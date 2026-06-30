@@ -19,17 +19,13 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Button
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateMapOf
-import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -40,13 +36,15 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.layout.positionInRoot
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
 import com.lernhero.domain.enum.CharacterState
-import com.lernhero.game.Character.CharacterUiModel
-import com.lernhero.game.Character.TestCharacter
+import com.lernhero.game.character.CharacterUiModel
+import com.lernhero.game.character.TestCharacter
 import com.lernhero.game.component.shake
 import com.lernhero.shared.Resources
 import kotlinx.coroutines.delay
@@ -55,15 +53,64 @@ import org.koin.compose.viewmodel.koinViewModel
 
 @Composable
 fun FightScreen() {
+    FightScreenOrientation()
+
     val viewModel = koinViewModel<GameViewModel>()
     val state by viewModel.uiState.collectAsState()
 
+    LaunchedEffect(
+        state.phase,
+        state.playback?.currentStepIndex,
+        state.playback?.currentStep?.id,
+        state.isBattleBusy()
+    ) {
+        if (state.phase == GamePhase.Battle && !state.isBattleBusy()) {
+            delay(250)
+            viewModel.playNextBattleStep()
+        }
+    }
+
+    Box(modifier = Modifier.fillMaxSize()) {
+        BattlePhaseScreen(
+            state = state,
+            onMoveToAttackFinished = viewModel::onMoveToAttackFinished,
+            onAttackAnimationFinished = viewModel::onAttackAnimationFinished,
+            onMoveBackFinished = viewModel::onMoveBackFinished
+        )
+
+        when (state.phase) {
+            GamePhase.Battle -> Unit
+
+            GamePhase.Quiz -> QuizDialog(
+                state = state,
+                onAnswer = viewModel::answerQuiz
+            )
+
+            GamePhase.Upgrade -> UpgradeDialog(
+                state = state,
+                onBuyUpgrade = viewModel::buyUpgrade,
+                onFinish = viewModel::finishUpgradePhase
+            )
+
+            GamePhase.Defeat -> DefeatDialog(
+                state = state,
+                onRestart = viewModel::restartRun
+            )
+        }
+    }
+}
+
+@Composable
+private fun BattlePhaseScreen(
+    state: GameStateUi,
+    onMoveToAttackFinished: (String) -> Unit,
+    onAttackAnimationFinished: (String) -> Unit,
+    onMoveBackFinished: (String) -> Unit
+) {
     val allCharacters = state.characters.values.toList()
-    val enemies = allCharacters.filter { !it.isPlayer }
-    val players = allCharacters.filter { it.isPlayer }
+    val enemies = allCharacters.filter { !it.isPlayer }.sortedBy { it.id }
+    val players = allCharacters.filter { it.isPlayer }.sortedBy { it.id }
     val slotPositions = remember { mutableStateMapOf<String, Offset>() }
-    var selectedPlayer by remember { mutableStateOf("1") }
-    var selectedEnemy by remember { mutableStateOf("2") }
 
     Box(
         modifier = Modifier.fillMaxSize()
@@ -74,6 +121,7 @@ fun FightScreen() {
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.FillBounds
         )
+
         Row(
             modifier = Modifier
                 .fillMaxSize()
@@ -94,9 +142,9 @@ fun FightScreen() {
                             slotPositions[id] = offset
                         }
                     },
-                    onMoveToAttackFinished = viewModel::onMoveToAttackFinished,
-                    onAttackAnimationFinished = viewModel::onAttackAnimationFinished,
-                    onMoveBackFinished = viewModel::onMoveBackFinished,
+                    onMoveToAttackFinished = onMoveToAttackFinished,
+                    onAttackAnimationFinished = onAttackAnimationFinished,
+                    onMoveBackFinished = onMoveBackFinished,
                     modifier = Modifier.fillMaxSize()
                 )
             }
@@ -115,29 +163,60 @@ fun FightScreen() {
                             slotPositions[id] = offset
                         }
                     },
-                    onMoveToAttackFinished = viewModel::onMoveToAttackFinished,
-                    onAttackAnimationFinished = viewModel::onAttackAnimationFinished,
-                    onMoveBackFinished = viewModel::onMoveBackFinished,
+                    onMoveToAttackFinished = onMoveToAttackFinished,
+                    onAttackAnimationFinished = onAttackAnimationFinished,
+                    onMoveBackFinished = onMoveBackFinished,
                     modifier = Modifier.fillMaxSize()
                 )
             }
         }
 
-        TestAttackControls(
-            playerValue = selectedPlayer,
-            enemyValue = selectedEnemy,
-            onPlayerValueChange = { value -> selectedPlayer = value.asBattleIndex() },
-            onEnemyValueChange = { value -> selectedEnemy = value.asBattleIndex() },
-            onAttack = {
-                if (selectedPlayer.isNotBlank() && selectedEnemy.isNotBlank()) {
-                    viewModel.startTestAttack(
-                        attackerId = "PLAYER_$selectedPlayer",
-                        targetId = "ENEMY_$selectedEnemy"
-                    )
-                }
-            },
-            modifier = Modifier.align(Alignment.Center)
+        BattleHud(
+            state = state,
+            modifier = Modifier
+                .align(Alignment.TopCenter)
+                .padding(16.dp)
         )
+    }
+}
+
+@Composable
+private fun BattleHud(
+    state: GameStateUi,
+    modifier: Modifier = Modifier
+) {
+    Column(
+        modifier = modifier
+            .clip(RoundedCornerShape(8.dp))
+            .background(Color(0xCC21150F))
+            .padding(horizontal = 16.dp, vertical = 12.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Text(
+            text = "Fala ${state.wave}",
+            color = Color.White,
+            fontSize = 18.sp,
+            fontWeight = FontWeight.Bold
+        )
+        Text(
+            text = state.phase.hudLabel(),
+            color = Color(0xFFE7D1B6),
+            fontSize = 13.sp
+        )
+        state.playback?.let { playback ->
+            Text(
+                text = "Playback: ${playback.progressLabel}",
+                color = Color(0xFFE7D1B6),
+                fontSize = 12.sp
+            )
+        }
+        state.message?.let { message ->
+            Text(
+                text = message,
+                color = Color(0xFFFFF1D6),
+                fontSize = 12.sp
+            )
+        }
     }
 }
 
@@ -187,11 +266,11 @@ private data class FormationSlot(
 
 private fun formationSlots(isRightSide: Boolean): List<FormationSlot> {
     val leftSlots = listOf(
-        FormationSlot(x = 0.22f, y = 0.60f),
-        FormationSlot(x = 0.40f, y = 0.50f),
-        FormationSlot(x = 0.25f, y = 0.40f),
-        FormationSlot(x = 0.54f, y = 0.58f),
-        FormationSlot(x = 0.44f, y = 0.36f)
+        FormationSlot(x = 0.26f, y = 0.58f),
+        FormationSlot(x = 0.42f, y = 0.42f),
+        FormationSlot(x = 0.30f, y = 0.32f),
+        FormationSlot(x = 0.54f, y = 0.62f),
+        FormationSlot(x = 0.50f, y = 0.28f)
     )
 
     if (!isRightSide) {
@@ -236,7 +315,7 @@ private fun CharacterSlot(
                             x = targetPosition.x - myPosition.x + attackMargin,
                             y = targetPosition.y - myPosition.y
                         ),
-                        animationSpec = tween(durationMillis = 300, easing = LinearEasing)
+                        animationSpec = tween(durationMillis = 220, easing = LinearEasing)
                     )
                     onMoveToAttackFinished(character.id)
                 }
@@ -244,14 +323,14 @@ private fun CharacterSlot(
 
             CharacterState.ATTACK -> {
                 val attackSprite = character.sprites.forState(CharacterState.ATTACK)
-                delay(attackSprite.totalFrames * attackSprite.animationSpeed + 1_000L)
+                delay(attackSprite.totalFrames * attackSprite.animationSpeed + 450L)
                 onAttackAnimationFinished(character.id)
             }
 
             CharacterState.MOVING_BACK -> {
                 animOffset.animateTo(
                     targetValue = Offset.Zero,
-                    animationSpec = tween(durationMillis = 300, easing = LinearEasing)
+                    animationSpec = tween(durationMillis = 220, easing = LinearEasing)
                 )
                 onMoveBackFinished(character.id)
             }
@@ -341,55 +420,26 @@ private fun HealthBar(
     }
 }
 
-@Composable
-private fun TestAttackControls(
-    playerValue: String,
-    enemyValue: String,
-    onPlayerValueChange: (String) -> Unit,
-    onEnemyValueChange: (String) -> Unit,
-    onAttack: () -> Unit,
-    modifier: Modifier = Modifier
-) {
-    Column(
-        modifier = modifier.width(260.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        Row(
-            horizontalArrangement = Arrangement.spacedBy(8.dp)
-        ) {
-            OutlinedTextField(
-                value = playerValue,
-                onValueChange = onPlayerValueChange,
-                singleLine = true,
-                label = { Text("Player") },
-                modifier = Modifier.weight(1f)
-            )
-            OutlinedTextField(
-                value = enemyValue,
-                onValueChange = onEnemyValueChange,
-                singleLine = true,
-                label = { Text("Enemy") },
-                modifier = Modifier.weight(1f)
-            )
-        }
-        Button(
-            onClick = onAttack,
-            modifier = Modifier.padding(top = 8.dp)
-        ) {
-            Text("ATK")
-        }
-    }
-}
-
-private fun String.asBattleIndex(): String {
-    return filter { it in '1'..'5' }.take(1)
-}
-
 private fun calculateCardSize(
     maxWidth: Dp,
     maxHeight: Dp
 ): Dp {
-    val widthBasedSize = maxWidth * 1.5f
-    val heightBasedSize = maxHeight * 1.5f
-    return minOf(widthBasedSize, heightBasedSize).coerceIn(200.dp, 300.dp)
+    val widthBasedSize = maxWidth * 1.35f
+    val heightBasedSize = maxHeight * 1.35f
+    return minOf(widthBasedSize, heightBasedSize).coerceIn(140.dp, 280.dp)
 }
+
+private fun GameStateUi.isBattleBusy(): Boolean =
+    characters.values.any { character ->
+        character.state == CharacterState.MOVING_TO_ATK ||
+            character.state == CharacterState.ATTACK ||
+            character.state == CharacterState.MOVING_BACK
+    }
+
+private fun GamePhase.hudLabel(): String =
+    when (this) {
+        GamePhase.Battle -> "Odtwarzanie walki"
+        GamePhase.Quiz -> "Quiz po fali"
+        GamePhase.Upgrade -> "Ulepszenia po fali"
+        GamePhase.Defeat -> "Koniec runu"
+    }

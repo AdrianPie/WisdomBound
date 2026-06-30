@@ -1,6 +1,7 @@
 
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
@@ -18,6 +19,8 @@ kotlin {
             jvmTarget.set(JvmTarget.JVM_11)
         }
     }
+
+    jvm("desktop")
     
     listOf(
         iosX64(),
@@ -40,6 +43,9 @@ kotlin {
             implementation(libs.google.firebase.common)
 
 
+        }
+        named("desktopMain").dependencies {
+            implementation(compose.desktop.currentOs)
         }
         commonMain.dependencies {
             implementation(libs.compose.runtime)
@@ -99,4 +105,16 @@ android {
 
 dependencies {
     debugImplementation(libs.compose.ui.tooling)
+}
+
+compose.desktop {
+    application {
+        mainClass = "org.apie.lernhero.MainKt"
+
+        nativeDistributions {
+            targetFormats(TargetFormat.Dmg)
+            packageName = "LernHero"
+            packageVersion = "1.0.0"
+        }
+    }
 }

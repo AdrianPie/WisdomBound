@@ -1,5 +1,6 @@
 package com.lernhero.shared
 
+import androidx.compose.ui.graphics.TransformOrigin
 import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -7,6 +8,7 @@ import lernhero.shared.generated.resources.Res
 import lernhero.shared.generated.resources.back_arrow
 import lernhero.shared.generated.resources.battle_mage_avatar
 import lernhero.shared.generated.resources.battlegroundTwo
+import lernhero.shared.generated.resources.body2
 import lernhero.shared.generated.resources.book
 import lernhero.shared.generated.resources.cat
 import lernhero.shared.generated.resources.check
@@ -18,14 +20,20 @@ import lernhero.shared.generated.resources.edit
 import lernhero.shared.generated.resources.fire_sprite
 import lernhero.shared.generated.resources.google_logo
 import lernhero.shared.generated.resources.grid
+import lernhero.shared.generated.resources.head
 import lernhero.shared.generated.resources.home
 import lernhero.shared.generated.resources.india
 import lernhero.shared.generated.resources.knight_attack_sprite
 import lernhero.shared.generated.resources.knight_avatar2
 import lernhero.shared.generated.resources.knight_sprite
+import lernhero.shared.generated.resources.left_down_hand
+import lernhero.shared.generated.resources.left_down_leg
+import lernhero.shared.generated.resources.left_up_hand
+import lernhero.shared.generated.resources.left_up_leg
 import lernhero.shared.generated.resources.log_in
 import lernhero.shared.generated.resources.log_out
 import lernhero.shared.generated.resources.logo_splash
+import lernhero.shared.generated.resources.magskeleton_idle
 import lernhero.shared.generated.resources.map_pin
 import lernhero.shared.generated.resources.menu
 import lernhero.shared.generated.resources.minus
@@ -34,7 +42,10 @@ import lernhero.shared.generated.resources.plus
 import lernhero.shared.generated.resources.ramka_test
 import lernhero.shared.generated.resources.ramka_test2
 import lernhero.shared.generated.resources.right_arrow
-import lernhero.shared.generated.resources.samurai_idle
+import lernhero.shared.generated.resources.right_down_hand
+import lernhero.shared.generated.resources.right_down_leg
+import lernhero.shared.generated.resources.right_up_hand2
+import lernhero.shared.generated.resources.right_up_leg
 import lernhero.shared.generated.resources.search
 import lernhero.shared.generated.resources.serbia
 import lernhero.shared.generated.resources.shopping_cart
@@ -93,6 +104,35 @@ object Resources {
         val knightAvatar = Res.drawable.knight_avatar2
         val sorcererAvatar = Res.drawable.sorcerer_avatar2
     }
+    object Player {
+            val head = Res.drawable.head
+            val body = Res.drawable.body2
+            val leftUpHand = Res.drawable.left_up_hand
+            val leftDownHand = Res.drawable.left_down_hand
+            val leftUpLeg = Res.drawable.left_up_leg
+            val leftDownLeg = Res.drawable.left_down_leg
+            val rightUpHand = Res.drawable.right_up_hand2
+            val rightDownHand = Res.drawable.right_down_hand
+            val rightUpLeg = Res.drawable.right_up_leg
+            val rightDownLeg = Res.drawable.right_down_leg
+    }
+    object KnightPivots {
+        // Centrum postaci
+        val head = TransformOrigin(0.5f, 0.2f)
+        val body = TransformOrigin(0.499f, 0.348f)
+
+        // Prawa strona (Przód - strona miecza)
+        val rightUpHand = TransformOrigin(0.573f, 0.276f)
+        val rightDownHand = TransformOrigin(0.61f, 0.373f)
+        val rightUpLeg = TransformOrigin(0.542f, 0.523f)
+        val rightDownLeg = TransformOrigin(0.575f, 0.679f)
+
+        // Lewa strona (Tył - za plecami)
+        val leftUpHand = TransformOrigin(0.412f, 0.262f)
+        val leftDownHand = TransformOrigin(0.354f, 0.359f)
+        val leftUpLeg = TransformOrigin(0.461f, 0.5f)
+        val leftDownLeg = TransformOrigin(0.417f, 0.677f)
+    }
     object Flag {
         val India = Res.drawable.india
         val Usa = Res.drawable.usa
@@ -120,15 +160,16 @@ object Resources {
             localWidth = 100.dp,
             renderScale = 1f,
         )
-        val samuraiIdle: SpriteAsset = SpriteAsset(
-            drawable = Res.drawable.samurai_idle,
-            frameWidth = 36,
-            frameHeight = 68,
-            totalFrames = 7,
-            framesPerRow = 7,
-            animationSpeed = 100,
+        val magSkeletoniIdle: SpriteAsset = SpriteAsset(
+            drawable = Res.drawable.magskeleton_idle,
+            frameWidth = 1280,
+            frameHeight = 720,
+            totalFrames = 18,
+            framesPerRow = 5,
+            animationSpeed = 42,
             localWidth = 100.dp,
-            renderScale = 0.45f
+            renderScale = 1f,
+            pingPong = true,
         )
         val knightAtkTest: SpriteAsset = SpriteAsset(
             drawable = Res.drawable.testattack,
@@ -162,6 +203,7 @@ data class SpriteAsset(
     val localWidth: Dp,
     val renderScale: Float = 1f,
     val playBackwards: Boolean = false,
+    val pingPong: Boolean = false,
 ){
     fun scaleWidthFactor(density: Density): Float {
         val frameWidthDp = with(density) { frameWidth.toDp() }

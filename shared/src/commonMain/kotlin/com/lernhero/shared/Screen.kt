@@ -15,5 +15,9 @@ sealed class Screen {
     @Serializable
     data object GameScreen : Screen()
     @Serializable
-    data object Shop : Screen()
+    data object KnightPreview : Screen()
+    @Serializable
+    data object ModularKnightPreview : Screen()
+    @Serializable
+    data object Equipment : Screen()
 }

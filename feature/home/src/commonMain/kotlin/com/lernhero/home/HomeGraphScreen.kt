@@ -5,6 +5,7 @@ import androidx.compose.animation.AnimatedContent
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -17,7 +18,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavDestination.Companion.hasRoute
 import androidx.navigation.NavDestination.Companion.hierarchy
@@ -48,9 +48,18 @@ fun HomeGraphScreen() {
         derivedStateOf {
             when {
                 currentRoute.value.isOnRoute<Screen.Home>() -> BottomBarDestination.Home
-                currentRoute.value.isOnRoute<Screen.GameScreen>() -> BottomBarDestination.Game
-                currentRoute.value.isOnRoute<Screen.Shop>() -> BottomBarDestination.Shop
+                currentRoute.value.isOnRoute<Screen.GameScreen>() -> BottomBarDestination.Fight
+                currentRoute.value.isOnRoute<Screen.Equipment>() -> BottomBarDestination.Equipment
                 else -> BottomBarDestination.Home
+            }
+        }
+    }
+    val topBarTitle by remember {
+        derivedStateOf {
+            when {
+                currentRoute.value.isOnRoute<Screen.KnightPreview>() -> "Knight Lab"
+                currentRoute.value.isOnRoute<Screen.ModularKnightPreview>() -> "Knight Preview"
+                else -> selectedDestination.title
             }
         }
     }
@@ -67,10 +76,10 @@ fun HomeGraphScreen() {
                 CenterAlignedTopAppBar(
                     title = {
                         AnimatedContent(
-                            targetState = selectedDestination
-                        ){destination ->
+                            targetState = topBarTitle
+                        ){title ->
                             Text(
-                                text = destination.title,
+                                text = title,
                                 fontFamily = FontFirst(),
                                 fontSize = FontSize.LARGE,
                                 color = TextPrimary
@@ -97,6 +106,26 @@ fun HomeGraphScreen() {
             }
         } else {
             { }
+        },
+        bottomBar = if (showBars) {
+            {
+                NavBottomBar(
+                    modifier = Modifier.navigationBarsPadding(),
+                    selected = selectedDestination,
+                    onSelect = { destination ->
+                        navController.navigate(destination.route) {
+                            launchSingleTop = true
+                            popUpTo<Screen.Home> {
+                                saveState = true
+                                inclusive = false
+                            }
+                            restoreState = true
+                        }
+                    }
+                )
+            }
+        } else {
+            { }
         }
     ) { paddingValues ->
         Box(
@@ -104,10 +133,7 @@ fun HomeGraphScreen() {
                 .fillMaxSize()
                 .then(
                     if (showBars) {
-                        Modifier.padding(
-                            top = paddingValues.calculateTopPadding(),
-                            bottom = paddingValues.calculateBottomPadding()
-                        )
+                        Modifier.padding(paddingValues)
                     } else {
                         Modifier
                     }
@@ -118,32 +144,52 @@ fun HomeGraphScreen() {
                 navController = navController,
                 startDestination = Screen.Home
             ) {
-                composable<Screen.Home> {  }
+                composable<Screen.Home> {
+                    HomeScreen(
+                        onOpenFight = {
+                            navController.navigate(Screen.GameScreen) {
+                                launchSingleTop = true
+                            }
+                        },
+                        onOpenKnightPreview = {
+                            navController.navigate(Screen.KnightPreview) {
+                                launchSingleTop = true
+                            }
+                        },
+                        onOpenModularKnightPreview = {
+                            navController.navigate(Screen.ModularKnightPreview) {
+                                launchSingleTop = true
+                            }
+                        },
+                        onOpenEquipment = {
+                            navController.navigate(Screen.Equipment) {
+                                launchSingleTop = true
+                            }
+                        }
+                    )
+                }
                 composable<Screen.GameScreen> { GameScreen(
                     navigateToFightScreen = {
                         navController.navigate(Screen.FightScreen)
                     }
                 ) }
-                composable<Screen.Shop> {  }
+                composable<Screen.Equipment> { EquipmentScreen() }
+                composable<Screen.KnightPreview> {
+                    KnightPreviewScreen(
+                        onBack = {
+                            navController.popBackStack()
+                        }
+                    )
+                }
+                composable<Screen.ModularKnightPreview> {
+                    ModularKnightPreviewScreen(
+                        onBack = {
+                            navController.popBackStack()
+                        }
+                    )
+                }
                 composable<Screen.FightScreen> { FightScreen() }
 
-            }
-            if (showBars) {
-                NavBottomBar(
-                    modifier = Modifier.align(Alignment.BottomCenter),
-                    selected = selectedDestination,
-                    onSelect = {destination ->
-                        navController.navigate(destination.route) {
-                            launchSingleTop = true
-                            popUpTo<Screen.Home> {
-                                saveState = true
-                                inclusive = false
-                            }
-                            restoreState = true
-                        }
-
-                    }
-                )
             }
 
         }
