@@ -443,32 +443,60 @@ private data class KnightWorkshopPart(
 
 private fun knightWorkshopParts(): List<KnightWorkshopPart> = listOf(
     KnightWorkshopPart(
-        id = "right_up_hand",
-        label = "Prawa gorna reka",
-        shortLabel = "R bark",
-        joint = "pivot: bark",
-        resource = Resources.Player.rightUpHand
-    ),
-    KnightWorkshopPart(
-        id = "right_down_hand",
-        label = "Prawe przedramie",
-        shortLabel = "R lokiec",
-        joint = "pivot: lokiec",
-        resource = Resources.Player.rightDownHand
-    ),
-    KnightWorkshopPart(
-        id = "right_up_leg",
+        id = "left_up_leg",
         label = "Prawe udo",
         shortLabel = "R biodro",
+        joint = "pivot: biodro",
+        resource = Resources.Player.leftUpLeg
+    ),
+    KnightWorkshopPart(
+        id = "left_down_leg",
+        label = "Prawa dolna noga",
+        shortLabel = "R kolano",
+        joint = "pivot: kolano",
+        resource = Resources.Player.leftDownLeg
+    ),
+    KnightWorkshopPart(
+        id = "leftx_foot",
+        label = "Prawa stopa",
+        shortLabel = "R stopa",
+        joint = "pivot: kostka",
+        resource = Resources.Player.leftFoot
+    ),
+    KnightWorkshopPart(
+        id = "rightx_up_leg",
+        label = "Lewe udo",
+        shortLabel = "L biodro",
         joint = "pivot: biodro",
         resource = Resources.Player.rightUpLeg
     ),
     KnightWorkshopPart(
-        id = "right_down_leg",
-        label = "Prawa dolna noga",
-        shortLabel = "R kolano",
+        id = "rightx_down_leg",
+        label = "Lewa dolna noga",
+        shortLabel = "L kolano",
         joint = "pivot: kolano",
         resource = Resources.Player.rightDownLeg
+    ),
+    KnightWorkshopPart(
+        id = "right_foot",
+        label = "Lewa stopa",
+        shortLabel = "L stopa",
+        joint = "pivot: kostka",
+        resource = Resources.Player.rightFoot
+    ),
+    KnightWorkshopPart(
+        id = "rightx_up_hand",
+        label = "Lewa gorna reka",
+        shortLabel = "L bark",
+        joint = "pivot: bark",
+        resource = Resources.Player.rightUpHand
+    ),
+    KnightWorkshopPart(
+        id = "rightx_down_hand",
+        label = "Lewe przedramie",
+        shortLabel = "L lokiec",
+        joint = "pivot: lokiec",
+        resource = Resources.Player.rightDownHand
     ),
     KnightWorkshopPart(
         id = "body",
@@ -485,30 +513,16 @@ private fun knightWorkshopParts(): List<KnightWorkshopPart> = listOf(
         resource = Resources.Player.head
     ),
     KnightWorkshopPart(
-        id = "left_up_leg",
-        label = "Lewe udo",
-        shortLabel = "L biodro",
-        joint = "pivot: biodro",
-        resource = Resources.Player.leftUpLeg
-    ),
-    KnightWorkshopPart(
-        id = "left_down_leg",
-        label = "Lewa dolna noga",
-        shortLabel = "L kolano",
-        joint = "pivot: kolano",
-        resource = Resources.Player.leftDownLeg
-    ),
-    KnightWorkshopPart(
         id = "left_up_hand",
-        label = "Lewa gorna reka",
-        shortLabel = "L bark",
+        label = "Prawa gorna reka",
+        shortLabel = "R bark",
         joint = "pivot: bark",
         resource = Resources.Player.leftUpHand
     ),
     KnightWorkshopPart(
         id = "left_down_hand",
-        label = "Lewe przedramie",
-        shortLabel = "L lokiec",
+        label = "Prawe przedramie",
+        shortLabel = "R lokiec",
         joint = "pivot: lokiec",
         resource = Resources.Player.leftDownHand
     )

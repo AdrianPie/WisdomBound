@@ -18,12 +18,12 @@ import org.jetbrains.compose.resources.painterResource
 fun ModularKnightPreview() {
     Box(modifier = Modifier.size(300.dp)) {
         Image(
-            painter = painterResource(Player.rightUpHand),
+            painter = painterResource(Player.leftUpLeg),
             contentDescription = null,
             modifier = Modifier.fillMaxSize()
         )
         Image(
-            painter = painterResource(Player.rightDownHand),
+            painter = painterResource(Player.leftDownLeg),
             contentDescription = null,
             modifier = Modifier.fillMaxSize()
         )
@@ -38,22 +38,22 @@ fun ModularKnightPreview() {
             modifier = Modifier.fillMaxSize()
         )
         Image(
+            painter = painterResource(Player.rightUpHand),
+            contentDescription = null,
+            modifier = Modifier.fillMaxSize()
+        )
+        Image(
+            painter = painterResource(Player.rightDownHand),
+            contentDescription = null,
+            modifier = Modifier.fillMaxSize()
+        )
+        Image(
             painter = painterResource(Player.body),
             contentDescription = null,
             modifier = Modifier.fillMaxSize()
         )
         Image(
             painter = painterResource(Player.head),
-            contentDescription = null,
-            modifier = Modifier.fillMaxSize()
-        )
-        Image(
-            painter = painterResource(Player.leftUpLeg),
-            contentDescription = null,
-            modifier = Modifier.fillMaxSize()
-        )
-        Image(
-            painter = painterResource(Player.leftDownLeg),
             contentDescription = null,
             modifier = Modifier.fillMaxSize()
         )

@@ -26,10 +26,23 @@ import lernhero.shared.generated.resources.india
 import lernhero.shared.generated.resources.knight_attack_sprite
 import lernhero.shared.generated.resources.knight_avatar2
 import lernhero.shared.generated.resources.knight_sprite
-import lernhero.shared.generated.resources.left_down_hand
-import lernhero.shared.generated.resources.left_down_leg
-import lernhero.shared.generated.resources.left_up_hand
-import lernhero.shared.generated.resources.left_up_leg
+import lernhero.shared.generated.resources.rightx_down_hand
+import lernhero.shared.generated.resources.rightx_down_leg
+import lernhero.shared.generated.resources.rightx_up_hand
+import lernhero.shared.generated.resources.rightx_up_leg
+import lernhero.shared.generated.resources.leftx_foot
+import lernhero.shared.generated.resources.right_foot
+import lernhero.shared.generated.resources.plate_head
+import lernhero.shared.generated.resources.plate_left_down_hand
+import lernhero.shared.generated.resources.plate_left_down_leg
+import lernhero.shared.generated.resources.plate_left_foot
+import lernhero.shared.generated.resources.plate_left_up_leg
+import lernhero.shared.generated.resources.plate_right_down_hand
+import lernhero.shared.generated.resources.plate_right_down_leg
+import lernhero.shared.generated.resources.plate_right_foot
+import lernhero.shared.generated.resources.plate_right_up_leg
+import lernhero.shared.generated.resources.plate_sword_down
+import lernhero.shared.generated.resources.plate_sword_up
 import lernhero.shared.generated.resources.log_in
 import lernhero.shared.generated.resources.log_out
 import lernhero.shared.generated.resources.logo_splash
@@ -42,10 +55,10 @@ import lernhero.shared.generated.resources.plus
 import lernhero.shared.generated.resources.ramka_test
 import lernhero.shared.generated.resources.ramka_test2
 import lernhero.shared.generated.resources.right_arrow
-import lernhero.shared.generated.resources.right_down_hand
-import lernhero.shared.generated.resources.right_down_leg
+import lernhero.shared.generated.resources.left_down_hand
+import lernhero.shared.generated.resources.left_down_leg
 import lernhero.shared.generated.resources.right_up_hand2
-import lernhero.shared.generated.resources.right_up_leg
+import lernhero.shared.generated.resources.left_up_leg
 import lernhero.shared.generated.resources.search
 import lernhero.shared.generated.resources.serbia
 import lernhero.shared.generated.resources.shopping_cart
@@ -107,31 +120,67 @@ object Resources {
     object Player {
             val head = Res.drawable.head
             val body = Res.drawable.body2
-            val leftUpHand = Res.drawable.left_up_hand
+
+            // Prawa reka (anatomicznie) - na ekranie po lewej, reka za cialem (idle)
+            val rightUpHand = Res.drawable.rightx_up_hand
+            val rightDownHand = Res.drawable.rightx_down_hand
+
+            // Lewa reka (anatomicznie) - na ekranie po prawej, reka rozdzki/miecza z przodu.
+            // Gorna czesc uzywa asset right_up_hand2 (najlepszy kawalek do uniesionej pozy).
+            val leftUpHand = Res.drawable.right_up_hand2
             val leftDownHand = Res.drawable.left_down_hand
+
+            // Prawa noga (anatomicznie) - na ekranie po lewej, noga z przodu
+            val rightUpLeg = Res.drawable.rightx_up_leg
+            val rightDownLeg = Res.drawable.rightx_down_leg
+            val rightFoot = Res.drawable.right_foot
+
+            // Lewa noga (anatomicznie) - na ekranie po prawej, noga z tylu
             val leftUpLeg = Res.drawable.left_up_leg
             val leftDownLeg = Res.drawable.left_down_leg
-            val rightUpHand = Res.drawable.right_up_hand2
-            val rightDownHand = Res.drawable.right_down_hand
-            val rightUpLeg = Res.drawable.right_up_leg
-            val rightDownLeg = Res.drawable.right_down_leg
+            val leftFoot = Res.drawable.leftx_foot
+    }
+    // Zbroja plytowa - nakladki rysowane na tych samych warstwach co czesci ciala
+    object PlateArmor {
+            val head = Res.drawable.plate_head
+
+            val rightDownHand = Res.drawable.plate_right_down_hand
+            val leftDownHand = Res.drawable.plate_left_down_hand
+
+            val rightUpLeg = Res.drawable.plate_right_up_leg
+            val rightDownLeg = Res.drawable.plate_right_down_leg
+            val rightFoot = Res.drawable.plate_right_foot
+
+            val leftUpLeg = Res.drawable.plate_left_up_leg
+            val leftDownLeg = Res.drawable.plate_left_down_leg
+            val leftFoot = Res.drawable.plate_left_foot
+
+            // Miecz trzymany w lewej dloni: ostrze przed dlonia, rekojesc wystaje za nia
+            val swordFront = Res.drawable.plate_sword_up
+            val swordBehind = Res.drawable.plate_sword_down
     }
     object KnightPivots {
         // Centrum postaci
         val head = TransformOrigin(0.5f, 0.2f)
         val body = TransformOrigin(0.499f, 0.348f)
+        // Punkt przy stopach - caly rycerz kolysze sie wokol niego, wiec stopy prawie sie nie ruszaja
+        val ground = TransformOrigin(0.555f, 0.9f)
 
-        // Prawa strona (Przód - strona miecza)
-        val rightUpHand = TransformOrigin(0.573f, 0.276f)
-        val rightDownHand = TransformOrigin(0.61f, 0.373f)
-        val rightUpLeg = TransformOrigin(0.542f, 0.523f)
-        val rightDownLeg = TransformOrigin(0.575f, 0.679f)
+        // Prawa reka (anatomicznie) - Tyl, idle - na ekranie po lewej
+        val rightUpHand = TransformOrigin(0.412f, 0.262f)
+        val rightDownHand = TransformOrigin(0.354f, 0.359f)
+        // Lewa reka (anatomicznie) - Przod, rozdzka/miecz - na ekranie po prawej
+        val leftUpHand = TransformOrigin(0.573f, 0.276f)
+        val leftDownHand = TransformOrigin(0.61f, 0.373f)
 
-        // Lewa strona (Tył - za plecami)
-        val leftUpHand = TransformOrigin(0.412f, 0.262f)
-        val leftDownHand = TransformOrigin(0.354f, 0.359f)
-        val leftUpLeg = TransformOrigin(0.461f, 0.5f)
-        val leftDownLeg = TransformOrigin(0.417f, 0.677f)
+        // Prawa noga (anatomicznie) - Przod - na ekranie po lewej
+        val rightUpLeg = TransformOrigin(0.461f, 0.5f)
+        val rightDownLeg = TransformOrigin(0.417f, 0.677f)
+        val rightFoot = TransformOrigin(0.387f, 0.852f)
+        // Lewa noga (anatomicznie) - Tyl - na ekranie po prawej
+        val leftUpLeg = TransformOrigin(0.542f, 0.523f)
+        val leftDownLeg = TransformOrigin(0.575f, 0.679f)
+        val leftFoot = TransformOrigin(0.595f, 0.85f)
     }
     object Flag {
         val India = Res.drawable.india
