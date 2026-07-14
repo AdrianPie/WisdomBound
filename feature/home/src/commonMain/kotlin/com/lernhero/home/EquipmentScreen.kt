@@ -20,13 +20,17 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -41,10 +45,9 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.lernhero.domain.data.PlayerRepository
-import com.lernhero.domain.shop.ShopItem
-import com.lernhero.domain.shop.ShopItemSlot
+import com.lernhero.domain.item.Item
+import com.lernhero.domain.item.ItemSlot
 import com.lernhero.game.character.KnightEquipment
-import com.lernhero.game.character.KnightEquipmentSlot
 import com.lernhero.game.character.ModularKnight
 import com.lernhero.shared.FontFirst
 import com.lernhero.shared.FontPixel
@@ -55,7 +58,7 @@ import org.jetbrains.compose.resources.painterResource
 import org.koin.compose.koinInject
 
 /* ---------------------------------------------------------------------------------------------
- *  Fresh RPG palette – warm obsidian + bright gold, high contrast so slots/items pop.
+ *  Fresh RPG palette - warm obsidian + bright gold, high contrast so slots/items pop.
  * ------------------------------------------------------------------------------------------- */
 private val Obsidian = Color(0xFF0F0C09)
 private val Panel = Color(0xFF211A12)
@@ -67,45 +70,23 @@ private val Bronze = Color(0xFF463A24)
 private val Parchment = Color(0xFFEDDCB6)
 private val Muted = Color(0xFF9C8968)
 private val Emerald = Color(0xFF62D98A)
-private val Ruby = Color(0xFFE0654F)
 
 private val SLOT = 56.dp
 private val BACKPACK_ICON = 60.dp
 
-/* A slot on the paper doll: a real gear slot or a cosmetic placeholder. */
-private sealed interface PaperSlot {
-    data class Gear(val slot: KnightEquipmentSlot) : PaperSlot
-    data class Deco(val label: String) : PaperSlot
-}
-
-private val LEFT_SLOTS = listOf(
-    PaperSlot.Gear(KnightEquipmentSlot.Head),
-    PaperSlot.Deco("Napiersnik"),
-    PaperSlot.Deco("Ramie"),
-)
-
-private val RIGHT_SLOTS = listOf(
-    PaperSlot.Gear(KnightEquipmentSlot.Hands),
-    PaperSlot.Gear(KnightEquipmentSlot.Legs),
-    PaperSlot.Gear(KnightEquipmentSlot.Feet),
-)
-
-private val WEAPON_SLOTS = listOf(
-    PaperSlot.Gear(KnightEquipmentSlot.MainHand),
-    PaperSlot.Deco("Tarcza"),
-)
+/** Sloty po lewej i prawej stronie postaci - uklad jak w klasycznym oknie postaci z MMO. */
+private val LEFT_SLOTS = listOf(ItemSlot.Head, ItemSlot.Chest, ItemSlot.Amulet)
+private val RIGHT_SLOTS = listOf(ItemSlot.Hands, ItemSlot.Legs, ItemSlot.Feet)
+private val BOTTOM_SLOTS = listOf(ItemSlot.MainHand, ItemSlot.OffHand, ItemSlot.Ring)
 
 @Composable
 fun EquipmentScreen() {
     val playerRepository = koinInject<PlayerRepository>()
     val viewModel = remember(playerRepository) { PlayerViewModel(playerRepository) }
     val state by viewModel.uiState.collectAsState()
-    val equipment = state.knightEquipment
 
-    /** Klikniecie slotu przelacza go: zalozony schodzi, pusty probuje sie zalozyc. */
-    val toggleSlot: (KnightEquipmentSlot) -> Unit = { slot ->
-        if (slot.isEquipped(equipment)) viewModel.unequipSlot(slot) else viewModel.equipSlot(slot)
-    }
+    /** Slot, dla ktorego otwarto liste posiadanych przedmiotow. */
+    var pickerSlot by remember { mutableStateOf<ItemSlot?>(null) }
 
     Surface(modifier = Modifier.fillMaxSize(), color = AppSurface) {
         Column(
@@ -116,24 +97,49 @@ fun EquipmentScreen() {
                 .padding(10.dp),
             verticalArrangement = Arrangement.spacedBy(10.dp)
         ) {
-            TitleBar(equipment = equipment, name = state.name, money = state.money)
-            PaperDoll(equipment = equipment, onSlotClick = toggleSlot)
-            Backpack(
-                ownedEquipment = state.ownedEquipment,
-                equipment = equipment,
-                onEquip = viewModel::equipSlot
+            TitleBar(
+                name = state.name,
+                money = state.money,
+                equippedCount = state.equipment.equipped.size
             )
-            StatsPanel(equipment = equipment)
+
+            PaperDoll(
+                knight = state.knightEquipment,
+                itemAt = state::itemIn,
+                // Klikniecie zdejmuje to, co stoi w slocie; pusty slot otwiera liste do wyboru.
+                onSlotClick = { slot ->
+                    if (state.itemIn(slot) != null) viewModel.unequipSlot(slot) else pickerSlot = slot
+                }
+            )
+
+            Backpack(
+                items = state.backpack,
+                onEquip = viewModel::equipItem
+            )
+
+            StatsPanel(equipped = state.equipment.equipped.keys.size)
             state.message?.let { HintBar(it) }
             Spacer(modifier = Modifier.height(4.dp))
         }
+    }
+
+    pickerSlot?.let { slot ->
+        ItemPickerDialog(
+            slot = slot,
+            items = state.ownedFor(slot),
+            onDismiss = { pickerSlot = null },
+            onPick = { item ->
+                viewModel.equipItem(item)
+                pickerSlot = null
+            }
+        )
     }
 }
 
 /* ------------------------------------------ Title ------------------------------------------ */
 
 @Composable
-private fun TitleBar(equipment: KnightEquipment, name: String, money: Int) {
+private fun TitleBar(name: String, money: Int, equippedCount: Int) {
     OrnateFrame(modifier = Modifier.fillMaxWidth()) {
         Row(
             modifier = Modifier.padding(horizontal = 12.dp, vertical = 8.dp),
@@ -166,14 +172,14 @@ private fun TitleBar(equipment: KnightEquipment, name: String, money: Int) {
                     overflow = TextOverflow.Ellipsis
                 )
                 Text(
-                    text = "Poziom 60  •  Rycerz",
+                    text = "Poziom 60  -  Rycerz",
                     color = Parchment,
                     fontFamily = FontFirst(),
                     fontSize = 11.sp
                 )
             }
             Column(horizontalAlignment = Alignment.End, verticalArrangement = Arrangement.spacedBy(3.dp)) {
-                Pill(text = "iLvl ${equippedCount(equipment) * 12}", strong = true)
+                Pill(text = "iLvl ${equippedCount * 12}")
                 Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(4.dp)) {
                     Image(painterResource(Resources.Icon.Dollar), null, modifier = Modifier.size(13.dp))
                     Text("$money", color = Gold, fontFamily = FontFirst(), fontSize = 12.sp, fontWeight = FontWeight.Bold)
@@ -187,8 +193,9 @@ private fun TitleBar(equipment: KnightEquipment, name: String, money: Int) {
 
 @Composable
 private fun PaperDoll(
-    equipment: KnightEquipment,
-    onSlotClick: (KnightEquipmentSlot) -> Unit
+    knight: KnightEquipment,
+    itemAt: (ItemSlot) -> Item?,
+    onSlotClick: (ItemSlot) -> Unit
 ) {
     OrnateFrame(modifier = Modifier.fillMaxWidth()) {
         Column(
@@ -200,15 +207,17 @@ private fun PaperDoll(
                 horizontalArrangement = Arrangement.spacedBy(4.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                SlotColumn(LEFT_SLOTS, equipment, onSlotClick)
-                Box(modifier = Modifier.weight(1f)) { Viewport(equipment) }
-                SlotColumn(RIGHT_SLOTS, equipment, onSlotClick)
+                SlotColumn(LEFT_SLOTS, itemAt, onSlotClick)
+                Box(modifier = Modifier.weight(1f)) { Viewport(knight) }
+                SlotColumn(RIGHT_SLOTS, itemAt, onSlotClick)
             }
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.spacedBy(16.dp, Alignment.CenterHorizontally)
             ) {
-                WEAPON_SLOTS.forEach { Slot(it, equipment, onSlotClick) }
+                BOTTOM_SLOTS.forEach { slot ->
+                    GearSlot(slot = slot, item = itemAt(slot), onClick = { onSlotClick(slot) })
+                }
             }
         }
     }
@@ -216,20 +225,22 @@ private fun PaperDoll(
 
 @Composable
 private fun SlotColumn(
-    slots: List<PaperSlot>,
-    equipment: KnightEquipment,
-    onSlotClick: (KnightEquipmentSlot) -> Unit
+    slots: List<ItemSlot>,
+    itemAt: (ItemSlot) -> Item?,
+    onSlotClick: (ItemSlot) -> Unit
 ) {
     Column(
         verticalArrangement = Arrangement.spacedBy(10.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        slots.forEach { Slot(it, equipment, onSlotClick) }
+        slots.forEach { slot ->
+            GearSlot(slot = slot, item = itemAt(slot), onClick = { onSlotClick(slot) })
+        }
     }
 }
 
 @Composable
-private fun Viewport(equipment: KnightEquipment) {
+private fun Viewport(knight: KnightEquipment) {
     Box(
         modifier = Modifier
             .fillMaxWidth()
@@ -250,7 +261,7 @@ private fun Viewport(equipment: KnightEquipment) {
         ) {
             ModularKnight(
                 modifier = Modifier.align(Alignment.BottomCenter),
-                equipment = equipment,
+                equipment = knight,
                 interactive = true
             )
         }
@@ -264,71 +275,39 @@ private fun Viewport(equipment: KnightEquipment) {
     }
 }
 
-@Composable
-private fun Slot(
-    paperSlot: PaperSlot,
-    equipment: KnightEquipment,
-    onSlotClick: (KnightEquipmentSlot) -> Unit
-) {
-    when (paperSlot) {
-        is PaperSlot.Deco -> DecoSlot(paperSlot.label)
-        is PaperSlot.Gear -> GearSlot(
-            slot = paperSlot.slot,
-            equipped = paperSlot.slot.isEquipped(equipment),
-            onClick = { onSlotClick(paperSlot.slot) }
-        )
-    }
-}
-
-@Composable
-private fun DecoSlot(label: String) {
-    SlotShell(label = label, labelStrong = false) {
-        Box(
-            modifier = Modifier
-                .size(SLOT)
-                .clip(RoundedCornerShape(8.dp))
-                .background(SlotBg)
-                .border(1.dp, GoldDim.copy(alpha = 0.45f), RoundedCornerShape(8.dp)),
-            contentAlignment = Alignment.Center
-        ) {
-            Box(
-                modifier = Modifier
-                    .size(16.dp)
-                    .clip(RoundedCornerShape(4.dp))
-                    .background(Color(0xFF1E1710))
-                    .border(1.dp, GoldDim.copy(alpha = 0.3f), RoundedCornerShape(4.dp))
-            )
-        }
-    }
-}
-
+/**
+ * Pojedynczy slot. Ramka bierze kolor z rzadkosci zalozonego przedmiotu, wiec legendarny miecz
+ * widac z drugiego konca ekranu - i nie trzeba do tego zadnej wiedzy o samym mieczu.
+ */
 @Composable
 private fun GearSlot(
-    slot: KnightEquipmentSlot,
-    equipped: Boolean,
+    slot: ItemSlot,
+    item: Item?,
     onClick: () -> Unit
 ) {
-    val icon = slotIcon(slot)
+    val equipped = item != null
+    val border = if (item != null) RarityPalette.frame(item.rarity) else GoldDim
 
-    SlotShell(label = slot.shortLabel, labelStrong = equipped) {
+    SlotShell(label = item?.name ?: slot.shortLabel(), labelStrong = equipped) {
         Box(
             modifier = Modifier
                 .size(SLOT)
                 .then(if (equipped) Modifier.shadow(6.dp, RoundedCornerShape(8.dp)) else Modifier)
                 .clip(RoundedCornerShape(8.dp))
                 .background(if (equipped) Color(0xFF3A2C18) else SlotBg)
-                .border(if (equipped) 2.dp else 1.dp, if (equipped) Gold else GoldDim, RoundedCornerShape(8.dp))
+                .border(if (equipped) 2.dp else 1.dp, border, RoundedCornerShape(8.dp))
                 .clickable(onClick = onClick),
             contentAlignment = Alignment.Center
         ) {
-            if (icon != null) {
+            if (item != null) {
                 Image(
-                    painter = painterResource(icon),
-                    contentDescription = slot.label,
+                    painter = painterResource(item.icon()),
+                    contentDescription = item.name,
                     modifier = Modifier.fillMaxSize().padding(6.dp),
-                    contentScale = ContentScale.Fit,
-                    alpha = if (equipped) 1f else 0.15f
+                    contentScale = ContentScale.Fit
                 )
+            } else {
+                Text(text = "+", color = GoldDim, fontFamily = FontPixel(), fontSize = 20.sp)
             }
         }
     }
@@ -352,23 +331,21 @@ private fun SlotShell(label: String, labelStrong: Boolean, content: @Composable 
 }
 
 @Composable
-private fun GearIcon(icon: DrawableResource?, size: Dp) {
+private fun GearIcon(icon: DrawableResource, frame: Color, size: Dp) {
     Box(
         modifier = Modifier
             .size(size)
             .clip(RoundedCornerShape(8.dp))
             .background(Color(0xFF3A2C18))
-            .border(2.dp, Gold, RoundedCornerShape(8.dp)),
+            .border(2.dp, frame, RoundedCornerShape(8.dp)),
         contentAlignment = Alignment.Center
     ) {
-        if (icon != null) {
-            Image(
-                painter = painterResource(icon),
-                contentDescription = null,
-                modifier = Modifier.fillMaxSize().padding(6.dp),
-                contentScale = ContentScale.Fit
-            )
-        }
+        Image(
+            painter = painterResource(icon),
+            contentDescription = null,
+            modifier = Modifier.fillMaxSize().padding(6.dp),
+            contentScale = ContentScale.Fit
+        )
     }
 }
 
@@ -376,12 +353,9 @@ private fun GearIcon(icon: DrawableResource?, size: Dp) {
 
 @Composable
 private fun Backpack(
-    ownedEquipment: List<ShopItem>,
-    equipment: KnightEquipment,
-    onEquip: (KnightEquipmentSlot) -> Unit
+    items: List<Item>,
+    onEquip: (Item) -> Unit
 ) {
-    val available = ownedEquipment.filterNot { it.slot.toKnightSlot().isEquipped(equipment) }
-
     OrnateFrame(modifier = Modifier.fillMaxWidth()) {
         Column(
             modifier = Modifier.padding(10.dp),
@@ -392,11 +366,17 @@ private fun Backpack(
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Text("Plecak", color = Gold, fontFamily = FontPixel(), style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.Bold)
+                Text(
+                    text = "Plecak",
+                    color = Gold,
+                    fontFamily = FontPixel(),
+                    style = MaterialTheme.typography.titleSmall,
+                    fontWeight = FontWeight.Bold
+                )
                 Text("kliknij, zeby zalozyc", color = Muted, fontFamily = FontFirst(), fontSize = 10.sp)
             }
 
-            if (available.isEmpty()) {
+            if (items.isEmpty()) {
                 Text(
                     "Plecak pusty. Kup ekwipunek w sklepie.",
                     color = Muted,
@@ -408,8 +388,8 @@ private fun Backpack(
                     modifier = Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()),
                     horizontalArrangement = Arrangement.spacedBy(10.dp)
                 ) {
-                    available.forEach { item ->
-                        BackpackItem(item = item, onClick = { onEquip(item.slot.toKnightSlot()) })
+                    items.forEach { item ->
+                        BackpackItem(item = item, onClick = { onEquip(item) })
                     }
                 }
             }
@@ -418,7 +398,7 @@ private fun Backpack(
 }
 
 @Composable
-private fun BackpackItem(item: ShopItem, onClick: () -> Unit) {
+private fun BackpackItem(item: Item, onClick: () -> Unit) {
     Column(
         modifier = Modifier
             .width(BACKPACK_ICON + 8.dp)
@@ -426,7 +406,7 @@ private fun BackpackItem(item: ShopItem, onClick: () -> Unit) {
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(3.dp)
     ) {
-        GearIcon(itemIcon(item), BACKPACK_ICON)
+        GearIcon(icon = item.icon(), frame = RarityPalette.frame(item.rarity), size = BACKPACK_ICON)
         Text(
             text = item.name,
             color = Parchment,
@@ -439,13 +419,91 @@ private fun BackpackItem(item: ShopItem, onClick: () -> Unit) {
     }
 }
 
+/* ------------------------------------------ Picker ----------------------------------------- */
+
+/**
+ * Lista posiadanych przedmiotow pasujacych do slotu. Pokazuje efekty kazdego z nich, bo to one -
+ * a nie suche liczby - decyduja, co warto zalozyc.
+ */
+@Composable
+private fun ItemPickerDialog(
+    slot: ItemSlot,
+    items: List<Item>,
+    onDismiss: () -> Unit,
+    onPick: (Item) -> Unit
+) {
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        containerColor = Panel,
+        title = {
+            Text(
+                text = slot.label(),
+                color = Gold,
+                fontFamily = FontPixel(),
+                fontWeight = FontWeight.Bold
+            )
+        },
+        text = {
+            if (items.isEmpty()) {
+                Text(
+                    text = "Nie masz nic na to miejsce. Zajrzyj do sklepu.",
+                    color = Muted,
+                    fontFamily = FontFirst(),
+                    style = MaterialTheme.typography.bodyMedium
+                )
+            } else {
+                Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                    items.forEach { item ->
+                        Row(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .clip(RoundedCornerShape(8.dp))
+                                .background(SlotBg)
+                                .border(1.dp, RarityPalette.frame(item.rarity), RoundedCornerShape(8.dp))
+                                .clickable { onPick(item) }
+                                .padding(8.dp),
+                            horizontalArrangement = Arrangement.spacedBy(8.dp),
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            GearIcon(
+                                icon = item.icon(),
+                                frame = RarityPalette.frame(item.rarity),
+                                size = 40.dp
+                            )
+                            Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
+                                Text(
+                                    text = item.name,
+                                    color = RarityPalette.frame(item.rarity),
+                                    fontFamily = FontFirst(),
+                                    fontWeight = FontWeight.Bold,
+                                    fontSize = 12.sp
+                                )
+                                item.effects.forEach { effect ->
+                                    Text(
+                                        text = "- ${effect.description}",
+                                        color = Emerald,
+                                        fontFamily = FontFirst(),
+                                        fontSize = 9.sp
+                                    )
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        confirmButton = {
+            TextButton(onClick = onDismiss) {
+                Text(text = "Zamknij", color = Gold, fontFamily = FontFirst())
+            }
+        }
+    )
+}
+
 /* ------------------------------------------- Stats ----------------------------------------- */
 
 @Composable
-private fun StatsPanel(equipment: KnightEquipment) {
-    val atk = listOf(equipment.mainHand, equipment.hands).count { it } * 3
-    val def = listOf(equipment.head, equipment.hands, equipment.legs, equipment.feet).count { it } * 2
-
+private fun StatsPanel(equipped: Int) {
     OrnateFrame(modifier = Modifier.fillMaxWidth()) {
         Row(
             modifier = Modifier.padding(10.dp),
@@ -455,20 +513,19 @@ private fun StatsPanel(equipment: KnightEquipment) {
                 header = "Magia",
                 modifier = Modifier.weight(1f),
                 rows = listOf(
-                    StatRow("Moc zaklec", "${172 + def * 4}", false),
-                    StatRow("Leczenie", "${172 + def * 3}", false),
-                    StatRow("Regen many", "${11 + def}", false)
+                    StatRow("Moc zaklec", "${172 + equipped * 8}", false),
+                    StatRow("Leczenie", "${172 + equipped * 6}", false),
+                    StatRow("Regen many", "${11 + equipped}", false)
                 )
             )
             StatCard(
                 header = "Walka",
                 modifier = Modifier.weight(1f),
                 rows = listOf(
-                    StatRow("Obrazenia", "${120 + atk * 8}-${180 + atk * 12}", false),
-                    StatRow("Moc ataku", "${100 + atk * 12}", true),
+                    StatRow("Obrazenia", "${120 + equipped * 8}-${180 + equipped * 12}", false),
+                    StatRow("Moc ataku", "${100 + equipped * 12}", true),
                     StatRow("Szybkosc", "3.6", false),
-                    StatRow("Kryt", "${7 + atk}%", false),
-                    StatRow("Trafienie", "6%", false)
+                    StatRow("Kryt", "${7 + equipped}%", false)
                 )
             )
         }
@@ -480,7 +537,6 @@ private data class StatRow(val label: String, val value: String, val highlight: 
 @Composable
 private fun StatCard(header: String, rows: List<StatRow>, modifier: Modifier = Modifier) {
     Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(5.dp)) {
-        // WoW-style header "dropdown"
         Box(
             modifier = Modifier
                 .fillMaxWidth()
@@ -515,14 +571,13 @@ private fun StatCard(header: String, rows: List<StatRow>, modifier: Modifier = M
 @Composable
 private fun OrnateFrame(
     modifier: Modifier = Modifier,
-    glow: Boolean = false,
     content: @Composable () -> Unit
 ) {
     Box(
         modifier = modifier
             .clip(RoundedCornerShape(12.dp))
             .background(Brush.verticalGradient(listOf(Panel, Obsidian)))
-            .border(2.dp, if (glow) Gold else GoldDim, RoundedCornerShape(12.dp))
+            .border(2.dp, GoldDim, RoundedCornerShape(12.dp))
             .padding(2.dp)
             .border(1.dp, Bronze, RoundedCornerShape(10.dp))
     ) {
@@ -531,12 +586,12 @@ private fun OrnateFrame(
 }
 
 @Composable
-private fun Pill(text: String, strong: Boolean) {
+private fun Pill(text: String) {
     Box(
         modifier = Modifier
             .clip(RoundedCornerShape(6.dp))
             .background(SlotBg)
-            .border(1.dp, if (strong) Gold else GoldDim, RoundedCornerShape(6.dp))
+            .border(1.dp, Gold, RoundedCornerShape(6.dp))
             .padding(horizontal = 8.dp, vertical = 3.dp)
     ) {
         Text(text, color = Gold, fontFamily = FontFirst(), fontSize = 11.sp, fontWeight = FontWeight.Bold)
@@ -556,26 +611,3 @@ private fun HintBar(message: String) {
         Text(message, color = Gold, fontFamily = FontFirst(), style = MaterialTheme.typography.labelMedium)
     }
 }
-
-/* ------------------------------------------ Helpers ---------------------------------------- */
-
-private fun slotIcon(slot: KnightEquipmentSlot): DrawableResource? = when (slot) {
-    KnightEquipmentSlot.Head -> Resources.PlateArmor.head
-    KnightEquipmentSlot.Hands -> Resources.PlateArmor.leftDownHand
-    KnightEquipmentSlot.Legs -> Resources.PlateArmor.leftUpLeg
-    KnightEquipmentSlot.Feet -> Resources.PlateArmor.leftFoot
-    KnightEquipmentSlot.MainHand -> Resources.PlateArmor.swordFront
-    else -> null
-}
-
-private fun itemIcon(item: ShopItem): DrawableResource = when (item.slot) {
-    ShopItemSlot.Head -> Resources.PlateArmor.head
-    ShopItemSlot.Hands -> Resources.PlateArmor.leftDownHand
-    ShopItemSlot.Legs -> Resources.PlateArmor.leftUpLeg
-    ShopItemSlot.Feet -> Resources.PlateArmor.leftFoot
-    ShopItemSlot.MainHand -> Resources.PlateArmor.swordFront
-}
-
-private fun equippedCount(equipment: KnightEquipment): Int = listOf(
-    equipment.head, equipment.hands, equipment.legs, equipment.feet, equipment.mainHand
-).count { it }

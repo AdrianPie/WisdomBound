@@ -8,7 +8,9 @@ import com.lernhero.domain.enum.CharacterState
 import com.lernhero.domain.game.BattleFighter
 import com.lernhero.domain.game.BattlePlaybackEngine
 import com.lernhero.domain.game.BattlePlaybackStep
+import com.lernhero.domain.item.ItemSlot
 import com.lernhero.domain.item.Loadout
+import com.lernhero.domain.item.itemIn
 import com.lernhero.domain.item.toLoadout
 import com.lernhero.domain.preset.MonsterCatalog
 import com.lernhero.domain.preset.PlayerEquipment
@@ -397,12 +399,13 @@ class GameViewModel(
                     maxHp = character.maxHp + hpBonus,
                     hp = character.hp + hpBonus,
                     attack = character.attack + attackBonus,
+                    // Rycerz rysuje sie z plyt, wiec pyta tylko, czy w slocie cokolwiek stoi.
                     knightEquipment = KnightEquipment(
-                        head = equipment.head,
-                        hands = equipment.hands,
-                        legs = equipment.legs,
-                        feet = equipment.feet,
-                        mainHand = equipment.mainHand
+                        head = equipment.itemIn(ItemSlot.Head) != null,
+                        hands = equipment.itemIn(ItemSlot.Hands) != null,
+                        legs = equipment.itemIn(ItemSlot.Legs) != null,
+                        feet = equipment.itemIn(ItemSlot.Feet) != null,
+                        mainHand = equipment.itemIn(ItemSlot.MainHand) != null
                     )
                 )
             }

@@ -41,20 +41,37 @@ object ItemCatalog {
         Loadout(ids.mapNotNull { byId(it) }.associateBy { it.slot })
 }
 
+/* ------------------------------- Ekwipunek gracza -------------------------------- */
+
 /**
- * Most miedzy starym zapisem gracza a nowym systemem.
+ * Przerabia zapis sprzed zmiany formatu (piec flag) na mape slot -> id przedmiotu.
  *
- * [PlayerEquipment] to piec flag zapisanych jeszcze przez poprzedni ekwipunek. Mapujemy je na
- * przedmioty z katalogu, wiec stare stany dzialaja bez migracji bazy - a caly system walki
- * widzi juz tylko [Loadout].
+ * Gracz, ktory mial "head = true", dostaje helm plytowy - czyli dokladnie ten przedmiot,
+ * ktory wtedy oznaczala ta flaga. Nowe zapisy wchodza tu i wychodza nietkniete.
  */
-fun PlayerEquipment.toLoadout(): Loadout {
-    val ids = buildList {
-        if (head) add(Armors.PLATE_HELM.id)
-        if (hands) add(Armors.PLATE_GAUNTLETS.id)
-        if (legs) add(Armors.PLATE_LEGS.id)
-        if (feet) add(Armors.PLATE_BOOTS.id)
-        if (mainHand) add(Weapons.PLATE_SWORD.id)
+fun PlayerEquipment.migrated(): PlayerEquipment {
+    if (equipped.isNotEmpty()) return this
+
+    val legacy = buildMap {
+        if (head) put(ItemSlot.Head.name, Armors.PLATE_HELM.id)
+        if (hands) put(ItemSlot.Hands.name, Armors.PLATE_GAUNTLETS.id)
+        if (legs) put(ItemSlot.Legs.name, Armors.PLATE_LEGS.id)
+        if (feet) put(ItemSlot.Feet.name, Armors.PLATE_BOOTS.id)
+        if (mainHand) put(ItemSlot.MainHand.name, Weapons.PLATE_SWORD.id)
     }
-    return ItemCatalog.loadoutOf(ids)
+    return PlayerEquipment(equipped = legacy)
 }
+
+/** Przedmiot zalozony w danym slocie, albo null. */
+fun PlayerEquipment.itemIn(slot: ItemSlot): Item? =
+    migrated().equipped[slot.name]?.let { ItemCatalog.byId(it) }
+
+fun PlayerEquipment.equip(item: Item): PlayerEquipment =
+    PlayerEquipment(equipped = migrated().equipped + (item.slot.name to item.id))
+
+fun PlayerEquipment.unequip(slot: ItemSlot): PlayerEquipment =
+    PlayerEquipment(equipped = migrated().equipped - slot.name)
+
+/** Zalozony ekwipunek widziany przez system walki: suma statystyk i lista efektow. */
+fun PlayerEquipment.toLoadout(): Loadout =
+    ItemCatalog.loadoutOf(migrated().equipped.values.toList())

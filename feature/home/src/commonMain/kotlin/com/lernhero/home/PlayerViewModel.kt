@@ -3,14 +3,17 @@ package com.lernhero.home
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.lernhero.domain.data.PlayerRepository
+import com.lernhero.domain.item.Item
+import com.lernhero.domain.item.ItemCatalog
+import com.lernhero.domain.item.ItemSlot
+import com.lernhero.domain.item.equip
+import com.lernhero.domain.item.itemIn
+import com.lernhero.domain.item.migrated
+import com.lernhero.domain.item.unequip
 import com.lernhero.domain.preset.MonsterCard
 import com.lernhero.domain.preset.MonsterCatalog
 import com.lernhero.domain.preset.PlayerEquipment
-import com.lernhero.domain.shop.ShopCatalog
-import com.lernhero.domain.shop.ShopItem
-import com.lernhero.domain.shop.ShopItemSlot
 import com.lernhero.game.character.KnightEquipment
-import com.lernhero.game.character.KnightEquipmentSlot
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.IO
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -31,18 +34,32 @@ data class PlayerUiState(
     val party: List<String?> = List(COMPANION_SLOTS) { null },
     val message: String? = null
 ) {
+    /**
+     * Rycerz na ekranie rysuje sie z plyt, wiec interesuje go tylko to, czy w slocie cokolwiek
+     * stoi - nie ktory to przedmiot. Tlumaczenie modelu domenowego na model rysowania siedzi tutaj.
+     */
     val knightEquipment: KnightEquipment
         get() = KnightEquipment(
-            head = equipment.head,
-            hands = equipment.hands,
-            legs = equipment.legs,
-            feet = equipment.feet,
-            mainHand = equipment.mainHand
+            head = equipment.itemIn(ItemSlot.Head) != null,
+            hands = equipment.itemIn(ItemSlot.Hands) != null,
+            legs = equipment.itemIn(ItemSlot.Legs) != null,
+            feet = equipment.itemIn(ItemSlot.Feet) != null,
+            mainHand = equipment.itemIn(ItemSlot.MainHand) != null
         )
 
-    /** Equipment the player owns (from the shop catalog), for the inventory drag panel. */
-    val ownedEquipment: List<ShopItem>
-        get() = ownedItems.mapNotNull { ShopCatalog.byId(it) }
+    /** Wszystko, co gracz kupil. */
+    val ownedEquipment: List<Item>
+        get() = ownedItems.mapNotNull { ItemCatalog.byId(it) }
+
+    /** Plecak: posiadane, ale niezalozone. */
+    val backpack: List<Item>
+        get() = ownedEquipment.filter { item -> equipment.itemIn(item.slot)?.id != item.id }
+
+    fun itemIn(slot: ItemSlot): Item? = equipment.itemIn(slot)
+
+    /** Posiadane przedmioty pasujace do slotu - lista do wyboru po kliknieciu pustego miejsca. */
+    fun ownedFor(slot: ItemSlot): List<Item> =
+        ownedEquipment.filter { it.slot == slot && equipment.itemIn(slot)?.id != it.id }
 
     /** Monsters resolved for each companion slot (null = empty slot). */
     val partyMonsters: List<MonsterCard?>
@@ -57,11 +74,6 @@ data class PlayerUiState(
             party.filterNotNull().forEach { remaining.remove(it) }
             return remaining.mapNotNull { MonsterCatalog.byId(it) }
         }
-
-    fun ownsItemFor(slot: KnightEquipmentSlot): Boolean =
-        slot.toShopSlot()?.let { shopSlot ->
-            ShopCatalog.itemForSlot(shopSlot)?.id in ownedItems
-        } ?: false
 }
 
 class PlayerViewModel(
@@ -86,7 +98,8 @@ class PlayerViewModel(
                         loading = false,
                         name = player.name.orEmpty(),
                         money = player.money,
-                        equipment = player.equipment,
+                        // Stary zapis (piec flag) przerabiamy na mape slot -> przedmiot od razu przy wczytaniu.
+                        equipment = player.equipment.migrated(),
                         ownedItems = player.ownedItems,
                         ownedMonsters = player.ownedMonsters,
                         party = player.party.normalizedParty()
@@ -96,44 +109,34 @@ class PlayerViewModel(
         }
     }
 
-    // region Equipment (drag & drop)
+    // region Ekwipunek
 
-    /** Equips an owned item into its slot. No-op if the item is not owned. */
-    fun equipSlot(slot: KnightEquipmentSlot) {
-        if (!slot.isEquippable) return
-        if (!_uiState.value.ownsItemFor(slot)) {
+    /** Zaklada przedmiot. Cokolwiek stalo w tym slocie, wraca do plecaka. */
+    fun equipItem(item: Item) {
+        val state = _uiState.value
+        if (item.id !in state.ownedItems) {
             _uiState.update { it.copy(message = "Najpierw kup ten przedmiot w sklepie.") }
             return
         }
-        setSlotEquipped(slot, equipped = true)
+        persistEquipment(state.equipment.equip(item))
     }
 
-    fun unequipSlot(slot: KnightEquipmentSlot) {
-        if (!slot.isEquippable) return
-        setSlotEquipped(slot, equipped = false)
+    fun unequipSlot(slot: ItemSlot) {
+        val state = _uiState.value
+        if (state.equipment.itemIn(slot) == null) return
+        persistEquipment(state.equipment.unequip(slot))
     }
 
-    private fun setSlotEquipped(slot: KnightEquipmentSlot, equipped: Boolean) {
-        val current = _uiState.value.equipment
-        val newEquipment = when (slot) {
-            KnightEquipmentSlot.Head -> current.copy(head = equipped)
-            KnightEquipmentSlot.Hands -> current.copy(hands = equipped)
-            KnightEquipmentSlot.Legs -> current.copy(legs = equipped)
-            KnightEquipmentSlot.Feet -> current.copy(feet = equipped)
-            KnightEquipmentSlot.MainHand -> current.copy(mainHand = equipped)
-            else -> current
-        }
-        if (newEquipment == current) return
-
-        _uiState.update { it.copy(equipment = newEquipment, message = null) }
+    private fun persistEquipment(equipment: PlayerEquipment) {
+        _uiState.update { it.copy(equipment = equipment, message = null) }
         viewModelScope.launch(Dispatchers.IO) {
-            playerRepository.updateEquipment(newEquipment)
+            playerRepository.updateEquipment(equipment)
         }
     }
 
     // endregion
 
-    // region Party (drag & drop)
+    // region Party
 
     /** Places an owned monster into [slotIndex]. Blocks placing more copies than are owned. */
     fun placeInParty(monsterId: String, slotIndex: Int) {
@@ -181,7 +184,7 @@ class PlayerViewModel(
 
     // region Shop
 
-    fun buyItem(item: ShopItem) {
+    fun buyItem(item: Item) {
         val state = _uiState.value
         if (item.id in state.ownedItems) {
             _uiState.update { it.copy(message = "Masz juz ten przedmiot.") }
@@ -254,20 +257,3 @@ class PlayerViewModel(
 /** Pads/truncates a stored party to exactly [COMPANION_SLOTS] slots. */
 private fun List<String?>.normalizedParty(): List<String?> =
     List(COMPANION_SLOTS) { index -> getOrNull(index) }
-
-fun KnightEquipmentSlot.toShopSlot(): ShopItemSlot? = when (this) {
-    KnightEquipmentSlot.Head -> ShopItemSlot.Head
-    KnightEquipmentSlot.Hands -> ShopItemSlot.Hands
-    KnightEquipmentSlot.Legs -> ShopItemSlot.Legs
-    KnightEquipmentSlot.Feet -> ShopItemSlot.Feet
-    KnightEquipmentSlot.MainHand -> ShopItemSlot.MainHand
-    else -> null
-}
-
-fun ShopItemSlot.toKnightSlot(): KnightEquipmentSlot = when (this) {
-    ShopItemSlot.Head -> KnightEquipmentSlot.Head
-    ShopItemSlot.Hands -> KnightEquipmentSlot.Hands
-    ShopItemSlot.Legs -> KnightEquipmentSlot.Legs
-    ShopItemSlot.Feet -> KnightEquipmentSlot.Feet
-    ShopItemSlot.MainHand -> KnightEquipmentSlot.MainHand
-}

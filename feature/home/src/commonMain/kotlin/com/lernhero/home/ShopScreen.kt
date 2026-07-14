@@ -45,15 +45,13 @@ import androidx.compose.ui.unit.sp
 import com.lernhero.domain.data.PlayerRepository
 import com.lernhero.domain.preset.MonsterCard
 import com.lernhero.domain.preset.MonsterCatalog
-import com.lernhero.domain.shop.ShopCatalog
-import com.lernhero.domain.shop.ShopItem
-import com.lernhero.domain.shop.ShopItemSlot
+import com.lernhero.domain.item.Item
+import com.lernhero.domain.item.ItemCatalog
 import com.lernhero.home.component.MonsterCardView
 import com.lernhero.shared.FontFirst
 import com.lernhero.shared.FontPixel
 import com.lernhero.shared.Resources
 import com.lernhero.shared.Surface as AppSurface
-import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.painterResource
 import org.koin.compose.koinInject
 
@@ -238,14 +236,14 @@ private fun ShopTabs(selected: ShopTab, onSelect: (ShopTab) -> Unit) {
 private fun EquipmentShop(
     ownedItems: List<String>,
     money: Int,
-    onBuy: (ShopItem) -> Unit
+    onBuy: (Item) -> Unit
 ) {
     FlowRow(
         modifier = Modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.spacedBy(10.dp),
         verticalArrangement = Arrangement.spacedBy(10.dp)
     ) {
-        ShopCatalog.items.forEach { item ->
+        ItemCatalog.all.forEach { item ->
             EquipmentShopCard(
                 item = item,
                 owned = item.id in ownedItems,
@@ -259,7 +257,7 @@ private fun EquipmentShop(
 
 @Composable
 private fun EquipmentShopCard(
-    item: ShopItem,
+    item: Item,
     owned: Boolean,
     canBuy: Boolean,
     onBuy: () -> Unit,
@@ -269,7 +267,7 @@ private fun EquipmentShopCard(
         modifier = modifier
             .clip(RoundedCornerShape(10.dp))
             .background(ShopPanel)
-            .border(1.5.dp, ShopGoldFrame, RoundedCornerShape(10.dp))
+            .border(1.5.dp, RarityPalette.frame(item.rarity), RoundedCornerShape(10.dp))
             .padding(10.dp),
         verticalArrangement = Arrangement.spacedBy(6.dp),
         horizontalAlignment = Alignment.CenterHorizontally
@@ -301,8 +299,8 @@ private fun EquipmentShopCard(
             maxLines = 1
         )
         Text(
-            text = item.slot.label(),
-            color = ShopMuted,
+            text = "${item.slot.label()}  -  ${RarityPalette.label(item.rarity)}",
+            color = RarityPalette.frame(item.rarity),
             fontFamily = FontFirst(),
             fontSize = 10.sp
         )
@@ -312,8 +310,17 @@ private fun EquipmentShopCard(
             fontFamily = FontFirst(),
             fontSize = 10.sp,
             textAlign = TextAlign.Center,
-            maxLines = 2
+            maxLines = 3
         )
+        item.effects.forEach { effect ->
+            Text(
+                text = "- ${effect.description}",
+                color = Color(0xFF7FD1A0),
+                fontFamily = FontFirst(),
+                fontSize = 9.sp,
+                textAlign = TextAlign.Center
+            )
+        }
         BuyButton(
             cost = item.cost,
             owned = owned,
@@ -429,20 +436,4 @@ private fun BuyButton(
             pulse = false
         }
     }
-}
-
-private fun ShopItem.icon(): DrawableResource = when (slot) {
-    ShopItemSlot.Head -> Resources.PlateArmor.head
-    ShopItemSlot.Hands -> Resources.PlateArmor.leftDownHand
-    ShopItemSlot.Legs -> Resources.PlateArmor.leftUpLeg
-    ShopItemSlot.Feet -> Resources.PlateArmor.leftFoot
-    ShopItemSlot.MainHand -> Resources.PlateArmor.swordFront
-}
-
-private fun ShopItemSlot.label(): String = when (this) {
-    ShopItemSlot.Head -> "Glowa"
-    ShopItemSlot.Hands -> "Rece"
-    ShopItemSlot.Legs -> "Nogi"
-    ShopItemSlot.Feet -> "Stopy"
-    ShopItemSlot.MainHand -> "Glowna reka"
 }
