@@ -51,8 +51,8 @@ import androidx.compose.ui.unit.sp
 import com.lernhero.domain.dungeon.DungeonMap
 import com.lernhero.domain.dungeon.DungeonMapGenerator
 import com.lernhero.domain.dungeon.DungeonNode
-import com.lernhero.shared.FontFirst
-import com.lernhero.shared.FontPixel
+import com.lernhero.shared.theme.FontFirst
+import com.lernhero.shared.theme.FontPixel
 import kotlin.random.Random
 import org.jetbrains.compose.resources.painterResource
 

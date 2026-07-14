@@ -2,7 +2,7 @@ package com.lernhero.home.dungeon
 
 import androidx.compose.ui.graphics.Color
 import com.lernhero.domain.dungeon.DungeonNodeType
-import com.lernhero.shared.Resources
+import com.lernhero.shared.resources.Resources
 import org.jetbrains.compose.resources.DrawableResource
 
 /**

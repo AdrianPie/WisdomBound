@@ -3,7 +3,7 @@ package com.lernhero.domain.item
 import com.lernhero.domain.item.catalog.Accessories
 import com.lernhero.domain.item.catalog.Armors
 import com.lernhero.domain.item.catalog.Weapons
-import com.lernhero.domain.preset.PlayerEquipment
+import com.lernhero.domain.player.PlayerEquipment
 
 /**
  * Rejestr wszystkich przedmiotow w grze.

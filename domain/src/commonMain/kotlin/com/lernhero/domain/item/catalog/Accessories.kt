@@ -13,7 +13,7 @@ import com.lernhero.domain.combat.effects.FrostThornsEffect
 import com.lernhero.domain.combat.effects.SpeedEffect
 import com.lernhero.domain.item.Item
 import com.lernhero.domain.item.ItemSlot
-import com.lernhero.domain.preset.Rarity
+import com.lernhero.domain.common.Rarity
 
 /**
  * Dodatki. Tu widac sile skladania: "pierscien krytyka" i "amulet mrozu" nie znaja sie nawzajem,

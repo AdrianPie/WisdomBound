@@ -1,6 +1,5 @@
 package com.lernhero.game.character
 
-import com.lernhero.domain.enum.CharacterState
 
 data class CharacterUiModel(
     val id: String,

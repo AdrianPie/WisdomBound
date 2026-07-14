@@ -2,8 +2,8 @@ package com.lernhero.auth
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.lernhero.domain.data.PlayerRepository
-import com.lernhero.domain.preset.Character
+import com.lernhero.domain.repository.PlayerRepository
+import com.lernhero.domain.player.HeroClass
 import dev.gitlive.firebase.Firebase
 import dev.gitlive.firebase.auth.FirebaseUser
 import dev.gitlive.firebase.auth.auth
@@ -49,7 +49,7 @@ class AuthViewModel(
 
     fun createPlayer(
         user: FirebaseUser?,
-        character: Character,
+        character: HeroClass,
         name: String,
         onSuccess: () -> Unit,
         onFailure: (String) -> Unit

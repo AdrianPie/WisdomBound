@@ -2,7 +2,7 @@ package com.lernhero.domain.item
 
 import com.lernhero.domain.combat.Effect
 import com.lernhero.domain.combat.Stats
-import com.lernhero.domain.preset.Rarity
+import com.lernhero.domain.common.Rarity
 
 /** Miejsca na postaci. Nowy slot dopisuje sie tutaj - reszta systemu nie zauwazy roznicy. */
 enum class ItemSlot {

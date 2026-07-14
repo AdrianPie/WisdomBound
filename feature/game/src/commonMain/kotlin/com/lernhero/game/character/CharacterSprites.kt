@@ -1,9 +1,8 @@
 package com.lernhero.game.character
 
-import com.lernhero.domain.enum.CharacterState
 
 
-import com.lernhero.shared.SpriteAsset
+import com.lernhero.shared.resources.SpriteAsset
 
 data class CharacterSprites(
     val idle: SpriteAsset,

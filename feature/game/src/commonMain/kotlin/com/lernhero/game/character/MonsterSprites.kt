@@ -1,12 +1,12 @@
 package com.lernhero.game.character
 
-import com.lernhero.shared.Resources
-import com.lernhero.shared.SpriteAsset
+import com.lernhero.shared.resources.Resources
+import com.lernhero.shared.resources.SpriteAsset
 
 /**
- * Maps a monster/character sprite key (as stored on [com.lernhero.domain.preset.MonsterCard.spriteKey]
+ * Maps a monster/character sprite key (as stored on [com.lernhero.domain.monster.MonsterCard.spriteKey]
  * and used by the battle) to its animated sprite set. Single source of truth for both the battle
- * ([com.lernhero.game.GameViewModel]) and the party/shop portraits in the home feature.
+ * ([com.lernhero.game.BattleViewModel]) and the party/shop portraits in the home feature.
  */
 object MonsterSprites {
     fun spritesFor(key: String): CharacterSprites = when (key) {

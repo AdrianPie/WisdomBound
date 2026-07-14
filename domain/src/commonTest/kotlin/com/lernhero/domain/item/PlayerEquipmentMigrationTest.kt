@@ -3,7 +3,7 @@ package com.lernhero.domain.item
 import com.lernhero.domain.combat.StatType
 import com.lernhero.domain.item.catalog.Armors
 import com.lernhero.domain.item.catalog.Weapons
-import com.lernhero.domain.preset.PlayerEquipment
+import com.lernhero.domain.player.PlayerEquipment
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertNull

@@ -1,10 +1,10 @@
 package com.lernhero.data
 
 
-import com.lernhero.domain.data.PlayerRepository
-import com.lernhero.domain.preset.Character
-import com.lernhero.domain.preset.Player
-import com.lernhero.domain.preset.PlayerEquipment
+import com.lernhero.domain.repository.PlayerRepository
+import com.lernhero.domain.player.HeroClass
+import com.lernhero.domain.player.Player
+import com.lernhero.domain.player.PlayerEquipment
 import dev.gitlive.firebase.Firebase
 import dev.gitlive.firebase.auth.FirebaseUser
 import dev.gitlive.firebase.auth.auth
@@ -24,7 +24,7 @@ class PlayerRepositoryImpl: PlayerRepository {
     override suspend fun createPlayer(
         user: FirebaseUser?,
         name: String,
-        character: Character?,
+        character: HeroClass?,
         onSuccess: () -> Unit,
         onFailure: (String) -> Unit
     ) {

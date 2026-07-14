@@ -9,7 +9,7 @@ import com.lernhero.domain.combat.effects.ReflectDamageEffect
 import com.lernhero.domain.combat.effects.SpeedEffect
 import com.lernhero.domain.item.Item
 import com.lernhero.domain.item.ItemSlot
-import com.lernhero.domain.preset.Rarity
+import com.lernhero.domain.common.Rarity
 
 /**
  * Pancerz. Identyfikatory zostaly te same co w starym sklepie ("plate_helm", "plate_boots"...),

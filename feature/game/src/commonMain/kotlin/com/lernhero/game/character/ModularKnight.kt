@@ -26,9 +26,9 @@ import androidx.compose.ui.graphics.TransformOrigin
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.lernhero.shared.Resources.KnightPivots
-import com.lernhero.shared.Resources.PlateArmor
-import com.lernhero.shared.Resources.Player
+import com.lernhero.shared.resources.Resources.KnightPivots
+import com.lernhero.shared.resources.Resources.PlateArmor
+import com.lernhero.shared.resources.Resources.Player
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.painterResource
 

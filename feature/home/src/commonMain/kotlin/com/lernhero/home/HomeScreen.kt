@@ -31,12 +31,12 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import com.lernhero.shared.ButtonPrimary
-import com.lernhero.shared.FontFirst
-import com.lernhero.shared.FontPixel
-import com.lernhero.shared.Resources
-import com.lernhero.shared.Surface as AppSurface
-import com.lernhero.shared.TextPrimary
+import com.lernhero.shared.theme.ButtonPrimary
+import com.lernhero.shared.theme.FontFirst
+import com.lernhero.shared.theme.FontPixel
+import com.lernhero.shared.resources.Resources
+import com.lernhero.shared.theme.Surface as AppSurface
+import com.lernhero.shared.theme.TextPrimary
 import org.jetbrains.compose.resources.painterResource
 
 @Composable

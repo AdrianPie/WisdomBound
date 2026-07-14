@@ -10,7 +10,7 @@ import com.lernhero.domain.combat.effects.MultiTargetAttackEffect
 import com.lernhero.domain.combat.effects.PoisonOnHitEffect
 import com.lernhero.domain.item.Item
 import com.lernhero.domain.item.ItemSlot
-import com.lernhero.domain.preset.Rarity
+import com.lernhero.domain.common.Rarity
 
 /**
  * Bron. Kazdy wpis to czysty przepis: statystyki + efekty. Zero logiki.

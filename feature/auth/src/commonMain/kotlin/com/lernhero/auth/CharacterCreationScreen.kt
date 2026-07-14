@@ -41,15 +41,15 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import com.lernhero.domain.preset.Character
-import com.lernhero.domain.preset.CharacterPreset
-import com.lernhero.shared.ButtonPrimary
-import com.lernhero.shared.FontFirst
-import com.lernhero.shared.FontPixel
-import com.lernhero.shared.FontSize
-import com.lernhero.shared.Resources
-import com.lernhero.shared.Surface
-import com.lernhero.shared.TextPrimary
+import com.lernhero.domain.player.HeroClass
+import com.lernhero.domain.player.HeroClasses
+import com.lernhero.shared.theme.ButtonPrimary
+import com.lernhero.shared.theme.FontFirst
+import com.lernhero.shared.theme.FontPixel
+import com.lernhero.shared.theme.FontSize
+import com.lernhero.shared.resources.Resources
+import com.lernhero.shared.theme.Surface
+import com.lernhero.shared.theme.TextPrimary
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.painterResource
 import org.koin.compose.viewmodel.koinViewModel
@@ -65,7 +65,7 @@ fun CharacterCreationScreen(
     val viewModel = koinViewModel<AuthViewModel>()
 
     var name by remember { mutableStateOf("") }
-    var selectedClass by remember { mutableStateOf<Character?>(null) }
+    var selectedClass by remember { mutableStateOf<HeroClass?>(null) }
     var isSaving by remember { mutableStateOf(false) }
     var errorMessage by remember { mutableStateOf<String?>(null) }
 
@@ -121,17 +121,17 @@ fun CharacterCreationScreen(
             ClassCard(
                 title = "Rycerz",
                 avatar = Resources.Image.knightAvatar,
-                character = CharacterPreset.Knight,
-                selected = selectedClass?.id == CharacterPreset.Knight.id,
-                onClick = { selectedClass = CharacterPreset.Knight },
+                character = HeroClasses.Knight,
+                selected = selectedClass?.id == HeroClasses.Knight.id,
+                onClick = { selectedClass = HeroClasses.Knight },
                 modifier = Modifier.weight(1f)
             )
             ClassCard(
                 title = "Czarodziej",
                 avatar = Resources.Image.sorcererAvatar,
-                character = CharacterPreset.Sorcerer,
-                selected = selectedClass?.id == CharacterPreset.Sorcerer.id,
-                onClick = { selectedClass = CharacterPreset.Sorcerer },
+                character = HeroClasses.Sorcerer,
+                selected = selectedClass?.id == HeroClasses.Sorcerer.id,
+                onClick = { selectedClass = HeroClasses.Sorcerer },
                 modifier = Modifier.weight(1f)
             )
         }
@@ -193,7 +193,7 @@ fun CharacterCreationScreen(
 private fun ClassCard(
     title: String,
     avatar: DrawableResource,
-    character: Character,
+    character: HeroClass,
     selected: Boolean,
     onClick: () -> Unit,
     modifier: Modifier = Modifier
