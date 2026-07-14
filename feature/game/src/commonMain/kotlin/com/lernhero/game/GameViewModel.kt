@@ -164,27 +164,54 @@ class GameViewModel(
         }
     }
 
+    /**
+     * Przyjmuje odpowiedz i **zatrzymuje** quiz na odslonieciu wyniku - nie przewija od razu
+     * do kolejnego pytania. Pusty [answerId] oznacza, ze skonczyl sie czas.
+     *
+     * Dalej quiz rusza dopiero z [continueQuiz], ktore ekran wywoluje po chwili na obejrzenie
+     * poprawnej odpowiedzi.
+     */
     fun answerQuiz(answerId: String) {
         _uiState.update { state ->
             val quiz = state.quiz ?: return@update state
-            if (state.phase != GamePhase.Quiz) return@update state
+            if (state.phase != GamePhase.Quiz || quiz.revealed) return@update state
 
             val question = quiz.currentQuestion ?: return@update state.startUpgradePhase(quiz)
             val isCorrect = question.answers.firstOrNull { it.id == answerId }?.isCorrect == true
-            // Nagroda idzie za trudnoscia pytania, nie za sama liczba trafien.
-            val updatedQuiz = quiz.copy(
-                correctAnswers = quiz.correctAnswers + if (isCorrect) 1 else 0,
-                earnedPoints = quiz.earnedPoints + if (isCorrect) question.reward else 0
+
+            state.copy(
+                // Nagroda idzie za trudnoscia pytania, nie za sama liczba trafien.
+                quiz = quiz.copy(
+                    correctAnswers = quiz.correctAnswers + if (isCorrect) 1 else 0,
+                    earnedPoints = quiz.earnedPoints + if (isCorrect) question.reward else 0,
+                    selectedAnswerId = answerId.ifBlank { null },
+                    revealed = true
+                ),
+                message = when {
+                    isCorrect -> "Dobra odpowiedz. +${question.reward} pkt"
+                    answerId.isBlank() -> "Czas minal."
+                    else -> "Zla odpowiedz."
+                }
             )
+        }
+    }
+
+    /** Przechodzi do kolejnego pytania (albo do nagrod) po pokazaniu, ktora odpowiedz byla dobra. */
+    fun continueQuiz() {
+        _uiState.update { state ->
+            val quiz = state.quiz ?: return@update state
+            if (state.phase != GamePhase.Quiz || !quiz.revealed) return@update state
 
             if (quiz.currentQuestionIndex >= quiz.questions.lastIndex) {
-                state.startUpgradePhase(updatedQuiz)
+                state.startUpgradePhase(quiz)
             } else {
                 state.copy(
-                    quiz = updatedQuiz.copy(
-                        currentQuestionIndex = quiz.currentQuestionIndex + 1
+                    quiz = quiz.copy(
+                        currentQuestionIndex = quiz.currentQuestionIndex + 1,
+                        selectedAnswerId = null,
+                        revealed = false
                     ),
-                    message = if (isCorrect) "Dobra odpowiedz." else "Zla odpowiedz."
+                    message = null
                 )
             }
         }

@@ -87,7 +87,8 @@ fun FightScreen() {
 
             GamePhase.Quiz -> QuizDialog(
                 state = state,
-                onAnswer = viewModel::answerQuiz
+                onAnswer = viewModel::answerQuiz,
+                onContinue = viewModel::continueQuiz
             )
 
             GamePhase.Upgrade -> UpgradeDialog(

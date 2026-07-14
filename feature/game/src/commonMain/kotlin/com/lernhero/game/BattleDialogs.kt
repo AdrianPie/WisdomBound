@@ -1,5 +1,6 @@
 package com.lernhero.game
 
+import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.tween
@@ -26,6 +27,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -41,24 +43,35 @@ import com.lernhero.shared.CategoryRed
 import com.lernhero.shared.FontFirst
 import com.lernhero.shared.FontPixel
 import com.lernhero.shared.TextPrimary
+import kotlinx.coroutines.delay
 
 @Composable
 fun QuizDialog(
     state: GameStateUi,
-    onAnswer: (String) -> Unit
+    onAnswer: (String) -> Unit,
+    onContinue: () -> Unit
 ) {
     val quiz = state.quiz ?: return
     val question = quiz.currentQuestion ?: return
     val progress = (quiz.currentQuestionIndex + 1).toFloat() / quiz.questions.size.toFloat()
 
     // Trudniejsze pytanie dostaje wiecej czasu - 5 sekund na stolice Bhutanu bylo okrucienstwem.
+    // Zegar staje w chwili odpowiedzi: podczas odslony nikt juz nikogo nie goni.
     val timeProgress = remember(question.id) { Animatable(1f) }
-    LaunchedEffect(question.id) {
+    LaunchedEffect(question.id, quiz.revealed) {
+        if (quiz.revealed) return@LaunchedEffect
         timeProgress.animateTo(
             targetValue = 0f,
             animationSpec = tween(durationMillis = question.seconds * 1000, easing = LinearEasing)
         )
         onAnswer("")
+    }
+
+    // Chwila na zobaczenie, ktora odpowiedz byla poprawna - dopiero potem kolejne pytanie.
+    LaunchedEffect(question.id, quiz.revealed) {
+        if (!quiz.revealed) return@LaunchedEffect
+        delay(QUIZ_REVEAL_MILLIS)
+        onContinue()
     }
 
     Dialog(onDismissRequest = {}) {
@@ -125,24 +138,25 @@ fun QuizDialog(
                             horizontalArrangement = Arrangement.spacedBy(8.dp)
                         ) {
                             rowAnswers.forEach { answer ->
-                                Button(
+                                AnswerButton(
+                                    answer = answer,
+                                    revealed = quiz.revealed,
+                                    picked = quiz.selectedAnswerId == answer.id,
                                     onClick = { onAnswer(answer.id) },
-                                    modifier = Modifier.weight(1f),
-                                    shape = RoundedCornerShape(8.dp),
-                                    colors = ButtonDefaults.buttonColors(
-                                        containerColor = Color.White,
-                                        contentColor = TextPrimary
-                                    )
-                                ) {
-                                    Text(
-                                        text = answer.text,
-                                        fontFamily = FontFirst(),
-                                        maxLines = 2
-                                    )
-                                }
+                                    modifier = Modifier.weight(1f)
+                                )
                             }
                         }
                     }
+                }
+
+                if (quiz.revealed) {
+                    RevealBanner(
+                        correct = quiz.answeredCorrectly,
+                        timedOut = quiz.selectedAnswerId == null,
+                        correctText = quiz.correctAnswer?.text.orEmpty(),
+                        reward = question.reward
+                    )
                 }
             }
         }
@@ -375,4 +389,89 @@ private fun difficultyColor(label: String): Color = when (label) {
     "Srednie" -> Color(0xFFFFD100)
     "Trudne" -> Color(0xFFFF8A3D)
     else -> Color(0xFFFF4D4D)
+}
+
+/** Ile czasu quiz stoi po odpowiedzi, zebys zdazyl zobaczyc, ktora byla dobra. */
+private const val QUIZ_REVEAL_MILLIS = 1600L
+
+private val AnswerGreen = Color(0xFF2E9E52)
+private val AnswerRed = Color(0xFFD64545)
+private val AnswerFaded = Color(0xFF3A3733)
+
+/**
+ * Przycisk odpowiedzi. Do momentu odpowiedzi wyglada tak samo dla wszystkich; po odslonie
+ * poprawna zapala sie na zielono, zle klikniecie na czerwono, a reszta gasnie.
+ */
+@Composable
+private fun AnswerButton(
+    answer: QuizAnswer,
+    revealed: Boolean,
+    picked: Boolean,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    val container by animateColorAsState(
+        when {
+            !revealed -> Color.White
+            answer.isCorrect -> AnswerGreen
+            picked -> AnswerRed
+            else -> AnswerFaded
+        }
+    )
+    val content = when {
+        !revealed -> TextPrimary
+        answer.isCorrect || picked -> Color.White
+        else -> Color(0xFF8C857C)
+    }
+
+    Button(
+        // Po odslonie klikanie nic nie daje - odpowiedz jest juz zapisana.
+        onClick = { if (!revealed) onClick() },
+        modifier = modifier,
+        shape = RoundedCornerShape(8.dp),
+        colors = ButtonDefaults.buttonColors(
+            containerColor = container,
+            contentColor = content
+        )
+    ) {
+        Text(
+            text = answer.text,
+            fontFamily = FontFirst(),
+            fontWeight = if (revealed && answer.isCorrect) FontWeight.Bold else FontWeight.Normal,
+            maxLines = 2
+        )
+    }
+}
+
+/** Jednozdaniowy werdykt pod odpowiedziami. */
+@Composable
+private fun RevealBanner(
+    correct: Boolean,
+    timedOut: Boolean,
+    correctText: String,
+    reward: Int
+) {
+    val color = if (correct) AnswerGreen else AnswerRed
+    val text = when {
+        correct -> "Dobrze! +$reward pkt"
+        timedOut -> "Czas minal. Poprawna: $correctText"
+        else -> "Zle. Poprawna: $correctText"
+    }
+
+    Box(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(8.dp))
+            .background(color.copy(alpha = 0.18f))
+            .border(1.dp, color, RoundedCornerShape(8.dp))
+            .padding(horizontal = 12.dp, vertical = 8.dp)
+    ) {
+        Text(
+            text = text,
+            color = color,
+            fontFamily = FontFirst(),
+            fontWeight = FontWeight.Bold,
+            fontSize = 13.sp
+        )
+    }
 }

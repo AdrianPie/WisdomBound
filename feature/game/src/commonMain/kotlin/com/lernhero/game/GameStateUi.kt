@@ -62,10 +62,24 @@ data class QuizState(
     val currentQuestionIndex: Int = 0,
     val correctAnswers: Int = 0,
     /** Punkty zebrane w tym quizie - trudniejsze pytania placa wiecej. */
-    val earnedPoints: Int = 0
+    val earnedPoints: Int = 0,
+    /** Co kliknal gracz. Null, gdy skonczyl mu sie czas. */
+    val selectedAnswerId: String? = null,
+    /**
+     * Czy odslonilismy juz wynik. Przez chwile po odpowiedzi quiz stoi: poprawna odpowiedz
+     * swieci na zielono, zle klikniecie na czerwono - zeby bylo wiadomo, jak bylo naprawde.
+     */
+    val revealed: Boolean = false
 ) {
     val currentQuestion: QuizQuestion?
         get() = questions.getOrNull(currentQuestionIndex)
+
+    val correctAnswer: QuizAnswer?
+        get() = currentQuestion?.answers?.firstOrNull { it.isCorrect }
+
+    /** Czy gracz trafil. Fałsz takze wtedy, gdy czas minal bez odpowiedzi. */
+    val answeredCorrectly: Boolean
+        get() = selectedAnswerId != null && selectedAnswerId == correctAnswer?.id
 }
 
 data class QuizQuestion(
