@@ -12,6 +12,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.IntSize
+import com.lernhero.game.BattleSpeed
 import com.lernhero.shared.SpriteAsset
 import kotlinx.coroutines.delay
 import org.jetbrains.compose.resources.imageResource
@@ -33,19 +34,28 @@ fun TestCharacter(
     val frameAspectRatio = sprite.frameWidth.toFloat() / sprite.frameHeight.toFloat()
     var frameIndex by remember(sprite, isLooping) { mutableIntStateOf(0) }
 
-    LaunchedEffect(sprite, isLooping) {
+    // Animacje jednorazowe (atak, smierc) musza zmiescic sie w skroconym kroku walki, wiec ida
+    // w jej tempie. Idle i trafienie zostaja w swoim rytmie - inaczej przy 8x cale pole bitwy
+    // wibruje, choc zadna z tych animacji niczego nie opoznia.
+    val frameDelay = if (isLooping) {
+        sprite.animationSpeed
+    } else {
+        BattleSpeed.scale(sprite.animationSpeed)
+    }
+
+    LaunchedEffect(sprite, isLooping, frameDelay) {
         frameIndex = 0
 
         if (isLooping) {
             while (true) {
-                delay(sprite.animationSpeed)
+                delay(frameDelay)
                 frameIndex = (frameIndex + 1) % animationFrames
             }
         } else {
             for (frame in 0 until animationFrames) {
                 frameIndex = frame
                 if (frame < animationFrames - 1) {
-                    delay(sprite.animationSpeed)
+                    delay(frameDelay)
                 }
             }
         }

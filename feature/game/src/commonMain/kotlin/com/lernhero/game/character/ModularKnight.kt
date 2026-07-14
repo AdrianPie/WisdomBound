@@ -40,27 +40,34 @@ fun ModularKnight(
     equipment: KnightEquipment = if (armored) KnightEquipment.FullPlate else KnightEquipment.Empty,
     sizeDp: Dp = 300.dp,
     interactive: Boolean = true,
+    /**
+     * Mnoznik tempa zamachu. W walce podaje go BattleSpeed; poza nia (ekwipunek, podglad)
+     * rycerz macha w normalnym tempie.
+     */
+    attackSpeed: Float = 1f,
 ) {
     val gear = if (armored) KnightEquipment.FullPlate else equipment
     val wandAttack = remember { Animatable(0f) }
     var localAttackTrigger by remember { mutableStateOf(0) }
 
+    fun faster(millis: Int): Int = (millis / attackSpeed).toInt().coerceAtLeast(1)
+
     suspend fun playWandAttack() {
         wandAttack.stop()
         wandAttack.snapTo(0f)
         // Anticipation: slight wind-up in the opposite direction
-        wandAttack.animateTo(-0.12f, tween(140, easing = FastOutSlowInEasing))
+        wandAttack.animateTo(-0.12f, tween(faster(140), easing = FastOutSlowInEasing))
         // Rise with a small overshoot, then settle into the pose
-        wandAttack.animateTo(1.06f, tween(380, easing = FastOutSlowInEasing))
-        wandAttack.animateTo(1f, tween(150, easing = LinearOutSlowInEasing))
+        wandAttack.animateTo(1.06f, tween(faster(380), easing = FastOutSlowInEasing))
+        wandAttack.animateTo(1f, tween(faster(150), easing = LinearOutSlowInEasing))
         // ~2s channel hold with a gentle pulse instead of a frozen pose
         repeat(2) {
-            wandAttack.animateTo(0.975f, tween(480, easing = EaseInOutSine))
-            wandAttack.animateTo(1f, tween(480, easing = EaseInOutSine))
+            wandAttack.animateTo(0.975f, tween(faster(480), easing = EaseInOutSine))
+            wandAttack.animateTo(1f, tween(faster(480), easing = EaseInOutSine))
         }
         // Return with follow-through past neutral, then settle
-        wandAttack.animateTo(-0.05f, tween(340, easing = FastOutSlowInEasing))
-        wandAttack.animateTo(0f, tween(160, easing = LinearOutSlowInEasing))
+        wandAttack.animateTo(-0.05f, tween(faster(340), easing = FastOutSlowInEasing))
+        wandAttack.animateTo(0f, tween(faster(160), easing = LinearOutSlowInEasing))
     }
 
     LaunchedEffect(attackTrigger) {

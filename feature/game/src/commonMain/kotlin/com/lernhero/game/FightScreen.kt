@@ -6,6 +6,7 @@ import androidx.compose.animation.core.VectorConverter
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
@@ -68,7 +69,7 @@ fun FightScreen() {
         state.isBattleBusy()
     ) {
         if (state.phase == GamePhase.Battle && !state.isBattleBusy()) {
-            delay(125)
+            delay(BattleSpeed.scale(125L))
             viewModel.playNextBattleStep()
         }
     }
@@ -220,6 +221,31 @@ private fun BattleHud(
                 fontSize = 12.sp
             )
         }
+
+        SpeedSwitch()
+    }
+}
+
+/**
+ * Przelacznik tempa walki. Klikniecie przeskakuje na kolejna predkosc - do testow zwykle
+ * chcemy 8x albo 16x, a do ogladania animacji 1x.
+ */
+@Composable
+private fun SpeedSwitch() {
+    Box(
+        modifier = Modifier
+            .padding(top = 6.dp)
+            .clip(RoundedCornerShape(6.dp))
+            .background(Color(0xFFB4451F))
+            .clickable { BattleSpeed.next() }
+            .padding(horizontal = 10.dp, vertical = 4.dp)
+    ) {
+        Text(
+            text = "Tempo ${BattleSpeed.label}",
+            color = Color.White,
+            fontSize = 12.sp,
+            fontWeight = FontWeight.Bold
+        )
     }
 }
 
@@ -316,7 +342,10 @@ private fun CharacterSlot(
                             x = targetPosition.x - myPosition.x + attackMargin,
                             y = targetPosition.y - myPosition.y
                         ),
-                        animationSpec = tween(durationMillis = 110, easing = LinearEasing)
+                        animationSpec = tween(
+                            durationMillis = BattleSpeed.scale(110),
+                            easing = LinearEasing
+                        )
                     )
                     onMoveToAttackFinished(character.id)
                 }
@@ -324,14 +353,18 @@ private fun CharacterSlot(
 
             CharacterState.ATTACK -> {
                 val attackSprite = character.sprites.forState(CharacterState.ATTACK)
-                delay(attackSprite.totalFrames * attackSprite.animationSpeed + 225L)
+                val full = attackSprite.totalFrames * attackSprite.animationSpeed + 225L
+                delay(BattleSpeed.scale(full))
                 onAttackAnimationFinished(character.id)
             }
 
             CharacterState.MOVING_BACK -> {
                 animOffset.animateTo(
                     targetValue = Offset.Zero,
-                    animationSpec = tween(durationMillis = 110, easing = LinearEasing)
+                    animationSpec = tween(
+                        durationMillis = BattleSpeed.scale(110),
+                        easing = LinearEasing
+                    )
                 )
                 onMoveBackFinished(character.id)
             }
@@ -389,6 +422,7 @@ private fun CharacterSlot(
                         equipment = knightEquipment,
                         attackTrigger = attackTrigger,
                         interactive = false,
+                        attackSpeed = BattleSpeed.multiplier,
                         // battleScale normalises the hero to the same height as the sprite fighters.
                         sizeDp = cardSize * character.battleScale,
                         modifier = Modifier.graphicsLayer {
