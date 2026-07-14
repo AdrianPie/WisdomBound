@@ -2,11 +2,14 @@ package com.lernhero.game
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.lernhero.domain.combat.StatType
 import com.lernhero.domain.data.PlayerRepository
 import com.lernhero.domain.enum.CharacterState
 import com.lernhero.domain.game.BattleFighter
 import com.lernhero.domain.game.BattlePlaybackEngine
 import com.lernhero.domain.game.BattlePlaybackStep
+import com.lernhero.domain.item.Loadout
+import com.lernhero.domain.item.toLoadout
 import com.lernhero.domain.preset.MonsterCatalog
 import com.lernhero.domain.preset.PlayerEquipment
 import com.lernhero.game.character.CharacterUiModel
@@ -30,6 +33,9 @@ class GameViewModel(
 
     /** Companion selection loaded from the persisted party (monster ids per slot). */
     private var savedParty: List<String?> = emptyList()
+
+    /** Zalozony ekwipunek bohatera - stad biora sie jego efekty w walce. */
+    private var heroLoadout: Loadout = Loadout.Empty
 
     private val _uiState = MutableStateFlow(createInitialState())
     val uiState = _uiState.asStateFlow()
@@ -59,6 +65,21 @@ class GameViewModel(
                         ),
                         message = "${step.attackerName} atakuje ${step.targetName}"
                     )
+                }
+
+                // Trucizna, ogien, odbicie i leczenie nie maja animacji ataku - poprawiaja tylko
+                // pasek HP i od razu przewijaja skrypt dalej.
+                is BattlePlaybackStep.Tick -> {
+                    val target = state.characters[step.targetId] ?: return@update state.advanceStep()
+                    state.copy(
+                        characters = state.characters.plus(
+                            target.id to target.copy(
+                                hp = step.targetHpAfter,
+                                state = if (step.targetDefeated) CharacterState.DEAD else target.state
+                            )
+                        ),
+                        message = step.label
+                    ).advanceStep()
                 }
 
                 is BattlePlaybackStep.WaveCleared -> state.startQuizPhase()
@@ -291,6 +312,10 @@ class GameViewModel(
         )
     }
 
+    private fun GameStateUi.advanceStep(): GameStateUi = copy(
+        playback = playback?.let { it.copy(currentStepIndex = it.currentStepIndex + 1) }
+    )
+
     private fun GameStateUi.hasActiveAnimation(): Boolean =
         characters.values.any { character ->
             character.state == CharacterState.MOVING_TO_ATK ||
@@ -352,16 +377,26 @@ class GameViewModel(
     private fun calculateRunCoins(state: GameStateUi): Int =
         (25 + (state.wave - 1) * 20 + state.totalScore / 20).coerceAtLeast(10)
 
+    /**
+     * Ekwipunek gracza wchodzi do walki jako [Loadout]: statystyki doliczamy do liczb pokazywanych
+     * w UI, a efekty (rozciecie na dwoch wrogow, kradziez zycia, blok pierwszego ciosu) jada dalej
+     * do silnika razem z wojownikiem.
+     */
     private fun GameStateUi.applyEquipmentBonuses(equipment: PlayerEquipment): GameStateUi {
+        val loadout = equipment.toLoadout()
+        heroLoadout = loadout
+
+        val hpBonus = loadout.stats[StatType.MaxHp].toInt()
+        val attackBonus = loadout.stats[StatType.Attack].toInt()
+
         val updatedCharacters = characters.mapValues { (_, character) ->
-            if (character.id != "PLAYER_KNIGHT") {
+            if (character.id != HERO_ID) {
                 character
             } else {
-                val hpBonus = equipment.hpBonus
                 character.copy(
                     maxHp = character.maxHp + hpBonus,
                     hp = character.hp + hpBonus,
-                    attack = character.attack + equipment.attackBonus,
+                    attack = character.attack + attackBonus,
                     knightEquipment = KnightEquipment(
                         head = equipment.head,
                         hands = equipment.hands,
@@ -580,7 +615,7 @@ class GameViewModel(
 
     private fun buildPlayerParty(): List<CharacterTemplate> {
         val hero = CharacterTemplate(
-            id = "PLAYER_KNIGHT",
+            id = HERO_ID,
             name = "Knight",
             isPlayer = true,
             avatar = "knight",
@@ -642,7 +677,7 @@ class GameViewModel(
             sprites = mapCharacterSprites(avatar),
             flipSprite = false,
             // The hero is drawn as the modular paper-doll knight so equipped gear shows in battle.
-            knightEquipment = if (id == "PLAYER_KNIGHT") KnightEquipment.Empty else null,
+            knightEquipment = if (id == HERO_ID) KnightEquipment.Empty else null,
             battleScale = avatarBattleScale(avatar)
         )
 
@@ -666,11 +701,15 @@ class GameViewModel(
             isPlayer = isPlayer,
             hp = hp,
             maxHp = maxHp,
-            attack = attack
+            attack = attack,
+            loadout = if (id == HERO_ID) heroLoadout else Loadout.Empty
         )
 
     private fun mapCharacterSprites(key: String) = MonsterSprites.spritesFor(key)
 }
+
+/** Id bohatera - jedyna postac, ktora nosi ekwipunek gracza. */
+const val HERO_ID = "PLAYER_KNIGHT"
 
 private data class CharacterTemplate(
     val id: String,

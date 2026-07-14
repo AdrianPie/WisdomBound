@@ -1,5 +1,16 @@
 package com.lernhero.domain.shop
 
+import com.lernhero.domain.item.Item
+import com.lernhero.domain.item.ItemCatalog
+import com.lernhero.domain.item.ItemSlot
+
+/**
+ * Widok przedmiotu dla starego sklepu i ekranu ekwipunku.
+ *
+ * Nie trzyma juz wlasnych danych - jest rzutem [ItemCatalog] na te piec slotow, ktore obsluguje
+ * dzisiejszy zapis gracza ([com.lernhero.domain.preset.PlayerEquipment] to wciaz piec flag).
+ * Jedno zrodlo prawdy o przedmiotach siedzi w katalogu; tutaj tylko je przycinamy.
+ */
 data class ShopItem(
     val id: String,
     val name: String,
@@ -17,55 +28,45 @@ enum class ShopItemSlot {
 }
 
 object ShopCatalog {
-    val PLATE_HELM = ShopItem(
-        id = "plate_helm",
-        name = "Helm plytowy",
-        description = "Ciezki helm chroniacy glowe. +2 do obrony.",
-        slot = ShopItemSlot.Head,
-        cost = 90
+
+    /**
+     * Sklep pokazuje po jednym przedmiocie na slot, bo tyle unosi dzisiejszy model zapisu.
+     * Gdy [com.lernhero.domain.preset.PlayerEquipment] przejdzie z flag na mape slot -> id,
+     * wystarczy tu puscic caly [ItemCatalog] i sklep od razu zobaczy wszystkie bronie.
+     */
+    private val legacyIds = listOf(
+        "plate_helm",
+        "plate_gauntlets",
+        "plate_legs",
+        "plate_boots",
+        "plate_sword"
     )
 
-    val PLATE_GAUNTLETS = ShopItem(
-        id = "plate_gauntlets",
-        name = "Rekawice plytowe",
-        description = "Stalowe rekawice. +3 do ataku i +2 do obrony.",
-        slot = ShopItemSlot.Hands,
-        cost = 110
-    )
-
-    val PLATE_LEGS = ShopItem(
-        id = "plate_legs",
-        name = "Nagolenniki plytowe",
-        description = "Solidne ochraniacze nog. +2 do obrony.",
-        slot = ShopItemSlot.Legs,
-        cost = 90
-    )
-
-    val PLATE_BOOTS = ShopItem(
-        id = "plate_boots",
-        name = "Buty plytowe",
-        description = "Wzmocnione buty bojowe. +2 do obrony.",
-        slot = ShopItemSlot.Feet,
-        cost = 80
-    )
-
-    val PLATE_SWORD = ShopItem(
-        id = "plate_sword",
-        name = "Miecz plytowy",
-        description = "Solidny miecz do reki glownej. +3 do ataku.",
-        slot = ShopItemSlot.MainHand,
-        cost = 100
-    )
-
-    val items: List<ShopItem> = listOf(
-        PLATE_HELM,
-        PLATE_GAUNTLETS,
-        PLATE_LEGS,
-        PLATE_BOOTS,
-        PLATE_SWORD
-    )
+    val items: List<ShopItem> = legacyIds
+        .mapNotNull { id -> ItemCatalog.byId(id) }
+        .mapNotNull { item -> item.toShopItem() }
 
     fun itemForSlot(slot: ShopItemSlot): ShopItem? = items.firstOrNull { it.slot == slot }
 
     fun byId(id: String): ShopItem? = items.firstOrNull { it.id == id }
+}
+
+private fun Item.toShopItem(): ShopItem? {
+    val shopSlot = slot.toShopSlot() ?: return null
+    return ShopItem(
+        id = id,
+        name = name,
+        description = description,
+        slot = shopSlot,
+        cost = cost
+    )
+}
+
+private fun ItemSlot.toShopSlot(): ShopItemSlot? = when (this) {
+    ItemSlot.Head -> ShopItemSlot.Head
+    ItemSlot.Hands -> ShopItemSlot.Hands
+    ItemSlot.Legs -> ShopItemSlot.Legs
+    ItemSlot.Feet -> ShopItemSlot.Feet
+    ItemSlot.MainHand -> ShopItemSlot.MainHand
+    ItemSlot.Chest, ItemSlot.OffHand, ItemSlot.Ring, ItemSlot.Amulet -> null
 }
