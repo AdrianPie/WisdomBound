@@ -14,10 +14,11 @@ import com.lernhero.domain.item.itemIn
 import com.lernhero.domain.item.toLoadout
 import com.lernhero.domain.preset.MonsterCatalog
 import com.lernhero.domain.preset.PlayerEquipment
+import com.lernhero.domain.quiz.QuizBank
+import com.lernhero.domain.quiz.QuizEntry
 import com.lernhero.game.character.CharacterUiModel
 import com.lernhero.game.character.KnightEquipment
 import com.lernhero.game.character.MonsterSprites
-import com.lernhero.shared.FlagCountry
 import com.lernhero.shared.FlagQuizResources
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.IO
@@ -170,8 +171,10 @@ class GameViewModel(
 
             val question = quiz.currentQuestion ?: return@update state.startUpgradePhase(quiz)
             val isCorrect = question.answers.firstOrNull { it.id == answerId }?.isCorrect == true
+            // Nagroda idzie za trudnoscia pytania, nie za sama liczba trafien.
             val updatedQuiz = quiz.copy(
-                correctAnswers = quiz.correctAnswers + if (isCorrect) 1 else 0
+                correctAnswers = quiz.correctAnswers + if (isCorrect) 1 else 0,
+                earnedPoints = quiz.earnedPoints + if (isCorrect) question.reward else 0
             )
 
             if (quiz.currentQuestionIndex >= quiz.questions.lastIndex) {
@@ -370,10 +373,10 @@ class GameViewModel(
         }
     }
 
+    /** Punkty za trafienia (wg trudnosci) plus premia za komplet. */
     private fun calculateQuizReward(quiz: QuizState): Int {
-        val basePoints = quiz.correctAnswers * 100
-        val perfectBonus = if (quiz.correctAnswers == quiz.questions.size) 100 else 0
-        return basePoints + perfectBonus
+        val perfectBonus = if (quiz.correctAnswers == quiz.questions.size) 150 else 0
+        return quiz.earnedPoints + perfectBonus
     }
 
     private fun calculateRunCoins(state: GameStateUi): Int =
@@ -569,45 +572,31 @@ class GameViewModel(
             }
         }
 
+    /**
+     * Quiz na dana fale: cztery pytania ustawione w drabinke trudnosci, losowane z banku.
+     * Odpowiedzi tasujemy tutaj, wiec bank nigdy nie zdradza, ktora jest poprawna.
+     */
     private fun createQuizForWave(wave: Int): QuizState =
         QuizState(
-            questions = FlagQuizResources.countries
-                .shuffled(Random.Default)
-                .take(3)
-                .mapIndexed { index, country ->
-                    country.toFlagQuestion(
-                        id = "wave_${wave}_flag_${index + 1}",
-                        allCountries = FlagQuizResources.countries
-                    )
-                }
+            questions = QuizBank.drawForWave(wave, Random.Default).map { it.toUiQuestion() }
         )
 
-    private fun FlagCountry.toFlagQuestion(
-        id: String,
-        allCountries: List<FlagCountry>
-    ): QuizQuestion {
-        val wrongAnswers = allCountries
-            .filter { country -> country.code != code }
-            .shuffled(Random.Default)
-            .take(3)
-
-        val answers = (wrongAnswers + this)
-            .shuffled(Random.Default)
-            .map { country ->
-                QuizAnswer(
-                    id = country.code,
-                    text = country.countryName,
-                    isCorrect = country.code == code
-                )
-            }
-
-        return QuizQuestion(
-            id = id,
-            prompt = "Jaka to flaga?",
-            flag = flag,
-            answers = answers
-        )
-    }
+    private fun QuizEntry.toUiQuestion(): QuizQuestion = QuizQuestion(
+        id = id,
+        prompt = prompt,
+        flag = flagCode?.let { FlagQuizResources.flagFor(it) },
+        answers = answers.shuffled(Random.Default).map { text ->
+            QuizAnswer(
+                id = text,
+                text = text,
+                isCorrect = text == correct
+            )
+        },
+        difficulty = difficulty.label,
+        category = category.label,
+        reward = difficulty.reward,
+        seconds = difficulty.seconds
+    )
 
     private fun buildInitialCharacters(): Map<CharacterId, CharacterUiModel> {
         val characters = buildPlayerParty().map { it.toUiModel() } +

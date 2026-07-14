@@ -60,7 +60,9 @@ data class BattlePlaybackUiState(
 data class QuizState(
     val questions: List<QuizQuestion>,
     val currentQuestionIndex: Int = 0,
-    val correctAnswers: Int = 0
+    val correctAnswers: Int = 0,
+    /** Punkty zebrane w tym quizie - trudniejsze pytania placa wiecej. */
+    val earnedPoints: Int = 0
 ) {
     val currentQuestion: QuizQuestion?
         get() = questions.getOrNull(currentQuestionIndex)
@@ -71,6 +73,12 @@ data class QuizQuestion(
     val prompt: String,
     val flag: DrawableResource? = null,
     val answers: List<QuizAnswer>,
+    /** "Trudne", "Eksperckie" - drabinka jak w Milionerach. */
+    val difficulty: String,
+    val category: String,
+    val reward: Int,
+    /** Ile sekund na odpowiedz. Pytanie o stolice Bhutanu dostaje wiecej czasu niz o Paryz. */
+    val seconds: Int,
     val explanation: String? = null
 )
 

@@ -46,56 +46,57 @@ import lernhero.shared.generated.resources.vn
 import lernhero.shared.generated.resources.za
 import org.jetbrains.compose.resources.DrawableResource
 
-data class FlagCountry(
-    val code: String,
-    val countryName: String,
-    val flag: DrawableResource
-)
-
+/**
+ * Flagi krajow. Pytania quizowe zyja w domenie i posluguja sie kodem kraju ("pl"), bo domena
+ * nie moze zalezec od Compose. Tutaj kod zamienia sie w obrazek - i tylko tutaj.
+ */
 object FlagQuizResources {
-    val countries = listOf(
-        FlagCountry(code = "pl", countryName = "Polska", flag = Res.drawable.pl),
-        FlagCountry(code = "de", countryName = "Niemcy", flag = Res.drawable.de),
-        FlagCountry(code = "fr", countryName = "Francja", flag = Res.drawable.fr),
-        FlagCountry(code = "es", countryName = "Hiszpania", flag = Res.drawable.es),
-        FlagCountry(code = "it", countryName = "Wlochy", flag = Res.drawable.it),
-        FlagCountry(code = "pt", countryName = "Portugalia", flag = Res.drawable.pt),
-        FlagCountry(code = "gb", countryName = "Wielka Brytania", flag = Res.drawable.gb),
-        FlagCountry(code = "ie", countryName = "Irlandia", flag = Res.drawable.ie),
-        FlagCountry(code = "us", countryName = "Stany Zjednoczone", flag = Res.drawable.us),
-        FlagCountry(code = "ca", countryName = "Kanada", flag = Res.drawable.ca),
-        FlagCountry(code = "mx", countryName = "Meksyk", flag = Res.drawable.mx),
-        FlagCountry(code = "br", countryName = "Brazylia", flag = Res.drawable.br),
-        FlagCountry(code = "ar", countryName = "Argentyna", flag = Res.drawable.ar),
-        FlagCountry(code = "cn", countryName = "Chiny", flag = Res.drawable.cn),
-        FlagCountry(code = "jp", countryName = "Japonia", flag = Res.drawable.jp),
-        FlagCountry(code = "kr", countryName = "Korea Poludniowa", flag = Res.drawable.kr),
-        FlagCountry(code = "au", countryName = "Australia", flag = Res.drawable.au),
-        FlagCountry(code = "nz", countryName = "Nowa Zelandia", flag = Res.drawable.nz),
-        FlagCountry(code = "no", countryName = "Norwegia", flag = Res.drawable.no),
-        FlagCountry(code = "se", countryName = "Szwecja", flag = Res.drawable.se),
-        FlagCountry(code = "fi", countryName = "Finlandia", flag = Res.drawable.fi),
-        FlagCountry(code = "dk", countryName = "Dania", flag = Res.drawable.dk),
-        FlagCountry(code = "nl", countryName = "Holandia", flag = Res.drawable.nl),
-        FlagCountry(code = "be", countryName = "Belgia", flag = Res.drawable.be),
-        FlagCountry(code = "ch", countryName = "Szwajcaria", flag = Res.drawable.ch),
-        FlagCountry(code = "at", countryName = "Austria", flag = Res.drawable.at),
-        FlagCountry(code = "cz", countryName = "Czechy", flag = Res.drawable.cz),
-        FlagCountry(code = "sk", countryName = "Slowacja", flag = Res.drawable.sk),
-        FlagCountry(code = "hu", countryName = "Wegry", flag = Res.drawable.hu),
-        FlagCountry(code = "ro", countryName = "Rumunia", flag = Res.drawable.ro),
-        FlagCountry(code = "bg", countryName = "Bulgaria", flag = Res.drawable.bg),
-        FlagCountry(code = "gr", countryName = "Grecja", flag = Res.drawable.gr),
-        FlagCountry(code = "tr", countryName = "Turcja", flag = Res.drawable.tr),
-        FlagCountry(code = "ua", countryName = "Ukraina", flag = Res.drawable.ua),
-        FlagCountry(code = "eg", countryName = "Egipt", flag = Res.drawable.eg),
-        FlagCountry(code = "ma", countryName = "Maroko", flag = Res.drawable.ma),
-        FlagCountry(code = "ng", countryName = "Nigeria", flag = Res.drawable.ng),
-        FlagCountry(code = "ke", countryName = "Kenia", flag = Res.drawable.ke),
-        FlagCountry(code = "za", countryName = "Republika Poludniowej Afryki", flag = Res.drawable.za),
-        FlagCountry(code = "th", countryName = "Tajlandia", flag = Res.drawable.th),
-        FlagCountry(code = "vn", countryName = "Wietnam", flag = Res.drawable.vn),
-        FlagCountry(code = "ph", countryName = "Filipiny", flag = Res.drawable.ph),
-        FlagCountry(code = "sg", countryName = "Singapur", flag = Res.drawable.sg)
+
+    private val flags: Map<String, DrawableResource> = mapOf(
+        "pl" to Res.drawable.pl,
+        "de" to Res.drawable.de,
+        "fr" to Res.drawable.fr,
+        "es" to Res.drawable.es,
+        "it" to Res.drawable.it,
+        "pt" to Res.drawable.pt,
+        "gb" to Res.drawable.gb,
+        "ie" to Res.drawable.ie,
+        "us" to Res.drawable.us,
+        "ca" to Res.drawable.ca,
+        "mx" to Res.drawable.mx,
+        "br" to Res.drawable.br,
+        "ar" to Res.drawable.ar,
+        "cn" to Res.drawable.cn,
+        "jp" to Res.drawable.jp,
+        "kr" to Res.drawable.kr,
+        "au" to Res.drawable.au,
+        "nz" to Res.drawable.nz,
+        "no" to Res.drawable.no,
+        "se" to Res.drawable.se,
+        "fi" to Res.drawable.fi,
+        "dk" to Res.drawable.dk,
+        "nl" to Res.drawable.nl,
+        "be" to Res.drawable.be,
+        "ch" to Res.drawable.ch,
+        "at" to Res.drawable.at,
+        "cz" to Res.drawable.cz,
+        "sk" to Res.drawable.sk,
+        "hu" to Res.drawable.hu,
+        "ro" to Res.drawable.ro,
+        "bg" to Res.drawable.bg,
+        "gr" to Res.drawable.gr,
+        "tr" to Res.drawable.tr,
+        "ua" to Res.drawable.ua,
+        "eg" to Res.drawable.eg,
+        "ma" to Res.drawable.ma,
+        "ng" to Res.drawable.ng,
+        "ke" to Res.drawable.ke,
+        "za" to Res.drawable.za,
+        "th" to Res.drawable.th,
+        "vn" to Res.drawable.vn,
+        "ph" to Res.drawable.ph,
+        "sg" to Res.drawable.sg
     )
+
+    fun flagFor(code: String): DrawableResource? = flags[code]
 }

@@ -5,6 +5,7 @@ import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -32,6 +33,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.sp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import com.lernhero.shared.ButtonPrimary
@@ -49,11 +51,12 @@ fun QuizDialog(
     val question = quiz.currentQuestion ?: return
     val progress = (quiz.currentQuestionIndex + 1).toFloat() / quiz.questions.size.toFloat()
 
+    // Trudniejsze pytanie dostaje wiecej czasu - 5 sekund na stolice Bhutanu bylo okrucienstwem.
     val timeProgress = remember(question.id) { Animatable(1f) }
     LaunchedEffect(question.id) {
         timeProgress.animateTo(
             targetValue = 0f,
-            animationSpec = tween(durationMillis = 5000, easing = LinearEasing)
+            animationSpec = tween(durationMillis = question.seconds * 1000, easing = LinearEasing)
         )
         onAnswer("")
     }
@@ -79,6 +82,15 @@ fun QuizDialog(
                 )
                 ProgressBar(progress = progress)
                 TimeBar(progress = timeProgress.value)
+
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(6.dp)
+                ) {
+                    QuizBadge(text = question.category, color = Color(0xFF3B9DFF))
+                    QuizBadge(text = question.difficulty, color = difficultyColor(question.difficulty))
+                    QuizBadge(text = "+${question.reward} pkt", color = Color(0xFFFFD100))
+                }
 
                 Text(
                     text = question.prompt,
@@ -335,4 +347,32 @@ private fun ProgressBar(progress: Float) {
                 .background(ButtonPrimary)
         )
     }
+}
+
+/** Mala plakietka nad pytaniem: kategoria, poziom, stawka. */
+@Composable
+private fun QuizBadge(text: String, color: Color) {
+    Box(
+        modifier = Modifier
+            .clip(RoundedCornerShape(6.dp))
+            .background(color.copy(alpha = 0.18f))
+            .border(1.dp, color, RoundedCornerShape(6.dp))
+            .padding(horizontal = 8.dp, vertical = 3.dp)
+    ) {
+        Text(
+            text = text,
+            color = color,
+            fontFamily = FontFirst(),
+            fontWeight = FontWeight.Bold,
+            fontSize = 10.sp
+        )
+    }
+}
+
+/** Im wyzszy szczebel drabinki, tym cieplejszy kolor - jak w Milionerach. */
+private fun difficultyColor(label: String): Color = when (label) {
+    "Latwe" -> Color(0xFF4ADE80)
+    "Srednie" -> Color(0xFFFFD100)
+    "Trudne" -> Color(0xFFFF8A3D)
+    else -> Color(0xFFFF4D4D)
 }
