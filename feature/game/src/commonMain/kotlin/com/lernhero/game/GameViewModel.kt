@@ -361,7 +361,7 @@ class GameViewModel(
                 character
             } else {
                 when (choice.type) {
-                    UpgradeType.TeamHealth -> {
+                    UpgradeType.TeamHealth, UpgradeType.Shield -> {
                         val value = choice.powerValue()
                         character.copy(
                             hp = character.hp + value,
@@ -369,27 +369,8 @@ class GameViewModel(
                         )
                     }
 
-                    UpgradeType.TeamAttack -> character.copy(
+                    UpgradeType.TeamAttack, UpgradeType.CriticalFocus -> character.copy(
                         attack = character.attack + choice.powerValue()
-                    )
-
-                    UpgradeType.TeamMana -> character.copy(
-                        mana = character.mana + choice.powerValue()
-                    )
-
-                    UpgradeType.TeamSpeed -> character.copy(
-                        attack = character.attack + (choice.powerValue() / 2).coerceAtLeast(1),
-                        mana = character.mana + choice.powerValue()
-                    )
-
-                    UpgradeType.Shield -> character.copy(
-                        hp = character.hp + choice.powerValue(),
-                        maxHp = character.maxHp + choice.powerValue()
-                    )
-
-                    UpgradeType.CriticalFocus -> character.copy(
-                        attack = character.attack + choice.powerValue(),
-                        mana = character.mana + choice.powerValue()
                     )
 
                     UpgradeType.HealTeam -> character.copy(
@@ -474,14 +455,6 @@ class GameViewModel(
                 type = UpgradeType.TeamAttack
             ),
             UpgradeChoice(
-                id = "wave_${wave}_mana_common",
-                title = "Krotki oddech many",
-                description = "+12 many dla kazdej postaci.",
-                cost = 75 + waveCost,
-                rarity = UpgradeRarity.Common,
-                type = UpgradeType.TeamMana
-            ),
-            UpgradeChoice(
                 id = "wave_${wave}_heal_common",
                 title = "Bandaze",
                 description = "Leczy druzyne do pelnego HP.",
@@ -506,14 +479,6 @@ class GameViewModel(
                 type = UpgradeType.TeamAttack
             ),
             UpgradeChoice(
-                id = "wave_${wave}_speed_rare",
-                title = "Szybki start",
-                description = "+18 many i lekki bonus do ataku.",
-                cost = 135 + waveCost,
-                rarity = UpgradeRarity.Rare,
-                type = UpgradeType.TeamSpeed
-            ),
-            UpgradeChoice(
                 id = "wave_${wave}_shield_rare",
                 title = "Bariera",
                 description = "+24 HP jako defensywny bonus dla druzyny.",
@@ -532,7 +497,7 @@ class GameViewModel(
             UpgradeChoice(
                 id = "wave_${wave}_focus_epic",
                 title = "Skupienie krytyczne",
-                description = "+8 ataku i +8 many dla kazdej postaci.",
+                description = "+10 ataku dla kazdej postaci.",
                 cost = 260 + waveCost,
                 rarity = UpgradeRarity.Epic,
                 type = UpgradeType.CriticalFocus
@@ -548,7 +513,7 @@ class GameViewModel(
             UpgradeChoice(
                 id = "wave_${wave}_legendary",
                 title = "Korona zwyciezcy",
-                description = "+16 ataku i +16 many dla calej druzyny.",
+                description = "+16 ataku dla calej druzyny.",
                 cost = 380 + waveCost,
                 rarity = UpgradeRarity.Legendary,
                 type = UpgradeType.CriticalFocus
@@ -556,48 +521,23 @@ class GameViewModel(
         )
     }
 
-    private fun UpgradeChoice.powerValue(): Int =
-        when (rarity) {
-            UpgradeRarity.Common -> when (type) {
-                UpgradeType.TeamHealth -> 18
-                UpgradeType.TeamAttack -> 3
-                UpgradeType.TeamMana -> 12
-                UpgradeType.TeamSpeed -> 10
-                UpgradeType.Shield -> 16
-                UpgradeType.CriticalFocus -> 4
-                UpgradeType.HealTeam -> 0
-            }
-
-            UpgradeRarity.Rare -> when (type) {
-                UpgradeType.TeamHealth -> 32
-                UpgradeType.TeamAttack -> 6
-                UpgradeType.TeamMana -> 20
-                UpgradeType.TeamSpeed -> 18
-                UpgradeType.Shield -> 24
-                UpgradeType.CriticalFocus -> 6
-                UpgradeType.HealTeam -> 0
-            }
-
-            UpgradeRarity.Epic -> when (type) {
-                UpgradeType.TeamHealth -> 48
-                UpgradeType.TeamAttack -> 10
-                UpgradeType.TeamMana -> 30
-                UpgradeType.TeamSpeed -> 26
-                UpgradeType.Shield -> 36
-                UpgradeType.CriticalFocus -> 8
-                UpgradeType.HealTeam -> 0
-            }
-
-            UpgradeRarity.Legendary -> when (type) {
-                UpgradeType.TeamHealth -> 72
-                UpgradeType.TeamAttack -> 16
-                UpgradeType.TeamMana -> 48
-                UpgradeType.TeamSpeed -> 40
-                UpgradeType.Shield -> 52
-                UpgradeType.CriticalFocus -> 16
-                UpgradeType.HealTeam -> 0
-            }
+    /** Sila ulepszenia rosnie z rzadkoscia. Jedna tabela zamiast czterech bloków when. */
+    private fun UpgradeChoice.powerValue(): Int {
+        val base = when (type) {
+            UpgradeType.TeamHealth -> 18
+            UpgradeType.Shield -> 16
+            UpgradeType.TeamAttack -> 3
+            UpgradeType.CriticalFocus -> 4
+            UpgradeType.HealTeam -> 0
         }
+        val multiplier = when (rarity) {
+            UpgradeRarity.Common -> 1.0f
+            UpgradeRarity.Rare -> 1.8f
+            UpgradeRarity.Epic -> 2.7f
+            UpgradeRarity.Legendary -> 4.0f
+        }
+        return (base * multiplier).toInt()
+    }
 
     /**
      * Quiz na dana fale: cztery pytania ustawione w drabinke trudnosci, losowane z banku.
@@ -640,7 +580,6 @@ class GameViewModel(
             avatar = "knight",
             hp = 130,
             maxHp = 130,
-            mana = 25,
             attack = 44
         )
 
@@ -655,7 +594,6 @@ class GameViewModel(
                         avatar = card.spriteKey,
                         hp = card.hp,
                         maxHp = card.hp,
-                        mana = 0,
                         attack = card.attack
                     )
                 }
@@ -678,7 +616,6 @@ class GameViewModel(
                 avatar = if (number % 2 == 0) "wolf" else "skeleton",
                 hp = 70 + hpBonus + index * 15,
                 maxHp = 70 + hpBonus + index * 15,
-                mana = 0,
                 attack = 10 + attackBonus + index * 2
             )
         }
@@ -691,7 +628,6 @@ class GameViewModel(
             hp = hp,
             maxHp = maxHp,
             attack = attack,
-            mana = mana,
             isPlayer = isPlayer,
             sprites = mapCharacterSprites(avatar),
             flipSprite = false,
@@ -737,6 +673,5 @@ private data class CharacterTemplate(
     val avatar: String,
     val hp: Int,
     val maxHp: Int,
-    val mana: Int,
     val attack: Int
 )

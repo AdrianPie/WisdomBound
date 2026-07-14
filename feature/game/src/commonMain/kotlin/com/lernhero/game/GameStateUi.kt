@@ -3,7 +3,6 @@ package com.lernhero.game
 import com.lernhero.domain.game.BattlePlaybackScript
 import com.lernhero.domain.game.BattlePlaybackStep
 import com.lernhero.game.character.CharacterUiModel
-import com.lernhero.game.character.EffectId
 import org.jetbrains.compose.resources.DrawableResource
 
 typealias CharacterId = String
@@ -119,8 +118,6 @@ data class UpgradeChoice(
 enum class UpgradeType {
     TeamHealth,
     TeamAttack,
-    TeamMana,
-    TeamSpeed,
     Shield,
     CriticalFocus,
     HealTeam
@@ -135,6 +132,3 @@ enum class UpgradeRarity(
     Legendary("Legendary")
 }
 
-data class EffectUiState(
-    val effectId: EffectId
-)

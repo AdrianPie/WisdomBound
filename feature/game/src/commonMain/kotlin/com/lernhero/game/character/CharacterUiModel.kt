@@ -8,7 +8,6 @@ data class CharacterUiModel(
     val hp: Int,
     val maxHp: Int,
     val attack: Int,
-    val mana: Int,
     val isPlayer: Boolean,
     val sprites: CharacterSprites,
     val state: CharacterState = CharacterState.IDLE,

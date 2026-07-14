@@ -241,7 +241,6 @@ private fun ClassCard(
             fontWeight = FontWeight.Bold
         )
         StatBar(label = "HP", value = character.maxHp, max = 60, color = Color(0xFFE04736))
-        StatBar(label = "Mana", value = character.maxMana, max = 60, color = Color(0xFF3B82F6))
         StatBar(label = "Atak", value = character.attack, max = 60, color = Color(0xFFF97316))
     }
 }
