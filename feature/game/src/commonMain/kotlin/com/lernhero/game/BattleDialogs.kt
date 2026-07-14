@@ -107,21 +107,28 @@ fun QuizDialog(
                 }
 
                 Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                    question.answers.forEach { answer ->
-                        Button(
-                            onClick = { onAnswer(answer.id) },
+                    question.answers.chunked(2).forEach { rowAnswers ->
+                        Row(
                             modifier = Modifier.fillMaxWidth(),
-                            shape = RoundedCornerShape(8.dp),
-                            colors = ButtonDefaults.buttonColors(
-                                containerColor = Color.White,
-                                contentColor = TextPrimary
-                            )
+                            horizontalArrangement = Arrangement.spacedBy(8.dp)
                         ) {
-                            Text(
-                                text = answer.text,
-                                fontFamily = FontFirst(),
-                                modifier = Modifier.fillMaxWidth()
-                            )
+                            rowAnswers.forEach { answer ->
+                                Button(
+                                    onClick = { onAnswer(answer.id) },
+                                    modifier = Modifier.weight(1f),
+                                    shape = RoundedCornerShape(8.dp),
+                                    colors = ButtonDefaults.buttonColors(
+                                        containerColor = Color.White,
+                                        contentColor = TextPrimary
+                                    )
+                                ) {
+                                    Text(
+                                        text = answer.text,
+                                        fontFamily = FontFirst(),
+                                        maxLines = 2
+                                    )
+                                }
+                            }
                         }
                     }
                 }
@@ -252,7 +259,7 @@ fun DefeatDialog(
             ) {
                 DialogHeader(
                     title = "Defeat",
-                    subtitle = "Dotarles do fali ${state.wave}. Wynik: ${state.totalScore}"
+                    subtitle = "Dotarles do fali ${state.wave}. Wynik: ${state.totalScore}. +${state.rewardCoins} monet"
                 )
 
                 Button(

@@ -33,20 +33,22 @@ fun App() {
     MaterialTheme {
         val playerRepository = koinInject<PlayerRepository>()
         var appReady by remember { mutableStateOf(false) }
-        val userAuthenticated = remember { playerRepository.getUserId() != null }
-        var startDestination by remember {
-            mutableStateOf(
-                if (userAuthenticated) {
-                    Screen.HomeGraph
-                } else {
-                    Screen.Auth
-                }
-            )
-        }
+        var startDestination by remember { mutableStateOf<Screen>(Screen.Auth) }
         LaunchedEffect(Unit){
             GoogleAuthProvider.create(
                 credentials = GoogleAuthCredentials(serverId = Constans.WEB_CLIENT_ID)
             )
+            // Zalogowany z postacia -> Home; zalogowany bez postaci -> tworzenie
+            // postaci; niezalogowany -> ekran logowania.
+            startDestination = if (playerRepository.getUserId() != null) {
+                if (playerRepository.getPlayer()?.character != null) {
+                    Screen.HomeGraph
+                } else {
+                    Screen.CharacterCreation
+                }
+            } else {
+                Screen.Auth
+            }
             appReady = true
         }
         AnimatedVisibility(

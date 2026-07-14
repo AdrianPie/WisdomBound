@@ -50,6 +50,7 @@ fun HomeGraphScreen() {
                 currentRoute.value.isOnRoute<Screen.Home>() -> BottomBarDestination.Home
                 currentRoute.value.isOnRoute<Screen.GameScreen>() -> BottomBarDestination.Fight
                 currentRoute.value.isOnRoute<Screen.Equipment>() -> BottomBarDestination.Equipment
+                currentRoute.value.isOnRoute<Screen.Shop>() -> BottomBarDestination.Shop
                 else -> BottomBarDestination.Home
             }
         }
@@ -65,7 +66,8 @@ fun HomeGraphScreen() {
     }
     val showBars by remember {
         derivedStateOf {
-            !currentRoute.value.isOnRoute<Screen.FightScreen>()
+            !currentRoute.value.isOnRoute<Screen.FightScreen>() &&
+                !currentRoute.value.isOnRoute<Screen.Party>()
         }
     }
     Scaffold(
@@ -170,10 +172,18 @@ fun HomeGraphScreen() {
                 }
                 composable<Screen.GameScreen> { GameScreen(
                     navigateToFightScreen = {
-                        navController.navigate(Screen.FightScreen)
+                        navController.navigate(Screen.Party)
                     }
                 ) }
+                composable<Screen.Party> {
+                    PartyScreen(
+                        onStartBattle = {
+                            navController.navigate(Screen.FightScreen)
+                        }
+                    )
+                }
                 composable<Screen.Equipment> { EquipmentScreen() }
+                composable<Screen.Shop> { ShopScreen() }
                 composable<Screen.KnightPreview> {
                     KnightPreviewScreen(
                         onBack = {

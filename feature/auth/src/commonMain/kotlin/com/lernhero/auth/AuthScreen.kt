@@ -21,7 +21,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import com.lernhero.auth.compontent.CustomDialog
 import com.lernhero.auth.compontent.GoogleButton
 import com.lernhero.shared.FontFirst
 import com.lernhero.shared.FontSize
@@ -38,9 +37,9 @@ import rememberMessageBarState
 
 @Composable
 fun AuthScreen(
-    navigateToHome: () -> Unit
+    navigateToHome: () -> Unit,
+    navigateToCharacterCreation: () -> Unit
 ) {
-    var showDialog by remember { mutableStateOf(false) }
     val viewModel = koinViewModel<AuthViewModel>()
     val messageBarState = rememberMessageBarState()
     var loadingState by remember { mutableStateOf(false) }
@@ -84,18 +83,21 @@ fun AuthScreen(
 
 
                 }
-                Button(
-                    onClick = {showDialog = true}
-                ){
-                    Text("dupa")
-                }
                 GoogleButtonUiContainerFirebase(
                     linkAccount = false,
                     onResult = { result ->
                         result.onSuccess { user ->
                             viewModel.setUser(user)
-                            showDialog = true
-                            loadingState = false
+                            // Gracz z postacia idzie od razu do Home,
+                            // nowy gracz najpierw tworzy postac.
+                            viewModel.checkHasCharacter { hasCharacter ->
+                                loadingState = false
+                                if (hasCharacter) {
+                                    navigateToHome()
+                                } else {
+                                    navigateToCharacterCreation()
+                                }
+                            }
                         }.onFailure { error ->
                             if (error.message?.contains("a network error") == true) {
                                 messageBarState.addError("Internet connection not available")
@@ -119,9 +121,5 @@ fun AuthScreen(
                 }
             }
         }
-        CustomDialog(showDialog,
-            onDismiss = { showDialog = false },
-            navigateToHome = navigateToHome
-        )
     }
 }

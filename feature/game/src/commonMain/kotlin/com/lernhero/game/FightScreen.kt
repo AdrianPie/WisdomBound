@@ -25,7 +25,9 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateMapOf
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -44,6 +46,7 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
 import com.lernhero.domain.enum.CharacterState
 import com.lernhero.game.character.CharacterUiModel
+import com.lernhero.game.character.ModularKnight
 import com.lernhero.game.character.TestCharacter
 import com.lernhero.game.component.shake
 import com.lernhero.shared.Resources
@@ -65,7 +68,7 @@ fun FightScreen() {
         state.isBattleBusy()
     ) {
         if (state.phase == GamePhase.Battle && !state.isBattleBusy()) {
-            delay(250)
+            delay(125)
             viewModel.playNextBattleStep()
         }
     }
@@ -244,7 +247,6 @@ private fun TeamFormation(
                 CharacterSlot(
                     character = character,
                     cardSize = cardSize,
-                    flipCharacter = flipCharacters,
                     slotPositions = slotPositions,
                     onPositionMeasured = onPositionMeasured,
                     onMoveToAttackFinished = onMoveToAttackFinished,
@@ -286,7 +288,6 @@ private fun formationSlots(isRightSide: Boolean): List<FormationSlot> {
 private fun CharacterSlot(
     character: CharacterUiModel,
     cardSize: Dp,
-    flipCharacter: Boolean,
     slotPositions: Map<String, Offset>,
     onPositionMeasured: (String, Offset) -> Unit,
     onMoveToAttackFinished: (String) -> Unit,
@@ -315,7 +316,7 @@ private fun CharacterSlot(
                             x = targetPosition.x - myPosition.x + attackMargin,
                             y = targetPosition.y - myPosition.y
                         ),
-                        animationSpec = tween(durationMillis = 220, easing = LinearEasing)
+                        animationSpec = tween(durationMillis = 110, easing = LinearEasing)
                     )
                     onMoveToAttackFinished(character.id)
                 }
@@ -323,14 +324,14 @@ private fun CharacterSlot(
 
             CharacterState.ATTACK -> {
                 val attackSprite = character.sprites.forState(CharacterState.ATTACK)
-                delay(attackSprite.totalFrames * attackSprite.animationSpeed + 450L)
+                delay(attackSprite.totalFrames * attackSprite.animationSpeed + 225L)
                 onAttackAnimationFinished(character.id)
             }
 
             CharacterState.MOVING_BACK -> {
                 animOffset.animateTo(
                     targetValue = Offset.Zero,
-                    animationSpec = tween(durationMillis = 220, easing = LinearEasing)
+                    animationSpec = tween(durationMillis = 110, easing = LinearEasing)
                 )
                 onMoveBackFinished(character.id)
             }
@@ -372,16 +373,49 @@ private fun CharacterSlot(
                     .offset(y = cardSize * 0.34f)
                     .width(cardSize * 0.28f)
             )
-            TestCharacter(
-                sprite = character.sprites.forState(character.state),
-                isLooping = character.state != CharacterState.ATTACK,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .graphicsLayer {
-                        scaleX = if (flipCharacter) -1f else 1f
+            val knightEquipment = character.knightEquipment
+            if (knightEquipment != null) {
+                var attackTrigger by remember(character.id) { mutableStateOf(0) }
+                LaunchedEffect(character.state) {
+                    if (character.state == CharacterState.ATTACK) attackTrigger += 1
+                }
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .shake(character.hp),
+                    contentAlignment = Alignment.BottomCenter
+                ) {
+                    ModularKnight(
+                        equipment = knightEquipment,
+                        attackTrigger = attackTrigger,
+                        interactive = false,
+                        // battleScale normalises the hero to the same height as the sprite fighters.
+                        sizeDp = cardSize * character.battleScale,
+                        modifier = Modifier.graphicsLayer {
+                            scaleX = if (character.flipSprite) -1f else 1f
+                        }
+                    )
+                }
+            } else {
+                // Each sprite frames its figure at a different scale; battleScale normalises the
+                // rendered width so every fighter appears a consistent size.
+                Box(
+                    modifier = Modifier.fillMaxSize(),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Box(modifier = Modifier.width(cardSize * character.battleScale)) {
+                        TestCharacter(
+                            sprite = character.sprites.forState(character.state),
+                            isLooping = character.state != CharacterState.ATTACK && character.state != CharacterState.DEAD,
+                            modifier = Modifier
+                                .graphicsLayer {
+                                    scaleX = if (character.flipSprite) -1f else 1f
+                                }
+                                .shake(character.hp)
+                        )
                     }
-                    .shake(character.hp)
-            )
+                }
+            }
         }
     }
 }

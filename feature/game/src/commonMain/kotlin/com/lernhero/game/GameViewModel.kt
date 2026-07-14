@@ -1,26 +1,42 @@
 package com.lernhero.game
 
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.lernhero.domain.data.PlayerRepository
 import com.lernhero.domain.enum.CharacterState
 import com.lernhero.domain.game.BattleFighter
 import com.lernhero.domain.game.BattlePlaybackEngine
 import com.lernhero.domain.game.BattlePlaybackStep
-import com.lernhero.game.character.CharacterSprites
+import com.lernhero.domain.preset.MonsterCatalog
+import com.lernhero.domain.preset.PlayerEquipment
 import com.lernhero.game.character.CharacterUiModel
+import com.lernhero.game.character.KnightEquipment
+import com.lernhero.game.character.MonsterSprites
 import com.lernhero.shared.FlagCountry
 import com.lernhero.shared.FlagQuizResources
-import com.lernhero.shared.Resources
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.IO
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
+import kotlinx.coroutines.launch
 import kotlin.random.Random
 
-class GameViewModel : ViewModel() {
+class GameViewModel(
+    private val playerRepository: PlayerRepository
+) : ViewModel() {
 
     private val playbackEngine = BattlePlaybackEngine()
 
+    /** Companion selection loaded from the persisted party (monster ids per slot). */
+    private var savedParty: List<String?> = emptyList()
+
     private val _uiState = MutableStateFlow(createInitialState())
     val uiState = _uiState.asStateFlow()
+
+    init {
+        loadSavedPlayer()
+    }
 
     fun playNextBattleStep() {
         _uiState.update { state ->
@@ -47,11 +63,17 @@ class GameViewModel : ViewModel() {
 
                 is BattlePlaybackStep.WaveCleared -> state.startQuizPhase()
 
-                is BattlePlaybackStep.PartyDefeated -> state.copy(
-                    phase = GamePhase.Defeat,
-                    playback = null,
-                    message = "Druzyna przegrala walke."
-                )
+                is BattlePlaybackStep.PartyDefeated -> {
+                    val reward = calculateRunCoins(state)
+                    saveRunReward(reward)
+                    state.copy(
+                        phase = GamePhase.Defeat,
+                        playback = null,
+                        rewardCoins = reward,
+                        rewardSaved = true,
+                        message = "Druzyna przegrala walke. +$reward monet."
+                    )
+                }
 
                 null -> state.copy(
                     phase = GamePhase.Defeat,
@@ -192,6 +214,27 @@ class GameViewModel : ViewModel() {
 
     fun restartRun() {
         _uiState.value = createInitialState()
+        loadSavedPlayer()
+    }
+
+    /** Loads the saved party + equipment and rebuilds the opening battle around them. */
+    private fun loadSavedPlayer() {
+        viewModelScope.launch(Dispatchers.IO) {
+            val player = playerRepository.getPlayer() ?: return@launch
+            savedParty = player.party
+            val rebuilt = GameStateUi(
+                characters = buildInitialCharacters(),
+                message = "Fala 1"
+            ).applyEquipmentBonuses(player.equipment).withPlaybackScript()
+            _uiState.value = rebuilt
+        }
+    }
+
+    private fun saveRunReward(coins: Int) {
+        if (coins <= 0) return
+        viewModelScope.launch(Dispatchers.IO) {
+            playerRepository.addMoney(coins)
+        }
     }
 
     private fun updateCharacterState(characterId: String, characterState: CharacterState) {
@@ -304,6 +347,32 @@ class GameViewModel : ViewModel() {
         val basePoints = quiz.correctAnswers * 100
         val perfectBonus = if (quiz.correctAnswers == quiz.questions.size) 100 else 0
         return basePoints + perfectBonus
+    }
+
+    private fun calculateRunCoins(state: GameStateUi): Int =
+        (25 + (state.wave - 1) * 20 + state.totalScore / 20).coerceAtLeast(10)
+
+    private fun GameStateUi.applyEquipmentBonuses(equipment: PlayerEquipment): GameStateUi {
+        val updatedCharacters = characters.mapValues { (_, character) ->
+            if (character.id != "PLAYER_KNIGHT") {
+                character
+            } else {
+                val hpBonus = equipment.hpBonus
+                character.copy(
+                    maxHp = character.maxHp + hpBonus,
+                    hp = character.hp + hpBonus,
+                    attack = character.attack + equipment.attackBonus,
+                    knightEquipment = KnightEquipment(
+                        head = equipment.head,
+                        hands = equipment.hands,
+                        legs = equipment.legs,
+                        feet = equipment.feet,
+                        mainHand = equipment.mainHand
+                    )
+                )
+            }
+        }
+        return copy(characters = updatedCharacters)
     }
 
     private fun createUpgradeState(wave: Int): UpgradeState =
@@ -509,29 +578,37 @@ class GameViewModel : ViewModel() {
         return characters.associateBy { it.id }
     }
 
-    private fun buildPlayerParty(): List<CharacterTemplate> =
-        listOf(
-            CharacterTemplate(
-                id = "PLAYER_MAGE",
-                name = "Skeleton Mage",
-                isPlayer = true,
-                avatar = "mag",
-                hp = 100,
-                maxHp = 100,
-                mana = 60,
-                attack = 18
-            ),
-            CharacterTemplate(
-                id = "PLAYER_KNIGHT",
-                name = "Knight",
-                isPlayer = true,
-                avatar = "knight",
-                hp = 130,
-                maxHp = 130,
-                mana = 25,
-                attack = 44
-            )
+    private fun buildPlayerParty(): List<CharacterTemplate> {
+        val hero = CharacterTemplate(
+            id = "PLAYER_KNIGHT",
+            name = "Knight",
+            isPlayer = true,
+            avatar = "knight",
+            hp = 130,
+            maxHp = 130,
+            mana = 25,
+            attack = 44
         )
+
+        val companions = savedParty
+            .filterNotNull()
+            .mapIndexedNotNull { index, monsterId ->
+                MonsterCatalog.byId(monsterId)?.let { card ->
+                    CharacterTemplate(
+                        id = "PLAYER_COMPANION_${index}_${card.id}",
+                        name = card.name,
+                        isPlayer = true,
+                        avatar = card.spriteKey,
+                        hp = card.hp,
+                        maxHp = card.hp,
+                        mana = 0,
+                        attack = card.attack
+                    )
+                }
+            }
+
+        return listOf(hero) + companions
+    }
 
     private fun buildWaveEnemies(wave: Int): List<CharacterTemplate> {
         val hpBonus = (wave - 1) * 25
@@ -544,7 +621,7 @@ class GameViewModel : ViewModel() {
                 id = "ENEMY_${wave}_$number",
                 name = "Potwor $number",
                 isPlayer = false,
-                avatar = if (number % 2 == 0) "mag" else "knight",
+                avatar = if (number % 2 == 0) "wolf" else "skeleton",
                 hp = 70 + hpBonus + index * 15,
                 maxHp = 70 + hpBonus + index * 15,
                 mana = 0,
@@ -562,8 +639,25 @@ class GameViewModel : ViewModel() {
             attack = attack,
             mana = mana,
             isPlayer = isPlayer,
-            sprites = mapCharacterSprites(avatar)
+            sprites = mapCharacterSprites(avatar),
+            flipSprite = false,
+            // The hero is drawn as the modular paper-doll knight so equipped gear shows in battle.
+            knightEquipment = if (id == "PLAYER_KNIGHT") KnightEquipment.Empty else null,
+            battleScale = avatarBattleScale(avatar)
         )
+
+    /**
+     * Normalises each fighter to a consistent on-screen size. Values are relative to the battle
+     * card width; tweak here if a sprite still looks too big/small. "knight" is the paper-doll
+     * hero (its art only fills ~55% of its canvas, hence < 1).
+     */
+    private fun avatarBattleScale(avatar: String): Float = when (avatar) {
+        "knight" -> 0.85f
+        "mag" -> 1.9f
+        "wolf" -> 1.0f
+        "skeleton" -> 1.0f
+        else -> 1.0f
+    }
 
     private fun CharacterUiModel.toBattleFighter(): BattleFighter =
         BattleFighter(
@@ -575,28 +669,7 @@ class GameViewModel : ViewModel() {
             attack = attack
         )
 
-    private fun mapCharacterSprites(key: String) = when (key) {
-        "mag" -> CharacterSprites(
-            idle = Resources.Sprite.magSkeletoniIdle,
-            attack = Resources.Sprite.magSkeletoniIdle,
-            hit = Resources.Sprite.magSkeletoniIdle,
-            dead = Resources.Sprite.magSkeletoniIdle
-        )
-
-        "knight" -> CharacterSprites(
-            idle = Resources.Sprite.knight,
-            attack = Resources.Sprite.knightAtk,
-            hit = Resources.Sprite.knight,
-            dead = Resources.Sprite.knight
-        )
-
-        else -> CharacterSprites(
-            idle = Resources.Sprite.knight,
-            attack = Resources.Sprite.knightAtk,
-            hit = Resources.Sprite.knight,
-            dead = Resources.Sprite.knight
-        )
-    }
+    private fun mapCharacterSprites(key: String) = MonsterSprites.spritesFor(key)
 }
 
 private data class CharacterTemplate(

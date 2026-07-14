@@ -24,6 +24,8 @@ data class GameStateUi(
     val phase: GamePhase = GamePhase.Battle,
     val wave: Int = 1,
     val rewardPoints: Int = 0,
+    val rewardCoins: Int = 0,
+    val rewardSaved: Boolean = false,
     val totalScore: Int = 0,
     val battleTurn: BattleSide = BattleSide.Players,
     val characters: Map<CharacterId, CharacterUiModel> = emptyMap(),

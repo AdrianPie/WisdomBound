@@ -61,6 +61,10 @@ import lernhero.shared.generated.resources.right_up_hand2
 import lernhero.shared.generated.resources.left_up_leg
 import lernhero.shared.generated.resources.search
 import lernhero.shared.generated.resources.serbia
+import lernhero.shared.generated.resources.skeleton_attack
+import lernhero.shared.generated.resources.skeleton_dead
+import lernhero.shared.generated.resources.skeleton_hit
+import lernhero.shared.generated.resources.skeleton_idle
 import lernhero.shared.generated.resources.shopping_cart
 import lernhero.shared.generated.resources.shopping_cart_image
 import lernhero.shared.generated.resources.sorcerer_avatar2
@@ -72,6 +76,10 @@ import lernhero.shared.generated.resources.user
 import lernhero.shared.generated.resources.vertical_menu
 import lernhero.shared.generated.resources.warning
 import lernhero.shared.generated.resources.weight
+import lernhero.shared.generated.resources.wolf_attack
+import lernhero.shared.generated.resources.wolf_dead
+import lernhero.shared.generated.resources.wolf_hit
+import lernhero.shared.generated.resources.wolf_idle
 import org.jetbrains.compose.resources.DrawableResource
 
 object Resources {
@@ -228,6 +236,86 @@ object Resources {
             framesPerRow = 1,
             animationSpeed = 100,
             localWidth = 100.dp,
+            renderScale = 1f
+        )
+        val skeletonIdle: SpriteAsset = SpriteAsset(
+            drawable = Res.drawable.skeleton_idle,
+            frameWidth = 440,
+            frameHeight = 560,
+            totalFrames = 24,
+            framesPerRow = 6,
+            animationSpeed = 70,
+            localWidth = 100.dp,
+            renderScale = 1f
+        )
+        val skeletonAttack: SpriteAsset = SpriteAsset(
+            drawable = Res.drawable.skeleton_attack,
+            frameWidth = 440,
+            frameHeight = 560,
+            totalFrames = 30,
+            framesPerRow = 6,
+            animationSpeed = 42,
+            localWidth = 100.dp,
+            renderScale = 1f
+        )
+        val skeletonHit: SpriteAsset = SpriteAsset(
+            drawable = Res.drawable.skeleton_hit,
+            frameWidth = 440,
+            frameHeight = 560,
+            totalFrames = 14,
+            framesPerRow = 6,
+            animationSpeed = 40,
+            localWidth = 100.dp,
+            renderScale = 1f
+        )
+        val skeletonDead: SpriteAsset = SpriteAsset(
+            drawable = Res.drawable.skeleton_dead,
+            frameWidth = 440,
+            frameHeight = 560,
+            totalFrames = 28,
+            framesPerRow = 6,
+            animationSpeed = 45,
+            localWidth = 100.dp,
+            renderScale = 1f
+        )
+        val wolfIdle: SpriteAsset = SpriteAsset(
+            drawable = Res.drawable.wolf_idle,
+            frameWidth = 560,
+            frameHeight = 400,
+            totalFrames = 24,
+            framesPerRow = 6,
+            animationSpeed = 72,
+            localWidth = 160.dp,
+            renderScale = 1f
+        )
+        val wolfAttack: SpriteAsset = SpriteAsset(
+            drawable = Res.drawable.wolf_attack,
+            frameWidth = 560,
+            frameHeight = 400,
+            totalFrames = 28,
+            framesPerRow = 6,
+            animationSpeed = 40,
+            localWidth = 160.dp,
+            renderScale = 1f
+        )
+        val wolfHit: SpriteAsset = SpriteAsset(
+            drawable = Res.drawable.wolf_hit,
+            frameWidth = 560,
+            frameHeight = 400,
+            totalFrames = 14,
+            framesPerRow = 6,
+            animationSpeed = 40,
+            localWidth = 160.dp,
+            renderScale = 1f
+        )
+        val wolfDead: SpriteAsset = SpriteAsset(
+            drawable = Res.drawable.wolf_dead,
+            frameWidth = 560,
+            frameHeight = 400,
+            totalFrames = 26,
+            framesPerRow = 6,
+            animationSpeed = 46,
+            localWidth = 160.dp,
             renderScale = 1f
         )
         val fireEffect: SpriteAsset = SpriteAsset(

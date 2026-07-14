@@ -25,5 +25,11 @@ enum class BottomBarDestination(
         icon = Resources.Icon.Person,
         title = "EQ",
         route = Screen.Equipment
+    ),
+
+    Shop(
+        icon = Resources.Icon.ShoppingCart,
+        title = "Shop",
+        route = Screen.Shop
     )
 }

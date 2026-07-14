@@ -24,6 +24,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.TransformOrigin
 import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.lernhero.shared.Resources.KnightPivots
 import com.lernhero.shared.Resources.PlateArmor
@@ -37,6 +38,8 @@ fun ModularKnight(
     attackTrigger: Int = 0,
     armored: Boolean = false,
     equipment: KnightEquipment = if (armored) KnightEquipment.FullPlate else KnightEquipment.Empty,
+    sizeDp: Dp = 300.dp,
+    interactive: Boolean = true,
 ) {
     val gear = if (armored) KnightEquipment.FullPlate else equipment
     val wandAttack = remember { Animatable(0f) }
@@ -126,13 +129,19 @@ fun ModularKnight(
 
     Box(
         modifier = modifier
-            .size(300.dp)
-            .clickable(
-                interactionSource = remember { MutableInteractionSource() },
-                indication = null
-            ) {
-                localAttackTrigger += 1
-            }
+            .size(sizeDp)
+            .then(
+                if (interactive) {
+                    Modifier.clickable(
+                        interactionSource = remember { MutableInteractionSource() },
+                        indication = null
+                    ) {
+                        localAttackTrigger += 1
+                    }
+                } else {
+                    Modifier
+                }
+            )
             .graphicsLayer {
                 transformOrigin = KnightPivots.ground
                 rotationZ = wholeBodySway

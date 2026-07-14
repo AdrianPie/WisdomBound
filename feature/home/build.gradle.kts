@@ -59,6 +59,7 @@ kotlin {
 
             implementation(project(path = ":shared" ))
             implementation(project(path = ":data" ))
+            implementation(project(path = ":domain" ))
             implementation(project(path = ":feature:game" ))
 
         }

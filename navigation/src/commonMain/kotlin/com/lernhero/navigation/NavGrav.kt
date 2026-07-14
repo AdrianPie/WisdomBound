@@ -5,6 +5,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.lernhero.auth.AuthScreen
+import com.lernhero.auth.CharacterCreationScreen
 import com.lernhero.home.HomeGraphScreen
 import com.lernhero.shared.Screen
 
@@ -25,7 +26,24 @@ fun SetupNavGraph(startDestination: Screen = Screen.Auth) {
                             inclusive = true
                         }
                     }
-
+                },
+                navigateToCharacterCreation = {
+                    navController.navigate(Screen.CharacterCreation){
+                        popUpTo<Screen.Auth>{
+                            inclusive = true
+                        }
+                    }
+                }
+            )
+        }
+        composable<Screen.CharacterCreation>{
+            CharacterCreationScreen(
+                navigateToHome = {
+                    navController.navigate(Screen.HomeGraph){
+                        popUpTo<Screen.CharacterCreation>{
+                            inclusive = true
+                        }
+                    }
                 }
             )
         }

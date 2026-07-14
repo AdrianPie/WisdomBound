@@ -4,13 +4,16 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.lernhero.domain.data.PlayerRepository
 import com.lernhero.domain.preset.Character
+import dev.gitlive.firebase.Firebase
 import dev.gitlive.firebase.auth.FirebaseUser
+import dev.gitlive.firebase.auth.auth
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.IO
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class AuthViewModel(
     private val playerRepository: PlayerRepository
@@ -29,6 +32,18 @@ class AuthViewModel(
 
     fun setUser(newUser: FirebaseUser?) {
         _user.value = newUser
+    }
+
+    fun currentFirebaseUser(): FirebaseUser? = Firebase.auth.currentUser
+
+    /** Checks whether the signed-in user already has a character saved in Firestore. */
+    fun checkHasCharacter(onResult: (Boolean) -> Unit) {
+        viewModelScope.launch(Dispatchers.IO) {
+            val hasCharacter = playerRepository.getPlayer()?.character != null
+            withContext(Dispatchers.Main) {
+                onResult(hasCharacter)
+            }
+        }
     }
 
 

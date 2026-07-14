@@ -4,15 +4,22 @@ package com.lernhero.data
 import com.lernhero.domain.data.PlayerRepository
 import com.lernhero.domain.preset.Character
 import com.lernhero.domain.preset.Player
+import com.lernhero.domain.preset.PlayerEquipment
 import dev.gitlive.firebase.Firebase
 import dev.gitlive.firebase.auth.FirebaseUser
 import dev.gitlive.firebase.auth.auth
+import dev.gitlive.firebase.firestore.DocumentReference
 import dev.gitlive.firebase.firestore.firestore
 
 class PlayerRepositoryImpl: PlayerRepository {
     override fun getUserId(): String? {
         return Firebase.auth.currentUser?.uid
     }
+
+    private fun playerDocument(): DocumentReference? =
+        getUserId()?.let { uid ->
+            Firebase.firestore.collection("player").document(uid)
+        }
 
     override suspend fun createPlayer(
         user: FirebaseUser?,
@@ -50,5 +57,76 @@ class PlayerRepositoryImpl: PlayerRepository {
             onFailure("Error while creating a Customer: ${e.message}")
         }
 
+    }
+
+    override suspend fun getPlayer(): Player? {
+        return try {
+            val snapshot = playerDocument()?.get() ?: return null
+            if (snapshot.exists) snapshot.data<Player>() else null
+        } catch (e: Exception) {
+            null
+        }
+    }
+
+    override suspend fun updateEquipment(equipment: PlayerEquipment) {
+        try {
+            val document = playerDocument() ?: return
+            val player = getPlayer() ?: return
+            document.set(player.copy(equipment = equipment))
+        } catch (_: Exception) {
+        }
+    }
+
+    override suspend fun updateParty(party: List<String?>) {
+        try {
+            val document = playerDocument() ?: return
+            val player = getPlayer() ?: return
+            document.set(player.copy(party = party))
+        } catch (_: Exception) {
+        }
+    }
+
+    override suspend fun addMoney(amount: Int): Int? {
+        return try {
+            val document = playerDocument() ?: return null
+            val player = getPlayer() ?: return null
+            val newBalance = (player.money + amount).coerceAtLeast(0)
+            document.set(player.copy(money = newBalance))
+            newBalance
+        } catch (e: Exception) {
+            null
+        }
+    }
+
+    override suspend fun purchaseItem(itemId: String, cost: Int): Player? {
+        return try {
+            val document = playerDocument() ?: return null
+            val player = getPlayer() ?: return null
+            if (itemId in player.ownedItems || player.money < cost) return null
+            val updated = player.copy(
+                money = player.money - cost,
+                ownedItems = player.ownedItems + itemId
+            )
+            document.set(updated)
+            updated
+        } catch (e: Exception) {
+            null
+        }
+    }
+
+    override suspend fun purchaseMonster(monsterId: String, cost: Int): Player? {
+        return try {
+            val document = playerDocument() ?: return null
+            val player = getPlayer() ?: return null
+            if (player.money < cost) return null
+            val updated = player.copy(
+                money = player.money - cost,
+                ownedMonsters = player.ownedMonsters + monsterId
+            )
+            document.set(updated)
+            updated
+        } catch (e: Exception) {
+            null
+        }
     }
 }

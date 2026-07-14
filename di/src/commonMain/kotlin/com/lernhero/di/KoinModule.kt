@@ -24,5 +24,3 @@ fun initializeKoin(
         modules(sharedModule)
     }
 }
-
-
