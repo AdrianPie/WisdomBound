@@ -1,11 +1,14 @@
 package com.lernhero.home
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.aspectRatio
@@ -14,22 +17,22 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import androidx.compose.runtime.toMutableStateList
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -40,8 +43,10 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.lernhero.domain.data.PlayerRepository
+import com.lernhero.domain.preset.MonsterCard
 import com.lernhero.game.character.KnightEquipment
 import com.lernhero.game.character.ModularKnight
+import com.lernhero.home.component.MonsterCardView
 import com.lernhero.shared.FontFirst
 import com.lernhero.shared.FontPixel
 import com.lernhero.shared.Surface as AppSurface
@@ -54,9 +59,6 @@ private val TextGold = Color(0xFFFFD100)
 private val TextMuted = Color(0xFF9D8B6A)
 private val SlotEmpty = Color(0xFF120E0A)
 private val HeroGlow = Color(0xFF3B9DFF)
-
-/** Ile obcych postaci moze dolaczyc do bohatera. Bohater ma wlasny, staly slot obok nich. */
-private const val PLAYER_SLOTS = 2
 
 /**
  * Inny gracz w druzynie. Na razie bierzemy ich z atrapy listy [FAKE_ONLINE_PLAYERS] -
@@ -78,19 +80,23 @@ private val FAKE_ONLINE_PLAYERS = listOf(
 
 /**
  * Ekran zakladki "Fight": tu skladasz druzyne i stad ruszasz do lochu.
- * Bohater jest zablokowany w pierwszym slocie, pozostale sa na innych graczy (MMO).
+ *
+ * Bohater siedzi w pierwszym, zablokowanym slocie. Obok niego stoja potwory-kompani,
+ * wybierane kliknieciem (plus w rogu panelu albo pusty slot) - bez przeciagania.
  */
 @Composable
 fun TeamScreen(
-    onStartDungeon: () -> Unit,
-    onOpenCompanions: () -> Unit
+    onStartDungeon: () -> Unit
 ) {
     val playerRepository = koinInject<PlayerRepository>()
     val viewModel = remember(playerRepository) { PlayerViewModel(playerRepository) }
     val state by viewModel.uiState.collectAsState()
 
-    val party = remember { List<TeamMate?>(PLAYER_SLOTS) { null }.toMutableStateList() }
-    var pickerOpen by remember { mutableStateOf(false) }
+    val mates = remember { mutableStateListOf<TeamMate>() }
+    var monsterPickerOpen by remember { mutableStateOf(false) }
+    var playerPickerOpen by remember { mutableStateOf(false) }
+
+    val hasFreeSlot = state.partyMonsters.any { it == null }
 
     Surface(modifier = Modifier.fillMaxSize(), color = AppSurface) {
         Column(
@@ -100,22 +106,21 @@ fun TeamScreen(
             verticalArrangement = Arrangement.spacedBy(14.dp)
         ) {
             TeamPanel(
-                heroName = state.name,
                 equipment = state.knightEquipment,
-                party = party,
-                onAdd = { pickerOpen = true },
-                onRemove = { index -> party[index] = null }
+                companions = state.partyMonsters,
+                onAddCompanion = { monsterPickerOpen = true },
+                onRemoveCompanion = viewModel::removeFromParty
             )
 
             Button(
-                onClick = { pickerOpen = true },
+                onClick = { playerPickerOpen = true },
                 modifier = Modifier.fillMaxWidth().height(52.dp),
                 shape = RoundedCornerShape(10.dp),
                 colors = ButtonDefaults.buttonColors(
                     containerColor = PanelDark,
                     contentColor = TextGold
                 ),
-                border = androidx.compose.foundation.BorderStroke(2.dp, GoldDim)
+                border = BorderStroke(2.dp, GoldDim)
             ) {
                 Text(
                     text = "ADD PLAYER",
@@ -125,14 +130,16 @@ fun TeamScreen(
                 )
             }
 
-            OutlinedButton(
-                onClick = onOpenCompanions,
-                modifier = Modifier.fillMaxWidth()
-            ) {
+            if (mates.isNotEmpty()) {
+                MateRow(mates = mates, onRemove = { mate -> mates.remove(mate) })
+            }
+
+            state.message?.let { message ->
                 Text(
-                    text = "Kompani (potwory)",
-                    color = TextMuted,
-                    fontFamily = FontFirst()
+                    text = message,
+                    color = TextGold,
+                    fontFamily = FontFirst(),
+                    fontSize = 11.sp
                 )
             }
 
@@ -166,14 +173,26 @@ fun TeamScreen(
         }
     }
 
-    if (pickerOpen) {
+    if (monsterPickerOpen) {
+        MonsterPickerDialog(
+            available = state.companionInventory,
+            hasFreeSlot = hasFreeSlot,
+            onDismiss = { monsterPickerOpen = false },
+            onPick = { card ->
+                val free = state.partyMonsters.indexOfFirst { it == null }
+                if (free >= 0) viewModel.placeInParty(card.id, free)
+                monsterPickerOpen = false
+            }
+        )
+    }
+
+    if (playerPickerOpen) {
         PlayerPickerDialog(
-            taken = party.filterNotNull().map { it.id }.toSet(),
-            onDismiss = { pickerOpen = false },
+            taken = mates.map { it.id }.toSet(),
+            onDismiss = { playerPickerOpen = false },
             onPick = { mate ->
-                val free = party.indexOfFirst { it == null }
-                if (free >= 0) party[free] = mate
-                pickerOpen = false
+                mates += mate
+                playerPickerOpen = false
             }
         )
     }
@@ -181,11 +200,10 @@ fun TeamScreen(
 
 @Composable
 private fun TeamPanel(
-    heroName: String,
     equipment: KnightEquipment,
-    party: List<TeamMate?>,
-    onAdd: () -> Unit,
-    onRemove: (Int) -> Unit
+    companions: List<MonsterCard?>,
+    onAddCompanion: () -> Unit,
+    onRemoveCompanion: (Int) -> Unit
 ) {
     Column(
         modifier = Modifier
@@ -211,7 +229,7 @@ private fun TeamPanel(
                     .size(52.dp)
                     .background(SlotEmpty)
                     .border(2.dp, GoldDim)
-                    .clickable(onClick = onAdd),
+                    .clickable(onClick = onAddCompanion),
                 contentAlignment = Alignment.Center
             ) {
                 Text(text = "+", color = TextGold, fontFamily = FontPixel(), fontSize = 26.sp)
@@ -222,15 +240,13 @@ private fun TeamPanel(
             modifier = Modifier.fillMaxWidth().padding(12.dp),
             horizontalArrangement = Arrangement.spacedBy(10.dp)
         ) {
-            HeroSlotCard(
-                name = heroName.ifBlank { "Bohater" },
-                equipment = equipment,
-                modifier = Modifier.weight(1f)
-            )
-            party.forEachIndexed { index, mate ->
-                PlayerSlotCard(
-                    mate = mate,
-                    onClick = { if (mate == null) onAdd() else onRemove(index) },
+            HeroSlotCard(equipment = equipment, modifier = Modifier.weight(1f))
+            companions.forEachIndexed { index, card ->
+                CompanionSlotCard(
+                    card = card,
+                    onClick = {
+                        if (card == null) onAddCompanion() else onRemoveCompanion(index)
+                    },
                     modifier = Modifier.weight(1f)
                 )
             }
@@ -240,118 +256,187 @@ private fun TeamPanel(
 
 @Composable
 private fun HeroSlotCard(
-    name: String,
     equipment: KnightEquipment,
     modifier: Modifier = Modifier
 ) {
-    Column(
-        modifier = modifier,
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(4.dp)
+    Box(
+        modifier = modifier
+            .aspectRatio(0.7f)
+            .clip(RoundedCornerShape(10.dp))
+            .background(
+                Brush.verticalGradient(
+                    listOf(HeroGlow.copy(alpha = 0.22f), Color(0xFF0E0A08))
+                )
+            )
+            .border(2.dp, HeroGlow, RoundedCornerShape(10.dp)),
+        contentAlignment = Alignment.BottomCenter
     ) {
-        Box(
-            modifier = Modifier
-                .fillMaxWidth()
-                .aspectRatio(0.7f)
-                .clip(RoundedCornerShape(10.dp))
-                .background(
-                    Brush.verticalGradient(
-                        listOf(HeroGlow.copy(alpha = 0.22f), Color(0xFF0E0A08))
-                    )
-                )
-                .border(2.dp, HeroGlow, RoundedCornerShape(10.dp)),
-            contentAlignment = Alignment.BottomCenter
-        ) {
-            Box(modifier = Modifier.fillMaxWidth(0.94f)) {
-                ModularKnight(
-                    modifier = Modifier.align(Alignment.BottomCenter),
-                    equipment = equipment
-                )
-            }
-            Text(
-                text = "🔒",
-                fontSize = 10.sp,
-                modifier = Modifier.align(Alignment.TopEnd).padding(5.dp)
+        Box(modifier = Modifier.fillMaxWidth(0.94f)) {
+            ModularKnight(
+                modifier = Modifier.align(Alignment.BottomCenter),
+                equipment = equipment
             )
         }
         Text(
-            text = name,
-            color = HeroGlow,
-            fontFamily = FontFirst(),
-            fontSize = 11.sp,
-            fontWeight = FontWeight.Bold,
-            maxLines = 1
+            text = "🔒",
+            fontSize = 10.sp,
+            modifier = Modifier.align(Alignment.TopEnd).padding(5.dp)
         )
     }
 }
 
 @Composable
-private fun PlayerSlotCard(
-    mate: TeamMate?,
+private fun CompanionSlotCard(
+    card: MonsterCard?,
     onClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
-    Column(
-        modifier = modifier,
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(4.dp)
+    Box(
+        modifier = modifier
+            .aspectRatio(0.7f)
+            .clip(RoundedCornerShape(10.dp))
+            .then(
+                if (card == null) {
+                    Modifier
+                        .background(SlotEmpty)
+                        .border(1.5.dp, GoldDim.copy(alpha = 0.7f), RoundedCornerShape(10.dp))
+                } else {
+                    Modifier
+                }
+            )
+            .clickable(onClick = onClick),
+        contentAlignment = Alignment.Center
     ) {
-        Box(
-            modifier = Modifier
-                .fillMaxWidth()
-                .aspectRatio(0.7f)
-                .clip(RoundedCornerShape(10.dp))
-                .background(SlotEmpty)
-                .border(
-                    width = if (mate == null) 1.5.dp else 2.dp,
-                    color = if (mate == null) GoldDim.copy(alpha = 0.7f) else Gold,
-                    shape = RoundedCornerShape(10.dp)
+        if (card == null) {
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.spacedBy(2.dp)
+            ) {
+                Text(text = "＋", color = GoldDim, fontSize = 26.sp)
+                Text(
+                    text = "Wolne\nmiejsce",
+                    color = TextMuted,
+                    fontFamily = FontFirst(),
+                    fontSize = 9.sp,
+                    textAlign = TextAlign.Center
                 )
-                .clickable(onClick = onClick),
-            contentAlignment = Alignment.Center
-        ) {
-            if (mate == null) {
-                Column(
-                    horizontalAlignment = Alignment.CenterHorizontally,
-                    verticalArrangement = Arrangement.spacedBy(2.dp)
-                ) {
-                    Text(text = "＋", color = GoldDim, fontSize = 24.sp)
-                    Text(
-                        text = "Wolne\nmiejsce",
-                        color = TextMuted,
-                        fontFamily = FontFirst(),
-                        fontSize = 9.sp,
-                        textAlign = TextAlign.Center
-                    )
-                }
-            } else {
-                Column(
-                    horizontalAlignment = Alignment.CenterHorizontally,
-                    verticalArrangement = Arrangement.spacedBy(2.dp)
-                ) {
-                    Text(text = "🛡", fontSize = 24.sp)
-                    Text(
-                        text = "lvl ${mate.level}",
-                        color = TextGold,
-                        fontFamily = FontFirst(),
-                        fontSize = 10.sp
-                    )
-                    Text(
-                        text = "usun",
-                        color = TextMuted,
-                        fontFamily = FontFirst(),
-                        fontSize = 9.sp
-                    )
-                }
+            }
+        } else {
+            MonsterCardView(
+                card = card,
+                portraitHeight = 72,
+                modifier = Modifier.fillMaxWidth()
+            )
+        }
+    }
+}
+
+/** Wybor kompana kliknieciem. Zastapil przeciaganie, ktore na telefonie bylo meczace. */
+@Composable
+private fun MonsterPickerDialog(
+    available: List<MonsterCard>,
+    hasFreeSlot: Boolean,
+    onDismiss: () -> Unit,
+    onPick: (MonsterCard) -> Unit
+) {
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        containerColor = PanelDark,
+        title = {
+            Text(
+                text = "Wybierz kompana",
+                color = TextGold,
+                fontFamily = FontPixel(),
+                fontWeight = FontWeight.Bold
+            )
+        },
+        text = {
+            when {
+                !hasFreeSlot -> Text(
+                    text = "Wszystkie miejsca zajete. Kliknij kompana w druzynie, zeby go odeslac.",
+                    color = TextMuted,
+                    fontFamily = FontFirst(),
+                    style = MaterialTheme.typography.bodyMedium
+                )
+
+                available.isEmpty() -> Text(
+                    text = "Nie masz wolnych potworow. Kup ich w sklepie.",
+                    color = TextMuted,
+                    fontFamily = FontFirst(),
+                    style = MaterialTheme.typography.bodyMedium
+                )
+
+                else -> MonsterPickerGrid(available = available, onPick = onPick)
+            }
+        },
+        confirmButton = {
+            TextButton(onClick = onDismiss) {
+                Text(text = "Zamknij", color = TextGold, fontFamily = FontFirst())
             }
         }
-        Text(
-            text = mate?.name ?: "Gracz",
-            color = if (mate == null) TextMuted else TextGold,
-            fontFamily = FontFirst(),
-            fontSize = 11.sp,
-            maxLines = 1
-        )
+    )
+}
+
+@OptIn(ExperimentalLayoutApi::class)
+@Composable
+private fun MonsterPickerGrid(
+    available: List<MonsterCard>,
+    onPick: (MonsterCard) -> Unit
+) {
+    FlowRow(
+        modifier = Modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.spacedBy(10.dp),
+        verticalArrangement = Arrangement.spacedBy(10.dp)
+    ) {
+        available.forEach { card ->
+            MonsterCardView(
+                card = card,
+                portraitHeight = 84,
+                modifier = Modifier
+                    .width(108.dp)
+                    .clickable { onPick(card) }
+            )
+        }
+    }
+}
+
+/** Gracze dobrani do druzyny. Docelowo pojada tu znajomi i gildia z social area. */
+@OptIn(ExperimentalLayoutApi::class)
+@Composable
+private fun MateRow(
+    mates: List<TeamMate>,
+    onRemove: (TeamMate) -> Unit
+) {
+    FlowRow(
+        modifier = Modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.spacedBy(8.dp),
+        verticalArrangement = Arrangement.spacedBy(8.dp)
+    ) {
+        mates.forEach { mate ->
+            Row(
+                modifier = Modifier
+                    .clip(RoundedCornerShape(8.dp))
+                    .background(SlotEmpty)
+                    .border(1.dp, Gold, RoundedCornerShape(8.dp))
+                    .clickable { onRemove(mate) }
+                    .padding(horizontal = 10.dp, vertical = 6.dp),
+                horizontalArrangement = Arrangement.spacedBy(6.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(
+                    text = mate.name,
+                    color = TextGold,
+                    fontFamily = FontFirst(),
+                    fontSize = 12.sp
+                )
+                Text(
+                    text = "lvl ${mate.level}  ✕",
+                    color = TextMuted,
+                    fontFamily = FontFirst(),
+                    fontSize = 10.sp
+                )
+            }
+        }
     }
 }
 
@@ -391,7 +476,11 @@ private fun PlayerPickerDialog(
                             .fillMaxWidth()
                             .clip(RoundedCornerShape(8.dp))
                             .background(SlotEmpty)
-                            .border(1.dp, if (used) GoldDim.copy(alpha = 0.4f) else GoldDim, RoundedCornerShape(8.dp))
+                            .border(
+                                width = 1.dp,
+                                color = if (used) GoldDim.copy(alpha = 0.4f) else GoldDim,
+                                shape = RoundedCornerShape(8.dp)
+                            )
                             .clickable(enabled = !used) { onPick(mate) }
                             .padding(10.dp),
                         horizontalArrangement = Arrangement.SpaceBetween

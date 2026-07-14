@@ -3,6 +3,7 @@ package com.lernhero.home
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -40,17 +41,11 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.lernhero.domain.data.PlayerRepository
-import com.lernhero.domain.shop.ShopCatalog
 import com.lernhero.domain.shop.ShopItem
 import com.lernhero.domain.shop.ShopItemSlot
 import com.lernhero.game.character.KnightEquipment
 import com.lernhero.game.character.KnightEquipmentSlot
 import com.lernhero.game.character.ModularKnight
-import com.lernhero.home.dnd.DragAndDropContainer
-import com.lernhero.home.dnd.DragAndDropState
-import com.lernhero.home.dnd.dragSource
-import com.lernhero.home.dnd.dropTarget
-import com.lernhero.home.dnd.rememberDragAndDropState
 import com.lernhero.shared.FontFirst
 import com.lernhero.shared.FontPixel
 import com.lernhero.shared.Resources
@@ -71,11 +66,9 @@ private val GoldDim = Color(0xFF6E5730)
 private val Bronze = Color(0xFF463A24)
 private val Parchment = Color(0xFFEDDCB6)
 private val Muted = Color(0xFF9C8968)
-private val Accept = Color(0xFF6FE07A)
 private val Emerald = Color(0xFF62D98A)
 private val Ruby = Color(0xFFE0654F)
 
-private const val EQUIP_INVENTORY_KEY = "equip_inventory"
 private val SLOT = 56.dp
 private val BACKPACK_ICON = 60.dp
 
@@ -102,42 +95,37 @@ private val WEAPON_SLOTS = listOf(
     PaperSlot.Deco("Tarcza"),
 )
 
-private sealed interface EquipDrag {
-    val item: ShopItem
-    data class FromInventory(override val item: ShopItem) : EquipDrag
-    data class FromSlot(val slot: KnightEquipmentSlot, override val item: ShopItem) : EquipDrag
-}
-
 @Composable
 fun EquipmentScreen() {
     val playerRepository = koinInject<PlayerRepository>()
     val viewModel = remember(playerRepository) { PlayerViewModel(playerRepository) }
     val state by viewModel.uiState.collectAsState()
     val equipment = state.knightEquipment
-    val dragState = rememberDragAndDropState<EquipDrag>()
+
+    /** Klikniecie slotu przelacza go: zalozony schodzi, pusty probuje sie zalozyc. */
+    val toggleSlot: (KnightEquipmentSlot) -> Unit = { slot ->
+        if (slot.isEquipped(equipment)) viewModel.unequipSlot(slot) else viewModel.equipSlot(slot)
+    }
 
     Surface(modifier = Modifier.fillMaxSize(), color = AppSurface) {
-        DragAndDropContainer(state = dragState, modifier = Modifier.fillMaxSize()) {
-            Column(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .background(Brush.verticalGradient(listOf(Color(0xFF070505), Obsidian)))
-                    .verticalScroll(rememberScrollState())
-                    .padding(10.dp),
-                verticalArrangement = Arrangement.spacedBy(10.dp)
-            ) {
-                TitleBar(equipment = equipment, name = state.name, money = state.money)
-                PaperDoll(equipment = equipment, dragState = dragState, onEquip = viewModel::equipSlot)
-                Backpack(
-                    ownedEquipment = state.ownedEquipment,
-                    equipment = equipment,
-                    dragState = dragState,
-                    onUnequip = viewModel::unequipSlot
-                )
-                StatsPanel(equipment = equipment)
-                state.message?.let { HintBar(it) }
-                Spacer(modifier = Modifier.height(4.dp))
-            }
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .background(Brush.verticalGradient(listOf(Color(0xFF070505), Obsidian)))
+                .verticalScroll(rememberScrollState())
+                .padding(10.dp),
+            verticalArrangement = Arrangement.spacedBy(10.dp)
+        ) {
+            TitleBar(equipment = equipment, name = state.name, money = state.money)
+            PaperDoll(equipment = equipment, onSlotClick = toggleSlot)
+            Backpack(
+                ownedEquipment = state.ownedEquipment,
+                equipment = equipment,
+                onEquip = viewModel::equipSlot
+            )
+            StatsPanel(equipment = equipment)
+            state.message?.let { HintBar(it) }
+            Spacer(modifier = Modifier.height(4.dp))
         }
     }
 }
@@ -200,8 +188,7 @@ private fun TitleBar(equipment: KnightEquipment, name: String, money: Int) {
 @Composable
 private fun PaperDoll(
     equipment: KnightEquipment,
-    dragState: DragAndDropState<EquipDrag>,
-    onEquip: (KnightEquipmentSlot) -> Unit
+    onSlotClick: (KnightEquipmentSlot) -> Unit
 ) {
     OrnateFrame(modifier = Modifier.fillMaxWidth()) {
         Column(
@@ -213,15 +200,15 @@ private fun PaperDoll(
                 horizontalArrangement = Arrangement.spacedBy(4.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                SlotColumn(LEFT_SLOTS, equipment, dragState, onEquip)
+                SlotColumn(LEFT_SLOTS, equipment, onSlotClick)
                 Box(modifier = Modifier.weight(1f)) { Viewport(equipment) }
-                SlotColumn(RIGHT_SLOTS, equipment, dragState, onEquip)
+                SlotColumn(RIGHT_SLOTS, equipment, onSlotClick)
             }
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.spacedBy(16.dp, Alignment.CenterHorizontally)
             ) {
-                WEAPON_SLOTS.forEach { Slot(it, equipment, dragState, onEquip) }
+                WEAPON_SLOTS.forEach { Slot(it, equipment, onSlotClick) }
             }
         }
     }
@@ -231,14 +218,13 @@ private fun PaperDoll(
 private fun SlotColumn(
     slots: List<PaperSlot>,
     equipment: KnightEquipment,
-    dragState: DragAndDropState<EquipDrag>,
-    onEquip: (KnightEquipmentSlot) -> Unit
+    onSlotClick: (KnightEquipmentSlot) -> Unit
 ) {
     Column(
         verticalArrangement = Arrangement.spacedBy(10.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        slots.forEach { Slot(it, equipment, dragState, onEquip) }
+        slots.forEach { Slot(it, equipment, onSlotClick) }
     }
 }
 
@@ -282,12 +268,15 @@ private fun Viewport(equipment: KnightEquipment) {
 private fun Slot(
     paperSlot: PaperSlot,
     equipment: KnightEquipment,
-    dragState: DragAndDropState<EquipDrag>,
-    onEquip: (KnightEquipmentSlot) -> Unit
+    onSlotClick: (KnightEquipmentSlot) -> Unit
 ) {
     when (paperSlot) {
         is PaperSlot.Deco -> DecoSlot(paperSlot.label)
-        is PaperSlot.Gear -> GearSlot(paperSlot.slot, paperSlot.slot.isEquipped(equipment), dragState, onEquip)
+        is PaperSlot.Gear -> GearSlot(
+            slot = paperSlot.slot,
+            equipped = paperSlot.slot.isEquipped(equipment),
+            onClick = { onSlotClick(paperSlot.slot) }
+        )
     }
 }
 
@@ -317,47 +306,19 @@ private fun DecoSlot(label: String) {
 private fun GearSlot(
     slot: KnightEquipmentSlot,
     equipped: Boolean,
-    dragState: DragAndDropState<EquipDrag>,
-    onEquip: (KnightEquipmentSlot) -> Unit
+    onClick: () -> Unit
 ) {
-    val hovered = dragState.hoveredTargetKey == slot
-    val shopItem = slot.toShopSlot()?.let { ShopCatalog.itemForSlot(it) }
     val icon = slotIcon(slot)
 
-    val border = when {
-        hovered -> Accept
-        equipped -> Gold
-        else -> GoldDim
-    }
-    val bg = when {
-        hovered -> Accept.copy(alpha = 0.18f)
-        equipped -> Color(0xFF3A2C18)
-        else -> SlotBg
-    }
-
-    SlotShell(label = slot.shortLabel, labelStrong = equipped || hovered) {
+    SlotShell(label = slot.shortLabel, labelStrong = equipped) {
         Box(
             modifier = Modifier
                 .size(SLOT)
                 .then(if (equipped) Modifier.shadow(6.dp, RoundedCornerShape(8.dp)) else Modifier)
                 .clip(RoundedCornerShape(8.dp))
-                .background(bg)
-                .border(if (hovered || equipped) 2.dp else 1.dp, border, RoundedCornerShape(8.dp))
-                .dropTarget(
-                    state = dragState,
-                    key = slot,
-                    canAccept = { it != null && it.item.slot.toKnightSlot() == slot },
-                    onDrop = { onEquip(slot) }
-                )
-                .then(
-                    if (equipped && shopItem != null) {
-                        Modifier.dragSource(
-                            state = dragState,
-                            dataProvider = { EquipDrag.FromSlot(slot, shopItem) },
-                            preview = { GearIcon(icon, SLOT) }
-                        )
-                    } else Modifier
-                ),
+                .background(if (equipped) Color(0xFF3A2C18) else SlotBg)
+                .border(if (equipped) 2.dp else 1.dp, if (equipped) Gold else GoldDim, RoundedCornerShape(8.dp))
+                .clickable(onClick = onClick),
             contentAlignment = Alignment.Center
         ) {
             if (icon != null) {
@@ -417,25 +378,13 @@ private fun GearIcon(icon: DrawableResource?, size: Dp) {
 private fun Backpack(
     ownedEquipment: List<ShopItem>,
     equipment: KnightEquipment,
-    dragState: DragAndDropState<EquipDrag>,
-    onUnequip: (KnightEquipmentSlot) -> Unit
+    onEquip: (KnightEquipmentSlot) -> Unit
 ) {
     val available = ownedEquipment.filterNot { it.slot.toKnightSlot().isEquipped(equipment) }
-    val hovered = dragState.hoveredTargetKey == EQUIP_INVENTORY_KEY
 
-    OrnateFrame(
-        modifier = Modifier.fillMaxWidth(),
-        glow = hovered
-    ) {
+    OrnateFrame(modifier = Modifier.fillMaxWidth()) {
         Column(
-            modifier = Modifier
-                .dropTarget(
-                    state = dragState,
-                    key = EQUIP_INVENTORY_KEY,
-                    canAccept = { it is EquipDrag.FromSlot },
-                    onDrop = { drag -> if (drag is EquipDrag.FromSlot) onUnequip(drag.slot) }
-                )
-                .padding(10.dp),
+            modifier = Modifier.padding(10.dp),
             verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
             Row(
@@ -444,7 +393,7 @@ private fun Backpack(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Text("Plecak", color = Gold, fontFamily = FontPixel(), style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.Bold)
-                Text("przeciagnij na postac →", color = Muted, fontFamily = FontFirst(), fontSize = 10.sp)
+                Text("kliknij, zeby zalozyc", color = Muted, fontFamily = FontFirst(), fontSize = 10.sp)
             }
 
             if (available.isEmpty()) {
@@ -459,7 +408,9 @@ private fun Backpack(
                     modifier = Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()),
                     horizontalArrangement = Arrangement.spacedBy(10.dp)
                 ) {
-                    available.forEach { item -> BackpackItem(item, dragState) }
+                    available.forEach { item ->
+                        BackpackItem(item = item, onClick = { onEquip(item.slot.toKnightSlot()) })
+                    }
                 }
             }
         }
@@ -467,15 +418,11 @@ private fun Backpack(
 }
 
 @Composable
-private fun BackpackItem(item: ShopItem, dragState: DragAndDropState<EquipDrag>) {
+private fun BackpackItem(item: ShopItem, onClick: () -> Unit) {
     Column(
         modifier = Modifier
             .width(BACKPACK_ICON + 8.dp)
-            .dragSource(
-                state = dragState,
-                dataProvider = { EquipDrag.FromInventory(item) },
-                preview = { GearIcon(itemIcon(item), BACKPACK_ICON) }
-            ),
+            .clickable(onClick = onClick),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(3.dp)
     ) {

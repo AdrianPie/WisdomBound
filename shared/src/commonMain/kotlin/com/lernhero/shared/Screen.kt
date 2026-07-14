@@ -21,8 +21,6 @@ sealed class Screen {
     @Serializable
     data class Dungeon(val seed: Long) : Screen()
     @Serializable
-    data object Party : Screen()
-    @Serializable
     data object KnightPreview : Screen()
     @Serializable
     data object ModularKnightPreview : Screen()

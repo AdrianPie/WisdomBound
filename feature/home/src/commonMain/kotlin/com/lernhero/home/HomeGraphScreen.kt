@@ -69,8 +69,7 @@ fun HomeGraphScreen() {
     val showBars by remember {
         derivedStateOf {
             !currentRoute.value.isOnRoute<Screen.FightScreen>() &&
-                !currentRoute.value.isOnRoute<Screen.Dungeon>() &&
-                !currentRoute.value.isOnRoute<Screen.Party>()
+                !currentRoute.value.isOnRoute<Screen.Dungeon>()
         }
     }
     Scaffold(
@@ -178,9 +177,6 @@ fun HomeGraphScreen() {
                         // Kazde wejscie do lochu to nowy seed, czyli nowa mapa.
                         onStartDungeon = {
                             navController.navigate(Screen.Dungeon(seed = Random.nextLong()))
-                        },
-                        onOpenCompanions = {
-                            navController.navigate(Screen.Party)
                         }
                     )
                 }
@@ -192,13 +188,6 @@ fun HomeGraphScreen() {
                         },
                         onAbandon = {
                             navController.popBackStack()
-                        }
-                    )
-                }
-                composable<Screen.Party> {
-                    PartyScreen(
-                        onStartBattle = {
-                            navController.navigate(Screen.FightScreen)
                         }
                     )
                 }
