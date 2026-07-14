@@ -74,6 +74,7 @@ class BattlePlaybackEngine(
                     targetId = targetId,
                     targetName = targetName,
                     damage = amount,
+                    isCritical = isCritical,
                     targetHpAfter = targetHpAfter,
                     targetDefeated = killed
                 )
@@ -81,6 +82,9 @@ class BattlePlaybackEngine(
                 BattlePlaybackStep.Tick(
                     id = "wave_${wave}_step_$stepNumber",
                     targetId = targetId,
+                    amount = amount,
+                    kind = tag.toHitKind(),
+                    heal = false,
                     targetHpAfter = targetHpAfter,
                     targetDefeated = killed,
                     label = "$targetName: ${tag.label()} -$amount HP"
@@ -91,6 +95,9 @@ class BattlePlaybackEngine(
         is CombatEvent.Healed -> BattlePlaybackStep.Tick(
             id = "wave_${wave}_step_$stepNumber",
             targetId = targetId,
+            amount = amount,
+            kind = HitKind.Heal,
+            heal = true,
             targetHpAfter = targetHpAfter,
             targetDefeated = false,
             label = "${names[targetId] ?: targetId}: +$amount HP"
@@ -105,6 +112,14 @@ class BattlePlaybackEngine(
         DamageTag.Poison -> "trucizna"
         DamageTag.Reflect -> "odbicie"
         DamageTag.Skill -> "efekt"
+    }
+
+    private fun DamageTag.toHitKind(): HitKind = when (this) {
+        DamageTag.Attack -> HitKind.Hit
+        DamageTag.Burn -> HitKind.Burn
+        DamageTag.Poison -> HitKind.Poison
+        DamageTag.Reflect -> HitKind.Reflect
+        DamageTag.Skill -> HitKind.Skill
     }
 
     private fun BattleFighter.toCombatant(): Combatant = Combatant(
@@ -140,6 +155,21 @@ data class BattlePlaybackScript(
     val steps: List<BattlePlaybackStep>
 )
 
+/**
+ * Rodzaj trafienia - steruje kolorem liczby obrazen i animacja efektu w warstwie UI.
+ * Zywe pojecie walki (czym bylo uderzenie), a nie regula gry, wiec jego miejsce jest tutaj,
+ * w warstwie tlumaczacej zdarzenia na to, co widzi gracz.
+ */
+enum class HitKind {
+    Hit,
+    Crit,
+    Burn,
+    Poison,
+    Reflect,
+    Skill,
+    Heal
+}
+
 sealed class BattlePlaybackStep {
     abstract val id: String
 
@@ -152,14 +182,20 @@ sealed class BattlePlaybackStep {
         val targetId: String,
         val targetName: String,
         val damage: Int,
+        val isCritical: Boolean,
         val targetHpAfter: Int,
         val targetDefeated: Boolean
-    ) : BattlePlaybackStep()
+    ) : BattlePlaybackStep() {
+        val hitKind: HitKind get() = if (isCritical) HitKind.Crit else HitKind.Hit
+    }
 
     /** Zmiana HP bez animacji ataku: trucizna, ogien, odbicie, leczenie. */
     data class Tick(
         override val id: String,
         val targetId: String,
+        val amount: Int,
+        val kind: HitKind,
+        val heal: Boolean,
         val targetHpAfter: Int,
         val targetDefeated: Boolean,
         val label: String

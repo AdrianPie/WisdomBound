@@ -2,11 +2,26 @@ package com.lernhero.game.battle
 
 import com.lernhero.domain.combat.playback.BattlePlaybackScript
 import com.lernhero.domain.combat.playback.BattlePlaybackStep
+import com.lernhero.domain.combat.playback.HitKind
 import com.lernhero.game.character.CharacterState
 import com.lernhero.game.character.CharacterUiModel
 import org.jetbrains.compose.resources.DrawableResource
 
 typealias CharacterId = String
+
+/**
+ * Ulotny efekt bojowy przypiety do walczacego: pływajaca liczba obrazen + wybuch (ogien, trucizna,
+ * leczenie). Zyje tylko przez czas animacji - warstwa UI odtwarza go i zdejmuje przez [id].
+ *
+ * [id] rosnie monotonicznie, wiec dwa te same trafienia (np. podwojna trucizna) nie zleja sie
+ * w jeden efekt.
+ */
+data class FloatingEffect(
+    val id: Long,
+    val targetId: String,
+    val amount: Int,
+    val kind: HitKind
+)
 
 enum class GamePhase {
     Battle,
@@ -32,6 +47,8 @@ data class BattleUiState(
     val playback: BattlePlaybackUiState? = null,
     val quiz: QuizState? = null,
     val upgrade: UpgradeState? = null,
+    /** Pływajace liczby obrazen i wybuchy czekajace na odegranie. */
+    val floatingEffects: List<FloatingEffect> = emptyList(),
     val message: String? = null
 )
 

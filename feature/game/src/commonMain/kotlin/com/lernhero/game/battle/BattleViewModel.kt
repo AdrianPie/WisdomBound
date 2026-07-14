@@ -6,6 +6,7 @@ import com.lernhero.domain.combat.StatType
 import com.lernhero.domain.combat.playback.BattleFighter
 import com.lernhero.domain.combat.playback.BattlePlaybackEngine
 import com.lernhero.domain.combat.playback.BattlePlaybackStep
+import com.lernhero.domain.combat.playback.HitKind
 import com.lernhero.game.character.CharacterState
 import com.lernhero.domain.item.ItemSlot
 import com.lernhero.domain.item.Loadout
@@ -40,6 +41,9 @@ class BattleViewModel(
     /** Zalozony ekwipunek bohatera - stad biora sie jego efekty w walce. */
     private var heroLoadout: Loadout = Loadout.Empty
 
+    /** Zrodlo rosnacych id dla pływajacych efektow. */
+    private var nextEffectId: Long = 0L
+
     private val _uiState = MutableStateFlow(createInitialState())
     val uiState = _uiState.asStateFlow()
 
@@ -71,7 +75,8 @@ class BattleViewModel(
                 }
 
                 // Trucizna, ogien, odbicie i leczenie nie maja animacji ataku - poprawiaja tylko
-                // pasek HP i od razu przewijaja skrypt dalej.
+                // pasek HP i od razu przewijaja skrypt dalej. Wybuch i liczbe pokazujemy tu, bo
+                // to jedyny moment, w ktorym ten tick jest widoczny.
                 is BattlePlaybackStep.Tick -> {
                     val target = state.characters[step.targetId] ?: return@update state.advanceStep()
                     state.copy(
@@ -82,7 +87,7 @@ class BattleViewModel(
                             )
                         ),
                         message = step.label
-                    ).advanceStep()
+                    ).spawnEffect(step.targetId, step.amount, step.kind).advanceStep()
                 }
 
                 is BattlePlaybackStep.WaveCleared -> state.startQuizPhase()
@@ -126,13 +131,23 @@ class BattleViewModel(
             )
             val updatedAttacker = attacker.copy(state = CharacterState.MOVING_BACK)
 
+            // Liczba obrazen wyskakuje dokladnie w klatce trafienia - nie wczesniej, nie pozniej.
             state.copy(
                 characters = state.characters
                     .plus(attackStep.targetId to updatedTarget)
                     .plus(characterId to updatedAttacker),
                 message = "${attackStep.targetName} traci ${attackStep.damage} HP"
-            )
+            ).spawnEffect(attackStep.targetId, attackStep.damage, attackStep.hitKind)
         }
+    }
+
+    /** Rodzi pływajacy efekt na celu. Id rosnie, wiec kolejne trafienia sie nie zlewaja. */
+    private fun BattleUiState.spawnEffect(targetId: String, amount: Int, kind: HitKind): BattleUiState =
+        copy(floatingEffects = floatingEffects + FloatingEffect(nextEffectId++, targetId, amount, kind))
+
+    /** Ekran zdejmuje efekt, gdy jego animacja dobiegnie konca. */
+    fun consumeFloatingEffect(id: Long) {
+        _uiState.update { it.copy(floatingEffects = it.floatingEffects.filterNot { fx -> fx.id == id }) }
     }
 
     fun onMoveBackFinished(characterId: String) {

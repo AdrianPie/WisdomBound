@@ -40,7 +40,8 @@ fun BattleScreen() {
             state = state,
             onMoveToAttackFinished = viewModel::onMoveToAttackFinished,
             onAttackAnimationFinished = viewModel::onAttackAnimationFinished,
-            onMoveBackFinished = viewModel::onMoveBackFinished
+            onMoveBackFinished = viewModel::onMoveBackFinished,
+            onEffectShown = viewModel::consumeFloatingEffect
         )
 
         when (state.phase) {

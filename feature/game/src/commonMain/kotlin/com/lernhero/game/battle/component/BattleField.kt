@@ -55,16 +55,20 @@ internal fun BattleField(
     state: BattleUiState,
     onMoveToAttackFinished: (String) -> Unit,
     onAttackAnimationFinished: (String) -> Unit,
-    onMoveBackFinished: (String) -> Unit
+    onMoveBackFinished: (String) -> Unit,
+    onEffectShown: (Long) -> Unit
 ) {
     val allCharacters = state.characters.values.toList()
     val enemies = allCharacters.filter { !it.isPlayer }.sortedBy { it.id }
     val players = allCharacters.filter { it.isPlayer }.sortedBy { it.id }
     val slotPositions = remember { mutableStateMapOf<String, Offset>() }
 
-    Box(
+    BoxWithConstraints(
         modifier = Modifier.fillMaxSize()
     ) {
+        // Rozmiar karty jak w szyku (kazda strona zajmuje pol ekranu) - efekty skaluja sie do niego.
+        val fxCardSize = calculateCardSize(maxWidth = maxWidth / 2f, maxHeight = maxHeight)
+
         Image(
             painter = painterResource(Resources.Image.battlegroundFirst),
             contentDescription = null,
@@ -120,6 +124,14 @@ internal fun BattleField(
                 )
             }
         }
+
+        // Nakladka efektow lezy nad wszystkim: liczby obrazen i wybuchy nie moga chowac sie za postaciami.
+        CombatFxLayer(
+            effects = state.floatingEffects,
+            slotPositions = slotPositions,
+            cardSize = fxCardSize,
+            onConsumed = onEffectShown
+        )
 
         BattleHud(
             state = state,
