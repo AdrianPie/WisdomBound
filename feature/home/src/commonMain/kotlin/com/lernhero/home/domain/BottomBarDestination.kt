@@ -18,7 +18,7 @@ enum class BottomBarDestination(
     Fight(
         icon = Resources.Icon.swords,
         title = "Fight",
-        route = Screen.GameScreen
+        route = Screen.Team
     ),
 
     Equipment(

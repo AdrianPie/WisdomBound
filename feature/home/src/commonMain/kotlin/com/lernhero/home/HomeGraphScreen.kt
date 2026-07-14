@@ -25,9 +25,11 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import com.lernhero.game.GameScreen
+import androidx.navigation.toRoute
 import com.lernhero.home.component.NavBottomBar
 import com.lernhero.home.domain.BottomBarDestination
+import com.lernhero.home.dungeon.DungeonMapScreen
+import kotlin.random.Random
 import com.lernhero.shared.FontFirst
 import com.lernhero.shared.FontSize
 import com.lernhero.shared.IconPrimary
@@ -48,7 +50,7 @@ fun HomeGraphScreen() {
         derivedStateOf {
             when {
                 currentRoute.value.isOnRoute<Screen.Home>() -> BottomBarDestination.Home
-                currentRoute.value.isOnRoute<Screen.GameScreen>() -> BottomBarDestination.Fight
+                currentRoute.value.isOnRoute<Screen.Team>() -> BottomBarDestination.Fight
                 currentRoute.value.isOnRoute<Screen.Equipment>() -> BottomBarDestination.Equipment
                 currentRoute.value.isOnRoute<Screen.Shop>() -> BottomBarDestination.Shop
                 else -> BottomBarDestination.Home
@@ -67,6 +69,7 @@ fun HomeGraphScreen() {
     val showBars by remember {
         derivedStateOf {
             !currentRoute.value.isOnRoute<Screen.FightScreen>() &&
+                !currentRoute.value.isOnRoute<Screen.Dungeon>() &&
                 !currentRoute.value.isOnRoute<Screen.Party>()
         }
     }
@@ -149,7 +152,7 @@ fun HomeGraphScreen() {
                 composable<Screen.Home> {
                     HomeScreen(
                         onOpenFight = {
-                            navController.navigate(Screen.GameScreen) {
+                            navController.navigate(Screen.Team) {
                                 launchSingleTop = true
                             }
                         },
@@ -170,11 +173,28 @@ fun HomeGraphScreen() {
                         }
                     )
                 }
-                composable<Screen.GameScreen> { GameScreen(
-                    navigateToFightScreen = {
-                        navController.navigate(Screen.Party)
-                    }
-                ) }
+                composable<Screen.Team> {
+                    TeamScreen(
+                        // Kazde wejscie do lochu to nowy seed, czyli nowa mapa.
+                        onStartDungeon = {
+                            navController.navigate(Screen.Dungeon(seed = Random.nextLong()))
+                        },
+                        onOpenCompanions = {
+                            navController.navigate(Screen.Party)
+                        }
+                    )
+                }
+                composable<Screen.Dungeon> { entry ->
+                    DungeonMapScreen(
+                        seed = entry.toRoute<Screen.Dungeon>().seed,
+                        onEnterFight = {
+                            navController.navigate(Screen.FightScreen)
+                        },
+                        onAbandon = {
+                            navController.popBackStack()
+                        }
+                    )
+                }
                 composable<Screen.Party> {
                     PartyScreen(
                         onStartBattle = {

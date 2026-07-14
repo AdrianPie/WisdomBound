@@ -14,8 +14,12 @@ sealed class Screen {
     data object Home: Screen()
     @Serializable
     data object FightScreen : Screen()
+    /** Zakladka "Fight": sklad druzyny i wejscie do lochu. */
     @Serializable
-    data object GameScreen : Screen()
+    data object Team : Screen()
+    /** Mapa lochu. Seed jednoznacznie okresla caly graf, wiec wystarczy go przekazac w trasie. */
+    @Serializable
+    data class Dungeon(val seed: Long) : Screen()
     @Serializable
     data object Party : Screen()
     @Serializable
