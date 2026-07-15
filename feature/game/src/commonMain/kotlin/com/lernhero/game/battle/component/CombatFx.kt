@@ -141,6 +141,9 @@ private fun FloatingEffectView(
     // Plotno efektu jest wieksze od karty, bo wybuch i embersy wychodza poza obrys postaci.
     val fxSize = cardSize * 2.6f
     val fxPx = with(density) { fxSize.toPx() }
+    // Sprite jest wyrownany do dolu karty, wiec srodek karty wypada na glowie. Schodzimy na tors,
+    // zeby wybuch trafial w postac, a nie unosil sie nad nia.
+    val bodyShiftPx = with(density) { (cardSize * 0.18f).toPx() }
     val measurer = rememberTextMeasurer()
     val p = progress.value
 
@@ -149,7 +152,7 @@ private fun FloatingEffectView(
             .offset {
                 IntOffset(
                     x = (centerInLayer.x - fxPx / 2f).toInt(),
-                    y = (centerInLayer.y - fxPx / 2f).toInt()
+                    y = (centerInLayer.y - fxPx / 2f + bodyShiftPx).toInt()
                 )
             }
             .size(fxSize),
@@ -217,7 +220,8 @@ private fun DrawScope.drawDamageNumber(
 
     val layout = measurer.measure(text, style)
     val ox = center.x - layout.size.width / 2f
-    val oy = center.y - 150f * k + rise - layout.size.height / 2f
+    // Liczba startuje tuz nad glowa (blizej niz w oryginale) i stad wystrzeliwuje w gore.
+    val oy = center.y - 70f * k + rise - layout.size.height / 2f
 
     // Obrys: cztery przesuniete kopie w ciemnym kolorze, potem wypelnienie - tanie "paintOrder=stroke".
     val d = 3f * k
