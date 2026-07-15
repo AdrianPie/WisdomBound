@@ -38,4 +38,13 @@ interface PlayerRepository {
      * owned multiset (duplicates allowed). Returns the updated player, or null on failure.
      */
     suspend fun purchaseMonster(monsterId: String, cost: Int): Player?
+
+    /**
+     * Buys a spell: checks balance, deducts the cost and stores the spell id.
+     * Returns the updated player, or null on failure (not enough money, already owned, signed out).
+     */
+    suspend fun purchaseSpell(spellId: String, cost: Int): Player?
+
+    /** Persists the ability bar: spell id -> assigned percent of a turn. */
+    suspend fun updateSpellWeights(weights: Map<String, Int>)
 }

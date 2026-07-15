@@ -129,4 +129,29 @@ class PlayerRepositoryImpl: PlayerRepository {
             null
         }
     }
+
+    override suspend fun purchaseSpell(spellId: String, cost: Int): Player? {
+        return try {
+            val document = playerDocument() ?: return null
+            val player = getPlayer() ?: return null
+            if (spellId in player.ownedSpells || player.money < cost) return null
+            val updated = player.copy(
+                money = player.money - cost,
+                ownedSpells = player.ownedSpells + spellId
+            )
+            document.set(updated)
+            updated
+        } catch (e: Exception) {
+            null
+        }
+    }
+
+    override suspend fun updateSpellWeights(weights: Map<String, Int>) {
+        try {
+            val document = playerDocument() ?: return
+            val player = getPlayer() ?: return
+            document.set(player.copy(spellWeights = weights))
+        } catch (_: Exception) {
+        }
+    }
 }

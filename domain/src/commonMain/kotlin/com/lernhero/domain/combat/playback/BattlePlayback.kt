@@ -8,6 +8,9 @@ import com.lernhero.domain.combat.Stats
 import com.lernhero.domain.combat.Team
 import com.lernhero.domain.combat.engine.BattleEngine
 import com.lernhero.domain.item.Loadout
+import com.lernhero.domain.spell.toChoice
+import com.lernhero.domain.spell.SpellCatalog
+import com.lernhero.domain.spell.AbilityLoadout
 import kotlin.random.Random
 
 /**
@@ -130,8 +133,10 @@ class BattlePlaybackEngine(
         hp = hp,
         // Bonusy do HP i ataku sa juz wliczone w hp/attack przez warstwe UI, wiec tutaj je odsiewamy.
         // Inaczej ten sam helm dodawalby zdrowie dwa razy.
-        itemStats = loadout.stats.without(StatType.MaxHp, StatType.Attack),
-        effects = loadout.effects
+        itemStats = loadout.stats.without(StatType.MaxHp, StatType.Attack) + spellPowerStats,
+        effects = loadout.effects,
+        // Pasek zdolnosci: zaklecia z ich procentami. Silnik losuje z tego co ture.
+        spells = ability.toChoices { id -> SpellCatalog.byId(id)?.toChoice() }
     )
 }
 
@@ -146,8 +151,15 @@ data class BattleFighter(
     val hp: Int,
     val maxHp: Int,
     val attack: Int,
-    val loadout: Loadout = Loadout.Empty
-)
+    val loadout: Loadout = Loadout.Empty,
+    /** Pasek zdolnosci wojownika. Pusty = zawsze zwykly atak. */
+    val ability: AbilityLoadout = AbilityLoadout(),
+    /** Mnoznik sily zaklec ponad baze (od przedmiotow/perkow). */
+    val spellPower: Float = 0f
+) {
+    internal val spellPowerStats: Stats
+        get() = if (spellPower == 0f) Stats.Empty else Stats.of(StatType.SpellPower to spellPower)
+}
 
 data class BattlePlaybackScript(
     val id: String,

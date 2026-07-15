@@ -14,6 +14,10 @@ data class Player(
     /** Multiset of [MonsterCard] ids the player owns (duplicates allowed). */
     val ownedMonsters: List<String> = emptyList(),
     /** Companion slots for the pre-battle party. Hero is implicit; entries are [MonsterCard] ids or null. */
-    val party: List<String?> = emptyList()
+    val party: List<String?> = emptyList(),
+    /** Zaklecia kupione w sklepie (id z katalogu zaklec). */
+    val ownedSpells: List<String> = emptyList(),
+    /** Pasek zdolnosci: id zaklecia -> przypisany procent tury. Reszta do 100% to zwykly atak. */
+    val spellWeights: Map<String, Int> = emptyMap()
 )
 

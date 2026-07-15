@@ -56,7 +56,12 @@ data class Combatant(
     val statuses: List<ActiveStatus> = emptyList(),
     val effects: List<Effect> = emptyList(),
     /** Statystyki z zalozonych przedmiotow, zsumowane raz przy starcie walki. */
-    val itemStats: Stats = Stats.Empty
+    val itemStats: Stats = Stats.Empty,
+    /**
+     * Pasek zdolnosci: zaklecia z szansa na aktywacje w kazdej turze. Suma szans to procent tur,
+     * w ktorych zamiast zwyklego ataku padnie spell. Pusta lista = zawsze zwykly atak.
+     */
+    val spells: List<SpellChoice> = emptyList()
 ) {
     val isAlive: Boolean get() = hp > 0
 

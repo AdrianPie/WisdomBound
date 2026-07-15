@@ -10,6 +10,9 @@ import com.lernhero.domain.combat.playback.HitKind
 import com.lernhero.game.character.CharacterState
 import com.lernhero.domain.item.ItemSlot
 import com.lernhero.domain.item.Loadout
+import com.lernhero.domain.run.RunSession
+import com.lernhero.domain.spell.SpellCatalog
+import com.lernhero.domain.spell.AbilityLoadout
 import com.lernhero.domain.item.itemIn
 import com.lernhero.domain.item.toLoadout
 import com.lernhero.domain.monster.MonsterCatalog
@@ -30,7 +33,8 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 
 class BattleViewModel(
-    private val playerRepository: PlayerRepository
+    private val playerRepository: PlayerRepository,
+    private val runSession: RunSession
 ) : ViewModel() {
 
     private val playbackEngine = BattlePlaybackEngine()
@@ -40,6 +44,10 @@ class BattleViewModel(
 
     /** Zalozony ekwipunek bohatera - stad biora sie jego efekty w walce. */
     private var heroLoadout: Loadout = Loadout.Empty
+
+    /** Pasek zdolnosci bohatera - zapis z EQ + bonusy z biezacego runu. */
+    private var heroAbility: AbilityLoadout = AbilityLoadout()
+    private var heroSpellPower: Float = 0f
 
     /** Zrodlo rosnacych id dla pływajacych efektow. */
     private var nextEffectId: Long = 0L
@@ -285,11 +293,28 @@ class BattleViewModel(
         loadSavedPlayer()
     }
 
+    /**
+     * Sklada pasek zdolnosci na te walke: wagi z EQ (albo przemeblowane przy ognisku), a pojemnosc
+     * to baza plus bonus z biezacego runu. Zaklecia, ktorych gracz nie posiada, sa odsiewane.
+     */
+    private fun buildAbility(player: com.lernhero.domain.player.Player): AbilityLoadout {
+        val mods = runSession.modifiers
+        val capacity = AbilityLoadout.BASE_CAPACITY + mods.bonusSpellCapacity
+        val weights = (mods.spellWeightOverride ?: player.spellWeights)
+            .filterKeys { it in player.ownedSpells && SpellCatalog.byId(it) != null }
+        // Przepuszczamy przez withPercent, zeby suma nigdy nie przekroczyla pojemnosci.
+        return weights.entries.fold(AbilityLoadout(capacity = capacity)) { bar, (id, pct) ->
+            bar.withPercent(id, pct)
+        }
+    }
+
     /** Loads the saved party + equipment and rebuilds the opening battle around them. */
     private fun loadSavedPlayer() {
         viewModelScope.launch(Dispatchers.IO) {
             val player = playerRepository.getPlayer() ?: return@launch
             savedParty = player.party
+            heroAbility = buildAbility(player)
+            heroSpellPower = runSession.modifiers.bonusSpellPower
             val rebuilt = BattleUiState(
                 characters = buildInitialCharacters(),
                 message = "Fala 1"
@@ -672,7 +697,9 @@ class BattleViewModel(
             hp = hp,
             maxHp = maxHp,
             attack = attack,
-            loadout = if (id == HERO_ID) heroLoadout else Loadout.Empty
+            loadout = if (id == HERO_ID) heroLoadout else Loadout.Empty,
+            ability = if (id == HERO_ID) heroAbility else AbilityLoadout(),
+            spellPower = if (id == HERO_ID) heroSpellPower else 0f
         )
 
     private fun mapCharacterSprites(key: String) = MonsterSprites.spritesFor(key)

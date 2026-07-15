@@ -9,6 +9,7 @@ import com.lernhero.domain.combat.CombatantId
 import com.lernhero.domain.combat.DamagePacket
 import com.lernhero.domain.combat.DamageTag
 import com.lernhero.domain.combat.EffectContext
+import com.lernhero.domain.combat.SpellChoice
 import com.lernhero.domain.combat.StatType
 import com.lernhero.domain.combat.StatusKind
 import com.lernhero.domain.combat.Team
@@ -55,7 +56,7 @@ class BattleEngine(
                 if (actor.isFrozen) continue
 
                 state = dispatch(state, CombatEvent.TurnStarted(state.turn, actorId), depth = 0)
-                state = performAttack(state, actorId, depth = 0)
+                state = takeTurn(state, actorId, depth = 0)
                 state = dispatch(state, CombatEvent.TurnEnded(state.turn, actorId), depth = 0)
             }
 
@@ -75,6 +76,49 @@ class BattleEngine(
                     .thenBy { it.id }
             )
             .map { it.id }
+
+    /**
+     * Akcja tury z paska zdolnosci. Losuje 0..99: kolejne zaklecia zjadaja swoje procenty, a jesli
+     * los nie trafi w zadne, pada zwykly atak. Suma szans zaklec to procent tur bez zwyklego ciosu.
+     *
+     * Kolejnosc [Combatant.spells] jest ustalona (malejaco), wiec przy tym samym seedzie wynik
+     * jest powtarzalny - tak samo jak reszta symulacji.
+     */
+    private fun takeTurn(state: BattleState, actorId: CombatantId, depth: Int): BattleState {
+        val actor = state.combatant(actorId) ?: return state
+        if (actor.spells.isNotEmpty()) {
+            val roll = random.nextInt(100)
+            var acc = 0
+            for (choice in actor.spells) {
+                acc += choice.chancePercent
+                if (roll < acc) return castSpell(state, actorId, choice, depth)
+            }
+        }
+        return performAttack(state, actorId, depth)
+    }
+
+    /** Rzuca zaklecie: buduje kontekst rzucajacego, zbiera intencje i wykonuje je jak kazde akcje. */
+    private fun castSpell(
+        state: BattleState,
+        actorId: CombatantId,
+        choice: SpellChoice,
+        depth: Int
+    ): BattleState {
+        val owner = state.combatant(actorId) ?: return state
+        if (!owner.isAlive) return state
+        val context = EffectContext(
+            state = state,
+            ownerId = actorId,
+            random = random,
+            usage = state.usageOf(actorId, choice.spellId)
+        )
+        val actions = choice.cast.cast(context)
+        if (actions.isEmpty()) {
+            // Zaklecie nie mialo w kogo/kim celowac (np. brak rannych do leczenia) - runda nie przepada.
+            return performAttack(state, actorId, depth)
+        }
+        return execute(state, actions, depth)
+    }
 
     /**
      * Zwykly atak. Liczba celow to statystyka [StatType.AttackTargets], wiec "miecz bijacy dwoch"

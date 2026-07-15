@@ -37,7 +37,10 @@ enum class StatType {
     CooldownReduction,
 
     /** Ilu wrogow obejmuje zwykly atak. Kazdy startuje z 1. */
-    AttackTargets
+    AttackTargets,
+
+    /** Mnoznik sily zaklec - o ile mocniejsze sa spelle wzgledem bazy. */
+    SpellPower
 }
 
 /**
