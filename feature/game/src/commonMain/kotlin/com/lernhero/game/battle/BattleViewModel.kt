@@ -439,8 +439,10 @@ class BattleViewModel(
         val loadout = equipment.toLoadout()
         heroLoadout = loadout
 
-        val hpBonus = loadout.stats[StatType.MaxHp].toInt()
-        val attackBonus = loadout.stats[StatType.Attack].toInt()
+        // Bonusy z ekwipunku plus perki z biezacego runu (obozowiska). Perki znikaja po runie.
+        val runMods = runSession.modifiers
+        val hpBonus = loadout.stats[StatType.MaxHp].toInt() + runMods.bonusMaxHp
+        val attackBonus = loadout.stats[StatType.Attack].toInt() + runMods.bonusAttack
 
         val updatedCharacters = characters.mapValues { (_, character) ->
             if (character.id != HERO_ID) {

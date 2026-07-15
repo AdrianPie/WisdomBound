@@ -51,6 +51,7 @@ import androidx.compose.ui.unit.sp
 import com.lernhero.domain.dungeon.DungeonMap
 import com.lernhero.domain.dungeon.DungeonMapGenerator
 import com.lernhero.domain.dungeon.DungeonNode
+import com.lernhero.domain.dungeon.DungeonNodeType
 import com.lernhero.shared.theme.FontFirst
 import com.lernhero.shared.theme.FontPixel
 import kotlin.random.Random
@@ -126,6 +127,8 @@ fun DungeonMapScreen(
 ) {
     val run = rememberSaveable(seed, saver = DungeonRunState.Saver) { DungeonRunState(seed) }
     var pendingNode by remember { mutableStateOf<DungeonNode?>(null) }
+    // Ognisko, przy ktorym gracz aktualnie odpoczywa (null = zamkniete).
+    var campfireNode by remember { mutableStateOf<DungeonNode?>(null) }
     val scrollState = rememberScrollState()
 
     // Wchodzimy do lochu od dolu - tam stoi bohater, tam sa pierwsze wybory.
@@ -161,8 +164,19 @@ fun DungeonMapScreen(
             onConfirm = {
                 run.enter(node)
                 pendingNode = null
-                if (node.type.isCombat) onEnterFight()
+                when {
+                    node.type.isCombat -> onEnterFight()
+                    // Ognisko: pole seeduje oferte perkow, wiec zawsze proponuje to samo.
+                    node.type == DungeonNodeType.Rest -> campfireNode = node
+                }
             }
+        )
+    }
+
+    campfireNode?.let { node ->
+        CampfireDialog(
+            nodeSeed = seed * 31 + node.id.hashCode().toLong(),
+            onLeave = { campfireNode = null }
         )
     }
 }

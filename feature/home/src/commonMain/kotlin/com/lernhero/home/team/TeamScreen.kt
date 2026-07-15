@@ -50,6 +50,8 @@ import com.lernhero.home.ui.MonsterCardView
 import com.lernhero.shared.theme.FontFirst
 import com.lernhero.shared.theme.FontPixel
 import com.lernhero.shared.theme.Surface as AppSurface
+import com.lernhero.domain.run.RunSession
+import org.koin.compose.koinInject
 import org.koin.compose.viewmodel.koinViewModel
 
 private val PanelDark = Color(0xFF1A1410)
@@ -89,6 +91,7 @@ fun TeamScreen(
     onStartDungeon: () -> Unit
 ) {
     val viewModel = koinViewModel<PlayerViewModel>()
+    val runSession = koinInject<RunSession>()
     val state by viewModel.uiState.collectAsState()
 
     val mates = remember { mutableStateListOf<TeamMate>() }
@@ -154,7 +157,11 @@ fun TeamScreen(
             )
 
             Button(
-                onClick = onStartDungeon,
+                onClick = {
+                    // Nowe zejscie - kasuje perki z poprzedniego runu.
+                    runSession.startNewRun()
+                    onStartDungeon()
+                },
                 modifier = Modifier.fillMaxWidth().height(64.dp),
                 shape = RoundedCornerShape(12.dp),
                 colors = ButtonDefaults.buttonColors(

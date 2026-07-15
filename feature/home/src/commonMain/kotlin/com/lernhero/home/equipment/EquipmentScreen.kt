@@ -45,6 +45,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.lernhero.domain.item.Item
+import com.lernhero.home.ui.AbilityBar
 import com.lernhero.domain.item.ItemSlot
 import com.lernhero.game.character.KnightEquipment
 import com.lernhero.game.character.ModularKnight
@@ -118,6 +119,12 @@ fun EquipmentScreen() {
             Backpack(
                 items = state.backpack,
                 onEquip = viewModel::equipItem
+            )
+
+            AbilityBar(
+                ability = state.ability,
+                ownedSpells = state.spells,
+                onSet = viewModel::setSpellPercent
             )
 
             StatsPanel(equipped = state.equipment.equipped.keys.size)

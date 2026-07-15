@@ -44,6 +44,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.lernhero.domain.item.Item
 import com.lernhero.domain.item.ItemCatalog
+import com.lernhero.domain.spell.SpellCatalog
+import com.lernhero.domain.spell.Spell
 import com.lernhero.domain.monster.MonsterCard
 import com.lernhero.domain.monster.MonsterCatalog
 import com.lernhero.home.player.PlayerViewModel
@@ -70,6 +72,7 @@ private val ShopBuy = Color(0xFFB4451F)
 
 private enum class ShopTab(val label: String) {
     Equipment("Ekwipunek"),
+    Spells("Zaklecia"),
     Monsters("Potwory")
 }
 
@@ -105,6 +108,12 @@ fun ShopScreen() {
                     ownedItems = state.ownedItems,
                     money = state.money,
                     onBuy = viewModel::buyItem
+                )
+
+                ShopTab.Spells -> SpellShop(
+                    ownedSpells = state.ownedSpells,
+                    money = state.money,
+                    onBuy = viewModel::buySpell
                 )
 
                 ShopTab.Monsters -> MonsterShop(
@@ -231,6 +240,103 @@ private fun ShopTabs(selected: ShopTab, onSelect: (ShopTab) -> Unit) {
                 )
             }
         }
+    }
+}
+
+@OptIn(ExperimentalLayoutApi::class)
+@Composable
+private fun SpellShop(
+    ownedSpells: List<String>,
+    money: Int,
+    onBuy: (Spell) -> Unit
+) {
+    Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+        Text(
+            text = "Zaklecia przypiszesz do paska zdolnosci w ekwipunku.",
+            color = ShopMuted,
+            fontFamily = FontFirst(),
+            fontSize = 11.sp
+        )
+        FlowRow(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.spacedBy(10.dp),
+            verticalArrangement = Arrangement.spacedBy(10.dp)
+        ) {
+            SpellCatalog.all.forEach { spell ->
+                SpellShopCard(
+                    spell = spell,
+                    owned = spell.id in ownedSpells,
+                    canBuy = money >= spell.cost && spell.id !in ownedSpells,
+                    onBuy = { onBuy(spell) },
+                    modifier = Modifier.width(164.dp)
+                )
+            }
+        }
+    }
+}
+
+@Composable
+private fun SpellShopCard(
+    spell: Spell,
+    owned: Boolean,
+    canBuy: Boolean,
+    onBuy: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    Column(
+        modifier = modifier
+            .clip(RoundedCornerShape(10.dp))
+            .background(ShopPanel)
+            .border(1.5.dp, RarityPalette.frame(spell.rarity), RoundedCornerShape(10.dp))
+            .padding(10.dp),
+        verticalArrangement = Arrangement.spacedBy(6.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Box(
+            modifier = Modifier
+                .size(64.dp)
+                .clip(RoundedCornerShape(8.dp))
+                .background(ShopBg)
+                .border(1.dp, ShopGoldFrame.copy(alpha = 0.5f), RoundedCornerShape(8.dp)),
+            contentAlignment = Alignment.Center
+        ) {
+            Image(
+                painter = painterResource(spell.icon()),
+                contentDescription = spell.name,
+                modifier = Modifier.fillMaxSize().padding(8.dp),
+                contentScale = ContentScale.Fit
+            )
+        }
+        Text(
+            text = spell.name,
+            color = ShopGold,
+            fontFamily = FontPixel(),
+            style = MaterialTheme.typography.titleSmall,
+            fontWeight = FontWeight.Bold,
+            textAlign = TextAlign.Center,
+            maxLines = 1
+        )
+        Text(
+            text = "Zaklecie  -  ${RarityPalette.label(spell.rarity)}",
+            color = RarityPalette.frame(spell.rarity),
+            fontFamily = FontFirst(),
+            fontSize = 10.sp
+        )
+        Text(
+            text = spell.description,
+            color = Color(0xFFCDBB99),
+            fontFamily = FontFirst(),
+            fontSize = 10.sp,
+            textAlign = TextAlign.Center,
+            maxLines = 4
+        )
+        BuyButton(
+            cost = spell.cost,
+            owned = owned,
+            canBuy = canBuy,
+            onBuy = onBuy,
+            modifier = Modifier.fillMaxWidth()
+        )
     }
 }
 

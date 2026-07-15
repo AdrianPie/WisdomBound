@@ -13,6 +13,9 @@ import com.lernhero.domain.item.unequip
 import com.lernhero.domain.monster.MonsterCard
 import com.lernhero.domain.monster.MonsterCatalog
 import com.lernhero.domain.player.PlayerEquipment
+import com.lernhero.domain.spell.AbilityLoadout
+import com.lernhero.domain.spell.Spell
+import com.lernhero.domain.spell.SpellCatalog
 import com.lernhero.game.character.KnightEquipment
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.IO
@@ -32,8 +35,21 @@ data class PlayerUiState(
     val ownedItems: List<String> = emptyList(),
     val ownedMonsters: List<String> = emptyList(),
     val party: List<String?> = List(COMPANION_SLOTS) { null },
+    val ownedSpells: List<String> = emptyList(),
+    val spellWeights: Map<String, Int> = emptyMap(),
     val message: String? = null
 ) {
+    /** Pasek zdolnosci: pojemnosc bazowa + wagi zaklec. Docina sie sam, wiec suma <= pojemnosci. */
+    val ability: AbilityLoadout
+        get() = spellWeights.entries
+            .fold(AbilityLoadout(capacity = AbilityLoadout.BASE_CAPACITY)) { bar, (id, pct) ->
+                bar.withPercent(id, pct)
+            }
+
+    /** Zaklecia, ktore gracz posiada (do paska w EQ). */
+    val spells: List<Spell>
+        get() = ownedSpells.mapNotNull { SpellCatalog.byId(it) }
+
     /**
      * Rycerz na ekranie rysuje sie z plyt, wiec interesuje go tylko to, czy w slocie cokolwiek
      * stoi - nie ktory to przedmiot. Tlumaczenie modelu domenowego na model rysowania siedzi tutaj.
@@ -102,7 +118,9 @@ class PlayerViewModel(
                         equipment = player.equipment.migrated(),
                         ownedItems = player.ownedItems,
                         ownedMonsters = player.ownedMonsters,
-                        party = player.party.normalizedParty()
+                        party = player.party.normalizedParty(),
+                        ownedSpells = player.ownedSpells,
+                        spellWeights = player.spellWeights
                     )
                 }
             }
@@ -182,7 +200,51 @@ class PlayerViewModel(
 
     // endregion
 
+    // region Ability bar
+
+    /**
+     * Ustawia procent zaklecia na pasku. Model docina go do wolnej pojemnosci, wiec nigdy nie
+     * przekroczymy limitu. Zmiana zapisuje sie natychmiast, tak jak zakladanie ekwipunku.
+     */
+    fun setSpellPercent(spellId: String, percent: Int) {
+        if (spellId !in _uiState.value.ownedSpells) return
+        val next = _uiState.value.ability.withPercent(spellId, percent).weights
+        _uiState.update { it.copy(spellWeights = next, message = null) }
+        viewModelScope.launch(Dispatchers.IO) {
+            playerRepository.updateSpellWeights(next)
+        }
+    }
+
+    // endregion
+
     // region Shop
+
+    fun buySpell(spell: Spell) {
+        val state = _uiState.value
+        if (spell.id in state.ownedSpells) {
+            _uiState.update { it.copy(message = "Masz juz to zaklecie.") }
+            return
+        }
+        if (state.money < spell.cost) {
+            _uiState.update { it.copy(message = "Za malo monet na to zaklecie.") }
+            return
+        }
+
+        viewModelScope.launch(Dispatchers.IO) {
+            val updated = playerRepository.purchaseSpell(spell.id, spell.cost)
+            _uiState.update { current ->
+                if (updated == null) {
+                    current.copy(message = "Zakup nie powiodl sie.")
+                } else {
+                    current.copy(
+                        money = updated.money,
+                        ownedSpells = updated.ownedSpells,
+                        message = "Kupiono: ${spell.name}"
+                    )
+                }
+            }
+        }
+    }
 
     fun buyItem(item: Item) {
         val state = _uiState.value

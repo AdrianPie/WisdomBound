@@ -53,3 +53,15 @@ fun ItemSlot.shortLabel(): String = when (this) {
     ItemSlot.Ring -> "Pierscien"
     ItemSlot.Amulet -> "Amulet"
 }
+
+/**
+ * Ikony zaklec. Osobna tabela od przedmiotow, bo spell ma wlasny [Spell.iconKey]. Na razie
+ * pozyczaja ikonki z UI - podmien tutaj, gdy narysujesz wlasne.
+ */
+fun com.lernhero.domain.spell.Spell.icon(): org.jetbrains.compose.resources.DrawableResource = when (iconKey) {
+    "fireball", "firebomb" -> com.lernhero.shared.resources.Resources.Icon.swords
+    "heal" -> com.lernhero.shared.resources.Resources.Icon.Home
+    "poison_dart" -> com.lernhero.shared.resources.Resources.Icon.MapPin
+    "frost_shard" -> com.lernhero.shared.resources.Resources.Icon.Unlock
+    else -> com.lernhero.shared.resources.Resources.Icon.Categories
+}
