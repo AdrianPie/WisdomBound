@@ -20,11 +20,8 @@ object BattleSpeed {
     /** Predkosci dostepne z HUD-u. */
     val options: List<Float> = listOf(1f, 2f, 4f, 8f, 16f)
 
-    /**
-     * Domyslne tempo. Ustawione na szybkie, bo dzis walka sluzy glownie do testow -
-     * zejdz na 1x w HUD-zie (albo tutaj), gdy zechcesz obejrzec animacje w normalnym tempie.
-     */
-    const val DEFAULT: Float = 8f
+    /** Walka startuje w normalnym tempie, zeby bylo widac animacje. Przyspieszasz recznie w HUD. */
+    const val DEFAULT: Float = 1f
 
     var multiplier: Float by mutableStateOf(DEFAULT)
 
@@ -35,8 +32,18 @@ object BattleSpeed {
 
     fun scale(millis: Int): Int = (millis / multiplier).toInt().coerceAtLeast(1)
 
-    fun next() {
+    val canSpeedUp: Boolean get() = multiplier < options.last()
+    val canSlowDown: Boolean get() = multiplier > options.first()
+
+    /** O jeden szczebel szybciej. Na maksie nic nie robi. */
+    fun faster() {
         val index = options.indexOf(multiplier)
-        multiplier = options[(index + 1) % options.size]
+        if (index in 0 until options.lastIndex) multiplier = options[index + 1]
+    }
+
+    /** O jeden szczebel wolniej. Na 1x nic nie robi. */
+    fun slower() {
+        val index = options.indexOf(multiplier)
+        if (index > 0) multiplier = options[index - 1]
     }
 }

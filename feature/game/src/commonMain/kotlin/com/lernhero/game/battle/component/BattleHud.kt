@@ -1,5 +1,8 @@
 package com.lernhero.game.battle.component
 
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
@@ -62,23 +65,49 @@ internal fun BattleHud(
 }
 
 /**
- * Przelacznik tempa walki. Klikniecie przeskakuje na kolejna predkosc - do testow zwykle
- * chcemy 8x albo 16x, a do ogladania animacji 1x.
+ * Sterowanie tempem walki: [-] wolniej, [+] szybciej. Walka startuje na 1x, wiec animacje widac
+ * od razu; przyspieszasz dopiero, gdy chcesz przewinac fale.
  */
 @Composable
 private fun SpeedSwitch() {
+    val multiplier = BattleSpeed.multiplier
+    Row(
+        modifier = Modifier.padding(top = 6.dp),
+        horizontalArrangement = Arrangement.spacedBy(6.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        SpeedButton(symbol = "−", enabled = BattleSpeed.canSlowDown, onClick = { BattleSpeed.slower() })
+        Box(
+            modifier = Modifier
+                .clip(RoundedCornerShape(6.dp))
+                .background(Color(0x99000000))
+                .padding(horizontal = 10.dp, vertical = 4.dp)
+        ) {
+            Text(
+                text = BattleSpeed.label,
+                color = Color.White,
+                fontSize = 13.sp,
+                fontWeight = FontWeight.Bold
+            )
+        }
+        SpeedButton(symbol = "+", enabled = BattleSpeed.canSpeedUp, onClick = { BattleSpeed.faster() })
+    }
+}
+
+@Composable
+private fun SpeedButton(symbol: String, enabled: Boolean, onClick: () -> Unit) {
     Box(
         modifier = Modifier
-            .padding(top = 6.dp)
+            .size(28.dp)
             .clip(RoundedCornerShape(6.dp))
-            .background(Color(0xFFB4451F))
-            .clickable { BattleSpeed.next() }
-            .padding(horizontal = 10.dp, vertical = 4.dp)
+            .background(if (enabled) Color(0xFFB4451F) else Color(0x55B4451F))
+            .then(if (enabled) Modifier.clickable(onClick = onClick) else Modifier),
+        contentAlignment = Alignment.Center
     ) {
         Text(
-            text = "Tempo ${BattleSpeed.label}",
-            color = Color.White,
-            fontSize = 12.sp,
+            text = symbol,
+            color = Color.White.copy(alpha = if (enabled) 1f else 0.5f),
+            fontSize = 18.sp,
             fontWeight = FontWeight.Bold
         )
     }
