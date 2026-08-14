@@ -1,6 +1,5 @@
 package com.lernhero.home.equipment
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -8,9 +7,10 @@ import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -34,52 +34,52 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.lernhero.domain.combat.StatType
 import com.lernhero.domain.item.Item
-import com.lernhero.home.ui.AbilityBar
 import com.lernhero.domain.item.ItemSlot
+import com.lernhero.domain.item.toLoadout
+import com.lernhero.domain.player.PlayerEquipment
 import com.lernhero.game.character.KnightEquipment
 import com.lernhero.game.character.ModularKnight
 import com.lernhero.home.player.PlayerViewModel
+import com.lernhero.home.ui.AbilityBar
 import com.lernhero.home.ui.RarityPalette
 import com.lernhero.home.ui.icon
 import com.lernhero.home.ui.label
 import com.lernhero.home.ui.shortLabel
+import com.lernhero.shared.theme.AppPalette
 import com.lernhero.shared.theme.FontFirst
 import com.lernhero.shared.theme.FontPixel
-import com.lernhero.shared.resources.Resources
-import com.lernhero.shared.theme.Surface as AppSurface
-import org.jetbrains.compose.resources.DrawableResource
-import org.jetbrains.compose.resources.painterResource
 import org.koin.compose.viewmodel.koinViewModel
 
 /* ---------------------------------------------------------------------------------------------
- *  Fresh RPG palette - warm obsidian + bright gold, high contrast so slots/items pop.
+ *  Ta sama paleta co reszta gry (AppPalette) - lokalne aliasy, zeby nazwy zostaly krotkie.
  * ------------------------------------------------------------------------------------------- */
-private val Obsidian = Color(0xFF0F0C09)
-private val Panel = Color(0xFF211A12)
-private val PanelHi = Color(0xFF31261A)
-private val SlotBg = Color(0xFF0B0806)
-private val Gold = Color(0xFFE8C15A)
-private val GoldDim = Color(0xFF6E5730)
-private val Bronze = Color(0xFF463A24)
-private val Parchment = Color(0xFFEDDCB6)
-private val Muted = Color(0xFF9C8968)
-private val Emerald = Color(0xFF62D98A)
+private val Bg = AppPalette.Background
+private val Panel = AppPalette.Panel
+private val PanelRaised = AppPalette.PanelRaised
+private val SlotBg = AppPalette.Ink
+private val Gold = AppPalette.Gold
+private val GoldDim = AppPalette.GoldDim
+private val GoldFrame = AppPalette.GoldFrame
+private val TextBody = AppPalette.TextBody
+private val Muted = AppPalette.TextMuted
+private val Success = AppPalette.Success
 
-private val SLOT = 56.dp
-private val BACKPACK_ICON = 60.dp
+private val SLOT = 60.dp
+private val BACKPACK_ICON = 64.dp
 
-/** Sloty po lewej i prawej stronie postaci - uklad jak w klasycznym oknie postaci z MMO. */
+/** Rozmiar rycerza w podgladzie - dopasowany do wysokosci [Viewport], zeby nic sie nie obcinalo. */
+private val KNIGHT_SIZE = 232.dp
+private val VIEWPORT_HEIGHT = 250.dp
+
 private val LEFT_SLOTS = listOf(ItemSlot.Head, ItemSlot.Chest, ItemSlot.Amulet)
 private val RIGHT_SLOTS = listOf(ItemSlot.Hands, ItemSlot.Legs, ItemSlot.Feet)
 private val BOTTOM_SLOTS = listOf(ItemSlot.MainHand, ItemSlot.OffHand, ItemSlot.Ring)
@@ -92,34 +92,26 @@ fun EquipmentScreen() {
     /** Slot, dla ktorego otwarto liste posiadanych przedmiotow. */
     var pickerSlot by remember { mutableStateOf<ItemSlot?>(null) }
 
-    Surface(modifier = Modifier.fillMaxSize(), color = AppSurface) {
+    Surface(modifier = Modifier.fillMaxSize(), color = Bg) {
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .background(Brush.verticalGradient(listOf(Color(0xFF070505), Obsidian)))
+                .background(AppPalette.ScreenGradient)
                 .verticalScroll(rememberScrollState())
-                .padding(10.dp),
-            verticalArrangement = Arrangement.spacedBy(10.dp)
+                .padding(14.dp),
+            verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
-            TitleBar(
-                name = state.name,
-                money = state.money,
-                equippedCount = state.equipment.equipped.size
-            )
+            TitleBar(name = state.name, money = state.money)
 
             PaperDoll(
                 knight = state.knightEquipment,
                 itemAt = state::itemIn,
-                // Klikniecie zdejmuje to, co stoi w slocie; pusty slot otwiera liste do wyboru.
                 onSlotClick = { slot ->
                     if (state.itemIn(slot) != null) viewModel.unequipSlot(slot) else pickerSlot = slot
                 }
             )
 
-            Backpack(
-                items = state.backpack,
-                onEquip = viewModel::equipItem
-            )
+            Backpack(items = state.backpack, onEquip = viewModel::equipItem)
 
             AbilityBar(
                 ability = state.ability,
@@ -127,7 +119,7 @@ fun EquipmentScreen() {
                 onSet = viewModel::setSpellPercent
             )
 
-            StatsPanel(equipped = state.equipment.equipped.keys.size)
+            StatsPanel(equipment = state.equipment)
             state.message?.let { HintBar(it) }
             Spacer(modifier = Modifier.height(4.dp))
         }
@@ -149,27 +141,22 @@ fun EquipmentScreen() {
 /* ------------------------------------------ Title ------------------------------------------ */
 
 @Composable
-private fun TitleBar(name: String, money: Int, equippedCount: Int) {
+private fun TitleBar(name: String, money: Int) {
     OrnateFrame(modifier = Modifier.fillMaxWidth()) {
         Row(
-            modifier = Modifier.padding(horizontal = 12.dp, vertical = 8.dp),
+            modifier = Modifier.padding(horizontal = 14.dp, vertical = 12.dp),
             verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(10.dp)
+            horizontalArrangement = Arrangement.spacedBy(12.dp)
         ) {
             Box(
                 modifier = Modifier
-                    .size(48.dp)
+                    .size(46.dp)
                     .clip(RoundedCornerShape(50))
                     .background(SlotBg)
                     .border(2.dp, Gold, RoundedCornerShape(50)),
                 contentAlignment = Alignment.Center
             ) {
-                Image(
-                    painter = painterResource(Resources.Image.knightAvatar),
-                    contentDescription = null,
-                    modifier = Modifier.fillMaxSize().padding(2.dp).clip(RoundedCornerShape(50)),
-                    contentScale = ContentScale.Crop
-                )
+                Text(text = "⚔️", fontSize = 20.sp)
             }
             Column(modifier = Modifier.weight(1f)) {
                 Text(
@@ -182,19 +169,13 @@ private fun TitleBar(name: String, money: Int, equippedCount: Int) {
                     overflow = TextOverflow.Ellipsis
                 )
                 Text(
-                    text = "Poziom 60  -  Rycerz",
-                    color = Parchment,
+                    text = "Rycerz",
+                    color = TextBody.copy(alpha = 0.7f),
                     fontFamily = FontFirst(),
                     fontSize = 11.sp
                 )
             }
-            Column(horizontalAlignment = Alignment.End, verticalArrangement = Arrangement.spacedBy(3.dp)) {
-                Pill(text = "iLvl ${equippedCount * 12}")
-                Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(4.dp)) {
-                    Image(painterResource(Resources.Icon.Dollar), null, modifier = Modifier.size(13.dp))
-                    Text("$money", color = Gold, fontFamily = FontFirst(), fontSize = 12.sp, fontWeight = FontWeight.Bold)
-                }
-            }
+            Pill(text = "💰 $money")
         }
     }
 }
@@ -209,12 +190,12 @@ private fun PaperDoll(
 ) {
     OrnateFrame(modifier = Modifier.fillMaxWidth()) {
         Column(
-            modifier = Modifier.padding(10.dp),
-            verticalArrangement = Arrangement.spacedBy(8.dp)
+            modifier = Modifier.padding(12.dp),
+            verticalArrangement = Arrangement.spacedBy(10.dp)
         ) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.spacedBy(4.dp),
+                horizontalArrangement = Arrangement.spacedBy(6.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 SlotColumn(LEFT_SLOTS, itemAt, onSlotClick)
@@ -223,7 +204,7 @@ private fun PaperDoll(
             }
             Row(
                 modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.spacedBy(16.dp, Alignment.CenterHorizontally)
+                horizontalArrangement = Arrangement.spacedBy(18.dp, Alignment.CenterHorizontally)
             ) {
                 BOTTOM_SLOTS.forEach { slot ->
                     GearSlot(slot = slot, item = itemAt(slot), onClick = { onSlotClick(slot) })
@@ -240,7 +221,7 @@ private fun SlotColumn(
     onSlotClick: (ItemSlot) -> Unit
 ) {
     Column(
-        verticalArrangement = Arrangement.spacedBy(10.dp),
+        verticalArrangement = Arrangement.spacedBy(12.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         slots.forEach { slot ->
@@ -249,38 +230,38 @@ private fun SlotColumn(
     }
 }
 
+/**
+ * Rycerz renderuje sie na stalym [KNIGHT_SIZE] (kwadrat), a viewport ma [VIEWPORT_HEIGHT] wieksza
+ * niz ten rozmiar - wczesniej bylo odwrotnie (rycerz 300dp w ramce 214dp) i glowa znikala za
+ * gorna krawedzia karty. Teraz nic nie ma prawa sie obciac.
+ */
 @Composable
 private fun Viewport(knight: KnightEquipment) {
     Box(
         modifier = Modifier
             .fillMaxWidth()
-            .height(214.dp)
-            .clip(RoundedCornerShape(10.dp))
+            .height(VIEWPORT_HEIGHT)
+            .clip(RoundedCornerShape(12.dp))
             .background(
                 Brush.radialGradient(
-                    colors = listOf(Color(0xFF52411F), Color(0xFF1C140C), Color(0xFF080605)),
-                    radius = 480f
+                    colors = listOf(Color(0xFF3D2E15), Color(0xFF1A130B), Color(0xFF0A0705))
                 )
             )
-            .border(1.5.dp, GoldDim, RoundedCornerShape(10.dp)),
+            .border(1.5.dp, GoldDim, RoundedCornerShape(12.dp)),
         contentAlignment = Alignment.BottomCenter
     ) {
-        Box(
-            modifier = Modifier.fillMaxWidth().aspectRatio(1f).align(Alignment.BottomCenter),
-            contentAlignment = Alignment.BottomCenter
-        ) {
-            ModularKnight(
-                modifier = Modifier.align(Alignment.BottomCenter),
-                equipment = knight,
-                interactive = true
-            )
-        }
+        ModularKnight(
+            modifier = Modifier.align(Alignment.BottomCenter),
+            equipment = knight,
+            sizeDp = KNIGHT_SIZE,
+            interactive = true
+        )
         Box(
             modifier = Modifier
                 .fillMaxWidth()
-                .height(20.dp)
+                .height(28.dp)
                 .align(Alignment.BottomCenter)
-                .background(Brush.verticalGradient(listOf(Color.Transparent, Color(0x99000000))))
+                .background(Brush.verticalGradient(listOf(Color.Transparent, Color(0xAA000000))))
         )
     }
 }
@@ -302,22 +283,22 @@ private fun GearSlot(
         Box(
             modifier = Modifier
                 .size(SLOT)
-                .then(if (equipped) Modifier.shadow(6.dp, RoundedCornerShape(8.dp)) else Modifier)
-                .clip(RoundedCornerShape(8.dp))
-                .background(if (equipped) Color(0xFF3A2C18) else SlotBg)
-                .border(if (equipped) 2.dp else 1.dp, border, RoundedCornerShape(8.dp))
+                .clip(RoundedCornerShape(10.dp))
+                .then(
+                    if (item != null) {
+                        Modifier.background(RarityPalette.cardBackground(item.rarity))
+                    } else {
+                        Modifier.background(SlotBg)
+                    }
+                )
+                .border(if (equipped) 2.dp else 1.dp, border, RoundedCornerShape(10.dp))
                 .clickable(onClick = onClick),
             contentAlignment = Alignment.Center
         ) {
             if (item != null) {
-                Image(
-                    painter = painterResource(item.icon()),
-                    contentDescription = item.name,
-                    modifier = Modifier.fillMaxSize().padding(6.dp),
-                    contentScale = ContentScale.Fit
-                )
+                Text(text = item.icon(), fontSize = 24.sp)
             } else {
-                Text(text = "+", color = GoldDim, fontFamily = FontPixel(), fontSize = 20.sp)
+                Text(text = "+", color = GoldDim, fontFamily = FontPixel(), fontSize = 22.sp)
             }
         }
     }
@@ -325,36 +306,17 @@ private fun GearSlot(
 
 @Composable
 private fun SlotShell(label: String, labelStrong: Boolean, content: @Composable () -> Unit) {
-    Column(horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(2.dp)) {
+    Column(horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(3.dp)) {
         content()
         Text(
             text = label,
             color = if (labelStrong) Gold else Muted,
             fontFamily = FontFirst(),
-            fontSize = 8.sp,
+            fontSize = 9.sp,
             maxLines = 1,
             overflow = TextOverflow.Ellipsis,
             textAlign = TextAlign.Center,
-            modifier = Modifier.width(SLOT + 8.dp)
-        )
-    }
-}
-
-@Composable
-private fun GearIcon(icon: DrawableResource, frame: Color, size: Dp) {
-    Box(
-        modifier = Modifier
-            .size(size)
-            .clip(RoundedCornerShape(8.dp))
-            .background(Color(0xFF3A2C18))
-            .border(2.dp, frame, RoundedCornerShape(8.dp)),
-        contentAlignment = Alignment.Center
-    ) {
-        Image(
-            painter = painterResource(icon),
-            contentDescription = null,
-            modifier = Modifier.fillMaxSize().padding(6.dp),
-            contentScale = ContentScale.Fit
+            modifier = Modifier.width(SLOT + 14.dp)
         )
     }
 }
@@ -368,7 +330,7 @@ private fun Backpack(
 ) {
     OrnateFrame(modifier = Modifier.fillMaxWidth()) {
         Column(
-            modifier = Modifier.padding(10.dp),
+            modifier = Modifier.padding(12.dp),
             verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
             Row(
@@ -383,12 +345,12 @@ private fun Backpack(
                     style = MaterialTheme.typography.titleSmall,
                     fontWeight = FontWeight.Bold
                 )
-                Text("kliknij, zeby zalozyc", color = Muted, fontFamily = FontFirst(), fontSize = 10.sp)
+                Text("dotknij, zeby zalozyc", color = Muted, fontFamily = FontFirst(), fontSize = 10.sp)
             }
 
             if (items.isEmpty()) {
                 Text(
-                    "Plecak pusty. Kup ekwipunek w sklepie.",
+                    "Plecak pusty. Zajrzyj do sklepu po nowy sprzet.",
                     color = Muted,
                     fontFamily = FontFirst(),
                     style = MaterialTheme.typography.bodySmall
@@ -411,17 +373,26 @@ private fun Backpack(
 private fun BackpackItem(item: Item, onClick: () -> Unit) {
     Column(
         modifier = Modifier
-            .width(BACKPACK_ICON + 8.dp)
+            .width(BACKPACK_ICON + 10.dp)
             .clickable(onClick = onClick),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(3.dp)
+        verticalArrangement = Arrangement.spacedBy(4.dp)
     ) {
-        GearIcon(icon = item.icon(), frame = RarityPalette.frame(item.rarity), size = BACKPACK_ICON)
+        Box(
+            modifier = Modifier
+                .size(BACKPACK_ICON)
+                .clip(RoundedCornerShape(10.dp))
+                .background(RarityPalette.cardBackground(item.rarity))
+                .border(2.dp, RarityPalette.frame(item.rarity), RoundedCornerShape(10.dp)),
+            contentAlignment = Alignment.Center
+        ) {
+            Text(text = item.icon(), fontSize = 26.sp)
+        }
         Text(
             text = item.name,
-            color = Parchment,
+            color = TextBody,
             fontFamily = FontFirst(),
-            fontSize = 8.sp,
+            fontSize = 9.sp,
             maxLines = 2,
             overflow = TextOverflow.Ellipsis,
             textAlign = TextAlign.Center
@@ -429,7 +400,7 @@ private fun BackpackItem(item: Item, onClick: () -> Unit) {
     }
 }
 
-/* ------------------------------------------ Picker ----------------------------------------- */
+/* ------------------------------------------- Picker ----------------------------------------- */
 
 /**
  * Lista posiadanych przedmiotow pasujacych do slotu. Pokazuje efekty kazdego z nich, bo to one -
@@ -471,15 +442,20 @@ private fun ItemPickerDialog(
                                 .background(SlotBg)
                                 .border(1.dp, RarityPalette.frame(item.rarity), RoundedCornerShape(8.dp))
                                 .clickable { onPick(item) }
-                                .padding(8.dp),
-                            horizontalArrangement = Arrangement.spacedBy(8.dp),
+                                .padding(10.dp),
+                            horizontalArrangement = Arrangement.spacedBy(10.dp),
                             verticalAlignment = Alignment.CenterVertically
                         ) {
-                            GearIcon(
-                                icon = item.icon(),
-                                frame = RarityPalette.frame(item.rarity),
-                                size = 40.dp
-                            )
+                            Box(
+                                modifier = Modifier
+                                    .size(40.dp)
+                                    .clip(RoundedCornerShape(8.dp))
+                                    .background(Panel)
+                                    .border(2.dp, RarityPalette.frame(item.rarity), RoundedCornerShape(8.dp)),
+                                contentAlignment = Alignment.Center
+                            ) {
+                                Text(text = item.icon(), fontSize = 20.sp)
+                            }
                             Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
                                 Text(
                                     text = item.name,
@@ -491,7 +467,7 @@ private fun ItemPickerDialog(
                                 item.effects.forEach { effect ->
                                     Text(
                                         text = "- ${effect.description}",
-                                        color = Emerald,
+                                        color = Success,
                                         fontFamily = FontFirst(),
                                         fontSize = 9.sp
                                     )
@@ -512,65 +488,88 @@ private fun ItemPickerDialog(
 
 /* ------------------------------------------- Stats ----------------------------------------- */
 
+/** Etykieta po polsku dla kazdej statystyki - w kolejnosci, w jakiej maja sie pokazywac. */
+private val STAT_ORDER = listOf(
+    StatType.MaxHp, StatType.Attack, StatType.Defense, StatType.Speed,
+    StatType.CritChance, StatType.CritDamage, StatType.Lifesteal, StatType.Dodge,
+    StatType.DamageReduction, StatType.SpellPower, StatType.HealPower,
+    StatType.CooldownReduction, StatType.AttackTargets
+)
+
+private fun StatType.label(): String = when (this) {
+    StatType.MaxHp -> "Zdrowie"
+    StatType.Attack -> "Atak"
+    StatType.Defense -> "Obrona"
+    StatType.Speed -> "Szybkosc"
+    StatType.CritChance -> "Szansa na kryta"
+    StatType.CritDamage -> "Sila kryta"
+    StatType.Dodge -> "Unik"
+    StatType.Lifesteal -> "Kradziez zycia"
+    StatType.DamageReduction -> "Redukcja obrazen"
+    StatType.HealPower -> "Sila leczenia"
+    StatType.CooldownReduction -> "Skrocenie odnowienia"
+    StatType.AttackTargets -> "Dodatkowe cele"
+    StatType.SpellPower -> "Sila zaklec"
+}
+
+private fun StatType.isPercent(): Boolean = this in setOf(
+    StatType.CritChance, StatType.CritDamage, StatType.Dodge, StatType.Lifesteal,
+    StatType.DamageReduction, StatType.HealPower, StatType.CooldownReduction, StatType.SpellPower
+)
+
+/** Prawdziwe bonusy z zalozonego ekwipunku - zadnych zmyslonych liczb, tylko to, co faktycznie dziala. */
 @Composable
-private fun StatsPanel(equipped: Int) {
+private fun StatsPanel(equipment: PlayerEquipment) {
+    val stats = remember(equipment) { equipment.toLoadout().stats }
+    val nonZero = STAT_ORDER.mapNotNull { type ->
+        val value = stats[type]
+        if (value != 0f) type to value else null
+    }
+
     OrnateFrame(modifier = Modifier.fillMaxWidth()) {
-        Row(
-            modifier = Modifier.padding(10.dp),
-            horizontalArrangement = Arrangement.spacedBy(10.dp)
-        ) {
-            StatCard(
-                header = "Magia",
-                modifier = Modifier.weight(1f),
-                rows = listOf(
-                    StatRow("Moc zaklec", "${172 + equipped * 8}", false),
-                    StatRow("Leczenie", "${172 + equipped * 6}", false),
-                    StatRow("Regen many", "${11 + equipped}", false)
-                )
+        Column(modifier = Modifier.padding(12.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+            Text(
+                text = "Bonusy z ekwipunku",
+                color = Gold,
+                fontFamily = FontPixel(),
+                fontWeight = FontWeight.Bold,
+                style = MaterialTheme.typography.titleSmall
             )
-            StatCard(
-                header = "Walka",
-                modifier = Modifier.weight(1f),
-                rows = listOf(
-                    StatRow("Obrazenia", "${120 + equipped * 8}-${180 + equipped * 12}", false),
-                    StatRow("Moc ataku", "${100 + equipped * 12}", true),
-                    StatRow("Szybkosc", "3.6", false),
-                    StatRow("Kryt", "${7 + equipped}%", false)
+            if (nonZero.isEmpty()) {
+                Text(
+                    text = "Nic jeszcze nie zalozyles - sloty czekaja.",
+                    color = Muted,
+                    fontFamily = FontFirst(),
+                    fontSize = 11.sp
                 )
-            )
+            } else {
+                StatGrid(nonZero)
+            }
         }
     }
 }
 
-private data class StatRow(val label: String, val value: String, val highlight: Boolean)
-
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
-private fun StatCard(header: String, rows: List<StatRow>, modifier: Modifier = Modifier) {
-    Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(5.dp)) {
-        Box(
-            modifier = Modifier
-                .fillMaxWidth()
-                .clip(RoundedCornerShape(6.dp))
-                .background(PanelHi)
-                .border(1.dp, GoldDim, RoundedCornerShape(6.dp))
-                .padding(horizontal = 8.dp, vertical = 5.dp)
-        ) {
-            Text(header, color = Gold, fontFamily = FontFirst(), fontSize = 12.sp, fontWeight = FontWeight.Bold)
-        }
-        rows.forEach { row ->
+private fun StatGrid(entries: List<Pair<StatType, Float>>) {
+    FlowRow(
+        modifier = Modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.spacedBy(8.dp),
+        verticalArrangement = Arrangement.spacedBy(8.dp)
+    ) {
+        entries.forEach { (type, value) ->
+            val display = if (type.isPercent()) "+${(value * 100).toInt()}%" else "+${value.toInt()}"
             Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween,
+                modifier = Modifier
+                    .clip(RoundedCornerShape(8.dp))
+                    .background(SlotBg)
+                    .border(1.dp, GoldDim, RoundedCornerShape(8.dp))
+                    .padding(horizontal = 10.dp, vertical = 6.dp),
+                horizontalArrangement = Arrangement.spacedBy(6.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Text(row.label, color = Muted, fontFamily = FontFirst(), fontSize = 11.sp)
-                Text(
-                    text = row.value,
-                    color = if (row.highlight) Emerald else Parchment,
-                    fontFamily = FontFirst(),
-                    fontSize = 11.sp,
-                    fontWeight = FontWeight.Bold
-                )
+                Text(text = display, color = Success, fontFamily = FontPixel(), fontWeight = FontWeight.Bold, fontSize = 12.sp)
+                Text(text = type.label(), color = Muted, fontFamily = FontFirst(), fontSize = 10.sp)
             }
         }
     }
@@ -585,11 +584,9 @@ private fun OrnateFrame(
 ) {
     Box(
         modifier = modifier
-            .clip(RoundedCornerShape(12.dp))
-            .background(Brush.verticalGradient(listOf(Panel, Obsidian)))
-            .border(2.dp, GoldDim, RoundedCornerShape(12.dp))
-            .padding(2.dp)
-            .border(1.dp, Bronze, RoundedCornerShape(10.dp))
+            .clip(RoundedCornerShape(14.dp))
+            .background(AppPalette.CardGradient)
+            .border(2.dp, GoldDim, RoundedCornerShape(14.dp))
     ) {
         content()
     }
@@ -599,12 +596,12 @@ private fun OrnateFrame(
 private fun Pill(text: String) {
     Box(
         modifier = Modifier
-            .clip(RoundedCornerShape(6.dp))
+            .clip(RoundedCornerShape(20.dp))
             .background(SlotBg)
-            .border(1.dp, Gold, RoundedCornerShape(6.dp))
-            .padding(horizontal = 8.dp, vertical = 3.dp)
+            .border(1.dp, GoldFrame, RoundedCornerShape(20.dp))
+            .padding(horizontal = 12.dp, vertical = 6.dp)
     ) {
-        Text(text, color = Gold, fontFamily = FontFirst(), fontSize = 11.sp, fontWeight = FontWeight.Bold)
+        Text(text = text, color = Gold, fontFamily = FontFirst(), fontSize = 12.sp, fontWeight = FontWeight.Bold)
     }
 }
 
@@ -614,7 +611,7 @@ private fun HintBar(message: String) {
         modifier = Modifier
             .fillMaxWidth()
             .clip(RoundedCornerShape(8.dp))
-            .background(PanelHi)
+            .background(PanelRaised)
             .border(1.dp, GoldDim, RoundedCornerShape(8.dp))
             .padding(10.dp)
     ) {

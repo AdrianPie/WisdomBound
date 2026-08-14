@@ -2,31 +2,30 @@ package com.lernhero.home.ui
 
 import com.lernhero.domain.item.Item
 import com.lernhero.domain.item.ItemSlot
-import com.lernhero.shared.resources.Resources
-import org.jetbrains.compose.resources.DrawableResource
+import com.lernhero.domain.spell.Spell
 
 /**
- * Jedyne miejsce, w ktorym przedmiot spotyka sie z grafika.
+ * Jedyne miejsce, w ktorym przedmiot/zaklecie spotyka sie z grafika.
  *
- * Domena zna tylko [Item.iconKey] - zwykly tekst - bo nie moze zalezec od Compose. Tutaj klucz
- * zamienia sie w obrazek. Gdy narysujesz wlasne ikony, podmieniasz je wylacznie w tej tabeli.
+ * Domena zna tylko [Item.iconKey]/[Spell.iconKey] - zwykly tekst - bo nie moze zalezec od
+ * Compose. Ikony to emoji: bez tego kazda bron i tak dzielila jedna ikonke miecza plytowego,
+ * a "kula ognia" pokazywala mieczyki, "leczenie" - domek. Emoji przynajmniej trafnie pokazuja,
+ * co dany przedmiot robi - podmien na wlasna grafike, gdy tylko ja narysujesz.
  */
-fun Item.icon(): DrawableResource = when (iconKey) {
-    "plate_head" -> Resources.PlateArmor.head
-    "plate_hands" -> Resources.PlateArmor.leftDownHand
-    "plate_legs" -> Resources.PlateArmor.leftUpLeg
-    "plate_feet" -> Resources.PlateArmor.leftFoot
-
-    // TODO: wlasne grafiki. Na razie kazda bron pozycza miecz plytowy, a dodatki - ikonki z UI.
-    "sword", "glaive", "dagger" -> Resources.PlateArmor.swordFront
-    "staff" -> Resources.Icon.Book
-    "shield" -> Resources.Icon.Weight
-    "cloak" -> Resources.Icon.Person
-    "ring", "band" -> Resources.Icon.Unlock
-    "amulet_frost" -> Resources.Icon.MapPin
-    "banner" -> Resources.Icon.swords
-
-    else -> Resources.Icon.Categories
+fun Item.icon(): String = when (iconKey) {
+    "plate_head" -> "🪖"
+    "plate_hands" -> "🧤"
+    "plate_legs" -> "👖"
+    "plate_feet" -> "🥾"
+    "sword", "dagger" -> "🗡️"
+    "glaive" -> "🔱"
+    "staff" -> "🪄"
+    "shield" -> "🛡️"
+    "cloak" -> "🧥"
+    "ring", "band" -> "💍"
+    "amulet_frost" -> "📿"
+    "banner" -> "🚩"
+    else -> "❔"
 }
 
 fun ItemSlot.label(): String = when (this) {
@@ -54,14 +53,11 @@ fun ItemSlot.shortLabel(): String = when (this) {
     ItemSlot.Amulet -> "Amulet"
 }
 
-/**
- * Ikony zaklec. Osobna tabela od przedmiotow, bo spell ma wlasny [Spell.iconKey]. Na razie
- * pozyczaja ikonki z UI - podmien tutaj, gdy narysujesz wlasne.
- */
-fun com.lernhero.domain.spell.Spell.icon(): org.jetbrains.compose.resources.DrawableResource = when (iconKey) {
-    "fireball", "firebomb" -> com.lernhero.shared.resources.Resources.Icon.swords
-    "heal" -> com.lernhero.shared.resources.Resources.Icon.Home
-    "poison_dart" -> com.lernhero.shared.resources.Resources.Icon.MapPin
-    "frost_shard" -> com.lernhero.shared.resources.Resources.Icon.Unlock
-    else -> com.lernhero.shared.resources.Resources.Icon.Categories
+fun Spell.icon(): String = when (iconKey) {
+    "fireball" -> "🔥"
+    "firebomb" -> "💥"
+    "heal" -> "💚"
+    "poison_dart" -> "☠️"
+    "frost_shard" -> "❄️"
+    else -> "✨"
 }

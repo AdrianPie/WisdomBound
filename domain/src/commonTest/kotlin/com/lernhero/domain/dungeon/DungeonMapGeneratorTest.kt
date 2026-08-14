@@ -66,7 +66,7 @@ class DungeonMapGeneratorTest {
                 }
             }
             assertTrue(boss.id in seen, "Boss nieosiagalny dla seeda $seed")
-            assertTrue(map.entryNodes.size >= 2, "Gracz musi miec realny wybor na starcie")
+            assertEquals(1, map.entryNodes.size, "Loch ma jedno wejscie - rozgalezienia zaczynaja sie pozniej")
         }
     }
 

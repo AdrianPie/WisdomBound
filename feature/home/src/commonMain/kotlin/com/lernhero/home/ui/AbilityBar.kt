@@ -15,7 +15,6 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -27,15 +26,15 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.lernhero.domain.spell.AbilityLoadout
 import com.lernhero.domain.spell.Spell
+import com.lernhero.shared.theme.AppPalette
 import com.lernhero.shared.theme.FontFirst
 import com.lernhero.shared.theme.FontPixel
-import org.jetbrains.compose.resources.painterResource
 
-private val Ink = Color(0xFF0B0806)
-private val Panel = Color(0xFF211A12)
-private val Gold = Color(0xFFE8C15A)
-private val GoldDim = Color(0xFF6E5730)
-private val Muted = Color(0xFF9C8968)
+private val Ink = AppPalette.Ink
+private val Panel = AppPalette.Panel
+private val Gold = AppPalette.Gold
+private val GoldDim = AppPalette.GoldDim
+private val Muted = AppPalette.TextMuted
 private val AttackGrey = Color(0xFF6C7080)
 
 /** Krok zmiany procentu jednym dotknieciem. */
@@ -187,12 +186,7 @@ private fun SpellRow(
                 .border(1.dp, color, RoundedCornerShape(6.dp)),
             contentAlignment = Alignment.Center
         ) {
-            Icon(
-                painter = painterResource(spell.icon()),
-                contentDescription = spell.name,
-                modifier = Modifier.size(20.dp),
-                tint = color
-            )
+            Text(text = spell.icon(), fontSize = 17.sp)
         }
         Column(modifier = Modifier.weight(1f)) {
             Text(

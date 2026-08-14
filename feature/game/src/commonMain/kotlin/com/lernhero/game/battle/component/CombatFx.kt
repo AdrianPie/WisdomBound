@@ -1,6 +1,8 @@
 package com.lernhero.game.battle.component
 
 import androidx.compose.animation.core.Animatable
+import androidx.compose.animation.core.LinearEasing
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -16,6 +18,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.graphics.drawscope.Stroke
@@ -23,6 +26,7 @@ import androidx.compose.ui.graphics.drawscope.rotate
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.layout.positionInRoot
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.text.TextMeasurer
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.drawText
 import androidx.compose.ui.text.font.FontWeight
@@ -34,6 +38,7 @@ import androidx.compose.ui.unit.sp
 import com.lernhero.domain.combat.playback.HitKind
 import com.lernhero.game.battle.BattleSpeed
 import com.lernhero.game.battle.FloatingEffect
+import kotlinx.coroutines.delay
 import kotlin.math.PI
 import kotlin.math.cos
 import kotlin.math.max
@@ -49,7 +54,7 @@ import kotlin.math.sin
  */
 
 /** Kolor liczby obrazen wg rodzaju trafienia. Wprost z palety oryginalnych scen. */
-private fun HitKind.color(): Color = when (this) {
+internal fun HitKind.color(): Color = when (this) {
     HitKind.Hit -> Color(0xFFFFFFFF)
     HitKind.Crit -> Color(0xFFFFDE59)
     HitKind.Burn -> Color(0xFFFF8A3C)
@@ -82,79 +87,60 @@ private fun pulse(p: Float, a: Float, b: Float): Float {
     return sin(t * PI).toFloat()
 }
 
-/* --------------------------------- warstwa efektow ---------------------------------- */
+/* --------------------------- wybuch + liczba, lokalnie na postaci --------------------------- */
 
 /**
- * Nakladka rysujaca wszystkie aktywne efekty. Kazdy jest przypiety do srodka swojego celu
- * ([slotPositions] trzyma pozycje w ukladzie korzenia, ten sam, w ktorym lezy ta nakladka).
+ * Wybuch i liczba obrazen rysowane WPROST na postaci, ktora je dostaje - zero globalnych
+ * pozycji, zero przeliczania "root minus origin". To jest w calosci lokalny modyfikator wewnatrz
+ * karty [com.lernhero.game.battle.component] `CharacterSlot`, wiec fizycznie nie moze wyladowac
+ * gdzies indziej na ekranie - poprzedni system (osobna nakladka + wspoldzielona mapa pozycji)
+ * mial dokladnie ten problem.
  *
- * Efekt sam siebie zdejmuje: po dobiegnieciu animacji wola [onConsumed].
+ * [hasProjectile] tylko opoznia start wybuchu o czas lotu pocisku (patrz [ProjectileOverlay]) -
+ * te dwa efekty nie dzielą zadnego stanu, wiec nic tu nie moze sie rozjechac.
  */
 @Composable
-internal fun CombatFxLayer(
-    effects: List<FloatingEffect>,
-    slotPositions: Map<String, Offset>,
-    cardSize: Dp,
-    onConsumed: (Long) -> Unit
-) {
-    // Pozycje celow sa w ukladzie korzenia. Odejmujemy wlasne polozenie warstwy, wiec efekt
-    // trafia w cel niezaleznie od tego, gdzie ta nakladka wyladowala w hierarchii.
-    var layerOrigin by remember { mutableStateOf(Offset.Zero) }
-
-    Box(
-        modifier = Modifier
-            .fillMaxSize()
-            .onGloballyPositioned { layerOrigin = it.positionInRoot() }
-    ) {
-        effects.forEach { fx ->
-            val center = slotPositions[fx.targetId] ?: return@forEach
-            key(fx.id) {
-                FloatingEffectView(
-                    effect = fx,
-                    centerInLayer = center - layerOrigin,
-                    cardSize = cardSize,
-                    onDone = { onConsumed(fx.id) }
-                )
-            }
-        }
-    }
-}
-
-@Composable
-private fun FloatingEffectView(
+internal fun LocalImpactEffect(
     effect: FloatingEffect,
-    centerInLayer: Offset,
     cardSize: Dp,
+    hasProjectile: Boolean,
     onDone: () -> Unit
 ) {
-    val density = LocalDensity.current
-    val progress = remember(effect.id) { Animatable(0f) }
+    val impact = remember(effect.id) { Animatable(0f) }
 
     LaunchedEffect(effect.id) {
+        if (hasProjectile) {
+            delay(BattleSpeed.scale(TRAVEL_MILLIS))
+        }
         // Tempo goni predkosc walki, ale efekt nie moze mrugnac szybciej niz da sie zobaczyc.
-        val duration = BattleSpeed.scale(900L).coerceAtLeast(320L)
-        progress.animateTo(1f, androidx.compose.animation.core.tween(duration.toInt()))
+        val impactDuration = BattleSpeed.scale(900L).coerceAtLeast(320L)
+        impact.animateTo(1f, tween(impactDuration.toInt()))
         onDone()
     }
 
-    // Plotno efektu jest wieksze od karty, bo wybuch i embersy wychodza poza obrys postaci.
+    ImpactBurst(effect = effect, cardSize = cardSize, progress = impact.value)
+}
+
+@Composable
+private fun ImpactBurst(
+    effect: FloatingEffect,
+    cardSize: Dp,
+    progress: Float
+) {
+    // Plotno efektu jest wieksze od karty, bo wybuch i embersy wychodza poza obrys postaci -
+    // Box centruje sie na rodzicu (CharacterSlot) mimo ze jest od niego wiekszy, wiec nie trzeba
+    // liczyc zadnych recznych przesuniec w pikselach.
     val fxSize = cardSize * 2.6f
-    val fxPx = with(density) { fxSize.toPx() }
     // Sprite jest wyrownany do dolu karty, wiec srodek karty wypada na glowie. Schodzimy na tors,
     // zeby wybuch trafial w postac, a nie unosil sie nad nia.
-    val bodyShiftPx = with(density) { (cardSize * 0.68f).toPx() }
+    val bodyShift = cardSize * 0.68f
     val measurer = rememberTextMeasurer()
-    val p = progress.value
+    val p = progress
 
     Box(
         modifier = Modifier
-            .offset {
-                IntOffset(
-                    x = (centerInLayer.x - fxPx / 2f).toInt(),
-                    y = (centerInLayer.y - fxPx / 2f + bodyShiftPx).toInt()
-                )
-            }
-            .size(fxSize),
+            .size(fxSize)
+            .offset(y = bodyShift),
         contentAlignment = Alignment.Center
     ) {
         val numberColor = effect.kind.color()
@@ -179,6 +165,84 @@ private fun FloatingEffectView(
     }
 }
 
+/* ------------------------------ pocisk lecacy od atakujacego --------------------------------- */
+
+/**
+ * Warstwa czysto kosmetyczna: rysuje swiecacy pocisk lecacy od atakujacego do celu, dla efektow
+ * ktore maja zrodlo. To JEDYNE miejsce, ktore jeszcze potrzebuje globalnych pozycji ([slotPositions]) -
+ * i tylko po to, zeby wiedziec skad dokad leci kulka. Wybuch i liczba (patrz [LocalImpactEffect])
+ * nie zalezą od tej warstwy w ogole, wiec nawet gdyby pozycja pocisku byla chwilowo niedokladna,
+ * liczba obrazen i tak zawsze wyladuje dokladnie na postaci.
+ */
+@Composable
+internal fun ProjectileOverlay(
+    effects: List<FloatingEffect>,
+    slotPositions: Map<String, Offset>,
+    modifier: Modifier = Modifier
+) {
+    var layerOrigin by remember { mutableStateOf(Offset.Zero) }
+
+    Box(
+        modifier = modifier
+            .fillMaxSize()
+            .onGloballyPositioned { layerOrigin = it.positionInRoot() }
+    ) {
+        effects.forEach { fx ->
+            val sourceId = fx.sourceId ?: return@forEach
+            val source = slotPositions[sourceId] ?: return@forEach
+            val target = slotPositions[fx.targetId] ?: return@forEach
+            key(fx.id) {
+                ProjectileTravel(
+                    from = source - layerOrigin,
+                    to = target - layerOrigin,
+                    color = fx.kind.color()
+                )
+            }
+        }
+    }
+}
+
+@Composable
+private fun ProjectileTravel(from: Offset, to: Offset, color: Color) {
+    val travel = remember { Animatable(0f) }
+    LaunchedEffect(from, to) {
+        val duration = BattleSpeed.scale(TRAVEL_MILLIS).coerceAtLeast(70L)
+        travel.animateTo(1f, tween(duration.toInt(), easing = LinearEasing))
+    }
+    if (travel.value >= 1f) return
+    Projectile(from = from, to = to, progress = travel.value, color = color)
+}
+
+/** Maly swiecacy pocisk lecacy po prostej od zrodla do celu - stad wiadomo, kto wlasnie uderzyl. */
+@Composable
+private fun Projectile(
+    from: Offset,
+    to: Offset,
+    progress: Float,
+    color: Color
+) {
+    val eased = easeOutQuad(progress)
+    val position = Offset(
+        x = from.x + (to.x - from.x) * eased,
+        y = from.y + (to.y - from.y) * eased
+    )
+    val fadeIn = (progress / 0.15f).coerceIn(0f, 1f)
+
+    Canvas(
+        modifier = Modifier
+            .offset { IntOffset((position.x - PROJECTILE_RADIUS_PX).toInt(), (position.y - PROJECTILE_RADIUS_PX).toInt()) }
+            .size(with(LocalDensity.current) { (PROJECTILE_RADIUS_PX * 2).toDp() })
+    ) {
+        drawCircle(color = color.copy(alpha = 0.35f * fadeIn), radius = PROJECTILE_RADIUS_PX * 1.8f)
+        drawCircle(color = color.copy(alpha = fadeIn), radius = PROJECTILE_RADIUS_PX)
+        drawCircle(color = Color.White.copy(alpha = 0.8f * fadeIn), radius = PROJECTILE_RADIUS_PX * 0.45f)
+    }
+}
+
+/** Ile ms zajmuje pociskowi przelot od atakujacego do celu, przy mnozniku predkosci 1x. */
+internal const val TRAVEL_MILLIS = 220L
+private const val PROJECTILE_RADIUS_PX = 14f
+
 /* ------------------------------- pływajaca liczba ---------------------------------- */
 
 /**
@@ -186,7 +250,7 @@ private fun FloatingEffectView(
  * wprost z komponentu Damage w oryginale.
  */
 private fun DrawScope.drawDamageNumber(
-    measurer: androidx.compose.ui.text.TextMeasurer,
+    measurer: TextMeasurer,
     center: Offset,
     k: Float,
     p: Float,
@@ -196,19 +260,21 @@ private fun DrawScope.drawDamageNumber(
 ) {
     if (p <= 0f) return
 
-    val rise = interp(easeOutQuad(p), 0f, 1f, 0f, -140f) * k
+    val rise = interp(easeOutQuad(p), 0f, 1f, 0f, -150f) * k
     val scale = if (p < 0.16f) {
-        interp(easeOutBack(p / 0.16f), 0f, 1f, 0.2f, 1.28f)
+        interp(easeOutBack(p / 0.16f), 0f, 1f, 0.2f, 1.5f)
     } else {
-        interp(easeOutQuad(((p - 0.16f) / 0.18f).coerceIn(0f, 1f)), 0f, 1f, 1.28f, 1.02f)
+        interp(easeOutQuad(((p - 0.16f) / 0.18f).coerceIn(0f, 1f)), 0f, 1f, 1.5f, 1.15f)
     }
     val alpha = when {
-        p < 0.1f -> p / 0.1f
-        p > 0.72f -> interp(p, 0.72f, 1f, 1f, 0f)
+        p < 0.08f -> p / 0.08f
+        p > 0.82f -> interp(p, 0.82f, 1f, 1f, 0f)
         else -> 1f
     }
 
-    val fontPx = (if (crit) 30f else 24f) * k * scale
+    // Liczba obrazen ma byc niemozliwa do przeoczenia - stad spory bazowy rozmiar, zanim jeszcze
+    // dojda mnozniki skali/animacji.
+    val fontPx = (if (crit) 52f else 42f) * k * scale
     val style = TextStyle(
         color = color.copy(alpha = alpha),
         fontSize = (fontPx / density).sp,
@@ -382,7 +448,7 @@ private fun DrawScope.drawPlus(at: Offset, s: Float, color: Color, op: Float) {
 }
 
 private fun DrawScope.drawRoundRectCentered(color: Color, at: Offset, w: Float, h: Float) {
-    drawRect(color = color, topLeft = Offset(at.x - w / 2f, at.y - h / 2f), size = androidx.compose.ui.geometry.Size(w, h))
+    drawRect(color = color, topLeft = Offset(at.x - w / 2f, at.y - h / 2f), size = Size(w, h))
 }
 
 /* ----------------------------- zwykle trafienie / krytyk ---------------------------- */

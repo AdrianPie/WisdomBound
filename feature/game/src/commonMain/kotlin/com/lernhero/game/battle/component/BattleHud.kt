@@ -4,13 +4,24 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -19,74 +30,203 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.lernhero.game.battle.BattleSpeed
-import com.lernhero.game.battle.BattleUiState
 import com.lernhero.game.battle.GamePhase
+import com.lernhero.shared.theme.FontFirst
 
+private val HudInk = Color(0xFF241A12)
+private val HudGold = Color(0xFFFFD34D)
+private val HudGoldFrame = Color(0xFFC8A45A)
+private val HudCream = Color(0xFFF4E9D7)
+
+/**
+ * Odznaka fali w lewym gornym rogu, jak poziom postaci w RPG - numer fali plus cienki pasek HP
+ * bohatera pod spodem, zeby stan druzyny byl widoczny bez patrzenia w glab pola bitwy.
+ */
 @Composable
-internal fun BattleHud(
-    state: BattleUiState,
-    modifier: Modifier = Modifier
-) {
+internal fun WaveBadge(wave: Int, heroHpFraction: Float, modifier: Modifier = Modifier) {
     Column(
         modifier = modifier
-            .clip(RoundedCornerShape(8.dp))
-            .background(Color(0xCC21150F))
-            .padding(horizontal = 16.dp, vertical = 12.dp),
+            .clip(RoundedCornerShape(12.dp))
+            .background(HudInk)
+            .border(2.dp, HudGoldFrame, RoundedCornerShape(12.dp))
+            .padding(horizontal = 14.dp, vertical = 8.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
-            text = "Fala ${state.wave}",
-            color = Color.White,
-            fontSize = 18.sp,
-            fontWeight = FontWeight.Bold
+            text = "FALA $wave",
+            color = HudGold,
+            fontFamily = FontFirst(),
+            fontWeight = FontWeight.Bold,
+            fontSize = 15.sp
+        )
+        Box(
+            modifier = Modifier
+                .padding(top = 4.dp)
+                .width(64.dp)
+                .height(6.dp)
+                .clip(RoundedCornerShape(50))
+                .background(Color(0xFF120E0A))
+        ) {
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth(heroHpFraction.coerceIn(0f, 1f))
+                    .height(6.dp)
+                    .clip(RoundedCornerShape(50))
+                    .background(Color(0xFF4ADE80))
+            )
+        }
+    }
+}
+
+/** Odznaka licznika pytan w prawym gornym rogu - lustro [WaveBadge] po drugiej stronie ekranu. */
+@Composable
+internal fun AnswerCountBadge(count: Int, modifier: Modifier = Modifier) {
+    Column(
+        modifier = modifier
+            .clip(RoundedCornerShape(12.dp))
+            .background(HudInk)
+            .border(2.dp, HudGoldFrame, RoundedCornerShape(12.dp))
+            .padding(horizontal = 14.dp, vertical = 8.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Text(
+            text = "PYTANIA",
+            color = Color(0xFF9D8B6A),
+            fontFamily = FontFirst(),
+            fontWeight = FontWeight.Bold,
+            fontSize = 10.sp
         )
         Text(
-            text = state.phase.hudLabel(),
-            color = Color(0xFFE7D1B6),
-            fontSize = 13.sp
+            text = "$count",
+            color = HudGold,
+            fontFamily = FontFirst(),
+            fontWeight = FontWeight.Bold,
+            fontSize = 17.sp
         )
-        state.playback?.let { playback ->
-            Text(
-                text = "Playback: ${playback.progressLabel}",
-                color = Color(0xFFE7D1B6),
-                fontSize = 12.sp
-            )
-        }
-        state.message?.let { message ->
-            Text(
-                text = message,
-                color = Color(0xFFFFF1D6),
-                fontSize = 12.sp
-            )
-        }
+    }
+}
 
+/** Krotki komunikat z silnika walki (fala nadciaga, passa, ulti...), wyswietlany na srodku gory. */
+@Composable
+internal fun BattleMessageBanner(
+    message: String?,
+    buffLabel: String?,
+    buffPositive: Boolean,
+    modifier: Modifier = Modifier
+) {
+    if (message == null && buffLabel == null) return
+    Column(
+        modifier = modifier
+            .clip(RoundedCornerShape(10.dp))
+            .background(Color(0xCC241A12))
+            .padding(horizontal = 12.dp, vertical = 6.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        buffLabel?.let {
+            Text(
+                text = it,
+                color = if (buffPositive) Color(0xFF7FD1A0) else Color(0xFFE7A08A),
+                fontFamily = FontFirst(),
+                fontWeight = FontWeight.Bold,
+                fontSize = 11.sp
+            )
+        }
+        message?.let {
+            Text(
+                text = it,
+                color = HudCream,
+                fontFamily = FontFirst(),
+                fontSize = 12.sp,
+                modifier = Modifier.padding(top = if (buffLabel != null) 2.dp else 0.dp)
+            )
+        }
+    }
+}
+
+/** Sterowanie tempem walki + kapitulacja - male, schowane w rogu, zeby nie zaslaniac pola bitwy. */
+@Composable
+internal fun BattleControls(
+    phase: GamePhase,
+    onCapitulate: () -> Unit = {},
+    modifier: Modifier = Modifier
+) {
+    var confirmCapitulate by remember { mutableStateOf(false) }
+
+    Row(
+        modifier = modifier,
+        horizontalArrangement = Arrangement.spacedBy(6.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
         SpeedSwitch()
+
+        if (phase == GamePhase.Battle) {
+            Box(
+                modifier = Modifier
+                    .clip(RoundedCornerShape(8.dp))
+                    .background(Color(0xCC241A12))
+                    .border(1.dp, Color(0xFFE7A08A), RoundedCornerShape(8.dp))
+                    .clickable { confirmCapitulate = true }
+                    .padding(horizontal = 10.dp, vertical = 6.dp)
+            ) {
+                Text(
+                    text = "Poddaj sie",
+                    color = Color(0xFFE7A08A),
+                    fontFamily = FontFirst(),
+                    fontSize = 12.sp,
+                    fontWeight = FontWeight.Bold
+                )
+            }
+        }
+    }
+
+    if (confirmCapitulate) {
+        AlertDialog(
+            onDismissRequest = { confirmCapitulate = false },
+            containerColor = Color(0xFF1A1410),
+            title = { Text(text = "Kapitulacja", color = Color(0xFFFFD100), fontWeight = FontWeight.Bold) },
+            text = {
+                Text(
+                    text = "Wycofujesz druzyne z biegu. Ratujesz tylko 25% zebranej zdobyczy - reszta przepada.",
+                    color = Color(0xFFCDBB99)
+                )
+            },
+            confirmButton = {
+                TextButton(onClick = {
+                    confirmCapitulate = false
+                    onCapitulate()
+                }) {
+                    Text(text = "Poddaj sie", color = Color(0xFFE7A08A))
+                }
+            },
+            dismissButton = {
+                TextButton(onClick = { confirmCapitulate = false }) {
+                    Text(text = "Walcz dalej", color = Color(0xFFFFD100))
+                }
+            }
+        )
     }
 }
 
 /**
- * Sterowanie tempem walki: [-] wolniej, [+] szybciej. Walka startuje na 1x, wiec animacje widac
- * od razu; przyspieszasz dopiero, gdy chcesz przewinac fale.
+ * Sterowanie tempem walki: [-] wolniej, [+] szybciej.
  */
 @Composable
 private fun SpeedSwitch() {
-    val multiplier = BattleSpeed.multiplier
     Row(
-        modifier = Modifier.padding(top = 6.dp),
-        horizontalArrangement = Arrangement.spacedBy(6.dp),
+        horizontalArrangement = Arrangement.spacedBy(4.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
         SpeedButton(symbol = "−", enabled = BattleSpeed.canSlowDown, onClick = { BattleSpeed.slower() })
         Box(
             modifier = Modifier
                 .clip(RoundedCornerShape(6.dp))
-                .background(Color(0x99000000))
-                .padding(horizontal = 10.dp, vertical = 4.dp)
+                .background(Color(0xCC241A12))
+                .padding(horizontal = 8.dp, vertical = 4.dp)
         ) {
             Text(
                 text = BattleSpeed.label,
                 color = Color.White,
-                fontSize = 13.sp,
+                fontSize = 12.sp,
                 fontWeight = FontWeight.Bold
             )
         }
@@ -98,8 +238,8 @@ private fun SpeedSwitch() {
 private fun SpeedButton(symbol: String, enabled: Boolean, onClick: () -> Unit) {
     Box(
         modifier = Modifier
-            .size(28.dp)
-            .clip(RoundedCornerShape(6.dp))
+            .size(24.dp)
+            .clip(CircleShape)
             .background(if (enabled) Color(0xFFB4451F) else Color(0x55B4451F))
             .then(if (enabled) Modifier.clickable(onClick = onClick) else Modifier),
         contentAlignment = Alignment.Center
@@ -107,16 +247,8 @@ private fun SpeedButton(symbol: String, enabled: Boolean, onClick: () -> Unit) {
         Text(
             text = symbol,
             color = Color.White.copy(alpha = if (enabled) 1f else 0.5f),
-            fontSize = 18.sp,
+            fontSize = 15.sp,
             fontWeight = FontWeight.Bold
         )
     }
 }
-
-private fun GamePhase.hudLabel(): String =
-    when (this) {
-        GamePhase.Battle -> "Odtwarzanie walki"
-        GamePhase.Quiz -> "Quiz po fali"
-        GamePhase.Upgrade -> "Ulepszenia po fali"
-        GamePhase.Defeat -> "Koniec runu"
-    }

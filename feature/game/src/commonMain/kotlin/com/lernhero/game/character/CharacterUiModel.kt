@@ -22,5 +22,10 @@ data class CharacterUiModel(
      * at a different scale, so this normalises every fighter to a consistent on-screen size.
      * Applied to the sprite width (or the paper-doll canvas for the hero).
      */
-    val battleScale: Float = 1f
+    val battleScale: Float = 1f,
+    /**
+     * Jak daleko ten wrog jest jeszcze od linii starcia: 1f = poza ekranem, 0f = dotarl i bije.
+     * Bez znaczenia dla graczy - stoja w miejscu.
+     */
+    val approach: Float = 0f
 )

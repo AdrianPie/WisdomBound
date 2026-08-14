@@ -133,7 +133,7 @@ class BattlePlaybackEngine(
         hp = hp,
         // Bonusy do HP i ataku sa juz wliczone w hp/attack przez warstwe UI, wiec tutaj je odsiewamy.
         // Inaczej ten sam helm dodawalby zdrowie dwa razy.
-        itemStats = loadout.stats.without(StatType.MaxHp, StatType.Attack) + spellPowerStats,
+        itemStats = loadout.stats.without(StatType.MaxHp, StatType.Attack) + spellPowerStats + bonusStats,
         effects = loadout.effects,
         // Pasek zdolnosci: zaklecia z ich procentami. Silnik losuje z tego co ture.
         spells = ability.toChoices { id -> SpellCatalog.byId(id)?.toChoice() }
@@ -155,7 +155,9 @@ data class BattleFighter(
     /** Pasek zdolnosci wojownika. Pusty = zawsze zwykly atak. */
     val ability: AbilityLoadout = AbilityLoadout(),
     /** Mnoznik sily zaklec ponad baze (od przedmiotow/perkow). */
-    val spellPower: Float = 0f
+    val spellPower: Float = 0f,
+    /** Dodatkowe surowe statystyki spoza ekwipunku - np. boosty z quizu przed walka. */
+    val bonusStats: Stats = Stats.Empty
 ) {
     internal val spellPowerStats: Stats
         get() = if (spellPower == 0f) Stats.Empty else Stats.of(StatType.SpellPower to spellPower)

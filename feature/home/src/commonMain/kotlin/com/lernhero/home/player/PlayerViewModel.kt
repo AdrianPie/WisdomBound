@@ -298,6 +298,29 @@ class PlayerViewModel(
 
     // endregion
 
+    /** Placi zlotem za zakup w lochu. Zwraca false, gdy monet nie starcza. */
+    fun spendGold(amount: Int, label: String): Boolean {
+        if (_uiState.value.money < amount) {
+            _uiState.update { it.copy(message = "Za malo monet.") }
+            return false
+        }
+        _uiState.update { it.copy(money = it.money - amount, message = label) }
+        viewModelScope.launch(Dispatchers.IO) {
+            playerRepository.addMoney(-amount)
+        }
+        return true
+    }
+
+    /** Znalezione zloto (skarby na mapie lochu) - dopisuje i utrwala saldo. */
+    fun grantGold(amount: Int, label: String) {
+        viewModelScope.launch(Dispatchers.IO) {
+            val newBalance = playerRepository.addMoney(amount)
+            _uiState.update { current ->
+                if (newBalance == null) current else current.copy(money = newBalance, message = label)
+            }
+        }
+    }
+
     /** Dev/testing helper: grants coins and persists the new balance. */
     fun addGold(amount: Int) {
         viewModelScope.launch(Dispatchers.IO) {

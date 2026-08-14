@@ -3,6 +3,7 @@ package com.lernhero.domain.repository
 import com.lernhero.domain.player.HeroClass
 import com.lernhero.domain.player.Player
 import com.lernhero.domain.player.PlayerEquipment
+import com.lernhero.domain.reading.Book
 import dev.gitlive.firebase.auth.FirebaseUser
 
 interface PlayerRepository {
@@ -47,4 +48,29 @@ interface PlayerRepository {
 
     /** Persists the ability bar: spell id -> assigned percent of a turn. */
     suspend fun updateSpellWeights(weights: Map<String, Int>)
+
+    /**
+     * Odbiera nagrode za cel dzienny (fitness albo czytanie) na dany dzien. Zwraca null, gdy
+     * nagroda za ten cel byla juz odebrana dzisiaj (albo gdy zapis sie nie udal) - w obu
+     * przypadkach nie placi drugi raz.
+     */
+    suspend fun claimDailyGoalReward(goalId: String, dateKey: String, reward: Int): Player?
+
+    /**
+     * Dopisuje kawalek aktywnego czytania: minuty/strony na dzisiaj (resetuja sie same, gdy
+     * [dateKey] zmieni sie na kolejny dzien) i sumaryczne statystyki na zawsze.
+     */
+    suspend fun recordReading(
+        dateKey: String,
+        minutesDelta: Int,
+        pagesDelta: Int,
+        wordsDelta: Int,
+        charactersDelta: Int
+    ): Player?
+
+    /** Zapamietuje ostatnia przeczytana strone danej ksiazki. */
+    suspend fun updateBookProgress(bookId: String, page: Int)
+
+    /** Dopisuje ksiazke wgrana przez gracza do biblioteki. */
+    suspend fun addImportedBook(book: Book)
 }

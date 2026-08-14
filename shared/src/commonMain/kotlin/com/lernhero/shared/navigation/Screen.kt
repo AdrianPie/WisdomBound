@@ -14,12 +14,12 @@ sealed class Screen {
     data object Home: Screen()
     @Serializable
     data object BattleScreen : Screen()
-    /** Zakladka "Fight": sklad druzyny i wejscie do lochu. */
+    /** Zakladka "Fight": sklad druzyny (u gory) i mapa krainy do wyboru lokacji (na dole). */
     @Serializable
     data object Team : Screen()
-    /** Mapa lochu. Seed jednoznacznie okresla caly graf, wiec wystarczy go przekazac w trasie. */
+    /** Wnetrze wybranego lochu: druzyna u gory, kompaktowa mapa wezlow na dole. */
     @Serializable
-    data class Dungeon(val seed: Long) : Screen()
+    data object DungeonCrawl : Screen()
     @Serializable
     data object KnightPreview : Screen()
     @Serializable
@@ -28,4 +28,10 @@ sealed class Screen {
     data object Equipment : Screen()
     @Serializable
     data object Shop : Screen()
+    /** Kroki, treningi i odbior nagrod fitness. */
+    @Serializable
+    data object Fitness : Screen()
+    /** Czytnik PDF: biblioteka ksiazek i odbior nagrod za czytanie. */
+    @Serializable
+    data object Books : Screen()
 }

@@ -8,8 +8,6 @@ import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBarDefaults
@@ -24,24 +22,25 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import androidx.navigation.toRoute
+import com.lernhero.domain.run.BattleRequest
+import com.lernhero.domain.run.RunSession
 import com.lernhero.game.battle.BattleScreen
 import com.lernhero.home.HomeScreen
 import com.lernhero.home.dev.KnightPreviewScreen
 import com.lernhero.home.dev.ModularKnightPreviewScreen
-import com.lernhero.home.dungeon.DungeonMapScreen
+import com.lernhero.home.dungeon.DungeonCrawlScreen
 import com.lernhero.home.equipment.EquipmentScreen
+import com.lernhero.home.fitness.FitnessScreen
+import com.lernhero.home.reading.ReaderChrome
+import com.lernhero.home.reading.ReadingScreen
 import com.lernhero.home.shop.ShopScreen
 import com.lernhero.home.team.TeamScreen
-import com.lernhero.shared.theme.FontFirst
+import com.lernhero.shared.theme.AppPalette
+import com.lernhero.shared.theme.FontPixel
 import com.lernhero.shared.theme.FontSize
-import com.lernhero.shared.theme.IconPrimary
-import com.lernhero.shared.resources.Resources
 import com.lernhero.shared.navigation.Screen
-import com.lernhero.shared.theme.Surface
-import com.lernhero.shared.theme.TextPrimary
 import kotlin.random.Random
-import org.jetbrains.compose.resources.painterResource
+import org.koin.compose.koinInject
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -56,6 +55,8 @@ fun HomeNavGraph() {
                 currentRoute.value.isOnRoute<Screen.Home>() -> BottomBarDestination.Home
                 currentRoute.value.isOnRoute<Screen.Team>() -> BottomBarDestination.Fight
                 currentRoute.value.isOnRoute<Screen.Equipment>() -> BottomBarDestination.Equipment
+                currentRoute.value.isOnRoute<Screen.Fitness>() -> BottomBarDestination.Fitness
+                currentRoute.value.isOnRoute<Screen.Books>() -> BottomBarDestination.Books
                 currentRoute.value.isOnRoute<Screen.Shop>() -> BottomBarDestination.Shop
                 else -> BottomBarDestination.Home
             }
@@ -73,11 +74,14 @@ fun HomeNavGraph() {
     val showBars by remember {
         derivedStateOf {
             !currentRoute.value.isOnRoute<Screen.BattleScreen>() &&
-                !currentRoute.value.isOnRoute<Screen.Dungeon>()
+                !currentRoute.value.isOnRoute<Screen.DungeonCrawl>() &&
+                // Otwarta ksiazka w czytniku - tekst ma zajac caly ekran, bez paskow.
+                !ReaderChrome.immersive
         }
     }
+    val runSession = koinInject<RunSession>()
     Scaffold(
-        containerColor = Surface,
+        containerColor = AppPalette.Background,
         contentWindowInsets = WindowInsets(0, 0, 0, 0),
         topBar = if (showBars) {
             {
@@ -85,30 +89,19 @@ fun HomeNavGraph() {
                     title = {
                         AnimatedContent(
                             targetState = topBarTitle
-                        ){title ->
+                        ) { title ->
                             Text(
                                 text = title,
-                                fontFamily = FontFirst(),
-                                fontSize = FontSize.LARGE,
-                                color = TextPrimary
-                            )
-                        }
-                    },
-                    navigationIcon = {
-                        IconButton(onClick = {}) {
-                            Icon(
-                                painter = painterResource(Resources.Icon.Menu),
-                                contentDescription = "Menu Icon"
+                                fontFamily = FontPixel(),
+                                fontSize = FontSize.MEDIUM,
+                                color = AppPalette.Gold
                             )
                         }
                     },
                     colors = TopAppBarDefaults.topAppBarColors(
-                        containerColor = Surface,
-                        scrolledContainerColor = Surface,
-                        navigationIconContentColor = IconPrimary,
-                        titleContentColor = TextPrimary,
-                        actionIconContentColor = IconPrimary
-
+                        containerColor = AppPalette.Background,
+                        scrolledContainerColor = AppPalette.Background,
+                        titleContentColor = AppPalette.Gold
                     )
                 )
             }
@@ -173,29 +166,47 @@ fun HomeNavGraph() {
                             navController.navigate(Screen.Equipment) {
                                 launchSingleTop = true
                             }
+                        },
+                        onOpenShop = {
+                            navController.navigate(Screen.Shop) {
+                                launchSingleTop = true
+                            }
+                        },
+                        onOpenFitness = {
+                            navController.navigate(Screen.Fitness) {
+                                launchSingleTop = true
+                            }
+                        },
+                        onOpenBooks = {
+                            navController.navigate(Screen.Books) {
+                                launchSingleTop = true
+                            }
                         }
                     )
                 }
                 composable<Screen.Team> {
                     TeamScreen(
-                        // Kazde wejscie do lochu to nowy seed, czyli nowa mapa.
-                        onStartDungeon = {
-                            navController.navigate(Screen.Dungeon(seed = Random.nextLong()))
+                        onStartBattle = {
+                            navController.navigate(Screen.DungeonCrawl) {
+                                launchSingleTop = true
+                            }
                         }
                     )
                 }
-                composable<Screen.Dungeon> { entry ->
-                    DungeonMapScreen(
-                        seed = entry.toRoute<Screen.Dungeon>().seed,
-                        onEnterFight = {
+                composable<Screen.DungeonCrawl> {
+                    DungeonCrawlScreen(
+                        onFinished = { navController.popBackStack() },
+                        onEnterCombat = { kind ->
+                            // 1-3 fale na starcie z korytarza - zeby walka faktycznie sie konczyla
+                            // i dalo sie wrocic do chodzenia (patrz BattleViewModel.finishVictory).
+                            runSession.pendingBattle = BattleRequest(kind = kind, waves = Random.nextInt(1, 4), seed = Random.nextLong())
                             navController.navigate(Screen.BattleScreen)
-                        },
-                        onAbandon = {
-                            navController.popBackStack()
                         }
                     )
                 }
                 composable<Screen.Equipment> { EquipmentScreen() }
+                composable<Screen.Fitness> { FitnessScreen() }
+                composable<Screen.Books> { ReadingScreen() }
                 composable<Screen.Shop> { ShopScreen() }
                 composable<Screen.KnightPreview> {
                     KnightPreviewScreen(
@@ -211,7 +222,12 @@ fun HomeNavGraph() {
                         }
                     )
                 }
-                composable<Screen.BattleScreen> { BattleScreen() }
+                composable<Screen.BattleScreen> {
+                    BattleScreen(
+                        // Koniec walki (wygranej lub nie) - wracamy na mape lochu.
+                        onLeaveBattle = { navController.popBackStack() }
+                    )
+                }
 
             }
 

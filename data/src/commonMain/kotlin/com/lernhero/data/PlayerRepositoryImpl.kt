@@ -154,4 +154,69 @@ class PlayerRepositoryImpl: PlayerRepository {
         } catch (_: Exception) {
         }
     }
+
+    override suspend fun claimDailyGoalReward(goalId: String, dateKey: String, reward: Int): Player? {
+        return try {
+            val document = playerDocument() ?: return null
+            val player = getPlayer() ?: return null
+            if (player.dailyGoalClaims[goalId] == dateKey) return null
+            val updated = player.copy(
+                money = player.money + reward,
+                dailyGoalClaims = player.dailyGoalClaims + (goalId to dateKey)
+            )
+            document.set(updated)
+            updated
+        } catch (e: Exception) {
+            null
+        }
+    }
+
+    override suspend fun recordReading(
+        dateKey: String,
+        minutesDelta: Int,
+        pagesDelta: Int,
+        wordsDelta: Int,
+        charactersDelta: Int
+    ): Player? {
+        return try {
+            val document = playerDocument() ?: return null
+            val player = getPlayer() ?: return null
+            val today = player.readingToday.forToday(dateKey)
+            val updated = player.copy(
+                readingToday = today.copy(
+                    minutes = today.minutes + minutesDelta,
+                    pages = today.pages + pagesDelta
+                ),
+                readingStats = player.readingStats.copy(
+                    totalMinutes = player.readingStats.totalMinutes + minutesDelta,
+                    totalPages = player.readingStats.totalPages + pagesDelta,
+                    totalWords = player.readingStats.totalWords + wordsDelta,
+                    totalCharacters = player.readingStats.totalCharacters + charactersDelta
+                )
+            )
+            document.set(updated)
+            updated
+        } catch (e: Exception) {
+            null
+        }
+    }
+
+    override suspend fun updateBookProgress(bookId: String, page: Int) {
+        try {
+            val document = playerDocument() ?: return
+            val player = getPlayer() ?: return
+            document.set(player.copy(bookProgress = player.bookProgress + (bookId to page)))
+        } catch (_: Exception) {
+        }
+    }
+
+    override suspend fun addImportedBook(book: com.lernhero.domain.reading.Book) {
+        try {
+            val document = playerDocument() ?: return
+            val player = getPlayer() ?: return
+            if (player.importedBooks.any { it.id == book.id }) return
+            document.set(player.copy(importedBooks = player.importedBooks + book))
+        } catch (_: Exception) {
+        }
+    }
 }

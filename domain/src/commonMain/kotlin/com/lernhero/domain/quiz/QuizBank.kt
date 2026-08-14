@@ -5,8 +5,14 @@ import com.lernhero.domain.quiz.bank.BiologyQuestions
 import com.lernhero.domain.quiz.bank.CapitalQuestions
 import com.lernhero.domain.quiz.bank.ElementQuestions
 import com.lernhero.domain.quiz.bank.FlagQuestions
+import com.lernhero.domain.quiz.bank.GeographyQuestions
 import com.lernhero.domain.quiz.bank.HistoryQuestions
+import com.lernhero.domain.quiz.bank.LiteratureQuestions
+import com.lernhero.domain.quiz.bank.MathQuestions
+import com.lernhero.domain.quiz.bank.MythologyQuestions
 import com.lernhero.domain.quiz.bank.ScienceQuestions
+import com.lernhero.domain.quiz.bank.SportQuestions
+import com.lernhero.domain.quiz.bank.TechnologyQuestions
 import kotlin.random.Random
 
 /**
@@ -24,7 +30,13 @@ object QuizBank {
             HistoryQuestions.all +
             ElementQuestions.all +
             CapitalQuestions.all +
-            ScienceQuestions.all
+            ScienceQuestions.all +
+            GeographyQuestions.all +
+            SportQuestions.all +
+            MathQuestions.all +
+            LiteratureQuestions.all +
+            TechnologyQuestions.all +
+            MythologyQuestions.all
 
     fun all(random: Random = Random.Default): List<QuizEntry> =
         textEntries + FlagQuestions.entries(random)
@@ -47,12 +59,29 @@ object QuizBank {
      * Gdy pula danego poziomu sie wyczerpie (bo gracz dostal juz wszystkie eksperckie),
      * schodzimy o szczebel nizej zamiast zwracac puste pytanie.
      */
-    fun drawForWave(wave: Int, random: Random = Random.Default): List<QuizEntry> {
-        val pool = all(random).groupBy { it.difficulty }
+    fun drawForWave(wave: Int, random: Random = Random.Default): List<QuizEntry> =
+        draw(ladderFor(wave), category = null, random = random)
+
+    /**
+     * Losuje quiz wedlug zadanej drabinki, opcjonalnie tylko z jednej kategorii
+     * (null = losowe pytania z calego banku). Gdy kategoria nie ma pytania na danym
+     * szczeblu, bierzemy najblizszy poziom **z tej samej kategorii** - dopiero gdy
+     * cala kategoria sie wyczerpie, siegamy do reszty banku.
+     */
+    fun draw(
+        ladder: List<QuizDifficulty>,
+        category: QuizCategory? = null,
+        random: Random = Random.Default
+    ): List<QuizEntry> {
+        val everything = all(random)
+        val preferred = if (category == null) everything else everything.filter { it.category == category }
+        val preferredPool = preferred.groupBy { it.difficulty }
+        val fullPool = everything.groupBy { it.difficulty }
         val used = mutableSetOf<String>()
 
-        return ladderFor(wave).mapNotNull { difficulty ->
-            val entry = pickFrom(difficulty, pool, used, random)
+        return ladder.mapNotNull { difficulty ->
+            val entry = pickFrom(difficulty, preferredPool, used, random)
+                ?: pickFrom(difficulty, fullPool, used, random)
             entry?.also { used += it.id }
         }
     }

@@ -1,11 +1,13 @@
 package com.lernhero.game.battle.component
 
 import androidx.compose.animation.core.Animatable
+import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.LinearEasing
-import androidx.compose.animation.core.VectorConverter
+import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
@@ -21,6 +23,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateMapOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -42,6 +45,8 @@ import androidx.compose.ui.zIndex
 import com.lernhero.game.character.CharacterState
 import com.lernhero.game.battle.BattleSpeed
 import com.lernhero.game.battle.BattleUiState
+import com.lernhero.game.battle.FloatingEffect
+import com.lernhero.game.battle.HERO_ID
 import com.lernhero.game.character.CharacterUiModel
 import com.lernhero.game.character.ModularKnight
 import com.lernhero.game.character.SpriteCharacter
@@ -53,22 +58,28 @@ import org.jetbrains.compose.resources.painterResource
 @Composable
 internal fun BattleField(
     state: BattleUiState,
-    onMoveToAttackFinished: (String) -> Unit,
-    onAttackAnimationFinished: (String) -> Unit,
-    onMoveBackFinished: (String) -> Unit,
-    onEffectShown: (Long) -> Unit
+    onAttackFinished: (String) -> Unit,
+    onHitRecovered: (String) -> Unit,
+    onEffectShown: (Long) -> Unit,
+    onCapitulate: () -> Unit = {},
+    modifier: Modifier = Modifier
 ) {
     val allCharacters = state.characters.values.toList()
     val enemies = allCharacters.filter { !it.isPlayer }.sortedBy { it.id }
     val players = allCharacters.filter { it.isPlayer }.sortedBy { it.id }
     val slotPositions = remember { mutableStateMapOf<String, Offset>() }
 
-    BoxWithConstraints(
-        modifier = Modifier.fillMaxSize()
-    ) {
-        // Rozmiar karty jak w szyku (kazda strona zajmuje pol ekranu) - efekty skaluja sie do niego.
-        val fxCardSize = calculateCardSize(maxWidth = maxWidth / 2f, maxHeight = maxHeight)
+    // Piec dobrych odpowiedzi z rzedu odpala ulti - cale pole bitwy mruga na zloto na chwile.
+    val ultiFlash = remember { Animatable(0f) }
+    LaunchedEffect(state.ultiPulseId) {
+        if (state.ultiPulseId == 0L) return@LaunchedEffect
+        ultiFlash.snapTo(0.5f)
+        ultiFlash.animateTo(0f, animationSpec = tween(durationMillis = 550, easing = LinearEasing))
+    }
 
+    BoxWithConstraints(
+        modifier = modifier.fillMaxSize()
+    ) {
         Image(
             painter = painterResource(Resources.Image.battlegroundFirst),
             contentDescription = null,
@@ -79,7 +90,7 @@ internal fun BattleField(
         Row(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(horizontal = 24.dp, vertical = 16.dp),
+                .padding(horizontal = 12.dp, vertical = 12.dp),
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
         ) {
@@ -90,15 +101,15 @@ internal fun BattleField(
             ) {
                 TeamFormation(
                     characters = players,
-                    slotPositions = slotPositions,
+                    floatingEffects = state.floatingEffects,
                     onPositionMeasured = { id, offset ->
                         if (slotPositions[id] != offset) {
                             slotPositions[id] = offset
                         }
                     },
-                    onMoveToAttackFinished = onMoveToAttackFinished,
-                    onAttackAnimationFinished = onAttackAnimationFinished,
-                    onMoveBackFinished = onMoveBackFinished,
+                    onAttackFinished = onAttackFinished,
+                    onHitRecovered = onHitRecovered,
+                    onEffectShown = onEffectShown,
                     modifier = Modifier.fillMaxSize()
                 )
             }
@@ -111,33 +122,73 @@ internal fun BattleField(
                 TeamFormation(
                     characters = enemies,
                     flipCharacters = true,
-                    slotPositions = slotPositions,
+                    floatingEffects = state.floatingEffects,
                     onPositionMeasured = { id, offset ->
                         if (slotPositions[id] != offset) {
                             slotPositions[id] = offset
                         }
                     },
-                    onMoveToAttackFinished = onMoveToAttackFinished,
-                    onAttackAnimationFinished = onAttackAnimationFinished,
-                    onMoveBackFinished = onMoveBackFinished,
+                    onAttackFinished = onAttackFinished,
+                    onHitRecovered = onHitRecovered,
+                    onEffectShown = onEffectShown,
                     modifier = Modifier.fillMaxSize()
                 )
             }
         }
 
-        // Nakladka efektow lezy nad wszystkim: liczby obrazen i wybuchy nie moga chowac sie za postaciami.
-        CombatFxLayer(
+        // Pocisk to jedyna rzecz, ktora jeszcze potrzebuje globalnych pozycji - wybuch i liczba
+        // obrazen siedza teraz lokalnie na kazdej postaci (patrz CharacterSlot), wiec nie moga
+        // juz "polecieć" gdzies indziej na ekranie.
+        ProjectileOverlay(
             effects = state.floatingEffects,
-            slotPositions = slotPositions,
-            cardSize = fxCardSize,
-            onConsumed = onEffectShown
+            slotPositions = slotPositions
         )
 
-        BattleHud(
-            state = state,
+        if (ultiFlash.value > 0f) {
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .background(Color(0xFFFFD100).copy(alpha = ultiFlash.value))
+            )
+        }
+
+        val hero = state.characters[HERO_ID]
+        val heroHpFraction = if (hero != null && hero.maxHp > 0) {
+            hero.hp.toFloat() / hero.maxHp.toFloat()
+        } else {
+            1f
+        }
+
+        WaveBadge(
+            wave = state.wave,
+            heroHpFraction = heroHpFraction,
+            modifier = Modifier
+                .align(Alignment.TopStart)
+                .padding(10.dp)
+        )
+
+        AnswerCountBadge(
+            count = state.answeredCount,
+            modifier = Modifier
+                .align(Alignment.TopEnd)
+                .padding(10.dp)
+        )
+
+        BattleMessageBanner(
+            message = state.message,
+            buffLabel = state.activeCycleBuff?.takeIf { state.elapsedMs < it.expiresAtMs }?.outcome?.label,
+            buffPositive = (state.activeCycleBuff?.outcome?.attackMultiplier ?: 1f) >= 1f,
             modifier = Modifier
                 .align(Alignment.TopCenter)
-                .padding(16.dp)
+                .padding(top = 56.dp)
+        )
+
+        BattleControls(
+            phase = state.phase,
+            onCapitulate = onCapitulate,
+            modifier = Modifier
+                .align(Alignment.BottomEnd)
+                .padding(10.dp)
         )
     }
 }
@@ -146,11 +197,11 @@ internal fun BattleField(
 private fun TeamFormation(
     characters: List<CharacterUiModel>,
     flipCharacters: Boolean = false,
-    slotPositions: Map<String, Offset>,
+    floatingEffects: List<FloatingEffect>,
     onPositionMeasured: (String, Offset) -> Unit,
-    onMoveToAttackFinished: (String) -> Unit,
-    onAttackAnimationFinished: (String) -> Unit,
-    onMoveBackFinished: (String) -> Unit,
+    onAttackFinished: (String) -> Unit,
+    onHitRecovered: (String) -> Unit,
+    onEffectShown: (Long) -> Unit,
     modifier: Modifier = Modifier
 ) {
     BoxWithConstraints(
@@ -163,19 +214,39 @@ private fun TeamFormation(
             .mapIndexed { index, character -> character to slots[index % slots.size] }
             .sortedBy { (_, slot) -> slot.y }
             .forEach { (character, slot) ->
-                CharacterSlot(
-                    character = character,
-                    cardSize = cardSize,
-                    slotPositions = slotPositions,
-                    onPositionMeasured = onPositionMeasured,
-                    onMoveToAttackFinished = onMoveToAttackFinished,
-                    onAttackAnimationFinished = onAttackAnimationFinished,
-                    onMoveBackFinished = onMoveBackFinished,
-                    modifier = Modifier.offset(
-                        x = maxWidth * slot.x - cardSize / 2,
-                        y = maxHeight * slot.y - cardSize / 2
+                // Kazda postac dostaje wlasny, przypiety do id "przedzial" kompozycji - inaczej gdy
+                // fala sie zmienia (wrogowie umieraja, nowi dochodza), Compose potrafi podpiac stan
+                // animacji (approach, lean) pod NIEWLASCIWA postac, bo trafil w to samo miejsce w
+                // kolejnosci wywolan. Std brala sie ta "losowosc" efektow po zmianie fali.
+                key(character.id) {
+                    // Wrogowie nadciagaja z krawedzi ekranu do swojego miejsca w formacji; gracze
+                    // stoja w miejscu (approach = 0 zawsze), wiec dla nich to nie robi nic. Approach
+                    // teraz skacze wprost z 1f na 0f (patrz BattleViewModel.staggerEnemyEntrance), wiec
+                    // to ten tween - nie kolejne male kroki tickera - musi caly czas trwania wejscia.
+                    val animatedApproach by animateFloatAsState(
+                        targetValue = character.approach,
+                        animationSpec = tween(durationMillis = 900, easing = FastOutSlowInEasing)
                     )
-                )
+                    val effectiveX = if (flipCharacters) {
+                        slot.x + animatedApproach * (ENEMY_SPAWN_X - slot.x)
+                    } else {
+                        slot.x
+                    }
+
+                    CharacterSlot(
+                        character = character,
+                        cardSize = cardSize,
+                        effects = floatingEffects.filter { it.targetId == character.id },
+                        onPositionMeasured = onPositionMeasured,
+                        onAttackFinished = onAttackFinished,
+                        onHitRecovered = onHitRecovered,
+                        onEffectShown = onEffectShown,
+                        modifier = Modifier.offset(
+                            x = maxWidth * effectiveX - cardSize / 2,
+                            y = maxHeight * slot.y - cardSize / 2
+                        )
+                    )
+                }
             }
     }
 }
@@ -203,63 +274,44 @@ private fun formationSlots(isRightSide: Boolean): List<FormationSlot> {
     }
 }
 
+/**
+ * Wojownik stoi caly czas w swoim miejscu w formacji - atak to tylko zmiana klatek sprite'a
+ * (i lekkie "szturchniecie" w strone wroga przez [lean]), nigdy przemieszczenie karty.
+ * Tak dziala kazdy porzadny idle-battler: nikt nie biega przez ekran, zeby uderzyc.
+ */
 @Composable
 private fun CharacterSlot(
     character: CharacterUiModel,
     cardSize: Dp,
-    slotPositions: Map<String, Offset>,
+    effects: List<FloatingEffect>,
     onPositionMeasured: (String, Offset) -> Unit,
-    onMoveToAttackFinished: (String) -> Unit,
-    onAttackAnimationFinished: (String) -> Unit,
-    onMoveBackFinished: (String) -> Unit,
+    onAttackFinished: (String) -> Unit,
+    onHitRecovered: (String) -> Unit,
+    onEffectShown: (Long) -> Unit,
     modifier: Modifier = Modifier
 ) {
-    val density = LocalDensity.current
-    val myPosition = slotPositions[character.id]
-    val targetPosition = character.currentTargetId?.let { slotPositions[it] }
-    val animOffset = remember(character.id) {
-        Animatable(Offset.Zero, Offset.VectorConverter)
-    }
+    val leanPx = with(LocalDensity.current) { (cardSize * 0.12f).toPx() }
+    val lean by animateFloatAsState(
+        targetValue = if (character.state == CharacterState.ATTACK) {
+            if (character.isPlayer) leanPx else -leanPx
+        } else {
+            0f
+        },
+        animationSpec = tween(durationMillis = BattleSpeed.scale(90), easing = LinearEasing)
+    )
 
-    LaunchedEffect(character.state, character.currentTargetId, myPosition, targetPosition) {
+    LaunchedEffect(character.state) {
         when (character.state) {
-            CharacterState.MOVING_TO_ATK -> {
-                if (targetPosition != null && myPosition != null) {
-                    val attackMarginPx = with(density) {
-                        cardSize.toPx() * 0.55f
-                    }
-                    val attackMargin = if (character.isPlayer) -attackMarginPx else attackMarginPx
-
-                    animOffset.animateTo(
-                        targetValue = Offset(
-                            x = targetPosition.x - myPosition.x + attackMargin,
-                            y = targetPosition.y - myPosition.y
-                        ),
-                        animationSpec = tween(
-                            durationMillis = BattleSpeed.scale(110),
-                            easing = LinearEasing
-                        )
-                    )
-                    onMoveToAttackFinished(character.id)
-                }
-            }
-
             CharacterState.ATTACK -> {
                 val attackSprite = character.sprites.forState(CharacterState.ATTACK)
                 val full = attackSprite.totalFrames * attackSprite.animationSpeed + 225L
                 delay(BattleSpeed.scale(full))
-                onAttackAnimationFinished(character.id)
+                onAttackFinished(character.id)
             }
 
-            CharacterState.MOVING_BACK -> {
-                animOffset.animateTo(
-                    targetValue = Offset.Zero,
-                    animationSpec = tween(
-                        durationMillis = BattleSpeed.scale(110),
-                        easing = LinearEasing
-                    )
-                )
-                onMoveBackFinished(character.id)
+            CharacterState.HIT -> {
+                delay(BattleSpeed.scale(HIT_FLASH_MILLIS))
+                onHitRecovered(character.id)
             }
 
             else -> Unit
@@ -283,21 +335,18 @@ private fun CharacterSlot(
         Box(
             modifier = Modifier
                 .fillMaxSize()
-                .offset {
-                    IntOffset(
-                        x = animOffset.value.x.toInt(),
-                        y = animOffset.value.y.toInt()
-                    )
-                }
-                .zIndex(if (character.state == CharacterState.ATTACK) 2f else 0f),
+                .offset { IntOffset(x = lean.toInt(), y = 0) },
             contentAlignment = Alignment.Center
         ) {
             HealthBar(
                 character = character,
                 modifier = Modifier
                     .align(Alignment.TopCenter)
-                    .offset(y = cardSize * 0.34f)
-                    .width(cardSize * 0.28f)
+                    // Sprity o wiekszej skali (np. mag 1.9x) rysuja glowe znacznie wyzej nad
+                    // srodkiem karty niz sprity o skali 1x - dzielimy przez battleScale, zeby pasek
+                    // zawsze wyladowal tuz nad glowa, a nie na piersi wielkich postaci.
+                    .offset(y = cardSize * 0.30f / character.battleScale)
+                    .width(cardSize * 0.34f)
             )
             val knightEquipment = character.knightEquipment
             if (knightEquipment != null) {
@@ -343,6 +392,19 @@ private fun CharacterSlot(
                     }
                 }
             }
+
+            // Wybuch i liczba obrazen rysowane NA WIERZCHU postaci - stad rendering na samym
+            // koncu tej kolejnosci (Box uklada dzieci warstwami, ostatnie jest najwyzej).
+            effects.forEach { effect ->
+                key(effect.id) {
+                    LocalImpactEffect(
+                        effect = effect,
+                        cardSize = cardSize,
+                        hasProjectile = effect.sourceId != null,
+                        onDone = { onEffectShown(effect.id) }
+                    )
+                }
+            }
         }
     }
 }
@@ -360,10 +422,11 @@ private fun HealthBar(
 
     Box(
         modifier = modifier
-            .height(5.dp)
+            .height(9.dp)
             .clip(RoundedCornerShape(50))
-            .background(Color(0xFF2A160E))
-            .padding(1.dp)
+            .background(Color(0xFF120C08))
+            .border(1.dp, Color(0xFF000000).copy(alpha = 0.6f), RoundedCornerShape(50))
+            .padding(1.5.dp)
     ) {
         Box(
             modifier = Modifier
@@ -372,9 +435,9 @@ private fun HealthBar(
                 .clip(RoundedCornerShape(50))
                 .background(
                     if (hpFraction > 0.35f) {
-                        Color(0xFF68D043)
+                        Color(0xFF6FE04A)
                     } else {
-                        Color(0xFFE04736)
+                        Color(0xFFFF4B3E)
                     }
                 )
         )
@@ -385,7 +448,13 @@ private fun calculateCardSize(
     maxWidth: Dp,
     maxHeight: Dp
 ): Dp {
-    val widthBasedSize = maxWidth * 1.35f
-    val heightBasedSize = maxHeight * 1.35f
-    return minOf(widthBasedSize, heightBasedSize).coerceIn(140.dp, 280.dp)
+    val widthBasedSize = maxWidth * 1.05f
+    val heightBasedSize = maxHeight * 1.05f
+    return minOf(widthBasedSize, heightBasedSize).coerceIn(110.dp, 210.dp)
 }
+
+/** Poza prawa krawedzia wlasnej polowki pola - stad wrogowie wchodza na ekran, wyraznie zza jego brzegu. */
+private const val ENEMY_SPAWN_X = 1.7f
+
+/** Jak dlugo swieci sie czerwona poswiata trafienia, zanim postac wraca do bezczynnosci. */
+private const val HIT_FLASH_MILLIS = 260L

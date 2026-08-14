@@ -22,7 +22,13 @@ enum class QuizCategory(val label: String) {
     Elements("Pierwiastki"),
     Capitals("Stolice"),
     Science("Nauka"),
-    Flags("Flagi")
+    Flags("Flagi"),
+    Geography("Geografia"),
+    Sport("Sport"),
+    Math("Matematyka"),
+    Literature("Literatura"),
+    Technology("Technologia"),
+    Mythology("Mitologia")
 }
 
 /**

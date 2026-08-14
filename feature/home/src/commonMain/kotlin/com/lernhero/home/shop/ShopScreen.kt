@@ -54,21 +54,21 @@ import com.lernhero.home.ui.RarityPalette
 import com.lernhero.home.ui.icon
 import com.lernhero.home.ui.label
 import com.lernhero.home.ui.shortLabel
+import com.lernhero.shared.theme.AppPalette
 import com.lernhero.shared.theme.FontFirst
 import com.lernhero.shared.theme.FontPixel
 import com.lernhero.shared.resources.Resources
-import com.lernhero.shared.theme.Surface as AppSurface
 import org.jetbrains.compose.resources.painterResource
 import org.koin.compose.viewmodel.koinViewModel
 
-private val ShopBg = Color(0xFF17120D)
-private val ShopPanel = Color(0xFF1A1410)
-private val ShopPanelMid = Color(0xFF2A2218)
-private val ShopBorder = Color(0xFF6B5A38)
-private val ShopGoldFrame = Color(0xFFC8A45A)
-private val ShopGold = Color(0xFFFFD100)
-private val ShopMuted = Color(0xFF9D8B6A)
-private val ShopBuy = Color(0xFFB4451F)
+private val ShopBg = AppPalette.Ink
+private val ShopPanel = AppPalette.Panel
+private val ShopPanelMid = AppPalette.PanelRaised
+private val ShopBorder = AppPalette.GoldDim
+private val ShopGoldFrame = AppPalette.GoldFrame
+private val ShopGold = AppPalette.Gold
+private val ShopMuted = AppPalette.TextMuted
+private val ShopBuy = AppPalette.Action
 
 private enum class ShopTab(val label: String) {
     Equipment("Ekwipunek"),
@@ -82,7 +82,7 @@ fun ShopScreen() {
     val state by viewModel.uiState.collectAsState()
     var tab by remember { mutableStateOf(ShopTab.Equipment) }
 
-    Surface(modifier = Modifier.fillMaxSize(), color = AppSurface) {
+    Surface(modifier = Modifier.fillMaxSize(), color = AppPalette.Background) {
         Column(
             modifier = Modifier
                 .fillMaxSize()
@@ -182,26 +182,23 @@ private fun ShopHeader(money: Int, onAddGold: () -> Unit) {
                 )
             }
 
-            // Dev/testing: grant coins so the shop and party can be exercised.
+            // Dev/testing: dyskretny link, nie prawdziwy przycisk zakupu - inaczej wyglada
+            // jak zepsuta platnosc w grze zamiast narzedzia deweloperskiego.
             Box(
                 modifier = Modifier
-                    .clip(RoundedCornerShape(20.dp))
-                    .background(ShopBuy)
-                    .border(1.dp, ShopGold, RoundedCornerShape(20.dp))
                     .clickable(
                         interactionSource = remember { MutableInteractionSource() },
                         indication = null,
                         onClick = onAddGold
                     )
-                    .padding(horizontal = 10.dp, vertical = 8.dp),
+                    .padding(horizontal = 6.dp, vertical = 8.dp),
                 contentAlignment = Alignment.Center
             ) {
                 Text(
-                    text = "+5000",
-                    color = Color.White,
+                    text = "dev: +5000",
+                    color = ShopMuted.copy(alpha = 0.5f),
                     fontFamily = FontFirst(),
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 13.sp
+                    fontSize = 9.sp
                 )
             }
         }
@@ -300,12 +297,7 @@ private fun SpellShopCard(
                 .border(1.dp, ShopGoldFrame.copy(alpha = 0.5f), RoundedCornerShape(8.dp)),
             contentAlignment = Alignment.Center
         ) {
-            Image(
-                painter = painterResource(spell.icon()),
-                contentDescription = spell.name,
-                modifier = Modifier.fillMaxSize().padding(8.dp),
-                contentScale = ContentScale.Fit
-            )
+            Text(text = spell.icon(), fontSize = 28.sp)
         }
         Text(
             text = spell.name,
@@ -389,14 +381,7 @@ private fun EquipmentShopCard(
                 .border(1.dp, ShopGoldFrame.copy(alpha = 0.5f), RoundedCornerShape(8.dp)),
             contentAlignment = Alignment.Center
         ) {
-            Image(
-                painter = painterResource(item.icon()),
-                contentDescription = item.name,
-                modifier = Modifier
-                    .fillMaxSize()
-                    .padding(8.dp),
-                contentScale = ContentScale.Fit
-            )
+            Text(text = item.icon(), fontSize = 28.sp)
         }
         Text(
             text = item.name,

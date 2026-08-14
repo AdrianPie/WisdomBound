@@ -44,20 +44,17 @@ object DungeonMapGenerator {
      * Puszcza [DungeonConfig.paths] losowych spacerow od pietra 0 do pietra pod bossem.
      * Kazdy krok idzie o jedna kolumne w lewo, prosto albo w prawo - dzieki temu krawedzie
      * sa krotkie i mapa wyglada na recznie rysowana, a nie na plataniny linii.
+     *
+     * Wszystkie sciezki startuja z TEJ SAMEJ kolumny na pietrze 0 - loch ma jedno wejscie
+     * (jak w Darkest Dungeon), rozgalezienia pojawiaja sie dopiero pozniej, nie na starcie.
      */
     private fun buildGraph(random: Random, config: DungeonConfig): Map<Cell, Set<Cell>> {
         val edges = mutableMapOf<Cell, MutableSet<Cell>>()
         val topFloor = config.bossFloor - 1
+        val entryColumn = random.nextInt(config.columns)
 
-        val startColumns = mutableListOf<Int>()
-        repeat(config.paths) { pathIndex ->
-            var column = random.nextInt(config.columns)
-            // Druga sciezka musi ruszyc z innej kolumny niz pierwsza, inaczej mapa potrafi
-            // zaczac sie od jednego pola i pierwszy wybor gracza jest pozorny.
-            if (pathIndex == 1 && column == startColumns.first() && config.columns > 1) {
-                column = (column + 1 + random.nextInt(config.columns - 1)) % config.columns
-            }
-            startColumns += column
+        repeat(config.paths) {
+            var column = entryColumn
 
             for (floor in 0 until topFloor) {
                 val from = Cell(floor, column)

@@ -10,12 +10,19 @@ struct ComposeView: UIViewControllerRepresentable {
     func updateUIViewController(_ uiViewController: UIViewController, context: Context) {}
 }
 
+private let statusBarNotificationName = Notification.Name("LernHeroStatusBarHidden")
+
 struct ContentView: View {
+    @State private var statusBarHidden = false
+
     var body: some View {
         ComposeView()
             .ignoresSafeArea()
+            .statusBarHidden(statusBarHidden)
+            .onReceive(NotificationCenter.default.publisher(for: statusBarNotificationName)) { notification in
+                if let hidden = notification.userInfo?["hidden"] as? Bool {
+                    statusBarHidden = hidden
+                }
+            }
     }
 }
-
-
-

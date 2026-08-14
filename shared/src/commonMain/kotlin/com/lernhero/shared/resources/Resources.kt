@@ -7,6 +7,7 @@ import androidx.compose.ui.unit.dp
 import lernhero.shared.generated.resources.Res
 import lernhero.shared.generated.resources.back_arrow
 import lernhero.shared.generated.resources.battle_mage_avatar
+import lernhero.shared.generated.resources.brick_dungeon
 import lernhero.shared.generated.resources.battlegroundTwo
 import lernhero.shared.generated.resources.body2
 import lernhero.shared.generated.resources.book
@@ -18,6 +19,7 @@ import lernhero.shared.generated.resources.delete
 import lernhero.shared.generated.resources.dollar
 import lernhero.shared.generated.resources.edit
 import lernhero.shared.generated.resources.fire_sprite
+import lernhero.shared.generated.resources.game_map
 import lernhero.shared.generated.resources.google_logo
 import lernhero.shared.generated.resources.grid
 import lernhero.shared.generated.resources.head
@@ -70,6 +72,7 @@ import lernhero.shared.generated.resources.shopping_cart_image
 import lernhero.shared.generated.resources.sorcerer_avatar2
 import lernhero.shared.generated.resources.swords_24px
 import lernhero.shared.generated.resources.testattack
+import lernhero.shared.generated.resources.treasure
 import lernhero.shared.generated.resources.unlock
 import lernhero.shared.generated.resources.usa
 import lernhero.shared.generated.resources.user
@@ -124,6 +127,10 @@ object Resources {
         val battleMageAvatarGame = Res.drawable.battle_mage_avatar
         val knightAvatar = Res.drawable.knight_avatar2
         val sorcererAvatar = Res.drawable.sorcerer_avatar2
+
+        val dungeonMap = Res.drawable.game_map
+        val corridorBrick = Res.drawable.brick_dungeon
+        val treasureChest = Res.drawable.treasure
     }
     object Player {
             val head = Res.drawable.head
@@ -361,3 +368,9 @@ data class SpriteAsset(
         return otherLogical / frameWidthDp
     }
 }
+
+/**
+ * Surowe bajty pliku z `composeResources/files/...` (np. bundlowanej ksiazki PDF).
+ * Wygenerowany `Res` jest domyslnie wewnetrzny dla tego modulu - to jedyne publiczne wyjscie.
+ */
+suspend fun Resources.readFileBytes(path: String): ByteArray = Res.readBytes(path)

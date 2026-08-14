@@ -1,35 +1,41 @@
 package com.lernhero.home.navigation
 
-import com.lernhero.shared.resources.Resources
 import com.lernhero.shared.navigation.Screen
-import org.jetbrains.compose.resources.DrawableResource
 
+/** [icon] to emoji, nie zasob graficzny - te same glify co w kafelkach szybkich akcji na Home. */
 enum class BottomBarDestination(
-    val icon : DrawableResource,
+    val icon: String,
     val title: String,
     val route: Screen
-){
+) {
     Home(
-        icon = Resources.Icon.Home,
-        title = "Home",
+        icon = "🏰",
+        title = "Dom",
         route = Screen.Home
-
     ),
     Fight(
-        icon = Resources.Icon.swords,
-        title = "Fight",
+        icon = "⚔️",
+        title = "Walcz",
         route = Screen.Team
     ),
-
     Equipment(
-        icon = Resources.Icon.Person,
-        title = "EQ",
+        icon = "🛡️",
+        title = "Postac",
         route = Screen.Equipment
     ),
-
+    Fitness(
+        icon = "🏋️",
+        title = "Trening",
+        route = Screen.Fitness
+    ),
+    Books(
+        icon = "📚",
+        title = "Ksiazki",
+        route = Screen.Books
+    ),
     Shop(
-        icon = Resources.Icon.ShoppingCart,
-        title = "Shop",
+        icon = "🛒",
+        title = "Sklep",
         route = Screen.Shop
     )
 }

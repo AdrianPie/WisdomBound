@@ -17,13 +17,18 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import com.lernhero.game.battle.BattleUiState
+import com.lernhero.game.battle.GamePhase
 import com.lernhero.shared.theme.ButtonPrimary
 import com.lernhero.shared.theme.TextPrimary
 
+/**
+ * Koniec walki - albo wygrana (ostatnia fala z [com.lernhero.domain.run.BattleRequest.waves]
+ * oczyszczona), albo porazka/kapitulacja. Jedyna droga dalej prowadzi z powrotem na mape/korytarz.
+ */
 @Composable
-fun DefeatDialog(
+fun BattleResultDialog(
     state: BattleUiState,
-    onRestart: () -> Unit
+    onLeave: () -> Unit
 ) {
     Dialog(onDismissRequest = {}) {
         Surface(
@@ -39,19 +44,20 @@ fun DefeatDialog(
                 verticalArrangement = Arrangement.spacedBy(12.dp)
             ) {
                 DialogHeader(
-                    title = "Defeat",
-                    subtitle = "Dotarles do fali ${state.wave}. Wynik: ${state.totalScore}. +${state.rewardCoins} monet"
+                    title = if (state.phase == GamePhase.Victory) "Walka wygrana" else "Koniec biegu",
+                    // Dokladny rozklad "sakwa vs konto" siedzi juz w message - liczony raz, w viewmodelu.
+                    subtitle = state.message ?: "Padles na fali ${state.wave}."
                 )
 
                 Button(
-                    onClick = onRestart,
+                    onClick = onLeave,
                     shape = RoundedCornerShape(8.dp),
                     colors = ButtonDefaults.buttonColors(
                         containerColor = ButtonPrimary,
                         contentColor = TextPrimary
                     )
                 ) {
-                    Text("Restart")
+                    Text("Wroc na mape")
                 }
             }
         }
