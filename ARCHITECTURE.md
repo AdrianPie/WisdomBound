@@ -173,9 +173,12 @@ reflow/       tryb domyslny - tekst jako prawdziwy Compose Text
                                (getOffsetForPosition), reszta to arytmetyka na Stringu
                 ReaderPalette  kolory kartki (jasny/sepia/ciemny) - celowo NIE zlota paleta gry
 ReaderSession + PdfEngine.<platforma>.kt
-              tryb "oryginal" - PDF renderowany na bitmapie, jak dotad. Nie ma tu tlumaczen ani
-              liczenia slow, bo na bitmapie nie ma czego dotknac ani czego policzyc (Android nie
-              ma zadnego API do tekstu z PDF - `PdfRenderer` tylko rysuje)
+              tryb "oryginal" - PDF renderowany na bitmapie, jak dotad (`PdfRenderer` na
+              Androidzie, PDFKit na iOS). PDF probuje przejsc do reflow od razu po imporcie:
+              `LibraryViewModel.extractPdfContent` wyciaga caly tekst przez `PdfEngine.pageText`
+              (PDFBox-Android / `PDFPage.string` na iOS) i przepuszcza przez PlainTextParser -
+              oryginal zostaje tylko wtedy, gdy PDF nie ma warstwy tekstowej (skan bez OCR) albo
+              platforma nie potrafi wyciagnac tekstu (desktop)
 ReadingClock  zegar aktywnego czytania, wspolny dla obu trybow. AFK-guard: przewrocenie strony
               doladowuje budzet bezczynnosci, a bez kartkowania zegar staje - 15 minut apki
               otwartej na jednej stronie NIE zaliczy dziennego questa. Tempo liczy jako WPM,

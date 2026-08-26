@@ -14,18 +14,15 @@ enum class BookSource {
 
 @Serializable
 enum class BookFormat {
-    /** Czysty tekst - jedyny format, ktory dzis potrafimy pokazac w trybie reflow. */
     Txt,
+    /** Rozpakowanie zipa dochodzi pozniej - dzis zawsze konczy sie podgladem oryginalu. */
     Epub,
-    Pdf;
-
     /**
-     * Czy format da sie przelac przez [BookContent] i pokazac jako prawdziwy tekst.
-     * Tylko takie ksiazki maja tlumaczenie slow i uczciwy licznik slow - PDF zostaje
-     * bitmapa, wiec nie ma w nim czego dotknac ani czego policzyc.
+     * Tekst wyciagany PO IMPORCIE, na biezaco (PDFBox na Androidzie, PDFKit na iOS) - nie
+     * kazdy PDF ma warstwe tekstowa (np. zeskanowana ksiazka bez OCR), wiec proba moze sie
+     * nie udac. Wtedy ksiazka i tak zostaje otwarta, tylko w podgladzie oryginalu.
      */
-    val supportsReflow: Boolean
-        get() = this != Pdf
+    Pdf;
 
     companion object {
         /** Rozpoznanie po nazwie pliku - to wszystko, czym dysponujemy przy imporcie. */

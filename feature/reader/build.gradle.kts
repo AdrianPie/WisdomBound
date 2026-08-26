@@ -34,6 +34,7 @@ kotlin {
             implementation(libs.compose.ui.tooling.preview)
             implementation(libs.androidx.activity.compose)
             implementation(libs.mlkit.translate)
+            implementation(libs.pdfbox.android)
         }
         commonMain.dependencies {
             implementation(libs.compose.runtime)

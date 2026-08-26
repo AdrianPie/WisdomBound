@@ -33,6 +33,7 @@ splash = "1.2.0"
 sprite = "1.1.0"
 healthConnect = "1.1.0-alpha07"
 mlkitTranslate = "17.0.3"
+pdfboxAndroid = "2.0.27.0"
 
 
 [libraries]
@@ -48,6 +49,7 @@ androidx-lifecycle-viewmodelCompose = { module = "org.jetbrains.androidx.lifecyc
 androidx-lifecycle-runtimeCompose = { module = "org.jetbrains.androidx.lifecycle:lifecycle-runtime-compose", version.ref = "androidx-lifecycle" }
 androidx-health-connect-client = { module = "androidx.health.connect:connect-client", version.ref = "healthConnect" }
 mlkit-translate = { module = "com.google.mlkit:translate", version.ref = "mlkitTranslate" }
+pdfbox-android = { module = "com.tom-roush:pdfbox-android", version.ref = "pdfboxAndroid" }
 
 compose-runtime = { module = "org.jetbrains.compose.runtime:runtime", version.ref = "composeMultiplatform" }
 compose-foundation = { module = "org.jetbrains.compose.foundation:foundation", version.ref = "composeMultiplatform" }

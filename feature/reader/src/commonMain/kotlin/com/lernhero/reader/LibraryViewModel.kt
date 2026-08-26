@@ -92,16 +92,33 @@ class LibraryViewModel(
     }
 
     /**
-     * Tresc ksiazki dla trybu reflow. Null oznacza, ze formatu nie umiemy rozlozyc na tekst -
+     * Tresc ksiazki dla trybu reflow. Null oznacza, ze nie udalo sie wyciagnac z niej tekstu -
      * wtedy zostaje podglad oryginalu (PDF na bitmapie), bez tlumaczen i bez liczenia slow.
      */
     suspend fun loadContent(book: Book): BookContent? {
-        if (!book.format.supportsReflow) return null
         val bytes = loadBytes(book) ?: return null
         return when (book.format) {
             BookFormat.Txt -> PlainTextParser.parse(bytes.decodeToString())
+            BookFormat.Pdf -> extractPdfContent(bytes)
             // EPUB wymaga rozpakowania zipa - dochodzi w etapie 2.
-            else -> null
+            BookFormat.Epub -> null
+        }
+    }
+
+    /**
+     * Wyciaga caly tekst PDF-a przez [PdfEngine] i przepuszcza go przez [PlainTextParser] -
+     * ten sam parser co dla TXT, bo strumien tekstu ze strony PDF-a rzadzi sie tymi samymi
+     * regulami (pusta linia = nowy akapit). Null, gdy platforma nie potrafi wyciagnac tekstu
+     * (desktop) albo PDF nie ma warstwy tekstowej (skan bez OCR) - wtedy zostaje podglad oryginalu.
+     */
+    private suspend fun extractPdfContent(bytes: ByteArray): BookContent? {
+        val document = PdfEngine.open(bytes) ?: return null
+        return try {
+            val text = (0 until PdfEngine.pageCount(document))
+                .joinToString("\n\n") { page -> PdfEngine.pageText(document, page).orEmpty() }
+            text.takeIf { it.isNotBlank() }?.let { PlainTextParser.parse(it) }
+        } finally {
+            PdfEngine.close(document)
         }
     }
 

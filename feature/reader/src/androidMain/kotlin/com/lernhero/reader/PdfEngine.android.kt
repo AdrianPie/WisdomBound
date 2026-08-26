@@ -9,6 +9,9 @@ import android.graphics.pdf.PdfRenderer
 import android.net.Uri
 import android.os.ParcelFileDescriptor
 import android.provider.OpenableColumns
+import com.tom_roush.pdfbox.android.PDFBoxResourceLoader
+import com.tom_roush.pdfbox.pdmodel.PDDocument
+import com.tom_roush.pdfbox.text.PDFTextStripper
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.runtime.Composable
@@ -27,11 +30,17 @@ import org.koin.mp.KoinPlatform
  * Trzyma otwarty [PdfRenderer] razem z jego deskryptorem pliku i tymczasowym plikiem -
  * `PdfRenderer` potrzebuje `ParcelFileDescriptor`, nie surowych bajtow, wiec bajty ladujemy
  * do pliku w cache przy kazdym otwarciu.
+ *
+ * [pageTexts] jest wyciagniety RAZEM z otwarciem (PDFBox), nie na zadanie w [PdfEngine.pageText] -
+ * ten interfejs jest synchroniczny (dziedziczy sygnature po iOS, gdzie `PDFPage.string` jest
+ * tania), a parsowanie calego PDF-a przez PDFBox tanie nie jest. Placimy raz przy [open], zamiast
+ * ryzykowac zawieszenie UI przy kazdym wywolaniu.
  */
 actual class PdfDocumentHandle(
     val renderer: PdfRenderer,
     val fileDescriptor: ParcelFileDescriptor,
-    val tempFile: File
+    val tempFile: File,
+    val pageTexts: List<String?>
 )
 
 actual object PdfEngine {
@@ -43,8 +52,28 @@ actual object PdfEngine {
             val tempFile = File.createTempFile("book_", ".pdf", appContext().cacheDir)
             tempFile.writeBytes(bytes)
             val descriptor = ParcelFileDescriptor.open(tempFile, ParcelFileDescriptor.MODE_READ_ONLY)
-            PdfDocumentHandle(PdfRenderer(descriptor), descriptor, tempFile)
+            val renderer = PdfRenderer(descriptor)
+            PdfDocumentHandle(renderer, descriptor, tempFile, extractPageTexts(tempFile, renderer.pageCount))
         }.getOrNull()
+    }
+
+    /**
+     * PDFBox-Android - `PdfRenderer` systemowy tylko rysuje strony, nie ma zadnego API do
+     * tekstu. Bledy pojedynczej strony (zeskanowany obraz bez warstwy tekstu, uszkodzony font)
+     * nie maja zawalic calej ksiazki - stad `null` per strona zamiast wyjatku dla calego dokumentu.
+     */
+    private fun extractPageTexts(file: File, pageCount: Int): List<String?> {
+        PDFBoxResourceLoader.init(appContext())
+        return runCatching {
+            PDDocument.load(file).use { document ->
+                val stripper = PDFTextStripper()
+                (1..pageCount).map { page ->
+                    stripper.startPage = page
+                    stripper.endPage = page
+                    runCatching { stripper.getText(document) }.getOrNull()
+                }
+            }
+        }.getOrElse { List(pageCount) { null } }
     }
 
     actual fun pageCount(document: PdfDocumentHandle): Int = document.renderer.pageCount
@@ -60,9 +89,8 @@ actual object PdfEngine {
             }
         }
 
-    // Android nie ma wbudowanego API do wyciagania tekstu z PDF - PdfRenderer tylko rysuje strony
-    // jako bitmapy. Liczba slow dla PDF-ow na tej platformie zostaje wiec niepoliczona (null).
-    actual fun pageText(document: PdfDocumentHandle, pageIndex: Int): String? = null
+    actual fun pageText(document: PdfDocumentHandle, pageIndex: Int): String? =
+        document.pageTexts.getOrNull(pageIndex)
 
     actual fun close(document: PdfDocumentHandle) {
         runCatching { document.renderer.close() }
