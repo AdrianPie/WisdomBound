@@ -17,7 +17,14 @@ object WordQuizBank {
     const val MIN_WORDS = 4
 
     fun eligible(words: List<SavedWord>): List<SavedWord> =
-        words.distinctBy { it.text.lowercase() }.filter { it.translation.isNotBlank() }
+        words
+            .filter { !it.isSentence && it.translation.isNotBlank() && !it.text.containsWhitespace() }
+            .distinctBy { it.text.lowercase() }
+
+    // Dodatkowa siatka bezpieczenstwa obok [SavedWord.isSentence]: fiszki zapisane przed
+    // wprowadzeniem tej flagi maja ja domyslnie na `false`, wiec bez tego stare zdania nadal
+    // wpadalyby do puli quizu jako "slowo". Prawdziwe slowo nigdy nie ma w sobie spacji.
+    private fun String.containsWhitespace(): Boolean = any { it.isWhitespace() }
 
     /** Czy jest wystarczajaco fiszek, zeby zaczac endless na wlasnych slowkach. */
     fun hasEnoughWords(words: List<SavedWord>): Boolean = eligible(words).size >= MIN_WORDS

@@ -19,6 +19,17 @@ class WordQuizBankTest {
         savedAt = 0L
     )
 
+    private fun sentence(text: String, translation: String, id: String = text) = SavedWord(
+        id = id,
+        text = text,
+        translation = translation,
+        sentence = text,
+        bookId = "book",
+        bookTitle = "Book",
+        savedAt = 0L,
+        isSentence = true
+    )
+
     @Test
     fun `za malo fiszek nie daje pytania`() {
         val words = listOf(word("cat", "kot"), word("dog", "pies"), word("sun", "słońce"))
@@ -54,6 +65,46 @@ class WordQuizBankTest {
         )
         assertTrue(!WordQuizBank.hasEnoughWords(words))
         assertNull(WordQuizBank.draw(words, Random(1)))
+    }
+
+    @Test
+    fun `zapisane zdania nie wchodza do puli quizu`() {
+        val words = listOf(
+            word("cat", "kot"),
+            word("dog", "pies"),
+            word("sun", "słońce"),
+            word("moon", "księżyc"),
+            sentence("The cat sat on the mat.", "Kot usiadl na macie.")
+        )
+        val eligible = WordQuizBank.eligible(words)
+        assertEquals(4, eligible.size)
+        assertTrue(eligible.none { it.isSentence })
+
+        val entry = WordQuizBank.draw(words, Random(1))
+        assertTrue(entry != null)
+        assertTrue("Kot usiadl na macie." !in entry.answers, "zdanie nie moze byc odpowiedzia")
+    }
+
+    @Test
+    fun `wielowyrazowy tekst bez flagi tez jest odsiewany`() {
+        // Stare fiszki sprzed dodania isSentence maja te flage domyslnie false - spacja w
+        // tekscie jest druga siatka bezpieczenstwa, zeby i tak nie trafily do quizu.
+        val words = listOf(
+            word("cat", "kot"),
+            word("dog", "pies"),
+            word("sun", "słońce"),
+            word("moon", "księżyc"),
+            SavedWord(
+                id = "legacy",
+                text = "read weather in wreckage",
+                translation = "czytac pogode we wraku",
+                sentence = "Her father had taught her to read weather in wreckage.",
+                bookId = "book",
+                bookTitle = "Book",
+                savedAt = 0L
+            )
+        )
+        assertEquals(4, WordQuizBank.eligible(words).size)
     }
 
     @Test

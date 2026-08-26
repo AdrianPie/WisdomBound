@@ -13,6 +13,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
@@ -63,6 +64,16 @@ fun HomeNavGraph() {
     // JEDEN stan gracza, zeby zakup w sklepie od razu byl widoczny w ekwipunku/druzynie, bez
     // koniecznosci wyjscia i wejscia z powrotem na ekran.
     val playerViewModel = koinViewModel<PlayerViewModel>()
+
+    // Zakladki to jeden zywy back stack (saveState/restoreState), wiec Team NIE recomponuje sie
+    // od zera przy kazdym powrocie na nia - LaunchedEffect(Unit) w jej wnetrzu odpaliby sie tylko
+    // raz. Bez tego slowka zapisane w Czytelni nie byly widoczne w Endless "Wlasne" az do restartu
+    // aplikacji (PlayerViewModel czytal stan gracza tylko raz, przy pierwszym wejsciu).
+    LaunchedEffect(currentRoute.value) {
+        if (currentRoute.value.isOnRoute<Screen.Team>()) {
+            playerViewModel.refresh()
+        }
+    }
 
     val selectedDestination by remember {
         derivedStateOf {

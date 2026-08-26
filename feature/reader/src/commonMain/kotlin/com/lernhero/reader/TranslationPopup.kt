@@ -123,7 +123,8 @@ fun TranslationPopup(
                             sentence = selection.sentence,
                             bookId = "",
                             bookTitle = "",
-                            savedAt = 0L
+                            savedAt = 0L,
+                            isSentence = selection.scope == SelectionScope.Sentence
                         )
                     )
                 }
