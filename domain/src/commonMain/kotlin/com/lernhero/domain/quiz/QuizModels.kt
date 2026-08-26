@@ -28,7 +28,9 @@ enum class QuizCategory(val label: String) {
     Math("Matematyka"),
     Literature("Literatura"),
     Technology("Technologia"),
-    Mythology("Mitologia")
+    Mythology("Mitologia"),
+    /** Slowka zapisane w czytniku - jedyna kategoria, ktorej nie ma w [com.lernhero.domain.quiz.QuizBank]. */
+    Vocabulary("Slowka")
 }
 
 /**

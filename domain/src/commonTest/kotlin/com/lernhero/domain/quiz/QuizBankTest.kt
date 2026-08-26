@@ -18,7 +18,8 @@ class QuizBankTest {
     fun `bank ma duzo pytan w kazdej kategorii i na kazdym poziomie`() {
         assertTrue(all.size >= 150, "Bank powinien miec setki pytan, ma ${all.size}")
 
-        QuizCategory.entries.forEach { category ->
+        // Slowka nie sa w tym banku - budowane sa dynamicznie z fiszek gracza (WordQuizBank).
+        QuizCategory.entries.filter { it != QuizCategory.Vocabulary }.forEach { category ->
             val count = all.count { it.category == category }
             assertTrue(count >= 5, "Kategoria ${category.label} ma tylko $count pytan")
         }

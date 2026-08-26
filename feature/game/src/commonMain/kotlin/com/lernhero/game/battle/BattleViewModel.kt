@@ -29,6 +29,7 @@ import com.lernhero.domain.quiz.QuizBank
 import com.lernhero.domain.quiz.QuizCategory
 import com.lernhero.domain.quiz.QuizDifficulty
 import com.lernhero.domain.quiz.QuizEntry
+import com.lernhero.domain.quiz.WordQuizBank
 import com.lernhero.domain.repository.PlayerRepository
 import com.lernhero.domain.spell.AbilityLoadout
 import com.lernhero.domain.spell.Spell
@@ -1324,6 +1325,13 @@ class BattleViewModel(
         quizCounter += 1
         currentQuestionDifficulty = difficulty
 
+        // Wlasne slowka to zawsze wybor z czterech (ulozenie w kolejnosci nie pasuje do fiszek)
+        // i zawsze pytaja WYLACZNIE o slowka gracza - inaczej "trenuje slownictwo" bylby klamstwem,
+        // gdyby co druga runda wracala do wbudowanego banku.
+        if (runSession.customWords.isNotEmpty()) {
+            return LiveQuizState(question = drawMultipleChoiceQuestion(difficulty))
+        }
+
         // Na razie testowo pol na pol - tyle wystarczy, zeby sprawdzic, jak ukladanka gra sie w boju.
         val question = if (quizRandom.nextFloat() < ORDERING_QUESTION_CHANCE) {
             val ordering = OrderingBank.draw(difficulty, category = runSession.category, random = quizRandom)
@@ -1340,7 +1348,12 @@ class BattleViewModel(
     }
 
     private fun drawMultipleChoiceQuestion(difficulty: QuizDifficulty): QuizQuestion {
-        val entry = QuizBank.draw(listOf(difficulty), category = runSession.category, random = quizRandom).firstOrNull()
+        val customWords = runSession.customWords
+        val entry = if (customWords.isNotEmpty()) {
+            WordQuizBank.draw(customWords, quizRandom)
+        } else {
+            null
+        } ?: QuizBank.draw(listOf(difficulty), category = runSession.category, random = quizRandom).firstOrNull()
             ?: QuizBank.all(quizRandom).random(quizRandom)
         currentQuestionCategory = entry.category
         return entry.toUiQuestion()

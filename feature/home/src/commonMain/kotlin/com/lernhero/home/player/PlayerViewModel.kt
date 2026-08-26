@@ -26,6 +26,7 @@ import com.lernhero.domain.run.RunDifficulty
 import com.lernhero.domain.story.StoryProgress
 import com.lernhero.domain.progress.GameStats
 import com.lernhero.domain.progress.RunStats
+import com.lernhero.domain.reading.SavedWord
 import com.lernhero.domain.town.TownResources
 import com.lernhero.domain.spell.AbilityLoadout
 import com.lernhero.domain.spell.Spell
@@ -104,6 +105,8 @@ data class PlayerUiState(
     val stats: GameStats = GameStats(),
     /** Surowce miasta - potrzebne tu, bo Kuznia i Summon Center placa nimi, nie zlotem. */
     val resources: TownResources = TownResources(),
+    /** Fiszki zapisane w czytniku - surowiec pod endless "Wlasne" (patrz [com.lernhero.domain.quiz.WordQuizBank]). */
+    val savedWords: List<SavedWord> = emptyList(),
     val message: String? = null
 ) {
     /** Pasek zdolnosci: pojemnosc bazowa + wagi zaklec. Docina sie sam, wiec suma <= pojemnosci. */
@@ -235,7 +238,8 @@ class PlayerViewModel(
                         idleCollectedAt = player.idleCollectedAt,
                         progress = player.progress,
                         stats = player.stats,
-                        resources = player.townResources
+                        resources = player.townResources,
+                        savedWords = player.savedWords
                     )
                 }
             }

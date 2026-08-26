@@ -24,6 +24,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.lernhero.domain.quiz.QuizCategory
 import com.lernhero.domain.quiz.QuizDifficulty
+import com.lernhero.domain.quiz.WordQuizBank
 import com.lernhero.shared.theme.FontFirst
 import com.lernhero.shared.theme.FontPixel
 
@@ -56,6 +57,8 @@ fun EndlessSetupPanel(
     source: QuestionSource,
     difficulty: QuizDifficulty?,
     category: QuizCategory?,
+    /** Ile roznych, juz przetlumaczonych slowek gracz ma zapisanych - steruje zakladka "Wlasne". */
+    eligibleWordCount: Int,
     onSourceChange: (QuestionSource) -> Unit,
     onDifficultyChange: (QuizDifficulty?) -> Unit,
     onCategoryChange: (QuizCategory?) -> Unit,
@@ -116,7 +119,8 @@ fun EndlessSetupPanel(
                         selected = category == null,
                         onClick = { onCategoryChange(null) }
                     )
-                    QuizCategory.entries.forEach { entry ->
+                    // Slowka nie sa w banku wbudowanym - maja wlasna zakladke zrodla, nie ta liste.
+                    QuizCategory.entries.filter { it != QuizCategory.Vocabulary }.forEach { entry ->
                         Chip(
                             label = entry.label,
                             selected = category == entry,
@@ -128,7 +132,10 @@ fun EndlessSetupPanel(
                 StartButton(onStart = onStart)
             }
 
-            QuestionSource.Custom -> CustomComingSoon()
+            QuestionSource.Custom -> CustomWordsPanel(
+                eligibleWordCount = eligibleWordCount,
+                onStart = onStart
+            )
         }
     }
 }
@@ -219,11 +226,14 @@ private fun StartButton(onStart: () -> Unit) {
 }
 
 /**
- * Placeholder wlasnych talii. Mowi wprost, czego tu jeszcze nie ma - pusty ekran bez slowa
- * wyjasnienia gracz odczytalby jako zepsuty, a nie jako "w budowie".
+ * Endless na fiszkach zapisanych w czytniku - gracz pyta sam siebie o slowka, ktore podkreslil
+ * podczas czytania. Ponizej [WordQuizBank.MIN_WORDS] przyciski startu nie dzialaja, bo quiz
+ * z jedna czy dwiema fiszkami nie ma z czego zbudowac czterech odpowiedzi do wyboru.
  */
 @Composable
-private fun CustomComingSoon() {
+private fun CustomWordsPanel(eligibleWordCount: Int, onStart: () -> Unit) {
+    val ready = eligibleWordCount >= WordQuizBank.MIN_WORDS
+
     Column(
         modifier = Modifier
             .fillMaxWidth()
@@ -232,34 +242,45 @@ private fun CustomComingSoon() {
             .border(1.dp, FrameDim.copy(alpha = 0.6f), RoundedCornerShape(10.dp))
             .padding(16.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(8.dp)
+        verticalArrangement = Arrangement.spacedBy(10.dp)
     ) {
-        Text(text = "📝", fontSize = 30.sp)
+        Text(text = "🔖", fontSize = 30.sp)
         Text(
-            text = "WLASNE PYTANIA",
+            text = "SLOWKA Z CZYTELNI",
             color = GoldText,
             fontFamily = FontPixel(),
             fontWeight = FontWeight.Bold,
             fontSize = 13.sp
         )
         Text(
-            text = "Tu wgrasz wlasna talie - notatki, kartkowke, material na egzamin - albo dasz " +
-                "temat i AI ulozy z niego pytania. Potem trenujesz to w endless jak kazdy inny bank.",
+            text = if (ready) {
+                "Masz $eligibleWordCount przetlumaczonych slowek. Kazda runda pyta o jedno z nich - " +
+                    "wybierz poprawne tlumaczenie sposrod czterech."
+            } else {
+                "Zapisz jeszcze ${WordQuizBank.MIN_WORDS - eligibleWordCount} slowko/a w czytniku " +
+                    "(dotknij slowa, przetlumacz, kliknij zakladke) - masz $eligibleWordCount " +
+                    "z ${WordQuizBank.MIN_WORDS} potrzebnych."
+            },
             color = Muted,
             fontFamily = FontFirst(),
             fontSize = 11.sp,
             textAlign = TextAlign.Center
         )
-        Text(
-            text = "WKROTCE",
-            color = Muted,
-            fontFamily = FontPixel(),
-            fontWeight = FontWeight.Bold,
-            fontSize = 10.sp,
-            modifier = Modifier
-                .clip(RoundedCornerShape(50))
-                .background(Color(0xFF241E18))
-                .padding(horizontal = 14.dp, vertical = 6.dp)
-        )
+
+        if (ready) {
+            StartButton(onStart = onStart)
+        } else {
+            Text(
+                text = "ZA MALO SLOWEK",
+                color = Muted,
+                fontFamily = FontPixel(),
+                fontWeight = FontWeight.Bold,
+                fontSize = 10.sp,
+                modifier = Modifier
+                    .clip(RoundedCornerShape(50))
+                    .background(Color(0xFF241E18))
+                    .padding(horizontal = 14.dp, vertical = 6.dp)
+            )
+        }
     }
 }

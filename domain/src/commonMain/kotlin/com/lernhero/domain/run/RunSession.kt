@@ -3,6 +3,7 @@ package com.lernhero.domain.run
 import com.lernhero.domain.combat.Stats
 import com.lernhero.domain.quiz.QuizCategory
 import com.lernhero.domain.quiz.QuizDifficulty
+import com.lernhero.domain.reading.SavedWord
 import kotlin.math.roundToInt
 
 /**
@@ -45,6 +46,14 @@ class RunSession {
      * poziomie pytan decyduje tier planszy, a nie gracz.
      */
     var quizDifficulty: QuizDifficulty? = null
+        private set
+
+    /**
+     * Fiszki gracza do trenowania w endless (zakladka "Wlasne" w [com.lernhero.home.story.EndlessSetupPanel]).
+     * Niepuste = walka pyta WYLACZNIE o te slowka (patrz [com.lernhero.domain.quiz.WordQuizBank]),
+     * z pominieciem wbudowanego banku i pytan typu "ulóz w kolejnosci".
+     */
+    var customWords: List<SavedWord> = emptyList()
         private set
 
     /** Poziom trudnosci runu - skaluje wrogow, pytania i nagrody. */
@@ -96,13 +105,15 @@ class RunSession {
         category: QuizCategory? = null,
         difficulty: RunDifficulty = RunDifficulty.Normal,
         storyStage: Int? = null,
-        quizDifficulty: QuizDifficulty? = null
+        quizDifficulty: QuizDifficulty? = null,
+        customWords: List<SavedWord> = emptyList()
     ) {
         modifiers = RunModifiers()
         this.category = category
         this.difficulty = difficulty
         this.activeStoryStage = storyStage
         this.quizDifficulty = quizDifficulty
+        this.customWords = customWords
         pendingBattle = null
         lastBattleWon = null
         partyHp = emptyMap()

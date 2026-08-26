@@ -44,6 +44,7 @@ import com.lernhero.domain.monster.MonsterLevels
 import com.lernhero.domain.monster.MonsterStars
 import com.lernhero.domain.quiz.QuizCategory
 import com.lernhero.domain.quiz.QuizDifficulty
+import com.lernhero.domain.quiz.WordQuizBank
 import com.lernhero.domain.run.BattleKind
 import com.lernhero.domain.run.BattleRequest
 import com.lernhero.domain.run.ChestSlot
@@ -223,28 +224,34 @@ fun TeamScreen(
                 }
             }
 
-            PlayMode.Endless -> EndlessSetupPanel(
-                source = QuestionSource.valueOf(endlessSource),
-                difficulty = endlessDifficulty?.let { QuizDifficulty.valueOf(it) },
-                category = endlessCategory?.let { QuizCategory.valueOf(it) },
-                onSourceChange = { endlessSource = it.name },
-                onDifficultyChange = { endlessDifficulty = it?.name },
-                onCategoryChange = { endlessCategory = it?.name },
-                onStart = {
-                    runSession.startNewRun(
-                        category = endlessCategory?.let { QuizCategory.valueOf(it) },
-                        difficulty = RunDifficulty.Normal,
-                        quizDifficulty = endlessDifficulty?.let { QuizDifficulty.valueOf(it) }
-                    )
-                    runSession.pendingBattle = BattleRequest(
-                        kind = BattleKind.Normal,
-                        waves = 0,
-                        seed = Random.nextLong(),
-                        isEndless = true
-                    )
-                    onEnterBattle()
-                }
-            )
+            PlayMode.Endless -> {
+                val eligibleWords = remember(state.savedWords) { WordQuizBank.eligible(state.savedWords) }
+                EndlessSetupPanel(
+                    source = QuestionSource.valueOf(endlessSource),
+                    difficulty = endlessDifficulty?.let { QuizDifficulty.valueOf(it) },
+                    category = endlessCategory?.let { QuizCategory.valueOf(it) },
+                    eligibleWordCount = eligibleWords.size,
+                    onSourceChange = { endlessSource = it.name },
+                    onDifficultyChange = { endlessDifficulty = it?.name },
+                    onCategoryChange = { endlessCategory = it?.name },
+                    onStart = {
+                        val custom = QuestionSource.valueOf(endlessSource) == QuestionSource.Custom
+                        runSession.startNewRun(
+                            category = if (custom) null else endlessCategory?.let { QuizCategory.valueOf(it) },
+                            difficulty = RunDifficulty.Normal,
+                            quizDifficulty = if (custom) null else endlessDifficulty?.let { QuizDifficulty.valueOf(it) },
+                            customWords = if (custom) eligibleWords else emptyList()
+                        )
+                        runSession.pendingBattle = BattleRequest(
+                            kind = BattleKind.Normal,
+                            waves = 0,
+                            seed = Random.nextLong(),
+                            isEndless = true
+                        )
+                        onEnterBattle()
+                    }
+                )
+            }
         }
 
         state.message?.let { message ->
