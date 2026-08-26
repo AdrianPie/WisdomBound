@@ -48,7 +48,7 @@ import com.lernhero.reader.reflow.ReaderPalette
 import com.lernhero.reader.reflow.ReflowReader
 import com.lernhero.reader.reflow.SelectionScope
 import com.lernhero.reader.reflow.WordSelection
-import com.lernhero.reader.translate.TranslationSource
+import com.lernhero.reader.translate.platformTranslationSource
 import com.lernhero.shared.theme.FontFirst
 import com.lernhero.shared.theme.FontPixel
 import kotlinx.coroutines.launch
@@ -70,9 +70,9 @@ fun ReflowReaderView(
 ) {
     val scope = rememberCoroutineScope()
     val playerRepository = koinInject<PlayerRepository>()
-    // Na razie stub - patrz TranslationSource. Docelowo ML Kit (Android) / Translation framework
-    // (iOS), oba offline, bez klucza API.
-    val translationSource = remember { TranslationSource.Stub }
+    // ML Kit na Androidzie, Apple Translation Framework na iOS (26+) - oba offline, bez klucza
+    // API. Ponizej minimalnej wersji systemowej (albo na desktopie) dostajemy TranslationSource.Stub.
+    val translationSource = remember { platformTranslationSource() }
 
     val clock = remember(book.id) { ReadingClock(playerRepository, scope) }
     val clockState = clock.state

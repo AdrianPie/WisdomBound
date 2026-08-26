@@ -17,6 +17,7 @@ struct ContentView: View {
 
     var body: some View {
         ComposeView()
+            .overlay(TranslationHostView(host: TranslationBridge.host))
             .ignoresSafeArea()
             .statusBarHidden(statusBarHidden)
             .onReceive(NotificationCenter.default.publisher(for: statusBarNotificationName)) { notification in

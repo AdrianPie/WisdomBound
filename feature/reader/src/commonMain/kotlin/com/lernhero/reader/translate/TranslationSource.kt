@@ -23,6 +23,13 @@ interface TranslationSource {
     }
 }
 
+/**
+ * Prawdziwy silnik tlumaczenia danej platformy - ML Kit na Androidzie, `Translation` framework
+ * na iOS (iOS 17+; ponizej tej wersji [TranslationSource.Stub], bo starszy iOS nie ma tego API).
+ * Desktop nie ma odpowiednika, wiec dostaje [TranslationSource.Stub].
+ */
+expect fun platformTranslationSource(): TranslationSource
+
 sealed interface TranslationResult {
     data class Translated(val text: String) : TranslationResult
     /** Silnik tlumaczenia nie jest jeszcze podpiety (patrz [TranslationSource.Stub]). */
