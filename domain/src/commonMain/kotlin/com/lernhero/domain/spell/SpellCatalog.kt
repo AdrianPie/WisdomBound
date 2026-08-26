@@ -6,6 +6,7 @@ import com.lernhero.domain.combat.EffectContext
 import com.lernhero.domain.combat.SpellCast
 import com.lernhero.domain.combat.StatType
 import com.lernhero.domain.combat.StatusKind
+import com.lernhero.domain.combat.playback.HitKind
 import com.lernhero.domain.common.Rarity
 
 /**
@@ -46,7 +47,14 @@ object SpellCatalog {
                     turns = 3
                 )
             )
-        }
+        },
+        // Zywa walka nie ma jeszcze obrazen ciaglych (DOT), wiec podpalenie jest tu zwiniete
+        // w mocniejszy cios z gory - ta sama laczna wartosc, tylko wyplacona od razu.
+        live = LiveSpellSpec(
+            target = SpellTarget.RandomEnemy,
+            damageMultiplier = 2.2f,
+            hitKind = HitKind.Burn
+        )
     )
 
     val FIREBOMB = Spell(
@@ -67,7 +75,12 @@ object SpellCatalog {
                     tag = DamageTag.Burn
                 )
             )
-        }
+        },
+        live = LiveSpellSpec(
+            target = SpellTarget.AllEnemies,
+            damageMultiplier = 1.1f,
+            hitKind = HitKind.Burn
+        )
     )
 
     val HEAL = Spell(
@@ -86,7 +99,12 @@ object SpellCatalog {
                     amount = ctx.attack() * 1.6f * ctx.power()
                 )
             )
-        }
+        },
+        live = LiveSpellSpec(
+            target = SpellTarget.WoundedAlly,
+            healMultiplier = 1.6f,
+            hitKind = HitKind.Heal
+        )
     )
 
     val POISON_DART = Spell(
@@ -113,7 +131,13 @@ object SpellCatalog {
                     turns = 5
                 )
             )
-        }
+        },
+        // Piec tur trucizny zwiniete w jeden cios (patrz FIREBALL) - stad wysoki mnoznik.
+        live = LiveSpellSpec(
+            target = SpellTarget.RandomEnemy,
+            damageMultiplier = 2.6f,
+            hitKind = HitKind.Poison
+        )
     )
 
     val FROST_SHARD = Spell(
@@ -140,7 +164,14 @@ object SpellCatalog {
                     turns = 1
                 )
             )
-        }
+        },
+        // Zamrozenie DZIALA w zywej walce naprawde - zamrozony wrog traci swoj krok salwy.
+        live = LiveSpellSpec(
+            target = SpellTarget.RandomEnemy,
+            damageMultiplier = 1.2f,
+            freezeTurns = 1,
+            hitKind = HitKind.Skill
+        )
     )
 
     val all: List<Spell> = listOf(FIREBALL, FIREBOMB, HEAL, POISON_DART, FROST_SHARD)

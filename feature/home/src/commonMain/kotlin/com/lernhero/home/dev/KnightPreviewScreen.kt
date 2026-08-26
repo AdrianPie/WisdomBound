@@ -36,6 +36,8 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.TransformOrigin
 import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.platform.LocalClipboardManager
+import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.unit.dp
 import com.lernhero.shared.theme.ButtonPrimary
 import com.lernhero.shared.theme.FontFirst
@@ -53,6 +55,7 @@ fun KnightPreviewScreen(
     val parts = remember { knightWorkshopParts() }
     var selectedPart by remember { mutableStateOf(parts.first()) }
     var showContext by remember { mutableStateOf(true) }
+    val clipboard = LocalClipboardManager.current
 
     val rotations = remember {
         mutableStateMapOf<String, Float>().apply {
@@ -69,6 +72,8 @@ fun KnightPreviewScreen(
             parts.forEach { part -> this[part.id] = 0.5f }
         }
     }
+    // Pivoty zatwierdzone przyciskiem "Zapisz pivot" - tylko one traja do wygenerowanego kodu
+    val savedOrigins = remember { mutableStateMapOf<String, Offset>() }
 
     val rotation = rotations[selectedPart.id] ?: 0f
     val originX = originXs[selectedPart.id] ?: 0.5f
@@ -209,6 +214,58 @@ fun KnightPreviewScreen(
             Text(
                 text = "Punkt na pliku 512x512: x=${(originX * 512f).roundToInt()} px, y=${(originY * 512f).roundToInt()} px",
                 color = Color(0xFF6D6D6D),
+                fontFamily = FontFirst(),
+                style = MaterialTheme.typography.bodySmall
+            )
+            val isSaved = savedOrigins[selectedPart.id]?.let { it.x == originX && it.y == originY } == true
+            Button(
+                onClick = { savedOrigins[selectedPart.id] = Offset(originX, originY) },
+                modifier = Modifier.fillMaxWidth(),
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = if (isSaved) Color(0xFF3C8A3C) else ButtonPrimary,
+                    contentColor = TextPrimary
+                )
+            ) {
+                Text(
+                    text = if (isSaved) "Zapisano ✓" else "Zapisz pivot",
+                    fontFamily = FontFirst()
+                )
+            }
+        }
+
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .clip(RoundedCornerShape(8.dp))
+                .background(Color(0xFF1E1E1E))
+                .padding(10.dp),
+            verticalArrangement = Arrangement.spacedBy(6.dp)
+        ) {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(
+                    text = "KnightPivots (${savedOrigins.size}/${parts.size} zapisane)",
+                    color = Color.White,
+                    fontFamily = FontFirst(),
+                    style = MaterialTheme.typography.bodySmall
+                )
+                OutlinedButton(
+                    onClick = {
+                        clipboard.setText(AnnotatedString(buildKnightPivotsCode(parts, savedOrigins)))
+                    },
+                    colors = ButtonDefaults.outlinedButtonColors(
+                        contentColor = Color.White
+                    )
+                ) {
+                    Text(text = "Kopiuj kod", fontFamily = FontFirst(), style = MaterialTheme.typography.bodySmall)
+                }
+            }
+            Text(
+                text = buildKnightPivotsCode(parts, savedOrigins),
+                color = Color(0xFF9CDB9C),
                 fontFamily = FontFirst(),
                 style = MaterialTheme.typography.bodySmall
             )
@@ -438,95 +495,74 @@ private data class KnightWorkshopPart(
     val label: String,
     val shortLabel: String,
     val joint: String,
-    val resource: DrawableResource
+    val resource: DrawableResource,
+    /** Nazwa pola w Resources.KnightPivots, do ktorego trafi zapisana wartosc. */
+    val fieldName: String
 )
 
 private fun knightWorkshopParts(): List<KnightWorkshopPart> = listOf(
     KnightWorkshopPart(
-        id = "left_up_leg",
-        label = "Prawe udo",
-        shortLabel = "R biodro",
-        joint = "pivot: biodro",
-        resource = Resources.Player.leftUpLeg
-    ),
-    KnightWorkshopPart(
-        id = "left_down_leg",
-        label = "Prawa dolna noga",
-        shortLabel = "R kolano",
-        joint = "pivot: kolano",
-        resource = Resources.Player.leftDownLeg
-    ),
-    KnightWorkshopPart(
-        id = "leftx_foot",
-        label = "Prawa stopa",
-        shortLabel = "R stopa",
-        joint = "pivot: kostka",
-        resource = Resources.Player.leftFoot
-    ),
-    KnightWorkshopPart(
-        id = "rightx_up_leg",
-        label = "Lewe udo",
+        id = "left_leg",
+        label = "Lewa noga (tyl)",
         shortLabel = "L biodro",
         joint = "pivot: biodro",
-        resource = Resources.Player.rightUpLeg
+        resource = Resources.Player.leftLeg,
+        fieldName = "leftLeg"
     ),
     KnightWorkshopPart(
-        id = "rightx_down_leg",
-        label = "Lewa dolna noga",
-        shortLabel = "L kolano",
-        joint = "pivot: kolano",
-        resource = Resources.Player.rightDownLeg
+        id = "right_leg",
+        label = "Prawa noga (przod)",
+        shortLabel = "R biodro",
+        joint = "pivot: biodro",
+        resource = Resources.Player.rightLeg,
+        fieldName = "rightLeg"
     ),
     KnightWorkshopPart(
-        id = "right_foot",
-        label = "Lewa stopa",
-        shortLabel = "L stopa",
-        joint = "pivot: kostka",
-        resource = Resources.Player.rightFoot
-    ),
-    KnightWorkshopPart(
-        id = "rightx_up_hand",
-        label = "Lewa gorna reka",
-        shortLabel = "L bark",
+        id = "right_hand",
+        label = "Prawa reka (tyl, idle)",
+        shortLabel = "R bark",
         joint = "pivot: bark",
-        resource = Resources.Player.rightUpHand
-    ),
-    KnightWorkshopPart(
-        id = "rightx_down_hand",
-        label = "Lewe przedramie",
-        shortLabel = "L lokiec",
-        joint = "pivot: lokiec",
-        resource = Resources.Player.rightDownHand
+        resource = Resources.Player.rightHand,
+        fieldName = "rightHand"
     ),
     KnightWorkshopPart(
         id = "body",
         label = "Tulow",
         shortLabel = "Tulow",
         joint = "pivot: pas",
-        resource = Resources.Player.body
+        resource = Resources.Player.body,
+        fieldName = "body"
     ),
     KnightWorkshopPart(
         id = "head",
         label = "Glowa",
         shortLabel = "Glowa",
         joint = "pivot: szyja",
-        resource = Resources.Player.head
+        resource = Resources.Player.head,
+        fieldName = "head"
     ),
     KnightWorkshopPart(
-        id = "left_up_hand",
-        label = "Prawa gorna reka",
-        shortLabel = "R bark",
+        id = "left_hand",
+        label = "Lewa reka (przod, miecz)",
+        shortLabel = "L bark",
         joint = "pivot: bark",
-        resource = Resources.Player.leftUpHand
-    ),
-    KnightWorkshopPart(
-        id = "left_down_hand",
-        label = "Prawe przedramie",
-        shortLabel = "R lokiec",
-        joint = "pivot: lokiec",
-        resource = Resources.Player.leftDownHand
+        resource = Resources.Player.leftHand,
+        fieldName = "leftHand"
     )
 )
+
+/** Generuje gotowy do wklejenia blok pol dla Resources.KnightPivots, na podstawie zapisanych pivotow. */
+private fun buildKnightPivotsCode(
+    parts: List<KnightWorkshopPart>,
+    savedOrigins: Map<String, Offset>
+): String = parts.joinToString(separator = "\n") { part ->
+    val origin = savedOrigins[part.id]
+    if (origin != null) {
+        "val ${part.fieldName} = TransformOrigin(${origin.x.toCodeValue()}, ${origin.y.toCodeValue()})"
+    } else {
+        "// ${part.fieldName}: nie zapisano jeszcze pivota"
+    }
+}
 
 private fun Float.toDisplayValue(): String {
     return ((this * 100f).roundToInt() / 100f).toString()

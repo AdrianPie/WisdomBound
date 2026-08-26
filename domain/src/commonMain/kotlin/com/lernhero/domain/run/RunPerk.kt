@@ -1,5 +1,9 @@
 package com.lernhero.domain.run
 
+// Zbudowane, jeszcze nie podpiete: nic obecnie nie wola RunPerk.offer() z poziomu RunSession czy
+// UI obozowiska. Zostawione swiadomie jako gotowy element pod przyszly ekran wyboru perka -
+// nie kasowac jako "martwy kod".
+
 import kotlin.random.Random
 
 /**

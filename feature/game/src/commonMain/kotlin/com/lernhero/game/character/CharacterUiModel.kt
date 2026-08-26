@@ -8,10 +8,10 @@ data class CharacterUiModel(
     val maxHp: Int,
     val attack: Int,
     val isPlayer: Boolean,
-    val sprites: CharacterSprites,
+    /** Klucz gatunku - patrz [MonsterVisualPresets.forSpecies]. Bez znaczenia dla hero (rysowany przez [ModularKnight]). */
+    val avatarKey: String,
     val state: CharacterState = CharacterState.IDLE,
     val currentTargetId: String? = null,
-    val flipSprite: Boolean = false,
     /**
      * When set, this fighter is rendered as the modular paper-doll hero (with equipment) instead
      * of a sprite sheet, so the gear equipped in the Equipment screen shows up in battle.

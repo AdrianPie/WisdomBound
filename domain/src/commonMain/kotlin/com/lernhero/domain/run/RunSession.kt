@@ -2,6 +2,7 @@ package com.lernhero.domain.run
 
 import com.lernhero.domain.combat.Stats
 import com.lernhero.domain.quiz.QuizCategory
+import com.lernhero.domain.quiz.QuizDifficulty
 import kotlin.math.roundToInt
 
 /**
@@ -38,33 +39,48 @@ class RunSession {
     var category: QuizCategory? = null
         private set
 
+    /**
+     * Staly poziom pytan wybrany przed walka (endless). Null = trudnosc rosnie sama z numerem fali
+     * (drabinka [com.lernhero.domain.quiz.QuizBank.ladderFor]) - tak dziala kampania, gdzie o
+     * poziomie pytan decyduje tier planszy, a nie gracz.
+     */
+    var quizDifficulty: QuizDifficulty? = null
+        private set
+
     /** Poziom trudnosci runu - skaluje wrogow, pytania i nagrody. */
     var difficulty: RunDifficulty = RunDifficulty.Normal
         private set
 
     /**
-     * Zamowienie na najblizsza walke, skladane tuz przed nawigacja do [BattleRequest] - dziejsza
-     * to konkretny wezel lochu (patrz [pendingDungeonSeed]), nie cala lokacja z gory.
-     * Walka je czyta; null oznacza stara sciezke "walka bez mapy".
+     * Zamowienie na najblizsza walke, skladane tuz przed nawigacja do [BattleRequest] - dla
+     * kampanii to konkretna plansza mapy (patrz [com.lernhero.domain.story.StoryStage.seed]), nie
+     * cala kraina z gory. Walka je czyta; null oznacza stara sciezke "walka bez mapy".
      */
     var pendingBattle: BattleRequest? = null
 
     /**
-     * Seed lochu wybranego na mapie krainy - mapa lochu ([com.lernhero.domain.dungeon.DungeonMapGenerator])
-     * czyta go, zeby wygenerowac ten sam uklad wezlow za kazdym razem (np. po obrocie ekranu).
-     * Null = wejscie bez mapy krainy (np. test) - ekran lochu wtedy losuje swoj wlasny seed.
+     * Globalny numer planszy kampanii aktualnie rozgrywanej walki - null poza kampania (np. endless).
+     * Ustawiany razem z [startNewRun]; po zwyciestwie zapisuje sie jako zdobyty na [difficulty]
+     * (patrz [com.lernhero.domain.story.StoryProgress]).
      */
-    var pendingDungeonSeed: Long? = null
+    var activeStoryStage: Int? = null
+        private set
 
     /** Wynik ostatniej walki: true = zwyciestwo, false = porazka, null = jeszcze zadnej. */
     var lastBattleWon: Boolean? = null
 
     /**
-     * HP druzyny na koniec ostatniej walki (id postaci -> HP). Puste = jeszcze nikt sie nie bil
-     * w tym runie, wiec kolejna walka startuje w pelni zdrowia. Dzieki temu rany nie znikaja
-     * miedzy polami mapy - leczy tylko ognisko.
+     * HP druzyny na koniec ostatniej walki (id postaci -> HP). Kazda plansza kampanii startuje
+     * z pelnym HP (patrz [healParty], wolane przed kazda walka wywolana z mapy) - to pole ma wiec
+     * znaczenie realnie tylko wewnatrz jednej wielofalowej walki (endless), nie miedzy planszami.
      */
     var partyHp: Map<String, Int> = emptyMap()
+        private set
+
+    /**
+     * MaxHP druzyny na koniec ostatniej walki (id postaci -> maxHP), zapisywane razem z [partyHp].
+     */
+    var partyMaxHp: Map<String, Int> = emptyMap()
         private set
 
     /**
@@ -78,15 +94,19 @@ class RunSession {
     /** Nowe zejscie do lochu - kasuje wszystkie perki z poprzedniego. */
     fun startNewRun(
         category: QuizCategory? = null,
-        difficulty: RunDifficulty = RunDifficulty.Normal
+        difficulty: RunDifficulty = RunDifficulty.Normal,
+        storyStage: Int? = null,
+        quizDifficulty: QuizDifficulty? = null
     ) {
         modifiers = RunModifiers()
         this.category = category
         this.difficulty = difficulty
+        this.activeStoryStage = storyStage
+        this.quizDifficulty = quizDifficulty
         pendingBattle = null
-        pendingDungeonSeed = null
         lastBattleWon = null
         partyHp = emptyMap()
+        partyMaxHp = emptyMap()
         lootGold = 0
     }
 
@@ -98,9 +118,10 @@ class RunSession {
         modifiers = modifiers.copy(spellWeightOverride = weights)
     }
 
-    /** Zapamietuje HP druzyny po walce - kolejna walka odczyta je zamiast leczyc do pelna. */
-    fun savePartyHp(hp: Map<String, Int>) {
+    /** Zapamietuje HP/maxHP druzyny po walce - kolejna walka odczyta je zamiast leczyc do pelna. */
+    fun savePartyHp(hp: Map<String, Int>, maxHp: Map<String, Int>) {
         partyHp = hp
+        partyMaxHp = maxHp
     }
 
     /** Ognisko: pelny odpoczynek. Kolejna walka znowu zacznie sie w pelni zdrowia. */

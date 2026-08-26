@@ -62,6 +62,7 @@ kotlin {
             implementation(project(path = ":data" ))
             implementation(project(path = ":domain" ))
             implementation(project(path = ":feature:game" ))
+            implementation(project(path = ":feature:reader" ))
 
         }
         commonTest.dependencies {

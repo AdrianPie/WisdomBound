@@ -33,6 +33,11 @@ enum class BottomBarDestination(
         title = "Ksiazki",
         route = Screen.Books
     ),
+    Progress(
+        icon = "📊",
+        title = "Postep",
+        route = Screen.Progress
+    ),
     Shop(
         icon = "🛒",
         title = "Sklep",

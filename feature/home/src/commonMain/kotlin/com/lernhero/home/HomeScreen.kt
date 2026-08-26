@@ -1,40 +1,35 @@
 package com.lernhero.home
 
+import androidx.compose.animation.core.FastOutSlowInEasing
+import androidx.compose.animation.core.RepeatMode
+import androidx.compose.animation.core.animateFloat
+import androidx.compose.animation.core.infiniteRepeatable
+import androidx.compose.animation.core.rememberInfiniteTransition
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.ExperimentalLayoutApi
-import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Shadow
+import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.lernhero.home.player.PlayerViewModel
@@ -42,243 +37,217 @@ import com.lernhero.shared.resources.Resources
 import com.lernhero.shared.theme.AppPalette
 import com.lernhero.shared.theme.FontFirst
 import com.lernhero.shared.theme.FontPixel
+import androidx.compose.material3.Text
 import org.jetbrains.compose.resources.painterResource
-import org.koin.compose.viewmodel.koinViewModel
 
-private val Bg = AppPalette.Background
-private val Panel = AppPalette.Panel
-private val PanelRaised = AppPalette.PanelRaised
-private val Ink = AppPalette.Ink
-private val Gold = AppPalette.Gold
-private val GoldDim = AppPalette.GoldDim
-private val GoldFrame = AppPalette.GoldFrame
-private val TextBody = AppPalette.TextBody
 private val Muted = AppPalette.TextMuted
-private val Action = AppPalette.Action
 
-private data class QuickAction(
-    val icon: String,
-    val title: String,
+/**
+ * Jak szeroka (wzgledem szerokosci ekranu) jest jedna wyspa - praktycznie caly ekran.
+ *
+ * Kazdy PNG ma wokol wyspy przezroczysty margines (tresc zajmuje ~78% szerokosci i ~72% wysokosci
+ * kadru), wiec kontenery moga na siebie nachodzic o ~20% i grafiki i tak sie nie zetkna. To wlasnie
+ * ten margines pozwala trzymac wyspy tak duze przy czterech sztukach bez scrolla.
+ */
+private const val ISLAND_WIDTH_FRACTION = 0.48f
+
+/** Zmierzone na PNG-ach: gdzie w kadrze zaczyna sie i jak wysoka jest sama wyspa (reszta to alpha). */
+private const val ISLAND_ART_TOP_FRACTION = 0.17f
+private const val ISLAND_ART_HEIGHT_FRACTION = 0.72f
+
+/**
+ * Jedna wyspa-budynek na mapie Miasta. Pozycja pionowa liczy sie z kolejnosci na liscie (patrz
+ * CityMap - kazda wyspa dostaje wlasny "pas" wysokosci), tu trzymamy tylko poziomy ulamek
+ * (lekki zygzak lewo/prawo) i etykiete.
+ */
+private data class CityBuildingSpot(
+    val icon: Painter,
+    val label: String,
+    val xFraction: Float,
     val onClick: () -> Unit
 )
 
+/**
+ * Ekran Miasta - tlo (niebo/wyspy) rysowane wyzej w HomeNavGraph, wspolne dla calej apki.
+ * Cztery wyspy-budynki (tartak, kamieniolom, kuznia, summon center) rozlozone tak, zeby caly
+ * uklad miescil sie na ekranie bez scrolla - kazda to osobna, klikalna "instancja".
+ */
 @Composable
 fun HomeScreen(
-    onOpenFight: () -> Unit,
+    viewModel: PlayerViewModel,
+    onOpenSawmill: () -> Unit = {},
+    onOpenQuarry: () -> Unit = {},
+    onOpenForge: () -> Unit = {},
+    onOpenSummonCenter: () -> Unit = {},
     onOpenKnightPreview: () -> Unit,
     onOpenModularKnightPreview: () -> Unit,
-    onOpenEquipment: () -> Unit,
-    onOpenShop: () -> Unit,
-    onOpenFitness: () -> Unit = {},
-    onOpenBooks: () -> Unit = {}
+    onOpenMonsterAnchorLab: () -> Unit
 ) {
-    val viewModel = koinViewModel<PlayerViewModel>()
-    val state by viewModel.uiState.collectAsState()
+    Box(modifier = Modifier.fillMaxSize()) {
+        CityMap(
+            onOpenSawmill = onOpenSawmill,
+            onOpenQuarry = onOpenQuarry,
+            onOpenForge = onOpenForge,
+            onOpenSummonCenter = onOpenSummonCenter
+        )
 
-    Surface(modifier = Modifier.fillMaxSize(), color = Bg) {
-        Column(
+        DevLinksRow(
+            onOpenKnightPreview = onOpenKnightPreview,
+            onOpenModularKnightPreview = onOpenModularKnightPreview,
+            onOpenMonsterAnchorLab = onOpenMonsterAnchorLab,
+            onGrantResources = viewModel::grantTestResources,
             modifier = Modifier
-                .fillMaxSize()
-                .background(AppPalette.ScreenGradient)
-                .verticalScroll(rememberScrollState())
-                .padding(horizontal = 16.dp, vertical = 16.dp),
-            verticalArrangement = Arrangement.spacedBy(14.dp)
-        ) {
-            HeroCard(name = state.name, money = state.money)
-
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.spacedBy(10.dp)
-            ) {
-                SummaryTile(icon = "💰", title = "Zloto", value = "${state.money}", modifier = Modifier.weight(1f))
-                SummaryTile(
-                    icon = "🛡️",
-                    title = "Ekwipunek",
-                    value = "${state.equipment.equipped.size}/9",
-                    modifier = Modifier.weight(1f)
-                )
-                SummaryTile(icon = "✨", title = "Zaklecia", value = "${state.ownedSpells.size}", modifier = Modifier.weight(1f))
-            }
-
-            SectionLabel("Ruszaj w droge")
-            QuickActionsGrid(
-                actions = listOf(
-                    QuickAction("⚔️", "Walcz", onOpenFight),
-                    QuickAction("🛡️", "Postac", onOpenEquipment),
-                    QuickAction("🛒", "Sklep", onOpenShop),
-                    QuickAction("🏋️", "Trening", onOpenFitness),
-                    QuickAction("📚", "Ksiazki", onOpenBooks)
-                )
-            )
-
-            SectionLabel("Dzisiaj")
-            TodayCard()
-
-            DevLinksRow(onOpenKnightPreview, onOpenModularKnightPreview)
-        }
+                .align(Alignment.BottomCenter)
+                .padding(bottom = 2.dp)
+        )
     }
 }
 
 @Composable
-private fun HeroCard(name: String, money: Int) {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clip(RoundedCornerShape(16.dp))
-            .background(AppPalette.CardGradient)
-            .border(2.dp, GoldDim, RoundedCornerShape(16.dp))
-            .padding(16.dp),
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(14.dp)
-    ) {
-        Box(
-            modifier = Modifier
-                .size(84.dp)
-                .clip(RoundedCornerShape(14.dp))
-                .background(Ink)
-                .border(2.dp, Gold, RoundedCornerShape(14.dp)),
-            contentAlignment = Alignment.Center
-        ) {
-            Image(
-                painter = painterResource(Resources.Image.knightAvatar),
-                contentDescription = null,
-                modifier = Modifier.fillMaxSize().padding(4.dp).clip(RoundedCornerShape(10.dp)),
-                contentScale = ContentScale.Crop
-            )
-        }
+private fun CityMap(
+    onOpenSawmill: () -> Unit,
+    onOpenQuarry: () -> Unit,
+    onOpenForge: () -> Unit,
+    onOpenSummonCenter: () -> Unit
+) {
+    BoxWithConstraints(modifier = Modifier.fillMaxSize()) {
+        // xFraction = pozycja w WOLNEJ szerokosci (0 = do lewej, 1 = do prawej) - stad zygzak.
+        val spots = listOf(
+            CityBuildingSpot(painterResource(Resources.CityIsland.sawmill), "Tartak", 0.02f, onOpenSawmill),
+            CityBuildingSpot(painterResource(Resources.CityIsland.quarry), "Kamieniolom", 0.98f, onOpenQuarry),
+            CityBuildingSpot(painterResource(Resources.CityIsland.forge), "Kuznia", 0.02f, onOpenForge),
+            CityBuildingSpot(painterResource(Resources.CityIsland.summon), "Summon Center", 0.98f, onOpenSummonCenter)
+        )
 
-        Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(6.dp)) {
-            Text(
-                text = name.ifBlank { "Sir Lernhero" },
-                color = Gold,
-                fontFamily = FontPixel(),
-                style = MaterialTheme.typography.titleLarge,
-                fontWeight = FontWeight.Bold,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis
-            )
-            Text(
-                text = "Rycerz gotowy do runu",
-                color = TextBody.copy(alpha = 0.75f),
-                fontFamily = FontFirst(),
-                fontSize = 12.sp
-            )
-            Box(
-                modifier = Modifier
-                    .clip(RoundedCornerShape(20.dp))
-                    .background(Ink)
-                    .border(1.dp, GoldFrame, RoundedCornerShape(20.dp))
-                    .padding(horizontal = 10.dp, vertical = 4.dp)
+        // Wyspy sa CELOWO wieksze niz 1/4 wysokosci ekranu - inaczej (przy czterech osobnych,
+        // rozlacznych pasach) kazda musialaby zmiescic sie w ~1/4 wysokosci i robila sie malutka,
+        // z mnostwem pustego nieba dookola. Zamiast tego rozmiar bierze sie z SZEROKOSCI ekranu,
+        // a wyspy ida zygzakiem lewo-prawo i lekko na siebie nachodza w pionie. Nachodzenie nie
+        // przeszkadza, bo kazdy PNG ma wokol siebie przezroczysty margines, a zygzak sprawia, ze
+        // sasiednie wyspy i tak nie stykaja sie graficznie.
+        val islandSize = maxWidth * ISLAND_WIDTH_FRACTION
+        val freeWidth = (maxWidth - islandSize).coerceAtLeast(0.dp)
+        val lastIndex = (spots.size - 1).coerceAtLeast(1)
+
+        // Widoczna grafika zajmuje tylko srodek kadru - liczymy pozycje wzgledem NIEJ, a nie
+        // wzgledem calego (w duzej czesci przezroczystego) PNG, zeby wyspy byly rozlozone rowno
+        // optycznie i zeby skrajne nie wychodzily poza ekran.
+        val artHeight = islandSize * ISLAND_ART_HEIGHT_FRACTION
+        val artTopInset = islandSize * ISLAND_ART_TOP_FRACTION
+        val firstCenter = artHeight / 2
+        val lastCenter = maxHeight - artHeight / 2
+        val centerStep = (lastCenter - firstCenter) / lastIndex
+
+        spots.forEachIndexed { index, spot ->
+            val artCenterY = firstCenter + centerStep * index
+            CityIslandButton(
+                icon = spot.icon,
+                label = spot.label,
+                size = islandSize,
+                floatSeed = index,
+                modifier = Modifier.offset(
+                    x = freeWidth * spot.xFraction,
+                    y = artCenterY - artHeight / 2 - artTopInset
+                )
             ) {
-                Text(text = "💰 $money", color = Gold, fontFamily = FontFirst(), fontWeight = FontWeight.Bold, fontSize = 12.sp)
+                spot.onClick()
             }
         }
     }
 }
 
+/**
+ * Wyspa jako klikalny przycisk - lewitujaca (bardzo delikatny, powolny ruch gora-dol, spring/tween
+ * na sinusoidzie), z podpisem NAD grafika, bez zadnej "pigulki"/obwodki - sama czcionka pixelowa
+ * (ta sama co tytuly na gorze ekranu, np. "Dom") z lekkim cieniem, zeby dalo sie ja przeczytac na
+ * kazdym tle nieba.
+ */
 @Composable
-private fun SummaryTile(icon: String, title: String, value: String, modifier: Modifier = Modifier) {
-    Column(
-        modifier = modifier
-            .clip(RoundedCornerShape(12.dp))
-            .background(Panel)
-            .border(1.5.dp, GoldDim, RoundedCornerShape(12.dp))
-            .padding(12.dp),
-        verticalArrangement = Arrangement.spacedBy(4.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        Text(text = icon, fontSize = 18.sp)
-        Text(text = value, color = Gold, fontFamily = FontPixel(), fontWeight = FontWeight.Bold, fontSize = 15.sp)
-        Text(text = title, color = Muted, fontFamily = FontFirst(), fontSize = 10.sp)
-    }
-}
-
-@Composable
-private fun SectionLabel(text: String) {
-    Text(
-        text = text,
-        color = Gold,
-        fontFamily = FontPixel(),
-        fontWeight = FontWeight.Bold,
-        style = MaterialTheme.typography.titleSmall
+private fun CityIslandButton(
+    icon: Painter,
+    label: String,
+    size: Dp,
+    floatSeed: Int,
+    modifier: Modifier = Modifier,
+    onClick: () -> Unit
+) {
+    // Kazda wyspa ma inny czas/amplitude lewitacji, zeby nie unosily sie idealnie w takt -
+    // wyglada bardziej naturalnie/zywo, jak niezalezne obiekty, a nie jeden mechanizm.
+    val infiniteTransition = rememberInfiniteTransition(label = "islandFloat$floatSeed")
+    val floatOffset by infiniteTransition.animateFloat(
+        initialValue = -1f,
+        targetValue = 1f,
+        animationSpec = infiniteRepeatable(
+            animation = tween(
+                durationMillis = 2600 + floatSeed * 340,
+                easing = FastOutSlowInEasing
+            ),
+            repeatMode = RepeatMode.Reverse
+        ),
+        label = "islandFloatValue$floatSeed"
     )
-}
+    val bobAmplitude = (6 + floatSeed % 2 * 2).dp
 
-@OptIn(ExperimentalLayoutApi::class)
-@Composable
-private fun QuickActionsGrid(actions: List<QuickAction>) {
-    FlowRow(
-        modifier = Modifier.fillMaxWidth(),
-        horizontalArrangement = Arrangement.spacedBy(10.dp),
-        verticalArrangement = Arrangement.spacedBy(10.dp)
+    // Podpis lezy NA kadrze wyspy (w przezroczystym pasie tuz nad grafika), a nie nad nim - dzieki
+    // temu nie zabiera wysokosci, ktora jest tu najcenniejsza, i jedzie razem z lewitujaca wyspa.
+    Box(
+        modifier = modifier
+            .size(size)
+            .clickable(onClick = onClick)
+            .offset(y = bobAmplitude * floatOffset)
     ) {
-        actions.forEach { action ->
-            Column(
-                modifier = Modifier
-                    .width(96.dp)
-                    .aspectRatio(0.95f)
-                    .clip(RoundedCornerShape(14.dp))
-                    .background(Brush.verticalGradient(listOf(PanelRaised, Panel)))
-                    .border(1.5.dp, GoldDim, RoundedCornerShape(14.dp))
-                    .clickable(onClick = action.onClick)
-                    .padding(10.dp),
-                horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.Center
-            ) {
-                Text(text = action.icon, fontSize = 26.sp)
-                Spacer(modifier = Modifier.height(6.dp))
-                Text(
-                    text = action.title,
-                    color = TextBody,
-                    fontFamily = FontFirst(),
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 11.sp
-                )
-            }
-        }
-    }
-}
-
-@Composable
-private fun TodayCard() {
-    Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clip(RoundedCornerShape(14.dp))
-            .background(AppPalette.CardGradient)
-            .border(2.dp, GoldDim, RoundedCornerShape(14.dp))
-            .padding(14.dp),
-        verticalArrangement = Arrangement.spacedBy(10.dp)
-    ) {
-        TaskRow(icon = "⚔️", text = "Wygraj 1 walke", reward = "+zloto")
-        TaskRow(icon = "🏋️", text = "15 minut aktywnosci", reward = "+zloto")
-        TaskRow(icon = "📖", text = "15 minut czytania", reward = "+zloto")
-    }
-}
-
-@Composable
-private fun TaskRow(icon: String, text: String, reward: String) {
-    Row(
-        modifier = Modifier.fillMaxWidth(),
-        horizontalArrangement = Arrangement.SpaceBetween,
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            Text(text = icon, fontSize = 15.sp)
-            Spacer(modifier = Modifier.width(8.dp))
-            Text(text = text, color = TextBody, fontFamily = FontFirst(), fontSize = 13.sp)
-        }
-        Text(text = reward, color = Action, fontFamily = FontFirst(), fontWeight = FontWeight.Bold, fontSize = 12.sp)
+        // .size() (nie .width()) na OBU wymiarach - kwadratowe PNG (256x256), a samo .width()
+        // zdawalo sie honorowac jakis wewnetrzny preferowany rozmiar malarza zamiast wymuszonego
+        // rozmiaru (rozmiar wysp sie nie zmienial mimo zmiany wartosci, mimo ze pozycja - zwykly
+        // offset() - reagowala poprawnie).
+        Image(
+            painter = icon,
+            contentDescription = label,
+            contentScale = ContentScale.Fit,
+            modifier = Modifier.size(size)
+        )
+        Text(
+            text = label,
+            color = AppPalette.Gold,
+            fontFamily = FontPixel(),
+            fontWeight = FontWeight.Bold,
+            fontSize = 16.sp,
+            textAlign = TextAlign.Center,
+            style = TextStyle(
+                shadow = Shadow(color = Color.Black.copy(alpha = 0.85f), blurRadius = 12f)
+            ),
+            modifier = Modifier
+                .align(Alignment.TopCenter)
+                .padding(top = size * (ISLAND_ART_TOP_FRACTION - 0.09f))
+                .fillMaxWidth()
+        )
     }
 }
 
 /** Ekrany deweloperskie - male, dyskretne linki, zeby nie mylily sie z prawdziwymi funkcjami gry. */
 @Composable
-private fun DevLinksRow(onOpenKnightPreview: () -> Unit, onOpenModularKnightPreview: () -> Unit) {
+private fun DevLinksRow(
+    onOpenKnightPreview: () -> Unit,
+    onOpenModularKnightPreview: () -> Unit,
+    onOpenMonsterAnchorLab: () -> Unit,
+    onGrantResources: () -> Unit,
+    modifier: Modifier = Modifier
+) {
     Row(
-        modifier = Modifier.fillMaxWidth().padding(top = 4.dp),
+        modifier = modifier.fillMaxWidth().padding(top = 4.dp),
         horizontalArrangement = Arrangement.Center
     ) {
+        // Jedno tapniecie = pelen worek wszystkiego, czym da sie cokolwiek przetestowac:
+        // zloto, drewno, kamien, ruda, esencja, losy i XP. Wyroznione kolorem, bo w odroznieniu
+        // od pozostalych linkow dev ta rzecz ZMIENIA ZAPIS gracza.
+        Text(
+            text = "dev: +zasoby",
+            color = Color(0xFF5FD08A),
+            fontFamily = FontFirst(),
+            fontWeight = FontWeight.Bold,
+            fontSize = 10.sp,
+            modifier = Modifier.clickable(onClick = onGrantResources).padding(8.dp)
+        )
         Text(
             text = "dev: pivots",
             color = Muted.copy(alpha = 0.5f),
@@ -292,6 +261,13 @@ private fun DevLinksRow(onOpenKnightPreview: () -> Unit, onOpenModularKnightPrev
             fontFamily = FontFirst(),
             fontSize = 9.sp,
             modifier = Modifier.clickable(onClick = onOpenModularKnightPreview).padding(8.dp)
+        )
+        Text(
+            text = "dev: anchors",
+            color = Muted.copy(alpha = 0.5f),
+            fontFamily = FontFirst(),
+            fontSize = 9.sp,
+            modifier = Modifier.clickable(onClick = onOpenMonsterAnchorLab).padding(8.dp)
         )
     }
 }

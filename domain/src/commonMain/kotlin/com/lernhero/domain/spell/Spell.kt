@@ -17,5 +17,11 @@ data class Spell(
     val rarity: Rarity,
     val iconKey: String,
     val cost: Int,
-    val cast: SpellCast
+    /** Wersja dla silnika symulacyjnego ([com.lernhero.domain.combat.engine.BattleEngine]). */
+    val cast: SpellCast,
+    /**
+     * Wersja dla ZYWEJ walki na ekranie - patrz [LiveSpellSpec] po powod, dla ktorego sa dwie.
+     * Kazde zaklecie musi miec obie, inaczej dzialaloby tylko w polowie gry.
+     */
+    val live: LiveSpellSpec
 )

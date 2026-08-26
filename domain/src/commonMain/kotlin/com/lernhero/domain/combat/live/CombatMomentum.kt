@@ -6,11 +6,12 @@ package com.lernhero.domain.combat.live
  * tej turze - im mniejszy pasek, tym mniejszy dmg.
  */
 object AnswerTimer {
-    const val WINDOW_MS = 6000L
-    const val SEGMENTS = 5
+    /** 18s - podwojone z 9s, bo nawet to bylo za szybko na spokojne przeczytanie pytania i odpowiedz. */
+    const val WINDOW_MS = 18000L
+    const val SEGMENTS = 8
 
-    /** Mnoznik obrazen dla kazdego segmentu - indeks 0 = ostatni zostaly segment (najwolniej), 4 = pelny pasek. */
-    private val MULTIPLIERS = listOf(0.5f, 0.75f, 1.0f, 1.25f, 1.5f)
+    /** Mnoznik obrazen dla kazdego segmentu - indeks 0 = ostatni zostaly segment (najwolniej), ostatni = pelny pasek. */
+    private val MULTIPLIERS = listOf(0.5f, 0.64f, 0.79f, 0.93f, 1.07f, 1.21f, 1.36f, 1.5f)
 
     fun segmentIndexFor(remainingFraction: Float): Int =
         (remainingFraction.coerceIn(0f, 1f) * SEGMENTS).toInt().coerceIn(0, SEGMENTS - 1)

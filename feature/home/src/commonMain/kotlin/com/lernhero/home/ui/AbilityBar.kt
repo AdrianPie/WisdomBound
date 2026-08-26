@@ -22,6 +22,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.lernhero.domain.spell.AbilityLoadout
@@ -77,14 +78,14 @@ fun AbilityBar(
             verticalAlignment = Alignment.CenterVertically
         ) {
             Text(
-                text = "Pasek zdolnosci",
+                text = "Zaklecia w walce",
                 color = Gold,
                 fontFamily = FontPixel(),
                 fontWeight = FontWeight.Bold,
                 fontSize = 15.sp
             )
             Text(
-                text = "Wolne: ${ability.freePercent}% / ${ability.capacity}%",
+                text = "Wolne ${ability.freePercent}% z ${ability.capacity}%",
                 color = if (ability.freePercent == 0) Muted else Gold,
                 fontFamily = FontFirst(),
                 fontSize = 11.sp
@@ -109,7 +110,7 @@ fun AbilityBar(
 
         if (ownedSpells.isEmpty()) {
             Text(
-                text = "Nie masz zaklec. Kup je w sklepie, a potem przypisz je tutaj.",
+                text = "Nie masz zaklec. Odblokuj je nizej za esencje z lochow.",
                 color = Muted,
                 fontFamily = FontFirst(),
                 fontSize = 11.sp
@@ -168,53 +169,74 @@ private fun SpellRow(
     canAdd: Boolean,
     onSet: (String, Int) -> Unit
 ) {
+    val active = percent > 0
+
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .clip(RoundedCornerShape(8.dp))
-            .background(Ink)
-            .border(1.dp, if (percent > 0) color else GoldDim.copy(alpha = 0.5f), RoundedCornerShape(8.dp))
-            .padding(8.dp),
+            .clip(RoundedCornerShape(10.dp))
+            .background(if (active) Ink else Ink.copy(alpha = 0.55f))
+            .border(
+                width = if (active) 1.5.dp else 1.dp,
+                color = if (active) color else GoldDim.copy(alpha = 0.35f),
+                shape = RoundedCornerShape(10.dp)
+            )
+            .padding(horizontal = 8.dp, vertical = 7.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(8.dp)
     ) {
+        // Ikona nosi kolor segmentu z paska powyzej - to jedyne, co laczy wykres z lista.
         Box(
             modifier = Modifier
-                .size(34.dp)
-                .clip(RoundedCornerShape(6.dp))
-                .background(Panel)
-                .border(1.dp, color, RoundedCornerShape(6.dp)),
+                .size(32.dp)
+                .clip(RoundedCornerShape(8.dp))
+                .background(if (active) color.copy(alpha = 0.22f) else Panel)
+                .border(1.5.dp, if (active) color else GoldDim.copy(alpha = 0.4f), RoundedCornerShape(8.dp)),
             contentAlignment = Alignment.Center
         ) {
-            Text(text = spell.icon(), fontSize = 17.sp)
+            Text(text = spell.icon(), fontSize = 16.sp)
         }
-        Column(modifier = Modifier.weight(1f)) {
+
+        Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(1.dp)) {
             Text(
                 text = spell.name,
-                color = Gold,
+                color = if (active) Gold else Muted,
                 fontFamily = FontFirst(),
                 fontWeight = FontWeight.Bold,
                 fontSize = 12.sp,
                 maxLines = 1
             )
             Text(
-                text = "$percent% szansy na ture",
+                text = spell.description,
                 color = Muted,
                 fontFamily = FontFirst(),
-                fontSize = 10.sp
+                fontSize = 9.sp,
+                maxLines = 2,
+                overflow = TextOverflow.Ellipsis
             )
         }
-        StepButton("−", enabled = percent > 0) { onSet(spell.id, percent - STEP) }
-        Text(
-            text = "$percent%",
-            color = color,
-            fontFamily = FontPixel(),
-            fontWeight = FontWeight.Bold,
-            fontSize = 13.sp,
-            modifier = Modifier.width(38.dp),
-            textAlign = androidx.compose.ui.text.style.TextAlign.Center
-        )
-        StepButton("+", enabled = canAdd) { onSet(spell.id, percent + STEP) }
+
+        // Sterowanie w jednej pigulce: −  25%  + . Trzy osobne kontrolki rozrzucone po wierszu
+        // (tak bylo wczesniej) na telefonie czytaly sie jak przypadkowy zbior przyciskow.
+        Row(
+            modifier = Modifier
+                .clip(RoundedCornerShape(50))
+                .background(Panel)
+                .border(1.dp, GoldDim.copy(alpha = 0.5f), RoundedCornerShape(50)),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            StepButton("−", enabled = percent > 0) { onSet(spell.id, percent - STEP) }
+            Text(
+                text = "$percent%",
+                color = if (active) color else Muted,
+                fontFamily = FontPixel(),
+                fontWeight = FontWeight.Bold,
+                fontSize = 12.sp,
+                modifier = Modifier.width(36.dp),
+                textAlign = androidx.compose.ui.text.style.TextAlign.Center
+            )
+            StepButton("+", enabled = canAdd) { onSet(spell.id, percent + STEP) }
+        }
     }
 }
 
@@ -222,16 +244,15 @@ private fun SpellRow(
 private fun StepButton(symbol: String, enabled: Boolean, onClick: () -> Unit) {
     Box(
         modifier = Modifier
-            .size(30.dp)
-            .clip(RoundedCornerShape(6.dp))
-            .background(if (enabled) Color(0xFFB4451F) else Color(0x33B4451F))
+            .size(28.dp)
+            .clip(RoundedCornerShape(50))
             .then(if (enabled) Modifier.clickable(onClick = onClick) else Modifier),
         contentAlignment = Alignment.Center
     ) {
         Text(
             text = symbol,
-            color = Color.White.copy(alpha = if (enabled) 1f else 0.4f),
-            fontSize = 18.sp,
+            color = if (enabled) Gold else Gold.copy(alpha = 0.25f),
+            fontSize = 17.sp,
             fontWeight = FontWeight.Bold
         )
     }

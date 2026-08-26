@@ -1,5 +1,6 @@
 package com.lernhero.home.ui
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
@@ -22,8 +23,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.lernhero.domain.monster.MonsterCard
-import com.lernhero.game.character.MonsterSprites
-import com.lernhero.game.character.SpriteCharacter
+import com.lernhero.domain.monster.MonsterLevels
+import com.lernhero.domain.monster.MonsterStars
+import com.lernhero.game.character.MonsterVisualPresets
+import org.jetbrains.compose.resources.painterResource
 
 import com.lernhero.shared.theme.FontFirst
 import com.lernhero.shared.theme.FontPixel
@@ -44,9 +47,19 @@ fun MonsterCardView(
     modifier: Modifier = Modifier,
     portraitHeight: Int = 92,
     showSkills: Boolean = false,
+    /**
+     * Poziom kompana (patrz [MonsterLevels]) - domyslnie 1, czyli "bez levelu, jak w katalogu".
+     * Karta pokazuje TU obliczone HP/ATK (a nie bazowe z katalogu), zeby ulepszenie kupione w
+     * Summon Center bylo widoczne wszedzie, gdzie ta sama karta sie pojawia - w druzynie, w
+     * pickerze kompanow, w kolekcji.
+     */
+    level: Int = MonsterLevels.MIN_LEVEL,
+    /** Gwiazdki kompana - podnosza statystyki i sufit poziomu (patrz [MonsterStars]). */
+    stars: Int = MonsterStars.MIN_STARS,
     footer: (@Composable ColumnScope.() -> Unit)? = null
 ) {
     val frame = RarityPalette.frame(card.rarity)
+    val leveled = level > MonsterLevels.MIN_LEVEL
 
     Column(
         modifier = modifier
@@ -68,9 +81,27 @@ fun MonsterCardView(
             contentAlignment = Alignment.BottomCenter
         ) {
             Box(modifier = Modifier.fillMaxWidth(0.68f).padding(bottom = 4.dp)) {
-                SpriteCharacter(
-                    sprite = MonsterSprites.idleFor(card.spriteKey),
-                    isLooping = true
+                Image(
+                    painter = painterResource(MonsterVisualPresets.forSpecies(card.spriteKey).drawable),
+                    contentDescription = null,
+                    modifier = Modifier.fillMaxWidth()
+                )
+            }
+            // Plakietka poziomu - w rogu portretu, zeby bylo widac na pierwszy rzut oka, a nie
+            // dopiero po przeczytaniu liczb HP/ATK ponizej.
+            if (leveled) {
+                Text(
+                    text = "LV $level",
+                    color = CardTextGold,
+                    fontFamily = FontPixel(),
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 9.sp,
+                    modifier = Modifier
+                        .align(Alignment.TopEnd)
+                        .padding(3.dp)
+                        .clip(RoundedCornerShape(4.dp))
+                        .background(CardInk.copy(alpha = 0.85f))
+                        .padding(horizontal = 4.dp, vertical = 1.dp)
                 )
             }
         }
@@ -84,19 +115,22 @@ fun MonsterCardView(
             maxLines = 1
         )
 
-        Text(
-            text = RarityPalette.label(card.rarity),
-            color = frame,
-            fontFamily = FontFirst(),
-            fontSize = 10.sp
-        )
+        Row(horizontalArrangement = Arrangement.spacedBy(1.dp)) {
+            (1..MonsterStars.MAX_STARS).forEach { index ->
+                Text(
+                    text = "★",
+                    color = if (index <= stars) CardTextGold else Color(0xFF3A2E22),
+                    fontSize = 9.sp
+                )
+            }
+        }
 
         Row(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceEvenly
         ) {
-            StatPill(label = "HP", value = card.hp, color = StatHp)
-            StatPill(label = "ATK", value = card.attack, color = StatAtk)
+            StatPill(label = "HP", value = MonsterStars.hpAt(card, stars, level), color = StatHp)
+            StatPill(label = "ATK", value = MonsterStars.attackAt(card, stars, level), color = StatAtk)
         }
 
         if (showSkills && card.skills.isNotEmpty()) {

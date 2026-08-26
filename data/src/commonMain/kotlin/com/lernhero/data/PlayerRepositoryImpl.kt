@@ -1,10 +1,23 @@
 package com.lernhero.data
 
 
+import com.lernhero.domain.craft.CraftCost
+import com.lernhero.domain.monster.CompanionSpells
+import com.lernhero.domain.monster.MonsterCatalog
+import com.lernhero.domain.monster.MonsterLevels
+import com.lernhero.domain.monster.MonsterSpellLevels
+import com.lernhero.domain.monster.MonsterStars
 import com.lernhero.domain.repository.PlayerRepository
 import com.lernhero.domain.player.HeroClass
+import com.lernhero.domain.player.HeroStat
+import com.lernhero.domain.player.LevelCurve
 import com.lernhero.domain.player.Player
 import com.lernhero.domain.player.PlayerEquipment
+import com.lernhero.domain.progress.RunStats
+import com.lernhero.domain.story.IdleRewards
+import com.lernhero.domain.town.ProductionBuilding
+import com.lernhero.domain.town.ProductionState
+import com.lernhero.domain.town.TownResources
 import dev.gitlive.firebase.Firebase
 import dev.gitlive.firebase.auth.FirebaseUser
 import dev.gitlive.firebase.auth.auth
@@ -98,14 +111,26 @@ class PlayerRepositoryImpl: PlayerRepository {
         }
     }
 
-    override suspend fun purchaseItem(itemId: String, cost: Int): Player? {
+    override suspend fun grantItem(itemId: String): Player? {
         return try {
             val document = playerDocument() ?: return null
             val player = getPlayer() ?: return null
-            if (itemId in player.ownedItems || player.money < cost) return null
+            if (itemId in player.ownedItems) return null
+            val updated = player.copy(ownedItems = player.ownedItems + itemId)
+            document.set(updated)
+            updated
+        } catch (e: Exception) {
+            null
+        }
+    }
+
+    override suspend fun grantMonster(monsterId: String): Player? {
+        return try {
+            val document = playerDocument() ?: return null
+            val player = getPlayer() ?: return null
             val updated = player.copy(
-                money = player.money - cost,
-                ownedItems = player.ownedItems + itemId
+                ownedMonsters = player.ownedMonsters + monsterId,
+                stats = player.stats.copy(monstersSummoned = player.stats.monstersSummoned + 1)
             )
             document.set(updated)
             updated
@@ -114,14 +139,18 @@ class PlayerRepositoryImpl: PlayerRepository {
         }
     }
 
-    override suspend fun purchaseMonster(monsterId: String, cost: Int): Player? {
+    override suspend fun craftItem(itemId: String, cost: CraftCost): Player? {
         return try {
             val document = playerDocument() ?: return null
             val player = getPlayer() ?: return null
-            if (player.money < cost) return null
+            if (itemId in player.ownedItems) return null
+            if (!cost.canAfford(player.townResources, player.money)) return null
+
             val updated = player.copy(
-                money = player.money - cost,
-                ownedMonsters = player.ownedMonsters + monsterId
+                money = player.money - cost.gold,
+                townResources = cost.deductFrom(player.townResources),
+                ownedItems = player.ownedItems + itemId,
+                stats = player.stats.copy(itemsCrafted = player.stats.itemsCrafted + 1)
             )
             document.set(updated)
             updated
@@ -130,15 +159,185 @@ class PlayerRepositoryImpl: PlayerRepository {
         }
     }
 
-    override suspend fun purchaseSpell(spellId: String, cost: Int): Player? {
+    override suspend fun summonMonsters(monsterIds: List<String>, cost: CraftCost): Player? {
+        if (monsterIds.isEmpty()) return null
         return try {
             val document = playerDocument() ?: return null
             val player = getPlayer() ?: return null
-            if (spellId in player.ownedSpells || player.money < cost) return null
+            if (!cost.canAfford(player.townResources, player.money)) return null
+
             val updated = player.copy(
-                money = player.money - cost,
+                money = player.money - cost.gold,
+                townResources = cost.deductFrom(player.townResources),
+                ownedMonsters = player.ownedMonsters + monsterIds,
+                stats = player.stats.copy(
+                    monstersSummoned = player.stats.monstersSummoned + monsterIds.size
+                )
+            )
+            document.set(updated)
+            updated
+        } catch (e: Exception) {
+            null
+        }
+    }
+
+    override suspend fun unlockSpell(spellId: String, cost: CraftCost): Player? {
+        return try {
+            val document = playerDocument() ?: return null
+            val player = getPlayer() ?: return null
+            if (spellId in player.ownedSpells) return null
+            if (!cost.canAfford(player.townResources, player.money)) return null
+
+            val updated = player.copy(
+                money = player.money - cost.gold,
+                townResources = cost.deductFrom(player.townResources),
                 ownedSpells = player.ownedSpells + spellId
             )
+            document.set(updated)
+            updated
+        } catch (e: Exception) {
+            null
+        }
+    }
+
+    override suspend fun applyRunResult(run: RunStats): Player? {
+        return try {
+            val document = playerDocument() ?: return null
+            val player = getPlayer() ?: return null
+
+            val levelUp = LevelCurve.award(player.progress, run.xp)
+            val updated = player.copy(
+                money = (player.money + run.gold).coerceAtLeast(0),
+                progress = levelUp.progress,
+                stats = player.stats + run,
+                townResources = player.townResources.plusAll(
+                    wood = run.wood,
+                    stone = run.stone,
+                    iron = run.iron,
+                    essence = run.essence,
+                    tickets = run.summonTickets
+                )
+            )
+            document.set(updated)
+            updated
+        } catch (e: Exception) {
+            null
+        }
+    }
+
+    override suspend fun upgradeMonster(monsterId: String): Player? {
+        return try {
+            val document = playerDocument() ?: return null
+            val player = getPlayer() ?: return null
+            if (monsterId !in player.ownedMonsters) return null
+
+            val card = MonsterCatalog.byId(monsterId) ?: return null
+            val level = MonsterLevels.clamp(player.monsterLevels[monsterId] ?: MonsterLevels.MIN_LEVEL)
+            if (MonsterLevels.isMaxed(level)) return null
+
+            val cost = MonsterLevels.upgradeCost(level, card.rarity)
+            if (player.money < cost) return null
+
+            val updated = player.copy(
+                money = player.money - cost,
+                monsterLevels = player.monsterLevels + (monsterId to level + 1)
+            )
+            document.set(updated)
+            updated
+        } catch (e: Exception) {
+            null
+        }
+    }
+
+    override suspend fun ascendMonster(monsterId: String): Player? {
+        return try {
+            val document = playerDocument() ?: return null
+            val player = getPlayer() ?: return null
+            if (MonsterCatalog.byId(monsterId) == null) return null
+
+            val stars = MonsterStars.clampStars(player.monsterStars[monsterId] ?: MonsterStars.MIN_STARS)
+            if (MonsterStars.isMaxStars(stars)) return null
+
+            // Duplikaty to WSZYSTKIE kopie ponad ta jedna, ktora reprezentuje sama postac.
+            val owned = player.ownedMonsters.count { it == monsterId }
+            val cost = MonsterStars.ascendCost(stars)
+            if (owned - 1 < cost) return null
+
+            val remaining = player.ownedMonsters.toMutableList()
+            repeat(cost) { remaining.remove(monsterId) }
+
+            val updated = player.copy(
+                ownedMonsters = remaining,
+                monsterStars = player.monsterStars + (monsterId to stars + 1)
+            )
+            document.set(updated)
+            updated
+        } catch (e: Exception) {
+            null
+        }
+    }
+
+    override suspend fun dissolveMonster(monsterId: String): Player? {
+        return try {
+            val document = playerDocument() ?: return null
+            val player = getPlayer() ?: return null
+            val card = MonsterCatalog.byId(monsterId) ?: return null
+
+            val stars = MonsterStars.clampStars(player.monsterStars[monsterId] ?: MonsterStars.MIN_STARS)
+            // Ponizej maksymalnej gwiazdki duplikaty sa POTRZEBNE na awans - rozpuszczanie ich
+            // byloby zamiana lepszej nagrody na gorsza, wiec po prostu nie jest dozwolone.
+            if (!MonsterStars.isMaxStars(stars)) return null
+
+            val owned = player.ownedMonsters.count { it == monsterId }
+            if (owned <= 1) return null
+
+            val remaining = player.ownedMonsters.toMutableList().apply { remove(monsterId) }
+            val essence = MonsterStars.dissolveValue(card.rarity)
+
+            val updated = player.copy(
+                ownedMonsters = remaining,
+                townResources = player.townResources.plusAll(essence = essence)
+            )
+            document.set(updated)
+            updated
+        } catch (e: Exception) {
+            null
+        }
+    }
+
+    override suspend fun upgradeMonsterSpell(monsterId: String, spellId: String): Player? {
+        return try {
+            val document = playerDocument() ?: return null
+            val player = getPlayer() ?: return null
+            if (monsterId !in player.ownedMonsters) return null
+            val card = MonsterCatalog.byId(monsterId) ?: return null
+            if (spellId !in card.spellIds) return null
+            if (CompanionSpells.byId(spellId) == null) return null
+
+            val key = "$monsterId:$spellId"
+            val level = MonsterSpellLevels.clamp(player.monsterSpellLevels[key] ?: MonsterSpellLevels.MIN_LEVEL)
+            if (MonsterSpellLevels.isMaxed(level)) return null
+
+            val cost = MonsterSpellLevels.upgradeCost(level)
+            if (player.townResources.essence < cost) return null
+
+            val updated = player.copy(
+                townResources = player.townResources.copy(essence = player.townResources.essence - cost),
+                monsterSpellLevels = player.monsterSpellLevels + (key to level + 1)
+            )
+            document.set(updated)
+            updated
+        } catch (e: Exception) {
+            null
+        }
+    }
+
+    override suspend fun spendStatPoint(stat: HeroStat): Player? {
+        return try {
+            val document = playerDocument() ?: return null
+            val player = getPlayer() ?: return null
+            val progress = LevelCurve.spendPoint(player.progress, stat) ?: return null
+            val updated = player.copy(progress = progress)
             document.set(updated)
             updated
         } catch (e: Exception) {
@@ -152,6 +351,83 @@ class PlayerRepositoryImpl: PlayerRepository {
             val player = getPlayer() ?: return
             document.set(player.copy(spellWeights = weights))
         } catch (_: Exception) {
+        }
+    }
+
+    override suspend fun collectIdleRewards(now: Long): Player? {
+        return try {
+            val document = playerDocument() ?: return null
+            val player = getPlayer() ?: return null
+
+            // Pierwsze wejscie (znacznik = 0) tylko startuje licznik - nie ma jeszcze czego odebrac.
+            if (player.idleCollectedAt <= 0L) {
+                val started = player.copy(idleCollectedAt = now)
+                document.set(started)
+                return started
+            }
+
+            // Kwote liczy repozytorium z ZAPISANEGO stanu, nie ekran - inaczej "Get" bylby
+            // darmowym generatorem zlota dla kazdego, kto podmieni liczbe po stronie klienta.
+            val best = player.storyProgress.values.maxOrNull() ?: 0
+            val reward = IdleRewards.pendingFor(best, player.idleCollectedAt, now)
+            if (reward.isEmpty) return player
+
+            val levelUp = LevelCurve.award(player.progress, reward.xp)
+            val updated = player.copy(
+                money = player.money + reward.gold,
+                progress = levelUp.progress,
+                townResources = player.townResources.plusAll(iron = reward.iron, essence = reward.essence),
+                idleCollectedAt = now
+            )
+            document.set(updated)
+            updated
+        } catch (e: Exception) {
+            null
+        }
+    }
+
+    override suspend fun grantTestResources(
+        gold: Int,
+        wood: Int,
+        stone: Int,
+        iron: Int,
+        essence: Int,
+        tickets: Int,
+        xp: Int
+    ): Player? {
+        return try {
+            val document = playerDocument() ?: return null
+            val player = getPlayer() ?: return null
+            val levelUp = LevelCurve.award(player.progress, xp)
+            val updated = player.copy(
+                money = player.money + gold,
+                progress = levelUp.progress,
+                townResources = player.townResources.plusAll(
+                    wood = wood,
+                    stone = stone,
+                    iron = iron,
+                    essence = essence,
+                    tickets = tickets
+                )
+            )
+            document.set(updated)
+            updated
+        } catch (e: Exception) {
+            null
+        }
+    }
+
+    override suspend fun clearStoryStage(tier: String, globalStage: Int): Player? {
+        return try {
+            val document = playerDocument() ?: return null
+            val player = getPlayer() ?: return null
+            val current = player.storyProgress[tier] ?: 0
+            if (globalStage <= current) return player
+            val updated = player.copy(storyProgress = player.storyProgress + (tier to globalStage))
+            document.set(updated)
+            updated
+        } catch (e: Exception) {
+            null
         }
     }
 
@@ -217,6 +493,64 @@ class PlayerRepositoryImpl: PlayerRepository {
             if (player.importedBooks.any { it.id == book.id }) return
             document.set(player.copy(importedBooks = player.importedBooks + book))
         } catch (_: Exception) {
+        }
+    }
+
+    override suspend fun saveWord(word: com.lernhero.domain.reading.SavedWord): Player? {
+        return try {
+            val document = playerDocument() ?: return null
+            val player = getPlayer() ?: return null
+            if (player.savedWords.any { it.text.equals(word.text, ignoreCase = true) && it.bookId == word.bookId }) {
+                return player
+            }
+            val updated = player.copy(savedWords = player.savedWords + word)
+            document.set(updated)
+            updated
+        } catch (e: Exception) {
+            null
+        }
+    }
+
+    override suspend fun removeSavedWord(wordId: String): Player? {
+        return try {
+            val document = playerDocument() ?: return null
+            val player = getPlayer() ?: return null
+            val updated = player.copy(savedWords = player.savedWords.filterNot { it.id == wordId })
+            document.set(updated)
+            updated
+        } catch (e: Exception) {
+            null
+        }
+    }
+
+    override suspend fun updateProduction(
+        building: ProductionBuilding,
+        state: ProductionState,
+        resources: TownResources
+    ): Player? {
+        return try {
+            val document = playerDocument() ?: return null
+            val player = getPlayer() ?: return null
+            val updated = when (building) {
+                ProductionBuilding.Sawmill -> player.copy(sawmill = state, townResources = resources)
+                ProductionBuilding.Quarry -> player.copy(quarry = state, townResources = resources)
+            }
+            document.set(updated)
+            updated
+        } catch (e: Exception) {
+            null
+        }
+    }
+
+    override suspend fun updateTownResources(resources: TownResources): Player? {
+        return try {
+            val document = playerDocument() ?: return null
+            val player = getPlayer() ?: return null
+            val updated = player.copy(townResources = resources)
+            document.set(updated)
+            updated
+        } catch (e: Exception) {
+            null
         }
     }
 }

@@ -22,7 +22,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -49,7 +48,16 @@ import com.lernhero.domain.player.PlayerEquipment
 import com.lernhero.game.character.KnightEquipment
 import com.lernhero.game.character.ModularKnight
 import com.lernhero.home.player.PlayerViewModel
+import com.lernhero.domain.spell.SpellCatalog
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.tween
+import com.lernhero.domain.player.HeroCombatStats
+import com.lernhero.domain.player.HeroStat
+import com.lernhero.domain.player.PlayerProgress
 import com.lernhero.home.ui.AbilityBar
+import com.lernhero.home.ui.ItemDetailSheet
+import com.lernhero.home.ui.SpellUnlockPanel
+import com.lernhero.home.ui.format
 import com.lernhero.home.ui.RarityPalette
 import com.lernhero.home.ui.icon
 import com.lernhero.home.ui.label
@@ -57,12 +65,10 @@ import com.lernhero.home.ui.shortLabel
 import com.lernhero.shared.theme.AppPalette
 import com.lernhero.shared.theme.FontFirst
 import com.lernhero.shared.theme.FontPixel
-import org.koin.compose.viewmodel.koinViewModel
 
 /* ---------------------------------------------------------------------------------------------
  *  Ta sama paleta co reszta gry (AppPalette) - lokalne aliasy, zeby nazwy zostaly krotkie.
  * ------------------------------------------------------------------------------------------- */
-private val Bg = AppPalette.Background
 private val Panel = AppPalette.Panel
 private val PanelRaised = AppPalette.PanelRaised
 private val SlotBg = AppPalette.Ink
@@ -76,42 +82,63 @@ private val Success = AppPalette.Success
 private val SLOT = 60.dp
 private val BACKPACK_ICON = 64.dp
 
-/** Rozmiar rycerza w podgladzie - dopasowany do wysokosci [Viewport], zeby nic sie nie obcinalo. */
-private val KNIGHT_SIZE = 232.dp
-private val VIEWPORT_HEIGHT = 250.dp
+/**
+ * Rozmiar rycerza w podgladzie - dopasowany do wysokosci [Viewport], zeby nic sie nie obcinalo.
+ * Zmniejszony, gdy na ekran weszly poziom i statystyki bohatera: podglad byl najwiekszym elementem
+ * ekranu, a niosl najmniej informacji, wiec to on oddal miejsce, a nie ekwipunek.
+ */
+private val KNIGHT_SIZE = 176.dp
+private val VIEWPORT_HEIGHT = 190.dp
 
 private val LEFT_SLOTS = listOf(ItemSlot.Head, ItemSlot.Chest, ItemSlot.Amulet)
 private val RIGHT_SLOTS = listOf(ItemSlot.Hands, ItemSlot.Legs, ItemSlot.Feet)
 private val BOTTOM_SLOTS = listOf(ItemSlot.MainHand, ItemSlot.OffHand, ItemSlot.Ring)
 
 @Composable
-fun EquipmentScreen() {
-    val viewModel = koinViewModel<PlayerViewModel>()
+fun EquipmentScreen(viewModel: PlayerViewModel) {
     val state by viewModel.uiState.collectAsState()
 
     /** Slot, dla ktorego otwarto liste posiadanych przedmiotow. */
     var pickerSlot by remember { mutableStateOf<ItemSlot?>(null) }
 
-    Surface(modifier = Modifier.fillMaxSize(), color = Bg) {
+    /** Przedmiot ogladany w karcie szczegolow - patrz [ItemDetailSheet]. */
+    var inspected by remember { mutableStateOf<Item?>(null) }
+
+    Box(modifier = Modifier.fillMaxSize()) {
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .background(AppPalette.ScreenGradient)
                 .verticalScroll(rememberScrollState())
                 .padding(14.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
-            TitleBar(name = state.name, money = state.money)
+            // Gora ekranu: kim jestes, na jakim poziomie i co masz do rozdania. Wczesniej stal tu
+            // sam pasek z imieniem i zlotem, a poziom mieszkal w OSOBNEJ zakladce - czyli karta
+            // postaci byla rozbita na dwa ekrany pokazujace te sama postac.
+            HeroHeader(
+                name = state.name,
+                money = state.money,
+                progress = state.progress
+            )
+
+            HeroStatsRow(
+                progress = state.progress,
+                onSpend = viewModel::spendStatPoint
+            )
 
             PaperDoll(
                 knight = state.knightEquipment,
                 itemAt = state::itemIn,
+                combatStats = state.combatStats,
                 onSlotClick = { slot ->
-                    if (state.itemIn(slot) != null) viewModel.unequipSlot(slot) else pickerSlot = slot
+                    // Tapniecie zajetego slotu POKAZUJE przedmiot, a nie zdejmuje go po cichu -
+                    // to jedyny moment, w ktorym da sie zobaczyc, co ta rzecz w ogole robi.
+                    val equipped = state.itemIn(slot)
+                    if (equipped != null) inspected = equipped else pickerSlot = slot
                 }
             )
 
-            Backpack(items = state.backpack, onEquip = viewModel::equipItem)
+            Backpack(items = state.backpack, onInspect = { inspected = it })
 
             AbilityBar(
                 ability = state.ability,
@@ -119,7 +146,15 @@ fun EquipmentScreen() {
                 onSet = viewModel::setSpellPercent
             )
 
-            StatsPanel(equipment = state.equipment)
+            // Zdobywanie zaklec siedzi tuz pod paskiem, na ktorym sie je przypisuje - patrz
+            // [SpellUnlockPanel] po powod, dla ktorego nie sa juz w Summon Center.
+            SpellUnlockPanel(
+                spells = SpellCatalog.all,
+                ownedSpellIds = state.ownedSpells,
+                essence = state.resources.essence,
+                onUnlock = viewModel::unlockSpell
+            )
+
             state.message?.let { HintBar(it) }
             Spacer(modifier = Modifier.height(4.dp))
         }
@@ -131,9 +166,29 @@ fun EquipmentScreen() {
             items = state.ownedFor(slot),
             onDismiss = { pickerSlot = null },
             onPick = { item ->
-                viewModel.equipItem(item)
                 pickerSlot = null
+                inspected = item
             }
+        )
+    }
+
+    // Karta przedmiotu - jedno miejsce, w ktorym widac statystyki, opis i roznice wzgledem tego,
+    // co masz zalozone. Zakladanie/zdejmowanie idzie stad, a nie z samego tapniecia w ikone.
+    inspected?.let { item ->
+        val current = state.itemIn(item.slot)
+        ItemDetailSheet(
+            item = item,
+            comparedTo = current?.takeIf { it.id != item.id },
+            equipped = current?.id == item.id,
+            onEquip = {
+                viewModel.equipItem(item)
+                inspected = null
+            },
+            onUnequip = {
+                viewModel.unequipSlot(item.slot)
+                inspected = null
+            },
+            onDismiss = { inspected = null }
         )
     }
 }
@@ -141,41 +196,155 @@ fun EquipmentScreen() {
 /* ------------------------------------------ Title ------------------------------------------ */
 
 @Composable
-private fun TitleBar(name: String, money: Int) {
+private fun HeroHeader(name: String, money: Int, progress: PlayerProgress) {
+    val fill by animateFloatAsState(targetValue = progress.xpProgress, animationSpec = tween(600))
+
     OrnateFrame(modifier = Modifier.fillMaxWidth()) {
-        Row(
-            modifier = Modifier.padding(horizontal = 14.dp, vertical = 12.dp),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(12.dp)
+        Column(
+            modifier = Modifier.padding(horizontal = 12.dp, vertical = 10.dp),
+            verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(10.dp)
+            ) {
+                // Awatar niesie poziom - jedna rzecz zamiast dwoch, i od razu widac, gdzie sie patrzy.
+                Box(
+                    modifier = Modifier
+                        .size(44.dp)
+                        .clip(RoundedCornerShape(50))
+                        .background(SlotBg)
+                        .border(2.dp, Gold, RoundedCornerShape(50)),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text(
+                        text = "${progress.level}",
+                        color = Gold,
+                        fontFamily = FontPixel(),
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 17.sp
+                    )
+                }
+                Column(modifier = Modifier.weight(1f)) {
+                    Text(
+                        text = name.ifBlank { "Sir Lernhero" },
+                        color = Gold,
+                        fontFamily = FontPixel(),
+                        style = MaterialTheme.typography.titleMedium,
+                        fontWeight = FontWeight.Bold,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis
+                    )
+                    Text(
+                        text = "Rycerz · ${progress.xp}/${progress.xpForNextLevel} XP",
+                        color = TextBody.copy(alpha = 0.7f),
+                        fontFamily = FontFirst(),
+                        fontSize = 11.sp
+                    )
+                }
+                Pill(text = "💰 $money")
+            }
+
             Box(
                 modifier = Modifier
-                    .size(46.dp)
+                    .fillMaxWidth()
+                    .height(7.dp)
                     .clip(RoundedCornerShape(50))
                     .background(SlotBg)
-                    .border(2.dp, Gold, RoundedCornerShape(50)),
-                contentAlignment = Alignment.Center
             ) {
-                Text(text = "⚔️", fontSize = 20.sp)
-            }
-            Column(modifier = Modifier.weight(1f)) {
-                Text(
-                    text = name.ifBlank { "Sir Lernhero" },
-                    color = Gold,
-                    fontFamily = FontPixel(),
-                    style = MaterialTheme.typography.titleMedium,
-                    fontWeight = FontWeight.Bold,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis
-                )
-                Text(
-                    text = "Rycerz",
-                    color = TextBody.copy(alpha = 0.7f),
-                    fontFamily = FontFirst(),
-                    fontSize = 11.sp
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth(fill)
+                        .fillMaxSize()
+                        .clip(RoundedCornerShape(50))
+                        .background(Gold)
                 )
             }
-            Pill(text = "💰 $money")
+        }
+    }
+}
+
+/**
+ * Cztery statystyki w JEDNYM rzedzie zamiast czterech wierszy na osobnym ekranie. Opisy ("+2 ataku
+ * za punkt") zniknely stad celowo - przy pierwszym rozdaniu sa potrzebne, przy setnym to juz tylko
+ * cztery linijki do przescrollowania. Zostaje skrot, wartosc i "+", ktory zapala sie tylko wtedy,
+ * gdy naprawde jest co rozdac.
+ */
+@Composable
+private fun HeroStatsRow(progress: PlayerProgress, onSpend: (HeroStat) -> Unit) {
+    val canSpend = progress.unspentPoints > 0
+
+    Column(verticalArrangement = Arrangement.spacedBy(6.dp), modifier = Modifier.fillMaxWidth()) {
+        if (canSpend) {
+            Text(
+                text = "Masz ${progress.unspentPoints} pkt do rozdania",
+                color = Success,
+                fontFamily = FontFirst(),
+                fontWeight = FontWeight.Bold,
+                fontSize = 11.sp
+            )
+        }
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.spacedBy(6.dp)
+        ) {
+            HeroStat.entries.forEach { stat ->
+                StatChip(
+                    stat = stat,
+                    value = progress.stats[stat],
+                    canSpend = canSpend,
+                    onSpend = { onSpend(stat) },
+                    modifier = Modifier.weight(1f)
+                )
+            }
+        }
+    }
+}
+
+@Composable
+private fun StatChip(
+    stat: HeroStat,
+    value: Int,
+    canSpend: Boolean,
+    onSpend: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    Column(
+        modifier = modifier
+            .clip(RoundedCornerShape(10.dp))
+            .background(Panel)
+            .border(
+                width = if (canSpend) 1.5.dp else 1.dp,
+                color = if (canSpend) Gold else GoldDim.copy(alpha = 0.5f),
+                shape = RoundedCornerShape(10.dp)
+            )
+            .clickable(enabled = canSpend, onClick = onSpend)
+            .padding(vertical = 7.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.spacedBy(1.dp)
+    ) {
+        Text(
+            text = stat.short,
+            color = Muted,
+            fontFamily = FontPixel(),
+            fontWeight = FontWeight.Bold,
+            fontSize = 9.sp
+        )
+        Text(
+            text = "$value",
+            color = TextBody,
+            fontFamily = FontPixel(),
+            fontWeight = FontWeight.Bold,
+            fontSize = 16.sp
+        )
+        if (canSpend) {
+            Text(
+                text = "+",
+                color = Gold,
+                fontFamily = FontPixel(),
+                fontWeight = FontWeight.Bold,
+                fontSize = 12.sp
+            )
         }
     }
 }
@@ -186,12 +355,13 @@ private fun TitleBar(name: String, money: Int) {
 private fun PaperDoll(
     knight: KnightEquipment,
     itemAt: (ItemSlot) -> Item?,
+    combatStats: HeroCombatStats,
     onSlotClick: (ItemSlot) -> Unit
 ) {
     OrnateFrame(modifier = Modifier.fillMaxWidth()) {
         Column(
-            modifier = Modifier.padding(12.dp),
-            verticalArrangement = Arrangement.spacedBy(10.dp)
+            modifier = Modifier.padding(10.dp),
+            verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -204,13 +374,56 @@ private fun PaperDoll(
             }
             Row(
                 modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.spacedBy(18.dp, Alignment.CenterHorizontally)
+                horizontalArrangement = Arrangement.spacedBy(14.dp, Alignment.CenterHorizontally)
             ) {
                 BOTTOM_SLOTS.forEach { slot ->
                     GearSlot(slot = slot, item = itemAt(slot), onClick = { onSlotClick(slot) })
                 }
             }
+
+            // Liczby walki SIEDZA POD POSTACIA, w tej samej ramce. Wczesniej byly na samym dole
+            // ekranu jako "bonusy z ekwipunku" - czyli gracz nie widzial, ile w ogole zadaje
+            // obrazen, tylko ile DOKLADA mu sprzet.
+            CombatStatsStrip(stats = combatStats)
         }
+    }
+}
+
+/**
+ * Cztery liczby, ktore realnie decyduja o walce - atak, HP, krytyk i bonus z quizu. Jeden zwarty
+ * rzad zamiast siatki "bonusow z ekwipunku": na telefonie liczy sie to, co widac bez scrollowania.
+ */
+@Composable
+private fun CombatStatsStrip(stats: HeroCombatStats) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(10.dp))
+            .background(SlotBg)
+            .padding(vertical = 8.dp),
+        horizontalArrangement = Arrangement.SpaceEvenly
+    ) {
+        CombatStat("⚔", "${stats.attack}", "atak")
+        CombatStat("❤", "${stats.maxHp}", "zdrowie")
+        CombatStat("🎯", "${stats.critPercent}%", "kryt")
+        CombatStat("📚", "+${stats.quizBonusPercent}%", "z quizu")
+    }
+}
+
+@Composable
+private fun CombatStat(icon: String, value: String, label: String) {
+    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(3.dp)) {
+            Text(text = icon, fontSize = 12.sp)
+            Text(
+                text = value,
+                color = TextBody,
+                fontFamily = FontPixel(),
+                fontWeight = FontWeight.Bold,
+                fontSize = 14.sp
+            )
+        }
+        Text(text = label, color = Muted, fontFamily = FontFirst(), fontSize = 9.sp)
     }
 }
 
@@ -279,7 +492,10 @@ private fun GearSlot(
     val equipped = item != null
     val border = if (item != null) RarityPalette.frame(item.rarity) else GoldDim
 
-    SlotShell(label = item?.name ?: slot.shortLabel(), labelStrong = equipped) {
+    // Nazwa przedmiotu ZNIKNELA spod ikony - dwie linijki tekstu przy kazdym z dziewieciu slotow
+    // zjadaly pol ekranu, a i tak byly przyciete. Pelna nazwe (i wszystko inne) pokazuje karta
+    // przedmiotu po tapnieciu.
+    SlotShell(label = if (equipped) null else slot.shortLabel(), labelStrong = equipped) {
         Box(
             modifier = Modifier
                 .size(SLOT)
@@ -305,19 +521,22 @@ private fun GearSlot(
 }
 
 @Composable
-private fun SlotShell(label: String, labelStrong: Boolean, content: @Composable () -> Unit) {
+private fun SlotShell(label: String?, labelStrong: Boolean, content: @Composable () -> Unit) {
     Column(horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(3.dp)) {
         content()
-        Text(
-            text = label,
-            color = if (labelStrong) Gold else Muted,
-            fontFamily = FontFirst(),
-            fontSize = 9.sp,
-            maxLines = 1,
-            overflow = TextOverflow.Ellipsis,
-            textAlign = TextAlign.Center,
-            modifier = Modifier.width(SLOT + 14.dp)
-        )
+        // Zajety slot nie ma podpisu - o tym, co w nim stoi, mowi ikona i kolor rzadkosci ramki.
+        if (label != null) {
+            Text(
+                text = label,
+                color = if (labelStrong) Gold else Muted,
+                fontFamily = FontFirst(),
+                fontSize = 9.sp,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+                textAlign = TextAlign.Center,
+                modifier = Modifier.width(SLOT + 14.dp)
+            )
+        }
     }
 }
 
@@ -326,7 +545,7 @@ private fun SlotShell(label: String, labelStrong: Boolean, content: @Composable 
 @Composable
 private fun Backpack(
     items: List<Item>,
-    onEquip: (Item) -> Unit
+    onInspect: (Item) -> Unit
 ) {
     OrnateFrame(modifier = Modifier.fillMaxWidth()) {
         Column(
@@ -345,12 +564,12 @@ private fun Backpack(
                     style = MaterialTheme.typography.titleSmall,
                     fontWeight = FontWeight.Bold
                 )
-                Text("dotknij, zeby zalozyc", color = Muted, fontFamily = FontFirst(), fontSize = 10.sp)
+                Text("dotknij, zeby zobaczyc", color = Muted, fontFamily = FontFirst(), fontSize = 10.sp)
             }
 
             if (items.isEmpty()) {
                 Text(
-                    "Plecak pusty. Zajrzyj do sklepu po nowy sprzet.",
+                    "Plecak pusty. Wykuj sprzet w Kuzni.",
                     color = Muted,
                     fontFamily = FontFirst(),
                     style = MaterialTheme.typography.bodySmall
@@ -361,7 +580,7 @@ private fun Backpack(
                     horizontalArrangement = Arrangement.spacedBy(10.dp)
                 ) {
                     items.forEach { item ->
-                        BackpackItem(item = item, onClick = { onEquip(item) })
+                        BackpackItem(item = item, onClick = { onInspect(item) })
                     }
                 }
             }
@@ -427,7 +646,7 @@ private fun ItemPickerDialog(
         text = {
             if (items.isEmpty()) {
                 Text(
-                    text = "Nie masz nic na to miejsce. Zajrzyj do sklepu.",
+                    text = "Nie masz nic na to miejsce. Wykuj sprzet w Kuzni.",
                     color = Muted,
                     fontFamily = FontFirst(),
                     style = MaterialTheme.typography.bodyMedium
@@ -489,104 +708,17 @@ private fun ItemPickerDialog(
 /* ------------------------------------------- Stats ----------------------------------------- */
 
 /** Etykieta po polsku dla kazdej statystyki - w kolejnosci, w jakiej maja sie pokazywac. */
-private val STAT_ORDER = listOf(
-    StatType.MaxHp, StatType.Attack, StatType.Defense, StatType.Speed,
-    StatType.CritChance, StatType.CritDamage, StatType.Lifesteal, StatType.Dodge,
-    StatType.DamageReduction, StatType.SpellPower, StatType.HealPower,
-    StatType.CooldownReduction, StatType.AttackTargets
-)
-
-private fun StatType.label(): String = when (this) {
-    StatType.MaxHp -> "Zdrowie"
-    StatType.Attack -> "Atak"
-    StatType.Defense -> "Obrona"
-    StatType.Speed -> "Szybkosc"
-    StatType.CritChance -> "Szansa na kryta"
-    StatType.CritDamage -> "Sila kryta"
-    StatType.Dodge -> "Unik"
-    StatType.Lifesteal -> "Kradziez zycia"
-    StatType.DamageReduction -> "Redukcja obrazen"
-    StatType.HealPower -> "Sila leczenia"
-    StatType.CooldownReduction -> "Skrocenie odnowienia"
-    StatType.AttackTargets -> "Dodatkowe cele"
-    StatType.SpellPower -> "Sila zaklec"
-}
-
-private fun StatType.isPercent(): Boolean = this in setOf(
-    StatType.CritChance, StatType.CritDamage, StatType.Dodge, StatType.Lifesteal,
-    StatType.DamageReduction, StatType.HealPower, StatType.CooldownReduction, StatType.SpellPower
-)
-
-/** Prawdziwe bonusy z zalozonego ekwipunku - zadnych zmyslonych liczb, tylko to, co faktycznie dziala. */
-@Composable
-private fun StatsPanel(equipment: PlayerEquipment) {
-    val stats = remember(equipment) { equipment.toLoadout().stats }
-    val nonZero = STAT_ORDER.mapNotNull { type ->
-        val value = stats[type]
-        if (value != 0f) type to value else null
-    }
-
-    OrnateFrame(modifier = Modifier.fillMaxWidth()) {
-        Column(modifier = Modifier.padding(12.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-            Text(
-                text = "Bonusy z ekwipunku",
-                color = Gold,
-                fontFamily = FontPixel(),
-                fontWeight = FontWeight.Bold,
-                style = MaterialTheme.typography.titleSmall
-            )
-            if (nonZero.isEmpty()) {
-                Text(
-                    text = "Nic jeszcze nie zalozyles - sloty czekaja.",
-                    color = Muted,
-                    fontFamily = FontFirst(),
-                    fontSize = 11.sp
-                )
-            } else {
-                StatGrid(nonZero)
-            }
-        }
-    }
-}
-
-@OptIn(ExperimentalLayoutApi::class)
-@Composable
-private fun StatGrid(entries: List<Pair<StatType, Float>>) {
-    FlowRow(
-        modifier = Modifier.fillMaxWidth(),
-        horizontalArrangement = Arrangement.spacedBy(8.dp),
-        verticalArrangement = Arrangement.spacedBy(8.dp)
-    ) {
-        entries.forEach { (type, value) ->
-            val display = if (type.isPercent()) "+${(value * 100).toInt()}%" else "+${value.toInt()}"
-            Row(
-                modifier = Modifier
-                    .clip(RoundedCornerShape(8.dp))
-                    .background(SlotBg)
-                    .border(1.dp, GoldDim, RoundedCornerShape(8.dp))
-                    .padding(horizontal = 10.dp, vertical = 6.dp),
-                horizontalArrangement = Arrangement.spacedBy(6.dp),
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Text(text = display, color = Success, fontFamily = FontPixel(), fontWeight = FontWeight.Bold, fontSize = 12.sp)
-                Text(text = type.label(), color = Muted, fontFamily = FontFirst(), fontSize = 10.sp)
-            }
-        }
-    }
-}
-
-/* ------------------------------------------ Shared ----------------------------------------- */
-
 @Composable
 private fun OrnateFrame(
     modifier: Modifier = Modifier,
     content: @Composable () -> Unit
 ) {
+    // Przeswitujaca ramka - tlo apki (HomeNavGraph) ma byc widoczne w calym obszarze
+    // wokol slotow/kart, tylko one maja wlasne, solidne tla.
     Box(
         modifier = modifier
             .clip(RoundedCornerShape(14.dp))
-            .background(AppPalette.CardGradient)
-            .border(2.dp, GoldDim, RoundedCornerShape(14.dp))
+            .border(2.dp, GoldDim.copy(alpha = 0.5f), RoundedCornerShape(14.dp))
     ) {
         content()
     }

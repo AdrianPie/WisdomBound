@@ -1,15 +1,14 @@
 package com.lernhero.shared.resources
 
 import androidx.compose.ui.graphics.TransformOrigin
-import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import lernhero.shared.generated.resources.Res
 import lernhero.shared.generated.resources.back_arrow
+import lernhero.shared.generated.resources.background
 import lernhero.shared.generated.resources.battle_mage_avatar
 import lernhero.shared.generated.resources.brick_dungeon
 import lernhero.shared.generated.resources.battlegroundTwo
-import lernhero.shared.generated.resources.body2
 import lernhero.shared.generated.resources.book
 import lernhero.shared.generated.resources.cat
 import lernhero.shared.generated.resources.check
@@ -18,60 +17,57 @@ import lernhero.shared.generated.resources.close
 import lernhero.shared.generated.resources.delete
 import lernhero.shared.generated.resources.dollar
 import lernhero.shared.generated.resources.edit
-import lernhero.shared.generated.resources.fire_sprite
 import lernhero.shared.generated.resources.game_map
 import lernhero.shared.generated.resources.google_logo
 import lernhero.shared.generated.resources.grid
-import lernhero.shared.generated.resources.head
 import lernhero.shared.generated.resources.home
 import lernhero.shared.generated.resources.india
-import lernhero.shared.generated.resources.knight_attack_sprite
 import lernhero.shared.generated.resources.knight_avatar2
-import lernhero.shared.generated.resources.knight_sprite
-import lernhero.shared.generated.resources.rightx_down_hand
-import lernhero.shared.generated.resources.rightx_down_leg
-import lernhero.shared.generated.resources.rightx_up_hand
-import lernhero.shared.generated.resources.rightx_up_leg
-import lernhero.shared.generated.resources.leftx_foot
-import lernhero.shared.generated.resources.right_foot
-import lernhero.shared.generated.resources.plate_head
-import lernhero.shared.generated.resources.plate_left_down_hand
-import lernhero.shared.generated.resources.plate_left_down_leg
-import lernhero.shared.generated.resources.plate_left_foot
-import lernhero.shared.generated.resources.plate_left_up_leg
-import lernhero.shared.generated.resources.plate_right_down_hand
-import lernhero.shared.generated.resources.plate_right_down_leg
-import lernhero.shared.generated.resources.plate_right_foot
-import lernhero.shared.generated.resources.plate_right_up_leg
-import lernhero.shared.generated.resources.plate_sword_down
-import lernhero.shared.generated.resources.plate_sword_up
+import lernhero.shared.generated.resources.altar_empty
+import lernhero.shared.generated.resources.armor_new
+import lernhero.shared.generated.resources.body_new
+import lernhero.shared.generated.resources.boss_skeleton_dragon_2
+import lernhero.shared.generated.resources.human_archer_2
+import lernhero.shared.generated.resources.mage_missile_001_016
+import lernhero.shared.generated.resources.magicboom_8_frames
+import lernhero.shared.generated.resources.magic_missle_skeleton_mage
+import lernhero.shared.generated.resources.orc_archer_2
+import lernhero.shared.generated.resources.orc_warrior_2
+import lernhero.shared.generated.resources.skeleton_archer_2
+import lernhero.shared.generated.resources.skeleton_mage_2
+import lernhero.shared.generated.resources.skeleton_warrior_2
+import lernhero.shared.generated.resources.boot_left_new
+import lernhero.shared.generated.resources.boot_right_new
+import lernhero.shared.generated.resources.glove_left_new
+import lernhero.shared.generated.resources.glove_right_new
+import lernhero.shared.generated.resources.head_new
+import lernhero.shared.generated.resources.left_hand_new
+import lernhero.shared.generated.resources.left_leg_new
+import lernhero.shared.generated.resources.right_hand_new
+import lernhero.shared.generated.resources.right_leg_new
+import lernhero.shared.generated.resources.sword_down_new
+import lernhero.shared.generated.resources.sword_up_new
 import lernhero.shared.generated.resources.log_in
 import lernhero.shared.generated.resources.log_out
 import lernhero.shared.generated.resources.logo_splash
-import lernhero.shared.generated.resources.magskeleton_idle
 import lernhero.shared.generated.resources.map_pin
 import lernhero.shared.generated.resources.menu
+import lernhero.shared.generated.resources.mine_island
 import lernhero.shared.generated.resources.minus
 import lernhero.shared.generated.resources.paypal_logo
 import lernhero.shared.generated.resources.plus
 import lernhero.shared.generated.resources.ramka_test
 import lernhero.shared.generated.resources.ramka_test2
 import lernhero.shared.generated.resources.right_arrow
-import lernhero.shared.generated.resources.left_down_hand
-import lernhero.shared.generated.resources.left_down_leg
-import lernhero.shared.generated.resources.right_up_hand2
-import lernhero.shared.generated.resources.left_up_leg
 import lernhero.shared.generated.resources.search
 import lernhero.shared.generated.resources.serbia
-import lernhero.shared.generated.resources.skeleton_attack
-import lernhero.shared.generated.resources.skeleton_dead
-import lernhero.shared.generated.resources.skeleton_hit
-import lernhero.shared.generated.resources.skeleton_idle
 import lernhero.shared.generated.resources.shopping_cart
 import lernhero.shared.generated.resources.shopping_cart_image
+import lernhero.shared.generated.resources.smite_island
 import lernhero.shared.generated.resources.sorcerer_avatar2
+import lernhero.shared.generated.resources.summon_island
 import lernhero.shared.generated.resources.swords_24px
-import lernhero.shared.generated.resources.testattack
+import lernhero.shared.generated.resources.tartak_island
 import lernhero.shared.generated.resources.treasure
 import lernhero.shared.generated.resources.unlock
 import lernhero.shared.generated.resources.usa
@@ -79,11 +75,6 @@ import lernhero.shared.generated.resources.user
 import lernhero.shared.generated.resources.vertical_menu
 import lernhero.shared.generated.resources.warning
 import lernhero.shared.generated.resources.weight
-import lernhero.shared.generated.resources.wolf_attack
-import lernhero.shared.generated.resources.wolf_dead
-import lernhero.shared.generated.resources.wolf_hit
-import lernhero.shared.generated.resources.wolf_idle
-import org.jetbrains.compose.resources.DrawableResource
 
 object Resources {
     object Icon {
@@ -113,6 +104,9 @@ object Resources {
         val swords = Res.drawable.swords_24px
     }
     object Image {
+        /** Tlo calej aplikacji - rysowane raz za Scaffoldem w HomeNavGraph, widoczne pod kazda zakladka. */
+        val appBackground = Res.drawable.background
+
         val battlegroundFirst = Res.drawable.battlegroundTwo
         val ShoppingCart = Res.drawable.shopping_cart_image
         val Checkmark = Res.drawable.checkmark_image
@@ -132,240 +126,96 @@ object Resources {
         val corridorBrick = Res.drawable.brick_dungeon
         val treasureChest = Res.drawable.treasure
     }
+    /** Wyspy-budynki na ekranie Miasta (Dom) - kazda to osobna klikalna "instancja" (patrz HomeScreen). */
+    object CityIsland {
+        /** Pusty oltarz w Summon Center - scena, na ktorej "wychodzi" wylosowany summon. */
+        val altar = Res.drawable.altar_empty
+        val sawmill = Res.drawable.tartak_island
+        val quarry = Res.drawable.mine_island
+        val forge = Res.drawable.smite_island
+        val summon = Res.drawable.summon_island
+    }
     object Player {
-            val head = Res.drawable.head
-            val body = Res.drawable.body2
+            val head = Res.drawable.head_new
+            val body = Res.drawable.body_new
 
-            // Prawa reka (anatomicznie) - na ekranie po lewej, reka za cialem (idle)
-            val rightUpHand = Res.drawable.rightx_up_hand
-            val rightDownHand = Res.drawable.rightx_down_hand
+            // Prawa reka (anatomicznie) - na ekranie po lewej, reka za cialem (idle).
+            // Konczyna jednoczesciowa (bez podzialu na bicep/przedramie) - rotuje sztywno wokol barku.
+            val rightHand = Res.drawable.right_hand_new
 
-            // Lewa reka (anatomicznie) - na ekranie po prawej, reka rozdzki/miecza z przodu.
-            // Gorna czesc uzywa asset right_up_hand2 (najlepszy kawalek do uniesionej pozy).
-            val leftUpHand = Res.drawable.right_up_hand2
-            val leftDownHand = Res.drawable.left_down_hand
+            // Lewa reka (anatomicznie) - na ekranie po prawej, reka z mieczem z przodu.
+            val leftHand = Res.drawable.left_hand_new
 
-            // Prawa noga (anatomicznie) - na ekranie po lewej, noga z przodu
-            val rightUpLeg = Res.drawable.rightx_up_leg
-            val rightDownLeg = Res.drawable.rightx_down_leg
-            val rightFoot = Res.drawable.right_foot
+            // Prawa noga (anatomicznie) - na ekranie po lewej, noga z przodu.
+            // Konczyna jednoczesciowa (bez podzialu na udo/lydke) - rotuje sztywno wokol biodra.
+            val rightLeg = Res.drawable.right_leg_new
 
             // Lewa noga (anatomicznie) - na ekranie po prawej, noga z tylu
-            val leftUpLeg = Res.drawable.left_up_leg
-            val leftDownLeg = Res.drawable.left_down_leg
-            val leftFoot = Res.drawable.leftx_foot
+            val leftLeg = Res.drawable.left_leg_new
     }
-    // Zbroja plytowa - nakladki rysowane na tych samych warstwach co czesci ciala
+    // Ekwipunek - nakladki rysowane na tych samych warstwach co czesci ciala.
+    // Brak osobnego helmu i plyt na nogi w nowym zestawie grafik - te sloty na razie bez wizualizacji.
     object PlateArmor {
-            val head = Res.drawable.plate_head
+            val chest = Res.drawable.armor_new
 
-            val rightDownHand = Res.drawable.plate_right_down_hand
-            val leftDownHand = Res.drawable.plate_left_down_hand
+            val rightHand = Res.drawable.glove_right_new
+            val leftHand = Res.drawable.glove_left_new
 
-            val rightUpLeg = Res.drawable.plate_right_up_leg
-            val rightDownLeg = Res.drawable.plate_right_down_leg
-            val rightFoot = Res.drawable.plate_right_foot
-
-            val leftUpLeg = Res.drawable.plate_left_up_leg
-            val leftDownLeg = Res.drawable.plate_left_down_leg
-            val leftFoot = Res.drawable.plate_left_foot
+            val rightFoot = Res.drawable.boot_right_new
+            val leftFoot = Res.drawable.boot_left_new
 
             // Miecz trzymany w lewej dloni: ostrze przed dlonia, rekojesc wystaje za nia
-            val swordFront = Res.drawable.plate_sword_up
-            val swordBehind = Res.drawable.plate_sword_down
+            val swordFront = Res.drawable.sword_up_new
+            val swordBehind = Res.drawable.sword_down_new
     }
     object KnightPivots {
         // Centrum postaci
-        val head = TransformOrigin(0.5f, 0.2f)
-        val body = TransformOrigin(0.499f, 0.348f)
+        val head = TransformOrigin(0.512f, 0.568f)
+        val body = TransformOrigin(0.512f, 0.657f)
         // Punkt przy stopach - caly rycerz kolysze sie wokol niego, wiec stopy prawie sie nie ruszaja
         val ground = TransformOrigin(0.555f, 0.9f)
 
-        // Prawa reka (anatomicznie) - Tyl, idle - na ekranie po lewej
-        val rightUpHand = TransformOrigin(0.412f, 0.262f)
-        val rightDownHand = TransformOrigin(0.354f, 0.359f)
-        // Lewa reka (anatomicznie) - Przod, rozdzka/miecz - na ekranie po prawej
-        val leftUpHand = TransformOrigin(0.573f, 0.276f)
-        val leftDownHand = TransformOrigin(0.61f, 0.373f)
+        // Prawa reka (anatomicznie) - Tyl, idle - na ekranie po lewej. Pivot: bark.
+        val rightHand = TransformOrigin(0.461f, 0.573f)
+        // Lewa reka (anatomicznie) - Przod, miecz - na ekranie po prawej. Pivot: bark.
+        val leftHand = TransformOrigin(0.546f, 0.575f)
 
-        // Prawa noga (anatomicznie) - Przod - na ekranie po lewej
-        val rightUpLeg = TransformOrigin(0.461f, 0.5f)
-        val rightDownLeg = TransformOrigin(0.417f, 0.677f)
-        val rightFoot = TransformOrigin(0.387f, 0.852f)
-        // Lewa noga (anatomicznie) - Tyl - na ekranie po prawej
-        val leftUpLeg = TransformOrigin(0.542f, 0.523f)
-        val leftDownLeg = TransformOrigin(0.575f, 0.679f)
-        val leftFoot = TransformOrigin(0.595f, 0.85f)
+        // Prawa noga (anatomicznie) - Przod - na ekranie po lewej. Pivot: biodro.
+        val rightLeg = TransformOrigin(0.468f, 0.721f)
+        // Lewa noga (anatomicznie) - Tyl - na ekranie po prawej. Pivot: biodro.
+        val leftLeg = TransformOrigin(0.554f, 0.726f)
+    }
+    /** Anchor punkty efektow walki na rycerzu - ten sam typ co [com.lernhero.shared.resources.MonsterAnchors], zeby sekwencer/warstwa efektow nie musialy rozrozniac hero od monstera. */
+    val KnightCombatAnchors = CombatAnchorSet(
+        root = KnightPivots.ground,
+        effectAnchor = TransformOrigin(0.5f, 0.5f),
+        hitPoint = TransformOrigin(0.5f, 0.46f),
+        projectileOrigin = TransformOrigin(0.58f, 0.42f),
+        statusEffectAnchor = TransformOrigin(0.5f, 0.12f)
+    )
+    /** Pojedyncze PNG nowych potworow (bez sprite-sheetow) - klucz jak w [com.lernhero.domain.monster.MonsterCard.spriteKey]. */
+    object MonsterArt {
+        val skeletonWarrior = Res.drawable.skeleton_warrior_2
+        val skeletonArcher = Res.drawable.skeleton_archer_2
+        val skeletonMage = Res.drawable.skeleton_mage_2
+        val orcWarrior = Res.drawable.orc_warrior_2
+        val orcArcher = Res.drawable.orc_archer_2
+        val humanArcher = Res.drawable.human_archer_2
+        val bossSkeletonDragon = Res.drawable.boss_skeleton_dragon_2
+    }
+    /** Grafiki warstwy efektow walki (pociski, hit/spell effects) - patrz com.lernhero.game.battle.effects. */
+    object EffectArt {
+        /** Plonacy czaszkowy pocisk, 16 klatek 256x256 w siatce 4x4 - zostaje nieuzywany, za szybki lot by bylo widac animacje. */
+        val mageMissileSheet = Res.drawable.mage_missile_001_016
+        /** Ten sam pocisk jako jeden statyczny PNG - uzywany narazie do kazdego trafienia (bez animacji klatek). */
+        val mageMissile = Res.drawable.magic_missle_skeleton_mage
+        /** Wybuch trafienia - rosnie od iskry do pelnego wybuchu, 8 klatek, siatka 4x2 (256x144/klatka). */
+        val magicBomb = Res.drawable.magicboom_8_frames
     }
     object Flag {
         val India = Res.drawable.india
         val Usa = Res.drawable.usa
         val Serbia = Res.drawable.serbia
-    }
-    object Sprite{
-        val knight: SpriteAsset = SpriteAsset(
-            drawable = Res.drawable.knight_sprite,
-            frameWidth = 1280,
-            frameHeight = 720,
-            totalFrames = 29,
-            framesPerRow = 6,
-            animationSpeed = 62,
-            localWidth = 100.dp,
-            renderScale = 1f,
-            playBackwards = true
-        )
-        val knightAtk: SpriteAsset = SpriteAsset(
-            drawable = Res.drawable.knight_attack_sprite,
-            frameWidth = 1280,
-            frameHeight = 720,
-            totalFrames = 32,
-            framesPerRow = 6,
-            animationSpeed = 42,
-            localWidth = 100.dp,
-            renderScale = 1f,
-        )
-        val magSkeletoniIdle: SpriteAsset = SpriteAsset(
-            drawable = Res.drawable.magskeleton_idle,
-            frameWidth = 1280,
-            frameHeight = 720,
-            totalFrames = 18,
-            framesPerRow = 5,
-            animationSpeed = 42,
-            localWidth = 100.dp,
-            renderScale = 1f,
-            pingPong = true,
-        )
-        val knightAtkTest: SpriteAsset = SpriteAsset(
-            drawable = Res.drawable.testattack,
-            frameWidth = 587,
-            frameHeight = 707,
-            totalFrames = 1,
-            framesPerRow = 1,
-            animationSpeed = 100,
-            localWidth = 100.dp,
-            renderScale = 1f
-        )
-        val skeletonIdle: SpriteAsset = SpriteAsset(
-            drawable = Res.drawable.skeleton_idle,
-            frameWidth = 440,
-            frameHeight = 560,
-            totalFrames = 24,
-            framesPerRow = 6,
-            animationSpeed = 70,
-            localWidth = 100.dp,
-            renderScale = 1f
-        )
-        val skeletonAttack: SpriteAsset = SpriteAsset(
-            drawable = Res.drawable.skeleton_attack,
-            frameWidth = 440,
-            frameHeight = 560,
-            totalFrames = 30,
-            framesPerRow = 6,
-            animationSpeed = 42,
-            localWidth = 100.dp,
-            renderScale = 1f
-        )
-        val skeletonHit: SpriteAsset = SpriteAsset(
-            drawable = Res.drawable.skeleton_hit,
-            frameWidth = 440,
-            frameHeight = 560,
-            totalFrames = 14,
-            framesPerRow = 6,
-            animationSpeed = 40,
-            localWidth = 100.dp,
-            renderScale = 1f
-        )
-        val skeletonDead: SpriteAsset = SpriteAsset(
-            drawable = Res.drawable.skeleton_dead,
-            frameWidth = 440,
-            frameHeight = 560,
-            totalFrames = 28,
-            framesPerRow = 6,
-            animationSpeed = 45,
-            localWidth = 100.dp,
-            renderScale = 1f
-        )
-        val wolfIdle: SpriteAsset = SpriteAsset(
-            drawable = Res.drawable.wolf_idle,
-            frameWidth = 560,
-            frameHeight = 400,
-            totalFrames = 24,
-            framesPerRow = 6,
-            animationSpeed = 72,
-            localWidth = 160.dp,
-            renderScale = 1f
-        )
-        val wolfAttack: SpriteAsset = SpriteAsset(
-            drawable = Res.drawable.wolf_attack,
-            frameWidth = 560,
-            frameHeight = 400,
-            totalFrames = 28,
-            framesPerRow = 6,
-            animationSpeed = 40,
-            localWidth = 160.dp,
-            renderScale = 1f
-        )
-        val wolfHit: SpriteAsset = SpriteAsset(
-            drawable = Res.drawable.wolf_hit,
-            frameWidth = 560,
-            frameHeight = 400,
-            totalFrames = 14,
-            framesPerRow = 6,
-            animationSpeed = 40,
-            localWidth = 160.dp,
-            renderScale = 1f
-        )
-        val wolfDead: SpriteAsset = SpriteAsset(
-            drawable = Res.drawable.wolf_dead,
-            frameWidth = 560,
-            frameHeight = 400,
-            totalFrames = 26,
-            framesPerRow = 6,
-            animationSpeed = 46,
-            localWidth = 160.dp,
-            renderScale = 1f
-        )
-        val fireEffect: SpriteAsset = SpriteAsset(
-            drawable = Res.drawable.fire_sprite,
-            frameWidth = 128,
-            frameHeight = 128,
-            totalFrames = 21,
-            framesPerRow = 7,
-            animationSpeed = 100,
-            localWidth = 70.dp,
-            renderScale = 1f
-        )
-    }
-}
-data class SpriteAsset(
-    val drawable: DrawableResource,
-    val frameWidth: Int,
-    val frameHeight: Int,
-    val totalFrames: Int,
-    val framesPerRow: Int,
-    val animationSpeed: Long,
-    val localWidth: Dp,
-    val renderScale: Float = 1f,
-    val playBackwards: Boolean = false,
-    val pingPong: Boolean = false,
-){
-    fun scaleWidthFactor(density: Density): Float {
-        val frameWidthDp = with(density) { frameWidth.toDp() }
-        return localWidth / frameWidthDp
-    }
-    val effectiveWidth: Dp
-        get() = localWidth * renderScale
-    val ratio: Float
-        get() = frameHeight.toFloat() / frameWidth.toFloat()
-
-    fun scaleFactorRelativeTo(
-        other: SpriteAsset,
-        factor: Float,
-        density: Density
-    ): Float {
-        val frameWidthDp = with(density) { frameWidth.toDp() }
-        val otherLogical = other.localWidth * factor
-        return otherLogical / frameWidthDp
     }
 }
 

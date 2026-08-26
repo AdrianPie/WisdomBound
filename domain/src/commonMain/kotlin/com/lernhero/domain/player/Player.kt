@@ -1,8 +1,12 @@
 package com.lernhero.domain.player
 
+import com.lernhero.domain.progress.GameStats
 import com.lernhero.domain.reading.Book
 import com.lernhero.domain.reading.ReadingDayProgress
 import com.lernhero.domain.reading.ReadingStats
+import com.lernhero.domain.reading.SavedWord
+import com.lernhero.domain.town.ProductionState
+import com.lernhero.domain.town.TownResources
 import kotlinx.serialization.Serializable
 
 @Serializable
@@ -12,10 +16,34 @@ data class Player(
     val email: String? = null,
     val character: HeroClass? = null,
     val money: Int = 0,
+    /** Poziom, XP i rozdane punkty statystyk - patrz [PlayerProgress]. */
+    val progress: PlayerProgress = PlayerProgress(),
+    /**
+     * Liczniki calego konta (pytania, celnosc per kategoria, walki, rekordy). Z nich licza sie
+     * osiagniecia - patrz [com.lernhero.domain.progress.AchievementCatalog] - wiec nie ma osobnego
+     * zapisu "co juz odblokowane", ktory moglby sie rozjechac ze statystykami.
+     */
+    val stats: GameStats = GameStats(),
     val equipment: PlayerEquipment = PlayerEquipment(),
     val ownedItems: List<String> = emptyList(),
     /** Multiset of [MonsterCard] ids the player owns (duplicates allowed). */
     val ownedMonsters: List<String> = emptyList(),
+    /**
+     * Poziom kompana per KARTA (id potwora -> poziom 1..50, brak wpisu = poziom 1). Kupowany za
+     * zloto - patrz [com.lernhero.domain.monster.MonsterLevels]. Trzymany per karta, a nie per
+     * sztuka, wiec duplikaty sluza do sprzedazy, a nie do mnozenia poziomow.
+     */
+    val monsterLevels: Map<String, Int> = emptyMap(),
+    /**
+     * Gwiazdki kompana per karta (id -> 1..5, brak wpisu = 1). Podnoszone DUPLIKATAMI - patrz
+     * [com.lernhero.domain.monster.MonsterStars]. To gwiazdki, a nie zloto, zdejmuja sufit poziomu.
+     */
+    val monsterStars: Map<String, Int> = emptyMap(),
+    /**
+     * Poziomy zaklec kompanow: "idKarty:idZaklecia" -> poziom (brak wpisu = 1). Kupowane za
+     * esencje - patrz [com.lernhero.domain.monster.MonsterSpellLevels].
+     */
+    val monsterSpellLevels: Map<String, Int> = emptyMap(),
     /** Companion slots for the pre-battle party. Hero is implicit; entries are [MonsterCard] ids or null. */
     val party: List<String?> = emptyList(),
     /** Zaklecia kupione w sklepie (id z katalogu zaklec). */
@@ -35,6 +63,25 @@ data class Player(
     /** Ostatnia przeczytana strona per ksiazka (id ksiazki -> numer strony). */
     val bookProgress: Map<String, Int> = emptyMap(),
     /** Ksiazki wgrane przez gracza - te wbudowane (BundledBooks) nie musza tu siedziec. */
-    val importedBooks: List<Book> = emptyList()
+    val importedBooks: List<Book> = emptyList(),
+    /** Slowa zapisane z czytnika przyciskiem "zakladka" - surowiec pod quiz ze slowek. */
+    val savedWords: List<SavedWord> = emptyList(),
+    /**
+     * Postep w kampanii: poziom trudnosci ([com.lernhero.domain.run.RunDifficulty.name]) -> najwyzszy
+     * oczyszczony globalny numer planszy. Brak wpisu = nic jeszcze nie zdobyte na tym tierze.
+     * Patrz [com.lernhero.domain.story.StoryProgress].
+     */
+    val storyProgress: Map<String, Int> = emptyMap(),
+    /**
+     * Kiedy ostatnio odebrano nagrody idle z kampanii (epoch millis, 0 = nigdy). Od tego momentu
+     * liczy sie kolejne naliczenie - patrz [com.lernhero.domain.story.IdleRewards].
+     */
+    val idleCollectedAt: Long = 0L,
+    /** Surowce miasta - drewno, kamien, losy do summonow. */
+    val townResources: TownResources = TownResources(),
+    /** Stan tartaku (produkuje drewno) - patrz [com.lernhero.domain.town.ProductionMath]. */
+    val sawmill: ProductionState = ProductionState(),
+    /** Stan kamieniolomu (produkuje kamien). */
+    val quarry: ProductionState = ProductionState()
 )
 

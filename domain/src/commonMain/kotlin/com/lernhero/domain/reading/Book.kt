@@ -14,7 +14,27 @@ enum class BookSource {
 
 @Serializable
 enum class BookFormat {
-    Pdf
+    /** Czysty tekst - jedyny format, ktory dzis potrafimy pokazac w trybie reflow. */
+    Txt,
+    Epub,
+    Pdf;
+
+    /**
+     * Czy format da sie przelac przez [BookContent] i pokazac jako prawdziwy tekst.
+     * Tylko takie ksiazki maja tlumaczenie slow i uczciwy licznik slow - PDF zostaje
+     * bitmapa, wiec nie ma w nim czego dotknac ani czego policzyc.
+     */
+    val supportsReflow: Boolean
+        get() = this != Pdf
+
+    companion object {
+        /** Rozpoznanie po nazwie pliku - to wszystko, czym dysponujemy przy imporcie. */
+        fun ofFileName(name: String): BookFormat = when {
+            name.endsWith(".txt", ignoreCase = true) -> Txt
+            name.endsWith(".epub", ignoreCase = true) -> Epub
+            else -> Pdf
+        }
+    }
 }
 
 /**
@@ -38,6 +58,14 @@ data class Book(
  */
 object BundledBooks {
     val ALL: List<Book> = listOf(
+        Book(
+            id = "bundled_lantern_keeper",
+            title = "The Lantern Keeper",
+            author = "Tekst przykladowy",
+            format = BookFormat.Txt,
+            source = BookSource.Bundled,
+            locator = "files/books/sample_reflow.txt"
+        ),
         Book(
             id = "bundled_sample_tales",
             title = "Przykladowe opowiadania",

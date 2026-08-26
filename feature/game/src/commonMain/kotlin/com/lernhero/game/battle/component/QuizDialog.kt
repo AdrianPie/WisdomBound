@@ -2,8 +2,12 @@ package com.lernhero.game.battle.component
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.core.CubicBezierEasing
+import androidx.compose.animation.core.MutableTransitionState
+import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
-import androidx.compose.animation.fadeOut
+import androidx.compose.animation.scaleIn
+import androidx.compose.animation.slideInHorizontally
 import androidx.compose.animation.slideInVertically
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -13,31 +17,31 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableFloatStateOf
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.withFrameMillis
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.lerp
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -45,26 +49,55 @@ import androidx.compose.ui.unit.sp
 import com.lernhero.domain.combat.live.AnswerTimer
 import com.lernhero.domain.combat.live.StreakTracker
 import com.lernhero.game.battle.BattleUiState
+import com.lernhero.game.battle.LiveQuizState
+import com.lernhero.game.battle.MultipleChoiceQuestion
+import com.lernhero.game.battle.OrderingQuestion
 import com.lernhero.game.battle.QuizAnswer
+import com.lernhero.game.battle.QuizQuestion
+import com.lernhero.game.battle.WRONG_ANSWER_ENEMY_BONUS
+import com.lernhero.game.battle.WRONG_ANSWER_MULTIPLIER
 import com.lernhero.shared.theme.FontFirst
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive
 import kotlin.time.TimeSource
 
-/** Paleta jasnego, "kartowego" panelu quizu - odbite od ciemnej, zlotej reszty gry, zeby pytanie wyraznie odcinalo sie od pola bitwy i bylo jak najlatwiej czytelne. */
-private val PanelBg = Color(0xFFF3E8D4)
-private val PanelBorder = Color(0xFFC8A45A)
-private val InkStrong = Color(0xFF2A1D12)
-private val InkMuted = Color(0xFF8A7859)
-private val BubbleBg = Color(0xFF241A2E)
-private val BubbleText = Color(0xFFF6EEDD)
+/**
+ * Paleta jasnego, "kartowego" panelu quizu - odbite od ciemnej, zlotej reszty gry, zeby pytanie
+ * wyraznie odcinalo sie od pola bitwy i bylo jak najlatwiej czytelne. `internal`, bo tej samej
+ * "kartowej" oprawy uzywa tez [com.lernhero.game.battle.component.BossEventQuizBar] - specjalne
+ * zaklecie bossa ma wygladac jak normalny quiz, tylko z inna zawartoscia w srodku.
+ */
+/**
+ * Czas jednego, wspolnego przejscia calej sceny walki: arena kurczy sie i oddaje miejsce, a panel
+ * quizu w tym samym rytmie wjezdza z dolu. Jedna wartosc dla obu, zeby to byl jeden ruch kamery,
+ * a nie dwie osobne animacje - patrz [com.lernhero.game.battle.BattleScreen].
+ */
+internal const val SCENE_TRANSITION_MS = 780
+
+/**
+ * Klasyczne "ease-out cubic": szybki start, delikatne wyhamowanie na koncu. Uzywane przez cala
+ * scene walki, zeby kazdy jej element zwalnial tak samo.
+ */
+internal val EaseOutCubic = CubicBezierEasing(0.33f, 1f, 0.68f, 1f)
+
+internal val PanelBg = Color(0xFFF3E8D4)
+internal val PanelBorder = Color(0xFFC8A45A)
+internal val InkStrong = Color(0xFF2A1D12)
+internal val InkMuted = Color(0xFF8A7859)
+internal val BubbleBg = Color(0xFF241A2E)
+internal val BubbleText = Color(0xFFF6EEDD)
+
+/** Ksztalt panelu i "kutej", zlotej ramki wokol niego - dwie warstwy zlota daja wrazenie ozdobnej oprawy. */
+internal val PanelShape = RoundedCornerShape(topStart = 24.dp, topEnd = 24.dp)
+internal val PanelGradient = Brush.verticalGradient(listOf(Color(0xFFFAF1DE), PanelBg))
+internal val FrameGradient = Brush.verticalGradient(listOf(Color(0xFFFFE9A8), PanelBorder, Color(0xFF8A6B34)))
 
 /** Kolory ponumerowanych krazkow przy odpowiedziach - stale przypisanie do pozycji 1-4, jak w grach z quizami. */
 private val OptionColors = listOf(
-    Color(0xFF8B5CF6), // 1 - fiolet
-    Color(0xFF22A55E), // 2 - zielen
-    Color(0xFF2F8FE0), // 3 - blekit
-    Color(0xFFE08A2F) // 4 - pomarancz
+    Color(0xFF8B5CF6), // 1/A - fiolet
+    Color(0xFF22A55E), // 2/B - zielen
+    Color(0xFF2F8FE0), // 3/C - blekit
+    Color(0xFFE08A2F) // 4/D - pomarancz
 )
 
 /**
@@ -72,14 +105,18 @@ private val OptionColors = listOf(
  * dopoki nie padnie odpowiedz. Pasek nad pytaniem odlicza czas na odpowiedz: im szybciej klikniesz,
  * tym mocniejsza salwa poleci w tej turze.
  *
- * Ekran jest teraz pionowy (portrait), wiec panel jest waski i wysoki - pytanie + metryki siedza
- * u gory, a siatka 2x2 odpowiedzi zajmuje cala szerokosc ponizej, zamiast dzielic ja na pol z
- * pytaniem jak w starym, poziomym ukladzie.
+ * Obsluguje dwa rodzaje pytan: [MultipleChoiceQuestion] (jeden wybor z czterech, [onAnswer]) i
+ * [OrderingQuestion] (ulozenie wszystkich elementow we wlasciwej kolejnosci, [onOrderPick] - jedno
+ * klikniecie dodaje kolejny element na koniec ukladanej sekwencji).
+ *
+ * Ekran jest pionowy (portrait), wiec panel jest waski i wysoki - pytanie + metryki siedza u gory,
+ * a odpowiedzi ida w dol jedna pod druga, pelnej szerokosci "pigulki", jak w grze z reference.
  */
 @Composable
 fun LiveQuizBar(
     state: BattleUiState,
     onAnswer: (String) -> Unit,
+    onOrderPick: (String) -> Unit,
     onContinue: () -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -93,107 +130,288 @@ fun LiveQuizBar(
         onContinue()
     }
 
-    Surface(
-        modifier = modifier.fillMaxSize(),
-        shape = RoundedCornerShape(topStart = 24.dp, topEnd = 24.dp),
-        color = PanelBg,
-        border = androidx.compose.foundation.BorderStroke(2.dp, PanelBorder)
+    // Sam "wjazd" panelu z dolu robi juz kontener sceny (BattleScreen.SceneBottomPanel) - to on
+    // plynnie podnosi gorna krawedz tego panelu w rytm kurczacej sie areny. Tutaj zostaje wylacznie
+    // to, co dzieje sie W SRODKU panelu: pytanie, a potem odpowiedzi po kolei.
+    Box(
+        modifier = modifier
+            .fillMaxSize()
+            .clip(PanelShape)
+            .background(PanelGradient)
+            .border(3.dp, FrameGradient, PanelShape)
     ) {
-        Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(horizontal = 16.dp, vertical = 10.dp),
-            verticalArrangement = Arrangement.spacedBy(8.dp)
-        ) {
             Column(
                 modifier = Modifier
-                    .fillMaxWidth()
-                    .verticalScroll(rememberScrollState()),
+                    .fillMaxSize()
+                    .padding(horizontal = 16.dp, vertical = 10.dp),
                 verticalArrangement = Arrangement.spacedBy(8.dp)
             ) {
-                StreakPipRow(streak = state.streak)
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .verticalScroll(rememberScrollState()),
+                    verticalArrangement = Arrangement.spacedBy(8.dp)
+                ) {
+                    StreakPipRow(streak = state.streak)
 
-                AnswerCountdownBar(questionId = question.id, revealed = quiz.revealed)
+                    if (question is OrderingQuestion) {
+                        SequenceProgressRow(question = question, orderedSelection = quiz.orderedSelection)
+                    }
 
-                QuestionBubble(prompt = question.prompt)
+                    AnswerCountdownBar(questionId = question.id, revealed = quiz.revealed)
 
-                question.flag?.let { flag ->
-                    Surface(
+                    QuestionEntrance(questionId = question.id) {
+                        QuestionBubble(prompt = question.prompt)
+                    }
+
+                    if (question is MultipleChoiceQuestion) {
+                        question.flag?.let { flag ->
+                            Box(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .clip(RoundedCornerShape(10.dp))
+                                    .background(Color.White)
+                                    .border(1.dp, PanelBorder, RoundedCornerShape(10.dp))
+                            ) {
+                                Image(
+                                    painter = org.jetbrains.compose.resources.painterResource(flag),
+                                    contentDescription = question.prompt,
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                        .height(64.dp)
+                                        .padding(8.dp),
+                                    contentScale = ContentScale.Fit
+                                )
+                            }
+                        }
+                    }
+
+                    Row(
                         modifier = Modifier.fillMaxWidth(),
-                        shape = RoundedCornerShape(10.dp),
-                        color = Color.White,
-                        border = androidx.compose.foundation.BorderStroke(1.dp, PanelBorder)
+                        horizontalArrangement = Arrangement.spacedBy(6.dp),
+                        verticalAlignment = Alignment.CenterVertically
                     ) {
-                        Image(
-                            painter = org.jetbrains.compose.resources.painterResource(flag),
-                            contentDescription = question.prompt,
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .height(64.dp)
-                                .padding(8.dp),
-                            contentScale = ContentScale.Fit
+                        QuizBadge(text = question.category, color = Color(0xFF2F8FE0))
+                        QuizBadge(text = question.difficulty, color = difficultyColor(question.difficulty))
+                        QuizBadge(text = "+${question.reward} pkt", color = Color(0xFFE0A93A))
+                    }
+
+                    // Stawka tej tury - zeby zawsze bylo widac, co konkretnie daje dobra odpowiedz,
+                    // a co kosztuje zla. Bez tego gracz odpowiada "w ciemno" i nie widzi zwiazku
+                    // miedzy quizem a tym, co dzieje sie na polu bitwy.
+                    if (!quiz.revealed) {
+                        StakesRow(streak = state.streak)
+                    }
+
+                    if (quiz.revealed) {
+                        RevealBanner(
+                            correct = quiz.answeredCorrectly,
+                            correctText = revealCorrectText(question, quiz),
+                            reward = question.reward
                         )
                     }
                 }
 
-                Row(
+                // Odpowiedzi jedna pod druga, pelnej szerokosci. Najpierw na miejsce trafia pytanie
+                // ([QUESTION_LEAD_MILLIS]), dopiero potem wjezdzaja z boku kolejne odpowiedzi -
+                // 1, 2, 3, 4 - kazda o [TILE_STAGGER_MILLIS] pozniej od poprzedniej.
+                Column(
                     modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.spacedBy(6.dp),
-                    verticalAlignment = Alignment.CenterVertically
+                    verticalArrangement = Arrangement.spacedBy(10.dp)
                 ) {
-                    QuizBadge(text = question.category, color = Color(0xFF2F8FE0))
-                    QuizBadge(text = question.difficulty, color = difficultyColor(question.difficulty))
-                    QuizBadge(text = "+${question.reward} pkt", color = Color(0xFFE0A93A))
-                }
+                    var visibleCount by remember(question.id) { mutableStateOf(0) }
+                    LaunchedEffect(question.id) {
+                        visibleCount = 0
+                        val optionCount = when (question) {
+                            is MultipleChoiceQuestion -> question.answers.size
+                            is OrderingQuestion -> question.items.size
+                        }
+                        delay(QUESTION_LEAD_MILLIS)
+                        repeat(optionCount) {
+                            visibleCount += 1
+                            delay(TILE_STAGGER_MILLIS)
+                        }
+                    }
 
-                if (quiz.revealed) {
-                    RevealBanner(
-                        correct = quiz.answeredCorrectly,
-                        correctText = quiz.correctAnswer?.text.orEmpty(),
-                        reward = question.reward
-                    )
-                }
-            }
+                    when (question) {
+                        is MultipleChoiceQuestion -> question.answers.forEachIndexed { index, answer ->
+                            AnimatedVisibility(
+                                visible = index < visibleCount,
+                                enter = fadeIn(tween(TILE_ENTER_MILLIS, easing = EaseOutCubic)) +
+                                    slideInHorizontally(
+                                        animationSpec = tween(TILE_ENTER_MILLIS, easing = EaseOutCubic)
+                                    ) { fullWidth -> fullWidth / 2 }
+                            ) {
+                                val visual = when {
+                                    !quiz.revealed -> OptionVisual.IDLE
+                                    answer.isCorrect -> OptionVisual.CORRECT
+                                    quiz.selectedAnswerId == answer.id -> OptionVisual.WRONG
+                                    else -> OptionVisual.FADED
+                                }
+                                QuizOptionTile(
+                                    label = "${index + 1}",
+                                    badgeColor = OptionColors[index % OptionColors.size],
+                                    text = answer.text,
+                                    visual = visual,
+                                    enabled = !quiz.revealed,
+                                    onClick = { onAnswer(answer.id) },
+                                    modifier = Modifier.fillMaxWidth()
+                                )
+                            }
+                        }
 
-            // Siatka 2x2 na pelnej szerokosci ekranu, ponizej pytania - kazdy wiersz zajmuje
-            // polowe pozostalej wysokosci, stabilnie niezaleznie od dlugosci tekstu odpowiedzi.
-            Column(
-                modifier = Modifier
-                    .weight(1f)
-                    .fillMaxWidth(),
-                verticalArrangement = Arrangement.spacedBy(10.dp)
-            ) {
-                question.answers.chunked(2).forEachIndexed { rowIndex, rowAnswers ->
-                    Row(
-                        modifier = Modifier.weight(1f).fillMaxWidth(),
-                        horizontalArrangement = Arrangement.spacedBy(10.dp)
-                    ) {
-                        rowAnswers.forEachIndexed { columnIndex, answer ->
-                            val number = rowIndex * 2 + columnIndex + 1
-                            AnswerTile(
-                                number = number,
-                                answer = answer,
-                                revealed = quiz.revealed,
-                                picked = quiz.selectedAnswerId == answer.id,
-                                onClick = { onAnswer(answer.id) },
-                                modifier = Modifier.weight(1f).fillMaxHeight()
-                            )
+                        is OrderingQuestion -> question.items.forEachIndexed { index, item ->
+                            AnimatedVisibility(
+                                visible = index < visibleCount,
+                                enter = fadeIn(tween(TILE_ENTER_MILLIS, easing = EaseOutCubic)) +
+                                    slideInHorizontally(
+                                        animationSpec = tween(TILE_ENTER_MILLIS, easing = EaseOutCubic)
+                                    ) { fullWidth -> fullWidth / 2 }
+                            ) {
+                                val position = quiz.orderedSelection.indexOf(item.id)
+                                val visual = when {
+                                    quiz.revealed -> if (position == item.correctPosition) OptionVisual.CORRECT else OptionVisual.WRONG
+                                    position != -1 -> OptionVisual.SELECTED
+                                    else -> OptionVisual.IDLE
+                                }
+                                QuizOptionTile(
+                                    label = if (position != -1) "${position + 1}" else itemLabel(index),
+                                    badgeColor = OptionColors[index % OptionColors.size],
+                                    text = item.text,
+                                    visual = visual,
+                                    enabled = !quiz.revealed && position == -1,
+                                    onClick = { onOrderPick(item.id) },
+                                    modifier = Modifier.fillMaxWidth()
+                                )
+                            }
                         }
                     }
                 }
             }
         }
+}
+
+/**
+ * Co jest do wygrania/stracenia w tej turze - dwa kafelki, dobra i zla odpowiedz, z konkretnymi
+ * liczbami z [WRONG_ANSWER_MULTIPLIER]/[WRONG_ANSWER_ENEMY_BONUS]. Gdy gracz ma passe, dochodzi
+ * trzeci znacznik z informacja, ile jeszcze do ulti.
+ */
+@Composable
+private fun StakesRow(streak: StreakTracker) {
+    val wrongPercent = (WRONG_ANSWER_MULTIPLIER * 100).toInt()
+    val enemyBonusPercent = ((WRONG_ANSWER_ENEMY_BONUS - 1f) * 100).toInt()
+
+    Column(
+        modifier = Modifier.fillMaxWidth(),
+        verticalArrangement = Arrangement.spacedBy(4.dp)
+    ) {
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.spacedBy(6.dp)
+        ) {
+            StakeTile(
+                icon = "✅",
+                title = "PELNA SALWA",
+                detail = "100% ataku druzyny",
+                accent = Color(0xFF22A55E),
+                modifier = Modifier.weight(1f)
+            )
+            StakeTile(
+                icon = "❌",
+                title = "$wrongPercent% ATAKU",
+                detail = "wrogowie bija +$enemyBonusPercent%",
+                accent = Color(0xFFD1453D),
+                modifier = Modifier.weight(1f)
+            )
+        }
+
+        val toUlti = ULTI_STREAK_TARGET - streak.consecutiveCorrect
+        if (streak.consecutiveCorrect > 0 && toUlti > 0) {
+            Text(
+                text = "🔥 Passa ${streak.consecutiveCorrect} - jeszcze $toUlti do ULTI",
+                color = Color(0xFFE0A93A),
+                fontFamily = FontFirst(),
+                fontWeight = FontWeight.Bold,
+                fontSize = 10.sp
+            )
+        }
+    }
+}
+
+@Composable
+private fun StakeTile(
+    icon: String,
+    title: String,
+    detail: String,
+    accent: Color,
+    modifier: Modifier = Modifier
+) {
+    Row(
+        modifier = modifier
+            .clip(RoundedCornerShape(10.dp))
+            .background(accent.copy(alpha = 0.10f))
+            .border(1.5.dp, accent.copy(alpha = 0.55f), RoundedCornerShape(10.dp))
+            .padding(horizontal = 8.dp, vertical = 6.dp),
+        horizontalArrangement = Arrangement.spacedBy(6.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Text(text = icon, fontSize = 12.sp)
+        Column(verticalArrangement = Arrangement.spacedBy(1.dp)) {
+            Text(
+                text = title,
+                color = accent,
+                fontFamily = FontFirst(),
+                fontWeight = FontWeight.Bold,
+                fontSize = 10.sp
+            )
+            Text(text = detail, color = InkMuted, fontFamily = FontFirst(), fontSize = 9.sp)
+        }
+    }
+}
+
+/** Ile poprawnych z rzedu odpala ulti - zgodne z ULTI_STREAK w domain.combat.live. */
+private const val ULTI_STREAK_TARGET = 5
+
+/** Litera przypisana do elementu ukladanki wedlug jego miejsca w wyswietlonej (przetasowanej) liscie - A, B, C, D... */
+private fun itemLabel(displayIndex: Int): String = ('A' + displayIndex).toString()
+
+/** Poprawna odpowiedz/kolejnosc pokazywana w [RevealBanner] po nietrafionej probie. */
+private fun revealCorrectText(question: QuizQuestion, quiz: LiveQuizState): String = when (question) {
+    is MultipleChoiceQuestion -> quiz.correctAnswer?.text.orEmpty()
+    is OrderingQuestion -> question.items.sortedBy { it.correctPosition }.joinToString(" → ") { it.text }
+}
+
+/**
+ * Wejscie samego dymka pytania - pierwszy element, ktory laduje na miejscu w panelu (odpowiedzi ida
+ * po nim, patrz [QUESTION_LEAD_MILLIS]). Odtwarzane raz na kazde nowe [questionId].
+ */
+@Composable
+private fun QuestionEntrance(questionId: String, content: @Composable () -> Unit) {
+    val visibleState = remember(questionId) { MutableTransitionState(false).apply { targetState = true } }
+    AnimatedVisibility(
+        visibleState = visibleState,
+        enter = fadeIn(tween(QUESTION_ENTER_MILLIS, easing = EaseOutCubic)) +
+            scaleIn(
+                initialScale = 0.94f,
+                animationSpec = tween(QUESTION_ENTER_MILLIS, easing = EaseOutCubic)
+            ) +
+            slideInVertically(
+                animationSpec = tween(QUESTION_ENTER_MILLIS, easing = EaseOutCubic)
+            ) { fullHeight -> -fullHeight / 3 }
+    ) {
+        content()
     }
 }
 
 /** Dymek pytania - ciemna, kontrastowa "karteczka" nad odpowiedziami, jak w grze z reference. */
 @Composable
-private fun QuestionBubble(prompt: String, modifier: Modifier = Modifier) {
+internal fun QuestionBubble(prompt: String, modifier: Modifier = Modifier) {
     Column(modifier = modifier.fillMaxWidth()) {
-        Surface(
-            modifier = Modifier.fillMaxWidth(),
-            shape = RoundedCornerShape(18.dp),
-            color = BubbleBg
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .clip(RoundedCornerShape(18.dp))
+                .background(BubbleBg)
         ) {
             Text(
                 text = prompt,
@@ -223,13 +441,75 @@ private val BubbleTailShape = androidx.compose.foundation.shape.GenericShape { s
 }
 
 /**
- * Pasek czasu na odpowiedz tuz nad pytaniem - startuje pelny (5 segmentow) w chwili pojawienia
- * sie pytania i opada segment po segmencie. Im wiecej segmentow zostalo w chwili odpowiedzi, tym
- * mocniej drużyna uderzy w tej turze - stad kolor jedzie od zielonego (pelna moc) do czerwonego
- * (ostatni, najslabszy segment).
+ * Rzad krazkow-slotow nad pytaniem "ulóz w kolejnosci" - jeden slot na kazdy element, polaczone
+ * strzalkami. Puste sloty czekaja na kolejne klikniecie, wypelnione pokazuja litere i kolor
+ * elementu, ktory tam wyladowal - dzieki temu widac budowana sekwencje na biezaco.
  */
 @Composable
-internal fun AnswerCountdownBar(questionId: String, revealed: Boolean, modifier: Modifier = Modifier) {
+private fun SequenceProgressRow(
+    question: OrderingQuestion,
+    orderedSelection: List<String>,
+    modifier: Modifier = Modifier
+) {
+    Row(
+        modifier = modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.spacedBy(6.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        question.items.indices.forEach { slot ->
+            val filledId = orderedSelection.getOrNull(slot)
+            val filledIndex = filledId?.let { id -> question.items.indexOfFirst { it.id == id } }?.takeIf { it >= 0 }
+            val slotColor = filledIndex?.let { OptionColors[it % OptionColors.size] } ?: PanelBorder
+
+            Box(
+                modifier = Modifier
+                    .size(28.dp)
+                    .clip(CircleShape)
+                    .background(if (filledIndex != null) slotColor else Color.White)
+                    .border(2.dp, slotColor, CircleShape),
+                contentAlignment = Alignment.Center
+            ) {
+                if (filledIndex != null) {
+                    Text(
+                        text = itemLabel(filledIndex),
+                        color = Color.White,
+                        fontFamily = FontFirst(),
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 12.sp
+                    )
+                }
+            }
+
+            if (slot != question.items.lastIndex) {
+                Text(
+                    text = "›",
+                    color = InkMuted,
+                    fontFamily = FontFirst(),
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 16.sp
+                )
+            }
+        }
+    }
+}
+
+/**
+ * Pasek czasu na odpowiedz tuz nad pytaniem - startuje pelny ([AnswerTimer.SEGMENTS] segmentow) w
+ * chwili pojawienia sie pytania i opada segment po segmencie przez [AnswerTimer.WINDOW_MS] (kilka
+ * sekund, nie blyskawicznie). Im wiecej segmentow zostalo w chwili odpowiedzi, tym mocniej druzyna
+ * uderzy w tej turze - stad kolor jedzie od czerwonego (ostatni, najslabszy segment) do zielonego
+ * (pelna moc). Liczba sekund obok paska pokazuje dokladnie, ile jeszcze zostalo.
+ *
+ * Ten sam komponent (i to samo miejsce w panelu) uzywa [com.lernhero.game.battle.component.BossEventQuizBar]
+ * dla zaklecia bossa - std parametr [label], zeby podpis dalo sie dopasowac do kontekstu.
+ */
+@Composable
+internal fun AnswerCountdownBar(
+    questionId: String,
+    revealed: Boolean,
+    label: String = "SILA CIOSU",
+    modifier: Modifier = Modifier
+) {
     var remainingFraction by remember(questionId) { mutableFloatStateOf(1f) }
 
     LaunchedEffect(questionId, revealed) {
@@ -247,21 +527,35 @@ internal fun AnswerCountdownBar(questionId: String, revealed: Boolean, modifier:
     // tej wartosci, ktora policzyla mnoznik obrazen tej tury - pasek pokazuje to, co faktycznie trafilo.
     val litSegments = AnswerTimer.segmentIndexFor(remainingFraction) + 1
     val leadColor by animateColorAsState(segmentColor(litSegments - 1))
+    val remainingSeconds = remainingFraction * AnswerTimer.WINDOW_MS / 1000f
 
     Column(modifier = modifier.fillMaxWidth()) {
-        Text(
-            text = "SILA CIOSU",
-            color = InkMuted,
-            fontFamily = FontFirst(),
-            fontWeight = FontWeight.Bold,
-            fontSize = 10.sp
-        )
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Text(
+                text = label,
+                color = InkMuted,
+                fontFamily = FontFirst(),
+                fontWeight = FontWeight.Bold,
+                fontSize = 10.sp
+            )
+            Text(
+                text = "${(remainingSeconds * 10).toInt() / 10f}s",
+                color = leadColor,
+                fontFamily = FontFirst(),
+                fontWeight = FontWeight.Bold,
+                fontSize = 11.sp
+            )
+        }
 
         Row(
             modifier = Modifier
                 .padding(top = 4.dp)
                 .fillMaxWidth(),
-            horizontalArrangement = Arrangement.spacedBy(4.dp)
+            horizontalArrangement = Arrangement.spacedBy(3.dp)
         ) {
             repeat(AnswerTimer.SEGMENTS) { index ->
                 val lit = index < litSegments
@@ -278,13 +572,14 @@ internal fun AnswerCountdownBar(questionId: String, revealed: Boolean, modifier:
     }
 }
 
-/** Kolor kazdego segmentu paska - od czerwonego (ostatni, slaby) po zielony (pelna moc). */
-private fun segmentColor(index: Int): Color = when (index) {
-    4 -> Color(0xFF22A55E)
-    3 -> Color(0xFF7CB342)
-    2 -> Color(0xFFE0A93A)
-    1 -> Color(0xFFE08A2F)
-    else -> Color(0xFFD1453D)
+/**
+ * Kolor kazdego segmentu paska - od czerwonego (indeks 0, ostatni zostaly) po zielony (ostatni
+ * indeks, pelna moc), plynnie interpolowany, wiec dziala dla dowolnej liczby [AnswerTimer.SEGMENTS]
+ * zamiast sztywnej tabeli na 5 wpisow.
+ */
+private fun segmentColor(index: Int): Color {
+    val t = (index.toFloat() / (AnswerTimer.SEGMENTS - 1).coerceAtLeast(1)).coerceIn(0f, 1f)
+    return lerp(Color(0xFFD1453D), Color(0xFF22A55E), t)
 }
 
 /**
@@ -293,11 +588,12 @@ private fun segmentColor(index: Int): Color = when (index) {
  */
 @Composable
 fun ResolvingStrip(state: BattleUiState, modifier: Modifier = Modifier) {
-    Surface(
-        modifier = modifier.fillMaxSize(),
-        shape = RoundedCornerShape(topStart = 24.dp, topEnd = 24.dp),
-        color = PanelBg,
-        border = androidx.compose.foundation.BorderStroke(2.dp, PanelBorder)
+    Box(
+        modifier = modifier
+            .fillMaxSize()
+            .clip(PanelShape)
+            .background(PanelGradient)
+            .border(3.dp, FrameGradient, PanelShape)
     ) {
         Column(
             modifier = Modifier
@@ -373,66 +669,80 @@ private fun difficultyColor(label: String): Color = when (label) {
 /** Ile czasu quiz stoi po odpowiedzi, zebys zdazyl zobaczyc, ktora byla dobra. */
 private const val QUIZ_REVEAL_MILLIS = 550L
 
+/** Odstep miedzy kolejnymi odpowiedziami "wjezdzajacymi" na ekran - szybko, ale po kolei, 1 -> 4. */
+private const val TILE_STAGGER_MILLIS = 95L
+
+/** Ile pytanie ma "dla siebie", zanim zaczna wjezdzac odpowiedzi - zeby czytalo sie je pierwsze. */
+private const val QUESTION_LEAD_MILLIS = 150L
+
+/** Czas wjazdu pojedynczej odpowiedzi i samego dymka pytania. */
+private const val TILE_ENTER_MILLIS = 260
+private const val QUESTION_ENTER_MILLIS = 300
+
 private val AnswerGreen = Color(0xFF22A55E)
 private val AnswerRed = Color(0xFFD1453D)
 private val AnswerFadedBg = Color(0xFFEADFC6)
 private val AnswerFadedText = Color(0xFFB1A283)
 
+/** Stan wizualny jednej "pigulki" odpowiedzi - wspolny dla wyboru pojedynczego i ukladanki. */
+private enum class OptionVisual { IDLE, SELECTED, CORRECT, WRONG, FADED }
+
 /**
- * Kafelek odpowiedzi w siatce 2x2: kolorowy ponumerowany krazek nad tekstem, wypelnia cala swoja
- * cwiartke. Do momentu odpowiedzi wszystkie wygladaja tak samo; po odslonie poprawna zapala sie na
- * zielono, zle klikniecie na czerwono, a reszta gasnie.
+ * Pelnej szerokosci "pigulka" odpowiedzi: kolorowy krazek z etykieta (numer albo litera) i tekst.
+ * [OptionVisual.SELECTED] to stan posredni ukladanki - element juz klikniety, czeka na reszte,
+ * ale wynik jeszcze nie jest znany, wiec jest tylko wygaszony, bez koloru zielonego/czerwonego.
  */
 @Composable
-private fun AnswerTile(
-    number: Int,
-    answer: QuizAnswer,
-    revealed: Boolean,
-    picked: Boolean,
+private fun QuizOptionTile(
+    label: String,
+    badgeColor: Color,
+    text: String,
+    visual: OptionVisual,
+    enabled: Boolean,
     onClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
-    val badgeColor = OptionColors[(number - 1).coerceIn(0, OptionColors.size - 1)]
-
     val container by animateColorAsState(
-        when {
-            !revealed -> Color.White
-            answer.isCorrect -> AnswerGreen
-            picked -> AnswerRed
-            else -> AnswerFadedBg
+        when (visual) {
+            OptionVisual.IDLE -> Color.White
+            OptionVisual.SELECTED -> AnswerFadedBg
+            OptionVisual.CORRECT -> AnswerGreen
+            OptionVisual.WRONG -> AnswerRed
+            OptionVisual.FADED -> AnswerFadedBg
         }
     )
-    val content = when {
-        !revealed -> InkStrong
-        answer.isCorrect || picked -> Color.White
-        else -> AnswerFadedText
+    val content = when (visual) {
+        OptionVisual.CORRECT, OptionVisual.WRONG -> Color.White
+        OptionVisual.FADED, OptionVisual.SELECTED -> AnswerFadedText
+        OptionVisual.IDLE -> InkStrong
     }
-    val borderColor = when {
-        !revealed -> PanelBorder
-        answer.isCorrect -> AnswerGreen
-        picked -> AnswerRed
-        else -> AnswerFadedBg
+    val borderColor = when (visual) {
+        OptionVisual.IDLE -> PanelBorder
+        OptionVisual.SELECTED -> AnswerFadedText
+        OptionVisual.CORRECT -> AnswerGreen
+        OptionVisual.WRONG -> AnswerRed
+        OptionVisual.FADED -> AnswerFadedBg
     }
 
     Row(
         modifier = modifier
-            .clip(RoundedCornerShape(14.dp))
+            .clip(RoundedCornerShape(26.dp))
             .background(container)
-            .border(2.dp, borderColor, RoundedCornerShape(14.dp))
-            .then(if (!revealed) Modifier.clickable(onClick = onClick) else Modifier)
-            .padding(horizontal = 10.dp, vertical = 6.dp),
+            .border(2.dp, borderColor, RoundedCornerShape(26.dp))
+            .then(if (enabled) Modifier.clickable(onClick = onClick) else Modifier)
+            .padding(horizontal = 14.dp, vertical = 12.dp),
         verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(10.dp)
+        horizontalArrangement = Arrangement.spacedBy(12.dp)
     ) {
         Box(
             modifier = Modifier
-                .size(26.dp)
+                .size(28.dp)
                 .clip(CircleShape)
                 .background(badgeColor),
             contentAlignment = Alignment.Center
         ) {
             Text(
-                text = "$number",
+                text = label,
                 color = Color.White,
                 fontFamily = FontFirst(),
                 fontWeight = FontWeight.Bold,
@@ -440,11 +750,11 @@ private fun AnswerTile(
             )
         }
         Text(
-            text = answer.text,
+            text = text,
             color = content,
             fontFamily = FontFirst(),
-            fontWeight = if (revealed && answer.isCorrect) FontWeight.Bold else FontWeight.Normal,
-            fontSize = 13.sp,
+            fontWeight = if (visual == OptionVisual.CORRECT) FontWeight.Bold else FontWeight.Normal,
+            fontSize = 14.sp,
             maxLines = 3,
             modifier = Modifier.weight(1f)
         )

@@ -137,4 +137,29 @@ class AbilitySystemTest {
 
         assertEquals(run(), run(), "Pasek zdolnosci musi byc odtwarzalny z seeda")
     }
+
+    @Test
+    fun `kazde zaklecie ma opis dla ZYWEJ walki, nie tylko dla symulacji`() {
+        // Bez tego zaklecie dziala w BattleEngine, a na ekranie nie robi nic - dokladnie tak przez
+        // dluzszy czas wygladal caly pasek zdolnosci.
+        SpellCatalog.all.forEach { spell ->
+            val live = spell.live
+            val doesSomething = live.damageMultiplier > 0f || live.healMultiplier > 0f || live.freezeTurns > 0
+            assertTrue(doesSomething, "${spell.id} nie robi nic w zywej walce")
+        }
+    }
+
+    @Test
+    fun `zaklecie leczace celuje w sojusznika, raniace we wroga`() {
+        SpellCatalog.all.forEach { spell ->
+            if (spell.live.heals) {
+                assertEquals(SpellTarget.WoundedAlly, spell.live.target, "${spell.id} leczy, wiec cel to sojusznik")
+            } else {
+                assertTrue(
+                    spell.live.target != SpellTarget.WoundedAlly,
+                    "${spell.id} zadaje obrazenia, wiec nie moze celowac w sojusznika"
+                )
+            }
+        }
+    }
 }

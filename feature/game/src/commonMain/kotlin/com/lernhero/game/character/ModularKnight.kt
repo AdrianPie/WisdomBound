@@ -45,6 +45,8 @@ fun ModularKnight(
      * rycerz macha w normalnym tempie.
      */
     attackSpeed: Float = 1f,
+    /** Odpalane gdy pelna sekwencja ataku ([playSwordAttack]) faktycznie sie skonczy - tak walka wie, kiedy naprawde odegrala sie animacja, bez zgadywania czasu z zewnatrz. */
+    onAttackAnimationFinished: () -> Unit = {},
 ) {
     val gear = if (armored) KnightEquipment.FullPlate else equipment
     val wandAttack = remember { Animatable(0f) }
@@ -52,33 +54,28 @@ fun ModularKnight(
 
     fun faster(millis: Int): Int = (millis / attackSpeed).toInt().coerceAtLeast(1)
 
-    suspend fun playWandAttack() {
+    // Szybkie ciecie mieczem - cofniecie, zamach z lekkim przestrzeleniem, powrot. Cala sekwencja
+    // ~360ms przy attackSpeed=1x (dawniej ~3s "kanalowania" jak przy zaklęciu - za wolno na zwykly cios).
+    suspend fun playSwordAttack() {
         wandAttack.stop()
         wandAttack.snapTo(0f)
-        // Anticipation: slight wind-up in the opposite direction
-        wandAttack.animateTo(-0.12f, tween(faster(140), easing = FastOutSlowInEasing))
-        // Rise with a small overshoot, then settle into the pose
-        wandAttack.animateTo(1.06f, tween(faster(380), easing = FastOutSlowInEasing))
-        wandAttack.animateTo(1f, tween(faster(150), easing = LinearOutSlowInEasing))
-        // ~2s channel hold with a gentle pulse instead of a frozen pose
-        repeat(2) {
-            wandAttack.animateTo(0.975f, tween(faster(480), easing = EaseInOutSine))
-            wandAttack.animateTo(1f, tween(faster(480), easing = EaseInOutSine))
-        }
-        // Return with follow-through past neutral, then settle
-        wandAttack.animateTo(-0.05f, tween(faster(340), easing = FastOutSlowInEasing))
-        wandAttack.animateTo(0f, tween(faster(160), easing = LinearOutSlowInEasing))
+        wandAttack.animateTo(-0.18f, tween(faster(70), easing = FastOutSlowInEasing))
+        wandAttack.animateTo(1.08f, tween(faster(90), easing = FastOutSlowInEasing))
+        wandAttack.animateTo(1f, tween(faster(60), easing = LinearOutSlowInEasing))
+        wandAttack.animateTo(0f, tween(faster(140), easing = FastOutSlowInEasing))
     }
 
     LaunchedEffect(attackTrigger) {
         if (attackTrigger > 0) {
-            playWandAttack()
+            playSwordAttack()
+            onAttackAnimationFinished()
         }
     }
 
     LaunchedEffect(localAttackTrigger) {
         if (localAttackTrigger > 0) {
-            playWandAttack()
+            playSwordAttack()
+            onAttackAnimationFinished()
         }
     }
 
@@ -101,38 +98,22 @@ fun ModularKnight(
     )
 
     val attack = wandAttack.value
-    // Whole figure sways together around a pivot near the feet, so legs and torso move
-    // as one body: the head/shoulders swing more (far from the pivot), feet barely move
-    // (close to it).
-    val wholeBodySway = breath * 0.35f + attack * 2.5f
-    // Torso adds a little extra lean at the waist. Rotation only - a vertical breathing
-    // shift was detaching the torso from the hips, rotation keeps them connected.
-    val upperBodySway = breath * 0.6f + attack * 1.7f
-    // Battle-stance drop: the WHOLE figure sinks while the legs bend. The leg angles
-    // below shorten each leg by the same ~11 canvas px this drop adds back, so the
-    // feet land exactly on the ground line instead of hovering or sinking.
-    val stanceDrop = attack.coerceAtLeast(0f) * 6.5f
-    // Extra torso compression onto the hips (down only, waist overlaps the pelvis).
-    val crouch = attack.coerceAtLeast(0f) * 5f
-    val headRotation = counterBreath * 0.45f + attack * -2.8f
+    // Szybkie ciecie mieczem = ruch samej gornej polowy ciala i miecza. Nogi stoja w miejscu
+    // (tylko lekki oddech idle) - zadnego przysiadu/wykroku, ktory wygladal jak przygotowanie
+    // do zapasow, nie do zamachu mieczem.
+    val wholeBodySway = breath * 0.35f + attack * 1f
+    val upperBodySway = breath * 0.6f + attack * 3f
+    val headRotation = counterBreath * 0.45f + attack * -2f
 
-    val backArmShoulderRotation = counterBreath * 0.7f + attack * 8f
-    val backArmElbowRotation = breath * 0.45f + attack * 10f
+    // Limbs are single, rigid pieces (no elbow/knee art) - each rotates as one unit
+    // around its shoulder/hip pivot only.
+    val backArmRotation = counterBreath * 0.7f + attack * 6f
+    // Naturalny luk ciecia mieczem (nie uniesienie jak przy rozdzce) - okolo -70 stopni w szczycie zamachu.
+    val wandArmRotation = breath * 0.8f + attack * -70f
 
-    val wandShoulderRotation = breath * 0.8f + attack * -150f
-    val wandElbowRotation = counterBreath * 0.35f + attack * 10f
-
-    // Attack = asymmetric battle stance. Rear leg (his LEFT) takes the weight: thigh
-    // swings out, knee bends ~35deg and the shin tucks back under the body - a half-kneel.
-    // Front leg (his RIGHT) extends sideways like a lunge, nearly straight. Both bends
-    // shorten the legs by the same amount stanceDrop lowers the figure, so the feet stay
-    // on the ground line, and the ankles counter-rotate to keep them flat.
-    val rearHipRotation = breath * 0.18f + attack * -30f
-    val rearKneeRotation = attack * 35f - wholeBodySway
-    val rearFootRotation = -(wholeBodySway + rearHipRotation + rearKneeRotation)
-    val frontHipRotation = counterBreath * 0.18f + attack * 24f
-    val frontKneeRotation = attack * -12f - wholeBodySway
-    val frontFootRotation = -(wholeBodySway + frontHipRotation + frontKneeRotation)
+    // Nogi zostaja w idle - zero wykroku/przysiadu przy ataku.
+    val rearLegRotation = breath * 0.18f
+    val frontLegRotation = counterBreath * 0.18f
 
     Box(
         modifier = modifier
@@ -152,54 +133,46 @@ fun ModularKnight(
             .graphicsLayer {
                 transformOrigin = KnightPivots.ground
                 rotationZ = wholeBodySway
-                translationY = stanceDrop.dp.toPx()
             }
     ) {
         // Rear leg = character's LEFT leg (screen-right)
         KnightLeg(
-            upperPart = Player.leftUpLeg,
-            lowerPart = Player.leftDownLeg,
-            footPart = Player.leftFoot,
-            hipPivot = KnightPivots.leftUpLeg,
-            kneePivot = KnightPivots.leftDownLeg,
-            anklePivot = KnightPivots.leftFoot,
-            hipRotation = rearHipRotation,
-            kneeRotation = rearKneeRotation,
-            footRotation = rearFootRotation,
-            upperOverlay = if (gear.legs) PlateArmor.leftUpLeg else null,
-            lowerOverlay = if (gear.legs) PlateArmor.leftDownLeg else null,
+            part = Player.leftLeg,
+            pivot = KnightPivots.leftLeg,
+            rotation = rearLegRotation,
             footOverlay = if (gear.feet) PlateArmor.leftFoot else null
         )
         // Front leg = character's RIGHT leg (screen-left)
         KnightLeg(
-            upperPart = Player.rightUpLeg,
-            lowerPart = Player.rightDownLeg,
-            footPart = Player.rightFoot,
-            hipPivot = KnightPivots.rightUpLeg,
-            kneePivot = KnightPivots.rightDownLeg,
-            anklePivot = KnightPivots.rightFoot,
-            hipRotation = frontHipRotation,
-            kneeRotation = frontKneeRotation,
-            footRotation = frontFootRotation,
-            upperOverlay = if (gear.legs) PlateArmor.rightUpLeg else null,
-            lowerOverlay = if (gear.legs) PlateArmor.rightDownLeg else null,
-            footOverlay = if (gear.feet) PlateArmor.rightFoot else null,
-            lowerBehindUpper = true
+            part = Player.rightLeg,
+            pivot = KnightPivots.rightLeg,
+            rotation = frontLegRotation,
+            footOverlay = if (gear.feet) PlateArmor.rightFoot else null
         )
 
         KnightUpperBodyLayer(
             rotation = upperBodySway,
-            lift = crouch
+            lift = 0f
+        ) {
+            // Idle/back arm = character's RIGHT arm (screen-left), drawn behind body/head
+            KnightArm(
+                part = Player.rightHand,
+                pivot = KnightPivots.rightHand,
+                rotation = backArmRotation,
+                handOverlay = if (gear.hands) PlateArmor.rightHand else null
+            )
+        }
+
+        KnightUpperBodyLayer(
+            rotation = upperBodySway,
+            lift = 0f
         ) {
             // Wand/sword arm = character's LEFT arm (screen-right), drawn in front
             KnightArm(
-                upperPart = Player.leftUpHand,
-                lowerPart = Player.leftDownHand,
-                shoulderPivot = KnightPivots.leftUpHand,
-                elbowPivot = KnightPivots.leftDownHand,
-                shoulderRotation = wandShoulderRotation,
-                elbowRotation = wandElbowRotation,
-                lowerOverlay = if (gear.hands) PlateArmor.leftDownHand else null,
+                part = Player.leftHand,
+                pivot = KnightPivots.leftHand,
+                rotation = wandArmRotation,
+                handOverlay = if (gear.hands) PlateArmor.leftHand else null,
                 heldBehind = if (gear.mainHand) PlateArmor.swordBehind else null,
                 heldFront = if (gear.mainHand) PlateArmor.swordFront else null
             )
@@ -208,6 +181,13 @@ fun ModularKnight(
                 contentDescription = null,
                 modifier = Modifier.fillMaxSize()
             )
+            if (gear.chest) {
+                Image(
+                    painter = painterResource(PlateArmor.chest),
+                    contentDescription = null,
+                    modifier = Modifier.fillMaxSize()
+                )
+            }
             Box(
                 modifier = Modifier
                     .fillMaxSize()
@@ -221,30 +201,7 @@ fun ModularKnight(
                     contentDescription = null,
                     modifier = Modifier.fillMaxSize()
                 )
-                if (gear.head) {
-                    Image(
-                        painter = painterResource(PlateArmor.head),
-                        contentDescription = null,
-                        modifier = Modifier.fillMaxSize()
-                    )
-                }
             }
-        }
-
-        KnightUpperBodyLayer(
-            rotation = upperBodySway,
-            lift = crouch
-        ) {
-            // Idle/back arm = character's RIGHT arm (screen-left), drawn behind
-            KnightArm(
-                upperPart = Player.rightUpHand,
-                lowerPart = Player.rightDownHand,
-                shoulderPivot = KnightPivots.rightUpHand,
-                elbowPivot = KnightPivots.rightDownHand,
-                shoulderRotation = backArmShoulderRotation,
-                elbowRotation = backArmElbowRotation,
-                lowerOverlay = if (gear.hands) PlateArmor.rightDownHand else null
-            )
         }
     }
 }
@@ -270,14 +227,10 @@ private fun KnightUpperBodyLayer(
 
 @Composable
 private fun KnightArm(
-    upperPart: DrawableResource,
-    lowerPart: DrawableResource,
-    shoulderPivot: TransformOrigin,
-    elbowPivot: TransformOrigin,
-    shoulderRotation: Float,
-    elbowRotation: Float,
-    upperOverlay: DrawableResource? = null,
-    lowerOverlay: DrawableResource? = null,
+    part: DrawableResource,
+    pivot: TransformOrigin,
+    rotation: Float,
+    handOverlay: DrawableResource? = null,
     heldBehind: DrawableResource? = null,
     heldFront: DrawableResource? = null
 ) {
@@ -285,187 +238,67 @@ private fun KnightArm(
         modifier = Modifier
             .fillMaxSize()
             .graphicsLayer {
-                transformOrigin = shoulderPivot
-                rotationZ = shoulderRotation
+                transformOrigin = pivot
+                rotationZ = rotation
             }
     ) {
+        // Held object (sword handle) sticking out behind the fist
+        heldBehind?.let { held ->
+            Image(
+                painter = painterResource(held),
+                contentDescription = null,
+                modifier = Modifier.fillMaxSize()
+            )
+        }
         Image(
-            painter = painterResource(upperPart),
+            painter = painterResource(part),
             contentDescription = null,
             modifier = Modifier.fillMaxSize()
         )
-        upperOverlay?.let { overlay ->
+        handOverlay?.let { overlay ->
             Image(
                 painter = painterResource(overlay),
                 contentDescription = null,
                 modifier = Modifier.fillMaxSize()
             )
         }
-        Box(
-            modifier = Modifier
-                .fillMaxSize()
-                .graphicsLayer {
-                    transformOrigin = elbowPivot
-                    rotationZ = elbowRotation
-                }
-        ) {
-            // Held object (sword handle) sticking out behind the fist
-            heldBehind?.let { held ->
-                Image(
-                    painter = painterResource(held),
-                    contentDescription = null,
-                    modifier = Modifier.fillMaxSize()
-                )
-            }
+        // Held object (sword blade) in front of the fist
+        heldFront?.let { held ->
             Image(
-                painter = painterResource(lowerPart),
+                painter = painterResource(held),
                 contentDescription = null,
                 modifier = Modifier.fillMaxSize()
             )
-            lowerOverlay?.let { overlay ->
-                Image(
-                    painter = painterResource(overlay),
-                    contentDescription = null,
-                    modifier = Modifier.fillMaxSize()
-                )
-            }
-            // Held object (sword blade) in front of the fist
-            heldFront?.let { held ->
-                Image(
-                    painter = painterResource(held),
-                    contentDescription = null,
-                    modifier = Modifier.fillMaxSize()
-                )
-            }
         }
     }
 }
 
 @Composable
 private fun KnightLeg(
-    upperPart: DrawableResource,
-    lowerPart: DrawableResource,
-    footPart: DrawableResource,
-    hipPivot: TransformOrigin,
-    kneePivot: TransformOrigin,
-    anklePivot: TransformOrigin,
-    hipRotation: Float,
-    kneeRotation: Float,
-    footRotation: Float,
-    upperOverlay: DrawableResource? = null,
-    lowerOverlay: DrawableResource? = null,
-    footOverlay: DrawableResource? = null,
-    lowerBehindUpper: Boolean = false
-) {
-    Box(
-        modifier = Modifier
-            .fillMaxSize()
-            .graphicsLayer {
-                transformOrigin = hipPivot
-                rotationZ = hipRotation
-            }
-    ) {
-        if (lowerBehindUpper) {
-            LegLowerPart(
-                lowerPart = lowerPart,
-                footPart = footPart,
-                kneePivot = kneePivot,
-                anklePivot = anklePivot,
-                kneeRotation = kneeRotation,
-                footRotation = footRotation,
-                lowerOverlay = lowerOverlay,
-                footOverlay = footOverlay
-            )
-            Image(
-                painter = painterResource(upperPart),
-                contentDescription = null,
-                modifier = Modifier.fillMaxSize()
-            )
-            upperOverlay?.let { overlay ->
-                Image(
-                    painter = painterResource(overlay),
-                    contentDescription = null,
-                    modifier = Modifier.fillMaxSize()
-                )
-            }
-        } else {
-            Image(
-                painter = painterResource(upperPart),
-                contentDescription = null,
-                modifier = Modifier.fillMaxSize()
-            )
-            upperOverlay?.let { overlay ->
-                Image(
-                    painter = painterResource(overlay),
-                    contentDescription = null,
-                    modifier = Modifier.fillMaxSize()
-                )
-            }
-            LegLowerPart(
-                lowerPart = lowerPart,
-                footPart = footPart,
-                kneePivot = kneePivot,
-                anklePivot = anklePivot,
-                kneeRotation = kneeRotation,
-                footRotation = footRotation,
-                lowerOverlay = lowerOverlay,
-                footOverlay = footOverlay
-            )
-        }
-    }
-}
-
-@Composable
-private fun LegLowerPart(
-    lowerPart: DrawableResource,
-    footPart: DrawableResource,
-    kneePivot: TransformOrigin,
-    anklePivot: TransformOrigin,
-    kneeRotation: Float,
-    footRotation: Float,
-    lowerOverlay: DrawableResource? = null,
+    part: DrawableResource,
+    pivot: TransformOrigin,
+    rotation: Float,
     footOverlay: DrawableResource? = null
 ) {
     Box(
         modifier = Modifier
             .fillMaxSize()
             .graphicsLayer {
-                transformOrigin = kneePivot
-                rotationZ = kneeRotation
+                transformOrigin = pivot
+                rotationZ = rotation
             }
     ) {
         Image(
-            painter = painterResource(lowerPart),
+            painter = painterResource(part),
             contentDescription = null,
             modifier = Modifier.fillMaxSize()
         )
-        lowerOverlay?.let { overlay ->
+        footOverlay?.let { overlay ->
             Image(
                 painter = painterResource(overlay),
                 contentDescription = null,
                 modifier = Modifier.fillMaxSize()
             )
-        }
-        Box(
-            modifier = Modifier
-                .fillMaxSize()
-                .graphicsLayer {
-                    transformOrigin = anklePivot
-                    rotationZ = footRotation
-                }
-        ) {
-            Image(
-                painter = painterResource(footPart),
-                contentDescription = null,
-                modifier = Modifier.fillMaxSize()
-            )
-            footOverlay?.let { overlay ->
-                Image(
-                    painter = painterResource(overlay),
-                    contentDescription = null,
-                    modifier = Modifier.fillMaxSize()
-                )
-            }
         }
     }
 }

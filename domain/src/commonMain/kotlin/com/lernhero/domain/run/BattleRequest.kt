@@ -18,5 +18,7 @@ data class BattleRequest(
     val kind: BattleKind,
     val waves: Int,
     /** Seed pola mapy - ta sama walka po obrocie ekranu sklada sie tak samo. */
-    val seed: Long
+    val seed: Long,
+    /** Endless mode: fale nadciagaja bez konca (patrz BattleViewModel) - [waves] jest wtedy ignorowane. */
+    val isEndless: Boolean = false
 )

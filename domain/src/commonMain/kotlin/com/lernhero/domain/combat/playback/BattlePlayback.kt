@@ -181,7 +181,9 @@ enum class HitKind {
     Poison,
     Reflect,
     Skill,
-    Heal
+    Heal,
+    /** Cios zatrzymany przez garde ([com.lernhero.domain.run.EndlessBuff.Guard]) - zero obrazen. */
+    Block
 }
 
 sealed class BattlePlaybackStep {

@@ -2,6 +2,7 @@ package com.lernhero.game.character
 
 data class KnightEquipment(
     val head: Boolean = false,
+    val chest: Boolean = false,
     val hands: Boolean = false,
     val legs: Boolean = false,
     val feet: Boolean = false,
@@ -11,6 +12,7 @@ data class KnightEquipment(
         val Empty = KnightEquipment()
         val FullPlate = KnightEquipment(
             head = true,
+            chest = true,
             hands = true,
             legs = true,
             feet = true,
@@ -38,12 +40,13 @@ enum class KnightEquipmentSlot(
 
     val isEquippable: Boolean
         get() = when (this) {
-            Head, Hands, Legs, Feet, MainHand -> true
+            Head, Chest, Hands, Legs, Feet, MainHand -> true
             else -> false
         }
 
     fun toggle(equipment: KnightEquipment): KnightEquipment = when (this) {
         Head -> equipment.copy(head = !equipment.head)
+        Chest -> equipment.copy(chest = !equipment.chest)
         Hands -> equipment.copy(hands = !equipment.hands)
         Legs -> equipment.copy(legs = !equipment.legs)
         Feet -> equipment.copy(feet = !equipment.feet)
@@ -53,6 +56,7 @@ enum class KnightEquipmentSlot(
 
     fun isEquipped(equipment: KnightEquipment): Boolean = when (this) {
         Head -> equipment.head
+        Chest -> equipment.chest
         Hands -> equipment.hands
         Legs -> equipment.legs
         Feet -> equipment.feet

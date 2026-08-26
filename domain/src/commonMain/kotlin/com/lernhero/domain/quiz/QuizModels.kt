@@ -48,3 +48,16 @@ data class QuizEntry(
 ) {
     val answers: List<String> get() = listOf(correct) + wrong
 }
+
+/**
+ * Pytanie typu "ulóz w kolejnosci": gracz nie wybiera jednej poprawnej odpowiedzi, tylko ustawia
+ * wszystkie [items] we wlasciwym porzadku (chronologicznie, od najmniejszego do najwiekszego, itp.).
+ * [items] jest juz zapisane w poprawnej kolejnosci - warstwa UI tasuje je do wyswietlenia.
+ */
+data class OrderingEntry(
+    val id: String,
+    val prompt: String,
+    val items: List<String>,
+    val category: QuizCategory,
+    val difficulty: QuizDifficulty
+)

@@ -29,6 +29,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.foundation.horizontalScroll
+import androidx.compose.foundation.rememberScrollState
+import com.lernhero.domain.run.EndlessBuff
+import com.lernhero.domain.run.UpgradeRarity
 import com.lernhero.game.battle.BattleSpeed
 import com.lernhero.game.battle.GamePhase
 import com.lernhero.shared.theme.FontFirst
@@ -74,6 +78,45 @@ internal fun WaveBadge(wave: Int, heroHpFraction: Float, modifier: Modifier = Mo
                     .clip(RoundedCornerShape(50))
                     .background(Color(0xFF4ADE80))
             )
+        }
+    }
+}
+
+/**
+ * Rzad malych znaczkow aktywnych endless bonusow ([EndlessBuff], patrz BattleViewModel.spawnNextWave) -
+ * pusty poza endless mode, wiec nie zajmuje miejsca w story mode. Przewijalny w bok, bo przy dlugim
+ * biegu i sporym szczesciu moze sie ich uzbierac wiecej, niz zmiesci sie na ekranie na raz.
+ */
+@Composable
+internal fun EndlessBuffRow(buffs: Map<EndlessBuff, Int>, modifier: Modifier = Modifier) {
+    if (buffs.isEmpty()) return
+    Row(
+        modifier = modifier.horizontalScroll(rememberScrollState()),
+        horizontalArrangement = Arrangement.spacedBy(6.dp)
+    ) {
+        buffs.entries.sortedBy { it.key.ordinal }.forEach { (buff, stacks) ->
+            // Ten sam kolor co na karcie wyboru (UpgradeChoiceDialog) - po nim widac klase ulepszenia.
+            val accent = when (buff.rarity) {
+                UpgradeRarity.Common -> Color(0xFFB9B9B9)
+                UpgradeRarity.Rare -> Color(0xFF6FB7FF)
+                UpgradeRarity.Epic -> Color(0xFFC77DFF)
+                UpgradeRarity.Legendary -> Color(0xFFFFC04D)
+            }
+            Box(
+                modifier = Modifier
+                    .clip(RoundedCornerShape(8.dp))
+                    .background(HudInk)
+                    .border(1.5.dp, accent, RoundedCornerShape(8.dp))
+                    .padding(horizontal = 8.dp, vertical = 5.dp)
+            ) {
+                Text(
+                    text = if (stacks > 1) "${buff.title} x$stacks" else buff.title,
+                    color = accent,
+                    fontFamily = FontFirst(),
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 10.sp
+                )
+            }
         }
     }
 }

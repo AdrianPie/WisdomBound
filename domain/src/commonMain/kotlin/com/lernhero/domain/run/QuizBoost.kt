@@ -1,5 +1,9 @@
 package com.lernhero.domain.run
 
+// Zbudowane, jeszcze nie podpiete: nic obecnie nie wola QuizBoost.roll() ani nie czyta wyniku w
+// BattleEngine/BattleViewModel. Zostawione swiadomie jako gotowy element pod przyszla integracje
+// wyniku quizu z walka - nie kasowac jako "martwy kod".
+
 import com.lernhero.domain.combat.StatType
 import com.lernhero.domain.combat.Stats
 import kotlin.random.Random
