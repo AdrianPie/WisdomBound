@@ -50,6 +50,7 @@ import com.lernhero.domain.reading.BookContent
 import com.lernhero.domain.reading.ReadingGoal
 import com.lernhero.domain.reading.ReadingGoalCatalog
 import com.lernhero.domain.reading.ReadingGoalKind
+import com.lernhero.domain.reading.SavedWord
 import com.lernhero.domain.repository.PlayerRepository
 import com.lernhero.shared.theme.FontFirst
 import com.lernhero.shared.theme.FontPixel
@@ -145,6 +146,7 @@ fun ReadingScreen(
                 onOpen = ::open,
                 onImport = requestImport,
                 onClaim = viewModel::claim,
+                onRemoveWord = viewModel::removeWord,
                 insets = libraryInsets
             )
         }
@@ -158,6 +160,7 @@ private fun LibraryView(
     onOpen: (Book) -> Unit,
     onImport: () -> Unit,
     onClaim: (ReadingGoal) -> Unit,
+    onRemoveWord: (SavedWord) -> Unit,
     insets: PaddingValues
 ) {
     Column(
@@ -208,6 +211,8 @@ private fun LibraryView(
 
         ImportButton(onClick = onImport)
 
+        SavedWordsSection(words = state.savedWords, onRemove = onRemoveWord)
+
         state.message?.let { message ->
             Text(text = message, color = Green, fontFamily = FontFirst(), fontSize = 12.sp)
         }
@@ -215,6 +220,104 @@ private fun LibraryView(
         Spacer(modifier = Modifier.height(4.dp))
     }
 }
+
+/**
+ * Fiszki zapisane w czytniku. Bez tej listy slowka byly workiem bez dna - dalo sie je zapisac,
+ * ale nigdzie zobaczyc ani usunac, mimo ze to z nich buduje sie quiz w endless "Wlasne".
+ */
+@Composable
+private fun SavedWordsSection(words: List<SavedWord>, onRemove: (SavedWord) -> Unit) {
+    var expanded by remember { mutableStateOf(false) }
+
+    Text(
+        text = "Moje slowka (${words.size})",
+        color = Gold,
+        fontFamily = FontPixel(),
+        fontWeight = FontWeight.Bold,
+        style = MaterialTheme.typography.titleMedium
+    )
+
+    if (words.isEmpty()) {
+        Text(
+            text = "Dotknij slowa w ksiazce, przetlumacz je i kliknij zakladke - trafi tutaj " +
+                "i bedzie mozna trenowac je w trybie Endless.",
+            color = Muted,
+            fontFamily = FontFirst(),
+            fontSize = 11.sp
+        )
+        return
+    }
+
+    // Dluga lista fiszek zaslonilaby biblioteke, wiec domyslnie pokazujemy tylko poczatek.
+    val visible = if (expanded) words else words.take(COLLAPSED_WORD_COUNT)
+    visible.forEach { word ->
+        SavedWordRow(word = word, onRemove = { onRemove(word) })
+    }
+
+    if (words.size > COLLAPSED_WORD_COUNT) {
+        Text(
+            text = if (expanded) "Zwin" else "Pokaz wszystkie (${words.size})",
+            color = GoldFrame,
+            fontFamily = FontFirst(),
+            fontWeight = FontWeight.Bold,
+            fontSize = 11.sp,
+            modifier = Modifier
+                .clip(RoundedCornerShape(8.dp))
+                .clickable { expanded = !expanded }
+                .padding(horizontal = 10.dp, vertical = 6.dp)
+        )
+    }
+}
+
+@Composable
+private fun SavedWordRow(word: SavedWord, onRemove: () -> Unit) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(10.dp))
+            .background(Panel)
+            .border(1.dp, GoldDim.copy(alpha = 0.5f), RoundedCornerShape(10.dp))
+            .padding(horizontal = 12.dp, vertical = 10.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Column(modifier = Modifier.weight(1f)) {
+            Text(
+                text = word.text,
+                color = Color(0xFFEADFC8),
+                fontFamily = FontFirst(),
+                fontWeight = FontWeight.Bold,
+                fontSize = 13.sp
+            )
+            Text(
+                text = word.translation.ifBlank { "bez tlumaczenia" },
+                color = if (word.translation.isBlank()) Amber else Muted,
+                fontFamily = FontFirst(),
+                fontSize = 11.sp
+            )
+            if (word.bookTitle.isNotBlank()) {
+                Text(
+                    text = word.bookTitle,
+                    color = GoldDim,
+                    fontFamily = FontFirst(),
+                    fontSize = 9.sp,
+                    maxLines = 1
+                )
+            }
+        }
+        Text(
+            text = "usun",
+            color = Amber,
+            fontFamily = FontFirst(),
+            fontSize = 10.sp,
+            modifier = Modifier
+                .clip(RoundedCornerShape(8.dp))
+                .clickable(onClick = onRemove)
+                .padding(horizontal = 10.dp, vertical = 6.dp)
+        )
+    }
+}
+
+private const val COLLAPSED_WORD_COUNT = 5
 
 @Composable
 private fun StatsCard(state: LibraryUiState) {

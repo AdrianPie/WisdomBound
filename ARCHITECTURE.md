@@ -123,7 +123,12 @@ Kazdy ekran ma swoj folder. Wspolny `PlayerViewModel` siedzi w `player/`, bo dzi
 ekrany (druzyna, sklep, ekwipunek) - nie ma sensu mnozyc go razy trzy.
 
 ```
-navigation/   graf zakladek + dolny pasek
+navigation/   graf zakladek + dolny pasek. Paski sa NAKLADKA nad NavHostem, nie slotami
+              Scaffolda - inaczej ich zniknicie zabiera padding calej zawartosci i wychodzacy
+              ekran przeskakuje w chwili nawigacji. Padding ekranu zakladki (TabChrome) jest
+              staly przez cale jego zycie i NIE zalezy od tego, czy paski sa teraz widoczne.
+              Przejscia sa sekwencyjne (wygaszenie konczy sie przed rozjasnieniem), bo ekrany
+              sa przezroczyste i przy crossfade poprzedni przeswituje przez nowy
 team/         zakladka "Walcz" - sklad druzyny + przelacznik KAMPANIA/ENDLESS + wlasciwy panel
               ze story/. To tutaj wybiera sie plansze i stad startuje walka
 story/        czesci kampanii uzywane W ZAKLADCE "Walcz" (nie osobny ekran!):

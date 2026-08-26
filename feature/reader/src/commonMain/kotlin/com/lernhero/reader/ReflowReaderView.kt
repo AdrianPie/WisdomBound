@@ -51,6 +51,7 @@ import com.lernhero.reader.reflow.WordSelection
 import com.lernhero.reader.translate.platformTranslationSource
 import com.lernhero.shared.theme.FontFirst
 import com.lernhero.shared.theme.FontPixel
+import kotlin.time.Clock
 import kotlinx.coroutines.launch
 import org.koin.compose.koinInject
 
@@ -166,7 +167,13 @@ fun ReflowReaderView(
                     savedFeedback = true
                     scope.launch {
                         playerRepository.saveWord(
-                            word.copy(bookId = book.id, bookTitle = book.title)
+                            word.copy(
+                                bookId = book.id,
+                                bookTitle = book.title,
+                                // Znacznik czasu nadaje dopiero to miejsce - popup tlumaczenia
+                                // nie zna zegara i zostawia go na zerze.
+                                savedAt = Clock.System.now().toEpochMilliseconds()
+                            )
                         )
                     }
                 }

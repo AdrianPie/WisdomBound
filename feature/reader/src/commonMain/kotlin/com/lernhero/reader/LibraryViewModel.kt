@@ -9,6 +9,7 @@ import com.lernhero.domain.reading.BookSource
 import com.lernhero.domain.reading.BundledBooks
 import com.lernhero.domain.reading.PdfTextNormalizer
 import com.lernhero.domain.reading.ReaderSettings
+import com.lernhero.domain.reading.SavedWord
 import com.lernhero.domain.reading.PlainTextParser
 import com.lernhero.domain.reading.ReadingDayProgress
 import com.lernhero.domain.reading.ReadingGoal
@@ -33,6 +34,8 @@ data class LibraryUiState(
     val dailyGoalClaims: Map<String, String> = emptyMap(),
     /** Typografia czytnika zapisana na koncie - zeby nie wracala do domyslnej przy kazdej ksiazce. */
     val readerSettings: ReaderSettings = ReaderSettings(),
+    /** Fiszki zapisane w czytniku - najnowsze pierwsze. */
+    val savedWords: List<SavedWord> = emptyList(),
     val message: String? = null
 ) {
     fun claimedToday(goal: ReadingGoal): Boolean = dailyGoalClaims[goal.id] == readingToday.dateKey
@@ -67,7 +70,8 @@ class LibraryViewModel(
                     readingToday = (player?.readingToday ?: state.readingToday).forToday(today),
                     bookProgress = player?.bookProgress ?: state.bookProgress,
                     dailyGoalClaims = player?.dailyGoalClaims ?: state.dailyGoalClaims,
-                    readerSettings = player?.readerSettings ?: state.readerSettings
+                    readerSettings = player?.readerSettings ?: state.readerSettings,
+                    savedWords = (player?.savedWords ?: state.savedWords).sortedByDescending { it.savedAt }
                 )
             }
         }
@@ -160,6 +164,15 @@ class LibraryViewModel(
     fun saveReaderSettings(settings: ReaderSettings) {
         _uiState.update { it.copy(readerSettings = settings) }
         viewModelScope.launch(Dispatchers.IO) { playerRepository.updateReaderSettings(settings) }
+    }
+
+    /** Usuwa fiszke - gracz juz umie to slowo albo zapisal je przez pomylke. */
+    fun removeWord(word: SavedWord) {
+        _uiState.update { it.copy(savedWords = it.savedWords.filterNot { saved -> saved.id == word.id }) }
+        viewModelScope.launch(Dispatchers.IO) {
+            playerRepository.removeSavedWord(word.id)
+            refresh()
+        }
     }
 
     fun clearMessage() {
