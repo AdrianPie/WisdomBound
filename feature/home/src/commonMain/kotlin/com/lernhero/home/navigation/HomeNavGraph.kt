@@ -1,15 +1,24 @@
 package com.lernhero.home.navigation
 
 import androidx.compose.animation.AnimatedContent
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.core.tween
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.togetherWith
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.slideInVertically
+import androidx.compose.animation.slideOutVertically
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.asPaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.systemBars
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
@@ -17,9 +26,11 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.unit.dp
 import com.lernhero.shared.resources.Resources
 import org.jetbrains.compose.resources.painterResource
 import androidx.navigation.NavDestination.Companion.hasRoute
@@ -113,7 +124,7 @@ fun HomeNavGraph() {
     }
     val runSession = koinInject<RunSession>()
     Box(modifier = Modifier.fillMaxSize()) {
-        // Tlo calej apki - jedna warstwa pod Scaffoldem, widoczna na kazdej zakladce
+        // Tlo calej apki - jedna warstwa pod wszystkim, widoczna na kazdej zakladce
         // (rowniez pod bottom barem/top barem, ktore nakladaja sie na wierzchu).
         Image(
             painter = painterResource(Resources.Image.appBackground),
@@ -121,72 +132,26 @@ fun HomeNavGraph() {
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.Crop
         )
-        Scaffold(
-        containerColor = Color.Transparent,
-        contentWindowInsets = WindowInsets(0, 0, 0, 0),
-        topBar = if (showBars) {
-            {
-                CenterAlignedTopAppBar(
-                    title = {
-                        AnimatedContent(
-                            targetState = topBarTitle
-                        ) { title ->
-                            Text(
-                                text = title,
-                                fontFamily = FontPixel(),
-                                fontSize = FontSize.MEDIUM,
-                                color = AppPalette.Gold
-                            )
-                        }
-                    },
-                    colors = TopAppBarDefaults.topAppBarColors(
-                        containerColor = Color.Transparent,
-                        scrolledContainerColor = Color.Transparent,
-                        titleContentColor = AppPalette.Gold
-                    )
-                )
-            }
-        } else {
-            { }
-        },
-        bottomBar = if (showBars) {
-            {
-                NavBottomBar(
-                    modifier = Modifier.navigationBarsPadding(),
-                    selected = selectedDestination,
-                    onSelect = { destination ->
-                        navController.navigate(destination.route) {
-                            launchSingleTop = true
-                            popUpTo<Screen.Home> {
-                                saveState = true
-                                inclusive = false
-                            }
-                            restoreState = true
-                        }
-                    }
-                )
-            }
-        } else {
-            { }
-        }
-    ) { paddingValues ->
-        Box(
-            modifier = Modifier
-                .fillMaxSize()
-                .then(
-                    if (showBars) {
-                        Modifier.padding(paddingValues)
-                    } else {
-                        Modifier
-                    }
-                )
-        ) {
+        // Paski NIE sa czescia Scaffolda, tylko nakladka nad NavHostem. Gdy siedzialy w
+        // Scaffoldzie, ich zniknicie zabieralo padding CALEJ zawartosci - a poniewaz dzieje sie
+        // to w chwili rozpoczecia nawigacji, wychodzacy ekran przeskakiwal (wyspy na Home
+        // "teleportowaly sie") jeszcze zanim zdazyl sie wygasic.
+        Box(modifier = Modifier.fillMaxSize()) {
             NavHost(
                 modifier = Modifier.fillMaxSize(),
                 navController = navController,
-                startDestination = Screen.Home
+                startDestination = Screen.Home,
+                // Wygaszanie konczy sie, ZANIM zacznie sie rozjasnianie (stad delay rowny
+                // czasowi wyjscia). Domyslny crossfade pokazuje oba ekrany naraz, a ze wszystkie
+                // sa przezroczyste (tlo apki to jedna warstwa pod spodem), poprzedni ekran
+                // przeswitywal przez nowy.
+                enterTransition = { fadeIn(tween(SCREEN_FADE_IN_MS, delayMillis = SCREEN_FADE_OUT_MS)) },
+                exitTransition = { fadeOut(tween(SCREEN_FADE_OUT_MS)) },
+                popEnterTransition = { fadeIn(tween(SCREEN_FADE_IN_MS, delayMillis = SCREEN_FADE_OUT_MS)) },
+                popExitTransition = { fadeOut(tween(SCREEN_FADE_OUT_MS)) }
             ) {
                 composable<Screen.Home> {
+                    TabChrome {
                     HomeScreen(
                         viewModel = playerViewModel,
                         onOpenSawmill = {
@@ -225,6 +190,7 @@ fun HomeNavGraph() {
                             }
                         }
                     )
+                    }
                 }
                 composable<Screen.Sawmill> {
                     ProductionBuildingScreen(
@@ -251,19 +217,21 @@ fun HomeNavGraph() {
                     )
                 }
                 composable<Screen.Team> {
-                    TeamScreen(
-                        viewModel = playerViewModel,
-                        onOpenMap = {
-                            navController.navigate(Screen.StoryMap) {
-                                launchSingleTop = true
+                    TabChrome {
+                        TeamScreen(
+                            viewModel = playerViewModel,
+                            onOpenMap = {
+                                navController.navigate(Screen.StoryMap) {
+                                    launchSingleTop = true
+                                }
+                            },
+                            onEnterBattle = {
+                                navController.navigate(Screen.BattleScreen) {
+                                    launchSingleTop = true
+                                }
                             }
-                        },
-                        onEnterBattle = {
-                            navController.navigate(Screen.BattleScreen) {
-                                launchSingleTop = true
-                            }
-                        }
-                    )
+                        )
+                    }
                 }
                 composable<Screen.StoryMap> {
                     WorldMapScreen(
@@ -271,11 +239,14 @@ fun HomeNavGraph() {
                         onBack = { navController.popBackStack() }
                     )
                 }
-                composable<Screen.Equipment> { EquipmentScreen(viewModel = playerViewModel) }
-                composable<Screen.Fitness> { FitnessScreen() }
-                composable<Screen.Books> { ReadingScreen() }
-                composable<Screen.Shop> { ShopScreen(viewModel = playerViewModel) }
-                composable<Screen.Progress> { ProgressScreen(viewModel = playerViewModel) }
+                composable<Screen.Equipment> { TabChrome { EquipmentScreen(viewModel = playerViewModel) } }
+                composable<Screen.Fitness> { TabChrome { FitnessScreen() } }
+                // Czytelnia dostaje marginesy tylko na biblioteke - otwarta ksiazka ma isc na caly
+                // ekran. Owiniecie calego ReadingScreen w TabChrome zmienialoby strukture drzewa
+                // przy otwarciu ksiazki i gubilo jej stan.
+                composable<Screen.Books> { ReadingScreen(libraryInsets = tabChromeInsets()) }
+                composable<Screen.Shop> { TabChrome { ShopScreen(viewModel = playerViewModel) } }
+                composable<Screen.Progress> { TabChrome { ProgressScreen(viewModel = playerViewModel) } }
                 composable<Screen.KnightPreview> {
                     KnightPreviewScreen(
                         onBack = {
@@ -309,14 +280,98 @@ fun HomeNavGraph() {
                         }
                     )
                 }
-
             }
 
+            AnimatedVisibility(
+                visible = showBars,
+                enter = fadeIn(tween(BAR_FADE_MS)) + slideInVertically { -it },
+                exit = fadeOut(tween(BAR_FADE_MS)) + slideOutVertically { -it },
+                modifier = Modifier.align(Alignment.TopCenter)
+            ) {
+                CenterAlignedTopAppBar(
+                    title = {
+                        // Sam fade, bez domyslnego skalowania i animacji rozmiaru - tytul zmienia
+                        // dlugosc miedzy zakladkami, a domyslny SizeTransform rozpychal wtedy pasek.
+                        AnimatedContent(
+                            targetState = topBarTitle,
+                            transitionSpec = { fadeIn(tween(BAR_FADE_MS)) togetherWith fadeOut(tween(BAR_FADE_MS)) }
+                        ) { title ->
+                            Text(
+                                text = title,
+                                fontFamily = FontPixel(),
+                                fontSize = FontSize.MEDIUM,
+                                color = AppPalette.Gold
+                            )
+                        }
+                    },
+                    colors = TopAppBarDefaults.topAppBarColors(
+                        containerColor = Color.Transparent,
+                        scrolledContainerColor = Color.Transparent,
+                        titleContentColor = AppPalette.Gold
+                    )
+                )
+            }
+
+            AnimatedVisibility(
+                visible = showBars,
+                enter = fadeIn(tween(BAR_FADE_MS)) + slideInVertically { it },
+                exit = fadeOut(tween(BAR_FADE_MS)) + slideOutVertically { it },
+                modifier = Modifier.align(Alignment.BottomCenter)
+            ) {
+                NavBottomBar(
+                    modifier = Modifier.navigationBarsPadding(),
+                    selected = selectedDestination,
+                    onSelect = { destination ->
+                        navController.navigate(destination.route) {
+                            launchSingleTop = true
+                            popUpTo<Screen.Home> {
+                                saveState = true
+                                inclusive = false
+                            }
+                            restoreState = true
+                        }
+                    }
+                )
+            }
         }
-
     }
+}
 
+/**
+ * Wysokosci paskow. Stale, a nie mierzone - padding ekranow NIE MOZE zalezec od tego, czy paski
+ * sa akurat widoczne, bo wtedy kazde wejscie na ekran pelnoekranowy przeklada layout ekranu,
+ * ktory wlasnie z niego wychodzi.
+ */
+private val TopBarHeight = 64.dp
+private val BottomBarHeight = 76.dp
+
+private const val SCREEN_FADE_OUT_MS = 90
+private const val SCREEN_FADE_IN_MS = 200
+private const val BAR_FADE_MS = 160
+
+/**
+ * Marginesy pod paski dla ekranow zakladek - stale przez cale zycie ekranu.
+ * Ekrany pelnoekranowe (walka, budynki miasta, mapa, otwarty czytnik) nie uzywaja tego wcale.
+ */
+@Composable
+private fun TabChrome(content: @Composable () -> Unit) {
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(tabChromeInsets())
+    ) {
+        content()
     }
+}
+
+/** To samo co [TabChrome], ale jako gotowe wartosci - dla ekranow, ktore same decyduja, gdzie je nalozyc. */
+@Composable
+private fun tabChromeInsets(): PaddingValues {
+    val systemBars = WindowInsets.systemBars.asPaddingValues()
+    return PaddingValues(
+        top = systemBars.calculateTopPadding() + TopBarHeight,
+        bottom = systemBars.calculateBottomPadding() + BottomBarHeight
+    )
 }
 
 private inline fun <reified T : Any> androidx.navigation.NavBackStackEntry?.isOnRoute(): Boolean {

@@ -2,6 +2,7 @@ package com.lernhero.domain.player
 
 import com.lernhero.domain.progress.GameStats
 import com.lernhero.domain.reading.Book
+import com.lernhero.domain.reading.ReaderSettings
 import com.lernhero.domain.reading.ReadingDayProgress
 import com.lernhero.domain.reading.ReadingStats
 import com.lernhero.domain.reading.SavedWord
@@ -66,6 +67,8 @@ data class Player(
     val importedBooks: List<Book> = emptyList(),
     /** Slowa zapisane z czytnika przyciskiem "zakladka" - surowiec pod quiz ze slowek. */
     val savedWords: List<SavedWord> = emptyList(),
+    /** Typografia i motyw czytnika - wspolne dla calej biblioteki, nie per ksiazka. */
+    val readerSettings: ReaderSettings = ReaderSettings(),
     /**
      * Postep w kampanii: poziom trudnosci ([com.lernhero.domain.run.RunDifficulty.name]) -> najwyzszy
      * oczyszczony globalny numer planszy. Brak wpisu = nic jeszcze nie zdobyte na tym tierze.

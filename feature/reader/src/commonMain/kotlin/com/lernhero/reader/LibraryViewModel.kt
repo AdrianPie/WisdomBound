@@ -7,6 +7,8 @@ import com.lernhero.domain.reading.BookContent
 import com.lernhero.domain.reading.BookFormat
 import com.lernhero.domain.reading.BookSource
 import com.lernhero.domain.reading.BundledBooks
+import com.lernhero.domain.reading.PdfTextNormalizer
+import com.lernhero.domain.reading.ReaderSettings
 import com.lernhero.domain.reading.PlainTextParser
 import com.lernhero.domain.reading.ReadingDayProgress
 import com.lernhero.domain.reading.ReadingGoal
@@ -29,6 +31,8 @@ data class LibraryUiState(
     val readingToday: ReadingDayProgress = ReadingDayProgress(),
     val bookProgress: Map<String, Int> = emptyMap(),
     val dailyGoalClaims: Map<String, String> = emptyMap(),
+    /** Typografia czytnika zapisana na koncie - zeby nie wracala do domyslnej przy kazdej ksiazce. */
+    val readerSettings: ReaderSettings = ReaderSettings(),
     val message: String? = null
 ) {
     fun claimedToday(goal: ReadingGoal): Boolean = dailyGoalClaims[goal.id] == readingToday.dateKey
@@ -62,7 +66,8 @@ class LibraryViewModel(
                     readingStats = player?.readingStats ?: state.readingStats,
                     readingToday = (player?.readingToday ?: state.readingToday).forToday(today),
                     bookProgress = player?.bookProgress ?: state.bookProgress,
-                    dailyGoalClaims = player?.dailyGoalClaims ?: state.dailyGoalClaims
+                    dailyGoalClaims = player?.dailyGoalClaims ?: state.dailyGoalClaims,
+                    readerSettings = player?.readerSettings ?: state.readerSettings
                 )
             }
         }
@@ -106,17 +111,23 @@ class LibraryViewModel(
     }
 
     /**
-     * Wyciaga caly tekst PDF-a przez [PdfEngine] i przepuszcza go przez [PlainTextParser] -
-     * ten sam parser co dla TXT, bo strumien tekstu ze strony PDF-a rzadzi sie tymi samymi
-     * regulami (pusta linia = nowy akapit). Null, gdy platforma nie potrafi wyciagnac tekstu
-     * (desktop) albo PDF nie ma warstwy tekstowej (skan bez OCR) - wtedy zostaje podglad oryginalu.
+     * Wyciaga tekst PDF-a przez [PdfEngine] i sprowadza go do akapitow.
+     *
+     * Miedzy ekstrakcja a [PlainTextParser] stoi [PdfTextNormalizer] i to on jest tu istotny:
+     * ekstraktor PDF oddaje tekst linia-po-linii tak, jak lezal na stronie, bez zadnego znaku
+     * konca akapitu. Bez normalizacji cala ksiazka wygladalaby w czytniku jak jedna scianka.
+     *
+     * Null, gdy platforma nie potrafi wyciagnac tekstu (desktop) albo PDF nie ma warstwy
+     * tekstowej (skan bez OCR) - wtedy zostaje podglad oryginalu.
      */
     private suspend fun extractPdfContent(bytes: ByteArray): BookContent? {
         val document = PdfEngine.open(bytes) ?: return null
         return try {
-            val text = (0 until PdfEngine.pageCount(document))
-                .joinToString("\n\n") { page -> PdfEngine.pageText(document, page).orEmpty() }
-            text.takeIf { it.isNotBlank() }?.let { PlainTextParser.parse(it) }
+            val pages = (0 until PdfEngine.pageCount(document))
+                .map { page -> PdfEngine.pageText(document, page).orEmpty() }
+            PdfTextNormalizer.normalize(pages)
+                .takeIf { it.isNotBlank() }
+                ?.let { PlainTextParser.parse(it) }
         } finally {
             PdfEngine.close(document)
         }
@@ -143,6 +154,12 @@ class LibraryViewModel(
                 }
             }
         }
+    }
+
+    /** Zapis typografii czytnika - wolane przy zamknieciu ksiazki, nie przy kazdej zmianie suwaka. */
+    fun saveReaderSettings(settings: ReaderSettings) {
+        _uiState.update { it.copy(readerSettings = settings) }
+        viewModelScope.launch(Dispatchers.IO) { playerRepository.updateReaderSettings(settings) }
     }
 
     fun clearMessage() {

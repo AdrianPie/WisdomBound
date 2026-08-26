@@ -76,6 +76,31 @@ actual object PdfEngine {
  */
 private var activeDocumentPickerDelegate: UIDocumentPickerDelegateProtocol? = null
 
+/** Nasz wlasny katalog na ksiazki wewnatrz Documents - trwaly, nie czyszczony przez system. */
+private const val BOOKS_DIRECTORY = "Books"
+
+private fun documentsPath(): String =
+    NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, true)
+        .first() as String
+
+private fun booksDirectoryPath(): String {
+    val path = documentsPath() + "/" + BOOKS_DIRECTORY
+    NSFileManager.defaultManager.createDirectoryAtPath(path, true, null, null)
+    return path
+}
+
+/**
+ * Sciezka pliku ksiazki z jej [locator].
+ *
+ * [locator] to SAMA NAZWA PLIKU, nigdy sciezka bezwzgledna - i to jest tu sedno. Absolutna
+ * sciezka w iOS zawiera UUID kontenera aplikacji, ktory zmienia sie przy kazdej reinstalacji
+ * i aktualizacji. Zapisana na trwale wskazywalaby po takiej zmianie w prozne miejsce i ksiazka
+ * nie chcialaby sie otworzyc, dopoki gracz nie zaimportowal jej ponownie.
+ */
+private fun bookPath(locator: String): String =
+    if (locator.startsWith("/")) locator // stary zapis sprzed tej zmiany - probujemy, moze jeszcze zyje
+    else booksDirectoryPath() + "/" + locator
+
 @Composable
 actual fun rememberBookFilePicker(onPicked: (PickedFile) -> Unit): () -> Unit {
     val viewController = LocalUIViewController.current
@@ -83,9 +108,9 @@ actual fun rememberBookFilePicker(onPicked: (PickedFile) -> Unit): () -> Unit {
     return remember(viewController) {
         {
             val picker = UIDocumentPickerViewController(
-                documentTypes = listOf("com.adobe.pdf"),
-                // Import kopiuje plik do sandboxa naszej apki - nie potrzeba zakladek bezpieczenstwa,
-                // dostep zostaje trwaly sam z siebie.
+                documentTypes = listOf("com.adobe.pdf", "public.plain-text", "org.idpf.epub-container"),
+                // Import kopiuje plik do sandboxa apki - nie potrzeba zakladek bezpieczenstwa.
+                // Kopia ladzie jednak w tymczasowym Inbox, wiec i tak przenosimy ja do siebie.
                 inMode = UIDocumentPickerMode.UIDocumentPickerModeImport
             )
 
@@ -95,10 +120,21 @@ actual fun rememberBookFilePicker(onPicked: (PickedFile) -> Unit): () -> Unit {
                     didPickDocumentsAtURLs: List<*>
                 ) {
                     activeDocumentPickerDelegate = null
-                    val path = (didPickDocumentsAtURLs.firstOrNull() as? NSURL)?.path ?: return
-                    val data = NSData.dataWithContentsOfFile(path) ?: return
-                    val name = path.substringAfterLast("/").substringBeforeLast(".")
-                    onPicked(PickedFile(name = name, bytes = data.toByteArray(), persistentLocator = path))
+                    val pickedPath = (didPickDocumentsAtURLs.firstOrNull() as? NSURL)?.path ?: return
+                    val data = NSData.dataWithContentsOfFile(pickedPath) ?: return
+
+                    val fileName = pickedPath.substringAfterLast("/")
+                    val storedName = uniqueFileName(fileName)
+                    // Przenosimy do wlasnego katalogu: plik z Inboxa system moze skasowac.
+                    data.writeToFile(booksDirectoryPath() + "/" + storedName, true)
+
+                    onPicked(
+                        PickedFile(
+                            name = fileName.substringBeforeLast("."),
+                            bytes = data.toByteArray(),
+                            persistentLocator = storedName
+                        )
+                    )
                 }
 
                 override fun documentPickerWasCancelled(controller: UIDocumentPickerViewController) {
@@ -113,5 +149,19 @@ actual fun rememberBookFilePicker(onPicked: (PickedFile) -> Unit): () -> Unit {
     }
 }
 
+/** Dwie ksiazki o tej samej nazwie nie moga sie nadpisac - stad przyrostek, gdy nazwa zajeta. */
+private fun uniqueFileName(fileName: String): String {
+    val manager = NSFileManager.defaultManager
+    val directory = booksDirectoryPath()
+    if (!manager.fileExistsAtPath("$directory/$fileName")) return fileName
+
+    val base = fileName.substringBeforeLast(".", fileName)
+    val extension = fileName.substringAfterLast(".", "")
+    val suffix = if (extension.isEmpty()) "" else ".$extension"
+    var index = 2
+    while (manager.fileExistsAtPath("$directory/$base ($index)$suffix")) index++
+    return "$base ($index)$suffix"
+}
+
 actual suspend fun loadImportedBookBytes(locator: String): ByteArray? =
-    NSData.dataWithContentsOfFile(locator)?.toByteArray()
+    NSData.dataWithContentsOfFile(bookPath(locator))?.toByteArray()

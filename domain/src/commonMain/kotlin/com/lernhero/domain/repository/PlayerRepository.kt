@@ -7,6 +7,7 @@ import com.lernhero.domain.player.Player
 import com.lernhero.domain.player.PlayerEquipment
 import com.lernhero.domain.progress.RunStats
 import com.lernhero.domain.reading.Book
+import com.lernhero.domain.reading.ReaderSettings
 import com.lernhero.domain.reading.SavedWord
 import com.lernhero.domain.town.ProductionBuilding
 import com.lernhero.domain.town.ProductionState
@@ -127,6 +128,12 @@ interface PlayerRepository {
 
     /** Usuwa fiszke, np. gdy gracz juz umie dane slowo. */
     suspend fun removeSavedWord(wordId: String): Player?
+
+    /**
+     * Zapisuje typografie czytnika. Wolane RAZ, przy zamknieciu ksiazki - nie przy kazdym
+     * kliknieciu "A+", zeby regulacja rozmiaru czcionki nie zamieniala sie w serie zapisow.
+     */
+    suspend fun updateReaderSettings(settings: ReaderSettings)
 
     /**
      * Odhacza plansze kampanii jako zdobyta na danym tierze - zapisuje max(obecny, [globalStage]),

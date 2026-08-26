@@ -7,6 +7,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.aspectRatio
@@ -72,7 +73,13 @@ private val Amber = Color(0xFFE0913A)
  * (bajty ksiazki nie nadaja sie do przekazania przez argumenty nawigacji).
  */
 @Composable
-fun ReadingScreen() {
+fun ReadingScreen(
+    /**
+     * Marginesy pod paski aplikacji - dotycza WYLACZNIE biblioteki. Otwarta ksiazka chowa paski
+     * (ReaderChrome.immersive) i zajmuje caly ekran, wiec ich nie dostaje.
+     */
+    libraryInsets: PaddingValues = PaddingValues(0.dp)
+) {
     val viewModel = koinViewModel<LibraryViewModel>()
     val state by viewModel.uiState.collectAsState()
     val scope = rememberCoroutineScope()
@@ -120,6 +127,8 @@ fun ReadingScreen() {
                 book = book,
                 content = content,
                 startBlockIndex = state.pageFor(book),
+                initialSettings = state.readerSettings,
+                onSettingsChanged = viewModel::saveReaderSettings,
                 onClose = ::closeReader
             )
         } else if (book != null && bytes != null) {
@@ -135,7 +144,8 @@ fun ReadingScreen() {
                 openingId = opening,
                 onOpen = ::open,
                 onImport = requestImport,
-                onClaim = viewModel::claim
+                onClaim = viewModel::claim,
+                insets = libraryInsets
             )
         }
     }
@@ -147,12 +157,16 @@ private fun LibraryView(
     openingId: String?,
     onOpen: (Book) -> Unit,
     onImport: () -> Unit,
-    onClaim: (ReadingGoal) -> Unit
+    onClaim: (ReadingGoal) -> Unit,
+    insets: PaddingValues
 ) {
     Column(
         modifier = Modifier
             .fillMaxSize()
+            // Marginesy pod paski SA CZESCIA obszaru przewijania, nie ramka wokol niego - dzieki
+            // temu tresc przewija sie pod paskiem, zamiast urywac sie tuz nad nim.
             .verticalScroll(rememberScrollState())
+            .padding(insets)
             .padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(14.dp)
     ) {
@@ -485,6 +499,7 @@ private fun ReaderView(
         ) {
             ReaderBottomBar(
                 state = state,
+                clock = session.clock.state,
                 zoom = zoom,
                 onZoomOut = { zoom = (zoom - 0.25f).coerceAtLeast(0.75f) },
                 onZoomIn = { zoom = (zoom + 0.25f).coerceAtMost(2.5f) }
@@ -501,6 +516,7 @@ private fun ReaderView(
 @Composable
 private fun ReaderBottomBar(
     state: ReaderUiState,
+    clock: ReadingClockState,
     zoom: Float,
     onZoomOut: () -> Unit,
     onZoomIn: () -> Unit,
@@ -516,14 +532,14 @@ private fun ReaderBottomBar(
         horizontalArrangement = Arrangement.spacedBy(10.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
-        Box(modifier = Modifier.size(6.dp).clip(CircleShape).background(if (state.paused) Amber else Green))
+        Box(modifier = Modifier.size(6.dp).clip(CircleShape).background(if (clock.paused) Amber else Green))
         Text(
-            text = if (state.paused) {
+            text = if (clock.paused) {
                 "wstrzymano"
             } else {
-                "${state.sessionSeconds / 60}:${(state.sessionSeconds % 60).toString().padStart(2, '0')}"
+                "${clock.sessionSeconds / 60}:${(clock.sessionSeconds % 60).toString().padStart(2, '0')}"
             },
-            color = if (state.paused) Amber else Muted,
+            color = if (clock.paused) Amber else Muted,
             fontFamily = FontFirst(),
             fontSize = 10.sp
         )

@@ -523,6 +523,16 @@ class PlayerRepositoryImpl: PlayerRepository {
         }
     }
 
+    override suspend fun updateReaderSettings(settings: com.lernhero.domain.reading.ReaderSettings) {
+        try {
+            val document = playerDocument() ?: return
+            val player = getPlayer() ?: return
+            if (player.readerSettings == settings) return
+            document.set(player.copy(readerSettings = settings))
+        } catch (_: Exception) {
+        }
+    }
+
     override suspend fun updateProduction(
         building: ProductionBuilding,
         state: ProductionState,

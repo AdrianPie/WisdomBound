@@ -122,7 +122,8 @@ actual fun rememberBookFilePicker(onPicked: (PickedFile) -> Unit): () -> Unit {
     }
 
     return remember(launcher) {
-        { launcher.launch(arrayOf("application/pdf")) }
+        // Nie sam PDF - czytnik obsluguje tez czysty tekst, a EPUB dochodzi wkrotce.
+        { launcher.launch(arrayOf("application/pdf", "text/plain", "application/epub+zip")) }
     }
 }
 

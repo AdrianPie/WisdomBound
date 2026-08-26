@@ -65,6 +65,9 @@ fun ReflowReaderView(
     book: Book,
     content: BookContent,
     startBlockIndex: Int,
+    initialSettings: ReaderSettings,
+    /** Wolane raz, przy zamknieciu czytnika - patrz PlayerRepository.updateReaderSettings. */
+    onSettingsChanged: (ReaderSettings) -> Unit,
     onClose: () -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -77,7 +80,7 @@ fun ReflowReaderView(
     val clock = remember(book.id) { ReadingClock(playerRepository, scope) }
     val clockState = clock.state
 
-    var settings by remember { mutableStateOf(ReaderSettings()) }
+    var settings by remember { mutableStateOf(initialSettings) }
     var chromeVisible by remember { mutableStateOf(false) }
     var settingsVisible by remember { mutableStateOf(false) }
     var anchor by remember(book.id) { mutableStateOf(ReadingAnchor(startBlockIndex, 0)) }
@@ -96,6 +99,7 @@ fun ReflowReaderView(
             ReaderChrome.immersive = false
             setStatusBarHidden(false)
             clock.close()
+            onSettingsChanged(settings)
         }
     }
 
