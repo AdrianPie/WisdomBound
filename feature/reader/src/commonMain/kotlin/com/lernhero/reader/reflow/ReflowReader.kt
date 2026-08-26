@@ -40,7 +40,6 @@ import androidx.compose.ui.text.rememberTextMeasurer
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextIndent
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.em
 import androidx.compose.ui.unit.sp
 import com.lernhero.domain.reading.BookContent
 import com.lernhero.domain.reading.ReaderSettings
@@ -303,7 +302,10 @@ private fun rememberParagraphStyle(settings: ReaderSettings, palette: ReaderPale
         lineHeight = (settings.fontSizeSp * settings.lineHeightMultiplier).sp,
         fontFamily = settings.typeface.toFontFamily(),
         textAlign = if (settings.justify) TextAlign.Justify else TextAlign.Start,
-        textIndent = TextIndent(firstLine = 1.6.em)
+        // Sp policzony ze fontSizeSp, nie .em - na iOS silnik tekstu Skia rzuca
+        // "Only Sp can convert to Px" przy proscie konwersji TextUnitType.Em na piksele
+        // (wymaga wczesniej rozwiazac Em wzgledem fontSize, czego plain .toPx() nie robi).
+        textIndent = TextIndent(firstLine = (settings.fontSizeSp * 1.6f).sp)
     )
 
 @Composable
