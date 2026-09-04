@@ -8,6 +8,7 @@ import com.lernhero.domain.quiz.ai.QuizGenerator
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
 import io.ktor.client.engine.cio.CIO
+import io.ktor.client.plugins.HttpTimeout
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.client.request.parameter
 import io.ktor.client.request.post
@@ -32,6 +33,14 @@ class GeminiQuizGenerator(
     private val model: String = DEFAULT_MODEL,
     private val client: HttpClient = HttpClient(CIO) {
         install(ContentNegotiation) { json(Json { ignoreUnknownKeys = true }) }
+        // Domyslne 15s CIO to za malo: gemini-3.6-flash "mysli" przed odpowiedzia i przy 20-30
+        // pytaniach potrafi liczyc kilkadziesiat sekund. Cloud Run tnie caly request po 300s,
+        // wiec 180s zostawia zapas na odeslanie odpowiedzi apce.
+        install(HttpTimeout) {
+            requestTimeoutMillis = 180_000
+            connectTimeoutMillis = 30_000
+            socketTimeoutMillis = 180_000
+        }
     }
 ) : QuizGenerator {
 
@@ -49,7 +58,12 @@ class GeminiQuizGenerator(
                 contentType(ContentType.Application.Json)
                 setBody(
                     GeminiRequest(
-                        contents = listOf(GeminiContent(parts = listOf(GeminiPart(text = prompt))))
+                        contents = listOf(GeminiContent(parts = listOf(GeminiPart(text = prompt)))),
+                        // Pytania quizowe to zadanie odtworczo-formatujace, nie rozumowanie -
+                        // pelne "myslenie" modelu tylko wydluza odpowiedz i podbija rachunek.
+                        generationConfig = GeminiGenerationConfig(
+                            thinkingConfig = GeminiThinkingConfig(thinkingLevel = "low")
+                        )
                     )
                 )
             }
@@ -92,7 +106,16 @@ class GeminiQuizGenerator(
 }
 
 @Serializable
-private data class GeminiRequest(val contents: List<GeminiContent>)
+private data class GeminiRequest(
+    val contents: List<GeminiContent>,
+    val generationConfig: GeminiGenerationConfig? = null
+)
+
+@Serializable
+private data class GeminiGenerationConfig(val thinkingConfig: GeminiThinkingConfig? = null)
+
+@Serializable
+private data class GeminiThinkingConfig(val thinkingLevel: String)
 
 @Serializable
 private data class GeminiContent(val parts: List<GeminiPart>)

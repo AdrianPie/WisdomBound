@@ -7,6 +7,7 @@ import dev.gitlive.firebase.Firebase
 import dev.gitlive.firebase.auth.auth
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
+import io.ktor.client.plugins.HttpTimeout
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.client.request.header
 import io.ktor.client.request.post
@@ -32,6 +33,13 @@ class RemoteQuizGenerator(
     private val baseUrl: String = ServerConfig.AI_QUIZ_SERVER_BASE_URL,
     private val client: HttpClient = HttpClient {
         install(ContentNegotiation) { json(Json { ignoreUnknownKeys = true }) }
+        // Serwer musi jeszcze poczekac na model (patrz GeminiQuizGenerator - do 180s), wiec
+        // telefon nie moze sie rozlaczyc po domyslnych kilkunastu sekundach silnika.
+        install(HttpTimeout) {
+            requestTimeoutMillis = 200_000
+            connectTimeoutMillis = 30_000
+            socketTimeoutMillis = 200_000
+        }
     }
 ) : QuizGenerator {
 
