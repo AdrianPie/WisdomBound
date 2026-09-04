@@ -11,6 +11,7 @@ WORKDIR /workspace
 
 ENV ANDROID_HOME=/opt/android-sdk
 ENV ANDROID_SDK_ROOT=$ANDROID_HOME
+RUN apt-get update && apt-get install -y --no-install-recommends unzip && rm -rf /var/lib/apt/lists/*
 RUN mkdir -p $ANDROID_HOME/cmdline-tools && \
     curl -sSL -o /tmp/cmdline-tools.zip https://dl.google.com/android/repository/commandlinetools-linux-11076708_latest.zip && \
     unzip -q /tmp/cmdline-tools.zip -d $ANDROID_HOME/cmdline-tools && \
