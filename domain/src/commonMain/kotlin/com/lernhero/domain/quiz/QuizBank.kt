@@ -1,18 +1,43 @@
 package com.lernhero.domain.quiz
 
 import com.lernhero.domain.quiz.bank.AnimalQuestions
+import com.lernhero.domain.quiz.bank.AnimalQuestionsExtra
+import com.lernhero.domain.quiz.bank.AnimalQuestionsExtra2
 import com.lernhero.domain.quiz.bank.BiologyQuestions
+import com.lernhero.domain.quiz.bank.BiologyQuestionsExtra
+import com.lernhero.domain.quiz.bank.BiologyQuestionsExtra2
 import com.lernhero.domain.quiz.bank.CapitalQuestions
+import com.lernhero.domain.quiz.bank.CapitalQuestionsExtra
+import com.lernhero.domain.quiz.bank.CapitalQuestionsExtra2
 import com.lernhero.domain.quiz.bank.ElementQuestions
+import com.lernhero.domain.quiz.bank.ElementQuestionsExtra
+import com.lernhero.domain.quiz.bank.ElementQuestionsExtra2
 import com.lernhero.domain.quiz.bank.FlagQuestions
 import com.lernhero.domain.quiz.bank.GeographyQuestions
+import com.lernhero.domain.quiz.bank.GeographyQuestionsExtra
+import com.lernhero.domain.quiz.bank.GeographyQuestionsExtra2
 import com.lernhero.domain.quiz.bank.HistoryQuestions
+import com.lernhero.domain.quiz.bank.HistoryQuestionsExtra
+import com.lernhero.domain.quiz.bank.HistoryQuestionsExtra2
+import com.lernhero.domain.quiz.bank.WorldHistoryQuestions
 import com.lernhero.domain.quiz.bank.LiteratureQuestions
+import com.lernhero.domain.quiz.bank.LiteratureQuestionsExtra
+import com.lernhero.domain.quiz.bank.LiteratureQuestionsExtra2
 import com.lernhero.domain.quiz.bank.MathQuestions
+import com.lernhero.domain.quiz.bank.MathQuestionsExtra
+import com.lernhero.domain.quiz.bank.MathQuestionsExtra2
 import com.lernhero.domain.quiz.bank.MythologyQuestions
+import com.lernhero.domain.quiz.bank.MythologyQuestionsExtra
+import com.lernhero.domain.quiz.bank.MythologyQuestionsExtra2
 import com.lernhero.domain.quiz.bank.ScienceQuestions
+import com.lernhero.domain.quiz.bank.ScienceQuestionsExtra
+import com.lernhero.domain.quiz.bank.ScienceQuestionsExtra2
 import com.lernhero.domain.quiz.bank.SportQuestions
+import com.lernhero.domain.quiz.bank.SportQuestionsExtra
+import com.lernhero.domain.quiz.bank.SportQuestionsExtra2
 import com.lernhero.domain.quiz.bank.TechnologyQuestions
+import com.lernhero.domain.quiz.bank.TechnologyQuestionsExtra
+import com.lernhero.domain.quiz.bank.TechnologyQuestionsExtra2
 import kotlin.random.Random
 
 /**
@@ -36,7 +61,33 @@ object QuizBank {
             MathQuestions.all +
             LiteratureQuestions.all +
             TechnologyQuestions.all +
-            MythologyQuestions.all
+            MythologyQuestions.all +
+            BiologyQuestionsExtra.all +
+            AnimalQuestionsExtra.all +
+            HistoryQuestionsExtra.all +
+            ElementQuestionsExtra.all +
+            CapitalQuestionsExtra.all +
+            ScienceQuestionsExtra.all +
+            GeographyQuestionsExtra.all +
+            SportQuestionsExtra.all +
+            MathQuestionsExtra.all +
+            LiteratureQuestionsExtra.all +
+            TechnologyQuestionsExtra.all +
+            MythologyQuestionsExtra.all +
+            BiologyQuestionsExtra2.all +
+            AnimalQuestionsExtra2.all +
+            HistoryQuestionsExtra2.all +
+            ElementQuestionsExtra2.all +
+            CapitalQuestionsExtra2.all +
+            ScienceQuestionsExtra2.all +
+            GeographyQuestionsExtra2.all +
+            SportQuestionsExtra2.all +
+            MathQuestionsExtra2.all +
+            LiteratureQuestionsExtra2.all +
+            TechnologyQuestionsExtra2.all +
+            MythologyQuestionsExtra2.all +
+            // Historia powszechna - druga noga banku, celowo bez watkow polskich.
+            WorldHistoryQuestions.all
 
     fun all(random: Random = Random.Default): List<QuizEntry> =
         textEntries + FlagQuestions.entries(random)

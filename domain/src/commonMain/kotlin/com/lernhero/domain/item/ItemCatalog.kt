@@ -1,5 +1,6 @@
 package com.lernhero.domain.item
 
+import com.lernhero.domain.craft.ItemUpgrades
 import com.lernhero.domain.item.catalog.Accessories
 import com.lernhero.domain.item.catalog.Armors
 import com.lernhero.domain.item.catalog.Weapons
@@ -37,8 +38,17 @@ object ItemCatalog {
 
     fun bySlot(slot: ItemSlot): List<Item> = registry.values.filter { it.slot == slot }
 
-    fun loadoutOf(ids: List<String>): Loadout =
-        Loadout(ids.mapNotNull { byId(it) }.associateBy { it.slot })
+    /**
+     * [upgrades] to poziomy ulepszen (patrz [com.lernhero.domain.craft.ItemUpgrades]) - wchodza
+     * TUTAJ, w jednym miejscu, w ktorym zalozony ekwipunek zamienia sie w liczby dla walki.
+     * Dzieki temu ulepszony miecz bije mocniej wszedzie, a nie tylko na ekranie kuzni.
+     */
+    fun loadoutOf(ids: List<String>, upgrades: Map<String, Int> = emptyMap()): Loadout =
+        Loadout(
+            ids.mapNotNull { id ->
+                byId(id)?.let { ItemUpgrades.upgraded(it, ItemUpgrades.levelOf(upgrades, id)) }
+            }.associateBy { it.slot }
+        )
 }
 
 /* ------------------------------- Ekwipunek gracza -------------------------------- */
@@ -73,5 +83,5 @@ fun PlayerEquipment.unequip(slot: ItemSlot): PlayerEquipment =
     PlayerEquipment(equipped = migrated().equipped - slot.name)
 
 /** Zalozony ekwipunek widziany przez system walki: suma statystyk i lista efektow. */
-fun PlayerEquipment.toLoadout(): Loadout =
-    ItemCatalog.loadoutOf(migrated().equipped.values.toList())
+fun PlayerEquipment.toLoadout(upgrades: Map<String, Int> = emptyMap()): Loadout =
+    ItemCatalog.loadoutOf(migrated().equipped.values.toList(), upgrades)

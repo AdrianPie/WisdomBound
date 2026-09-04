@@ -1,26 +1,19 @@
 package com.lernhero.home.navigation
 
-import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
-import androidx.compose.animation.togetherWith
 import androidx.compose.animation.fadeOut
-import androidx.compose.animation.slideInVertically
-import androidx.compose.animation.slideOutVertically
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.asPaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.systemBars
-import androidx.compose.material3.CenterAlignedTopAppBar
-import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.derivedStateOf
@@ -28,6 +21,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
@@ -39,6 +33,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.toRoute
 import com.lernhero.domain.run.RunSession
 import com.lernhero.game.battle.BattleScreen
 import com.lernhero.domain.town.ProductionBuilding
@@ -49,23 +44,24 @@ import com.lernhero.home.city.SummonCenterScreen
 import com.lernhero.home.dev.KnightPreviewScreen
 import com.lernhero.home.dev.ModularKnightPreviewScreen
 import com.lernhero.home.dev.MonsterAnchorLabScreen
+import com.lernhero.home.dev.MonsterAnimationLabScreen
 import com.lernhero.home.story.WorldMapScreen
+import com.lernhero.home.talent.TalentScreen
 import com.lernhero.home.equipment.EquipmentScreen
-import com.lernhero.home.fitness.FitnessScreen
+import com.lernhero.home.growth.GrowthScreen
 import com.lernhero.home.player.PlayerViewModel
+import com.lernhero.home.quiz.CustomQuizViewModel
+import com.lernhero.home.quiz.DeckEditorScreen
+import com.lernhero.home.settings.SettingsScreen
 import com.lernhero.home.progress.ProgressScreen
 import com.lernhero.reader.ReaderChrome
-import com.lernhero.reader.ReadingScreen
+import com.lernhero.reader.VocabularyScreen
 import com.lernhero.home.shop.ShopScreen
 import com.lernhero.home.team.TeamScreen
-import com.lernhero.shared.theme.AppPalette
-import com.lernhero.shared.theme.FontPixel
-import com.lernhero.shared.theme.FontSize
 import com.lernhero.shared.navigation.Screen
 import org.koin.compose.koinInject
 import org.koin.compose.viewmodel.koinViewModel
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeNavGraph() {
 
@@ -75,6 +71,9 @@ fun HomeNavGraph() {
     // JEDEN stan gracza, zeby zakup w sklepie od razu byl widoczny w ekwipunku/druzynie, bez
     // koniecznosci wyjscia i wejscia z powrotem na ekran.
     val playerViewModel = koinViewModel<PlayerViewModel>()
+    // Talie pytan dzieli zakladka "Walcz" z edytorem - edytor musi widziec te sama liste, w
+    // ktorej gracz zaraz wybierze talie do walki, bez czekania na ponowne wczytanie z bazy.
+    val customQuizViewModel = koinViewModel<CustomQuizViewModel>()
 
     // Zakladki to jeden zywy back stack (saveState/restoreState), wiec Team NIE recomponuje sie
     // od zera przy kazdym powrocie na nia - LaunchedEffect(Unit) w jej wnetrzu odpaliby sie tylko
@@ -91,22 +90,10 @@ fun HomeNavGraph() {
             when {
                 currentRoute.value.isOnRoute<Screen.Home>() -> BottomBarDestination.Home
                 currentRoute.value.isOnRoute<Screen.Team>() -> BottomBarDestination.Fight
-                currentRoute.value.isOnRoute<Screen.Equipment>() -> BottomBarDestination.Equipment
-                currentRoute.value.isOnRoute<Screen.Fitness>() -> BottomBarDestination.Fitness
-                currentRoute.value.isOnRoute<Screen.Books>() -> BottomBarDestination.Books
+                currentRoute.value.isOnRoute<Screen.Growth>() -> BottomBarDestination.Growth
                 currentRoute.value.isOnRoute<Screen.Progress>() -> BottomBarDestination.Progress
                 currentRoute.value.isOnRoute<Screen.Shop>() -> BottomBarDestination.Shop
                 else -> BottomBarDestination.Home
-            }
-        }
-    }
-    val topBarTitle by remember {
-        derivedStateOf {
-            when {
-                currentRoute.value.isOnRoute<Screen.KnightPreview>() -> "Knight Lab"
-                currentRoute.value.isOnRoute<Screen.ModularKnightPreview>() -> "Knight Preview"
-                currentRoute.value.isOnRoute<Screen.MonsterAnchorLab>() -> "Monster Anchor Lab"
-                else -> selectedDestination.title
             }
         }
     }
@@ -118,9 +105,21 @@ fun HomeNavGraph() {
                 !currentRoute.value.isOnRoute<Screen.Quarry>() &&
                 !currentRoute.value.isOnRoute<Screen.Forge>() &&
                 !currentRoute.value.isOnRoute<Screen.SummonCenter>() &&
+                !currentRoute.value.isOnRoute<Screen.Talents>() &&
+                // Karta postaci wchodzi z naglowka na Dom - jest podekranem, nie zakladka.
+                !currentRoute.value.isOnRoute<Screen.Equipment>() &&
+                // Dev Animation Center jest projektowany na CALY ekran bez przewijania - pasek
+                // zakladek zjadalby dolny panel z suwakami.
+                !currentRoute.value.isOnRoute<Screen.MonsterAnimationLab>() &&
+                // Edytor talii pisze sie na pelnym ekranie - patrz composable<Screen.DeckEditor>.
+                !currentRoute.value.isOnRoute<Screen.DeckEditor>() &&
+                !currentRoute.value.isOnRoute<Screen.Settings>() &&
                 // Otwarta ksiazka w czytniku - tekst ma zajac caly ekran, bez paskow.
                 !ReaderChrome.immersive
         }
+    }
+    val onHome by remember {
+        derivedStateOf { currentRoute.value.isOnRoute<Screen.Home>() }
     }
     val runSession = koinInject<RunSession>()
     Box(modifier = Modifier.fillMaxSize()) {
@@ -131,6 +130,31 @@ fun HomeNavGraph() {
             contentDescription = null,
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.Crop
+        )
+
+        // Przyciemnienie tla. Bez niego jasne chmury bija sie z trescia: zloty tekst na rozowej
+        // chmurze traci kontrast, a panele w polprzezroczystym tle robia sie brudne.
+        //
+        // Dom dostaje LZEJSZY welon (mapa miasta JEST trescia i ma byc widoczna), a ekrany z
+        // panelami i tekstem mocniejszy - to ten sam obraz w tle, ale inna rola.
+        val scrim by animateFloatAsState(
+            targetValue = if (onHome) HOME_SCRIM_ALPHA else CONTENT_SCRIM_ALPHA,
+            animationSpec = tween(SCREEN_FADE_IN_MS),
+            label = "bgScrim"
+        )
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .background(
+                    // Gradient, nie plaski kolor: gora i dol (gdzie stoja paski i naglowki) sa
+                    // ciemniejsze, srodek janiejszy - tlo dalej "oddycha".
+                    Brush.verticalGradient(
+                        0f to Color.Black.copy(alpha = scrim + 0.10f),
+                        0.35f to Color.Black.copy(alpha = scrim),
+                        0.75f to Color.Black.copy(alpha = scrim),
+                        1f to Color.Black.copy(alpha = scrim + 0.12f)
+                    )
+                )
         )
         // Paski NIE sa czescia Scaffolda, tylko nakladka nad NavHostem. Gdy siedzialy w
         // Scaffoldzie, ich zniknicie zabieralo padding CALEJ zawartosci - a poniewaz dzieje sie
@@ -154,6 +178,11 @@ fun HomeNavGraph() {
                     TabChrome {
                     HomeScreen(
                         viewModel = playerViewModel,
+                        onOpenCharacter = {
+                            navController.navigate(Screen.Equipment) {
+                                launchSingleTop = true
+                            }
+                        },
                         onOpenSawmill = {
                             navController.navigate(Screen.Sawmill) {
                                 launchSingleTop = true
@@ -188,9 +217,25 @@ fun HomeNavGraph() {
                             navController.navigate(Screen.MonsterAnchorLab) {
                                 launchSingleTop = true
                             }
+                        },
+                        onOpenMonsterAnimationLab = {
+                            navController.navigate(Screen.MonsterAnimationLab) {
+                                launchSingleTop = true
+                            }
+                        },
+                        onOpenSettings = {
+                            navController.navigate(Screen.Settings) {
+                                launchSingleTop = true
+                            }
                         }
                     )
                     }
+                }
+                composable<Screen.Settings> {
+                    SettingsScreen(
+                        onBack = { navController.popBackStack() },
+                        insets = WindowInsets.systemBars.asPaddingValues()
+                    )
                 }
                 composable<Screen.Sawmill> {
                     ProductionBuildingScreen(
@@ -220,6 +265,12 @@ fun HomeNavGraph() {
                     TabChrome {
                         TeamScreen(
                             viewModel = playerViewModel,
+                            quizViewModel = customQuizViewModel,
+                            onEditDeck = { deckId, startWithAi ->
+                                navController.navigate(Screen.DeckEditor(deckId, startWithAi)) {
+                                    launchSingleTop = true
+                                }
+                            },
                             onOpenMap = {
                                 navController.navigate(Screen.StoryMap) {
                                     launchSingleTop = true
@@ -239,12 +290,56 @@ fun HomeNavGraph() {
                         onBack = { navController.popBackStack() }
                     )
                 }
-                composable<Screen.Equipment> { TabChrome { EquipmentScreen(viewModel = playerViewModel) } }
-                composable<Screen.Fitness> { TabChrome { FitnessScreen() } }
-                // Czytelnia dostaje marginesy tylko na biblioteke - otwarta ksiazka ma isc na caly
-                // ekran. Owiniecie calego ReadingScreen w TabChrome zmienialoby strukture drzewa
-                // przy otwarciu ksiazki i gubilo jej stan.
-                composable<Screen.Books> { ReadingScreen(libraryInsets = tabChromeInsets()) }
+                composable<Screen.Equipment> {
+                    EquipmentScreen(
+                        viewModel = playerViewModel,
+                        onBack = { navController.popBackStack() },
+                        onOpenTalents = {
+                            navController.navigate(Screen.Talents) {
+                                launchSingleTop = true
+                            }
+                        }
+                    )
+                }
+                composable<Screen.Talents> {
+                    TalentScreen(
+                        viewModel = playerViewModel,
+                        onBack = { navController.popBackStack() }
+                    )
+                }
+                // Rozwoj = Czytelnia + Trening w dwoch podzakladkach. NIE owijamy w TabChrome:
+                // przy otwartej ksiazce czytnik idzie na caly ekran, a staly padding TabChrome
+                // zmienialby strukture drzewa i gubil jego stan. GrowthScreen sam rozdziela
+                // marginesy miedzy przelacznik podzakladek a tresc.
+                composable<Screen.Growth> {
+                    GrowthScreen(
+                        tabInsets = tabChromeInsets(),
+                        onOpenVocabulary = {
+                            navController.navigate(Screen.Vocabulary) { launchSingleTop = true }
+                        }
+                    )
+                }
+                composable<Screen.Vocabulary> {
+                    // Slowka to ekran PELNY, nie zakladka - dostaje wiec same marginesy systemowe.
+                    // Wczesniej dostawal tabChromeInsets i rezerwowal u dolu miejsce na pasek
+                    // zakladek, ktorego na tym ekranie w ogole nie ma.
+                    VocabularyScreen(
+                        onBack = { navController.popBackStack() },
+                        insets = WindowInsets.systemBars.asPaddingValues()
+                    )
+                }
+                composable<Screen.DeckEditor> { entry ->
+                    val route: Screen.DeckEditor = entry.toRoute()
+                    // Ekran PELNY, jak Slowka: pisanie pytan potrzebuje calej wysokosci, a pasek
+                    // zakladek zjadalby klawiature na malych telefonach.
+                    DeckEditorScreen(
+                        viewModel = customQuizViewModel,
+                        deckId = route.deckId,
+                        startWithAi = route.startWithAi,
+                        onBack = { navController.popBackStack() },
+                        insets = WindowInsets.systemBars.asPaddingValues()
+                    )
+                }
                 composable<Screen.Shop> { TabChrome { ShopScreen(viewModel = playerViewModel) } }
                 composable<Screen.Progress> { TabChrome { ProgressScreen(viewModel = playerViewModel) } }
                 composable<Screen.KnightPreview> {
@@ -259,6 +354,11 @@ fun HomeNavGraph() {
                         onBack = {
                             navController.popBackStack()
                         }
+                    )
+                }
+                composable<Screen.MonsterAnimationLab> {
+                    MonsterAnimationLabScreen(
+                        onBack = { navController.popBackStack() }
                     )
                 }
                 composable<Screen.MonsterAnchorLab> {
@@ -284,42 +384,12 @@ fun HomeNavGraph() {
 
             AnimatedVisibility(
                 visible = showBars,
-                enter = fadeIn(tween(BAR_FADE_MS)) + slideInVertically { -it },
-                exit = fadeOut(tween(BAR_FADE_MS)) + slideOutVertically { -it },
-                modifier = Modifier.align(Alignment.TopCenter)
-            ) {
-                CenterAlignedTopAppBar(
-                    title = {
-                        // Sam fade, bez domyslnego skalowania i animacji rozmiaru - tytul zmienia
-                        // dlugosc miedzy zakladkami, a domyslny SizeTransform rozpychal wtedy pasek.
-                        AnimatedContent(
-                            targetState = topBarTitle,
-                            transitionSpec = { fadeIn(tween(BAR_FADE_MS)) togetherWith fadeOut(tween(BAR_FADE_MS)) }
-                        ) { title ->
-                            Text(
-                                text = title,
-                                fontFamily = FontPixel(),
-                                fontSize = FontSize.MEDIUM,
-                                color = AppPalette.Gold
-                            )
-                        }
-                    },
-                    colors = TopAppBarDefaults.topAppBarColors(
-                        containerColor = Color.Transparent,
-                        scrolledContainerColor = Color.Transparent,
-                        titleContentColor = AppPalette.Gold
-                    )
-                )
-            }
-
-            AnimatedVisibility(
-                visible = showBars,
-                enter = fadeIn(tween(BAR_FADE_MS)) + slideInVertically { it },
-                exit = fadeOut(tween(BAR_FADE_MS)) + slideOutVertically { it },
+                // Sam fade, bez slide - slide przycina wystajacy nad pasek przycisk "Walcz".
+                enter = fadeIn(tween(BAR_FADE_MS)),
+                exit = fadeOut(tween(BAR_FADE_MS)),
                 modifier = Modifier.align(Alignment.BottomCenter)
             ) {
                 NavBottomBar(
-                    modifier = Modifier.navigationBarsPadding(),
                     selected = selectedDestination,
                     onSelect = { destination ->
                         navController.navigate(destination.route) {
@@ -338,12 +408,21 @@ fun HomeNavGraph() {
 }
 
 /**
- * Wysokosci paskow. Stale, a nie mierzone - padding ekranow NIE MOZE zalezec od tego, czy paski
- * sa akurat widoczne, bo wtedy kazde wejscie na ekran pelnoekranowy przeklada layout ekranu,
- * ktory wlasnie z niego wychodzi.
+ * Wysokosc dolnego paska + maly odstep u gory. Stale, a nie mierzone - padding ekranow NIE MOZE
+ * zalezec od tego, czy pasek jest akurat widoczny, bo wtedy kazde wejscie na ekran pelnoekranowy
+ * przeklada layout ekranu, ktory wlasnie z niego wychodzi.
+ *
+ * Gornego paska z tytulem zakladki juz nie ma - byl czystym napisem ("Postep", "Dom"...) i zjadal
+ * wysokosc. Zostaje tylko waski odstep, zeby tresc nie zaczynala sie tuz pod statusbarem.
  */
-private val TopBarHeight = 64.dp
-private val BottomBarHeight = 76.dp
+private val TabTopGap = 8.dp
+private val BottomBarHeight = 70.dp
+
+/** Welon nad tlem na ekranie Dom - lekki, bo mapa miasta jest tu trescia, nie dekoracja. */
+private const val HOME_SCRIM_ALPHA = 0.18f
+
+/** Welon na ekranach z panelami i tekstem - mocniejszy, zeby tresc miala spokojne tlo. */
+private const val CONTENT_SCRIM_ALPHA = 0.42f
 
 private const val SCREEN_FADE_OUT_MS = 90
 private const val SCREEN_FADE_IN_MS = 200
@@ -369,7 +448,7 @@ private fun TabChrome(content: @Composable () -> Unit) {
 private fun tabChromeInsets(): PaddingValues {
     val systemBars = WindowInsets.systemBars.asPaddingValues()
     return PaddingValues(
-        top = systemBars.calculateTopPadding() + TopBarHeight,
+        top = systemBars.calculateTopPadding() + TabTopGap,
         bottom = systemBars.calculateBottomPadding() + BottomBarHeight
     )
 }

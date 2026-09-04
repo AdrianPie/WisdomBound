@@ -3,78 +3,78 @@ package com.lernhero.domain.quiz.bank
 import com.lernhero.domain.quiz.EstimationEntry
 
 /**
- * Pula testowa "zgadnij rok" dla specjalnego zdarzenia bossa - wszystkie na wspolnej skali suwaka
- * (patrz [ESTIMATION_YEAR_MIN]/[ESTIMATION_YEAR_MAX]), zeby UI mogl uzyc jednego, stalego suwaka
- * niezaleznie od wylosowanego pytania.
+ * Test pool of "guess the year" questions for the boss special event - all on a shared slider
+ * scale (see [ESTIMATION_YEAR_MIN]/[ESTIMATION_YEAR_MAX]), so the UI can use one fixed slider
+ * regardless of which question got drawn.
  */
-const val ESTIMATION_YEAR_MIN = -1000
+const val ESTIMATION_YEAR_MIN = -3000
 const val ESTIMATION_YEAR_MAX = 2025
 
 object EstimationQuestions {
     val all: List<EstimationEntry> = listOf(
         EstimationEntry(
             id = "est_genghis_khan_birth",
-            prompt = "W ktorym roku urodzil sie Czyngis-chan?",
+            prompt = "In which year was Genghis Khan born?",
             minValue = ESTIMATION_YEAR_MIN,
             maxValue = ESTIMATION_YEAR_MAX,
             correctValue = 1162,
-            unit = "rok"
+            unit = "year"
         ),
         EstimationEntry(
             id = "est_islam_founding",
-            prompt = "W ktorym roku Mahomet otrzymal pierwsze objawienie, dajace poczatek islamowi?",
+            prompt = "In which year did Muhammad receive the first revelation, giving rise to Islam?",
             minValue = ESTIMATION_YEAR_MIN,
             maxValue = ESTIMATION_YEAR_MAX,
             correctValue = 610,
-            unit = "rok"
+            unit = "year"
         ),
         EstimationEntry(
             id = "est_rome_fall",
-            prompt = "W ktorym roku upadlo Cesarstwo Zachodniorzymskie?",
+            prompt = "In which year did the Western Roman Empire fall?",
             minValue = ESTIMATION_YEAR_MIN,
             maxValue = ESTIMATION_YEAR_MAX,
             correctValue = 476,
-            unit = "rok"
+            unit = "year"
         ),
         EstimationEntry(
             id = "est_french_revolution",
-            prompt = "W ktorym roku wybuchla Rewolucja Francuska?",
+            prompt = "In which year did the French Revolution break out?",
             minValue = ESTIMATION_YEAR_MIN,
             maxValue = ESTIMATION_YEAR_MAX,
             correctValue = 1789,
-            unit = "rok"
+            unit = "year"
         ),
         EstimationEntry(
             id = "est_moon_landing",
-            prompt = "W ktorym roku czlowiek pierwszy raz wyladowal na Ksiezycu?",
+            prompt = "In which year did humans first land on the Moon?",
             minValue = ESTIMATION_YEAR_MIN,
             maxValue = ESTIMATION_YEAR_MAX,
             correctValue = 1969,
-            unit = "rok"
+            unit = "year"
         ),
         EstimationEntry(
             id = "est_ww1_start",
-            prompt = "W ktorym roku wybuchla Pierwsza Wojna Swiatowa?",
+            prompt = "In which year did World War I break out?",
             minValue = ESTIMATION_YEAR_MIN,
             maxValue = ESTIMATION_YEAR_MAX,
             correctValue = 1914,
-            unit = "rok"
+            unit = "year"
         ),
         EstimationEntry(
             id = "est_magna_carta",
-            prompt = "W ktorym roku podpisano Magna Carte?",
+            prompt = "In which year was the Magna Carta signed?",
             minValue = ESTIMATION_YEAR_MIN,
             maxValue = ESTIMATION_YEAR_MAX,
             correctValue = 1215,
-            unit = "rok"
+            unit = "year"
         ),
         EstimationEntry(
             id = "est_columbus_america",
-            prompt = "W ktorym roku Kolumb dotarl do Ameryki?",
+            prompt = "In which year did Columbus reach America?",
             minValue = ESTIMATION_YEAR_MIN,
             maxValue = ESTIMATION_YEAR_MAX,
             correctValue = 1492,
-            unit = "rok"
+            unit = "year"
         )
     )
 }

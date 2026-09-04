@@ -4,7 +4,7 @@ import com.lernhero.domain.quiz.QuizCategory
 import com.lernhero.domain.quiz.QuizDifficulty
 import com.lernhero.domain.quiz.QuizEntry
 
-/** Sport - pilka nozna, olimpiady, rekordy. */
+/** Sports - soccer, the Olympics, records. */
 object SportQuestions {
 
     private fun ask(
@@ -24,149 +24,149 @@ object SportQuestions {
 
     val all: List<QuizEntry> = listOf(
 
-        /* ------------------------------- Latwe ------------------------------- */
+        /* ------------------------------- Easy ------------------------------- */
         ask(
             id = "druzyna_pilka",
-            prompt = "Ilu zawodnikow liczy druzyna pilki noznej na boisku?",
+            prompt = "How many players does a soccer team have on the field?",
             correct = "11",
             wrong = listOf("10", "12", "9"),
             difficulty = QuizDifficulty.Easy
         ),
         ask(
             id = "kolarstwo",
-            prompt = "Tour de France to wyscig w jakiej dyscyplinie?",
-            correct = "Kolarstwie",
-            wrong = listOf("Biegach", "Wioslarstwie", "Rajdach samochodowych"),
+            prompt = "The Tour de France is a race in which sport?",
+            correct = "Cycling",
+            wrong = listOf("Running", "Rowing", "Car rallying"),
             difficulty = QuizDifficulty.Easy
         ),
         ask(
             id = "kosz",
-            prompt = "Ile punktow daje rzut zza linii w koszykowce?",
+            prompt = "How many points is a shot from behind the line worth in basketball?",
             correct = "3",
             wrong = listOf("2", "4", "1"),
             difficulty = QuizDifficulty.Easy
         ),
         ask(
             id = "olimpiada_kolka",
-            prompt = "Ile kolek ma flaga olimpijska?",
+            prompt = "How many rings does the Olympic flag have?",
             correct = "5",
             wrong = listOf("4", "6", "7"),
             difficulty = QuizDifficulty.Easy
         ),
         ask(
             id = "tenis_narzedzie",
-            prompt = "Czym odbija sie pilke w tenisie?",
-            correct = "Rakieta",
-            wrong = listOf("Kijem", "Paletka do ping-ponga", "Maczuga"),
+            prompt = "What do you hit the ball with in tennis?",
+            correct = "A racket",
+            wrong = listOf("A bat", "A ping-pong paddle", "A club"),
             difficulty = QuizDifficulty.Easy
         ),
         ask(
             id = "szachy_figury",
-            prompt = "Ktora figura w szachach porusza sie tylko po skosie?",
-            correct = "Goniec",
-            wrong = listOf("Wieza", "Skoczek", "Hetman"),
+            prompt = "Which chess piece moves only diagonally?",
+            correct = "The bishop",
+            wrong = listOf("The rook", "The knight", "The queen"),
             difficulty = QuizDifficulty.Easy
         ),
 
-        /* ------------------------------ Srednie ------------------------------ */
+        /* ------------------------------ Medium ------------------------------ */
         ask(
             id = "mundial_2018",
-            prompt = "Kto wygral pilkarskie mistrzostwa swiata w 2018 roku?",
-            correct = "Francja",
-            wrong = listOf("Chorwacja", "Brazylia", "Niemcy"),
+            prompt = "Who won the soccer World Cup in 2018?",
+            correct = "France",
+            wrong = listOf("Croatia", "Brazil", "Germany"),
             difficulty = QuizDifficulty.Medium
         ),
         ask(
             id = "maraton",
-            prompt = "Ile kilometrow ma maraton?",
-            correct = "Okolo 42",
-            wrong = listOf("Okolo 50", "Okolo 30", "Okolo 21"),
+            prompt = "How many kilometers is a marathon?",
+            correct = "About 42",
+            wrong = listOf("About 50", "About 30", "About 21"),
             difficulty = QuizDifficulty.Medium
         ),
         ask(
             id = "malysz",
-            prompt = "W jakiej dyscyplinie slynal Adam Malysz?",
-            correct = "Skoki narciarskie",
-            wrong = listOf("Biegi narciarskie", "Biathlon", "Snowboard"),
+            prompt = "Which sport was Adam Malysz famous for?",
+            correct = "Ski jumping",
+            wrong = listOf("Cross-country skiing", "Biathlon", "Snowboarding"),
             difficulty = QuizDifficulty.Medium
         ),
         ask(
             id = "lewandowski",
-            prompt = "W jakim klubie Robert Lewandowski zostal krolem strzelcow Bundesligi?",
-            correct = "Bayern Monachium",
-            wrong = listOf("Real Madryt", "Manchester United", "Juventus"),
+            prompt = "At which club did Robert Lewandowski become the Bundesliga's top scorer?",
+            correct = "Bayern Munich",
+            wrong = listOf("Real Madrid", "Manchester United", "Juventus"),
             difficulty = QuizDifficulty.Medium
         ),
         ask(
             id = "hokej",
-            prompt = "Na czym rozgrywa sie mecz hokeja na lodzie?",
-            correct = "Na lodowisku",
-            wrong = listOf("Na trawie", "Na parkiecie", "Na piasku"),
+            prompt = "On what surface is an ice hockey match played?",
+            correct = "An ice rink",
+            wrong = listOf("Grass", "A hardwood court", "Sand"),
             difficulty = QuizDifficulty.Medium
         ),
         ask(
             id = "siatkowka_sety",
-            prompt = "Do ilu wygranych setow gra sie mecz siatkowki?",
+            prompt = "How many sets won does it take to win a volleyball match?",
             correct = "3",
             wrong = listOf("2", "4", "5"),
             difficulty = QuizDifficulty.Medium
         ),
 
-        /* ------------------------------ Trudne ------------------------------- */
+        /* ------------------------------ Hard ------------------------------- */
         ask(
             id = "bolt",
-            prompt = "Jaki jest rekord swiata Usaina Bolta na 100 m?",
-            correct = "9,58 s",
-            wrong = listOf("9,69 s", "9,72 s", "9,49 s"),
+            prompt = "What is Usain Bolt's world record in the 100 m?",
+            correct = "9.58 s",
+            wrong = listOf("9.69 s", "9.72 s", "9.49 s"),
             difficulty = QuizDifficulty.Hard
         ),
         ask(
             id = "olimpiada_1896",
-            prompt = "Gdzie odbyly sie pierwsze nowozytne igrzyska olimpijskie?",
-            correct = "Ateny",
-            wrong = listOf("Paryz", "Rzym", "Londyn"),
+            prompt = "Where were the first modern Olympic Games held?",
+            correct = "Athens",
+            wrong = listOf("Paris", "Rome", "London"),
             difficulty = QuizDifficulty.Hard
         ),
         ask(
             id = "wimbledon",
-            prompt = "Na jakiej nawierzchni rozgrywany jest Wimbledon?",
-            correct = "Trawa",
-            wrong = listOf("Macka", "Beton", "Ceglana maczka i beton na zmiane"),
+            prompt = "What surface is Wimbledon played on?",
+            correct = "Grass",
+            wrong = listOf("Sand", "Concrete", "Clay and hard court, alternating"),
             difficulty = QuizDifficulty.Hard
         ),
         ask(
             id = "f1_tor_pl",
-            prompt = "Ktory Polak jako pierwszy wygral wyscig Formuly 1?",
+            prompt = "Which Pole was the first to win a Formula 1 race?",
             correct = "Robert Kubica",
             wrong = listOf("Krzysztof Holowczyc", "Kajetan Kajetanowicz", "Sobieslaw Zasada"),
             difficulty = QuizDifficulty.Hard
         ),
         ask(
             id = "szachy_mistrz",
-            prompt = "Ktory szachista byl mistrzem swiata najdluzej w XX wieku?",
+            prompt = "Which chess player held the world championship title the longest in the 20th century?",
             correct = "Emanuel Lasker",
-            wrong = listOf("Garri Kasparow", "Bobby Fischer", "Anatolij Karpow"),
+            wrong = listOf("Garry Kasparov", "Bobby Fischer", "Anatoly Karpov"),
             difficulty = QuizDifficulty.Hard
         ),
 
-        /* ----------------------------- Eksperckie ---------------------------- */
+        /* ----------------------------- Expert ---------------------------- */
         ask(
             id = "mundial_1974",
-            prompt = "Ktore miejsce zajela Polska na mundialu w 1974 roku?",
-            correct = "3",
-            wrong = listOf("1", "2", "4"),
+            prompt = "What place did Poland finish at the 1974 World Cup?",
+            correct = "3rd",
+            wrong = listOf("1st", "2nd", "4th"),
             difficulty = QuizDifficulty.Expert
         ),
         ask(
             id = "dekatlon",
-            prompt = "Z ilu konkurencji sklada sie dziesieciobój?",
+            prompt = "How many events make up the decathlon?",
             correct = "10",
             wrong = listOf("8", "12", "7"),
             difficulty = QuizDifficulty.Expert
         ),
         ask(
             id = "nba_wilt",
-            prompt = "Kto zdobyl 100 punktow w jednym meczu NBA?",
+            prompt = "Who scored 100 points in a single NBA game?",
             correct = "Wilt Chamberlain",
             wrong = listOf("Michael Jordan", "Kobe Bryant", "LeBron James"),
             difficulty = QuizDifficulty.Expert

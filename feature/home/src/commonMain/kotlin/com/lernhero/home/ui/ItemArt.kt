@@ -1,6 +1,8 @@
 package com.lernhero.home.ui
 
+import androidx.compose.ui.graphics.Color
 import com.lernhero.domain.item.Item
+import com.lernhero.domain.monster.Element
 import com.lernhero.domain.item.ItemSlot
 import com.lernhero.domain.spell.Spell
 
@@ -25,31 +27,50 @@ fun Item.icon(): String = when (iconKey) {
     "ring", "band" -> "💍"
     "amulet_frost" -> "📿"
     "banner" -> "🚩"
+    // Sprzet kompanow - patrz [com.lernhero.domain.item.catalog.MonsterGear]. Placeholdery
+    // do podmiany razem z reszta grafiki.
+    "claw" -> "🪝"
+    "fang" -> "🦷"
+    "spine" -> "🔺"
+    "lash" -> "🌿"
+    "hide" -> "🟫"
+    "chitin" -> "🪲"
+    "shroud" -> "🕸️"
+    "horns" -> "🐏"
+    "mask" -> "🎭"
+    "paws" -> "🐾"
+    "fins" -> "🐟"
+    "totem" -> "🗿"
+    "pearl" -> "🔮"
+    "seed" -> "🌱"
     else -> "❔"
 }
 
+/** Odznaka zywiolu - kolor bierze sie z [Element.colorHex], zeby domena zostala bez Compose. */
+fun Element.badgeColor(): Color = Color(colorHex)
+
 fun ItemSlot.label(): String = when (this) {
-    ItemSlot.Head -> "Glowa"
-    ItemSlot.Chest -> "Tors"
-    ItemSlot.Hands -> "Rece"
-    ItemSlot.Legs -> "Nogi"
-    ItemSlot.Feet -> "Stopy"
-    ItemSlot.MainHand -> "Glowna reka"
-    ItemSlot.OffHand -> "Druga reka"
-    ItemSlot.Ring -> "Pierscien"
+    ItemSlot.Head -> "Head"
+    ItemSlot.Chest -> "Chest"
+    ItemSlot.Hands -> "Hands"
+    ItemSlot.Legs -> "Legs"
+    ItemSlot.Feet -> "Feet"
+    ItemSlot.MainHand -> "Main Hand"
+    ItemSlot.OffHand -> "Off Hand"
+    ItemSlot.Ring -> "Ring"
     ItemSlot.Amulet -> "Amulet"
 }
 
 /** Krotka etykieta pod slotem na postaci - dluzsze nazwy nie mieszcza sie w kafelku. */
 fun ItemSlot.shortLabel(): String = when (this) {
-    ItemSlot.Head -> "Glowa"
-    ItemSlot.Chest -> "Tors"
-    ItemSlot.Hands -> "Rece"
-    ItemSlot.Legs -> "Nogi"
-    ItemSlot.Feet -> "Stopy"
-    ItemSlot.MainHand -> "Bron"
-    ItemSlot.OffHand -> "Tarcza"
-    ItemSlot.Ring -> "Pierscien"
+    ItemSlot.Head -> "Head"
+    ItemSlot.Chest -> "Chest"
+    ItemSlot.Hands -> "Hands"
+    ItemSlot.Legs -> "Legs"
+    ItemSlot.Feet -> "Feet"
+    ItemSlot.MainHand -> "Weapon"
+    ItemSlot.OffHand -> "Shield"
+    ItemSlot.Ring -> "Ring"
     ItemSlot.Amulet -> "Amulet"
 }
 

@@ -8,11 +8,22 @@ package com.lernhero.domain.reading
  * - pusta linia rozdziela akapity,
  * - pojedyncze zlamanie linii w srodku akapitu jest sklejane spacja (tak zapisana jest
  *   wiekszosc plikow z Gutenberga - twarde lamanie na ~70 znakow, ktore w reflow musi zniknac),
+ * - ciagi bialych znakow zwijaja sie do JEDNEJ spacji,
  * - krotka linia bez konczacej interpunkcji, stojaca samotnie, to naglowek rozdzialu.
  */
 object PlainTextParser {
 
     private const val MAX_HEADING_LENGTH = 70
+
+    /**
+     * Ciag spacji/tabow -> jedna spacja.
+     *
+     * Klasyczny maszynopis (i wiekszosc plikow z Gutenberga) stawia DWIE spacje po kropce.
+     * Przy wyrownaniu do obu krawedzi silnik tekstu rozciaga kazda spacje z osobna, wiec ta
+     * podwojna robi sie dwa razy szersza od reszty - stad wyrwa po kazdym zdaniu. Zwijamy je
+     * juz przy parsowaniu, bo to wada ZRODLA, a nie sposobu rysowania.
+     */
+    private val SPACE_RUN = Regex("[ \t ]{2,}")
 
     fun parse(raw: String): BookContent {
         val normalized = raw.replace("\r\n", "\n").replace('\r', '\n')
@@ -31,7 +42,10 @@ object PlainTextParser {
         }
 
         chunks.forEach { chunk ->
-            val joined = chunk.trim().replace(Regex("[ \t]*\n[ \t]*"), " ").trim()
+            val joined = chunk.trim()
+                .replace(Regex("[ \t]*\n[ \t]*"), " ")
+                .replace(SPACE_RUN, " ")
+                .trim()
             if (joined.isEmpty()) return@forEach
 
             if (isHeading(joined)) {

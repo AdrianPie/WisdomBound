@@ -118,4 +118,51 @@ class WordQuizBankTest {
         )
         assertEquals(4, WordQuizBank.eligible(words).size)
     }
+
+    @Test
+    fun `quiz pyta o slowa do nauki, opanowane zostaja tylko dystraktorami`() {
+        val learning = word("moon", "księżyc")
+        val words = listOf(
+            word("cat", "kot").mastered(),
+            word("dog", "pies").mastered(),
+            word("sun", "słońce").mastered(),
+            learning
+        )
+
+        // Kazde losowanie musi trafic w jedyne slowo, ktorego gracz sie jeszcze uczy.
+        repeat(20) { seed ->
+            val entry = WordQuizBank.draw(words, Random(seed))
+            assertTrue(entry != null)
+            assertEquals(learning.translation, entry.correct)
+        }
+    }
+
+    @Test
+    fun `gdy wszystko opanowane, quiz wraca do calej puli zamiast milczec`() {
+        val words = listOf(
+            word("cat", "kot").mastered(),
+            word("dog", "pies").mastered(),
+            word("sun", "słońce").mastered(),
+            word("moon", "księżyc").mastered()
+        )
+        assertTrue(WordQuizBank.draw(words, Random(1)) != null)
+    }
+
+    @Test
+    fun `id pytania prowadzi z powrotem do fiszki`() {
+        val words = listOf(
+            word("cat", "kot"),
+            word("dog", "pies"),
+            word("sun", "słońce"),
+            word("moon", "księżyc")
+        )
+        val entry = WordQuizBank.draw(words, Random(1))
+        assertTrue(entry != null)
+
+        val wordId = WordQuizBank.savedWordIdOf(entry.id)
+        assertTrue(wordId in words.map { it.id }, "walka musi umiec odnotowac wynik na tej fiszce")
+        assertNull(WordQuizBank.savedWordIdOf("geo_capital_pl"), "pytanie z banku nie ma fiszki")
+    }
+
+    private fun SavedWord.mastered() = copy(correctStreak = 5, correctTotal = 5, masteredAt = 1L)
 }

@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -19,7 +20,6 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -41,7 +41,6 @@ import com.lernhero.shared.theme.FontFirst
 import com.lernhero.shared.theme.FontPixel
 import org.koin.compose.viewmodel.koinViewModel
 
-private val Bg = Color(0xFF120E0A)
 private val Panel = Color(0xFF1A1410)
 private val Ink = Color(0xFF0F0B08)
 private val Gold = Color(0xFFFFD100)
@@ -56,7 +55,7 @@ private val Locked = Color(0xFF4A4030)
  * zlotem. Bez zgody platformy pokazuje tylko przycisk "Polacz" - zadnych fikcyjnych liczb.
  */
 @Composable
-fun FitnessScreen() {
+fun FitnessScreen(insets: PaddingValues = PaddingValues(0.dp)) {
     val viewModel = koinViewModel<FitnessViewModel>()
     val state by viewModel.uiState.collectAsState()
 
@@ -69,16 +68,18 @@ fun FitnessScreen() {
         }
     }
 
-    Surface(modifier = Modifier.fillMaxSize(), color = Bg) {
+    // Przezroczyste tlo - niebo Miasta z HomeNavGraph ma przebijac tak samo jak na innych zakladkach.
+    Box(modifier = Modifier.fillMaxSize()) {
         Column(
             modifier = Modifier
                 .fillMaxSize()
+                .padding(insets)
                 .verticalScroll(rememberScrollState())
                 .padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(14.dp)
         ) {
             Text(
-                text = "Trening",
+                text = "Training",
                 color = Gold,
                 fontFamily = FontPixel(),
                 fontWeight = FontWeight.Bold,
@@ -96,7 +97,7 @@ fun FitnessScreen() {
                 else -> {
                     TodayCard(snapshot = state.snapshot)
                     Text(
-                        text = "Cele dnia",
+                        text = "Daily Goals",
                         color = Gold,
                         fontFamily = FontPixel(),
                         fontWeight = FontWeight.Bold,
@@ -160,10 +161,10 @@ private fun ConnectCard(
     ) {
         Text(
             text = when (availability) {
-                FitnessAvailability.Available -> "Polacz zdrowie telefonu"
-                FitnessAvailability.NeedsInstall -> "Brak Health Connect"
-                FitnessAvailability.NeedsUpdate -> "Health Connect wymaga aktualizacji"
-                FitnessAvailability.Unsupported -> "Brak zrodla danych"
+                FitnessAvailability.Available -> "Connect phone health"
+                FitnessAvailability.NeedsInstall -> "Health Connect missing"
+                FitnessAvailability.NeedsUpdate -> "Health Connect needs an update"
+                FitnessAvailability.Unsupported -> "No data source"
             },
             color = Gold,
             fontFamily = FontPixel(),
@@ -173,13 +174,13 @@ private fun ConnectCard(
         Text(
             text = when (availability) {
                 FitnessAvailability.Available ->
-                    "Daj dostep do krokow i treningow, zeby odbierac nagrody za aktywnosc."
+                    "Grant access to steps and workouts to claim rewards for activity."
                 FitnessAvailability.NeedsInstall ->
-                    "Zainstaluj darmowa aplikacje Health Connect ze Sklepu Play, zeby ta zakladka widziala Twoje kroki."
+                    "Install the free Health Connect app from the Play Store so this tab can see your steps."
                 FitnessAvailability.NeedsUpdate ->
-                    "Masz zainstalowany Health Connect, ale w wersji za starej. Zaktualizuj go ze Sklepu Play."
+                    "You have Health Connect installed, but it's too old. Update it from the Play Store."
                 FitnessAvailability.Unsupported ->
-                    "Ta platforma nie udostepnia danych o aktywnosci."
+                    "This platform doesn't provide activity data."
             },
             color = Muted,
             fontFamily = FontFirst(),
@@ -191,7 +192,7 @@ private fun ConnectCard(
                 onClick = onConnect,
                 colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFB4451F), contentColor = Color.White)
             ) {
-                Text(text = "Polacz", fontFamily = FontFirst(), fontWeight = FontWeight.Bold)
+                Text(text = "Connect", fontFamily = FontFirst(), fontWeight = FontWeight.Bold)
             }
 
             FitnessAvailability.NeedsInstall, FitnessAvailability.NeedsUpdate -> {
@@ -201,7 +202,7 @@ private fun ConnectCard(
                         colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFB4451F), contentColor = Color.White)
                     ) {
                         Text(
-                            text = if (availability == FitnessAvailability.NeedsInstall) "Zainstaluj" else "Zaktualizuj",
+                            text = if (availability == FitnessAvailability.NeedsInstall) "Install" else "Update",
                             fontFamily = FontFirst(),
                             fontWeight = FontWeight.Bold
                         )
@@ -210,7 +211,7 @@ private fun ConnectCard(
                         onClick = onRetry,
                         colors = ButtonDefaults.buttonColors(containerColor = Ink, contentColor = Gold)
                     ) {
-                        Text(text = "Sprawdz ponownie", fontFamily = FontFirst(), fontWeight = FontWeight.Bold)
+                        Text(text = "Check Again", fontFamily = FontFirst(), fontWeight = FontWeight.Bold)
                     }
                 }
             }
@@ -231,9 +232,9 @@ private fun TodayCard(snapshot: FitnessSnapshot) {
             .padding(16.dp),
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
-        StatBlock(label = "Kroki", value = "${snapshot.steps}")
-        StatBlock(label = "Aktywne min.", value = "${snapshot.activeMinutes}")
-        StatBlock(label = "Treningi", value = "${snapshot.workouts.size}")
+        StatBlock(label = "Steps", value = "${snapshot.steps}")
+        StatBlock(label = "Active min.", value = "${snapshot.activeMinutes}")
+        StatBlock(label = "Workouts", value = "${snapshot.workouts.size}")
     }
 }
 
@@ -345,9 +346,9 @@ private fun ClaimButton(complete: Boolean, claimed: Boolean, onClaim: () -> Unit
     ) {
         Text(
             text = when {
-                claimed -> "Odebrano"
-                complete -> "Odbierz"
-                else -> "Za wczesnie"
+                claimed -> "Claimed"
+                complete -> "Claim"
+                else -> "Too Early"
             },
             color = when {
                 claimed -> Green

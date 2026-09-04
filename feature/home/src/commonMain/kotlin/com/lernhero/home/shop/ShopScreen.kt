@@ -51,9 +51,9 @@ private data class GemPack(
 )
 
 private val GEM_PACKS = listOf(
-    GemPack("small", "Sakiewka", 100, null, "9,99 zl", "💎"),
-    GemPack("medium", "Skrzynka", 550, "+10% gratis", "39,99 zl", "💎"),
-    GemPack("large", "Skarbiec", 1500, "+25% gratis", "99,99 zl", "💎")
+    GemPack("small", "Pouch", 100, null, "$9.99", "💎"),
+    GemPack("medium", "Chest", 550, "+10% free", "$39.99", "💎"),
+    GemPack("large", "Vault", 1500, "+25% free", "$99.99", "💎")
 )
 
 /**
@@ -115,7 +115,7 @@ private fun Header(money: Int) {
                 fontSize = 16.sp
             )
             Text(
-                text = "Klejnoty za prawdziwa walute",
+                text = "Gems for real money",
                 color = Muted,
                 fontFamily = FontFirst(),
                 fontSize = 11.sp
@@ -184,7 +184,7 @@ private fun GemPackCard(pack: GemPack) {
                 fontSize = 12.sp
             )
             Text(
-                text = "Platnosci jeszcze nie dzialaja",
+                text = "Payments aren't live yet",
                 color = Muted.copy(alpha = 0.7f),
                 fontFamily = FontFirst(),
                 fontSize = 10.sp
@@ -216,16 +216,16 @@ private fun WhereToGetThings() {
             fontSize = 12.sp
         )
         Text(
-            text = "Wszystko wytwarzasz w Domu z tego, co przyniesiesz z lochu:",
+            text = "Everything is crafted at Home from what you bring back from the dungeon:",
             color = Muted,
             fontFamily = FontFirst(),
             fontSize = 12.sp
         )
-        SourceRow("⚒", "Kuznia", "Przedmioty — za rude, drewno i kamien.")
-        SourceRow("🔮", "Summon Center", "Kompani za losy, zaklecia za esencje.")
-        SourceRow("⚔", "Lochy", "Ruda i esencja wypadaja za fale i bossow.")
+        SourceRow("⚒", "Forge", "Items — for ore, wood and stone.")
+        SourceRow("🔮", "Summon Center", "Companions for tickets, spells for essence.")
+        SourceRow("⚔", "Dungeons", "Ore and essence drop from waves and bosses.")
         Text(
-            text = "Klejnoty nigdy nie beda skrotem do mocy — tylko do wygody.",
+            text = "Gems will never be a shortcut to power - only to convenience.",
             color = Muted.copy(alpha = 0.75f),
             fontFamily = FontFirst(),
             fontSize = 11.sp,

@@ -6,32 +6,50 @@ import androidx.compose.animation.core.animateFloat
 import androidx.compose.animation.core.infiniteRepeatable
 import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.animation.core.tween
+import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.requiredSize
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shadow
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.LineHeightStyle
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.lernhero.domain.player.PlayerProgress
+import com.lernhero.domain.town.TownResources
+import com.lernhero.game.character.HeroLook
+import com.lernhero.game.character.KnightEquipment
+import com.lernhero.game.character.ModularKnight
 import com.lernhero.home.player.PlayerViewModel
 import com.lernhero.shared.resources.Resources
 import com.lernhero.shared.theme.AppPalette
@@ -41,6 +59,15 @@ import androidx.compose.material3.Text
 import org.jetbrains.compose.resources.painterResource
 
 private val Muted = AppPalette.TextMuted
+
+/**
+ * Przelacznik calego rzedu linkow deweloperskich na Domu (podglady modeli + przycisk dosypujacy
+ * zasoby). MUSI byc false przed kazdym wydaniem do sklepu - przelacz recznie na true lokalnie,
+ * gdy testujesz, i wroc do false przed buildem release. Docelowo warto to zastapic prawdziwa
+ * flaga per-platform (BuildConfig.DEBUG na Androidzie i jej odpowiednik na iOS/desktop), ale to
+ * jedna linijka wystarcza, zeby nie wypuscic przycisku "darmowe zloto" do sklepu.
+ */
+private const val SHOW_DEV_TOOLS = false
 
 /**
  * Jak szeroka (wzgledem szerokosci ekranu) jest jedna wyspa - praktycznie caly ekran.
@@ -75,30 +102,262 @@ private data class CityBuildingSpot(
 @Composable
 fun HomeScreen(
     viewModel: PlayerViewModel,
+    onOpenCharacter: () -> Unit = {},
+    onOpenSettings: () -> Unit = {},
     onOpenSawmill: () -> Unit = {},
     onOpenQuarry: () -> Unit = {},
     onOpenForge: () -> Unit = {},
     onOpenSummonCenter: () -> Unit = {},
     onOpenKnightPreview: () -> Unit,
     onOpenModularKnightPreview: () -> Unit,
-    onOpenMonsterAnchorLab: () -> Unit
+    onOpenMonsterAnchorLab: () -> Unit,
+    onOpenMonsterAnimationLab: () -> Unit
 ) {
-    Box(modifier = Modifier.fillMaxSize()) {
-        CityMap(
-            onOpenSawmill = onOpenSawmill,
-            onOpenQuarry = onOpenQuarry,
-            onOpenForge = onOpenForge,
-            onOpenSummonCenter = onOpenSummonCenter
-        )
+    val state by viewModel.uiState.collectAsState()
 
-        DevLinksRow(
-            onOpenKnightPreview = onOpenKnightPreview,
-            onOpenModularKnightPreview = onOpenModularKnightPreview,
-            onOpenMonsterAnchorLab = onOpenMonsterAnchorLab,
-            onGrantResources = viewModel::grantTestResources,
+    Column(modifier = Modifier.fillMaxSize()) {
+        // Karta postaci nie ma juz wlasnej zakladki - jej skrot (kto, jaki poziom, ile zasobow)
+        // siedzi u gory Domu i jest wejsciem na pelny ekran ekwipunku.
+        Row(
             modifier = Modifier
-                .align(Alignment.BottomCenter)
-                .padding(bottom = 2.dp)
+                .padding(horizontal = 10.dp, vertical = 4.dp)
+                .fillMaxWidth(),
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            HomeHeroBar(
+                name = state.name,
+                progress = state.progress,
+                money = state.money,
+                resources = state.resources,
+                knight = state.knightEquipment,
+                look = state.heroLook,
+                onClick = onOpenCharacter,
+                modifier = Modifier.weight(1f)
+            )
+            SettingsButton(onClick = onOpenSettings)
+        }
+
+        Box(modifier = Modifier.weight(1f).fillMaxWidth()) {
+            CityMap(
+                onOpenSawmill = onOpenSawmill,
+                onOpenQuarry = onOpenQuarry,
+                onOpenForge = onOpenForge,
+                onOpenSummonCenter = onOpenSummonCenter
+            )
+
+            // Za flaga: "dev: +zasoby" doklada 50k zlota jednym tapnieciem, wiec w buildzie
+            // sklepowym ten caly rzad MUSI byc wylaczony - inaczej kazdy gracz ma darmowy cheat
+            // bez zadnego hackowania, samym interfejsem. Firestore Security Rules i tak by to
+            // przycielo (limit delty na zapis), ale nie ma po co w ogole pokazywac przycisku.
+            if (SHOW_DEV_TOOLS) {
+                DevLinksRow(
+                    onOpenKnightPreview = onOpenKnightPreview,
+                    onOpenModularKnightPreview = onOpenModularKnightPreview,
+                    onOpenMonsterAnchorLab = onOpenMonsterAnchorLab,
+                    onOpenMonsterAnimationLab = onOpenMonsterAnimationLab,
+                    onGrantResources = viewModel::grantTestResources,
+                    modifier = Modifier
+                        .align(Alignment.BottomCenter)
+                        .padding(bottom = 2.dp)
+                )
+            }
+        }
+    }
+}
+
+/** Srednica kola-awatara. Wieksza niz wysokosc paska info - kolo ma nad pasek wystawac. */
+private val HERO_AVATAR = 56.dp
+
+/** Szerokosc paska poziomu w pasku info - staly, wyrazny, nie przyciety krawedzia. */
+private val HERO_XP_BAR_W = 132.dp
+
+/** Przycina pusta przestrzen nad/pod linia tekstu - pixelowa czcionka niesie jej sporo. */
+private val TrimmedLine = LineHeightStyle(
+    alignment = LineHeightStyle.Alignment.Center,
+    trim = LineHeightStyle.Trim.Both
+)
+
+/**
+ * Skrot karty postaci na gorze Domu. Dwie OSOBNE rzeczy w jednym rzedzie:
+ *  - lewa: kolo-awatar + przylegly pasek info (imie, XP, pasek poziomu). Pasek jest zaokraglony
+ *    od strony kola, a scienty na prosto od prawej. Cala lewa strona jest klikalna.
+ *  - prawa: samodzielne, przezroczyste pastylki zasobow (zloto, esencja).
+ * Wszystkie tla sa polprzezroczyste, zeby niebo Miasta przebijalo pod spodem.
+ */
+@Composable
+private fun SettingsButton(onClick: () -> Unit) {
+    Box(
+        modifier = Modifier
+            .size(38.dp)
+            .clip(RoundedCornerShape(10.dp))
+            .background(Color(0x992A2018))
+            .border(1.dp, Color(0x996B5A38), RoundedCornerShape(10.dp))
+            .clickable(onClick = onClick),
+        contentAlignment = Alignment.Center
+    ) {
+        androidx.compose.material3.Text(text = "⚙", fontSize = 18.sp)
+    }
+}
+
+@Composable
+private fun HomeHeroBar(
+    name: String,
+    progress: PlayerProgress,
+    money: Int,
+    resources: TownResources,
+    knight: KnightEquipment,
+    look: HeroLook,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    val fill by animateFloatAsState(targetValue = progress.xpProgress, label = "homeXp")
+
+    Row(
+        modifier = modifier.fillMaxWidth(),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        // Grupa lewa: kolo + pasek. Owija sie wokol tresci (nie rozpycha pustym panelem);
+        // Spacer nizej odpycha zasoby do prawej krawedzi.
+        Box(
+            modifier = Modifier.clickable(onClick = onClick),
+            contentAlignment = Alignment.CenterStart
+        ) {
+            HeroInfoPanel(
+                name = name,
+                xpText = "Knight · ${progress.xp} / ${progress.xpForNextLevel} XP",
+                fill = fill
+            )
+            HeroAvatar(knight = knight, look = look, level = progress.level)
+        }
+
+        Spacer(modifier = Modifier.weight(1f))
+
+        Column(
+            horizontalAlignment = Alignment.End,
+            verticalArrangement = Arrangement.spacedBy(5.dp)
+        ) {
+            ResourceChip("🪙", money)
+            ResourceChip("💎", resources.essence)
+        }
+    }
+}
+
+@Composable
+private fun HeroInfoPanel(
+    name: String,
+    xpText: String,
+    fill: Float
+) {
+    Row(
+        modifier = Modifier
+            .padding(start = HERO_AVATAR / 2)
+            // Lewa strona zaokraglona (chowa sie pod kolem), prawa scienta na prosto - jak prostokat.
+            .clip(RoundedCornerShape(topStart = 20.dp, bottomStart = 20.dp))
+            .background(AppPalette.Panel.copy(alpha = 0.5f))
+            .padding(start = HERO_AVATAR / 2 + 10.dp, end = 12.dp, top = 6.dp, bottom = 9.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
+            Text(
+                text = name.ifBlank { "Sir Lernhero" },
+                color = AppPalette.Gold,
+                fontFamily = FontPixel(),
+                fontWeight = FontWeight.Bold,
+                fontSize = 11.sp,
+                style = TextStyle(lineHeight = 11.sp, lineHeightStyle = TrimmedLine),
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis
+            )
+            Text(
+                text = xpText,
+                color = AppPalette.TextMuted,
+                fontFamily = FontFirst(),
+                fontSize = 8.sp,
+                style = TextStyle(lineHeight = 8.sp, lineHeightStyle = TrimmedLine),
+                maxLines = 1
+            )
+            Box(
+                modifier = Modifier
+                    .width(HERO_XP_BAR_W)
+                    .height(5.dp)
+                    .clip(RoundedCornerShape(50))
+                    .background(AppPalette.Ink.copy(alpha = 0.5f))
+            ) {
+                Box(
+                    modifier = Modifier
+                        .fillMaxHeight()
+                        .fillMaxWidth(fill)
+                        .clip(RoundedCornerShape(50))
+                        .background(AppPalette.Gold)
+                )
+            }
+        }
+    }
+}
+
+@Composable
+private fun HeroAvatar(knight: KnightEquipment, look: HeroLook, level: Int) {
+    // Zewnetrzny Box NIE jest przyciety - dzieki temu ramka z poziomem moze SIEDZIEC NA kole,
+    // w jego prawym dolnym rogu, zamiast zostac scieta razem z rycerzem.
+    Box(contentAlignment = Alignment.BottomEnd) {
+        Box(
+            modifier = Modifier
+                .size(HERO_AVATAR)
+                .clip(RoundedCornerShape(50))
+                .background(AppPalette.Ink)
+                .border(2.dp, AppPalette.Gold, RoundedCornerShape(50)),
+            contentAlignment = Alignment.Center
+        ) {
+            // Duzo wieksza klatka rycerza, docisnieta w dol - w kolku widac tors i glowe, nie
+            // calego ludzika z mnostwem pustej przestrzeni. requiredSize omija ciasne wiazania.
+            ModularKnight(
+                equipment = knight,
+                look = look,
+                sizeDp = 92.dp,
+                interactive = false,
+                modifier = Modifier.requiredSize(92.dp).offset(y = 21.dp)
+            )
+        }
+        Box(
+            modifier = Modifier
+                .offset(x = 3.dp, y = 3.dp)
+                .clip(RoundedCornerShape(50))
+                .background(AppPalette.Ink)
+                .border(1.5.dp, AppPalette.Gold, RoundedCornerShape(50))
+                .padding(horizontal = 5.dp, vertical = 1.dp)
+        ) {
+            Text(
+                text = "$level",
+                color = AppPalette.Gold,
+                fontFamily = FontPixel(),
+                fontWeight = FontWeight.Bold,
+                fontSize = 9.sp,
+                style = TextStyle(lineHeight = 9.sp, lineHeightStyle = TrimmedLine)
+            )
+        }
+    }
+}
+
+@Composable
+private fun ResourceChip(icon: String, value: Int) {
+    Row(
+        modifier = Modifier
+            .clip(RoundedCornerShape(50))
+            .background(AppPalette.Ink.copy(alpha = 0.5f))
+            .border(1.dp, AppPalette.GoldDim.copy(alpha = 0.7f), RoundedCornerShape(50))
+            .padding(horizontal = 9.dp, vertical = 4.dp),
+        horizontalArrangement = Arrangement.spacedBy(5.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Text(text = icon, fontSize = 11.sp)
+        Text(
+            text = "$value",
+            color = AppPalette.Gold,
+            fontFamily = FontPixel(),
+            fontWeight = FontWeight.Bold,
+            fontSize = 11.sp,
+            maxLines = 1
         )
     }
 }
@@ -113,9 +372,9 @@ private fun CityMap(
     BoxWithConstraints(modifier = Modifier.fillMaxSize()) {
         // xFraction = pozycja w WOLNEJ szerokosci (0 = do lewej, 1 = do prawej) - stad zygzak.
         val spots = listOf(
-            CityBuildingSpot(painterResource(Resources.CityIsland.sawmill), "Tartak", 0.02f, onOpenSawmill),
-            CityBuildingSpot(painterResource(Resources.CityIsland.quarry), "Kamieniolom", 0.98f, onOpenQuarry),
-            CityBuildingSpot(painterResource(Resources.CityIsland.forge), "Kuznia", 0.02f, onOpenForge),
+            CityBuildingSpot(painterResource(Resources.CityIsland.sawmill), "Sawmill", 0.02f, onOpenSawmill),
+            CityBuildingSpot(painterResource(Resources.CityIsland.quarry), "Quarry", 0.98f, onOpenQuarry),
+            CityBuildingSpot(painterResource(Resources.CityIsland.forge), "Forge", 0.02f, onOpenForge),
             CityBuildingSpot(painterResource(Resources.CityIsland.summon), "Summon Center", 0.98f, onOpenSummonCenter)
         )
 
@@ -230,6 +489,7 @@ private fun DevLinksRow(
     onOpenKnightPreview: () -> Unit,
     onOpenModularKnightPreview: () -> Unit,
     onOpenMonsterAnchorLab: () -> Unit,
+    onOpenMonsterAnimationLab: () -> Unit,
     onGrantResources: () -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -268,6 +528,13 @@ private fun DevLinksRow(
             fontFamily = FontFirst(),
             fontSize = 9.sp,
             modifier = Modifier.clickable(onClick = onOpenMonsterAnchorLab).padding(8.dp)
+        )
+        Text(
+            text = "dev: anim",
+            color = Muted.copy(alpha = 0.5f),
+            fontFamily = FontFirst(),
+            fontSize = 9.sp,
+            modifier = Modifier.clickable(onClick = onOpenMonsterAnimationLab).padding(8.dp)
         )
     }
 }

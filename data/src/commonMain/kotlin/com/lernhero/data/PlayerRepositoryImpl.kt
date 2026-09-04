@@ -2,19 +2,28 @@ package com.lernhero.data
 
 
 import com.lernhero.domain.craft.CraftCost
+import com.lernhero.domain.craft.ItemUpgrades
+import com.lernhero.domain.item.ItemCatalog
 import com.lernhero.domain.monster.CompanionSpells
 import com.lernhero.domain.monster.MonsterCatalog
 import com.lernhero.domain.monster.MonsterLevels
 import com.lernhero.domain.monster.MonsterSpellLevels
 import com.lernhero.domain.monster.MonsterStars
 import com.lernhero.domain.repository.PlayerRepository
+import com.lernhero.domain.player.HeroAppearance
 import com.lernhero.domain.player.HeroClass
 import com.lernhero.domain.player.HeroStat
+import com.lernhero.domain.item.catalog.MonsterGear
 import com.lernhero.domain.player.LevelCurve
+import com.lernhero.domain.talent.TalentCatalog
+import com.lernhero.domain.talent.TalentRules
 import com.lernhero.domain.player.Player
 import com.lernhero.domain.player.PlayerEquipment
+import com.lernhero.domain.player.StarterGift
 import com.lernhero.domain.progress.RunStats
+import com.lernhero.domain.quiz.custom.CustomDeck
 import com.lernhero.domain.story.IdleRewards
+import com.lernhero.domain.summon.FreeSummon
 import com.lernhero.domain.town.ProductionBuilding
 import com.lernhero.domain.town.ProductionState
 import com.lernhero.domain.town.TownResources
@@ -38,17 +47,27 @@ class PlayerRepositoryImpl: PlayerRepository {
         user: FirebaseUser?,
         name: String,
         character: HeroClass?,
+        appearance: HeroAppearance,
+        starterGift: StarterGift?,
         onSuccess: () -> Unit,
         onFailure: (String) -> Unit
     ) {
         try {
             if (user != null) {
                 val playerCollection = Firebase.firestore.collection(collectionPath = "player")
+                // Dar startowy trafia i do plecaka, i do zalozonego ekwipunku - gracz ma go miec
+                // na sobie w pierwszej walce, a nie do odszukania w menu.
+                val giftItem = starterGift?.item
                 val player = Player(
                     id = user.uid,
                     name = name,
                     email = user.email ?: "Unknown",
                     character = character,
+                    appearance = appearance,
+                    ownedItems = listOfNotNull(giftItem?.id),
+                    equipment = PlayerEquipment(
+                        equipped = giftItem?.let { mapOf(it.slot.name to it.id) } ?: emptyMap()
+                    ),
                 )
 
                 val playerExists = playerCollection.document(user.uid).get().exists
@@ -143,14 +162,48 @@ class PlayerRepositoryImpl: PlayerRepository {
         return try {
             val document = playerDocument() ?: return null
             val player = getPlayer() ?: return null
-            if (itemId in player.ownedItems) return null
+            // Sprzet kompana idzie do WLASNEJ puli - o tym, ktora to, decyduje samo id
+            // (patrz [MonsterGear.isMonsterGear]), wiec ekran nie musi tego przekazywac.
+            val forMonster = MonsterGear.isMonsterGear(itemId)
+            val ownedPool = if (forMonster) player.ownedMonsterItems else player.ownedItems
+            if (itemId in ownedPool) return null
             if (!cost.canAfford(player.townResources, player.money)) return null
 
             val updated = player.copy(
                 money = player.money - cost.gold,
                 townResources = cost.deductFrom(player.townResources),
-                ownedItems = player.ownedItems + itemId,
+                ownedItems = if (forMonster) player.ownedItems else player.ownedItems + itemId,
+                ownedMonsterItems =
+                    if (forMonster) player.ownedMonsterItems + itemId else player.ownedMonsterItems,
                 stats = player.stats.copy(itemsCrafted = player.stats.itemsCrafted + 1)
+            )
+            document.set(updated)
+            updated
+        } catch (e: Exception) {
+            null
+        }
+    }
+
+    override suspend fun upgradeItem(itemId: String): Player? {
+        return try {
+            val document = playerDocument() ?: return null
+            val player = getPlayer() ?: return null
+            val forMonster = MonsterGear.isMonsterGear(itemId)
+            val item = if (forMonster) MonsterGear.byId(itemId) else ItemCatalog.byId(itemId)
+            if (item == null) return null
+            // Ulepszac mozna TYLKO to, co sie ma - inaczej kuznia bylaby skrotem do zdobycia
+            // przedmiotu z pominieciem wykuwania.
+            val ownedPool = if (forMonster) player.ownedMonsterItems else player.ownedItems
+            if (itemId !in ownedPool) return null
+
+            val level = ItemUpgrades.levelOf(player.itemUpgrades, itemId)
+            val cost = ItemUpgrades.nextCost(item, level) ?: return null
+            if (!cost.canAfford(player.townResources, player.money)) return null
+
+            val updated = player.copy(
+                money = player.money - cost.gold,
+                townResources = cost.deductFrom(player.townResources),
+                itemUpgrades = player.itemUpgrades + (itemId to level + 1)
             )
             document.set(updated)
             updated
@@ -181,17 +234,23 @@ class PlayerRepositoryImpl: PlayerRepository {
         }
     }
 
-    override suspend fun unlockSpell(spellId: String, cost: CraftCost): Player? {
+    override suspend fun claimFreeSummon(
+        bannerId: String,
+        cooldownMs: Long,
+        monsterId: String,
+        now: Long
+    ): Player? {
         return try {
             val document = playerDocument() ?: return null
             val player = getPlayer() ?: return null
-            if (spellId in player.ownedSpells) return null
-            if (!cost.canAfford(player.townResources, player.money)) return null
+            // Gotowosc liczymy z ZAPISU, nie z tego, co przyslal ekran - to jedyny sposob, zeby
+            // dwa szybkie tapniecia nie wyplacily dwoch darmowych losowan.
+            if (!FreeSummon.isReady(player.freeSummonClaims[bannerId], cooldownMs, now)) return null
 
             val updated = player.copy(
-                money = player.money - cost.gold,
-                townResources = cost.deductFrom(player.townResources),
-                ownedSpells = player.ownedSpells + spellId
+                ownedMonsters = player.ownedMonsters + monsterId,
+                freeSummonClaims = player.freeSummonClaims + (bannerId to now),
+                stats = player.stats.copy(monstersSummoned = player.stats.monstersSummoned + 1)
             )
             document.set(updated)
             updated
@@ -345,12 +404,64 @@ class PlayerRepositoryImpl: PlayerRepository {
         }
     }
 
-    override suspend fun updateSpellWeights(weights: Map<String, Int>) {
-        try {
-            val document = playerDocument() ?: return
-            val player = getPlayer() ?: return
-            document.set(player.copy(spellWeights = weights))
-        } catch (_: Exception) {
+    override suspend fun spendTalentPoint(talentId: String): Player? {
+        return try {
+            val document = playerDocument() ?: return null
+            val player = getPlayer() ?: return null
+            val talent = TalentCatalog.byId(talentId) ?: return null
+
+            val ranks = TalentRules.spend(
+                talent = talent,
+                ranks = player.talentRanks,
+                availablePoints = TalentRules.availablePoints(player.progress.level, player.talentRanks)
+            ) ?: return null
+
+            // Zaklecia licza sie ZAWSZE z calego drzewka (TalentRules.spellChances) - nic nie ma
+            // czego dopisywac do zapisu osobno.
+            val updated = player.copy(talentRanks = ranks)
+            document.set(updated)
+            updated
+        } catch (e: Exception) {
+            null
+        }
+    }
+
+    override suspend fun resetTalents(): Player? {
+        return try {
+            val document = playerDocument() ?: return null
+            val player = getPlayer() ?: return null
+            val spent = TalentRules.totalSpent(player.talentRanks)
+            if (spent <= 0) return null
+
+            // Punktow nie trzeba oddawac recznie - wynikaja z poziomu, wiec zeruja sie razem
+            // ze stopniami (patrz [TalentRules.availablePoints]). Zaklecia znikaja z nimi, bo
+            // drzewko jest ich jedynym zrodlem.
+            val updated = player.copy(talentRanks = emptyMap())
+            document.set(updated)
+            updated
+        } catch (e: Exception) {
+            null
+        }
+    }
+
+    override suspend fun updateMonsterEquipment(
+        monsterId: String,
+        equipment: Map<String, String>
+    ): Player? {
+        return try {
+            val document = playerDocument() ?: return null
+            val player = getPlayer() ?: return null
+            // Pusty ekwipunek USUWA wpis zamiast zapisywac pusta mape - inaczej dokument
+            // gracza rosnie o klucz na kazdego kompana, ktoremu kiedykolwiek zdjeto sprzet.
+            val updatedMap =
+                if (equipment.isEmpty()) player.monsterEquipment - monsterId
+                else player.monsterEquipment + (monsterId to equipment)
+
+            val updated = player.copy(monsterEquipment = updatedMap)
+            document.set(updated)
+            updated
+        } catch (e: Exception) {
+            null
         }
     }
 
@@ -523,6 +634,61 @@ class PlayerRepositoryImpl: PlayerRepository {
         }
     }
 
+    override suspend fun recordWordAnswer(wordId: String, correct: Boolean, now: Long): Player? {
+        return try {
+            val document = playerDocument() ?: return null
+            val player = getPlayer() ?: return null
+            val word = player.savedWords.firstOrNull { it.id == wordId } ?: return player
+            val updated = player.copy(
+                savedWords = player.savedWords.map { saved ->
+                    if (saved.id == wordId) {
+                        com.lernhero.domain.reading.VocabularyDeck.recordAnswer(word, correct, now)
+                    } else {
+                        saved
+                    }
+                }
+            )
+            document.set(updated)
+            updated
+        } catch (e: Exception) {
+            null
+        }
+    }
+
+    override suspend fun setBookCover(bookId: String, coverLocator: String): Player? {
+        return try {
+            val document = playerDocument() ?: return null
+            val player = getPlayer() ?: return null
+            if (player.importedBooks.none { it.id == bookId }) return player
+            val updated = player.copy(
+                importedBooks = player.importedBooks.map { book ->
+                    if (book.id == bookId) book.copy(coverLocator = coverLocator) else book
+                }
+            )
+            document.set(updated)
+            updated
+        } catch (e: Exception) {
+            null
+        }
+    }
+
+    override suspend fun removeImportedBook(bookId: String): Player? {
+        return try {
+            val document = playerDocument() ?: return null
+            val player = getPlayer() ?: return null
+            val updated = player.copy(
+                importedBooks = player.importedBooks.filterNot { it.id == bookId },
+                // Postep bez ksiazki byl by tylko smieciem w zapisie - fiszki zostaja, bo slowko
+                // raz nauczone jest warte tyle samo, nawet gdy ksiazka zniknela z polki.
+                bookProgress = player.bookProgress - bookId
+            )
+            document.set(updated)
+            updated
+        } catch (e: Exception) {
+            null
+        }
+    }
+
     override suspend fun updateReaderSettings(settings: com.lernhero.domain.reading.ReaderSettings) {
         try {
             val document = playerDocument() ?: return
@@ -549,6 +715,53 @@ class PlayerRepositoryImpl: PlayerRepository {
             updated
         } catch (e: Exception) {
             null
+        }
+    }
+
+    /* ---- Wlasne talie pytan: podkolekcja player/{uid}/decks ---- */
+
+    private fun decksCollection() =
+        getUserId()?.let { uid ->
+            Firebase.firestore.collection("player").document(uid).collection("decks")
+        }
+
+    override suspend fun getCustomDecks(): List<CustomDeck> {
+        return try {
+            val snapshot = decksCollection()?.get() ?: return emptyList()
+            snapshot.documents
+                // Talia zapisana starsza wersja modelu nie moze wywrocic calej listy - pojedynczy
+                // dokument, ktorego nie da sie odczytac, po prostu wypada.
+                .mapNotNull { document -> runCatching { document.data<CustomDeck>() }.getOrNull() }
+                .sortedByDescending { it.updatedAt }
+        } catch (e: Exception) {
+            emptyList()
+        }
+    }
+
+    override suspend fun saveCustomDeck(deck: CustomDeck): Boolean {
+        return try {
+            val collection = decksCollection() ?: return false
+            // Sufit pytan pilnujemy TUTAJ, a nie tylko w edytorze: dokument Firestore ma twardy
+            // limit 1 MB, a "wygeneruj jeszcze 30" da sie klikac bez konca.
+            val trimmed = if (deck.questions.size > CustomDeck.MAX_QUESTIONS) {
+                deck.copy(questions = deck.questions.take(CustomDeck.MAX_QUESTIONS))
+            } else {
+                deck
+            }
+            collection.document(trimmed.id).set(trimmed)
+            true
+        } catch (e: Exception) {
+            false
+        }
+    }
+
+    override suspend fun deleteCustomDeck(deckId: String): Boolean {
+        return try {
+            val collection = decksCollection() ?: return false
+            collection.document(deckId).delete()
+            true
+        } catch (e: Exception) {
+            false
         }
     }
 

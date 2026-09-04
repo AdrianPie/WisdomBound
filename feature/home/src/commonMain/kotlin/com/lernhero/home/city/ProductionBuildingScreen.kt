@@ -226,7 +226,7 @@ private fun ProductionPulsePanel(
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                TownSectionLabel("Tempo")
+                TownSectionLabel("Rate")
                 Text(
                     text = if (rapidFire) "⚡ NA MAKSA" else "co ${cycleMillis.asPulseLabel()}",
                     color = if (rapidFire) AppPalette.Warning else Muted,
@@ -354,7 +354,7 @@ private fun StoragePanel(
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                TownSectionLabel("Magazyn")
+                TownSectionLabel("Storage")
                 Text(
                     text = if (full) "PELNY - odbierz!" else "$pending / $cap",
                     color = if (full) AppPalette.Warning else Muted,
@@ -399,9 +399,9 @@ private fun RatePanel(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
-                TownSectionLabel("Produkcja")
+                TownSectionLabel("Production")
                 Text(
-                    text = "Poziom $level",
+                    text = "Level $level",
                     color = Gold,
                     fontFamily = FontPixel(),
                     fontWeight = FontWeight.Bold,
@@ -437,7 +437,7 @@ private fun RatePanel(
                 BoostBadge(percent = boostPercent, remaining = boostRemaining)
             } else {
                 Text(
-                    text = "Rozwiaz quiz, zeby przyspieszyc produkcje.",
+                    text = "Answer a quiz question to speed up production.",
                     color = Muted,
                     fontFamily = FontFirst(),
                     fontSize = 11.sp
@@ -477,8 +477,8 @@ private fun BoostBadge(percent: Int, remaining: Long) {
 private const val QUIZ_BOOST_PERCENT = 25
 
 private fun ProductionBuilding.title(): String = when (this) {
-    ProductionBuilding.Sawmill -> "Tartak"
-    ProductionBuilding.Quarry -> "Kamieniolom"
+    ProductionBuilding.Sawmill -> "Sawmill"
+    ProductionBuilding.Quarry -> "Quarry"
 }
 
 private fun ProductionBuilding.resourceIcon(): String = when (this) {

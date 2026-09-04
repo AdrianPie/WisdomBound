@@ -21,9 +21,11 @@ import com.lernhero.game.FightScreenOrientation
 import com.lernhero.game.battle.component.BattleField
 import com.lernhero.game.battle.component.BattleSummaryScreen
 import com.lernhero.game.battle.component.BossEventQuizBar
+import com.lernhero.game.battle.component.CategoryPickPanel
 import com.lernhero.game.battle.component.EaseOutCubic
 import com.lernhero.game.battle.component.LiveQuizBar
 import com.lernhero.game.battle.component.ResolvingStrip
+import com.lernhero.game.battle.component.BossChargeOverlay
 import com.lernhero.game.battle.component.SCENE_TRANSITION_MS
 import com.lernhero.game.battle.component.UpgradeChoiceDialog
 import com.lernhero.shared.theme.AppPalette
@@ -33,6 +35,12 @@ import org.koin.compose.viewmodel.koinViewModel
 private const val BOTTOM_FRACTION_INTRO = 0f
 private const val BOTTOM_FRACTION_RESOLVING = 0.22f
 private const val BOTTOM_FRACTION_QUESTION = 0.68f
+
+/**
+ * Zdarzenie bossa dostaje WYRAZNIE mniej dolu niz zwykly quiz - cala scena dzieje sie na arenie
+ * (zbliżenie bossa, iskry, licznik stawki), wiec panel z suwakiem ma jej nie zaslaniac.
+ */
+private const val BOTTOM_FRACTION_BOSS_EVENT = 0.46f
 
 /**
  * Ekran walki: fale wrogow nadciagaja bez konca, kazda tura to jedno pytanie quizu. Koniec przychodzi
@@ -63,10 +71,22 @@ fun BattleScreen(
 
     // Zwykle pytanie i zaklecie bossa rozwijaja dol tak samo - zaklecie ma wygladac jak normalny quiz,
     // tylko z inna zawartoscia w srodku.
-    val bottomExpanded = state.turnPhase == TurnPhase.Question || state.bossEvent != null
+    val bossEvent = state.bossEvent
+    // Podczas LADOWANIA bossa dol jest schowany - najpierw ma byc widac, co boss szykuje.
+    // Panel z pytaniem wjezdza dopiero w fazie Quiz i jest nizszy niz zwykly quiz.
+    // Panel jest na gorze tylko wtedy, gdy gracz ma cos do zrobienia albo do przeczytania.
+    // Kulminacja (lot kuli) ma caly ekran dla siebie - nic jej nie zaslania.
+    val bossQuizUp = bossEvent != null &&
+        bossEvent.phase != BossEventPhase.Charging &&
+        bossEvent.phase != BossEventPhase.Payoff
+    val bottomExpanded = state.turnPhase == TurnPhase.Question ||
+        state.turnPhase == TurnPhase.CategoryPick ||
+        bossQuizUp
     val bottomFraction by animateFloatAsState(
         targetValue = when {
             state.phase != GamePhase.Battle -> BOTTOM_FRACTION_INTRO
+            bossEvent != null && !bossQuizUp -> BOTTOM_FRACTION_RESOLVING
+            bossQuizUp -> BOTTOM_FRACTION_BOSS_EVENT
             bottomExpanded -> BOTTOM_FRACTION_QUESTION
             else -> BOTTOM_FRACTION_RESOLVING
         },
@@ -86,29 +106,48 @@ fun BattleScreen(
         Column(modifier = Modifier.fillMaxSize()) {
             // Arena zawsze zajmuje CALA reszte wysokosci - kurczy sie plynnie razem z rosnacym dolem,
             // a postacie (rozstawione na ulamkach wysokosci) jada do gory dokladnie w tym samym rytmie.
-            BattleField(
-                state = state,
-                onAttackFinished = viewModel::onAttackFinished,
-                onHitRecovered = viewModel::onHitRecovered,
-                onEffectShown = viewModel::consumeFloatingEffect,
-                onCapitulate = viewModel::capitulate,
-                modifier = Modifier.weight(1f)
-            )
+            Box(modifier = Modifier.weight(1f)) {
+                BattleField(
+                    state = state,
+                    onAttackFinished = viewModel::onAttackFinished,
+                    onHitRecovered = viewModel::onHitRecovered,
+                    onEffectShown = viewModel::consumeFloatingEffect,
+                    onCapitulate = viewModel::capitulate,
+                    modifier = Modifier.fillMaxSize()
+                )
+
+                // Inscenizacja zdarzenia bossa rysuje sie NAD arena i nie zabiera jej miejsca -
+                // boss zostaje tam, gdzie stal, a scena dzieje sie wokol niego.
+                if (bossEvent != null) {
+                    BossChargeOverlay(event = bossEvent, modifier = Modifier.fillMaxSize())
+                }
+            }
 
             SceneBottomPanel(
                 height = screenHeight * bottomFraction,
                 // Panel pytania jest renderowany w stalej, docelowej wysokosci - dzieki temu wjezdza
                 // w calosci, bez rozciagania sie w trakcie. Pasek rozliczania tury nie wjezdza,
                 // wiec po prostu wypelnia to, co aktualnie ma do dyspozycji.
-                pinnedContentHeight = if (bottomExpanded) screenHeight * BOTTOM_FRACTION_QUESTION else null
+                pinnedContentHeight = when {
+                    bossQuizUp -> screenHeight * BOTTOM_FRACTION_BOSS_EVENT
+                    bottomExpanded -> screenHeight * BOTTOM_FRACTION_QUESTION
+                    else -> null
+                }
             ) {
                 if (state.phase == GamePhase.Battle) {
-                    val bossEvent = state.bossEvent
                     when {
-                        bossEvent != null -> BossEventQuizBar(
+                        bossQuizUp && bossEvent != null -> BossEventQuizBar(
                             event = bossEvent,
                             onGuessChange = viewModel::submitBossEventGuess,
                             onConfirm = viewModel::confirmBossEventGuess,
+                            modifier = Modifier.fillMaxSize()
+                        )
+
+                        // Wybor tematu wchodzi w to samo miejsce co quiz - to nadal "dol ekranu
+                        // czeka na decyzje gracza", tylko decyzja jest inna.
+                        state.categoryOffer != null -> CategoryPickPanel(
+                            offer = state.categoryOffer!!,
+                            onPick = viewModel::chooseCategory,
                             modifier = Modifier.fillMaxSize()
                         )
 
@@ -116,6 +155,8 @@ fun BattleScreen(
                             state = state,
                             onAnswer = viewModel::answerQuiz,
                             onOrderPick = viewModel::pickOrderItem,
+                            onMultiToggle = viewModel::toggleMultiSelect,
+                            onMultiConfirm = viewModel::confirmMultiSelect,
                             onContinue = viewModel::continueQuiz,
                             modifier = Modifier.fillMaxSize()
                         )

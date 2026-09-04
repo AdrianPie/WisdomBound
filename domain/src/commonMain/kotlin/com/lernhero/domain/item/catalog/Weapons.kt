@@ -22,8 +22,8 @@ object Weapons {
 
     val PLATE_SWORD = Item(
         id = "plate_sword",
-        name = "Miecz plytowy",
-        description = "Solidny miecz obosieczny. Siega dwoch przeciwnikow naraz.",
+        name = "Plate Sword",
+        description = "A sturdy double-edged sword. Reaches two enemies at once.",
         slot = ItemSlot.MainHand,
         rarity = Rarity.Common,
         iconKey = "sword",
@@ -36,8 +36,8 @@ object Weapons {
 
     val REAPER_GLAIVE = Item(
         id = "reaper_glaive",
-        name = "Kosa zniwiarza",
-        description = "Tnie trzech wrogow naraz, a po zabiciu pozwala uderzyc ponownie.",
+        name = "Reaper's Glaive",
+        description = "Cuts three enemies at once, and lets you strike again after a kill.",
         slot = ItemSlot.MainHand,
         rarity = Rarity.Epic,
         iconKey = "glaive",
@@ -51,8 +51,8 @@ object Weapons {
 
     val VENOM_DAGGER = Item(
         id = "venom_dagger",
-        name = "Zatruty sztylet",
-        description = "Szybki i podstepny. Zatruwa rane, a trucizna nie zna litosci dla pancerza.",
+        name = "Venom Dagger",
+        description = "Fast and treacherous. Poisons the wound, and the venom shows armor no mercy.",
         slot = ItemSlot.MainHand,
         rarity = Rarity.Rare,
         iconKey = "dagger",
@@ -69,8 +69,8 @@ object Weapons {
 
     val EMBER_STAFF = Item(
         id = "ember_staff",
-        name = "Kostur zaru",
-        description = "Podpala wrogow i co druga ture leczy trzech najbardziej poobijanych sojusznikow.",
+        name = "Ember Staff",
+        description = "Sets enemies alight and heals the three most wounded allies every other turn.",
         slot = ItemSlot.MainHand,
         rarity = Rarity.Rare,
         iconKey = "staff",

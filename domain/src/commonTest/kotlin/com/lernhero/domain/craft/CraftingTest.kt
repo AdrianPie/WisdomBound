@@ -49,7 +49,8 @@ class CraftingTest {
 
     @Test
     fun `kazda rzecz ma dokladnie jedna walute`() {
-        // Regula projektowa: kompani ida za losy, zaklecia za esencje, przedmioty za surowce.
+        // Regula projektowa: kompani ida za losy, przedmioty za surowce. Zaklec juz sie NIE kupuje -
+        // wpadaja z drzewka talentow (patrz TalentEffect.UnlockSpell).
         // Podwojna bramka (losy I esencja na tym samym przycisku) zrobila kiedys martwy ekran -
         // gracz z pelnym workiem losow nie mogl zrobic nic.
         Rarity.entries.forEach { rarity ->
@@ -58,18 +59,6 @@ class CraftingTest {
             assertEquals(0, cost.essence, "kompan $rarity nie moze wymagac esencji")
             assertEquals(0, cost.gold, "kompan $rarity nie moze wymagac zlota")
         }
-
-        SummonCosts.spellOffers.forEach { (spell, cost) ->
-            assertTrue(cost.essence > 0, "${spell.id} powinien kosztowac esencje")
-            assertEquals(0, cost.tickets, "${spell.id} nie moze wymagac losow")
-            assertEquals(0, cost.gold, "${spell.id} nie moze wymagac zlota")
-        }
-    }
-
-    @Test
-    fun `rzadsze zaklecie kosztuje wiecej esencji`() {
-        val sorted = SummonCosts.spellOffers.sortedBy { it.first.rarity.ordinal }
-        assertTrue(sorted.last().second.essence > sorted.first().second.essence)
     }
 
     @Test

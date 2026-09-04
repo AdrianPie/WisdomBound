@@ -16,6 +16,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -51,11 +52,34 @@ internal fun TownScreenScaffold(
     money: Int,
     toasts: List<TownToast>,
     onBack: () -> Unit,
+    /**
+     * Ekrany, ktore musza zmiescic cala tresc bez scrolla (karta kompana), dostaja naglowek
+     * zbity do JEDNEGO wiersza. Trzy wiersze chromu zabieraly tam okolo jednej trzeciej
+     * wysokosci - tyle, ile potrzebuje caly panel statystyk.
+     */
+    compact: Boolean = false,
     content: @Composable () -> Unit
 ) {
     Box(modifier = Modifier.fillMaxSize()) {
-        Column(modifier = Modifier.fillMaxSize().statusBarsPadding()) {
-            TownHeader(title = title, resources = resources, money = money, onBack = onBack)
+        // Oba marginesy systemowe siedza TUTAJ, a nie w ekranach.
+        //
+        // Wczesniej scaffold dawal tylko gorny (statusBarsPadding), przez co tresc kazdego budynku
+        // Miasta wchodzila pod dolny pasek gestow - i kazdy ekran laral to u siebie po swojemu
+        // (albo wcale). Skoro szkielet rezerwuje miejsce na naglowek, ma tez rezerwowac miejsce na
+        // dolna krawedz.
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .statusBarsPadding()
+                .navigationBarsPadding()
+        ) {
+            TownHeader(
+                title = title,
+                resources = resources,
+                money = money,
+                compact = compact,
+                onBack = onBack
+            )
             Box(modifier = Modifier.fillMaxSize()) { content() }
         }
 
@@ -109,8 +133,41 @@ private fun TownHeader(
     title: String,
     resources: TownResources,
     money: Int,
+    compact: Boolean,
     onBack: () -> Unit
 ) {
+    if (compact) {
+        // Jeden wiersz: powrot, tytul i tylko te dwa zasoby, ktorymi faktycznie sie tu placi.
+        Row(
+            modifier = Modifier.fillMaxWidth().padding(horizontal = 10.dp, vertical = 5.dp),
+            horizontalArrangement = Arrangement.spacedBy(7.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Box(
+                modifier = Modifier
+                    .clip(RoundedCornerShape(9.dp))
+                    .background(Ink.copy(alpha = 0.8f))
+                    .border(1.5.dp, GoldDim, RoundedCornerShape(9.dp))
+                    .clickable(onClick = onBack)
+                    .padding(horizontal = 9.dp, vertical = 5.dp)
+            ) {
+                Text(text = "←", color = Gold, fontFamily = FontPixel(), fontSize = 13.sp)
+            }
+            Text(
+                text = title,
+                color = Gold,
+                fontFamily = FontPixel(),
+                fontWeight = FontWeight.Bold,
+                fontSize = 14.sp,
+                maxLines = 1,
+                modifier = Modifier.weight(1f)
+            )
+            ResourcePill("💰", money)
+            ResourcePill("✨", resources.essence)
+        }
+        return
+    }
+
     Column(
         modifier = Modifier.fillMaxWidth().padding(horizontal = 12.dp, vertical = 8.dp),
         verticalArrangement = Arrangement.spacedBy(8.dp)

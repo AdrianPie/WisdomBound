@@ -20,5 +20,7 @@ data class BattleRequest(
     /** Seed pola mapy - ta sama walka po obrocie ekranu sklada sie tak samo. */
     val seed: Long,
     /** Endless mode: fale nadciagaja bez konca (patrz BattleViewModel) - [waves] jest wtedy ignorowane. */
-    val isEndless: Boolean = false
+    val isEndless: Boolean = false,
+    /** Debug: dodatkowy mnoznik HP wrogow (test walki z bossem - zeby nie padal na jednym ciosie). */
+    val enemyHpMultiplier: Float = 1f
 )

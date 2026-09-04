@@ -16,6 +16,12 @@ data class Player(
     val name: String? = null,
     val email: String? = null,
     val character: HeroClass? = null,
+    /**
+     * Wyglad wybrany przy tworzeniu postaci - preset i kolory skory/wlosow. Zapisy sprzed tej
+     * zmiany nie maja tego pola i dostana [HeroAppearance] domyslny, czyli dokladnie tego
+     * bohatera, ktorego widzialy do tej pory.
+     */
+    val appearance: HeroAppearance = HeroAppearance(),
     val money: Int = 0,
     /** Poziom, XP i rozdane punkty statystyk - patrz [PlayerProgress]. */
     val progress: PlayerProgress = PlayerProgress(),
@@ -27,6 +33,17 @@ data class Player(
     val stats: GameStats = GameStats(),
     val equipment: PlayerEquipment = PlayerEquipment(),
     val ownedItems: List<String> = emptyList(),
+    /**
+     * Poziom ulepszenia per PRZEDMIOT (id -> 0..10, brak wpisu = 0) - patrz
+     * [com.lernhero.domain.craft.ItemUpgrades]. Jedna mapa na oba katalogi (sprzet bohatera i
+     * kompanow), bo id sa unikalne w calej grze, a poziom znaczy wszedzie to samo.
+     */
+    val itemUpgrades: Map<String, Int> = emptyMap(),
+    /**
+     * Sprzet kompanow wykuty w kuzni ([com.lernhero.domain.item.catalog.MonsterGear]). Osobna lista
+     * od [ownedItems], zeby plecak bohatera nie zapelnial sie pazurami, ktorych i tak nie zalozy.
+     */
+    val ownedMonsterItems: List<String> = emptyList(),
     /** Multiset of [MonsterCard] ids the player owns (duplicates allowed). */
     val ownedMonsters: List<String> = emptyList(),
     /**
@@ -45,12 +62,25 @@ data class Player(
      * esencje - patrz [com.lernhero.domain.monster.MonsterSpellLevels].
      */
     val monsterSpellLevels: Map<String, Int> = emptyMap(),
+    /**
+     * Ekwipunek kompanow: idKarty -> (nazwaSlotu -> idPrzedmiotu). Puste stringi zamiast typow,
+     * bo tak to ląduje w Firestore - patrz [com.lernhero.domain.monster.MonsterEquipment].
+     */
+    val monsterEquipment: Map<String, Map<String, String>> = emptyMap(),
     /** Companion slots for the pre-battle party. Hero is implicit; entries are [MonsterCard] ids or null. */
     val party: List<String?> = emptyList(),
-    /** Zaklecia kupione w sklepie (id z katalogu zaklec). */
-    val ownedSpells: List<String> = emptyList(),
-    /** Pasek zdolnosci: id zaklecia -> przypisany procent tury. Reszta do 100% to zwykly atak. */
-    val spellWeights: Map<String, Int> = emptyMap(),
+    /**
+     * Kiedy ostatnio odebrano DARMOWY summon danego bannera (id bannera -> epoch millis).
+     * Trzymamy moment odbioru, a nie pozostaly czas - patrz [com.lernhero.domain.summon.FreeSummon].
+     */
+    val freeSummonClaims: Map<String, Long> = emptyMap(),
+    /**
+     * Wykupione stopnie talentow: id wezla -> stopien (brak wpisu = 0). Patrz
+     * [com.lernhero.domain.talent.TalentRules]. Trzymamy SAME stopnie, a nie policzone bonusy -
+     * dzieki temu przestrojenie liczb w katalogu dziala od razu na wszystkich zapisach, zamiast
+     * zostawiac graczy z bonusami wyliczonymi wedlug starej wersji.
+     */
+    val talentRanks: Map<String, Int> = emptyMap(),
     /**
      * Ostatni dzien, w ktorym odebrano nagrode za dany cel dzienny - fitness albo czytanie
      * (id celu -> "yyyy-MM-dd"). Odswieza sie samo: cel jest znowu do odebrania, gdy zapisana

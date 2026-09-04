@@ -45,5 +45,19 @@ data class PickedFile(
 @Composable
 expect fun rememberBookFilePicker(onPicked: (PickedFile) -> Unit): () -> Unit
 
+/**
+ * To samo co [rememberBookFilePicker], tylko filtrowane do obrazkow - okladki ksiazek wgrywane
+ * przez gracza. Zwrocony [PickedFile.persistentLocator] laduje w [com.lernhero.domain.reading.Book.coverLocator]
+ * i pozniej odczytuje sie go tym samym [loadImportedBookBytes], co plik ksiazki.
+ */
+@Composable
+expect fun rememberCoverImagePicker(onPicked: (PickedFile) -> Unit): () -> Unit
+
 /** Odczytuje bajty wczesniej zaimportowanej ksiazki z zapisanego [locator]. */
 expect suspend fun loadImportedBookBytes(locator: String): ByteArray?
+
+/**
+ * Dekoduje bajty okladki na bitmape gotowa do narysowania. Osobno od [loadImportedBookBytes],
+ * bo dekodowanie obrazka to juz robota platformy (BitmapFactory / UIImage).
+ */
+expect fun decodeImageBytes(bytes: ByteArray): ImageBitmap?

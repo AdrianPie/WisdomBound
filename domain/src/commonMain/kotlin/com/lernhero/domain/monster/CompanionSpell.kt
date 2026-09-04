@@ -10,11 +10,11 @@ import kotlin.math.roundToInt
  */
 enum class CompanionSpellKind(val label: String) {
     /** Leczy sojusznika o procent JEGO maks. HP. */
-    Heal("Leczenie"),
+    Heal("Heal"),
     /** Dodatkowe obrazenia w cel - mnoznik ataku kompana. */
-    Strike("Cios"),
+    Strike("Strike"),
     /** Obrazenia we wszystkich wrogow naraz. */
-    Blast("Wybuch")
+    Blast("Blast")
 }
 
 /**
@@ -93,9 +93,9 @@ object MonsterSpellLevels {
         val chance = chanceAt(spell, level)
         val power = powerAt(spell, level)
         return when (spell.kind) {
-            CompanionSpellKind.Heal -> "$chance% szansy: leczy ${(power * 100).roundToInt()}% maks. HP"
-            CompanionSpellKind.Strike -> "$chance% szansy: dodatkowy cios za ${(power * 100).roundToInt()}% ataku"
-            CompanionSpellKind.Blast -> "$chance% szansy: wybuch za ${(power * 100).roundToInt()}% ataku we wszystkich"
+            CompanionSpellKind.Heal -> "$chance% chance: heals ${(power * 100).roundToInt()}% max HP"
+            CompanionSpellKind.Strike -> "$chance% chance: extra hit for ${(power * 100).roundToInt()}% attack"
+            CompanionSpellKind.Blast -> "$chance% chance: blast for ${(power * 100).roundToInt()}% attack on all"
         }
     }
 }
@@ -108,8 +108,8 @@ object CompanionSpells {
 
     val MEND = CompanionSpell(
         id = "mend",
-        name = "Opatrunek",
-        description = "Kompan opatruje najbardziej poobijanego sojusznika.",
+        name = "Field Dressing",
+        description = "The companion tends to the most wounded ally.",
         kind = CompanionSpellKind.Heal,
         icon = "💚",
         chancePercent = 30,
@@ -118,8 +118,8 @@ object CompanionSpells {
 
     val BONE_SHARD = CompanionSpell(
         id = "bone_shard",
-        name = "Kostny odlamek",
-        description = "Dorzuca szybki cios w losowego wroga.",
+        name = "Bone Shard",
+        description = "Adds a quick strike against a random enemy.",
         kind = CompanionSpellKind.Strike,
         icon = "🦴",
         chancePercent = 25,
@@ -128,8 +128,8 @@ object CompanionSpells {
 
     val ARROW_VOLLEY = CompanionSpell(
         id = "arrow_volley",
-        name = "Salwa strzal",
-        description = "Ostrzeliwuje calą wroga formacje.",
+        name = "Arrow Volley",
+        description = "Fires on the entire enemy formation.",
         kind = CompanionSpellKind.Blast,
         icon = "🏹",
         chancePercent = 18,
@@ -138,8 +138,8 @@ object CompanionSpells {
 
     val DARK_BOLT = CompanionSpell(
         id = "dark_bolt",
-        name = "Mroczny pocisk",
-        description = "Ciezki pocisk w jednego wroga.",
+        name = "Dark Bolt",
+        description = "A heavy missile aimed at one enemy.",
         kind = CompanionSpellKind.Strike,
         icon = "🔮",
         chancePercent = 22,
@@ -148,8 +148,8 @@ object CompanionSpells {
 
     val WAR_CRY = CompanionSpell(
         id = "war_cry",
-        name = "Okrzyk wojenny",
-        description = "Rozpedza druzyne - dodatkowy cios w losowego wroga.",
+        name = "War Cry",
+        description = "Rallies the party - an extra hit against a random enemy.",
         kind = CompanionSpellKind.Strike,
         icon = "📣",
         chancePercent = 28,
@@ -158,8 +158,8 @@ object CompanionSpells {
 
     val FLAME_ARROW = CompanionSpell(
         id = "flame_arrow",
-        name = "Ognista strzala",
-        description = "Podpala cala wroga formacje.",
+        name = "Flame Arrow",
+        description = "Sets the entire enemy formation alight.",
         kind = CompanionSpellKind.Blast,
         icon = "🔥",
         chancePercent = 15,

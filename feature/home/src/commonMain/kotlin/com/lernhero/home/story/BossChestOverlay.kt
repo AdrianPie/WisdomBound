@@ -120,8 +120,8 @@ fun BossChestOverlay(
             )
             Text(
                 text = when (phase) {
-                    WheelPhase.Closed -> "Boss pokonany. Skrzynia sama sie otworzy - kolo zdecyduje, co z niej wypadnie."
-                    WheelPhase.Spinning -> "Kolo sie kreci..."
+                    WheelPhase.Closed -> "Boss defeated. The chest will open on its own - the wheel decides what drops."
+                    WheelPhase.Spinning -> "The wheel is spinning..."
                     WheelPhase.Revealed -> prizeLabel
                 },
                 color = if (phase == WheelPhase.Revealed) SlotColors.getValue(prize) else Color(0xFF9D8B6A),

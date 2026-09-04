@@ -7,6 +7,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
@@ -57,10 +58,12 @@ import com.lernhero.domain.story.StoryStageCatalog
 import com.lernhero.home.city.TownViewModel
 import com.lernhero.home.story.BossChestOverlay
 import com.lernhero.home.story.CampaignPanel
+import com.lernhero.home.quiz.CustomQuizViewModel
 import com.lernhero.home.story.EndlessSetupPanel
 import com.lernhero.home.story.QuestionSource
 import com.lernhero.home.story.StageLootDialog
 import com.lernhero.home.story.resolveChestPrize
+import com.lernhero.game.character.HeroLook
 import com.lernhero.game.character.KnightEquipment
 import com.lernhero.game.character.ModularKnight
 import com.lernhero.game.character.MonsterVisualPresets
@@ -91,7 +94,8 @@ private val HeroGlow = Color(0xFF3B9DFF)
  * - pod nim przelacznik KAMPANIA / ENDLESS,
  * - a pod nim wlasciwy panel: [com.lernhero.home.story.CampaignPanel] (tlo krainy, przeciwnicy,
  *   nagrody idle z GET, przyciski MAPA/BATTLE/LOOT i rzad plansz) albo
- *   [com.lernhero.home.story.EndlessSetupPanel] (poziom pytan + kategoria + miejsce na wlasne talie).
+ *   [com.lernhero.home.story.EndlessSetupPanel] (poziom pytan + kategoria albo wlasny material:
+ *   fiszki z czytelni i wlasne talie pytan).
  *
  * Wybor KRAINY i tieru trudnosci nie dzieje sie tutaj - do tego jest osobny ekran Mapy
  * ([com.lernhero.home.story.WorldMapScreen]), a wybor konkretnej planszy to rzad na dole panelu.
@@ -99,10 +103,13 @@ private val HeroGlow = Color(0xFF3B9DFF)
 @Composable
 fun TeamScreen(
     viewModel: PlayerViewModel,
+    quizViewModel: CustomQuizViewModel,
     onOpenMap: () -> Unit,
-    onEnterBattle: () -> Unit
+    onEnterBattle: () -> Unit,
+    onEditDeck: (deckId: String, startWithAi: Boolean) -> Unit
 ) {
     val state by viewModel.uiState.collectAsState()
+    val quizState by quizViewModel.uiState.collectAsState()
     val runSession = koinInject<RunSession>()
     val selection = koinInject<CampaignSelection>()
     val townViewModel = koinViewModel<TownViewModel>()
@@ -116,6 +123,10 @@ fun TeamScreen(
     var endlessSource by rememberSaveable { mutableStateOf<String>(QuestionSource.Builtin.name) }
     var endlessDifficulty by rememberSaveable { mutableStateOf<String?>(null) }
     var endlessCategory by rememberSaveable { mutableStateOf<String?>(null) }
+
+    // Ktora talia jest wybrana w zakladce "Wlasne". Null = fiszki z czytelni, czyli to, co bylo
+    // tam jedynym zrodlem, zanim doszly wlasne talie.
+    var endlessDeckId by rememberSaveable { mutableStateOf<String?>(null) }
 
     val cleared = state.storyProgress
     val world = selection.resolveWorld(cleared)
@@ -170,6 +181,7 @@ fun TeamScreen(
     ) {
         TeamPanel(
             equipment = state.knightEquipment,
+            look = state.heroLook,
             companions = state.partyMonsters,
             levelOf = state::levelOf,
             starsOf = state::starsOf,
@@ -183,7 +195,7 @@ fun TeamScreen(
             PlayMode.Campaign -> {
                 if (stage == null) {
                     Text(
-                        text = "Kampania ukonczona na tym poziomie trudnosci. Wybierz wyzszy w Mapie.",
+                        text = "Campaign completed at this difficulty. Pick a higher one on the Map.",
                         color = TextMuted,
                         fontFamily = FontFirst(),
                         fontSize = 12.sp
@@ -231,22 +243,48 @@ fun TeamScreen(
                     difficulty = endlessDifficulty?.let { QuizDifficulty.valueOf(it) },
                     category = endlessCategory?.let { QuizCategory.valueOf(it) },
                     eligibleWordCount = eligibleWords.size,
+                    decks = quizState.decks,
+                    decksLoading = quizState.loading,
+                    selectedDeckId = endlessDeckId,
                     onSourceChange = { endlessSource = it.name },
+                    onSelectWords = { endlessDeckId = null },
+                    onSelectDeck = { endlessDeckId = it },
+                    onCreateDeck = { withAi -> onEditDeck(quizViewModel.newDeck(), withAi) },
+                    onEditDeck = { deckId -> onEditDeck(deckId, false) },
                     onDifficultyChange = { endlessDifficulty = it?.name },
                     onCategoryChange = { endlessCategory = it?.name },
                     onStart = {
                         val custom = QuestionSource.valueOf(endlessSource) == QuestionSource.Custom
+                        val deck = if (custom) quizState.decks.firstOrNull { it.id == endlessDeckId } else null
                         runSession.startNewRun(
                             category = if (custom) null else endlessCategory?.let { QuizCategory.valueOf(it) },
                             difficulty = RunDifficulty.Normal,
                             quizDifficulty = if (custom) null else endlessDifficulty?.let { QuizDifficulty.valueOf(it) },
-                            customWords = if (custom) eligibleWords else emptyList()
+                            // Wlasne zrodlo jest JEDNO: albo talia, albo fiszki (patrz CustomSourcePanel).
+                            customWords = if (custom && deck == null) eligibleWords else emptyList(),
+                            customDeck = deck
                         )
                         runSession.pendingBattle = BattleRequest(
                             kind = BattleKind.Normal,
                             waves = 0,
                             seed = Random.nextLong(),
                             isEndless = true
+                        )
+                        onEnterBattle()
+                    },
+                    onStartBossTest = {
+                        runSession.startNewRun(
+                            category = endlessCategory?.let { QuizCategory.valueOf(it) },
+                            difficulty = RunDifficulty.Normal,
+                            quizDifficulty = endlessDifficulty?.let { QuizDifficulty.valueOf(it) }
+                        )
+                        runSession.healParty()
+                        runSession.pendingBattle = BattleRequest(
+                            kind = BattleKind.Boss,
+                            waves = 1,
+                            seed = Random.nextLong(),
+                            isEndless = false,
+                            enemyHpMultiplier = 30f
                         )
                         onEnterBattle()
                     }
@@ -351,6 +389,7 @@ private fun ModeTabs(selected: PlayMode, onSelect: (PlayMode) -> Unit) {
 @Composable
 private fun TeamPanel(
     equipment: KnightEquipment,
+    look: HeroLook,
     companions: List<MonsterCard?>,
     levelOf: (String) -> Int,
     starsOf: (String) -> Int,
@@ -389,29 +428,53 @@ private fun TeamPanel(
             }
         }
 
-        Row(
-            modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp, vertical = 6.dp),
-            horizontalArrangement = Arrangement.spacedBy(6.dp)
-        ) {
-            HeroSlotCard(equipment = equipment, modifier = Modifier.weight(1f).height(78.dp))
+        // Szesc miejsc (bohater + pieciu kompanow) w JEDNYM rzedzie zrobiloby z kazdej karty pasek
+        // szerokosci kciuka. Dwa rzedy po trzy zostawiaja karty w tym samym rozmiarze co dotad.
+        val slots: List<@Composable (Modifier) -> Unit> = buildList {
+            add { modifier -> HeroSlotCard(equipment = equipment, look = look, modifier = modifier) }
             companions.forEachIndexed { index, card ->
-                CompanionSlotCard(
-                    card = card,
-                    level = card?.let { levelOf(it.id) } ?: 1,
-                    stars = card?.let { starsOf(it.id) } ?: 1,
-                    onClick = {
-                        if (card == null) onAddCompanion() else onRemoveCompanion(index)
-                    },
-                    modifier = Modifier.weight(1f).height(78.dp)
-                )
+                add { modifier ->
+                    CompanionSlotCard(
+                        card = card,
+                        level = card?.let { levelOf(it.id) } ?: 1,
+                        stars = card?.let { starsOf(it.id) } ?: 1,
+                        onClick = {
+                            if (card == null) onAddCompanion() else onRemoveCompanion(index)
+                        },
+                        modifier = modifier
+                    )
+                }
+            }
+        }
+
+        Column(
+            modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp, vertical = 6.dp),
+            verticalArrangement = Arrangement.spacedBy(6.dp)
+        ) {
+            slots.chunked(TEAM_ROW_SLOTS).forEach { row ->
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(6.dp)
+                ) {
+                    row.forEach { slot -> slot(Modifier.weight(1f).height(78.dp)) }
+                    // Niepelny rzad dopychamy pustka, zeby karty zostaly tej samej szerokosci
+                    // co w rzedzie pelnym, a nie rozlazly sie na cala szerokosc panelu.
+                    repeat(TEAM_ROW_SLOTS - row.size) {
+                        Spacer(modifier = Modifier.weight(1f))
+                    }
+                }
             }
         }
     }
 }
 
+/** Ile miejsc druzyny miesci sie w jednym rzedzie panelu - reszta schodzi do kolejnego. */
+private const val TEAM_ROW_SLOTS = 3
+
 @Composable
 private fun HeroSlotCard(
     equipment: KnightEquipment,
+    look: HeroLook,
     modifier: Modifier = Modifier
 ) {
     Box(
@@ -428,7 +491,8 @@ private fun HeroSlotCard(
         Box(modifier = Modifier.fillMaxWidth(0.94f)) {
             ModularKnight(
                 modifier = Modifier.align(Alignment.BottomCenter),
-                equipment = equipment
+                equipment = equipment,
+                look = look
             )
         }
         Text(
@@ -469,7 +533,7 @@ private fun CompanionSlotCard(
             ) {
                 Text(text = "＋", color = GoldDim, fontSize = 26.sp)
                 Text(
-                    text = "Wolne\nmiejsce",
+                    text = "Open\nslot",
                     color = TextMuted,
                     fontFamily = FontFirst(),
                     fontSize = 9.sp,
@@ -537,14 +601,14 @@ private fun MonsterPickerDialog(
 
             when {
                 !hasFreeSlot -> Text(
-                    text = "Wszystkie miejsca zajete. Kliknij kompana w druzynie, zeby go odeslac.",
+                    text = "All slots are full. Tap a companion in the party to send it back.",
                     color = TextMuted,
                     fontFamily = FontFirst(),
                     fontSize = 12.sp
                 )
 
                 available.isEmpty() -> Text(
-                    text = "Nie masz wolnych potworow. Przyzwij ich w Summon Center.",
+                    text = "You have no free companions. Summon some at the Summon Center.",
                     color = TextMuted,
                     fontFamily = FontFirst(),
                     fontSize = 12.sp
@@ -558,7 +622,7 @@ private fun MonsterPickerDialog(
                         onPick = onPick
                     )
                     Text(
-                        text = "Masz kilka tej samej karty? Zapasowe sprzedasz w Kolekcji (Summon Center) za zloto.",
+                        text = "Have duplicate cards? Sell the spares in the Collection (Summon Center) for gold.",
                         color = TextMuted,
                         fontFamily = FontFirst(),
                         fontSize = 10.sp

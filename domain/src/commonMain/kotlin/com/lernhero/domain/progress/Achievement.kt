@@ -5,17 +5,17 @@ package com.lernhero.domain.progress
  * swiadomie: to ona jest w tej grze wlasciwym osiagnieciem, walka tylko jej opakowaniem.
  */
 enum class AchievementGroup(val label: String) {
-    Learning("Nauka"),
-    Combat("Walka"),
-    Journey("Wyprawy"),
-    Wealth("Dorobek")
+    Learning("Learning"),
+    Combat("Combat"),
+    Journey("Journey"),
+    Wealth("Wealth")
 }
 
 /** Stopien trudnosci - ten sam pomysl co rzadkosc lupu, tylko dla celow. */
 enum class AchievementTier(val label: String) {
-    Bronze("Brazowe"),
-    Silver("Srebrne"),
-    Gold("Zlote")
+    Bronze("Bronze"),
+    Silver("Silver"),
+    Gold("Gold")
 }
 
 /**
@@ -48,11 +48,11 @@ data class Achievement(
 object AchievementCatalog {
 
     val all: List<Achievement> = listOf(
-        // ---------------- Nauka ----------------
+        // ---------------- Learning ----------------
         Achievement(
             id = "answers_50",
-            title = "Pierwsze pytania",
-            description = "Odpowiedz na 50 pytan.",
+            title = "First Questions",
+            description = "Answer 50 questions.",
             group = AchievementGroup.Learning,
             tier = AchievementTier.Bronze,
             target = 50,
@@ -60,8 +60,8 @@ object AchievementCatalog {
         ),
         Achievement(
             id = "answers_500",
-            title = "Uczen",
-            description = "Odpowiedz na 500 pytan.",
+            title = "Student",
+            description = "Answer 500 questions.",
             group = AchievementGroup.Learning,
             tier = AchievementTier.Silver,
             target = 500,
@@ -69,8 +69,8 @@ object AchievementCatalog {
         ),
         Achievement(
             id = "answers_2500",
-            title = "Erudyta",
-            description = "Odpowiedz na 2500 pytan.",
+            title = "Scholar",
+            description = "Answer 2500 questions.",
             group = AchievementGroup.Learning,
             tier = AchievementTier.Gold,
             target = 2500,
@@ -78,8 +78,8 @@ object AchievementCatalog {
         ),
         Achievement(
             id = "correct_250",
-            title = "Dobra pamiec",
-            description = "Odpowiedz poprawnie 250 razy.",
+            title = "Good Memory",
+            description = "Answer correctly 250 times.",
             group = AchievementGroup.Learning,
             tier = AchievementTier.Silver,
             target = 250,
@@ -87,8 +87,8 @@ object AchievementCatalog {
         ),
         Achievement(
             id = "streak_10",
-            title = "Seria dziesieciu",
-            description = "Trafnij 10 odpowiedzi z rzedu.",
+            title = "Streak of Ten",
+            description = "Get 10 answers right in a row.",
             group = AchievementGroup.Learning,
             tier = AchievementTier.Bronze,
             target = 10,
@@ -96,8 +96,8 @@ object AchievementCatalog {
         ),
         Achievement(
             id = "streak_25",
-            title = "Nie do zatrzymania",
-            description = "Trafnij 25 odpowiedzi z rzedu.",
+            title = "Unstoppable",
+            description = "Get 25 answers right in a row.",
             group = AchievementGroup.Learning,
             tier = AchievementTier.Gold,
             target = 25,
@@ -105,19 +105,19 @@ object AchievementCatalog {
         ),
         Achievement(
             id = "categories_5",
-            title = "Szerokie horyzonty",
-            description = "Odpowiedz poprawnie w 5 roznych kategoriach.",
+            title = "Broad Horizons",
+            description = "Answer correctly in 5 different categories.",
             group = AchievementGroup.Learning,
             tier = AchievementTier.Bronze,
             target = 5,
             progressOf = { stats -> stats.perCategory.count { it.value.correct > 0 } }
         ),
 
-        // ---------------- Walka ----------------
+        // ---------------- Combat ----------------
         Achievement(
             id = "wins_1",
-            title = "Pierwsza krew",
-            description = "Wygraj pierwsza walke.",
+            title = "First Blood",
+            description = "Win your first battle.",
             group = AchievementGroup.Combat,
             tier = AchievementTier.Bronze,
             target = 1,
@@ -125,8 +125,8 @@ object AchievementCatalog {
         ),
         Achievement(
             id = "wins_50",
-            title = "Weteran",
-            description = "Wygraj 50 walk.",
+            title = "Veteran",
+            description = "Win 50 battles.",
             group = AchievementGroup.Combat,
             tier = AchievementTier.Silver,
             target = 50,
@@ -134,8 +134,8 @@ object AchievementCatalog {
         ),
         Achievement(
             id = "waves_100",
-            title = "Lamacz fal",
-            description = "Oczysc lacznie 100 fal.",
+            title = "Wave Breaker",
+            description = "Clear 100 waves in total.",
             group = AchievementGroup.Combat,
             tier = AchievementTier.Silver,
             target = 100,
@@ -143,8 +143,8 @@ object AchievementCatalog {
         ),
         Achievement(
             id = "endless_10",
-            title = "Bez konca",
-            description = "Dojdz do 10. fali w trybie endless.",
+            title = "Endless",
+            description = "Reach wave 10 in endless mode.",
             group = AchievementGroup.Combat,
             tier = AchievementTier.Bronze,
             target = 10,
@@ -152,19 +152,19 @@ object AchievementCatalog {
         ),
         Achievement(
             id = "endless_30",
-            title = "Legenda areny",
-            description = "Dojdz do 30. fali w trybie endless.",
+            title = "Arena Legend",
+            description = "Reach wave 30 in endless mode.",
             group = AchievementGroup.Combat,
             tier = AchievementTier.Gold,
             target = 30,
             progressOf = { it.bestEndlessWave }
         ),
 
-        // ---------------- Wyprawy ----------------
+        // ---------------- Journey ----------------
         Achievement(
             id = "boss_1",
-            title = "Pogromca",
-            description = "Pokonaj pierwszego bossa lochu.",
+            title = "Slayer",
+            description = "Defeat your first dungeon boss.",
             group = AchievementGroup.Journey,
             tier = AchievementTier.Bronze,
             target = 1,
@@ -172,8 +172,8 @@ object AchievementCatalog {
         ),
         Achievement(
             id = "boss_10",
-            title = "Lowca bossow",
-            description = "Pokonaj 10 bossow.",
+            title = "Boss Hunter",
+            description = "Defeat 10 bosses.",
             group = AchievementGroup.Journey,
             tier = AchievementTier.Silver,
             target = 10,
@@ -181,19 +181,19 @@ object AchievementCatalog {
         ),
         Achievement(
             id = "dungeons_5",
-            title = "Kartograf",
-            description = "Przejdz 5 lochow do konca.",
+            title = "Cartographer",
+            description = "Clear 5 dungeons all the way through.",
             group = AchievementGroup.Journey,
             tier = AchievementTier.Silver,
             target = 5,
             progressOf = { it.dungeonsCleared }
         ),
 
-        // ---------------- Dorobek ----------------
+        // ---------------- Wealth ----------------
         Achievement(
             id = "gold_5000",
-            title = "Sakwa pelna",
-            description = "Zdobadz lacznie 5000 monet.",
+            title = "Full Purse",
+            description = "Earn 5000 coins in total.",
             group = AchievementGroup.Wealth,
             tier = AchievementTier.Bronze,
             target = 5_000,
@@ -201,8 +201,8 @@ object AchievementCatalog {
         ),
         Achievement(
             id = "gold_50000",
-            title = "Skarbiec",
-            description = "Zdobadz lacznie 50 000 monet.",
+            title = "Treasury",
+            description = "Earn 50,000 coins in total.",
             group = AchievementGroup.Wealth,
             tier = AchievementTier.Gold,
             target = 50_000,
@@ -210,8 +210,8 @@ object AchievementCatalog {
         ),
         Achievement(
             id = "crafted_5",
-            title = "Kowal",
-            description = "Wykuj 5 przedmiotow.",
+            title = "Blacksmith",
+            description = "Forge 5 items.",
             group = AchievementGroup.Wealth,
             tier = AchievementTier.Bronze,
             target = 5,
@@ -219,8 +219,8 @@ object AchievementCatalog {
         ),
         Achievement(
             id = "summoned_5",
-            title = "Przyzywacz",
-            description = "Przyzwij 5 kompanow.",
+            title = "Summoner",
+            description = "Summon 5 companions.",
             group = AchievementGroup.Wealth,
             tier = AchievementTier.Bronze,
             target = 5,

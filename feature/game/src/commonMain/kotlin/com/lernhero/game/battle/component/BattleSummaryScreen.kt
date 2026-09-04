@@ -164,7 +164,7 @@ private fun Header(won: Boolean, accent: Color, wave: Int, endless: Boolean) {
             fontSize = 20.sp
         )
         Text(
-            text = if (endless) "Dotarles do fali $wave" else "Fala $wave",
+            text = if (endless) "You reached wave $wave" else "Wave $wave",
             color = Muted,
             fontFamily = FontFirst(),
             fontSize = 12.sp
@@ -197,7 +197,7 @@ private fun LevelUpBanner(levels: Int) {
                 fontSize = 15.sp
             )
             Text(
-                text = "Masz nowe punkty statystyk do rozdania w zakladce Postep.",
+                text = "You have new stat points to spend in the Progress tab.",
                 color = Cream,
                 fontFamily = FontFirst(),
                 fontSize = 11.sp
@@ -217,23 +217,23 @@ private data class SummaryRow(
 
 private fun summaryRows(summary: RunStats?, wave: Int): List<SummaryRow> {
     if (summary == null) {
-        return listOf(SummaryRow("⚔", "Fala", "$wave"))
+        return listOf(SummaryRow("⚔", "Wave", "$wave"))
     }
 
     return buildList {
-        add(SummaryRow("📚", "Pytania", "${summary.questionsCorrect}/${summary.questionsAnswered}"))
-        add(SummaryRow("🎯", "Celnosc", "${summary.accuracyPercent}%"))
+        add(SummaryRow("📚", "Questions", "${summary.questionsCorrect}/${summary.questionsAnswered}"))
+        add(SummaryRow("🎯", "Accuracy", "${summary.accuracyPercent}%"))
         if (summary.bestAnswerStreak > 0) {
-            add(SummaryRow("🔥", "Najdluzsza seria", "${summary.bestAnswerStreak}"))
+            add(SummaryRow("🔥", "Longest Streak", "${summary.bestAnswerStreak}"))
         }
-        add(SummaryRow("🌊", "Oczyszczone fale", "${summary.wavesCleared}", divider = true))
-        add(SummaryRow("⭐", "Doswiadczenie", "+${summary.xp} XP", emphasis = true))
-        add(SummaryRow("💰", "Zloto", "+${summary.gold}", emphasis = true))
-        if (summary.iron > 0) add(SummaryRow("⚙", "Ruda", "+${summary.iron}", emphasis = true))
-        if (summary.essence > 0) add(SummaryRow("✨", "Esencja", "+${summary.essence}", emphasis = true))
-        if (summary.summonTickets > 0) add(SummaryRow("🎟", "Losy", "+${summary.summonTickets}", emphasis = true))
-        if (summary.wood > 0) add(SummaryRow("🪵", "Drewno", "+${summary.wood}", emphasis = true))
-        if (summary.stone > 0) add(SummaryRow("🪨", "Kamien", "+${summary.stone}", emphasis = true))
+        add(SummaryRow("🌊", "Waves Cleared", "${summary.wavesCleared}", divider = true))
+        add(SummaryRow("⭐", "Experience", "+${summary.xp} XP", emphasis = true))
+        add(SummaryRow("💰", "Gold", "+${summary.gold}", emphasis = true))
+        if (summary.iron > 0) add(SummaryRow("⚙", "Ore", "+${summary.iron}", emphasis = true))
+        if (summary.essence > 0) add(SummaryRow("✨", "Essence", "+${summary.essence}", emphasis = true))
+        if (summary.summonTickets > 0) add(SummaryRow("🎟", "Tickets", "+${summary.summonTickets}", emphasis = true))
+        if (summary.wood > 0) add(SummaryRow("🪵", "Wood", "+${summary.wood}", emphasis = true))
+        if (summary.stone > 0) add(SummaryRow("🪨", "Stone", "+${summary.stone}", emphasis = true))
     }
 }
 

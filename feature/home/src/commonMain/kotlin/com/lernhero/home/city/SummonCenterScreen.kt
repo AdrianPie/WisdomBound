@@ -25,6 +25,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -51,10 +52,14 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.lernhero.domain.common.Rarity
 import com.lernhero.domain.monster.MonsterCard
+import com.lernhero.domain.monster.MonsterEquipment
 import com.lernhero.domain.craft.CraftCost
 import com.lernhero.domain.craft.SummonCosts
 import com.lernhero.domain.monster.MonsterCatalog
 import com.lernhero.domain.spell.Spell
+import com.lernhero.domain.summon.FreeSummon
+import kotlin.time.Clock
+import org.jetbrains.compose.resources.DrawableResource
 import com.lernhero.home.player.PlayerViewModel
 import com.lernhero.home.ui.RarityPalette
 import com.lernhero.home.ui.icon
@@ -74,19 +79,29 @@ import kotlin.random.Random
 /**
  * Rodzaj bannera - jak w idlach: tanszy losuje glownie pospolite, drozszy realnie podbija szanse
  * na rzadkie. Wagi sa per [Rarity], wiec dochodzenie nowych potworow do katalogu niczego tu nie psuje.
+ *
+ * [id] trafia do zapisu ([com.lernhero.domain.player.Player.freeSummonClaims]), wiec NIE zmieniaj go
+ * przy zmianie nazwy - inaczej wszystkim graczom zresetuje sie licznik darmowego summona.
+ * [art] to na razie placeholder, patrz [Resources.SummonBanner].
  */
 private enum class SummonBanner(
+    val id: String,
     val label: String,
-    val icon: String,
+    val art: DrawableResource,
     val ticketCost: Int,
+    val cooldownMs: Long,
     val accent: Color,
+    val glow: Color,
     val weights: Map<Rarity, Int>
 ) {
     Basic(
-        label = "Zwykly Summon",
-        icon = "🗿",
+        id = "basic",
+        label = "Basic Summon",
+        art = Resources.SummonBanner.Basic,
         ticketCost = 1,
-        accent = Color(0xFF9DB2C4),
+        cooldownMs = FreeSummon.BASIC_COOLDOWN_MS,
+        accent = Color(0xFF7FB3E8),
+        glow = Color(0xFF1E3A5F),
         weights = mapOf(
             Rarity.Common to 70,
             Rarity.Uncommon to 25,
@@ -94,10 +109,13 @@ private enum class SummonBanner(
         )
     ),
     Heroic(
-        label = "Heroiczny Summon",
-        icon = "👑",
+        id = "heroic",
+        label = "Heroic Summon",
+        art = Resources.SummonBanner.Heroic,
         ticketCost = 3,
-        accent = Color(0xFFFFB020),
+        cooldownMs = FreeSummon.HEROIC_COOLDOWN_MS,
+        accent = Color(0xFFFFC44D),
+        glow = Color(0xFF6B3410),
         weights = mapOf(
             Rarity.Common to 25,
             Rarity.Uncommon to 45,
@@ -111,8 +129,8 @@ private enum class SummonPhase { Idle, Charging, Flash, Reveal, Result }
 
 /** Dwie polowy budynku: oltarz (zdobywanie kart) i kolekcja (zamiana kart na sile). */
 private enum class SummonSection(val label: String) {
-    Ritual("Przyzywanie"),
-    Collection("Kolekcja")
+    Ritual("Summon"),
+    Collection("Collection")
 }
 
 /**
@@ -135,6 +153,7 @@ fun SummonCenterScreen(
     val state by playerViewModel.uiState.collectAsState()
 
     var section by remember { mutableStateOf(SummonSection.Ritual) }
+
     var banner by remember { mutableStateOf(SummonBanner.Basic) }
     var phase by remember { mutableStateOf(SummonPhase.Idle) }
     var pulled by remember { mutableStateOf<List<MonsterCard>>(emptyList()) }
@@ -178,18 +197,35 @@ fun SummonCenterScreen(
 
     val busy = phase != SummonPhase.Idle && phase != SummonPhase.Result
 
+    // Zegar odliczania darmowych summonow. Tyka tylko na tym ekranie i tylko w sekcji rytualu -
+    // nie ma po co budzic rekompozycji, gdy gracz oglada kolekcje.
+    var now by remember { mutableStateOf(Clock.System.now().toEpochMilliseconds()) }
+    LaunchedEffect(section) {
+        while (section == SummonSection.Ritual) {
+            now = Clock.System.now().toEpochMilliseconds()
+            delay(1000)
+        }
+    }
+
+    // Naglowek jest ZAWSZE zbity (compact), niezaleznie od sekcji. Wczesniej rytual dostawal pelny
+    // naglowek z szescioma surowcami, a kolekcja zbity - przez co przelacznik sekcji przeskakiwal
+    // w pionie przy kazdym tapnieciu i wygladalo to, jakby zakladki zamienialy sie miejscami.
+    // Poza tym drewno/kamien/ruda nie maja tu czego szukac: w Summon Center placi sie LOSAMI,
+    // a te licza sie przy samych bannerach.
     TownScreenScaffold(
         title = "Summon Center",
         resources = state.resources,
         money = state.money,
         toasts = emptyList(),
-        onBack = onBack
+        onBack = onBack,
+        compact = true
     ) {
+      Box(modifier = Modifier.fillMaxSize()) {
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(horizontal = 12.dp, vertical = 8.dp),
-            verticalArrangement = Arrangement.spacedBy(10.dp)
+                .padding(start = 8.dp, end = 8.dp, top = 4.dp, bottom = 6.dp),
+            verticalArrangement = Arrangement.spacedBy(6.dp)
         ) {
             SectionTabs(selected = section, onSelect = { section = it }, enabled = !busy)
 
@@ -198,25 +234,36 @@ fun SummonCenterScreen(
                     collection = state.collection,
                     money = state.money,
                     essence = state.resources.essence,
+                    equipmentOf = playerViewModel::equipmentOf,
+                    upgrades = state.itemUpgrades,
+                    ownedGear = state.ownedMonsterItems,
+                    gearTakenBy = { id ->
+                        MonsterEquipment.equippedElsewhere(state.monsterEquipment, id)
+                    },
                     onUpgrade = playerViewModel::upgradeMonster,
                     onAscend = playerViewModel::ascendMonster,
                     onDissolve = playerViewModel::dissolveMonster,
                     onUpgradeSpell = playerViewModel::upgradeMonsterSpell,
+                    onEquip = playerViewModel::equipMonsterItem,
+                    onUnequipSlot = playerViewModel::unequipMonsterSlot,
+                    onUnequipAll = playerViewModel::unequipMonsterAll,
+                    onAutoEquip = playerViewModel::autoEquipMonster,
                     modifier = Modifier.weight(1f)
                 )
-                state.message?.let { message ->
-                    Text(text = message, color = Gold, fontFamily = FontFirst(), fontSize = 12.sp)
-                }
                 return@Column
             }
 
-            BannerRow(
+            BannerList(
                 selected = banner,
                 tickets = state.resources.summonTickets,
+                claims = state.freeSummonClaims,
+                now = now,
                 enabled = !busy,
                 onSelect = { banner = it }
             )
 
+            // Scena rytualu bez ramki i bez panelu - tlo bedzie wlasna grafika, a obwodka tylko
+            // dzielila ekran na pudelka.
             AltarStage(
                 banner = banner,
                 phase = phase,
@@ -228,28 +275,49 @@ fun SummonCenterScreen(
                 modifier = Modifier.weight(1f)
             )
 
+            val freeReady = FreeSummon.isReady(state.freeSummonClaims[banner.id], banner.cooldownMs, now)
+
             SummonButtons(
                 banner = banner,
                 tickets = state.resources.summonTickets,
+                freeReady = freeReady,
                 enabled = !busy,
                 onSummon = { count ->
-                    // Placimy losami bannera za caly ciag - jeden zapis na cale losowanie.
                     val rolled = List(count) { banner.roll() }
                     pulled = rolled
-                    playerViewModel.summonMonsters(rolled, CraftCost(tickets = banner.ticketCost * count))
+                    // Darmowy summon x1 idzie osobna sciezka - bez kosztu, ze stemplem czasu.
+                    if (count == 1 && freeReady) {
+                        playerViewModel.claimFreeSummon(banner.id, banner.cooldownMs, rolled.first(), now)
+                    } else {
+                        // Placimy losami bannera za caly ciag - jeden zapis na cale losowanie.
+                        playerViewModel.summonMonsters(rolled, CraftCost(tickets = banner.ticketCost * count))
+                    }
                     phase = SummonPhase.Charging
                 }
             )
-
-            state.message?.let { message ->
-                Text(
-                    text = message,
-                    color = Gold,
-                    fontFamily = FontFirst(),
-                    fontSize = 12.sp
-                )
-            }
         }
+
+        // Komunikat jako NAKLADKA, nie element ukladu - wczesniej pojawiajaca sie linijka tekstu
+        // spychala cala zawartosc w gore i ekran skakal przy kazdym summonie. Siedzi NAD rzedem
+        // przyciskow, zeby ich nie przykrywac.
+        state.message?.let { message ->
+            Text(
+                text = message,
+                color = Gold,
+                fontFamily = FontFirst(),
+                fontWeight = FontWeight.Bold,
+                fontSize = 11.sp,
+                maxLines = 1,
+                textAlign = TextAlign.Center,
+                modifier = Modifier
+                    .align(Alignment.BottomCenter)
+                    .padding(bottom = MESSAGE_BOTTOM_GAP)
+                    .clip(RoundedCornerShape(50))
+                    .background(Ink.copy(alpha = 0.75f))
+                    .padding(horizontal = 12.dp, vertical = 3.dp)
+            )
+        }
+      }
     }
 }
 
@@ -280,7 +348,7 @@ private fun SectionTabs(
                         shape = RoundedCornerShape(10.dp)
                     )
                     .clickable(enabled = enabled) { onSelect(entry) }
-                    .padding(vertical = 9.dp),
+                    .padding(vertical = 6.dp),
                 contentAlignment = Alignment.Center
             ) {
                 Text(
@@ -295,60 +363,120 @@ private fun SectionTabs(
     }
 }
 
-/** Wybor bannera - poziomy odpowiednik listy z lewej strony w mobilnych gaczach. */
+/**
+ * Lista bannerow ulozona jak w mobilnych gaczach: posag/figura po lewej, obok nazwa, licznik losow
+ * i linijka "Za darmo" z odliczaniem. Wybrany banner ma jasna ramke i mocniejsza poswiate.
+ *
+ * Grafiki to [Resources.SummonBanner] - na razie placeholdery, podmiana pliku wystarczy.
+ */
 @Composable
-private fun BannerRow(
+private fun BannerList(
     selected: SummonBanner,
     tickets: Int,
+    claims: Map<String, Long>,
+    now: Long,
     enabled: Boolean,
     onSelect: (SummonBanner) -> Unit
 ) {
-    Row(
-        modifier = Modifier.fillMaxWidth(),
-        horizontalArrangement = Arrangement.spacedBy(8.dp)
-    ) {
+    Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
         SummonBanner.entries.forEach { entry ->
-            val isSelected = entry == selected
-            Column(
+            BannerCard(
+                banner = entry,
+                selected = entry == selected,
+                tickets = tickets,
+                remainingMs = FreeSummon.remainingMs(claims[entry.id], entry.cooldownMs, now),
+                enabled = enabled,
+                onClick = { onSelect(entry) }
+            )
+        }
+    }
+}
+
+@Composable
+private fun BannerCard(
+    banner: SummonBanner,
+    selected: Boolean,
+    tickets: Int,
+    remainingMs: Long,
+    enabled: Boolean,
+    onClick: () -> Unit
+) {
+    val free = remainingMs <= 0L
+
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(10.dp))
+            .background(
+                Brush.horizontalGradient(
+                    if (selected) listOf(banner.glow, banner.glow.copy(alpha = 0.35f))
+                    else listOf(Ink.copy(alpha = 0.75f), Ink.copy(alpha = 0.55f))
+                )
+            )
+            .border(
+                width = if (selected) 2.dp else 1.dp,
+                color = if (selected) banner.accent else GoldDim.copy(alpha = 0.45f),
+                shape = RoundedCornerShape(10.dp)
+            )
+            .clickable(enabled = enabled, onClick = onClick)
+            .padding(horizontal = 8.dp, vertical = 5.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(9.dp)
+    ) {
+        Image(
+            painter = painterResource(banner.art),
+            contentDescription = banner.label,
+            contentScale = ContentScale.Fit,
+            modifier = Modifier.size(42.dp)
+        )
+
+        Column(
+            modifier = Modifier.weight(1f),
+            verticalArrangement = Arrangement.spacedBy(3.dp)
+        ) {
+            Text(
+                text = banner.label,
+                color = if (selected) Color.White else TextBody,
+                fontFamily = FontPixel(),
+                fontWeight = FontWeight.Bold,
+                fontSize = 12.sp,
+                maxLines = 1
+            )
+            // Pasek z liczba losow - jak w referencji: ciemne wglebienie z iloscia waluty.
+            Row(
                 modifier = Modifier
-                    .weight(1f)
-                    .clip(RoundedCornerShape(12.dp))
-                    .background(
-                        if (isSelected) {
-                            Brush.verticalGradient(
-                                listOf(entry.accent.copy(alpha = 0.30f), entry.accent.copy(alpha = 0.10f))
-                            )
-                        } else {
-                            Brush.verticalGradient(listOf(Ink.copy(alpha = 0.7f), Ink.copy(alpha = 0.7f)))
-                        }
-                    )
-                    .border(
-                        width = if (isSelected) 2.dp else 1.dp,
-                        color = if (isSelected) entry.accent else GoldDim.copy(alpha = 0.5f),
-                        shape = RoundedCornerShape(12.dp)
-                    )
-                    .clickable(enabled = enabled) { onSelect(entry) }
-                    .padding(vertical = 8.dp, horizontal = 6.dp),
-                horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.spacedBy(3.dp)
+                    .clip(RoundedCornerShape(50))
+                    .background(Color.Black.copy(alpha = 0.45f))
+                    .padding(horizontal = 8.dp, vertical = 2.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(4.dp)
             ) {
-                Text(text = entry.icon, fontSize = 20.sp)
+                Text(text = "🎟️", fontSize = 9.sp)
                 Text(
-                    text = entry.label,
-                    color = if (isSelected) entry.accent else TextBody,
+                    text = "${banner.ticketCost}",
+                    color = if (tickets >= banner.ticketCost) Color.White else Color(0xFFD1453D),
                     fontFamily = FontPixel(),
                     fontWeight = FontWeight.Bold,
-                    fontSize = 10.sp,
-                    textAlign = TextAlign.Center,
-                    maxLines = 1
-                )
-                Text(
-                    text = "🎟️ ${entry.ticketCost}",
-                    color = if (tickets >= entry.ticketCost) TextBody else Muted,
-                    fontFamily = FontFirst(),
                     fontSize = 10.sp
                 )
             }
+        }
+
+        // Odliczanie do darmowego summona - dokladnie ta rola co "Free 01:54:39" w referencji.
+        Column(horizontalAlignment = Alignment.End) {
+            Text(
+                text = "Free",
+                color = Muted,
+                fontFamily = FontFirst(),
+                fontSize = 8.sp
+            )
+            Text(
+                text = FreeSummon.format(remainingMs),
+                color = if (free) Color(0xFF5FD08A) else TextBody,
+                fontFamily = FontPixel(),
+                fontWeight = FontWeight.Bold,
+                fontSize = 11.sp
+            )
         }
     }
 }
@@ -375,7 +503,9 @@ private fun AltarStage(
     // wypadlo mu cos dobrego, jeszcze zanim przeczyta tabliczke.
     val power = hero?.rarity?.effectPower() ?: 1f
 
-    TownPanel(modifier = modifier.fillMaxWidth()) {
+    // Bez TownPanel: zadnej ramki ani tla. Scena ma byc otwarta - docelowo pod spodem stanie
+    // wlasna grafika tla, a obwodka tylko robilaby z niej "pudelko na ekranie".
+    Box(modifier = modifier.fillMaxWidth()) {
         BoxWithConstraints(modifier = Modifier.fillMaxSize()) {
             // ContentScale.Fit na fillMaxSize() dobiera rozmiar SAM, z obu wymiarow naraz - bez
             // recznie dobieranego mnoznika, ktory trzeba przeliczac za kazdym razem, gdy podmienia
@@ -403,7 +533,7 @@ private fun AltarStage(
 
             Image(
                 painter = painterResource(Resources.CityIsland.altar),
-                contentDescription = "Oltarz",
+                contentDescription = "Altar",
                 contentScale = ContentScale.Fit,
                 modifier = Modifier
                     .fillMaxSize()
@@ -451,7 +581,7 @@ private fun AltarStage(
 
             if (phase == SummonPhase.Idle) {
                 Text(
-                    text = "Wybierz banner i odpal rytual.",
+                    text = "Pick a banner and start the ritual.",
                     color = Muted,
                     fontFamily = FontFirst(),
                     fontSize = 11.sp,
@@ -693,50 +823,97 @@ private fun NamePlate(card: MonsterCard, accent: Color, modifier: Modifier = Mod
 }
 
 /**
- * Przyciski losowania. Gdy nie stac - przycisk NIE jest po prostu wygaszony: pod spodem stoi zdanie
- * mowiace, czego brakuje i skad sie to bierze. Wygaszony przycisk bez powodu to najszybszy sposob,
- * zeby gracz uznal, ze ekran jest zepsuty.
+ * Dwa male przyciski summona pod scena - jak w referencji: zwarta pastylka z iloscia losow w
+ * kolku i podpisem obok, zamiast dwoch szerokich plyt na cala szerokosc ekranu.
+ *
+ * Gdy licznik darmowego summona doszedl do zera, przycisk x1 zmienia sie w "ZA DARMO" - gracz
+ * nie musi nigdzie indziej sprawdzac, czy juz mu sie nalezy.
  */
 @Composable
 private fun SummonButtons(
     banner: SummonBanner,
     tickets: Int,
+    freeReady: Boolean,
     enabled: Boolean,
     onSummon: (Int) -> Unit
 ) {
     val singleCost = banner.ticketCost
     val tenCost = banner.ticketCost * 10
 
-    Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.spacedBy(10.dp)
-        ) {
-            TownActionButton(
-                text = "SUMMON x1",
-                subtitle = "🎟️ $singleCost",
-                primary = true,
-                enabled = enabled && tickets >= singleCost,
-                modifier = Modifier.weight(1f),
-                onClick = { onSummon(1) }
-            )
-            TownActionButton(
-                text = "SUMMON x10",
-                subtitle = "🎟️ $tenCost",
-                enabled = enabled && tickets >= tenCost,
-                modifier = Modifier.weight(1f),
-                onClick = { onSummon(10) }
-            )
-        }
+    Row(
+        modifier = Modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.spacedBy(10.dp, Alignment.CenterHorizontally),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        SummonPill(
+            label = if (freeReady) "Free" else "Summon",
+            badge = if (freeReady) "★" else "$singleCost",
+            highlighted = true,
+            enabled = enabled && (freeReady || tickets >= singleCost),
+            onClick = { onSummon(1) }
+        )
+        SummonPill(
+            label = "Summon x10",
+            badge = "$tenCost",
+            highlighted = false,
+            enabled = enabled && tickets >= tenCost,
+            onClick = { onSummon(10) }
+        )
+    }
+}
 
-        if (tickets < singleCost) {
+@Composable
+private fun SummonPill(
+    label: String,
+    badge: String,
+    highlighted: Boolean,
+    enabled: Boolean,
+    onClick: () -> Unit
+) {
+    val top = if (highlighted) Color(0xFFFFD98A) else Color(0xFFE9C069)
+    val bottom = if (highlighted) Color(0xFFEDA429) else Color(0xFFC38C24)
+
+    Row(
+        modifier = Modifier
+            .clip(RoundedCornerShape(50))
+            .background(
+                if (enabled) Brush.verticalGradient(listOf(top, bottom))
+                else Brush.verticalGradient(listOf(Color(0xFF453B2C), Color(0xFF332B20)))
+            )
+            .border(
+                width = 2.dp,
+                color = if (enabled) Color(0xFFFFF0C2) else GoldDim.copy(alpha = 0.5f),
+                shape = RoundedCornerShape(50)
+            )
+            .clickable(enabled = enabled, onClick = onClick)
+            .padding(start = 5.dp, end = 16.dp, top = 5.dp, bottom = 5.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(7.dp)
+    ) {
+        // Kolko z kosztem - ten sam pomysl, co zwiniety zwoj z liczba w referencji.
+        Box(
+            modifier = Modifier
+                .size(26.dp)
+                .clip(RoundedCornerShape(50))
+                .background(Color(0xFF2A1B08).copy(alpha = if (enabled) 0.75f else 0.5f)),
+            contentAlignment = Alignment.Center
+        ) {
             Text(
-                text = "Brakuje losow (masz $tickets z $singleCost). Losy wypadaja ze skrzyni po bossie lochu.",
-                color = Color(0xFFD1453D),
-                fontFamily = FontFirst(),
+                text = badge,
+                color = if (enabled) Color(0xFFFFD98A) else Muted,
+                fontFamily = FontPixel(),
+                fontWeight = FontWeight.Bold,
                 fontSize = 11.sp
             )
         }
+        Text(
+            text = label,
+            color = if (enabled) Color(0xFF3A2600) else Muted,
+            fontFamily = FontPixel(),
+            fontWeight = FontWeight.Bold,
+            fontSize = 12.sp,
+            maxLines = 1
+        )
     }
 }
 
@@ -848,3 +1025,6 @@ private const val MONSTER_RISE_DISTANCE_PX = 140f
 
 /** Gdzie w (kwadratowym) kadrze oltarza jest powierzchnia kregu (zmierzone z pliku PNG). */
 private const val ALTAR_PLATFORM_Y_FRACTION = 0.62f
+
+/** Ile miejsca zostawic pod komunikatem, zeby nie wszedl na rzad przyciskow summona. */
+private val MESSAGE_BOTTOM_GAP = 52.dp

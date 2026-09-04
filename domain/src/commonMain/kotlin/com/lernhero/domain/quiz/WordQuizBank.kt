@@ -1,6 +1,7 @@
 package com.lernhero.domain.quiz
 
 import com.lernhero.domain.reading.SavedWord
+import com.lernhero.domain.reading.VocabularyDeck
 import kotlin.random.Random
 
 /**
@@ -38,7 +39,11 @@ object WordQuizBank {
         val pool = eligible(words)
         if (pool.size < MIN_WORDS) return null
 
-        val target = pool.random(random)
+        // Pytamy o slowa, ktorych gracz sie JESZCZE uczy - opanowane zostaja w puli tylko jako
+        // dystraktory. Inaczej im dluzej gra, tym czesciej quiz odpytywalby go z rzeczy, ktore
+        // juz umie, i tym rzadziej z tych, na ktorych mu zalezy. Gdy cala pula jest opanowana,
+        // wracamy do niej w calosci - lepsza powtorka niz brak pytania.
+        val target = (VocabularyDeck.learning(pool).ifEmpty { pool }).random(random)
         val wrong = pool
             .filter { it.id != target.id && it.translation != target.translation }
             .shuffled(random)
@@ -51,7 +56,7 @@ object WordQuizBank {
         if (wrong.size < 3) return null
 
         return QuizEntry(
-            id = "word_${target.id}",
+            id = "$ENTRY_PREFIX${target.id}",
             prompt = wordPrompt(target),
             correct = target.translation,
             wrong = wrong,
@@ -59,6 +64,17 @@ object WordQuizBank {
             difficulty = QuizDifficulty.Easy
         )
     }
+
+    /** Prefiks [QuizEntry.id] pytan ze slowek - patrz [savedWordIdOf]. */
+    private const val ENTRY_PREFIX = "word_"
+
+    /**
+     * Wyciaga id fiszki z id pytania - null, gdy pytanie nie pochodzi ze slowek. Dzieki temu walka
+     * moze odnotowac wynik na konkretnym slowku, nie wiedzac nic o [SavedWord]: dostaje samo id
+     * pytania, ktore i tak juz ma.
+     */
+    fun savedWordIdOf(quizEntryId: String): String? =
+        quizEntryId.removePrefix(ENTRY_PREFIX).takeIf { it != quizEntryId && it.isNotBlank() }
 
     private fun wordPrompt(word: SavedWord): String =
         if (word.sentence.isBlank()) {

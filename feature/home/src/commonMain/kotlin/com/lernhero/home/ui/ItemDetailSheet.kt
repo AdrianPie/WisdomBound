@@ -163,7 +163,7 @@ fun ItemDetailSheet(
 
             comparedTo?.let { current ->
                 Text(
-                    text = "Porownanie z: ${current.name}",
+                    text = "Compared to: ${current.name}",
                     color = Muted,
                     fontFamily = FontFirst(),
                     fontSize = 10.sp
@@ -289,19 +289,19 @@ internal val STAT_ORDER = listOf(
 )
 
 internal fun StatType.label(): String = when (this) {
-    StatType.MaxHp -> "Zdrowie"
-    StatType.Attack -> "Atak"
-    StatType.Defense -> "Obrona"
-    StatType.Speed -> "Szybkosc"
-    StatType.CritChance -> "Szansa na kryta"
-    StatType.CritDamage -> "Sila kryta"
-    StatType.Dodge -> "Unik"
-    StatType.Lifesteal -> "Kradziez zycia"
-    StatType.DamageReduction -> "Redukcja obrazen"
-    StatType.HealPower -> "Sila leczenia"
-    StatType.CooldownReduction -> "Skrocenie odnowienia"
-    StatType.AttackTargets -> "Dodatkowe cele"
-    StatType.SpellPower -> "Sila zaklec"
+    StatType.MaxHp -> "Health"
+    StatType.Attack -> "Attack"
+    StatType.Defense -> "Defense"
+    StatType.Speed -> "Speed"
+    StatType.CritChance -> "Crit Chance"
+    StatType.CritDamage -> "Crit Damage"
+    StatType.Dodge -> "Dodge"
+    StatType.Lifesteal -> "Lifesteal"
+    StatType.DamageReduction -> "Damage Reduction"
+    StatType.HealPower -> "Heal Power"
+    StatType.CooldownReduction -> "Cooldown Reduction"
+    StatType.AttackTargets -> "Extra Targets"
+    StatType.SpellPower -> "Spell Power"
 }
 
 internal fun StatType.isPercent(): Boolean = this in setOf(

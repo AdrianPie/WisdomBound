@@ -3,6 +3,7 @@ package com.lernhero.reader.reflow
 import androidx.compose.ui.text.TextLayoutResult
 import androidx.compose.ui.text.TextMeasurer
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.style.TextIndent
 import androidx.compose.ui.unit.Constraints
 import com.lernhero.domain.reading.ContentBlock
 import com.lernhero.domain.reading.ReadingAnchor
@@ -19,6 +20,14 @@ data class PageFragment(
     val text: String,
     val isHeading: Boolean,
     val isContinuation: Boolean,
+    /**
+     * Czy pierwsza linia tego fragmentu dostaje wciecie akapitowe.
+     *
+     * Fałsz nie tylko dla dalszego ciagu akapitu, ale tez dla PIERWSZEGO akapitu po naglowku -
+     * w skladzie ksiazkowym wciecie mowi "to nowy akapit po poprzednim", a po tytule rozdzialu
+     * nie ma poprzedniego, wiec wciecie jest tam bledem, nie ozdoba.
+     */
+    val indentFirstLine: Boolean,
     /**
      * Odstep nad fragmentem, w pikselach. Wyliczony przy paginacji i podany renderowi gotowy,
      * zeby obie strony liczyly tak samo - gdy paginator rezerwuje miejsce, ktorego render nie
@@ -80,14 +89,21 @@ class TextPaginator(
 
         blocks.forEachIndexed { localIndex, block ->
             val isHeading = block is ContentBlock.Heading
-            val style = if (isHeading) headingStyle else paragraphStyle
+            // Akapity nie dostaja odstepu - rozdziela je wciecie pierwszej linii, tak jak w
+            // skladzie ksiazkowym. Oddycha tylko naglowek: nad soba i pod soba.
+            val previousWasHeading = blocks.getOrNull(localIndex - 1) is ContentBlock.Heading
+            // Pierwszy akapit po naglowku idzie BEZ wciecia - i musi byc tak juz na etapie
+            // mierzenia, inaczej paginator policzylby inna liczbe linii niz render narysuje.
+            val indentFirstLine = !isHeading && !previousWasHeading
+            val style = when {
+                isHeading -> headingStyle
+                indentFirstLine -> paragraphStyle
+                else -> paragraphStyle.copy(textIndent = TextIndent())
+            }
             val layout = measure(block.text, style)
             if (layout.lineCount == 0) return@forEachIndexed
 
             var line = 0
-            // Akapity nie dostaja odstepu - rozdziela je wciecie pierwszej linii, tak jak w
-            // skladzie ksiazkowym. Oddycha tylko naglowek: nad soba i pod soba.
-            val previousWasHeading = blocks.getOrNull(localIndex - 1) is ContentBlock.Heading
             var spacing = when {
                 current.isEmpty() -> 0
                 isHeading -> blockSpacingPx * 2
@@ -127,6 +143,7 @@ class TextPaginator(
                     text = block.text.substring(start, end),
                     isHeading = isHeading,
                     isContinuation = line > 0,
+                    indentFirstLine = indentFirstLine && line == 0,
                     spacingBeforePx = spacing
                 )
 

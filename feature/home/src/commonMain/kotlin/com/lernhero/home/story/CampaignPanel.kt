@@ -146,7 +146,7 @@ private fun IdleHeader(
                     maxLines = 1
                 )
                 Text(
-                    text = "Plansza $stageLabel",
+                    text = "Stage $stageLabel",
                     color = Muted,
                     fontFamily = FontFirst(),
                     fontSize = 10.sp
@@ -304,7 +304,7 @@ private fun ActionRow(
         horizontalArrangement = Arrangement.spacedBy(8.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
-        SideAction(icon = "🗺", label = "MAPA", onClick = onOpenMap, modifier = Modifier.weight(1f))
+        SideAction(icon = "🗺", label = "MAP", onClick = onOpenMap, modifier = Modifier.weight(1f))
 
         Text(
             text = "BATTLE",

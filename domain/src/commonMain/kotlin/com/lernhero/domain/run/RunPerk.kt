@@ -17,8 +17,8 @@ enum class RunPerk(
 ) {
     Focus(
         title = "Skupienie",
-        description = "+10% pojemnosci paska zdolnosci do konca runu.",
-        apply = { it.copy(bonusSpellCapacity = it.bonusSpellCapacity + 10) }
+        description = "+15% sily zaklec do konca runu.",
+        apply = { it.copy(bonusSpellPower = it.bonusSpellPower + 0.15f) }
     ),
     Edge(
         title = "Ostrze",

@@ -3,22 +3,18 @@ package com.lernhero.domain.run
 import com.lernhero.domain.combat.Stats
 import com.lernhero.domain.quiz.QuizCategory
 import com.lernhero.domain.quiz.QuizDifficulty
+import com.lernhero.domain.quiz.custom.CustomDeck
 import com.lernhero.domain.reading.SavedWord
 import kotlin.math.roundToInt
 
 /**
  * Bonusy zebrane w trakcie jednego zejscia do lochu - z obozowisk i perkow. Licza sie **tylko**
  * do konca runu; nowy run startuje z czystym kontem.
- *
- * [spellWeightOverride] pozwala przemeblowac pasek zdolnosci przy ognisku, nie ruszajac zapisu
- * z ekwipunku. Null = uzyj tego, co gracz ustawil w EQ.
  */
 data class RunModifiers(
-    val bonusSpellCapacity: Int = 0,
     val bonusAttack: Int = 0,
     val bonusMaxHp: Int = 0,
     val bonusSpellPower: Float = 0f,
-    val spellWeightOverride: Map<String, Int>? = null,
     /**
      * Ogolne bonusy statystyk (szansa na kryta, unik, kradziez zycia, redukcja obrazen...)
      * zebrane z quizow przed walkami - kazdy komplet odpowiedzi dopisuje tu troche na caly run.
@@ -54,6 +50,14 @@ class RunSession {
      * z pominieciem wbudowanego banku i pytan typu "ulóz w kolejnosci".
      */
     var customWords: List<SavedWord> = emptyList()
+        private set
+
+    /**
+     * Wlasna talia pytan wybrana przed walka (endless -> "Wlasne" -> talia gracza). Niepusta =
+     * walka pyta WYLACZNIE z niej, dokladnie tak samo jak przy fiszkach powyzej - patrz
+     * [com.lernhero.domain.quiz.custom.CustomDeckBank].
+     */
+    var customDeck: CustomDeck? = null
         private set
 
     /** Poziom trudnosci runu - skaluje wrogow, pytania i nagrody. */
@@ -106,7 +110,8 @@ class RunSession {
         difficulty: RunDifficulty = RunDifficulty.Normal,
         storyStage: Int? = null,
         quizDifficulty: QuizDifficulty? = null,
-        customWords: List<SavedWord> = emptyList()
+        customWords: List<SavedWord> = emptyList(),
+        customDeck: CustomDeck? = null
     ) {
         modifiers = RunModifiers()
         this.category = category
@@ -114,6 +119,7 @@ class RunSession {
         this.activeStoryStage = storyStage
         this.quizDifficulty = quizDifficulty
         this.customWords = customWords
+        this.customDeck = customDeck
         pendingBattle = null
         lastBattleWon = null
         partyHp = emptyMap()
@@ -123,10 +129,6 @@ class RunSession {
 
     fun apply(change: (RunModifiers) -> RunModifiers) {
         modifiers = change(modifiers)
-    }
-
-    fun overrideSpellWeights(weights: Map<String, Int>) {
-        modifiers = modifiers.copy(spellWeightOverride = weights)
     }
 
     /** Zapamietuje HP/maxHP druzyny po walce - kolejna walka odczyta je zamiast leczyc do pelna. */

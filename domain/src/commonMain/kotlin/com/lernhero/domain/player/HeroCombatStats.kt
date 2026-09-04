@@ -2,6 +2,7 @@ package com.lernhero.domain.player
 
 import com.lernhero.domain.combat.StatType
 import com.lernhero.domain.combat.Stats
+import com.lernhero.domain.talent.TalentBonuses
 import kotlin.math.roundToInt
 
 /**
@@ -43,14 +44,24 @@ data class HeroCombatStats(
     companion object {
         /**
          * [gearStats] to suma statystyk z zalozonego ekwipunku
-         * ([com.lernhero.domain.item.Loadout.stats]), [heroStats] to punkty rozdane po awansach.
+         * ([com.lernhero.domain.item.Loadout.stats]), [heroStats] to punkty rozdane po awansach,
+         * a [talents] to plaskie bonusy z drzewka ([com.lernhero.domain.talent.TalentRules.bonusesOf]).
+         *
+         * Talenty dorzucaja tu WYLACZNIE to, co da sie pokazac jedna liczba. Ich druga, wieksza
+         * czesc - staki mechanik bojowych (garda, kolce, rozped...) - nie ma sensu na karcie
+         * postaci, bo dziala dopiero w walce; te wchodza do niej osobno, patrz BattleViewModel.
          */
-        fun of(gearStats: Stats, heroStats: HeroStats): HeroCombatStats = HeroCombatStats(
-            attack = HeroBaseStats.ATTACK + gearStats[StatType.Attack].toInt() + heroStats.attackBonus,
-            maxHp = HeroBaseStats.HP + gearStats[StatType.MaxHp].toInt() + heroStats.maxHpBonus,
-            critChance = HeroBaseStats.CRIT_CHANCE + gearStats[StatType.CritChance] + heroStats.critChanceBonus,
+        fun of(
+            gearStats: Stats,
+            heroStats: HeroStats,
+            talents: TalentBonuses = TalentBonuses.EMPTY
+        ): HeroCombatStats = HeroCombatStats(
+            attack = HeroBaseStats.ATTACK + gearStats[StatType.Attack].toInt() + heroStats.attackBonus + talents.attack,
+            maxHp = HeroBaseStats.HP + gearStats[StatType.MaxHp].toInt() + heroStats.maxHpBonus + talents.maxHp,
+            critChance = HeroBaseStats.CRIT_CHANCE + gearStats[StatType.CritChance] +
+                heroStats.critChanceBonus + talents.critChance,
             critMultiplier = HeroBaseStats.CRIT_MULTIPLIER,
-            quizDamageMultiplier = heroStats.quizDamageMultiplier,
+            quizDamageMultiplier = heroStats.quizDamageMultiplier * talents.quizDamageMultiplier,
             spellPower = gearStats[StatType.SpellPower],
             damageReduction = gearStats[StatType.DamageReduction]
         )

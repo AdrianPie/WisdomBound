@@ -25,8 +25,8 @@ object SpellCatalog {
 
     val FIREBALL = Spell(
         id = "fireball",
-        name = "Kula ognia",
-        description = "Ciska ognista kula w losowego wroga i podpala go na 3 tury.",
+        name = "Fireball",
+        description = "Hurls a fireball at a random enemy and sets it alight for 3 turns.",
         rarity = Rarity.Uncommon,
         iconKey = "fireball",
         cost = 180,
@@ -59,8 +59,8 @@ object SpellCatalog {
 
     val FIREBOMB = Spell(
         id = "firebomb",
-        name = "Bomba ognista",
-        description = "Wybucha obszarowo, raniac ogniem wszystkich wrogow.",
+        name = "Firebomb",
+        description = "Explodes in an area, burning every enemy.",
         rarity = Rarity.Rare,
         iconKey = "firebomb",
         cost = 300,
@@ -85,8 +85,8 @@ object SpellCatalog {
 
     val HEAL = Spell(
         id = "heal",
-        name = "Leczenie",
-        description = "Przywraca zdrowie najbardziej poobijanemu sojusznikowi.",
+        name = "Heal",
+        description = "Restores health to the most wounded ally.",
         rarity = Rarity.Uncommon,
         iconKey = "heal",
         cost = 200,
@@ -109,8 +109,8 @@ object SpellCatalog {
 
     val POISON_DART = Spell(
         id = "poison_dart",
-        name = "Zatruta strzalka",
-        description = "Trafia wroga i zatruwa go na 5 tur - trucizna ignoruje pancerz.",
+        name = "Poison Dart",
+        description = "Hits an enemy and poisons it for 5 turns - the poison ignores armor.",
         rarity = Rarity.Uncommon,
         iconKey = "poison_dart",
         cost = 160,
@@ -142,8 +142,8 @@ object SpellCatalog {
 
     val FROST_SHARD = Spell(
         id = "frost_shard",
-        name = "Odlamek lodu",
-        description = "Rani i zamraza wroga na jedna ture - zamrozony traci kolejke.",
+        name = "Frost Shard",
+        description = "Damages and freezes an enemy for one turn - frozen enemies lose their turn.",
         rarity = Rarity.Rare,
         iconKey = "frost_shard",
         cost = 280,

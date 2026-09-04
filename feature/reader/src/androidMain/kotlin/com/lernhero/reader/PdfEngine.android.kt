@@ -4,6 +4,7 @@ import android.content.ContentResolver
 import android.content.Context
 import android.content.Intent
 import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.graphics.Color
 import android.graphics.pdf.PdfRenderer
 import android.net.Uri
@@ -126,6 +127,35 @@ actual fun rememberBookFilePicker(onPicked: (PickedFile) -> Unit): () -> Unit {
         { launcher.launch(arrayOf("application/pdf", "text/plain", "application/epub+zip")) }
     }
 }
+
+@Composable
+actual fun rememberCoverImagePicker(onPicked: (PickedFile) -> Unit): () -> Unit {
+    val context = LocalContext.current
+    val scope = rememberCoroutineScope()
+
+    val launcher = rememberLauncherForActivityResult(
+        contract = ActivityResultContracts.OpenDocument()
+    ) { uri: Uri? ->
+        if (uri == null) return@rememberLauncherForActivityResult
+        scope.launch(Dispatchers.IO) {
+            // Okladka musi przezyc restart aplikacji tak samo jak sama ksiazka - bez trwalego
+            // uprawnienia polka rozsypalaby sie na szare placeholdery po pierwszym zamknieciu.
+            runCatching {
+                context.contentResolver.takePersistableUriPermission(uri, Intent.FLAG_GRANT_READ_URI_PERMISSION)
+            }
+            val bytes = context.contentResolver.openInputStream(uri)?.use { it.readBytes() } ?: return@launch
+            val name = displayNameOf(context.contentResolver, uri) ?: "Okladka"
+            withContext(Dispatchers.Main) {
+                onPicked(PickedFile(name = name, bytes = bytes, persistentLocator = uri.toString()))
+            }
+        }
+    }
+
+    return remember(launcher) { { launcher.launch(arrayOf("image/*")) } }
+}
+
+actual fun decodeImageBytes(bytes: ByteArray): ImageBitmap? =
+    runCatching { BitmapFactory.decodeByteArray(bytes, 0, bytes.size)?.asImageBitmap() }.getOrNull()
 
 actual suspend fun loadImportedBookBytes(locator: String): ByteArray? = withContext(Dispatchers.IO) {
     runCatching {

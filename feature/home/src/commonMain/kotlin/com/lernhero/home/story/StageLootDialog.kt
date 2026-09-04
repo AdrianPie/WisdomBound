@@ -97,7 +97,7 @@ fun StageLootDialog(
             }
 
             Text(
-                text = "Najlepsze, co moze tu wypasc: ${RarityPalette.label(maxRarity)}",
+                text = "Best possible drop here: ${RarityPalette.label(maxRarity)}",
                 color = RarityPalette.frame(maxRarity),
                 fontFamily = FontFirst(),
                 fontWeight = FontWeight.Bold,
@@ -145,7 +145,7 @@ fun StageLootDialog(
 
             if (stage.isBoss) {
                 Text(
-                    text = "Boss dodatkowo otwiera kolo fortuny ze skrzynia.",
+                    text = "The boss also opens a chest wheel of fortune.",
                     color = Muted,
                     fontFamily = FontFirst(),
                     fontSize = 10.sp,

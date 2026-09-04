@@ -21,4 +21,9 @@ actual object PdfEngine {
 @Composable
 actual fun rememberBookFilePicker(onPicked: (PickedFile) -> Unit): () -> Unit = { }
 
+@Composable
+actual fun rememberCoverImagePicker(onPicked: (PickedFile) -> Unit): () -> Unit = { }
+
 actual suspend fun loadImportedBookBytes(locator: String): ByteArray? = null
+
+actual fun decodeImageBytes(bytes: ByteArray): ImageBitmap? = null

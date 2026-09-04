@@ -4,7 +4,7 @@ import com.lernhero.domain.quiz.QuizCategory
 import com.lernhero.domain.quiz.QuizDifficulty
 import com.lernhero.domain.quiz.QuizEntry
 
-/** Historia - swiatowa i polska. */
+/** History - world and Polish. */
 object HistoryQuestions {
 
     private fun ask(
@@ -24,205 +24,205 @@ object HistoryQuestions {
 
     val all: List<QuizEntry> = listOf(
 
-        /* ------------------------------- Latwe ------------------------------- */
+        /* ------------------------------- Easy ------------------------------- */
         ask(
             id = "ii_wojna",
-            prompt = "W ktorym roku wybuchla II wojna swiatowa?",
+            prompt = "In which year did World War II break out?",
             correct = "1939",
             wrong = listOf("1914", "1945", "1918"),
             difficulty = QuizDifficulty.Easy
         ),
         ask(
             id = "ksiezyc",
-            prompt = "Kto jako pierwszy stanal na Ksiezycu?",
+            prompt = "Who was the first person to walk on the Moon?",
             correct = "Neil Armstrong",
-            wrong = listOf("Buzz Aldrin", "Jurij Gagarin", "Michael Collins"),
+            wrong = listOf("Buzz Aldrin", "Yuri Gagarin", "Michael Collins"),
             difficulty = QuizDifficulty.Easy
         ),
         ask(
             id = "mona_lisa",
-            prompt = "Kto namalowal Mona Lise?",
+            prompt = "Who painted the Mona Lisa?",
             correct = "Leonardo da Vinci",
-            wrong = listOf("Michal Aniol", "Rafael Santi", "Pablo Picasso"),
+            wrong = listOf("Michelangelo", "Raphael", "Pablo Picasso"),
             difficulty = QuizDifficulty.Easy
         ),
         ask(
             id = "chrzest",
-            prompt = "W ktorym roku Polska przyjela chrzest?",
+            prompt = "In which year did Poland adopt Christianity?",
             correct = "966",
             wrong = listOf("1000", "1025", "1050"),
             difficulty = QuizDifficulty.Easy
         ),
         ask(
             id = "piramidy",
-            prompt = "W ktorym kraju znajduja sie piramidy w Gizie?",
-            correct = "Egipt",
-            wrong = listOf("Meksyk", "Irak", "Sudan"),
+            prompt = "In which country are the pyramids of Giza located?",
+            correct = "Egypt",
+            wrong = listOf("Mexico", "Iraq", "Sudan"),
             difficulty = QuizDifficulty.Easy
         ),
         ask(
             id = "niepodleglosc",
-            prompt = "W ktorym roku Polska odzyskala niepodleglosc?",
+            prompt = "In which year did Poland regain independence?",
             correct = "1918",
             wrong = listOf("1920", "1945", "1989"),
             difficulty = QuizDifficulty.Easy
         ),
         ask(
             id = "mur",
-            prompt = "W ktorym roku upadl Mur Berlinski?",
+            prompt = "In which year did the Berlin Wall fall?",
             correct = "1989",
             wrong = listOf("1991", "1985", "1993"),
             difficulty = QuizDifficulty.Easy
         ),
 
-        /* ------------------------------ Srednie ------------------------------ */
+        /* ------------------------------ Medium ------------------------------ */
         ask(
             id = "i_wojna",
-            prompt = "W ktorym roku wybuchla I wojna swiatowa?",
+            prompt = "In which year did World War I break out?",
             correct = "1914",
             wrong = listOf("1912", "1918", "1939"),
             difficulty = QuizDifficulty.Medium
         ),
         ask(
             id = "gagarin",
-            prompt = "Kto jako pierwszy czlowiek polecial w kosmos?",
-            correct = "Jurij Gagarin",
-            wrong = listOf("Neil Armstrong", "Alan Shepard", "Walentyna Tierieszkowa"),
+            prompt = "Who was the first human to travel into space?",
+            correct = "Yuri Gagarin",
+            wrong = listOf("Neil Armstrong", "Alan Shepard", "Valentina Tereshkova"),
             difficulty = QuizDifficulty.Medium
         ),
         ask(
             id = "kolumb",
-            prompt = "W ktorym roku Krzysztof Kolumb dotarl do Ameryki?",
+            prompt = "In which year did Christopher Columbus reach America?",
             correct = "1492",
             wrong = listOf("1453", "1500", "1488"),
             difficulty = QuizDifficulty.Medium
         ),
         ask(
             id = "grunwald",
-            prompt = "Ktora bitwe stoczono w 1410 roku?",
-            correct = "Bitwe pod Grunwaldem",
-            wrong = listOf("Bitwe pod Legnica", "Bitwe pod Chocimiem", "Bitwe pod Wiedniem"),
+            prompt = "Which battle was fought in 1410?",
+            correct = "The Battle of Grunwald",
+            wrong = listOf("The Battle of Legnica", "The Battle of Chocim", "The Battle of Vienna"),
             difficulty = QuizDifficulty.Medium
         ),
         ask(
             id = "waszyngton",
-            prompt = "Kto byl pierwszym prezydentem Stanow Zjednoczonych?",
-            correct = "Jerzy Waszyngton",
+            prompt = "Who was the first President of the United States?",
+            correct = "George Washington",
             wrong = listOf("Abraham Lincoln", "Thomas Jefferson", "John Adams"),
             difficulty = QuizDifficulty.Medium
         ),
         ask(
             id = "chrobry",
-            prompt = "Kto byl pierwszym koronowanym krolem Polski?",
-            correct = "Boleslaw Chrobry",
-            wrong = listOf("Mieszko I", "Kazimierz Wielki", "Wladyslaw Lokietek"),
+            prompt = "Who was the first crowned King of Poland?",
+            correct = "Boleslaw the Brave",
+            wrong = listOf("Mieszko I", "Casimir the Great", "Wladyslaw the Elbow-high"),
             difficulty = QuizDifficulty.Medium
         ),
         ask(
             id = "titanic",
-            prompt = "W ktorym roku zatonal Titanic?",
+            prompt = "In which year did the Titanic sink?",
             correct = "1912",
             wrong = listOf("1905", "1918", "1923"),
             difficulty = QuizDifficulty.Medium
         ),
         ask(
             id = "rewolucja_fr",
-            prompt = "W ktorym roku wybuchla rewolucja francuska?",
+            prompt = "In which year did the French Revolution break out?",
             correct = "1789",
             wrong = listOf("1799", "1776", "1804"),
             difficulty = QuizDifficulty.Medium
         ),
 
-        /* ------------------------------ Trudne ------------------------------- */
+        /* ------------------------------ Hard ------------------------------- */
         ask(
             id = "ostatni_krol",
-            prompt = "Kto byl ostatnim krolem Polski?",
+            prompt = "Who was the last King of Poland?",
             correct = "Stanislaw August Poniatowski",
-            wrong = listOf("Jan III Sobieski", "August III Sas", "Stanislaw Leszczynski"),
+            wrong = listOf("John III Sobieski", "Augustus III", "Stanislaw Leszczynski"),
             difficulty = QuizDifficulty.Hard
         ),
         ask(
             id = "wieden",
-            prompt = "Kto dowodzil wojskami chrzescijanskimi w bitwie pod Wiedniem w 1683 roku?",
-            correct = "Jan III Sobieski",
-            wrong = listOf("Stefan Batory", "Zygmunt III Waza", "Wladyslaw IV"),
+            prompt = "Who commanded the Christian forces at the Battle of Vienna in 1683?",
+            correct = "John III Sobieski",
+            wrong = listOf("Stephen Bathory", "Sigismund III Vasa", "Wladyslaw IV"),
             difficulty = QuizDifficulty.Hard
         ),
         ask(
             id = "konstytucja",
-            prompt = "W ktorym roku uchwalono Konstytucje 3 maja?",
+            prompt = "In which year was the Constitution of May 3 adopted?",
             correct = "1791",
             wrong = listOf("1793", "1795", "1789"),
             difficulty = QuizDifficulty.Hard
         ),
         ask(
             id = "rzym",
-            prompt = "W ktorym roku upadlo Cesarstwo Zachodniorzymskie?",
+            prompt = "In which year did the Western Roman Empire fall?",
             correct = "476",
             wrong = listOf("410", "395", "527"),
             difficulty = QuizDifficulty.Hard
         ),
         ask(
             id = "piastowie",
-            prompt = "Ktora dynastia rzadzila Polska jako pierwsza?",
-            correct = "Piastowie",
-            wrong = listOf("Jagiellonowie", "Wazowie", "Wettynowie"),
+            prompt = "Which dynasty ruled Poland first?",
+            correct = "The Piasts",
+            wrong = listOf("The Jagiellons", "The Vasas", "The Wettins"),
             difficulty = QuizDifficulty.Hard
         ),
         ask(
             id = "waterloo",
-            prompt = "W ktorym roku Napoleon przegral bitwe pod Waterloo?",
+            prompt = "In which year did Napoleon lose the Battle of Waterloo?",
             correct = "1815",
             wrong = listOf("1812", "1805", "1821"),
             difficulty = QuizDifficulty.Hard
         ),
         ask(
             id = "druk",
-            prompt = "Kto w Europie upowszechnil druk ruchoma czcionka?",
-            correct = "Jan Gutenberg",
-            wrong = listOf("Mikolaj Kopernik", "Leonardo da Vinci", "Galileusz"),
+            prompt = "Who popularized movable-type printing in Europe?",
+            correct = "Johannes Gutenberg",
+            wrong = listOf("Nicolaus Copernicus", "Leonardo da Vinci", "Galileo"),
             difficulty = QuizDifficulty.Hard
         ),
 
-        /* ----------------------------- Eksperckie ---------------------------- */
+        /* ----------------------------- Expert ---------------------------- */
         ask(
             id = "westfalski",
-            prompt = "W ktorym roku pokoj westfalski zakonczyl wojne trzydziestoletnia?",
+            prompt = "In which year did the Peace of Westphalia end the Thirty Years' War?",
             correct = "1648",
             wrong = listOf("1618", "1659", "1667"),
             difficulty = QuizDifficulty.Expert
         ),
         ask(
             id = "oktawian",
-            prompt = "Kto byl pierwszym cesarzem rzymskim?",
-            correct = "Oktawian August",
-            wrong = listOf("Juliusz Cezar", "Neron", "Tyberiusz"),
+            prompt = "Who was the first Roman emperor?",
+            correct = "Augustus (Octavian)",
+            wrong = listOf("Julius Caesar", "Nero", "Tiberius"),
             difficulty = QuizDifficulty.Expert
         ),
         ask(
             id = "machiavelli",
-            prompt = "Kto napisal traktat 'Ksiaze'?",
+            prompt = "Who wrote the treatise 'The Prince'?",
             correct = "Niccolo Machiavelli",
-            wrong = listOf("Dante Alighieri", "Erazm z Rotterdamu", "Tomasz Morus"),
+            wrong = listOf("Dante Alighieri", "Erasmus of Rotterdam", "Thomas More"),
             difficulty = QuizDifficulty.Expert
         ),
         ask(
             id = "unia_lubelska",
-            prompt = "W ktorym roku zawarto unie lubelska?",
+            prompt = "In which year was the Union of Lublin signed?",
             correct = "1569",
             wrong = listOf("1385", "1466", "1596"),
             difficulty = QuizDifficulty.Expert
         ),
         ask(
             id = "hastings",
-            prompt = "W ktorym roku odbyla sie bitwa pod Hastings?",
+            prompt = "In which year was the Battle of Hastings?",
             correct = "1066",
             wrong = listOf("1215", "1096", "1013"),
             difficulty = QuizDifficulty.Expert
         ),
         ask(
             id = "konstantynopol",
-            prompt = "W ktorym roku Turcy zdobyli Konstantynopol?",
+            prompt = "In which year did the Ottomans capture Constantinople?",
             correct = "1453",
             wrong = listOf("1492", "1389", "1521"),
             difficulty = QuizDifficulty.Expert

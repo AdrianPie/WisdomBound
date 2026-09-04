@@ -1,5 +1,6 @@
 package com.lernhero.domain.player
 
+import com.lernhero.domain.talent.TalentRules
 import kotlinx.serialization.Serializable
 import kotlin.math.pow
 import kotlin.math.roundToInt
@@ -18,10 +19,10 @@ import kotlin.math.roundToInt
  */
 @Serializable
 enum class HeroStat(val label: String, val short: String, val description: String) {
-    Strength("Sila", "SIL", "+2 ataku druzyny za punkt."),
-    Vitality("Wytrzymalosc", "WYT", "+8 maks. HP druzyny za punkt."),
-    Focus("Skupienie", "SKU", "+2% obrazen z dobrej odpowiedzi za punkt."),
-    Luck("Szczescie", "SZC", "+0,6% szansy na cios krytyczny za punkt.")
+    Strength("Strength", "STR", "+2 party attack per point."),
+    Vitality("Vitality", "VIT", "+8 max party HP per point."),
+    Focus("Focus", "FOC", "+2% damage from correct answers per point."),
+    Luck("Luck", "LUC", "+0.6% critical hit chance per point.")
 }
 
 /**
@@ -96,7 +97,9 @@ data class PlayerProgress(
 data class LevelUpResult(
     val progress: PlayerProgress,
     val levelsGained: Int,
-    val pointsGained: Int
+    val pointsGained: Int,
+    /** Punkty talentow z tych samych awansow - patrz [PlayerProgress.unspentTalentPoints]. */
+    val talentPointsGained: Int = 0
 ) {
     val leveledUp: Boolean get() = levelsGained > 0
 }
@@ -108,7 +111,10 @@ data class LevelUpResult(
  */
 object LevelCurve {
 
-    /** Ile punktow statystyk daje jeden awans. */
+    /**
+     * Ile punktow statystyk daje jeden awans. Punkty TALENTOW licza sie osobno i wolniej -
+     * patrz [TalentRules.POINTS_PER_LEVEL].
+     */
     const val POINTS_PER_LEVEL = 3
 
     private const val BASE_XP = 120f
@@ -139,6 +145,10 @@ object LevelCurve {
         }
 
         val points = levels * POINTS_PER_LEVEL
+        // Punktow talentow NIE dopisujemy do zapisu - wynikaja wprost z osiagnietego poziomu
+        // (patrz [TalentRules.availablePoints]). Tutaj licza sie tylko po to, zeby ekran koncowy
+        // mogl pokazac, ile ich przybylo.
+        val talentPoints = levels * TalentRules.POINTS_PER_LEVEL
         return LevelUpResult(
             progress = progress.copy(
                 level = level,
@@ -146,7 +156,8 @@ object LevelCurve {
                 unspentPoints = progress.unspentPoints + points
             ),
             levelsGained = levels,
-            pointsGained = points
+            pointsGained = points,
+            talentPointsGained = talentPoints
         )
     }
 

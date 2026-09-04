@@ -26,10 +26,14 @@ import org.jetbrains.compose.resources.painterResource
 import lernhero.composeapp.generated.resources.Res
 import lernhero.composeapp.generated.resources.compose_multiplatform
 import org.koin.compose.koinInject
+import com.lernhero.shared.i18n.AppLanguageStore
+import com.lernhero.shared.i18n.ProvideAppStrings
 
 @Composable
 @Preview
 fun App() {
+    val languageStore = koinInject<AppLanguageStore>()
+    ProvideAppStrings(languageStore) {
     MaterialTheme {
         val playerRepository = koinInject<PlayerRepository>()
         var appReady by remember { mutableStateOf(false) }
@@ -44,7 +48,7 @@ fun App() {
                 if (playerRepository.getPlayer()?.character != null) {
                     Screen.HomeGraph
                 } else {
-                    Screen.CharacterCreation
+                    Screen.CharacterCreation()
                 }
             } else {
                 Screen.Auth
@@ -62,5 +66,6 @@ fun App() {
         }
 
 
+    }
     }
 }

@@ -42,6 +42,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.TransformOrigin
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.layout.onGloballyPositioned
@@ -68,7 +69,11 @@ import com.lernhero.game.battle.effects.damageNumberColor
 import com.lernhero.game.character.CharacterUiModel
 import com.lernhero.game.character.ModularKnight
 import com.lernhero.game.character.MonsterCharacter
+import com.lernhero.game.character.AnimSlot
+import com.lernhero.game.character.MonsterAnimations
+import com.lernhero.game.character.MonsterRigs
 import com.lernhero.game.character.MonsterVisualPresets
+import com.lernhero.game.character.RiggedMonster
 import com.lernhero.shared.resources.CombatAnchorSet
 import com.lernhero.shared.resources.Resources
 import kotlinx.coroutines.delay
@@ -122,44 +127,42 @@ internal fun BattleField(
             contentScale = ContentScale.FillBounds
         )
 
-        Row(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(horizontal = 12.dp, vertical = 12.dp),
-            horizontalArrangement = Arrangement.SpaceBetween,
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            Box(
-                modifier = Modifier
-                    .weight(1f)
-                    .fillMaxSize()
-            ) {
-                TeamFormation(
-                    characters = players,
-                    isEnemySide = false,
-                    stunnedIds = state.stunnedCharacterIds,
-                    guardCharges = state.guardCharges,
-                    onRectMeasured = { id, rect -> characterRects[id] = rect },
-                    onAttackFinished = onAttackFinished,
-                    onHitRecovered = onHitRecovered,
-                    modifier = Modifier.fillMaxSize()
-                )
-            }
+        // Warstwy sceny zdarzenia bossa sa CELOWO rozbite na trzy przebiegi, zeby uzyskac glebie:
+        //
+        //   tlo areny  ->  NASZA DRUZYNA  ->  mgla + iskry  ->  BOSS  ->  liczby  ->  quiz
+        //
+        // Dzieki temu boss stoi na pierwszym planie, a wlasna druzyna tonie w mgle razem z tlem -
+        // dokladnie tak, jak wyglada to w kadrach anime, gdy ktos laduje atak. Poza zdarzeniem
+        // bossa wszystkie trzy przebiegi rysuja sie jeden po drugim i uklad jest nie do odroznienia
+        // od zwyklego (te same wagi, ten sam padding).
+        val bossEvent = state.bossEvent
 
-            Box(
-                modifier = Modifier
-                    .weight(1f)
-                    .fillMaxSize()
-            ) {
-                TeamFormation(
-                    characters = enemies,
-                    isEnemySide = true,
-                    onRectMeasured = { id, rect -> characterRects[id] = rect },
-                    onAttackFinished = onAttackFinished,
-                    onHitRecovered = onHitRecovered,
-                    modifier = Modifier.fillMaxSize()
-                )
-            }
+        SideRow {
+            TeamFormation(
+                characters = players,
+                isEnemySide = false,
+                stunnedIds = state.stunnedCharacterIds,
+                guardCharges = state.guardCharges,
+                onRectMeasured = { id, rect -> characterRects[id] = rect },
+                onAttackFinished = onAttackFinished,
+                onHitRecovered = onHitRecovered,
+                modifier = Modifier.fillMaxSize()
+            )
+        }
+
+        if (bossEvent != null) {
+            BossChargeBackdrop(event = bossEvent, modifier = Modifier.fillMaxSize())
+        }
+
+        SideRow(alignEnd = true) {
+            TeamFormation(
+                characters = enemies,
+                isEnemySide = true,
+                onRectMeasured = { id, rect -> characterRects[id] = rect },
+                onAttackFinished = onAttackFinished,
+                onHitRecovered = onHitRecovered,
+                modifier = Modifier.fillMaxSize()
+            )
         }
 
         // Warstwa efektow - calkowicie osobna od postaci, patrz com.lernhero.game.battle.effects.
@@ -224,19 +227,6 @@ internal fun BattleField(
                 .align(Alignment.TopEnd)
                 .padding(10.dp)
         )
-
-        // Zaklecie bossa w toku: powiekszony, przyblizony portret siedzi tam, gdzie normalnie widac
-        // kawalek pola bitwy nad rozszerzonym dolem quizu - gora prawa, jak przy zwyklym pytaniu.
-        state.bossEvent?.let { bossEvent ->
-            state.characters[bossEvent.bossId]?.let { boss ->
-                BossPortrait(
-                    boss = boss,
-                    modifier = Modifier
-                        .align(Alignment.TopEnd)
-                        .padding(top = 46.dp, end = 8.dp)
-                )
-            }
-        }
 
         BattleMessageBanner(
             message = state.message,
@@ -447,7 +437,11 @@ private fun formationSlots(isRightSide: Boolean): List<FormationSlot> {
         FormationSlot(x = 0.42f, y = 0.42f),
         FormationSlot(x = 0.30f, y = 0.32f),
         FormationSlot(x = 0.54f, y = 0.62f),
-        FormationSlot(x = 0.50f, y = 0.28f)
+        FormationSlot(x = 0.50f, y = 0.28f),
+        // Szoste miejsce - druzyna to bohater + pieciu kompanow (COMPANION_SLOTS), a fale wroga
+        // tez dochodza do szesciu. Przy pieciu miejscach szosta postac staje DOKLADNIE na
+        // pierwszej (slots[index % size]), bo indeks sie zawija.
+        FormationSlot(x = 0.66f, y = 0.46f)
     )
 
     if (!isRightSide) {
@@ -538,6 +532,7 @@ private fun CharacterSlot(
                 ) {
                     ModularKnight(
                         equipment = knightEquipment,
+                        look = character.heroLook,
                         attackTrigger = attackTrigger,
                         interactive = false,
                         attackSpeed = BattleSpeed.multiplier,
@@ -550,6 +545,23 @@ private fun CharacterSlot(
                                 CharacterRect(coordinates.positionInRoot(), coordinates.size, flipped = false)
                             )
                         }
+                    )
+                }
+            } else if (MonsterRigs.forSpecies(character.avatarKey).isFlat.not()) {
+                // Potwor z rigiem wieloczesciowym (np. boss-smok) - gra nazwane animacje
+                // z [MonsterAnimations] zamiast matematycznego zamachu [MonsterCharacter].
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .shake(character.hp),
+                    contentAlignment = Alignment.BottomCenter
+                ) {
+                    RiggedCharacter(
+                        character = character,
+                        cardSize = cardSize,
+                        isEnemySide = isEnemySide,
+                        onRectMeasured = onRectMeasured,
+                        onAttackFinished = onAttackFinished
                     )
                 }
             } else {
@@ -565,6 +577,8 @@ private fun CharacterSlot(
                         attackTrigger = attackTrigger,
                         isEnemySide = isEnemySide,
                         sizeDp = cardSize * character.battleScale,
+                        // Boss (battleScale >> 1) ma prawo wyjsc poza kwadrat karty formacji.
+                        unbounded = character.battleScale > 2.5f,
                         attackSpeed = BattleSpeed.multiplier,
                         onAttackAnimationFinished = { onAttackFinished(character.id) },
                         modifier = Modifier.onGloballyPositioned { coordinates ->
@@ -590,38 +604,122 @@ private fun CharacterSlot(
 }
 
 /**
- * Powiekszony, przyblizony portret bossa podczas jego zaklecia ([BattleUiState.bossEvent]) - widac
- * tylko gorna czesc sylwetki (twarz/glowa), obcieta przez wasko przycieta ramke, otoczona pulsujaca
- * czerwona poswiata. Content jest znaczaco szerszy niz ramka i wyrownany do gory - to samo "kadrowanie",
- * ktorym fotografowie przybliozaja portret, tylko w Compose przez clip + oversized child.
+ * Jedna polowa areny (lewa = druzyna, prawa = wrogowie) w pelnowymiarowym wierszu.
+ *
+ * Obie strony musza miec DOKLADNIE te same wagi i padding, bo sa rysowane w osobnych przebiegach
+ * (patrz komentarz o warstwach w [BattleField]) - inaczej rozjechalyby sie wzgledem siebie.
  */
 @Composable
-private fun BossPortrait(boss: CharacterUiModel, modifier: Modifier = Modifier) {
-    val pulse = rememberInfiniteTransition()
-    val glow by pulse.animateFloat(
-        initialValue = 0.45f,
-        targetValue = 1f,
-        animationSpec = infiniteRepeatable(tween(900, easing = EaseInOutSine), RepeatMode.Reverse)
-    )
-    val frameShape = RoundedCornerShape(topStart = 10.dp, topEnd = 10.dp, bottomStart = 22.dp, bottomEnd = 22.dp)
-
-    Box(
-        modifier = modifier
-            .size(width = 140.dp, height = 118.dp)
-            .clip(frameShape)
-            .background(
-                Brush.verticalGradient(listOf(Color(0xFF3A140D), Color(0xFF160805)))
-            )
-            .border(2.dp, Color(0xFFE0654F).copy(alpha = glow), frameShape),
-        contentAlignment = Alignment.TopCenter
+private fun SideRow(
+    alignEnd: Boolean = false,
+    content: @Composable () -> Unit
+) {
+    Row(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(horizontal = 12.dp, vertical = 12.dp),
+        horizontalArrangement = Arrangement.SpaceBetween,
+        verticalAlignment = Alignment.CenterVertically
     ) {
-        Image(
-            painter = painterResource(MonsterVisualPresets.forSpecies(boss.avatarKey).drawable),
-            contentDescription = null,
-            modifier = Modifier.width(210.dp).offset(y = (-6).dp)
-        )
+        if (alignEnd) Box(modifier = Modifier.weight(1f).fillMaxSize())
+        Box(modifier = Modifier.weight(1f).fillMaxSize()) { content() }
+        if (!alignEnd) Box(modifier = Modifier.weight(1f).fillMaxSize())
     }
 }
+
+/**
+ * Potwor rysowany z rigu ([MonsterRigs]) i odtwarzajacy nazwane animacje ([MonsterAnimations]).
+ *
+ * Playhead jedzie od 0 do 1 przez [MonsterAnimationClip.durationMs] i ZATRZYMUJE SIE na koncu -
+ * animacje w tej grze sa jednorazowymi zagraniami ("otworz pysk i laduj pocisk"), a nie petlami;
+ * po zakonczeniu poza ma zostac taka, jaka ustawila ostatnia klatka.
+ *
+ * Uwaga na [CharacterState.ATTACK]: ta sciezka MUSI zaraportowac koniec ciosu przez
+ * [onAttackFinished], inaczej kolejka salwy ([BattleViewModel.startNextVolley]) czekalaby
+ * w nieskonczonosc na animacje, ktora nigdy nie zglosila, ze sie skonczyla.
+ */
+@Composable
+private fun RiggedCharacter(
+    character: CharacterUiModel,
+    cardSize: Dp,
+    isEnemySide: Boolean,
+    onRectMeasured: (String, CharacterRect) -> Unit,
+    onAttackFinished: (String) -> Unit
+) {
+    val rig = remember(character.avatarKey) { MonsterRigs.forSpecies(character.avatarKey) }
+    val preset = remember(character.avatarKey) { MonsterVisualPresets.forSpecies(character.avatarKey) }
+    val clip = remember(character.avatarKey, character.animSlot) {
+        character.animSlot?.let { MonsterAnimations.clipFor(character.avatarKey, it) }
+    }
+
+    val playhead = remember { Animatable(0f) }
+    LaunchedEffect(character.animTrigger, clip, character.animDurationMs) {
+        if (clip == null) {
+            playhead.snapTo(0f)
+            return@LaunchedEffect
+        }
+        playhead.snapTo(0f)
+        // Czas zgrany z czyms na ekranie (np. licznikiem quizu) idzie BEZ skalowania predkoscia
+        // walki - inaczej animacja rozjechalaby sie z paskiem, ktory tez nie jest skalowany.
+        val durationMs = character.animDurationMs
+            ?: BattleSpeed.scale(clip.durationMs.toLong()).toInt()
+        playhead.animateTo(
+            targetValue = 1f,
+            animationSpec = tween(durationMs, easing = LinearEasing)
+        )
+    }
+
+    // Zamach bez wlasnej animacji rigu - zglaszamy koniec po stalym czasie, zeby salwa szla dalej.
+    LaunchedEffect(character.state) {
+        if (character.state == CharacterState.ATTACK) {
+            // Sufit jest tu celowo: dlugi, efektowny klip nie moze zatrzymac calej salwy na
+            // kilka sekund tylko dlatego, ze ktos podpial go pod gniazdo ataku.
+            val attackClip = MonsterAnimations.clipFor(character.avatarKey, AnimSlot.Attack)
+            val attackMs = (attackClip?.durationMs ?: RIGGED_ATTACK_FALLBACK_MS)
+                .coerceAtMost(MAX_RIGGED_ATTACK_MS)
+            delay(BattleSpeed.scale(attackMs.toLong()))
+            onAttackFinished(character.id)
+        }
+    }
+
+    // Najazd kamery na bossa podczas ladowania - plynny, zeby nie "skakal" w kadr.
+    val zoom by animateFloatAsState(
+        targetValue = character.cameraZoom,
+        animationSpec = tween(durationMillis = 900, easing = FastOutSlowInEasing),
+        label = "bossCameraZoom"
+    )
+
+    RiggedMonster(
+        rig = rig,
+        preset = preset,
+        clip = clip,
+        progress = playhead.value,
+        sizeDp = cardSize * character.battleScale,
+        isEnemySide = isEnemySide,
+        unbounded = character.battleScale > 2.5f,
+        effectTintOverride = character.animEffectTintArgb?.let { Color(it) },
+        modifier = Modifier
+            .graphicsLayer {
+                scaleX = zoom
+                scaleY = zoom
+                // Punkt zaczepienia w okolicy czaszki (gora-lewo sylwetki smoka), zeby najazd
+                // wypychal na ekran GLOWE, a nie ogon.
+                transformOrigin = TransformOrigin(0.28f, 0.34f)
+            }
+            .onGloballyPositioned { coordinates ->
+                onRectMeasured(
+                    character.id,
+                    CharacterRect(coordinates.positionInRoot(), coordinates.size, flipped = !isEnemySide)
+                )
+            }
+    )
+}
+
+/** Ile trwa cios rigowanego potwora, ktory nie ma wlasnej animacji ATAK. */
+private const val RIGGED_ATTACK_FALLBACK_MS = 420
+
+/** Twardy sufit na czekanie na animacje ciosu - salwa ma isc dalej nawet przy bardzo dlugim klipie. */
+private const val MAX_RIGGED_ATTACK_MS = 1200
 
 /**
  * Tarcza nad bohaterem - tyle ciosow zatrzyma jeszcze jego garda ([com.lernhero.domain.run.EndlessBuff.Guard]/

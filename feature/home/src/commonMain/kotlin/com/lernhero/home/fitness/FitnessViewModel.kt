@@ -59,7 +59,7 @@ class FitnessViewModel(
                     // Nie chowamy bledu w cichej wiecznej "ladujemy" - widac dokladnie, co sie stalo.
                     return@update state.copy(
                         loading = false,
-                        message = "Blad odczytu aktywnosci: ${it.message ?: it::class.simpleName}"
+                        message = "Error reading activity: ${it.message ?: it::class.simpleName}"
                     )
                 }
                 state.copy(
@@ -79,7 +79,7 @@ class FitnessViewModel(
         if (granted) {
             refresh()
         } else {
-            _uiState.update { it.copy(message = "Bez zgody nie zobaczymy krokow ani treningów.") }
+            _uiState.update { it.copy(message = "Without permission we can't see your steps or workouts.") }
         }
     }
 
@@ -95,12 +95,12 @@ class FitnessViewModel(
             )
             _uiState.update { current ->
                 if (updated == null) {
-                    current.copy(message = "Nie udalo sie odebrac nagrody - sprobuj ponownie.")
+                    current.copy(message = "Couldn't claim the reward - try again.")
                 } else {
                     current.copy(
                         money = updated.money,
                         fitnessClaims = updated.dailyGoalClaims,
-                        message = "Odebrano +${goal.reward} zl: ${goal.title}"
+                        message = "Claimed +${goal.reward} gold: ${goal.title}"
                     )
                 }
             }

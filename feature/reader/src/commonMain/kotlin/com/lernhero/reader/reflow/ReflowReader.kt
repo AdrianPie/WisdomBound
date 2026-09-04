@@ -38,6 +38,9 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.rememberTextMeasurer
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.Hyphens
+import androidx.compose.ui.text.style.LineBreak
+import androidx.compose.ui.text.style.LineHeightStyle
 import androidx.compose.ui.text.style.TextIndent
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -178,24 +181,19 @@ private fun ReaderPageView(
             if (fragment.spacingBeforePx > 0) {
                 Spacer(Modifier.height(with(density) { fragment.spacingBeforePx.toDp() }))
             }
-            if (fragment.isHeading) {
-                Text(
-                    text = fragment.text,
-                    style = headingStyle,
-                    modifier = Modifier.fillMaxWidth()
-                )
-            } else {
-                FragmentText(
-                    fragment = fragment,
-                    content = content,
-                    settings = settings,
-                    palette = palette,
-                    baseStyle = paragraphStyle,
-                    selection = selection,
-                    onWordTapped = onWordTapped,
-                    onEmptyTap = onEmptyTap
-                )
-            }
+            // Naglowek idzie ta SAMA sciezka co akapit, tylko z innym stylem. Wczesniej byl
+            // zwyklym Text bez obslugi dotkniecia, wiec tytulu rozdzialu nie dalo sie
+            // przetlumaczyc - a to czesto jedyne miejsce z nieznanym slowem na stronie.
+            FragmentText(
+                fragment = fragment,
+                content = content,
+                settings = settings,
+                palette = palette,
+                baseStyle = if (fragment.isHeading) headingStyle else paragraphStyle,
+                selection = selection,
+                onWordTapped = onWordTapped,
+                onEmptyTap = onEmptyTap
+            )
         }
     }
     }
@@ -264,7 +262,8 @@ private fun FragmentText(
                             wordCharStart = globalWordStart,
                             sentenceCharStart = sentenceRange.first,
                             sentenceCharEnd = sentenceRange.last + 1,
-                            anchor = rootOffset + Offset((wordBox.left + wordBox.right) / 2f, wordBox.top)
+                            anchor = rootOffset + Offset((wordBox.left + wordBox.right) / 2f, wordBox.top),
+                            wordBottomPx = rootOffset.y + wordBox.bottom
                         )
                     )
                 }
@@ -299,9 +298,29 @@ private fun rememberParagraphStyle(settings: ReaderSettings, palette: ReaderPale
     TextStyle(
         color = palette.text,
         fontSize = settings.fontSizeSp.sp,
-        lineHeight = (settings.fontSizeSp * settings.lineHeightMultiplier).sp,
+        lineHeight = (settings.fontSizeSp * settings.effectiveLineHeight).sp,
+        // Trim.None to POPRAWKA NA STYK AKAPITOW, nie kosmetyka.
+        //
+        // Kazdy akapit to osobny Text. Domyslne LineHeightStyle obcina dodatkowa interlinie nad
+        // PIERWSZA i pod OSTATNIA linia bloku - wewnatrz akapitu odstep miedzy liniami jest wiec
+        // pelny, ale na granicy dwoch akapitow obcinany jest DWA RAZY. Zmierzone: 35px miedzy
+        // liniami akapitu i tylko 20px miedzy "...were thick." a "She had...", czyli ogonki liter
+        // z konca jednego akapitu wchodzily na wersaliki z poczatku nastepnego.
+        //
+        // Trim.None zostawia interlinie na obu koncach bloku, wiec odstep miedzy akapitami jest
+        // taki sam jak miedzy zwyklymi liniami.
+        lineHeightStyle = LineHeightStyle(
+            alignment = LineHeightStyle.Alignment.Proportional,
+            trim = LineHeightStyle.Trim.None
+        ),
         fontFamily = settings.typeface.toFontFamily(),
         textAlign = if (settings.justify) TextAlign.Justify else TextAlign.Start,
+        // Wyrownanie do obu krawedzi BEZ dzielenia wyrazow rozpycha spacje na pol linijki - stad
+        // "rzeki" bialych dziur w tekscie. Hyphens.Auto pozwala lamac wyrazy i to wlasnie ono robi
+        // z justowania cos czytelnego, a nie tabelke.
+        hyphens = if (settings.justify) Hyphens.Auto else Hyphens.None,
+        // Wdowy/sieroty: nie lamiemy linii tak, zeby na koncu zostalo samotne krotkie slowo.
+        lineBreak = LineBreak.Paragraph,
         // Sp policzony ze fontSizeSp, nie .em - na iOS silnik tekstu Skia rzuca
         // "Only Sp can convert to Px" przy proscie konwersji TextUnitType.Em na piksele
         // (wymaga wczesniej rozwiazac Em wzgledem fontSize, czego plain .toPx() nie robi).

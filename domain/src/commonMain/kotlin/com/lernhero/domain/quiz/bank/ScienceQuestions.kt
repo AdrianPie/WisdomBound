@@ -4,7 +4,7 @@ import com.lernhero.domain.quiz.QuizCategory
 import com.lernhero.domain.quiz.QuizDifficulty
 import com.lernhero.domain.quiz.QuizEntry
 
-/** Nauka, kosmos i fizyka. */
+/** Science, space and physics. */
 object ScienceQuestions {
 
     private fun ask(
@@ -24,158 +24,158 @@ object ScienceQuestions {
 
     val all: List<QuizEntry> = listOf(
 
-        /* ------------------------------- Latwe ------------------------------- */
+        /* ------------------------------- Easy ------------------------------- */
         ask(
             id = "merkury",
-            prompt = "Ktora planeta jest najblizej Slonca?",
-            correct = "Merkury",
-            wrong = listOf("Wenus", "Ziemia", "Mars"),
+            prompt = "Which planet is closest to the Sun?",
+            correct = "Mercury",
+            wrong = listOf("Venus", "Earth", "Mars"),
             difficulty = QuizDifficulty.Easy
         ),
         ask(
             id = "planety",
-            prompt = "Ile planet liczy Uklad Sloneczny?",
+            prompt = "How many planets does the Solar System have?",
             correct = "8",
             wrong = listOf("9", "7", "10"),
             difficulty = QuizDifficulty.Easy
         ),
         ask(
             id = "satelita",
-            prompt = "Jak nazywa sie naturalny satelita Ziemi?",
-            correct = "Ksiezyc",
-            wrong = listOf("Fobos", "Tytan", "Europa"),
+            prompt = "What is Earth's natural satellite called?",
+            correct = "The Moon",
+            wrong = listOf("Phobos", "Titan", "Europa"),
             difficulty = QuizDifficulty.Easy
         ),
         ask(
             id = "mars",
-            prompt = "Ktora planete nazywamy Czerwona Planeta?",
+            prompt = "Which planet do we call the Red Planet?",
             correct = "Mars",
-            wrong = listOf("Wenus", "Merkury", "Jowisz"),
+            wrong = listOf("Venus", "Mercury", "Jupiter"),
             difficulty = QuizDifficulty.Easy
         ),
         ask(
             id = "richter",
-            prompt = "Co mierzy skala Richtera?",
-            correct = "Sile trzesien ziemi",
-            wrong = listOf("Temperature", "Cisnienie", "Predkosc wiatru"),
+            prompt = "What does the Richter scale measure?",
+            correct = "Earthquake magnitude",
+            wrong = listOf("Temperature", "Pressure", "Wind speed"),
             difficulty = QuizDifficulty.Easy
         ),
         ask(
             id = "kat",
-            prompt = "Ile stopni ma kat pelny?",
+            prompt = "How many degrees is a full angle?",
             correct = "360",
             wrong = listOf("180", "90", "270"),
             difficulty = QuizDifficulty.Easy
         ),
 
-        /* ------------------------------ Srednie ------------------------------ */
+        /* ------------------------------ Medium ------------------------------ */
         ask(
             id = "jowisz",
-            prompt = "Ktora planeta Ukladu Slonecznego jest najwieksza?",
-            correct = "Jowisz",
-            wrong = listOf("Saturn", "Neptun", "Uran"),
+            prompt = "Which planet of the Solar System is the largest?",
+            correct = "Jupiter",
+            wrong = listOf("Saturn", "Neptune", "Uranus"),
             difficulty = QuizDifficulty.Medium
         ),
         ask(
             id = "swiatlo",
-            prompt = "Jaka jest predkosc swiatla w prozni?",
-            correct = "Okolo 300 000 km/s",
-            wrong = listOf("Okolo 30 000 km/s", "Okolo 3 000 km/s", "Okolo 1 000 000 km/s"),
+            prompt = "What is the speed of light in a vacuum?",
+            correct = "About 186,000 mi/s (300,000 km/s)",
+            wrong = listOf("About 18,600 mi/s", "About 1,860 mi/s", "About 620,000 mi/s"),
             difficulty = QuizDifficulty.Medium
         ),
         ask(
             id = "galaktyka",
-            prompt = "Jak nazywa sie galaktyka, w ktorej lezy Uklad Sloneczny?",
-            correct = "Droga Mleczna",
-            wrong = listOf("Andromeda", "Galaktyka Trojkata", "Wielki Oblok Magellana"),
+            prompt = "What is the galaxy the Solar System sits in called?",
+            correct = "The Milky Way",
+            wrong = listOf("Andromeda", "The Triangulum Galaxy", "The Large Magellanic Cloud"),
             difficulty = QuizDifficulty.Medium
         ),
         ask(
             id = "kopernik",
-            prompt = "Kto udowodnil, ze to Ziemia kraza wokol Slonca, a nie odwrotnie?",
-            correct = "Mikolaj Kopernik",
+            prompt = "Who proved that the Earth orbits the Sun, not the other way around?",
+            correct = "Nicolaus Copernicus",
             wrong = listOf("Isaac Newton", "Galileo Galilei", "Johannes Kepler"),
             difficulty = QuizDifficulty.Medium
         ),
         ask(
             id = "grawitacja",
-            prompt = "Kto sformulowal prawo powszechnego ciazenia?",
+            prompt = "Who formulated the law of universal gravitation?",
             correct = "Isaac Newton",
             wrong = listOf("Albert Einstein", "Nikola Tesla", "Michael Faraday"),
             difficulty = QuizDifficulty.Medium
         ),
 
-        /* ------------------------------ Trudne ------------------------------- */
+        /* ------------------------------ Hard ------------------------------- */
         ask(
             id = "einstein",
-            prompt = "Kto sformulowal teorie wzglednosci?",
+            prompt = "Who formulated the theory of relativity?",
             correct = "Albert Einstein",
             wrong = listOf("Isaac Newton", "Niels Bohr", "Max Planck"),
             difficulty = QuizDifficulty.Hard
         ),
         ask(
             id = "penicylina",
-            prompt = "Kto odkryl penicyline?",
+            prompt = "Who discovered penicillin?",
             correct = "Alexander Fleming",
-            wrong = listOf("Ludwik Pasteur", "Robert Koch", "Jonas Salk"),
+            wrong = listOf("Louis Pasteur", "Robert Koch", "Jonas Salk"),
             difficulty = QuizDifficulty.Hard
         ),
         ask(
             id = "sila",
-            prompt = "Jaka jest jednostka sily w ukladzie SI?",
-            correct = "Niuton",
-            wrong = listOf("Dzul", "Wat", "Paskal"),
+            prompt = "What is the SI unit of force?",
+            correct = "Newton",
+            wrong = listOf("Joule", "Watt", "Pascal"),
             difficulty = QuizDifficulty.Hard
         ),
         ask(
             id = "zero",
-            prompt = "Ile wynosi zero absolutne w stopniach Celsjusza?",
-            correct = "Okolo -273",
-            wrong = listOf("Okolo -100", "Okolo -200", "Okolo -460"),
+            prompt = "What is absolute zero in degrees Celsius?",
+            correct = "About -273",
+            wrong = listOf("About -100", "About -200", "About -460"),
             difficulty = QuizDifficulty.Hard
         ),
         ask(
             id = "dzwiek",
-            prompt = "W ktorym osrodku dzwiek rozchodzi sie najszybciej?",
-            correct = "W ciele stalym",
-            wrong = listOf("W wodzie", "W powietrzu", "W prozni"),
+            prompt = "In which medium does sound travel fastest?",
+            correct = "In a solid",
+            wrong = listOf("In water", "In air", "In a vacuum"),
             difficulty = QuizDifficulty.Hard
         ),
 
-        /* ----------------------------- Eksperckie ---------------------------- */
+        /* ----------------------------- Expert ---------------------------- */
         ask(
             id = "kwant",
-            prompt = "Kto zapoczatkowal teorie kwantow?",
+            prompt = "Who launched quantum theory?",
             correct = "Max Planck",
             wrong = listOf("Albert Einstein", "Werner Heisenberg", "Erwin Schrodinger"),
             difficulty = QuizDifficulty.Expert
         ),
         ask(
             id = "entropia",
-            prompt = "Ktora zasada termodynamiki mowi o wzroscie entropii?",
-            correct = "Druga",
-            wrong = listOf("Pierwsza", "Trzecia", "Zerowa"),
+            prompt = "Which law of thermodynamics states that entropy increases?",
+            correct = "The second",
+            wrong = listOf("The first", "The third", "The zeroth"),
             difficulty = QuizDifficulty.Expert
         ),
         ask(
             id = "hubble",
-            prompt = "Kto odkryl, ze Wszechswiat sie rozszerza?",
+            prompt = "Who discovered that the Universe is expanding?",
             correct = "Edwin Hubble",
             wrong = listOf("Albert Einstein", "Carl Sagan", "Georges Lemaitre"),
             difficulty = QuizDifficulty.Expert
         ),
         ask(
             id = "czarna_dziura",
-            prompt = "Jak nazywa sie granica czarnej dziury, zza ktorej nic nie ucieknie?",
-            correct = "Horyzont zdarzen",
-            wrong = listOf("Osobliwosc", "Dysk akrecyjny", "Granica Roche'a"),
+            prompt = "What is the boundary of a black hole called, beyond which nothing can escape?",
+            correct = "The event horizon",
+            wrong = listOf("The singularity", "The accretion disk", "The Roche limit"),
             difficulty = QuizDifficulty.Expert
         ),
         ask(
             id = "neutrino",
-            prompt = "Ktora czastka niemal nie oddzialuje z materia i przelatuje przez Ziemie?",
+            prompt = "Which particle barely interacts with matter and passes straight through Earth?",
             correct = "Neutrino",
-            wrong = listOf("Proton", "Elektron", "Foton"),
+            wrong = listOf("Proton", "Electron", "Photon"),
             difficulty = QuizDifficulty.Expert
         )
     )

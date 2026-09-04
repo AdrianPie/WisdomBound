@@ -212,7 +212,7 @@ internal fun BattleControls(
                     .padding(horizontal = 10.dp, vertical = 6.dp)
             ) {
                 Text(
-                    text = "Poddaj sie",
+                    text = "Surrender",
                     color = Color(0xFFE7A08A),
                     fontFamily = FontFirst(),
                     fontSize = 12.sp,
@@ -226,10 +226,10 @@ internal fun BattleControls(
         AlertDialog(
             onDismissRequest = { confirmCapitulate = false },
             containerColor = Color(0xFF1A1410),
-            title = { Text(text = "Kapitulacja", color = Color(0xFFFFD100), fontWeight = FontWeight.Bold) },
+            title = { Text(text = "Surrender?", color = Color(0xFFFFD100), fontWeight = FontWeight.Bold) },
             text = {
                 Text(
-                    text = "Wycofujesz druzyne z biegu. Ratujesz tylko 25% zebranej zdobyczy - reszta przepada.",
+                    text = "You are pulling your party out of the run. Only 25% of collected loot is saved - the rest is lost.",
                     color = Color(0xFFCDBB99)
                 )
             },
@@ -238,12 +238,12 @@ internal fun BattleControls(
                     confirmCapitulate = false
                     onCapitulate()
                 }) {
-                    Text(text = "Poddaj sie", color = Color(0xFFE7A08A))
+                    Text(text = "Surrender", color = Color(0xFFE7A08A))
                 }
             },
             dismissButton = {
                 TextButton(onClick = { confirmCapitulate = false }) {
-                    Text(text = "Walcz dalej", color = Color(0xFFFFD100))
+                    Text(text = "Keep Fighting", color = Color(0xFFFFD100))
                 }
             }
         )

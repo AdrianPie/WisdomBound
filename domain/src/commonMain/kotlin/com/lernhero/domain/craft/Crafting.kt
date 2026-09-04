@@ -3,6 +3,7 @@ package com.lernhero.domain.craft
 import com.lernhero.domain.common.Rarity
 import com.lernhero.domain.item.Item
 import com.lernhero.domain.item.ItemCatalog
+import com.lernhero.domain.item.catalog.MonsterGear
 import com.lernhero.domain.spell.Spell
 import com.lernhero.domain.spell.SpellCatalog
 import com.lernhero.domain.town.TownResources
@@ -78,12 +79,34 @@ object Forge {
         )
     }
 
-    val recipes: List<ForgeRecipe>
-        get() = ItemCatalog.all
+    /** Recepty bohatera - to, co widac na zakladce "Bohater". */
+    val recipes: List<ForgeRecipe> get() = recipesFor(ForgeTrack.Hero)
+
+    /**
+     * Recepty jednego toru. Obie pule sa tym samym typem ([Item]) i licza koszt tym samym
+     * [costFor] - rozni je wylacznie katalog, z ktorego pochodza.
+     */
+    fun recipesFor(track: ForgeTrack): List<ForgeRecipe> =
+        track.catalog()
             .sortedWith(compareBy({ it.rarity.ordinal }, { it.slot.ordinal }))
             .map { ForgeRecipe(item = it, cost = costFor(it)) }
 
-    fun recipeFor(itemId: String): ForgeRecipe? = ItemCatalog.byId(itemId)?.let { ForgeRecipe(it, costFor(it)) }
+    fun recipeFor(itemId: String): ForgeRecipe? =
+        (ItemCatalog.byId(itemId) ?: MonsterGear.byId(itemId))?.let { ForgeRecipe(it, costFor(it)) }
+}
+
+/**
+ * Dwie polowy kuzni. Bohater ma swoj ekwipunek, kompani swoj - patrz [MonsterGear] po powod,
+ * dla ktorego pule sa rozdzielone, a nie wspolne.
+ */
+enum class ForgeTrack(val label: String, val icon: String) {
+    Hero("Hero", "\uD83D\uDEE1"),
+    Monster("Summons", "\uD83D\uDC3E");
+
+    fun catalog(): List<Item> = when (this) {
+        Hero -> ItemCatalog.all
+        Monster -> MonsterGear.all
+    }
 }
 
 /**
@@ -106,10 +129,4 @@ object SummonCosts {
         Rarity.Legendary -> CraftCost(tickets = 5)
     }
 
-    fun forSpell(spell: Spell): CraftCost = CraftCost(
-        essence = 40 + spell.rarity.ordinal * 55
-    )
-
-    val spellOffers: List<Pair<Spell, CraftCost>>
-        get() = SpellCatalog.all.sortedBy { it.rarity.ordinal }.map { it to forSpell(it) }
 }

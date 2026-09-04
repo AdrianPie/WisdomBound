@@ -8,9 +8,10 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.safeDrawing
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.shape.CircleShape
@@ -26,10 +27,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.layout.onGloballyPositioned
+import androidx.compose.ui.layout.layout
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.lernhero.domain.reading.SavedWord
@@ -50,7 +50,9 @@ private val AccentBlue = Color(0xFF6AA9FF)
  * pokazuje tlumaczenie calego zdania bez tego przycisku (juz jest rozszerzone).
  *
  * [modifier] powinien wypelniac caly ekran czytnika - popup pozycjonuje sie sam wzgledem
- * [WordSelection.anchor], ktory jest juz we wspolrzednych okna.
+ * [WordSelection.anchor], ktory jest juz we wspolrzednych okna. Domyslnie staje NAD slowem;
+ * gdy nad slowem nie ma miejsca (slowo przy gorze ekranu / pod wcieciem aparatu), przeskakuje
+ * POD slowo - inaczej karta wjezdzala na notch i na samo slowo.
  */
 @Composable
 fun TranslationPopup(
@@ -70,25 +72,45 @@ fun TranslationPopup(
         result = translationSource.translate(selection.selectedText)
     }
 
-    // Wysokosc karty poznajemy dopiero po zlozeniu (tekst tlumaczenia ma zmienna dlugosc), wiec
-    // pion liczymy w dwoch krokach: najpierw zakladamy typowa wysokosc, potem korygujemy po
-    // faktycznym pomiarze - bez tego dluzsze tlumaczenie ucieka czescia karty poza gore ekranu.
-    var measuredHeightPx by remember { mutableStateOf(0) }
-
     BoxWithConstraints(modifier = modifier.fillMaxSize()) {
         val popupWidthDp = 240.dp
-        val popupWidthPx = with(density) { popupWidthDp.roundToPx() }
-        val maxXPx = (with(density) { maxWidth.roundToPx() } - popupWidthPx - 16).coerceAtLeast(16)
-
-        val xPx = (selection.anchor.x - popupWidthPx / 2f).roundToInt().coerceIn(16, maxXPx)
+        val maxWidthPx = with(density) { maxWidth.roundToPx() }
         val gapPx = with(density) { 14.dp.roundToPx() }
-        val yPx = (selection.anchor.y - measuredHeightPx - gapPx).roundToInt().coerceAtLeast(with(density) { 8.dp.roundToPx() })
+        val marginPx = with(density) { 8.dp.roundToPx() }
+        val maxHeightPx = with(density) { maxHeight.roundToPx() }
+        // Bezpieczny margines u gory: pasek statusu + wciecie aparatu. W trybie czytania pasek
+        // jest schowany, ale notch fizycznie zostaje - stad safeDrawing, a nie systemBars.
+        val safeTopPx = WindowInsets.safeDrawing.getTop(density).coerceAtLeast(marginPx)
+        val anchorX = selection.anchor.x
+        val anchorY = selection.anchor.y
+        val wordBottomPx = selection.wordBottomPx
 
         Column(
             modifier = Modifier
-                .offset { IntOffset(xPx, yPx) }
                 .widthIn(max = popupWidthDp)
-                .onGloballyPositioned { measuredHeightPx = it.size.height }
+                // Wysokosc karty zalezy od dlugosci tlumaczenia, a pion popupa (nad slowem) od tej
+                // wysokosci. Liczymy go z FAKTYCZNEGO pomiaru w tym samym przebiegu ukladu: wariant
+                // "zmierz w stanie, przesun w recompozycji" ladowal pierwsza klatke pod slowem
+                // (wysokosc == 0) i dopiero nastepna przeskakiwal nad nie - rzadko, ale widocznie.
+                .layout { measurable, constraints ->
+                    val placeable = measurable.measure(constraints)
+                    val x = (anchorX - placeable.width / 2f).roundToInt()
+                        .coerceIn(marginPx, (maxWidthPx - placeable.width - marginPx).coerceAtLeast(marginPx))
+
+                    // Preferujemy NAD slowem. Gdy tam nie ma miejsca (karta wjechalaby pod notch),
+                    // stajemy POD slowem i docinamy do dolnej krawedzi ekranu.
+                    val yAbove = (anchorY - placeable.height - gapPx).roundToInt()
+                    val y = if (yAbove >= safeTopPx) {
+                        yAbove
+                    } else {
+                        (wordBottomPx + gapPx).roundToInt()
+                            .coerceIn(safeTopPx, (maxHeightPx - placeable.height - marginPx).coerceAtLeast(safeTopPx))
+                    }
+
+                    layout(placeable.width, placeable.height) {
+                        placeable.place(x, y)
+                    }
+                }
                 .clip(RoundedCornerShape(14.dp))
                 .background(PopupBg)
                 .border(1.dp, PopupBorder, RoundedCornerShape(14.dp))
@@ -98,8 +120,8 @@ fun TranslationPopup(
                 Text(
                     text = when (val r = result) {
                         is TranslationResult.Translated -> r.text
-                        TranslationResult.Unavailable -> "Tlumacz nie jest jeszcze podlaczony"
-                        TranslationResult.Failed -> "Nie udalo sie przetlumaczyc"
+                        TranslationResult.Unavailable -> "Translator isn't connected yet"
+                        TranslationResult.Failed -> "Translation failed"
                         null -> "..."
                     },
                     color = if (result is TranslationResult.Unavailable) Color(0xFF8A93A0) else Color.White,

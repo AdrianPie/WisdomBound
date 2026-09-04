@@ -37,6 +37,9 @@ enum class BookFormat {
 /**
  * Ksiazka w bibliotece gracza. [locator] jest nieprzezroczysty dla domeny - to warstwa
  * platformowa wie, czy to sciezka zasobu, czy zakodowany URI/zakladka do pliku uzytkownika.
+ *
+ * [coverLocator] dziala dokladnie tak samo, tylko wskazuje na obrazek okladki wgrany przez
+ * gracza. Null = brak okladki, biblioteka rysuje wtedy zastepczy grzbiet z tytulem.
  */
 @Serializable
 data class Book(
@@ -45,7 +48,8 @@ data class Book(
     val author: String,
     val format: BookFormat,
     val source: BookSource,
-    val locator: String
+    val locator: String,
+    val coverLocator: String? = null
 )
 
 /**

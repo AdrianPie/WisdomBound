@@ -53,10 +53,16 @@ kotlin {
             implementation(libs.koin.compose)
             implementation(libs.koin.compose.viewmodel)
             implementation(libs.auth.firebase.kmp)
+            // Logowanie e-mailem idzie wprost przez Firebase Auth - kmpauth daje tylko przyciski
+            // dostawcow (Google/Apple), nie ma w nim rejestracji haslem.
+            implementation(libs.firebase.auth)
 
             implementation(project(path = ":shared" ))
             implementation(project(path = ":data" ))
             implementation(project(path = ":domain" ))
+            // Rycerz z ekranu tworzenia postaci to ten sam ModularKnight, ktorym rysuje sie
+            // bohatera w walce i w ekwipunku - jeden model, zero drugiej wersji do utrzymania.
+            implementation(project(path = ":feature:game" ))
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
@@ -70,6 +76,11 @@ android {
 
     defaultConfig {
         minSdk = libs.versions.android.minSdk.get().toInt()
+    }
+    // Potrzebne dla BuildConfig.DEBUG - na nim wisi wejscie deweloperskie z ekranu logowania
+    // (patrz isDebugBuild()). W buildzie release stala jest false, wiec przycisk znika sam.
+    buildFeatures {
+        buildConfig = true
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11

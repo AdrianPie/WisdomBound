@@ -36,7 +36,7 @@ enum class ReaderTypeface {
 data class ReaderSettings(
     val mode: ReadingMode = ReadingMode.Reflow,
     val fontSizeSp: Int = DEFAULT_FONT_SIZE_SP,
-    val lineHeightMultiplier: Float = 1.55f,
+    val lineHeightMultiplier: Float = DEFAULT_LINE_HEIGHT,
     val horizontalMarginDp: Int = 24,
     /** Justowanie do obu krawedzi - tak wyglada sklad ksiazkowy. */
     val justify: Boolean = true,
@@ -46,9 +46,31 @@ data class ReaderSettings(
     fun withFontSize(sp: Int): ReaderSettings =
         copy(fontSizeSp = sp.coerceIn(MIN_FONT_SIZE_SP, MAX_FONT_SIZE_SP))
 
+    fun withLineHeight(multiplier: Float): ReaderSettings =
+        copy(lineHeightMultiplier = multiplier.coerceIn(MIN_LINE_HEIGHT, MAX_LINE_HEIGHT))
+
+    /**
+     * Interlinia gotowa do uzycia w stylu tekstu.
+     *
+     * Czytana PRZEZ TE FUNKCJE, a nie prosto z pola, bo w zapisach graczy siedzi jeszcze stara
+     * wartosc 1.55 - przy niej ogonek "g" z jednej linii niemal dotykal "B" z nastepnej. Docinanie
+     * do [MIN_LINE_HEIGHT] naprawia te zapisy bez osobnej migracji.
+     */
+    val effectiveLineHeight: Float
+        get() = lineHeightMultiplier.coerceIn(MIN_LINE_HEIGHT, MAX_LINE_HEIGHT)
+
     companion object {
         const val MIN_FONT_SIZE_SP = 13
         const val MAX_FONT_SIZE_SP = 32
         const val DEFAULT_FONT_SIZE_SP = 19
+
+        /**
+         * Dolny sufit interlinii. Ponizej ~1.7 wydluzone znaki kroju szeryfowego (ogonki g/y/p
+         * kontra wysokie b/l/B) zaczynaja sie stykac miedzy liniami.
+         */
+        const val MIN_LINE_HEIGHT = 1.7f
+        const val MAX_LINE_HEIGHT = 2.4f
+        const val DEFAULT_LINE_HEIGHT = 1.85f
+        const val LINE_HEIGHT_STEP = 0.1f
     }
 }

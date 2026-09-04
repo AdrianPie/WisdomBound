@@ -4,6 +4,8 @@ import com.lernhero.domain.combat.live.CycleOutcome
 import com.lernhero.domain.combat.live.StreakTracker
 import com.lernhero.domain.combat.playback.HitKind
 import com.lernhero.domain.progress.RunStats
+import com.lernhero.domain.monster.Element
+import com.lernhero.domain.quiz.CategoryOffer
 import com.lernhero.domain.quiz.EstimationEntry
 import com.lernhero.domain.run.EndlessBuff
 import com.lernhero.game.character.CharacterUiModel
@@ -44,10 +46,11 @@ enum class GamePhase {
 }
 
 /**
- * Faza biezacej tury: [Question] - walka stoi, czeka na odpowiedz, dol ekranu jest rozszerzony;
+ * Faza biezacej tury: [CategoryPick] - gracz wybiera temat nadchodzacego pytania (tryb story,
+ * patrz [CategoryOffer]); [Question] - walka stoi, czeka na odpowiedz, dol ekranu jest rozszerzony;
  * [Resolving] - odpowiedz padla, druzyny wymieniaja ciosy, pole bitwy jest rozszerzone.
  */
-enum class TurnPhase { Question, Resolving }
+enum class TurnPhase { CategoryPick, Question, Resolving }
 
 /** Efekt zamknietego cyklu dziesieciu odpowiedzi - trzyma sie przez [expiresAtMs] (czas gry). */
 data class CycleBuffState(
@@ -111,6 +114,16 @@ data class BattleUiState(
     /** Specjalne zdarzenie elity/bossa w trakcie zamiast zwyklego ciosu tej tury - patrz [BossEventState]. */
     val bossEvent: BossEventState? = null,
     /**
+     * Cztery kafle tematow do wyboru przed tura (tryb story) - dopoki nie jest null, walka czeka
+     * na decyzje gracza i nie ma jeszcze pytania. Patrz [com.lernhero.domain.quiz.CategoryOffer].
+     */
+    val categoryOffer: CategoryOffer? = null,
+    /**
+     * Zywioly wzmocnione na TE ture wybranym kaflem - jednostki gracza o tym zywiole bija mocniej
+     * (patrz [com.lernhero.domain.quiz.CategoryOffer.ELEMENT_BOOST]). Czysci sie z kazda nowa tura.
+     */
+    val boostedElements: Set<Element> = emptySet(),
+    /**
      * Bonusy przyznane w endless mode (patrz [com.lernhero.domain.run.BattleRequest.isEndless]) -
      * bonus -> liczba stakow. Zawsze puste poza endless. Puste = zaden jeszcze nie wypadl.
      */
@@ -151,7 +164,7 @@ fun BattleUiState.activeCycleMultiplier(): Float =
     activeCycleBuff?.takeIf { elapsedMs < it.expiresAtMs }?.outcome?.attackMultiplier ?: 1f
 
 /** Co elita/boss szykuje zamiast zwyklego ciosu - flavor zdarzenia, patrz [BattleUiState.resolveBossEvent][com.lernhero.game.battle.BattleViewModel]. */
-enum class BossEventKind { Heal, Poison, StunGamble }
+enum class BossEventKind { Heal, Poison, StunGamble, Strike }
 
 /**
  * Specjalne zdarzenie elity/bossa zamiast zwyklego ciosu tej tury - walka staje, dol ekranu
@@ -165,9 +178,66 @@ data class BossEventState(
     val bossId: String,
     val kind: BossEventKind,
     val question: EstimationEntry,
-    val guess: Int = (question.minValue + question.maxValue) / 2,
+    /**
+     * Widelki suwaka wylosowane dla TEJ rozgrywki pytania (patrz [EstimationEntry.sliderRange]) -
+     * waskie okno wokol poprawnej wartosci, przesuniete losowo, zeby odpowiedz nie siedziala
+     * zawsze na srodku. Bez tego suwak obejmowal cala epoke i trafienie w rok bylo loteria.
+     */
+    val sliderMin: Int = question.minValue,
+    val sliderMax: Int = question.maxValue,
+    val guess: Int = (sliderMin + sliderMax) / 2,
     val resolved: Boolean = false,
-    val outcome: BossEventOutcome? = null
+    val outcome: BossEventOutcome? = null,
+    /** Na ktorym etapie inscenizacji jestesmy - patrz [BossEventPhase]. */
+    val phase: BossEventPhase = BossEventPhase.Charging,
+    /**
+     * NAJGORSZY mozliwy skutek tego zdarzenia (przy fatalnym quizie). Liczony z gory, w chwili
+     * odpalenia, i pokazywany rosnacym licznikiem juz podczas ladowania - dzieki temu gracz WIE,
+     * o jaka stawke gra, zanim odpowie, a po odpowiedzi widzi, ile z tego udalo mu sie sciac.
+     */
+    val projection: BossEventProjection
+)
+
+/**
+ * Etapy inscenizacji zdarzenia bossa. Wczesniej wszystko dzialo sie naraz i nie bylo widac, co
+ * wlasciwie zaszlo - kazdy etap ma teraz wlasny, wyrazny obraz na ekranie i wlasny czas trwania.
+ */
+enum class BossEventPhase {
+    /** Boss laduje atak: zbliza sie do kamery, tlo ciemnieje, iskry lecą w gore, licznik rosnie. Bez quizu. */
+    Charging,
+
+    /** Panel quizu wjezdza od dolu, licznik dalej pulsuje, leci czas na odpowiedz. */
+    Quiz,
+
+    /** Werdykt: poprawna wartosc kontra zgadywana, ocena celnosci i redukcja - licznik SPADA na oczach gracza. */
+    Judging,
+
+    /** Kulminacja: kula z pyska leci w cel (albo wybucha na samym bossie, gdy sie leczy). */
+    Payoff
+}
+
+/**
+ * Zapowiedz skutku zdarzenia - to, co widac na liczniku podczas ladowania.
+ *
+ * [worstValue] to skutek przy fatalnym quizie (performance = 0), czyli gorna granica tego, co
+ * gracz moze jeszcze utracic. Po rozstrzygnieciu licznik zjezdza z niej do faktycznego wyniku.
+ */
+data class BossEventProjection(
+    /** Nazwa ataku pokazywana nad licznikiem, np. "TRUJACY ODDECH". */
+    val attackName: String,
+    /** Co mierzy licznik, np. "OBRAZENIA" albo "OGLUSZENIE". */
+    val valueLabel: String,
+    /**
+     * Ile zaklecie urosnie, jesli gracz przeczeka CALY czas na odpowiedz, przy neutralnej celnosci
+     * (mnoznik 1.0). Licznik na ekranie pnie sie do tej wartosci przez cale ladowanie i quiz - to
+     * jest to "zaklecie sie laduje, im dluzej zwlekasz, tym mocniej oberwiesz".
+     *
+     * Wynik koncowy MOZE ja przekroczyc: kiepska odpowiedz mnozy zaklecie w gore (patrz
+     * [BossEventOutcome.accuracyMultiplier]).
+     */
+    val chargedValue: Int,
+    /** Sufiks liczby - "" dla obrazen, "%" dla ogluszenia. */
+    val unit: String = ""
 )
 
 /**
@@ -178,10 +248,20 @@ data class BossEventState(
 data class BossEventOutcome(
     val performance: Float,
     val message: String,
+    /**
+     * O ile odpowiedz przemnozyla naladowane zaklecie. **Ponizej 1.0 = gracz oslabil cios,
+     * powyzej 1.0 = wzmocnil.** To jest sedno mechaniki: zla odpowiedz nie jest "brakiem zniżki",
+     * tylko realnie DOKLADA obrazen - stad na ekranie werdyktu widac i "-40%", i "+190%".
+     */
+    val accuracyMultiplier: Float = 1f,
+    /** Ile zaklecie naladowalo z samego czasu, zanim odpowiedz je przemnozyla - baza dla "%". */
+    val chargedValue: Int = 0,
     /** [BossEventKind.Heal] - juz naliczone i zastosowane HP odzyskane przez bossa. */
     val healAmount: Int = 0,
     /** [BossEventKind.Poison] - juz naliczona i zastosowana suma obrazen na cala druzyne. */
     val poisonDamage: Int = 0,
+    /** [BossEventKind.Strike] - juz naliczona i zastosowana suma obrazen z poteznego ciosu. */
+    val strikeDamage: Int = 0,
     /** [BossEventKind.StunGamble] - jaka czesc druzyny zostala ogluszona (0 = zaklecie przerwane). */
     val affectedFraction: Float = 0f,
     val stunTurns: Int = 0,
@@ -200,6 +280,8 @@ data class LiveQuizState(
     val question: QuizQuestion,
     val selectedAnswerId: String? = null,
     val orderedSelection: List<String> = emptyList(),
+    /** Zaznaczone opcje w [MultiSelectQuestion] - pusty zbior dla pozostalych typow pytan. */
+    val multiSelection: Set<String> = emptySet(),
     val revealed: Boolean = false
 ) {
     val correctAnswer: QuizAnswer?
@@ -210,6 +292,10 @@ data class LiveQuizState(
             is MultipleChoiceQuestion -> selectedAnswerId != null && selectedAnswerId == correctAnswer?.id
             is OrderingQuestion -> orderedSelection.size == q.items.size &&
                 orderedSelection == q.items.sortedBy { it.correctPosition }.map { it.id }
+            // Zaliczamy TYLKO komplet: wszystkie poprawne i ani jednej blednej. Czesciowe
+            // trafienie nie jest "prawie dobrze" - przy zaznaczaniu z listy latwo byloby
+            // zaklikac wszystko i zawsze miec polowe punktow.
+            is MultiSelectQuestion -> multiSelection == q.correctIds
         }
 }
 
@@ -261,4 +347,25 @@ data class OrderingItem(
     val id: String,
     val text: String,
     val correctPosition: Int
+)
+
+/**
+ * Pytanie "zaznacz wszystkie prawdziwe" - gracz przelacza dowolna liczbe opcji i zatwierdza.
+ * [options] jest juz przetasowane, wiec poprawne nie stoja obok siebie.
+ */
+data class MultiSelectQuestion(
+    override val id: String,
+    override val prompt: String,
+    val options: List<MultiSelectOption>,
+    override val difficulty: String,
+    override val category: String,
+    override val reward: Int
+) : QuizQuestion {
+    val correctIds: Set<String> get() = options.filter { it.isCorrect }.map { it.id }.toSet()
+}
+
+data class MultiSelectOption(
+    val id: String,
+    val text: String,
+    val isCorrect: Boolean
 )

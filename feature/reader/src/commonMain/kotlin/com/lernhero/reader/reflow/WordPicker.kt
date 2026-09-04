@@ -72,9 +72,13 @@ enum class SelectionScope { Word, Sentence }
  * wokol niego, zeby przycisk "rozszerz na zdanie" w popupie nie musial nic przeliczac na nowo,
  * tylko przelaczyc [scope].
  *
- * [anchor] to pozycja w ukladzie okna (px), gdzie ma sie pojawic popup - liczona raz, w miejscu
- * dotkniecia, i NIE zmienia sie przy rozszerzeniu na zdanie (popup zostaje tam, gdzie gracz
- * dotknal, zamiast skakac po ekranie razem z rosnacym zaznaczeniem).
+ * [anchor] to GORNA krawedz dotknietego slowa w ukladzie okna (px, srodek w poziomie) - liczona
+ * raz, w miejscu dotkniecia, i NIE zmienia sie przy rozszerzeniu na zdanie (popup zostaje tam,
+ * gdzie gracz dotknal, zamiast skakac po ekranie razem z rosnacym zaznaczeniem).
+ *
+ * [wordBottomPx] to dolna krawedz tego samego slowa. Popup domyslnie staje NAD slowem, ale gdy
+ * slowo jest przy samej gorze ekranu (brak miejsca nad nim), przeskakuje POD nie - i wtedy
+ * potrzebuje wiedziec, gdzie slowo sie konczy.
  */
 data class WordSelection(
     val scope: SelectionScope,
@@ -84,7 +88,8 @@ data class WordSelection(
     val wordCharStart: Int,
     val sentenceCharStart: Int,
     val sentenceCharEnd: Int,
-    val anchor: Offset
+    val anchor: Offset,
+    val wordBottomPx: Float
 ) {
     val selectedText: String
         get() = if (scope == SelectionScope.Word) word else sentence

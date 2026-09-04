@@ -14,6 +14,7 @@ import com.lernhero.domain.reading.PlainTextParser
 import com.lernhero.domain.reading.ReadingDayProgress
 import com.lernhero.domain.reading.ReadingGoal
 import com.lernhero.domain.reading.ReadingStats
+import com.lernhero.domain.reading.VocabularyDeck
 import com.lernhero.domain.repository.PlayerRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.IO
@@ -36,10 +37,27 @@ data class LibraryUiState(
     val readerSettings: ReaderSettings = ReaderSettings(),
     /** Fiszki zapisane w czytniku - najnowsze pierwsze. */
     val savedWords: List<SavedWord> = emptyList(),
+    /** Id ostatnio otwartej ksiazki - karta "Czytaj dalej" na gorze biblioteki. */
+    val lastOpenedBookId: String? = null,
     val message: String? = null
 ) {
     fun claimedToday(goal: ReadingGoal): Boolean = dailyGoalClaims[goal.id] == readingToday.dateKey
     fun pageFor(book: Book): Int = bookProgress[book.id] ?: 0
+
+    /** Wszystkie ksiazki na polce - wbudowane i wgrane razem, bo dla gracza to jedna biblioteka. */
+    val allBooks: List<Book> get() = importedBooks + bundledBooks
+
+    /**
+     * Ksiazka do karty "Czytaj dalej": ostatnio otwarta, a gdy jeszcze zadnej nie bylo -
+     * ta z najdalszym postepem. Null tylko przy zupelnie pustej polce.
+     */
+    val continueBook: Book?
+        get() = lastOpenedBookId?.let { id -> allBooks.firstOrNull { it.id == id } }
+            ?: allBooks.filter { (bookProgress[it.id] ?: 0) > 0 }.maxByOrNull { bookProgress[it.id] ?: 0 }
+
+    /** Ile fiszek czeka na nauke, a ile juz opanowanych - licznik na kafelku "Slowka". */
+    val wordsLearning: Int get() = VocabularyDeck.learning(savedWords).size
+    val wordsMastered: Int get() = VocabularyDeck.mastered(savedWords).size
 }
 
 /**
@@ -81,8 +99,8 @@ class LibraryViewModel(
     fun onBookImported(picked: PickedFile): Book {
         val book = Book(
             id = "imported_${picked.persistentLocator.hashCode()}",
-            title = picked.name.ifBlank { "Ksiazka" },
-            author = "Zaimportowano",
+            title = picked.name.ifBlank { "Book" },
+            author = "Imported",
             format = BookFormat.ofFileName(picked.name),
             source = BookSource.Imported,
             locator = picked.persistentLocator
@@ -149,11 +167,11 @@ class LibraryViewModel(
             )
             _uiState.update { current ->
                 if (updated == null) {
-                    current.copy(message = "Nie udalo sie odebrac nagrody - sprobuj ponownie.")
+                    current.copy(message = "Couldn't claim the reward - try again.")
                 } else {
                     current.copy(
                         dailyGoalClaims = updated.dailyGoalClaims,
-                        message = "Odebrano +${goal.reward} zl: ${goal.title}"
+                        message = "Claimed +${goal.reward} gold: ${goal.title}"
                     )
                 }
             }
@@ -173,6 +191,40 @@ class LibraryViewModel(
             playerRepository.removeSavedWord(word.id)
             refresh()
         }
+    }
+
+    /** Zapamietuje, ktora ksiazke gracz wlasnie otworzyl - stad bierze sie karta "Czytaj dalej". */
+    fun onBookOpened(book: Book) {
+        _uiState.update { it.copy(lastOpenedBookId = book.id) }
+    }
+
+    /** Podpina okladke wgrana przez gracza do ksiazki na polce. */
+    fun setCover(book: Book, picked: PickedFile) {
+        viewModelScope.launch(Dispatchers.IO) {
+            playerRepository.setBookCover(book.id, picked.persistentLocator)
+            refresh()
+        }
+    }
+
+    /** Zdejmuje ksiazke z polki. Fiszki z niej zostaja - slowo raz nauczone jest warte tyle samo. */
+    fun removeBook(book: Book) {
+        _uiState.update { state ->
+            state.copy(importedBooks = state.importedBooks.filterNot { it.id == book.id })
+        }
+        viewModelScope.launch(Dispatchers.IO) {
+            playerRepository.removeImportedBook(book.id)
+            refresh()
+        }
+    }
+
+    /**
+     * Bajty okladki do narysowania. Osobno od [loadBytes], bo okladka jest opcjonalna i jej brak
+     * (skasowany plik, cofniete uprawnienie) nie moze wywrocic polki - zwracamy null i biblioteka
+     * rysuje zastepczy grzbiet.
+     */
+    suspend fun loadCover(book: Book): ByteArray? {
+        val locator = book.coverLocator ?: return null
+        return runCatching { loadImportedBookBytes(locator) }.getOrNull()
     }
 
     fun clearMessage() {

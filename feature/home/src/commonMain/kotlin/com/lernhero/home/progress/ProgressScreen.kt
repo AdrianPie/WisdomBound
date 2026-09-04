@@ -41,6 +41,7 @@ import com.lernhero.domain.progress.AchievementTier
 import com.lernhero.domain.progress.GameStats
 import com.lernhero.domain.quiz.QuizCategory
 import com.lernhero.home.player.PlayerViewModel
+import com.lernhero.reader.ReadingGoalsPanel
 import com.lernhero.shared.theme.FontFirst
 import com.lernhero.shared.theme.FontPixel
 
@@ -53,8 +54,10 @@ private val Good = Color(0xFF5FD08A)
 private val Bad = Color(0xFFE56A5D)
 
 private enum class ProgressTab(val label: String) {
-    Stats("Statystyki"),
-    Achievements("Osiagniecia")
+    Stats("Stats"),
+    Achievements("Achievements"),
+    /** Cele dzienne za czytanie - przeniesione tu z Czytelni, patrz [ReadingGoalsPanel]. */
+    Reading("Reading")
 }
 
 /**
@@ -91,6 +94,7 @@ fun ProgressScreen(viewModel: PlayerViewModel) {
             when (tab) {
                 ProgressTab.Stats -> StatsTab(stats = state.stats)
                 ProgressTab.Achievements -> AchievementsTab(stats = state.stats)
+                ProgressTab.Reading -> ReadingGoalsPanel()
             }
         }
     }
@@ -128,7 +132,7 @@ private fun LearningHeader(stats: GameStats) {
         ) {
             Column {
                 Text(
-                    text = "CELNOSC ${stats.accuracyPercent}%",
+                    text = "ACCURACY ${stats.accuracyPercent}%",
                     color = accent,
                     fontFamily = FontPixel(),
                     fontWeight = FontWeight.Bold,
@@ -150,7 +154,7 @@ private fun LearningHeader(stats: GameStats) {
                     fontSize = 15.sp
                 )
                 Text(
-                    text = "najdluzsza seria",
+                    text = "longest streak",
                     color = Muted,
                     fontFamily = FontFirst(),
                     fontSize = 10.sp
@@ -216,13 +220,13 @@ private fun TabRow(selected: ProgressTab, onSelect: (ProgressTab) -> Unit) {
 
 @Composable
 private fun StatsTab(stats: GameStats) {
-    Panel(title = "NAUKA") {
+    Panel(title = "LEARNING") {
         BigNumberRow(
-            left = "${stats.questionsCorrect}/${stats.questionsAnswered}" to "Poprawne pytania",
-            right = "${stats.accuracyPercent}%" to "Celnosc"
+            left = "${stats.questionsCorrect}/${stats.questionsAnswered}" to "Correct answers",
+            right = "${stats.accuracyPercent}%" to "Accuracy"
         )
-        StatLine("Bledne odpowiedzi", "${stats.questionsWrong}")
-        StatLine("Najdluzsza seria", "${stats.bestAnswerStreak}")
+        StatLine("Wrong answers", "${stats.questionsWrong}")
+        StatLine("Longest streak", "${stats.bestAnswerStreak}")
     }
 
     val categories = remember(stats) {
@@ -232,7 +236,7 @@ private fun StatsTab(stats: GameStats) {
             .sortedByDescending { (_, stat) -> stat.answered }
     }
     if (categories.isNotEmpty()) {
-        Panel(title = "CELNOSC WEDLUG KATEGORII") {
+        Panel(title = "ACCURACY BY CATEGORY") {
             categories.forEach { (category, stat) ->
                 CategoryBar(
                     label = category.label,
@@ -244,21 +248,21 @@ private fun StatsTab(stats: GameStats) {
         }
     }
 
-    Panel(title = "WALKA") {
+    Panel(title = "COMBAT") {
         BigNumberRow(
-            left = "${stats.battlesWon}" to "Wygrane walki",
-            right = "${stats.bestEndlessWave}" to "Rekord endless"
+            left = "${stats.battlesWon}" to "Battles won",
+            right = "${stats.bestEndlessWave}" to "Endless record"
         )
-        StatLine("Przegrane walki", "${stats.battlesLost}")
-        StatLine("Oczyszczone fale", "${stats.totalWavesCleared}")
-        StatLine("Pokonani bossowie", "${stats.bossesDefeated}")
-        StatLine("Ukonczone lochy", "${stats.dungeonsCleared}")
+        StatLine("Battles lost", "${stats.battlesLost}")
+        StatLine("Waves cleared", "${stats.totalWavesCleared}")
+        StatLine("Bosses defeated", "${stats.bossesDefeated}")
+        StatLine("Dungeons cleared", "${stats.dungeonsCleared}")
     }
 
-    Panel(title = "DOROBEK") {
-        StatLine("Zdobyte zloto", "${stats.goldEarned}")
-        StatLine("Wykute przedmioty", "${stats.itemsCrafted}")
-        StatLine("Przyzwani kompani", "${stats.monstersSummoned}")
+    Panel(title = "WEALTH") {
+        StatLine("Gold earned", "${stats.goldEarned}")
+        StatLine("Items forged", "${stats.itemsCrafted}")
+        StatLine("Companions summoned", "${stats.monstersSummoned}")
     }
 }
 
@@ -358,10 +362,10 @@ private fun AchievementsTab(stats: GameStats) {
     val unlocked = remember(stats) { AchievementCatalog.unlockedCount(stats) }
     val total = AchievementCatalog.all.size
 
-    Panel(title = "ODBLOKOWANE") {
+    Panel(title = "UNLOCKED") {
         BigNumberRow(
-            left = "$unlocked/$total" to "Osiagniecia",
-            right = "${(unlocked * 100 / total.coerceAtLeast(1))}%" to "Ukonczenie"
+            left = "$unlocked/$total" to "Achievements",
+            right = "${(unlocked * 100 / total.coerceAtLeast(1))}%" to "Completion"
         )
     }
 

@@ -63,6 +63,15 @@ data class Stats(private val values: Map<StatType, Float> = emptyMap()) {
     /** Odsiewa wybrane statystyki - przydatne, gdy warstwa wyzej wchlonela je juz do swoich liczb. */
     fun without(vararg stats: StatType): Stats = Stats(values - stats.toSet())
 
+    /**
+     * Wszystkie wartosci przemnozone przez [factor] - tak dziala poziom ulepszenia przedmiotu
+     * (patrz [com.lernhero.domain.craft.ItemUpgrades]). Skalujemy CALY zestaw, wiec przedmiot
+     * rosnie proporcjonalnie i nie zmienia swojego charakteru.
+     */
+    fun scaled(factor: Float): Stats =
+        if (factor == 1f || values.isEmpty()) this
+        else Stats(values.mapValues { (_, value) -> value * factor })
+
     fun isEmpty(): Boolean = values.isEmpty()
 
     fun asMap(): Map<StatType, Float> = values

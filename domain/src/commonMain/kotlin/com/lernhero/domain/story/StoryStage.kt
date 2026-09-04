@@ -6,9 +6,6 @@ import com.lernhero.domain.run.RunDifficulty
 import kotlin.math.roundToInt
 import kotlin.random.Random
 
-/** Co ile plansz w krainie stoi boss (ostatnia plansza krainy jest ZAWSZE bossem - patrz [StoryStageCatalog]). */
-const val BOSS_INTERVAL = 5
-
 /**
  * Jedna plansza kampanii, gotowa do pokazania na mapie: kim walczysz, ile ich, co dostaniesz.
  * Wszystko liczone z gory (deterministycznie z [world]+[stageInWorld]+[tier]), wiec podglad na
@@ -69,9 +66,9 @@ object StoryStageCatalog {
         )
     }
 
-    /** Ostatnia plansza krainy jest ZAWSZE bossem, a co [BOSS_INTERVAL] po drodze stoi elita. */
+    /** W krainie jest [StoryWorld.stageCount] plansz i tylko ostatnia z nich jest bossem/elita. */
     fun isBossStage(stageInWorld: Int, worldStageCount: Int): Boolean =
-        stageInWorld == worldStageCount || stageInWorld % BOSS_INTERVAL == 0
+        stageInWorld == worldStageCount
 
     /**
      * Podglad nagrody na kafelku mapy - przyblizony, nie musi co do grosza zgadzac sie z tym, co

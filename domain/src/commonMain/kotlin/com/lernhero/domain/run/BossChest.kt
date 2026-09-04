@@ -22,14 +22,14 @@ enum class ChestSlot(
      */
     val depthScaling: Float
 ) {
-    GoldSmall("60 monet", "60 zl", "💰", weight = 24f, depthScaling = 0f),
-    GoldMedium("150 monet", "150 zl", "💰", weight = 17f, depthScaling = 0f),
-    GoldLarge("400 monet", "400 zl", "💰", weight = 6f, depthScaling = 0.5f),
-    SummonTicket("Los do Summon Center", "1 los", "🎟", weight = 15f, depthScaling = 0.3f),
-    ItemCommon("Przedmiot (zwykly)", "Przedmiot", "🗡", weight = 17f, depthScaling = 0f),
-    ItemRare("Przedmiot (rzadki)", "Rzadki", "⚔", weight = 8f, depthScaling = 0.6f),
-    HeroicTicket("LOS NA HEROICZNEGO BOHATERA", "3 losy", "👑", weight = 2f, depthScaling = 1f),
-    ItemLegendary("LEGENDARNY PRZEDMIOT", "Legenda", "✨", weight = 1f, depthScaling = 1f);
+    GoldSmall("60 coins", "60 gold", "💰", weight = 24f, depthScaling = 0f),
+    GoldMedium("150 coins", "150 gold", "💰", weight = 17f, depthScaling = 0f),
+    GoldLarge("400 coins", "400 gold", "💰", weight = 6f, depthScaling = 0.5f),
+    SummonTicket("Summon Center ticket", "1 ticket", "🎟", weight = 15f, depthScaling = 0.3f),
+    ItemCommon("Item (common)", "Item", "🗡", weight = 17f, depthScaling = 0f),
+    ItemRare("Item (rare)", "Rare", "⚔", weight = 8f, depthScaling = 0.6f),
+    HeroicTicket("HEROIC COMPANION TICKET", "3 tickets", "👑", weight = 2f, depthScaling = 1f),
+    ItemLegendary("LEGENDARY ITEM", "Legendary", "✨", weight = 1f, depthScaling = 1f);
 
     val isJackpot: Boolean get() = this == HeroicTicket || this == ItemLegendary
 

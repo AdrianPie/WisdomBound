@@ -4,7 +4,7 @@ import com.lernhero.domain.quiz.QuizCategory
 import com.lernhero.domain.quiz.QuizDifficulty
 import com.lernhero.domain.quiz.QuizEntry
 
-/** Matematyka - liczby, figury i szybkie rachunki. */
+/** Math - numbers, shapes and quick mental arithmetic. */
 object MathQuestions {
 
     private fun ask(
@@ -24,149 +24,149 @@ object MathQuestions {
 
     val all: List<QuizEntry> = listOf(
 
-        /* ------------------------------- Latwe ------------------------------- */
+        /* ------------------------------- Easy ------------------------------- */
         ask(
             id = "7x8",
-            prompt = "Ile to 7 x 8?",
+            prompt = "What is 7 x 8?",
             correct = "56",
             wrong = listOf("54", "58", "64"),
             difficulty = QuizDifficulty.Easy
         ),
         ask(
             id = "trojkat_boki",
-            prompt = "Ile bokow ma trojkat?",
+            prompt = "How many sides does a triangle have?",
             correct = "3",
             wrong = listOf("4", "2", "5"),
             difficulty = QuizDifficulty.Easy
         ),
         ask(
             id = "polowa_90",
-            prompt = "Ile to polowa z 90?",
+            prompt = "What is half of 90?",
             correct = "45",
             wrong = listOf("40", "50", "35"),
             difficulty = QuizDifficulty.Easy
         ),
         ask(
             id = "kwadrans",
-            prompt = "Ile minut ma kwadrans?",
+            prompt = "How many minutes are in a quarter hour?",
             correct = "15",
             wrong = listOf("10", "20", "30"),
             difficulty = QuizDifficulty.Easy
         ),
         ask(
             id = "tuzin",
-            prompt = "Ile sztuk to tuzin?",
+            prompt = "How many items make a dozen?",
             correct = "12",
             wrong = listOf("10", "6", "20"),
             difficulty = QuizDifficulty.Easy
         ),
         ask(
             id = "9kw",
-            prompt = "Ile to 9 do kwadratu?",
+            prompt = "What is 9 squared?",
             correct = "81",
             wrong = listOf("72", "89", "91"),
             difficulty = QuizDifficulty.Easy
         ),
 
-        /* ------------------------------ Srednie ------------------------------ */
+        /* ------------------------------ Medium ------------------------------ */
         ask(
             id = "pi",
-            prompt = "Jaka wartosc ma w przyblizeniu liczba pi?",
-            correct = "3,14",
-            wrong = listOf("3,41", "2,71", "3,04"),
+            prompt = "What is the approximate value of pi?",
+            correct = "3.14",
+            wrong = listOf("3.41", "2.71", "3.04"),
             difficulty = QuizDifficulty.Medium
         ),
         ask(
             id = "liczba_pierwsza",
-            prompt = "Ktora z tych liczb jest pierwsza?",
+            prompt = "Which of these numbers is prime?",
             correct = "17",
             wrong = listOf("15", "21", "27"),
             difficulty = QuizDifficulty.Medium
         ),
         ask(
             id = "kat_prosty",
-            prompt = "Ile stopni ma kat prosty?",
+            prompt = "How many degrees is a right angle?",
             correct = "90",
             wrong = listOf("45", "180", "60"),
             difficulty = QuizDifficulty.Medium
         ),
         ask(
             id = "procent",
-            prompt = "Ile to 20% ze 150?",
+            prompt = "What is 20% of 150?",
             correct = "30",
             wrong = listOf("25", "35", "20"),
             difficulty = QuizDifficulty.Medium
         ),
         ask(
             id = "szesc_szescian",
-            prompt = "Ile scian ma szescian?",
+            prompt = "How many faces does a cube have?",
             correct = "6",
             wrong = listOf("8", "4", "12"),
             difficulty = QuizDifficulty.Medium
         ),
         ask(
             id = "rzym_l",
-            prompt = "Jaka liczbe oznacza rzymskie L?",
+            prompt = "What number does the Roman numeral L represent?",
             correct = "50",
             wrong = listOf("100", "40", "500"),
             difficulty = QuizDifficulty.Medium
         ),
 
-        /* ------------------------------ Trudne ------------------------------- */
+        /* ------------------------------ Hard ------------------------------- */
         ask(
             id = "silnia_5",
-            prompt = "Ile wynosi 5! (5 silnia)?",
+            prompt = "What is 5! (5 factorial)?",
             correct = "120",
             wrong = listOf("100", "60", "150"),
             difficulty = QuizDifficulty.Hard
         ),
         ask(
             id = "pitagoras",
-            prompt = "Trojkat o bokach 3 i 4 ma przeciwprostokatna o dlugosci...",
+            prompt = "A triangle with legs of 3 and 4 has a hypotenuse of...",
             correct = "5",
-            wrong = listOf("6", "7", "4,5"),
+            wrong = listOf("6", "7", "4.5"),
             difficulty = QuizDifficulty.Hard
         ),
         ask(
             id = "suma_katow",
-            prompt = "Ile wynosi suma katow w trojkacie?",
-            correct = "180 stopni",
-            wrong = listOf("360 stopni", "90 stopni", "270 stopni"),
+            prompt = "What is the sum of angles in a triangle?",
+            correct = "180 degrees",
+            wrong = listOf("360 degrees", "90 degrees", "270 degrees"),
             difficulty = QuizDifficulty.Hard
         ),
         ask(
             id = "fibonacci",
-            prompt = "Jaka liczba jest nastepna w ciagu 1, 1, 2, 3, 5, 8...?",
+            prompt = "What number comes next in the sequence 1, 1, 2, 3, 5, 8...?",
             correct = "13",
             wrong = listOf("11", "12", "16"),
             difficulty = QuizDifficulty.Hard
         ),
         ask(
             id = "log_100",
-            prompt = "Ile wynosi logarytm dziesietny ze 100?",
+            prompt = "What is the base-10 logarithm of 100?",
             correct = "2",
             wrong = listOf("10", "1", "100"),
             difficulty = QuizDifficulty.Hard
         ),
 
-        /* ----------------------------- Eksperckie ---------------------------- */
+        /* ----------------------------- Expert ---------------------------- */
         ask(
             id = "liczba_e",
-            prompt = "Jaka wartosc ma w przyblizeniu liczba e?",
-            correct = "2,72",
-            wrong = listOf("3,14", "1,62", "2,24"),
+            prompt = "What is the approximate value of e?",
+            correct = "2.72",
+            wrong = listOf("3.14", "1.62", "2.24"),
             difficulty = QuizDifficulty.Expert
         ),
         ask(
             id = "liczby_doskonale",
-            prompt = "Ktora z tych liczb jest doskonala (rowna sumie swoich dzielnikow)?",
+            prompt = "Which of these numbers is perfect (equal to the sum of its divisors)?",
             correct = "28",
             wrong = listOf("24", "30", "36"),
             difficulty = QuizDifficulty.Expert
         ),
         ask(
             id = "duzy_pierwszy",
-            prompt = "Ktora z tych liczb NIE jest pierwsza?",
+            prompt = "Which of these numbers is NOT prime?",
             correct = "91",
             wrong = listOf("89", "97", "83"),
             difficulty = QuizDifficulty.Expert

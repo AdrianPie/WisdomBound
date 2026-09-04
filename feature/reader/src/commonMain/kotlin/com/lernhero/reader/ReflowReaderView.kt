@@ -198,7 +198,7 @@ private fun SavedToast(onDismissed: () -> Unit) {
         onDismissed()
     }
     Text(
-        text = "Zapisano do fiszek",
+        text = "Saved to flashcards",
         color = Color(0xFF120E0A),
         fontFamily = FontFirst(),
         fontWeight = FontWeight.Bold,
@@ -297,7 +297,7 @@ private fun ReaderSettingsPanel(
     ) {
         Row(verticalAlignment = Alignment.CenterVertically) {
             Text(
-                text = "Rozmiar tekstu",
+                text = "Text Size",
                 color = Color(0xFF9D8B6A),
                 fontFamily = FontFirst(),
                 fontSize = 11.sp,
@@ -315,13 +315,43 @@ private fun ReaderSettingsPanel(
             StepButton("A+") { onSettingsChanged(settings.withFontSize(settings.fontSizeSp + 1)) }
         }
 
+        // Interlinia. Wczesniej byla zaszyta na sztywno i za ciasna - ogonki liter z jednej linii
+        // niemal dotykaly liter z nastepnej, a gracz nie mial jak tego poprawic.
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Text(
+                text = "Line Spacing",
+                color = Color(0xFF9D8B6A),
+                fontFamily = FontFirst(),
+                fontSize = 11.sp,
+                modifier = Modifier.weight(1f)
+            )
+            StepButton("−") {
+                onSettingsChanged(
+                    settings.withLineHeight(settings.effectiveLineHeight - ReaderSettings.LINE_HEIGHT_STEP)
+                )
+            }
+            Text(
+                text = settings.effectiveLineHeight.oneDecimal(),
+                color = Color(0xFFFFD100),
+                fontFamily = FontFirst(),
+                fontSize = 12.sp,
+                textAlign = TextAlign.Center,
+                modifier = Modifier.width(34.dp)
+            )
+            StepButton("+") {
+                onSettingsChanged(
+                    settings.withLineHeight(settings.effectiveLineHeight + ReaderSettings.LINE_HEIGHT_STEP)
+                )
+            }
+        }
+
         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
             ReaderTheme.entries.forEach { theme ->
                 ChoiceChip(
                     label = when (theme) {
-                        ReaderTheme.Light -> "Jasny"
+                        ReaderTheme.Light -> "Light"
                         ReaderTheme.Sepia -> "Sepia"
-                        ReaderTheme.Dark -> "Ciemny"
+                        ReaderTheme.Dark -> "Dark"
                     },
                     selected = settings.theme == theme,
                     onClick = { onSettingsChanged(settings.copy(theme = theme)) }
@@ -329,7 +359,7 @@ private fun ReaderSettingsPanel(
             }
             Spacer(Modifier.weight(1f))
             ChoiceChip(
-                label = "Justowanie",
+                label = "Justify",
                 selected = settings.justify,
                 onClick = { onSettingsChanged(settings.copy(justify = !settings.justify)) }
             )
@@ -372,3 +402,9 @@ private fun ChoiceChip(label: String, selected: Boolean, onClick: () -> Unit) {
 }
 
 private fun Int.asClock(): String = "${this / 60}:${(this % 60).toString().padStart(2, '0')}"
+
+/** "1.8" - bez toString(Locale) i bez String.format, ktorych nie ma w common. */
+private fun Float.oneDecimal(): String {
+    val tenths = kotlin.math.round(this * 10).toInt()
+    return "${tenths / 10}.${tenths % 10}"
+}

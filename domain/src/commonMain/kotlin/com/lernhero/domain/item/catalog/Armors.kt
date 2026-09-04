@@ -19,8 +19,8 @@ object Armors {
 
     val PLATE_HELM = Item(
         id = "plate_helm",
-        name = "Helm plytowy",
-        description = "Ciezki helm. Pierwszy cios w walce odbija sie od niego bez szkody.",
+        name = "Plate Helm",
+        description = "A heavy helm. The first hit in battle bounces off it harmlessly.",
         slot = ItemSlot.Head,
         rarity = Rarity.Uncommon,
         iconKey = "plate_head",
@@ -36,8 +36,8 @@ object Armors {
 
     val PLATE_GAUNTLETS = Item(
         id = "plate_gauntlets",
-        name = "Rekawice plytowe",
-        description = "Stalowe rekawice, ktore odbieraja wrogowi zycie i oddaja je tobie.",
+        name = "Plate Gauntlets",
+        description = "Steel gauntlets that drain the enemy's life and give it to you.",
         slot = ItemSlot.Hands,
         rarity = Rarity.Rare,
         iconKey = "plate_hands",
@@ -53,8 +53,8 @@ object Armors {
 
     val PLATE_LEGS = Item(
         id = "plate_legs",
-        name = "Nagolenniki plytowe",
-        description = "Solidne ochraniacze nog. Wiecej zdrowia, mniej ryzyka.",
+        name = "Plate Greaves",
+        description = "Sturdy leg guards. More health, less risk.",
         slot = ItemSlot.Legs,
         rarity = Rarity.Common,
         iconKey = "plate_legs",
@@ -67,8 +67,8 @@ object Armors {
 
     val PLATE_BOOTS = Item(
         id = "plate_boots",
-        name = "Buty plytowe",
-        description = "Wzmocnione buty bojowe. Ruszasz do walki pierwszy.",
+        name = "Plate Boots",
+        description = "Reinforced combat boots. You strike first in battle.",
         slot = ItemSlot.Feet,
         rarity = Rarity.Common,
         iconKey = "plate_feet",
@@ -81,8 +81,8 @@ object Armors {
 
     val AEGIS_SHIELD = Item(
         id = "aegis_shield",
-        name = "Tarcza Egidy",
-        description = "Odbija polowe otrzymanych obrazen, a gdy jest zle - stawia bariere.",
+        name = "Aegis Shield",
+        description = "Reflects half of damage taken, and raises a barrier when things get dire.",
         slot = ItemSlot.OffHand,
         rarity = Rarity.Epic,
         iconKey = "shield",

@@ -7,10 +7,8 @@ import com.lernhero.domain.combat.StatType
 import com.lernhero.domain.combat.Stats
 import com.lernhero.domain.combat.Team
 import com.lernhero.domain.combat.engine.BattleEngine
+import com.lernhero.domain.combat.SpellChoice
 import com.lernhero.domain.item.Loadout
-import com.lernhero.domain.spell.toChoice
-import com.lernhero.domain.spell.SpellCatalog
-import com.lernhero.domain.spell.AbilityLoadout
 import kotlin.random.Random
 
 /**
@@ -135,8 +133,8 @@ class BattlePlaybackEngine(
         // Inaczej ten sam helm dodawalby zdrowie dwa razy.
         itemStats = loadout.stats.without(StatType.MaxHp, StatType.Attack) + spellPowerStats + bonusStats,
         effects = loadout.effects,
-        // Pasek zdolnosci: zaklecia z ich procentami. Silnik losuje z tego co ture.
-        spells = ability.toChoices { id -> SpellCatalog.byId(id)?.toChoice() }
+        // Zaklecia z drzewka talentow, kazde z wlasna szansa. Silnik losuje z tego co ture.
+        spells = spells
     )
 }
 
@@ -152,8 +150,8 @@ data class BattleFighter(
     val maxHp: Int,
     val attack: Int,
     val loadout: Loadout = Loadout.Empty,
-    /** Pasek zdolnosci wojownika. Pusty = zawsze zwykly atak. */
-    val ability: AbilityLoadout = AbilityLoadout(),
+    /** Zaklecia wojownika z ich szansami. Pusto = zawsze zwykly atak. */
+    val spells: List<SpellChoice> = emptyList(),
     /** Mnoznik sily zaklec ponad baze (od przedmiotow/perkow). */
     val spellPower: Float = 0f,
     /** Dodatkowe surowe statystyki spoza ekwipunku - np. boosty z quizu przed walka. */

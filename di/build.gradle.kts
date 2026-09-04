@@ -49,6 +49,7 @@ kotlin {
 
             implementation(project(path = ":feature:auth"))
             implementation(project(path = ":domain"))
+            implementation(project(path = ":shared"))
             implementation(project(path = ":data"))
             implementation(project(path = ":feature:game"))
             implementation(project(path = ":feature:home"))

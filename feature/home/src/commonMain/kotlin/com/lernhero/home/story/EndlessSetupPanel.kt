@@ -24,7 +24,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.lernhero.domain.quiz.QuizCategory
 import com.lernhero.domain.quiz.QuizDifficulty
-import com.lernhero.domain.quiz.WordQuizBank
+import com.lernhero.domain.quiz.custom.CustomDeck
+import com.lernhero.home.quiz.CustomSourcePanel
+import com.lernhero.shared.i18n.AppStrings
+import com.lernhero.shared.i18n.strings
 import com.lernhero.shared.theme.FontFirst
 import com.lernhero.shared.theme.FontPixel
 
@@ -37,10 +40,12 @@ private val Muted = Color(0xFF9D8B6A)
 private val GoldText = Color(0xFFFFD34D)
 private val EndlessAccent = Color(0xFFE0654F)
 
-/** Zrodlo pytan do endless: wbudowany bank albo (wkrotce) wlasna talia gracza. */
-enum class QuestionSource(val label: String) {
-    Builtin("Bank pytan"),
-    Custom("Wlasne")
+/** Zrodlo pytan do endless: wbudowany bank albo wlasny material gracza (fiszki / talie). */
+enum class QuestionSource(private val labelOf: (AppStrings) -> String) {
+    Builtin({ it.endlessSourceBuiltin }),
+    Custom({ it.endlessSourceCustom });
+
+    fun label(strings: AppStrings): String = labelOf(strings)
 }
 
 /**
@@ -48,8 +53,8 @@ enum class QuestionSource(val label: String) {
  * ktorego endless istnieje jako osobny tryb - nie chodzi o "fale bez konca", tylko o to, ze gracz
  * moze przyjsc TRENOWAC konkretny temat na konkretnym poziomie.
  *
- * Zakladka [QuestionSource.Custom] jest na razie pusta i mowi to wprost - to miejsce pod wgrywanie
- * wlasnych pytan i generowanie talii przez AI.
+ * Zakladka [QuestionSource.Custom] oddaje ten sam wybor dla wlasnego materialu: fiszki z czytelni
+ * albo talia napisana (lub wygenerowana) w edytorze - patrz [CustomSourcePanel].
  */
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
@@ -59,10 +64,21 @@ fun EndlessSetupPanel(
     category: QuizCategory?,
     /** Ile roznych, juz przetlumaczonych slowek gracz ma zapisanych - steruje zakladka "Wlasne". */
     eligibleWordCount: Int,
+    /** Wlasne talie gracza - druga (obok fiszek) postac wlasnego materialu. */
+    decks: List<CustomDeck>,
+    decksLoading: Boolean,
+    /** Null = w zakladce "Wlasne" wybrane sa fiszki z czytelni, nie talia. */
+    selectedDeckId: String?,
     onSourceChange: (QuestionSource) -> Unit,
     onDifficultyChange: (QuizDifficulty?) -> Unit,
     onCategoryChange: (QuizCategory?) -> Unit,
+    onSelectWords: () -> Unit,
+    onSelectDeck: (String) -> Unit,
+    onCreateDeck: (withAi: Boolean) -> Unit,
+    onEditDeck: (String) -> Unit,
     onStart: () -> Unit,
+    /** Debug: rozpoczyna walke z bossem od razu, z pominieciem fal. */
+    onStartBossTest: () -> Unit = {},
     modifier: Modifier = Modifier
 ) {
     Column(
@@ -78,14 +94,14 @@ fun EndlessSetupPanel(
 
         when (source) {
             QuestionSource.Builtin -> {
-                SectionLabel("Poziom pytan")
+                SectionLabel(strings.endlessLevelLabel)
                 FlowRow(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.spacedBy(6.dp),
                     verticalArrangement = Arrangement.spacedBy(6.dp)
                 ) {
                     Chip(
-                        label = "Rosnacy",
+                        label = strings.endlessLevelRising,
                         selected = difficulty == null,
                         onClick = { onDifficultyChange(null) }
                     )
@@ -99,28 +115,28 @@ fun EndlessSetupPanel(
                 }
                 Text(
                     text = if (difficulty == null) {
-                        "Trudnosc rosnie z kazda fala - klasyczny sprawdzian wytrzymalosci."
+                        strings.endlessLevelRisingHint
                     } else {
-                        "Wszystkie pytania na poziomie \"${difficulty.label}\" - trening jednego progu."
+                        strings.endlessLevelFixedHint(difficulty.label)
                     },
                     color = Muted,
                     fontFamily = FontFirst(),
                     fontSize = 10.sp
                 )
 
-                SectionLabel("Kategoria")
+                SectionLabel(strings.endlessCategoryLabel)
                 FlowRow(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.spacedBy(6.dp),
                     verticalArrangement = Arrangement.spacedBy(6.dp)
                 ) {
                     Chip(
-                        label = "Losowa",
+                        label = strings.endlessCategoryRandom,
                         selected = category == null,
                         onClick = { onCategoryChange(null) }
                     )
-                    // Slowka nie sa w banku wbudowanym - maja wlasna zakladke zrodla, nie ta liste.
-                    QuizCategory.entries.filter { it != QuizCategory.Vocabulary }.forEach { entry ->
+                    // Slowka i wlasne talie nie sa w banku wbudowanym - maja wlasna zakladke zrodla.
+                    QuizCategory.builtin.forEach { entry ->
                         Chip(
                             label = entry.label,
                             selected = category == entry,
@@ -130,10 +146,33 @@ fun EndlessSetupPanel(
                 }
 
                 StartButton(onStart = onStart)
+
+                Text(
+                    text = strings.endlessBossTest,
+                    color = Ink,
+                    fontFamily = FontPixel(),
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 11.sp,
+                    textAlign = TextAlign.Center,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .clip(RoundedCornerShape(10.dp))
+                        .background(GoldText)
+                        .border(2.dp, Color(0xFFFFE9A8), RoundedCornerShape(10.dp))
+                        .clickable(onClick = onStartBossTest)
+                        .padding(vertical = 10.dp)
+                )
             }
 
-            QuestionSource.Custom -> CustomWordsPanel(
+            QuestionSource.Custom -> CustomSourcePanel(
                 eligibleWordCount = eligibleWordCount,
+                decks = decks,
+                loading = decksLoading,
+                selectedDeckId = selectedDeckId,
+                onSelectWords = onSelectWords,
+                onSelectDeck = onSelectDeck,
+                onCreateDeck = onCreateDeck,
+                onEditDeck = onEditDeck,
                 onStart = onStart
             )
         }
@@ -148,6 +187,7 @@ private fun SourceTabs(selected: QuestionSource, onSelect: (QuestionSource) -> U
     ) {
         QuestionSource.entries.forEach { entry ->
             val isSelected = entry == selected
+            val label = entry.label(strings)
             Box(
                 modifier = Modifier
                     .weight(1f)
@@ -163,7 +203,7 @@ private fun SourceTabs(selected: QuestionSource, onSelect: (QuestionSource) -> U
                 contentAlignment = Alignment.Center
             ) {
                 Text(
-                    text = entry.label,
+                    text = label,
                     color = if (isSelected) GoldText else Muted,
                     fontFamily = FontFirst(),
                     fontWeight = FontWeight.Bold,
@@ -209,7 +249,7 @@ private fun Chip(label: String, selected: Boolean, onClick: () -> Unit) {
 @Composable
 private fun StartButton(onStart: () -> Unit) {
     Text(
-        text = "ROZPOCZNIJ",
+        text = strings.endlessStart,
         color = Color.White,
         fontFamily = FontPixel(),
         fontWeight = FontWeight.Bold,
@@ -223,64 +263,4 @@ private fun StartButton(onStart: () -> Unit) {
             .clickable(onClick = onStart)
             .padding(vertical = 14.dp)
     )
-}
-
-/**
- * Endless na fiszkach zapisanych w czytniku - gracz pyta sam siebie o slowka, ktore podkreslil
- * podczas czytania. Ponizej [WordQuizBank.MIN_WORDS] przyciski startu nie dzialaja, bo quiz
- * z jedna czy dwiema fiszkami nie ma z czego zbudowac czterech odpowiedzi do wyboru.
- */
-@Composable
-private fun CustomWordsPanel(eligibleWordCount: Int, onStart: () -> Unit) {
-    val ready = eligibleWordCount >= WordQuizBank.MIN_WORDS
-
-    Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clip(RoundedCornerShape(10.dp))
-            .background(Ink)
-            .border(1.dp, FrameDim.copy(alpha = 0.6f), RoundedCornerShape(10.dp))
-            .padding(16.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(10.dp)
-    ) {
-        Text(text = "🔖", fontSize = 30.sp)
-        Text(
-            text = "SLOWKA Z CZYTELNI",
-            color = GoldText,
-            fontFamily = FontPixel(),
-            fontWeight = FontWeight.Bold,
-            fontSize = 13.sp
-        )
-        Text(
-            text = if (ready) {
-                "Masz $eligibleWordCount przetlumaczonych slowek. Kazda runda pyta o jedno z nich - " +
-                    "wybierz poprawne tlumaczenie sposrod czterech."
-            } else {
-                "Zapisz jeszcze ${WordQuizBank.MIN_WORDS - eligibleWordCount} slowko/a w czytniku " +
-                    "(dotknij slowa, przetlumacz, kliknij zakladke) - masz $eligibleWordCount " +
-                    "z ${WordQuizBank.MIN_WORDS} potrzebnych."
-            },
-            color = Muted,
-            fontFamily = FontFirst(),
-            fontSize = 11.sp,
-            textAlign = TextAlign.Center
-        )
-
-        if (ready) {
-            StartButton(onStart = onStart)
-        } else {
-            Text(
-                text = "ZA MALO SLOWEK",
-                color = Muted,
-                fontFamily = FontPixel(),
-                fontWeight = FontWeight.Bold,
-                fontSize = 10.sp,
-                modifier = Modifier
-                    .clip(RoundedCornerShape(50))
-                    .background(Color(0xFF241E18))
-                    .padding(horizontal = 14.dp, vertical = 6.dp)
-            )
-        }
-    }
 }

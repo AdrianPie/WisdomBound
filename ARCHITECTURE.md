@@ -63,6 +63,15 @@ monster/         karty kompanow i cala ekonomia kolekcji
   EnemySpecies       pool gatunkow/archetypow dla wrogow fali - dzielony przez BattleViewModel
                      i podglad przeciwnikow na mapie kampanii
 quiz/            bank pytan; bank/ to tresc podzielona na kategorie
+  custom/            WLASNE talie gracza - pytania pisane recznie albo wygenerowane przez model.
+                     CustomQuestion jest jednym PLASKIM typem z polem `type` (a nie hierarchia
+                     czterech klas), bo leci prosto do Firestore i przez jeden formularz w UI.
+                     Walidacja (CustomQuestion.issues) jest jedynym miejscem, ktore decyduje,
+                     czy pytanie wejdzie do walki - uzywa jej i edytor, i parser odpowiedzi AI
+  ai/                generowanie talii przez model. QuizGenerator to SZEW (jak TranslationSource
+                     w czytniku): dzis Stub, prawdziwy silnik to jedna klasa w :data pozniej.
+                     Cala trudna czesc - QuizGenerationPrompt i QuizGenerationParser - dziala
+                     bez sieci i jest przetestowana
 story/           kampania: StoryWorld (kraina) + StoryStage (jedna plansza, liczona na zadanie
                  z globalnego numeru + tieru, nie trzymana w pamieci). Zero chodzenia - gracz
                  klika plansze, tak jak w Idle Heroes. Boss na ostatniej planszy kazdej krainy
@@ -98,7 +107,8 @@ run/             stan pojedynczej walki/zejscia
 ```
 
 **Dodajesz miecz?** `item/catalog/Weapons.kt`. **Nowa mechanika?** `combat/effects/`.
-**Nowe pytanie?** `quiz/bank/`. Silnika nie dotykasz w zadnym z tych przypadkow - to jest caly
+**Nowe pytanie?** `quiz/bank/`. **Podpinasz model AI?** implementacja `QuizGenerator` w `:data`
+i jedna linijka w `:di`. Silnika nie dotykasz w zadnym z tych przypadkow - to jest caly
 sens tego podzialu.
 
 ## :feature:game
@@ -134,14 +144,19 @@ team/         zakladka "Walcz" - sklad druzyny + przelacznik KAMPANIA/ENDLESS + 
 story/        czesci kampanii uzywane W ZAKLADCE "Walcz" (nie osobny ekran!):
                 CampaignPanel      panel pod druzyna - tlo krainy z przeciwnikami, pasek nagrod
                                    idle z GET, przyciski MAPA/BATTLE/LOOT, rzad plansz na dole
-                EndlessSetupPanel  konfiguracja endless: poziom pytan + kategoria + zakladka
-                                   "Wlasne" (placeholder pod wlasne talie / generowanie AI)
+                EndlessSetupPanel  konfiguracja endless: poziom pytan + kategoria, a w zakladce
+                                   "Wlasne" wybor wlasnego materialu (patrz quiz/ nizej)
                 StageLootDialog    podglad puli lupu planszy (przycisk LOOT)
                 BossChestOverlay   kolo fortuny po pokonaniu bossa
                 WorldMapScreen     JEDYNY osobny ekran - wybor krainy i tieru trudnosci (MAPA)
               Zastapilo dawny DungeonCrawlScreen (mapa-graf wezlow + spacer korytarzem) - razem
               z nim zniknely zdarzenia korytarzowe i wedrowny handlarz (byly przywiazane do
               "kroku w korytarzu", ktorego juz nie ma)
+quiz/         wlasne talie pytan do endless: panel wyboru zrodla w zakladce "Walcz"
+              (CustomSourcePanel - fiszki z czytelni ALBO talia), edytor talii na pelnym ekranie
+              (DeckEditorScreen + QuestionEditorDialog) i CustomQuizViewModel. Talie zyja w
+              podkolekcji `player/{uid}/decks`, nie w dokumencie gracza - stad wlasny ViewModel
+              zamiast doklejania sie do PlayerViewModel
 progress/     zakladka Postep: poziom bohatera i rozdawanie punktow, statystyki nauki
               (celnosc per kategoria), osiagniecia
 shop/         sklep za PRAWDZIWA walute (klejnoty). Sprzetu sie tu NIE kupuje - przedmioty
@@ -207,9 +222,11 @@ kod kraju - a warstwa UI zamienia te teksty na zasoby w **jednym pliku**:
 
 ## Testy
 
-`:domain` jest testowany, bo tam mieszka logika. 65 testow pilnuje generatora mapy, silnika walki
+`:domain` jest testowany, bo tam mieszka logika. 90 testow pilnuje generatora mapy, silnika walki
 (efekty naprawde dzialaja w symulacji), migracji ekwipunku, systemu umiejetnosci, banku pytan,
-zdarzen w lochu, kola fortuny, krzywej awansu, statystyk konta i kosztow wytwarzania.
+zdarzen w lochu, kola fortuny, krzywej awansu, statystyk konta, kosztow wytwarzania, walidacji
+i losowania wlasnych talii oraz parsera odpowiedzi modelu (ten ostatni to jedyny sposob, zeby
+generowanie AI dalo sie sprawdzic, zanim jakikolwiek model zostanie podpiety).
 
 Warstwa UI nie ma testow - i to jest swiadome. Skoro walka rozstrzyga sie w domenie, to test
 domeny sprawdza mechanike, a ekran zostaje tylko odtwarzaczem.

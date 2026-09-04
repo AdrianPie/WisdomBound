@@ -4,7 +4,7 @@ import com.lernhero.domain.quiz.QuizCategory
 import com.lernhero.domain.quiz.QuizDifficulty
 import com.lernhero.domain.quiz.QuizEntry
 
-/** "Jaki to pierwiastek?" - symbole z ukladu okresowego i podstawy chemii. */
+/** "What element is this?" - periodic table symbols and chemistry basics. */
 object ElementQuestions {
 
     private fun ask(
@@ -22,7 +22,7 @@ object ElementQuestions {
         difficulty = difficulty
     )
 
-    /** Skrot na najczestszy typ pytania: "Jaki pierwiastek ma symbol X?". */
+    /** Shorthand for the most common question type: "Which element has the symbol X?". */
     private fun symbol(
         symbol: String,
         correct: String,
@@ -30,7 +30,7 @@ object ElementQuestions {
         difficulty: QuizDifficulty
     ) = ask(
         id = "symbol_${symbol.lowercase()}",
-        prompt = "Jaki pierwiastek kryje sie pod symbolem $symbol?",
+        prompt = "Which element hides behind the symbol $symbol?",
         correct = correct,
         wrong = wrong,
         difficulty = difficulty
@@ -38,115 +38,115 @@ object ElementQuestions {
 
     val all: List<QuizEntry> = listOf(
 
-        /* ------------------------------- Latwe ------------------------------- */
-        symbol("O", "Tlen", listOf("Zloto", "Osm", "Olow"), QuizDifficulty.Easy),
-        symbol("H", "Wodor", listOf("Hel", "Rtec", "Wapn"), QuizDifficulty.Easy),
-        symbol("Fe", "Zelazo", listOf("Fluor", "Fosfor", "Frans"), QuizDifficulty.Easy),
-        symbol("Au", "Zloto", listOf("Srebro", "Miedz", "Glin"), QuizDifficulty.Easy),
-        symbol("C", "Wegiel", listOf("Wapn", "Chlor", "Cez"), QuizDifficulty.Easy),
+        /* ------------------------------- Easy ------------------------------- */
+        symbol("O", "Oxygen", listOf("Gold", "Osmium", "Lead"), QuizDifficulty.Easy),
+        symbol("H", "Hydrogen", listOf("Helium", "Mercury", "Calcium"), QuizDifficulty.Easy),
+        symbol("Fe", "Iron", listOf("Fluorine", "Phosphorus", "Francium"), QuizDifficulty.Easy),
+        symbol("Au", "Gold", listOf("Silver", "Copper", "Aluminum"), QuizDifficulty.Easy),
+        symbol("C", "Carbon", listOf("Calcium", "Chlorine", "Cesium"), QuizDifficulty.Easy),
         ask(
             id = "woda",
-            prompt = "Jaki jest wzor chemiczny wody?",
+            prompt = "What is the chemical formula of water?",
             correct = "H2O",
             wrong = listOf("CO2", "O2", "H2O2"),
             difficulty = QuizDifficulty.Easy
         ),
         ask(
             id = "powietrze",
-            prompt = "Ktorego gazu jest najwiecej w powietrzu?",
-            correct = "Azotu",
-            wrong = listOf("Tlenu", "Dwutlenku wegla", "Argonu"),
+            prompt = "Which gas is most abundant in air?",
+            correct = "Nitrogen",
+            wrong = listOf("Oxygen", "Carbon dioxide", "Argon"),
             difficulty = QuizDifficulty.Easy
         ),
         ask(
             id = "sol",
-            prompt = "Z jakich pierwiastkow sklada sie sol kuchenna?",
-            correct = "Sod i chlor",
-            wrong = listOf("Potas i chlor", "Sod i siarka", "Wapn i chlor"),
+            prompt = "Which elements make up table salt?",
+            correct = "Sodium and chlorine",
+            wrong = listOf("Potassium and chlorine", "Sodium and sulfur", "Calcium and chlorine"),
             difficulty = QuizDifficulty.Easy
         ),
 
-        /* ------------------------------ Srednie ------------------------------ */
-        symbol("Ag", "Srebro", listOf("Zloto", "Argon", "Glin"), QuizDifficulty.Medium),
-        symbol("Na", "Sod", listOf("Azot", "Nikiel", "Neon"), QuizDifficulty.Medium),
-        symbol("K", "Potas", listOf("Krypton", "Wapn", "Kobalt"), QuizDifficulty.Medium),
-        symbol("Cu", "Miedz", listOf("Kobalt", "Chrom", "Cez"), QuizDifficulty.Medium),
-        symbol("Pb", "Olow", listOf("Platyna", "Pallad", "Polon"), QuizDifficulty.Medium),
-        symbol("N", "Azot", listOf("Neon", "Nikiel", "Sod"), QuizDifficulty.Medium),
-        symbol("S", "Siarka", listOf("Sod", "Selen", "Krzem"), QuizDifficulty.Medium),
+        /* ------------------------------ Medium ------------------------------ */
+        symbol("Ag", "Silver", listOf("Gold", "Argon", "Aluminum"), QuizDifficulty.Medium),
+        symbol("Na", "Sodium", listOf("Nitrogen", "Nickel", "Neon"), QuizDifficulty.Medium),
+        symbol("K", "Potassium", listOf("Krypton", "Calcium", "Cobalt"), QuizDifficulty.Medium),
+        symbol("Cu", "Copper", listOf("Cobalt", "Chromium", "Cesium"), QuizDifficulty.Medium),
+        symbol("Pb", "Lead", listOf("Platinum", "Palladium", "Polonium"), QuizDifficulty.Medium),
+        symbol("N", "Nitrogen", listOf("Neon", "Nickel", "Sodium"), QuizDifficulty.Medium),
+        symbol("S", "Sulfur", listOf("Sodium", "Selenium", "Silicon"), QuizDifficulty.Medium),
         ask(
             id = "liczba_1",
-            prompt = "Ktory pierwiastek ma liczbe atomowa 1?",
-            correct = "Wodor",
-            wrong = listOf("Hel", "Wegiel", "Tlen"),
+            prompt = "Which element has atomic number 1?",
+            correct = "Hydrogen",
+            wrong = listOf("Helium", "Carbon", "Oxygen"),
             difficulty = QuizDifficulty.Medium
         ),
         ask(
             id = "co2",
-            prompt = "Jaki gaz wydychamy z pluc po oddychaniu komorkowym?",
-            correct = "Dwutlenek wegla",
-            wrong = listOf("Tlen", "Azot", "Metan"),
+            prompt = "Which gas do we exhale from the lungs after cellular respiration?",
+            correct = "Carbon dioxide",
+            wrong = listOf("Oxygen", "Nitrogen", "Methane"),
             difficulty = QuizDifficulty.Medium
         ),
 
-        /* ------------------------------ Trudne ------------------------------- */
-        symbol("Hg", "Rtec", listOf("Hel", "Hafn", "Holm"), QuizDifficulty.Hard),
-        symbol("Sn", "Cyna", listOf("Skand", "Selen", "Stront"), QuizDifficulty.Hard),
-        symbol("Si", "Krzem", listOf("Siarka", "Srebro", "Sod"), QuizDifficulty.Hard),
-        symbol("Zn", "Cynk", listOf("Cyrkon", "Cyna", "Cez"), QuizDifficulty.Hard),
-        symbol("W", "Wolfram", listOf("Wanad", "Wodor", "Wapn"), QuizDifficulty.Hard),
+        /* ------------------------------ Hard ------------------------------- */
+        symbol("Hg", "Mercury", listOf("Helium", "Hafnium", "Holmium"), QuizDifficulty.Hard),
+        symbol("Sn", "Tin", listOf("Scandium", "Selenium", "Strontium"), QuizDifficulty.Hard),
+        symbol("Si", "Silicon", listOf("Sulfur", "Silver", "Sodium"), QuizDifficulty.Hard),
+        symbol("Zn", "Zinc", listOf("Zirconium", "Tin", "Cesium"), QuizDifficulty.Hard),
+        symbol("W", "Tungsten", listOf("Vanadium", "Hydrogen", "Calcium"), QuizDifficulty.Hard),
         ask(
             id = "najczestszy",
-            prompt = "Ktory pierwiastek jest najczestszy we Wszechswiecie?",
-            correct = "Wodor",
-            wrong = listOf("Hel", "Tlen", "Wegiel"),
+            prompt = "Which element is the most abundant in the Universe?",
+            correct = "Hydrogen",
+            wrong = listOf("Helium", "Oxygen", "Carbon"),
             difficulty = QuizDifficulty.Hard
         ),
         ask(
             id = "ilosc",
-            prompt = "Ile pierwiastkow liczy dzisiejszy uklad okresowy?",
+            prompt = "How many elements does today's periodic table have?",
             correct = "118",
             wrong = listOf("108", "92", "120"),
             difficulty = QuizDifficulty.Hard
         ),
         ask(
             id = "cieklym",
-            prompt = "Ktory metal jest w temperaturze pokojowej ciecza?",
-            correct = "Rtec",
-            wrong = listOf("Olow", "Cyna", "Gal"),
+            prompt = "Which metal is liquid at room temperature?",
+            correct = "Mercury",
+            wrong = listOf("Lead", "Tin", "Gallium"),
             difficulty = QuizDifficulty.Hard
         ),
 
-        /* ----------------------------- Eksperckie ---------------------------- */
-        symbol("Sb", "Antymon", listOf("Stront", "Srebro", "Selen"), QuizDifficulty.Expert),
-        symbol("Kr", "Krypton", listOf("Chrom", "Kobalt", "Potas"), QuizDifficulty.Expert),
-        symbol("Mn", "Mangan", listOf("Magnez", "Molibden", "Miedz"), QuizDifficulty.Expert),
+        /* ----------------------------- Expert ---------------------------- */
+        symbol("Sb", "Antimony", listOf("Strontium", "Silver", "Selenium"), QuizDifficulty.Expert),
+        symbol("Kr", "Krypton", listOf("Chromium", "Cobalt", "Potassium"), QuizDifficulty.Expert),
+        symbol("Mn", "Manganese", listOf("Magnesium", "Molybdenum", "Copper"), QuizDifficulty.Expert),
         ask(
             id = "curie",
-            prompt = "Ktory pierwiastek Maria Sklodowska-Curie nazwala na czesc swojej ojczyzny?",
-            correct = "Polon",
-            wrong = listOf("Rad", "Uran", "Radon"),
+            prompt = "Which element did Marie Sklodowska-Curie name after her homeland?",
+            correct = "Polonium",
+            wrong = listOf("Radium", "Uranium", "Radon"),
             difficulty = QuizDifficulty.Expert
         ),
         ask(
             id = "mendelejew",
-            prompt = "Kto opracowal uklad okresowy pierwiastkow?",
-            correct = "Dmitrij Mendelejew",
+            prompt = "Who devised the periodic table of elements?",
+            correct = "Dmitri Mendeleev",
             wrong = listOf("Niels Bohr", "Antoine Lavoisier", "John Dalton"),
             difficulty = QuizDifficulty.Expert
         ),
         ask(
             id = "szlachetne",
-            prompt = "Ktory z tych gazow jest gazem szlachetnym?",
+            prompt = "Which of these gases is a noble gas?",
             correct = "Argon",
-            wrong = listOf("Azot", "Metan", "Wodor"),
+            wrong = listOf("Nitrogen", "Methane", "Hydrogen"),
             difficulty = QuizDifficulty.Expert
         ),
         ask(
             id = "twardy",
-            prompt = "Jaka odmiana wegla jest najtwardszym naturalnym mineralem?",
-            correct = "Diament",
-            wrong = listOf("Grafit", "Fuleren", "Wegiel drzewny"),
+            prompt = "Which form of carbon is the hardest natural mineral?",
+            correct = "Diamond",
+            wrong = listOf("Graphite", "Fullerene", "Charcoal"),
             difficulty = QuizDifficulty.Expert
         )
     )

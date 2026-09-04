@@ -35,9 +35,9 @@ data class StreakOutcome(
 )
 
 enum class CycleOutcome(val attackMultiplier: Float, val label: String) {
-    Empowered(attackMultiplier = 1.35f, label = "Passa! +35% ataku na chwile"),
-    Weakened(attackMultiplier = 0.75f, label = "Slaba runda... -25% ataku na chwile"),
-    Neutral(attackMultiplier = 1f, label = "Runda bez efektu")
+    Empowered(attackMultiplier = 1.35f, label = "On a streak! +35% attack for a moment"),
+    Weakened(attackMultiplier = 0.75f, label = "Rough round... -25% attack for a moment"),
+    Neutral(attackMultiplier = 1f, label = "No effect this round")
 }
 
 /** Ile ms trzyma sie efekt zamknietego cyklu (buff albo debuff). */

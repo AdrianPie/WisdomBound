@@ -27,6 +27,12 @@ import lernhero.shared.generated.resources.altar_empty
 import lernhero.shared.generated.resources.armor_new
 import lernhero.shared.generated.resources.body_new
 import lernhero.shared.generated.resources.boss_skeleton_dragon_2
+import lernhero.shared.generated.resources.magic_missle_1
+import lernhero.shared.generated.resources.magic_missle_2
+import lernhero.shared.generated.resources.magic_missle_3
+import lernhero.shared.generated.resources.boss_skeleton_dragon_body
+import lernhero.shared.generated.resources.boss_skeleton_dragon_up_skull
+import lernhero.shared.generated.resources.boss_skeleton_dragon_down_skull
 import lernhero.shared.generated.resources.human_archer_2
 import lernhero.shared.generated.resources.mage_missile_001_016
 import lernhero.shared.generated.resources.magicboom_8_frames
@@ -40,6 +46,7 @@ import lernhero.shared.generated.resources.boot_left_new
 import lernhero.shared.generated.resources.boot_right_new
 import lernhero.shared.generated.resources.glove_left_new
 import lernhero.shared.generated.resources.glove_right_new
+import lernhero.shared.generated.resources.hair_new
 import lernhero.shared.generated.resources.head_new
 import lernhero.shared.generated.resources.left_hand_new
 import lernhero.shared.generated.resources.left_leg_new
@@ -75,6 +82,13 @@ import lernhero.shared.generated.resources.user
 import lernhero.shared.generated.resources.vertical_menu
 import lernhero.shared.generated.resources.warning
 import lernhero.shared.generated.resources.weight
+import lernhero.shared.generated.resources.nav_home
+import lernhero.shared.generated.resources.nav_growth
+import lernhero.shared.generated.resources.nav_fight
+import lernhero.shared.generated.resources.nav_progress
+import lernhero.shared.generated.resources.nav_shop
+import lernhero.shared.generated.resources.summon_banner_basic
+import lernhero.shared.generated.resources.summon_banner_heroic
 
 object Resources {
     object Icon {
@@ -102,6 +116,28 @@ object Resources {
         val Warning = Res.drawable.warning
         val Weight = Res.drawable.weight
         val swords = Res.drawable.swords_24px
+    }
+
+    /**
+     * Ikony dolnego paska nawigacji. Na razie PLACEHOLDERY - podmien pliki
+     * `shared/src/commonMain/composeResources/drawable/nav_*.png` na docelowe grafiki,
+     * nazwa pliku zostaje ta sama i nic w kodzie nie trzeba ruszac.
+     */
+    object NavIcon {
+        val Home = Res.drawable.nav_home
+        val Growth = Res.drawable.nav_growth
+        val Fight = Res.drawable.nav_fight
+        val Progress = Res.drawable.nav_progress
+        val Shop = Res.drawable.nav_shop
+    }
+
+    /**
+     * Ikony bannerow w Summon Center. Na razie PLACEHOLDERY - podmien pliki
+     * `drawable/summon_banner_*.png` na docelowe posagi/figury, kod zostaje bez zmian.
+     */
+    object SummonBanner {
+        val Basic = Res.drawable.summon_banner_basic
+        val Heroic = Res.drawable.summon_banner_heroic
     }
     object Image {
         /** Tlo calej aplikacji - rysowane raz za Scaffoldem w HomeNavGraph, widoczne pod kazda zakladka. */
@@ -138,6 +174,14 @@ object Resources {
     object Player {
             val head = Res.drawable.head_new
             val body = Res.drawable.body_new
+
+            /**
+             * Same wlosy, wyciete z [head] i sprowadzone do bieli (zachowany tylko relatywny cien).
+             * Rysuje sie JE NA glowie i mnozy przez wybrany kolor - dzieki temu farbowanie wlosow
+             * nie wymaga osobnego sprite'a na kazdy kolor. Wygenerowane z head_new.png, wiec po
+             * podmianie glowy trzeba wygenerowac na nowo takze ten plik.
+             */
+            val hair = Res.drawable.hair_new
 
             // Prawa reka (anatomicznie) - na ekranie po lewej, reka za cialem (idle).
             // Konczyna jednoczesciowa (bez podzialu na bicep/przedramie) - rotuje sztywno wokol barku.
@@ -202,6 +246,12 @@ object Resources {
         val orcArcher = Res.drawable.orc_archer_2
         val humanArcher = Res.drawable.human_archer_2
         val bossSkeletonDragon = Res.drawable.boss_skeleton_dragon_2
+
+        // Boss rozbity na 3 warstwy do animacji szczeki (patrz MonsterRigs.forSpecies) - kazdy PNG
+        // ma ten sam canvas 768x768 co plaski bossSkeletonDragon, wiec warstwy same trafiaja na miejsce.
+        val bossSkeletonDragonBody = Res.drawable.boss_skeleton_dragon_body
+        val bossSkeletonDragonSkullUp = Res.drawable.boss_skeleton_dragon_up_skull
+        val bossSkeletonDragonSkullDown = Res.drawable.boss_skeleton_dragon_down_skull
     }
     /** Grafiki warstwy efektow walki (pociski, hit/spell effects) - patrz com.lernhero.game.battle.effects. */
     object EffectArt {
@@ -211,6 +261,15 @@ object Resources {
         val mageMissile = Res.drawable.magic_missle_skeleton_mage
         /** Wybuch trafienia - rosnie od iskry do pelnego wybuchu, 8 klatek, siatka 4x2 (256x144/klatka). */
         val magicBomb = Res.drawable.magicboom_8_frames
+
+        /**
+         * Pocisk magiczny zlozony z TRZECH pierscieni - kazdy to osobny PNG na tym samym canvasie
+         * 256x256, wiec naklada sie bez pozycjonowania. Kazdy kreci sie z wlasna predkoscia
+         * (patrz com.lernhero.game.battle.effects.LayeredEffectCatalog).
+         */
+        val magicMissileRing1 = Res.drawable.magic_missle_1
+        val magicMissileRing2 = Res.drawable.magic_missle_2
+        val magicMissileRing3 = Res.drawable.magic_missle_3
     }
     object Flag {
         val India = Res.drawable.india

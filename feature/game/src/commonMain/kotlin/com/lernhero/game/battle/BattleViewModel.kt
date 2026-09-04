@@ -13,6 +13,7 @@ import com.lernhero.domain.item.toLoadout
 import com.lernhero.domain.monster.EnemySpecies
 import com.lernhero.domain.monster.CompanionSpell
 import com.lernhero.domain.monster.CompanionSpellKind
+import com.lernhero.domain.monster.Element
 import com.lernhero.domain.monster.MonsterCatalog
 import com.lernhero.domain.monster.MonsterLevels
 import com.lernhero.domain.monster.MonsterSpellLevels
@@ -22,6 +23,10 @@ import com.lernhero.domain.player.HeroStats
 import com.lernhero.domain.player.PlayerEquipment
 import com.lernhero.domain.progress.CategoryStat
 import com.lernhero.domain.progress.RunStats
+import com.lernhero.domain.quiz.CategoryOffer
+import com.lernhero.domain.quiz.MultiSelectBank
+import com.lernhero.domain.quiz.MultiSelectEntry
+import com.lernhero.domain.quiz.CategoryOption
 import com.lernhero.domain.quiz.EstimationBank
 import com.lernhero.domain.quiz.OrderingBank
 import com.lernhero.domain.quiz.OrderingEntry
@@ -30,19 +35,26 @@ import com.lernhero.domain.quiz.QuizCategory
 import com.lernhero.domain.quiz.QuizDifficulty
 import com.lernhero.domain.quiz.QuizEntry
 import com.lernhero.domain.quiz.WordQuizBank
+import com.lernhero.domain.quiz.custom.CustomDeck
+import com.lernhero.domain.quiz.custom.CustomDeckBank
+import com.lernhero.domain.quiz.custom.CustomQuestionType
 import com.lernhero.domain.repository.PlayerRepository
-import com.lernhero.domain.spell.AbilityLoadout
 import com.lernhero.domain.spell.Spell
 import com.lernhero.domain.spell.SpellCatalog
 import com.lernhero.domain.spell.SpellTarget
 import com.lernhero.domain.run.BattleKind
 import com.lernhero.domain.run.BattleRequest
 import com.lernhero.domain.run.EndlessBuff
+import com.lernhero.domain.talent.TalentBonuses
+import com.lernhero.domain.talent.TalentRules
 import com.lernhero.domain.run.RunDifficulty
 import com.lernhero.domain.run.RunLoot
 import com.lernhero.domain.run.RunSession
+import com.lernhero.game.character.AnimSlot
 import com.lernhero.game.character.CharacterState
 import com.lernhero.game.character.CharacterUiModel
+import com.lernhero.domain.player.HeroAppearance
+import com.lernhero.game.character.HeroLook
 import com.lernhero.game.character.KnightEquipment
 import com.lernhero.shared.resources.FlagResources
 import kotlinx.coroutines.Dispatchers
@@ -54,6 +66,7 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlin.math.roundToInt
 import kotlin.random.Random
+import kotlin.time.Clock
 import kotlin.time.TimeSource
 
 /**
@@ -73,6 +86,18 @@ class BattleViewModel(
     /** Zamowienie zlozone przez mape. Brak = szybka walka testowa. */
     private val request: BattleRequest =
         runSession.pendingBattle ?: BattleRequest(BattleKind.Normal, waves = 1, seed = Random.nextLong())
+
+    /**
+     * Pojedynek z bossem: brak zwyklego quizu tury. Cala walka to naprzemiennie atak specjalny bossa
+     * (quiz-oszacowanie skalujacy jego moc) i salwa druzyny - patrz [beginBossTurn]/[startPlayerTurn].
+     */
+    private val isBossDuel: Boolean = request.kind == BattleKind.Boss
+
+    /**
+     * Wybor tematu pytania przed tura ([CategoryOffer]) - tylko kampania. Endless ma wlasny wybor
+     * kategorii JUZ przed walka (EndlessSetupPanel), a pojedynek z bossem nie ma zwyklego quizu.
+     */
+    private val categoryPickEnabled: Boolean = !request.isEndless && !isBossDuel
 
     private var savedParty: List<String?> = emptyList()
 
@@ -150,11 +175,19 @@ class BattleViewModel(
     private var heroStats: HeroStats = HeroStats()
 
     /**
-     * Pasek zdolnosci bohatera - ile procent jego ciosow zamienia sie w ktore zaklecie. Wczytywany
-     * razem z reszta gracza; puste = bohater tylko bije. Do tej pory ten pasek byl zapisywany i
-     * NIGDY nie czytany przez walke - zaklecia nie robily kompletnie nic.
+     * Bonusy z drzewka talentow. Wieksza ich czesc to staki mechanik, ktore walka juz umiala
+     * obslugiwac dla trybu endless ([EndlessBuff]) - wystarczylo zasiedlic nimi
+     * [BattleUiState.endlessBuffs] na starcie, zeby garda, kolce czy rozped dzialaly w KAZDEJ
+     * walce, bez ani jednej nowej galezi w silniku. Reszta (plaski atak/HP/krytyk/quiz) wchodzi
+     * tymi samymi kanalami, co [heroStats].
      */
-    private var heroAbility: AbilityLoadout = AbilityLoadout()
+    private var talentBonuses: TalentBonuses = TalentBonuses.EMPTY
+
+    /**
+     * Zaklecia bohatera z drzewka talentow: id -> szansa (procent ciosow) na rzut. Wczytywane
+     * razem z reszta gracza; puste = bohater tylko bije.
+     */
+    private var heroSpellChances: Map<String, Int> = emptyMap()
 
     /** Wrogowie zamrozeni [SpellCatalog.FROST_SHARD] - traca tyle najblizszych krokow salwy. */
     private var frozenTurns: MutableMap<String, Int> = mutableMapOf()
@@ -483,7 +516,7 @@ class BattleViewModel(
         if (frozen > 0) {
             frozenTurns[step.attackerId] = frozen - 1
             volleyPlan = volleyPlan.drop(1)
-            _uiState.update { it.copy(message = "${it.characters[step.attackerId]?.name ?: "Wrog"} jest zamrozony!") }
+            _uiState.update { it.copy(message = "${it.characters[step.attackerId]?.name ?: "The enemy"} is frozen!") }
             startNextVolley()
             return
         }
@@ -563,6 +596,12 @@ class BattleViewModel(
         // pozostale kroki przelecialy na sucho) - wtedy zamiast pytania nalezy wpuscic kolejna fale.
         if (resolveOutcomeIfOver(state)) return
 
+        // Pojedynek z bossem: po salwie druzyny wraca jego kolejny atak specjalny, nie quiz tury.
+        if (isBossDuel) {
+            beginBossTurn()
+            return
+        }
+
         if (state.stunTurnsRemaining > 0) {
             runStunnedRound(state)
             return
@@ -576,6 +615,26 @@ class BattleViewModel(
      * dokladnie tutaj - od tego momentu (a nie od podmiany fali) liczy sie pasek czasu na odpowiedz.
      */
     private fun askNextQuestion(extraElapsedMs: Long = 0L, keepMessage: Boolean = false) {
+        // Kampania: zanim padnie pytanie, gracz wybiera z czterech kafli - temat plus bonus
+        // frakcyjny na cala nadchodzaca ture (patrz [chooseCategory]). Pasek czasu na odpowiedz
+        // NIE startuje tutaj: zaczyna sie dopiero w chwili wyboru, zeby namysl nad kaflami nie
+        // zjadal mnoznika sily ciosu.
+        if (categoryPickEnabled) {
+            _uiState.update { s ->
+                if (s.phase != GamePhase.Battle) return@update s
+                s.copy(
+                    elapsedMs = s.elapsedMs + extraElapsedMs,
+                    turnPhase = TurnPhase.CategoryPick,
+                    categoryOffer = CategoryOffer.roll(quizRandom),
+                    boostedElements = emptySet(),
+                    quiz = null,
+                    stunnedCharacterIds = emptySet(),
+                    message = if (keepMessage) s.message else null
+                )
+            }
+            return
+        }
+
         questionShownAt = TimeSource.Monotonic.markNow()
         _uiState.update { s ->
             if (s.phase != GamePhase.Battle) return@update s
@@ -585,6 +644,28 @@ class BattleViewModel(
                 quiz = drawNextQuestion(s.wave),
                 stunnedCharacterIds = emptySet(),
                 message = if (keepMessage) s.message else null
+            )
+        }
+    }
+
+    /**
+     * Gracz wybral kafel: zapamietujemy wzmocnione zywioly na te ture i DOPIERO TERAZ rysujemy
+     * pytanie - z kategorii, ktora sam wskazal. Od tego momentu leci pasek czasu na odpowiedz.
+     */
+    fun chooseCategory(option: CategoryOption) {
+        val state = _uiState.value
+        if (state.phase != GamePhase.Battle || state.turnPhase != TurnPhase.CategoryPick) return
+
+        questionShownAt = TimeSource.Monotonic.markNow()
+        val boosted = option.elements.toSet()
+        _uiState.update { s ->
+            if (s.phase != GamePhase.Battle) return@update s
+            s.copy(
+                turnPhase = TurnPhase.Question,
+                categoryOffer = null,
+                boostedElements = boosted,
+                quiz = drawNextQuestion(s.wave, forcedCategory = option.category),
+                message = "Boost: " + option.elements.joinToString(" + ") { it.label }
             )
         }
     }
@@ -611,7 +692,7 @@ class BattleViewModel(
             it.copy(
                 stunTurnsRemaining = remaining,
                 turnPhase = TurnPhase.Resolving,
-                message = if (remaining > 0) "Druzyna wciaz oszolomiona..." else "Druzyna otrzasa sie z oszolomienia..."
+                message = if (remaining > 0) "The party is still stunned..." else "The party shakes off the stun..."
             )
         }
         startNextVolley()
@@ -683,7 +764,8 @@ class BattleViewModel(
         val precisionStacks = endlessBuffs[EndlessBuff.Precision] ?: 0
         val isCrit = attacker.isPlayer &&
             combatRandom.nextFloat() <
-            (CRIT_CHANCE + precisionStacks * PRECISION_CRIT_BONUS_PER_STACK + heroStats.critChanceBonus)
+            (CRIT_CHANCE + precisionStacks * PRECISION_CRIT_BONUS_PER_STACK +
+                heroStats.critChanceBonus + talentBonuses.critChance)
 
         val multiplier = if (attacker.isPlayer) {
             val brutalityStacks = endlessBuffs[EndlessBuff.Brutality] ?: 0
@@ -709,14 +791,30 @@ class BattleViewModel(
 
             // [HeroStat.Focus] wzmacnia WYLACZNIE mnoznik z quizu - punkty w skupienie oplacaja sie
             // tylko temu, kto faktycznie odpowiada dobrze, a nie temu, kto przeklikuje pytania.
-            currentTurnMultiplier * heroStats.quizDamageMultiplier * critMultiplier * statBonus * momentum * execution
+            currentTurnMultiplier * heroStats.quizDamageMultiplier * talentBonuses.quizDamageMultiplier *
+                critMultiplier * statBonus * momentum * execution
         } else {
             val fortressStacks = endlessBuffs[EndlessBuff.Fortress] ?: 0
             val fortressReduction = (fortressStacks * FORTRESS_REDUCTION_PER_STACK).coerceAtMost(MAX_FORTRESS_REDUCTION)
             currentEnemyMultiplier * (1f - fortressReduction)
         }
 
-        val amount = (attacker.attack * multiplier * factor).roundToInt().coerceAtLeast(1)
+        // Przewaga zywiolu dziala w OBIE strony i mnozy sie z reszta - wchodzi tu, a nie w
+        // gałęzi gracza, bo ten sam trojkat ma obowiazywac takze wrogow bijacych w kompanow.
+        val elemental = Element.multiplier(attacker.element, target.element)
+
+        // Bonus z kafla wybranego przed tura ([CategoryOffer]) - dotyczy WYLACZNIE jednostek gracza
+        // o wzmocnionym zywiole i tylko do konca tej tury (boostedElements czysci sie w askNextQuestion).
+        val factionBoost = if (attacker.isPlayer && attacker.element != null &&
+            attacker.element in boostedElements
+        ) {
+            1f + CategoryOffer.ELEMENT_BOOST
+        } else {
+            1f
+        }
+
+        val amount = (attacker.attack * multiplier * elemental * factionBoost * factor)
+            .roundToInt().coerceAtLeast(1)
         return PendingHit(
             targetId = target.id,
             amount = amount,
@@ -748,14 +846,14 @@ class BattleViewModel(
     }
 
     /**
-     * Rzut na pasek zdolnosci. Kazde zaklecie ma swoj procent tury; reszta do 100% to zwykly atak.
-     * Zwraca null, gdy wypadl zwykly cios - i to jest najczestszy wynik, bo pasek ma sufit
-     * [AbilityLoadout.capacity] wyraznie ponizej 100%.
+     * Rzut na zaklecia bohatera. Kazde odblokowane zaklecie ma swoja szanse (procent ciosow);
+     * reszta to zwykly atak. Zwraca null, gdy wypadl zwykly cios - najczestszy wynik, bo suma
+     * szans zaklec jest wyraznie ponizej 100%.
      */
     private fun rollSpell(): Spell? {
-        if (heroAbility.weights.isEmpty()) return null
+        if (heroSpellChances.isEmpty()) return null
         var roll = combatRandom.nextInt(100)
-        for ((spellId, percent) in heroAbility.weights) {
+        for ((spellId, percent) in heroSpellChances) {
             if (percent <= 0) continue
             roll -= percent
             if (roll < 0) return SpellCatalog.byId(spellId)
@@ -988,6 +1086,7 @@ class BattleViewModel(
             difficulty = currentQuestionDifficulty,
             consecutiveCorrect = streakOutcome.tracker.consecutiveCorrect
         )
+        recordSavedWordAnswer(quiz.question.id, isCorrect)
 
         // Im wiecej segmentow paska zostalo w chwili odpowiedzi, tym mocniejsza bedzie salwa
         // tej tury - zablokowane teraz, obowiazuje przez cala ture.
@@ -1006,7 +1105,7 @@ class BattleViewModel(
             totalScore = totalScore + if (isCorrect) reward else 0,
             answeredCount = answeredCount + 1,
             correctCount = correctCount + if (isCorrect) 1 else 0,
-            message = if (isCorrect) "Dobra odpowiedz! +$reward pkt" else "Zla odpowiedz.",
+            message = if (isCorrect) "Correct! +$reward pts" else "Wrong answer.",
             // Komplet liczb dla banera na polu bitwy - patrz [TurnOutcome].
             turnOutcome = TurnOutcome(
                 id = answeredCount + 1L,
@@ -1039,6 +1138,52 @@ class BattleViewModel(
      * Razem [BOSS_HEAL_CHANCE] + [BOSS_POISON_CHANCE] + [BOSS_STUN_GAMBLE_CHANCE] = 30% na atak -
      * elita/boss bije normalnie w pozostalych 70% przypadkow.
      */
+    /**
+     * Pojedynek z bossem: rozpoczyna jego kolejny atak specjalny. Boss NIE bije zwyklymi ciosami -
+     * kazda jego tura to jedno zdarzenie ([BossEventKind]), ktorego sile ustala quiz-oszacowanie
+     * (patrz [resolveBossEvent]). Po zatwierdzeniu quizu rusza salwa druzyny ([startPlayerTurn]).
+     */
+    private fun beginBossTurn() {
+        val state = _uiState.value
+        if (state.phase != GamePhase.Battle) return
+        val bossId = state.characters.values.firstOrNull { !it.isPlayer && it.hp > 0 }?.id ?: return
+        abandonVolley()
+        val kind = BOSS_DUEL_EVENTS.random(quizRandom)
+        triggerBossEvent(kind, bossId)
+    }
+
+    /**
+     * Pojedynek z bossem: salwa druzyny po jego ataku specjalnym. Sam boss nie ma tu kroku - bije
+     * wylacznie zdarzeniami ([beginBossTurn]). Oszolomieni ([BattleUiState.stunnedCharacterIds])
+     * pomijaja te salwe, a licznik [BattleUiState.stunTurnsRemaining] spada o jeden.
+     */
+    private fun startPlayerTurn() {
+        val state = _uiState.value
+        if (state.phase != GamePhase.Battle) return
+        abandonVolley()
+
+        val stunned = state.stunTurnsRemaining > 0
+        val playerIds = state.characters.values
+            .filter { it.isPlayer && it.hp > 0 && (!stunned || it.id !in state.stunnedCharacterIds) }
+            .sortedBy { it.id }
+            .map { it.id }
+
+        volleyPlan = state.buildTurnPlan(playerIds, emptyList())
+        currentRoundIndex = -1
+        refreshGuards(turnStart = true)
+
+        val remainingStun = (state.stunTurnsRemaining - 1).coerceAtLeast(0)
+        _uiState.update {
+            it.copy(
+                turnPhase = TurnPhase.Resolving,
+                stunTurnsRemaining = remainingStun,
+                stunnedCharacterIds = if (remainingStun == 0) emptySet() else it.stunnedCharacterIds,
+                message = if (stunned) "Part of the party is still stunned..." else null
+            )
+        }
+        startNextVolley()
+    }
+
     private fun rollBossSpecialEvent(random: Random): BossEventKind? {
         val roll = random.nextFloat()
         return when {
@@ -1057,19 +1202,125 @@ class BattleViewModel(
      * [confirmBossEventGuess], gdy gracz zatwierdzi zgadywanie.
      */
     private fun triggerBossEvent(kind: BossEventKind, attackerId: String) {
-        bossEventShownAt = TimeSource.Monotonic.markNow()
         _uiState.update { state ->
+            // Boss odgrywa swoja animacje rzucania (rozwarcie pyska + ladowanie pocisku) ROZCIAGNIETA
+            // na caly czas na odpowiedz - dzieki temu kulminacja animacji zbiega sie z koncem paska
+            // quizu, zamiast konczyc sie po sekundzie i zostawiac bossa nieruchomo na resztę rundy.
+            val boss = state.characters[attackerId]
+            val characters = if (boss != null) {
+                state.characters + (attackerId to boss.copy(
+                    animSlot = AnimSlot.Cast,
+                    animTrigger = boss.animTrigger + 1,
+                    animDurationMs = (BOSS_EVENT_CHARGE_MS + AnswerTimer.WINDOW_MS).toInt(),
+                    // Pocisk w pysku przybiera kolor pasujacy do tego, co boss wlasnie robi.
+                    animEffectTintArgb = bossEventTintArgb(kind),
+                    // Najazd kamery - pysk bossa wchodzi na ekran na czas calego zdarzenia.
+                    cameraZoom = BOSS_EVENT_CAMERA_ZOOM
+                ))
+            } else {
+                state.characters
+            }
+
             state.copy(
-                bossEvent = BossEventState(bossId = attackerId, kind = kind, question = EstimationBank.random(quizRandom)),
+                characters = characters,
+                bossEvent = run {
+                    // Wlasna talia moze niesc swoje pytania "oszacuj" - gdy nie niesie zadnego,
+                    // boss i tak musi miec czym zaatakowac, wiec wracamy do banku wbudowanego.
+                    val question = runSession.customDeck
+                        ?.let { CustomDeckBank.drawEstimation(it, quizRandom) }
+                        ?: EstimationBank.random(quizRandom)
+                    val range = question.sliderRange(quizRandom)
+                    BossEventState(
+                        bossId = attackerId,
+                        kind = kind,
+                        question = question,
+                        sliderMin = range.first,
+                        sliderMax = range.last,
+                        phase = BossEventPhase.Charging,
+                        projection = state.projectBossEvent(kind, attackerId)
+                    )
+                },
                 message = bossEventAnnounceMessage(kind)
+            )
+        }
+
+        // Ladowanie leci BEZ quizu - dopiero po nim panel wjezdza od dolu i rusza licznik czasu.
+        // Wczesniej wszystko pojawialo sie naraz i nie bylo widac, co boss wlasciwie robi.
+        viewModelScope.launch {
+            delay(BOSS_EVENT_CHARGE_MS)
+            if (_uiState.value.bossEvent?.phase != BossEventPhase.Charging) return@launch
+            bossEventShownAt = TimeSource.Monotonic.markNow()
+            _uiState.update { state ->
+                val event = state.bossEvent ?: return@update state
+                state.copy(bossEvent = event.copy(phase = BossEventPhase.Quiz))
+            }
+        }
+    }
+
+    /**
+     * Liczy NAJGORSZY mozliwy skutek zdarzenia (fatalny quiz, performance = 0) - to samo, co
+     * policzylyby resolve*Event dla performance = 0. Sluzy wylacznie do pokazania stawki na
+     * liczniku podczas ladowania; faktyczny wynik liczy sie normalnie po zatwierdzeniu.
+     */
+    private fun BattleUiState.projectBossEvent(kind: BossEventKind, bossId: String): BossEventProjection {
+        val boss = characters[bossId]
+        val alivePlayers = characters.values.count { it.isPlayer && it.hp > 0 }
+        return when (kind) {
+            BossEventKind.Heal -> {
+                val missingHp = boss?.let { (it.maxHp - it.hp).coerceAtLeast(0) } ?: 0
+                BossEventProjection(
+                    attackName = "PIESN KOSCI",
+                    valueLabel = "LECZENIE",
+                    chargedValue = (missingHp * BOSS_HEAL_MAX_FRACTION).roundToInt()
+                )
+            }
+
+            BossEventKind.Poison -> {
+                val total = characters.values
+                    .filter { it.isPlayer && it.hp > 0 }
+                    .sumOf { (it.maxHp * BOSS_POISON_MAX_FRACTION).roundToInt().coerceAtLeast(1) }
+                BossEventProjection(
+                    attackName = "TRUJACY ODDECH",
+                    valueLabel = "OBRAZENIA",
+                    chargedValue = total
+                )
+            }
+
+            BossEventKind.Strike -> {
+                val perPlayer = ((boss?.attack ?: 0) * BOSS_STRIKE_MAX_ATTACK_MULTIPLIER).roundToInt()
+                BossEventProjection(
+                    attackName = "POTEZNY CIOS",
+                    valueLabel = "OBRAZENIA",
+                    chargedValue = perPlayer * alivePlayers
+                )
+            }
+
+            BossEventKind.StunGamble -> BossEventProjection(
+                attackName = "KLATWA BEZRUCHU",
+                valueLabel = "OGLUSZENIE",
+                chargedValue = (BOSS_STUN_MAX_FRACTION * 100f).roundToInt(),
+                unit = "%"
             )
         }
     }
 
+    /**
+     * Kolor pocisku ladowanego w pysku bossa - czytelny sygnal, co za chwile zrobi. Odcienie
+     * wziete z palety zywiolow ([com.lernhero.domain.monster.Element]), zeby caly UI mowil jednym
+     * jezykiem kolorow.
+     */
+    private fun bossEventTintArgb(kind: BossEventKind): Long = when (kind) {
+        BossEventKind.Heal -> 0xFF4ADE80        // zielen - jak Natura
+        BossEventKind.Poison -> 0xFF9B6BD6      // fiolet - jak Smierc (i tak wyglada dzis PNG)
+        BossEventKind.StunGamble -> 0xFFFFD34D  // zolc - "uwazaj"
+        BossEventKind.Strike -> 0xFFE0654F      // czerwien - jak Ogien
+    }
+
     private fun bossEventAnnounceMessage(kind: BossEventKind): String = when (kind) {
-        BossEventKind.Heal -> "Boss szykuje sie do leczenia..."
-        BossEventKind.Poison -> "Boss szykuje trujacy oddech..."
-        BossEventKind.StunGamble -> "Boss szykuje potezne zaklecie..."
+        BossEventKind.Heal -> "The boss prepares to heal..."
+        BossEventKind.Poison -> "The boss prepares a poisonous breath..."
+        BossEventKind.StunGamble -> "The boss prepares a powerful spell..."
+        BossEventKind.Strike -> "The boss winds up for a powerful strike..."
     }
 
     /** Suwak w [com.lernhero.game.battle.component.BossEventQuizBar] przesunal sie - zapamietujemy wartosc bez rozstrzygania. */
@@ -1077,7 +1328,7 @@ class BattleViewModel(
         _uiState.update { state ->
             val event = state.bossEvent ?: return@update state
             if (event.resolved) return@update state
-            state.copy(bossEvent = event.copy(guess = value.coerceIn(event.question.minValue, event.question.maxValue)))
+            state.copy(bossEvent = event.copy(guess = value.coerceIn(event.sliderMin, event.sliderMax)))
         }
     }
 
@@ -1089,11 +1340,17 @@ class BattleViewModel(
     fun confirmBossEventGuess() {
         val event = _uiState.value.bossEvent ?: return
         if (event.resolved) return
+        // Ladowanie jeszcze trwa - nie ma czego zatwierdzac (auto-confirm z paska tez tu nie wejdzie).
+        if (event.phase == BossEventPhase.Charging) return
 
         _uiState.update { state ->
             val current = state.bossEvent ?: return@update state
             if (current.resolved) return@update state
-            state.resolveBossEvent(current)
+            // Wynik jest juz policzony i zastosowany, ale zanim wroci walka, pokazujemy WERDYKT:
+            // ile bylo naprawde, ile dal gracz i o ile to scielo cios.
+            state.resolveBossEvent(current).let { resolved ->
+                resolved.copy(bossEvent = resolved.bossEvent?.copy(phase = BossEventPhase.Judging))
+            }
         }
 
         // Zaklecie ogluszylo kogos: reszta biezacej salwy zostala zbudowana ZANIM ktokolwiek byl
@@ -1103,9 +1360,42 @@ class BattleViewModel(
         val justStunned = _uiState.value.stunTurnsRemaining > 0
 
         viewModelScope.launch {
-            delay(BOSS_EVENT_REVEAL_MILLIS)
-            _uiState.update { it.copy(bossEvent = null) }
-            if (justStunned) {
+            // Werdykt: gracz czyta, o ile sciął cios, i widzi jak licznik zjezdza z najgorszego
+            // przypadku do faktycznego wyniku.
+            delay(BOSS_EVENT_JUDGING_MS)
+            _uiState.update { state ->
+                val current = state.bossEvent ?: return@update state
+                state.copy(bossEvent = current.copy(phase = BossEventPhase.Payoff))
+            }
+
+            // Kulminacja: kula wychodzi z pyska i leci w cel (albo wybucha na bossie przy leczeniu).
+            delay(BOSS_EVENT_PAYOFF_MS)
+            _uiState.update { state ->
+                // Zdarzenie zamkniete - boss wraca do spoczynku, zeby pysk nie zostal otwarty
+                // na cala nastepna ture.
+                val boss = state.characters[event.bossId]
+                state.copy(
+                    bossEvent = null,
+                    characters = if (boss != null) {
+                        state.characters + (event.bossId to boss.copy(
+                            animSlot = null,
+                            animDurationMs = null,
+                            animEffectTintArgb = null,
+                            cameraZoom = 1f
+                        ))
+                    } else {
+                        state.characters
+                    }
+                )
+            }
+
+            // Trucizna / potezny cios mogly rozniesc cala druzyne - sprawdzamy to przed dalsza walka.
+            if (resolveOutcomeIfOver(_uiState.value)) return@launch
+
+            if (isBossDuel) {
+                // Zdarzenie bossa juz naliczylo swoj efekt (w tym stun) - teraz salwa druzyny.
+                startPlayerTurn()
+            } else if (justStunned) {
                 runStunnedRound(_uiState.value)
             } else {
                 settleVolleyStep()
@@ -1120,36 +1410,126 @@ class BattleViewModel(
      * zgadywania - to ona skaluje kazdy z trzech wariantow: im lepszy quiz, tym slabszy efekt bossa.
      */
     private fun BattleUiState.resolveBossEvent(event: BossEventState): BattleUiState {
-        val remainingFraction = 1f -
+        // 1) CZAS laduje zaklecie. Licznik na ekranie rosnie razem z ta wartoscia, wiec zwlekanie
+        //    kosztuje wprost i widac to na biezaco. Podloga sprawia, ze nawet blyskawiczna
+        //    odpowiedz cos kosztuje - inaczej sama szybkosc kasowalaby atak i celnosc nie mialaby
+        //    juz znaczenia.
+        val elapsedFraction =
             (bossEventShownAt.elapsedNow().inWholeMilliseconds.toFloat() / AnswerTimer.WINDOW_MS).coerceIn(0f, 1f)
-        val segments = AnswerTimer.segmentIndexFor(remainingFraction) + 1
-        val segmentFraction = segments.toFloat() / AnswerTimer.SEGMENTS
+        val timeScale = BOSS_TIME_FLOOR + (1f - BOSS_TIME_FLOOR) * elapsedFraction
 
-        val range = (event.question.maxValue - event.question.minValue).toFloat().coerceAtLeast(1f)
-        val closeness = 1f - (kotlin.math.abs(event.guess - event.question.correctValue) / range).coerceIn(0f, 1f)
+        // 2) CELNOSC mnozy to, co sie naladowalo - w OBIE strony. Trafiona data tnie cios,
+        //    strzal w kosmos realnie go wzmacnia (stad "+190%" na ekranie werdyktu).
+        // Celnosc liczona wzgledem TOLERANCJI TEGO pytania, a nie szerokosci suwaka - inaczej
+        // 10 lat pomylki przy Mahomecie i przy premierze iPhone'a dostawaloby te sama ocene.
+        val closeness = event.question.closeness(event.guess)
+        val accuracyMultiplier = BOSS_ACCURACY_WORST_MULTIPLIER +
+            (BOSS_ACCURACY_BEST_MULTIPLIER - BOSS_ACCURACY_WORST_MULTIPLIER) * closeness
 
-        val performance = ((segmentFraction + closeness) / 2f).coerceIn(0f, 1f)
+        val severity = (timeScale * accuracyMultiplier).coerceAtLeast(0f)
+        // Zachowane dla ekranow, ktore mowia jezykiem "jak dobrze poszlo" (1 = idealnie).
+        val performance = (1f - (severity / BOSS_ACCURACY_WORST_MULTIPLIER)).coerceIn(0f, 1f)
+
+        val ctx = BossEventMath(
+            severity = severity,
+            accuracyMultiplier = accuracyMultiplier,
+            timeScale = timeScale,
+            closeness = closeness,
+            performance = performance
+        )
 
         return when (event.kind) {
-            BossEventKind.Heal -> resolveHealEvent(event, performance)
-            BossEventKind.Poison -> resolvePoisonEvent(event, performance)
-            BossEventKind.StunGamble -> resolveStunGambleEvent(event, performance, closeness)
+            BossEventKind.Heal -> resolveHealEvent(event, ctx)
+            BossEventKind.Poison -> resolvePoisonEvent(event, ctx)
+            BossEventKind.StunGamble -> resolveStunGambleEvent(event, ctx)
+            BossEventKind.Strike -> resolveStrikeEvent(event, ctx)
         }
     }
 
+    /**
+     * Rozlozony na czynniki wynik quizu bossa. [severity] to jedyna liczba, ktorej potrzebuja
+     * poszczegolne resolve*Event - reszta jedzie z nia tylko po to, zeby ekran werdyktu mogl
+     * pokazac, SKAD sie wziela.
+     */
+    private data class BossEventMath(
+        /** Ile razy wartosc bazowa - iloczyn naladowanego czasu i mnoznika z celnosci. */
+        val severity: Float,
+        val accuracyMultiplier: Float,
+        val timeScale: Float,
+        val closeness: Float,
+        val performance: Float
+    )
+
+    /**
+     * Fatalny quiz (performance=0) tnie cala druzyne za [BOSS_STRIKE_MAX_ATTACK_MULTIPLIER] ataku
+     * bossa kazdego; idealny (performance=1) - cios calkiem chybia. To jedyny sposob, w jaki boss
+     * zadaje obrazenia w pojedynku (patrz [isBossDuel]).
+     */
+    private fun BattleUiState.resolveStrikeEvent(event: BossEventState, math: BossEventMath): BattleUiState {
+        val boss = characters[event.bossId]
+        val bossAttack = boss?.attack ?: 0
+        val damagePerPlayer = (bossAttack * BOSS_STRIKE_MAX_ATTACK_MULTIPLIER * math.severity).roundToInt()
+
+        val alivePlayers = characters.values.filter { it.isPlayer && it.hp > 0 }
+        val damageByPlayer = if (damagePerPlayer <= 0) {
+            emptyMap()
+        } else {
+            alivePlayers.associate { it.id to damagePerPlayer.coerceAtLeast(1) }
+        }
+        val totalDamage = damageByPlayer.values.sum()
+
+        var updatedCharacters = characters
+        var effects = floatingEffects
+        damageByPlayer.forEach { (playerId, dmg) ->
+            val player = updatedCharacters[playerId] ?: return@forEach
+            val after = (player.hp - dmg).coerceAtLeast(0)
+            updatedCharacters = updatedCharacters.plus(
+                playerId to player.copy(hp = after, state = if (after <= 0) CharacterState.DEAD else player.state)
+            )
+            effects = effects + FloatingEffect(nextEffectId++, playerId, dmg, HitKind.Hit)
+        }
+
+        val message = if (totalDamage <= 0) {
+            "Perfect! The boss's strike hit nothing."
+        } else {
+            "A powerful strike hits the party for a total of $totalDamage HP."
+        }
+        val outcome = BossEventOutcome(
+            performance = math.performance,
+            message = message,
+            accuracyMultiplier = math.accuracyMultiplier,
+            chargedValue = (bossAttack * BOSS_STRIKE_MAX_ATTACK_MULTIPLIER * math.timeScale).roundToInt() *
+                characters.values.count { it.isPlayer && it.hp > 0 },
+            strikeDamage = totalDamage
+        )
+
+        return copy(
+            characters = updatedCharacters,
+            floatingEffects = effects,
+            bossEvent = event.copy(resolved = true, outcome = outcome),
+            message = message
+        )
+    }
+
     /** Fatalny quiz (performance=0) leczy bossa za [BOSS_HEAL_MAX_FRACTION] brakujacego HP; idealny (performance=1) - za nic. */
-    private fun BattleUiState.resolveHealEvent(event: BossEventState, performance: Float): BattleUiState {
+    private fun BattleUiState.resolveHealEvent(event: BossEventState, math: BossEventMath): BattleUiState {
         val boss = characters[event.bossId]
         val missingHp = boss?.let { (it.maxHp - it.hp).coerceAtLeast(0) } ?: 0
-        val healFraction = BOSS_HEAL_MAX_FRACTION * (1f - performance)
+        val healFraction = BOSS_HEAL_MAX_FRACTION * math.severity
         val healAmount = (missingHp * healFraction).roundToInt().coerceAtLeast(0)
 
         val message = if (healAmount <= 0) {
-            "Idealnie! Boss nie zdazyl sie wyleczyc."
+            "Perfect! The boss couldn't heal in time."
         } else {
-            "Boss leczy sie za $healAmount HP."
+            "The boss heals for $healAmount HP."
         }
-        val outcome = BossEventOutcome(performance = performance, message = message, healAmount = healAmount)
+        val outcome = BossEventOutcome(
+            performance = math.performance,
+            message = message,
+            accuracyMultiplier = math.accuracyMultiplier,
+            chargedValue = (missingHp * BOSS_HEAL_MAX_FRACTION * math.timeScale).roundToInt(),
+            healAmount = healAmount
+        )
 
         var updatedCharacters = characters
         var effects = floatingEffects
@@ -1169,8 +1549,8 @@ class BattleViewModel(
     }
 
     /** Fatalny quiz (performance=0) zatruwa druzyne za [BOSS_POISON_MAX_FRACTION] HP kazdego; idealny (performance=1) - za nic. */
-    private fun BattleUiState.resolvePoisonEvent(event: BossEventState, performance: Float): BattleUiState {
-        val damageFraction = BOSS_POISON_MAX_FRACTION * (1f - performance)
+    private fun BattleUiState.resolvePoisonEvent(event: BossEventState, math: BossEventMath): BattleUiState {
+        val damageFraction = BOSS_POISON_MAX_FRACTION * math.severity
         val alivePlayers = characters.values.filter { it.isPlayer && it.hp > 0 }
         val damageByPlayer = if (damageFraction <= 0f) {
             emptyMap()
@@ -1191,11 +1571,19 @@ class BattleViewModel(
         }
 
         val message = if (totalDamage <= 0) {
-            "Idealnie! Trucizna nie zdazyla podzialac."
+            "Perfect! The poison didn't have time to work."
         } else {
-            "Trucizna razi druzyne za lacznie $totalDamage HP."
+            "The poison hits the party for a total of $totalDamage HP."
         }
-        val outcome = BossEventOutcome(performance = performance, message = message, poisonDamage = totalDamage)
+        val outcome = BossEventOutcome(
+            performance = math.performance,
+            message = message,
+            accuracyMultiplier = math.accuracyMultiplier,
+            chargedValue = characters.values
+                .filter { it.isPlayer && it.hp > 0 }
+                .sumOf { (it.hp * BOSS_POISON_MAX_FRACTION * math.timeScale).roundToInt() },
+            poisonDamage = totalDamage
+        )
 
         return copy(
             characters = updatedCharacters,
@@ -1210,38 +1598,39 @@ class BattleViewModel(
      * od poprawnej wartosci (uzywajac celnosci), tym dluzej to trwa. Idealna szybkosc (performance
      * >= 0.85) zawsze przerywa zaklecie calkiem, bez wzgledu na to, jak bardzo chybiona byla zgadywana wartosc.
      */
-    private fun BattleUiState.resolveStunGambleEvent(event: BossEventState, performance: Float, closeness: Float): BattleUiState {
-        val affectedFraction = when {
-            performance >= 0.85f -> 0f
-            performance >= 0.6f -> 0.15f
-            performance >= 0.4f -> 0.35f
-            performance >= 0.2f -> 0.60f
-            else -> 0.85f
-        }
-        val interrupted = affectedFraction <= 0f
+    private fun BattleUiState.resolveStunGambleEvent(event: BossEventState, math: BossEventMath): BattleUiState {
+        // Ta sama skala co reszta zdarzen: czas laduje, celnosc mnozy. Sufit 85% zostaje - nawet
+        // najgorszy wynik ma zostawic graczowi kogos, kto sie rusza.
+        val affectedFraction = (BOSS_STUN_MAX_FRACTION * math.severity).coerceIn(0f, BOSS_STUN_MAX_FRACTION)
+        val interrupted = affectedFraction < BOSS_STUN_INTERRUPT_THRESHOLD
         val stunTurns = when {
-            closeness >= 0.9f -> 1
-            closeness >= 0.6f -> 2
+            math.closeness >= 0.9f -> 1
+            math.closeness >= 0.6f -> 2
             else -> 3
         }
 
         val alivePlayers = characters.values.filter { it.isPlayer && it.hp > 0 }
-        val affectedCount = (alivePlayers.size * affectedFraction).roundToInt().coerceIn(0, alivePlayers.size)
+        val affectedCount = if (interrupted) 0 else {
+            (alivePlayers.size * affectedFraction).roundToInt().coerceIn(0, alivePlayers.size)
+        }
         // Najpierw ci z najnizszym HP - to oni najbardziej odczuja utrate tury bez obrony.
         val affectedIds = alivePlayers.sortedBy { it.hp }.take(affectedCount).map { it.id }.toSet()
 
         val message = if (interrupted) {
-            "Przerwaliscie zaklecie bossa!"
+            "You interrupted the boss's spell!"
         } else {
             val percent = (affectedFraction * 100).roundToInt()
-            val turnsWord = if (stunTurns == 1) "ture" else "tury"
-            "Boss oszalamia $percent% druzyny na $stunTurns $turnsWord!"
+            val turnsWord = if (stunTurns == 1) "turn" else "turns"
+            "The boss stuns $percent% of the party for $stunTurns $turnsWord!"
         }
 
         val outcome = BossEventOutcome(
-            performance = performance,
+            performance = math.performance,
             message = message,
-            affectedFraction = affectedFraction,
+            accuracyMultiplier = math.accuracyMultiplier,
+            chargedValue = ((BOSS_STUN_MAX_FRACTION * math.timeScale).coerceAtMost(BOSS_STUN_MAX_FRACTION) * 100f)
+                .roundToInt(),
+            affectedFraction = if (interrupted) 0f else affectedFraction,
             stunTurns = stunTurns,
             interrupted = interrupted
         )
@@ -1312,7 +1701,7 @@ class BattleViewModel(
         startNextVolley()
     }
 
-    private fun drawNextQuestion(wave: Int): LiveQuizState {
+    private fun drawNextQuestion(wave: Int, forcedCategory: QuizCategory? = null): LiveQuizState {
         // Endless pozwala wybrac STALY poziom pytan przed walka (patrz EndlessSetupPanel) - wtedy
         // drabinka rosnaca z fala nie obowiazuje, bo gracz przyszedl cwiczyc konkretny poziom.
         val fixed = runSession.quizDifficulty
@@ -1332,28 +1721,69 @@ class BattleViewModel(
             return LiveQuizState(question = drawMultipleChoiceQuestion(difficulty))
         }
 
+        // Wlasna talia gracza dziala tak samo jak fiszki: skoro gracz przyszedl cwiczyc SWOJ
+        // material, to wbudowany bank nie ma tu czego szukac. Talia moze niesc kazdy z typow
+        // pytan, wiec o rodzaj tury decyduje wylosowane pytanie, nie rzut kostka jak nizej.
+        runSession.customDeck?.let { deck ->
+            deckQuestion(deck, difficulty)?.let { return LiveQuizState(question = it) }
+        }
+
+        // Temat wskazany przez gracza na kaflu ma pierwszenstwo przed kategoria runu.
+        val category = forcedCategory ?: runSession.category
+
+        // "Zaznacz wszystkie prawdziwe" wchodzi jako trzeci typ pytania obok wyboru i ukladanki.
+        val multiRoll = quizRandom.nextFloat()
+        if (multiRoll < MULTI_SELECT_QUESTION_CHANCE) {
+            val multi = MultiSelectBank.draw(difficulty, category = category, random = quizRandom)
+            if (multi != null) {
+                currentQuestionCategory = multi.category
+                return LiveQuizState(question = multi.toUiQuestion())
+            }
+        }
+
         // Na razie testowo pol na pol - tyle wystarczy, zeby sprawdzic, jak ukladanka gra sie w boju.
         val question = if (quizRandom.nextFloat() < ORDERING_QUESTION_CHANCE) {
-            val ordering = OrderingBank.draw(difficulty, category = runSession.category, random = quizRandom)
+            val ordering = OrderingBank.draw(difficulty, category = category, random = quizRandom)
             if (ordering != null) {
                 currentQuestionCategory = ordering.category
                 ordering.toUiQuestion()
             } else {
-                drawMultipleChoiceQuestion(difficulty)
+                drawMultipleChoiceQuestion(difficulty, category)
             }
         } else {
-            drawMultipleChoiceQuestion(difficulty)
+            drawMultipleChoiceQuestion(difficulty, category)
         }
         return LiveQuizState(question = question)
     }
 
-    private fun drawMultipleChoiceQuestion(difficulty: QuizDifficulty): QuizQuestion {
+    /**
+     * Jedno pytanie z wlasnej talii, zamienione na to, co rozumie ekran. Null tylko wtedy, gdy
+     * talia nie ma ani jednego gotowego pytania na ture - wtedy walka wraca do zwyklego losowania
+     * zamiast stanac (gracz mogl usunac pytania w trakcie trwania walki).
+     */
+    private fun deckQuestion(deck: CustomDeck, difficulty: QuizDifficulty): QuizQuestion? {
+        val question = CustomDeckBank.draw(deck, difficulty, quizRandom) ?: return null
+        currentQuestionCategory = QuizCategory.Custom
+        currentQuestionDifficulty = question.difficulty
+        return when (question.type) {
+            CustomQuestionType.Choice -> question.toQuizEntry(deck.id)?.toUiQuestion()
+            CustomQuestionType.MultiSelect -> question.toMultiSelectEntry(deck.id)?.toUiQuestion()
+            CustomQuestionType.Ordering -> question.toOrderingEntry(deck.id)?.toUiQuestion()
+            // Do tury nie trafia (patrz CustomDeck.turnReady) - pada wylacznie jako zdarzenie bossa.
+            CustomQuestionType.Estimation -> null
+        }
+    }
+
+    private fun drawMultipleChoiceQuestion(
+        difficulty: QuizDifficulty,
+        category: QuizCategory? = runSession.category
+    ): QuizQuestion {
         val customWords = runSession.customWords
         val entry = if (customWords.isNotEmpty()) {
             WordQuizBank.draw(customWords, quizRandom)
         } else {
             null
-        } ?: QuizBank.draw(listOf(difficulty), category = runSession.category, random = quizRandom).firstOrNull()
+        } ?: QuizBank.draw(listOf(difficulty), category = category, random = quizRandom).firstOrNull()
             ?: QuizBank.all(quizRandom).random(quizRandom)
         currentQuestionCategory = entry.category
         return entry.toUiQuestion()
@@ -1382,7 +1812,7 @@ class BattleViewModel(
                 rewardCoins = banked,
                 rewardSaved = true,
                 runSummary = summary,
-                message = "Poddales sie na fali ${state.wave}. Ratujesz $banked z $bagTotal monet w sakwie (25%)."
+                message = "You surrendered on wave ${state.wave}. You save $banked of $bagTotal coins from your bag (25%)."
             )
         }
     }
@@ -1432,7 +1862,7 @@ class BattleViewModel(
             guardCharges = emptyMap(),
             secondWindUses = emptyMap(),
             upgradeOffer = offer,
-            message = "Fala $nextWave nadciaga..."
+            message = "Wave $nextWave incoming..."
         ).applyWaveRegeneration()
     }
 
@@ -1472,7 +1902,7 @@ class BattleViewModel(
         val stacks = ((endlessBuffs[buff] ?: 0) + 1).coerceAtMost(buff.maxStacks)
         var next = copy(
             endlessBuffs = endlessBuffs + (buff to stacks),
-            message = "Ulepszenie: ${buff.title}! ${buff.description}"
+            message = "Upgrade: ${buff.title}! ${buff.description}"
         )
 
         val hpBonus = when (buff) {
@@ -1516,7 +1946,7 @@ class BattleViewModel(
             rewardCoins = banked,
             rewardSaved = true,
             runSummary = summary,
-            message = "Walka wygrana! Zgarniasz caly lup - $banked monet."
+            message = "Battle won! You claim all the loot - $banked coins."
         )
     }
 
@@ -1541,7 +1971,7 @@ class BattleViewModel(
             rewardCoins = banked,
             rewardSaved = true,
             runSummary = summary,
-            message = "Druzyna padla na fali $wave. Ratujesz $banked z $bagTotal monet w sakwie (25%)."
+            message = "The party fell on wave $wave. You save $banked of $bagTotal coins from your bag (25%)."
         )
     }
 
@@ -1592,11 +2022,9 @@ class BattleViewModel(
             savedMonsterStars = player.monsterStars
             savedSpellLevels = player.monsterSpellLevels
             heroStats = player.progress.stats
-            // Pasek zdolnosci: ustawienia z ogniska (RunModifiers) maja pierwszenstwo nad zapisem z EQ.
-            val weights = runSession.modifiers.spellWeightOverride ?: player.spellWeights
-            heroAbility = weights.entries.fold(
-                AbilityLoadout(capacity = AbilityLoadout.BASE_CAPACITY + runSession.modifiers.bonusSpellCapacity)
-            ) { bar, (id, percent) -> bar.withPercent(id, percent) }
+            talentBonuses = TalentRules.bonusesOf(player.talentRanks)
+            // Zaklecia bohatera i ich szanse biora sie w calosci z drzewka talentow.
+            heroSpellChances = talentBonuses.spellChances
             _uiState.update { current ->
                 // Dopoki trwa intro, prawdziwa druzyna (dopiero co wczytana z repo) musi wejsc
                 // tak samo ukryta jak placeholder z createInitialState - inaczej wyskoczylaby od
@@ -1605,7 +2033,8 @@ class BattleViewModel(
                 val stillIntro = current.phase == GamePhase.Intro
                 val players = buildPlayerParty().map { it.toUiModel().copy(approach = if (stillIntro) 1f else 0f) }
                 current.copy(characters = buildWave(current.wave, players, autoStagger = !stillIntro))
-                    .applyEquipmentBonuses(player.equipment)
+                    .applyTalentBuffs()
+                    .applyEquipmentBonuses(player.equipment, player.appearance, player.itemUpgrades)
                     .applyPersistedHp()
             }
         }
@@ -1618,12 +2047,37 @@ class BattleViewModel(
      *
      * Liczba zdobytych poziomow wraca do stanu, zeby ekran koncowy mogl pokazac "AWANS".
      */
+    /**
+     * Pytanie ze slowek trafia z powrotem na fiszke: seria, liczniki i awans do archiwum
+     * "opanowane" (patrz [com.lernhero.domain.reading.VocabularyDeck]). Pytania z wbudowanego
+     * banku nie maja id fiszki i po prostu tedy nie przechodza.
+     *
+     * Zapis leci osobno od [submitRunResult], bo dotyczy JEDNEJ odpowiedzi, a nie calego runu -
+     * gracz musi zobaczyc przesuniete liczniki nawet wtedy, gdy walke przerwie w polowie.
+     */
+    private fun recordSavedWordAnswer(quizEntryId: String, correct: Boolean) {
+        val wordId = WordQuizBank.savedWordIdOf(quizEntryId) ?: return
+        val now = Clock.System.now().toEpochMilliseconds()
+        viewModelScope.launch(Dispatchers.IO) {
+            playerRepository.recordWordAnswer(wordId, correct, now)
+        }
+    }
+
     private fun submitRunResult(summary: RunStats) {
         viewModelScope.launch(Dispatchers.IO) {
             val before = playerRepository.getPlayer()?.progress?.level ?: 1
             val after = playerRepository.applyRunResult(summary)?.progress?.level ?: before
             val gained = (after - before).coerceAtLeast(0)
             if (gained > 0) _uiState.update { it.copy(levelsGained = gained) }
+
+            // Zaliczenie planszy kampanii idzie TYM SAMYM zapisem co reszta wyniku, od razu po
+            // wygranej. Wczesniej robil to ekran druzyny dopiero po powrocie z walki i scigal sie
+            // z jego wlasnym refresh() - przez co kazda plansze trzeba bylo przechodzic 2x, zanim
+            // "kliknela".
+            val storyStage = runSession.activeStoryStage
+            if (summary.won && !request.isEndless && storyStage != null) {
+                playerRepository.clearStoryStage(runSession.difficulty.name, storyStage)
+            }
         }
     }
 
@@ -1681,8 +2135,28 @@ class BattleViewModel(
             }
 
             delay(PRE_QUIZ_REVEAL_PAUSE_MS)
-            _uiState.update { state ->
-                state.copy(phase = GamePhase.Battle, quiz = drawNextQuestion(state.wave), message = "Fala nadciaga...")
+            if (isBossDuel) {
+                // Walka z bossem nie ma zwyklego quizu tury - od razu rusza jego pierwszy atak
+                // specjalny (patrz [beginBossTurn]).
+                _uiState.update { state ->
+                    state.copy(phase = GamePhase.Battle, turnPhase = TurnPhase.Resolving, message = "The boss enters the fight...")
+                }
+                beginBossTurn()
+            } else if (categoryPickEnabled) {
+                // Kampania: pierwsza tura tez zaczyna sie od wyboru tematu, a nie od gotowego pytania.
+                _uiState.update { state ->
+                    state.copy(
+                        phase = GamePhase.Battle,
+                        turnPhase = TurnPhase.CategoryPick,
+                        categoryOffer = CategoryOffer.roll(quizRandom),
+                        quiz = null,
+                        message = "Wave incoming..."
+                    )
+                }
+            } else {
+                _uiState.update { state ->
+                    state.copy(phase = GamePhase.Battle, quiz = drawNextQuestion(state.wave), message = "Wave incoming...")
+                }
             }
         }
     }
@@ -1712,18 +2186,39 @@ class BattleViewModel(
             runSession.difficulty.coinMultiplier).roundToInt().coerceAtLeast(5)
 
     /**
+     * Wpuszcza staki z drzewka talentow do [BattleUiState.endlessBuffs].
+     *
+     * To jest caly "silnik" talentow bojowych: mapa bonusow byla juz czytana bezwarunkowo przez
+     * cala walke (endless tylko ja ZAPELNIAL kartami), wiec talenty po prostu ustawiaja jej stan
+     * poczatkowy. Karty z biegu doliczaja sie normalnie na wierzch - a sufit [EndlessBuff.maxStacks]
+     * pilnuje, zeby suma nie przebila granicy, ktora silnik uznaje za maksimum.
+     */
+    private fun BattleUiState.applyTalentBuffs(): BattleUiState {
+        if (talentBonuses.buffStacks.isEmpty()) return this
+        val merged = endlessBuffs.toMutableMap()
+        talentBonuses.buffStacks.forEach { (buff, stacks) ->
+            merged[buff] = ((merged[buff] ?: 0) + stacks).coerceAtMost(buff.maxStacks)
+        }
+        return copy(endlessBuffs = merged)
+    }
+
+    /**
      * Ekwipunek gracza wchodzi do walki jako proste bonusy do ataku/HP - efekty specjalne
      * (rozciecie na dwoch wrogow, odbicie, zaklecia z paska zdolnosci) czekaja na kolejna iteracje,
      * bo silnik czasu rzeczywistego jeszcze ich nie rozumie.
      */
-    private fun BattleUiState.applyEquipmentBonuses(equipment: PlayerEquipment): BattleUiState {
-        val loadout = equipment.toLoadout()
+    private fun BattleUiState.applyEquipmentBonuses(
+        equipment: PlayerEquipment,
+        appearance: HeroAppearance,
+        itemUpgrades: Map<String, Int>
+    ): BattleUiState {
+        val loadout = equipment.toLoadout(itemUpgrades)
         val runMods = runSession.modifiers
         // Statystyki z awansow ([HeroStat.Strength]/[HeroStat.Vitality]) dzialaja na CALA druzyne -
         // to bohater prowadzi wyprawe, wiec jego rozwoj podnosi tez kompanow. Ekwipunek i perki
         // z runu zostaja przy samym bohaterze, tak jak dotad.
-        val partyHpBonus = heroStats.maxHpBonus
-        val partyAttackBonus = heroStats.attackBonus
+        val partyHpBonus = heroStats.maxHpBonus + talentBonuses.maxHp
+        val partyAttackBonus = heroStats.attackBonus + talentBonuses.attack
         val hpBonus = loadout.stats[StatType.MaxHp].toInt() + runMods.bonusMaxHp + partyHpBonus
         val attackBonus = loadout.stats[StatType.Attack].toInt() + runMods.bonusAttack + partyAttackBonus
 
@@ -1743,6 +2238,7 @@ class BattleViewModel(
                     maxHp = character.maxHp + hpBonus,
                     hp = character.hp + hpBonus,
                     attack = character.attack + attackBonus,
+                    heroLook = HeroLook.of(appearance),
                     knightEquipment = KnightEquipment(
                         head = equipment.itemIn(ItemSlot.Head) != null,
                         chest = equipment.itemIn(ItemSlot.Chest) != null,
@@ -1799,6 +2295,50 @@ class BattleViewModel(
             category = category.label,
             reward = difficulty.reward
         )
+    }
+
+    /** [MultiSelectEntry.correct] i `.wrong` sa w banku rozdzielone - tu je laczymy i tasujemy. */
+    private fun MultiSelectEntry.toUiQuestion(): QuizQuestion = MultiSelectQuestion(
+        id = id,
+        prompt = prompt,
+        options = (correct.map { it to true } + wrong.map { it to false })
+            .shuffled(Random.Default)
+            .map { (text, isCorrect) ->
+                MultiSelectOption(id = text, text = text, isCorrect = isCorrect)
+            },
+        difficulty = difficulty.label,
+        category = category.label,
+        reward = difficulty.reward
+    )
+
+    /** Przelacza jedna opcje w pytaniu wielokrotnego wyboru - rozstrzygniecie dopiero po ZATWIERDZ. */
+    fun toggleMultiSelect(optionId: String) {
+        _uiState.update { state ->
+            val quiz = state.quiz ?: return@update state
+            if (quiz.revealed || quiz.question !is MultiSelectQuestion) return@update state
+            val next = if (optionId in quiz.multiSelection) {
+                quiz.multiSelection - optionId
+            } else {
+                quiz.multiSelection + optionId
+            }
+            state.copy(quiz = quiz.copy(multiSelection = next))
+        }
+    }
+
+    /** Gracz zatwierdzil komplet zaznaczen - stad dalej idzie ta sama sciezka co inne typy pytan. */
+    fun confirmMultiSelect() {
+        _uiState.update { state ->
+            val quiz = state.quiz ?: return@update state
+            val question = quiz.question as? MultiSelectQuestion ?: return@update state
+            if (state.phase != GamePhase.Battle || quiz.revealed) return@update state
+
+            val revealed = quiz.copy(revealed = true)
+            state.resolveQuizOutcome(
+                quiz = revealed,
+                isCorrect = revealed.answeredCorrectly,
+                reward = question.reward
+            )
+        }
     }
 
     private fun buildPlayerParty(): List<CharacterTemplate> {
@@ -1883,7 +2423,7 @@ class BattleViewModel(
             val attack = (baseAttack * difficulty.enemyAttackMultiplier * levelAttackMultiplier(level) * archetype.second).roundToInt()
             CharacterTemplate(
                 id = "ENEMY_${wave}_$number",
-                name = "Potwor $number",
+                name = "Monster $number",
                 isPlayer = false,
                 avatar = species,
                 hp = hp,
@@ -1908,12 +2448,12 @@ class BattleViewModel(
         val archetype = SPECIES_STAT_MULTIPLIER[species] ?: (1f to 1f)
         val baseHp = ENEMY_BASE_HP + (wave - 1) * ENEMY_HP_PER_WAVE
         val baseAttack = ENEMY_BASE_ATTACK + (wave - 1) * ENEMY_ATTACK_PER_WAVE
-        val hp = (baseHp * difficulty.enemyHpMultiplier * levelHpMultiplier(level) * archetype.first * hpMultiplier).roundToInt()
+        val hp = (baseHp * difficulty.enemyHpMultiplier * levelHpMultiplier(level) * archetype.first * hpMultiplier * request.enemyHpMultiplier).roundToInt()
         val attack = (baseAttack * difficulty.enemyAttackMultiplier * levelAttackMultiplier(level) * archetype.second * attackMultiplier).roundToInt()
 
         return CharacterTemplate(
             id = if (isBoss) "BOSS_$wave" else "ELITE_$wave",
-            name = if (isBoss) "Bos lochu" else "Elitarny lowca",
+            name = if (isBoss) "Dungeon Boss" else "Elite Hunter",
             isPlayer = false,
             avatar = species,
             hp = hp,
@@ -1932,8 +2472,16 @@ class BattleViewModel(
             attack = attack,
             isPlayer = isPlayer,
             avatarKey = avatar,
+            // Zywiol bierze sie z KARTY o tym samym kluczu - gatunki wrogow ([EnemySpecies.all])
+            // i id kompanow to ten sam zbior, wiec nie trzeba przepychac typu przez szablony.
+            element = MonsterCatalog.byId(avatar)?.element,
             knightEquipment = if (id == HERO_ID) KnightEquipment.Empty else null,
-            battleScale = avatarBattleScale(avatar) * (if (isElite) ELITE_SCALE_MULTIPLIER else 1f)
+            battleScale = when {
+                // Boss ma byc kolosem - stoi znacznie wiecej niz elita, wystajac sylwetka poza pole.
+                avatar == EnemySpecies.BOSS_SPECIES -> BOSS_BATTLE_SCALE
+                isElite -> avatarBattleScale(avatar) * ELITE_SCALE_MULTIPLIER
+                else -> avatarBattleScale(avatar)
+            }
         )
 
     private fun avatarBattleScale(avatar: String): Float = when (avatar) {
@@ -2106,8 +2654,16 @@ private const val ELITE_ATTACK_MULTIPLIER = 1.6f
 private const val BOSS_HP_MULTIPLIER = 6f
 private const val BOSS_ATTACK_MULTIPLIER = 2.1f
 
-/** Dodatkowe przeskalowanie sylwetki elity/bossa ponad zwykle [BattleViewModel.avatarBattleScale]. */
+/** Dodatkowe przeskalowanie sylwetki elity ponad zwykle [BattleViewModel.avatarBattleScale]. */
 private const val ELITE_SCALE_MULTIPLIER = 2.2f
+
+/**
+ * Skala sylwetki bossa na polu bitwy. Dawniej mnoznik bossa (3.3) i tak byl przycinany przez
+ * constrainty karty formacji do ~1x - teraz sprite rysowany jest [requiredSize] (patrz
+ * [com.lernhero.game.character.MonsterCharacter] param `unbounded`), wiec ta liczba dziala wprost:
+ * ~4x wiekszy niz zwykly potwor, sylwetka wychodzi poza krawedz pola.
+ */
+private const val BOSS_BATTLE_SCALE = 3f
 
 /** Gatunki losowane na zwyklych wrogow fali oraz elite (boss ma zawsze [MonsterCatalog] wlasny, staly avatar). */
 /** Gatunki i archetypy wroga - patrz [EnemySpecies], dzielone z podgladem plansz kampanii. */
@@ -2171,9 +2727,52 @@ private const val BOSS_STUN_GAMBLE_CHANCE = 0.10f
 private const val BOSS_HEAL_MAX_FRACTION = 0.30f
 private const val BOSS_POISON_MAX_FRACTION = 0.10f
 
+/**
+ * Fatalny quiz przy zdarzeniu [com.lernhero.game.battle.BossEventKind.Strike]: kazdy bohater
+ * przyjmuje tyle razy atak bossa. Idealny quiz sprowadza to do zera.
+ */
+private const val BOSS_STRIKE_MAX_ATTACK_MULTIPLIER = 1.4f
+
+/**
+ * Pula zdarzen w pojedynku z bossem ([BattleViewModel.isBossDuel]) - losowana po rowno przy kazdej
+ * jego turze. To jedyne, czym boss dziala na druzyne; zwyklych ciosow nie zadaje.
+ */
+private val BOSS_DUEL_EVENTS = BossEventKind.entries
+
 /** Ile trwa "przeczytanie" wyniku zaklecia bossa, zanim overlay zniknie i walka rusza dalej. */
 /** Dluzej niz dawniej - teraz w tym oknie widac tez zgadywana wartosc na tle poprawnej, nie tylko werdykt. */
-private const val BOSS_EVENT_REVEAL_MILLIS = 2600L
+/** Ile boss laduje atak, zanim wjedzie quiz - czas na zobaczenie, co szykuje i o jaka stawke gra. */
+/** Jak czesto zamiast zwyklego pytania wypada "zaznacz wszystkie prawdziwe". */
+private const val MULTI_SELECT_QUESTION_CHANCE = 0.22f
+
+private const val BOSS_EVENT_CHARGE_MS = 2200L
+
+/** Ile trwa werdykt (poprawna wartosc, zgadywana, redukcja) - licznik w tym czasie zjezdza do wyniku. */
+private const val BOSS_EVENT_JUDGING_MS = 2400L
+
+/**
+ * Ile zaklecia laduje sie od razu, niezaleznie od czasu. Bez tej podlogi natychmiastowa odpowiedz
+ * kasowalaby atak do zera i celnosc przestalaby cokolwiek znaczyc.
+ */
+private const val BOSS_TIME_FLOOR = 0.28f
+
+/** Mnoznik przy IDEALNIE trafionej odpowiedzi - zaklecie niemal gasnie. */
+private const val BOSS_ACCURACY_BEST_MULTIPLIER = 0.1f
+
+/** Mnoznik przy calkowitym pudle - odpowiedz realnie WZMACNIA cios (stad "+190%" na werdykcie). */
+private const val BOSS_ACCURACY_WORST_MULTIPLIER = 2.9f
+
+/** Najwieksza czesc druzyny, jaka moze zostac ogluszona - reszta zawsze ma sie czym bronic. */
+private const val BOSS_STUN_MAX_FRACTION = 0.85f
+
+/** Ponizej tego progu zaklecie ogluszenia liczy sie za przerwane. */
+private const val BOSS_STUN_INTERRUPT_THRESHOLD = 0.12f
+
+/** Jak mocno pysk bossa najezdza na ekran podczas zdarzenia specjalnego. */
+private const val BOSS_EVENT_CAMERA_ZOOM = 1.75f
+
+/** Ile trwa kulminacja: lot kuli z pyska w cel. */
+private const val BOSS_EVENT_PAYOFF_MS = 1300L
 
 /** Ile milisekund "czasu gry" dolicza kazda zakonczona tura - od tego zalezy wygasanie [CYCLE_BUFF_DURATION_MS]. */
 private const val TURN_DURATION_ESTIMATE_MS = 4000L

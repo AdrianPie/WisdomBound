@@ -36,11 +36,14 @@ class StoryStageTest {
     }
 
     @Test
-    fun `co piata plansza po drodze tez jest bossem`() {
-        assertTrue(StoryStageCatalog.isBossStage(5, 15))
-        assertTrue(StoryStageCatalog.isBossStage(10, 15))
-        assertFalse(StoryStageCatalog.isBossStage(4, 15))
-        assertFalse(StoryStageCatalog.isBossStage(6, 15))
+    fun `tylko ostatnia plansza krainy jest bossem`() {
+        (1 until 6).forEach { assertFalse(StoryStageCatalog.isBossStage(it, 6), "plansza $it nie powinna byc bossem") }
+        assertTrue(StoryStageCatalog.isBossStage(6, 6))
+    }
+
+    @Test
+    fun `kraina ma szesc plansz`() {
+        StoryWorldCatalog.all.forEach { assertEquals(6, it.stageCount) }
     }
 
     @Test

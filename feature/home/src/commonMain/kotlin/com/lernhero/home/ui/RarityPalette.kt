@@ -20,11 +20,11 @@ object RarityPalette {
     fun glow(rarity: Rarity): Color = frame(rarity).copy(alpha = 0.35f)
 
     fun label(rarity: Rarity): String = when (rarity) {
-        Rarity.Common -> "Zwykly"
-        Rarity.Uncommon -> "Niezwykly"
-        Rarity.Rare -> "Rzadki"
-        Rarity.Epic -> "Epicki"
-        Rarity.Legendary -> "Legendarny"
+        Rarity.Common -> "Common"
+        Rarity.Uncommon -> "Uncommon"
+        Rarity.Rare -> "Rare"
+        Rarity.Epic -> "Epic"
+        Rarity.Legendary -> "Legendary"
     }
 
     /** Soft vertical gradient used behind rarity cards. */

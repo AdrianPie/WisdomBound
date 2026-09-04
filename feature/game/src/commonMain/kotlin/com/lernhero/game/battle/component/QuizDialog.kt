@@ -50,6 +50,7 @@ import com.lernhero.domain.combat.live.AnswerTimer
 import com.lernhero.domain.combat.live.StreakTracker
 import com.lernhero.game.battle.BattleUiState
 import com.lernhero.game.battle.LiveQuizState
+import com.lernhero.game.battle.MultiSelectQuestion
 import com.lernhero.game.battle.MultipleChoiceQuestion
 import com.lernhero.game.battle.OrderingQuestion
 import com.lernhero.game.battle.QuizAnswer
@@ -117,6 +118,8 @@ fun LiveQuizBar(
     state: BattleUiState,
     onAnswer: (String) -> Unit,
     onOrderPick: (String) -> Unit,
+    onMultiToggle: (String) -> Unit,
+    onMultiConfirm: () -> Unit,
     onContinue: () -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -225,6 +228,7 @@ fun LiveQuizBar(
                         val optionCount = when (question) {
                             is MultipleChoiceQuestion -> question.answers.size
                             is OrderingQuestion -> question.items.size
+                            is MultiSelectQuestion -> question.options.size
                         }
                         delay(QUESTION_LEAD_MILLIS)
                         repeat(optionCount) {
@@ -285,6 +289,46 @@ fun LiveQuizBar(
                                 )
                             }
                         }
+
+                        // "Zaznacz wszystkie prawdziwe" - w odroznieniu od pozostalych typow nic
+                        // nie rozstrzyga sie samo: gracz przelacza dowolna liczbe opcji i dopiero
+                        // ZATWIERDZ konczy ture. Po odsłonieciu widac komplet - co bylo poprawne,
+                        // co gracz przeoczyl i co zaznaczyl niepotrzebnie.
+                        is MultiSelectQuestion -> question.options.forEachIndexed { index, option ->
+                            AnimatedVisibility(
+                                visible = index < visibleCount,
+                                enter = fadeIn(tween(TILE_ENTER_MILLIS, easing = EaseOutCubic)) +
+                                    slideInHorizontally(
+                                        animationSpec = tween(TILE_ENTER_MILLIS, easing = EaseOutCubic)
+                                    ) { fullWidth -> fullWidth / 2 }
+                            ) {
+                                val picked = option.id in quiz.multiSelection
+                                val visual = when {
+                                    !quiz.revealed -> if (picked) OptionVisual.SELECTED else OptionVisual.IDLE
+                                    option.isCorrect -> OptionVisual.CORRECT
+                                    picked -> OptionVisual.WRONG
+                                    else -> OptionVisual.FADED
+                                }
+                                QuizOptionTile(
+                                    label = if (picked) "✔" else itemLabel(index),
+                                    badgeColor = OptionColors[index % OptionColors.size],
+                                    text = option.text,
+                                    visual = visual,
+                                    enabled = !quiz.revealed,
+                                    onClick = { onMultiToggle(option.id) },
+                                    modifier = Modifier.fillMaxWidth()
+                                )
+                            }
+                        }
+                    }
+
+                    if (question is MultiSelectQuestion && !quiz.revealed) {
+                        val picked = quiz.multiSelection.size
+                        MultiSelectConfirm(
+                            pickedCount = picked,
+                            enabled = picked > 0,
+                            onConfirm = onMultiConfirm
+                        )
                     }
                 }
             }
@@ -379,6 +423,34 @@ private fun itemLabel(displayIndex: Int): String = ('A' + displayIndex).toString
 private fun revealCorrectText(question: QuizQuestion, quiz: LiveQuizState): String = when (question) {
     is MultipleChoiceQuestion -> quiz.correctAnswer?.text.orEmpty()
     is OrderingQuestion -> question.items.sortedBy { it.correctPosition }.joinToString(" → ") { it.text }
+    is MultiSelectQuestion -> question.options.filter { it.isCorrect }.joinToString(", ") { it.text }
+}
+
+/**
+ * Przycisk konczacy pytanie wielokrotnego wyboru. Licznik zaznaczen jest tu celowo: przy szescioma
+ * i wiecej opcjami latwo zgubic rachube, ile sie juz kliknelo.
+ */
+@Composable
+private fun MultiSelectConfirm(pickedCount: Int, enabled: Boolean, onConfirm: () -> Unit) {
+    val accent = if (enabled) Color(0xFF22A55E) else Color(0xFF7A6A4A)
+    Box(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(top = 4.dp)
+            .clip(RoundedCornerShape(14.dp))
+            .background(accent)
+            .then(if (enabled) Modifier.clickable(onClick = onConfirm) else Modifier)
+            .padding(vertical = 12.dp),
+        contentAlignment = Alignment.Center
+    ) {
+        Text(
+            text = if (pickedCount > 0) "ZATWIERDZ ($pickedCount)" else "ZAZNACZ ODPOWIEDZI",
+            color = Color.White,
+            fontFamily = FontFirst(),
+            fontWeight = FontWeight.Bold,
+            fontSize = 13.sp
+        )
+    }
 }
 
 /**
@@ -603,7 +675,7 @@ fun ResolvingStrip(state: BattleUiState, modifier: Modifier = Modifier) {
         ) {
             StreakPipRow(streak = state.streak)
             Text(
-                text = state.message ?: "Wymiana ciosow...",
+                text = state.message ?: "Exchanging blows...",
                 color = InkStrong,
                 fontFamily = FontFirst(),
                 fontWeight = FontWeight.Bold,
@@ -660,9 +732,9 @@ private fun QuizBadge(text: String, color: Color) {
 
 /** Im wyzszy szczebel drabinki, tym cieplejszy kolor - jak w Milionerach. */
 private fun difficultyColor(label: String): Color = when (label) {
-    "Latwe" -> Color(0xFF22A55E)
-    "Srednie" -> Color(0xFFE0A93A)
-    "Trudne" -> Color(0xFFE08A2F)
+    "Easy" -> Color(0xFF22A55E)
+    "Medium" -> Color(0xFFE0A93A)
+    "Hard" -> Color(0xFFE08A2F)
     else -> Color(0xFFD1453D)
 }
 
@@ -769,7 +841,7 @@ private fun RevealBanner(
     reward: Int
 ) {
     val color = if (correct) AnswerGreen else AnswerRed
-    val text = if (correct) "Dobrze! +$reward pkt" else "Zle. Poprawna: $correctText"
+    val text = if (correct) "Correct! +$reward pts" else "Wrong. Correct answer: $correctText"
 
     Box(
         modifier = Modifier

@@ -5,14 +5,17 @@ import androidx.lifecycle.viewModelScope
 import com.lernhero.domain.repository.PlayerRepository
 import com.lernhero.domain.item.Item
 import com.lernhero.domain.item.ItemCatalog
+import com.lernhero.domain.item.catalog.MonsterGear
 import com.lernhero.domain.item.ItemSlot
 import com.lernhero.domain.item.equip
 import com.lernhero.domain.item.itemIn
 import com.lernhero.domain.item.migrated
+import com.lernhero.domain.craft.ItemUpgrades
 import com.lernhero.domain.item.toLoadout
 import com.lernhero.domain.item.unequip
 import com.lernhero.domain.monster.MonsterCard
 import com.lernhero.domain.monster.MonsterCatalog
+import com.lernhero.domain.monster.MonsterEquipment
 import com.lernhero.domain.monster.CompanionSpell
 import com.lernhero.domain.monster.MonsterLevels
 import com.lernhero.domain.monster.MonsterSpellLevels
@@ -28,9 +31,12 @@ import com.lernhero.domain.progress.GameStats
 import com.lernhero.domain.progress.RunStats
 import com.lernhero.domain.reading.SavedWord
 import com.lernhero.domain.town.TownResources
-import com.lernhero.domain.spell.AbilityLoadout
-import com.lernhero.domain.spell.Spell
-import com.lernhero.domain.spell.SpellCatalog
+import com.lernhero.domain.talent.Talent
+import com.lernhero.domain.talent.TalentBonuses
+import com.lernhero.domain.talent.TalentRules
+import com.lernhero.domain.talent.TalentTree
+import com.lernhero.domain.player.HeroAppearance
+import com.lernhero.game.character.HeroLook
 import com.lernhero.game.character.KnightEquipment
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.IO
@@ -39,8 +45,12 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 
-/** Number of companion slots next to the hero in the pre-battle party. */
-const val COMPANION_SLOTS = 2
+/**
+ * Miejsca na kompanow obok bohatera. Cala druzyna to SZESC postaci, a bohater zajmuje jedno
+ * miejsce - stad piec, a nie szesc. Walka bierze sklad wprost z tej listy, wiec sama liczba
+ * wystarczy, zeby na polu bitwy stanelo szesciu swoich.
+ */
+const val COMPANION_SLOTS = 5
 
 /**
  * Jedna pozycja kolekcji kompanow: karta, ile sztuk, jaki poziom, ile gwiazdek i ile z nich stoi
@@ -82,9 +92,17 @@ data class OwnedMonster(
 data class PlayerUiState(
     val loading: Boolean = true,
     val name: String = "",
+    /** Wyglad wybrany przy tworzeniu postaci - z niego biora sie kolory rysowanego bohatera. */
+    val appearance: HeroAppearance = HeroAppearance(),
     val money: Int = 0,
     val equipment: PlayerEquipment = PlayerEquipment(),
     val ownedItems: List<String> = emptyList(),
+    /** Poziomy ulepszen przedmiotow (id -> 0..10) - patrz [ItemUpgrades]. */
+    val itemUpgrades: Map<String, Int> = emptyMap(),
+    /** Sprzet kompanow - osobna pula od plecaka bohatera, patrz [MonsterGear]. */
+    val ownedMonsterItems: List<String> = emptyList(),
+    /** Ekwipunek kompanow: idKarty -> (slot -> id przedmiotu). Patrz [MonsterEquipment]. */
+    val monsterEquipment: Map<String, Map<String, String>> = emptyMap(),
     val ownedMonsters: List<String> = emptyList(),
     /** Poziom kompana per karta (brak wpisu = [MonsterLevels.MIN_LEVEL]). */
     val monsterLevels: Map<String, Int> = emptyMap(),
@@ -93,8 +111,10 @@ data class PlayerUiState(
     /** Poziomy zaklec kompanow ("idKarty:idZaklecia" -> poziom). */
     val monsterSpellLevels: Map<String, Int> = emptyMap(),
     val party: List<String?> = List(COMPANION_SLOTS) { null },
-    val ownedSpells: List<String> = emptyList(),
-    val spellWeights: Map<String, Int> = emptyMap(),
+    /** Kiedy ostatnio odebrano darmowy summon per banner - patrz [com.lernhero.domain.summon.FreeSummon]. */
+    val freeSummonClaims: Map<String, Long> = emptyMap(),
+    /** Wykupione stopnie talentow (id wezla -> stopien) - patrz [TalentRules]. */
+    val talentRanks: Map<String, Int> = emptyMap(),
     /** Postep w kampanii per tier trudnosci - patrz [StoryProgress]. */
     val storyProgress: Map<String, Int> = emptyMap(),
     /** Kiedy ostatnio odebrano nagrody idle (epoch millis, 0 = nigdy) - patrz [IdleRewards]. */
@@ -109,21 +129,13 @@ data class PlayerUiState(
     val savedWords: List<SavedWord> = emptyList(),
     val message: String? = null
 ) {
-    /** Pasek zdolnosci: pojemnosc bazowa + wagi zaklec. Docina sie sam, wiec suma <= pojemnosci. */
-    val ability: AbilityLoadout
-        get() = spellWeights.entries
-            .fold(AbilityLoadout(capacity = AbilityLoadout.BASE_CAPACITY)) { bar, (id, pct) ->
-                bar.withPercent(id, pct)
-            }
-
-    /** Zaklecia, ktore gracz posiada (do paska w EQ). */
-    val spells: List<Spell>
-        get() = ownedSpells.mapNotNull { SpellCatalog.byId(it) }
-
     /**
      * Rycerz na ekranie rysuje sie z plyt, wiec interesuje go tylko to, czy w slocie cokolwiek
      * stoi - nie ktory to przedmiot. Tlumaczenie modelu domenowego na model rysowania siedzi tutaj.
      */
+    val heroLook: HeroLook
+        get() = HeroLook.of(appearance)
+
     val knightEquipment: KnightEquipment
         get() = KnightEquipment(
             head = equipment.itemIn(ItemSlot.Head) != null,
@@ -139,7 +151,17 @@ data class PlayerUiState(
      * ekwipunku i punktow z awansow, wiec karta postaci pokazuje dokladnie to, czym walczy walka.
      */
     val combatStats: HeroCombatStats
-        get() = HeroCombatStats.of(equipment.toLoadout().stats, progress.stats)
+        get() = HeroCombatStats.of(equipment.toLoadout(itemUpgrades).stats, progress.stats, talentBonuses)
+
+    /** Zsumowane efekty drzewka - ekran talentow pokazuje z tego podsumowanie na dole. */
+    val talentBonuses: TalentBonuses
+        get() = TalentRules.bonusesOf(talentRanks)
+
+    /** Nierozdane punkty talentow - liczone z poziomu, nie przechowywane osobno. */
+    val talentPoints: Int get() = TalentRules.availablePoints(progress.level, talentRanks)
+
+    /** Ile punktow siedzi w danym drzewku - progi rzedow licza sie wlasnie z tego. */
+    fun talentPointsIn(tree: TalentTree): Int = TalentRules.pointsIn(talentRanks, tree)
 
     /** Wszystko, co gracz kupil. */
     val ownedEquipment: List<Item>
@@ -193,12 +215,19 @@ data class PlayerUiState(
             }
             .sortedWith(compareByDescending<OwnedMonster> { it.card.rarity.ordinal }.thenBy { it.card.name })
 
-    /** Owned monsters not currently placed in the party (respects duplicate ownership). */
+    /**
+     * Owned monsters available to add to the party. Each distinct companion can stand in the party
+     * only ONCE, so any id already placed is dropped from the picker entirely - duplicate copies
+     * stay in the Collection (to sell or level), they are not extra party bodies.
+     */
     val companionInventory: List<MonsterCard>
         get() {
-            val remaining = ownedMonsters.toMutableList()
-            party.filterNotNull().forEach { remaining.remove(it) }
-            return remaining.mapNotNull { MonsterCatalog.byId(it) }
+            val inParty = party.filterNotNull().toSet()
+            return ownedMonsters.asSequence()
+                .distinct()
+                .filter { it !in inParty }
+                .mapNotNull { MonsterCatalog.byId(it) }
+                .toList()
         }
 }
 
@@ -223,17 +252,21 @@ class PlayerViewModel(
                     state.copy(
                         loading = false,
                         name = player.name.orEmpty(),
+                        appearance = player.appearance,
                         money = player.money,
                         // Stary zapis (piec flag) przerabiamy na mape slot -> przedmiot od razu przy wczytaniu.
                         equipment = player.equipment.migrated(),
                         ownedItems = player.ownedItems,
+                        itemUpgrades = player.itemUpgrades,
+                        ownedMonsterItems = player.ownedMonsterItems,
+                        monsterEquipment = player.monsterEquipment,
                         ownedMonsters = player.ownedMonsters,
                         monsterLevels = player.monsterLevels,
                         monsterStars = player.monsterStars,
                         monsterSpellLevels = player.monsterSpellLevels,
                         party = player.party.normalizedParty(),
-                        ownedSpells = player.ownedSpells,
-                        spellWeights = player.spellWeights,
+                        freeSummonClaims = player.freeSummonClaims,
+                        talentRanks = player.talentRanks,
                         storyProgress = player.storyProgress,
                         idleCollectedAt = player.idleCollectedAt,
                         progress = player.progress,
@@ -275,16 +308,18 @@ class PlayerViewModel(
 
     // region Party
 
-    /** Places an owned monster into [slotIndex]. Blocks placing more copies than are owned. */
+    /**
+     * Places an owned monster into [slotIndex]. A companion can stand in the party only once -
+     * having several copies does not let the same monster fill several slots.
+     */
     fun placeInParty(monsterId: String, slotIndex: Int) {
         if (slotIndex !in 0 until COMPANION_SLOTS) return
         val state = _uiState.value
         val party = state.party.normalizedParty().toMutableList()
 
-        val placedElsewhere = party.filterIndexed { i, id -> i != slotIndex && id == monsterId }.size
-        val owned = state.ownedMonsters.count { it == monsterId }
-        if (placedElsewhere >= owned) {
-            _uiState.update { it.copy(message = "Nie masz kolejnej kopii tego potwora.") }
+        if (state.ownedMonsters.none { it == monsterId }) return
+        if (party.filterIndexed { i, id -> i != slotIndex && id == monsterId }.isNotEmpty()) {
+            _uiState.update { it.copy(message = "Ten stronnik juz stoi w druzynie.") }
             return
         }
 
@@ -352,57 +387,7 @@ class PlayerViewModel(
 
     // endregion
 
-    // region Ability bar
-
-    /**
-     * Ustawia procent zaklecia na pasku. Model docina go do wolnej pojemnosci, wiec nigdy nie
-     * przekroczymy limitu. Zmiana zapisuje sie natychmiast, tak jak zakladanie ekwipunku.
-     */
-    fun setSpellPercent(spellId: String, percent: Int) {
-        if (spellId !in _uiState.value.ownedSpells) return
-        val next = _uiState.value.ability.withPercent(spellId, percent).weights
-        _uiState.update { it.copy(spellWeights = next, message = null) }
-        viewModelScope.launch(Dispatchers.IO) {
-            playerRepository.updateSpellWeights(next)
-        }
-    }
-
-    // endregion
-
     // region Shop
-
-    /**
-     * Odblokowuje zaklecie za esencje z lochow (dawniej zakup za zloto w sklepie). Zaklecia,
-     * przedmioty i kompani maja teraz osobne waluty i osobne budynki - patrz
-     * [com.lernhero.domain.craft.SummonCosts].
-     */
-    fun unlockSpell(spell: Spell, cost: CraftCost) {
-        val state = _uiState.value
-        if (spell.id in state.ownedSpells) {
-            _uiState.update { it.copy(message = "Masz juz to zaklecie.") }
-            return
-        }
-        if (!cost.canAfford(state.resources, state.money)) {
-            _uiState.update { it.copy(message = "Za malo esencji na to zaklecie.") }
-            return
-        }
-
-        viewModelScope.launch(Dispatchers.IO) {
-            val updated = playerRepository.unlockSpell(spell.id, cost)
-            _uiState.update { current ->
-                if (updated == null) {
-                    current.copy(message = "Nie udalo sie odblokowac zaklecia.")
-                } else {
-                    current.copy(
-                        money = updated.money,
-                        resources = updated.townResources,
-                        ownedSpells = updated.ownedSpells,
-                        message = "Odblokowano: ${spell.name}"
-                    )
-                }
-            }
-        }
-    }
 
     /**
      * Wykuwa przedmiot w Kuzni. Ekwipunku nie kupuje sie juz za zloto - jest zrobiony z materialow
@@ -410,7 +395,11 @@ class PlayerViewModel(
      */
     fun craftItem(item: Item, cost: CraftCost) {
         val state = _uiState.value
-        if (item.id in state.ownedItems) {
+        // Sprzet kompana ma WLASNA pule - sprawdzanie go w plecaku bohatera pozwalaloby wykuwac
+        // ten sam pazur w kolko (repozytorium i tak by go odrzucilo, ale bez zadnego komunikatu).
+        val ownedPool =
+            if (MonsterGear.isMonsterGear(item.id)) state.ownedMonsterItems else state.ownedItems
+        if (item.id in ownedPool) {
             _uiState.update { it.copy(message = "Masz juz ten przedmiot.") }
             return
         }
@@ -429,8 +418,51 @@ class PlayerViewModel(
                         money = updated.money,
                         resources = updated.townResources,
                         ownedItems = updated.ownedItems,
+                        ownedMonsterItems = updated.ownedMonsterItems,
                         stats = updated.stats,
                         message = "Wykuto: ${item.name}"
+                    )
+                }
+            }
+        }
+    }
+
+    /**
+     * Podnosi przedmiot o jeden poziom ulepszenia. Kosztu NIE bierzemy z ekranu - liczy go
+     * repozytorium z zapisanego poziomu, wiec podwojne tapniecie nie kupi dwa razy tego samego,
+     * najtanszego progu. Tutaj sprawdzamy tylko to, co da sie powiedziec od razu, zeby gracz
+     * dostal komunikat bez podrozy do bazy.
+     */
+    fun upgradeItem(item: Item) {
+        val state = _uiState.value
+        val ownedPool =
+            if (MonsterGear.isMonsterGear(item.id)) state.ownedMonsterItems else state.ownedItems
+        if (item.id !in ownedPool) {
+            _uiState.update { it.copy(message = "Najpierw trzeba wykuc ten przedmiot.") }
+            return
+        }
+        val level = ItemUpgrades.levelOf(state.itemUpgrades, item.id)
+        val cost = ItemUpgrades.nextCost(item, level)
+        if (cost == null) {
+            _uiState.update { it.copy(message = "To juz maksymalny poziom.") }
+            return
+        }
+        if (!cost.canAfford(state.resources, state.money)) {
+            _uiState.update { it.copy(message = "Brakuje skladnikow na ulepszenie.") }
+            return
+        }
+
+        viewModelScope.launch(Dispatchers.IO) {
+            val updated = playerRepository.upgradeItem(item.id)
+            _uiState.update { current ->
+                if (updated == null) {
+                    current.copy(message = "Ulepszanie sie nie udalo.")
+                } else {
+                    current.copy(
+                        money = updated.money,
+                        resources = updated.townResources,
+                        itemUpgrades = updated.itemUpgrades,
+                        message = "${item.name} +${ItemUpgrades.levelOf(updated.itemUpgrades, item.id)}"
                     )
                 }
             }
@@ -465,6 +497,28 @@ class PlayerViewModel(
                         } else {
                             "Przyzwano ${cards.size} kompanow"
                         }
+                    )
+                }
+            }
+        }
+    }
+
+    /**
+     * Odbiera darmowy summon danego bannera. O tym, czy licznik doszedl do zera, decyduje
+     * repozytorium - tutaj tylko przekazujemy wylosowana karte i biezacy czas.
+     */
+    fun claimFreeSummon(bannerId: String, cooldownMs: Long, card: MonsterCard, now: Long) {
+        viewModelScope.launch(Dispatchers.IO) {
+            val updated = playerRepository.claimFreeSummon(bannerId, cooldownMs, card.id, now)
+            _uiState.update { current ->
+                if (updated == null) {
+                    current.copy(message = "Darmowy summon jeszcze nie jest gotowy.")
+                } else {
+                    current.copy(
+                        ownedMonsters = updated.ownedMonsters,
+                        freeSummonClaims = updated.freeSummonClaims,
+                        stats = updated.stats,
+                        message = "Darmowy summon: ${card.name}"
                     )
                 }
             }
@@ -611,6 +665,103 @@ class PlayerViewModel(
         }
     }
 
+    /**
+     * Wykupuje jeden stopien talentu. Regul (prog rzedu, rodzic, wolny punkt) pilnuje
+     * [TalentRules] w repozytorium - tutaj jest tylko szybki odsiew, zeby nie strzelac zapytaniem
+     * po kazdym tapnieciu w zamkniety wezel.
+     */
+    fun spendTalentPoint(talent: Talent) {
+        val state = _uiState.value
+        if (!TalentRules.canSpend(talent, state.talentRanks, state.talentPoints)) return
+
+        viewModelScope.launch(Dispatchers.IO) {
+            val updated = playerRepository.spendTalentPoint(talent.id) ?: return@launch
+            _uiState.update {
+                it.copy(
+                    talentRanks = updated.talentRanks,
+                    progress = updated.progress,
+                    message = "${talent.name} ${updated.talentRanks[talent.id] ?: 0}/${talent.maxRank}"
+                )
+            }
+        }
+    }
+
+    /** Zeruje drzewko i oddaje wszystkie punkty - razem z zakleciami, ktore z niego wyszly. */
+    fun resetTalents() {
+        if (TalentRules.totalSpent(_uiState.value.talentRanks) <= 0) return
+
+        viewModelScope.launch(Dispatchers.IO) {
+            val updated = playerRepository.resetTalents() ?: return@launch
+            _uiState.update {
+                it.copy(
+                    talentRanks = updated.talentRanks,
+                    progress = updated.progress,
+                    message = "Drzewko wyzerowane - punkty wrocily."
+                )
+            }
+        }
+    }
+
+    /* ------------------------------ Ekwipunek kompanow ------------------------------ */
+
+    /** Ekwipunek jednego kompana - pusta mapa, gdy nic jeszcze nie zalozyl. */
+    fun equipmentOf(monsterId: String): Map<String, String> =
+        _uiState.value.monsterEquipment[monsterId] ?: MonsterEquipment.EMPTY
+
+    fun equipMonsterItem(monsterId: String, item: Item) {
+        val current = equipmentOf(monsterId)
+        persistMonsterEquipment(monsterId, MonsterEquipment.with(current, item), "Zalozono: ${item.name}")
+    }
+
+    fun unequipMonsterSlot(monsterId: String, slot: ItemSlot) {
+        val current = equipmentOf(monsterId)
+        if (slot.name !in current) return
+        persistMonsterEquipment(monsterId, MonsterEquipment.without(current, slot), "Gear unequipped")
+    }
+
+    /** Zdejmuje kompanowi WSZYSTKO - odpowiednik przycisku "Zdejmij" na ekranie kompana. */
+    fun unequipMonsterAll(monsterId: String) {
+        if (equipmentOf(monsterId).isEmpty()) return
+        persistMonsterEquipment(monsterId, MonsterEquipment.EMPTY, "All gear unequipped")
+    }
+
+    /**
+     * Dobiera kompanowi najlepszy dostepny sprzet do kazdego slotu. Przedmioty noszone przez
+     * INNYCH kompanow sa pomijane - pula liczy sztuki, wiec ten sam pazur nie moze wisiec
+     * na dwoch naraz.
+     */
+    fun autoEquipMonster(monsterId: String) {
+        val state = _uiState.value
+        val element = MonsterCatalog.byId(monsterId)?.element
+        val taken = MonsterEquipment.equippedElsewhere(state.monsterEquipment, monsterId)
+        val next = MonsterEquipment.autoEquip(state.ownedMonsterItems, element, taken)
+
+        if (next == equipmentOf(monsterId)) {
+            _uiState.update { it.copy(message = "Nie ma czym ulepszyc tego kompana.") }
+            return
+        }
+        persistMonsterEquipment(monsterId, next, "Gear auto-equipped")
+    }
+
+    private fun persistMonsterEquipment(
+        monsterId: String,
+        equipment: Map<String, String>,
+        message: String
+    ) {
+        // Optymistycznie: ekran ma zareagowac natychmiast, a zapis dogonic w tle. Odpowiedz
+        // z repozytorium i tak nadpisze stan, wiec rozjazd trwa najwyzej jeden oddech.
+        _uiState.update { current ->
+            val map =
+                if (equipment.isEmpty()) current.monsterEquipment - monsterId
+                else current.monsterEquipment + (monsterId to equipment)
+            current.copy(monsterEquipment = map, message = message)
+        }
+        viewModelScope.launch(Dispatchers.IO) {
+            val updated = playerRepository.updateMonsterEquipment(monsterId, equipment) ?: return@launch
+            _uiState.update { it.copy(monsterEquipment = updated.monsterEquipment) }
+        }
+    }
+
     // endregion
 
     /** Placi zlotem za zakup w lochu. Zwraca false, gdy monet nie starcza. */
@@ -718,6 +869,12 @@ class PlayerViewModel(
     }
 }
 
-/** Pads/truncates a stored party to exactly [COMPANION_SLOTS] slots. */
-private fun List<String?>.normalizedParty(): List<String?> =
-    List(COMPANION_SLOTS) { index -> getOrNull(index) }
+/**
+ * Pads/truncates a stored party to exactly [COMPANION_SLOTS] slots and drops repeated ids -
+ * a companion belongs in the party only once, and older saves may still hold duplicates.
+ */
+private fun List<String?>.normalizedParty(): List<String?> {
+    val seen = mutableSetOf<String>()
+    val unique = map { id -> if (id != null && seen.add(id)) id else null }
+    return List(COMPANION_SLOTS) { index -> unique.getOrNull(index) }
+}

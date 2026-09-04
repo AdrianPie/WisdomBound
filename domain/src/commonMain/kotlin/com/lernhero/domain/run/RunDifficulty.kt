@@ -20,32 +20,32 @@ enum class RunDifficulty(
     val coinMultiplier: Float
 ) {
     Normal(
-        label = "Normalny",
-        description = "Wyrownana walka i pytania od latwych po trudne.",
+        label = "Normal",
+        description = "Balanced fights and questions from easy to hard.",
         icon = "⚔",
         enemyHpMultiplier = 1f,
         enemyAttackMultiplier = 1f,
         coinMultiplier = 1f
     ),
     Nightmare(
-        label = "Koszmar",
-        description = "Wrogowie i pytania wyraznie mocniejsze. Odblokowany po ukonczeniu Normalnego.",
+        label = "Nightmare",
+        description = "Enemies and questions noticeably tougher. Unlocked after clearing Normal.",
         icon = "💀",
         enemyHpMultiplier = 1.5f,
         enemyAttackMultiplier = 1.35f,
         coinMultiplier = 1.6f
     ),
     Hell(
-        label = "Piekło",
-        description = "Ta sama kampania, dużo ostrzejsza. Odblokowany po ukonczeniu Koszmaru.",
+        label = "Hell",
+        description = "The same campaign, much harsher. Unlocked after clearing Nightmare.",
         icon = "👹",
         enemyHpMultiplier = 2.2f,
         enemyAttackMultiplier = 1.8f,
         coinMultiplier = 2.4f
     ),
     Death(
-        label = "Śmierć",
-        description = "Szczyt kampanii. Odblokowany po ukonczeniu Piekła.",
+        label = "Death",
+        description = "The peak of the campaign. Unlocked after clearing Hell.",
         icon = "🔥",
         enemyHpMultiplier = 3.2f,
         enemyAttackMultiplier = 2.4f,

@@ -13,6 +13,7 @@ import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.requiredSize
 import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -48,6 +49,11 @@ fun MonsterCharacter(
     modifier: Modifier = Modifier,
     sizeDp: Dp = preset.baseSizeDp,
     attackSpeed: Float = 1f,
+    /**
+     * Gdy true, sylwetka moze wyjsc poza kwadrat karty w formacji ([requiredSize] zamiast [size],
+     * ktory jest przycinany do constraintow rodzica). Uzywane dla bossa - patrz [CharacterUiModel.battleScale].
+     */
+    unbounded: Boolean = false,
     onAttackAnimationFinished: () -> Unit = {}
 ) {
     fun faster(millis: Int): Int = (millis / attackSpeed).toInt().coerceAtLeast(1)
@@ -106,7 +112,9 @@ fun MonsterCharacter(
     Box(
         // preset.visualScale kompensuje rozne puste marginesy w kazdym PNG, zeby wszystkie
         // gatunki wygladaly na ta sama wielkosc obok siebie mimo tego samego sizeDp.
-        modifier = modifier.size(sizeDp * preset.visualScale),
+        modifier = modifier.let {
+            if (unbounded) it.requiredSize(sizeDp * preset.visualScale) else it.size(sizeDp * preset.visualScale)
+        },
         contentAlignment = Alignment.BottomCenter
     ) {
         Image(

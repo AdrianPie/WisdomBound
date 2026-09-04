@@ -23,8 +23,8 @@ object Accessories {
 
     val RING_OF_FURY = Item(
         id = "ring_of_fury",
-        name = "Pierscien furii",
-        description = "Czesciej trafiasz krytycznie, a krytyki bola bardziej.",
+        name = "Ring of Fury",
+        description = "You land critical hits more often, and criticals hurt more.",
         slot = ItemSlot.Ring,
         rarity = Rarity.Rare,
         iconKey = "ring",
@@ -37,8 +37,8 @@ object Accessories {
 
     val BAND_OF_HASTE = Item(
         id = "band_of_haste",
-        name = "Obraczka pospiechu",
-        description = "Szybsze tury i krotsze przerwy miedzy zakleciami.",
+        name = "Band of Haste",
+        description = "Faster turns and shorter cooldowns between spells.",
         slot = ItemSlot.Ring,
         rarity = Rarity.Uncommon,
         iconKey = "band",
@@ -51,8 +51,8 @@ object Accessories {
 
     val AMULET_OF_FROST = Item(
         id = "amulet_of_frost",
-        name = "Amulet szronu",
-        description = "Twoje krytyki zamrazaja, a napastnicy ryzykuja przymarzniecie do ziemi.",
+        name = "Amulet of Frost",
+        description = "Your criticals freeze enemies, and attackers risk freezing to the ground.",
         slot = ItemSlot.Amulet,
         rarity = Rarity.Epic,
         iconKey = "amulet_frost",
@@ -66,15 +66,15 @@ object Accessories {
 
     val BANNER_OF_VALOR = Item(
         id = "banner_of_valor",
-        name = "Sztandar mestwa",
-        description = "Cala druzyna bije mocniej, a walka zaczyna sie od okrzyku bojowego.",
+        name = "Banner of Valor",
+        description = "The whole party hits harder, and battle opens with a war cry.",
         slot = ItemSlot.Amulet,
         rarity = Rarity.Legendary,
         iconKey = "banner",
         effects = listOf(
             AllyAuraEffect(
                 id = "aura_valor",
-                description = "Sojusznicy zyskuja +4 ataku.",
+                description = "Allies gain +4 attack.",
                 bonus = Stats.of(StatType.Attack to 4f)
             ),
             BattleCryEffect(stat = StatType.Attack, potency = 6f, turns = 3)
@@ -84,8 +84,8 @@ object Accessories {
 
     val CLOAK_OF_SHADOWS = Item(
         id = "cloak_of_shadows",
-        name = "Plaszcz cieni",
-        description = "Cios, ktory cie nie trafi, nie zrobi ci krzywdy.",
+        name = "Cloak of Shadows",
+        description = "A hit that misses you can't hurt you.",
         slot = ItemSlot.Chest,
         rarity = Rarity.Rare,
         iconKey = "cloak",

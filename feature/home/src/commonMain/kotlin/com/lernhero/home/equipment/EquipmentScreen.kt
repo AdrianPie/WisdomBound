@@ -16,6 +16,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.systemBarsPadding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -45,18 +46,17 @@ import com.lernhero.domain.item.Item
 import com.lernhero.domain.item.ItemSlot
 import com.lernhero.domain.item.toLoadout
 import com.lernhero.domain.player.PlayerEquipment
+import com.lernhero.game.character.HeroLook
 import com.lernhero.game.character.KnightEquipment
 import com.lernhero.game.character.ModularKnight
 import com.lernhero.home.player.PlayerViewModel
-import com.lernhero.domain.spell.SpellCatalog
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
 import com.lernhero.domain.player.HeroCombatStats
 import com.lernhero.domain.player.HeroStat
 import com.lernhero.domain.player.PlayerProgress
-import com.lernhero.home.ui.AbilityBar
+import com.lernhero.domain.talent.TalentRules
 import com.lernhero.home.ui.ItemDetailSheet
-import com.lernhero.home.ui.SpellUnlockPanel
 import com.lernhero.home.ui.format
 import com.lernhero.home.ui.RarityPalette
 import com.lernhero.home.ui.icon
@@ -95,7 +95,11 @@ private val RIGHT_SLOTS = listOf(ItemSlot.Hands, ItemSlot.Legs, ItemSlot.Feet)
 private val BOTTOM_SLOTS = listOf(ItemSlot.MainHand, ItemSlot.OffHand, ItemSlot.Ring)
 
 @Composable
-fun EquipmentScreen(viewModel: PlayerViewModel) {
+fun EquipmentScreen(
+    viewModel: PlayerViewModel,
+    onBack: () -> Unit,
+    onOpenTalents: () -> Unit
+) {
     val state by viewModel.uiState.collectAsState()
 
     /** Slot, dla ktorego otwarto liste posiadanych przedmiotow. */
@@ -108,10 +112,15 @@ fun EquipmentScreen(viewModel: PlayerViewModel) {
         Column(
             modifier = Modifier
                 .fillMaxSize()
+                .systemBarsPadding()
                 .verticalScroll(rememberScrollState())
                 .padding(14.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
+            // Karta postaci nie jest juz zakladka - wchodzi sie na nia z naglowka na Dom, wiec
+            // potrzebuje wlasnego powrotu.
+            BackRow(onBack = onBack)
+
             // Gora ekranu: kim jestes, na jakim poziomie i co masz do rozdania. Wczesniej stal tu
             // sam pasek z imieniem i zlotem, a poziom mieszkal w OSOBNEJ zakladce - czyli karta
             // postaci byla rozbita na dwa ekrany pokazujace te sama postac.
@@ -128,6 +137,7 @@ fun EquipmentScreen(viewModel: PlayerViewModel) {
 
             PaperDoll(
                 knight = state.knightEquipment,
+                look = state.heroLook,
                 itemAt = state::itemIn,
                 combatStats = state.combatStats,
                 onSlotClick = { slot ->
@@ -140,19 +150,11 @@ fun EquipmentScreen(viewModel: PlayerViewModel) {
 
             Backpack(items = state.backpack, onInspect = { inspected = it })
 
-            AbilityBar(
-                ability = state.ability,
-                ownedSpells = state.spells,
-                onSet = viewModel::setSpellPercent
-            )
-
-            // Zdobywanie zaklec siedzi tuz pod paskiem, na ktorym sie je przypisuje - patrz
-            // [SpellUnlockPanel] po powod, dla ktorego nie sa juz w Summon Center.
-            SpellUnlockPanel(
-                spells = SpellCatalog.all,
-                ownedSpellIds = state.ownedSpells,
-                essence = state.resources.essence,
-                onUnlock = viewModel::unlockSpell
+            // Zaklecia bierze sie teraz wylacznie z drzewka - stad wejscie do niego zamiast paska.
+            TalentEntryTile(
+                points = state.talentPoints,
+                spent = TalentRules.totalSpent(state.talentRanks),
+                onClick = onOpenTalents
             )
 
             state.message?.let { HintBar(it) }
@@ -193,7 +195,95 @@ fun EquipmentScreen(viewModel: PlayerViewModel) {
     }
 }
 
+/* ------------------------------------------ Talenty ----------------------------------------- */
+
+/**
+ * Wejscie do drzewka talentow. Swieci i pokazuje licznik, dopoki sa nierozdane punkty - awans
+ * daje je po cichu w tle walki, wiec bez tego badge'a gracz nie mialby skad wiedziec, ze cos
+ * na niego czeka.
+ */
+@Composable
+private fun TalentEntryTile(
+    points: Int,
+    spent: Int,
+    onClick: () -> Unit
+) {
+    val pending = points > 0
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(12.dp))
+            .background(if (pending) AppPalette.Gold.copy(alpha = 0.12f) else AppPalette.Panel)
+            .border(
+                width = if (pending) 2.dp else 1.dp,
+                color = if (pending) AppPalette.Gold else AppPalette.GoldFrame.copy(alpha = 0.5f),
+                shape = RoundedCornerShape(12.dp)
+            )
+            .clickable(onClick = onClick)
+            .padding(horizontal = 12.dp, vertical = 11.dp),
+        horizontalArrangement = Arrangement.spacedBy(11.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Text(text = "\uD83C\uDF33", fontSize = 24.sp)
+
+        Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(2.dp)) {
+            Text(
+                text = "Talent Tree",
+                color = AppPalette.Gold,
+                fontFamily = FontPixel(),
+                fontWeight = FontWeight.Bold,
+                fontSize = 14.sp
+            )
+            Text(
+                text = when {
+                    pending -> "You have $points pts to spend"
+                    spent > 0 -> "$spent pts spent - review or respec"
+                    else -> "Destruction, Bulwark, Light - choose your path"
+                },
+                color = if (pending) AppPalette.TextBody else AppPalette.TextMuted,
+                fontFamily = FontFirst(),
+                fontSize = 11.sp
+            )
+        }
+
+        if (pending) {
+            Box(
+                modifier = Modifier
+                    .clip(RoundedCornerShape(9.dp))
+                    .background(AppPalette.Gold)
+                    .padding(horizontal = 9.dp, vertical = 4.dp)
+            ) {
+                Text(
+                    text = "$points",
+                    color = AppPalette.Ink,
+                    fontFamily = FontPixel(),
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 13.sp
+                )
+            }
+        } else {
+            Text(text = "›", color = AppPalette.TextMuted, fontFamily = FontPixel(), fontSize = 20.sp)
+        }
+    }
+}
+
 /* ------------------------------------------ Title ------------------------------------------ */
+
+@Composable
+private fun BackRow(onBack: () -> Unit) {
+    Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
+        Box(
+            modifier = Modifier
+                .clip(RoundedCornerShape(10.dp))
+                .background(SlotBg.copy(alpha = 0.8f))
+                .border(1.5.dp, GoldDim, RoundedCornerShape(10.dp))
+                .clickable(onClick = onBack)
+                .padding(horizontal = 12.dp, vertical = 8.dp)
+        ) {
+            Text(text = "←", color = Gold, fontFamily = FontPixel(), fontSize = 15.sp)
+        }
+    }
+}
 
 @Composable
 private fun HeroHeader(name: String, money: Int, progress: PlayerProgress) {
@@ -236,7 +326,7 @@ private fun HeroHeader(name: String, money: Int, progress: PlayerProgress) {
                         overflow = TextOverflow.Ellipsis
                     )
                     Text(
-                        text = "Rycerz · ${progress.xp}/${progress.xpForNextLevel} XP",
+                        text = "Knight · ${progress.xp}/${progress.xpForNextLevel} XP",
                         color = TextBody.copy(alpha = 0.7f),
                         fontFamily = FontFirst(),
                         fontSize = 11.sp
@@ -277,7 +367,7 @@ private fun HeroStatsRow(progress: PlayerProgress, onSpend: (HeroStat) -> Unit) 
     Column(verticalArrangement = Arrangement.spacedBy(6.dp), modifier = Modifier.fillMaxWidth()) {
         if (canSpend) {
             Text(
-                text = "Masz ${progress.unspentPoints} pkt do rozdania",
+                text = "You have ${progress.unspentPoints} pts to spend",
                 color = Success,
                 fontFamily = FontFirst(),
                 fontWeight = FontWeight.Bold,
@@ -354,6 +444,7 @@ private fun StatChip(
 @Composable
 private fun PaperDoll(
     knight: KnightEquipment,
+    look: HeroLook,
     itemAt: (ItemSlot) -> Item?,
     combatStats: HeroCombatStats,
     onSlotClick: (ItemSlot) -> Unit
@@ -369,7 +460,7 @@ private fun PaperDoll(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 SlotColumn(LEFT_SLOTS, itemAt, onSlotClick)
-                Box(modifier = Modifier.weight(1f)) { Viewport(knight) }
+                Box(modifier = Modifier.weight(1f)) { Viewport(knight, look) }
                 SlotColumn(RIGHT_SLOTS, itemAt, onSlotClick)
             }
             Row(
@@ -449,7 +540,7 @@ private fun SlotColumn(
  * gorna krawedzia karty. Teraz nic nie ma prawa sie obciac.
  */
 @Composable
-private fun Viewport(knight: KnightEquipment) {
+private fun Viewport(knight: KnightEquipment, look: HeroLook) {
     Box(
         modifier = Modifier
             .fillMaxWidth()
@@ -466,6 +557,7 @@ private fun Viewport(knight: KnightEquipment) {
         ModularKnight(
             modifier = Modifier.align(Alignment.BottomCenter),
             equipment = knight,
+            look = look,
             sizeDp = KNIGHT_SIZE,
             interactive = true
         )
@@ -558,7 +650,7 @@ private fun Backpack(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(
-                    text = "Plecak",
+                    text = "Backpack",
                     color = Gold,
                     fontFamily = FontPixel(),
                     style = MaterialTheme.typography.titleSmall,
@@ -569,7 +661,7 @@ private fun Backpack(
 
             if (items.isEmpty()) {
                 Text(
-                    "Plecak pusty. Wykuj sprzet w Kuzni.",
+                    "Backpack is empty. Forge gear at the Forge.",
                     color = Muted,
                     fontFamily = FontFirst(),
                     style = MaterialTheme.typography.bodySmall
@@ -646,7 +738,7 @@ private fun ItemPickerDialog(
         text = {
             if (items.isEmpty()) {
                 Text(
-                    text = "Nie masz nic na to miejsce. Wykuj sprzet w Kuzni.",
+                    text = "You have nothing for this slot. Forge gear at the Forge.",
                     color = Muted,
                     fontFamily = FontFirst(),
                     style = MaterialTheme.typography.bodyMedium
@@ -699,7 +791,7 @@ private fun ItemPickerDialog(
         },
         confirmButton = {
             TextButton(onClick = onDismiss) {
-                Text(text = "Zamknij", color = Gold, fontFamily = FontFirst())
+                Text(text = "Close", color = Gold, fontFamily = FontFirst())
             }
         }
     )

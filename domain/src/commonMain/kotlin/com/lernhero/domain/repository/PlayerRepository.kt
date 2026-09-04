@@ -1,11 +1,14 @@
 package com.lernhero.domain.repository
 
 import com.lernhero.domain.craft.CraftCost
+import com.lernhero.domain.player.HeroAppearance
 import com.lernhero.domain.player.HeroClass
 import com.lernhero.domain.player.HeroStat
 import com.lernhero.domain.player.Player
 import com.lernhero.domain.player.PlayerEquipment
+import com.lernhero.domain.player.StarterGift
 import com.lernhero.domain.progress.RunStats
+import com.lernhero.domain.quiz.custom.CustomDeck
 import com.lernhero.domain.reading.Book
 import com.lernhero.domain.reading.ReaderSettings
 import com.lernhero.domain.reading.SavedWord
@@ -16,10 +19,19 @@ import dev.gitlive.firebase.auth.FirebaseUser
 
 interface PlayerRepository {
     fun getUserId(): String?
+    /**
+     * Zaklada dokument gracza po pierwszym zalogowaniu.
+     *
+     * [appearance] i [starterGift] pochodza wprost z ekranu tworzenia postaci. Dar startowy
+     * ląduje od razu W PLECAKU I NA POSTACI - inaczej gracz wybieralby przedmiot, ktorego potem
+     * musi szukac w ekwipunku, a pierwsza walka wygladalaby tak samo bez wzgledu na wybor.
+     */
     suspend fun createPlayer(
         user: FirebaseUser?,
         name: String,
         character: HeroClass?,
+        appearance: HeroAppearance = HeroAppearance(),
+        starterGift: StarterGift? = null,
         onSuccess: () -> Unit,
         onFailure: (String) -> Unit
     )
@@ -52,6 +64,15 @@ interface PlayerRepository {
     suspend fun craftItem(itemId: String, cost: CraftCost): Player?
 
     /**
+     * Podnosi przedmiot o JEDEN poziom ulepszenia (patrz [com.lernhero.domain.craft.ItemUpgrades]).
+     * Zwraca null, gdy gracza nie stac, przedmiotu nie ma w plecaku albo stoi juz na maksie.
+     *
+     * Koszt liczy repozytorium z zapisanego poziomu, a nie z ekranu - inaczej dwa szybkie
+     * tapniecia platilyby dwa razy za ten sam, najtanszy poziom.
+     */
+    suspend fun upgradeItem(itemId: String): Player?
+
+    /**
      * Przyzywa kompanow w Summon Center - zuzywa losy/esencje i ZAPISUJE ich do kolekcji.
      *
      * Lista, a nie pojedynczy potwor, bo summon x10 musi byc JEDNYM zapisem z JEDNYM lacznym
@@ -60,8 +81,15 @@ interface PlayerRepository {
      */
     suspend fun summonMonsters(monsterIds: List<String>, cost: CraftCost): Player?
 
-    /** Odblokowuje zaklecie za esencje z lochow (dawniej zakup za zloto w sklepie). */
-    suspend fun unlockSpell(spellId: String, cost: CraftCost): Player?
+    /**
+     * Odbiera DARMOWY summon danego bannera: dopisuje kompana i stempluje czas odbioru, bez kosztu.
+     *
+     * Gotowosc sprawdza repozytorium ([com.lernhero.domain.summon.FreeSummon]), a nie ekran - inaczej
+     * dwa szybkie tapniecia albo cofniecie zegara w telefonie dawaloby dwa darmowe losowania.
+     * Zwraca null, gdy licznik jeszcze nie doszedl do zera.
+     */
+    suspend fun claimFreeSummon(bannerId: String, cooldownMs: Long, monsterId: String, now: Long): Player?
+
 
     /**
      * Rozlicza cale zejscie JEDNYM zapisem: zloto, surowce, XP (razem z awansami i punktami
@@ -72,6 +100,22 @@ interface PlayerRepository {
 
     /** Rozdaje jeden punkt statystyki. Zwraca null, gdy nie ma nierozdanych punktow. */
     suspend fun spendStatPoint(stat: HeroStat): Player?
+
+    /**
+     * Dokłada jeden stopien talentu. Zwraca null, gdy regul nie da sie spelnic - progu rzedu,
+     * rodzica albo braku punktu pilnuje [com.lernhero.domain.talent.TalentRules], a nie ekran,
+     * bo to samo zadanie moze przyjsc z pominieciem UI.
+     *
+     * Zaklecia licza sie ZAWSZE z calego drzewka ([com.lernhero.domain.talent.TalentRules.spellChances]),
+     * wiec nie ma czego dopisywac do zapisu osobno.
+     */
+    suspend fun spendTalentPoint(talentId: String): Player?
+
+    /**
+     * Zeruje drzewko i oddaje WSZYSTKIE wydane punkty. Zaklecia odblokowane talentami znikaja
+     * razem z nimi - inaczej reset byłby darmowym sposobem na zatrzymanie czarow.
+     */
+    suspend fun resetTalents(): Player?
 
     /**
      * Podnosi poziom kompana za zloto. Zwraca null, gdy brakuje monet, gracz nie ma tej karty albo
@@ -95,8 +139,13 @@ interface PlayerRepository {
     /** Podnosi poziom zaklecia kompana za esencje - patrz [com.lernhero.domain.monster.MonsterSpellLevels]. */
     suspend fun upgradeMonsterSpell(monsterId: String, spellId: String): Player?
 
-    /** Persists the ability bar: spell id -> assigned percent of a turn. */
-    suspend fun updateSpellWeights(weights: Map<String, Int>)
+    /**
+     * Zapisuje CALY ekwipunek jednego kompana naraz (mapa slot -> id przedmiotu).
+     *
+     * Caly, a nie slot po slocie, bo auto-equip zmienia szesc slotow jednoczesnie - szesc
+     * osobnych zapisow czytaloby stan sprzed poprzedniego i czesc zmian by przepadla.
+     */
+    suspend fun updateMonsterEquipment(monsterId: String, equipment: Map<String, String>): Player?
 
     /**
      * Odbiera nagrode za cel dzienny (fitness albo czytanie) na dany dzien. Zwraca null, gdy
@@ -128,6 +177,34 @@ interface PlayerRepository {
 
     /** Usuwa fiszke, np. gdy gracz juz umie dane slowo. */
     suspend fun removeSavedWord(wordId: String): Player?
+
+    /**
+     * Odnotowuje jedna odpowiedz na fiszke: seria, liczniki i ewentualny awans do archiwum
+     * "opanowane" (patrz [com.lernhero.domain.reading.VocabularyDeck.recordAnswer]). Wolane z walki
+     * po kazdym pytaniu ze slowek, wiec musi byc tanie i odporne na nieznane id (fiszka mogla
+     * zostac usunieta w trakcie walki) - nieznane id nie jest bledem, po prostu nic nie zmienia.
+     */
+    suspend fun recordWordAnswer(wordId: String, correct: Boolean, now: Long): Player?
+
+    /* ---- Wlasne talie pytan (endless "Wlasne") ---- */
+
+    /**
+     * Talie gracza. Zyja w PODKOLEKCJI `player/{uid}/decks`, a nie w dokumencie gracza: setka
+     * pytan wygenerowana przez AI to kilkadziesiat kilobajtow, a dokument gracza i tak niesie juz
+     * fiszki, kolekcje kompanow i caly postep. Stad tez osobne wczytywanie zamiast pola w [Player].
+     */
+    suspend fun getCustomDecks(): List<CustomDeck>
+
+    /** Zapisuje talie w calosci (nowa albo zmieniona) - zwraca false, gdy zapis sie nie udal. */
+    suspend fun saveCustomDeck(deck: CustomDeck): Boolean
+
+    suspend fun deleteCustomDeck(deckId: String): Boolean
+
+    /** Podpina okladke do ksiazki w bibliotece - [coverLocator] wskazuje na plik wybrany przez gracza. */
+    suspend fun setBookCover(bookId: String, coverLocator: String): Player?
+
+    /** Usuwa ksiazke wgrana przez gracza z biblioteki (bundlowanych nie da sie usunac). */
+    suspend fun removeImportedBook(bookId: String): Player?
 
     /**
      * Zapisuje typografie czytnika. Wolane RAZ, przy zamknieciu ksiazki - nie przy kazdym

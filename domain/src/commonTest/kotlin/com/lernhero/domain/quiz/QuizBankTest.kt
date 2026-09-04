@@ -16,18 +16,32 @@ class QuizBankTest {
 
     @Test
     fun `bank ma duzo pytan w kazdej kategorii i na kazdym poziomie`() {
-        assertTrue(all.size >= 150, "Bank powinien miec setki pytan, ma ${all.size}")
+        assertTrue(all.size >= 1300, "Bank powinien miec ponad 1300 pytan, ma ${all.size}")
 
-        // Slowka nie sa w tym banku - budowane sa dynamicznie z fiszek gracza (WordQuizBank).
-        QuizCategory.entries.filter { it != QuizCategory.Vocabulary }.forEach { category ->
+        // Slowka i wlasne talie nie sa w tym banku - powstaja z materialu gracza (patrz QuizCategory.builtin).
+        // Flagi sa ograniczone liczba dostepnych grafik krajow, wiec maja nizszy prog.
+        QuizCategory.builtin.filter { it != QuizCategory.Flags }.forEach { category ->
             val count = all.count { it.category == category }
-            assertTrue(count >= 5, "Kategoria ${category.label} ma tylko $count pytan")
+            assertTrue(count >= 100, "Kategoria ${category.label} ma tylko $count pytan")
         }
+        assertTrue(all.count { it.category == QuizCategory.Flags } >= 40, "Kategoria flag ma za malo pytan")
 
         QuizDifficulty.entries.forEach { difficulty ->
             val count = all.count { it.difficulty == difficulty }
-            assertTrue(count >= 20, "Poziom ${difficulty.label} ma tylko $count pytan")
+            assertTrue(count >= 300, "Poziom ${difficulty.label} ma tylko $count pytan")
         }
+    }
+
+    @Test
+    fun `tresci pytan sie nie powtarzaja`() {
+        // Gracz szybciej zauwazy powtorzone pytanie niz powtorzone id - wiec pilnujemy tresci.
+        val duplicates = all
+            .filter { it.category != QuizCategory.Flags }
+            .groupBy { it.prompt }
+            .filter { it.value.size > 1 }
+            .keys
+
+        assertTrue(duplicates.isEmpty(), "Powtorzone tresci pytan: $duplicates")
     }
 
     @Test

@@ -4,7 +4,7 @@ import com.lernhero.domain.quiz.QuizCategory
 import com.lernhero.domain.quiz.QuizDifficulty
 import com.lernhero.domain.quiz.QuizEntry
 
-/** Zwierzeta - od kangura po kalmara olbrzymiego. */
+/** Animals - from the kangaroo to the giant squid. */
 object AnimalQuestions {
 
     private fun ask(
@@ -24,200 +24,200 @@ object AnimalQuestions {
 
     val all: List<QuizEntry> = listOf(
 
-        /* ------------------------------- Latwe ------------------------------- */
+        /* ------------------------------- Easy ------------------------------- */
         ask(
             id = "najwieksze",
-            prompt = "Jakie zwierze jest najwieksze na Ziemi?",
-            correct = "Pletwal blekitny",
-            wrong = listOf("Slon afrykanski", "Zyrafa", "Rekin wielorybi"),
+            prompt = "Which animal is the largest on Earth?",
+            correct = "Blue whale",
+            wrong = listOf("African elephant", "Giraffe", "Whale shark"),
             difficulty = QuizDifficulty.Easy
         ),
         ask(
             id = "pajak_nogi",
-            prompt = "Ile nog ma pajak?",
+            prompt = "How many legs does a spider have?",
             correct = "8",
             wrong = listOf("6", "10", "4"),
             difficulty = QuizDifficulty.Easy
         ),
         ask(
             id = "gepard",
-            prompt = "Ktore zwierze jest najszybsze na ladzie?",
-            correct = "Gepard",
-            wrong = listOf("Lew", "Kon", "Antylopa"),
+            prompt = "Which animal is the fastest on land?",
+            correct = "Cheetah",
+            wrong = listOf("Lion", "Horse", "Antelope"),
             difficulty = QuizDifficulty.Easy
         ),
         ask(
             id = "panda",
-            prompt = "Czym zywi sie panda wielka?",
-            correct = "Bambusem",
-            wrong = listOf("Miesem", "Rybami", "Orzechami"),
+            prompt = "What does the giant panda eat?",
+            correct = "Bamboo",
+            wrong = listOf("Meat", "Fish", "Nuts"),
             difficulty = QuizDifficulty.Easy
         ),
         ask(
             id = "kangur",
-            prompt = "Ktore zwierze nosi mlode w torbie na brzuchu?",
-            correct = "Kangur",
-            wrong = listOf("Lama", "Dingo", "Tapir"),
+            prompt = "Which animal carries its young in a pouch?",
+            correct = "Kangaroo",
+            wrong = listOf("Llama", "Dingo", "Tapir"),
             difficulty = QuizDifficulty.Easy
         ),
         ask(
             id = "zyrafa",
-            prompt = "Ktore zwierze ladowe jest najwyzsze?",
-            correct = "Zyrafa",
-            wrong = listOf("Slon", "Wielblad", "Los"),
+            prompt = "Which land animal is the tallest?",
+            correct = "Giraffe",
+            wrong = listOf("Elephant", "Camel", "Moose"),
             difficulty = QuizDifficulty.Easy
         ),
         ask(
             id = "miod",
-            prompt = "Ktory owad wytwarza miod?",
-            correct = "Pszczola",
-            wrong = listOf("Osa", "Mrowka", "Motyl"),
+            prompt = "Which insect produces honey?",
+            correct = "Bee",
+            wrong = listOf("Wasp", "Ant", "Butterfly"),
             difficulty = QuizDifficulty.Easy
         ),
         ask(
             id = "krolowa_dzungli",
-            prompt = "Ktore z tych zwierzat jest ssakiem?",
-            correct = "Delfin",
-            wrong = listOf("Rekin", "Krokodyl", "Waz"),
+            prompt = "Which of these animals is a mammal?",
+            correct = "Dolphin",
+            wrong = listOf("Shark", "Crocodile", "Snake"),
             difficulty = QuizDifficulty.Easy
         ),
 
-        /* ------------------------------ Srednie ------------------------------ */
+        /* ------------------------------ Medium ------------------------------ */
         ask(
             id = "strus",
-            prompt = "Ktory ptak nie potrafi latac?",
-            correct = "Strus",
-            wrong = listOf("Sokol", "Jaskolka", "Czapla"),
+            prompt = "Which bird cannot fly?",
+            correct = "Ostrich",
+            wrong = listOf("Falcon", "Swallow", "Heron"),
             difficulty = QuizDifficulty.Medium
         ),
         ask(
             id = "osmiornica_serca",
-            prompt = "Ile serc ma osmiornica?",
+            prompt = "How many hearts does an octopus have?",
             correct = "3",
             wrong = listOf("1", "2", "5"),
             difficulty = QuizDifficulty.Medium
         ),
         ask(
             id = "kameleon",
-            prompt = "Ktory gad slynie ze zmiany koloru skory?",
-            correct = "Kameleon",
-            wrong = listOf("Iguana", "Gekon", "Waran"),
+            prompt = "Which reptile is famous for changing skin color?",
+            correct = "Chameleon",
+            wrong = listOf("Iguana", "Gecko", "Monitor lizard"),
             difficulty = QuizDifficulty.Medium
         ),
         ask(
             id = "zolw",
-            prompt = "Ktore zwierze moze dozyc ponad stu lat?",
-            correct = "Zolw olbrzymi",
-            wrong = listOf("Kot", "Wilk", "Zajac"),
+            prompt = "Which animal can live for over a hundred years?",
+            correct = "Giant tortoise",
+            wrong = listOf("Cat", "Wolf", "Hare"),
             difficulty = QuizDifficulty.Medium
         ),
         ask(
             id = "ciaza_slonia",
-            prompt = "Ktore ladowe zwierze ma najdluzsza ciaze?",
-            correct = "Slon",
-            wrong = listOf("Nosorozec", "Kon", "Zyrafa"),
+            prompt = "Which land animal has the longest pregnancy?",
+            correct = "Elephant",
+            wrong = listOf("Rhinoceros", "Horse", "Giraffe"),
             difficulty = QuizDifficulty.Medium
         ),
         ask(
             id = "nietoperz",
-            prompt = "Jakim zmyslem nietoperz orientuje sie w ciemnosci?",
-            correct = "Echolokacja",
-            wrong = listOf("Wzrokiem nocnym", "Wechem", "Magnetoreceptorami"),
+            prompt = "Which sense does a bat use to navigate in the dark?",
+            correct = "Echolocation",
+            wrong = listOf("Night vision", "Smell", "Magnetoreception"),
             difficulty = QuizDifficulty.Medium
         ),
         ask(
             id = "mlode_konia",
-            prompt = "Jak nazywa sie mlode konia?",
-            correct = "Zrebie",
-            wrong = listOf("Ciele", "Prosie", "Kozle"),
+            prompt = "What is a baby horse called?",
+            correct = "Foal",
+            wrong = listOf("Calf", "Piglet", "Kid"),
             difficulty = QuizDifficulty.Medium
         ),
         ask(
             id = "kolibr",
-            prompt = "Ktory ptak potrafi latac do tylu?",
-            correct = "Koliber",
-            wrong = listOf("Wrobel", "Zimorodek", "Bocian"),
+            prompt = "Which bird can fly backwards?",
+            correct = "Hummingbird",
+            wrong = listOf("Sparrow", "Kingfisher", "Stork"),
             difficulty = QuizDifficulty.Medium
         ),
 
-        /* ------------------------------ Trudne ------------------------------- */
+        /* ------------------------------ Hard ------------------------------- */
         ask(
             id = "dziobak",
-            prompt = "Ktory ssak sklada jaja?",
-            correct = "Dziobak",
-            wrong = listOf("Pancernik", "Leniwiec", "Jez"),
+            prompt = "Which mammal lays eggs?",
+            correct = "Platypus",
+            wrong = listOf("Armadillo", "Sloth", "Hedgehog"),
             difficulty = QuizDifficulty.Hard
         ),
         ask(
             id = "krowa_zoladek",
-            prompt = "Ile komor ma zoladek krowy?",
+            prompt = "How many chambers does a cow's stomach have?",
             correct = "4",
             wrong = listOf("1", "2", "3"),
             difficulty = QuizDifficulty.Hard
         ),
         ask(
             id = "kalmar_oczy",
-            prompt = "Ktore zwierze ma najwieksze oczy na swiecie?",
-            correct = "Kalmar olbrzymi",
-            wrong = listOf("Sowa", "Wieloryb", "Slon morski"),
+            prompt = "Which animal has the largest eyes in the world?",
+            correct = "Giant squid",
+            wrong = listOf("Owl", "Whale", "Elephant seal"),
             difficulty = QuizDifficulty.Hard
         ),
         ask(
             id = "taniec_pszczol",
-            prompt = "Ktory owad wskazuje wspoltowarzyszom droge do pozywienia tancem?",
-            correct = "Pszczola",
-            wrong = listOf("Mrowka", "Osa", "Termit"),
+            prompt = "Which insect shows its fellows the way to food with a dance?",
+            correct = "Bee",
+            wrong = listOf("Ant", "Wasp", "Termite"),
             difficulty = QuizDifficulty.Hard
         ),
         ask(
             id = "pingwiny_arktyka",
-            prompt = "Ile gatunkow pingwinow zyje dziko na biegunie polnocnym?",
-            correct = "Zaden",
-            wrong = listOf("Trzy", "Piec", "Osiem"),
+            prompt = "How many penguin species live wild at the North Pole?",
+            correct = "None",
+            wrong = listOf("Three", "Five", "Eight"),
             difficulty = QuizDifficulty.Hard
         ),
         ask(
             id = "gepard_pazury",
-            prompt = "Ktory duzy kot nie potrafi ryczec, za to mruczy?",
-            correct = "Gepard",
-            wrong = listOf("Lew", "Tygrys", "Jaguar"),
+            prompt = "Which big cat cannot roar, but purrs instead?",
+            correct = "Cheetah",
+            wrong = listOf("Lion", "Tiger", "Jaguar"),
             difficulty = QuizDifficulty.Hard
         ),
 
-        /* ----------------------------- Eksperckie ---------------------------- */
+        /* ----------------------------- Expert ---------------------------- */
         ask(
             id = "hemocyjanina",
-            prompt = "Ktore zwierze ma niebieska krew?",
-            correct = "Osmiornica",
-            wrong = listOf("Zaba", "Waz", "Karp"),
+            prompt = "Which animal has blue blood?",
+            correct = "Octopus",
+            wrong = listOf("Frog", "Snake", "Carp"),
             difficulty = QuizDifficulty.Expert
         ),
         ask(
             id = "aksolotl",
-            prompt = "Ktory plaz slynie ze zdolnosci odtwarzania utraconych konczyn?",
-            correct = "Aksolotl",
-            wrong = listOf("Ropucha", "Traszka alpejska", "Rzekotka"),
+            prompt = "Which amphibian is famous for regrowing lost limbs?",
+            correct = "Axolotl",
+            wrong = listOf("Toad", "Alpine newt", "Tree frog"),
             difficulty = QuizDifficulty.Expert
         ),
         ask(
             id = "niesporczak",
-            prompt = "Ktore zwierze przetrwa prozne kosmosu i skrajne temperatury?",
-            correct = "Niesporczak",
-            wrong = listOf("Karaluch", "Skorpion", "Rozgwiazda"),
+            prompt = "Which animal survives the vacuum of space and extreme temperatures?",
+            correct = "Tardigrade",
+            wrong = listOf("Cockroach", "Scorpion", "Starfish"),
             difficulty = QuizDifficulty.Expert
         ),
         ask(
             id = "narwal",
-            prompt = "Ktory ssak morski ma dlugi, spiralny cios wyrastajacy z glowy?",
-            correct = "Narwal",
-            wrong = listOf("Bialucha", "Morswin", "Manat"),
+            prompt = "Which marine mammal has a long, spiral tusk growing from its head?",
+            correct = "Narwhal",
+            wrong = listOf("Beluga whale", "Porpoise", "Manatee"),
             difficulty = QuizDifficulty.Expert
         ),
         ask(
             id = "echidna",
-            prompt = "Ktore zwierze, obok dziobaka, nalezy do stekowcow?",
-            correct = "Kolczatka",
-            wrong = listOf("Oposs", "Wombat", "Koala"),
+            prompt = "Which animal, alongside the platypus, is a monotreme?",
+            correct = "Echidna",
+            wrong = listOf("Opossum", "Wombat", "Koala"),
             difficulty = QuizDifficulty.Expert
         )
     )

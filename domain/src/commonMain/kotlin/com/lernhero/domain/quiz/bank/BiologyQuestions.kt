@@ -5,7 +5,7 @@ import com.lernhero.domain.quiz.QuizDifficulty
 import com.lernhero.domain.quiz.QuizEntry
 
 /**
- * Biologia i cialo czlowieka. Dopisanie pytania to jedna pozycja na liscie - nic wiecej.
+ * Biology and the human body. Adding a question is one entry in the list - nothing more.
  */
 object BiologyQuestions {
 
@@ -26,200 +26,200 @@ object BiologyQuestions {
 
     val all: List<QuizEntry> = listOf(
 
-        /* ------------------------------- Latwe ------------------------------- */
+        /* ------------------------------- Easy ------------------------------- */
         ask(
             id = "serce",
-            prompt = "Ktory narzad pompuje krew w ciele czlowieka?",
-            correct = "Serce",
-            wrong = listOf("Watroba", "Pluca", "Nerki"),
+            prompt = "Which organ pumps blood through the human body?",
+            correct = "Heart",
+            wrong = listOf("Liver", "Lungs", "Kidneys"),
             difficulty = QuizDifficulty.Easy
         ),
         ask(
             id = "pluca",
-            prompt = "Ktory narzad odpowiada za oddychanie?",
-            correct = "Pluca",
-            wrong = listOf("Zoladek", "Trzustka", "Sledziona"),
+            prompt = "Which organ is responsible for breathing?",
+            correct = "Lungs",
+            wrong = listOf("Stomach", "Pancreas", "Spleen"),
             difficulty = QuizDifficulty.Easy
         ),
         ask(
             id = "fotosynteza",
-            prompt = "Jak nazywa sie proces, w ktorym rosliny wytwarzaja pokarm ze swiatla?",
-            correct = "Fotosynteza",
-            wrong = listOf("Fermentacja", "Transpiracja", "Oddychanie komorkowe"),
+            prompt = "What is the process called in which plants make food from light?",
+            correct = "Photosynthesis",
+            wrong = listOf("Fermentation", "Transpiration", "Cellular respiration"),
             difficulty = QuizDifficulty.Easy
         ),
         ask(
             id = "skora",
-            prompt = "Ktory narzad czlowieka jest najwiekszy?",
-            correct = "Skora",
-            wrong = listOf("Watroba", "Pluca", "Jelito cienkie"),
+            prompt = "Which human organ is the largest?",
+            correct = "Skin",
+            wrong = listOf("Liver", "Lungs", "Small intestine"),
             difficulty = QuizDifficulty.Easy
         ),
         ask(
             id = "komorka",
-            prompt = "Jak nazywa sie najmniejsza jednostka budulcowa organizmu?",
-            correct = "Komorka",
-            wrong = listOf("Tkanka", "Narzad", "Atom"),
+            prompt = "What is the smallest building block of an organism called?",
+            correct = "Cell",
+            wrong = listOf("Tissue", "Organ", "Atom"),
             difficulty = QuizDifficulty.Easy
         ),
         ask(
             id = "krew_tlen",
-            prompt = "Co przenosza czerwone krwinki?",
-            correct = "Tlen",
-            wrong = listOf("Cukier", "Bialka", "Witaminy"),
+            prompt = "What do red blood cells carry?",
+            correct = "Oxygen",
+            wrong = listOf("Sugar", "Proteins", "Vitamins"),
             difficulty = QuizDifficulty.Easy
         ),
         ask(
             id = "kosci",
-            prompt = "Ile kosci ma szkielet doroslego czlowieka?",
+            prompt = "How many bones does an adult human skeleton have?",
             correct = "206",
             wrong = listOf("152", "300", "180"),
             difficulty = QuizDifficulty.Easy
         ),
         ask(
             id = "zmysly",
-            prompt = "Ktory narzad odpowiada za widzenie?",
-            correct = "Oko",
-            wrong = listOf("Ucho", "Nos", "Jezyk"),
+            prompt = "Which organ is responsible for sight?",
+            correct = "Eye",
+            wrong = listOf("Ear", "Nose", "Tongue"),
             difficulty = QuizDifficulty.Easy
         ),
 
-        /* ------------------------------ Srednie ------------------------------ */
+        /* ------------------------------ Medium ------------------------------ */
         ask(
             id = "mitochondrium",
-            prompt = "Ktora czesc komorki nazywana jest jej elektrownia?",
-            correct = "Mitochondrium",
-            wrong = listOf("Jadro komorkowe", "Rybosom", "Aparat Golgiego"),
+            prompt = "Which part of a cell is called its powerhouse?",
+            correct = "Mitochondrion",
+            wrong = listOf("Cell nucleus", "Ribosome", "Golgi apparatus"),
             difficulty = QuizDifficulty.Medium
         ),
         ask(
             id = "chromosomy",
-            prompt = "Ile chromosomow ma zdrowa komorka czlowieka?",
+            prompt = "How many chromosomes does a healthy human cell have?",
             correct = "46",
             wrong = listOf("23", "48", "44"),
             difficulty = QuizDifficulty.Medium
         ),
         ask(
             id = "chlorofil",
-            prompt = "Jaki barwnik nadaje roslinom zielony kolor?",
-            correct = "Chlorofil",
-            wrong = listOf("Karoten", "Melanina", "Hemoglobina"),
+            prompt = "Which pigment gives plants their green color?",
+            correct = "Chlorophyll",
+            wrong = listOf("Carotene", "Melanin", "Hemoglobin"),
             difficulty = QuizDifficulty.Medium
         ),
         ask(
             id = "insulina",
-            prompt = "Ktory narzad produkuje insuline?",
-            correct = "Trzustka",
-            wrong = listOf("Watroba", "Nerki", "Tarczyca"),
+            prompt = "Which organ produces insulin?",
+            correct = "Pancreas",
+            wrong = listOf("Liver", "Kidneys", "Thyroid"),
             difficulty = QuizDifficulty.Medium
         ),
         ask(
             id = "darwin",
-            prompt = "Kto sformulowal teorie ewolucji przez dobor naturalny?",
-            correct = "Karol Darwin",
-            wrong = listOf("Grzegorz Mendel", "Ludwik Pasteur", "Carl Linneusz"),
+            prompt = "Who formulated the theory of evolution by natural selection?",
+            correct = "Charles Darwin",
+            wrong = listOf("Gregor Mendel", "Louis Pasteur", "Carl Linnaeus"),
             difficulty = QuizDifficulty.Medium
         ),
         ask(
             id = "jamy_serca",
-            prompt = "Ile jam ma serce czlowieka?",
+            prompt = "How many chambers does the human heart have?",
             correct = "4",
             wrong = listOf("2", "3", "6"),
             difficulty = QuizDifficulty.Medium
         ),
         ask(
             id = "witamina_d",
-            prompt = "Ktora witamine organizm wytwarza pod wplywem slonca?",
-            correct = "Witamine D",
-            wrong = listOf("Witamine C", "Witamine A", "Witamine B12"),
+            prompt = "Which vitamin does the body produce from sunlight?",
+            correct = "Vitamin D",
+            wrong = listOf("Vitamin C", "Vitamin A", "Vitamin B12"),
             difficulty = QuizDifficulty.Medium
         ),
         ask(
             id = "zoladek",
-            prompt = "Jaki kwas pomaga trawic pokarm w zoladku?",
-            correct = "Kwas solny",
-            wrong = listOf("Kwas siarkowy", "Kwas octowy", "Kwas azotowy"),
+            prompt = "Which acid helps digest food in the stomach?",
+            correct = "Hydrochloric acid",
+            wrong = listOf("Sulfuric acid", "Acetic acid", "Nitric acid"),
             difficulty = QuizDifficulty.Medium
         ),
 
-        /* ------------------------------ Trudne ------------------------------- */
+        /* ------------------------------ Hard ------------------------------- */
         ask(
             id = "mejoza",
-            prompt = "Jak nazywa sie podzial komorkowy prowadzacy do powstania komorek plciowych?",
-            correct = "Mejoza",
-            wrong = listOf("Mitoza", "Cytokineza", "Apoptoza"),
+            prompt = "What is the cell division that produces sex cells called?",
+            correct = "Meiosis",
+            wrong = listOf("Mitosis", "Cytokinesis", "Apoptosis"),
             difficulty = QuizDifficulty.Hard
         ),
         ask(
             id = "mendel",
-            prompt = "Kto jest uwazany za ojca genetyki dzieki badaniom nad groszkiem?",
-            correct = "Grzegorz Mendel",
-            wrong = listOf("Karol Darwin", "James Watson", "Francis Crick"),
+            prompt = "Who is considered the father of genetics for his research on peas?",
+            correct = "Gregor Mendel",
+            wrong = listOf("Charles Darwin", "James Watson", "Francis Crick"),
             difficulty = QuizDifficulty.Hard
         ),
         ask(
             id = "mozdzek",
-            prompt = "Ktora czesc mozgu odpowiada za rownowage i koordynacje ruchow?",
-            correct = "Mozdzek",
-            wrong = listOf("Kora mozgowa", "Rdzen przedluzony", "Podwzgorze"),
+            prompt = "Which part of the brain is responsible for balance and movement coordination?",
+            correct = "Cerebellum",
+            wrong = listOf("Cerebral cortex", "Medulla oblongata", "Hypothalamus"),
             difficulty = QuizDifficulty.Hard
         ),
         ask(
             id = "dawca",
-            prompt = "Ktora grupa krwi jest uniwersalnym dawca?",
-            correct = "0 Rh-",
+            prompt = "Which blood type is the universal donor?",
+            correct = "O Rh-",
             wrong = listOf("AB Rh+", "A Rh+", "B Rh-"),
             difficulty = QuizDifficulty.Hard
         ),
         ask(
             id = "neuron",
-            prompt = "Jak nazywa sie miejsce, w ktorym jeden neuron przekazuje sygnal drugiemu?",
-            correct = "Synapsa",
-            wrong = listOf("Akson", "Dendryt", "Mielina"),
+            prompt = "What is the place where one neuron passes a signal to another called?",
+            correct = "Synapse",
+            wrong = listOf("Axon", "Dendrite", "Myelin"),
             difficulty = QuizDifficulty.Hard
         ),
         ask(
             id = "nefron",
-            prompt = "Jak nazywa sie podstawowa jednostka filtracyjna nerki?",
-            correct = "Nefron",
-            wrong = listOf("Pecherzyk", "Alweola", "Kanalik zolciowy"),
+            prompt = "What is the kidney's basic filtration unit called?",
+            correct = "Nephron",
+            wrong = listOf("Alveolus", "Vesicle", "Bile duct"),
             difficulty = QuizDifficulty.Hard
         ),
 
-        /* ----------------------------- Eksperckie ---------------------------- */
+        /* ----------------------------- Expert ---------------------------- */
         ask(
             id = "amylaza",
-            prompt = "Ktory enzym zawarty w slinie rozklada skrobie?",
-            correct = "Amylaza",
-            wrong = listOf("Pepsyna", "Lipaza", "Trypsyna"),
+            prompt = "Which enzyme in saliva breaks down starch?",
+            correct = "Amylase",
+            wrong = listOf("Pepsin", "Lipase", "Trypsin"),
             difficulty = QuizDifficulty.Expert
         ),
         ask(
             id = "mrna",
-            prompt = "Ktory rodzaj RNA przenosi informacje genetyczna z jadra do rybosomu?",
+            prompt = "Which type of RNA carries genetic information from the nucleus to the ribosome?",
             correct = "mRNA",
             wrong = listOf("tRNA", "rRNA", "siRNA"),
             difficulty = QuizDifficulty.Expert
         ),
         ask(
             id = "ektoderma",
-            prompt = "Z ktorego listka zarodkowego rozwija sie uklad nerwowy?",
-            correct = "Ektoderma",
-            wrong = listOf("Mezoderma", "Endoderma", "Chorda"),
+            prompt = "Which germ layer does the nervous system develop from?",
+            correct = "Ectoderm",
+            wrong = listOf("Mesoderm", "Endoderm", "Notochord"),
             difficulty = QuizDifficulty.Expert
         ),
         ask(
             id = "atp",
-            prompt = "Jak nazywa sie zwiazek bedacy podstawowym nosnikiem energii w komorce?",
+            prompt = "What is the compound that's the cell's main energy carrier called?",
             correct = "ATP",
-            wrong = listOf("DNA", "NADH", "Glukoza"),
+            wrong = listOf("DNA", "NADH", "Glucose"),
             difficulty = QuizDifficulty.Expert
         ),
         ask(
             id = "krebs",
-            prompt = "Jak inaczej nazywa sie cykl Krebsa?",
-            correct = "Cykl kwasu cytrynowego",
-            wrong = listOf("Cykl mocznikowy", "Cykl Calvina", "Glikoliza"),
+            prompt = "What is the Krebs cycle also known as?",
+            correct = "The citric acid cycle",
+            wrong = listOf("The urea cycle", "The Calvin cycle", "Glycolysis"),
             difficulty = QuizDifficulty.Expert
         )
     )

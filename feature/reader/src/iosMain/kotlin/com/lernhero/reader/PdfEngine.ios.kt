@@ -163,5 +163,58 @@ private fun uniqueFileName(fileName: String): String {
     return "$base ($index)$suffix"
 }
 
+/**
+ * Okladka ladzie w tym samym katalogu co ksiazki i pod tym samym rodzajem locatora (sama nazwa
+ * pliku), wiec odczytuje sie ja zwyklym [loadImportedBookBytes] - nie ma potrzeby drugiego
+ * magazynu tylko dlatego, ze plik jest obrazkiem, a nie tekstem.
+ */
+@Composable
+actual fun rememberCoverImagePicker(onPicked: (PickedFile) -> Unit): () -> Unit {
+    val viewController = LocalUIViewController.current
+
+    return remember(viewController) {
+        {
+            val picker = UIDocumentPickerViewController(
+                documentTypes = listOf("public.image"),
+                inMode = UIDocumentPickerMode.UIDocumentPickerModeImport
+            )
+
+            val delegate = object : NSObject(), UIDocumentPickerDelegateProtocol {
+                override fun documentPicker(
+                    controller: UIDocumentPickerViewController,
+                    didPickDocumentsAtURLs: List<*>
+                ) {
+                    activeDocumentPickerDelegate = null
+                    val pickedPath = (didPickDocumentsAtURLs.firstOrNull() as? NSURL)?.path ?: return
+                    val data = NSData.dataWithContentsOfFile(pickedPath) ?: return
+
+                    val fileName = pickedPath.substringAfterLast("/")
+                    val storedName = uniqueFileName(fileName)
+                    data.writeToFile(booksDirectoryPath() + "/" + storedName, true)
+
+                    onPicked(
+                        PickedFile(
+                            name = fileName.substringBeforeLast("."),
+                            bytes = data.toByteArray(),
+                            persistentLocator = storedName
+                        )
+                    )
+                }
+
+                override fun documentPickerWasCancelled(controller: UIDocumentPickerViewController) {
+                    activeDocumentPickerDelegate = null
+                }
+            }
+
+            activeDocumentPickerDelegate = delegate
+            picker.delegate = delegate
+            viewController.presentViewController(picker, true, null)
+        }
+    }
+}
+
+actual fun decodeImageBytes(bytes: ByteArray): ImageBitmap? =
+    runCatching { Image.makeFromEncoded(bytes).toComposeImageBitmap() }.getOrNull()
+
 actual suspend fun loadImportedBookBytes(locator: String): ByteArray? =
     NSData.dataWithContentsOfFile(bookPath(locator))?.toByteArray()

@@ -5,8 +5,8 @@ package com.lernhero.domain.story
  * UI go tlumaczy na PNG (patrz feature/home/story/StoryWorldArt.kt); dopoki go nie ma, ekran
  * rysuje zastepcza plansze z nazwa i tym kluczem, wiec podmiana nie wymaga zmiany tutaj.
  *
- * [stageCount] to liczba plansz w tej krainie. Co [BOSS_INTERVAL] plansz stoi boss - patrz
- * [StoryStageCatalog.isBossStage].
+ * [stageCount] to liczba plansz w tej krainie - ostatnia z nich jest walka z bossem/elita
+ * (patrz [StoryStageCatalog.isBossStage]).
  */
 data class StoryWorld(
     val id: String,
@@ -23,12 +23,12 @@ data class StoryWorld(
 object StoryWorldCatalog {
 
     val all: List<StoryWorld> = listOf(
-        StoryWorld("forest", 1, "Zapomniany Las", "world_forest", stageCount = 15),
-        StoryWorld("mine", 2, "Krwawa Kopalnia", "world_mine", stageCount = 15),
-        StoryWorld("icefield", 3, "Lodowe Pustkowia", "world_icefield", stageCount = 15),
-        StoryWorld("heat", 4, "Kraina Zaru", "world_heat", stageCount = 15),
-        StoryWorld("heaven", 5, "Wysokie Niebiosa", "world_heaven", stageCount = 15),
-        StoryWorld("abyss", 6, "Otchlan", "world_abyss", stageCount = 15)
+        StoryWorld("forest", 1, "Forgotten Forest", "world_forest", stageCount = 6),
+        StoryWorld("mine", 2, "Bloody Mine", "world_mine", stageCount = 6),
+        StoryWorld("icefield", 3, "Frozen Wastes", "world_icefield", stageCount = 6),
+        StoryWorld("heat", 4, "Scorched Lands", "world_heat", stageCount = 6),
+        StoryWorld("heaven", 5, "High Heavens", "world_heaven", stageCount = 6),
+        StoryWorld("abyss", 6, "The Abyss", "world_abyss", stageCount = 6)
     )
 
     val totalStages: Int get() = all.sumOf { it.stageCount }

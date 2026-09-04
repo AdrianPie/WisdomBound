@@ -26,6 +26,7 @@ import androidx.compose.ui.graphics.TransformOrigin
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.graphics.ColorFilter
 import com.lernhero.shared.resources.Resources.KnightPivots
 import com.lernhero.shared.resources.Resources.PlateArmor
 import com.lernhero.shared.resources.Resources.Player
@@ -38,6 +39,12 @@ fun ModularKnight(
     attackTrigger: Int = 0,
     armored: Boolean = false,
     equipment: KnightEquipment = if (armored) KnightEquipment.FullPlate else KnightEquipment.Empty,
+    /**
+     * Kolory skory i wlosow z zapisu gracza. Domyslnie [HeroLook.Default], czyli sprite'y w
+     * oryginalnych barwach - dzieki temu ekrany, ktore jeszcze nie przekazuja wygladu, wygladaja
+     * dokladnie tak jak przed dolozeniem kolorowania.
+     */
+    look: HeroLook = HeroLook.Default,
     sizeDp: Dp = 300.dp,
     interactive: Boolean = true,
     /**
@@ -140,6 +147,7 @@ fun ModularKnight(
             part = Player.leftLeg,
             pivot = KnightPivots.leftLeg,
             rotation = rearLegRotation,
+            skin = look.skinFilter,
             footOverlay = if (gear.feet) PlateArmor.leftFoot else null
         )
         // Front leg = character's RIGHT leg (screen-left)
@@ -147,6 +155,7 @@ fun ModularKnight(
             part = Player.rightLeg,
             pivot = KnightPivots.rightLeg,
             rotation = frontLegRotation,
+            skin = look.skinFilter,
             footOverlay = if (gear.feet) PlateArmor.rightFoot else null
         )
 
@@ -159,6 +168,7 @@ fun ModularKnight(
                 part = Player.rightHand,
                 pivot = KnightPivots.rightHand,
                 rotation = backArmRotation,
+                skin = look.skinFilter,
                 handOverlay = if (gear.hands) PlateArmor.rightHand else null
             )
         }
@@ -172,6 +182,7 @@ fun ModularKnight(
                 part = Player.leftHand,
                 pivot = KnightPivots.leftHand,
                 rotation = wandArmRotation,
+                skin = look.skinFilter,
                 handOverlay = if (gear.hands) PlateArmor.leftHand else null,
                 heldBehind = if (gear.mainHand) PlateArmor.swordBehind else null,
                 heldFront = if (gear.mainHand) PlateArmor.swordFront else null
@@ -179,6 +190,7 @@ fun ModularKnight(
             Image(
                 painter = painterResource(Player.body),
                 contentDescription = null,
+                colorFilter = look.skinFilter,
                 modifier = Modifier.fillMaxSize()
             )
             if (gear.chest) {
@@ -199,6 +211,15 @@ fun ModularKnight(
                 Image(
                     painter = painterResource(Player.head),
                     contentDescription = null,
+                    colorFilter = look.skinFilter,
+                    modifier = Modifier.fillMaxSize()
+                )
+                // Wlosy to osobna warstwa na glowie - w samym sprite'cie glowy sa czarne, a
+                // czarnego mnozeniem nie da sie przefarbowac (patrz HeroLook).
+                Image(
+                    painter = painterResource(Player.hair),
+                    contentDescription = null,
+                    colorFilter = look.hairFilter,
                     modifier = Modifier.fillMaxSize()
                 )
             }
@@ -230,6 +251,7 @@ private fun KnightArm(
     part: DrawableResource,
     pivot: TransformOrigin,
     rotation: Float,
+    skin: ColorFilter?,
     handOverlay: DrawableResource? = null,
     heldBehind: DrawableResource? = null,
     heldFront: DrawableResource? = null
@@ -253,6 +275,7 @@ private fun KnightArm(
         Image(
             painter = painterResource(part),
             contentDescription = null,
+            colorFilter = skin,
             modifier = Modifier.fillMaxSize()
         )
         handOverlay?.let { overlay ->
@@ -278,6 +301,7 @@ private fun KnightLeg(
     part: DrawableResource,
     pivot: TransformOrigin,
     rotation: Float,
+    skin: ColorFilter?,
     footOverlay: DrawableResource? = null
 ) {
     Box(
@@ -291,6 +315,7 @@ private fun KnightLeg(
         Image(
             painter = painterResource(part),
             contentDescription = null,
+            colorFilter = skin,
             modifier = Modifier.fillMaxSize()
         )
         footOverlay?.let { overlay ->

@@ -96,7 +96,7 @@ class TownViewModel(
         val now = nowMillis()
         val pending = ProductionMath.pendingFor(production, now)
         if (pending <= 0) {
-            pushToast("Nic jeszcze nie wyprodukowano")
+            pushToast("Nothing produced yet")
             return
         }
 
@@ -135,7 +135,7 @@ class TownViewModel(
         val production = state.stateOf(building)
         val cost = ProductionMath.upgradeCost(production.level)
         if (state.money < cost) {
-            pushToast("Za malo zlota (potrzeba $cost)")
+            pushToast("Not enough gold (need $cost)")
             return
         }
 
@@ -150,7 +150,7 @@ class TownViewModel(
         _uiState.update { it.copy(money = it.money - cost) }
         applyProduction(building, updatedProduction, updatedResources)
         viewModelScope.launch(Dispatchers.IO) { playerRepository.addMoney(-cost) }
-        pushToast("Poziom ${updatedProduction.level}!", emphasis = true)
+        pushToast("Level ${updatedProduction.level}!", emphasis = true)
     }
 
     private fun applyProduction(

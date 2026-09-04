@@ -50,10 +50,10 @@ data class TownResources(
 
 @Serializable
 enum class ResourceType(val label: String, val icon: String) {
-    Wood("Drewno", "\uD83E\uDEB5"),
-    Stone("Kamien", "\uD83E\uDEA8"),
-    Iron("Ruda", "\u2699"),
-    Essence("Esencja", "\u2728")
+    Wood("Wood", "\uD83E\uDEB5"),
+    Stone("Stone", "\uD83E\uDEA8"),
+    Iron("Ore", "\u2699"),
+    Essence("Essence", "\u2728")
 }
 
 /** Ktory budynek produkcyjny - kazdy trzyma wlasny [ProductionState] i produkuje wlasny surowiec. */

@@ -33,6 +33,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.lernhero.domain.combat.live.CycleOutcome
+import com.lernhero.domain.quiz.CategoryOffer
 import com.lernhero.game.battle.BattleUiState
 import com.lernhero.game.battle.TurnOutcome
 import com.lernhero.shared.theme.FontFirst
@@ -146,9 +147,10 @@ internal fun TeamStatusBar(
     val cycleBuff = state.activeCycleBuff?.takeIf { state.elapsedMs < it.expiresAtMs }
     val streak = state.streak.consecutiveCorrect
     val stunned = state.stunTurnsRemaining > 0
+    val boosted = state.boostedElements
 
     // Nic aktywnego - nie zasmiecamy pola bitwy pustym paskiem.
-    if (cycleBuff == null && streak <= 0 && !stunned) return
+    if (cycleBuff == null && streak <= 0 && !stunned && boosted.isEmpty()) return
 
     FlowRow(
         modifier = modifier.fillMaxWidth(),
@@ -176,6 +178,17 @@ internal fun TeamStatusBar(
 
         if (stunned) {
             StatusChip("💫", "OGLUSZENIE", "${state.stunTurnsRemaining} tur", Bad)
+        }
+
+        // Bonus frakcyjny z kafla wybranego przed tura - bez tego znacznika gracz zapomina, ktora
+        // frakcje wlasnie wzmocnil, zanim salwa dojdzie do skutku.
+        boosted.forEach { element ->
+            StatusChip(
+                icon = element.icon,
+                label = element.label.uppercase(),
+                detail = "+${(CategoryOffer.ELEMENT_BOOST * 100).toInt()}% ATK",
+                accent = Color(element.colorHex)
+            )
         }
     }
 }
