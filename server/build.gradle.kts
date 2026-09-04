@@ -26,7 +26,14 @@ kotlin {
         jvmMain.dependencies {
             // Silnik walidacji/parsowania AI (QuizGenerationPrompt/Parser) i cala reszta symulacji -
             // ten sam kod, ktory dzis dziala w apce, teraz uzywany 1:1 na serwerze. Zero duplikacji.
-            implementation(project(":domain"))
+            implementation(project(":domain")) {
+                // :domain ciagnie tranzytywnie kmpauth-firebase -> dev.gitlive:firebase-java-sdk,
+                // lekka JVM-owa atrape Firebase z WLASNA klasa com.google.firebase.FirebaseApp -
+                // inna niz w prawdziwym firebase-admin ponizej. Dwie klasy o tej samej nazwie w
+                // dystrybucji = NoSuchMethodError w runtime, zalezne od tego, ktora "wygra" przy
+                // EXCLUDE (patrz duplicatesStrategy nizej). Serwer nigdy nie uzywa atrapy - excludujemy.
+                exclude(group = "dev.gitlive", module = "firebase-java-sdk")
+            }
 
             implementation(libs.ktor.server.core)
             implementation(libs.ktor.server.netty)
