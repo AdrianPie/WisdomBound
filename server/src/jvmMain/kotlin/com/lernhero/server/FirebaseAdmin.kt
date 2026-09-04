@@ -28,6 +28,12 @@ object FirebaseAdmin {
         FirebaseApp.getApps().firstOrNull() ?: FirebaseApp.initializeApp(
             FirebaseOptions.builder()
                 .setCredentials(GoogleCredentials.getApplicationDefault())
+                // GoogleCredentials.getApplicationDefault() na Cloud Run NIE niesie w sobie ID
+                // projektu (to konto serwisowe metadata servera, nie plik JSON z project_id) -
+                // bez jawnego .setProjectId() verifyIdToken() rzuca IllegalStateException.
+                // FIREBASE_PROJECT_ID w ENV pozwala latwo zmienic projekt bez rebuildu; domyslny
+                // to ten sam projekt co composeApp/google-services.json.
+                .setProjectId(System.getenv("FIREBASE_PROJECT_ID") ?: "quizhero-467415")
                 .build()
         )
     }
