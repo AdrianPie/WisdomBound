@@ -49,8 +49,6 @@ object FirebaseAdmin {
             app
             FirebaseAuth.getInstance().verifyIdToken(idToken).uid
         } catch (e: Exception) {
-            // TODO: usun po zdiagnozowaniu przyczyny 401.
-            System.err.println("verifyIdToken failed: ${e::class.simpleName}: ${e.message}")
             null
         }
     }
@@ -73,7 +71,9 @@ sealed interface QuotaCheck {
  */
 object AiQuota {
 
-    private const val LIMIT_PER_WEEK = 2
+    // Konfigurowalny przez ENV, zeby podbic/wylaczyc limit na czas testow bez rebuildu - patrz
+    // AI_QUOTA_LIMIT_PER_WEEK. Domyslnie 2/tydzien jak dotad.
+    private val LIMIT_PER_WEEK = System.getenv("AI_QUOTA_LIMIT_PER_WEEK")?.toIntOrNull() ?: 2
     private const val WEEK_MS = 7L * 24 * 60 * 60 * 1000
 
     suspend fun consume(uid: String): QuotaCheck = withContext(Dispatchers.IO) {

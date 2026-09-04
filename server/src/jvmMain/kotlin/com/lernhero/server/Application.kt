@@ -105,15 +105,8 @@ private fun io.ktor.server.routing.Routing.quizGenerationRoute(generator: QuizGe
 
 /** Weryfikuje `Authorization: Bearer <idToken>` przez Firebase Admin SDK. Null = odmowa. */
 private suspend fun io.ktor.server.application.ApplicationCall.authenticatedUid(): String? {
-    val header = request.header("Authorization") ?: run {
-        // TODO: usun po zdiagnozowaniu przyczyny 401.
-        System.err.println("authenticatedUid: no Authorization header")
-        return null
-    }
+    val header = request.header("Authorization") ?: return null
     val token = header.removePrefix("Bearer ").trim()
-    if (token.isBlank() || token == header) {
-        System.err.println("authenticatedUid: malformed Authorization header")
-        return null
-    }
+    if (token.isBlank() || token == header) return null
     return FirebaseAdmin.verifyIdToken(token)
 }

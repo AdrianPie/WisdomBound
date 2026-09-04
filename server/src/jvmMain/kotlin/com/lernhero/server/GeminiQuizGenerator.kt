@@ -85,7 +85,9 @@ class GeminiQuizGenerator(
 
     companion object {
         /** Szybki, tani model - w sam raz do generowania ustrukturyzowanych pytan quizowych. */
-        const val DEFAULT_MODEL = "gemini-2.5-flash"
+        // "gemini-2.5-flash" jest wycofany dla nowych kluczy (404 "no longer available to new
+        // users") - Gemini zastapil go "gemini-3.6-flash".
+        const val DEFAULT_MODEL = "gemini-3.6-flash"
     }
 }
 
