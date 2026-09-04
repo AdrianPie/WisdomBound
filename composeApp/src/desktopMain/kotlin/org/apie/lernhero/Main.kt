@@ -7,7 +7,7 @@ import androidx.compose.ui.window.WindowState
 import androidx.compose.ui.window.application
 import com.lernhero.di.initializeKoin
 import com.lernhero.navigation.SetupNavGraph
-import com.lernhero.shared.Screen
+import com.lernhero.shared.navigation.Screen
 
 fun main() = application {
     initializeKoin()

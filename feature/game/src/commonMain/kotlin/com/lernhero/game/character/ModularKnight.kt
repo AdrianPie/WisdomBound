@@ -2,7 +2,6 @@ package com.lernhero.game.character
 
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.EaseInOutSine
-import androidx.compose.animation.core.FastOutLinearInEasing
 import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.LinearOutSlowInEasing
 import androidx.compose.animation.core.RepeatMode
@@ -25,39 +24,65 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.TransformOrigin
 import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.lernhero.shared.Resources.KnightPivots
-import com.lernhero.shared.Resources.Player
+import androidx.compose.ui.graphics.ColorFilter
+import com.lernhero.shared.resources.Resources.KnightPivots
+import com.lernhero.shared.resources.Resources.PlateArmor
+import com.lernhero.shared.resources.Resources.Player
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.painterResource
 
 @Composable
 fun ModularKnight(
     modifier: Modifier = Modifier,
-    attackTrigger: Int = 0
+    attackTrigger: Int = 0,
+    armored: Boolean = false,
+    equipment: KnightEquipment = if (armored) KnightEquipment.FullPlate else KnightEquipment.Empty,
+    /**
+     * Kolory skory i wlosow z zapisu gracza. Domyslnie [HeroLook.Default], czyli sprite'y w
+     * oryginalnych barwach - dzieki temu ekrany, ktore jeszcze nie przekazuja wygladu, wygladaja
+     * dokladnie tak jak przed dolozeniem kolorowania.
+     */
+    look: HeroLook = HeroLook.Default,
+    sizeDp: Dp = 300.dp,
+    interactive: Boolean = true,
+    /**
+     * Mnoznik tempa zamachu. W walce podaje go BattleSpeed; poza nia (ekwipunek, podglad)
+     * rycerz macha w normalnym tempie.
+     */
+    attackSpeed: Float = 1f,
+    /** Odpalane gdy pelna sekwencja ataku ([playSwordAttack]) faktycznie sie skonczy - tak walka wie, kiedy naprawde odegrala sie animacja, bez zgadywania czasu z zewnatrz. */
+    onAttackAnimationFinished: () -> Unit = {},
 ) {
+    val gear = if (armored) KnightEquipment.FullPlate else equipment
     val wandAttack = remember { Animatable(0f) }
     var localAttackTrigger by remember { mutableStateOf(0) }
 
-    suspend fun playWandAttack() {
+    fun faster(millis: Int): Int = (millis / attackSpeed).toInt().coerceAtLeast(1)
+
+    // Szybkie ciecie mieczem - cofniecie, zamach z lekkim przestrzeleniem, powrot. Cala sekwencja
+    // ~360ms przy attackSpeed=1x (dawniej ~3s "kanalowania" jak przy zaklęciu - za wolno na zwykly cios).
+    suspend fun playSwordAttack() {
         wandAttack.stop()
         wandAttack.snapTo(0f)
-        wandAttack.animateTo(0.42f, tween(260, easing = FastOutSlowInEasing))
-        wandAttack.animateTo(0.62f, tween(110, easing = FastOutLinearInEasing))
-        wandAttack.animateTo(0.78f, tween(2000, easing = LinearOutSlowInEasing))
-        wandAttack.animateTo(1f, tween(300, easing = LinearOutSlowInEasing))
-        wandAttack.snapTo(0f)
+        wandAttack.animateTo(-0.18f, tween(faster(70), easing = FastOutSlowInEasing))
+        wandAttack.animateTo(1.08f, tween(faster(90), easing = FastOutSlowInEasing))
+        wandAttack.animateTo(1f, tween(faster(60), easing = LinearOutSlowInEasing))
+        wandAttack.animateTo(0f, tween(faster(140), easing = FastOutSlowInEasing))
     }
 
     LaunchedEffect(attackTrigger) {
         if (attackTrigger > 0) {
-            playWandAttack()
+            playSwordAttack()
+            onAttackAnimationFinished()
         }
     }
 
     LaunchedEffect(localAttackTrigger) {
         if (localAttackTrigger > 0) {
-            playWandAttack()
+            playSwordAttack()
+            onAttackAnimationFinished()
         }
     }
 
@@ -80,94 +105,132 @@ fun ModularKnight(
     )
 
     val attack = wandAttack.value
-    val bodyRotation = breath * 1.25f + wandCurve(attack, gather = -3.2f, cast = 4.2f, hold = 2.2f)
-    val headRotation = counterBreath * 0.45f + wandCurve(attack, gather = 1.8f, cast = -2.8f, hold = -1.4f)
+    // Szybkie ciecie mieczem = ruch samej gornej polowy ciala i miecza. Nogi stoja w miejscu
+    // (tylko lekki oddech idle) - zadnego przysiadu/wykroku, ktory wygladal jak przygotowanie
+    // do zapasow, nie do zamachu mieczem.
+    val wholeBodySway = breath * 0.35f + attack * 1f
+    val upperBodySway = breath * 0.6f + attack * 3f
+    val headRotation = counterBreath * 0.45f + attack * -2f
 
-    val backArmShoulderRotation = counterBreath * 0.7f +
-            wandCurve(attack, gather = -4f, cast = 8f, hold = 3f)
-    val backArmElbowRotation = breath * 0.45f +
-            wandCurve(attack, gather = 6f, cast = 10f, hold = 4f)
+    // Limbs are single, rigid pieces (no elbow/knee art) - each rotates as one unit
+    // around its shoulder/hip pivot only.
+    val backArmRotation = counterBreath * 0.7f + attack * 6f
+    // Naturalny luk ciecia mieczem (nie uniesienie jak przy rozdzce) - okolo -70 stopni w szczycie zamachu.
+    val wandArmRotation = breath * 0.8f + attack * -70f
 
-    val wandShoulderRotation = breath * 0.8f +
-            wandCurve(attack, gather = -118f, cast = -178f, hold = -178f)
-    val wandElbowRotation = counterBreath * 0.35f +
-            wandCurve(attack, gather = 68f, cast = 86f, hold = 86f)
-
-    val rearHipRotation = breath * 0.18f + wandCurve(attack, gather = -2.5f, cast = -1.2f, hold = -0.7f)
-    val rearKneeRotation = wandCurve(attack, gather = 4.5f, cast = 2.5f, hold = 1f)
-    val frontHipRotation = counterBreath * 0.18f + wandCurve(attack, gather = 2.5f, cast = 1.4f, hold = 0.7f)
-    val frontKneeRotation = wandCurve(attack, gather = -4.5f, cast = -2.8f, hold = -1f)
+    // Nogi zostaja w idle - zero wykroku/przysiadu przy ataku.
+    val rearLegRotation = breath * 0.18f
+    val frontLegRotation = counterBreath * 0.18f
 
     Box(
         modifier = modifier
-            .size(300.dp)
-            .clickable(
-                interactionSource = remember { MutableInteractionSource() },
-                indication = null
-            ) {
-                localAttackTrigger += 1
+            .size(sizeDp)
+            .then(
+                if (interactive) {
+                    Modifier.clickable(
+                        interactionSource = remember { MutableInteractionSource() },
+                        indication = null
+                    ) {
+                        localAttackTrigger += 1
+                    }
+                } else {
+                    Modifier
+                }
+            )
+            .graphicsLayer {
+                transformOrigin = KnightPivots.ground
+                rotationZ = wholeBodySway
             }
     ) {
+        // Rear leg = character's LEFT leg (screen-right)
         KnightLeg(
-            upperPart = Player.rightUpLeg,
-            lowerPart = Player.rightDownLeg,
-            hipPivot = KnightPivots.rightUpLeg,
-            kneePivot = KnightPivots.rightDownLeg,
-            hipRotation = rearHipRotation,
-            kneeRotation = rearKneeRotation
+            part = Player.leftLeg,
+            pivot = KnightPivots.leftLeg,
+            rotation = rearLegRotation,
+            skin = look.skinFilter,
+            footOverlay = if (gear.feet) PlateArmor.leftFoot else null
         )
+        // Front leg = character's RIGHT leg (screen-left)
         KnightLeg(
-            upperPart = Player.leftUpLeg,
-            lowerPart = Player.leftDownLeg,
-            hipPivot = KnightPivots.leftUpLeg,
-            kneePivot = KnightPivots.leftDownLeg,
-            hipRotation = frontHipRotation,
-            kneeRotation = frontKneeRotation,
-            lowerBehindUpper = true
+            part = Player.rightLeg,
+            pivot = KnightPivots.rightLeg,
+            rotation = frontLegRotation,
+            skin = look.skinFilter,
+            footOverlay = if (gear.feet) PlateArmor.rightFoot else null
         )
 
-        KnightUpperBodyLayer(bodyRotation = bodyRotation) {
+        KnightUpperBodyLayer(
+            rotation = upperBodySway,
+            lift = 0f
+        ) {
+            // Idle/back arm = character's RIGHT arm (screen-left), drawn behind body/head
             KnightArm(
-                upperPart = Player.leftUpHand,
-                lowerPart = Player.leftDownHand,
-                shoulderPivot = KnightPivots.leftUpHand,
-                elbowPivot = KnightPivots.leftDownHand,
-                shoulderRotation = backArmShoulderRotation,
-                elbowRotation = backArmElbowRotation
+                part = Player.rightHand,
+                pivot = KnightPivots.rightHand,
+                rotation = backArmRotation,
+                skin = look.skinFilter,
+                handOverlay = if (gear.hands) PlateArmor.rightHand else null
+            )
+        }
+
+        KnightUpperBodyLayer(
+            rotation = upperBodySway,
+            lift = 0f
+        ) {
+            // Wand/sword arm = character's LEFT arm (screen-right), drawn in front
+            KnightArm(
+                part = Player.leftHand,
+                pivot = KnightPivots.leftHand,
+                rotation = wandArmRotation,
+                skin = look.skinFilter,
+                handOverlay = if (gear.hands) PlateArmor.leftHand else null,
+                heldBehind = if (gear.mainHand) PlateArmor.swordBehind else null,
+                heldFront = if (gear.mainHand) PlateArmor.swordFront else null
             )
             Image(
                 painter = painterResource(Player.body),
                 contentDescription = null,
+                colorFilter = look.skinFilter,
                 modifier = Modifier.fillMaxSize()
             )
-            Image(
-                painter = painterResource(Player.head),
-                contentDescription = null,
+            if (gear.chest) {
+                Image(
+                    painter = painterResource(PlateArmor.chest),
+                    contentDescription = null,
+                    modifier = Modifier.fillMaxSize()
+                )
+            }
+            Box(
                 modifier = Modifier
                     .fillMaxSize()
                     .graphicsLayer {
                         transformOrigin = KnightPivots.head
                         rotationZ = headRotation
                     }
-            )
-        }
-
-        KnightUpperBodyLayer(bodyRotation = bodyRotation) {
-            KnightArm(
-                upperPart = Player.rightUpHand,
-                lowerPart = Player.rightDownHand,
-                shoulderPivot = KnightPivots.rightUpHand,
-                elbowPivot = KnightPivots.rightDownHand,
-                shoulderRotation = wandShoulderRotation,
-                elbowRotation = wandElbowRotation
-            )
+            ) {
+                Image(
+                    painter = painterResource(Player.head),
+                    contentDescription = null,
+                    colorFilter = look.skinFilter,
+                    modifier = Modifier.fillMaxSize()
+                )
+                // Wlosy to osobna warstwa na glowie - w samym sprite'cie glowy sa czarne, a
+                // czarnego mnozeniem nie da sie przefarbowac (patrz HeroLook).
+                Image(
+                    painter = painterResource(Player.hair),
+                    contentDescription = null,
+                    colorFilter = look.hairFilter,
+                    modifier = Modifier.fillMaxSize()
+                )
+            }
         }
     }
 }
 
 @Composable
 private fun KnightUpperBodyLayer(
-    bodyRotation: Float,
+    rotation: Float,
+    lift: Float,
     content: @Composable () -> Unit
 ) {
     Box(
@@ -175,7 +238,8 @@ private fun KnightUpperBodyLayer(
             .fillMaxSize()
             .graphicsLayer {
                 transformOrigin = KnightPivots.body
-                rotationZ = bodyRotation
+                rotationZ = rotation
+                translationY = lift.dp.toPx()
             }
     ) {
         content()
@@ -184,142 +248,82 @@ private fun KnightUpperBodyLayer(
 
 @Composable
 private fun KnightArm(
-    upperPart: DrawableResource,
-    lowerPart: DrawableResource,
-    shoulderPivot: TransformOrigin,
-    elbowPivot: TransformOrigin,
-    shoulderRotation: Float,
-    elbowRotation: Float
+    part: DrawableResource,
+    pivot: TransformOrigin,
+    rotation: Float,
+    skin: ColorFilter?,
+    handOverlay: DrawableResource? = null,
+    heldBehind: DrawableResource? = null,
+    heldFront: DrawableResource? = null
 ) {
     Box(
         modifier = Modifier
             .fillMaxSize()
             .graphicsLayer {
-                transformOrigin = shoulderPivot
-                rotationZ = shoulderRotation
+                transformOrigin = pivot
+                rotationZ = rotation
             }
     ) {
+        // Held object (sword handle) sticking out behind the fist
+        heldBehind?.let { held ->
+            Image(
+                painter = painterResource(held),
+                contentDescription = null,
+                modifier = Modifier.fillMaxSize()
+            )
+        }
         Image(
-            painter = painterResource(upperPart),
+            painter = painterResource(part),
             contentDescription = null,
+            colorFilter = skin,
             modifier = Modifier.fillMaxSize()
         )
-        Image(
-            painter = painterResource(lowerPart),
-            contentDescription = null,
-            modifier = Modifier
-                .fillMaxSize()
-                .graphicsLayer {
-                    transformOrigin = elbowPivot
-                    rotationZ = elbowRotation
-                }
-        )
+        handOverlay?.let { overlay ->
+            Image(
+                painter = painterResource(overlay),
+                contentDescription = null,
+                modifier = Modifier.fillMaxSize()
+            )
+        }
+        // Held object (sword blade) in front of the fist
+        heldFront?.let { held ->
+            Image(
+                painter = painterResource(held),
+                contentDescription = null,
+                modifier = Modifier.fillMaxSize()
+            )
+        }
     }
 }
 
 @Composable
 private fun KnightLeg(
-    upperPart: DrawableResource,
-    lowerPart: DrawableResource,
-    hipPivot: TransformOrigin,
-    kneePivot: TransformOrigin,
-    hipRotation: Float,
-    kneeRotation: Float,
-    lowerBehindUpper: Boolean = false
+    part: DrawableResource,
+    pivot: TransformOrigin,
+    rotation: Float,
+    skin: ColorFilter?,
+    footOverlay: DrawableResource? = null
 ) {
     Box(
         modifier = Modifier
             .fillMaxSize()
             .graphicsLayer {
-                transformOrigin = hipPivot
-                rotationZ = hipRotation
+                transformOrigin = pivot
+                rotationZ = rotation
             }
     ) {
-        if (lowerBehindUpper) {
-            LegLowerPart(
-                lowerPart = lowerPart,
-                kneePivot = kneePivot,
-                kneeRotation = kneeRotation
-            )
+        Image(
+            painter = painterResource(part),
+            contentDescription = null,
+            colorFilter = skin,
+            modifier = Modifier.fillMaxSize()
+        )
+        footOverlay?.let { overlay ->
             Image(
-                painter = painterResource(upperPart),
+                painter = painterResource(overlay),
                 contentDescription = null,
                 modifier = Modifier.fillMaxSize()
             )
-        } else {
-            Image(
-                painter = painterResource(upperPart),
-                contentDescription = null,
-                modifier = Modifier.fillMaxSize()
-            )
-            LegLowerPart(
-                lowerPart = lowerPart,
-                kneePivot = kneePivot,
-                kneeRotation = kneeRotation
-            )
         }
     }
-}
-
-@Composable
-private fun LegLowerPart(
-    lowerPart: DrawableResource,
-    kneePivot: TransformOrigin,
-    kneeRotation: Float
-) {
-    Image(
-        painter = painterResource(lowerPart),
-        contentDescription = null,
-        modifier = Modifier
-            .fillMaxSize()
-            .graphicsLayer {
-                transformOrigin = kneePivot
-                rotationZ = kneeRotation
-            }
-    )
-}
-
-private fun wandCurve(
-    progress: Float,
-    gather: Float,
-    cast: Float,
-    hold: Float
-): Float {
-    return when {
-        progress <= 0.42f -> {
-            val t = progress.segment(0f, 0.42f).smoothStep()
-            lerp(0f, gather, t)
-        }
-        progress <= 0.62f -> {
-            val t = progress.segment(0.42f, 0.62f)
-            lerp(gather, cast, t)
-        }
-        progress <= 0.78f -> {
-            val t = progress.segment(0.62f, 0.78f).smoothStep()
-            lerp(cast, hold, t)
-        }
-        else -> {
-            val t = progress.segment(0.78f, 1f).smoothStep()
-            lerp(hold, 0f, t)
-        }
-    }
-}
-
-private fun Float.segment(
-    start: Float,
-    end: Float
-): Float {
-    return ((this - start) / (end - start)).coerceIn(0f, 1f)
-}
-
-private fun Float.smoothStep(): Float {
-    return this * this * (3f - 2f * this)
-}
-
-private fun lerp(
-    start: Float,
-    end: Float,
-    amount: Float
-): Float {
-    return start + (end - start) * amount
 }

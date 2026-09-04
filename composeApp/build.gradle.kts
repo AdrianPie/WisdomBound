@@ -30,6 +30,10 @@ kotlin {
         iosTarget.binaries.framework {
             baseName = "ComposeApp"
             isStatic = true
+            // Reader eksponuje swoj most tlumaczen (patrz feature/reader/.../TranslationSource.ios.kt)
+            // do Swift - Apple `Translation` framework jest czystym Swiftem bez naglowka ObjC,
+            // wiec Kotlin/Native nie moze go wywolac wprost, tylko odwrotnie: Swift woła w Kotlina.
+            export(project(":feature:reader"))
         }
     }
     
@@ -61,6 +65,9 @@ kotlin {
             implementation(libs.firebase.app)
             implementation(libs.koin.compose)
             implementation(libs.koin.compose.viewmodel)
+
+            // api, nie implementation - export() w bloku framework wymaga tego dla dzialania.
+            api(project(path = ":feature:reader"))
 
             implementation(project(path = ":navigation" ))
             implementation(project(path = ":shared" ))

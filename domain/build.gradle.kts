@@ -48,6 +48,9 @@ kotlin {
             implementation(libs.androidx.lifecycle.viewmodelCompose)
             implementation(libs.androidx.lifecycle.runtimeCompose)
 
+            // JSON - parser odpowiedzi modelu przy generowaniu wlasnej talii (quiz/ai).
+            implementation(libs.kotlinx.serialization)
+
             implementation(libs.firebase.firestore)
             implementation(libs.auth.firebase.kmp)
 

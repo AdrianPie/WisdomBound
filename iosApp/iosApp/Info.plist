@@ -19,5 +19,9 @@
 	</array>
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
+	<key>NSHealthShareUsageDescription</key>
+	<string>LernHero czyta kroki i treningi, zeby przyznawac nagrody za aktywnosc.</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>LernHero nie zapisuje danych zdrowotnych - to uprawnienie zostaje niewykorzystane.</string>
 </dict>
 </plist>

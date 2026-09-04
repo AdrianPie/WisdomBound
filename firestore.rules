@@ -1,0 +1,111 @@
+rules_version = '2';
+
+// LernHero - Firestore Security Rules
+//
+// Zakres celowo ograniczony: to NIE jest pelna ochrona ekonomii gry (patrz nizej "Czego to
+// NIE robi"). Cel na TERAZ jest wprost taki, jak ustalilismy: zamknac latwe, jednorazowe
+// exploity (ustaw sobie miliard zlota, cofnij zegar i zbieraj idle w kolko, zrob sie adminem),
+// zanim przeniesiemy realne liczenie na serwer. Docelowo ekonomia (zloto/XP/surowce/lup)
+// powinna byc pisana WYLACZNIE przez zaufany backend (Cloud Run/Functions z Admin SDK), a te
+// reguly zmienia sie wtedy na "client can only read".
+//
+// Czego to NIE robi (swiadomy kompromis na "kilka dni"):
+//  - NIE sprawdza, czy zdobyte przedmioty/kompani/poziomy talentow byly "uczciwie zarobione" -
+//    listy (ownedItems, ownedMonsters...) i mapy (monsterLevels, talentRanks, storyProgress...)
+//    zostaja tak jak dzis, edytowalne przez klienta. To wymagaloby przepisania kazdej mutacji na
+//    Cloud Function - poza budzetem czasowym teraz. Podniesienie tej bariery to nastepny krok.
+//  - Limity delt ponizej sa CELOWO szerokie (wyzej niz jakakolwiek pojedyncza legalna nagroda),
+//    zeby nie polamac normalnej gry przez zle oszacowany pulap. Dostroj je realnymi liczbami
+//    z balansu gry (RunLoot, IdleRewards, koszty w Kuzni/Summon Center), gdy bedzie czas.
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isOwner(uid) {
+      return request.auth != null && request.auth.uid == uid;
+    }
+
+    function isNewNumber(field) {
+      return field in request.resource.data && request.resource.data[field] is int;
+    }
+
+    function wasNumber(field) {
+      return field in resource.data && resource.data[field] is int;
+    }
+
+    // Delta pola liczbowego miedzy stara a nowa wersja dokumentu. Zaklada 0, gdy pole nie
+    // istnialo wczesniej (np. stary zapis sprzed dodania nowego pola).
+    function delta(field) {
+      return (isNewNumber(field) ? request.resource.data[field] : 0)
+        - (wasNumber(field) ? resource.data[field] : 0);
+    }
+
+    // Jeden generous-ale-skonczony pulap na WSZYSTKIE walutowe pola na jeden zapis dokumentu.
+    // Prawdziwa najwieksza legalna nagroda (skrzynia bossa, pelny magazyn idle 12h na najwyzszym
+    // tierze) powinna byc rzedu wielkosci nizsza - podbij tu pozniej z realnym balansem.
+    function withinEconomyBounds() {
+      return delta('money') <= 50000 && delta('money') >= -50000
+        && request.resource.data.money >= 0
+        && (!('townResources' in request.resource.data) ||
+          (
+            request.resource.data.townResources.wood >= 0 &&
+            request.resource.data.townResources.stone >= 0 &&
+            request.resource.data.townResources.iron >= 0 &&
+            request.resource.data.townResources.essence >= 0 &&
+            request.resource.data.townResources.summonTickets >= 0 &&
+            request.resource.data.townResources.wood <= (resource.data.townResources.wood + 5000) &&
+            request.resource.data.townResources.stone <= (resource.data.townResources.stone + 5000) &&
+            request.resource.data.townResources.iron <= (resource.data.townResources.iron + 5000) &&
+            request.resource.data.townResources.essence <= (resource.data.townResources.essence + 5000) &&
+            request.resource.data.townResources.summonTickets <= (resource.data.townResources.summonTickets + 100)
+          ))
+        && (!('progress' in request.resource.data) ||
+          (
+            request.resource.data.progress.xp >= 0 &&
+            request.resource.data.progress.xp <= (resource.data.progress.xp + 20000) &&
+            request.resource.data.progress.unspentPoints <=
+              (resource.data.progress.unspentPoints + 10)
+          ));
+    }
+
+    // idleCollectedAt: tylko do przodu, nigdy w przyszlosc wzgledem zegara SERWERA
+    // (request.time - to jedyny czas, ktoremu tu ufamy). Minutowa tolerancja na drobne
+    // rozjazdy/kolejke zapisu.
+    function withinIdleClockBounds() {
+      return !('idleCollectedAt' in request.resource.data) ||
+        (
+          request.resource.data.idleCollectedAt >= (
+            'idleCollectedAt' in resource.data ? resource.data.idleCollectedAt : 0
+          )
+          && request.resource.data.idleCollectedAt <= (request.time.toMillis() + 60000)
+        );
+    }
+
+    match /player/{uid} {
+      allow read: if isOwner(uid);
+
+      // Pierwszy zapis (tworzenie gracza) - domyslne wartosci w createPlayer sa bezpieczne,
+      // nie ma jeszcze "przed", wiec nie ma czego ograniczac delta.
+      allow create: if isOwner(uid);
+
+      allow update: if isOwner(uid) && withinEconomyBounds() && withinIdleClockBounds();
+
+      allow delete: if false;
+
+      // Flaga uprawnien - NIGDY nie dotykana przez klienta, w zadna strone.
+      match /privateData/{docId} {
+        allow read, write: if false;
+      }
+
+      // Wlasne talie pytan - nie sa ekonomia, wlasciciel moze je dowolnie edytowac.
+      match /decks/{deckId} {
+        allow read, write: if isOwner(uid);
+      }
+    }
+
+    // Wszystko inne domyslnie zamkniete.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

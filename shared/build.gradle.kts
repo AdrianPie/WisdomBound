@@ -49,6 +49,10 @@ kotlin {
             implementation(libs.androidx.lifecycle.runtimeCompose)
 
             implementation(libs.kotlinx.serialization)
+            // Local (per-device) preference storage - app language lives here, not in Player,
+            // because it must apply even before the player is loaded (Auth screen, splash).
+            implementation(libs.multiplatform.settings)
+            implementation(libs.multiplatform.settings.no.arg)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)

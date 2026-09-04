@@ -1,0 +1,80 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [4 0 R 5 0 R 6 0 R] /Count 3 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /Resources << /Font << /F1 3 0 R >> >> /MediaBox [0 0 612 792] /Contents 7 0 R >>
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /Resources << /Font << /F1 3 0 R >> >> /MediaBox [0 0 612 792] /Contents 8 0 R >>
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /Resources << /Font << /F1 3 0 R >> >> /MediaBox [0 0 612 792] /Contents 9 0 R >>
+endobj
+7 0 obj
+<< /Length 796 >>
+stream
+BT /F1 18 Tf 72 740 Td (Rozdzial pierwszy: Przyklad) Tj ET
+BT /F1 12 Tf 72 700 Td (To jest przykladowy, oryginalny tekst demonstracyjny.) Tj ET
+BT /F1 12 Tf 72 680 Td (Sluzy wylacznie do przetestowania czytnika PDF w aplikacji.) Tj ET
+BT /F1 12 Tf 72 660 Td (Podmien ten plik na prawdziwa ksiazke z domeny publicznej,) Tj ET
+BT /F1 12 Tf 72 640 Td (na przyklad z serwisu Wolne Lektury albo Project Gutenberg.) Tj ET
+BT /F1 12 Tf 72 620 Td () Tj ET
+BT /F1 12 Tf 72 600 Td (Kazda strona tego dokumentu zawiera kilka linijek tekstu,) Tj ET
+BT /F1 12 Tf 72 580 Td (zeby licznik slow i stron mial co zliczac podczas testow.) Tj ET
+BT /F1 12 Tf 72 560 Td (Aplikacja liczy slowa tak jak edytor tekstu - jako tokeny) Tj ET
+BT /F1 12 Tf 72 540 Td (oddzielone bialymi znakami, niezaleznie od jezyka.) Tj ET
+endstream
+endobj
+8 0 obj
+<< /Length 841 >>
+stream
+BT /F1 18 Tf 72 740 Td (Rozdzial drugi: Druga strona) Tj ET
+BT /F1 12 Tf 72 700 Td (Druga strona przykladowego dokumentu demonstracyjnego.) Tj ET
+BT /F1 12 Tf 72 680 Td (Przewracanie stron powinno aktualizowac licznik przeczytanych) Tj ET
+BT /F1 12 Tf 72 660 Td (kartek oraz zliczac czas aktywnego czytania w tle.) Tj ET
+BT /F1 12 Tf 72 640 Td () Tj ET
+BT /F1 12 Tf 72 620 Td (Jesli czytelnik zostawi aplikacje otwarta bez interakcji,) Tj ET
+BT /F1 12 Tf 72 600 Td (system wykrywa brak aktywnosci i wstrzymuje odliczanie czasu,) Tj ET
+BT /F1 12 Tf 72 580 Td (zeby nagroda za czytanie nie byla przyznawana za bezczynnosc.) Tj ET
+BT /F1 12 Tf 72 560 Td () Tj ET
+BT /F1 12 Tf 72 540 Td (To jedynie przykladowy tekst - nie jest to fragment zadnej) Tj ET
+BT /F1 12 Tf 72 520 Td (prawdziwej powiesci ani utworu chronionego prawem autorskim.) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Length 546 >>
+stream
+BT /F1 18 Tf 72 740 Td (Rozdzial trzeci: Trzecia strona) Tj ET
+BT /F1 12 Tf 72 700 Td (Trzecia i ostatnia strona przykladowego dokumentu.) Tj ET
+BT /F1 12 Tf 72 680 Td (Gratulacje - dotarles do konca demonstracyjnej ksiazki.) Tj ET
+BT /F1 12 Tf 72 660 Td () Tj ET
+BT /F1 12 Tf 72 640 Td (W prawdziwej bibliotece w tym miejscu bedzie znajdowac sie) Tj ET
+BT /F1 12 Tf 72 620 Td (kolejny rozdzial prawdziwej ksiazki z wygasla licencja.) Tj ET
+BT /F1 12 Tf 72 600 Td () Tj ET
+BT /F1 12 Tf 72 580 Td (Dziekujemy za przetestowanie czytnika PDF.) Tj ET
+endstream
+endobj
+xref
+0 10
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000127 00000 n 
+0000000197 00000 n 
+0000000323 00000 n 
+0000000449 00000 n 
+0000000575 00000 n 
+0000001422 00000 n 
+0000002314 00000 n 
+trailer
+<< /Size 10 /Root 1 0 R >>
+startxref
+2911
+%%EOF

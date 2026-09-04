@@ -1,0 +1,8 @@
+.git
+.gradle
+.idea
+**/build
+**/.cxx
+composeApp/iosApp
+*.iml
+local.properties

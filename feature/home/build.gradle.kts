@@ -35,6 +35,7 @@ kotlin {
             implementation(libs.compose.ui.tooling.preview)
             implementation(libs.androidx.activity.compose)
             implementation(libs.splash.screen)
+            implementation(libs.androidx.health.connect.client)
 
         }
         commonMain.dependencies {
@@ -59,7 +60,9 @@ kotlin {
 
             implementation(project(path = ":shared" ))
             implementation(project(path = ":data" ))
+            implementation(project(path = ":domain" ))
             implementation(project(path = ":feature:game" ))
+            implementation(project(path = ":feature:reader" ))
 
         }
         commonTest.dependencies {

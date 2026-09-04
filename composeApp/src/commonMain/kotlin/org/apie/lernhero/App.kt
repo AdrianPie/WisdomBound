@@ -14,11 +14,11 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import org.jetbrains.compose.ui.tooling.preview.Preview
-import com.lernhero.domain.data.PlayerRepository
+import com.lernhero.domain.repository.PlayerRepository
 
-import com.lernhero.shared.Screen
+import com.lernhero.shared.navigation.Screen
 import com.lernhero.navigation.SetupNavGraph
-import com.lernhero.shared.Constans
+import com.lernhero.shared.Constants
 import com.mmk.kmpauth.google.GoogleAuthCredentials
 import com.mmk.kmpauth.google.GoogleAuthProvider
 import org.jetbrains.compose.resources.painterResource
@@ -26,27 +26,33 @@ import org.jetbrains.compose.resources.painterResource
 import lernhero.composeapp.generated.resources.Res
 import lernhero.composeapp.generated.resources.compose_multiplatform
 import org.koin.compose.koinInject
+import com.lernhero.shared.i18n.AppLanguageStore
+import com.lernhero.shared.i18n.ProvideAppStrings
 
 @Composable
 @Preview
 fun App() {
+    val languageStore = koinInject<AppLanguageStore>()
+    ProvideAppStrings(languageStore) {
     MaterialTheme {
         val playerRepository = koinInject<PlayerRepository>()
         var appReady by remember { mutableStateOf(false) }
-        val userAuthenticated = remember { playerRepository.getUserId() != null }
-        var startDestination by remember {
-            mutableStateOf(
-                if (userAuthenticated) {
-                    Screen.HomeGraph
-                } else {
-                    Screen.Auth
-                }
-            )
-        }
+        var startDestination by remember { mutableStateOf<Screen>(Screen.Auth) }
         LaunchedEffect(Unit){
             GoogleAuthProvider.create(
-                credentials = GoogleAuthCredentials(serverId = Constans.WEB_CLIENT_ID)
+                credentials = GoogleAuthCredentials(serverId = Constants.WEB_CLIENT_ID)
             )
+            // Zalogowany z postacia -> Home; zalogowany bez postaci -> tworzenie
+            // postaci; niezalogowany -> ekran logowania.
+            startDestination = if (playerRepository.getUserId() != null) {
+                if (playerRepository.getPlayer()?.character != null) {
+                    Screen.HomeGraph
+                } else {
+                    Screen.CharacterCreation()
+                }
+            } else {
+                Screen.Auth
+            }
             appReady = true
         }
         AnimatedVisibility(
@@ -60,5 +66,6 @@ fun App() {
         }
 
 
+    }
     }
 }

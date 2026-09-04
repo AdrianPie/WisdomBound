@@ -7,7 +7,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.lernhero.shared.Resources.Player
+import com.lernhero.shared.resources.Resources.Player
 import org.jetbrains.compose.resources.painterResource
 
 
@@ -18,22 +18,17 @@ import org.jetbrains.compose.resources.painterResource
 fun ModularKnightPreview() {
     Box(modifier = Modifier.size(300.dp)) {
         Image(
-            painter = painterResource(Player.rightUpHand),
+            painter = painterResource(Player.leftLeg),
             contentDescription = null,
             modifier = Modifier.fillMaxSize()
         )
         Image(
-            painter = painterResource(Player.rightDownHand),
+            painter = painterResource(Player.rightLeg),
             contentDescription = null,
             modifier = Modifier.fillMaxSize()
         )
         Image(
-            painter = painterResource(Player.rightUpLeg),
-            contentDescription = null,
-            modifier = Modifier.fillMaxSize()
-        )
-        Image(
-            painter = painterResource(Player.rightDownLeg),
+            painter = painterResource(Player.rightHand),
             contentDescription = null,
             modifier = Modifier.fillMaxSize()
         )
@@ -48,22 +43,7 @@ fun ModularKnightPreview() {
             modifier = Modifier.fillMaxSize()
         )
         Image(
-            painter = painterResource(Player.leftUpLeg),
-            contentDescription = null,
-            modifier = Modifier.fillMaxSize()
-        )
-        Image(
-            painter = painterResource(Player.leftDownLeg),
-            contentDescription = null,
-            modifier = Modifier.fillMaxSize()
-        )
-        Image(
-            painter = painterResource(Player.leftUpHand),
-            contentDescription = null,
-            modifier = Modifier.fillMaxSize()
-        )
-        Image(
-            painter = painterResource(Player.leftDownHand),
+            painter = painterResource(Player.leftHand),
             contentDescription = null,
             modifier = Modifier.fillMaxSize()
         )
