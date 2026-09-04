@@ -18,25 +18,31 @@ import java.util.concurrent.ExecutionException
  */
 object FirebaseAdmin {
 
+    /**
+     * Jedyne miejsce, ktore woła [FirebaseApp.initializeApp] - i [firestore], i [verifyIdToken]
+     * przechodza przez ten sam `by lazy`, wiec ktokolwiek z nich zapyta pierwszy, inicjalizuje
+     * app dla obu. Trzymanie initu tylko w [firestore] (jak bylo wczesniej) psulo weryfikacje
+     * tokenow, bo /quiz/generate woła [verifyIdToken] ZANIM cokolwiek dotknie Firestore.
+     */
+    private val app: FirebaseApp by lazy {
+        FirebaseApp.getApps().firstOrNull() ?: FirebaseApp.initializeApp(
+            FirebaseOptions.builder()
+                .setCredentials(GoogleCredentials.getApplicationDefault())
+                .build()
+        )
+    }
+
     val firestore: Firestore by lazy {
-        if (FirebaseApp.getApps().isEmpty()) {
-            FirebaseApp.initializeApp(
-                FirebaseOptions.builder()
-                    .setCredentials(GoogleCredentials.getApplicationDefault())
-                    .build()
-            )
-        }
+        app
         FirestoreClient.getFirestore()
     }
 
     /** Sprawdza token Firebase Auth z naglowka `Authorization: Bearer <token>`. Null = nieprawidlowy/brak. */
     suspend fun verifyIdToken(idToken: String): String? = withContext(Dispatchers.IO) {
         try {
+            app
             FirebaseAuth.getInstance().verifyIdToken(idToken).uid
         } catch (e: Exception) {
-            // TODO: usun ten log po zdiagnozowaniu przyczyny 401 - nie chcemy w produkcji
-            // logowac szczegolow bledow weryfikacji tokenow na stale.
-            System.err.println("verifyIdToken failed: ${e::class.simpleName}: ${e.message}")
             null
         }
     }
