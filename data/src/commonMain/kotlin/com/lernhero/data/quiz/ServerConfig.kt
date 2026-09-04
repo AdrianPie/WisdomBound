@@ -7,5 +7,5 @@ package com.lernhero.data.quiz
  * apka dziala bez serwera, dopoki ktos nie wklei tutaj prawdziwy URL.
  */
 object ServerConfig {
-    const val AI_QUIZ_SERVER_BASE_URL: String = ""
+    const val AI_QUIZ_SERVER_BASE_URL: String = "https://lernhero-server-898723572748.europe-west1.run.app"
 }
