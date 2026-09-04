@@ -43,6 +43,8 @@ object FirebaseAdmin {
             app
             FirebaseAuth.getInstance().verifyIdToken(idToken).uid
         } catch (e: Exception) {
+            // TODO: usun po zdiagnozowaniu przyczyny 401.
+            System.err.println("verifyIdToken failed: ${e::class.simpleName}: ${e.message}")
             null
         }
     }
