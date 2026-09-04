@@ -33,6 +33,12 @@ class GeminiQuizGenerator(
     private val model: String = DEFAULT_MODEL,
     private val client: HttpClient = HttpClient(CIO) {
         install(ContentNegotiation) { json(Json { ignoreUnknownKeys = true }) }
+        // CIO ma WLASNY requestTimeout (domyslnie 15s), calkiem niezalezny od pluginu
+        // HttpTimeout ponizej - i to on odpala sie pierwszy. Poznac go po komunikacie
+        // "request_timeout=unknown ms" (plugin podalby konkretna liczbe). Musza byc oba.
+        engine {
+            requestTimeout = 180_000
+        }
         // Domyslne 15s CIO to za malo: gemini-3.6-flash "mysli" przed odpowiedzia i przy 20-30
         // pytaniach potrafi liczyc kilkadziesiat sekund. Cloud Run tnie caly request po 300s,
         // wiec 180s zostawia zapas na odeslanie odpowiedzi apce.
