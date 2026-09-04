@@ -34,6 +34,7 @@ fun Application.module() {
     }
     install(StatusPages) {
         exception<Throwable> { call, cause ->
+            cause.printStackTrace()
             call.respond(HttpStatusCode.InternalServerError, mapOf("error" to (cause.message ?: "unknown error")))
         }
     }
