@@ -8,8 +8,11 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -74,16 +77,27 @@ fun CustomSourcePanel(
 
         DeckSectionLabel(strings.deckMyDecksLabel)
 
-        when {
-            loading -> Hint(strings.deckLoading)
-            decks.isEmpty() -> Hint(strings.deckEmptyHint)
-            else -> decks.forEach { deck ->
-                DeckCard(
-                    deck = deck,
-                    selected = deck.id == selectedDeckId,
-                    onSelect = { onSelectDeck(deck.id) },
-                    onEdit = { onEditDeck(deck.id) }
-                )
+        // Wlasny, ograniczony wysokoscia kwadrat na liste talii - scrolluje sie TYLKO on, gdy
+        // talii jest duzo. Reszta panelu (karta, przyciski, START) ma zostac na miejscu, zamiast
+        // calej strony trzeba bylo przewijac, zeby dojsc do START.
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .heightIn(max = 260.dp)
+                .verticalScroll(rememberScrollState()),
+            verticalArrangement = Arrangement.spacedBy(10.dp)
+        ) {
+            when {
+                loading -> Hint(strings.deckLoading)
+                decks.isEmpty() -> Hint(strings.deckEmptyHint)
+                else -> decks.forEach { deck ->
+                    DeckCard(
+                        deck = deck,
+                        selected = deck.id == selectedDeckId,
+                        onSelect = { onSelectDeck(deck.id) },
+                        onEdit = { onEditDeck(deck.id) }
+                    )
+                }
             }
         }
 
