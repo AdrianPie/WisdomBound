@@ -316,13 +316,14 @@ fun LiveQuizBar(
             }
         }
 
-        // Pasek streaka wisi KILKA PX NAD zlota ramka panelu, nie w srodku - stad osobny Box
-        // wyzej bez przyciecia i ujemny offset tutaj.
+        // Pasek streaka siedzi NA zlotej ramce panelu (polowa kropki nad, polowa na ramce), nie
+        // w srodku - stad osobny Box wyzej bez przyciecia. Offset celowo maly: wyzej koliduje z
+        // paskiem HUD areny (predkosc bitwy / Surrender), ktory jest tuz nad tym panelem.
         StreakPipRow(
             streak = state.streak,
             modifier = Modifier
                 .align(Alignment.TopCenter)
-                .offset(y = (-10).dp)
+                .offset(y = (-7).dp)
         )
     }
 }
