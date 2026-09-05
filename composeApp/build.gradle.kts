@@ -124,6 +124,9 @@ android {
         getByName("release") {
             isMinifyEnabled = false
             signingConfig = signingConfigs.getByName("release")
+            // Symbole natywne (libtranslate_jni.so itd.) do Play - czytelne stacktrace crashy
+            // z warstwy C++ zamiast surowych adresow.
+            ndk { debugSymbolLevel = "FULL" }
         }
     }
 
