@@ -7,6 +7,50 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:792351484406:android:a2b23fde84c885b84b3fd7",
+        "android_client_info": {
+          "package_name": "com.intelligentape.wisdombound"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "792351484406-4i3onhlp0gm7alqf4j7c0vnojoqkqbuo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.intelligentape.wisdombound",
+            "certificate_hash": "8eabda1fa36807edcb87441b72fe9b15612259f3"
+          }
+        },
+        {
+          "client_id": "792351484406-gnr1qsv8m5h449av9k0p7pf1140qkvij.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0nYU5afptIsLfv7Iwoquq-b6bQ0tdApA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "792351484406-gnr1qsv8m5h449av9k0p7pf1140qkvij.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "792351484406-me2iq0cpj9ogh5fdpphoammjprcetnqe.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.apie.lernhero.LernHero"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:792351484406:android:9052a83395b0ee014b3fd7",
         "android_client_info": {
           "package_name": "org.apie.lernhero"
@@ -37,6 +81,13 @@
             {
               "client_id": "792351484406-gnr1qsv8m5h449av9k0p7pf1140qkvij.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "792351484406-me2iq0cpj9ogh5fdpphoammjprcetnqe.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.apie.lernhero.LernHero"
+              }
             }
           ]
         }
