@@ -1024,7 +1024,10 @@ private const val REVEAL_HOLD_MS = 500L
 private const val MONSTER_RISE_DISTANCE_PX = 140f
 
 /** Gdzie w (kwadratowym) kadrze oltarza jest powierzchnia kregu (zmierzone z pliku PNG). */
-private const val ALTAR_PLATFORM_Y_FRACTION = 0.62f
+// Wysokosc kregu rytualnego w kadrze summon_center.png (ulamek calego kwadratowego PNG) - tu
+// laduja stopy przyzwanego potwora. Zmierzone z pliku: srodek gwiazdy ~0.61, przednia krawedz
+// plyty ~0.76; stopy na srodku-przodzie kregu.
+private const val ALTAR_PLATFORM_Y_FRACTION = 0.66f
 
 /** Ile miejsca zostawic pod komunikatem, zeby nie wszedl na rzad przyciskow summona. */
 private val MESSAGE_BOTTOM_GAP = 52.dp

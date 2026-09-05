@@ -27,7 +27,6 @@ import lernhero.shared.generated.resources.grid
 import lernhero.shared.generated.resources.home
 import lernhero.shared.generated.resources.india
 import lernhero.shared.generated.resources.knight_avatar2
-import lernhero.shared.generated.resources.altar_empty
 import lernhero.shared.generated.resources.armor_new
 import lernhero.shared.generated.resources.body_new
 import lernhero.shared.generated.resources.boss_skeleton_dragon_2
@@ -76,6 +75,7 @@ import lernhero.shared.generated.resources.shopping_cart
 import lernhero.shared.generated.resources.shopping_cart_image
 import lernhero.shared.generated.resources.smite_island
 import lernhero.shared.generated.resources.sorcerer_avatar2
+import lernhero.shared.generated.resources.summon_center
 import lernhero.shared.generated.resources.summon_island
 import lernhero.shared.generated.resources.swords_24px
 import lernhero.shared.generated.resources.tartak_island
@@ -186,7 +186,7 @@ object Resources {
     /** Wyspy-budynki na ekranie Miasta (Dom) - kazda to osobna klikalna "instancja" (patrz HomeScreen). */
     object CityIsland {
         /** Pusty oltarz w Summon Center - scena, na ktorej "wychodzi" wylosowany summon. */
-        val altar = Res.drawable.altar_empty
+        val altar = Res.drawable.summon_center
         val sawmill = Res.drawable.tartak_island
         val quarry = Res.drawable.mine_island
         val forge = Res.drawable.smite_island
