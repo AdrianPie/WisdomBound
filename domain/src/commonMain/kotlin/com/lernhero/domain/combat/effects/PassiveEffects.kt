@@ -26,33 +26,33 @@ class StatBonusEffect(
  */
 class MultiTargetAttackEffect(private val targets: Int) : StatEffect {
     override val id = "multi_target_$targets"
-    override val description = "Atakuje $targets przeciwnikow naraz."
+    override val description = "Attacks $targets enemies at once."
     override val bonus = Stats.of(StatType.AttackTargets to (targets - 1).toFloat())
 }
 
 /** Szansa na trafienie krytyczne, 0.15 = +15%. */
 class CriticalChanceEffect(private val percent: Float) : StatEffect {
     override val id = "crit_chance_${(percent * 100).toInt()}"
-    override val description = "+${(percent * 100).toInt()}% szansy na trafienie krytyczne."
+    override val description = "+${(percent * 100).toInt()}% critical hit chance."
     override val bonus = Stats.of(StatType.CritChance to percent)
 }
 
 class CriticalDamageEffect(private val multiplier: Float) : StatEffect {
     override val id = "crit_damage_${(multiplier * 100).toInt()}"
-    override val description = "+${(multiplier * 100).toInt()}% obrazen krytycznych."
+    override val description = "+${(multiplier * 100).toInt()}% critical damage."
     override val bonus = Stats.of(StatType.CritDamage to multiplier)
 }
 
 /** Kradziez zycia - ulamek zadanych obrazen wraca jako leczenie. Silnik dolicza to sam. */
 class LifestealEffect(private val percent: Float) : StatEffect {
     override val id = "lifesteal_${(percent * 100).toInt()}"
-    override val description = "${(percent * 100).toInt()}% zadanych obrazen wraca jako zdrowie."
+    override val description = "${(percent * 100).toInt()}% of damage dealt returns as health."
     override val bonus = Stats.of(StatType.Lifesteal to percent)
 }
 
 class DodgeChanceEffect(private val percent: Float) : StatEffect {
     override val id = "dodge_${(percent * 100).toInt()}"
-    override val description = "+${(percent * 100).toInt()}% szansy na unik."
+    override val description = "+${(percent * 100).toInt()}% dodge chance."
     override val bonus = Stats.of(StatType.Dodge to percent)
 }
 
@@ -64,7 +64,7 @@ class SpeedEffect(private val amount: Float) : StatEffect {
 
 class DamageReductionEffect(private val percent: Float) : StatEffect {
     override val id = "damage_reduction_${(percent * 100).toInt()}"
-    override val description = "Otrzymujesz o ${(percent * 100).toInt()}% mniej obrazen."
+    override val description = "You take ${(percent * 100).toInt()}% less damage."
     override val bonus = Stats.of(StatType.DamageReduction to percent)
 }
 
@@ -74,7 +74,7 @@ class DamageReductionEffect(private val percent: Float) : StatEffect {
  */
 class CooldownReductionEffect(private val turns: Int) : StatEffect {
     override val id = "cooldown_reduction_$turns"
-    override val description = "Efekty cykliczne odpalaja sie o $turns ture szybciej."
+    override val description = "Recurring effects trigger $turns turn sooner."
     override val bonus = Stats.of(StatType.CooldownReduction to turns.toFloat())
 }
 

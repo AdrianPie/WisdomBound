@@ -44,20 +44,20 @@ object QuizGenerationParser {
         defaultDifficulty: QuizDifficulty = QuizDifficulty.Medium
     ): QuizGenerationResult {
         val body = extractJson(raw) ?: return QuizGenerationResult.Failed(
-            "Model nie odpowiedzial JSON-em - sprobuj jeszcze raz."
+            "The model did not answer with JSON - try again."
         )
 
         val root = try {
             json.parseToJsonElement(body)
         } catch (e: Exception) {
-            return QuizGenerationResult.Failed("Nie udalo sie odczytac odpowiedzi modelu (${e.message}).")
+            return QuizGenerationResult.Failed("Could not read the model's answer (${e.message}).")
         }
 
         val array = when {
             root is JsonArray -> root
             root is JsonObject -> (root["questions"] as? JsonArray) ?: (root["pytania"] as? JsonArray)
             else -> null
-        } ?: return QuizGenerationResult.Failed("Odpowiedz modelu nie zawiera listy pytan.")
+        } ?: return QuizGenerationResult.Failed("The model's answer has no question list.")
 
         val questions = mutableListOf<CustomQuestion>()
         val warnings = mutableListOf<String>()
@@ -65,18 +65,18 @@ object QuizGenerationParser {
         array.forEachIndexed { index, element ->
             val obj = element as? JsonObject
             if (obj == null) {
-                warnings += "Pytanie ${index + 1}: nie jest obiektem JSON."
+                warnings += "Question ${index + 1}: not a JSON object."
                 return@forEachIndexed
             }
 
             val typeName = obj.string("type") ?: obj.string("typ")
             val type = typeName?.let(QuizGenerationPrompt::typeOf)
             if (type == null) {
-                warnings += "Pytanie ${index + 1}: nieznany typ \"${typeName.orEmpty()}\"."
+                warnings += "Question ${index + 1}: unknown type \"${typeName.orEmpty()}\"."
                 return@forEachIndexed
             }
             if (type !in allowedTypes) {
-                warnings += "Pytanie ${index + 1}: typ \"${typeName}\" nie byl zamowiony - pominiete."
+                warnings += "Question ${index + 1}: type \"${typeName}\" was not requested - skipped."
                 return@forEachIndexed
             }
 
@@ -110,7 +110,7 @@ object QuizGenerationParser {
 
         if (questions.isEmpty()) {
             return QuizGenerationResult.Failed(
-                "Zadne z pytan modelu nie nadawalo sie do talii." +
+                "None of the model's questions fit the deck." +
                     warnings.firstOrNull()?.let { " ($it)" }.orEmpty()
             )
         }

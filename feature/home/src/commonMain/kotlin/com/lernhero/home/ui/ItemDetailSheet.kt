@@ -190,7 +190,7 @@ fun ItemDetailSheet(
                     )
                 }
                 SheetButton(
-                    label = "ZAMKNIJ",
+                    label = "CLOSE",
                     accent = Frame,
                     onClick = onDismiss,
                     modifier = Modifier.weight(1f)

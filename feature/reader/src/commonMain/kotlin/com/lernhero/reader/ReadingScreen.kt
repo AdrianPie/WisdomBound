@@ -280,9 +280,9 @@ private fun LibraryView(
 private fun MiniStats(state: LibraryUiState) {
     Row(horizontalArrangement = Arrangement.spacedBy(10.dp), verticalAlignment = Alignment.Bottom) {
         MiniStat(value = "${state.readingStats.totalMinutes}", label = "min")
-        MiniStat(value = "${state.readingStats.totalPages}", label = "stron")
-        MiniStat(value = "${state.readingStats.averageWpm}", label = "s/min")
-        MiniStat(value = "${state.readingToday.minutes}", label = "dzis", accent = true)
+        MiniStat(value = "${state.readingStats.totalPages}", label = "pages")
+        MiniStat(value = "${state.readingStats.averageWpm}", label = "wpm")
+        MiniStat(value = "${state.readingToday.minutes}", label = "today", accent = true)
     }
 }
 

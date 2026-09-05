@@ -150,7 +150,7 @@ fun DeckEditorScreen(
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                DeckSectionLabel("Pytania (${deck.turnReady.size} gotowych z ${deck.questions.size})")
+                DeckSectionLabel("Questions (${deck.turnReady.size} ready of ${deck.questions.size})")
                 if (deck.brokenCount > 0) {
                     Text(
                         text = "${deck.brokenCount} do dokonczenia",
@@ -179,7 +179,7 @@ fun DeckEditorScreen(
             }
 
             DeckButton(
-                label = "+ DODAJ PYTANIE",
+                label = "+ ADD QUESTION",
                 onClick = { addingType = true },
                 color = Color(0xFF3A2A18),
                 textColor = DeckGold,
@@ -238,8 +238,8 @@ fun DeckEditorScreen(
 
     if (confirmDelete && deck != null) {
         ConfirmDialog(
-            title = "USUNAC TALIE?",
-            body = "\"${deck.displayName}\" i wszystkie ${deck.questions.size} pytan znikna na zawsze.",
+            title = "DELETE DECK?",
+            body = "\"${deck.displayName}\" and all ${deck.questions.size} questions are gone for good.",
             onConfirm = {
                 confirmDelete = false
                 viewModel.delete(deck.id)
@@ -325,7 +325,7 @@ private fun AiSection(
             verticalAlignment = Alignment.CenterVertically
         ) {
             Text(
-                text = "✨ WYGENERUJ PYTANIA",
+                text = "✨ GENERATE QUESTIONS",
                 color = DeckGold,
                 fontFamily = FontPixel(),
                 fontWeight = FontWeight.Bold,
@@ -437,7 +437,7 @@ private fun WarningsPanel(warnings: List<String>, onDismiss: () -> Unit) {
         verticalArrangement = Arrangement.spacedBy(3.dp)
     ) {
         Text(
-            text = "MODEL PRZYSLAL TEZ COS, CZEGO NIE DALO SIE UZYC:",
+            text = "THE MODEL ALSO SENT SOMETHING UNUSABLE:",
             color = DeckGold,
             fontFamily = FontPixel(),
             fontSize = 10.sp

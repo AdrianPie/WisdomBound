@@ -656,7 +656,7 @@ private fun Backpack(
                     style = MaterialTheme.typography.titleSmall,
                     fontWeight = FontWeight.Bold
                 )
-                Text("dotknij, zeby zobaczyc", color = Muted, fontFamily = FontFirst(), fontSize = 10.sp)
+                Text("tap to view", color = Muted, fontFamily = FontFirst(), fontSize = 10.sp)
             }
 
             if (items.isEmpty()) {

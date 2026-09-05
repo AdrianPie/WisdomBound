@@ -29,7 +29,7 @@ class HealAlliesEffect(
 ) : TriggeredEffect {
     override val id = "heal_allies_${targets}_${amount.toInt()}"
     override val description =
-        "Co $everyTurns tury leczy $targets sojusznikow za ${amount.toInt()} zdrowia."
+        "Every $everyTurns turns heals $targets allies for ${amount.toInt()} health."
     override val trigger = Trigger.TurnStart
     override val conditions: List<EffectCondition> = listOf(OwnerIsActor, EveryNTurns(everyTurns))
 
@@ -54,7 +54,7 @@ class BattleCryEffect(
     private val turns: Int
 ) : TriggeredEffect {
     override val id = "battle_cry_${stat.name.lowercase()}_${potency.toInt()}"
-    override val description = "Na starcie walki wzmacnia druzyne: +${potency.toInt()} ${stat.name}."
+    override val description = "At the start of battle buffs the team: +${potency.toInt()} ${stat.name}."
     override val trigger = Trigger.BattleStart
 
     override fun react(event: CombatEvent, context: EffectContext): List<CombatAction> = listOf(
@@ -76,7 +76,7 @@ class WarHornEffect(
     private val turns: Int
 ) : TriggeredEffect {
     override val id = "war_horn_${stat.name.lowercase()}_${potency.toInt()}"
-    override val description = "Na starcie walki oslabia wrogow: -${potency.toInt()} ${stat.name}."
+    override val description = "At the start of battle weakens enemies: -${potency.toInt()} ${stat.name}."
     override val trigger = Trigger.BattleStart
 
     override fun react(event: CombatEvent, context: EffectContext): List<CombatAction> = listOf(
@@ -94,7 +94,7 @@ class WarHornEffect(
 /** Zdejmuje trucizne i ogien z druzyny co kilka tur. */
 class CleanseAlliesEffect(private val everyTurns: Int = 3) : TriggeredEffect {
     override val id = "cleanse_allies_$everyTurns"
-    override val description = "Co $everyTurns tury zdejmuje trucizne i ogien z druzyny."
+    override val description = "Every $everyTurns turns clears poison and burn from the team."
     override val trigger = Trigger.TurnStart
     override val conditions: List<EffectCondition> = listOf(OwnerIsActor, EveryNTurns(everyTurns))
 

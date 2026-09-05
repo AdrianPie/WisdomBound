@@ -1307,7 +1307,7 @@ class BattleViewModel(
             BossEventKind.Strike -> {
                 val perPlayer = ((boss?.attack ?: 0) * BOSS_STRIKE_MAX_ATTACK_MULTIPLIER).roundToInt()
                 BossEventProjection(
-                    attackName = "POTEZNY CIOS",
+                    attackName = "HEAVY BLOW",
                     valueLabel = "OBRAZENIA",
                     chargedValue = perPlayer * alivePlayers
                 )
@@ -1687,7 +1687,7 @@ class BattleViewModel(
             characters = updatedCharacters,
             floatingEffects = effects,
             ultiPulseId = ultiPulseId + 1,
-            message = "ULTI! Cala fala oberwala za $amount"
+            message = "ULTI! The whole wave took $amount"
         )
     }
 

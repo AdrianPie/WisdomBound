@@ -55,16 +55,16 @@ data class QuizBoost(
         private fun attack(id: String, title: String, fairAtk: Int, goodAtk: Int, runAtk: Int) = QuizBoost(
             id = id,
             title = title,
-            fair = QuizBoostEffect(attackBonus = fairAtk, description = "+$fairAtk ataku na te walke"),
-            good = QuizBoostEffect(attackBonus = goodAtk, description = "+$goodAtk ataku na te walke"),
+            fair = QuizBoostEffect(attackBonus = fairAtk, description = "+$fairAtk attack for this fight"),
+            good = QuizBoostEffect(attackBonus = goodAtk, description = "+$goodAtk attack for this fight"),
             goodRunBonus = { it.copy(bonusAttack = it.bonusAttack + runAtk) }
         )
 
         private fun health(id: String, title: String, fairHp: Int, goodHp: Int, runHp: Int) = QuizBoost(
             id = id,
             title = title,
-            fair = QuizBoostEffect(hpBonus = fairHp, description = "+$fairHp HP na te walke"),
-            good = QuizBoostEffect(hpBonus = goodHp, description = "+$goodHp HP na te walke"),
+            fair = QuizBoostEffect(hpBonus = fairHp, description = "+$fairHp HP for this fight"),
+            good = QuizBoostEffect(hpBonus = goodHp, description = "+$goodHp HP for this fight"),
             goodRunBonus = { it.copy(bonusMaxHp = it.bonusMaxHp + runHp) }
         )
 
@@ -109,16 +109,16 @@ data class QuizBoost(
                 fairValue = 0.06f,
                 goodValue = 0.12f,
                 runValue = 0.03f,
-                describe = { "+${percent(it)} szansy na krytyka na te walke" }
+                describe = { "+${percent(it)} crit chance for this fight" }
             ),
             stat(
                 id = "crushing_blow",
-                title = "Miazdzacy cios",
+                title = "Crushing Blow",
                 statType = StatType.CritDamage,
                 fairValue = 0.15f,
                 goodValue = 0.35f,
                 runValue = 0.08f,
-                describe = { "+${percent(it)} obrazen z krytyka na te walke" }
+                describe = { "+${percent(it)} crit damage for this fight" }
             ),
             stat(
                 id = "bloodlust",
@@ -127,7 +127,7 @@ data class QuizBoost(
                 fairValue = 0.06f,
                 goodValue = 0.12f,
                 runValue = 0.03f,
-                describe = { "+${percent(it)} kradziezy zycia na te walke" }
+                describe = { "+${percent(it)} lifesteal for this fight" }
             ),
             stat(
                 id = "nimble_steps",
@@ -136,7 +136,7 @@ data class QuizBoost(
                 fairValue = 0.05f,
                 goodValue = 0.1f,
                 runValue = 0.02f,
-                describe = { "+${percent(it)} szansy na unik na te walke" }
+                describe = { "+${percent(it)} dodge chance for this fight" }
             ),
             stat(
                 id = "stone_skin",
@@ -145,7 +145,7 @@ data class QuizBoost(
                 fairValue = 0.05f,
                 goodValue = 0.1f,
                 runValue = 0.02f,
-                describe = { "+${percent(it)} redukcji obrazen na te walke" }
+                describe = { "+${percent(it)} damage reduction for this fight" }
             ),
             stat(
                 id = "arcane_spark",
@@ -154,7 +154,7 @@ data class QuizBoost(
                 fairValue = 0.15f,
                 goodValue = 0.3f,
                 runValue = 0.08f,
-                describe = { "+${percent(it)} sily zaklec na te walke" }
+                describe = { "+${percent(it)} spell power for this fight" }
             ),
             stat(
                 id = "quickened_reflex",
@@ -163,7 +163,7 @@ data class QuizBoost(
                 fairValue = 2f,
                 goodValue = 4f,
                 runValue = 1f,
-                describe = { "+${it.toInt()} szybkosci na te walke" }
+                describe = { "+${it.toInt()} speed for this fight" }
             ),
             // Boosty zlozone - dwie mniejsze statystyki naraz, dla odmiany od pojedynczych.
             QuizBoost(
@@ -172,12 +172,12 @@ data class QuizBoost(
                 fair = QuizBoostEffect(
                     attackBonus = 3,
                     stats = Stats.of(StatType.CritChance to 0.04f),
-                    description = "+3 ataku i +4% szansy na krytyka na te walke"
+                    description = "+3 attack and +4% crit chance for this fight"
                 ),
                 good = QuizBoostEffect(
                     attackBonus = 6,
                     stats = Stats.of(StatType.CritChance to 0.08f),
-                    description = "+6 ataku i +8% szansy na krytyka na te walke"
+                    description = "+6 attack and +8% crit chance for this fight"
                 ),
                 goodRunBonus = {
                     it.copy(
@@ -192,12 +192,12 @@ data class QuizBoost(
                 fair = QuizBoostEffect(
                     hpBonus = 12,
                     stats = Stats.of(StatType.DamageReduction to 0.04f),
-                    description = "+12 HP i +4% redukcji obrazen na te walke"
+                    description = "+12 HP and +4% damage reduction for this fight"
                 ),
                 good = QuizBoostEffect(
                     hpBonus = 25,
                     stats = Stats.of(StatType.DamageReduction to 0.08f),
-                    description = "+25 HP i +8% redukcji obrazen na te walke"
+                    description = "+25 HP and +8% damage reduction for this fight"
                 ),
                 goodRunBonus = {
                     it.copy(
@@ -211,11 +211,11 @@ data class QuizBoost(
                 title = "Mistrz run",
                 fair = QuizBoostEffect(
                     stats = Stats.of(StatType.SpellPower to 0.1f, StatType.CritDamage to 0.1f),
-                    description = "+10% sily zaklec i +10% obrazen z krytyka na te walke"
+                    description = "+10% spell power and +10% crit damage for this fight"
                 ),
                 good = QuizBoostEffect(
                     stats = Stats.of(StatType.SpellPower to 0.22f, StatType.CritDamage to 0.22f),
-                    description = "+22% sily zaklec i +22% obrazen z krytyka na te walke"
+                    description = "+22% spell power and +22% crit damage for this fight"
                 ),
                 goodRunBonus = {
                     it.copy(

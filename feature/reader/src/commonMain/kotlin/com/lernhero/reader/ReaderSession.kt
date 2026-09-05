@@ -46,7 +46,7 @@ class ReaderSession(
         scope.launch(Dispatchers.Default) {
             val doc = PdfEngine.open(bytes)
             if (doc == null) {
-                uiState = uiState.copy(loading = false, error = "Nie udalo sie otworzyc pliku.")
+                uiState = uiState.copy(loading = false, error = "Could not open the file.")
                 return@launch
             }
             document = doc

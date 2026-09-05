@@ -168,14 +168,14 @@ internal fun TurnImpactOverlay(
 private fun VerdictLine(correct: Boolean, accent: Color, seconds: Float) {
     Column(horizontalAlignment = Alignment.CenterHorizontally) {
         Text(
-            text = if (correct) "DOBRZE!" else "PUDLO!",
+            text = if (correct) "CORRECT!" else "MISSED!",
             color = accent,
             fontFamily = FontPixel(),
             fontWeight = FontWeight.Bold,
             fontSize = 22.sp
         )
         Text(
-            text = if (correct) "odpowiedz w ${seconds.oneDecimal()}s" else "cios wychodzi slabiej",
+            text = if (correct) "answered in ${seconds.oneDecimal()}s" else "your volley lands weaker",
             color = Muted,
             fontFamily = FontFirst(),
             fontSize = 10.sp
@@ -201,13 +201,13 @@ private fun MultiplierChips(entry: TurnOutcome) {
         verticalArrangement = Arrangement.spacedBy(5.dp)
     ) {
         if (entry.correct) {
-            Chip(icon = "⚡", label = "SZYBKOSC", value = entry.speedMultiplier.asPercent(), accent = Accent)
+            Chip(icon = "⚡", label = "SPEED", value = entry.speedMultiplier.asPercent(), accent = Accent)
             // Neutralny cykl (x1.0) nie wnosi nic do rownania - pokazywanie go tylko rozpraszaloby.
             if (entry.cycleMultiplier != 1f) {
                 val buffed = entry.cycleMultiplier > 1f
                 Chip(
                     icon = if (buffed) "🔥" else "🔻",
-                    label = if (buffed) "PASSA" else "SLABOSC",
+                    label = if (buffed) "STREAK" else "SLUMP",
                     value = entry.cycleMultiplier.asPercent(),
                     accent = if (buffed) Good else Bad
                 )
@@ -215,7 +215,7 @@ private fun MultiplierChips(entry: TurnOutcome) {
         } else {
             // Sama kara do salwy jest juz w rownaniu ponizej - tutaj tylko to, czego rownanie NIE
             // pokazuje: ze w tej turze wrogowie tez uderza mocniej.
-            Chip(icon = "🛡", label = "WROGOWIE", value = "+${enemyBonusPercent()}%", accent = Bad)
+            Chip(icon = "🛡", label = "ENEMIES", value = "+${enemyBonusPercent()}%", accent = Bad)
         }
     }
 }
@@ -274,7 +274,7 @@ private fun AttackEquation(entry: TurnOutcome, accent: Color) {
         verticalArrangement = Arrangement.spacedBy(5.dp)
     ) {
         Text(
-            text = "ATAK DRUZYNY",
+            text = "TEAM ATTACK",
             color = Muted,
             fontFamily = FontFirst(),
             fontWeight = FontWeight.Bold,

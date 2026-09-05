@@ -142,13 +142,13 @@ internal fun ProductionQuizDialog(
             }
 
             Text(
-                text = "Rezygnacja nie zuzywa dziennej proby.",
+                text = "Backing out does not use your daily try.",
                 color = AppPalette.TextFaint,
                 fontFamily = FontFirst(),
                 fontSize = 10.sp
             )
             Text(
-                text = "ZAMKNIJ",
+                text = "CLOSE",
                 color = AppPalette.TextMuted,
                 fontFamily = FontPixel(),
                 fontWeight = FontWeight.Bold,
@@ -211,7 +211,7 @@ private fun QuizProgress(index: Int, total: Int, correct: Int) {
         verticalAlignment = Alignment.CenterVertically
     ) {
         Text(
-            text = "PYTANIE ${index + 1}/$total",
+            text = "QUESTION ${index + 1}/$total",
             color = AppPalette.Gold,
             fontFamily = FontPixel(),
             fontWeight = FontWeight.Bold,
@@ -247,7 +247,7 @@ private fun QuizResult(correct: Int, total: Int, onClaim: () -> Unit) {
             fontSize = 30.sp
         )
         Text(
-            text = if (percent > 0) "+$percent% PRODUKCJI na 24h" else "Bez bonusu tym razem",
+            text = if (percent > 0) "+$percent% PRODUCTION for 24h" else "No bonus this time",
             color = accent,
             fontFamily = FontPixel(),
             fontWeight = FontWeight.Bold,
@@ -255,13 +255,13 @@ private fun QuizResult(correct: Int, total: Int, onClaim: () -> Unit) {
             textAlign = TextAlign.Center
         )
         Text(
-            text = "Kolejne podejscie za 24h.",
+            text = "Next try in 24h.",
             color = AppPalette.TextFaint,
             fontFamily = FontFirst(),
             fontSize = 11.sp
         )
         TownActionButton(
-            text = "ODBIERZ",
+            text = "CLAIM",
             primary = true,
             modifier = Modifier.fillMaxWidth(),
             onClick = onClaim

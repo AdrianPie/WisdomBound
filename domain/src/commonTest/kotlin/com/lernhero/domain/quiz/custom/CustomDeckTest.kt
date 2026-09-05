@@ -37,13 +37,13 @@ class CustomDeckTest {
     @Test
     fun `powtorzona odpowiedz to blad`() {
         val broken = choice("q1").copy(wrong = listOf("Zakaz wjazdu", "Inna", "Jeszcze inna"))
-        assertTrue(broken.issues().any { it.contains("powtarzaja") }, broken.issues().toString())
+        assertTrue(broken.issues().any { it.contains("repeat") }, broken.issues().toString())
     }
 
     @Test
     fun `puste odpowiedzi nie licza sie do minimum`() {
         val broken = choice("q1").copy(wrong = listOf("Zla", "", "  "))
-        assertTrue(broken.issues().any { it.contains("Za malo") }, broken.issues().toString())
+        assertTrue(broken.issues().any { it.contains("Too few") }, broken.issues().toString())
     }
 
     @Test

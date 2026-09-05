@@ -250,9 +250,9 @@ private fun StakeCounter(event: BossEventState, accent: Color) {
         val percent = ((delta.toFloat() / charged) * 100f).roundToInt()
         Text(
             text = when {
-                delta < 0 -> "$percent% dzieki odpowiedzi"
-                delta > 0 -> "+$percent% przez pudlo"
-                else -> "bez zmian"
+                delta < 0 -> "$percent% thanks to your answer"
+                delta > 0 -> "+$percent% from the miss"
+                else -> "no change"
             },
             color = if (delta < 0) Color(0xFF4ADE80) else Color(0xFFD1453D),
             fontFamily = FontPixel(),
@@ -285,7 +285,7 @@ private fun VerdictCard(event: BossEventState, accent: Color) {
         closeness >= 0.97f -> "PRAWIE IDEALNIE"
         closeness >= 0.85f -> "BLISKO"
         closeness >= 0.6f -> "TAK SOBIE"
-        else -> "PUDLO"
+        else -> "MISS"
     }
     val verdictColor = when {
         closeness >= 0.85f -> Color(0xFF4ADE80)

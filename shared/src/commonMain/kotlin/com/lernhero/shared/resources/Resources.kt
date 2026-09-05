@@ -10,7 +10,6 @@ import lernhero.shared.generated.resources.background
 import lernhero.shared.generated.resources.bloody_mines
 import lernhero.shared.generated.resources.forgotten_forest
 import lernhero.shared.generated.resources.frozen_wastes
-import lernhero.shared.generated.resources.battle_mage_avatar
 import lernhero.shared.generated.resources.brick_dungeon
 import lernhero.shared.generated.resources.battlegroundTwo
 import lernhero.shared.generated.resources.book
@@ -21,7 +20,6 @@ import lernhero.shared.generated.resources.close
 import lernhero.shared.generated.resources.delete
 import lernhero.shared.generated.resources.dollar
 import lernhero.shared.generated.resources.edit
-import lernhero.shared.generated.resources.game_map
 import lernhero.shared.generated.resources.google_logo
 import lernhero.shared.generated.resources.grid
 import lernhero.shared.generated.resources.home
@@ -66,8 +64,6 @@ import lernhero.shared.generated.resources.mine_island
 import lernhero.shared.generated.resources.minus
 import lernhero.shared.generated.resources.paypal_logo
 import lernhero.shared.generated.resources.plus
-import lernhero.shared.generated.resources.ramka_test
-import lernhero.shared.generated.resources.ramka_test2
 import lernhero.shared.generated.resources.right_arrow
 import lernhero.shared.generated.resources.search
 import lernhero.shared.generated.resources.serbia
@@ -155,14 +151,10 @@ object Resources {
         val GoogleLogo = Res.drawable.google_logo
         val PaypalLogo = Res.drawable.paypal_logo
 
-        val boundsDragonArmor = Res.drawable.ramka_test
-        val boundsDruidArmor = Res.drawable.ramka_test2
 
-        val battleMageAvatarGame = Res.drawable.battle_mage_avatar
         val knightAvatar = Res.drawable.knight_avatar2
         val sorcererAvatar = Res.drawable.sorcerer_avatar2
 
-        val dungeonMap = Res.drawable.game_map
         val corridorBrick = Res.drawable.brick_dungeon
         val treasureChest = Res.drawable.treasure
 

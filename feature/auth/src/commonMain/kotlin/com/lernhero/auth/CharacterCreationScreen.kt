@@ -104,7 +104,7 @@ fun CharacterCreationScreen(
 
         if (devPreview) {
             Text(
-                text = "DEV PREVIEW - nic sie nie zapisuje",
+                text = "DEV PREVIEW - nothing is saved",
                 color = AppPalette.Warning,
                 fontFamily = FontFirst(),
                 fontSize = FontSize.SMALL

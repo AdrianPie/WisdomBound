@@ -108,10 +108,10 @@ class BattlePlaybackEngine(
     }
 
     private fun DamageTag.label(): String = when (this) {
-        DamageTag.Attack -> "cios"
-        DamageTag.Burn -> "ogien"
-        DamageTag.Poison -> "trucizna"
-        DamageTag.Reflect -> "odbicie"
+        DamageTag.Attack -> "hit"
+        DamageTag.Burn -> "burn"
+        DamageTag.Poison -> "poison"
+        DamageTag.Reflect -> "reflect"
         DamageTag.Skill -> "efekt"
     }
 

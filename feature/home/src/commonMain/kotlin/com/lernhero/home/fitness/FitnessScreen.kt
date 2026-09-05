@@ -75,7 +75,7 @@ private val Locked = Color(0xFF4A4030)
  * MUSI byc false przed kazdym wydaniem do sklepu. Przelacz recznie na true lokalnie, gdy testujesz
  * na emulatorze bez danych Health Connect, i wroc do false przed buildem release.
  */
-private const val SHOW_DEV_TOOLS = true
+private const val SHOW_DEV_TOOLS = false
 
 /**
  * Zakladka "Trening": dzisiejsza aktywnosc z zegarka/telefonu plus cele, za ktore placi sie

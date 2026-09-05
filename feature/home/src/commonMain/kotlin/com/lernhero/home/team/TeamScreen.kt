@@ -344,7 +344,7 @@ fun TeamScreen(
 
 /** Kampania albo endless - dwa zupelnie rozne powody, zeby wejsc do walki. */
 private enum class PlayMode(val label: String) {
-    Campaign("KAMPANIA"),
+    Campaign("CAMPAIGN"),
     Endless("ENDLESS")
 }
 
@@ -592,7 +592,7 @@ private fun MonsterPickerDialog(
             verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
             Text(
-                text = "WYBIERZ KOMPANA",
+                text = "PICK A COMPANION",
                 color = TextGold,
                 fontFamily = FontPixel(),
                 fontWeight = FontWeight.Bold,
@@ -631,7 +631,7 @@ private fun MonsterPickerDialog(
             }
 
             Text(
-                text = "ZAMKNIJ",
+                text = "CLOSE",
                 color = TextGold,
                 fontFamily = FontPixel(),
                 fontWeight = FontWeight.Bold,

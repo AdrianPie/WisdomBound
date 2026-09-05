@@ -65,14 +65,14 @@ internal fun TeamStatusBar(
             val toUlti = (ULTI_STREAK - streak).coerceAtLeast(0)
             StatusChip(
                 icon = "🔥",
-                label = "PASSA $streak",
-                detail = if (toUlti > 0) "$toUlti do ULTI" else "ULTI!",
+                label = "STREAK $streak",
+                detail = if (toUlti > 0) "$toUlti to ULTI" else "ULTI!",
                 accent = Accent
             )
         }
 
         if (stunned) {
-            StatusChip("💫", "OGLUSZENIE", "${state.stunTurnsRemaining} tur", Bad)
+            StatusChip("💫", "STUNNED", "${state.stunTurnsRemaining} turns", Bad)
         }
 
         // Bonus frakcyjny z kafla wybranego przed tura - bez tego znacznika gracz zapomina, ktora

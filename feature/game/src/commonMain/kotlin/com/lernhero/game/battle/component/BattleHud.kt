@@ -57,7 +57,7 @@ internal fun WaveBadge(wave: Int, heroHpFraction: Float, modifier: Modifier = Mo
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
-            text = "FALA $wave",
+            text = "WAVE $wave",
             color = HudGold,
             fontFamily = FontFirst(),
             fontWeight = FontWeight.Bold,
@@ -133,7 +133,7 @@ internal fun AnswerCountBadge(count: Int, modifier: Modifier = Modifier) {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
-            text = "PYTANIA",
+            text = "QUESTIONS",
             color = Color(0xFF9D8B6A),
             fontFamily = FontFirst(),
             fontWeight = FontWeight.Bold,

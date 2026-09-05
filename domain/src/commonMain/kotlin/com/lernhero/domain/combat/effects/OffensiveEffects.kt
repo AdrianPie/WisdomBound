@@ -27,7 +27,7 @@ class BurnOnHitEffect(
     private val chance: Float = 1f
 ) : TriggeredEffect {
     override val id = "burn_on_hit_${potency.toInt()}_$turns"
-    override val description = "Podpala cel: ${potency.toInt()} obrazen przez $turns tury."
+    override val description = "Sets the target on fire: ${potency.toInt()} damage over $turns turns."
     override val trigger = Trigger.DamageDealt
     override val conditions: List<EffectCondition> =
         listOf(OwnerIsSource, ExcludeDamageTag(DamageTag.Burn), Chance(chance))
@@ -55,7 +55,7 @@ class PoisonOnHitEffect(
     private val chance: Float = 1f
 ) : TriggeredEffect {
     override val id = "poison_on_hit_${potency.toInt()}_$turns"
-    override val description = "Zatruwa cel: ${potency.toInt()} obrazen przez $turns tur, ignoruje pancerz."
+    override val description = "Poisons the target: ${potency.toInt()} damage over $turns turns, ignores armor."
     override val trigger = Trigger.DamageDealt
     override val conditions: List<EffectCondition> =
         listOf(OwnerIsSource, ExcludeDamageTag(DamageTag.Poison), Chance(chance))
@@ -108,7 +108,7 @@ class FreezeOnCriticalEffect(private val turns: Int) : TriggeredEffect {
  */
 class ExtraAttackOnKillEffect(private val chance: Float = 1f) : TriggeredEffect {
     override val id = "extra_attack_on_kill"
-    override val description = "Po zabiciu przeciwnika atakujesz jeszcze raz."
+    override val description = "After killing an enemy you attack again."
     override val trigger = Trigger.Kill
     override val conditions: List<EffectCondition> = listOf(OwnerIsSource, Chance(chance))
 
@@ -121,7 +121,7 @@ class ExtraAttackOnKillEffect(private val chance: Float = 1f) : TriggeredEffect 
 /** Wybuch przy zabiciu - obrazenia obszarowe w pozostalych wrogow. */
 class DeathExplosionEffect(private val damage: Float) : TriggeredEffect {
     override val id = "death_explosion_${damage.toInt()}"
-    override val description = "Zabity przeciwnik wybucha, raniac pozostalych za ${damage.toInt()}."
+    override val description = "A slain enemy explodes, hitting the rest for ${damage.toInt()}."
     override val trigger = Trigger.Kill
     override val conditions: List<EffectCondition> = listOf(OwnerIsSource)
 

@@ -157,7 +157,7 @@ fun BossEventQuizBar(
                     contentAlignment = Alignment.Center
                 ) {
                     Text(
-                        text = "ZATWIERDZ",
+                        text = "CONFIRM",
                         color = Color.White,
                         fontFamily = FontFirst(),
                         fontWeight = FontWeight.Bold,
@@ -214,10 +214,10 @@ fun BossEventQuizBar(
 }
 
 private fun bossEventTitle(kind: BossEventKind): String = when (kind) {
-    BossEventKind.Heal -> "BOSS SIE LECZY"
+    BossEventKind.Heal -> "BOSS IS HEALING"
     BossEventKind.Poison -> "TRUJACY ODDECH"
     BossEventKind.StunGamble -> "ZAKLECIE BOSSA"
-    BossEventKind.Strike -> "POTEZNY CIOS"
+    BossEventKind.Strike -> "HEAVY BLOW"
 }
 
 private fun bossEventHint(kind: BossEventKind): String = when (kind) {

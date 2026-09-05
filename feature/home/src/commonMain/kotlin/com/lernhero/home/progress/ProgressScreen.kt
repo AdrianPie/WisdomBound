@@ -139,7 +139,7 @@ private fun LearningHeader(stats: GameStats) {
                     fontSize = 16.sp
                 )
                 Text(
-                    text = "${stats.questionsCorrect} z ${stats.questionsAnswered} pytan",
+                    text = "${stats.questionsCorrect} of ${stats.questionsAnswered} questions",
                     color = Muted,
                     fontFamily = FontFirst(),
                     fontSize = 11.sp

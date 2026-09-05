@@ -49,7 +49,7 @@ data class CustomDeck(
     /** Czy da sie z tego zagrac endless - poniżej progu quiz zaczalby powtarzac to samo pytanie. */
     val isPlayable: Boolean get() = turnReady.size >= MIN_QUESTIONS
 
-    val displayName: String get() = name.ifBlank { "Talia bez nazwy" }
+    val displayName: String get() = name.ifBlank { "Untitled deck" }
 
     fun withQuestion(question: CustomQuestion): CustomDeck {
         val index = questions.indexOfFirst { it.id == question.id }

@@ -124,15 +124,15 @@ private fun OfferHeader(offer: UpgradeOffer) {
         verticalArrangement = Arrangement.spacedBy(4.dp)
     ) {
         Text(
-            text = "FALA ${offer.wave} - WYBIERZ ULEPSZENIE",
+            text = "WAVE ${offer.wave} - PICK AN UPGRADE",
             color = Color(0xFFFFD34D),
             fontFamily = FontFirst(),
             fontWeight = FontWeight.Bold,
             fontSize = 15.sp
         )
         Text(
-            text = "Zostaje do konca biegu. Poziom kart: ${(offer.quality * 100).roundToInt()}% " +
-                "(im wiecej dobrych odpowiedzi, tym lepsze karty).",
+            text = "Lasts until the end of the run. Card quality: ${(offer.quality * 100).roundToInt()}% " +
+                "(the more correct answers, the better the cards).",
             color = Muted,
             fontFamily = FontFirst(),
             fontSize = 10.sp,
@@ -227,7 +227,7 @@ private fun UpgradeCard(
             )
             Text(
                 text = if (ownedStacks > 0) {
-                    "Masz x$ownedStacks z ${buff.maxStacks} - wybor dolozy kolejny stak."
+                    "You have x$ownedStacks of ${buff.maxStacks} - picking adds another stack."
                 } else {
                     "Nowe (max x${buff.maxStacks})"
                 },

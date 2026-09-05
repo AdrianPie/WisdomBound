@@ -453,10 +453,10 @@ private fun BonusSummary(bonuses: TalentBonuses) {
     if (bonuses.isEmpty) return
 
     val lines = buildList {
-        if (bonuses.attack != 0) add("+${bonuses.attack} ataku druzyny")
-        if (bonuses.maxHp != 0) add("+${bonuses.maxHp} maks. HP druzyny")
-        if (bonuses.critChance != 0f) add("+${(bonuses.critChance * 100).toInt()}% szansy na krytyka")
-        if (bonuses.quizDamage != 0f) add("+${(bonuses.quizDamage * 100).toInt()}% obrazen z quizu")
+        if (bonuses.attack != 0) add("+${bonuses.attack} team attack")
+        if (bonuses.maxHp != 0) add("+${bonuses.maxHp} team max HP")
+        if (bonuses.critChance != 0f) add("+${(bonuses.critChance * 100).toInt()}% crit chance")
+        if (bonuses.quizDamage != 0f) add("+${(bonuses.quizDamage * 100).toInt()}% quiz damage")
         bonuses.buffStacks.forEach { (buff, stacks) -> add("${buff.title} x$stacks") }
         bonuses.spellChances.forEach { (spellId, chance) ->
             val name = SpellCatalog.byId(spellId)?.name ?: spellId

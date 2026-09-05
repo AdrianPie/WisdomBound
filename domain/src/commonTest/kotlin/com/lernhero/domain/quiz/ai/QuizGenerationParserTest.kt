@@ -89,7 +89,7 @@ class QuizGenerationParserTest {
 
         val result = assertIs<QuizGenerationResult.Generated>(parse(raw, types = setOf(CustomQuestionType.Choice)))
         assertEquals(CustomQuestionType.Choice, result.questions.single().type)
-        assertTrue(result.warnings.single().contains("nie byl zamowiony"))
+        assertTrue(result.warnings.single().contains("was not requested"))
     }
 
     @Test

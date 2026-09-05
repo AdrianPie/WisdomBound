@@ -151,7 +151,7 @@ class FitnessViewModel(
             )
             _uiState.update { current ->
                 if (updated == null) {
-                    current.copy(message = "Skrzynia na dzis jest juz otwarta.")
+                    current.copy(message = "Today's chest is already open.")
                 } else {
                     val slot = ChestWheel.roll(Random.Default, StepChest.wheelLevel(current.snapshot.steps))
                     current.copy(

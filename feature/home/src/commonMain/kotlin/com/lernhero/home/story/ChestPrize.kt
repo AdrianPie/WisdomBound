@@ -30,8 +30,8 @@ fun resolveChestPrize(slot: ChestSlot, random: Random): ChestPrize {
         }
         val consolation = 120
         return ChestPrize(
-            label = "${slot.emoji} Skrzynia byla pusta - $consolation monet",
-            grant = { player, _ -> player.grantGold(consolation, "+$consolation monet ze skrzyni") }
+            label = "${slot.emoji} The chest was empty - $consolation coins",
+            grant = { player, _ -> player.grantGold(consolation, "+$consolation coins from the chest") }
         )
     }
 
@@ -39,13 +39,13 @@ fun resolveChestPrize(slot: ChestSlot, random: Random): ChestPrize {
         val count = slot.ticketCount
         return ChestPrize(
             label = "${slot.emoji} ${slot.label}",
-            grant = { _, town -> town.grantSummonTickets(count, "+$count 🎟️ ze skrzyni bossa") }
+            grant = { _, town -> town.grantSummonTickets(count, "+$count 🎟️ from the boss chest") }
         )
     }
 
     val gold = slot.goldAmount
     return ChestPrize(
         label = "${slot.emoji} ${slot.label}",
-        grant = { player, _ -> player.grantGold(gold, "+$gold monet ze skrzyni bossa") }
+        grant = { player, _ -> player.grantGold(gold, "+$gold coins from the boss chest") }
     )
 }

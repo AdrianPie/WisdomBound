@@ -90,7 +90,7 @@ internal fun TownScreenScaffold(
             Box(modifier = Modifier.fillMaxSize()) { content() }
         }
 
-        // Komunikaty ("+50 drewna", "+25% PRODUKCJI") - zeby zawsze bylo widac, co wlasnie dostales.
+        // Komunikaty ("+50 drewna", "+25% PRODUCTION") - zeby zawsze bylo widac, co wlasnie dostales.
         Column(
             modifier = Modifier
                 .align(Alignment.TopCenter)

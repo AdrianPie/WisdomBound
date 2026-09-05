@@ -62,40 +62,40 @@ data class CustomQuestion(
      */
     fun issues(): List<String> {
         val problems = mutableListOf<String>()
-        if (prompt.isBlank()) problems += "Brak tresci pytania."
+        if (prompt.isBlank()) problems += "The question text is missing."
 
         when (type) {
             CustomQuestionType.Choice -> {
                 val good = correct.filter { it.isNotBlank() }
                 val bad = wrong.filter { it.isNotBlank() }
-                if (good.size != 1) problems += "Wybor jednej odpowiedzi wymaga DOKLADNIE jednej poprawnej."
+                if (good.size != 1) problems += "Single choice needs EXACTLY one correct answer."
                 if (bad.size < MIN_WRONG_ANSWERS) {
-                    problems += "Za malo blednych odpowiedzi (min. $MIN_WRONG_ANSWERS)."
+                    problems += "Too few wrong answers (min. $MIN_WRONG_ANSWERS)."
                 }
                 if (bad.size > MAX_WRONG_ANSWERS) {
-                    problems += "Za duzo blednych odpowiedzi (max. $MAX_WRONG_ANSWERS)."
+                    problems += "Too many wrong answers (max. $MAX_WRONG_ANSWERS)."
                 }
-                if (hasDuplicateAnswers(good + bad)) problems += "Odpowiedzi sie powtarzaja."
+                if (hasDuplicateAnswers(good + bad)) problems += "Answers repeat."
             }
 
             CustomQuestionType.MultiSelect -> {
                 val good = correct.filter { it.isNotBlank() }
                 val bad = wrong.filter { it.isNotBlank() }
-                if (good.isEmpty()) problems += "Zaznacz przynajmniej jedna poprawna odpowiedz."
-                if (bad.isEmpty()) problems += "Potrzebna jest przynajmniej jedna bledna odpowiedz."
+                if (good.isEmpty()) problems += "Mark at least one correct answer."
+                if (bad.isEmpty()) problems += "At least one wrong answer is needed."
                 if (good.size + bad.size > MAX_OPTIONS) problems += "Za duzo opcji (max. $MAX_OPTIONS)."
-                if (hasDuplicateAnswers(good + bad)) problems += "Opcje sie powtarzaja."
+                if (hasDuplicateAnswers(good + bad)) problems += "Options repeat."
             }
 
             CustomQuestionType.Ordering -> {
                 val steps = items.filter { it.isNotBlank() }
                 if (steps.size < MIN_ORDERING_ITEMS) {
-                    problems += "Ukladanka potrzebuje min. $MIN_ORDERING_ITEMS elementow."
+                    problems += "An ordering question needs at least $MIN_ORDERING_ITEMS items."
                 }
                 if (steps.size > MAX_ORDERING_ITEMS) {
                     problems += "Ukladanka miesci max. $MAX_ORDERING_ITEMS elementow."
                 }
-                if (hasDuplicateAnswers(steps)) problems += "Elementy sie powtarzaja."
+                if (hasDuplicateAnswers(steps)) problems += "Items repeat."
             }
 
             CustomQuestionType.Estimation -> {

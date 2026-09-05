@@ -154,7 +154,7 @@ fun QuestionEditorDialog(
                 }
 
                 CustomQuestionType.MultiSelect -> {
-                    DeckSectionLabel("Poprawne (wszystkie do zaznaczenia)")
+                    DeckSectionLabel("Correct (mark all that apply)")
                     AnswerRows(
                         values = draft.correct,
                         label = "Correct",
@@ -321,7 +321,7 @@ private fun AnswerRows(
         }
         if (rows.size < maxRows) {
             DeckButton(
-                label = "+ DODAJ",
+                label = "+ ADD",
                 onClick = { onChange(rows + "") },
                 color = Color(0xFF2A2018),
                 textColor = DeckGold,
@@ -381,7 +381,7 @@ private fun OrderingRows(values: List<String>, onChange: (List<String>) -> Unit)
         }
         if (rows.size < CustomQuestion.MAX_ORDERING_ITEMS) {
             DeckButton(
-                label = "+ DODAJ",
+                label = "+ ADD",
                 onClick = { onChange(rows + "") },
                 color = Color(0xFF2A2018),
                 textColor = DeckGold,

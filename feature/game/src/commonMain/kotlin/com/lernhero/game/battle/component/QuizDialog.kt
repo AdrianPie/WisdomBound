@@ -387,7 +387,7 @@ private fun MultiSelectConfirm(pickedCount: Int, enabled: Boolean, onConfirm: ()
         contentAlignment = Alignment.Center
     ) {
         Text(
-            text = if (pickedCount > 0) "ZATWIERDZ ($pickedCount)" else "ZAZNACZ ODPOWIEDZI",
+            text = if (pickedCount > 0) "CONFIRM ($pickedCount)" else "PICK ANSWERS",
             color = Color.White,
             fontFamily = FontFirst(),
             fontWeight = FontWeight.Bold,
@@ -522,7 +522,7 @@ private fun SequenceProgressRow(
 internal fun AnswerCountdownBar(
     questionId: String,
     revealed: Boolean,
-    label: String = "SILA CIOSU",
+    label: String = "HIT POWER",
     modifier: Modifier = Modifier
 ) {
     var remainingFraction by remember(questionId) { mutableFloatStateOf(1f) }
@@ -624,7 +624,7 @@ fun ResolvingStrip(state: BattleUiState, modifier: Modifier = Modifier) {
                     // W takcie [TurnPhase.Impact] nikt jeszcze nie bije - cala uwaga ma byc na
                     // rozliczeniu odpowiedzi na srodku ekranu, wiec pasek nie udaje trwajacej walki.
                     text = state.message
-                        ?: if (state.turnPhase == TurnPhase.Impact) "Salwa sie laduje..." else "Exchanging blows...",
+                        ?: if (state.turnPhase == TurnPhase.Impact) "Volley charging..." else "Exchanging blows...",
                     color = InkStrong,
                     fontFamily = FontFirst(),
                     fontWeight = FontWeight.Bold,

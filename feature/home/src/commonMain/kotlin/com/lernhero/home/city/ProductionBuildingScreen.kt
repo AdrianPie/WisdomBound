@@ -130,9 +130,9 @@ fun ProductionBuildingScreen(
                     // Dopoki bonus trwa, dzienna proba jest zuzyta - przycisk mowi wprost, kiedy
                     // wroci, zamiast po prostu nie reagowac na dotkniecie.
                     subtitle = if (boostActive) {
-                        "za ${formatBoostRemaining(boostRemaining)}"
+                        "in ${formatBoostRemaining(boostRemaining)}"
                     } else {
-                        "${ProductionQuiz.QUESTION_COUNT} pytan - do +${ProductionQuiz.MAX_BOOST_PERCENT}%"
+                        "${ProductionQuiz.QUESTION_COUNT} questions - up to +${ProductionQuiz.MAX_BOOST_PERCENT}%"
                     },
                     primary = true,
                     enabled = !boostActive,
@@ -140,7 +140,7 @@ fun ProductionBuildingScreen(
                     onClick = { quizOpen = true }
                 )
                 TownActionButton(
-                    text = "ULEPSZ",
+                    text = "UPGRADE",
                     subtitle = "💰 $upgradeCost  •  +35%",
                     enabled = state.money >= upgradeCost,
                     modifier = Modifier.weight(1f),
@@ -503,7 +503,7 @@ private fun BoostBadge(percent: Int, remaining: Long) {
         verticalAlignment = Alignment.CenterVertically
     ) {
         Text(
-            text = if (earned) "⚡ BONUS +$percent%" else "BEZ BONUSU",
+            text = if (earned) "⚡ BONUS +$percent%" else "NO BONUS",
             color = accent,
             fontFamily = FontPixel(),
             fontWeight = FontWeight.Bold,

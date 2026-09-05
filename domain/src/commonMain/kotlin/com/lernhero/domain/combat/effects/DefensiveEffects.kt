@@ -31,7 +31,7 @@ import com.lernhero.domain.combat.TriggeredEffect
  */
 class IgnoreFirstHitEffect : DamageModifierEffect {
     override val id = "ignore_first_hit"
-    override val description = "Pochlania pierwszy cios otrzymany w walce."
+    override val description = "Absorbs the first hit taken in battle."
     override val phase = DamagePhase.Incoming
     override val priority = 10
     override val conditions = listOf(OncePerBattle, ExcludeDamageTag(DamageTag.Reflect))
@@ -51,7 +51,7 @@ class IgnoreFirstHitEffect : DamageModifierEffect {
  */
 class ReflectDamageEffect(private val percent: Float) : DamageModifierEffect {
     override val id = "reflect_${(percent * 100).toInt()}"
-    override val description = "Odbija ${(percent * 100).toInt()}% otrzymanych obrazen."
+    override val description = "Reflects ${(percent * 100).toInt()}% of damage taken."
     override val phase = DamagePhase.Incoming
     override val priority = 20
     override val conditions = listOf(ExcludeDamageTag(DamageTag.Reflect))
@@ -85,7 +85,7 @@ class LastStandEffect(
 ) : TriggeredEffect {
     override val id = "last_stand_${(hpFraction * 100).toInt()}"
     override val description =
-        "Ponizej ${(hpFraction * 100).toInt()}% zycia daje ${shield.toInt()} tarczy. Raz na walke."
+        "Below ${(hpFraction * 100).toInt()}% health grants ${shield.toInt()} shield. Once per battle."
     override val trigger = Trigger.DamageTaken
     override val conditions: List<EffectCondition> =
         listOf(OwnerIsTarget, BelowHpFraction(hpFraction), OncePerBattle)
@@ -104,7 +104,7 @@ class FrostThornsEffect(
     private val turns: Int
 ) : TriggeredEffect {
     override val id = "frost_thorns_${(chance * 100).toInt()}"
-    override val description = "${(chance * 100).toInt()}% szansy na zamrozenie napastnika."
+    override val description = "${(chance * 100).toInt()}% chance to freeze the attacker."
     override val trigger = Trigger.DamageTaken
     override val conditions: List<EffectCondition> =
         listOf(OwnerIsTarget, ExcludeDamageTag(DamageTag.Reflect), Chance(chance))

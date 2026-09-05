@@ -319,7 +319,7 @@ class PlayerViewModel(
 
         if (state.ownedMonsters.none { it == monsterId }) return
         if (party.filterIndexed { i, id -> i != slotIndex && id == monsterId }.isNotEmpty()) {
-            _uiState.update { it.copy(message = "Ten stronnik juz stoi w druzynie.") }
+            _uiState.update { it.copy(message = "That companion is already in your team.") }
             return
         }
 
@@ -400,7 +400,7 @@ class PlayerViewModel(
         val ownedPool =
             if (MonsterGear.isMonsterGear(item.id)) state.ownedMonsterItems else state.ownedItems
         if (item.id in ownedPool) {
-            _uiState.update { it.copy(message = "Masz juz ten przedmiot.") }
+            _uiState.update { it.copy(message = "You already own this item.") }
             return
         }
         if (!cost.canAfford(state.resources, state.money)) {
@@ -412,7 +412,7 @@ class PlayerViewModel(
             val updated = playerRepository.craftItem(item.id, cost)
             _uiState.update { current ->
                 if (updated == null) {
-                    current.copy(message = "Wykuwanie sie nie udalo.")
+                    current.copy(message = "Forging failed.")
                 } else {
                     current.copy(
                         money = updated.money,
@@ -444,7 +444,7 @@ class PlayerViewModel(
         val level = ItemUpgrades.levelOf(state.itemUpgrades, item.id)
         val cost = ItemUpgrades.nextCost(item, level)
         if (cost == null) {
-            _uiState.update { it.copy(message = "To juz maksymalny poziom.") }
+            _uiState.update { it.copy(message = "Already at max level.") }
             return
         }
         if (!cost.canAfford(state.resources, state.money)) {
@@ -456,7 +456,7 @@ class PlayerViewModel(
             val updated = playerRepository.upgradeItem(item.id)
             _uiState.update { current ->
                 if (updated == null) {
-                    current.copy(message = "Ulepszanie sie nie udalo.")
+                    current.copy(message = "Upgrade failed.")
                 } else {
                     current.copy(
                         money = updated.money,
@@ -485,7 +485,7 @@ class PlayerViewModel(
             val updated = playerRepository.summonMonsters(cards.map { it.id }, cost)
             _uiState.update { current ->
                 if (updated == null) {
-                    current.copy(message = "Przyzwanie sie nie udalo.")
+                    current.copy(message = "Summon failed.")
                 } else {
                     current.copy(
                         money = updated.money,
@@ -493,9 +493,9 @@ class PlayerViewModel(
                         ownedMonsters = updated.ownedMonsters,
                         stats = updated.stats,
                         message = if (cards.size == 1) {
-                            "Do druzyny dolacza: ${cards.first().name}"
+                            "Joining your team: ${cards.first().name}"
                         } else {
-                            "Przyzwano ${cards.size} kompanow"
+                            "Summoned ${cards.size} companions"
                         }
                     )
                 }
@@ -512,7 +512,7 @@ class PlayerViewModel(
             val updated = playerRepository.claimFreeSummon(bannerId, cooldownMs, card.id, now)
             _uiState.update { current ->
                 if (updated == null) {
-                    current.copy(message = "Darmowy summon jeszcze nie jest gotowy.")
+                    current.copy(message = "The free summon is not ready yet.")
                 } else {
                     current.copy(
                         ownedMonsters = updated.ownedMonsters,
@@ -530,12 +530,12 @@ class PlayerViewModel(
         val state = _uiState.value
         if (monster.atLevelCap) {
             _uiState.update {
-                it.copy(message = "Poziom ${monster.levelCap} to sufit ${monster.stars}★ - awansuj duplikatami.")
+                it.copy(message = "Level ${monster.levelCap} is the ${monster.stars}★ cap - ascend with duplicates.")
             }
             return
         }
         if (state.money < monster.levelUpCost) {
-            _uiState.update { it.copy(message = "Za malo monet na kolejny poziom.") }
+            _uiState.update { it.copy(message = "Not enough coins for the next level.") }
             return
         }
 
@@ -543,12 +543,12 @@ class PlayerViewModel(
             val updated = playerRepository.upgradeMonster(monster.card.id)
             _uiState.update { current ->
                 if (updated == null) {
-                    current.copy(message = "Ulepszenie sie nie udalo.")
+                    current.copy(message = "Upgrade failed.")
                 } else {
                     current.copy(
                         money = updated.money,
                         monsterLevels = updated.monsterLevels,
-                        message = "${monster.card.name} awansuje na poziom ${updated.monsterLevels[monster.card.id]}"
+                        message = "${monster.card.name} reaches level ${updated.monsterLevels[monster.card.id]}"
                     )
                 }
             }
@@ -566,7 +566,7 @@ class PlayerViewModel(
         }
         if (!monster.canAscend) {
             _uiState.update {
-                it.copy(message = "Potrzebujesz ${monster.ascendCost} kopii (masz ${monster.duplicates}).")
+                it.copy(message = "You need ${monster.ascendCost} copies (you have ${monster.duplicates}).")
             }
             return
         }
@@ -575,7 +575,7 @@ class PlayerViewModel(
             val updated = playerRepository.ascendMonster(monster.card.id)
             _uiState.update { current ->
                 if (updated == null) {
-                    current.copy(message = "Awans sie nie udal.")
+                    current.copy(message = "Ascension failed.")
                 } else {
                     val stars = updated.monsterStars[monster.card.id] ?: monster.stars
                     current.copy(
@@ -595,9 +595,9 @@ class PlayerViewModel(
             _uiState.update {
                 it.copy(
                     message = if (!monster.maxStars) {
-                        "Duplikaty sa potrzebne na awans - rozpuscisz je dopiero na ${MonsterStars.MAX_STARS}★."
+                        "Duplicates are needed to ascend - you can dissolve them at ${MonsterStars.MAX_STARS}★."
                     } else {
-                        "Nie masz nadmiarowych kopii."
+                        "You have no spare copies."
                     }
                 )
             }
@@ -608,7 +608,7 @@ class PlayerViewModel(
             val updated = playerRepository.dissolveMonster(monster.card.id)
             _uiState.update { current ->
                 if (updated == null) {
-                    current.copy(message = "Rozpuszczenie sie nie udalo.")
+                    current.copy(message = "Dissolving failed.")
                 } else {
                     current.copy(
                         ownedMonsters = updated.ownedMonsters,
@@ -626,7 +626,7 @@ class PlayerViewModel(
         if (MonsterSpellLevels.isMaxed(level)) return
         val cost = MonsterSpellLevels.upgradeCost(level)
         if (_uiState.value.resources.essence < cost) {
-            _uiState.update { it.copy(message = "Za malo esencji (potrzeba $cost).") }
+            _uiState.update { it.copy(message = "Not enough essence (need $cost).") }
             return
         }
 
@@ -634,12 +634,12 @@ class PlayerViewModel(
             val updated = playerRepository.upgradeMonsterSpell(monster.card.id, spell.id)
             _uiState.update { current ->
                 if (updated == null) {
-                    current.copy(message = "Ulepszenie zaklecia sie nie udalo.")
+                    current.copy(message = "Spell upgrade failed.")
                 } else {
                     current.copy(
                         resources = updated.townResources,
                         monsterSpellLevels = updated.monsterSpellLevels,
-                        message = "${spell.name} na poziomie ${level + 1}"
+                        message = "${spell.name} at level ${level + 1}"
                     )
                 }
             }
@@ -737,7 +737,7 @@ class PlayerViewModel(
         val next = MonsterEquipment.autoEquip(state.ownedMonsterItems, element, taken)
 
         if (next == equipmentOf(monsterId)) {
-            _uiState.update { it.copy(message = "Nie ma czym ulepszyc tego kompana.") }
+            _uiState.update { it.copy(message = "Nothing to upgrade this companion with.") }
             return
         }
         persistMonsterEquipment(monsterId, next, "Gear auto-equipped")
@@ -767,7 +767,7 @@ class PlayerViewModel(
     /** Placi zlotem za zakup w lochu. Zwraca false, gdy monet nie starcza. */
     fun spendGold(amount: Int, label: String): Boolean {
         if (_uiState.value.money < amount) {
-            _uiState.update { it.copy(message = "Za malo monet.") }
+            _uiState.update { it.copy(message = "Not enough coins.") }
             return false
         }
         _uiState.update { it.copy(money = it.money - amount, message = label) }
@@ -805,7 +805,7 @@ class PlayerViewModel(
             _uiState.update { current ->
                 current.copy(
                     money = balance ?: current.money,
-                    message = "${item.name} juz masz - zamiast tego +$fallbackGold monet."
+                    message = "You already own ${item.name} - +$fallbackGold coins instead."
                 )
             }
         }
@@ -819,7 +819,7 @@ class PlayerViewModel(
                 it.copy(
                     ownedMonsters = updated.ownedMonsters,
                     stats = updated.stats,
-                    message = "Do druzyny dolacza: ${card.name}"
+                    message = "Joining your team: ${card.name}"
                 )
             }
         }
@@ -858,7 +858,7 @@ class PlayerViewModel(
             _uiState.update { current ->
                 if (newBalance == null) current else current.copy(
                     money = newBalance,
-                    message = "+$amount monet (test)"
+                    message = "+$amount coins (test)"
                 )
             }
         }

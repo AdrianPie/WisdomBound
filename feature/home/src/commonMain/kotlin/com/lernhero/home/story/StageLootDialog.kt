@@ -154,7 +154,7 @@ fun StageLootDialog(
             }
 
             Text(
-                text = "ZAMKNIJ",
+                text = "CLOSE",
                 color = GoldText,
                 fontFamily = FontPixel(),
                 fontWeight = FontWeight.Bold,

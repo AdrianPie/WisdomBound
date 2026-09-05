@@ -114,7 +114,7 @@ object MonsterRigs {
 enum class AnimSlot(val id: String, val label: String) {
     Idle("idle", "SPOCZ"),
     Attack("attack", "ATAK"),
-    Hit("hit", "CIOS"),
+    Hit("hit", "HIT"),
     Cast("cast", "RZUT"),
     Death("death", "SMIERC")
 }

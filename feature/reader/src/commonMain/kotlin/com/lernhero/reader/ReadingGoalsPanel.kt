@@ -63,7 +63,7 @@ fun ReadingGoalsPanel(modifier: Modifier = Modifier) {
                 fontSize = 14.sp
             )
             Text(
-                text = "dzis ${state.readingToday.minutes} min, ${state.readingToday.pages} stron",
+                text = "today ${state.readingToday.minutes} min, ${state.readingToday.pages} pages",
                 color = Muted,
                 fontFamily = FontFirst(),
                 fontSize = 10.sp

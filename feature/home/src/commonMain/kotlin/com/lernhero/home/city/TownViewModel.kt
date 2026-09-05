@@ -17,7 +17,7 @@ import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import kotlin.time.Clock
 
-/** Krotki komunikat wyskakujacy na ekranie ("+25% PRODUKCJI", "+50 drewna") - patrz TownToasts. */
+/** Krotki komunikat wyskakujacy na ekranie ("+25% PRODUCTION", "+50 drewna") - patrz TownToasts. */
 data class TownToast(
     val id: Long,
     val text: String,
@@ -126,7 +126,7 @@ class TownViewModel(
         applyProduction(building, updatedProduction, updatedResources)
 
         if (pending > 0) pushToast("+$pending ${building.resourceLabel()}")
-        pushToast("+$percent% PRODUKCJI na 24h", emphasis = true)
+        pushToast("+$percent% PRODUCTION for 24h", emphasis = true)
     }
 
     /** Ulepszenie budynku za zloto - kazdy poziom to +35% produkcji. */

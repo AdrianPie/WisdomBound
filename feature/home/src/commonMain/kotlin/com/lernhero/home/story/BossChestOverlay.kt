@@ -142,7 +142,7 @@ fun BossChestOverlay(
 
             if (phase == WheelPhase.Revealed) {
                 Text(
-                    text = "ODBIERZ",
+                    text = "CLAIM",
                     color = Color(0xFFFFD34D),
                     fontFamily = FontPixel(),
                     fontWeight = FontWeight.Bold,
@@ -269,7 +269,7 @@ private fun PrizeWheel(rotation: Float, highlighted: ChestSlot?, dungeonLevel: I
 
         if (highlighted != null) {
             Text(
-                text = "${highlighted.label} - szansa ${(ChestWheel.chanceOf(highlighted, dungeonLevel) * 100).roundToInt()}%",
+                text = "${highlighted.label} - ${(ChestWheel.chanceOf(highlighted, dungeonLevel) * 100).roundToInt()}% chance",
                 color = Color(0xFF9D8B6A),
                 fontFamily = FontFirst(),
                 fontSize = 10.sp

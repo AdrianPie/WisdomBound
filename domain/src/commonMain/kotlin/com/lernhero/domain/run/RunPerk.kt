@@ -27,7 +27,7 @@ enum class RunPerk(
     ),
     Vitality(
         title = "Wigor",
-        description = "+25 maksymalnego zdrowia do konca runu.",
+        description = "+25 max health for the rest of the run.",
         apply = { it.copy(bonusMaxHp = it.bonusMaxHp + 25) }
     ),
     Arcana(

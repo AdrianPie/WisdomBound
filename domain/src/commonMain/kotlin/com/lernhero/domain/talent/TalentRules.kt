@@ -5,7 +5,7 @@ import com.lernhero.domain.run.EndlessBuff
 /** Dlaczego danego stopnia NIE da sie teraz wykupic - UI pokazuje to wprost, zamiast gasic wezel bez slowa. */
 enum class TalentBlock(val reason: String) {
     NoPoints("Brak punktow talentow"),
-    MaxRank("Talent jest juz wymaksowany"),
+    MaxRank("Talent is already maxed out"),
     TierLocked("Za malo punktow w tym drzewku"),
     ParentMissing("Wymaga wczesniejszego talentu")
 }

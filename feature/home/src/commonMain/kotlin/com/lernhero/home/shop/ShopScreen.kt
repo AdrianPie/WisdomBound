@@ -209,7 +209,7 @@ private fun WhereToGetThings() {
         verticalArrangement = Arrangement.spacedBy(10.dp)
     ) {
         Text(
-            text = "SPRZETU NIE KUPUJESZ",
+            text = "GEAR IS NOT FOR SALE",
             color = GoldText,
             fontFamily = FontPixel(),
             fontWeight = FontWeight.Bold,
