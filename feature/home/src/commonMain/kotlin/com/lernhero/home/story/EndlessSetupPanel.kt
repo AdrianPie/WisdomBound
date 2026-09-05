@@ -87,8 +87,8 @@ fun EndlessSetupPanel(
             .clip(RoundedCornerShape(14.dp))
             .background(Panel)
             .border(2.dp, Frame.copy(alpha = 0.7f), RoundedCornerShape(14.dp))
-            .padding(12.dp),
-        verticalArrangement = Arrangement.spacedBy(12.dp)
+            .padding(8.dp),
+        verticalArrangement = Arrangement.spacedBy(8.dp)
     ) {
         SourceTabs(selected = source, onSelect = onSourceChange)
 
@@ -199,7 +199,7 @@ private fun SourceTabs(selected: QuestionSource, onSelect: (QuestionSource) -> U
                         shape = RoundedCornerShape(9.dp)
                     )
                     .clickable { onSelect(entry) }
-                    .padding(vertical = 9.dp),
+                    .padding(vertical = 6.dp),
                 contentAlignment = Alignment.Center
             ) {
                 Text(

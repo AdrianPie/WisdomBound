@@ -176,8 +176,8 @@ fun TeamScreen(
         modifier = Modifier
             .fillMaxSize()
             .verticalScroll(rememberScrollState())
-            .padding(12.dp),
-        verticalArrangement = Arrangement.spacedBy(8.dp)
+            .padding(8.dp),
+        verticalArrangement = Arrangement.spacedBy(6.dp)
     ) {
         TeamPanel(
             equipment = state.knightEquipment,
@@ -371,7 +371,7 @@ private fun ModeTabs(selected: PlayMode, onSelect: (PlayMode) -> Unit) {
                         RoundedCornerShape(7.dp)
                     )
                     .clickable { onSelect(entry) }
-                    .padding(vertical = 9.dp),
+                    .padding(vertical = 6.dp),
                 contentAlignment = Alignment.Center
             ) {
                 Text(
@@ -413,12 +413,12 @@ private fun TeamPanel(
                 fontFamily = FontPixel(),
                 fontWeight = FontWeight.Bold,
                 fontSize = 14.sp,
-                modifier = Modifier.weight(1f).padding(start = 10.dp, top = 8.dp, bottom = 8.dp)
+                modifier = Modifier.weight(1f).padding(start = 10.dp, top = 6.dp, bottom = 6.dp)
             )
             Box(
                 modifier = Modifier
                     .padding(end = 8.dp)
-                    .size(36.dp)
+                    .size(30.dp)
                     .background(SlotEmpty)
                     .border(1.5.dp, GoldDim)
                     .clickable(onClick = onAddCompanion),
@@ -456,7 +456,7 @@ private fun TeamPanel(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.spacedBy(6.dp)
                 ) {
-                    row.forEach { slot -> slot(Modifier.weight(1f).height(78.dp)) }
+                    row.forEach { slot -> slot(Modifier.weight(1f).height(62.dp)) }
                     // Niepelny rzad dopychamy pustka, zeby karty zostaly tej samej szerokosci
                     // co w rzedzie pelnym, a nie rozlazly sie na cala szerokosc panelu.
                     repeat(TEAM_ROW_SLOTS - row.size) {
