@@ -15,6 +15,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlin.random.Random
+import kotlin.time.Clock
 
 data class FitnessUiState(
     val loading: Boolean = true,
@@ -169,19 +170,37 @@ class FitnessViewModel(
 
     /**
      * DEV: dosypuje kroki bez dotykania Health Connect/HealthKit. Emulatory zwykle nie maja
-     * zadnych danych o krokach i nie da sie ich tam "nachodzic" - to jedyny sposob, zeby przetestowac
-     * skrzynie/cele bez fizycznego telefonu. Dziala natychmiast (in-memory), nic nie zapisuje do
-     * platformy ani serwera - po [refresh] wraca prawdziwa (czyli zazwyczaj zerowa) liczba.
+     * zadnych danych o krokach (ani samego Health Connect skonfigurowanego z danymi) i nie da sie
+     * ich tam "nachodzic" - to jedyny sposob, zeby przetestowac skrzynie/cele bez fizycznego
+     * telefonu. Dziala natychmiast (in-memory), nic nie zapisuje do platformy ani serwera - po
+     * [refresh] wraca prawdziwy (czyli zazwyczaj zerowy/niepodlaczony) stan.
      *
-     * Wymaga juz przyznanej zgody (a wiec i prawdziwego [FitnessSnapshot.dateKey] z platformy) -
-     * to dosypuje TYLKO kroki, nie udaje calego polaczenia z Health Connect.
+     * Musi dzialac TAKZE gdy zgoda nie jest jeszcze przyznana (ekran pokazuje wtedy tylko
+     * "Connect") - inaczej na emulatorze, ktory czesto w ogole nie potrafi przejsc realnego flow
+     * zgody, przycisk devowy bylby ukryty za tym samym murem, ktory ma pozwalac obejsc.
      */
     fun addDebugSteps(amount: Int = 1000) {
-        if (_uiState.value.snapshot.dateKey.isBlank()) return
         _uiState.update { state ->
-            state.copy(snapshot = state.snapshot.copy(steps = state.snapshot.steps + amount))
+            val dateKey = state.snapshot.dateKey.ifBlank { devDateKey() }
+            state.copy(
+                permissionGranted = true,
+                availability = FitnessAvailability.Available,
+                snapshot = state.snapshot.copy(
+                    steps = state.snapshot.steps + amount,
+                    dateKey = dateKey,
+                    availability = FitnessAvailability.Available,
+                    permissionGranted = true
+                )
+            )
         }
     }
+
+    /**
+     * Zastepczy "dzisiejszy" klucz dla [addDebugSteps], gdy platforma jeszcze zadnego nie podala -
+     * common nie ma tu java.time/kotlinx-datetime, wiec licznik dni od epoki (Clock, ktory juz
+     * jest w projekcie) wystarcza: rozny klucz kazdego realnego dnia, bez formatowania kalendarza.
+     */
+    private fun devDateKey(): String = "dev-${Clock.System.now().toEpochMilliseconds() / 86_400_000L}"
 
     fun clearMessage() {
         _uiState.update { it.copy(message = null) }

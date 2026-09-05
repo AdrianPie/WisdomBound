@@ -116,6 +116,14 @@ fun FitnessScreen(insets: PaddingValues = PaddingValues(0.dp)) {
                 style = MaterialTheme.typography.headlineSmall
             )
 
+            // Poza `when` nizej celowo - musi dzialac TAKZE zanim zgoda na Health Connect zostanie
+            // przyznana (np. na emulatorze, ktory czesto w ogole nie potrafi przejsc tego flow).
+            // SHOW_DEV_TOOLS = ten sam wylacznik-konwencja co na Domu (HomeScreen.kt) - MUSI byc
+            // false przed kazdym wydaniem do sklepu.
+            if (SHOW_DEV_TOOLS) {
+                DevAddStepsButton(onClick = { viewModel.addDebugSteps(1000) })
+            }
+
             when {
                 state.loading -> LoadingCard()
                 !state.permissionGranted -> ConnectCard(
@@ -132,14 +140,6 @@ fun FitnessScreen(insets: PaddingValues = PaddingValues(0.dp)) {
                         openedToday = state.stepChestOpenedToday,
                         onOpen = viewModel::openStepChest
                     )
-
-                    // Emulatory zazwyczaj nie maja zadnych danych o krokach w Health Connect i nie
-                    // da sie ich tam "nachodzic" - bez tego nie dawalo sie w ogole przetestowac
-                    // skrzyni/celow poza fizycznym telefonem. SHOW_DEV_TOOLS = ten sam wylacznik
-                    // co na Domu (HomeScreen.kt) - MUSI byc false przed kazdym wydaniem do sklepu.
-                    if (SHOW_DEV_TOOLS) {
-                        DevAddStepsButton(onClick = { viewModel.addDebugSteps(1000) })
-                    }
 
                     TodayCard(snapshot = state.snapshot)
                     Text(
