@@ -58,6 +58,12 @@ internal fun TownScreenScaffold(
      * wysokosci - tyle, ile potrzebuje caly panel statystyk.
      */
     compact: Boolean = false,
+    /**
+     * Pelny pasek surowcow pod tytulem takze w trybie [compact] - dla ekranow, ktore placa wiecej
+     * niz jednym zasobem (kuznia). Domyslnie false, zeby ekrany dobrane pod brak scrolla nie
+     * traciły wysokosci na cos, czego nie wydaja.
+     */
+    showAllResources: Boolean = false,
     content: @Composable () -> Unit
 ) {
     Box(modifier = Modifier.fillMaxSize()) {
@@ -78,6 +84,7 @@ internal fun TownScreenScaffold(
                 resources = resources,
                 money = money,
                 compact = compact,
+                showAllResources = showAllResources,
                 onBack = onBack
             )
             Box(modifier = Modifier.fillMaxSize()) { content() }
@@ -134,36 +141,59 @@ private fun TownHeader(
     resources: TownResources,
     money: Int,
     compact: Boolean,
+    showAllResources: Boolean,
     onBack: () -> Unit
 ) {
     if (compact) {
-        // Jeden wiersz: powrot, tytul i tylko te dwa zasoby, ktorymi faktycznie sie tu placi.
-        Row(
+        Column(
             modifier = Modifier.fillMaxWidth().padding(horizontal = 10.dp, vertical = 5.dp),
-            horizontalArrangement = Arrangement.spacedBy(7.dp),
-            verticalAlignment = Alignment.CenterVertically
+            verticalArrangement = Arrangement.spacedBy(5.dp)
         ) {
-            Box(
-                modifier = Modifier
-                    .clip(RoundedCornerShape(9.dp))
-                    .background(Ink.copy(alpha = 0.8f))
-                    .border(1.5.dp, GoldDim, RoundedCornerShape(9.dp))
-                    .clickable(onClick = onBack)
-                    .padding(horizontal = 9.dp, vertical = 5.dp)
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(7.dp),
+                verticalAlignment = Alignment.CenterVertically
             ) {
-                Text(text = "←", color = Gold, fontFamily = FontPixel(), fontSize = 13.sp)
+                Box(
+                    modifier = Modifier
+                        .clip(RoundedCornerShape(9.dp))
+                        .background(Ink.copy(alpha = 0.8f))
+                        .border(1.5.dp, GoldDim, RoundedCornerShape(9.dp))
+                        .clickable(onClick = onBack)
+                        .padding(horizontal = 9.dp, vertical = 5.dp)
+                ) {
+                    Text(text = "←", color = Gold, fontFamily = FontPixel(), fontSize = 13.sp)
+                }
+                Text(
+                    text = title,
+                    color = Gold,
+                    fontFamily = FontPixel(),
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 14.sp,
+                    maxLines = 1,
+                    modifier = Modifier.weight(1f)
+                )
+                // Przy pelnym pasku ponizej te dwie pigulki bylyby tym samym dwa razy.
+                if (!showAllResources) {
+                    ResourcePill("💰", money)
+                    ResourcePill("✨", resources.essence)
+                }
             }
-            Text(
-                text = title,
-                color = Gold,
-                fontFamily = FontPixel(),
-                fontWeight = FontWeight.Bold,
-                fontSize = 14.sp,
-                maxLines = 1,
-                modifier = Modifier.weight(1f)
-            )
-            ResourcePill("💰", money)
-            ResourcePill("✨", resources.essence)
+
+            // Kuznia placi drewnem, kamieniem, ruda, esencja I zlotem naraz - pokazywanie tylko
+            // dwoch z nich zmuszalo do zgadywania, czego brakuje, albo do wychodzenia z ekranu.
+            if (showAllResources) {
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(5.dp)
+                ) {
+                    ResourcePill("🪵", resources.wood, Modifier.weight(1f))
+                    ResourcePill("🪨", resources.stone, Modifier.weight(1f))
+                    ResourcePill("⚙", resources.iron, Modifier.weight(1f))
+                    ResourcePill("✨", resources.essence, Modifier.weight(1f))
+                    ResourcePill("💰", money, Modifier.weight(1f))
+                }
+            }
         }
         return
     }

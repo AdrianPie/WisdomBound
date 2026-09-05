@@ -124,7 +124,8 @@ fun ForgeScreen(
         money = state.money,
         toasts = emptyList(),
         onBack = onBack,
-        compact = true
+        compact = true,
+        showAllResources = true
     ) {
         Box(modifier = Modifier.fillMaxSize()) {
             // BEZ scrolla: wszystko ma sie zmiescic na jednym ekranie. Warsztat zajmuje tyle,

@@ -2698,12 +2698,26 @@ private const val ORDERING_QUESTION_CHANCE = 0.5f
  * obrazeniach przyjmowanych na ture - bohater wytrzymuje kilka tur, a zla odpowiedz boli, ale nie
  * konczy gry. Skalowanie na fale/poziom zostaje, tylko startuje z duzo nizszego pulapu.
  */
-private const val ENEMY_BASE_HP = 120
-private const val ENEMY_HP_PER_WAVE = 30
-private const val ENEMY_HP_PER_INDEX = 18
-private const val ENEMY_BASE_ATTACK = 9
-private const val ENEMY_ATTACK_PER_WAVE = 2
-private const val ENEMY_ATTACK_PER_INDEX = 1
+/*
+ * Wrogowie byli o rzad wielkosci za slabi na starcie kampanii: nowa postac traci ~6% HP na plansze
+ * przy dobrych odpowiedziach i ~24% przy zlych - czyli zle granie nie mialo zadnych konsekwencji.
+ * Zrodlem byla nie tyle sila ciosu, co HP: wrogowie ginęli w pierwszej rundzie tury (bohater bije
+ * ~106 za cios, wrog mial ~150 HP), wiec w ogole nie zdazali oddac.
+ *
+ * Liczby ponizej sa dobrane symulacja calej tury (3 rundy x cala druzyna, focus fire graczy,
+ * losowe cele wrogow, krytyki, mnoznik quizu) tak, zeby dla NOWEJ postaci na planszy 1-3:
+ *   - dobre odpowiedzi: ~22% traconego HP, zero zgonow (wygrywasz, ale to czujesz),
+ *   - zle odpowiedzi:   ~63% traconego HP i realne ryzyko smierci.
+ *
+ * Krzywa (LEVEL_HP_STEP/LEVEL_ATK_STEP) zostaje nietknieta - zmienia sie sam poziom bazowy, wiec
+ * proporcje miedzy planszami sa te same co dotad, tylko caly wykres jest podniesiony ~1.5x.
+ */
+private const val ENEMY_BASE_HP = 180
+private const val ENEMY_HP_PER_WAVE = 40
+private const val ENEMY_HP_PER_INDEX = 25
+private const val ENEMY_BASE_ATTACK = 14
+private const val ENEMY_ATTACK_PER_WAVE = 3
+private const val ENEMY_ATTACK_PER_INDEX = 2
 
 /** Elita/boss to jeden, duzo wiekszy wrog - mnozniki HP/ataku wzgledem zwyklego potwora na tej fali. */
 private const val ELITE_HP_MULTIPLIER = 3.2f
