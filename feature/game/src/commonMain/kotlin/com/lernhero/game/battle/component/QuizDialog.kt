@@ -17,6 +17,8 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -154,9 +156,14 @@ fun LiveQuizBar(
                     .padding(horizontal = 16.dp, vertical = 10.dp),
                 verticalArrangement = Arrangement.spacedBy(8.dp)
             ) {
+                // Pytanie i odpowiedzi przewijaja sie RAZEM, w obszarze o zmiennej wysokosci
+                // (weight), a nie osobno - dzieki temu przycisk ZATWIERDZ ponizej ma zawsze swoje
+                // miejsce i nie da sie go wypchnac poza ekran liczba opcji (przy 7 pozycjach
+                // wielokrotnego wyboru wczesniej znikal i nie bylo czym potwierdzic odpowiedzi).
                 Column(
                     modifier = Modifier
                         .fillMaxWidth()
+                        .weight(1f)
                         .verticalScroll(rememberScrollState()),
                     verticalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
@@ -199,123 +206,143 @@ fun LiveQuizBar(
                             reward = question.reward
                         )
                     }
+
+                    // Odpowiedzi. Najpierw na miejsce trafia pytanie ([QUESTION_LEAD_MILLIS]), dopiero
+                    // potem wjezdzaja z boku kolejne odpowiedzi - kazda o [TILE_STAGGER_MILLIS] pozniej.
+                    Column(
+                        modifier = Modifier.fillMaxWidth().padding(top = 2.dp),
+                        verticalArrangement = Arrangement.spacedBy(10.dp)
+                    ) {
+                        var visibleCount by remember(question.id) { mutableStateOf(0) }
+                        LaunchedEffect(question.id) {
+                            visibleCount = 0
+                            val optionCount = when (question) {
+                                is MultipleChoiceQuestion -> question.answers.size
+                                is OrderingQuestion -> question.items.size
+                                is MultiSelectQuestion -> question.options.size
+                            }
+                            delay(QUESTION_LEAD_MILLIS)
+                            repeat(optionCount) {
+                                visibleCount += 1
+                                delay(TILE_STAGGER_MILLIS)
+                            }
+                        }
+
+                        when (question) {
+                            is MultipleChoiceQuestion -> question.answers.forEachIndexed { index, answer ->
+                                AnimatedVisibility(
+                                    visible = index < visibleCount,
+                                    enter = fadeIn(tween(TILE_ENTER_MILLIS, easing = EaseOutCubic)) +
+                                        slideInHorizontally(
+                                            animationSpec = tween(TILE_ENTER_MILLIS, easing = EaseOutCubic)
+                                        ) { fullWidth -> fullWidth / 2 }
+                                ) {
+                                    val visual = when {
+                                        !quiz.revealed -> OptionVisual.IDLE
+                                        answer.isCorrect -> OptionVisual.CORRECT
+                                        quiz.selectedAnswerId == answer.id -> OptionVisual.WRONG
+                                        else -> OptionVisual.FADED
+                                    }
+                                    QuizOptionTile(
+                                        label = "${index + 1}",
+                                        badgeColor = OptionColors[index % OptionColors.size],
+                                        text = answer.text,
+                                        visual = visual,
+                                        enabled = !quiz.revealed,
+                                        onClick = { onAnswer(answer.id) },
+                                        modifier = Modifier.fillMaxWidth()
+                                    )
+                                }
+                            }
+
+                            is OrderingQuestion -> question.items.forEachIndexed { index, item ->
+                                AnimatedVisibility(
+                                    visible = index < visibleCount,
+                                    enter = fadeIn(tween(TILE_ENTER_MILLIS, easing = EaseOutCubic)) +
+                                        slideInHorizontally(
+                                            animationSpec = tween(TILE_ENTER_MILLIS, easing = EaseOutCubic)
+                                        ) { fullWidth -> fullWidth / 2 }
+                                ) {
+                                    val position = quiz.orderedSelection.indexOf(item.id)
+                                    val visual = when {
+                                        quiz.revealed -> if (position == item.correctPosition) OptionVisual.CORRECT else OptionVisual.WRONG
+                                        position != -1 -> OptionVisual.SELECTED
+                                        else -> OptionVisual.IDLE
+                                    }
+                                    QuizOptionTile(
+                                        label = if (position != -1) "${position + 1}" else itemLabel(index),
+                                        badgeColor = OptionColors[index % OptionColors.size],
+                                        text = item.text,
+                                        visual = visual,
+                                        enabled = !quiz.revealed && position == -1,
+                                        onClick = { onOrderPick(item.id) },
+                                        modifier = Modifier.fillMaxWidth()
+                                    )
+                                }
+                            }
+
+                            // "Zaznacz wszystkie prawdziwe" - w odroznieniu od pozostalych typow nic
+                            // nie rozstrzyga sie samo: gracz przelacza dowolna liczbe opcji i dopiero
+                            // ZATWIERDZ konczy ture. Po odsłonieciu widac komplet - co bylo poprawne,
+                            // co gracz przeoczyl i co zaznaczyl niepotrzebnie.
+                            // Wielokrotny wybor potrafi miec 6-7 opcji - w jednej kolumnie same kafle
+                            // sa wyzsze niz caly panel. Dwie kolumny polowia te wysokosc, a etykiety
+                            // przy tym typie pytania sa krotkie (pojedyncze nazwy), wiec sie miesza.
+                            is MultiSelectQuestion -> question.options
+                                .withIndex()
+                                .chunked(if (question.options.size > MULTI_SELECT_SINGLE_COLUMN_MAX) 2 else 1)
+                                .forEach { rowOptions ->
+                                    Row(
+                                        modifier = Modifier.fillMaxWidth(),
+                                        horizontalArrangement = Arrangement.spacedBy(8.dp)
+                                    ) {
+                                        rowOptions.forEach { (index, option) ->
+                                            AnimatedVisibility(
+                                                visible = index < visibleCount,
+                                                enter = fadeIn(tween(TILE_ENTER_MILLIS, easing = EaseOutCubic)) +
+                                                    slideInHorizontally(
+                                                        animationSpec = tween(TILE_ENTER_MILLIS, easing = EaseOutCubic)
+                                                    ) { fullWidth -> fullWidth / 2 },
+                                                modifier = Modifier.weight(1f)
+                                            ) {
+                                                val picked = option.id in quiz.multiSelection
+                                                val visual = when {
+                                                    !quiz.revealed -> if (picked) OptionVisual.SELECTED else OptionVisual.IDLE
+                                                    option.isCorrect -> OptionVisual.CORRECT
+                                                    picked -> OptionVisual.WRONG
+                                                    else -> OptionVisual.FADED
+                                                }
+                                                QuizOptionTile(
+                                                    label = if (picked) "✔" else itemLabel(index),
+                                                    badgeColor = OptionColors[index % OptionColors.size],
+                                                    text = option.text,
+                                                    visual = visual,
+                                                    enabled = !quiz.revealed,
+                                                    onClick = { onMultiToggle(option.id) },
+                                                    modifier = Modifier.fillMaxWidth().heightIn(min = MULTI_SELECT_TILE_MIN)
+                                                )
+                                            }
+                                        }
+                                        // Nieparzysta liczba opcji - ostatni kafel zostaje tej samej
+                                        // szerokosci co reszta, zamiast rozciagac sie na caly rzad.
+                                        if (rowOptions.size == 1 && question.options.size > MULTI_SELECT_SINGLE_COLUMN_MAX) {
+                                            Spacer(modifier = Modifier.weight(1f))
+                                        }
+                                    }
+                                }
+                        }
+                    }
                 }
 
-                // Odpowiedzi jedna pod druga, pelnej szerokosci. Najpierw na miejsce trafia pytanie
-                // ([QUESTION_LEAD_MILLIS]), dopiero potem wjezdzaja z boku kolejne odpowiedzi -
-                // 1, 2, 3, 4 - kazda o [TILE_STAGGER_MILLIS] pozniej od poprzedniej.
-                Column(
-                    modifier = Modifier.fillMaxWidth(),
-                    verticalArrangement = Arrangement.spacedBy(10.dp)
-                ) {
-                    var visibleCount by remember(question.id) { mutableStateOf(0) }
-                    LaunchedEffect(question.id) {
-                        visibleCount = 0
-                        val optionCount = when (question) {
-                            is MultipleChoiceQuestion -> question.answers.size
-                            is OrderingQuestion -> question.items.size
-                            is MultiSelectQuestion -> question.options.size
-                        }
-                        delay(QUESTION_LEAD_MILLIS)
-                        repeat(optionCount) {
-                            visibleCount += 1
-                            delay(TILE_STAGGER_MILLIS)
-                        }
-                    }
-
-                    when (question) {
-                        is MultipleChoiceQuestion -> question.answers.forEachIndexed { index, answer ->
-                            AnimatedVisibility(
-                                visible = index < visibleCount,
-                                enter = fadeIn(tween(TILE_ENTER_MILLIS, easing = EaseOutCubic)) +
-                                    slideInHorizontally(
-                                        animationSpec = tween(TILE_ENTER_MILLIS, easing = EaseOutCubic)
-                                    ) { fullWidth -> fullWidth / 2 }
-                            ) {
-                                val visual = when {
-                                    !quiz.revealed -> OptionVisual.IDLE
-                                    answer.isCorrect -> OptionVisual.CORRECT
-                                    quiz.selectedAnswerId == answer.id -> OptionVisual.WRONG
-                                    else -> OptionVisual.FADED
-                                }
-                                QuizOptionTile(
-                                    label = "${index + 1}",
-                                    badgeColor = OptionColors[index % OptionColors.size],
-                                    text = answer.text,
-                                    visual = visual,
-                                    enabled = !quiz.revealed,
-                                    onClick = { onAnswer(answer.id) },
-                                    modifier = Modifier.fillMaxWidth()
-                                )
-                            }
-                        }
-
-                        is OrderingQuestion -> question.items.forEachIndexed { index, item ->
-                            AnimatedVisibility(
-                                visible = index < visibleCount,
-                                enter = fadeIn(tween(TILE_ENTER_MILLIS, easing = EaseOutCubic)) +
-                                    slideInHorizontally(
-                                        animationSpec = tween(TILE_ENTER_MILLIS, easing = EaseOutCubic)
-                                    ) { fullWidth -> fullWidth / 2 }
-                            ) {
-                                val position = quiz.orderedSelection.indexOf(item.id)
-                                val visual = when {
-                                    quiz.revealed -> if (position == item.correctPosition) OptionVisual.CORRECT else OptionVisual.WRONG
-                                    position != -1 -> OptionVisual.SELECTED
-                                    else -> OptionVisual.IDLE
-                                }
-                                QuizOptionTile(
-                                    label = if (position != -1) "${position + 1}" else itemLabel(index),
-                                    badgeColor = OptionColors[index % OptionColors.size],
-                                    text = item.text,
-                                    visual = visual,
-                                    enabled = !quiz.revealed && position == -1,
-                                    onClick = { onOrderPick(item.id) },
-                                    modifier = Modifier.fillMaxWidth()
-                                )
-                            }
-                        }
-
-                        // "Zaznacz wszystkie prawdziwe" - w odroznieniu od pozostalych typow nic
-                        // nie rozstrzyga sie samo: gracz przelacza dowolna liczbe opcji i dopiero
-                        // ZATWIERDZ konczy ture. Po odsłonieciu widac komplet - co bylo poprawne,
-                        // co gracz przeoczyl i co zaznaczyl niepotrzebnie.
-                        is MultiSelectQuestion -> question.options.forEachIndexed { index, option ->
-                            AnimatedVisibility(
-                                visible = index < visibleCount,
-                                enter = fadeIn(tween(TILE_ENTER_MILLIS, easing = EaseOutCubic)) +
-                                    slideInHorizontally(
-                                        animationSpec = tween(TILE_ENTER_MILLIS, easing = EaseOutCubic)
-                                    ) { fullWidth -> fullWidth / 2 }
-                            ) {
-                                val picked = option.id in quiz.multiSelection
-                                val visual = when {
-                                    !quiz.revealed -> if (picked) OptionVisual.SELECTED else OptionVisual.IDLE
-                                    option.isCorrect -> OptionVisual.CORRECT
-                                    picked -> OptionVisual.WRONG
-                                    else -> OptionVisual.FADED
-                                }
-                                QuizOptionTile(
-                                    label = if (picked) "✔" else itemLabel(index),
-                                    badgeColor = OptionColors[index % OptionColors.size],
-                                    text = option.text,
-                                    visual = visual,
-                                    enabled = !quiz.revealed,
-                                    onClick = { onMultiToggle(option.id) },
-                                    modifier = Modifier.fillMaxWidth()
-                                )
-                            }
-                        }
-                    }
-
-                    if (question is MultiSelectQuestion && !quiz.revealed) {
-                        val picked = quiz.multiSelection.size
-                        MultiSelectConfirm(
-                            pickedCount = picked,
-                            enabled = picked > 0,
-                            onConfirm = onMultiConfirm
-                        )
-                    }
+                // Zatwierdzenie stoi POZA obszarem przewijania - to jedyny sposob, zeby dalo sie
+                // potwierdzic odpowiedz niezaleznie od tego, ile opcji ma pytanie.
+                if (question is MultiSelectQuestion && !quiz.revealed) {
+                    val picked = quiz.multiSelection.size
+                    MultiSelectConfirm(
+                        pickedCount = picked,
+                        enabled = picked > 0,
+                        onConfirm = onMultiConfirm
+                    )
                 }
             }
         }
@@ -655,6 +682,12 @@ private const val TILE_STAGGER_MILLIS = 95L
 
 /** Ile pytanie ma "dla siebie", zanim zaczna wjezdzac odpowiedzi - zeby czytalo sie je pierwsze. */
 private const val QUESTION_LEAD_MILLIS = 150L
+
+/** Do tylu opcji wielokrotny wybor zostaje w jednej kolumnie - wyzej idzie w dwie. */
+private const val MULTI_SELECT_SINGLE_COLUMN_MAX = 4
+
+/** Wspolna minimalna wysokosc kafla w dwukolumnowym ukladzie - zeby rzad nie byl "schodkowy". */
+private val MULTI_SELECT_TILE_MIN = 56.dp
 
 /** Czas wjazdu pojedynczej odpowiedzi i samego dymka pytania. */
 private const val TILE_ENTER_MILLIS = 260
