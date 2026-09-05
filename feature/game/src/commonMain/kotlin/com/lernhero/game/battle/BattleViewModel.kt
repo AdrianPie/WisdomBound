@@ -3,6 +3,8 @@ package com.lernhero.game.battle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.lernhero.domain.combat.StatType
+import com.lernhero.domain.story.StoryWorldCatalog
+import com.lernhero.shared.resources.Resources
 import com.lernhero.domain.combat.live.AnswerTimer
 import com.lernhero.domain.combat.live.CYCLE_BUFF_DURATION_MS
 import com.lernhero.domain.combat.live.record
@@ -2123,6 +2125,16 @@ class BattleViewModel(
      * istnieje. [playBattleIntro] (odpalane z `init`) po kolei ich wpuszcza i dopiero na koncu
      * tworzy pierwsze pytanie - patrz tam po pelna sekwencje.
      */
+    /**
+     * Tlo krainy dla biezacej walki. W endless/boss-test nie ma zadnej krainy - wtedy zostaje
+     * domyslne generyczne tlo z [BattleUiState.battleBackground].
+     */
+    private fun resolveBattleBackground(): org.jetbrains.compose.resources.DrawableResource {
+        val stage = runSession.activeStoryStage ?: return Resources.Image.battlegroundFirst
+        val worldId = StoryWorldCatalog.worldForGlobalStage(stage)?.id ?: return Resources.Image.battlegroundFirst
+        return Resources.Image.worldBackground(worldId) ?: Resources.Image.battlegroundFirst
+    }
+
     private fun createInitialState(): BattleUiState {
         val players = buildPlayerParty().map { it.toUiModel().copy(approach = 1f) }
         val characters = buildWave(1, players, autoStagger = false)
@@ -2131,7 +2143,8 @@ class BattleViewModel(
             wave = 1,
             characters = characters,
             quiz = null,
-            message = null
+            message = null,
+            battleBackground = resolveBattleBackground()
         )
     }
 

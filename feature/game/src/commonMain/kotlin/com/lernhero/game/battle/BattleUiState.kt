@@ -9,6 +9,7 @@ import com.lernhero.domain.quiz.CategoryOffer
 import com.lernhero.domain.quiz.EstimationEntry
 import com.lernhero.domain.run.EndlessBuff
 import com.lernhero.game.character.CharacterUiModel
+import com.lernhero.shared.resources.Resources
 import org.jetbrains.compose.resources.DrawableResource
 
 typealias CharacterId = String
@@ -160,7 +161,13 @@ data class BattleUiState(
      */
     val runSummary: RunStats? = null,
     /** Ile poziomow bohater zdobyl w tym zejsciu - ekran koncowy pokazuje z tego "AWANS". */
-    val levelsGained: Int = 0
+    val levelsGained: Int = 0,
+    /**
+     * Tlo pola bitwy. W kampanii to grafika krainy, w ktorej sie walczy (rozwiazane z
+     * [com.lernhero.domain.run.RunSession.activeStoryStage]); w endless/boss-test - domyslne
+     * [com.lernhero.shared.resources.Resources.Image.battlegroundFirst], bo tam nie ma krainy.
+     */
+    val battleBackground: DrawableResource = Resources.Image.battlegroundFirst
 )
 
 /**

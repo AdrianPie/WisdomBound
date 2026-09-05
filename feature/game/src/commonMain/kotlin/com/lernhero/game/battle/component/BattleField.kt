@@ -121,8 +121,11 @@ internal fun BattleField(
     BoxWithConstraints(
         modifier = modifier.fillMaxSize()
     ) {
+        // Tlo krainy tej walki (kampania) albo generyczne (endless/boss) - patrz
+        // [BattleUiState.battleBackground]. FillBounds, bo pole bitwy to caly ekran, a nie waski
+        // pasek podgladu - tu nie ma czego "przycinac od gory".
         Image(
-            painter = painterResource(Resources.Image.battlegroundFirst),
+            painter = painterResource(state.battleBackground),
             contentDescription = null,
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.FillBounds

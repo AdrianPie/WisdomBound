@@ -21,14 +21,20 @@ data class StoryWorldArt(
     val expectedFile: String
 )
 
-fun StoryWorld.art(): StoryWorldArt = when (id) {
-    "forest" -> StoryWorldArt(Resources.Image.worldForest, "🌲", Color(0xFF3FA96A), "world_forest.png")
-    "mine" -> StoryWorldArt(Resources.Image.worldMine, "⛏", Color(0xFF9B2C3D), "world_mine.png")
-    "icefield" -> StoryWorldArt(Resources.Image.worldIcefield, "❄", Color(0xFF4E8AB8), "world_icefield.png")
-    "heat" -> StoryWorldArt(null, "🌋", Color(0xFFC7532F), "world_heat.png")
-    "heaven" -> StoryWorldArt(null, "☁", Color(0xFF8A5FD0), "world_heaven.png")
-    "abyss" -> StoryWorldArt(null, "🕳", Color(0xFF6B5A38), "world_abyss.png")
-    else -> StoryWorldArt(null, "🗺", Color(0xFF6B5A38), "world_$id.png")
+fun StoryWorld.art(): StoryWorldArt {
+    // Tlo bierze sie z jednego wspolnego miejsca ([Resources.Image.worldBackground]) - tego samego,
+    // ktorego uzywa tlo walki - zeby podglad krainy i sama bitwa nigdy sie nie rozjechaly.
+    val bg = Resources.Image.worldBackground(id)
+    val (emoji, tint) = when (id) {
+        "forest" -> "🌲" to Color(0xFF3FA96A)
+        "mine" -> "⛏" to Color(0xFF9B2C3D)
+        "icefield" -> "❄" to Color(0xFF4E8AB8)
+        "heat" -> "🌋" to Color(0xFFC7532F)
+        "heaven" -> "☁" to Color(0xFF8A5FD0)
+        "abyss" -> "🕳" to Color(0xFF6B5A38)
+        else -> "🗺" to Color(0xFF6B5A38)
+    }
+    return StoryWorldArt(bg, emoji, tint, "world_$id.png")
 }
 
 fun StoryWorldArt.gradient(): Brush = Brush.verticalGradient(

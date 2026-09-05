@@ -3,6 +3,7 @@ package com.lernhero.shared.resources
 import androidx.compose.ui.graphics.TransformOrigin
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import org.jetbrains.compose.resources.DrawableResource
 import lernhero.shared.generated.resources.Res
 import lernhero.shared.generated.resources.back_arrow
 import lernhero.shared.generated.resources.background
@@ -165,10 +166,22 @@ object Resources {
         val corridorBrick = Res.drawable.brick_dungeon
         val treasureChest = Res.drawable.treasure
 
-        /** Tla krain story mode - podpiete w [com.lernhero.home.story.StoryWorldArt]. */
+        /**
+         * Tla krain story mode - jedno zrodlo prawdy dla WSZYSTKICH miejsc, ktore rysuja krainy:
+         * podglad w panelu kampanii, ekran Mapy ([com.lernhero.home.story.StoryWorldArt]) i tlo
+         * samej walki ([com.lernhero.game.battle.component.BattleField]). Null = kraina jeszcze
+         * bez grafiki (wtedy walka spada na [battlegroundFirst], a karty krain na gradient).
+         */
         val worldForest = Res.drawable.forgotten_forest
         val worldMine = Res.drawable.bloody_mines
         val worldIcefield = Res.drawable.frozen_wastes
+
+        fun worldBackground(worldId: String): DrawableResource? = when (worldId) {
+            "forest" -> worldForest
+            "mine" -> worldMine
+            "icefield" -> worldIcefield
+            else -> null
+        }
     }
     /** Wyspy-budynki na ekranie Miasta (Dom) - kazda to osobna klikalna "instancja" (patrz HomeScreen). */
     object CityIsland {
