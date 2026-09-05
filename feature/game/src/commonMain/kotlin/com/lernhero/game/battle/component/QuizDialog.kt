@@ -49,6 +49,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.lernhero.domain.combat.live.AnswerTimer
 import com.lernhero.domain.combat.live.StreakTracker
+import com.lernhero.game.battle.BattleSpeed
 import com.lernhero.game.battle.BattleUiState
 import com.lernhero.game.battle.LiveQuizState
 import com.lernhero.game.battle.MultiSelectQuestion
@@ -56,6 +57,7 @@ import com.lernhero.game.battle.MultipleChoiceQuestion
 import com.lernhero.game.battle.OrderingQuestion
 import com.lernhero.game.battle.QuizAnswer
 import com.lernhero.game.battle.QuizQuestion
+import com.lernhero.game.battle.TurnPhase
 import com.lernhero.shared.theme.FontFirst
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive
@@ -128,7 +130,7 @@ fun LiveQuizBar(
     // Krotka chwila na zobaczenie, ktora odpowiedz byla poprawna - potem od razu kolejne pytanie.
     LaunchedEffect(question.id, quiz.revealed) {
         if (!quiz.revealed) return@LaunchedEffect
-        delay(QUIZ_REVEAL_MILLIS)
+        delay(BattleSpeed.scale(QUIZ_REVEAL_MILLIS))
         onContinue()
     }
 
@@ -592,7 +594,10 @@ fun ResolvingStrip(state: BattleUiState, modifier: Modifier = Modifier) {
                 verticalArrangement = Arrangement.spacedBy(6.dp)
             ) {
                 Text(
-                    text = state.message ?: "Exchanging blows...",
+                    // W takcie [TurnPhase.Impact] nikt jeszcze nie bije - cala uwaga ma byc na
+                    // rozliczeniu odpowiedzi na srodku ekranu, wiec pasek nie udaje trwajacej walki.
+                    text = state.message
+                        ?: if (state.turnPhase == TurnPhase.Impact) "Salwa sie laduje..." else "Exchanging blows...",
                     color = InkStrong,
                     fontFamily = FontFirst(),
                     fontWeight = FontWeight.Bold,
@@ -635,8 +640,15 @@ private fun StreakPipRow(streak: StreakTracker, modifier: Modifier = Modifier) {
     }
 }
 
-/** Ile czasu quiz stoi po odpowiedzi, zebys zdazyl zobaczyc, ktora byla dobra. */
-private const val QUIZ_REVEAL_MILLIS = 550L
+/**
+ * Ile czasu quiz stoi po odpowiedzi, zebys zdazyl zobaczyc, ktora byla dobra.
+ *
+ * 550ms (tyle bylo wczesniej) wystarczalo tylko na zauwazenie, ZE cos mignelo - przy pytaniach z
+ * czterema-pieciu opcjami nie dalo sie w tym czasie znalezc wzrokiem zielonego kafla, a przy blednej
+ * odpowiedzi tym bardziej przeczytac, ktora byla poprawna. Skalowane przez [BattleSpeed], wiec
+ * przewijanie walki na 4x/8x dalej dziala.
+ */
+private const val QUIZ_REVEAL_MILLIS = 1700L
 
 /** Odstep miedzy kolejnymi odpowiedziami "wjezdzajacymi" na ekran - szybko, ale po kolei, 1 -> 4. */
 private const val TILE_STAGGER_MILLIS = 95L

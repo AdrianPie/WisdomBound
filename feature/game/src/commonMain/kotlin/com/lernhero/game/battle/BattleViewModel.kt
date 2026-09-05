@@ -1090,14 +1090,24 @@ class BattleViewModel(
 
         // Im wiecej segmentow paska zostalo w chwili odpowiedzi, tym mocniejsza bedzie salwa
         // tej tury - zablokowane teraz, obowiazuje przez cala ture.
+        val answeredAfterMs = questionShownAt.elapsedNow().inWholeMilliseconds
         val remainingFraction = 1f -
-            (questionShownAt.elapsedNow().inWholeMilliseconds.toFloat() / AnswerTimer.WINDOW_MS).coerceIn(0f, 1f)
+            (answeredAfterMs.toFloat() / AnswerTimer.WINDOW_MS).coerceIn(0f, 1f)
+        val speedMultiplier = AnswerTimer.multiplierFor(remainingFraction)
+        val cycleMultiplier = activeCycleMultiplier()
         currentTurnMultiplier = if (isCorrect) {
-            AnswerTimer.multiplierFor(remainingFraction) * activeCycleMultiplier()
+            speedMultiplier * cycleMultiplier
         } else {
             WRONG_ANSWER_MULTIPLIER
         }
         currentEnemyMultiplier = if (isCorrect) 1f else WRONG_ANSWER_ENEMY_BONUS
+
+        // Rownanie pokazywane na TurnImpactOverlay - liczy sie z ataku ZYWYCH, bo tylko oni
+        // faktycznie ruszaja w tej salwie. Same liczby sa juz policzone wyzej; tu je tylko zbieramy,
+        // zeby overlay nie musial znac zadnej reguly walki.
+        val baseAttack = characters.values.filter { it.isPlayer && it.hp > 0 }.sumOf { it.attack }
+        val boostedAttack = (baseAttack * currentTurnMultiplier).roundToInt()
+        val deltaPercent = ((currentTurnMultiplier - 1f) * 100).roundToInt()
 
         var next = copy(
             quiz = quiz,
@@ -1113,7 +1123,13 @@ class BattleViewModel(
                 damageMultiplier = currentTurnMultiplier,
                 reward = if (isCorrect) reward else 0,
                 ultiTriggered = streakOutcome.ultiTriggered,
-                cycleLabel = streakOutcome.cycleResult?.label
+                cycleLabel = streakOutcome.cycleResult?.label,
+                answerSeconds = answeredAfterMs / 1000f,
+                speedMultiplier = speedMultiplier,
+                cycleMultiplier = cycleMultiplier,
+                baseAttack = baseAttack,
+                boostedAttack = boostedAttack,
+                attackDeltaPercent = deltaPercent
             )
         )
 
@@ -1688,6 +1704,27 @@ class BattleViewModel(
 
         // Nowa tura = koniec wszystkiego, co zostalo po poprzedniej (i po jej opoznionych `delay`).
         abandonVolley()
+
+        // Najpierw sam takt rozliczenia odpowiedzi: pole bitwy juz sie rozsuwa, ale nikt jeszcze nie
+        // bije - gracz ma chwile, zeby zobaczyc, co jego odpowiedz zrobila z sila druzyny.
+        _uiState.update { it.copy(turnPhase = TurnPhase.Impact, message = null) }
+        // Ten sam straznik co w [scheduleVolley]: gdy tura zostanie w miedzyczasie porzucona
+        // (koniec fali, przegrana, wyjscie z ekranu), takt Impact nie odpali juz salwy.
+        val token = volleyToken
+        viewModelScope.launch {
+            delay(BattleSpeed.scale(IMPACT_HOLD_MILLIS))
+            if (token != volleyToken) return@launch
+            startResolving()
+        }
+    }
+
+    /**
+     * Wlasciwy start salwy - odpalany dopiero PO [TurnPhase.Impact], zeby animacja rozliczenia
+     * odpowiedzi nie scigala sie z lecacymi pociskami.
+     */
+    private fun startResolving() {
+        val state = _uiState.value
+        if (state.phase != GamePhase.Battle || state.turnPhase != TurnPhase.Impact) return
 
         // Tylko zywi - martwe kroki i tak przelatuja na sucho, ale zasmiecaja kolejke i przez to
         // koniec tury (a wiec i wykrycie oczyszczonej fali) potrafil sie o nie oprzec.
@@ -2598,6 +2635,13 @@ const val HERO_ID = "PLAYER_KNIGHT"
 
 /** Ile rund (salwa gracza + salwa wrogow) rozgrywa sie po kazdej odpowiedzi. */
 private const val ROUNDS_PER_TURN = 3
+
+/**
+ * Dlugosc taktu [TurnPhase.Impact] - tyle pole bitwy stoi, zanim ruszy salwa, zeby gracz zdazyl
+ * przeczytac rozliczenie swojej odpowiedzi (TurnImpactOverlay animuje sie w tym samym oknie).
+ * Skalowane przez [BattleSpeed], wiec na 4x/8x nie jest to zadnym hamulcem.
+ */
+private const val IMPACT_HOLD_MILLIS = 2400L
 
 /**
  * Bohater - jedyna postac, ktora gracz ma OD RAZU, wiec caly early game musi dac sie przejsc nim

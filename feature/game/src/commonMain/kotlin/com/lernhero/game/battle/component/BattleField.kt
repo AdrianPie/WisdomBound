@@ -57,6 +57,7 @@ import com.lernhero.game.battle.BattleSpeed
 import com.lernhero.game.battle.BattleUiState
 import com.lernhero.game.battle.FloatingEffect
 import com.lernhero.game.battle.HERO_ID
+import com.lernhero.game.battle.TurnPhase
 import com.lernhero.domain.combat.playback.HitKind
 import com.lernhero.game.battle.effects.CharacterRect
 import com.lernhero.game.battle.effects.DamageNumberController
@@ -213,9 +214,11 @@ internal fun BattleField(
                 .padding(start = 10.dp, bottom = 8.dp, end = 60.dp)
         )
 
-        // Wynik ostatniej odpowiedzi - na srodku, nie do przeoczenia.
-        AnswerOutcomeBanner(
+        // Rozliczenie ostatniej odpowiedzi - na srodku, w takcie [TurnPhase.Impact], czyli ZANIM
+        // ktokolwiek uderzy. Znika w chwili, gdy rusza salwa, zeby nie zaslaniac samej walki.
+        TurnImpactOverlay(
             outcome = state.turnOutcome,
+            visible = state.turnPhase == TurnPhase.Impact,
             modifier = Modifier
                 .align(Alignment.Center)
                 .padding(horizontal = 16.dp)

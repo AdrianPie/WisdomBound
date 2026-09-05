@@ -48,9 +48,14 @@ enum class GamePhase {
 /**
  * Faza biezacej tury: [CategoryPick] - gracz wybiera temat nadchodzacego pytania (tryb story,
  * patrz [CategoryOffer]); [Question] - walka stoi, czeka na odpowiedz, dol ekranu jest rozszerzony;
- * [Resolving] - odpowiedz padla, druzyny wymieniaja ciosy, pole bitwy jest rozszerzone.
+ * [Impact] - odpowiedz padla, pole bitwy JESZCZE stoi, a na srodku gra sie jej rozliczenie
+ * (patrz TurnImpactOverlay); [Resolving] - dopiero teraz druzyny wymieniaja ciosy.
+ *
+ * [Impact] jest osobnym taktem celowo: wczesniej salwa ruszala w tej samej chwili, w ktorej
+ * pokazywal sie wynik odpowiedzi, wiec jedno zaslanialo drugie i nie bylo widac, co ta odpowiedz
+ * wlasciwie dala.
  */
-enum class TurnPhase { CategoryPick, Question, Resolving }
+enum class TurnPhase { CategoryPick, Question, Impact, Resolving }
 
 /** Efekt zamknietego cyklu dziesieciu odpowiedzi - trzyma sie przez [expiresAtMs] (czas gry). */
 data class CycleBuffState(
@@ -73,7 +78,19 @@ data class TurnOutcome(
     val reward: Int,
     val ultiTriggered: Boolean,
     /** Etykieta zamknietego cyklu dziesieciu odpowiedzi, jesli akurat sie domknal. */
-    val cycleLabel: String? = null
+    val cycleLabel: String? = null,
+    /** Po ilu sekundach padla odpowiedz - to z niej bierze sie [speedMultiplier]. */
+    val answerSeconds: Float = 0f,
+    /** Sam mnoznik z paska czasu (0.5-1.5), bez buffow. */
+    val speedMultiplier: Float = 1f,
+    /** Mnoznik z aktywnego buffa/debuffa cyklu (1.35 / 0.75 / 1.0). */
+    val cycleMultiplier: Float = 1f,
+    /** Suma ataku ZYWYCH czlonkow druzyny przed mnoznikiem - lewa strona rownania na overlayu. */
+    val baseAttack: Int = 0,
+    /** [baseAttack] po przemnozeniu przez [damageMultiplier] - prawa strona rownania. */
+    val boostedAttack: Int = 0,
+    /** O ile mocniej (albo slabiej) bije druzyna w tej turze, w procentach: +36, -45... */
+    val attackDeltaPercent: Int = 0
 )
 
 data class BattleUiState(
