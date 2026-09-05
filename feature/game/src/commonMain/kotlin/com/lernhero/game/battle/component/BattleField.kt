@@ -27,6 +27,7 @@ import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -67,6 +68,7 @@ import com.lernhero.game.battle.effects.EffectMotion
 import com.lernhero.game.battle.effects.EffectsController
 import com.lernhero.game.battle.effects.EffectsOverlay
 import com.lernhero.game.battle.effects.damageNumberColor
+import com.lernhero.domain.monster.Element
 import com.lernhero.game.character.CharacterUiModel
 import com.lernhero.game.character.ModularKnight
 import com.lernhero.game.character.MonsterCharacter
@@ -175,6 +177,7 @@ internal fun BattleField(
         HealthBarsOverlay(
             characters = allCharacters,
             characterRects = characterRects,
+            boostedElements = state.boostedElements,
             modifier = Modifier.fillMaxSize()
         )
 
@@ -272,6 +275,7 @@ private fun anchorsFor(character: CharacterUiModel): CombatAnchorSet =
 private fun HealthBarsOverlay(
     characters: List<CharacterUiModel>,
     characterRects: Map<String, CharacterRect>,
+    boostedElements: Set<Element>,
     modifier: Modifier = Modifier
 ) {
     var layerOrigin by remember { mutableStateOf(Offset.Zero) }
@@ -287,21 +291,91 @@ private fun HealthBarsOverlay(
                 val local = world - layerOrigin
                 val barWidthPx = rect.size.width * 0.5f
                 val barWidthDp = with(density) { barWidthPx.toDp() }
-                HealthBar(
-                    character = character,
+                val boosted = character.element != null && character.element in boostedElements
+
+                Row(
                     modifier = Modifier
                         .offset {
+                            // Odznaka zywiolu wychodzi lewo od paska, wiec cofamy caly rzad o jej
+                            // szerokosc + odstep, zeby pasek zostal wysrodkowany nad postacia.
+                            val badgeShift = if (character.element != null) ELEMENT_BADGE_PX + 3f else 0f
                             IntOffset(
-                                x = (local.x - barWidthPx / 2f).roundToInt(),
+                                x = (local.x - barWidthPx / 2f - badgeShift).roundToInt(),
                                 y = local.y.roundToInt()
                             )
-                        }
-                        .width(barWidthDp)
-                )
+                        },
+                    horizontalArrangement = Arrangement.spacedBy(3.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    character.element?.let { element ->
+                        ElementBadge(element = element, boosted = boosted)
+                    }
+                    HealthBar(character = character, modifier = Modifier.width(barWidthDp))
+                }
             }
         }
     }
 }
+
+/**
+ * Odznaka zywiolu przy pasku HP - jedna kropka w kolorze zywiolu, zeby gracz od razu widzial,
+ * ktora jednostka jest jakiego typu (do tej pory bylo to zapisane tylko w danych).
+ *
+ * [boosted] = ten zywiol zostal wybrany kaflem tematu na te ture: odznaka pulsuje jasna poswiata,
+ * a przy pierwszym wlaczeniu robi krotki "pop" - to jedyny sygnal, po ktorym gracz widzi, ze jego
+ * wybor kategorii realnie wzmocnil TE konkretne postacie.
+ */
+@Composable
+private fun ElementBadge(element: Element, boosted: Boolean) {
+    val color = Color(element.colorHex)
+
+    val pulse = rememberInfiniteTransition(label = "elementPulse")
+    val glow by pulse.animateFloat(
+        initialValue = if (boosted) 0.35f else 0f,
+        targetValue = if (boosted) 1f else 0f,
+        animationSpec = infiniteRepeatable(tween(760, easing = EaseInOutSine), RepeatMode.Reverse),
+        label = "elementGlow"
+    )
+    // "Pop" przy wlaczeniu boosta - animateFloatAsState kluczowane na `boosted` rusza tylko przy zmianie.
+    val pop by animateFloatAsState(
+        targetValue = if (boosted) 1f else 0f,
+        animationSpec = tween(320, easing = EaseInOutSine),
+        label = "elementPop"
+    )
+    val scale = 1f + 0.35f * pop * (1f - pop) * 4f  // parabola 0->1->0, szczyt w polowie
+
+    Box(
+        modifier = Modifier
+            .size(ELEMENT_BADGE_DP)
+            .graphicsLayer {
+                scaleX = scale
+                scaleY = scale
+            },
+        contentAlignment = Alignment.Center
+    ) {
+        if (boosted) {
+            Box(
+                modifier = Modifier
+                    .size(ELEMENT_BADGE_DP)
+                    .graphicsLayer { alpha = glow }
+                    .clip(CircleShape)
+                    .background(color.copy(alpha = 0.55f))
+            )
+        }
+        Box(
+            modifier = Modifier
+                .size(ELEMENT_BADGE_DP * 0.62f)
+                .clip(CircleShape)
+                .background(
+                    Brush.radialGradient(listOf(color, color.copy(alpha = 0.65f)))
+                )
+                .border(0.75.dp, Color.Black.copy(alpha = 0.5f), CircleShape)
+        )
+    }
+}
+
+private val ELEMENT_BADGE_DP = 12.dp
+private const val ELEMENT_BADGE_PX = 12f
 
 /**
  * Niewidzialny "dyrygent": dla kazdego nowego [FloatingEffect] (Game Logic -> Combat Action, patrz
