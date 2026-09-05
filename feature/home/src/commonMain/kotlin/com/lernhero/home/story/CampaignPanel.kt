@@ -233,10 +233,13 @@ private fun StageScene(stage: StoryStage, world: StoryWorld) {
             .background(art.gradient())
     ) {
         art.background?.let { background ->
+            // Podglad to niski pasek (140dp), a pelna mapa jest wysoka - pokazujemy GORE grafiki
+            // (niebo/horyzont krainy, nie ziemia pod nogami), stad alignment = TopCenter przy Crop.
             Image(
                 painter = painterResource(background),
                 contentDescription = null,
                 contentScale = ContentScale.Crop,
+                alignment = Alignment.TopCenter,
                 modifier = Modifier.fillMaxSize()
             )
         }

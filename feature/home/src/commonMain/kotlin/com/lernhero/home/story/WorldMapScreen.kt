@@ -233,6 +233,7 @@ private fun WorldCard(
                 painter = painterResource(background),
                 contentDescription = null,
                 contentScale = ContentScale.Crop,
+                alignment = Alignment.TopCenter,
                 modifier = Modifier.fillMaxSize()
             )
         }

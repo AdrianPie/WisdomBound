@@ -6,6 +6,9 @@ import androidx.compose.ui.unit.dp
 import lernhero.shared.generated.resources.Res
 import lernhero.shared.generated.resources.back_arrow
 import lernhero.shared.generated.resources.background
+import lernhero.shared.generated.resources.bloody_mines
+import lernhero.shared.generated.resources.forgotten_forest
+import lernhero.shared.generated.resources.frozen_wastes
 import lernhero.shared.generated.resources.battle_mage_avatar
 import lernhero.shared.generated.resources.brick_dungeon
 import lernhero.shared.generated.resources.battlegroundTwo
@@ -161,6 +164,11 @@ object Resources {
         val dungeonMap = Res.drawable.game_map
         val corridorBrick = Res.drawable.brick_dungeon
         val treasureChest = Res.drawable.treasure
+
+        /** Tla krain story mode - podpiete w [com.lernhero.home.story.StoryWorldArt]. */
+        val worldForest = Res.drawable.forgotten_forest
+        val worldMine = Res.drawable.bloody_mines
+        val worldIcefield = Res.drawable.frozen_wastes
     }
     /** Wyspy-budynki na ekranie Miasta (Dom) - kazda to osobna klikalna "instancja" (patrz HomeScreen). */
     object CityIsland {

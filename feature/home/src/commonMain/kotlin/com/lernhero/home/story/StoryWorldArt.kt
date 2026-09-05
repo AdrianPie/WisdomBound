@@ -3,6 +3,7 @@ package com.lernhero.home.story
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import com.lernhero.domain.story.StoryWorld
+import com.lernhero.shared.resources.Resources
 import org.jetbrains.compose.resources.DrawableResource
 
 /**
@@ -21,9 +22,9 @@ data class StoryWorldArt(
 )
 
 fun StoryWorld.art(): StoryWorldArt = when (id) {
-    "forest" -> StoryWorldArt(null, "🌲", Color(0xFF3FA96A), "world_forest.png")
-    "mine" -> StoryWorldArt(null, "⛏", Color(0xFF9B2C3D), "world_mine.png")
-    "icefield" -> StoryWorldArt(null, "❄", Color(0xFF4E8AB8), "world_icefield.png")
+    "forest" -> StoryWorldArt(Resources.Image.worldForest, "🌲", Color(0xFF3FA96A), "world_forest.png")
+    "mine" -> StoryWorldArt(Resources.Image.worldMine, "⛏", Color(0xFF9B2C3D), "world_mine.png")
+    "icefield" -> StoryWorldArt(Resources.Image.worldIcefield, "❄", Color(0xFF4E8AB8), "world_icefield.png")
     "heat" -> StoryWorldArt(null, "🌋", Color(0xFFC7532F), "world_heat.png")
     "heaven" -> StoryWorldArt(null, "☁", Color(0xFF8A5FD0), "world_heaven.png")
     "abyss" -> StoryWorldArt(null, "🕳", Color(0xFF6B5A38), "world_abyss.png")
