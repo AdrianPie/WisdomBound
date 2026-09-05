@@ -55,8 +55,6 @@ import com.lernhero.game.battle.MultipleChoiceQuestion
 import com.lernhero.game.battle.OrderingQuestion
 import com.lernhero.game.battle.QuizAnswer
 import com.lernhero.game.battle.QuizQuestion
-import com.lernhero.game.battle.WRONG_ANSWER_ENEMY_BONUS
-import com.lernhero.game.battle.WRONG_ANSWER_MULTIPLIER
 import com.lernhero.shared.theme.FontFirst
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive
@@ -199,13 +197,6 @@ fun LiveQuizBar(
                         QuizBadge(text = "+${question.reward} pkt", color = Color(0xFFE0A93A))
                     }
 
-                    // Stawka tej tury - zeby zawsze bylo widac, co konkretnie daje dobra odpowiedz,
-                    // a co kosztuje zla. Bez tego gracz odpowiada "w ciemno" i nie widzi zwiazku
-                    // miedzy quizem a tym, co dzieje sie na polu bitwy.
-                    if (!quiz.revealed) {
-                        StakesRow(streak = state.streak)
-                    }
-
                     if (quiz.revealed) {
                         RevealBanner(
                             correct = quiz.answeredCorrectly,
@@ -334,87 +325,6 @@ fun LiveQuizBar(
             }
         }
 }
-
-/**
- * Co jest do wygrania/stracenia w tej turze - dwa kafelki, dobra i zla odpowiedz, z konkretnymi
- * liczbami z [WRONG_ANSWER_MULTIPLIER]/[WRONG_ANSWER_ENEMY_BONUS]. Gdy gracz ma passe, dochodzi
- * trzeci znacznik z informacja, ile jeszcze do ulti.
- */
-@Composable
-private fun StakesRow(streak: StreakTracker) {
-    val wrongPercent = (WRONG_ANSWER_MULTIPLIER * 100).toInt()
-    val enemyBonusPercent = ((WRONG_ANSWER_ENEMY_BONUS - 1f) * 100).toInt()
-
-    Column(
-        modifier = Modifier.fillMaxWidth(),
-        verticalArrangement = Arrangement.spacedBy(4.dp)
-    ) {
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.spacedBy(6.dp)
-        ) {
-            StakeTile(
-                icon = "✅",
-                title = "PELNA SALWA",
-                detail = "100% ataku druzyny",
-                accent = Color(0xFF22A55E),
-                modifier = Modifier.weight(1f)
-            )
-            StakeTile(
-                icon = "❌",
-                title = "$wrongPercent% ATAKU",
-                detail = "wrogowie bija +$enemyBonusPercent%",
-                accent = Color(0xFFD1453D),
-                modifier = Modifier.weight(1f)
-            )
-        }
-
-        val toUlti = ULTI_STREAK_TARGET - streak.consecutiveCorrect
-        if (streak.consecutiveCorrect > 0 && toUlti > 0) {
-            Text(
-                text = "🔥 Passa ${streak.consecutiveCorrect} - jeszcze $toUlti do ULTI",
-                color = Color(0xFFE0A93A),
-                fontFamily = FontFirst(),
-                fontWeight = FontWeight.Bold,
-                fontSize = 10.sp
-            )
-        }
-    }
-}
-
-@Composable
-private fun StakeTile(
-    icon: String,
-    title: String,
-    detail: String,
-    accent: Color,
-    modifier: Modifier = Modifier
-) {
-    Row(
-        modifier = modifier
-            .clip(RoundedCornerShape(10.dp))
-            .background(accent.copy(alpha = 0.10f))
-            .border(1.5.dp, accent.copy(alpha = 0.55f), RoundedCornerShape(10.dp))
-            .padding(horizontal = 8.dp, vertical = 6.dp),
-        horizontalArrangement = Arrangement.spacedBy(6.dp),
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        Text(text = icon, fontSize = 12.sp)
-        Column(verticalArrangement = Arrangement.spacedBy(1.dp)) {
-            Text(
-                text = title,
-                color = accent,
-                fontFamily = FontFirst(),
-                fontWeight = FontWeight.Bold,
-                fontSize = 10.sp
-            )
-            Text(text = detail, color = InkMuted, fontFamily = FontFirst(), fontSize = 9.sp)
-        }
-    }
-}
-
-/** Ile poprawnych z rzedu odpala ulti - zgodne z ULTI_STREAK w domain.combat.live. */
-private const val ULTI_STREAK_TARGET = 5
 
 /** Litera przypisana do elementu ukladanki wedlug jego miejsca w wyswietlonej (przetasowanej) liscie - A, B, C, D... */
 private fun itemLabel(displayIndex: Int): String = ('A' + displayIndex).toString()
