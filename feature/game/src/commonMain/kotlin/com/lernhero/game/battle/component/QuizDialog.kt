@@ -20,6 +20,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
@@ -131,16 +132,18 @@ fun LiveQuizBar(
         onContinue()
     }
 
-    // Sam "wjazd" panelu z dolu robi juz kontener sceny (BattleScreen.SceneBottomPanel) - to on
-    // plynnie podnosi gorna krawedz tego panelu w rytm kurczacej sie areny. Tutaj zostaje wylacznie
-    // to, co dzieje sie W SRODKU panelu: pytanie, a potem odpowiedzi po kolei.
-    Box(
-        modifier = modifier
-            .fillMaxSize()
-            .clip(PanelShape)
-            .background(PanelGradient)
-            .border(3.dp, FrameGradient, PanelShape)
-    ) {
+    // Zewnetrzny Box BEZ przyciecia - pasek streaka ma wisiec kilka px NAD zlota ramka panelu,
+    // a nie byc kolejnym rzedem w srodku. Sam "wjazd" panelu z dolu robi juz kontener sceny
+    // (BattleScreen.SceneBottomPanel) - to on plynnie podnosi gorna krawedz w rytm kurczacej sie
+    // areny; tutaj zostaje wylacznie to, co dzieje sie W SRODKU i TUZ NAD panelem.
+    Box(modifier = modifier.fillMaxSize()) {
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .clip(PanelShape)
+                .background(PanelGradient)
+                .border(3.dp, FrameGradient, PanelShape)
+        ) {
             Column(
                 modifier = Modifier
                     .fillMaxSize()
@@ -153,8 +156,6 @@ fun LiveQuizBar(
                         .verticalScroll(rememberScrollState()),
                     verticalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
-                    StreakPipRow(streak = state.streak)
-
                     if (question is OrderingQuestion) {
                         SequenceProgressRow(question = question, orderedSelection = quiz.orderedSelection)
                     }
@@ -185,16 +186,6 @@ fun LiveQuizBar(
                                 )
                             }
                         }
-                    }
-
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.spacedBy(6.dp),
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        QuizBadge(text = question.category, color = Color(0xFF2F8FE0))
-                        QuizBadge(text = question.difficulty, color = difficultyColor(question.difficulty))
-                        QuizBadge(text = "+${question.reward} pkt", color = Color(0xFFE0A93A))
                     }
 
                     if (quiz.revealed) {
@@ -324,6 +315,16 @@ fun LiveQuizBar(
                 }
             }
         }
+
+        // Pasek streaka wisi KILKA PX NAD zlota ramka panelu, nie w srodku - stad osobny Box
+        // wyzej bez przyciecia i ujemny offset tutaj.
+        StreakPipRow(
+            streak = state.streak,
+            modifier = Modifier
+                .align(Alignment.TopCenter)
+                .offset(y = (-10).dp)
+        )
+    }
 }
 
 /** Litera przypisana do elementu ukladanki wedlug jego miejsca w wyswietlonej (przetasowanej) liscie - A, B, C, D... */
@@ -600,8 +601,9 @@ fun ResolvingStrip(state: BattleUiState, modifier: Modifier = Modifier) {
  * Piec zielonych z rzedu (nawet miedzy cyklami) odpala ulti gdzie indziej w viewmodelu.
  */
 @Composable
-private fun StreakPipRow(streak: StreakTracker) {
+private fun StreakPipRow(streak: StreakTracker, modifier: Modifier = Modifier) {
     Row(
+        modifier = modifier,
         horizontalArrangement = Arrangement.spacedBy(4.dp)
     ) {
         streak.pips.forEach { pip ->
@@ -619,33 +621,6 @@ private fun StreakPipRow(streak: StreakTracker) {
             )
         }
     }
-}
-
-@Composable
-private fun QuizBadge(text: String, color: Color) {
-    Box(
-        modifier = Modifier
-            .clip(RoundedCornerShape(50))
-            .background(color.copy(alpha = 0.14f))
-            .border(1.dp, color, RoundedCornerShape(50))
-            .padding(horizontal = 10.dp, vertical = 4.dp)
-    ) {
-        Text(
-            text = text,
-            color = color,
-            fontFamily = FontFirst(),
-            fontWeight = FontWeight.Bold,
-            fontSize = 11.sp
-        )
-    }
-}
-
-/** Im wyzszy szczebel drabinki, tym cieplejszy kolor - jak w Milionerach. */
-private fun difficultyColor(label: String): Color = when (label) {
-    "Easy" -> Color(0xFF22A55E)
-    "Medium" -> Color(0xFFE0A93A)
-    "Hard" -> Color(0xFFE08A2F)
-    else -> Color(0xFFD1453D)
 }
 
 /** Ile czasu quiz stoi po odpowiedzi, zebys zdazyl zobaczyc, ktora byla dobra. */
