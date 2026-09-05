@@ -167,6 +167,22 @@ class FitnessViewModel(
         _uiState.update { it.copy(pendingChestSlot = null) }
     }
 
+    /**
+     * DEV: dosypuje kroki bez dotykania Health Connect/HealthKit. Emulatory zwykle nie maja
+     * zadnych danych o krokach i nie da sie ich tam "nachodzic" - to jedyny sposob, zeby przetestowac
+     * skrzynie/cele bez fizycznego telefonu. Dziala natychmiast (in-memory), nic nie zapisuje do
+     * platformy ani serwera - po [refresh] wraca prawdziwa (czyli zazwyczaj zerowa) liczba.
+     *
+     * Wymaga juz przyznanej zgody (a wiec i prawdziwego [FitnessSnapshot.dateKey] z platformy) -
+     * to dosypuje TYLKO kroki, nie udaje calego polaczenia z Health Connect.
+     */
+    fun addDebugSteps(amount: Int = 1000) {
+        if (_uiState.value.snapshot.dateKey.isBlank()) return
+        _uiState.update { state ->
+            state.copy(snapshot = state.snapshot.copy(steps = state.snapshot.steps + amount))
+        }
+    }
+
     fun clearMessage() {
         _uiState.update { it.copy(message = null) }
     }

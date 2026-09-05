@@ -71,6 +71,13 @@ private val Green = Color(0xFF4ADE80)
 private val Locked = Color(0xFF4A4030)
 
 /**
+ * Ten sam wylacznik co SHOW_DEV_TOOLS w HomeScreen.kt (osobna stala, bo to inny plik/modul) -
+ * MUSI byc false przed kazdym wydaniem do sklepu. Przelacz recznie na true lokalnie, gdy testujesz
+ * na emulatorze bez danych Health Connect, i wroc do false przed buildem release.
+ */
+private const val SHOW_DEV_TOOLS = true
+
+/**
  * Zakladka "Trening": dzisiejsza aktywnosc z zegarka/telefonu plus cele, za ktore placi sie
  * zlotem. Bez zgody platformy pokazuje tylko przycisk "Polacz" - zadnych fikcyjnych liczb.
  */
@@ -125,6 +132,15 @@ fun FitnessScreen(insets: PaddingValues = PaddingValues(0.dp)) {
                         openedToday = state.stepChestOpenedToday,
                         onOpen = viewModel::openStepChest
                     )
+
+                    // Emulatory zazwyczaj nie maja zadnych danych o krokach w Health Connect i nie
+                    // da sie ich tam "nachodzic" - bez tego nie dawalo sie w ogole przetestowac
+                    // skrzyni/celow poza fizycznym telefonem. SHOW_DEV_TOOLS = ten sam wylacznik
+                    // co na Domu (HomeScreen.kt) - MUSI byc false przed kazdym wydaniem do sklepu.
+                    if (SHOW_DEV_TOOLS) {
+                        DevAddStepsButton(onClick = { viewModel.addDebugSteps(1000) })
+                    }
+
                     TodayCard(snapshot = state.snapshot)
                     Text(
                         text = "Daily Goals",
@@ -318,6 +334,28 @@ private fun StepChestCard(
                 )
             }
         }
+    }
+}
+
+@Composable
+private fun DevAddStepsButton(onClick: () -> Unit) {
+    Box(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(10.dp))
+            .background(Color(0xFF3A1F1F))
+            .border(1.dp, Color(0xFFB05050), RoundedCornerShape(10.dp))
+            .clickable(onClick = onClick)
+            .padding(vertical = 10.dp),
+        contentAlignment = Alignment.Center
+    ) {
+        Text(
+            text = "DEV: +1000 steps",
+            color = Color(0xFFFF8A8A),
+            fontFamily = FontPixel(),
+            fontWeight = FontWeight.Bold,
+            fontSize = 12.sp
+        )
     }
 }
 
