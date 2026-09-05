@@ -25,6 +25,19 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
+import androidx.compose.animation.core.LinearEasing
+import androidx.compose.animation.core.RepeatMode
+import androidx.compose.animation.core.animateFloat
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.infiniteRepeatable
+import androidx.compose.animation.core.rememberInfiniteTransition
+import androidx.compose.animation.core.tween
+import androidx.compose.ui.draw.scale
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.size
+import com.lernhero.shared.resources.Resources
+import org.jetbrains.compose.resources.painterResource
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -37,9 +50,16 @@ import com.lernhero.domain.fitness.FitnessGoal
 import com.lernhero.domain.fitness.FitnessGoalCatalog
 import com.lernhero.domain.fitness.FitnessGoalKind
 import com.lernhero.domain.fitness.FitnessSnapshot
+import com.lernhero.domain.fitness.StepChest
+import com.lernhero.domain.run.ChestSlot
+import com.lernhero.home.city.TownViewModel
+import com.lernhero.home.player.PlayerViewModel
+import com.lernhero.home.story.BossChestOverlay
+import com.lernhero.home.story.resolveChestPrize
 import com.lernhero.shared.theme.FontFirst
 import com.lernhero.shared.theme.FontPixel
 import org.koin.compose.viewmodel.koinViewModel
+import kotlin.random.Random
 
 private val Panel = Color(0xFF1A1410)
 private val Ink = Color(0xFF0F0B08)
@@ -68,6 +88,9 @@ fun FitnessScreen(insets: PaddingValues = PaddingValues(0.dp)) {
         }
     }
 
+    val playerViewModel = koinViewModel<PlayerViewModel>()
+    val townViewModel = koinViewModel<TownViewModel>()
+
     // Przezroczyste tlo - niebo Miasta z HomeNavGraph ma przebijac tak samo jak na innych zakladkach.
     Box(modifier = Modifier.fillMaxSize()) {
         Column(
@@ -95,6 +118,13 @@ fun FitnessScreen(insets: PaddingValues = PaddingValues(0.dp)) {
                     onRetry = viewModel::refresh
                 )
                 else -> {
+                    // Skrzynia stoi NAD dzisiejszymi liczbami - to ona jest powodem, dla ktorego
+                    // wchodzi sie tu w ciagu dnia ("ile mi jeszcze brakuje"), a nie tabelka krokow.
+                    StepChestCard(
+                        snapshot = state.snapshot,
+                        openedToday = state.stepChestOpenedToday,
+                        onOpen = viewModel::openStepChest
+                    )
                     TodayCard(snapshot = state.snapshot)
                     Text(
                         text = "Daily Goals",
@@ -124,6 +154,169 @@ fun FitnessScreen(insets: PaddingValues = PaddingValues(0.dp)) {
             }
 
             Spacer(modifier = Modifier.height(8.dp))
+        }
+
+        // Kolo fortuny ze skrzyni - dokladnie to samo, ktore krecisz po bossie (ChestSlot/ChestWheel),
+        // wiec dzienna skrzynia za kroki gra w te sama gre co reszta lupu, a nie w osobna, wlasna.
+        state.pendingChestSlot?.let { slotName ->
+            val slot = ChestSlot.valueOf(slotName)
+            // Nagroda musi byc rozwiazana RAZ: inaczej kazda rekompozycja losowalaby inny przedmiot
+            // i podpis na kole nie zgadzalby sie z tym, co faktycznie wpada do ekwipunku.
+            val prize = remember(slotName) { resolveChestPrize(slot, Random.Default) }
+            BossChestOverlay(
+                dungeonLevel = StepChest.wheelLevel(state.snapshot.steps),
+                prize = slot,
+                prizeLabel = prize.label,
+                onClaim = {
+                    prize.grant(playerViewModel, townViewModel)
+                    viewModel.consumeStepChest()
+                }
+            )
+        }
+    }
+}
+
+/**
+ * Dzienna skrzynia za kroki - trzy stany, kazdy mowi jednym spojrzeniem, co robic:
+ *
+ *  - ZAMKNIETA: ile jeszcze krokow brakuje, pasek postepu, skrzynia przygaszona,
+ *  - GOTOWA: skrzynia pulsuje i swieci, jest przycisk OTWORZ,
+ *  - OTWARTA DZIS: skrzynia otwarta, przygaszona, i informacja, ze wraca jutro.
+ *
+ * Pulsowanie chodzi WYLACZNIE w stanie gotowym - to jedyny moment, w ktorym cos od gracza zalezy,
+ * wiec tylko wtedy karta zaczepia wzrok.
+ */
+@Composable
+private fun StepChestCard(
+    snapshot: FitnessSnapshot,
+    openedToday: Boolean,
+    onOpen: () -> Unit
+) {
+    val unlocked = StepChest.isUnlocked(snapshot)
+    val ready = unlocked && !openedToday
+    val progress = StepChest.progress(snapshot)
+
+    val transition = rememberInfiniteTransition(label = "chestPulse")
+    val pulse by transition.animateFloat(
+        initialValue = 1f,
+        targetValue = if (ready) 1.10f else 1f,
+        animationSpec = infiniteRepeatable(
+            animation = tween(900, easing = LinearEasing),
+            repeatMode = RepeatMode.Reverse
+        ),
+        label = "chestPulseScale"
+    )
+    val animatedProgress by animateFloatAsState(targetValue = progress, label = "chestProgress")
+
+    val frame = when {
+        ready -> Gold
+        openedToday -> GoldDim
+        else -> GoldFrame.copy(alpha = 0.5f)
+    }
+
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(14.dp))
+            .background(if (ready) Color(0xFF241B10) else Panel)
+            .border(if (ready) 2.dp else 1.dp, frame, RoundedCornerShape(14.dp))
+            .then(if (ready) Modifier.clickable(onClick = onOpen) else Modifier)
+            .padding(14.dp),
+        verticalArrangement = Arrangement.spacedBy(10.dp)
+    ) {
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.spacedBy(12.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            // Ta sama grafika skrzyni co na kole fortuny po bossie - jedna skrzynia w calej grze,
+            // a nie emoji-zastepnik obok prawdziwego sprite'a. Po otwarciu przygaszona.
+            Image(
+                painter = painterResource(Resources.Image.treasureChest),
+                contentDescription = null,
+                alpha = if (openedToday) 0.35f else 1f,
+                modifier = Modifier.size(44.dp).scale(pulse)
+            )
+            Column(
+                modifier = Modifier.weight(1f),
+                verticalArrangement = Arrangement.spacedBy(2.dp)
+            ) {
+                Text(
+                    text = "Daily step chest",
+                    color = if (ready) Gold else Muted,
+                    fontFamily = FontPixel(),
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 13.sp
+                )
+                Text(
+                    text = when {
+                        openedToday -> "Opened today - comes back tomorrow."
+                        ready -> "Unlocked! Spin the wheel for loot."
+                        else -> "${StepChest.stepsRemaining(snapshot)} steps to go."
+                    },
+                    color = Muted,
+                    fontFamily = FontFirst(),
+                    fontSize = 11.sp
+                )
+            }
+        }
+
+        // Licznik zostaje widoczny w KAZDYM stanie - takze po otwarciu, bo "ile dzis zrobilem"
+        // jest ciekawe samo w sobie, nie tylko jako warunek skrzyni.
+        Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween
+            ) {
+                Text(
+                    text = "${snapshot.steps} / ${StepChest.STEPS_REQUIRED}",
+                    color = if (unlocked) Green else Muted,
+                    fontFamily = FontPixel(),
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 12.sp
+                )
+                Text(
+                    text = "${(progress * 100).toInt()}%",
+                    color = if (unlocked) Green else Muted,
+                    fontFamily = FontFirst(),
+                    fontSize = 11.sp
+                )
+            }
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(8.dp)
+                    .clip(RoundedCornerShape(4.dp))
+                    .background(Ink)
+            ) {
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth(animatedProgress)
+                        .height(8.dp)
+                        .clip(RoundedCornerShape(4.dp))
+                        .background(if (unlocked) Green else GoldFrame)
+                )
+            }
+        }
+
+        if (ready) {
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clip(RoundedCornerShape(10.dp))
+                    .background(Gold)
+                    .clickable(onClick = onOpen)
+                    .padding(vertical = 10.dp),
+                contentAlignment = Alignment.Center
+            ) {
+                Text(
+                    text = "OPEN CHEST",
+                    color = Ink,
+                    fontFamily = FontPixel(),
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 13.sp
+                )
+            }
         }
     }
 }
