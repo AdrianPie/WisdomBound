@@ -286,19 +286,23 @@ private fun HealthBarsOverlay(
     ) {
         characters.forEach { character ->
             val rect = characterRects[character.id] ?: return@forEach
+            // Trup nie ma paska - po smierci zostawal pusty prostokat, bo martwe postacie zostaja
+            // w mapie stanu (przygaszony sprite lezy dalej na ziemi).
+            if (character.hp <= 0 || character.state == CharacterState.DEAD) return@forEach
             key(character.id) {
                 val world = rect.resolve(anchorsFor(character).hpBarAnchor)
                 val local = world - layerOrigin
                 val barWidthPx = rect.size.width * 0.5f
                 val barWidthDp = with(density) { barWidthPx.toDp() }
-                val boosted = character.element != null && character.element in boostedElements
+                // Odznaka zywiolu tylko na NASZYCH jednostkach: to gracz wybiera kafel tematu i to
+                // jego druzyne ten wybor wzmacnia - typ wroga nic tu nie zmienia.
+                val showBadge = character.isPlayer && character.element != null
+                val boosted = showBadge && character.element in boostedElements
 
                 Row(
                     modifier = Modifier
                         .offset {
-                            // Odznaka zywiolu wychodzi lewo od paska, wiec cofamy caly rzad o jej
-                            // szerokosc + odstep, zeby pasek zostal wysrodkowany nad postacia.
-                            val badgeShift = if (character.element != null) ELEMENT_BADGE_PX + 3f else 0f
+                            val badgeShift = if (showBadge) ELEMENT_BADGE_PX + 3f else 0f
                             IntOffset(
                                 x = (local.x - barWidthPx / 2f - badgeShift).roundToInt(),
                                 y = local.y.roundToInt()
@@ -307,8 +311,8 @@ private fun HealthBarsOverlay(
                     horizontalArrangement = Arrangement.spacedBy(3.dp),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    character.element?.let { element ->
-                        ElementBadge(element = element, boosted = boosted)
+                    if (showBadge) {
+                        ElementBadge(element = character.element!!, boosted = boosted)
                     }
                     HealthBar(character = character, modifier = Modifier.width(barWidthDp))
                 }
