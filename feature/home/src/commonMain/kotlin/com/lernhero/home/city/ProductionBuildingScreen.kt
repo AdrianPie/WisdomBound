@@ -40,6 +40,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.lernhero.domain.town.ProductionBuilding
 import com.lernhero.domain.town.ProductionMath
+import com.lernhero.domain.town.ProductionQuiz
 import com.lernhero.shared.resources.Resources
 import com.lernhero.shared.theme.AppPalette
 import com.lernhero.shared.theme.FontFirst
@@ -53,8 +54,9 @@ import kotlin.math.roundToInt
  * Ekran tartaku / kamieniolomu. Rdzen "idle feelingu": widac stawke na godzine, pasek magazynu rosnie
  * w czasie rzeczywistym, a nad nim wyskakuja "+N" w miare jak przybywa surowca.
  *
- * Quiz jest tu na razie placeholderem (jeden przycisk zamiast pytania) - docelowo to on ma ustawiac
- * bonus, ale sama mechanika bonusu ([ProductionMath]) juz dziala w pelni.
+ * Przycisk QUIZ otwiera prawdziwe podejscie ([ProductionQuizDialog]): piec pytan, a od liczby
+ * trafien zalezy sila bonusu na 24h (patrz [ProductionQuiz]). Bonus trwa dobe i to on jest
+ * blokada "raz na 24h" - dopoki chodzi, przycisk pokazuje, ile zostalo do kolejnej proby.
  */
 @Composable
 fun ProductionBuildingScreen(
@@ -73,6 +75,11 @@ fun ProductionBuildingScreen(
     val boostActive = ProductionMath.isBoostActive(production, now)
     val boostRemaining = ProductionMath.boostRemainingMillis(production, now)
     val upgradeCost = ProductionMath.upgradeCost(production.level)
+
+    // Nowe `attemptId` = nowy zestaw pytan. Rosnie po kazdym zamknieciu, zeby druga proba
+    // (nastepnego dnia) nie dostala tych samych pieciu pytan z pamieci kompozycji.
+    var quizOpen by remember { mutableStateOf(false) }
+    var quizAttemptId by remember { mutableStateOf(0) }
 
     TownScreenScaffold(
         title = building.title(),
@@ -120,10 +127,17 @@ fun ProductionBuildingScreen(
             ) {
                 TownActionButton(
                     text = "QUIZ",
-                    subtitle = "+25% na 24h",
+                    // Dopoki bonus trwa, dzienna proba jest zuzyta - przycisk mowi wprost, kiedy
+                    // wroci, zamiast po prostu nie reagowac na dotkniecie.
+                    subtitle = if (boostActive) {
+                        "za ${formatBoostRemaining(boostRemaining)}"
+                    } else {
+                        "${ProductionQuiz.QUESTION_COUNT} pytan - do +${ProductionQuiz.MAX_BOOST_PERCENT}%"
+                    },
                     primary = true,
+                    enabled = !boostActive,
                     modifier = Modifier.weight(1f),
-                    onClick = { viewModel.applyQuizBoost(building, QUIZ_BOOST_PERCENT) }
+                    onClick = { quizOpen = true }
                 )
                 TownActionButton(
                     text = "ULEPSZ",
@@ -134,7 +148,32 @@ fun ProductionBuildingScreen(
                 )
             }
         }
+
+        if (quizOpen) {
+            ProductionQuizDialog(
+                attemptId = quizAttemptId,
+                onFinished = { _, boostPercent ->
+                    // Bonus zapisuje sie ZAWSZE, takze przy zerze - to on otwiera 24-godzinne
+                    // okno, czyli zuzywa dzienna probe (patrz ProductionQuiz).
+                    viewModel.applyQuizBoost(building, boostPercent)
+                    quizAttemptId += 1
+                    quizOpen = false
+                },
+                onDismiss = {
+                    quizAttemptId += 1
+                    quizOpen = false
+                }
+            )
+        }
     }
+}
+
+/** "23h 35m" / "48m" - to samo, co pokazuje pasek bonusu, tylko krotsze. */
+private fun formatBoostRemaining(millis: Long): String {
+    val totalMinutes = (millis / 60_000L).coerceAtLeast(0)
+    val hours = totalMinutes / 60
+    val minutes = totalMinutes % 60
+    return if (hours > 0) "${hours}h ${minutes}m" else "${minutes}m"
 }
 
 /** Wyspa budynku + licznik tego, co wlasnie "kapie" do magazynu, z wyskakujacymi "+N". */
@@ -449,18 +488,23 @@ private fun RatePanel(
 
 @Composable
 private fun BoostBadge(percent: Int, remaining: Long) {
+    // Quiz zaliczony na zero tez otwiera 24-godzinne okno (zuzywa probe), ale "+0%" na zielono
+    // czytaloby sie jak nagroda - stad osobny, przygaszony wariant plakietki.
+    val earned = percent > 0
+    val accent = if (earned) AppPalette.Success else Muted
+
     Row(
         modifier = Modifier
             .clip(RoundedCornerShape(20.dp))
-            .background(AppPalette.Success.copy(alpha = 0.18f))
-            .border(1.5.dp, AppPalette.Success, RoundedCornerShape(20.dp))
+            .background(accent.copy(alpha = 0.18f))
+            .border(1.5.dp, accent, RoundedCornerShape(20.dp))
             .padding(horizontal = 12.dp, vertical = 6.dp),
         horizontalArrangement = Arrangement.spacedBy(8.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
         Text(
-            text = "⚡ BONUS +$percent%",
-            color = AppPalette.Success,
+            text = if (earned) "⚡ BONUS +$percent%" else "BEZ BONUSU",
+            color = accent,
             fontFamily = FontPixel(),
             fontWeight = FontWeight.Bold,
             fontSize = 12.sp
@@ -474,7 +518,6 @@ private fun BoostBadge(percent: Int, remaining: Long) {
     }
 }
 
-private const val QUIZ_BOOST_PERCENT = 25
 
 private fun ProductionBuilding.title(): String = when (this) {
     ProductionBuilding.Sawmill -> "Sawmill"
