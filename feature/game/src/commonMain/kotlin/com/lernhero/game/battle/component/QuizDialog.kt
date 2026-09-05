@@ -132,14 +132,16 @@ fun LiveQuizBar(
         onContinue()
     }
 
-    // Zewnetrzny Box BEZ przyciecia - pasek streaka ma wisiec kilka px NAD zlota ramka panelu,
-    // a nie byc kolejnym rzedem w srodku. Sam "wjazd" panelu z dolu robi juz kontener sceny
-    // (BattleScreen.SceneBottomPanel) - to on plynnie podnosi gorna krawedz w rytm kurczacej sie
-    // areny; tutaj zostaje wylacznie to, co dzieje sie W SRODKU i TUZ NAD panelem.
+    // Pasek streaka ma wisiec NAD zlota ramka panelu, nad plansza walki - ale rodzic
+    // (BattleScreen.SceneBottomPanel) przycina wszystko poza wlasnymi granicami, wiec offsetu
+    // "na zewnatrz" nie da sie tu bezpiecznie uzyc (ucina sie w polowie). Zamiast tego zloty
+    // panel dostaje padding u gory - to rezerwuje miejsce na streak W GRANICACH tego samego
+    // obszaru, ktory i tak juz mamy przydzielony.
     Box(modifier = modifier.fillMaxSize()) {
         Box(
             modifier = Modifier
                 .fillMaxSize()
+                .padding(top = STREAK_ROW_GAP)
                 .clip(PanelShape)
                 .background(PanelGradient)
                 .border(3.dp, FrameGradient, PanelShape)
@@ -316,17 +318,17 @@ fun LiveQuizBar(
             }
         }
 
-        // Pasek streaka siedzi NA zlotej ramce panelu (polowa kropki nad, polowa na ramce), nie
-        // w srodku - stad osobny Box wyzej bez przyciecia. Offset celowo maly: wyzej koliduje z
-        // paskiem HUD areny (predkosc bitwy / Surrender), ktory jest tuz nad tym panelem.
+        // W miejscu zarezerwowanym przez padding(top = STREAK_ROW_GAP) na zlotym panelu wyzej -
+        // widocznie NAD panelem, nad plansza walki, bez wychodzenia poza wlasne granice.
         StreakPipRow(
             streak = state.streak,
-            modifier = Modifier
-                .align(Alignment.TopCenter)
-                .offset(y = (-7).dp)
+            modifier = Modifier.align(Alignment.TopCenter)
         )
     }
 }
+
+/** Ile miejsca u gory zlotego panelu jest zarezerwowane pod pasek streaka - patrz [LiveQuizBar]. */
+private val STREAK_ROW_GAP = 20.dp
 
 /** Litera przypisana do elementu ukladanki wedlug jego miejsca w wyswietlonej (przetasowanej) liscie - A, B, C, D... */
 private fun itemLabel(displayIndex: Int): String = ('A' + displayIndex).toString()
@@ -572,28 +574,37 @@ private fun segmentColor(index: Int): Color {
  */
 @Composable
 fun ResolvingStrip(state: BattleUiState, modifier: Modifier = Modifier) {
-    Box(
-        modifier = modifier
-            .fillMaxSize()
-            .clip(PanelShape)
-            .background(PanelGradient)
-            .border(3.dp, FrameGradient, PanelShape)
-    ) {
-        Column(
+    // Ten sam uklad "streak w zarezerwowanym miejscu nad zlotym panelem" co w LiveQuizBar -
+    // inaczej pasek streaka skakalby w inne miejsce przy kazdym przejsciu quiz <-> rozliczanie tury.
+    Box(modifier = modifier.fillMaxSize()) {
+        Box(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(horizontal = 16.dp, vertical = 10.dp),
-            verticalArrangement = Arrangement.spacedBy(6.dp)
+                .padding(top = STREAK_ROW_GAP)
+                .clip(PanelShape)
+                .background(PanelGradient)
+                .border(3.dp, FrameGradient, PanelShape)
         ) {
-            StreakPipRow(streak = state.streak)
-            Text(
-                text = state.message ?: "Exchanging blows...",
-                color = InkStrong,
-                fontFamily = FontFirst(),
-                fontWeight = FontWeight.Bold,
-                fontSize = 13.sp
-            )
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(horizontal = 16.dp, vertical = 10.dp),
+                verticalArrangement = Arrangement.spacedBy(6.dp)
+            ) {
+                Text(
+                    text = state.message ?: "Exchanging blows...",
+                    color = InkStrong,
+                    fontFamily = FontFirst(),
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 13.sp
+                )
+            }
         }
+
+        StreakPipRow(
+            streak = state.streak,
+            modifier = Modifier.align(Alignment.TopCenter)
+        )
     }
 }
 
