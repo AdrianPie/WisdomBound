@@ -92,6 +92,13 @@ private fun io.ktor.server.routing.Routing.quizGenerationRoute(generator: QuizGe
                 val result = generator.generate(
                     request.copy(count = request.count.coerceIn(QuizGenerationRequest.MIN_COUNT, QuizGenerationRequest.MAX_COUNT))
                 )
+                if (result is QuizGenerationResult.Failed) {
+                    // Endpoint zawsze zwraca 200 (bledy providera to poprawna, oczekiwana
+                    // odpowiedz domenowa, nie blad HTTP) - bez tego logu access-log Cloud Run
+                    // pokazuje "200" nawet dla timeoutu/bledu modelu, co jest myslace przy
+                    // diagnozowaniu (patrz historia commitow przy tym pliku).
+                    System.err.println("quiz/generate: model provider failed: ${result.reason}")
+                }
                 val withQuota = if (result is QuizGenerationResult.Generated) {
                     result.copy(remainingThisWeek = quota.remainingAfterThisCall)
                 } else {
