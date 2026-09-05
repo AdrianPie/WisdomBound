@@ -14,6 +14,8 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -76,26 +78,31 @@ fun CategoryPickPanel(
             modifier = Modifier.fillMaxWidth()
         )
 
-        // Dwa wiersze po dwa kafle - kazdy bierze rowna czesc wysokosci panelu, zeby siatka
-        // wygladala tak samo niezaleznie od tego, jak wysoki jest dol ekranu.
+        // Dwa wiersze po dwa kafle. Kafel niesie tylko kule zywiolu i nazwe tematu - nie ma po co
+        // rozciagac go na cala wysokosc panelu (dol ekranu w tej fazie jest tak samo wysoki jak
+        // przy quizie). Stala, kompaktowa wysokosc; siatka siedzi u gory panelu.
         offer.options.chunked(2).forEach { row ->
             Row(
-                modifier = Modifier.fillMaxWidth().weight(1f),
+                modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.spacedBy(8.dp)
             ) {
                 row.forEach { option ->
                     CategoryTile(
                         option = option,
                         onClick = { onPick(option) },
-                        modifier = Modifier.weight(1f).fillMaxSize()
+                        modifier = Modifier.weight(1f).height(CATEGORY_TILE_HEIGHT)
                     )
                 }
-                // Niepelny wiersz (gdyby kiedys bylo nieparzyscie) nie ma rozciagac ostatniego kafla.
                 repeat(2 - row.size) { Box(modifier = Modifier.weight(1f)) }
             }
         }
+
+        Spacer(modifier = Modifier.weight(1f))
     }
 }
+
+/** Kompaktowa wysokosc kafla tematu - miesci kule 40dp + nazwe, nic wiecej tam nie ma. */
+private val CATEGORY_TILE_HEIGHT = 60.dp
 
 @Composable
 private fun CategoryTile(

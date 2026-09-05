@@ -37,6 +37,13 @@ private const val BOTTOM_FRACTION_RESOLVING = 0.22f
 private const val BOTTOM_FRACTION_QUESTION = 0.68f
 
 /**
+ * Wybor tematu ([TurnPhase.CategoryPick]) dostaje WYRAZNIE mniej dolu niz quiz - to tylko siatka
+ * 2x2 niskich kafli (kula + nazwa), nie ma pod nimi zadnej tresci, wiec 0.68 zostawialo pol ekranu
+ * pustego, kremowego panelu.
+ */
+private const val BOTTOM_FRACTION_CATEGORY = 0.31f
+
+/**
  * Zdarzenie bossa dostaje WYRAZNIE mniej dolu niz zwykly quiz - cala scena dzieje sie na arenie
  * (zbliżenie bossa, iskry, licznik stawki), wiec panel z suwakiem ma jej nie zaslaniac.
  */
@@ -87,6 +94,7 @@ fun BattleScreen(
             state.phase != GamePhase.Battle -> BOTTOM_FRACTION_INTRO
             bossEvent != null && !bossQuizUp -> BOTTOM_FRACTION_RESOLVING
             bossQuizUp -> BOTTOM_FRACTION_BOSS_EVENT
+            state.turnPhase == TurnPhase.CategoryPick -> BOTTOM_FRACTION_CATEGORY
             bottomExpanded -> BOTTOM_FRACTION_QUESTION
             else -> BOTTOM_FRACTION_RESOLVING
         },
@@ -130,6 +138,7 @@ fun BattleScreen(
                 // wiec po prostu wypelnia to, co aktualnie ma do dyspozycji.
                 pinnedContentHeight = when {
                     bossQuizUp -> screenHeight * BOTTOM_FRACTION_BOSS_EVENT
+                    state.turnPhase == TurnPhase.CategoryPick -> screenHeight * BOTTOM_FRACTION_CATEGORY
                     bottomExpanded -> screenHeight * BOTTOM_FRACTION_QUESTION
                     else -> null
                 }
