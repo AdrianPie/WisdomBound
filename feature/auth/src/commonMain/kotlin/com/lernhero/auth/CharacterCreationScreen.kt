@@ -10,19 +10,16 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.IntrinsicSize
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.requiredSize
 import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -44,7 +41,6 @@ import androidx.compose.ui.unit.dp
 import com.lernhero.domain.player.HeroAppearance
 import com.lernhero.domain.player.HeroClasses
 import com.lernhero.domain.player.HeroPalette
-import com.lernhero.domain.player.HeroPreset
 import com.lernhero.domain.player.HeroPresets
 import com.lernhero.domain.player.StarterGift
 import com.lernhero.domain.player.StarterGifts
@@ -80,23 +76,24 @@ fun CharacterCreationScreen(
     val t = strings
 
     var name by remember { mutableStateOf("") }
-    var preset by remember { mutableStateOf(HeroPresets.Default) }
-    var appearance by remember { mutableStateOf(HeroPresets.appearanceOf(HeroPresets.Default)) }
+    // Jedna wersja postaci - wybor plci wroci, gdy kobieta dostanie wlasne sprite'y. Kolor wlosow
+    // tez na razie schowany (barwienie wygladalo zle) - zostaje domyslny odcien z presetu.
+    val appearanceBase = remember { HeroPresets.appearanceOf(HeroPresets.Default) }
+    var appearance by remember { mutableStateOf(appearanceBase) }
     var gift by remember { mutableStateOf(StarterGifts.Default) }
     var isSaving by remember { mutableStateOf(false) }
     var errorMessage by remember { mutableStateOf<String?>(null) }
 
+    // Ekran NIE przewija sie - HeroStage bierze [Modifier.weight], wiec cala kolumna zawsze
+    // miesci sie w jednym widoku niezaleznie od wysokosci telefonu.
     Column(
         modifier = Modifier
             .fillMaxSize()
             .background(AppPalette.ScreenGradient)
-            // Insety PRZED scrollem - inaczej tytul wjezdza pod pasek statusu, a przy dolnej
-            // krawedzi przycisk startu ląduje pod paskiem nawigacji.
             .safeDrawingPadding()
-            .verticalScroll(rememberScrollState())
-            .padding(horizontal = 20.dp, vertical = 24.dp),
+            .padding(horizontal = 20.dp, vertical = 16.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(14.dp)
+        verticalArrangement = Arrangement.spacedBy(10.dp)
     ) {
         Text(
             text = t.creationTitle,
@@ -119,20 +116,8 @@ fun CharacterCreationScreen(
             // Dar startowy jest na postaci od pierwszej sekundy gry, wiec zakladamy go juz tutaj.
             // Helm nie ma jeszcze wlasnego sprite'a (patrz Resources.PlateArmor), wiec jego
             // wybor po prostu nic nie zmienia w podgladzie - dolozenie grafiki naprawi to samo.
-            equipment = gift.previewEquipment()
-        )
-
-        // Preset - strzalki zamiast listy, bo wersji postaci ma byc kilka, a nie kilkadziesiat.
-        PresetSwitcher(
-            label = presetLabel(preset),
-            onPrevious = {
-                preset = preset.shifted(-1)
-                appearance = HeroPresets.appearanceOf(preset)
-            },
-            onNext = {
-                preset = preset.shifted(+1)
-                appearance = HeroPresets.appearanceOf(preset)
-            }
+            equipment = gift.previewEquipment(),
+            modifier = Modifier.weight(1f)
         )
 
         SwatchRow(
@@ -140,12 +125,6 @@ fun CharacterCreationScreen(
             colors = HeroPalette.SkinTones,
             selected = appearance.skinTone,
             onSelect = { appearance = appearance.copy(skinTone = it) }
-        )
-        SwatchRow(
-            label = t.creationHair,
-            colors = HeroPalette.HairColors,
-            selected = appearance.hairColor,
-            onSelect = { appearance = appearance.copy(hairColor = it) }
         )
 
         OutlinedTextField(
@@ -259,16 +238,16 @@ fun CharacterCreationScreen(
     }
 }
 
-/** Scena z bohaterem - jedyny duzy element ekranu, wszystko inne jest pod nim. */
+/** Scena z bohaterem - jedyny duzy element ekranu, bierze cala wolna wysokosc ([Modifier.weight]). */
 @Composable
 private fun HeroStage(
     appearance: HeroAppearance,
-    equipment: KnightEquipment
+    equipment: KnightEquipment,
+    modifier: Modifier = Modifier
 ) {
     Box(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxWidth()
-            .height(280.dp)
             .clip(RoundedCornerShape(18.dp))
             .background(AppPalette.CardGradient)
             .border(2.dp, AppPalette.GoldFrame, RoundedCornerShape(18.dp)),
@@ -281,49 +260,10 @@ private fun HeroStage(
             // Klikniecie w postac = zamach mieczem. Jedyna "zabawka" na tym ekranie i jedyny
             // sposob, zeby zobaczyc bohatera w ruchu przed startem gry.
             interactive = true,
-            modifier = Modifier.requiredSize(300.dp).offset(y = 14.dp)
+            // Kwadrat wpisany w scene - scena bierze zmienna wysokosc, wiec postac skaluje sie
+            // z nia, zamiast wystawac przy nizszym telefonie (dawne requiredSize(300)).
+            modifier = Modifier.fillMaxHeight().aspectRatio(1f)
         )
-    }
-}
-
-@Composable
-private fun PresetSwitcher(
-    label: String,
-    onPrevious: () -> Unit,
-    onNext: () -> Unit
-) {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clip(RoundedCornerShape(12.dp))
-            .background(AppPalette.Panel)
-            .border(1.dp, AppPalette.GoldDim, RoundedCornerShape(12.dp))
-            .padding(horizontal = 8.dp, vertical = 6.dp),
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.SpaceBetween
-    ) {
-        ArrowButton(glyph = "◀", onClick = onPrevious)
-        Text(
-            text = label,
-            color = AppPalette.Gold,
-            fontFamily = FontPixel(),
-            fontSize = FontSize.MEDIUM
-        )
-        ArrowButton(glyph = "▶", onClick = onNext)
-    }
-}
-
-@Composable
-private fun ArrowButton(glyph: String, onClick: () -> Unit) {
-    Box(
-        modifier = Modifier
-            .size(40.dp)
-            .clip(RoundedCornerShape(10.dp))
-            .background(AppPalette.Ink)
-            .clickable(onClick = onClick),
-        contentAlignment = Alignment.Center
-    ) {
-        Text(text = glyph, color = AppPalette.GoldFrame, fontSize = FontSize.EXTRA_REGULAR)
     }
 }
 
@@ -429,20 +369,6 @@ private fun GiftCard(
 }
 
 /* --------------------------------- pomocnicze --------------------------------- */
-
-/** Kolejny/poprzedni preset w kolko - lista jest krotka, wiec zawijanie jest naturalne. */
-private fun HeroPreset.shifted(by: Int): HeroPreset {
-    val all = HeroPresets.all
-    val index = all.indexOfFirst { it.id == id }.coerceAtLeast(0)
-    return all[((index + by) % all.size + all.size) % all.size]
-}
-
-/** Nazwa presetu w jezyku UI - domena trzyma samo id (patrz [HeroPreset]). */
-@Composable
-private fun presetLabel(preset: HeroPreset): String = when (preset.id) {
-    HeroPresets.Female.id -> strings.creationPresetFemale
-    else -> strings.creationPresetMale
-}
 
 /**
  * Podglad daru na postaci. Rysowanie bohatera zna tylko sloty ("cos w rece"), nie konkretne
