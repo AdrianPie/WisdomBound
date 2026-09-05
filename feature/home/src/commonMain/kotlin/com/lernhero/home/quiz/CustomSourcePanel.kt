@@ -59,7 +59,7 @@ fun CustomSourcePanel(
 
     Column(
         modifier = modifier.fillMaxWidth(),
-        verticalArrangement = Arrangement.spacedBy(10.dp)
+        verticalArrangement = Arrangement.spacedBy(6.dp)
     ) {
         DeckSectionLabel(strings.deckSourceWordsTitle)
         SourceCard(
@@ -79,13 +79,15 @@ fun CustomSourcePanel(
 
         // Wlasny, ograniczony wysokoscia kwadrat na liste talii - scrolluje sie TYLKO on, gdy
         // talii jest duzo. Reszta panelu (karta, przyciski, START) ma zostac na miejscu, zamiast
-        // calej strony trzeba bylo przewijac, zeby dojsc do START.
+        // calej strony trzeba bylo przewijac, zeby dojsc do START - a wysokosc jest scietniej
+        // dobrana, zeby caly panel (razem z dolnym paskiem nawigacji) miescil sie na ekranie bez
+        // przewijania.
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .heightIn(max = 260.dp)
+                .heightIn(max = 172.dp)
                 .verticalScroll(rememberScrollState()),
-            verticalArrangement = Arrangement.spacedBy(10.dp)
+            verticalArrangement = Arrangement.spacedBy(6.dp)
         ) {
             when {
                 loading -> Hint(strings.deckLoading)
@@ -166,27 +168,27 @@ private fun SourceCard(
                 shape = RoundedCornerShape(10.dp)
             )
             .clickable(enabled = enabled, onClick = onClick)
-            .padding(12.dp),
-        horizontalArrangement = Arrangement.spacedBy(10.dp),
+            .padding(horizontal = 10.dp, vertical = 7.dp),
+        horizontalArrangement = Arrangement.spacedBy(8.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
-        Text(text = icon, fontSize = 22.sp)
+        Text(text = icon, fontSize = 16.sp)
         Column(
             modifier = Modifier.weight(1f),
-            verticalArrangement = Arrangement.spacedBy(3.dp)
+            verticalArrangement = Arrangement.spacedBy(1.dp)
         ) {
             Text(
                 text = title,
                 color = if (enabled) DeckGold else DeckMuted,
                 fontFamily = FontPixel(),
                 fontWeight = FontWeight.Bold,
-                fontSize = 12.sp
+                fontSize = 11.sp
             )
             Text(
                 text = subtitle,
                 color = DeckMuted,
                 fontFamily = FontFirst(),
-                fontSize = 10.sp
+                fontSize = 9.sp
             )
         }
         trailing?.invoke()
@@ -221,9 +223,9 @@ private fun DeckCard(
                     .background(Color(0xFF2A2018))
                     .border(1.dp, DeckFrameDim, RoundedCornerShape(8.dp))
                     .clickable(onClick = onEdit)
-                    .padding(horizontal = 10.dp, vertical = 8.dp)
+                    .padding(horizontal = 8.dp, vertical = 6.dp)
             ) {
-                Text(text = "✎", color = DeckGold, fontSize = 14.sp)
+                Text(text = "✎", color = DeckGold, fontSize = 12.sp)
             }
         }
     )
@@ -241,6 +243,6 @@ private fun Hint(text: String) {
             .clip(RoundedCornerShape(10.dp))
             .background(DeckInk)
             .border(1.dp, DeckFrameDim.copy(alpha = 0.5f), RoundedCornerShape(10.dp))
-            .padding(12.dp)
+            .padding(10.dp)
     )
 }
