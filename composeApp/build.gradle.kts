@@ -1,7 +1,9 @@
 
+import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
-import org.jetbrains.compose.desktop.application.dsl.TargetFormat
+import java.io.FileInputStream
+import java.util.Properties
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
@@ -9,7 +11,6 @@ plugins {
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
     alias(libs.plugins.google.services)
-
 }
 
 kotlin {
@@ -21,7 +22,7 @@ kotlin {
     }
 
     jvm("desktop")
-    
+
     listOf(
         iosX64(),
         iosArm64(),
@@ -36,7 +37,7 @@ kotlin {
             export(project(":feature:reader"))
         }
     }
-    
+
     sourceSets {
         androidMain.dependencies {
             implementation(libs.compose.ui.tooling.preview)
@@ -45,12 +46,12 @@ kotlin {
             implementation(libs.koin.android)
             implementation(project.dependencies.platform(libs.google.firebase.bom))
             implementation(libs.google.firebase.common)
-
-
         }
+
         named("desktopMain").dependencies {
             implementation(compose.desktop.currentOs)
         }
+
         commonMain.dependencies {
             implementation(libs.compose.runtime)
             implementation(libs.compose.foundation)
@@ -69,18 +70,25 @@ kotlin {
             // api, nie implementation - export() w bloku framework wymaga tego dla dzialania.
             api(project(path = ":feature:reader"))
 
-            implementation(project(path = ":navigation" ))
-            implementation(project(path = ":shared" ))
-            implementation(project(path = ":domain" ))
-            implementation(project(path = ":di" ))
-            implementation(project(path = ":data" ))
-
-
+            implementation(project(path = ":navigation"))
+            implementation(project(path = ":shared"))
+            implementation(project(path = ":domain"))
+            implementation(project(path = ":di"))
+            implementation(project(path = ":data"))
         }
+
         commonTest.dependencies {
             implementation(libs.kotlin.test)
         }
     }
+}
+
+// Wczytanie danych do podpisywania aplikacji z keystore.properties
+val keystorePropertiesFile = rootProject.file("keystore.properties")
+val keystoreProperties = Properties()
+
+if (keystorePropertiesFile.exists()) {
+    keystoreProperties.load(FileInputStream(keystorePropertiesFile))
 }
 
 android {
@@ -94,16 +102,31 @@ android {
         versionCode = 1
         versionName = "1.0"
     }
+
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
+
+    signingConfigs {
+        create("release") {
+            storeFile = rootProject.file(
+                keystoreProperties["storeFile"] as String
+            )
+            storePassword = keystoreProperties["storePassword"] as String
+            keyAlias = keystoreProperties["keyAlias"] as String
+            keyPassword = keystoreProperties["keyPassword"] as String
+        }
+    }
+
     buildTypes {
         getByName("release") {
             isMinifyEnabled = false
+            signingConfig = signingConfigs.getByName("release")
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
@@ -120,7 +143,7 @@ compose.desktop {
 
         nativeDistributions {
             targetFormats(TargetFormat.Dmg)
-            packageName = "LernHero"
+            packageName = "WisdomBound"
             packageVersion = "1.0.0"
         }
     }

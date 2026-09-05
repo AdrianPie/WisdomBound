@@ -1,6 +1,9 @@
 TEAM_ID=
 
 PRODUCT_NAME=LernHero
+// Nazwa na ekranie glownym. PRODUCT_NAME i bundle id zostaja - sa
+// zarejestrowane w App Store Connect, zmiana = inna aplikacja.
+INFOPLIST_KEY_CFBundleDisplayName=WisdomBound
 PRODUCT_BUNDLE_IDENTIFIER=org.apie.lernhero.LernHero
 
 CURRENT_PROJECT_VERSION=1

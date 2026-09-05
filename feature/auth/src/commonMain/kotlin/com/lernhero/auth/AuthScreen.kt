@@ -117,7 +117,7 @@ fun AuthScreen(
             ) {
                 Image(
                     painter = painterResource(Resources.Image.logo),
-                    contentDescription = "LernHero logo"
+                    contentDescription = "WisdomBound logo"
                 )
                 Text(
                     text = t.authTagline,

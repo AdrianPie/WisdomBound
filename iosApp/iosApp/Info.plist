@@ -20,8 +20,8 @@
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
 	<key>NSHealthShareUsageDescription</key>
-	<string>LernHero czyta kroki i treningi, zeby przyznawac nagrody za aktywnosc.</string>
+	<string>WisdomBound reads your steps and workouts to reward you for activity.</string>
 	<key>NSHealthUpdateUsageDescription</key>
-	<string>LernHero nie zapisuje danych zdrowotnych - to uprawnienie zostaje niewykorzystane.</string>
+	<string>WisdomBound does not write health data - this permission stays unused.</string>
 </dict>
 </plist>

@@ -18,3 +18,6 @@ captures
 **/xcshareddata/WorkspaceSettings.xcsettings
 upload-keystore.jks
 *.jks
+
+# Podpisywanie release - NIGDY do repo
+keystore.properties

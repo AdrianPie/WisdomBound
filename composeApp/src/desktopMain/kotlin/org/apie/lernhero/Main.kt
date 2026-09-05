@@ -14,7 +14,7 @@ fun main() = application {
 
     Window(
         onCloseRequest = ::exitApplication,
-        title = "LernHero",
+        title = "WisdomBound",
         state = WindowState(width = 1280.dp, height = 800.dp)
     ) {
         MaterialTheme {
