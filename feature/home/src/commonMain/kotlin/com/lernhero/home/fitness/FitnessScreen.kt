@@ -60,6 +60,7 @@ import com.lernhero.shared.theme.FontFirst
 import com.lernhero.shared.theme.FontPixel
 import org.koin.compose.viewmodel.koinViewModel
 import kotlin.random.Random
+import com.lernhero.shared.isDebugBuild
 
 private val Panel = Color(0xFF1A1410)
 private val Ink = Color(0xFF0F0B08)
@@ -71,11 +72,11 @@ private val Green = Color(0xFF4ADE80)
 private val Locked = Color(0xFF4A4030)
 
 /**
- * Ten sam wylacznik co SHOW_DEV_TOOLS w HomeScreen.kt (osobna stala, bo to inny plik/modul) -
- * MUSI byc false przed kazdym wydaniem do sklepu. Przelacz recznie na true lokalnie, gdy testujesz
- * na emulatorze bez danych Health Connect, i wroc do false przed buildem release.
+ * Ten sam wylacznik co SHOW_DEV_TOOLS w HomeScreen.kt - oba czytaja [isDebugBuild], wiec w buildzie
+ * sklepowym gasna SAME. Wczesniej byla to reczna stala, ktora trzeba bylo pamietac zeby wlaczyc na
+ * czas testow na emulatorze bez Health Connect i wylaczyc przed wydaniem.
  */
-private const val SHOW_DEV_TOOLS = false
+private val SHOW_DEV_TOOLS: Boolean get() = isDebugBuild
 
 /**
  * Zakladka "Trening": dzisiejsza aktywnosc z zegarka/telefonu plus cele, za ktore placi sie
@@ -118,8 +119,8 @@ fun FitnessScreen(insets: PaddingValues = PaddingValues(0.dp)) {
 
             // Poza `when` nizej celowo - musi dzialac TAKZE zanim zgoda na Health Connect zostanie
             // przyznana (np. na emulatorze, ktory czesto w ogole nie potrafi przejsc tego flow).
-            // SHOW_DEV_TOOLS = ten sam wylacznik-konwencja co na Domu (HomeScreen.kt) - MUSI byc
-            // false przed kazdym wydaniem do sklepu.
+            // SHOW_DEV_TOOLS bierze sie z typu buildu (patrz isDebugBuild), wiec w release
+            // ten przycisk znika sam - nie ma czego pamietac przed wydaniem.
             if (SHOW_DEV_TOOLS) {
                 DevAddStepsButton(onClick = { viewModel.addDebugSteps(1000) })
             }

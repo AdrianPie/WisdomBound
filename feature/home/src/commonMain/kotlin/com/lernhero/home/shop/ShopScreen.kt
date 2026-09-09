@@ -2,7 +2,6 @@ package com.lernhero.home.shop
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -108,7 +107,7 @@ private fun Header(money: Int) {
     ) {
         Column {
             Text(
-                text = "SKLEP",
+                text = "SHOP",
                 color = GoldText,
                 fontFamily = FontPixel(),
                 fontWeight = FontWeight.Bold,
@@ -157,16 +156,22 @@ private fun GemPackCard(pack: GemPack) {
                     fontWeight = FontWeight.Bold,
                     fontSize = 14.sp
                 )
+                // Zaslepka "SOON", a NIE cena - i bez clickable.
+                //
+                // Kafel z "$9.99" i ramka czytalo sie jako przycisk zakupu, ktory po tapnieciu nic
+                // nie robil (clickable { }). Przy braku podpietego billingu to jest jednoczesnie
+                // najgorszy mozliwy UX i niepotrzebne ryzyko przy weryfikacji Google Play, ktore
+                // patrzy wlasnie na to, czy apka udaje sprzedaz poza ich systemem platnosci.
+                // Sama cena zostaje nizej, jako informacja w opisie pakietu.
                 Box(
                     modifier = Modifier
                         .clip(RoundedCornerShape(8.dp))
-                        .background(Color(0xFF2A3340))
-                        .border(1.dp, GemBlue.copy(alpha = 0.4f), RoundedCornerShape(8.dp))
-                        .clickable { }
+                        .background(Color(0xFF232A33))
+                        .border(1.dp, Muted.copy(alpha = 0.3f), RoundedCornerShape(8.dp))
                         .padding(horizontal = 12.dp, vertical = 6.dp)
                 ) {
                     Text(
-                        text = pack.price,
+                        text = "SOON",
                         color = Muted,
                         fontFamily = FontFirst(),
                         fontWeight = FontWeight.Bold,
@@ -176,7 +181,7 @@ private fun GemPackCard(pack: GemPack) {
             }
             Text(
                 text = buildString {
-                    append("${pack.gems} klejnotow")
+                    append("${pack.gems} gems")
                     pack.bonus?.let { append(" · $it") }
                 },
                 color = GemBlue,
@@ -184,7 +189,7 @@ private fun GemPackCard(pack: GemPack) {
                 fontSize = 12.sp
             )
             Text(
-                text = "Payments aren't live yet",
+                text = "Planned price ${pack.price} · payments are not live yet",
                 color = Muted.copy(alpha = 0.7f),
                 fontFamily = FontFirst(),
                 fontSize = 10.sp

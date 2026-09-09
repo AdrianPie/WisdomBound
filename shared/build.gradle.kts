@@ -64,6 +64,12 @@ android {
     namespace = "org.apie.shared"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
+    // Potrzebne dla BuildConfig.DEBUG, z ktorego czyta isDebugBuild (BuildInfo.android.kt) -
+    // to on gasi narzedzia deweloperskie w buildzie sklepowym.
+    buildFeatures {
+        buildConfig = true
+    }
+
     defaultConfig {
         minSdk = libs.versions.android.minSdk.get().toInt()
     }

@@ -57,6 +57,7 @@ import com.lernhero.shared.theme.FontFirst
 import com.lernhero.shared.theme.FontPixel
 import androidx.compose.material3.Text
 import org.jetbrains.compose.resources.painterResource
+import com.lernhero.shared.isDebugBuild
 
 private val Muted = AppPalette.TextMuted
 
@@ -67,7 +68,7 @@ private val Muted = AppPalette.TextMuted
  * flaga per-platform (BuildConfig.DEBUG na Androidzie i jej odpowiednik na iOS/desktop), ale to
  * jedna linijka wystarcza, zeby nie wypuscic przycisku "darmowe zloto" do sklepu.
  */
-private const val SHOW_DEV_TOOLS = false
+private val SHOW_DEV_TOOLS: Boolean get() = isDebugBuild
 
 /**
  * Jak szeroka (wzgledem szerokosci ekranu) jest jedna wyspa - praktycznie caly ekran.
@@ -146,10 +147,13 @@ fun HomeScreen(
                 onOpenSummonCenter = onOpenSummonCenter
             )
 
-            // Za flaga: "dev: +zasoby" doklada 50k zlota jednym tapnieciem, wiec w buildzie
-            // sklepowym ten caly rzad MUSI byc wylaczony - inaczej kazdy gracz ma darmowy cheat
-            // bez zadnego hackowania, samym interfejsem. Firestore Security Rules i tak by to
+            // Za flaga: "dev: +zasoby" doklada pelen worek surowcow jednym tapnieciem, wiec w
+            // buildzie sklepowym ten caly rzad musi byc wylaczony - inaczej kazdy gracz ma darmowy
+            // cheat bez zadnego hackowania, samym interfejsem. Firestore Security Rules i tak by to
             // przycielo (limit delty na zapis), ale nie ma po co w ogole pokazywac przycisku.
+            //
+            // Warunek czyta TYP BUILDU (isDebugBuild), a nie reczna stala - to bylo jedyne, co
+            // stalo miedzy release'em a widocznym cheatem, i opieralo sie na pamieci czlowieka.
             if (SHOW_DEV_TOOLS) {
                 DevLinksRow(
                     onOpenKnightPreview = onOpenKnightPreview,
