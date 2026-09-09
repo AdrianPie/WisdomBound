@@ -28,6 +28,10 @@ mapie i prawdziwa walka za "WALCZ" zawsze pokazuja to samo.
 Kierunek zaleznosci jest jednostronny: `feature -> domain -> (nic)`. Gdy `:domain` zaczyna
 potrzebowac Compose, to znak, ze cos wyladowalo w zlym module.
 
+`:domain` naprawde nie zalezy od NICZEGO - takze od `:shared`. Stala tam kiedys taka zaleznosc,
+ktorej nic nie uzywalo, a ktora blokowala cyklem poprawny kierunek `:shared -> :domain`
+(potrzebny, zeby warstwa platformy mogla czytac modele domeny - patrz powiadomienia nizej).
+
 ## :domain
 
 ```
@@ -50,7 +54,10 @@ craft/           koszty wytwarzania: Kuznia (przedmioty za rude) i Summon Center
                  zaklecia za esencje). Receptura liczy sie z rzadkosci przedmiotu, wiec nowy miecz
                  w katalogu OD RAZU ma swoja recepture - nic tu nie trzeba dopisywac
 progress/        liczniki konta (GameStats/RunStats) i osiagniecia. Osiagniecie NIE ma wlasnego
-                 stanu - postep liczy sie w locie z GameStats, wiec nie da sie go rozjechac
+                 stanu - postep liczy sie w locie z GameStats, wiec nie da sie go rozjechac.
+                 Jedyne, co sie zapisuje, to fakt ODBIORU nagrody (Player.claimedAchievements);
+                 sama kwota siedzi na STOPNIU (AchievementTier.reward), wiec nowy cel w katalogu
+                 nie wymaga wymyslania mu ceny i nie da sie dodac takiego, ktory placi zero
 monster/         karty kompanow i cala ekonomia kolekcji
   MonsterCard        dane karty + spellIds (zaklecia kompana)
   MonsterLevels      poziomy za ZLOTO. MAX_LEVEL to sufit absolutny; realny limit daja gwiazdki
@@ -79,14 +86,24 @@ story/           kampania: StoryWorld (kraina) + StoryStage (jedna plansza, licz
   CampaignSelection  gdzie gracz "stoi" (kraina + tier + wybrana plansza). Koin singleton, bo
                      ten wybor musi przezyc przejscie zakladka <-> ekran Mapy
   IdleRewards        nagrody kapiace offline (przycisk GET). Bezstanowa matematyka z roznicy
-                     czasu, tak samo jak town/ProductionMath; sufit CAP_HOURS
+                     czasu, tak samo jak produkcja w miescie (town/); sufit CAP_HOURS
   StageLoot          jawna pula lupu planszy (przycisk LOOT) - rzadsze przedmioty wchodza do
-                     puli dopiero glebiej i na wyzszych tierach
+                     puli dopiero glebiej i na wyzszych tierach. DWIE polowy: itemPool/dropChance
+                     pokazuja graczowi, po co tu bije, a roll() faktycznie oddaje przedmiot po
+                     wygranej. Przez dluzszy czas istniala tylko pierwsza - gra obiecywala lup
+                     i nie dawala go nigdy. Lup jedzie na konto w RunStats.droppedItemIds, razem
+                     z reszta wyniku, bo rozliczenie zejscia jest JEDNYM zapisem
 player/          Player, PlayerEquipment, klasy postaci, PlayerProgress (poziom/XP/statystyki
                  rozdawane po awansie - LevelCurve to cala krzywa progresji)
 common/          Rarity - dzielona przez przedmioty i potwory
 repository/      interfejsy repozytoriow (implementacje sa w :data)
 fitness/         modele trackera fitness (dzienny snapshot, cele, katalog celi)
+notification/    CO i KIEDY przypomniec - ReminderPlan liczy plan z zapisanego stanu gracza i
+                 nie trzyma wlasnego (ta sama sztuczka co IdleRewards: wszystko z roznicy czasu,
+                 wiec przeliczenie przy kazdym wejsciu do gry jest darmowe i nie da sie go
+                 rozjechac). JAK - czyli kanaly, uprawnienia i harmonogram systemowy - siedzi w
+                 shared/notification. Powody sa DOKLADNIE trzy i kazdy niesie konkret; powiadomienie
+                 bez tresci uczy gracza zmiatac je bez czytania, a potem wylaczac wszystkie
 reading/         modele czytnika (Book, BookContent, ReaderSettings, ReadingGoal, ReadingStats,
                  TextStats, PlainTextParser). BookContent jest niezalezny od formatu - parser
                  TXT/EPUB produkuje ten sam model, a strony NIE istnieja w domenie: powstaja
@@ -208,6 +225,32 @@ ReadingClock  zegar aktywnego czytania, wspolny dla obu trybow. AFK-guard: przew
 Postep w ksiazce zapisujemy jako **pozycje w tekscie**, nie numer strony (`ReadingAnchor`) -
 przy innym rozmiarze czcionki "strona 42" wskazuje zupelnie inny fragment.
 
+## :shared - powiadomienia
+
+```
+notification/
+  ReminderScheduler       expect/actual. Kontrakt jest NADPISUJACY: schedule() dostaje CALY plan
+                          i zastepuje nim kolejke. Kazde przypomnienie ma staly klucz
+                          (ReminderKind.id), wiec dziesiec wejsc do gry daje jedno powiadomienie,
+                          a nie dziesiec
+  .android                WorkManager - NIE AlarmManager: od Androida 12 dokladne alarmy wymagaja
+                          osobnego uprawnienia, a "magazyn sie zapelnil" nie potrzebuje precyzji
+                          co do sekundy. W zamian zadanie przezywa restart telefonu
+  .ios                    UNTimeIntervalNotificationTrigger - sekundy od teraz, ten sam model
+                          czasu co setInitialDelay po drugiej stronie
+  .desktop                ReminderScheduler.None - swiadomy brak, nie luka
+  nextLocalHourMillis     "najblizsza 20:00 czasu LOKALNEGO". Osobne expect/actual, bo wymaga
+                          kalendarza i strefy czasowej - dokladnie tego, czego ReminderPlan
+                          celowo nie zna. Domena dostaje gotowa liczbe
+  requestNotificationAccess  prosba o zgode. Wolana WYLACZNIE z Ustawien, po tapnieciu w przycisk,
+                          nigdy przy starcie gry - zgoda wyproszona w pierwszej sekundzie, bez
+                          kontekstu, to najkrotsza droga do odmowy na zawsze
+```
+
+`isDebugBuild` (shared/BuildInfo.kt) tez jest expect/actual: to on gasi narzedzia deweloperskie
+w buildzie sklepowym. Wczesniej robily to reczne stale `SHOW_DEV_TOOLS` w dwoch plikach i jedyne,
+co stalo miedzy release'em a widocznym przyciskiem "dev: +zasoby", to pamiec czlowieka.
+
 ## Gdzie sa granice grafiki
 
 Domena nie zna obrazkow. Przedmiot niesie `iconKey: String`, potwor `spriteKey`, pytanie o flage
@@ -222,11 +265,15 @@ kod kraju - a warstwa UI zamienia te teksty na zasoby w **jednym pliku**:
 
 ## Testy
 
-`:domain` jest testowany, bo tam mieszka logika. 90 testow pilnuje generatora mapy, silnika walki
+`:domain` jest testowany, bo tam mieszka logika. Testy pilnuja generatora mapy, silnika walki
 (efekty naprawde dzialaja w symulacji), migracji ekwipunku, systemu umiejetnosci, banku pytan,
 zdarzen w lochu, kola fortuny, krzywej awansu, statystyk konta, kosztow wytwarzania, walidacji
-i losowania wlasnych talii oraz parsera odpowiedzi modelu (ten ostatni to jedyny sposob, zeby
-generowanie AI dalo sie sprawdzic, zanim jakikolwiek model zostanie podpiety).
+i losowania wlasnych talii, parsera odpowiedzi modelu (ten ostatni to jedyny sposob, zeby
+generowanie AI dalo sie sprawdzic, zanim jakikolwiek model zostanie podpiety), losowania lupu
+planszy oraz planu przypomnien.
+
+Ten ostatni jest testowany glownie od strony sytuacji, w ktorych plan ma byc PUSTY - bo to one
+decyduja, czy gracz zostawi powiadomienia wlaczone.
 
 Warstwa UI nie ma testow - i to jest swiadome. Skoro walka rozstrzyga sie w domenie, to test
 domeny sprawdza mechanike, a ekran zostaje tylko odtwarzaczem.
