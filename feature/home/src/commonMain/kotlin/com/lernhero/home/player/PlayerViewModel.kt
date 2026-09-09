@@ -369,7 +369,7 @@ class PlayerViewModel(
         val state = _uiState.value
         val item = instance.resolve()
         if (item == null || Inventory.byUid(state.heroBag, instance.uid) == null) {
-            _uiState.update { it.copy(message = "Najpierw wykuj ten przedmiot w Kuzni.") }
+            _uiState.update { it.copy(message = "Forge this item first.") }
             return
         }
         persistEquipment(state.equipment.equip(instance, item.slot))
@@ -508,7 +508,7 @@ class PlayerViewModel(
         // Zadnej blokady "juz to masz": kazde wykucie daje NOWA SZTUKE. To po to sa egzemplarze -
         // dziesieciu kompanow moze nosic ten sam typ pazura, jesli wykujesz dziesiec sztuk.
         if (!cost.canAfford(state.resources, state.money)) {
-            _uiState.update { it.copy(message = "Brakuje materialow na ten przedmiot.") }
+            _uiState.update { it.copy(message = "Not enough materials for this item.") }
             return
         }
 
@@ -524,7 +524,7 @@ class PlayerViewModel(
                         heroBag = updated.heroBag(),
                         monsterBag = updated.monsterBag(),
                         stats = updated.stats,
-                        message = "Wykuto: ${item.name}"
+                        message = "Forged: ${item.name}"
                     )
                 }
             }
@@ -544,7 +544,7 @@ class PlayerViewModel(
             ?: Inventory.byUid(state.monsterBag, instance.uid)
         val item = owned?.base()
         if (owned == null || item == null) {
-            _uiState.update { it.copy(message = "Najpierw trzeba wykuc ten przedmiot.") }
+            _uiState.update { it.copy(message = "You have to forge this item first.") }
             return
         }
         val cost = ItemUpgrades.nextCost(item, owned.level)
@@ -553,7 +553,7 @@ class PlayerViewModel(
             return
         }
         if (!cost.canAfford(state.resources, state.money)) {
-            _uiState.update { it.copy(message = "Brakuje skladnikow na ulepszenie.") }
+            _uiState.update { it.copy(message = "Not enough materials for this upgrade.") }
             return
         }
 
@@ -585,7 +585,7 @@ class PlayerViewModel(
         if (cards.isEmpty()) return
         val state = _uiState.value
         if (!cost.canAfford(state.resources, state.money)) {
-            _uiState.update { it.copy(message = "Brakuje losow albo esencji.") }
+            _uiState.update { it.copy(message = "Not enough tickets or essence.") }
             return
         }
 
@@ -626,7 +626,7 @@ class PlayerViewModel(
                         ownedMonsters = updated.ownedMonsters,
                         freeSummonClaims = updated.freeSummonClaims,
                         stats = updated.stats,
-                        message = "Darmowy summon: ${card.name}"
+                        message = "Free summon: ${card.name}"
                     )
                 }
             }
@@ -669,7 +669,7 @@ class PlayerViewModel(
      */
     fun ascendMonster(monster: OwnedMonster) {
         if (monster.maxStars) {
-            _uiState.update { it.copy(message = "${monster.card.name} ma juz maksymalne gwiazdki.") }
+            _uiState.update { it.copy(message = "${monster.card.name} is already at max stars.") }
             return
         }
         if (!monster.canAscend) {
@@ -689,7 +689,7 @@ class PlayerViewModel(
                     current.copy(
                         ownedMonsters = updated.ownedMonsters,
                         monsterStars = updated.monsterStars,
-                        message = "${monster.card.name} awansuje na $stars★! Nowy sufit: " +
+                        message = "${monster.card.name} ascends to $stars★! New level cap: " +
                             "${MonsterStars.levelCapFor(stars)}"
                     )
                 }
@@ -721,7 +721,7 @@ class PlayerViewModel(
                     current.copy(
                         ownedMonsters = updated.ownedMonsters,
                         resources = updated.townResources,
-                        message = "Rozpuszczono kopie: +${monster.dissolveValue} esencji"
+                        message = "Copy dissolved: +${monster.dissolveValue} essence"
                     )
                 }
             }
@@ -804,7 +804,7 @@ class PlayerViewModel(
                 it.copy(
                     talentRanks = updated.talentRanks,
                     progress = updated.progress,
-                    message = "Drzewko wyzerowane - punkty wrocily."
+                    message = "Talent tree reset - your points are back."
                 )
             }
         }
@@ -928,7 +928,7 @@ class PlayerViewModel(
             val updated = playerRepository.grantItem(item.id)
             if (updated != null) {
                 _uiState.update {
-                    it.copy(heroBag = updated.heroBag(), message = "Zdobyto: ${item.name}")
+                    it.copy(heroBag = updated.heroBag(), message = "Obtained: ${item.name}")
                 }
                 return@launch
             }
@@ -976,7 +976,7 @@ class PlayerViewModel(
                     money = updated.money,
                     progress = updated.progress,
                     resources = updated.townResources,
-                    message = "DEV: dosypano zasobow"
+                    message = "DEV: resources granted"
                 )
             }
         }

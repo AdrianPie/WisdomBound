@@ -137,7 +137,7 @@ fun BattleSummaryScreen(
             }
 
             Text(
-                text = "WROC",
+                text = "BACK",
                 color = GoldText,
                 fontFamily = FontPixel(),
                 fontWeight = FontWeight.Bold,
@@ -164,7 +164,7 @@ private fun Header(won: Boolean, accent: Color, wave: Int, endless: Boolean) {
     ) {
         Text(text = if (won) "🏆" else "💀", fontSize = 44.sp)
         Text(
-            text = if (won) "ZWYCIESTWO" else "KONIEC WYPRAWY",
+            text = if (won) "VICTORY" else "RUN OVER",
             color = accent,
             fontFamily = FontPixel(),
             fontWeight = FontWeight.Bold,
@@ -197,7 +197,7 @@ private fun LevelUpBanner(levels: Int) {
         Text(text = "⭐", fontSize = 24.sp)
         Column {
             Text(
-                text = if (levels > 1) "AWANS x$levels!" else "AWANS!",
+                text = if (levels > 1) "LEVEL UP x$levels!" else "LEVEL UP!",
                 color = GoldText,
                 fontFamily = FontPixel(),
                 fontWeight = FontWeight.Bold,
