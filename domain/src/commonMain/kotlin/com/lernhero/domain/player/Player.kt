@@ -104,6 +104,14 @@ data class Player(
      * data przestaje byc dzisiejsza. Oba systemy nagrod dziela ta sama mape.
      */
     val dailyGoalClaims: Map<String, String> = emptyMap(),
+    /**
+     * Id osiagniec, za ktore ODEBRANO juz nagrode (patrz [com.lernhero.domain.progress.Achievement]).
+     *
+     * To jedyny stan, jaki osiagniecia w ogole zapisuja - sam postep liczy sie w locie z
+     * [GameStats], wiec nie da sie go rozjechac, a dopisanie nowego celu dziala wstecz. Lista,
+     * nie Set, bo tak leci do Firestore; kod czytajacy zamienia ja na Set.
+     */
+    val claimedAchievements: List<String> = emptyList(),
     /** Sumaryczne statystyki czytania - licza sie od poczatku, nie resetuja sie codziennie. */
     val readingStats: ReadingStats = ReadingStats(),
     /** Aktywne czytanie z dzisiaj - reset nastepuje, gdy [ReadingDayProgress.dateKey] przestaje byc dzisiejszy. */

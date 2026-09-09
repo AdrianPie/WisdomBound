@@ -93,7 +93,11 @@ fun ProgressScreen(viewModel: PlayerViewModel) {
         ) {
             when (tab) {
                 ProgressTab.Stats -> StatsTab(stats = state.stats)
-                ProgressTab.Achievements -> AchievementsTab(stats = state.stats)
+                ProgressTab.Achievements -> AchievementsTab(
+                    stats = state.stats,
+                    claimed = state.claimedAchievements,
+                    onClaim = viewModel::claimAchievement
+                )
                 ProgressTab.Reading -> ReadingGoalsPanel()
             }
         }
@@ -358,15 +362,32 @@ private fun CategoryBar(label: String, correct: Int, answered: Int, accuracy: Fl
 // ---------------------------------------------------------- Osiagniecia
 
 @Composable
-private fun AchievementsTab(stats: GameStats) {
+private fun AchievementsTab(
+    stats: GameStats,
+    claimed: Set<String>,
+    onClaim: (Achievement) -> Unit
+) {
     val unlocked = remember(stats) { AchievementCatalog.unlockedCount(stats) }
     val total = AchievementCatalog.all.size
+    val pendingGold = remember(stats, claimed) { AchievementCatalog.claimableGold(stats, claimed) }
 
     Panel(title = "UNLOCKED") {
         BigNumberRow(
             left = "$unlocked/$total" to "Achievements",
             right = "${(unlocked * 100 / total.coerceAtLeast(1))}%" to "Completion"
         )
+        // Nieodebrane zloto stoi NA GORZE listy, a nie przy poszczegolnych wpisach - inaczej
+        // gracz musialby przewinac caly ekran, zeby w ogole zauwazyc, ze cos mu sie nalezy.
+        if (pendingGold > 0) {
+            Text(
+                text = "\uD83D\uDCB0 $pendingGold gold waiting to be claimed",
+                color = GoldText,
+                fontFamily = FontFirst(),
+                fontWeight = FontWeight.Bold,
+                fontSize = 12.sp,
+                modifier = Modifier.fillMaxWidth().padding(top = 6.dp)
+            )
+        }
     }
 
     AchievementGroup.entries.forEach { group ->
@@ -374,15 +395,26 @@ private fun AchievementsTab(stats: GameStats) {
         if (items.isEmpty()) return@forEach
         Panel(title = group.label.uppercase()) {
             items.forEach { achievement ->
-                AchievementRow(achievement = achievement, stats = stats)
+                AchievementRow(
+                    achievement = achievement,
+                    stats = stats,
+                    claimed = achievement.id in claimed,
+                    onClaim = { onClaim(achievement) }
+                )
             }
         }
     }
 }
 
 @Composable
-private fun AchievementRow(achievement: Achievement, stats: GameStats) {
+private fun AchievementRow(
+    achievement: Achievement,
+    stats: GameStats,
+    claimed: Boolean,
+    onClaim: () -> Unit
+) {
     val unlocked = achievement.isUnlocked(stats)
+    val claimable = unlocked && !claimed
     val fraction = achievement.fraction(stats)
     val tierColor = when (achievement.tier) {
         AchievementTier.Bronze -> Color(0xFFB87333)
@@ -440,13 +472,29 @@ private fun AchievementRow(achievement: Achievement, stats: GameStats) {
                 }
             }
         }
-        Text(
-            text = if (unlocked) "✓" else "${achievement.progress(stats)}/${achievement.target}",
-            color = if (unlocked) Good else Muted,
-            fontFamily = FontFirst(),
-            fontWeight = FontWeight.Bold,
-            fontSize = 11.sp
-        )
+        // Prawa krawedz wiersza ma trzy stany: postep -> przycisk ODBIERZ -> ptaszek.
+        // Przycisk pojawia sie tylko przy [claimable], a i tak ostatnie slowo ma repozytorium.
+        when {
+            claimable -> Text(
+                text = "CLAIM +${achievement.reward}",
+                color = Color(0xFF120C08),
+                fontFamily = FontFirst(),
+                fontWeight = FontWeight.Bold,
+                fontSize = 10.sp,
+                modifier = Modifier
+                    .clip(RoundedCornerShape(8.dp))
+                    .background(GoldText)
+                    .clickable(onClick = onClaim)
+                    .padding(horizontal = 10.dp, vertical = 6.dp)
+            )
+            else -> Text(
+                text = if (unlocked) "✓" else "${achievement.progress(stats)}/${achievement.target}",
+                color = if (unlocked) Good else Muted,
+                fontFamily = FontFirst(),
+                fontWeight = FontWeight.Bold,
+                fontSize = 11.sp
+            )
+        }
     }
 }
 

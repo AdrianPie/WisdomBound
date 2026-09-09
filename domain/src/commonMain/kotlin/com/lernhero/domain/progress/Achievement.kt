@@ -11,11 +11,17 @@ enum class AchievementGroup(val label: String) {
     Wealth("Wealth")
 }
 
-/** Stopien trudnosci - ten sam pomysl co rzadkosc lupu, tylko dla celow. */
-enum class AchievementTier(val label: String) {
-    Bronze("Bronze"),
-    Silver("Silver"),
-    Gold("Gold")
+/**
+ * Stopien trudnosci - ten sam pomysl co rzadkosc lupu, tylko dla celow.
+ *
+ * [reward] to zloto za odebranie osiagniecia tego stopnia. Nagroda siedzi na STOPNIU, a nie na
+ * pojedynczym osiagnieciu, celowo: dopisanie nowego celu do katalogu nie wymaga wtedy wymyslania
+ * mu kwoty i nie da sie przez przeoczenie dodac celu, ktory placi zero albo dziesiec razy za duzo.
+ */
+enum class AchievementTier(val label: String, val reward: Int) {
+    Bronze("Bronze", 250),
+    Silver("Silver", 1_000),
+    Gold("Gold", 4_000)
 }
 
 /**
@@ -36,6 +42,17 @@ data class Achievement(
     fun isUnlocked(stats: GameStats): Boolean = progressOf(stats) >= target
     fun fraction(stats: GameStats): Float =
         if (target <= 0) 1f else (progressOf(stats).toFloat() / target).coerceIn(0f, 1f)
+
+    /** Zloto za odebranie - bierze sie ze stopnia, patrz [AchievementTier.reward]. */
+    val reward: Int get() = tier.reward
+
+    /**
+     * Czy jest co odebrac: zdobyte, ale jeszcze nieodebrane. Osiagniecie samo nie trzyma stanu
+     * (postep liczy sie z [GameStats]), wiec JEDYNE, co trzeba zapisac, to fakt odbioru nagrody -
+     * stad [claimed] z zewnatrz zamiast pola w tej klasie.
+     */
+    fun isClaimable(stats: GameStats, claimed: Set<String>): Boolean =
+        isUnlocked(stats) && id !in claimed
 }
 
 /**
@@ -231,6 +248,16 @@ object AchievementCatalog {
     fun byGroup(group: AchievementGroup): List<Achievement> = all.filter { it.group == group }
 
     fun unlockedCount(stats: GameStats): Int = all.count { it.isUnlocked(stats) }
+
+    fun byId(id: String): Achievement? = all.firstOrNull { it.id == id }
+
+    /** Ile osiagniec czeka na odbior - z tego bierze sie kropka na zakladce Postep. */
+    fun claimableCount(stats: GameStats, claimed: Set<String>): Int =
+        all.count { it.isClaimable(stats, claimed) }
+
+    /** Ile zlota lezy nieodebrane - pokazywane nad lista, zeby bylo widac po co tam wchodzic. */
+    fun claimableGold(stats: GameStats, claimed: Set<String>): Int =
+        all.filter { it.isClaimable(stats, claimed) }.sumOf { it.reward }
 
     /** Najblizsze do zdobycia - to one trafiaja na gore ekranu jako "jeszcze troche". */
     fun nextUp(stats: GameStats, limit: Int = 3): List<Achievement> =

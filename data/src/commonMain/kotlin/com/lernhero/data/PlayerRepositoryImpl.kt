@@ -25,6 +25,7 @@ import com.lernhero.domain.talent.TalentRules
 import com.lernhero.domain.player.Player
 import com.lernhero.domain.player.PlayerEquipment
 import com.lernhero.domain.player.StarterGift
+import com.lernhero.domain.progress.AchievementCatalog
 import com.lernhero.domain.progress.RunStats
 import com.lernhero.domain.quiz.custom.CustomDeck
 import com.lernhero.domain.story.IdleRewards
@@ -313,6 +314,27 @@ class PlayerRepositoryImpl: PlayerRepository {
                     essence = run.essence,
                     tickets = run.summonTickets
                 )
+            )
+            document.set(updated)
+            updated
+        } catch (e: Exception) {
+            null
+        }
+    }
+
+    override suspend fun claimAchievement(achievementId: String): Player? {
+        return try {
+            val document = playerDocument() ?: return null
+            val player = getPlayer() ?: return null
+
+            val achievement = AchievementCatalog.byId(achievementId) ?: return null
+            // Bramka jest TUTAJ, nie w UI: ekran tylko chowa przycisk. Liczymy z zapisanych
+            // statystyk, wiec dwa szybkie tapniecia daja jedna wyplate, a nie dwie.
+            if (!achievement.isClaimable(player.stats, player.claimedAchievements.toSet())) return null
+
+            val updated = player.copy(
+                money = player.money + achievement.reward,
+                claimedAchievements = player.claimedAchievements + achievementId
             )
             document.set(updated)
             updated

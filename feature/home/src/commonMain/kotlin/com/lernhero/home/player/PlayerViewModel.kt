@@ -39,6 +39,7 @@ import com.lernhero.domain.run.RunDifficulty
 import com.lernhero.domain.story.StoryProgress
 import com.lernhero.domain.player.AdminAccounts
 import com.lernhero.domain.player.PartySlots
+import com.lernhero.domain.progress.Achievement
 import com.lernhero.domain.progress.GameStats
 import com.lernhero.domain.progress.RunStats
 import com.lernhero.domain.reading.SavedWord
@@ -142,6 +143,11 @@ data class PlayerUiState(
     val progress: PlayerProgress = PlayerProgress(),
     /** Liczniki calego konta - z nich licza sie statystyki i osiagniecia. */
     val stats: GameStats = GameStats(),
+    /**
+     * Id osiagniec, za ktore odebrano juz nagrode. Razem ze [stats] wystarcza, zeby ekran
+     * Postepu wiedzial, co jest do odebrania - patrz [Achievement.isClaimable].
+     */
+    val claimedAchievements: Set<String> = emptySet(),
     /** Surowce miasta - potrzebne tu, bo Kuznia i Summon Center placa nimi, nie zlotem. */
     val resources: TownResources = TownResources(),
     /** Fiszki zapisane w czytniku - surowiec pod endless "Wlasne" (patrz [com.lernhero.domain.quiz.WordQuizBank]). */
@@ -312,6 +318,7 @@ class PlayerViewModel(
                         idleCollectedAt = player.idleCollectedAt,
                         progress = player.progress,
                         stats = player.stats,
+                        claimedAchievements = player.claimedAchievements.toSet(),
                         resources = player.townResources,
                         savedWords = player.savedWords
                     )
@@ -854,6 +861,24 @@ class PlayerViewModel(
             val newBalance = playerRepository.addMoney(amount)
             _uiState.update { current ->
                 if (newBalance == null) current else current.copy(money = newBalance, message = label)
+            }
+        }
+    }
+
+    /**
+     * Odbiera nagrode za zdobyte osiagniecie. Czy wolno - decyduje repozytorium (liczy z
+     * zapisanych statystyk), wiec tapniecie w przycisk, ktory akurat nie powinien byc aktywny,
+     * po prostu nic nie robi zamiast wyplacac drugi raz.
+     */
+    fun claimAchievement(achievement: Achievement) {
+        viewModelScope.launch(Dispatchers.IO) {
+            val updated = playerRepository.claimAchievement(achievement.id) ?: return@launch
+            _uiState.update {
+                it.copy(
+                    money = updated.money,
+                    claimedAchievements = updated.claimedAchievements.toSet(),
+                    message = "${achievement.title}: +${achievement.reward} gold"
+                )
             }
         }
     }

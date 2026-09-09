@@ -114,6 +114,18 @@ interface PlayerRepository {
      */
     suspend fun applyRunResult(run: RunStats): Player?
 
+    /**
+     * Odbiera nagrode za zdobyte osiagniecie: dopisuje zloto i stempluje id jako odebrane.
+     *
+     * Warunek "zdobyte i jeszcze nieodebrane" sprawdza REPOZYTORIUM, a nie ekran - liczy go z
+     * zapisanych [com.lernhero.domain.progress.GameStats], wiec dwa szybkie tapniecia nie zaplaca
+     * dwa razy, i nie da sie odebrac nagrody za cel, do ktorego gracz nie doszedl. Kwota tez
+     * pochodzi z katalogu, a nie z UI - inaczej ekran moglby zazadac dowolnej.
+     *
+     * Zwraca null, gdy nagrody nie wolno wyplacic (nieznane id, cel nieosiagniety, juz odebrane).
+     */
+    suspend fun claimAchievement(achievementId: String): Player?
+
     /** Rozdaje jeden punkt statystyki. Zwraca null, gdy nie ma nierozdanych punktow. */
     suspend fun spendStatPoint(stat: HeroStat): Player?
 
