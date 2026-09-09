@@ -3,6 +3,7 @@ package com.lernhero.game.battle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.lernhero.domain.combat.StatType
+import com.lernhero.domain.story.StageLoot
 import com.lernhero.domain.story.StoryWorldCatalog
 import com.lernhero.shared.resources.Resources
 import com.lernhero.domain.combat.live.AnswerTimer
@@ -1994,11 +1995,26 @@ class BattleViewModel(
         runTally.recordBossBonus(request.kind, runSession.activeStoryStage ?: 1)
         val banked = runSession.settleLoot(VICTORY_LOOT_FRACTION)
 
+        // Lup rzeczowy - to samo losowanie, ktore przycisk LOOT zapowiada graczowi przed walka
+        // (patrz [StageLoot.roll]). Tylko kampania: w endless nie ma planszy, z ktorej pula
+        // mialaby sie wziac, a jego wlasna nagroda to stakujace sie bonusy fal.
+        val storyStage = runSession.activeStoryStage
+        val dropped = if (!request.isEndless && storyStage != null) {
+            StageLoot.roll(
+                globalStage = storyStage,
+                tier = runSession.difficulty,
+                isBoss = request.kind == BattleKind.Boss
+            )
+        } else {
+            null
+        }
+
         val summary = runTally.toRunStats(
             won = true,
             endless = request.isEndless,
             gold = banked,
-            bossDefeated = request.kind == BattleKind.Boss
+            bossDefeated = request.kind == BattleKind.Boss,
+            droppedItemIds = listOfNotNull(dropped?.id)
         )
         submitRunResult(summary)
 
@@ -2007,7 +2023,12 @@ class BattleViewModel(
             rewardCoins = banked,
             rewardSaved = true,
             runSummary = summary,
-            message = "Battle won! You claim all the loot - $banked coins."
+            droppedItem = dropped,
+            message = if (dropped != null) {
+                "Battle won! $banked coins - and ${dropped.name} dropped."
+            } else {
+                "Battle won! You claim all the loot - $banked coins."
+            }
         )
     }
 
@@ -2648,7 +2669,13 @@ private class RunTally {
         xp += bonus.xp
     }
 
-    fun toRunStats(won: Boolean, endless: Boolean, gold: Int, bossDefeated: Boolean): RunStats = RunStats(
+    fun toRunStats(
+        won: Boolean,
+        endless: Boolean,
+        gold: Int,
+        bossDefeated: Boolean,
+        droppedItemIds: List<String> = emptyList()
+    ): RunStats = RunStats(
         won = won,
         endless = endless,
         wavesCleared = wavesCleared,
@@ -2666,7 +2693,8 @@ private class RunTally {
         iron = iron,
         essence = essence,
         wood = wood,
-        stone = stone
+        stone = stone,
+        droppedItemIds = droppedItemIds
     )
 }
 

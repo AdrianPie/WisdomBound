@@ -36,6 +36,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.lernhero.domain.common.Rarity
+import com.lernhero.domain.item.Item
 import com.lernhero.domain.progress.RunStats
 import com.lernhero.game.battle.BattleUiState
 import com.lernhero.game.battle.GamePhase
@@ -103,6 +105,11 @@ fun BattleSummaryScreen(
             if (state.levelsGained > 0) {
                 LevelUpBanner(levels = state.levelsGained)
             }
+
+            // Lup rzeczowy dostaje WLASNY baner, a nie kolejny wiersz w tabelce - wypada rzadko
+            // (patrz [StageLoot.dropChance]) i ma byc widoczny jako wydarzenie, nie jako liczba
+            // obok rudy.
+            state.droppedItem?.let { item -> LootBanner(item = item) }
 
             Column(
                 modifier = Modifier
@@ -198,6 +205,57 @@ private fun LevelUpBanner(levels: Int) {
             )
             Text(
                 text = "You have new stat points to spend in the Progress tab.",
+                color = Cream,
+                fontFamily = FontFirst(),
+                fontSize = 11.sp
+            )
+        }
+    }
+}
+
+/**
+ * Kolor ramki wedlug rzadkosci. Wlasna kopia palety, a nie import z `:feature:home` - ten modul
+ * nie zalezy od tamtego i nie ma po co zaczynac (patrz ARCHITECTURE.md, kierunek zaleznosci).
+ */
+private fun rarityColor(rarity: Rarity): Color = when (rarity) {
+    Rarity.Common -> Color(0xFFB8B2A6)
+    Rarity.Uncommon -> Color(0xFF6FCF6B)
+    Rarity.Rare -> Color(0xFF5AA9FF)
+    Rarity.Epic -> Color(0xFFB06CFF)
+    Rarity.Legendary -> Color(0xFFFFC13D)
+}
+
+/**
+ * "Wypadl przedmiot!" - to jest ta chwila, dla ktorej gracz powtarza plansze, wiec dostaje ramke
+ * w kolorze rzadkosci i wlasne wejscie animacja, tak samo jak awans.
+ */
+@Composable
+private fun LootBanner(item: Item) {
+    val accent = rarityColor(item.rarity)
+    val pop by animateFloatAsState(targetValue = 1f, animationSpec = tween(520, easing = EaseOutBack))
+
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .graphicsLayer { scaleX = pop; scaleY = pop }
+            .clip(RoundedCornerShape(12.dp))
+            .background(Brush.horizontalGradient(listOf(accent.copy(alpha = 0.28f), Color(0xFF1A1410))))
+            .border(2.dp, accent, RoundedCornerShape(12.dp))
+            .padding(horizontal = 14.dp, vertical = 12.dp),
+        horizontalArrangement = Arrangement.spacedBy(10.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Text(text = "🎁", fontSize = 24.sp)
+        Column {
+            Text(
+                text = "LOOT!",
+                color = accent,
+                fontFamily = FontPixel(),
+                fontWeight = FontWeight.Bold,
+                fontSize = 15.sp
+            )
+            Text(
+                text = "${item.name} (${item.rarity.name}) went into your bag.",
                 color = Cream,
                 fontFamily = FontFirst(),
                 fontSize = 11.sp

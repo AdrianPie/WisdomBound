@@ -3,6 +3,7 @@ package com.lernhero.game.battle
 import com.lernhero.domain.combat.live.CycleOutcome
 import com.lernhero.domain.combat.live.StreakTracker
 import com.lernhero.domain.combat.playback.HitKind
+import com.lernhero.domain.item.Item
 import com.lernhero.domain.progress.RunStats
 import com.lernhero.domain.monster.Element
 import com.lernhero.domain.quiz.CategoryOffer
@@ -160,6 +161,12 @@ data class BattleUiState(
      * ekranie koncowym (patrz BattleSummaryScreen). Null dopoki walka trwa.
      */
     val runSummary: RunStats? = null,
+    /**
+     * Przedmiot, ktory wypadl z tej walki, albo null gdy nic nie wypadlo (patrz
+     * [com.lernhero.domain.story.StageLoot.roll]). Trzymany jako caly [Item], a nie samo id, bo
+     * ekran koncowy pokazuje nazwe, rzadkosc i ikone - a nie ma sensu odpytywac katalogu z UI.
+     */
+    val droppedItem: Item? = null,
     /** Ile poziomow bohater zdobyl w tym zejsciu - ekran koncowy pokazuje z tego "AWANS". */
     val levelsGained: Int = 0,
     /**

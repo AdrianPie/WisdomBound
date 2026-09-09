@@ -42,5 +42,26 @@ object StageLoot {
     /** Szansa, ze po wygranej wypadnie JAKIKOLWIEK przedmiot (boss ma wyraznie wieksza). */
     fun dropChance(isBoss: Boolean): Float = if (isBoss) 0.35f else 0.08f
 
+    /**
+     * Losuje lup po WYGRANEJ walce na planszy kampanii - null, gdy nic nie wypadlo.
+     *
+     * To jest druga polowa [itemPool]: dialog LOOT pokazuje pule i procent, a to wywolanie
+     * faktycznie oddaje przedmiot. Przez dluzszy czas istniala tylko pierwsza polowa - gracz
+     * widzial jawna liste nagrod i szanse, a po walce nie dostawal NIGDY nic.
+     *
+     * Losujemy z tej samej [itemPool], wiec podglad nie moze sie rozjechac z rzeczywistoscia.
+     */
+    fun roll(
+        globalStage: Int,
+        tier: com.lernhero.domain.run.RunDifficulty,
+        isBoss: Boolean,
+        random: Random = Random.Default
+    ): Item? {
+        if (random.nextFloat() >= dropChance(isBoss)) return null
+        val pool = itemPool(globalStage, tier)
+        if (pool.isEmpty()) return null
+        return pool[random.nextInt(pool.size)]
+    }
+
     private const val POOL_SIZE = 4
 }

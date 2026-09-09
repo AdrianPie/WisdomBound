@@ -105,6 +105,17 @@ data class RunStats(
     val essence: Int = 0,
     val summonTickets: Int = 0,
     /**
+     * Przedmioty, ktore wypadly z tego zejscia (id z [com.lernhero.domain.item.ItemCatalog]).
+     *
+     * Jada RAZEM z reszta wyniku, a nie osobnym `grantItem`, bo cale rozliczenie zejscia jest
+     * jednym zapisem - drugie wywolanie czytaloby stan sprzed pierwszego i albo gubiloby
+     * przedmiot, albo cofalo dopisane wlasnie zloto i XP.
+     *
+     * Lista, a nie jeden przedmiot, zeby boss z kilkoma dropami nie wymagal zmiany formatu.
+     * Domyslnie pusta, wiec stare zapisy deserializuja sie bez zmian.
+     */
+    val droppedItemIds: List<String> = emptyList(),
+    /**
      * Czy to rozliczenie liczy sie jako STOCZONA walka. Ukonczenie lochu tez przechodzi ta sama
      * droga (jeden zapis, te same liczniki), ale nie jest walka - bez tego kazde wyjscie z lochu
      * dopisywaloby fikcyjna wygrana albo przegrana do statystyk.

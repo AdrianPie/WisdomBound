@@ -292,13 +292,20 @@ class PlayerRepositoryImpl: PlayerRepository {
     override suspend fun applyRunResult(run: RunStats): Player? {
         return try {
             val document = playerDocument() ?: return null
-            val player = getPlayer() ?: return null
+            // withMigratedItems(), bo lup dopisuje sie do plecaka - na koncie sprzed formatu
+            // egzemplarzy trzeba najpierw przeniesc stary ekwipunek, inaczej pierwszy drop
+            // wyzerowalby to, czego migracja jeszcze nie tknela.
+            val player = getPlayer()?.withMigratedItems() ?: return null
 
             val levelUp = LevelCurve.award(player.progress, run.xp)
+            val bagWithLoot = run.droppedItemIds.fold(player.heroInventory) { bag, itemId ->
+                Inventory.add(bag, itemId)
+            }
             val updated = player.copy(
                 money = (player.money + run.gold).coerceAtLeast(0),
                 progress = levelUp.progress,
                 stats = player.stats + run,
+                heroInventory = bagWithLoot,
                 townResources = player.townResources.plusAll(
                     wood = run.wood,
                     stone = run.stone,
