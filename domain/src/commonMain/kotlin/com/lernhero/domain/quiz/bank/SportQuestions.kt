@@ -54,13 +54,6 @@ object SportQuestions {
             difficulty = QuizDifficulty.Easy
         ),
         ask(
-            id = "tenis_narzedzie",
-            prompt = "What do you hit the ball with in tennis?",
-            correct = "A racket",
-            wrong = listOf("A bat", "A ping-pong paddle", "A club"),
-            difficulty = QuizDifficulty.Easy
-        ),
-        ask(
             id = "szachy_figury",
             prompt = "Which chess piece moves only diagonally?",
             correct = "The bishop",
@@ -77,20 +70,6 @@ object SportQuestions {
             difficulty = QuizDifficulty.Medium
         ),
         ask(
-            id = "maraton",
-            prompt = "How many kilometers is a marathon?",
-            correct = "About 42",
-            wrong = listOf("About 50", "About 30", "About 21"),
-            difficulty = QuizDifficulty.Medium
-        ),
-        ask(
-            id = "malysz",
-            prompt = "Which sport was Adam Malysz famous for?",
-            correct = "Ski jumping",
-            wrong = listOf("Cross-country skiing", "Biathlon", "Snowboarding"),
-            difficulty = QuizDifficulty.Medium
-        ),
-        ask(
             id = "lewandowski",
             prompt = "At which club did Robert Lewandowski become the Bundesliga's top scorer?",
             correct = "Bayern Munich",
@@ -99,9 +78,9 @@ object SportQuestions {
         ),
         ask(
             id = "hokej",
-            prompt = "On what surface is an ice hockey match played?",
-            correct = "An ice rink",
-            wrong = listOf("Grass", "A hardwood court", "Sand"),
+            prompt = "How long is one period in an ice hockey game?",
+            correct = "20 minutes",
+            wrong = listOf("15 minutes", "25 minutes", "30 minutes"),
             difficulty = QuizDifficulty.Medium
         ),
         ask(
@@ -135,13 +114,6 @@ object SportQuestions {
             difficulty = QuizDifficulty.Hard
         ),
         ask(
-            id = "f1_tor_pl",
-            prompt = "Which Pole was the first to win a Formula 1 race?",
-            correct = "Robert Kubica",
-            wrong = listOf("Krzysztof Holowczyc", "Kajetan Kajetanowicz", "Sobieslaw Zasada"),
-            difficulty = QuizDifficulty.Hard
-        ),
-        ask(
             id = "szachy_mistrz",
             prompt = "Which chess player held the world championship title the longest in the 20th century?",
             correct = "Emanuel Lasker",
@@ -151,17 +123,10 @@ object SportQuestions {
 
         /* ----------------------------- Expert ---------------------------- */
         ask(
-            id = "mundial_1974",
-            prompt = "What place did Poland finish at the 1974 World Cup?",
-            correct = "3rd",
-            wrong = listOf("1st", "2nd", "4th"),
-            difficulty = QuizDifficulty.Expert
-        ),
-        ask(
             id = "dekatlon",
-            prompt = "How many events make up the decathlon?",
-            correct = "10",
-            wrong = listOf("8", "12", "7"),
+            prompt = "Which event closes the men's Olympic decathlon on the second day?",
+            correct = "The 1500 metres",
+            wrong = listOf("The javelin throw", "The pole vault", "The 110 m hurdles"),
             difficulty = QuizDifficulty.Expert
         ),
         ask(

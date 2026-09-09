@@ -1,5 +1,6 @@
 package com.lernhero.domain.combat.playback
 
+import com.lernhero.domain.monster.Element
 import com.lernhero.domain.combat.CombatEvent
 import com.lernhero.domain.combat.Combatant
 import com.lernhero.domain.combat.DamageTag
@@ -134,7 +135,8 @@ class BattlePlaybackEngine(
         itemStats = loadout.stats.without(StatType.MaxHp, StatType.Attack) + spellPowerStats + bonusStats,
         effects = loadout.effects,
         // Zaklecia z drzewka talentow, kazde z wlasna szansa. Silnik losuje z tego co ture.
-        spells = spells
+        spells = spells,
+        element = element
     )
 }
 
@@ -155,7 +157,9 @@ data class BattleFighter(
     /** Mnoznik sily zaklec ponad baze (od przedmiotow/perkow). */
     val spellPower: Float = 0f,
     /** Dodatkowe surowe statystyki spoza ekwipunku - np. boosty z quizu przed walka. */
-    val bonusStats: Stats = Stats.Empty
+    val bonusStats: Stats = Stats.Empty,
+    /** Zywiol - czytaja go efekty bijace w konkretny typ. Null u bohatera i wrogow bez typu. */
+    val element: Element? = null
 ) {
     internal val spellPowerStats: Stats
         get() = if (spellPower == 0f) Stats.Empty else Stats.of(StatType.SpellPower to spellPower)

@@ -1,5 +1,11 @@
 package com.lernhero.domain.combat.effects
 
+import com.lernhero.domain.combat.Combatant
+import com.lernhero.domain.monster.Element
+import com.lernhero.domain.combat.DamagePacket
+import com.lernhero.domain.combat.DamageModifierEffect
+import com.lernhero.domain.combat.DamageModification
+import com.lernhero.domain.combat.DamagePhase
 import com.lernhero.domain.combat.Chance
 import com.lernhero.domain.combat.CombatAction
 import com.lernhero.domain.combat.CombatEvent
@@ -138,5 +144,58 @@ class DeathExplosionEffect(private val damage: Float) : TriggeredEffect {
                 canCrit = false
             )
         )
+    }
+}
+
+/**
+ * Szansa na DRUGI atak w tej samej turze - klasyczne "double strike" z RPG.
+ *
+ * Rozni sie od [ExtraAttackOnKillEffect] warunkiem, a nie skutkiem: tamten wymaga zabicia wroga,
+ * ten wystarczy, ze trafisz. Dlatego jest tez znacznie mocniejszy przy tej samej szansie i broni
+ * z nim powinny miec nizsze statystyki bazowe.
+ *
+ * [ExcludeDamageTag] odsiewa trucizne, podpalenie i odbicie: bez tego bron zaczynalaby dodatkowe
+ * ataki od wlasnych obrazen obszarowych, a lancuch napedzalby sam siebie (przed nieskonczonoscia
+ * broni tylko limit glebokosci w silniku - to za slaba gwarancja jak na regule przedmiotu).
+ */
+class DoubleAttackChanceEffect(private val chance: Float) : TriggeredEffect {
+    override val id = "double_attack_${(chance * 100).toInt()}"
+    override val description = "${(chance * 100).toInt()}% chance to strike twice."
+    override val trigger = Trigger.DamageDealt
+    override val conditions: List<EffectCondition> = listOf(
+        OwnerIsSource,
+        ExcludeDamageTag(DamageTag.Poison),
+        ExcludeDamageTag(DamageTag.Burn),
+        ExcludeDamageTag(DamageTag.Reflect),
+        Chance(chance)
+    )
+
+    override fun react(event: CombatEvent, context: EffectContext): List<CombatAction> {
+        if (context.enemies().isEmpty()) return emptyList()
+        return listOf(CombatAction.ExtraAttack(attackerId = context.ownerId))
+    }
+}
+
+/**
+ * Bron "przeciw konkretnemu typowi": mocniejsza wylacznie wtedy, gdy cel ma zywiol [against].
+ *
+ * To jedyny efekt, ktory czyta [Combatant.element], i dlatego jest modyfikatorem obrazen, a nie
+ * bonusem do statystyk: premia ma zalezec od TEGO, w kogo akurat lecisz, a nie od tego, co masz
+ * na sobie. Srebrny miecz w plecaku nie czyni cie silniejszym - czyni cie silniejszym wobec
+ * nieumarlych.
+ */
+class ElementBaneEffect(
+    private val against: Element,
+    private val bonus: Float
+) : DamageModifierEffect {
+    override val id = "bane_${against.name.lowercase()}_${(bonus * 100).toInt()}"
+    override val description =
+        "+${(bonus * 100).toInt()}% damage against ${against.label} enemies."
+    override val phase = DamagePhase.Outgoing
+
+    override fun modify(packet: DamagePacket, context: EffectContext): DamageModification {
+        val target = context.state.combatants[packet.targetId]
+        if (target?.element != against) return DamageModification(packet)
+        return DamageModification(packet.scaled(1f + bonus))
     }
 }

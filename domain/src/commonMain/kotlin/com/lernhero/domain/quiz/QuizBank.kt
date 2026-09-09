@@ -12,10 +12,12 @@ import com.lernhero.domain.quiz.bank.CapitalQuestionsExtra2
 import com.lernhero.domain.quiz.bank.ElementQuestions
 import com.lernhero.domain.quiz.bank.ElementQuestionsExtra
 import com.lernhero.domain.quiz.bank.ElementQuestionsExtra2
+import com.lernhero.domain.quiz.bank.EverydayQuestions
 import com.lernhero.domain.quiz.bank.FlagQuestions
 import com.lernhero.domain.quiz.bank.GeographyQuestions
 import com.lernhero.domain.quiz.bank.GeographyQuestionsExtra
 import com.lernhero.domain.quiz.bank.GeographyQuestionsExtra2
+import com.lernhero.domain.quiz.bank.GeographyQuestionsCompare
 import com.lernhero.domain.quiz.bank.HistoryQuestions
 import com.lernhero.domain.quiz.bank.HistoryQuestionsExtra
 import com.lernhero.domain.quiz.bank.HistoryQuestionsExtra2
@@ -29,15 +31,25 @@ import com.lernhero.domain.quiz.bank.MathQuestionsExtra2
 import com.lernhero.domain.quiz.bank.MythologyQuestions
 import com.lernhero.domain.quiz.bank.MythologyQuestionsExtra
 import com.lernhero.domain.quiz.bank.MythologyQuestionsExtra2
+import com.lernhero.domain.quiz.bank.HistoryQuestionsExtra3
+import com.lernhero.domain.quiz.bank.LandmarkQuestions
+import com.lernhero.domain.quiz.bank.LiteratureQuestionsExtra3
+import com.lernhero.domain.quiz.bank.PolandQuestions
+import com.lernhero.domain.quiz.bank.PolandQuestionsExtra
+import com.lernhero.domain.quiz.bank.PolandQuestionsMoved
 import com.lernhero.domain.quiz.bank.ScienceQuestions
 import com.lernhero.domain.quiz.bank.ScienceQuestionsExtra
 import com.lernhero.domain.quiz.bank.ScienceQuestionsExtra2
+import com.lernhero.domain.quiz.bank.ScienceQuestionsCompare
 import com.lernhero.domain.quiz.bank.SportQuestions
 import com.lernhero.domain.quiz.bank.SportQuestionsExtra
 import com.lernhero.domain.quiz.bank.SportQuestionsExtra2
+import com.lernhero.domain.quiz.bank.SportQuestionsWorld
 import com.lernhero.domain.quiz.bank.TechnologyQuestions
 import com.lernhero.domain.quiz.bank.TechnologyQuestionsExtra
 import com.lernhero.domain.quiz.bank.TechnologyQuestionsExtra2
+import com.lernhero.domain.quiz.bank.TriviaQuestionsCulture
+import com.lernhero.domain.quiz.bank.TriviaQuestionsNature
 import kotlin.random.Random
 
 /**
@@ -87,7 +99,31 @@ object QuizBank {
             TechnologyQuestionsExtra2.all +
             MythologyQuestionsExtra2.all +
             // Historia powszechna - druga noga banku, celowo bez watkow polskich.
-            WorldHistoryQuestions.all
+            WorldHistoryQuestions.all +
+            // Temat lokalny - w banku siedzi zawsze, ale do wyboru trafia tylko przy jezyku PL
+            // (patrz QuizCategory.builtinFor). Bank zna wszystko, filtruje dopiero UI.
+            PolandQuestions.all +
+            PolandQuestionsExtra.all +
+            // Druga tura przeprowadzki do tematu lokalnego - patrz [PolandQuestionsMoved].
+            PolandQuestionsMoved.all +
+            // Swiat poza Europa - dowazenie banku po wyjezdzie watkow polskich.
+            HistoryQuestionsExtra3.all +
+            LiteratureQuestionsExtra3.all +
+            // Pytania porownawcze ("gdzie wiecej", odd one out) - format, w ktorym da sie wygrac
+            // rozumowaniem, a nie tylko pamiecia. Patrz [GeographyQuestionsCompare].
+            GeographyQuestionsCompare.all +
+            ScienceQuestionsCompare.all +
+            // Wiedza codzienna - kuchnia, dom, muzyka, gry. Patrz [EverydayQuestions].
+            EverydayQuestions.all +
+            // Partia po audycie banku: pytania "chce sie zapamietac" w miejsce wycietych
+            // pytan-zerowek ("ile oczu ma czlowiek"). Patrz [TriviaQuestionsNature].
+            TriviaQuestionsNature.all +
+            TriviaQuestionsCulture.all +
+            // Sport bez watkow lokalnych - dowazenie kategorii po przeniesieniu pytan o polskich
+            // sportowcach do tematu polskiego. Patrz [SportQuestionsWorld].
+            SportQuestionsWorld.all +
+            // Zabytki, rzeki i nieoczywiste stolice - patrz [LandmarkQuestions].
+            LandmarkQuestions.all
 
     fun all(random: Random = Random.Default): List<QuizEntry> =
         textEntries + FlagQuestions.entries(random)

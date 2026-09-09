@@ -39,13 +39,6 @@ object WorldHistoryQuestions {
 
         /* =========================== ANTIQUITY - easy =========================== */
         ask(
-            id = "piramidy_kraj",
-            prompt = "In which country do the pyramids of Giza stand?",
-            correct = "Egypt",
-            wrong = listOf("Mexico", "Iraq", "Sudan"),
-            difficulty = QuizDifficulty.Easy
-        ),
-        ask(
             id = "kolosseum_miasto",
             prompt = "In which city does the Colosseum stand?",
             correct = "Rome",
@@ -235,13 +228,6 @@ object WorldHistoryQuestions {
             difficulty = QuizDifficulty.Easy
         ),
         ask(
-            id = "magellan_wyprawa",
-            prompt = "Whose expedition was the first to circumnavigate the globe?",
-            correct = "Ferdinand Magellan's",
-            wrong = listOf("Francis Drake's", "James Cook's", "Vasco da Gama's"),
-            difficulty = QuizDifficulty.Medium
-        ),
-        ask(
             id = "aztekowie_zdobywca",
             prompt = "Which conquistador toppled the Aztec empire?",
             correct = "Hernan Cortes",
@@ -275,13 +261,6 @@ object WorldHistoryQuestions {
             correct = "The Peace of Westphalia",
             wrong = listOf("The Peace of Augsburg", "The Treaty of Utrecht", "The Peace of Nicaea"),
             difficulty = QuizDifficulty.Hard
-        ),
-        ask(
-            id = "deklaracja_usa",
-            prompt = "In which year was the US Declaration of Independence proclaimed?",
-            correct = "1776",
-            wrong = listOf("1789", "1783", "1765"),
-            difficulty = QuizDifficulty.Easy
         ),
         ask(
             id = "bastylia",
@@ -439,22 +418,6 @@ object WorldHistoryQuestions {
             wrong = listOf("France", "The Soviet Union", "Great Britain"),
             difficulty = QuizDifficulty.Medium
         ),
-        ask(
-            id = "suez_kanal",
-            prompt = "Which canal connects the Mediterranean Sea with the Red Sea?",
-            correct = "The Suez Canal",
-            wrong = listOf("The Panama Canal", "The Kiel Canal", "The Corinth Canal"),
-            difficulty = QuizDifficulty.Easy,
-            category = QuizCategory.Geography
-        ),
-        ask(
-            id = "kanal_panamski",
-            prompt = "Which two oceans does the Panama Canal connect?",
-            correct = "The Atlantic and the Pacific",
-            wrong = listOf("The Atlantic and the Indian", "The Pacific and the Indian", "The Arctic and the Atlantic"),
-            difficulty = QuizDifficulty.Medium,
-            category = QuizCategory.Geography
-        ),
 
         /* ====================== WORLD FIGURES AND INVENTIONS ====================== */
         ask(
@@ -564,22 +527,6 @@ object WorldHistoryQuestions {
 
         /* ============================== WORLD MYTHOLOGY ============================== */
         ask(
-            id = "mit_odyn",
-            prompt = "Who is the chief god in Norse mythology?",
-            correct = "Odin",
-            wrong = listOf("Thor", "Loki", "Baldur"),
-            difficulty = QuizDifficulty.Easy,
-            category = QuizCategory.Mythology
-        ),
-        ask(
-            id = "mit_ra",
-            prompt = "Which Egyptian god was the god of the sun?",
-            correct = "Ra",
-            wrong = listOf("Osiris", "Anubis", "Horus"),
-            difficulty = QuizDifficulty.Easy,
-            category = QuizCategory.Mythology
-        ),
-        ask(
             id = "mit_wisznu",
             prompt = "In which religion do the gods Brahma, Vishnu and Shiva appear?",
             correct = "Hinduism",
@@ -627,22 +574,6 @@ object WorldHistoryQuestions {
             correct = "China and Europe",
             wrong = listOf("India and Africa", "Persia and Scandinavia", "Japan and America"),
             difficulty = QuizDifficulty.Medium,
-            category = QuizCategory.Geography
-        ),
-        ask(
-            id = "petra_kraj",
-            prompt = "In which country is the rock-cut city of Petra?",
-            correct = "Jordan",
-            wrong = listOf("Egypt", "Syria", "Israel"),
-            difficulty = QuizDifficulty.Medium,
-            category = QuizCategory.Geography
-        ),
-        ask(
-            id = "stonehenge",
-            prompt = "In which country does Stonehenge stand?",
-            correct = "United Kingdom",
-            wrong = listOf("Ireland", "France", "Denmark"),
-            difficulty = QuizDifficulty.Easy,
             category = QuizCategory.Geography
         ),
         ask(

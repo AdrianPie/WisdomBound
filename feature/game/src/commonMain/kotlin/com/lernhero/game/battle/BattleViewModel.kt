@@ -9,6 +9,9 @@ import com.lernhero.domain.combat.live.AnswerTimer
 import com.lernhero.domain.combat.live.CYCLE_BUFF_DURATION_MS
 import com.lernhero.domain.combat.live.record
 import com.lernhero.domain.combat.playback.HitKind
+import com.lernhero.domain.item.heroBag
+import com.lernhero.domain.item.migratedHeroEquipment
+import com.lernhero.domain.item.ItemInstance
 import com.lernhero.domain.item.ItemSlot
 import com.lernhero.domain.item.itemIn
 import com.lernhero.domain.item.toLoadout
@@ -22,6 +25,7 @@ import com.lernhero.domain.monster.MonsterSpellLevels
 import com.lernhero.domain.monster.MonsterStars
 import com.lernhero.domain.player.HeroBaseStats
 import com.lernhero.domain.player.HeroStats
+import com.lernhero.domain.player.PartySlots
 import com.lernhero.domain.player.PlayerEquipment
 import com.lernhero.domain.progress.CategoryStat
 import com.lernhero.domain.progress.RunStats
@@ -34,6 +38,7 @@ import com.lernhero.domain.quiz.OrderingBank
 import com.lernhero.domain.quiz.OrderingEntry
 import com.lernhero.domain.quiz.QuizBank
 import com.lernhero.domain.quiz.QuizCategory
+import com.lernhero.shared.i18n.AppLanguageStore
 import com.lernhero.domain.quiz.QuizDifficulty
 import com.lernhero.domain.quiz.QuizEntry
 import com.lernhero.domain.quiz.WordQuizBank
@@ -82,8 +87,17 @@ import kotlin.time.TimeSource
  */
 class BattleViewModel(
     private val playerRepository: PlayerRepository,
-    private val runSession: RunSession
+    private val runSession: RunSession,
+    /** Jezyk gracza - decyduje, czy kafle tematow moga pokazac kategorie lokalna (patrz [offerableCategories]). */
+    private val languageStore: AppLanguageStore
 ) : ViewModel() {
+
+    /**
+     * Tematy, ktore wolno zaproponowac TEMU graczowi: caly bank minus kategorie lokalne innych
+     * jezykow (np. "Poland" dla grajacego po angielsku).
+     */
+    private val offerableCategories: List<QuizCategory>
+        get() = QuizCategory.builtinFor(languageStore.current.code)
 
     /** Zamowienie zlozone przez mape. Brak = szybka walka testowa. */
     private val request: BattleRequest =
@@ -200,6 +214,14 @@ class BattleViewModel(
     /** Kategoria i poziom biezacego pytania - potrzebne do statystyk per kategoria i do XP za odpowiedz. */
     private var currentQuestionCategory: QuizCategory? = null
     private var currentQuestionDifficulty: QuizDifficulty = QuizDifficulty.Easy
+
+    /**
+     * Czy [playBattleIntro] wpuscilo juz bohaterow na pozycje.
+     *
+     * Potrzebne, bo intro trwa DLUZEJ niz samo wejscie druzyny, a [loadSavedPlayer] moze skonczyc
+     * sie w dowolnym momencie - patrz komentarz przy podmianie druzyny.
+     */
+    private var introPlayersEntered: Boolean = false
 
     private val _uiState = MutableStateFlow(createInitialState())
     val uiState = _uiState.asStateFlow()
@@ -627,7 +649,7 @@ class BattleViewModel(
                 s.copy(
                     elapsedMs = s.elapsedMs + extraElapsedMs,
                     turnPhase = TurnPhase.CategoryPick,
-                    categoryOffer = CategoryOffer.roll(quizRandom),
+                    categoryOffer = CategoryOffer.roll(quizRandom, offerableCategories),
                     boostedElements = emptySet(),
                     quiz = null,
                     stunnedCharacterIds = emptySet(),
@@ -1246,7 +1268,7 @@ class BattleViewModel(
                     // boss i tak musi miec czym zaatakowac, wiec wracamy do banku wbudowanego.
                     val question = runSession.customDeck
                         ?.let { CustomDeckBank.drawEstimation(it, quizRandom) }
-                        ?: EstimationBank.random(quizRandom)
+                        ?: EstimationBank.random(quizRandom, languageStore.current.code)
                     val range = question.sliderRange(quizRandom)
                     BossEventState(
                         bossId = attackerId,
@@ -2056,7 +2078,10 @@ class BattleViewModel(
     private fun loadSavedPlayer() {
         viewModelScope.launch(Dispatchers.IO) {
             val player = playerRepository.getPlayer() ?: return@launch
-            savedParty = player.party
+            // Sklad przycinamy do miejsc OTWARTYCH poziomem bohatera. Zapis moze zawierac wiecej
+            // (powstal przed progami albo po zmianie tabeli), a walka czyta druzyne wprost stad -
+            // bez tego stary zapis omijalby caly system odblokowywania.
+            savedParty = PartySlots.enforce(player.party, player.progress.level)
             savedMonsterLevels = player.monsterLevels
             savedMonsterStars = player.monsterStars
             savedSpellLevels = player.monsterSpellLevels
@@ -2065,15 +2090,22 @@ class BattleViewModel(
             // Zaklecia bohatera i ich szanse biora sie w calosci z drzewka talentow.
             heroSpellChances = talentBonuses.spellChances
             _uiState.update { current ->
-                // Dopoki trwa intro, prawdziwa druzyna (dopiero co wczytana z repo) musi wejsc
-                // tak samo ukryta jak placeholder z createInitialState - inaczej wyskoczylaby od
-                // razu, przeskakujac cala animacje wejscia, a wrogowie zostaliby ponownie
-                // wpuszczeni od zera zamiast czekac na playBattleIntro.
-                val stillIntro = current.phase == GamePhase.Intro
-                val players = buildPlayerParty().map { it.toUiModel().copy(approach = if (stillIntro) 1f else 0f) }
-                current.copy(characters = buildWave(current.wave, players, autoStagger = !stillIntro))
+                // Ukryta wchodzi tylko druzyna, ktorej intro jeszcze NIE wpuscilo.
+                //
+                // Warunkiem bylo kiedys samo `phase == Intro` i to byl blad wyscigu: intro trwa
+                // dalej po wejsciu bohaterow (wchodza wrogowie, potem pauza przed quizem), wiec
+                // odczyt z repo, ktory trafil w to okno, podmienial WPUSZCZONYCH juz bohaterow na
+                // swiezych z approach = 1f - a petla, ktora miala ich odslonic, byla juz za nimi.
+                // Efekt: walka z niewidzialna druzyna, po stronie gracza pusty ekran.
+                val hidden = current.phase == GamePhase.Intro && !introPlayersEntered
+                val players = buildPlayerParty().map { it.toUiModel().copy(approach = if (hidden) 1f else 0f) }
+                // Wrogowie zostaja DOKLADNIE tacy, jacy sa - razem ze stanem wejscia i obrazeniami.
+                // Skladanie fali od nowa gubilo jedno i drugie, a nic nie wnosilo: pula wrogow
+                // zalezy tylko od ziarna i numeru fali ([buildWaveEnemies]), nie od druzyny.
+                val enemies = current.characters.filterValues { !it.isPlayer }
+                current.copy(characters = players.associateBy { it.id } + enemies)
                     .applyTalentBuffs()
-                    .applyEquipmentBonuses(player.equipment, player.appearance, player.itemUpgrades)
+                    .applyEquipmentBonuses(player.migratedHeroEquipment(), player.appearance, player.heroBag())
                     .applyPersistedHp()
             }
         }
@@ -2172,6 +2204,7 @@ class BattleViewModel(
                 if (index > 0) delay(PLAYER_ENTRANCE_STAGGER_MS)
                 revealCharacter(id)
             }
+            introPlayersEntered = true
 
             delay(PRE_ENEMY_ENTRANCE_PAUSE_MS)
 
@@ -2198,7 +2231,7 @@ class BattleViewModel(
                     state.copy(
                         phase = GamePhase.Battle,
                         turnPhase = TurnPhase.CategoryPick,
-                        categoryOffer = CategoryOffer.roll(quizRandom),
+                        categoryOffer = CategoryOffer.roll(quizRandom, offerableCategories),
                         quiz = null,
                         message = "Wave incoming..."
                     )
@@ -2260,9 +2293,10 @@ class BattleViewModel(
     private fun BattleUiState.applyEquipmentBonuses(
         equipment: PlayerEquipment,
         appearance: HeroAppearance,
-        itemUpgrades: Map<String, Int>
+        /** Plecak bohatera - sloty trzymaja uid sztuk, wiec bez niego nie wiadomo, co w nich lezy. */
+        heroBag: List<ItemInstance>
     ): BattleUiState {
-        val loadout = equipment.toLoadout(itemUpgrades)
+        val loadout = equipment.toLoadout(heroBag)
         val runMods = runSession.modifiers
         // Statystyki z awansow ([HeroStat.Strength]/[HeroStat.Vitality]) dzialaja na CALA druzyne -
         // to bohater prowadzi wyprawe, wiec jego rozwoj podnosi tez kompanow. Ekwipunek i perki
@@ -2290,12 +2324,12 @@ class BattleViewModel(
                     attack = character.attack + attackBonus,
                     heroLook = HeroLook.of(appearance),
                     knightEquipment = KnightEquipment(
-                        head = equipment.itemIn(ItemSlot.Head) != null,
-                        chest = equipment.itemIn(ItemSlot.Chest) != null,
-                        hands = equipment.itemIn(ItemSlot.Hands) != null,
-                        legs = equipment.itemIn(ItemSlot.Legs) != null,
-                        feet = equipment.itemIn(ItemSlot.Feet) != null,
-                        mainHand = equipment.itemIn(ItemSlot.MainHand) != null
+                        head = equipment.itemIn(ItemSlot.Head, heroBag) != null,
+                        chest = equipment.itemIn(ItemSlot.Chest, heroBag) != null,
+                        hands = equipment.itemIn(ItemSlot.Hands, heroBag) != null,
+                        legs = equipment.itemIn(ItemSlot.Legs, heroBag) != null,
+                        feet = equipment.itemIn(ItemSlot.Feet, heroBag) != null,
+                        mainHand = equipment.itemIn(ItemSlot.MainHand, heroBag) != null
                     )
                 )
             }

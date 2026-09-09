@@ -26,6 +26,7 @@ import com.lernhero.domain.quiz.QuizCategory
 import com.lernhero.domain.quiz.QuizDifficulty
 import com.lernhero.domain.quiz.custom.CustomDeck
 import com.lernhero.home.quiz.CustomSourcePanel
+import com.lernhero.home.ui.FantasyFrame
 import com.lernhero.shared.i18n.AppStrings
 import com.lernhero.shared.i18n.strings
 import com.lernhero.shared.theme.FontFirst
@@ -81,8 +82,9 @@ fun EndlessSetupPanel(
     onStartBossTest: () -> Unit = {},
     modifier: Modifier = Modifier
 ) {
-    Column(
-        modifier = modifier
+    FantasyFrame(modifier = modifier.fillMaxWidth(), inset = 16.dp) {
+      Column(
+        modifier = Modifier
             .fillMaxWidth()
             .clip(RoundedCornerShape(14.dp))
             .background(Panel)
@@ -136,7 +138,8 @@ fun EndlessSetupPanel(
                         onClick = { onCategoryChange(null) }
                     )
                     // Slowka i wlasne talie nie sa w banku wbudowanym - maja wlasna zakladke zrodla.
-                    QuizCategory.builtin.forEach { entry ->
+                    // Kategorie lokalne (np. Poland) pokazuja sie tylko przy pasujacym jezyku.
+                    QuizCategory.builtinFor(strings.languageCode).forEach { entry ->
                         Chip(
                             label = entry.label,
                             selected = category == entry,
@@ -176,6 +179,7 @@ fun EndlessSetupPanel(
                 onStart = onStart
             )
         }
+      }
     }
 }
 

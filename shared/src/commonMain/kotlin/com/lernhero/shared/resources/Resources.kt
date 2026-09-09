@@ -13,6 +13,14 @@ import lernhero.shared.generated.resources.frozen_wastes
 import lernhero.shared.generated.resources.brick_dungeon
 import lernhero.shared.generated.resources.battlegroundTwo
 import lernhero.shared.generated.resources.book
+import lernhero.shared.generated.resources.border
+import lernhero.shared.generated.resources.summoner_collection_screen
+import lernhero.shared.generated.resources.flying_stone
+import lernhero.shared.generated.resources.flying_stone1
+import lernhero.shared.generated.resources.flying_stone2
+import lernhero.shared.generated.resources.flying_stone3
+import lernhero.shared.generated.resources.flying_stone4
+import lernhero.shared.generated.resources.flying_stone5
 import lernhero.shared.generated.resources.cat
 import lernhero.shared.generated.resources.check
 import lernhero.shared.generated.resources.checkmark_image
@@ -155,8 +163,31 @@ object Resources {
         val knightAvatar = Res.drawable.knight_avatar2
         val sorcererAvatar = Res.drawable.sorcerer_avatar2
 
+        /**
+         * Ozdobna ramka 9-slice (rogi w oryginalnym rozmiarze, boki rozciagane, srodek
+         * przezroczysty). Uzywana przez [com.lernhero.home.ui.FramedPanel]. Podmiana pliku
+         * `drawable/border.png` na inny 512x512 z transparentnym srodkiem wystarcza.
+         */
+        val forgeFrame = Res.drawable.border
+
         val corridorBrick = Res.drawable.brick_dungeon
         val treasureChest = Res.drawable.treasure
+
+        /** Tlo ekranu kolekcji kompanow (zakladka Collection w Summon Center). */
+        val summonerCollectionBackground = Res.drawable.summoner_collection_screen
+
+        /**
+         * Latajaca wyspa pod sylwetka kompana: jeden duzy kamien + piec malych kamykow, ktore
+         * lewituja kazdy we wlasnym tempie ([com.lernhero.home.ui.FloatingIsland]).
+         */
+        val floatingIslandSlab = Res.drawable.flying_stone
+        val floatingIslandPebbles = listOf(
+            Res.drawable.flying_stone1,
+            Res.drawable.flying_stone2,
+            Res.drawable.flying_stone3,
+            Res.drawable.flying_stone4,
+            Res.drawable.flying_stone5,
+        )
 
         /**
          * Tla krain story mode - jedno zrodlo prawdy dla WSZYSTKICH miejsc, ktore rysuja krainy:

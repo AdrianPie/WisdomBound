@@ -26,21 +26,13 @@ object GeographyQuestionsExtra {
 
         /* ------------------------------- Easy ------------------------------- */
         ask("morze_wlochy", "On which sea does Venice sit?", "The Adriatic", listOf("The Tyrrhenian Sea", "The Aegean Sea", "The Black Sea"), QuizDifficulty.Easy),
-        ask("gory_polska_pd", "Which mountains form Poland's southern border with Slovakia?", "The Tatras", listOf("The Alps", "The Karkonosze", "The Bieszczady"), QuizDifficulty.Easy),
         ask("kontynent_najwiekszy", "Which continent is the largest?", "Asia", listOf("Africa", "North America", "Europe"), QuizDifficulty.Easy),
         ask("kontynent_najmniejszy", "Which continent is the smallest?", "Australia", listOf("Europe", "Antarctica", "South America"), QuizDifficulty.Easy),
-        ask("sahara_typ", "What is the Sahara?", "A desert", listOf("A steppe", "A jungle", "A glacier"), QuizDifficulty.Easy),
         ask("amazonia_kontynent", "On which continent is the Amazon rainforest?", "South America", listOf("Africa", "Asia", "Australia"), QuizDifficulty.Easy),
         ask("wieza_eiffla", "In which city does the Eiffel Tower stand?", "Paris", listOf("London", "Rome", "Vienna"), QuizDifficulty.Easy),
-        ask("polska_sasiedzi", "How many countries border Poland?", "Seven", listOf("Five", "Six", "Eight"), QuizDifficulty.Easy),
         ask("morze_martwe", "What is the Dead Sea known for?", "Extremely high salinity", listOf("The coldest water", "The greatest depth", "Being fresh water"), QuizDifficulty.Easy),
-        ask("islandia_typ", "What is Iceland?", "An island in the Atlantic", listOf("A Scandinavian peninsula", "A Pacific archipelago", "Part of Greenland"), QuizDifficulty.Easy),
 
         /* ------------------------------ Medium ------------------------------ */
-        ask("wisla_zrodlo", "Where does the Vistula river originate?", "In the Silesian Beskids", listOf("In the Tatras", "In the Sudetes", "In the Masurian Lake District"), QuizDifficulty.Medium),
-        ask("polska_jezioro", "Which lake is the largest in Poland?", "Sniardwy", listOf("Mamry", "Hancza", "Lebsko"), QuizDifficulty.Medium),
-        ask("polska_najglebsze", "Which lake is the deepest in Poland?", "Hancza", listOf("Sniardwy", "Wigry", "Mamry"), QuizDifficulty.Medium),
-        ask("polska_wojewodztwa", "How many provinces (voivodeships) does Poland have?", "16", listOf("14", "18", "12"), QuizDifficulty.Medium),
         ask("kanal_sueski", "Which seas does the Suez Canal connect?", "The Mediterranean with the Red Sea", listOf("The Baltic with the North Sea", "The Black Sea with the Aegean", "The Pacific with the Atlantic"), QuizDifficulty.Medium),
         ask("kanal_panamski", "Which oceans does the Panama Canal connect?", "The Atlantic with the Pacific", listOf("The Pacific with the Indian Ocean", "The Atlantic with the Arctic", "The Indian with the Southern Ocean"), QuizDifficulty.Medium),
         ask("gory_ameryka_pd", "What is the longest mountain range in South America called?", "The Andes", listOf("The Cordilleras", "The Appalachians", "The Sierra Nevada"), QuizDifficulty.Medium),
@@ -65,7 +57,6 @@ object GeographyQuestionsExtra {
         ask("greenwich", "Which city does the prime meridian pass through?", "London", listOf("Paris", "Rome", "Madrid"), QuizDifficulty.Hard),
         ask("najdluzsza_rzeka_europy", "Which river is the longest in Europe?", "The Volga", listOf("The Danube", "The Rhine", "The Dnieper"), QuizDifficulty.Hard),
         ask("morze_aralskie", "What happened to the Aral Sea in the 20th century?", "It shrank to a fraction of its former size", listOf("It doubled in size", "It froze permanently", "It merged with the Black Sea"), QuizDifficulty.Hard),
-        ask("polska_najnizej", "Where is Poland's lowest point located?", "Near Raczki Elblaskie", listOf("On the Vistula Spit", "In the Klodzko Valley", "In the Oder valley"), QuizDifficulty.Hard),
         ask("wyspa_borneo", "Between how many countries is the island of Borneo divided?", "Three", listOf("Two", "Four", "One"), QuizDifficulty.Hard),
         ask("najwiekszy_archipelag", "Which country is the largest island nation in the world?", "Indonesia", listOf("The Philippines", "Japan", "Madagascar"), QuizDifficulty.Hard),
 
@@ -76,7 +67,6 @@ object GeographyQuestionsExtra {
         ask("kaldera_toba", "Where is Lake Toba, formed by a giant caldera?", "On Sumatra", listOf("On Java", "In Japan", "In New Zealand"), QuizDifficulty.Expert),
         ask("rzeka_kongo", "Which river is the deepest in the world?", "The Congo", listOf("The Amazon", "The Yangtze", "The Mississippi"), QuizDifficulty.Expert),
         ask("caspian_status", "Why is the status of the Caspian Sea disputed?", "It's hard to decide whether it's a sea or a lake", listOf("It spans three continents", "Its level changes by 100 m every year", "It has no permanent shoreline"), QuizDifficulty.Expert),
-        ask("trojstyk_polska", "Where do the borders of Poland, Czechia and Slovakia meet?", "At the tripoint near Jaworzynka", listOf("At Sniezka", "In Ustrzyki Gorne", "At the Dukla Pass"), QuizDifficulty.Expert),
         ask("najwiecej_wulkanow", "Which country has the most active volcanoes?", "Indonesia", listOf("Japan", "Chile", "USA"), QuizDifficulty.Expert),
         ask("linia_wallace", "What does the Wallace Line separate?", "Asian fauna from Australian fauna", listOf("Pacific time zones", "African tectonic plates", "Humid climate from dry climate"), QuizDifficulty.Expert),
         ask("panstwo_najdluzsze", "Which country is the longest from north to south?", "Chile", listOf("Norway", "Brazil", "Russia"), QuizDifficulty.Expert),

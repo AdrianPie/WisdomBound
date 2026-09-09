@@ -25,8 +25,18 @@ enum class QuizDifficulty(
  * Temat pytania. Dwa ostatnie wpisy NIE MAJA pokrycia w [QuizBank] - powstaja z materialu gracza
  * (fiszki z czytelni, wlasna talia), wiec wszedzie, gdzie wybiera sie temat z wbudowanego banku,
  * chodzi o [QuizCategory.builtin], a nie o cale `entries`.
+ *
+ * [localeCode] oznacza temat LOKALNY - sensowny tylko dla gracza w danym jezyku. Gra jest wydana
+ * globalnie, a pytanie "w ktorym roku wybuchlo powstanie styczniowe?" dla gracza z Teksasu nie jest
+ * trudne, tylko niemozliwe i nudne. Zamiast rozpuszczac takie pytania po History/Literature
+ * (gdzie kazdy je dostawal), maja wlasna kategorie, ktora pokazuje sie wylacznie przy pasujacym
+ * jezyku aplikacji - patrz [builtinFor].
  */
-enum class QuizCategory(val label: String, val inBuiltinBank: Boolean = true) {
+enum class QuizCategory(
+    val label: String,
+    val inBuiltinBank: Boolean = true,
+    val localeCode: String? = null
+) {
     Biology("Biology"),
     Animals("Animals"),
     History("History"),
@@ -40,15 +50,33 @@ enum class QuizCategory(val label: String, val inBuiltinBank: Boolean = true) {
     Literature("Literature"),
     Technology("Technology"),
     Mythology("Mythology"),
+
+    /** Temat lokalny: historia, kultura i geografia Polski. Widoczny tylko przy jezyku polskim. */
+    Poland("Poland", localeCode = "pl"),
+
     /** Slowka zapisane w czytniku - budowane w locie z fiszek, patrz [WordQuizBank]. */
     Vocabulary("Words", inBuiltinBank = false),
 
     /** Pytania z wlasnej talii gracza - patrz [com.lernhero.domain.quiz.custom.CustomDeck]. */
     Custom("Custom", inBuiltinBank = false);
 
+    /** Czy ten temat wolno pokazac graczowi grajacemu w jezyku [languageCode]. */
+    fun availableIn(languageCode: String): Boolean =
+        localeCode == null || localeCode == languageCode
+
     companion object {
-        /** Tematy, ktore realnie maja pytania w [QuizBank] - jedyne, ktore wolno pokazac do wyboru. */
+        /**
+         * Tematy, ktore realnie maja pytania w [QuizBank] - LACZNIE z lokalnymi. To jest widok
+         * "co jest w banku" (uzywaja go testy pokrycia), a nie "co pokazac graczowi" - do tego
+         * sluzy [builtinFor].
+         */
         val builtin: List<QuizCategory> get() = entries.filter { it.inBuiltinBank }
+
+        /**
+         * Tematy do pokazania graczowi w danym jezyku: bank minus kategorie lokalne innych jezykow.
+         */
+        fun builtinFor(languageCode: String): List<QuizCategory> =
+            builtin.filter { it.availableIn(languageCode) }
     }
 }
 

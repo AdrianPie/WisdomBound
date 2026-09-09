@@ -25,16 +25,11 @@ object TechnologyQuestionsExtra {
     val all: List<QuizEntry> = listOf(
 
         /* ------------------------------- Easy ------------------------------- */
-        ask("klawiatura", "What is a keyboard used for?", "Entering text", listOf("Displaying images", "Storing files", "Powering the computer"), QuizDifficulty.Easy),
         ask("ram_rola", "What is RAM used for?", "Temporarily holding data while the computer runs", listOf("Permanently storing files", "Cooling the processor", "Displaying images"), QuizDifficulty.Easy),
         ask("dysk_twardy", "What stores data after the computer is turned off?", "A drive", listOf("RAM", "The processor", "The graphics card"), QuizDifficulty.Easy),
-        ask("email_znak", "Which symbol always appears in an email address?", "The @ sign", listOf("The # sign", "An asterisk *", "A percent sign %"), QuizDifficulty.Easy),
-        ask("przegladarka", "Which of these programs is a web browser?", "Firefox", listOf("Excel", "Photoshop", "Spotify"), QuizDifficulty.Easy),
         ask("system_windows", "Which company makes Windows?", "Microsoft", listOf("Apple", "Google", "IBM"), QuizDifficulty.Easy),
         ask("gps_rola", "What is GPS used for?", "Determining location", listOf("Encrypting data", "Charging a battery", "Compressing photos"), QuizDifficulty.Easy),
         ask("bluetooth", "What is Bluetooth used for?", "Short-range wireless connectivity", listOf("Connecting to a satellite", "Powering devices", "3D printing"), QuizDifficulty.Easy),
-        ask("plik_jpg", "What is a file with a .jpg extension?", "An image", listOf("A text document", "A program", "A spreadsheet"), QuizDifficulty.Easy),
-        ask("haslo_bezpieczne", "Which password is the safest?", "A long phrase of varied characters", listOf("123456", "password", "Your name and birth year"), QuizDifficulty.Easy),
         ask("chmura", "What does storing files 'in the cloud' mean?", "On servers accessible over the internet", listOf("On a local drive", "In RAM", "On a CD"), QuizDifficulty.Easy),
         ask("ikona_dysk", "What does a floppy disk icon usually mean in software?", "Save", listOf("Print", "Delete", "Undo"), QuizDifficulty.Easy),
 
@@ -44,7 +39,7 @@ object TechnologyQuestionsExtra {
         ask("https_co", "What does HTTPS add over HTTP?", "Encryption of the connection", listOf("Faster downloads", "Automatic translation", "Image compression"), QuizDifficulty.Medium),
         ask("gpu_rola", "What is a graphics card responsible for?", "Calculations related to images", listOf("Storing files", "Connecting to the internet", "Powering the motherboard"), QuizDifficulty.Medium),
         ask("ssd_hdd", "How does an SSD differ from a classic HDD?", "It has no moving parts and is faster", listOf("It always has more capacity", "It only works in laptops", "It needs no power"), QuizDifficulty.Medium),
-        ask("open_source", "What does open-source software mean?", "The source code is public", listOf("It's always paid", "It only works online", "It has no license"), QuizDifficulty.Medium),
+        ask("linux_torvalds", "Who released the first version of the Linux kernel in 1991?", "Linus Torvalds", listOf("Richard Stallman", "Ken Thompson", "Andrew Tanenbaum"), QuizDifficulty.Medium),
         ask("kompilator", "What does a compiler do?", "Translates source code into machine code", listOf("Runs websites", "Tests hardware", "Draws the interface"), QuizDifficulty.Medium),
         ask("baza_danych", "What is the SQL language used for?", "Querying a database", listOf("Styling web pages", "3D animation", "Network configuration"), QuizDifficulty.Medium),
         ask("css_rola", "What is CSS used for?", "Describing how pages look", listOf("Application logic", "Storing data", "Network connections"), QuizDifficulty.Medium),

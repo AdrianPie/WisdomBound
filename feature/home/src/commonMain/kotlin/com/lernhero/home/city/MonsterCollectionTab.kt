@@ -31,8 +31,12 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.geometry.CornerRadius
+import androidx.compose.ui.graphics.PathEffect
 import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
@@ -41,6 +45,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.lernhero.domain.combat.StatType
 import com.lernhero.domain.item.Item
+import com.lernhero.domain.item.ItemInstance
+import com.lernhero.domain.item.resolve
 import com.lernhero.domain.item.ItemSlot
 import com.lernhero.domain.item.catalog.MonsterGear
 import com.lernhero.domain.monster.CompanionSpell
@@ -49,9 +55,11 @@ import com.lernhero.domain.monster.MonsterEquipment
 import com.lernhero.domain.monster.MonsterSpellLevels
 import com.lernhero.game.character.MonsterVisualPresets
 import com.lernhero.home.player.OwnedMonster
+import com.lernhero.home.ui.FloatingIsland
 import com.lernhero.home.ui.ParchmentPalette
 import com.lernhero.home.ui.RarityPalette
 import com.lernhero.home.ui.badgeColor
+import com.lernhero.home.ui.format
 import com.lernhero.home.ui.icon
 import com.lernhero.home.ui.shortLabel
 import com.lernhero.shared.theme.FontFirst
@@ -87,15 +95,17 @@ fun MonsterCollectionTab(
     money: Int,
     essence: Int,
     equipmentOf: (String) -> Map<String, String>,
-    /** Poziomy ulepszen sprzetu (id -> 0..10) - karta pokazuje statystyki juz z nimi. */
-    upgrades: Map<String, Int>,
-    ownedGear: List<String>,
+    /**
+     * Plecak sprzetu kompanow jako SZTUKI - poziom ulepszenia siedzi w egzemplarzu, a sloty
+     * wskazuja na uid, wiec bez tej listy nie da sie powiedziec, co kompan ma na sobie.
+     */
+    bag: List<ItemInstance>,
     gearTakenBy: (String) -> Set<String>,
     onUpgrade: (OwnedMonster) -> Unit,
     onAscend: (OwnedMonster) -> Unit,
     onDissolve: (OwnedMonster) -> Unit,
     onUpgradeSpell: (OwnedMonster, CompanionSpell) -> Unit,
-    onEquip: (String, Item) -> Unit,
+    onEquip: (String, ItemInstance) -> Unit,
     onUnequipSlot: (String, ItemSlot) -> Unit,
     onUnequipAll: (String) -> Unit,
     onAutoEquip: (String) -> Unit,
@@ -132,7 +142,7 @@ fun MonsterCollectionTab(
         Board(
             monster = selected,
             equipment = equipment,
-            upgrades = upgrades,
+            bag = bag,
             money = money,
             essence = essence,
             pane = pane,
@@ -144,7 +154,7 @@ fun MonsterCollectionTab(
             onSlotClick = { slot ->
                 // Zajety slot ZDEJMUJE, pusty otwiera liste - dwa rozne gesty na jednym
                 // kafelku byłyby nie do odgadniecia.
-                if (MonsterEquipment.itemIn(equipment, slot) != null) onUnequipSlot(selected.card.id, slot)
+                if (MonsterEquipment.instanceIn(equipment, slot, bag) != null) onUnequipSlot(selected.card.id, slot)
                 else pickerSlot = slot
             },
             onUnequipAll = { onUnequipAll(selected.card.id) },
@@ -160,10 +170,13 @@ fun MonsterCollectionTab(
 
     pickerSlot?.let { slot ->
         val taken = gearTakenBy(selected.card.id)
-        val candidates = ownedGear
-            .mapNotNull { MonsterGear.byId(it) }
-            .filter { it.slot == slot && it.id !in taken }
-            .sortedByDescending { MonsterEquipment.scoreFor(it, selected.card.element) }
+        // Kandydaci to SZTUKI, nie typy: dwie kopie tego samego pazura to dwie osobne pozycje,
+        // bo kazda moze byc na innym poziomie i tylko jedna z nich jest wolna.
+        val candidates = bag
+            .filter { it.uid !in taken }
+            .mapNotNull { instance -> instance.resolve()?.let { instance to it } }
+            .filter { (_, item) -> item.slot == slot }
+            .sortedByDescending { (_, item) -> MonsterEquipment.scoreFor(item, selected.card.element) }
 
         GearPicker(
             slot = slot,
@@ -189,20 +202,15 @@ private fun Stage(
     modifier: Modifier = Modifier
 ) {
     val card = monster.card
-    val accent = card.element.badgeColor()
 
+    // Bez tla i bez ramki - tlo Summon Center jest globalne ([SummonCenterScreen]) i ma byc
+    // widoczne wszedzie, a nie wycinane w prostokat tej sceny.
     Box(
-        modifier = modifier
-            .fillMaxWidth()
-            .clip(RoundedCornerShape(12.dp))
-            .background(Brush.verticalGradient(listOf(accent.copy(alpha = 0.45f), Color(0xFF19100A))))
-            .border(2.dp, ParchmentPalette.Frame, RoundedCornerShape(12.dp))
+        modifier = modifier.fillMaxWidth()
     ) {
-        Image(
-            painter = painterResource(MonsterVisualPresets.forSpecies(card.spriteKey).drawable),
-            contentDescription = null,
-            contentScale = ContentScale.Fit,
-            modifier = Modifier.align(Alignment.Center).fillMaxHeight().padding(vertical = 20.dp)
+        FloatingIsland(
+            spritePainter = painterResource(MonsterVisualPresets.forSpecies(card.spriteKey).drawable),
+            modifier = Modifier.fillMaxSize()
         )
 
         // Podpis lezy NA scenie, a nie nad nia - to on oszczedza pionowy pas, ktorego brakuje
@@ -298,7 +306,7 @@ private val PANE_HEIGHT = 96.dp
 private fun Board(
     monster: OwnedMonster,
     equipment: Map<String, String>,
-    upgrades: Map<String, Int>,
+    bag: List<ItemInstance>,
     money: Int,
     essence: Int,
     pane: Pane,
@@ -327,7 +335,7 @@ private fun Board(
                 Pane.Info -> InfoPane(
                     monster = monster,
                     equipment = equipment,
-                    upgrades = upgrades,
+                    bag = bag,
                     money = money,
                     essence = essence,
                     onUpgrade = onUpgrade,
@@ -339,6 +347,7 @@ private fun Board(
                 Pane.Gear -> GearPane(
                     monster = monster,
                     equipment = equipment,
+                    bag = bag,
                     onSlotClick = onSlotClick,
                     onUnequipAll = onUnequipAll,
                     onAutoEquip = onAutoEquip
@@ -399,7 +408,7 @@ private fun PaneTabs(pane: Pane, onPane: (Pane) -> Unit) {
 private fun InfoPane(
     monster: OwnedMonster,
     equipment: Map<String, String>,
-    upgrades: Map<String, Int>,
+    bag: List<ItemInstance>,
     money: Int,
     essence: Int,
     onUpgrade: () -> Unit,
@@ -409,7 +418,7 @@ private fun InfoPane(
 ) {
     // Statystyki pokazujemy JUZ z ekwipunkiem - karta ma mowic, czym kompan naprawde walczy,
     // a nie ile mial na sucho przed zalozeniem czegokolwiek.
-    val gear = MonsterEquipment.statsOf(equipment, monster.card.element, upgrades)
+    val gear = MonsterEquipment.statsOf(equipment, monster.card.element, bag)
     val hp = monster.hp + gear[StatType.MaxHp].toInt()
     val attack = monster.attack + gear[StatType.Attack].toInt()
     val armor = (gear[StatType.DamageReduction] * 100f).toInt()
@@ -658,6 +667,7 @@ private fun TinyButton(
 private fun GearPane(
     monster: OwnedMonster,
     equipment: Map<String, String>,
+    bag: List<ItemInstance>,
     onSlotClick: (ItemSlot) -> Unit,
     onUnequipAll: () -> Unit,
     onAutoEquip: () -> Unit
@@ -674,6 +684,7 @@ private fun GearPane(
                 GearSlot(
                     slot = slot,
                     equipment = equipment,
+                    bag = bag,
                     element = monster.card.element,
                     modifier = Modifier.weight(1f),
                     onClick = { onSlotClick(slot) }
@@ -707,54 +718,81 @@ private fun GearPane(
 private fun GearSlot(
     slot: ItemSlot,
     equipment: Map<String, String>,
+    bag: List<ItemInstance>,
     element: Element,
     modifier: Modifier = Modifier,
     onClick: () -> Unit
 ) {
-    val item = MonsterEquipment.itemIn(equipment, slot)
+    val item = MonsterEquipment.itemIn(equipment, slot, bag)
     // Niezgodny zywiol podswietlamy juz na slocie - inaczej gracz zobaczy kare dopiero
     // w liczbach i nie skojarzy jej z konkretnym przedmiotem.
     val mismatch = item != null && MonsterGear.elementFor(item.id).let { it != null && it != element }
+
+    // Pusty slot ma sie roznic TLEM, nie drobnym znaczkiem w rogu. Wczesniej pusty i zajety
+    // wygladaly identycznie (ta sama ciemna plomba, ta sama ramka, przygaszona ikonka slotu w
+    // srodku) i jedyna roznica byla zielona plakietka 13 dp - na pergaminie nie do wylapania.
+    // Teraz: zajety = ciemne gniazdo z ramka rzadkosci, pusty = jasne wglebienie z PRZERYWANA
+    // ramka. Roznice widac z drugiego konca ekranu, bez czytania.
+    val shape = RoundedCornerShape(8.dp)
     val frame = when {
         mismatch -> Color(0xFF9E2B20)
         item != null -> RarityPalette.frame(item.rarity)
-        else -> ParchmentPalette.CardEdge
+        else -> ParchmentPalette.FrameLight
     }
 
-    Box(modifier = modifier, contentAlignment = Alignment.BottomEnd) {
-        Box(
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(44.dp)
-                .clip(RoundedCornerShape(8.dp))
-                .background(ParchmentPalette.SlotFill)
-                .border(2.dp, frame, RoundedCornerShape(8.dp))
-                .clickable(onClick = onClick),
-            contentAlignment = Alignment.Center
-        ) {
-            if (item != null) {
-                Text(text = item.icon(), fontSize = 20.sp)
-            } else {
-                // Szary zarys mowi, CO wchodzi w ten slot - sam pusty kwadrat nie mowi nic,
-                // a na etykiety pod spodem nie ma juz miejsca.
-                Text(text = slot.slotGlyph(), fontSize = 16.sp, modifier = Modifier.alpha(0.35f))
-            }
-        }
-        if (item == null) {
-            Box(
-                modifier = Modifier
-                    .padding(2.dp)
-                    .size(13.dp)
-                    .clip(RoundedCornerShape(4.dp))
-                    .background(Color(0xFF57C24A))
-                    .border(1.dp, ParchmentPalette.Frame, RoundedCornerShape(4.dp)),
-                contentAlignment = Alignment.Center
+    Box(
+        modifier = modifier
+            .fillMaxWidth()
+            .height(GEAR_SLOT_HEIGHT)
+            .clip(shape)
+            .background(if (item != null) ParchmentPalette.SlotFill else ParchmentPalette.Inset)
+            .then(
+                if (item != null) {
+                    Modifier.border(2.dp, frame, shape)
+                } else {
+                    // Przerywana ramka to uniwersalny znak "tu czegos brakuje" - Compose nie ma
+                    // jej w border(), wiec rysujemy ja recznie.
+                    Modifier.drawBehind {
+                        drawRoundRect(
+                            color = frame,
+                            cornerRadius = CornerRadius(8.dp.toPx()),
+                            style = Stroke(
+                                width = 2.dp.toPx(),
+                                pathEffect = PathEffect.dashPathEffect(
+                                    floatArrayOf(5.dp.toPx(), 4.dp.toPx())
+                                )
+                            )
+                        )
+                    }
+                }
+            )
+            .clickable(onClick = onClick),
+        contentAlignment = Alignment.Center
+    ) {
+        if (item != null) {
+            Text(text = item.icon(), fontSize = 22.sp)
+        } else {
+            // Pusty slot dalej mowi, CO w niego wchodzi - ale juz jako blady zarys na jasnym tle,
+            // z plusem obok, zeby nie dalo sie go pomylic z zalozonym przedmiotem.
+            Row(
+                horizontalArrangement = Arrangement.spacedBy(1.dp),
+                verticalAlignment = Alignment.CenterVertically
             ) {
-                Text(text = "+", color = Color.White, fontSize = 9.sp, fontWeight = FontWeight.Bold)
+                Text(text = slot.slotGlyph(), fontSize = 15.sp, modifier = Modifier.alpha(0.30f))
+                Text(
+                    text = "+",
+                    color = ParchmentPalette.InkMuted,
+                    fontFamily = FontPixel(),
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 14.sp
+                )
             }
         }
     }
 }
+
+/** Wysokosc kafla slotu - o oczko wyzszy niz wczesniej, bo ikona 20 sp gubila sie w 44 dp. */
+private val GEAR_SLOT_HEIGHT = 50.dp
 
 /** Podpowiedz, co wchodzi w slot - szary zarys zamiast pustego kwadratu. */
 private fun ItemSlot.slotGlyph(): String = when (this) {
@@ -942,9 +980,10 @@ private fun MiniAvatar(
 @Composable
 private fun GearPicker(
     slot: ItemSlot,
-    items: List<Item>,
+    /** Wolne SZTUKI sparowane z ich przedmiotem (juz z poziomem ulepszenia tej sztuki). */
+    items: List<Pair<ItemInstance, Item>>,
     element: Element,
-    onPick: (Item) -> Unit,
+    onPick: (ItemInstance) -> Unit,
     onDismiss: () -> Unit
 ) {
     Box(
@@ -981,7 +1020,7 @@ private fun GearPicker(
                     textAlign = TextAlign.Center
                 )
             } else {
-                items.forEach { item ->
+                items.forEach { (instance, item) ->
                     val matches = MonsterGear.elementFor(item.id).let { it == null || it == element }
                     Row(
                         modifier = Modifier
@@ -989,7 +1028,7 @@ private fun GearPicker(
                             .clip(RoundedCornerShape(8.dp))
                             .background(ParchmentPalette.Inset)
                             .border(2.dp, RarityPalette.frame(item.rarity), RoundedCornerShape(8.dp))
-                            .clickable { onPick(item) }
+                            .clickable { onPick(instance) }
                             .padding(6.dp),
                         horizontalArrangement = Arrangement.spacedBy(7.dp),
                         verticalAlignment = Alignment.CenterVertically
@@ -997,11 +1036,27 @@ private fun GearPicker(
                         Text(text = item.icon(), fontSize = 18.sp)
                         Column(modifier = Modifier.weight(1f)) {
                             Text(
-                                text = item.name,
+                                // Poziom przy nazwie: dwie kopie tego samego pazura roznia sie
+                                // tylko nim, wiec bez niego picker pokazywalby dwa identyczne wiersze.
+                                text = if (instance.level > 0) "${item.name} +${instance.level}" else item.name,
                                 color = ParchmentPalette.Ink,
                                 fontFamily = FontFirst(),
                                 fontWeight = FontWeight.Bold,
                                 fontSize = 11.sp
+                            )
+                            // Liczby, ktore ten pazur naprawde daje - bez nich picker byl lista
+                            // nazw i gracz wybieral po ikonie.
+                            Text(
+                                text = item.stats.asMap()
+                                    .filterValues { it != 0f }
+                                    .entries
+                                    .joinToString("  ") { (stat, value) ->
+                                        "${stat.shortLabel()} ${stat.format(value)}"
+                                    },
+                                color = ParchmentPalette.Ink,
+                                fontFamily = FontPixel(),
+                                fontWeight = FontWeight.Bold,
+                                fontSize = 10.sp
                             )
                             Text(
                                 text = if (matches) "Matches element" else "Mismatched element",

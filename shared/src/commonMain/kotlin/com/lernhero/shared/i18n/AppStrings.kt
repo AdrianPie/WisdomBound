@@ -15,6 +15,14 @@ package com.lernhero.shared.i18n
  */
 interface AppStrings {
 
+    /**
+     * Kod jezyka tej wersji tekstow ("en"/"pl"). Trzymany TUTAJ, a nie tylko w [AppLanguageStore],
+     * bo ekrany czytaja jezyk przez [strings] i nie musza wtedy siegac po singleton ze store'a -
+     * a niektore decyzje (np. ktore kategorie quizu pokazac, patrz
+     * [com.lernhero.domain.quiz.QuizCategory.builtinFor]) zaleza od jezyka, nie od pojedynczego napisu.
+     */
+    val languageCode: String
+
     /* ---- common (shared across many screens/dialogs) ---- */
     val commonStart: String
     val commonCancel: String
@@ -96,6 +104,9 @@ interface AppStrings {
 
 /** English - the default and the language the app ships with. */
 object EnStrings : AppStrings {
+
+    override val languageCode = "en"
+
     override val commonStart = "Start"
     override val commonCancel = "Cancel"
     override val commonSave = "Save"
@@ -176,6 +187,9 @@ object EnStrings : AppStrings {
 
 /** Polish - the original dev language, kept as a full alternative. */
 object PlStrings : AppStrings {
+
+    override val languageCode = "pl"
+
     override val commonStart = "Start"
     override val commonCancel = "Anuluj"
     override val commonSave = "Zapisz"

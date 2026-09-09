@@ -3,6 +3,11 @@ package com.lernhero.data
 
 import com.lernhero.domain.craft.CraftCost
 import com.lernhero.domain.craft.ItemUpgrades
+import com.lernhero.domain.item.Inventory
+import com.lernhero.domain.player.AdminAccounts
+import com.lernhero.domain.player.AdminKit
+import com.lernhero.domain.item.base
+import com.lernhero.domain.item.withMigratedItems
 import com.lernhero.domain.item.ItemCatalog
 import com.lernhero.domain.monster.CompanionSpells
 import com.lernhero.domain.monster.MonsterCatalog
@@ -64,9 +69,13 @@ class PlayerRepositoryImpl: PlayerRepository {
                     email = user.email ?: "Unknown",
                     character = character,
                     appearance = appearance,
-                    ownedItems = listOfNotNull(giftItem?.id),
+                    // Nowe konto rodzi sie juz w formacie sztuk - zaden nowy gracz nie przechodzi
+                    // przez migracje starego plecaka.
+                    heroInventory = giftItem?.let { Inventory.add(emptyList(), it.id) } ?: emptyList(),
                     equipment = PlayerEquipment(
-                        equipped = giftItem?.let { mapOf(it.slot.name to it.id) } ?: emptyMap()
+                        equipped = giftItem?.let {
+                            mapOf(it.slot.name to "${it.id}${Inventory.UID_SEPARATOR}0")
+                        } ?: emptyMap()
                     ),
                 )
 
@@ -133,9 +142,10 @@ class PlayerRepositoryImpl: PlayerRepository {
     override suspend fun grantItem(itemId: String): Player? {
         return try {
             val document = playerDocument() ?: return null
-            val player = getPlayer() ?: return null
-            if (itemId in player.ownedItems) return null
-            val updated = player.copy(ownedItems = player.ownedItems + itemId)
+            val player = getPlayer()?.withMigratedItems() ?: return null
+            // Duplikaty sa teraz DOZWOLONE - druga sztuka tego samego przedmiotu to osobny
+            // egzemplarz, ktory mozna zalozyc innemu kompanowi albo ulepszyc niezaleznie.
+            val updated = player.copy(heroInventory = Inventory.add(player.heroInventory, itemId))
             document.set(updated)
             updated
         } catch (e: Exception) {
@@ -158,23 +168,41 @@ class PlayerRepositoryImpl: PlayerRepository {
         }
     }
 
-    override suspend fun craftItem(itemId: String, cost: CraftCost): Player? {
+    override suspend fun grantAdminKit(): Player? {
         return try {
             val document = playerDocument() ?: return null
             val player = getPlayer() ?: return null
+            // Bramka jest TUTAJ, a nie w UI: ekran tylko chowa przycisk, a to zapis decyduje,
+            // czyje konto wolno napelnic.
+            if (!AdminAccounts.isAdmin(player.email)) return null
+            val updated = AdminKit.grant(player)
+            document.set(updated)
+            updated
+        } catch (e: Exception) {
+            null
+        }
+    }
+
+    override suspend fun craftItem(itemId: String, cost: CraftCost): Player? {
+        return try {
+            val document = playerDocument() ?: return null
+            val player = getPlayer()?.withMigratedItems() ?: return null
             // Sprzet kompana idzie do WLASNEJ puli - o tym, ktora to, decyduje samo id
             // (patrz [MonsterGear.isMonsterGear]), wiec ekran nie musi tego przekazywac.
             val forMonster = MonsterGear.isMonsterGear(itemId)
-            val ownedPool = if (forMonster) player.ownedMonsterItems else player.ownedItems
-            if (itemId in ownedPool) return null
             if (!cost.canAfford(player.townResources, player.money)) return null
 
+            // Brak blokady "juz masz": kazde wykucie daje NOWA SZTUKE. To wlasnie po to sa
+            // egzemplarze - zeby dziesieciu kompanow moglo nosic ten sam typ pazura.
             val updated = player.copy(
                 money = player.money - cost.gold,
                 townResources = cost.deductFrom(player.townResources),
-                ownedItems = if (forMonster) player.ownedItems else player.ownedItems + itemId,
-                ownedMonsterItems =
-                    if (forMonster) player.ownedMonsterItems + itemId else player.ownedMonsterItems,
+                heroInventory =
+                    if (forMonster) player.heroInventory
+                    else Inventory.add(player.heroInventory, itemId),
+                monsterInventory =
+                    if (forMonster) Inventory.add(player.monsterInventory, itemId)
+                    else player.monsterInventory,
                 stats = player.stats.copy(itemsCrafted = player.stats.itemsCrafted + 1)
             )
             document.set(updated)
@@ -184,26 +212,28 @@ class PlayerRepositoryImpl: PlayerRepository {
         }
     }
 
-    override suspend fun upgradeItem(itemId: String): Player? {
+    /** [uid] to KONKRETNA sztuka - ulepszenie dotyka jej jednej, a nie wszystkich kopii typu. */
+    override suspend fun upgradeItem(uid: String): Player? {
         return try {
             val document = playerDocument() ?: return null
-            val player = getPlayer() ?: return null
-            val forMonster = MonsterGear.isMonsterGear(itemId)
-            val item = if (forMonster) MonsterGear.byId(itemId) else ItemCatalog.byId(itemId)
-            if (item == null) return null
-            // Ulepszac mozna TYLKO to, co sie ma - inaczej kuznia bylaby skrotem do zdobycia
-            // przedmiotu z pominieciem wykuwania.
-            val ownedPool = if (forMonster) player.ownedMonsterItems else player.ownedItems
-            if (itemId !in ownedPool) return null
+            val player = getPlayer()?.withMigratedItems() ?: return null
 
-            val level = ItemUpgrades.levelOf(player.itemUpgrades, itemId)
-            val cost = ItemUpgrades.nextCost(item, level) ?: return null
+            // Ulepszac mozna TYLKO to, co sie ma - inaczej kuznia bylaby skrotem do zdobycia
+            // przedmiotu z pominieciem wykuwania. Sztuka moze lezec w ktorymkolwiek z plecakow.
+            val forMonster = Inventory.byUid(player.monsterInventory, uid) != null
+            val bag = if (forMonster) player.monsterInventory else player.heroInventory
+            val instance = Inventory.byUid(bag, uid) ?: return null
+            val item = instance.base() ?: return null
+
+            val cost = ItemUpgrades.nextCost(item, instance.level) ?: return null
             if (!cost.canAfford(player.townResources, player.money)) return null
 
+            val raised = Inventory.withLevel(bag, uid, instance.level + 1)
             val updated = player.copy(
                 money = player.money - cost.gold,
                 townResources = cost.deductFrom(player.townResources),
-                itemUpgrades = player.itemUpgrades + (itemId to level + 1)
+                heroInventory = if (forMonster) player.heroInventory else raised,
+                monsterInventory = if (forMonster) raised else player.monsterInventory
             )
             document.set(updated)
             updated
@@ -450,7 +480,9 @@ class PlayerRepositoryImpl: PlayerRepository {
     ): Player? {
         return try {
             val document = playerDocument() ?: return null
-            val player = getPlayer() ?: return null
+            // withMigratedItems: sloty zapisujemy juz jako uid, wiec caly gracz musi byc w nowym
+            // formacie - inaczej polowa kompanow mialaby uid, a polowa stare id z katalogu.
+            val player = getPlayer()?.withMigratedItems() ?: return null
             // Pusty ekwipunek USUWA wpis zamiast zapisywac pusta mape - inaczej dokument
             // gracza rosnie o klucz na kazdego kompana, ktoremu kiedykolwiek zdjeto sprzet.
             val updatedMap =

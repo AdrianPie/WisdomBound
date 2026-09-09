@@ -28,14 +28,9 @@ object ScienceQuestionsExtra {
         ask("woda_wrzenie", "At what temperature does water boil at normal pressure?", "100 C", listOf("80 C", "120 C", "60 C"), QuizDifficulty.Easy),
         ask("woda_zamarza", "At what temperature does water freeze?", "0 C", listOf("-10 C", "4 C", "10 C"), QuizDifficulty.Easy),
         ask("stany_skupienia", "How many basic states of matter are taught in school?", "Three", listOf("Two", "Four", "Five"), QuizDifficulty.Easy),
-        ask("magnes_bieguny", "How many poles does a magnet have?", "Two", listOf("One", "Three", "Four"), QuizDifficulty.Easy),
         ask("tecza_barwy", "How many colors are traditionally listed in a rainbow?", "Seven", listOf("Five", "Six", "Eight"), QuizDifficulty.Easy),
-        ask("slonce_typ", "What is the Sun?", "A star", listOf("A planet", "A comet", "A moon"), QuizDifficulty.Easy),
-        ask("grawitacja_kierunek", "What makes objects fall to the ground?", "Gravity", listOf("Friction", "Pressure", "Magnetism"), QuizDifficulty.Easy),
-        ask("swiatlo_zrodlo", "Which of these light sources is natural?", "The Sun", listOf("A light bulb", "A flashlight", "A phone screen"), QuizDifficulty.Easy),
         ask("dzien_rok", "What causes the cycle of day and night?", "Earth rotating on its own axis", listOf("Earth orbiting the Sun", "The Moon's movement", "Changing distance from the Sun"), QuizDifficulty.Easy),
         ask("pory_roku", "What causes the seasons?", "The tilt of Earth's axis", listOf("Changing distance from the Sun", "The Moon's phase", "Earth's rotation speed"), QuizDifficulty.Easy),
-        ask("cien_powstaje", "When does a shadow form?", "When an object blocks light", listOf("When light bends", "When the air is humid", "When an object is warm"), QuizDifficulty.Easy),
         ask("dzwiek_prozn", "Does sound travel through a vacuum?", "No, it needs a medium", listOf("Yes, just like in air", "Yes, but slower", "Only at high volume"), QuizDifficulty.Easy),
 
         /* ------------------------------ Medium ------------------------------ */

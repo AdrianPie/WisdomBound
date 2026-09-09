@@ -32,17 +32,30 @@ data class Player(
      */
     val stats: GameStats = GameStats(),
     val equipment: PlayerEquipment = PlayerEquipment(),
+
+    /**
+     * Plecak bohatera jako SZTUKI - patrz [com.lernhero.domain.item.ItemInstance]. Zastapil
+     * [ownedItems]; te dwa pola nigdy nie sa uzywane naraz, bo zapis czyta sie przez
+     * [com.lernhero.domain.item.heroBag], ktore samo wybiera nowy format albo przerabia stary.
+     */
+    val heroInventory: List<com.lernhero.domain.item.ItemInstance> = emptyList(),
+
+    /** To samo dla sprzetu kompanow - zastepuje [ownedMonsterItems]. */
+    val monsterInventory: List<com.lernhero.domain.item.ItemInstance> = emptyList(),
+
+    /**
+     * STARY format plecaka bohatera: lista ID z katalogu, po jednej sztuce na przedmiot. Zostaje
+     * WYLACZNIE po to, zeby dokumenty zapisane przed przejsciem na egzemplarze wciaz dawaly sie
+     * wczytac - patrz [com.lernhero.domain.item.heroBag]. Nowy zapis go nie wypelnia.
+     */
     val ownedItems: List<String> = emptyList(),
     /**
-     * Poziom ulepszenia per PRZEDMIOT (id -> 0..10, brak wpisu = 0) - patrz
-     * [com.lernhero.domain.craft.ItemUpgrades]. Jedna mapa na oba katalogi (sprzet bohatera i
-     * kompanow), bo id sa unikalne w calej grze, a poziom znaczy wszedzie to samo.
+     * STARY format poziomow ulepszen: id przedmiotu -> 0..10. Wlasnie ta mapa powodowala, ze
+     * ulepszenie jednego nozyka ulepszalo kazdy nozyk w grze - poziom nalezy teraz do SZTUKI
+     * ([com.lernhero.domain.item.ItemInstance.level]). Zostaje tylko do wczytania starych zapisow.
      */
     val itemUpgrades: Map<String, Int> = emptyMap(),
-    /**
-     * Sprzet kompanow wykuty w kuzni ([com.lernhero.domain.item.catalog.MonsterGear]). Osobna lista
-     * od [ownedItems], zeby plecak bohatera nie zapelnial sie pazurami, ktorych i tak nie zalozy.
-     */
+    /** STARY format plecaka kompanow - zastapiony przez [monsterInventory]. */
     val ownedMonsterItems: List<String> = emptyList(),
     /** Multiset of [MonsterCard] ids the player owns (duplicates allowed). */
     val ownedMonsters: List<String> = emptyList(),
@@ -63,8 +76,12 @@ data class Player(
      */
     val monsterSpellLevels: Map<String, Int> = emptyMap(),
     /**
-     * Ekwipunek kompanow: idKarty -> (nazwaSlotu -> idPrzedmiotu). Puste stringi zamiast typow,
-     * bo tak to ląduje w Firestore - patrz [com.lernhero.domain.monster.MonsterEquipment].
+     * Ekwipunek kompanow: idKarty -> (nazwaSlotu -> uid SZTUKI). Puste stringi zamiast typow, bo
+     * tak to laduje w Firestore - patrz [com.lernhero.domain.monster.MonsterEquipment].
+     *
+     * W starych zapisach stoi tu ID Z KATALOGU zamiast uid; rozroznia je
+     * [com.lernhero.domain.item.Inventory.UID_SEPARATOR] i przerabia
+     * [com.lernhero.domain.item.migratedMonsterEquipment].
      */
     val monsterEquipment: Map<String, Map<String, String>> = emptyMap(),
     /** Companion slots for the pre-battle party. Hero is implicit; entries are [MonsterCard] ids or null. */

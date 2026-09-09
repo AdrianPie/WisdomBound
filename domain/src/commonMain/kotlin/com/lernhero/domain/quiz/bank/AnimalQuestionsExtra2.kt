@@ -29,14 +29,7 @@ object AnimalQuestionsExtra2 {
         ask("kot_widzenie", "When do cats see especially well?", "At dusk and in darkness", listOf("Only at noon", "Only underwater", "They can't see in the dark at all"), QuizDifficulty.Easy),
         ask("krolik_zeby", "What do a rabbit's teeth do throughout its life?", "Grow continuously", listOf("Fall out every year", "Not grow at all", "Change color"), QuizDifficulty.Easy),
         ask("wiewiorka_zapasy", "What do squirrels do in the fall?", "Store nuts", listOf("Migrate south", "Fall into deep sleep", "Shed their fur"), QuizDifficulty.Easy),
-        ask("kura_jajo", "What does a hen lay?", "Eggs", listOf("Milk", "Honey", "Wool"), QuizDifficulty.Easy),
-        ask("owca_produkt", "What is obtained from sheep?", "Wool", listOf("Honey", "Silk", "Wax"), QuizDifficulty.Easy),
-        ask("pszczola_produkt", "What do bees produce?", "Honey", listOf("Wool", "Silk", "Milk"), QuizDifficulty.Easy),
         ask("jedwabnik", "What is silk made from?", "Silkworm cocoons", listOf("Sheep's wool", "Plant fibers", "Goat hair"), QuizDifficulty.Easy),
-        ask("zaba_srodowisko", "Where do frogs usually live?", "In water and on land", listOf("Only in the sea", "Only in the desert", "Only in the air"), QuizDifficulty.Easy),
-        ask("waz_poruszanie", "How does a snake move?", "Slithering without legs", listOf("Hopping on two legs", "Flying", "Only swimming"), QuizDifficulty.Easy),
-        ask("kot_futro_kolor", "What determines a cat's coat coloring?", "Genes", listOf("Diet", "Age", "Weather"), QuizDifficulty.Easy),
-        ask("pies_rasy", "How do dog breeds differ?", "In appearance and traits bred by humans", listOf("In biological species", "In number of legs", "In how they breathe"), QuizDifficulty.Easy),
 
         /* ------------------------------ Medium ------------------------------ */
         ask("mrowkolew", "How does an antlion larva hunt?", "It digs a pit trap in the sand and waits for prey", listOf("It chases prey on foot", "It flies and catches prey mid-air", "It spins a web like a spider"), QuizDifficulty.Medium),

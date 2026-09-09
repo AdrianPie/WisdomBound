@@ -30,11 +30,9 @@ object MathQuestionsExtra {
         ask("100_7", "What is 100 - 37?", "63", listOf("73", "67", "57"), QuizDifficulty.Easy),
         ask("144_12", "What is 144 / 12?", "12", listOf("14", "11", "16"), QuizDifficulty.Easy),
         ask("polowa_250", "What is half of 250?", "125", listOf("120", "135", "150"), QuizDifficulty.Easy),
-        ask("boki_kwadratu", "How many sides does a square have?", "Four", listOf("Three", "Five", "Six"), QuizDifficulty.Easy),
         ask("boki_pieciokata", "How many sides does a pentagon have?", "Five", listOf("Four", "Six", "Seven"), QuizDifficulty.Easy),
         ask("obwod_kwadratu", "What is the perimeter of a square with side 5?", "20", listOf("25", "10", "15"), QuizDifficulty.Easy),
         ask("pole_kwadratu", "What is the area of a square with side 6?", "36", listOf("24", "12", "30"), QuizDifficulty.Easy),
-        ask("liczba_parzysta", "Which of these numbers is even?", "38", listOf("27", "45", "19"), QuizDifficulty.Easy),
         ask("polowa_setki", "What is 50% of 80?", "40", listOf("30", "45", "60"), QuizDifficulty.Easy),
         ask("godzina_minuty", "How many minutes are in an hour and a half?", "90", listOf("60", "100", "120"), QuizDifficulty.Easy),
         ask("liczba_rzymska_x", "What number does the Roman numeral X represent?", "10", listOf("5", "50", "100"), QuizDifficulty.Easy),
@@ -60,7 +58,6 @@ object MathQuestionsExtra {
 
         /* ------------------------------ Hard ------------------------------- */
         ask("pitagoras", "What does the Pythagorean theorem concern?", "The relationship between the sides of a right triangle", listOf("The sum of angles in a circle", "A trapezoid's area", "Similarity of shapes"), QuizDifficulty.Hard),
-        ask("przeciwprostokatna", "What is the hypotenuse of a triangle with legs 3 and 4?", "5", listOf("6", "7", "5.5"), QuizDifficulty.Hard),
         ask("objetosc_szescianu", "What is the volume of a cube with edge 4?", "64", listOf("16", "48", "32"), QuizDifficulty.Hard),
         ask("objetosc_walca", "What is the formula for a cylinder's volume?", "pi x r squared x h", listOf("2 x pi x r x h", "pi x r x h", "pi x d x h"), QuizDifficulty.Hard),
         ask("silnia_6", "What is 6! (6 factorial)?", "720", listOf("120", "360", "1440"), QuizDifficulty.Hard),

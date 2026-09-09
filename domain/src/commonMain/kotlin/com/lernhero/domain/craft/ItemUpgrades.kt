@@ -1,18 +1,19 @@
 package com.lernhero.domain.craft
 
 import com.lernhero.domain.item.Item
-import com.lernhero.domain.item.ItemCatalog
-import com.lernhero.domain.item.catalog.MonsterGear
 
 /**
- * Ulepszanie WYKUTEGO przedmiotu: ten sam miecz, tylko mocniejszy. Poziom trzymamy per id
- * przedmiotu ([com.lernhero.domain.player.Player.itemUpgrades]), a nie jako osobna kopie
- * przedmiotu - dzieki temu przestrojenie liczb w katalogu dziala od razu na wszystkich zapisach,
- * tak samo jak przy talentach i poziomach kompanow.
+ * Ulepszanie WYKUTEJ SZTUKI: ten sam miecz, tylko mocniejszy.
  *
- * Ulepszanie NIE zjada duplikatow przedmiotow, bo plecak bohatera ich nie ma - `ownedItems` to
- * zbior id, a [com.lernhero.domain.repository.PlayerRepository.grantItem] odrzuca powtorki. Zamiast
- * tego kosztem sa surowce, ktore gracz i tak zbiera na wyprawach.
+ * Poziom nalezy do egzemplarza ([com.lernhero.domain.item.ItemInstance.level]), a nie do typu
+ * przedmiotu. Wczesniej siedzial w mapie `id -> poziom`, wiec podniesienie jednego nozyka
+ * podnosilo kazdy nozyk w grze; teraz dwie kopie tego samego miecza moga stac na roznych poziomach.
+ *
+ * Sam katalog zostaje zrodlem liczb BAZOWYCH - przestrojenie go dziala od razu na wszystkich
+ * zapisach, tak samo jak przy talentach i poziomach kompanow.
+ *
+ * Kosztem ulepszania sa surowce, a nie duplikaty: duplikat to teraz pelnoprawny przedmiot dla
+ * kolejnego kompana, wiec zjadanie go byloby kara za granie szeroko.
  */
 object ItemUpgrades {
 
@@ -28,6 +29,10 @@ object ItemUpgrades {
     /** Od tego poziomu do kosztu dochodzi esencja - to jest ta "sciana" w drugiej polowie toru. */
     const val ESSENCE_FROM_LEVEL = 6
 
+    /**
+     * Poziom ze STAREGO formatu zapisu (mapa `id -> poziom`). Uzywane juz wylacznie przez
+     * migracje plecaka - patrz [com.lernhero.domain.item.heroBag].
+     */
     fun levelOf(upgrades: Map<String, Int>, itemId: String): Int =
         (upgrades[itemId] ?: MIN_LEVEL).coerceIn(MIN_LEVEL, MAX_LEVEL)
 
@@ -66,11 +71,5 @@ object ItemUpgrades {
     fun upgraded(item: Item, level: Int): Item {
         if (level <= MIN_LEVEL) return item
         return item.copy(stats = item.stats.scaled(multiplierFor(level)))
-    }
-
-    /** Przedmiot z dowolnego katalogu (bohater albo kompani) juz po naliczeniu poziomu. */
-    fun upgradedById(itemId: String, upgrades: Map<String, Int>): Item? {
-        val item = ItemCatalog.byId(itemId) ?: MonsterGear.byId(itemId) ?: return null
-        return upgraded(item, levelOf(upgrades, itemId))
     }
 }

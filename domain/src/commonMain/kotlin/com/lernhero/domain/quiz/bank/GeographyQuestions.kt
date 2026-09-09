@@ -26,31 +26,10 @@ object GeographyQuestions {
 
         /* ------------------------------- Easy ------------------------------- */
         ask(
-            id = "najdluzsza_rzeka_pl",
-            prompt = "Which river is the longest in Poland?",
-            correct = "Vistula",
-            wrong = listOf("Oder", "Warta", "Bug"),
-            difficulty = QuizDifficulty.Easy
-        ),
-        ask(
-            id = "najwyzszy_szczyt_pl",
-            prompt = "What is the name of Poland's highest peak?",
-            correct = "Rysy",
-            wrong = listOf("Giewont", "Sniezka", "Babia Gora"),
-            difficulty = QuizDifficulty.Easy
-        ),
-        ask(
             id = "kontynenty",
             prompt = "How many continents are there on Earth?",
             correct = "7",
             wrong = listOf("5", "6", "8"),
-            difficulty = QuizDifficulty.Easy
-        ),
-        ask(
-            id = "najwiekszy_ocean",
-            prompt = "Which ocean is the largest?",
-            correct = "Pacific",
-            wrong = listOf("Atlantic", "Indian", "Arctic"),
             difficulty = QuizDifficulty.Easy
         ),
         ask(
@@ -98,13 +77,6 @@ object GeographyQuestions {
             difficulty = QuizDifficulty.Medium
         ),
         ask(
-            id = "najwieksza_wyspa",
-            prompt = "Which island is the largest in the world?",
-            correct = "Greenland",
-            wrong = listOf("Madagascar", "Borneo", "New Guinea"),
-            difficulty = QuizDifficulty.Medium
-        ),
-        ask(
             id = "wulkan_wl",
             prompt = "What is the name of the famous volcano near Naples?",
             correct = "Vesuvius",
@@ -132,13 +104,6 @@ object GeographyQuestions {
             prompt = "On which continent is the Atacama Desert?",
             correct = "South America",
             wrong = listOf("Africa", "Asia", "Australia"),
-            difficulty = QuizDifficulty.Hard
-        ),
-        ask(
-            id = "ciesnina",
-            prompt = "Which strait separates Europe from Africa?",
-            correct = "Strait of Gibraltar",
-            wrong = listOf("Bosphorus", "Bering Strait", "Strait of Hormuz"),
             difficulty = QuizDifficulty.Hard
         ),
         ask(

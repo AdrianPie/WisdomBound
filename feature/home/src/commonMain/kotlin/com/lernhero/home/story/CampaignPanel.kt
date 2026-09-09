@@ -41,6 +41,7 @@ import com.lernhero.domain.story.StoryStageCatalog
 import com.lernhero.domain.story.StoryWorld
 import com.lernhero.domain.story.StoryWorldCatalog
 import com.lernhero.game.character.MonsterVisualPresets
+import com.lernhero.home.ui.FantasyFrame
 import com.lernhero.shared.theme.FontFirst
 import com.lernhero.shared.theme.FontPixel
 import org.jetbrains.compose.resources.painterResource
@@ -77,8 +78,9 @@ fun CampaignPanel(
     onBattle: () -> Unit,
     modifier: Modifier = Modifier
 ) {
-    Column(
-        modifier = modifier
+    FantasyFrame(modifier = modifier.fillMaxWidth(), inset = 16.dp) {
+      Column(
+        modifier = Modifier
             .fillMaxWidth()
             .clip(RoundedCornerShape(14.dp))
             .background(Panel)
@@ -108,6 +110,7 @@ fun CampaignPanel(
             cleared = cleared,
             onSelectStage = onSelectStage
         )
+      }
     }
 }
 

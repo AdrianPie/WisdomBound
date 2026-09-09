@@ -17,11 +17,26 @@ object EstimationQuestionsExtra {
         unit = "year"
     )
 
+    /**
+     * Wariant lokalny: pytanie idzie na zdarzenie bossa TYLKO u gracza w danym jezyku
+     * (patrz [EstimationEntry.localeCode]). Bez tego data z historii jednego kraju trafialaby
+     * do gracza, ktory nie ma jak jej znac.
+     */
+    private fun localYear(id: String, prompt: String, value: Int, locale: String) = EstimationEntry(
+        id = "est2_$id",
+        prompt = prompt,
+        minValue = ESTIMATION_YEAR_MIN,
+        maxValue = ESTIMATION_YEAR_MAX,
+        correctValue = value,
+        unit = "year",
+        localeCode = locale
+    )
+
     val all: List<EstimationEntry> = listOf(
-        year("chrzest_polski", "In which year did Poland adopt Christianity?", 966),
-        year("grunwald", "In which year was the Battle of Grunwald fought?", 1410),
-        year("konstytucja_3maja", "In which year was the Constitution of May 3 adopted?", 1791),
-        year("niepodleglosc", "In which year did Poland regain independence?", 1918),
+        localYear("chrzest_polski", "In which year did Poland adopt Christianity?", 966, locale = "pl"),
+        localYear("grunwald", "In which year was the Battle of Grunwald fought?", 1410, locale = "pl"),
+        localYear("konstytucja_3maja", "In which year was the Constitution of May 3 adopted?", 1791, locale = "pl"),
+        localYear("niepodleglosc", "In which year did Poland regain independence?", 1918, locale = "pl"),
         year("ww2_wybuch", "In which year did World War II break out?", 1939),
         year("mur_berlinski", "In which year did the Berlin Wall fall?", 1989),
         year("titanic", "In which year did the Titanic sink?", 1912),
@@ -35,7 +50,7 @@ object EstimationQuestionsExtra {
         year("gutenberg", "Around which year did Gutenberg print his Bible?", 1455),
         year("wieden_odsiecz", "In which year was the Relief of Vienna?", 1683),
         year("wersal", "In which year was the Treaty of Versailles signed?", 1919),
-        year("bitwa_warszawska_est", "In which year was the Battle of Warsaw fought?", 1920),
+        localYear("bitwa_warszawska_est", "In which year was the Battle of Warsaw fought?", 1920, locale = "pl"),
         year("solidarnosc", "In which year was the Solidarity movement founded?", 1980),
         year("penicylina", "In which year did Alexander Fleming discover penicillin?", 1928),
         year("wzglednosc", "In which year did Einstein publish the general theory of relativity?", 1915),

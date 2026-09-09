@@ -32,9 +32,7 @@ object MathQuestionsExtra2 {
         ask("cwiartka_z_80", "What is 1/4 of 80?", "20", listOf("16", "40", "10"), QuizDifficulty.Easy),
         ask("boki_szescioakta", "How many sides does a hexagon have?", "Six", listOf("Five", "Seven", "Eight"), QuizDifficulty.Easy),
         ask("kat_polny_stopnie", "How many degrees is a straight angle?", "180", listOf("90", "360", "45"), QuizDifficulty.Easy),
-        ask("liczba_nieparzysta", "Which of these numbers is odd?", "47", listOf("32", "58", "64"), QuizDifficulty.Easy),
         ask("procent_10_50", "What is 10% of 50?", "5", listOf("10", "15", "50"), QuizDifficulty.Easy),
-        ask("tydzien_dni", "How many days are in a week?", "7", listOf("5", "10", "6"), QuizDifficulty.Easy),
         ask("liczba_rzymska_v", "What number does the Roman numeral V represent?", "5", listOf("1", "10", "50"), QuizDifficulty.Easy),
         ask("liczba_rzymska_m", "What number does the Roman numeral M represent?", "1000", listOf("500", "100", "5000"), QuizDifficulty.Easy),
 
@@ -68,6 +66,6 @@ object MathQuestionsExtra2 {
         ask("liczby_pierwsze_blizniacze", "What do we call pairs of primes differing by 2, like 11 and 13?", "Twin primes", listOf("Perfect numbers", "Amicable numbers", "Mersenne primes"), QuizDifficulty.Expert),
         ask("teoria_grafow_euler", "Which problem gave rise to graph theory?", "The Seven Bridges of Konigsberg problem", listOf("The four color problem", "The traveling salesman problem", "Zeno's paradox"), QuizDifficulty.Expert),
         ask("cztery_barwy", "What does the four color theorem state?", "Any map can be colored with four colors with no adjacent regions sharing one", listOf("Every graph has a Hamiltonian cycle", "Every number has four divisors", "Every triangle has four altitudes"), QuizDifficulty.Expert),
-        ask("pierwiastki_niewspolmierne", "What are irrational numbers?", "Numbers whose ratio can't be expressed as a fraction of integers", listOf("Negative numbers", "Complex numbers", "Prime numbers"), QuizDifficulty.Expert)
+        ask("pierwiastki_niewspolmierne", "What are irrational numbers?", "Numbers that cannot be written as a ratio of two integers", listOf("Negative numbers", "Complex numbers", "Prime numbers"), QuizDifficulty.Expert)
     )
 }

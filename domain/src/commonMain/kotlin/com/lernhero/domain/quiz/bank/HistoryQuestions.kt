@@ -47,24 +47,10 @@ object HistoryQuestions {
             difficulty = QuizDifficulty.Easy
         ),
         ask(
-            id = "chrzest",
-            prompt = "In which year did Poland adopt Christianity?",
-            correct = "966",
-            wrong = listOf("1000", "1025", "1050"),
-            difficulty = QuizDifficulty.Easy
-        ),
-        ask(
             id = "piramidy",
             prompt = "In which country are the pyramids of Giza located?",
             correct = "Egypt",
             wrong = listOf("Mexico", "Iraq", "Sudan"),
-            difficulty = QuizDifficulty.Easy
-        ),
-        ask(
-            id = "niepodleglosc",
-            prompt = "In which year did Poland regain independence?",
-            correct = "1918",
-            wrong = listOf("1920", "1945", "1989"),
             difficulty = QuizDifficulty.Easy
         ),
         ask(
@@ -112,13 +98,6 @@ object HistoryQuestions {
             difficulty = QuizDifficulty.Medium
         ),
         ask(
-            id = "chrobry",
-            prompt = "Who was the first crowned King of Poland?",
-            correct = "Boleslaw the Brave",
-            wrong = listOf("Mieszko I", "Casimir the Great", "Wladyslaw the Elbow-high"),
-            difficulty = QuizDifficulty.Medium
-        ),
-        ask(
             id = "titanic",
             prompt = "In which year did the Titanic sink?",
             correct = "1912",
@@ -134,13 +113,6 @@ object HistoryQuestions {
         ),
 
         /* ------------------------------ Hard ------------------------------- */
-        ask(
-            id = "ostatni_krol",
-            prompt = "Who was the last King of Poland?",
-            correct = "Stanislaw August Poniatowski",
-            wrong = listOf("John III Sobieski", "Augustus III", "Stanislaw Leszczynski"),
-            difficulty = QuizDifficulty.Hard
-        ),
         ask(
             id = "wieden",
             prompt = "Who commanded the Christian forces at the Battle of Vienna in 1683?",
@@ -160,13 +132,6 @@ object HistoryQuestions {
             prompt = "In which year did the Western Roman Empire fall?",
             correct = "476",
             wrong = listOf("410", "395", "527"),
-            difficulty = QuizDifficulty.Hard
-        ),
-        ask(
-            id = "piastowie",
-            prompt = "Which dynasty ruled Poland first?",
-            correct = "The Piasts",
-            wrong = listOf("The Jagiellons", "The Vasas", "The Wettins"),
             difficulty = QuizDifficulty.Hard
         ),
         ask(
@@ -220,12 +185,5 @@ object HistoryQuestions {
             wrong = listOf("1215", "1096", "1013"),
             difficulty = QuizDifficulty.Expert
         ),
-        ask(
-            id = "konstantynopol",
-            prompt = "In which year did the Ottomans capture Constantinople?",
-            correct = "1453",
-            wrong = listOf("1492", "1389", "1521"),
-            difficulty = QuizDifficulty.Expert
-        )
     )
 }

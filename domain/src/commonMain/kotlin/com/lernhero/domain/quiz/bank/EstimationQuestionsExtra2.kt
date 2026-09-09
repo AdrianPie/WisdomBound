@@ -17,8 +17,23 @@ object EstimationQuestionsExtra2 {
         unit = "year"
     )
 
+    /**
+     * Wariant lokalny: pytanie idzie na zdarzenie bossa TYLKO u gracza w danym jezyku
+     * (patrz [EstimationEntry.localeCode]). Bez tego data z historii jednego kraju trafialaby
+     * do gracza, ktory nie ma jak jej znac.
+     */
+    private fun localYear(id: String, prompt: String, value: Int, locale: String) = EstimationEntry(
+        id = "est3_$id",
+        prompt = prompt,
+        minValue = ESTIMATION_YEAR_MIN,
+        maxValue = ESTIMATION_YEAR_MAX,
+        correctValue = value,
+        unit = "year",
+        localeCode = locale
+    )
+
     val all: List<EstimationEntry> = listOf(
-        year("grunwald_est2", "In which year did Wladyslaw Jagiello defeat the Teutonic Knights at Grunwald?", 1410),
+        localYear("grunwald_est2", "In which year did Wladyslaw Jagiello defeat the Teutonic Knights at Grunwald?", 1410, locale = "pl"),
         year("reformacja_luter", "In which year did Martin Luther post his theses, starting the Reformation?", 1517),
         year("wynalazek_druku", "Around which year did Gutenberg invent movable-type printing?", 1440),
         year("bitwa_pod_lepanto", "In which year was the naval Battle of Lepanto fought?", 1571),
@@ -37,7 +52,7 @@ object EstimationQuestionsExtra2 {
         year("powstanie_izraela", "In which year was the State of Israel proclaimed?", 1948),
         year("pierwszy_lot_kosmiczny_czlowieka", "In which year did Yuri Gagarin become the first human in space?", 1961),
         year("rozpad_zsrr", "In which year did the Soviet Union formally dissolve?", 1991),
-        year("wstapienie_polski_ue", "In which year did Poland join the European Union?", 2004),
+        localYear("wstapienie_polski_ue", "In which year did Poland join the European Union?", 2004, locale = "pl"),
         year("pierwszy_iphone_est", "In which year was the first iPhone unveiled to the world?", 2007),
         year("wybuch_pandemii_covid", "In which year did the World Health Organization declare the COVID-19 pandemic?", 2020)
     )

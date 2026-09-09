@@ -16,6 +16,15 @@ data class EstimationEntry(
     val correctValue: Int,
     val unit: String,
     /**
+     * Kod jezyka, dla ktorego to pytanie ma sens - tak samo jak
+     * [com.lernhero.domain.quiz.QuizCategory.localeCode]. Null = pytanie globalne.
+     *
+     * Pula szacowan nie ma kategorii, wiec bez tego pola "w ktorym roku wybuchlo powstanie
+     * styczniowe?" trafialoby na zdarzenie bossa u kazdego gracza na swiecie - filtruje
+     * [EstimationBank.forLanguage].
+     */
+    val localeCode: String? = null,
+    /**
      * Ile jednostek obok wciaz liczy sie za STRZAL W DZIESIATKE.
      *
      * To najwazniejsza liczba przy ocenianiu i musi byc WLASNA dla kazdego pytania: 10 lat pomylki
@@ -70,6 +79,10 @@ data class EstimationEntry(
         const val SLIDER_WINDOW_UNITS = 7
     }
 }
+
+/** Czy to pytanie wolno pokazac graczowi grajacemu w jezyku [languageCode]. */
+fun EstimationEntry.availableIn(languageCode: String): Boolean =
+    localeCode == null || localeCode == languageCode
 
 /**
  * Domyslna tolerancja dla pytania o rok, dobrana wedlug EPOKI.

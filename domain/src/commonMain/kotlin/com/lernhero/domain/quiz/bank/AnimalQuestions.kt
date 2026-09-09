@@ -157,7 +157,7 @@ object AnimalQuestions {
         ),
         ask(
             id = "kalmar_oczy",
-            prompt = "Which animal has the largest eyes in the world?",
+            prompt = "Which animal has an eye that can grow to the size of a dinner plate?",
             correct = "Giant squid",
             wrong = listOf("Owl", "Whale", "Elephant seal"),
             difficulty = QuizDifficulty.Hard

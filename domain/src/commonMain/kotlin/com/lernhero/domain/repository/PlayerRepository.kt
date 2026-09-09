@@ -48,8 +48,10 @@ interface PlayerRepository {
     suspend fun addMoney(amount: Int): Int?
 
     /**
-     * Nagroda-przedmiot (skrzynia po bossie) - dopisuje id bez zadnego kosztu. Zwraca null takze
-     * wtedy, gdy gracz juz go ma; wolajacy zamienia to wtedy na inna nagrode.
+     * Nagroda-przedmiot (skrzynia po bossie) - dopisuje NOWA SZTUKE bez zadnego kosztu.
+     *
+     * Duplikaty sa dozwolone: druga kopia to osobny egzemplarz, ktory mozna zalozyc innemu
+     * kompanowi albo ulepszyc niezaleznie od pierwszej.
      */
     suspend fun grantItem(itemId: String): Player?
 
@@ -57,20 +59,34 @@ interface PlayerRepository {
     suspend fun grantMonster(monsterId: String): Player?
 
     /**
-     * Wykuwa przedmiot w Kuzni: sprawdza surowce I zloto, odejmuje jedno i drugie, dopisuje przedmiot
-     * oraz podbija licznik [com.lernhero.domain.progress.GameStats.itemsCrafted]. Wszystko jednym
-     * zapisem - inaczej dalo by sie stracic surowce bez przedmiotu (tak dzialala stara kuznia).
+     * Wsypuje zestaw testowy ([com.lernhero.domain.player.AdminKit]) - wszystkie przedmioty, wysoki
+     * poziom, zaliczona kampania. Zwraca null takze wtedy, gdy konto NIE jest na liscie
+     * [com.lernhero.domain.player.AdminAccounts], wiec wywolanie tego z UI przez zwyklego gracza
+     * nic nie robi.
+     */
+    suspend fun grantAdminKit(): Player?
+
+    /**
+     * Wykuwa przedmiot w Kuzni: sprawdza surowce I zloto, odejmuje jedno i drugie, dopisuje NOWA
+     * SZTUKE oraz podbija licznik [com.lernhero.domain.progress.GameStats.itemsCrafted]. Wszystko
+     * jednym zapisem - inaczej dalo by sie stracic surowce bez przedmiotu (tak dzialala stara kuznia).
+     *
+     * Kazde wywolanie daje kolejny egzemplarz - dziesiec wykuc to dziesiec noszalnych pazurow.
      */
     suspend fun craftItem(itemId: String, cost: CraftCost): Player?
 
     /**
-     * Podnosi przedmiot o JEDEN poziom ulepszenia (patrz [com.lernhero.domain.craft.ItemUpgrades]).
-     * Zwraca null, gdy gracza nie stac, przedmiotu nie ma w plecaku albo stoi juz na maksie.
+     * Podnosi KONKRETNA SZTUKE o jeden poziom ulepszenia (patrz
+     * [com.lernhero.domain.craft.ItemUpgrades]). [uid] to identyfikator egzemplarza
+     * ([com.lernhero.domain.item.ItemInstance.uid]), a nie id z katalogu - dzieki temu ulepszenie
+     * jednego nozyka nie podnosi wszystkich pozostalych.
+     *
+     * Zwraca null, gdy gracza nie stac, sztuki nie ma w plecaku albo stoi juz na maksie.
      *
      * Koszt liczy repozytorium z zapisanego poziomu, a nie z ekranu - inaczej dwa szybkie
      * tapniecia platilyby dwa razy za ten sam, najtanszy poziom.
      */
-    suspend fun upgradeItem(itemId: String): Player?
+    suspend fun upgradeItem(uid: String): Player?
 
     /**
      * Przyzywa kompanow w Summon Center - zuzywa losy/esencje i ZAPISUJE ich do kolekcji.

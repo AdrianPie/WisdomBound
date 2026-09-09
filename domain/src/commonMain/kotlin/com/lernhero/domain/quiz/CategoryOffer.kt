@@ -28,16 +28,20 @@ data class CategoryOffer(
         /** O ile mocniej bije jednostka, ktorej zywiol zostal wzmocniony wybranym kaflem. */
         const val ELEMENT_BOOST = 0.20f
 
-        /** Kategorie, ktore realnie maja pytania w [QuizBank]. */
-        private val offerable: List<QuizCategory> get() = QuizCategory.builtin
-
         /**
          * Sklada oferte na jedna ture: cztery ROZNE kategorie, kazda z wlasnym bonusem frakcyjnym.
          * Zywioly moga sie powtarzac miedzy kaflami - to normalne, czasem po prostu wypada tura
          * dobra dla Ognia.
+         *
+         * [available] domyslnie obejmuje caly bank; ekran walki podaje tu liste zawezona do jezyka
+         * gracza ([QuizCategory.builtinFor]), zeby kafel z tematem lokalnym innego kraju nie trafil
+         * do kogos, kto nie ma szans na nim odpowiedziec.
          */
-        fun roll(random: Random): CategoryOffer {
-            val categories = offerable.shuffled(random).take(OPTION_COUNT)
+        fun roll(
+            random: Random,
+            available: List<QuizCategory> = QuizCategory.builtin
+        ): CategoryOffer {
+            val categories = available.shuffled(random).take(OPTION_COUNT)
             return CategoryOffer(
                 options = categories.map { category ->
                     val elements = if (random.nextFloat() < DUAL_ELEMENT_CHANCE) {

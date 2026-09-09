@@ -1,5 +1,6 @@
 package com.lernhero.domain.combat
 
+import com.lernhero.domain.monster.Element
 typealias CombatantId = String
 
 enum class Team {
@@ -61,7 +62,15 @@ data class Combatant(
      * Pasek zdolnosci: zaklecia z szansa na aktywacje w kazdej turze. Suma szans to procent tur,
      * w ktorych zamiast zwyklego ataku padnie spell. Pusta lista = zawsze zwykly atak.
      */
-    val spells: List<SpellChoice> = emptyList()
+    val spells: List<SpellChoice> = emptyList(),
+    /**
+     * Zywiol walczacego - null u bohatera i u wrogow bez przypisanego typu.
+     *
+     * Silnik sam z siebie nic z nim nie robi; czytaja go efekty, ktore biją mocniej w konkretny typ
+     * (patrz [com.lernhero.domain.combat.effects.ElementBaneEffect]). Bez tego pola "topor na
+     * nieumarlych" nie mialby jak sprawdzic, czy cel jest nieumarly.
+     */
+    val element: Element? = null
 ) {
     val isAlive: Boolean get() = hp > 0
 

@@ -25,11 +25,7 @@ object ScienceQuestionsExtra2 {
     val all: List<QuizEntry> = listOf(
 
         /* ------------------------------- Easy ------------------------------- */
-        ask("teleskop_funkcja", "What is a telescope used for?", "Observing distant objects, like stars", listOf("Measuring temperature", "Weighing objects", "Studying microorganisms"), QuizDifficulty.Easy),
-        ask("mikroskop_funkcja", "What is a microscope used for?", "Viewing very small objects", listOf("Observing stars", "Measuring pressure", "Forecasting weather"), QuizDifficulty.Easy),
-        ask("termometr_funkcja", "What does a thermometer measure?", "Temperature", listOf("Pressure", "Humidity", "Wind speed"), QuizDifficulty.Easy),
         ask("barometr_funkcja", "What does a barometer measure?", "Atmospheric pressure", listOf("Temperature", "Humidity", "Speed of sound"), QuizDifficulty.Easy),
-        ask("wynalazca_zarowki", "Who is often credited with popularizing the light bulb?", "Thomas Edison", listOf("Nikola Tesla alone", "Albert Einstein", "James Watt"), QuizDifficulty.Easy),
         ask("silnik_parowy", "Who improved the steam engine, paving the way for the Industrial Revolution?", "James Watt", listOf("Thomas Edison", "Alexander Graham Bell", "Isaac Newton"), QuizDifficulty.Easy),
         ask("radio_wynalazca", "Who is credited with inventing radio?", "Guglielmo Marconi", listOf("Thomas Edison", "Alexander Bell", "Nikola Tesla, undisputedly alone"), QuizDifficulty.Easy),
         ask("penicylina_rok", "In which year did Fleming discover penicillin?", "1928", listOf("1918", "1938", "1948"), QuizDifficulty.Easy),

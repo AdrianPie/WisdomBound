@@ -33,13 +33,6 @@ object LiteratureQuestions {
             difficulty = QuizDifficulty.Easy
         ),
         ask(
-            id = "pan_tadeusz",
-            prompt = "Who wrote 'Pan Tadeusz'?",
-            correct = "Adam Mickiewicz",
-            wrong = listOf("Juliusz Slowacki", "Henryk Sienkiewicz", "Boleslaw Prus"),
-            difficulty = QuizDifficulty.Easy
-        ),
-        ask(
             id = "wladca",
             prompt = "Who wrote 'The Lord of the Rings'?",
             correct = "J.R.R. Tolkien",
@@ -77,13 +70,6 @@ object LiteratureQuestions {
             difficulty = QuizDifficulty.Medium
         ),
         ask(
-            id = "lalka",
-            prompt = "Who is the main character of Prus's 'The Doll'?",
-            correct = "Stanislaw Wokulski",
-            wrong = listOf("Ignacy Rzecki", "Tomasz Judym", "Andrzej Kmicic"),
-            difficulty = QuizDifficulty.Medium
-        ),
-        ask(
             id = "sherlock",
             prompt = "Who created the character Sherlock Holmes?",
             correct = "Arthur Conan Doyle",
@@ -95,13 +81,6 @@ object LiteratureQuestions {
             prompt = "Who wrote the saga about the witcher Geralt?",
             correct = "Andrzej Sapkowski",
             wrong = listOf("Jacek Dukaj", "Stanislaw Lem", "Remigiusz Mroz"),
-            difficulty = QuizDifficulty.Medium
-        ),
-        ask(
-            id = "nobel_szymborska",
-            prompt = "Which Polish poet won the Nobel Prize in Literature?",
-            correct = "Wislawa Szymborska",
-            wrong = listOf("Maria Konopnicka", "Halina Poswiatowska", "Agnieszka Osiecka"),
             difficulty = QuizDifficulty.Medium
         ),
         ask(
@@ -132,13 +111,6 @@ object LiteratureQuestions {
             prompt = "Who wrote the novel '1984'?",
             correct = "George Orwell",
             wrong = listOf("Aldous Huxley", "Ray Bradbury", "Franz Kafka"),
-            difficulty = QuizDifficulty.Hard
-        ),
-        ask(
-            id = "chlopi_nobel",
-            prompt = "For which novel did Reymont win the Nobel Prize?",
-            correct = "The Peasants",
-            wrong = listOf("The Promised Land", "The Comedienne", "Fermenty"),
             difficulty = QuizDifficulty.Hard
         ),
         ask(

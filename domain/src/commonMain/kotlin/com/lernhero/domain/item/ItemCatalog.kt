@@ -2,8 +2,11 @@ package com.lernhero.domain.item
 
 import com.lernhero.domain.craft.ItemUpgrades
 import com.lernhero.domain.item.catalog.Accessories
+import com.lernhero.domain.item.catalog.AccessoriesExtra
 import com.lernhero.domain.item.catalog.Armors
+import com.lernhero.domain.item.catalog.ArmorsExtra
 import com.lernhero.domain.item.catalog.Weapons
+import com.lernhero.domain.item.catalog.WeaponsExtra
 import com.lernhero.domain.player.PlayerEquipment
 
 /**
@@ -19,8 +22,11 @@ object ItemCatalog {
 
     init {
         register(Weapons.all)
+        register(WeaponsExtra.all)
         register(Armors.all)
+        register(ArmorsExtra.all)
         register(Accessories.all)
+        register(AccessoriesExtra.all)
     }
 
     fun register(items: List<Item>) {
@@ -39,16 +45,12 @@ object ItemCatalog {
     fun bySlot(slot: ItemSlot): List<Item> = registry.values.filter { it.slot == slot }
 
     /**
-     * [upgrades] to poziomy ulepszen (patrz [com.lernhero.domain.craft.ItemUpgrades]) - wchodza
-     * TUTAJ, w jednym miejscu, w ktorym zalozony ekwipunek zamienia sie w liczby dla walki.
-     * Dzieki temu ulepszony miecz bije mocniej wszedzie, a nie tylko na ekranie kuzni.
+     * Zalozone SZTUKI zamienione w liczby dla walki. Poziom ulepszenia przychodzi z egzemplarza
+     * ([ItemInstance.level]), a nie z osobnej mapy obok - dzieki temu dwie kopie tego samego
+     * miecza moga miec rozne poziomy i kazda bije tak, jak faktycznie zostala wykuta.
      */
-    fun loadoutOf(ids: List<String>, upgrades: Map<String, Int> = emptyMap()): Loadout =
-        Loadout(
-            ids.mapNotNull { id ->
-                byId(id)?.let { ItemUpgrades.upgraded(it, ItemUpgrades.levelOf(upgrades, id)) }
-            }.associateBy { it.slot }
-        )
+    fun loadoutOf(instances: List<ItemInstance>): Loadout =
+        Loadout(instances.mapNotNull { it.resolve() }.associateBy { it.slot })
 }
 
 /* ------------------------------- Ekwipunek gracza -------------------------------- */
@@ -72,16 +74,28 @@ fun PlayerEquipment.migrated(): PlayerEquipment {
     return PlayerEquipment(equipped = legacy)
 }
 
-/** Przedmiot zalozony w danym slocie, albo null. */
-fun PlayerEquipment.itemIn(slot: ItemSlot): Item? =
-    migrated().equipped[slot.name]?.let { ItemCatalog.byId(it) }
+/**
+ * Sloty trzymaja uid SZTUK, wiec zeby powiedziec, co w nich lezy, trzeba miec plecak. Stad
+ * [bag] w kazdej z tych funkcji - to on jest zrodlem prawdy o przedmiotach, a mapa slotow
+ * tylko wskazuje palcem.
+ */
+fun PlayerEquipment.instanceIn(slot: ItemSlot, bag: List<ItemInstance>): ItemInstance? =
+    migrated().equipped[slot.name]?.let { uid -> Inventory.byUid(bag, uid) }
 
-fun PlayerEquipment.equip(item: Item): PlayerEquipment =
-    PlayerEquipment(equipped = migrated().equipped + (item.slot.name to item.id))
+/** Przedmiot zalozony w danym slocie (juz z poziomem ulepszenia tej sztuki), albo null. */
+fun PlayerEquipment.itemIn(slot: ItemSlot, bag: List<ItemInstance>): Item? =
+    instanceIn(slot, bag)?.resolve()
+
+/** Zaklada KONKRETNA sztuke - slot zapamietuje jej uid, a nie typ przedmiotu. */
+fun PlayerEquipment.equip(instance: ItemInstance, slot: ItemSlot): PlayerEquipment =
+    PlayerEquipment(equipped = migrated().equipped + (slot.name to instance.uid))
 
 fun PlayerEquipment.unequip(slot: ItemSlot): PlayerEquipment =
     PlayerEquipment(equipped = migrated().equipped - slot.name)
 
+/** Uid sztuk zalozonych przez bohatera - do odfiltrowania ich z listy "wolne w plecaku". */
+fun PlayerEquipment.equippedUids(): Set<String> = migrated().equipped.values.toSet()
+
 /** Zalozony ekwipunek widziany przez system walki: suma statystyk i lista efektow. */
-fun PlayerEquipment.toLoadout(upgrades: Map<String, Int> = emptyMap()): Loadout =
-    ItemCatalog.loadoutOf(migrated().equipped.values.toList(), upgrades)
+fun PlayerEquipment.toLoadout(bag: List<ItemInstance>): Loadout =
+    ItemCatalog.loadoutOf(migrated().equipped.values.mapNotNull { Inventory.byUid(bag, it) })

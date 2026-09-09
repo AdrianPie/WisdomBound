@@ -11,13 +11,18 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.aspectRatio
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.offset
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.navigationBarsPadding
@@ -47,12 +52,19 @@ import com.lernhero.domain.craft.CraftCost
 import com.lernhero.domain.craft.Forge
 import com.lernhero.domain.craft.ForgeRecipe
 import com.lernhero.domain.craft.ForgeTrack
+import com.lernhero.domain.craft.ItemTier
 import com.lernhero.domain.craft.ItemUpgrades
+import com.lernhero.domain.item.Inventory
+import com.lernhero.domain.item.ItemCategory
+import com.lernhero.domain.item.ItemInstance
+import com.lernhero.domain.item.base
 import com.lernhero.domain.item.Item
 import com.lernhero.domain.town.TownResources
 import com.lernhero.domain.item.catalog.MonsterGear
 import com.lernhero.domain.monster.Element
 import com.lernhero.home.player.PlayerViewModel
+import com.lernhero.home.ui.FramedPanel
+import com.lernhero.home.ui.ItemInfoBlock
 import com.lernhero.home.ui.PageDots
 import com.lernhero.home.ui.ParchmentButton
 import com.lernhero.home.ui.ParchmentInset
@@ -99,22 +111,71 @@ fun ForgeScreen(
     var mode by remember { mutableStateOf(ForgeMode.Forge) }
     var track by remember { mutableStateOf(ForgeTrack.Hero) }
 
-    val ownedPool = if (track == ForgeTrack.Monster) state.ownedMonsterItems else state.ownedItems
+    val bag = if (track == ForgeTrack.Monster) state.monsterBag else state.heroBag
     val allRecipes = remember(track) { Forge.recipesFor(track) }
 
-    // Ulepszac mozna WYLACZNIE to, co sie ma. Pokazywanie tu calego katalogu robiloby z tej
-    // zakladki druga liste zyczen zamiast warsztatu.
-    val recipes = remember(mode, allRecipes, ownedPool) {
-        if (mode == ForgeMode.Upgrade) allRecipes.filter { it.item.id in ownedPool } else allRecipes
+    // Dwa tryby, dwie ROZNE listy - i to jest sedno przejscia na egzemplarze.
+    //
+    // Forge pokazuje RECEPTURY (co da sie wykuc; kazde wykucie daje kolejna sztuke), a Upgrade
+    // pokazuje SZTUKI (co juz mam; ulepsza sie konkretny egzemplarz, nie typ). Wczesniej obie
+    // zakladki chodzily po recepturach, wiec ulepszenie "nozyka" dotykalo wszystkich nozykow naraz.
+    val entries = remember(mode, allRecipes, bag, state.storyProgress) {
+        when (mode) {
+            // Kolejnosc wg progu, a nie wg pliku z recepturami: gracz przeglada katalog od tego,
+            // co moze wykuc teraz, do tego, na co jeszcze pracuje. Dzieki temu zamkniete rzeczy
+            // skupiaja sie na koncu, zamiast byc rozsiane po wszystkich stronach.
+            ForgeMode.Forge -> allRecipes.sortedBy { ItemTier.of(it.item).ordinal }.map { recipe ->
+                val tier = ItemTier.of(recipe.item)
+                ForgeEntry(
+                    key = recipe.id,
+                    item = recipe.item,
+                    cost = recipe.cost,
+                    instance = null,
+                    level = ItemUpgrades.MIN_LEVEL,
+                    ownedCount = Inventory.countOf(bag, recipe.item.id),
+                    tier = tier,
+                    locked = !tier.isUnlocked(state.storyProgress)
+                )
+            }
+
+            ForgeMode.Upgrade -> bag.mapNotNull { instance ->
+                val item = instance.base() ?: return@mapNotNull null
+                ForgeEntry(
+                    key = instance.uid,
+                    item = item,
+                    cost = Forge.costFor(item),
+                    instance = instance,
+                    level = instance.level,
+                    ownedCount = Inventory.countOf(bag, item.id),
+                    // Ulepszac wolno zawsze - prog bramkuje WYKUWANIE, a nie to, co juz masz.
+                    // Inaczej cofniecie sie w kampanii zamrazaloby graczowi wlasny sprzet.
+                    tier = null,
+                    locked = false
+                )
+            }
+        }
     }
-    val pages = remember(recipes) { recipes.chunked(PAGE_SIZE) }
+    // Polka: bron / pancerz / bizuteria. null = wszystko. Przy kilkudziesieciu recepturach
+    // "przewin i szukaj miecza" przestalo dzialac - filtr jest tansza odpowiedzia niz osobne
+    // zakladki, bo nie zabiera trzeciej osi wyboru obok trybu i toru.
+    var category by remember(track, mode) { mutableStateOf<ItemCategory?>(null) }
 
-    // Wybor i strona sa per WIDOK (tor + tryb): przejscie na "Summony" nie moze zostawic
+    // Kategorie liczymy z PELNEJ listy, nie z przefiltrowanej - inaczej wybranie broni ukryloby
+    // przyciski pozostalych polek i nie bylo jak wrocic.
+    val categories = remember(entries) {
+        ItemCategory.entries.filter { cat -> entries.any { it.category == cat } }
+    }
+    val visible = remember(entries, category) {
+        category?.let { cat -> entries.filter { it.category == cat } } ?: entries
+    }
+    val pages = remember(visible) { visible.chunked(PAGE_SIZE) }
+
+    // Wybor i strona sa per WIDOK (tor + tryb + polka): przejscie na "Summony" nie moze zostawic
     // w warsztacie miecza bohatera, bo przycisk dzialalby na cos, czego nie widac ponizej.
-    var selectedId by remember(track, mode) { mutableStateOf(recipes.firstOrNull()?.id) }
-    var page by remember(track, mode) { mutableStateOf(0) }
+    var selectedKey by remember(track, mode, category) { mutableStateOf(visible.firstOrNull()?.key) }
+    var page by remember(track, mode, category) { mutableStateOf(0) }
 
-    val recipe = recipes.firstOrNull { it.id == selectedId } ?: recipes.firstOrNull()
+    val entry = visible.firstOrNull { it.key == selectedKey } ?: visible.firstOrNull()
 
     // Ten sam szkielet co reszta budynkow Miasta (tartak, kamieniolom, summon center): powrot,
     // tytul i pasek surowcow z jednego miejsca.
@@ -143,15 +204,22 @@ fun ForgeScreen(
                     onSelect = { mode = ForgeMode.entries[it] }
                 )
 
-                Row(
+                // Rail "dla kogo" nie stoi OBOK panelu (wtedy panel ucieka w lewo, a rail dynda
+                // przy krawedzi ekranu), tylko OKRAKIEM na jego prawym boku: polowa w obrysie
+                // pergaminu, polowa poza nim. Panel przez to jest wezszy i wysrodkowany, a rail
+                // wyglada jak przypiety do niego, nie zawieszony w powietrzu.
+                Box(
                     modifier = Modifier.fillMaxWidth().weight(1f),
-                    horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    contentAlignment = Alignment.Center
                 ) {
+                  Box(modifier = Modifier.fillMaxHeight().widthIn(max = 360.dp)) {
                     Column(
-                        modifier = Modifier.weight(1f).fillMaxSize(),
-                        verticalArrangement = Arrangement.spacedBy(8.dp)
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .padding(end = RAIL_STRADDLE),
+                        verticalArrangement = Arrangement.spacedBy(8.dp, Alignment.CenterVertically)
                     ) {
-                        if (recipe == null) {
+                        if (entry == null) {
                             ParchmentPanel(modifier = Modifier.fillMaxWidth(), title = mode.label) {
                                 Text(
                                     text = mode.emptyHint(track),
@@ -163,19 +231,21 @@ fun ForgeScreen(
                             }
                         } else when (mode) {
                             ForgeMode.Forge -> Workbench(
-                                recipe = recipe,
-                                owned = recipe.item.id in ownedPool,
-                                affordable = recipe.cost.canAfford(state.resources, state.money),
+                                item = entry.item,
+                                cost = entry.cost,
+                                ownedCount = entry.ownedCount,
+                                affordable = entry.cost.canAfford(state.resources, state.money),
+                                lockedTier = entry.tier?.takeUnless { it.isUnlocked(state.storyProgress) },
                                 ironHave = state.resources.iron,
-                                onForge = { playerViewModel.craftItem(recipe.item, recipe.cost) }
+                                onForge = { playerViewModel.craftItem(entry.item, entry.cost) }
                             )
 
                             ForgeMode.Upgrade -> UpgradeBench(
-                                item = recipe.item,
-                                level = ItemUpgrades.levelOf(state.itemUpgrades, recipe.item.id),
+                                item = entry.item,
+                                level = entry.level,
                                 resources = state.resources,
                                 money = state.money,
-                                onUpgrade = { playerViewModel.upgradeItem(recipe.item) }
+                                onUpgrade = { entry.instance?.let(playerViewModel::upgradeItem) }
                             )
                         }
 
@@ -183,20 +253,28 @@ fun ForgeScreen(
                             page = pages.getOrNull(page).orEmpty(),
                             pageCount = pages.size,
                             pageIndex = page,
-                            selectedId = selectedId,
-                            ownedIds = ownedPool,
-                            upgrades = state.itemUpgrades,
+                            selectedKey = selectedKey,
                             affordable = { it.cost.canAfford(state.resources, state.money) },
-                            onSelect = { selectedId = it },
+                            categories = categories,
+                            category = category,
+                            onCategory = { category = it },
+                            // Strona jest "zamknieta", gdy ZADNEJ pozycji z niej nie da sie
+                            // jeszcze wykuc - wtedy klodka na kropce mowi prawde o calej stronie.
+                            pageLocked = { index -> pages.getOrNull(index).orEmpty().all { it.locked } },
+                            onSelect = { selectedKey = it },
                             onPage = { page = it },
-                            modifier = Modifier.weight(1f)
+                            modifier = Modifier.heightIn(max = 340.dp)
                         )
                     }
 
                     TrackRail(
                         selected = track,
-                        onSelect = { track = it }
+                        onSelect = { track = it },
+                        modifier = Modifier
+                            .align(Alignment.CenterEnd)
+                            .offset(x = RAIL_STRADDLE)
                     )
+                  }
                 }
             }
 
@@ -223,6 +301,31 @@ fun ForgeScreen(
 }
 
 /**
+ * Jedna pozycja na tablicy kuzni - wspolny ksztalt dla obu trybow, zeby siatka i warsztat nie
+ * musialy wiedziec, ktory tryb jest wlaczony.
+ *
+ * [instance] jest null w trybie Forge (jeszcze nie ma czego ulepszac - dopiero wykuwamy) i
+ * niepuste w trybie Upgrade, gdzie kazdy kafelek to KONKRETNA sztuka z plecaka.
+ * [key] to wtedy uid sztuki, a nie id receptury - dzieki temu dwie kopie tego samego pazura sa
+ * dwoma osobnymi kafelkami, kazdy z wlasnym poziomem.
+ */
+private data class ForgeEntry(
+    val key: String,
+    val item: Item,
+    val cost: CraftCost,
+    val instance: ItemInstance?,
+    val level: Int,
+    /** Ile sztuk tego typu gracz juz ma - warsztat pokazuje to zamiast "juz masz / nie masz". */
+    val ownedCount: Int,
+    /** Prog kuzni - null w trybie Upgrade, gdzie bramka nie obowiazuje. */
+    val tier: ItemTier?,
+    /** Czy prog jest jeszcze zamkniety. Zamkniete pozycje ZOSTAJA w katalogu - patrz [RecipeTile]. */
+    val locked: Boolean
+) {
+    val category: ItemCategory get() = ItemCategory.of(item)
+}
+
+/**
  * Dwie czynnosci kuzni. Osobno od [ForgeTrack], bo to niezalezne pytania: "co robie" i "dla kogo".
  */
 private enum class ForgeMode(val label: String) {
@@ -241,12 +344,17 @@ private enum class ForgeMode(val label: String) {
  * Pionowy pasek przy prawej krawedzi: dla kogo kujemy. Stoi z boku, a nie na gorze, bo to wybor
  * niezalezny od trybu - przelaczenie go ma zmienic pule, a nie to, co gracz wlasnie robi.
  */
+/** O ile kafelek railu wystaje poza prawy bok panelu (i o tyle samo w niego wchodzi). */
+private val RAIL_STRADDLE = 16.dp
+
 @Composable
 private fun TrackRail(
     selected: ForgeTrack,
-    onSelect: (ForgeTrack) -> Unit
+    onSelect: (ForgeTrack) -> Unit,
+    modifier: Modifier = Modifier
 ) {
     Column(
+        modifier = modifier,
         verticalArrangement = Arrangement.spacedBy(6.dp)
     ) {
         ForgeTrack.entries.forEach { track ->
@@ -339,17 +447,20 @@ private fun short(value: Int): String = when {
  */
 @Composable
 private fun Workbench(
-    recipe: ForgeRecipe,
-    owned: Boolean,
+    item: Item,
+    cost: CraftCost,
+    /** Ile sztuk juz mam. Zastapilo "owned: Boolean" - teraz wykuwa sie w nieskonczonosc. */
+    ownedCount: Int,
     affordable: Boolean,
+    /** Niepusty = prog kuzni jeszcze zamkniety, wiec przycisk nie dziala mimo surowcow. */
+    lockedTier: ItemTier?,
     ironHave: Int,
     onForge: () -> Unit
 ) {
-    val item = recipe.item
     val frame = RarityPalette.frame(item.rarity)
     val element = MonsterGear.elementFor(item.id)
 
-    ParchmentPanel(modifier = Modifier.fillMaxWidth(), title = "Forge: ${item.name}") {
+    FramedPanel(modifier = Modifier.fillMaxWidth(), title = "Forge: ${item.name}") {
         Row(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.Center,
@@ -357,7 +468,7 @@ private fun Workbench(
         ) {
             MaterialSlot(icon = "🪵")
             Spacer(modifier = Modifier.size(6.dp))
-            ForgeRing(frame = frame, active = affordable && !owned) {
+            ForgeRing(frame = frame, active = affordable) {
                 Box(
                     modifier = Modifier
                         .size(70.dp)
@@ -387,29 +498,48 @@ private fun Workbench(
             element?.let { ElementBadge(it) }
         }
 
-        Text(
-            text = item.description,
-            color = ParchmentPalette.Ink,
-            fontFamily = FontFirst(),
-            fontSize = 11.sp,
-            textAlign = TextAlign.Center
-        )
+        // Opis + statystyki + ZDOLNOSCI w jednym bloku o stalej wysokosci - patrz [ItemInfoBlock]
+        // po powod, dla ktorego wysokosc jest sztywna (menu skakalo przy zmianie przedmiotu).
+        ItemInfoBlock(item = item)
 
-        CostRow(cost = recipe.cost)
+        CostRow(cost = cost)
+
+        // Licznik zamiast blokady: wykucie kolejnej sztuki jest normalnym ruchem, bo kazda
+        // z nich mozna zalozyc innemu kompanowi.
+        if (ownedCount > 0) {
+            Text(
+                text = "You already have $ownedCount",
+                color = ParchmentPalette.InkMuted,
+                fontFamily = FontFirst(),
+                fontWeight = FontWeight.Bold,
+                fontSize = 10.sp
+            )
+        }
 
         ParchmentButton(
-            text = if (owned) "ALREADY OWNED" else "FORGE",
-            enabled = affordable && !owned,
+            text = if (lockedTier != null) "LOCKED" else "FORGE",
+            enabled = affordable && lockedTier == null,
             modifier = Modifier.fillMaxWidth(),
             onClick = onForge
         )
 
+        // Zamkniety prog mowi WPROST, co go otwiera - "LOCKED" bez powodu wyglada jak blad gry.
+        lockedTier?.let { tier ->
+            Text(
+                text = "${tier.label} gear unlocks after clearing ${tier.requiredStages()} stages.",
+                color = Color(0xFF9E2B20),
+                fontFamily = FontFirst(),
+                fontSize = 10.sp,
+                textAlign = TextAlign.Center
+            )
+        }
+
         // Wygaszony przycisk musi powiedziec, DLACZEGO jest wygaszony - inaczej ekran wyglada
         // na zepsuty. Ruda jest tu kluczowa: to jedyny material, ktorego nie produkuje miasto.
-        if (!owned && !affordable) {
+        if (lockedTier == null && !affordable) {
             Text(
-                text = if (recipe.cost.iron > ironHave) {
-                    "Not enough ore ($ironHave of ${recipe.cost.iron}). Ore only drops in dungeons."
+                text = if (cost.iron > ironHave) {
+                    "Not enough ore ($ironHave of ${cost.iron}). Ore only drops in dungeons."
                 } else {
                     "Not enough materials - check the cost above."
                 },
@@ -560,7 +690,7 @@ private fun UpgradeBench(
     val current = ItemUpgrades.upgraded(item, level).stats
     val next = ItemUpgrades.upgraded(item, level + 1).stats
 
-    ParchmentPanel(
+    FramedPanel(
         modifier = Modifier.fillMaxWidth(),
         title = "Upgrade: ${item.name}"
     ) {
@@ -595,51 +725,74 @@ private fun UpgradeBench(
             }
         }
 
-        // Same statystyki, ktore przedmiot NAPRAWDE ma - pusta tabelka na przedmiocie bez
-        // statystyk mowilaby, ze ulepszanie nic nie da, i mialaby racje.
-        val statTypes = current.asMap().keys.toList()
-        if (statTypes.isEmpty()) {
-            Text(
-                text = "This item has no stats to scale - only its effect.",
-                color = ParchmentPalette.InkMuted,
-                fontFamily = FontFirst(),
-                fontSize = 10.sp,
-                textAlign = TextAlign.Center
-            )
-        } else {
-            ParchmentInset(modifier = Modifier.fillMaxWidth()) {
-                Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
-                    statTypes.forEach { stat ->
-                        Row(
-                            modifier = Modifier.fillMaxWidth(),
-                            horizontalArrangement = Arrangement.SpaceBetween,
-                            verticalAlignment = Alignment.CenterVertically
-                        ) {
-                            Text(
-                                text = stat.label(),
-                                color = ParchmentPalette.InkMuted,
-                                fontFamily = FontFirst(),
-                                fontSize = 10.sp
-                            )
-                            Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
-                                Text(
-                                    text = stat.format(current[stat]),
-                                    color = ParchmentPalette.Ink,
-                                    fontFamily = FontPixel(),
-                                    fontSize = 11.sp
-                                )
-                                if (!maxed) {
+        // Tabelka PRZED -> PO plus zdolnosci, w bloku o STALEJ wysokosci. Wysokosc jest sztywna
+        // z tego samego powodu co w warsztacie kucia: liczba statystyk rozni sie miedzy
+        // przedmiotami, wiec bez tego panel kurczyl sie i rozciagal przy kazdej zmianie sztuki.
+        Box(modifier = Modifier.fillMaxWidth().height(UPGRADE_INFO_HEIGHT)) {
+            Column(
+                modifier = Modifier.fillMaxWidth().verticalScroll(rememberScrollState()),
+                verticalArrangement = Arrangement.spacedBy(4.dp)
+            ) {
+                // Same statystyki, ktore przedmiot NAPRAWDE ma - pusta tabelka na przedmiocie bez
+                // statystyk mowilaby, ze ulepszanie nic nie da, i mialaby racje.
+                val statTypes = current.asMap().keys.toList()
+                if (statTypes.isEmpty()) {
+                    Text(
+                        text = "This item has no stats to scale - only its effect.",
+                        color = ParchmentPalette.InkMuted,
+                        fontFamily = FontFirst(),
+                        fontSize = 10.sp,
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier.fillMaxWidth()
+                    )
+                } else {
+                    ParchmentInset(modifier = Modifier.fillMaxWidth()) {
+                        Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
+                            statTypes.forEach { stat ->
+                                Row(
+                                    modifier = Modifier.fillMaxWidth(),
+                                    horizontalArrangement = Arrangement.SpaceBetween,
+                                    verticalAlignment = Alignment.CenterVertically
+                                ) {
                                     Text(
-                                        text = "→ ${stat.format(next[stat])}",
-                                        color = Color(0xFF2F7D32),
-                                        fontFamily = FontPixel(),
-                                        fontWeight = FontWeight.Bold,
-                                        fontSize = 11.sp
+                                        text = stat.label(),
+                                        color = ParchmentPalette.InkMuted,
+                                        fontFamily = FontFirst(),
+                                        fontSize = 10.sp
                                     )
+                                    Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+                                        Text(
+                                            text = stat.format(current[stat]),
+                                            color = ParchmentPalette.Ink,
+                                            fontFamily = FontPixel(),
+                                            fontSize = 11.sp
+                                        )
+                                        if (!maxed) {
+                                            Text(
+                                                text = "→ ${stat.format(next[stat])}",
+                                                color = Color(0xFF2F7D32),
+                                                fontFamily = FontPixel(),
+                                                fontWeight = FontWeight.Bold,
+                                                fontSize = 11.sp
+                                            )
+                                        }
+                                    }
                                 }
                             }
                         }
                     }
+                }
+
+                // Zdolnosci NIE zmieniaja sie z poziomem (ulepszenie podbija liczby, nie reguly) -
+                // ale gracz musi je widziec tutaj, bo to na ich podstawie decyduje, ktora sztuke
+                // warto pchac dalej.
+                if (item.effects.isNotEmpty()) {
+                    ItemInfoBlock(
+                        item = item,
+                        height = UPGRADE_EFFECTS_HEIGHT,
+                        showDescription = false,
+                        showStats = false
+                    )
                 }
             }
         }
@@ -693,61 +846,132 @@ private fun LevelPips(level: Int) {
  */
 @Composable
 private fun CatalogBoard(
-    page: List<ForgeRecipe>,
+    page: List<ForgeEntry>,
     pageCount: Int,
     pageIndex: Int,
-    selectedId: String?,
-    ownedIds: List<String>,
-    upgrades: Map<String, Int>,
-    affordable: (ForgeRecipe) -> Boolean,
+    selectedKey: String?,
+    affordable: (ForgeEntry) -> Boolean,
+    categories: List<ItemCategory>,
+    category: ItemCategory?,
+    onCategory: (ItemCategory?) -> Unit,
+    pageLocked: (Int) -> Boolean,
     onSelect: (String) -> Unit,
     onPage: (Int) -> Unit,
     modifier: Modifier = Modifier
 ) {
-    ParchmentPanel(modifier = modifier.fillMaxWidth()) {
-        ParchmentInset(modifier = Modifier.fillMaxWidth()) {
-            Column(verticalArrangement = Arrangement.spacedBy(7.dp)) {
-                page.chunked(COLUMNS).forEach { row ->
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.spacedBy(7.dp)
-                    ) {
-                        row.forEach { entry ->
-                            RecipeTile(
-                                recipe = entry,
-                                selected = entry.id == selectedId,
-                                owned = entry.item.id in ownedIds,
-                                level = ItemUpgrades.levelOf(upgrades, entry.item.id),
-                                affordable = affordable(entry),
-                                modifier = Modifier.weight(1f),
-                                onClick = { onSelect(entry.id) }
-                            )
-                        }
-                        // Ostatni rzad bywa niepelny - puste wagi trzymaja kafelki w tej samej
-                        // szerokosci, zamiast rozciagac dwa ostatnie na caly wiersz.
-                        repeat(COLUMNS - row.size) {
-                            Box(modifier = Modifier.weight(1f).aspectRatio(1f))
+    val gap = 7.dp
+    FramedPanel(modifier = modifier.fillMaxWidth()) {
+        CategoryBar(categories = categories, selected = category, onSelect = onCategory)
+
+        // Kafelek dostaje STALY bok liczony z tego, co realnie zostalo na ekranie - i z szerokosci,
+        // i z wysokosci. Wczesniej kafelki byly kwadratami "po szerokosci" (weight + aspectRatio),
+        // wiec cztery rzedy zawsze mialy ~380dp i na nizszych telefonach siatka wychodzila pod
+        // dolna krawedz. Teraz nigdy nie przekracza przydzielonego miejsca.
+        ParchmentInset(modifier = Modifier.fillMaxWidth().weight(1f)) {
+            BoxWithConstraints(
+                modifier = Modifier.fillMaxSize(),
+                contentAlignment = Alignment.Center
+            ) {
+                val byWidth = (maxWidth - gap * (COLUMNS - 1)) / COLUMNS
+                val byHeight = (maxHeight - gap * (ROWS - 1)) / ROWS
+                val tile = minOf(byWidth, byHeight).coerceAtLeast(28.dp)
+                Column(
+                    verticalArrangement = Arrangement.spacedBy(gap, Alignment.CenterVertically),
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    page.chunked(COLUMNS).forEach { row ->
+                        Row(horizontalArrangement = Arrangement.spacedBy(gap)) {
+                            row.forEach { entry ->
+                                RecipeTile(
+                                    entry = entry,
+                                    selected = entry.key == selectedKey,
+                                    affordable = affordable(entry),
+                                    modifier = Modifier.size(tile),
+                                    onClick = { onSelect(entry.key) }
+                                )
+                            }
+                            // Niepelny ostatni rzad: puste kafelki tej samej wielkosci trzymaja
+                            // siatke wyrownana do lewej zamiast rozjezdzac ja na srodku.
+                            repeat(COLUMNS - row.size) {
+                                Box(modifier = Modifier.size(tile))
+                            }
                         }
                     }
                 }
             }
         }
 
-        PageDots(count = pageCount, selected = pageIndex, onSelect = onPage)
+        PageDots(count = pageCount, selected = pageIndex, locked = pageLocked, onSelect = onPage)
+    }
+}
+
+/**
+ * Pasek polek nad siatka: WSZYSTKO / bron / pancerz / bizuteria.
+ *
+ * Ikony zamiast nazw, bo cztery slowa po angielsku nie mieszcza sie w szerokosci panelu na
+ * mniejszym telefonie, a symbol miecza i tarczy czyta sie bez tlumaczenia.
+ */
+@Composable
+private fun CategoryBar(
+    categories: List<ItemCategory>,
+    selected: ItemCategory?,
+    onSelect: (ItemCategory?) -> Unit
+) {
+    if (categories.size <= 1) return
+    Row(
+        modifier = Modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.spacedBy(5.dp, Alignment.CenterHorizontally)
+    ) {
+        CategoryChip(label = "ALL", active = selected == null, onClick = { onSelect(null) })
+        categories.forEach { cat ->
+            CategoryChip(
+                label = cat.icon,
+                active = selected == cat,
+                // Ponowne stukniecie w aktywna polke zdejmuje filtr - inaczej powrot do calosci
+                // wymagalby trafienia w maly przycisk "ALL" po drugiej stronie paska.
+                onClick = { onSelect(if (selected == cat) null else cat) }
+            )
+        }
+    }
+}
+
+@Composable
+private fun CategoryChip(label: String, active: Boolean, onClick: () -> Unit) {
+    Box(
+        modifier = Modifier
+            .height(24.dp)
+            .widthIn(min = 40.dp)
+            .clip(RoundedCornerShape(8.dp))
+            .background(if (active) ParchmentPalette.Button else ParchmentPalette.Inset)
+            .border(
+                width = 2.dp,
+                color = if (active) ParchmentPalette.ButtonEdge else ParchmentPalette.FrameLight,
+                shape = RoundedCornerShape(8.dp)
+            )
+            .clickable(onClick = onClick),
+        contentAlignment = Alignment.Center
+    ) {
+        Text(
+            text = label,
+            color = if (active) ParchmentPalette.Ink else ParchmentPalette.InkMuted,
+            fontFamily = FontPixel(),
+            fontWeight = FontWeight.Bold,
+            fontSize = 12.sp
+        )
     }
 }
 
 @Composable
 private fun RecipeTile(
-    recipe: ForgeRecipe,
+    entry: ForgeEntry,
     selected: Boolean,
-    owned: Boolean,
-    level: Int,
     affordable: Boolean,
     modifier: Modifier = Modifier,
     onClick: () -> Unit
 ) {
-    val item = recipe.item
+    val item = entry.item
+    val level = entry.level
+    val owned = entry.ownedCount > 0
     val frame = RarityPalette.frame(item.rarity)
     val element = MonsterGear.elementFor(item.id)
 
@@ -764,10 +988,17 @@ private fun RecipeTile(
             .clickable(onClick = onClick)
             // Nieosiagalne recepty gasna, ale zostaja klikalne - gracz ma prawo sprawdzic,
             // ile brakuje, zanim uzbiera surowce.
-            .alpha(if (owned || affordable) 1f else 0.45f),
+            .alpha(if (entry.locked) 0.5f else if (owned || affordable) 1f else 0.45f),
         contentAlignment = Alignment.Center
     ) {
         Text(text = item.icon(), fontSize = 30.sp)
+
+        // Zamkniety prog: klodka NA ikonie, ale przedmiot nadal widoczny i klikalny. Ukrycie go
+        // odbieraloby graczowi jedyny powod, dla ktorego ma isc dalej w kampanie - zeby chciec
+        // Titan's Carapace, trzeba najpierw wiedziec, ze istnieje.
+        if (entry.locked) {
+            Text(text = "🔒", fontSize = 22.sp)
+        }
 
         // Znaczniki w rogach: zywiol i poziom lewo-gora, "masz juz" prawo-gora - tak jak
         // gwiazdki rzadkosci na kafelkach artefaktow. Zywiol i poziom siedza w JEDNYM rzedzie,
@@ -833,7 +1064,17 @@ private fun RecipeTile(
     }
 }
 
+/** Staly budzet miejsca na tabelke PRZED -> PO i zdolnosci w warsztacie ulepszania. */
+private val UPGRADE_INFO_HEIGHT = 118.dp
+
+/** Ile z tego przypada na liste zdolnosci. */
+private val UPGRADE_EFFECTS_HEIGHT = 44.dp
+
 private const val COLUMNS = 4
 
-/** Ile kafelkow miesci sie na jednej "tablicy" - cztery rzedy po cztery, jak na wzorze. */
-private const val PAGE_SIZE = 16
+/** Rzedy na jednej "tablicy". Trzy zamiast czterech - siatka mniej sciska warsztat i cala
+ *  tresc miesci sie na jednym ekranie bez scrolla; reszta receptur idzie na kolejna strone. */
+private const val ROWS = 3
+
+/** Ile kafelkow miesci sie na jednej "tablicy" - [ROWS] rzedow po [COLUMNS]. */
+private const val PAGE_SIZE = ROWS * COLUMNS

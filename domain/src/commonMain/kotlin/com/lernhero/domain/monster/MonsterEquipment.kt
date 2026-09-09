@@ -1,7 +1,9 @@
 package com.lernhero.domain.monster
 
 import com.lernhero.domain.combat.StatType
-import com.lernhero.domain.craft.ItemUpgrades
+import com.lernhero.domain.item.Inventory
+import com.lernhero.domain.item.ItemInstance
+import com.lernhero.domain.item.resolve
 import com.lernhero.domain.combat.Stats
 import com.lernhero.domain.item.Item
 import com.lernhero.domain.item.ItemSlot
@@ -19,15 +21,24 @@ object MonsterEquipment {
     /** Pusty ekwipunek - wygodniejsze niz powtarzanie emptyMap() w kazdym wywolaniu. */
     val EMPTY: Map<String, String> = emptyMap()
 
-    fun itemIn(equipment: Map<String, String>, slot: ItemSlot): Item? =
-        equipment[slot.name]?.let { MonsterGear.byId(it) }
+    /**
+     * Slot trzyma uid SZTUKI, wiec do odczytania go potrzebny jest plecak kompanow [bag].
+     * Nieznany uid po prostu wypada - stary zapis albo sprzedany przedmiot nie moze wysadzic ekranu.
+     */
+    fun instanceIn(equipment: Map<String, String>, slot: ItemSlot, bag: List<ItemInstance>): ItemInstance? =
+        equipment[slot.name]?.let { uid -> Inventory.byUid(bag, uid) }
 
-    /** Wszystkie zalozone przedmioty - nieznane id po prostu wypada, nie wysadza ekranu. */
-    fun itemsOf(equipment: Map<String, String>): List<Item> =
-        MonsterGear.SLOTS.mapNotNull { itemIn(equipment, it) }
+    /** Przedmiot w slocie, juz z poziomem ulepszenia TEJ sztuki. */
+    fun itemIn(equipment: Map<String, String>, slot: ItemSlot, bag: List<ItemInstance>): Item? =
+        instanceIn(equipment, slot, bag)?.resolve()
 
-    fun with(equipment: Map<String, String>, item: Item): Map<String, String> =
-        equipment + (item.slot.name to item.id)
+    /** Wszystkie zalozone przedmioty. */
+    fun itemsOf(equipment: Map<String, String>, bag: List<ItemInstance>): List<Item> =
+        MonsterGear.SLOTS.mapNotNull { itemIn(equipment, it, bag) }
+
+    /** Zaklada KONKRETNA sztuke - dwie kopie tego samego pazura to dwa rozne przedmioty. */
+    fun with(equipment: Map<String, String>, instance: ItemInstance, slot: ItemSlot): Map<String, String> =
+        equipment + (slot.name to instance.uid)
 
     fun without(equipment: Map<String, String>, slot: ItemSlot): Map<String, String> =
         equipment - slot.name
@@ -40,13 +51,13 @@ object MonsterEquipment {
     fun statsOf(
         equipment: Map<String, String>,
         element: Element?,
-        upgrades: Map<String, Int> = emptyMap()
+        bag: List<ItemInstance>
     ): Stats =
-        itemsOf(equipment).fold(Stats.Empty) { total, item ->
-            // Poziom ulepszenia mnozy sie z premia za zywiol - to dwa niezalezne powody, dla
-            // ktorych ten sam pazur bywa mocniejszy (patrz ItemUpgrades i MonsterGear.matchBonus).
-            val upgraded = ItemUpgrades.upgraded(item, ItemUpgrades.levelOf(upgrades, item.id))
-            total + upgraded.stats.scaledBy(MonsterGear.matchBonus(item.id, element))
+        // Poziom ulepszenia siedzi juz w sztuce (itemIn zwraca przedmiot po naliczeniu poziomu),
+        // wiec zostaje tylko premia za zgodnosc zywiolu - drugi, niezalezny powod, dla ktorego
+        // ten sam pazur bywa mocniejszy.
+        itemsOf(equipment, bag).fold(Stats.Empty) { total, item ->
+            total + item.stats.scaledBy(MonsterGear.matchBonus(item.id, element))
         }
 
     /**
@@ -79,25 +90,25 @@ object MonsterEquipment {
      * tego kompana zostaja dostepne, inaczej auto-equip zdejmowalby mu wlasny sprzet.
      */
     fun autoEquip(
-        ownedIds: List<String>,
+        bag: List<ItemInstance>,
         element: Element?,
         takenBy: Set<String> = emptySet()
     ): Map<String, String> {
-        val available = ownedIds
-            .asSequence()
-            .filter { it !in takenBy }
-            .mapNotNull { MonsterGear.byId(it) }
-            .toList()
+        // Para (sztuka, jej przedmiot po naliczeniu poziomu) - ocena musi patrzec na ULEPSZONE
+        // liczby, inaczej auto-equip zakladalby surowy pazur zamiast tego samego, ale na +8.
+        val available = bag
+            .filter { it.uid !in takenBy }
+            .mapNotNull { instance -> instance.resolve()?.let { instance to it } }
 
         return MonsterGear.SLOTS.mapNotNull { slot ->
             available
-                .filter { it.slot == slot }
-                .maxByOrNull { scoreFor(it, element) }
-                ?.let { slot.name to it.id }
+                .filter { (_, item) -> item.slot == slot }
+                .maxByOrNull { (_, item) -> scoreFor(item, element) }
+                ?.let { (instance, _) -> slot.name to instance.uid }
         }.toMap()
     }
 
-    /** Wszystkie id noszone przez kompanow INNYCH niz [exceptMonsterId]. */
+    /** Uid sztuk noszonych przez kompanow INNYCH niz [exceptMonsterId]. */
     fun equippedElsewhere(
         allEquipment: Map<String, Map<String, String>>,
         exceptMonsterId: String

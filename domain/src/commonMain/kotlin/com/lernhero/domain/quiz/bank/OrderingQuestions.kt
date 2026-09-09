@@ -37,13 +37,6 @@ object OrderingQuestions {
             difficulty = QuizDifficulty.Easy
         ),
         OrderingEntry(
-            id = "ord_bio_animal_size",
-            prompt = "Order these animals from smallest to largest.",
-            items = listOf("Ant", "Cat", "Horse", "Elephant"),
-            category = QuizCategory.Animals,
-            difficulty = QuizDifficulty.Easy
-        ),
-        OrderingEntry(
             id = "ord_bio_animal_lifespan",
             prompt = "Order these animals from shortest to longest average lifespan.",
             items = listOf("Fruit fly", "Mouse", "Dog", "Giant tortoise"),
@@ -63,13 +56,6 @@ object OrderingQuestions {
             items = listOf("Sniezka", "Mont Blanc", "Kilimanjaro", "Mount Everest"),
             category = QuizCategory.Geography,
             difficulty = QuizDifficulty.Hard
-        ),
-        OrderingEntry(
-            id = "ord_math_numbers",
-            prompt = "Order these numbers from smallest to largest.",
-            items = listOf("7", "23", "108", "965"),
-            category = QuizCategory.Math,
-            difficulty = QuizDifficulty.Easy
         ),
         OrderingEntry(
             id = "ord_math_fractions",

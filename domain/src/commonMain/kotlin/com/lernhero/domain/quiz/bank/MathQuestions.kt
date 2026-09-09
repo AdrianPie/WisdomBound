@@ -33,20 +33,6 @@ object MathQuestions {
             difficulty = QuizDifficulty.Easy
         ),
         ask(
-            id = "trojkat_boki",
-            prompt = "How many sides does a triangle have?",
-            correct = "3",
-            wrong = listOf("4", "2", "5"),
-            difficulty = QuizDifficulty.Easy
-        ),
-        ask(
-            id = "polowa_90",
-            prompt = "What is half of 90?",
-            correct = "45",
-            wrong = listOf("40", "50", "35"),
-            difficulty = QuizDifficulty.Easy
-        ),
-        ask(
             id = "kwadrans",
             prompt = "How many minutes are in a quarter hour?",
             correct = "15",
@@ -125,14 +111,14 @@ object MathQuestions {
             prompt = "A triangle with legs of 3 and 4 has a hypotenuse of...",
             correct = "5",
             wrong = listOf("6", "7", "4.5"),
-            difficulty = QuizDifficulty.Hard
+            difficulty = QuizDifficulty.Medium
         ),
         ask(
             id = "suma_katow",
             prompt = "What is the sum of angles in a triangle?",
             correct = "180 degrees",
             wrong = listOf("360 degrees", "90 degrees", "270 degrees"),
-            difficulty = QuizDifficulty.Hard
+            difficulty = QuizDifficulty.Easy
         ),
         ask(
             id = "fibonacci",

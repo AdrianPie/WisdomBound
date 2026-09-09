@@ -31,7 +31,6 @@ object TechnologyQuestionsExtra2 {
         ask("microsoft_zalozyciel", "Who co-founded Microsoft?", "Bill Gates", listOf("Steve Jobs", "Jeff Bezos", "Mark Zuckerberg"), QuizDifficulty.Easy),
         ask("apple_zalozyciel", "Who co-founded Apple?", "Steve Jobs", listOf("Bill Gates", "Jeff Bezos", "Sergey Brin"), QuizDifficulty.Easy),
         ask("google_zalozyciele", "Who founded Google?", "Larry Page and Sergey Brin", listOf("Bill Gates and Paul Allen", "Steve Jobs and Steve Wozniak", "Jeff Bezos and Elon Musk"), QuizDifficulty.Easy),
-        ask("email_pierwszy_znak", "What does the abbreviation www stand for?", "World Wide Web", listOf("World Wireless Web", "Wide World Web", "World Web Wire"), QuizDifficulty.Easy),
         ask("usb_skrot", "What does the abbreviation USB stand for?", "Universal Serial Bus", listOf("United System Board", "Universal System Bus is a wrong variant", "Unified Serial Base"), QuizDifficulty.Easy),
         ask("pdf_skrot", "What does the abbreviation PDF stand for?", "Portable Document Format", listOf("Personal Data File", "Printed Document Format", "Public Data Format"), QuizDifficulty.Easy),
         ask("smartfon_pierwszy", "Which company released the first iPhone?", "Apple", listOf("Samsung", "Nokia", "Google"), QuizDifficulty.Easy),

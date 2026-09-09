@@ -25,21 +25,16 @@ object AnimalQuestionsExtra {
     val all: List<QuizEntry> = listOf(
 
         /* ------------------------------- Easy ------------------------------- */
-        ask("mlode_krowy", "What is a baby cow called?", "Calf", listOf("Foal", "Piglet", "Lamb"), QuizDifficulty.Easy),
-        ask("mlode_owcy", "What is a baby sheep called?", "Lamb", listOf("Calf", "Kid", "Piglet"), QuizDifficulty.Easy),
         ask("mlode_zaby", "What is a baby frog called right after hatching?", "Tadpole", listOf("Larva", "Pupa", "Fry"), QuizDifficulty.Easy),
-        ask("kot_pazury", "What does a cat retract when it's not hunting?", "Its claws", listOf("Its whiskers", "Its teeth", "Its ears"), QuizDifficulty.Easy),
         ask("delfin_klasa", "Which animal group do dolphins belong to?", "Mammals", listOf("Fish", "Reptiles", "Amphibians"), QuizDifficulty.Easy),
         ask("wielblad_garby", "What does a camel store in its hump?", "Fat", listOf("Water", "Air", "Salt"), QuizDifficulty.Easy),
         ask("kangur_kraj", "Which continent do kangaroos come from?", "Australia", listOf("Africa", "South America", "Asia"), QuizDifficulty.Easy),
         ask("zyrafa_plamy", "What else is a giraffe known for besides its height?", "A long, black tongue", listOf("Gills", "Spikes on its back", "A trunk"), QuizDifficulty.Easy),
-        ask("sowa_pora", "At what time of day do owls usually hunt?", "At night", listOf("At noon", "Only at dawn", "They never hunt"), QuizDifficulty.Easy),
         ask("ryba_oddech", "What do fish breathe with?", "Gills", listOf("Lungs", "Skin", "Windpipes"), QuizDifficulty.Easy),
         ask("wilk_grupa", "What is a group of wolves called?", "A pack", listOf("A flock", "A swarm", "A shoal"), QuizDifficulty.Easy),
         ask("motyl_stadium", "What does a caterpillar become before it's a butterfly?", "A chrysalis (pupa)", listOf("An egg", "A tadpole", "A fly larva"), QuizDifficulty.Easy),
         ask("jez_obrona", "How does a hedgehog defend itself from predators?", "It curls into a spiky ball", listOf("It climbs a tree", "It sprays ink", "It pretends to be bigger"), QuizDifficulty.Easy),
         ask("bocian_zima", "What do white storks do for the winter?", "Fly to Africa", listOf("Hibernate", "Stay in their nests", "Move into the forest"), QuizDifficulty.Easy),
-        ask("krowa_pokarm", "What does a cow eat?", "Plants", listOf("Meat", "Insects", "Fish"), QuizDifficulty.Easy),
 
         /* ------------------------------ Medium ------------------------------ */
         ask("rekin_szkielet", "What is a shark's skeleton made of?", "Cartilage", listOf("Bone", "Chitin", "Horn"), QuizDifficulty.Medium),

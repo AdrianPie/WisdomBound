@@ -76,7 +76,7 @@ object ElementQuestionsExtra2 {
         symbol("Os", "Osmium", listOf("Lead", "Iridium", "Platinum"), QuizDifficulty.Expert),
         symbol("Pd", "Palladium", listOf("Platinum", "Polonium", "Potassium"), QuizDifficulty.Expert),
         ask("pierwiastek_najciezszy_stabilny", "Which is the heaviest element with stable isotopes?", "Lead", listOf("Bismuth", "Uranium", "Radium"), QuizDifficulty.Expert),
-        ask("transuranowce", "What are transuranium elements?", "Elements with an atomic number higher than uranium's, made artificially", listOf("Hydrogen isotopes", "Noble gases", "Naturally occurring rare-earth metals"), QuizDifficulty.Expert),
-        ask("aktynowce_ile", "How many elements make up the actinide group?", "15", listOf("10", "20", "7"), QuizDifficulty.Expert)
+        ask("astat_rzadki", "Which is the rarest naturally occurring element in Earth's crust?", "Astatine", listOf("Francium", "Promethium", "Polonium"), QuizDifficulty.Expert),
+        ask("aktynowce_ile", "How many elements does the actinide series contain, from actinium to lawrencium?", "15", listOf("10", "20", "7"), QuizDifficulty.Expert)
     )
 }

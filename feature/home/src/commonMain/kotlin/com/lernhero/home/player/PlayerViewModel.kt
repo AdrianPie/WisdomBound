@@ -4,6 +4,16 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.lernhero.domain.repository.PlayerRepository
 import com.lernhero.domain.item.Item
+import com.lernhero.domain.item.Inventory
+import com.lernhero.domain.item.ItemInstance
+import com.lernhero.domain.item.resolve
+import com.lernhero.domain.item.heroBag
+import com.lernhero.domain.item.monsterBag
+import com.lernhero.domain.item.migratedHeroEquipment
+import com.lernhero.domain.item.migratedMonsterEquipment
+import com.lernhero.domain.item.instanceIn
+import com.lernhero.domain.item.equippedUids
+import com.lernhero.domain.item.base
 import com.lernhero.domain.item.ItemCatalog
 import com.lernhero.domain.item.catalog.MonsterGear
 import com.lernhero.domain.item.ItemSlot
@@ -27,6 +37,8 @@ import com.lernhero.domain.player.HeroCombatStats
 import com.lernhero.domain.player.PlayerProgress
 import com.lernhero.domain.run.RunDifficulty
 import com.lernhero.domain.story.StoryProgress
+import com.lernhero.domain.player.AdminAccounts
+import com.lernhero.domain.player.PartySlots
 import com.lernhero.domain.progress.GameStats
 import com.lernhero.domain.progress.RunStats
 import com.lernhero.domain.reading.SavedWord
@@ -49,8 +61,10 @@ import kotlinx.coroutines.launch
  * Miejsca na kompanow obok bohatera. Cala druzyna to SZESC postaci, a bohater zajmuje jedno
  * miejsce - stad piec, a nie szesc. Walka bierze sklad wprost z tej listy, wiec sama liczba
  * wystarczy, zeby na polu bitwy stanelo szesciu swoich.
+ *
+ * Liczba miejsc jest CALKOWITA - ile z nich stoi otworem, mowi [PartySlots.unlockedCount].
  */
-const val COMPANION_SLOTS = 5
+const val COMPANION_SLOTS = PartySlots.TOTAL
 
 /**
  * Jedna pozycja kolekcji kompanow: karta, ile sztuk, jaki poziom, ile gwiazdek i ile z nich stoi
@@ -92,16 +106,21 @@ data class OwnedMonster(
 data class PlayerUiState(
     val loading: Boolean = true,
     val name: String = "",
+    /** Konto z lista [com.lernhero.domain.player.AdminAccounts] - jedyne, ktore widzi zestaw testowy. */
+    val isAdmin: Boolean = false,
     /** Wyglad wybrany przy tworzeniu postaci - z niego biora sie kolory rysowanego bohatera. */
     val appearance: HeroAppearance = HeroAppearance(),
     val money: Int = 0,
     val equipment: PlayerEquipment = PlayerEquipment(),
-    val ownedItems: List<String> = emptyList(),
-    /** Poziomy ulepszen przedmiotow (id -> 0..10) - patrz [ItemUpgrades]. */
-    val itemUpgrades: Map<String, Int> = emptyMap(),
+    /**
+     * Plecak bohatera jako SZTUKI - poziom ulepszenia siedzi w egzemplarzu, nie w osobnej mapie
+     * obok (patrz [ItemInstance]). Dzieki temu dwie kopie tego samego miecza moga byc na roznych
+     * poziomach, a slot wskazuje na konkretna z nich.
+     */
+    val heroBag: List<ItemInstance> = emptyList(),
     /** Sprzet kompanow - osobna pula od plecaka bohatera, patrz [MonsterGear]. */
-    val ownedMonsterItems: List<String> = emptyList(),
-    /** Ekwipunek kompanow: idKarty -> (slot -> id przedmiotu). Patrz [MonsterEquipment]. */
+    val monsterBag: List<ItemInstance> = emptyList(),
+    /** Ekwipunek kompanow: idKarty -> (slot -> uid sztuki). Patrz [MonsterEquipment]. */
     val monsterEquipment: Map<String, Map<String, String>> = emptyMap(),
     val ownedMonsters: List<String> = emptyList(),
     /** Poziom kompana per karta (brak wpisu = [MonsterLevels.MIN_LEVEL]). */
@@ -138,12 +157,12 @@ data class PlayerUiState(
 
     val knightEquipment: KnightEquipment
         get() = KnightEquipment(
-            head = equipment.itemIn(ItemSlot.Head) != null,
-            chest = equipment.itemIn(ItemSlot.Chest) != null,
-            hands = equipment.itemIn(ItemSlot.Hands) != null,
-            legs = equipment.itemIn(ItemSlot.Legs) != null,
-            feet = equipment.itemIn(ItemSlot.Feet) != null,
-            mainHand = equipment.itemIn(ItemSlot.MainHand) != null
+            head = equipment.itemIn(ItemSlot.Head, heroBag) != null,
+            chest = equipment.itemIn(ItemSlot.Chest, heroBag) != null,
+            hands = equipment.itemIn(ItemSlot.Hands, heroBag) != null,
+            legs = equipment.itemIn(ItemSlot.Legs, heroBag) != null,
+            feet = equipment.itemIn(ItemSlot.Feet, heroBag) != null,
+            mainHand = equipment.itemIn(ItemSlot.MainHand, heroBag) != null
         )
 
     /**
@@ -151,7 +170,7 @@ data class PlayerUiState(
      * ekwipunku i punktow z awansow, wiec karta postaci pokazuje dokladnie to, czym walczy walka.
      */
     val combatStats: HeroCombatStats
-        get() = HeroCombatStats.of(equipment.toLoadout(itemUpgrades).stats, progress.stats, talentBonuses)
+        get() = HeroCombatStats.of(equipment.toLoadout(heroBag).stats, progress.stats, talentBonuses)
 
     /** Zsumowane efekty drzewka - ekran talentow pokazuje z tego podsumowanie na dole. */
     val talentBonuses: TalentBonuses
@@ -163,25 +182,46 @@ data class PlayerUiState(
     /** Ile punktow siedzi w danym drzewku - progi rzedow licza sie wlasnie z tego. */
     fun talentPointsIn(tree: TalentTree): Int = TalentRules.pointsIn(talentRanks, tree)
 
-    /** Wszystko, co gracz kupil. */
-    val ownedEquipment: List<Item>
-        get() = ownedItems.mapNotNull { ItemCatalog.byId(it) }
+    /**
+     * Sztuki, ktore gracz NOSI PRZY SOBIE, sparowane z gotowym przedmiotem (juz z poziomem
+     * ulepszenia tej sztuki). Nierozpoznane id wypadaja - usuniety z katalogu przedmiot nie moze
+     * wysadzic ekwipunku.
+     */
+    val ownedEquipment: List<Pair<ItemInstance, Item>>
+        get() = heroBag.mapNotNull { instance -> instance.resolve()?.let { instance to it } }
 
-    /** Plecak: posiadane, ale niezalozone. */
-    val backpack: List<Item>
-        get() = ownedEquipment.filter { item -> equipment.itemIn(item.slot)?.id != item.id }
+    /** Plecak: posiadane, ale NIEZALOZONE sztuki. Porownujemy uid, bo kopii moze byc wiele. */
+    val backpack: List<Pair<ItemInstance, Item>>
+        get() {
+            val worn = equipment.equippedUids()
+            return ownedEquipment.filterNot { (instance, _) -> instance.uid in worn }
+        }
 
-    fun itemIn(slot: ItemSlot): Item? = equipment.itemIn(slot)
+    fun itemIn(slot: ItemSlot): Item? = equipment.itemIn(slot, heroBag)
 
-    /** Posiadane przedmioty pasujace do slotu - lista do wyboru po kliknieciu pustego miejsca. */
-    fun ownedFor(slot: ItemSlot): List<Item> =
-        ownedEquipment.filter { it.slot == slot && equipment.itemIn(slot)?.id != it.id }
+    fun instanceIn(slot: ItemSlot): ItemInstance? = equipment.instanceIn(slot, heroBag)
+
+    /** Wolne sztuki pasujace do slotu - lista do wyboru po kliknieciu pustego miejsca. */
+    fun ownedFor(slot: ItemSlot): List<Pair<ItemInstance, Item>> =
+        backpack.filter { (_, item) -> item.slot == slot }
 
     /** Monsters resolved for each companion slot (null = empty slot). */
     val partyMonsters: List<MonsterCard?>
         get() = List(COMPANION_SLOTS) { index ->
-            party.getOrNull(index)?.let { MonsterCatalog.byId(it) }
+            party.getOrNull(index)
+                ?.takeIf { isSlotUnlocked(index) }
+                ?.let { MonsterCatalog.byId(it) }
         }
+
+    /** Czy to miejsce jest juz otwarte poziomem bohatera - patrz [PartySlots]. */
+    fun isSlotUnlocked(slotIndex: Int): Boolean = PartySlots.isUnlocked(slotIndex, progress.level)
+
+    /** Poziom, ktory otwiera to miejsce - na klodce w [com.lernhero.home.team.TeamPanel]. */
+    fun levelForSlot(slotIndex: Int): Int = PartySlots.requiredLevel(slotIndex)
+
+    /** Czy jest gdzie postawic kolejnego kompana - liczone TYLKO po otwartych miejscach. */
+    val hasFreeCompanionSlot: Boolean
+        get() = (0 until COMPANION_SLOTS).any { isSlotUnlocked(it) && party.getOrNull(it) == null }
 
     fun levelOf(monsterId: String): Int =
         MonsterLevels.clampToStars(monsterLevels[monsterId] ?: MonsterLevels.MIN_LEVEL, starsOf(monsterId))
@@ -252,14 +292,15 @@ class PlayerViewModel(
                     state.copy(
                         loading = false,
                         name = player.name.orEmpty(),
+                        isAdmin = AdminAccounts.isAdmin(player.email),
                         appearance = player.appearance,
                         money = player.money,
-                        // Stary zapis (piec flag) przerabiamy na mape slot -> przedmiot od razu przy wczytaniu.
-                        equipment = player.equipment.migrated(),
-                        ownedItems = player.ownedItems,
-                        itemUpgrades = player.itemUpgrades,
-                        ownedMonsterItems = player.ownedMonsterItems,
-                        monsterEquipment = player.monsterEquipment,
+                        // Stary zapis przerabiamy na nowy JUZ PRZY WCZYTANIU - dalej w ekranach
+                        // istnieje tylko format sztuk (patrz [withMigratedItems]).
+                        equipment = player.migratedHeroEquipment(),
+                        heroBag = player.heroBag(),
+                        monsterBag = player.monsterBag(),
+                        monsterEquipment = player.migratedMonsterEquipment(),
                         ownedMonsters = player.ownedMonsters,
                         monsterLevels = player.monsterLevels,
                         monsterStars = player.monsterStars,
@@ -281,19 +322,20 @@ class PlayerViewModel(
 
     // region Ekwipunek
 
-    /** Zaklada przedmiot. Cokolwiek stalo w tym slocie, wraca do plecaka. */
-    fun equipItem(item: Item) {
+    /** Zaklada KONKRETNA sztuke. Cokolwiek stalo w tym slocie, wraca do plecaka. */
+    fun equipItem(instance: ItemInstance) {
         val state = _uiState.value
-        if (item.id !in state.ownedItems) {
+        val item = instance.resolve()
+        if (item == null || Inventory.byUid(state.heroBag, instance.uid) == null) {
             _uiState.update { it.copy(message = "Najpierw wykuj ten przedmiot w Kuzni.") }
             return
         }
-        persistEquipment(state.equipment.equip(item))
+        persistEquipment(state.equipment.equip(instance, item.slot))
     }
 
     fun unequipSlot(slot: ItemSlot) {
         val state = _uiState.value
-        if (state.equipment.itemIn(slot) == null) return
+        if (state.equipment.instanceIn(slot, state.heroBag) == null) return
         persistEquipment(state.equipment.unequip(slot))
     }
 
@@ -315,6 +357,14 @@ class PlayerViewModel(
     fun placeInParty(monsterId: String, slotIndex: Int) {
         if (slotIndex !in 0 until COMPANION_SLOTS) return
         val state = _uiState.value
+        // Bramka jest tez TUTAJ, nie tylko w UI: ekran moze wystawic przycisk, ale to model
+        // odpowiada za to, co trafi do zapisu i stad na pole bitwy.
+        if (!state.isSlotUnlocked(slotIndex)) {
+            _uiState.update {
+                it.copy(message = "That slot opens at level ${PartySlots.requiredLevel(slotIndex)}.")
+            }
+            return
+        }
         val party = state.party.normalizedParty().toMutableList()
 
         if (state.ownedMonsters.none { it == monsterId }) return
@@ -330,6 +380,8 @@ class PlayerViewModel(
     fun swapPartySlots(a: Int, b: Int) {
         if (a == b) return
         if (a !in 0 until COMPANION_SLOTS || b !in 0 until COMPANION_SLOTS) return
+        val state = _uiState.value
+        if (!state.isSlotUnlocked(a) || !state.isSlotUnlocked(b)) return
         val party = _uiState.value.party.normalizedParty().toMutableList()
         val tmp = party[a]
         party[a] = party[b]
@@ -343,6 +395,22 @@ class PlayerViewModel(
         if (party[slotIndex] == null) return
         party[slotIndex] = null
         persistParty(party)
+    }
+
+    /**
+     * Wsypuje zestaw testowy. Repozytorium i tak sprawdza uprawnienie, wiec ten brak sprawdzenia
+     * tutaj jest swiadomy - jedno miejsce decyduje, zamiast dwoch, ktore moga sie rozjechac.
+     */
+    fun grantAdminKit() {
+        viewModelScope.launch(Dispatchers.IO) {
+            val granted = playerRepository.grantAdminKit()
+            if (granted == null) {
+                _uiState.update { it.copy(message = "Admin kit unavailable for this account.") }
+                return@launch
+            }
+            refresh()
+            _uiState.update { it.copy(message = "Admin kit granted.") }
+        }
     }
 
     private fun persistParty(party: List<String?>) {
@@ -395,14 +463,8 @@ class PlayerViewModel(
      */
     fun craftItem(item: Item, cost: CraftCost) {
         val state = _uiState.value
-        // Sprzet kompana ma WLASNA pule - sprawdzanie go w plecaku bohatera pozwalaloby wykuwac
-        // ten sam pazur w kolko (repozytorium i tak by go odrzucilo, ale bez zadnego komunikatu).
-        val ownedPool =
-            if (MonsterGear.isMonsterGear(item.id)) state.ownedMonsterItems else state.ownedItems
-        if (item.id in ownedPool) {
-            _uiState.update { it.copy(message = "You already own this item.") }
-            return
-        }
+        // Zadnej blokady "juz to masz": kazde wykucie daje NOWA SZTUKE. To po to sa egzemplarze -
+        // dziesieciu kompanow moze nosic ten sam typ pazura, jesli wykujesz dziesiec sztuk.
         if (!cost.canAfford(state.resources, state.money)) {
             _uiState.update { it.copy(message = "Brakuje materialow na ten przedmiot.") }
             return
@@ -417,8 +479,8 @@ class PlayerViewModel(
                     current.copy(
                         money = updated.money,
                         resources = updated.townResources,
-                        ownedItems = updated.ownedItems,
-                        ownedMonsterItems = updated.ownedMonsterItems,
+                        heroBag = updated.heroBag(),
+                        monsterBag = updated.monsterBag(),
                         stats = updated.stats,
                         message = "Wykuto: ${item.name}"
                     )
@@ -433,16 +495,17 @@ class PlayerViewModel(
      * najtanszego progu. Tutaj sprawdzamy tylko to, co da sie powiedziec od razu, zeby gracz
      * dostal komunikat bez podrozy do bazy.
      */
-    fun upgradeItem(item: Item) {
+    fun upgradeItem(instance: ItemInstance) {
         val state = _uiState.value
-        val ownedPool =
-            if (MonsterGear.isMonsterGear(item.id)) state.ownedMonsterItems else state.ownedItems
-        if (item.id !in ownedPool) {
+        // Szukamy KONKRETNEJ sztuki - moze lezec w ktorymkolwiek z dwoch plecakow.
+        val owned = Inventory.byUid(state.heroBag, instance.uid)
+            ?: Inventory.byUid(state.monsterBag, instance.uid)
+        val item = owned?.base()
+        if (owned == null || item == null) {
             _uiState.update { it.copy(message = "Najpierw trzeba wykuc ten przedmiot.") }
             return
         }
-        val level = ItemUpgrades.levelOf(state.itemUpgrades, item.id)
-        val cost = ItemUpgrades.nextCost(item, level)
+        val cost = ItemUpgrades.nextCost(item, owned.level)
         if (cost == null) {
             _uiState.update { it.copy(message = "Already at max level.") }
             return
@@ -453,16 +516,19 @@ class PlayerViewModel(
         }
 
         viewModelScope.launch(Dispatchers.IO) {
-            val updated = playerRepository.upgradeItem(item.id)
+            val updated = playerRepository.upgradeItem(instance.uid)
             _uiState.update { current ->
                 if (updated == null) {
                     current.copy(message = "Upgrade failed.")
                 } else {
+                    val bags = updated.heroBag() + updated.monsterBag()
+                    val level = Inventory.byUid(bags, instance.uid)?.level ?: owned.level
                     current.copy(
                         money = updated.money,
                         resources = updated.townResources,
-                        itemUpgrades = updated.itemUpgrades,
-                        message = "${item.name} +${ItemUpgrades.levelOf(updated.itemUpgrades, item.id)}"
+                        heroBag = updated.heroBag(),
+                        monsterBag = updated.monsterBag(),
+                        message = "${item.name} +$level"
                     )
                 }
             }
@@ -708,9 +774,14 @@ class PlayerViewModel(
     fun equipmentOf(monsterId: String): Map<String, String> =
         _uiState.value.monsterEquipment[monsterId] ?: MonsterEquipment.EMPTY
 
-    fun equipMonsterItem(monsterId: String, item: Item) {
+    fun equipMonsterItem(monsterId: String, instance: ItemInstance) {
+        val item = instance.resolve() ?: return
         val current = equipmentOf(monsterId)
-        persistMonsterEquipment(monsterId, MonsterEquipment.with(current, item), "Zalozono: ${item.name}")
+        persistMonsterEquipment(
+            monsterId,
+            MonsterEquipment.with(current, instance, item.slot),
+            "Zalozono: ${item.name}"
+        )
     }
 
     fun unequipMonsterSlot(monsterId: String, slot: ItemSlot) {
@@ -734,7 +805,7 @@ class PlayerViewModel(
         val state = _uiState.value
         val element = MonsterCatalog.byId(monsterId)?.element
         val taken = MonsterEquipment.equippedElsewhere(state.monsterEquipment, monsterId)
-        val next = MonsterEquipment.autoEquip(state.ownedMonsterItems, element, taken)
+        val next = MonsterEquipment.autoEquip(state.monsterBag, element, taken)
 
         if (next == equipmentOf(monsterId)) {
             _uiState.update { it.copy(message = "Nothing to upgrade this companion with.") }
@@ -797,7 +868,7 @@ class PlayerViewModel(
             val updated = playerRepository.grantItem(item.id)
             if (updated != null) {
                 _uiState.update {
-                    it.copy(ownedItems = updated.ownedItems, message = "Zdobyto: ${item.name}")
+                    it.copy(heroBag = updated.heroBag(), message = "Zdobyto: ${item.name}")
                 }
                 return@launch
             }

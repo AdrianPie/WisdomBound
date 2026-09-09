@@ -35,13 +35,6 @@ object BiologyQuestions {
             difficulty = QuizDifficulty.Easy
         ),
         ask(
-            id = "pluca",
-            prompt = "Which organ is responsible for breathing?",
-            correct = "Lungs",
-            wrong = listOf("Stomach", "Pancreas", "Spleen"),
-            difficulty = QuizDifficulty.Easy
-        ),
-        ask(
             id = "fotosynteza",
             prompt = "What is the process called in which plants make food from light?",
             correct = "Photosynthesis",
@@ -74,13 +67,6 @@ object BiologyQuestions {
             prompt = "How many bones does an adult human skeleton have?",
             correct = "206",
             wrong = listOf("152", "300", "180"),
-            difficulty = QuizDifficulty.Easy
-        ),
-        ask(
-            id = "zmysly",
-            prompt = "Which organ is responsible for sight?",
-            correct = "Eye",
-            wrong = listOf("Ear", "Nose", "Tongue"),
             difficulty = QuizDifficulty.Easy
         ),
 

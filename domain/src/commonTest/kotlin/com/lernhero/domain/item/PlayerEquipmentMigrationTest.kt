@@ -3,6 +3,7 @@ package com.lernhero.domain.item
 import com.lernhero.domain.combat.StatType
 import com.lernhero.domain.item.catalog.Armors
 import com.lernhero.domain.item.catalog.Weapons
+import com.lernhero.domain.player.Player
 import com.lernhero.domain.player.PlayerEquipment
 import kotlin.test.Test
 import kotlin.test.assertEquals
@@ -35,29 +36,60 @@ class PlayerEquipmentMigrationTest {
         assertEquals(current, current.migrated())
     }
 
+    /** Plecak z jedna sztuka kazdego z podanych przedmiotow - skrot na potrzeby testow. */
+    private fun bagOf(vararg items: Item): List<ItemInstance> =
+        items.fold(emptyList()) { bag, item -> Inventory.add(bag, item.id) }
+
+    private fun List<ItemInstance>.of(item: Item): ItemInstance = first { it.itemId == item.id }
+
     @Test
     fun `zalozenie przedmiotu wypycha poprzedni z tego samego slotu`() {
+        val bag = bagOf(Weapons.PLATE_SWORD, Weapons.REAPER_GLAIVE)
         val equipment = PlayerEquipment()
-            .equip(Weapons.PLATE_SWORD)
-            .equip(Weapons.REAPER_GLAIVE)
+            .equip(bag.of(Weapons.PLATE_SWORD), ItemSlot.MainHand)
+            .equip(bag.of(Weapons.REAPER_GLAIVE), ItemSlot.MainHand)
 
-        assertEquals(Weapons.REAPER_GLAIVE, equipment.itemIn(ItemSlot.MainHand))
+        assertEquals(Weapons.REAPER_GLAIVE, equipment.itemIn(ItemSlot.MainHand, bag))
         assertEquals(1, equipment.equipped.size, "Slot glownej reki miesci jeden przedmiot")
     }
 
     @Test
-    fun `zdjecie przedmiotu oproznia slot`() {
-        val equipment = PlayerEquipment().equip(Armors.PLATE_HELM).unequip(ItemSlot.Head)
+    fun `dwie kopie tego samego miecza to dwa rozne przedmioty`() {
+        // Sedno przejscia na egzemplarze: slot wskazuje na SZTUKE, wiec da sie odroznic
+        // miecz na +5 od surowego miecza tego samego typu.
+        val bag = Inventory.withLevel(
+            Inventory.add(emptyList(), Weapons.PLATE_SWORD.id, count = 2),
+            "${Weapons.PLATE_SWORD.id}#1",
+            level = 5
+        )
+        val raw = bag.first { it.level == 0 }
+        val upgraded = bag.first { it.level == 5 }
 
-        assertNull(equipment.itemIn(ItemSlot.Head))
+        val withRaw = PlayerEquipment().equip(raw, ItemSlot.MainHand)
+        val withUpgraded = PlayerEquipment().equip(upgraded, ItemSlot.MainHand)
+
+        val rawAttack = withRaw.itemIn(ItemSlot.MainHand, bag)!!.stats[StatType.Attack]
+        val upgradedAttack = withUpgraded.itemIn(ItemSlot.MainHand, bag)!!.stats[StatType.Attack]
+        assertTrue(upgradedAttack > rawAttack, "Ulepszona sztuka ma bic mocniej niz surowa")
+    }
+
+    @Test
+    fun `zdjecie przedmiotu oproznia slot`() {
+        val bag = bagOf(Armors.PLATE_HELM)
+        val equipment = PlayerEquipment()
+            .equip(bag.of(Armors.PLATE_HELM), ItemSlot.Head)
+            .unequip(ItemSlot.Head)
+
+        assertNull(equipment.itemIn(ItemSlot.Head, bag))
     }
 
     @Test
     fun `ekwipunek gracza sklada sie do statystyk i efektow walki`() {
+        val bag = bagOf(Weapons.REAPER_GLAIVE, Armors.PLATE_HELM)
         val loadout = PlayerEquipment()
-            .equip(Weapons.REAPER_GLAIVE)
-            .equip(Armors.PLATE_HELM)
-            .toLoadout()
+            .equip(bag.of(Weapons.REAPER_GLAIVE), ItemSlot.MainHand)
+            .equip(bag.of(Armors.PLATE_HELM), ItemSlot.Head)
+            .toLoadout(bag)
 
         assertEquals(9f, loadout.stats[StatType.Attack], "Atak z kosy")
         assertEquals(12f, loadout.stats[StatType.MaxHp], "Zdrowie z helmu")
@@ -69,7 +101,16 @@ class PlayerEquipmentMigrationTest {
 
     @Test
     fun `stary zapis dziala w walce dokladnie tak jak przed migracja`() {
-        val loadout = PlayerEquipment(head = true, hands = true, mainHand = true).toLoadout()
+        // Pelna sciezka najstarszego zapisu: piec flag -> mapa slotow -> uid sztuk -> walka.
+        val player = Player(
+            equipment = PlayerEquipment(head = true, hands = true, mainHand = true),
+            ownedItems = listOf(
+                Armors.PLATE_HELM.id,
+                Armors.PLATE_GAUNTLETS.id,
+                Weapons.PLATE_SWORD.id
+            )
+        )
+        val loadout = player.migratedHeroEquipment().toLoadout(player.heroBag())
 
         assertEquals(Armors.PLATE_HELM, loadout[ItemSlot.Head])
         assertEquals(Armors.PLATE_GAUNTLETS, loadout[ItemSlot.Hands])

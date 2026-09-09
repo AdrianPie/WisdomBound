@@ -10,10 +10,11 @@ import com.lernhero.domain.monster.Element
 /**
  * Sprzet dla kompanow - osobna linia od ekwipunku bohatera.
  *
- * Osobna, a nie wspolna pula, bo [com.lernhero.domain.player.Player.ownedItems] to lista ID bez
- * pojecia egzemplarza: gdyby ten sam miecz mogl nosic bohater ALBO kompan, trzeba by najpierw
- * przerobic caly zapis na sztuki i pilnowac, kto co ma na sobie. Osobny katalog daje to samo
- * uczucie ("wykuwam cos dla swojego kompana") bez migracji calego stanu gracza.
+ * Osobna, a nie wspolna pula - ale juz nie z powodu zapisu. Plecak liczy dzis SZTUKI
+ * ([com.lernhero.domain.item.ItemInstance]), wiec technicznie nic nie stoi na przeszkodzie, zeby
+ * bohater i kompan siegali do jednej puli. Zostaje podzial PROJEKTOWY: sprzet kompana ma wlasne
+ * sloty, wlasna premie za zywiol i wlasne tempo zdobywania, a wspolna pula zamienilaby wybor
+ * "dla kogo kuje" w licytacje o te same przedmioty.
  *
  * Typ [Item] jest ten sam, co u bohatera - dzieki temu kuznia, koszty i sumowanie statystyk
  * dzialaja bez ani jednej nowej galezi. Rozni je wylacznie katalog, w ktorym siedza.
@@ -261,11 +262,184 @@ object MonsterGear {
         element = Element.Nature
     )
 
+
+    /* ------------------------------ Master (Epic) ------------------------------ */
+    //
+    // Sprzet kompana celowo zostaje przy CZYSTYCH STATYSTYKACH nawet na wysokich progach.
+    // Zdolnosci sa dzialka bohatera: jest jeden, wiec jego efekty da sie zbalansowac. Kompanow
+    // bywa szesciu i kazdy efekt mnozylby sie razy szesc - z "20% szansy na podwojny atak"
+    // robi sie wtedy druzyna atakujaca dwa razy na ture. Kompani skaluja LICZBY, bohater REGULY.
+
+    val DRAGON_TALON = gear(
+        id = "dragon_talon",
+        name = "Dragon Talon",
+        description = "Torn from something that was still burning when it died.",
+        slot = ItemSlot.MainHand,
+        rarity = Rarity.Epic,
+        iconKey = "talon",
+        stats = Stats.of(StatType.Attack to 11f, StatType.CritChance to 0.05f),
+        cost = 460,
+        element = Element.Fire
+    )
+
+    val ABYSS_HOOK = gear(
+        id = "abyss_hook",
+        name = "Abyss Hook",
+        description = "Drags things down. Everything comes back up lighter.",
+        slot = ItemSlot.MainHand,
+        rarity = Rarity.Epic,
+        iconKey = "hook",
+        stats = Stats.of(StatType.Attack to 10f, StatType.Lifesteal to 0.08f),
+        cost = 450,
+        element = Element.Water
+    )
+
+    val BARKHIDE_SHELL = gear(
+        id = "barkhide_shell",
+        name = "Barkhide Shell",
+        description = "Living bark. Closes over wounds between fights.",
+        slot = ItemSlot.Chest,
+        rarity = Rarity.Epic,
+        iconKey = "bark",
+        stats = Stats.of(StatType.MaxHp to 85f, StatType.DamageReduction to 0.06f),
+        cost = 480,
+        element = Element.Nature
+    )
+
+    val TOMB_HELM = gear(
+        id = "tomb_helm",
+        name = "Tomb Helm",
+        description = "Cold to the touch, and heavier than it looks.",
+        slot = ItemSlot.Head,
+        rarity = Rarity.Epic,
+        iconKey = "helm",
+        stats = Stats.of(StatType.Attack to 8f, StatType.MaxHp to 40f),
+        cost = 440,
+        element = Element.Death
+    )
+
+    val GALE_HOOVES = gear(
+        id = "gale_hooves",
+        name = "Gale Hooves",
+        description = "Ground barely involved.",
+        slot = ItemSlot.Feet,
+        rarity = Rarity.Epic,
+        iconKey = "hooves",
+        stats = Stats.of(StatType.Speed to 14f, StatType.Dodge to 0.06f),
+        cost = 420
+    )
+
+    val EMBERHEART_CHARM = gear(
+        id = "emberheart_charm",
+        name = "Emberheart Charm",
+        description = "A coal that has refused to go out for a very long time.",
+        slot = ItemSlot.Amulet,
+        rarity = Rarity.Epic,
+        iconKey = "charm",
+        stats = Stats.of(StatType.SpellPower to 0.18f, StatType.Attack to 6f),
+        cost = 455,
+        element = Element.Fire
+    )
+
+    val IRONWOOD_RING = gear(
+        id = "ironwood_ring",
+        name = "Ironwood Ring",
+        description = "Grown, not forged. It shows.",
+        slot = ItemSlot.Ring,
+        rarity = Rarity.Epic,
+        iconKey = "ring",
+        stats = Stats.of(StatType.MaxHp to 55f, StatType.DamageReduction to 0.05f),
+        cost = 430,
+        element = Element.Nature
+    )
+
+    /* ---------------------------- Mythic (Legendary) ---------------------------- */
+
+    val WORLDEATER_MAW = gear(
+        id = "worldeater_maw",
+        name = "Worldeater Maw",
+        description = "The single hardest thing a companion can carry into a fight.",
+        slot = ItemSlot.MainHand,
+        rarity = Rarity.Legendary,
+        iconKey = "maw",
+        stats = Stats.of(
+            StatType.Attack to 16f,
+            StatType.CritChance to 0.08f,
+            StatType.CritDamage to 0.15f
+        ),
+        cost = 700
+    )
+
+    val AEONPLATE = gear(
+        id = "aeonplate",
+        name = "Aeonplate",
+        description = "Outlasts the battle, the war, and usually the enemy.",
+        slot = ItemSlot.Chest,
+        rarity = Rarity.Legendary,
+        iconKey = "plate",
+        stats = Stats.of(StatType.MaxHp to 120f, StatType.DamageReduction to 0.10f),
+        cost = 740
+    )
+
+    val CROWN_OF_TIDES = gear(
+        id = "crown_of_tides",
+        name = "Crown of Tides",
+        description = "The sea keeps what it takes, and gives some of it back.",
+        slot = ItemSlot.Head,
+        rarity = Rarity.Legendary,
+        iconKey = "crown",
+        stats = Stats.of(StatType.MaxHp to 65f, StatType.HealPower to 0.25f, StatType.Attack to 7f),
+        cost = 690,
+        element = Element.Water
+    )
+
+    val SOULBINDER_BAND = gear(
+        id = "soulbinder_band",
+        name = "Soulbinder Band",
+        description = "Every wound dealt is a wound repaid.",
+        slot = ItemSlot.Ring,
+        rarity = Rarity.Legendary,
+        iconKey = "ring",
+        stats = Stats.of(StatType.Lifesteal to 0.14f, StatType.Attack to 8f),
+        cost = 710,
+        element = Element.Death
+    )
+
+    val TOTEM_OF_AGES = gear(
+        id = "totem_of_ages",
+        name = "Totem of Ages",
+        description = "Older than the forest it came from.",
+        slot = ItemSlot.Amulet,
+        rarity = Rarity.Legendary,
+        iconKey = "totem",
+        stats = Stats.of(
+            StatType.SpellPower to 0.28f,
+            StatType.HealPower to 0.2f,
+            StatType.MaxHp to 60f
+        ),
+        cost = 730
+    )
+
+    val STORMSTRIDE_CLAWS = gear(
+        id = "stormstride_claws",
+        name = "Stormstride Claws",
+        description = "Fast enough that the first blow is usually yours.",
+        slot = ItemSlot.Feet,
+        rarity = Rarity.Legendary,
+        iconKey = "claws",
+        stats = Stats.of(StatType.Speed to 20f, StatType.Dodge to 0.1f, StatType.Attack to 5f),
+        cost = 680
+    )
+
     val all: List<Item> = listOf(
         BONE_CLAW, EMBER_FANG, TIDE_SPINE, THORN_LASH,
         HIDE_WRAP, CHITIN_PLATE, GRAVE_SHROUD,
         HORN_CROWN, EMBER_MASK, SWIFT_PAWS, DEEP_FINS,
-        SPIRIT_TOTEM, TIDE_PEARL, BLOOD_BAND, SEED_RING
+        SPIRIT_TOTEM, TIDE_PEARL, BLOOD_BAND, SEED_RING,
+        DRAGON_TALON, ABYSS_HOOK, BARKHIDE_SHELL, TOMB_HELM, GALE_HOOVES,
+        EMBERHEART_CHARM, IRONWOOD_RING,
+        WORLDEATER_MAW, AEONPLATE, CROWN_OF_TIDES, SOULBINDER_BAND,
+        TOTEM_OF_AGES, STORMSTRIDE_CLAWS
     )
 
     private val byId: Map<String, Item> = all.associateBy { it.id }

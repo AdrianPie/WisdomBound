@@ -1,10 +1,12 @@
 package com.lernhero.home.ui
 
+import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxScope
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.Row
@@ -17,16 +19,26 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.FilterQuality
+import androidx.compose.ui.graphics.ImageBitmap
+import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.IntOffset
+import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.lernhero.shared.resources.Resources
 import com.lernhero.shared.theme.FontFirst
 import com.lernhero.shared.theme.FontPixel
+import org.jetbrains.compose.resources.imageResource
+import kotlin.math.roundToInt
 
 /**
  * Zestaw "pergaminowy" - jasne, kremowe panele w grubej brazowej ramce, zolte przyciski i
@@ -263,6 +275,12 @@ fun PageDots(
     count: Int,
     selected: Int,
     modifier: Modifier = Modifier,
+    /**
+     * Czy cala strona jest jeszcze zamknieta. Kropka dostaje wtedy klodke i gasnie - ale ZOSTAJE
+     * klikalna, bo pokazanie graczowi, co czeka wyzej, jest calym sensem tego znacznika.
+     * Domyslnie nic nie jest zamkniete, wiec pozostali uzytkownicy [PageDots] nie zauwaza roznicy.
+     */
+    locked: (Int) -> Boolean = { false },
     onSelect: (Int) -> Unit
 ) {
     if (count <= 1) return
@@ -273,27 +291,161 @@ fun PageDots(
     ) {
         repeat(count) { index ->
             val active = index == selected
-            Box(
-                modifier = Modifier
-                    .size(if (active) 30.dp else 26.dp)
-                    .clip(CircleShape)
-                    .background(if (active) ParchmentPalette.TabActive else Color(0xFF8E3A5B))
-                    .border(
-                        width = 2.dp,
-                        color = if (active) ParchmentPalette.ButtonEdge else ParchmentPalette.Frame,
-                        shape = CircleShape
+            val shut = locked(index)
+            Box(contentAlignment = Alignment.TopEnd) {
+                Box(
+                    modifier = Modifier
+                        .size(if (active) 30.dp else 26.dp)
+                        .clip(CircleShape)
+                        .background(if (active) ParchmentPalette.TabActive else Color(0xFF8E3A5B))
+                        .border(
+                            width = 2.dp,
+                            color = if (active) ParchmentPalette.ButtonEdge else ParchmentPalette.Frame,
+                            shape = CircleShape
+                        )
+                        .clickable { onSelect(index) }
+                        .alpha(if (shut) 0.5f else 1f),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text(
+                        text = "${index + 1}",
+                        color = if (active) ParchmentPalette.Ink else ParchmentPalette.Paper,
+                        fontFamily = FontPixel(),
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 12.sp
                     )
-                    .clickable { onSelect(index) },
-                contentAlignment = Alignment.Center
-            ) {
-                Text(
-                    text = "${index + 1}",
-                    color = if (active) ParchmentPalette.Ink else ParchmentPalette.Paper,
-                    fontFamily = FontPixel(),
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 12.sp
-                )
+                }
+                // Klodka POZA przygaszonym kolem, nie w nim: gdyby sama tez byla wyblakla,
+                // znikalaby dokladnie tam, gdzie ma cos komunikowac.
+                if (shut) {
+                    Text(text = "🔒", fontSize = 10.sp)
+                }
             }
         }
     }
+}
+
+/**
+ * Panel z ozdobna ramka 9-slice ([Resources.Image.forgeFrame]) zamiast rysowanej ramki
+ * [ParchmentPanel]. Rogi grafiki ida w stalym rozmiarze, boki sa rozciagane - dzieki temu ta
+ * sama grafika pasuje do panelu kazdej szerokosci i wysokosci bez deformacji ornamentow.
+ *
+ * API zgodne z [ParchmentPanel] ([title] + tresc w [ColumnScope]) - podmiana to jedna linia.
+ */
+@Composable
+fun FramedPanel(
+    modifier: Modifier = Modifier,
+    title: String? = null,
+    content: @Composable ColumnScope.() -> Unit
+) {
+    FantasyFrame(modifier = modifier) {
+        // Papier wchodzi POD belki ramki (wciecie [FRAME_INLAY] jest mniejsze niz grubosc belki),
+        // zeby ramka lezala na krawedzi papieru, a nie lewitowala obok niego.
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .clip(RoundedCornerShape(10.dp))
+                .background(
+                    Brush.verticalGradient(
+                        listOf(ParchmentPalette.Paper, ParchmentPalette.PaperDark)
+                    )
+                )
+                .padding(horizontal = 10.dp, vertical = 10.dp),
+            verticalArrangement = Arrangement.spacedBy(8.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            title?.let {
+                Text(
+                    text = it,
+                    color = ParchmentPalette.Ink,
+                    fontFamily = FontPixel(),
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 15.sp,
+                    textAlign = TextAlign.Center,
+                    modifier = Modifier.fillMaxWidth()
+                )
+            }
+            content()
+        }
+    }
+}
+
+/**
+ * Sama ozdobna ramka 9-slice ([Resources.Image.forgeFrame]) narysowana NA obrysie dowolnej
+ * tresci - bez papieru w srodku. Do paneli, ktore maja wlasne tlo/uklad (mapa krainy, endless).
+ *
+ * [inset] to wciecie tresci. UWAGA: ramka rysuje sie NA WIERZCHU, wiec inset mniejszy niz grubosc
+ * belki (~[FRAME_CORNER] * 33/96, czyli ok. 15 dp) chowa tresc pod belka - tak wlasnie ucinalo
+ * pierwsza litere tytulu krainy przy inset = 5 dp. Zmniejszaj go tylko tam, gdzie pod belka ma
+ * wejsc TLO (papier), a nie tekst czy przycisk.
+ */
+@Composable
+fun FantasyFrame(
+    modifier: Modifier = Modifier,
+    inset: Dp = FRAME_INLAY,
+    content: @Composable BoxScope.() -> Unit
+) {
+    val frame = imageResource(Resources.Image.forgeFrame)
+    Box(modifier = modifier) {
+        Box(modifier = Modifier.padding(inset), content = content)
+        Canvas(modifier = Modifier.matchParentSize()) {
+            drawNineSlice(frame, FRAME_SRC_INSET, FRAME_CORNER.toPx())
+        }
+    }
+}
+
+/**
+ * Ile pikseli zrodlowej grafiki (512x512) to "rog" - nierozciagana czesc z ornamentem.
+ * Zmierzone: ozdobnik rogu konczy sie ~94 px, wiec 96 lapie go w calosci bez zbednej pustej ramki.
+ */
+private const val FRAME_SRC_INSET = 96
+
+/** Rysowany rozmiar rogu na ekranie - wieksza wartosc = grubsze belki i wieksze ornamenty. */
+private val FRAME_CORNER = 43.dp
+
+/**
+ * O ile papier jest wciety wzgledem krawedzi ramki. Mniejsze niz rysowana grubosc belki
+ * (~[FRAME_CORNER] * 33/96 ≈ 16 dp), wiec papier wchodzi pod belke i nie ma szczeliny.
+ */
+private val FRAME_INLAY = 13.dp
+
+/**
+ * Rysuje [image] jako ramke 9-slice na calej powierzchni rysowania. Srodkowy fragment
+ * (przezroczysty na grafice ramki) jest pomijany - pod nim widac tlo panelu.
+ */
+private fun DrawScope.drawNineSlice(image: ImageBitmap, srcInset: Int, corner: Float) {
+    val iw = image.width
+    val ih = image.height
+    val w = size.width
+    val h = size.height
+    val c = corner.coerceAtMost(minOf(w, h) / 2f)
+
+    fun piece(sx: Int, sy: Int, sw: Int, sh: Int, dx: Float, dy: Float, dw: Float, dh: Float) {
+        if (dw <= 0f || dh <= 0f || sw <= 0 || sh <= 0) return
+        drawImage(
+            image = image,
+            srcOffset = IntOffset(sx, sy),
+            srcSize = IntSize(sw, sh),
+            dstOffset = IntOffset(dx.roundToInt(), dy.roundToInt()),
+            dstSize = IntSize(dw.roundToInt().coerceAtLeast(1), dh.roundToInt().coerceAtLeast(1)),
+            filterQuality = FilterQuality.High
+        )
+    }
+
+    val midSW = iw - 2 * srcInset
+    val midSH = ih - 2 * srcInset
+    val midDW = w - 2 * c
+    val midDH = h - 2 * c
+
+    // Rogi - staly rozmiar.
+    piece(0, 0, srcInset, srcInset, 0f, 0f, c, c)
+    piece(iw - srcInset, 0, srcInset, srcInset, w - c, 0f, c, c)
+    piece(0, ih - srcInset, srcInset, srcInset, 0f, h - c, c, c)
+    piece(iw - srcInset, ih - srcInset, srcInset, srcInset, w - c, h - c, c, c)
+
+    // Boki - rozciagane wzdluz jednej osi.
+    piece(srcInset, 0, midSW, srcInset, c, 0f, midDW, c)
+    piece(srcInset, ih - srcInset, midSW, srcInset, c, h - c, midDW, c)
+    piece(0, srcInset, srcInset, midSH, 0f, c, c, midDH)
+    piece(iw - srcInset, srcInset, srcInset, midSH, w - c, c, c, midDH)
 }

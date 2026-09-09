@@ -16,6 +16,13 @@ class EstimationBalanceTest {
 
     private val all = EstimationBank.all
 
+    /**
+     * Pytania "zgadnij ROK" - jedyne, dla ktorych rozklad epok cokolwiek znaczy. Odkad pula ma
+     * takze populacje, wysokosci i odleglosci, liczenie "ile jest z lat 1900+" po CALEJ puli
+     * mierzylo populacje Nigerii jako wydarzenie z XX wieku.
+     */
+    private val years = all.filter { it.unit == "year" }
+
     @Test
     fun `pula jest duza i bez zdublowanych id`() {
         assertTrue(all.size >= 120, "Pula ma tylko ${all.size} pytan")
@@ -34,20 +41,47 @@ class EstimationBalanceTest {
     fun `zadna epoka nie zjada wiecej niz polowy puli`() {
         // Wczesniej same lata 1900+ mialy ponad 50% udzialu i zdarzenie bossa sprowadzalo sie
         // do dat z ostatniego stulecia.
-        val modern = all.count { it.correctValue >= 1900 }
-        val share = modern.toFloat() / all.size
+        val modern = years.count { it.correctValue >= 1900 }
+        val share = modern.toFloat() / years.size
         assertTrue(share <= 0.5f, "Lata 1900+ to ${(share * 100).toInt()}% puli - za duzo")
     }
 
     @Test
     fun `dawne epoki maja realna reprezentacje`() {
-        val ancient = all.count { it.correctValue < 0 }
-        val earlyMedieval = all.count { it.correctValue in 0..999 }
-        val medieval = all.count { it.correctValue in 1000..1499 }
+        val ancient = years.count { it.correctValue < 0 }
+        val earlyMedieval = years.count { it.correctValue in 0..999 }
+        val medieval = years.count { it.correctValue in 1000..1499 }
 
         assertTrue(ancient >= 20, "Starozytnosc p.n.e.: tylko $ancient pytan")
         assertTrue(earlyMedieval >= 10, "Lata 0-999: tylko $earlyMedieval pytan")
         assertTrue(medieval >= 15, "Lata 1000-1499: tylko $medieval pytan")
+    }
+
+    @Test
+    fun `pula ma tez szacowania inne niz daty`() {
+        // Samo "zgadnij rok" sprowadzalo zdarzenie bossa do jednej umiejetnosci: pamieci do dat.
+        // Populacje, odleglosci i wysokosci sprawdzaja wyczucie skali, a nie zapamietana liczbe.
+        val nonYear = all.filterNot { it.unit == "year" }
+        assertTrue(nonYear.size >= 60, "Szacowan innych niz rok jest tylko ${nonYear.size}")
+
+        val units = nonYear.map { it.unit }.distinct()
+        assertTrue(units.size >= 4, "Za malo roznych jednostek: $units")
+    }
+
+    @Test
+    fun `pytania lokalne sa wyjatkiem, nie regula`() {
+        // Gra jest wydana globalnie - pula domyslna (angielska) musi zostac duza po odsianiu
+        // tematow lokalnych.
+        val global = EstimationBank.forLanguage("en")
+        assertTrue(global.size >= 150, "Globalna pula ma tylko ${global.size} pytan")
+        assertTrue(
+            global.none { it.localeCode != null },
+            "Do puli globalnej weszlo pytanie lokalne"
+        )
+        assertTrue(
+            EstimationBank.forLanguage("pl").size > global.size,
+            "Polska pula powinna byc nadzbiorem globalnej"
+        )
     }
 
     @Test

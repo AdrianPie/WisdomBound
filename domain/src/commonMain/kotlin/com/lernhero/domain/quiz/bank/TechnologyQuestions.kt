@@ -33,13 +33,6 @@ object TechnologyQuestions {
             difficulty = QuizDifficulty.Easy
         ),
         ask(
-            id = "mysz",
-            prompt = "What is a computer mouse used for?",
-            correct = "Controlling the cursor",
-            wrong = listOf("Printing", "Cooling the computer", "Powering it"),
-            difficulty = QuizDifficulty.Easy
-        ),
-        ask(
             id = "iphone_firma",
             prompt = "Which company makes the iPhone?",
             correct = "Apple",
@@ -51,20 +44,6 @@ object TechnologyQuestions {
             prompt = "Who is credited with popularizing the light bulb?",
             correct = "Thomas Edison",
             wrong = listOf("Nikola Tesla", "Alexander Bell", "James Watt"),
-            difficulty = QuizDifficulty.Easy
-        ),
-        ask(
-            id = "monitor",
-            prompt = "Which device displays the image from a computer?",
-            correct = "A monitor",
-            wrong = listOf("A scanner", "A microphone", "A router"),
-            difficulty = QuizDifficulty.Easy
-        ),
-        ask(
-            id = "google_typ",
-            prompt = "What is Google, first and foremost?",
-            correct = "A search engine",
-            wrong = listOf("An online store", "A messaging app", "A banking system"),
             difficulty = QuizDifficulty.Easy
         ),
 

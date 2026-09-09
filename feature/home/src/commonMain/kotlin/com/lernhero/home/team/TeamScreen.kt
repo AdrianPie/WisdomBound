@@ -67,6 +67,8 @@ import com.lernhero.game.character.HeroLook
 import com.lernhero.game.character.KnightEquipment
 import com.lernhero.game.character.ModularKnight
 import com.lernhero.game.character.MonsterVisualPresets
+import com.lernhero.domain.player.PartySlots
+import com.lernhero.home.player.COMPANION_SLOTS
 import com.lernhero.home.player.PlayerViewModel
 import com.lernhero.home.ui.MonsterCardView
 import com.lernhero.home.ui.RarityPalette
@@ -116,7 +118,7 @@ fun TeamScreen(
 
     var monsterPickerOpen by remember { mutableStateOf(false) }
     var mode by rememberSaveable { mutableStateOf<String>(PlayMode.Campaign.name) }
-    val hasFreeSlot = state.partyMonsters.any { it == null }
+    val hasFreeSlot = state.hasFreeCompanionSlot
 
     // Ustawienia endless - zyja miedzy wejsciami w zakladke, zeby nie trzeba bylo ich klikac
     // od nowa po kazdej walce.
@@ -183,6 +185,7 @@ fun TeamScreen(
             equipment = state.knightEquipment,
             look = state.heroLook,
             companions = state.partyMonsters,
+            heroLevel = state.progress.level,
             levelOf = state::levelOf,
             starsOf = state::starsOf,
             onAddCompanion = { monsterPickerOpen = true },
@@ -314,7 +317,13 @@ fun TeamScreen(
             hasFreeSlot = hasFreeSlot,
             onDismiss = { monsterPickerOpen = false },
             onPick = { card ->
+                // Pierwsze wolne OTWARTE miejsce - inaczej wybor kompana trafialby w klodke
+                // i cicho nic nie robil.
                 val free = state.partyMonsters.indexOfFirst { it == null }
+                    .takeIf { it >= 0 && state.isSlotUnlocked(it) }
+                    ?: (0 until COMPANION_SLOTS).firstOrNull {
+                        state.isSlotUnlocked(it) && state.partyMonsters[it] == null
+                    } ?: -1
                 if (free >= 0) viewModel.placeInParty(card.id, free)
                 monsterPickerOpen = false
             }
@@ -391,6 +400,8 @@ private fun TeamPanel(
     equipment: KnightEquipment,
     look: HeroLook,
     companions: List<MonsterCard?>,
+    /** Poziom bohatera - on decyduje, ktore miejsca w druzynie sa juz otwarte. */
+    heroLevel: Int,
     levelOf: (String) -> Int,
     starsOf: (String) -> Int,
     onAddCompanion: () -> Unit,
@@ -438,6 +449,11 @@ private fun TeamPanel(
                         card = card,
                         level = card?.let { levelOf(it.id) } ?: 1,
                         stars = card?.let { starsOf(it.id) } ?: 1,
+                        lockedUntilLevel = if (PartySlots.isUnlocked(index, heroLevel)) {
+                            null
+                        } else {
+                            PartySlots.requiredLevel(index)
+                        },
                         onClick = {
                             if (card == null) onAddCompanion() else onRemoveCompanion(index)
                         },
@@ -508,9 +524,18 @@ private fun CompanionSlotCard(
     card: MonsterCard?,
     level: Int,
     stars: Int,
+    /** Poziom bohatera otwierajacy to miejsce; null = juz otwarte (patrz [PartySlots]). */
+    lockedUntilLevel: Int?,
     onClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
+    // Zamkniete miejsce jest WIDOCZNE, nie ukryte: pusta ramka z poziomem obok mowi graczowi,
+    // ze druzyna urosnie, i po co ma zdobywac XP. Ukrycie jej zamienia system w niespodzianke,
+    // o ktorej nikt nie wie, ze na nia pracuje.
+    if (lockedUntilLevel != null) {
+        LockedSlotCard(level = lockedUntilLevel, modifier = modifier)
+        return
+    }
     Box(
         modifier = modifier
             .clip(RoundedCornerShape(10.dp))
@@ -547,6 +572,33 @@ private fun CompanionSlotCard(
                 stars = stars,
                 portraitHeight = 72,
                 modifier = Modifier.fillMaxWidth()
+            )
+        }
+    }
+}
+
+/** Miejsce jeszcze nie otwarte - klodka i poziom, ktory je otworzy. Nieklikalne. */
+@Composable
+private fun LockedSlotCard(level: Int, modifier: Modifier = Modifier) {
+    Box(
+        modifier = modifier
+            .clip(RoundedCornerShape(10.dp))
+            .background(SlotEmpty.copy(alpha = 0.5f))
+            .border(1.5.dp, GoldDim.copy(alpha = 0.3f), RoundedCornerShape(10.dp)),
+        contentAlignment = Alignment.Center
+    ) {
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.spacedBy(2.dp)
+        ) {
+            Text(text = "🔒", fontSize = 18.sp)
+            Text(
+                text = "Lvl $level",
+                color = TextMuted,
+                fontFamily = FontPixel(),
+                fontWeight = FontWeight.Bold,
+                fontSize = 10.sp,
+                textAlign = TextAlign.Center
             )
         }
     }

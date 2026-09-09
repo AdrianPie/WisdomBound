@@ -21,13 +21,6 @@ object OrderingQuestionsExtra {
     val all: List<OrderingEntry> = listOf(
 
         /* ------------------------------- Easy ------------------------------- */
-        order("liczby_setki", "Order these numbers from smallest to largest.", listOf("48", "480", "4800", "48000"), QuizCategory.Math, QuizDifficulty.Easy),
-        order("dni_tygodnia", "Order these days of the week.", listOf("Monday", "Wednesday", "Friday", "Sunday"), QuizCategory.Science, QuizDifficulty.Easy),
-        order("miesiace", "Order these months in the calendar.", listOf("January", "April", "August", "November"), QuizCategory.Science, QuizDifficulty.Easy),
-        order("jednostki_dlugosc", "Order these units from smallest to largest.", listOf("Millimeter", "Centimeter", "Meter", "Kilometer"), QuizCategory.Math, QuizDifficulty.Easy),
-        order("jednostki_czas", "Order these time units from shortest to longest.", listOf("Second", "Minute", "Hour", "Day"), QuizCategory.Math, QuizDifficulty.Easy),
-        order("zwierzeta_predkosc", "Order these animals from slowest to fastest.", listOf("Snail", "Human", "Horse", "Cheetah"), QuizCategory.Animals, QuizDifficulty.Easy),
-        order("figury_boki", "Order these shapes by number of sides, starting with the fewest.", listOf("Triangle", "Square", "Pentagon", "Hexagon"), QuizCategory.Math, QuizDifficulty.Easy),
         order("etapy_motyla", "Order the stages of a butterfly's development.", listOf("Egg", "Caterpillar", "Chrysalis", "Butterfly"), QuizCategory.Biology, QuizDifficulty.Easy),
         order("kontynenty_wielkosc", "Order these continents from smallest to largest.", listOf("Australia", "Europe", "Africa", "Asia"), QuizCategory.Geography, QuizDifficulty.Easy),
 
@@ -41,7 +34,6 @@ object OrderingQuestionsExtra {
         order("morza_glebokosc", "Order these bodies of water from shallowest to deepest.", listOf("The Baltic Sea", "The North Sea", "The Mediterranean Sea", "The Pacific Ocean"), QuizCategory.Geography, QuizDifficulty.Medium),
         order("sport_dystanse", "Order these track events from shortest to longest.", listOf("100 m", "800 m", "5000 m", "Marathon"), QuizCategory.Sport, QuizDifficulty.Medium),
         order("uklad_pokarmowy", "Order these parts of the digestive system in the order food passes through them.", listOf("Esophagus", "Stomach", "Small intestine", "Large intestine"), QuizCategory.Biology, QuizDifficulty.Medium),
-        order("skala_temperatur", "Order these temperatures from lowest to highest.", listOf("-40 C", "0 C", "37 C", "100 C"), QuizCategory.Science, QuizDifficulty.Medium),
         order("wojny_swiatowe", "Order these 20th-century events from oldest.", listOf("World War I", "World War II", "Gagarin's spaceflight", "The fall of the Berlin Wall"), QuizCategory.History, QuizDifficulty.Medium),
 
         /* ------------------------------ Hard ------------------------------- */

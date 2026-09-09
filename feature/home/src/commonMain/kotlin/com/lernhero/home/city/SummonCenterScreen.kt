@@ -26,6 +26,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.navigationBarsPadding
+import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -212,7 +213,17 @@ fun SummonCenterScreen(
     // w pionie przy kazdym tapnieciu i wygladalo to, jakby zakladki zamienialy sie miejscami.
     // Poza tym drewno/kamien/ruda nie maja tu czego szukac: w Summon Center placi sie LOSAMI,
     // a te licza sie przy samych bannerach.
-    TownScreenScaffold(
+    // Tlo CALEGO Summon Center - pod naglowkiem, zakladkami i obiema sekcjami. Siedzi POZA
+    // scaffoldem, zeby nie bylo nad nim widac globalnego tla aplikacji.
+    Box(modifier = Modifier.fillMaxSize()) {
+      Image(
+          painter = painterResource(Resources.Image.summonerCollectionBackground),
+          contentDescription = null,
+          contentScale = ContentScale.Crop,
+          modifier = Modifier.matchParentSize()
+      )
+
+      TownScreenScaffold(
         title = "Summon Center",
         resources = state.resources,
         money = state.money,
@@ -235,8 +246,7 @@ fun SummonCenterScreen(
                     money = state.money,
                     essence = state.resources.essence,
                     equipmentOf = playerViewModel::equipmentOf,
-                    upgrades = state.itemUpgrades,
-                    ownedGear = state.ownedMonsterItems,
+                    bag = state.monsterBag,
                     gearTakenBy = { id ->
                         MonsterEquipment.equippedElsewhere(state.monsterEquipment, id)
                     },
@@ -318,6 +328,7 @@ fun SummonCenterScreen(
             )
         }
       }
+    }
     }
 }
 
@@ -512,11 +523,16 @@ private fun AltarStage(
             // sie PNG (poprzedni "1.75x" byl skalibrowany pod stary plik, gdzie oltarz zajmowal
             // tylko 52% wlasnego kadru - przy nowym, ktory wypelnia 94%, dawal zle wyniki). Oltarz
             // jest kwadratowy, wiec renderowany bok = krotszy wymiar dostepnej przestrzeni.
-            val altarSide = minOf(maxWidth, maxHeight)
-            val altarTop = (maxHeight - altarSide) / 2
-            // Wysokosc plyty kregu w kadrze (ulamek CALEGO kwadratowego PNG, zmierzone z pliku) -
-            // tu maja ladowac stopy przyzwanego potwora.
-            val platformY = altarTop + altarSide * ALTAR_PLATFORM_Y_FRACTION
+            // Krag jest teraz WIEKSZY niz krotszy bok sceny ([ALTAR_SCALE]) - przy zwyklym
+            // ContentScale.Fit w wysokiej, waskiej scenie oltarz zajmowal tylko jej srodek i
+            // ginal w tle, a rytual wygladal jak miniaturka.
+            val altarSide = minOf(maxWidth, maxHeight) * ALTAR_SCALE
+            // Plyta kregu (= stopy przyzwanego potwora) ladujaca na TEJ SAMEJ wysokosci sceny co
+            // kamien z kompanem w zakladce Collection. Wczesniej oltarz byl po prostu wysrodkowany
+            // w pionie, wiec przy przelaczeniu zakladki postac przeskakiwala.
+            val platformY = maxHeight * ALTAR_PLATFORM_SCENE_FRACTION
+            // Wysokosc plyty kregu w kadrze (ulamek CALEGO kwadratowego PNG, zmierzone z pliku).
+            val altarTop = platformY - altarSide * ALTAR_PLATFORM_Y_FRACTION
             // Ta sama wysokosc, ale jako ulamek CALEJ sceny - Canvas efektow liczy w pikselach.
             val platformFraction = platformY / maxHeight
 
@@ -536,7 +552,9 @@ private fun AltarStage(
                 contentDescription = "Altar",
                 contentScale = ContentScale.Fit,
                 modifier = Modifier
-                    .fillMaxSize()
+                    .align(Alignment.TopCenter)
+                    .offset(y = altarTop)
+                    .size(altarSide)
                     .graphicsLayer {
                         // Oltarz lekko "oddycha" w trakcie ladowania rytualu.
                         val pulse = 1f + 0.05f * chargeValue
@@ -565,8 +583,13 @@ private fun AltarStage(
                     modifier = Modifier
                         .align(Alignment.TopCenter)
                         // Stopy potwora dokladnie na plycie kregu, niezaleznie od tego jak wysoki
-                        // jest sprite danego gatunku.
-                        .padding(top = (platformY - preset.baseSizeDp).coerceAtLeast(0.dp))
+                        // jest sprite danego gatunku. +SPRITE_EDGE_PADDING: kadr sprite'a ma pod
+                        // stopami wlasny pusty margines (~13% wysokosci), wiec bez tej poprawki
+                        // bohater wisi nad kregiem - tym bardziej, im wiekszy go rysujemy.
+                        .offset(
+                            y = platformY - preset.baseSizeDp * SUMMONED_MONSTER_SCALE *
+                                (1f - SPRITE_EDGE_PADDING)
+                        )
                 )
             }
 
@@ -640,7 +663,7 @@ private fun RitualGlow(
 
     Canvas(modifier = modifier) {
         val center = Offset(size.width / 2f, size.height * platformFraction)
-        val radius = size.minDimension * 0.72f * pulse * (0.7f + 0.3f * intensity)
+        val radius = size.minDimension * 0.72f * EFFECT_SCALE * pulse * (0.7f + 0.3f * intensity)
         drawCircle(
             brush = Brush.radialGradient(
                 colors = listOf(accent.copy(alpha = GLOW_MAX_ALPHA * intensity.coerceIn(0f, 1f)), Color.Transparent),
@@ -684,7 +707,7 @@ private fun SummonBurst(
 
     Canvas(modifier = modifier) {
         val center = Offset(size.width / 2f, size.height * platformFraction)
-        val baseRadius = size.minDimension * 0.5f
+        val baseRadius = size.minDimension * 0.5f * EFFECT_SCALE
 
         // 1. Ladowanie - jasny rdzen zbierajacy sie na plycie kregu, zanim strzeli.
         if (charge > 0f && burst <= 0f) {
@@ -777,7 +800,9 @@ private fun SummonedMonster(
         contentDescription = card.name,
         contentScale = ContentScale.Fit,
         modifier = modifier
-            .size(preset.baseSizeDp)
+            // Bohater po wyjsciu z kregu byl mniejszy niz sam krag - na scenie, ktora jest
+            // punktem kulminacyjnym calego ekranu, to gubilo caly efekt.
+            .size(preset.baseSizeDp * SUMMONED_MONSTER_SCALE)
             .graphicsLayer {
                 val scale = (0.55f + 0.45f * rise) * preset.visualScale
                 scaleX = scale
@@ -1028,6 +1053,25 @@ private const val MONSTER_RISE_DISTANCE_PX = 140f
 // laduja stopy przyzwanego potwora. Zmierzone z pliku: srodek gwiazdy ~0.61, przednia krawedz
 // plyty ~0.76; stopy na srodku-przodzie kregu.
 private const val ALTAR_PLATFORM_Y_FRACTION = 0.66f
+
+/** O ile krag jest wiekszy od krotszego boku sceny - powyzej 1 celowo wychodzi poza kadr. */
+private const val ALTAR_SCALE = 1.25f
+
+/**
+ * Na jakiej wysokosci sceny lezy plyta kregu. Ta sama wartosc co srodek grupy
+ * w [com.lernhero.home.ui.FloatingIsland], zeby przelaczenie Summon <-> Collection nie
+ * przesuwalo postaci po ekranie.
+ */
+private const val ALTAR_PLATFORM_SCENE_FRACTION = 0.60f
+
+/** O ile wiekszy jest przyzwany bohater od swojego bazowego rozmiaru z presetu. */
+private const val SUMMONED_MONSTER_SCALE = 1.55f
+
+/** Przezroczysty margines w kadrze sprite'a potwora - zmierzone na plikach, jak w FloatingIsland. */
+private const val SPRITE_EDGE_PADDING = 0.13f
+
+/** Mnoznik promieni poswiaty i fali rytualu - efekty maja byc widoczne, nie subtelne. */
+private const val EFFECT_SCALE = 1.35f
 
 /** Ile miejsca zostawic pod komunikatem, zeby nie wszedl na rzad przyciskow summona. */
 private val MESSAGE_BOTTOM_GAP = 52.dp

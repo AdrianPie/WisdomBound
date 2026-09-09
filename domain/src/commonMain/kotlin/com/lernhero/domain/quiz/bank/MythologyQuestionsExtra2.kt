@@ -30,7 +30,6 @@ object MythologyQuestionsExtra2 {
         ask("demeter_domena", "What was Demeter the goddess of?", "Harvest and fertility", listOf("War", "The sea", "The underworld"), QuizDifficulty.Easy),
         ask("herakles_ojciec", "Who was Heracles's divine father?", "Zeus", listOf("Poseidon", "Ares", "Hades"), QuizDifficulty.Easy),
         ask("pegaz", "What was Pegasus?", "A winged horse", listOf("A winged lion", "A winged dog", "A winged snake"), QuizDifficulty.Easy),
-        ask("smok_wawelski", "Who did the legendary Krakus (or a clever cobbler) defeat in Polish legend?", "The Wawel Dragon", listOf("A basilisk", "Cerberus", "The Minotaur"), QuizDifficulty.Easy),
         ask("nimfy", "What were nymphs in Greek mythology?", "Nature spirits, e.g. of forests and springs", listOf("Goddesses of war", "Queens of Olympus", "Only daughters of Zeus and Hera"), QuizDifficulty.Easy),
         ask("horus", "Which animal/symbol often accompanies the Egyptian god Horus?", "A falcon", listOf("A cat", "A crocodile", "A jackal"), QuizDifficulty.Easy),
         ask("bastet", "Which animal did the Egyptian goddess Bastet represent?", "A cat", listOf("A crocodile", "A falcon", "A snake"), QuizDifficulty.Easy),
