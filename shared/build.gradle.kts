@@ -36,9 +36,15 @@ kotlin {
             implementation(libs.compose.ui.tooling.preview)
             implementation(libs.androidx.activity.compose)
             implementation(libs.splash.screen)
-
+            // Przypomnienia w grze (patrz shared/notification). WorkManager, a nie AlarmManager:
+            // od Androida 12 dokladne alarmy wymagaja osobnego uprawnienia, a przypomnienie
+            // "magazyn pelny" nie potrzebuje precyzji co do sekundy.
+            implementation(libs.androidx.work.runtime)
+            implementation(libs.androidx.core.ktx)
         }
         commonMain.dependencies {
+            // Przypomnienia biora plan wprost z modelu gracza (domain/notification/ReminderPlan).
+            implementation(project(path = ":domain"))
             implementation(libs.compose.runtime)
             implementation(libs.compose.foundation)
             implementation(libs.compose.material3)

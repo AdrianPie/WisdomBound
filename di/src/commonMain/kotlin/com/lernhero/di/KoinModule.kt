@@ -7,6 +7,8 @@ import com.lernhero.domain.repository.PlayerRepository
 import com.lernhero.domain.quiz.ai.QuizGenerator
 import com.lernhero.domain.run.RunSession
 import com.lernhero.shared.i18n.AppLanguageStore
+import com.lernhero.shared.notification.ReminderScheduler
+import com.lernhero.shared.notification.platformReminderScheduler
 import com.lernhero.domain.story.CampaignSelection
 
 import com.lernhero.game.battle.BattleViewModel
@@ -27,6 +29,9 @@ val sharedModule = module {
     single { CampaignSelection() }
     // Device-local UI language (not account data) - patrz shared/i18n/AppLanguage.kt.
     single { AppLanguageStore() }
+    // Harmonogram przypomnien. Na desktopie to ReminderScheduler.None - swiadomy brak,
+    // nie luka (patrz ReminderScheduler.desktop.kt).
+    single<ReminderScheduler> { platformReminderScheduler() }
     // Generator pytan do wlasnych talii. RemoteQuizGenerator sam wraca do zachowania Stub
     // (isAvailable == false), dopoki ServerConfig.AI_QUIZ_SERVER_BASE_URL jest puste - czyli
     // dzis, przed pierwszym wdrozeniem :server na Cloud Run, UI dziala dokladnie tak jak wczesniej.

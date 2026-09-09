@@ -122,4 +122,13 @@ object StoryProgress {
 
     fun isCampaignComplete(cleared: Map<String, Int>, tier: RunDifficulty): Boolean =
         (cleared[tier.name] ?: 0) >= StoryWorldCatalog.totalStages
+
+    /**
+     * Najdalsza zdobyta plansza NIEZALEZNIE od tieru - z niej liczy sie tempo nagrod idle
+     * ([IdleRewards.ratePerHour]) i to, czy w ogole jest co przypominac ([ReminderPlan]).
+     *
+     * Maksimum ze wszystkich tierow, a nie z biezacego: gracz, ktory doszedl daleko na Normalnym
+     * i wlasnie zaczyna Koszmar, nie moze na chwile stracic calego tempa kapania.
+     */
+    fun bestClearedStage(cleared: Map<String, Int>): Int = cleared.values.maxOrNull() ?: 0
 }

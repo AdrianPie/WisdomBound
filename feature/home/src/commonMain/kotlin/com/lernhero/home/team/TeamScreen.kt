@@ -54,6 +54,7 @@ import com.lernhero.domain.run.RunDifficulty
 import com.lernhero.domain.run.RunSession
 import com.lernhero.domain.story.CampaignSelection
 import com.lernhero.domain.story.IdleRewards
+import com.lernhero.domain.story.StoryProgress
 import com.lernhero.domain.story.StoryStageCatalog
 import com.lernhero.home.city.TownViewModel
 import com.lernhero.home.story.BossChestOverlay
@@ -147,7 +148,7 @@ fun TeamScreen(
     // Nagrody idle licza sie z roznicy czasu - jedno odczytanie zegara przy wejsciu wystarczy,
     // bo panel i tak odswiezy sie przy nastepnym wejsciu w zakladke.
     val now = remember { Clock.System.now().toEpochMilliseconds() }
-    val bestCleared = cleared.values.maxOrNull() ?: 0
+    val bestCleared = StoryProgress.bestClearedStage(cleared)
     val idleReward = remember(bestCleared, state.idleCollectedAt, now) {
         IdleRewards.pendingFor(bestCleared, state.idleCollectedAt, now)
     }

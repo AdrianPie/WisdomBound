@@ -39,10 +39,16 @@ import com.lernhero.domain.run.RunDifficulty
 import com.lernhero.domain.story.StoryProgress
 import com.lernhero.domain.player.AdminAccounts
 import com.lernhero.domain.player.PartySlots
+import com.lernhero.domain.player.Player
+import kotlin.time.Clock
+import com.lernhero.reader.todayDateKey
 import com.lernhero.domain.progress.Achievement
 import com.lernhero.domain.progress.GameStats
 import com.lernhero.domain.progress.RunStats
+import com.lernhero.domain.notification.ReminderPlan
 import com.lernhero.domain.reading.SavedWord
+import com.lernhero.shared.notification.ReminderScheduler
+import com.lernhero.shared.notification.nextLocalHourMillis
 import com.lernhero.domain.town.TownResources
 import com.lernhero.domain.talent.Talent
 import com.lernhero.domain.talent.TalentBonuses
@@ -278,7 +284,8 @@ data class PlayerUiState(
 }
 
 class PlayerViewModel(
-    private val playerRepository: PlayerRepository
+    private val playerRepository: PlayerRepository,
+    private val reminders: ReminderScheduler
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(PlayerUiState())
@@ -324,7 +331,35 @@ class PlayerViewModel(
                     )
                 }
             }
+            if (player != null) rescheduleReminders(player)
         }
+    }
+
+    /**
+     * Przelicza plan przypomnien od nowa i nadpisuje nim kolejke systemowa.
+     *
+     * Wolane przy KAZDYM wczytaniu gracza, bo caly plan wynika z roznicy czasu (tak samo jak
+     * nagrody idle i produkcja w miescie) - nie ma zadnego stanu w tle, ktory moglby sie rozjechac.
+     * Nadpisywanie jest bezpieczne: kazde przypomnienie ma staly klucz, wiec dziesiec wejsc do gry
+     * daje jedno przypomnienie, a nie dziesiec.
+     */
+    private fun rescheduleReminders(player: Player) {
+        if (!reminders.isPermitted) return
+
+        val now = Clock.System.now().toEpochMilliseconds()
+        // "Cel dzienny odhaczony" poznajemy po tym, ze cokolwiek zostalo dzis odebrane -
+        // dokladnej daty z krokomierza ten ViewModel nie ma, a i tak chodzi o to, zeby NIE
+        // szturchac kogos, kto juz dzis cos zrobil.
+        val todayGoalDone = player.dailyGoalClaims.values.any { it == todayDateKey() }
+
+        reminders.schedule(
+            ReminderPlan.forPlayer(
+                player = player,
+                now = now,
+                todayGoalDone = todayGoalDone,
+                nextDailyGoalSlotMs = nextLocalHourMillis(ReminderPlan.DAILY_GOAL_HOUR, now)
+            )
+        )
     }
 
     // region Ekwipunek

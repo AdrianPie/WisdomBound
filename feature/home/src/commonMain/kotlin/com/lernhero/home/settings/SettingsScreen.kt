@@ -21,6 +21,16 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.runtime.DisposableEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleEventObserver
+import androidx.lifecycle.compose.LocalLifecycleOwner
+import com.lernhero.shared.notification.ReminderScheduler
+import com.lernhero.shared.notification.requestNotificationAccess
 import com.lernhero.shared.i18n.AppLanguage
 import com.lernhero.shared.i18n.AppLanguageStore
 import com.lernhero.shared.i18n.strings
@@ -109,6 +119,99 @@ fun SettingsScreen(
                     fontSize = 10.sp
                 )
             }
+
+            NotificationsPanel()
+        }
+    }
+}
+
+/**
+ * Powiadomienia. Trzy powody, wypisane wprost - gracz ma zobaczyc, na co sie zgadza, ZANIM
+ * systemowe okienko zapyta. Prosba idzie dopiero po tapnieciu w przycisk, nigdy przy starcie gry:
+ * zgoda wyproszona w pierwszej sekundzie, bez kontekstu, to najkrotsza droga do odmowy na zawsze.
+ *
+ * Stan czytamy przy KAZDYM zlozeniu ekranu, bo odpowiedz z systemu przychodzi asynchronicznie
+ * (i moze przyjsc z ustawien systemowych, poza aplikacja) - patrz [ReminderScheduler.isPermitted].
+ */
+@Composable
+private fun NotificationsPanel() {
+    val scheduler = koinInject<ReminderScheduler>()
+    var permitted by remember { mutableStateOf(scheduler.isPermitted) }
+    val lifecycleOwner = LocalLifecycleOwner.current
+
+    // Gracz moze wrocic z ustawien systemowych z inna odpowiedzia niz wyszedl - odswiezamy stan
+    // przy kazdym powrocie na ekran, a nie tylko przy pierwszym zlozeniu.
+    DisposableEffect(lifecycleOwner) {
+        val observer = LifecycleEventObserver { _, event ->
+            if (event == Lifecycle.Event.ON_RESUME) permitted = scheduler.isPermitted
+        }
+        lifecycleOwner.lifecycle.addObserver(observer)
+        onDispose { lifecycleOwner.lifecycle.removeObserver(observer) }
+    }
+
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(14.dp))
+            .background(Panel)
+            .border(2.dp, Frame.copy(alpha = 0.7f), RoundedCornerShape(14.dp))
+            .padding(14.dp),
+        verticalArrangement = Arrangement.spacedBy(10.dp)
+    ) {
+        Text(
+            text = "NOTIFICATIONS",
+            color = Gold,
+            fontFamily = FontPixel(),
+            fontWeight = FontWeight.Bold,
+            fontSize = 12.sp
+        )
+        Text(
+            text = "We only send three, and only when something is actually waiting:\n" +
+                "· your camp storage filled up\n" +
+                "· a free summon is ready\n" +
+                "· your daily goal is still open in the evening",
+            color = Cream,
+            fontFamily = FontFirst(),
+            fontSize = 11.sp
+        )
+
+        if (permitted) {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(
+                    text = "Reminders are on",
+                    color = Cream,
+                    fontFamily = FontFirst(),
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 12.sp
+                )
+                Text(text = "✓", color = Gold, fontSize = 14.sp)
+            }
+            Text(
+                text = "Turn them off any time in your system settings.",
+                color = Muted,
+                fontFamily = FontFirst(),
+                fontSize = 10.sp
+            )
+        } else {
+            Text(
+                text = "TURN ON REMINDERS",
+                color = Color(0xFF120C08),
+                fontFamily = FontFirst(),
+                fontWeight = FontWeight.Bold,
+                fontSize = 12.sp,
+                modifier = Modifier
+                    .clip(RoundedCornerShape(10.dp))
+                    .background(Gold)
+                    .clickable {
+                        requestNotificationAccess()
+                        // Odpowiedz przychodzi asynchronicznie - stan podlapie ON_RESUME wyzej.
+                    }
+                    .padding(horizontal = 14.dp, vertical = 10.dp)
+            )
         }
     }
 }

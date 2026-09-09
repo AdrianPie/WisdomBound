@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <uses-permission android:name="android.permission.INTERNET"/>
 
+    <!-- Przypomnienia w grze (magazyn idle pelny, darmowy summon gotowy, cel dzienny).
+         Od Androida 13 zgoda jest wymagana i prosi o nia ekran Ustawien, a nie start apki -
+         gracz ma najpierw zobaczyc, po co. Patrz shared/notification/ReminderScheduler. -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+
     <!-- Health Connect: odczyt krokow i sesji treningowych dla zakladki "Trening". -->
     <uses-permission android:name="android.permission.health.READ_STEPS"/>
     <uses-permission android:name="android.permission.health.READ_EXERCISE"/>

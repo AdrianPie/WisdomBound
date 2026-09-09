@@ -54,7 +54,10 @@ kotlin {
             implementation(libs.firebase.firestore)
             implementation(libs.auth.firebase.kmp)
 
-            implementation(project(path = ":shared" ))
+            // :domain nie zalezy od ZADNEGO innego modulu - patrz ARCHITECTURE.md, kierunek
+            // zaleznosci jest jednostronny (feature -> domain -> nic). Stala tu kiedys zaleznosc
+            // od :shared, ale nic jej nie uzywalo poza jednym linkiem w komentarzu; blokowala za
+            // to :shared -> :domain (cykl), czyli dokladnie ten kierunek, ktory jest poprawny.
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)

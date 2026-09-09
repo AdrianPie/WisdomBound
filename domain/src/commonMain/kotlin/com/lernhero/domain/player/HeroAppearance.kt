@@ -22,7 +22,7 @@ data class HeroAppearance(
 
 /**
  * Jeden "szablon" postaci do wyboru na ekranie tworzenia. Nazwa widoczna dla gracza NIE siedzi
- * tutaj, tylko w [com.lernhero.shared.i18n.AppStrings] - domena nie zna jezyka UI. Na razie dwa (kobieta/mezczyzna) i oba
+ * tutaj, tylko w AppStrings (modul :shared) - domena nie zna jezyka UI. Na razie dwa (kobieta/mezczyzna) i oba
  * korzystaja z tego samego zestawu sprite'ow - osobnych grafik dla kobiety jeszcze nie ma.
  * Dolozenie kolejnej wersji postaci to dopisanie wpisu tutaj plus zestawu sprite'ow po stronie UI
  * (patrz mapowanie [spriteSet] w feature:game).
