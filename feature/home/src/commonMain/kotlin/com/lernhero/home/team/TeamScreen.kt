@@ -41,7 +41,9 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.lernhero.domain.monster.MonsterCard
+import com.lernhero.domain.progress.CategoryMastery
 import com.lernhero.domain.monster.MonsterLevels
+import com.lernhero.domain.monster.CompanionPower
 import com.lernhero.domain.monster.MonsterStars
 import com.lernhero.domain.quiz.QuizCategory
 import com.lernhero.domain.quiz.QuizDifficulty
@@ -50,6 +52,7 @@ import com.lernhero.domain.run.BattleKind
 import com.lernhero.domain.run.BattleRequest
 import com.lernhero.domain.run.ChestSlot
 import com.lernhero.domain.run.ChestWheel
+import com.lernhero.domain.story.StageRepeats
 import com.lernhero.domain.run.RunDifficulty
 import com.lernhero.domain.run.RunSession
 import com.lernhero.domain.story.CampaignSelection
@@ -165,11 +168,18 @@ fun TeamScreen(
         if (runSession.lastBattleWon != true) return@LaunchedEffect
 
         val tier = RunDifficulty.valueOf(tierName)
+        // Czytamy licznik PRZED zapisem - inaczej pierwsze przejscie od razu wygladaloby na powtorke.
+        val firstClear = StageRepeats.isFirstClear(state.stageClears, tier, index)
         viewModel.clearStoryStage(tier, index)
         // Po wygranej przesuwamy sie na kolejna plansze zamiast tkwic na zdobytej.
         selection.clearStage()
 
-        if (StoryStageCatalog.stageAt(index, tier)?.isBoss == true) {
+        // Skrzynia nalezy sie WYLACZNIE za pierwsze zdobycie planszy. Kolo fortuny nie ma
+        // "polowy zakrecenia", wiec powtorka nie moze go dostac przycietego tak, jak reszte lupu
+        // ([StageRepeats]) - a boss placacy piec losow za kazdym razem byl szybszym zrodlem
+        // niz cala kampania. Powtarzalny farm ma miejsce w endless, gdzie boss wchodzi co
+        // dziesiata fala i placi tym wiecej, im glebiej gracz zaszedl.
+        if (firstClear && StoryStageCatalog.stageAt(index, tier)?.isBoss == true) {
             chestStage = index
             chestSlotName = ChestWheel.roll(Random.Default, index).name
         }
@@ -250,6 +260,7 @@ fun TeamScreen(
                     decks = quizState.decks,
                     decksLoading = quizState.loading,
                     selectedDeckId = endlessDeckId,
+                    categoryLevels = state.categoryLevels,
                     onSourceChange = { endlessSource = it.name },
                     onSelectWords = { endlessDeckId = null },
                     onSelectDeck = { endlessDeckId = it },
@@ -260,17 +271,25 @@ fun TeamScreen(
                     onStart = {
                         val custom = QuestionSource.valueOf(endlessSource) == QuestionSource.Custom
                         val deck = if (custom) quizState.decks.firstOrNull { it.id == endlessDeckId } else null
+                        val topic = if (custom) null else endlessCategory?.let { QuizCategory.valueOf(it) }
                         runSession.startNewRun(
-                            category = if (custom) null else endlessCategory?.let { QuizCategory.valueOf(it) },
+                            category = topic,
                             difficulty = RunDifficulty.Normal,
                             quizDifficulty = if (custom) null else endlessDifficulty?.let { QuizDifficulty.valueOf(it) },
                             // Wlasne zrodlo jest JEDNO: albo talia, albo fiszki (patrz CustomSourcePanel).
                             customWords = if (custom && deck == null) eligibleWords else emptyList(),
-                            customDeck = deck
+                            customDeck = deck,
+                            // Poziom opanowania tego tematu steruje w walce trudnoscia startowa
+                            // i mnoznikiem nagrod - patrz [CategoryMastery].
+                            categoryLevel = topic
+                                ?.let { state.categoryLevels.levelOf(it) }
+                                ?: CategoryMastery.FIRST_LEVEL
                         )
                         runSession.pendingBattle = BattleRequest(
                             kind = BattleKind.Normal,
-                            waves = 0,
+                            // Komplet fal do awansu tematu. Walka i tak nie konczy sie sama
+                            // (isEndless) - to jest prog, na ktorym wypada oferta awansu.
+                            waves = CategoryMastery.WAVES_PER_LEVEL,
                             seed = Random.nextLong(),
                             isEndless = true
                         )
@@ -822,14 +841,14 @@ private fun CompanionPickTile(
         }
         Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
             Text(
-                text = "${MonsterStars.hpAt(stack.card, stars, level)}",
+                text = "${CompanionPower.hpAt(stack.card, stars, level)}",
                 color = Color(0xFFEF4444),
                 fontFamily = FontFirst(),
                 fontWeight = FontWeight.Bold,
                 fontSize = 9.sp
             )
             Text(
-                text = "${MonsterStars.attackAt(stack.card, stars, level)}",
+                text = "${CompanionPower.attackAt(stack.card, stars, level)}",
                 color = Color(0xFFF97316),
                 fontFamily = FontFirst(),
                 fontWeight = FontWeight.Bold,

@@ -99,7 +99,6 @@ data class RunStats(
     val perCategory: Map<String, CategoryStat> = emptyMap(),
     val gold: Int = 0,
     val xp: Int = 0,
-    val wood: Int = 0,
     val stone: Int = 0,
     val iron: Int = 0,
     val essence: Int = 0,
@@ -120,10 +119,19 @@ data class RunStats(
      * droga (jeden zapis, te same liczniki), ale nie jest walka - bez tego kazde wyjscie z lochu
      * dopisywaloby fikcyjna wygrana albo przegrana do statystyk.
      */
-    val countsAsBattle: Boolean = true
+    val countsAsBattle: Boolean = true,
+    /**
+     * Temat, ktory awansuje o poziom przy tym rozliczeniu (nazwa [QuizCategory]), albo null.
+     * Ustawia sie po wyczyszczeniu kompletu fal endless - patrz [CategoryMastery.clearsLevel].
+     *
+     * Jedzie RAZEM z reszta wyniku z tego samego powodu co [droppedItemIds]: cale zejscie jest
+     * jednym zapisem, a osobne wywolanie czytaloby stan sprzed niego i cofalo dopisane wlasnie
+     * zloto i XP.
+     */
+    val masteredCategory: String? = null
 ) {
     val accuracyPercent: Int
         get() = if (questionsAnswered <= 0) 0 else (questionsCorrect * 100f / questionsAnswered).roundToInt()
 
-    val anyResources: Boolean get() = wood > 0 || stone > 0 || iron > 0 || essence > 0 || summonTickets > 0
+    val anyResources: Boolean get() = stone > 0 || iron > 0 || essence > 0 || summonTickets > 0
 }

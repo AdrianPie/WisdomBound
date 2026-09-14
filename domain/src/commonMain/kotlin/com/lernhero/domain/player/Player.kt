@@ -99,6 +99,12 @@ data class Player(
      */
     val talentRanks: Map<String, Int> = emptyMap(),
     /**
+     * Poziom opanowania kazdego tematu quizu (nazwa kategorii -> poziom, brak wpisu = 1). Rosnie
+     * za wyczyszczenie kompletu fal w endless i podnosi tam startowa trudnosc oraz nagrody -
+     * patrz [com.lernhero.domain.progress.CategoryMastery].
+     */
+    val categoryLevels: Map<String, Int> = emptyMap(),
+    /**
      * Ostatni dzien, w ktorym odebrano nagrode za dany cel dzienny - fitness albo czytanie
      * (id celu -> "yyyy-MM-dd"). Odswieza sie samo: cel jest znowu do odebrania, gdy zapisana
      * data przestaje byc dzisiejsza. Oba systemy nagrod dziela ta sama mape.
@@ -131,15 +137,22 @@ data class Player(
      */
     val storyProgress: Map<String, Int> = emptyMap(),
     /**
+     * Ile razy KAZDA plansza zostala juz zdobyta: "TIER:numer" -> licznik. Osobno od
+     * [storyProgress], ktory pamieta tylko NAJDALSZA plansze - a do wyceny powtorki potrzebna
+     * jest historia tej konkretnej. Patrz [com.lernhero.domain.story.StageRepeats].
+     */
+    val stageClears: Map<String, Int> = emptyMap(),
+    /**
      * Kiedy ostatnio odebrano nagrody idle z kampanii (epoch millis, 0 = nigdy). Od tego momentu
      * liczy sie kolejne naliczenie - patrz [com.lernhero.domain.story.IdleRewards].
      */
     val idleCollectedAt: Long = 0L,
-    /** Surowce miasta - drewno, kamien, losy do summonow. */
+    /** Surowce miasta - kamien, ruda, esencja, losy do summonow. */
     val townResources: TownResources = TownResources(),
-    /** Stan tartaku (produkuje drewno) - patrz [com.lernhero.domain.town.ProductionMath]. */
-    val sawmill: ProductionState = ProductionState(),
-    /** Stan kamieniolomu (produkuje kamien). */
+    /**
+     * Stan kamieniolomu (produkuje kamien) - patrz [com.lernhero.domain.town.ProductionMath].
+     * Jedyny budynek produkcyjny; pole `sawmill` ze starszych zapisow jest po prostu ignorowane.
+     */
     val quarry: ProductionState = ProductionState()
 )
 

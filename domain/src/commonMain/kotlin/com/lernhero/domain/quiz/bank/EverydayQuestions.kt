@@ -40,7 +40,7 @@ object EverydayQuestions {
         ask("ciasto_rosnie", "Why does bread dough rise?", "Yeast releases carbon dioxide", listOf("Water evaporates from it", "Gluten expands when heated", "Salt draws in moisture"), QuizCategory.Science, QuizDifficulty.Medium),
         ask("papryka_ostra", "Which compound makes chilli peppers hot?", "Capsaicin", listOf("Menthol", "Tannin", "Caffeine"), QuizCategory.Science, QuizDifficulty.Medium),
         ask("jablko_brazowieje", "Why does a cut apple turn brown?", "Its compounds oxidize in air", listOf("It starts to ferment", "Bacteria colonise it", "It loses water"), QuizCategory.Science, QuizDifficulty.Medium),
-        ask("cebula_lzy", "Why does cutting an onion make your eyes water?", "It releases a sulfur compound that irritates the eyes", listOf("It releases pure ammonia", "Its acid evaporates", "Its dust scratches the eye"), QuizCategory.Science, QuizDifficulty.Medium),
+        ask("cebula_lzy", "Why does cutting an onion make your eyes water?", "It releases a sulfur compound that irritates the eyes", listOf("It releases a puff of pure ammonia into the air", "Its acid evaporates into the air", "Its fine dust scratches the eye"), QuizCategory.Science, QuizDifficulty.Medium),
         ask("suchy_lod", "What is dry ice?", "Frozen carbon dioxide", listOf("Very cold water ice", "Frozen nitrogen", "Compressed helium"), QuizCategory.Science, QuizDifficulty.Medium),
         ask("lod_plywa", "Why does ice float on water?", "Ice is less dense than liquid water", listOf("Ice is warmer than water", "Air bubbles hold it up", "Water pushes it up by surface tension"), QuizCategory.Science, QuizDifficulty.Medium),
         ask("szklo_surowiec", "What is the main raw material of glass?", "Sand", listOf("Limestone", "Clay", "Quartz crystal"), QuizCategory.Science, QuizDifficulty.Medium),
@@ -55,8 +55,8 @@ object EverydayQuestions {
 
         /* ------------------------------ Zjawiska wokol nas ------------------------- */
         ask("niebo_niebieskie", "Why is the sky blue?", "Sunlight is scattered by the atmosphere", listOf("The oceans reflect onto it", "Ozone is blue", "Water vapour absorbs red light"), QuizCategory.Science, QuizDifficulty.Medium),
-        ask("tecza_powstaje", "What causes a rainbow?", "Light refracting and dispersing in water droplets", listOf("Clouds reflecting sunlight", "Dust scattering light", "The magnetic field bending light"), QuizCategory.Science, QuizDifficulty.Medium),
-        ask("zorza_polarna", "What causes the aurora?", "Charged particles from the Sun hitting the atmosphere", listOf("Ice crystals refracting moonlight", "Lightning high in the atmosphere", "Reflections off the polar ice"), QuizCategory.Science, QuizDifficulty.Hard),
+        ask("tecza_powstaje", "What causes a rainbow?", "Light refracting and dispersing in water droplets", listOf("Sunlight reflecting off the tops of clouds", "Dust in the air scattering the light", "Earth's magnetic field bending the light"), QuizCategory.Science, QuizDifficulty.Medium),
+        ask("zorza_polarna", "What causes the aurora?", "Charged particles from the Sun hitting the atmosphere", listOf("Ice crystals refracting the light of the Moon", "Lightning discharged high in the atmosphere", "Sunlight reflecting off the polar ice caps"), QuizCategory.Science, QuizDifficulty.Hard),
         ask("higrometr_mierzy", "What does a hygrometer measure?", "Air humidity", listOf("Air pressure", "Wind speed", "Rainfall"), QuizCategory.Science, QuizDifficulty.Medium),
         ask("sejsmograf_mierzy", "What does a seismograph record?", "Ground motion during earthquakes", listOf("Ocean currents", "Solar flares", "Volcanic gas output"), QuizCategory.Science, QuizDifficulty.Easy),
         ask("om_jednostka", "What is the unit of electrical resistance?", "The ohm", listOf("The volt", "The ampere", "The watt"), QuizCategory.Science, QuizDifficulty.Medium),

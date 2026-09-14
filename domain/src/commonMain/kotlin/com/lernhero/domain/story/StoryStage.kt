@@ -3,6 +3,7 @@ package com.lernhero.domain.story
 import com.lernhero.domain.monster.EnemySpecies
 import com.lernhero.domain.run.BattleKind
 import com.lernhero.domain.run.RunDifficulty
+import com.lernhero.domain.run.RunLoot
 import kotlin.math.roundToInt
 import kotlin.random.Random
 
@@ -51,7 +52,11 @@ object StoryStageCatalog {
             List(enemyCount) { EnemySpecies.all[random.nextInt(EnemySpecies.all.size)] }
         }
 
-        val waves = if (isBoss) 1 else (1 + stageInWorld % 3)
+        // Fale rosna WEWNATRZ krainy, a nie skacza. Dotad bylo to `stageInWorld % 3`, czyli
+        // 2-3-1-2-3: trzecia plansza kazdej krainy byla krotsza od drugiej i od pierwszej, wiec
+        // droga przez kraine raz po raz cofala sie do rozgrzewki. Lacznie fal jest tyle samo -
+        // zmienila sie tylko ich kolejnosc.
+        val waves = if (isBoss) 1 else (1 + stageInWorld / 2)
 
         return StoryStage(
             world = world,
@@ -61,8 +66,8 @@ object StoryStageCatalog {
             kind = kind,
             enemyPreview = enemyPreview,
             waves = waves,
-            rewardGold = rewardGoldFor(globalIndex, kind, tier),
-            rewardXp = rewardXpFor(globalIndex, kind, tier)
+            rewardGold = rewardGoldFor(globalIndex, kind, tier, waves),
+            rewardXp = rewardXpFor(globalIndex, kind, tier, waves)
         )
     }
 
@@ -75,17 +80,27 @@ object StoryStageCatalog {
      * faktycznie wyplaci walka (na to wplywa jeszcze quiz i passa), tylko dac graczowi realne
      * wyobrazenie, ile ta plansza jest warta.
      */
-    private fun rewardGoldFor(globalIndex: Int, kind: BattleKind, tier: RunDifficulty): Int {
-        val base = 20 + globalIndex * 4
+    private fun rewardGoldFor(globalIndex: Int, kind: BattleKind, tier: RunDifficulty, waves: Int): Int {
         val kindBonus = if (kind == BattleKind.Boss) 2.4f else 1f
-        return (base * kindBonus * tier.coinMultiplier).roundToInt()
+        return (GOLD_PER_WAVE * waves * kindBonus * tier.coinMultiplier *
+            RunLoot.depthMultiplier(globalIndex)).roundToInt()
     }
 
-    private fun rewardXpFor(globalIndex: Int, kind: BattleKind, tier: RunDifficulty): Int {
-        val base = 15 + globalIndex * 3
+    private fun rewardXpFor(globalIndex: Int, kind: BattleKind, tier: RunDifficulty, waves: Int): Int {
         val kindBonus = if (kind == BattleKind.Boss) 2f else 1f
-        return (base * kindBonus).roundToInt()
+        return (XP_PER_WAVE * waves * kindBonus * tier.coinMultiplier *
+            RunLoot.depthMultiplier(globalIndex)).roundToInt()
     }
+
+    /**
+     * Z czego liczony jest podglad: tyle mniej wiecej placi JEDNA fala (patrz [RunLoot]), a plansza
+     * ma ich [StoryStage.waves]. Wczesniej podglad mial wlasny wzor z numerem planszy, a walka
+     * placila plaska stawke z numeru fali - dwa rozne zrodla prawdy o tej samej liczbie, ktore
+     * rozjezdzaly sie tym bardziej, im glebiej gracz zaszedl. Teraz obie strony przechodza przez
+     * [RunLoot.depthMultiplier], wiec kafel na mapie i sakwa po walce mowia to samo.
+     */
+    private const val GOLD_PER_WAVE = 60f
+    private const val XP_PER_WAVE = 25f
 }
 
 /**

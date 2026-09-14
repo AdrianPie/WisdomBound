@@ -67,6 +67,19 @@ class StoryStageTest {
         assertFalse(stage.isBoss)
     }
 
+    /** Droga przez kraine ma sie zaostrzac, a nie falowac - patrz [StoryStageCatalog.stageAt]. */
+    @Test
+    fun `liczba fal rosnie w kolejnych planszach krainy`() {
+        val world = StoryWorldCatalog.all.first()
+        val start = StoryWorldCatalog.startIndexOf(world.id)
+        val waves = (0 until world.stageCount - 1).map {
+            StoryStageCatalog.stageAt(start + it, RunDifficulty.Normal)!!.waves
+        }
+
+        assertEquals(waves.sorted(), waves, "Plansza glebiej w krainie nie moze byc krotsza: $waves")
+        assertTrue(waves.last() > waves.first(), "Ostatnia zwykla plansza ma byc dluzsza niz pierwsza")
+    }
+
     @Test
     fun `wyzszy tier daje wyzsza nagrode za te sama plansze`() {
         val normal = StoryStageCatalog.stageAt(1, RunDifficulty.Normal)!!

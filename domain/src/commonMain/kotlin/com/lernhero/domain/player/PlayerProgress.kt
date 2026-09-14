@@ -117,8 +117,32 @@ object LevelCurve {
      */
     const val POINTS_PER_LEVEL = 3
 
-    private const val BASE_XP = 120f
-    private const val GROWTH = 1.18f
+    /**
+     * Koszt pierwszego awansu. Obnizone ze 120, bo poczatek gry byl najwolniejsza jego czescia:
+     * pierwsza plansza kampanii wyplaca ok. 50 XP, wiec na poziom 2 trzeba bylo trzech plansz,
+     * a przez pierwsze piec minut gracz nie widzial ANI JEDNEGO awansu. To jest dokladnie ten
+     * moment, w ktorym gra ma pokazac, ze rozwoj istnieje - miejsce na kompana, punkt talentu,
+     * punkty statystyk. Teraz pierwsze poziomy leca po jednej walce.
+     */
+    private const val BASE_XP = 70f
+
+    /**
+     * Tempo drozenia kolejnych poziomow. Bylo 1.18 i to byl najciezszy pojedynczy hamulec w calej
+     * grze: sila bohatera rosnie LINIOWO z poziomem (+2 ataku i +8 HP za punkt), a wrogowie rosna
+     * MNOZNIKOWO - glebokosc planszy razy tier razy liczebnosc fali. Przy 1.18 poziom 23, ktorego
+     * wymaga ostatnia plansza Normalnego, kosztowal piec razy wiecej XP niz poziom 14, ktory cala
+     * kampania realnie wyplacala. Gracz konczyl swiat drugi i wchodzil w sciane nie do przejscia
+     * inaczej niz kilkudniowym farmieniem - bez jednego zdania, ktore by go o tym uprzedzilo.
+     *
+     * 1.12 zostawialo krzywa wykladnicza, ale razem z obnizonym [BASE_XP] cala gra robila sie
+     * plaska: poziomy kapaly rownym tempem przez cale zejscie i zadna godzina nie rozniła sie od
+     * poprzedniej. 1.14 przywraca ksztalt, o ktory chodzi: **pierwsza godzina daje kilkanascie
+     * awansow, druga juz tylko kilka, a dziesiaty poziom od konca jest celem na wieczor.**
+     * Zmierzone na symulacji kampanii (75% trafien): 5 min -> poziom 3, 30 min -> 11, 1 h -> 15,
+     * 2 h -> 21, 3 h -> 27. Sila wrogow rosnie w tym czasie 4-krotnie, wiec krzywa nadal nie
+     * ucieka liniowej sile bohatera - sprawdza to PlayerProgressTest.
+     */
+    private const val GROWTH = 1.14f
 
     /** XP potrzebne, zeby przejsc Z poziomu [level] - 1 NA poziom [level]. */
     fun xpForLevel(level: Int): Int =

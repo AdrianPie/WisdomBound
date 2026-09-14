@@ -140,7 +140,7 @@ object TechnologyQuestions {
             id = "moore",
             prompt = "What does Moore's law concern?",
             correct = "The doubling of transistor count in chips",
-            wrong = listOf("Internet speed", "RAM prices", "Server power consumption"),
+            wrong = listOf("The doubling of internet speed each year", "The steady fall in the price of memory", "The rise in server power consumption"),
             difficulty = QuizDifficulty.Expert
         ),
         ask(

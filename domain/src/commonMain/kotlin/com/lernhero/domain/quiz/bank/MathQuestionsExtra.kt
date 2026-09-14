@@ -57,12 +57,12 @@ object MathQuestionsExtra {
         ask("figury_przekatne", "How many diagonals does a quadrilateral have?", "Two", listOf("Four", "One", "Three"), QuizDifficulty.Medium),
 
         /* ------------------------------ Hard ------------------------------- */
-        ask("pitagoras", "What does the Pythagorean theorem concern?", "The relationship between the sides of a right triangle", listOf("The sum of angles in a circle", "A trapezoid's area", "Similarity of shapes"), QuizDifficulty.Hard),
+        ask("pitagoras", "What does the Pythagorean theorem concern?", "The relationship between the sides of a right triangle", listOf("The sum of the angles drawn inside a circle", "The area enclosed by a trapezoid's sides", "The conditions for two shapes to be similar"), QuizDifficulty.Hard),
         ask("objetosc_szescianu", "What is the volume of a cube with edge 4?", "64", listOf("16", "48", "32"), QuizDifficulty.Hard),
         ask("objetosc_walca", "What is the formula for a cylinder's volume?", "pi x r squared x h", listOf("2 x pi x r x h", "pi x r x h", "pi x d x h"), QuizDifficulty.Hard),
         ask("silnia_6", "What is 6! (6 factorial)?", "720", listOf("120", "360", "1440"), QuizDifficulty.Hard),
         ask("procent_skladany", "What sets compound interest apart from simple interest?", "Interest accrues on previous interest too", listOf("It's calculated only once in a lifetime", "It always gives less", "It only applies to loans"), QuizDifficulty.Hard),
-        ask("liczba_wymierna", "Which of these numbers is NOT rational?", "The square root of 2", listOf("0.5", "7", "22/7"), QuizDifficulty.Hard),
+        ask("liczba_wymierna", "Which of these numbers is NOT rational?", "The square root of 2", listOf("The fraction 22/7", "The number 0.5", "The whole number 7"), QuizDifficulty.Hard),
         ask("delta", "How many roots does a quadratic function have when the discriminant is negative?", "Zero", listOf("One", "Two", "Infinitely many"), QuizDifficulty.Hard),
         ask("logarytm_2_8", "What is log base 2 of 8?", "3", listOf("2", "4", "8"), QuizDifficulty.Hard),
         ask("ciag_arytmetyczny", "What stays constant in an arithmetic sequence?", "The difference between consecutive terms", listOf("The ratio of consecutive terms", "The sum of all terms", "The first term"), QuizDifficulty.Hard),
@@ -74,14 +74,14 @@ object MathQuestionsExtra {
         ask("euler_wzor", "What does Euler's identity relate?", "The numbers e, i, pi, 1 and 0", listOf("Only pi and e", "Areas and perimeters", "Derivatives and integrals"), QuizDifficulty.Expert),
         ask("pochodna_x2", "What is the derivative of x squared?", "2x", listOf("x", "x cubed / 3", "2"), QuizDifficulty.Expert),
         ask("calka_x", "What is the indefinite integral of x?", "x squared / 2 + C", listOf("2x + C", "1 + C", "ln x + C"), QuizDifficulty.Expert),
-        ask("hipoteza_riemanna", "What does the Riemann hypothesis concern?", "The distribution of the zeta function's zeros", listOf("Differential equations", "The four color theorem", "Graph theory"), QuizDifficulty.Expert),
+        ask("hipoteza_riemanna", "What does the Riemann hypothesis concern?", "The distribution of the zeta function's zeros", listOf("The solutions of differential equations", "The colouring of maps with four colours", "The shortest path through a large graph"), QuizDifficulty.Expert),
         ask("fermat", "How many years passed before Fermat's Last Theorem was proven?", "Over 350", listOf("About 50", "About 100", "Over 1000"), QuizDifficulty.Expert),
-        ask("godel", "What do Godel's incompleteness theorems state?", "Any sufficiently rich system has undecidable statements", listOf("Every theorem can be proven", "Mathematics is contradictory", "There are finitely many primes"), QuizDifficulty.Expert),
+        ask("godel", "What do Godel's incompleteness theorems state?", "Any sufficiently rich system has undecidable statements", listOf("Every true theorem can in the end be proven", "Mathematics contains a hidden contradiction", "There are only finitely many prime numbers"), QuizDifficulty.Expert),
         ask("liczba_pierwsza_najwieksza", "What form do the largest known prime numbers take?", "Mersenne primes", listOf("Fermat numbers", "Fibonacci numbers", "Perfect numbers"), QuizDifficulty.Expert),
         ask("topologia_kubek", "Which shape does a topologist consider equivalent to a coffee mug?", "A torus (donut)", listOf("A sphere", "A cube", "A Mobius strip"), QuizDifficulty.Expert),
         ask("zloty_podzial", "What is the approximate value of the golden ratio?", "1.618", listOf("1.414", "2.718", "3.142"), QuizDifficulty.Expert),
         ask("liczba_grahama", "What is Graham's number associated with?", "An extremely large number from combinatorics", listOf("The number of atoms in the Universe", "The limit of the Fibonacci sequence", "The base of the natural logarithm"), QuizDifficulty.Expert),
         ask("p_np", "What does the P vs NP problem concern?", "The computational complexity of problems", listOf("Non-Euclidean geometry", "Measure theory", "The Navier-Stokes equations"), QuizDifficulty.Expert),
-        ask("banach_tarski", "What does the Banach-Tarski paradox state?", "A ball can be split apart and reassembled into two identical balls", listOf("Pi is rational", "Every set has a measure", "All infinities are equal"), QuizDifficulty.Expert)
+        ask("banach_tarski", "What does the Banach-Tarski paradox state?", "A ball can be split apart and reassembled into two identical balls", listOf("A sphere cannot be turned inside out without tearing", "Pi can be written as a ratio of two whole numbers", "All infinite sets are exactly the same size"), QuizDifficulty.Expert)
     )
 }

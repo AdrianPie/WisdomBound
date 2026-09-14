@@ -1,12 +1,15 @@
 package com.lernhero.di
 
 import com.lernhero.auth.AuthViewModel
+import com.lernhero.data.FirebaseAccountSession
 import com.lernhero.data.PlayerRepositoryImpl
 import com.lernhero.data.quiz.RemoteQuizGenerator
+import com.lernhero.domain.repository.AccountSession
 import com.lernhero.domain.repository.PlayerRepository
 import com.lernhero.domain.quiz.ai.QuizGenerator
 import com.lernhero.domain.run.RunSession
 import com.lernhero.shared.i18n.AppLanguageStore
+import com.lernhero.shared.prefs.AppPreferences
 import com.lernhero.shared.notification.ReminderScheduler
 import com.lernhero.shared.notification.platformReminderScheduler
 import com.lernhero.domain.story.CampaignSelection
@@ -24,11 +27,15 @@ import org.koin.dsl.module
 
 val sharedModule = module {
     single<PlayerRepository> { PlayerRepositoryImpl() }
+    // Tozsamosc konta (kto jest zalogowany, wylogowanie) - osobno od postepu gracza.
+    single<AccountSession> { FirebaseAccountSession() }
     single { RunSession() }
     // Gdzie gracz stoi na mapie kampanii - dzielone miedzy zakladka "Walcz" a ekranem Mapy.
     single { CampaignSelection() }
     // Device-local UI language (not account data) - patrz shared/i18n/AppLanguage.kt.
     single { AppLanguageStore() }
+    // Reszta preferencji urzadzenia (przypomnienia, tempo walki) - patrz shared/prefs.
+    single { AppPreferences() }
     // Harmonogram przypomnien. Na desktopie to ReminderScheduler.None - swiadomy brak,
     // nie luka (patrz ReminderScheduler.desktop.kt).
     single<ReminderScheduler> { platformReminderScheduler() }

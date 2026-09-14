@@ -105,7 +105,6 @@ fun HomeScreen(
     viewModel: PlayerViewModel,
     onOpenCharacter: () -> Unit = {},
     onOpenSettings: () -> Unit = {},
-    onOpenSawmill: () -> Unit = {},
     onOpenQuarry: () -> Unit = {},
     onOpenForge: () -> Unit = {},
     onOpenSummonCenter: () -> Unit = {},
@@ -141,7 +140,6 @@ fun HomeScreen(
 
         Box(modifier = Modifier.weight(1f).fillMaxWidth()) {
             CityMap(
-                onOpenSawmill = onOpenSawmill,
                 onOpenQuarry = onOpenQuarry,
                 onOpenForge = onOpenForge,
                 onOpenSummonCenter = onOpenSummonCenter
@@ -368,7 +366,6 @@ private fun ResourceChip(icon: String, value: Int) {
 
 @Composable
 private fun CityMap(
-    onOpenSawmill: () -> Unit,
     onOpenQuarry: () -> Unit,
     onOpenForge: () -> Unit,
     onOpenSummonCenter: () -> Unit
@@ -376,10 +373,10 @@ private fun CityMap(
     BoxWithConstraints(modifier = Modifier.fillMaxSize()) {
         // xFraction = pozycja w WOLNEJ szerokosci (0 = do lewej, 1 = do prawej) - stad zygzak.
         val spots = listOf(
-            CityBuildingSpot(painterResource(Resources.CityIsland.sawmill), "Sawmill", 0.02f, onOpenSawmill),
-            CityBuildingSpot(painterResource(Resources.CityIsland.quarry), "Quarry", 0.98f, onOpenQuarry),
-            CityBuildingSpot(painterResource(Resources.CityIsland.forge), "Forge", 0.02f, onOpenForge),
-            CityBuildingSpot(painterResource(Resources.CityIsland.summon), "Summon Center", 0.98f, onOpenSummonCenter)
+            // Trzy wyspy, nie cztery - tartak zniknal razem z drewnem (patrz [TownResources]).
+            CityBuildingSpot(painterResource(Resources.CityIsland.quarry), "Quarry", 0.02f, onOpenQuarry),
+            CityBuildingSpot(painterResource(Resources.CityIsland.forge), "Forge", 0.98f, onOpenForge),
+            CityBuildingSpot(painterResource(Resources.CityIsland.summon), "Summon Center", 0.02f, onOpenSummonCenter)
         )
 
         // Wyspy sa CELOWO wieksze niz 1/4 wysokosci ekranu - inaczej (przy czterech osobnych,

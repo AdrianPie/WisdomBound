@@ -44,6 +44,34 @@ interface AppStrings {
     val settingsTitle: String
     val settingsLanguage: String
     val settingsLanguageHint: String
+    val settingsNotifications: String
+    val settingsNotificationsIntro: String
+    val settingsNotificationsAsk: String
+    val settingsNotificationsBlocked: String
+    val settingsNotificationsAll: String
+    val settingsNotificationsAllHint: String
+    val settingsReminderStorage: String
+    val settingsReminderStorageHint: String
+    val settingsReminderSummon: String
+    val settingsReminderSummonHint: String
+    val settingsReminderDaily: String
+    val settingsReminderDailyHint: String
+    val settingsReminderHour: String
+    val settingsBattle: String
+    val settingsBattleSpeed: String
+    val settingsBattleSpeedHint: String
+    val settingsAccount: String
+    val settingsSignedInAs: String
+    val settingsSignedInUnknown: String
+    val settingsSignOut: String
+    val settingsSignOutHint: String
+    val settingsSignOutConfirm: String
+    val settingsAbout: String
+    val settingsReset: String
+    val settingsResetHint: String
+    val settingsResetDone: String
+    val settingsOn: String
+    val settingsOff: String
 
     /* ---- endless setup / custom quiz (feature/home/story + feature/home/quiz) ---- */
     val endlessSourceBuiltin: String
@@ -125,6 +153,41 @@ object EnStrings : AppStrings {
     override val settingsTitle = "Settings"
     override val settingsLanguage = "Language"
     override val settingsLanguageHint = "Changes the whole app immediately - no restart needed."
+
+    override val settingsNotifications = "Notifications"
+    override val settingsNotificationsIntro =
+        "We only send three, and only when something is actually waiting for you."
+    override val settingsNotificationsAsk = "Turn on reminders"
+    override val settingsNotificationsBlocked =
+        "Notifications are switched off for LernHero in your system settings. Tap to reopen them."
+    override val settingsNotificationsAll = "All reminders"
+    override val settingsNotificationsAllHint = "Off clears everything already queued up."
+    override val settingsReminderStorage = "Camp storage full"
+    override val settingsReminderStorageHint = "Campaign rewards stopped piling up."
+    override val settingsReminderSummon = "Free summon ready"
+    override val settingsReminderSummonHint = "Your free pull is waiting in the Summon Center."
+    override val settingsReminderDaily = "Daily goal"
+    override val settingsReminderDailyHint = "An evening nudge, only if today is still unticked."
+    override val settingsReminderHour = "Evening nudge at"
+
+    override val settingsBattle = "Battle"
+    override val settingsBattleSpeed = "Starting speed"
+    override val settingsBattleSpeedHint =
+        "Every battle starts at this pace. You can still change it mid-fight in the HUD."
+
+    override val settingsAccount = "Account"
+    override val settingsSignedInAs = "Signed in as"
+    override val settingsSignedInUnknown = "Signed in"
+    override val settingsSignOut = "Sign out"
+    override val settingsSignOutHint =
+        "Your hero and progress stay on the account - sign back in and everything is where you left it."
+    override val settingsSignOutConfirm = "Sign out for real?"
+    override val settingsAbout = "About"
+    override val settingsReset = "Restore defaults"
+    override val settingsResetHint = "Only the settings on this screen. Your hero and progress stay untouched."
+    override val settingsResetDone = "Settings restored to defaults."
+    override val settingsOn = "On"
+    override val settingsOff = "Off"
 
     override val endlessSourceBuiltin = "Question bank"
     override val endlessSourceCustom = "Custom"
@@ -208,6 +271,41 @@ object PlStrings : AppStrings {
     override val settingsTitle = "Ustawienia"
     override val settingsLanguage = "Jezyk"
     override val settingsLanguageHint = "Zmienia cala apke od razu - bez restartu."
+
+    override val settingsNotifications = "Powiadomienia"
+    override val settingsNotificationsIntro =
+        "Wysylamy dokladnie trzy i tylko wtedy, gdy cos naprawde na Ciebie czeka."
+    override val settingsNotificationsAsk = "Wlacz przypomnienia"
+    override val settingsNotificationsBlocked =
+        "Powiadomienia dla LernHero sa wylaczone w ustawieniach systemu. Tapnij, zeby je otworzyc."
+    override val settingsNotificationsAll = "Wszystkie przypomnienia"
+    override val settingsNotificationsAllHint = "Wylaczenie kasuje tez to, co juz stoi w kolejce."
+    override val settingsReminderStorage = "Pelny magazyn w obozie"
+    override val settingsReminderStorageHint = "Nagrody z kampanii przestaly sie zbierac."
+    override val settingsReminderSummon = "Darmowy summon gotowy"
+    override val settingsReminderSummonHint = "Darmowe losowanie czeka w Summon Center."
+    override val settingsReminderDaily = "Cel dzienny"
+    override val settingsReminderDailyHint = "Wieczorne szturchniecie - tylko gdy dzis jeszcze nic nie odhaczone."
+    override val settingsReminderHour = "Wieczorem o"
+
+    override val settingsBattle = "Walka"
+    override val settingsBattleSpeed = "Tempo startowe"
+    override val settingsBattleSpeedHint =
+        "Od tego tempa startuje kazda walka. W trakcie dalej zmienisz je w HUD-zie."
+
+    override val settingsAccount = "Konto"
+    override val settingsSignedInAs = "Zalogowany jako"
+    override val settingsSignedInUnknown = "Zalogowany"
+    override val settingsSignOut = "Wyloguj"
+    override val settingsSignOutHint =
+        "Bohater i postep zostaja na koncie - po ponownym zalogowaniu wszystko jest na swoim miejscu."
+    override val settingsSignOutConfirm = "Na pewno wylogowac?"
+    override val settingsAbout = "O aplikacji"
+    override val settingsReset = "Przywroc domyslne"
+    override val settingsResetHint = "Tylko ustawienia z tego ekranu. Bohater i postep zostaja nietkniete."
+    override val settingsResetDone = "Przywrocono ustawienia domyslne."
+    override val settingsOn = "Wl."
+    override val settingsOff = "Wyl."
 
     override val endlessSourceBuiltin = "Bank pytan"
     override val endlessSourceCustom = "Wlasne"

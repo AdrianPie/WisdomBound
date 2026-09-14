@@ -29,6 +29,17 @@ class CampaignSelection {
     var stage: Int? = null
         private set
 
+    /**
+     * Zapomina, co bylo wybrane. Wolane przy wylogowaniu: ten obiekt zyje tak dlugo jak proces,
+     * wiec bez tego nastepne konto zalogowane na tym samym telefonie zaczynaloby na krainie
+     * i planszy poprzednika.
+     */
+    fun reset() {
+        worldId = null
+        tier = RunDifficulty.Normal
+        stage = null
+    }
+
     fun select(worldId: String, tier: RunDifficulty) {
         this.worldId = worldId
         this.tier = tier

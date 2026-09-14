@@ -259,7 +259,6 @@ interface PlayerRepository {
      */
     suspend fun grantTestResources(
         gold: Int,
-        wood: Int,
         stone: Int,
         iron: Int,
         essence: Int,

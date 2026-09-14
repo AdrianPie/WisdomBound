@@ -56,6 +56,33 @@ private val GEM_PACKS = listOf(
 )
 
 /**
+ * Skrzynia z losami do Summon Center - kupowana za gemy.
+ *
+ * To jest swiadoma zmiana zasady, ktora ten ekran glosil wczesniej ("gemy nigdy nie beda skrotem
+ * do mocy"). Po ukonczeniu kampanii na Normalnym gracz staje przed sciana, ktorej nie przebija ani
+ * poziom, ani sprzet, tylko GWIAZDKI kompanow - a te ida z duplikatow, czyli z losow. Skoro losy
+ * bramkuja postep, skrzynia z losami JEST skrotem do mocy i udawanie inaczej byloby klamstwem
+ * na ekranie sklepu.
+ *
+ * Co zostaje uczciwe: kazdy los da sie tez wyfarmic. Boss w endless wchodzi co dziesiata fala
+ * ([com.lernhero.domain.run.EndlessMilestones]) i placi tym wiecej, im glebiej gracz zaszedl -
+ * czyli tym wiecej, im lepiej odpowiada. Skrzynia kupuje CZAS, nie cos, czego nie da sie zdobyc.
+ */
+private data class TicketPack(
+    val id: String,
+    val title: String,
+    val tickets: Int,
+    val gems: Int,
+    val note: String?
+)
+
+private val TICKET_PACKS = listOf(
+    TicketPack("tickets_small", "Summon Pouch", 10, 90, null),
+    TicketPack("tickets_medium", "Summon Crate", 60, 450, "+20% more per gem"),
+    TicketPack("tickets_large", "Summon Hoard", 200, 1200, "+67% more per gem")
+)
+
+/**
  * Sklep za prawdziwa walute. Ekwipunek, kompani i zaklecia ZNIKLY stad swiadomie: kupowanie ich za
  * zloto bylo obejsciem calej rozgrywki (nie musiales schodzic do lochu, zeby sie wzmocnic), a
  * jednoczesnie zabijalo ekonomie - po wykupieniu katalogu zloto przestawalo miec sens.
@@ -77,8 +104,9 @@ fun ShopScreen(viewModel: PlayerViewModel) {
     ) {
         Header(money = state.money)
 
+        // Zostalo po polsku po tlumaczeniu calego UI - reszta ekranu jest po angielsku.
         Text(
-            text = "KLEJNOTY",
+            text = "GEMS",
             color = GoldText,
             fontFamily = FontPixel(),
             fontWeight = FontWeight.Bold,
@@ -89,7 +117,57 @@ fun ShopScreen(viewModel: PlayerViewModel) {
             GemPackCard(pack = pack)
         }
 
+        Text(
+            text = "SUMMON TICKETS",
+            color = GoldText,
+            fontFamily = FontPixel(),
+            fontWeight = FontWeight.Bold,
+            fontSize = 13.sp
+        )
+
+        TICKET_PACKS.forEach { pack ->
+            TicketPackCard(pack = pack)
+        }
+
         WhereToGetThings()
+    }
+}
+
+@Composable
+private fun TicketPackCard(pack: TicketPack) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(12.dp))
+            .background(PanelInk)
+            .border(1.5.dp, GoldText.copy(alpha = 0.45f), RoundedCornerShape(12.dp))
+            .padding(14.dp),
+        horizontalArrangement = Arrangement.spacedBy(12.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Text(text = "🎟", fontSize = 26.sp)
+        Column(modifier = Modifier.weight(1f)) {
+            Text(
+                text = pack.title,
+                color = GoldText,
+                fontFamily = FontPixel(),
+                fontWeight = FontWeight.Bold,
+                fontSize = 12.sp
+            )
+            Text(
+                text = "${pack.tickets} tickets" + (pack.note?.let { " · $it" } ?: ""),
+                color = Muted,
+                fontFamily = FontFirst(),
+                fontSize = 11.sp
+            )
+        }
+        Text(
+            text = "💎 ${pack.gems}",
+            color = GemBlue,
+            fontFamily = FontPixel(),
+            fontWeight = FontWeight.Bold,
+            fontSize = 12.sp
+        )
     }
 }
 
@@ -226,11 +304,13 @@ private fun WhereToGetThings() {
             fontFamily = FontFirst(),
             fontSize = 12.sp
         )
-        SourceRow("⚒", "Forge", "Items — for ore, wood and stone.")
+        SourceRow("⚒", "Forge", "Items — for ore and stone.")
         SourceRow("🔮", "Summon Center", "Companions for tickets, spells for essence.")
         SourceRow("⚔", "Dungeons", "Ore and essence drop from waves and bosses.")
+        SourceRow("♾", "Endless", "A boss every 10 waves — tickets, stone and bonus XP.")
         Text(
-            text = "Gems will never be a shortcut to power - only to convenience.",
+            text = "Tickets can be bought, and every one of them can also be earned. " +
+                "Go deeper in Endless and the bosses pay more.",
             color = Muted.copy(alpha = 0.75f),
             fontFamily = FontFirst(),
             fontSize = 11.sp,

@@ -114,7 +114,7 @@ object TalentCatalog {
             tier = 3,
             column = 0,
             name = "Double Shot",
-            description = "The hero fires +1 extra projectile per attack per rank.",
+            description = "The hero fires +1 extra projectile per attack per rank. Extra projectiles hit for 60%.",
             icon = "🏹",
             maxRank = 3,
             effects = listOf(TalentEffect.Buff(EndlessBuff.MultiShot))
@@ -148,7 +148,7 @@ object TalentCatalog {
             tier = 4,
             column = 0,
             name = "Volley",
-            description = "The WHOLE party fires +1 extra projectile per attack per rank.",
+            description = "The WHOLE party fires +1 extra projectile per attack per rank. Extra projectiles hit for 60%.",
             icon = "☄️",
             maxRank = 2,
             effects = listOf(TalentEffect.Buff(EndlessBuff.Volley))
@@ -190,7 +190,7 @@ object TalentCatalog {
             tier = 0,
             column = 2,
             name = "Fortress",
-            description = "-7% damage taken per rank (max 60%).",
+            description = "-7% damage taken per rank (max 60%). Stacks with Sanctuary.",
             icon = "🏰",
             maxRank = 5,
             effects = listOf(TalentEffect.Buff(EndlessBuff.Fortress))
@@ -202,7 +202,7 @@ object TalentCatalog {
             tier = 1,
             column = 0,
             name = "Vitality",
-            description = "+10% max party HP per rank - and heals for the same amount instantly.",
+            description = "+10% max party HP per rank - and heals for the same amount instantly. Stacks with Breath of Life.",
             icon = "❤️",
             maxRank = 4,
             effects = listOf(TalentEffect.Buff(EndlessBuff.Vitality))
@@ -224,7 +224,7 @@ object TalentCatalog {
             tier = 1,
             column = 2,
             name = "Thorns",
-            description = "The attacker takes 25% of the damage it dealt to the party.",
+            description = "The attacker takes 25% of the damage it dealt to the party. Stacks with Iron Shell.",
             icon = "🌵",
             maxRank = 3,
             effects = listOf(TalentEffect.Buff(EndlessBuff.Thorns))
@@ -247,7 +247,7 @@ object TalentCatalog {
             tier = 2,
             column = 1,
             name = "Second Wind",
-            description = "Once per wave the hero survives a fatal hit with 25% HP.",
+            description = "Once per wave the hero survives a fatal hit with 25% HP. Stacks with Mercy.",
             icon = "🫀",
             maxRank = 2,
             effects = listOf(TalentEffect.Buff(EndlessBuff.SecondWind))
@@ -323,7 +323,7 @@ object TalentCatalog {
             tier = 4,
             column = 2,
             name = "Colossus",
-            description = "+20% attack AND +20% max HP for the whole party per rank.",
+            description = "+20% attack AND +20% max HP for the whole party per rank. Stacks with Avatar of Light.",
             icon = "👑",
             maxRank = 2,
             effects = listOf(TalentEffect.Buff(EndlessBuff.Avatar))
@@ -339,7 +339,7 @@ object TalentCatalog {
             tier = 0,
             column = 0,
             name = "Vampirism",
-            description = "Heal for 5% of damage dealt per rank.",
+            description = "Heal for 5% of damage dealt per rank. Stacks with Transfusion.",
             icon = "🩸",
             maxRank = 4,
             effects = listOf(TalentEffect.Buff(EndlessBuff.Vampirism))
@@ -350,7 +350,7 @@ object TalentCatalog {
             tier = 0,
             column = 2,
             name = "Regeneration",
-            description = "After every wave cleared, the party heals 7% of max HP per rank.",
+            description = "After every wave cleared, the party heals 7% of max HP per rank. Stacks with Renewal.",
             icon = "🌿",
             maxRank = 4,
             effects = listOf(TalentEffect.Buff(EndlessBuff.Regeneration))
@@ -384,7 +384,7 @@ object TalentCatalog {
             tier = 1,
             column = 2,
             name = "Breath of Life",
-            description = "+10% max party HP per rank - and heals for the same amount instantly.",
+            description = "+10% max party HP per rank - and heals for the same amount instantly. Stacks with Vitality.",
             icon = "🌸",
             maxRank = 4,
             effects = listOf(TalentEffect.Buff(EndlessBuff.Vitality))
@@ -418,7 +418,7 @@ object TalentCatalog {
             tier = 2,
             column = 2,
             name = "Sanctuary",
-            description = "+25 max party HP and -7% damage taken per rank.",
+            description = "+25 max party HP and -7% damage taken per rank. The reduction stacks with Fortress.",
             icon = "⛪",
             maxRank = 3,
             effects = listOf(
@@ -448,7 +448,7 @@ object TalentCatalog {
             tier = 3,
             column = 1,
             name = "Mercy",
-            description = "Once per wave the hero survives a fatal hit with 25% HP.",
+            description = "Once per wave the hero survives a fatal hit with 25% HP. Stacks with Second Wind.",
             icon = "🕊️",
             maxRank = 2,
             effects = listOf(TalentEffect.Buff(EndlessBuff.SecondWind))
@@ -474,7 +474,7 @@ object TalentCatalog {
             tier = 4,
             column = 1,
             name = "Avatar of Light",
-            description = "+20% attack AND +20% max HP for the whole party per rank.",
+            description = "+20% attack AND +20% max HP for the whole party per rank. Stacks with Colossus.",
             icon = "😇",
             maxRank = 2,
             effects = listOf(TalentEffect.Buff(EndlessBuff.Avatar)),

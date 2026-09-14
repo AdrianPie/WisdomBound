@@ -45,7 +45,7 @@ object MathQuestionsExtra2 {
         ask("pierwiastek_144", "What is the square root of 144?", "12", listOf("11", "13", "14"), QuizDifficulty.Medium),
         ask("dwa_do_dziesiatej", "What is 2 to the power of 10?", "1024", listOf("512", "2048", "100"), QuizDifficulty.Medium),
         ask("srednia_wazona_prosta", "What is the arithmetic mean of 10, 20 and 30?", "20", listOf("15", "25", "18"), QuizDifficulty.Medium),
-        ask("kat_rozwarty", "What angle do we call obtuse?", "Greater than 90, less than 180 degrees", listOf("Less than 90 degrees", "Exactly 90 degrees", "Exactly 180 degrees"), QuizDifficulty.Medium),
+        ask("kat_rozwarty", "What angle do we call obtuse?", "Greater than 90, less than 180 degrees", listOf("Smaller than 90 degrees, but not zero", "Exactly 90 degrees", "Exactly 180 degrees"), QuizDifficulty.Medium),
         ask("liczby_wzgledne_pierwsze", "Which pair of numbers is coprime (GCD=1)?", "8 and 9", listOf("6 and 9", "10 and 15", "12 and 18"), QuizDifficulty.Medium),
         ask("proporcja_prosta", "If 3 apples cost \$6, how much do 5 apples cost?", "\$10", listOf("\$8", "\$12", "\$15"), QuizDifficulty.Medium),
 
@@ -65,7 +65,7 @@ object MathQuestionsExtra2 {
         ask("szereg_harmoniczny", "Does the harmonic series (sum of 1/n) converge?", "No, it diverges", listOf("Yes, it converges to 2", "Yes, it converges to pi", "Yes, it converges to e"), QuizDifficulty.Expert),
         ask("liczby_pierwsze_blizniacze", "What do we call pairs of primes differing by 2, like 11 and 13?", "Twin primes", listOf("Perfect numbers", "Amicable numbers", "Mersenne primes"), QuizDifficulty.Expert),
         ask("teoria_grafow_euler", "Which problem gave rise to graph theory?", "The Seven Bridges of Konigsberg problem", listOf("The four color problem", "The traveling salesman problem", "Zeno's paradox"), QuizDifficulty.Expert),
-        ask("cztery_barwy", "What does the four color theorem state?", "Any map can be colored with four colors with no adjacent regions sharing one", listOf("Every graph has a Hamiltonian cycle", "Every number has four divisors", "Every triangle has four altitudes"), QuizDifficulty.Expert),
-        ask("pierwiastki_niewspolmierne", "What are irrational numbers?", "Numbers that cannot be written as a ratio of two integers", listOf("Negative numbers", "Complex numbers", "Prime numbers"), QuizDifficulty.Expert)
+        ask("cztery_barwy", "What does the four color theorem state?", "Any map can be colored with four colors with no adjacent regions sharing one", listOf("Every graph contains a cycle passing through all of its vertices", "Every whole number has exactly four divisors", "Every triangle has four distinct altitudes"), QuizDifficulty.Expert),
+        ask("pierwiastki_niewspolmierne", "What are irrational numbers?", "Numbers that cannot be written as a ratio of two integers", listOf("Numbers that lie below zero on the number line", "Numbers that include an imaginary part", "Numbers divisible only by one and themselves"), QuizDifficulty.Expert)
     )
 }

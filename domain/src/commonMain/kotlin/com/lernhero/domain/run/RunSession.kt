@@ -1,6 +1,7 @@
 package com.lernhero.domain.run
 
 import com.lernhero.domain.combat.Stats
+import com.lernhero.domain.progress.CategoryMastery
 import com.lernhero.domain.quiz.QuizCategory
 import com.lernhero.domain.quiz.QuizDifficulty
 import com.lernhero.domain.quiz.custom.CustomDeck
@@ -65,6 +66,15 @@ class RunSession {
         private set
 
     /**
+     * Poziom opanowania tematu wybranego na to wejscie w endless (patrz
+     * [com.lernhero.domain.progress.CategoryMastery]). Steruje startowa trudnoscia pytan, sila
+     * wrogow i mnoznikiem nagrod. Poza endless zostaje na [CategoryMastery.FIRST_LEVEL] i nic
+     * nie zmienia.
+     */
+    var categoryLevel: Int = CategoryMastery.FIRST_LEVEL
+        private set
+
+    /**
      * Zamowienie na najblizsza walke, skladane tuz przed nawigacja do [BattleRequest] - dla
      * kampanii to konkretna plansza mapy (patrz [com.lernhero.domain.story.StoryStage.seed]), nie
      * cala kraina z gory. Walka je czyta; null oznacza stara sciezke "walka bez mapy".
@@ -111,7 +121,8 @@ class RunSession {
         storyStage: Int? = null,
         quizDifficulty: QuizDifficulty? = null,
         customWords: List<SavedWord> = emptyList(),
-        customDeck: CustomDeck? = null
+        customDeck: CustomDeck? = null,
+        categoryLevel: Int = CategoryMastery.FIRST_LEVEL
     ) {
         modifiers = RunModifiers()
         this.category = category
@@ -120,6 +131,7 @@ class RunSession {
         this.quizDifficulty = quizDifficulty
         this.customWords = customWords
         this.customDeck = customDeck
+        this.categoryLevel = categoryLevel
         pendingBattle = null
         lastBattleWon = null
         partyHp = emptyMap()

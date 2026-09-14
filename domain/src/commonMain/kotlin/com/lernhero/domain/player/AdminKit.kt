@@ -91,7 +91,6 @@ object AdminKit {
             monsterInventory = monsterBag,
             ownedMonsters = base.ownedMonsters + MonsterCatalog.all.map { it.id },
             townResources = TownResources(
-                wood = RESOURCE,
                 stone = RESOURCE,
                 iron = RESOURCE,
                 essence = RESOURCE,

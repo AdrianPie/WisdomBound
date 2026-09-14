@@ -75,6 +75,7 @@ fun ProductionBuildingScreen(
     val boostActive = ProductionMath.isBoostActive(production, now)
     val boostRemaining = ProductionMath.boostRemainingMillis(production, now)
     val upgradeCost = ProductionMath.upgradeCost(production.level)
+    val maxed = ProductionMath.isMaxed(production.level)
 
     // Nowe `attemptId` = nowy zestaw pytan. Rosnie po kazdym zamknieciu, zeby druga proba
     // (nastepnego dnia) nie dostala tych samych pieciu pytan z pamieci kompozycji.
@@ -140,9 +141,11 @@ fun ProductionBuildingScreen(
                     onClick = { quizOpen = true }
                 )
                 TownActionButton(
-                    text = "UPGRADE",
-                    subtitle = "💰 $upgradeCost  •  +35%",
-                    enabled = state.money >= upgradeCost,
+                    text = if (maxed) "MAX LEVEL" else "UPGRADE",
+                    // Sufit budynku jest CELOWY - patrz [ProductionMath.MAX_LEVEL]. Przycisk musi
+                    // powiedziec, ze to koniec toru, a nie tylko zgasnac bez slowa.
+                    subtitle = if (maxed) "level ${ProductionMath.MAX_LEVEL} of ${ProductionMath.MAX_LEVEL}" else "💰 $upgradeCost  •  +22%",
+                    enabled = !maxed && state.money >= upgradeCost,
                     modifier = Modifier.weight(1f),
                     onClick = { viewModel.upgrade(building) }
                 )
@@ -520,16 +523,13 @@ private fun BoostBadge(percent: Int, remaining: Long) {
 
 
 private fun ProductionBuilding.title(): String = when (this) {
-    ProductionBuilding.Sawmill -> "Sawmill"
     ProductionBuilding.Quarry -> "Quarry"
 }
 
 private fun ProductionBuilding.resourceIcon(): String = when (this) {
-    ProductionBuilding.Sawmill -> "🪵"
     ProductionBuilding.Quarry -> "🪨"
 }
 
 private fun ProductionBuilding.islandArt() = when (this) {
-    ProductionBuilding.Sawmill -> Resources.CityIsland.sawmill
     ProductionBuilding.Quarry -> Resources.CityIsland.quarry
 }

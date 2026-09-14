@@ -60,6 +60,12 @@ progress/        liczniki konta (GameStats/RunStats) i osiagniecia. Osiagniecie 
                  nie wymaga wymyslania mu ceny i nie da sie dodac takiego, ktory placi zero
 monster/         karty kompanow i cala ekonomia kolekcji
   MonsterCard        dane karty + spellIds (zaklecia kompana)
+  CompanionPower     JEDYNE miejsce liczace, ile kompan ma HP i ataku - czyta je i karta w
+                     kolekcji, i pole bitwy. Kompan istnial wczesniej w dwoch skalach naraz
+                     (karta 55-100 HP, walka razy trzy) i nikt ich nie pogodzil, przez co sprzet
+                     kompanow - pisany w skali WALKI - nie dzialal ani tu, ani tam: modul
+                     :feature:game ANI RAZU nie wspominal o MonsterEquipment, a karta dodawala
+                     bonus ze zlej skali i zawyzala trzykrotnie
   MonsterLevels      poziomy za ZLOTO. MAX_LEVEL to sufit absolutny; realny limit daja gwiazdki
   MonsterStars       gwiazdki za DUPLIKATY (2/3/5/8 kopii = 19 lacznie do 5★). Kazda gwiazdka
                      zdejmuje sufit poziomu i dodaje +25% statystyk. Na 5★ nadmiarowe kopie
@@ -86,7 +92,19 @@ story/           kampania: StoryWorld (kraina) + StoryStage (jedna plansza, licz
   CampaignSelection  gdzie gracz "stoi" (kraina + tier + wybrana plansza). Koin singleton, bo
                      ten wybor musi przezyc przejscie zakladka <-> ekran Mapy
   IdleRewards        nagrody kapiace offline (przycisk GET). Bezstanowa matematyka z roznicy
-                     czasu, tak samo jak produkcja w miescie (town/); sufit CAP_HOURS
+                     czasu, tak samo jak produkcja w miescie (town/); sufit CAP_HOURS.
+                     **XP tu NIE MA i to jest regula, nie przeoczenie**: cala gra stoi na tym,
+                     ze poziom placi sie dobra odpowiedzia (patrz run/RunLoot). Kapaczka dawala
+                     1440 XP za dwanascie godzin nieobecnosci - poltora poziomu za nic - a po
+                     pierwszej krainie 360 XP przy awansie kosztujacym niecale 240. Zostaje
+                     zloto i materialy: powod, zeby zajrzec rano, a nie darmowy awans
+  StageRepeats       ile placi PONOWNE przejscie tej samej planszy: 100% / 50% / 30% / 10% i tyle
+                     juz zostaje. Wczesniej nic nie odrozniało pierwszego przejscia od setnego,
+                     a boss ostatniej planszy to JEDNA fala placaca piec losow - cztery powtorki
+                     bily caly tier kampanii (21 losow). Zadna sciana nie byla wtedy sciana, bo
+                     zawsze taniej bylo pospamowac znane pole niz cokolwiek zdobyc. Licznik podejsc
+                     siedzi w Player.stageClears ("TIER:numer" -> ile razy), osobno od
+                     storyProgress, ktory pamieta tylko NAJDALSZA plansze
   StageLoot          jawna pula lupu planszy (przycisk LOOT) - rzadsze przedmioty wchodza do
                      puli dopiero glebiej i na wyzszych tierach. DWIE polowy: itemPool/dropChance
                      pokazuja graczowi, po co tu bije, a roll() faktycznie oddaje przedmiot po
@@ -95,6 +113,34 @@ story/           kampania: StoryWorld (kraina) + StoryStage (jedna plansza, licz
                      z reszta wyniku, bo rozliczenie zejscia jest JEDNYM zapisem
 player/          Player, PlayerEquipment, klasy postaci, PlayerProgress (poziom/XP/statystyki
                  rozdawane po awansie - LevelCurve to cala krzywa progresji)
+  LevelCurve       BASE_XP 70, GROWTH 1.14. Ksztalt jest CELOWY i zmierzony na symulacji
+                   kampanii (75% trafien): 5 min -> poziom 3, 30 min -> 11, 1 h -> 15, 2 h -> 21,
+                   3 h -> 27. Czyli pierwsza godzina daje kilkanascie awansow, a kazda nastepna
+                   coraz mniej. Ruszanie ktorejkolwiek z tych dwoch liczb przesuwa CALA gre -
+                   razem z progami PartySlots, ktore sa pod nie dobrane
+  PartySlots       miejsca na kompanow otwieraja sie na poziomach 1/3/7/12/20. To sa MINUTY
+                   przelozone na numery: ~5 min, ~18 min, ~35 min, ~2 h. Po kazdej zmianie
+                   LevelCurve trzeba je przeliczyc, inaczej caly komplet otworzy sie w pierwszej
+                   godzinie - zanim gracz bedzie mial czym go zapelnic (losy leca ze skrzyn)
+town/            miasto: surowce (TownResources) i produkcja (ProductionMath).
+                 Surowcow sa TRZY - kamien (kamieniolom), ruda i esencja (tylko z walk) - plus
+                 losy do summonow i zloto. Drewno i tartak zostaly skasowane: drewno mialo jednego
+                 odbiorce (wykuwanie, 15-75 sztuk raz na przedmiot), a same skrzynie po bossach
+                 wyplacaly go ponad 1600. Zasob, ktorego nie da sie ani zabraknac, ani wydac,
+                 nie jest decyzja gracza - jest czwarta pozycja w kazdym oknie kosztu. Jego role
+                 przejal kamien (Forge.costFor: 35 x tier, czyli suma obu dawnych pozycji).
+  ProductionMath   budynek ma SUFIT (MAX_LEVEL 10) i to jest cala roznica miedzy "kopalnia
+                   pomaga" a "kopalnia gra za gracza": bez sufitu poziom 12 robil 1629/h, czyli
+                   13 000 kamienia na jedno odebranie magazynu, przy najdrozszym ulepszeniu
+                   przedmiotu za 3300. Teraz maks to 270/h (magazyn 2157) - mniej wiecej jedno
+                   ulepszenie dziennie. Caly tor kosztuje ok. 13 000 zlota i jest jedynym
+                   SKONCZONYM sinkiem na zloto w grze. Pilnuje tego ProductionMathTest
+talent/          drzewko rozwoju bohatera. Wiekszosc wezlow to staki [EndlessBuff], czyli mechanik,
+                 ktore walka juz umiala liczyc dla endless - dzieki temu drzewko nie potrzebowalo ani
+                 jednej nowej galezi w silniku. Uwaga przy strojeniu: SIEDEM buffow karmia po DWA
+                 rozne wezly (Vitality, Avatar, Fortress, SecondWind, Thorns, Regeneration,
+                 Vampirism), wiec sufit z opisu jednego wezla to polowa tego, co gracz moze zebrac.
+                 Pilnuje tego TalentDescriptionTest - opis musi nazywac blizniaka
 common/          Rarity - dzielona przez przedmioty i potwory
 repository/      interfejsy repozytoriow (implementacje sa w :data)
 fitness/         modele trackera fitness (dzienny snapshot, cele, katalog celi)
@@ -112,10 +158,25 @@ run/             stan pojedynczej walki/zejscia
   RunSession       zywy stan biezacego runu (RunModifiers, HP druzyny, lup)
   RunDifficulty    4 tiery kampanii (Normal/Nightmare/Hell/Death) - zakladki nad mapa, kazdy
                    nastepny odblokowuje sie dopiero po ukonczeniu poprzedniego OD DESKI DO DESKI
-                   (patrz story/StoryProgress.isTierUnlocked). Endless zawsze stoi na Normal
+                   (patrz story/StoryProgress.isTierUnlocked). Endless zawsze stoi na Normal.
+                   Tier steruje DWIEMA rzeczami: sila wrogow i - przez campaignLadder - poziomem
+                   pytan. To drugie dlugo bylo martwe: trudnosc pytania brala sie wylacznie
+                   z numeru fali, a plansza ma ich najwyzej trzy, wiec cala kampania, na kazdym
+                   tierze, chodzila po poczatku drabinki
   RunLoot          ile jedno zejscie daje XP i materialow. XP plynie glownie z DOBRYCH
-                   ODPOWIEDZI, materialy (ruda/esencja) z walki
-  BossChest        kolo fortuny ze skrzyni po bossie (jawne szanse)
+                   ODPOWIEDZI, materialy (ruda/esencja) z walki, a CALA stawka planszy kampanii
+                   jest mnozona przez depthMultiplier - plansza placi w tym samym tempie, w jakim
+                   rosna stojacy na niej wrogowie. Bez tego stawka liczyla sie z numeru FALI (a te
+                   sa najwyzej trzy), wiec plansza 36 wyplacala tyle co plansza 1 i poziom bohatera
+                   nie mial szans nadazyc za krzywa wrogow
+  EndlessMilestones rytm endless: co 10 fal wchodzi JEDEN boss i to on placi skrzynie - losy,
+                   kamien, premia XP - tym wieksze, im glebsza fala. Bez tego endless nie mial
+                   czym placic: kazda jego fala startowala jako BattleKind.Normal, a bossBonus
+                   dla Normal to same zera. Tryb pomyslany jako miejsce do farmienia nie wyplacal
+                   ANI JEDNEGO losa - a sciana, w ktora gracz wchodzi po kampanii na Normalnym,
+                   stoi wlasnie na gwiazdkach kompanow, czyli na duplikatach, czyli na losach
+  BossChest        kolo fortuny ze skrzyni po bossie (jawne szanse). Nalezy sie WYLACZNIE za
+                   pierwsze zdobycie planszy - patrz story/StageRepeats
   QuizBoost, RunPerk                         zbudowane, ale NIC jeszcze ich nie wola (zero
                                               miejsc uzycia w calym repo) - to swiadomy zapas
                                               pod przyszla integracje (boost z quizu przed
@@ -179,7 +240,8 @@ progress/     zakladka Postep: poziom bohatera i rozdawanie punktow, statystyki 
 shop/         sklep za PRAWDZIWA walute (klejnoty). Sprzetu sie tu NIE kupuje - przedmioty
               wykuwa sie w Kuzni, kompanow i zaklecia przyzywa w Summon Center, a materialy
               na jedno i drugie wypadaja wylacznie z walk kampanii/endless
-city/         budynki miasta: tartak, kamieniolom, Kuznia (crafting), Summon Center
+city/         budynki miasta: kamieniolom, Kuznia (crafting), Summon Center - TRZY wyspy
+              na mapie miasta, bo tartak zniknal razem z drewnem (patrz domain/town)
 equipment/    ekwipunek (paper doll)
 fitness/      zakladka fitness (krokomierz/trening przez Health Connect na Androidzie, HealthKit
               na iOS - patrz FitnessTracker.<platforma>.kt)
@@ -246,6 +308,28 @@ notification/
                           nigdy przy starcie gry - zgoda wyproszona w pierwszej sekundzie, bez
                           kontekstu, to najkrotsza droga do odmowy na zawsze
 ```
+
+## :shared - preferencje urzadzenia
+
+```
+prefs/AppPreferences     wszystko, co gracz przestawia w Ustawieniach, a co NIE jest danymi konta:
+                         przypomnienia (glowny wylacznik + kazdy z trzech rodzajow + godzina
+                         wieczornego szturchniecia) i tempo, od ktorego startuje walka.
+                         Zapis przez multiplatform-settings, tak samo jak jezyk (i18n/AppLanguageStore)
+```
+
+Konto (kto jest zalogowany, wylogowanie) idzie osobna sciezka: interfejs `AccountSession`
+w `:domain/repository`, implementacja `FirebaseAccountSession` w `:data`. Osobno od
+`PlayerRepository`, bo to dwie rozne rzeczy - tam POSTEP, tutaj TOZSAMOSC. Wylogowanie czysci
+jeszcze obiekty zyjace tak dlugo jak proces (`RunSession`, `CampaignSelection`) i oddaje decyzje
+`SetupNavGraph` przez `HomeNavGraph(onSignedOut = ...)` - graf Domu ma wlasny NavController
+i sam nie dosiegnie ekranu logowania.
+
+Zasada ekranu Ustawien: **kazde pole w `AppPreferences` ma swojego czytelnika w kodzie gry**.
+Przypomnienia czyta `PlayerViewModel.rescheduleReminders` (plan liczy sie w domenie, Ustawienia sa
+filtrem na koncu), tempo walki - `BattleViewModel` w `init`. Przelacznik, ktorego nikt nie czyta,
+jest gorszy niz jego brak: uczy gracza, ze ustawienia nic nie robia. Nowa preferencja = pole tutaj
++ czytelnik + jedna linijka w `SettingsScreen` (klocki UI stoja obok, w `SettingsUi.kt`).
 
 `isDebugBuild` (shared/BuildInfo.kt) tez jest expect/actual: to on gasi narzedzia deweloperskie
 w buildzie sklepowym. Wczesniej robily to reczne stale `SHOW_DEV_TOOLS` w dwoch plikach i jedyne,

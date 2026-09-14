@@ -11,16 +11,20 @@ package com.lernhero.domain.player
  * ## Skad te konkretne poziomy
  *
  * Progi sa dobrane pod tempo zdobywania XP w kampanii ([com.lernhero.domain.run.RunLoot]:
- * ~8-30 XP za odpowiedz i ~15-25 za fale, czyli grubo licząc **ok. 150 XP za jedno zejscie**
- * trwajace kilka minut). Zestawione z krzywa [LevelCurve] (BASE_XP 120, GROWTH 1.18) daje to:
+ * ~8-30 XP za odpowiedz i ~15-25 za fale). Czasy nizej pochodza z symulacji calej kampanii przy
+ * 75% trafien, na krzywej [LevelCurve] (BASE_XP 70, GROWTH 1.14):
  *
- * | Miejsce | Poziom | XP od zera | Mniej wiecej |
- * |---------|--------|-----------|--------------|
- * | 1       | 1      | 0         | od poczatku  |
- * | 2       | 3      | ~260      | kilka minut  |
- * | 3       | 6      | ~860      | ~20 minut    |
- * | 4       | 10     | ~2300     | ~45 minut    |
- * | 5       | 15     | ~6300     | ~2 godziny   |
+ * | Miejsce | Poziom | Mniej wiecej |
+ * |---------|--------|--------------|
+ * | 1       | 1      | od poczatku  |
+ * | 2       | 3      | ~5 minut     |
+ * | 3       | 7      | ~18 minut    |
+ * | 4       | 12     | ~35 minut    |
+ * | 5       | 20     | ~2 godziny   |
+ *
+ * Poziomy przesunely sie w gore razem z przyspieszona krzywa awansu - te same MINUTY, inne
+ * numerki. Gdyby zostaly stare (3/6/10/15), caly komplet miejsc otwieralby sie w pierwszej
+ * godzinie, czyli zanim gracz mialby czym je zapelnic (losy leca ze skrzyn po bossach).
  *
  * Odstepy celowo rosna: pierwsze miejsce ma przyjsc szybko, zeby gracz od razu zobaczyl, ze system
  * istnieje, a ostatnie ma byc celem na caly pierwszy wieczor. Zmiana krzywej XP przesuwa te czasy,
@@ -34,7 +38,7 @@ object PartySlots {
     /**
      * Poziom bohatera otwierajacy miejsce o danym indeksie. Rosnaco - [unlockedCount] na tym polega.
      */
-    private val UNLOCK_LEVEL = listOf(1, 3, 6, 10, 15)
+    private val UNLOCK_LEVEL = listOf(1, 3, 7, 12, 20)
 
     init {
         require(UNLOCK_LEVEL.size == TOTAL) { "Kazde miejsce musi miec swoj prog" }

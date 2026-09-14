@@ -24,17 +24,28 @@ import com.lernhero.game.battle.component.BossEventQuizBar
 import com.lernhero.game.battle.component.CategoryPickPanel
 import com.lernhero.game.battle.component.EaseOutCubic
 import com.lernhero.game.battle.component.LiveQuizBar
+import com.lernhero.game.battle.component.MasteryDialog
 import com.lernhero.game.battle.component.ResolvingStrip
 import com.lernhero.game.battle.component.BossChargeOverlay
 import com.lernhero.game.battle.component.SCENE_TRANSITION_MS
 import com.lernhero.game.battle.component.UpgradeChoiceDialog
+import androidx.compose.foundation.layout.offset
+import com.lernhero.game.battle.component.QuestionBubble
+import com.lernhero.game.battle.component.QuestionEntrance
+import com.lernhero.shared.resources.Resources
 import com.lernhero.shared.theme.AppPalette
 import org.koin.compose.viewmodel.koinViewModel
 
 /** Ile ekranu zajmuje dol sceny w kazdym ze stanow tury - patrz [BattleScreen]. */
 private const val BOTTOM_FRACTION_INTRO = 0f
 private const val BOTTOM_FRACTION_RESOLVING = 0.22f
-private const val BOTTOM_FRACTION_QUESTION = 0.68f
+
+/**
+ * Quiz. Mniej niz kiedys (0.68), bo ramka z pytaniem nie siedzi juz w panelu - wisi na jego gornej
+ * krawedzi, polowa nad arena (patrz [BattleScreen]). Panel utrzymuje wiec tylko pasek czasu i liste
+ * odpowiedzi, a odzyskana wysokosc dostaje arena.
+ */
+private const val BOTTOM_FRACTION_QUESTION = 0.58f
 
 /**
  * Wybor tematu ([TurnPhase.CategoryPick]) dostaje WYRAZNIE mniej dolu niz quiz - to tylko siatka
@@ -64,8 +75,12 @@ private const val BOTTOM_FRACTION_BOSS_EVENT = 0.46f
  *  3. dopiero potem ruszala druga animacja 0.78f -> 0.32f - czyli trzeci, osobny ruch.
  *
  * Teraz jest jedno zrodlo prawdy: [bottomFraction] plynnie interpoluje miedzy 0f (intro, arena na caly
- * ekran), 0.22f (rozliczanie tury) i 0.68f (pytanie). Arena bierze `weight(1f)`, czyli zawsze DOKLADNIE
+ * ekran), 0.22f (rozliczanie tury) i 0.58f (pytanie). Arena bierze `weight(1f)`, czyli zawsze DOKLADNIE
  * to, co zostalo - nigdy nie ma szczeliny, przez ktora cokolwiek moglo by przeswitywac.
+ *
+ * Ta sama wartosc pozycjonuje ramke z pytaniem, ktora wisi na granicy areny i panelu - polowa nad,
+ * polowa pod. Rysuje sie ja POZA [SceneBottomPanel] (ten przycina do swoich granic), na koncu tego
+ * samego Boxa co cala scena.
  */
 @Composable
 fun BattleScreen(
@@ -110,6 +125,10 @@ fun BattleScreen(
             .background(AppPalette.Background)
     ) {
         val screenHeight = maxHeight
+
+        // Ramka pytania idzie przez CALA szerokosc ekranu (dotyka obu krawedzi), wiec jej wysokosc
+        // wynika wprost z proporcji grafiki - to samo wyliczenie robi w srodku QuestionBubble.
+        val questionFrameHeight = maxWidth / Resources.QuizArt.QUESTION_FRAME_RATIO
 
         Column(modifier = Modifier.fillMaxSize()) {
             // Arena zawsze zajmuje CALA reszte wysokosci - kurczy sie plynnie razem z rosnacym dolem,
@@ -167,6 +186,7 @@ fun BattleScreen(
                             onMultiToggle = viewModel::toggleMultiSelect,
                             onMultiConfirm = viewModel::confirmMultiSelect,
                             onContinue = viewModel::continueQuiz,
+                            questionOverhang = questionFrameHeight / 2,
                             modifier = Modifier.fillMaxSize()
                         )
 
@@ -178,6 +198,37 @@ fun BattleScreen(
                 }
             }
         }
+
+        // Ramka z pytaniem NIE jest czescia dolnego panelu - ten przycina wszystko poza swoimi
+        // granicami ([SceneBottomPanel] i jego clipToBounds), a pytanie ma polowa wisiec nad nim,
+        // na arenie. Dlatego rysuje sie je tutaj, jako ostatnie dziecko tego samego Boxa co cala
+        // scena: nad arena i nad panelem, przez pelna szerokosc ekranu.
+        //
+        // Pozycja jedzie za animowanym [bottomFraction], wiec ramka plynnie wjezdza razem z panelem
+        // zamiast przeskakiwac na miejsce po zakonczeniu animacji.
+        if (state.phase == GamePhase.Battle && state.turnPhase == TurnPhase.Question) {
+            state.quiz?.let { quiz ->
+                QuestionEntrance(questionId = quiz.question.id) {
+                    QuestionBubble(
+                        prompt = quiz.question.prompt,
+                        modifier = Modifier.offset(
+                            y = screenHeight * (1f - bottomFraction) - questionFrameHeight / 2
+                        )
+                    )
+                }
+            }
+        }
+    }
+
+    // Awans tematu - lezy nad scena tak samo jak wybor ulepszenia i tak samo wstrzymuje walke,
+    // dopoki gracz nie zdecyduje, czy wychodzi z sakwa, czy gra dalej.
+    state.masteryOffer?.let { offer ->
+        MasteryDialog(
+            offer = offer,
+            onClaim = viewModel::claimMastery,
+            onPushOn = viewModel::pushOnAfterMastery,
+            modifier = Modifier.fillMaxSize()
+        )
     }
 
     // Wybor ulepszenia (endless) lezy NAD cala scena i blokuje wszystko pod spoda - walka rusza

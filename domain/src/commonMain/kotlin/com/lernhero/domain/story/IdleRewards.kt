@@ -13,7 +13,17 @@ import kotlin.math.roundToInt
  */
 object IdleRewards {
 
-    /** Po tylu godzinach magazyn jest pelny i nic wiecej sie nie zbiera. */
+    /**
+     * Po tylu godzinach magazyn jest pelny i nic wiecej sie nie zbiera.
+     *
+     * **XP z tej kapaczki celowo NIE MA.** Bylo: 12 + 3 na plansze za godzine, czyli po
+     * dwunastu godzinach nieobecnosci 1440 XP na koncu kampanii - i, co gorsza, 360 XP juz po
+     * pierwszej krainie, gdy caly awans kosztowal ich niecale 240. Gracz wracajacy po nocy
+     * dostawal poltora poziomu ZA NIC, w grze, ktora cala opiera sie na tym, ze poziom placi sie
+     * dobra odpowiedzia ([com.lernhero.domain.run.RunLoot]: "XP plynie z NAUKI"). Kapaczka zostaje
+     * tym, czym ma byc - zapasem MATERIALOW, ktory daje powod, zeby zajrzec rano; awans trzeba
+     * odegrac.
+     */
     const val CAP_HOURS = 12f
 
     private const val MILLIS_PER_HOUR = 3_600_000f
@@ -23,7 +33,6 @@ object IdleRewards {
         if (highestClearedStage <= 0) return IdleRate()
         return IdleRate(
             gold = 30f + highestClearedStage * 6f,
-            xp = 12f + highestClearedStage * 3f,
             iron = 2f + highestClearedStage * 0.5f,
             essence = 3f + highestClearedStage * 0.7f
         )
@@ -40,7 +49,6 @@ object IdleRewards {
         val rate = ratePerHour(highestClearedStage)
         return IdleReward(
             gold = (rate.gold * hours).roundToInt(),
-            xp = (rate.xp * hours).roundToInt(),
             iron = (rate.iron * hours).roundToInt(),
             essence = (rate.essence * hours).roundToInt(),
             hoursAccrued = hours
@@ -56,17 +64,15 @@ object IdleRewards {
 
 data class IdleRate(
     val gold: Float = 0f,
-    val xp: Float = 0f,
     val iron: Float = 0f,
     val essence: Float = 0f
 )
 
 data class IdleReward(
     val gold: Int = 0,
-    val xp: Int = 0,
     val iron: Int = 0,
     val essence: Int = 0,
     val hoursAccrued: Float = 0f
 ) {
-    val isEmpty: Boolean get() = gold <= 0 && xp <= 0 && iron <= 0 && essence <= 0
+    val isEmpty: Boolean get() = gold <= 0 && iron <= 0 && essence <= 0
 }

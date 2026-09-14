@@ -80,7 +80,7 @@ object ScienceQuestions {
             id = "swiatlo",
             prompt = "What is the speed of light in a vacuum?",
             correct = "About 186,000 mi/s (300,000 km/s)",
-            wrong = listOf("About 18,600 mi/s", "About 1,860 mi/s", "About 620,000 mi/s"),
+            wrong = listOf("About 18,600 mi/s (30,000 km/s)", "About 1,860 mi/s (3,000 km/s)", "About 620,000 mi/s (1,000,000 km/s)"),
             difficulty = QuizDifficulty.Medium
         ),
         ask(

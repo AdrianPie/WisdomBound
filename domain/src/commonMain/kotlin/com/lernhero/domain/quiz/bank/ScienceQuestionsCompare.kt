@@ -79,7 +79,7 @@ object ScienceQuestionsCompare {
         /* ------------------------------ Matematyka -------------------------------- */
         ask("ktora_pierwsza", "Which of these three-digit numbers is prime?", "101", listOf("111", "121", "141"), QuizCategory.Math, QuizDifficulty.Medium),
         ask("najwiekszy_ulamek", "Which of these fractions is the largest?", "3/4", listOf("2/3", "5/8", "7/12"), QuizCategory.Math, QuizDifficulty.Hard),
-        ask("liczba_niewymierna", "Which of these is an irrational number?", "The square root of 2", listOf("0.5", "3/7", "-4"), QuizCategory.Math, QuizDifficulty.Medium),
+        ask("liczba_niewymierna", "Which of these is an irrational number?", "The square root of 2", listOf("The fraction 3 over 7", "The number 0.5", "Minus four"), QuizCategory.Math, QuizDifficulty.Medium),
         ask("najwiecej_bokow", "Which of these shapes has the most sides?", "An octagon", listOf("A triangle", "A pentagon", "A hexagon"), QuizCategory.Math, QuizDifficulty.Easy),
         ask("najwieksza_potega", "Which of these is the largest?", "2 to the power of 10", listOf("10 cubed", "5 to the power of 4", "3 to the power of 6"), QuizCategory.Math, QuizDifficulty.Hard),
         ask("kat_rozwarty", "Which of these angles is obtuse?", "120 degrees", listOf("45 degrees", "90 degrees", "30 degrees"), QuizCategory.Math, QuizDifficulty.Easy),

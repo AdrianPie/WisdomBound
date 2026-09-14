@@ -419,12 +419,11 @@ private fun TopBar(onBack: () -> Unit) {
 }
 
 @Composable
-private fun ResourceStrip(wood: Int, stone: Int, iron: Int, gold: Int) {
+private fun ResourceStrip(stone: Int, iron: Int, gold: Int) {
     Row(
         modifier = Modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.spacedBy(6.dp)
     ) {
-        ResourcePill(icon = "🪵", amount = short(wood), modifier = Modifier.weight(1f))
         ResourcePill(icon = "🪨", amount = short(stone), modifier = Modifier.weight(1f))
         ResourcePill(icon = "⚙", amount = short(iron), modifier = Modifier.weight(1f))
         ResourcePill(icon = "💰", amount = short(gold), modifier = Modifier.weight(1f))

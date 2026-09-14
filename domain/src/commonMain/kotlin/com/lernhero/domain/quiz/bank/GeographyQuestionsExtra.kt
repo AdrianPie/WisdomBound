@@ -63,7 +63,7 @@ object GeographyQuestionsExtra {
         /* ----------------------------- Expert ---------------------------- */
         ask("panstwo_bez_dostepu", "Which country is Europe's only doubly landlocked state?", "Liechtenstein", listOf("Switzerland", "Austria", "Andorra"), QuizDifficulty.Expert),
         ask("najwiekszy_ladolod", "Where is the world's largest ice sheet?", "Antarctica", listOf("Greenland", "Alaska", "The Himalayas"), QuizDifficulty.Expert),
-        ask("nunatak", "What is a nunatak?", "A rocky peak protruding above a glacier", listOf("A fjord bay", "A desert dune", "A glacial lake"), QuizDifficulty.Expert),
+        ask("nunatak", "What is a nunatak?", "A rocky peak protruding above a glacier", listOf("A narrow bay cut into a fjord coast", "A crescent dune moved by desert wind", "A lake left behind by a glacier"), QuizDifficulty.Expert),
         ask("kaldera_toba", "Where is Lake Toba, formed by a giant caldera?", "On Sumatra", listOf("On Java", "In Japan", "In New Zealand"), QuizDifficulty.Expert),
         ask("rzeka_kongo", "Which river is the deepest in the world?", "The Congo", listOf("The Amazon", "The Yangtze", "The Mississippi"), QuizDifficulty.Expert),
         ask("caspian_status", "Why is the status of the Caspian Sea disputed?", "It's hard to decide whether it's a sea or a lake", listOf("It spans three continents", "Its level changes by 100 m every year", "It has no permanent shoreline"), QuizDifficulty.Expert),

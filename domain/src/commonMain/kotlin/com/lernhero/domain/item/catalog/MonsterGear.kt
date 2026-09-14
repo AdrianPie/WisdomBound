@@ -5,6 +5,7 @@ import com.lernhero.domain.combat.Stats
 import com.lernhero.domain.common.Rarity
 import com.lernhero.domain.item.Item
 import com.lernhero.domain.item.ItemSlot
+import com.lernhero.domain.monster.CompanionPower
 import com.lernhero.domain.monster.Element
 
 /**
@@ -21,6 +22,26 @@ import com.lernhero.domain.monster.Element
  *
  * Kompani uzywaja SZESCIU slotow (pazur, pancerz, helm, buty, amulet, pierscien) - reszta slotow
  * bohatera nie ma dla nich sensu i celowo zostaje pusta.
+ *
+ * ## W jakiej skali sa te liczby
+ *
+ * W skali WALKI, czyli tej samej co statystyki bohatera - patrz [CompanionPower]. Karta kompana
+ * w katalogu jest opisana "malymi" liczbami (55-100 HP), ale do walki wchodzi przemnozona; sprzet
+ * dolicza sie juz PO tym przeskalowaniu. Pancerz +84 HP to wiec +40% na kompanie majacym 210 HP,
+ * a nie +120% na karcie majacej 70.
+ *
+ * ## Dlaczego liczby sa o 30% nizsze, niz byly
+ *
+ * Bo sprzetu kompanow jest SZESC slotow razy PIECIU kompanow - trzydziesci sztuk przeciwko
+ * dziewieciu u bohatera. Przy pierwotnych wartosciach pelny sprzet druzyny dawal +102% HP i +64%
+ * ataku, przy +24%/+14% z calego kompletu bohatera podniesionego na +10. Cztery razy wiecej za
+ * piec razy wiekszy koszt to prawie proporcja, ale sprzet bohatera przestawalby byc pierwszym
+ * wyborem. Po przycieciu wychodzi ok. +71%/+45%, czyli **trzy razy komplet bohatera za piec razy
+ * wiekszy koszt** - kompani zostaja najwiekszym pojedynczym systemem w grze (i maja nim byc, bo
+ * sa najdrozsi), ale kuje sie najpierw dla bohatera.
+ *
+ * Na sama kampanie nie ma to wplywu: ogranicznikiem jest tam RUDA, nie sila przedmiotu. Do konca
+ * Normalnego starcza jej na komplet Common dla bohatera i sprzet dla dwoch kompanow z pieciu.
  */
 object MonsterGear {
 
@@ -87,7 +108,7 @@ object MonsterGear {
         slot = ItemSlot.MainHand,
         rarity = Rarity.Common,
         iconKey = "claw",
-        stats = Stats.of(StatType.Attack to 4f),
+        stats = Stats.of(StatType.Attack to 3f),
         cost = 90,
         element = Element.Death
     )
@@ -99,7 +120,7 @@ object MonsterGear {
         slot = ItemSlot.MainHand,
         rarity = Rarity.Uncommon,
         iconKey = "fang",
-        stats = Stats.of(StatType.Attack to 6f, StatType.CritChance to 0.03f),
+        stats = Stats.of(StatType.Attack to 4f, StatType.CritChance to 0.03f),
         cost = 180,
         element = Element.Fire
     )
@@ -111,7 +132,7 @@ object MonsterGear {
         slot = ItemSlot.MainHand,
         rarity = Rarity.Rare,
         iconKey = "spine",
-        stats = Stats.of(StatType.Attack to 8f, StatType.Speed to 3f),
+        stats = Stats.of(StatType.Attack to 6f, StatType.Speed to 3f),
         cost = 320,
         element = Element.Water
     )
@@ -123,7 +144,7 @@ object MonsterGear {
         slot = ItemSlot.MainHand,
         rarity = Rarity.Rare,
         iconKey = "lash",
-        stats = Stats.of(StatType.Attack to 7f, StatType.Lifesteal to 0.05f),
+        stats = Stats.of(StatType.Attack to 5f, StatType.Lifesteal to 0.05f),
         cost = 300,
         element = Element.Nature
     )
@@ -137,7 +158,7 @@ object MonsterGear {
         slot = ItemSlot.Chest,
         rarity = Rarity.Common,
         iconKey = "hide",
-        stats = Stats.of(StatType.MaxHp to 25f),
+        stats = Stats.of(StatType.MaxHp to 18f),
         cost = 100
     )
 
@@ -148,7 +169,7 @@ object MonsterGear {
         slot = ItemSlot.Chest,
         rarity = Rarity.Uncommon,
         iconKey = "chitin",
-        stats = Stats.of(StatType.MaxHp to 45f, StatType.DamageReduction to 0.03f),
+        stats = Stats.of(StatType.MaxHp to 31f, StatType.DamageReduction to 0.03f),
         cost = 210,
         element = Element.Nature
     )
@@ -160,7 +181,7 @@ object MonsterGear {
         slot = ItemSlot.Chest,
         rarity = Rarity.Rare,
         iconKey = "shroud",
-        stats = Stats.of(StatType.MaxHp to 60f, StatType.Lifesteal to 0.04f),
+        stats = Stats.of(StatType.MaxHp to 42f, StatType.Lifesteal to 0.04f),
         cost = 340,
         element = Element.Death
     )
@@ -174,7 +195,7 @@ object MonsterGear {
         slot = ItemSlot.Head,
         rarity = Rarity.Common,
         iconKey = "horns",
-        stats = Stats.of(StatType.MaxHp to 18f, StatType.Attack to 2f),
+        stats = Stats.of(StatType.MaxHp to 13f, StatType.Attack to 1f),
         cost = 95
     )
 
@@ -185,7 +206,7 @@ object MonsterGear {
         slot = ItemSlot.Head,
         rarity = Rarity.Uncommon,
         iconKey = "mask",
-        stats = Stats.of(StatType.Attack to 5f, StatType.CritDamage to 0.10f),
+        stats = Stats.of(StatType.Attack to 4f, StatType.CritDamage to 0.10f),
         cost = 200,
         element = Element.Fire
     )
@@ -222,7 +243,7 @@ object MonsterGear {
         slot = ItemSlot.Amulet,
         rarity = Rarity.Uncommon,
         iconKey = "totem",
-        stats = Stats.of(StatType.SpellPower to 0.08f, StatType.MaxHp to 20f),
+        stats = Stats.of(StatType.SpellPower to 0.08f, StatType.MaxHp to 14f),
         cost = 230
     )
 
@@ -233,7 +254,7 @@ object MonsterGear {
         slot = ItemSlot.Amulet,
         rarity = Rarity.Rare,
         iconKey = "pearl",
-        stats = Stats.of(StatType.HealPower to 0.15f, StatType.MaxHp to 35f),
+        stats = Stats.of(StatType.HealPower to 0.15f, StatType.MaxHp to 24f),
         cost = 360,
         element = Element.Water
     )
@@ -245,7 +266,7 @@ object MonsterGear {
         slot = ItemSlot.Ring,
         rarity = Rarity.Rare,
         iconKey = "band",
-        stats = Stats.of(StatType.Lifesteal to 0.06f, StatType.Attack to 3f),
+        stats = Stats.of(StatType.Lifesteal to 0.06f, StatType.Attack to 2f),
         cost = 330,
         element = Element.Death
     )
@@ -257,7 +278,7 @@ object MonsterGear {
         slot = ItemSlot.Ring,
         rarity = Rarity.Uncommon,
         iconKey = "seed",
-        stats = Stats.of(StatType.MaxHp to 30f, StatType.HealPower to 0.10f),
+        stats = Stats.of(StatType.MaxHp to 21f, StatType.HealPower to 0.10f),
         cost = 205,
         element = Element.Nature
     )
@@ -277,7 +298,7 @@ object MonsterGear {
         slot = ItemSlot.MainHand,
         rarity = Rarity.Epic,
         iconKey = "talon",
-        stats = Stats.of(StatType.Attack to 11f, StatType.CritChance to 0.05f),
+        stats = Stats.of(StatType.Attack to 8f, StatType.CritChance to 0.05f),
         cost = 460,
         element = Element.Fire
     )
@@ -289,7 +310,7 @@ object MonsterGear {
         slot = ItemSlot.MainHand,
         rarity = Rarity.Epic,
         iconKey = "hook",
-        stats = Stats.of(StatType.Attack to 10f, StatType.Lifesteal to 0.08f),
+        stats = Stats.of(StatType.Attack to 7f, StatType.Lifesteal to 0.08f),
         cost = 450,
         element = Element.Water
     )
@@ -301,7 +322,7 @@ object MonsterGear {
         slot = ItemSlot.Chest,
         rarity = Rarity.Epic,
         iconKey = "bark",
-        stats = Stats.of(StatType.MaxHp to 85f, StatType.DamageReduction to 0.06f),
+        stats = Stats.of(StatType.MaxHp to 59f, StatType.DamageReduction to 0.06f),
         cost = 480,
         element = Element.Nature
     )
@@ -313,7 +334,7 @@ object MonsterGear {
         slot = ItemSlot.Head,
         rarity = Rarity.Epic,
         iconKey = "helm",
-        stats = Stats.of(StatType.Attack to 8f, StatType.MaxHp to 40f),
+        stats = Stats.of(StatType.Attack to 6f, StatType.MaxHp to 28f),
         cost = 440,
         element = Element.Death
     )
@@ -336,7 +357,7 @@ object MonsterGear {
         slot = ItemSlot.Amulet,
         rarity = Rarity.Epic,
         iconKey = "charm",
-        stats = Stats.of(StatType.SpellPower to 0.18f, StatType.Attack to 6f),
+        stats = Stats.of(StatType.SpellPower to 0.18f, StatType.Attack to 4f),
         cost = 455,
         element = Element.Fire
     )
@@ -348,7 +369,7 @@ object MonsterGear {
         slot = ItemSlot.Ring,
         rarity = Rarity.Epic,
         iconKey = "ring",
-        stats = Stats.of(StatType.MaxHp to 55f, StatType.DamageReduction to 0.05f),
+        stats = Stats.of(StatType.MaxHp to 38f, StatType.DamageReduction to 0.05f),
         cost = 430,
         element = Element.Nature
     )
@@ -363,7 +384,7 @@ object MonsterGear {
         rarity = Rarity.Legendary,
         iconKey = "maw",
         stats = Stats.of(
-            StatType.Attack to 16f,
+            StatType.Attack to 11f,
             StatType.CritChance to 0.08f,
             StatType.CritDamage to 0.15f
         ),
@@ -377,7 +398,7 @@ object MonsterGear {
         slot = ItemSlot.Chest,
         rarity = Rarity.Legendary,
         iconKey = "plate",
-        stats = Stats.of(StatType.MaxHp to 120f, StatType.DamageReduction to 0.10f),
+        stats = Stats.of(StatType.MaxHp to 84f, StatType.DamageReduction to 0.10f),
         cost = 740
     )
 
@@ -388,7 +409,7 @@ object MonsterGear {
         slot = ItemSlot.Head,
         rarity = Rarity.Legendary,
         iconKey = "crown",
-        stats = Stats.of(StatType.MaxHp to 65f, StatType.HealPower to 0.25f, StatType.Attack to 7f),
+        stats = Stats.of(StatType.MaxHp to 46f, StatType.HealPower to 0.25f, StatType.Attack to 5f),
         cost = 690,
         element = Element.Water
     )
@@ -400,7 +421,7 @@ object MonsterGear {
         slot = ItemSlot.Ring,
         rarity = Rarity.Legendary,
         iconKey = "ring",
-        stats = Stats.of(StatType.Lifesteal to 0.14f, StatType.Attack to 8f),
+        stats = Stats.of(StatType.Lifesteal to 0.14f, StatType.Attack to 6f),
         cost = 710,
         element = Element.Death
     )
@@ -415,7 +436,7 @@ object MonsterGear {
         stats = Stats.of(
             StatType.SpellPower to 0.28f,
             StatType.HealPower to 0.2f,
-            StatType.MaxHp to 60f
+            StatType.MaxHp to 42f
         ),
         cost = 730
     )
@@ -427,7 +448,7 @@ object MonsterGear {
         slot = ItemSlot.Feet,
         rarity = Rarity.Legendary,
         iconKey = "claws",
-        stats = Stats.of(StatType.Speed to 20f, StatType.Dodge to 0.1f, StatType.Attack to 5f),
+        stats = Stats.of(StatType.Speed to 20f, StatType.Dodge to 0.1f, StatType.Attack to 4f),
         cost = 680
     )
 

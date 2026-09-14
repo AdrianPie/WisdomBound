@@ -33,7 +33,7 @@ object SportQuestionsWorld {
     val all: List<QuizEntry> = listOf(
 
         /* ------------------------------- Easy ------------------------------- */
-        ask("spalony_zasada", "In football, a player is offside if, when the ball is played, they are...", "Nearer the goal line than the ball and the second-last defender", listOf("Inside the penalty area", "Behind the halfway line", "In front of the goalkeeper"), QuizDifficulty.Easy),
+        ask("spalony_zasada", "In football, a player is offside if, when the ball is played, they are...", "Nearer the goal line than the ball and the second-last defender", listOf("Standing anywhere inside the opposing penalty area", "Standing behind the halfway line of the pitch", "Standing directly in front of the goalkeeper"), QuizDifficulty.Easy),
         ask("hat_trick", "What is a 'hat-trick' in football?", "Three goals by one player in a match", listOf("Three saves in a row", "Three matches without conceding", "Three yellow cards"), QuizDifficulty.Easy),
         ask("nba_kosz_punkty", "How many points is a free throw worth in basketball?", "One", listOf("Two", "Three", "Half a point"), QuizDifficulty.Easy),
         ask("tenis_set_gemy", "How many games do you normally need to win a set in tennis?", "Six, with a two-game lead", listOf("Five, with any lead", "Seven, always", "Four, with a two-game lead"), QuizDifficulty.Easy),
@@ -43,7 +43,7 @@ object SportQuestionsWorld {
         ask("tie_break", "In tennis, when is a tie-break usually played?", "At 6-6 in a set", listOf("At 5-5 in a set", "After every set", "Only in the final set"), QuizDifficulty.Medium),
         ask("nba_faul", "How many personal fouls foul a player out of an NBA game?", "Six", listOf("Four", "Five", "Seven"), QuizDifficulty.Medium),
         ask("rugby_punkty_drop", "How many points is a drop goal worth in rugby union?", "Three", listOf("Two", "Five", "One"), QuizDifficulty.Medium),
-        ask("golf_par", "What does 'par' mean on a golf hole?", "The number of strokes a good player is expected to take", listOf("The record for that hole", "The number of players in a group", "The distance in hundreds of metres"), QuizDifficulty.Medium),
+        ask("golf_par", "What does 'par' mean on a golf hole?", "The number of strokes a good player is expected to take", listOf("The lowest score ever recorded on that hole", "The number of players allowed in one group", "The length of the hole in hundreds of metres"), QuizDifficulty.Medium),
         ask("kolarstwo_peleton", "What is the main group of riders in a road race called?", "The peloton", listOf("The breakaway", "The domestique", "The prologue"), QuizDifficulty.Medium),
         ask("plywanie_delfin", "Which swimming stroke requires both arms to move together over the water?", "Butterfly", listOf("Front crawl", "Backstroke", "Breaststroke"), QuizDifficulty.Medium),
         ask("boks_rundy", "How many rounds does a modern world title boxing fight last at most?", "Twelve", listOf("Ten", "Fifteen", "Eight"), QuizDifficulty.Medium),
@@ -53,12 +53,12 @@ object SportQuestionsWorld {
 
         /* ------------------------------- Hard ------------------------------- */
         ask("krykiet_test", "How many days can a cricket Test match last?", "Five", listOf("Three", "One", "Seven"), QuizDifficulty.Hard),
-        ask("f1_drs", "What does DRS do in Formula 1?", "Opens the rear wing to cut drag and help overtaking", listOf("Cools the brakes", "Limits fuel flow", "Boosts the engine electrically"), QuizDifficulty.Hard),
-        ask("sumo_zwyciestwo", "How does a sumo wrestler win a bout?", "By forcing the opponent out of the ring or down onto the ground", listOf("By pinning both shoulders", "On points after three rounds", "By lifting the opponent overhead"), QuizDifficulty.Hard),
+        ask("f1_drs", "What does DRS do in Formula 1?", "Opens the rear wing to cut drag and help overtaking", listOf("Forces cool air over the brakes on long straights", "Limits how much fuel reaches the engine", "Adds a burst of power from the battery"), QuizDifficulty.Hard),
+        ask("sumo_zwyciestwo", "How does a sumo wrestler win a bout?", "By forcing the opponent out of the ring or down onto the ground", listOf("By pinning both of the opponent's shoulders to the floor", "On points awarded by judges after three rounds", "By lifting the opponent clear above the head"), QuizDifficulty.Hard),
         ask("maraton_kobiet_pierwszy", "At which Olympics did women first run the marathon?", "Los Angeles 1984", listOf("Munich 1972", "Montreal 1976", "Seoul 1988"), QuizDifficulty.Hard),
         ask("triathlon_ironman", "How long is the run in a full Ironman triathlon?", "A full marathon, 42.2 km", listOf("A half marathon", "10 km", "21 km"), QuizDifficulty.Hard),
-        ask("nba_triple_double", "What is a 'triple-double' in basketball?", "Double figures in three statistical categories in one game", listOf("Three double-doubles in a row", "Doubling the score three times", "Three overtime periods"), QuizDifficulty.Hard),
-        ask("szachy_roszada", "In chess, what does castling move?", "The king and one rook, in a single move", listOf("The king and the queen", "Two pawns at once", "A rook and a knight"), QuizDifficulty.Hard),
+        ask("nba_triple_double", "What is a 'triple-double' in basketball?", "Double figures in three statistical categories in one game", listOf("Three double-doubles in three straight games", "Doubling your own score three times over", "Three periods of overtime in one match"), QuizDifficulty.Hard),
+        ask("szachy_roszada", "In chess, what does castling move?", "The king and one rook, in a single move", listOf("The king and the queen, side by side", "Two pawns moved on the same turn", "A rook and a knight, swapping places"), QuizDifficulty.Hard),
         ask("tour_koszulka_biala", "In the Tour de France, who wears the white jersey?", "The best young rider", listOf("The best sprinter", "The best climber", "The last rider overall"), QuizDifficulty.Hard),
 
         /* ------------------------------ Expert ------------------------------ */

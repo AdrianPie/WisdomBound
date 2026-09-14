@@ -71,13 +71,14 @@ sealed class Screen {
     @Serializable
     data class DeckEditor(val deckId: String, val startWithAi: Boolean = false) : Screen()
 
-    /** Ustawienia urzadzenia (jezyk itp.) - wchodzi sie z zebatki obok karty postaci na Domu. */
+    /**
+     * Ustawienia: jezyk, przypomnienia, tempo walki i konto (z wylogowaniem wlacznie) - wchodzi
+     * sie z zebatki obok karty postaci na Domu.
+     */
     @Serializable
     data object Settings : Screen()
 
     /* -- Budynki Miasta (ekran Dom) - kazda wyspa to osobna "instancja", patrz HomeScreen. -- */
-    @Serializable
-    data object Sawmill : Screen()
     @Serializable
     data object Quarry : Screen()
     @Serializable

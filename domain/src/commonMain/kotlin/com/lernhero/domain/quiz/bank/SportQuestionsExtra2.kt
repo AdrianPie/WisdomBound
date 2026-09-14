@@ -34,8 +34,8 @@ object SportQuestionsExtra2 {
         /* ------------------------------ Medium ------------------------------ */
         ask("triathlon_dyscypliny", "What three disciplines make up a triathlon?", "Swimming, cycling and running", listOf("Running, jumping and throwing", "Swimming, climbing and running", "Cycling, wrestling and shooting"), QuizDifficulty.Medium),
         ask("biathlon_dyscypliny", "What two disciplines make up biathlon?", "Cross-country skiing and shooting", listOf("Running and swimming", "Skiing and jumping", "Skating and shooting"), QuizDifficulty.Medium),
-        ask("curling_cel", "What is the goal of curling?", "Placing a stone as close as possible to the target's center on the ice", listOf("Knocking down all the pins", "Getting a puck into a goal", "Running the farthest"), QuizDifficulty.Medium),
-        ask("squash_gra_gdzie", "Where is a squash match played?", "In an enclosed room with four walls", listOf("On an open court", "On ice", "In a pool"), QuizDifficulty.Medium),
+        ask("curling_cel", "What is the goal of curling?", "Placing a stone as close as possible to the target's center on the ice", listOf("Knocking over as many pins as you can at the far end of the lane", "Getting the puck into the goal more often than the other side", "Covering more distance than anyone else in the time given"), QuizDifficulty.Medium),
+        ask("squash_gra_gdzie", "Where is a squash match played?", "In an enclosed room with four walls", listOf("On an open court with a net", "On a rink of prepared ice", "In a pool of set length"), QuizDifficulty.Medium),
         ask("bilard_ile_bil", "How many balls (cue ball included) are used in classic American pool (8-ball)?", "16", listOf("10", "12", "20"), QuizDifficulty.Medium),
         ask("olimpiada_letnia_dyscyplin", "Which of these disciplines is NOT held at the Summer Olympics?", "Cross-country skiing", listOf("Swimming", "Track and field", "Judo"), QuizDifficulty.Medium),
         ask("hokej_krazek", "What is a hockey puck made of?", "Vulcanized rubber", listOf("Metal", "Wood", "Bone"), QuizDifficulty.Medium),

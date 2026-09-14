@@ -17,7 +17,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -29,7 +29,6 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -42,13 +41,20 @@ import androidx.compose.runtime.withFrameMillis
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.BlendMode
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.graphics.lerp
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.lernhero.shared.resources.Resources
+import org.jetbrains.compose.resources.painterResource
 import com.lernhero.domain.combat.live.AnswerTimer
 import com.lernhero.domain.combat.live.StreakTracker
 import com.lernhero.game.battle.BattleSpeed
@@ -88,20 +94,25 @@ internal val PanelBg = Color(0xFFF3E8D4)
 internal val PanelBorder = Color(0xFFC8A45A)
 internal val InkStrong = Color(0xFF2A1D12)
 internal val InkMuted = Color(0xFF8A7859)
-internal val BubbleBg = Color(0xFF241A2E)
-internal val BubbleText = Color(0xFFF6EEDD)
 
 /** Ksztalt panelu i "kutej", zlotej ramki wokol niego - dwie warstwy zlota daja wrazenie ozdobnej oprawy. */
 internal val PanelShape = RoundedCornerShape(topStart = 24.dp, topEnd = 24.dp)
 internal val PanelGradient = Brush.verticalGradient(listOf(Color(0xFFFAF1DE), PanelBg))
 internal val FrameGradient = Brush.verticalGradient(listOf(Color(0xFFFFE9A8), PanelBorder, Color(0xFF8A6B34)))
 
-/** Kolory ponumerowanych krazkow przy odpowiedziach - stale przypisanie do pozycji 1-4, jak w grach z quizami. */
+/**
+ * Kolory ponumerowanych krazkow przy odpowiedziach - stale przypisanie do pozycji, jak w grach z
+ * quizami. Ta sama barwa idzie tez w kamienie na ramce dymka (patrz [QuizOptionTile]), wiec numer i
+ * jego dymek zawsze "swieca" tym samym kolorem. Szesc pozycji, bo wielokrotny wybor potrafi miec
+ * 6-7 opcji - przy krotszej liscie kolory zaczelyby sie powtarzac.
+ */
 private val OptionColors = listOf(
     Color(0xFF8B5CF6), // 1/A - fiolet
     Color(0xFF22A55E), // 2/B - zielen
     Color(0xFF2F8FE0), // 3/C - blekit
-    Color(0xFFE08A2F) // 4/D - pomarancz
+    Color(0xFFE08A2F), // 4/D - pomarancz
+    Color(0xFFE0487A), // 5/E - malina
+    Color(0xFF16B8A6) // 6/F - turkus
 )
 
 /**
@@ -124,6 +135,7 @@ fun LiveQuizBar(
     onMultiToggle: (String) -> Unit,
     onMultiConfirm: () -> Unit,
     onContinue: () -> Unit,
+    questionOverhang: Dp,
     modifier: Modifier = Modifier
 ) {
     val quiz = state.quiz ?: return
@@ -153,7 +165,11 @@ fun LiveQuizBar(
             Column(
                 modifier = Modifier
                     .fillMaxSize()
-                    .padding(horizontal = 16.dp, vertical = 10.dp),
+                    // Dolna polowa ramki pytania nachodzi na gore panelu (rysuje ja BattleScreen,
+                    // poza tym kontenerem) - to wciecie chroni tresc przed wejsciem pod nia.
+                    .padding(top = questionOverhang + 10.dp)
+                    .padding(horizontal = 16.dp)
+                    .padding(bottom = 10.dp),
                 verticalArrangement = Arrangement.spacedBy(8.dp)
             ) {
                 // Pytanie i odpowiedzi przewijaja sie RAZEM, w obszarze o zmiennej wysokosci
@@ -171,11 +187,9 @@ fun LiveQuizBar(
                         SequenceProgressRow(question = question, orderedSelection = quiz.orderedSelection)
                     }
 
+                    // Pasek czasu idzie POD pytaniem, ktore wisi nad panelem - stad jest tu
+                    // pierwszy, a samego pytania juz w tej kolumnie nie ma.
                     AnswerCountdownBar(questionId = question.id, revealed = quiz.revealed)
-
-                    QuestionEntrance(questionId = question.id) {
-                        QuestionBubble(prompt = question.prompt)
-                    }
 
                     if (question is MultipleChoiceQuestion) {
                         question.flag?.let { flag ->
@@ -209,8 +223,15 @@ fun LiveQuizBar(
 
                     // Odpowiedzi. Najpierw na miejsce trafia pytanie ([QUESTION_LEAD_MILLIS]), dopiero
                     // potem wjezdzaja z boku kolejne odpowiedzi - kazda o [TILE_STAGGER_MILLIS] pozniej.
+                    // Ciemna podkladka pod cala lista: jasne dymki odpowiedzi na jasnym panelu
+                    // zlewaly sie w jedno pole, a na ciemnym tle kazdy z nich wyrazne "stoi" osobno.
                     Column(
-                        modifier = Modifier.fillMaxWidth().padding(top = 2.dp),
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(top = 2.dp)
+                            .clip(AnswerListShape)
+                            .background(AnswerListBg)
+                            .padding(horizontal = 10.dp, vertical = 12.dp),
                         verticalArrangement = Arrangement.spacedBy(10.dp)
                     ) {
                         var visibleCount by remember(question.id) { mutableStateOf(0) }
@@ -285,51 +306,34 @@ fun LiveQuizBar(
                             // nie rozstrzyga sie samo: gracz przelacza dowolna liczbe opcji i dopiero
                             // ZATWIERDZ konczy ture. Po odsłonieciu widac komplet - co bylo poprawne,
                             // co gracz przeoczyl i co zaznaczyl niepotrzebnie.
-                            // Wielokrotny wybor potrafi miec 6-7 opcji - w jednej kolumnie same kafle
-                            // sa wyzsze niz caly panel. Dwie kolumny polowia te wysokosc, a etykiety
-                            // przy tym typie pytania sa krotkie (pojedyncze nazwy), wiec sie miesza.
-                            is MultiSelectQuestion -> question.options
-                                .withIndex()
-                                .chunked(if (question.options.size > MULTI_SELECT_SINGLE_COLUMN_MAX) 2 else 1)
-                                .forEach { rowOptions ->
-                                    Row(
-                                        modifier = Modifier.fillMaxWidth(),
-                                        horizontalArrangement = Arrangement.spacedBy(8.dp)
-                                    ) {
-                                        rowOptions.forEach { (index, option) ->
-                                            AnimatedVisibility(
-                                                visible = index < visibleCount,
-                                                enter = fadeIn(tween(TILE_ENTER_MILLIS, easing = EaseOutCubic)) +
-                                                    slideInHorizontally(
-                                                        animationSpec = tween(TILE_ENTER_MILLIS, easing = EaseOutCubic)
-                                                    ) { fullWidth -> fullWidth / 2 },
-                                                modifier = Modifier.weight(1f)
-                                            ) {
-                                                val picked = option.id in quiz.multiSelection
-                                                val visual = when {
-                                                    !quiz.revealed -> if (picked) OptionVisual.SELECTED else OptionVisual.IDLE
-                                                    option.isCorrect -> OptionVisual.CORRECT
-                                                    picked -> OptionVisual.WRONG
-                                                    else -> OptionVisual.FADED
-                                                }
-                                                QuizOptionTile(
-                                                    label = if (picked) "✔" else itemLabel(index),
-                                                    badgeColor = OptionColors[index % OptionColors.size],
-                                                    text = option.text,
-                                                    visual = visual,
-                                                    enabled = !quiz.revealed,
-                                                    onClick = { onMultiToggle(option.id) },
-                                                    modifier = Modifier.fillMaxWidth().heightIn(min = MULTI_SELECT_TILE_MIN)
-                                                )
-                                            }
-                                        }
-                                        // Nieparzysta liczba opcji - ostatni kafel zostaje tej samej
-                                        // szerokosci co reszta, zamiast rozciagac sie na caly rzad.
-                                        if (rowOptions.size == 1 && question.options.size > MULTI_SELECT_SINGLE_COLUMN_MAX) {
-                                            Spacer(modifier = Modifier.weight(1f))
-                                        }
+                            // Jedna kolumna pelnej szerokosci, jak przy pozostalych typach - przy
+                            // 6-7 opcjach lista wychodzi poza panel, ale panel i tak sie przewija.
+                            is MultiSelectQuestion -> question.options.forEachIndexed { index, option ->
+                                AnimatedVisibility(
+                                    visible = index < visibleCount,
+                                    enter = fadeIn(tween(TILE_ENTER_MILLIS, easing = EaseOutCubic)) +
+                                        slideInHorizontally(
+                                            animationSpec = tween(TILE_ENTER_MILLIS, easing = EaseOutCubic)
+                                        ) { fullWidth -> fullWidth / 2 }
+                                ) {
+                                    val picked = option.id in quiz.multiSelection
+                                    val visual = when {
+                                        !quiz.revealed -> if (picked) OptionVisual.SELECTED else OptionVisual.IDLE
+                                        option.isCorrect -> OptionVisual.CORRECT
+                                        picked -> OptionVisual.WRONG
+                                        else -> OptionVisual.FADED
                                     }
+                                    QuizOptionTile(
+                                        label = if (picked) "✔" else itemLabel(index),
+                                        badgeColor = OptionColors[index % OptionColors.size],
+                                        text = option.text,
+                                        visual = visual,
+                                        enabled = !quiz.revealed,
+                                        onClick = { onMultiToggle(option.id) },
+                                        modifier = Modifier.fillMaxWidth()
+                                    )
                                 }
+                            }
                         }
                     }
                 }
@@ -358,6 +362,10 @@ fun LiveQuizBar(
 
 /** Ile miejsca u gory zlotego panelu jest zarezerwowane pod pasek streaka - patrz [LiveQuizBar]. */
 private val STREAK_ROW_GAP = 20.dp
+
+/** Ciemna podkladka pod lista odpowiedzi - uzasadnienie przy jej uzyciu w [LiveQuizBar]. */
+private val AnswerListBg = Color(0xFF3A2A1C)
+private val AnswerListShape = RoundedCornerShape(18.dp)
 
 /** Litera przypisana do elementu ukladanki wedlug jego miejsca w wyswietlonej (przetasowanej) liscie - A, B, C, D... */
 private fun itemLabel(displayIndex: Int): String = ('A' + displayIndex).toString()
@@ -401,7 +409,7 @@ private fun MultiSelectConfirm(pickedCount: Int, enabled: Boolean, onConfirm: ()
  * po nim, patrz [QUESTION_LEAD_MILLIS]). Odtwarzane raz na kazde nowe [questionId].
  */
 @Composable
-private fun QuestionEntrance(questionId: String, content: @Composable () -> Unit) {
+internal fun QuestionEntrance(questionId: String, content: @Composable () -> Unit) {
     val visibleState = remember(questionId) { MutableTransitionState(false).apply { targetState = true } }
     AnimatedVisibility(
         visibleState = visibleState,
@@ -418,42 +426,51 @@ private fun QuestionEntrance(questionId: String, content: @Composable () -> Unit
     }
 }
 
-/** Dymek pytania - ciemna, kontrastowa "karteczka" nad odpowiedziami, jak w grze z reference. */
+/**
+ * Ramka z pytaniem - jedna gotowa grafika ([Resources.QuizArt.questionFrame]) z wpisanym w nia
+ * tekstem, na calej dostepnej szerokosci panelu.
+ *
+ * Wysokosc wynika z proporcji grafiki (`aspectRatio`), a nie z dlugosci pytania. Daje to dwie
+ * rzeczy naraz: zdobienia nigdy sie nie deformuja, a blok pytania ma stala wysokosc - inaczej
+ * rosnacy dymek przepychalby odpowiedzi w gore i w dol przy kazdej zmianie pytania, a te wjezdzaja
+ * animacja i klika sie w nie na czas.
+ */
 @Composable
 internal fun QuestionBubble(prompt: String, modifier: Modifier = Modifier) {
-    Column(modifier = modifier.fillMaxWidth()) {
-        Box(
-            modifier = Modifier
-                .fillMaxWidth()
-                .clip(RoundedCornerShape(18.dp))
-                .background(BubbleBg)
-        ) {
-            Text(
-                text = prompt,
-                color = BubbleText,
-                fontFamily = FontFirst(),
-                style = MaterialTheme.typography.titleMedium,
-                fontWeight = FontWeight.Bold,
-                modifier = Modifier.padding(horizontal = 16.dp, vertical = 14.dp)
-            )
-        }
-        // Ogonek dymka - maly trojkat pod lewa krawedzia, wskazujacy w strone bohatera nad panelem.
-        Box(
-            modifier = Modifier
-                .padding(start = 22.dp)
-                .size(14.dp)
-                .clip(BubbleTailShape)
-                .background(BubbleBg)
+    Box(
+        modifier = modifier.fillMaxWidth().aspectRatio(Resources.QuizArt.QUESTION_FRAME_RATIO),
+        contentAlignment = Alignment.Center
+    ) {
+        Image(
+            painter = painterResource(Resources.QuizArt.questionFrame),
+            contentDescription = null,
+            modifier = Modifier.fillMaxSize(),
+            contentScale = ContentScale.FillBounds
+        )
+        Text(
+            text = prompt,
+            // Tlo ramki jest jasne, kremowe - napis musi byc ciemny, inaczej znika.
+            color = InkStrong,
+            fontFamily = FontFirst(),
+            fontSize = QUESTION_TEXT_SIZE,
+            fontWeight = FontWeight.Bold,
+            textAlign = TextAlign.Center,
+            maxLines = QUESTION_MAX_LINES,
+            overflow = TextOverflow.Ellipsis,
+            modifier = Modifier.fillMaxWidth(Resources.QuizArt.QUESTION_TEXT_WIDTH_FRACTION)
         )
     }
 }
 
-private val BubbleTailShape = androidx.compose.foundation.shape.GenericShape { size, _ ->
-    moveTo(0f, 0f)
-    lineTo(size.width, 0f)
-    lineTo(size.width / 2f, size.height)
-    close()
-}
+/**
+ * Rozmiar napisu i limit linii dobrane tak, zeby najdluzsze pytanie z banku (97 znakow) miescilo
+ * sie w plaskim wnetrzu ramki na KAZDEJ typowej szerokosci telefonu - takze na najwezszych, gdzie
+ * ramka jest najnizsza. Wnetrze ma ok. 60% wysokosci ramki, a trzy linie po 14sp to ok. 55 dp przy
+ * 58 dp dostepnych na ekranie 320 dp. Dluzsze pytania - wlasne lub generowane - urwa sie
+ * wielokropkiem, zamiast wyjsc na zlota oprawe.
+ */
+private val QUESTION_TEXT_SIZE = 14.sp
+private const val QUESTION_MAX_LINES = 3
 
 /**
  * Rzad krazkow-slotow nad pytaniem "ulóz w kolejnosci" - jeden slot na kazdy element, polaczone
@@ -683,28 +700,67 @@ private const val TILE_STAGGER_MILLIS = 95L
 /** Ile pytanie ma "dla siebie", zanim zaczna wjezdzac odpowiedzi - zeby czytalo sie je pierwsze. */
 private const val QUESTION_LEAD_MILLIS = 150L
 
-/** Do tylu opcji wielokrotny wybor zostaje w jednej kolumnie - wyzej idzie w dwie. */
-private const val MULTI_SELECT_SINGLE_COLUMN_MAX = 4
-
-/** Wspolna minimalna wysokosc kafla w dwukolumnowym ukladzie - zeby rzad nie byl "schodkowy". */
-private val MULTI_SELECT_TILE_MIN = 56.dp
-
 /** Czas wjazdu pojedynczej odpowiedzi i samego dymka pytania. */
 private const val TILE_ENTER_MILLIS = 260
 private const val QUESTION_ENTER_MILLIS = 300
 
 private val AnswerGreen = Color(0xFF22A55E)
 private val AnswerRed = Color(0xFFD1453D)
-private val AnswerFadedBg = Color(0xFFEADFC6)
 private val AnswerFadedText = Color(0xFFB1A283)
 
-/** Stan wizualny jednej "pigulki" odpowiedzi - wspolny dla wyboru pojedynczego i ukladanki. */
+/** Stan wizualny jednej odpowiedzi - wspolny dla wyboru pojedynczego, ukladanki i wielokrotnego wyboru. */
 private enum class OptionVisual { IDLE, SELECTED, CORRECT, WRONG, FADED }
 
 /**
- * Pelnej szerokosci "pigulka" odpowiedzi: kolorowy krazek z etykieta (numer albo litera) i tekst.
- * [OptionVisual.SELECTED] to stan posredni ukladanki - element juz klikniety, czeka na reszte,
- * ale wynik jeszcze nie jest znany, wiec jest tylko wygaszony, bez koloru zielonego/czerwonego.
+ * Barwa kamieni w ramce dymka i krazka z numerem. Dopoki odpowiedz nie padla, kazda pozycja swieci
+ * wlasnym kolorem z [OptionColors] - po odsloneciu wszystkie przechodza na werdykt (zielen/czerwien),
+ * zeby jednym rzutem oka bylo widac, co bylo dobre.
+ */
+private fun gemTintFor(visual: OptionVisual, optionColor: Color): Color = when (visual) {
+    OptionVisual.IDLE, OptionVisual.SELECTED -> optionColor
+    OptionVisual.CORRECT -> AnswerGreen
+    OptionVisual.WRONG -> AnswerRed
+    OptionVisual.FADED -> AnswerFadedText
+}
+
+/**
+ * Tint pola pod tekstem odpowiedzi. Warstwa `fill` jest znormalizowana do bieli tak, ze zostaly w
+ * niej tylko UBYTKI - miekkie cienie przy ramce i ciemny kontur wnetrza. Mnozenie (Modulate) daje
+ * wiec dokladnie te barwe na plaskiej czesci pola, a cienie z oryginalnej grafiki przyciemniaja ja
+ * po swojemu. Nie jest to plaska plama koloru: kazdy stan zachowuje to samo cieniowanie co krem.
+ *
+ * [OptionVisual.IDLE] to bazowy kolor kremu z `answer.png` (jego 97. percentyl), wiec nietkniety
+ * dymek wyglada 1:1 jak oryginalna grafika.
+ */
+private fun fillTintFor(visual: OptionVisual): Color = when (visual) {
+    OptionVisual.IDLE -> Color(0xFFF9F1E0)
+    OptionVisual.SELECTED -> Color(0xFFFFE7A6) // klikniete, wynik jeszcze nieznany - zloty poblask
+    OptionVisual.CORRECT -> Color(0xFFA6E8BC)
+    OptionVisual.WRONG -> Color(0xFFF4B3AD)
+    OptionVisual.FADED -> Color(0xFFCEC2A6)
+}
+
+/** Kolor napisu - tlo dymka jest zawsze jasne, wiec werdykt niesie ciemna, nasycona wersja barwy. */
+private fun inkFor(visual: OptionVisual): Color = when (visual) {
+    OptionVisual.IDLE, OptionVisual.SELECTED -> InkStrong
+    OptionVisual.CORRECT -> Color(0xFF12532F)
+    OptionVisual.WRONG -> Color(0xFF7A1C17)
+    // Wyrazniejszy niz [AnswerFadedText]: wygaszona odpowiedz ma schodzic na drugi plan, ale dalej
+    // musi dac sie ja przeczytac - na przyciemnionym, bezowym tle jasny bez znikal.
+    OptionVisual.FADED -> Color(0xFF80714F)
+}
+
+/**
+ * Pelnej szerokosci, ozdobny dymek odpowiedzi: zlota ramka z kamieniami, biale pole na tekst i
+ * krazek z etykieta (numer albo litera) wpuszczony w lewa krawedz.
+ *
+ * Grafika jest ROZBITA NA WARSTWY (patrz [Resources.QuizArt]) wlasnie po to, zeby kolor kamieni i
+ * tla dalo sie wyliczyc w kodzie zamiast trzymac osobny PNG na kazdy stan: warstwy `fill` i `gems`
+ * sa szare i przechodza przez `ColorFilter.tint(..., BlendMode.Modulate)`, czyli mnozenie - szarosc
+ * razy barwa zachowuje cieniowanie i fasetki z oryginalnego rysunku. Zloto idzie bez filtra.
+ *
+ * [OptionVisual.SELECTED] to stan posredni (ukladanka, wielokrotny wybor) - element juz klikniety,
+ * czeka na reszte, ale wynik jeszcze nie jest znany.
  */
 @Composable
 private fun QuizOptionTile(
@@ -716,64 +772,142 @@ private fun QuizOptionTile(
     onClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
-    val container by animateColorAsState(
-        when (visual) {
-            OptionVisual.IDLE -> Color.White
-            OptionVisual.SELECTED -> AnswerFadedBg
-            OptionVisual.CORRECT -> AnswerGreen
-            OptionVisual.WRONG -> AnswerRed
-            OptionVisual.FADED -> AnswerFadedBg
-        }
-    )
-    val content = when (visual) {
-        OptionVisual.CORRECT, OptionVisual.WRONG -> Color.White
-        OptionVisual.FADED, OptionVisual.SELECTED -> AnswerFadedText
-        OptionVisual.IDLE -> InkStrong
-    }
-    val borderColor = when (visual) {
-        OptionVisual.IDLE -> PanelBorder
-        OptionVisual.SELECTED -> AnswerFadedText
-        OptionVisual.CORRECT -> AnswerGreen
-        OptionVisual.WRONG -> AnswerRed
-        OptionVisual.FADED -> AnswerFadedBg
-    }
+    val fill by animateColorAsState(fillTintFor(visual))
+    val gem by animateColorAsState(gemTintFor(visual, badgeColor))
+    val ink = inkFor(visual)
 
-    Row(
+    Box(
         modifier = modifier
-            .clip(RoundedCornerShape(26.dp))
-            .background(container)
-            .border(2.dp, borderColor, RoundedCornerShape(26.dp))
-            .then(if (enabled) Modifier.clickable(onClick = onClick) else Modifier)
-            .padding(horizontal = 14.dp, vertical = 12.dp),
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(12.dp)
+            .heightIn(min = ANSWER_TILE_MIN_HEIGHT)
+            .then(if (enabled) Modifier.clickable(onClick = onClick) else Modifier),
+        contentAlignment = Alignment.CenterStart
     ) {
+        // matchParentSize, a nie fillMaxSize: caly panel siedzi w verticalScroll, wiec dostepna
+        // wysokosc jest nieskonczona - o rozmiarze kafla ma decydowac tekst, a warstwy grafiki maja
+        // sie tylko pod niego podciagnac. Wszystkie trzy leza na tym samym canvasie, wiec wystarczy
+        // ten sam modifier i FillBounds; krazek z numerem wystaje w lewo, stad padding od jego polowy.
+        val layer = Modifier.matchParentSize().padding(start = ANSWER_BUBBLE_START)
+        Image(
+            painter = painterResource(Resources.QuizArt.answerBubbleFill),
+            contentDescription = null,
+            modifier = layer,
+            contentScale = ContentScale.FillBounds,
+            colorFilter = ColorFilter.tint(fill, BlendMode.Modulate)
+        )
+        Image(
+            painter = painterResource(Resources.QuizArt.answerBubbleFrame),
+            contentDescription = null,
+            modifier = layer,
+            contentScale = ContentScale.FillBounds
+        )
+        Image(
+            painter = painterResource(Resources.QuizArt.answerBubbleGems),
+            contentDescription = null,
+            modifier = layer,
+            contentScale = ContentScale.FillBounds,
+            colorFilter = ColorFilter.tint(gem, BlendMode.Modulate)
+        )
+
+        // Napis nalezy do DYMKA, nie do kafla - dlatego siedzi we wlasnym Boxie przystajacym do
+        // dymka i jest w nim wysrodkowany. Wysrodkowanie w calym kaflu (czyli w przestrzeni "po
+        // krazku") przesuwaloby go w prawo wzgledem kamieni, ktore w grafice leza dokladnie na
+        // srodku dymka - i wlasnie z nimi napis ma sie pokrywac.
         Box(
-            modifier = Modifier
-                .size(28.dp)
-                .clip(CircleShape)
-                .background(badgeColor),
+            modifier = Modifier.matchParentSize().padding(start = ANSWER_BUBBLE_START),
             contentAlignment = Alignment.Center
         ) {
             Text(
-                text = label,
-                color = Color.White,
+                text = text,
+                color = ink,
                 fontFamily = FontFirst(),
-                fontWeight = FontWeight.Bold,
-                fontSize = 13.sp
+                fontWeight = if (visual == OptionVisual.CORRECT) FontWeight.Bold else FontWeight.Normal,
+                fontSize = 14.sp,
+                maxLines = 3,
+                textAlign = TextAlign.Center,
+                // Takie samo wciecie z obu stron - inaczej napis przestalby byc na srodku dymka.
+                // Musi wystarczyc, by ominac krazek nachodzacy na lewa krawedz.
+                modifier = Modifier.padding(horizontal = ANSWER_TEXT_SIDE_INSET, vertical = 20.dp)
             )
         }
-        Text(
-            text = text,
-            color = content,
-            fontFamily = FontFirst(),
-            fontWeight = if (visual == OptionVisual.CORRECT) FontWeight.Bold else FontWeight.Normal,
-            fontSize = 14.sp,
-            maxLines = 3,
-            modifier = Modifier.weight(1f)
+
+        AnswerBadge(
+            label = label,
+            gemTint = gem,
+            modifier = Modifier.align(Alignment.CenterStart).offset(x = ANSWER_BADGE_NUDGE)
         )
     }
 }
+
+/**
+ * Krazek z numerem odpowiedzi - zlota oprawa bez filtra, kamien w srodku pomnozony przez [gemTint],
+ * czyli ten sam kolor co kamienie na dymku obok.
+ */
+@Composable
+private fun AnswerBadge(
+    label: String,
+    gemTint: Color,
+    modifier: Modifier = Modifier,
+    size: Dp = ANSWER_BADGE_SIZE
+) {
+    Box(modifier = modifier.size(size), contentAlignment = Alignment.Center) {
+        Image(
+            painter = painterResource(Resources.QuizArt.answerBadgeGem),
+            contentDescription = null,
+            modifier = Modifier.fillMaxSize(),
+            colorFilter = ColorFilter.tint(gemTint, BlendMode.Modulate)
+        )
+        Image(
+            painter = painterResource(Resources.QuizArt.answerBadgeFrame),
+            contentDescription = null,
+            modifier = Modifier.fillMaxSize()
+        )
+        Text(
+            text = label,
+            color = Color.White,
+            fontFamily = FontFirst(),
+            fontWeight = FontWeight.Bold,
+            fontSize = 15.sp,
+            // Kamien nie jest wysrodkowany w swoim canvasie - jego srodek lezy na 41% wysokosci
+            // pliku, nie na 50%. Litera rysowana w srodku Boxa wypadalaby wiec ponizej srodka
+            // kamienia; ten offset sadza ja dokladnie na nim. Ulamek, a nie stala w dp, zeby
+            // trzymal sie przy kazdym rozmiarze krazka.
+            modifier = Modifier.offset(y = -size * BADGE_GEM_CENTER_OFFSET)
+        )
+    }
+}
+
+/** O ile srodek kamienia w [Resources.QuizArt.answerBadgeGem] lezy nad srodkiem jego canvasu. */
+private const val BADGE_GEM_CENTER_OFFSET = 0.088f
+
+/**
+ * Wysokosc dymka odpowiedzi. Grafika ma proporcje ~3.8:1, a kafel pelnej szerokosci na telefonie w
+ * pionie to ok. 300 dp - przy tej wysokosci rozciagniecie w poziomie schodzi ponizej progu, na
+ * ktorym widac deformacje kamieni, a w bialym polu mieszcza sie dwie linijki tekstu.
+ */
+private val ANSWER_TILE_MIN_HEIGHT = 78.dp
+
+/** Srednica krazka z numerem. */
+private val ANSWER_BADGE_SIZE = 58.dp
+
+/**
+ * Od ktorego miejsca zaczyna sie sam dymek - krazek wystaje w lewo poza jego krawedz i czesciowo ja
+ * przykrywa, jak w oryginalnej grafice.
+ */
+private val ANSWER_BUBBLE_START = 26.dp
+
+/**
+ * Przesuniecie krazka w prawo wzgledem lewej krawedzi kafla. Jego srodek ma leciec nieco ZA
+ * krawedzia dymka ([ANSWER_BUBBLE_START]), a nie dokladnie na niej - inaczej krazek zwiesza sie na
+ * zewnatrz i odkleja od ramki.
+ */
+private val ANSWER_BADGE_NUDGE = 7.dp
+
+/**
+ * Wciecie napisu odpowiedzi po OBU stronach dymka. Krazek wchodzi na dymek na glebokosc
+ * `ANSWER_BADGE_NUDGE + ANSWER_BADGE_SIZE - ANSWER_BUBBLE_START` (39 dp) - tekst musi zaczynac sie
+ * za nim, a zeby zostal na srodku dymka, tyle samo miejsca schodzi z prawej.
+ */
+private val ANSWER_TEXT_SIDE_INSET = 42.dp
 
 /** Jednozdaniowy werdykt pod odpowiedziami. */
 @Composable

@@ -1,6 +1,7 @@
 package com.lernhero.game.battle
 
 import com.lernhero.domain.combat.live.CycleOutcome
+import com.lernhero.domain.quiz.QuizCategory
 import com.lernhero.domain.combat.live.StreakTracker
 import com.lernhero.domain.combat.playback.HitKind
 import com.lernhero.domain.item.Item
@@ -157,6 +158,11 @@ data class BattleUiState(
     /** Wybor ulepszenia czekajacy na decyzje gracza - dopoki jest, walka stoi. */
     val upgradeOffer: UpgradeOffer? = null,
     /**
+     * Komplet fal endless zebrany - temat awansowal i gracz decyduje, czy wychodzi z nagroda, czy
+     * idzie dalej. Dopoki to lezy, walka stoi (tak samo jak przy [upgradeOffer]).
+     */
+    val masteryOffer: MasteryOffer? = null,
+    /**
      * Podsumowanie calego zejscia - wypelniane dopiero w chwili zakonczenia walki i pokazywane na
      * ekranie koncowym (patrz BattleSummaryScreen). Null dopoki walka trwa.
      */
@@ -188,6 +194,23 @@ data class UpgradeOffer(
     val choices: List<EndlessBuff>,
     val quality: Float,
     val ownedStacks: Map<EndlessBuff, Int> = emptyMap()
+)
+
+/**
+ * Moment awansu tematu: komplet fal ([com.lernhero.domain.progress.CategoryMastery.WAVES_PER_LEVEL])
+ * zebrany. Awans jest juz PEWNY - zapisze sie niezaleznie od tego, czym skonczy sie reszta biegu -
+ * a gracz wybiera tylko, czy wychodzi z pelna sakwa, czy gra dalej.
+ *
+ * Sens tego wyboru jest w [com.lernhero.domain.run.RunSession.settleLoot]: wyjscie teraz ksieguje
+ * caly lup, a dalsza gra stawia go pod zastaw - porazka odda juz tylko cwierc.
+ */
+data class MasteryOffer(
+    val category: QuizCategory,
+    val wave: Int,
+    /** Poziom, ktory temat wlasnie osiagnal. */
+    val newLevel: Int,
+    /** Ile zlota lezy w sakwie w tej chwili - to jest stawka decyzji. */
+    val bagGold: Int
 )
 
 /** Aktualnie aktywny mnoznik z zamknietego cyklu dziesieciu odpowiedzi (Empowered/Weakened/Neutral), jesli jeszcze trwa. */

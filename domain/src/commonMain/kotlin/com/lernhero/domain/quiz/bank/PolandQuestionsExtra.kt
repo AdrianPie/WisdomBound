@@ -52,7 +52,7 @@ object PolandQuestionsExtra {
         ask("papiez_polak", "Which Pole became pope in 1978?", "John Paul II", listOf("John XXIII", "Paul VI", "Benedict XVI"), QuizDifficulty.Medium),
         ask("walesa_funkcja", "What office did Lech Walesa hold in the 1990s?", "President of Poland", listOf("Prime Minister", "Speaker of the Sejm", "Mayor of Gdansk"), QuizDifficulty.Medium),
         ask("wisla_ujscie", "Into which sea does the Vistula flow?", "The Baltic Sea", listOf("The North Sea", "The Black Sea", "The Sea of Azov"), QuizDifficulty.Medium),
-        ask("bigos_co", "What is bigos?", "A stew of sauerkraut, cabbage and meat", listOf("A cold beetroot soup", "A poppy-seed cake", "A potato pancake"), QuizDifficulty.Medium),
+        ask("bigos_co", "What is bigos?", "A stew of sauerkraut, cabbage and meat", listOf("A cold soup of beetroot and soured milk", "A yeast cake filled with poppy seed", "A fried pancake made of grated potato"), QuizDifficulty.Medium),
         ask("skoki_narciarskie_obiekt", "In which Polish town is the Wielka Krokiew ski jumping hill?", "Zakopane", listOf("Szczyrk", "Karpacz", "Wisla"), QuizDifficulty.Medium),
         ask("uniwersytet_najstarszy", "Which is the oldest university in Poland?", "The Jagiellonian University", listOf("The University of Warsaw", "Adam Mickiewicz University", "The University of Wroclaw"), QuizDifficulty.Medium),
 
@@ -72,7 +72,7 @@ object PolandQuestionsExtra {
         ask("szkola_lwowsko_warszawska", "The Lwow-Warsaw School was a school of what?", "Logic and philosophy", listOf("Painting", "Architecture", "Military engineering"), QuizDifficulty.Expert),
         ask("statut_wislicki", "Which king issued the Statutes of Wislica and Piotrkow?", "Casimir the Great", listOf("Wladyslaw the Elbow-high", "Louis of Hungary", "Wladyslaw Jagiello"), QuizDifficulty.Expert),
         ask("elekcja_pierwsza", "Who was the first king elected in a free election in Poland?", "Henry of Valois", listOf("Stephen Bathory", "Sigismund III Vasa", "Wladyslaw IV"), QuizDifficulty.Expert),
-        ask("komisja_edukacji", "What was the Commission of National Education (1773) notable for?", "One of the first state education ministries in Europe", listOf("Founding the first university", "Reforming the army", "Printing the first Polish newspaper"), QuizDifficulty.Expert),
+        ask("komisja_edukacji", "What was the Commission of National Education (1773) notable for?", "One of the first state education ministries in Europe", listOf("Founding the country's first university", "Reforming the army after the partitions", "Printing the first newspaper in Polish"), QuizDifficulty.Expert),
         ask("bitwa_pod_cecora", "Near which town did Hetman Zolkiewski fall in 1620?", "Cecora", listOf("Chocim", "Beresteczko", "Zborow"), QuizDifficulty.Expert),
         ask("polska_ludowa_nazwa", "What was the official name of the Polish state between 1952 and 1989?", "The Polish People's Republic", listOf("The Second Polish Republic", "The Congress Kingdom", "The Polish Commonwealth"), QuizDifficulty.Expert),
         ask("traktat_ryski", "The 1921 Treaty of Riga ended a war between Poland and which state?", "Soviet Russia", listOf("Germany", "Lithuania", "Czechoslovakia"), QuizDifficulty.Expert),

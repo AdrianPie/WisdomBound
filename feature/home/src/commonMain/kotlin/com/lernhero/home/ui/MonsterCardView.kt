@@ -24,6 +24,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.lernhero.domain.monster.MonsterCard
 import com.lernhero.domain.monster.MonsterLevels
+import com.lernhero.domain.monster.CompanionPower
 import com.lernhero.domain.monster.MonsterStars
 import com.lernhero.game.character.MonsterVisualPresets
 import org.jetbrains.compose.resources.painterResource
@@ -129,8 +130,8 @@ fun MonsterCardView(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceEvenly
         ) {
-            StatPill(label = "HP", value = MonsterStars.hpAt(card, stars, level), color = StatHp)
-            StatPill(label = "ATK", value = MonsterStars.attackAt(card, stars, level), color = StatAtk)
+            StatPill(label = "HP", value = CompanionPower.hpAt(card, stars, level), color = StatHp)
+            StatPill(label = "ATK", value = CompanionPower.attackAt(card, stars, level), color = StatAtk)
         }
 
         if (showSkills && card.skills.isNotEmpty()) {

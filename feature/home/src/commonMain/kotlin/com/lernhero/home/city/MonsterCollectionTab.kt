@@ -51,6 +51,7 @@ import com.lernhero.domain.item.ItemSlot
 import com.lernhero.domain.item.catalog.MonsterGear
 import com.lernhero.domain.monster.CompanionSpell
 import com.lernhero.domain.monster.Element
+import com.lernhero.domain.monster.CompanionPower
 import com.lernhero.domain.monster.MonsterEquipment
 import com.lernhero.domain.monster.MonsterSpellLevels
 import com.lernhero.game.character.MonsterVisualPresets
@@ -418,9 +419,12 @@ private fun InfoPane(
 ) {
     // Statystyki pokazujemy JUZ z ekwipunkiem - karta ma mowic, czym kompan naprawde walczy,
     // a nie ile mial na sucho przed zalozeniem czegokolwiek.
+    // Sprzet i baza sa w TEJ SAMEJ skali (walki) - patrz [CompanionPower]. Wczesniej nie byly:
+    // statystyki szly ze skali karty (70 HP), a sprzet ze skali walki (+120 HP z pancerza), wiec
+    // karta obiecywala trzy razy wiecej, niz sprzet naprawde dawal.
     val gear = MonsterEquipment.statsOf(equipment, monster.card.element, bag)
-    val hp = monster.hp + gear[StatType.MaxHp].toInt()
-    val attack = monster.attack + gear[StatType.Attack].toInt()
+    val hp = CompanionPower.hpAt(monster.card, monster.stars, monster.level, gear)
+    val attack = CompanionPower.attackAt(monster.card, monster.stars, monster.level, gear)
     val armor = (gear[StatType.DamageReduction] * 100f).toInt()
     val speed = gear[StatType.Speed].toInt()
 

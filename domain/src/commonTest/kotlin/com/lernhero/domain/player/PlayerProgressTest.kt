@@ -32,9 +32,39 @@ class PlayerProgressTest {
 
     @Test
     fun `kolejne poziomy sa coraz drozsze`() {
-        val second = LevelCurve.xpForLevel(2)
-        val tenth = LevelCurve.xpForLevel(10)
-        assertTrue(tenth > second * 3, "poziom 2: $second, poziom 10: $tenth")
+        // Prog byl kiedys "dziesiaty x3 wzgledem drugiego" i opisywal krzywa 1.18. Ta krzywa zostala
+        // zlagodzona do 1.12, bo uciekala LINIOWEJ sile, ktora poziom rozdaje (+2 ataku i +8 HP za
+        // punkt) - ostatnia plansza Normalnego wymagala poziomu 23, a cala kampania wyplacala 14.
+        // Test pilnuje wiec INTENCJI (krzywa ma byc wykladnicza i rosnaca), a nie tamtej liczby.
+        assertTrue(
+            (2..40).all { LevelCurve.xpForLevel(it) > LevelCurve.xpForLevel(it - 1) },
+            "Kazdy kolejny poziom ma kosztowac wiecej od poprzedniego"
+        )
+        val early = LevelCurve.xpForLevel(10) - LevelCurve.xpForLevel(9)
+        val late = LevelCurve.xpForLevel(30) - LevelCurve.xpForLevel(29)
+        assertTrue(late > early * 5, "Krzywa ma zostac wykladnicza: skok $early wczesnie, $late pozno")
+    }
+
+    @Test
+    fun `pierwsze poziomy leca po jednej walce, a dalsze wyraznie zwalniaja`() {
+        // To jest KSZTALT krzywej, o ktory chodzi w calej grze: pierwsza godzina ma dac
+        // kilkanascie awansow (miejsca na kompanow, punkty talentow - widac, ze rozwoj istnieje),
+        // a druga juz tylko kilka. Wczesniej BASE_XP 120 kazalo zagrac trzy plansze na poziom 2:
+        // przez pierwsze piec minut nowy gracz nie widzial ANI JEDNEGO awansu.
+        //
+        // Odniesienie: jedna plansza kampanii wyplaca mniej wiecej sto XP.
+        val stagePayout = 100
+        assertTrue(
+            LevelCurve.xpForLevel(2) < stagePayout,
+            "pierwszy awans ma zmiescic sie w jednej walce, a kosztuje ${LevelCurve.xpForLevel(2)}"
+        )
+
+        val toLevel10 = (2..10).sumOf { LevelCurve.xpForLevel(it) }
+        val toLevel25 = (2..25).sumOf { LevelCurve.xpForLevel(it) }
+        assertTrue(
+            toLevel25 > toLevel10 * 8,
+            "druga polowa toru ma byc nieporownanie drozsza: $toLevel10 do 10, $toLevel25 do 25"
+        )
     }
 
     @Test

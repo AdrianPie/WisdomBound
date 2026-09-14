@@ -187,7 +187,6 @@ private fun TownHeader(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.spacedBy(5.dp)
                 ) {
-                    ResourcePill("🪵", resources.wood, Modifier.weight(1f))
                     ResourcePill("🪨", resources.stone, Modifier.weight(1f))
                     ResourcePill("⚙", resources.iron, Modifier.weight(1f))
                     ResourcePill("✨", resources.essence, Modifier.weight(1f))
@@ -234,7 +233,6 @@ private fun TownHeader(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.spacedBy(6.dp)
         ) {
-            ResourcePill("🪵", resources.wood, Modifier.weight(1f))
             ResourcePill("🪨", resources.stone, Modifier.weight(1f))
             ResourcePill("⚙", resources.iron, Modifier.weight(1f))
             ResourcePill("✨", resources.essence, Modifier.weight(1f))

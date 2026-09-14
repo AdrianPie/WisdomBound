@@ -22,6 +22,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.lernhero.domain.progress.CategoryLevels
+import com.lernhero.domain.progress.CategoryMastery
 import com.lernhero.domain.quiz.QuizCategory
 import com.lernhero.domain.quiz.QuizDifficulty
 import com.lernhero.domain.quiz.custom.CustomDeck
@@ -70,6 +72,8 @@ fun EndlessSetupPanel(
     decksLoading: Boolean,
     /** Null = w zakladce "Wlasne" wybrane sa fiszki z czytelni, nie talia. */
     selectedDeckId: String?,
+    /** Poziomy opanowania tematow - patrz [com.lernhero.domain.progress.CategoryMastery]. */
+    categoryLevels: CategoryLevels,
     onSourceChange: (QuestionSource) -> Unit,
     onDifficultyChange: (QuizDifficulty?) -> Unit,
     onCategoryChange: (QuizCategory?) -> Unit,
@@ -127,25 +131,20 @@ fun EndlessSetupPanel(
                 )
 
                 SectionLabel(strings.endlessCategoryLabel)
-                FlowRow(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.spacedBy(6.dp),
-                    verticalArrangement = Arrangement.spacedBy(6.dp)
-                ) {
-                    Chip(
-                        label = strings.endlessCategoryRandom,
-                        selected = category == null,
-                        onClick = { onCategoryChange(null) }
+                // Slowka i wlasne talie nie sa w banku wbudowanym - maja wlasna zakladke zrodla.
+                // Kategorie lokalne (np. Poland) pokazuja sie tylko przy pasujacym jezyku.
+                CategoryMasteryList(
+                    categories = QuizCategory.builtinFor(strings.languageCode),
+                    levels = categoryLevels,
+                    selected = category,
+                    onSelect = onCategoryChange
+                )
+                category?.let { picked ->
+                    MasteryGoalHint(
+                        category = picked,
+                        level = categoryLevels.levelOf(picked),
+                        fixed = difficulty
                     )
-                    // Slowka i wlasne talie nie sa w banku wbudowanym - maja wlasna zakladke zrodla.
-                    // Kategorie lokalne (np. Poland) pokazuja sie tylko przy pasujacym jezyku.
-                    QuizCategory.builtinFor(strings.languageCode).forEach { entry ->
-                        Chip(
-                            label = entry.label,
-                            selected = category == entry,
-                            onClick = { onCategoryChange(entry) }
-                        )
-                    }
                 }
 
                 StartButton(onStart = onStart)
@@ -266,5 +265,49 @@ private fun StartButton(onStart: () -> Unit) {
             .border(2.dp, Color(0xFFFF8A6B), RoundedCornerShape(10.dp))
             .clickable(onClick = onStart)
             .padding(vertical = 14.dp)
+    )
+}
+
+/**
+ * Jednozdaniowa zapowiedz celu wejscia: ile fal do awansu i co ten awans da. Stoi pod lista, a nie
+ * na kaflu, bo dotyczy WYBRANEGO tematu - powtarzanie tego przy kazdym wierszu zamienialoby liste
+ * w sciane tekstu.
+ */
+@Composable
+private fun MasteryGoalHint(category: QuizCategory, level: Int, fixed: QuizDifficulty?) {
+    val next = CategoryMastery.startingDifficulty(level + 1)
+    val now = CategoryMastery.startingDifficulty(level)
+    val harder = next != now
+    // Recznie zanizony poziom pytan robi z wejscia trening: nie pcha tematu wyzej i nie placi jego
+    // premii. Gracz musi to wiedziec PRZED startem, a nie domyslic sie po dwudziestu falach bez
+    // awansu - patrz [CategoryMastery.countsForMastery].
+    val counts = CategoryMastery.countsForMastery(level, fixed)
+
+    Text(
+        text = buildString {
+            if (!counts) {
+                append("Training run at ")
+                append(fixed?.label)
+                append(" - below ")
+                append(category.label)
+                append(" level ")
+                append(level)
+                append(" (")
+                append(now.label)
+                append("), so the topic will not level up and pays no level bonus.")
+            } else {
+                append("Clear ")
+                append(CategoryMastery.WAVES_PER_LEVEL)
+                append(" waves to reach ")
+                append(category.label)
+                append(" level ")
+                append(level + 1)
+                append(if (harder) " - questions then start at ${next.label}." else " - richer rewards.")
+            }
+        },
+        color = if (counts) Muted else EndlessAccent,
+        fontFamily = FontFirst(),
+        fontSize = 10.sp,
+        modifier = Modifier.fillMaxWidth().padding(top = 2.dp)
     )
 }

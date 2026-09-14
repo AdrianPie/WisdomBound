@@ -57,7 +57,15 @@ fun SetupNavGraph(startDestination: Screen = Screen.Auth) {
             )
         }
         composable<Screen.HomeGraph>{
-            HomeNavGraph()
+            HomeNavGraph(
+                // Wylogowanie zdejmuje CALA gre ze stosu - inaczej "wstecz" z ekranu logowania
+                // wrzucaloby z powrotem do gry na koncie, ktorego juz nie ma.
+                onSignedOut = {
+                    navController.navigate(Screen.Auth) {
+                        popUpTo<Screen.HomeGraph> { inclusive = true }
+                    }
+                }
+            )
         }
     }
 }

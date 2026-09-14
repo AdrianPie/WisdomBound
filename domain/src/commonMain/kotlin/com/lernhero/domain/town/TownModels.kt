@@ -8,13 +8,19 @@ import kotlin.math.roundToInt
 /**
  * Surowce miasta. Money zostaje tam gdzie byl (Player.money) - to osobna, starsza waluta.
  *
- * Drewno i kamien produkuja budynki, a [iron] i [essence] wypadaja WYLACZNIE w lochach - to one
+ * Trzy surowce, a nie cztery. Drewno zostalo skasowane, bo nie bylo surowcem tylko ozdoba: jego
+ * JEDYNYM odbiorca bylo wykuwanie (15-75 sztuk raz na przedmiot), a same skrzynie z bossow
+ * kampanii wyplacaly go ponad 1600 - nie liczac tartaku, ktory na pierwszym poziomie robil
+ * 60/h bez konca. Zasob, ktorego nie da sie ani zabraknac, ani wydac, nie jest decyzja gracza,
+ * tylko czwartym kafelkiem na pasku i czwarta pozycja w kazdym oknie kosztu. Jego role przejal
+ * [stone] - patrz [com.lernhero.domain.craft.Forge.costFor].
+ *
+ * [stone] produkuje kamieniolom, a [iron] i [essence] wypadaja WYLACZNIE w lochach - to one
  * spinaja loch z miastem: bijesz sie po to, zeby miec z czego kuc i przyzywac. Dzieki temu wyprawa
  * ma sens nawet wtedy, gdy gracz ma juz pelno zlota.
  */
 @Serializable
 data class TownResources(
-    val wood: Int = 0,
     val stone: Int = 0,
     /** Zlom i ruda z lochow - jedyne zrodlo materialu na przedmioty w Kuzni. */
     val iron: Int = 0,
@@ -24,23 +30,20 @@ data class TownResources(
     val summonTickets: Int = 0
 ) {
     fun plus(type: ResourceType, amount: Int): TownResources = when (type) {
-        ResourceType.Wood -> copy(wood = wood + amount)
         ResourceType.Stone -> copy(stone = stone + amount)
         ResourceType.Iron -> copy(iron = iron + amount)
         ResourceType.Essence -> copy(essence = essence + amount)
     }
 
     fun amountOf(type: ResourceType): Int = when (type) {
-        ResourceType.Wood -> wood
         ResourceType.Stone -> stone
         ResourceType.Iron -> iron
         ResourceType.Essence -> essence
     }
 
     /** Dolicza cala zdobycz z jednego zejscia naraz - patrz [com.lernhero.domain.progress.RunStats]. */
-    fun plusAll(wood: Int = 0, stone: Int = 0, iron: Int = 0, essence: Int = 0, tickets: Int = 0): TownResources =
+    fun plusAll(stone: Int = 0, iron: Int = 0, essence: Int = 0, tickets: Int = 0): TownResources =
         copy(
-            wood = this.wood + wood,
             stone = this.stone + stone,
             iron = this.iron + iron,
             essence = this.essence + essence,
@@ -50,16 +53,21 @@ data class TownResources(
 
 @Serializable
 enum class ResourceType(val label: String, val icon: String) {
-    Wood("Wood", "\uD83E\uDEB5"),
     Stone("Stone", "\uD83E\uDEA8"),
     Iron("Ore", "\u2699"),
     Essence("Essence", "\u2728")
 }
 
-/** Ktory budynek produkcyjny - kazdy trzyma wlasny [ProductionState] i produkuje wlasny surowiec. */
+/**
+ * Budynek produkcyjny - trzyma wlasny [ProductionState] i produkuje wlasny surowiec.
+ *
+ * Zostal JEDEN. Tartak i kamieniolom byly tym samym budynkiem w dwoch skorkach: ta sama krzywa,
+ * ten sam koszt, ten sam ekran, tylko inna ikona - a gracz musial odwiedzac oba, zeby nie tracic
+ * produkcji. Podwojenie klikania nie jest glebia. Zostawiony jest [Quarry], bo kamien ma realnego
+ * odbiorce (ulepszanie przedmiotow), a drewno nie mialo zadnego.
+ */
 @Serializable
 enum class ProductionBuilding(val resource: ResourceType) {
-    Sawmill(ResourceType.Wood),
     Quarry(ResourceType.Stone)
 }
 
@@ -91,19 +99,34 @@ object ProductionMath {
     const val BOOST_DURATION_MS: Long = 24L * 60 * 60 * 1000
 
     /** Produkcja na godzine na 1. poziomie. */
-    private const val BASE_PER_HOUR = 60f
+    private const val BASE_PER_HOUR = 45f
 
-    /** Kazdy poziom to +35% produkcji - wykladniczo, jak w idlach, zeby ulepszanie bylo odczuwalne. */
-    private const val LEVEL_GROWTH = 1.35f
+    /** Kazdy poziom to +22% produkcji - wykladniczo, zeby ulepszanie bylo odczuwalne. */
+    private const val LEVEL_GROWTH = 1.22f
+
+    /**
+     * Sufit budynku - i to jest cala roznica miedzy "kopalnia pomaga" a "kopalnia gra za gracza".
+     *
+     * Bez sufitu, przy 60/h i +35% na poziom, budynek na poziomie 12 robil 1629 kamienia na
+     * godzine, czyli 13 000 na jedno odebranie magazynu. Ulepszenie przedmiotu na +10 kosztuje
+     * najwyzej 3300 kamienia, wiec kopalnia sama, bez jednej odpowiedzi na pytanie, wyplacala
+     * kilka pelnych ulepszen dziennie. Teraz ostatni poziom daje 270/h (2157 na magazyn), czyli
+     * mniej wiecej JEDNO ulepszenie dziennie - realna pomoc, ktora nie zastepuje grania.
+     */
+    const val MAX_LEVEL = 10
 
     /** Magazyn to tyle, ile budynek wyprodukuje przez tyle godzin - potem przestaje zbierac. */
     private const val STORAGE_HOURS = 8f
 
     private const val MILLIS_PER_HOUR = 3_600_000f
 
+    fun clampLevel(level: Int): Int = level.coerceIn(1, MAX_LEVEL)
+
+    fun isMaxed(level: Int): Boolean = level >= MAX_LEVEL
+
     /** Produkcja/h bez bonusu z quizu. */
     fun baseRatePerHour(level: Int): Float =
-        BASE_PER_HOUR * LEVEL_GROWTH.pow(level - 1)
+        BASE_PER_HOUR * LEVEL_GROWTH.pow(clampLevel(level) - 1)
 
     /** Produkcja/h z uwzglednieniem aktywnego bonusu - to ta liczba idzie na ekran. */
     fun effectiveRatePerHour(state: ProductionState, now: Long): Float =
@@ -145,6 +168,15 @@ object ProductionMath {
         return produced.roundToInt().coerceAtMost(storageCap(state.level))
     }
 
-    /** Koszt ulepszenia budynku na kolejny poziom - rosnie szybciej niz produkcja. */
-    fun upgradeCost(level: Int): Int = (50f * 1.6f.pow(level - 1)).roundToInt()
+    /**
+     * Koszt ulepszenia budynku na kolejny poziom - rosnie szybciej niz produkcja, wiec kazdy
+     * kolejny poziom jest gorszym interesem od poprzedniego. Wyciagniecie kamieniolomu na
+     * [MAX_LEVEL] kosztuje w sumie ok. 13 000 zlota, czyli mniej wiecej tyle, ile zostaje w
+     * sakwie po przejsciu kampanii na Normalnym - to jest jedyny SKONCZONY sink na zloto w grze,
+     * wiec ma byc wart calego zapasu, a nie drobnych.
+     *
+     * Zwraca 0 na [MAX_LEVEL] - nie ma ceny za poziom, ktorego nie ma.
+     */
+    fun upgradeCost(level: Int): Int =
+        if (isMaxed(level)) 0 else (80f * 1.7f.pow(level - 1)).roundToInt()
 }

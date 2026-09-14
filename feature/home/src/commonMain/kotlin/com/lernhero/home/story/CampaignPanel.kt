@@ -158,7 +158,6 @@ private fun IdleHeader(
 
             Row(horizontalArrangement = Arrangement.spacedBy(6.dp), verticalAlignment = Alignment.CenterVertically) {
                 IdleChip("💰", reward.gold)
-                IdleChip("⭐", reward.xp)
                 IdleChip("⚙", reward.iron)
                 IdleChip("✨", reward.essence)
             }

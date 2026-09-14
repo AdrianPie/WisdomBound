@@ -3,6 +3,7 @@ package com.lernhero.home.player
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.lernhero.domain.repository.PlayerRepository
+import com.lernhero.domain.progress.CategoryLevels
 import com.lernhero.domain.item.Item
 import com.lernhero.domain.item.Inventory
 import com.lernhero.domain.item.ItemInstance
@@ -25,6 +26,7 @@ import com.lernhero.domain.item.toLoadout
 import com.lernhero.domain.item.unequip
 import com.lernhero.domain.monster.MonsterCard
 import com.lernhero.domain.monster.MonsterCatalog
+import com.lernhero.domain.monster.CompanionPower
 import com.lernhero.domain.monster.MonsterEquipment
 import com.lernhero.domain.monster.CompanionSpell
 import com.lernhero.domain.monster.MonsterLevels
@@ -48,6 +50,7 @@ import com.lernhero.domain.progress.RunStats
 import com.lernhero.domain.notification.ReminderPlan
 import com.lernhero.domain.reading.SavedWord
 import com.lernhero.shared.notification.ReminderScheduler
+import com.lernhero.shared.prefs.AppPreferences
 import com.lernhero.shared.notification.nextLocalHourMillis
 import com.lernhero.domain.town.TownResources
 import com.lernhero.domain.talent.Talent
@@ -87,8 +90,11 @@ data class OwnedMonster(
     /** Poziom kazdego zaklecia tej karty (id zaklecia -> poziom). */
     val spellLevels: Map<String, Int> = emptyMap()
 ) {
-    val hp: Int get() = MonsterStars.hpAt(card, stars, level)
-    val attack: Int get() = MonsterStars.attackAt(card, stars, level)
+    // Liczby w skali WALKI, a nie karty katalogowej - patrz [CompanionPower]. Kompan z 70 HP
+    // na karcie stawal obok bohatera z 420 i wygladal na pomylke; prawdziwa jego wartoscia w
+    // walce jest 210. Sprzet dolicza sie do tego samego, wiec nie ma dwoch roznych "HP kompana".
+    val hp: Int get() = CompanionPower.hpAt(card, stars, level)
+    val attack: Int get() = CompanionPower.attackAt(card, stars, level)
 
     /** Ile kopii ponad te jedna, ktora JEST postacia - to one sa paliwem awansu. */
     val duplicates: Int get() = (count - 1).coerceAtLeast(0)
@@ -143,6 +149,8 @@ data class PlayerUiState(
     val talentRanks: Map<String, Int> = emptyMap(),
     /** Postep w kampanii per tier trudnosci - patrz [StoryProgress]. */
     val storyProgress: Map<String, Int> = emptyMap(),
+    /** Ile razy kazda plansza byla juz zdobyta - patrz [StageRepeats]. */
+    val stageClears: Map<String, Int> = emptyMap(),
     /** Kiedy ostatnio odebrano nagrody idle (epoch millis, 0 = nigdy) - patrz [IdleRewards]. */
     val idleCollectedAt: Long = 0L,
     /** Poziom, XP i rozdane punkty - zrodlo dla zakladki Postep i dla bonusow w walce. */
@@ -158,6 +166,8 @@ data class PlayerUiState(
     val resources: TownResources = TownResources(),
     /** Fiszki zapisane w czytniku - surowiec pod endless "Wlasne" (patrz [com.lernhero.domain.quiz.WordQuizBank]). */
     val savedWords: List<SavedWord> = emptyList(),
+    /** Poziomy opanowania tematow quizu - patrz [com.lernhero.domain.progress.CategoryMastery]. */
+    val categoryLevels: CategoryLevels = CategoryLevels(),
     val message: String? = null
 ) {
     /**
@@ -285,11 +295,19 @@ data class PlayerUiState(
 
 class PlayerViewModel(
     private val playerRepository: PlayerRepository,
-    private val reminders: ReminderScheduler
+    private val reminders: ReminderScheduler,
+    private val preferences: AppPreferences
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(PlayerUiState())
     val uiState = _uiState.asStateFlow()
+
+    /**
+     * Ostatnio wczytany gracz - trzymany WYLACZNIE po to, zeby dalo sie przeliczyc przypomnienia
+     * po zmianie w Ustawieniach ([remindersPreferencesChanged]) bez kolejnego strzalu po siec.
+     * Ekrany czytaja [uiState], nigdy tego pola.
+     */
+    private var lastPlayer: Player? = null
 
     init {
         refresh()
@@ -322,16 +340,21 @@ class PlayerViewModel(
                         freeSummonClaims = player.freeSummonClaims,
                         talentRanks = player.talentRanks,
                         storyProgress = player.storyProgress,
+                        stageClears = player.stageClears,
                         idleCollectedAt = player.idleCollectedAt,
                         progress = player.progress,
                         stats = player.stats,
                         claimedAchievements = player.claimedAchievements.toSet(),
                         resources = player.townResources,
-                        savedWords = player.savedWords
+                        savedWords = player.savedWords,
+                        categoryLevels = CategoryLevels(player.categoryLevels)
                     )
                 }
             }
-            if (player != null) rescheduleReminders(player)
+            if (player != null) {
+                lastPlayer = player
+                rescheduleReminders(player)
+            }
         }
     }
 
@@ -343,8 +366,23 @@ class PlayerViewModel(
      * Nadpisywanie jest bezpieczne: kazde przypomnienie ma staly klucz, wiec dziesiec wejsc do gry
      * daje jedno przypomnienie, a nie dziesiec.
      */
+    /**
+     * Wolane z Ustawien po kazdej zmianie przelacznika przypomnien. Bez tego nowy stan wszedlby
+     * w zycie dopiero przy nastepnym wczytaniu gracza - a gracz, ktory wlasnie cos wylaczyl,
+     * ma prawo oczekiwac, ze to juz sie stalo.
+     */
+    fun remindersPreferencesChanged() {
+        lastPlayer?.let(::rescheduleReminders)
+    }
+
     private fun rescheduleReminders(player: Player) {
         if (!reminders.isPermitted) return
+        // Wylaczenie w Ustawieniach ma kasowac to, co JUZ stoi w kolejce - inaczej przelacznik
+        // dzialalby dopiero od nastepnego przypomnienia, czyli z punktu widzenia gracza: wcale.
+        if (!preferences.remindersEnabled) {
+            reminders.cancelAll()
+            return
+        }
 
         val now = Clock.System.now().toEpochMilliseconds()
         // "Cel dzienny odhaczony" poznajemy po tym, ze cokolwiek zostalo dzis odebrane -
@@ -352,14 +390,18 @@ class PlayerViewModel(
         // szturchac kogos, kto juz dzis cos zrobil.
         val todayGoalDone = player.dailyGoalClaims.values.any { it == todayDateKey() }
 
-        reminders.schedule(
-            ReminderPlan.forPlayer(
-                player = player,
-                now = now,
-                todayGoalDone = todayGoalDone,
-                nextDailyGoalSlotMs = nextLocalHourMillis(ReminderPlan.DAILY_GOAL_HOUR, now)
-            )
-        )
+        // Plan liczy sie w calosci, a dopiero potem odsiewamy wyciszone rodzaje - dzieki temu
+        // regula "co i kiedy" zostaje jedna, w domenie, a Ustawienia sa zwyklym filtrem na koncu.
+        val plan = ReminderPlan.forPlayer(
+            player = player,
+            now = now,
+            todayGoalDone = todayGoalDone,
+            nextDailyGoalSlotMs = nextLocalHourMillis(preferences.dailyGoalHour, now)
+        ).filter { preferences.isReminderEnabled(it.kind) }
+
+        // Pusty plan tez wysylamy: [ReminderScheduler.schedule] nadpisuje CALA kolejke, wiec
+        // wyciszenie ostatniego rodzaju naprawde ja oprozni.
+        reminders.schedule(plan)
     }
 
     // region Ekwipunek
@@ -964,7 +1006,6 @@ class PlayerViewModel(
         viewModelScope.launch(Dispatchers.IO) {
             val updated = playerRepository.grantTestResources(
                 gold = 50_000,
-                wood = 5_000,
                 stone = 5_000,
                 iron = 2_000,
                 essence = 2_000,

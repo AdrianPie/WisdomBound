@@ -52,42 +52,60 @@ enum class RunDifficulty(
         coinMultiplier = 3.6f
     );
 
-    /** Drabinka pytan przy bramie lochu - piec pytan otwierajacych run. */
-    val gateLadder: List<QuizDifficulty>
-        get() = when (this) {
-            Normal -> listOf(
-                QuizDifficulty.Easy, QuizDifficulty.Easy, QuizDifficulty.Medium,
-                QuizDifficulty.Medium, QuizDifficulty.Hard
-            )
-            Nightmare -> listOf(
-                QuizDifficulty.Easy, QuizDifficulty.Medium, QuizDifficulty.Medium,
-                QuizDifficulty.Hard, QuizDifficulty.Hard
-            )
-            Hell, Death -> listOf(
-                QuizDifficulty.Medium, QuizDifficulty.Medium, QuizDifficulty.Hard,
-                QuizDifficulty.Hard, QuizDifficulty.Expert
-            )
-        }
-
-    /** Drabinka trzech pytan otwierajacych walke na polu mapy. Boss podnosi poprzeczke. */
-    fun battleLadder(kind: BattleKind): List<QuizDifficulty> = when (this) {
-        Normal -> when (kind) {
-            BattleKind.Normal -> listOf(QuizDifficulty.Easy, QuizDifficulty.Easy, QuizDifficulty.Medium)
-            BattleKind.Elite -> listOf(QuizDifficulty.Easy, QuizDifficulty.Medium, QuizDifficulty.Medium)
-            BattleKind.Boss -> listOf(QuizDifficulty.Medium, QuizDifficulty.Medium, QuizDifficulty.Hard)
-        }
-        Nightmare -> when (kind) {
-            BattleKind.Normal -> listOf(QuizDifficulty.Easy, QuizDifficulty.Medium, QuizDifficulty.Medium)
-            BattleKind.Elite -> listOf(QuizDifficulty.Medium, QuizDifficulty.Medium, QuizDifficulty.Hard)
-            BattleKind.Boss -> listOf(QuizDifficulty.Medium, QuizDifficulty.Hard, QuizDifficulty.Expert)
-        }
-        Hell, Death -> when (kind) {
-            BattleKind.Normal -> listOf(QuizDifficulty.Medium, QuizDifficulty.Hard, QuizDifficulty.Hard)
-            BattleKind.Elite -> listOf(QuizDifficulty.Hard, QuizDifficulty.Hard, QuizDifficulty.Expert)
-            BattleKind.Boss -> listOf(QuizDifficulty.Hard, QuizDifficulty.Expert, QuizDifficulty.Expert)
+    /**
+     * Drabinka pytan jednej planszy kampanii - CZTERY szczeble, po ktorych walka chodzi w kolko
+     * (patrz BattleViewModel.drawNextQuestion).
+     *
+     * Do tej pory o trudnosci pytan w kampanii decydowal wylacznie numer FALI
+     * ([com.lernhero.domain.quiz.QuizBank.ladderFor]), a plansza ma ich od jednej do trzech -
+     * wiec kampania nigdy nie wychodzila poza poczatek drabinki. Opis tieru obiecywal "pytania
+     * wyraznie trudniejsze", a gracz na Smierci, na ostatniej planszy Otchlani, dostawal dokladnie
+     * te same pytania co na pierwszej planszy Lasu na Normalnym. Tier skalowal wrogow i monety,
+     * a jedyna rzecz, ktora w tej grze naprawde rozstrzyga walke - pytanie - zostawial nietknieta.
+     *
+     * Teraz szczebel startowy sklada sie z trzech rzeczy: TIERU (zakladka nad mapa), GLEBOKOSCI
+     * kampanii ([globalStage]) i RODZAJU walki (boss podnosi poprzeczke). Na Normalnym plansza 1
+     * wychodzi dokladnie tak, jak wygladala drabinka fali 1 - czyli poczatek gry nie zrobil sie
+     * trudniejszy, zmienil sie tylko dalszy ciag.
+     */
+    fun campaignLadder(kind: BattleKind, globalStage: Int): List<QuizDifficulty> {
+        val start = tierStep + depthStep(globalStage) + kind.ladderStep
+        return listOf(start, start, start + 1, start + 1).map { rung ->
+            QuizDifficulty.entries[rung.coerceIn(0, QuizDifficulty.entries.lastIndex)]
         }
     }
 
+    /**
+     * Ile szczebli doklada sam tier. [Hell] i [Death] stoja na tym samym stopniu celowo: pytanie
+     * ma tylko cztery poziomy, a te dwa tiery rozni juz przede wszystkim to, ile wytrzymuja
+     * wrogowie ([enemyHpMultiplier]) - nie da sie zadac "jeszcze bardziej eksperckiego" pytania.
+     */
+    private val tierStep: Int
+        get() = when (this) {
+            Normal -> 0
+            Nightmare -> 1
+            Hell, Death -> 2
+        }
+
     /** Nastepny szczebel trudnosci kampanii - null na [Death], juz nie ma wyzej. */
     val next: RunDifficulty? get() = entries.getOrNull(ordinal + 1)
+
+    private companion object {
+        /**
+         * Co tyle plansz kampania doklada jeden szczebel trudnosci pytan. Przy
+         * [com.lernhero.domain.story.StoryWorldCatalog.totalStages] = 36 daje to trzy stopnie
+         * na tier: dwie pierwsze krainy, dwie srodkowe, dwie ostatnie.
+         */
+        const val STAGES_PER_RUNG = 12
+
+        fun depthStep(globalStage: Int): Int = (globalStage - 1).coerceAtLeast(0) / STAGES_PER_RUNG
+    }
 }
+
+/** Ile szczebli drabinki pytan doklada sam rodzaj walki - patrz [RunDifficulty.campaignLadder]. */
+private val BattleKind.ladderStep: Int
+    get() = when (this) {
+        BattleKind.Normal -> 0
+        BattleKind.Elite -> 0
+        BattleKind.Boss -> 1
+    }

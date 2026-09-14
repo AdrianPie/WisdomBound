@@ -16,7 +16,7 @@ class QuizBankTest {
 
     @Test
     fun `bank ma duzo pytan w kazdej kategorii i na kazdym poziomie`() {
-        assertTrue(all.size >= 1300, "Bank powinien miec ponad 1300 pytan, ma ${all.size}")
+        assertTrue(all.size >= 2400, "Bank powinien miec ponad 2400 pytan, ma ${all.size}")
 
         // Slowka i wlasne talie nie sa w tym banku - powstaja z materialu gracza (patrz QuizCategory.builtin).
         // Flagi sa ograniczone liczba dostepnych grafik krajow, wiec maja nizszy prog.
@@ -29,6 +29,30 @@ class QuizBankTest {
         QuizDifficulty.entries.forEach { difficulty ->
             val count = all.count { it.difficulty == difficulty }
             assertTrue(count >= 300, "Poziom ${difficulty.label} ma tylko $count pytan")
+        }
+    }
+
+    /**
+     * **Glebokosc, nie tylko szerokosc.**
+     *
+     * Odkad endless gra sie na JEDNYM temacie przez dwadziescia fal
+     * ([com.lernhero.domain.progress.CategoryMastery]), suma pytan w kategorii przestala cokolwiek
+     * mowic. Liczy sie to, ile ma ona pytan na GORNYCH szczeblach - bo od poziomu 5 tematu gracz
+     * startuje na Hard, a od 7 na Expert i nizej juz nie schodzi. Kategoria z dwudziestoma
+     * pytaniami eksperckimi wyczerpuje je w jednym wejsciu, a losowanie zaczyna po cichu schodzic
+     * o szczebel nizej (patrz [QuizBank.pickFrom]) - czyli awans tematu robi pytania LATWIEJSZYMI.
+     *
+     * Flagi sa poza tym progiem: ich liczbe ogranicza liczba dostepnych grafik krajow, a nie bank.
+     */
+    @Test
+    fun `kazdy temat ma z czego pytac na gornych szczeblach`() {
+        QuizCategory.builtin.filter { it != QuizCategory.Flags }.forEach { category ->
+            val inCategory = all.filter { it.category == category }
+            val hard = inCategory.count { it.difficulty == QuizDifficulty.Hard }
+            val expert = inCategory.count { it.difficulty == QuizDifficulty.Expert }
+
+            assertTrue(hard >= 40, "Temat ${category.label} ma tylko $hard pytan trudnych")
+            assertTrue(expert >= 30, "Temat ${category.label} ma tylko $expert pytan eksperckich")
         }
     }
 

@@ -101,7 +101,7 @@ object MythologyQuestions {
             id = "minotaur",
             prompt = "Where did the Minotaur live?",
             correct = "In the labyrinth on Crete",
-            wrong = listOf("On Olympus", "In Troy", "In Hades"),
+            wrong = listOf("On the slopes of Olympus", "Behind the walls of Troy", "In the depths of Hades"),
             difficulty = QuizDifficulty.Medium
         ),
         ask(

@@ -29,10 +29,14 @@ import com.lernhero.domain.progress.AchievementCatalog
 import com.lernhero.domain.progress.RunStats
 import com.lernhero.domain.quiz.custom.CustomDeck
 import com.lernhero.domain.story.IdleRewards
+import com.lernhero.domain.story.StageRepeats
+import com.lernhero.domain.run.RunDifficulty
 import com.lernhero.domain.summon.FreeSummon
 import com.lernhero.domain.town.ProductionBuilding
 import com.lernhero.domain.town.ProductionState
 import com.lernhero.domain.town.TownResources
+import com.lernhero.domain.progress.CategoryLevels
+import com.lernhero.domain.quiz.QuizCategory
 import dev.gitlive.firebase.Firebase
 import dev.gitlive.firebase.auth.FirebaseUser
 import dev.gitlive.firebase.auth.auth
@@ -302,13 +306,19 @@ class PlayerRepositoryImpl: PlayerRepository {
             val bagWithLoot = run.droppedItemIds.fold(player.heroInventory) { bag, itemId ->
                 Inventory.add(bag, itemId)
             }
+            // Awans tematu jedzie tym samym zapisem co zloto i XP - patrz [RunStats.masteredCategory].
+            val masteredLevels = run.masteredCategory
+                ?.let { name -> QuizCategory.entries.firstOrNull { it.name == name } }
+                ?.let { category -> CategoryLevels(player.categoryLevels).advanced(category).levels }
+                ?: player.categoryLevels
+
             val updated = player.copy(
                 money = (player.money + run.gold).coerceAtLeast(0),
                 progress = levelUp.progress,
                 stats = player.stats + run,
+                categoryLevels = masteredLevels,
                 heroInventory = bagWithLoot,
                 townResources = player.townResources.plusAll(
-                    wood = run.wood,
                     stone = run.stone,
                     iron = run.iron,
                     essence = run.essence,
@@ -544,10 +554,9 @@ class PlayerRepositoryImpl: PlayerRepository {
             val reward = IdleRewards.pendingFor(best, player.idleCollectedAt, now)
             if (reward.isEmpty) return player
 
-            val levelUp = LevelCurve.award(player.progress, reward.xp)
+            // XP z kapaczki nie ma - awans placi sie odpowiedzia, patrz [IdleRewards.CAP_HOURS].
             val updated = player.copy(
                 money = player.money + reward.gold,
-                progress = levelUp.progress,
                 townResources = player.townResources.plusAll(iron = reward.iron, essence = reward.essence),
                 idleCollectedAt = now
             )
@@ -560,7 +569,6 @@ class PlayerRepositoryImpl: PlayerRepository {
 
     override suspend fun grantTestResources(
         gold: Int,
-        wood: Int,
         stone: Int,
         iron: Int,
         essence: Int,
@@ -575,7 +583,6 @@ class PlayerRepositoryImpl: PlayerRepository {
                 money = player.money + gold,
                 progress = levelUp.progress,
                 townResources = player.townResources.plusAll(
-                    wood = wood,
                     stone = stone,
                     iron = iron,
                     essence = essence,
@@ -593,9 +600,20 @@ class PlayerRepositoryImpl: PlayerRepository {
         return try {
             val document = playerDocument() ?: return null
             val player = getPlayer() ?: return null
+            val difficulty = RunDifficulty.entries.firstOrNull { it.name == tier } ?: return player
             val current = player.storyProgress[tier] ?: 0
-            if (globalStage <= current) return player
-            val updated = player.copy(storyProgress = player.storyProgress + (tier to globalStage))
+            // Licznik podejsc rosnie ZAWSZE, takze przy powtorce - to z niego liczy sie wycena
+            // kolejnego przejscia ([StageRepeats]). Wczesniej funkcja wychodzila tu przedwczesnie
+            // przy `globalStage <= current`, wiec powtorki nie zostawialy po sobie zadnego sladu.
+            val clears = StageRepeats.withClear(player.stageClears, difficulty, globalStage)
+            val updated = player.copy(
+                stageClears = clears,
+                storyProgress = if (globalStage > current) {
+                    player.storyProgress + (tier to globalStage)
+                } else {
+                    player.storyProgress
+                }
+            )
             document.set(updated)
             updated
         } catch (e: Exception) {
@@ -769,7 +787,6 @@ class PlayerRepositoryImpl: PlayerRepository {
             val document = playerDocument() ?: return null
             val player = getPlayer() ?: return null
             val updated = when (building) {
-                ProductionBuilding.Sawmill -> player.copy(sawmill = state, townResources = resources)
                 ProductionBuilding.Quarry -> player.copy(quarry = state, townResources = resources)
             }
             document.set(updated)

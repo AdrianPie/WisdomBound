@@ -38,7 +38,7 @@ object HistoryQuestionsExtra3 {
         ask("tenochtitlan_kto", "Which empire was ruled from the city of Tenochtitlan?", "The Aztec empire", listOf("The Inca empire", "The Maya city-states", "The Olmec"), QuizDifficulty.Easy),
         ask("gandhi_metoda", "What method did Mahatma Gandhi use against British rule?", "Non-violent resistance", listOf("Guerrilla warfare", "A naval blockade", "A palace coup"), QuizDifficulty.Easy),
         ask("mandela_kraj", "In which country was Nelson Mandela president?", "South Africa", listOf("Kenya", "Nigeria", "Ghana"), QuizDifficulty.Easy),
-        ask("apartheid_co", "What was apartheid?", "A system of enforced racial segregation", listOf("A trade agreement", "A style of architecture", "A form of taxation"), QuizDifficulty.Easy),
+        ask("apartheid_co", "What was apartheid?", "A system of enforced racial segregation", listOf("A trade agreement between two empires", "A style of building popular in the 1930s", "A form of tax levied on farmland"), QuizDifficulty.Easy),
         ask("sfinks_kraj", "In which country does the Great Sphinx stand?", "Egypt", listOf("Iraq", "Greece", "Mexico"), QuizDifficulty.Easy),
         ask("titanic_rok_wiek", "In which century did the Titanic sink?", "The 20th century", listOf("The 19th century", "The 18th century", "The 21st century"), QuizDifficulty.Easy),
         ask("karawany_sahara", "Which animal made long-distance trade routes across the Sahara possible?", "The camel", listOf("The horse", "The ox", "The donkey"), QuizDifficulty.Easy),
@@ -51,14 +51,14 @@ object HistoryQuestionsExtra3 {
         ask("wojna_opiumowa_kto", "The Opium Wars were fought between China and which power?", "Britain", listOf("Russia", "Portugal", "The Netherlands"), QuizDifficulty.Medium),
         ask("indie_niepodleglosc", "In which year did India gain independence?", "1947", listOf("1935", "1950", "1962"), QuizDifficulty.Medium),
         ask("bizancjum_upadek", "In which year did Constantinople fall to the Ottomans?", "1453", listOf("1204", "1492", "1389"), QuizDifficulty.Medium),
-        ask("hammurabi_co", "What is Hammurabi best known for?", "One of the earliest written law codes", listOf("Building the pyramids", "Inventing the alphabet", "Founding Athens"), QuizDifficulty.Medium),
+        ask("hammurabi_co", "What is Hammurabi best known for?", "One of the earliest written law codes", listOf("The building of the great pyramids", "The invention of the first alphabet", "The founding of the city of Athens"), QuizDifficulty.Medium),
         ask("czarna_smierc_wiek", "In which century did the Black Death sweep Europe?", "The 14th century", listOf("The 12th century", "The 16th century", "The 17th century"), QuizDifficulty.Medium),
         ask("zlota_horda_kto", "The Golden Horde was a state founded by which people?", "The Mongols", listOf("The Ottomans", "The Vikings", "The Magyars"), QuizDifficulty.Medium),
         ask("wojna_krymska_strony", "In the Crimean War, Russia fought a coalition led by which two powers?", "Britain and France", listOf("Prussia and Austria", "Spain and Portugal", "Sweden and Denmark"), QuizDifficulty.Medium),
         ask("apollo_program_cel", "What was the goal of the Apollo program?", "Landing humans on the Moon", listOf("Building a space station", "Reaching Mars", "Mapping Venus"), QuizDifficulty.Medium),
 
         /* ------------------------------ Hard ------------------------------- */
-        ask("traktat_tordesillas", "What did the 1494 Treaty of Tordesillas divide?", "Newly discovered lands between Spain and Portugal", listOf("The Holy Roman Empire", "The Baltic trade", "Italy between France and Austria"), QuizDifficulty.Hard),
+        ask("traktat_tordesillas", "What did the 1494 Treaty of Tordesillas divide?", "Newly discovered lands between Spain and Portugal", listOf("The lands of the Holy Roman Empire among its princes", "The Baltic trade between the Hanseatic cities", "Italy between the crowns of France and Austria"), QuizDifficulty.Hard),
         ask("wielki_zimbabwe", "Great Zimbabwe was the centre of a state on which continent?", "Africa", listOf("South America", "Asia", "Australia"), QuizDifficulty.Hard),
         ask("dynastia_mogolow", "The Mughal Empire ruled mainly over which region?", "The Indian subcontinent", listOf("Persia", "Anatolia", "Central China"), QuizDifficulty.Hard),
         ask("sakoku_japonia", "What was Japan's sakoku policy?", "Near-total isolation from the outside world", listOf("Forced conversion to Buddhism", "Land reform for peasants", "An alliance with Portugal"), QuizDifficulty.Hard),
@@ -77,8 +77,8 @@ object HistoryQuestionsExtra3 {
         ask("rewolta_bokserow", "Against whom was the Boxer Rebellion directed?", "Foreign influence in China", listOf("The Japanese emperor", "The Mughal court", "Russian serfdom"), QuizDifficulty.Expert),
         ask("kodeks_justyniana_nazwa", "By what name is the great compilation of Roman law known?", "Corpus Juris Civilis", listOf("Lex Salica", "Codex Theodosianus", "Digesta Gothica"), QuizDifficulty.Expert),
         ask("dynastia_tokugawa_miasto", "Which city was the seat of the Tokugawa shogunate?", "Edo", listOf("Kyoto", "Osaka", "Nara"), QuizDifficulty.Expert),
-        ask("wielki_skok_naprzod", "What was China's Great Leap Forward meant to achieve?", "Rapid industrialization and collectivization", listOf("Opening trade with the West", "A return to imperial rule", "Demilitarization"), QuizDifficulty.Expert),
-        ask("imperium_ottomanskie_szczyt", "Under which sultan did the Ottoman Empire reach its greatest expansion in Europe?", "Suleiman the Magnificent", listOf("Osman I", "Mehmed II", "Selim III"), QuizDifficulty.Expert),
+        ask("wielki_skok_naprzod", "What was China's Great Leap Forward meant to achieve?", "Rapid industrialization and collectivization", listOf("Opening trade with the countries of the West", "A return to rule by the old imperial court", "The disarming of the country after the war"), QuizDifficulty.Expert),
+        ask("imperium_ottomanskie_szczyt", "Under which sultan did the Ottoman Empire reach its greatest expansion in Europe?", "Suleiman the Magnificent", listOf("Osman the First", "Mehmed the Conqueror", "Selim the Grim"), QuizDifficulty.Expert),
         ask("traktat_nerczynski", "The 1689 Treaty of Nerchinsk settled a border between Russia and which state?", "Qing China", listOf("Persia", "The Ottoman Empire", "Sweden"), QuizDifficulty.Expert)
     )
 }

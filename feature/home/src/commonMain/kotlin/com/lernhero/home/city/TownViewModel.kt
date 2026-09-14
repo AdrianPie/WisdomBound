@@ -28,14 +28,12 @@ data class TownUiState(
     val loading: Boolean = true,
     val money: Int = 0,
     val resources: TownResources = TownResources(),
-    val sawmill: ProductionState = ProductionState(),
     val quarry: ProductionState = ProductionState(),
     /** Rosnie co tyknięcie - wymusza przeliczenie paska/licznikow w UI. */
     val now: Long = 0L,
     val toasts: List<TownToast> = emptyList()
 ) {
     fun stateOf(building: ProductionBuilding): ProductionState = when (building) {
-        ProductionBuilding.Sawmill -> sawmill
         ProductionBuilding.Quarry -> quarry
     }
 }
@@ -72,7 +70,6 @@ class TownViewModel(
                         resources = player.townResources,
                         // Budynek nigdy nie uruchomiony ma lastCollectedAt = 0 - startujemy go od
                         // TERAZ, zeby pierwsze wejscie nie naliczylo produkcji od epoki Uniksa.
-                        sawmill = player.sawmill.startedIfNeeded(),
                         quarry = player.quarry.startedIfNeeded()
                     )
                 }
@@ -133,6 +130,12 @@ class TownViewModel(
     fun upgrade(building: ProductionBuilding) {
         val state = _uiState.value
         val production = state.stateOf(building)
+        // Sufit sprawdzamy TUTAJ, a nie tylko w UI - inaczej zapis z wyzszym poziomem (albo
+        // dwuklik w chwili przeliczania) przepchnalby budynek ponad [ProductionMath.MAX_LEVEL].
+        if (ProductionMath.isMaxed(production.level)) {
+            pushToast("The building is already at max level")
+            return
+        }
         val cost = ProductionMath.upgradeCost(production.level)
         if (state.money < cost) {
             pushToast("Not enough gold (need $cost)")
@@ -160,7 +163,6 @@ class TownViewModel(
     ) {
         _uiState.update { state ->
             when (building) {
-                ProductionBuilding.Sawmill -> state.copy(sawmill = production, resources = resources)
                 ProductionBuilding.Quarry -> state.copy(quarry = production, resources = resources)
             }
         }
@@ -194,7 +196,6 @@ class TownViewModel(
 }
 
 private fun ProductionBuilding.resourceLabel(): String = when (this) {
-    ProductionBuilding.Sawmill -> "drewna"
     ProductionBuilding.Quarry -> "kamienia"
 }
 

@@ -63,7 +63,7 @@ object BiologyQuestionsExtra {
         ask("symbioza", "What is the relationship called where both organisms benefit?", "Mutualism", listOf("Parasitism", "Competition", "Commensalism"), QuizDifficulty.Medium),
 
         /* ------------------------------ Hard ------------------------------- */
-        ask("golgi", "What is the Golgi apparatus responsible for?", "Processing and sorting proteins", listOf("Producing ATP", "Storing DNA", "Photosynthesis"), QuizDifficulty.Hard),
+        ask("golgi", "What is the Golgi apparatus responsible for?", "Processing and sorting proteins", listOf("Producing the cell's energy", "Storing the cell's own DNA", "Carrying out photosynthesis"), QuizDifficulty.Hard),
         ask("lizosom", "What do lysosomes contain?", "Digestive enzymes", listOf("Chlorophyll", "Ribosomal RNA", "Fat stores"), QuizDifficulty.Hard),
         ask("mitoza_faza", "In which phase of mitosis do chromosomes line up on the equatorial plane?", "Metaphase", listOf("Prophase", "Anaphase", "Telophase"), QuizDifficulty.Hard),
         ask("krew_ph", "What is the normal pH of human blood?", "About 7.4", listOf("About 5.5", "About 8.5", "Exactly 7.0"), QuizDifficulty.Hard),
@@ -74,9 +74,9 @@ object BiologyQuestionsExtra {
         ask("mielina", "What role does the myelin sheath play?", "Speeds up nerve impulse conduction", listOf("Nourishes the neuron", "Produces neurotransmitters", "Protects against toxins"), QuizDifficulty.Hard),
         ask("kodon", "How many nucleotides make up one codon?", "Three", listOf("Two", "Four", "Six"), QuizDifficulty.Hard),
         ask("enzym_hamowanie", "What is the part of an enzyme where a substrate binds called?", "The active site", listOf("The regulatory domain", "The prosthetic group", "The allosteric site"), QuizDifficulty.Hard),
-        ask("osmoza", "What moves during osmosis?", "Water across a semipermeable membrane", listOf("Mineral salts", "Proteins", "Oxygen"), QuizDifficulty.Hard),
+        ask("osmoza", "What moves during osmosis?", "Water across a semipermeable membrane", listOf("Mineral salts along a nerve fibre", "Proteins out through the cell wall", "Oxygen bubbles through the cytoplasm"), QuizDifficulty.Hard),
         ask("hemofilia", "What is hemophilia associated with?", "A blood clotting disorder", listOf("An excess of red blood cells", "A lack of insulin", "Nerve damage"), QuizDifficulty.Hard),
-        ask("gatunek_def", "What determines membership in a single species, biologically?", "The ability to produce fertile offspring", listOf("Similar appearance", "Sharing the same range", "Eating the same diet"), QuizDifficulty.Hard),
+        ask("gatunek_def", "What determines membership in a single species, biologically?", "The ability to produce fertile offspring", listOf("A close similarity in appearance", "Living within the same range", "Feeding on exactly the same diet"), QuizDifficulty.Hard),
         ask("tkanki_typy", "How many basic tissue types are distinguished in humans?", "Four", listOf("Two", "Six", "Eight"), QuizDifficulty.Hard),
 
         /* ----------------------------- Expert ---------------------------- */
@@ -87,7 +87,7 @@ object BiologyQuestionsExtra {
         ask("prion", "What is a prion?", "An infectious, misfolded protein", listOf("An RNA virus", "An anaerobic bacterium", "A DNA fragment"), QuizDifficulty.Expert),
         ask("krzyzowka_mendel", "What phenotype ratio does a cross of two heterozygotes give in single-gene inheritance?", "3:1", listOf("1:1", "9:3:3:1", "2:2"), QuizDifficulty.Expert),
         ask("chemiosmoza", "Who described the chemiosmotic theory of ATP production?", "Peter Mitchell", listOf("Hans Krebs", "Otto Warburg", "Fritz Lipmann"), QuizDifficulty.Expert),
-        ask("intron", "What are introns?", "Non-coding gene segments spliced out of pre-mRNA", listOf("Protein-coding fragments", "Histone proteins", "Repair enzymes"), QuizDifficulty.Expert),
+        ask("intron", "What are introns?", "Non-coding gene segments spliced out of pre-mRNA", listOf("Protein-coding fragments kept in the mRNA", "Histone proteins the DNA is wound around", "Repair enzymes that patch broken strands"), QuizDifficulty.Expert),
         ask("halden", "What is the state of allele frequency equilibrium in a large population called?", "Hardy-Weinberg equilibrium", listOf("Genetic drift", "The founder effect", "Nash equilibrium"), QuizDifficulty.Expert),
         ask("stromatolit", "Which organisms are credited with putting oxygen into Earth's atmosphere?", "Cyanobacteria", listOf("Fungi", "Methanogenic archaea", "Diatoms"), QuizDifficulty.Expert),
         ask("crispr", "What is the CRISPR-Cas9 technique used for?", "Precise genome editing", listOf("Sequencing proteins", "Growing stem cells", "Brain imaging"), QuizDifficulty.Expert),

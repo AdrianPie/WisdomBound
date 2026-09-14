@@ -84,7 +84,7 @@ object CapitalQuestionsExtra {
         /* ----------------------------- Expert ---------------------------- */
         capital("Bolivia (constitutional capital)", "Sucre", listOf("La Paz", "Santa Cruz", "Cochabamba"), QuizDifficulty.Expert),
         capital("Ivory Coast", "Yamoussoukro", listOf("Abidjan", "Bouake", "Korhogo"), QuizDifficulty.Expert),
-        capital("Sri Lanka (administrative capital)", "Sri Jayawardenepura Kotte", listOf("Colombo", "Kandy", "Galle"), QuizDifficulty.Expert),
+        capital("Sri Lanka (administrative capital)", "Sri Jayawardenepura Kotte", listOf("Nuwara Eliya", "Trincomalee", "Batticaloa"), QuizDifficulty.Expert),
         capital("Tajikistan", "Dushanbe", listOf("Khujand", "Kulob", "Qurghonteppa"), QuizDifficulty.Expert),
         capital("Turkmenistan", "Ashgabat", listOf("Turkmenbashy", "Mary", "Dashoguz"), QuizDifficulty.Expert),
         capital("Azerbaijan", "Baku", listOf("Ganja", "Sumgait", "Lankaran"), QuizDifficulty.Expert),

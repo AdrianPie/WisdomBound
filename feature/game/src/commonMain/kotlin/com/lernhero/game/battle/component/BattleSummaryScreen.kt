@@ -290,7 +290,6 @@ private fun summaryRows(summary: RunStats?, wave: Int): List<SummaryRow> {
         if (summary.iron > 0) add(SummaryRow("⚙", "Ore", "+${summary.iron}", emphasis = true))
         if (summary.essence > 0) add(SummaryRow("✨", "Essence", "+${summary.essence}", emphasis = true))
         if (summary.summonTickets > 0) add(SummaryRow("🎟", "Tickets", "+${summary.summonTickets}", emphasis = true))
-        if (summary.wood > 0) add(SummaryRow("🪵", "Wood", "+${summary.wood}", emphasis = true))
         if (summary.stone > 0) add(SummaryRow("🪨", "Stone", "+${summary.stone}", emphasis = true))
     }
 }

@@ -97,6 +97,12 @@ import lernhero.shared.generated.resources.nav_progress
 import lernhero.shared.generated.resources.nav_shop
 import lernhero.shared.generated.resources.summon_banner_basic
 import lernhero.shared.generated.resources.summon_banner_heroic
+import lernhero.shared.generated.resources.answer_frame
+import lernhero.shared.generated.resources.answer_fill
+import lernhero.shared.generated.resources.answer_gems
+import lernhero.shared.generated.resources.answer_badge_frame
+import lernhero.shared.generated.resources.answer_badge_gem
+import lernhero.shared.generated.resources.ramka
 
 object Resources {
     object Icon {
@@ -315,6 +321,43 @@ object Resources {
         val magicMissileRing2 = Res.drawable.magic_missle_2
         val magicMissileRing3 = Res.drawable.magic_missle_3
     }
+    /**
+     * Ozdobny dymek odpowiedzi w quizie, rozbity na warstwy - bo kolor kamieni i tla ma zalezec od
+     * numeru odpowiedzi i od tego, czy byla trafiona. Zloto zostaje w oryginalnych barwach, a
+     * [answerBubbleFill] i [answerBubbleGems] sa w ODCIENIACH SZAROSCI: rysowane przez
+     * `ColorFilter.tint(kolor, BlendMode.Modulate)` przyjmuja dowolna barwe, zachowujac cieniowanie
+     * i fasetki z oryginalnej grafiki. Wszystkie warstwy leza na tym samym canvasie 1233x325, wiec
+     * naklada sie je jedna na druga bez pozycjonowania - kolejnosc: fill, frame, gems.
+     *
+     * Wygenerowane z `answer.png` / `answer_number.png` - po podmianie zrodel trzeba wygenerowac
+     * warstwy na nowo. Uzywa ich [com.lernhero.game.battle.component.LiveQuizBar].
+     */
+    object QuizArt {
+        val answerBubbleFrame = Res.drawable.answer_frame
+        val answerBubbleFill = Res.drawable.answer_fill
+        val answerBubbleGems = Res.drawable.answer_gems
+
+        /** Krazek z numerem odpowiedzi - canvas 264x255, ta sama zasada dwoch warstw co wyzej. */
+        val answerBadgeFrame = Res.drawable.answer_badge_frame
+        val answerBadgeGem = Res.drawable.answer_badge_gem
+
+        /**
+         * Gotowa, ozdobna ramka pod PYTANIE (1996x665) - cala oprawa razem z tlem, wiec rysuje sie
+         * ja jednym Image, bez skladania z warstw. Proporcje trzyma [QUESTION_FRAME_RATIO].
+         */
+        val questionFrame = Res.drawable.ramka
+
+        /** Szerokosc do wysokosci [questionFrame] - do `Modifier.aspectRatio`. */
+        const val QUESTION_FRAME_RATIO = 1996f / 665f
+
+        /**
+         * Jaka czesc szerokosci ramki moze zajac tekst pytania. Wnetrze siega 87% szerokosci, ale
+         * przy samych krawedziach jest juz plytkie (wcinaja sie narozniki), wiec tekst dostaje
+         * wezszy pas - zmierzony tak, by trzymal sie czesci o pelnej wysokosci wnetrza.
+         */
+        const val QUESTION_TEXT_WIDTH_FRACTION = 0.78f
+    }
+
     object Flag {
         val India = Res.drawable.india
         val Usa = Res.drawable.usa

@@ -63,7 +63,14 @@ import org.koin.compose.koinInject
 import org.koin.compose.viewmodel.koinViewModel
 
 @Composable
-fun HomeNavGraph() {
+fun HomeNavGraph(
+    /**
+     * Wyjscie z konta. Ten graf ma WLASNY NavController, wiec z wylogowania nie da sie dojsc do
+     * ekranu logowania inaczej niz oddajac decyzje grafowi nadrzednemu (patrz
+     * com.lernhero.navigation.SetupNavGraph).
+     */
+    onSignedOut: () -> Unit = {}
+) {
 
     val navController = rememberNavController()
     val currentRoute = navController.currentBackStackEntryAsState()
@@ -101,7 +108,6 @@ fun HomeNavGraph() {
         derivedStateOf {
             !currentRoute.value.isOnRoute<Screen.BattleScreen>() &&
                 !currentRoute.value.isOnRoute<Screen.StoryMap>() &&
-                !currentRoute.value.isOnRoute<Screen.Sawmill>() &&
                 !currentRoute.value.isOnRoute<Screen.Quarry>() &&
                 !currentRoute.value.isOnRoute<Screen.Forge>() &&
                 !currentRoute.value.isOnRoute<Screen.SummonCenter>() &&
@@ -183,11 +189,6 @@ fun HomeNavGraph() {
                                 launchSingleTop = true
                             }
                         },
-                        onOpenSawmill = {
-                            navController.navigate(Screen.Sawmill) {
-                                launchSingleTop = true
-                            }
-                        },
                         onOpenQuarry = {
                             navController.navigate(Screen.Quarry) {
                                 launchSingleTop = true
@@ -233,14 +234,10 @@ fun HomeNavGraph() {
                 }
                 composable<Screen.Settings> {
                     SettingsScreen(
+                        playerViewModel = playerViewModel,
                         onBack = { navController.popBackStack() },
+                        onSignedOut = onSignedOut,
                         insets = WindowInsets.systemBars.asPaddingValues()
-                    )
-                }
-                composable<Screen.Sawmill> {
-                    ProductionBuildingScreen(
-                        building = ProductionBuilding.Sawmill,
-                        onBack = { navController.popBackStack() }
                     )
                 }
                 composable<Screen.Quarry> {

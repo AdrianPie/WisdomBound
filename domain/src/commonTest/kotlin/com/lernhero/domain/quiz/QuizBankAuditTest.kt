@@ -9,7 +9,8 @@ import kotlin.test.assertTrue
  * i przeszla przez [QuizBankTest].
  *
  * [QuizBankTest] pilnuje rzeczy mechanicznych (zdublowane id, cztery odpowiedzi, identyczna
- * tresc). Tutaj sa dwie wady, ktorych ono NIE widzialo, a gracz widzialby od razu.
+ * tresc). Tutaj sa wady, ktorych ono NIE widzialo, a gracz zobaczylby od razu - albo, co gorsza,
+ * nauczylby sie je wykorzystywac zamiast odpowiadac.
  */
 class QuizBankAuditTest {
 
@@ -72,6 +73,35 @@ class QuizBankAuditTest {
         assertTrue(misplaced.isEmpty(), "Polskie tresci poza kategoria Poland: $misplaced")
     }
 
+    /**
+     * **Poprawna odpowiedz nie wyroznia sie sama dlugoscia.**
+     *
+     * Najtansza sciaga w kazdym quizie: jedna odpowiedz rozwlekla i wyjasniajaca, trzy urwane.
+     * Gracz, ktory nie ma pojecia o temacie, klika najdluzsza i trafia duzo czesciej niz raz na
+     * cztery - a pytanie, ktore da sie wygrac bez wiedzy, nie uczy niczego i psuje kazdy
+     * mechanizm, ktory od tej wiedzy zalezy (mnoznik obrazen, drabinka trudnosci, poziom tematu).
+     *
+     * Audyt znalazl 182 takie pytania w banku, ktory przechodzil wszystkie pozostale testy - nie
+     * przez niechlujstwo, tylko dlatego, ze pisze sie je naturalnie: poprawna odpowiedz zna sie
+     * dokladnie, a dystraktory dopisuje sie w trzech slowach.
+     *
+     * Prog jest CELOWO luzny. Nie chodzi o to, zeby cztery odpowiedzi mialy rowna dlugosc (przy
+     * nazwie wlasnej to niewykonalne - "Sri Jayawardenepura Kotte" nie ma jak sie skrocic), tylko
+     * o to, zeby zadna nie odstawala tak, ze widac ja z drugiego konca ekranu.
+     *
+     * Flagi sa poza testem: tam wszystkie cztery odpowiedzi to nazwy panstw losowane z tej samej
+     * puli, wiec dlugosc niczego nie zdradza.
+     */
+    @Test
+    fun `poprawna odpowiedz nie wyroznia sie sama dlugoscia`() {
+        val giveaways = all
+            .filter { it.category != QuizCategory.Flags }
+            .filter { entry -> entry.wrong.all { entry.correct.length - it.length >= LENGTH_GIVEAWAY } }
+            .map { "${it.id}: '${it.correct}' vs ${it.wrong}" }
+
+        assertTrue(giveaways.isEmpty(), "Poprawna odpowiedz zdradza sie dlugoscia: $giveaways")
+    }
+
     /*
      * Byl tu trzeci test - "odpowiedz schowana w tresci pytania". Zostal USUNIETY, choc znalazl
      * realne wady (permafrost -> "grunt trwale zamarzniety", transuranowce -> "ciezsze od uranu",
@@ -89,6 +119,13 @@ class QuizBankAuditTest {
     private companion object {
         /** Powyzej tego pokrycia slow kluczowych dwa pytania o tej samej odpowiedzi to ten sam fakt. */
         const val DUPLICATE_THRESHOLD = 0.55
+
+        /**
+         * O tyle znakow poprawna odpowiedz moze byc dluzsza od KAZDEJ blednej, zanim zacznie sie
+         * sama zdradzac. Liczone wzgledem najdluzszego dystraktora, nie sredniej - wystarczy jedna
+         * bledna odpowiedz podobnej dlugosci, zeby wybor przestal byc darmowy.
+         */
+        const val LENGTH_GIVEAWAY = 15
 
         /** Postacie i miejsca bez rozpoznawalnosci poza Polska - patrz test wyzej. */
         val POLAND_ONLY = listOf(

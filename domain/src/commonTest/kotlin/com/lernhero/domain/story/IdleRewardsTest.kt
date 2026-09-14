@@ -43,6 +43,19 @@ class IdleRewardsTest {
     }
 
     @Test
+    fun `kapaczka placi materialami, a nie awansem`() {
+        // Regula calej gry brzmi "XP plynie z NAUKI" (patrz RunLoot) - a kapaczka idle dawala do
+        // 1440 XP za dwanascie godzin nieobecnosci, czyli poltora poziomu ZA NIC. Gorzej na
+        // starcie: po pierwszej krainie 360 XP przy awansie kosztujacym niecale 240. Teraz idle
+        // odklada wylacznie zloto i surowce - powod, zeby zajrzec rano, a nie darmowy poziom.
+        val rate = IdleRewards.ratePerHour(36)
+        assertTrue(rate.gold > 0f && rate.iron > 0f && rate.essence > 0f)
+
+        val reward = IdleRewards.pendingFor(36, 1L, 1L + 12 * hour)
+        assertTrue(reward.gold > 0 && reward.iron > 0 && reward.essence > 0)
+    }
+
+    @Test
     fun `dluzsza nieobecnosc daje wiecej, dopoki nie przekroczy sufitu`() {
         val short = IdleRewards.pendingFor(20, 1L, 1L + 2 * hour)
         val long = IdleRewards.pendingFor(20, 1L, 1L + 6 * hour)

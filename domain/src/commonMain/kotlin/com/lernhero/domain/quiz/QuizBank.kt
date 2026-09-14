@@ -25,6 +25,7 @@ import com.lernhero.domain.quiz.bank.WorldHistoryQuestions
 import com.lernhero.domain.quiz.bank.LiteratureQuestions
 import com.lernhero.domain.quiz.bank.LiteratureQuestionsExtra
 import com.lernhero.domain.quiz.bank.LiteratureQuestionsExtra2
+import com.lernhero.domain.quiz.bank.MasteryDepthQuestions
 import com.lernhero.domain.quiz.bank.MathQuestions
 import com.lernhero.domain.quiz.bank.MathQuestionsExtra
 import com.lernhero.domain.quiz.bank.MathQuestionsExtra2
@@ -50,6 +51,9 @@ import com.lernhero.domain.quiz.bank.TechnologyQuestionsExtra
 import com.lernhero.domain.quiz.bank.TechnologyQuestionsExtra2
 import com.lernhero.domain.quiz.bank.TriviaQuestionsCulture
 import com.lernhero.domain.quiz.bank.TriviaQuestionsNature
+import com.lernhero.domain.quiz.bank.TriviaQuestionsExtremes
+import com.lernhero.domain.quiz.bank.TriviaQuestionsMastery
+import com.lernhero.domain.quiz.bank.TriviaQuestionsOrigins
 import kotlin.random.Random
 
 /**
@@ -123,7 +127,16 @@ object QuizBank {
             // sportowcach do tematu polskiego. Patrz [SportQuestionsWorld].
             SportQuestionsWorld.all +
             // Zabytki, rzeki i nieoczywiste stolice - patrz [LandmarkQuestions].
-            LandmarkQuestions.all
+            LandmarkQuestions.all +
+            // Skad sie wziely nazwy, slowa i wynalazki - patrz [TriviaQuestionsOrigins].
+            TriviaQuestionsOrigins.all +
+            // Rekordy i skrajnosci - patrz [TriviaQuestionsExtremes].
+            TriviaQuestionsExtremes.all +
+            // Dowazenie gornych szczebli pod tryb opanowania tematu - patrz [TriviaQuestionsMastery].
+            TriviaQuestionsMastery.all +
+            // Po czternascie pytan Hard/Expert na KAZDY temat - dokonczenie tego samego dowazenia,
+            // tym razem rozlozone po kategoriach po rowno. Patrz [MasteryDepthQuestions].
+            MasteryDepthQuestions.all
 
     fun all(random: Random = Random.Default): List<QuizEntry> =
         textEntries + FlagQuestions.entries(random)

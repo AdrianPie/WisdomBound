@@ -14,7 +14,6 @@ import com.lernhero.domain.town.TownResources
  * to sobie sam i kuznia potrafila zabrac surowce nie dajac nic w zamian.
  */
 data class CraftCost(
-    val wood: Int = 0,
     val stone: Int = 0,
     val iron: Int = 0,
     val essence: Int = 0,
@@ -22,15 +21,13 @@ data class CraftCost(
     val gold: Int = 0
 ) {
     fun canAfford(resources: TownResources, money: Int): Boolean =
-        resources.wood >= wood &&
-            resources.stone >= stone &&
+        resources.stone >= stone &&
             resources.iron >= iron &&
             resources.essence >= essence &&
             resources.summonTickets >= tickets &&
             money >= gold
 
     fun deductFrom(resources: TownResources): TownResources = resources.copy(
-        wood = resources.wood - wood,
         stone = resources.stone - stone,
         iron = resources.iron - iron,
         essence = resources.essence - essence,
@@ -39,7 +36,6 @@ data class CraftCost(
 
     /** Pozycje kosztu, ktore faktycznie cos kosztuja - do wyswietlenia bez pustych zer. */
     fun entries(): List<Pair<String, Int>> = buildList {
-        if (wood > 0) add("🪵" to wood)
         if (stone > 0) add("🪨" to stone)
         if (iron > 0) add("⚙" to iron)
         if (essence > 0) add("✨" to essence)
@@ -72,8 +68,10 @@ object Forge {
     fun costFor(item: Item): CraftCost {
         val tier = item.rarity.ordinal + 1
         return CraftCost(
-            wood = 15 * tier,
-            stone = 20 * tier,
+            // Kamien przejal po skasowanym drewnie role materialu "masowego" - stad 35, a nie 20:
+            // to suma obu dawnych pozycji, wiec wykucie kosztuje tyle samo pracy co wczesniej,
+            // tylko liczy sie w jednej walucie zamiast w dwoch. Patrz [TownResources].
+            stone = 35 * tier,
             iron = 8 * tier * tier,
             gold = (item.cost * 0.35f).toInt()
         )

@@ -65,7 +65,7 @@ object ElementQuestionsExtra {
         ask("gaz_szlachetny", "Which group of elements almost never forms chemical compounds?", "The noble gases", listOf("Alkali metals", "Halogens", "Lanthanides"), QuizDifficulty.Medium),
         ask("baterie_lit", "Which element is key in phone batteries?", "Lithium", listOf("Zinc", "Nickel", "Cadmium"), QuizDifficulty.Medium),
         ask("neon_reklamy", "Which gas glows red in classic sign tubes?", "Neon", listOf("Argon", "Krypton", "Xenon"), QuizDifficulty.Medium),
-        ask("hel_glos", "Why does your voice sound high after inhaling helium?", "Sound travels faster through helium than through air", listOf("Helium tightens the vocal cords", "Helium muffles low tones", "Helium changes the shape of the mouth"), QuizDifficulty.Medium),
+        ask("hel_glos", "Why does your voice sound high after inhaling helium?", "Sound travels faster through helium than through air", listOf("Helium tightens the vocal cords for a while", "Helium muffles the lower tones of speech", "Helium changes the shape of the mouth cavity"), QuizDifficulty.Medium),
         ask("stal_sklad", "What is steel mainly made of?", "Iron and carbon", listOf("Iron and zinc", "Copper and tin", "Aluminum and silicon"), QuizDifficulty.Medium),
         ask("braz_stop", "What is bronze, an alloy known since antiquity, made of?", "Copper and tin", listOf("Copper and zinc", "Iron and nickel", "Lead and silver"), QuizDifficulty.Medium),
 
