@@ -177,6 +177,11 @@ fun BattleScreen(
                         state.categoryOffer != null -> CategoryPickPanel(
                             offer = state.categoryOffer!!,
                             onPick = viewModel::chooseCategory,
+                            teamElements = state.characters.values
+                                .filter { it.isPlayer && it.hp > 0 }
+                                .mapNotNull { it.element }
+                                .groupingBy { it }
+                                .eachCount(),
                             modifier = Modifier.fillMaxSize()
                         )
 
@@ -188,6 +193,7 @@ fun BattleScreen(
                             onMultiConfirm = viewModel::confirmMultiSelect,
                             onContinue = viewModel::continueQuiz,
                             questionOverhang = questionFrameHeight / 2,
+                            onTimerStart = viewModel::markQuestionShown,
                             modifier = Modifier.fillMaxSize()
                         )
 

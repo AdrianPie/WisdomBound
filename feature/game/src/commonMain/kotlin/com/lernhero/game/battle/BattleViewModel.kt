@@ -781,6 +781,18 @@ class BattleViewModel(
     }
 
     /**
+     * Pasek czasu wlasnie pojawil sie na ekranie - dopiero TERAZ gracz widzi pytanie, wiec dopiero
+     * teraz liczymy czas odpowiedzi. Wczesniej zegar ruszal w chwili wylosowania pytania, a panel
+     * jeszcze przez ~1-2 s wjezdzal na ekran: pasek pokazywal "zostalo 1.6s, x1.05", a salwa
+     * liczyla sie z 18.8s i x1.00. Gracz tracil moc za czas, w ktorym nie mial czego czytac.
+     */
+    fun markQuestionShown(questionId: String) {
+        val quiz = _uiState.value.quiz ?: return
+        if (quiz.question.id != questionId || quiz.revealed) return
+        questionShownAt = TimeSource.Monotonic.markNow()
+    }
+
+    /**
      * Jedna runda oszolomienia: oszolomieni gracze ([BattleUiState.stunnedCharacterIds]) nie
      * atakuja, reszta druzyny (jesli ktos akurat uniknal zakladu) bije normalnie, a wrogowie biją
      * bez przeszkod. [BattleUiState.stunnedCharacterIds] zostaje niezmienione az do ostatniej rundy -
@@ -3267,7 +3279,7 @@ private const val ROUNDS_PER_TURN = 3
  * druzyna - konczyl liczyc w tej samej chwili, w ktorej karta zaczynala znikac: gracz widzial ruch,
  * ale nie zdazyl odczytac wyniku.
  */
-private const val IMPACT_HOLD_MILLIS = 3400L
+private const val IMPACT_HOLD_MILLIS = 2700L
 
 /**
  * Bohater - jedyna postac, ktora gracz ma OD RAZU, wiec caly early game musi dac sie przejsc nim
@@ -3287,8 +3299,11 @@ private val CRIT_DAMAGE_MULTIPLIER get() = HeroBaseStats.CRIT_MULTIPLIER
 /**
  * Zla odpowiedz oslabia salwe, ale nie zatrzymuje postepu - gracz ma miec "jestem dobry, wiec ide
  * szybciej", a nie "nie trafilem, wiec nie gram". 0.3f oznaczalo praktycznie stracona ture.
+ *
+ * Musi byc wyraznie PONIZEJ [AnswerTimer.CORRECT_FLOOR]: najwolniejsza dobra odpowiedz ma bic
+ * mniej wiecej dwa razy mocniej niz pudlo, inaczej oplaca sie strzelac zamiast myslec.
  */
-internal const val WRONG_ANSWER_MULTIPLIER = 0.55f
+internal const val WRONG_ANSWER_MULTIPLIER = 0.5f
 
 /** Zla odpowiedz nie tylko oslabia atak druzyny (patrz wyzej) - wrogowie tez bija mocniej ta ture. */
 internal const val WRONG_ANSWER_ENEMY_BONUS = 1.15f

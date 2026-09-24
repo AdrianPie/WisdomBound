@@ -3,6 +3,18 @@ package com.lernhero.game.battle.component
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.CubicBezierEasing
+import androidx.compose.animation.core.Animatable
+import androidx.compose.animation.core.EaseInOutSine
+import androidx.compose.animation.core.LinearEasing
+import androidx.compose.animation.core.RepeatMode
+import androidx.compose.animation.core.animateFloat
+import androidx.compose.animation.core.infiniteRepeatable
+import androidx.compose.animation.core.keyframes
+import androidx.compose.animation.core.rememberInfiniteTransition
+import androidx.compose.animation.core.spring
+import androidx.compose.foundation.layout.width
+import androidx.compose.ui.graphics.graphicsLayer
+import kotlin.math.roundToInt
 import androidx.compose.animation.core.MutableTransitionState
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
@@ -137,6 +149,7 @@ fun LiveQuizBar(
     onMultiConfirm: () -> Unit,
     onContinue: () -> Unit,
     questionOverhang: Dp,
+    onTimerStart: (questionId: String) -> Unit = {},
     modifier: Modifier = Modifier
 ) {
     val quiz = state.quiz ?: return
@@ -192,7 +205,8 @@ fun LiveQuizBar(
                     AnswerCountdownBar(
                         questionId = question.id,
                         revealed = quiz.revealed,
-                        windowMs = quiz.windowMs
+                        windowMs = quiz.windowMs,
+                        onStart = { onTimerStart(question.id) }
                     )
 
                     if (question is MultipleChoiceQuestion) {
@@ -217,13 +231,9 @@ fun LiveQuizBar(
                         }
                     }
 
-                    if (quiz.revealed) {
-                        RevealBanner(
-                            correct = quiz.answeredCorrectly,
-                            correctText = revealCorrectText(question, quiz),
-                            reward = question.reward
-                        )
-                    }
+                    // Bez banera "Wrong. Correct answer: ..." - wjezdzal miedzy pasek a odpowiedzi
+                    // i przesuwal caly panel w dol. Werdykt niosa same kafle (zielony = dobra,
+                    // czerwony = twoj blad), a skutek pokazuje TurnImpactOverlay na polu bitwy.
 
                     // Odpowiedzi wypelniaja CALE miejsce, ktore zostalo, i nigdy sie nie przewijaja:
                     // kafle dziela dostepna wysokosc miedzy siebie ([weight]), a gdy przy jednej
@@ -293,12 +303,6 @@ private val AnswerListShape = RoundedCornerShape(18.dp)
 /** Litera przypisana do elementu ukladanki wedlug jego miejsca w wyswietlonej (przetasowanej) liscie - A, B, C, D... */
 private fun itemLabel(displayIndex: Int): String = ('A' + displayIndex).toString()
 
-/** Poprawna odpowiedz/kolejnosc pokazywana w [RevealBanner] po nietrafionej probie. */
-private fun revealCorrectText(question: QuizQuestion, quiz: LiveQuizState): String = when (question) {
-    is MultipleChoiceQuestion -> quiz.correctAnswer?.text.orEmpty()
-    is OrderingQuestion -> question.items.sortedBy { it.correctPosition }.joinToString(" → ") { it.text }
-    is MultiSelectQuestion -> question.options.filter { it.isCorrect }.joinToString(", ") { it.text }
-}
 
 /**
  * Przycisk konczacy pytanie wielokrotnego wyboru. Licznik zaznaczen jest tu celowo: przy szescioma
@@ -449,14 +453,19 @@ private fun SequenceProgressRow(
 }
 
 /**
- * Pasek czasu na odpowiedz tuz nad pytaniem - startuje pelny ([AnswerTimer.SEGMENTS] segmentow) w
- * chwili pojawienia sie pytania i opada segment po segmencie przez [AnswerTimer.WINDOW_MS] (kilka
- * sekund, nie blyskawicznie). Im wiecej segmentow zostalo w chwili odpowiedzi, tym mocniej druzyna
- * uderzy w tej turze - stad kolor jedzie od czerwonego (ostatni, najslabszy segment) do zielonego
- * (pelna moc). Liczba sekund obok paska pokazuje dokladnie, ile jeszcze zostalo.
+ * Licznik czasu na odpowiedz - jeden plynny pasek zamiast osmiu klockow.
  *
- * Ten sam komponent (i to samo miejsce w panelu) uzywa [com.lernhero.game.battle.component.BossEventQuizBar]
- * dla zaklecia bossa - std parametr [label], zeby podpis dalo sie dopasowac do kontekstu.
+ * Pokazuje dwie rzeczy, ktore gracz ma zrozumiec bez czytania instrukcji:
+ *  - **ile mocy da odpowiedz TERAZ** - duzy mnoznik po prawej ("x1.40"), liczony ta sama funkcja,
+ *    ktora potem liczy salwe ([AnswerTimer.multiplierFor]), wiec obietnica i wynik sa te same;
+ *  - **strefa pelnej mocy** - poczatkowy odcinek paska z napisem MAX. Dopoki wypelnienie jest w tej
+ *    strefie, czytanie pytania nic nie kosztuje. Potem pasek plynnie gasnie od zieleni do bursztynu.
+ *
+ * Ostatnie 20% okna pulsuje na czerwono - sygnal "odpowiedz, zanim minie czas", ale bez paniki:
+ * nawet wtedy dobra odpowiedz bije pelnym x1.0.
+ *
+ * Ten sam komponent uzywa zaklecie bossa ([BossEventQuizBar]) - tam mnoznik salwy nie ma sensu,
+ * wiec [showMultiplier] = false zostawia tylko pasek i sekundy.
  */
 @Composable
 internal fun AnswerCountdownBar(
@@ -465,12 +474,16 @@ internal fun AnswerCountdownBar(
     /** Okno TEGO pytania - rozne dla roznych pytan i fal, patrz [AnswerTimer.windowFor]. */
     windowMs: Long = AnswerTimer.WINDOW_MS,
     label: String = "HIT POWER",
+    showMultiplier: Boolean = true,
+    /** Pasek ruszyl - od tej chwili liczy sie czas odpowiedzi (patrz BattleViewModel.markQuestionShown). */
+    onStart: () -> Unit = {},
     modifier: Modifier = Modifier
 ) {
     var remainingFraction by remember(questionId) { mutableFloatStateOf(1f) }
 
     LaunchedEffect(questionId, revealed) {
         if (revealed) return@LaunchedEffect
+        onStart()
         val start = TimeSource.Monotonic.markNow()
         while (isActive) {
             val elapsedMs = start.elapsedNow().inWholeMilliseconds
@@ -480,64 +493,203 @@ internal fun AnswerCountdownBar(
         }
     }
 
-    // Po odpowiedzi petla wyzej sie zatrzymuje, wiec remainingFraction zamraza sie dokladnie na
-    // tej wartosci, ktora policzyla mnoznik obrazen tej tury - pasek pokazuje to, co faktycznie trafilo.
-    val litSegments = AnswerTimer.segmentIndexFor(remainingFraction) + 1
-    val leadColor by animateColorAsState(segmentColor(litSegments - 1))
+    // Po odpowiedzi petla wyzej sie zatrzymuje, wiec pasek zamraza sie dokladnie na tej wartosci,
+    // ktora policzyla mnoznik salwy - pokazuje to, co faktycznie trafilo.
+    val multiplier = AnswerTimer.multiplierFor(remainingFraction)
+    val inGrace = AnswerTimer.isInGrace(remainingFraction)
+    val urgent = !revealed && remainingFraction < URGENT_FRACTION
+    val barColor = timerColor(remainingFraction)
     val remainingSeconds = remainingFraction * windowMs / 1000f
 
-    Column(modifier = modifier.fillMaxWidth()) {
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.SpaceBetween,
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            Text(
-                text = label,
-                color = InkMuted,
-                fontFamily = FontFirst(),
-                fontWeight = FontWeight.Bold,
-                fontSize = 10.sp
-            )
-            Text(
-                text = "${(remainingSeconds * 10).toInt() / 10f}s",
-                color = leadColor,
-                fontFamily = FontFirst(),
-                fontWeight = FontWeight.Bold,
-                fontSize = 11.sp
-            )
-        }
+    val pulse = rememberInfiniteTransition(label = "timerPulse")
+    val pulseAlpha by pulse.animateFloat(
+        initialValue = 0.35f,
+        targetValue = 1f,
+        animationSpec = infiniteRepeatable(tween(380, easing = EaseInOutSine), RepeatMode.Reverse),
+        label = "timerPulseAlpha"
+    )
+    val shimmer by pulse.animateFloat(
+        initialValue = -0.3f,
+        targetValue = 1.3f,
+        animationSpec = infiniteRepeatable(tween(1400, easing = LinearEasing)),
+        label = "timerShimmer"
+    )
 
-        Row(
-            modifier = Modifier
-                .padding(top = 4.dp)
-                .fillMaxWidth(),
-            horizontalArrangement = Arrangement.spacedBy(3.dp)
-        ) {
-            repeat(AnswerTimer.SEGMENTS) { index ->
-                val lit = index < litSegments
-                Box(
-                    modifier = Modifier
-                        .weight(1f)
-                        .height(12.dp)
-                        .clip(RoundedCornerShape(50))
-                        .background(if (lit) segmentColor(index) else Color(0xFFE0D2B0))
-                        .border(1.dp, if (lit) leadColor else PanelBorder, RoundedCornerShape(50))
+    Row(
+        modifier = modifier.fillMaxWidth(),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(10.dp)
+    ) {
+        Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(
+                    text = "⚡ $label",
+                    color = InkMuted,
+                    fontFamily = FontFirst(),
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 10.sp,
+                    letterSpacing = 0.5.sp
+                )
+                Text(
+                    text = "⏱ ${(remainingSeconds * 10).toInt() / 10f}s",
+                    color = if (urgent) TimerRed.copy(alpha = pulseAlpha) else InkMuted,
+                    fontFamily = FontFirst(),
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 11.sp
                 )
             }
+
+            // Tor paska: ciemny rowek, strefa MAX na poczatku (po prawej - pasek maleje od prawej
+            // do lewej, wiec "pelna moc" to jego prawy koniec), plynne wypelnienie i swiecaca glowka.
+            BoxWithConstraints(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(TIMER_BAR_HEIGHT)
+                    .clip(RoundedCornerShape(50))
+                    .background(TimerTrack)
+                    .border(1.dp, Color(0xFF1C140C), RoundedCornerShape(50))
+            ) {
+                val full = maxWidth
+                val graceStart = full * (1f - AnswerTimer.GRACE_FRACTION)
+                if (showMultiplier) {
+                    // Strefa pelnej mocy - lekko jasniejsza, z podpisem, zeby bylo widac, ile
+                    // "darmowego" czasu jest na przeczytanie pytania.
+                    Box(
+                        modifier = Modifier
+                            .offset(x = graceStart)
+                            .width(full - graceStart)
+                            .fillMaxHeight()
+                            .background(Color.White.copy(alpha = 0.07f)),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        Text(
+                            text = "MAX",
+                            color = Color.White.copy(alpha = if (inGrace) 0f else 0.35f),
+                            fontFamily = FontFirst(),
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 8.sp
+                        )
+                    }
+                }
+
+                val fillWidth = full * remainingFraction
+                Box(
+                    modifier = Modifier
+                        .width(fillWidth)
+                        .fillMaxHeight()
+                        .clip(RoundedCornerShape(50))
+                        .background(
+                            Brush.horizontalGradient(listOf(barColor.copy(alpha = 0.75f), barColor))
+                        )
+                        .graphicsLayer { alpha = if (urgent) 0.55f + 0.45f * pulseAlpha else 1f }
+                ) {
+                    // Polysk przesuwajacy sie po wypelnieniu - pasek "zyje", dopoki trwa pelna moc.
+                    if (inGrace && !revealed) {
+                        Box(
+                            modifier = Modifier
+                                .fillMaxSize()
+                                .background(
+                                    Brush.horizontalGradient(
+                                        0f to Color.Transparent,
+                                        (shimmer - 0.12f).coerceIn(0f, 1f) to Color.Transparent,
+                                        shimmer.coerceIn(0f, 1f) to Color.White.copy(alpha = 0.45f),
+                                        (shimmer + 0.12f).coerceIn(0f, 1f) to Color.Transparent,
+                                        1f to Color.Transparent
+                                    )
+                                )
+                        )
+                    }
+                    // Gorny blik - pasek jest "szklana rurka", a nie plaska plama.
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(TIMER_BAR_HEIGHT / 3)
+                            .padding(horizontal = 6.dp)
+                            .offset(y = 2.dp)
+                            .clip(RoundedCornerShape(50))
+                            .background(Color.White.copy(alpha = 0.3f))
+                    )
+                }
+
+                // Glowka paska - jasna kropka na koncu wypelnienia, tam gdzie "ucieka" czas.
+                if (remainingFraction > 0.02f) {
+                    Box(
+                        modifier = Modifier
+                            .offset(x = (fillWidth - TIMER_BAR_HEIGHT).coerceAtLeast(0.dp))
+                            .size(TIMER_BAR_HEIGHT)
+                            .clip(CircleShape)
+                            .background(
+                                Brush.radialGradient(
+                                    listOf(Color.White.copy(alpha = 0.9f), barColor.copy(alpha = 0f))
+                                )
+                            )
+                    )
+                }
+            }
+        }
+
+        if (showMultiplier) {
+            MultiplierBadge(multiplier = multiplier, color = barColor, max = inGrace)
         }
     }
 }
 
-/**
- * Kolor kazdego segmentu paska - od czerwonego (indeks 0, ostatni zostaly) po zielony (ostatni
- * indeks, pelna moc), plynnie interpolowany, wiec dziala dla dowolnej liczby [AnswerTimer.SEGMENTS]
- * zamiast sztywnej tabeli na 5 wpisow.
- */
-private fun segmentColor(index: Int): Color {
-    val t = (index.toFloat() / (AnswerTimer.SEGMENTS - 1).coerceAtLeast(1)).coerceIn(0f, 1f)
-    return lerp(Color(0xFFD1453D), Color(0xFF22A55E), t)
+/** Mnoznik salwy "na zywo" - duza liczba w kapsule, pompuje przy zmianie setnych. */
+@Composable
+private fun MultiplierBadge(multiplier: Float, color: Color, max: Boolean) {
+    val hundredths = (multiplier * 100).roundToInt()
+    Column(
+        modifier = Modifier
+            .width(64.dp)
+            .clip(RoundedCornerShape(12.dp))
+            .background(Brush.verticalGradient(listOf(Color(0xFF3A2A1C), Color(0xFF241A12))))
+            .border(1.5.dp, color, RoundedCornerShape(12.dp))
+            .padding(vertical = 4.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Text(
+            text = "×${hundredths / 100}.${(hundredths % 100).toString().padStart(2, '0')}",
+            color = color,
+            fontFamily = FontFirst(),
+            fontWeight = FontWeight.Black,
+            fontSize = 16.sp,
+            maxLines = 1
+        )
+        Text(
+            text = if (max) "MAX" else "DMG",
+            color = Color.White.copy(alpha = 0.6f),
+            fontFamily = FontFirst(),
+            fontWeight = FontWeight.Bold,
+            fontSize = 8.sp,
+            letterSpacing = 1.sp
+        )
+    }
 }
+
+/** Zielony w strefie MAX, potem plynnie przez zloto do bursztynu; czerwien tylko na samym koncu. */
+private fun timerColor(remainingFraction: Float): Color {
+    val decayStart = 1f - AnswerTimer.GRACE_FRACTION
+    return when {
+        remainingFraction >= decayStart -> TimerGreen
+        remainingFraction >= URGENT_FRACTION -> {
+            val t = (remainingFraction - URGENT_FRACTION) / (decayStart - URGENT_FRACTION)
+            lerp(TimerAmber, TimerGold, t)
+        }
+        else -> lerp(TimerRed, TimerAmber, remainingFraction / URGENT_FRACTION)
+    }
+}
+
+private val TIMER_BAR_HEIGHT = 16.dp
+private const val URGENT_FRACTION = 0.2f
+private val TimerTrack = Color(0xFF3A2A1C)
+private val TimerGreen = Color(0xFF2FCB6E)
+private val TimerGold = Color(0xFFF2C230)
+private val TimerAmber = Color(0xFFF08A2C)
+private val TimerRed = Color(0xFFE0453A)
 
 /**
  * Skrocony, zwiniety pasek pokazywany zamiast [LiveQuizBar] w trakcie [com.lernhero.game.battle.TurnPhase.Resolving] -
@@ -887,8 +1039,38 @@ private fun QuizOptionTile(
     val gem by animateColorAsState(gemTintFor(visual, badgeColor))
     val ink = inkFor(visual)
 
+    // Reakcja kafla na werdykt: dobra odpowiedz "podskakuje", zla sie trzesie. Werdykt czyta sie
+    // z ruchu, zanim oko zdazy porownac kolory.
+    val pop = remember { Animatable(1f) }
+    val jolt = remember { Animatable(0f) }
+    LaunchedEffect(visual) {
+        when (visual) {
+            OptionVisual.CORRECT -> {
+                pop.animateTo(1.07f, tween(120, easing = EaseOutCubic))
+                pop.animateTo(1f, spring(dampingRatio = 0.35f, stiffness = 500f))
+            }
+            OptionVisual.WRONG -> jolt.animateTo(
+                0f,
+                keyframes {
+                    durationMillis = 360
+                    -10f at 45
+                    10f at 90
+                    -7f at 150
+                    7f at 210
+                    -3f at 280
+                }
+            )
+            else -> Unit
+        }
+    }
+
     BoxWithConstraints(
         modifier = modifier
+            .graphicsLayer {
+                scaleX = pop.value
+                scaleY = pop.value
+                translationX = jolt.value * density
+            }
             .heightIn(min = ANSWER_TILE_FLOOR_HEIGHT)
             .then(if (enabled) Modifier.clickable(onClick = onClick) else Modifier),
         contentAlignment = Alignment.CenterStart
@@ -1081,32 +1263,3 @@ private val ANSWER_NARROW_TILE_WIDTH = 200.dp
  * od ramki. Poczatek dymka liczy sie teraz z polowy krazka, bo ten zmienia rozmiar.
  */
 private val ANSWER_BADGE_NUDGE = 7.dp
-
-
-/** Jednozdaniowy werdykt pod odpowiedziami. */
-@Composable
-private fun RevealBanner(
-    correct: Boolean,
-    correctText: String,
-    reward: Int
-) {
-    val color = if (correct) AnswerGreen else AnswerRed
-    val text = if (correct) "Correct! +$reward pts" else "Wrong. Correct answer: $correctText"
-
-    Box(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clip(RoundedCornerShape(12.dp))
-            .background(color.copy(alpha = 0.14f))
-            .border(1.dp, color, RoundedCornerShape(12.dp))
-            .padding(horizontal = 12.dp, vertical = 8.dp)
-    ) {
-        Text(
-            text = text,
-            color = color,
-            fontFamily = FontFirst(),
-            fontWeight = FontWeight.Bold,
-            fontSize = 13.sp
-        )
-    }
-}

@@ -1,22 +1,49 @@
 package com.lernhero.domain.combat.live
 
 /**
- * Pasek czasu na odpowiedz w biezacej turze - startuje pelny, gdy pojawia sie pytanie, i opada w
- * kilku segmentach. Im wiecej segmentow zostalo w chwili odpowiedzi, tym mocniej drużyna uderzy w
- * tej turze - im mniejszy pasek, tym mniejszy dmg.
+ * Pasek czasu na odpowiedz w biezacej turze i to, jak czas wplywa na sile salwy.
+ *
+ * ## Balans (wersja 2)
+ *
+ * Wczesniej pasek mial osiem schodkow od x1.5 do x0.5, a zla odpowiedz dawala x0.55. Skutek: dobra,
+ * ale przemyslana odpowiedz (ostatni schodek, x0.5) bila SLABIEJ niz szybkie strzelanie na slepo.
+ * Gra nagradzala zgadywanie zamiast wiedzy - dokladnie odwrotnie, niz powinna gra do nauki.
+ *
+ * Teraz obowiazuja trzy zasady:
+ *  1. **Dobra odpowiedz nigdy nie bije slabiej niz x[CORRECT_FLOOR]** - czyli zawsze mniej wiecej
+ *     dwa razy mocniej niz pudlo. Wiedza jest wazniejsza od refleksu.
+ *  2. **Pierwsze [GRACE_FRACTION] okna to pelna moc** - tyle trwa spokojne przeczytanie pytania.
+ *     Nikt nie traci na tym, ze czyta.
+ *  3. Potem moc opada **plynnie** (bez schodkow) do podlogi na koncu okna. Czas nadal sie liczy,
+ *     ale jako premia za pewnosc, a nie kara za myslenie.
  */
 object AnswerTimer {
     /** 18s - podwojone z 9s, bo nawet to bylo za szybko na spokojne przeczytanie pytania i odpowiedz. */
     const val WINDOW_MS = 18000L
-    const val SEGMENTS = 8
 
-    /** Mnoznik obrazen dla kazdego segmentu - indeks 0 = ostatni zostaly segment (najwolniej), ostatni = pelny pasek. */
-    private val MULTIPLIERS = listOf(0.5f, 0.64f, 0.79f, 0.93f, 1.07f, 1.21f, 1.36f, 1.5f)
+    /** Mnoznik szybkiej, dobrej odpowiedzi (w oknie [GRACE_FRACTION]). */
+    const val CORRECT_PEAK = 1.4f
 
-    fun segmentIndexFor(remainingFraction: Float): Int =
-        (remainingFraction.coerceIn(0f, 1f) * SEGMENTS).toInt().coerceIn(0, SEGMENTS - 1)
+    /** Mnoznik dobrej odpowiedzi na ostatnia chwile. */
+    const val CORRECT_FLOOR = 1.0f
 
-    fun multiplierFor(remainingFraction: Float): Float = MULTIPLIERS[segmentIndexFor(remainingFraction)]
+    /** Jaka czesc okna (od poczatku) daje jeszcze pelna moc. 0.3 = ~5.4s z osiemnastu. */
+    const val GRACE_FRACTION = 0.3f
+
+    /**
+     * Mnoznik dobrej odpowiedzi, gdy zostalo [remainingFraction] okna (1 = pytanie wlasnie sie
+     * pojawilo, 0 = czas minal). Zla odpowiedz ma wlasny, staly mnoznik - czas jej nie dotyczy.
+     */
+    fun multiplierFor(remainingFraction: Float): Float {
+        val remaining = remainingFraction.coerceIn(0f, 1f)
+        val decayStart = 1f - GRACE_FRACTION
+        if (remaining >= decayStart) return CORRECT_PEAK
+        val t = remaining / decayStart // 1 na poczatku spadku, 0 na koncu okna
+        return CORRECT_FLOOR + (CORRECT_PEAK - CORRECT_FLOOR) * t
+    }
+
+    /** Czy odpowiedz w tej chwili dalaby jeszcze pelna moc - pasek pokazuje wtedy "MAX". */
+    fun isInGrace(remainingFraction: Float): Boolean = remainingFraction >= 1f - GRACE_FRACTION
 
     /**
      * Ile czasu dostaje KONKRETNE pytanie. Dwie rzeczy je zmieniaja i obie sa celowe.

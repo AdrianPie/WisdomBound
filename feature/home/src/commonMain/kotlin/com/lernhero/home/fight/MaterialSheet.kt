@@ -310,7 +310,7 @@ private fun TopicTile(
     ) {
         // Wybor widac po zlotej ramce - w ciasnym kaflu nie ma miejsca na osobny znaczek.
         Row(verticalAlignment = Alignment.CenterVertically) {
-            IconTile(icon = category.icon(), tint = tier, size = 38)
+            IconTile(icon = category.icon, tint = tier, size = 38)
             Column(
                 modifier = Modifier.padding(start = 10.dp).weight(1f),
                 verticalArrangement = Arrangement.spacedBy(4.dp)
@@ -348,25 +348,6 @@ private fun TopicTile(
             }
         }
     }
-}
-
-/** Ikona tematu - tylko do kafla; nowy temat bez wpisu dostaje ksiazke. */
-private fun QuizCategory.icon(): String = when (this) {
-    QuizCategory.Biology -> "🧬"
-    QuizCategory.Animals -> "🦊"
-    QuizCategory.History -> "🏛️"
-    QuizCategory.Elements -> "⚗️"
-    QuizCategory.Capitals -> "🏙️"
-    QuizCategory.Science -> "🔬"
-    QuizCategory.Flags -> "🚩"
-    QuizCategory.Geography -> "🗺️"
-    QuizCategory.Sport -> "⚽"
-    QuizCategory.Math -> "➗"
-    QuizCategory.Literature -> "📚"
-    QuizCategory.Technology -> "💻"
-    QuizCategory.Mythology -> "🐉"
-    QuizCategory.Poland -> "🇵🇱"
-    else -> "📖"
 }
 
 /** Barwa progu, od ktorego startuja pytania tematu - zielony latwy, czerwony ekspert. */

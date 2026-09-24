@@ -34,31 +34,33 @@ enum class QuizDifficulty(
  */
 enum class QuizCategory(
     val label: String,
+    /** Emoji tematu na kaflach wyboru - placeholder pod przyszla grafike, tak jak [com.lernhero.domain.monster.Element.icon]. */
+    val icon: String = "📖",
     val inBuiltinBank: Boolean = true,
     val localeCode: String? = null
 ) {
-    Biology("Biology"),
-    Animals("Animals"),
-    History("History"),
-    Elements("Elements"),
-    Capitals("Capitals"),
-    Science("Science"),
-    Flags("Flags"),
-    Geography("Geography"),
-    Sport("Sport"),
-    Math("Math"),
-    Literature("Literature"),
-    Technology("Technology"),
-    Mythology("Mythology"),
+    Biology("Biology", icon = "🧬"),
+    Animals("Animals", icon = "🦊"),
+    History("History", icon = "🏛️"),
+    Elements("Elements", icon = "⚗️"),
+    Capitals("Capitals", icon = "🏙️"),
+    Science("Science", icon = "🔬"),
+    Flags("Flags", icon = "🚩"),
+    Geography("Geography", icon = "🗺️"),
+    Sport("Sport", icon = "⚽"),
+    Math("Math", icon = "➗"),
+    Literature("Literature", icon = "📚"),
+    Technology("Technology", icon = "💻"),
+    Mythology("Mythology", icon = "🐉"),
 
     /** Temat lokalny: historia, kultura i geografia Polski. Widoczny tylko przy jezyku polskim. */
-    Poland("Poland", localeCode = "pl"),
+    Poland("Poland", icon = "🇵🇱", localeCode = "pl"),
 
     /** Slowka zapisane w czytniku - budowane w locie z fiszek, patrz [WordQuizBank]. */
-    Vocabulary("Words", inBuiltinBank = false),
+    Vocabulary("Words", icon = "🗂️", inBuiltinBank = false),
 
     /** Pytania z wlasnej talii gracza - patrz [com.lernhero.domain.quiz.custom.CustomDeck]. */
-    Custom("Custom", inBuiltinBank = false);
+    Custom("Custom", icon = "📝", inBuiltinBank = false);
 
     /** Czy ten temat wolno pokazac graczowi grajacemu w jezyku [languageCode]. */
     fun availableIn(languageCode: String): Boolean =

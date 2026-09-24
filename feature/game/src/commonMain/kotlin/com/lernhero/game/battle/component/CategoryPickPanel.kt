@@ -1,6 +1,16 @@
 package com.lernhero.game.battle.component
 
 import androidx.compose.animation.core.EaseInOutSine
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.spring
+import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.interaction.collectIsPressedAsState
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import kotlinx.coroutines.delay
 import androidx.compose.animation.core.RepeatMode
 import androidx.compose.animation.core.animateFloat
 import androidx.compose.animation.core.infiniteRepeatable
@@ -43,21 +53,25 @@ import com.lernhero.shared.theme.FontFirst
 import com.lernhero.shared.theme.FontPixel
 
 /**
- * Wybor tematu przed tura - siatka 2x2 kafli, wzorowana na Quiz RPG (Mystic Wiz): po lewej stronie
- * kafla swiecaca kula zywiolu, po prawej nazwa kategorii.
+ * Wybor tematu przed tura - cztery kafle 2x2 (mechanika z Quiz RPG / Mystic Wiz).
  *
- * Kafel z DWOMA zywiolami ([CategoryOption.elements]) ma kule przecieta na pol, po kolorze na
- * strone - dokladnie tak, jak w pierwowzorze sygnalizowane sa podwojne bonusy. To wizualnie
- * najwazniejsza informacja na tym ekranie, bo taki kafel wzmacnia dwie frakcje naraz.
+ * Kafel niesie DWIE decyzje naraz i obie musza byc czytelne bez zgadywania:
+ *  - **temat** pytania - duza ikona i nazwa,
+ *  - **zywiol**, ktory ta tura wzmocni (+[CategoryOffer.ELEMENT_BOOST] ataku) - kula zywiolu
+ *    i podpis. Gdy w druzynie SA kompani tego zywiolu, kafel swieci w jego kolorze i mowi wprost,
+ *    ilu z nich skorzysta ("2 allies +20%"). Wczesniej sama kolorowa kula nic nie mowila - gracz
+ *    nie wiedzial, ze wybor tematu w ogole cos zmienia w walce.
  *
- * Kolory i "kule" sa PLACEHOLDERAMI z [Element.colorHex] - podmiana na prawdziwe PNG/efekty
- * dotyczy wylacznie [ElementOrb] ponizej, reszta ukladu zostaje bez zmian.
+ * Kafle wypelniaja cale miejsce panelu (dol ekranu ma w tej fazie te sama wysokosc co przy quizie),
+ * zamiast stac malym paskiem u gory nad pusta plama.
  */
 @Composable
 fun CategoryPickPanel(
     offer: CategoryOffer,
     onPick: (CategoryOption) -> Unit,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    /** Zywioly zywych kompanow - ile kafel realnie wzmocni. Pusta mapa = bez podpowiedzi. */
+    teamElements: Map<Element, Int> = emptyMap()
 ) {
     Column(
         modifier = modifier
@@ -65,84 +79,183 @@ fun CategoryPickPanel(
             .clip(PanelShape)
             .background(PanelGradient)
             .border(3.dp, FrameGradient, PanelShape)
-            .padding(horizontal = 12.dp, vertical = 8.dp),
-        verticalArrangement = Arrangement.spacedBy(6.dp)
+            .padding(horizontal = 12.dp, vertical = 10.dp),
+        verticalArrangement = Arrangement.spacedBy(8.dp)
     ) {
-        Text(
-            text = "CHOOSE A TOPIC",
-            color = Color(0xFF8A6B3A),
-            fontFamily = FontPixel(),
-            fontWeight = FontWeight.Bold,
-            fontSize = 11.sp,
-            textAlign = TextAlign.Center,
-            modifier = Modifier.fillMaxWidth()
-        )
+        Column(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Text(
+                text = "Choose your next question",
+                color = InkStrong,
+                fontFamily = FontFirst(),
+                fontWeight = FontWeight.Bold,
+                fontSize = 16.sp
+            )
+            Text(
+                text = "Topic decides the question · element boosts your team",
+                color = InkMuted,
+                fontFamily = FontFirst(),
+                fontSize = 11.sp,
+                textAlign = TextAlign.Center
+            )
+        }
 
-        // Dwa wiersze po dwa kafle. Kafel niesie tylko kule zywiolu i nazwe tematu - nie ma po co
-        // rozciagac go na cala wysokosc panelu (dol ekranu w tej fazie jest tak samo wysoki jak
-        // przy quizie). Stala, kompaktowa wysokosc; siatka siedzi u gory panelu.
+        // Kafle wjezdzaja po kolei - krotko, ale widac, ze to nowa decyzja, a nie ten sam ekran.
+        var shown by remember(offer) { mutableStateOf(0) }
+        LaunchedEffect(offer) {
+            shown = 0
+            repeat(offer.options.size) {
+                delay(70)
+                shown += 1
+            }
+        }
+
+        var index = 0
         offer.options.chunked(2).forEach { row ->
             Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.spacedBy(8.dp)
+                modifier = Modifier.fillMaxWidth().weight(1f),
+                horizontalArrangement = Arrangement.spacedBy(10.dp)
             ) {
                 row.forEach { option ->
+                    val order = index++
                     CategoryTile(
                         option = option,
+                        allies = option.elements.sumOf { teamElements[it] ?: 0 },
+                        visible = shown > order,
                         onClick = { onPick(option) },
-                        modifier = Modifier.weight(1f).height(CATEGORY_TILE_HEIGHT)
+                        modifier = Modifier.weight(1f).fillMaxHeight()
                     )
                 }
                 repeat(2 - row.size) { Box(modifier = Modifier.weight(1f)) }
             }
         }
-
-        Spacer(modifier = Modifier.weight(1f))
     }
 }
-
-/** Kompaktowa wysokosc kafla tematu - miesci kule 40dp + nazwe, nic wiecej tam nie ma. */
-private val CATEGORY_TILE_HEIGHT = 60.dp
 
 @Composable
 private fun CategoryTile(
     option: CategoryOption,
+    allies: Int,
+    visible: Boolean,
     onClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
-    val dual = option.elements.size > 1
-    Row(
+    val colors = option.elements.map { Color(it.colorHex) }
+    val main = colors.first()
+    val relevant = allies > 0
+
+    val appear by animateFloatAsState(
+        targetValue = if (visible) 1f else 0f,
+        animationSpec = spring(dampingRatio = 0.6f, stiffness = 420f),
+        label = "tileAppear"
+    )
+    val interaction = remember { MutableInteractionSource() }
+    val pressed by interaction.collectIsPressedAsState()
+    val press by animateFloatAsState(if (pressed) 0.95f else 1f, label = "tilePress")
+
+    // Kafel, ktory wzmocni kogos z druzyny, oddycha poswiata - to jest ten "dobry" wybor.
+    val glow = rememberInfiniteTransition(label = "tileGlow")
+    val glowAlpha by glow.animateFloat(
+        initialValue = 0.35f,
+        targetValue = 0.9f,
+        animationSpec = infiniteRepeatable(tween(1100, easing = EaseInOutSine), RepeatMode.Reverse),
+        label = "tileGlowAlpha"
+    )
+
+    Box(
         modifier = modifier
-            .clip(RoundedCornerShape(14.dp))
+            .graphicsLayer {
+                val s = (0.85f + 0.15f * appear) * press
+                scaleX = s
+                scaleY = s
+                alpha = appear.coerceIn(0f, 1f)
+                translationY = (1f - appear) * 24f * density
+            }
+            .clip(TileShape)
+            .background(Brush.verticalGradient(listOf(Color(0xFF4A3524), Color(0xFF2A1D12))))
             .background(
-                Brush.verticalGradient(listOf(Color(0xFFF6EBD2), Color(0xFFE3D2AE)))
+                Brush.radialGradient(
+                    listOf(main.copy(alpha = if (relevant) 0.45f else 0.22f), Color.Transparent),
+                    center = Offset(0f, 0f),
+                    radius = 420f
+                )
             )
             .border(
-                width = if (dual) 3.dp else 2.dp,
-                // Kafel dwuzywiolowy dostaje ramke w gradiencie obu kolorow - widac go z daleka.
-                brush = if (dual) {
-                    Brush.horizontalGradient(option.elements.map { Color(it.colorHex) })
+                width = if (relevant) 2.5.dp else 1.5.dp,
+                brush = if (colors.size > 1) {
+                    Brush.linearGradient(colors.map { it.copy(alpha = if (relevant) glowAlpha else 0.6f) })
                 } else {
-                    Brush.horizontalGradient(listOf(Color(0xFFB99A5E), Color(0xFF8A6B3A)))
+                    Brush.linearGradient(
+                        listOf(
+                            main.copy(alpha = if (relevant) glowAlpha else 0.45f),
+                            Color(0xFF8A6B3A).copy(alpha = 0.6f)
+                        )
+                    )
                 },
-                shape = RoundedCornerShape(14.dp)
+                shape = TileShape
             )
-            .clickable(onClick = onClick)
-            .padding(horizontal = 8.dp),
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(8.dp)
+            .clickable(interactionSource = interaction, indication = null, onClick = onClick)
+            .padding(10.dp)
     ) {
-        ElementOrb(elements = option.elements)
+        // Ikona tematu na gorze, podpis zywiolu na dole - osobne pasy, zeby duza ikona nie
+        // wchodzila na tekst bonusu.
         Text(
-            text = option.category.label,
-            color = Color(0xFF3B2E1C),
-            fontFamily = FontFirst(),
-            fontWeight = FontWeight.Bold,
-            fontSize = 13.sp,
-            modifier = Modifier.weight(1f)
+            text = option.category.icon,
+            fontSize = 34.sp,
+            modifier = Modifier
+                .align(Alignment.TopEnd)
+                .graphicsLayer { rotationZ = 8f }
         )
+
+        Column(
+            modifier = Modifier.fillMaxSize(),
+            verticalArrangement = Arrangement.SpaceBetween
+        ) {
+            Text(
+                text = option.category.label,
+                color = Color.White,
+                fontFamily = FontFirst(),
+                fontWeight = FontWeight.Bold,
+                fontSize = 16.sp,
+                maxLines = 1,
+                modifier = Modifier.padding(end = 40.dp)
+            )
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(6.dp)
+            ) {
+                ElementOrb(elements = option.elements, modifier = Modifier.size(24.dp))
+                Column {
+                    Text(
+                        text = option.elements.joinToString(" + ") { it.label } +
+                            " +${(CategoryOffer.ELEMENT_BOOST * 100).toInt()}%",
+                        overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis,
+                        color = if (relevant) main else Color.White.copy(alpha = 0.75f),
+                        fontFamily = FontFirst(),
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 11.sp,
+                        maxLines = 1
+                    )
+                    Text(
+                        text = when (allies) {
+                            0 -> "no allies boosted"
+                            1 -> "1 ally boosted"
+                            else -> "$allies allies boosted"
+                        },
+                        color = Color.White.copy(alpha = if (relevant) 0.85f else 0.45f),
+                        fontFamily = FontFirst(),
+                        fontSize = 9.sp,
+                        maxLines = 1
+                    )
+                }
+            }
+        }
     }
 }
+
+private val TileShape = RoundedCornerShape(16.dp)
 
 /**
  * Kula zywiolu - jeden kolor, albo przy dwoch zywiolach polowa na polowe (pion), z pulsujaca
@@ -158,7 +271,7 @@ private fun ElementOrb(elements: List<Element>, modifier: Modifier = Modifier) {
         animationSpec = infiniteRepeatable(tween(1100, easing = EaseInOutSine), RepeatMode.Reverse)
     )
 
-    Box(modifier = modifier.size(40.dp), contentAlignment = Alignment.Center) {
+    Box(modifier = modifier, contentAlignment = Alignment.Center) {
         Canvas(modifier = Modifier.fillMaxSize().graphicsLayer { alpha = glow }) {
             val r = size.minDimension / 2f
             val c = Offset(size.width / 2f, size.height / 2f)
@@ -192,7 +305,7 @@ private fun ElementOrb(elements: List<Element>, modifier: Modifier = Modifier) {
 
         Text(
             text = elements.joinToString("") { it.icon },
-            fontSize = if (elements.size > 1) 11.sp else 15.sp
+            fontSize = if (elements.size > 1) 7.sp else 11.sp
         )
     }
 }
