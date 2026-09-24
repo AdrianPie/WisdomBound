@@ -27,9 +27,10 @@ internal object MonsterIdleStyles {
                 Emit(0.83f, 0.37f, Fx.Ember, density = 0.6f)
             )
         ),
+        // Bez trzepotu: sciskanie calego PNG w pionie wygladalo jak blad grafiki, nie jak skrzydla.
+        // Zostaje plynne unoszenie z przechylem i iskry sypiace sie ze skrzydel.
         "fire_bat" to IdleStyle(
-            breathe = 0f, swayDeg = 2f, periodMs = 1500, hover = 0.05f,
-            flap = 0.16f, flapPivotY = 0.66f, flapMs = 300,
+            breathe = 0.01f, swayDeg = 4f, periodMs = 2200, hover = 0.06f,
             emitters = listOf(
                 Emit(0.28f, 0.52f, Fx.Ember, spread = 0.1f),
                 Emit(0.75f, 0.6f, Fx.Ember, spread = 0.1f)
