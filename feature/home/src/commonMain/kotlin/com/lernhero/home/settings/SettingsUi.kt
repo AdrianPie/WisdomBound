@@ -1,15 +1,17 @@
 package com.lernhero.home.settings
 
-import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
@@ -25,225 +27,257 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.lernhero.shared.theme.FontFirst
 import com.lernhero.shared.theme.FontPixel
 
 /**
- * Klocki, z ktorych zlozony jest ekran Ustawien - i tylko on.
+ * Klocki ekranu Ustawien - i tylko jego.
  *
- * Siedza w osobnym pliku, bo ekran ma juz cztery sekcje i kazda kolejna preferencja ma byc
- * DOPISANIEM JEDNEJ LINIJKI w [SettingsScreen], a nie kolejna kopia ramki, tytulu i przelacznika.
- * Gdy ktorys z tych klockow przyda sie poza Ustawieniami, jego miejsce jest w `:shared`.
+ * Uklad jak w porzadnych ustawieniach systemowych: maly naglowek grupy NAD karta, w karcie wiersze
+ * (ikona w kafelku, tytul, podpis, cos po prawej) rozdzielone cienka linia. Kazda nowa preferencja
+ * to jeden [SettingsRow] w [SettingsScreen] - nie kolejna ramka.
  */
 
-internal val Ink = Color(0xFF120E0A)
-internal val Panel = Color(0xFF19120C)
-internal val Frame = Color(0xFFC8A45A)
-internal val FrameDim = Color(0xFF6B5A38)
+internal val Ink = Color(0xFF110D09)
+internal val Panel = Color(0xFF1C150F)
+internal val PanelHi = Color(0xFF261C13)
+internal val Divider = Color(0xFF2E2419)
+internal val FrameDim = Color(0xFF4A3D29)
 internal val Cream = Color(0xFFF4E9D7)
 internal val Muted = Color(0xFF9D8B6A)
 internal val Gold = Color(0xFFFFD34D)
+internal val Danger = Color(0xFFFF6B5E)
 
-/** Ramka z tytulem. Wszystko, co ekran pokazuje, mieszka w ktorejs z nich. */
+/** Naglowek grupy i karta z wierszami. Wiersze same rysuja linie miedzy soba ([divider]). */
 @Composable
-internal fun SettingsSection(
-    title: String,
-    modifier: Modifier = Modifier,
+internal fun SettingsGroup(
+    title: String?,
+    footer: String? = null,
     content: @Composable ColumnScope.() -> Unit
 ) {
-    Column(
-        modifier = modifier
-            .fillMaxWidth()
-            .clip(RoundedCornerShape(14.dp))
-            .background(Panel)
-            .border(2.dp, Frame.copy(alpha = 0.7f), RoundedCornerShape(14.dp))
-            .padding(14.dp),
-        verticalArrangement = Arrangement.spacedBy(10.dp)
-    ) {
-        Text(
-            text = title.uppercase(),
-            color = Gold,
-            fontFamily = FontPixel(),
-            fontWeight = FontWeight.Bold,
-            fontSize = 12.sp
+    Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
+        if (title != null) {
+            Text(
+                text = title.uppercase(),
+                color = Muted,
+                fontFamily = FontPixel(),
+                fontSize = 10.sp,
+                letterSpacing = 1.sp,
+                modifier = Modifier.padding(start = 6.dp)
+            )
+        }
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .clip(RoundedCornerShape(16.dp))
+                .background(Brush.verticalGradient(listOf(PanelHi, Panel)))
+                .border(1.dp, FrameDim.copy(alpha = 0.6f), RoundedCornerShape(16.dp)),
+            content = content
         )
-        content()
+        if (footer != null) {
+            Text(
+                text = footer,
+                color = Muted,
+                fontFamily = FontFirst(),
+                fontSize = 11.sp,
+                lineHeight = 15.sp,
+                modifier = Modifier.padding(horizontal = 6.dp)
+            )
+        }
     }
-}
-
-/** Zdanie wyjasniajace pod tytulem albo pod wierszem - male, przygaszone, nigdy klikalne. */
-@Composable
-internal fun SettingsHint(text: String, modifier: Modifier = Modifier) {
-    Text(
-        text = text,
-        color = Muted,
-        fontFamily = FontFirst(),
-        fontSize = 10.sp,
-        modifier = modifier
-    )
 }
 
 /**
- * Wiersz z przelacznikiem. [enabled] = false przygasza CALY wiersz i odcina tapniecie - tak
- * wygladaja przelaczniki rodzajow przypomnien, dopoki nie ma zgody systemu: widac, ze istnieja,
- * i widac, ze dzis nic nie zrobia.
+ * Jeden wiersz karty. [trailing] to przelacznik, wartosc albo nic - wtedy przy [onClick] pojawia
+ * sie strzalka. [below] to miejsce na kontrolke pelnej szerokosci pod tekstem (np. segmenty).
  */
 @Composable
-internal fun SettingsToggleRow(
-    label: String,
-    hint: String?,
-    checked: Boolean,
-    onCheckedChange: (Boolean) -> Unit,
-    enabled: Boolean = true
+internal fun SettingsRow(
+    icon: String,
+    iconTint: Color,
+    title: String,
+    subtitle: String? = null,
+    titleColor: Color = Cream,
+    divider: Boolean = true,
+    enabled: Boolean = true,
+    onClick: (() -> Unit)? = null,
+    trailing: (@Composable () -> Unit)? = null,
+    below: (@Composable () -> Unit)? = null
 ) {
-    Row(
+    Column(
         modifier = Modifier
             .fillMaxWidth()
-            .alpha(if (enabled) 1f else 0.45f)
-            .clip(RoundedCornerShape(10.dp))
-            .clickable(enabled = enabled) { onCheckedChange(!checked) }
-            .padding(vertical = 4.dp),
-        horizontalArrangement = Arrangement.spacedBy(10.dp),
-        verticalAlignment = Alignment.CenterVertically
+            .alpha(if (enabled) 1f else 0.4f)
+            .then(if (onClick != null) Modifier.clickable(enabled = enabled, onClick = onClick) else Modifier)
     ) {
-        Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(2.dp)) {
-            Text(
-                text = label,
-                color = Cream,
-                fontFamily = FontFirst(),
-                fontWeight = FontWeight.Bold,
-                fontSize = 12.sp
-            )
-            if (hint != null) SettingsHint(hint)
+        Column(
+            modifier = Modifier.padding(horizontal = 14.dp, vertical = 12.dp),
+            verticalArrangement = Arrangement.spacedBy(10.dp)
+        ) {
+            Row(
+                horizontalArrangement = Arrangement.spacedBy(12.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                IconTile(icon, iconTint)
+                Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(2.dp)) {
+                    Text(
+                        text = title,
+                        color = titleColor,
+                        fontFamily = FontFirst(),
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 14.sp,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis
+                    )
+                    if (subtitle != null) {
+                        Text(
+                            text = subtitle,
+                            color = Muted,
+                            fontFamily = FontFirst(),
+                            fontSize = 11.sp,
+                            lineHeight = 14.sp
+                        )
+                    }
+                }
+                when {
+                    trailing != null -> trailing()
+                    onClick != null -> Text(text = "›", color = Muted, fontSize = 22.sp)
+                }
+            }
+            below?.invoke()
         }
-        PixelSwitch(checked = checked)
+        if (divider) {
+            Box(
+                modifier = Modifier
+                    .padding(start = 62.dp)
+                    .fillMaxWidth()
+                    .height(1.dp)
+                    .background(Divider)
+            )
+        }
     }
+}
+
+@Composable
+private fun IconTile(icon: String, tint: Color) {
+    Box(
+        modifier = Modifier
+            .size(34.dp)
+            .clip(RoundedCornerShape(10.dp))
+            .background(tint.copy(alpha = 0.18f))
+            .border(1.dp, tint.copy(alpha = 0.45f), RoundedCornerShape(10.dp)),
+        contentAlignment = Alignment.Center
+    ) {
+        Text(text = icon, fontSize = 16.sp)
+    }
+}
+
+/** Wartosc tekstowa po prawej stronie wiersza (np. numer wersji). */
+@Composable
+internal fun SettingsValue(text: String) {
+    Text(text = text, color = Muted, fontFamily = FontFirst(), fontWeight = FontWeight.Bold, fontSize = 13.sp)
 }
 
 /** Przelacznik rysowany recznie - Material3 Switch wyglada tu jak wklejka z innej gry. */
 @Composable
-private fun PixelSwitch(checked: Boolean) {
-    val track by animateColorAsState(if (checked) Gold.copy(alpha = 0.35f) else Ink)
-    val knobColor by animateColorAsState(if (checked) Gold else FrameDim)
-    val knobOffset by animateDpAsState(if (checked) 18.dp else 2.dp)
+internal fun SettingsSwitch(checked: Boolean) {
+    val track by animateColorAsState(if (checked) Gold else Color(0xFF2B2219))
+    val knobOffset by animateDpAsState(if (checked) 22.dp else 3.dp)
 
     Box(
         modifier = Modifier
-            .width(40.dp)
-            .height(22.dp)
-            .clip(RoundedCornerShape(11.dp))
+            .width(48.dp)
+            .height(28.dp)
+            .clip(RoundedCornerShape(14.dp))
             .background(track)
-            .border(
-                width = 1.dp,
-                color = if (checked) Gold else FrameDim.copy(alpha = 0.7f),
-                shape = RoundedCornerShape(11.dp)
-            )
+            .border(1.dp, if (checked) Gold else FrameDim, RoundedCornerShape(14.dp))
     ) {
         Box(
             modifier = Modifier
                 .align(Alignment.CenterStart)
                 .offset(x = knobOffset)
-                .size(18.dp)
+                .size(22.dp)
                 .clip(CircleShape)
-                .background(knobColor)
+                .background(if (checked) Color(0xFF2A1D08) else Muted)
         )
     }
 }
 
-/**
- * Wiersz wyboru jednej wartosci z kilku - jezyk, tempo walki, godzina. Kafle sa na tyle male,
- * ze mieszcza sie w rzedzie; przy dluzszych listach lepszym klockiem bedzie osobny wiersz na opcje
- * (tak jak [SettingsOptionRow] dla jezyka).
- */
+/** Segmenty z przesuwanym podswietleniem - jezyk, tempo walki, godzina. */
 @Composable
-internal fun <T> SettingsChoiceRow(
+internal fun <T> SettingsSegmented(
     options: List<T>,
     selected: T,
     label: (T) -> String,
     onSelect: (T) -> Unit,
     enabled: Boolean = true
 ) {
-    Row(
-        modifier = Modifier.fillMaxWidth().alpha(if (enabled) 1f else 0.45f),
-        horizontalArrangement = Arrangement.spacedBy(8.dp)
+    val index = options.indexOf(selected).coerceAtLeast(0)
+    BoxWithConstraints(
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(38.dp)
+            .alpha(if (enabled) 1f else 0.45f)
+            .clip(RoundedCornerShape(11.dp))
+            .background(Ink)
+            .border(1.dp, FrameDim.copy(alpha = 0.7f), RoundedCornerShape(11.dp))
+            .padding(3.dp)
     ) {
-        options.forEach { option ->
-            val active = option == selected
-            Text(
-                text = label(option),
-                color = if (active) Ink else Cream,
-                fontFamily = FontFirst(),
-                fontWeight = FontWeight.Bold,
-                fontSize = 12.sp,
-                modifier = Modifier
-                    .weight(1f)
-                    .clip(RoundedCornerShape(10.dp))
-                    .background(if (active) Gold else Ink)
-                    .border(
-                        width = 1.dp,
-                        color = if (active) Gold else FrameDim.copy(alpha = 0.6f),
-                        shape = RoundedCornerShape(10.dp)
+        val segment = maxWidth / options.size
+        val offset by animateDpAsState(segment * index)
+        Box(
+            modifier = Modifier
+                .offset(x = offset)
+                .width(segment)
+                .fillMaxHeight()
+                .clip(RoundedCornerShape(8.dp))
+                .background(Brush.verticalGradient(listOf(Color(0xFFFFE07A), Color(0xFFF2B928))))
+        )
+        Row(modifier = Modifier.fillMaxWidth().fillMaxHeight()) {
+            options.forEachIndexed { i, option ->
+                Box(
+                    modifier = Modifier
+                        .weight(1f)
+                        .fillMaxHeight()
+                        .clip(RoundedCornerShape(8.dp))
+                        .clickable(enabled = enabled) { onSelect(option) },
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text(
+                        text = label(option),
+                        color = if (i == index) Color(0xFF2A1D08) else Cream,
+                        fontFamily = FontFirst(),
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 13.sp,
+                        textAlign = TextAlign.Center,
+                        maxLines = 1
                     )
-                    .clickable(enabled = enabled) { onSelect(option) }
-                    .padding(vertical = 10.dp),
-                textAlign = androidx.compose.ui.text.style.TextAlign.Center
-            )
+                }
+            }
         }
     }
 }
 
-/** Pelnej szerokosci wiersz wyboru z ptaszkiem - dla list, ktore maja rosnac (jezyki). */
+/** Przycisk w wierszu (np. zgoda na powiadomienia). */
 @Composable
-internal fun SettingsOptionRow(label: String, selected: Boolean, onClick: () -> Unit) {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clip(RoundedCornerShape(10.dp))
-            .background(if (selected) Color(0xFF2A1F14) else Ink)
-            .border(
-                width = if (selected) 2.dp else 1.dp,
-                color = if (selected) Gold else FrameDim.copy(alpha = 0.6f),
-                shape = RoundedCornerShape(10.dp)
-            )
-            .clickable(onClick = onClick)
-            .padding(horizontal = 14.dp, vertical = 12.dp),
-        horizontalArrangement = Arrangement.SpaceBetween,
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        Text(
-            text = label,
-            color = if (selected) Gold else Cream,
-            fontFamily = FontFirst(),
-            fontWeight = FontWeight.Bold,
-            fontSize = 13.sp
-        )
-        if (selected) Text(text = "✓", color = Gold, fontSize = 14.sp)
-    }
-}
-
-/** Przycisk akcji. Jeden wyglad na zgode na powiadomienia i na przywracanie domyslnych. */
-@Composable
-internal fun SettingsButton(
-    text: String,
-    onClick: () -> Unit,
-    modifier: Modifier = Modifier,
-    filled: Boolean = true
-) {
+internal fun SettingsPillButton(text: String, onClick: () -> Unit) {
     Text(
-        text = text.uppercase(),
-        color = if (filled) Color(0xFF120C08) else Cream,
+        text = text,
+        color = Color(0xFF2A1D08),
         fontFamily = FontFirst(),
         fontWeight = FontWeight.Bold,
         fontSize = 12.sp,
-        modifier = modifier
-            .clip(RoundedCornerShape(10.dp))
-            .background(if (filled) Gold else Ink)
-            .border(1.dp, if (filled) Gold else FrameDim.copy(alpha = 0.7f), RoundedCornerShape(10.dp))
+        modifier = Modifier
+            .clip(RoundedCornerShape(50))
+            .background(Gold)
             .clickable(onClick = onClick)
-            .padding(horizontal = 14.dp, vertical = 10.dp)
+            .padding(horizontal = 14.dp, vertical = 8.dp)
     )
 }

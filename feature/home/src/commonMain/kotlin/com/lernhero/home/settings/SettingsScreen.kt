@@ -2,7 +2,18 @@ package com.lernhero.home.settings
 
 import com.lernhero.shared.monetization.AdPrivacy
 import com.lernhero.domain.repository.AccountDeletion
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
+import com.lernhero.shared.appVersionName
+import com.lernhero.shared.resources.Resources
+import org.jetbrains.compose.resources.painterResource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -25,6 +36,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.runtime.rememberCoroutineScope
@@ -46,11 +58,10 @@ import com.lernhero.shared.notification.ReminderScheduler
 import com.lernhero.shared.notification.requestNotificationAccess
 import com.lernhero.shared.prefs.AppPreferences
 import com.lernhero.shared.theme.FontFirst
-import com.lernhero.shared.theme.FontPixel
 import org.koin.compose.koinInject
 
 /**
- * Ustawienia - preferencje URZADZENIA (nie konta gracza).
+ * Ustawienia - preferencje URZADZENIA i konto.
  *
  * Zasada tego ekranu: **kazdy przelacznik ma czytelnika w kodzie gry**. Jezyk zmienia teksty
  * natychmiast ([AppLanguageStore] jest stanem Compose), przypomnienia przeliczaja kolejke
@@ -58,8 +69,8 @@ import org.koin.compose.koinInject
  * jest tym, od ktorego startuje nastepna walka ([AppPreferences.battleSpeed] czytane w
  * BattleViewModel). Nic tu nie jest atrapa - i nic nowego nie powinno nia byc.
  *
- * Stan zyje w [AppPreferences] i [AppLanguageStore], nie w tym pliku: ekran nie trzyma wlasnej
- * kopii, wiec nie da sie go rozjechac z tym, co naprawde zapisane.
+ * Kolejnosc grup: konto na gorze (kim jestem), potem to, co sie zmienia najczesciej, a akcje
+ * nieodwracalne osobno na samym dole, w czerwonej strefie - zeby nikt ich nie tapnal przypadkiem.
  */
 @Composable
 fun SettingsScreen(
@@ -71,119 +82,212 @@ fun SettingsScreen(
     val languageStore = koinInject<AppLanguageStore>()
     val preferences = koinInject<AppPreferences>()
     val scheduler = koinInject<ReminderScheduler>()
+    val session = koinInject<AccountSession>()
 
     var resetMessage by remember { mutableStateOf<String?>(null) }
 
     Surface(modifier = Modifier.fillMaxSize(), color = Ink) {
-        // Pasek z powrotem i tytulem zostaje na miejscu - przewija sie sama lista ustawien.
         Column(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(insets)
-                .padding(horizontal = 14.dp, vertical = 10.dp),
-            verticalArrangement = Arrangement.spacedBy(14.dp)
         ) {
+            // Pasek z powrotem i tytulem zostaje na miejscu - przewija sie sama lista ustawien.
             Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                modifier = Modifier.fillMaxWidth().padding(horizontal = 12.dp, vertical = 10.dp),
+                horizontalArrangement = Arrangement.spacedBy(12.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
+                Box(
+                    modifier = Modifier
+                        .size(38.dp)
+                        .clip(CircleShape)
+                        .background(Panel)
+                        .border(1.dp, FrameDim, CircleShape)
+                        .clickable(onClick = onBack),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text(text = "‹", color = Gold, fontSize = 24.sp, fontWeight = FontWeight.Bold)
+                }
                 Text(
-                    text = "‹",
-                    color = Gold,
-                    fontFamily = FontPixel(),
-                    fontSize = 22.sp,
-                    modifier = Modifier.clickable(onClick = onBack)
-                )
-                Text(
-                    text = strings.settingsTitle.uppercase(),
-                    color = Gold,
-                    fontFamily = FontPixel(),
+                    text = strings.settingsTitle,
+                    color = Cream,
+                    fontFamily = FontFirst(),
                     fontWeight = FontWeight.Bold,
-                    fontSize = 15.sp
+                    fontSize = 22.sp
                 )
             }
 
             Column(
                 modifier = Modifier
                     .fillMaxSize()
-                    .verticalScroll(rememberScrollState()),
-                verticalArrangement = Arrangement.spacedBy(14.dp)
+                    .verticalScroll(rememberScrollState())
+                    .padding(horizontal = 16.dp, vertical = 6.dp),
+                verticalArrangement = Arrangement.spacedBy(22.dp)
             ) {
-            SettingsSection(title = strings.settingsLanguage) {
-                AppLanguage.entries.forEach { language ->
-                    SettingsOptionRow(
-                        label = language.nativeName,
-                        selected = language == languageStore.current,
-                        onClick = { languageStore.set(language) }
+                AccountCard(email = session.email)
+
+                SettingsGroup(title = strings.settingsGeneral) {
+                    SettingsRow(
+                        icon = "🌐",
+                        iconTint = Color(0xFF5AA9FF),
+                        title = strings.settingsLanguage,
+                        subtitle = strings.settingsLanguageHint,
+                        below = {
+                            SettingsSegmented(
+                                options = AppLanguage.entries,
+                                selected = languageStore.current,
+                                label = { it.nativeName },
+                                onSelect = { languageStore.set(it) }
+                            )
+                        }
+                    )
+                    SettingsRow(
+                        icon = "⚔️",
+                        iconTint = Color(0xFFFF8A4C),
+                        title = strings.settingsBattleSpeed,
+                        subtitle = strings.settingsBattleSpeedHint,
+                        divider = false,
+                        below = {
+                            SettingsSegmented(
+                                // Lista predkosci pochodzi z HUD-u walki, wiec nie da sie tu
+                                // ustawic tempa, ktorego walka nie zna.
+                                options = BattleSpeed.options,
+                                selected = preferences.battleSpeed,
+                                label = { "${it.toInt()}x" },
+                                onSelect = { preferences.chooseBattleSpeed(it) }
+                            )
+                        }
                     )
                 }
-                SettingsHint(strings.settingsLanguageHint)
-            }
 
-            NotificationsSection(
-                preferences = preferences,
-                scheduler = scheduler,
-                onChanged = { playerViewModel.remindersPreferencesChanged() }
-            )
-
-            SettingsSection(title = strings.settingsBattle) {
-                Text(
-                    text = strings.settingsBattleSpeed,
-                    color = Cream,
-                    fontFamily = FontFirst(),
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 12.sp
+                NotificationsGroup(
+                    preferences = preferences,
+                    scheduler = scheduler,
+                    onChanged = { playerViewModel.remindersPreferencesChanged() }
                 )
-                SettingsChoiceRow(
-                    // Lista predkosci pochodzi z HUD-u walki, wiec nie da sie tu ustawic tempa,
-                    // ktorego walka nie zna.
-                    options = BattleSpeed.options,
-                    selected = preferences.battleSpeed,
-                    label = { "${it.toInt()}x" },
-                    onSelect = { preferences.chooseBattleSpeed(it) }
-                )
-                SettingsHint(strings.settingsBattleSpeedHint)
-            }
 
-            AccountSection(onSignedOut = onSignedOut)
-
-            SettingsSection(title = strings.settingsAbout) {
                 // Napis bierzemy TERAZ, w ciele composable - w lambdzie tapniecia `strings`
                 // juz nie ma, bo to wlasnosc czytana z kompozycji.
                 val doneText = strings.settingsResetDone
-                SettingsButton(
-                    text = strings.settingsReset,
-                    filled = false,
-                    onClick = {
-                        preferences.resetToDefaults()
-                        playerViewModel.remindersPreferencesChanged()
-                        resetMessage = doneText
+                SettingsGroup(title = strings.settingsAbout, footer = resetMessage) {
+                    if (AdPrivacy.optionsRequired) {
+                        SettingsRow(
+                            icon = "🛡️",
+                            iconTint = Color(0xFF6FD08C),
+                            title = strings.settingsAdPrivacy,
+                            onClick = AdPrivacy::showOptions
+                        )
                     }
-                )
-                SettingsHint(resetMessage ?: strings.settingsResetHint)
-                if (isDebugBuild) SettingsHint("debug build")
-            }
+                    SettingsRow(
+                        icon = "↺",
+                        iconTint = Color(0xFFB38CFF),
+                        title = strings.settingsReset,
+                        subtitle = strings.settingsResetHint,
+                        onClick = {
+                            preferences.resetToDefaults()
+                            playerViewModel.remindersPreferencesChanged()
+                            resetMessage = doneText
+                        }
+                    )
+                    SettingsRow(
+                        icon = "ℹ️",
+                        iconTint = Muted,
+                        title = strings.settingsVersion,
+                        divider = false,
+                        trailing = {
+                            SettingsValue(appVersionName() + if (isDebugBuild) " · debug" else "")
+                        }
+                    )
+                }
 
-            Spacer(modifier = Modifier.height(8.dp))
+                DangerZone(onSignedOut = onSignedOut)
+
+                Footer()
             }
         }
     }
 }
 
+/** Karta "kim jestem" - godlo i adres konta. */
+@Composable
+private fun AccountCard(email: String?) {
+    SettingsGroup(title = strings.settingsAccount) {
+        Row(
+            modifier = Modifier.padding(14.dp),
+            horizontalArrangement = Arrangement.spacedBy(14.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Box(
+                modifier = Modifier
+                    .size(52.dp)
+                    .clip(CircleShape)
+                    .background(Ink)
+                    .border(2.dp, Gold.copy(alpha = 0.7f), CircleShape),
+                contentAlignment = Alignment.Center
+            ) {
+                Image(
+                    painter = painterResource(Resources.Image.emblem),
+                    contentDescription = null,
+                    modifier = Modifier.size(36.dp)
+                )
+            }
+            Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(2.dp)) {
+                Text(
+                    text = if (email != null) strings.settingsSignedInAs else strings.settingsSignedInUnknown,
+                    color = Muted,
+                    fontFamily = FontFirst(),
+                    fontSize = 11.sp
+                )
+                if (email != null) {
+                    Text(
+                        text = email,
+                        color = Cream,
+                        fontFamily = FontFirst(),
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 15.sp,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis
+                    )
+                }
+            }
+        }
+    }
+}
+
+@Composable
+private fun Footer() {
+    Column(
+        modifier = Modifier.fillMaxWidth().padding(top = 4.dp, bottom = 20.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.spacedBy(4.dp)
+    ) {
+        Image(
+            painter = painterResource(Resources.Image.emblem),
+            contentDescription = null,
+            modifier = Modifier.size(30.dp),
+            alpha = 0.5f
+        )
+        Text(
+            text = "WisdomBound  v${appVersionName()}",
+            color = Muted.copy(alpha = 0.7f),
+            fontFamily = FontFirst(),
+            fontSize = 11.sp
+        )
+    }
+}
+
 /**
  * Powiadomienia. Trzy powody, wypisane wprost - gracz ma zobaczyc, na co sie zgadza, ZANIM
- * systemowe okienko zapyta. Prosba idzie dopiero po tapnieciu w przycisk, nigdy przy starcie gry:
- * zgoda wyproszona w pierwszej sekundzie, bez kontekstu, to najkrotsza droga do odmowy na zawsze.
+ * systemowe okienko zapyta. Prosba idzie dopiero po tapnieciu w przycisk, nigdy przy starcie gry.
  *
  * Stan zgody czytamy przy KAZDYM powrocie na ekran, bo odpowiedz z systemu przychodzi
  * asynchronicznie i moze przyjsc z ustawien systemowych, spoza aplikacji.
  *
- * Bez zgody systemu przelaczniki sa widoczne, ale przygaszone i martwe - chowanie ich sprawiloby,
- * ze po tapnieciu "Wlacz przypomnienia" polowa sekcji wyskakuje znikad.
+ * Bez zgody systemu przelaczniki sa widoczne, ale przygaszone i martwe.
  */
 @Composable
-private fun NotificationsSection(
+private fun NotificationsGroup(
     preferences: AppPreferences,
     scheduler: ReminderScheduler,
     onChanged: () -> Unit
@@ -209,74 +313,58 @@ private fun NotificationsSection(
 
     val remindersOn = permitted && preferences.remindersEnabled
 
-    SettingsSection(title = strings.settingsNotifications) {
-        Text(
-            text = strings.settingsNotificationsIntro,
-            color = Cream,
-            fontFamily = FontFirst(),
-            fontSize = 11.sp
-        )
-
+    SettingsGroup(
+        title = strings.settingsNotifications,
+        footer = strings.settingsNotificationsIntro
+    ) {
         if (!permitted) {
-            SettingsButton(
-                text = strings.settingsNotificationsAsk,
-                onClick = { requestNotificationAccess() }
+            SettingsRow(
+                icon = "🔕",
+                iconTint = Gold,
+                title = strings.settingsNotificationsAsk,
+                subtitle = strings.settingsNotificationsBlocked,
                 // Odpowiedz przychodzi asynchronicznie - stan podlapie ON_RESUME wyzej.
+                onClick = { requestNotificationAccess() },
+                trailing = { SettingsPillButton(strings.settingsOn) { requestNotificationAccess() } }
             )
-            SettingsHint(strings.settingsNotificationsBlocked)
         }
 
-        SettingsToggleRow(
-            label = strings.settingsNotificationsAll,
-            hint = strings.settingsNotificationsAllHint,
-            checked = preferences.remindersEnabled,
+        SettingsRow(
+            icon = "🔔",
+            iconTint = Gold,
+            title = strings.settingsNotificationsAll,
+            subtitle = strings.settingsNotificationsAllHint,
             enabled = permitted,
-            onCheckedChange = {
-                preferences.setAllReminders(it)
+            onClick = {
+                preferences.setAllReminders(!preferences.remindersEnabled)
                 onChanged()
-            }
+            },
+            trailing = { SettingsSwitch(checked = preferences.remindersEnabled) }
         )
+        ReminderKindRow(ReminderKind.IdleStorageFull, "🏕️", Color(0xFF6FD08C),
+            strings.settingsReminderStorage, strings.settingsReminderStorageHint, preferences, remindersOn, onChanged)
+        ReminderKindRow(ReminderKind.FreeSummonReady, "✨", Color(0xFFB38CFF),
+            strings.settingsReminderSummon, strings.settingsReminderSummonHint, preferences, remindersOn, onChanged)
+        ReminderKindRow(ReminderKind.DailyGoal, "🎯", Color(0xFFFF8A4C),
+            strings.settingsReminderDaily, strings.settingsReminderDailyHint, preferences, remindersOn, onChanged)
 
-        ReminderKindRow(
-            kind = ReminderKind.IdleStorageFull,
-            label = strings.settingsReminderStorage,
-            hint = strings.settingsReminderStorageHint,
-            preferences = preferences,
-            enabled = remindersOn,
-            onChanged = onChanged
-        )
-        ReminderKindRow(
-            kind = ReminderKind.FreeSummonReady,
-            label = strings.settingsReminderSummon,
-            hint = strings.settingsReminderSummonHint,
-            preferences = preferences,
-            enabled = remindersOn,
-            onChanged = onChanged
-        )
-        ReminderKindRow(
-            kind = ReminderKind.DailyGoal,
-            label = strings.settingsReminderDaily,
-            hint = strings.settingsReminderDailyHint,
-            preferences = preferences,
-            enabled = remindersOn,
-            onChanged = onChanged
-        )
-
-        Text(
-            text = strings.settingsReminderHour,
-            color = Cream,
-            fontFamily = FontFirst(),
-            fontWeight = FontWeight.Bold,
-            fontSize = 12.sp
-        )
-        SettingsChoiceRow(
-            options = (AppPreferences.MIN_HOUR..AppPreferences.MAX_HOUR step 2).toList(),
-            selected = preferences.dailyGoalHour.nearestOffered(),
-            label = { "$it:00" },
+        SettingsRow(
+            icon = "🌙",
+            iconTint = Color(0xFF5AA9FF),
+            title = strings.settingsReminderHour,
+            divider = false,
             enabled = remindersOn && preferences.isReminderAllowed(ReminderKind.DailyGoal),
-            onSelect = {
-                preferences.chooseDailyGoalHour(it)
-                onChanged()
+            below = {
+                SettingsSegmented(
+                    options = (AppPreferences.MIN_HOUR..AppPreferences.MAX_HOUR step 2).toList(),
+                    selected = preferences.dailyGoalHour.nearestOffered(),
+                    label = { "$it:00" },
+                    enabled = remindersOn && preferences.isReminderAllowed(ReminderKind.DailyGoal),
+                    onSelect = {
+                        preferences.chooseDailyGoalHour(it)
+                        onChanged()
+                    }
+                )
             }
         )
     }
@@ -296,39 +384,43 @@ private fun Int.nearestOffered(): Int =
 @Composable
 private fun ReminderKindRow(
     kind: ReminderKind,
+    icon: String,
+    tint: Color,
     label: String,
     hint: String,
     preferences: AppPreferences,
     enabled: Boolean,
     onChanged: () -> Unit
 ) {
-    SettingsToggleRow(
-        label = label,
-        hint = hint,
-        // Przy wylaczonym glownym przelaczniku wiersz pokazuje WLASNY stan (przygaszony),
-        // a nie falszywe "wylaczone" - po ponownym wlaczeniu wszystkiego nic sie nie gubi.
-        checked = preferences.isReminderAllowed(kind),
+    // Przy wylaczonym glownym przelaczniku wiersz pokazuje WLASNY stan (przygaszony),
+    // a nie falszywe "wylaczone" - po ponownym wlaczeniu wszystkiego nic sie nie gubi.
+    val checked = preferences.isReminderAllowed(kind)
+    SettingsRow(
+        icon = icon,
+        iconTint = tint,
+        title = label,
+        subtitle = hint,
         enabled = enabled,
-        onCheckedChange = {
-            preferences.setReminderEnabled(kind, it)
+        onClick = {
+            preferences.setReminderEnabled(kind, !checked)
             onChanged()
-        }
+        },
+        trailing = { SettingsSwitch(checked = checked) }
     )
 }
 
 /**
- * Konto. Do tej pory z gry NIE DALO SIE wyjsc - raz zalogowane konto zostawalo na telefonie na
- * zawsze, wiec drugi gracz w domu nie mial jak wejsc na swoje.
+ * Wylogowanie i usuniecie konta - osobno, na dole, na czerwono.
  *
- * Wylogowanie kasuje sesje lokalnie, a nie konto: postep siedzi w Firestore i wraca w calosci.
- * Dlatego wystarczy jedno potwierdzenie, bez straszenia utrata danych.
+ * Wylogowanie kasuje sesje lokalnie, a nie konto: postep siedzi w Firestore i wraca w calosci,
+ * wiec wystarczy jedno potwierdzenie. Usuniecie jest nieodwracalne - drugie tapniecie.
  *
  * Przed odeslaniem na logowanie czyscimy obiekty, ktore zyja tak dlugo jak proces ([RunSession],
- * [CampaignSelection]) - bez tego nastepne konto na tym samym telefonie zaczynaloby z krainą,
+ * [CampaignSelection]) - bez tego nastepne konto na tym samym telefonie zaczynaloby z kraina,
  * plansza i niedokonczonym runem poprzednika.
  */
 @Composable
-private fun AccountSection(onSignedOut: () -> Unit) {
+private fun DangerZone(onSignedOut: () -> Unit) {
     val session = koinInject<AccountSession>()
     val runSession = koinInject<RunSession>()
     val campaign = koinInject<CampaignSelection>()
@@ -341,24 +433,18 @@ private fun AccountSection(onSignedOut: () -> Unit) {
     val needsLoginText = strings.settingsDeleteNeedsLogin
     val failedText = strings.settingsDeleteFailed
 
-    SettingsSection(title = strings.settingsAccount) {
-        Text(
-            text = session.email?.let { "${strings.settingsSignedInAs} $it" }
-                ?: strings.settingsSignedInUnknown,
-            color = Cream,
-            fontFamily = FontFirst(),
-            fontWeight = FontWeight.Bold,
-            fontSize = 12.sp
-        )
-
-        SettingsButton(
-            text = if (confirming) strings.settingsSignOutConfirm else strings.settingsSignOut,
-            filled = confirming,
+    SettingsGroup(title = strings.settingsDangerZone, footer = deleteError) {
+        SettingsRow(
+            icon = "🚪",
+            iconTint = Gold,
+            title = if (confirming) strings.settingsSignOutConfirm else strings.settingsSignOut,
+            titleColor = if (confirming) Gold else Cream,
+            subtitle = strings.settingsSignOutHint,
             onClick = {
-                if (working) return@SettingsButton
+                if (working) return@SettingsRow
                 if (!confirming) {
                     confirming = true
-                    return@SettingsButton
+                    return@SettingsRow
                 }
                 working = true
                 scope.launch {
@@ -369,17 +455,19 @@ private fun AccountSection(onSignedOut: () -> Unit) {
                 }
             }
         )
-        SettingsHint(strings.settingsSignOutHint)
-
-        SettingsButton(
-            text = if (confirmingDelete) strings.settingsDeleteAccountConfirm else strings.settingsDeleteAccount,
-            filled = confirmingDelete,
+        SettingsRow(
+            icon = "🗑️",
+            iconTint = Danger,
+            title = if (confirmingDelete) strings.settingsDeleteAccountConfirm else strings.settingsDeleteAccount,
+            titleColor = Danger,
+            subtitle = strings.settingsDeleteAccountHint,
+            divider = false,
             onClick = {
-                if (working) return@SettingsButton
+                if (working) return@SettingsRow
                 if (!confirmingDelete) {
                     confirmingDelete = true
                     deleteError = null
-                    return@SettingsButton
+                    return@SettingsRow
                 }
                 working = true
                 scope.launch {
@@ -397,10 +485,5 @@ private fun AccountSection(onSignedOut: () -> Unit) {
                 }
             }
         )
-        SettingsHint(deleteError ?: strings.settingsDeleteAccountHint)
-
-        if (AdPrivacy.optionsRequired) {
-            SettingsButton(text = strings.settingsAdPrivacy, filled = false, onClick = AdPrivacy::showOptions)
-        }
     }
 }

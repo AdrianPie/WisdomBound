@@ -75,6 +75,9 @@ interface AppStrings {
     val settingsDeleteNeedsLogin: String
     val settingsDeleteFailed: String
     val settingsAbout: String
+    val settingsDangerZone: String
+    val settingsVersion: String
+    val settingsGeneral: String
     val settingsReset: String
     val settingsResetHint: String
     val settingsResetDone: String
@@ -187,7 +190,7 @@ object EnStrings : AppStrings {
         "We only send three, and only when something is actually waiting for you."
     override val settingsNotificationsAsk = "Turn on reminders"
     override val settingsNotificationsBlocked =
-        "Notifications are switched off for LernHero in your system settings. Tap to reopen them."
+        "Notifications are switched off for WisdomBound in your system settings. Tap to reopen them."
     override val settingsNotificationsAll = "All reminders"
     override val settingsNotificationsAllHint = "Off clears everything already queued up."
     override val settingsReminderStorage = "Camp storage full"
@@ -220,6 +223,9 @@ object EnStrings : AppStrings {
         "For safety, sign out and sign back in, then delete the account within 5 minutes."
     override val settingsDeleteFailed = "Could not delete the account. Check your connection and try again."
     override val settingsAbout = "About"
+    override val settingsDangerZone = "Danger zone"
+    override val settingsVersion = "Version"
+    override val settingsGeneral = "General"
     override val settingsReset = "Restore defaults"
     override val settingsResetHint = "Only the settings on this screen. Your hero and progress stay untouched."
     override val settingsResetDone = "Settings restored to defaults."
@@ -334,7 +340,7 @@ object PlStrings : AppStrings {
         "Wysylamy dokladnie trzy i tylko wtedy, gdy cos naprawde na Ciebie czeka."
     override val settingsNotificationsAsk = "Wlacz przypomnienia"
     override val settingsNotificationsBlocked =
-        "Powiadomienia dla LernHero sa wylaczone w ustawieniach systemu. Tapnij, zeby je otworzyc."
+        "Powiadomienia dla WisdomBound sa wylaczone w ustawieniach systemu. Tapnij, zeby je otworzyc."
     override val settingsNotificationsAll = "Wszystkie przypomnienia"
     override val settingsNotificationsAllHint = "Wylaczenie kasuje tez to, co juz stoi w kolejce."
     override val settingsReminderStorage = "Pelny magazyn w obozie"
@@ -367,6 +373,9 @@ object PlStrings : AppStrings {
         "Dla bezpieczenstwa wyloguj sie i zaloguj ponownie, a potem usun konto w ciagu 5 minut."
     override val settingsDeleteFailed = "Nie udalo sie usunac konta. Sprawdz polaczenie i sprobuj ponownie."
     override val settingsAbout = "O aplikacji"
+    override val settingsDangerZone = "Strefa zagrozenia"
+    override val settingsVersion = "Wersja"
+    override val settingsGeneral = "Ogolne"
     override val settingsReset = "Przywroc domyslne"
     override val settingsResetHint = "Tylko ustawienia z tego ekranu. Bohater i postep zostaja nietkniete."
     override val settingsResetDone = "Przywrocono ustawienia domyslne."

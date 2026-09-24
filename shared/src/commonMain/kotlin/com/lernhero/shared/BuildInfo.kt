@@ -13,3 +13,7 @@ package com.lernhero.shared
  * Teraz odpowiada za to typ buildu, wiec nie da sie tego zapomniec.
  */
 expect val isDebugBuild: Boolean
+
+/** Wersja apki widoczna dla gracza (versionName / CFBundleShortVersionString) - do stopki Ustawien. */
+@androidx.compose.runtime.Composable
+expect fun appVersionName(): String
