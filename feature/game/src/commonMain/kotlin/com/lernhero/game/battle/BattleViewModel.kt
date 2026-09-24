@@ -248,6 +248,9 @@ class BattleViewModel(
     /** Mala premia do zlota z poziomu bohatera - patrz [com.lernhero.domain.player.LevelGoldBonus]. */
     private var heroGoldMultiplier: Float = 1f
 
+    /** Poziom bohatera z zapisu - tylko do odznaki przy pasku HP. */
+    private var heroLevel: Int = 1
+
     /** Numer rundy w biezacej turze - zmiana odnawia garde z [EndlessBuff.Aegis] (patrz [refreshGuards]). */
     private var currentRoundIndex: Int = -1
 
@@ -2452,6 +2455,7 @@ class BattleViewModel(
             // bez tego stary zapis omijalby caly system odblokowywania.
             savedParty = PartySlots.enforce(player.party, player.progress.level)
             heroGoldMultiplier = com.lernhero.domain.player.LevelGoldBonus.multiplier(player.progress.level)
+            heroLevel = player.progress.level
             savedMonsterLevels = player.monsterLevels
             savedMonsterStars = player.monsterStars
             savedMonsterEquipment = player.migratedMonsterEquipment()
@@ -2950,7 +2954,8 @@ class BattleViewModel(
             avatar = "knight",
             hp = HERO_BASE_HP,
             maxHp = HERO_BASE_HP,
-            attack = HERO_BASE_ATTACK
+            attack = HERO_BASE_ATTACK,
+            level = heroLevel
         )
 
         val companions = savedParty
@@ -2984,12 +2989,13 @@ class BattleViewModel(
                     companionCardOf["PLAYER_COMPANION_${index}_${card.id}"] = card.id
                     CharacterTemplate(
                         id = "PLAYER_COMPANION_${index}_${card.id}",
-                        name = if (level > MonsterLevels.MIN_LEVEL) "${card.name} (${level})" else card.name,
+                        name = card.name,
                         isPlayer = true,
                         avatar = card.spriteKey,
                         hp = hp,
                         maxHp = hp,
-                        attack = CompanionPower.attackAt(card, stars, level, gear)
+                        attack = CompanionPower.attackAt(card, stars, level, gear),
+                        level = level
                     )
                 }
             }
@@ -3048,9 +3054,25 @@ class BattleViewModel(
                 avatar = species,
                 hp = hp,
                 maxHp = hp,
-                attack = attack
+                attack = attack,
+                level = enemyLevel(wave, level, BattleKind.Normal)
             )
         }
+    }
+
+    /**
+     * Poziom wroga do odznaki przy pasku HP. Nie wplywa na statystyki (te licza drabinka i mnozniki
+     * wyzej) - to czytelne streszczenie ich wzrostu: plansza kampanii podnosi poziom co dwa, fala
+     * co trzy, elita i boss maja wyraznie wiecej. W endless liczy sie tylko fala.
+     */
+    private fun enemyLevel(wave: Int, stage: Int?, kind: BattleKind): Int {
+        val base = (stage?.let { (it - 1) * 2 } ?: 0) + 1 + (wave - 1) / 3
+        val bonus = when (kind) {
+            BattleKind.Boss -> 5
+            BattleKind.Normal -> 0
+            else -> 2
+        }
+        return base + bonus + runSession.difficulty.ordinal * 5
     }
 
     /**
@@ -3092,7 +3114,8 @@ class BattleViewModel(
             hp = hp,
             maxHp = hp,
             attack = attack,
-            isElite = true
+            isElite = true,
+            level = enemyLevel(wave, level, kind)
         )
     }
 
@@ -3105,6 +3128,7 @@ class BattleViewModel(
             attack = attack,
             isPlayer = isPlayer,
             avatarKey = avatar,
+            level = level,
             // Zywiol bierze sie z KARTY o tym samym kluczu - gatunki wrogow ([EnemySpecies.all])
             // i id kompanow to ten sam zbior, wiec nie trzeba przepychac typu przez szablony.
             element = MonsterCatalog.byId(avatar)?.element,
@@ -3558,6 +3582,8 @@ private data class CharacterTemplate(
     val maxHp: Int,
     val attack: Int,
     /** Elita/boss - dostaje dodatkowe przeskalowanie sylwetki (patrz [BattleViewModel.ELITE_SCALE_MULTIPLIER]). */
-    val isElite: Boolean = false
+    val isElite: Boolean = false,
+    /** Poziom pokazywany przy pasku HP - bohater i kompan swoj, wrog z planszy i fali. */
+    val level: Int = 1
 )
 

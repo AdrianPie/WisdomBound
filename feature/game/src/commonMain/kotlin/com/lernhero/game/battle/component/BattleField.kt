@@ -54,6 +54,7 @@ import androidx.compose.ui.layout.positionInRoot
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.IntOffset
+import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.zIndex
 import com.lernhero.game.character.CharacterState
@@ -183,10 +184,16 @@ internal fun BattleField(
         // Warstwa efektow - calkowicie osobna od postaci, patrz com.lernhero.game.battle.effects.
         EffectsOverlay(controller = effectsController, modifier = Modifier.fillMaxSize())
         DamageNumbersOverlay(controller = damageNumberController, modifier = Modifier.fillMaxSize())
+        // Mnozniki ataku NA TE TURE - od rozliczenia odpowiedzi do nastepnego pytania. Tabliczki
+        // pokazuja je od razu przy kazdej postaci (patrz [UnitPlate]).
+        val turnActive = state.turnPhase == TurnPhase.Impact || state.turnPhase == TurnPhase.Resolving
+        val outcome = state.turnOutcome.takeIf { turnActive }
         HealthBarsOverlay(
             characters = allCharacters,
             characterRects = characterRects,
             boostedElements = state.boostedElements,
+            playerAttackMultiplier = outcome?.damageMultiplier ?: 1f,
+            enemyAttackMultiplier = if (outcome != null && !outcome.correct) com.lernhero.game.battle.WRONG_ANSWER_ENEMY_BONUS else 1f,
             modifier = Modifier.fillMaxSize()
         )
 
@@ -295,6 +302,8 @@ private fun HealthBarsOverlay(
     characters: List<CharacterUiModel>,
     characterRects: Map<String, CharacterRect>,
     boostedElements: Set<Element>,
+    playerAttackMultiplier: Float,
+    enemyAttackMultiplier: Float,
     modifier: Modifier = Modifier
 ) {
     var layerOrigin by remember { mutableStateOf(Offset.Zero) }
@@ -311,30 +320,31 @@ private fun HealthBarsOverlay(
             key(character.id) {
                 val world = rect.resolve(anchorsFor(character).hpBarAnchor)
                 val local = world - layerOrigin
-                val barWidthPx = rect.size.width * 0.5f
+                val barWidthPx = rect.size.width * 0.42f
                 val barWidthDp = with(density) { barWidthPx.toDp() }
-                // Odznaka zywiolu tylko na NASZYCH jednostkach: to gracz wybiera kafel tematu i to
-                // jego druzyne ten wybor wzmacnia - typ wroga nic tu nie zmienia.
-                val showBadge = character.isPlayer && character.element != null
-                val boosted = showBadge && character.element in boostedElements
+                // Zywiol przy kazdym, kto go ma - u naszych pulsuje, gdy kafel tematu go wzmocnil.
+                val showBadge = character.element != null
+                val boosted = character.isPlayer && character.element in boostedElements
 
-                Row(
+                var plateSize by remember { mutableStateOf(IntSize.Zero) }
+                UnitPlate(
+                    character = character,
+                    attackMultiplier = if (character.isPlayer) playerAttackMultiplier else enemyAttackMultiplier,
+                    barWidth = barWidthDp,
+                    elementBadge = if (showBadge) {
+                        { ElementBadge(element = character.element!!, boosted = boosted) }
+                    } else null,
                     modifier = Modifier
+                        .onGloballyPositioned { plateSize = it.size }
                         .offset {
-                            val badgeShift = if (showBadge) ELEMENT_BADGE_PX + 3f else 0f
                             IntOffset(
-                                x = (local.x - barWidthPx / 2f - badgeShift).roundToInt(),
-                                y = local.y.roundToInt()
+                                // Wysrodkowana nad postacia; DOLNA krawedz na czubku glowy, wiec
+                                // tabliczka nigdy nie przykrywa sylwetki.
+                                x = (local.x - plateSize.width / 2f).roundToInt(),
+                                y = (local.y - plateSize.height).roundToInt()
                             )
-                        },
-                    horizontalArrangement = Arrangement.spacedBy(3.dp),
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    if (showBadge) {
-                        ElementBadge(element = character.element!!, boosted = boosted)
-                    }
-                    HealthBar(character = character, modifier = Modifier.width(barWidthDp))
-                }
+                        }
+                )
             }
         }
     }
@@ -390,7 +400,7 @@ private fun ElementBadge(element: Element, boosted: Boolean) {
 }
 
 private val ELEMENT_BADGE_DP = 16.dp
-private const val ELEMENT_BADGE_PX = 12f
+
 
 /**
  * Niewidzialny "dyrygent": dla kazdego nowego [FloatingEffect] (Game Logic -> Combat Action, patrz
@@ -867,41 +877,6 @@ private fun DizzyStars(modifier: Modifier = Modifier) {
         fontSize = 16.sp,
         modifier = modifier.graphicsLayer { rotationZ = angle }
     )
-}
-
-@Composable
-private fun HealthBar(
-    character: CharacterUiModel,
-    modifier: Modifier = Modifier
-) {
-    val hpFraction = if (character.maxHp > 0) {
-        character.hp.toFloat() / character.maxHp.toFloat()
-    } else {
-        0f
-    }.coerceIn(0f, 1f)
-
-    Box(
-        modifier = modifier
-            .height(4.dp)
-            .clip(RoundedCornerShape(50))
-            .background(Color(0xFF120C08).copy(alpha = 0.75f))
-            .border(0.75.dp, Color.Black.copy(alpha = 0.55f), RoundedCornerShape(50))
-            .padding(0.75.dp)
-    ) {
-        Box(
-            modifier = Modifier
-                .fillMaxWidth(hpFraction)
-                .fillMaxSize()
-                .clip(RoundedCornerShape(50))
-                .background(
-                    if (hpFraction > 0.35f) {
-                        Color(0xFF3DDC1F)
-                    } else {
-                        Color(0xFFFF2E1F)
-                    }
-                )
-        )
-    }
 }
 
 private fun calculateCardSize(

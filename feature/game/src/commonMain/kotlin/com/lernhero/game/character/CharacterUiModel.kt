@@ -9,6 +9,8 @@ data class CharacterUiModel(
     val maxHp: Int,
     val attack: Int,
     val isPlayer: Boolean,
+    /** Poziom do odznaki przy pasku HP (bohater, kompan, wrog). */
+    val level: Int = 1,
     /** Klucz gatunku - patrz [MonsterVisualPresets.forSpecies]. Bez znaczenia dla hero (rysowany przez [ModularKnight]). */
     val avatarKey: String,
     /**
