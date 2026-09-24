@@ -25,7 +25,6 @@ object ScienceQuestionsExtra {
     val all: List<QuizEntry> = listOf(
 
         /* ------------------------------- Easy ------------------------------- */
-        ask("woda_wrzenie", "At what temperature does water boil at normal pressure?", "100 C", listOf("80 C", "120 C", "60 C"), QuizDifficulty.Easy),
         ask("woda_zamarza", "At what temperature does water freeze?", "0 C", listOf("-10 C", "4 C", "10 C"), QuizDifficulty.Easy),
         ask("stany_skupienia", "How many basic states of matter are taught in school?", "Three", listOf("Two", "Four", "Five"), QuizDifficulty.Easy),
         ask("tecza_barwy", "How many colors are traditionally listed in a rainbow?", "Seven", listOf("Five", "Six", "Eight"), QuizDifficulty.Easy),
@@ -41,26 +40,19 @@ object ScienceQuestionsExtra {
         ask("archimedes", "What does Archimedes' principle concern?", "Buoyant force in fluids", listOf("Conservation of momentum", "Thermal expansion", "Reflection of light"), QuizDifficulty.Medium),
         ask("ph_kwas", "What pH does an acidic solution have?", "Below 7", listOf("Equal to 7", "Above 7", "Above 14"), QuizDifficulty.Medium),
         ask("atom_jadro", "What's inside an atom's nucleus?", "Protons and neutrons", listOf("Only electrons", "Protons and electrons", "Only neutrons"), QuizDifficulty.Medium),
-        ask("elektron_ladunek", "What charge does an electron have?", "Negative", listOf("Positive", "Zero", "Variable"), QuizDifficulty.Medium),
         ask("ksiezyc_fazy", "How long is a full cycle of Moon phases?", "About 29.5 days", listOf("About 24 days", "Exactly 30 days", "About 365 days"), QuizDifficulty.Medium),
-        ask("planeta_pierscienie", "Which planet is famous for its spectacular rings?", "Saturn", listOf("Jupiter", "Uranus", "Neptune"), QuizDifficulty.Medium),
-        ask("planeta_najgoretsza", "Which Solar System planet has the highest surface temperature?", "Venus", listOf("Mercury", "Mars", "Jupiter"), QuizDifficulty.Medium),
-        ask("kometa_ogon", "Why does a comet have a tail?", "Solar wind blows gas and dust off it", listOf("It burns from friction", "Jupiter's gravity pulls it out", "It spins very fast"), QuizDifficulty.Medium),
-        ask("rok_swietlny", "What is a light-year?", "A unit of distance", listOf("A unit of time", "A unit of brightness", "A unit of a star's mass"), QuizDifficulty.Medium),
         ask("stan_plazmy", "Which state of matter dominates in stars?", "Plasma", listOf("Gas", "Liquid", "Solid"), QuizDifficulty.Medium),
         ask("mieszanina_jednorodna", "What is a solution of salt in water?", "A homogeneous mixture", listOf("A chemical compound", "A heterogeneous mixture", "An element"), QuizDifficulty.Medium),
         ask("kataliza", "What does a catalyst do?", "Speeds up a reaction without being consumed itself", listOf("Increases the mass of the products formed", "Changes which products the reaction gives", "Lowers the temperature of the surroundings"), QuizDifficulty.Medium),
 
         /* ------------------------------ Hard ------------------------------- */
         ask("newton_trzecia", "What does Newton's third law state?", "Every action has an equal and opposite reaction", listOf("A body with no force moves at constant velocity", "Force equals mass times acceleration", "Energy is never lost"), QuizDifficulty.Hard),
-        ask("doppler", "What does the Doppler effect concern?", "A wave's frequency shift when its source moves", listOf("The bending of light passing through a prism", "The rate at which a nucleus decays", "How heat travels along a metal bar"), QuizDifficulty.Hard),
         ask("polprzewodnik", "What characterizes a semiconductor?", "It conducts better when heated or doped", listOf("It never conducts electricity", "It always conducts perfectly", "It loses resistance at any temperature"), QuizDifficulty.Hard),
         ask("izotop", "What differs between isotopes of the same element?", "The number of neutrons", listOf("The number of protons", "The nuclear charge", "The atomic number"), QuizDifficulty.Hard),
         ask("polowiczny_rozpad", "What does half-life mean?", "The time after which half of the nuclei have decayed", listOf("The time in which every nucleus decays", "The time needed to emit a single quantum", "The time an electron takes to orbit once"), QuizDifficulty.Hard),
         ask("entropia_pojecie", "What is entropy, roughly speaking?", "A measure of a system's disorder", listOf("A measure of a system's mass", "A measure of reaction speed", "A measure of charge"), QuizDifficulty.Hard),
         ask("supernowa", "How does the life of a very massive star end?", "A supernova explosion", listOf("Turning into a planet", "Slowly cooling into a brown dwarf", "Breaking apart into comets"), QuizDifficulty.Hard),
         ask("czarna_dziura_masa", "What forms from the core of the most massive stars after a supernova?", "A black hole", listOf("A white dwarf", "A planetary nebula", "A quasar"), QuizDifficulty.Hard),
-        ask("bialy_karzel", "What will the Sun become at the end of its life?", "A white dwarf", listOf("A black hole", "A neutron star", "A supernova"), QuizDifficulty.Hard),
         ask("czastka_higgsa", "At which facility was the Higgs boson discovered?", "CERN", listOf("NASA", "Fermilab", "MIT"), QuizDifficulty.Hard),
         ask("laser_skrot", "What is the core mechanism behind a laser?", "Stimulated emission of radiation", listOf("Fission of heavy atomic nuclei", "Friction between fast electrons", "Sudden compression of a gas"), QuizDifficulty.Hard),
         ask("nadprzewodnik", "What happens to a superconductor's resistance below its critical temperature?", "It drops to zero", listOf("It rises sharply", "It stays the same", "It changes sign"), QuizDifficulty.Hard),
@@ -71,12 +63,10 @@ object ScienceQuestionsExtra {
         ask("splatanie", "What is quantum entanglement?", "Correlated particle states regardless of distance", listOf("A head-on collision of two single photons", "Current that flows on without resistance", "A particle decaying into three lighter ones"), QuizDifficulty.Expert),
         ask("cmb", "What is the cosmic microwave background radiation?", "A remnant of the early Universe", listOf("Emission from the Milky Way", "Radiation from the Sun", "Detector noise"), QuizDifficulty.Expert),
         ask("fale_graw", "When were gravitational waves first directly detected?", "2015", listOf("1998", "2020", "1974"), QuizDifficulty.Expert),
-        ask("granica_chandrasekhara", "What does the Chandrasekhar limit concern?", "The maximum mass of a white dwarf", listOf("Earth's escape velocity", "The temperature of hydrogen fusion", "A galaxy's size"), QuizDifficulty.Expert),
         ask("hawking", "What does Hawking radiation predict?", "That black holes slowly evaporate", listOf("That the Universe is shrinking", "That gravity is a strong force", "That time flows backward"), QuizDifficulty.Expert),
         ask("neutrino_masa", "What was discovered about neutrinos through observing their oscillation?", "That they have a nonzero mass", listOf("That they move faster than light", "That they carry a positive charge", "That they don't exist"), QuizDifficulty.Expert),
         ask("model_standardowy", "How many fundamental interactions does the Standard Model describe?", "Three", listOf("Four", "Two", "Five"), QuizDifficulty.Expert),
         ask("kwark_rodzaje", "How many types (flavors) of quarks are there?", "Six", listOf("Three", "Four", "Eight"), QuizDifficulty.Expert),
-        ask("stala_hubble", "What does the Hubble constant describe?", "The rate at which the Universe is expanding", listOf("The total mass of the Milky Way galaxy", "The peak brightness of a supernova", "The age of the Sun and its planets"), QuizDifficulty.Expert),
         ask("bose_einstein", "What is a Bose-Einstein condensate?", "A state of matter near absolute zero", listOf("The plasma inside a hot young star", "A fluid held above its critical point", "A crystal of tightly packed metal"), QuizDifficulty.Expert),
         ask("efekt_fotoelektryczny", "For explaining which phenomenon did Einstein win the Nobel Prize?", "The photoelectric effect", listOf("The theory of relativity", "Brownian motion", "Mass-energy equivalence"), QuizDifficulty.Expert)
     )

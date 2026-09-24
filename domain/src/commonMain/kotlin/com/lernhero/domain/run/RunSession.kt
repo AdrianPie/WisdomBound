@@ -30,7 +30,20 @@ data class RunModifiers(
  */
 class RunSession {
 
+    /**
+     * Pytania zadane w tym uruchomieniu gry - wszystkie typy, wszystkie walki. Dzieki temu kolejna
+     * plansza nie zaczyna od tych samych pytan co poprzednia. Patrz [com.lernhero.domain.quiz.QuestionHistory].
+     */
+    val questionHistory = com.lernhero.domain.quiz.QuestionHistory()
+
     var modifiers: RunModifiers = RunModifiers()
+        private set
+
+    /**
+     * Poziom drabinki wypraw, na ktorym idzie ten bieg - patrz [RunLadder]. Zero, gdy bieg nie
+     * jest wyprawa (kampania), bo tam o sile wrogow decyduje tier planszy i jej numer.
+     */
+    var ladderTier: Int = 0
         private set
 
     /** Wybrana kategoria pytan na ten run. Null = losowe pytania z calego banku. */
@@ -46,7 +59,7 @@ class RunSession {
         private set
 
     /**
-     * Fiszki gracza do trenowania w endless (zakladka "Wlasne" w [com.lernhero.home.story.EndlessSetupPanel]).
+     * Fiszki gracza do trenowania w wyprawie (wybor materialu - [com.lernhero.home.fight.MaterialSheet]).
      * Niepuste = walka pyta WYLACZNIE o te slowka (patrz [com.lernhero.domain.quiz.WordQuizBank]),
      * z pominieciem wbudowanego banku i pytan typu "ulóz w kolejnosci".
      */
@@ -122,7 +135,9 @@ class RunSession {
         quizDifficulty: QuizDifficulty? = null,
         customWords: List<SavedWord> = emptyList(),
         customDeck: CustomDeck? = null,
-        categoryLevel: Int = CategoryMastery.FIRST_LEVEL
+        categoryLevel: Int = CategoryMastery.FIRST_LEVEL,
+        /** Poziom drabinki wypraw - patrz [ladderTier]. */
+        ladderTier: Int = 0
     ) {
         modifiers = RunModifiers()
         this.category = category
@@ -132,6 +147,7 @@ class RunSession {
         this.customWords = customWords
         this.customDeck = customDeck
         this.categoryLevel = categoryLevel
+        this.ladderTier = ladderTier
         pendingBattle = null
         lastBattleWon = null
         partyHp = emptyMap()

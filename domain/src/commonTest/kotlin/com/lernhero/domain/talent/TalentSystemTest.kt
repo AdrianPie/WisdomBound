@@ -3,6 +3,7 @@ package com.lernhero.domain.talent
 import com.lernhero.domain.player.LevelCurve
 import com.lernhero.domain.player.PlayerProgress
 import com.lernhero.domain.spell.SpellCatalog
+import com.lernhero.domain.run.EndlessBuff
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertNotNull
@@ -182,7 +183,44 @@ class TalentSystemTest {
         // Zapis z absurdalnie wysokim stopniem (np. po zmianie katalogu) nie moze dac wiecej stakow,
         // niz silnik walki uznaje za maksimum - inaczej Twierdza redukowalaby ponad 100% obrazen.
         val bonuses = TalentRules.bonusesOf(mapOf(talent.id to 99))
-        assertEquals(buff.maxStacks, bonuses.buffStacks[buff])
+        assertEquals(TalentRules.talentCap(buff), bonuses.buffStacks[buff])
+    }
+
+    @Test
+    fun `talenty zostawiaja polowe kazdej mechaniki kartom z biegu`() {
+        EndlessBuff.entries.forEach { buff ->
+            assertTrue(TalentRules.talentCap(buff) <= (buff.maxStacks + 1) / 2)
+        }
+    }
+
+    @Test
+    fun `zaden punkt nie przepada w suficie mechaniki`() {
+        // Suma stopni wszystkich talentow karmiacych buff nie moze przekroczyc limitu talentow -
+        // inaczej ostatnie punkty w wezle bylyby wydane na nic.
+        val perBuff = TalentCatalog.all
+            .flatMap { t -> t.effects.filterIsInstance<TalentEffect.Buff>().map { it.buff to it.stacksPerRank * t.maxRank } }
+            .groupBy({ it.first }, { it.second })
+            .mapValues { (_, stacks) -> stacks.sum() }
+        val wasted = perBuff.filter { (buff, stacks) -> stacks > TalentRules.talentCap(buff) }
+        assertTrue(wasted.isEmpty(), "Talenty przebijaja limit: $wasted")
+    }
+
+    @Test
+    fun `obciete stopnie ze starego zapisu wracaja do puli`() {
+        val talent = TalentCatalog.byId("heal_vampirism")!!
+        assertEquals(talent.maxRank, TalentRules.totalSpent(mapOf(talent.id to talent.maxRank + 2)))
+    }
+
+    @Test
+    fun `leczenie z talentow jest umiarkowane`() {
+        val all = TalentCatalog.all.associate { it.id to it.maxRank }
+        val bonuses = TalentRules.bonusesOf(all)
+        // Wampiryzm najwyzej 10%, regeneracja 14% na fale, jedno Blogoslawienstwo, jeden Drugi Oddech.
+        assertTrue((bonuses.buffStacks[EndlessBuff.Vampirism] ?: 0) <= 2)
+        assertTrue((bonuses.buffStacks[EndlessBuff.Regeneration] ?: 0) <= 2)
+        assertTrue((bonuses.buffStacks[EndlessBuff.Blessing] ?: 0) <= 1)
+        assertTrue((bonuses.buffStacks[EndlessBuff.SecondWind] ?: 0) <= 1)
+        assertTrue((bonuses.spellChances["heal"] ?: 0) <= 25)
     }
 
     @Test
@@ -274,8 +312,8 @@ class TalentSystemTest {
 
     @Test
     fun `zerowanie drzewka oddaje wszystkie punkty`() {
-        val ranks = mapOf("dps_might" to 5, "dps_precision" to 2)
-        assertEquals(4, TalentRules.availablePoints(level = 12, ranks = ranks))
+        val ranks = mapOf("dps_might" to 3, "dps_precision" to 2)
+        assertEquals(6, TalentRules.availablePoints(level = 12, ranks = ranks))
         assertEquals(11, TalentRules.availablePoints(level = 12, ranks = emptyMap()))
     }
 

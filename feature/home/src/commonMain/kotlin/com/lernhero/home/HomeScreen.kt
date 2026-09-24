@@ -1,487 +1,451 @@
 package com.lernhero.home
 
 import androidx.compose.animation.core.FastOutSlowInEasing
-import androidx.compose.animation.core.RepeatMode
-import androidx.compose.animation.core.animateFloat
-import androidx.compose.animation.core.infiniteRepeatable
-import androidx.compose.animation.core.rememberInfiniteTransition
-import androidx.compose.animation.core.tween
 import androidx.compose.animation.core.animateFloatAsState
-import androidx.compose.foundation.Image
+import androidx.compose.animation.core.tween
+import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
-import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.requiredSize
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.BiasAlignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.geometry.Size
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.FilterQuality
 import androidx.compose.ui.graphics.Shadow
-import androidx.compose.ui.graphics.painter.Painter
-import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.LineHeightStyle
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.IntOffset
+import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.lernhero.domain.player.PlayerProgress
-import com.lernhero.domain.town.TownResources
-import com.lernhero.game.character.HeroLook
-import com.lernhero.game.character.KnightEquipment
-import com.lernhero.game.character.ModularKnight
+import com.lernhero.domain.monetization.AdRewards
 import com.lernhero.home.player.PlayerViewModel
+import com.lernhero.reader.todayDateKey
+import com.lernhero.shared.isDebugBuild
 import com.lernhero.shared.resources.Resources
 import com.lernhero.shared.theme.AppPalette
 import com.lernhero.shared.theme.FontFirst
 import com.lernhero.shared.theme.FontPixel
-import androidx.compose.material3.Text
-import org.jetbrains.compose.resources.painterResource
-import com.lernhero.shared.isDebugBuild
+import org.jetbrains.compose.resources.imageResource
+import kotlin.math.max
+import kotlin.math.roundToInt
 
 private val Muted = AppPalette.TextMuted
 
+/** Ciemnosc, w ktorej tonie scena poza kadrem mapy - patrz [TownMap]. */
+private val VoidDark = Color(0xFF120E18)
+
 /**
  * Przelacznik calego rzedu linkow deweloperskich na Domu (podglady modeli + przycisk dosypujacy
- * zasoby). MUSI byc false przed kazdym wydaniem do sklepu - przelacz recznie na true lokalnie,
- * gdy testujesz, i wroc do false przed buildem release. Docelowo warto to zastapic prawdziwa
- * flaga per-platform (BuildConfig.DEBUG na Androidzie i jej odpowiednik na iOS/desktop), ale to
- * jedna linijka wystarcza, zeby nie wypuscic przycisku "darmowe zloto" do sklepu.
+ * zasoby). Czyta TYP BUILDU, wiec do sklepu nie ma prawa pojsc widoczny cheat.
  */
 private val SHOW_DEV_TOOLS: Boolean get() = isDebugBuild
 
 /**
- * Jak szeroka (wzgledem szerokosci ekranu) jest jedna wyspa - praktycznie caly ekran.
+ * Wymiary grafiki mapy w pikselach. Sa tu na sztywno, bo to wzgledem NICH liczone sa wszystkie
+ * pozycje budynkow - [Painter.intrinsicSize] dalby te sama liczbe, ale dopiero po wczytaniu
+ * obrazu, wiec uklad przeskakiwalby przy pierwszej klatce.
  *
- * Kazdy PNG ma wokol wyspy przezroczysty margines (tresc zajmuje ~78% szerokosci i ~72% wysokosci
- * kadru), wiec kontenery moga na siebie nachodzic o ~20% i grafiki i tak sie nie zetkna. To wlasnie
- * ten margines pozwala trzymac wyspy tak duze przy czterech sztukach bez scrolla.
+ * Przy podmianie grafiki trzeba zmienic te dwie liczby (i przemierzyc ulamki w [townSpots]).
  */
-private const val ISLAND_WIDTH_FRACTION = 0.48f
-
-/** Zmierzone na PNG-ach: gdzie w kadrze zaczyna sie i jak wysoka jest sama wyspa (reszta to alpha). */
-private const val ISLAND_ART_TOP_FRACTION = 0.17f
-private const val ISLAND_ART_HEIGHT_FRACTION = 0.72f
+private const val MAP_WIDTH = 768f
+private const val MAP_HEIGHT = 1512f
 
 /**
- * Jedna wyspa-budynek na mapie Miasta. Pozycja pionowa liczy sie z kolejnosci na liscie (patrz
- * CityMap - kazda wyspa dostaje wlasny "pas" wysokosci), tu trzymamy tylko poziomy ulamek
- * (lekki zygzak lewo/prawo) i etykiete.
+ * Ile wierszy pikseli z krawedzi grafiki rozciagamy na pas poza mapa. Kilka, a nie jeden:
+ * pojedynczy wiersz lapie szum kompresji i potrafi wyjsc w paskach.
  */
-private data class CityBuildingSpot(
-    val icon: Painter,
+private const val EDGE_BLEED_PX = 4
+
+/**
+ * O ile podnosimy cala mape ponad dolna krawedz ekranu - miasto stalo zbyt nisko, przyklejone
+ * dokladnie do dolu. Zapas, ktory ten offset otwiera pod mapa, wypelnia juz istniejacy pas
+ * "most schodzi w otchlan" (patrz nizej, `bottomStart < screenHeight`), wiec podniesienie mapy
+ * nie wymaga zadnej dodatkowej logiki - most po prostu wisi troche wyzej nad ciemnoscia.
+ */
+private val MAP_LIFT = 16.dp
+
+
+/**
+ * Jedno klikalne miejsce na mapie Domu.
+ *
+ * Wszystkie cztery liczby to UŁAMKI GRAFIKI (0..1), a nie ekranu - i to jest tu cala sztuczka.
+ * Mapa rysuje sie przez [ContentScale.Crop], wiec na kazdym telefonie ma inna skale i inne
+ * przyciecie bokow; gdyby pozycje byly ulamkami EKRANU, kopalnia zjezdzalaby z wejscia do jaskini
+ * przy kazdej innej proporcji ekranu. Liczone wzgledem grafiki i przepuszczone przez to samo
+ * przeksztalcenie, co ona ([TownMap]), zostaja przyklejone do budynku na zawsze.
+ *
+ * [x]/[y] to SRODEK budynku, [width]/[height] jego bryla - czyli obszar, ktory realnie da sie
+ * tapnac. Podpis wisi pod ta bryla.
+ */
+private data class TownSpot(
     val label: String,
-    val xFraction: Float,
+    val x: Float,
+    val y: Float,
+    val width: Float,
+    val height: Float,
     val onClick: () -> Unit
 )
 
 /**
- * Ekran Miasta - tlo (niebo/wyspy) rysowane wyzej w HomeNavGraph, wspolne dla calej apki.
- * Cztery wyspy-budynki (tartak, kamieniolom, kuznia, summon center) rozlozone tak, zeby caly
- * uklad miescil sie na ekranie bez scrolla - kazda to osobna, klikalna "instancja".
+ * Ekran Domu - jedna statyczna mapa osady, po ktorej sie klika.
+ *
+ * Zastapila cztery lewitujace wyspy. Tamte byly czterema osobnymi grafikami bez wspolnej
+ * perspektywy, swiatla ani gruntu - kazda ladna z osobna, razem nie skladaly sie w zadne miejsce,
+ * tylko w liste przyciskow udajaca mape. Tutaj budynki stoja w jednym kadrze, wiec Dom wyglada jak
+ * miejsce, do ktorego sie wraca - a klikalnosc jest doklejona do tego kadru, nie odwrotnie.
  */
 @Composable
 fun HomeScreen(
     viewModel: PlayerViewModel,
-    onOpenCharacter: () -> Unit = {},
-    onOpenSettings: () -> Unit = {},
+    /** Marginesy pod paski gry - dotycza PODPISOW i linkow dev, nie samej mapy (ta idzie pod paski). */
+    contentPadding: PaddingValues = PaddingValues(0.dp),
+    /**
+     * Ile paski REALNIE zakrywaja farba. Mniej niz [contentPadding], bo tamto rezerwuje miejsce
+     * takze na portret zwieszony pod plyta gornego paska - a przez ten pas widac tlo. Mapa musi
+     * siegac dokladnie tam, dokad siega farba paskow, ani mniej (zostaje szpara), ani wiecej
+     * (niepotrzebnie przycina boki).
+     */
+    coverPadding: PaddingValues = contentPadding,
     onOpenQuarry: () -> Unit = {},
     onOpenForge: () -> Unit = {},
     onOpenSummonCenter: () -> Unit = {},
+    /** Swiatynia - osiagniecia i statystyki nauki. */
+    onOpenTemple: () -> Unit = {},
     onOpenKnightPreview: () -> Unit,
     onOpenModularKnightPreview: () -> Unit,
     onOpenMonsterAnchorLab: () -> Unit,
-    onOpenMonsterAnimationLab: () -> Unit
+    onOpenMonsterAnimationLab: () -> Unit,
+    onOpenChestPreview: () -> Unit = {}
 ) {
+    // Ulamki zmierzone na samej grafice (siatka procentowa nalozona na plik), a nie dobrane na oko:
+    // srodek kazdego wpisu lezy na bryle budynku, a nie na jego podpisie czy cieniu.
+    val spots = listOf(
+        TownSpot(
+            label = "Mine",
+            x = 0.185f, y = 0.375f, width = 0.30f, height = 0.138f,
+            onClick = onOpenQuarry
+        ),
+        TownSpot(
+            label = "Temple",
+            x = 0.790f, y = 0.340f, width = 0.32f, height = 0.190f,
+            onClick = onOpenTemple
+        ),
+        TownSpot(
+            label = "Summon",
+            x = 0.280f, y = 0.612f, width = 0.40f, height = 0.164f,
+            onClick = onOpenSummonCenter
+        ),
+        TownSpot(
+            label = "Forge",
+            x = 0.850f, y = 0.625f, width = 0.33f, height = 0.172f,
+            onClick = onOpenForge
+        )
+    )
+
     val state by viewModel.uiState.collectAsState()
+    val isPremium by viewModel.isPremium.collectAsState()
 
-    Column(modifier = Modifier.fillMaxSize()) {
-        // Karta postaci nie ma juz wlasnej zakladki - jej skrot (kto, jaki poziom, ile zasobow)
-        // siedzi u gory Domu i jest wejsciem na pelny ekran ekwipunku.
-        Row(
+    Box(modifier = Modifier.fillMaxSize()) {
+        TownMap(spots = spots, contentPadding = contentPadding, coverPadding = coverPadding)
+
+        AdGoldButton(
+            remaining = state.adGold.remainingOn(todayDateKey(), AdRewards.GOLD_ADS_PER_DAY),
+            perDay = AdRewards.GOLD_ADS_PER_DAY,
+            reward = AdRewards.goldFor(state.progress.level),
+            busy = state.watchingAd,
+            isPremium = isPremium,
+            pulse = state.adRewardPulse,
+            lastReward = state.lastAdReward,
+            note = state.adNote,
+            onClick = viewModel::watchAdForGold,
+            onNoteShown = viewModel::clearAdNote,
             modifier = Modifier
-                .padding(horizontal = 10.dp, vertical = 4.dp)
-                .fillMaxWidth(),
-            horizontalArrangement = Arrangement.spacedBy(8.dp),
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            HomeHeroBar(
-                name = state.name,
-                progress = state.progress,
-                money = state.money,
-                resources = state.resources,
-                knight = state.knightEquipment,
-                look = state.heroLook,
-                onClick = onOpenCharacter,
-                modifier = Modifier.weight(1f)
-            )
-            SettingsButton(onClick = onOpenSettings)
-        }
+                .align(Alignment.TopEnd)
+                .padding(top = contentPadding.calculateTopPadding() + 6.dp, end = 8.dp)
+        )
 
-        Box(modifier = Modifier.weight(1f).fillMaxWidth()) {
-            CityMap(
-                onOpenQuarry = onOpenQuarry,
-                onOpenForge = onOpenForge,
-                onOpenSummonCenter = onOpenSummonCenter
+        // Za flaga: "dev: +zasoby" doklada pelen worek surowcow jednym tapnieciem, wiec w
+        // buildzie sklepowym ten caly rzad musi byc wylaczony.
+        if (SHOW_DEV_TOOLS) {
+            DevLinksRow(
+                onOpenKnightPreview = onOpenKnightPreview,
+                onOpenModularKnightPreview = onOpenModularKnightPreview,
+                onOpenMonsterAnchorLab = onOpenMonsterAnchorLab,
+                onOpenMonsterAnimationLab = onOpenMonsterAnimationLab,
+                onOpenChestPreview = onOpenChestPreview,
+                onGrantResources = viewModel::grantTestResources,
+                modifier = Modifier
+                    .align(Alignment.BottomCenter)
+                    .padding(contentPadding)
             )
-
-            // Za flaga: "dev: +zasoby" doklada pelen worek surowcow jednym tapnieciem, wiec w
-            // buildzie sklepowym ten caly rzad musi byc wylaczony - inaczej kazdy gracz ma darmowy
-            // cheat bez zadnego hackowania, samym interfejsem. Firestore Security Rules i tak by to
-            // przycielo (limit delty na zapis), ale nie ma po co w ogole pokazywac przycisku.
-            //
-            // Warunek czyta TYP BUILDU (isDebugBuild), a nie reczna stala - to bylo jedyne, co
-            // stalo miedzy release'em a widocznym cheatem, i opieralo sie na pamieci czlowieka.
-            if (SHOW_DEV_TOOLS) {
-                DevLinksRow(
-                    onOpenKnightPreview = onOpenKnightPreview,
-                    onOpenModularKnightPreview = onOpenModularKnightPreview,
-                    onOpenMonsterAnchorLab = onOpenMonsterAnchorLab,
-                    onOpenMonsterAnimationLab = onOpenMonsterAnimationLab,
-                    onGrantResources = viewModel::grantTestResources,
-                    modifier = Modifier
-                        .align(Alignment.BottomCenter)
-                        .padding(bottom = 2.dp)
-                )
-            }
         }
     }
 }
-
-/** Srednica kola-awatara. Wieksza niz wysokosc paska info - kolo ma nad pasek wystawac. */
-private val HERO_AVATAR = 56.dp
-
-/** Szerokosc paska poziomu w pasku info - staly, wyrazny, nie przyciety krawedzia. */
-private val HERO_XP_BAR_W = 132.dp
-
-/** Przycina pusta przestrzen nad/pod linia tekstu - pixelowa czcionka niesie jej sporo. */
-private val TrimmedLine = LineHeightStyle(
-    alignment = LineHeightStyle.Alignment.Center,
-    trim = LineHeightStyle.Trim.Both
-)
 
 /**
- * Skrot karty postaci na gorze Domu. Dwie OSOBNE rzeczy w jednym rzedzie:
- *  - lewa: kolo-awatar + przylegly pasek info (imie, XP, pasek poziomu). Pasek jest zaokraglony
- *    od strony kola, a scienty na prosto od prawej. Cala lewa strona jest klikalna.
- *  - prawa: samodzielne, przezroczyste pastylki zasobow (zloto, esencja).
- * Wszystkie tla sa polprzezroczyste, zeby niebo Miasta przebijalo pod spodem.
+ * Mapa i przypiete do niej punkty.
+ *
+ * Grafika idzie POD paski gry (pelny kadr), bo obraz urwany rowno pod paskiem zdradza, ze to
+ * obrazek w ramce, a nie miejsce. Punkty licza sie z tego samego przeksztalcenia, ktorym rysuje
+ * sie obraz - stad recznie liczona skala zamiast zwyklego [Modifier.fillMaxSize] na kazdym z nich.
  */
 @Composable
-private fun SettingsButton(onClick: () -> Unit) {
-    Box(
-        modifier = Modifier
-            .size(38.dp)
-            .clip(RoundedCornerShape(10.dp))
-            .background(Color(0x992A2018))
-            .border(1.dp, Color(0x996B5A38), RoundedCornerShape(10.dp))
-            .clickable(onClick = onClick),
-        contentAlignment = Alignment.Center
-    ) {
-        androidx.compose.material3.Text(text = "⚙", fontSize = 18.sp)
-    }
-}
-
-@Composable
-private fun HomeHeroBar(
-    name: String,
-    progress: PlayerProgress,
-    money: Int,
-    resources: TownResources,
-    knight: KnightEquipment,
-    look: HeroLook,
-    onClick: () -> Unit,
-    modifier: Modifier = Modifier
-) {
-    val fill by animateFloatAsState(targetValue = progress.xpProgress, label = "homeXp")
-
-    Row(
-        modifier = modifier.fillMaxWidth(),
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        // Grupa lewa: kolo + pasek. Owija sie wokol tresci (nie rozpycha pustym panelem);
-        // Spacer nizej odpycha zasoby do prawej krawedzi.
-        Box(
-            modifier = Modifier.clickable(onClick = onClick),
-            contentAlignment = Alignment.CenterStart
-        ) {
-            HeroInfoPanel(
-                name = name,
-                xpText = "Knight · ${progress.xp} / ${progress.xpForNextLevel} XP",
-                fill = fill
-            )
-            HeroAvatar(knight = knight, look = look, level = progress.level)
-        }
-
-        Spacer(modifier = Modifier.weight(1f))
-
-        Column(
-            horizontalAlignment = Alignment.End,
-            verticalArrangement = Arrangement.spacedBy(5.dp)
-        ) {
-            ResourceChip("🪙", money)
-            ResourceChip("💎", resources.essence)
-        }
-    }
-}
-
-@Composable
-private fun HeroInfoPanel(
-    name: String,
-    xpText: String,
-    fill: Float
-) {
-    Row(
-        modifier = Modifier
-            .padding(start = HERO_AVATAR / 2)
-            // Lewa strona zaokraglona (chowa sie pod kolem), prawa scienta na prosto - jak prostokat.
-            .clip(RoundedCornerShape(topStart = 20.dp, bottomStart = 20.dp))
-            .background(AppPalette.Panel.copy(alpha = 0.5f))
-            .padding(start = HERO_AVATAR / 2 + 10.dp, end = 12.dp, top = 6.dp, bottom = 9.dp),
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
-            Text(
-                text = name.ifBlank { "Sir Lernhero" },
-                color = AppPalette.Gold,
-                fontFamily = FontPixel(),
-                fontWeight = FontWeight.Bold,
-                fontSize = 11.sp,
-                style = TextStyle(lineHeight = 11.sp, lineHeightStyle = TrimmedLine),
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis
-            )
-            Text(
-                text = xpText,
-                color = AppPalette.TextMuted,
-                fontFamily = FontFirst(),
-                fontSize = 8.sp,
-                style = TextStyle(lineHeight = 8.sp, lineHeightStyle = TrimmedLine),
-                maxLines = 1
-            )
-            Box(
-                modifier = Modifier
-                    .width(HERO_XP_BAR_W)
-                    .height(5.dp)
-                    .clip(RoundedCornerShape(50))
-                    .background(AppPalette.Ink.copy(alpha = 0.5f))
-            ) {
-                Box(
-                    modifier = Modifier
-                        .fillMaxHeight()
-                        .fillMaxWidth(fill)
-                        .clip(RoundedCornerShape(50))
-                        .background(AppPalette.Gold)
-                )
-            }
-        }
-    }
-}
-
-@Composable
-private fun HeroAvatar(knight: KnightEquipment, look: HeroLook, level: Int) {
-    // Zewnetrzny Box NIE jest przyciety - dzieki temu ramka z poziomem moze SIEDZIEC NA kole,
-    // w jego prawym dolnym rogu, zamiast zostac scieta razem z rycerzem.
-    Box(contentAlignment = Alignment.BottomEnd) {
-        Box(
-            modifier = Modifier
-                .size(HERO_AVATAR)
-                .clip(RoundedCornerShape(50))
-                .background(AppPalette.Ink)
-                .border(2.dp, AppPalette.Gold, RoundedCornerShape(50)),
-            contentAlignment = Alignment.Center
-        ) {
-            // Duzo wieksza klatka rycerza, docisnieta w dol - w kolku widac tors i glowe, nie
-            // calego ludzika z mnostwem pustej przestrzeni. requiredSize omija ciasne wiazania.
-            ModularKnight(
-                equipment = knight,
-                look = look,
-                sizeDp = 92.dp,
-                interactive = false,
-                modifier = Modifier.requiredSize(92.dp).offset(y = 21.dp)
-            )
-        }
-        Box(
-            modifier = Modifier
-                .offset(x = 3.dp, y = 3.dp)
-                .clip(RoundedCornerShape(50))
-                .background(AppPalette.Ink)
-                .border(1.5.dp, AppPalette.Gold, RoundedCornerShape(50))
-                .padding(horizontal = 5.dp, vertical = 1.dp)
-        ) {
-            Text(
-                text = "$level",
-                color = AppPalette.Gold,
-                fontFamily = FontPixel(),
-                fontWeight = FontWeight.Bold,
-                fontSize = 9.sp,
-                style = TextStyle(lineHeight = 9.sp, lineHeightStyle = TrimmedLine)
-            )
-        }
-    }
-}
-
-@Composable
-private fun ResourceChip(icon: String, value: Int) {
-    Row(
-        modifier = Modifier
-            .clip(RoundedCornerShape(50))
-            .background(AppPalette.Ink.copy(alpha = 0.5f))
-            .border(1.dp, AppPalette.GoldDim.copy(alpha = 0.7f), RoundedCornerShape(50))
-            .padding(horizontal = 9.dp, vertical = 4.dp),
-        horizontalArrangement = Arrangement.spacedBy(5.dp),
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        Text(text = icon, fontSize = 11.sp)
-        Text(
-            text = "$value",
-            color = AppPalette.Gold,
-            fontFamily = FontPixel(),
-            fontWeight = FontWeight.Bold,
-            fontSize = 11.sp,
-            maxLines = 1
-        )
-    }
-}
-
-@Composable
-private fun CityMap(
-    onOpenQuarry: () -> Unit,
-    onOpenForge: () -> Unit,
-    onOpenSummonCenter: () -> Unit
+private fun TownMap(
+    spots: List<TownSpot>,
+    contentPadding: PaddingValues,
+    coverPadding: PaddingValues = contentPadding
 ) {
     BoxWithConstraints(modifier = Modifier.fillMaxSize()) {
-        // xFraction = pozycja w WOLNEJ szerokosci (0 = do lewej, 1 = do prawej) - stad zygzak.
-        val spots = listOf(
-            // Trzy wyspy, nie cztery - tartak zniknal razem z drewnem (patrz [TownResources]).
-            CityBuildingSpot(painterResource(Resources.CityIsland.quarry), "Quarry", 0.02f, onOpenQuarry),
-            CityBuildingSpot(painterResource(Resources.CityIsland.forge), "Forge", 0.98f, onOpenForge),
-            CityBuildingSpot(painterResource(Resources.CityIsland.summon), "Summon Center", 0.02f, onOpenSummonCenter)
+        val density = LocalDensity.current
+        val boxWidth = with(density) { maxWidth.toPx() }
+        val boxHeight = with(density) { maxHeight.toPx() }
+
+        // Mapa musi pokryc PAS MIEDZY PASKAMI, a nie caly ekran - i to jest tu cala sztuczka.
+        //
+        // Grafika jest w proporcjach 0.59, telefon ma ~0.45, wiec czegos trzeba sie pozbyc.
+        // Probowalem obu skrajnosci i obie byly zle:
+        //  - dopasowanie do szerokosci zostawialo pas u gory i u dolu; domalowywana rozciagnieta
+        //    krawedz wychodzila spod paska zakladek i bylo widac smugi;
+        //  - wypelnienie calego ekranu ucinalo po ~12% z boku, czyli komin kuzni (a z nim dym)
+        //    i choragiew kopalni.
+        //
+        // Pasek gry i pasek zakladek sa nieprzezroczyste, wiec mapa nie musi siegac pod nie
+        // trescia - wystarczy, ze pokryje to, co realnie widac. Skala bierze sie wiec z WIEKSZEJ
+        // z dwoch potrzeb: wypelnic szerokosc albo wypelnic wysokosc widocznego pasa. Na zwyklym
+        // telefonie wygrywa szerokosc (nie ginie ani piksel w poziomie), a im wyzszy ekran, tym
+        // bardziej dokladamy skali - ale zawsze mniej, niz zadalby pelny ekran.
+        val safeTop = with(density) { coverPadding.calculateTopPadding().toPx() }
+        val safeBottom = with(density) { coverPadding.calculateBottomPadding().toPx() }
+        val bandHeight = (boxHeight - safeTop - safeBottom).coerceAtLeast(1f)
+
+        val scale = max(boxWidth / MAP_WIDTH, bandHeight / MAP_HEIGHT)
+        val drawnWidth = MAP_WIDTH * scale
+        val drawnHeight = MAP_HEIGHT * scale
+        val left = (boxWidth - drawnWidth) / 2f
+        // Mapa jest przyklejona DOLEM DO DOLU EKRANU, a nie wysrodkowana - i to nie jest detal.
+        //
+        // Zapas musi gdzies pojsc i obie krawedzie znosza to zupelnie inaczej: u gory jest gladkie
+        // niebo (odchylenie kolorow w poziomie to 5 na 255), wiec jego przedluzenie jest
+        // niewidoczne; u dolu jest most rysowany w perspektywie, ktorego nie da sie przedluzyc bez
+        // rozmazania go w pionowe pasy. Wysrodkowanie dzielilo zapas po rowno, czyli zawsze
+        // oddawalo czesc tej gorszej krawedzi. Teraz dolu nie przedluzamy w ogole - most konczy
+        // sie dokladnie tam, gdzie konczy sie ekran - a caly zapas bierze na siebie niebo.
+        val top = boxHeight - drawnHeight - with(density) { MAP_LIFT.toPx() }
+
+        val map = imageResource(Resources.Image.townHome)
+        Canvas(modifier = Modifier.matchParentSize()) {
+            val mapTop = top.roundToInt()
+            val mapLeft = left.roundToInt()
+            val mapWidth = drawnWidth.roundToInt()
+            val mapHeight = drawnHeight.roundToInt()
+            val screenWidth = size.width.roundToInt()
+            val screenHeight = size.height.roundToInt()
+
+            // NAJPIERW nieprzezroczysty spod. Bez niego w pasie nad i pod mapa przeswitywalo
+            // globalne tlo aplikacji - zupelnie inne niebo - i to ono wygladalo jak "grafika nie
+            // siega do konca ekranu". Pas nie byl pusty; byl wypelniony cudzym obrazkiem.
+            drawRect(color = VoidDark)
+
+            drawImage(
+                image = map,
+                srcOffset = IntOffset.Zero,
+                srcSize = IntSize(map.width, map.height),
+                dstOffset = IntOffset(mapLeft, mapTop),
+                dstSize = IntSize(mapWidth, mapHeight),
+                filterQuality = FilterQuality.High
+            )
+
+            // Gdy pas jednak zostaje (bardzo wysoki ekran), przedluzamy mape JEJ WLASNA krawedzia
+            // i dopiero to przedluzenie wygaszamy w ciemnosc. Samo rozciagniecie dawalo widoczne
+            // smugi kamienia, a sam ciemny prostokat - twarda linie w poprzek ekranu. Zlozone
+            // razem daja szew, ktorego nie widac: przy krawedzi kolory zgadzaja sie co do piksela,
+            // a zanim rozciagniecie zdazy sie zdradzic, jest juz ciemno.
+            if (mapTop > 0) {
+                drawImage(
+                    image = map,
+                    srcOffset = IntOffset.Zero,
+                    srcSize = IntSize(map.width, EDGE_BLEED_PX),
+                    dstOffset = IntOffset(mapLeft, 0),
+                    dstSize = IntSize(mapWidth, mapTop),
+                    filterQuality = FilterQuality.High
+                )
+                // To jedyne przedluzenie, ktore zostalo - i celowo tylko ono. Niebo ciemnieje ku
+                // gorze, wiec wygaszenie nie jest zaklejaniem bledu, tylko ciagiem tego, co
+                // grafika juz robi: im wyzej, tym glebsza noc.
+                drawRect(
+                    brush = Brush.verticalGradient(
+                        0f to VoidDark.copy(alpha = 0.80f),
+                        1f to VoidDark.copy(alpha = 0f),
+                        startY = 0f,
+                        endY = mapTop.toFloat()
+                    ),
+                    size = Size(size.width, mapTop.toFloat())
+                )
+            }
+
+            // Przy przyklejeniu dolem ten pas ma zerowa wysokosc - zostaje wylacznie jako
+            // zabezpieczenie przed zaokragleniem do pelnych pikseli.
+            val bottomStart = mapTop + mapHeight
+            if (bottomStart < screenHeight) {
+                val gap = (screenHeight - bottomStart).toFloat()
+                drawImage(
+                    image = map,
+                    srcOffset = IntOffset(0, map.height - EDGE_BLEED_PX),
+                    srcSize = IntSize(map.width, EDGE_BLEED_PX),
+                    dstOffset = IntOffset(mapLeft, bottomStart),
+                    dstSize = IntSize(mapWidth, gap.roundToInt()),
+                    filterQuality = FilterQuality.High
+                )
+                // Dol gasimy SZYBKO - na dole grafiki jest most z perspektywa, wiec jego
+                // rozciagniecie rozmazuje sie w pasy. Pelna ciemnosc wchodzi juz w polowie pasa:
+                // przy samej krawedzi kolory zgadzaja sie co do piksela, a zanim rozciagniecie
+                // zdazy sie zdradzic, nie ma juz czego ogladac. Most po prostu schodzi w otchlan,
+                // nad ktora cala ta wyspa wisi.
+                drawRect(
+                    brush = Brush.verticalGradient(
+                        0.0f to VoidDark.copy(alpha = 0f),
+                        0.5f to VoidDark.copy(alpha = 0.92f),
+                        1.0f to VoidDark,
+                        startY = bottomStart.toFloat(),
+                        endY = size.height
+                    ),
+                    topLeft = Offset(0f, bottomStart.toFloat()),
+                    size = Size(size.width, gap)
+                )
+            }
+
+            // Ekran szerszy niz mapa (tablet) - boki juz sa ciemne od podkladu, wiec nie ma tu
+            // nic do dorysowania.
+            if (screenWidth > mapWidth) Unit
+        }
+
+        // Zycie miasta - ogien, dym, runy, iskry. Rysowane NA mapie, ale POD podpisami: swiatlo
+        // ma padac na kamien, a nie na napisy.
+        TownAmbience(
+            frame = MapFrame(left = left, top = top, width = drawnWidth, height = drawnHeight),
+            modifier = Modifier.matchParentSize()
         )
 
-        // Wyspy sa CELOWO wieksze niz 1/4 wysokosci ekranu - inaczej (przy czterech osobnych,
-        // rozlacznych pasach) kazda musialaby zmiescic sie w ~1/4 wysokosci i robila sie malutka,
-        // z mnostwem pustego nieba dookola. Zamiast tego rozmiar bierze sie z SZEROKOSCI ekranu,
-        // a wyspy ida zygzakiem lewo-prawo i lekko na siebie nachodza w pionie. Nachodzenie nie
-        // przeszkadza, bo kazdy PNG ma wokol siebie przezroczysty margines, a zygzak sprawia, ze
-        // sasiednie wyspy i tak nie stykaja sie graficznie.
-        val islandSize = maxWidth * ISLAND_WIDTH_FRACTION
-        val freeWidth = (maxWidth - islandSize).coerceAtLeast(0.dp)
-        val lastIndex = (spots.size - 1).coerceAtLeast(1)
+        spots.forEach { spot ->
+            val spotWidth = spot.width * drawnWidth
+            val spotHeight = spot.height * drawnHeight
+            val centerX = left + spot.x * drawnWidth
+            // Jedno zrodlo dotyku dla bryly i podpisu - tapniecie budynku ma animowac JEGO
+            // podpis, mimo ze to dwa osobne elementy ukladu.
+            val interaction = remember { MutableInteractionSource() }
 
-        // Widoczna grafika zajmuje tylko srodek kadru - liczymy pozycje wzgledem NIEJ, a nie
-        // wzgledem calego (w duzej czesci przezroczystego) PNG, zeby wyspy byly rozlozone rowno
-        // optycznie i zeby skrajne nie wychodzily poza ekran.
-        val artHeight = islandSize * ISLAND_ART_HEIGHT_FRACTION
-        val artTopInset = islandSize * ISLAND_ART_TOP_FRACTION
-        val firstCenter = artHeight / 2
-        val lastCenter = maxHeight - artHeight / 2
-        val centerStep = (lastCenter - firstCenter) / lastIndex
+            // Bryla budynku: przyklejona do grafiki co do piksela. Moze czesciowo wyjsc poza
+            // ekran przy ciasnym kadrze i to jest w porzadku - klika sie to, co widac.
+            Box(
+                modifier = Modifier
+                    .offset(
+                        x = with(density) { (centerX - spotWidth / 2f).toDp() },
+                        y = with(density) { (top + spot.y * drawnHeight - spotHeight / 2f).toDp() }
+                    )
+                    .size(
+                        width = with(density) { spotWidth.toDp() },
+                        height = with(density) { spotHeight.toDp() }
+                    )
+                    .clickable(
+                        interactionSource = interaction,
+                        indication = null,
+                        onClick = spot.onClick
+                    )
+            )
 
-        spots.forEachIndexed { index, spot ->
-            val artCenterY = firstCenter + centerStep * index
-            CityIslandButton(
-                icon = spot.icon,
+            // Podpis NIE jest dzieckiem bryly, tylko osobno przypietym elementem - i to celowo.
+            // Przy ciasnym kadrze srodek kuzni wypada kilkadziesiat pikseli od krawedzi, wiec
+            // podpis wysrodkowany na niej wychodzil poza ekran ("FORG"). [BiasAlignment] ustawia
+            // go proporcjonalnie do pozycji budynku, ale NIGDY poza rodzica - czyli sam sie
+            // docisknie do krawedzi, zamiast sie o nia uciac.
+            TownSpotLabel(
                 label = spot.label,
-                size = islandSize,
-                floatSeed = index,
-                modifier = Modifier.offset(
-                    x = freeWidth * spot.xFraction,
-                    y = artCenterY - artHeight / 2 - artTopInset
-                )
-            ) {
-                spot.onClick()
-            }
+                interactionSource = interaction,
+                modifier = Modifier
+                    .align(
+                        BiasAlignment(
+                            horizontalBias = ((centerX / boxWidth) * 2f - 1f).coerceIn(-1f, 1f),
+                            verticalBias = -1f
+                        )
+                    )
+                    .offset(
+                        y = with(density) {
+                            (top + (spot.y + spot.height / 2f) * drawnHeight).toDp()
+                        }
+                    )
+            )
         }
     }
 }
 
 /**
- * Wyspa jako klikalny przycisk - lewitujaca (bardzo delikatny, powolny ruch gora-dol, spring/tween
- * na sinusoidzie), z podpisem NAD grafika, bez zadnej "pigulki"/obwodki - sama czcionka pixelowa
- * (ta sama co tytuly na gorze ekranu, np. "Dom") z lekkim cieniem, zeby dalo sie ja przeczytac na
- * kazdym tle nieba.
+ * Podpis budynku.
+ *
+ * Ma wlasne, ciemne tlo, a nie sam cien - mapa jest gesta i roznokolorowa (rozowe niebo,
+ * pomaranczowy ogien, szary kamien), wiec tekst z samym cieniem gubil sie dokladnie tam, gdzie
+ * bylo najciekawiej. Pigulka jest przezroczysta na tyle, zeby nie zaklejac grafiki.
+ *
+ * Nie ma tu ramki wokol budynku ani stalej "poswiaty": mapa ma wygladac jak obraz, a nie jak
+ * plansza z zaznaczonymi polami. Ze cos jest klikalne, mowi podpis - i reakcja na dotyk, ktora
+ * przychodzi z bryly budynku przez wspolny [interactionSource].
  */
 @Composable
-private fun CityIslandButton(
-    icon: Painter,
+private fun TownSpotLabel(
     label: String,
-    size: Dp,
-    floatSeed: Int,
-    modifier: Modifier = Modifier,
-    onClick: () -> Unit
+    interactionSource: MutableInteractionSource,
+    modifier: Modifier = Modifier
 ) {
-    // Kazda wyspa ma inny czas/amplitude lewitacji, zeby nie unosily sie idealnie w takt -
-    // wyglada bardziej naturalnie/zywo, jak niezalezne obiekty, a nie jeden mechanizm.
-    val infiniteTransition = rememberInfiniteTransition(label = "islandFloat$floatSeed")
-    val floatOffset by infiniteTransition.animateFloat(
-        initialValue = -1f,
-        targetValue = 1f,
-        animationSpec = infiniteRepeatable(
-            animation = tween(
-                durationMillis = 2600 + floatSeed * 340,
-                easing = FastOutSlowInEasing
-            ),
-            repeatMode = RepeatMode.Reverse
-        ),
-        label = "islandFloatValue$floatSeed"
+    val pressed by interactionSource.collectIsPressedAsState()
+    val press by animateFloatAsState(
+        targetValue = if (pressed) 1.10f else 1f,
+        animationSpec = tween(120, easing = FastOutSlowInEasing),
+        label = "townPress"
     )
-    val bobAmplitude = (6 + floatSeed % 2 * 2).dp
 
-    // Podpis lezy NA kadrze wyspy (w przezroczystym pasie tuz nad grafika), a nie nad nim - dzieki
-    // temu nie zabiera wysokosci, ktora jest tu najcenniejsza, i jedzie razem z lewitujaca wyspa.
-    Box(
+    Text(
+        text = label.uppercase(),
+        color = AppPalette.Gold,
+        fontFamily = FontPixel(),
+        fontWeight = FontWeight.Bold,
+        fontSize = 12.sp,
+        textAlign = TextAlign.Center,
+        style = TextStyle(
+            shadow = Shadow(color = Color.Black.copy(alpha = 0.9f), blurRadius = 8f)
+        ),
         modifier = modifier
-            .size(size)
-            .clickable(onClick = onClick)
-            .offset(y = bobAmplitude * floatOffset)
-    ) {
-        // .size() (nie .width()) na OBU wymiarach - kwadratowe PNG (256x256), a samo .width()
-        // zdawalo sie honorowac jakis wewnetrzny preferowany rozmiar malarza zamiast wymuszonego
-        // rozmiaru (rozmiar wysp sie nie zmienial mimo zmiany wartosci, mimo ze pozycja - zwykly
-        // offset() - reagowala poprawnie).
-        Image(
-            painter = icon,
-            contentDescription = label,
-            contentScale = ContentScale.Fit,
-            modifier = Modifier.size(size)
-        )
-        Text(
-            text = label,
-            color = AppPalette.Gold,
-            fontFamily = FontPixel(),
-            fontWeight = FontWeight.Bold,
-            fontSize = 16.sp,
-            textAlign = TextAlign.Center,
-            style = TextStyle(
-                shadow = Shadow(color = Color.Black.copy(alpha = 0.85f), blurRadius = 12f)
-            ),
-            modifier = Modifier
-                .align(Alignment.TopCenter)
-                .padding(top = size * (ISLAND_ART_TOP_FRACTION - 0.09f))
-                .fillMaxWidth()
-        )
-    }
+            .scale(press)
+            .clip(RoundedCornerShape(50))
+            .background(Color(0xCC120E0A))
+            .border(1.5.dp, Color(0x99C8A45A), RoundedCornerShape(50))
+            .padding(horizontal = 12.dp, vertical = 5.dp)
+    )
 }
 
 /** Ekrany deweloperskie - male, dyskretne linki, zeby nie mylily sie z prawdziwymi funkcjami gry. */
@@ -491,6 +455,7 @@ private fun DevLinksRow(
     onOpenModularKnightPreview: () -> Unit,
     onOpenMonsterAnchorLab: () -> Unit,
     onOpenMonsterAnimationLab: () -> Unit,
+    onOpenChestPreview: () -> Unit,
     onGrantResources: () -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -498,9 +463,8 @@ private fun DevLinksRow(
         modifier = modifier.fillMaxWidth().padding(top = 4.dp),
         horizontalArrangement = Arrangement.Center
     ) {
-        // Jedno tapniecie = pelen worek wszystkiego, czym da sie cokolwiek przetestowac:
-        // zloto, drewno, kamien, ruda, esencja, losy i XP. Wyroznione kolorem, bo w odroznieniu
-        // od pozostalych linkow dev ta rzecz ZMIENIA ZAPIS gracza.
+        // Jedno tapniecie = pelen worek wszystkiego, czym da sie cokolwiek przetestowac.
+        // Wyroznione kolorem, bo w odroznieniu od pozostalych linkow dev ta rzecz ZMIENIA ZAPIS.
         Text(
             text = "dev: +zasoby",
             color = Color(0xFF5FD08A),
@@ -536,6 +500,13 @@ private fun DevLinksRow(
             fontFamily = FontFirst(),
             fontSize = 9.sp,
             modifier = Modifier.clickable(onClick = onOpenMonsterAnimationLab).padding(8.dp)
+        )
+        Text(
+            text = "dev: chest",
+            color = Muted.copy(alpha = 0.5f),
+            fontFamily = FontFirst(),
+            fontSize = 9.sp,
+            modifier = Modifier.clickable(onClick = onOpenChestPreview).padding(8.dp)
         )
     }
 }

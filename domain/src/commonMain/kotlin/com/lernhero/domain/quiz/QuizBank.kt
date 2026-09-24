@@ -39,6 +39,9 @@ import com.lernhero.domain.quiz.bank.PolandQuestions
 import com.lernhero.domain.quiz.bank.PolandQuestionsExtra
 import com.lernhero.domain.quiz.bank.PolandQuestionsMoved
 import com.lernhero.domain.quiz.bank.ScienceQuestions
+import com.lernhero.domain.quiz.bank.SpaceQuestions
+import com.lernhero.domain.quiz.bank.CultureQuestionsWorld
+import com.lernhero.domain.quiz.bank.EverydayQuestionsExtra
 import com.lernhero.domain.quiz.bank.ScienceQuestionsExtra
 import com.lernhero.domain.quiz.bank.ScienceQuestionsExtra2
 import com.lernhero.domain.quiz.bank.ScienceQuestionsCompare
@@ -54,6 +57,9 @@ import com.lernhero.domain.quiz.bank.TriviaQuestionsNature
 import com.lernhero.domain.quiz.bank.TriviaQuestionsExtremes
 import com.lernhero.domain.quiz.bank.TriviaQuestionsMastery
 import com.lernhero.domain.quiz.bank.TriviaQuestionsOrigins
+import com.lernhero.domain.quiz.bank.QuestionsRefresh
+import com.lernhero.domain.quiz.bank.QuestionsCurious
+import com.lernhero.domain.quiz.bank.QuestionsWorld
 import kotlin.random.Random
 
 /**
@@ -72,6 +78,10 @@ object QuizBank {
             ElementQuestions.all +
             CapitalQuestions.all +
             ScienceQuestions.all +
+            // Nowe pule pod dwudziestofalowy bieg - patrz [SpaceQuestions]/[EverydayQuestionsExtra].
+            SpaceQuestions.all +
+            EverydayQuestionsExtra.all +
+            CultureQuestionsWorld.all +
             GeographyQuestions.all +
             SportQuestions.all +
             MathQuestions.all +
@@ -136,7 +146,14 @@ object QuizBank {
             TriviaQuestionsMastery.all +
             // Po czternascie pytan Hard/Expert na KAZDY temat - dokonczenie tego samego dowazenia,
             // tym razem rozlozone po kategoriach po rowno. Patrz [MasteryDepthQuestions].
-            MasteryDepthQuestions.all
+            MasteryDepthQuestions.all +
+            // Po przegladzie banku (wyciete duble, mity i pytania-zerowki) - dosypane gorne
+            // szczeble i polska historia przeniesiona do tematu lokalnego. Patrz [QuestionsRefresh].
+            QuestionsRefresh.all +
+            // Ciekawostki z zaskakujacym, sprawdzonym faktem - patrz [QuestionsCurious].
+            QuestionsCurious.all +
+            // Duza paczka pytan z wiedzy przydatnej na co dzien - patrz [QuestionsWorld].
+            QuestionsWorld.all
 
     fun all(random: Random = Random.Default): List<QuizEntry> =
         textEntries + FlagQuestions.entries(random)
@@ -171,7 +188,8 @@ object QuizBank {
     fun draw(
         ladder: List<QuizDifficulty>,
         category: QuizCategory? = null,
-        random: Random = Random.Default
+        random: Random = Random.Default,
+        seen: (String) -> Boolean = { false }
     ): List<QuizEntry> {
         val everything = all(random)
         val preferred = if (category == null) everything else everything.filter { it.category == category }
@@ -179,9 +197,16 @@ object QuizBank {
         val fullPool = everything.groupBy { it.difficulty }
         val used = mutableSetOf<String>()
 
+        // Najpierw pytania jeszcze nie zadane ([seen] - pamiec calej sesji, patrz QuestionHistory),
+        // w temacie, a potem w calym banku. Dopiero gdy temat jest wyczerpany do cna, wraca
+        // pytanie juz widziane - i to z tematu, bo gracz go wybral.
         return ladder.mapNotNull { difficulty ->
-            val entry = pickFrom(difficulty, preferredPool, used, random)
-                ?: pickFrom(difficulty, fullPool, used, random)
+            val fresh: (QuizEntry) -> Boolean = { it.id !in used && !seen(it.id) }
+            val unused: (QuizEntry) -> Boolean = { it.id !in used }
+            val entry = pickFrom(difficulty, preferredPool, fresh, random)
+                ?: (if (category == null) null else pickFrom(difficulty, fullPool, fresh, random))
+                ?: pickFrom(difficulty, preferredPool, unused, random)
+                ?: pickFrom(difficulty, fullPool, unused, random)
             entry?.also { used += it.id }
         }
     }
@@ -189,7 +214,7 @@ object QuizBank {
     private fun pickFrom(
         difficulty: QuizDifficulty,
         pool: Map<QuizDifficulty, List<QuizEntry>>,
-        used: Set<String>,
+        allowed: (QuizEntry) -> Boolean,
         random: Random
     ): QuizEntry? {
         // Kolejnosc szukania: zadany poziom, potem coraz latwiejsze, na koncu trudniejsze.
@@ -198,7 +223,7 @@ object QuizBank {
         }
 
         fallback.forEach { level ->
-            val candidates = pool[level].orEmpty().filter { it.id !in used }
+            val candidates = pool[level].orEmpty().filter(allowed)
             if (candidates.isNotEmpty()) return candidates[random.nextInt(candidates.size)]
         }
         return null

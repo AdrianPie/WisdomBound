@@ -54,27 +54,26 @@ object FirebaseAdmin {
     }
 }
 
-/** Wynik sprawdzenia/zuzycia limitu tygodniowego - patrz [AiQuota.consume]. */
+/** Wynik sprawdzenia/zuzycia limitu miesiecznego - patrz [AiQuota.consume]. */
 sealed interface QuotaCheck {
     data class Allowed(val remainingAfterThisCall: Int) : QuotaCheck
     data class Denied(val resetsAt: Long) : QuotaCheck
 }
 
 /**
- * Limit generowan AI - "2x/tydzien" per gracz. Zyje w `player/{uid}/privateData/aiUsage`,
- * dokumencie, do ktorego klient NIE MA dostepu wedlug Security Rules (patrz firestore.rules) -
- * Admin SDK je omija, wiec to jedyne miejsce, ktore w ogole moze ten dokument tknac.
+ * Limit generowan AI subskrybenta - [PREMIUM_MONTHLY_LIMIT] na 30 dni liczone od pierwszego
+ * generowania w okresie. Zyje w `player/{uid}/privateData/aiUsage`, dokumencie, do ktorego klient
+ * NIE MA dostepu wedlug Security Rules (patrz firestore.rules) - Admin SDK je omija, wiec to
+ * jedyne miejsce, ktore w ogole moze ten dokument tknac.
  *
  * Sprawdzenie i inkrementacja licza sie ATOMOWO w jednej transakcji Firestore, zeby dwa
  * rownoczesne requesty tego samego gracza nie zdazyly obie przejsc "jeszcze jest limit"
- * przed zapisem.
+ * przed zapisem. Czy gracz W OGOLE moze generowac (subskrypcja), rozstrzyga wczesniej
+ * [Entitlements] - ten obiekt liczy juz tylko zuzycie.
  */
 object AiQuota {
 
-    // Konfigurowalny przez ENV, zeby podbic/wylaczyc limit na czas testow bez rebuildu - patrz
-    // AI_QUOTA_LIMIT_PER_WEEK. Domyslnie 2/tydzien jak dotad.
-    private val LIMIT_PER_WEEK = System.getenv("AI_QUOTA_LIMIT_PER_WEEK")?.toIntOrNull() ?: 2
-    private const val WEEK_MS = 7L * 24 * 60 * 60 * 1000
+    private const val PERIOD_MS = 30L * 24 * 60 * 60 * 1000
 
     suspend fun consume(uid: String): QuotaCheck = withContext(Dispatchers.IO) {
         val doc = FirebaseAdmin.firestore
@@ -86,15 +85,15 @@ object AiQuota {
                 val now = System.currentTimeMillis()
                 val snapshot = tx.get(doc).get()
 
-                val weekStartedAt = snapshot.getLong("weekStartedAt") ?: 0L
+                val periodStartedAt = snapshot.getLong("periodStartedAt") ?: 0L
                 val storedCount = snapshot.getLong("count") ?: 0L
 
-                val weekExpired = now - weekStartedAt >= WEEK_MS
-                val effectiveWeekStart = if (weekExpired) now else weekStartedAt
-                val effectiveCount = if (weekExpired) 0L else storedCount
+                val periodExpired = now - periodStartedAt >= PERIOD_MS
+                val effectiveStart = if (periodExpired) now else periodStartedAt
+                val effectiveCount = if (periodExpired) 0L else storedCount
 
-                if (effectiveCount >= LIMIT_PER_WEEK) {
-                    return@runTransaction QuotaCheck.Denied(resetsAt = effectiveWeekStart + WEEK_MS)
+                if (effectiveCount >= PREMIUM_MONTHLY_LIMIT) {
+                    return@runTransaction QuotaCheck.Denied(resetsAt = effectiveStart + PERIOD_MS)
                 }
 
                 val newCount = effectiveCount + 1
@@ -102,15 +101,15 @@ object AiQuota {
                     doc,
                     mapOf(
                         "count" to newCount,
-                        "weekStartedAt" to effectiveWeekStart
+                        "periodStartedAt" to effectiveStart
                     )
                 )
-                QuotaCheck.Allowed(remainingAfterThisCall = (LIMIT_PER_WEEK - newCount).toInt())
+                QuotaCheck.Allowed(remainingAfterThisCall = (PREMIUM_MONTHLY_LIMIT - newCount).toInt())
             }.get()
         } catch (e: ExecutionException) {
             // Awaria Firestore nie powinna wywalic calego requestu - lepiej odmowic generowania
             // (koszt: gracz traci jedna probe) niz zawiesic caly endpoint na wyjatku transakcji.
-            QuotaCheck.Denied(resetsAt = System.currentTimeMillis() + WEEK_MS)
+            QuotaCheck.Denied(resetsAt = System.currentTimeMillis() + PERIOD_MS)
         }
     }
 }

@@ -74,12 +74,12 @@ object EstimationQuestionsMeasures {
         measure("tunel_pod_kanalem", "How long is the Channel Tunnel?", 50, "km", 7, 200),
 
         /* ---------------------- Powierzchnie (tysiace km kw.) ----------------------- */
-        measure("rosja_pow", "What is the area of Russia?", 17_098, "thousand km2", 1_200, 30_000),
-        measure("kanada_pow", "What is the area of Canada?", 9_985, "thousand km2", 800, 30_000),
-        measure("australia_pow", "What is the area of Australia?", 7_692, "thousand km2", 650, 30_000),
-        measure("sahara_pow", "What is the area of the Sahara?", 9_200, "thousand km2", 900, 30_000),
-        measure("amazonia_pow", "What is the area of the Amazon rainforest?", 5_500, "thousand km2", 600, 30_000),
-        measure("grenlandia_pow", "What is the area of Greenland?", 2_166, "thousand km2", 250, 10_000),
+        measure("rosja_pow", "What is the area of Russia?", 17, "million km2", 2, 60),
+        measure("kanada_pow", "What is the area of Canada?", 10, "million km2", 2, 60),
+        measure("australia_pow", "What is the area of Australia?", 8, "million km2", 2, 60),
+        measure("sahara_pow", "What is the area of the Sahara?", 9, "million km2", 2, 60),
+        measure("amazonia_pow", "What is the area of the Amazon rainforest?", 6, "million km2", 2, 60),
+        measure("grenlandia_pow", "What is the area of Greenland?", 2, "million km2", 1, 40),
         measure("morze_kaspijskie_pow", "What is the area of the Caspian Sea?", 371, "thousand km2", 45, 2_000),
         measure("francja_pow", "What is the area of France (mainland and Corsica)?", 552, "thousand km2", 60, 3_000),
 

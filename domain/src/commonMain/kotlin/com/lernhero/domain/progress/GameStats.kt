@@ -39,13 +39,23 @@ data class GameStats(
     val totalWavesCleared: Int = 0,
     val goldEarned: Int = 0,
     val itemsCrafted: Int = 0,
-    val monstersSummoned: Int = 0
+    val monstersSummoned: Int = 0,
+    /**
+     * Biezaca seria poprawnych odpowiedzi w KAZDYM temacie osobno, ciagnaca sie miedzy walkami.
+     * Przerywa ja tylko blad w tym samym temacie - inaczej "30 stolic z rzedu" wymagaloby
+     * jednej bardzo dlugiej walki z samymi stolicami.
+     */
+    val categoryStreaks: Map<String, Int> = emptyMap(),
+    /** Rekord serii per temat - z niego licza sie osiagniecia tematyczne. */
+    val bestCategoryStreaks: Map<String, Int> = emptyMap()
 ) {
     val accuracy: Float get() = if (questionsAnswered <= 0) 0f else questionsCorrect.toFloat() / questionsAnswered
     val accuracyPercent: Int get() = (accuracy * 100).roundToInt()
     val questionsWrong: Int get() = (questionsAnswered - questionsCorrect).coerceAtLeast(0)
 
     fun statFor(category: QuizCategory): CategoryStat = perCategory[category.name] ?: CategoryStat()
+
+    fun bestStreakIn(category: QuizCategory): Int = bestCategoryStreaks[category.name] ?: 0
 
     /** Kategorie, w ktorych gracz cokolwiek odpowiadal - posortowane od najslabszej celnosci. */
     fun weakestCategories(minAnswers: Int = 5): List<Pair<QuizCategory, CategoryStat>> =
@@ -64,10 +74,21 @@ data class GameStats(
             mergedCategories[key] = (mergedCategories[key] ?: CategoryStat()) + stat
         }
 
+        val streaks = categoryStreaks.toMutableMap()
+        val bestStreaks = bestCategoryStreaks.toMutableMap()
+        run.categoryStreaks.forEach { (key, part) ->
+            val carried = (streaks[key] ?: 0) + part.opening
+            val best = maxOf(bestStreaks[key] ?: 0, carried, part.best)
+            bestStreaks[key] = best
+            streaks[key] = if (part.broken) part.closing else carried
+        }
+
         return copy(
             questionsAnswered = questionsAnswered + run.questionsAnswered,
             questionsCorrect = questionsCorrect + run.questionsCorrect,
             perCategory = mergedCategories,
+            categoryStreaks = streaks,
+            bestCategoryStreaks = bestStreaks,
             bestAnswerStreak = maxOf(bestAnswerStreak, run.bestAnswerStreak),
             battlesWon = battlesWon + if (run.countsAsBattle && run.won) 1 else 0,
             battlesLost = battlesLost + if (run.countsAsBattle && !run.won) 1 else 0,
@@ -97,6 +118,8 @@ data class RunStats(
     val questionsCorrect: Int = 0,
     val bestAnswerStreak: Int = 0,
     val perCategory: Map<String, CategoryStat> = emptyMap(),
+    /** Serie w tematach z tego zejscia - [GameStats.plus] dokleja je do serii z poprzednich walk. */
+    val categoryStreaks: Map<String, CategoryStreakRun> = emptyMap(),
     val gold: Int = 0,
     val xp: Int = 0,
     val stone: Int = 0,
@@ -134,4 +157,25 @@ data class RunStats(
         get() = if (questionsAnswered <= 0) 0 else (questionsCorrect * 100f / questionsAnswered).roundToInt()
 
     val anyResources: Boolean get() = stone > 0 || iron > 0 || essence > 0 || summonTickets > 0
+}
+
+/**
+ * Seria w jednym temacie w obrebie jednego zejscia, rozlozona tak, by dalo sie ja dokleic do serii
+ * z poprzednich walk: [opening] to poprawne odpowiedzi przed pierwszym bledem (przedluzaja stara
+ * serie), [closing] to seria po ostatnim bledzie (zaczyna nowa), [best] to najlepsza seria w srodku.
+ */
+@Serializable
+data class CategoryStreakRun(
+    val opening: Int = 0,
+    val broken: Boolean = false,
+    val closing: Int = 0,
+    val best: Int = 0
+) {
+    fun record(correct: Boolean): CategoryStreakRun =
+        if (correct) {
+            val next = closing + 1
+            copy(opening = if (broken) opening else opening + 1, closing = next, best = maxOf(best, next))
+        } else {
+            copy(broken = true, closing = 0)
+        }
 }

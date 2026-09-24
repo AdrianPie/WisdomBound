@@ -59,7 +59,10 @@ data class FitnessGoal(
     val description: String,
     val kind: FitnessGoalKind,
     val threshold: Int,
-    val reward: Int
+    /** Zloto. */
+    val reward: Int,
+    val gems: Int = 0,
+    val tickets: Int = 0
 ) {
     fun progress(snapshot: FitnessSnapshot): Int = when (kind) {
         FitnessGoalKind.Steps -> snapshot.steps
@@ -71,55 +74,28 @@ data class FitnessGoal(
 }
 
 /** Pula celow dziennych. Nowy cel to jeden wpis - reszta ekranu doda go sama. */
+/** Dwa glowne cele krokow - ten sam uklad co czytanie: nawyk (5 000) i wyzwanie (10 000). */
 object FitnessGoalCatalog {
     val DAILY: List<FitnessGoal> = listOf(
         FitnessGoal(
             id = "daily_steps_5k",
-            title = "Rozgrzewka",
-            description = "Zrob 5000 krokow dzisiaj.",
+            title = "Morning Walk",
+            description = "Walk 5,000 steps today.",
             kind = FitnessGoalKind.Steps,
             threshold = 5_000,
-            reward = 40
+            reward = 300,
+            gems = 25,
+            tickets = 1
         ),
         FitnessGoal(
             id = "daily_steps_10k",
-            title = "Piechur",
-            description = "Zrob 10 000 krokow dzisiaj.",
+            title = "Trailblazer",
+            description = "Walk 10,000 steps today.",
             kind = FitnessGoalKind.Steps,
             threshold = 10_000,
-            reward = 90
-        ),
-        FitnessGoal(
-            id = "daily_steps_15k",
-            title = "Zelazne nogi",
-            description = "Zrob 15 000 krokow dzisiaj.",
-            kind = FitnessGoalKind.Steps,
-            threshold = 15_000,
-            reward = 150
-        ),
-        FitnessGoal(
-            id = "daily_active_30",
-            title = "Rozruch",
-            description = "30 minut aktywnosci dzisiaj.",
-            kind = FitnessGoalKind.ActiveMinutes,
-            threshold = 30,
-            reward = 60
-        ),
-        FitnessGoal(
-            id = "daily_active_60",
-            title = "Pot na czole",
-            description = "60 minut aktywnosci dzisiaj.",
-            kind = FitnessGoalKind.ActiveMinutes,
-            threshold = 60,
-            reward = 120
-        ),
-        FitnessGoal(
-            id = "daily_workout_1",
-            title = "Trening dnia",
-            description = "Zaloguj przynajmniej jeden trening.",
-            kind = FitnessGoalKind.Workout,
-            threshold = 1,
-            reward = 100
+            reward = 1000,
+            gems = 80,
+            tickets = 3
         )
     )
 }

@@ -104,29 +104,8 @@ object MythologyQuestions {
             wrong = listOf("On the slopes of Olympus", "Behind the walls of Troy", "In the depths of Hades"),
             difficulty = QuizDifficulty.Medium
         ),
-        ask(
-            id = "pandora",
-            prompt = "What did Pandora release when she opened her box?",
-            correct = "Misfortunes",
-            wrong = listOf("Riches", "Animals", "Rain"),
-            difficulty = QuizDifficulty.Medium
-        ),
 
         /* ------------------------------ Hard ------------------------------- */
-        ask(
-            id = "achilles",
-            prompt = "Which body part was Achilles's only weak point?",
-            correct = "His heel",
-            wrong = listOf("His hand", "His knee", "His neck"),
-            difficulty = QuizDifficulty.Hard
-        ),
-        ask(
-            id = "cerber",
-            prompt = "How many heads did Cerberus, the dog guarding the underworld, have?",
-            correct = "3",
-            wrong = listOf("2", "5", "7"),
-            difficulty = QuizDifficulty.Hard
-        ),
         ask(
             id = "yggdrasil",
             prompt = "What is the cosmic tree in Norse mythology called?",
@@ -141,13 +120,6 @@ object MythologyQuestions {
             wrong = listOf("Svarog", "Veles", "Svetovid"),
             difficulty = QuizDifficulty.Hard
         ),
-        ask(
-            id = "ikar",
-            prompt = "Why did Icarus fall into the sea?",
-            correct = "The Sun melted the wax in his wings",
-            wrong = listOf("He broke a wing on a rock", "Apollo shot him", "The north wind swept him away"),
-            difficulty = QuizDifficulty.Hard
-        ),
 
         /* ----------------------------- Expert ---------------------------- */
         ask(
@@ -155,13 +127,6 @@ object MythologyQuestions {
             prompt = "What is the Norse end of the world called?",
             correct = "Ragnarok",
             wrong = listOf("Valhalla", "Niflheim", "Ginnungagap"),
-            difficulty = QuizDifficulty.Expert
-        ),
-        ask(
-            id = "syzyf_kara",
-            prompt = "What was Sisyphus's punishment?",
-            correct = "Pushing a boulder that kept rolling back down",
-            wrong = listOf("A bird ate his liver", "Standing neck-deep in water he couldn't drink", "Holding up the sky on his shoulders"),
             difficulty = QuizDifficulty.Expert
         ),
         ask(

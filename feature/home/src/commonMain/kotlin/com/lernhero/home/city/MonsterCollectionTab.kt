@@ -223,10 +223,13 @@ private fun Stage(
         ) {
             Text(
                 text = card.name,
-                color = Color(0xFFF4E9D7),
-                fontFamily = FontPixel(),
-                fontWeight = FontWeight.Bold,
-                fontSize = 12.sp
+                color = Color(0xFFFFF1D6),
+                fontFamily = FontFirst(),
+                fontWeight = FontWeight.Black,
+                fontSize = 20.sp,
+                style = androidx.compose.ui.text.TextStyle(
+                    shadow = androidx.compose.ui.graphics.Shadow(Color.Black, androidx.compose.ui.geometry.Offset(0f, 3f), 6f)
+                )
             )
             ElementDot(card.element)
         }
@@ -238,8 +241,11 @@ private fun Stage(
             repeat(5) { i ->
                 Text(
                     text = "★",
-                    color = if (i < monster.stars) Color(0xFFFFC93C) else Color(0x556B5A38),
-                    fontSize = 10.sp
+                    color = if (i < monster.stars) Color(0xFFFFC93C) else Color(0x88FFFFFF),
+                    fontSize = 20.sp,
+                    style = androidx.compose.ui.text.TextStyle(
+                        shadow = androidx.compose.ui.graphics.Shadow(Color.Black, androidx.compose.ui.geometry.Offset(0f, 2f), 4f)
+                    )
                 )
             }
         }
@@ -250,8 +256,9 @@ private fun Stage(
         Text(
             text = "x${monster.count}",
             color = Color(0xFFEADFC8),
-            fontFamily = FontPixel(),
-            fontSize = 10.sp,
+            fontFamily = FontFirst(),
+            fontWeight = FontWeight.Black,
+            fontSize = 13.sp,
             modifier = Modifier
                 .align(Alignment.BottomStart)
                 .padding(6.dp)
@@ -266,14 +273,14 @@ private fun Stage(
 private fun Arrow(text: String, modifier: Modifier = Modifier, onClick: () -> Unit) {
     Box(
         modifier = modifier
-            .size(30.dp)
+            .size(42.dp)
             .clip(CircleShape)
-            .background(Color(0xAA3D2A18))
+            .background(Color(0xCC3D2A18))
             .border(2.dp, ParchmentPalette.Button.copy(alpha = 0.8f), CircleShape)
             .clickable(onClick = onClick),
         contentAlignment = Alignment.Center
     ) {
-        Text(text = text, color = ParchmentPalette.Button, fontSize = 17.sp, fontWeight = FontWeight.Bold)
+        Text(text = text, color = ParchmentPalette.Button, fontSize = 26.sp, fontWeight = FontWeight.Black)
     }
 }
 
@@ -281,13 +288,13 @@ private fun Arrow(text: String, modifier: Modifier = Modifier, onClick: () -> Un
 private fun ElementDot(element: Element) {
     Box(
         modifier = Modifier
-            .size(14.dp)
+            .size(24.dp)
             .clip(CircleShape)
             .background(element.badgeColor())
-            .border(1.dp, Color(0x66000000), CircleShape),
+            .border(2.dp, Color(0xCC000000), CircleShape),
         contentAlignment = Alignment.Center
     ) {
-        Text(text = element.icon, fontSize = 8.sp)
+        Text(text = element.icon, fontSize = 13.sp)
     }
 }
 
@@ -301,7 +308,7 @@ private fun ElementDot(element: Element) {
  * zakladka musi sie w tym zmiescic - stad wszystko upchniete w trzy waskie wiersze zamiast
  * listy sekcji z naglowkami.
  */
-private val PANE_HEIGHT = 96.dp
+private val PANE_HEIGHT = 132.dp
 
 @Composable
 private fun Board(
@@ -376,15 +383,15 @@ private fun PaneTabs(pane: Pane, onPane: (Pane) -> Unit) {
                     .clip(RoundedCornerShape(5.dp))
                     .background(if (active) ParchmentPalette.TabActive else Color.Transparent)
                     .clickable { onPane(entry) }
-                    .padding(vertical = 4.dp),
+                    .padding(vertical = 7.dp),
                 contentAlignment = Alignment.Center
             ) {
                 Text(
                     text = entry.label,
                     color = if (active) ParchmentPalette.Ink else ParchmentPalette.Paper.copy(alpha = 0.8f),
                     fontFamily = FontFirst(),
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 11.sp
+                    fontWeight = FontWeight.Black,
+                    fontSize = 14.sp
                 )
             }
         }
@@ -430,20 +437,20 @@ private fun InfoPane(
 
     Column(
         modifier = Modifier.fillMaxSize(),
-        verticalArrangement = Arrangement.spacedBy(4.dp)
+        verticalArrangement = Arrangement.SpaceBetween
     ) {
         Row(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.spacedBy(6.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Text(text = "💪", fontSize = 12.sp)
+            Text(text = "💪", fontSize = 15.sp)
             Text(
                 text = "${attack * 3 + hp / 2}",
                 color = ParchmentPalette.Ink,
-                fontFamily = FontPixel(),
-                fontWeight = FontWeight.Bold,
-                fontSize = 13.sp
+                fontFamily = FontFirst(),
+                fontWeight = FontWeight.Black,
+                fontSize = 17.sp
             )
 
             Spacer(modifier = Modifier.width(2.dp))
@@ -465,9 +472,9 @@ private fun InfoPane(
             Text(
                 text = "LV ${monster.level}/${monster.levelCap}",
                 color = Color(0xFF9E3B24),
-                fontFamily = FontPixel(),
-                fontWeight = FontWeight.Bold,
-                fontSize = 12.sp
+                fontFamily = FontFirst(),
+                fontWeight = FontWeight.Black,
+                fontSize = 15.sp
             )
         }
 
@@ -479,12 +486,12 @@ private fun InfoPane(
                 .clip(RoundedCornerShape(7.dp))
                 .background(ParchmentPalette.Card)
                 .border(1.dp, ParchmentPalette.CardEdge, RoundedCornerShape(7.dp))
-                .padding(vertical = 4.dp)
+                .padding(vertical = 6.dp)
         ) {
             StatCell("❤️", "$hp", "HP", Modifier.weight(1f))
-            StatCell("⚔️", "$attack", "atak", Modifier.weight(1f))
-            StatCell("🛡️", "$armor%", "pancerz", Modifier.weight(1f))
-            StatCell("👟", "$speed", "szybkosc", Modifier.weight(1f))
+            StatCell("⚔️", "$attack", "Attack", Modifier.weight(1f))
+            StatCell("🛡️", "$armor%", "Armor", Modifier.weight(1f))
+            StatCell("👟", "$speed", "Speed", Modifier.weight(1f))
         }
 
         Row(
@@ -507,17 +514,17 @@ private fun InfoPane(
                         text = "Capped - ascend a star",
                         color = ParchmentPalette.InkMuted,
                         fontFamily = FontFirst(),
-                        fontSize = 9.sp,
+                        fontSize = 11.sp,
                         maxLines = 1
                     )
                 } else {
-                    Text(text = "💰", fontSize = 11.sp)
+                    Text(text = "💰", fontSize = 13.sp)
                     Text(
                         text = "${monster.levelUpCost}",
                         color = ParchmentPalette.Ink,
-                        fontFamily = FontPixel(),
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 11.sp
+                        fontFamily = FontFirst(),
+                        fontWeight = FontWeight.Black,
+                        fontSize = 14.sp
                     )
                 }
             }
@@ -525,7 +532,7 @@ private fun InfoPane(
             val canUp = !monster.atLevelCap && money >= monster.levelUpCost
             Box(
                 modifier = Modifier
-                    .size(width = 44.dp, height = 26.dp)
+                    .size(width = 48.dp, height = 32.dp)
                     .clip(RoundedCornerShape(7.dp))
                     .background(if (canUp) Color(0xFF57C24A) else ParchmentPalette.ButtonDisabled)
                     .border(2.dp, if (canUp) Color(0xFF3E8F34) else ParchmentPalette.CardEdge, RoundedCornerShape(7.dp))
@@ -560,13 +567,13 @@ private fun StatCell(icon: String, value: String, label: String, modifier: Modif
             horizontalArrangement = Arrangement.spacedBy(3.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Text(text = icon, fontSize = 10.sp)
+            Text(text = icon, fontSize = 14.sp)
             Text(
                 text = value,
                 color = ParchmentPalette.Ink,
-                fontFamily = FontPixel(),
-                fontWeight = FontWeight.Bold,
-                fontSize = 12.sp,
+                fontFamily = FontFirst(),
+                fontWeight = FontWeight.Black,
+                fontSize = 16.sp,
                 maxLines = 1
             )
         }
@@ -574,7 +581,8 @@ private fun StatCell(icon: String, value: String, label: String, modifier: Modif
             text = label,
             color = ParchmentPalette.InkMuted,
             fontFamily = FontFirst(),
-            fontSize = 7.sp,
+            fontWeight = FontWeight.Bold,
+            fontSize = 10.sp,
             maxLines = 1
         )
     }

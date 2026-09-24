@@ -34,6 +34,7 @@ import com.lernhero.domain.player.PartySlots
 import com.lernhero.domain.player.PlayerEquipment
 import com.lernhero.domain.progress.CategoryMastery
 import com.lernhero.domain.progress.CategoryStat
+import com.lernhero.domain.progress.CategoryStreakRun
 import com.lernhero.domain.progress.RunStats
 import com.lernhero.domain.quiz.CategoryOffer
 import com.lernhero.domain.quiz.MultiSelectBank
@@ -41,11 +42,17 @@ import com.lernhero.domain.quiz.MultiSelectEntry
 import com.lernhero.domain.quiz.CategoryOption
 import com.lernhero.domain.quiz.EstimationBank
 import com.lernhero.domain.quiz.OrderingBank
+import com.lernhero.domain.quiz.TrueFalseBank
+import com.lernhero.domain.quiz.TrueFalseEntry
 import com.lernhero.domain.quiz.OrderingEntry
 import com.lernhero.domain.quiz.QuizBank
 import com.lernhero.domain.quiz.QuizCategory
 import com.lernhero.shared.i18n.AppLanguageStore
 import com.lernhero.shared.prefs.AppPreferences
+import com.lernhero.domain.monetization.AdRewards
+import com.lernhero.domain.monetization.Bundle
+import com.lernhero.shared.monetization.AdOutcome
+import com.lernhero.shared.monetization.RewardedAction
 import com.lernhero.domain.quiz.QuizDifficulty
 import com.lernhero.domain.quiz.QuizEntry
 import com.lernhero.domain.quiz.WordQuizBank
@@ -62,8 +69,11 @@ import com.lernhero.domain.run.EndlessBuff
 import com.lernhero.domain.talent.TalentBonuses
 import com.lernhero.domain.talent.TalentRules
 import com.lernhero.domain.run.RunDifficulty
+import com.lernhero.domain.run.RunLadder
 import com.lernhero.domain.run.EndlessMilestones
 import com.lernhero.domain.run.RunLoot
+import com.lernhero.domain.monster.EnemyRole
+import com.lernhero.domain.story.CampaignLadder
 import com.lernhero.domain.story.StageRepeats
 import com.lernhero.domain.run.RunSession
 import com.lernhero.game.character.AnimSlot
@@ -74,6 +84,7 @@ import com.lernhero.game.character.HeroLook
 import com.lernhero.game.character.KnightEquipment
 import com.lernhero.shared.resources.FlagResources
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import kotlinx.coroutines.IO
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -99,7 +110,8 @@ class BattleViewModel(
     private val runSession: RunSession,
     /** Jezyk gracza - decyduje, czy kafle tematow moga pokazac kategorie lokalna (patrz [offerableCategories]). */
     private val languageStore: AppLanguageStore,
-    preferences: AppPreferences
+    preferences: AppPreferences,
+    private val rewardedAction: RewardedAction
 ) : ViewModel() {
 
     init {
@@ -123,12 +135,20 @@ class BattleViewModel(
     /**
      * Pojedynek z bossem: brak zwyklego quizu tury. Cala walka to naprzemiennie atak specjalny bossa
      * (quiz-oszacowanie skalujacy jego moc) i salwa druzyny - patrz [beginBossTurn]/[startPlayerTurn].
+     *
+     * To jest juz WYLACZNIE walka testowa z narzedzi dev. Plansza kampanii przestala byc "jedna
+     * walka z bossem" - jest dwudziestofalowym biegiem ([CampaignLadder]), w ktorym boss wchodzi
+     * jako fala 10 i 20. Gdyby ten warunek dalej patrzyl na sam [BattleRequest.kind], kazda plansza
+     * konczaca kraine zamienialaby sie w dwadziescia fal pojedynku bez zwyklego quizu.
      */
-    private val isBossDuel: Boolean = request.kind == BattleKind.Boss
+    private val isBossDuel: Boolean = request.kind == BattleKind.Boss &&
+        !request.isEndless &&
+        runSession.activeStoryStage == null
 
     /**
      * Wybor tematu pytania przed tura ([CategoryOffer]) - tylko kampania. Endless ma wlasny wybor
-     * kategorii JUZ przed walka (EndlessSetupPanel), a pojedynek z bossem nie ma zwyklego quizu.
+     * materialu JUZ przed walka ([com.lernhero.home.fight.MaterialSheet]), a pojedynek z bossem
+     * nie ma zwyklego quizu.
      */
     private val categoryPickEnabled: Boolean = !request.isEndless && !isBossDuel
 
@@ -221,6 +241,12 @@ class BattleViewModel(
 
     /** Trwa juz rozstrzyganie konca fali/walki - patrz [resolveOutcomeIfOver]. Blokuje podwojne rozliczenie. */
     private var resolvingOutcome: Boolean = false
+
+    /** Wskrzeszenie za reklame przysluguje RAZ na walke - drugi wipe konczy bieg. */
+    private var reviveUsed: Boolean = false
+
+    /** Mala premia do zlota z poziomu bohatera - patrz [com.lernhero.domain.player.LevelGoldBonus]. */
+    private var heroGoldMultiplier: Float = 1f
 
     /** Numer rundy w biezacej turze - zmiana odnawia garde z [EndlessBuff.Aegis] (patrz [refreshGuards]). */
     private var currentRoundIndex: Int = -1
@@ -490,6 +516,20 @@ class BattleViewModel(
             val teamWiped = settled.characters.values.none { it.isPlayer && it.hp > 0 }
             val lastWaveCleared = !request.isEndless && settled.wave >= request.waves
             when {
+                teamWiped && !reviveUsed && (rewardedAction.canOffer || playerGems() >= AdRewards.REVIVE_GEMS) -> {
+                    val gems = playerGems()
+                    _uiState.update {
+                        it.copy(
+                            reviveOffer = ReviveOffer(
+                                free = rewardedAction.isPremium,
+                                adAvailable = rewardedAction.canOffer,
+                                gems = gems
+                            ),
+                            quiz = null,
+                            message = null
+                        )
+                    }
+                }
                 teamWiped -> _uiState.update { it.finishDefeat() }
                 lastWaveCleared -> _uiState.update { it.finishVictory() }
                 else -> {
@@ -560,7 +600,11 @@ class BattleViewModel(
         // stunTurnsRemaining == 0 jest kluczowy: w trakcie oszolomionej rundy (patrz runStunnedRound)
         // boss ma PO PROSTU BIC, a nie w kolko losowac nowe zdarzenia - inaczej caly ekran zapetla
         // sie w kolejnych oknach zamiast realnie walczyc, dopoki gracz nie zauwazy, ze "nic sie nie dzieje".
-        if (!step.isPlayer && request.kind != BattleKind.Normal) {
+        // Rodzaj TEJ fali, nie calej walki: bieg ma dwadziescia fal, a elita/boss wchodzi w nim
+        // co piata/dziesiata ([CampaignLadder]). Wczesniej stal tu [BattleRequest.kind], czyli
+        // rodzaj CALEJ walki - przez co w wyprawie (kind = Normal) zdarzenia bossa nie odpalaly
+        // sie ani razu, a na planszy-bossie odpalaly sie na kazdej fali.
+        if (!step.isPlayer && kindForWave(_uiState.value.wave) != BattleKind.Normal) {
             val currentState = _uiState.value
             val canTriggerEvent = currentState.bossEvent == null && currentState.stunTurnsRemaining == 0
             val attacker = currentState.characters[step.attackerId]
@@ -1174,8 +1218,10 @@ class BattleViewModel(
         // Im wiecej segmentow paska zostalo w chwili odpowiedzi, tym mocniejsza bedzie salwa
         // tej tury - zablokowane teraz, obowiazuje przez cala ture.
         val answeredAfterMs = questionShownAt.elapsedNow().inWholeMilliseconds
+        // Ulamek liczy sie z okna TEGO pytania, nie ze stalej globalnej - inaczej krotsze okno na
+        // glebokich falach byloby czysta strata mnoznika, a nie realnym wymogiem szybszej odpowiedzi.
         val remainingFraction = 1f -
-            (answeredAfterMs.toFloat() / AnswerTimer.WINDOW_MS).coerceIn(0f, 1f)
+            (answeredAfterMs.toFloat() / quiz.windowMs).coerceIn(0f, 1f)
         val speedMultiplier = AnswerTimer.multiplierFor(remainingFraction)
         val cycleMultiplier = activeCycleMultiplier()
         currentTurnMultiplier = if (isCorrect) {
@@ -1283,12 +1329,26 @@ class BattleViewModel(
         startNextVolley()
     }
 
+    /**
+     * Elita odpala zdarzenia DWA RAZY rzadziej niz boss.
+     *
+     * Dopoki elita/boss byli cala walka, jedna stawka na oba miala sens. Teraz bieg ma cztery takie
+     * fale (5, 10, 15, 20) i kazda z nich bije po kilka razy na ture - przy jednej stawce zdarzenie
+     * bossa przestawalo byc wydarzeniem i zamienialo sie w podstawowy sposob, w jaki gra pyta.
+     */
+    private fun bossEventChanceScale(): Float =
+        if (kindForWave(_uiState.value.wave) == BattleKind.Elite) ELITE_EVENT_CHANCE_SCALE else 1f
+
     private fun rollBossSpecialEvent(random: Random): BossEventKind? {
+        val scale = bossEventChanceScale()
+        val heal = BOSS_HEAL_CHANCE * scale
+        val poison = BOSS_POISON_CHANCE * scale
+        val stun = BOSS_STUN_GAMBLE_CHANCE * scale
         val roll = random.nextFloat()
         return when {
-            roll < BOSS_HEAL_CHANCE -> BossEventKind.Heal
-            roll < BOSS_HEAL_CHANCE + BOSS_POISON_CHANCE -> BossEventKind.Poison
-            roll < BOSS_HEAL_CHANCE + BOSS_POISON_CHANCE + BOSS_STUN_GAMBLE_CHANCE -> BossEventKind.StunGamble
+            roll < heal -> BossEventKind.Heal
+            roll < heal + poison -> BossEventKind.Poison
+            roll < heal + poison + stun -> BossEventKind.StunGamble
             else -> null
         }
     }
@@ -1822,8 +1882,9 @@ class BattleViewModel(
     }
 
     private fun drawNextQuestion(wave: Int, forcedCategory: QuizCategory? = null): LiveQuizState {
-        // Endless pozwala wybrac STALY poziom pytan przed walka (patrz EndlessSetupPanel) - wtedy
-        // drabinka rosnaca z fala nie obowiazuje, bo gracz przyszedl cwiczyc konkretny poziom.
+        // Staly poziom pytan wylacza drabinke rosnaca z fala. Wyprawa juz go nie ustawia (material
+        // wybiera sie bez szczebla trudnosci - patrz MaterialSheet), ale pole zostaje: czyta je
+        // jeszcze zapis sprzed zmiany i walki testowe.
         val fixed = runSession.quizDifficulty
         val storyStage = runSession.activeStoryStage
         val difficulty = when {
@@ -1837,7 +1898,9 @@ class BattleViewModel(
             // ma ich najwyzej trzy, wiec drabinka fali nie zdazyla nigdy wyjsc poza rozgrzewke
             // (patrz [RunDifficulty.campaignLadder]).
             storyStage != null -> {
-                val ladder = runSession.difficulty.campaignLadder(request.kind, storyStage)
+                // Rodzaj TEJ fali i jej numer, nie sama plansza: bieg ma dwadziescia fal, wiec
+                // pytania musza rosnac razem z wrogami, a fala bossa ma pytac trudniej.
+                val ladder = runSession.difficulty.campaignLadder(kindForWave(wave), storyStage, wave)
                 ladder[quizCounter % ladder.size]
             }
             else -> {
@@ -1852,42 +1915,60 @@ class BattleViewModel(
         // i zawsze pytaja WYLACZNIE o slowka gracza - inaczej "trenuje slownictwo" bylby klamstwem,
         // gdyby co druga runda wracala do wbudowanego banku.
         if (runSession.customWords.isNotEmpty()) {
-            return LiveQuizState(question = drawMultipleChoiceQuestion(difficulty))
+            return liveQuiz(drawMultipleChoiceQuestion(difficulty), wave)
         }
 
         // Wlasna talia gracza dziala tak samo jak fiszki: skoro gracz przyszedl cwiczyc SWOJ
         // material, to wbudowany bank nie ma tu czego szukac. Talia moze niesc kazdy z typow
         // pytan, wiec o rodzaj tury decyduje wylosowane pytanie, nie rzut kostka jak nizej.
         runSession.customDeck?.let { deck ->
-            deckQuestion(deck, difficulty)?.let { return LiveQuizState(question = it) }
+            deckQuestion(deck, difficulty)?.let { return liveQuiz(it, wave) }
         }
 
         // Temat wskazany przez gracza na kaflu ma pierwszenstwo przed kategoria runu.
         val category = forcedCategory ?: runSession.category
 
-        // "Zaznacz wszystkie prawdziwe" wchodzi jako trzeci typ pytania obok wyboru i ukladanki.
-        val multiRoll = quizRandom.nextFloat()
-        if (multiRoll < MULTI_SELECT_QUESTION_CHANCE) {
-            val multi = MultiSelectBank.draw(difficulty, category = category, random = quizRandom)
-            if (multi != null) {
-                currentQuestionCategory = multi.category
-                return LiveQuizState(question = multi.toUiQuestion())
-            }
+        // Typ tury: najczesciej zwykly wybor, obok niego prawda/falsz, ukladanka i zaznacz-wszystkie.
+        // Specjalne typy maja male pule na temat i poziom, wiec biora wylacznie pytania jeszcze nie
+        // zadane (patrz QuestionHistory) - gdy takiego brak, tura dostaje zwykle pytanie z wyboru.
+        // Wczesniej ukladanka wypadala w co drugiej turze, a przy jednej-dwoch ukladankach na temat
+        // i poziom to samo pytanie wracalo po dwoch-trzech falach.
+        val seen: (String) -> Boolean = runSession.questionHistory::contains
+        val roll = quizRandom.nextFloat()
+        val special: QuizQuestion? = when {
+            roll < ORDERING_QUESTION_CHANCE ->
+                OrderingBank.draw(difficulty, category, quizRandom, seen)?.also { currentQuestionCategory = it.category }?.toUiQuestion()
+            roll < ORDERING_QUESTION_CHANCE + MULTI_SELECT_QUESTION_CHANCE ->
+                MultiSelectBank.draw(difficulty, category, quizRandom, seen)?.also { currentQuestionCategory = it.category }?.toUiQuestion()
+            roll < ORDERING_QUESTION_CHANCE + MULTI_SELECT_QUESTION_CHANCE + TRUE_FALSE_QUESTION_CHANCE ->
+                TrueFalseBank.draw(difficulty, category, quizRandom, seen)?.also { currentQuestionCategory = it.category }?.toUiQuestion()
+            else -> null
         }
+        val question = special ?: drawMultipleChoiceQuestion(difficulty, category)
+        runSession.questionHistory.remember(question.id)
+        return liveQuiz(question, wave)
+    }
 
-        // Na razie testowo pol na pol - tyle wystarczy, zeby sprawdzic, jak ukladanka gra sie w boju.
-        val question = if (quizRandom.nextFloat() < ORDERING_QUESTION_CHANCE) {
-            val ordering = OrderingBank.draw(difficulty, category = category, random = quizRandom)
-            if (ordering != null) {
-                currentQuestionCategory = ordering.category
-                ordering.toUiQuestion()
-            } else {
-                drawMultipleChoiceQuestion(difficulty, category)
-            }
-        } else {
-            drawMultipleChoiceQuestion(difficulty, category)
-        }
-        return LiveQuizState(question = question)
+    /**
+     * Pytanie gotowe na ekran razem z JEGO oknem czasu.
+     *
+     * Czas nie jest juz staly dla calej gry ([AnswerTimer.WINDOW_MS]): zalezy od rozmiaru pytania
+     * (ukladanka z szesciu elementow to nie to samo co wybor z czterech) i od glebokosci fali -
+     * patrz [AnswerTimer.windowFor]. To jest druga krzywa trudnosci biegu, obok sily wrogow, i ta
+     * bardziej uczciwa: nie zabiera graczowi mocy, tylko wymaga, zeby wiedzial odpowiedz, a nie
+     * dochodzil do niej przez eliminacje.
+     */
+    private fun liveQuiz(question: QuizQuestion, wave: Int): LiveQuizState =
+        LiveQuizState(
+            question = question,
+            windowMs = AnswerTimer.windowFor(optionCount = question.optionCount(), wave = wave)
+        )
+
+    /** Ile "rzeczy do przeczytania" ma pytanie - z tego liczy sie jego okno czasu. */
+    private fun QuizQuestion.optionCount(): Int = when (this) {
+        is MultipleChoiceQuestion -> answers.size
+        is OrderingQuestion -> items.size
+        is MultiSelectQuestion -> options.size
     }
 
     /**
@@ -1917,10 +1998,92 @@ class BattleViewModel(
             WordQuizBank.draw(customWords, quizRandom)
         } else {
             null
-        } ?: QuizBank.draw(listOf(difficulty), category = category, random = quizRandom).firstOrNull()
+        } ?: QuizBank.draw(listOf(difficulty), category = category, random = quizRandom, seen = runSession.questionHistory::contains).firstOrNull()
             ?: QuizBank.all(quizRandom).random(quizRandom)
         currentQuestionCategory = entry.category
         return entry.toUiQuestion()
+    }
+
+    /**
+     * Gracz bierze wskrzeszenie: reklama (albo nic, przy subskrypcji), a potem cala druzyna wstaje
+     * z [AdRewards.REVIVE_HP_FRACTION] maksymalnego HP i walka toczy sie dalej z ta sama fala.
+     */
+    fun acceptRevive() {
+        val offer = _uiState.value.reviveOffer ?: return
+        if (offer.watching) return
+        _uiState.update { it.copy(reviveOffer = offer.copy(watching = true, note = null)) }
+        viewModelScope.launch {
+            when (rewardedAction.earn()) {
+                AdOutcome.Rewarded -> revive()
+                AdOutcome.Skipped -> _uiState.update {
+                    it.copy(reviveOffer = offer.copy(watching = false, note = "Watch the ad to the end to revive."))
+                }
+                AdOutcome.Unavailable -> _uiState.update {
+                    it.copy(reviveOffer = offer.copy(watching = false, note = "No ad available right now - try again."))
+                }
+            }
+        }
+    }
+
+    /**
+     * Wskrzeszenie za diamenty - dla gracza bez reklamy (brak sieci, brak zgody, brak ochoty).
+     * Diamenty schodza w zapisie PRZED wstaniem druzyny; gdy zapis sie nie uda, nic sie nie dzieje.
+     */
+    fun acceptReviveWithGems() {
+        val offer = _uiState.value.reviveOffer ?: return
+        if (offer.watching || offer.gems < AdRewards.REVIVE_GEMS) return
+        _uiState.update { it.copy(reviveOffer = offer.copy(watching = true, note = null)) }
+        viewModelScope.launch {
+            val paid = withContext(Dispatchers.IO) {
+                playerRepository.spendGems(AdRewards.REVIVE_GEMS, Bundle(), Clock.System.now().toEpochMilliseconds())
+            }
+            if (paid != null) {
+                revive()
+            } else {
+                _uiState.update {
+                    it.copy(reviveOffer = offer.copy(watching = false, note = "Couldn't spend gems - try again."))
+                }
+            }
+        }
+    }
+
+    /** Diamenty z zapisu - pytamy dopiero przy wipe'ie, bo tylko wtedy sa potrzebne. */
+    private suspend fun playerGems(): Int =
+        withContext(Dispatchers.IO) { playerRepository.getPlayer()?.gems ?: 0 }
+
+    /** Odmowa wskrzeszenia = zwykla porazka, dokladnie ta, ktora padlaby bez propozycji. */
+    fun declineRevive() {
+        _uiState.update { state ->
+            if (state.reviveOffer == null) return@update state
+            state.copy(reviveOffer = null).finishDefeat()
+        }
+    }
+
+    private fun revive() {
+        reviveUsed = true
+        _uiState.update { state ->
+            var next = state.copy(
+                reviveOffer = null,
+                stunTurnsRemaining = 0,
+                stunnedCharacterIds = emptySet(),
+                message = "Your party rises again!",
+                characters = state.characters.mapValues { (_, character) ->
+                    if (!character.isPlayer) return@mapValues character
+                    val hp = (character.maxHp * AdRewards.REVIVE_HP_FRACTION).roundToInt().coerceAtLeast(1)
+                    character.copy(
+                        hp = maxOf(character.hp, hp),
+                        state = CharacterState.IDLE,
+                        currentTargetId = null,
+                        animSlot = null
+                    )
+                }
+            )
+            next.characters.values.filter { it.isPlayer }.forEach { player ->
+                next = next.spawnEffect(player.id, player.hp, HitKind.Heal)
+            }
+            next
+        }
+        askNextQuestion(keepMessage = true)
     }
 
     /** Kapitulacja w trakcie walki: druzyna ucieka zywa, ale bez lupu z biezacej fali. */
@@ -1931,7 +2094,7 @@ class BattleViewModel(
             runSession.savePartyHp(state.playerHp(), state.playerMaxHp())
             runSession.lastBattleWon = false
             val bagTotal = runSession.lootGold
-            val banked = runSession.settleLoot(CAPITULATE_LOOT_FRACTION)
+            val banked = runSession.settleLoot(capitulateLootFraction(state.wave))
 
             val summary = runTally.toRunStats(
                 won = false,
@@ -1946,6 +2109,7 @@ class BattleViewModel(
 
             state.copy(
                 phase = GamePhase.Defeat,
+                reviveOffer = null,
                 rewardCoins = banked,
                 rewardSaved = true,
                 runSummary = summary,
@@ -1968,7 +2132,13 @@ class BattleViewModel(
         runSession.savePartyHp(playerHp(), playerMaxHp())
         runSession.addLoot(calculateWaveCoins(this))
         val clearedKind = kindForWave(wave)
-        runTally.recordWaveCleared(wave, clearedKind, runSession.difficulty, campaignStage())
+        runTally.recordWaveCleared(
+            wave,
+            clearedKind,
+            runSession.difficulty,
+            campaignStage(),
+            ladderRewardMultiplier(wave)
+        )
         // Boss endless placi skrzynie dokladnie tak, jak boss kampanii - to jest jedyne
         // powtarzalne zrodlo losow w grze, patrz [EndlessMilestones].
         runTally.recordBossBonus(clearedKind, bossDepth(wave))
@@ -1982,7 +2152,17 @@ class BattleViewModel(
         // Im lepiej szedl quiz do tej pory, tym czesciej w ofercie sa te mocniejsze karty.
         // Story mode nigdy tego nie widzi (request.isEndless).
         val quality = EndlessBuff.qualityFor(correctCount, answeredCount)
-        val offer = if (request.isEndless && wave % ENDLESS_BUFF_INTERVAL == 0) {
+        // Karty ulepszen wypadaja teraz TAKZE w kampanii - to one robia z planszy bieg, a nie tylko
+        // dluzsza walke: co trzy fale gracz wybiera jedna z trzech kart i gra nia do konca planszy.
+        // Cala krzywa trudnosci kampanii ([CampaignLadder.relativeDifficulty]) jest policzona przy
+        // zalozeniu, ze do dwudziestej fali zbierze ich szesc - bez tego warunku dwudziesta fala
+        // jest nie do przejscia, a nie "ciezka".
+        val offersUpgrade = if (request.isEndless) {
+            wave % ENDLESS_BUFF_INTERVAL == 0
+        } else {
+            runSession.activeStoryStage != null && CampaignLadder.offersUpgrade(wave)
+        }
+        val offer = if (offersUpgrade) {
             EndlessBuff.offer(endlessBuffs, quality, combatRandom)
                 .takeIf { it.isNotEmpty() }
                 ?.let { UpgradeOffer(wave = nextWave, choices = it, quality = quality, ownedStacks = endlessBuffs) }
@@ -2025,16 +2205,35 @@ class BattleViewModel(
             secondWindUses = emptyMap(),
             upgradeOffer = offer,
             message = "Wave $nextWave incoming..."
-        ).applyWaveRegeneration()
+        ).applyWaveRegeneration(clearedWave = wave)
     }
 
-    /** [EndlessBuff.Regeneration]: kazda oczyszczona fala oddaje druzynie czesc maks. HP. */
-    private fun BattleUiState.applyWaveRegeneration(): BattleUiState {
+    /**
+     * Oddech miedzy falami: kazda oczyszczona fala oddaje druzynie czesc maks. HP, a fale z elita
+     * i bossem - duzo wieksza.
+     *
+     * ## Dlaczego to musialo powstac
+     *
+     * HP przechodzi z fali na fale, a jedynym zrodlem leczenia byla karta [EndlessBuff.Regeneration]
+     * - czyli LOSOWA. Dopoki plansza miala dwie fale, nie mialo to znaczenia. Przy dwudziestu
+     * oznaczaloby to, ze bieg da sie skonczyc tylko wtedy, gdy akurat wypadnie regeneracja: kazde
+     * obrazenie z fali trzeciej zostaje na koncie do dwudziestej, a wrogowie po drodze rosna
+     * trzykrotnie. To nie jest trudnosc, tylko loteria przy rozdaniu kart.
+     *
+     * Bazowe [WAVE_CLEAR_HEAL_FRACTION] nie uratuje nikogo, kto gra zle - to ~4% na fale przy
+     * stracie rzedu 20% na zla ture. Kamien milowy ([MILESTONE_HEAL_FRACTION]) jest nagroda za
+     * przetrwanie elity/bossa i jednoczesnie miejscem, w ktorym bieg realnie sie "resetuje".
+     */
+    private fun BattleUiState.applyWaveRegeneration(clearedWave: Int): BattleUiState {
         val stacks = endlessBuffs[EndlessBuff.Regeneration] ?: 0
-        if (stacks <= 0) return this
+        val milestone = kindForWave(clearedWave) != BattleKind.Normal
+        val fraction = WAVE_CLEAR_HEAL_FRACTION +
+            (if (milestone) MILESTONE_HEAL_FRACTION else 0f) +
+            stacks * REGENERATION_PER_STACK
+        if (fraction <= 0f) return this
         var next = this
         characters.values.filter { it.isPlayer && it.hp > 0 }.forEach { player ->
-            next = next.healCharacter(player.id, player.maxHp * stacks * REGENERATION_PER_STACK)
+            next = next.healCharacter(player.id, player.maxHp * fraction)
         }
         return next
     }
@@ -2116,7 +2315,13 @@ class BattleViewModel(
         runSession.savePartyHp(playerHp(), playerMaxHp())
         runSession.lastBattleWon = true
         runSession.addLoot(calculateWaveCoins(this))
-        runTally.recordWaveCleared(wave, kindForWave(wave), runSession.difficulty, campaignStage())
+        runTally.recordWaveCleared(
+            wave,
+            kindForWave(wave),
+            runSession.difficulty,
+            campaignStage(),
+            ladderRewardMultiplier(wave)
+        )
         runTally.recordBossBonus(kindForWave(wave), bossDepth(wave))
         val banked = runSession.settleLoot(VICTORY_LOOT_FRACTION)
 
@@ -2234,6 +2439,7 @@ class BattleViewModel(
             // (powstal przed progami albo po zmianie tabeli), a walka czyta druzyne wprost stad -
             // bez tego stary zapis omijalby caly system odblokowywania.
             savedParty = PartySlots.enforce(player.party, player.progress.level)
+            heroGoldMultiplier = com.lernhero.domain.player.LevelGoldBonus.multiplier(player.progress.level)
             savedMonsterLevels = player.monsterLevels
             savedMonsterStars = player.monsterStars
             savedMonsterEquipment = player.migratedMonsterEquipment()
@@ -2324,9 +2530,14 @@ class BattleViewModel(
      * domyslne generyczne tlo z [BattleUiState.battleBackground].
      */
     private fun resolveBattleBackground(): org.jetbrains.compose.resources.DrawableResource {
+        // Wyprawa nie ma krainy - ma wlasna, jedna arene na wszystkie fale i tiery.
+        if (request.isEndless) return Resources.Image.arenaEndless
+
         val stage = runSession.activeStoryStage ?: return Resources.Image.battlegroundFirst
         val worldId = StoryWorldCatalog.worldForGlobalStage(stage)?.id ?: return Resources.Image.battlegroundFirst
-        return Resources.Image.worldBackground(worldId) ?: Resources.Image.battlegroundFirst
+        // Arena to INNA grafika niz kafel krainy na Mapie - patrz [Resources.Image.battleBackground].
+        // Kraina, ktora swojej areny jeszcze nie ma, spada na generyczne pole bitwy.
+        return Resources.Image.battleBackground(worldId) ?: Resources.Image.battlegroundFirst
     }
 
     private fun createInitialState(): BattleUiState {
@@ -2426,7 +2637,8 @@ class BattleViewModel(
         // Glebokosc planszy podbija go tym samym, ktorym podbija XP i materialy - patrz
         // [RunLoot.depthMultiplier]. Bez tego plansza 36 placila dokladnie tyle co plansza 1.
         return (raw * runSession.difficulty.coinMultiplier * masteryRewardMultiplier() *
-            RunLoot.depthMultiplier(campaignStage()) * payoutFraction)
+            ladderRewardMultiplier(state.wave) *
+            RunLoot.depthMultiplier(campaignStage()) * payoutFraction * heroGoldMultiplier)
             .roundToInt().coerceAtLeast(8)
     }
 
@@ -2437,8 +2649,57 @@ class BattleViewModel(
      * Czym jest fala o tym numerze. W kampanii decyduje mapa ([BattleRequest.kind]); w endless -
      * sam numer fali, bo co [EndlessMilestones.BOSS_INTERVAL] wchodzi boss ze skrzynia i losami.
      */
-    private fun kindForWave(wave: Int): BattleKind =
-        if (request.isEndless) EndlessMilestones.kindFor(wave) else request.kind
+    /**
+     * Czym jest TA fala. Oba tryby maja teraz ten sam rytm - tlum, elita, boss - tylko liczony
+     * z wlasnej drabinki: wyprawa z [RunLadder], kampania z [CampaignLadder] (elita co piata fala,
+     * boss co dziesiata). Walka testowa z dev-toolsow nie ma fal i bierze rodzaj wprost z zamowienia.
+     */
+    private fun kindForWave(wave: Int): BattleKind = when {
+        request.isEndless -> RunLadder.kindFor(wave)
+        runSession.activeStoryStage != null -> CampaignLadder.kindFor(wave)
+        else -> request.kind
+    }
+
+    /**
+     * Mnoznik sily wrogow z drabinki wypraw - patrz [RunLadder].
+     *
+     * Dotyczy WYLACZNIE wypraw ([BattleRequest.isEndless]); kampania ma wlasne skalowanie po
+     * numerze planszy i tierze mapy, wiec dostaje 1.0 i nic sie w niej nie zmienia.
+     *
+     * Krzywa siedzi w domenie, a nie tutaj, bo to ona jest balansem gry: liczy sie z tym, ile
+     * kart ulepszen gracz zdazyl po drodze zebrac, i przestrojenie jej nie wymaga dotykania walki.
+     */
+    private fun ladderMultiplier(wave: Int): Float = when {
+        request.isEndless -> RunLadder.enemyMultiplier(runSession.ladderTier, wave)
+        // Kampania ma wlasna gorke w obrebie planszy - pulap biegu daja [stageHpMultiplier] /
+        // [stageAttackMultiplier], a ta liczba odpowiada wylacznie za jego KSZTALT.
+        runSession.activeStoryStage != null -> CampaignLadder.waveMultiplier(wave)
+        else -> 1f
+    }
+
+    /** Czy to plansza konczaca kraine - jedyne, co zostalo z dawnego "plansza-boss". */
+    private val isBossStage: Boolean get() = request.kind == BattleKind.Boss && !request.isEndless
+
+    /**
+     * Pulap calego biegu z GLEBOKOSCI planszy kampanii. Null (wyprawa, walka testowa) = brak
+     * dodatkowego mnoznika; tam za skalowanie odpowiada wylacznie drabinka fal.
+     */
+    private fun stageHpMultiplier(stage: Int?): Float =
+        stage?.let { CampaignLadder.stageHpMultiplier(it, isBossStage) } ?: 1f
+
+    private fun stageAttackMultiplier(stage: Int?): Float =
+        stage?.let { CampaignLadder.stageAttackMultiplier(it, isBossStage) } ?: 1f
+
+    /**
+     * Mnoznik LUPU z drabinki wypraw - druga polowa tej samej umowy co [ladderMultiplier].
+     *
+     * Bez niego wyzszy poziom drabinki bylby czysta kara: wrogowie mocniejsi o [RunLadder.TIER_STEP],
+     * a sakwa dokladnie taka sama jak na poziomie pierwszym - czyli najlepszym zagraniem byloby
+     * NIE przechodzic mety. Rosnie przy tym wolniej niz sila wrogow (patrz [RunLadder.rewardMultiplier]),
+     * wiec glebsze fale placa lepiej, ale nie zastepuja zdobywania poziomow.
+     */
+    private fun ladderRewardMultiplier(wave: Int): Float =
+        if (request.isEndless) RunLadder.rewardMultiplier(runSession.ladderTier, wave) else 1f
 
     /**
      * Glebokosc, od ktorej liczy sie premia za bossa. W kampanii to numer planszy, w endless -
@@ -2451,7 +2712,8 @@ class BattleViewModel(
     private fun calculateDefeatCoins(state: BattleUiState): Int =
         ((8 + (state.wave - 1) * 6 + state.totalScore / 20) *
             runSession.difficulty.coinMultiplier * masteryRewardMultiplier() *
-            RunLoot.depthMultiplier(campaignStage()) * payoutFraction)
+            ladderRewardMultiplier(state.wave) *
+            RunLoot.depthMultiplier(campaignStage()) * payoutFraction * heroGoldMultiplier)
             .roundToInt().coerceAtLeast(5)
 
     /**
@@ -2584,6 +2846,22 @@ class BattleViewModel(
         answers = answers.shuffled(Random.Default).map { text ->
             QuizAnswer(id = text, text = text, isCorrect = text == correct)
         },
+        difficulty = difficulty.label,
+        category = category.label,
+        reward = difficulty.reward
+    )
+
+    /**
+     * Prawda/falsz to zwykly wybor z dwoch odpowiedzi - ten sam kafel, ten sam pasek czasu. Kolejnosc
+     * jest stala (najpierw "True"), bo tasowanie dwoch odpowiedzi tylko myli.
+     */
+    private fun TrueFalseEntry.toUiQuestion(): QuizQuestion = MultipleChoiceQuestion(
+        id = id,
+        prompt = statement,
+        answers = listOf(
+            QuizAnswer(id = "$id:true", text = "True", isCorrect = isTrue),
+            QuizAnswer(id = "$id:false", text = "False", isCorrect = !isTrue)
+        ),
         difficulty = difficulty.label,
         category = category.label,
         reward = difficulty.reward
@@ -2730,7 +3008,8 @@ class BattleViewModel(
             return listOf(buildEliteOrBoss(wave, random, difficulty, level, kind))
         }
 
-        // Story mode: wiecej wrogow na fale im wyzszy poziom lochu (tlum, nie tylko twardsze ciosy).
+        // Wiecej wrogow na fale im glebiej w biegu i im wyzsza plansza (tlum, nie tylko twardsze
+        // ciosy). W kampanii liczy sie jedno i drugie, bo bieg ma teraz dwadziescia fal.
         val levelCountBonus = level?.let { (it - 1) / 3 } ?: 0
         val enemyCount = (2 + random.nextInt(2) + wave / 5 + levelCountBonus).coerceAtMost(6)
         val topic = masteryEnemyMultiplier()
@@ -2738,13 +3017,21 @@ class BattleViewModel(
             val number = index + 1
             val species = WAVE_ENEMY_SPECIES[random.nextInt(WAVE_ENEMY_SPECIES.size)]
             val archetype = SPECIES_STAT_MULTIPLIER.getValue(species)
-            val baseHp = ENEMY_BASE_HP + (wave - 1) * ENEMY_HP_PER_WAVE + index * ENEMY_HP_PER_INDEX
-            val baseAttack = ENEMY_BASE_ATTACK + (wave - 1) * ENEMY_ATTACK_PER_WAVE + index * ENEMY_ATTACK_PER_INDEX
-            val hp = (baseHp * difficulty.enemyHpMultiplier * levelHpMultiplier(level) * archetype.first * topic).roundToInt()
-            val attack = (baseAttack * difficulty.enemyAttackMultiplier * levelAttackMultiplier(level) * archetype.second * topic).roundToInt()
+            // Druga os roznorodnosci obok gatunku: Kolosa trzeba przetrwac, Lowce ubic pierwszego -
+            // patrz [EnemyRole]. Rosnie z fala, wiec dwudziesta nie jest pierwsza w wiekszej skali.
+            val role = EnemyRole.roll(wave, random.nextFloat())
+            // O wzrost z fala dba drabinka (mnoznik), a nie dodawanie po kawalku: dwie krzywe naraz
+            // znosilyby sie nawzajem i zadnej nie dalo by sie nastroic.
+            val ladder = ladderMultiplier(wave)
+            val baseHp = (ENEMY_BASE_HP + index * ENEMY_HP_PER_INDEX) * ladder
+            val baseAttack = (ENEMY_BASE_ATTACK + index * ENEMY_ATTACK_PER_INDEX) * ladder
+            val hp = (baseHp * difficulty.enemyHpMultiplier * stageHpMultiplier(level) *
+                archetype.first * role.hpMultiplier * topic).roundToInt()
+            val attack = (baseAttack * difficulty.enemyAttackMultiplier * stageAttackMultiplier(level) *
+                archetype.second * role.attackMultiplier * topic).roundToInt()
             CharacterTemplate(
                 id = "ENEMY_${wave}_$number",
-                name = "Monster $number",
+                name = enemyName(species, role, number),
                 isPlayer = false,
                 avatar = species,
                 hp = hp,
@@ -2752,6 +3039,15 @@ class BattleViewModel(
                 attack = attack
             )
         }
+    }
+
+    /**
+     * Nazwa wroga na pasku zycia: gatunek plus rola. "Monster 3" nie mowilo nic - a rola jest
+     * informacja TAKTYCZNA ("Stalker" = ubij pierwszego), wiec musi byc widoczna bez klikania.
+     */
+    private fun enemyName(species: String, role: EnemyRole, number: Int): String {
+        val base = MonsterCatalog.byId(species)?.name ?: "Monster $number"
+        return if (role.label.isEmpty()) base else "$base ${role.label}"
     }
 
     private fun buildEliteOrBoss(
@@ -2769,15 +3065,16 @@ class BattleViewModel(
         // (fallback 1f/1f), bo jego sila juz w calosci siedzi w BOSS_*_MULTIPLIER powyzej.
         val species = if (isBoss) EnemySpecies.BOSS_SPECIES else WAVE_ENEMY_SPECIES[random.nextInt(WAVE_ENEMY_SPECIES.size)]
         val archetype = SPECIES_STAT_MULTIPLIER[species] ?: (1f to 1f)
-        val baseHp = ENEMY_BASE_HP + (wave - 1) * ENEMY_HP_PER_WAVE
-        val baseAttack = ENEMY_BASE_ATTACK + (wave - 1) * ENEMY_ATTACK_PER_WAVE
+        val ladder = ladderMultiplier(wave)
+        val baseHp = ENEMY_BASE_HP * ladder
+        val baseAttack = ENEMY_BASE_ATTACK * ladder
         val topic = masteryEnemyMultiplier()
-        val hp = (baseHp * difficulty.enemyHpMultiplier * levelHpMultiplier(level) * archetype.first * hpMultiplier * request.enemyHpMultiplier * topic).roundToInt()
-        val attack = (baseAttack * difficulty.enemyAttackMultiplier * levelAttackMultiplier(level) * archetype.second * attackMultiplier * topic).roundToInt()
+        val hp = (baseHp * difficulty.enemyHpMultiplier * stageHpMultiplier(level) * archetype.first * hpMultiplier * request.enemyHpMultiplier * topic).roundToInt()
+        val attack = (baseAttack * difficulty.enemyAttackMultiplier * stageAttackMultiplier(level) * archetype.second * attackMultiplier * topic).roundToInt()
 
         return CharacterTemplate(
             id = if (isBoss) "BOSS_$wave" else "ELITE_$wave",
-            name = if (isBoss) "Dungeon Boss" else "Elite Hunter",
+            name = if (isBoss) "Wave $wave Boss" else "Elite Hunter",
             isPlayer = false,
             avatar = species,
             hp = hp,
@@ -2852,6 +3149,7 @@ private class RunTally {
     private var wavesCleared = 0
     private var bestWave = 1
     private val perCategory = mutableMapOf<String, CategoryStat>()
+    private val categoryStreaks = mutableMapOf<String, CategoryStreakRun>()
 
     fun recordAnswer(
         correct: Boolean,
@@ -2867,6 +3165,7 @@ private class RunTally {
         // Pytania bez rozpoznanej kategorii (fallback z calego banku) licza sie do sumy, ale nie
         // zasmiecaja rozbicia per kategoria bledna etykieta.
         val key = category?.name ?: return
+        categoryStreaks[key] = (categoryStreaks[key] ?: CategoryStreakRun()).record(correct)
         val current = perCategory[key] ?: CategoryStat()
         perCategory[key] = current.copy(
             answered = current.answered + 1,
@@ -2874,12 +3173,26 @@ private class RunTally {
         )
     }
 
-    fun recordWaveCleared(wave: Int, kind: BattleKind, difficulty: RunDifficulty, stage: Int) {
+    fun recordWaveCleared(
+        wave: Int,
+        kind: BattleKind,
+        difficulty: RunDifficulty,
+        stage: Int,
+        /**
+         * Mnoznik stawki tej fali - w wyprawie rosnie z poziomem drabinki i numerem fali
+         * ([RunLadder.rewardMultiplier]), poza nia zostaje 1.0.
+         *
+         * Wchodzi TUTAJ, a nie na koncu rozliczenia, bo dotyczy konkretnej fali: bieg konczacy sie
+         * na fali 24 zbiera po drodze osiem stawek slabszych i szesnascie coraz mocniejszych, a
+         * jeden mnoznik doklejony do sumy udawalby, ze wszystkie byly warte tyle co ostatnia.
+         */
+        rewardMultiplier: Float = 1f
+    ) {
         wavesCleared += 1
         bestWave = maxOf(bestWave, wave)
-        xp += RunLoot.xpForWave(wave, kind, difficulty, stage)
-        iron += RunLoot.ironForWave(wave, kind, stage)
-        essence += RunLoot.essenceForWave(wave, kind, stage)
+        xp += (RunLoot.xpForWave(wave, kind, difficulty, stage) * rewardMultiplier).roundToInt()
+        iron += (RunLoot.ironForWave(wave, kind, stage) * rewardMultiplier).roundToInt()
+        essence += (RunLoot.essenceForWave(wave, kind, stage) * rewardMultiplier).roundToInt()
     }
 
     fun recordBossBonus(kind: BattleKind, dungeonLevel: Int) {
@@ -2919,6 +3232,7 @@ private class RunTally {
         questionsCorrect = questionsCorrect,
         bestAnswerStreak = bestStreak,
         perCategory = perCategory.toMap(),
+        categoryStreaks = categoryStreaks.toMap(),
         gold = gold,
         xp = (xp * xpMultiplier * payoutFraction).roundToInt(),
         iron = (iron * payoutFraction).roundToInt(),
@@ -2947,8 +3261,13 @@ private const val ROUNDS_PER_TURN = 3
  * Dlugosc taktu [TurnPhase.Impact] - tyle pole bitwy stoi, zanim ruszy salwa, zeby gracz zdazyl
  * przeczytac rozliczenie swojej odpowiedzi (TurnImpactOverlay animuje sie w tym samym oknie).
  * Skalowane przez [BattleSpeed], wiec na 4x/8x nie jest to zadnym hamulcem.
+ *
+ * Musi byc DLUZSZE niz cala animacja karty (dwa odstepy etapow + doliczanie liczby ataku, patrz
+ * TurnImpactOverlay). Przy 2400 ms ostatni etap - czyli ten, w ktorym pada pointa, ile mocniej bije
+ * druzyna - konczyl liczyc w tej samej chwili, w ktorej karta zaczynala znikac: gracz widzial ruch,
+ * ale nie zdazyl odczytac wyniku.
  */
-private const val IMPACT_HOLD_MILLIS = 2400L
+private const val IMPACT_HOLD_MILLIS = 3400L
 
 /**
  * Bohater - jedyna postac, ktora gracz ma OD RAZU, wiec caly early game musi dac sie przejsc nim
@@ -2975,7 +3294,10 @@ internal const val WRONG_ANSWER_MULTIPLIER = 0.55f
 internal const val WRONG_ANSWER_ENEMY_BONUS = 1.15f
 
 /** Testowo pol na pol - jak sie sprawdzi, mozna dostroic w dol/gore albo powiazac z fala/kategoria. */
-private const val ORDERING_QUESTION_CHANCE = 0.5f
+private const val ORDERING_QUESTION_CHANCE = 0.12f
+
+/** Udzial tur prawda/falsz - patrz [TrueFalseBank]. */
+private const val TRUE_FALSE_QUESTION_CHANCE = 0.2f
 
 /**
  * Bazowe HP/atak zwyklego wroga na fali 1, index 0 (przed mnoznikami trudnosci/poziomu/archetypu).
@@ -3039,11 +3361,9 @@ private val SPECIES_STAT_MULTIPLIER get() = EnemySpecies.statMultiplier
  * [RunDifficulty] (4 tiery, za malo na dziesiatki plansz). Null (endless albo szybka walka
  * testowa bez kampanii) = brak dodatkowego mnoznika, tam skaluje sie tylko [wave].
  */
-private fun levelHpMultiplier(level: Int?): Float = level?.let { 1f + (it - 1) * LEVEL_HP_STEP } ?: 1f
-private fun levelAttackMultiplier(level: Int?): Float = level?.let { 1f + (it - 1) * LEVEL_ATK_STEP } ?: 1f
-
-private const val LEVEL_HP_STEP = 0.12f
-private const val LEVEL_ATK_STEP = 0.09f
+/* Krzywa glebokosci mieszka w [CampaignLadder] - patrz stageHpMultiplier/stageAttackMultiplier
+ * w BattleViewModel. Dawne LEVEL_HP_STEP/LEVEL_ATK_STEP byly tu jedyna kopia tej umowy, mimo ze
+ * odwolywal sie do nich komentarzem takze [RunLoot.depthMultiplier]. */
 
 /** Co ile oczyszczonych fal w endless mode gracz dostaje do wyboru karty ulepszen ([EndlessBuff.offer]). */
 private const val ENDLESS_BUFF_INTERVAL = 3
@@ -3055,6 +3375,12 @@ private const val MAX_FORTRESS_REDUCTION = 0.60f
 private const val VAMPIRISM_HEAL_PER_STACK = 0.05f
 private const val VITALITY_MAX_HP_PER_STACK = 0.10f
 private const val REGENERATION_PER_STACK = 0.07f
+
+/** Ile maks. HP wraca druzynie po KAZDEJ oczyszczonej fali - patrz applyWaveRegeneration. */
+private const val WAVE_CLEAR_HEAL_FRACTION = 0.04f
+
+/** Dodatkowo po fali z elita albo bossem - to jest nagroda za przetrwanie kamienia milowego. */
+private const val MILESTONE_HEAL_FRACTION = 0.16f
 
 /** Dodatkowe cele z [EndlessBuff.Cleave] obrywaja slabiej niz cel glowny. */
 private const val CLEAVE_DAMAGE_FACTOR = 0.6f
@@ -3090,6 +3416,9 @@ private const val PROJECTILE_STAGGER_MILLIS = 170L
  * Szanse na kazde specjalne zdarzenie przy pojedynczym ataku elity/bossa - razem 30%
  * (10% + 10% + 10%), reszta to zwykly cios. Latwo dostroic albo dodac kolejne zdarzenia pozniej.
  */
+/** O ile rzadziej zdarzenia odpala elita - patrz [BattleViewModel.bossEventChanceScale]. */
+private const val ELITE_EVENT_CHANCE_SCALE = 0.5f
+
 private const val BOSS_HEAL_CHANCE = 0.10f
 private const val BOSS_POISON_CHANCE = 0.10f
 private const val BOSS_STUN_GAMBLE_CHANCE = 0.10f
@@ -3114,12 +3443,19 @@ private val BOSS_DUEL_EVENTS = BossEventKind.entries
 /** Dluzej niz dawniej - teraz w tym oknie widac tez zgadywana wartosc na tle poprawnej, nie tylko werdykt. */
 /** Ile boss laduje atak, zanim wjedzie quiz - czas na zobaczenie, co szykuje i o jaka stawke gra. */
 /** Jak czesto zamiast zwyklego pytania wypada "zaznacz wszystkie prawdziwe". */
-private const val MULTI_SELECT_QUESTION_CHANCE = 0.22f
+private const val MULTI_SELECT_QUESTION_CHANCE = 0.13f
 
 private const val BOSS_EVENT_CHARGE_MS = 2200L
 
-/** Ile trwa werdykt (poprawna wartosc, zgadywana, redukcja) - licznik w tym czasie zjezdza do wyniku. */
-private const val BOSS_EVENT_JUDGING_MS = 2400L
+/**
+ * Ile trwa werdykt (poprawna wartosc, zgadywana, redukcja) - licznik w tym czasie zjezdza do wyniku.
+ *
+ * Werdykt jest rozpisany na cztery takty po 650 ms (prawidlowa wartosc -> twoja -> roznica ->
+ * skutek), a po ostatnim zjezdza jeszcze licznik stawki (1 s). Ta stala musi te ~3 sekundy
+ * pomiescic i zostawic chwile na obejrzenie calosci - inaczej scena urywa sie w polowie wlasnego
+ * zdania.
+ */
+private const val BOSS_EVENT_JUDGING_MS = 4300L
 
 /**
  * Ile zaklecia laduje sie od razu, niezaleznie od czasu. Bez tej podlogi natychmiastowa odpowiedz
@@ -3182,8 +3518,21 @@ private const val VICTORY_LOOT_FRACTION = 1f
 
 private const val DEFEAT_LOOT_FRACTION = 0.25f
 
-/** Czesc sakwy uratowana przy dobrowolnej kapitulacji - tyle samo, co przy porazce. */
-private const val CAPITULATE_LOOT_FRACTION = 0.25f
+/**
+ * Czesc sakwy uratowana przy dobrowolnej kapitulacji - rosnie z glebokoscia biegu.
+ *
+ * Dopoki plansza miala dwie fale, "wyjdz z 25%" bylo tym samym co "przegraj" i nikt tego nie
+ * uzywal. Przy dwudziestu falach to jest DECYZJA, na ktorej stoi caly tryb: plansze zalicza
+ * dopiero fala dwudziesta, wiec gracz na pietnastej wybiera miedzy pewnym lupem a odblokowaniem
+ * kolejnej planszy. Porazka dalej placi plaskie [DEFEAT_LOOT_FRACTION] - ryzyko ma byc realne.
+ */
+private fun capitulateLootFraction(wave: Int): Float {
+    val progress = ((wave - 1).coerceAtLeast(0).toFloat() / CampaignLadder.WAVES_PER_STAGE).coerceIn(0f, 1f)
+    return CAPITULATE_LOOT_MIN + (CAPITULATE_LOOT_MAX - CAPITULATE_LOOT_MIN) * progress
+}
+
+private const val CAPITULATE_LOOT_MIN = 0.30f
+private const val CAPITULATE_LOOT_MAX = 0.70f
 
 private data class CharacterTemplate(
     val id: String,

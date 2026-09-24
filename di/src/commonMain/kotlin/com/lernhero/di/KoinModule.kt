@@ -12,6 +12,12 @@ import com.lernhero.shared.i18n.AppLanguageStore
 import com.lernhero.shared.prefs.AppPreferences
 import com.lernhero.shared.notification.ReminderScheduler
 import com.lernhero.shared.notification.platformReminderScheduler
+import com.lernhero.shared.monetization.RewardedAction
+import com.lernhero.shared.monetization.RewardedAds
+import com.lernhero.shared.monetization.SubscriptionService
+import com.lernhero.shared.monetization.TranslationQuota
+import com.lernhero.shared.monetization.platformRewardedAds
+import com.lernhero.shared.monetization.platformSubscriptionService
 import com.lernhero.domain.story.CampaignSelection
 
 import com.lernhero.game.battle.BattleViewModel
@@ -43,6 +49,13 @@ val sharedModule = module {
     // (isAvailable == false), dopoki ServerConfig.AI_QUIZ_SERVER_BASE_URL jest puste - czyli
     // dzis, przed pierwszym wdrozeniem :server na Cloud Run, UI dziala dokladnie tak jak wczesniej.
     single<QuizGenerator> { RemoteQuizGenerator() }
+    // Subskrypcja (RevenueCat) i reklamy z nagroda (AdMob). Bez klucza/SDK na danej platformie
+    // oba wracaja jako .None i gra dziala dalej, tylko bez sklepu i reklam.
+    single<SubscriptionService> { platformSubscriptionService() }
+    single<com.lernhero.shared.monetization.OneTimePurchases> { com.lernhero.shared.monetization.platformOneTimePurchases() }
+    single<RewardedAds> { platformRewardedAds() }
+    single { RewardedAction(get(), get()) }
+    single { TranslationQuota(get()) }
     viewModelOf(::AuthViewModel)
     viewModelOf(::BattleViewModel)
     viewModelOf(::PlayerViewModel)

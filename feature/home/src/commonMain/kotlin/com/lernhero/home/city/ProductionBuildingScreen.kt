@@ -10,6 +10,17 @@ import androidx.compose.animation.fadeOut
 import androidx.compose.animation.scaleIn
 import androidx.compose.animation.slideOutVertically
 import androidx.compose.foundation.Image
+import androidx.compose.animation.core.FastOutSlowInEasing
+import androidx.compose.animation.core.RepeatMode
+import androidx.compose.animation.core.animateFloat
+import androidx.compose.animation.core.infiniteRepeatable
+import androidx.compose.animation.core.rememberInfiniteTransition
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.ui.draw.alpha
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.graphicsLayer
+import com.lernhero.home.ui.OutlinedText
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
@@ -21,6 +32,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -92,8 +104,9 @@ fun ProductionBuildingScreen(
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(horizontal = 14.dp, vertical = 8.dp),
-            verticalArrangement = Arrangement.spacedBy(10.dp)
+                .verticalScroll(rememberScrollState())
+                .padding(horizontal = 14.dp, vertical = 6.dp),
+            verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
             ProductionStage(
                 building = building,
@@ -101,26 +114,35 @@ fun ProductionBuildingScreen(
                 ratePerHour = ratePerHour
             )
 
-            ProductionPulsePanel(
-                ratePerHour = ratePerHour,
-                resourceIcon = building.resourceIcon()
-            )
-
             StoragePanel(
                 pending = pending,
                 cap = cap,
+                ratePerHour = ratePerHour,
                 resourceIcon = building.resourceIcon(),
                 onCollect = { viewModel.collect(building) }
             )
 
-            RatePanel(
-                level = production.level,
-                baseRate = baseRate,
-                effectiveRate = ratePerHour,
-                boostActive = boostActive,
-                boostRemaining = boostRemaining,
-                boostPercent = ((production.boostMultiplier - 1f) * 100).roundToInt()
-            )
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(8.dp)
+            ) {
+                StatTile("⭐", "Level", "${production.level}", Modifier.weight(1f))
+                StatTile(
+                    "⛏",
+                    "Rate",
+                    "${ratePerHour.roundToInt()}/h",
+                    Modifier.weight(1f),
+                    valueColor = if (boostActive) AppPalette.Success else Color.White
+                )
+                StatTile(
+                    "⚡",
+                    "Boost",
+                    if (boostActive) "+${((production.boostMultiplier - 1f) * 100).roundToInt()}%" else "—",
+                    Modifier.weight(1f),
+                    caption = if (boostActive) formatBoostRemaining(boostRemaining) else "quiz it",
+                    valueColor = if (boostActive) AppPalette.Success else Color.White
+                )
+            }
 
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -128,23 +150,21 @@ fun ProductionBuildingScreen(
             ) {
                 TownActionButton(
                     text = "QUIZ",
-                    // Dopoki bonus trwa, dzienna proba jest zuzyta - przycisk mowi wprost, kiedy
-                    // wroci, zamiast po prostu nie reagowac na dotkniecie.
+                    // Dopoki bonus trwa, dzienna proba jest zuzyta - przycisk mowi wprost, kiedy wroci.
                     subtitle = if (boostActive) {
-                        "in ${formatBoostRemaining(boostRemaining)}"
+                        "again in ${formatBoostRemaining(boostRemaining)}"
                     } else {
-                        "${ProductionQuiz.QUESTION_COUNT} questions - up to +${ProductionQuiz.MAX_BOOST_PERCENT}%"
+                        "${ProductionQuiz.QUESTION_COUNT} questions · up to +${ProductionQuiz.MAX_BOOST_PERCENT}%"
                     },
-                    primary = true,
                     enabled = !boostActive,
                     modifier = Modifier.weight(1f),
                     onClick = { quizOpen = true }
                 )
                 TownActionButton(
                     text = if (maxed) "MAX LEVEL" else "UPGRADE",
-                    // Sufit budynku jest CELOWY - patrz [ProductionMath.MAX_LEVEL]. Przycisk musi
-                    // powiedziec, ze to koniec toru, a nie tylko zgasnac bez slowa.
-                    subtitle = if (maxed) "level ${ProductionMath.MAX_LEVEL} of ${ProductionMath.MAX_LEVEL}" else "💰 $upgradeCost  •  +22%",
+                    // Sufit budynku jest CELOWY - patrz [ProductionMath.MAX_LEVEL].
+                    subtitle = if (maxed) "level ${ProductionMath.MAX_LEVEL} of ${ProductionMath.MAX_LEVEL}" else "💰 $upgradeCost  ·  +22% rate",
+                    primary = true,
                     enabled = !maxed && state.money >= upgradeCost,
                     modifier = Modifier.weight(1f),
                     onClick = { viewModel.upgrade(building) }
@@ -179,46 +199,96 @@ private fun formatBoostRemaining(millis: Long): String {
     return if (hours > 0) "${hours}h ${minutes}m" else "${minutes}m"
 }
 
-/** Wyspa budynku + licznik tego, co wlasnie "kapie" do magazynu, z wyskakujacymi "+N". */
+/** Wyspa budynku w poswiacie + wielki licznik tego, co kapie do magazynu, z wyskakujacymi "+N". */
 @Composable
 private fun ProductionStage(
     building: ProductionBuilding,
     pending: Int,
     ratePerHour: Float
 ) {
-    TownPanel(modifier = Modifier.fillMaxWidth()) {
-        Box(modifier = Modifier.fillMaxWidth().height(210.dp)) {
-            Image(
-                painter = painterResource(building.islandArt()),
-                contentDescription = building.title(),
-                modifier = Modifier.fillMaxWidth(0.9f).align(Alignment.Center)
+    val infinite = rememberInfiniteTransition()
+    val bob by infinite.animateFloat(0f, 1f, infiniteRepeatable(tween(2200, easing = FastOutSlowInEasing), RepeatMode.Reverse))
+    val glow by infinite.animateFloat(0.5f, 0.9f, infiniteRepeatable(tween(1800), RepeatMode.Reverse))
+
+    Box(modifier = Modifier.fillMaxWidth().height(270.dp)) {
+        Box(
+            modifier = Modifier
+                .align(Alignment.Center)
+                .offset(y = 20.dp)
+                .fillMaxWidth()
+                .height(220.dp)
+                .alpha(glow)
+                .background(Brush.radialGradient(listOf(Color(0x66FFC76B), Color.Transparent)), RoundedCornerShape(50))
+        )
+        Image(
+            painter = painterResource(building.islandArt()),
+            contentDescription = building.title(),
+            modifier = Modifier
+                .size(250.dp)
+                .align(Alignment.Center)
+                .offset(y = 22.dp)
+                .graphicsLayer { translationY = -bob * 8f * density }
+        )
+
+        // Wielki, zywy licznik nad budynkiem - on daje poczucie "leci, pracuje".
+        Row(
+            modifier = Modifier
+                .align(Alignment.TopCenter)
+                .clip(RoundedCornerShape(50))
+                .background(Color(0xE60C0806))
+                .border(2.5.dp, Color(0xFF120B05), RoundedCornerShape(50))
+                .padding(start = 12.dp, end = 6.dp, top = 4.dp, bottom = 4.dp),
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Text(text = building.resourceIcon(), fontSize = 26.sp)
+            OutlinedText(text = "$pending", size = 28.sp, color = Gold)
+            Text(
+                text = "+${ratePerHour.roundToInt()}/h",
+                color = Color.White,
+                fontFamily = FontFirst(),
+                fontWeight = FontWeight.Black,
+                fontSize = 13.sp,
+                modifier = Modifier
+                    .clip(RoundedCornerShape(50))
+                    .background(Brush.verticalGradient(listOf(Color(0xFF6FD04A), Color(0xFF2F8A22))))
+                    .padding(horizontal = 10.dp, vertical = 4.dp)
             )
+        }
 
-            // Duzy, zywy licznik nad budynkiem - to on ma dawac poczucie "leci, pracuje".
-            Column(
-                modifier = Modifier.align(Alignment.TopCenter).padding(top = 10.dp),
-                horizontalAlignment = Alignment.CenterHorizontally
-            ) {
-                Text(
-                    text = "${building.resourceIcon()} $pending",
-                    color = Gold,
-                    fontFamily = FontPixel(),
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 26.sp
-                )
-                Text(
-                    text = "${ratePerHour.roundToInt()}/h",
-                    color = AppPalette.Success,
-                    fontFamily = FontPixel(),
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 13.sp
-                )
-            }
+        GainPopups(
+            pending = pending,
+            icon = building.resourceIcon(),
+            modifier = Modifier.align(Alignment.TopCenter).padding(top = 64.dp)
+        )
+    }
+}
 
-            GainPopups(
-                pending = pending,
-                icon = building.resourceIcon(),
-                modifier = Modifier.align(Alignment.TopCenter).padding(top = 62.dp)
+/** Kafelek statystyki: ikona, wielka wartosc, maly podpis. */
+@Composable
+private fun StatTile(
+    icon: String,
+    label: String,
+    value: String,
+    modifier: Modifier = Modifier,
+    caption: String? = null,
+    valueColor: Color = Color.White
+) {
+    TownPanel(modifier = modifier) {
+        Column(
+            modifier = Modifier.fillMaxWidth().padding(vertical = 10.dp, horizontal = 6.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.spacedBy(2.dp)
+        ) {
+            Text(text = icon, fontSize = 18.sp)
+            OutlinedText(text = value, size = 18.sp, color = valueColor, maxLines = 1)
+            Text(
+                text = caption ?: label.uppercase(),
+                color = Muted,
+                fontFamily = FontFirst(),
+                fontWeight = FontWeight.Bold,
+                fontSize = 10.sp,
+                maxLines = 1
             )
         }
     }
@@ -235,7 +305,7 @@ private fun ProductionStage(
  * praktycznie miga i "+1" leci jak z karabinu - dokladnie o to chodzilo.
  */
 @Composable
-private fun ProductionPulsePanel(
+private fun ProductionPulse(
     ratePerHour: Float,
     resourceIcon: String
 ) {
@@ -258,35 +328,33 @@ private fun ProductionPulsePanel(
 
     val rapidFire = cycleMillis <= RAPID_FIRE_THRESHOLD_MS
 
-    TownPanel(modifier = Modifier.fillMaxWidth()) {
-        Column(
-            modifier = Modifier.fillMaxWidth().padding(12.dp),
-            verticalArrangement = Arrangement.spacedBy(8.dp)
-        ) {
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                TownSectionLabel("Rate")
-                Text(
-                    text = if (rapidFire) "⚡ NA MAKSA" else "co ${cycleMillis.asPulseLabel()}",
-                    color = if (rapidFire) AppPalette.Warning else Muted,
-                    fontFamily = FontFirst(),
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 11.sp
-                )
-            }
-
-            Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.CenterEnd) {
-                TownProgressBar(
-                    progress = progress.value,
-                    fill = if (rapidFire) AppPalette.Warning else AppPalette.Success,
-                    height = 22.dp
-                )
-                PulsePop(pulseId = pulseId, icon = resourceIcon)
-            }
+    Row(
+        modifier = Modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.spacedBy(8.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Text(
+            text = if (rapidFire) "⚡ MAX SPEED" else "next +1",
+            color = if (rapidFire) AppPalette.Warning else Muted,
+            fontFamily = FontFirst(),
+            fontWeight = FontWeight.Bold,
+            fontSize = 11.sp
+        )
+        Box(modifier = Modifier.weight(1f), contentAlignment = Alignment.CenterEnd) {
+            TownProgressBar(
+                progress = progress.value,
+                fill = if (rapidFire) AppPalette.Warning else AppPalette.Success,
+                height = 12.dp
+            )
+            PulsePop(pulseId = pulseId, icon = resourceIcon)
         }
+        Text(
+            text = cycleMillis.asPulseLabel(),
+            color = Muted,
+            fontFamily = FontFirst(),
+            fontWeight = FontWeight.Bold,
+            fontSize = 11.sp
+        )
     }
 }
 
@@ -382,14 +450,15 @@ private const val POPUP_VISIBLE_MILLIS = 700L
 private fun StoragePanel(
     pending: Int,
     cap: Int,
+    ratePerHour: Float,
     resourceIcon: String,
     onCollect: () -> Unit
 ) {
     val full = pending >= cap
     TownPanel(modifier = Modifier.fillMaxWidth()) {
         Column(
-            modifier = Modifier.fillMaxWidth().padding(12.dp),
-            verticalArrangement = Arrangement.spacedBy(8.dp)
+            modifier = Modifier.fillMaxWidth().padding(14.dp),
+            verticalArrangement = Arrangement.spacedBy(10.dp)
         ) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -397,22 +466,22 @@ private fun StoragePanel(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 TownSectionLabel("Storage")
-                Text(
-                    text = if (full) "PELNY - odbierz!" else "$pending / $cap",
-                    color = if (full) AppPalette.Warning else Muted,
-                    fontFamily = FontFirst(),
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 11.sp
-                )
+                if (full) {
+                    OutlinedText(text = "FULL - collect!", size = 13.sp, color = AppPalette.Warning, strokeWidth = 4f)
+                }
             }
 
             TownProgressBar(
                 progress = if (cap > 0) pending.toFloat() / cap else 0f,
-                fill = if (full) AppPalette.Warning else AppPalette.Success
+                fill = if (full) AppPalette.Warning else Color(0xFF4FB3FF),
+                height = 28.dp,
+                label = "$pending / $cap"
             )
 
+            ProductionPulse(ratePerHour = ratePerHour, resourceIcon = resourceIcon)
+
             TownActionButton(
-                text = "ZBIERZ $resourceIcon $pending",
+                text = "COLLECT  $resourceIcon $pending",
                 primary = true,
                 enabled = pending > 0,
                 modifier = Modifier.fillMaxWidth(),
@@ -421,106 +490,6 @@ private fun StoragePanel(
         }
     }
 }
-
-/** Rozbicie stawki: baza z poziomu + bonus z quizu = to, co faktycznie leci. */
-@Composable
-private fun RatePanel(
-    level: Int,
-    baseRate: Float,
-    effectiveRate: Float,
-    boostActive: Boolean,
-    boostRemaining: Long,
-    boostPercent: Int
-) {
-    TownPanel(modifier = Modifier.fillMaxWidth()) {
-        Column(
-            modifier = Modifier.fillMaxWidth().padding(12.dp),
-            verticalArrangement = Arrangement.spacedBy(6.dp)
-        ) {
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween
-            ) {
-                TownSectionLabel("Production")
-                Text(
-                    text = "Level $level",
-                    color = Gold,
-                    fontFamily = FontPixel(),
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 12.sp
-                )
-            }
-
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Text(
-                    text = "${baseRate.roundToInt()}/h",
-                    color = if (boostActive) Muted else TextBody,
-                    fontFamily = FontPixel(),
-                    fontSize = 14.sp
-                )
-                if (boostActive) {
-                    Text(
-                        text = "  →  ",
-                        color = Muted,
-                        fontFamily = FontPixel(),
-                        fontSize = 14.sp
-                    )
-                    Text(
-                        text = "${effectiveRate.roundToInt()}/h",
-                        color = AppPalette.Success,
-                        fontFamily = FontPixel(),
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 17.sp
-                    )
-                }
-            }
-
-            if (boostActive) {
-                BoostBadge(percent = boostPercent, remaining = boostRemaining)
-            } else {
-                Text(
-                    text = "Answer a quiz question to speed up production.",
-                    color = Muted,
-                    fontFamily = FontFirst(),
-                    fontSize = 11.sp
-                )
-            }
-        }
-    }
-}
-
-@Composable
-private fun BoostBadge(percent: Int, remaining: Long) {
-    // Quiz zaliczony na zero tez otwiera 24-godzinne okno (zuzywa probe), ale "+0%" na zielono
-    // czytaloby sie jak nagroda - stad osobny, przygaszony wariant plakietki.
-    val earned = percent > 0
-    val accent = if (earned) AppPalette.Success else Muted
-
-    Row(
-        modifier = Modifier
-            .clip(RoundedCornerShape(20.dp))
-            .background(accent.copy(alpha = 0.18f))
-            .border(1.5.dp, accent, RoundedCornerShape(20.dp))
-            .padding(horizontal = 12.dp, vertical = 6.dp),
-        horizontalArrangement = Arrangement.spacedBy(8.dp),
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        Text(
-            text = if (earned) "⚡ BONUS +$percent%" else "NO BONUS",
-            color = accent,
-            fontFamily = FontPixel(),
-            fontWeight = FontWeight.Bold,
-            fontSize = 12.sp
-        )
-        Text(
-            text = remaining.asDuration(),
-            color = TextBody,
-            fontFamily = FontFirst(),
-            fontSize = 11.sp
-        )
-    }
-}
-
 
 private fun ProductionBuilding.title(): String = when (this) {
     ProductionBuilding.Quarry -> "Quarry"

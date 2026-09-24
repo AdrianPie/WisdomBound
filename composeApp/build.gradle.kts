@@ -35,6 +35,9 @@ kotlin {
             // do Swift - Apple `Translation` framework jest czystym Swiftem bez naglowka ObjC,
             // wiec Kotlin/Native nie moze go wywolac wprost, tylko odwrotnie: Swift woła w Kotlina.
             export(project(":feature:reader"))
+            // Most sklepu i reklam (shared/monetization/Monetization.ios.kt) - ta sama sztuczka:
+            // RevenueCat i Google Mobile Ads to Swift z SPM, wiec to Swift woła w Kotlina.
+            export(project(":shared"))
         }
     }
 
@@ -71,7 +74,7 @@ kotlin {
             api(project(path = ":feature:reader"))
 
             implementation(project(path = ":navigation"))
-            implementation(project(path = ":shared"))
+            api(project(path = ":shared"))
             implementation(project(path = ":domain"))
             implementation(project(path = ":di"))
             implementation(project(path = ":data"))
@@ -99,8 +102,8 @@ android {
         applicationId = "com.intelligentape.wisdombound"
         minSdk = libs.versions.android.minSdk.get().toInt()
         targetSdk = libs.versions.android.targetSdk.get().toInt()
-        versionCode = 2
-        versionName = "1.1"
+        versionCode = 4
+        versionName = "1.4"
     }
 
     packaging {

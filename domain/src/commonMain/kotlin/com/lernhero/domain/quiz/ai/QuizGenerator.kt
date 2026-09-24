@@ -68,14 +68,14 @@ sealed interface QuizGenerationResult {
      * Pytania, ktore przeszly walidacje. [warnings] mowi, ile i dlaczego odpadlo - gracz ma
      * wiedziec, ze prosil o 10, a dostal 8, zamiast domyslac sie tego z liczby wierszy.
      *
-     * [remainingThisWeek] - stan limitu PO tym wywolaniu, doklejony przez serwer. Apka pokazuje
-     * go w UI i NIE liczy limitu sama - patrz notatka przy [QuizGenerator].
+     * [remainingThisMonth] - stan miesiecznego limitu subskrypcji PO tym wywolaniu, doklejony przez
+     * serwer. Apka pokazuje go w UI i NIE liczy limitu sama - patrz notatka przy [QuizGenerator].
      */
     @Serializable
     data class Generated(
         val questions: List<CustomQuestion>,
         val warnings: List<String> = emptyList(),
-        val remainingThisWeek: Int? = null
+        val remainingThisMonth: Int? = null
     ) : QuizGenerationResult
 
     /** Model nie jest podpiety (patrz [QuizGenerator.Stub]). */
@@ -85,7 +85,11 @@ sealed interface QuizGenerationResult {
     @Serializable
     data class Failed(val reason: String) : QuizGenerationResult
 
-    /** Limit tygodniowy wyczerpany - serwer odmowil, zanim w ogole zapytal model. */
+    /** Miesieczny limit subskrypcji wyczerpany - serwer odmowil, zanim w ogole zapytal model. */
     @Serializable
     data class QuotaExceeded(val resetsAt: Long) : QuizGenerationResult
+
+    /** Generowanie AI jest tylko dla subskrybentow - serwer nie widzi aktywnej subskrypcji. */
+    @Serializable
+    data object SubscriptionRequired : QuizGenerationResult
 }

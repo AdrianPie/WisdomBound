@@ -74,7 +74,6 @@ object GeographyQuestionsCompare {
         ask("stolica_najdalej_poludnie", "Which of these capitals lies furthest south?", "Wellington", listOf("Canberra", "Santiago", "Pretoria"), QuizDifficulty.Hard),
         ask("najdalej_wschod_europa", "Which of these cities lies furthest east?", "Istanbul", listOf("Athens", "Rome", "Vienna"), QuizDifficulty.Medium),
         ask("rownik_kraj", "Which of these countries does the equator cross?", "Ecuador", listOf("Peru", "Bolivia", "Chile"), QuizDifficulty.Medium),
-        ask("dwa_kontynenty", "Which of these countries lies on two continents?", "Turkiye", listOf("Greece", "Bulgaria", "Italy"), QuizDifficulty.Medium),
 
         /* -------------------------------- Odd one out ------------------------------ */
         ask("nie_afryka", "Which of these countries is NOT in Africa?", "Guyana", listOf("Ghana", "Guinea", "Gabon"), QuizDifficulty.Easy),

@@ -287,7 +287,7 @@ private fun summaryRows(summary: RunStats?, wave: Int): List<SummaryRow> {
         add(SummaryRow("🌊", "Waves Cleared", "${summary.wavesCleared}", divider = true))
         add(SummaryRow("⭐", "Experience", "+${summary.xp} XP", emphasis = true))
         add(SummaryRow("💰", "Gold", "+${summary.gold}", emphasis = true))
-        if (summary.iron > 0) add(SummaryRow("⚙", "Ore", "+${summary.iron}", emphasis = true))
+        if (summary.iron > 0) add(SummaryRow("🔩", "Ore", "+${summary.iron}", emphasis = true))
         if (summary.essence > 0) add(SummaryRow("✨", "Essence", "+${summary.essence}", emphasis = true))
         if (summary.summonTickets > 0) add(SummaryRow("🎟", "Tickets", "+${summary.summonTickets}", emphasis = true))
         if (summary.stone > 0) add(SummaryRow("🪨", "Stone", "+${summary.stone}", emphasis = true))

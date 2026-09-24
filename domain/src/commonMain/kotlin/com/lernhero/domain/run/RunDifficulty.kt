@@ -68,8 +68,8 @@ enum class RunDifficulty(
      * wychodzi dokladnie tak, jak wygladala drabinka fali 1 - czyli poczatek gry nie zrobil sie
      * trudniejszy, zmienil sie tylko dalszy ciag.
      */
-    fun campaignLadder(kind: BattleKind, globalStage: Int): List<QuizDifficulty> {
-        val start = tierStep + depthStep(globalStage) + kind.ladderStep
+    fun campaignLadder(kind: BattleKind, globalStage: Int, wave: Int = 1): List<QuizDifficulty> {
+        val start = tierStep + depthStep(globalStage) + kind.ladderStep + waveStep(wave)
         return listOf(start, start, start + 1, start + 1).map { rung ->
             QuizDifficulty.entries[rung.coerceIn(0, QuizDifficulty.entries.lastIndex)]
         }
@@ -99,6 +99,18 @@ enum class RunDifficulty(
         const val STAGES_PER_RUNG = 12
 
         fun depthStep(globalStage: Int): Int = (globalStage - 1).coerceAtLeast(0) / STAGES_PER_RUNG
+
+        /**
+         * Co tyle fal biegu dochodzi jeden szczebel trudnosci pytan.
+         *
+         * Plansza ma dwadziescia fal ([com.lernhero.domain.story.CampaignLadder]), a wrogowie
+         * puchna na niej ponad trzykrotnie. Gdyby pytania staly w miejscu, dwudziesta fala bylaby
+         * trudniejsza wylacznie dla druzyny - a to quiz ma byc ta sciana. Osiem fal na szczebel
+         * daje dwa dodatkowe stopnie do mety.
+         */
+        const val WAVES_PER_RUNG = 8
+
+        fun waveStep(wave: Int): Int = (wave - 1).coerceAtLeast(0) / WAVES_PER_RUNG
     }
 }
 

@@ -16,17 +16,11 @@ object OrderingBank {
         // Partia po audycie - kolejnosc, do ktorej trzeba DOJSC, nie "poranek, poludnie, noc".
         OrderingQuestionsTrivia.all
 
-    fun draw(difficulty: QuizDifficulty, category: QuizCategory? = null, random: Random = Random.Default): OrderingEntry? {
-        val preferred = if (category == null) all else all.filter { it.category == category }
-        val pool = preferred.ifEmpty { all }.groupBy { it.difficulty }
-
-        val fallback = QuizDifficulty.entries.sortedBy { candidate ->
-            kotlin.math.abs(candidate.ordinal - difficulty.ordinal)
-        }
-        fallback.forEach { level ->
-            val candidates = pool[level].orEmpty()
-            if (candidates.isNotEmpty()) return candidates[random.nextInt(candidates.size)]
-        }
-        return null
-    }
+    /** Tylko pytania jeszcze nie zadane - patrz [drawFresh]. Null = walka bierze zwykle pytanie. */
+    fun draw(
+        difficulty: QuizDifficulty,
+        category: QuizCategory? = null,
+        random: Random = Random.Default,
+        seen: (String) -> Boolean = { false }
+    ): OrderingEntry? = all.drawFresh(difficulty, category, random, seen, { it.id }, { it.category }, { it.difficulty })
 }

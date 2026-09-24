@@ -345,14 +345,6 @@ object TriviaQuestionsOrigins {
             difficulty = D
         ),
         ask(
-            id = "marzec_mars",
-            prompt = "Which month is named after the Roman god of war?",
-            correct = "March",
-            wrong = listOf("May", "June", "August"),
-            category = M,
-            difficulty = D
-        ),
-        ask(
             id = "panika_pan",
             prompt = "The word 'panic' comes from which Greek god?",
             correct = "Pan",
@@ -377,14 +369,6 @@ object TriviaQuestionsOrigins {
             difficulty = D
         ),
         ask(
-            id = "nemezis_bogini",
-            prompt = "Nemesis was the Greek goddess of what?",
-            correct = "Retribution",
-            wrong = listOf("Wisdom", "Victory", "Discord"),
-            category = M,
-            difficulty = R
-        ),
-        ask(
             id = "prometeusz_imie",
             prompt = "The name Prometheus means what in Greek?",
             correct = "Forethought",
@@ -397,14 +381,6 @@ object TriviaQuestionsOrigins {
             prompt = "The word 'museum' originally meant a place dedicated to whom?",
             correct = "The Muses",
             wrong = listOf("Athena", "Apollo", "The Fates"),
-            category = M,
-            difficulty = D
-        ),
-        ask(
-            id = "echo_nimfa",
-            prompt = "The word 'echo' comes from a nymph who could only do what?",
-            correct = "Repeat others' words",
-            wrong = listOf("Sing without stopping", "Speak in riddles", "Whisper the future"),
             category = M,
             difficulty = D
         ),
@@ -435,14 +411,6 @@ object TriviaQuestionsOrigins {
             difficulty = R
         ),
         ask(
-            id = "argon_leniwy",
-            prompt = "Which element takes its name from the Greek word for 'idle'?",
-            correct = "Argon",
-            wrong = listOf("Neon", "Krypton", "Xenon"),
-            category = S,
-            difficulty = R
-        ),
-        ask(
             id = "szczepionka_krowa",
             prompt = "The word 'vaccine' comes from the Latin name for which animal?",
             correct = "Cow",
@@ -465,14 +433,6 @@ object TriviaQuestionsOrigins {
             wrong = listOf("Kosmos", "Pneuma", "Aither"),
             category = S,
             difficulty = X
-        ),
-        ask(
-            id = "bug_owad",
-            prompt = "In computing, 'bug' is said to date from an actual insect found where?",
-            correct = "Inside a relay",
-            wrong = listOf("On a punch card", "In a vacuum tube crate", "On a printer ribbon"),
-            category = T,
-            difficulty = D
         ),
         ask(
             id = "algorytm_uczony",

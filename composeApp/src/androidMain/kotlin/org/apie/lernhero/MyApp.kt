@@ -3,6 +3,7 @@ package org.apie.lernhero
 import android.app.Application
 import com.google.firebase.FirebaseApp
 import com.lernhero.di.initializeKoin
+import com.lernhero.shared.monetization.initMonetization
 import com.lernhero.shared.notification.ReminderContext
 import com.lernhero.shared.notification.trackActivities
 import org.koin.android.ext.koin.androidContext
@@ -16,6 +17,8 @@ class MyApp: Application() {
         // Sledzenie widocznej Activity - o zgode na powiadomienia moze poprosic
         // tylko Activity, nie sam Context aplikacji.
         trackActivities()
+        // RevenueCat i AdMob - przed Koinem, bo to z nich budowane sa serwisy w grafie.
+        initMonetization()
         initializeKoin(
             config = {
                 androidContext(this@MyApp)

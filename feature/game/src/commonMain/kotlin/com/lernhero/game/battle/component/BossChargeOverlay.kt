@@ -2,6 +2,7 @@ package com.lernhero.game.battle.component
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.Animatable
+import androidx.compose.animation.core.EaseOutBack
 import androidx.compose.animation.core.EaseOutCubic
 import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.RepeatMode
@@ -12,7 +13,8 @@ import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
-import androidx.compose.animation.slideInHorizontally
+import androidx.compose.animation.scaleIn
+import androidx.compose.animation.slideInVertically
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -21,17 +23,21 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.asPaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.safeDrawing
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -49,6 +55,7 @@ import com.lernhero.game.battle.BossEventState
 import com.lernhero.shared.theme.FontFirst
 import com.lernhero.shared.theme.FontPixel
 import kotlin.math.abs
+import kotlinx.coroutines.delay
 import kotlin.math.roundToInt
 import kotlin.math.sin
 
@@ -115,9 +122,21 @@ fun BossChargeBackdrop(
 }
 
 /**
- * PIERWSZY PLAN sceny - licznik stawki, werdykt i kula kulminacji. Rysowany nad postaciami, ale
+ * PIERWSZY PLAN sceny - stawka zaklecia, werdykt i kula kulminacji. Rysowany nad postaciami, ale
  * pod panelem quizu, wiec kolejnosc planow to: tlo areny -> przyciemnienie + iskry -> smok ->
  * liczby -> quiz.
+ *
+ * ## Dlaczego wszystko stoi w JEDNEJ kolumnie u gory
+ *
+ * Wczesniej licznik wisial przy lewej krawedzi, mniej wiecej na wysokosci pyska bossa, a werdykt
+ * wjezdzal osobna karta pod gornym brzegiem ekranu. Byly to dwie polowy tego samego zdania ("tyle
+ * zaraz dostaniesz" i "tyle uratowala twoja odpowiedz") lezace w dwoch roznych miejscach, na dodatek
+ * licznik nachodzil na wlasna druzyne i na jej paski zycia. Efekt: w chwili rozstrzygniecia oko nie
+ * mialo gdzie patrzec i cala scena przelatywala niezauwazona.
+ *
+ * Teraz stawka i werdykt to jeden slup u gory sceny: liczba zjezdza (albo skacze) dokladnie nad
+ * zdaniem, ktore mowi, dlaczego. Gora ekranu jest do tego jedynym wolnym miejscem - dol nalezy do
+ * panelu quizu, prawa strona do bossa, lewa i spod do druzyny.
  */
 @Composable
 fun BossChargeOverlay(
@@ -127,39 +146,80 @@ fun BossChargeOverlay(
     val accent = bossEventAccentColor(event.kind)
     val phase = event.phase
 
+    // Werdykt czyta sie jak ZDANIE, wiec wchodzi po kawalku: najpierw prawidlowa wartosc, potem
+    // twoja, potem roznica miedzy nimi, a dopiero na koncu to, co z tej roznicy wynika dla walki.
+    // Wczesniej wszystkie cztery rzeczy pojawialy sie w jednej klatce razem ze skaczacym licznikiem
+    // - bylo na co patrzec, ale nie bylo czego przeczytac.
+    var beat by remember(event.phase) { mutableIntStateOf(0) }
+    LaunchedEffect(event.phase) {
+        if (event.phase != BossEventPhase.Judging) {
+            // Payoff dziedziczy komplet - karta ma juz wszystko pokazane, gdy leci kula.
+            beat = if (event.phase == BossEventPhase.Payoff) VERDICT_BEATS else 0
+            return@LaunchedEffect
+        }
+        beat = 1
+        while (beat < VERDICT_BEATS) {
+            delay(VERDICT_BEAT_MS)
+            beat += 1
+        }
+    }
+
+    // Ten sam powod co przy zwyklym HUD-zie walki: kamera/notch potrafia siegac dobry kawalek
+    // w dol ekranu, a stawka zaklecia stoi dokladnie tam, gdzie normalnie byloby WAVE/QUESTIONS.
+    val topInset = WindowInsets.safeDrawing.asPaddingValues().calculateTopPadding()
+
     BoxWithConstraints(modifier = modifier.fillMaxSize()) {
-        // Licznik po LEWEJ, w pionie mniej wiecej na wysokosci pyska. Celowo moze lekko nachodzic
-        // na wlasna druzyne - to najwazniejsza liczba na ekranie i ma byc widoczna z daleka.
         Column(
             modifier = Modifier
-                .align(Alignment.CenterStart)
-                .padding(start = 10.dp)
-                .fillMaxWidth(0.52f),
-            verticalArrangement = Arrangement.spacedBy(2.dp)
+                .align(Alignment.TopCenter)
+                .padding(start = 12.dp, top = topInset + 10.dp, end = 12.dp, bottom = 10.dp)
+                .fillMaxWidth(),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
-            Text(
-                text = event.projection.attackName,
-                color = accent,
-                fontFamily = FontPixel(),
-                fontWeight = FontWeight.Bold,
-                fontSize = 14.sp
-            )
-            Text(
-                text = event.projection.valueLabel,
-                color = Color(0xFFBFB098),
-                fontFamily = FontFirst(),
-                fontSize = 10.sp
-            )
-            StakeCounter(event = event, accent = accent)
+            // Ciemna plyta pod liczbami - arena pod spodem bywa jasna (lawa, snieg), a to jest
+            // liczba, ktora ma sie czytac z drugiego konca pokoju.
+            Column(
+                modifier = Modifier
+                    .clip(RoundedCornerShape(16.dp))
+                    .background(Color(0xFF0E0B08).copy(alpha = 0.82f))
+                    .border(2.dp, accent.copy(alpha = 0.75f), RoundedCornerShape(16.dp))
+                    .padding(horizontal = 18.dp, vertical = 10.dp),
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.spacedBy(2.dp)
+            ) {
+                Text(
+                    text = event.projection.attackName,
+                    color = accent,
+                    fontFamily = FontPixel(),
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 15.sp,
+                    textAlign = TextAlign.Center
+                )
+                Text(
+                    text = event.projection.valueLabel,
+                    color = Color(0xFFBFB098),
+                    fontFamily = FontFirst(),
+                    fontSize = 10.sp,
+                    textAlign = TextAlign.Center
+                )
+                // Licznik zjezdza dopiero na ostatnim takcie - razem ze zdaniem, ktore
+                // tlumaczy, DLACZEGO zjechal.
+                StakeCounter(event = event, accent = accent, settleNow = beat >= VERDICT_BEATS)
+            }
+
         }
 
+        // Werdykt NIE stoi juz pod licznikiem - ma srodek ekranu i cala jego szerokosc. Tam jest
+        // miejsce na liczby, ktore da sie przeczytac z drugiego konca pokoju, i tam patrzy oko,
+        // gdy walka staje.
         AnimatedVisibility(
             visible = phase == BossEventPhase.Judging,
-            enter = fadeIn(tween(260)) + slideInHorizontally(tween(320)) { -it / 3 },
-            exit = fadeOut(tween(200)),
-            modifier = Modifier.align(Alignment.TopCenter).padding(top = 8.dp)
+            enter = fadeIn(tween(200)),
+            exit = fadeOut(tween(250)),
+            modifier = Modifier.align(Alignment.Center)
         ) {
-            VerdictCard(event = event, accent = accent)
+            VerdictCard(event = event, beat = beat)
         }
 
         if (phase == BossEventPhase.Payoff) {
@@ -179,12 +239,12 @@ fun BossChargeOverlay(
  * ma szanse zauwazyc katem oka, nie odrywajac sie od suwaka.
  */
 @Composable
-private fun StakeCounter(event: BossEventState, accent: Color) {
+private fun StakeCounter(event: BossEventState, accent: Color, settleNow: Boolean) {
     val charged = event.projection.chargedValue
     val actual = event.actualValue()
 
     val shown = remember { Animatable(0f) }
-    LaunchedEffect(event.phase, charged, actual) {
+    LaunchedEffect(event.phase, charged, actual, settleNow) {
         when (event.phase) {
             // Ladowanie + quiz to JEDEN ciagly ruch licznika od zera do pelnego naladowania:
             // najpierw rosnie sam z siebie, potem dalej rosnie, dopoki gracz zwleka z odpowiedzia.
@@ -194,14 +254,15 @@ private fun StakeCounter(event: BossEventState, accent: Color) {
             BossEventPhase.Quiz ->
                 shown.animateTo(charged.toFloat(), tween(ANSWER_WINDOW_MS, easing = LinearEasing))
 
-            // Werdykt: skok na faktyczna wartosc. W gore albo w dol - to jest ta chwila, w ktorej
-            // widac, co dala odpowiedz.
+            // Werdykt: zjazd na faktyczna wartosc - ale dopiero, gdy karta pod spodem doczytala
+            // do konca. To jest pointa calej sceny i ma paść jako ostatnia, a nie razem z reszta.
             BossEventPhase.Judging, BossEventPhase.Payoff ->
-                shown.animateTo(actual.toFloat(), tween(900, easing = EaseOutCubic))
+                if (settleNow) shown.animateTo(actual.toFloat(), tween(1000, easing = EaseOutCubic))
         }
     }
 
-    val settled = event.phase == BossEventPhase.Judging || event.phase == BossEventPhase.Payoff
+    val settled = settleNow &&
+        (event.phase == BossEventPhase.Judging || event.phase == BossEventPhase.Payoff)
     val fill = if (charged > 0) (shown.value / charged).coerceIn(0f, 2f) else 0f
 
     // Drganie rosnie razem z liczba - przy pelnym naladowaniu cyfry wyraznie sie trzesa.
@@ -233,6 +294,7 @@ private fun StakeCounter(event: BossEventState, accent: Color) {
         fontFamily = FontPixel(),
         fontWeight = FontWeight.Bold,
         fontSize = 54.sp,
+        textAlign = TextAlign.Center,
         modifier = Modifier.graphicsLayer {
             val amp = if (settled) 0f else fill * 5f
             translationX = (jitter - 0.5f) * 2f * amp
@@ -240,7 +302,6 @@ private fun StakeCounter(event: BossEventState, accent: Color) {
             val s = if (settled) 1f else beat
             scaleX = s
             scaleY = s
-            transformOrigin = androidx.compose.ui.graphics.TransformOrigin(0f, 0.5f)
         }
     )
 
@@ -257,7 +318,8 @@ private fun StakeCounter(event: BossEventState, accent: Color) {
             color = if (delta < 0) Color(0xFF4ADE80) else Color(0xFFD1453D),
             fontFamily = FontPixel(),
             fontWeight = FontWeight.Bold,
-            fontSize = 13.sp
+            fontSize = 14.sp,
+            textAlign = TextAlign.Center
         )
     }
 }
@@ -269,11 +331,24 @@ private const val BOSS_CHARGE_SHARE = 0.35f
 private const val ANSWER_WINDOW_MS = 18000
 
 /**
- * Karta werdyktu: co bylo poprawnie, co dal gracz, jak blisko byl i o ile to scielo cios.
- * To jest odpowiedz na "nie wiadomo tak naprawde co sie stalo".
+ * Werdykt oszacowania - scena na srodku ekranu, rozpisana na cztery takty.
+ *
+ * ## Co sie w niej dzieje
+ *
+ *  1. **JAK BLISKO** wielkimi literami i pod tym prawidlowa wartosc - "1650". Sama, przez pol
+ *     sekundy: to jest liczba, ktora gracz mial odgadnac i ktora ma zapamietac.
+ *  2. **TWOJA ODPOWIEDZ** - "1660" wjezdza OBOK, tak samo duza. Obie wisza chwile obok siebie,
+ *     zeby dalo sie je porownac wzrokiem, a nie w pamieci.
+ *  3. **ODEJMOWANIE** - obie liczby zjezdzaja ku sobie i miedzy nimi wybija roznica: "10".
+ *     To jest ta jedna liczba, od ktorej zalezy cala reszta.
+ *  4. **CO TO ZNACZY** - dopiero teraz zdanie o ciosie bossa, i w tej samej chwili licznik stawki
+ *     u gory zjezdza do faktycznej wartosci.
+ *
+ * Wczesniej wszystko to bylo mala karta przyklejona pod licznikiem, u samej gory ekranu, i
+ * pojawialo sie praktycznie naraz. Informacja byla ta sama - tylko nie bylo jej widac.
  */
 @Composable
-private fun VerdictCard(event: BossEventState, accent: Color) {
+private fun VerdictCard(event: BossEventState, beat: Int) {
     val correct = event.question.correctValue
     val guess = event.guess
     val diff = abs(guess - correct)
@@ -281,10 +356,10 @@ private fun VerdictCard(event: BossEventState, accent: Color) {
     val closeness = 1f - (diff.toFloat() / range).coerceIn(0f, 1f)
 
     val verdict = when {
-        diff == 0 -> "W PUNKT!"
-        closeness >= 0.97f -> "PRAWIE IDEALNIE"
-        closeness >= 0.85f -> "BLISKO"
-        closeness >= 0.6f -> "TAK SOBIE"
+        diff == 0 -> "SPOT ON!"
+        closeness >= 0.97f -> "ALMOST PERFECT"
+        closeness >= 0.85f -> "CLOSE"
+        closeness >= 0.6f -> "SO-SO"
         else -> "MISS"
     }
     val verdictColor = when {
@@ -293,60 +368,185 @@ private fun VerdictCard(event: BossEventState, accent: Color) {
         else -> Color(0xFFD1453D)
     }
 
-    // Mnoznik z celnosci, pokazany tak, jak go czuje gracz: "-40%" albo "+190%".
     val mult = event.outcome?.accuracyMultiplier ?: 1f
     val deltaPercent = ((mult - 1f) * 100f).roundToInt()
 
+    // Takt 3 zsuwa obie liczby ku sobie - to jest cala "animacja odejmowania". Dopoki nie padnie,
+    // stoja rozsuniete na tyle, zeby bylo widac, ze sa DWIE.
+    val converge by animateFloatAsState(
+        targetValue = if (beat >= 3) 1f else 0f,
+        animationSpec = tween(420, easing = EaseOutCubic),
+        label = "verdictConverge"
+    )
+    val spread = (NUMBER_SPREAD * (1f - converge)).dp
+
     Column(
         modifier = Modifier
-            .padding(horizontal = 20.dp)
-            .clip(RoundedCornerShape(16.dp))
-            .background(Color(0xFF16120C).copy(alpha = 0.94f))
-            .border(2.dp, verdictColor, RoundedCornerShape(16.dp))
-            .padding(horizontal = 18.dp, vertical = 12.dp),
+            .fillMaxWidth()
+            .padding(horizontal = 14.dp)
+            .clip(RoundedCornerShape(20.dp))
+            .background(Color(0xFF0B0805).copy(alpha = 0.92f))
+            .border(3.dp, verdictColor, RoundedCornerShape(20.dp))
+            .padding(horizontal = 16.dp, vertical = 18.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(5.dp)
+        verticalArrangement = Arrangement.spacedBy(12.dp)
     ) {
-        Text(
-            text = verdict,
-            color = verdictColor,
-            fontFamily = FontPixel(),
-            fontWeight = FontWeight.Bold,
-            fontSize = 20.sp
-        )
-        Row(horizontalArrangement = Arrangement.spacedBy(14.dp)) {
-            VerdictValue("PRAWIDLOWO", "$correct", Color(0xFFF4E9D7))
-            VerdictValue("TWOJA", "$guess", verdictColor)
-        }
-        Text(
-            text = when {
-                deltaPercent < 0 -> "ATAK OSLABIONY $deltaPercent%"
-                deltaPercent > 0 -> "ATAK WZMOCNIONY +$deltaPercent%"
-                else -> "ATAK BEZ ZMIAN"
-            },
-            color = if (deltaPercent < 0) Color(0xFF4ADE80) else Color(0xFFD1453D),
-            fontFamily = FontFirst(),
-            fontWeight = FontWeight.Bold,
-            fontSize = 12.sp,
-            textAlign = TextAlign.Center
-        )
-        event.outcome?.message?.let { msg ->
+        // Takt 1 - werdykt wielkimi literami.
+        VerdictBeat(visible = beat >= 1) {
             Text(
-                text = msg,
-                color = Color(0xFFBFB098),
-                fontFamily = FontFirst(),
-                fontSize = 10.sp,
+                text = verdict,
+                color = verdictColor,
+                fontFamily = FontPixel(),
+                fontWeight = FontWeight.Bold,
+                fontSize = 30.sp,
                 textAlign = TextAlign.Center
             )
+        }
+
+        // Takty 1-3: prawidlowa wartosc, twoja odpowiedz obok niej, potem zjazd ku sobie.
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.Center
+        ) {
+            VerdictBeat(visible = beat >= 1) {
+                BigNumber(
+                    label = "CORRECT",
+                    value = "$correct",
+                    color = Color(0xFFFFD34D),
+                    modifier = Modifier.offset(x = -spread)
+                )
+            }
+            VerdictBeat(visible = beat >= 2) {
+                BigNumber(
+                    label = "YOUR ANSWER",
+                    value = "$guess",
+                    color = verdictColor,
+                    modifier = Modifier.offset(x = spread)
+                )
+            }
+        }
+
+        // Takt 3 - roznica. Wybija w skali, bo to ona rozstrzyga cale zdarzenie.
+        VerdictBeat(visible = beat >= 3, punch = true) {
+            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                Text(
+                    text = if (diff == 0) "PERFECT HIT" else "OFF BY",
+                    color = Color(0xFF8A7A5E),
+                    fontFamily = FontFirst(),
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 11.sp
+                )
+                Text(
+                    text = "$diff",
+                    color = verdictColor,
+                    fontFamily = FontPixel(),
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 46.sp
+                )
+            }
+        }
+
+        // Takt 4 - co ta roznica robi z ciosem bossa. Razem z nia rusza licznik stawki u gory.
+        VerdictBeat(visible = beat >= 4) {
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.spacedBy(4.dp)
+            ) {
+                Text(
+                    text = when {
+                        deltaPercent < 0 -> "BOSS ATTACK WEAKENED $deltaPercent%"
+                        deltaPercent > 0 -> "BOSS ATTACK STRENGTHENED +$deltaPercent%"
+                        else -> "BOSS ATTACK UNCHANGED"
+                    },
+                    color = if (deltaPercent < 0) Color(0xFF4ADE80) else Color(0xFFD1453D),
+                    fontFamily = FontPixel(),
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 16.sp,
+                    textAlign = TextAlign.Center
+                )
+                event.outcome?.message?.let { msg ->
+                    Text(
+                        text = msg,
+                        color = Color(0xFFBFB098),
+                        fontFamily = FontFirst(),
+                        fontSize = 11.sp,
+                        textAlign = TextAlign.Center
+                    )
+                }
+            }
         }
     }
 }
 
+/** Jedna z dwoch wielkich liczb werdyktu - podpis maly, liczba duza. */
 @Composable
-private fun VerdictValue(label: String, value: String, color: Color) {
+private fun BigNumber(label: String, value: String, color: Color, modifier: Modifier = Modifier) {
+    Column(
+        modifier = modifier.padding(horizontal = 10.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Text(
+            text = label,
+            color = Color(0xFF8A7A5E),
+            fontFamily = FontFirst(),
+            fontWeight = FontWeight.Bold,
+            fontSize = 10.sp
+        )
+        Text(
+            text = value,
+            color = color,
+            fontFamily = FontPixel(),
+            fontWeight = FontWeight.Bold,
+            fontSize = 34.sp,
+            maxLines = 1
+        )
+    }
+}
+
+/** Jak daleko od srodka startuja obie liczby, zanim zjada sie w takcie odejmowania. */
+private const val NUMBER_SPREAD = 26f
+
+/**
+ * Jeden takt werdyktu - wjezdza i zostaje. [punch] to mocniejsze wejscie ze sprezyna, zarezerwowane
+ * dla roznicy: to jedyna liczba, ktora ma sie w tej scenie "wybic", reszta ma po prostu wejsc.
+ */
+@Composable
+private fun VerdictBeat(visible: Boolean, punch: Boolean = false, content: @Composable () -> Unit) {
+    AnimatedVisibility(
+        visible = visible,
+        enter = if (punch) {
+            fadeIn(tween(160)) +
+                scaleIn(initialScale = 0.45f, animationSpec = tween(420, easing = EaseOutBack))
+        } else {
+            fadeIn(tween(220)) +
+                slideInVertically(tween(280, easing = EaseOutCubic)) { it / 2 } +
+                scaleIn(initialScale = 0.9f, animationSpec = tween(280, easing = EaseOutCubic))
+        }
+    ) {
+        content()
+    }
+}
+
+/**
+ * Ile taktow ma werdykt i co ile wchodzi kolejny.
+ *
+ * 650 ms to nie jest "wolno" - to jest czas, w ktorym da sie przeczytac liczbe i przeniesc wzrok
+ * na nastepna. Cztery takty zajmuja ~2s, a faza werdyktu trwa [BOSS_EVENT_JUDGING_MS], wiec na
+ * koncu zostaje jeszcze chwila na obejrzenie calosci.
+ */
+private const val VERDICT_BEATS = 4
+private const val VERDICT_BEAT_MS = 650L
+
+@Composable
+private fun VerdictValue(
+    label: String,
+    value: String,
+    color: Color,
+    size: androidx.compose.ui.unit.TextUnit = 17.sp
+) {
     Column(horizontalAlignment = Alignment.CenterHorizontally) {
         Text(label, color = Color(0xFF8A7A5E), fontFamily = FontFirst(), fontSize = 8.sp)
-        Text(value, color = color, fontFamily = FontPixel(), fontWeight = FontWeight.Bold, fontSize = 17.sp)
+        Text(value, color = color, fontFamily = FontPixel(), fontWeight = FontWeight.Bold, fontSize = size)
     }
 }
 

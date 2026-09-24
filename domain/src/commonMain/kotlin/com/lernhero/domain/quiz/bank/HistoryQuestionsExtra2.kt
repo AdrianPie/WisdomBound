@@ -25,9 +25,7 @@ object HistoryQuestionsExtra2 {
     val all: List<QuizEntry> = listOf(
 
         /* ------------------------------- Easy ------------------------------- */
-        ask("statek_kolumb", "What was one of Columbus's ships called?", "Santa Maria", listOf("Titanic", "Beagle", "Endeavour"), QuizDifficulty.Easy),
         ask("jedwabny_szlak", "What was the Silk Road?", "A network of trade routes between Asia and Europe", listOf("A great river running across northern China", "A knightly order founded in the Holy Land", "A peace treaty between Persia and Rome"), QuizDifficulty.Easy),
-        ask("krzyzowcy_cel", "Where did the Crusades set out for?", "The Holy Land", listOf("America", "China", "Australia"), QuizDifficulty.Easy),
         ask("kolumb_kraj", "On whose behalf did Columbus set out for the Indies?", "The Monarchs of Spain", listOf("The King of Portugal", "The King of England", "The King of France"), QuizDifficulty.Easy),
 
         /* ------------------------------ Medium ------------------------------ */
@@ -46,7 +44,6 @@ object HistoryQuestionsExtra2 {
         ask("nato_powstanie", "In which year was NATO founded?", "1949", listOf("1945", "1955", "1939"), QuizDifficulty.Hard),
 
         /* ----------------------------- Expert ---------------------------- */
-        ask("targowica", "What was the Targowica Confederation?", "A magnate conspiracy against the reforms of the May 3 Constitution", listOf("An alliance of the nobility with Napoleon against Russia", "A movement fighting for independence from Russia", "A treaty of union with the Grand Duchy of Lithuania"), QuizDifficulty.Expert),
         ask("bitwa_o_anglie", "What was the Battle of Britain in 1940?", "The Luftwaffe's air campaign against Great Britain", listOf("The Allied landing on the beaches of Normandy", "A battle fought only by ships in the Atlantic", "A land offensive across the deserts of Africa"), QuizDifficulty.Expert),
     )
 }

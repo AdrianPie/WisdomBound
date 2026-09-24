@@ -141,13 +141,6 @@ object WorldHistoryQuestions {
 
         /* ============================ MIDDLE AGES ============================ */
         ask(
-            id = "wikingowie_kraj",
-            prompt = "Which region of Europe did the Vikings come from?",
-            correct = "Scandinavia",
-            wrong = listOf("The Balkans", "Iberia", "Britain"),
-            difficulty = QuizDifficulty.Easy
-        ),
-        ask(
             id = "hastings_zwyciezca",
             prompt = "Who won the Battle of Hastings in 1066?",
             correct = "William the Conqueror",
@@ -167,13 +160,6 @@ object WorldHistoryQuestions {
             correct = "The Mongol Empire",
             wrong = listOf("The Ottoman Empire", "The Chinese Empire", "The Persian Empire"),
             difficulty = QuizDifficulty.Easy
-        ),
-        ask(
-            id = "magna_carta",
-            prompt = "In which country was the Magna Carta signed?",
-            correct = "England",
-            wrong = listOf("France", "Scotland", "Germany"),
-            difficulty = QuizDifficulty.Medium
         ),
         ask(
             id = "czarna_smierc",
@@ -221,13 +207,6 @@ object WorldHistoryQuestions {
 
         /* ======================= DISCOVERIES AND THE EARLY MODERN AGE ======================= */
         ask(
-            id = "kolumb_rok",
-            prompt = "Who reached America under the Spanish flag in 1492?",
-            correct = "Christopher Columbus",
-            wrong = listOf("Vasco da Gama", "Ferdinand Magellan", "Amerigo Vespucci"),
-            difficulty = QuizDifficulty.Easy
-        ),
-        ask(
             id = "aztekowie_zdobywca",
             prompt = "Which conquistador toppled the Aztec empire?",
             correct = "Hernan Cortes",
@@ -240,13 +219,6 @@ object WorldHistoryQuestions {
             correct = "Francisco Pizarro",
             wrong = listOf("Hernan Cortes", "Juan Ponce de Leon", "Hernando de Soto"),
             difficulty = QuizDifficulty.Hard
-        ),
-        ask(
-            id = "machu_picchu",
-            prompt = "Which civilization built Machu Picchu?",
-            correct = "The Incas",
-            wrong = listOf("The Maya", "The Aztecs", "The Olmecs"),
-            difficulty = QuizDifficulty.Medium
         ),
         ask(
             id = "reformacja_luter",
@@ -356,13 +328,6 @@ object WorldHistoryQuestions {
             difficulty = QuizDifficulty.Medium
         ),
         ask(
-            id = "apartheid_kraj",
-            prompt = "In which country was the apartheid system in force?",
-            correct = "South Africa",
-            wrong = listOf("Rhodesia", "Namibia", "Kenya"),
-            difficulty = QuizDifficulty.Easy
-        ),
-        ask(
             id = "mandela",
             prompt = "Who became President of South Africa after 27 years in prison?",
             correct = "Nelson Mandela",
@@ -382,13 +347,6 @@ object WorldHistoryQuestions {
             correct = "Cuba",
             wrong = listOf("Haiti", "Jamaica", "Puerto Rico"),
             difficulty = QuizDifficulty.Medium
-        ),
-        ask(
-            id = "mur_berlinski_kraj",
-            prompt = "Which city was divided by the wall torn down in 1989?",
-            correct = "Berlin",
-            wrong = listOf("Vienna", "Prague", "Budapest"),
-            difficulty = QuizDifficulty.Easy
         ),
         ask(
             id = "zsrr_rozpad",
@@ -453,14 +411,6 @@ object WorldHistoryQuestions {
             category = QuizCategory.Biology
         ),
         ask(
-            id = "telefon_wynalazca",
-            prompt = "Who is credited with patenting the telephone in 1876?",
-            correct = "Alexander Graham Bell",
-            wrong = listOf("Thomas Edison", "Nikola Tesla", "Guglielmo Marconi"),
-            difficulty = QuizDifficulty.Medium,
-            category = QuizCategory.Technology
-        ),
-        ask(
             id = "radio_marconi",
             prompt = "Who carried out the first transatlantic radio transmission?",
             correct = "Guglielmo Marconi",
@@ -487,27 +437,12 @@ object WorldHistoryQuestions {
 
         /* ======================= WORLD LITERATURE AND CULTURE ======================= */
         ask(
-            id = "szekspir_hamlet",
-            prompt = "Who wrote 'Hamlet'?",
-            correct = "William Shakespeare",
-            wrong = listOf("Christopher Marlowe", "Ben Jonson", "John Milton"),
-            difficulty = QuizDifficulty.Easy,
-            category = QuizCategory.Literature
-        ),
-        ask(
             id = "boska_komedia",
             prompt = "Who wrote 'The Divine Comedy'?",
             correct = "Dante Alighieri",
             wrong = listOf("Petrarch", "Boccaccio", "Virgil"),
             difficulty = QuizDifficulty.Medium,
             category = QuizCategory.Literature
-        ),
-        ask(
-            id = "mona_lisa",
-            prompt = "Who painted the 'Mona Lisa'?",
-            correct = "Leonardo da Vinci",
-            wrong = listOf("Michelangelo", "Raphael", "Sandro Botticelli"),
-            difficulty = QuizDifficulty.Easy
         ),
         ask(
             id = "kaplica_sykstynska",
@@ -532,30 +467,6 @@ object WorldHistoryQuestions {
             correct = "Hinduism",
             wrong = listOf("Buddhism", "Sikhism", "Jainism"),
             difficulty = QuizDifficulty.Medium,
-            category = QuizCategory.Mythology
-        ),
-        ask(
-            id = "mit_amaterasu",
-            prompt = "Amaterasu, the sun goddess, comes from which mythology?",
-            correct = "Japanese",
-            wrong = listOf("Chinese", "Korean", "Mongolian"),
-            difficulty = QuizDifficulty.Hard,
-            category = QuizCategory.Mythology
-        ),
-        ask(
-            id = "mit_quetzalcoatl",
-            prompt = "Quetzalcoatl, the feathered serpent, was a god of which civilization?",
-            correct = "The Aztecs",
-            wrong = listOf("The Incas", "The Maya", "The Olmecs"),
-            difficulty = QuizDifficulty.Hard,
-            category = QuizCategory.Mythology
-        ),
-        ask(
-            id = "mit_anansi",
-            prompt = "Anansi, the cunning spider, is a figure from which mythology?",
-            correct = "West African",
-            wrong = listOf("Australian", "Caribbean", "Polynesian"),
-            difficulty = QuizDifficulty.Expert,
             category = QuizCategory.Mythology
         ),
 
@@ -584,30 +495,8 @@ object WorldHistoryQuestions {
             difficulty = QuizDifficulty.Hard,
             category = QuizCategory.Geography
         ),
-        ask(
-            id = "cesarstwo_bizantyjskie_stolica",
-            prompt = "What is the city that was the capital of Byzantium called today?",
-            correct = "Istanbul",
-            wrong = listOf("Ankara", "Athens", "Izmir"),
-            difficulty = QuizDifficulty.Medium,
-            category = QuizCategory.Geography
-        ),
 
         /* =============================== EXPERT =============================== */
-        ask(
-            id = "traktat_tordesillas",
-            prompt = "Which two countries divided the New World between themselves in the Treaty of Tordesillas?",
-            correct = "Spain and Portugal",
-            wrong = listOf("England and France", "The Netherlands and Spain", "Portugal and France"),
-            difficulty = QuizDifficulty.Expert
-        ),
-        ask(
-            id = "kongres_wiedenski",
-            prompt = "After whose defeat was the Congress of Vienna convened?",
-            correct = "Napoleon's",
-            wrong = listOf("Frederick the Great's", "Charles XII's", "Louis XIV's"),
-            difficulty = QuizDifficulty.Expert
-        ),
         ask(
             id = "sykes_picot",
             prompt = "Which secret agreement divided the Middle East between Great Britain and France?",

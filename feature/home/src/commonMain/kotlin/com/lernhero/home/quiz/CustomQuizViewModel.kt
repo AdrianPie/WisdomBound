@@ -10,10 +10,13 @@ import com.lernhero.domain.quiz.custom.CustomDeck
 import com.lernhero.domain.quiz.custom.CustomQuestion
 import com.lernhero.domain.quiz.custom.CustomQuestionType
 import com.lernhero.domain.quiz.custom.DeckOrigin
+import com.lernhero.domain.monetization.PremiumLimits
 import com.lernhero.domain.repository.PlayerRepository
+import com.lernhero.shared.monetization.SubscriptionService
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.IO
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
@@ -33,11 +36,13 @@ data class CustomQuizUiState(
     val warnings: List<String> = emptyList(),
     val message: String? = null,
     /**
-     * Stan tygodniowego limitu generowania - null, dopoki gracz nic jeszcze nie wygenerowal w tej
+     * Stan miesiecznego limitu generowania - null, dopoki gracz nic jeszcze nie wygenerowal w tej
      * sesji. Serwer jest jedynym, ktory to liczy (patrz [QuizGenerationResult.Generated]) - apka
      * tylko wyswietla ostatnia wartosc, jaka dostala.
      */
-    val remainingAiGenerationsThisWeek: Int? = null
+    val remainingAiGenerationsThisMonth: Int? = null,
+    /** Serwer odmowil, bo nie widzi subskrypcji - ekran ma wtedy otworzyc paywall. */
+    val subscriptionRequired: Boolean = false
 )
 
 /**
@@ -49,7 +54,8 @@ data class CustomQuizUiState(
  */
 class CustomQuizViewModel(
     private val playerRepository: PlayerRepository,
-    private val generator: QuizGenerator
+    private val generator: QuizGenerator,
+    private val subscription: SubscriptionService
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(CustomQuizUiState())
@@ -57,6 +63,12 @@ class CustomQuizViewModel(
 
     /** Czy w ogole pokazywac przycisk generowania - patrz [QuizGenerator.Stub]. */
     val aiAvailable: Boolean get() = generator.isAvailable
+
+    /**
+     * Generowanie AI jest tylko z subskrypcja. Apka chowa za tym panel od razu, ale ostatnie slowo
+     * ma serwer (sprawdza RevenueCat) - patrz [QuizGenerationResult.SubscriptionRequired].
+     */
+    val isPremium: StateFlow<Boolean> get() = subscription.isPremium
 
     init {
         refresh()
@@ -161,6 +173,10 @@ class CustomQuizViewModel(
         _uiState.update { it.copy(message = null) }
     }
 
+    fun dismissSubscriptionPrompt() {
+        _uiState.update { it.copy(subscriptionRequired = false) }
+    }
+
     fun clearWarnings() {
         _uiState.update { it.copy(warnings = emptyList()) }
     }
@@ -215,8 +231,8 @@ class CustomQuizViewModel(
                             ),
                             warnings = result.warnings,
                             message = "Added ${added.size} questions - review and fix them before heading into battle.",
-                            remainingAiGenerationsThisWeek = result.remainingThisWeek
-                                ?: state.remainingAiGenerationsThisWeek
+                            remainingAiGenerationsThisMonth = result.remainingThisMonth
+                                ?: state.remainingAiGenerationsThisMonth
                         )
                     }
 
@@ -232,9 +248,16 @@ class CustomQuizViewModel(
 
                     is QuizGenerationResult.QuotaExceeded -> state.copy(
                         generating = false,
-                        remainingAiGenerationsThisWeek = 0,
-                        message = "You've used up this week's AI generations. Try again next week, " +
-                            "or write questions by hand for now."
+                        remainingAiGenerationsThisMonth = 0,
+                        message = "You've used all ${PremiumLimits.PREMIUM_AI_QUIZZES_PER_MONTH} AI generations " +
+                            "for this month. They renew 30 days after your first one - until then, write " +
+                            "questions by hand."
+                    )
+
+                    QuizGenerationResult.SubscriptionRequired -> state.copy(
+                        generating = false,
+                        subscriptionRequired = true,
+                        message = "AI generation is part of Premium."
                     )
                 }
             }

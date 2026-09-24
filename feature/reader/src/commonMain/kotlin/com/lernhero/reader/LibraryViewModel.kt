@@ -155,7 +155,7 @@ class LibraryViewModel(
         }
     }
 
-    fun claim(goal: ReadingGoal) {
+    fun claim(goal: ReadingGoal, onClaimed: () -> Unit = {}) {
         val state = _uiState.value
         if (state.claimedToday(goal) || !goal.isComplete(state.readingToday)) return
 
@@ -163,15 +163,18 @@ class LibraryViewModel(
             val updated = playerRepository.claimDailyGoalReward(
                 goalId = goal.id,
                 dateKey = state.readingToday.dateKey,
-                reward = goal.reward
+                reward = goal.reward,
+                gems = goal.gems,
+                tickets = goal.tickets
             )
             _uiState.update { current ->
                 if (updated == null) {
                     current.copy(message = "Couldn't claim the reward - try again.")
                 } else {
+                    onClaimed()
                     current.copy(
                         dailyGoalClaims = updated.dailyGoalClaims,
-                        message = "Claimed +${goal.reward} gold: ${goal.title}"
+                        message = "🎁 ${goal.title}: +${goal.reward} gold, +${goal.gems} gems, +${goal.tickets} tickets!"
                     )
                 }
             }

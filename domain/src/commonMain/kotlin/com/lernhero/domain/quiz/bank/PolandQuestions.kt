@@ -108,7 +108,6 @@ object PolandQuestions {
         ask("geo2_trojstyk_polska", "Where do the borders of Poland, Czechia and Slovakia meet?", "At the tripoint near Jaworzynka", listOf("At Sniezka", "In Ustrzyki Gorne", "At the Dukla Pass"), QuizDifficulty.Expert),
         ask("his2_pokoj_torunski", "In which year was the Second Peace of Thorn signed?", "1466", listOf("1411", "1525", "1343"), QuizDifficulty.Expert),
         ask("his2_holdpruski", "In which year was the Prussian Homage?", "1525", listOf("1466", "1569", "1505"), QuizDifficulty.Expert),
-        ask("his2_nihil_novi", "In which year was the Nihil novi constitution passed?", "1505", listOf("1573", "1454", "1493"), QuizDifficulty.Expert),
         ask("his2_konfederacja_warszawska", "What did the Warsaw Confederation of 1573 concern?", "Religious tolerance", listOf("Military taxes", "Hereditary succession", "An alliance with Turkey"), QuizDifficulty.Expert),
         ask("his2_bitwa_klushino", "Near which town did Hetman Zolkiewski defeat Russian forces in 1610?", "Klushino", listOf("Cecora", "Chocim", "Berestechko"), QuizDifficulty.Expert),
         ask("his2_sejm_niemy", "In which year did the Silent Sejm convene?", "1717", listOf("1697", "1733", "1764"), QuizDifficulty.Expert),

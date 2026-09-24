@@ -130,3 +130,16 @@ data class OrderingEntry(
     val category: QuizCategory,
     val difficulty: QuizDifficulty
 )
+
+/**
+ * Pytanie "prawda czy falsz": jedno stwierdzenie i czy jest prawdziwe. Najlepiej dzialaja tu
+ * popularne MITY ("nietoperze sa slepe") i fakty, ktore brzmia jak mit ("banany to jagody") -
+ * wtedy odpowiedz wymaga wiedzy, a nie tylko rzutu moneta.
+ */
+data class TrueFalseEntry(
+    val id: String,
+    val statement: String,
+    val isTrue: Boolean,
+    val category: QuizCategory,
+    val difficulty: QuizDifficulty
+)

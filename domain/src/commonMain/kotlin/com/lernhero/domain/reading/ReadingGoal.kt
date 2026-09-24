@@ -12,49 +12,45 @@ data class ReadingGoal(
     val description: String,
     val kind: ReadingGoalKind,
     val threshold: Int,
-    val reward: Int
+    /** Zloto. */
+    val reward: Int,
+    val gems: Int = 0,
+    val tickets: Int = 0
 ) {
     fun progress(today: ReadingDayProgress): Int = when (kind) {
-        ReadingGoalKind.Minutes -> today.minutes
+        ReadingGoalKind.Minutes -> today.activeSeconds / 60
         ReadingGoalKind.Pages -> today.pages
     }
 
     fun isComplete(today: ReadingDayProgress): Boolean = progress(today) >= threshold
 }
 
+/**
+ * Dwa cele, nie cztery: krotka lista czyta sie jak obietnica ("15 minut i masz skrzynie"), a dluga
+ * jak obowiazek. 15 minut to glowny nawyk, godzina - wyzwanie dla wciagnietych. Nagrody sa celowo
+ * hojne (diamenty + losy), bo to one maja byc powodem, zeby codziennie siasc do ksiazki.
+ */
 object ReadingGoalCatalog {
     val DAILY: List<ReadingGoal> = listOf(
         ReadingGoal(
             id = "daily_read_15",
-            title = "Codzienna dawka",
-            description = "Czytaj aktywnie 15 minut dzisiaj.",
+            title = "Daily Dose",
+            description = "Read for 15 minutes today.",
             kind = ReadingGoalKind.Minutes,
             threshold = 15,
-            reward = 70
-        ),
-        ReadingGoal(
-            id = "daily_read_30",
-            title = "Molik ksiazkowy",
-            description = "Czytaj aktywnie 30 minut dzisiaj.",
-            kind = ReadingGoalKind.Minutes,
-            threshold = 30,
-            reward = 140
+            reward = 300,
+            gems = 25,
+            tickets = 1
         ),
         ReadingGoal(
             id = "daily_read_60",
-            title = "Bibliofil",
-            description = "Czytaj aktywnie 60 minut dzisiaj.",
+            title = "Deep Reader",
+            description = "Read for a full hour today.",
             kind = ReadingGoalKind.Minutes,
             threshold = 60,
-            reward = 260
-        ),
-        ReadingGoal(
-            id = "daily_pages_10",
-            title = "Kartkarz",
-            description = "Przewroc 10 stron dzisiaj.",
-            kind = ReadingGoalKind.Pages,
-            threshold = 10,
-            reward = 60
+            reward = 1000,
+            gems = 80,
+            tickets = 3
         )
     )
 }

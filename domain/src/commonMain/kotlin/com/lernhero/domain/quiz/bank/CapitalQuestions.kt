@@ -49,7 +49,6 @@ object CapitalQuestions {
         capital("Spain", "Madrid", listOf("Barcelona", "Seville", "Valencia"), QuizDifficulty.Easy),
         capital("United Kingdom", "London", listOf("Manchester", "Edinburgh", "Liverpool"), QuizDifficulty.Easy),
         capital("Japan", "Tokyo", listOf("Osaka", "Kyoto", "Nagoya"), QuizDifficulty.Easy),
-        country("Athens", "Greece", listOf("Turkey", "Cyprus", "Bulgaria"), QuizDifficulty.Easy),
 
         /* ------------------------------ Medium ------------------------------ */
         capital("Australia", "Canberra", listOf("Sydney", "Melbourne", "Perth"), QuizDifficulty.Medium),
@@ -74,7 +73,6 @@ object CapitalQuestions {
         country("Pretoria", "South Africa", listOf("Kenya", "Zimbabwe", "Namibia"), QuizDifficulty.Hard),
 
         /* ----------------------------- Expert ---------------------------- */
-        capital("Kazakhstan", "Astana", listOf("Almaty", "Shymkent", "Karaganda"), QuizDifficulty.Expert),
         capital("Myanmar", "Naypyidaw", listOf("Yangon", "Mandalay", "Bago"), QuizDifficulty.Expert),
         capital("Bhutan", "Thimphu", listOf("Paro", "Punakha", "Phuentsholing"), QuizDifficulty.Expert),
         capital("Mongolia", "Ulaanbaatar", listOf("Erdenet", "Darkhan", "Khovd"), QuizDifficulty.Expert),

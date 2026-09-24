@@ -35,4 +35,6 @@ sealed interface TranslationResult {
     /** Silnik tlumaczenia nie jest jeszcze podpiety (patrz [TranslationSource.Stub]). */
     data object Unavailable : TranslationResult
     data object Failed : TranslationResult
+    /** Dzienny limit darmowych tlumaczen wyczerpany - patrz [com.lernhero.shared.monetization.TranslationQuota]. */
+    data object LimitReached : TranslationResult
 }

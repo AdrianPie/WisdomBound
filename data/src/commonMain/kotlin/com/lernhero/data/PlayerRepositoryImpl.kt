@@ -1,13 +1,21 @@
 package com.lernhero.data
 
 
+import com.lernhero.domain.jewel.JewelBench
+import com.lernhero.domain.jewel.JewelState
+import com.lernhero.domain.jewel.Sockets
 import com.lernhero.domain.craft.CraftCost
+import com.lernhero.domain.energy.EnergyRules
+import com.lernhero.domain.energy.EnergyState
+import kotlin.time.Clock
 import com.lernhero.domain.craft.ItemUpgrades
 import com.lernhero.domain.item.Inventory
 import com.lernhero.domain.player.AdminAccounts
 import com.lernhero.domain.player.AdminKit
 import com.lernhero.domain.item.base
 import com.lernhero.domain.item.withMigratedItems
+import com.lernhero.domain.monetization.DailyCounter
+import com.lernhero.domain.monetization.plusBundle
 import com.lernhero.domain.item.ItemCatalog
 import com.lernhero.domain.monster.CompanionSpells
 import com.lernhero.domain.monster.MonsterCatalog
@@ -344,6 +352,8 @@ class PlayerRepositoryImpl: PlayerRepository {
 
             val updated = player.copy(
                 money = player.money + achievement.reward,
+                gems = player.gems + achievement.gems,
+                jewels = achievement.jewel?.let { JewelBench.grant(player.jewels, it.id) } ?: player.jewels,
                 claimedAchievements = player.claimedAchievements + achievementId
             )
             document.set(updated)
@@ -352,6 +362,50 @@ class PlayerRepositoryImpl: PlayerRepository {
             null
         }
     }
+
+    override suspend fun socketJewel(uid: String, jewelId: String): Player? =
+        updateJewels { player ->
+            val forMonster = Inventory.byUid(player.monsterInventory, uid) != null
+            val bag = if (forMonster) player.monsterInventory else player.heroInventory
+            val item = Inventory.byUid(bag, uid)?.base() ?: return@updateJewels null
+            val result = JewelBench.socket(JewelState(bag, player.jewels), uid, jewelId, Sockets.countFor(item))
+                ?: return@updateJewels null
+            player.withJewelState(result, forMonster)
+        }
+
+    override suspend fun unsocketJewel(uid: String, index: Int): Player? =
+        updateJewels { player ->
+            val forMonster = Inventory.byUid(player.monsterInventory, uid) != null
+            val bag = if (forMonster) player.monsterInventory else player.heroInventory
+            val result = JewelBench.unsocket(JewelState(bag, player.jewels), uid, index)
+                ?: return@updateJewels null
+            player.withJewelState(result, forMonster)
+        }
+
+    override suspend fun combineJewels(jewelId: String): Player? =
+        updateJewels { player ->
+            val pouch = JewelBench.combine(player.jewels, jewelId) ?: return@updateJewels null
+            player.copy(jewels = pouch)
+        }
+
+    /** Wspolny szkielet operacji na kamieniach: wczytaj, zmien (albo odmow nullem), zapisz. */
+    private suspend fun updateJewels(change: (Player) -> Player?): Player? {
+        return try {
+            val document = playerDocument() ?: return null
+            val player = getPlayer()?.withMigratedItems() ?: return null
+            val updated = change(player) ?: return null
+            document.set(updated)
+            updated
+        } catch (e: Exception) {
+            null
+        }
+    }
+
+    private fun Player.withJewelState(state: JewelState, forMonster: Boolean): Player = copy(
+        jewels = state.pouch,
+        heroInventory = if (forMonster) heroInventory else state.bag,
+        monsterInventory = if (forMonster) state.bag else monsterInventory
+    )
 
     override suspend fun upgradeMonster(monsterId: String): Player? {
         return try {
@@ -551,7 +605,7 @@ class PlayerRepositoryImpl: PlayerRepository {
             // Kwote liczy repozytorium z ZAPISANEGO stanu, nie ekran - inaczej "Get" bylby
             // darmowym generatorem zlota dla kazdego, kto podmieni liczbe po stronie klienta.
             val best = player.storyProgress.values.maxOrNull() ?: 0
-            val reward = IdleRewards.pendingFor(best, player.idleCollectedAt, now)
+            val reward = IdleRewards.pendingFor(best, player.idleCollectedAt, now, player.progress.level)
             if (reward.isEmpty) return player
 
             // XP z kapaczki nie ma - awans placi sie odpowiedzia, patrz [IdleRewards.CAP_HOURS].
@@ -573,7 +627,8 @@ class PlayerRepositoryImpl: PlayerRepository {
         iron: Int,
         essence: Int,
         tickets: Int,
-        xp: Int
+        xp: Int,
+        gems: Int
     ): Player? {
         return try {
             val document = playerDocument() ?: return null
@@ -581,7 +636,11 @@ class PlayerRepositoryImpl: PlayerRepository {
             val levelUp = LevelCurve.award(player.progress, xp)
             val updated = player.copy(
                 money = player.money + gold,
+                gems = player.gems + gems,
                 progress = levelUp.progress,
+                // Zestaw testowy dolewa tez energie - inaczej kazde dluzsze testowanie walk
+                // konczylo sie czekaniem na zegar, ktory z testowanym zachowaniem nie ma nic wspolnego.
+                energy = EnergyState(amount = EnergyRules.MAX, updatedAt = Clock.System.now().toEpochMilliseconds()),
                 townResources = player.townResources.plusAll(
                     stone = stone,
                     iron = iron,
@@ -621,14 +680,136 @@ class PlayerRepositoryImpl: PlayerRepository {
         }
     }
 
-    override suspend fun claimDailyGoalReward(goalId: String, dateKey: String, reward: Int): Player? {
+    override suspend fun claimDailyGoalReward(goalId: String, dateKey: String, reward: Int, gems: Int, tickets: Int): Player? {
         return try {
             val document = playerDocument() ?: return null
             val player = getPlayer() ?: return null
             if (player.dailyGoalClaims[goalId] == dateKey) return null
             val updated = player.copy(
                 money = player.money + reward,
+                gems = player.gems + gems,
+                townResources = if (tickets > 0) player.townResources.plusAll(tickets = tickets) else player.townResources,
                 dailyGoalClaims = player.dailyGoalClaims + (goalId to dateKey)
+            )
+            document.set(updated)
+            updated
+        } catch (e: Exception) {
+            null
+        }
+    }
+
+    override suspend fun claimAdGold(dateKey: String, maxPerDay: Int, reward: Int): Player? {
+        return try {
+            val document = playerDocument() ?: return null
+            val player = getPlayer() ?: return null
+            if (player.adGold.remainingOn(dateKey, maxPerDay) <= 0) return null
+            val updated = player.copy(
+                money = player.money + reward,
+                adGold = player.adGold.increment(dateKey)
+            )
+            document.set(updated)
+            updated
+        } catch (e: Exception) {
+            null
+        }
+    }
+
+    override suspend fun claimLegendPack(): Player? {
+        return try {
+            val document = playerDocument() ?: return null
+            val player = getPlayer()?.withMigratedItems() ?: return null
+            if (player.legendPackClaimed) return player
+            val pack = com.lernhero.domain.monetization.LegendPack
+            val inventory = pack.ITEM_IDS.fold(player.heroInventory) { bag, id -> Inventory.add(bag, id) }
+            val updated = player.copy(
+                legendPackClaimed = true,
+                gems = player.gems + pack.GEMS,
+                heroInventory = inventory,
+                townResources = player.townResources.plusAll(stone = 0, iron = 0, essence = 0, tickets = pack.TICKETS)
+            )
+            document.set(updated)
+            updated
+        } catch (e: Exception) {
+            null
+        }
+    }
+
+    override suspend fun grantGemPack(pack: com.lernhero.domain.monetization.GemPack): Player? {
+        return try {
+            val document = playerDocument() ?: return null
+            val player = getPlayer() ?: return null
+            val updated = player.copy(
+                gems = player.gems + pack.grantFor(player.gemPacksBought),
+                gemPacksBought = (player.gemPacksBought + pack.productId).distinct()
+            )
+            document.set(updated)
+            updated
+        } catch (e: Exception) {
+            null
+        }
+    }
+
+    override suspend fun spendGems(
+        gems: Int,
+        bundle: com.lernhero.domain.monetization.Bundle,
+        now: Long,
+        dealId: String?,
+        dateKey: String,
+        maxPerDay: Int
+    ): Player? {
+        return try {
+            val document = playerDocument() ?: return null
+            val player = getPlayer()?.withMigratedItems() ?: return null
+            if (gems < 0 || player.gems < gems) return null
+            val deals = if (dealId != null) {
+                val counter = player.gemDeals[dealId] ?: DailyCounter()
+                if (maxPerDay > 0 && counter.remainingOn(dateKey, maxPerDay) <= 0) return null
+                player.gemDeals + (dealId to counter.increment(dateKey))
+            } else {
+                player.gemDeals
+            }
+            val updated = player.copy(gems = player.gems - gems, gemDeals = deals).plusBundle(bundle, now)
+            document.set(updated)
+            updated
+        } catch (e: Exception) {
+            null
+        }
+    }
+
+    override suspend fun openShopChest(
+        opening: com.lernhero.domain.monetization.ChestOpening,
+        withAd: Boolean,
+        dateKey: String,
+        now: Long
+    ): Player? {
+        return try {
+            val document = playerDocument() ?: return null
+            val player = getPlayer()?.withMigratedItems() ?: return null
+            val chest = opening.chest
+            val paid = if (withAd) {
+                if (!player.shopChestAds.canWatch(chest, dateKey, now)) return null
+                player.copy(shopChestAds = player.shopChestAds.afterWatch(chest, dateKey, now))
+            } else {
+                if (player.gems < chest.gemCost) return null
+                player.copy(gems = player.gems - chest.gemCost)
+            }
+            val updated = paid.copy(epicChestPity = opening.nextPity).plusBundle(opening.total, now)
+            document.set(updated)
+            updated
+        } catch (e: Exception) {
+            null
+        }
+    }
+
+    override suspend fun claimPremiumGems(dateKey: String): Player? {
+        val id = com.lernhero.domain.monetization.PremiumLimits.DAILY_GEMS_CLAIM_ID
+        return try {
+            val document = playerDocument() ?: return null
+            val player = getPlayer() ?: return null
+            if (player.dailyGoalClaims[id] == dateKey) return null
+            val updated = player.copy(
+                gems = player.gems + com.lernhero.domain.monetization.PremiumLimits.DAILY_GEMS,
+                dailyGoalClaims = player.dailyGoalClaims + (id to dateKey)
             )
             document.set(updated)
             updated
@@ -639,7 +820,7 @@ class PlayerRepositoryImpl: PlayerRepository {
 
     override suspend fun recordReading(
         dateKey: String,
-        minutesDelta: Int,
+        secondsDelta: Int,
         pagesDelta: Int,
         wordsDelta: Int,
         charactersDelta: Int
@@ -648,13 +829,17 @@ class PlayerRepositoryImpl: PlayerRepository {
             val document = playerDocument() ?: return null
             val player = getPlayer() ?: return null
             val today = player.readingToday.forToday(dateKey)
+            val todaySeconds = today.activeSeconds + secondsDelta
+            val totalSeconds = player.readingStats.activeSeconds + secondsDelta
             val updated = player.copy(
                 readingToday = today.copy(
-                    minutes = today.minutes + minutesDelta,
+                    seconds = todaySeconds,
+                    minutes = todaySeconds / 60,
                     pages = today.pages + pagesDelta
                 ),
                 readingStats = player.readingStats.copy(
-                    totalMinutes = player.readingStats.totalMinutes + minutesDelta,
+                    totalSeconds = totalSeconds,
+                    totalMinutes = totalSeconds / 60,
                     totalPages = player.readingStats.totalPages + pagesDelta,
                     totalWords = player.readingStats.totalWords + wordsDelta,
                     totalCharacters = player.readingStats.totalCharacters + charactersDelta
@@ -840,6 +1025,19 @@ class PlayerRepositoryImpl: PlayerRepository {
             true
         } catch (e: Exception) {
             false
+        }
+    }
+
+    override suspend fun spendEnergy(cost: Int, now: Long): Player? {
+        return try {
+            val document = playerDocument() ?: return null
+            val player = getPlayer() ?: return null
+            val paid = EnergyRules.spend(player.energy, now, cost) ?: return null
+            val updated = player.copy(energy = paid)
+            document.set(updated)
+            updated
+        } catch (e: Exception) {
+            null
         }
     }
 

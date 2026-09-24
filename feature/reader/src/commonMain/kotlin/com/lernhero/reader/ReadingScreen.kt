@@ -3,6 +3,7 @@ package com.lernhero.reader
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.combinedClickable
@@ -86,7 +87,9 @@ fun ReadingScreen(
      */
     libraryInsets: PaddingValues = PaddingValues(0.dp),
     /** Wejscie do osobnej instancji "Slowka" - patrz [VocabularyScreen]. */
-    onOpenVocabulary: () -> Unit = {}
+    onOpenVocabulary: () -> Unit = {},
+    /** Po odebraniu nagrody za czytanie - zeby gorny pasek gry od razu pokazal nowe zloto/diamenty. */
+    onRewardClaimed: () -> Unit = {}
 ) {
     val viewModel = koinViewModel<LibraryViewModel>()
     val state by viewModel.uiState.collectAsState()
@@ -134,7 +137,13 @@ fun ReadingScreen(
         openBook = null
         openBytes = null
         openContent = null
+        // Ostatnia porcja czasu leci na konto asynchronicznie (ReadingClock.close) - drugie
+        // odswiezenie chwile pozniej lapie ja, zeby licznik dnia nie stal o kilka sekund w tyle.
         viewModel.refresh()
+        scope.launch {
+            kotlinx.coroutines.delay(1200)
+            viewModel.refresh()
+        }
     }
 
     val book = openBook
@@ -150,7 +159,8 @@ fun ReadingScreen(
                 startBlockIndex = state.pageFor(book),
                 initialSettings = state.readerSettings,
                 onSettingsChanged = viewModel::saveReaderSettings,
-                onClose = ::closeReader
+                onClose = ::closeReader,
+                todayBaseSeconds = state.readingToday.activeSeconds
             )
         }
         book != null && bytes != null -> Surface(modifier = Modifier.fillMaxSize(), color = Bg) {
@@ -158,6 +168,7 @@ fun ReadingScreen(
                 book = book,
                 bytes = bytes,
                 startPage = state.pageFor(book),
+                todayBaseSeconds = state.readingToday.activeSeconds,
                 onClose = ::closeReader
             )
         }
@@ -174,6 +185,7 @@ fun ReadingScreen(
                     requestCover()
                 },
                 onRemoveBook = viewModel::removeBook,
+                onClaim = { goal -> viewModel.claim(goal, onRewardClaimed) },
                 loadCover = viewModel::loadCover,
                 insets = libraryInsets
             )
@@ -182,11 +194,9 @@ fun ReadingScreen(
 }
 
 /**
- * Biblioteka: cienki pasek liczb, karta "Czytaj dalej", polka z okladkami i wejscie do Slowek.
- *
- * Celow dziennych tu NIE MA - przeniosly sie do zakladki Postep, gdzie mieszkaja wszystkie inne
- * nagrody i osiagniecia. Czytelnia ma wygladac jak aplikacja do czytania, a nie jak lista zadan:
- * gracz wchodzi tu, zeby wrocic do ksiazki, nie zeby odebrac zloto.
+ * Biblioteka w stylu ksiegarni: karta dziennego czytania z nagrodami na gorze (to ona ma ciagnac
+ * do codziennych 15 minut), duza karta "Czytaj dalej", potem polki z okladkami stojacymi na
+ * drewnianej desce - "Czytasz teraz", "Moje ksiazki" (z okladka "+ Dodaj") i darmowa klasyka.
  */
 @Composable
 private fun LibraryView(
@@ -197,33 +207,36 @@ private fun LibraryView(
     onOpenVocabulary: () -> Unit,
     onPickCover: (Book) -> Unit,
     onRemoveBook: (Book) -> Unit,
+    onClaim: (com.lernhero.domain.reading.ReadingGoal) -> Unit,
     loadCover: suspend (Book) -> ByteArray?,
     insets: PaddingValues
 ) {
+    val readingNow = state.allBooks.filter { (state.bookProgress[it.id] ?: 0) > 0 && it.id != state.continueBook?.id }
+
     Column(
         modifier = Modifier
             .fillMaxSize()
-            // Marginesy pod paski SA CZESCIA obszaru przewijania, nie ramka wokol niego - dzieki
-            // temu tresc przewija sie pod paskiem, zamiast urywac sie tuz nad nim.
-            .verticalScroll(rememberScrollState())
             .padding(insets)
+            .verticalScroll(rememberScrollState())
             .padding(horizontal = 16.dp),
-        verticalArrangement = Arrangement.spacedBy(14.dp)
+        verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
         Row(
             modifier = Modifier.fillMaxWidth().padding(top = 4.dp),
-            horizontalArrangement = Arrangement.SpaceBetween,
-            verticalAlignment = Alignment.Bottom
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(8.dp)
         ) {
-            Text(
-                text = "Library",
-                color = Gold,
-                fontFamily = FontPixel(),
-                fontWeight = FontWeight.Bold,
-                style = MaterialTheme.typography.headlineSmall
-            )
-            MiniStats(state)
+            KitText(text = "Library", size = 28.sp, color = KitGold)
+            Box(modifier = Modifier.weight(1f))
+            HeaderChip("📖", "${state.allBooks.size}")
+            HeaderChip("🔤", "${state.wordsLearning + state.wordsMastered}")
         }
+
+        DailyReadingCard(
+            today = state.readingToday,
+            claimed = state::claimedToday,
+            onClaim = onClaim
+        )
 
         state.continueBook?.let { book ->
             ContinueCard(
@@ -235,14 +248,21 @@ private fun LibraryView(
             )
         }
 
-        VocabularyCard(
-            learning = state.wordsLearning,
-            mastered = state.wordsMastered,
-            onClick = onOpenVocabulary
-        )
+        if (readingNow.isNotEmpty()) {
+            Shelf(
+                title = "Reading Now",
+                books = readingNow,
+                state = state,
+                openingId = openingId,
+                loadCover = loadCover,
+                onOpen = onOpen,
+                onPickCover = null,
+                onRemove = null
+            )
+        }
 
         Shelf(
-            title = "Your Library",
+            title = "My Books",
             books = state.importedBooks,
             state = state,
             openingId = openingId,
@@ -250,13 +270,11 @@ private fun LibraryView(
             onOpen = onOpen,
             onPickCover = onPickCover,
             onRemove = onRemoveBook,
-            emptyHint = "You haven't uploaded any books yet."
+            onAdd = onImport
         )
 
-        ImportButton(onClick = onImport)
-
         Shelf(
-            title = "Z wygasla licencja",
+            title = "Free Classics",
             books = state.bundledBooks,
             state = state,
             openingId = openingId,
@@ -267,43 +285,73 @@ private fun LibraryView(
             onRemove = null
         )
 
+        VocabularyCard(
+            learning = state.wordsLearning,
+            mastered = state.wordsMastered,
+            onClick = onOpenVocabulary
+        )
+
+        StatsPanel(state)
+
         state.message?.let { message ->
-            Text(text = message, color = Green, fontFamily = FontFirst(), fontSize = 12.sp)
+            Text(text = message, color = Green, fontFamily = FontFirst(), fontWeight = FontWeight.Bold, fontSize = 12.sp)
         }
 
-        Spacer(modifier = Modifier.height(8.dp))
-    }
-}
-
-/** Minimalny licznik w naglowku - cztery liczby w jednej linii, bez wlasnej karty i ramki. */
-@Composable
-private fun MiniStats(state: LibraryUiState) {
-    Row(horizontalArrangement = Arrangement.spacedBy(10.dp), verticalAlignment = Alignment.Bottom) {
-        MiniStat(value = "${state.readingStats.totalMinutes}", label = "min")
-        MiniStat(value = "${state.readingStats.totalPages}", label = "pages")
-        MiniStat(value = "${state.readingStats.averageWpm}", label = "wpm")
-        MiniStat(value = "${state.readingToday.minutes}", label = "today", accent = true)
+        Spacer(modifier = Modifier.height(12.dp))
     }
 }
 
 @Composable
-private fun MiniStat(value: String, label: String, accent: Boolean = false) {
-    Column(horizontalAlignment = Alignment.CenterHorizontally) {
-        Text(
-            text = value,
-            color = if (accent) Green else GoldFrame,
-            fontFamily = FontPixel(),
-            fontWeight = FontWeight.Bold,
-            fontSize = 13.sp
-        )
-        Text(text = label, color = Muted, fontFamily = FontFirst(), fontSize = 8.sp)
+private fun HeaderChip(icon: String, value: String) {
+    Row(
+        modifier = Modifier
+            .clip(RoundedCornerShape(50))
+            .background(Color(0xE60C0806))
+            .border(1.5.dp, KitOutline, RoundedCornerShape(50))
+            .padding(horizontal = 10.dp, vertical = 4.dp),
+        horizontalArrangement = Arrangement.spacedBy(4.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Text(icon, fontSize = 13.sp)
+        Text(value, color = Color.White, fontFamily = FontFirst(), fontWeight = FontWeight.Black, fontSize = 13.sp)
+    }
+}
+
+/** Liczby calego czytania - na dole, bo to podsumowanie, a nie powod wejscia do biblioteki. */
+@Composable
+private fun StatsPanel(state: LibraryUiState) {
+    KitPanel(modifier = Modifier.fillMaxWidth()) {
+        Column(modifier = Modifier.fillMaxWidth().padding(14.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+            KitText(text = "Your Reading", size = 17.sp, color = KitGold, strokeWidth = 5f)
+            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                StatTile("⏱", state.readingStats.activeSeconds.asHoursMinutes(), "Total time", Modifier.weight(1f))
+                StatTile("📄", "${state.readingStats.totalPages}", "Pages", Modifier.weight(1f))
+                StatTile("⚡", "${state.readingStats.averageWpm}", "Words/min", Modifier.weight(1f))
+            }
+        }
+    }
+}
+
+@Composable
+private fun StatTile(icon: String, value: String, label: String, modifier: Modifier = Modifier) {
+    Column(
+        modifier = modifier
+            .clip(RoundedCornerShape(12.dp))
+            .background(Color(0x66000000))
+            .border(2.dp, KitOutline, RoundedCornerShape(12.dp))
+            .padding(vertical = 10.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.spacedBy(2.dp)
+    ) {
+        Text(icon, fontSize = 16.sp)
+        KitText(text = value, size = 17.sp, color = Color.White, maxLines = 1)
+        Text(label.uppercase(), color = KitMuted, fontFamily = FontFirst(), fontWeight = FontWeight.Bold, fontSize = 9.sp)
     }
 }
 
 /**
- * "Czytaj dalej" - najwazniejszy przycisk calego ekranu. Gracz w 95% przypadkow wchodzi tu po to,
- * zeby wrocic do tej jednej ksiazki, wiec stoi ona nad polka i mowi od razu, na ktorej stronie
- * zostal.
+ * "Czytaj dalej" - najwazniejszy przycisk calego ekranu: duza okladka, tytul, autor, strona i
+ * wielki zielony przycisk. Gracz w 95% przypadkow wchodzi tu po to, zeby wrocic do tej ksiazki.
  */
 @Composable
 private fun ContinueCard(
@@ -313,42 +361,39 @@ private fun ContinueCard(
     loadCover: suspend (Book) -> ByteArray?,
     onClick: () -> Unit
 ) {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clip(RoundedCornerShape(12.dp))
-            .background(Panel)
-            .border(2.dp, GoldFrame, RoundedCornerShape(12.dp))
-            .clickable(onClick = onClick)
-            .padding(12.dp),
-        horizontalArrangement = Arrangement.spacedBy(12.dp),
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        Box(modifier = Modifier.width(52.dp)) {
-            CoverArt(book = book, loadCover = loadCover)
-        }
-        Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(3.dp)) {
-            Text(text = "CZYTAJ DALEJ", color = GoldDim, fontFamily = FontPixel(), fontSize = 9.sp)
-            Text(
-                text = book.title,
-                color = Cream,
-                fontFamily = FontFirst(),
-                fontWeight = FontWeight.Bold,
-                fontSize = 14.sp,
-                maxLines = 2,
-                overflow = TextOverflow.Ellipsis
-            )
-            Text(
-                text = if (page > 0) "strona ${page + 1}" else "od poczatku",
-                color = Muted,
-                fontFamily = FontFirst(),
-                fontSize = 11.sp
-            )
-        }
-        if (loading) {
-            CircularProgressIndicator(color = Gold, modifier = Modifier.size(20.dp))
-        } else {
-            Text(text = "▶", color = Gold, fontFamily = FontPixel(), fontSize = 18.sp)
+    KitPanel(modifier = Modifier.fillMaxWidth()) {
+        Row(
+            modifier = Modifier.fillMaxWidth().clickable(onClick = onClick).padding(14.dp),
+            horizontalArrangement = Arrangement.spacedBy(14.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Box(modifier = Modifier.width(92.dp)) {
+                CoverArt(book = book, loadCover = loadCover)
+            }
+            Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(5.dp)) {
+                Text("CONTINUE READING", color = KitGold, fontFamily = FontFirst(), fontWeight = FontWeight.Black, fontSize = 10.sp)
+                KitText(text = book.title, size = 18.sp, color = Color.White, maxLines = 2)
+                Text(
+                    text = book.author,
+                    color = KitMuted,
+                    fontFamily = FontFirst(),
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 12.sp,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis
+                )
+                Text(
+                    text = if (page > 0) "📍 Section ${page + 1}" else "📍 Start from the beginning",
+                    color = Cream,
+                    fontFamily = FontFirst(),
+                    fontSize = 11.sp
+                )
+                if (loading) {
+                    CircularProgressIndicator(color = Gold, modifier = Modifier.size(24.dp))
+                } else {
+                    KitButton(label = "▶  READ", colors = GreenButton, onClick = onClick, modifier = Modifier.fillMaxWidth())
+                }
+            }
         }
     }
 }
@@ -359,28 +404,34 @@ private fun VocabularyCard(learning: Int, mastered: Int, onClick: () -> Unit) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .clip(RoundedCornerShape(12.dp))
-            .background(Ink)
-            .border(1.5.dp, GoldDim, RoundedCornerShape(12.dp))
+            .clip(RoundedCornerShape(16.dp))
+            .background(Brush.horizontalGradient(listOf(Color(0xFF1E4F95), Color(0xFF12305E))))
+            .border(2.5.dp, KitOutline, RoundedCornerShape(16.dp))
             .clickable(onClick = onClick)
             .padding(horizontal = 14.dp, vertical = 12.dp),
         horizontalArrangement = Arrangement.spacedBy(12.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
+        Text("🔤", fontSize = 30.sp)
         Column(modifier = Modifier.weight(1f)) {
-            Text(text = "Words", color = Gold, fontFamily = FontPixel(), fontWeight = FontWeight.Bold, fontSize = 15.sp)
+            KitText(text = "Words", size = 18.sp, color = Color.White, strokeWidth = 5f)
             Text(
-                text = "$learning do nauki  ·  $mastered opanowanych",
-                color = Muted,
+                text = "$learning to learn  ·  $mastered mastered",
+                color = Color(0xFFBFD3F0),
                 fontFamily = FontFirst(),
-                fontSize = 10.sp
+                fontWeight = FontWeight.Bold,
+                fontSize = 12.sp
             )
         }
-        Text(text = "›", color = GoldFrame, fontFamily = FontPixel(), fontWeight = FontWeight.Bold, fontSize = 20.sp)
+        KitText(text = "›", size = 26.sp, color = KitGold)
     }
 }
 
-/** Rzad okladek przewijany w poziomie - polka, a nie lista wierszy. */
+/**
+ * Polka: tytul, a pod nim okladki STOJACE na drewnianej desce, przewijane w poziomie.
+ * [onAdd] dodaje na poczatku okladke "+ Dodaj ksiazke" - import jest czescia polki, nie osobnym
+ * przyciskiem pod nia.
+ */
 @Composable
 private fun Shelf(
     title: String,
@@ -391,42 +442,81 @@ private fun Shelf(
     onOpen: (Book) -> Unit,
     onPickCover: ((Book) -> Unit)?,
     onRemove: ((Book) -> Unit)?,
-    emptyHint: String? = null
+    onAdd: (() -> Unit)? = null
 ) {
     Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-        Text(
-            text = title,
-            color = Gold,
-            fontFamily = FontPixel(),
-            fontWeight = FontWeight.Bold,
-            style = MaterialTheme.typography.titleMedium
-        )
-
-        if (books.isEmpty()) {
-            if (emptyHint != null) {
-                Text(text = emptyHint, color = Muted, fontFamily = FontFirst(), fontSize = 11.sp)
-            }
-            return@Column
+        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            KitText(text = title, size = 18.sp, color = KitGold, strokeWidth = 5f)
+            Text("${books.size}", color = KitMuted, fontFamily = FontFirst(), fontWeight = FontWeight.Black, fontSize = 12.sp)
         }
-
-        LazyRow(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-            items(books, key = { it.id }) { book ->
-                BookCard(
-                    book = book,
-                    page = state.bookProgress[book.id],
-                    loading = openingId == book.id,
-                    loadCover = loadCover,
-                    onOpen = { onOpen(book) },
-                    onPickCover = onPickCover?.let { pick -> { pick(book) } },
-                    onRemove = onRemove?.let { remove -> { remove(book) } }
-                )
+        Box {
+            // Deska polki pod okladkami.
+            Box(
+                modifier = Modifier
+                    .align(Alignment.BottomCenter)
+                    .fillMaxWidth()
+                    .padding(bottom = 36.dp)
+                    .height(12.dp)
+                    .clip(RoundedCornerShape(4.dp))
+                    .background(Brush.verticalGradient(listOf(Color(0xFF9A6A3A), Color(0xFF5A3A1C))))
+                    .border(1.5.dp, KitOutline, RoundedCornerShape(4.dp))
+            )
+            LazyRow(
+                horizontalArrangement = Arrangement.spacedBy(12.dp),
+                contentPadding = PaddingValues(horizontal = 6.dp)
+            ) {
+                if (onAdd != null) {
+                    item(key = "add") { AddBookCard(onClick = onAdd) }
+                }
+                items(books, key = { it.id }) { book ->
+                    BookCard(
+                        book = book,
+                        page = state.bookProgress[book.id],
+                        loading = openingId == book.id,
+                        loadCover = loadCover,
+                        onOpen = { onOpen(book) },
+                        onPickCover = onPickCover?.let { pick -> { pick(book) } },
+                        onRemove = onRemove?.let { remove -> { remove(book) } }
+                    )
+                }
             }
+        }
+        if (books.isEmpty() && onAdd != null) {
+            Text(
+                text = "Upload any TXT or PDF - a school reading, a novel, notes. Tap a word while reading to translate and save it.",
+                color = KitMuted,
+                fontFamily = FontFirst(),
+                fontSize = 11.sp
+            )
         }
     }
 }
 
 /** Szerokosc okladki na polce - okladki maja proporcje ksiazki (2:3), stad tylko szerokosc. */
 private val COVER_WIDTH = 96.dp
+
+@Composable
+private fun AddBookCard(onClick: () -> Unit) {
+    Column(modifier = Modifier.width(COVER_WIDTH), verticalArrangement = Arrangement.spacedBy(5.dp)) {
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .aspectRatio(0.66f)
+                .clip(RoundedCornerShape(8.dp))
+                .background(Color(0x55000000))
+                .border(2.dp, KitGold.copy(alpha = 0.6f), RoundedCornerShape(8.dp))
+                .clickable(onClick = onClick),
+            contentAlignment = Alignment.Center
+        ) {
+            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                KitText(text = "+", size = 36.sp, color = KitGold)
+                Text("Add book", color = KitGold, fontFamily = FontFirst(), fontWeight = FontWeight.Black, fontSize = 11.sp)
+                Text("TXT · PDF", color = KitMuted, fontFamily = FontFirst(), fontSize = 9.sp)
+            }
+        }
+        Box(modifier = Modifier.height(30.dp))
+    }
+}
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
@@ -457,6 +547,23 @@ private fun BookCard(
         ) {
             CoverArt(book = book, loadCover = loadCover)
 
+            if (page != null && page > 0) {
+                Text(
+                    text = "§${page + 1}",
+                    color = Color.White,
+                    fontFamily = FontFirst(),
+                    fontWeight = FontWeight.Black,
+                    fontSize = 10.sp,
+                    modifier = Modifier
+                        .align(Alignment.TopEnd)
+                        .padding(4.dp)
+                        .clip(RoundedCornerShape(50))
+                        .background(Color(0xFF3F9E2B))
+                        .border(1.5.dp, KitOutline, RoundedCornerShape(50))
+                        .padding(horizontal = 6.dp, vertical = 1.dp)
+                )
+            }
+
             if (loading) {
                 Box(
                     modifier = Modifier
@@ -470,24 +577,26 @@ private fun BookCard(
             }
         }
 
-        Text(
-            text = book.title,
-            color = Cream,
-            fontFamily = FontFirst(),
-            fontWeight = FontWeight.Bold,
-            fontSize = 10.sp,
-            lineHeight = 12.sp,
-            maxLines = 2,
-            overflow = TextOverflow.Ellipsis
-        )
-        Text(
-            text = if (page != null && page > 0) "str. ${page + 1}" else book.author,
-            color = if (page != null && page > 0) GoldFrame else Muted,
-            fontFamily = FontFirst(),
-            fontSize = 9.sp,
-            maxLines = 1,
-            overflow = TextOverflow.Ellipsis
-        )
+        Column(modifier = Modifier.height(30.dp)) {
+            Text(
+                text = book.title,
+                color = Cream,
+                fontFamily = FontFirst(),
+                fontWeight = FontWeight.Bold,
+                fontSize = 11.sp,
+                lineHeight = 12.sp,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis
+            )
+            Text(
+                text = book.author,
+                color = Muted,
+                fontFamily = FontFirst(),
+                fontSize = 9.sp,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis
+            )
+        }
     }
 
     if (menuOpen) {
@@ -500,9 +609,19 @@ private fun BookCard(
     }
 }
 
+/** Zastepcze okladki - kolor z tytulu, wiec ta sama ksiazka ma zawsze ten sam kolor. */
+private val CoverColors = listOf(
+    listOf(Color(0xFF7A2E2E), Color(0xFF3E1520)),
+    listOf(Color(0xFF1E4F95), Color(0xFF12305E)),
+    listOf(Color(0xFF2E6B3F), Color(0xFF173A22)),
+    listOf(Color(0xFF6B3A8A), Color(0xFF341A48)),
+    listOf(Color(0xFF8A5A1E), Color(0xFF4A2E0C)),
+    listOf(Color(0xFF1E6B6B), Color(0xFF0E3A3A))
+)
+
 /**
- * Okladka: wgrany obrazek albo zastepczy grzbiet z tytulem. Bajty czytane sa leniwie, per
- * ksiazka - polka nie moze czekac z narysowaniem sie na dysk.
+ * Okladka: wgrany obrazek albo wygenerowana okladka (kolor z tytulu, grzbiet, zlote ramki).
+ * Bajty czytane sa leniwie, per ksiazka - polka nie moze czekac z narysowaniem sie na dysk.
  */
 @Composable
 private fun CoverArt(book: Book, loadCover: suspend (Book) -> ByteArray?) {
@@ -512,13 +631,14 @@ private fun CoverArt(book: Book, loadCover: suspend (Book) -> ByteArray?) {
         cover = loadCover(book)?.let { bytes -> decodeImageBytes(bytes) }
     }
 
+    val colors = CoverColors[(book.title.hashCode() and 0x7fffffff) % CoverColors.size]
     Box(
         modifier = Modifier
             .fillMaxWidth()
             .aspectRatio(0.66f)
-            .clip(RoundedCornerShape(8.dp))
-            .background(Ink)
-            .border(1.5.dp, GoldDim, RoundedCornerShape(8.dp)),
+            .clip(RoundedCornerShape(topStart = 3.dp, bottomStart = 3.dp, topEnd = 8.dp, bottomEnd = 8.dp))
+            .background(Brush.verticalGradient(colors))
+            .border(2.dp, KitOutline, RoundedCornerShape(topStart = 3.dp, bottomStart = 3.dp, topEnd = 8.dp, bottomEnd = 8.dp)),
         contentAlignment = Alignment.Center
     ) {
         val image = cover
@@ -530,25 +650,40 @@ private fun CoverArt(book: Book, loadCover: suspend (Book) -> ByteArray?) {
                 contentScale = ContentScale.Crop
             )
         } else {
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(6.dp)
+                    .border(1.dp, KitGold.copy(alpha = 0.5f), RoundedCornerShape(4.dp))
+            )
             Column(
-                modifier = Modifier.padding(8.dp),
+                modifier = Modifier.padding(horizontal = 10.dp),
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.spacedBy(6.dp)
             ) {
+                Text("✦", color = KitGold, fontSize = 12.sp)
                 Text(
                     text = book.title,
-                    color = GoldFrame,
+                    color = Color(0xFFFFF1D6),
                     fontFamily = FontFirst(),
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 9.sp,
-                    lineHeight = 11.sp,
+                    fontWeight = FontWeight.Black,
+                    fontSize = 11.sp,
+                    lineHeight = 13.sp,
                     textAlign = TextAlign.Center,
                     maxLines = 4,
                     overflow = TextOverflow.Ellipsis
                 )
-                Text(text = book.format.name.uppercase(), color = GoldDim, fontFamily = FontFirst(), fontSize = 8.sp)
+                Text(book.format.name.uppercase(), color = KitGold.copy(alpha = 0.7f), fontFamily = FontFirst(), fontWeight = FontWeight.Bold, fontSize = 8.sp)
             }
         }
+        // Grzbiet - ciemny pasek z polyskiem przy lewej krawedzi, jak u prawdziwej ksiazki.
+        Box(
+            modifier = Modifier
+                .align(Alignment.CenterStart)
+                .fillMaxHeight()
+                .width(7.dp)
+                .background(Brush.horizontalGradient(listOf(Color(0x66000000), Color(0x22FFFFFF), Color(0x00000000))))
+        )
     }
 }
 
@@ -560,67 +695,31 @@ private fun BookMenuDialog(
     onRemove: (() -> Unit)?
 ) {
     Dialog(onDismissRequest = onDismiss) {
-        Column(
-            modifier = Modifier
-                .fillMaxWidth()
-                .clip(RoundedCornerShape(14.dp))
-                .background(Panel)
-                .border(2.dp, GoldFrame, RoundedCornerShape(14.dp))
-                .padding(16.dp),
-            verticalArrangement = Arrangement.spacedBy(10.dp)
-        ) {
-            Text(
-                text = book.title,
-                color = Gold,
-                fontFamily = FontPixel(),
-                fontWeight = FontWeight.Bold,
-                fontSize = 15.sp
-            )
-
-            onPickCover?.let {
-                MenuButton(
-                    text = if (book.coverLocator == null) "Upload Cover" else "Change Cover",
-                    accent = GoldFrame,
-                    onClick = it
-                )
+        KitPanel(modifier = Modifier.fillMaxWidth()) {
+            Column(
+                modifier = Modifier.fillMaxWidth().padding(16.dp),
+                verticalArrangement = Arrangement.spacedBy(10.dp)
+            ) {
+                KitText(text = book.title, size = 18.sp, color = KitGold, maxLines = 2)
+                onPickCover?.let {
+                    KitButton(
+                        label = if (book.coverLocator == null) "Upload Cover" else "Change Cover",
+                        colors = listOf(Color(0xFF5BB8FF), Color(0xFF2C6FC4)),
+                        modifier = Modifier.fillMaxWidth(),
+                        onClick = it
+                    )
+                }
+                onRemove?.let {
+                    KitButton(
+                        label = "Remove from Library",
+                        colors = listOf(Color(0xFFE5645A), Color(0xFF8C2A22)),
+                        modifier = Modifier.fillMaxWidth(),
+                        onClick = it
+                    )
+                }
+                KitButton(label = "Cancel", colors = listOf(Color(0xFF6B5A48), Color(0xFF3A2E22)), modifier = Modifier.fillMaxWidth(), onClick = onDismiss)
             }
-            onRemove?.let {
-                MenuButton(text = "Remove from Library", accent = Amber, onClick = it)
-            }
-            MenuButton(text = "Cancel", accent = GoldDim, onClick = onDismiss)
         }
-    }
-}
-
-@Composable
-private fun MenuButton(text: String, accent: Color, onClick: () -> Unit) {
-    Box(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clip(RoundedCornerShape(8.dp))
-            .background(Ink)
-            .border(1.5.dp, accent, RoundedCornerShape(8.dp))
-            .clickable(onClick = onClick)
-            .padding(vertical = 10.dp),
-        contentAlignment = Alignment.Center
-    ) {
-        Text(text = text, color = accent, fontFamily = FontFirst(), fontWeight = FontWeight.Bold, fontSize = 12.sp)
-    }
-}
-
-@Composable
-private fun ImportButton(onClick: () -> Unit) {
-    Box(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clip(RoundedCornerShape(10.dp))
-            .background(Color(0xFFB4451F))
-            .border(1.5.dp, Gold, RoundedCornerShape(10.dp))
-            .clickable(onClick = onClick)
-            .padding(vertical = 12.dp),
-        contentAlignment = Alignment.Center
-    ) {
-        Text(text = "+ Dodaj ksiazke (TXT, PDF)", color = Color.White, fontFamily = FontPixel(), fontWeight = FontWeight.Bold, fontSize = 13.sp)
     }
 }
 
@@ -631,12 +730,13 @@ private fun ReaderView(
     book: Book,
     bytes: ByteArray,
     startPage: Int,
+    todayBaseSeconds: Int,
     onClose: () -> Unit
 ) {
     val scope = rememberCoroutineScope()
     val playerRepository = koinInject<PlayerRepository>()
 
-    val session = remember(book.id) { ReaderSession(book, bytes, startPage, playerRepository, scope) }
+    val session = remember(book.id) { ReaderSession(book, bytes, startPage, playerRepository, scope, todayBaseSeconds) }
     val state = session.uiState
     var zoom by remember { mutableStateOf(1f) }
     var chromeVisible by remember { mutableStateOf(true) }

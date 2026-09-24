@@ -12,6 +12,14 @@ package com.lernhero.domain.summon
  */
 object FreeSummon {
 
+    /**
+     * Id bannerow w zapisie ([com.lernhero.domain.player.Player.freeSummonClaims]). Stale, a nie
+     * literaly rozsypane po ekranach: zmiana takiego tekstu w jednym miejscu kasuje wszystkim
+     * graczom licznik darmowego losu, wiec nie moze istniec w kilku kopiach.
+     */
+    const val BASIC_BANNER = "basic"
+    const val HEROIC_BANNER = "heroic"
+
     /** Zwykly banner - darmowy los co 6 godzin. */
     const val BASIC_COOLDOWN_MS: Long = 6L * 60 * 60 * 1000
 
@@ -28,6 +36,14 @@ object FreeSummon {
 
     fun isReady(claimedAt: Long?, cooldownMs: Long, now: Long): Boolean =
         remainingMs(claimedAt, cooldownMs, now) <= 0L
+
+    /**
+     * Czy czeka JAKIKOLWIEK darmowy los. Dla plakietek poza Centrum Przyzywania (okno druzyny,
+     * powiadomienia) - tam liczy sie sam fakt "jest po co tam isc", a nie ktory banner.
+     */
+    fun anyReady(claims: Map<String, Long>, now: Long): Boolean =
+        isReady(claims[BASIC_BANNER], BASIC_COOLDOWN_MS, now) ||
+            isReady(claims[HEROIC_BANNER], HEROIC_COOLDOWN_MS, now)
 
     /**
      * Odliczanie w formacie zaleznym od skali: sekundy przy krotkim czasie, dni przy dlugim.

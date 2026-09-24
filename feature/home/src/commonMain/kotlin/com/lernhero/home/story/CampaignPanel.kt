@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyRow
@@ -20,21 +21,19 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.lernhero.domain.energy.EnergyRules
 import com.lernhero.domain.story.IdleReward
+import com.lernhero.domain.story.StageRepeats
 import com.lernhero.domain.story.StoryProgress
 import com.lernhero.domain.story.StoryStage
 import com.lernhero.domain.story.StoryStageCatalog
@@ -44,6 +43,7 @@ import com.lernhero.game.character.MonsterVisualPresets
 import com.lernhero.home.ui.FantasyFrame
 import com.lernhero.shared.theme.FontFirst
 import com.lernhero.shared.theme.FontPixel
+import kotlin.math.roundToInt
 import org.jetbrains.compose.resources.painterResource
 
 private val Ink = Color(0xFF120E0A)
@@ -55,14 +55,29 @@ private val Muted = Color(0xFF9D8B6A)
 private val GoldText = Color(0xFFFFD34D)
 private val BattleRed = Color(0xFFB4451F)
 private val CollectGreen = Color(0xFF3FA96A)
+private val Green = Color(0xFF4ADE80)
 
 /**
- * Panel kampanii - siedzi WEWNATRZ zakladki "Walcz", pod skladem druzyny. Uklad wzorowany na
- * Idle Heroes: tlo krainy z przeciwnikami, pasek nagrod idle z przyciskiem GET u gory, rzad
- * przyciskow (MAPA / BATTLE / LOOT) i ciag ponumerowanych plansz na dole.
+ * Panel kampanii - otwierany z tabliczki miejsca na scenie wyprawy. Uklad wzorowany na Idle Heroes:
+ * tlo krainy z przeciwnikami, pasek nagrod idle z przyciskiem GET u gory, rzad przyciskow
+ * (MAPA / BATTLE / LOOT) i ciag ponumerowanych plansz na dole.
  *
- * Swiadomie NIE ma tu przycisku "Team" z oryginalu - druzyna stoi juz nad tym panelem, w tej samej
- * zakladce, wiec osobne przejscie do niej byloby droga donikad.
+ * Swiadomie NIE ma tu przycisku "Team" z oryginalu - sklad ustawia sie na scenie, tuz obok
+ * przycisku START, wiec osobne przejscie do niego byloby droga donikad.
+ *
+ * ## Co sie w nim zmienilo i dlaczego
+ *
+ * Panel zostal, bo robi rzecz, ktorej zadna lista nie zrobi: pokazuje, KTO czeka na planszy - sceneria
+ * krainy i sylwetki przeciwnikow liczone z tego samego ziarna, co prawdziwa walka. To jest powod,
+ * dla ktorego sie tu wchodzi.
+ *
+ * Naprawione sa trzy rzeczy, ktore w nim nie dzialaly:
+ *  - **nie dalo sie wybrac planszy** - pasek plansz lezal na samym dole ekranu, a pod nim rysowal
+ *    sie plywajacy krzyzyk zamkniecia, ktory przechwytywal dotyk. Krzyzyk siedzi teraz W panelu,
+ *    w gornym pasku, wiec nie ma czego zaslaniac;
+ *  - **panel zajmowal caly ekran**, zeby zadac jedno pytanie - teraz jest oknem na scenie;
+ *  - **o planszy nie mowil nic poza numerem** - doszedl pasek z nagroda ([StageReward]) i licznik
+ *    powtorek na kazdym kolku.
  */
 @Composable
 fun CampaignPanel(
@@ -76,12 +91,18 @@ fun CampaignPanel(
     onOpenLoot: () -> Unit,
     onCollectIdle: () -> Unit,
     onBattle: () -> Unit,
-    modifier: Modifier = Modifier
+    onClose: () -> Unit,
+    modifier: Modifier = Modifier,
+    /** Ile razy KAZDA plansza tej krainy zostala juz zdobyta - patrz [StageRepeats]. */
+    clearsOf: (StoryStage) -> Int = { 0 }
 ) {
     FantasyFrame(modifier = modifier.fillMaxWidth(), inset = 16.dp) {
+      // Panel wypelnia miejsce przydzielone przez okno, a nadmiar wysokosci zbiera GRAFIKA planszy -
+      // patrz [StageScene]. Naglowek idle, pasek nagrody, przyciski i pasek plansz maja swoje stale
+      // wysokosci i zawsze zostaja widoczne.
       Column(
         modifier = Modifier
-            .fillMaxWidth()
+            .fillMaxSize()
             .clip(RoundedCornerShape(14.dp))
             .background(Panel)
             .border(2.dp, Frame, RoundedCornerShape(14.dp)),
@@ -92,10 +113,18 @@ fun CampaignPanel(
             stageLabel = stage.label,
             reward = idleReward,
             storageFraction = idleStorageFraction,
-            onCollect = onCollectIdle
+            onCollect = onCollectIdle,
+            onClose = onClose
         )
 
-        StageScene(stage = stage, world = world)
+        StageScene(
+            stage = stage,
+            world = world,
+            // Grafika rosnie razem z oknem zamiast zostawiac pustke pod panelem.
+            modifier = Modifier.weight(1f)
+        )
+
+        StageReward(stage = stage, clears = clearsOf(stage))
 
         ActionRow(
             isBoss = stage.isBoss,
@@ -108,6 +137,7 @@ fun CampaignPanel(
             world = world,
             stage = stage,
             cleared = cleared,
+            clearsOf = clearsOf,
             onSelectStage = onSelectStage
         )
       }
@@ -118,6 +148,9 @@ fun CampaignPanel(
  * Pasek nagrod idle. Sam pokazuje, ile nazbieralo sie od ostatniego odbioru i jak pelny jest
  * magazyn - po [com.lernhero.domain.story.IdleRewards.CAP_HOURS] przestaje kapac, i to widac na
  * pasku, zeby gracz wiedzial, ze warto zajrzec.
+ *
+ * Tu tez siedzi zamkniecie okna: gorny pasek to jedyne miejsce, ktore NIGDY nie zaslania tresci -
+ * a poprzedni, plywajacy krzyzyk lezal dokladnie na pasku plansz i zjadal tapniecia.
  */
 @Composable
 private fun IdleHeader(
@@ -125,7 +158,8 @@ private fun IdleHeader(
     stageLabel: String,
     reward: IdleReward,
     storageFraction: Float,
-    onCollect: () -> Unit
+    onCollect: () -> Unit,
+    onClose: () -> Unit
 ) {
     Column(
         modifier = Modifier
@@ -158,7 +192,7 @@ private fun IdleHeader(
 
             Row(horizontalArrangement = Arrangement.spacedBy(6.dp), verticalAlignment = Alignment.CenterVertically) {
                 IdleChip("💰", reward.gold)
-                IdleChip("⚙", reward.iron)
+                IdleChip("🔩", reward.iron)
                 IdleChip("✨", reward.essence)
             }
 
@@ -178,6 +212,20 @@ private fun IdleHeader(
                     )
                     .clickable(enabled = !reward.isEmpty, onClick = onCollect)
                     .padding(horizontal = 12.dp, vertical = 7.dp)
+            )
+
+            Text(
+                text = "✕",
+                color = Muted,
+                fontFamily = FontPixel(),
+                fontWeight = FontWeight.Bold,
+                fontSize = 13.sp,
+                modifier = Modifier
+                    .clip(RoundedCornerShape(8.dp))
+                    .background(Panel)
+                    .border(1.5.dp, FrameDim, RoundedCornerShape(8.dp))
+                    .clickable(onClick = onClose)
+                    .padding(horizontal = 9.dp, vertical = 7.dp)
             )
         }
 
@@ -213,29 +261,23 @@ private fun IdleChip(icon: String, value: Int) {
     }
 }
 
-internal fun Int.compactAmount(): String = when {
-    this >= 1_000_000 -> "${this / 1_000_000}.${(this % 1_000_000) / 100_000}M"
-    this >= 1_000 -> "${this / 1_000}.${(this % 1_000) / 100}K"
-    else -> toString()
-}
-
 /**
  * Scena planszy: tlo krainy (placeholder do czasu PNG - patrz [StoryWorldArt]) i stojacy na nim
  * przeciwnicy. To jest to samo, co wejdzie do walki - podglad liczy sie z tego samego seeda co
  * prawdziwa walka ([StoryStage]), wiec nie da sie tych dwoch rozjechac.
  */
 @Composable
-private fun StageScene(stage: StoryStage, world: StoryWorld) {
+private fun StageScene(stage: StoryStage, world: StoryWorld, modifier: Modifier = Modifier) {
     val art = world.art()
 
     Box(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxWidth()
-            .height(140.dp)
+            .heightIn(min = STAGE_SCENE_MIN_HEIGHT)
             .background(art.gradient())
     ) {
         art.background?.let { background ->
-            // Podglad to niski pasek (140dp), a pelna mapa jest wysoka - pokazujemy GORE grafiki
+            // Podglad to niski pasek, a pelna mapa jest wysoka - pokazujemy GORE grafiki
             // (niebo/horyzont krainy, nie ziemia pod nogami), stad alignment = TopCenter przy Crop.
             Image(
                 painter = painterResource(background),
@@ -293,6 +335,62 @@ private fun StageScene(stage: StoryStage, world: StoryWorld) {
     }
 }
 
+/**
+ * Co da wejscie na TE plansze - jedna linijka miedzy scena a przyciskiem BATTLE.
+ *
+ * Stoi dokladnie tam, gdzie zapada decyzja: nad przyciskiem, ktory wydaje energie. Liczby sa
+ * PRZYBLIZONE (to ten sam podglad, co na mapie, przemnozony przez ulamek za powtorki - na wynik
+ * wplywa jeszcze quiz i passa), ale rzad wielkosci wystarczy, zeby wybrac, gdzie isc.
+ *
+ * Licznik powtorek jest tu najwazniejszy: to jedyne miejsce, w ktorym widac, ze plansza przechodzona
+ * czwarty raz placi dziesiata czesc stawki - ZANIM sie w nia wejdzie.
+ */
+@Composable
+private fun StageReward(stage: StoryStage, clears: Int) {
+    val fraction = StageRepeats.payoutFraction(clears)
+    val gold = (stage.rewardGold * fraction).roundToInt()
+    val xp = (stage.rewardXp * fraction).roundToInt()
+
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .background(Ink)
+            .padding(horizontal = 12.dp, vertical = 7.dp),
+        horizontalArrangement = Arrangement.spacedBy(10.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Text(
+            text = "💰 ${gold.compactAmount()}",
+            color = Cream,
+            fontFamily = FontFirst(),
+            fontWeight = FontWeight.Bold,
+            fontSize = 11.sp
+        )
+        Text(
+            text = "⭐ ${xp.compactAmount()}",
+            color = Cream,
+            fontFamily = FontFirst(),
+            fontWeight = FontWeight.Bold,
+            fontSize = 11.sp
+        )
+        Text(
+            text = "⚔ ${stage.waves} " + if (stage.waves == 1) "wave" else "waves",
+            color = Muted,
+            fontFamily = FontFirst(),
+            fontSize = 11.sp,
+            modifier = Modifier.weight(1f)
+        )
+        Text(
+            text = payoutLabel(clears),
+            color = if (clears == 0) Green else Muted,
+            fontFamily = FontFirst(),
+            fontWeight = FontWeight.Bold,
+            fontSize = 10.sp,
+            textAlign = TextAlign.End
+        )
+    }
+}
+
 /** MAPA / BATTLE / LOOT - BATTLE jest srodkowy i najwiekszy, bo to jedyna akcja, ktora cos zaczyna. */
 @Composable
 private fun ActionRow(
@@ -312,7 +410,9 @@ private fun ActionRow(
         SideAction(icon = "🗺", label = "MAP", onClick = onOpenMap, modifier = Modifier.weight(1f))
 
         Text(
-            text = "BATTLE",
+            // Cena stoi NA przycisku, a nie w komunikacie po kliknieciu - gracz ma wiedziec,
+            // ile kosztuje wejscie, zanim je wyda.
+            text = "BATTLE  ⚡${EnergyRules.BATTLE_COST}",
             color = Color.White,
             fontFamily = FontPixel(),
             fontWeight = FontWeight.Bold,
@@ -357,12 +457,16 @@ private fun SideAction(icon: String, label: String, onClick: () -> Unit, modifie
 /**
  * Ciag plansz krainy na dole panelu. Wybrana jest wieksza i zlota (to ona pojdzie do walki),
  * zdobyte maja ptaszka, kolejna niedostepna - klodke.
+ *
+ * Pod kazdym kolkiem stoi licznik podejsc ("x2"), bo sam ptaszek mowil tylko "bylem tu", a stawka
+ * zalezy od tego, ILE razy sie tu bylo.
  */
 @Composable
 private fun StageStrip(
     world: StoryWorld,
     stage: StoryStage,
     cleared: Map<String, Int>,
+    clearsOf: (StoryStage) -> Int,
     onSelectStage: (Int) -> Unit
 ) {
     val start = StoryWorldCatalog.startIndexOf(world.id)
@@ -392,6 +496,7 @@ private fun StageStrip(
                 selected = entry.globalIndex == stage.globalIndex,
                 playable = playable,
                 cleared = isCleared,
+                clears = clearsOf(entry),
                 onClick = { if (playable) onSelectStage(entry.globalIndex) }
             )
         }
@@ -404,6 +509,7 @@ private fun StageBubble(
     selected: Boolean,
     playable: Boolean,
     cleared: Boolean,
+    clears: Int,
     onClick: () -> Unit
 ) {
     val size = if (selected) 54.dp else 44.dp
@@ -421,32 +527,71 @@ private fun StageBubble(
         else -> FrameDim
     }
 
-    Box(
-        modifier = Modifier
-            .size(size)
-            .clip(RoundedCornerShape(50))
-            .background(background)
-            .border(if (selected) 3.dp else 2.dp, border, RoundedCornerShape(50))
-            .clickable(enabled = playable, onClick = onClick),
-        contentAlignment = Alignment.Center
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.spacedBy(3.dp)
     ) {
-        when {
-            !playable -> Text(text = "🔒", fontSize = 14.sp)
-            stage.isBoss -> Text(text = "👑", fontSize = if (selected) 22.sp else 18.sp)
-            cleared && !selected -> Text(
-                text = "✓",
-                color = Color(0xFF5FD08A),
-                fontFamily = FontPixel(),
-                fontWeight = FontWeight.Bold,
-                fontSize = 16.sp
-            )
-            else -> Text(
-                text = stage.label,
-                color = if (selected) GoldText else Cream,
-                fontFamily = FontPixel(),
-                fontWeight = FontWeight.Bold,
-                fontSize = if (selected) 12.sp else 10.sp
-            )
+        Box(
+            modifier = Modifier
+                .size(size)
+                .clip(RoundedCornerShape(50))
+                .background(background)
+                .border(if (selected) 3.dp else 2.dp, border, RoundedCornerShape(50))
+                .clickable(enabled = playable, onClick = onClick),
+            contentAlignment = Alignment.Center
+        ) {
+            when {
+                !playable -> Text(text = "🔒", fontSize = 14.sp)
+                stage.isBoss -> Text(text = "👑", fontSize = if (selected) 22.sp else 18.sp)
+                cleared && !selected -> Text(
+                    text = "✓",
+                    color = Color(0xFF5FD08A),
+                    fontFamily = FontPixel(),
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 16.sp
+                )
+                else -> Text(
+                    text = stage.label,
+                    color = if (selected) GoldText else Cream,
+                    fontFamily = FontPixel(),
+                    fontWeight = FontWeight.Bold,
+                    fontSize = if (selected) 12.sp else 10.sp
+                )
+            }
         }
+
+        // Miejsce pod licznik jest zarezerwowane ZAWSZE - inaczej kolka z licznikiem i bez niego
+        // mialyby rozna wysokosc i caly pasek falowalby przy kazdym przejsciu planszy.
+        Text(
+            text = if (clears > 0) "×$clears" else "",
+            color = if (selected) GoldText else Muted,
+            fontFamily = FontFirst(),
+            fontWeight = FontWeight.Bold,
+            fontSize = 9.sp,
+            lineHeight = 11.sp
+        )
     }
 }
+
+/**
+ * Jednym zdaniem: ile zaplaci KOLEJNE wejscie na te plansze.
+ *
+ * Kampania placi za postep, nie za powtarzanie ([StageRepeats]) - a gracz widzi to zdanie w dwoch
+ * miejscach: nad przyciskiem BATTLE i na scenie, pod nazwa wybranej planszy. Bez niego spadek lupu
+ * wyglada jak blad gry, a nie jak zasada, wedlug ktorej mozna zdecydowac, czy farmic tu, czy isc
+ * dalej.
+ */
+internal fun payoutLabel(clears: Int): String = when (clears) {
+    0 -> "first clear · full loot"
+    else -> "cleared ×$clears · loot ${(StageRepeats.payoutFraction(clears) * 100).roundToInt()}%"
+}
+
+/** 1200 -> "1.2K". Bez kotlin.String.format, ktorego nie ma w common. */
+internal fun Int.compactAmount(): String = when {
+    this >= 1_000_000 -> "${this / 1_000_000}.${(this % 1_000_000) / 100_000}M"
+    this >= 1_000 -> "${this / 1_000}.${(this % 1_000) / 100}K"
+    else -> toString()
+}
+
+/** Dolna granica podgladu krainy - ponizej tego grafika przestaje cokolwiek pokazywac. */
+private val STAGE_SCENE_MIN_HEIGHT = 140.dp

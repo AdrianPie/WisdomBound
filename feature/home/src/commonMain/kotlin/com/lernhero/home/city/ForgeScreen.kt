@@ -1,5 +1,6 @@
 package com.lernhero.home.city
 
+import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.RepeatMode
 import androidx.compose.animation.core.animateFloat
@@ -11,21 +12,18 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.aspectRatio
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.offset
-import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.navigationBarsPadding
+import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -44,13 +42,14 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.lernhero.domain.craft.CraftCost
 import com.lernhero.domain.craft.Forge
-import com.lernhero.domain.craft.ForgeRecipe
 import com.lernhero.domain.craft.ForgeTrack
 import com.lernhero.domain.craft.ItemTier
 import com.lernhero.domain.craft.ItemUpgrades
@@ -63,43 +62,27 @@ import com.lernhero.domain.town.TownResources
 import com.lernhero.domain.item.catalog.MonsterGear
 import com.lernhero.domain.monster.Element
 import com.lernhero.home.player.PlayerViewModel
-import com.lernhero.home.ui.FramedPanel
 import com.lernhero.home.ui.ItemInfoBlock
-import com.lernhero.home.ui.PageDots
-import com.lernhero.home.ui.ParchmentButton
-import com.lernhero.home.ui.ParchmentInset
-import com.lernhero.home.ui.ParchmentPalette
-import com.lernhero.home.ui.ParchmentPanel
-import com.lernhero.home.ui.ParchmentTabs
+import com.lernhero.home.ui.OutlinedText
 import com.lernhero.home.ui.RarityPalette
-import com.lernhero.home.ui.ResourcePill
 import com.lernhero.home.ui.badgeColor
 import com.lernhero.home.ui.format
 import com.lernhero.home.ui.icon
 import com.lernhero.home.ui.label
 import com.lernhero.shared.theme.FontFirst
-import com.lernhero.shared.theme.FontPixel
+
+private val Outline = Color(0xFF120B05)
+private val Bad = Color(0xFFFF6B5B)
+private val Good = Color(0xFF7BE06A)
 
 /**
- * Kuznia. Dwie NIEZALEZNE osie wyboru, kazda na wlasnej krawedzi ekranu:
+ * Kuznia. Dwie NIEZALEZNE osie wyboru: tryb ([ForgeMode] - kuj/ulepszaj) i tor ([ForgeTrack] -
+ * dla bohatera/dla kompanow). Obie stoja w jednym rzedzie na gorze.
  *
- * ```
- * [ Forge | Upgrade ]                <- co robimy (gora)
- * +-------------------------+ [B]    <- dla kogo (prawa krawedz):
- * |  warsztat wybranej rzeczy| [S]       B = bohater, S = summony
- * +-------------------------+
- * +-------------------------+
- * |  siatka przedmiotow     |
- * |        (1)(2)(3)        |
- * +-------------------------+
- * ```
- *
- * Wczesniej gorne zakladki mielily tor (bohater/summony) i nie bylo gdzie dolozyc ulepszania.
- * Rozbicie na dwie osie daje cztery widoki z dwoch krotkich list, zamiast jednej listy czterech
- * pozycji - i pozwala przelaczyc "dla kogo" bez gubienia tego, co sie wlasnie robi.
- *
- * [ForgeTrack] to dwie ROZNE pule sprzetu (patrz [MonsterGear] po powod, dla ktorego nie dziela
- * jednej), a [ForgeMode] to dwie rozne czynnosci na tej samej puli.
+ * Uklad: warsztat wybranej rzeczy u gory (staly rozmiar), pod nim PRZEWIJANA siatka duzych
+ * kafelkow. Wczesniej siatka byla stronicowana i sciskana do resztki ekranu, przez co kafelki
+ * mialy ~24dp, a nazwy byly nieczytelne - teraz kafelek ma zawsze czytelny rozmiar, a to, co sie
+ * nie miesci, po prostu sie przewija.
  */
 @Composable
 fun ForgeScreen(
@@ -114,16 +97,10 @@ fun ForgeScreen(
     val bag = if (track == ForgeTrack.Monster) state.monsterBag else state.heroBag
     val allRecipes = remember(track) { Forge.recipesFor(track) }
 
-    // Dwa tryby, dwie ROZNE listy - i to jest sedno przejscia na egzemplarze.
-    //
-    // Forge pokazuje RECEPTURY (co da sie wykuc; kazde wykucie daje kolejna sztuke), a Upgrade
-    // pokazuje SZTUKI (co juz mam; ulepsza sie konkretny egzemplarz, nie typ). Wczesniej obie
-    // zakladki chodzily po recepturach, wiec ulepszenie "nozyka" dotykalo wszystkich nozykow naraz.
+    // Forge pokazuje RECEPTURY (co da sie wykuc), a Upgrade - SZTUKI (co juz mam; ulepsza sie
+    // konkretny egzemplarz, nie typ).
     val entries = remember(mode, allRecipes, bag, state.storyProgress) {
         when (mode) {
-            // Kolejnosc wg progu, a nie wg pliku z recepturami: gracz przeglada katalog od tego,
-            // co moze wykuc teraz, do tego, na co jeszcze pracuje. Dzieki temu zamkniete rzeczy
-            // skupiaja sie na koncu, zamiast byc rozsiane po wszystkich stronach.
             ForgeMode.Forge -> allRecipes.sortedBy { ItemTier.of(it.item).ordinal }.map { recipe ->
                 val tier = ItemTier.of(recipe.item)
                 ForgeEntry(
@@ -148,37 +125,23 @@ fun ForgeScreen(
                     level = instance.level,
                     ownedCount = Inventory.countOf(bag, item.id),
                     // Ulepszac wolno zawsze - prog bramkuje WYKUWANIE, a nie to, co juz masz.
-                    // Inaczej cofniecie sie w kampanii zamrazaloby graczowi wlasny sprzet.
                     tier = null,
                     locked = false
                 )
             }
         }
     }
-    // Polka: bron / pancerz / bizuteria. null = wszystko. Przy kilkudziesieciu recepturach
-    // "przewin i szukaj miecza" przestalo dzialac - filtr jest tansza odpowiedzia niz osobne
-    // zakladki, bo nie zabiera trzeciej osi wyboru obok trybu i toru.
     var category by remember(track, mode) { mutableStateOf<ItemCategory?>(null) }
-
-    // Kategorie liczymy z PELNEJ listy, nie z przefiltrowanej - inaczej wybranie broni ukryloby
-    // przyciski pozostalych polek i nie bylo jak wrocic.
     val categories = remember(entries) {
         ItemCategory.entries.filter { cat -> entries.any { it.category == cat } }
     }
     val visible = remember(entries, category) {
         category?.let { cat -> entries.filter { it.category == cat } } ?: entries
     }
-    val pages = remember(visible) { visible.chunked(PAGE_SIZE) }
 
-    // Wybor i strona sa per WIDOK (tor + tryb + polka): przejscie na "Summony" nie moze zostawic
-    // w warsztacie miecza bohatera, bo przycisk dzialalby na cos, czego nie widac ponizej.
     var selectedKey by remember(track, mode, category) { mutableStateOf(visible.firstOrNull()?.key) }
-    var page by remember(track, mode, category) { mutableStateOf(0) }
-
     val entry = visible.firstOrNull { it.key == selectedKey } ?: visible.firstOrNull()
 
-    // Ten sam szkielet co reszta budynkow Miasta (tartak, kamieniolom, summon center): powrot,
-    // tytul i pasek surowcow z jednego miejsca.
     TownScreenScaffold(
         title = "Forge",
         resources = state.resources,
@@ -189,111 +152,83 @@ fun ForgeScreen(
         showAllResources = true
     ) {
         Box(modifier = Modifier.fillMaxSize()) {
-            // BEZ scrolla: wszystko ma sie zmiescic na jednym ekranie. Warsztat zajmuje tyle,
-            // ile potrzebuje, a katalog bierze CALA reszte (weight) - dzieki temu na kazdym
-            // telefonie uklad konczy sie dokladnie na dolnej krawedzi, zamiast uciekac pod nia.
             Column(
                 modifier = Modifier
                     .fillMaxSize()
-                    .padding(start = 10.dp, end = 10.dp, top = 4.dp, bottom = 6.dp),
-                verticalArrangement = Arrangement.spacedBy(8.dp)
+                    .padding(start = 12.dp, end = 12.dp, top = 6.dp, bottom = 6.dp),
+                verticalArrangement = Arrangement.spacedBy(10.dp)
             ) {
-                ParchmentTabs(
-                    tabs = ForgeMode.entries.map { it.label },
-                    selectedIndex = ForgeMode.entries.indexOf(mode),
-                    onSelect = { mode = ForgeMode.entries[it] }
-                )
-
-                // Rail "dla kogo" nie stoi OBOK panelu (wtedy panel ucieka w lewo, a rail dynda
-                // przy krawedzi ekranu), tylko OKRAKIEM na jego prawym boku: polowa w obrysie
-                // pergaminu, polowa poza nim. Panel przez to jest wezszy i wysrodkowany, a rail
-                // wyglada jak przypiety do niego, nie zawieszony w powietrzu.
-                Box(
-                    modifier = Modifier.fillMaxWidth().weight(1f),
-                    contentAlignment = Alignment.Center
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                    verticalAlignment = Alignment.CenterVertically
                 ) {
-                  Box(modifier = Modifier.fillMaxHeight().widthIn(max = 360.dp)) {
-                    Column(
-                        modifier = Modifier
-                            .fillMaxSize()
-                            .padding(end = RAIL_STRADDLE),
-                        verticalArrangement = Arrangement.spacedBy(8.dp, Alignment.CenterVertically)
-                    ) {
-                        if (entry == null) {
-                            ParchmentPanel(modifier = Modifier.fillMaxWidth(), title = mode.label) {
-                                Text(
-                                    text = mode.emptyHint(track),
-                                    color = ParchmentPalette.InkMuted,
-                                    fontFamily = FontFirst(),
-                                    fontSize = 12.sp,
-                                    textAlign = TextAlign.Center
-                                )
-                            }
-                        } else when (mode) {
-                            ForgeMode.Forge -> Workbench(
-                                item = entry.item,
-                                cost = entry.cost,
-                                ownedCount = entry.ownedCount,
-                                affordable = entry.cost.canAfford(state.resources, state.money),
-                                lockedTier = entry.tier?.takeUnless { it.isUnlocked(state.storyProgress) },
-                                ironHave = state.resources.iron,
-                                onForge = { playerViewModel.craftItem(entry.item, entry.cost) }
-                            )
+                    ForgeMode.entries.forEach { m ->
+                        ChunkyTab(label = m.label, active = m == mode, modifier = Modifier.weight(1f)) { mode = m }
+                    }
+                    TrackToggle(selected = track, onSelect = { track = it })
+                }
 
-                            ForgeMode.Upgrade -> UpgradeBench(
-                                item = entry.item,
-                                level = entry.level,
-                                resources = state.resources,
-                                money = state.money,
-                                onUpgrade = { entry.instance?.let(playerViewModel::upgradeItem) }
-                            )
-                        }
-
-                        CatalogBoard(
-                            page = pages.getOrNull(page).orEmpty(),
-                            pageCount = pages.size,
-                            pageIndex = page,
-                            selectedKey = selectedKey,
-                            affordable = { it.cost.canAfford(state.resources, state.money) },
-                            categories = categories,
-                            category = category,
-                            onCategory = { category = it },
-                            // Strona jest "zamknieta", gdy ZADNEJ pozycji z niej nie da sie
-                            // jeszcze wykuc - wtedy klodka na kropce mowi prawde o calej stronie.
-                            pageLocked = { index -> pages.getOrNull(index).orEmpty().all { it.locked } },
-                            onSelect = { selectedKey = it },
-                            onPage = { page = it },
-                            modifier = Modifier.heightIn(max = 340.dp)
+                if (entry == null) {
+                    TownPanel(modifier = Modifier.fillMaxWidth()) {
+                        Text(
+                            text = mode.emptyHint(track),
+                            color = Muted,
+                            fontFamily = FontFirst(),
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 13.sp,
+                            textAlign = TextAlign.Center,
+                            modifier = Modifier.fillMaxWidth().padding(24.dp)
                         )
                     }
-
-                    TrackRail(
-                        selected = track,
-                        onSelect = { track = it },
-                        modifier = Modifier
-                            .align(Alignment.CenterEnd)
-                            .offset(x = RAIL_STRADDLE)
+                } else when (mode) {
+                    ForgeMode.Forge -> Workbench(
+                        item = entry.item,
+                        cost = entry.cost,
+                        ownedCount = entry.ownedCount,
+                        resources = state.resources,
+                        money = state.money,
+                        lockedTier = entry.tier?.takeUnless { it.isUnlocked(state.storyProgress) },
+                        onForge = { playerViewModel.craftItem(entry.item, entry.cost) }
                     )
-                  }
+
+                    ForgeMode.Upgrade -> UpgradeBench(
+                        item = entry.item,
+                        level = entry.level,
+                        resources = state.resources,
+                        money = state.money,
+                        onUpgrade = { entry.instance?.let(playerViewModel::upgradeItem) }
+                    )
                 }
+
+                CatalogBoard(
+                    entries = visible,
+                    selectedKey = entry?.key,
+                    affordable = { it.cost.canAfford(state.resources, state.money) },
+                    categories = categories,
+                    category = category,
+                    onCategory = { category = it },
+                    onSelect = { selectedKey = it },
+                    modifier = Modifier.weight(1f)
+                )
             }
 
-            // Komunikat jako nakladka - element ukladu przesuwalby cala zawartosc i ekran
-            // skakalby po kazdym wykuciu.
+            // Komunikat jako nakladka - element ukladu przesuwalby zawartosc po kazdym wykuciu.
             state.message?.let { message ->
                 Text(
                     text = message,
-                    color = ParchmentPalette.Button,
+                    color = Gold,
                     fontFamily = FontFirst(),
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 11.sp,
+                    fontWeight = FontWeight.Black,
+                    fontSize = 12.sp,
                     maxLines = 1,
                     modifier = Modifier
                         .align(Alignment.BottomCenter)
-                        .padding(bottom = 2.dp)
+                        .padding(bottom = 10.dp)
                         .clip(RoundedCornerShape(50))
-                        .background(Color(0xFF1A1008).copy(alpha = 0.85f))
-                        .padding(horizontal = 12.dp, vertical = 3.dp)
+                        .background(Color(0xF01A1008))
+                        .border(2.dp, Outline, RoundedCornerShape(50))
+                        .padding(horizontal = 14.dp, vertical = 5.dp)
                 )
             }
         }
@@ -338,235 +273,171 @@ private enum class ForgeMode(val label: String) {
     }
 }
 
-/* ---------------------------------------- Rail torow ---------------------------------------- */
-
-/**
- * Pionowy pasek przy prawej krawedzi: dla kogo kujemy. Stoi z boku, a nie na gorze, bo to wybor
- * niezalezny od trybu - przelaczenie go ma zmienic pule, a nie to, co gracz wlasnie robi.
- */
-/** O ile kafelek railu wystaje poza prawy bok panelu (i o tyle samo w niego wchodzi). */
-private val RAIL_STRADDLE = 16.dp
+/* ------------------------------------------- Gorny rzad ------------------------------------------ */
 
 @Composable
-private fun TrackRail(
-    selected: ForgeTrack,
-    onSelect: (ForgeTrack) -> Unit,
-    modifier: Modifier = Modifier
-) {
-    Column(
-        modifier = modifier,
-        verticalArrangement = Arrangement.spacedBy(6.dp)
+private fun ChunkyTab(label: String, active: Boolean, modifier: Modifier = Modifier, onClick: () -> Unit) {
+    Box(
+        modifier = modifier
+            .height(42.dp)
+            .clip(RoundedCornerShape(12.dp))
+            .background(
+                if (active) Brush.verticalGradient(listOf(Color(0xFFFFC94A), Color(0xFFE0801C)))
+                else Brush.verticalGradient(listOf(Color(0xFF3A2A1C), Color(0xFF221810)))
+            )
+            .border(2.5.dp, Outline, RoundedCornerShape(12.dp))
+            .clickable(onClick = onClick),
+        contentAlignment = Alignment.Center
+    ) {
+        if (active) OutlinedText(text = label, size = 16.sp, color = Color.White, strokeWidth = 5f)
+        else Text(label, color = Muted, fontFamily = FontFirst(), fontWeight = FontWeight.Black, fontSize = 15.sp)
+    }
+}
+
+/** Dla kogo kujemy: bohater / kompani - dwa okragle przyciski w jednej kapsule. */
+@Composable
+private fun TrackToggle(selected: ForgeTrack, onSelect: (ForgeTrack) -> Unit) {
+    Row(
+        modifier = Modifier
+            .clip(RoundedCornerShape(50))
+            .background(Color(0xE60C0806))
+            .border(2.dp, Outline, RoundedCornerShape(50))
+            .padding(3.dp),
+        horizontalArrangement = Arrangement.spacedBy(3.dp)
     ) {
         ForgeTrack.entries.forEach { track ->
             val active = track == selected
-            Column(
+            Box(
                 modifier = Modifier
-                    .size(width = 46.dp, height = 54.dp)
-                    .clip(RoundedCornerShape(11.dp))
-                    .background(if (active) ParchmentPalette.Button else ParchmentPalette.Inset)
-                    .border(
-                        width = if (active) 3.dp else 2.dp,
-                        color = if (active) ParchmentPalette.ButtonEdge else ParchmentPalette.FrameLight,
-                        shape = RoundedCornerShape(11.dp)
+                    .size(36.dp)
+                    .clip(CircleShape)
+                    .background(
+                        if (active) Brush.verticalGradient(listOf(Color(0xFF5BB8FF), Color(0xFF2C6FC4)))
+                        else Brush.verticalGradient(listOf(Color.Transparent, Color.Transparent))
                     )
-                    .clickable { onSelect(track) }
-                    .padding(vertical = 4.dp),
-                horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.Center
+                    .clickable { onSelect(track) },
+                contentAlignment = Alignment.Center
             ) {
-                Text(text = track.icon, fontSize = 20.sp)
-                Text(
-                    text = track.label,
-                    color = if (active) ParchmentPalette.Ink else ParchmentPalette.InkMuted,
-                    fontFamily = FontFirst(),
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 8.sp,
-                    maxLines = 1
-                )
+                Text(text = track.icon, fontSize = 18.sp, modifier = Modifier.alpha(if (active) 1f else 0.5f))
             }
         }
     }
-}
-
-/* ------------------------------------------- Naglowek ------------------------------------------ */
-
-@Composable
-private fun TopBar(onBack: () -> Unit) {
-    Row(
-        modifier = Modifier.fillMaxWidth(),
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(10.dp)
-    ) {
-        Box(
-            modifier = Modifier
-                .size(42.dp)
-                .clip(RoundedCornerShape(11.dp))
-                .background(ParchmentPalette.Button)
-                .border(3.dp, ParchmentPalette.ButtonEdge, RoundedCornerShape(11.dp))
-                .clickable(onClick = onBack),
-            contentAlignment = Alignment.Center
-        ) {
-            Text(text = "←", color = ParchmentPalette.Ink, fontSize = 20.sp, fontWeight = FontWeight.Bold)
-        }
-        Text(
-            text = "Forge",
-            color = ParchmentPalette.Button,
-            fontFamily = FontPixel(),
-            fontWeight = FontWeight.Bold,
-            fontSize = 20.sp
-        )
-    }
-}
-
-@Composable
-private fun ResourceStrip(stone: Int, iron: Int, gold: Int) {
-    Row(
-        modifier = Modifier.fillMaxWidth(),
-        horizontalArrangement = Arrangement.spacedBy(6.dp)
-    ) {
-        ResourcePill(icon = "🪨", amount = short(stone), modifier = Modifier.weight(1f))
-        ResourcePill(icon = "⚙", amount = short(iron), modifier = Modifier.weight(1f))
-        ResourcePill(icon = "💰", amount = short(gold), modifier = Modifier.weight(1f))
-    }
-}
-
-/** Skracanie duzych liczb - pigulka ma stala szerokosc, a saldo potrafi miec siedem cyfr. */
-private fun short(value: Int): String = when {
-    value >= 1_000_000 -> "${value / 100_000 / 10f}M"
-    value >= 1_000 -> "${value / 100 / 10f}K"
-    else -> "$value"
 }
 
 /* ------------------------------------------ Warsztat ------------------------------------------ */
 
 /**
- * Gorna tablica: wybrany przedmiot w obracajacym sie kregu run, po bokach sloty materialow,
- * pod spodem koszt i przycisk. Krag jest jedynym ruchomym elementem - kuznia ma "pracowac",
- * ale nie odciagac uwagi od liczb.
+ * Warsztat: po lewej wybrany przedmiot w obracajacym sie kregu, po prawej nazwa, rzadkosc,
+ * opis/statystyki/zdolnosci; pod spodem koszt (ile mam / ile trzeba) i przycisk.
  */
 @Composable
 private fun Workbench(
     item: Item,
     cost: CraftCost,
-    /** Ile sztuk juz mam. Zastapilo "owned: Boolean" - teraz wykuwa sie w nieskonczonosc. */
     ownedCount: Int,
-    affordable: Boolean,
-    /** Niepusty = prog kuzni jeszcze zamkniety, wiec przycisk nie dziala mimo surowcow. */
+    resources: TownResources,
+    money: Int,
     lockedTier: ItemTier?,
-    ironHave: Int,
     onForge: () -> Unit
 ) {
+    val affordable = cost.canAfford(resources, money)
+    TownPanel(modifier = Modifier.fillMaxWidth()) {
+        Column(
+            modifier = Modifier.fillMaxWidth().padding(12.dp),
+            verticalArrangement = Arrangement.spacedBy(10.dp)
+        ) {
+            ItemHeader(item = item, active = affordable && lockedTier == null, badge = if (ownedCount > 0) "x$ownedCount" else null)
+            ItemInfoBlock(item = item, height = 52.dp)
+            CostRow(cost = cost, resources = resources, money = money)
+            TownActionButton(
+                text = if (lockedTier != null) "🔒 LOCKED" else "FORGE",
+                subtitle = when {
+                    lockedTier != null -> "${lockedTier.label} gear unlocks after ${lockedTier.requiredStages()} stages"
+                    !affordable && cost.iron > resources.iron -> "Not enough ore - it drops in dungeons"
+                    !affordable -> "Not enough materials"
+                    else -> null
+                },
+                primary = true,
+                enabled = affordable && lockedTier == null,
+                modifier = Modifier.fillMaxWidth(),
+                onClick = onForge
+            )
+        }
+    }
+}
+
+@Composable
+private fun ItemHeader(item: Item, active: Boolean, badge: String?, levelLine: String? = null) {
     val frame = RarityPalette.frame(item.rarity)
     val element = MonsterGear.elementFor(item.id)
-
-    FramedPanel(modifier = Modifier.fillMaxWidth(), title = "Forge: ${item.name}") {
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.Center,
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            MaterialSlot(icon = "🪵")
-            Spacer(modifier = Modifier.size(6.dp))
-            ForgeRing(frame = frame, active = affordable) {
-                Box(
-                    modifier = Modifier
-                        .size(70.dp)
-                        .clip(RoundedCornerShape(14.dp))
-                        .background(RarityPalette.cardBackground(item.rarity))
-                        .border(3.dp, frame, RoundedCornerShape(14.dp)),
-                    contentAlignment = Alignment.Center
-                ) {
-                    Text(text = item.icon(), fontSize = 34.sp)
+    Row(
+        modifier = Modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.spacedBy(12.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        ForgeRing(frame = frame, active = active) {
+            Box(
+                modifier = Modifier
+                    .size(66.dp)
+                    .clip(RoundedCornerShape(14.dp))
+                    .background(RarityPalette.cardBackground(item.rarity))
+                    .border(3.dp, frame, RoundedCornerShape(14.dp)),
+                contentAlignment = Alignment.Center
+            ) {
+                Text(text = item.icon(), fontSize = 34.sp)
+                badge?.let {
+                    Text(
+                        text = it,
+                        color = Color.White,
+                        fontFamily = FontFirst(),
+                        fontWeight = FontWeight.Black,
+                        fontSize = 10.sp,
+                        modifier = Modifier
+                            .align(Alignment.BottomEnd)
+                            .padding(3.dp)
+                            .clip(RoundedCornerShape(50))
+                            .background(Color(0xCC000000))
+                            .padding(horizontal = 4.dp)
+                    )
                 }
             }
-            Spacer(modifier = Modifier.size(6.dp))
-            MaterialSlot(icon = "⚙")
         }
-
-        Row(
-            horizontalArrangement = Arrangement.spacedBy(6.dp),
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            Text(
-                text = "${item.slot.label()} · ${RarityPalette.label(item.rarity)}",
-                color = ParchmentPalette.InkMuted,
-                fontFamily = FontFirst(),
-                fontWeight = FontWeight.Bold,
-                fontSize = 11.sp
-            )
-            element?.let { ElementBadge(it) }
-        }
-
-        // Opis + statystyki + ZDOLNOSCI w jednym bloku o stalej wysokosci - patrz [ItemInfoBlock]
-        // po powod, dla ktorego wysokosc jest sztywna (menu skakalo przy zmianie przedmiotu).
-        ItemInfoBlock(item = item)
-
-        CostRow(cost = cost)
-
-        // Licznik zamiast blokady: wykucie kolejnej sztuki jest normalnym ruchem, bo kazda
-        // z nich mozna zalozyc innemu kompanowi.
-        if (ownedCount > 0) {
-            Text(
-                text = "You already have $ownedCount",
-                color = ParchmentPalette.InkMuted,
-                fontFamily = FontFirst(),
-                fontWeight = FontWeight.Bold,
-                fontSize = 10.sp
-            )
-        }
-
-        ParchmentButton(
-            text = if (lockedTier != null) "LOCKED" else "FORGE",
-            enabled = affordable && lockedTier == null,
-            modifier = Modifier.fillMaxWidth(),
-            onClick = onForge
-        )
-
-        // Zamkniety prog mowi WPROST, co go otwiera - "LOCKED" bez powodu wyglada jak blad gry.
-        lockedTier?.let { tier ->
-            Text(
-                text = "${tier.label} gear unlocks after clearing ${tier.requiredStages()} stages.",
-                color = Color(0xFF9E2B20),
-                fontFamily = FontFirst(),
-                fontSize = 10.sp,
-                textAlign = TextAlign.Center
-            )
-        }
-
-        // Wygaszony przycisk musi powiedziec, DLACZEGO jest wygaszony - inaczej ekran wyglada
-        // na zepsuty. Ruda jest tu kluczowa: to jedyny material, ktorego nie produkuje miasto.
-        if (lockedTier == null && !affordable) {
-            Text(
-                text = if (cost.iron > ironHave) {
-                    "Not enough ore ($ironHave of ${cost.iron}). Ore only drops in dungeons."
-                } else {
-                    "Not enough materials - check the cost above."
-                },
-                color = Color(0xFF9E2B20),
-                fontFamily = FontFirst(),
-                fontSize = 10.sp,
-                textAlign = TextAlign.Center
-            )
+        Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+            OutlinedText(text = item.name, size = 19.sp, color = frame.brighten(), maxLines = 2)
+            Row(horizontalArrangement = Arrangement.spacedBy(6.dp), verticalAlignment = Alignment.CenterVertically) {
+                Chip(text = RarityPalette.label(item.rarity), color = frame)
+                Chip(text = item.slot.label(), color = Color(0xFF8C7A5C))
+                element?.let { ElementBadge(it) }
+            }
+            levelLine?.let { OutlinedText(text = it, size = 15.sp, color = Gold, strokeWidth = 4f) }
         }
     }
 }
 
-/** Pusty slot materialu po bokach kregu - placeholder pod przyszle "wsady" do wykuwania. */
+private fun Color.brighten(): Color = Color(
+    red = red + (1f - red) * 0.3f,
+    green = green + (1f - green) * 0.3f,
+    blue = blue + (1f - blue) * 0.3f,
+    alpha = 1f
+)
+
 @Composable
-private fun MaterialSlot(icon: String) {
-    Box(
+private fun Chip(text: String, color: Color) {
+    Text(
+        text = text,
+        color = Color.White,
+        fontFamily = FontFirst(),
+        fontWeight = FontWeight.Black,
+        fontSize = 10.sp,
         modifier = Modifier
-            .size(46.dp)
-            .clip(RoundedCornerShape(10.dp))
-            .background(ParchmentPalette.Inset)
-            .border(2.dp, ParchmentPalette.FrameLight, RoundedCornerShape(10.dp)),
-        contentAlignment = Alignment.Center
-    ) {
-        Text(text = icon, fontSize = 18.sp, modifier = Modifier.alpha(0.65f))
-    }
+            .clip(RoundedCornerShape(50))
+            .background(color.copy(alpha = 0.35f))
+            .border(1.5.dp, color, RoundedCornerShape(50))
+            .padding(horizontal = 7.dp, vertical = 2.dp)
+    )
 }
 
-/** Obracajacy sie pierscien run wokol przedmiotu - gasnie, gdy nie da sie wykuc. */
+/** Obracajacy sie pierscien swiatla wokol przedmiotu - gasnie, gdy nie da sie wykuc. */
 @Composable
 private fun ForgeRing(
     frame: Color,
@@ -577,36 +448,28 @@ private fun ForgeRing(
     val angle by spin.animateFloat(
         initialValue = 0f,
         targetValue = 360f,
-        animationSpec = infiniteRepeatable(
-            animation = tween(durationMillis = 14_000, easing = LinearEasing),
-            repeatMode = RepeatMode.Restart
-        ),
+        animationSpec = infiniteRepeatable(tween(durationMillis = 9_000, easing = LinearEasing)),
         label = "forge-ring-angle"
     )
+    val pulse by spin.animateFloat(0.6f, 1f, infiniteRepeatable(tween(1200, easing = FastOutSlowInEasing), RepeatMode.Reverse), label = "forge-pulse")
 
-    Box(modifier = Modifier.size(126.dp), contentAlignment = Alignment.Center) {
+    Box(modifier = Modifier.size(92.dp), contentAlignment = Alignment.Center) {
         Box(
             modifier = Modifier
-                .size(126.dp)
+                .size(92.dp)
                 .clip(CircleShape)
-                .background(ParchmentPalette.Inset)
-                .border(3.dp, ParchmentPalette.FrameLight, CircleShape)
+                .background(Brush.radialGradient(listOf(frame.copy(alpha = if (active) 0.45f * pulse else 0.12f), Color(0xFF0C0806))))
+                .border(2.5.dp, Outline, CircleShape)
         )
         Box(
             modifier = Modifier
-                .size(112.dp)
-                .alpha(if (active) 1f else 0.3f)
+                .size(86.dp)
+                .alpha(if (active) 1f else 0.25f)
                 .rotate(angle)
                 .clip(CircleShape)
                 .background(
                     Brush.sweepGradient(
-                        listOf(
-                            frame.copy(alpha = 0f),
-                            frame.copy(alpha = 0.65f),
-                            frame.copy(alpha = 0f),
-                            frame.copy(alpha = 0.3f),
-                            frame.copy(alpha = 0f)
-                        )
+                        listOf(frame.copy(alpha = 0f), frame.copy(alpha = 0.8f), frame.copy(alpha = 0f), frame.copy(alpha = 0.4f), frame.copy(alpha = 0f))
                     )
                 )
         )
@@ -619,48 +482,56 @@ private fun ElementBadge(element: Element) {
     val color = element.badgeColor()
     Row(
         modifier = Modifier
-            .clip(RoundedCornerShape(7.dp))
-            .background(color.copy(alpha = 0.25f))
-            .border(1.dp, color, RoundedCornerShape(7.dp))
+            .clip(RoundedCornerShape(50))
+            .background(color.copy(alpha = 0.35f))
+            .border(1.5.dp, color, RoundedCornerShape(50))
             .padding(horizontal = 6.dp, vertical = 2.dp),
         horizontalArrangement = Arrangement.spacedBy(3.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
         Text(text = element.icon, fontSize = 10.sp)
-        Text(
-            text = element.label,
-            color = ParchmentPalette.Ink,
-            fontFamily = FontFirst(),
-            fontWeight = FontWeight.Bold,
-            fontSize = 9.sp
-        )
+        Text(text = element.label, color = Color.White, fontFamily = FontFirst(), fontWeight = FontWeight.Black, fontSize = 10.sp)
     }
 }
 
-/** Koszt w jednym wglebionym wierszu - [CraftCost.entries] pomija zera, wiec nie ma pustych ikon. */
+/**
+ * Koszt jako kafelki "mam / trzeba": brakujacy surowiec swieci na czerwono, wiec od razu widac,
+ * CZEGO brakuje, zamiast zgadywac po wygaszonym przycisku.
+ */
 @Composable
-private fun CostRow(cost: CraftCost) {
-    ParchmentInset(modifier = Modifier.fillMaxWidth()) {
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.Center,
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            cost.entries().forEach { (icon, amount) ->
-                Row(
-                    modifier = Modifier.padding(horizontal = 8.dp),
-                    horizontalArrangement = Arrangement.spacedBy(4.dp),
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Text(text = icon, fontSize = 13.sp)
-                    Text(
-                        text = "$amount",
-                        color = ParchmentPalette.Ink,
-                        fontFamily = FontPixel(),
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 12.sp
-                    )
-                }
+private fun CostRow(cost: CraftCost, resources: TownResources, money: Int) {
+    Row(
+        modifier = Modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.spacedBy(6.dp)
+    ) {
+        cost.entries().forEach { (icon, amount) ->
+            val have = when (icon) {
+                "🪨" -> resources.stone
+                "🔩" -> resources.iron
+                "✨" -> resources.essence
+                "🎟" -> resources.summonTickets
+                else -> money
+            }
+            val enough = have >= amount
+            Row(
+                modifier = Modifier
+                    .weight(1f)
+                    .clip(RoundedCornerShape(10.dp))
+                    .background(Color(0xE60C0806))
+                    .border(2.dp, if (enough) Outline else Bad.copy(alpha = 0.8f), RoundedCornerShape(10.dp))
+                    .padding(vertical = 6.dp),
+                horizontalArrangement = Arrangement.Center,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(text = icon, fontSize = 15.sp)
+                Text(
+                    text = " ${amount.compact()}",
+                    color = if (enough) Color.White else Bad,
+                    fontFamily = FontFirst(),
+                    fontWeight = FontWeight.Black,
+                    fontSize = 14.sp,
+                    maxLines = 1
+                )
             }
         }
     }
@@ -670,8 +541,7 @@ private fun CostRow(cost: CraftCost) {
 
 /**
  * Warsztat ulepszania: ten sam przedmiot, tylko mocniejszy. Pokazuje PRZED -> PO na kazdej
- * statystyce, bo bez tego "+1" nie znaczy nic; koszt kolejnego progu liczy [ItemUpgrades],
- * a nie ekran - tak samo jak przy zapisie, wiec liczby nie potrafia sie rozjechac.
+ * statystyce, bo bez tego "+1" nie znaczy nic; koszt kolejnego progu liczy [ItemUpgrades].
  */
 @Composable
 private fun UpgradeBench(
@@ -681,7 +551,6 @@ private fun UpgradeBench(
     money: Int,
     onUpgrade: () -> Unit
 ) {
-    val frame = RarityPalette.frame(item.rarity)
     val maxed = ItemUpgrades.isMaxed(level)
     val cost = ItemUpgrades.nextCost(item, level)
     val affordable = cost?.canAfford(resources, money) == true
@@ -689,147 +558,89 @@ private fun UpgradeBench(
     val current = ItemUpgrades.upgraded(item, level).stats
     val next = ItemUpgrades.upgraded(item, level + 1).stats
 
-    FramedPanel(
-        modifier = Modifier.fillMaxWidth(),
-        title = "Upgrade: ${item.name}"
-    ) {
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.spacedBy(10.dp),
-            verticalAlignment = Alignment.CenterVertically
+    TownPanel(modifier = Modifier.fillMaxWidth()) {
+        Column(
+            modifier = Modifier.fillMaxWidth().padding(12.dp),
+            verticalArrangement = Arrangement.spacedBy(10.dp)
         ) {
-            Box(
-                modifier = Modifier
-                    .size(62.dp)
-                    .clip(RoundedCornerShape(13.dp))
-                    .background(RarityPalette.cardBackground(item.rarity))
-                    .border(3.dp, frame, RoundedCornerShape(13.dp)),
-                contentAlignment = Alignment.Center
-            ) {
-                Text(text = item.icon(), fontSize = 30.sp)
-            }
+            ItemHeader(
+                item = item,
+                active = affordable,
+                badge = if (level > ItemUpgrades.MIN_LEVEL) "+$level" else null,
+                levelLine = if (maxed) "+$level · MAX" else "+$level  →  +${level + 1}"
+            )
+            LevelPips(level = level)
 
-            Column(
-                modifier = Modifier.weight(1f),
-                verticalArrangement = Arrangement.spacedBy(3.dp)
-            ) {
-                Text(
-                    text = if (maxed) "+$level · MAX" else "+$level  →  +${level + 1}",
-                    color = ParchmentPalette.Button,
-                    fontFamily = FontPixel(),
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 15.sp
-                )
-                LevelPips(level = level)
-            }
-        }
-
-        // Tabelka PRZED -> PO plus zdolnosci, w bloku o STALEJ wysokosci. Wysokosc jest sztywna
-        // z tego samego powodu co w warsztacie kucia: liczba statystyk rozni sie miedzy
-        // przedmiotami, wiec bez tego panel kurczyl sie i rozciagal przy kazdej zmianie sztuki.
-        Box(modifier = Modifier.fillMaxWidth().height(UPGRADE_INFO_HEIGHT)) {
-            Column(
-                modifier = Modifier.fillMaxWidth().verticalScroll(rememberScrollState()),
-                verticalArrangement = Arrangement.spacedBy(4.dp)
-            ) {
-                // Same statystyki, ktore przedmiot NAPRAWDE ma - pusta tabelka na przedmiocie bez
-                // statystyk mowilaby, ze ulepszanie nic nie da, i mialaby racje.
-                val statTypes = current.asMap().keys.toList()
-                if (statTypes.isEmpty()) {
-                    Text(
-                        text = "This item has no stats to scale - only its effect.",
-                        color = ParchmentPalette.InkMuted,
-                        fontFamily = FontFirst(),
-                        fontSize = 10.sp,
-                        textAlign = TextAlign.Center,
-                        modifier = Modifier.fillMaxWidth()
-                    )
-                } else {
-                    ParchmentInset(modifier = Modifier.fillMaxWidth()) {
-                        Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
-                            statTypes.forEach { stat ->
-                                Row(
-                                    modifier = Modifier.fillMaxWidth(),
-                                    horizontalArrangement = Arrangement.SpaceBetween,
-                                    verticalAlignment = Alignment.CenterVertically
-                                ) {
-                                    Text(
-                                        text = stat.label(),
-                                        color = ParchmentPalette.InkMuted,
-                                        fontFamily = FontFirst(),
-                                        fontSize = 10.sp
-                                    )
-                                    Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
-                                        Text(
-                                            text = stat.format(current[stat]),
-                                            color = ParchmentPalette.Ink,
-                                            fontFamily = FontPixel(),
-                                            fontSize = 11.sp
-                                        )
-                                        if (!maxed) {
-                                            Text(
-                                                text = "→ ${stat.format(next[stat])}",
-                                                color = Color(0xFF2F7D32),
-                                                fontFamily = FontPixel(),
-                                                fontWeight = FontWeight.Bold,
-                                                fontSize = 11.sp
-                                            )
-                                        }
+            // Tabelka PRZED -> PO w bloku o STALEJ wysokosci - liczba statystyk rozni sie miedzy
+            // przedmiotami, a panel nie moze skakac przy zmianie sztuki.
+            Box(modifier = Modifier.fillMaxWidth().height(UPGRADE_INFO_HEIGHT)) {
+                Column(
+                    modifier = Modifier.fillMaxWidth().verticalScroll(rememberScrollState()),
+                    verticalArrangement = Arrangement.spacedBy(4.dp)
+                ) {
+                    val statTypes = current.asMap().keys.toList()
+                    if (statTypes.isEmpty()) {
+                        Text(
+                            text = "This item has no stats to scale - only its effect.",
+                            color = Muted,
+                            fontFamily = FontFirst(),
+                            fontSize = 12.sp,
+                            textAlign = TextAlign.Center,
+                            modifier = Modifier.fillMaxWidth()
+                        )
+                    } else {
+                        statTypes.forEach { stat ->
+                            Row(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .clip(RoundedCornerShape(8.dp))
+                                    .background(Color(0x66000000))
+                                    .padding(horizontal = 10.dp, vertical = 4.dp),
+                                horizontalArrangement = Arrangement.SpaceBetween,
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                Text(stat.label(), color = Muted, fontFamily = FontFirst(), fontWeight = FontWeight.Bold, fontSize = 12.sp)
+                                Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                                    Text(stat.format(current[stat]), color = Color.White, fontFamily = FontFirst(), fontWeight = FontWeight.Black, fontSize = 13.sp)
+                                    if (!maxed) {
+                                        Text("→ ${stat.format(next[stat])}", color = Good, fontFamily = FontFirst(), fontWeight = FontWeight.Black, fontSize = 13.sp)
                                     }
                                 }
                             }
                         }
                     }
-                }
-
-                // Zdolnosci NIE zmieniaja sie z poziomem (ulepszenie podbija liczby, nie reguly) -
-                // ale gracz musi je widziec tutaj, bo to na ich podstawie decyduje, ktora sztuke
-                // warto pchac dalej.
-                if (item.effects.isNotEmpty()) {
-                    ItemInfoBlock(
-                        item = item,
-                        height = UPGRADE_EFFECTS_HEIGHT,
-                        showDescription = false,
-                        showStats = false
-                    )
+                    if (item.effects.isNotEmpty()) {
+                        ItemInfoBlock(item = item, height = UPGRADE_EFFECTS_HEIGHT, showDescription = false, showStats = false)
+                    }
                 }
             }
-        }
 
-        cost?.let { CostRow(cost = it) }
+            cost?.let { CostRow(cost = it, resources = resources, money = money) }
 
-        ParchmentButton(
-            text = if (maxed) "MAX LEVEL" else "UPGRADE",
-            enabled = !maxed && affordable,
-            modifier = Modifier.fillMaxWidth(),
-            onClick = onUpgrade
-        )
-
-        if (!maxed && !affordable) {
-            Text(
-                text = "Not enough materials - check the cost above.",
-                color = Color(0xFF9E2B20),
-                fontFamily = FontFirst(),
-                fontSize = 10.sp,
-                textAlign = TextAlign.Center
+            TownActionButton(
+                text = if (maxed) "MAX LEVEL" else "UPGRADE",
+                subtitle = if (!maxed && !affordable) "Not enough materials" else null,
+                primary = true,
+                enabled = !maxed && affordable,
+                modifier = Modifier.fillMaxWidth(),
+                onClick = onUpgrade
             )
         }
     }
 }
 
-/** Pasek kropek 0..MAX - jeden rzut oka mowi, jak daleko do konca toru. */
+/** Pasek segmentow 0..MAX - jeden rzut oka mowi, jak daleko do konca toru. */
 @Composable
 private fun LevelPips(level: Int) {
-    Row(horizontalArrangement = Arrangement.spacedBy(3.dp)) {
+    Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(3.dp)) {
         repeat(ItemUpgrades.MAX_LEVEL) { index ->
             Box(
                 modifier = Modifier
-                    .size(7.dp)
-                    .clip(CircleShape)
-                    .background(
-                        if (index < level) ParchmentPalette.Button else ParchmentPalette.Inset
-                    )
-                    .border(1.dp, ParchmentPalette.FrameLight, CircleShape)
+                    .weight(1f)
+                    .height(8.dp)
+                    .clip(RoundedCornerShape(50))
+                    .background(if (index < level) Brush.verticalGradient(listOf(Color(0xFFFFE27A), Color(0xFFE08A1E))) else Brush.verticalGradient(listOf(Color(0xFF0C0806), Color(0xFF0C0806))))
+                    .border(1.dp, Outline, RoundedCornerShape(50))
             )
         }
     }
@@ -837,79 +648,42 @@ private fun LevelPips(level: Int) {
 
 /* ------------------------------------------- Katalog ------------------------------------------- */
 
-/**
- * Dolna tablica: cala oferta jako siatka kwadratowych ikon ze stronicowaniem.
- *
- * Siatke skladamy z [Row] po cztery, a nie z LazyVerticalGrid, bo caly ekran siedzi juz
- * w [verticalScroll]; zagniezdzenie leniwej siatki w scrollu wysadza pomiar wysokosci.
- */
+/** Katalog: polki (filtr) + przewijana siatka duzych kafelkow z nazwa pod ikona. */
 @Composable
 private fun CatalogBoard(
-    page: List<ForgeEntry>,
-    pageCount: Int,
-    pageIndex: Int,
+    entries: List<ForgeEntry>,
     selectedKey: String?,
     affordable: (ForgeEntry) -> Boolean,
     categories: List<ItemCategory>,
     category: ItemCategory?,
     onCategory: (ItemCategory?) -> Unit,
-    pageLocked: (Int) -> Boolean,
     onSelect: (String) -> Unit,
-    onPage: (Int) -> Unit,
     modifier: Modifier = Modifier
 ) {
-    val gap = 7.dp
-    FramedPanel(modifier = modifier.fillMaxWidth()) {
-        CategoryBar(categories = categories, selected = category, onSelect = onCategory)
-
-        // Kafelek dostaje STALY bok liczony z tego, co realnie zostalo na ekranie - i z szerokosci,
-        // i z wysokosci. Wczesniej kafelki byly kwadratami "po szerokosci" (weight + aspectRatio),
-        // wiec cztery rzedy zawsze mialy ~380dp i na nizszych telefonach siatka wychodzila pod
-        // dolna krawedz. Teraz nigdy nie przekracza przydzielonego miejsca.
-        ParchmentInset(modifier = Modifier.fillMaxWidth().weight(1f)) {
-            BoxWithConstraints(
+    TownPanel(modifier = modifier.fillMaxWidth()) {
+        Column(modifier = Modifier.fillMaxSize().padding(10.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+            CategoryBar(categories = categories, selected = category, onSelect = onCategory)
+            LazyVerticalGrid(
+                columns = GridCells.Fixed(COLUMNS),
                 modifier = Modifier.fillMaxSize(),
-                contentAlignment = Alignment.Center
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                verticalArrangement = Arrangement.spacedBy(8.dp),
+                contentPadding = PaddingValues(bottom = 36.dp)
             ) {
-                val byWidth = (maxWidth - gap * (COLUMNS - 1)) / COLUMNS
-                val byHeight = (maxHeight - gap * (ROWS - 1)) / ROWS
-                val tile = minOf(byWidth, byHeight).coerceAtLeast(28.dp)
-                Column(
-                    verticalArrangement = Arrangement.spacedBy(gap, Alignment.CenterVertically),
-                    horizontalAlignment = Alignment.CenterHorizontally
-                ) {
-                    page.chunked(COLUMNS).forEach { row ->
-                        Row(horizontalArrangement = Arrangement.spacedBy(gap)) {
-                            row.forEach { entry ->
-                                RecipeTile(
-                                    entry = entry,
-                                    selected = entry.key == selectedKey,
-                                    affordable = affordable(entry),
-                                    modifier = Modifier.size(tile),
-                                    onClick = { onSelect(entry.key) }
-                                )
-                            }
-                            // Niepelny ostatni rzad: puste kafelki tej samej wielkosci trzymaja
-                            // siatke wyrownana do lewej zamiast rozjezdzac ja na srodku.
-                            repeat(COLUMNS - row.size) {
-                                Box(modifier = Modifier.size(tile))
-                            }
-                        }
-                    }
+                items(entries, key = { it.key }) { entry ->
+                    RecipeTile(
+                        entry = entry,
+                        selected = entry.key == selectedKey,
+                        affordable = affordable(entry),
+                        onClick = { onSelect(entry.key) }
+                    )
                 }
             }
         }
-
-        PageDots(count = pageCount, selected = pageIndex, locked = pageLocked, onSelect = onPage)
     }
 }
 
-/**
- * Pasek polek nad siatka: WSZYSTKO / bron / pancerz / bizuteria.
- *
- * Ikony zamiast nazw, bo cztery slowa po angielsku nie mieszcza sie w szerokosci panelu na
- * mniejszym telefonie, a symbol miecza i tarczy czyta sie bez tlumaczenia.
- */
+/** Pasek polek nad siatka: WSZYSTKO / bron / pancerz / bizuteria. */
 @Composable
 private fun CategoryBar(
     categories: List<ItemCategory>,
@@ -919,15 +693,15 @@ private fun CategoryBar(
     if (categories.size <= 1) return
     Row(
         modifier = Modifier.fillMaxWidth(),
-        horizontalArrangement = Arrangement.spacedBy(5.dp, Alignment.CenterHorizontally)
+        horizontalArrangement = Arrangement.spacedBy(6.dp)
     ) {
-        CategoryChip(label = "ALL", active = selected == null, onClick = { onSelect(null) })
+        CategoryChip(label = "ALL", active = selected == null, modifier = Modifier.weight(1f), onClick = { onSelect(null) })
         categories.forEach { cat ->
             CategoryChip(
                 label = cat.icon,
                 active = selected == cat,
-                // Ponowne stukniecie w aktywna polke zdejmuje filtr - inaczej powrot do calosci
-                // wymagalby trafienia w maly przycisk "ALL" po drugiej stronie paska.
+                modifier = Modifier.weight(1f),
+                // Ponowne stukniecie w aktywna polke zdejmuje filtr.
                 onClick = { onSelect(if (selected == cat) null else cat) }
             )
         }
@@ -935,28 +709,24 @@ private fun CategoryBar(
 }
 
 @Composable
-private fun CategoryChip(label: String, active: Boolean, onClick: () -> Unit) {
+private fun CategoryChip(label: String, active: Boolean, modifier: Modifier = Modifier, onClick: () -> Unit) {
     Box(
-        modifier = Modifier
-            .height(24.dp)
-            .widthIn(min = 40.dp)
-            .clip(RoundedCornerShape(8.dp))
-            .background(if (active) ParchmentPalette.Button else ParchmentPalette.Inset)
-            .border(
-                width = 2.dp,
-                color = if (active) ParchmentPalette.ButtonEdge else ParchmentPalette.FrameLight,
-                shape = RoundedCornerShape(8.dp)
+        modifier = modifier
+            .height(32.dp)
+            .clip(RoundedCornerShape(10.dp))
+            .background(
+                if (active) Brush.verticalGradient(listOf(Color(0xFF5BB8FF), Color(0xFF2C6FC4)))
+                else Brush.verticalGradient(listOf(Color(0xFF2A1E14), Color(0xFF17100A)))
             )
+            .border(2.dp, Outline, RoundedCornerShape(10.dp))
             .clickable(onClick = onClick),
         contentAlignment = Alignment.Center
     ) {
-        Text(
-            text = label,
-            color = if (active) ParchmentPalette.Ink else ParchmentPalette.InkMuted,
-            fontFamily = FontPixel(),
-            fontWeight = FontWeight.Bold,
-            fontSize = 12.sp
-        )
+        if (label == "ALL") {
+            OutlinedText(text = label, size = 13.sp, color = if (active) Color.White else Muted, strokeWidth = 4f)
+        } else {
+            Text(text = label, fontSize = 16.sp, modifier = Modifier.alpha(if (active) 1f else 0.6f))
+        }
     }
 }
 
@@ -965,7 +735,6 @@ private fun RecipeTile(
     entry: ForgeEntry,
     selected: Boolean,
     affordable: Boolean,
-    modifier: Modifier = Modifier,
     onClick: () -> Unit
 ) {
     val item = entry.item
@@ -973,107 +742,86 @@ private fun RecipeTile(
     val owned = entry.ownedCount > 0
     val frame = RarityPalette.frame(item.rarity)
     val element = MonsterGear.elementFor(item.id)
+    val pulse by rememberInfiniteTransition(label = "tile").animateFloat(
+        0.6f, 1f, infiniteRepeatable(tween(700), RepeatMode.Reverse), label = "tile-pulse"
+    )
 
-    Box(
-        modifier = modifier
-            .aspectRatio(1f)
-            .clip(RoundedCornerShape(10.dp))
-            .background(RarityPalette.cardBackground(item.rarity))
-            .border(
-                width = if (selected) 3.dp else 2.dp,
-                color = if (selected) ParchmentPalette.Button else frame.copy(alpha = 0.85f),
-                shape = RoundedCornerShape(10.dp)
-            )
+    Column(
+        modifier = Modifier
             .clickable(onClick = onClick)
-            // Nieosiagalne recepty gasna, ale zostaja klikalne - gracz ma prawo sprawdzic,
-            // ile brakuje, zanim uzbiera surowce.
-            .alpha(if (entry.locked) 0.5f else if (owned || affordable) 1f else 0.45f),
-        contentAlignment = Alignment.Center
+            // Nieosiagalne recepty gasna, ale zostaja klikalne - gracz ma prawo sprawdzic, ile brakuje.
+            .alpha(if (entry.locked) 0.5f else if (owned || affordable) 1f else 0.6f),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.spacedBy(3.dp)
     ) {
-        Text(text = item.icon(), fontSize = 30.sp)
-
-        // Zamkniety prog: klodka NA ikonie, ale przedmiot nadal widoczny i klikalny. Ukrycie go
-        // odbieraloby graczowi jedyny powod, dla ktorego ma isc dalej w kampanie - zeby chciec
-        // Titan's Carapace, trzeba najpierw wiedziec, ze istnieje.
-        if (entry.locked) {
-            Text(text = "🔒", fontSize = 22.sp)
-        }
-
-        // Znaczniki w rogach: zywiol i poziom lewo-gora, "masz juz" prawo-gora - tak jak
-        // gwiazdki rzadkosci na kafelkach artefaktow. Zywiol i poziom siedza w JEDNYM rzedzie,
-        // bo sprzet kompana potrafi miec obie rzeczy naraz i w osobnych Boxach nachodzilyby
-        // na siebie.
-        Row(
-            modifier = Modifier.align(Alignment.TopStart).padding(3.dp),
-            horizontalArrangement = Arrangement.spacedBy(2.dp),
-            verticalAlignment = Alignment.CenterVertically
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .aspectRatio(1f)
+                .graphicsLayer {
+                    val s = if (selected) 1f + 0.03f * pulse else 1f
+                    scaleX = s
+                    scaleY = s
+                }
+                .clip(RoundedCornerShape(12.dp))
+                .background(RarityPalette.cardBackground(item.rarity))
+                .border(if (selected) 3.dp else 2.dp, if (selected) Gold else frame, RoundedCornerShape(12.dp)),
+            contentAlignment = Alignment.Center
         ) {
-            element?.let {
+            Text(text = item.icon(), fontSize = 30.sp)
+            if (entry.locked) Text(text = "🔒", fontSize = 20.sp, modifier = Modifier.align(Alignment.BottomEnd).padding(3.dp))
+
+            Row(
+                modifier = Modifier.align(Alignment.TopStart).padding(3.dp),
+                horizontalArrangement = Arrangement.spacedBy(2.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                element?.let {
+                    Box(
+                        modifier = Modifier
+                            .size(12.dp)
+                            .clip(CircleShape)
+                            .background(it.badgeColor())
+                            .border(1.dp, Outline, CircleShape)
+                    )
+                }
+                if (level > ItemUpgrades.MIN_LEVEL) {
+                    OutlinedText(text = "+$level", size = 11.sp, color = Gold, strokeWidth = 4f)
+                }
+            }
+            if (owned) {
                 Box(
                     modifier = Modifier
-                        .size(12.dp)
+                        .align(Alignment.TopEnd)
+                        .padding(3.dp)
+                        .size(16.dp)
                         .clip(CircleShape)
-                        .background(it.badgeColor())
-                        .border(1.dp, ParchmentPalette.Frame, CircleShape)
-                )
-            }
-            if (level > ItemUpgrades.MIN_LEVEL) {
-                Text(
-                    text = "+$level",
-                    color = ParchmentPalette.Ink,
-                    fontFamily = FontPixel(),
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 9.sp,
-                    modifier = Modifier
-                        .clip(RoundedCornerShape(5.dp))
-                        .background(ParchmentPalette.Button)
-                        .padding(horizontal = 3.dp)
-                )
+                        .background(Color(0xFF4ADE80))
+                        .border(1.5.dp, Outline, CircleShape),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text(text = "✓", color = Outline, fontSize = 10.sp, fontWeight = FontWeight.Black)
+                }
             }
         }
-        if (owned) {
-            Box(
-                modifier = Modifier
-                    .align(Alignment.TopEnd)
-                    .padding(3.dp)
-                    .size(14.dp)
-                    .clip(CircleShape)
-                    .background(Color(0xFF4ADE80))
-                    .border(1.dp, ParchmentPalette.Frame, CircleShape),
-                contentAlignment = Alignment.Center
-            ) {
-                Text(text = "✓", color = ParchmentPalette.Ink, fontSize = 9.sp, fontWeight = FontWeight.Bold)
-            }
-        }
-
         Text(
             text = item.name,
-            color = Color(0xFFF4E9D7),
+            color = if (selected) Gold else Color(0xFFEADFC8),
             fontFamily = FontFirst(),
             fontWeight = FontWeight.Bold,
-            fontSize = 7.sp,
+            fontSize = 10.sp,
             textAlign = TextAlign.Center,
             maxLines = 2,
-            modifier = Modifier
-                .align(Alignment.BottomCenter)
-                .fillMaxWidth()
-                .background(Color(0x99000000))
-                .padding(horizontal = 2.dp, vertical = 2.dp)
+            overflow = TextOverflow.Ellipsis,
+            lineHeight = 11.sp
         )
     }
 }
 
 /** Staly budzet miejsca na tabelke PRZED -> PO i zdolnosci w warsztacie ulepszania. */
-private val UPGRADE_INFO_HEIGHT = 118.dp
+private val UPGRADE_INFO_HEIGHT = 96.dp
 
 /** Ile z tego przypada na liste zdolnosci. */
-private val UPGRADE_EFFECTS_HEIGHT = 44.dp
+private val UPGRADE_EFFECTS_HEIGHT = 40.dp
 
 private const val COLUMNS = 4
-
-/** Rzedy na jednej "tablicy". Trzy zamiast czterech - siatka mniej sciska warsztat i cala
- *  tresc miesci sie na jednym ekranie bez scrolla; reszta receptur idzie na kolejna strone. */
-private const val ROWS = 3
-
-/** Ile kafelkow miesci sie na jednej "tablicy" - [ROWS] rzedow po [COLUMNS]. */
-private const val PAGE_SIZE = ROWS * COLUMNS

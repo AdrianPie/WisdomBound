@@ -41,6 +41,9 @@ kotlin {
             // "magazyn pelny" nie potrzebuje precyzji co do sekundy.
             implementation(libs.androidx.work.runtime)
             implementation(libs.androidx.core.ktx)
+            // Subskrypcja premium i reklamy z nagroda - patrz shared/monetization.
+            implementation(libs.revenuecat.purchases)
+            implementation(libs.play.services.ads)
         }
         commonMain.dependencies {
             // Przypomnienia biora plan wprost z modelu gracza (domain/notification/ReminderPlan).
@@ -55,6 +58,7 @@ kotlin {
             implementation(libs.androidx.lifecycle.runtimeCompose)
 
             implementation(libs.kotlinx.serialization)
+            implementation(libs.kotlinx.coroutines.core)
             // Local (per-device) preference storage - app language lives here, not in Player,
             // because it must apply even before the player is loaded (Auth screen, splash).
             implementation(libs.multiplatform.settings)

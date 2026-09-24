@@ -33,7 +33,6 @@ object ScienceQuestionsExtra2 {
         ask("newton_jablko", "What supposedly inspired Newton's thinking on gravity?", "A falling apple", listOf("A comet in the sky", "A solar eclipse", "An earthquake"), QuizDifficulty.Easy),
 
         /* ------------------------------ Medium ------------------------------ */
-        ask("metoda_naukowa", "What is the first step of the scientific method?", "Asking a question or making an observation", listOf("Publishing the results in a journal", "Designing a poster for a conference", "Collecting an award for the work"), QuizDifficulty.Medium),
         ask("hipoteza_definicja", "What is a hypothesis in science?", "A proposed explanation to be tested", listOf("A law already proven beyond doubt", "The final conclusion of a study", "A particular kind of experiment"), QuizDifficulty.Medium),
         ask("grupa_kontrolna", "What is a control group used for in an experiment?", "Comparison with the test group", listOf("Speeding up the study", "Funding the research", "Publishing results"), QuizDifficulty.Medium),
         ask("curie_odkrycia", "For discovering which elements did Marie Sklodowska-Curie win a Nobel Prize?", "Polonium and radium", listOf("Oxygen and hydrogen", "Uranium and plutonium", "Gold and silver"), QuizDifficulty.Medium),
@@ -42,7 +41,6 @@ object ScienceQuestionsExtra2 {
         ask("gps_technologia", "What technology does GPS rely on?", "Signals from satellites", listOf("Radio waves from ground towers only", "Earth's magnetic field", "Sound"), QuizDifficulty.Medium),
         ask("rentgen_promienie", "Who discovered X-rays?", "Wilhelm Rontgen", listOf("Marie Curie", "Max Planck", "Niels Bohr"), QuizDifficulty.Medium),
         ask("fleming_bakteria", "Which mold/bacterium did Fleming observe when discovering penicillin?", "Penicillium mold", listOf("E. coli bacteria", "The flu virus", "Baker's yeast"), QuizDifficulty.Medium),
-        ask("chemia_analityczna", "What does analytical chemistry deal with?", "Determining the composition and amount of substances in a sample", listOf("Synthesising new medicines and nothing else besides", "Studying the composition of distant stars", "Designing engines that burn fuel cleanly"), QuizDifficulty.Medium),
 
         /* ------------------------------ Hard ------------------------------- */
         ask("teoria_falsyfikacji", "Who formulated falsifiability as a criterion of being scientific?", "Karl Popper", listOf("Thomas Kuhn", "Isaac Newton", "Francis Bacon"), QuizDifficulty.Hard),
@@ -51,7 +49,6 @@ object ScienceQuestionsExtra2 {
         ask("eksperyment_podwojnej_szczeliny", "What does the double-slit experiment show?", "The wave-particle duality of light and matter", listOf("That matter always behaves as a wave", "That light carries no mass at all", "That electrons do not really exist"), QuizDifficulty.Hard),
         ask("cern_lhc", "What is the Large Hadron Collider (LHC) used for?", "Colliding particles at enormous energies", listOf("Observing distant galaxies", "Predicting earthquakes", "Producing electric power"), QuizDifficulty.Hard),
         ask("recenzja_naukowa", "What is scientific peer review?", "Evaluation of research by other experts before publication", listOf("Proofreading done by the authors themselves first", "An automatic check of spelling and grammar", "A public vote on which papers appear"), QuizDifficulty.Hard),
-        ask("powtarzalnosc_wynikow", "Why does an experiment's reproducibility matter in science?", "It confirms the reliability of the result", listOf("It speeds up publication", "It lowers research costs", "It increases sensationalism"), QuizDifficulty.Hard),
         ask("teoria_a_prawo", "How does a scientific theory differ from a scientific law?", "A theory explains a phenomenon, a law describes its regularity mathematically", listOf("A theory is nothing more than a guess that nobody has tested yet", "A law can never be challenged once it has been stated", "The two words mean exactly the same thing"), QuizDifficulty.Hard),
 
         /* ----------------------------- Expert ---------------------------- */

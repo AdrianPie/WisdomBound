@@ -53,7 +53,6 @@ object BiologyQuestionsExtra {
         ask("fotosynteza_produkt", "Which gas is a byproduct of photosynthesis?", "Oxygen", listOf("Nitrogen", "Carbon dioxide", "Methane"), QuizDifficulty.Medium),
         ask("chloroplast", "In which plant cell structure does photosynthesis take place?", "The chloroplast", listOf("The mitochondrion", "The vacuole", "The nucleus"), QuizDifficulty.Medium),
         ask("sciana_kom", "What is the plant cell wall made of?", "Cellulose", listOf("Chitin", "Keratin", "Peptidoglycan"), QuizDifficulty.Medium),
-        ask("kregowce_grupy", "How many classes are traditionally distinguished among vertebrates?", "Five", listOf("Three", "Seven", "Ten"), QuizDifficulty.Medium),
         ask("plyny_ustrojowe", "What percentage of human body mass is water?", "About 60%", listOf("About 20%", "About 90%", "About 40%"), QuizDifficulty.Medium),
         ask("insulina_rola", "What does insulin do in the body?", "Lowers blood sugar levels", listOf("Raises blood pressure", "Increases clotting", "Speeds up breathing"), QuizDifficulty.Medium),
         ask("wirus_zycie", "Why are viruses not considered fully-fledged living organisms?", "They can't reproduce without a host cell", listOf("They have no genetic material", "They can't mutate", "They don't respond to temperature"), QuizDifficulty.Medium),

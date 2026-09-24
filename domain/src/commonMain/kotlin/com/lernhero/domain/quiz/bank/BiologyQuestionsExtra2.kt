@@ -34,14 +34,12 @@ object BiologyQuestionsExtra2 {
 
         /* ------------------------------ Medium ------------------------------ */
         ask("gruczoly_dokrewne", "What does the endocrine system deal with?", "Secreting hormones", listOf("Digesting food", "Filtering blood", "Producing red blood cells only"), QuizDifficulty.Medium),
-        ask("melanina", "What is melanin in the skin responsible for?", "Skin color and UV protection", listOf("Sensing pain", "Producing sweat", "Skin elasticity"), QuizDifficulty.Medium),
         ask("gruczoly_potowe", "What are sweat glands for?", "Regulating body temperature", listOf("Digesting fats", "Producing hormones", "Strengthening bones"), QuizDifficulty.Medium),
         ask("kregoslup_odcinki", "How many sections does the human spine have?", "Five", listOf("Three", "Four", "Seven"), QuizDifficulty.Medium),
         ask("uklad_limfatyczny", "What is the lymphatic system responsible for?", "Immunity and fluid drainage", listOf("Producing urine", "Digesting proteins", "Secreting insulin"), QuizDifficulty.Medium),
         ask("genotyp_fenotyp", "How does phenotype differ from genotype?", "Phenotype is visible traits, genotype is the genetic code", listOf("The phenotype applies only to plants and fungi", "The genotype keeps changing during life", "They are two names for the same thing"), QuizDifficulty.Medium),
         ask("ropucha_aga", "Which animal, brought to Australia in 1935 to protect sugar cane, became a plague itself?", "The cane toad", listOf("The rabbit", "The dingo", "The emu"), QuizDifficulty.Medium),
         ask("nisza_ekologiczna", "What is an ecological niche?", "A species' role in an ecosystem", listOf("A site used only for wintering", "An area protected by law", "A particular type of soil"), QuizDifficulty.Medium),
-        ask("las_pieter", "How many main layers are distinguished in a typical forest?", "Four", listOf("Two", "Three", "Six"), QuizDifficulty.Medium),
         ask("uv_dna", "Which part of sunlight damages DNA in skin cells and causes sunburn?", "Ultraviolet radiation", listOf("Infrared radiation", "Visible light", "Radio waves"), QuizDifficulty.Medium),
         ask("gatunek_endemiczny", "What is an endemic species?", "One found only in a specific, limited area", listOf("One that died out within living memory", "One bred on farms for its meat", "One protected by international law"), QuizDifficulty.Medium),
         ask("las_gatunki", "Which land habitat holds the greatest number of species?", "Tropical rainforest", listOf("Boreal forest (taiga)", "Temperate grassland", "Tundra"), QuizDifficulty.Medium),

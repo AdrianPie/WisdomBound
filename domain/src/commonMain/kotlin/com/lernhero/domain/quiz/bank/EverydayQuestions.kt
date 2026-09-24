@@ -46,10 +46,8 @@ object EverydayQuestions {
         ask("szklo_surowiec", "What is the main raw material of glass?", "Sand", listOf("Limestone", "Clay", "Quartz crystal"), QuizCategory.Science, QuizDifficulty.Medium),
         ask("soda_wzor", "What is the chemical formula of baking soda?", "NaHCO3", listOf("NaCl", "CaCO3", "KNO3"), QuizCategory.Elements, QuizDifficulty.Hard),
         ask("miedz_przewody", "Which metal is used in most household electrical wiring?", "Copper", listOf("Aluminium", "Iron", "Zinc"), QuizCategory.Elements, QuizDifficulty.Easy),
-        ask("katalizator_rola", "What does a catalyst do in a chemical reaction?", "Speeds it up without being consumed", listOf("Provides all the energy for it", "Turns into the product", "Stops it once it starts"), QuizCategory.Science, QuizDifficulty.Hard),
         ask("ph_siedem", "What does a pH of 7 mean?", "The solution is neutral", listOf("The solution is strongly acidic", "The solution is strongly basic", "The solution conducts no current"), QuizCategory.Science, QuizDifficulty.Easy),
         ask("witamina_gotowanie", "Which vitamin is most easily destroyed by cooking?", "Vitamin C", listOf("Vitamin D", "Vitamin K", "Vitamin E"), QuizCategory.Biology, QuizDifficulty.Hard),
-        ask("kofeina_mozg", "What does caffeine block in the brain?", "Adenosine receptors", listOf("Dopamine production", "Serotonin uptake", "Oxygen transport"), QuizCategory.Biology, QuizDifficulty.Expert),
         ask("szczepionka_uczy", "What does a vaccine train?", "The immune system", listOf("The nervous system", "The digestive system", "The circulatory system"), QuizCategory.Biology, QuizDifficulty.Easy),
         ask("grupa_krwi_czesta", "Which is the most common blood type worldwide?", "O positive", listOf("A negative", "AB positive", "B negative"), QuizCategory.Biology, QuizDifficulty.Hard),
 
@@ -64,15 +62,8 @@ object EverydayQuestions {
         /* ---------------------------------- Kuchnia -------------------------------- */
         ask("sushi_kraj", "Which country is sushi originally from?", "Japan", listOf("China", "Korea", "Thailand"), QuizCategory.Geography, QuizDifficulty.Easy),
         ask("paella_kraj", "Which country is paella from?", "Spain", listOf("Italy", "Portugal", "Greece"), QuizCategory.Geography, QuizDifficulty.Easy),
-        ask("hummus_skladnik", "What is the main ingredient of hummus?", "Chickpeas", listOf("Lentils", "White beans", "Peas"), QuizCategory.Biology, QuizDifficulty.Medium),
-        ask("tofu_z_czego", "What is tofu made from?", "Soybeans", listOf("Rice", "Wheat", "Almonds"), QuizCategory.Biology, QuizDifficulty.Easy),
         ask("najdrozsza_przyprawa", "Which spice is the most expensive by weight?", "Saffron", listOf("Vanilla", "Cardamom", "Black pepper"), QuizCategory.Geography, QuizDifficulty.Medium),
-        ask("guacamole_skladnik", "What is the main ingredient of guacamole?", "Avocado", listOf("Courgette", "Green pepper", "Broad beans"), QuizCategory.Biology, QuizDifficulty.Easy),
-        ask("cydr_z_czego", "Cider is made by fermenting which fruit?", "Apples", listOf("Grapes", "Pears", "Plums"), QuizCategory.Biology, QuizDifficulty.Easy),
-        ask("risotto_ryz", "Which rice variety is traditionally used for risotto?", "Arborio", listOf("Basmati", "Jasmine", "Long-grain"), QuizCategory.Geography, QuizDifficulty.Hard),
         ask("wanilia_roslina", "Vanilla flavouring comes from the pods of which plant family?", "An orchid", listOf("A palm", "A cactus", "A fern"), QuizCategory.Biology, QuizDifficulty.Hard),
-        ask("marcepan_orzech", "Which nut is marzipan made from?", "Almond", listOf("Hazelnut", "Walnut", "Cashew"), QuizCategory.Biology, QuizDifficulty.Medium),
-        ask("pesto_ziolo", "Which herb is the base of pesto alla genovese?", "Basil", listOf("Parsley", "Oregano", "Mint"), QuizCategory.Geography, QuizDifficulty.Medium),
 
         /* ------------------------------ Muzyka i sztuka ---------------------------- */
         ask("gitara_struny", "How many strings does a standard guitar have?", "Six", listOf("Four", "Five", "Seven"), QuizCategory.Technology, QuizDifficulty.Easy),
@@ -101,7 +92,6 @@ object EverydayQuestions {
         ask("hokej_tercje", "How many periods are played in an ice hockey game?", "Three", listOf("Two", "Four", "Five"), QuizCategory.Sport, QuizDifficulty.Medium),
         ask("boks_runda", "How long is one round in professional men's boxing?", "Three minutes", listOf("Two minutes", "Four minutes", "Five minutes"), QuizCategory.Sport, QuizDifficulty.Medium),
         ask("kola_olimpijskie_znaczenie", "What do the five Olympic rings represent?", "The five inhabited continents", listOf("The five founding countries", "The five original sports", "The five Olympic virtues"), QuizCategory.Sport, QuizDifficulty.Medium),
-        ask("giro_koszulka", "What colour is the leader's jersey in the Giro d'Italia?", "Pink", listOf("Yellow", "Red", "Blue"), QuizCategory.Sport, QuizDifficulty.Hard),
 
         /* -------------------------------- Technologia ------------------------------ */
         ask("http_skrot", "What does HTTP stand for?", "Hypertext transfer protocol", listOf("High-throughput transfer protocol", "Hyperlink text transport process", "Host transfer to protocol"), QuizCategory.Technology, QuizDifficulty.Medium),

@@ -82,14 +82,6 @@ object TriviaQuestionsExtremes {
             difficulty = R
         ),
         ask(
-            id = "kolibr_serce",
-            prompt = "A hummingbird's heart can beat roughly how many times per minute in flight?",
-            correct = "Over 1,000",
-            wrong = listOf("About 200", "About 400", "About 700"),
-            category = A,
-            difficulty = R
-        ),
-        ask(
             id = "slimak_zeby",
             prompt = "Which of these animals has the most teeth, by a wide margin?",
             correct = "A garden snail",
@@ -132,28 +124,12 @@ object TriviaQuestionsExtremes {
 
         /* -------------------------------- Cialo -------------------------------- */
         ask(
-            id = "kosc_udowa",
-            prompt = "Which human bone is the strongest?",
-            correct = "The femur",
-            wrong = listOf("The skull", "The shin bone", "The jawbone"),
-            category = B,
-            difficulty = E
-        ),
-        ask(
             id = "jelito_powierzchnia",
             prompt = "Spread flat, the lining of the human small intestine would cover roughly what?",
             correct = "A tennis court",
             wrong = listOf("A dinner table", "A car park space", "A football pitch"),
             category = B,
             difficulty = R
-        ),
-        ask(
-            id = "kwas_zoladkowy",
-            prompt = "Stomach acid is strong enough to do what?",
-            correct = "Dissolve metal",
-            wrong = listOf("Burn through glass", "Evaporate at room temperature", "Bleach fabric white"),
-            category = B,
-            difficulty = D
         ),
         ask(
             id = "kosci_niemowle",
@@ -181,14 +157,6 @@ object TriviaQuestionsExtremes {
         ),
 
         /* ------------------------------ Ziemia ------------------------------ */
-        ask(
-            id = "pustynia_lod",
-            prompt = "Which is the largest desert on Earth?",
-            correct = "Antarctica",
-            wrong = listOf("The Sahara", "The Gobi", "The Arabian Desert"),
-            category = G,
-            difficulty = D
-        ),
         ask(
             id = "rowu_glebokosc",
             prompt = "If Mount Everest were dropped into the Mariana Trench, what would happen?",
@@ -220,14 +188,6 @@ object TriviaQuestionsExtremes {
             wrong = listOf("A few months", "About two years", "About five years"),
             category = G,
             difficulty = R
-        ),
-        ask(
-            id = "morze_martwe",
-            prompt = "Why can swimmers float so easily in the Dead Sea?",
-            correct = "Its extreme salt content",
-            wrong = listOf("Its shallow depth", "Its low temperature", "Its strong currents"),
-            category = G,
-            difficulty = E
         ),
         ask(
             id = "rosja_strefy",
@@ -264,68 +224,12 @@ object TriviaQuestionsExtremes {
 
         /* ------------------------------ Kosmos ------------------------------ */
         ask(
-            id = "wenus_upal",
-            prompt = "Which planet has the hottest surface, despite not being closest to the Sun?",
-            correct = "Venus",
-            wrong = listOf("Mercury", "Mars", "Jupiter"),
-            category = S,
-            difficulty = D
-        ),
-        ask(
-            id = "saturn_gestosc",
-            prompt = "Saturn is so light for its size that it would do what in a big enough ocean?",
-            correct = "Float",
-            wrong = listOf("Sink slowly", "Break apart", "Boil the water"),
-            category = S,
-            difficulty = D
-        ),
-        ask(
-            id = "neutronowa_lyzka",
-            prompt = "A teaspoon of neutron star material would weigh roughly as much as what?",
-            correct = "A mountain",
-            wrong = listOf("A car", "A skyscraper", "An ocean liner"),
-            category = S,
-            difficulty = R
-        ),
-        ask(
-            id = "wenus_doba",
-            prompt = "On Venus, which lasts longer?",
-            correct = "A day",
-            wrong = listOf("A year", "They are equal", "It has no fixed year"),
-            category = S,
-            difficulty = R
-        ),
-        ask(
             id = "slonce_masa",
             prompt = "The Sun accounts for roughly what share of the Solar System's total mass?",
             correct = "Over 99%",
             wrong = listOf("About 70%", "About 85%", "About 95%"),
             category = S,
             difficulty = D
-        ),
-        ask(
-            id = "ksiezyc_oddala",
-            prompt = "The Moon is drifting away from Earth at about what rate each year?",
-            correct = "A few centimetres",
-            wrong = listOf("A few millimetres", "About a metre", "About ten metres"),
-            category = S,
-            difficulty = R
-        ),
-        ask(
-            id = "czerwona_plama",
-            prompt = "Jupiter's Great Red Spot is a single storm that has been raging for at least how long?",
-            correct = "Centuries",
-            wrong = listOf("A few years", "About fifty years", "About a decade"),
-            category = S,
-            difficulty = D
-        ),
-        ask(
-            id = "swiatlo_slonce",
-            prompt = "Light from the Sun takes roughly how long to reach Earth?",
-            correct = "Eight minutes",
-            wrong = listOf("Eight seconds", "Eight hours", "Instantly"),
-            category = S,
-            difficulty = E
         ),
 
         /* ---------------------------- Materia i liczby ---------------------------- */
@@ -336,14 +240,6 @@ object TriviaQuestionsExtremes {
             wrong = listOf("Corundum", "Topaz", "Quartz"),
             category = C,
             difficulty = E
-        ),
-        ask(
-            id = "osm_gestosc",
-            prompt = "Which is the densest naturally occurring element?",
-            correct = "Osmium",
-            wrong = listOf("Lead", "Gold", "Tungsten"),
-            category = C,
-            difficulty = R
         ),
         ask(
             id = "wolfram_topnienie",

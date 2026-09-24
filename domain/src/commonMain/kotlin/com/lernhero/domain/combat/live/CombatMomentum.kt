@@ -17,6 +17,41 @@ object AnswerTimer {
         (remainingFraction.coerceIn(0f, 1f) * SEGMENTS).toInt().coerceIn(0, SEGMENTS - 1)
 
     fun multiplierFor(remainingFraction: Float): Float = MULTIPLIERS[segmentIndexFor(remainingFraction)]
+
+    /**
+     * Ile czasu dostaje KONKRETNE pytanie. Dwie rzeczy je zmieniaja i obie sa celowe.
+     *
+     * **Rozmiar pytania.** Cztery odpowiedzi czyta sie inaczej niz ukladanka z szesciu elementow
+     * albo "zaznacz wszystkie prawdziwe" z siedmiu opcji. Staly czas dla wszystkich znaczyl, ze
+     * dlugie pytania byly trudniejsze nie tresci, tylko przez czytanie - a to nie jest ta trudnosc,
+     * o ktora w tej grze chodzi. Kazda opcja ponad cztery dokłada [MS_PER_EXTRA_OPTION].
+     *
+     * **Glebokosc fali.** Im dalej w biegu, tym mniej czasu - do [MIN_WAVE_FACTOR] wartosci
+     * bazowej. To jest druga (obok sily wrogow) krzywa trudnosci biegu, i ta bardziej uczciwa:
+     * nie zabiera graczowi mocy, tylko zadaje, zeby wiedzial odpowiedz OD RAZU, zamiast dochodzic
+     * do niej przez eliminacje. Na dwudziestej fali zostaje okolo 13 sekund zamiast osiemnastu.
+     *
+     * Pasek na ekranie i mnoznik salwy licza sie z UŁAMKA tego okna, wiec obie te rzeczy dostraja
+     * sie same - nie ma drugiego miejsca, ktore trzeba by zmienic razem z ta funkcja.
+     */
+    fun windowFor(optionCount: Int, wave: Int): Long {
+        val extras = (optionCount - BASE_OPTIONS).coerceAtLeast(0)
+        val sized = WINDOW_MS + extras * MS_PER_EXTRA_OPTION
+        val factor = (1f - (wave.coerceAtLeast(1) - 1) * WAVE_PRESSURE_PER_WAVE)
+            .coerceAtLeast(MIN_WAVE_FACTOR)
+        return (sized * factor).toLong().coerceAtLeast(MIN_WINDOW_MS)
+    }
+
+    /** Ile opcji miesci sie w bazowym czasie - tyle ma zwykle pytanie wyboru. */
+    private const val BASE_OPTIONS = 4
+    private const val MS_PER_EXTRA_OPTION = 1500L
+
+    /** O ile krocej na kazda fale i jak nisko moze to zejsc (0.62 = ~11s z osiemnastu). */
+    private const val WAVE_PRESSURE_PER_WAVE = 0.015f
+    private const val MIN_WAVE_FACTOR = 0.62f
+
+    /** Twarda podloga - ponizej tego nie da sie przeczytac nawet krotkiego pytania. */
+    private const val MIN_WINDOW_MS = 8000L
 }
 
 /**

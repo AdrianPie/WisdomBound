@@ -15,20 +15,21 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -172,15 +173,14 @@ fun LiveQuizBar(
                     .padding(bottom = 10.dp),
                 verticalArrangement = Arrangement.spacedBy(8.dp)
             ) {
-                // Pytanie i odpowiedzi przewijaja sie RAZEM, w obszarze o zmiennej wysokosci
-                // (weight), a nie osobno - dzieki temu przycisk ZATWIERDZ ponizej ma zawsze swoje
-                // miejsce i nie da sie go wypchnac poza ekran liczba opcji (przy 7 pozycjach
-                // wielokrotnego wyboru wczesniej znikal i nie bylo czym potwierdzic odpowiedzi).
+                // Obszar pytania NIE przewija sie w ogole. Drobne elementy (pasek czasu, flaga,
+                // baner odslaniajacy) maja swoje wysokosci, a cala reszte zabiera siatka
+                // odpowiedzi - to ona sie dopasowuje. Przycisk ZATWIERDZ stoi ponizej, poza tym
+                // obszarem, wiec liczba opcji nigdy go nie wypycha poza ekran.
                 Column(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .weight(1f)
-                        .verticalScroll(rememberScrollState()),
+                        .weight(1f),
                     verticalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
                     if (question is OrderingQuestion) {
@@ -189,7 +189,11 @@ fun LiveQuizBar(
 
                     // Pasek czasu idzie POD pytaniem, ktore wisi nad panelem - stad jest tu
                     // pierwszy, a samego pytania juz w tej kolumnie nie ma.
-                    AnswerCountdownBar(questionId = question.id, revealed = quiz.revealed)
+                    AnswerCountdownBar(
+                        questionId = question.id,
+                        revealed = quiz.revealed,
+                        windowMs = quiz.windowMs
+                    )
 
                     if (question is MultipleChoiceQuestion) {
                         question.flag?.let { flag ->
@@ -221,124 +225,43 @@ fun LiveQuizBar(
                         )
                     }
 
-                    // Odpowiedzi. Najpierw na miejsce trafia pytanie ([QUESTION_LEAD_MILLIS]), dopiero
-                    // potem wjezdzaja z boku kolejne odpowiedzi - kazda o [TILE_STAGGER_MILLIS] pozniej.
-                    // Ciemna podkladka pod cala lista: jasne dymki odpowiedzi na jasnym panelu
-                    // zlewaly sie w jedno pole, a na ciemnym tle kazdy z nich wyrazne "stoi" osobno.
-                    Column(
+                    // Odpowiedzi wypelniaja CALE miejsce, ktore zostalo, i nigdy sie nie przewijaja:
+                    // kafle dziela dostepna wysokosc miedzy siebie ([weight]), a gdy przy jednej
+                    // kolumnie zrobilyby sie nieczytelnie niskie, siatka przechodzi na DWIE kolumny
+                    // (patrz [answerColumns]). Wczesniej caly panel siedzial w verticalScroll i przy
+                    // czterech odpowiedziach mieszczil sie co do dp - wystarczyl baner odslaniajacy
+                    // albo flaga nad pytaniem, zeby ostatnia opcja zjechala pod krawedz ekranu.
+                    //
+                    // Ciemna podkladka pod cala lista: jasne dymki na jasnym panelu zlewaly sie w
+                    // jedno pole, a na ciemnym tle kazdy z nich wyraznie "stoi" osobno.
+                    val options = question.toAnswerOptions(quiz, onAnswer, onOrderPick, onMultiToggle)
+
+                    var visibleCount by remember(question.id) { mutableStateOf(0) }
+                    LaunchedEffect(question.id) {
+                        visibleCount = 0
+                        delay(QUESTION_LEAD_MILLIS)
+                        repeat(options.size) {
+                            visibleCount += 1
+                            delay(TILE_STAGGER_MILLIS)
+                        }
+                    }
+
+                    AnswerGrid(
+                        questionId = question.id,
+                        revealed = quiz.revealed,
+                        options = options,
+                        visibleCount = visibleCount,
                         modifier = Modifier
                             .fillMaxWidth()
+                            .weight(1f)
                             .padding(top = 2.dp)
                             .clip(AnswerListShape)
                             .background(AnswerListBg)
-                            .padding(horizontal = 10.dp, vertical = 12.dp),
-                        verticalArrangement = Arrangement.spacedBy(10.dp)
-                    ) {
-                        var visibleCount by remember(question.id) { mutableStateOf(0) }
-                        LaunchedEffect(question.id) {
-                            visibleCount = 0
-                            val optionCount = when (question) {
-                                is MultipleChoiceQuestion -> question.answers.size
-                                is OrderingQuestion -> question.items.size
-                                is MultiSelectQuestion -> question.options.size
-                            }
-                            delay(QUESTION_LEAD_MILLIS)
-                            repeat(optionCount) {
-                                visibleCount += 1
-                                delay(TILE_STAGGER_MILLIS)
-                            }
-                        }
-
-                        when (question) {
-                            is MultipleChoiceQuestion -> question.answers.forEachIndexed { index, answer ->
-                                AnimatedVisibility(
-                                    visible = index < visibleCount,
-                                    enter = fadeIn(tween(TILE_ENTER_MILLIS, easing = EaseOutCubic)) +
-                                        slideInHorizontally(
-                                            animationSpec = tween(TILE_ENTER_MILLIS, easing = EaseOutCubic)
-                                        ) { fullWidth -> fullWidth / 2 }
-                                ) {
-                                    val visual = when {
-                                        !quiz.revealed -> OptionVisual.IDLE
-                                        answer.isCorrect -> OptionVisual.CORRECT
-                                        quiz.selectedAnswerId == answer.id -> OptionVisual.WRONG
-                                        else -> OptionVisual.FADED
-                                    }
-                                    QuizOptionTile(
-                                        label = "${index + 1}",
-                                        badgeColor = OptionColors[index % OptionColors.size],
-                                        text = answer.text,
-                                        visual = visual,
-                                        enabled = !quiz.revealed,
-                                        onClick = { onAnswer(answer.id) },
-                                        modifier = Modifier.fillMaxWidth()
-                                    )
-                                }
-                            }
-
-                            is OrderingQuestion -> question.items.forEachIndexed { index, item ->
-                                AnimatedVisibility(
-                                    visible = index < visibleCount,
-                                    enter = fadeIn(tween(TILE_ENTER_MILLIS, easing = EaseOutCubic)) +
-                                        slideInHorizontally(
-                                            animationSpec = tween(TILE_ENTER_MILLIS, easing = EaseOutCubic)
-                                        ) { fullWidth -> fullWidth / 2 }
-                                ) {
-                                    val position = quiz.orderedSelection.indexOf(item.id)
-                                    val visual = when {
-                                        quiz.revealed -> if (position == item.correctPosition) OptionVisual.CORRECT else OptionVisual.WRONG
-                                        position != -1 -> OptionVisual.SELECTED
-                                        else -> OptionVisual.IDLE
-                                    }
-                                    QuizOptionTile(
-                                        label = if (position != -1) "${position + 1}" else itemLabel(index),
-                                        badgeColor = OptionColors[index % OptionColors.size],
-                                        text = item.text,
-                                        visual = visual,
-                                        enabled = !quiz.revealed && position == -1,
-                                        onClick = { onOrderPick(item.id) },
-                                        modifier = Modifier.fillMaxWidth()
-                                    )
-                                }
-                            }
-
-                            // "Zaznacz wszystkie prawdziwe" - w odroznieniu od pozostalych typow nic
-                            // nie rozstrzyga sie samo: gracz przelacza dowolna liczbe opcji i dopiero
-                            // ZATWIERDZ konczy ture. Po odsłonieciu widac komplet - co bylo poprawne,
-                            // co gracz przeoczyl i co zaznaczyl niepotrzebnie.
-                            // Jedna kolumna pelnej szerokosci, jak przy pozostalych typach - przy
-                            // 6-7 opcjach lista wychodzi poza panel, ale panel i tak sie przewija.
-                            is MultiSelectQuestion -> question.options.forEachIndexed { index, option ->
-                                AnimatedVisibility(
-                                    visible = index < visibleCount,
-                                    enter = fadeIn(tween(TILE_ENTER_MILLIS, easing = EaseOutCubic)) +
-                                        slideInHorizontally(
-                                            animationSpec = tween(TILE_ENTER_MILLIS, easing = EaseOutCubic)
-                                        ) { fullWidth -> fullWidth / 2 }
-                                ) {
-                                    val picked = option.id in quiz.multiSelection
-                                    val visual = when {
-                                        !quiz.revealed -> if (picked) OptionVisual.SELECTED else OptionVisual.IDLE
-                                        option.isCorrect -> OptionVisual.CORRECT
-                                        picked -> OptionVisual.WRONG
-                                        else -> OptionVisual.FADED
-                                    }
-                                    QuizOptionTile(
-                                        label = if (picked) "✔" else itemLabel(index),
-                                        badgeColor = OptionColors[index % OptionColors.size],
-                                        text = option.text,
-                                        visual = visual,
-                                        enabled = !quiz.revealed,
-                                        onClick = { onMultiToggle(option.id) },
-                                        modifier = Modifier.fillMaxWidth()
-                                    )
-                                }
-                            }
-                        }
-                    }
+                            .padding(horizontal = 10.dp, vertical = 10.dp)
+                    )
                 }
 
-                // Zatwierdzenie stoi POZA obszarem przewijania - to jedyny sposob, zeby dalo sie
+                // Zatwierdzenie stoi POZA obszarem odpowiedzi - to jedyny sposob, zeby dalo sie
                 // potwierdzic odpowiedz niezaleznie od tego, ile opcji ma pytanie.
                 if (question is MultiSelectQuestion && !quiz.revealed) {
                     val picked = quiz.multiSelection.size
@@ -539,6 +462,8 @@ private fun SequenceProgressRow(
 internal fun AnswerCountdownBar(
     questionId: String,
     revealed: Boolean,
+    /** Okno TEGO pytania - rozne dla roznych pytan i fal, patrz [AnswerTimer.windowFor]. */
+    windowMs: Long = AnswerTimer.WINDOW_MS,
     label: String = "HIT POWER",
     modifier: Modifier = Modifier
 ) {
@@ -549,7 +474,7 @@ internal fun AnswerCountdownBar(
         val start = TimeSource.Monotonic.markNow()
         while (isActive) {
             val elapsedMs = start.elapsedNow().inWholeMilliseconds
-            remainingFraction = (1f - elapsedMs.toFloat() / AnswerTimer.WINDOW_MS).coerceIn(0f, 1f)
+            remainingFraction = (1f - elapsedMs.toFloat() / windowMs).coerceIn(0f, 1f)
             if (remainingFraction <= 0f) break
             withFrameMillis {}
         }
@@ -559,7 +484,7 @@ internal fun AnswerCountdownBar(
     // tej wartosci, ktora policzyla mnoznik obrazen tej tury - pasek pokazuje to, co faktycznie trafilo.
     val litSegments = AnswerTimer.segmentIndexFor(remainingFraction) + 1
     val leadColor by animateColorAsState(segmentColor(litSegments - 1))
-    val remainingSeconds = remainingFraction * AnswerTimer.WINDOW_MS / 1000f
+    val remainingSeconds = remainingFraction * windowMs / 1000f
 
     Column(modifier = modifier.fillMaxWidth()) {
         Row(
@@ -762,6 +687,192 @@ private fun inkFor(visual: OptionVisual): Color = when (visual) {
  * [OptionVisual.SELECTED] to stan posredni (ukladanka, wielokrotny wybor) - element juz klikniety,
  * czeka na reszte, ale wynik jeszcze nie jest znany.
  */
+/**
+ * Jedna odpowiedz gotowa do narysowania - wspolny ksztalt dla wszystkich trzech typow pytania.
+ * Dzieki niemu siatka jest napisana RAZ; wczesniej kazdy typ mial wlasna, niemal identyczna kopie
+ * petli rysujacej kafle i kazda poprawka ukladu trzeba bylo robic trzy razy.
+ */
+private data class AnswerOption(
+    val label: String,
+    val badgeColor: Color,
+    val text: String,
+    val visual: OptionVisual,
+    val enabled: Boolean,
+    val onClick: () -> Unit
+)
+
+/** Sprowadza dowolny typ pytania do listy [AnswerOption] - cala roznica miedzy typami konczy sie tutaj. */
+@Composable
+private fun QuizQuestion.toAnswerOptions(
+    quiz: LiveQuizState,
+    onAnswer: (String) -> Unit,
+    onOrderPick: (String) -> Unit,
+    onMultiToggle: (String) -> Unit
+): List<AnswerOption> = when (this) {
+    is MultipleChoiceQuestion -> answers.mapIndexed { index, answer ->
+        AnswerOption(
+            label = "${index + 1}",
+            badgeColor = OptionColors[index % OptionColors.size],
+            text = answer.text,
+            visual = when {
+                !quiz.revealed -> OptionVisual.IDLE
+                answer.isCorrect -> OptionVisual.CORRECT
+                quiz.selectedAnswerId == answer.id -> OptionVisual.WRONG
+                else -> OptionVisual.FADED
+            },
+            enabled = !quiz.revealed,
+            onClick = { onAnswer(answer.id) }
+        )
+    }
+
+    is OrderingQuestion -> items.mapIndexed { index, item ->
+        val position = quiz.orderedSelection.indexOf(item.id)
+        AnswerOption(
+            label = if (position != -1) "${position + 1}" else itemLabel(index),
+            badgeColor = OptionColors[index % OptionColors.size],
+            text = item.text,
+            visual = when {
+                quiz.revealed -> if (position == item.correctPosition) OptionVisual.CORRECT else OptionVisual.WRONG
+                position != -1 -> OptionVisual.SELECTED
+                else -> OptionVisual.IDLE
+            },
+            enabled = !quiz.revealed && position == -1,
+            onClick = { onOrderPick(item.id) }
+        )
+    }
+
+    // "Zaznacz wszystkie prawdziwe" - w odroznieniu od pozostalych typow nic nie rozstrzyga sie
+    // samo: gracz przelacza dowolna liczbe opcji i dopiero ZATWIERDZ konczy ture.
+    is MultiSelectQuestion -> options.mapIndexed { index, option ->
+        val picked = option.id in quiz.multiSelection
+        AnswerOption(
+            label = if (picked) "✔" else itemLabel(index),
+            badgeColor = OptionColors[index % OptionColors.size],
+            text = option.text,
+            visual = when {
+                !quiz.revealed -> if (picked) OptionVisual.SELECTED else OptionVisual.IDLE
+                option.isCorrect -> OptionVisual.CORRECT
+                picked -> OptionVisual.WRONG
+                else -> OptionVisual.FADED
+            },
+            enabled = !quiz.revealed,
+            onClick = { onMultiToggle(option.id) }
+        )
+    }
+}
+
+/**
+ * Ile kolumn ma miec siatka odpowiedzi przy takiej liczbie opcji i takiej wysokosci.
+ *
+ * To jest cala regula "dwa rzedy, gdy sie nie mieszcza": liczymy, ile wysokosci przypadloby na
+ * kafel w JEDNEJ kolumnie, i jesli wychodzi mniej niz [ANSWER_TILE_READABLE_HEIGHT], przechodzimy
+ * na dwie. Przy siedmiu opcjach wielokrotnego wyboru jedna kolumna daje 41 dp na kafel - napis
+ * przestaje sie miescic; dwie kolumny robia z tego cztery rzedy po 78 dp, czyli tyle, ile ma
+ * zwykle pytanie z czterema odpowiedziami.
+ *
+ * Powyzej [ANSWER_MAX_COLUMNS] nie idziemy: przy trzech kolumnach na dymek zostaje mniej niz
+ * sto dp szerokosci i tekst dluzszy niz jedno slowo i tak zostalby przyciety.
+ */
+private fun answerColumns(count: Int, available: Dp): Int {
+    if (count <= 2) return 1
+    val perTile = (available - ANSWER_TILE_GAP * (count - 1)) / count
+    return if (perTile < ANSWER_TILE_READABLE_HEIGHT) ANSWER_MAX_COLUMNS else 1
+}
+
+/**
+ * Siatka odpowiedzi wypelniajaca DOKLADNIE przydzielona wysokosc - bez przewijania i bez przyciecia.
+ *
+ * Kazdy rzad bierze [weight], wiec kafle zawsze dziela to, co jest; [QuizOptionTile] sam dopasowuje
+ * krazek z numerem i wielkosc pisma do wysokosci, ktora dostal. Miejsce kafla istnieje od poczatku,
+ * a animacja wejscia ([visibleCount]) dotyczy tylko jego ZAWARTOSCI - inaczej uklad skakalby przy
+ * kazdej kolejnej pojawiajacej sie odpowiedzi.
+ */
+@Composable
+private fun AnswerGrid(
+    questionId: String,
+    revealed: Boolean,
+    options: List<AnswerOption>,
+    visibleCount: Int,
+    modifier: Modifier = Modifier
+) {
+    BoxWithConstraints(modifier = modifier) {
+        // Ile kolumn ma siatka liczy sie TYLKO dopoki odpowiedz nie padla - RevealBanner, ktory
+        // wskakuje po odpowiedzi, zabiera kawalek tej samej wysokosci i bez tej blokady siatka
+        // przeliczylaby sie od nowa w polowie animacji werdyktu, skakac z jednej kolumny na dwie.
+        // Gracz ma wtedy widziec dokladnie ten sam uklad co przed klikniciem - tylko podswietlony.
+        var lockedHeight by remember(questionId) { mutableStateOf(maxHeight) }
+        if (!revealed) {
+            lockedHeight = maxHeight
+        }
+        val columns = answerColumns(options.size, lockedHeight)
+        val rows = options.chunked(columns)
+
+        // Rzedy dziela wysokosc po rowno, ale nie rosna ponad [ANSWER_TILE_MAX_HEIGHT] - przy dwoch
+        // odpowiedziach (prawda/falsz) kazdy dymek dostalby pol panelu i grafika by sie rozjechala.
+        // Nadmiar miejsca idzie wtedy rowno nad i pod siatke.
+        Column(
+            modifier = Modifier.fillMaxSize(),
+            verticalArrangement = Arrangement.spacedBy(ANSWER_TILE_GAP, Alignment.CenterVertically)
+        ) {
+            rows.forEachIndexed { rowIndex, row ->
+                Row(
+                    modifier = Modifier.fillMaxWidth().weight(1f, fill = false).heightIn(max = ANSWER_TILE_MAX_HEIGHT),
+                    horizontalArrangement = Arrangement.spacedBy(ANSWER_TILE_GAP)
+                ) {
+                    row.forEachIndexed { columnIndex, option ->
+                        val index = rowIndex * columns + columnIndex
+                        AnswerCell(
+                            option = option,
+                            visible = index < visibleCount,
+                            modifier = Modifier.weight(1f).fillMaxHeight()
+                        )
+                    }
+                    // Niepelny rzad dopychamy pustka, zeby kafle zostaly tej samej szerokosci
+                    // co w rzedzie pelnym, a nie rozlazly sie na cala szerokosc panelu.
+                    repeat(columns - row.size) {
+                        Spacer(modifier = Modifier.weight(1f))
+                    }
+                }
+            }
+        }
+    }
+}
+
+/**
+ * Jedno MIEJSCE w siatce odpowiedzi. Miejsce istnieje od poczatku i ma stala wielkosc - animacja
+ * wejscia dotyczy tylko zawartosci, wiec uklad nie skacze, gdy kolejne odpowiedzi sie pojawiaja.
+ *
+ * Osobna funkcja, a nie Box w srodku rzedu, z konkretnego powodu: w zasiegu Row/Column stoja takze
+ * `RowScope.AnimatedVisibility` i `ColumnScope.AnimatedVisibility`, przez co wywolanie bez zasiegu
+ * nie daje sie rozwiazac. Tutaj zadnego zasiegu ukladu nie ma i jest jednoznacznie.
+ */
+@Composable
+private fun AnswerCell(
+    option: AnswerOption,
+    visible: Boolean,
+    modifier: Modifier = Modifier
+) {
+    Box(modifier = modifier) {
+        AnimatedVisibility(
+            visible = visible,
+            enter = fadeIn(tween(TILE_ENTER_MILLIS, easing = EaseOutCubic)) +
+                slideInHorizontally(
+                    animationSpec = tween(TILE_ENTER_MILLIS, easing = EaseOutCubic)
+                ) { fullWidth -> fullWidth / 2 }
+        ) {
+            QuizOptionTile(
+                label = option.label,
+                badgeColor = option.badgeColor,
+                text = option.text,
+                visual = option.visual,
+                enabled = option.enabled,
+                onClick = option.onClick,
+                modifier = Modifier.fillMaxSize()
+            )
+        }
+    }
+}
+
 @Composable
 private fun QuizOptionTile(
     label: String,
@@ -776,17 +887,41 @@ private fun QuizOptionTile(
     val gem by animateColorAsState(gemTintFor(visual, badgeColor))
     val ink = inkFor(visual)
 
-    Box(
+    BoxWithConstraints(
         modifier = modifier
-            .heightIn(min = ANSWER_TILE_MIN_HEIGHT)
+            .heightIn(min = ANSWER_TILE_FLOOR_HEIGHT)
             .then(if (enabled) Modifier.clickable(onClick = onClick) else Modifier),
         contentAlignment = Alignment.CenterStart
     ) {
-        // matchParentSize, a nie fillMaxSize: caly panel siedzi w verticalScroll, wiec dostepna
-        // wysokosc jest nieskonczona - o rozmiarze kafla ma decydowac tekst, a warstwy grafiki maja
-        // sie tylko pod niego podciagnac. Wszystkie trzy leza na tym samym canvasie, wiec wystarczy
-        // ten sam modifier i FillBounds; krazek z numerem wystaje w lewo, stad padding od jego polowy.
-        val layer = Modifier.matchParentSize().padding(start = ANSWER_BUBBLE_START)
+        // Kafel dostaje wysokosc OD UKLADU (siatka dzieli miejsce miedzy rzedy), wiec krazek z
+        // numerem i wielkosc pisma musza sie do niej dopasowac - inaczej przy siedmiu opcjach
+        // krazek o stalej srednicy 58 dp bylby wyzszy od calego dymka, ktory ma zdobic.
+        // Wczesniej wysokosc brala sie z tekstu, bo panel siedzial w verticalScroll i miejsca
+        // "na dole" bylo nieskonczenie wiele.
+        val badgeSize = (maxHeight * ANSWER_BADGE_HEIGHT_RATIO)
+            .coerceIn(ANSWER_BADGE_MIN_SIZE, ANSWER_BADGE_SIZE)
+        val textSize = when {
+            maxHeight < 52.dp -> 11.sp
+            maxHeight < 66.dp -> 12.sp
+            else -> 14.sp
+        }
+        // Dwie kolumny zwezaja dymek na tyle, ze dluzsza odpowiedz musi dostac wiecej wierszy,
+        // a nie mniej - inaczej urywalaby sie w polowie slowa.
+        val textLines = if (maxWidth < ANSWER_NARROW_TILE_WIDTH) 4 else 3
+        val textPadding = (maxHeight * 0.14f).coerceIn(6.dp, 20.dp)
+
+        // Wszystkie trzy warstwy leza na tym samym canvasie, wiec wystarczy ten sam modifier i
+        // FillBounds; krazek z numerem wystaje w lewo poza dymek i czesciowo go przykrywa.
+        //
+        // Obie liczby licza sie Z ROZMIARU KRAZKA, a nie ze stalych - krazek zmienia sie razem z
+        // wysokoscia kafla, wiec stale 26/42 dp (dobrane pod krazek 58 dp) rozjechalyby sie przy
+        // kazdym innym rozmiarze: dymek zaczynalby sie w zlym miejscu, a napis wchodzilby pod
+        // numer. Przy pelnym krazku wychodzi dokladnie tyle, co dawne stale.
+        val bubbleStart = badgeSize * ANSWER_BUBBLE_START_RATIO
+        // Krazek zachodzi na dymek na glebokosc `nudge + srednica - poczatek dymka`; napis musi
+        // zaczac sie za nim, a zeby zostal na SRODKU dymka, tyle samo miejsca schodzi z prawej.
+        val textInset = ANSWER_BADGE_NUDGE + badgeSize - bubbleStart + ANSWER_TEXT_CLEARANCE
+        val layer = Modifier.matchParentSize().padding(start = bubbleStart)
         Image(
             painter = painterResource(Resources.QuizArt.answerBubbleFill),
             contentDescription = null,
@@ -813,7 +948,7 @@ private fun QuizOptionTile(
         // krazku") przesuwaloby go w prawo wzgledem kamieni, ktore w grafice leza dokladnie na
         // srodku dymka - i wlasnie z nimi napis ma sie pokrywac.
         Box(
-            modifier = Modifier.matchParentSize().padding(start = ANSWER_BUBBLE_START),
+            modifier = Modifier.matchParentSize().padding(start = bubbleStart),
             contentAlignment = Alignment.Center
         ) {
             Text(
@@ -821,18 +956,20 @@ private fun QuizOptionTile(
                 color = ink,
                 fontFamily = FontFirst(),
                 fontWeight = if (visual == OptionVisual.CORRECT) FontWeight.Bold else FontWeight.Normal,
-                fontSize = 14.sp,
-                maxLines = 3,
+                fontSize = textSize,
+                maxLines = textLines,
+                overflow = TextOverflow.Ellipsis,
                 textAlign = TextAlign.Center,
                 // Takie samo wciecie z obu stron - inaczej napis przestalby byc na srodku dymka.
                 // Musi wystarczyc, by ominac krazek nachodzacy na lewa krawedz.
-                modifier = Modifier.padding(horizontal = ANSWER_TEXT_SIDE_INSET, vertical = 20.dp)
+                modifier = Modifier.padding(horizontal = textInset, vertical = textPadding)
             )
         }
 
         AnswerBadge(
             label = label,
             gemTint = gem,
+            size = badgeSize,
             modifier = Modifier.align(Alignment.CenterStart).offset(x = ANSWER_BADGE_NUDGE)
         )
     }
@@ -880,34 +1017,71 @@ private fun AnswerBadge(
 private const val BADGE_GEM_CENTER_OFFSET = 0.088f
 
 /**
- * Wysokosc dymka odpowiedzi. Grafika ma proporcje ~3.8:1, a kafel pelnej szerokosci na telefonie w
- * pionie to ok. 300 dp - przy tej wysokosci rozciagniecie w poziomie schodzi ponizej progu, na
- * ktorym widac deformacje kamieni, a w bialym polu mieszcza sie dwie linijki tekstu.
+ * Wysokosc, ponizej ktorej dymek przestaje byc czytelny - i jedyny prog decydujacy o tym, czy
+ * siatka odpowiedzi idzie w jedna czy w dwie kolumny (patrz [answerColumns]).
+ *
+ * Grafika dymka ma proporcje ~3.8:1, a kafel pelnej szerokosci na telefonie w pionie to ok. 300 dp:
+ * przy 78 dp rozciagniecie w poziomie schodzi ponizej progu, na ktorym widac deformacje kamieni, a
+ * w bialym polu mieszcza sie dwie linijki tekstu. Ponizej ok. 62 dp napis zaczyna sie urywac, wiec
+ * lepiej zlozyc opcje na dwie kolumny niz sciskac je w jedna.
  */
-private val ANSWER_TILE_MIN_HEIGHT = 78.dp
-
-/** Srednica krazka z numerem. */
-private val ANSWER_BADGE_SIZE = 58.dp
+private val ANSWER_TILE_READABLE_HEIGHT = 62.dp
 
 /**
- * Od ktorego miejsca zaczyna sie sam dymek - krazek wystaje w lewo poza jego krawedz i czesciowo ja
- * przykrywa, jak w oryginalnej grafice.
+ * Absolutna podloga wysokosci kafla. Siatka dzieli miejsce rowno, wiec normalnie nikt tego nie
+ * dotyka - to zabezpieczenie na wypadek panelu nizszego niz cokolwiek, co przewidzielismy
+ * (np. telefon w poziomie albo przyszly tryb z wieksza arena).
  */
-private val ANSWER_BUBBLE_START = 26.dp
+private val ANSWER_TILE_FLOOR_HEIGHT = 40.dp
+
+/** Najwyzszy dymek odpowiedzi - mniej wiecej naturalna proporcja grafiki przy pelnej szerokosci panelu. */
+private val ANSWER_TILE_MAX_HEIGHT = 86.dp
+
+/** Odstep miedzy kaflami - ten sam w pionie i w poziomie, zeby siatka byla rowna. */
+private val ANSWER_TILE_GAP = 10.dp
+
+/**
+ * Wiecej niz dwie kolumny nie ma sensu: przy trzech na dymek zostaje mniej niz sto dp szerokosci
+ * i kazda odpowiedz dluzsza od jednego slowa i tak zostalaby przycieta.
+ */
+private const val ANSWER_MAX_COLUMNS = 2
+
+/** Srednica krazka z numerem przy PELNEJ wysokosci kafla. */
+private val ANSWER_BADGE_SIZE = 58.dp
+
+/** Krazek nie moze zejsc ponizej tego - przestalby byc czytelny jako numer odpowiedzi. */
+private val ANSWER_BADGE_MIN_SIZE = 30.dp
+
+/**
+ * Od ktorego miejsca zaczyna sie sam dymek, liczone w srednicach krazka. Krazek wystaje w lewo
+ * poza jego krawedz i czesciowo ja przykrywa, jak w oryginalnej grafice. Przy pelnym krazku
+ * (58 dp) daje to 26 dp, czyli dokladnie tyle, ile wynosila dawna stala.
+ */
+private const val ANSWER_BUBBLE_START_RATIO = 0.45f
+
+/** Ile napis ma zostawic luzu za krazkiem, zeby nie stykal sie z jego krawedzia. */
+private val ANSWER_TEXT_CLEARANCE = 3.dp
+
+/**
+ * Jaka czesc wysokosci kafla zajmuje krazek. Przy pelnowymiarowym kaflu (78 dp) daje to dokladnie
+ * dawne 58 dp; przy niskim kaflu krazek kurczy sie razem z nim, zamiast z niego wystawac.
+ */
+private const val ANSWER_BADGE_HEIGHT_RATIO = 0.74f
+
+/**
+ * Ponizej tej szerokosci kafel uznajemy za WASKI (czyli: jestesmy w dwoch kolumnach) i pozwalamy
+ * napisowi na jeden wiersz wiecej - w waskim dymku dluzsza odpowiedz potrzebuje wysokosci, nie
+ * przyciecia.
+ */
+private val ANSWER_NARROW_TILE_WIDTH = 200.dp
 
 /**
  * Przesuniecie krazka w prawo wzgledem lewej krawedzi kafla. Jego srodek ma leciec nieco ZA
- * krawedzia dymka ([ANSWER_BUBBLE_START]), a nie dokladnie na niej - inaczej krazek zwiesza sie na
- * zewnatrz i odkleja od ramki.
+ * krawedzia dymka, a nie dokladnie na niej - inaczej krazek zwiesza sie na zewnatrz i odkleja
+ * od ramki. Poczatek dymka liczy sie teraz z polowy krazka, bo ten zmienia rozmiar.
  */
 private val ANSWER_BADGE_NUDGE = 7.dp
 
-/**
- * Wciecie napisu odpowiedzi po OBU stronach dymka. Krazek wchodzi na dymek na glebokosc
- * `ANSWER_BADGE_NUDGE + ANSWER_BADGE_SIZE - ANSWER_BUBBLE_START` (39 dp) - tekst musi zaczynac sie
- * za nim, a zeby zostal na srodku dymka, tyle samo miejsca schodzi z prawej.
- */
-private val ANSWER_TEXT_SIDE_INSET = 42.dp
 
 /** Jednozdaniowy werdykt pod odpowiedziami. */
 @Composable

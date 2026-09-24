@@ -88,7 +88,7 @@ class PoisonOnHitEffect(
  */
 class FreezeOnCriticalEffect(private val turns: Int) : TriggeredEffect {
     override val id = "freeze_on_crit_$turns"
-    override val description = "Trafienie krytyczne zamraza cel na $turns ture."
+    override val description = "Critical hits freeze the target for $turns turn(s)."
     override val trigger = Trigger.DamageDealt
     override val conditions: List<EffectCondition> = listOf(OwnerIsSource, OnCriticalOnly)
 

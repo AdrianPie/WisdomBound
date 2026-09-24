@@ -39,16 +39,12 @@ object CapitalQuestionsExtra2 {
 
         /* ------------------------------- Easy ------------------------------- */
         capital("Venezuela", "Caracas", listOf("Bogota", "Lima", "Quito"), QuizDifficulty.Easy),
-        country("Lima", "Peru", listOf("Chile", "Ecuador", "Bolivia"), QuizDifficulty.Easy),
         capital("Ecuador", "Quito", listOf("Bogota", "Lima", "Caracas"), QuizDifficulty.Easy),
         capital("Kuwait", "Kuwait City", listOf("Riyadh", "Doha", "Manama"), QuizDifficulty.Easy),
         capital("Qatar", "Doha", listOf("Dubai", "Abu Dhabi", "Manama"), QuizDifficulty.Easy),
         capital("United Arab Emirates", "Abu Dhabi", listOf("Dubai", "Doha", "Manama"), QuizDifficulty.Easy),
-        country("Dublin", "Ireland", listOf("United Kingdom", "Iceland", "Scotland"), QuizDifficulty.Easy),
-        country("Lisbon", "Portugal", listOf("Spain", "Italy", "France"), QuizDifficulty.Easy),
 
         /* ------------------------------ Medium ------------------------------ */
-        country("Bogota", "Colombia", listOf("Venezuela", "Peru", "Ecuador"), QuizDifficulty.Medium),
         capital("Uruguay", "Montevideo", listOf("Buenos Aires", "Santiago", "Asuncion"), QuizDifficulty.Medium),
         capital("Paraguay", "Asuncion", listOf("Montevideo", "La Paz", "Santa Cruz"), QuizDifficulty.Medium),
         capital("Bolivia (seat of government)", "La Paz", listOf("Sucre", "Santa Cruz", "Cochabamba"), QuizDifficulty.Medium),
@@ -60,7 +56,6 @@ object CapitalQuestionsExtra2 {
         capital("Algeria", "Algiers", listOf("Tunis", "Tripoli", "Rabat"), QuizDifficulty.Medium),
         capital("Tunisia", "Tunis", listOf("Algiers", "Tripoli", "Rabat"), QuizDifficulty.Medium),
         capital("Libya", "Tripoli", listOf("Tunis", "Algiers", "Cairo"), QuizDifficulty.Medium),
-        country("Wellington", "New Zealand", listOf("Australia", "Fiji", "Papua New Guinea"), QuizDifficulty.Medium),
 
         /* ------------------------------ Hard ------------------------------- */
         capital("Ghana", "Accra", listOf("Lagos", "Abidjan", "Lome"), QuizDifficulty.Hard),
@@ -72,7 +67,6 @@ object CapitalQuestionsExtra2 {
         capital("Democratic Republic of the Congo", "Kinshasa", listOf("Brazzaville", "Luanda", "Kigali"), QuizDifficulty.Hard),
         capital("Uganda", "Kampala", listOf("Nairobi", "Kigali", "Bujumbura"), QuizDifficulty.Hard),
         capital("Rwanda", "Kigali", listOf("Bujumbura", "Kampala", "Nairobi"), QuizDifficulty.Hard),
-        capital("Sri Lanka (former capital)", "Colombo", listOf("Kandy", "Galle", "Jaffna"), QuizDifficulty.Hard),
         capital("Bangladesh", "Dhaka", listOf("Chittagong", "Kolkata", "Karachi"), QuizDifficulty.Hard),
 
         /* ----------------------------- Expert ---------------------------- */

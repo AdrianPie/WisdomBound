@@ -25,7 +25,6 @@ object TechnologyQuestionsExtra {
     val all: List<QuizEntry> = listOf(
 
         /* ------------------------------- Easy ------------------------------- */
-        ask("ram_rola", "What is RAM used for?", "Temporarily holding data while the computer runs", listOf("Permanently storing files after a shutdown", "Cooling the processor under heavy load", "Drawing the image sent to the monitor"), QuizDifficulty.Easy),
         ask("dysk_twardy", "What stores data after the computer is turned off?", "A drive", listOf("RAM", "The processor", "The graphics card"), QuizDifficulty.Easy),
         ask("system_windows", "Which company makes Windows?", "Microsoft", listOf("Apple", "Google", "IBM"), QuizDifficulty.Easy),
         ask("gps_rola", "What is GPS used for?", "Determining location", listOf("Encrypting data", "Charging a battery", "Compressing photos"), QuizDifficulty.Easy),
@@ -38,7 +37,6 @@ object TechnologyQuestionsExtra {
         ask("dns_rola", "What is DNS used for?", "Converting domain names into IP addresses", listOf("Encrypting the connection to a website", "Compressing pages before they are sent", "Blocking adverts before a page loads"), QuizDifficulty.Medium),
         ask("https_co", "What does HTTPS add over HTTP?", "Encryption of the connection", listOf("Faster downloads", "Automatic translation", "Image compression"), QuizDifficulty.Medium),
         ask("gpu_rola", "What is a graphics card responsible for?", "Calculations related to images", listOf("Storing files", "Connecting to the internet", "Powering the motherboard"), QuizDifficulty.Medium),
-        ask("ssd_hdd", "How does an SSD differ from a classic HDD?", "It has no moving parts and is faster", listOf("It always has more capacity", "It only works in laptops", "It needs no power"), QuizDifficulty.Medium),
         ask("linux_torvalds", "Who released the first version of the Linux kernel in 1991?", "Linus Torvalds", listOf("Richard Stallman", "Ken Thompson", "Andrew Tanenbaum"), QuizDifficulty.Medium),
         ask("kompilator", "What does a compiler do?", "Translates source code into machine code", listOf("Serves finished web pages to a browser", "Tests the hardware for faults on start-up", "Draws the interface a user clicks on"), QuizDifficulty.Medium),
         ask("baza_danych", "What is the SQL language used for?", "Querying a database", listOf("Styling web pages", "3D animation", "Network configuration"), QuizDifficulty.Medium),
@@ -46,8 +44,6 @@ object TechnologyQuestionsExtra {
         ask("java_kotlin", "Which virtual machine does Kotlin run on by default?", "The JVM", listOf(".NET", "V8", "LLVM"), QuizDifficulty.Medium),
         ask("android_jezyk", "Which language does Google now recommend for writing Android apps?", "Kotlin", listOf("Swift", "Objective-C", "PHP"), QuizDifficulty.Medium),
         ask("ios_jezyk", "Which language are iOS apps written in today?", "Swift", listOf("Kotlin", "Ruby", "Go"), QuizDifficulty.Medium),
-        ask("vpn", "What is a VPN used for?", "Creating a secure tunnel over a network", listOf("Speeding up the processor", "Backing up files", "Scanning drives"), QuizDifficulty.Medium),
-        ask("phishing", "What is phishing?", "Stealing data by impersonating someone trustworthy", listOf("A hard drive failing without any warning", "Encrypting files to demand a ransom", "A firewall rule that blocks a whole site"), QuizDifficulty.Medium),
         ask("cookies", "What are cookies?", "Small pieces of data websites store in a browser", listOf("Small programs that damage the system", "Copies of the system kept for recovery", "Drivers that let hardware talk to the system"), QuizDifficulty.Medium),
 
         /* ------------------------------ Hard ------------------------------- */
@@ -73,7 +69,6 @@ object TechnologyQuestionsExtra {
         ask("unix_autorzy", "Who created the Unix operating system at Bell Labs?", "Ken Thompson and Dennis Ritchie", listOf("Bill Gates and Paul Allen", "Steve Jobs and Steve Wozniak", "Linus Torvalds"), QuizDifficulty.Expert),
         ask("www_autor", "Who invented the World Wide Web?", "Tim Berners-Lee", listOf("Vint Cerf", "Marc Andreessen", "Robert Kahn"), QuizDifficulty.Expert),
         ask("tcp_autorzy", "Who co-created the TCP/IP protocol?", "Vint Cerf and Robert Kahn", listOf("Tim Berners-Lee", "Larry Page and Sergey Brin", "Dennis Ritchie"), QuizDifficulty.Expert),
-        ask("turing_test", "What does the Turing test concern?", "Telling a human apart from a machine in conversation", listOf("Measuring how fast a processor can compute", "Proving that an algorithm is correct", "Judging how secure a cipher really is"), QuizDifficulty.Expert),
         ask("halting", "What does the halting problem state?", "There's no general way to decide whether a program will halt", listOf("Every program can in the end be optimised further", "A recursive function always terminates in time", "Loops always run faster than recursion does"), QuizDifficulty.Expert),
         ask("moore_koniec", "What increasingly limits Moore's law today?", "The physical limits of miniaturization and heat dissipation", listOf("A falling demand for ever more computing power", "The rising price of the software that runs on it", "Legal restrictions on exporting fast chips"), QuizDifficulty.Expert),
         ask("kwantowy_qubit", "How does a qubit differ from a classical bit?", "It can be in a superposition of states", listOf("It stores two bytes", "It's faster at every task", "It needs no power"), QuizDifficulty.Expert),

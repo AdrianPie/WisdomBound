@@ -39,10 +39,8 @@ object GeographyQuestionsExtra {
         ask("wulkan_wlochy", "Which volcano on Sicily is the most active in Europe?", "Etna", listOf("Vesuvius", "Stromboli", "Hekla"), QuizDifficulty.Medium),
         ask("panstwo_dwa_konty", "Which country spans two continents: Europe and Asia?", "Turkey", listOf("Greece", "Egypt", "Cyprus"), QuizDifficulty.Medium),
         ask("najmniejsze_panstwo", "Which country is the smallest in the world?", "Vatican City", listOf("Monaco", "San Marino", "Liechtenstein"), QuizDifficulty.Medium),
-        ask("najludniejszy_kraj", "Which country has the most inhabitants today?", "India", listOf("China", "USA", "Indonesia"), QuizDifficulty.Medium),
         ask("ciesnina_bering", "What does the Bering Strait separate?", "Asia from North America", listOf("Europe from Africa", "Australia from Asia", "Greenland from Canada"), QuizDifficulty.Medium),
         ask("pustynia_azja", "Which desert lies in Mongolia and China?", "The Gobi", listOf("The Kalahari", "The Atacama", "The Karakum"), QuizDifficulty.Medium),
-        ask("fiordy_kraj", "Which country holds Europe's most famous fjords?", "Norway", listOf("Sweden", "Iceland", "Finland"), QuizDifficulty.Medium),
         ask("wodospad_wiktorii", "Victoria Falls lies on the border of which two countries?", "Zambia and Zimbabwe", listOf("Kenya and Tanzania", "South Africa and Botswana", "Uganda and Rwanda"), QuizDifficulty.Medium),
         ask("morze_srodziemne_wyspa", "Which Mediterranean island is the largest?", "Sicily", listOf("Sardinia", "Cyprus", "Corsica"), QuizDifficulty.Medium),
 
@@ -51,7 +49,6 @@ object GeographyQuestionsExtra {
         ask("jezioro_powierzchnia", "Which lake has the largest surface area in the world?", "The Caspian Sea", listOf("Lake Superior", "Lake Baikal", "Lake Victoria"), QuizDifficulty.Hard),
         ask("najdluzsza_granica", "Which two countries share the longest land border in the world?", "Canada and the USA", listOf("Russia and China", "Argentina and Chile", "India and China"), QuizDifficulty.Hard),
         ask("najwyzszy_wodospad", "Which waterfall is the highest in the world?", "Angel Falls", listOf("Niagara Falls", "Iguazu Falls", "Victoria Falls"), QuizDifficulty.Hard),
-        ask("punkt_najnizszy", "Which land location sits lowest below sea level?", "The Dead Sea shore", listOf("Death Valley", "Qattara Depression", "Lake Eyre"), QuizDifficulty.Hard),
         ask("panstwa_afryka", "How many countries does Africa have according to the UN?", "54", listOf("47", "60", "51"), QuizDifficulty.Hard),
         ask("rownolezniki_zwrotnik", "What is the tropic in the southern hemisphere called?", "Tropic of Capricorn", listOf("Tropic of Cancer", "Arctic Circle", "Prime Meridian"), QuizDifficulty.Hard),
         ask("greenwich", "Which city does the prime meridian pass through?", "London", listOf("Paris", "Rome", "Madrid"), QuizDifficulty.Hard),
@@ -70,7 +67,6 @@ object GeographyQuestionsExtra {
         ask("najwiecej_wulkanow", "Which country has the most active volcanoes?", "Indonesia", listOf("Japan", "Chile", "USA"), QuizDifficulty.Expert),
         ask("linia_wallace", "What does the Wallace Line separate?", "Asian fauna from Australian fauna", listOf("Pacific time zones", "African tectonic plates", "Humid climate from dry climate"), QuizDifficulty.Expert),
         ask("panstwo_najdluzsze", "Which country is the longest from north to south?", "Chile", listOf("Norway", "Brazil", "Russia"), QuizDifficulty.Expert),
-        ask("strefa_czasowa_rosja", "How many time zones does Russia span?", "11", listOf("9", "13", "7"), QuizDifficulty.Expert),
         ask("polwysep_najwiekszy", "Which peninsula is the largest in the world?", "The Arabian Peninsula", listOf("The Indian Peninsula", "Scandinavia", "The Balkan Peninsula"), QuizDifficulty.Expert)
     )
 }

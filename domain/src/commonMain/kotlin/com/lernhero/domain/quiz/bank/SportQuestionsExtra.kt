@@ -62,7 +62,6 @@ object SportQuestionsExtra {
         ask("igrzyska_zimowe_polska", "Which city hosted the 2022 Winter Olympics?", "Beijing", listOf("Sochi", "Pyeongchang", "Vancouver"), QuizDifficulty.Hard),
 
         /* ----------------------------- Expert ---------------------------- */
-        ask("olimpiada_maraton_1908", "Why is a marathon 42195 m today?", "That distance was set at the 1908 London Olympics", listOf("That's how far Pheidippides ran", "Pierre de Coubertin fixed it that way", "It's exactly 26 Roman miles"), QuizDifficulty.Expert),
         ask("fosbury", "Who revolutionized the high jump with the backward flop technique?", "Dick Fosbury", listOf("Jesse Owens", "Carl Lewis", "Javier Sotomayor"), QuizDifficulty.Expert),
         ask("sotomayor", "Who holds the men's high jump world record?", "Javier Sotomayor", listOf("Mutaz Barshim", "Dick Fosbury", "Patrik Sjoberg"), QuizDifficulty.Expert),
         ask("duplantis", "Who has repeatedly broken the pole vault world record?", "Armand Duplantis", listOf("Sergey Bubka", "Renaud Lavillenie", "Piotr Lisek"), QuizDifficulty.Expert),

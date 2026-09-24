@@ -14,22 +14,11 @@ object MultiSelectBank {
         // Partia po audycie - dystraktory, ktore sa POPULARNYMI bledami. Patrz [MultiSelectQuestionsTrivia].
         MultiSelectQuestionsTrivia.all
 
-    /**
-     * Losuje pytanie na dany poziom, opcjonalnie z jednej kategorii.
-     *
-     * Gdy dokladne dopasowanie (kategoria + poziom) nie ma pokrycia w banku, schodzimy najpierw do
-     * samej kategorii, a dopiero potem do calej puli - zwrocenie null zamiast pytania zablokowaloby
-     * ture, a to gorsze niz pytanie o oczko latwiejsze.
-     */
+    /** Tylko pytania jeszcze nie zadane - patrz [drawFresh]. Null = walka bierze zwykle pytanie. */
     fun draw(
         difficulty: QuizDifficulty,
         category: QuizCategory? = null,
-        random: Random = Random.Default
-    ): MultiSelectEntry? {
-        if (all.isEmpty()) return null
-        val byCategory = if (category == null) all else all.filter { it.category == category }
-        return byCategory.filter { it.difficulty == difficulty }.randomOrNull(random)
-            ?: byCategory.randomOrNull(random)
-            ?: all.randomOrNull(random)
-    }
+        random: Random = Random.Default,
+        seen: (String) -> Boolean = { false }
+    ): MultiSelectEntry? = all.drawFresh(difficulty, category, random, seen, { it.id }, { it.category }, { it.difficulty })
 }

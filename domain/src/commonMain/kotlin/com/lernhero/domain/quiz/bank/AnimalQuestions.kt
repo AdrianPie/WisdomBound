@@ -105,13 +105,6 @@ object AnimalQuestions {
             difficulty = QuizDifficulty.Medium
         ),
         ask(
-            id = "zolw",
-            prompt = "Which animal can live for over a hundred years?",
-            correct = "Giant tortoise",
-            wrong = listOf("Cat", "Wolf", "Hare"),
-            difficulty = QuizDifficulty.Medium
-        ),
-        ask(
             id = "ciaza_slonia",
             prompt = "Which land animal has the longest pregnancy?",
             correct = "Elephant",
@@ -163,13 +156,6 @@ object AnimalQuestions {
             difficulty = QuizDifficulty.Hard
         ),
         ask(
-            id = "taniec_pszczol",
-            prompt = "Which insect shows its fellows the way to food with a dance?",
-            correct = "Bee",
-            wrong = listOf("Ant", "Wasp", "Termite"),
-            difficulty = QuizDifficulty.Hard
-        ),
-        ask(
             id = "pingwiny_arktyka",
             prompt = "How many penguin species live wild at the North Pole?",
             correct = "None",
@@ -197,13 +183,6 @@ object AnimalQuestions {
             prompt = "Which amphibian is famous for regrowing lost limbs?",
             correct = "Axolotl",
             wrong = listOf("Toad", "Alpine newt", "Tree frog"),
-            difficulty = QuizDifficulty.Expert
-        ),
-        ask(
-            id = "niesporczak",
-            prompt = "Which animal survives the vacuum of space and extreme temperatures?",
-            correct = "Tardigrade",
-            wrong = listOf("Cockroach", "Scorpion", "Starfish"),
             difficulty = QuizDifficulty.Expert
         ),
         ask(

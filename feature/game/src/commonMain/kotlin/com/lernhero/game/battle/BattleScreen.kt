@@ -26,6 +26,7 @@ import com.lernhero.game.battle.component.EaseOutCubic
 import com.lernhero.game.battle.component.LiveQuizBar
 import com.lernhero.game.battle.component.MasteryDialog
 import com.lernhero.game.battle.component.ResolvingStrip
+import com.lernhero.game.battle.component.ReviveDialog
 import com.lernhero.game.battle.component.BossChargeOverlay
 import com.lernhero.game.battle.component.SCENE_TRANSITION_MS
 import com.lernhero.game.battle.component.UpgradeChoiceDialog
@@ -237,6 +238,17 @@ fun BattleScreen(
         UpgradeChoiceDialog(
             offer = offer,
             onPick = viewModel::chooseUpgrade,
+            modifier = Modifier.fillMaxSize()
+        )
+    }
+
+    // Ostatnia szansa po wipe'ie - lezy nad scena i trzyma walke, dopoki gracz nie zdecyduje.
+    state.reviveOffer?.let { offer ->
+        ReviveDialog(
+            offer = offer,
+            onRevive = viewModel::acceptRevive,
+            onReviveWithGems = viewModel::acceptReviveWithGems,
+            onGiveUp = viewModel::declineRevive,
             modifier = Modifier.fillMaxSize()
         )
     }

@@ -34,7 +34,15 @@ object EstimationQuestionsPopulation {
         tolerance = tolerance
     )
 
-    /** Miasta i male kraje - w tysiacach, bo w milionach wyszlyby same zera. */
+    /**
+     * Tysiace - WYLACZNIE dla miejsc ponizej miliona mieszkancow (Reykjavik, Malta, Islandia).
+     *
+     * Wszystko powyzej wrocilo do milionow, i to nie jest kosmetyka. "Ile osob mieszka w Norwegii?"
+     * z odpowiedzia 5600 tysiecy jest pytaniem o przeliczanie, a nie o wyczucie skali: nikt nie ma
+     * w glowie liczby mieszkancow w tysiacach, kazdy ma ja w milionach ("jakies piec i pol"). To
+     * samo z Tokio - "37 000 tysiecy" trzeba sobie w glowie podzielic, zanim w ogole zacznie sie
+     * myslec o odpowiedzi.
+     */
     private fun thousands(id: String, prompt: String, value: Int, tolerance: Int) = EstimationEntry(
         id = "estpop_$id",
         prompt = prompt,
@@ -89,10 +97,11 @@ object EstimationQuestionsPopulation {
         millions("greece", "Roughly how many people live in Greece?", 10, 2),
         millions("portugal", "Roughly how many people live in Portugal?", 10, 2),
 
-        /* ------------------------- Male kraje - w tysiacach ------------------------ */
-        thousands("norway", "Roughly how many people live in Norway?", 5_600, 500),
-        thousands("new_zealand", "Roughly how many people live in New Zealand?", 5_300, 500),
-        thousands("ireland", "Roughly how many people live in Ireland?", 5_300, 500),
+        /* --- Male kraje. Granica jest przy ~2 mln: powyzej milion jest jednostka, w ktorej
+           sie mysli, ponizej zaokraglenie do pelnych milionow zjadloby cala odpowiedz. --- */
+        millions("norway", "Roughly how many people live in Norway?", 6, 1, max = 60),
+        millions("new_zealand", "Roughly how many people live in New Zealand?", 5, 1, max = 60),
+        millions("ireland", "Roughly how many people live in Ireland?", 5, 1, max = 60),
         thousands("estonia", "Roughly how many people live in Estonia?", 1_370, 150),
         thousands("cyprus", "Roughly how many people live in Cyprus?", 1_300, 180),
         thousands("luxembourg", "Roughly how many people live in Luxembourg?", 670, 90),
@@ -100,22 +109,22 @@ object EstimationQuestionsPopulation {
         thousands("iceland", "Roughly how many people live in Iceland?", 390, 60),
 
         /* ------------------------ Miasta - aglomeracje ---------------------------- */
-        thousands("tokyo", "Roughly how many people live in the Tokyo metropolitan area?", 37_000, 3_500),
-        thousands("delhi", "Roughly how many people live in the Delhi metropolitan area?", 33_000, 3_500),
-        thousands("shanghai", "Roughly how many people live in the Shanghai metropolitan area?", 29_000, 3_000),
-        thousands("sao_paulo", "Roughly how many people live in the Sao Paulo metropolitan area?", 22_000, 2_500),
-        thousands("cairo", "Roughly how many people live in the Cairo metropolitan area?", 22_000, 2_500),
-        thousands("mexico_city", "Roughly how many people live in the Mexico City metropolitan area?", 22_000, 2_500),
-        thousands("new_york", "Roughly how many people live in the New York metropolitan area?", 19_000, 2_200),
-        thousands("lagos", "Roughly how many people live in the Lagos metropolitan area?", 16_000, 2_500),
-        thousands("istanbul", "Roughly how many people live in the Istanbul metropolitan area?", 16_000, 2_000),
-        thousands("buenos_aires", "Roughly how many people live in the Buenos Aires metropolitan area?", 15_000, 2_000),
-        thousands("moscow", "Roughly how many people live in the Moscow metropolitan area?", 13_000, 1_800),
-        thousands("paris", "Roughly how many people live in the Paris metropolitan area?", 11_000, 1_500),
-        thousands("london", "Roughly how many people live in Greater London?", 8_900, 1_000),
-        thousands("bangkok", "Roughly how many people live in the Bangkok metropolitan area?", 11_000, 1_500),
-        thousands("berlin", "Roughly how many people live in the city of Berlin?", 3_700, 450),
-        thousands("rome", "Roughly how many people live in the city of Rome?", 2_800, 400),
+        millions("tokyo", "Roughly how many people live in the Tokyo metropolitan area?", 37, 4, max = 60),
+        millions("delhi", "Roughly how many people live in the Delhi metropolitan area?", 33, 4, max = 60),
+        millions("shanghai", "Roughly how many people live in the Shanghai metropolitan area?", 29, 3, max = 60),
+        millions("sao_paulo", "Roughly how many people live in the Sao Paulo metropolitan area?", 22, 2, max = 60),
+        millions("cairo", "Roughly how many people live in the Cairo metropolitan area?", 22, 2, max = 60),
+        millions("mexico_city", "Roughly how many people live in the Mexico City metropolitan area?", 22, 2, max = 60),
+        millions("new_york", "Roughly how many people live in the New York metropolitan area?", 19, 2, max = 60),
+        millions("lagos", "Roughly how many people live in the Lagos metropolitan area?", 16, 2, max = 60),
+        millions("istanbul", "Roughly how many people live in the Istanbul metropolitan area?", 16, 2, max = 60),
+        millions("buenos_aires", "Roughly how many people live in the Buenos Aires metropolitan area?", 15, 2, max = 60),
+        millions("moscow", "Roughly how many people live in the Moscow metropolitan area?", 13, 2, max = 60),
+        millions("paris", "Roughly how many people live in the Paris metropolitan area?", 11, 2, max = 60),
+        millions("london", "Roughly how many people live in Greater London?", 9, 1, max = 60),
+        millions("bangkok", "Roughly how many people live in the Bangkok metropolitan area?", 11, 2, max = 60),
+        millions("berlin", "Roughly how many people live in the city of Berlin?", 4, 1, max = 60),
+        millions("rome", "Roughly how many people live in the city of Rome?", 3, 1, max = 60),
         thousands("amsterdam", "Roughly how many people live in the city of Amsterdam?", 930, 150),
         thousands("reykjavik", "Roughly how many people live in the city of Reykjavik?", 140, 30),
 

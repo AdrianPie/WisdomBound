@@ -8,11 +8,19 @@ data class ReadingStats(
     val totalMinutes: Int = 0,
     val totalPages: Int = 0,
     val totalWords: Int = 0,
-    val totalCharacters: Int = 0
+    val totalCharacters: Int = 0,
+    /**
+     * Czas czytania w SEKUNDACH. Dawniej liczyly sie tylko pelne minuty i resztka kazdej sesji
+     * przepadala - trzy sesje po 5:40 dawaly 15 minut, a nie 17. Stare zapisy maja tu zero i
+     * wtedy [activeSeconds] wraca do minut.
+     */
+    val totalSeconds: Int = 0
 ) {
+    val activeSeconds: Int get() = maxOf(totalSeconds, totalMinutes * 60)
+
     /** Srednie tempo w slowach na minute - licza sie tylko minuty AKTYWNEGO czytania (patrz AFK-guard). */
     val averageWpm: Int
-        get() = if (totalMinutes <= 0) 0 else totalWords / totalMinutes
+        get() = if (activeSeconds < 60) 0 else (totalWords * 60L / activeSeconds).toInt()
 }
 
 /**
@@ -23,8 +31,12 @@ data class ReadingStats(
 data class ReadingDayProgress(
     val dateKey: String = "",
     val minutes: Int = 0,
-    val pages: Int = 0
+    val pages: Int = 0,
+    /** Dzisiejszy czas w sekundach - patrz [ReadingStats.totalSeconds]. */
+    val seconds: Int = 0
 ) {
+    val activeSeconds: Int get() = maxOf(seconds, minutes * 60)
+
     /** Progres na dzisiaj, albo puste zero, gdy zapisana data jest juz nieaktualna. */
     fun forToday(todayKey: String): ReadingDayProgress =
         if (dateKey == todayKey) this else ReadingDayProgress(dateKey = todayKey)

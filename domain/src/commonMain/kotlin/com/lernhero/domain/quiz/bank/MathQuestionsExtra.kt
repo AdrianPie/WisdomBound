@@ -34,9 +34,6 @@ object MathQuestionsExtra {
         ask("obwod_kwadratu", "What is the perimeter of a square with side 5?", "20", listOf("25", "10", "15"), QuizDifficulty.Easy),
         ask("pole_kwadratu", "What is the area of a square with side 6?", "36", listOf("24", "12", "30"), QuizDifficulty.Easy),
         ask("polowa_setki", "What is 50% of 80?", "40", listOf("30", "45", "60"), QuizDifficulty.Easy),
-        ask("godzina_minuty", "How many minutes are in an hour and a half?", "90", listOf("60", "100", "120"), QuizDifficulty.Easy),
-        ask("liczba_rzymska_x", "What number does the Roman numeral X represent?", "10", listOf("5", "50", "100"), QuizDifficulty.Easy),
-        ask("liczba_rzymska_c", "What number does the Roman numeral C represent?", "100", listOf("50", "500", "1000"), QuizDifficulty.Easy),
 
         /* ------------------------------ Medium ------------------------------ */
         ask("procent_15_200", "What is 15% of 200?", "30", listOf("25", "35", "45"), QuizDifficulty.Medium),
@@ -60,9 +57,6 @@ object MathQuestionsExtra {
         ask("pitagoras", "What does the Pythagorean theorem concern?", "The relationship between the sides of a right triangle", listOf("The sum of the angles drawn inside a circle", "The area enclosed by a trapezoid's sides", "The conditions for two shapes to be similar"), QuizDifficulty.Hard),
         ask("objetosc_szescianu", "What is the volume of a cube with edge 4?", "64", listOf("16", "48", "32"), QuizDifficulty.Hard),
         ask("objetosc_walca", "What is the formula for a cylinder's volume?", "pi x r squared x h", listOf("2 x pi x r x h", "pi x r x h", "pi x d x h"), QuizDifficulty.Hard),
-        ask("silnia_6", "What is 6! (6 factorial)?", "720", listOf("120", "360", "1440"), QuizDifficulty.Hard),
-        ask("procent_skladany", "What sets compound interest apart from simple interest?", "Interest accrues on previous interest too", listOf("It's calculated only once in a lifetime", "It always gives less", "It only applies to loans"), QuizDifficulty.Hard),
-        ask("liczba_wymierna", "Which of these numbers is NOT rational?", "The square root of 2", listOf("The fraction 22/7", "The number 0.5", "The whole number 7"), QuizDifficulty.Hard),
         ask("delta", "How many roots does a quadratic function have when the discriminant is negative?", "Zero", listOf("One", "Two", "Infinitely many"), QuizDifficulty.Hard),
         ask("logarytm_2_8", "What is log base 2 of 8?", "3", listOf("2", "4", "8"), QuizDifficulty.Hard),
         ask("ciag_arytmetyczny", "What stays constant in an arithmetic sequence?", "The difference between consecutive terms", listOf("The ratio of consecutive terms", "The sum of all terms", "The first term"), QuizDifficulty.Hard),

@@ -80,7 +80,7 @@ fun StageLootDialog(
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(
-                text = "LUP Z PLANSZY ${stage.label}",
+                text = "STAGE ${stage.label} LOOT",
                 color = GoldText,
                 fontFamily = FontPixel(),
                 fontWeight = FontWeight.Bold,

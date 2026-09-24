@@ -60,7 +60,14 @@ fun CategoryMasteryList(
     levels: CategoryLevels,
     selected: QuizCategory?,
     onSelect: (QuizCategory?) -> Unit,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    /**
+     * Czy podswietlic wiersz "wszystkie tematy". Domyslnie tak, gdy zaden temat nie jest wybrany -
+     * ale lista bywa teraz czescia WIEKSZEGO wyboru ([com.lernhero.home.fight.MaterialSheet]),
+     * w ktorym brak tematu moze znaczyc "gramy z wlasnej talii". Wtedy nic tutaj nie jest wybrane
+     * i mieszanka nie moze tego udawac.
+     */
+    mixedSelected: Boolean = selected == null
 ) {
     Column(
         modifier = modifier.fillMaxWidth(),
@@ -68,7 +75,7 @@ fun CategoryMasteryList(
     ) {
         // "Wszystkie tematy" nie ma poziomu i to jest uczciwe: skoro pytania lecą z calego banku,
         // nie ma czego awansowac. Zostaje jako szybkie wejscie bez zobowiazan.
-        MixedRow(selected = selected == null, onClick = { onSelect(null) })
+        MixedRow(selected = mixedSelected, onClick = { onSelect(null) })
 
         categories.forEach { category ->
             val level = levels.levelOf(category)

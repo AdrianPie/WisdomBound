@@ -75,11 +75,15 @@ fun BossEventQuizBar(
             .background(PanelGradient)
             .border(3.dp, FrameGradient, PanelShape)
     ) {
+        // Panel nie przewija sie w calosci, tak samo jak zwykly panel pytania ([QuizDialog]).
+        // Tytul i pasek czasu stoja u gory, przycisk ZATWIERDZ u dolu, a caly ruch dzieje sie
+        // miedzy nimi. Wczesniej przewijalo sie wszystko razem, wiec przy dluzszym pytaniu albo
+        // nizszym ekranie ZATWIERDZ - jedyny sposob, zeby zakonczyc zdarzenie - schodzil pod
+        // krawedz panelu.
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(horizontal = 16.dp, vertical = 10.dp)
-                .verticalScroll(rememberScrollState()),
+                .padding(horizontal = 16.dp, vertical = 10.dp),
             verticalArrangement = Arrangement.spacedBy(10.dp)
         ) {
             Text(
@@ -93,9 +97,17 @@ fun BossEventQuizBar(
             AnswerCountdownBar(
                 questionId = event.question.id,
                 revealed = event.resolved,
-                label = "WYNIK QUIZU"
+                label = "QUIZ RESULT"
             )
 
+            // Tresc miedzy naglowkiem a przyciskiem - to ona oddaje miejsce, gdy go brakuje.
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .weight(1f)
+                    .verticalScroll(rememberScrollState()),
+                verticalArrangement = Arrangement.spacedBy(10.dp)
+            ) {
             QuestionBubble(prompt = event.question.prompt)
 
             if (!event.resolved) {
@@ -147,23 +159,6 @@ fun BossEventQuizBar(
                     fontSize = 10.sp
                 )
 
-                Box(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .clip(RoundedCornerShape(14.dp))
-                        .background(accent)
-                        .clickable(onClick = onConfirm)
-                        .padding(vertical = 12.dp),
-                    contentAlignment = Alignment.Center
-                ) {
-                    Text(
-                        text = "CONFIRM",
-                        color = Color.White,
-                        fontFamily = FontFirst(),
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 13.sp
-                    )
-                }
             } else {
                 // Ile brakowalo do poprawnej wartosci - zeby bylo widac, czy zgadywanie w ogole
                 // mialo znaczenie, a nie tylko szybkosc zatwierdzenia.
@@ -209,14 +204,37 @@ fun BossEventQuizBar(
                     }
                 }
             }
+            }
+
+            // ZATWIERDZ stoi POZA obszarem przewijania - to jedyny sposob, zeby dalo sie zamknac
+            // zdarzenie niezaleznie od tego, jak dlugie jest pytanie.
+            if (!event.resolved) {
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .clip(RoundedCornerShape(14.dp))
+                        .background(accent)
+                        .clickable(onClick = onConfirm)
+                        .padding(vertical = 12.dp),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text(
+                        text = "CONFIRM",
+                        color = Color.White,
+                        fontFamily = FontFirst(),
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 13.sp
+                    )
+                }
+            }
         }
     }
 }
 
 private fun bossEventTitle(kind: BossEventKind): String = when (kind) {
     BossEventKind.Heal -> "BOSS IS HEALING"
-    BossEventKind.Poison -> "TRUJACY ODDECH"
-    BossEventKind.StunGamble -> "ZAKLECIE BOSSA"
+    BossEventKind.Poison -> "POISON BREATH"
+    BossEventKind.StunGamble -> "BOSS SPELL"
     BossEventKind.Strike -> "HEAVY BLOW"
 }
 

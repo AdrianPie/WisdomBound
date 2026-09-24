@@ -81,6 +81,12 @@ private fun io.ktor.server.routing.Routing.quizGenerationRoute(generator: QuizGe
             return@post
         }
 
+        // Generowanie AI jest tylko dla subskrybentow - sprawdzane w RevenueCat, nie w apce.
+        if (!Entitlements.isPremium(uid)) {
+            call.respond(HttpStatusCode.PaymentRequired, QuizGenerationResult.SubscriptionRequired)
+            return@post
+        }
+
         // Limit sprawdzany i ZUZYTY PRZED wywolaniem modelu - inaczej gracz moglby wywolac
         // (kosztowny) request do LLM, a limit i tak by go nie policzyl przy bledzie zapisu.
         when (val quota = AiQuota.consume(uid)) {
@@ -100,7 +106,7 @@ private fun io.ktor.server.routing.Routing.quizGenerationRoute(generator: QuizGe
                     System.err.println("quiz/generate: model provider failed: ${result.reason}")
                 }
                 val withQuota = if (result is QuizGenerationResult.Generated) {
-                    result.copy(remainingThisWeek = quota.remainingAfterThisCall)
+                    result.copy(remainingThisMonth = quota.remainingAfterThisCall)
                 } else {
                     result
                 }

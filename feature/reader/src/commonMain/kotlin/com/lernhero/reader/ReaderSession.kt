@@ -33,12 +33,13 @@ class ReaderSession(
     private val bytes: ByteArray,
     startPage: Int,
     private val playerRepository: PlayerRepository,
-    private val scope: CoroutineScope
+    private val scope: CoroutineScope,
+    todayBaseSeconds: Int = 0
 ) {
     var uiState by mutableStateOf(ReaderUiState())
         private set
 
-    val clock = ReadingClock(playerRepository, scope)
+    val clock = ReadingClock(playerRepository, scope, todayBaseSeconds)
 
     private var document: PdfDocumentHandle? = null
 

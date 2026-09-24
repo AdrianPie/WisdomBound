@@ -37,7 +37,7 @@ data class CraftCost(
     /** Pozycje kosztu, ktore faktycznie cos kosztuja - do wyswietlenia bez pustych zer. */
     fun entries(): List<Pair<String, Int>> = buildList {
         if (stone > 0) add("🪨" to stone)
-        if (iron > 0) add("⚙" to iron)
+        if (iron > 0) add("🔩" to iron)
         if (essence > 0) add("✨" to essence)
         if (tickets > 0) add("🎟" to tickets)
         if (gold > 0) add("💰" to gold)

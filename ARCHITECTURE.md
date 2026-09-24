@@ -75,7 +75,19 @@ monster/         karty kompanow i cala ekonomia kolekcji
                      niz w pasku zdolnosci bohatera), a poziom kupuje sie za esencje
   EnemySpecies       pool gatunkow/archetypow dla wrogow fali - dzielony przez BattleViewModel
                      i podglad przeciwnikow na mapie kampanii
+  EnemyRole          druga os roznorodnosci obok gatunku: Brute (2x HP, slaby cios), Stalker
+                     (szklany, bije jak elita), Warden, Ravager. Wchodza wraz z fala i mnoza sie
+                     przez archetyp gatunku - dwadziescia fal tych samych szkieletow to dwadziescia
+                     razy ta sama walka. Zero nowych grafik: role widac w nazwie wroga
 quiz/            bank pytan; bank/ to tresc podzielona na kategorie
+  QuestionHistory    pamiec zadanych pytan (wszystkie typy, cala sesja gry - zyje w RunSession).
+                     Losowanie bierze najpierw pytania jeszcze nie widziane; specjalne typy
+                     (ukladanka, zaznacz-wszystkie, prawda/falsz) biora WYLACZNIE niewidziane, a gdy
+                     ich brak, tura dostaje zwykly wybor - nigdy powtorke. Proporcje typow tur siedza
+                     w BattleViewModel (*_QUESTION_CHANCE)
+  TrueFalseBank      prawda/falsz - najlepiej mity i fakty brzmiace jak mity. Nowe pytanie nie moze
+                     powtarzac faktu, o ktory pyta juz ktores pytanie z wyborem: gracz odbiera ten
+                     sam fakt w innym formacie jako to samo pytanie
   custom/            WLASNE talie gracza - pytania pisane recznie albo wygenerowane przez model.
                      CustomQuestion jest jednym PLASKIM typem z polem `type` (a nie hierarchia
                      czterech klas), bo leci prosto do Firestore i przez jeden formularz w UI.
@@ -87,8 +99,14 @@ quiz/            bank pytan; bank/ to tresc podzielona na kategorie
                      bez sieci i jest przetestowana
 story/           kampania: StoryWorld (kraina) + StoryStage (jedna plansza, liczona na zadanie
                  z globalnego numeru + tieru, nie trzymana w pamieci). Zero chodzenia - gracz
-                 klika plansze, tak jak w Idle Heroes. Boss na ostatniej planszy kazdej krainy
-                 i co BOSS_INTERVAL (5) po drodze
+                 klika plansze, tak jak w Idle Heroes
+  CampaignLadder   BALANS KAMPANII: plansza = bieg na 20 fal, elita co 5, boss co 10, karta
+                     ulepszenia co 3. Plansze zalicza dopiero fala 20 i dopiero to odblokowuje
+                     kolejna; powtarzac mozna bez konca (StageRepeats tnie lup). Liczba, ktora tu
+                     rzadzi, to relativeDifficulty - o ile wrogowie wyprzedzili druzyne rosnaca
+                     NA KARTACH, nie surowa sila wroga. Cel: ~2.1 na fali 20. Wczesniej plansza
+                     miala 1-4 fale, wiec nie miescila ani krzywej, ani jednej karty ulepszenia -
+                     kampania nie byla rozgrywka, tylko klikaniem
   CampaignSelection  gdzie gracz "stoi" (kraina + tier + wybrana plansza). Koin singleton, bo
                      ten wybor musi przezyc przejscie zakladka <-> ekran Mapy
   IdleRewards        nagrody kapiace offline (przycisk GET). Bezstanowa matematyka z roznicy
@@ -169,6 +187,10 @@ run/             stan pojedynczej walki/zejscia
                    rosna stojacy na niej wrogowie. Bez tego stawka liczyla sie z numeru FALI (a te
                    sa najwyzej trzy), wiec plansza 36 wyplacala tyle co plansza 1 i poziom bohatera
                    nie mial szans nadazyc za krzywa wrogow
+  AnswerTimer      (combat/live) czas na odpowiedz NIE jest stala: rosnie z liczba opcji
+                   (ukladanka z szesciu to nie wybor z czterech) i maleje z numerem fali, do 62%
+                   bazy. To druga krzywa trudnosci biegu i ta bardziej uczciwa - nie zabiera mocy,
+                   tylko wymaga, zeby wiedziec, a nie dochodzic przez eliminacje
   EndlessMilestones rytm endless: co 10 fal wchodzi JEDEN boss i to on placi skrzynie - losy,
                    kamien, premia XP - tym wieksze, im glebsza fala. Bez tego endless nie mial
                    czym placic: kazda jego fala startowala jako BattleKind.Normal, a bossBonus
@@ -217,26 +239,74 @@ navigation/   graf zakladek + dolny pasek. Paski sa NAKLADKA nad NavHostem, nie 
               staly przez cale jego zycie i NIE zalezy od tego, czy paski sa teraz widoczne.
               Przejscia sa sekwencyjne (wygaszenie konczy sie przed rozjasnieniem), bo ekrany
               sa przezroczyste i przy crossfade poprzedni przeswituje przez nowy
-team/         zakladka "Walcz" - sklad druzyny + przelacznik KAMPANIA/ENDLESS + wlasciwy panel
-              ze story/. To tutaj wybiera sie plansze i stad startuje walka
+fight/        zakladka "Walcz" - SCENA, nie panel sterowania:
+                FightScreen        przewijane tlo (ParallaxStage), bohater w drodze, wielki START
+                                   za energie, kropki postepu poziomu, przelacznik KAMPANIA/ENDLESS.
+                                   START ZAWSZE zaczyna walke - takze w kampanii. Wybor planszy
+                                   siedzi pod tabliczka miejsca i pod kropkami postepu
+                PartySheet         okno skladu: miejsca u gory, rezerwa pod nimi, wejscie do
+                                   przyzywania. Jedno okno na dodanie, zdjecie i podmiane kompana
+                MaterialSheet      okno materialu wyprawy: wlasne talie i fiszki nad lista tematow.
+                                   Jedno tapniecie wybiera i zamyka (RunMaterial = zapisany wybor)
 story/        czesci kampanii uzywane W ZAKLADCE "Walcz" (nie osobny ekran!):
-                CampaignPanel      panel pod druzyna - tlo krainy z przeciwnikami, pasek nagrod
-                                   idle z GET, przyciski MAPA/BATTLE/LOOT, rzad plansz na dole
-                EndlessSetupPanel  konfiguracja endless: poziom pytan + kategoria, a w zakladce
-                                   "Wlasne" wybor wlasnego materialu (patrz quiz/ nizej)
+                CampaignLaunch     wejscie na plansze + ksiegowosc powrotu (przesuniecie wyboru,
+                                   skrzynia za PIERWSZE pokonanie bossa). Stan siedzi na poziomie
+                                   zakladki, wiec przezywa wyjscie do walki; uzywaja go i START,
+                                   i panel plansz - obie drogi rozliczaja sie identycznie
+                CampaignBoard      OKNO wyboru planszy (tabliczka miejsca / kropki postepu) -
+                                   przygaszona scena, panel posrodku, krzyzyk w jego wlasnym
+                                   gornym pasku (plywajacy lezal na pasku plansz i zjadal tapniecia)
+                CampaignPanel      tlo krainy z przeciwnikami, pasek nagrod idle z GET, nagroda za
+                                   wybrana plansze, przyciski MAPA/BATTLE/LOOT, rzad plansz z
+                                   licznikiem podejsc
+                CampaignPanel      tlo krainy z przeciwnikami, pasek nagrod idle z GET,
+                                   przyciski MAPA/BATTLE/LOOT, rzad plansz na dole
                 StageLootDialog    podglad puli lupu planszy (przycisk LOOT)
-                BossChestOverlay   kolo fortuny po pokonaniu bossa
+                BossChestOverlay   skrzynia po bossie: spada, otwiera sie ze spritesheeta,
+                                   nagroda wyskakuje w kolorze rzadkosci
                 WorldMapScreen     JEDYNY osobny ekran - wybor krainy i tieru trudnosci (MAPA)
               Zastapilo dawny DungeonCrawlScreen (mapa-graf wezlow + spacer korytarzem) - razem
               z nim zniknely zdarzenia korytarzowe i wedrowny handlarz (byly przywiazane do
               "kroku w korytarzu", ktorego juz nie ma)
-quiz/         wlasne talie pytan do endless: panel wyboru zrodla w zakladce "Walcz"
-              (CustomSourcePanel - fiszki z czytelni ALBO talia), edytor talii na pelnym ekranie
+quiz/         wlasne talie pytan: zakladka Quizy (QuizStudioScreen - lista talii i dwa wejscia,
+              "napisz sam" / "wygeneruj"), edytor talii na pelnym ekranie
               (DeckEditorScreen + QuestionEditorDialog) i CustomQuizViewModel. Talie zyja w
               podkolekcji `player/{uid}/decks`, nie w dokumencie gracza - stad wlasny ViewModel
               zamiast doklejania sie do PlayerViewModel
-progress/     zakladka Postep: poziom bohatera i rozdawanie punktow, statystyki nauki
+progress/     Swiatynia (wyspa na mapie Domu, juz nie zakladka): poziom bohatera i rozdawanie
+              punktow, statystyki nauki
               (celnosc per kategoria), osiagniecia
+
+ZASADA UKLADU EKRANU (obowiazuje kazdy pelny ekran, nie tylko zakladki)
+              Ekran NIE przewija sie w calosci. Naglowek, przelacznik zakladek i przycisk akcji
+              (START / ZAPISZ / saldo / licznik punktow) stoja nieruchomo, a `verticalScroll`
+              dostaje WYLACZNIE ta czesc, ktorej jest za duzo - lista tematow, polka ksiazek,
+              drzewo talentow, lista pytan w talii. Technicznie: Column(fillMaxSize) bez scrolla,
+              stale elementy wprost w nim, a tresc w zagniezdzonym Column(fillMaxSize +
+              verticalScroll) albo w Box(weight(1f)).
+
+              Powod jest konkretny, nie estetyczny: przy przewijaniu CALEJ strony przycisk, po
+              ktory gracz tu przyszedl, ucieka poza ekran dokladnie wtedy, gdy jest potrzebny.
+              W zakladce "Walcz" trzeba bylo przescrollowac trzynascie kategorii, zeby dojsc do
+              STARTU; w edytorze talii ZAPIS uciekal przy dluzszej talii; w sklepie saldo znikalo
+              przy schodzeniu do oferty. Wyjatkiem sa DIALOGI i arkusze (BattleSummaryScreen,
+              ItemDetailSheet, QuizDialog...) - tam przewija sie cala zawartosc, bo to okno, a
+              nie ekran - oraz AuthScreen, gdzie formularz musi uciekac przed klawiatura.
+
+              Konsekwencja przy strojeniu: kazde dodane dp stalego elementu zabiera je liscie.
+              Panel druzyny w "Walcz" ma z tego powodu kafle 52 dp zamiast 62 i przy telefonie
+              360x800 zostawia liscie tematow ok. 190 dp, czyli trzy wiersze.
+
+              PANEL PYTANIA (QuizDialog, BossEventDialog) tez sie nie przewija, tylko inaczej:
+              tam nie ma "listy do przewiniecia", bo KAZDA odpowiedz musi byc widoczna naraz.
+              Siatka odpowiedzi dzieli przydzielona wysokosc miedzy kafle (weight), a gdy przy
+              jednej kolumnie zeszlyby ponizej ANSWER_TILE_READABLE_HEIGHT, przechodzi na DWIE
+              kolumny - to cala regula, patrz `answerColumns`. Przy 4 odpowiedziach wychodzi
+              jedna kolumna po 78 dp (czyli dokladnie tak, jak bylo), przy 7 opcjach
+              wielokrotnego wyboru - dwie kolumny po 78 dp zamiast jednej po 41 dp.
+              QuizOptionTile sam skaluje krazek z numerem i wielkosc pisma do wysokosci, ktora
+              dostal; wszystkie wymiary licza sie Z ROZMIARU KRAZKA, bo stale dobrane pod 58 dp
+              rozjezdzaly sie przy kazdym innym.
 shop/         sklep za PRAWDZIWA walute (klejnoty). Sprzetu sie tu NIE kupuje - przedmioty
               wykuwa sie w Kuzni, kompanow i zaklecia przyzywa w Summon Center, a materialy
               na jedno i drugie wypadaja wylacznie z walk kampanii/endless
@@ -308,6 +378,25 @@ notification/
                           nigdy przy starcie gry - zgoda wyproszona w pierwszej sekundzie, bez
                           kontekstu, to najkrotsza droga do odmowy na zawsze
 ```
+
+## :shared - monetyzacja
+
+```
+monetization/
+  SubscriptionService   premium przez RevenueCat (uprawnienie "premium"). Android: SDK wprost,
+                        iOS: most do Swifta (MonetizationBridge.swift, pakiety SPM), desktop: None.
+                        Gracz jest w RevenueCat pod uid Firebase (identify w PlayerViewModel.refresh)
+  RewardedAds           reklamy z nagroda (AdMob). Jedna reklama laduje sie w tle z wyprzedzeniem
+  RewardedAction        JEDYNA droga do nagrody "za reklame" - subskrybent dostaje ja bez reklamy
+  TranslationQuota      5 tlumaczen dziennie w czytniku bez premium, liczone na urzadzeniu
+  PremiumPaywall        jedno okno subskrypcji dla sklepu, edytora talii i czytnika
+  MonetizationConfig    publiczne klucze RevenueCat i jednostki AdMob (dzis TESTOWE Google)
+```
+
+Liczby (limity, zloto za reklame, HP po wskrzeszeniu) siedza w `:domain/monetization`. Limit
+generowania AI (200/miesiac, tylko premium) egzekwuje `:server`: pyta RevenueCat wprost
+(`Entitlements`, REVENUECAT_SECRET_KEY) - apka tylko chowa panel, bo oszukac da sie apke, a nie
+serwer. Bez klucza na serwerze generowanie jest zablokowane dla wszystkich.
 
 ## :shared - preferencje urzadzenia
 

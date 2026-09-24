@@ -8,10 +8,12 @@ import org.jetbrains.compose.resources.DrawableResource
 /**
  * Pozycje dolnego paska. [icon] to grafika (PLACEHOLDER - patrz [Resources.NavIcon]).
  *
- * Kolejnosc jest celowa: "Walcz" stoi w SRODKU (indeks 2) i jest wyrozniona wizualnie jako
- * centralny, wystajacy przycisk - to najwazniejsze miejsce w grze, reszta to zaplecze.
+ * Kolejnosc jest celowa: "Walcz" stoi w SRODKU - to najwazniejsze miejsce w grze, reszta to
+ * zaplecze. Wyroznienie w pasku nie nalezy juz jednak do niej na stale: pomaranczowy, uniesiony
+ * kafel wedruje za OTWARTA zakladka (patrz [NavBottomBar]), bo pasek ma mowic "gdzie jestem",
+ * a nie "co jest wazne".
  *
- * Karta postaci NIE ma tu wlasnej zakladki - wchodzi sie na nia z naglowka bohatera na ekranie Dom.
+ * Karta postaci NIE ma tu wlasnej zakladki - otwiera sie ja portretem z gornego paska gry.
  */
 enum class BottomBarDestination(
     val icon: DrawableResource,
@@ -35,10 +37,15 @@ enum class BottomBarDestination(
         titleOf = { it.navFight },
         route = Screen.Team
     ),
-    Progress(
+    /**
+     * Wlasne quizy. Dawniej stal tu Postep - ale podsumowanie osiagniec oglada sie raz na jakis
+     * czas, a pytania pisze sie regularnie, wiec to ono zaslugiwalo na miejsce w pasku. Postep
+     * przeniosl sie do Swiatyni na mapie Domu.
+     */
+    Quizzes(
         icon = Resources.NavIcon.Progress,
-        titleOf = { it.navProgress },
-        route = Screen.Progress
+        titleOf = { it.navQuizzes },
+        route = Screen.QuizStudio
     ),
     Shop(
         icon = Resources.NavIcon.Shop,
@@ -47,7 +54,4 @@ enum class BottomBarDestination(
     );
 
     fun title(strings: AppStrings): String = titleOf(strings)
-
-    /** Centralny, wyrozniony przycisk paska. */
-    val isPrimary: Boolean get() = this == Fight
 }

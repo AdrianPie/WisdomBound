@@ -33,7 +33,6 @@ object TechnologyQuestionsExtra2 {
         ask("google_zalozyciele", "Who founded Google?", "Larry Page and Sergey Brin", listOf("Bill Gates and Paul Allen", "Steve Jobs and Steve Wozniak", "Jeff Bezos and Elon Musk"), QuizDifficulty.Easy),
         ask("usb_skrot", "What does the abbreviation USB stand for?", "Universal Serial Bus", listOf("United System Board", "Universal System Bus is a wrong variant", "Unified Serial Base"), QuizDifficulty.Easy),
         ask("pdf_skrot", "What does the abbreviation PDF stand for?", "Portable Document Format", listOf("Personal Data File", "Printed Document Format", "Public Data Format"), QuizDifficulty.Easy),
-        ask("smartfon_pierwszy", "Which company released the first iPhone?", "Apple", listOf("Samsung", "Nokia", "Google"), QuizDifficulty.Easy),
 
         /* ------------------------------ Medium ------------------------------ */
         ask("android_zalozenie", "Which company originally created Android, before Google bought it?", "Android Inc.", listOf("Nokia", "Motorola", "Samsung"), QuizDifficulty.Medium),
@@ -46,7 +45,6 @@ object TechnologyQuestionsExtra2 {
         ask("antywirus_funkcja", "What is antivirus software used for?", "Detecting and removing malware", listOf("Speeding up the computer", "Making backups", "Managing files"), QuizDifficulty.Medium),
 
         /* ------------------------------ Hard ------------------------------- */
-        ask("moore_prawo_tresc", "What did Moore's law predict?", "Transistor count on a chip doubling roughly every two years", listOf("Internet speeds doubling for everyone every single year", "Computer prices falling by half every year", "Drive capacity doubling every single month"), QuizDifficulty.Hard),
         ask("open_source_licencje", "Which license is one of the most well-known in open source?", "The GNU GPL", listOf("The Windows EULA", "The Adobe Creative License", "The Apple Developer Agreement"), QuizDifficulty.Hard),
         ask("machine_learning_typ", "How does supervised learning differ from unsupervised?", "Supervised data has labels, unsupervised doesn't", listOf("Supervised uses no data", "Unsupervised always needs more compute power", "They're synonyms"), QuizDifficulty.Hard),
         ask("sieci_5g", "How does 5G differ from 4G?", "Higher throughput and lower latency", listOf("It only works over cable", "It's slower but cheaper", "It requires a different alphabet"), QuizDifficulty.Hard),

@@ -52,11 +52,14 @@ object StoryStageCatalog {
             List(enemyCount) { EnemySpecies.all[random.nextInt(EnemySpecies.all.size)] }
         }
 
-        // Fale rosna WEWNATRZ krainy, a nie skacza. Dotad bylo to `stageInWorld % 3`, czyli
-        // 2-3-1-2-3: trzecia plansza kazdej krainy byla krotsza od drugiej i od pierwszej, wiec
-        // droga przez kraine raz po raz cofala sie do rozgrzewki. Lacznie fal jest tyle samo -
-        // zmienila sie tylko ich kolejnosc.
-        val waves = if (isBoss) 1 else (1 + stageInWorld / 2)
+        // KAZDA plansza to pelny, dwudziestofalowy bieg - patrz [CampaignLadder].
+        //
+        // Wczesniej bylo tu od jednej do czterech fal (boss: jedna). Plansza konczyla sie, zanim
+        // zdazyla sie zaczac: nie miala krzywej trudnosci, nie miescila ani jednej karty ulepszenia
+        // (te wypadaja co trzy fale) i nie dalo sie w niej przegrac inaczej niz przez pech. Rodzaj
+        // walki nie zalezy juz od planszy, tylko od NUMERU FALI (elita co piata, boss co dziesiata),
+        // wiec jedna plansza niesie caly rytm, ktory wczesniej rozkladal sie na cala kraine.
+        val waves = CampaignLadder.WAVES_PER_STAGE
 
         return StoryStage(
             world = world,

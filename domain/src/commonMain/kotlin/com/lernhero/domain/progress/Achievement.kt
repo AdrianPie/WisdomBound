@@ -1,11 +1,18 @@
 package com.lernhero.domain.progress
 
+import com.lernhero.domain.jewel.Jewel
+import com.lernhero.domain.jewel.JewelGrade
+import com.lernhero.domain.jewel.JewelType
+import com.lernhero.domain.quiz.QuizCategory
+
 /**
  * Kategoria osiagniecia - po niej grupuje sie lista na ekranie postepu. Nauka jest pierwsza
  * swiadomie: to ona jest w tej grze wlasciwym osiagnieciem, walka tylko jej opakowaniem.
  */
 enum class AchievementGroup(val label: String) {
     Learning("Learning"),
+    /** Serie w pojedynczych tematach - glowne zrodlo kamieni. */
+    Topics("Topics"),
     Combat("Combat"),
     Journey("Journey"),
     Wealth("Wealth")
@@ -17,11 +24,14 @@ enum class AchievementGroup(val label: String) {
  * [reward] to zloto za odebranie osiagniecia tego stopnia. Nagroda siedzi na STOPNIU, a nie na
  * pojedynczym osiagnieciu, celowo: dopisanie nowego celu do katalogu nie wymaga wtedy wymyslania
  * mu kwoty i nie da sie przez przeoczenie dodac celu, ktory placi zero albo dziesiec razy za duzo.
+ *
+ * [gems] to jednorazowe diamenty - osiagniecia sa jedynym zrodlem diamentow, ktore nie jest
+ * codzienne, wiec moga placic hojniej niz cele dzienne, nie rozpedzajac przy tym dziennego dochodu.
  */
-enum class AchievementTier(val label: String, val reward: Int) {
-    Bronze("Bronze", 250),
-    Silver("Silver", 1_000),
-    Gold("Gold", 4_000)
+enum class AchievementTier(val label: String, val reward: Int, val gems: Int, val jewelGrade: JewelGrade) {
+    Bronze("Bronze", 250, 10, JewelGrade.Chipped),
+    Silver("Silver", 1_000, 30, JewelGrade.Flawed),
+    Gold("Gold", 4_000, 100, JewelGrade.Polished)
 }
 
 /**
@@ -36,8 +46,14 @@ data class Achievement(
     val group: AchievementGroup,
     val tier: AchievementTier,
     val target: Int,
-    val progressOf: (GameStats) -> Int
+    val progressOf: (GameStats) -> Int,
+    /** Rodzaj kamienia w nagrodzie; szlif wynika ze stopnia ([AchievementTier.jewelGrade]). */
+    val jewelType: JewelType? = null,
+    /** Temat, ktorego dotyczy osiagniecie z grupy [AchievementGroup.Topics]. */
+    val topic: QuizCategory? = null
 ) {
+    val jewel: Jewel? get() = jewelType?.let { Jewel(it, tier.jewelGrade) }
+
     fun progress(stats: GameStats): Int = progressOf(stats).coerceAtMost(target)
     fun isUnlocked(stats: GameStats): Boolean = progressOf(stats) >= target
     fun fraction(stats: GameStats): Float =
@@ -45,6 +61,9 @@ data class Achievement(
 
     /** Zloto za odebranie - bierze sie ze stopnia, patrz [AchievementTier.reward]. */
     val reward: Int get() = tier.reward
+
+    /** Diamenty za odebranie - tez ze stopnia. */
+    val gems: Int get() = tier.gems
 
     /**
      * Czy jest co odebrac: zdobyte, ale jeszcze nieodebrane. Osiagniecie samo nie trzyma stanu
@@ -64,7 +83,9 @@ data class Achievement(
  */
 object AchievementCatalog {
 
-    val all: List<Achievement> = listOf(
+    val all: List<Achievement> by lazy { fixed + topics }
+
+    private val fixed: List<Achievement> = listOf(
         // ---------------- Learning ----------------
         Achievement(
             id = "answers_50",
@@ -73,6 +94,7 @@ object AchievementCatalog {
             group = AchievementGroup.Learning,
             tier = AchievementTier.Bronze,
             target = 50,
+            jewelType = JewelType.Onyx,
             progressOf = { it.questionsAnswered }
         ),
         Achievement(
@@ -82,6 +104,7 @@ object AchievementCatalog {
             group = AchievementGroup.Learning,
             tier = AchievementTier.Silver,
             target = 500,
+            jewelType = JewelType.Topaz,
             progressOf = { it.questionsAnswered }
         ),
         Achievement(
@@ -91,6 +114,7 @@ object AchievementCatalog {
             group = AchievementGroup.Learning,
             tier = AchievementTier.Gold,
             target = 2500,
+            jewelType = JewelType.Amethyst,
             progressOf = { it.questionsAnswered }
         ),
         Achievement(
@@ -100,6 +124,7 @@ object AchievementCatalog {
             group = AchievementGroup.Learning,
             tier = AchievementTier.Silver,
             target = 250,
+            jewelType = JewelType.Sapphire,
             progressOf = { it.questionsCorrect }
         ),
         Achievement(
@@ -109,6 +134,7 @@ object AchievementCatalog {
             group = AchievementGroup.Learning,
             tier = AchievementTier.Bronze,
             target = 10,
+            jewelType = JewelType.Ruby,
             progressOf = { it.bestAnswerStreak }
         ),
         Achievement(
@@ -118,6 +144,7 @@ object AchievementCatalog {
             group = AchievementGroup.Learning,
             tier = AchievementTier.Gold,
             target = 25,
+            jewelType = JewelType.Topaz,
             progressOf = { it.bestAnswerStreak }
         ),
         Achievement(
@@ -127,7 +154,49 @@ object AchievementCatalog {
             group = AchievementGroup.Learning,
             tier = AchievementTier.Bronze,
             target = 5,
+            jewelType = JewelType.Emerald,
             progressOf = { stats -> stats.perCategory.count { it.value.correct > 0 } }
+        ),
+
+        Achievement(
+            id = "streak_50",
+            title = "Flawless Mind",
+            description = "Get 50 answers right in a row.",
+            group = AchievementGroup.Learning,
+            tier = AchievementTier.Gold,
+            target = 50,
+            jewelType = JewelType.Amethyst,
+            progressOf = { it.bestAnswerStreak }
+        ),
+        Achievement(
+            id = "correct_1000",
+            title = "Sage",
+            description = "Answer correctly 1000 times.",
+            group = AchievementGroup.Learning,
+            tier = AchievementTier.Gold,
+            target = 1000,
+            jewelType = JewelType.Sapphire,
+            progressOf = { it.questionsCorrect }
+        ),
+        Achievement(
+            id = "categories_10",
+            title = "Explorer",
+            description = "Answer correctly in 10 different categories.",
+            group = AchievementGroup.Learning,
+            tier = AchievementTier.Silver,
+            target = 10,
+            jewelType = JewelType.Onyx,
+            progressOf = { stats -> stats.perCategory.count { it.value.correct > 0 } }
+        ),
+        Achievement(
+            id = "polymath",
+            title = "Polymath",
+            description = "Reach a streak of 10 in 5 different topics.",
+            group = AchievementGroup.Learning,
+            tier = AchievementTier.Gold,
+            target = 5,
+            jewelType = JewelType.Emerald,
+            progressOf = { stats -> stats.bestCategoryStreaks.count { it.value >= 10 } }
         ),
 
         // ---------------- Combat ----------------
@@ -138,6 +207,7 @@ object AchievementCatalog {
             group = AchievementGroup.Combat,
             tier = AchievementTier.Bronze,
             target = 1,
+            jewelType = JewelType.Ruby,
             progressOf = { it.battlesWon }
         ),
         Achievement(
@@ -147,6 +217,7 @@ object AchievementCatalog {
             group = AchievementGroup.Combat,
             tier = AchievementTier.Silver,
             target = 50,
+            jewelType = JewelType.Ruby,
             progressOf = { it.battlesWon }
         ),
         Achievement(
@@ -156,6 +227,7 @@ object AchievementCatalog {
             group = AchievementGroup.Combat,
             tier = AchievementTier.Silver,
             target = 100,
+            jewelType = JewelType.Onyx,
             progressOf = { it.totalWavesCleared }
         ),
         Achievement(
@@ -165,6 +237,7 @@ object AchievementCatalog {
             group = AchievementGroup.Combat,
             tier = AchievementTier.Bronze,
             target = 10,
+            jewelType = JewelType.Sapphire,
             progressOf = { it.bestEndlessWave }
         ),
         Achievement(
@@ -174,6 +247,7 @@ object AchievementCatalog {
             group = AchievementGroup.Combat,
             tier = AchievementTier.Gold,
             target = 30,
+            jewelType = JewelType.Amethyst,
             progressOf = { it.bestEndlessWave }
         ),
 
@@ -185,6 +259,7 @@ object AchievementCatalog {
             group = AchievementGroup.Journey,
             tier = AchievementTier.Bronze,
             target = 1,
+            jewelType = JewelType.Emerald,
             progressOf = { it.bossesDefeated }
         ),
         Achievement(
@@ -194,6 +269,7 @@ object AchievementCatalog {
             group = AchievementGroup.Journey,
             tier = AchievementTier.Silver,
             target = 10,
+            jewelType = JewelType.Ruby,
             progressOf = { it.bossesDefeated }
         ),
         Achievement(
@@ -203,6 +279,7 @@ object AchievementCatalog {
             group = AchievementGroup.Journey,
             tier = AchievementTier.Silver,
             target = 5,
+            jewelType = JewelType.Topaz,
             progressOf = { it.dungeonsCleared }
         ),
 
@@ -214,6 +291,7 @@ object AchievementCatalog {
             group = AchievementGroup.Wealth,
             tier = AchievementTier.Bronze,
             target = 5_000,
+            jewelType = JewelType.Topaz,
             progressOf = { it.goldEarned }
         ),
         Achievement(
@@ -223,6 +301,7 @@ object AchievementCatalog {
             group = AchievementGroup.Wealth,
             tier = AchievementTier.Gold,
             target = 50_000,
+            jewelType = JewelType.Amethyst,
             progressOf = { it.goldEarned }
         ),
         Achievement(
@@ -232,6 +311,7 @@ object AchievementCatalog {
             group = AchievementGroup.Wealth,
             tier = AchievementTier.Bronze,
             target = 5,
+            jewelType = JewelType.Onyx,
             progressOf = { it.itemsCrafted }
         ),
         Achievement(
@@ -241,8 +321,57 @@ object AchievementCatalog {
             group = AchievementGroup.Wealth,
             tier = AchievementTier.Bronze,
             target = 5,
+            jewelType = JewelType.Emerald,
             progressOf = { it.monstersSummoned }
         )
+    )
+
+    /**
+     * Po trzy stopnie serii w kazdym temacie z wbudowanego banku. Tematy lokalne (np. Polska)
+     * sa pominiete, bo nie kazdy gracz je widzi - osiagniecie niemozliwe do zdobycia tylko by
+     * irytowalo.
+     */
+    private val topics: List<Achievement> by lazy { buildTopics() }
+
+    private fun buildTopics(): List<Achievement> = QuizCategory.builtin
+        .filter { it.localeCode == null }
+        .flatMap { category ->
+            TOPIC_STEPS.map { (tier, target, title) ->
+                Achievement(
+                    id = "topic_${category.name.lowercase()}_$target",
+                    title = "${category.label} $title",
+                    description = "Answer $target ${category.label} questions right in a row. " +
+                        "Only a wrong ${category.label} answer breaks the streak.",
+                    group = AchievementGroup.Topics,
+                    tier = tier,
+                    target = target,
+                    jewelType = TOPIC_JEWELS[category] ?: JewelType.Onyx,
+                    topic = category,
+                    progressOf = { it.bestStreakIn(category) }
+                )
+            }
+        }
+
+    private val TOPIC_STEPS = listOf(
+        Triple(AchievementTier.Bronze, 10, "Apprentice"),
+        Triple(AchievementTier.Silver, 30, "Adept"),
+        Triple(AchievementTier.Gold, 60, "Master")
+    )
+
+    private val TOPIC_JEWELS: Map<QuizCategory, JewelType> = mapOf(
+        QuizCategory.Biology to JewelType.Emerald,
+        QuizCategory.Animals to JewelType.Onyx,
+        QuizCategory.History to JewelType.Amethyst,
+        QuizCategory.Elements to JewelType.Ruby,
+        QuizCategory.Capitals to JewelType.Sapphire,
+        QuizCategory.Science to JewelType.Topaz,
+        QuizCategory.Flags to JewelType.Ruby,
+        QuizCategory.Geography to JewelType.Sapphire,
+        QuizCategory.Sport to JewelType.Onyx,
+        QuizCategory.Math to JewelType.Topaz,
+        QuizCategory.Literature to JewelType.Amethyst,
+        QuizCategory.Technology to JewelType.Topaz,
+        QuizCategory.Mythology to JewelType.Emerald
     )
 
     fun byGroup(group: AchievementGroup): List<Achievement> = all.filter { it.group == group }

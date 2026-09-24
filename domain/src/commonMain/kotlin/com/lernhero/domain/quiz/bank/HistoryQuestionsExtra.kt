@@ -25,16 +25,9 @@ object HistoryQuestionsExtra {
     val all: List<QuizEntry> = listOf(
 
         /* ------------------------------- Easy ------------------------------- */
-        ask("rycerze_epoka", "In which era did knights in plate armor live?", "The Middle Ages", listOf("Antiquity", "The 20th century", "Prehistory"), QuizDifficulty.Easy),
         ask("ww2_koniec", "In which year did World War II end?", "1945", listOf("1944", "1946", "1943"), QuizDifficulty.Easy),
-        ask("mur_co", "What did the Berlin Wall divide?", "East and West Berlin", listOf("Germany and France", "Poland and Germany", "Vienna and Bratislava"), QuizDifficulty.Easy),
         ask("wikingowie_skad", "Where did the Vikings come from?", "Scandinavia", listOf("Spain", "Greece", "Egypt"), QuizDifficulty.Easy),
-        ask("kolo_wynalazek", "Which invention is older?", "The wheel", listOf("The steam engine", "The magnetic compass", "The printing press"), QuizDifficulty.Easy),
-        ask("rzym_imperium", "Which city was the capital of the Roman Empire?", "Rome", listOf("Athens", "Carthage", "Alexandria"), QuizDifficulty.Easy),
-        ask("solidarnosc_kraj", "In which country was the Solidarity movement founded?", "Poland", listOf("Hungary", "Czechoslovakia", "East Germany"), QuizDifficulty.Easy),
         ask("pierwsza_wojna_koniec", "In which year did World War I end?", "1918", listOf("1919", "1917", "1920"), QuizDifficulty.Easy),
-        ask("faraon_tut", "Who was Tutankhamun?", "A Pharaoh of Egypt", listOf("An Emperor of China", "A King of Persia", "An Aztec chief"), QuizDifficulty.Easy),
-        ask("kopernik_kraj", "Which country did Nicolaus Copernicus come from?", "Poland", listOf("Italy", "Germany", "Czechia"), QuizDifficulty.Easy),
         ask("egipt_pismo", "What is the writing of the ancient Egyptians called?", "Hieroglyphs", listOf("Cuneiform", "Runic", "The Greek alphabet"), QuizDifficulty.Easy),
         ask("nowozytne_odkrycia", "Who sailed around the Cape of Good Hope on the way to India?", "Vasco da Gama", listOf("Columbus", "Cortes", "Cook"), QuizDifficulty.Easy),
 
@@ -54,7 +47,6 @@ object HistoryQuestionsExtra {
         ask("mur_upadek_kto", "Which Soviet leader announced perestroika?", "Mikhail Gorbachev", listOf("Leonid Brezhnev", "Nikita Khrushchev", "Yuri Andropov"), QuizDifficulty.Hard),
         ask("sobor_trydencki", "What was the Council of Trent for?", "The Counter-Reformation in the Catholic Church", listOf("Dividing the Holy Roman Empire in two", "Settling the end of the Hundred Years' War", "Fixing the borders of Byzantium"), QuizDifficulty.Hard),
         ask("hanza", "What was the Hanseatic League?", "A league of merchant cities on the Baltic and North Sea", listOf("A knightly order founded in the Holy Land", "A German dynasty ruling the Rhine valley", "An Italian military alliance against France"), QuizDifficulty.Hard),
-        ask("bitwa_pod_wieden_rok", "In which year was the Relief of Vienna?", "1683", listOf("1673", "1699", "1621"), QuizDifficulty.Hard),
         ask("cesarz_chin_pierwszy", "Who unified China as its first emperor?", "Qin Shi Huang", listOf("Kublai Khan", "Confucius", "Sun Tzu"), QuizDifficulty.Hard),
         ask("inkowie_kraj", "The heartland of the Inca empire lay in which present-day country?", "Peru", listOf("Mexico", "Brazil", "Colombia"), QuizDifficulty.Hard),
         ask("rewolucja_przemyslowa", "In which country did the Industrial Revolution begin?", "The United Kingdom", listOf("Germany", "France", "The USA"), QuizDifficulty.Hard),

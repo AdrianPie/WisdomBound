@@ -130,13 +130,6 @@ object LiteratureQuestions {
             difficulty = QuizDifficulty.Expert
         ),
         ask(
-            id = "ulisses",
-            prompt = "In which city is Joyce's 'Ulysses' set?",
-            correct = "Dublin",
-            wrong = listOf("London", "Edinburgh", "Belfast"),
-            difficulty = QuizDifficulty.Expert
-        ),
-        ask(
             id = "proust",
             prompt = "Who wrote the cycle 'In Search of Lost Time'?",
             correct = "Marcel Proust",

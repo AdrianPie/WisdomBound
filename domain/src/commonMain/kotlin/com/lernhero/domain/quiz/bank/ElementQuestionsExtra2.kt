@@ -53,8 +53,6 @@ object ElementQuestionsExtra2 {
         symbol("Ni", "Nickel", listOf("Neon", "Niobium", "Neodymium"), QuizDifficulty.Medium),
         symbol("As", "Arsenic", listOf("Astatine", "Argon", "Actinium"), QuizDifficulty.Medium),
         symbol("Br", "Bromine", listOf("Barium", "Boron", "Beryllium"), QuizDifficulty.Medium),
-        forSymbol("calcium", "Ca", listOf("Cl", "C", "Cm"), QuizDifficulty.Medium),
-        forSymbol("chlorine", "Cl", listOf("Ch", "Cr", "Cn"), QuizDifficulty.Medium),
         ask("gaz_cieplarniany", "Which gas is the main greenhouse gas from human activity?", "Carbon dioxide", listOf("Oxygen", "Nitrogen", "Argon"), QuizDifficulty.Medium),
         ask("rdza_reakcja", "What does iron react with to form rust?", "Oxygen and water", listOf("Nitrogen", "Hydrogen", "Argon"), QuizDifficulty.Medium),
         ask("ocet_kwas", "Which acid is found in vinegar?", "Acetic acid", listOf("Hydrochloric acid", "Sulfuric acid", "Citric acid"), QuizDifficulty.Medium),
@@ -71,12 +69,9 @@ object ElementQuestionsExtra2 {
         ask("azot_atmosfera", "What percentage of Earth's atmosphere is nitrogen?", "About 78%", listOf("About 21%", "About 50%", "About 95%"), QuizDifficulty.Hard),
 
         /* ----------------------------- Expert ---------------------------- */
-        symbol("Hf", "Hafnium", listOf("Holmium", "Helium", "Mercury"), QuizDifficulty.Expert),
-        symbol("Re", "Rhenium", listOf("Rhodium", "Ruthenium", "Radon"), QuizDifficulty.Expert),
         symbol("Os", "Osmium", listOf("Lead", "Iridium", "Platinum"), QuizDifficulty.Expert),
         symbol("Pd", "Palladium", listOf("Platinum", "Polonium", "Potassium"), QuizDifficulty.Expert),
         ask("pierwiastek_najciezszy_stabilny", "Which is the heaviest element with stable isotopes?", "Lead", listOf("Bismuth", "Uranium", "Radium"), QuizDifficulty.Expert),
         ask("astat_rzadki", "Which is the rarest naturally occurring element in Earth's crust?", "Astatine", listOf("Francium", "Promethium", "Polonium"), QuizDifficulty.Expert),
-        ask("aktynowce_ile", "How many elements does the actinide series contain, from actinium to lawrencium?", "15", listOf("10", "20", "7"), QuizDifficulty.Expert)
     )
 }

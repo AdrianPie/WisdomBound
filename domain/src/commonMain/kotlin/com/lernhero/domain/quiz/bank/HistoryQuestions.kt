@@ -84,13 +84,6 @@ object HistoryQuestions {
             difficulty = QuizDifficulty.Medium
         ),
         ask(
-            id = "grunwald",
-            prompt = "Which battle was fought in 1410?",
-            correct = "The Battle of Grunwald",
-            wrong = listOf("The Battle of Legnica", "The Battle of Chocim", "The Battle of Vienna"),
-            difficulty = QuizDifficulty.Medium
-        ),
-        ask(
             id = "waszyngton",
             prompt = "Who was the first President of the United States?",
             correct = "George Washington",
@@ -113,20 +106,6 @@ object HistoryQuestions {
         ),
 
         /* ------------------------------ Hard ------------------------------- */
-        ask(
-            id = "wieden",
-            prompt = "Who commanded the Christian forces at the Battle of Vienna in 1683?",
-            correct = "John III Sobieski",
-            wrong = listOf("Stephen Bathory", "Sigismund III Vasa", "Wladyslaw IV"),
-            difficulty = QuizDifficulty.Hard
-        ),
-        ask(
-            id = "konstytucja",
-            prompt = "In which year was the Constitution of May 3 adopted?",
-            correct = "1791",
-            wrong = listOf("1793", "1795", "1789"),
-            difficulty = QuizDifficulty.Hard
-        ),
         ask(
             id = "rzym",
             prompt = "In which year did the Western Roman Empire fall?",
@@ -169,13 +148,6 @@ object HistoryQuestions {
             prompt = "Who wrote the treatise 'The Prince'?",
             correct = "Niccolo Machiavelli",
             wrong = listOf("Dante Alighieri", "Erasmus of Rotterdam", "Thomas More"),
-            difficulty = QuizDifficulty.Expert
-        ),
-        ask(
-            id = "unia_lubelska",
-            prompt = "In which year was the Union of Lublin signed?",
-            correct = "1569",
-            wrong = listOf("1385", "1466", "1596"),
             difficulty = QuizDifficulty.Expert
         ),
         ask(

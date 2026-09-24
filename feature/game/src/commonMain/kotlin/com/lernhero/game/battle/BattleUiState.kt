@@ -2,6 +2,7 @@ package com.lernhero.game.battle
 
 import com.lernhero.domain.combat.live.CycleOutcome
 import com.lernhero.domain.quiz.QuizCategory
+import com.lernhero.domain.combat.live.AnswerTimer
 import com.lernhero.domain.combat.live.StreakTracker
 import com.lernhero.domain.combat.playback.HitKind
 import com.lernhero.domain.item.Item
@@ -23,6 +24,18 @@ typealias CharacterId = String
  *
  * [id] rosnie monotonicznie, wiec dwa te same trafienia nie zleja sie w jeden efekt.
  */
+/** Propozycja wskrzeszenia po porazce - patrz [com.lernhero.domain.monetization.AdRewards.REVIVE_HP_FRACTION]. */
+data class ReviveOffer(
+    /** Subskrybent wskrzesza bez reklamy - przycisk mowi wtedy co innego. */
+    val free: Boolean,
+    /** Czy da sie teraz obejrzec reklame (albo wskrzesic za darmo z subskrypcja). */
+    val adAvailable: Boolean = true,
+    /** Diamenty gracza - druga droga: wskrzeszenie za [com.lernhero.domain.monetization.AdRewards.REVIVE_GEMS]. */
+    val gems: Int = 0,
+    val watching: Boolean = false,
+    val note: String? = null
+)
+
 data class FloatingEffect(
     val id: Long,
     val targetId: String,
@@ -157,6 +170,11 @@ data class BattleUiState(
     val secondWindUses: Map<CharacterId, Int> = emptyMap(),
     /** Wybor ulepszenia czekajacy na decyzje gracza - dopoki jest, walka stoi. */
     val upgradeOffer: UpgradeOffer? = null,
+    /**
+     * Druzyna padla, ale wskrzeszenie za reklame jest jeszcze do wziecia (raz na walke). Dopoki
+     * to lezy, walka stoi - porazka rozlicza sie dopiero po odmowie.
+     */
+    val reviveOffer: ReviveOffer? = null,
     /**
      * Komplet fal endless zebrany - temat awansowal i gracz decyduje, czy wychodzi z nagroda, czy
      * idzie dalej. Dopoki to lezy, walka stoi (tak samo jak przy [upgradeOffer]).
@@ -336,7 +354,13 @@ data class LiveQuizState(
     val orderedSelection: List<String> = emptyList(),
     /** Zaznaczone opcje w [MultiSelectQuestion] - pusty zbior dla pozostalych typow pytan. */
     val multiSelection: Set<String> = emptySet(),
-    val revealed: Boolean = false
+    val revealed: Boolean = false,
+    /**
+     * Ile czasu gracz ma na TO pytanie. Nie jest to stala calej gry: zalezy od rozmiaru pytania i
+     * od glebokosci fali (patrz [com.lernhero.domain.combat.live.AnswerTimer.windowFor]), a pasek
+     * na ekranie i mnoznik salwy licza sie z ulamka wlasnie tej liczby.
+     */
+    val windowMs: Long = AnswerTimer.WINDOW_MS
 ) {
     val correctAnswer: QuizAnswer?
         get() = (question as? MultipleChoiceQuestion)?.answers?.firstOrNull { it.isCorrect }

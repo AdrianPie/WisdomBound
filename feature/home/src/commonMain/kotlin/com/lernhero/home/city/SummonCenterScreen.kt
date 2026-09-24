@@ -96,7 +96,7 @@ private enum class SummonBanner(
     val weights: Map<Rarity, Int>
 ) {
     Basic(
-        id = "basic",
+        id = FreeSummon.BASIC_BANNER,
         label = "Basic Summon",
         art = Resources.SummonBanner.Basic,
         ticketCost = 1,
@@ -110,7 +110,7 @@ private enum class SummonBanner(
         )
     ),
     Heroic(
-        id = "heroic",
+        id = FreeSummon.HEROIC_BANNER,
         label = "Heroic Summon",
         art = Resources.SummonBanner.Heroic,
         ticketCost = 3,
@@ -547,10 +547,10 @@ private fun AltarStage(
                 modifier = Modifier.fillMaxSize()
             )
 
-            Image(
-                painter = painterResource(Resources.CityIsland.altar),
-                contentDescription = "Altar",
-                contentScale = ContentScale.Fit,
+            // Oltarz i jego swiatla siedza w JEDNYM pudelku - inaczej znaki musialyby powtarzac
+            // caly rachunek pozycji i skali, i rozjezdzalyby sie z grafika przy kazdej zmianie
+            // [ALTAR_SCALE] albo rozmiaru sceny.
+            Box(
                 modifier = Modifier
                     .align(Alignment.TopCenter)
                     .offset(y = altarTop)
@@ -561,7 +561,25 @@ private fun AltarStage(
                         scaleX = pulse
                         scaleY = pulse
                     }
-            )
+            ) {
+                Image(
+                    painter = painterResource(Resources.CityIsland.altar),
+                    contentDescription = "Altar",
+                    contentScale = ContentScale.Fit,
+                    modifier = Modifier.fillMaxSize()
+                )
+
+                // Runy, krag i swiece zapalaja sie w kolorze rzadkosci - patrz [AltarRuneLights].
+                AltarRuneLights(
+                    accent = accent,
+                    // W spoczynku znaki tylko sie tla; po kliknieciu summona rozpalaja sie razem z
+                    // ladowaniem rytualu i dostaja dodatkowy kop w momencie blysku.
+                    intensity = (ALTAR_RUNE_IDLE + (1f - ALTAR_RUNE_IDLE) * chargeValue + flashValue)
+                        .coerceIn(0f, 1f),
+                    charge = chargeValue,
+                    modifier = Modifier.fillMaxSize()
+                )
+            }
 
             // Fala uderzeniowa NAD oltarzem - wczesniej cala warstwa efektow szla pod grafika,
             // wiec oltarz ja zasłaniał i po podmianie na nieprzezroczysty PNG zrobila sie

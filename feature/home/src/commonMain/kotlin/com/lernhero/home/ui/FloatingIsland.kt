@@ -9,6 +9,12 @@ import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.BoxWithConstraints
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.requiredSize
+import androidx.compose.foundation.background
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
@@ -44,28 +50,19 @@ fun FloatingIsland(
     val transition = rememberInfiniteTransition(label = "floating-island")
 
     BoxWithConstraints(modifier = modifier) {
-        val slabW = maxWidth * SLAB_WIDTH_FRACTION
-        val spriteH = maxHeight * SPRITE_HEIGHT_FRACTION
+        // JEDNA jednostka skali dla kamienia, sylwetki i kamykow. Wczesniej kamien bral 70%
+        // szerokosci niezaleznie od wysokosci sceny - na niskiej scenie obraz sie sciskal (Fit),
+        // a kamyki, liczone od NIESCISNIETEJ szerokosci, rozlatywaly sie po calym ekranie.
+        val unit = minOf(maxWidth * SLAB_WIDTH_FRACTION, maxHeight * HEIGHT_BUDGET)
+        val slabW = unit
+        val spriteH = unit * SPRITE_TO_SLAB
 
-        // Sprite'y potworow maja wlasny przezroczysty margines (zmierzone na plikach: ~13%
-        // wysokosci kadru u gory i u dolu). Stala w dp tego nie nadganiala - im wieksza sylwetka,
-        // tym wiekszy margines, wiec stopy zaczynaly wisiec nad kamieniem. Liczymy go wiec jako
-        // UDZIAL wysokosci sprite'a.
-        val sink = spriteH * SPRITE_EDGE_PADDING
-
-        // Gdzie postawic stopy, zeby CALA grupa (widoczna sylwetka + kamien) miala srodek dokladnie
-        // w srodku sceny - czyli na wysokosci strzalek przewijania kompanow. Wczesniej feetY bylo
-        // stalym ulamkiem wysokosci i grupa wychodzila wyraznie nad strzalki.
-        //
-        //   zasieg sylwetki w gore = (1 - 2 * SPRITE_EDGE_PADDING) * spriteH
-        //   zasieg kamienia w dol  = (SLAB_VISUAL_BOTTOM - SLAB_TOP_INSET) * slabW
-        val spriteReach = spriteH * (1f - 2f * SPRITE_EDGE_PADDING)
+        // Srodek grupy (widoczna sylwetka + kamien) = srodek sceny.
+        val spriteReach = spriteH * (1f - SPRITE_EDGE_PADDING)
         val slabReach = slabW * (SLAB_VISUAL_BOTTOM - SLAB_TOP_INSET)
-        val feetY = maxHeight / 2 + spriteReach / 2 - slabReach / 2
-
-        // Plaski wierzch kamienia siedzi [SLAB_TOP_INSET] wysokosci jego (kwadratowej) grafiki
-        // od gory - o tyle podnosimy kamien, zeby jego wierzch wypadl dokladnie pod stopami.
-        val slabTop = (feetY - slabW * SLAB_TOP_INSET).coerceAtLeast(0.dp)
+        val feetY = maxHeight / 2 + (spriteReach - slabReach) / 2
+        val slabTop = feetY - slabW * SLAB_TOP_INSET
+        val sink = spriteH * SPRITE_EDGE_PADDING
 
         val bobPx = with(LocalDensity.current) { 5.dp.toPx() }
         val bob by transition.animateFloat(
@@ -76,6 +73,19 @@ fun FloatingIsland(
                 repeatMode = RepeatMode.Reverse,
             ),
             label = "slab-bob",
+        )
+
+        // Miekka poswiata pod stopami - osadza postac w scenie.
+        Box(
+            modifier = Modifier
+                .align(Alignment.TopCenter)
+                .offset(y = feetY - slabW * 0.35f)
+                .requiredSize(slabW * 1.3f, slabW * 0.7f)
+                .graphicsLayer { translationY = -bobPx * bob }
+                .background(
+                    Brush.radialGradient(listOf(Color(0x55FFD9A0), Color.Transparent)),
+                    RoundedCornerShape(50)
+                )
         )
 
         PEBBLES.forEach { pebble ->
@@ -96,10 +106,9 @@ fun FloatingIsland(
                 contentScale = ContentScale.Fit,
                 modifier = Modifier
                     .align(Alignment.TopCenter)
-                    .padding(top = (feetY + slabW * pebble.yFactor).coerceAtLeast(0.dp))
-                    .offset(x = slabW * pebble.xFactor)
-                    .size(pebble.size)
-                    .graphicsLayer { translationY = -ampPx * t },
+                    .offset(x = slabW * pebble.xFactor, y = feetY + slabW * pebble.yFactor)
+                    .requiredSize(slabW * pebble.sizeFactor)
+                    .graphicsLayer { translationY = -ampPx * t - bobPx * bob * 0.5f },
             )
         }
 
@@ -109,8 +118,8 @@ fun FloatingIsland(
             contentScale = ContentScale.Fit,
             modifier = Modifier
                 .align(Alignment.TopCenter)
-                .padding(top = slabTop)
-                .width(slabW)
+                .offset(y = slabTop)
+                .requiredSize(slabW)
                 .graphicsLayer { translationY = -bobPx * bob },
         )
 
@@ -120,20 +129,23 @@ fun FloatingIsland(
             contentScale = ContentScale.Fit,
             modifier = Modifier
                 .align(Alignment.TopCenter)
-                // +sink: kadr sprite'a ma pusty margines pod stopami, wiec opuszczamy go o tyle,
-                // ile ten margines realnie zajmuje - inaczej sylwetka wisi nad kamieniem.
-                .padding(top = (feetY + sink - spriteH).coerceAtLeast(0.dp))
-                .height(spriteH)
+                // +sink: kadr sprite'a ma pusty margines pod stopami.
+                .offset(y = feetY + sink - spriteH)
+                .requiredSize(spriteH)
                 .graphicsLayer { translationY = -bobPx * bob },
         )
     }
 }
 
 /** Ile szerokosci sceny zajmuje glowny kamien. */
-private const val SLAB_WIDTH_FRACTION = 0.70f
+private const val SLAB_WIDTH_FRACTION = 0.62f
 
-/** Ile wysokosci sceny zajmuje KADR sylwetki - widoczna czesc jest o [SPRITE_EDGE_PADDING] mniejsza. */
-private const val SPRITE_HEIGHT_FRACTION = 0.50f
+/** Jaka czesc wysokosci sceny moze zajac jednostka skali - grupa ma ~1.35 jednostki wysokosci. */
+private const val HEIGHT_BUDGET = 0.68f
+
+/** Kadr sylwetki wzgledem szerokosci kamienia. */
+private const val SPRITE_TO_SLAB = 1.15f
+
 
 /** Przezroczysty margines w kadrze sprite'a, u gory i u dolu - zmierzone na plikach potworow. */
 private const val SPRITE_EDGE_PADDING = 0.13f
@@ -152,16 +164,16 @@ private data class Pebble(
     val resIndex: Int,
     val xFactor: Float,
     val yFactor: Float,
-    val size: Dp,
+    val sizeFactor: Float,
     val periodMs: Int,
     val amplitude: Dp,
     val startMs: Int,
 )
 
+/** Kamyki trzymaja sie SPODU kamienia (yFactor od wierzchu: 0.3-0.6), w obrysie jego szerokosci. */
 private val PEBBLES = listOf(
-    Pebble(resIndex = 0, xFactor = -0.60f, yFactor = 0.28f, size = 20.dp, periodMs = 2600, amplitude = 7.dp, startMs = 0),
-    Pebble(resIndex = 1, xFactor = 0.62f, yFactor = 0.16f, size = 15.dp, periodMs = 3400, amplitude = 9.dp, startMs = 520),
-    Pebble(resIndex = 2, xFactor = -0.16f, yFactor = 0.74f, size = 24.dp, periodMs = 2100, amplitude = 6.dp, startMs = 960),
-    Pebble(resIndex = 3, xFactor = 0.38f, yFactor = 0.66f, size = 13.dp, periodMs = 3900, amplitude = 11.dp, startMs = 240),
-    Pebble(resIndex = 4, xFactor = 0.06f, yFactor = 0.52f, size = 22.dp, periodMs = 2900, amplitude = 8.dp, startMs = 1320),
+    Pebble(resIndex = 0, xFactor = -0.34f, yFactor = 0.42f, sizeFactor = 0.075f, periodMs = 2600, amplitude = 5.dp, startMs = 0),
+    Pebble(resIndex = 1, xFactor = 0.36f, yFactor = 0.36f, sizeFactor = 0.06f, periodMs = 3400, amplitude = 6.dp, startMs = 520),
+    Pebble(resIndex = 2, xFactor = -0.08f, yFactor = 0.62f, sizeFactor = 0.08f, periodMs = 2100, amplitude = 4.dp, startMs = 960),
+    Pebble(resIndex = 3, xFactor = 0.2f, yFactor = 0.56f, sizeFactor = 0.05f, periodMs = 3900, amplitude = 7.dp, startMs = 240),
 )

@@ -1,5 +1,7 @@
 package com.lernhero.domain.player
 
+import com.lernhero.domain.energy.EnergyState
+import com.lernhero.domain.monetization.DailyCounter
 import com.lernhero.domain.progress.GameStats
 import com.lernhero.domain.reading.Book
 import com.lernhero.domain.reading.ReaderSettings
@@ -118,6 +120,8 @@ data class Player(
      * nie Set, bo tak leci do Firestore; kod czytajacy zamienia ja na Set.
      */
     val claimedAchievements: List<String> = emptyList(),
+    /** Nieosadzone kamienie: id z [com.lernhero.domain.jewel.Jewels] -> liczba sztuk. */
+    val jewels: Map<String, Int> = emptyMap(),
     /** Sumaryczne statystyki czytania - licza sie od poczatku, nie resetuja sie codziennie. */
     val readingStats: ReadingStats = ReadingStats(),
     /** Aktywne czytanie z dzisiaj - reset nastepuje, gdy [ReadingDayProgress.dateKey] przestaje byc dzisiejszy. */
@@ -150,9 +154,34 @@ data class Player(
     /** Surowce miasta - kamien, ruda, esencja, losy do summonow. */
     val townResources: TownResources = TownResources(),
     /**
+     * Energia - bilet wstepu do walki, odnawiany czasem. Trzymamy stan + moment przeliczenia,
+     * bo ile jej jest, wynika z roznicy czasu - patrz [com.lernhero.domain.energy.EnergyRules].
+     */
+    val energy: EnergyState = EnergyState(),
+    /**
      * Stan kamieniolomu (produkuje kamien) - patrz [com.lernhero.domain.town.ProductionMath].
      * Jedyny budynek produkcyjny; pole `sawmill` ze starszych zapisow jest po prostu ignorowane.
      */
-    val quarry: ProductionState = ProductionState()
+    val quarry: ProductionState = ProductionState(),
+    /** Ile razy dzis odebrano zloto za reklame z ekranu Domu - patrz [com.lernhero.domain.monetization.AdRewards]. */
+    val adGold: DailyCounter = DailyCounter(),
+    /** Diamenty - waluta premium, za nie otwiera sie skrzynie w sklepie. */
+    val gems: Int = 0,
+    /** Limity otwierania skrzyn ze sklepu za reklame - patrz [com.lernhero.domain.monetization.ShopChest]. */
+    val shopChestAds: com.lernhero.domain.monetization.ShopChestAds = com.lernhero.domain.monetization.ShopChestAds(),
+    /** Czy Legend Pack zostal juz wydany - kupuje sie go raz na konto. */
+    val legendPackClaimed: Boolean = false,
+    /** Ile epickich skrzyn otwarto od ostatniej legendy - patrz [com.lernhero.domain.monetization.ShopChest.EPIC_PITY]. */
+    val epicChestPity: Int = 0,
+    /**
+     * Pakiety diamentow kupione choc raz (productId). Pierwszy zakup kazdego jest podwojony -
+     * patrz [com.lernhero.domain.monetization.GemPack.grantFor].
+     */
+    val gemPacksBought: List<String> = emptyList(),
+    /**
+     * Dzienne liczniki zakupow za diamenty z limitem (id oferty -> licznik). Na razie tylko
+     * doladowanie energii - patrz [com.lernhero.domain.monetization.EnergyRefill].
+     */
+    val gemDeals: Map<String, DailyCounter> = emptyMap()
 )
 

@@ -55,52 +55,12 @@ object TriviaQuestionsMastery {
 
         /* ------------------------------- Zwierzeta ------------------------------- */
         ask(
-            id = "wombat_odchody",
-            prompt = "The wombat is the only animal known to produce droppings of what shape?",
-            correct = "Cubes",
-            wrong = listOf("Spirals", "Discs", "Hexagons"),
-            category = A,
-            difficulty = R
-        ),
-        ask(
-            id = "flaming_kolor",
-            prompt = "Flamingos get their pink colour from what?",
-            correct = "Their diet",
-            wrong = listOf("Sunlight exposure", "Their age", "Mineral-rich mud"),
-            category = A,
-            difficulty = D
-        ),
-        ask(
             id = "sowa_oczy",
             prompt = "Why must an owl turn its whole head to look sideways?",
             correct = "Its eyes cannot rotate",
             wrong = listOf("Its eyes have no lids", "Its neck is rigid", "It sees only in front"),
             category = A,
             difficulty = R
-        ),
-        ask(
-            id = "delfin_sen",
-            prompt = "How does a dolphin sleep without drowning?",
-            correct = "Half its brain stays awake",
-            wrong = listOf("It floats on its back", "It sleeps on the sea floor", "It stops breathing"),
-            category = A,
-            difficulty = R
-        ),
-        ask(
-            id = "koala_palce",
-            prompt = "Koalas share which surprising trait with humans?",
-            correct = "Fingerprints",
-            wrong = listOf("Colour vision", "Sweat glands on the palms", "A collarbone"),
-            category = A,
-            difficulty = X
-        ),
-        ask(
-            id = "pszczola_taniec",
-            prompt = "A honeybee's waggle dance communicates what to the hive?",
-            correct = "Direction and distance to food",
-            wrong = listOf("The queen's health", "A warning of predators", "The time of day"),
-            category = A,
-            difficulty = D
         ),
         ask(
             id = "rekin_wiek_luski",
@@ -110,32 +70,8 @@ object TriviaQuestionsMastery {
             category = A,
             difficulty = R
         ),
-        ask(
-            id = "kot_mruczenie",
-            prompt = "Which of these big cats cannot roar?",
-            correct = "The cheetah",
-            wrong = listOf("The lion", "The tiger", "The leopard"),
-            category = A,
-            difficulty = R
-        ),
 
         /* --------------------------------- Cialo --------------------------------- */
-        ask(
-            id = "watroba_regeneracja",
-            prompt = "Which human organ can regrow after losing a large part of itself?",
-            correct = "The liver",
-            wrong = listOf("The kidney", "The pancreas", "The spleen"),
-            category = B,
-            difficulty = D
-        ),
-        ask(
-            id = "kosc_strzemiaczko",
-            prompt = "The smallest bone in the human body sits where?",
-            correct = "In the ear",
-            wrong = listOf("In the nose", "In the little toe", "In the wrist"),
-            category = B,
-            difficulty = D
-        ),
         ask(
             id = "rogowka_naczynia",
             prompt = "Which part of the human body has no blood vessels at all?",
@@ -151,14 +87,6 @@ object TriviaQuestionsMastery {
             wrong = listOf("The stomach wall", "The throat", "The heart"),
             category = B,
             difficulty = D
-        ),
-        ask(
-            id = "dna_dlugosc",
-            prompt = "Uncoiled, the DNA in a single human cell would stretch roughly how far?",
-            correct = "About two metres",
-            wrong = listOf("About two centimetres", "About twenty metres", "About two kilometres"),
-            category = B,
-            difficulty = R
         ),
         ask(
             id = "bakterie_liczba",
@@ -187,22 +115,6 @@ object TriviaQuestionsMastery {
             difficulty = D
         ),
         ask(
-            id = "kraj_bez_rzeki",
-            prompt = "Saudi Arabia is notable for having none of what?",
-            correct = "Permanent rivers",
-            wrong = listOf("Mountains", "Coastline", "Natural lakes and mountains both"),
-            category = G,
-            difficulty = R
-        ),
-        ask(
-            id = "istambul_kontynenty",
-            prompt = "Which major city sits on two continents at once?",
-            correct = "Istanbul",
-            wrong = listOf("Cairo", "Athens", "Baku"),
-            category = G,
-            difficulty = D
-        ),
-        ask(
             id = "hispaniola_podzial",
             prompt = "Haiti and the Dominican Republic share which island?",
             correct = "Hispaniola",
@@ -211,26 +123,10 @@ object TriviaQuestionsMastery {
             difficulty = R
         ),
         ask(
-            id = "punkt_najnizszy",
-            prompt = "The lowest exposed land on Earth lies on the shore of what?",
-            correct = "The Dead Sea",
-            wrong = listOf("The Caspian Sea", "Death Valley", "Lake Assal"),
-            category = G,
-            difficulty = D
-        ),
-        ask(
             id = "afryka_rownik",
             prompt = "The equator passes through all of these continents except which?",
             correct = "Australia",
             wrong = listOf("Africa", "South America", "Asia"),
-            category = G,
-            difficulty = R
-        ),
-        ask(
-            id = "kraj_enklawa",
-            prompt = "Which country is entirely surrounded by just one other country?",
-            correct = "Lesotho",
-            wrong = listOf("Nepal", "Andorra", "Luxembourg"),
             category = G,
             difficulty = R
         ),
@@ -251,14 +147,6 @@ object TriviaQuestionsMastery {
             wrong = listOf("Perth and Adelaide", "Brisbane and Sydney", "Hobart and Melbourne"),
             category = K,
             difficulty = R
-        ),
-        ask(
-            id = "stolica_mjanma",
-            prompt = "Myanmar moved its seat of government to which purpose-built city?",
-            correct = "Naypyidaw",
-            wrong = listOf("Yangon", "Mandalay", "Bago"),
-            category = K,
-            difficulty = D
         ),
         ask(
             id = "stolica_rpa",
@@ -295,22 +183,6 @@ object TriviaQuestionsMastery {
 
         /* -------------------------------- Historia -------------------------------- */
         ask(
-            id = "wojna_najkrotsza",
-            prompt = "The shortest war in recorded history lasted roughly how long?",
-            correct = "Under an hour",
-            wrong = listOf("Three days", "Two weeks", "A single month"),
-            category = H,
-            difficulty = R
-        ),
-        ask(
-            id = "oxford_azteków",
-            prompt = "Which was founded first: the University of Oxford or the Aztec Empire?",
-            correct = "Oxford",
-            wrong = listOf("The Aztec Empire", "They began the same decade", "Neither has a known date"),
-            category = H,
-            difficulty = R
-        ),
-        ask(
             id = "faks_lincoln",
             prompt = "Which empire was still standing when the first fax machine was patented?",
             correct = "The Ottoman Empire",
@@ -319,28 +191,12 @@ object TriviaQuestionsMastery {
             difficulty = X
         ),
         ask(
-            id = "mur_widocznosc",
-            prompt = "What is true about seeing the Great Wall of China from space?",
-            correct = "It cannot be seen with the naked eye",
-            wrong = listOf("It is the only visible structure", "It is visible from the Moon", "It is visible only at night"),
-            category = H,
-            difficulty = D
-        ),
-        ask(
             id = "napoleon_wzrost",
             prompt = "Napoleon's reputation for being short came mainly from what?",
             correct = "A difference between French and English units",
             wrong = listOf("An illness he suffered as a small child", "The unusually tall guards around him", "Claims he made himself in his letters"),
             category = H,
             difficulty = X
-        ),
-        ask(
-            id = "wikingowie_helmy",
-            prompt = "Horned Viking helmets were popularised by what?",
-            correct = "19th-century opera costumes",
-            wrong = listOf("Norse burial finds", "Medieval chronicles", "Roman accounts"),
-            category = H,
-            difficulty = R
         ),
         ask(
             id = "pyramida_robotnicy",
@@ -352,14 +208,6 @@ object TriviaQuestionsMastery {
         ),
 
         /* ------------------------------- Literatura ------------------------------- */
-        ask(
-            id = "don_kichot_pierwszy",
-            prompt = "Don Quixote is often called the first what?",
-            correct = "Modern novel",
-            wrong = listOf("Printed book", "Autobiography", "Detective story"),
-            category = L,
-            difficulty = D
-        ),
         ask(
             id = "frankenstein_autor",
             prompt = "Frankenstein was written by an author who was how old at the time?",
@@ -373,14 +221,6 @@ object TriviaQuestionsMastery {
             prompt = "Which famous line does Sherlock Holmes never actually say in the books?",
             correct = "Elementary, my dear Watson",
             wrong = listOf("The game is afoot", "You see, but you do not observe", "Data, data, data"),
-            category = L,
-            difficulty = R
-        ),
-        ask(
-            id = "tolkien_zawod",
-            prompt = "Besides writing fiction, J.R.R. Tolkien worked professionally as what?",
-            correct = "A philologist",
-            wrong = listOf("An architect", "A cartographer", "A composer"),
             category = L,
             difficulty = R
         ),
@@ -433,14 +273,6 @@ object TriviaQuestionsMastery {
             wrong = listOf("A physics experiment", "A university timetable", "An email system"),
             category = T,
             difficulty = R
-        ),
-        ask(
-            id = "kod_ada",
-            prompt = "Ada Lovelace is credited with writing the first what?",
-            correct = "Computer algorithm",
-            wrong = listOf("Operating system", "Programming manual", "Electronic circuit"),
-            category = T,
-            difficulty = D
         ),
         ask(
             id = "usb_wtyczka",
@@ -511,14 +343,6 @@ object TriviaQuestionsMastery {
             difficulty = D
         ),
         ask(
-            id = "wodor_wszechswiat",
-            prompt = "Which element makes up most of the ordinary matter in the universe?",
-            correct = "Hydrogen",
-            wrong = listOf("Helium", "Oxygen", "Carbon"),
-            category = C,
-            difficulty = D
-        ),
-        ask(
             id = "krzem_skorupa",
             prompt = "After oxygen, which element is most abundant in Earth's crust?",
             correct = "Silicon",
@@ -551,14 +375,6 @@ object TriviaQuestionsMastery {
             wrong = listOf("Greece", "Egypt", "Rome"),
             category = N,
             difficulty = R
-        ),
-        ask(
-            id = "liczba_pierwsza_parzysta",
-            prompt = "How many even prime numbers are there?",
-            correct = "Exactly one",
-            wrong = listOf("None", "Infinitely many", "Exactly two"),
-            category = N,
-            difficulty = D
         ),
         ask(
             id = "wstega_mobiusa",
@@ -628,38 +444,6 @@ object TriviaQuestionsMastery {
         ),
 
         /* -------------------------------- Mitologia -------------------------------- */
-        ask(
-            id = "syzyf_kara",
-            prompt = "Sisyphus was condemned to eternally do what?",
-            correct = "Roll a boulder uphill",
-            wrong = listOf("Reach for fruit he cannot grasp", "Be chained to a rock", "Carry the sky"),
-            category = M,
-            difficulty = D
-        ),
-        ask(
-            id = "atlas_kara",
-            prompt = "In Greek myth, Atlas was made to hold up what?",
-            correct = "The sky",
-            wrong = listOf("The Earth", "A mountain", "The sea"),
-            category = M,
-            difficulty = D
-        ),
-        ask(
-            id = "ragnarok_koniec",
-            prompt = "In Norse myth, Ragnarok describes what?",
-            correct = "The end and rebirth of the world",
-            wrong = listOf("The creation of humans", "A feast of the gods", "Odin's journey for wisdom"),
-            category = M,
-            difficulty = R
-        ),
-        ask(
-            id = "anubis_rola",
-            prompt = "The Egyptian god Anubis presided over what?",
-            correct = "Mummification and the dead",
-            wrong = listOf("The Nile flood", "War and hunting", "Writing and wisdom"),
-            category = M,
-            difficulty = R
-        ),
         ask(
             id = "puszka_pandory",
             prompt = "What was left inside Pandora's container after everything escaped?",

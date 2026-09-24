@@ -17,6 +17,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
@@ -70,7 +71,9 @@ fun ReflowReaderView(
     /** Wolane raz, przy zamknieciu czytnika - patrz PlayerRepository.updateReaderSettings. */
     onSettingsChanged: (ReaderSettings) -> Unit,
     onClose: () -> Unit,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    /** Dzisiejszy czas czytania z konta w chwili otwarcia - baza pierscienia celu. */
+    todayBaseSeconds: Int = 0
 ) {
     val scope = rememberCoroutineScope()
     val playerRepository = koinInject<PlayerRepository>()
@@ -78,7 +81,7 @@ fun ReflowReaderView(
     // API. Ponizej minimalnej wersji systemowej (albo na desktopie) dostajemy TranslationSource.Stub.
     val translationSource = remember { platformTranslationSource() }
 
-    val clock = remember(book.id) { ReadingClock(playerRepository, scope) }
+    val clock = remember(book.id) { ReadingClock(playerRepository, scope, todayBaseSeconds) }
     val clockState = clock.state
 
     var settings by remember { mutableStateOf(initialSettings) }
@@ -124,8 +127,25 @@ fun ReflowReaderView(
                 scope.launch { playerRepository.updateBookProgress(book.id, newAnchor.blockIndex) }
             },
             onPageAdvanced = { words -> clock.onPageAdvanced(words) },
-            onWordTapped = { selection = it },
+            onWordTapped = {
+                clock.onInteraction()
+                selection = it
+            },
             onToggleChrome = ::toggleChrome
+        )
+
+        // Licznik celu - zawsze widoczny, maly, w kolorach motywu strony.
+        if (!chromeVisible) {
+            ReadingGoalPill(
+                todaySeconds = clockState.todaySeconds,
+                paused = clockState.paused,
+                ink = palette.text,
+                modifier = Modifier.align(Alignment.BottomEnd).navigationBarsPadding().padding(bottom = 6.dp, end = 12.dp)
+            )
+        }
+        GoalReachedBanner(
+            todaySeconds = clockState.todaySeconds,
+            modifier = Modifier.align(Alignment.TopCenter).padding(top = 40.dp)
         )
 
         AnimatedVisibility(
@@ -256,7 +276,7 @@ private fun ReaderTopBar(
                         .background(if (clock.paused) Color(0xFFE0913A) else Color(0xFF4ADE80))
                 )
                 Text(
-                    text = if (clock.paused) "wstrzymano" else clock.sessionSeconds.asClock(),
+                    text = if (clock.paused) "paused" else "session ${clock.sessionSeconds.asClock()} · today ${clock.todaySeconds.asTimer()}",
                     color = if (clock.paused) Color(0xFFE0913A) else Color(0xFF9D8B6A),
                     fontFamily = FontFirst(),
                     fontSize = 10.sp

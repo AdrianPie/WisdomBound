@@ -44,17 +44,14 @@ object PolandQuestionsExtra {
         ask("wejscie_ue", "In which year did Poland join the European Union?", "2004", listOf("1999", "2007", "2011"), QuizDifficulty.Easy),
 
         /* ------------------------------ Medium ------------------------------ */
-        ask("najwyzszy_szczyt", "What is the highest peak in Poland?", "Rysy", listOf("Sniezka", "Babia Gora", "Giewont"), QuizDifficulty.Medium),
         ask("kopalnia_soli", "Which Polish salt mine is a UNESCO World Heritage site?", "Wieliczka", listOf("Klodawa", "Bochnia alone", "Inowroclaw"), QuizDifficulty.Medium),
         ask("nato_rok", "In which year did Poland join NATO?", "1999", listOf("1991", "2004", "1997"), QuizDifficulty.Medium),
         ask("hymn_nazwa", "What is the Polish national anthem called?", "Dabrowski's Mazurka", listOf("Rota", "Boze cos Polske", "Warszawianka"), QuizDifficulty.Medium),
         ask("noblistki_ile", "How many Nobel Prizes did Maria Sklodowska-Curie win?", "Two", listOf("One", "Three", "Four"), QuizDifficulty.Medium),
         ask("papiez_polak", "Which Pole became pope in 1978?", "John Paul II", listOf("John XXIII", "Paul VI", "Benedict XVI"), QuizDifficulty.Medium),
         ask("walesa_funkcja", "What office did Lech Walesa hold in the 1990s?", "President of Poland", listOf("Prime Minister", "Speaker of the Sejm", "Mayor of Gdansk"), QuizDifficulty.Medium),
-        ask("wisla_ujscie", "Into which sea does the Vistula flow?", "The Baltic Sea", listOf("The North Sea", "The Black Sea", "The Sea of Azov"), QuizDifficulty.Medium),
         ask("bigos_co", "What is bigos?", "A stew of sauerkraut, cabbage and meat", listOf("A cold soup of beetroot and soured milk", "A yeast cake filled with poppy seed", "A fried pancake made of grated potato"), QuizDifficulty.Medium),
         ask("skoki_narciarskie_obiekt", "In which Polish town is the Wielka Krokiew ski jumping hill?", "Zakopane", listOf("Szczyrk", "Karpacz", "Wisla"), QuizDifficulty.Medium),
-        ask("uniwersytet_najstarszy", "Which is the oldest university in Poland?", "The Jagiellonian University", listOf("The University of Warsaw", "Adam Mickiewicz University", "The University of Wroclaw"), QuizDifficulty.Medium),
 
         /* ------------------------------ Hard ------------------------------- */
         ask("malbork_co", "What is Malbork best known for?", "The largest brick castle in the world", listOf("A salt mine", "A Gothic cathedral", "A Renaissance town hall"), QuizDifficulty.Hard),

@@ -45,130 +45,21 @@ private val Green = Color(0xFF4ADE80)
  * w Czytelni i odwrotnie.
  */
 @Composable
-fun ReadingGoalsPanel(modifier: Modifier = Modifier) {
+fun ReadingGoalsPanel(modifier: Modifier = Modifier, onRewardClaimed: () -> Unit = {}) {
     val viewModel = koinViewModel<LibraryViewModel>()
     val state by viewModel.uiState.collectAsState()
 
     Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(10.dp)) {
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.SpaceBetween,
-            verticalAlignment = Alignment.Bottom
-        ) {
-            Text(
-                text = "Daily Goals - Reading",
-                color = Gold,
-                fontFamily = FontPixel(),
-                fontWeight = FontWeight.Bold,
-                fontSize = 14.sp
-            )
-            Text(
-                text = "today ${state.readingToday.minutes} min, ${state.readingToday.pages} pages",
-                color = Muted,
-                fontFamily = FontFirst(),
-                fontSize = 10.sp
-            )
+        DailyReadingCard(
+            today = state.readingToday,
+            claimed = state::claimedToday,
+            onClaim = { goal -> viewModel.claim(goal, onRewardClaimed) }
+        )
+        state.message?.let {
+            Text(text = it, color = Green, fontFamily = FontFirst(), fontWeight = FontWeight.Bold, fontSize = 12.sp)
         }
-
-        ReadingGoalCatalog.DAILY.forEach { goal ->
-            val progress = goal.progress(state.readingToday).coerceAtMost(goal.threshold)
-            val complete = goal.isComplete(state.readingToday)
-            val claimed = state.claimedToday(goal)
-            val ratio = if (goal.threshold <= 0) 0f else progress.toFloat() / goal.threshold.toFloat()
-
-            Column(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .clip(RoundedCornerShape(10.dp))
-                    .background(Ink)
-                    .border(1.5.dp, if (complete && !claimed) Gold else GoldDim, RoundedCornerShape(10.dp))
-                    .padding(12.dp),
-                verticalArrangement = Arrangement.spacedBy(6.dp)
-            ) {
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Column(modifier = Modifier.weight(1f)) {
-                        Text(
-                            text = goal.title,
-                            color = Gold,
-                            fontFamily = FontPixel(),
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 13.sp
-                        )
-                        Text(text = goal.description, color = Muted, fontFamily = FontFirst(), fontSize = 10.sp)
-                    }
-                    Text(
-                        text = "+${goal.reward} zl",
-                        color = GoldFrame,
-                        fontFamily = FontFirst(),
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 12.sp
-                    )
-                }
-
-                Box(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .height(8.dp)
-                        .clip(RoundedCornerShape(4.dp))
-                        .background(GoldDim.copy(alpha = 0.4f))
-                ) {
-                    Box(
-                        modifier = Modifier
-                            .fillMaxWidth(ratio.coerceIn(0f, 1f))
-                            .height(8.dp)
-                            .clip(RoundedCornerShape(4.dp))
-                            .background(if (complete) Green else GoldFrame)
-                    )
-                }
-
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    val unit = if (goal.kind == ReadingGoalKind.Minutes) " min" else " str."
-                    Text(
-                        text = "$progress / ${goal.threshold}$unit",
-                        color = Muted,
-                        fontFamily = FontFirst(),
-                        fontSize = 10.sp
-                    )
-
-                    val enabled = complete && !claimed
-                    Box(
-                        modifier = Modifier
-                            .clip(RoundedCornerShape(8.dp))
-                            .background(if (enabled) Color(0xFFB4451F) else Ink)
-                            .border(1.dp, if (enabled) Gold else GoldDim, RoundedCornerShape(8.dp))
-                            .clickable(enabled = enabled) { viewModel.claim(goal) }
-                            .padding(horizontal = 12.dp, vertical = 6.dp)
-                    ) {
-                        Text(
-                            text = when {
-                                claimed -> "Claimed"
-                                complete -> "Claim"
-                                else -> "Too Early"
-                            },
-                            color = when {
-                                claimed -> Green
-                                enabled -> Color.White
-                                else -> Muted
-                            },
-                            fontFamily = FontFirst(),
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 11.sp
-                        )
-                    }
-                }
-            }
-        }
-
         ReadingTotals(
-            minutes = state.readingStats.totalMinutes,
+            minutes = state.readingStats.activeSeconds / 60,
             pages = state.readingStats.totalPages,
             words = state.readingStats.totalWords,
             wpm = state.readingStats.averageWpm

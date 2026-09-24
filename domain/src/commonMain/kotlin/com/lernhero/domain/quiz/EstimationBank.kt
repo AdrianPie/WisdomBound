@@ -6,6 +6,7 @@ import com.lernhero.domain.quiz.bank.EstimationQuestionsExtra2
 import com.lernhero.domain.quiz.bank.EstimationQuestionsMeasures
 import com.lernhero.domain.quiz.bank.EstimationQuestionsModern
 import com.lernhero.domain.quiz.bank.EstimationQuestionsPopulation
+import com.lernhero.domain.quiz.bank.EstimationQuestionsScale
 import com.lernhero.domain.quiz.bank.EstimationQuestionsWorld
 import kotlin.random.Random
 
@@ -19,7 +20,9 @@ object EstimationBank {
         // Szacowania BEZ dat - zdarzenie bossa przestaje byc kartkowka z historii.
         EstimationQuestionsPopulation.all +
         EstimationQuestionsMeasures.all +
-        EstimationQuestionsModern.all
+        EstimationQuestionsModern.all +
+        // Czwarta pula bez dat - bieg pyta o szacowanie cztery razy na plansze, nie raz.
+        EstimationQuestionsScale.all
 
     /**
      * Pula zawezona do jezyka gracza - patrz [EstimationEntry.localeCode]. Bank trzyma wszystko,

@@ -82,7 +82,7 @@ class CraftingTest {
 
     @Test
     fun `pozycje kosztu pomijaja zera`() {
-        assertEquals(listOf("⚙" to 5), CraftCost(iron = 5).entries())
+        assertEquals(listOf("🔩" to 5), CraftCost(iron = 5).entries())
         assertTrue(CraftCost().entries().isEmpty())
     }
 }

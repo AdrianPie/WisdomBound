@@ -22,9 +22,13 @@ data class StoryWorldArt(
 )
 
 fun StoryWorld.art(): StoryWorldArt {
-    // Tlo bierze sie z jednego wspolnego miejsca ([Resources.Image.worldBackground]) - tego samego,
-    // ktorego uzywa tlo walki - zeby podglad krainy i sama bitwa nigdy sie nie rozjechaly.
-    val bg = Resources.Image.worldBackground(id)
+    // Podglad pokazuje ARENE tej krainy, a dopiero gdy jej nie ma - stara ilustracje krainy.
+    //
+    // Od kiedy walka ma wlasny zestaw teł ([Resources.Image.battleBackground]), te dwa zrodla
+    // zaczely mowic co innego: panel kampanii rysowal stara grafike, a bitwa nowa arene. Gracz
+    // widzial wiec "stara mape w niektorych miejscach", mimo ze nic nie bylo zepsute - po prostu
+    // dwa ekrany czytaly dwa rozne pliki o tej samej krainie.
+    val bg = Resources.Image.battleBackground(id) ?: Resources.Image.worldBackground(id)
     val (emoji, tint) = when (id) {
         "forest" -> "🌲" to Color(0xFF3FA96A)
         "mine" -> "⛏" to Color(0xFF9B2C3D)
@@ -34,7 +38,9 @@ fun StoryWorld.art(): StoryWorldArt {
         "abyss" -> "🕳" to Color(0xFF6B5A38)
         else -> "🗺" to Color(0xFF6B5A38)
     }
-    return StoryWorldArt(bg, emoji, tint, "world_$id.png")
+    // Nazwa pliku, ktorego brakuje - te trzy krainy nie maja jeszcze wlasnej areny i dlatego
+    // wchodzi pod nie generyczne pole bitwy.
+    return StoryWorldArt(bg, emoji, tint, "${id}_new.png")
 }
 
 fun StoryWorldArt.gradient(): Brush = Brush.verticalGradient(

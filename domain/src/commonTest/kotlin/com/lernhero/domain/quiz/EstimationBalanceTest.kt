@@ -127,4 +127,30 @@ class EstimationBalanceTest {
             assertTrue(wayOff == 0f, "${entry.id}: kompletne pudlo daje $wayOff zamiast 0")
         }
     }
+
+    /**
+     * **Jednostka musi byc ta, w ktorej gracz MYSLI.**
+     *
+     * "Ile osob mieszka w Norwegii?" z odpowiedzia w tysiacach (5600) nie jest pytaniem o wyczucie
+     * skali, tylko o przeliczanie: nikt nie trzyma w glowie ludnosci kraju w tysiacach. To samo
+     * z powierzchnia Rosji ("17 098 tysiecy km2") i z aglomeracja Tokio ("37 000 tysiecy").
+     *
+     * Regula: TYSIACE wolno uzyc tylko wtedy, gdy odpowiedz jest mniejsza niz dwa tysiace tysiecy -
+     * czyli tam, gdzie w milionach zostalyby same zera albo zaokraglenie zjadloby cala odpowiedz.
+     * Powyzej tego progu jednostka to miliony.
+     */
+    @Test
+    fun `tysiace tylko tam, gdzie miliony byłyby zerem`() {
+        val wrongUnit = EstimationBank.all
+            .filter { it.unit.contains("thousand") && it.correctValue >= THOUSAND_UNIT_CEILING }
+            .map { "${it.id}: ${it.correctValue} ${it.unit}" }
+
+        assertTrue(
+            wrongUnit.isEmpty(),
+            "Odpowiedz w tysiacach tam, gdzie mysli sie w milionach: $wrongUnit"
+        )
+    }
+
+    /** Powyzej tylu tysiecy pytanie ma pytac w milionach - patrz test wyzej. */
+    private val THOUSAND_UNIT_CEILING = 2_000
 }

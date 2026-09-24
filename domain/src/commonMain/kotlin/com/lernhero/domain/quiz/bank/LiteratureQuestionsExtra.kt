@@ -41,14 +41,11 @@ object LiteratureQuestionsExtra {
         ask("duma_uprzedzenie", "Who wrote 'Pride and Prejudice'?", "Jane Austen", listOf("Emily Bronte", "Charlotte Bronte", "George Eliot"), QuizDifficulty.Medium),
         ask("wichrowe_wzgorza", "Who wrote 'Wuthering Heights'?", "Emily Bronte", listOf("Jane Austen", "Charlotte Bronte", "Mary Shelley"), QuizDifficulty.Medium),
         ask("frankenstein", "Who wrote 'Frankenstein'?", "Mary Shelley", listOf("Bram Stoker", "Edgar Allan Poe", "Robert Louis Stevenson"), QuizDifficulty.Medium),
-        ask("drakula", "Who wrote 'Dracula'?", "Bram Stoker", listOf("Mary Shelley", "H.P. Lovecraft", "Edgar Allan Poe"), QuizDifficulty.Medium),
         ask("hobbit_autor", "Who wrote 'The Hobbit'?", "J.R.R. Tolkien", listOf("C.S. Lewis", "George R.R. Martin", "Terry Pratchett"), QuizDifficulty.Medium),
 
         /* ------------------------------ Hard ------------------------------- */
-        ask("proces", "Who wrote 'The Trial'?", "Franz Kafka", listOf("Thomas Mann", "Hermann Hesse", "Robert Musil"), QuizDifficulty.Hard),
         ask("czarodziejska_gora", "Who wrote 'The Magic Mountain'?", "Thomas Mann", listOf("Franz Kafka", "Hermann Hesse", "Stefan Zweig"), QuizDifficulty.Hard),
         ask("mistrz_malgorzata", "Who wrote 'The Master and Margarita'?", "Mikhail Bulgakov", listOf("Fyodor Dostoevsky", "Leo Tolstoy", "Anton Chekhov"), QuizDifficulty.Hard),
-        ask("wojna_i_pokoj", "Who wrote 'War and Peace'?", "Leo Tolstoy", listOf("Fyodor Dostoevsky", "Ivan Turgenev", "Nikolai Gogol"), QuizDifficulty.Hard),
         ask("sto_lat_samotnosci", "Who wrote 'One Hundred Years of Solitude'?", "Gabriel Garcia Marquez", listOf("Mario Vargas Llosa", "Jorge Luis Borges", "Julio Cortazar"), QuizDifficulty.Hard),
         ask("eneida", "Who wrote 'The Aeneid'?", "Virgil", listOf("Ovid", "Horace", "Homer"), QuizDifficulty.Hard),
         ask("don_kichot_autor", "Who wrote 'Don Quixote'?", "Miguel de Cervantes", listOf("Lope de Vega", "Calderon de la Barca", "Federico Garcia Lorca"), QuizDifficulty.Hard),
@@ -60,9 +57,6 @@ object LiteratureQuestionsExtra {
         ask("pani_dalloway", "Who wrote 'Mrs Dalloway'?", "Virginia Woolf", listOf("Katherine Mansfield", "Doris Lessing", "Iris Murdoch"), QuizDifficulty.Expert),
         ask("czekajac_na_godota", "Who wrote 'Waiting for Godot'?", "Samuel Beckett", listOf("Eugene Ionesco", "Jean Genet", "Harold Pinter"), QuizDifficulty.Expert),
         ask("ziemia_jalowa", "Who wrote the poem 'The Waste Land'?", "T.S. Eliot", listOf("Ezra Pound", "W.B. Yeats", "W.H. Auden"), QuizDifficulty.Expert),
-        ask("schulz_zaginione", "Which lost novel by Bruno Schulz is still being searched for?", "The Messiah", listOf("Sanatorium", "The Shops", "Spring"), QuizDifficulty.Expert),
-        ask("lem_dziela", "Which Stanislaw Lem novel tells of an expedition to a planet covered by an ocean?", "Solaris", listOf("The Invincible", "Eden", "Fiasco"), QuizDifficulty.Expert),
-        ask("kafka_przemiana", "What did Gregor Samsa turn into in 'The Metamorphosis'?", "A giant insect", listOf("A dog", "A bird", "A stone"), QuizDifficulty.Expert),
         ask("proust_madeleine", "What triggers a flood of memories in Proust's novel?", "A madeleine cake", listOf("An old photograph", "The smell of the sea", "The sound of a piano"), QuizDifficulty.Expert),
         ask("borges_biblioteka", "Which Borges story describes an infinite library?", "The Library of Babel", listOf("The Aleph", "The Garden of Forking Paths", "Funes the Memorious"), QuizDifficulty.Expert),
         ask("dostojewski_bracia", "Which Dostoevsky novel ends with a trial for patricide?", "The Brothers Karamazov", listOf("The Idiot", "Demons", "The Gambler"), QuizDifficulty.Expert)

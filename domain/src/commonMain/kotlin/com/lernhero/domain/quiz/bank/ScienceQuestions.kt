@@ -60,13 +60,6 @@ object ScienceQuestions {
             wrong = listOf("Temperature", "Pressure", "Wind speed"),
             difficulty = QuizDifficulty.Easy
         ),
-        ask(
-            id = "kat",
-            prompt = "How many degrees is a full angle?",
-            correct = "360",
-            wrong = listOf("180", "90", "270"),
-            difficulty = QuizDifficulty.Easy
-        ),
 
         /* ------------------------------ Medium ------------------------------ */
         ask(
@@ -74,20 +67,6 @@ object ScienceQuestions {
             prompt = "Which planet of the Solar System is the largest?",
             correct = "Jupiter",
             wrong = listOf("Saturn", "Neptune", "Uranus"),
-            difficulty = QuizDifficulty.Medium
-        ),
-        ask(
-            id = "swiatlo",
-            prompt = "What is the speed of light in a vacuum?",
-            correct = "About 186,000 mi/s (300,000 km/s)",
-            wrong = listOf("About 18,600 mi/s (30,000 km/s)", "About 1,860 mi/s (3,000 km/s)", "About 620,000 mi/s (1,000,000 km/s)"),
-            difficulty = QuizDifficulty.Medium
-        ),
-        ask(
-            id = "galaktyka",
-            prompt = "What is the galaxy the Solar System sits in called?",
-            correct = "The Milky Way",
-            wrong = listOf("Andromeda", "The Triangulum Galaxy", "The Large Magellanic Cloud"),
             difficulty = QuizDifficulty.Medium
         ),
         ask(
@@ -125,20 +104,6 @@ object ScienceQuestions {
             prompt = "What is the SI unit of force?",
             correct = "Newton",
             wrong = listOf("Joule", "Watt", "Pascal"),
-            difficulty = QuizDifficulty.Hard
-        ),
-        ask(
-            id = "zero",
-            prompt = "What is absolute zero in degrees Celsius?",
-            correct = "About -273",
-            wrong = listOf("About -100", "About -200", "About -460"),
-            difficulty = QuizDifficulty.Hard
-        ),
-        ask(
-            id = "dzwiek",
-            prompt = "In which medium does sound travel fastest?",
-            correct = "In a solid",
-            wrong = listOf("In water", "In air", "In a vacuum"),
             difficulty = QuizDifficulty.Hard
         ),
 

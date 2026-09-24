@@ -69,15 +69,22 @@ class StoryStageTest {
 
     /** Droga przez kraine ma sie zaostrzac, a nie falowac - patrz [StoryStageCatalog.stageAt]. */
     @Test
-    fun `liczba fal rosnie w kolejnych planszach krainy`() {
+    fun `kazda plansza to pelny bieg, a glebokosc podnosi sile, nie dlugosc`() {
+        // Dawna umowa brzmiala "plansza glebiej w krainie jest DLUZSZA" (1-4 fale). Teraz kazda
+        // plansza to ten sam, dwudziestofalowy bieg ([CampaignLadder]) - roznica miedzy pierwsza a
+        // ostatnia siedzi w sile wrogow i w nagrodzie, a nie w liczbie fal. Dzieki temu kazda
+        // plansza miesci pelna krzywa trudnosci i szesc kart ulepszen.
         val world = StoryWorldCatalog.all.first()
         val start = StoryWorldCatalog.startIndexOf(world.id)
-        val waves = (0 until world.stageCount - 1).map {
+        val waves = (0 until world.stageCount).map {
             StoryStageCatalog.stageAt(start + it, RunDifficulty.Normal)!!.waves
         }
 
-        assertEquals(waves.sorted(), waves, "Plansza glebiej w krainie nie moze byc krotsza: $waves")
-        assertTrue(waves.last() > waves.first(), "Ostatnia zwykla plansza ma byc dluzsza niz pierwsza")
+        assertEquals(List(world.stageCount) { CampaignLadder.WAVES_PER_STAGE }, waves)
+
+        val first = StoryStageCatalog.stageAt(start, RunDifficulty.Normal)!!
+        val last = StoryStageCatalog.stageAt(start + world.stageCount - 1, RunDifficulty.Normal)!!
+        assertTrue(last.rewardGold > first.rewardGold, "glebsza plansza ma placic wiecej")
     }
 
     @Test

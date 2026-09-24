@@ -4,10 +4,10 @@ import com.lernhero.domain.run.EndlessBuff
 
 /** Dlaczego danego stopnia NIE da sie teraz wykupic - UI pokazuje to wprost, zamiast gasic wezel bez slowa. */
 enum class TalentBlock(val reason: String) {
-    NoPoints("Brak punktow talentow"),
+    NoPoints("No talent points left"),
     MaxRank("Talent is already maxed out"),
-    TierLocked("Za malo punktow w tym drzewku"),
-    ParentMissing("Wymaga wczesniejszego talentu")
+    TierLocked("Not enough points in this tree"),
+    ParentMissing("Requires")
 }
 
 /** Stan jednego wezla policzony dla konkretnego gracza - wszystko, czego ekran potrzebuje do rysowania. */
@@ -58,17 +58,35 @@ object TalentRules {
         (pointsEarnedBy(level) - totalSpent(ranks)).coerceAtLeast(0)
 
     /** Wykupione stopnie: id talentu -> stopien. Brak wpisu = 0. */
-    fun rankOf(ranks: Map<String, Int>, talentId: String): Int = ranks[talentId] ?: 0
+    fun rankOf(ranks: Map<String, Int>, talentId: String): Int {
+        val raw = ranks[talentId] ?: 0
+        // Stary zapis moze miec wiecej stopni, niz talent ma po zmianie balansu - liczy sie maksimum.
+        return TalentCatalog.byId(talentId)?.let { raw.coerceIn(0, it.maxRank) } ?: raw
+    }
 
-    /** Ile punktow gracz wydal lacznie (we wszystkich drzewkach). */
+    /**
+     * Ile punktow gracz wydal lacznie (we wszystkich drzewkach).
+     *
+     * Stopien liczy sie najwyzej do [Talent.maxRank]: gdy balans obetnie talentowi stopnie
+     * (np. Wampiryzm 4 -> 2), nadmiar ze starego zapisu WRACA do puli, zamiast przepasc.
+     */
     fun totalSpent(ranks: Map<String, Int>): Int =
-        ranks.entries.sumOf { (id, rank) -> if (TalentCatalog.byId(id) == null) 0 else rank }
+        ranks.entries.sumOf { (id, rank) -> TalentCatalog.byId(id)?.let { rank.coerceIn(0, it.maxRank) } ?: 0 }
 
     /** Ile punktow siedzi w JEDNYM drzewku - to od tego zaleza progi rzedow. */
     fun pointsIn(ranks: Map<String, Int>, tree: TalentTree): Int =
         ranks.entries.sumOf { (id, rank) ->
-            if (TalentCatalog.byId(id)?.tree == tree) rank else 0
+            TalentCatalog.byId(id)?.takeIf { it.tree == tree }?.let { rank.coerceIn(0, it.maxRank) } ?: 0
         }
+
+    /**
+     * Ile stakow mechaniki moga dac SAME talenty: polowa sufitu z endless, zaokraglona w gore.
+     *
+     * Talenty dzialaja w kazdej walce, na stale - karty z biegu tylko do konca biegu. Gdyby
+     * talent mogl zapelnic mechanike do pelna, karty z endless przestalyby sie pokazywac (sa juz
+     * wymaksowane), a stala sila bohatera bylaby taka jak na koncu najlepszego biegu.
+     */
+    fun talentCap(buff: EndlessBuff): Int = (buff.maxStacks + 1) / 2
 
     /** Ile punktow trzeba miec w drzewku, zeby otworzyc [tier]. */
     fun pointsRequiredFor(tier: Int): Int = tier * POINTS_PER_TIER
@@ -131,9 +149,8 @@ object TalentRules {
     /**
      * Sumuje wszystkie wykupione stopnie w jeden worek bonusow.
      *
-     * Staki buffow sa przycinane do [EndlessBuff.maxStacks] - ten sam sufit, ktory obowiazuje
-     * ulepszenia z endless. Bez tego talent i karta z biegu potrafilyby razem przebic granice,
-     * ktora silnik uznaje za maksimum (np. Twierdza redukujaca ponad 60% obrazen).
+     * Staki buffow sa przycinane do [talentCap] - polowy sufitu z endless. Reszta zostaje dla kart
+     * z biegu, a walka i tak przycina sume do [EndlessBuff.maxStacks].
      */
     fun bonusesOf(ranks: Map<String, Int>): TalentBonuses {
         if (ranks.isEmpty()) return TalentBonuses.EMPTY
@@ -168,7 +185,7 @@ object TalentRules {
         }
 
         return TalentBonuses(
-            buffStacks = buffs.mapValues { (buff, stacks) -> stacks.coerceAtMost(buff.maxStacks) },
+            buffStacks = buffs.mapValues { (buff, stacks) -> stacks.coerceAtMost(talentCap(buff)) },
             attack = attack,
             maxHp = maxHp,
             critChance = crit,

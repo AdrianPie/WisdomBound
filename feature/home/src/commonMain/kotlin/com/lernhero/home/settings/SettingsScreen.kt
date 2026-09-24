@@ -73,11 +73,11 @@ fun SettingsScreen(
     var resetMessage by remember { mutableStateOf<String?>(null) }
 
     Surface(modifier = Modifier.fillMaxSize(), color = Ink) {
+        // Pasek z powrotem i tytulem zostaje na miejscu - przewija sie sama lista ustawien.
         Column(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(insets)
-                .verticalScroll(rememberScrollState())
                 .padding(horizontal = 14.dp, vertical = 10.dp),
             verticalArrangement = Arrangement.spacedBy(14.dp)
         ) {
@@ -102,6 +102,12 @@ fun SettingsScreen(
                 )
             }
 
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .verticalScroll(rememberScrollState()),
+                verticalArrangement = Arrangement.spacedBy(14.dp)
+            ) {
             SettingsSection(title = strings.settingsLanguage) {
                 AppLanguage.entries.forEach { language ->
                     SettingsOptionRow(
@@ -158,6 +164,7 @@ fun SettingsScreen(
             }
 
             Spacer(modifier = Modifier.height(8.dp))
+            }
         }
     }
 }

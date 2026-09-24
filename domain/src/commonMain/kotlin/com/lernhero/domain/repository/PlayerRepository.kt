@@ -126,6 +126,18 @@ interface PlayerRepository {
      */
     suspend fun claimAchievement(achievementId: String): Player?
 
+    /**
+     * Osadza kamien z sakiewki w sztuce z plecaka bohatera albo kompanow. Null, gdy nie ma kamienia,
+     * sztuki albo wolnego slotu - reguly liczy [com.lernhero.domain.jewel.JewelBench].
+     */
+    suspend fun socketJewel(uid: String, jewelId: String): Player?
+
+    /** Wyjmuje kamien ze slotu [index] i oddaje go do sakiewki. Darmowe. */
+    suspend fun unsocketJewel(uid: String, index: Int): Player?
+
+    /** Laczy [com.lernhero.domain.jewel.Jewels.COMBINE_COUNT] kamienie w jeden szlifu wyzej. */
+    suspend fun combineJewels(jewelId: String): Player?
+
     /** Rozdaje jeden punkt statystyki. Zwraca null, gdy nie ma nierozdanych punktow. */
     suspend fun spendStatPoint(stat: HeroStat): Player?
 
@@ -180,7 +192,58 @@ interface PlayerRepository {
      * nagroda za ten cel byla juz odebrana dzisiaj (albo gdy zapis sie nie udal) - w obu
      * przypadkach nie placi drugi raz.
      */
-    suspend fun claimDailyGoalReward(goalId: String, dateKey: String, reward: Int): Player?
+    suspend fun claimDailyGoalReward(goalId: String, dateKey: String, reward: Int, gems: Int = 0, tickets: Int = 0): Player?
+
+    /**
+     * Zloto za obejrzana reklame. Null, gdy dzienny limit [maxPerDay] jest juz wyczerpany (albo
+     * zapis sie nie udal) - wtedy nic nie placi.
+     */
+    suspend fun claimAdGold(dateKey: String, maxPerDay: Int, reward: Int): Player?
+
+    /**
+     * Placi za otwarcie skrzyni ze sklepu: diamentami ([withAd] = false) albo zapisuje zuzyta
+     * reklame. Null, gdy brakuje diamentow, limit reklam jest wyczerpany albo zapis sie nie udal.
+     * Sama nagroda przyznawana jest osobno, po animacji otwarcia.
+     */
+    /**
+     * Wydaje zawartosc Legend Packa po zakupie. Idempotentne: gdy pakiet juz wydano, zwraca gracza
+     * bez zmian - ponowne przywrocenie zakupu nie dubluje nagrod.
+     */
+    suspend fun claimLegendPack(): Player?
+
+    /**
+     * Wydaje diamenty zakupionego pakietu. Pierwszy zakup danego pakietu jest podwojony
+     * ([com.lernhero.domain.monetization.GemPack.grantFor]) - o tym, czy to pierwszy, decyduje zapis.
+     */
+    suspend fun grantGemPack(pack: com.lernhero.domain.monetization.GemPack): Player?
+
+    /**
+     * Zakup za diamenty: odejmuje [gems] i dopisuje [bundle] w JEDNYM zapisie. Gdy [dealId] nie jest
+     * null, zakup liczy sie do dziennego licznika tej oferty i nie przejdzie ponad [maxPerDay].
+     * Null, gdy brakuje diamentow, limit jest wyczerpany albo zapis sie nie udal.
+     */
+    suspend fun spendGems(
+        gems: Int,
+        bundle: com.lernhero.domain.monetization.Bundle,
+        now: Long,
+        dealId: String? = null,
+        dateKey: String = "",
+        maxPerDay: Int = 0
+    ): Player?
+
+    /**
+     * Otwarcie skrzyni ze sklepu: zaplata (diamenty albo licznik reklam) i CALA zawartosc w jednym
+     * zapisie - zabicie aplikacji w trakcie animacji nie moze zabrac diamentow bez nagrody.
+     */
+    suspend fun openShopChest(
+        opening: com.lernhero.domain.monetization.ChestOpening,
+        withAd: Boolean,
+        dateKey: String,
+        now: Long
+    ): Player?
+
+    /** Codzienne diamenty subskrybenta - raz dziennie, pilnowane przez zapis. */
+    suspend fun claimPremiumGems(dateKey: String): Player?
 
     /**
      * Dopisuje kawalek aktywnego czytania: minuty/strony na dzisiaj (resetuja sie same, gdy
@@ -188,7 +251,7 @@ interface PlayerRepository {
      */
     suspend fun recordReading(
         dateKey: String,
-        minutesDelta: Int,
+        secondsDelta: Int,
         pagesDelta: Int,
         wordsDelta: Int,
         charactersDelta: Int
@@ -263,7 +326,8 @@ interface PlayerRepository {
         iron: Int,
         essence: Int,
         tickets: Int,
-        xp: Int
+        xp: Int,
+        gems: Int = 0
     ): Player?
 
     /**
@@ -279,4 +343,13 @@ interface PlayerRepository {
 
     /** Dopisuje surowce miasta (moze tez odejmowac, np. koszt craftu w kuzni). */
     suspend fun updateTownResources(resources: TownResources): Player?
+
+    /**
+     * Placi [cost] energii wedlug stanu na [now] - albo zwraca null, gdy nie ma z czego.
+     *
+     * Naliczenie tego, co naroslo od ostatniego razu, dzieje sie TUTAJ, przy zapisie: gdyby
+     * liczyl je ekran, dwa urzadzenia zalogowane na to samo konto doliczylyby ten sam przyrost
+     * dwa razy. Patrz [com.lernhero.domain.energy.EnergyRules].
+     */
+    suspend fun spendEnergy(cost: Int, now: Long): Player?
 }

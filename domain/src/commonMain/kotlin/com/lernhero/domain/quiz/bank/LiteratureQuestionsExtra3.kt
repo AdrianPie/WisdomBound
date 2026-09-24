@@ -39,7 +39,6 @@ object LiteratureQuestionsExtra3 {
         ask("dickens_oliver", "Who wrote 'Oliver Twist'?", "Charles Dickens", listOf("Thomas Hardy", "William Thackeray", "Anthony Trollope"), QuizDifficulty.Easy),
         ask("twain_tomsawyer", "Who wrote 'The Adventures of Tom Sawyer'?", "Mark Twain", listOf("Jack London", "O. Henry", "Washington Irving"), QuizDifficulty.Easy),
         ask("london_zew", "Who wrote 'The Call of the Wild'?", "Jack London", listOf("Mark Twain", "James Fenimore Cooper", "Rudyard Kipling"), QuizDifficulty.Easy),
-        ask("moby_dick_zwierze", "Which animal is hunted in 'Moby-Dick'?", "A whale", listOf("A shark", "A giant squid", "A bear"), QuizDifficulty.Easy),
         ask("odyseja_bohater", "Who is the hero of the 'Odyssey'?", "Odysseus", listOf("Achilles", "Hector", "Aeneas"), QuizDifficulty.Easy),
 
         /* ------------------------------ Medium ------------------------------ */
@@ -62,7 +61,6 @@ object LiteratureQuestionsExtra3 {
         ask("pamuk_kraj", "Which country does the Nobel laureate Orhan Pamuk come from?", "Turkey", listOf("Greece", "Egypt", "Iran"), QuizDifficulty.Hard),
         ask("ishiguro_dzielo", "Who wrote 'The Remains of the Day'?", "Kazuo Ishiguro", listOf("Ian McEwan", "Julian Barnes", "Salman Rushdie"), QuizDifficulty.Hard),
         ask("opowiesc_podrecznej", "Who wrote 'The Handmaid's Tale'?", "Margaret Atwood", listOf("Doris Lessing", "Ursula K. Le Guin", "Alice Munro"), QuizDifficulty.Hard),
-        ask("rzecz_o_ksiaze_genji", "'The Tale of Genji', often called the first novel, was written in which country?", "Japan", listOf("China", "Korea", "India"), QuizDifficulty.Hard),
         ask("nobel_marquez_nurt", "Which literary movement is Gabriel Garcia Marquez associated with?", "Magical realism", listOf("Naturalism", "Futurism", "The Beat generation"), QuizDifficulty.Hard),
         ask("beowulf_jezyk", "In which language was 'Beowulf' originally written?", "Old English", listOf("Old Norse", "Latin", "Middle High German"), QuizDifficulty.Hard),
         ask("achebe_jezyk", "Chinua Achebe wrote his most famous novels primarily in which language?", "English", listOf("Igbo", "French", "Swahili"), QuizDifficulty.Hard),

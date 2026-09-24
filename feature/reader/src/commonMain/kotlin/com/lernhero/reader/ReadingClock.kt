@@ -18,7 +18,9 @@ data class ReadingClockState(
     val paused: Boolean = false,
     val sessionSeconds: Int = 0,
     val sessionPages: Int = 0,
-    val sessionWords: Int = 0
+    val sessionWords: Int = 0,
+    /** Dzisiejszy czas czytania RAZEM z ta sesja - to on napedza pierscien celu w czytniku. */
+    val todaySeconds: Int = 0
 ) {
     /**
      * Tempo biezacej sesji w slowach na minute.
@@ -48,15 +50,17 @@ data class ReadingClockState(
  */
 class ReadingClock(
     private val playerRepository: PlayerRepository,
-    scope: CoroutineScope
+    scope: CoroutineScope,
+    /** Ile dzis juz przeczytano PRZED otwarciem tej ksiazki (z konta) - baza licznika dnia. */
+    todayBaseSeconds: Int = 0
 ) {
-    var state by mutableStateOf(ReadingClockState())
+    var state by mutableStateOf(ReadingClockState(todaySeconds = todayBaseSeconds))
         private set
 
     private var idleBudgetSeconds = IDLE_BUDGET_SECONDS
-    private var secondsTowardNextMinute = 0
+    private var secondsSinceFlush = 0
 
-    private var pendingMinutes = 0
+    private var pendingSeconds = 0
     private var pendingPages = 0
     private var pendingWords = 0
     private var pendingCharacters = 0
@@ -67,18 +71,23 @@ class ReadingClock(
                 delay(1000)
                 if (idleBudgetSeconds > 0) {
                     idleBudgetSeconds -= 1
-                    secondsTowardNextMinute += 1
-                    state = state.copy(paused = false, sessionSeconds = state.sessionSeconds + 1)
-                    if (secondsTowardNextMinute >= 60) {
-                        secondsTowardNextMinute -= 60
-                        pendingMinutes += 1
-                    }
+                    pendingSeconds += 1
+                    state = state.copy(
+                        paused = false,
+                        sessionSeconds = state.sessionSeconds + 1,
+                        todaySeconds = state.todaySeconds + 1
+                    )
                 } else {
                     state = state.copy(paused = true)
                 }
-                // Regularny odplyw do konta - nawet gdy gracz zabije apke bez pozegnania,
-                // traci co najwyzej kilkanascie sekund, nie caly postep sesji.
-                if (pendingMinutes > 0) flush()
+                // Odplyw do konta co [FLUSH_EVERY_SECONDS] - w SEKUNDACH, nie pelnych minutach.
+                // Wczesniej zapisywaly sie tylko cale minuty, a resztka kazdej sesji przepadala
+                // przy zamknieciu ksiazki, wiec licznik dnia zawsze byl ponizej prawdy.
+                secondsSinceFlush += 1
+                if (secondsSinceFlush >= FLUSH_EVERY_SECONDS) {
+                    secondsSinceFlush = 0
+                    flush()
+                }
             }
         }
     }
@@ -121,11 +130,11 @@ class ReadingClock(
     }
 
     private fun takePending(): Pending? {
-        if (pendingMinutes == 0 && pendingPages == 0 && pendingWords == 0 && pendingCharacters == 0) {
+        if (pendingSeconds == 0 && pendingPages == 0 && pendingWords == 0 && pendingCharacters == 0) {
             return null
         }
-        val payload = Pending(pendingMinutes, pendingPages, pendingWords, pendingCharacters)
-        pendingMinutes = 0
+        val payload = Pending(pendingSeconds, pendingPages, pendingWords, pendingCharacters)
+        pendingSeconds = 0
         pendingPages = 0
         pendingWords = 0
         pendingCharacters = 0
@@ -133,7 +142,7 @@ class ReadingClock(
     }
 
     private inner class Pending(
-        val minutes: Int,
+        val seconds: Int,
         val pages: Int,
         val words: Int,
         val characters: Int
@@ -141,7 +150,7 @@ class ReadingClock(
         suspend fun send() {
             playerRepository.recordReading(
                 dateKey = todayDateKey(),
-                minutesDelta = minutes,
+                secondsDelta = seconds,
                 pagesDelta = pages,
                 wordsDelta = words,
                 charactersDelta = characters
@@ -150,7 +159,13 @@ class ReadingClock(
     }
 
     private companion object {
-        /** Ile sekund bezczynnosci toleruje zegar, zanim wstrzyma odliczanie. */
-        const val IDLE_BUDGET_SECONDS = 90
+        /**
+         * Ile sekund bezczynnosci toleruje zegar, zanim wstrzyma odliczanie. 150, nie 90: gesta
+         * strona przy duzej czcionce to spokojnie dwie minuty czytania bez dotykania ekranu.
+         */
+        const val IDLE_BUDGET_SECONDS = 150
+
+        /** Co ile sekund zbierany czas leci na konto. */
+        const val FLUSH_EVERY_SECONDS = 15
     }
 }

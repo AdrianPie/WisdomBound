@@ -7,7 +7,19 @@ import org.jetbrains.compose.resources.DrawableResource
 import lernhero.shared.generated.resources.Res
 import lernhero.shared.generated.resources.back_arrow
 import lernhero.shared.generated.resources.background
+import lernhero.shared.generated.resources.town_home_screen
+import lernhero.shared.generated.resources.chest_new_anim
+import lernhero.shared.generated.resources.basic_chest
+import lernhero.shared.generated.resources.epic_chest
+import lernhero.shared.generated.resources._1layer
+import lernhero.shared.generated.resources._2layer
+import lernhero.shared.generated.resources._3layer
+import lernhero.shared.generated.resources._4layer
 import lernhero.shared.generated.resources.bloody_mines
+import lernhero.shared.generated.resources.bloodymine_new
+import lernhero.shared.generated.resources.endless_new
+import lernhero.shared.generated.resources.forgottenforest_new
+import lernhero.shared.generated.resources.frozenwastes_new
 import lernhero.shared.generated.resources.forgotten_forest
 import lernhero.shared.generated.resources.frozen_wastes
 import lernhero.shared.generated.resources.brick_dungeon
@@ -80,6 +92,7 @@ import lernhero.shared.generated.resources.shopping_cart_image
 import lernhero.shared.generated.resources.smite_island
 import lernhero.shared.generated.resources.sorcerer_avatar2
 import lernhero.shared.generated.resources.summon_center
+import lernhero.shared.generated.resources.summon_center_runes
 import lernhero.shared.generated.resources.summon_island
 import lernhero.shared.generated.resources.swords_24px
 import lernhero.shared.generated.resources.tartak_island
@@ -137,6 +150,21 @@ object Resources {
      * `shared/src/commonMain/composeResources/drawable/nav_*.png` na docelowe grafiki,
      * nazwa pliku zostaje ta sama i nic w kodzie nie trzeba ruszac.
      */
+    /**
+     * Warstwy przewijanego tla sceny wyprawy - od najdalszej do najblizszej kamery.
+     * Rysuje je [com.lernhero.home.fight.ParallaxStage]; kazda jedzie w innym tempie.
+     */
+    object Backdrop {
+        /** Najdalsza i najwieksza - jaskinia z lawa. */
+        val lavaFar = Res.drawable._4layer
+        /** Skaly i krysztaly za mostem. */
+        val lavaMid = Res.drawable._3layer
+        /** Most - po nim idzie druzyna. */
+        val lavaBridge = Res.drawable._2layer
+        /** Pierwszy plan - skalki przejezdzajace tuz przed kamera. */
+        val lavaNear = Res.drawable._1layer
+    }
+
     object NavIcon {
         val Home = Res.drawable.nav_home
         val Growth = Res.drawable.nav_growth
@@ -156,6 +184,18 @@ object Resources {
     object Image {
         /** Tlo calej aplikacji - rysowane raz za Scaffoldem w HomeNavGraph, widoczne pod kazda zakladka. */
         val appBackground = Res.drawable.background
+
+        /**
+         * Mapa Domu - JEDEN statyczny obraz calej osady (kopalnia, swiatynia, krag, kuznia, brama).
+         * Zastapil cztery osobne, lewitujace wyspy: te byly czterema niezaleznymi grafikami bez
+         * wspolnej perspektywy i swiatla, wiec nigdy nie skladaly sie w miejsce - a to ma byc
+         * miejsce, po ktorym gracz wraca.
+         *
+         * UWAGA przy podmianie: pozycje klikalnych budynkow sa ULAMKAMI TEGO obrazu (patrz
+         * [com.lernhero.home.TownSpot]), wiec nowa grafika musi trzymac ten sam uklad albo trzeba
+         * przemierzyc ulamki.
+         */
+        val townHome = Res.drawable.town_home_screen
 
         val battlegroundFirst = Res.drawable.battlegroundTwo
         val ShoppingCart = Res.drawable.shopping_cart_image
@@ -178,6 +218,16 @@ object Resources {
 
         val corridorBrick = Res.drawable.brick_dungeon
         val treasureChest = Res.drawable.treasure
+
+        /**
+         * Animowana skrzynia - 40 klatek zamkniecia/otwarcia, siatka 4 kolumny x 10 wierszy.
+         * Klatka jest PROSTOKATNA (768x432, proporcja 16:9), nie kwadratowa jak poprzedni plik -
+         * kto rysuje ja w kwadratowym boxie, musi sam dopasowac wysokosc/szerokosc do tej proporcji
+         * (patrz ChestPreviewScreen), inaczej obraz sie splaszcza.
+         */
+        val treasureChestSheet = Res.drawable.chest_new_anim
+        val shopChestBasic = Res.drawable.basic_chest
+        val shopChestEpic = Res.drawable.epic_chest
 
         /** Tlo ekranu kolekcji kompanow (zakladka Collection w Summon Center). */
         val summonerCollectionBackground = Res.drawable.summoner_collection_screen
@@ -211,11 +261,45 @@ object Resources {
             "icefield" -> worldIcefield
             else -> null
         }
+
+        /**
+         * Areny walki - OSOBNE grafiki od [worldBackground], mimo ze przedstawiaja te same krainy.
+         *
+         * Tamte sa widokiem krainy z zewnatrz (kafel na Mapie, podglad planszy) i moga miec dowolna
+         * kompozycje. Te sa PODLOGA, na ktorej stoi druzyna: horyzont musi lezec tam, gdzie stopy
+         * postaci, a srodek kadru musi zostac pusty, bo wchodza w niego bohaterowie i wrogowie.
+         * Jedna grafika nie da rady obu tych rzeczy naraz, stad dwa zestawy.
+         *
+         * Kraina bez wlasnej areny spada na [battlegroundFirst] - walka nigdy nie zostaje bez tla.
+         */
+        val arenaEndless = Res.drawable.endless_new
+        val arenaForest = Res.drawable.forgottenforest_new
+        val arenaMine = Res.drawable.bloodymine_new
+        val arenaIcefield = Res.drawable.frozenwastes_new
+
+        fun battleBackground(worldId: String): DrawableResource? = when (worldId) {
+            "forest" -> arenaForest
+            "mine" -> arenaMine
+            "icefield" -> arenaIcefield
+            // "heat", "heaven", "abyss" - jeszcze bez wlasnej areny.
+            else -> null
+        }
     }
     /** Wyspy-budynki na ekranie Miasta (Dom) - kazda to osobna klikalna "instancja" (patrz HomeScreen). */
     object CityIsland {
         /** Pusty oltarz w Summon Center - scena, na ktorej "wychodzi" wylosowany summon. */
         val altar = Res.drawable.summon_center
+
+        /**
+         * Same ryte znaki z [altar] (runy, gwiazda kregu, godla swiecznikow), sprowadzone do bieli -
+         * w alfie siedzi glebokosc rytu. Rysuje sie JE NA oltarzu i barwi kolorem rzadkosci
+         * summona, dzieki czemu jeden plik obsluguje wszystkie rzadkosci; sama grafika oltarza
+         * jest szara i nie da sie jej przebarwic wybiorczo. Ta sama sztuczka co [Player.hair].
+         *
+         * Wygenerowane z `summon_center.webp` skryptem `tools/altar_rune_mask.py` - po podmianie
+         * grafiki oltarza URUCHOM GO PONOWNIE, inaczej swiatlo zostanie na starych znakach.
+         */
+        val altarRunes = Res.drawable.summon_center_runes
         val sawmill = Res.drawable.tartak_island
         val quarry = Res.drawable.mine_island
         val forge = Res.drawable.smite_island

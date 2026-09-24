@@ -101,21 +101,22 @@ fun FitnessScreen(insets: PaddingValues = PaddingValues(0.dp)) {
 
     // Przezroczyste tlo - niebo Miasta z HomeNavGraph ma przebijac tak samo jak na innych zakladkach.
     Box(modifier = Modifier.fillMaxSize()) {
+        // Tytul zostaje przyklejony, przewija sie sama tresc - patrz reszta zakladek.
         Column(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(insets)
-                .verticalScroll(rememberScrollState())
                 .padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(14.dp)
         ) {
-            Text(
-                text = "Training",
-                color = Gold,
-                fontFamily = FontPixel(),
-                fontWeight = FontWeight.Bold,
-                style = MaterialTheme.typography.headlineSmall
-            )
+            com.lernhero.home.ui.OutlinedText(text = "Training", size = 28.sp, color = Color(0xFFFFD34D))
+
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .verticalScroll(rememberScrollState()),
+                verticalArrangement = Arrangement.spacedBy(14.dp)
+            ) {
 
             // Poza `when` nizej celowo - musi dzialac TAKZE zanim zgoda na Health Connect zostanie
             // przyznana (np. na emulatorze, ktory czesto w ogole nie potrafi przejsc tego flow).
@@ -136,28 +137,16 @@ fun FitnessScreen(insets: PaddingValues = PaddingValues(0.dp)) {
                 else -> {
                     // Skrzynia stoi NAD dzisiejszymi liczbami - to ona jest powodem, dla ktorego
                     // wchodzi sie tu w ciagu dnia ("ile mi jeszcze brakuje"), a nie tabelka krokow.
-                    StepChestCard(
+                    DailyStepsCard(
+                        snapshot = state.snapshot,
+                        claimed = state::claimedToday,
+                        onClaim = { goal -> viewModel.claim(goal) { playerViewModel.refresh() } }
+                    )
+                    StepChestBanner(
                         snapshot = state.snapshot,
                         openedToday = state.stepChestOpenedToday,
                         onOpen = viewModel::openStepChest
                     )
-
-                    TodayCard(snapshot = state.snapshot)
-                    Text(
-                        text = "Daily Goals",
-                        color = Gold,
-                        fontFamily = FontPixel(),
-                        fontWeight = FontWeight.Bold,
-                        style = MaterialTheme.typography.titleMedium
-                    )
-                    FitnessGoalCatalog.DAILY.forEach { goal ->
-                        GoalCard(
-                            goal = goal,
-                            snapshot = state.snapshot,
-                            claimed = state.claimedToday(goal),
-                            onClaim = { viewModel.claim(goal) }
-                        )
-                    }
                 }
             }
 
@@ -171,6 +160,7 @@ fun FitnessScreen(insets: PaddingValues = PaddingValues(0.dp)) {
             }
 
             Spacer(modifier = Modifier.height(8.dp))
+            }
         }
 
         // Kolo fortuny ze skrzyni - dokladnie to samo, ktore krecisz po bossie (ChestSlot/ChestWheel),
@@ -182,8 +172,9 @@ fun FitnessScreen(insets: PaddingValues = PaddingValues(0.dp)) {
             val prize = remember(slotName) { resolveChestPrize(slot, Random.Default) }
             BossChestOverlay(
                 dungeonLevel = StepChest.wheelLevel(state.snapshot.steps),
-                prize = slot,
-                prizeLabel = prize.label,
+                slot = slot,
+                prize = prize,
+                title = "STEP CHEST",
                 onClaim = {
                     prize.grant(playerViewModel, townViewModel)
                     viewModel.consumeStepChest()

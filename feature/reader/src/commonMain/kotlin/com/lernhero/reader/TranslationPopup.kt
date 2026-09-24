@@ -37,7 +37,11 @@ import com.lernhero.reader.reflow.SelectionScope
 import com.lernhero.reader.reflow.WordSelection
 import com.lernhero.reader.translate.TranslationResult
 import com.lernhero.reader.translate.TranslationSource
+import com.lernhero.domain.monetization.PremiumLimits
+import com.lernhero.shared.monetization.PremiumPaywall
+import com.lernhero.shared.monetization.TranslationQuota
 import com.lernhero.shared.theme.FontFirst
+import org.koin.compose.koinInject
 import kotlin.math.roundToInt
 
 private val PopupBg = Color(0xFF1C2430)
@@ -64,12 +68,33 @@ fun TranslationPopup(
     modifier: Modifier = Modifier
 ) {
     val density = LocalDensity.current
+    val quota = koinInject<TranslationQuota>()
+    var paywallOpen by remember { mutableStateOf(false) }
+    var freeLeft by remember { mutableStateOf<Int?>(null) }
 
     var result by remember(selection.scope, selection.selectedText) {
         mutableStateOf<TranslationResult?>(null)
     }
     LaunchedEffect(selection.scope, selection.selectedText) {
-        result = translationSource.translate(selection.selectedText)
+        val today = todayDateKey()
+        if (!quota.canTranslate(today)) {
+            result = TranslationResult.LimitReached
+            return@LaunchedEffect
+        }
+        val translated = translationSource.translate(selection.selectedText)
+        if (translated is TranslationResult.Translated) {
+            quota.consume(today)
+            freeLeft = if (quota.isUnlimited) null else quota.remaining(today)
+        }
+        result = translated
+    }
+
+    if (paywallOpen) {
+        PremiumPaywall(
+            subscription = koinInject(),
+            reason = "You've used today's ${PremiumLimits.FREE_TRANSLATIONS_PER_DAY} free translations.",
+            onDismiss = { paywallOpen = false }
+        )
     }
 
     BoxWithConstraints(modifier = modifier.fillMaxSize()) {
@@ -122,14 +147,48 @@ fun TranslationPopup(
                         is TranslationResult.Translated -> r.text
                         TranslationResult.Unavailable -> "Translator isn't connected yet"
                         TranslationResult.Failed -> "Translation failed"
+                        TranslationResult.LimitReached ->
+                            "That's today's ${PremiumLimits.FREE_TRANSLATIONS_PER_DAY} free translations. " +
+                                "Premium translates without limits."
                         null -> "..."
                     },
-                    color = if (result is TranslationResult.Unavailable) Color(0xFF8A93A0) else Color.White,
+                    color = if (result is TranslationResult.Unavailable || result is TranslationResult.LimitReached) {
+                        Color(0xFF8A93A0)
+                    } else {
+                        Color.White
+                    },
                     fontFamily = FontFirst(),
                     fontSize = 15.sp,
                     modifier = Modifier.weight(1f)
                 )
                 PopupIconButton(symbol = "×", onClick = onDismiss)
+            }
+
+            if (result is TranslationResult.LimitReached) {
+                Text(
+                    text = "👑 GO PREMIUM",
+                    color = Color(0xFF1C1408),
+                    fontFamily = FontFirst(),
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 12.sp,
+                    modifier = Modifier
+                        .padding(top = 10.dp)
+                        .clip(RoundedCornerShape(8.dp))
+                        .background(Color(0xFFFFD34D))
+                        .clickable { paywallOpen = true }
+                        .padding(horizontal = 12.dp, vertical = 7.dp)
+                )
+                return@Column
+            }
+
+            freeLeft?.let { left ->
+                Text(
+                    text = "$left free translations left today",
+                    color = Color(0xFF8A93A0),
+                    fontFamily = FontFirst(),
+                    fontSize = 10.sp,
+                    modifier = Modifier.padding(top = 6.dp)
+                )
             }
 
             Row(

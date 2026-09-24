@@ -33,13 +33,6 @@ object GeographyQuestions {
             difficulty = QuizDifficulty.Easy
         ),
         ask(
-            id = "morze_pl",
-            prompt = "Which sea does Poland border?",
-            correct = "Baltic",
-            wrong = listOf("North Sea", "Mediterranean", "Black Sea"),
-            difficulty = QuizDifficulty.Easy
-        ),
-        ask(
             id = "sahara",
             prompt = "On which continent is the Sahara desert?",
             correct = "Africa",
@@ -49,31 +42,10 @@ object GeographyQuestions {
 
         /* ------------------------------ Medium ------------------------------ */
         ask(
-            id = "najdluzsza_rzeka_swiat",
-            prompt = "Which river is regarded as the longest in the world?",
-            correct = "Nile",
-            wrong = listOf("Amazon", "Yangtze", "Mississippi"),
-            difficulty = QuizDifficulty.Medium
-        ),
-        ask(
             id = "everest",
             prompt = "In which mountain range is Mount Everest?",
             correct = "Himalayas",
             wrong = listOf("Andes", "Alps", "Caucasus"),
-            difficulty = QuizDifficulty.Medium
-        ),
-        ask(
-            id = "najwieksze_panstwo",
-            prompt = "Which country has the largest land area in the world?",
-            correct = "Russia",
-            wrong = listOf("Canada", "China", "USA"),
-            difficulty = QuizDifficulty.Medium
-        ),
-        ask(
-            id = "wielki_kanion",
-            prompt = "In which country is the Grand Canyon?",
-            correct = "USA",
-            wrong = listOf("Mexico", "Australia", "South Africa"),
             difficulty = QuizDifficulty.Medium
         ),
         ask(
@@ -83,13 +55,6 @@ object GeographyQuestions {
             wrong = listOf("Etna", "Stromboli", "Krakatoa"),
             difficulty = QuizDifficulty.Medium
         ),
-        ask(
-            id = "rzeka_egipt",
-            prompt = "Which river flows through Egypt?",
-            correct = "Nile",
-            wrong = listOf("Euphrates", "Tigris", "Congo"),
-            difficulty = QuizDifficulty.Medium
-        ),
 
         /* ------------------------------ Hard ------------------------------- */
         ask(
@@ -97,13 +62,6 @@ object GeographyQuestions {
             prompt = "Which lake is the deepest in the world?",
             correct = "Baikal",
             wrong = listOf("Tanganyika", "Caspian Sea", "Superior"),
-            difficulty = QuizDifficulty.Hard
-        ),
-        ask(
-            id = "atacama",
-            prompt = "On which continent is the Atacama Desert?",
-            correct = "South America",
-            wrong = listOf("Africa", "Asia", "Australia"),
             difficulty = QuizDifficulty.Hard
         ),
         ask(

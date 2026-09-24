@@ -58,7 +58,7 @@ class DodgeChanceEffect(private val percent: Float) : StatEffect {
 
 class SpeedEffect(private val amount: Float) : StatEffect {
     override val id = "speed_${amount.toInt()}"
-    override val description = "+${amount.toInt()} szybkosci - czesciej zaczynasz ture pierwszy."
+    override val description = "+${amount.toInt()} speed - you act first more often."
     override val bonus = Stats.of(StatType.Speed to amount)
 }
 

@@ -20,11 +20,14 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.asPaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.safeDrawing
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
@@ -120,6 +123,12 @@ internal fun BattleField(
         onEffectShown = onEffectShown
     )
 
+    // Kamera/notch/pasek statusu potrafia siegac dobry kawalek w dol ekranu - HUD u gory
+    // (numer fali, licznik pytan, baner komunikatu) NIE moze zaczynac sie od stalego 10 dp,
+    // bo na takich telefonach wchodzi wprost pod wycięcie. Arena pod spodem zostaje fillMaxSize
+    // (ma wygladac na pelnoekranowa), przesuwa sie tylko HUD, ktory na niej stoi.
+    val topInset = WindowInsets.safeDrawing.asPaddingValues().calculateTopPadding()
+
     BoxWithConstraints(
         modifier = modifier.fillMaxSize()
     ) {
@@ -196,20 +205,29 @@ internal fun BattleField(
             1f
         }
 
-        WaveBadge(
-            wave = state.wave,
-            heroHpFraction = heroHpFraction,
-            modifier = Modifier
-                .align(Alignment.TopStart)
-                .padding(10.dp)
-        )
+        // Gora ekranu nalezy do JEDNEJ rzeczy naraz. W trakcie zdarzenia bossa cala ta strefa jest
+        // scena: stawka zaklecia, werdykt i to, co z niego wynika ([BossChargeOverlay]) - a numer
+        // fali, licznik pytan, pasek ulepszen i baner komunikatu rysowaly sie DOKLADNIE pod nimi.
+        // Nie tylko zaslanialy: kazda z tych rzeczy mowi o czyms innym niz to, na co gracz wlasnie
+        // patrzy. Wracaja w tej samej klatce, w ktorej zdarzenie sie konczy.
+        val bossSceneUp = bossEvent != null
 
-        EndlessBuffRow(
-            buffs = state.endlessBuffs,
-            modifier = Modifier
-                .align(Alignment.TopStart)
-                .padding(start = 10.dp, top = 66.dp, end = 90.dp)
-        )
+        if (!bossSceneUp) {
+            WaveBadge(
+                wave = state.wave,
+                heroHpFraction = heroHpFraction,
+                modifier = Modifier
+                    .align(Alignment.TopStart)
+                    .padding(start = 10.dp, top = topInset + 10.dp, end = 10.dp, bottom = 10.dp)
+            )
+
+            EndlessBuffRow(
+                buffs = state.endlessBuffs,
+                modifier = Modifier
+                    .align(Alignment.TopStart)
+                    .padding(start = 10.dp, top = topInset + 66.dp, end = 90.dp)
+            )
+        }
 
         // Stan druzyny (buff/debuff cyklu, passa, ogluszenie) - tuz nad naszymi postaciami, po ich
         // stronie pola bitwy, zeby bylo widac przez cala walke, a nie tylko w chwili odpowiedzi.
@@ -225,25 +243,26 @@ internal fun BattleField(
         TurnImpactOverlay(
             outcome = state.turnOutcome,
             visible = state.turnPhase == TurnPhase.Impact,
-            modifier = Modifier
-                .align(Alignment.Center)
-                .padding(horizontal = 16.dp)
+            // Cala arena, nie sam srodek: nakladka gasi tlo pod soba, a to musi siegac krawedzi.
+            modifier = Modifier.fillMaxSize()
         )
 
-        AnswerCountBadge(
-            count = state.answeredCount,
-            modifier = Modifier
-                .align(Alignment.TopEnd)
-                .padding(10.dp)
-        )
+        if (!bossSceneUp) {
+            AnswerCountBadge(
+                count = state.answeredCount,
+                modifier = Modifier
+                    .align(Alignment.TopEnd)
+                    .padding(start = 10.dp, top = topInset + 10.dp, end = 10.dp, bottom = 10.dp)
+            )
+        }
 
         BattleMessageBanner(
-            message = state.message,
+            message = state.message.takeUnless { bossSceneUp },
             buffLabel = state.activeCycleBuff?.takeIf { state.elapsedMs < it.expiresAtMs }?.outcome?.label,
             buffPositive = (state.activeCycleBuff?.outcome?.attackMultiplier ?: 1f) >= 1f,
             modifier = Modifier
                 .align(Alignment.TopCenter)
-                .padding(top = 56.dp)
+                .padding(top = topInset + 56.dp)
         )
 
         BattleControls(

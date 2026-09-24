@@ -33,20 +33,6 @@ object MathQuestions {
             difficulty = QuizDifficulty.Easy
         ),
         ask(
-            id = "kwadrans",
-            prompt = "How many minutes are in a quarter hour?",
-            correct = "15",
-            wrong = listOf("10", "20", "30"),
-            difficulty = QuizDifficulty.Easy
-        ),
-        ask(
-            id = "tuzin",
-            prompt = "How many items make a dozen?",
-            correct = "12",
-            wrong = listOf("10", "6", "20"),
-            difficulty = QuizDifficulty.Easy
-        ),
-        ask(
             id = "9kw",
             prompt = "What is 9 squared?",
             correct = "81",

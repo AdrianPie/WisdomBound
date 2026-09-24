@@ -79,7 +79,6 @@ object CapitalQuestionsExtra {
         capital("Iran", "Tehran", listOf("Isfahan", "Mashhad", "Shiraz"), QuizDifficulty.Hard),
         capital("Ethiopia", "Addis Ababa", listOf("Dire Dawa", "Gondar", "Mekelle"), QuizDifficulty.Hard),
         capital("Tanzania", "Dodoma", listOf("Dar es Salaam", "Arusha", "Mwanza"), QuizDifficulty.Hard),
-        country("Ulaanbaatar", "Mongolia", listOf("Kazakhstan", "Kyrgyzstan", "Tibet"), QuizDifficulty.Hard),
 
         /* ----------------------------- Expert ---------------------------- */
         capital("Bolivia (constitutional capital)", "Sucre", listOf("La Paz", "Santa Cruz", "Cochabamba"), QuizDifficulty.Expert),

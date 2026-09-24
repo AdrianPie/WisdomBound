@@ -1,5 +1,6 @@
 package com.lernhero.domain.story
 
+import com.lernhero.domain.player.LevelGoldBonus
 import kotlin.math.roundToInt
 
 /**
@@ -42,13 +43,14 @@ object IdleRewards {
      * Ile czeka do odebrania. [lastCollectedAt] = 0 oznacza "jeszcze nigdy nie odbierano" - wtedy
      * liczymy od [now], zeby nowe konto nie dostalo naliczenia od epoki Uniksa.
      */
-    fun pendingFor(highestClearedStage: Int, lastCollectedAt: Long, now: Long): IdleReward {
+    fun pendingFor(highestClearedStage: Int, lastCollectedAt: Long, now: Long, heroLevel: Int = 1): IdleReward {
         if (lastCollectedAt <= 0L || now <= lastCollectedAt) return IdleReward()
 
         val hours = ((now - lastCollectedAt) / MILLIS_PER_HOUR).coerceAtMost(CAP_HOURS)
         val rate = ratePerHour(highestClearedStage)
         return IdleReward(
-            gold = (rate.gold * hours).roundToInt(),
+            // Poziom bohatera dokłada mala premie do zlota - patrz [LevelGoldBonus].
+            gold = (rate.gold * hours * LevelGoldBonus.multiplier(heroLevel)).roundToInt(),
             iron = (rate.iron * hours).roundToInt(),
             essence = (rate.essence * hours).roundToInt(),
             hoursAccrued = hours

@@ -1,6 +1,10 @@
 package com.lernhero.home.quiz
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.size
+import com.lernhero.home.ui.OutlinedText
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -34,12 +38,15 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.lernhero.domain.monetization.PremiumLimits
 import com.lernhero.domain.quiz.QuizDifficulty
 import com.lernhero.domain.quiz.ai.QuizGenerationRequest
 import com.lernhero.domain.quiz.custom.CustomDeck
 import com.lernhero.domain.quiz.custom.CustomQuestion
 import com.lernhero.domain.quiz.custom.CustomQuestionType
+import com.lernhero.shared.monetization.PremiumPaywall
 import com.lernhero.shared.theme.FontFirst
+import org.koin.compose.koinInject
 import com.lernhero.shared.theme.FontPixel
 
 /**
@@ -59,6 +66,8 @@ fun DeckEditorScreen(
     insets: PaddingValues = PaddingValues(0.dp)
 ) {
     val state by viewModel.uiState.collectAsState()
+    val isPremium by viewModel.isPremium.collectAsState()
+    var paywallOpen by remember { mutableStateOf(false) }
 
     LaunchedEffect(deckId) { viewModel.open(deckId) }
 
@@ -75,12 +84,14 @@ fun DeckEditorScreen(
     var aiOpen by remember { mutableStateOf(startWithAi) }
     var confirmDelete by remember { mutableStateOf(false) }
 
-    Surface(modifier = Modifier.fillMaxSize(), color = DeckInk) {
+    Surface(modifier = Modifier.fillMaxSize(), color = Color(0xFF140E0A)) {
+        // Naglowek z POWROTEM i ZAPISEM zostaje przyklejony - przewijaja sie same pytania.
+        // Przy talii na kilkadziesiat pozycji przycisk zapisu uciekal poza ekran dokladnie
+        // wtedy, gdy byl potrzebny.
         Column(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(insets)
-                .verticalScroll(rememberScrollState())
                 .padding(horizontal = 14.dp, vertical = 10.dp),
             verticalArrangement = Arrangement.spacedBy(10.dp)
         ) {
@@ -97,6 +108,12 @@ fun DeckEditorScreen(
                 onSave = { viewModel.save() }
             )
 
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .verticalScroll(rememberScrollState()),
+                verticalArrangement = Arrangement.spacedBy(10.dp)
+            ) {
             if (deck == null) {
                 Text(
                     text = "Couldn't find this deck.",
@@ -117,6 +134,9 @@ fun DeckEditorScreen(
             AiSection(
                 open = aiOpen,
                 available = viewModel.aiAvailable,
+                isPremium = isPremium,
+                remainingThisMonth = state.remainingAiGenerationsThisMonth,
+                onUnlock = { paywallOpen = true },
                 generating = state.generating,
                 topic = deck.topic,
                 onToggle = { aiOpen = !aiOpen },
@@ -181,8 +201,7 @@ fun DeckEditorScreen(
             DeckButton(
                 label = "+ ADD QUESTION",
                 onClick = { addingType = true },
-                color = Color(0xFF3A2A18),
-                textColor = DeckGold,
+                color = Color(0xFF3F9E2B),
                 modifier = Modifier.fillMaxWidth()
             )
 
@@ -199,11 +218,11 @@ fun DeckEditorScreen(
             DeckButton(
                 label = "DELETE DECK",
                 onClick = { confirmDelete = true },
-                color = Color(0xFF2A1512),
-                textColor = DeckRed,
-                fontSize = 11,
+                color = Color(0xFF8C2A22),
+                fontSize = 12,
                 modifier = Modifier.fillMaxWidth()
             )
+            }
         }
     }
 
@@ -236,6 +255,17 @@ fun DeckEditorScreen(
         )
     }
 
+    if (paywallOpen || state.subscriptionRequired) {
+        PremiumPaywall(
+            subscription = koinInject(),
+            reason = "AI generation is a Premium feature.",
+            onDismiss = {
+                paywallOpen = false
+                viewModel.dismissSubscriptionPrompt()
+            }
+        )
+    }
+
     if (confirmDelete && deck != null) {
         ConfirmDialog(
             title = "DELETE DECK?",
@@ -260,32 +290,33 @@ private fun EditorHeader(
 ) {
     Row(
         modifier = Modifier.fillMaxWidth(),
-        horizontalArrangement = Arrangement.spacedBy(8.dp),
+        horizontalArrangement = Arrangement.spacedBy(10.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
-        DeckButton(
-            label = "‹ WSTECZ",
-            onClick = onBack,
-            color = Color(0xFF2A2018),
-            textColor = DeckCream,
-            fontSize = 11
-        )
-        Text(
-            text = deck?.displayName?.uppercase() ?: "DECK",
+        Box(
+            modifier = Modifier
+                .size(42.dp)
+                .clip(CircleShape)
+                .background(Brush.verticalGradient(listOf(Color(0xFF5A3F24), Color(0xFF2C1D10))))
+                .border(2.5.dp, Color(0xFF120B05), CircleShape)
+                .clickable(onClick = onBack),
+            contentAlignment = Alignment.Center
+        ) {
+            OutlinedText(text = "‹", size = 26.sp, color = DeckGold)
+        }
+        OutlinedText(
+            text = deck?.displayName ?: "Tome",
+            size = 20.sp,
             color = DeckGold,
-            fontFamily = FontPixel(),
-            fontWeight = FontWeight.Bold,
-            fontSize = 13.sp,
             maxLines = 1,
-            overflow = TextOverflow.Ellipsis,
             modifier = Modifier.weight(1f)
         )
         DeckButton(
-            label = if (dirty) "SAVE •" else "SAVE",
+            label = if (dirty) "SAVE •" else "SAVED",
             onClick = onSave,
-            color = if (dirty) Color(0xFF2E6B3F) else Color(0xFF2A2018),
+            color = if (dirty) Color(0xFF3F9E2B) else Color(0xFF3A2E22),
             textColor = if (dirty) Color.White else DeckMuted,
-            fontSize = 11
+            fontSize = 13
         )
     }
 }
@@ -299,6 +330,9 @@ private fun EditorHeader(
 private fun AiSection(
     open: Boolean,
     available: Boolean,
+    isPremium: Boolean,
+    remainingThisMonth: Int?,
+    onUnlock: () -> Unit,
     generating: Boolean,
     topic: String,
     onToggle: () -> Unit,
@@ -313,28 +347,75 @@ private fun AiSection(
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .clip(RoundedCornerShape(12.dp))
-            .background(DeckPanel)
-            .border(1.dp, DeckFrameDim, RoundedCornerShape(12.dp))
-            .padding(12.dp),
-        verticalArrangement = Arrangement.spacedBy(8.dp)
+            .clip(RoundedCornerShape(16.dp))
+            .background(Brush.verticalGradient(listOf(Color(0xFF3A1E6E), Color(0xFF1E1038))))
+            .border(3.dp, Color(0xFF120B05), RoundedCornerShape(16.dp))
+            .padding(14.dp),
+        verticalArrangement = Arrangement.spacedBy(10.dp)
     ) {
         Row(
             modifier = Modifier.fillMaxWidth().clickable(onClick = onToggle),
-            horizontalArrangement = Arrangement.SpaceBetween,
+            horizontalArrangement = Arrangement.spacedBy(10.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Text(
-                text = "✨ GENERATE QUESTIONS",
-                color = DeckGold,
-                fontFamily = FontPixel(),
-                fontWeight = FontWeight.Bold,
-                fontSize = 12.sp
-            )
-            Text(text = if (open) "▲" else "▼", color = DeckMuted, fontSize = 12.sp)
+            Text(text = "📜", fontSize = 28.sp)
+            Column(modifier = Modifier.weight(1f)) {
+                OutlinedText(text = "AI Scroll", size = 18.sp, color = Color.White, strokeWidth = 5f)
+                Text(
+                    text = if (isPremium) "Give a topic - get a ready deck" else "Premium - the Sage writes decks for you",
+                    color = Color(0xFFCBB6F0),
+                    fontFamily = FontFirst(),
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 11.sp
+                )
+            }
+            if (!isPremium) {
+                Text(
+                    text = "👑",
+                    fontSize = 16.sp,
+                    modifier = Modifier
+                        .clip(CircleShape)
+                        .background(Brush.verticalGradient(listOf(Color(0xFFFFE27A), Color(0xFFE0A21E))))
+                        .border(2.dp, Color(0xFF120B05), CircleShape)
+                        .padding(6.dp)
+                )
+            }
+            Text(text = if (open) "▲" else "▼", color = Color(0xFFCBB6F0), fontSize = 14.sp)
         }
 
         if (!open) return@Column
+
+        // Bez subskrypcji generowanie jest zamkniete w calosci - formularz nie ma sensu, skoro
+        // serwer i tak odmowi. Zamiast niego jedna rzecz do zrobienia: odblokuj.
+        if (!isPremium) {
+            listOf(
+                "✨" to "Up to ${PremiumLimits.PREMIUM_AI_QUIZZES_PER_MONTH} decks a month on any topic",
+                "🎯" to "Pick the level, question count and types",
+                "⚡" to "A full deck in seconds - ready for battle"
+            ).forEach { (icon, line) ->
+                Row(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {
+                    Text(icon, fontSize = 15.sp)
+                    Text(line, color = Color.White, fontFamily = FontFirst(), fontWeight = FontWeight.Bold, fontSize = 12.sp)
+                }
+            }
+            DeckButton(label = "👑 UNLOCK PREMIUM", onClick = onUnlock, color = Color(0xFFE0A21E), modifier = Modifier.fillMaxWidth())
+            Text(
+                text = "You can still write questions by hand below.",
+                color = Color(0xFFCBB6F0),
+                fontFamily = FontFirst(),
+                fontSize = 11.sp
+            )
+            return@Column
+        }
+
+        remainingThisMonth?.let { left ->
+            Text(
+                text = "$left of ${PremiumLimits.PREMIUM_AI_QUIZZES_PER_MONTH} generations left this month",
+                color = DeckGold,
+                fontFamily = FontFirst(),
+                fontSize = 10.sp
+            )
+        }
 
         if (!available) {
             Text(
@@ -410,9 +491,10 @@ private fun AiSection(
         )
 
         DeckButton(
-            label = if (generating) "GENERATING..." else "GENERATE AND ADD",
+            label = if (generating) "✨ THE SAGE IS WRITING..." else "✨ GENERATE AND ADD",
             onClick = { if (!generating) onGenerate(count, difficulty, types, notes) },
             enabled = !generating,
+            color = Color(0xFF8A3FE0),
             modifier = Modifier.fillMaxWidth()
         )
         Text(

@@ -37,6 +37,9 @@ sealed class Screen {
     /** Dev Animation Center - os czasu do animowania czesci potworow (patrz MonsterAnimationLabScreen). */
     @Serializable
     data object MonsterAnimationLab : Screen()
+    /** Podglad spritesheeta skrzyni (patrz ChestPreviewScreen) - tap = odtworz otwarcie od nowa. */
+    @Serializable
+    data object ChestPreview : Screen()
     @Serializable
     data object Equipment : Screen()
     /** Drzewko talentow - trzy sciezki rozwoju bohatera. Wchodzi sie z karty postaci. */
@@ -44,9 +47,19 @@ sealed class Screen {
     data object Talents : Screen()
     @Serializable
     data object Shop : Screen()
-    /** Poziom bohatera, statystyki nauki i osiagniecia - patrz feature/home/progress. */
+    /**
+     * Poziom bohatera, statystyki nauki i osiagniecia - patrz feature/home/progress.
+     *
+     * Przestal byc zakladka: wchodzi sie tu ze Swiatyni na mapie Domu, bo to miejsce, do ktorego
+     * zaglada sie od czasu do czasu po podsumowanie, a nie przy kazdej sesji. Miejsce w dolnym
+     * pasku przejelo [QuizStudio] - robienie wlasnych pytan jest CZYNNOSCIA, nie podsumowaniem.
+     */
     @Serializable
     data object Progress : Screen()
+
+    /** Wlasne talie pytan: pisane recznie albo generowane przez AI. Zakladka w dolnym pasku. */
+    @Serializable
+    data object QuizStudio : Screen()
     /**
      * Zakladka "Rozwoj": czytanie ksiazek i trening z urzadzenia jako jedno miejsce - obie te
      * rzeczy robi sie NAPRAWDE, poza gra, i obie daja bonusy. W srodku dwie podzakladki

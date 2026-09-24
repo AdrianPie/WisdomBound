@@ -107,8 +107,8 @@ object ReminderPlan {
      */
     private fun freeSummonReady(player: Player, now: Long): List<GameReminder> {
         val readyTimes = listOf(
-            FreeSummon.readyAt(player.freeSummonClaims[BASIC_BANNER], FreeSummon.BASIC_COOLDOWN_MS),
-            FreeSummon.readyAt(player.freeSummonClaims[HEROIC_BANNER], FreeSummon.HEROIC_COOLDOWN_MS)
+            FreeSummon.readyAt(player.freeSummonClaims[FreeSummon.BASIC_BANNER], FreeSummon.BASIC_COOLDOWN_MS),
+            FreeSummon.readyAt(player.freeSummonClaims[FreeSummon.HEROIC_BANNER], FreeSummon.HEROIC_COOLDOWN_MS)
         ).filter { it > now }
 
         val soonest = readyTimes.minOrNull() ?: return emptyList()
@@ -123,6 +123,4 @@ object ReminderPlan {
     }
 
     // Id bannerow - te same, ktorych uzywa Summon Center przy zapisie odbioru.
-    private const val BASIC_BANNER = "basic"
-    private const val HEROIC_BANNER = "heroic"
 }

@@ -37,6 +37,13 @@ import com.lernhero.domain.town.TownResources
 import com.lernhero.shared.theme.AppPalette
 import com.lernhero.shared.theme.FontFirst
 import com.lernhero.shared.theme.FontPixel
+import com.lernhero.home.ui.OutlinedText
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.offset
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.wrapContentHeight
+import androidx.compose.foundation.layout.wrapContentWidth
+import androidx.compose.foundation.shape.CircleShape
 
 internal val Gold = AppPalette.Gold
 internal val GoldDim = AppPalette.GoldDim
@@ -154,24 +161,13 @@ private fun TownHeader(
                 horizontalArrangement = Arrangement.spacedBy(7.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Box(
-                    modifier = Modifier
-                        .clip(RoundedCornerShape(9.dp))
-                        .background(Ink.copy(alpha = 0.8f))
-                        .border(1.5.dp, GoldDim, RoundedCornerShape(9.dp))
-                        .clickable(onClick = onBack)
-                        .padding(horizontal = 9.dp, vertical = 5.dp)
-                ) {
-                    Text(text = "←", color = Gold, fontFamily = FontPixel(), fontSize = 13.sp)
-                }
-                Text(
+                BackButton(onBack)
+                OutlinedText(
                     text = title,
+                    size = 19.sp,
                     color = Gold,
-                    fontFamily = FontPixel(),
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 14.sp,
                     maxLines = 1,
-                    modifier = Modifier.weight(1f)
+                    modifier = Modifier.weight(1f).wrapContentWidth(Alignment.Start)
                 )
                 // Przy pelnym pasku ponizej te dwie pigulki bylyby tym samym dwa razy.
                 if (!showAllResources) {
@@ -187,10 +183,10 @@ private fun TownHeader(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.spacedBy(5.dp)
                 ) {
-                    ResourcePill("🪨", resources.stone, Modifier.weight(1f))
-                    ResourcePill("⚙", resources.iron, Modifier.weight(1f))
-                    ResourcePill("✨", resources.essence, Modifier.weight(1f))
-                    ResourcePill("💰", money, Modifier.weight(1f))
+                    ResourcePill("🪨", resources.stone, Modifier.weight(1f), stretch = true)
+                    ResourcePill("🔩", resources.iron, Modifier.weight(1f), stretch = true)
+                    ResourcePill("✨", resources.essence, Modifier.weight(1f), stretch = true)
+                    ResourcePill("💰", money, Modifier.weight(1f), stretch = true)
                 }
             }
         }
@@ -202,29 +198,15 @@ private fun TownHeader(
         verticalArrangement = Arrangement.spacedBy(8.dp)
     ) {
         Row(verticalAlignment = Alignment.CenterVertically) {
-            Box(
-                modifier = Modifier
-                    .clip(RoundedCornerShape(10.dp))
-                    .background(Ink.copy(alpha = 0.8f))
-                    .border(1.5.dp, GoldDim, RoundedCornerShape(10.dp))
-                    .clickable(onClick = onBack)
-                    .padding(horizontal = 12.dp, vertical = 8.dp)
-            ) {
-                Text(text = "←", color = Gold, fontFamily = FontPixel(), fontSize = 15.sp)
-            }
-            Text(
+            BackButton(onBack)
+            OutlinedText(
                 text = title,
+                size = 24.sp,
                 color = Gold,
-                fontFamily = FontPixel(),
-                fontWeight = FontWeight.Bold,
-                fontSize = 18.sp,
-                textAlign = TextAlign.Center,
                 modifier = Modifier.weight(1f)
             )
             // Wyrownanie do srodka - ta sama szerokosc co przycisk powrotu.
-            Box(modifier = Modifier.padding(horizontal = 12.dp, vertical = 8.dp)) {
-                Text(text = "←", color = Color.Transparent, fontFamily = FontPixel(), fontSize = 15.sp)
-            }
+            Box(modifier = Modifier.size(BACK_SIZE))
         }
 
         // Ruda i esencja stoja obok drewna i kamienia, bo od tej chwili to one sa glownym
@@ -233,44 +215,75 @@ private fun TownHeader(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.spacedBy(6.dp)
         ) {
-            ResourcePill("🪨", resources.stone, Modifier.weight(1f))
-            ResourcePill("⚙", resources.iron, Modifier.weight(1f))
-            ResourcePill("✨", resources.essence, Modifier.weight(1f))
+            ResourcePill("🪨", resources.stone, Modifier.weight(1f), stretch = true)
+            ResourcePill("🔩", resources.iron, Modifier.weight(1f), stretch = true)
+            ResourcePill("✨", resources.essence, Modifier.weight(1f), stretch = true)
         }
         Row(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.spacedBy(6.dp)
         ) {
-            ResourcePill("💰", money, Modifier.weight(1f))
-            ResourcePill("🎟️", resources.summonTickets, Modifier.weight(1f))
+            ResourcePill("💰", money, Modifier.weight(1f), stretch = true)
+            ResourcePill("🎟️", resources.summonTickets, Modifier.weight(1f), stretch = true)
         }
     }
 }
 
+private val BACK_SIZE = 42.dp
+private val Outline = Color(0xFF120B05)
+
+/** Okragly przycisk powrotu z grubym obrysem - jak w naglowkach gier mobilnych. */
 @Composable
-internal fun ResourcePill(icon: String, value: Int, modifier: Modifier = Modifier) {
-    Row(
-        modifier = modifier
-            .clip(RoundedCornerShape(18.dp))
-            .background(Ink.copy(alpha = 0.85f))
-            .border(1.5.dp, GoldDim, RoundedCornerShape(18.dp))
-            .padding(horizontal = 8.dp, vertical = 6.dp),
-        horizontalArrangement = Arrangement.spacedBy(4.dp),
-        verticalAlignment = Alignment.CenterVertically
+private fun BackButton(onBack: () -> Unit) {
+    Box(
+        modifier = Modifier
+            .size(BACK_SIZE)
+            .clip(CircleShape)
+            .background(Brush.verticalGradient(listOf(Color(0xFF5A3F24), Color(0xFF2C1D10))))
+            .border(2.5.dp, Outline, CircleShape)
+            .clickable(onClick = onBack),
+        contentAlignment = Alignment.Center
     ) {
-        Text(text = icon, fontSize = 13.sp)
-        Text(
-            text = value.compact(),
-            color = Gold,
-            fontFamily = FontPixel(),
-            fontWeight = FontWeight.Bold,
-            fontSize = 12.sp,
-            maxLines = 1
+        Box(
+            modifier = Modifier
+                .matchParentSize()
+                .padding(2.5.dp)
+                .border(1.5.dp, Gold.copy(alpha = 0.55f), CircleShape)
         )
+        OutlinedText(text = "‹", size = 26.sp, color = Gold, modifier = Modifier.offset(y = (-2).dp))
     }
 }
 
-/** Panel w stylu reszty gry - ciemna karta w zlotej ramce. */
+/** Licznik surowca: ikona nachodzi na ciemna pastylke z liczba - ten sam jezyk co gorny pasek gry. */
+@Composable
+internal fun ResourcePill(icon: String, value: Int, modifier: Modifier = Modifier, stretch: Boolean = false) {
+    Box(modifier = modifier, contentAlignment = Alignment.CenterStart) {
+        Box(
+            modifier = Modifier
+                .then(if (stretch) Modifier.fillMaxWidth() else Modifier)
+                .padding(start = 10.dp)
+                .clip(RoundedCornerShape(50))
+                .background(Color(0xE60C0806))
+                .border(1.5.dp, Outline, RoundedCornerShape(50))
+                .padding(start = 18.dp, end = 10.dp, top = 4.dp, bottom = 4.dp)
+        ) {
+            Text(
+                text = value.compact(),
+                color = Color.White,
+                fontFamily = FontFirst(),
+                fontWeight = FontWeight.Black,
+                fontSize = 13.sp,
+                maxLines = 1
+            )
+        }
+        Text(text = icon, fontSize = 18.sp)
+    }
+}
+
+/**
+ * Panel w stylu reszty gry: cieply ciemny gradient, gruby ciemny obrys i cienka zlota linia
+ * wewnatrz - daje "wypuklosc" drewnianej plyty zamiast plaskiej karty.
+ */
 @Composable
 internal fun TownPanel(
     modifier: Modifier = Modifier,
@@ -279,14 +292,20 @@ internal fun TownPanel(
     Box(
         modifier = modifier
             .clip(RoundedCornerShape(16.dp))
-            .background(AppPalette.Panel.copy(alpha = 0.88f))
-            .border(2.dp, GoldDim, RoundedCornerShape(16.dp))
+            .background(Brush.verticalGradient(listOf(Color(0xF0352519), Color(0xF01C130C))))
+            .border(2.5.dp, Outline, RoundedCornerShape(16.dp))
     ) {
+        Box(
+            modifier = Modifier
+                .matchParentSize()
+                .padding(2.5.dp)
+                .border(1.dp, Gold.copy(alpha = 0.3f), RoundedCornerShape(14.dp))
+        )
         content()
     }
 }
 
-/** Duzy przycisk akcji - podstawowy (zloty) albo poboczny (ciemny). */
+/** Duzy "tlusty" przycisk akcji - zielony (glowny), niebieski (poboczny) albo szary (nieaktywny). */
 @Composable
 internal fun TownActionButton(
     text: String,
@@ -296,48 +315,57 @@ internal fun TownActionButton(
     enabled: Boolean = true,
     onClick: () -> Unit
 ) {
-    val background = when {
-        !enabled -> Brush.verticalGradient(listOf(AppPalette.Panel, AppPalette.Panel))
-        primary -> Brush.verticalGradient(listOf(AppPalette.ActionBright, AppPalette.Action))
-        else -> Brush.verticalGradient(listOf(AppPalette.PanelRaised, AppPalette.Panel))
+    val colors = when {
+        !enabled -> listOf(Color(0xFF7D7468), Color(0xFF4F483F))
+        primary -> listOf(Color(0xFF8BE05A), Color(0xFF3F9E2B))
+        else -> listOf(Color(0xFF5BB8FF), Color(0xFF2C6FC4))
     }
-    Column(
+    Box(
         modifier = modifier
-            .clip(RoundedCornerShape(12.dp))
-            .background(background)
-            .border(2.dp, if (enabled) Gold else GoldDim.copy(alpha = 0.5f), RoundedCornerShape(12.dp))
-            .clickable(enabled = enabled, onClick = onClick)
-            .padding(vertical = 12.dp, horizontal = 10.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(2.dp)
+            .clip(RoundedCornerShape(14.dp))
+            .background(Brush.verticalGradient(colors))
+            .border(2.5.dp, Outline, RoundedCornerShape(14.dp))
+            .clickable(enabled = enabled, onClick = onClick),
+        contentAlignment = Alignment.Center
     ) {
-        Text(
-            text = text,
-            color = if (enabled) Color.White else Muted,
-            fontFamily = FontPixel(),
-            fontWeight = FontWeight.Bold,
-            fontSize = 14.sp,
-            textAlign = TextAlign.Center
+        // Jasny polysk na gornej polowie.
+        Box(
+            modifier = Modifier
+                .matchParentSize()
+                .padding(start = 5.dp, end = 5.dp, top = 4.dp)
+                .wrapContentHeight(Alignment.Top)
+                .height(10.dp)
+                .clip(RoundedCornerShape(50))
+                .background(Color.White.copy(alpha = if (enabled) 0.28f else 0.1f))
         )
-        subtitle?.let {
-            Text(
-                text = it,
-                color = if (enabled) Color.White.copy(alpha = 0.85f) else Muted,
-                fontFamily = FontFirst(),
-                fontSize = 10.sp,
-                textAlign = TextAlign.Center
-            )
+        Column(
+            modifier = Modifier.padding(vertical = 10.dp, horizontal = 10.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.spacedBy(1.dp)
+        ) {
+            OutlinedText(text = text, size = 17.sp, color = if (enabled) Color.White else Color(0xFFD8D0C4))
+            subtitle?.let {
+                Text(
+                    text = it,
+                    color = if (enabled) Color.White else Color(0xFFD8D0C4),
+                    fontFamily = FontFirst(),
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 11.sp,
+                    textAlign = TextAlign.Center
+                )
+            }
         }
     }
 }
 
-/** Pasek postepu z wypelnieniem animowanym plynnie - serce "idle feelingu". */
+/** Pasek postepu: gleboka rynna, wypelnienie z polyskiem, plynna animacja. */
 @Composable
 internal fun TownProgressBar(
     progress: Float,
     modifier: Modifier = Modifier,
     fill: Color = AppPalette.Success,
-    height: androidx.compose.ui.unit.Dp = 18.dp
+    height: androidx.compose.ui.unit.Dp = 18.dp,
+    label: String? = null
 ) {
     val animated by animateFloatAsState(
         targetValue = progress.coerceIn(0f, 1f),
@@ -349,30 +377,43 @@ internal fun TownProgressBar(
             .fillMaxWidth()
             .height(height)
             .clip(RoundedCornerShape(50))
-            .background(Ink)
-            .border(1.5.dp, GoldDim, RoundedCornerShape(50))
+            .background(Color(0xFF0B0704))
+            .border(2.dp, Outline, RoundedCornerShape(50)),
+        contentAlignment = Alignment.Center
     ) {
         Box(
             modifier = Modifier
+                .align(Alignment.CenterStart)
                 .fillMaxWidth(animated)
                 .fillMaxSize()
+                .padding(2.dp)
                 .clip(RoundedCornerShape(50))
-                .background(Brush.horizontalGradient(listOf(fill.copy(alpha = 0.75f), fill)))
-        )
+                .background(Brush.verticalGradient(listOf(fill.lighten(), fill, fill.copy(alpha = 0.85f))))
+        ) {
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .fillMaxHeight(0.4f)
+                    .padding(horizontal = 4.dp, vertical = 1.dp)
+                    .clip(RoundedCornerShape(50))
+                    .background(Color.White.copy(alpha = 0.3f))
+            )
+        }
+        label?.let { OutlinedText(text = it, size = 12.sp, color = Color.White, strokeWidth = 5f) }
     }
 }
 
-/** Etykieta sekcji w panelu. */
+private fun Color.lighten(): Color = Color(
+    red = red + (1f - red) * 0.35f,
+    green = green + (1f - green) * 0.35f,
+    blue = blue + (1f - blue) * 0.35f,
+    alpha = alpha
+)
+
+/** Etykieta sekcji w panelu - zloty napis z obrysem. */
 @Composable
 internal fun TownSectionLabel(text: String, modifier: Modifier = Modifier) {
-    Text(
-        text = text,
-        color = Gold,
-        fontFamily = FontPixel(),
-        fontWeight = FontWeight.Bold,
-        fontSize = 13.sp,
-        modifier = modifier
-    )
+    OutlinedText(text = text, size = 16.sp, color = Gold, modifier = modifier, strokeWidth = 5f)
 }
 
 /** 1234 -> "1.2K", zeby duze liczby idle nie rozpychaly UI. */

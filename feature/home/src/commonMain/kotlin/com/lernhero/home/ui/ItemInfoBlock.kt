@@ -56,9 +56,9 @@ fun ItemInfoBlock(
             if (showDescription && item.description.isNotBlank()) {
                 Text(
                     text = item.description,
-                    color = ParchmentPalette.InkMuted,
+                    color = androidx.compose.ui.graphics.Color(0xFFB8A888),
                     fontFamily = FontFirst(),
-                    fontSize = 10.sp,
+                    fontSize = 11.sp,
                     textAlign = TextAlign.Center
                 )
             }
@@ -73,10 +73,10 @@ fun ItemInfoBlock(
                     stats.entries.forEach { (stat, value) ->
                         Text(
                             text = "${stat.shortLabel()} ${stat.format(value)}",
-                            color = if (value > 0f) ParchmentPalette.Ink else Color_Negative,
-                            fontFamily = FontPixel(),
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 11.sp,
+                            color = if (value > 0f) androidx.compose.ui.graphics.Color(0xFF7BE06A) else Color_Negative,
+                            fontFamily = FontFirst(),
+                            fontWeight = FontWeight.Black,
+                            fontSize = 13.sp,
                             modifier = Modifier.padding(horizontal = 5.dp)
                         )
                     }
@@ -88,10 +88,10 @@ fun ItemInfoBlock(
             item.effects.forEach { effect ->
                 Text(
                     text = "✦ ${effect.description}",
-                    color = ParchmentPalette.Ink,
+                    color = androidx.compose.ui.graphics.Color(0xFFFFD34D),
                     fontFamily = FontFirst(),
                     fontWeight = FontWeight.Bold,
-                    fontSize = 10.sp,
+                    fontSize = 11.sp,
                     textAlign = TextAlign.Center
                 )
             }
@@ -102,7 +102,7 @@ fun ItemInfoBlock(
 /** Domyslny budzet miejsca na opis + staty + zdolnosci. Dobrany pod najbogatszy przedmiot w grze. */
 val ITEM_INFO_HEIGHT = 74.dp
 
-private val Color_Negative = androidx.compose.ui.graphics.Color(0xFF9E2B20)
+private val Color_Negative = androidx.compose.ui.graphics.Color(0xFFFF6B5B)
 
 /** Krotka etykieta statystyki - w warsztacie nie ma miejsca na "Critical damage". */
 internal fun StatType.shortLabel(): String = when (this) {

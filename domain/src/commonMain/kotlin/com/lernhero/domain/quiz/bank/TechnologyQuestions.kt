@@ -63,13 +63,6 @@ object TechnologyQuestions {
             difficulty = QuizDifficulty.Medium
         ),
         ask(
-            id = "bit_bajt",
-            prompt = "How many bits make up one byte?",
-            correct = "8",
-            wrong = listOf("4", "16", "10"),
-            difficulty = QuizDifficulty.Medium
-        ),
-        ask(
             id = "telefon_bell",
             prompt = "Who patented the telephone?",
             correct = "Alexander Graham Bell",
@@ -81,13 +74,6 @@ object TechnologyQuestions {
             prompt = "What is the HTML language used for?",
             correct = "Building web pages",
             wrong = listOf("Controlling robots", "Scientific calculations", "Creating databases"),
-            difficulty = QuizDifficulty.Medium
-        ),
-        ask(
-            id = "wifi",
-            prompt = "What is Wi-Fi used for?",
-            correct = "Wireless network connectivity",
-            wrong = listOf("Charging a phone", "Printing", "Measuring temperature"),
             difficulty = QuizDifficulty.Medium
         ),
 
@@ -107,20 +93,6 @@ object TechnologyQuestions {
             difficulty = QuizDifficulty.Hard
         ),
         ask(
-            id = "linux",
-            prompt = "Who created the Linux kernel?",
-            correct = "Linus Torvalds",
-            wrong = listOf("Bill Gates", "Steve Wozniak", "Dennis Ritchie"),
-            difficulty = QuizDifficulty.Hard
-        ),
-        ask(
-            id = "binarnie_10",
-            prompt = "How is the number 10 written in binary?",
-            correct = "1010",
-            wrong = listOf("1100", "1001", "1110"),
-            difficulty = QuizDifficulty.Hard
-        ),
-        ask(
             id = "pierwszy_program",
             prompt = "Who is regarded as the first programmer in history?",
             correct = "Ada Lovelace",
@@ -129,13 +101,6 @@ object TechnologyQuestions {
         ),
 
         /* ----------------------------- Expert ---------------------------- */
-        ask(
-            id = "arpanet",
-            prompt = "What was the network the internet grew out of called?",
-            correct = "ARPANET",
-            wrong = listOf("ETHERNET", "USENET", "TELENET"),
-            difficulty = QuizDifficulty.Expert
-        ),
         ask(
             id = "moore",
             prompt = "What does Moore's law concern?",

@@ -22,6 +22,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
       ) -> Bool {
           FirebaseApp.configure()
           TranslationBridge.install()
+          MonetizationBridge.install()
           return true
       }
 

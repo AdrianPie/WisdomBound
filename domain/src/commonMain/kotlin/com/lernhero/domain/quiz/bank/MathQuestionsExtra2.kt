@@ -25,7 +25,6 @@ object MathQuestionsExtra2 {
     val all: List<QuizEntry> = listOf(
 
         /* ------------------------------- Easy ------------------------------- */
-        ask("9x9", "What is 9 x 9?", "81", listOf("72", "90", "99"), QuizDifficulty.Easy),
         ask("6x11", "What is 6 x 11?", "66", listOf("60", "72", "56"), QuizDifficulty.Easy),
         ask("81_9", "What is 81 / 9?", "9", listOf("8", "7", "11"), QuizDifficulty.Easy),
         ask("200_45", "What is 200 - 45?", "155", listOf("145", "165", "150"), QuizDifficulty.Easy),
@@ -33,7 +32,6 @@ object MathQuestionsExtra2 {
         ask("boki_szescioakta", "How many sides does a hexagon have?", "Six", listOf("Five", "Seven", "Eight"), QuizDifficulty.Easy),
         ask("kat_polny_stopnie", "How many degrees is a straight angle?", "180", listOf("90", "360", "45"), QuizDifficulty.Easy),
         ask("procent_10_50", "What is 10% of 50?", "5", listOf("10", "15", "50"), QuizDifficulty.Easy),
-        ask("liczba_rzymska_v", "What number does the Roman numeral V represent?", "5", listOf("1", "10", "50"), QuizDifficulty.Easy),
         ask("liczba_rzymska_m", "What number does the Roman numeral M represent?", "1000", listOf("500", "100", "5000"), QuizDifficulty.Easy),
 
         /* ------------------------------ Medium ------------------------------ */
@@ -44,7 +42,6 @@ object MathQuestionsExtra2 {
         ask("pole_trapezu", "What is the formula for a trapezoid's area?", "(a + b) x h / 2", listOf("a x b", "(a + b) x h", "a x h / 2"), QuizDifficulty.Medium),
         ask("pierwiastek_144", "What is the square root of 144?", "12", listOf("11", "13", "14"), QuizDifficulty.Medium),
         ask("dwa_do_dziesiatej", "What is 2 to the power of 10?", "1024", listOf("512", "2048", "100"), QuizDifficulty.Medium),
-        ask("srednia_wazona_prosta", "What is the arithmetic mean of 10, 20 and 30?", "20", listOf("15", "25", "18"), QuizDifficulty.Medium),
         ask("kat_rozwarty", "What angle do we call obtuse?", "Greater than 90, less than 180 degrees", listOf("Smaller than 90 degrees, but not zero", "Exactly 90 degrees", "Exactly 180 degrees"), QuizDifficulty.Medium),
         ask("liczby_wzgledne_pierwsze", "Which pair of numbers is coprime (GCD=1)?", "8 and 9", listOf("6 and 9", "10 and 15", "12 and 18"), QuizDifficulty.Medium),
         ask("proporcja_prosta", "If 3 apples cost \$6, how much do 5 apples cost?", "\$10", listOf("\$8", "\$12", "\$15"), QuizDifficulty.Medium),

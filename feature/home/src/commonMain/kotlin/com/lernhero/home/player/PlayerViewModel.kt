@@ -1,5 +1,6 @@
 package com.lernhero.home.player
 
+import com.lernhero.domain.jewel.Jewels
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.lernhero.domain.repository.PlayerRepository
@@ -33,6 +34,15 @@ import com.lernhero.domain.monster.MonsterLevels
 import com.lernhero.domain.monster.MonsterSpellLevels
 import com.lernhero.domain.monster.MonsterStars
 import com.lernhero.domain.craft.CraftCost
+import com.lernhero.domain.energy.EnergyRules
+import com.lernhero.domain.monetization.Bundle
+import com.lernhero.domain.monetization.ChestOpening
+import com.lernhero.domain.monetization.EnergyRefill
+import com.lernhero.domain.monetization.PremiumLimits
+import com.lernhero.domain.monetization.ShopChest
+import com.lernhero.domain.monetization.SupplyDeal
+import com.lernhero.domain.monetization.TicketPack
+import com.lernhero.domain.energy.EnergyState
 import com.lernhero.domain.player.HeroStat
 import com.lernhero.domain.player.PlayerEquipment
 import com.lernhero.domain.player.HeroCombatStats
@@ -50,6 +60,13 @@ import com.lernhero.domain.progress.RunStats
 import com.lernhero.domain.notification.ReminderPlan
 import com.lernhero.domain.reading.SavedWord
 import com.lernhero.shared.notification.ReminderScheduler
+import com.lernhero.domain.monetization.AdRewards
+import com.lernhero.domain.monetization.DailyCounter
+import com.lernhero.reader.todayDateKey
+import com.lernhero.shared.monetization.AdOutcome
+import com.lernhero.shared.monetization.PurchaseOutcome
+import com.lernhero.shared.monetization.RewardedAction
+import com.lernhero.shared.monetization.SubscriptionService
 import com.lernhero.shared.prefs.AppPreferences
 import com.lernhero.shared.notification.nextLocalHourMillis
 import com.lernhero.domain.town.TownResources
@@ -63,9 +80,11 @@ import com.lernhero.game.character.KnightEquipment
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.IO
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 /**
  * Miejsca na kompanow obok bohatera. Cala druzyna to SZESC postaci, a bohater zajmuje jedno
@@ -162,12 +181,51 @@ data class PlayerUiState(
      * Postepu wiedzial, co jest do odebrania - patrz [Achievement.isClaimable].
      */
     val claimedAchievements: Set<String> = emptySet(),
+    /** Nieosadzone kamienie: id -> liczba sztuk. */
+    val jewels: Map<String, Int> = emptyMap(),
     /** Surowce miasta - potrzebne tu, bo Kuznia i Summon Center placa nimi, nie zlotem. */
     val resources: TownResources = TownResources(),
+    /**
+     * Energia na walki. Trzymamy STAN Z ZAPISU, nie przeliczona liczbe - ile jej jest w tej
+     * sekundzie, liczy [EnergyRules.regenerated] w chwili rysowania. Inaczej pasek stalby w
+     * miejscu az do nastepnego wczytania gracza.
+     */
+    val energy: EnergyState = EnergyState(),
     /** Fiszki zapisane w czytniku - surowiec pod endless "Wlasne" (patrz [com.lernhero.domain.quiz.WordQuizBank]). */
     val savedWords: List<SavedWord> = emptyList(),
     /** Poziomy opanowania tematow quizu - patrz [com.lernhero.domain.progress.CategoryMastery]. */
     val categoryLevels: CategoryLevels = CategoryLevels(),
+    /** Ile razy dzis odebrano zloto za reklame - patrz [AdRewards]. */
+    val adGold: DailyCounter = DailyCounter(),
+    val gems: Int = 0,
+    val legendPackClaimed: Boolean = false,
+    /** Cena Legend Packa ze sklepu; null = jeszcze nie wiadomo (pokazujemy cene zapasowa). */
+    val legendPackPrice: String? = null,
+    val buyingLegendPack: Boolean = false,
+    /** Ceny pakietow diamentow ze sklepu (productId -> cena); brak wpisu = cena zapasowa. */
+    val gemPackPrices: Map<String, String> = emptyMap(),
+    /** Pakiet, ktory wlasnie sie kupuje - jego przycisk pokazuje "..." i nie da sie kliknac drugi raz. */
+    val buyingGemPack: String? = null,
+    val shopChestAds: com.lernhero.domain.monetization.ShopChestAds = com.lernhero.domain.monetization.ShopChestAds(),
+    /** Epickie skrzynie od ostatniej legendy - karta skrzyni pokazuje z tego odliczanie do gwarancji. */
+    val epicChestPity: Int = 0,
+    /** Pakiety diamentow kupione choc raz - reszta ma plakietke "x2". */
+    val gemPacksBought: List<String> = emptyList(),
+    /** Dzienne liczniki zakupow za diamenty (np. doladowania energii). */
+    val gemDeals: Map<String, DailyCounter> = emptyMap(),
+    /** Dzien ostatniego odbioru diamentow Premium ("yyyy-MM-dd"), pusty = nigdy. */
+    val premiumGemsDay: String = "",
+    /** Gracz chcial walczyc bez energii - ekran pokazuje okno doladowania. */
+    val energyPrompt: Boolean = false,
+    /** Zakladka, na ktorej ma sie otworzyc sklep (np. "+" przy zlocie) - sklep ja zjada przy wejsciu. */
+    val requestedShopTab: String? = null,
+    /** Reklama wlasnie leci - przycisk ma sie nie dac kliknac drugi raz. */
+    val watchingAd: Boolean = false,
+    /** Ostatnio wyplacone zloto za reklame + licznik wyplat, zeby efekt monet odpalal sie przy kazdej. */
+    val lastAdReward: Int = 0,
+    val adRewardPulse: Int = 0,
+    /** Krotki komunikat pod przyciskiem reklamy na ekranie Domu (osobno od [message], ktory czytaja inne ekrany). */
+    val adNote: String? = null,
     val message: String? = null
 ) {
     /**
@@ -238,7 +296,7 @@ data class PlayerUiState(
     /** Czy to miejsce jest juz otwarte poziomem bohatera - patrz [PartySlots]. */
     fun isSlotUnlocked(slotIndex: Int): Boolean = PartySlots.isUnlocked(slotIndex, progress.level)
 
-    /** Poziom, ktory otwiera to miejsce - na klodce w [com.lernhero.home.team.TeamPanel]. */
+    /** Poziom, ktory otwiera to miejsce - na klodce w [com.lernhero.home.fight.PartySheet]. */
     fun levelForSlot(slotIndex: Int): Int = PartySlots.requiredLevel(slotIndex)
 
     /** Czy jest gdzie postawic kolejnego kompana - liczone TYLKO po otwartych miejscach. */
@@ -296,11 +354,18 @@ data class PlayerUiState(
 class PlayerViewModel(
     private val playerRepository: PlayerRepository,
     private val reminders: ReminderScheduler,
-    private val preferences: AppPreferences
+    private val preferences: AppPreferences,
+    private val subscription: SubscriptionService,
+    private val rewardedAction: RewardedAction,
+    private val oneTime: com.lernhero.shared.monetization.OneTimePurchases
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(PlayerUiState())
     val uiState = _uiState.asStateFlow()
+
+    /** Subskrypcja premium - sklep i przycisk reklamy pokazuja po niej inny stan. */
+    val isPremium: StateFlow<Boolean> get() = subscription.isPremium
+    val subscriptionService: SubscriptionService get() = subscription
 
     /**
      * Ostatnio wczytany gracz - trzymany WYLACZNIE po to, zeby dalo sie przeliczyc przypomnienia
@@ -345,15 +410,330 @@ class PlayerViewModel(
                         progress = player.progress,
                         stats = player.stats,
                         claimedAchievements = player.claimedAchievements.toSet(),
+                        jewels = player.jewels,
                         resources = player.townResources,
+                        energy = player.energy,
                         savedWords = player.savedWords,
-                        categoryLevels = CategoryLevels(player.categoryLevels)
+                        categoryLevels = CategoryLevels(player.categoryLevels),
+                        adGold = player.adGold,
+                        gems = player.gems,
+                        shopChestAds = player.shopChestAds,
+                        legendPackClaimed = player.legendPackClaimed,
+                        epicChestPity = player.epicChestPity,
+                        gemPacksBought = player.gemPacksBought,
+                        gemDeals = player.gemDeals,
+                        premiumGemsDay = player.dailyGoalClaims[PremiumLimits.DAILY_GEMS_CLAIM_ID].orEmpty()
                     )
                 }
             }
             if (player != null) {
                 lastPlayer = player
                 rescheduleReminders(player)
+                // Zakupy w RevenueCat ida za kontem, nie za urzadzeniem - bez tego subskrypcja
+                // kupiona na telefonie nie bylaby widoczna na tablecie tego samego gracza.
+                subscription.identify(playerRepository.getUserId())
+            }
+        }
+    }
+
+    /**
+     * Zloto za reklame z ekranu Domu. Subskrybent dostaje je bez reklamy (patrz [RewardedAction]).
+     * Limit dzienny pilnuje repozytorium - tutaj sprawdzamy go tylko po to, zeby nie puszczac
+     * reklamy, za ktora i tak nic by sie nie nalezalo.
+     */
+    fun watchAdForGold() {
+        val state = _uiState.value
+        if (state.watchingAd) return
+        val today = todayDateKey()
+        if (state.adGold.remainingOn(today, AdRewards.GOLD_ADS_PER_DAY) <= 0) {
+            _uiState.update { it.copy(adNote = "That's all the free gold for today - come back tomorrow.") }
+            return
+        }
+        _uiState.update { it.copy(watchingAd = true, adNote = null) }
+        viewModelScope.launch {
+            val outcome = rewardedAction.earn()
+            if (outcome != AdOutcome.Rewarded) {
+                _uiState.update {
+                    it.copy(
+                        watchingAd = false,
+                        adNote = if (outcome == AdOutcome.Skipped) {
+                            "Watch the ad to the end to get the gold."
+                        } else {
+                            "No ad available right now - try again in a moment."
+                        }
+                    )
+                }
+                return@launch
+            }
+            val reward = AdRewards.goldFor(_uiState.value.progress.level)
+            val updated = withContext(Dispatchers.IO) {
+                playerRepository.claimAdGold(today, AdRewards.GOLD_ADS_PER_DAY, reward)
+            }
+            _uiState.update { current ->
+                if (updated == null) {
+                    current.copy(watchingAd = false, adNote = "Couldn't save the reward - try again.")
+                } else {
+                    lastPlayer = updated
+                    current.copy(
+                        watchingAd = false,
+                        money = updated.money,
+                        adGold = updated.adGold,
+                        lastAdReward = reward,
+                        adRewardPulse = current.adRewardPulse + 1,
+                        adNote = "+$reward gold!"
+                    )
+                }
+            }
+        }
+    }
+
+    /**
+     * Placi za skrzynie ze sklepu - reklama albo diamenty. [onPaid] dostaje wylosowane pole
+     * dopiero PO zapisie platnosci, wiec przerwana reklama czy brak diamentow niczego nie otwiera.
+     */
+    /**
+     * Otwarcie skrzyni ze sklepu. Zawartosc losuje sie TUTAJ ([ShopChest.open]) i zapisuje razem
+     * z zaplata w jednym kroku - animacja dostaje gotowy wynik ([onOpened]) i niczego juz nie
+     * przyznaje, wiec zamkniecie aplikacji w trakcie otwierania nie zabiera nagrody.
+     */
+    fun openShopChest(
+        chest: ShopChest,
+        withAd: Boolean,
+        onOpened: (ChestOpening) -> Unit
+    ) {
+        val state = _uiState.value
+        if (state.watchingAd) return
+        val today = todayDateKey()
+        val now = Clock.System.now().toEpochMilliseconds()
+        if (withAd && !state.shopChestAds.canWatch(chest, today, now)) return
+        if (!withAd && state.gems < chest.gemCost) {
+            _uiState.update { it.copy(message = "Not enough gems") }
+            return
+        }
+        _uiState.update { it.copy(watchingAd = withAd) }
+        viewModelScope.launch {
+            if (withAd) {
+                val outcome = rewardedAction.earn()
+                if (outcome != AdOutcome.Rewarded) {
+                    _uiState.update {
+                        it.copy(
+                            watchingAd = false,
+                            message = if (outcome == AdOutcome.Skipped) "Watch the ad to the end to open the chest."
+                            else "No ad available right now - try again in a moment."
+                        )
+                    }
+                    return@launch
+                }
+            }
+            val opening = chest.open(state.progress.level, _uiState.value.epicChestPity, kotlin.random.Random.Default)
+            val updated = withContext(Dispatchers.IO) {
+                playerRepository.openShopChest(opening, withAd, today, now)
+            }
+            if (updated == null) {
+                _uiState.update { it.copy(watchingAd = false, message = "Couldn't open the chest - try again.") }
+                return@launch
+            }
+            applyPurchase(updated)
+            _uiState.update { it.copy(watchingAd = false, message = null) }
+            onOpened(opening)
+        }
+    }
+
+    /** Po kazdym zakupie: wszystko, co zakup mogl zmienic, przepisane z zapisu. */
+    private fun applyPurchase(updated: Player) {
+        lastPlayer = updated
+        _uiState.update {
+            it.copy(
+                money = updated.money,
+                gems = updated.gems,
+                resources = updated.townResources,
+                heroBag = updated.heroBag(),
+                energy = updated.energy,
+                shopChestAds = updated.shopChestAds,
+                epicChestPity = updated.epicChestPity,
+                gemPacksBought = updated.gemPacksBought,
+                gemDeals = updated.gemDeals,
+                legendPackClaimed = updated.legendPackClaimed,
+                premiumGemsDay = updated.dailyGoalClaims[PremiumLimits.DAILY_GEMS_CLAIM_ID].orEmpty()
+            )
+        }
+    }
+
+    /**
+     * Zakup za diamenty z pewna zawartoscia (paczka zlota, losy, doladowanie). [onGranted] dostaje
+     * to, co doszlo - ekran robi z tego efekt nagrody.
+     */
+    private fun spendGems(
+        gems: Int,
+        bundle: Bundle,
+        dealId: String? = null,
+        maxPerDay: Int = 0,
+        onGranted: (Bundle) -> Unit
+    ) {
+        if (_uiState.value.gems < gems) {
+            _uiState.update { it.copy(message = "Not enough gems") }
+            return
+        }
+        val today = todayDateKey()
+        val now = Clock.System.now().toEpochMilliseconds()
+        viewModelScope.launch {
+            val updated = withContext(Dispatchers.IO) {
+                playerRepository.spendGems(gems, bundle, now, dealId, today, maxPerDay)
+            }
+            if (updated == null) {
+                _uiState.update { it.copy(message = "Purchase failed - try again.") }
+                return@launch
+            }
+            applyPurchase(updated)
+            _uiState.update { it.copy(message = null) }
+            onGranted(bundle)
+        }
+    }
+
+    fun buySupply(deal: SupplyDeal, onGranted: (Bundle) -> Unit) =
+        spendGems(deal.gems, deal.bundleFor(_uiState.value.progress.level), onGranted = onGranted)
+
+    /** Ile doladowan energii kupiono dzis - od tego zalezy cena kolejnego. */
+    fun energyRefillsToday(): Int =
+        _uiState.value.gemDeals[EnergyRefill.DEAL_ID]?.countOn(todayDateKey()) ?: 0
+
+    fun buyEnergyRefill(onGranted: (Bundle) -> Unit) {
+        val price = EnergyRefill.priceFor(energyRefillsToday()) ?: run {
+            _uiState.update { it.copy(message = "No more refills today - energy comes back on its own.") }
+            return
+        }
+        spendGems(
+            gems = price,
+            bundle = Bundle(energy = EnergyRefill.AMOUNT),
+            dealId = EnergyRefill.DEAL_ID,
+            maxPerDay = EnergyRefill.MAX_PER_DAY
+        ) {
+            _uiState.update { s -> s.copy(energyPrompt = false) }
+            onGranted(it)
+        }
+    }
+
+    fun showEnergyRefill() = _uiState.update { it.copy(energyPrompt = true) }
+
+    fun dismissEnergyRefill() = _uiState.update { it.copy(energyPrompt = false) }
+
+    /** Sklep ma sie otworzyc na konkretnej zakladce - patrz [PlayerUiState.requestedShopTab]. */
+    fun requestShopTab(tab: String) = _uiState.update { it.copy(requestedShopTab = tab) }
+
+    fun consumeShopTab() = _uiState.update { it.copy(requestedShopTab = null) }
+
+    /** Codzienne diamenty Premium. Czy wolno dzis - pilnuje zapis; tutaj tylko czy to subskrybent. */
+    fun claimPremiumGems(onGranted: (Int) -> Unit) {
+        if (!subscription.isPremium.value) return
+        val today = todayDateKey()
+        if (_uiState.value.premiumGemsDay == today) return
+        viewModelScope.launch {
+            val updated = withContext(Dispatchers.IO) { playerRepository.claimPremiumGems(today) } ?: return@launch
+            applyPurchase(updated)
+            onGranted(PremiumLimits.DAILY_GEMS)
+        }
+    }
+
+    /** Cena ze sklepu + przywrocenie: kupiony, ale niewydany pakiet (np. po reinstalacji) wydaje sie tutaj. */
+    fun refreshLegendPack() {
+        viewModelScope.launch {
+            val pack = com.lernhero.domain.monetization.LegendPack
+            val price = oneTime.price(pack.PRODUCT_ID)
+            val gemPrices = com.lernhero.domain.monetization.GemPack.entries
+                .mapNotNull { gp -> oneTime.price(gp.productId)?.let { gp.productId to it } }
+                .toMap()
+            _uiState.update { it.copy(legendPackPrice = price, gemPackPrices = gemPrices) }
+            if (!_uiState.value.legendPackClaimed && oneTime.owns(pack.PRODUCT_ID)) grantLegendPack()
+        }
+    }
+
+    /** Zakup Legend Packa. [onGranted] odpala sie po zapisaniu nagrod - ekran pokazuje wtedy efekt. */
+    fun buyLegendPack(onGranted: () -> Unit) {
+        val state = _uiState.value
+        if (state.legendPackClaimed || state.buyingLegendPack) return
+        _uiState.update { it.copy(buyingLegendPack = true) }
+        viewModelScope.launch {
+            val outcome = oneTime.buy(com.lernhero.domain.monetization.LegendPack.PRODUCT_ID)
+            when (outcome) {
+                PurchaseOutcome.Success -> if (grantLegendPack()) onGranted()
+                PurchaseOutcome.Cancelled -> Unit
+                is PurchaseOutcome.Failed -> _uiState.update { it.copy(message = outcome.reason) }
+            }
+            _uiState.update { it.copy(buyingLegendPack = false) }
+        }
+    }
+
+    /**
+     * Zakup pakietu diamentow. Diamenty dopisujemy dopiero po potwierdzeniu ze sklepu, a
+     * [onGranted] dostaje ich liczbe - ekran pokazuje wtedy efekt wyplaty.
+     */
+    fun buyGemPack(pack: com.lernhero.domain.monetization.GemPack, onGranted: (Int) -> Unit) {
+        if (_uiState.value.buyingGemPack != null) return
+        _uiState.update { it.copy(buyingGemPack = pack.productId) }
+        viewModelScope.launch {
+            when (val outcome = oneTime.buy(pack.productId)) {
+                PurchaseOutcome.Success -> {
+                    val before = _uiState.value.gems
+                    val updated = withContext(Dispatchers.IO) { playerRepository.grantGemPack(pack) }
+                    if (updated != null) {
+                        applyPurchase(updated)
+                        onGranted(updated.gems - before)
+                    } else {
+                        _uiState.update { it.copy(message = "Purchase went through but saving failed - restart the app.") }
+                    }
+                }
+                PurchaseOutcome.Cancelled -> Unit
+                is PurchaseOutcome.Failed -> _uiState.update { it.copy(message = outcome.reason) }
+            }
+            _uiState.update { it.copy(buyingGemPack = null) }
+        }
+    }
+
+    /** Losy za diamenty. [onGranted] dostaje liczbe losow po udanym zapisie. */
+    fun buyTicketPack(pack: TicketPack, onGranted: (Int) -> Unit) =
+        spendGems(pack.gems, Bundle(tickets = pack.tickets)) { onGranted(pack.tickets) }
+
+    private suspend fun grantLegendPack(): Boolean {
+        val updated = withContext(Dispatchers.IO) { playerRepository.claimLegendPack() } ?: return false
+        lastPlayer = updated
+        _uiState.update {
+            it.copy(
+                gems = updated.gems,
+                legendPackClaimed = updated.legendPackClaimed,
+                heroBag = updated.heroBag(),
+                resources = updated.townResources
+            )
+        }
+        return true
+    }
+
+    fun clearAdNote() {
+        _uiState.update { it.copy(adNote = null) }
+    }
+
+    /**
+     * Placi energia za wejscie do walki. [onGranted] odpala sie TYLKO wtedy, gdy zaplacono -
+     * nawigacja do bitwy wisi na tym wywolaniu, wiec brak energii po prostu nigdzie nie prowadzi.
+     *
+     * Stan lokalny schodzi OD RAZU, jeszcze przed odpowiedzia bazy: gracz ma zobaczyc, ze pasek
+     * spadl, w tej samej klatce, w ktorej wchodzi do walki. Gdy zapis sie nie powiedzie,
+     * [refresh] przywroci prawde z serwera.
+     */
+    fun enterBattle(onGranted: () -> Unit) {
+        val now = Clock.System.now().toEpochMilliseconds()
+        val paid = EnergyRules.spend(_uiState.value.energy, now, EnergyRules.BATTLE_COST)
+        if (paid == null) {
+            // Zamiast martwego komunikatu - okno doladowania (diamenty) z odliczaniem do darmowej energii.
+            _uiState.update { it.copy(message = "Not enough energy for a battle.", energyPrompt = true) }
+            return
+        }
+        _uiState.update { it.copy(energy = paid, message = null) }
+        onGranted()
+        viewModelScope.launch(Dispatchers.IO) {
+            val player = playerRepository.spendEnergy(EnergyRules.BATTLE_COST, now)
+            if (player != null) {
+                lastPlayer = player
+                _uiState.update { it.copy(energy = player.energy) }
             }
         }
     }
@@ -947,14 +1327,44 @@ class PlayerViewModel(
      * zapisanych statystyk), wiec tapniecie w przycisk, ktory akurat nie powinien byc aktywny,
      * po prostu nic nie robi zamiast wyplacac drugi raz.
      */
+    fun socketJewel(instance: ItemInstance, jewelId: String) =
+        applyJewelChange("Could not socket that jewel.") { playerRepository.socketJewel(instance.uid, jewelId) }
+
+    fun unsocketJewel(instance: ItemInstance, index: Int) =
+        applyJewelChange("Could not remove that jewel.") { playerRepository.unsocketJewel(instance.uid, index) }
+
+    fun combineJewels(jewelId: String) =
+        applyJewelChange("You need ${Jewels.COMBINE_COUNT} of the same jewel.") { playerRepository.combineJewels(jewelId) }
+
+    private fun applyJewelChange(failure: String, change: suspend () -> Player?) {
+        viewModelScope.launch(Dispatchers.IO) {
+            val updated = change()
+            _uiState.update { current ->
+                if (updated == null) {
+                    current.copy(message = failure)
+                } else {
+                    current.copy(
+                        jewels = updated.jewels,
+                        heroBag = updated.heroBag(),
+                        monsterBag = updated.monsterBag(),
+                        message = null
+                    )
+                }
+            }
+        }
+    }
+
     fun claimAchievement(achievement: Achievement) {
         viewModelScope.launch(Dispatchers.IO) {
             val updated = playerRepository.claimAchievement(achievement.id) ?: return@launch
             _uiState.update {
                 it.copy(
                     money = updated.money,
+                    gems = updated.gems,
                     claimedAchievements = updated.claimedAchievements.toSet(),
-                    message = "${achievement.title}: +${achievement.reward} gold"
+                    jewels = updated.jewels,
+                    message = "${achievement.title}: +${achievement.reward} gold, +${achievement.gems} gems" +
+                        (achievement.jewel?.let { jewel -> ", ${jewel.name}" } ?: "")
                 )
             }
         }
@@ -1010,11 +1420,13 @@ class PlayerViewModel(
                 iron = 2_000,
                 essence = 2_000,
                 tickets = 50,
-                xp = 5_000
+                xp = 5_000,
+                gems = 2_000
             ) ?: return@launch
             _uiState.update {
                 it.copy(
                     money = updated.money,
+                    gems = updated.gems,
                     progress = updated.progress,
                     resources = updated.townResources,
                     message = "DEV: resources granted"

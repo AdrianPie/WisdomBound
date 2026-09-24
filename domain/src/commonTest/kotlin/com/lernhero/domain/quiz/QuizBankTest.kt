@@ -16,7 +16,10 @@ class QuizBankTest {
 
     @Test
     fun `bank ma duzo pytan w kazdej kategorii i na kazdym poziomie`() {
-        assertTrue(all.size >= 2400, "Bank powinien miec ponad 2400 pytan, ma ${all.size}")
+        // Prog zszedl z 2400 po przegladzie banku: wyciete ~370 pozycji to glownie TEN SAM fakt
+        // zapisany kilka razy (gracz odbieral je jako powtorki), wiec liczba spadla, a roznorodnosc
+        // nie. Glebi tematow pilnuje osobny test ponizej i on swoich progow nie obnizyl.
+        assertTrue(all.size >= 2200, "Bank powinien miec ponad 2200 pytan, ma ${all.size}")
 
         // Slowka i wlasne talie nie sa w tym banku - powstaja z materialu gracza (patrz QuizCategory.builtin).
         // Flagi sa ograniczone liczba dostepnych grafik krajow, wiec maja nizszy prog.

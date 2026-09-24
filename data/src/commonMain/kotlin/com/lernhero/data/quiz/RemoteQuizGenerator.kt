@@ -65,6 +65,8 @@ class RemoteQuizGenerator(
         }
 
         return when {
+            response.status == HttpStatusCode.PaymentRequired -> QuizGenerationResult.SubscriptionRequired
+
             response.status == HttpStatusCode.TooManyRequests ->
                 try {
                     response.body<QuizGenerationResult.QuotaExceeded>()

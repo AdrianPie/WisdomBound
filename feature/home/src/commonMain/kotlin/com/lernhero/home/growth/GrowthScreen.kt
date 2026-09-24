@@ -20,6 +20,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -47,7 +48,8 @@ private enum class GrowthTab(val label: String, val icon: String) {
 @Composable
 fun GrowthScreen(
     tabInsets: PaddingValues,
-    onOpenVocabulary: () -> Unit
+    onOpenVocabulary: () -> Unit,
+    onRewardClaimed: () -> Unit = {}
 ) {
     var tab by remember { mutableStateOf(GrowthTab.Books) }
     val immersive = ReaderChrome.immersive
@@ -73,7 +75,8 @@ fun GrowthScreen(
             when (tab) {
                 GrowthTab.Books -> ReadingScreen(
                     libraryInsets = contentInsets,
-                    onOpenVocabulary = onOpenVocabulary
+                    onOpenVocabulary = onOpenVocabulary,
+                    onRewardClaimed = onRewardClaimed
                 )
                 GrowthTab.Training -> FitnessScreen(insets = contentInsets)
             }
@@ -98,27 +101,27 @@ private fun GrowthTabBar(
                     .weight(1f)
                     .clip(RoundedCornerShape(12.dp))
                     .background(
-                        if (isSelected) AppPalette.Panel.copy(alpha = 0.7f)
-                        else AppPalette.Ink.copy(alpha = 0.45f)
+                        if (isSelected) androidx.compose.ui.graphics.Brush.verticalGradient(listOf(Color(0xFF5BB8FF), Color(0xFF2C7BD6)))
+                        else androidx.compose.ui.graphics.Brush.verticalGradient(listOf(Color(0xFFE9D6B4), Color(0xFFC9AE84)))
                     )
-                    .border(
-                        width = if (isSelected) 2.dp else 1.dp,
-                        color = if (isSelected) AppPalette.Gold else AppPalette.GoldDim.copy(alpha = 0.5f),
-                        shape = RoundedCornerShape(12.dp)
-                    )
+                    .border(2.5.dp, if (isSelected) Color(0xFF123A6B) else Color(0xFF6B4A24), RoundedCornerShape(12.dp))
                     .clickable { onSelect(entry) }
                     .padding(vertical = 9.dp),
                 horizontalArrangement = Arrangement.Center,
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Text(text = entry.icon, fontSize = 13.sp)
-                Text(
-                    text = "  ${entry.label}",
-                    color = if (isSelected) AppPalette.Gold else AppPalette.TextMuted,
-                    fontFamily = FontFirst(),
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 12.sp
-                )
+                Text(text = entry.icon, fontSize = 15.sp)
+                if (isSelected) {
+                    com.lernhero.home.ui.OutlinedText(text = "  ${entry.label}", size = 14.sp, color = Color.White, strokeWidth = 5f)
+                } else {
+                    Text(
+                        text = "  ${entry.label}",
+                        color = Color(0xFF4A3218),
+                        fontFamily = FontFirst(),
+                        fontWeight = FontWeight.Black,
+                        fontSize = 14.sp
+                    )
+                }
             }
         }
     }

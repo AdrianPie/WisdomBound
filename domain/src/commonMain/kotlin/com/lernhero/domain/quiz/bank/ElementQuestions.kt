@@ -75,13 +75,6 @@ object ElementQuestions {
         symbol("N", "Nitrogen", listOf("Neon", "Nickel", "Sodium"), QuizDifficulty.Medium),
         symbol("S", "Sulfur", listOf("Sodium", "Selenium", "Silicon"), QuizDifficulty.Medium),
         ask(
-            id = "liczba_1",
-            prompt = "Which element has atomic number 1?",
-            correct = "Hydrogen",
-            wrong = listOf("Helium", "Carbon", "Oxygen"),
-            difficulty = QuizDifficulty.Medium
-        ),
-        ask(
             id = "co2",
             prompt = "Which gas do we exhale from the lungs after cellular respiration?",
             correct = "Carbon dioxide",
@@ -142,12 +135,5 @@ object ElementQuestions {
             wrong = listOf("Nitrogen", "Methane", "Hydrogen"),
             difficulty = QuizDifficulty.Expert
         ),
-        ask(
-            id = "twardy",
-            prompt = "Which form of carbon is the hardest natural mineral?",
-            correct = "Diamond",
-            wrong = listOf("Graphite", "Fullerene", "Charcoal"),
-            difficulty = QuizDifficulty.Expert
-        )
     )
 }

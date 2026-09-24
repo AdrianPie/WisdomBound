@@ -17,6 +17,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -96,7 +97,19 @@ internal fun TurnImpactOverlay(
         stage = 3
     }
 
-    Box(modifier = modifier, contentAlignment = Alignment.Center) {
+    Box(modifier = modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+        // Przyciemnienie CALEJ areny pod karta. Bez niego rozliczenie konkurowalo o wzrok z tlem
+        // krainy, paskami zycia i postaciami - i przegrywalo: to jest ta jedna chwila w turze,
+        // w ktorej gracz ma zobaczyc, co zrobila jego odpowiedz, wiec reszta ma na nia poczekac.
+        val scrim by animateFloatAsState(
+            targetValue = if (visible) SCRIM_ALPHA else 0f,
+            animationSpec = tween(BattleSpeed.scale(220)),
+            label = "impactScrim"
+        )
+        if (scrim > 0.01f) {
+            Box(modifier = Modifier.fillMaxSize().background(Color.Black.copy(alpha = scrim)))
+        }
+
         AnimatedVisibility(
             visible = visible,
             enter = fadeIn(tween(BattleSpeed.scale(140))) +
@@ -106,11 +119,14 @@ internal fun TurnImpactOverlay(
         ) {
             Column(
                 modifier = Modifier
-                    .widthIn(max = 300.dp)
-                    .clip(RoundedCornerShape(16.dp))
-                    .background(Ink.copy(alpha = 0.94f))
-                    .border(2.5.dp, accent.copy(alpha = 0.9f), RoundedCornerShape(16.dp))
-                    .padding(horizontal = 18.dp, vertical = 14.dp),
+                    // Margines karty siedzi TUTAJ, a nie na calej nakladce - przyciemnienie ma
+                    // siegac krawedzi ekranu, inaczej po bokach zostaja dwa jasne paski.
+                    .padding(horizontal = 16.dp)
+                    .widthIn(max = 340.dp)
+                    .clip(RoundedCornerShape(18.dp))
+                    .background(Ink.copy(alpha = 0.96f))
+                    .border(3.dp, accent, RoundedCornerShape(18.dp))
+                    .padding(horizontal = 20.dp, vertical = 16.dp),
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.spacedBy(9.dp)
             ) {
@@ -129,6 +145,22 @@ internal fun TurnImpactOverlay(
                         slideInVertically(tween(BattleSpeed.scale(240), easing = EaseOutCubic)) { it / 3 }
                 ) {
                     AttackEquation(entry = entry, accent = accent)
+                }
+
+                // Jedno zdanie po ludzku, pod rownaniem: liczby mowia ILE, a to mowi CO z tego
+                // wynika. Bez niego caly overlay czytalo sie jak paragon, a nie jak skutek.
+                AnimatedVisibility(
+                    visible = stage >= 3,
+                    enter = fadeIn(tween(BattleSpeed.scale(240)))
+                ) {
+                    Text(
+                        text = meaningOf(entry),
+                        color = accent,
+                        fontFamily = FontFirst(),
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 12.sp,
+                        textAlign = TextAlign.Center
+                    )
                 }
 
                 if (entry.ultiTriggered) {
@@ -172,7 +204,7 @@ private fun VerdictLine(correct: Boolean, accent: Color, seconds: Float) {
             color = accent,
             fontFamily = FontPixel(),
             fontWeight = FontWeight.Bold,
-            fontSize = 22.sp
+            fontSize = 26.sp
         )
         Text(
             text = if (correct) "answered in ${seconds.oneDecimal()}s" else "your volley lands weaker",
@@ -299,7 +331,7 @@ private fun AttackEquation(entry: TurnOutcome, accent: Color) {
                 color = accent,
                 fontFamily = FontPixel(),
                 fontWeight = FontWeight.Bold,
-                fontSize = 26.sp,
+                fontSize = 34.sp,
                 modifier = Modifier.scale(1f + 0.12f * (1f - progress))
             )
             Text(
@@ -307,7 +339,7 @@ private fun AttackEquation(entry: TurnOutcome, accent: Color) {
                 color = accent,
                 fontFamily = FontFirst(),
                 fontWeight = FontWeight.Bold,
-                fontSize = 12.sp
+                fontSize = 15.sp
             )
         }
 
@@ -328,14 +360,14 @@ private fun ImpactBar(ratio: Float, progress: Float, accent: Color) {
     Box(
         modifier = Modifier
             .fillMaxWidth()
-            .height(9.dp)
+            .height(12.dp)
             .clip(RoundedCornerShape(5.dp))
             .background(Color.White.copy(alpha = 0.10f))
     ) {
         Box(
             modifier = Modifier
                 .fillMaxWidth(filled)
-                .height(9.dp)
+                .height(12.dp)
                 .clip(RoundedCornerShape(5.dp))
                 .background(Brush.horizontalGradient(listOf(accent.copy(alpha = 0.65f), accent)))
         )
@@ -343,13 +375,13 @@ private fun ImpactBar(ratio: Float, progress: Float, accent: Color) {
         Box(
             modifier = Modifier
                 .fillMaxWidth(baseFraction)
-                .height(9.dp),
+                .height(12.dp),
             contentAlignment = Alignment.CenterEnd
         ) {
             Box(
                 modifier = Modifier
                     .width(2.dp)
-                    .height(9.dp)
+                    .height(12.dp)
                     .background(Color.White.copy(alpha = 0.55f))
             )
         }
@@ -374,11 +406,35 @@ private fun Float.oneDecimal(): String {
     return "${scaled / 10}.${scaled % 10}"
 }
 
-/** Odstep miedzy kolejnymi etapami wchodzacymi na karte (werdykt -> zetony -> rownanie). */
-private const val STAGE_GAP_MILLIS = 420L
+/**
+ * Skutek odpowiedzi jednym zdaniem - to, co gracz ma z karty zapamietac, gdy juz nie patrzy na
+ * procenty. Kara za pudlo jest DWUCZLONOWA (slabsza salwa + mocniejsi wrogowie) i tylko tutaj widac
+ * oba czlony naraz.
+ */
+private fun meaningOf(entry: TurnOutcome): String {
+    val delta = entry.attackDeltaPercent
+    return when {
+        !entry.correct -> "Weaker volley, and enemies hit +${enemyBonusPercent()}% this turn"
+        delta > 0 -> "Your team hits $delta% harder this turn"
+        delta < 0 -> "Your team hits ${-delta}% weaker this turn"
+        else -> "Your volley lands at full strength"
+    }
+}
+
+/**
+ * Odstep miedzy kolejnymi etapami wchodzacymi na karte (werdykt -> zetony -> rownanie).
+ *
+ * Etapy razem z licznikiem musza zmiescic sie w takcie [TurnPhase.Impact] - gdy ten czas rosnie
+ * albo maleje, te dwie stale ida za nim, inaczej karta albo urywa sie w polowie liczenia, albo stoi
+ * gotowa i tylko czeka.
+ */
+private const val STAGE_GAP_MILLIS = 520L
 
 /** Ile trwa doliczanie sie liczby ataku do wartosci koncowej. */
-private const val COUNTER_MILLIS = 900
+private const val COUNTER_MILLIS = 1100
+
+/** Jak mocno arena gasnie pod karta rozliczenia. */
+private const val SCRIM_ALPHA = 0.62f
 
 /**
  * Gorna granica skali paska: najmocniejsza mozliwa salwa to ~1.5 (pasek czasu) x 1.35 (passa) ~ 2.0.

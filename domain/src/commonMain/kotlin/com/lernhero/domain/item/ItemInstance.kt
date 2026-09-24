@@ -2,6 +2,9 @@ package com.lernhero.domain.item
 
 import com.lernhero.domain.craft.ItemUpgrades
 import com.lernhero.domain.item.catalog.MonsterGear
+import com.lernhero.domain.jewel.Jewel
+import com.lernhero.domain.jewel.Jewels
+import com.lernhero.domain.jewel.Sockets
 import kotlinx.serialization.Serializable
 
 /**
@@ -27,7 +30,9 @@ data class ItemInstance(
     /** Wpis w katalogu ([ItemCatalog] albo [com.lernhero.domain.item.catalog.MonsterGear]). */
     val itemId: String,
     /** Poziom ulepszenia TEJ sztuki, 0..[com.lernhero.domain.craft.ItemUpgrades.MAX_LEVEL]. */
-    val level: Int = 0
+    val level: Int = 0,
+    /** Id osadzonych kamieni ([com.lernhero.domain.jewel.Jewels]), najwyzej tyle, ile [Sockets] pozwala. */
+    val jewels: List<String> = emptyList()
 )
 
 /**
@@ -93,7 +98,20 @@ object Inventory {
  */
 fun ItemInstance.resolve(): Item? {
     val base = ItemCatalog.byId(itemId) ?: MonsterGear.byId(itemId) ?: return null
-    return ItemUpgrades.upgraded(base, level.coerceIn(ItemUpgrades.MIN_LEVEL, ItemUpgrades.MAX_LEVEL))
+    val upgraded = ItemUpgrades.upgraded(base, level.coerceIn(ItemUpgrades.MIN_LEVEL, ItemUpgrades.MAX_LEVEL))
+    val set = socketedJewels(base)
+    if (set.isEmpty()) return upgraded
+    // Kamienie doliczaja sie PO ulepszeniu - poziom kuzni skaluje przedmiot, nie kamien.
+    return upgraded.copy(
+        stats = set.fold(upgraded.stats) { total, jewel -> total + jewel.stats },
+        effects = upgraded.effects + set.flatMap { it.effects }
+    )
+}
+
+/** Osadzone kamienie, przyciete do liczby slotow przedmiotu. */
+fun ItemInstance.socketedJewels(base: Item? = base()): List<Jewel> {
+    if (base == null) return emptyList()
+    return jewels.mapNotNull(Jewels::byId).take(Sockets.countFor(base))
 }
 
 /** Przedmiot BEZ naliczonego poziomu - do pokazania "czym to jest" w katalogu i sklepie. */

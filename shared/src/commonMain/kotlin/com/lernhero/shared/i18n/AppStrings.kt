@@ -38,6 +38,8 @@ interface AppStrings {
     val navGrowth: String
     val navFight: String
     val navProgress: String
+    /** Zakladka z wlasnymi quizami - patrz Screen.QuizStudio. */
+    val navQuizzes: String
     val navShop: String
 
     /* ---- settings screen ---- */
@@ -148,6 +150,7 @@ object EnStrings : AppStrings {
     override val navGrowth = "Growth"
     override val navFight = "Fight"
     override val navProgress = "Progress"
+    override val navQuizzes = "Quizzes"
     override val navShop = "Shop"
 
     override val settingsTitle = "Settings"
@@ -266,6 +269,7 @@ object PlStrings : AppStrings {
     override val navGrowth = "Rozwoj"
     override val navFight = "Walcz"
     override val navProgress = "Postep"
+    override val navQuizzes = "Quizy"
     override val navShop = "Sklep"
 
     override val settingsTitle = "Ustawienia"
