@@ -77,7 +77,7 @@ internal fun UnitPlate(
         )
         elementBadge?.invoke()
         HpBar(hp = character.hp, maxHp = character.maxHp, width = barWidth)
-        AttackStat(base = character.attack, multiplier = attackMultiplier)
+        AttackStat(base = character.attack, multiplier = attackMultiplier, isPlayer = character.isPlayer)
     }
 }
 
@@ -140,16 +140,18 @@ private fun HpBar(hp: Int, maxHp: Int, width: Dp) {
  * powiekszenie i powrot ze sprezynowaniem) i zlocieje; gdy maleje - to samo w dol, na czerwono.
  */
 @Composable
-private fun AttackStat(base: Int, multiplier: Float, modifier: Modifier = Modifier) {
+private fun AttackStat(base: Int, multiplier: Float, isPlayer: Boolean, modifier: Modifier = Modifier) {
     val target = (base * multiplier).roundToInt()
     val value by animateFloatAsState(target.toFloat(), tween(650, easing = FastOutSlowInEasing), label = "atk")
     val up = multiplier > 1.001f
     val down = multiplier < 0.999f
+    // Kolor mowi "dobrze/zle DLA GRACZA": nasz atak w gore i wrogi w dol to zloto, odwrotnie czerwien.
+    val goodForPlayer = if (isPlayer) up else down
     val color by animateColorAsState(
         when {
-            up -> Color(0xFFFFD34D)
-            down -> Color(0xFFFF6B5E)
-            else -> Color.White.copy(alpha = 0.9f)
+            !up && !down -> Color.White.copy(alpha = 0.9f)
+            goodForPlayer -> Color(0xFFFFD34D)
+            else -> Color(0xFFFF6B5E)
         },
         label = "atkColor"
     )
