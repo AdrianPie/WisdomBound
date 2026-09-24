@@ -68,6 +68,12 @@ interface AppStrings {
     val settingsSignOut: String
     val settingsSignOutHint: String
     val settingsSignOutConfirm: String
+    val settingsDeleteAccount: String
+    val settingsAdPrivacy: String
+    val settingsDeleteAccountConfirm: String
+    val settingsDeleteAccountHint: String
+    val settingsDeleteNeedsLogin: String
+    val settingsDeleteFailed: String
     val settingsAbout: String
     val settingsReset: String
     val settingsResetHint: String
@@ -185,6 +191,15 @@ object EnStrings : AppStrings {
     override val settingsSignOutHint =
         "Your hero and progress stay on the account - sign back in and everything is where you left it."
     override val settingsSignOutConfirm = "Sign out for real?"
+    override val settingsDeleteAccount = "Delete account"
+    override val settingsAdPrivacy = "Ad privacy settings"
+    override val settingsDeleteAccountConfirm = "Delete forever? Tap again"
+    override val settingsDeleteAccountHint =
+        "Deletes your hero, progress and purchases' in-game rewards for good. An active subscription " +
+            "is not cancelled - cancel it in Google Play / App Store."
+    override val settingsDeleteNeedsLogin =
+        "For safety, sign out and sign back in, then delete the account within 5 minutes."
+    override val settingsDeleteFailed = "Could not delete the account. Check your connection and try again."
     override val settingsAbout = "About"
     override val settingsReset = "Restore defaults"
     override val settingsResetHint = "Only the settings on this screen. Your hero and progress stay untouched."
@@ -304,6 +319,15 @@ object PlStrings : AppStrings {
     override val settingsSignOutHint =
         "Bohater i postep zostaja na koncie - po ponownym zalogowaniu wszystko jest na swoim miejscu."
     override val settingsSignOutConfirm = "Na pewno wylogowac?"
+    override val settingsDeleteAccount = "Usun konto"
+    override val settingsAdPrivacy = "Prywatnosc reklam"
+    override val settingsDeleteAccountConfirm = "Usunac na zawsze? Tapnij ponownie"
+    override val settingsDeleteAccountHint =
+        "Trwale usuwa bohatera, postep i nagrody z zakupow w grze. Aktywna subskrypcja nie zostanie " +
+            "anulowana - anuluj ja w Google Play / App Store."
+    override val settingsDeleteNeedsLogin =
+        "Dla bezpieczenstwa wyloguj sie i zaloguj ponownie, a potem usun konto w ciagu 5 minut."
+    override val settingsDeleteFailed = "Nie udalo sie usunac konta. Sprawdz polaczenie i sprobuj ponownie."
     override val settingsAbout = "O aplikacji"
     override val settingsReset = "Przywroc domyslne"
     override val settingsResetHint = "Tylko ustawienia z tego ekranu. Bohater i postep zostaja nietkniete."

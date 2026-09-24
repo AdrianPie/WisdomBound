@@ -44,6 +44,8 @@ kotlin {
             // Subskrypcja premium i reklamy z nagroda - patrz shared/monetization.
             implementation(libs.revenuecat.purchases)
             implementation(libs.play.services.ads)
+            // Zgoda RODO na reklamy (Google UMP) - bez niej AdMob w UE ogranicza albo wstrzymuje reklamy.
+            implementation(libs.user.messaging.platform)
         }
         commonMain.dependencies {
             // Przypomnienia biora plan wprost z modelu gracza (domain/notification/ReminderPlan).

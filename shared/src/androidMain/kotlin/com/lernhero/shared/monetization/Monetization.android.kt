@@ -1,7 +1,6 @@
 package com.lernhero.shared.monetization
 
 import android.app.Application
-import com.google.android.gms.ads.MobileAds
 import com.revenuecat.purchases.Purchases
 import com.revenuecat.purchases.PurchasesConfiguration
 
@@ -14,7 +13,7 @@ fun Application.initMonetization() {
     if (MonetizationConfig.REVENUECAT_ANDROID_KEY.isNotBlank() && !Purchases.isConfigured) {
         Purchases.configure(PurchasesConfiguration.Builder(this, MonetizationConfig.REVENUECAT_ANDROID_KEY).build())
     }
-    MobileAds.initialize(this)
+    // SDK reklam startuje dopiero po zgodzie RODO - patrz [AdConsent].
 }
 
 internal object MonetizationContext {

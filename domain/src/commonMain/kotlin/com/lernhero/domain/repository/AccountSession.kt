@@ -20,4 +20,18 @@ interface AccountSession {
      * w grze bez konta i kazdy zapis przepadnie po cichu.
      */
     suspend fun signOut()
+
+    /**
+     * Trwale usuwa konto i wszystkie dane gracza (wymog Google Play dla aplikacji z kontami).
+     * Subskrypcji w sklepie to NIE anuluje - to robi sam gracz w Google Play / App Store.
+     */
+    suspend fun deleteAccount(): AccountDeletion
+}
+
+enum class AccountDeletion {
+    Deleted,
+
+    /** Firebase usuwa konto tylko tuz po zalogowaniu - trzeba sie wylogowac i zalogowac ponownie. */
+    NeedsRecentLogin,
+    Failed
 }

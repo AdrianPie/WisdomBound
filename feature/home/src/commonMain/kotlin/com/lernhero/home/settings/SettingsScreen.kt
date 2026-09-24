@@ -1,5 +1,7 @@
 package com.lernhero.home.settings
 
+import com.lernhero.shared.monetization.AdPrivacy
+import com.lernhero.domain.repository.AccountDeletion
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -334,6 +336,10 @@ private fun AccountSection(onSignedOut: () -> Unit) {
 
     var confirming by remember { mutableStateOf(false) }
     var working by remember { mutableStateOf(false) }
+    var confirmingDelete by remember { mutableStateOf(false) }
+    var deleteError by remember { mutableStateOf<String?>(null) }
+    val needsLoginText = strings.settingsDeleteNeedsLogin
+    val failedText = strings.settingsDeleteFailed
 
     SettingsSection(title = strings.settingsAccount) {
         Text(
@@ -364,5 +370,37 @@ private fun AccountSection(onSignedOut: () -> Unit) {
             }
         )
         SettingsHint(strings.settingsSignOutHint)
+
+        SettingsButton(
+            text = if (confirmingDelete) strings.settingsDeleteAccountConfirm else strings.settingsDeleteAccount,
+            filled = confirmingDelete,
+            onClick = {
+                if (working) return@SettingsButton
+                if (!confirmingDelete) {
+                    confirmingDelete = true
+                    deleteError = null
+                    return@SettingsButton
+                }
+                working = true
+                scope.launch {
+                    when (session.deleteAccount()) {
+                        AccountDeletion.Deleted -> {
+                            runSession.startNewRun()
+                            campaign.reset()
+                            onSignedOut()
+                        }
+                        AccountDeletion.NeedsRecentLogin -> deleteError = needsLoginText
+                        AccountDeletion.Failed -> deleteError = failedText
+                    }
+                    confirmingDelete = false
+                    working = false
+                }
+            }
+        )
+        SettingsHint(deleteError ?: strings.settingsDeleteAccountHint)
+
+        if (AdPrivacy.optionsRequired) {
+            SettingsButton(text = strings.settingsAdPrivacy, filled = false, onClick = AdPrivacy::showOptions)
+        }
     }
 }

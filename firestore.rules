@@ -90,11 +90,14 @@ service cloud.firestore {
 
       allow update: if isOwner(uid) && withinEconomyBounds() && withinIdleClockBounds();
 
-      allow delete: if false;
+      // Usuniecie wlasnego konta (Ustawienia -> Delete account, wymog Google Play).
+      allow delete: if isOwner(uid);
 
-      // Flaga uprawnien - NIGDY nie dotykana przez klienta, w zadna strone.
+      // Flaga uprawnien - klient nie moze jej czytac ani ustawiac. Moze ja tylko skasowac razem
+      // z wlasnym kontem; skasowanie nikomu nie daje uprawnien.
       match /privateData/{docId} {
-        allow read, write: if false;
+        allow read, create, update: if false;
+        allow delete: if isOwner(uid);
       }
 
       // Wlasne talie pytan - nie sa ekonomia, wlasciciel moze je dowolnie edytowac.

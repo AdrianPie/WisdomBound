@@ -1,5 +1,6 @@
 package org.apie.lernhero
 
+import com.lernhero.shared.monetization.gatherAdConsent
 import android.graphics.Color
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -24,6 +25,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             App()
         }
+        gatherAdConsent()
     }
 }
 

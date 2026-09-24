@@ -27,11 +27,12 @@ internal class AdMobRewardedAds(private val app: Application) : RewardedAds {
     override val isAvailable: Boolean = true
 
     init {
-        preload()
+        AdConsent.whenReady(::preload)
     }
 
     override suspend fun show(): AdOutcome = withContext(Dispatchers.Main) {
         val activity = CurrentActivity.value ?: return@withContext AdOutcome.Unavailable
+        if (!AdConsent.canRequestAds) return@withContext AdOutcome.Unavailable
         val ad = ready ?: withTimeoutOrNull(LOAD_TIMEOUT_MS) { load() } ?: run {
             preload()
             return@withContext AdOutcome.Unavailable
@@ -56,7 +57,7 @@ internal class AdMobRewardedAds(private val app: Application) : RewardedAds {
     }
 
     private fun preload() {
-        if (ready != null || loading) return
+        if (ready != null || loading || !AdConsent.canRequestAds) return
         loading = true
         RewardedAd.load(app, adUnit, AdRequest.Builder().build(), object : RewardedAdLoadCallback() {
             override fun onAdLoaded(ad: RewardedAd) {
