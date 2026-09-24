@@ -65,10 +65,9 @@ fun FightSheet(
                 .padding(top = 8.dp, bottom = DIALOG_CLOSE_LANE)
                 .fillMaxWidth()
                 .widthIn(max = SHEET_MAX_WIDTH)
-                .clip(RoundedCornerShape(18.dp))
+                .clip(RoundedCornerShape(24.dp))
                 .background(Brush.verticalGradient(listOf(SheetTop, SheetBottom)))
-                .border(2.5.dp, SheetFrame, RoundedCornerShape(18.dp))
-                .padding(3.dp)
+                .border(1.dp, SheetFrame.copy(alpha = 0.45f), RoundedCornerShape(24.dp))
         ) {
             SheetHeader(title = title, subtitle = subtitle)
             Column(
@@ -78,7 +77,7 @@ fun FightSheet(
                 modifier = Modifier
                     .fillMaxWidth()
                     .verticalScroll(rememberScrollState())
-                    .padding(horizontal = 11.dp, vertical = 11.dp),
+                    .padding(start = 16.dp, end = 16.dp, top = 4.dp, bottom = 18.dp),
                 verticalArrangement = Arrangement.spacedBy(10.dp),
                 content = content
             )
@@ -94,30 +93,29 @@ fun FightSheet(
     }
 }
 
-/** Belka tytulu - ciemniejsza od plyty, zeby okno mialo gore, a nie samo zaczynalo sie trescia. */
+/** Naglowek okna - duzy tytul i jedna linijka pod nim, bez osobnej belki. */
 @Composable
 private fun SheetHeader(title: String, subtitle: String?) {
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .clip(RoundedCornerShape(topStart = 15.dp, topEnd = 15.dp, bottomStart = 4.dp, bottomEnd = 4.dp))
-            .background(SheetHeaderBg)
-            .padding(horizontal = 14.dp, vertical = 10.dp),
-        verticalArrangement = Arrangement.spacedBy(2.dp)
+            .padding(start = 18.dp, end = 18.dp, top = 18.dp, bottom = 8.dp),
+        verticalArrangement = Arrangement.spacedBy(3.dp)
     ) {
+        // Wersaliki z dawnych wywolan ("STUDY MATERIAL") zamieniamy na zwykly zapis tytulu.
         Text(
-            text = title,
-            color = SheetGold,
-            fontFamily = FontPixel(),
+            text = title.lowercase().replaceFirstChar { it.uppercase() },
+            color = SheetCream,
+            fontFamily = FontFirst(),
             fontWeight = FontWeight.Bold,
-            fontSize = 15.sp
+            fontSize = 22.sp
         )
         subtitle?.let {
             Text(
                 text = it,
                 color = SheetMuted,
                 fontFamily = FontFirst(),
-                fontSize = 11.sp
+                fontSize = 12.sp
             )
         }
     }
@@ -128,11 +126,11 @@ private fun SheetHeader(title: String, subtitle: String?) {
 fun SheetSectionLabel(text: String, modifier: Modifier = Modifier) {
     Text(
         text = text.uppercase(),
-        color = SheetGold,
+        color = SheetMuted,
         fontFamily = FontPixel(),
-        fontWeight = FontWeight.Bold,
-        fontSize = 11.sp,
-        modifier = modifier
+        fontSize = 10.sp,
+        letterSpacing = 1.sp,
+        modifier = modifier.padding(top = 6.dp)
     )
 }
 
@@ -143,7 +141,8 @@ fun SheetHint(text: String, modifier: Modifier = Modifier) {
         text = text,
         color = SheetMuted,
         fontFamily = FontFirst(),
-        fontSize = 10.sp,
+        fontSize = 11.sp,
+        lineHeight = 15.sp,
         modifier = modifier
     )
 }
@@ -168,8 +167,8 @@ fun SheetStatRow(content: @Composable () -> Unit) {
 /** Najszersze, na ile okno moze urosnac - na tablecie ma zostac oknem, a nie rozlac sie na ekran. */
 private val SHEET_MAX_WIDTH = 420.dp
 
-internal val SheetTop = Color(0xFF241A11)
-internal val SheetBottom = Color(0xFF17110B)
+internal val SheetTop = Color(0xFF221912)
+internal val SheetBottom = Color(0xFF140F0A)
 internal val SheetHeaderBg = Color(0xFF3A2A18)
 internal val SheetFrame = Color(0xFFC8A45A)
 internal val SheetFrameDim = Color(0xFF6B5A38)
