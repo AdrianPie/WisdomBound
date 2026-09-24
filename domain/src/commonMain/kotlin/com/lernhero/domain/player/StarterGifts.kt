@@ -3,6 +3,7 @@ package com.lernhero.domain.player
 import com.lernhero.domain.item.ItemCatalog
 import com.lernhero.domain.item.ItemSlot
 import com.lernhero.domain.item.catalog.Armors
+import com.lernhero.domain.item.catalog.ArmorsExtra
 import com.lernhero.domain.item.catalog.Weapons
 
 /**
@@ -28,8 +29,8 @@ object StarterGifts {
     /** Miecz - najprostszy start, bije dwoch przeciwnikow naraz. */
     val Sword = StarterGift(id = "sword", itemId = Weapons.PLATE_SWORD.id)
 
-    /** Helm - pierwszy cios w walce odbija sie od niego bez szkody. */
-    val Helm = StarterGift(id = "helm", itemId = Armors.PLATE_HELM.id)
+    /** Kaftan - wiecej zycia i pancerza. Helm wypadl z darow, bo nie widac go na postaci. */
+    val Armor = StarterGift(id = "armor", itemId = ArmorsExtra.LEATHER_JERKIN.id)
 
     /** Buty - inicjatywa: uderzasz pierwszy. Dla tych, ktorzy wola wyprzedzic niz przetrzymac. */
     val Boots = StarterGift(id = "boots", itemId = Armors.PLATE_BOOTS.id)
@@ -38,7 +39,7 @@ object StarterGifts {
      * Trzy dary o zblizonej cenie sklepowej (80-100 zlota) - wybor ma byc o STYLU gry, a nie o
      * tym, ktora opcja jest po prostu mocniejsza.
      */
-    val all: List<StarterGift> = listOf(Sword, Helm, Boots)
+    val all: List<StarterGift> = listOf(Sword, Armor, Boots)
 
     val Default: StarterGift = Sword
 

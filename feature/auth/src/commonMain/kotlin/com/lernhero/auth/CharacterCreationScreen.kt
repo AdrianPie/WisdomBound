@@ -1,6 +1,12 @@
 package com.lernhero.auth
 
-import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.core.FastOutSlowInEasing
+import androidx.compose.animation.core.RepeatMode
+import androidx.compose.animation.core.animateFloat
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.infiniteRepeatable
+import androidx.compose.animation.core.rememberInfiniteTransition
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -8,23 +14,20 @@ import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.IntrinsicSize
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.OutlinedTextField
-import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -34,10 +37,21 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import com.lernhero.auth.component.AuthBackdrop
+import com.lernhero.auth.component.ButtonTone
+import com.lernhero.auth.component.GameButton
+import com.lernhero.auth.component.GamePanel
+import com.lernhero.auth.component.GameText
+import com.lernhero.auth.component.GameTextField
+import com.lernhero.domain.combat.StatType
 import com.lernhero.domain.player.HeroAppearance
 import com.lernhero.domain.player.HeroClasses
 import com.lernhero.domain.player.HeroPalette
@@ -50,21 +64,18 @@ import com.lernhero.game.character.ModularKnight
 import com.lernhero.shared.i18n.strings
 import com.lernhero.shared.theme.AppPalette
 import com.lernhero.shared.theme.FontFirst
-import com.lernhero.shared.theme.FontPixel
-import com.lernhero.shared.theme.FontSize
 import org.koin.compose.viewmodel.koinViewModel
 
 /**
- * Tworzenie postaci: JEDEN duzy bohater i kilka rzedow kafelkow pod nim. Zadnych zakladek ani
- * suwakow - kazde ustawienie widac od razu na tej samej figurze, wiec gracz nie musi niczego
- * sobie wyobrazac.
+ * Tworzenie postaci: JEDEN duzy bohater na scenie i jedna karta z wyborami pod nim. Zadnych
+ * zakladek ani suwakow - kazde ustawienie widac od razu na tej samej figurze, a imie wisi nad
+ * glowa bohatera, zanim jeszcze gracz skonczy je pisac.
  *
  * Ten sam [ModularKnight], ktorym rysuje sie bohatera w walce i w ekwipunku - to, co gracz tu
  * sklada, jest doslownie postacia, ktora zaraz zobaczy w grze.
  *
  * [devPreview] to wejscie z przycisku deweloperskiego na ekranie logowania: nikt nie jest
- * zalogowany, wiec ekran NICZEGO nie zapisuje - przycisk startu tylko wraca. Bez tego "Ruszaj na
- * przygode" konczyloby sie bledem "User is not available", ktory nie mowi nic o samym ekranie.
+ * zalogowany, wiec ekran NICZEGO nie zapisuje - przycisk startu tylko wraca.
  */
 @Composable
 fun CharacterCreationScreen(
@@ -84,248 +95,262 @@ fun CharacterCreationScreen(
     var isSaving by remember { mutableStateOf(false) }
     var errorMessage by remember { mutableStateOf<String?>(null) }
 
-    // Ekran NIE przewija sie - HeroStage bierze [Modifier.weight], wiec cala kolumna zawsze
-    // miesci sie w jednym widoku niezaleznie od wysokosci telefonu.
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(AppPalette.ScreenGradient)
-            .safeDrawingPadding()
-            .padding(horizontal = 20.dp, vertical = 16.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(10.dp)
-    ) {
-        Text(
-            text = t.creationTitle,
-            color = AppPalette.Gold,
-            fontFamily = FontPixel(),
-            fontSize = FontSize.LARGE
-        )
-
+    fun start() {
         if (devPreview) {
-            Text(
-                text = "DEV PREVIEW - nothing is saved",
-                color = AppPalette.Warning,
-                fontFamily = FontFirst(),
-                fontSize = FontSize.SMALL
-            )
+            onDevPreviewExit()
+            return
         }
-
-        HeroStage(
+        val heroName = name.trim()
+        if (heroName.isEmpty()) {
+            errorMessage = t.creationErrorNoName
+            return
+        }
+        isSaving = true
+        errorMessage = null
+        viewModel.createPlayer(
+            user = viewModel.currentFirebaseUser(),
+            // Klasa bohatera nie jest juz wyborem gracza - postac rozwija sie przez talenty
+            // i ekwipunek, a nie przez zadeklarowanie klasy na starcie.
+            character = HeroClasses.Knight,
+            name = heroName,
             appearance = appearance,
-            // Dar startowy jest na postaci od pierwszej sekundy gry, wiec zakladamy go juz tutaj.
-            // Helm nie ma jeszcze wlasnego sprite'a (patrz Resources.PlateArmor), wiec jego
-            // wybor po prostu nic nie zmienia w podgladzie - dolozenie grafiki naprawi to samo.
-            equipment = gift.previewEquipment(),
-            modifier = Modifier.weight(1f)
-        )
-
-        SwatchRow(
-            label = t.creationSkin,
-            colors = HeroPalette.SkinTones,
-            selected = appearance.skinTone,
-            onSelect = { appearance = appearance.copy(skinTone = it) }
-        )
-
-        OutlinedTextField(
-            value = name,
-            onValueChange = { newValue -> if (newValue.length <= 16) name = newValue },
-            singleLine = true,
-            label = { Text(text = t.creationNameLabel, fontFamily = FontFirst()) },
-            placeholder = { Text(text = t.creationNameHint, fontFamily = FontFirst()) },
-            colors = OutlinedTextFieldDefaults.colors(
-                focusedTextColor = AppPalette.TextBody,
-                unfocusedTextColor = AppPalette.TextBody,
-                focusedBorderColor = AppPalette.Gold,
-                unfocusedBorderColor = AppPalette.GoldDim,
-                focusedLabelColor = AppPalette.Gold,
-                unfocusedLabelColor = AppPalette.TextMuted,
-                cursorColor = AppPalette.Gold
-            ),
-            modifier = Modifier.fillMaxWidth()
-        )
-
-        SectionLabel(text = t.creationGiftTitle, hint = t.creationGiftHint)
-        // IntrinsicSize.Min - trzy karty maja rozne dlugosci opisow, a bez tego kazda jest innej
-        // wysokosci i najdluzsza sie przycina.
-        Row(
-            modifier = Modifier.fillMaxWidth().height(IntrinsicSize.Min),
-            horizontalArrangement = Arrangement.spacedBy(10.dp)
-        ) {
-            StarterGifts.all.forEach { option ->
-                GiftCard(
-                    gift = option,
-                    selected = option.id == gift.id,
-                    onClick = { gift = option },
-                    modifier = Modifier.weight(1f).fillMaxHeight()
-                )
-            }
-        }
-
-        Text(
-            text = t.creationSubtitle,
-            color = AppPalette.TextFaint,
-            fontFamily = FontFirst(),
-            fontSize = FontSize.SMALL,
-            textAlign = TextAlign.Center
-        )
-
-        errorMessage?.let { message ->
-            Text(
-                text = message,
-                color = AppPalette.Danger,
-                fontFamily = FontFirst(),
-                fontSize = FontSize.SMALL
-            )
-        }
-
-        Button(
-            onClick = {
-                if (devPreview) {
-                    onDevPreviewExit()
-                    return@Button
-                }
-                val heroName = name.trim()
-                if (heroName.isEmpty()) {
-                    errorMessage = t.creationErrorNoName
-                    return@Button
-                }
-                isSaving = true
-                errorMessage = null
-                viewModel.createPlayer(
-                    user = viewModel.currentFirebaseUser(),
-                    // Klasa bohatera nie jest juz wyborem gracza - postac rozwija sie przez
-                    // talenty i ekwipunek, a nie przez zadeklarowanie klasy na starcie.
-                    character = HeroClasses.Knight,
-                    name = heroName,
-                    appearance = appearance,
-                    starterGift = gift,
-                    onSuccess = {
-                        isSaving = false
-                        navigateToHome()
-                    },
-                    onFailure = { error ->
-                        isSaving = false
-                        errorMessage = error
-                    }
-                )
+            starterGift = gift,
+            onSuccess = {
+                isSaving = false
+                navigateToHome()
             },
-            enabled = !isSaving,
-            shape = RoundedCornerShape(12.dp),
-            colors = ButtonDefaults.buttonColors(
-                containerColor = AppPalette.Action,
-                contentColor = AppPalette.GoldBright,
-                disabledContainerColor = AppPalette.Panel,
-                disabledContentColor = AppPalette.TextFaint
-            ),
-            modifier = Modifier.fillMaxWidth().height(52.dp)
+            onFailure = { error ->
+                isSaving = false
+                errorMessage = error
+            }
+        )
+    }
+
+    AuthBackdrop {
+        // Ekran NIE przewija sie - scena bierze [Modifier.weight], wiec calosc zawsze miesci sie
+        // w jednym widoku, a bohater skaluje sie z wolna wysokoscia.
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .safeDrawingPadding()
+                .imePadding()
+                .padding(horizontal = 16.dp, vertical = 12.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.spacedBy(10.dp)
         ) {
-            if (isSaving) {
-                CircularProgressIndicator(
-                    modifier = Modifier.size(20.dp),
-                    color = AppPalette.GoldBright,
-                    strokeWidth = 2.dp
+            GameText(text = t.creationTitle, size = 30.sp, color = Color(0xFFFFD34D), strokeWidth = 8f)
+
+            if (devPreview) {
+                Text("DEV PREVIEW - nothing is saved", color = AppPalette.Warning, fontFamily = FontFirst(), fontSize = 12.sp)
+            }
+
+            HeroStage(
+                appearance = appearance,
+                name = name.trim().ifEmpty { t.creationNamePlaceholder },
+                named = name.isNotBlank(),
+                hint = t.creationTapHero,
+                // Dar startowy jest na postaci od pierwszej sekundy gry, wiec zakladamy go juz tutaj.
+                equipment = gift.previewEquipment(),
+                modifier = Modifier.weight(1f)
+            )
+
+            GamePanel(modifier = Modifier.widthIn(max = 480.dp).fillMaxWidth()) {
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(8.dp)
+                ) {
+                    GameTextField(
+                        value = name,
+                        onValueChange = { newValue ->
+                            if (newValue.length <= 16) name = newValue
+                            errorMessage = null
+                        },
+                        placeholder = t.creationNameHint,
+                        icon = "✏️",
+                        imeAction = ImeAction.Done,
+                        modifier = Modifier.weight(1f)
+                    )
+                    GameButton(
+                        text = "🎲",
+                        onClick = {
+                            name = HeroNames.random(exclude = name)
+                            errorMessage = null
+                        },
+                        tone = ButtonTone.Gold,
+                        modifier = Modifier.size(54.dp)
+                    )
+                }
+
+                SkinRow(
+                    label = t.creationSkin,
+                    colors = HeroPalette.SkinTones,
+                    selected = appearance.skinTone,
+                    onSelect = { appearance = appearance.copy(skinTone = it) }
                 )
-            } else {
-                Text(
+
+                Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                    Row(verticalAlignment = Alignment.Bottom, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                        GameText(text = t.creationGiftTitle, size = 16.sp, color = Color(0xFFFFD34D), strokeWidth = 5f)
+                        Text(t.creationGiftHint, color = Color(0xFFBFA878), fontFamily = FontFirst(), fontSize = 11.sp)
+                    }
+                    // IntrinsicSize.Min - karty maja rozne dlugosci opisow, a bez tego kazda jest
+                    // innej wysokosci i najdluzsza sie przycina.
+                    Row(
+                        modifier = Modifier.fillMaxWidth().height(IntrinsicSize.Min),
+                        horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                        StarterGifts.all.forEach { option ->
+                            GiftCard(
+                                gift = option,
+                                selected = option.id == gift.id,
+                                onClick = { gift = option },
+                                modifier = Modifier.weight(1f).fillMaxHeight()
+                            )
+                        }
+                    }
+                }
+
+                errorMessage?.let { message ->
+                    Text(
+                        text = message,
+                        color = Color(0xFFFF8A73),
+                        fontFamily = FontFirst(),
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 13.sp,
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier.fillMaxWidth()
+                    )
+                }
+
+                GameButton(
                     text = if (devPreview) t.commonBack else t.creationStart,
-                    fontFamily = FontPixel(),
-                    fontSize = FontSize.EXTRA_REGULAR,
-                    fontWeight = FontWeight.Bold
+                    onClick = ::start,
+                    tone = ButtonTone.Green,
+                    loading = isSaving,
+                    height = 58.dp,
+                    modifier = Modifier.fillMaxWidth()
+                )
+                Text(
+                    text = t.creationSubtitle,
+                    color = Color(0xFF9D8BB8),
+                    fontFamily = FontFirst(),
+                    fontSize = 11.sp,
+                    textAlign = TextAlign.Center,
+                    modifier = Modifier.fillMaxWidth()
                 )
             }
         }
     }
 }
 
-/** Scena z bohaterem - jedyny duzy element ekranu, bierze cala wolna wysokosc ([Modifier.weight]). */
+/**
+ * Scena: bohater na swietlistym podescie, nad glowa tabliczka z imieniem. Swiatlo za postacia
+ * lekko oddycha - scena ma zyc, zanim gracz cokolwiek kliknie.
+ */
 @Composable
 private fun HeroStage(
     appearance: HeroAppearance,
+    name: String,
+    named: Boolean,
+    hint: String,
     equipment: KnightEquipment,
     modifier: Modifier = Modifier
 ) {
-    Box(
-        modifier = modifier
-            .fillMaxWidth()
-            .clip(RoundedCornerShape(18.dp))
-            .background(AppPalette.CardGradient)
-            .border(2.dp, AppPalette.GoldFrame, RoundedCornerShape(18.dp)),
-        contentAlignment = Alignment.Center
-    ) {
+    val infinite = rememberInfiniteTransition()
+    val breath by infinite.animateFloat(0.55f, 0.9f, infiniteRepeatable(tween(2400, easing = FastOutSlowInEasing), RepeatMode.Reverse))
+
+    Box(modifier = modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
+        Box(
+            modifier = Modifier
+                .fillMaxHeight()
+                .aspectRatio(1f)
+                .graphicsLayer { alpha = breath }
+                .background(Brush.radialGradient(listOf(Color(0x66FFC94D), Color(0x22B061FF), Color.Transparent)))
+        )
+        // Podest - plaska elipsa pod stopami, na ktorej bohater "stoi".
+        Box(
+            modifier = Modifier
+                .align(Alignment.BottomCenter)
+                .padding(bottom = 18.dp)
+                .fillMaxWidth(0.55f)
+                .height(22.dp)
+                .clip(CircleShape)
+                .background(Brush.radialGradient(listOf(Color(0xAAFFD34D), Color(0x33FFD34D), Color.Transparent)))
+        )
         ModularKnight(
             equipment = equipment,
             look = HeroLook.of(appearance),
             sizeDp = 300.dp,
-            // Klikniecie w postac = zamach mieczem. Jedyna "zabawka" na tym ekranie i jedyny
-            // sposob, zeby zobaczyc bohatera w ruchu przed startem gry.
+            // Klikniecie w postac = zamach mieczem - jedyny sposob, zeby zobaczyc bohatera
+            // w ruchu przed startem gry.
             interactive = true,
-            // Kwadrat wpisany w scene - scena bierze zmienna wysokosc, wiec postac skaluje sie
-            // z nia, zamiast wystawac przy nizszym telefonie (dawne requiredSize(300)).
             modifier = Modifier.fillMaxHeight().aspectRatio(1f)
+        )
+        Column(
+            modifier = Modifier.align(Alignment.TopCenter).padding(top = 4.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Box(
+                modifier = Modifier
+                    .clip(RoundedCornerShape(50))
+                    .background(Color(0xCC120B1E))
+                    .border(1.5.dp, if (named) Color(0xFFFFD34D) else Color(0xFF5A4630), RoundedCornerShape(50))
+                    .padding(horizontal = 16.dp, vertical = 6.dp)
+            ) {
+                GameText(
+                    text = name,
+                    size = 18.sp,
+                    color = if (named) Color.White else Color(0xFF8C7C63),
+                    strokeWidth = 5f
+                )
+            }
+        }
+        Text(
+            text = hint,
+            color = Color(0xFFCDB9E6),
+            fontFamily = FontFirst(),
+            fontSize = 11.sp,
+            modifier = Modifier.align(Alignment.BottomCenter)
         )
     }
 }
 
-/** Rzad kolorow do wyboru - klikniecie od razu przemalowuje bohatera nad spodem ekranu. */
+/** Rzad odcieni skory - klikniecie od razu przemalowuje bohatera na scenie. */
 @Composable
-private fun SwatchRow(
+private fun SkinRow(
     label: String,
     colors: List<String>,
     selected: String,
     onSelect: (String) -> Unit
 ) {
-    Column(
+    Row(
         modifier = Modifier.fillMaxWidth(),
-        verticalArrangement = Arrangement.spacedBy(6.dp)
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(10.dp)
     ) {
-        Text(
-            text = label,
-            color = AppPalette.TextMuted,
-            fontFamily = FontFirst(),
-            fontSize = FontSize.SMALL
-        )
-        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+        GameText(text = label, size = 16.sp, color = Color(0xFFFFD34D), strokeWidth = 5f)
+        Row(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {
             colors.forEach { hex ->
                 val isSelected = hex == selected
-                val borderColor by animateColorAsState(
-                    targetValue = if (isSelected) AppPalette.Gold else AppPalette.GoldDim
-                )
+                val scale by animateFloatAsState(if (isSelected) 1.15f else 1f)
                 Box(
                     modifier = Modifier
-                        .size(if (isSelected) 34.dp else 30.dp)
+                        .size(32.dp)
+                        .graphicsLayer { scaleX = scale; scaleY = scale }
                         .clip(CircleShape)
                         .background(Color(HeroPalette.parseHex(hex)))
-                        .border(if (isSelected) 3.dp else 1.dp, borderColor, CircleShape)
+                        .border(if (isSelected) 3.dp else 1.5.dp, if (isSelected) Color(0xFFFFD34D) else Color(0xFF120B05), CircleShape)
                         .clickable(
                             interactionSource = remember { MutableInteractionSource() },
                             indication = null,
                             onClick = { onSelect(hex) }
-                        )
-                )
+                        ),
+                    contentAlignment = Alignment.Center
+                ) {
+                    if (isSelected) Text("✓", color = Color(0xFF3A2410), fontWeight = FontWeight.Black, fontSize = 14.sp)
+                }
             }
         }
-    }
-}
-
-@Composable
-private fun SectionLabel(text: String, hint: String) {
-    Column(
-        modifier = Modifier.fillMaxWidth(),
-        verticalArrangement = Arrangement.spacedBy(2.dp)
-    ) {
-        Text(
-            text = text,
-            color = AppPalette.Gold,
-            fontFamily = FontPixel(),
-            fontSize = FontSize.EXTRA_REGULAR
-        )
-        Text(
-            text = hint,
-            color = AppPalette.TextFaint,
-            fontFamily = FontFirst(),
-            fontSize = FontSize.EXTRA_SMALL
-        )
     }
 }
 
@@ -336,34 +361,43 @@ private fun GiftCard(
     onClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
-    val borderColor by animateColorAsState(
-        targetValue = if (selected) AppPalette.Gold else AppPalette.GoldDim
-    )
+    val item = gift.item
+    val scale by animateFloatAsState(if (selected) 1.03f else 1f)
     Column(
         modifier = modifier
-            .clip(RoundedCornerShape(12.dp))
-            .background(if (selected) AppPalette.PanelRaised else AppPalette.Panel)
-            .border(if (selected) 2.dp else 1.dp, borderColor, RoundedCornerShape(12.dp))
+            .graphicsLayer { scaleX = scale; scaleY = scale }
+            .clip(RoundedCornerShape(14.dp))
+            .background(
+                if (selected) Brush.verticalGradient(listOf(Color(0xFF4A3212), Color(0xFF2A1A0A)))
+                else Brush.verticalGradient(listOf(Color(0xCC1E1428), Color(0xCC120B1A)))
+            )
+            .border(if (selected) 2.5.dp else 1.5.dp, if (selected) Color(0xFFFFD34D) else Color(0xFF5A4630), RoundedCornerShape(14.dp))
             .clickable(
                 interactionSource = remember { MutableInteractionSource() },
                 indication = null,
                 onClick = onClick
             )
-            .padding(10.dp),
-        verticalArrangement = Arrangement.spacedBy(4.dp)
+            .padding(horizontal = 6.dp, vertical = 8.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.spacedBy(3.dp)
     ) {
+        Text(gift.icon(), fontSize = 26.sp)
         Text(
-            text = gift.item?.name.orEmpty(),
-            color = if (selected) AppPalette.Gold else AppPalette.TextBody,
-            fontFamily = FontPixel(),
-            fontSize = FontSize.SMALL,
-            fontWeight = FontWeight.Bold
+            text = item?.name.orEmpty(),
+            color = if (selected) Color(0xFFFFD34D) else Color(0xFFEADFC8),
+            fontFamily = FontFirst(),
+            fontWeight = FontWeight.Black,
+            fontSize = 12.sp,
+            textAlign = TextAlign.Center,
+            maxLines = 2
         )
         Text(
-            text = gift.item?.description.orEmpty(),
-            color = AppPalette.TextFaint,
+            text = gift.statLine(),
+            color = Color(0xFF8BE05A),
             fontFamily = FontFirst(),
-            fontSize = FontSize.EXTRA_SMALL
+            fontWeight = FontWeight.Bold,
+            fontSize = 11.sp,
+            textAlign = TextAlign.Center
         )
     }
 }
@@ -376,7 +410,36 @@ private fun GiftCard(
  */
 private fun StarterGift.previewEquipment(): KnightEquipment = when (id) {
     StarterGifts.Sword.id -> KnightEquipment(mainHand = true)
-    StarterGifts.Helm.id -> KnightEquipment(head = true)
+    StarterGifts.Armor.id -> KnightEquipment(chest = true)
     StarterGifts.Boots.id -> KnightEquipment(feet = true)
     else -> KnightEquipment.Empty
+}
+
+private fun StarterGift.icon(): String = when (id) {
+    StarterGifts.Sword.id -> "⚔️"
+    StarterGifts.Armor.id -> "🦺"
+    StarterGifts.Boots.id -> "🥾"
+    else -> "🎁"
+}
+
+/** Krotko, co dar daje - "Atk +5", "HP +12 Def +1" - zeby wybor nie byl w ciemno. */
+private fun StarterGift.statLine(): String {
+    val stats = item?.stats ?: return ""
+    return listOf(
+        StatType.Attack to "Atk",
+        StatType.MaxHp to "HP",
+        StatType.Defense to "Def",
+        StatType.Speed to "Spd"
+    ).mapNotNull { (stat, label) ->
+        stats[stat].takeIf { it != 0f }?.let { "$label +${it.toInt()}" }
+    }.joinToString(" ")
+}
+
+private object HeroNames {
+    private val all = listOf(
+        "Aldric", "Brynn", "Cedric", "Dorian", "Elowen", "Faelan", "Garrick", "Isolde",
+        "Kael", "Lyra", "Merrin", "Nyx", "Orin", "Rowan", "Seren", "Thorne", "Valen", "Wren"
+    )
+
+    fun random(exclude: String): String = all.filter { it != exclude }.random()
 }

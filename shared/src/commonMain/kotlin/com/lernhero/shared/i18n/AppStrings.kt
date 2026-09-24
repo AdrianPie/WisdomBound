@@ -122,6 +122,22 @@ interface AppStrings {
     val authErrorNoNetwork: String
     val authErrorPlayServices: String
     fun authErrorGeneric(message: String): String
+    val authWelcomeBack: String
+    val authWelcomeBackHint: String
+    val authWelcomeNew: String
+    val authWelcomeNewHint: String
+    val authConfirmPassword: String
+    val authPasswordRule: String
+    val authForgotPassword: String
+    fun authResetSent(email: String): String
+    val authResetNeedEmail: String
+    val authErrorPasswordsDiffer: String
+    val authErrorWrongCredentials: String
+    val authErrorEmailInUse: String
+    val authErrorInvalidEmail: String
+    val authErrorWeakPassword: String
+    val authErrorTooManyAttempts: String
+    val authGoogleWaiting: String
 
     /* ---- character creation (feature/auth) ---- */
     val creationTitle: String
@@ -136,6 +152,9 @@ interface AppStrings {
     val creationGiftHint: String
     val creationStart: String
     val creationErrorNoName: String
+    val creationRandomName: String
+    val creationTapHero: String
+    val creationNamePlaceholder: String
 }
 
 /** English - the default and the language the app ships with. */
@@ -251,6 +270,22 @@ object EnStrings : AppStrings {
     override val authErrorNoNetwork = "Internet connection not available"
     override val authErrorPlayServices = "Google Play Services not available"
     override fun authErrorGeneric(message: String) = "Sign in failed: $message"
+    override val authWelcomeBack = "Welcome back"
+    override val authWelcomeBackHint = "Sign in and pick up where you left off."
+    override val authWelcomeNew = "Begin your journey"
+    override val authWelcomeNewHint = "Create an account - your hero and progress are saved in the cloud."
+    override val authConfirmPassword = "Repeat password"
+    override val authPasswordRule = "At least 6 characters."
+    override val authForgotPassword = "Forgot password?"
+    override fun authResetSent(email: String) = "Password reset link sent to $email."
+    override val authResetNeedEmail = "Type your email first, then tap Forgot password."
+    override val authErrorPasswordsDiffer = "The passwords are not the same."
+    override val authErrorWrongCredentials = "Wrong email or password."
+    override val authErrorEmailInUse = "This email already has an account - sign in instead."
+    override val authErrorInvalidEmail = "That doesn't look like an email address."
+    override val authErrorWeakPassword = "That password is too weak - use at least 6 characters."
+    override val authErrorTooManyAttempts = "Too many attempts. Wait a moment and try again."
+    override val authGoogleWaiting = "Please wait..."
 
     override val creationTitle = "Your hero"
     override val creationSubtitle = "The name and the gift stay with your hero for good."
@@ -264,6 +299,9 @@ object EnStrings : AppStrings {
     override val creationGiftHint = "You start the game wearing it."
     override val creationStart = "START THE ADVENTURE"
     override val creationErrorNoName = "Your hero needs a name."
+    override val creationRandomName = "Random"
+    override val creationTapHero = "Tap the hero to swing"
+    override val creationNamePlaceholder = "Nameless"
 }
 
 /** Polish - the original dev language, kept as a full alternative. */
@@ -379,6 +417,22 @@ object PlStrings : AppStrings {
     override val authErrorNoNetwork = "Brak polaczenia z internetem"
     override val authErrorPlayServices = "Brak Google Play Services"
     override fun authErrorGeneric(message: String) = "Logowanie nie powiodlo sie: $message"
+    override val authWelcomeBack = "Witaj ponownie"
+    override val authWelcomeBackHint = "Zaloguj sie i graj dalej od miejsca, w ktorym skonczyles."
+    override val authWelcomeNew = "Zacznij przygode"
+    override val authWelcomeNewHint = "Zaloz konto - bohater i postep zapisza sie w chmurze."
+    override val authConfirmPassword = "Powtorz haslo"
+    override val authPasswordRule = "Co najmniej 6 znakow."
+    override val authForgotPassword = "Nie pamietasz hasla?"
+    override fun authResetSent(email: String) = "Link do zmiany hasla wyslany na $email."
+    override val authResetNeedEmail = "Najpierw wpisz e-mail, potem kliknij Nie pamietasz hasla."
+    override val authErrorPasswordsDiffer = "Hasla nie sa takie same."
+    override val authErrorWrongCredentials = "Zly e-mail albo haslo."
+    override val authErrorEmailInUse = "Ten e-mail ma juz konto - zaloguj sie."
+    override val authErrorInvalidEmail = "To nie wyglada na adres e-mail."
+    override val authErrorWeakPassword = "Za slabe haslo - uzyj co najmniej 6 znakow."
+    override val authErrorTooManyAttempts = "Za duzo prob. Odczekaj chwile i sprobuj ponownie."
+    override val authGoogleWaiting = "Chwileczke..."
 
     override val creationTitle = "Twoj bohater"
     override val creationSubtitle = "Imie i dar zostaja z bohaterem na stale."
@@ -392,6 +446,9 @@ object PlStrings : AppStrings {
     override val creationGiftHint = "Zaczynasz gre juz z nim na sobie."
     override val creationStart = "RUSZAJ NA PRZYGODE"
     override val creationErrorNoName = "Bohater potrzebuje imienia."
+    override val creationRandomName = "Losuj"
+    override val creationTapHero = "Tapnij bohatera, zeby machnal mieczem"
+    override val creationNamePlaceholder = "Bezimienny"
 }
 
 fun stringsFor(language: AppLanguage): AppStrings = when (language) {

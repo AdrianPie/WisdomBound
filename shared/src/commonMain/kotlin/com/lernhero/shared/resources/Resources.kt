@@ -77,7 +77,7 @@ import lernhero.shared.generated.resources.sword_down_new
 import lernhero.shared.generated.resources.sword_up_new
 import lernhero.shared.generated.resources.log_in
 import lernhero.shared.generated.resources.log_out
-import lernhero.shared.generated.resources.logo_splash
+import lernhero.shared.generated.resources.wisdombound_emblem
 import lernhero.shared.generated.resources.map_pin
 import lernhero.shared.generated.resources.menu
 import lernhero.shared.generated.resources.mine_island
@@ -200,7 +200,8 @@ object Resources {
         val battlegroundFirst = Res.drawable.battlegroundTwo
         val ShoppingCart = Res.drawable.shopping_cart_image
         val Checkmark = Res.drawable.checkmark_image
-        val logo = Res.drawable.logo_splash
+        /** Godlo WisdomBound (zlota ksiega z gwiazda) na przezroczystym tle - wyciete z ikony aplikacji. */
+        val emblem = Res.drawable.wisdombound_emblem
         val Cat = Res.drawable.cat
         val GoogleLogo = Res.drawable.google_logo
         val PaypalLogo = Res.drawable.paypal_logo
