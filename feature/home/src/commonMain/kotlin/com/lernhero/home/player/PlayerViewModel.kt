@@ -506,6 +506,7 @@ class PlayerViewModel(
         val today = todayDateKey()
         val now = Clock.System.now().toEpochMilliseconds()
         if (withAd && !state.shopChestAds.canWatch(chest, today, now)) return
+        if (!withAd && !chest.forGems) return
         if (!withAd && state.gems < chest.gemCost) {
             _uiState.update { it.copy(message = "Not enough gems") }
             return

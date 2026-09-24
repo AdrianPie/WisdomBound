@@ -8,6 +8,7 @@ import com.lernhero.domain.run.ChestSlot
 import kotlin.random.Random
 import kotlin.test.Test
 import kotlin.test.assertEquals
+import kotlin.test.assertFalse
 import kotlin.test.assertTrue
 
 /**
@@ -157,5 +158,28 @@ class EconomyTest {
     @Test
     fun legendaryItemsExistForChests() {
         assertTrue(ItemCatalog.all.any { it.rarity == Rarity.Legendary })
+    }
+
+    @Test
+    fun dailyChestIsAboutFifteenPercentOfBasic() {
+        for (level in listOf(1, 10, 30)) {
+            val share = ShopChest.Daily.expectedValue(level) / ShopChest.Basic.expectedValue(level)
+            assertTrue(share in 0.08f..0.22f, "Daily chest is ${share}x Basic on level $level")
+        }
+        assertEquals(ShopChest.DAILY_GEMS, ShopChest.Daily.guaranteedFor(1).gems)
+    }
+
+    @Test
+    fun onlyTheDailyChestOpensForAdsAndOnlyThreeTimesADay() {
+        var ads = ShopChestAds()
+        assertFalse(ads.canWatch(ShopChest.Basic, "2026-09-24", 0L))
+        assertFalse(ads.canWatch(ShopChest.Epic, "2026-09-24", 0L))
+        repeat(ShopChest.DAILY_ADS_PER_DAY) {
+            assertTrue(ads.canWatch(ShopChest.Daily, "2026-09-24", 0L))
+            ads = ads.afterWatch(ShopChest.Daily, "2026-09-24", 0L)
+        }
+        assertFalse(ads.canWatch(ShopChest.Daily, "2026-09-24", 0L))
+        assertTrue(ads.canWatch(ShopChest.Daily, "2026-09-25", 0L))
+        assertFalse(ShopChest.Daily.forGems)
     }
 }

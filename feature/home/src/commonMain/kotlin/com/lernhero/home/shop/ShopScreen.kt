@@ -170,21 +170,21 @@ fun ShopScreen(viewModel: PlayerViewModel) {
                                 onBuy = { viewModel.buyLegendPack { legendCelebration = true } }
                             )
                         }
+                        SectionBanner("Free Daily Chest")
+                        DailyChestCard(
+                            level = level,
+                            remaining = state.shopChestAds.dailyRemaining(today),
+                            available = state.shopChestAds.canWatch(ShopChest.Daily, today, now) && !state.watchingAd,
+                            onAd = { adConfirm = ShopChest.Daily }
+                        )
                         SectionBanner("Equipment Chests")
                         Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-                            ShopChest.entries.forEach { chest ->
-                                val ads = state.shopChestAds
+                            ShopChest.entries.filter { it.forGems }.forEach { chest ->
                                 ChestCard(
                                     chest = chest,
-                                    adLabel = when (chest) {
-                                        ShopChest.Basic -> "${ads.basicRemaining(today)}/${ShopChest.BASIC_ADS_PER_DAY}"
-                                        ShopChest.Epic -> ads.epicWaitMs(now).let { if (it == 0L) "1/1" else formatWait(it) }
-                                    },
-                                    adAvailable = ads.canWatch(chest, today, now) && !state.watchingAd,
                                     canAffordGems = state.gems >= chest.gemCost,
                                     level = level,
                                     pity = state.epicChestPity,
-                                    onAd = { adConfirm = chest },
                                     onGems = {
                                         viewModel.openShopChest(chest, withAd = false) { opening = it }
                                     },
@@ -337,12 +337,6 @@ fun ShopScreen(viewModel: PlayerViewModel) {
     }
 }
 
-private fun formatWait(ms: Long): String {
-    val minutes = ms / 60_000
-    val hours = minutes / 60
-    return if (hours >= 24) "${hours / 24}d ${hours % 24}h" else if (hours > 0) "${hours}h ${minutes % 60}m" else "${minutes.coerceAtLeast(1)}m"
-}
-
 @Composable
 private fun TabRow(selected: ShopTab, onSelect: (ShopTab) -> Unit) {
     Row(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.fillMaxWidth()) {
@@ -397,21 +391,24 @@ private fun OutlinedLabel(text: String, size: androidx.compose.ui.unit.TextUnit,
 }
 
 private fun ShopChest.headerColors(): List<Color> = when (this) {
+    ShopChest.Daily -> listOf(Color(0xFF5CC84A), Color(0xFF2F8A2A))
     ShopChest.Basic -> listOf(Color(0xFF3C8FE0), Color(0xFF2361A8))
     ShopChest.Epic -> listOf(Color(0xFF9A4FD6), Color(0xFF6A2DA6))
 }
 
 private fun ShopChest.bodyGlow(): Color = when (this) {
+    ShopChest.Daily -> Color(0xFFD4F7C4)
     ShopChest.Basic -> Color(0xFFBFE3FF)
     ShopChest.Epic -> Color(0xFFE6C7FF)
 }
 
 private fun ShopChest.image() = when (this) {
-    ShopChest.Basic -> Resources.Image.shopChestBasic
+    ShopChest.Daily, ShopChest.Basic -> Resources.Image.shopChestBasic
     ShopChest.Epic -> Resources.Image.shopChestEpic
 }
 
 private fun ShopChest.pitch(): String = when (this) {
+    ShopChest.Daily -> "+ 1 small prize: gold, a ticket or gear"
     ShopChest.Basic -> "+ 1 prize: gear, tickets or a Legendary"
     ShopChest.Epic -> "+ 1 prize: Rare+ gear, heroic tickets or a Legendary"
 }
@@ -422,15 +419,102 @@ private fun ShopChest.valueLabel(level: Int): String {
     return "x${halves / 2}${if (halves % 2 == 1) ".5" else ""} VALUE"
 }
 
+/**
+ * Darmowa skrzynia za reklame - szeroka, pozioma karta NAD skrzyniami za diamenty. Inny ksztalt niz
+ * tamte dwie celowo: to codzienny prezent, a nie towar, i nie moze wygladac jak tansza wersja
+ * [ShopChest.Basic].
+ */
+@Composable
+private fun DailyChestCard(
+    level: Int,
+    remaining: Int,
+    available: Boolean,
+    onAd: () -> Unit
+) {
+    val chest = ShopChest.Daily
+    val guaranteed = remember(level) { chest.guaranteedFor(level) }
+    val bob by rememberInfiniteTransition().animateFloat(0f, 1f, infiniteRepeatable(tween(1400, easing = FastOutSlowInEasing), RepeatMode.Reverse))
+    val colors = chest.headerColors()
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(14.dp))
+            .background(Brush.horizontalGradient(listOf(colors.last(), Color(0xFF1F5C1C))))
+            .border(3.dp, Color(0xFF14202E), RoundedCornerShape(14.dp))
+            .padding(8.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(10.dp)
+    ) {
+        Box(
+            modifier = Modifier
+                .size(92.dp)
+                .clip(RoundedCornerShape(10.dp))
+                .background(Brush.radialGradient(listOf(Color.White, chest.bodyGlow(), colors.first()))),
+            contentAlignment = Alignment.Center
+        ) {
+            Image(
+                painter = painterResource(chest.image()),
+                contentDescription = chest.title,
+                modifier = Modifier
+                    .fillMaxWidth(0.82f)
+                    .graphicsLayer { translationY = -bob * 4f * density }
+            )
+            Text(
+                text = "FREE",
+                color = Color.White,
+                fontFamily = FontFirst(),
+                fontWeight = FontWeight.Black,
+                fontSize = 10.sp,
+                modifier = Modifier
+                    .align(Alignment.TopStart)
+                    .padding(4.dp)
+                    .clip(RoundedCornerShape(50))
+                    .background(Brush.horizontalGradient(listOf(Color(0xFFE5433B), Color(0xFFFF7A45))))
+                    .border(1.5.dp, Color(0xFF3A0A06), RoundedCornerShape(50))
+                    .padding(horizontal = 6.dp, vertical = 1.dp)
+            )
+        }
+        Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(3.dp)) {
+            OutlinedLabel(chest.title, 16.sp, Color.White)
+            guaranteed.entries().chunked(2).forEach { row ->
+                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    row.forEach { (icon, amount) ->
+                        Text(
+                            text = "$icon ${amount.grouped()}",
+                            color = Color.White,
+                            fontFamily = FontFirst(),
+                            fontWeight = FontWeight.Black,
+                            fontSize = 12.sp
+                        )
+                    }
+                }
+            }
+            Text(
+                text = chest.pitch(),
+                color = Color(0xFFFFE27A),
+                fontFamily = FontFirst(),
+                fontWeight = FontWeight.Bold,
+                fontSize = 10.sp,
+                lineHeight = 12.sp
+            )
+        }
+        ChunkyButton(
+            top = if (remaining > 0) "▶ AD" else "DONE",
+            bottom = if (remaining > 0) "$remaining/${ShopChest.DAILY_ADS_PER_DAY}" else "tomorrow",
+            enabled = available,
+            colors = listOf(Color(0xFF8BE05A), Color(0xFF3F9E2B)),
+            onClick = onAd,
+            modifier = Modifier.width(78.dp)
+        )
+    }
+}
+
 @Composable
 private fun ChestCard(
     chest: ShopChest,
-    adLabel: String,
-    adAvailable: Boolean,
     canAffordGems: Boolean,
     level: Int,
     pity: Int,
-    onAd: () -> Unit,
     onGems: () -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -571,27 +655,15 @@ private fun ChestCard(
                 modifier = Modifier.padding(horizontal = 4.dp)
             )
         }
-        Row(
-            modifier = Modifier.fillMaxWidth().padding(start = 6.dp, end = 6.dp, bottom = 8.dp),
-            horizontalArrangement = Arrangement.spacedBy(6.dp)
-        ) {
-            ChunkyButton(
-                top = "▶ AD",
-                bottom = adLabel,
-                enabled = adAvailable,
-                colors = listOf(Color(0xFF8BE05A), Color(0xFF3F9E2B)),
-                onClick = onAd,
-                modifier = Modifier.weight(1f)
-            )
-            ChunkyButton(
-                top = "💎",
-                bottom = "${chest.gemCost}",
-                enabled = canAffordGems,
-                colors = listOf(Color(0xFFFFD86B), Color(0xFFE79B1E)),
-                onClick = onGems,
-                modifier = Modifier.weight(1f)
-            )
-        }
+        // Tylko diamenty - za reklame otwiera sie [ShopChest.Daily], nie te.
+        ChunkyButton(
+            top = "OPEN",
+            bottom = "💎 ${chest.gemCost}",
+            enabled = canAffordGems,
+            colors = listOf(Color(0xFFFFD86B), Color(0xFFE79B1E)),
+            onClick = onGems,
+            modifier = Modifier.fillMaxWidth().padding(start = 6.dp, end = 6.dp, bottom = 8.dp)
+        )
     }
 }
 

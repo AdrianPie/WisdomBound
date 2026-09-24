@@ -790,7 +790,7 @@ class PlayerRepositoryImpl: PlayerRepository {
                 if (!player.shopChestAds.canWatch(chest, dateKey, now)) return null
                 player.copy(shopChestAds = player.shopChestAds.afterWatch(chest, dateKey, now))
             } else {
-                if (player.gems < chest.gemCost) return null
+                if (!chest.forGems || player.gems < chest.gemCost) return null
                 player.copy(gems = player.gems - chest.gemCost)
             }
             val updated = paid.copy(epicChestPity = opening.nextPity).plusBundle(opening.total, now)

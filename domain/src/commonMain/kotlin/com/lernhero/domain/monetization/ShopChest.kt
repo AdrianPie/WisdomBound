@@ -5,8 +5,11 @@ import com.lernhero.domain.run.ChestSlot
 import kotlin.random.Random
 
 /**
- * Skrzynie ze sklepu. Kazda otwiera sie na dwa sposoby: za diamenty (zawsze) albo za reklame
- * (z limitem - zwykla [BASIC_ADS_PER_DAY] razy dziennie, epicka raz na [EPIC_AD_COOLDOWN_MS]).
+ * Skrzynie ze sklepu. Dwa swiaty, celowo rozdzielone:
+ *  - [Daily] - WYLACZNIE za reklame, [DAILY_ADS_PER_DAY] razy dziennie. Mala paczka (~15% wartosci
+ *    [Basic]) plus kilka diamentow - powod, zeby wracac codziennie, a nie zamiennik zakupu.
+ *  - [Basic] i [Epic] - WYLACZNIE za diamenty. Wczesniej otwieraly sie tez za reklame, przez co
+ *    najlepsza zawartosc sklepu byla za darmo i nie bylo powodu kupowac diamentow.
  *
  * ## Co jest w srodku
  *
@@ -22,9 +25,20 @@ import kotlin.random.Random
  */
 enum class ShopChest(
     val title: String,
+    /** Cena w diamentach; 0 = tej skrzyni nie da sie kupic, otwiera sie tylko za reklame. */
     val gemCost: Int,
     private val weights: Map<ChestSlot, Float>
 ) {
+    Daily(
+        title = "Daily Chest",
+        gemCost = 0,
+        weights = mapOf(
+            ChestSlot.GoldSmall to 55f,
+            ChestSlot.GoldMedium to 20f,
+            ChestSlot.SummonTicket to 15f,
+            ChestSlot.ItemCommon to 10f
+        )
+    ),
     Basic(
         title = "Basic Chest",
         gemCost = 100,
@@ -46,6 +60,12 @@ enum class ShopChest(
         )
     );
 
+    /** Da sie ja otworzyc za diamenty. */
+    val forGems: Boolean get() = gemCost > 0
+
+    /** Da sie ja otworzyc za reklame. */
+    val forAds: Boolean get() = this == Daily
+
     fun chanceOf(slot: ChestSlot): Float = (weights[slot] ?: 0f) / weights.values.sum()
 
     /** Pola, ktore w ogole moga wypasc - do okna z szansami. */
@@ -56,6 +76,14 @@ enum class ShopChest(
      * zgodnie z reszta gry.
      */
     fun guaranteedFor(heroLevel: Int): Bundle = when (this) {
+        // ~15% pewnej czesci Basic + staly napiwek w diamentach (nie rosnie z poziomem - diamenty
+        // sa waluta za prawdziwe pieniadze, ich podaz ma byc przewidywalna).
+        Daily -> Bundle(
+            gold = Bundle.scaled(75f, heroLevel),
+            iron = Bundle.scaled(6f, heroLevel),
+            essence = Bundle.scaled(6f, heroLevel),
+            gems = DAILY_GEMS
+        )
         Basic -> Bundle(
             gold = Bundle.scaled(500f, heroLevel),
             iron = Bundle.scaled(40f, heroLevel),
@@ -126,8 +154,11 @@ enum class ShopChest(
     }
 
     companion object {
-        const val BASIC_ADS_PER_DAY = 3
-        const val EPIC_AD_COOLDOWN_MS = 2L * 24 * 60 * 60 * 1000
+        /** Ile razy dziennie mozna otworzyc [Daily] za reklame. */
+        const val DAILY_ADS_PER_DAY = 3
+
+        /** Diamenty w kazdej [Daily]. */
+        const val DAILY_GEMS = 5
 
         /** Najpozniej co tyle epickich skrzyn wypada legenda. */
         const val EPIC_PITY = 10
@@ -153,26 +184,27 @@ data class ChestOpening(
     val pityTriggered: Boolean
 )
 
-/** Kiedy gracz ostatnio otwieral skrzynie ze sklepu za reklame. */
+/**
+ * Licznik reklam na skrzynie ze sklepu.
+ *
+ * Pole nazywa sie `basic`, bo tak jest zapisane w Firestore z czasow, gdy za reklame otwieralo sie
+ * Basic Chest - teraz liczy otwarcia [ShopChest.Daily]. `epicAt` zostaje tylko po to, zeby stare
+ * zapisy dalo sie odczytac; nic go juz nie ustawia.
+ */
 @kotlinx.serialization.Serializable
 data class ShopChestAds(
     val basic: DailyCounter = DailyCounter(),
     val epicAt: Long = 0L
 ) {
-    fun basicRemaining(day: String): Int = basic.remainingOn(day, ShopChest.BASIC_ADS_PER_DAY)
+    fun dailyRemaining(day: String): Int = basic.remainingOn(day, ShopChest.DAILY_ADS_PER_DAY)
 
-    /** 0 = mozna teraz; inaczej ile ms do nastepnej reklamy na epicka. */
-    fun epicWaitMs(now: Long): Long = (epicAt + ShopChest.EPIC_AD_COOLDOWN_MS - now).coerceAtLeast(0L)
+    @Suppress("UNUSED_PARAMETER")
+    fun canWatch(chest: ShopChest, day: String, now: Long): Boolean =
+        chest.forAds && dailyRemaining(day) > 0
 
-    fun canWatch(chest: ShopChest, day: String, now: Long): Boolean = when (chest) {
-        ShopChest.Basic -> basicRemaining(day) > 0
-        ShopChest.Epic -> epicWaitMs(now) == 0L
-    }
-
-    fun afterWatch(chest: ShopChest, day: String, now: Long): ShopChestAds = when (chest) {
-        ShopChest.Basic -> copy(basic = basic.increment(day))
-        ShopChest.Epic -> copy(epicAt = now)
-    }
+    @Suppress("UNUSED_PARAMETER")
+    fun afterWatch(chest: ShopChest, day: String, now: Long): ShopChestAds =
+        if (chest.forAds) copy(basic = basic.increment(day)) else this
 }
 
 /**
