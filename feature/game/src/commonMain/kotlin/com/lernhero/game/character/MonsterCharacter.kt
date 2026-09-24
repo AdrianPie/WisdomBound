@@ -10,7 +10,8 @@ import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.infiniteRepeatable
 import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.animation.core.tween
-import androidx.compose.foundation.Image
+import androidx.compose.animation.core.LinearEasing
+import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.requiredSize
@@ -26,7 +27,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.unit.Dp
-import org.jetbrains.compose.resources.painterResource
+import org.jetbrains.compose.resources.imageResource
 
 /**
  * Pojedynczy PNG animowany matematycznie (bez sprite-sheeta) - odpowiednik [ModularKnight] dla
@@ -92,6 +93,14 @@ fun MonsterCharacter(
         targetValue = 1f,
         animationSpec = infiniteRepeatable(tween(1400, easing = EaseInOutSine), RepeatMode.Reverse)
     )
+    // Zegar animacji spoczynku w ms. Kazdy potwor dostaje wlasne przesuniecie, zeby dwa takie same
+    // gatunki obok siebie nie oddychaly i nie sypaly iskrami w idealnym unisonie.
+    val clock = idleInfinite.animateFloat(
+        initialValue = 0f,
+        targetValue = IDLE_CLOCK_MS.toFloat(),
+        animationSpec = infiniteRepeatable(tween(IDLE_CLOCK_MS, easing = LinearEasing))
+    )
+    val phaseOffset = remember { kotlin.random.Random.nextFloat() * 10_000f }
 
     val deadAlpha by animateFloatAsState(
         targetValue = if (state == CharacterState.DEAD) 0f else 1f,
@@ -107,7 +116,8 @@ fun MonsterCharacter(
     // Wypad zawsze w strone przeciwnej formacji: wrog (prawa strona) bije w lewo, sojusznik w prawo.
     val lungeDirection = if (isEnemySide) -1f else 1f
     val attackTranslatePx = attack.value * 14f
-    val idleBobPx = breath * 2.5f
+    // Stary podskok zostaje tylko dla artu bez wlasnego oddechu (breathe = 0).
+    val idleBobPx = if (preset.idle.breathe > 0f) 0f else breath * 2.5f
 
     Box(
         // preset.visualScale kompensuje rozne puste marginesy w kazdym PNG, zeby wszystkie
@@ -117,9 +127,11 @@ fun MonsterCharacter(
         },
         contentAlignment = Alignment.BottomCenter
     ) {
-        Image(
-            painter = painterResource(preset.drawable),
-            contentDescription = null,
+        // Jeden Canvas zamiast dwoch Image: sprite, fala szat, czasteczki i blysk trafienia maja
+        // ten sam czas i te same transformacje (patrz [drawIdleMonster]).
+        val image = imageResource(preset.drawable)
+        val pivotY = preset.anchors.root.pivotFractionY
+        Canvas(
             modifier = Modifier
                 .fillMaxSize()
                 .graphicsLayer {
@@ -129,22 +141,25 @@ fun MonsterCharacter(
                     translationX = attackTranslatePx * lungeDirection
                     alpha = deadAlpha
                 }
-        )
-        if (hitFlash.value > 0f) {
-            Image(
-                painter = painterResource(preset.drawable),
-                contentDescription = null,
-                modifier = Modifier
-                    .fillMaxSize()
-                    .graphicsLayer {
-                        scaleX = facing * enterPop.value * deadScale
-                        scaleY = enterPop.value * deadScale
-                        translationY = idleBobPx
-                        translationX = attackTranslatePx * lungeDirection
-                        alpha = hitFlash.value * 0.65f
-                    },
-                colorFilter = ColorFilter.tint(Color(0xFFFF3B30), BlendMode.SrcIn)
-            )
+        ) {
+            // Czytane TUTAJ, w fazie rysowania - zegar co klatke odswieza tylko rysunek, nie kompozycje.
+            val t = clock.value + phaseOffset
+            drawIdleMonster(image = image, style = preset.idle, t = t, pivotY = pivotY)
+            val flash = hitFlash.value
+            if (flash > 0f) {
+                drawIdleMonster(
+                    image = image,
+                    style = preset.idle,
+                    t = t,
+                    pivotY = pivotY,
+                    alpha = flash * 0.65f,
+                    colorFilter = ColorFilter.tint(Color(0xFFFF3B30), BlendMode.SrcIn),
+                    particles = false
+                )
+            }
         }
     }
 }
+
+/** Dlugosc petli zegara spoczynku - dluga, zeby przeskok na poczatek zdarzal sie rzadko. */
+private const val IDLE_CLOCK_MS = 120_000

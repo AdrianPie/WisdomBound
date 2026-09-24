@@ -25,6 +25,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.BiasAlignment
 import androidx.compose.ui.Modifier
@@ -194,7 +196,9 @@ fun HomeScreen(
         // Za flaga: "dev: +zasoby" doklada pelen worek surowcow jednym tapnieciem, wiec w
         // buildzie sklepowym ten caly rzad musi byc wylaczony.
         if (SHOW_DEV_TOOLS) {
+            var bestiaryOpen by remember { mutableStateOf(false) }
             DevLinksRow(
+                onOpenBestiary = { bestiaryOpen = true },
                 onOpenKnightPreview = onOpenKnightPreview,
                 onOpenModularKnightPreview = onOpenModularKnightPreview,
                 onOpenMonsterAnchorLab = onOpenMonsterAnchorLab,
@@ -205,6 +209,9 @@ fun HomeScreen(
                     .align(Alignment.BottomCenter)
                     .padding(contentPadding)
             )
+            if (bestiaryOpen) {
+                com.lernhero.home.dev.BestiaryDevOverlay(onClose = { bestiaryOpen = false })
+            }
         }
     }
 }
@@ -457,6 +464,7 @@ private fun DevLinksRow(
     onOpenMonsterAnimationLab: () -> Unit,
     onOpenChestPreview: () -> Unit,
     onGrantResources: () -> Unit,
+    onOpenBestiary: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     Row(
@@ -465,6 +473,13 @@ private fun DevLinksRow(
     ) {
         // Jedno tapniecie = pelen worek wszystkiego, czym da sie cokolwiek przetestowac.
         // Wyroznione kolorem, bo w odroznieniu od pozostalych linkow dev ta rzecz ZMIENIA ZAPIS.
+        Text(
+            text = "zoo",
+            color = Muted.copy(alpha = 0.5f),
+            fontFamily = FontFirst(),
+            fontSize = 9.sp,
+            modifier = Modifier.clickable(onClick = onOpenBestiary).padding(horizontal = 4.dp, vertical = 8.dp)
+        )
         Text(
             text = "dev: +zasoby",
             color = Color(0xFF5FD08A),

@@ -32,7 +32,9 @@ data class MonsterVisualPreset(
      * Grafika narysowana patrzac w PRAWO (druga fala kompanow). Walka odbija wtedy sprite odwrotnie
      * niz przy starym arcie - wrog i tak ma patrzec w lewo, sojusznik w prawo.
      */
-    val facesRight: Boolean = false
+    val facesRight: Boolean = false,
+    /** Animacja spoczynku - oddech, falowanie, czasteczki. Patrz [IdleStyle]. */
+    val idle: IdleStyle = IdleStyle.Default
 ) {
     /** Mnoznik scaleX: 1 = bez odbicia. Wrog patrzy w lewo, sojusznik w prawo - niezaleznie od artu. */
     fun facing(isEnemySide: Boolean): Float {
@@ -103,7 +105,8 @@ object MonsterVisualPresets {
             ),
             baseSizeDp = 100.dp,
             visualScale = scale,
-            facesRight = true
+            facesRight = true,
+            idle = MonsterIdleStyles.byKey[key] ?: IdleStyle.Default
         )
     }
 
