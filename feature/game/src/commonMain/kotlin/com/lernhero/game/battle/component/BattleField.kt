@@ -327,9 +327,24 @@ private fun HealthBarsOverlay(
                 val boosted = character.isPlayer && character.element in boostedElements
 
                 var plateSize by remember { mutableStateOf(IntSize.Zero) }
-                UnitPlate(
+                var feetSize by remember { mutableStateOf(IntSize.Zero) }
+                val feet = rect.resolve(anchorsFor(character).root) - layerOrigin
+                // Atak z lewej, pancerz z prawej - rozstawione na mniej wiecej szerokosc stop.
+                FeetStats(
                     character = character,
                     attackMultiplier = if (character.isPlayer) playerAttackMultiplier else enemyAttackMultiplier,
+                    spread = with(density) { (rect.size.width * 0.38f).toDp() },
+                    modifier = Modifier
+                        .onGloballyPositioned { feetSize = it.size }
+                        .offset {
+                            IntOffset(
+                                x = (feet.x - feetSize.width / 2f).roundToInt(),
+                                y = (feet.y - feetSize.height * 0.75f).roundToInt()
+                            )
+                        }
+                )
+                UnitPlate(
+                    character = character,
                     barWidth = barWidthDp,
                     elementBadge = if (showBadge) {
                         { ElementBadge(element = character.element!!, boosted = boosted) }

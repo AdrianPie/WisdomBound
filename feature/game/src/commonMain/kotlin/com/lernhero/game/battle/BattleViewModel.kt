@@ -955,7 +955,9 @@ class BattleViewModel(
             1f
         }
 
-        val amount = (attacker.attack * multiplier * elemental * factionBoost * factor)
+        // Pancerz celu odcina czesc ciosu - dziala w obie strony (nasza zbroja, pancerz Straznika).
+        val armor = (1f - target.armor.coerceIn(0f, com.lernhero.domain.combat.Armor.MAX))
+        val amount = (attacker.attack * multiplier * elemental * factionBoost * factor * armor)
             .roundToInt().coerceAtLeast(1)
         return PendingHit(
             targetId = target.id,
@@ -2823,10 +2825,16 @@ class BattleViewModel(
                     )
                 }
             } else {
+                // Pancerz bohatera: Obrona i redukcja z ekwipunku (razem z kamieniami i efektami
+                // typu "-10% obrazen") - patrz [com.lernhero.domain.combat.Armor].
+                val effectStats = loadout.effects
+                    .filterIsInstance<com.lernhero.domain.combat.StatEffect>()
+                    .fold(com.lernhero.domain.combat.Stats.Empty) { acc, e -> acc + e.bonus }
                 character.copy(
                     maxHp = character.maxHp + hpBonus,
                     hp = character.hp + hpBonus,
                     attack = character.attack + attackBonus,
+                    armor = com.lernhero.domain.combat.Armor.of(loadout.stats + effectStats),
                     heroLook = HeroLook.of(appearance),
                     knightEquipment = KnightEquipment(
                         head = equipment.itemIn(ItemSlot.Head, heroBag) != null,
@@ -2995,7 +3003,8 @@ class BattleViewModel(
                         hp = hp,
                         maxHp = hp,
                         attack = CompanionPower.attackAt(card, stars, level, gear),
-                        level = level
+                        level = level,
+                        armor = com.lernhero.domain.combat.Armor.of(gear)
                     )
                 }
             }
@@ -3055,7 +3064,8 @@ class BattleViewModel(
                 hp = hp,
                 maxHp = hp,
                 attack = attack,
-                level = enemyLevel(wave, level, BattleKind.Normal)
+                level = enemyLevel(wave, level, BattleKind.Normal),
+                armor = role.armor
             )
         }
     }
@@ -3115,7 +3125,8 @@ class BattleViewModel(
             maxHp = hp,
             attack = attack,
             isElite = true,
-            level = enemyLevel(wave, level, kind)
+            level = enemyLevel(wave, level, kind),
+            armor = if (isBoss) BOSS_ARMOR else ELITE_ARMOR
         )
     }
 
@@ -3129,6 +3140,7 @@ class BattleViewModel(
             isPlayer = isPlayer,
             avatarKey = avatar,
             level = level,
+            armor = armor,
             // Zywiol bierze sie z KARTY o tym samym kluczu - gatunki wrogow ([EnemySpecies.all])
             // i id kompanow to ten sam zbior, wiec nie trzeba przepychac typu przez szablony.
             element = MonsterCatalog.byId(avatar)?.element,
@@ -3319,6 +3331,10 @@ private val HERO_BASE_ATTACK get() = HeroBaseStats.ATTACK
 
 private val CRIT_CHANCE get() = HeroBaseStats.CRIT_CHANCE
 private val CRIT_DAMAGE_MULTIPLIER get() = HeroBaseStats.CRIT_MULTIPLIER
+
+/** Pancerz elity i bossa - odcinaja czesc obrazen, zeby nie padaly tak szybko jak zwykli wrogowie. */
+private const val ELITE_ARMOR = 0.1f
+private const val BOSS_ARMOR = 0.15f
 
 /**
  * Zla odpowiedz oslabia salwe, ale nie zatrzymuje postepu - gracz ma miec "jestem dobry, wiec ide
@@ -3584,6 +3600,8 @@ private data class CharacterTemplate(
     /** Elita/boss - dostaje dodatkowe przeskalowanie sylwetki (patrz [BattleViewModel.ELITE_SCALE_MULTIPLIER]). */
     val isElite: Boolean = false,
     /** Poziom pokazywany przy pasku HP - bohater i kompan swoj, wrog z planszy i fali. */
-    val level: Int = 1
+    val level: Int = 1,
+    /** Pancerz - patrz [com.lernhero.domain.combat.Armor]. */
+    val armor: Float = 0f
 )
 

@@ -75,12 +75,14 @@ enum class EnemyRole(
     /** Od ktorej fali ta rola w ogole wchodzi do puli - pierwsze fale maja byc rozgrzewka. */
     val fromWave: Int,
     /** Waga w losowaniu, gdy juz wejdzie. */
-    val weight: Int
+    val weight: Int,
+    /** Pancerz - ulamek obrazen, ktory ten wrog odcina (patrz [com.lernhero.domain.combat.Armor]). */
+    val armor: Float = 0f
 ) {
     Grunt("", 1f, 1f, fromWave = 1, weight = 10),
-    Brute("Brute", 1.85f, 0.80f, fromWave = 3, weight = 5),
+    Brute("Brute", 1.85f, 0.80f, fromWave = 3, weight = 5, armor = 0.1f),
     Stalker("Stalker", 0.62f, 1.45f, fromWave = 5, weight = 5),
-    Warden("Warden", 1.45f, 1.15f, fromWave = 9, weight = 4),
+    Warden("Warden", 1.45f, 1.15f, fromWave = 9, weight = 4, armor = 0.2f),
     Ravager("Ravager", 0.85f, 1.70f, fromWave = 13, weight = 4);
 
     companion object {
