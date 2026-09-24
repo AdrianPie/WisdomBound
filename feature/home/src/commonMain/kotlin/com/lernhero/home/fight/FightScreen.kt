@@ -393,7 +393,7 @@ private fun CompanionStrip(
 ) {
     Column(
         modifier = modifier,
-        verticalArrangement = Arrangement.spacedBy(5.dp),
+        verticalArrangement = Arrangement.spacedBy(7.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         companions.forEachIndexed { index, card ->
@@ -401,31 +401,36 @@ private fun CompanionStrip(
             Box(
                 modifier = Modifier
                     .size(MINI_SLOT)
-                    .clip(RoundedCornerShape(10.dp))
-                    .background(if (card != null) MiniFill else MiniEmpty)
+                    .clip(RoundedCornerShape(12.dp))
+                    .background(if (unlocked) (if (card != null) MiniFill else MiniEmpty) else Color(0xCC0E0A07))
                     .border(
                         width = if (card != null) 1.5.dp else 1.dp,
                         color = if (card != null) MiniEdgeOn else MiniEdge,
-                        shape = RoundedCornerShape(10.dp)
+                        shape = RoundedCornerShape(12.dp)
                     )
-                    .clickable(enabled = unlocked) { onClick(index) },
+                    // Zamkniete tez reaguje - sklad pokazuje wtedy, od ktorego poziomu sie otwiera.
+                    .clickable { onClick(index) },
                 contentAlignment = Alignment.Center
             ) {
                 when {
-                    !unlocked -> Text(
-                        text = "${PartySlots.requiredLevel(index)}",
-                        color = PlateMuted.copy(alpha = 0.6f),
-                        fontFamily = FontFirst(),
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 10.sp
-                    )
+                    // Klodka + "Lv N": sama liczba nic nie mowila - wygladala jak licznik.
+                    !unlocked -> Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                        Text(text = "🔒", fontSize = 15.sp, modifier = Modifier.alpha(0.8f))
+                        Text(
+                            text = "Lv ${PartySlots.requiredLevel(index)}",
+                            color = PlateMuted,
+                            fontFamily = FontFirst(),
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 9.sp
+                        )
+                    }
 
                     card == null -> Text(
                         text = "+",
                         color = PlateMuted,
                         fontFamily = FontFirst(),
                         fontWeight = FontWeight.Bold,
-                        fontSize = 16.sp
+                        fontSize = 22.sp
                     )
 
                     else -> {
@@ -441,7 +446,7 @@ private fun CompanionStrip(
                             color = Color.White,
                             fontFamily = FontFirst(),
                             fontWeight = FontWeight.Bold,
-                            fontSize = 8.sp,
+                            fontSize = 10.sp,
                             style = TextStyle(shadow = Shadow(color = Color(0xFF120D09), blurRadius = 4f)),
                             modifier = Modifier.align(Alignment.BottomEnd).padding(horizontal = 3.dp)
                         )
@@ -800,7 +805,7 @@ private fun SideButton(
 }
 
 /** Bok miniatury kompana. Male male - patrz [CompanionStrip]. */
-private val MINI_SLOT = 34.dp
+private val MINI_SLOT = 46.dp
 
 private val MiniFill = Color(0xCC241B12)
 private val MiniEmpty = Color(0x99140F0A)
