@@ -1,5 +1,6 @@
 package com.lernhero.game.character
 
+import com.lernhero.domain.monster.CompanionPassive
 import com.lernhero.domain.monster.Element
 
 data class CharacterUiModel(
@@ -13,6 +14,8 @@ data class CharacterUiModel(
     val level: Int = 1,
     /** Pancerz: ulamek obrazen, ktory ta postac odcina - patrz [com.lernhero.domain.combat.Armor]. */
     val armor: Float = 0f,
+    /** Moc bierna gatunku - dziala po obu stronach, patrz [CompanionPassive]. Bohater ma null. */
+    val passive: CompanionPassive? = null,
     /** Klucz gatunku - patrz [MonsterVisualPresets.forSpecies]. Bez znaczenia dla hero (rysowany przez [ModularKnight]). */
     val avatarKey: String,
     /**

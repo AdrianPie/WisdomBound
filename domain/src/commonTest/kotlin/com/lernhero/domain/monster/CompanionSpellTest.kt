@@ -63,16 +63,25 @@ class CompanionSpellTest {
     }
 
     @Test
-    fun `leczenie celuje w sojusznika, obrazenia we wrogow`() {
+    fun `leczenie i tarcze celuja w sojusznikow, reszta we wrogow`() {
         CompanionSpells.all.forEach { spell ->
-            when (spell.kind) {
-                CompanionSpellKind.Heal ->
-                    assertEquals(com.lernhero.domain.spell.SpellTarget.WoundedAlly, spell.target)
-                CompanionSpellKind.Strike ->
-                    assertEquals(com.lernhero.domain.spell.SpellTarget.RandomEnemy, spell.target)
-                CompanionSpellKind.Blast ->
-                    assertEquals(com.lernhero.domain.spell.SpellTarget.AllEnemies, spell.target)
+            val expected = when (spell.kind) {
+                CompanionSpellKind.Heal, CompanionSpellKind.HealAll, CompanionSpellKind.Shield ->
+                    com.lernhero.domain.spell.SpellTarget.WoundedAlly
+                CompanionSpellKind.Blast -> com.lernhero.domain.spell.SpellTarget.AllEnemies
+                else -> com.lernhero.domain.spell.SpellTarget.RandomEnemy
             }
+            assertEquals(expected, spell.target, spell.id)
+        }
+    }
+
+    @Test
+    fun `kazda karta ma moc bierna i znane zaklecia`() {
+        MonsterCatalog.all.forEach { card ->
+            assertTrue(card.passive != null, "${card.id} bez mocy biernej")
+            assertEquals(card.spellIds.size, card.spells.size, "${card.id} ma nieznane zaklecie")
+            assertTrue(card.spells.isNotEmpty(), "${card.id} bez zaklec")
+            assertTrue(card.defense in 0..40, "${card.id} ma obrone ${card.defense}")
         }
     }
 

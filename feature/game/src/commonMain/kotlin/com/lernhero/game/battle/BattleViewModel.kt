@@ -21,6 +21,7 @@ import com.lernhero.domain.item.toLoadout
 import com.lernhero.domain.monster.EnemySpecies
 import com.lernhero.domain.monster.CompanionSpell
 import com.lernhero.domain.monster.CompanionSpellKind
+import com.lernhero.domain.monster.CompanionPassive
 import com.lernhero.domain.monster.Element
 import com.lernhero.domain.monster.MonsterCatalog
 import com.lernhero.domain.monster.MonsterLevels
@@ -279,6 +280,9 @@ class BattleViewModel(
     /** Wrogowie zamrozeni [SpellCatalog.FROST_SHARD] - traca tyle najblizszych krokow salwy. */
     private var frozenTurns: MutableMap<String, Int> = mutableMapOf()
 
+    /** Kto juz zuzyl w tej fali [CompanionPassive.Undying] - czyszczone razem z nowa fala. */
+    private val undyingUsed: MutableSet<String> = mutableSetOf()
+
     /** Zbierany na biezaco wynik tego zejscia - na koniec leci do repozytorium i na ekran koncowy. */
     private var runTally: RunTally = RunTally()
 
@@ -375,6 +379,12 @@ class BattleViewModel(
                 .let { foes -> if (attacker.isPlayer) foes.minByOrNull { it.id } else foes.randomOrNull(combatRandom) }
             ?: return this
 
+        // Unik ([CompanionPassive.Evasion]) - rzucany przy budowaniu ciosu, tu tylko go pokazujemy.
+        // Przed garda, zeby unik nie zjadal ladunku tarczy.
+        if (hit.dodged) {
+            return spawnEffect(targetId = target.id, amount = 0, kind = HitKind.Dodge, sourceId = attackerId)
+        }
+
         // Garda ([EndlessBuff.Guard]/[EndlessBuff.Aegis]): cios po prostu nie dochodzi.
         val charges = guardCharges[target.id] ?: 0
         if (!attacker.isPlayer && target.isPlayer && charges > 0) {
@@ -393,6 +403,13 @@ class BattleViewModel(
             return healCharacter(hit.targetId, hit.amount.toFloat())
         }
 
+        // Tarcza z zaklecia kompana ([CompanionSpellKind.Shield]) - jeden ladunek gardy wiecej.
+        if (hit.grantsGuard) {
+            val ally = characters[hit.targetId]?.takeIf { it.hp > 0 } ?: return this
+            return copy(guardCharges = guardCharges + (ally.id to (guardCharges[ally.id] ?: 0) + 1))
+                .spawnEffect(targetId = ally.id, amount = 0, kind = HitKind.Shield)
+        }
+
         if (hit.freezeTurns > 0) frozenTurns[target.id] = hit.freezeTurns
 
         val raw = (target.hp - hit.amount).coerceAtLeast(0)
@@ -400,10 +417,14 @@ class BattleViewModel(
         val secondWindStacks = if (target.isPlayer) endlessBuffs[EndlessBuff.SecondWind] ?: 0 else 0
         val alreadyUsed = secondWindUses[target.id] ?: 0
         val rescued = raw <= 0 && secondWindStacks > alreadyUsed
-        val finalHp = if (rescued) {
-            (target.maxHp * SECOND_WIND_HP_FRACTION).roundToInt().coerceAtLeast(1)
-        } else {
-            raw
+        // Nieumarly ([CompanionPassive.Undying]): raz na fale wstaje zamiast pasc - po obu stronach.
+        val undying = raw <= 0 && !rescued && target.passive == CompanionPassive.Undying &&
+            target.id !in undyingUsed
+        if (undying) undyingUsed += target.id
+        val finalHp = when {
+            rescued -> (target.maxHp * SECOND_WIND_HP_FRACTION).roundToInt().coerceAtLeast(1)
+            undying -> (target.maxHp * CompanionPassive.Undying.value).roundToInt().coerceAtLeast(1)
+            else -> raw
         }
 
         var next = copy(
@@ -414,10 +435,27 @@ class BattleViewModel(
                 )
             ),
             secondWindUses = if (rescued) secondWindUses + (target.id to alreadyUsed + 1) else secondWindUses,
-            message = if (rescued) "${target.name} lapie drugi oddech!" else message
+            message = when {
+                rescued -> "${target.name} lapie drugi oddech!"
+                undying -> "${target.name} refuses to die!"
+                else -> message
+            }
         ).spawnEffect(targetId = target.id, amount = hit.amount, kind = hit.kind, sourceId = attackerId)
 
-        if (rescued) next = next.spawnEffect(targetId = target.id, amount = finalHp, kind = HitKind.Heal)
+        if (rescued || undying) next = next.spawnEffect(targetId = target.id, amount = finalHp, kind = HitKind.Heal)
+
+        // Wysysanie z zaklecia ([CompanionSpellKind.Drain]) i wampiryzm gatunku
+        // ([CompanionPassive.Lifesteal]) - oba od REALNIE zadanych obrazen.
+        val drain = hit.drainFraction +
+            if (attacker.passive == CompanionPassive.Lifesteal) CompanionPassive.Lifesteal.value else 0f
+        if (drain > 0f) {
+            next = next.healCharacter(attackerId, hit.amount * drain, boosted = attacker.isPlayer)
+        }
+
+        // Kolce gatunku ([CompanionPassive.Thorns]) - dzialaja tez na wrogach z ta moca.
+        if (target.passive == CompanionPassive.Thorns) {
+            next = next.dealReflected(attackerId, (hit.amount * CompanionPassive.Thorns.value).roundToInt())
+        }
 
         // Wampiryzm: kazdy cios gracza (takze dodatkowe pociski) leczy atakujacego za czesc
         // REALNIE zadanych obrazen, nie za atak bazowy.
@@ -456,10 +494,15 @@ class BattleViewModel(
     }
 
     /** Leczenie w jednym miejscu - razem z bonusem z [EndlessBuff.Blessing] i efektem na ekranie. */
-    private fun BattleUiState.healCharacter(characterId: String, rawAmount: Float): BattleUiState {
+    private fun BattleUiState.healCharacter(
+        characterId: String,
+        rawAmount: Float,
+        /** false dla wrogow - [EndlessBuff.Blessing] to ulepszenie DRUZYNY. */
+        boosted: Boolean = true
+    ): BattleUiState {
         val character = characters[characterId] ?: return this
         if (character.hp <= 0) return this
-        val amount = (rawAmount * healingMultiplier()).roundToInt()
+        val amount = (rawAmount * if (boosted) healingMultiplier() else 1f).roundToInt()
         if (amount <= 0) return this
         val healed = (character.hp + amount).coerceAtMost(character.maxHp)
         if (healed == character.hp) return this
@@ -903,11 +946,23 @@ class BattleViewModel(
         target: CharacterUiModel,
         factor: Float
     ): PendingHit {
+        // Unik celu ([CompanionPassive.Evasion]) - rzut tutaj, zeby pocisk i tak polecial.
+        if (target.passive == CompanionPassive.Evasion &&
+            combatRandom.nextFloat() < CompanionPassive.Evasion.value
+        ) {
+            return PendingHit(targetId = target.id, amount = 0, isCrit = false, kind = HitKind.Dodge, dodged = true)
+        }
+
         val precisionStacks = endlessBuffs[EndlessBuff.Precision] ?: 0
-        val isCrit = attacker.isPlayer &&
+        val keenEye = if (attacker.passive == CompanionPassive.KeenEye) CompanionPassive.KeenEye.value else 0f
+        val isCrit = if (attacker.isPlayer) {
             combatRandom.nextFloat() <
-            (CRIT_CHANCE + precisionStacks * PRECISION_CRIT_BONUS_PER_STACK +
-                heroStats.critChanceBonus + talentBonuses.critChance)
+                (CRIT_CHANCE + precisionStacks * PRECISION_CRIT_BONUS_PER_STACK +
+                    heroStats.critChanceBonus + talentBonuses.critChance + keenEye)
+        } else {
+            // Wrogowie krytykuja WYLACZNIE z mocy gatunku - bez tego nie maja szansy na krytyka.
+            keenEye > 0f && combatRandom.nextFloat() < keenEye
+        }
 
         val multiplier = if (attacker.isPlayer) {
             val brutalityStacks = endlessBuffs[EndlessBuff.Brutality] ?: 0
@@ -938,8 +993,11 @@ class BattleViewModel(
         } else {
             val fortressStacks = endlessBuffs[EndlessBuff.Fortress] ?: 0
             val fortressReduction = (fortressStacks * FORTRESS_REDUCTION_PER_STACK).coerceAtMost(MAX_FORTRESS_REDUCTION)
-            currentEnemyMultiplier * (1f - fortressReduction)
+            val enemyCrit = if (isCrit) CRIT_DAMAGE_MULTIPLIER else 1f
+            currentEnemyMultiplier * (1f - fortressReduction) * enemyCrit
         }
+
+        val passiveBonus = passiveDamageMultiplier(attacker, target)
 
         // Przewaga zywiolu dziala w OBIE strony i mnozy sie z reszta - wchodzi tu, a nie w
         // gałęzi gracza, bo ten sam trojkat ma obowiazywac takze wrogow bijacych w kompanow.
@@ -957,7 +1015,7 @@ class BattleViewModel(
 
         // Pancerz celu odcina czesc ciosu - dziala w obie strony (nasza zbroja, pancerz Straznika).
         val armor = (1f - target.armor.coerceIn(0f, com.lernhero.domain.combat.Armor.MAX))
-        val amount = (attacker.attack * multiplier * elemental * factionBoost * factor * armor)
+        val amount = (attacker.attack * multiplier * elemental * factionBoost * factor * armor * passiveBonus)
             .roundToInt().coerceAtLeast(1)
         return PendingHit(
             targetId = target.id,
@@ -965,6 +1023,33 @@ class BattleViewModel(
             isCrit = isCrit,
             kind = if (isCrit) HitKind.Crit else HitKind.Hit
         )
+    }
+
+    /**
+     * Moce bierne, ktore zmieniaja sile ciosu: [CompanionPassive.Berserk] (napastnik ranny),
+     * [CompanionPassive.Predator] (cel ranny) i [CompanionPassive.Warband] (kazdy zywy sojusznik
+     * z ta moca i TYM SAMYM zywiolem co napastnik dokłada swoj procent - takze on sam).
+     */
+    private fun BattleUiState.passiveDamageMultiplier(attacker: CharacterUiModel, target: CharacterUiModel): Float {
+        var bonus = 1f
+        if (attacker.passive == CompanionPassive.Berserk && attacker.maxHp > 0 &&
+            attacker.hp.toFloat() / attacker.maxHp < CompanionPassive.BERSERK_THRESHOLD
+        ) {
+            bonus *= 1f + CompanionPassive.Berserk.value
+        }
+        if (attacker.passive == CompanionPassive.Predator && target.maxHp > 0 &&
+            target.hp.toFloat() / target.maxHp < CompanionPassive.PREDATOR_THRESHOLD
+        ) {
+            bonus *= 1f + CompanionPassive.Predator.value
+        }
+        if (attacker.element != null) {
+            val banners = characters.values.count {
+                it.isPlayer == attacker.isPlayer && it.hp > 0 &&
+                    it.passive == CompanionPassive.Warband && it.element == attacker.element
+            }
+            bonus *= 1f + banners * CompanionPassive.Warband.value
+        }
+        return bonus
     }
 
     /**
@@ -1017,7 +1102,11 @@ class BattleViewModel(
         val cardId = companionCardOf[characterId] ?: return null
         val card = MonsterCatalog.byId(cardId) ?: return null
 
+        val anyoneWounded = _uiState.value.characters.values.any { it.isPlayer && it.hp > 0 && it.hp < it.maxHp }
         card.spells.forEach { spell ->
+            // Leczenie przy pelnym HP druzyny zmarnowaloby kompanowi cala kolejke - wtedy bije zwyczajnie.
+            val healing = spell.kind == CompanionSpellKind.Heal || spell.kind == CompanionSpellKind.HealAll
+            if (healing && !anyoneWounded) return@forEach
             val level = MonsterSpellLevels.clamp(
                 savedSpellLevels["$cardId:${spell.id}"] ?: MonsterSpellLevels.MIN_LEVEL
             )
@@ -1030,7 +1119,8 @@ class BattleViewModel(
 
     /**
      * Rzuca zaklecie kompana. Leczenie liczy sie od maks. HP CELU (procent), a obrazenia od ataku
-     * rzucajacego - tak jak opisuje to [CompanionSpellKind].
+     * rzucajacego razy mnoznik tury - z przewaga zywiolu i pancerzem celu, jak zwykly cios (poza
+     * [CompanionSpellKind.Pierce], ktory pancerz ignoruje). Rodzaje opisuje [CompanionSpellKind].
      */
     private fun castCompanionSpell(cast: CompanionCast, casterId: String) {
         val state = _uiState.value
@@ -1038,36 +1128,62 @@ class BattleViewModel(
         val spell = cast.spell
         val power = MonsterSpellLevels.powerAt(spell, cast.level)
 
+        val allies = state.characters.values.filter { it.isPlayer && it.hp > 0 }.sortedBy { it.id }
+        val foes = state.characters.values.filter { !it.isPlayer && it.hp > 0 }.sortedBy { it.id }
+        val wounded = allies.filter { it.hp < it.maxHp }
+
         val targets = when (spell.kind) {
-            CompanionSpellKind.Heal ->
-                state.characters.values
-                    .filter { it.isPlayer && it.hp > 0 && it.hp < it.maxHp }
-                    .minByOrNull { it.hp.toFloat() / it.maxHp }
-                    ?.let { listOf(it) }.orEmpty()
-            CompanionSpellKind.Strike ->
-                state.characters.values.filter { !it.isPlayer && it.hp > 0 }
-                    .randomOrNull(combatRandom)?.let { listOf(it) }.orEmpty()
-            CompanionSpellKind.Blast ->
-                state.characters.values.filter { !it.isPlayer && it.hp > 0 }.sortedBy { it.id }
+            CompanionSpellKind.Heal -> wounded.minByOrNull { it.hp.toFloat() / it.maxHp }?.let { listOf(it) }.orEmpty()
+            CompanionSpellKind.HealAll -> wounded
+            CompanionSpellKind.Shield -> allies
+            CompanionSpellKind.Blast -> foes
+            CompanionSpellKind.Chain -> foes.shuffled(combatRandom).take(CompanionSpellKind.CHAIN_TARGETS)
+            CompanionSpellKind.Execute -> foes.minByOrNull { it.hp.toFloat() / it.maxHp }?.let { listOf(it) }.orEmpty()
+            CompanionSpellKind.Strike, CompanionSpellKind.Pierce,
+            CompanionSpellKind.Drain, CompanionSpellKind.Freeze ->
+                foes.randomOrNull(combatRandom)?.let { listOf(it) }.orEmpty()
         }
 
+        // Nie ma kogo bic - [rollCompanionSpell] odsiewa juz leczenie bez rannych, wiec to rzadkosc.
         if (targets.isEmpty()) {
             startNextVolley()
             return
         }
 
         val hits = targets.map { target ->
-            val amount = when (spell.kind) {
-                CompanionSpellKind.Heal -> (target.maxHp * power).roundToInt().coerceAtLeast(1)
-                else -> (caster.attack * power * currentTurnMultiplier).roundToInt().coerceAtLeast(1)
+            when (spell.kind) {
+                CompanionSpellKind.Heal, CompanionSpellKind.HealAll -> PendingHit(
+                    targetId = target.id,
+                    amount = (target.maxHp * power).roundToInt().coerceAtLeast(1),
+                    isCrit = false,
+                    kind = spell.hitKind,
+                    heals = true
+                )
+                CompanionSpellKind.Shield -> PendingHit(
+                    targetId = target.id,
+                    amount = 0,
+                    isCrit = false,
+                    kind = spell.hitKind,
+                    grantsGuard = true
+                )
+                else -> {
+                    val wounded = target.maxHp > 0 &&
+                        target.hp.toFloat() / target.maxHp < CompanionPassive.PREDATOR_THRESHOLD
+                    val execute = if (spell.kind == CompanionSpellKind.Execute && wounded) 2f else 1f
+                    val armor = if (spell.kind == CompanionSpellKind.Pierce) 1f
+                    else 1f - target.armor.coerceIn(0f, com.lernhero.domain.combat.Armor.MAX)
+                    val amount = caster.attack * power * currentTurnMultiplier * execute * armor *
+                        Element.multiplier(caster.element, target.element)
+                    PendingHit(
+                        targetId = target.id,
+                        amount = amount.roundToInt().coerceAtLeast(1),
+                        isCrit = false,
+                        kind = spell.hitKind,
+                        freezeTurns = if (spell.kind == CompanionSpellKind.Freeze) 1 else 0,
+                        drainFraction = if (spell.kind == CompanionSpellKind.Drain) 1f else 0f
+                    )
+                }
             }
-            PendingHit(
-                targetId = target.id,
-                amount = amount,
-                isCrit = false,
-                kind = spell.hitKind,
-                heals = spell.kind == CompanionSpellKind.Heal
-            )
         }
 
         pendingHits = pendingHits + (casterId to hits)
@@ -1882,6 +1998,17 @@ class BattleViewModel(
      * Wlasciwy start salwy - odpalany dopiero PO [TurnPhase.Impact], zeby animacja rozliczenia
      * odpowiedzi nie scigala sie z lecacymi pociskami.
      */
+    /** [CompanionPassive.Regeneration]: kazdy zywy z ta moca odzyskuje czesc HP na starcie tury. */
+    private fun applyRegeneration() {
+        _uiState.update { state ->
+            state.characters.values
+                .filter { it.hp > 0 && it.passive == CompanionPassive.Regeneration && it.hp < it.maxHp }
+                .fold(state) { acc, regen ->
+                    acc.healCharacter(regen.id, regen.maxHp * CompanionPassive.Regeneration.value, boosted = regen.isPlayer)
+                }
+        }
+    }
+
     private fun startResolving() {
         val state = _uiState.value
         if (state.phase != GamePhase.Battle || state.turnPhase != TurnPhase.Impact) return
@@ -1893,6 +2020,7 @@ class BattleViewModel(
         volleyPlan = state.buildTurnPlan(playerIds, enemyIds)
         currentRoundIndex = -1
         refreshGuards(turnStart = true)
+        applyRegeneration()
 
         _uiState.update { it.copy(turnPhase = TurnPhase.Resolving, message = null) }
         startNextVolley()
@@ -2146,6 +2274,7 @@ class BattleViewModel(
     /** Fala oczyszczona: lup do sakwy, nastepna fala wchodzi bez przerwy - to jest endless run. */
     private fun BattleUiState.spawnNextWave(): BattleUiState {
         val nextWave = wave + 1
+        undyingUsed.clear()
         runSession.savePartyHp(playerHp(), playerMaxHp())
         runSession.addLoot(calculateWaveCoins(this))
         val clearedKind = kindForWave(wave)
@@ -3004,7 +3133,7 @@ class BattleViewModel(
                         maxHp = hp,
                         attack = CompanionPower.attackAt(card, stars, level, gear),
                         level = level,
-                        armor = com.lernhero.domain.combat.Armor.of(gear)
+                        armor = CompanionPower.armorAt(card, gear)
                     )
                 }
             }
@@ -3065,7 +3194,7 @@ class BattleViewModel(
                 maxHp = hp,
                 attack = attack,
                 level = enemyLevel(wave, level, BattleKind.Normal),
-                armor = role.armor
+                armor = role.armor + speciesArmor(species)
             )
         }
     }
@@ -3126,9 +3255,16 @@ class BattleViewModel(
             attack = attack,
             isElite = true,
             level = enemyLevel(wave, level, kind),
-            armor = if (isBoss) BOSS_ARMOR else ELITE_ARMOR
+            armor = (if (isBoss) BOSS_ARMOR else ELITE_ARMOR) + speciesArmor(species)
         )
     }
+
+    /**
+     * Wlasna obrona gatunku u WROGA - polowa tego, co ma kompan tej samej karty. Pelna obrona
+     * plus pancerz roli/elity robila z golema-Straznika sciane, ktorej nowy gracz nie przebije.
+     */
+    private fun speciesArmor(species: String): Float =
+        (MonsterCatalog.byId(species)?.defense ?: 0) / 100f * ENEMY_SPECIES_DEFENSE_FACTOR
 
     private fun CharacterTemplate.toUiModel(): CharacterUiModel =
         CharacterUiModel(
@@ -3144,6 +3280,7 @@ class BattleViewModel(
             // Zywiol bierze sie z KARTY o tym samym kluczu - gatunki wrogow ([EnemySpecies.all])
             // i id kompanow to ten sam zbior, wiec nie trzeba przepychac typu przez szablony.
             element = MonsterCatalog.byId(avatar)?.element,
+            passive = MonsterCatalog.byId(avatar)?.passive,
             knightEquipment = if (id == HERO_ID) KnightEquipment.Empty else null,
             battleScale = when {
                 // Boss ma byc kolosem - stoi znacznie wiecej niz elita, wystajac sylwetka poza pole.
@@ -3174,7 +3311,13 @@ private data class PendingHit(
     /** Zaklecie leczace - [amount] idzie wtedy na plus, nie na minus (patrz applyHit). */
     val heals: Boolean = false,
     /** Ile tur cel traci kolejke po tym trafieniu (zamrozenie). */
-    val freezeTurns: Int = 0
+    val freezeTurns: Int = 0,
+    /** Cel uskoczyl - zero obrazen, sam napis (patrz [com.lernhero.domain.monster.CompanionPassive.Evasion]). */
+    val dodged: Boolean = false,
+    /** Tarcza dla sojusznika zamiast obrazen - patrz [com.lernhero.domain.monster.CompanionSpellKind.Shield]. */
+    val grantsGuard: Boolean = false,
+    /** Ile z zadanych obrazen wraca do rzucajacego jako leczenie ([com.lernhero.domain.monster.CompanionSpellKind.Drain]). */
+    val drainFraction: Float = 0f
 )
 
 /**
@@ -3335,6 +3478,9 @@ private val CRIT_DAMAGE_MULTIPLIER get() = HeroBaseStats.CRIT_MULTIPLIER
 /** Pancerz elity i bossa - odcinaja czesc obrazen, zeby nie padaly tak szybko jak zwykli wrogowie. */
 private const val ELITE_ARMOR = 0.1f
 private const val BOSS_ARMOR = 0.15f
+
+/** Jaka czesc [com.lernhero.domain.monster.MonsterCard.defense] dostaje wrog tego gatunku. */
+private const val ENEMY_SPECIES_DEFENSE_FACTOR = 0.5f
 
 /**
  * Zla odpowiedz oslabia salwe, ale nie zatrzymuje postepu - gracz ma miec "jestem dobry, wiec ide

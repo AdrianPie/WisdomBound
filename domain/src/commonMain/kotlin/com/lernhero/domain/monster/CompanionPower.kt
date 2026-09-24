@@ -49,4 +49,15 @@ object CompanionPower {
     /** Atak kompana w walce - patrz [hpAt]. */
     fun attackAt(card: MonsterCard, stars: Int, level: Int, gear: Stats = Stats.Empty): Int =
         (MonsterStars.attackAt(card, stars, level) * ATTACK_SCALE + gear[StatType.Attack]).roundToInt()
+
+    /**
+     * Pancerz kompana w walce (ulamek 0..[com.lernhero.domain.combat.Armor.MAX]): wlasna obrona
+     * gatunku ([MonsterCard.defense]) plus to, co daje sprzet. Obrona karty wchodzi jak redukcja
+     * obrazen (liniowo), obrona ze sprzetu przez krzywa [com.lernhero.domain.combat.Armor.of].
+     */
+    fun armorAt(card: MonsterCard, gear: Stats = Stats.Empty): Float =
+        com.lernhero.domain.combat.Armor.of(
+            defense = gear[StatType.Defense],
+            damageReduction = gear[StatType.DamageReduction] + card.defense / 100f
+        )
 }

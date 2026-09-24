@@ -52,6 +52,7 @@ import com.lernhero.domain.item.catalog.MonsterGear
 import com.lernhero.domain.monster.CompanionSpell
 import com.lernhero.domain.monster.Element
 import com.lernhero.domain.monster.CompanionPower
+import kotlin.math.roundToInt
 import com.lernhero.domain.monster.MonsterEquipment
 import com.lernhero.domain.monster.MonsterSpellLevels
 import com.lernhero.game.character.MonsterVisualPresets
@@ -423,7 +424,8 @@ private fun InfoPane(
     val gear = MonsterEquipment.statsOf(equipment, monster.card.element, bag)
     val hp = CompanionPower.hpAt(monster.card, monster.stars, monster.level, gear)
     val attack = CompanionPower.attackAt(monster.card, monster.stars, monster.level, gear)
-    val armor = (gear[StatType.DamageReduction] * 100f).toInt()
+    // Pancerz = obrona gatunku + sprzet, dokladnie to, co odcina walka (patrz [CompanionPower.armorAt]).
+    val armor = (CompanionPower.armorAt(monster.card, gear) * 100f).roundToInt()
     val speed = gear[StatType.Speed].toInt()
 
     Column(

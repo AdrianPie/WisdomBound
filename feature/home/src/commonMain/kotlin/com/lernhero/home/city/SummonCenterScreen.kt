@@ -134,7 +134,9 @@ private enum class SummonPhase { Idle, Charging, Flash, Reveal, Result }
 /** Dwie polowy budynku: oltarz (zdobywanie kart) i kolekcja (zamiana kart na sile). */
 private enum class SummonSection(val label: String) {
     Ritual("Summon"),
-    Collection("Collection")
+    Collection("Collection"),
+    /** Cala pula bannerow w tabeli - statystyki, moce i zaklecia (patrz [MonsterIndexTab]). */
+    Index("Index")
 }
 
 /**
@@ -261,6 +263,14 @@ fun SummonCenterScreen(
                     onUnequipSlot = playerViewModel::unequipMonsterSlot,
                     onUnequipAll = playerViewModel::unequipMonsterAll,
                     onAutoEquip = playerViewModel::autoEquipMonster,
+                    modifier = Modifier.weight(1f)
+                )
+                return@Column
+            }
+
+            if (section == SummonSection.Index) {
+                MonsterIndexTab(
+                    ownedCounts = state.collection.associate { it.card.id to it.count },
                     modifier = Modifier.weight(1f)
                 )
                 return@Column

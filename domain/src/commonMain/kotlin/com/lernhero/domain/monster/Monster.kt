@@ -38,7 +38,15 @@ data class MonsterCard(
      * Id zaklec kompana z [CompanionSpells]. To one odrozniaja karty od siebie bardziej niz same
      * HP/atak - i to na nich gracz wydaje esencje z rozpuszczonych duplikatow.
      */
-    val spellIds: List<String> = emptyList()
+    val spellIds: List<String> = emptyList(),
+    /**
+     * Wlasny pancerz gatunku w PROCENTACH - ile kazdego ciosu odcina, zanim doliczy sie sprzet
+     * (patrz [CompanionPower.armorAt] i [com.lernhero.domain.combat.Armor]). Tanki 20-35, lucznicy
+     * i magowie 0-5 - to druga, obok HP, os "jak dlugo ten potwor stoi".
+     */
+    val defense: Int = 0,
+    /** Moc bierna - dziala zawsze, po obu stronach pola bitwy (patrz [CompanionPassive]). */
+    val passive: CompanionPassive? = null
 ) {
     /** Zaklecia rozwiazane z katalogu - nieznane id po prostu wypada, nie wysadza karty. */
     val spells: List<CompanionSpell> get() = spellIds.mapNotNull { CompanionSpells.byId(it) }
@@ -54,6 +62,8 @@ object MonsterCatalog {
         cost = 120,
         spriteKey = "skeleton_warrior",
         element = Element.Death,
+        defense = 10,
+        passive = CompanionPassive.Undying,
         spellIds = listOf("bone_shard"),
         skills = listOf(
             MonsterSkill("Bone Strike", "Deals melee damage to a chosen enemy.")
@@ -69,6 +79,8 @@ object MonsterCatalog {
         cost = 140,
         spriteKey = "skeleton_archer",
         element = Element.Death,
+        defense = 0,
+        passive = CompanionPassive.KeenEye,
         spellIds = listOf("arrow_volley"),
         skills = listOf(
             MonsterSkill("Ranged Shot", "Hits an enemy with an arrow before it can close the distance.")
@@ -84,6 +96,8 @@ object MonsterCatalog {
         cost = 320,
         spriteKey = "skeleton_mage",
         element = Element.Water,
+        defense = 0,
+        passive = CompanionPassive.Evasion,
         spellIds = listOf("dark_bolt", "mend"),
         skills = listOf(
             MonsterSkill("Arcane Bolt", "A magic missile that deals damage at range."),
@@ -100,6 +114,8 @@ object MonsterCatalog {
         cost = 200,
         spriteKey = "orc_warrior",
         element = Element.Fire,
+        defense = 15,
+        passive = CompanionPassive.Berserk,
         spellIds = listOf("war_cry"),
         skills = listOf(
             MonsterSkill("Axe Rend", "A quick attack that deals increased damage.")
@@ -115,6 +131,8 @@ object MonsterCatalog {
         cost = 220,
         spriteKey = "orc_archer",
         element = Element.Fire,
+        defense = 5,
+        passive = CompanionPassive.Warband,
         spellIds = listOf("flame_arrow"),
         skills = listOf(
             MonsterSkill("Arrow Hail", "A volley of arrows dealing damage at range.")
@@ -130,6 +148,8 @@ object MonsterCatalog {
         cost = 210,
         spriteKey = "human_archer",
         element = Element.Nature,
+        defense = 5,
+        passive = CompanionPassive.Predator,
         spellIds = listOf("arrow_volley", "mend"),
         skills = listOf(
             MonsterSkill("Precise Shot", "A precise shot with a higher chance to critically hit.")
@@ -149,7 +169,9 @@ object MonsterCatalog {
         cost = 120,
         spriteKey = "ember_imp",
         element = Element.Fire,
-        spellIds = listOf("bone_shard"),
+        defense = 0,
+        passive = CompanionPassive.Evasion,
+        spellIds = listOf("cinder_flick"),
         skills = listOf(MonsterSkill("Cinder Flick", "Flicks a burning ember at an enemy."))
     )
     val FIRE_BAT = MonsterCard(
@@ -161,7 +183,9 @@ object MonsterCatalog {
         cost = 120,
         spriteKey = "fire_bat",
         element = Element.Fire,
-        spellIds = listOf("bone_shard"),
+        defense = 0,
+        passive = CompanionPassive.Lifesteal,
+        spellIds = listOf("life_leech"),
         skills = listOf(MonsterSkill("Scorching Dive", "Dives at an enemy, leaving it smoldering."))
     )
     val LAVA_SLIME = MonsterCard(
@@ -173,7 +197,9 @@ object MonsterCatalog {
         cost = 120,
         spriteKey = "lava_slime",
         element = Element.Fire,
-        spellIds = listOf("war_cry"),
+        defense = 20,
+        passive = CompanionPassive.Thorns,
+        spellIds = listOf("magma_burst"),
         skills = listOf(MonsterSkill("Molten Body", "Soaks hits with its bubbling bulk."))
     )
     val GOBLIN_SPEARMAN = MonsterCard(
@@ -185,6 +211,8 @@ object MonsterCatalog {
         cost = 120,
         spriteKey = "goblin_spearman",
         element = Element.Nature,
+        defense = 10,
+        passive = CompanionPassive.Warband,
         spellIds = listOf("war_cry"),
         skills = listOf(MonsterSkill("Spear Jab", "A quick thrust with a crude spear."))
     )
@@ -197,7 +225,9 @@ object MonsterCatalog {
         cost = 120,
         spriteKey = "mushroom_sprite",
         element = Element.Nature,
-        spellIds = listOf("mend"),
+        defense = 5,
+        passive = CompanionPassive.Regeneration,
+        spellIds = listOf("spore_cloud"),
         skills = listOf(MonsterSkill("Spore Cloud", "Soothing spores patch up allies."))
     )
     val TIDECRAWLER = MonsterCard(
@@ -209,7 +239,9 @@ object MonsterCatalog {
         cost = 120,
         spriteKey = "tidecrawler",
         element = Element.Water,
-        spellIds = listOf("war_cry"),
+        defense = 25,
+        passive = CompanionPassive.Thorns,
+        spellIds = listOf("shell_guard"),
         skills = listOf(MonsterSkill("Shell Guard", "Hides behind a barnacled shell."))
     )
     val BUBBLE_SLIME = MonsterCard(
@@ -221,7 +253,9 @@ object MonsterCatalog {
         cost = 120,
         spriteKey = "bubble_slime",
         element = Element.Water,
-        spellIds = listOf("war_cry"),
+        defense = 15,
+        passive = CompanionPassive.Regeneration,
+        spellIds = listOf("bubble_shield"),
         skills = listOf(MonsterSkill("Bubble Wrap", "Absorbs blows in a wobbling bubble."))
     )
     val MURLOC = MonsterCard(
@@ -233,7 +267,9 @@ object MonsterCatalog {
         cost = 120,
         spriteKey = "murloc",
         element = Element.Water,
-        spellIds = listOf("bone_shard"),
+        defense = 5,
+        passive = CompanionPassive.Warband,
+        spellIds = listOf("fish_spear"),
         skills = listOf(MonsterSkill("Fish Spear", "Pokes enemies with a tiny, angry spear."))
     )
     val ZOMBIE = MonsterCard(
@@ -245,7 +281,9 @@ object MonsterCatalog {
         cost = 120,
         spriteKey = "zombie",
         element = Element.Death,
-        spellIds = listOf("war_cry"),
+        defense = 15,
+        passive = CompanionPassive.Undying,
+        spellIds = listOf("grave_bite"),
         skills = listOf(MonsterSkill("Shamble", "Keeps coming no matter what."))
     )
     val GHOST = MonsterCard(
@@ -257,7 +295,9 @@ object MonsterCatalog {
         cost = 120,
         spriteKey = "ghost",
         element = Element.Death,
-        spellIds = listOf("dark_bolt"),
+        defense = 0,
+        passive = CompanionPassive.Evasion,
+        spellIds = listOf("wail"),
         skills = listOf(MonsterSkill("Wail", "A chilling wail that saps an enemy."))
     )
     val HELLHOUND = MonsterCard(
@@ -269,7 +309,9 @@ object MonsterCatalog {
         cost = 210,
         spriteKey = "hellhound",
         element = Element.Fire,
-        spellIds = listOf("bone_shard"),
+        defense = 5,
+        passive = CompanionPassive.Berserk,
+        spellIds = listOf("lava_bite"),
         skills = listOf(MonsterSkill("Lava Bite", "A burning bite that tears through armor."))
     )
     val FLAME_CULTIST = MonsterCard(
@@ -281,7 +323,9 @@ object MonsterCatalog {
         cost = 210,
         spriteKey = "flame_cultist",
         element = Element.Fire,
-        spellIds = listOf("flame_arrow"),
+        defense = 0,
+        passive = CompanionPassive.KeenEye,
+        spellIds = listOf("fireball"),
         skills = listOf(MonsterSkill("Fireball", "Hurls a ball of fire at an enemy."))
     )
     val FOREST_FOX = MonsterCard(
@@ -293,7 +337,9 @@ object MonsterCatalog {
         cost = 210,
         spriteKey = "forest_fox",
         element = Element.Nature,
-        spellIds = listOf("bone_shard"),
+        defense = 5,
+        passive = CompanionPassive.Evasion,
+        spellIds = listOf("fox_flurry"),
         skills = listOf(MonsterSkill("Leaf Dash", "Darts in and out with a flurry of leaves."))
     )
     val TREANT_SAPLING = MonsterCard(
@@ -305,7 +351,9 @@ object MonsterCatalog {
         cost = 210,
         spriteKey = "treant_sapling",
         element = Element.Nature,
-        spellIds = listOf("war_cry"),
+        defense = 25,
+        passive = CompanionPassive.Regeneration,
+        spellIds = listOf("bark_skin"),
         skills = listOf(MonsterSkill("Bark Skin", "Hardens its bark against blows."))
     )
     val ELF_RANGER = MonsterCard(
@@ -317,7 +365,9 @@ object MonsterCatalog {
         cost = 210,
         spriteKey = "elf_ranger",
         element = Element.Nature,
-        spellIds = listOf("arrow_volley"),
+        defense = 5,
+        passive = CompanionPassive.KeenEye,
+        spellIds = listOf("hunters_mark"),
         skills = listOf(MonsterSkill("Vine Arrow", "An arrow that never misses its mark."))
     )
     val BOAR_RIDER = MonsterCard(
@@ -329,7 +379,9 @@ object MonsterCatalog {
         cost = 210,
         spriteKey = "boar_rider",
         element = Element.Nature,
-        spellIds = listOf("war_cry"),
+        defense = 15,
+        passive = CompanionPassive.Berserk,
+        spellIds = listOf("tusk_charge"),
         skills = listOf(MonsterSkill("Tusk Charge", "Charges into the enemy line."))
     )
     val FROST_WOLF = MonsterCard(
@@ -341,7 +393,9 @@ object MonsterCatalog {
         cost = 210,
         spriteKey = "frost_wolf",
         element = Element.Water,
-        spellIds = listOf("bone_shard"),
+        defense = 5,
+        passive = CompanionPassive.Warband,
+        spellIds = listOf("frost_fang"),
         skills = listOf(MonsterSkill("Frost Fang", "An icy bite that slows its prey."))
     )
     val ICE_ARCHER = MonsterCard(
@@ -353,7 +407,9 @@ object MonsterCatalog {
         cost = 210,
         spriteKey = "ice_archer",
         element = Element.Water,
-        spellIds = listOf("arrow_volley"),
+        defense = 5,
+        passive = CompanionPassive.Predator,
+        spellIds = listOf("ice_arrow"),
         skills = listOf(MonsterSkill("Ice Arrow", "A frozen arrow shot from afar."))
     )
     val GHOUL = MonsterCard(
@@ -365,7 +421,9 @@ object MonsterCatalog {
         cost = 210,
         spriteKey = "ghoul",
         element = Element.Death,
-        spellIds = listOf("bone_shard"),
+        defense = 10,
+        passive = CompanionPassive.Lifesteal,
+        spellIds = listOf("rending_claws"),
         skills = listOf(MonsterSkill("Rending Claws", "Rips into an enemy with filthy claws."))
     )
     val BANSHEE = MonsterCard(
@@ -377,7 +435,9 @@ object MonsterCatalog {
         cost = 210,
         spriteKey = "banshee",
         element = Element.Death,
-        spellIds = listOf("dark_bolt"),
+        defense = 0,
+        passive = CompanionPassive.Evasion,
+        spellIds = listOf("soul_scream"),
         skills = listOf(MonsterSkill("Soul Scream", "A scream that hurts every enemy."))
     )
     val SALAMANDER = MonsterCard(
@@ -389,7 +449,9 @@ object MonsterCatalog {
         cost = 320,
         spriteKey = "salamander",
         element = Element.Fire,
-        spellIds = listOf("bone_shard"),
+        defense = 10,
+        passive = CompanionPassive.Berserk,
+        spellIds = listOf("blazing_slash", "flame_arrow"),
         skills = listOf(MonsterSkill("Blazing Slash", "A curved blade wreathed in fire."))
     )
     val EFREET = MonsterCard(
@@ -401,7 +463,9 @@ object MonsterCatalog {
         cost = 320,
         spriteKey = "efreet",
         element = Element.Fire,
-        spellIds = listOf("flame_arrow", "dark_bolt"),
+        defense = 5,
+        passive = CompanionPassive.KeenEye,
+        spellIds = listOf("firestorm", "fireball"),
         skills = listOf(MonsterSkill("Firestorm", "Engulfs all enemies in flame."))
     )
     val MAGMA_GOLEM = MonsterCard(
@@ -413,7 +477,9 @@ object MonsterCatalog {
         cost = 320,
         spriteKey = "magma_golem",
         element = Element.Fire,
-        spellIds = listOf("war_cry"),
+        defense = 30,
+        passive = CompanionPassive.Thorns,
+        spellIds = listOf("magma_shell", "magma_burst"),
         skills = listOf(MonsterSkill("Molten Fists", "Crushing blows of living magma."))
     )
     val CENTAUR_HUNTRESS = MonsterCard(
@@ -425,7 +491,9 @@ object MonsterCatalog {
         cost = 320,
         spriteKey = "centaur_huntress",
         element = Element.Nature,
-        spellIds = listOf("arrow_volley"),
+        defense = 10,
+        passive = CompanionPassive.Predator,
+        spellIds = listOf("arrow_volley", "hunters_mark"),
         skills = listOf(MonsterSkill("Hunter's Volley", "Rains arrows on the enemy line."))
     )
     val THORN_BEAST = MonsterCard(
@@ -437,7 +505,9 @@ object MonsterCatalog {
         cost = 320,
         spriteKey = "thorn_beast",
         element = Element.Nature,
-        spellIds = listOf("war_cry"),
+        defense = 25,
+        passive = CompanionPassive.Thorns,
+        spellIds = listOf("bark_skin", "bramble_lash"),
         skills = listOf(MonsterSkill("Thorn Hide", "Enemies that strike it get pricked."))
     )
     val NAGA_SIREN = MonsterCard(
@@ -449,7 +519,9 @@ object MonsterCatalog {
         cost = 320,
         spriteKey = "naga_siren",
         element = Element.Water,
-        spellIds = listOf("mend"),
+        defense = 10,
+        passive = CompanionPassive.Regeneration,
+        spellIds = listOf("tidal_song", "siren_call"),
         skills = listOf(MonsterSkill("Tidal Song", "A song of the sea that heals allies."))
     )
     val YETI = MonsterCard(
@@ -461,7 +533,9 @@ object MonsterCatalog {
         cost = 320,
         spriteKey = "yeti",
         element = Element.Water,
-        spellIds = listOf("war_cry"),
+        defense = 25,
+        passive = CompanionPassive.Berserk,
+        spellIds = listOf("avalanche", "ice_wall"),
         skills = listOf(MonsterSkill("Avalanche Roar", "A roar that shakes the battlefield."))
     )
     val VAMPIRE = MonsterCard(
@@ -473,7 +547,9 @@ object MonsterCatalog {
         cost = 320,
         spriteKey = "vampire",
         element = Element.Death,
-        spellIds = listOf("bone_shard"),
+        defense = 10,
+        passive = CompanionPassive.Lifesteal,
+        spellIds = listOf("blood_drain", "bat_swarm"),
         skills = listOf(MonsterSkill("Blood Drain", "Drains an enemy's life."))
     )
     val MINOTAUR = MonsterCard(
@@ -485,7 +561,9 @@ object MonsterCatalog {
         cost = 520,
         spriteKey = "minotaur",
         element = Element.Fire,
-        spellIds = listOf("war_cry"),
+        defense = 25,
+        passive = CompanionPassive.Berserk,
+        spellIds = listOf("labrys_cleave", "war_cry"),
         skills = listOf(MonsterSkill("Labrys Cleave", "A massive axe swing through enemies."))
     )
     val CENTAUR = MonsterCard(
@@ -497,7 +575,9 @@ object MonsterCatalog {
         cost = 520,
         spriteKey = "centaur",
         element = Element.Nature,
-        spellIds = listOf("arrow_volley"),
+        defense = 15,
+        passive = CompanionPassive.Warband,
+        spellIds = listOf("arrow_storm", "hunters_mark"),
         skills = listOf(MonsterSkill("Storm of Arrows", "A storm of arrows on all enemies."))
     )
     val ANCIENT_TREANT = MonsterCard(
@@ -509,7 +589,9 @@ object MonsterCatalog {
         cost = 520,
         spriteKey = "ancient_treant",
         element = Element.Nature,
-        spellIds = listOf("war_cry", "mend"),
+        defense = 35,
+        passive = CompanionPassive.Regeneration,
+        spellIds = listOf("forest_embrace", "bark_skin"),
         skills = listOf(MonsterSkill("Forest's Embrace", "Roots shield and heal the party."))
     )
     val FROST_GIANT = MonsterCard(
@@ -521,7 +603,9 @@ object MonsterCatalog {
         cost = 520,
         spriteKey = "frost_giant",
         element = Element.Water,
-        spellIds = listOf("war_cry", "mend"),
+        defense = 35,
+        passive = CompanionPassive.Thorns,
+        spellIds = listOf("glacier_slam", "ice_wall"),
         skills = listOf(MonsterSkill("Glacier Club", "A crushing blow of solid ice."))
     )
     val DEATH_KNIGHT = MonsterCard(
@@ -533,7 +617,9 @@ object MonsterCatalog {
         cost = 520,
         spriteKey = "death_knight",
         element = Element.Death,
-        spellIds = listOf("war_cry"),
+        defense = 30,
+        passive = CompanionPassive.Undying,
+        spellIds = listOf("runeblade", "soul_chain"),
         skills = listOf(MonsterSkill("Runeblade", "A cursed blade that cuts deep."))
     )
     val LICH = MonsterCard(
@@ -545,7 +631,9 @@ object MonsterCatalog {
         cost = 520,
         spriteKey = "lich",
         element = Element.Death,
-        spellIds = listOf("arrow_volley", "dark_bolt"),
+        defense = 10,
+        passive = CompanionPassive.Warband,
+        spellIds = listOf("soul_fire", "soul_chain"),
         skills = listOf(MonsterSkill("Soul Fire", "Ghostly flames burn all enemies."))
     )
     val PHOENIX = MonsterCard(
@@ -557,7 +645,9 @@ object MonsterCatalog {
         cost = 850,
         spriteKey = "phoenix",
         element = Element.Fire,
-        spellIds = listOf("flame_arrow", "mend"),
+        defense = 20,
+        passive = CompanionPassive.Undying,
+        spellIds = listOf("firestorm", "rebirth_flame"),
         skills = listOf(MonsterSkill("Rebirth Flames", "Flames that burn foes and mend allies."))
     )
 

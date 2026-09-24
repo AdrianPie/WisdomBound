@@ -185,7 +185,11 @@ enum class HitKind {
     Skill,
     Heal,
     /** Cios zatrzymany przez garde ([com.lernhero.domain.run.EndlessBuff.Guard]) - zero obrazen. */
-    Block
+    Block,
+    /** Cel uskoczyl ([com.lernhero.domain.monster.CompanionPassive.Evasion]) - zero obrazen. */
+    Dodge,
+    /** Sojusznik dostal ladunek gardy z zaklecia kompana ([com.lernhero.domain.monster.CompanionSpellKind.Shield]). */
+    Shield
 }
 
 sealed class BattlePlaybackStep {

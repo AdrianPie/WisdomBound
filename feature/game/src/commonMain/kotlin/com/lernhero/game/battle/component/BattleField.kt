@@ -320,32 +320,17 @@ private fun HealthBarsOverlay(
             key(character.id) {
                 val world = rect.resolve(anchorsFor(character).hpBarAnchor)
                 val local = world - layerOrigin
-                val barWidthPx = rect.size.width * 0.42f
-                val barWidthDp = with(density) { barWidthPx.toDp() }
+                // Pasek wezszy niz dawniej - obok niego stoja teraz jeszcze dwie odznaki (ATK, DEF).
+                val barWidthDp = with(density) { (rect.size.width * 0.34f).toDp() }.coerceIn(28.dp, 56.dp)
                 // Zywiol przy kazdym, kto go ma - u naszych pulsuje, gdy kafel tematu go wzmocnil.
                 val showBadge = character.element != null
                 val boosted = character.isPlayer && character.element in boostedElements
 
                 var plateSize by remember { mutableStateOf(IntSize.Zero) }
-                var feetSize by remember { mutableStateOf(IntSize.Zero) }
-                val feet = rect.resolve(anchorsFor(character).root) - layerOrigin
-                // Atak z lewej, pancerz z prawej - rozstawione na mniej wiecej szerokosc stop.
-                FeetStats(
-                    character = character,
-                    attackMultiplier = if (character.isPlayer) playerAttackMultiplier else enemyAttackMultiplier,
-                    spread = with(density) { (rect.size.width * 0.38f).toDp() },
-                    modifier = Modifier
-                        .onGloballyPositioned { feetSize = it.size }
-                        .offset {
-                            IntOffset(
-                                x = (feet.x - feetSize.width / 2f).roundToInt(),
-                                y = (feet.y - feetSize.height * 0.75f).roundToInt()
-                            )
-                        }
-                )
                 UnitPlate(
                     character = character,
                     barWidth = barWidthDp,
+                    attackMultiplier = if (character.isPlayer) playerAttackMultiplier else enemyAttackMultiplier,
                     elementBadge = if (showBadge) {
                         { ElementBadge(element = character.element!!, boosted = boosted) }
                     } else null,
@@ -449,6 +434,8 @@ private fun CombatEffectsCoordinator(
                     val label = when (effect.kind) {
                         // Garda ([EndlessBuff.Guard]) zatrzymuje cios w calosci - "-0" nic by nie mowilo.
                         HitKind.Block -> "BLOK"
+                        HitKind.Dodge -> "DODGE"
+                        HitKind.Shield -> "🛡"
                         HitKind.Heal -> "+${effect.amount}"
                         else -> "-${effect.amount}"
                     }

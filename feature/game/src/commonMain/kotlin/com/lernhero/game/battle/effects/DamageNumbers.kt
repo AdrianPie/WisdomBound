@@ -37,6 +37,8 @@ fun HitKind.damageNumberColor(): Color = when (this) {
     HitKind.Skill -> Color(0xFF8FD0FF)
     HitKind.Heal -> Color(0xFF7BE88A)
     HitKind.Block -> Color(0xFFBFD4E8)
+    HitKind.Dodge -> Color(0xFFE6F0FF)
+    HitKind.Shield -> Color(0xFF9FD8FF)
 }
 
 internal data class ActiveDamageNumber(

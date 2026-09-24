@@ -6,6 +6,7 @@ import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.spring
 import androidx.compose.animation.core.tween
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
@@ -19,6 +20,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.GenericShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -31,6 +33,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shadow
+import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -40,16 +43,21 @@ import androidx.compose.ui.unit.sp
 import com.lernhero.game.character.CharacterUiModel
 import com.lernhero.shared.theme.FontFirst
 import kotlin.math.roundToInt
+import org.jetbrains.compose.resources.DrawableResource
+import org.jetbrains.compose.resources.painterResource
 
 /**
- * Tabliczka walczacego nad glowa: `7 🔥[pasek HP]` - atak i pancerz stoja przy stopach ([FeetStats]).
+ * Tabliczka walczacego nad glowa, w jednym rzedzie: `[poziom] [zywiol] [pasek HP] (ATK) (DEF)`.
  *
- * - **Poziom** - sama liczba z obrysem, bez ramki (tak czytelnie jak w grach, na ktorych sie
- *   wzorujemy).
+ * - **Poziom** - szesciokatna odznaka z lewej.
  * - **Zywiol** - emblemat ([elementBadge]); u naszych pulsuje, gdy kafel tematu go wzmocnil.
  * - **Pasek HP** z liczba w srodku i "cieniem obrazen" (jasny kawalek znika chwile po ciosie).
- * - **Atak NA TE TURE** z prawej. Po odpowiedzi mnoznik salwy wchodzi od razu: liczba dolicza sie,
- *   "pompuje" i zostaje zabarwiona (zloto = mocniej, czerwien = slabiej) do nastepnego pytania.
+ * - **ATK NA TE TURE** - po odpowiedzi mnoznik salwy wchodzi od razu: liczba dolicza sie, kolko
+ *   "pompuje" i zmienia kolor (jasne zloto = dobrze dla gracza, czerwien = zle) do nastepnego pytania.
+ * - **DEF** - pancerz w procentach, czyli ile kazdego ciosu ta postac odcina
+ *   ([com.lernhero.domain.combat.Armor]).
+ *
+ * Tla odznak mozna podmienic na grafiki - patrz [PlateArt].
  *
  * Tabliczka stoi CALA nad glowa - jej dolna krawedz jest na wysokosci czubka glowy (patrz
  * BattleField.HealthBarsOverlay), wiec nie przykrywa postaci.
@@ -58,6 +66,7 @@ import kotlin.math.roundToInt
 internal fun UnitPlate(
     character: CharacterUiModel,
     barWidth: Dp,
+    attackMultiplier: Float,
     modifier: Modifier = Modifier,
     elementBadge: (@Composable () -> Unit)? = null
 ) {
@@ -66,141 +75,167 @@ internal fun UnitPlate(
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(2.dp)
     ) {
-        Text(
-            text = "${character.level}",
-            color = if (character.isPlayer) Color.White else Color(0xFFFFB4AC),
-            fontFamily = FontFirst(),
-            fontWeight = FontWeight.Black,
-            fontSize = 9.sp,
-            style = Outline
-        )
+        LevelBadge(level = character.level, isPlayer = character.isPlayer)
         elementBadge?.invoke()
-        HpBar(hp = character.hp, maxHp = character.maxHp, width = barWidth, armor = 0f)
+        HpBar(hp = character.hp, maxHp = character.maxHp, width = barWidth)
+        AttackBadge(base = character.attack, multiplier = attackMultiplier, isPlayer = character.isPlayer)
+        DefenseBadge(armor = character.armor)
     }
 }
 
 /**
- * Znaczki przy stopach, jak w Hearthstone: z lewej ATAK (zlota gema z liczba), z prawej PANCERZ
- * (stalowa tarcza z procentem). Nad glowa zostaje tylko poziom, zywiol i HP - dwie najwazniejsze
- * liczby walki stoja tam, gdzie oko i tak patrzy na postac, a nie w tlumie nad glowami.
+ * Grafiki pod odznakami tabliczki. `null` = odznaka rysowana w kodzie (kolo/szesciokat z gradientem).
+ * Po wgraniu PNG wystarczy tu podpiac zasob - liczba zostaje rysowana na wierzchu.
  */
+internal object PlateArt {
+    val level: DrawableResource? = null
+    val attack: DrawableResource? = null
+    val defense: DrawableResource? = null
+}
+
 @Composable
-internal fun FeetStats(
-    character: CharacterUiModel,
-    attackMultiplier: Float,
-    spread: Dp,
-    modifier: Modifier = Modifier
-) {
-    Row(
-        modifier = modifier,
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(spread)
+private fun LevelBadge(level: Int, isPlayer: Boolean) {
+    val rim = if (isPlayer) Color(0xFFFFD66B) else Color(0xFFFF8A7A)
+    BadgeFrame(
+        art = PlateArt.level,
+        shape = HexShape,
+        fill = Brush.verticalGradient(listOf(Color(0xFF3A4458), Color(0xFF151A24))),
+        rim = rim
     ) {
-        AttackGem(base = character.attack, multiplier = attackMultiplier, isPlayer = character.isPlayer)
-        ArmorShield(armor = character.armor)
+        BadgeNumber(text = "$level", color = Color.White)
     }
 }
 
 @Composable
-private fun AttackGem(base: Int, multiplier: Float, isPlayer: Boolean) {
+private fun AttackBadge(base: Int, multiplier: Float, isPlayer: Boolean) {
     val target = (base * multiplier).roundToInt()
     val value by animateFloatAsState(target.toFloat(), tween(650, easing = FastOutSlowInEasing), label = "atk")
     val up = multiplier > 1.001f
     val down = multiplier < 0.999f
     val goodForPlayer = if (isPlayer) up else down
-    // Gema zmienia kolor razem z mnoznikiem tury: zloto normalnie, jasniejsze zloto na plus dla
-    // gracza, czerwien na minus - i "pompuje" przy kazdej zmianie.
+    // Kolor = korzysc dla GRACZA: nasz atak w gore albo wroga w dol to jasne zloto, odwrotnie czerwien.
     val top by animateColorAsState(
         when {
-            !up && !down -> Color(0xFFFFD66B)
+            !up && !down -> Color(0xFFFFB25C)
             goodForPlayer -> Color(0xFFFFF09A)
-            else -> Color(0xFFFF8A7A)
-        }, label = "gemTop"
+            else -> Color(0xFFFF6B5E)
+        }, label = "atkTop"
     )
     val bottom by animateColorAsState(
         when {
-            !up && !down -> Color(0xFFE08A12)
-            goodForPlayer -> Color(0xFFFFB300)
-            else -> Color(0xFFC0281C)
-        }, label = "gemBottom"
+            !up && !down -> Color(0xFFC2410C)
+            goodForPlayer -> Color(0xFFE39B00)
+            else -> Color(0xFF8E1410)
+        }, label = "atkBottom"
     )
     val pulse = remember { Animatable(1f) }
     LaunchedEffect(target) {
         if (!up && !down && target == base) return@LaunchedEffect
         pulse.snapTo(1f)
-        pulse.animateTo(1.5f, tween(140, easing = FastOutSlowInEasing))
+        pulse.animateTo(1.55f, tween(140, easing = FastOutSlowInEasing))
         pulse.animateTo(1f, spring(dampingRatio = 0.35f, stiffness = 420f))
     }
-    Box(
-        modifier = Modifier
-            .size(STAT_BADGE)
-            .graphicsLayer {
-                scaleX = pulse.value
-                scaleY = pulse.value
-            }
-            .clip(CircleShape)
-            .background(Brush.radialGradient(listOf(top, bottom)))
-            .border(1.5.dp, Color(0xFF2A1606), CircleShape),
-        contentAlignment = Alignment.Center
+    BadgeFrame(
+        art = PlateArt.attack,
+        shape = CircleShape,
+        fill = Brush.radialGradient(listOf(top, bottom)),
+        rim = Color(0xFF2A1606),
+        modifier = Modifier.graphicsLayer {
+            scaleX = pulse.value
+            scaleY = pulse.value
+        }
     ) {
-        Text(
-            text = "${value.roundToInt()}",
-            color = Color.White,
-            fontFamily = FontFirst(),
-            fontWeight = FontWeight.Black,
-            fontSize = if (value >= 1000f) 7.sp else 9.sp,
-            style = HeavyOutline
-        )
+        BadgeNumber(text = "${value.roundToInt()}", color = Color.White)
     }
 }
 
 @Composable
-private fun ArmorShield(armor: Float) {
+private fun DefenseBadge(armor: Float) {
     val percent = (armor * 100).roundToInt()
-    Box(
-        modifier = Modifier
-            .size(width = STAT_BADGE, height = STAT_BADGE + 2.dp)
-            .clip(ShieldShape)
-            .background(
-                Brush.verticalGradient(
-                    if (percent > 0) listOf(Color(0xFFE3ECF5), Color(0xFF7D8FA3))
-                    else listOf(Color(0xFF8A8F96), Color(0xFF4A4F57))
-                )
-            )
-            .border(1.5.dp, Color(0xFF151A20), ShieldShape),
-        contentAlignment = Alignment.Center
+    BadgeFrame(
+        art = PlateArt.defense,
+        shape = CircleShape,
+        fill = Brush.radialGradient(
+            if (percent > 0) listOf(Color(0xFFD6E6F5), Color(0xFF4D6A8A))
+            else listOf(Color(0xFF8A8F96), Color(0xFF3F444C))
+        ),
+        rim = Color(0xFF121821)
     ) {
-        Text(
-            text = "$percent",
-            color = Color.White,
-            fontFamily = FontFirst(),
-            fontWeight = FontWeight.Black,
-            fontSize = 9.sp,
-            style = HeavyOutline,
-            modifier = Modifier.padding(bottom = 2.dp)
-        )
+        BadgeNumber(text = "$percent", color = Color.White)
     }
 }
 
-/** Ksztalt tarczy: plaska gora, boki schodza w szpic na dole. */
-private val ShieldShape = androidx.compose.foundation.shape.GenericShape { size, _ ->
+/** Wspolna rama odznaki: grafika z [PlateArt], a bez niej ksztalt z gradientem i obwodka. */
+@Composable
+private fun BadgeFrame(
+    art: DrawableResource?,
+    shape: Shape,
+    fill: Brush,
+    rim: Color,
+    modifier: Modifier = Modifier,
+    content: @Composable () -> Unit
+) {
+    Box(
+        modifier = modifier.size(STAT_BADGE),
+        contentAlignment = Alignment.Center
+    ) {
+        if (art != null) {
+            Image(
+                painter = painterResource(art),
+                contentDescription = null,
+                modifier = Modifier.matchParentSize()
+            )
+        } else {
+            Box(
+                modifier = Modifier
+                    .matchParentSize()
+                    .clip(shape)
+                    .background(fill)
+                    .border(1.5.dp, rim, shape)
+            )
+        }
+        content()
+    }
+}
+
+/** Liczba na odznace - im wiecej cyfr, tym mniejsza, zeby zmiescila sie w kole. */
+@Composable
+private fun BadgeNumber(text: String, color: Color) {
+    Text(
+        text = text,
+        color = color,
+        fontFamily = FontFirst(),
+        fontWeight = FontWeight.Black,
+        fontSize = when {
+            text.length <= 2 -> 8.sp
+            text.length == 3 -> 7.sp
+            else -> 5.5.sp
+        },
+        lineHeight = 8.sp,
+        style = HeavyOutline
+    )
+}
+
+/** Szesciokat "na plasko" - odznaka poziomu, zeby nie mylila sie z okraglymi statystykami. */
+private val HexShape = GenericShape { size, _ ->
     val w = size.width
     val h = size.height
-    moveTo(0f, h * 0.08f)
-    quadraticTo(w * 0.5f, -h * 0.06f, w, h * 0.08f)
+    moveTo(w * 0.25f, 0f)
+    lineTo(w * 0.75f, 0f)
     lineTo(w, h * 0.5f)
-    quadraticTo(w * 0.95f, h * 0.85f, w * 0.5f, h)
-    quadraticTo(w * 0.05f, h * 0.85f, 0f, h * 0.5f)
+    lineTo(w * 0.75f, h)
+    lineTo(w * 0.25f, h)
+    lineTo(0f, h * 0.5f)
     close()
 }
 
 private val HeavyOutline = TextStyle(shadow = Shadow(color = Color(0xFF1A0E04), blurRadius = 4f))
 
-/** Srednica znaczka ataku/pancerza przy stopach. */
-internal val STAT_BADGE = 18.dp
+/** Srednica odznak poziomu/ataku/pancerza na tabliczce. */
+internal val STAT_BADGE = 17.dp
 
 @Composable
-private fun HpBar(hp: Int, maxHp: Int, width: Dp, armor: Float) {
+private fun HpBar(hp: Int, maxHp: Int, width: Dp) {
     val fraction = if (maxHp > 0) (hp.toFloat() / maxHp).coerceIn(0f, 1f) else 0f
     val shown by animateFloatAsState(fraction, tween(180), label = "hp")
     // Cien obrazen: dogania pasek z opoznieniem, wiec przez chwile widac zabrany kawalek.
@@ -215,12 +250,7 @@ private fun HpBar(hp: Int, maxHp: Int, width: Dp, armor: Float) {
             .size(width = width, height = 8.dp)
             .clip(RoundedCornerShape(50))
             .background(Color(0xE6120C08))
-            // Pancerz widac na samym pasku: stalowa, jasna ramka zamiast czarnej. Im wiecej, tym grubsza.
-            .border(
-                width = if (armor > 0f) (1f + armor * 2.5f).dp else 0.75.dp,
-                color = if (armor > 0f) Color(0xFFB9C7D6) else Color.Black.copy(alpha = 0.7f),
-                shape = RoundedCornerShape(50)
-            )
+            .border(0.75.dp, Color.Black.copy(alpha = 0.7f), RoundedCornerShape(50))
             .padding(1.dp)
     ) {
         Box(
