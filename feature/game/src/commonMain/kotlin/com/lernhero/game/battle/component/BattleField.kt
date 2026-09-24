@@ -385,19 +385,11 @@ private fun ElementBadge(element: Element, boosted: Boolean) {
                     .background(color.copy(alpha = 0.55f))
             )
         }
-        Box(
-            modifier = Modifier
-                .size(ELEMENT_BADGE_DP * 0.62f)
-                .clip(CircleShape)
-                .background(
-                    Brush.radialGradient(listOf(color, color.copy(alpha = 0.65f)))
-                )
-                .border(0.75.dp, Color.Black.copy(alpha = 0.5f), CircleShape)
-        )
+        com.lernhero.game.character.ElementEmblem(element = element, size = ELEMENT_BADGE_DP * 0.9f)
     }
 }
 
-private val ELEMENT_BADGE_DP = 12.dp
+private val ELEMENT_BADGE_DP = 16.dp
 private const val ELEMENT_BADGE_PX = 12f
 
 /**
@@ -674,8 +666,9 @@ private fun CharacterSlot(
                         .shake(character.hp),
                     contentAlignment = Alignment.BottomCenter
                 ) {
+                    val preset = MonsterVisualPresets.forSpecies(character.avatarKey)
                     MonsterCharacter(
-                        preset = MonsterVisualPresets.forSpecies(character.avatarKey),
+                        preset = preset,
                         state = character.state,
                         attackTrigger = attackTrigger,
                         isEnemySide = isEnemySide,
@@ -696,7 +689,9 @@ private fun CharacterSlot(
                                 // nieodbite anchory sojusznikom (ktorzy WIZUALNIE SA odbici) -
                                 // dokladnie na odwrot. Std kazdy anchor odsuniety od 0.5 (np. hitPoint
                                 // 0.605) trafial ~20px w zla strone.
-                                CharacterRect(coordinates.positionInRoot(), coordinates.size, flipped = !isEnemySide)
+                                // Anchory odbijamy dokladnie tam, gdzie odbijany jest sprite - a to
+                                // zalezy tez od tego, w ktora strone narysowano art (facesRight).
+                                CharacterRect(coordinates.positionInRoot(), coordinates.size, flipped = preset.facing(isEnemySide) < 0f)
                             )
                         }
                     )

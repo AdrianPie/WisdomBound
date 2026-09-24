@@ -226,7 +226,7 @@ private fun CategoryTile(
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(6.dp)
             ) {
-                ElementOrb(elements = option.elements, modifier = Modifier.size(24.dp))
+                ElementOrb(elements = option.elements, modifier = Modifier.size(width = 34.dp, height = 24.dp))
                 Column {
                     Text(
                         text = option.elements.joinToString(" + ") { it.label } +
@@ -258,55 +258,21 @@ private fun CategoryTile(
 private val TileShape = RoundedCornerShape(16.dp)
 
 /**
- * Kula zywiolu - jeden kolor, albo przy dwoch zywiolach polowa na polowe (pion), z pulsujaca
- * poswiata. PLACEHOLDER: docelowo w to miejsce wchodzi PNG/spritesheet ikony frakcji, uklad
- * kafla sie nie zmienia.
+ * Emblemat zywiolu kafla - jeden, albo dwa nachodzace na siebie przy kaflu dwuzywiolowym.
  */
 @Composable
 private fun ElementOrb(elements: List<Element>, modifier: Modifier = Modifier) {
-    val pulse = rememberInfiniteTransition()
-    val glow by pulse.animateFloat(
-        initialValue = 0.55f,
-        targetValue = 1f,
-        animationSpec = infiniteRepeatable(tween(1100, easing = EaseInOutSine), RepeatMode.Reverse)
-    )
-
-    Box(modifier = modifier, contentAlignment = Alignment.Center) {
-        Canvas(modifier = Modifier.fillMaxSize().graphicsLayer { alpha = glow }) {
-            val r = size.minDimension / 2f
-            val c = Offset(size.width / 2f, size.height / 2f)
-
-            if (elements.size == 1) {
-                drawCircle(color = Color(elements[0].colorHex), radius = r, center = c)
-            } else {
-                // Dwa zywioly: lewa polowa pierwszy, prawa drugi. clipRect na polowie kola daje
-                // czysty podzial bez rysowania wlasnej sciezki.
-                clipRect(right = c.x) {
-                    drawCircle(color = Color(elements[0].colorHex), radius = r, center = c)
-                }
-                clipRect(left = c.x) {
-                    drawCircle(color = Color(elements[1].colorHex), radius = r, center = c)
-                }
-            }
-
-            // Blik u gory - tanie "szklo", zeby kula nie byla plaskim kolem.
-            drawCircle(
-                color = Color.White.copy(alpha = 0.45f),
-                radius = r * 0.3f,
-                center = Offset(c.x - r * 0.3f, c.y - r * 0.35f)
-            )
-            drawCircle(
-                color = Color.Black.copy(alpha = 0.35f),
-                radius = r,
-                center = c,
-                style = androidx.compose.ui.graphics.drawscope.Stroke(width = 3f)
+    Box(modifier = modifier, contentAlignment = Alignment.CenterStart) {
+        if (elements.size == 1) {
+            com.lernhero.game.character.ElementEmblem(elements[0], size = 24.dp)
+        } else {
+            com.lernhero.game.character.ElementEmblem(elements[0], size = 20.dp)
+            com.lernhero.game.character.ElementEmblem(
+                elements[1],
+                size = 20.dp,
+                modifier = Modifier.padding(start = 12.dp)
             )
         }
-
-        Text(
-            text = elements.joinToString("") { it.icon },
-            fontSize = if (elements.size > 1) 7.sp else 11.sp
-        )
     }
 }
 

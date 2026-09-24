@@ -63,7 +63,7 @@ fun RiggedMonster(
     effectTintOverride: Color? = null
 ) {
     val boxSize = sizeDp * preset.visualScale
-    val facing = if (isEnemySide) 1f else -1f
+    val facing = preset.facing(isEnemySide)
 
     Box(
         modifier = modifier.let { if (unbounded) it.requiredSize(boxSize) else it.size(boxSize) },

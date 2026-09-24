@@ -286,16 +286,7 @@ private fun Arrow(text: String, modifier: Modifier = Modifier, onClick: () -> Un
 
 @Composable
 private fun ElementDot(element: Element) {
-    Box(
-        modifier = Modifier
-            .size(24.dp)
-            .clip(CircleShape)
-            .background(element.badgeColor())
-            .border(2.dp, Color(0xCC000000), CircleShape),
-        contentAlignment = Alignment.Center
-    ) {
-        Text(text = element.icon, fontSize = 13.sp)
-    }
+    com.lernhero.game.character.ElementEmblem(element = element, size = 26.dp)
 }
 
 /* ------------------------------------------- Panel dolny ---------------------------------------- */

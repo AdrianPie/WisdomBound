@@ -104,9 +104,10 @@ private enum class SummonBanner(
         accent = Color(0xFF7FB3E8),
         glow = Color(0xFF1E3A5F),
         weights = mapOf(
-            Rarity.Common to 70,
-            Rarity.Uncommon to 25,
-            Rarity.Rare to 5
+            Rarity.Common to 64,
+            Rarity.Uncommon to 27,
+            Rarity.Rare to 7,
+            Rarity.Epic to 2
         )
     ),
     Heroic(
@@ -118,9 +119,11 @@ private enum class SummonBanner(
         accent = Color(0xFFFFC44D),
         glow = Color(0xFF6B3410),
         weights = mapOf(
-            Rarity.Common to 25,
-            Rarity.Uncommon to 45,
-            Rarity.Rare to 30
+            Rarity.Common to 22,
+            Rarity.Uncommon to 42,
+            Rarity.Rare to 26,
+            Rarity.Epic to 8,
+            Rarity.Legendary to 2
         )
     )
 }

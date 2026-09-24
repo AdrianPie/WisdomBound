@@ -489,7 +489,7 @@ private fun ElementBadge(element: Element) {
         horizontalArrangement = Arrangement.spacedBy(3.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
-        Text(text = element.icon, fontSize = 10.sp)
+        com.lernhero.game.character.ElementEmblem(element = element, size = 14.dp)
         Text(text = element.label, color = Color.White, fontFamily = FontFirst(), fontWeight = FontWeight.Black, fontSize = 10.sp)
     }
 }

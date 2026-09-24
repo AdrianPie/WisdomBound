@@ -21,3 +21,4 @@ upload-keystore.jks
 
 # Podpisywanie release - NIGDY do repo
 keystore.properties
+art/

@@ -103,7 +103,7 @@ fun MonsterCharacter(
     )
 
     // Art patrzy w lewo z natury - po stronie wroga zostaje jak jest, po stronie sojusznika odbijamy.
-    val facing = if (isEnemySide) 1f else -1f
+    val facing = preset.facing(isEnemySide)
     // Wypad zawsze w strone przeciwnej formacji: wrog (prawa strona) bije w lewo, sojusznik w prawo.
     val lungeDirection = if (isEnemySide) -1f else 1f
     val attackTranslatePx = attack.value * 14f

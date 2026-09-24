@@ -8,6 +8,10 @@ package com.lernhero.domain.monster
  */
 object EnemySpecies {
 
+    /**
+     * Zwykli wrogowie: stara szostka plus druga fala kompanow do Rare wlacznie. Epic i Legendary
+     * zostaja tylko jako kompani - wrog nie moze wygladac jak nagroda z najdrozszego bannera.
+     */
     val all: List<String> = listOf(
         "skeleton_warrior",
         "skeleton_archer",
@@ -15,7 +19,9 @@ object EnemySpecies {
         "orc_warrior",
         "orc_archer",
         "human_archer"
-    )
+    ) + MonsterCatalog.secondWave
+        .filter { it.rarity <= com.lernhero.domain.common.Rarity.Rare }
+        .map { it.id }
 
     /** Avatar bossa - jedyny gatunek spoza [all], nie ma wlasnej karty kompana. */
     const val BOSS_SPECIES = "boss_skeleton_dragon"
@@ -33,7 +39,14 @@ object EnemySpecies {
         "orc_warrior" to (1.35f to 1.00f),
         "orc_archer" to (1.10f to 1.10f),
         "human_archer" to (1.00f to 1.05f)
-    )
+    ) + MonsterCatalog.secondWave.associate { card ->
+        // Tylko PROPORCJE karty (tank/dps), nie jej rzadkosc - wrog rosnie z fala, nie z gatunkiem.
+        val avgHp = 85f
+        val avgAtk = 19f
+        val ratio = (card.hp / avgHp) / (card.attack / avgAtk)
+        val hpMul = kotlin.math.sqrt(ratio).coerceIn(0.7f, 1.4f)
+        card.id to (hpMul to (1f / hpMul).coerceIn(0.75f, 1.3f))
+    }
 
     fun archetypeOf(species: String): Pair<Float, Float> = statMultiplier[species] ?: (1f to 1f)
 }

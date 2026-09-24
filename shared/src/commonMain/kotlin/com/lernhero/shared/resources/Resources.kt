@@ -78,6 +78,45 @@ import lernhero.shared.generated.resources.sword_up_new
 import lernhero.shared.generated.resources.log_in
 import lernhero.shared.generated.resources.log_out
 import lernhero.shared.generated.resources.wisdombound_emblem
+import lernhero.shared.generated.resources.monster_ember_imp
+import lernhero.shared.generated.resources.monster_fire_bat
+import lernhero.shared.generated.resources.monster_lava_slime
+import lernhero.shared.generated.resources.monster_goblin_spearman
+import lernhero.shared.generated.resources.monster_mushroom_sprite
+import lernhero.shared.generated.resources.monster_tidecrawler
+import lernhero.shared.generated.resources.monster_bubble_slime
+import lernhero.shared.generated.resources.monster_murloc
+import lernhero.shared.generated.resources.monster_zombie
+import lernhero.shared.generated.resources.monster_ghost
+import lernhero.shared.generated.resources.monster_hellhound
+import lernhero.shared.generated.resources.monster_flame_cultist
+import lernhero.shared.generated.resources.monster_forest_fox
+import lernhero.shared.generated.resources.monster_treant_sapling
+import lernhero.shared.generated.resources.monster_elf_ranger
+import lernhero.shared.generated.resources.monster_boar_rider
+import lernhero.shared.generated.resources.monster_frost_wolf
+import lernhero.shared.generated.resources.monster_ice_archer
+import lernhero.shared.generated.resources.monster_ghoul
+import lernhero.shared.generated.resources.monster_banshee
+import lernhero.shared.generated.resources.monster_salamander
+import lernhero.shared.generated.resources.monster_efreet
+import lernhero.shared.generated.resources.monster_magma_golem
+import lernhero.shared.generated.resources.monster_centaur_huntress
+import lernhero.shared.generated.resources.monster_thorn_beast
+import lernhero.shared.generated.resources.monster_naga_siren
+import lernhero.shared.generated.resources.monster_yeti
+import lernhero.shared.generated.resources.monster_vampire
+import lernhero.shared.generated.resources.monster_minotaur
+import lernhero.shared.generated.resources.monster_centaur
+import lernhero.shared.generated.resources.monster_ancient_treant
+import lernhero.shared.generated.resources.monster_frost_giant
+import lernhero.shared.generated.resources.monster_death_knight
+import lernhero.shared.generated.resources.monster_lich
+import lernhero.shared.generated.resources.monster_phoenix
+import lernhero.shared.generated.resources.element_fire
+import lernhero.shared.generated.resources.element_nature
+import lernhero.shared.generated.resources.element_water
+import lernhero.shared.generated.resources.element_death
 import lernhero.shared.generated.resources.map_pin
 import lernhero.shared.generated.resources.menu
 import lernhero.shared.generated.resources.mine_island
@@ -387,6 +426,56 @@ object Resources {
         val bossSkeletonDragonBody = Res.drawable.boss_skeleton_dragon_body
         val bossSkeletonDragonSkullUp = Res.drawable.boss_skeleton_dragon_up_skull
         val bossSkeletonDragonSkullDown = Res.drawable.boss_skeleton_dragon_down_skull
+
+        /**
+         * Druga fala kompanow - 512x512, postac wpasowana w te same proporcje (stopy na 88% wysokosci),
+         * narysowana patrzac w PRAWO. Klucz = spriteKey karty.
+         */
+        val secondWave: Map<String, DrawableResource> = mapOf(
+            "ember_imp" to Res.drawable.monster_ember_imp,
+            "fire_bat" to Res.drawable.monster_fire_bat,
+            "lava_slime" to Res.drawable.monster_lava_slime,
+            "goblin_spearman" to Res.drawable.monster_goblin_spearman,
+            "mushroom_sprite" to Res.drawable.monster_mushroom_sprite,
+            "tidecrawler" to Res.drawable.monster_tidecrawler,
+            "bubble_slime" to Res.drawable.monster_bubble_slime,
+            "murloc" to Res.drawable.monster_murloc,
+            "zombie" to Res.drawable.monster_zombie,
+            "ghost" to Res.drawable.monster_ghost,
+            "hellhound" to Res.drawable.monster_hellhound,
+            "flame_cultist" to Res.drawable.monster_flame_cultist,
+            "forest_fox" to Res.drawable.monster_forest_fox,
+            "treant_sapling" to Res.drawable.monster_treant_sapling,
+            "elf_ranger" to Res.drawable.monster_elf_ranger,
+            "boar_rider" to Res.drawable.monster_boar_rider,
+            "frost_wolf" to Res.drawable.monster_frost_wolf,
+            "ice_archer" to Res.drawable.monster_ice_archer,
+            "ghoul" to Res.drawable.monster_ghoul,
+            "banshee" to Res.drawable.monster_banshee,
+            "salamander" to Res.drawable.monster_salamander,
+            "efreet" to Res.drawable.monster_efreet,
+            "magma_golem" to Res.drawable.monster_magma_golem,
+            "centaur_huntress" to Res.drawable.monster_centaur_huntress,
+            "thorn_beast" to Res.drawable.monster_thorn_beast,
+            "naga_siren" to Res.drawable.monster_naga_siren,
+            "yeti" to Res.drawable.monster_yeti,
+            "vampire" to Res.drawable.monster_vampire,
+            "minotaur" to Res.drawable.monster_minotaur,
+            "centaur" to Res.drawable.monster_centaur,
+            "ancient_treant" to Res.drawable.monster_ancient_treant,
+            "frost_giant" to Res.drawable.monster_frost_giant,
+            "death_knight" to Res.drawable.monster_death_knight,
+            "lich" to Res.drawable.monster_lich,
+            "phoenix" to Res.drawable.monster_phoenix
+        )
+    }
+
+    /** Emblematy zywiolow (256x256) - zamiast emoji w kolkach. Klucz = Element.name. */
+    object ElementArt {
+        val fire = Res.drawable.element_fire
+        val nature = Res.drawable.element_nature
+        val water = Res.drawable.element_water
+        val death = Res.drawable.element_death
     }
     /** Grafiki warstwy efektow walki (pociski, hit/spell effects) - patrz com.lernhero.game.battle.effects. */
     object EffectArt {
