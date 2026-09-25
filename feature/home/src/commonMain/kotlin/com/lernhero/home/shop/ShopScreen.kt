@@ -90,6 +90,7 @@ import kotlin.math.roundToInt
 import kotlin.time.Clock
 import com.lernhero.shared.monetization.PremiumPaywall
 import com.lernhero.shared.theme.FontFirst
+import com.lernhero.shared.theme.StrokedText
 import com.lernhero.shared.theme.FontPixel
 
 private val PanelInk = Color(0xFF19120C)
@@ -374,20 +375,7 @@ private fun SectionBanner(text: String) {
 /** Gruby bialy napis z ciemnym obrysem - jak na przyciskach i naglowkach w referencji. */
 @Composable
 private fun OutlinedLabel(text: String, size: androidx.compose.ui.unit.TextUnit, color: Color, outline: Boolean = true, modifier: Modifier = Modifier) {
-    Box(modifier = modifier, contentAlignment = Alignment.Center) {
-        if (outline) {
-            Text(
-                text = text,
-                color = Color(0xFF1A1208),
-                fontFamily = FontFirst(),
-                fontWeight = FontWeight.Black,
-                fontSize = size,
-                textAlign = TextAlign.Center,
-                style = TextStyle(drawStyle = Stroke(width = 6f, join = StrokeJoin.Round))
-            )
-        }
-        Text(text = text, color = color, fontFamily = FontFirst(), fontWeight = FontWeight.Black, fontSize = size, textAlign = TextAlign.Center)
-    }
+    StrokedText(text, size, color, Color(0xFF1A1208), modifier, strokeWidth = if (outline) 6f else 0f)
 }
 
 private fun ShopChest.headerColors(): List<Color> = when (this) {

@@ -62,15 +62,15 @@ object BundledBooks {
         Book(
             id = "bundled_lantern_keeper",
             title = "The Lantern Keeper",
-            author = "Tekst przykladowy",
+            author = "LernHero Originals",
             format = BookFormat.Txt,
             source = BookSource.Bundled,
             locator = "files/books/sample_reflow.txt"
         ),
         Book(
             id = "bundled_sample_tales",
-            title = "Przykladowe opowiadania",
-            author = "Domena publiczna (przykladowy tekst)",
+            title = "Sample Tales",
+            author = "Public domain",
             format = BookFormat.Pdf,
             source = BookSource.Bundled,
             locator = "files/books/sample_tales.pdf"

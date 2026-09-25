@@ -92,7 +92,7 @@ internal fun EndlessBuffRow(buffs: Map<EndlessBuff, Int>, modifier: Modifier = M
     if (buffs.isEmpty()) return
     Row(
         modifier = modifier.horizontalScroll(rememberScrollState()),
-        horizontalArrangement = Arrangement.spacedBy(6.dp)
+        horizontalArrangement = Arrangement.spacedBy(4.dp)
     ) {
         buffs.entries.sortedBy { it.key.ordinal }.forEach { (buff, stacks) ->
             // Ten sam kolor co na karcie wyboru (UpgradeChoiceDialog) - po nim widac klase ulepszenia.
@@ -104,17 +104,19 @@ internal fun EndlessBuffRow(buffs: Map<EndlessBuff, Int>, modifier: Modifier = M
             }
             Box(
                 modifier = Modifier
-                    .clip(RoundedCornerShape(8.dp))
-                    .background(HudInk)
-                    .border(1.5.dp, accent, RoundedCornerShape(8.dp))
-                    .padding(horizontal = 8.dp, vertical = 5.dp)
+                    .clip(RoundedCornerShape(6.dp))
+                    // Maly i polprzezroczysty - lezy nad polem bitwy i nie moze zaslaniac postaci.
+                    .background(HudInk.copy(alpha = 0.7f))
+                    .border(1.dp, accent.copy(alpha = 0.8f), RoundedCornerShape(6.dp))
+                    .padding(horizontal = 5.dp, vertical = 2.dp)
             ) {
                 Text(
                     text = if (stacks > 1) "${buff.title} x$stacks" else buff.title,
                     color = accent,
                     fontFamily = FontFirst(),
                     fontWeight = FontWeight.Bold,
-                    fontSize = 10.sp
+                    fontSize = 8.sp,
+                    lineHeight = 10.sp
                 )
             }
         }

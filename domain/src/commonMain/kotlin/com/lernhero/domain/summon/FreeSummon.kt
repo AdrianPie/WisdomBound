@@ -50,7 +50,7 @@ object FreeSummon {
      * Gracz patrzacy na heroiczny banner nie potrzebuje sekund - potrzebuje "jeszcze 2 dni".
      */
     fun format(remainingMs: Long): String {
-        if (remainingMs <= 0L) return "GOTOWE"
+        if (remainingMs <= 0L) return "READY"
         val totalSeconds = remainingMs / 1000
         val days = totalSeconds / 86_400
         val hours = (totalSeconds % 86_400) / 3600

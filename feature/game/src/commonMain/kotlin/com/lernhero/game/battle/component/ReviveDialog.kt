@@ -29,9 +29,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
@@ -46,7 +44,7 @@ import com.lernhero.shared.theme.FontPixel
 import kotlin.math.roundToInt
 
 /**
- * Druzyna padla - ostatnia szansa. Scena gasnie, na srodku swieci aureola nad czaszka i jedna
+ * Druzyna padla - ostatnia szansa. Scena gasnie, na srodku czaszka w zlotym kole z cicha poswiata i jedna
  * decyzja: obejrzyj reklame i wstan z polowa HP, albo przyjmij porazke. Raz na walke.
  */
 @Composable
@@ -66,10 +64,11 @@ internal fun ReviveDialog(
         targetValue = 1f,
         animationSpec = infiniteRepeatable(tween(1300, easing = FastOutSlowInEasing), RepeatMode.Reverse)
     )
-    val spin by infinite.animateFloat(
+    // Cienki pierscien, ktory co chwile rozchodzi sie od czaszki i gasnie.
+    val ripple by infinite.animateFloat(
         initialValue = 0f,
-        targetValue = 360f,
-        animationSpec = infiniteRepeatable(tween(9000, easing = LinearEasing))
+        targetValue = 1f,
+        animationSpec = infiniteRepeatable(tween(2200, easing = LinearEasing))
     )
 
     val percent = (AdRewards.REVIVE_HP_FRACTION * 100).roundToInt()
@@ -95,36 +94,43 @@ internal fun ReviveDialog(
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.spacedBy(14.dp)
         ) {
-            Box(modifier = Modifier.size(150.dp), contentAlignment = Alignment.Center) {
+            Box(modifier = Modifier.size(130.dp), contentAlignment = Alignment.Center) {
+                // Miekka, cieplo pulsujaca poswiata za czaszka.
                 Box(
                     modifier = Modifier
-                        .size(150.dp)
-                        .rotate(spin)
-                        .alpha(0.25f + 0.35f * halo)
+                        .size(130.dp)
                         .background(
-                            Brush.sweepGradient(List(16) { if (it % 2 == 0) Color(0xFFFFF1C2) else Color.Transparent }),
+                            Brush.radialGradient(
+                                listOf(
+                                    Color(0xFFFFD98A).copy(alpha = 0.22f + 0.14f * halo),
+                                    Color(0xFFFFB347).copy(alpha = 0.06f),
+                                    Color.Transparent
+                                )
+                            ),
                             CircleShape
                         )
                 )
                 Box(
                     modifier = Modifier
-                        .size(96.dp)
-                        .clip(CircleShape)
-                        .background(
-                            Brush.radialGradient(
-                                listOf(Color(0xFFFFF1C2).copy(alpha = 0.55f + 0.3f * halo), Color(0x33FFD34D), Color.Transparent)
-                            )
-                        )
+                        .size(80.dp)
+                        .graphicsLayer {
+                            val s = 1f + 0.55f * ripple
+                            scaleX = s
+                            scaleY = s
+                            alpha = (1f - ripple) * 0.7f
+                        }
+                        .border(1.5.dp, Color(0xFFFFD98A), CircleShape)
                 )
-                Text(text = "💀", fontSize = 48.sp)
-                Text(
-                    text = "😇",
-                    fontSize = 22.sp,
+                Box(
                     modifier = Modifier
-                        .align(Alignment.TopCenter)
-                        .padding(top = 14.dp)
-                        .graphicsLayer { translationY = -6f * halo * density }
-                )
+                        .size(80.dp)
+                        .clip(CircleShape)
+                        .background(Color(0xFF1A1420))
+                        .border(2.dp, Color(0xFFE0B35A).copy(alpha = 0.7f + 0.3f * halo), CircleShape),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text(text = "💀", fontSize = 40.sp)
+                }
             }
 
             Text(

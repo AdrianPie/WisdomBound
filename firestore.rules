@@ -40,6 +40,16 @@ service cloud.firestore {
         - (wasNumber(field) ? resource.data[field] : 0);
     }
 
+    // Pole surowca z bezpiecznym domyslnym 0 - brakujace pole (np. usuniete z modelu jak `wood`)
+    // nie moze wywalac calej reguly i blokowac kazdego zapisu gracza.
+    function res(field) {
+      return request.resource.data.townResources.get(field, 0);
+    }
+
+    function oldRes(field) {
+      return resource.data.get('townResources', {}).get(field, 0);
+    }
+
     // Jeden generous-ale-skonczony pulap na WSZYSTKIE walutowe pola na jeden zapis dokumentu.
     // Prawdziwa najwieksza legalna nagroda (skrzynia bossa, pelny magazyn idle 12h na najwyzszym
     // tierze) powinna byc rzedu wielkosci nizsza - podbij tu pozniej z realnym balansem.
@@ -48,16 +58,11 @@ service cloud.firestore {
         && request.resource.data.money >= 0
         && (!('townResources' in request.resource.data) ||
           (
-            request.resource.data.townResources.wood >= 0 &&
-            request.resource.data.townResources.stone >= 0 &&
-            request.resource.data.townResources.iron >= 0 &&
-            request.resource.data.townResources.essence >= 0 &&
-            request.resource.data.townResources.summonTickets >= 0 &&
-            request.resource.data.townResources.wood <= (resource.data.townResources.wood + 5000) &&
-            request.resource.data.townResources.stone <= (resource.data.townResources.stone + 5000) &&
-            request.resource.data.townResources.iron <= (resource.data.townResources.iron + 5000) &&
-            request.resource.data.townResources.essence <= (resource.data.townResources.essence + 5000) &&
-            request.resource.data.townResources.summonTickets <= (resource.data.townResources.summonTickets + 100)
+            res('stone') >= 0 && res('iron') >= 0 && res('essence') >= 0 && res('summonTickets') >= 0 &&
+            res('stone') <= oldRes('stone') + 5000 &&
+            res('iron') <= oldRes('iron') + 5000 &&
+            res('essence') <= oldRes('essence') + 5000 &&
+            res('summonTickets') <= oldRes('summonTickets') + 100
           ))
         && (!('progress' in request.resource.data) ||
           (

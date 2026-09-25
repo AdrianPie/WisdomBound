@@ -529,7 +529,7 @@ private fun WarningsPanel(warnings: List<String>, onDismiss: () -> Unit) {
         }
         if (warnings.size > 6) {
             Text(
-                text = "...i jeszcze ${warnings.size - 6}.",
+                text = "...and ${warnings.size - 6} more.",
                 color = DeckMuted,
                 fontFamily = FontFirst(),
                 fontSize = 10.sp

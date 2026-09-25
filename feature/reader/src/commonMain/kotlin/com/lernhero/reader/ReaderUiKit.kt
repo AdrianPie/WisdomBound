@@ -45,6 +45,7 @@ import com.lernhero.domain.reading.ReadingDayProgress
 import com.lernhero.domain.reading.ReadingGoal
 import com.lernhero.domain.reading.ReadingGoalCatalog
 import com.lernhero.shared.theme.FontFirst
+import com.lernhero.shared.theme.StrokedText
 
 /* Wspolny "growy" jezyk czytelni - ten sam co sklep i budynki Miasta (modul czytnika nie widzi
  * komponentow z :feature:home, wiec ma wlasne, identyczne w wygladzie kopie). */
@@ -63,19 +64,7 @@ internal fun KitText(
     strokeWidth: Float = 6f,
     maxLines: Int = Int.MAX_VALUE
 ) {
-    Box(modifier = modifier, contentAlignment = Alignment.Center) {
-        Text(
-            text = text,
-            color = KitOutline,
-            fontFamily = FontFirst(),
-            fontWeight = FontWeight.Black,
-            fontSize = size,
-            textAlign = TextAlign.Center,
-            maxLines = maxLines,
-            style = TextStyle(drawStyle = Stroke(width = strokeWidth, join = StrokeJoin.Round))
-        )
-        Text(text = text, color = color, fontFamily = FontFirst(), fontWeight = FontWeight.Black, fontSize = size, textAlign = TextAlign.Center, maxLines = maxLines)
-    }
+    StrokedText(text, size, color, KitOutline, modifier, strokeWidth, maxLines)
 }
 
 /** Drewniana plyta: cieply gradient, gruby obrys, cienka zlota linia w srodku. */

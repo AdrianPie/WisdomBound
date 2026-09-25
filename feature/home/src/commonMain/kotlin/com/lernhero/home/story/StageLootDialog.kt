@@ -91,9 +91,9 @@ fun StageLootDialog(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceEvenly
             ) {
-                LootStat("💰", "${stage.rewardGold}", "zloto")
+                LootStat("💰", "${stage.rewardGold}", "gold")
                 LootStat("⭐", "${stage.rewardXp}", "XP")
-                LootStat("🎲", "$dropChance%", "na przedmiot")
+                LootStat("🎲", "$dropChance%", "item drop")
             }
 
             Text(

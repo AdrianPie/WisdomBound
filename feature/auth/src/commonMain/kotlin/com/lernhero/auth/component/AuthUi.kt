@@ -61,6 +61,7 @@ import androidx.compose.ui.unit.sp
 import com.lernhero.shared.resources.Resources
 import com.lernhero.shared.theme.AppPalette
 import com.lernhero.shared.theme.FontFirst
+import com.lernhero.shared.theme.StrokedText
 import org.jetbrains.compose.resources.painterResource
 
 /*
@@ -102,25 +103,7 @@ fun GameText(
     modifier: Modifier = Modifier,
     strokeWidth: Float = 6f
 ) {
-    Box(modifier = modifier, contentAlignment = Alignment.Center) {
-        Text(
-            text = text,
-            color = Outline,
-            fontFamily = FontFirst(),
-            fontWeight = FontWeight.Black,
-            fontSize = size,
-            textAlign = TextAlign.Center,
-            style = TextStyle(drawStyle = Stroke(width = strokeWidth, join = StrokeJoin.Round))
-        )
-        Text(
-            text = text,
-            color = color,
-            fontFamily = FontFirst(),
-            fontWeight = FontWeight.Black,
-            fontSize = size,
-            textAlign = TextAlign.Center
-        )
-    }
+    StrokedText(text, size, color, Outline, modifier, strokeWidth)
 }
 
 /** Polprzezroczysta karta ze zlota oprawa, na ktorej leza formularze. */

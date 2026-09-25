@@ -30,6 +30,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeDrawing
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
@@ -307,10 +308,14 @@ private fun HealthBarsOverlay(
     modifier: Modifier = Modifier
 ) {
     var layerOrigin by remember { mutableStateOf(Offset.Zero) }
+    var layerWidth by remember { mutableStateOf(0) }
     val density = LocalDensity.current
 
     Box(
-        modifier = modifier.onGloballyPositioned { layerOrigin = it.positionInRoot() }
+        modifier = modifier.onGloballyPositioned {
+            layerOrigin = it.positionInRoot()
+            layerWidth = it.size.width
+        }
     ) {
         characters.forEach { character ->
             val rect = characterRects[character.id] ?: return@forEach
@@ -320,8 +325,8 @@ private fun HealthBarsOverlay(
             key(character.id) {
                 val world = rect.resolve(anchorsFor(character).hpBarAnchor)
                 val local = world - layerOrigin
-                // Pasek wezszy niz dawniej - obok niego stoja teraz jeszcze dwie odznaki (ATK, DEF).
-                val barWidthDp = with(density) { (rect.size.width * 0.34f).toDp() }.coerceIn(28.dp, 56.dp)
+                // Minimalna szerokosc cienkiego paska HP pod rzedem statystyk.
+                val barWidthDp = with(density) { (rect.size.width * 0.34f).toDp() }.coerceIn(20.dp, 40.dp)
                 // Zywiol przy kazdym, kto go ma - u naszych pulsuje, gdy kafel tematu go wzmocnil.
                 val showBadge = character.element != null
                 val boosted = character.isPlayer && character.element in boostedElements
@@ -340,7 +345,9 @@ private fun HealthBarsOverlay(
                             IntOffset(
                                 // Wysrodkowana nad postacia; DOLNA krawedz na czubku glowy, wiec
                                 // tabliczka nigdy nie przykrywa sylwetki.
-                                x = (local.x - plateSize.width / 2f).roundToInt(),
+                                // Przy krawedzi ekranu dosuwamy ja do srodka, zeby nie byla ucieta.
+                                x = (local.x - plateSize.width / 2f).roundToInt()
+                                    .coerceIn(0, (layerWidth - plateSize.width).coerceAtLeast(0)),
                                 y = (local.y - plateSize.height).roundToInt()
                             )
                         }
@@ -399,7 +406,7 @@ private fun ElementBadge(element: Element, boosted: Boolean) {
     }
 }
 
-private val ELEMENT_BADGE_DP = 16.dp
+private val ELEMENT_BADGE_DP = 10.dp
 
 
 /**
@@ -478,11 +485,14 @@ private fun TeamFormation(
     BoxWithConstraints(
         modifier = modifier.padding(vertical = 8.dp)
     ) {
-        val cardSize = calculateCardSize(maxWidth = maxWidth, maxHeight = maxHeight)
-        val slots = formationSlots(isEnemySide)
-
-        characters
-            .mapIndexed { index, character -> character to slots[index % slots.size] }
+        // Pelna druzyna w zygzaku ciasno zachodzi na siebie - przy 5-6 postaciach kazda jest mniejsza.
+        val crowding = when {
+            characters.size >= 5 -> 0.8f
+            characters.size == 4 -> 0.9f
+            else -> 1f
+        }
+        val cardSize = calculateCardSize(maxWidth = maxWidth, maxHeight = maxHeight) * crowding
+        formationSlots(characters, isEnemySide)
             .sortedBy { (_, slot) -> slot.y }
             .forEach { (character, slot) ->
                 // Kazda postac dostaje wlasny, przypiety do id "przedzial" kompozycji - inaczej gdy
@@ -538,27 +548,36 @@ private data class FormationSlot(
     val y: Float
 )
 
-private fun formationSlots(isRightSide: Boolean): List<FormationSlot> {
-    val leftSlots = listOf(
-        FormationSlot(x = 0.26f, y = 0.58f),
-        FormationSlot(x = 0.42f, y = 0.42f),
-        FormationSlot(x = 0.30f, y = 0.32f),
-        FormationSlot(x = 0.54f, y = 0.62f),
-        FormationSlot(x = 0.50f, y = 0.28f),
-        // Szoste miejsce - druzyna to bohater + pieciu kompanow (COMPANION_SLOTS), a fale wroga
-        // tez dochodza do szesciu. Przy pieciu miejscach szosta postac staje DOKLADNIE na
-        // pierwszej (slots[index % size]), bo indeks sie zawija.
-        FormationSlot(x = 0.66f, y = 0.46f)
-    )
-
-    if (!isRightSide) {
-        return leftSlots
+/**
+ * Zygzak przy boku ekranu: postacie ida od gory do dolu, na przemian blizej i dalej od krawedzi,
+ * wiec nikt nie stoi na srodku pola i nikt nikogo nie zaslania. Najwieksi stoja na samej gorze
+ * (za reszta), mniejsi coraz nizej - maly stworek nigdy nie znika za golemem.
+ *
+ * x i y to ulamki wlasnej polowki pola (x = 0 przy zewnetrznej krawedzi ekranu). Pierwsze, gorne
+ * miejsce jest blizej srodka, bo zewnetrzny gorny rog zajmuja ramki WAVE / QUESTIONS.
+ */
+private fun formationSlots(
+    characters: List<CharacterUiModel>,
+    isRightSide: Boolean
+): List<Pair<CharacterUiModel, FormationSlot>> {
+    val ordered = characters.sortedByDescending { character ->
+        val species = if (character.knightEquipment != null) 1f
+        else MonsterVisualPresets.forSpecies(character.avatarKey).visualScale
+        character.battleScale * species
     }
-
-    return leftSlots.map { slot ->
-        slot.copy(x = 1f - slot.x)
+    val count = ordered.size
+    return ordered.mapIndexed { index, character ->
+        val t = if (count <= 1) 0.5f else index / (count - 1f)
+        val x = if (index % 2 == 0) ZIGZAG_INNER_X else ZIGZAG_OUTER_X
+        val y = ZIGZAG_TOP_Y + (ZIGZAG_BOTTOM_Y - ZIGZAG_TOP_Y) * t
+        character to FormationSlot(x = if (isRightSide) 1f - x else x, y = y)
     }
 }
+
+private const val ZIGZAG_INNER_X = 0.52f
+private const val ZIGZAG_OUTER_X = 0.24f
+private const val ZIGZAG_TOP_Y = 0.40f
+private const val ZIGZAG_BOTTOM_Y = 0.74f
 
 /**
  * Wojownik stoi caly czas w swoim miejscu w formacji - atak to tylko krotka animacja matematyczna
@@ -689,7 +708,12 @@ private fun CharacterSlot(
                         unbounded = character.battleScale > 2.5f,
                         attackSpeed = BattleSpeed.multiplier,
                         onAttackAnimationFinished = { onAttackFinished(character.id) },
-                        modifier = Modifier.onGloballyPositioned { coordinates ->
+                        // Klasa wielkosci gatunku (MonsterVisualPresets SMALL/MEDIUM/LARGE) moze byc
+                        // wieksza od karty - bez tego size() przycinal ja do karty i golem stal
+                        // wzrostu bohatera. Rosnie w gore, stopy zostaja na ziemi.
+                        modifier = Modifier
+                            .let { if (character.battleScale > 2.5f) it else it.wrapContentSize(Alignment.BottomCenter, unbounded = true) }
+                            .onGloballyPositioned { coordinates ->
                             onRectMeasured(
                                 character.id,
                                 // BYLO odwrotnie: [MonsterCharacter.facing] odbija sprite (scaleX) gdy
@@ -885,9 +909,11 @@ private fun calculateCardSize(
     maxWidth: Dp,
     maxHeight: Dp
 ): Dp {
-    val widthBasedSize = maxWidth * 0.525f
-    val heightBasedSize = maxHeight * 0.525f
-    return minOf(widthBasedSize, heightBasedSize).coerceIn(55.dp, 105.dp)
+    // Nieco mniejsza karta niz dawniej - duze potwory (MonsterVisualPresets.LARGE = 1.5x) musza sie
+    // zmiescic w formacji bez wchodzenia na sasiadow.
+    val widthBasedSize = maxWidth * 0.45f
+    val heightBasedSize = maxHeight * 0.45f
+    return minOf(widthBasedSize, heightBasedSize).coerceIn(48.dp, 90.dp)
 }
 
 /** Poza prawa krawedzia wlasnej polowki pola - stad wrogowie wchodza na ekran, wyraznie zza jego brzegu. */

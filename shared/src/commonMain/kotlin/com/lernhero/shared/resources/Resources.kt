@@ -134,6 +134,9 @@ import lernhero.shared.generated.resources.summon_center
 import lernhero.shared.generated.resources.summon_center_runes
 import lernhero.shared.generated.resources.summon_island
 import lernhero.shared.generated.resources.swords_24px
+import lernhero.shared.generated.resources.plate_heart
+import lernhero.shared.generated.resources.plate_sword
+import lernhero.shared.generated.resources.plate_shield
 import lernhero.shared.generated.resources.tartak_island
 import lernhero.shared.generated.resources.treasure
 import lernhero.shared.generated.resources.unlock
@@ -182,6 +185,10 @@ object Resources {
         val Warning = Res.drawable.warning
         val Weight = Res.drawable.weight
         val swords = Res.drawable.swords_24px
+        /** Pelne, kolorowe ikony statystyk na tabliczce nad glowa w walce. */
+        val PlateHeart = Res.drawable.plate_heart
+        val PlateSword = Res.drawable.plate_sword
+        val PlateShield = Res.drawable.plate_shield
     }
 
     /**

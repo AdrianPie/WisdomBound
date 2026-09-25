@@ -229,7 +229,7 @@ private fun UpgradeCard(
                 text = if (ownedStacks > 0) {
                     "You have x$ownedStacks of ${buff.maxStacks} - picking adds another stack."
                 } else {
-                    "Nowe (max x${buff.maxStacks})"
+                    "New - stacks up to x${buff.maxStacks}."
                 },
                 color = Muted,
                 fontFamily = FontFirst(),
