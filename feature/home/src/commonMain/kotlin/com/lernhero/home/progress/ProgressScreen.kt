@@ -1,10 +1,9 @@
 package com.lernhero.home.progress
 
-import com.lernhero.home.ui.JewelRow
-import com.lernhero.home.ui.JewelIcon
-import com.lernhero.domain.jewel.Jewels
+import com.lernhero.shared.theme.GlyphText
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
+import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -12,15 +11,15 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.Spacer
-import com.lernhero.home.navigation.bottomBarSpace
-import androidx.compose.foundation.layout.systemBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.systemBarsPadding
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Text
@@ -33,42 +32,44 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.StrokeCap
+import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.lernhero.domain.player.HeroStat
-import com.lernhero.domain.player.PlayerProgress
+import com.lernhero.domain.jewel.Jewels
 import com.lernhero.domain.progress.Achievement
 import com.lernhero.domain.progress.AchievementCatalog
 import com.lernhero.domain.progress.AchievementGroup
 import com.lernhero.domain.progress.AchievementTier
 import com.lernhero.domain.progress.GameStats
 import com.lernhero.domain.quiz.QuizCategory
+import com.lernhero.home.navigation.bottomBarSpace
 import com.lernhero.home.player.PlayerViewModel
+import com.lernhero.home.ui.ChunkyButton
+import com.lernhero.home.ui.GlyphBadge
+import com.lernhero.home.ui.GrooveBar
+import com.lernhero.home.ui.JewelIcon
+import com.lernhero.home.ui.JewelRow
+import com.lernhero.home.ui.OutlinedText
+import com.lernhero.home.ui.PaperCard
+import com.lernhero.home.ui.PaperInk
+import com.lernhero.home.ui.PaperLabel
+import com.lernhero.home.ui.PaperTabs
+import com.lernhero.home.ui.PaperTile
+import com.lernhero.home.ui.PaperTitle
+import com.lernhero.home.ui.PaperValue
+import com.lernhero.home.ui.ParchmentPalette
 import com.lernhero.reader.ReadingGoalsPanel
 import com.lernhero.shared.theme.FontFirst
-import com.lernhero.shared.theme.FontPixel
-import androidx.compose.foundation.Canvas
-import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.layout.aspectRatio
-import androidx.compose.foundation.layout.width
-import androidx.compose.ui.geometry.Offset
-import androidx.compose.ui.geometry.Size
-import androidx.compose.ui.graphics.StrokeCap
-import androidx.compose.ui.graphics.drawscope.Stroke
-import com.lernhero.home.city.TownPanel
-import com.lernhero.home.city.TownProgressBar
-import com.lernhero.home.ui.OutlinedText
 
-private val Ink = Color(0xFF19120C)
-private val Frame = Color(0xFFC8A45A)
-private val Cream = Color(0xFFF4E9D7)
-private val Muted = Color(0xFF9D8B6A)
 private val GoldText = Color(0xFFFFD34D)
-private val Good = Color(0xFF5FD08A)
-private val Bad = Color(0xFFE56A5D)
+private val Outline = Color(0xFF120B05)
 
 private enum class ProgressTab(val label: String) {
     Stats("Stats"),
@@ -111,12 +112,17 @@ fun ProgressScreen(viewModel: PlayerViewModel, onBack: () -> Unit) {
 
         LearningHeader(stats = state.stats)
 
-        TabRow(selected = tab, onSelect = { tab = it })
+        PaperTabs(
+            labels = ProgressTab.entries.map { it.label },
+            selected = tab.ordinal,
+            onSelect = { tab = ProgressTab.entries[it] }
+        )
 
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .verticalScroll(rememberScrollState()),
+                // Kazda zakladka zaczyna od gory - wspolny scroll otwieral Osiagniecia w polowie listy.
+                .verticalScroll(remember(tab) { androidx.compose.foundation.ScrollState(0) }),
             verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
             when (tab) {
@@ -151,12 +157,11 @@ private fun RoundBack(onBack: () -> Unit) {
     }
 }
 
-private val Outline = Color(0xFF120B05)
-
+/** Kolor celnosci na papierze: zielony od 75%, bursztyn od 50%, ponizej czerwony. */
 private fun accentFor(accuracy: Float): Color = when {
-    accuracy >= 0.75f -> Good
-    accuracy >= 0.5f -> GoldText
-    else -> Bad
+    accuracy >= 0.75f -> PaperInk.Good
+    accuracy >= 0.5f -> PaperInk.Warn
+    else -> PaperInk.Bad
 }
 
 /**
@@ -168,77 +173,53 @@ private fun LearningHeader(stats: GameStats) {
     val fill by animateFloatAsState(targetValue = stats.accuracy, animationSpec = tween(900))
     val accent = accentFor(stats.accuracy)
 
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clip(RoundedCornerShape(18.dp))
-            .background(Brush.linearGradient(listOf(Color(0xFF4A2A6E), Color(0xFF24133A), Color(0xFF160C22))))
-            .border(3.dp, Brush.verticalGradient(listOf(GoldText, Color(0xFFE08A1E))), RoundedCornerShape(18.dp))
-            .padding(14.dp),
-        horizontalArrangement = Arrangement.spacedBy(16.dp),
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        Box(modifier = Modifier.size(104.dp), contentAlignment = Alignment.Center) {
-            Canvas(modifier = Modifier.fillMaxSize()) {
-                val stroke = 12.dp.toPx()
-                val arcSize = Size(size.width - stroke, size.height - stroke)
-                val topLeft = Offset(stroke / 2, stroke / 2)
-                drawArc(Color(0xFF0B0714), -90f, 360f, false, topLeft, arcSize, style = Stroke(stroke))
-                drawArc(
-                    Brush.sweepGradient(listOf(accent.copy(alpha = 0.7f), accent, accent.copy(alpha = 0.7f))),
-                    -90f, 360f * fill, false, topLeft, arcSize,
-                    style = Stroke(stroke, cap = StrokeCap.Round)
-                )
+    PaperCard {
+        Row(horizontalArrangement = Arrangement.spacedBy(14.dp), verticalAlignment = Alignment.CenterVertically) {
+            Box(modifier = Modifier.size(88.dp), contentAlignment = Alignment.Center) {
+                Canvas(modifier = Modifier.fillMaxSize()) {
+                    val stroke = 10.dp.toPx()
+                    val arcSize = Size(size.width - stroke, size.height - stroke)
+                    val topLeft = Offset(stroke / 2, stroke / 2)
+                    drawArc(PaperInk.RingTrack, -90f, 360f, false, topLeft, arcSize, style = Stroke(stroke))
+                    drawArc(accent, -90f, 360f * fill, false, topLeft, arcSize, style = Stroke(stroke, cap = StrokeCap.Round))
+                }
+                Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                    PaperValue(text = "${stats.accuracyPercent}%", size = 22)
+                    PaperLabel("accuracy")
+                }
             }
-            Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                OutlinedText(text = "${stats.accuracyPercent}%", size = 24.sp, color = Color.White)
-                Text("accuracy", color = Color(0xFFBFA9DE), fontFamily = FontFirst(), fontWeight = FontWeight.Bold, fontSize = 10.sp)
-            }
-        }
-        Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-            OutlinedText(text = "${stats.questionsCorrect} / ${stats.questionsAnswered}", size = 22.sp, color = GoldText)
-            Text("questions answered right", color = Color(0xFFBFA9DE), fontFamily = FontFirst(), fontWeight = FontWeight.Bold, fontSize = 11.sp)
-            Row(
-                modifier = Modifier
-                    .clip(RoundedCornerShape(50))
-                    .background(Brush.horizontalGradient(listOf(Color(0xFFFF7A2E), Color(0xFFD9322B))))
-                    .border(2.dp, Outline, RoundedCornerShape(50))
-                    .padding(horizontal = 12.dp, vertical = 4.dp),
-                horizontalArrangement = Arrangement.spacedBy(6.dp),
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Text("🔥", fontSize = 14.sp)
-                OutlinedText(text = "${stats.bestAnswerStreak} best streak", size = 13.sp, color = Color.White, strokeWidth = 4f)
-            }
-        }
-    }
-}
-
-@Composable
-private fun TabRow(selected: ProgressTab, onSelect: (ProgressTab) -> Unit) {
-    Row(
-        modifier = Modifier.fillMaxWidth(),
-        horizontalArrangement = Arrangement.spacedBy(8.dp)
-    ) {
-        ProgressTab.entries.forEach { entry ->
-            val active = entry == selected
-            Box(
-                modifier = Modifier
-                    .weight(1f)
-                    .clip(RoundedCornerShape(12.dp))
-                    .background(
-                        if (active) Brush.verticalGradient(listOf(Color(0xFF5BB8FF), Color(0xFF2C7BD6)))
-                        else Brush.verticalGradient(listOf(Color(0xFFE9D6B4), Color(0xFFC9AE84)))
+            Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                PaperLabel("Questions answered right")
+                Row(verticalAlignment = Alignment.Bottom) {
+                    PaperValue(text = "${stats.questionsCorrect}", size = 26)
+                    GlyphText(
+                        text = " / ${stats.questionsAnswered}",
+                        color = PaperInk.Muted,
+                        fontFamily = FontFirst(),
+                        fontWeight = FontWeight.Black,
+                        fontSize = 16.sp,
+                        lineHeight = 22.sp
                     )
-                    .border(2.5.dp, if (active) Color(0xFF123A6B) else Color(0xFF6B4A24), RoundedCornerShape(12.dp))
-                    .clickable { onSelect(entry) }
-                    .padding(vertical = 9.dp),
-                contentAlignment = Alignment.Center
-            ) {
-                if (active) {
-                    OutlinedText(text = entry.label, size = 12.sp, color = Color.White, strokeWidth = 5f)
-                } else {
-                    Text(entry.label, color = Color(0xFF4A3218), fontFamily = FontFirst(), fontWeight = FontWeight.Black, fontSize = 12.sp, maxLines = 1)
+                }
+                Row(
+                    modifier = Modifier
+                        .padding(top = 2.dp)
+                        .clip(RoundedCornerShape(50))
+                        .background(Brush.verticalGradient(listOf(Color(0xFFF08A3A), Color(0xFFC8502A))))
+                        .border(1.dp, Color(0xFF8A3418), RoundedCornerShape(50))
+                        .padding(horizontal = 10.dp, vertical = 3.dp),
+                    horizontalArrangement = Arrangement.spacedBy(5.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    GlyphText("🔥", fontSize = 12.sp, lineHeight = 14.sp)
+                    GlyphText(
+                        text = "Best streak ${stats.bestAnswerStreak}",
+                        color = Color.White,
+                        fontFamily = FontFirst(),
+                        fontWeight = FontWeight.Black,
+                        fontSize = 11.sp,
+                        lineHeight = 13.sp
+                    )
                 }
             }
         }
@@ -250,12 +231,12 @@ private fun TabRow(selected: ProgressTab, onSelect: (ProgressTab) -> Unit) {
 @Composable
 private fun StatsTab(stats: GameStats) {
     Section(title = "Learning") {
-        TileGrid(
+        StatGrid(
             listOf(
-                Tile("✅", "${stats.questionsCorrect}", "Correct", Good),
-                Tile("❌", "${stats.questionsWrong}", "Wrong", Bad),
-                Tile("🎯", "${stats.accuracyPercent}%", "Accuracy", accentFor(stats.accuracy)),
-                Tile("🔥", "${stats.bestAnswerStreak}", "Best streak", Color(0xFFFF9A3C))
+                Stat("Correct", "${stats.questionsCorrect}", "✓", PaperInk.Good),
+                Stat("Wrong", "${stats.questionsWrong}", "✕", PaperInk.Bad),
+                Stat("Accuracy", "${stats.accuracyPercent}%", "%", accentFor(stats.accuracy)),
+                Stat("Best streak", "${stats.bestAnswerStreak}", "★", Color(0xFFE0782A))
             ),
             columns = 2
         )
@@ -272,29 +253,21 @@ private fun StatsTab(stats: GameStats) {
         Section(title = "Topics") {
             weakest?.let { (category, stat) ->
                 if (stat.accuracy < 0.5f) {
-                    Row(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .clip(RoundedCornerShape(10.dp))
-                            .background(Bad.copy(alpha = 0.15f))
-                            .border(1.5.dp, Bad.copy(alpha = 0.6f), RoundedCornerShape(10.dp))
-                            .padding(horizontal = 10.dp, vertical = 8.dp),
-                        horizontalArrangement = Arrangement.spacedBy(8.dp),
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        Text(category.icon(), fontSize = 18.sp)
-                        Text(
+                    PaperTile(modifier = Modifier.fillMaxWidth(), accent = PaperInk.Bad) {
+                        GlyphBadge(glyph = "!", color = PaperInk.Bad, size = 26.dp)
+                        GlyphText(
                             text = "Weakest topic: ${category.label}. A few more rounds will fix it!",
-                            color = Cream,
+                            color = PaperInk.Ink,
                             fontFamily = FontFirst(),
                             fontWeight = FontWeight.Bold,
-                            fontSize = 12.sp
+                            fontSize = 12.sp,
+                            lineHeight = 15.sp
                         )
                     }
                 }
             }
             categories.forEach { (category, stat) ->
-                CategoryBar(
+                CategoryRow(
                     icon = category.icon(),
                     label = category.label,
                     correct = stat.correct,
@@ -306,25 +279,25 @@ private fun StatsTab(stats: GameStats) {
     }
 
     Section(title = "Combat") {
-        TileGrid(
+        StatGrid(
             listOf(
-                Tile("⚔️", "${stats.battlesWon}", "Won"),
-                Tile("💀", "${stats.battlesLost}", "Lost"),
-                Tile("🌊", "${stats.bestEndlessWave}", "Endless best"),
-                Tile("👹", "${stats.bossesDefeated}", "Bosses"),
-                Tile("🏰", "${stats.dungeonsCleared}", "Dungeons"),
-                Tile("🧱", "${stats.totalWavesCleared}", "Waves")
+                Stat("Won", "${stats.battlesWon}"),
+                Stat("Lost", "${stats.battlesLost}"),
+                Stat("Endless best", "${stats.bestEndlessWave}"),
+                Stat("Bosses", "${stats.bossesDefeated}"),
+                Stat("Dungeons", "${stats.dungeonsCleared}"),
+                Stat("Waves", "${stats.totalWavesCleared}")
             ),
             columns = 3
         )
     }
 
     Section(title = "Wealth") {
-        TileGrid(
+        StatGrid(
             listOf(
-                Tile("💰", compact(stats.goldEarned), "Gold earned", GoldText),
-                Tile("⚒️", "${stats.itemsCrafted}", "Forged"),
-                Tile("🔮", "${stats.monstersSummoned}", "Summoned")
+                Stat("Gold earned", compact(stats.goldEarned)),
+                Stat("Upgrades", "${stats.itemsCrafted}"),
+                Stat("Summoned", "${stats.monstersSummoned}")
             ),
             columns = 3
         )
@@ -339,27 +312,23 @@ private fun compact(value: Long): String = when {
 
 private fun compact(value: Int): String = compact(value.toLong())
 
-private data class Tile(val icon: String, val value: String, val label: String, val color: Color = Color.White)
+/** [glyph] + [color] = kafelek z kolkiem jak na karcie atrybutow; bez nich - sama liczba. */
+private data class Stat(val label: String, val value: String, val glyph: String? = null, val color: Color? = null)
 
 @Composable
-private fun TileGrid(tiles: List<Tile>, columns: Int) {
+private fun StatGrid(stats: List<Stat>, columns: Int) {
     Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-        tiles.chunked(columns).forEach { row ->
+        stats.chunked(columns).forEach { row ->
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                row.forEach { tile ->
-                    Column(
-                        modifier = Modifier
-                            .weight(1f)
-                            .clip(RoundedCornerShape(12.dp))
-                            .background(Brush.verticalGradient(listOf(Color(0xFF2A1E14), Color(0xFF140E09))))
-                            .border(2.dp, Outline, RoundedCornerShape(12.dp))
-                            .padding(vertical = 10.dp),
-                        horizontalAlignment = Alignment.CenterHorizontally,
-                        verticalArrangement = Arrangement.spacedBy(2.dp)
-                    ) {
-                        Text(tile.icon, fontSize = 18.sp)
-                        OutlinedText(text = tile.value, size = 20.sp, color = tile.color, maxLines = 1)
-                        Text(tile.label.uppercase(), color = Muted, fontFamily = FontFirst(), fontWeight = FontWeight.Bold, fontSize = 9.sp, maxLines = 1)
+                row.forEach { stat ->
+                    PaperTile(modifier = Modifier.weight(1f)) {
+                        if (stat.glyph != null && stat.color != null) {
+                            GlyphBadge(glyph = stat.glyph, color = stat.color, size = 32.dp)
+                        }
+                        Column {
+                            PaperLabel(stat.label)
+                            PaperValue(text = stat.value, color = stat.color?.takeIf { stat.glyph == "%" } ?: PaperInk.Ink)
+                        }
                     }
                 }
                 repeat(columns - row.size) { Box(modifier = Modifier.weight(1f)) }
@@ -369,11 +338,11 @@ private fun TileGrid(tiles: List<Tile>, columns: Int) {
 }
 
 /**
- * Pasek celnosci jednej kategorii. Kolor jest informacja, nie ozdoba: ponizej 50% robi sie czerwony,
+ * Celnosc jednej kategorii. Kolor jest informacja, nie ozdoba: ponizej 50% robi sie czerwony,
  * bo to jest wlasnie ta kategoria, ktora trzeba powtorzyc.
  */
 @Composable
-private fun CategoryBar(icon: String, label: String, correct: Int, answered: Int, accuracy: Float) {
+private fun CategoryRow(icon: String, label: String, correct: Int, answered: Int, accuracy: Float) {
     val color = accentFor(accuracy)
     Row(
         modifier = Modifier.fillMaxWidth(),
@@ -382,26 +351,43 @@ private fun CategoryBar(icon: String, label: String, correct: Int, answered: Int
     ) {
         Box(
             modifier = Modifier
-                .size(36.dp)
-                .clip(RoundedCornerShape(10.dp))
-                .background(color.copy(alpha = 0.2f))
-                .border(2.dp, color.copy(alpha = 0.8f), RoundedCornerShape(10.dp)),
+                .size(34.dp)
+                .clip(RoundedCornerShape(9.dp))
+                .background(ParchmentPalette.Card)
+                .border(1.dp, ParchmentPalette.CardEdge, RoundedCornerShape(9.dp)),
             contentAlignment = Alignment.Center
         ) {
-            Text(icon, fontSize = 18.sp)
+            GlyphText(icon, fontSize = 17.sp, lineHeight = 19.sp)
         }
         Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
-            Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-                Text(label, color = Cream, fontFamily = FontFirst(), fontWeight = FontWeight.Black, fontSize = 14.sp)
-                Text(
-                    text = "$correct/$answered  ·  ${(accuracy * 100).toInt()}%",
+            Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
+                GlyphText(
+                    text = label,
+                    color = PaperInk.Ink,
+                    fontFamily = FontFirst(),
+                    fontWeight = FontWeight.Black,
+                    fontSize = 13.sp,
+                    lineHeight = 15.sp,
+                    modifier = Modifier.weight(1f)
+                )
+                GlyphText(
+                    text = "$correct/$answered  ",
+                    color = PaperInk.Muted,
+                    fontFamily = FontFirst(),
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 11.sp,
+                    lineHeight = 13.sp
+                )
+                GlyphText(
+                    text = "${(accuracy * 100).toInt()}%",
                     color = color,
                     fontFamily = FontFirst(),
                     fontWeight = FontWeight.Black,
-                    fontSize = 12.sp
+                    fontSize = 13.sp,
+                    lineHeight = 15.sp
                 )
             }
-            TownProgressBar(progress = accuracy, fill = color, height = 14.dp)
+            GrooveBar(progress = accuracy, fill = color, height = 9.dp)
         }
     }
 }
@@ -427,6 +413,12 @@ private fun QuizCategory.icon(): String = when (this) {
 
 // ---------------------------------------------------------- Osiagniecia
 
+private fun AchievementTier.color(): Color = when (this) {
+    AchievementTier.Bronze -> Color(0xFFB0703A)
+    AchievementTier.Silver -> Color(0xFF8FA8C4)
+    AchievementTier.Gold -> PaperInk.Gold
+}
+
 @Composable
 private fun AchievementsTab(
     stats: GameStats,
@@ -439,13 +431,16 @@ private fun AchievementsTab(
 
     Section(title = "Unlocked") {
         Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-            Text("🏆", fontSize = 34.sp)
+            GlyphBadge(glyph = "★", color = PaperInk.Gold, size = 44.dp)
             Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(6.dp)) {
-                OutlinedText(text = "$unlocked / $total", size = 22.sp, color = GoldText)
-                TownProgressBar(
+                Row(verticalAlignment = Alignment.Bottom) {
+                    PaperValue(text = "$unlocked", size = 22)
+                    GlyphText(" / $total", color = PaperInk.Muted, fontFamily = FontFirst(), fontWeight = FontWeight.Black, fontSize = 14.sp, lineHeight = 20.sp)
+                }
+                GrooveBar(
                     progress = unlocked.toFloat() / total.coerceAtLeast(1),
-                    fill = GoldText,
-                    height = 18.dp,
+                    fill = PaperInk.Gold,
+                    height = 16.dp,
                     label = "${(unlocked * 100 / total.coerceAtLeast(1))}%"
                 )
             }
@@ -453,18 +448,16 @@ private fun AchievementsTab(
         // Nieodebrane zloto stoi NA GORZE listy - inaczej gracz musialby przewinac caly ekran,
         // zeby w ogole zauwazyc, ze cos mu sie nalezy.
         if (pendingGold > 0) {
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .clip(RoundedCornerShape(10.dp))
-                    .background(Brush.horizontalGradient(listOf(Color(0xFF6B4A0E), Color(0xFF3A2808))))
-                    .border(2.dp, GoldText, RoundedCornerShape(10.dp))
-                    .padding(horizontal = 12.dp, vertical = 8.dp),
-                horizontalArrangement = Arrangement.spacedBy(8.dp),
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Text("💰", fontSize = 18.sp)
-                OutlinedText(text = "$pendingGold gold waiting to be claimed!", size = 13.sp, color = GoldText, strokeWidth = 4f)
+            PaperTile(modifier = Modifier.fillMaxWidth(), accent = PaperInk.Gold) {
+                GlyphText("💰", fontSize = 18.sp, lineHeight = 20.sp)
+                GlyphText(
+                    text = "$pendingGold gold waiting to be claimed!",
+                    color = PaperInk.Ink,
+                    fontFamily = FontFirst(),
+                    fontWeight = FontWeight.Black,
+                    fontSize = 13.sp,
+                    lineHeight = 15.sp
+                )
             }
         }
     }
@@ -496,58 +489,39 @@ private fun AchievementRow(
 ) {
     val unlocked = achievement.isUnlocked(stats)
     val claimable = unlocked && !claimed
-    val fraction = achievement.fraction(stats)
-    val tierColor = when (achievement.tier) {
-        AchievementTier.Bronze -> Color(0xFFCD8A4E)
-        AchievementTier.Silver -> Color(0xFFC9D4DC)
-        AchievementTier.Gold -> GoldText
-    }
+    val tier = achievement.tier.color()
 
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clip(RoundedCornerShape(12.dp))
-            .background(
-                if (claimable) Brush.horizontalGradient(listOf(Color(0xFF3F2E0E), Color(0xFF1E150B)))
-                else Brush.horizontalGradient(listOf(Color(0xFF241A12), Color(0xFF17100A)))
-            )
-            .border(2.dp, if (unlocked) tierColor else Outline, RoundedCornerShape(12.dp))
-            .padding(horizontal = 10.dp, vertical = 10.dp),
-        horizontalArrangement = Arrangement.spacedBy(10.dp),
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        Box(
-            modifier = Modifier
-                .size(42.dp)
-                .clip(CircleShape)
-                .background(
-                    if (unlocked) Brush.radialGradient(listOf(tierColor, tierColor.copy(alpha = 0.5f)))
-                    else Brush.radialGradient(listOf(Color(0xFF3A3028), Color(0xFF1E1812)))
-                )
-                .border(2.5.dp, Outline, CircleShape),
-            contentAlignment = Alignment.Center
-        ) {
-            Text(text = if (unlocked) "🏅" else "🔒", fontSize = 20.sp)
-        }
+    PaperTile(modifier = Modifier.fillMaxWidth(), accent = if (claimable) PaperInk.Good else null) {
+        // Medal w kolorze stopnia; zamkniete sa szare, zeby od razu bylo widac, co juz masz.
+        GlyphBadge(glyph = "★", color = if (unlocked) tier else Color(0xFFC7B89E), size = 38.dp)
         Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(3.dp)) {
-            Text(
+            GlyphText(
                 text = achievement.title,
-                color = if (unlocked) Cream else Color(0xFFC8B89A),
+                color = if (unlocked) PaperInk.Ink else PaperInk.Muted,
                 fontFamily = FontFirst(),
                 fontWeight = FontWeight.Black,
-                fontSize = 14.sp
+                fontSize = 13.sp,
+                lineHeight = 15.sp,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis
             )
-            Text(text = achievement.description, color = Muted, fontFamily = FontFirst(), fontSize = 11.sp)
+            GlyphText(
+                text = achievement.description,
+                color = PaperInk.Muted,
+                fontFamily = FontFirst(),
+                fontSize = 11.sp,
+                lineHeight = 13.sp
+            )
             achievement.jewel?.takeIf { !claimed }?.let { jewel ->
                 Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(4.dp)) {
-                    JewelIcon(jewel = jewel, size = 18.dp)
-                    Text(text = jewel.name, color = Color(jewel.type.colorHex), fontFamily = FontFirst(), fontWeight = FontWeight.Bold, fontSize = 11.sp)
+                    JewelIcon(jewel = jewel, size = 16.dp)
+                    GlyphText(text = jewel.name, color = Color(jewel.type.colorHex), fontFamily = FontFirst(), fontWeight = FontWeight.Bold, fontSize = 11.sp, lineHeight = 13.sp)
                 }
             }
             if (!unlocked) {
-                TownProgressBar(
-                    progress = fraction,
-                    fill = tierColor,
+                GrooveBar(
+                    progress = achievement.fraction(stats),
+                    fill = tier,
                     height = 16.dp,
                     label = "${achievement.progress(stats)}/${achievement.target}"
                 )
@@ -555,20 +529,17 @@ private fun AchievementRow(
         }
         // Prawa krawedz wiersza ma trzy stany: postep -> przycisk ODBIERZ -> ptaszek.
         when {
-            claimable -> Column(
-                modifier = Modifier
-                    .clip(RoundedCornerShape(10.dp))
-                    .background(Brush.verticalGradient(listOf(Color(0xFF8BE05A), Color(0xFF3F9E2B))))
-                    .border(2.dp, Outline, RoundedCornerShape(10.dp))
-                    .clickable(onClick = onClaim)
-                    .padding(horizontal = 10.dp, vertical = 5.dp),
-                horizontalAlignment = Alignment.CenterHorizontally
-            ) {
-                OutlinedText(text = "CLAIM", size = 12.sp, color = Color.White, strokeWidth = 4f)
-                OutlinedText(text = "💰${achievement.reward} 💎${achievement.gems}", size = 11.sp, color = GoldText, strokeWidth = 4f)
-                achievement.jewel?.let { JewelIcon(jewel = it, size = 26.dp) }
+            claimable -> ChunkyButton(text = "CLAIM", color = Color(0xFF4FAE3A), onClick = onClaim) {
+                GlyphText(
+                    text = "💰${achievement.reward} 💎${achievement.gems}",
+                    color = Color.White,
+                    fontFamily = FontFirst(),
+                    fontWeight = FontWeight.Black,
+                    fontSize = 10.sp,
+                    lineHeight = 12.sp
+                )
             }
-            unlocked -> Text("✓", color = Good, fontWeight = FontWeight.Black, fontSize = 20.sp)
+            unlocked -> GlyphBadge(glyph = "✓", color = PaperInk.Good, size = 26.dp)
         }
     }
 }
@@ -589,15 +560,16 @@ private fun currentTopicSteps(topicAchievements: List<Achievement>, claimed: Set
 private fun JewelsTab(pouch: Map<String, Int>, onCombine: (String) -> Unit) {
     val owned = Jewels.all.filter { (pouch[it.id] ?: 0) > 0 }
     Section(title = "Jewel pouch") {
-        Text(
+        GlyphText(
             text = "Jewels come from achievements. Set them into sockets on Uncommon or better gear. " +
                 "Combine ${Jewels.COMBINE_COUNT} of the same jewel into a better cut.",
-            color = Muted,
+            color = PaperInk.Muted,
             fontFamily = FontFirst(),
-            fontSize = 11.sp
+            fontSize = 11.sp,
+            lineHeight = 14.sp
         )
         if (owned.isEmpty()) {
-            Text("Your pouch is empty. Claim achievements to earn jewels.", color = Cream, fontFamily = FontFirst(), fontSize = 13.sp)
+            GlyphText("Your pouch is empty. Claim achievements to earn jewels.", color = PaperInk.Ink, fontFamily = FontFirst(), fontWeight = FontWeight.Bold, fontSize = 13.sp)
         }
         owned.forEach { jewel ->
             val count = pouch[jewel.id] ?: 0
@@ -606,18 +578,7 @@ private fun JewelsTab(pouch: Map<String, Int>, onCombine: (String) -> Unit) {
                 jewel = jewel,
                 count = count,
                 trailing = if (canCombine) {
-                    {
-                        Box(
-                            modifier = Modifier
-                                .clip(RoundedCornerShape(10.dp))
-                                .background(Brush.verticalGradient(listOf(Color(0xFFB98CFF), Color(0xFF6B3FC4))))
-                                .border(2.dp, Outline, RoundedCornerShape(10.dp))
-                                .clickable { onCombine(jewel.id) }
-                                .padding(horizontal = 8.dp, vertical = 6.dp)
-                        ) {
-                            OutlinedText(text = "COMBINE", size = 11.sp, color = Color.White, strokeWidth = 4f)
-                        }
-                    }
+                    { ChunkyButton(text = "COMBINE", color = PaperInk.Purple, textSize = 11, onClick = { onCombine(jewel.id) }) }
                 } else null
             )
         }
@@ -626,13 +587,8 @@ private fun JewelsTab(pouch: Map<String, Int>, onCombine: (String) -> Unit) {
 
 @Composable
 private fun Section(title: String, content: @Composable () -> Unit) {
-    TownPanel(modifier = Modifier.fillMaxWidth()) {
-        Column(
-            modifier = Modifier.fillMaxWidth().padding(14.dp),
-            verticalArrangement = Arrangement.spacedBy(10.dp)
-        ) {
-            OutlinedText(text = title, size = 17.sp, color = GoldText, strokeWidth = 5f)
-            content()
-        }
+    PaperCard {
+        PaperTitle(title)
+        content()
     }
 }

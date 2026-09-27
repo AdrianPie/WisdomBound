@@ -6,6 +6,16 @@ import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.layout.BoxWithConstraints
+import androidx.compose.foundation.layout.offset
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.graphicsLayer
+import com.lernhero.domain.monster.Element
+import com.lernhero.game.character.ElementEmblem
+import com.lernhero.home.ui.darken
+import com.lernhero.shared.theme.StrokedText
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -35,8 +45,6 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.lernhero.domain.monster.CompanionPower
@@ -163,29 +171,62 @@ fun PartySheet(
 
         SheetSectionLabel("Reserve")
 
-        FlowRow(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.spacedBy(8.dp),
-            verticalArrangement = Arrangement.spacedBy(8.dp)
-        ) {
-            reserve.forEach { card ->
-                ReserveTile(
-                    card = card,
-                    level = levelOf(card.id),
-                    stars = starsOf(card.id),
-                    onClick = {
-                        // Wstawiamy w zaznaczone miejsce, a potem przesuwamy zaznaczenie na
-                        // kolejne wolne - kompletowanie skladu ma byc ciagiem tapniec, a nie
-                        // seria powrotow do gornego rzedu.
-                        if (PartySlots.isUnlocked(target, heroLevel)) {
-                            onPlace(card.id, target)
-                            val next = party.toMutableList().also { it[target] = card }
-                            target = firstFreeSlot(next, heroLevel) ?: target
-                        }
+        // Filtr zywiolow jak w Idle Heroes - przy kilkudziesieciu kompanach szuka sie po kolorze.
+        var elementFilter by remember { mutableStateOf<Element?>(null) }
+        val elements = Element.entries
+        run {
+            Row(horizontalArrangement = Arrangement.spacedBy(6.dp), verticalAlignment = Alignment.CenterVertically) {
+                FilterChip(selected = elementFilter == null, onClick = { elementFilter = null }) {
+                    Text("ALL", color = SheetCream, fontFamily = FontFirst(), fontWeight = FontWeight.Black, fontSize = 10.sp)
+                }
+                elements.forEach { e ->
+                    FilterChip(selected = elementFilter == e, onClick = { elementFilter = if (elementFilter == e) null else e }) {
+                        ElementEmblem(element = e, size = 46.dp)
                     }
-                )
+                }
             }
-            SummonTile(ready = freeSummonReady, onClick = onSummon)
+        }
+
+        // Najsilniejsi na poczatku - to ich gracz zwykle szuka, kompletujac sklad.
+        val shown = remember(reserve, elementFilter) {
+            reserve
+                .filter { elementFilter == null || it.element == elementFilter }
+                .sortedByDescending { CompanionPower.hpAt(it, starsOf(it.id), levelOf(it.id)) + CompanionPower.attackAt(it, starsOf(it.id), levelOf(it.id)) * 4 }
+        }
+        BoxWithConstraints(modifier = Modifier.fillMaxWidth()) {
+            val gap = 6.dp
+            // -0.5dp: zaokraglenia pikseli potrafily zepchnac piaty kafel do nastepnego rzedu.
+            val tile = (maxWidth - gap * (RESERVE_COLUMNS - 1)) / RESERVE_COLUMNS - 0.5.dp
+            // STALA wysokosc siatki (RESERVE_ROWS rzedow) z przewijaniem w srodku - okno nie moze
+            // rosnac ani kurczyc sie w zaleznosci od tego, ilu kompanow jest w rezerwie/filtrze.
+            FlowRow(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(tile * RESERVE_ROWS + gap * (RESERVE_ROWS - 1))
+                    .verticalScroll(rememberScrollState()),
+                horizontalArrangement = Arrangement.spacedBy(gap),
+                verticalArrangement = Arrangement.spacedBy(gap)
+            ) {
+                shown.forEach { card ->
+                    CompanionAvatar(
+                        card = card,
+                        level = levelOf(card.id),
+                        stars = starsOf(card.id),
+                        modifier = Modifier.width(tile),
+                        onClick = {
+                            // Wstawiamy w zaznaczone miejsce, a potem przesuwamy zaznaczenie na
+                            // kolejne wolne - kompletowanie skladu ma byc ciagiem tapniec, a nie
+                            // seria powrotow do gornego rzedu.
+                            if (PartySlots.isUnlocked(target, heroLevel)) {
+                                onPlace(card.id, target)
+                                val next = party.toMutableList().also { it[target] = card }
+                                target = firstFreeSlot(next, heroLevel) ?: target
+                            }
+                        }
+                    )
+                }
+                SummonTile(ready = freeSummonReady, onClick = onSummon, modifier = Modifier.width(tile))
+            }
         }
 
         SheetHint(
@@ -231,9 +272,31 @@ private fun PartySlotTile(
         label = "slotEdgeWidth"
     )
 
+    // Zajete miejsce to SAM portret - bez drugiej, przycinajacej ramki wokol niego. Zaznaczenie
+    // to zlota obwodka NA portrecie.
+    if (card != null) {
+        Box(modifier = modifier.aspectRatio(1f)) {
+            CompanionAvatar(
+                card = card,
+                level = level,
+                stars = null,
+                modifier = Modifier.fillMaxSize(),
+                onClick = onClick
+            )
+            if (selected) {
+                Box(
+                    modifier = Modifier
+                        .matchParentSize()
+                        .border(edgeWidth, edge, RoundedCornerShape(10.dp))
+                )
+            }
+        }
+        return
+    }
+
     Box(
         modifier = modifier
-            .aspectRatio(0.86f)
+            .aspectRatio(1f)
             .clip(RoundedCornerShape(12.dp))
             .then(
                 if (card != null) {
@@ -269,127 +332,128 @@ private fun PartySlotTile(
                 fontSize = 22.sp
             )
 
-            else -> {
-                Image(
-                    painter = painterResource(MonsterVisualPresets.forSpecies(card.spriteKey).drawable),
-                    contentDescription = card.name,
-                    contentScale = ContentScale.Fit,
-                    modifier = Modifier.fillMaxSize().padding(4.dp)
-                )
-                ElementDot(
-                    colorHex = card.element.colorHex,
-                    modifier = Modifier.align(Alignment.TopStart).padding(3.dp)
-                )
-                Text(
-                    text = "$level",
-                    color = Color.White,
-                    fontFamily = FontFirst(),
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 9.sp,
-                    modifier = Modifier
-                        .align(Alignment.BottomEnd)
-                        .padding(2.dp)
-                        .clip(RoundedCornerShape(4.dp))
-                        .background(SheetInk.copy(alpha = 0.85f))
-                        .padding(horizontal = 4.dp, vertical = 1.dp)
-                )
-            }
+            else -> CompanionAvatar(
+                card = card,
+                level = level,
+                stars = null,
+                modifier = Modifier.fillMaxSize(),
+                onClick = onClick
+            )
         }
     }
 }
 
 /**
- * Kafel rezerwy. Portret jest maly (nie karta kolekcji), bo to lista do SZYBKIEGO wyboru - pelna
- * karta z opisem zaklec nalezy do Centrum Przyzywania, gdzie sie kompanow oglada i rozwija.
+ * Portret kompana jak w Idle Heroes: kwadrat w zlocistej ramie, tlo w (przyciemnionym) kolorze
+ * rzadkosci, zywiol w lewym gornym rogu, poziom w prawym, gwiazdki na dole na portrecie. Bez
+ * nazwy i liczb - to lista do SZYBKIEGO wyboru, pelna karta jest w Centrum Przyzywania.
  */
 @Composable
-private fun ReserveTile(
+private fun CompanionAvatar(
     card: MonsterCard,
     level: Int,
-    stars: Int,
+    /** null = bez gwiazdek (miejsca druzyny, gdzie kafel jest za maly). */
+    stars: Int?,
+    modifier: Modifier = Modifier,
     onClick: () -> Unit
 ) {
-    Column(
-        modifier = Modifier
-            .width(RESERVE_TILE)
-            .clip(RoundedCornerShape(12.dp))
-            .background(RarityPalette.cardBackground(card.rarity))
-            .border(1.5.dp, RarityPalette.frame(card.rarity), RoundedCornerShape(12.dp))
-            .clickable(onClick = onClick)
-            .padding(5.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(3.dp)
-    ) {
+    val fill = RarityPalette.frame(card.rarity)
+    BoxWithConstraints(modifier = modifier.aspectRatio(1f)) {
+        val s = maxWidth
+        val corner = s * 0.14f
+        val outer = RoundedCornerShape(corner)
+        val inner = RoundedCornerShape(corner * 0.6f)
         Box(
             modifier = Modifier
-                .fillMaxWidth()
-                .height(50.dp)
-                .clip(RoundedCornerShape(8.dp))
-                .background(SheetInk),
+                .matchParentSize()
+                .clip(outer)
+                .background(Brush.verticalGradient(listOf(Color(0xFFFAEACB), Color(0xFFE3C390), Color(0xFFC39A60))))
+                .border(1.dp, AvatarEdge, outer)
+                .padding(s * 0.045f)
+                .clip(inner)
+                .background(Brush.verticalGradient(listOf(fill.darken(0.25f), fill.darken(0.6f))))
+                .border(1.dp, fill.darken(0.65f), inner)
+                .clickable(onClick = onClick),
             contentAlignment = Alignment.BottomCenter
         ) {
             Image(
                 painter = painterResource(MonsterVisualPresets.forSpecies(card.spriteKey).drawable),
                 contentDescription = card.name,
                 contentScale = ContentScale.Fit,
-                modifier = Modifier.fillMaxWidth(0.78f).padding(bottom = 2.dp)
-            )
-            ElementDot(
-                colorHex = card.element.colorHex,
-                modifier = Modifier.align(Alignment.TopStart).padding(3.dp)
-            )
-            Text(
-                text = "LV$level",
-                color = SheetGold,
-                fontFamily = FontFirst(),
-                fontWeight = FontWeight.Bold,
-                fontSize = 8.sp,
                 modifier = Modifier
-                    .align(Alignment.TopEnd)
-                    .padding(2.dp)
-                    .clip(RoundedCornerShape(3.dp))
-                    .background(SheetInk.copy(alpha = 0.85f))
-                    .padding(horizontal = 3.dp, vertical = 1.dp)
+                    .fillMaxSize()
+                    .graphicsLayer {
+                                                // Minimalne przyblizenie - potwor ma sie miescic caly, a nie byc uciety.
+                        scaleX = 1.04f
+                        scaleY = 1.04f
+                        translationY = size.height * 0.02f
+                    }
             )
-        }
-
-        Text(
-            text = card.name,
-            color = SheetCream,
-            fontFamily = FontFirst(),
-            fontWeight = FontWeight.Bold,
-            fontSize = 9.sp,
-            maxLines = 1,
-            overflow = TextOverflow.Ellipsis,
-            textAlign = TextAlign.Center
-        )
-        Row(horizontalArrangement = Arrangement.spacedBy(1.dp)) {
-            (1..MonsterStars.MAX_STARS).forEach { index ->
-                Text(
-                    text = "★",
-                    color = if (index <= stars) SheetGold else Color(0xFF3A2E22),
-                    fontSize = 7.sp
-                )
+            if (stars != null) {
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(s * 0.28f)
+                        .background(Brush.verticalGradient(listOf(Color.Transparent, Color.Black.copy(alpha = 0.65f)))),
+                    contentAlignment = Alignment.BottomCenter
+                ) {
+                    Row(
+                        modifier = Modifier.padding(bottom = s * 0.02f),
+                        horizontalArrangement = Arrangement.spacedBy((-1).dp)
+                    ) {
+                        repeat(stars.coerceIn(0, MonsterStars.MAX_STARS)) {
+                            StrokedText(
+                                text = "★",
+                                size = (s.value * 0.15f).sp,
+                                color = Color(0xFFFFD34D),
+                                outline = AvatarEdge,
+                                strokeWidth = 2.5f,
+                                tight = true
+                            )
+                        }
+                    }
+                }
             }
         }
-        Row(horizontalArrangement = Arrangement.spacedBy(5.dp)) {
-            Text(
-                text = "${CompanionPower.hpAt(card, stars, level)}",
-                color = SheetRed,
-                fontFamily = FontFirst(),
-                fontWeight = FontWeight.Bold,
-                fontSize = 9.sp
-            )
-            Text(
-                text = "${CompanionPower.attackAt(card, stars, level)}",
-                color = Color(0xFFF97316),
-                fontFamily = FontFirst(),
-                fontWeight = FontWeight.Bold,
-                fontSize = 9.sp
-            )
-        }
+        ElementEmblem(
+            element = card.element,
+            size = s * 0.27f,
+            modifier = Modifier.align(Alignment.TopStart).offset(x = -(s * 0.03f), y = -(s * 0.03f))
+        )
+        StrokedText(
+            text = "$level",
+            size = (s.value * 0.17f).sp,
+            color = Color.White,
+            outline = AvatarEdge,
+            strokeWidth = 4f,
+            tight = true,
+            modifier = Modifier.align(Alignment.TopEnd).padding(top = s * 0.07f, end = s * 0.08f)
+        )
     }
 }
+
+/** Filtr zywiolu nad rezerwa: kolko z emblematem, zlota obwodka na wybranym. */
+@Composable
+private fun FilterChip(selected: Boolean, onClick: () -> Unit, content: @Composable () -> Unit) {
+    Box(
+        modifier = Modifier
+            .size(40.dp)
+            // Tlo z ksztaltem, ale BEZ clip - emblemat ma wypelniac kolko i lekko z niego wystawac.
+            .background(if (selected) SheetInk else SheetInk.copy(alpha = 0.55f), CircleShape)
+            .border(if (selected) 2.dp else 1.dp, if (selected) SheetGold else SheetFrameDim, CircleShape)
+            .clickable(onClick = onClick),
+        contentAlignment = Alignment.Center
+    ) {
+        content()
+    }
+}
+
+private val AvatarEdge = Color(0xFF5E3F1F)
+
+private const val RESERVE_COLUMNS = 5
+
+/** Ile rzedow rezerwy widac naraz - reszta sie przewija. */
+private const val RESERVE_ROWS = 4
 
 /**
  * Wejscie do przyzywania - ostatni kafel rezerwy, a nie osobny przycisk gdzies pod lista.
@@ -399,32 +463,26 @@ private fun ReserveTile(
  * isc tam natychmiast.
  */
 @Composable
-private fun SummonTile(ready: Boolean, onClick: () -> Unit) {
-    Box(contentAlignment = Alignment.TopEnd) {
+private fun SummonTile(ready: Boolean, onClick: () -> Unit, modifier: Modifier = Modifier) {
+    Box(modifier = modifier.aspectRatio(1f), contentAlignment = Alignment.TopEnd) {
         Column(
             modifier = Modifier
-                .width(RESERVE_TILE)
-                .clip(RoundedCornerShape(12.dp))
+                .fillMaxSize()
+                .clip(RoundedCornerShape(10.dp))
                 .background(SheetInk)
-                .border(1.5.dp, SheetFrame.copy(alpha = 0.7f), RoundedCornerShape(12.dp))
-                .clickable(onClick = onClick)
-                .padding(vertical = 12.dp),
+                .border(1.5.dp, SheetFrame.copy(alpha = 0.7f), RoundedCornerShape(10.dp))
+                .clickable(onClick = onClick),
             horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.spacedBy(4.dp)
+            verticalArrangement = Arrangement.Center
         ) {
-            Text(text = "✨", fontSize = 24.sp)
+            Text(text = "✨", fontSize = 20.sp, lineHeight = 22.sp)
             Text(
-                text = "Summon",
-                color = SheetGold,
+                text = if (ready) "Free" else "Summon",
+                color = if (ready) SheetGreen else SheetGold,
                 fontFamily = FontFirst(),
                 fontWeight = FontWeight.Bold,
-                fontSize = 10.sp
-            )
-            Text(
-                text = if (ready) "Free pull" else "Center",
-                color = if (ready) SheetGreen else SheetMuted,
-                fontFamily = FontFirst(),
-                fontSize = 9.sp
+                fontSize = 9.sp,
+                lineHeight = 10.sp
             )
         }
         if (ready) {
@@ -437,18 +495,6 @@ private fun SummonTile(ready: Boolean, onClick: () -> Unit) {
             )
         }
     }
-}
-
-/** Zywiol jako kropka, nie napis - w tej skali i tak nikt by go nie przeczytal. */
-@Composable
-private fun ElementDot(colorHex: Long, modifier: Modifier = Modifier) {
-    Box(
-        modifier = modifier
-            .size(9.dp)
-            .clip(CircleShape)
-            .background(Color(colorHex))
-            .border(1.dp, Color(0x66000000), CircleShape)
-    )
 }
 
 @Composable
@@ -487,4 +533,3 @@ private fun SmallAction(label: String, onClick: () -> Unit) {
 }
 
 /** Bok kafla rezerwy - cztery mieszcza sie w rzedzie na typowym telefonie. */
-private val RESERVE_TILE = 78.dp

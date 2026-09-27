@@ -1,6 +1,8 @@
 package com.lernhero.home.city
 
+import com.lernhero.shared.theme.GlyphText
 import androidx.compose.animation.core.FastOutSlowInEasing
+import com.lernhero.home.ui.ItemArtImage
 import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.RepeatMode
 import androidx.compose.animation.core.animateFloat
@@ -49,9 +51,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.lernhero.domain.craft.CraftCost
-import com.lernhero.domain.craft.Forge
 import com.lernhero.domain.craft.ForgeTrack
-import com.lernhero.domain.craft.ItemTier
 import com.lernhero.domain.craft.ItemUpgrades
 import com.lernhero.domain.item.Inventory
 import com.lernhero.domain.item.ItemCategory
@@ -63,6 +63,8 @@ import com.lernhero.domain.item.catalog.MonsterGear
 import com.lernhero.domain.monster.Element
 import com.lernhero.home.player.PlayerViewModel
 import com.lernhero.home.ui.ItemInfoBlock
+import com.lernhero.home.ui.ItemIcon
+import androidx.compose.foundation.layout.BoxWithConstraints
 import com.lernhero.home.ui.OutlinedText
 import com.lernhero.home.ui.RarityPalette
 import com.lernhero.home.ui.badgeColor
@@ -76,8 +78,8 @@ private val Bad = Color(0xFFFF6B5B)
 private val Good = Color(0xFF7BE06A)
 
 /**
- * Kuznia. Dwie NIEZALEZNE osie wyboru: tryb ([ForgeMode] - kuj/ulepszaj) i tor ([ForgeTrack] -
- * dla bohatera/dla kompanow). Obie stoja w jednym rzedzie na gorze.
+ * Kuznia - tylko ULEPSZANIE. Przedmiotow sie tu nie wykuwa: wypadaja ze skrzyn i bossow, a kuznia
+ * podnosi poziom konkretnych sztuk. Na gorze przelacznik toru ([ForgeTrack] - bohater/kompani).
  *
  * Uklad: warsztat wybranej rzeczy u gory (staly rozmiar), pod nim PRZEWIJANA siatka duzych
  * kafelkow. Wczesniej siatka byla stronicowana i sciskana do resztki ekranu, przez co kafelki
@@ -91,47 +93,26 @@ fun ForgeScreen(
 ) {
     val state by playerViewModel.uiState.collectAsState()
 
-    var mode by remember { mutableStateOf(ForgeMode.Forge) }
     var track by remember { mutableStateOf(ForgeTrack.Hero) }
 
     val bag = if (track == ForgeTrack.Monster) state.monsterBag else state.heroBag
-    val allRecipes = remember(track) { Forge.recipesFor(track) }
 
-    // Forge pokazuje RECEPTURY (co da sie wykuc), a Upgrade - SZTUKI (co juz mam; ulepsza sie
-    // konkretny egzemplarz, nie typ).
-    val entries = remember(mode, allRecipes, bag, state.storyProgress) {
-        when (mode) {
-            ForgeMode.Forge -> allRecipes.sortedBy { ItemTier.of(it.item).ordinal }.map { recipe ->
-                val tier = ItemTier.of(recipe.item)
-                ForgeEntry(
-                    key = recipe.id,
-                    item = recipe.item,
-                    cost = recipe.cost,
-                    instance = null,
-                    level = ItemUpgrades.MIN_LEVEL,
-                    ownedCount = Inventory.countOf(bag, recipe.item.id),
-                    tier = tier,
-                    locked = !tier.isUnlocked(state.storyProgress)
-                )
-            }
-
-            ForgeMode.Upgrade -> bag.mapNotNull { instance ->
-                val item = instance.base() ?: return@mapNotNull null
-                ForgeEntry(
-                    key = instance.uid,
-                    item = item,
-                    cost = Forge.costFor(item),
-                    instance = instance,
-                    level = instance.level,
-                    ownedCount = Inventory.countOf(bag, item.id),
-                    // Ulepszac wolno zawsze - prog bramkuje WYKUWANIE, a nie to, co juz masz.
-                    tier = null,
-                    locked = false
-                )
-            }
+    // Kuznia juz nie wykuwa - przedmioty wypadaja ze skrzyn i bossow, a tu ulepsza sie konkretne
+    // SZTUKI z plecaka (dwie kopie tego samego miecza to dwa kafelki, kazdy z wlasnym poziomem).
+    val entries = remember(bag) {
+        bag.mapNotNull { instance ->
+            val item = instance.base() ?: return@mapNotNull null
+            ForgeEntry(
+                key = instance.uid,
+                item = item,
+                cost = ItemUpgrades.nextCost(item, instance.level) ?: CraftCost(),
+                instance = instance,
+                level = instance.level,
+                ownedCount = Inventory.countOf(bag, item.id)
+            )
         }
     }
-    var category by remember(track, mode) { mutableStateOf<ItemCategory?>(null) }
+    var category by remember(track) { mutableStateOf<ItemCategory?>(null) }
     val categories = remember(entries) {
         ItemCategory.entries.filter { cat -> entries.any { it.category == cat } }
     }
@@ -139,7 +120,7 @@ fun ForgeScreen(
         category?.let { cat -> entries.filter { it.category == cat } } ?: entries
     }
 
-    var selectedKey by remember(track, mode, category) { mutableStateOf(visible.firstOrNull()?.key) }
+    var selectedKey by remember(track, category) { mutableStateOf(visible.firstOrNull()?.key) }
     val entry = visible.firstOrNull { it.key == selectedKey } ?: visible.firstOrNull()
 
     TownScreenScaffold(
@@ -163,16 +144,23 @@ fun ForgeScreen(
                     horizontalArrangement = Arrangement.spacedBy(8.dp),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    ForgeMode.entries.forEach { m ->
-                        ChunkyTab(label = m.label, active = m == mode, modifier = Modifier.weight(1f)) { mode = m }
+                    Column(modifier = Modifier.weight(1f)) {
+                        OutlinedText(text = "Upgrade gear", size = 18.sp, color = Gold, strokeWidth = 5f)
+                        GlyphText(
+                            text = "New gear drops from chests and bosses.",
+                            color = Muted,
+                            fontFamily = FontFirst(),
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 11.sp
+                        )
                     }
                     TrackToggle(selected = track, onSelect = { track = it })
                 }
 
                 if (entry == null) {
                     TownPanel(modifier = Modifier.fillMaxWidth()) {
-                        Text(
-                            text = mode.emptyHint(track),
+                        GlyphText(
+                            text = "No ${track.label.lowercase()} gear yet - it drops from chests and bosses.",
                             color = Muted,
                             fontFamily = FontFirst(),
                             fontWeight = FontWeight.Bold,
@@ -181,18 +169,8 @@ fun ForgeScreen(
                             modifier = Modifier.fillMaxWidth().padding(24.dp)
                         )
                     }
-                } else when (mode) {
-                    ForgeMode.Forge -> Workbench(
-                        item = entry.item,
-                        cost = entry.cost,
-                        ownedCount = entry.ownedCount,
-                        resources = state.resources,
-                        money = state.money,
-                        lockedTier = entry.tier?.takeUnless { it.isUnlocked(state.storyProgress) },
-                        onForge = { playerViewModel.craftItem(entry.item, entry.cost) }
-                    )
-
-                    ForgeMode.Upgrade -> UpgradeBench(
+                } else {
+                    UpgradeBench(
                         item = entry.item,
                         level = entry.level,
                         resources = state.resources,
@@ -215,7 +193,7 @@ fun ForgeScreen(
 
             // Komunikat jako nakladka - element ukladu przesuwalby zawartosc po kazdym wykuciu.
             state.message?.let { message ->
-                Text(
+                GlyphText(
                     text = message,
                     color = Gold,
                     fontFamily = FontFirst(),
@@ -236,13 +214,9 @@ fun ForgeScreen(
 }
 
 /**
- * Jedna pozycja na tablicy kuzni - wspolny ksztalt dla obu trybow, zeby siatka i warsztat nie
- * musialy wiedziec, ktory tryb jest wlaczony.
- *
- * [instance] jest null w trybie Forge (jeszcze nie ma czego ulepszac - dopiero wykuwamy) i
- * niepuste w trybie Upgrade, gdzie kazdy kafelek to KONKRETNA sztuka z plecaka.
- * [key] to wtedy uid sztuki, a nie id receptury - dzieki temu dwie kopie tego samego pazura sa
- * dwoma osobnymi kafelkami, kazdy z wlasnym poziomem.
+ * Jedna pozycja na tablicy kuzni - KONKRETNA sztuka z plecaka. [key] to uid sztuki, dzieki temu
+ * dwie kopie tego samego pazura sa dwoma osobnymi kafelkami, kazdy z wlasnym poziomem.
+ * [cost] to koszt NASTEPNEGO poziomu (pusty na maksie).
  */
 private data class ForgeEntry(
     val key: String,
@@ -250,51 +224,14 @@ private data class ForgeEntry(
     val cost: CraftCost,
     val instance: ItemInstance?,
     val level: Int,
-    /** Ile sztuk tego typu gracz juz ma - warsztat pokazuje to zamiast "juz masz / nie masz". */
-    val ownedCount: Int,
-    /** Prog kuzni - null w trybie Upgrade, gdzie bramka nie obowiazuje. */
-    val tier: ItemTier?,
-    /** Czy prog jest jeszcze zamkniety. Zamkniete pozycje ZOSTAJA w katalogu - patrz [RecipeTile]. */
-    val locked: Boolean
+    /** Ile sztuk tego typu gracz juz ma. */
+    val ownedCount: Int
 ) {
     val category: ItemCategory get() = ItemCategory.of(item)
 }
 
-/**
- * Dwie czynnosci kuzni. Osobno od [ForgeTrack], bo to niezalezne pytania: "co robie" i "dla kogo".
- */
-private enum class ForgeMode(val label: String) {
-    Forge("Forge"),
-    Upgrade("Upgrade");
-
-    fun emptyHint(track: ForgeTrack): String = when (this) {
-        Forge -> "This tab has no recipes yet."
-        Upgrade -> "Nothing to upgrade yet - forge ${track.label.lowercase()} gear first."
-    }
-}
-
 /* ------------------------------------------- Gorny rzad ------------------------------------------ */
 
-@Composable
-private fun ChunkyTab(label: String, active: Boolean, modifier: Modifier = Modifier, onClick: () -> Unit) {
-    Box(
-        modifier = modifier
-            .height(42.dp)
-            .clip(RoundedCornerShape(12.dp))
-            .background(
-                if (active) Brush.verticalGradient(listOf(Color(0xFFFFC94A), Color(0xFFE0801C)))
-                else Brush.verticalGradient(listOf(Color(0xFF3A2A1C), Color(0xFF221810)))
-            )
-            .border(2.5.dp, Outline, RoundedCornerShape(12.dp))
-            .clickable(onClick = onClick),
-        contentAlignment = Alignment.Center
-    ) {
-        if (active) OutlinedText(text = label, size = 16.sp, color = Color.White, strokeWidth = 5f)
-        else Text(label, color = Muted, fontFamily = FontFirst(), fontWeight = FontWeight.Black, fontSize = 15.sp)
-    }
-}
-
-/** Dla kogo kujemy: bohater / kompani - dwa okragle przyciski w jednej kapsule. */
 @Composable
 private fun TrackToggle(selected: ForgeTrack, onSelect: (ForgeTrack) -> Unit) {
     Row(
@@ -318,53 +255,13 @@ private fun TrackToggle(selected: ForgeTrack, onSelect: (ForgeTrack) -> Unit) {
                     .clickable { onSelect(track) },
                 contentAlignment = Alignment.Center
             ) {
-                Text(text = track.icon, fontSize = 18.sp, modifier = Modifier.alpha(if (active) 1f else 0.5f))
+                GlyphText(text = track.icon, fontSize = 18.sp, modifier = Modifier.alpha(if (active) 1f else 0.5f))
             }
         }
     }
 }
 
 /* ------------------------------------------ Warsztat ------------------------------------------ */
-
-/**
- * Warsztat: po lewej wybrany przedmiot w obracajacym sie kregu, po prawej nazwa, rzadkosc,
- * opis/statystyki/zdolnosci; pod spodem koszt (ile mam / ile trzeba) i przycisk.
- */
-@Composable
-private fun Workbench(
-    item: Item,
-    cost: CraftCost,
-    ownedCount: Int,
-    resources: TownResources,
-    money: Int,
-    lockedTier: ItemTier?,
-    onForge: () -> Unit
-) {
-    val affordable = cost.canAfford(resources, money)
-    TownPanel(modifier = Modifier.fillMaxWidth()) {
-        Column(
-            modifier = Modifier.fillMaxWidth().padding(12.dp),
-            verticalArrangement = Arrangement.spacedBy(10.dp)
-        ) {
-            ItemHeader(item = item, active = affordable && lockedTier == null, badge = if (ownedCount > 0) "x$ownedCount" else null)
-            ItemInfoBlock(item = item, height = 52.dp)
-            CostRow(cost = cost, resources = resources, money = money)
-            TownActionButton(
-                text = if (lockedTier != null) "🔒 LOCKED" else "FORGE",
-                subtitle = when {
-                    lockedTier != null -> "${lockedTier.label} gear unlocks after ${lockedTier.requiredStages()} stages"
-                    !affordable && cost.iron > resources.iron -> "Not enough ore - it drops in dungeons"
-                    !affordable -> "Not enough materials"
-                    else -> null
-                },
-                primary = true,
-                enabled = affordable && lockedTier == null,
-                modifier = Modifier.fillMaxWidth(),
-                onClick = onForge
-            )
-        }
-    }
-}
 
 @Composable
 private fun ItemHeader(item: Item, active: Boolean, badge: String?, levelLine: String? = null) {
@@ -384,9 +281,9 @@ private fun ItemHeader(item: Item, active: Boolean, badge: String?, levelLine: S
                     .border(3.dp, frame, RoundedCornerShape(14.dp)),
                 contentAlignment = Alignment.Center
             ) {
-                Text(text = item.icon(), fontSize = 34.sp)
+                ItemArtImage(item = item, size = 54.dp)
                 badge?.let {
-                    Text(
+                    GlyphText(
                         text = it,
                         color = Color.White,
                         fontFamily = FontFirst(),
@@ -423,7 +320,7 @@ private fun Color.brighten(): Color = Color(
 
 @Composable
 private fun Chip(text: String, color: Color) {
-    Text(
+    GlyphText(
         text = text,
         color = Color.White,
         fontFamily = FontFirst(),
@@ -490,7 +387,7 @@ private fun ElementBadge(element: Element) {
         verticalAlignment = Alignment.CenterVertically
     ) {
         com.lernhero.game.character.ElementEmblem(element = element, size = 14.dp)
-        Text(text = element.label, color = Color.White, fontFamily = FontFirst(), fontWeight = FontWeight.Black, fontSize = 10.sp)
+        GlyphText(text = element.label, color = Color.White, fontFamily = FontFirst(), fontWeight = FontWeight.Black, fontSize = 10.sp)
     }
 }
 
@@ -523,8 +420,8 @@ private fun CostRow(cost: CraftCost, resources: TownResources, money: Int) {
                 horizontalArrangement = Arrangement.Center,
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Text(text = icon, fontSize = 15.sp)
-                Text(
+                GlyphText(text = icon, fontSize = 15.sp)
+                GlyphText(
                     text = " ${amount.compact()}",
                     color = if (enough) Color.White else Bad,
                     fontFamily = FontFirst(),
@@ -580,7 +477,7 @@ private fun UpgradeBench(
                 ) {
                     val statTypes = current.asMap().keys.toList()
                     if (statTypes.isEmpty()) {
-                        Text(
+                        GlyphText(
                             text = "This item has no stats to scale - only its effect.",
                             color = Muted,
                             fontFamily = FontFirst(),
@@ -599,11 +496,11 @@ private fun UpgradeBench(
                                 horizontalArrangement = Arrangement.SpaceBetween,
                                 verticalAlignment = Alignment.CenterVertically
                             ) {
-                                Text(stat.label(), color = Muted, fontFamily = FontFirst(), fontWeight = FontWeight.Bold, fontSize = 12.sp)
+                                GlyphText(stat.label(), color = Muted, fontFamily = FontFirst(), fontWeight = FontWeight.Bold, fontSize = 12.sp)
                                 Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-                                    Text(stat.format(current[stat]), color = Color.White, fontFamily = FontFirst(), fontWeight = FontWeight.Black, fontSize = 13.sp)
+                                    GlyphText(stat.format(current[stat]), color = Color.White, fontFamily = FontFirst(), fontWeight = FontWeight.Black, fontSize = 13.sp)
                                     if (!maxed) {
-                                        Text("→ ${stat.format(next[stat])}", color = Good, fontFamily = FontFirst(), fontWeight = FontWeight.Black, fontSize = 13.sp)
+                                        GlyphText("→ ${stat.format(next[stat])}", color = Good, fontFamily = FontFirst(), fontWeight = FontWeight.Black, fontSize = 13.sp)
                                     }
                                 }
                             }
@@ -725,7 +622,7 @@ private fun CategoryChip(label: String, active: Boolean, modifier: Modifier = Mo
         if (label == "ALL") {
             OutlinedText(text = label, size = 13.sp, color = if (active) Color.White else Muted, strokeWidth = 4f)
         } else {
-            Text(text = label, fontSize = 16.sp, modifier = Modifier.alpha(if (active) 1f else 0.6f))
+            GlyphText(text = label, fontSize = 16.sp, modifier = Modifier.alpha(if (active) 1f else 0.6f))
         }
     }
 }
@@ -739,7 +636,6 @@ private fun RecipeTile(
 ) {
     val item = entry.item
     val level = entry.level
-    val owned = entry.ownedCount > 0
     val frame = RarityPalette.frame(item.rarity)
     val element = MonsterGear.elementFor(item.id)
     val pulse by rememberInfiniteTransition(label = "tile").animateFloat(
@@ -748,63 +644,49 @@ private fun RecipeTile(
 
     Column(
         modifier = Modifier
-            .clickable(onClick = onClick)
-            // Nieosiagalne recepty gasna, ale zostaja klikalne - gracz ma prawo sprawdzic, ile brakuje.
-            .alpha(if (entry.locked) 0.5f else if (owned || affordable) 1f else 0.6f),
+            .clickable(onClick = onClick),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(3.dp)
     ) {
-        Box(
+        BoxWithConstraints(
             modifier = Modifier
                 .fillMaxWidth()
                 .aspectRatio(1f)
                 .graphicsLayer {
-                    val s = if (selected) 1f + 0.03f * pulse else 1f
+                    val s = if (selected) 1f + 0.04f * pulse else 1f
                     scaleX = s
                     scaleY = s
-                }
-                .clip(RoundedCornerShape(12.dp))
-                .background(RarityPalette.cardBackground(item.rarity))
-                .border(if (selected) 3.dp else 2.dp, if (selected) Gold else frame, RoundedCornerShape(12.dp)),
+                },
             contentAlignment = Alignment.Center
         ) {
-            Text(text = item.icon(), fontSize = 30.sp)
-            if (entry.locked) Text(text = "🔒", fontSize = 20.sp, modifier = Modifier.align(Alignment.BottomEnd).padding(3.dp))
-
-            Row(
-                modifier = Modifier.align(Alignment.TopStart).padding(3.dp),
-                horizontalArrangement = Arrangement.spacedBy(2.dp),
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                element?.let {
-                    Box(
-                        modifier = Modifier
-                            .size(12.dp)
-                            .clip(CircleShape)
-                            .background(it.badgeColor())
-                            .border(1.dp, Outline, CircleShape)
-                    )
-                }
-                if (level > ItemUpgrades.MIN_LEVEL) {
-                    OutlinedText(text = "+$level", size = 11.sp, color = Gold, strokeWidth = 4f)
-                }
-            }
-            if (owned) {
+            // Wybrany kafel: zlota poswiata za karta.
+            if (selected) {
                 Box(
                     modifier = Modifier
-                        .align(Alignment.TopEnd)
-                        .padding(3.dp)
-                        .size(16.dp)
+                        .matchParentSize()
+                        .clip(RoundedCornerShape(maxWidth * 0.18f))
+                        .background(Gold.copy(alpha = 0.35f * pulse))
+                )
+            }
+            ItemIcon(
+                item = item,
+                level = level,
+                size = maxWidth * 0.9f,
+                canUpgrade = affordable && !ItemUpgrades.isMaxed(level)
+            )
+            element?.let {
+                Box(
+                    modifier = Modifier
+                        .align(Alignment.TopStart)
+                        .padding(4.dp)
+                        .size(12.dp)
                         .clip(CircleShape)
-                        .background(Color(0xFF4ADE80))
-                        .border(1.5.dp, Outline, CircleShape),
-                    contentAlignment = Alignment.Center
-                ) {
-                    Text(text = "✓", color = Outline, fontSize = 10.sp, fontWeight = FontWeight.Black)
-                }
+                        .background(it.badgeColor())
+                        .border(1.dp, Outline, CircleShape)
+                )
             }
         }
-        Text(
+        GlyphText(
             text = item.name,
             color = if (selected) Gold else Color(0xFFEADFC8),
             fontFamily = FontFirst(),

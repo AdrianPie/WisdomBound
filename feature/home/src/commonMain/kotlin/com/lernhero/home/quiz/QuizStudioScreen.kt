@@ -52,16 +52,20 @@ import androidx.compose.ui.unit.sp
 import com.lernhero.domain.monetization.PremiumLimits
 import com.lernhero.domain.quiz.custom.CustomDeck
 import com.lernhero.domain.quiz.custom.DeckOrigin
-import com.lernhero.home.city.TownProgressBar
 import com.lernhero.home.navigation.bottomBarSpace
+import com.lernhero.home.ui.CountChip
+import com.lernhero.home.ui.GrooveBar
 import com.lernhero.home.ui.OutlinedText
+import com.lernhero.home.ui.PaperCard
+import com.lernhero.home.ui.PaperInk
+import com.lernhero.home.ui.ParchmentPalette
+import com.lernhero.home.ui.darkenBy
+import com.lernhero.home.ui.lightenBy
 import com.lernhero.shared.monetization.PremiumPaywall
 import com.lernhero.shared.monetization.SubscriptionService
 import com.lernhero.shared.theme.FontFirst
 import org.koin.compose.koinInject
 
-private val Outline = Color(0xFF120B05)
-private val Parchment = Color(0xFFF1DFB8)
 
 /**
  * Biblioteka Medrca - miejsce, w ktorym gracz robi material do nauki, zamiast tylko go zuzywac.
@@ -100,22 +104,21 @@ fun QuizStudioScreen(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.spacedBy(10.dp)
         ) {
-            CreateCard(
+            CreateButton(
                 icon = "🪶",
                 title = "Write",
                 subtitle = "Your questions,\nyour rules",
-                colors = listOf(Color(0xFF3C8FE0), Color(0xFF1E4F95)),
+                color = Color(0xFF3C82D0),
                 badge = null,
                 onClick = { onEditDeck(viewModel.newDeck(), false) },
                 modifier = Modifier.weight(1f)
             )
-            CreateCard(
+            CreateButton(
                 icon = "📜",
                 title = "AI Scroll",
                 subtitle = "Give a topic,\nget a deck",
-                colors = listOf(Color(0xFF9A4FD6), Color(0xFF4A1E86)),
-                badge = if (isPremium) null else "👑 PREMIUM",
-                sparkle = true,
+                color = Color(0xFF8A52CC),
+                badge = if (isPremium) null else "PREMIUM",
                 onClick = {
                     if (isPremium) onEditDeck(viewModel.newDeck(), true) else paywallOpen = true
                 },
@@ -125,20 +128,7 @@ fun QuizStudioScreen(
 
         Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
             OutlinedText(text = "Your Tomes", size = 20.sp, color = DeckGold, strokeWidth = 5f)
-            if (state.decks.isNotEmpty()) {
-                Text(
-                    text = "${state.decks.size}",
-                    color = Color.White,
-                    fontFamily = FontFirst(),
-                    fontWeight = FontWeight.Black,
-                    fontSize = 12.sp,
-                    modifier = Modifier
-                        .clip(RoundedCornerShape(50))
-                        .background(Color(0xE60C0806))
-                        .border(1.5.dp, Outline, RoundedCornerShape(50))
-                        .padding(horizontal = 8.dp, vertical = 2.dp)
-                )
-            }
+            if (state.decks.isNotEmpty()) CountChip("${state.decks.size}")
         }
 
         when {
@@ -155,147 +145,152 @@ fun QuizStudioScreen(
 }
 
 /**
- * Scena medrca. Grafika postaci/budynku jeszcze nie istnieje - do tego czasu medrca gra emoji na
- * tle magicznego kregu, a podmiana na PNG to jedna linia w miejscu oznaczonym ponizej.
+ * Naglowek Biblioteki: medrzec w okraglym "oknie" (obracajace sie promienie zostaja - sa lubiane)
+ * i jego dymek na pergaminie. Wczesniej to byla fioletowa scena ze zlota ramka, polprzezroczystymi
+ * ksiazkami i poswiata - wygladala jak z generatora, a nie jak czesc gry.
  */
 @Composable
 private fun SageScene(deckCount: Int) {
     val infinite = rememberInfiniteTransition()
     val spin by infinite.animateFloat(0f, 360f, infiniteRepeatable(tween(24_000, easing = LinearEasing)))
     val bob by infinite.animateFloat(0f, 1f, infiniteRepeatable(tween(1800, easing = FastOutSlowInEasing), RepeatMode.Reverse))
-    val glow by infinite.animateFloat(0.5f, 1f, infiniteRepeatable(tween(1400), RepeatMode.Reverse))
 
-    Box(
-        modifier = Modifier
-            .fillMaxWidth()
-            .height(210.dp)
-            .clip(RoundedCornerShape(20.dp))
-            .background(Brush.verticalGradient(listOf(Color(0xFF2B1B4E), Color(0xFF1A1030), Color(0xFF0F0A1C))))
-            .border(3.dp, Brush.verticalGradient(listOf(DeckGold, Color(0xFFE08A1E))), RoundedCornerShape(20.dp))
-            .clipToBounds()
-    ) {
-        // Magiczny krag za medrcem.
-        Canvas(modifier = Modifier.size(260.dp).align(Alignment.CenterStart).offset(x = (-50).dp).rotate(spin)) {
-            val r = size.minDimension / 2f
-            for (i in 0 until 12) {
-                rotate(i * 30f) {
-                    val path = Path().apply {
-                        moveTo(center.x, center.y)
-                        lineTo(center.x - r * 0.08f, center.y - r)
-                        lineTo(center.x + r * 0.08f, center.y - r)
-                        close()
-                    }
-                    drawPath(path, Brush.radialGradient(listOf(Color(0x66B48BFF), Color.Transparent), center, r))
-                }
-            }
-            drawCircle(Color(0x55FFD34D), radius = r * 0.62f, style = androidx.compose.ui.graphics.drawscope.Stroke(width = 3f))
-            drawCircle(Color(0x33FFD34D), radius = r * 0.5f, style = androidx.compose.ui.graphics.drawscope.Stroke(width = 2f))
-        }
-        // Polki z ksiegami w tle po prawej.
-        Text(
-            text = "📚",
-            fontSize = 64.sp,
-            modifier = Modifier.align(Alignment.BottomEnd).padding(end = 10.dp, bottom = 6.dp).graphicsLayer { alpha = 0.35f }
-        )
-
-        // TODO grafika: podmienic emoji medrca na Image(painterResource(Resources.Image.sage)).
-        Box(
-            modifier = Modifier
-                .align(Alignment.CenterStart)
-                .padding(start = 18.dp)
-                .size(140.dp)
-                .graphicsLayer { translationY = -bob * 6f * density },
-            contentAlignment = Alignment.Center
-        ) {
+    PaperCard {
+        Row(horizontalArrangement = Arrangement.spacedBy(12.dp), verticalAlignment = Alignment.CenterVertically) {
+            // TODO grafika: podmienic emoji medrca na Image(painterResource(Resources.Image.sage)).
             Box(
                 modifier = Modifier
-                    .size(120.dp)
-                    .graphicsLayer { alpha = glow }
-                    .background(Brush.radialGradient(listOf(Color(0x88FFD34D), Color.Transparent)), CircleShape)
-            )
-            Text(text = "🧙", fontSize = 92.sp)
+                    .size(104.dp)
+                    .clip(CircleShape)
+                    .background(ParchmentPalette.Frame)
+                    .padding(3.dp)
+                    .clip(CircleShape)
+                    .background(Brush.verticalGradient(listOf(Color(0xFF34285A), Color(0xFF1A1330))))
+                    .border(1.5.dp, Color(0xFFE0B75A), CircleShape),
+                contentAlignment = Alignment.Center
+            ) {
+                Canvas(modifier = Modifier.fillMaxSize().rotate(spin)) {
+                    val r = size.minDimension * 0.7f
+                    for (i in 0 until 12) {
+                        rotate(i * 30f) {
+                            val path = Path().apply {
+                                moveTo(center.x, center.y)
+                                lineTo(center.x - r * 0.1f, center.y - r)
+                                lineTo(center.x + r * 0.1f, center.y - r)
+                                close()
+                            }
+                            drawPath(path, Brush.radialGradient(listOf(Color(0x55FFD98A), Color.Transparent), center, r))
+                        }
+                    }
+                }
+                Text(
+                    text = "🧙",
+                    fontSize = 60.sp,
+                    modifier = Modifier.graphicsLayer { translationY = (4f - bob * 6f) * density }
+                )
+            }
+            Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                Text(
+                    text = "The Sage's Library",
+                    color = ParchmentPalette.Ink,
+                    fontFamily = FontFirst(),
+                    fontWeight = FontWeight.Black,
+                    fontSize = 17.sp,
+                    lineHeight = 19.sp
+                )
+                SpeechBubble(
+                    text = when {
+                        deckCount == 0 -> "Every hero writes their own spellbook. Shall we start yours?"
+                        deckCount < 3 -> "A fine start! The more you write, the sharper your mind."
+                        else -> "$deckCount tomes already! The library grows wiser with you."
+                    }
+                )
+            }
         }
-
-        // Dymek medrca.
-        Column(
-            modifier = Modifier
-                .align(Alignment.TopEnd)
-                .padding(top = 16.dp, end = 14.dp)
-                .width(170.dp)
-        ) {
-            Text(
-                text = when {
-                    deckCount == 0 -> "Every hero writes their own spellbook. Shall we start yours?"
-                    deckCount < 3 -> "A fine start! The more you write, the sharper your mind."
-                    else -> "$deckCount tomes already! The library grows wiser with you."
-                },
-                color = Color(0xFF3A2410),
-                fontFamily = FontFirst(),
-                fontWeight = FontWeight.Bold,
-                fontSize = 12.sp,
-                modifier = Modifier
-                    .clip(RoundedCornerShape(14.dp))
-                    .background(Parchment)
-                    .border(2.5.dp, Outline, RoundedCornerShape(14.dp))
-                    .padding(horizontal = 12.dp, vertical = 10.dp)
-            )
-        }
-        OutlinedText(
-            text = "The Sage's Library",
-            size = 20.sp,
-            color = DeckGold,
-            strokeWidth = 5f,
-            modifier = Modifier.align(Alignment.BottomEnd).padding(end = 14.dp, bottom = 12.dp)
-        )
     }
 }
 
+/** Dymek z ogonkiem wskazujacym w lewo, na medrca. */
 @Composable
-private fun CreateCard(
+private fun SpeechBubble(text: String) {
+    Box {
+        Text(
+            text = text,
+            color = ParchmentPalette.Ink,
+            fontFamily = FontFirst(),
+            fontWeight = FontWeight.Bold,
+            fontStyle = androidx.compose.ui.text.font.FontStyle.Italic,
+            fontSize = 12.sp,
+            lineHeight = 15.sp,
+            modifier = Modifier
+                .padding(start = 7.dp)
+                .clip(RoundedCornerShape(12.dp))
+                .background(ParchmentPalette.Card)
+                .border(1.dp, ParchmentPalette.CardEdge, RoundedCornerShape(12.dp))
+                .padding(horizontal = 10.dp, vertical = 8.dp)
+        )
+        Canvas(modifier = Modifier.size(width = 9.dp, height = 14.dp).align(Alignment.CenterStart)) {
+            val tail = Path().apply {
+                moveTo(size.width + 1f, 0f)
+                lineTo(0f, size.height / 2f)
+                lineTo(size.width + 1f, size.height)
+                close()
+            }
+            drawPath(tail, ParchmentPalette.Card)
+            drawLine(ParchmentPalette.CardEdge, androidx.compose.ui.geometry.Offset(size.width, 0f), androidx.compose.ui.geometry.Offset(0f, size.height / 2f), 1.dp.toPx())
+            drawLine(ParchmentPalette.CardEdge, androidx.compose.ui.geometry.Offset(0f, size.height / 2f), androidx.compose.ui.geometry.Offset(size.width, size.height), 1.dp.toPx())
+        }
+    }
+}
+
+/**
+ * Wejscie "napisz" / "zwoj AI" jako gruby przycisk z warga pod spodem - wyglada na wciskany.
+ * Jedna ikona w ciemnym okienku, bez poswiaty i migajacych gwiazdek.
+ */
+@Composable
+private fun CreateButton(
     icon: String,
     title: String,
     subtitle: String,
-    colors: List<Color>,
+    color: Color,
     badge: String?,
     onClick: () -> Unit,
-    modifier: Modifier = Modifier,
-    sparkle: Boolean = false
+    modifier: Modifier = Modifier
 ) {
-    val infinite = rememberInfiniteTransition()
-    val bob by infinite.animateFloat(0f, 1f, infiniteRepeatable(tween(1500, easing = FastOutSlowInEasing), RepeatMode.Reverse))
-    val twinkle by infinite.animateFloat(0f, 1f, infiniteRepeatable(tween(900), RepeatMode.Reverse))
-
+    val shape = RoundedCornerShape(16.dp)
     Box(modifier = modifier.padding(top = 8.dp)) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .clip(RoundedCornerShape(18.dp))
-                .background(Brush.verticalGradient(colors))
-                .border(3.dp, Outline, RoundedCornerShape(18.dp))
+                .clip(shape)
+                .background(color.darkenBy(0.45f))
+                .padding(bottom = 4.dp)
+                .clip(shape)
+                .background(Brush.verticalGradient(listOf(color.lightenBy(0.18f), color, color.darkenBy(0.12f))))
+                .border(2.dp, color.darkenBy(0.5f), shape)
                 .clickable(onClick = onClick)
-                .padding(vertical = 14.dp, horizontal = 10.dp),
+                .padding(vertical = 12.dp, horizontal = 10.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.spacedBy(4.dp)
         ) {
-            Box(contentAlignment = Alignment.Center, modifier = Modifier.size(64.dp)) {
-                Box(
-                    modifier = Modifier
-                        .size(60.dp)
-                        .background(Brush.radialGradient(listOf(Color(0x66FFFFFF), Color.Transparent)), CircleShape)
-                )
-                Text(text = icon, fontSize = 40.sp, modifier = Modifier.graphicsLayer { translationY = -bob * 4f * density })
-                if (sparkle) {
-                    Text("✨", fontSize = 14.sp, modifier = Modifier.align(Alignment.TopEnd).graphicsLayer { alpha = twinkle })
-                    Text("✨", fontSize = 10.sp, modifier = Modifier.align(Alignment.BottomStart).graphicsLayer { alpha = 1f - twinkle })
-                }
+            Box(
+                modifier = Modifier
+                    .size(50.dp)
+                    .clip(RoundedCornerShape(12.dp))
+                    .background(color.darkenBy(0.4f))
+                    .border(1.5.dp, Color.White.copy(alpha = 0.35f), RoundedCornerShape(12.dp)),
+                contentAlignment = Alignment.Center
+            ) {
+                Text(text = icon, fontSize = 28.sp, lineHeight = 30.sp)
             }
-            OutlinedText(text = title, size = 20.sp, color = Color.White)
+            OutlinedText(text = title, size = 18.sp, color = Color.White, strokeWidth = 5f)
             Text(
                 text = subtitle,
-                color = Color.White.copy(alpha = 0.85f),
+                color = Color.White.copy(alpha = 0.9f),
                 fontFamily = FontFirst(),
                 fontWeight = FontWeight.Bold,
                 fontSize = 11.sp,
+                lineHeight = 13.sp,
                 textAlign = androidx.compose.ui.text.style.TextAlign.Center
             )
         }
@@ -306,53 +301,66 @@ private fun CreateCard(
                 fontFamily = FontFirst(),
                 fontWeight = FontWeight.Black,
                 fontSize = 10.sp,
+                lineHeight = 12.sp,
                 modifier = Modifier
-                    .align(Alignment.TopCenter)
-                    .offset(y = (-8).dp)
-                    .clip(RoundedCornerShape(50))
-                    .background(Brush.horizontalGradient(listOf(Color(0xFFFFE27A), Color(0xFFE0A21E))))
-                    .border(2.dp, Outline, RoundedCornerShape(50))
-                    .padding(horizontal = 10.dp, vertical = 3.dp)
+                    .align(Alignment.TopEnd)
+                    .offset(x = 4.dp, y = (-8).dp)
+                    .clip(RoundedCornerShape(6.dp))
+                    .background(Brush.verticalGradient(listOf(Color(0xFFFFE27A), Color(0xFFE0A21E))))
+                    .border(1.5.dp, Color(0xFF8A5A0E), RoundedCornerShape(6.dp))
+                    .padding(horizontal = 7.dp, vertical = 2.dp)
             )
         }
     }
 }
 
 /**
- * Talia jako ksiega na polce: kolorowy grzbiet (AI - fiolet, reczna - braz), tytul, temat i pasek
- * "gotowa do walki". Liczba gotowych pytan jest tu wazniejsza od nazwy, bo mowi, czy talia nadaje
- * sie juz do boju; niedokonczone pytania pokazujemy na czerwono.
+ * Talia jako ksiega: skorzany grzbiet z inicjalem (AI - fiolet, reczna - braz), a obok pergamin
+ * z tytulem, tematem i paskiem "gotowa do walki". Liczba gotowych pytan jest tu wazniejsza od
+ * nazwy, bo mowi, czy talia nadaje sie juz do boju; niedokonczone pytania pokazujemy na czerwono.
  */
 @Composable
 private fun TomeCard(deck: CustomDeck, onClick: () -> Unit) {
     val ai = deck.origin == DeckOrigin.Ai
-    val spine = if (ai) listOf(Color(0xFF9A4FD6), Color(0xFF4A1E86)) else listOf(Color(0xFFB8702E), Color(0xFF6B3A12))
+    val leather = if (ai) Color(0xFF6E3FB0) else Color(0xFF8A4E22)
     val ready = deck.turnReady.size
     val playable = deck.isPlayable
+    val outer = RoundedCornerShape(14.dp)
+    val inner = RoundedCornerShape(11.5.dp)
 
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .height(100.dp)
-            .clip(RoundedCornerShape(14.dp))
-            .background(Brush.horizontalGradient(listOf(Color(0xFF3A2A1C), Color(0xFF1C130C))))
-            .border(2.5.dp, Outline, RoundedCornerShape(14.dp))
+            .height(92.dp)
+            .clip(outer)
+            .background(ParchmentPalette.Frame)
+            .padding(2.5.dp)
+            .clip(inner)
+            .background(Brush.verticalGradient(listOf(ParchmentPalette.Paper, ParchmentPalette.PaperDark)))
             .clickable(onClick = onClick),
         verticalAlignment = Alignment.CenterVertically
     ) {
-        // Grzbiet ksiegi.
+        // Grzbiet ksiegi: skora, dwa zlote paski i inicjal tytulu.
         Box(
             modifier = Modifier
                 .fillMaxHeight()
-                .width(58.dp)
-                .background(Brush.horizontalGradient(spine)),
+                .width(52.dp)
+                .background(Brush.horizontalGradient(listOf(leather.darkenBy(0.25f), leather, leather.darkenBy(0.35f)))),
             contentAlignment = Alignment.Center
         ) {
-            Column(modifier = Modifier.fillMaxHeight().padding(vertical = 10.dp), verticalArrangement = Arrangement.SpaceBetween) {
-                Box(modifier = Modifier.width(42.dp).height(3.dp).background(DeckGold.copy(alpha = 0.8f)))
-                Box(modifier = Modifier.width(42.dp).height(3.dp).background(DeckGold.copy(alpha = 0.8f)))
+            Column(
+                modifier = Modifier.fillMaxHeight().padding(vertical = 12.dp),
+                verticalArrangement = Arrangement.SpaceBetween
+            ) {
+                Box(modifier = Modifier.width(52.dp).height(3.dp).background(Color(0xFFE0B75A)))
+                Box(modifier = Modifier.width(52.dp).height(3.dp).background(Color(0xFFE0B75A)))
             }
-            Text(text = if (ai) "📜" else "📕", fontSize = 26.sp)
+            OutlinedText(
+                text = if (ai) "AI" else deck.name.trim().firstOrNull()?.uppercase() ?: "?",
+                size = 20.sp,
+                color = Color(0xFFFFE08A),
+                strokeWidth = 5f
+            )
         }
         Column(
             modifier = Modifier.weight(1f).padding(horizontal = 12.dp),
@@ -360,42 +368,45 @@ private fun TomeCard(deck: CustomDeck, onClick: () -> Unit) {
         ) {
             Text(
                 text = deck.name.ifBlank { "Untitled tome" },
-                color = Color.White,
+                color = ParchmentPalette.Ink,
                 fontFamily = FontFirst(),
                 fontWeight = FontWeight.Black,
-                fontSize = 16.sp,
+                fontSize = 15.sp,
+                lineHeight = 17.sp,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis
             )
             Text(
                 text = deck.topic.ifBlank { "No topic" },
-                color = DeckMuted,
+                color = ParchmentPalette.InkMuted,
                 fontFamily = FontFirst(),
                 fontWeight = FontWeight.Bold,
                 fontSize = 11.sp,
+                lineHeight = 13.sp,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis
             )
-            TownProgressBar(
+            GrooveBar(
                 progress = (ready.toFloat() / CustomDeck.MIN_QUESTIONS).coerceAtMost(1f),
-                fill = if (playable) Color(0xFF6FD04A) else Color(0xFFFFB02E),
-                height = 22.dp,
+                fill = if (playable) PaperInk.Good else PaperInk.Warn,
+                height = 17.dp,
                 label = if (playable) "$ready questions · ready!" else "$ready / ${CustomDeck.MIN_QUESTIONS} to battle"
             )
             if (deck.brokenCount > 0) {
                 Text(
                     text = "${deck.brokenCount} unfinished",
-                    color = DeckRed,
+                    color = PaperInk.Bad,
                     fontFamily = FontFirst(),
                     fontWeight = FontWeight.Bold,
-                    fontSize = 10.sp
+                    fontSize = 10.sp,
+                    lineHeight = 12.sp
                 )
             }
         }
         Text(
             text = "›",
-            color = DeckGold,
-            fontSize = 28.sp,
+            color = ParchmentPalette.Frame,
+            fontSize = 26.sp,
             fontWeight = FontWeight.Black,
             modifier = Modifier.padding(end = 12.dp)
         )
@@ -404,25 +415,18 @@ private fun TomeCard(deck: CustomDeck, onClick: () -> Unit) {
 
 @Composable
 private fun EmptyShelf() {
-    Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clip(RoundedCornerShape(14.dp))
-            .background(Color(0x99000000))
-            .border(2.dp, DeckFrameDim, RoundedCornerShape(14.dp))
-            .padding(22.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(6.dp)
-    ) {
-        Text("📖", fontSize = 36.sp)
-        OutlinedText(text = "The shelf is empty", size = 16.sp, color = Color.White, strokeWidth = 4f)
-        Text(
-            text = "Write your first tome above - a school subject, a driving test, anything you want to remember.",
-            color = DeckMuted,
-            fontFamily = FontFirst(),
-            fontSize = 12.sp,
-            textAlign = androidx.compose.ui.text.style.TextAlign.Center
-        )
+    PaperCard {
+        Column(modifier = Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(4.dp)) {
+            Text("The shelf is empty", color = ParchmentPalette.Ink, fontFamily = FontFirst(), fontWeight = FontWeight.Black, fontSize = 15.sp)
+            Text(
+                text = "Write your first tome above - a school subject, a driving test, anything you want to remember.",
+                color = ParchmentPalette.InkMuted,
+                fontFamily = FontFirst(),
+                fontSize = 12.sp,
+                lineHeight = 15.sp,
+                textAlign = androidx.compose.ui.text.style.TextAlign.Center
+            )
+        }
     }
 }
 

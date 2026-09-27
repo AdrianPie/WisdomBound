@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style parent="Theme.SplashScreen" name="Theme.HeroQuiz.Splash">
-    <item name="windowSplashScreenBackground">#0E1626</item>
-    <item name="android:windowFullscreen">false</item>
-    <item name="android:windowActionBar">false</item>
-    <item name="android:windowNoTitle">true</item>
-    <item name="postSplashScreenTheme">@android:style/Theme.Light.NoTitleBar.Fullscreen</item>
-    <item name="windowSplashScreenAnimatedIcon">@drawable/splash_icon</item>
-</style>
+        <item name="windowSplashScreenBackground">#0E1626</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="postSplashScreenTheme">@style/Theme.HeroQuiz</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_icon</item>
+    </style>
 
+    <!--
+        Motyw aplikacji po splashu. Dawniej Theme.Light.NoTitleBar.Fullscreen - pelny ekran przez
+        flage okna to mechanizm wycofany przy wyswietlaniu bez ramki (Android 15), a jasne tlo
+        mignelo na bialo przed pierwsza klatka Compose. Paski systemowe ustawia MainActivity.
+    -->
+    <style parent="android:Theme.Material.NoActionBar" name="Theme.HeroQuiz">
+        <item name="android:windowBackground">@color/app_background</item>
+    </style>
 
+    <color name="app_background">#0E1626</color>
 </resources>
-

@@ -1,5 +1,6 @@
 package com.lernhero.home.quiz
 
+import com.lernhero.shared.theme.GlyphText
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.size
 import com.lernhero.home.ui.OutlinedText
@@ -115,7 +116,7 @@ fun DeckEditorScreen(
                 verticalArrangement = Arrangement.spacedBy(10.dp)
             ) {
             if (deck == null) {
-                Text(
+                GlyphText(
                     text = "Couldn't find this deck.",
                     color = DeckMuted,
                     fontFamily = FontFirst(),
@@ -127,7 +128,7 @@ fun DeckEditorScreen(
             DeckField(
                 value = deck.name,
                 onValueChange = viewModel::rename,
-                label = "Nazwa talii (np. Prawo jazdy kat. B)",
+                label = "Deck name (e.g. Driving test, Category B)",
                 modifier = Modifier.fillMaxWidth()
             )
 
@@ -151,7 +152,7 @@ fun DeckEditorScreen(
             }
 
             state.message?.let { message ->
-                Text(
+                GlyphText(
                     text = message,
                     color = DeckGold,
                     fontFamily = FontFirst(),
@@ -172,7 +173,7 @@ fun DeckEditorScreen(
             ) {
                 DeckSectionLabel("Questions (${deck.turnReady.size} ready of ${deck.questions.size})")
                 if (deck.brokenCount > 0) {
-                    Text(
+                    GlyphText(
                         text = "${deck.brokenCount} do dokonczenia",
                         color = DeckRed,
                         fontFamily = FontFirst(),
@@ -182,7 +183,7 @@ fun DeckEditorScreen(
             }
 
             if (deck.questions.isEmpty()) {
-                Text(
+                GlyphText(
                     text = "Empty. Add a question by hand or ask the model above for a ready set.",
                     color = DeckMuted,
                     fontFamily = FontFirst(),
@@ -206,7 +207,7 @@ fun DeckEditorScreen(
             )
 
             if (!deck.isPlayable) {
-                Text(
+                GlyphText(
                     text = "Battle needs ${CustomDeck.MIN_QUESTIONS} finished questions " +
                         "(\"estimate\" questions count separately - they only appear against a boss).",
                     color = DeckMuted,
@@ -358,10 +359,10 @@ private fun AiSection(
             horizontalArrangement = Arrangement.spacedBy(10.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Text(text = "📜", fontSize = 28.sp)
+            GlyphText(text = "📜", fontSize = 28.sp)
             Column(modifier = Modifier.weight(1f)) {
                 OutlinedText(text = "AI Scroll", size = 18.sp, color = Color.White, strokeWidth = 5f)
-                Text(
+                GlyphText(
                     text = if (isPremium) "Give a topic - get a ready deck" else "Premium - the Sage writes decks for you",
                     color = Color(0xFFCBB6F0),
                     fontFamily = FontFirst(),
@@ -370,7 +371,7 @@ private fun AiSection(
                 )
             }
             if (!isPremium) {
-                Text(
+                GlyphText(
                     text = "👑",
                     fontSize = 16.sp,
                     modifier = Modifier
@@ -380,7 +381,7 @@ private fun AiSection(
                         .padding(6.dp)
                 )
             }
-            Text(text = if (open) "▲" else "▼", color = Color(0xFFCBB6F0), fontSize = 14.sp)
+            GlyphText(text = if (open) "▲" else "▼", color = Color(0xFFCBB6F0), fontSize = 14.sp)
         }
 
         if (!open) return@Column
@@ -394,12 +395,12 @@ private fun AiSection(
                 "⚡" to "A full deck in seconds - ready for battle"
             ).forEach { (icon, line) ->
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {
-                    Text(icon, fontSize = 15.sp)
-                    Text(line, color = Color.White, fontFamily = FontFirst(), fontWeight = FontWeight.Bold, fontSize = 12.sp)
+                    GlyphText(icon, fontSize = 15.sp)
+                    GlyphText(line, color = Color.White, fontFamily = FontFirst(), fontWeight = FontWeight.Bold, fontSize = 12.sp)
                 }
             }
             DeckButton(label = "👑 UNLOCK PREMIUM", onClick = onUnlock, color = Color(0xFFE0A21E), modifier = Modifier.fillMaxWidth())
-            Text(
+            GlyphText(
                 text = "You can still write questions by hand below.",
                 color = Color(0xFFCBB6F0),
                 fontFamily = FontFirst(),
@@ -409,7 +410,7 @@ private fun AiSection(
         }
 
         remainingThisMonth?.let { left ->
-            Text(
+            GlyphText(
                 text = "$left of ${PremiumLimits.PREMIUM_AI_QUIZZES_PER_MONTH} generations left this month",
                 color = DeckGold,
                 fontFamily = FontFirst(),
@@ -418,7 +419,7 @@ private fun AiSection(
         }
 
         if (!available) {
-            Text(
+            GlyphText(
                 text = "The model isn't connected yet - the screen works, but generating returns nothing. " +
                     "Until then, write questions by hand below.",
                 color = DeckMuted,
@@ -430,7 +431,7 @@ private fun AiSection(
         DeckField(
             value = topic,
             onValueChange = onTopicChange,
-            label = "Temat (np. znaki drogowe, prawo jazdy kat. B)",
+            label = "Topic (e.g. road signs, driving test Category B)",
             modifier = Modifier.fillMaxWidth()
         )
 
@@ -497,7 +498,7 @@ private fun AiSection(
             color = Color(0xFF8A3FE0),
             modifier = Modifier.fillMaxWidth()
         )
-        Text(
+        GlyphText(
             text = "Questions are added to the deck - they don't erase what's already there.",
             color = DeckMuted,
             fontFamily = FontFirst(),
@@ -518,17 +519,17 @@ private fun WarningsPanel(warnings: List<String>, onDismiss: () -> Unit) {
             .padding(10.dp),
         verticalArrangement = Arrangement.spacedBy(3.dp)
     ) {
-        Text(
+        GlyphText(
             text = "THE MODEL ALSO SENT SOMETHING UNUSABLE:",
             color = DeckGold,
             fontFamily = FontPixel(),
             fontSize = 10.sp
         )
         warnings.take(6).forEach { warning ->
-            Text(text = "• $warning", color = DeckMuted, fontFamily = FontFirst(), fontSize = 10.sp)
+            GlyphText(text = "• $warning", color = DeckMuted, fontFamily = FontFirst(), fontSize = 10.sp)
         }
         if (warnings.size > 6) {
-            Text(
+            GlyphText(
                 text = "...and ${warnings.size - 6} more.",
                 color = DeckMuted,
                 fontFamily = FontFirst(),
@@ -564,7 +565,7 @@ private fun QuestionRow(
             modifier = Modifier.weight(1f),
             verticalArrangement = Arrangement.spacedBy(3.dp)
         ) {
-            Text(
+            GlyphText(
                 text = question.prompt.ifBlank { "(bez tresci)" },
                 color = DeckCream,
                 fontFamily = FontFirst(),
@@ -572,7 +573,7 @@ private fun QuestionRow(
                 maxLines = 2,
                 overflow = TextOverflow.Ellipsis
             )
-            Text(
+            GlyphText(
                 text = "${question.type.label} • ${question.difficulty.label}" +
                     issues.firstOrNull()?.let { " • $it" }.orEmpty(),
                 color = if (issues.isEmpty()) DeckMuted else DeckRed,
@@ -589,7 +590,7 @@ private fun QuestionRow(
                 .clickable(onClick = onDelete)
                 .padding(horizontal = 10.dp, vertical = 8.dp)
         ) {
-            Text(text = "🗑", fontSize = 12.sp)
+            GlyphText(text = "🗑", fontSize = 12.sp)
         }
     }
 }
@@ -625,13 +626,13 @@ private fun TypePickerDialog(onPick: (CustomQuestionType) -> Unit, onDismiss: ()
                         .padding(12.dp),
                     verticalArrangement = Arrangement.spacedBy(2.dp)
                 ) {
-                    Text(
+                    GlyphText(
                         text = type.label,
                         color = DeckGold,
                         fontFamily = FontPixel(),
                         fontSize = 12.sp
                     )
-                    Text(text = type.hint, color = DeckMuted, fontFamily = FontFirst(), fontSize = 10.sp)
+                    GlyphText(text = type.hint, color = DeckMuted, fontFamily = FontFirst(), fontSize = 10.sp)
                 }
             }
         }
@@ -663,14 +664,14 @@ private fun ConfirmDialog(
             verticalArrangement = Arrangement.spacedBy(10.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Text(
+            GlyphText(
                 text = title,
                 color = DeckRed,
                 fontFamily = FontPixel(),
                 fontWeight = FontWeight.Bold,
                 fontSize = 13.sp
             )
-            Text(text = body, color = DeckCream, fontFamily = FontFirst(), fontSize = 11.sp)
+            GlyphText(text = body, color = DeckCream, fontFamily = FontFirst(), fontSize = 11.sp)
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 DeckButton(
                     label = "CANCEL",

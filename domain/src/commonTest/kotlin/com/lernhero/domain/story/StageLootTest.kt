@@ -5,6 +5,7 @@ import com.lernhero.domain.run.RunDifficulty
 import kotlin.test.Test
 import kotlin.random.Random
 import kotlin.test.assertEquals
+import kotlin.test.assertNotNull
 import kotlin.test.assertNull
 import kotlin.test.assertTrue
 
@@ -92,5 +93,15 @@ class StageLootTest {
             override fun nextBits(bitCount: Int): Int = Int.MAX_VALUE
         }
         assertNull(StageLoot.roll(30, RunDifficulty.Normal, isBoss = true, random = never))
+    }
+
+    @Test
+    fun `boss przy pierwszym przejsciu zawsze daje przedmiot`() {
+        // Losowanie tuz pod 1.0 - przy kazdej szansie ponizej 100% nic by nie wypadlo.
+        val worst = object : Random() {
+            override fun nextBits(bitCount: Int): Int = 0
+            override fun nextFloat(): Float = 0.9999f
+        }
+        assertNotNull(StageLoot.roll(30, RunDifficulty.Normal, isBoss = true, firstClear = true, random = worst))
     }
 }

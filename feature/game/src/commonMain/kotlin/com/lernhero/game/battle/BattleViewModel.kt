@@ -4,6 +4,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.lernhero.domain.combat.StatType
 import com.lernhero.domain.story.StageLoot
+import com.lernhero.shared.audio.Sfx
+import com.lernhero.shared.audio.Sounds
 import com.lernhero.domain.story.StoryWorldCatalog
 import com.lernhero.shared.resources.Resources
 import com.lernhero.domain.combat.live.AnswerTimer
@@ -92,6 +94,9 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import com.lernhero.game.battle.fx.AttackStyle
+import com.lernhero.game.battle.fx.AttackStyles
+import com.lernhero.game.battle.fx.ProjectileKind
 import kotlin.math.roundToInt
 import kotlin.random.Random
 import kotlin.time.Clock
@@ -177,6 +182,9 @@ class BattleViewModel(
      * tam nie ma czego powtarzac, bo glebokosc trzeba za kazdym razem zdobyc od nowa.
      */
     private var payoutFraction: Float = 1f
+
+    /** Przedmioty z bossow w endless, zebrane w trakcie biegu - wyplacane razem z wynikiem. */
+    private val endlessDrops: MutableList<String> = mutableListOf()
     private var savedMonsterBag: List<ItemInstance> = emptyList()
 
     /** Poziomy zaklec kompanow ("idKarty:idZaklecia" -> poziom). */
@@ -343,15 +351,49 @@ class BattleViewModel(
         }
 
         val token = volleyToken
+        val attacker = _uiState.value.characters[characterId]
+        val style = attacker?.let { AttackStyles.of(it.avatarKey, it.knightEquipment != null, it.battleScale) }
+            ?: AttackStyle.Melee
         viewModelScope.launch {
-            hits.forEachIndexed { index, hit ->
-                if (token != volleyToken) return@launch
-                if (index > 0) delay(BattleSpeed.scale(PROJECTILE_STAGGER_MILLIS))
-                _uiState.update { it.applyHit(characterId, hit) }
+            // Kazdy pocisk serii leci osobno: wystrzal, lot, dopiero potem trafienie. Kolejne
+            // startuja z malym odstepem i laduja rownolegle - seria nie czeka, az poprzedni
+            // pocisk doleci, bo wtedy MultiShot trwalby dwa razy dluzej niz pojedynczy strzal.
+            val landings = hits.mapIndexed { index, hit ->
+                launch {
+                    if (index > 0) delay(BattleSpeed.scale(PROJECTILE_STAGGER_MILLIS * index))
+                    if (token != volleyToken) return@launch
+                    val projectile = AttackStyles.projectileFor(style, hit.kind)
+                    if (projectile != null) {
+                        val flight = BattleSpeed.scale(projectile.flightMs)
+                        Sounds.play(Sfx.Whoosh)
+                        _uiState.update { it.launchProjectile(characterId, hit.targetId, projectile, flight) }
+                        delay(flight.toLong())
+                        if (token != volleyToken) return@launch
+                    }
+                    _uiState.update { it.applyHit(characterId, hit) }
+                }
             }
+            landings.forEach { it.join() }
             if (token != volleyToken) return@launch
             finishAttacker(characterId)
         }
+    }
+
+    private fun BattleUiState.launchProjectile(
+        sourceId: String,
+        targetId: String,
+        kind: ProjectileKind,
+        flightMs: Int
+    ): BattleUiState {
+        val target = characters[targetId]?.takeIf { it.hp > 0 }?.id
+            ?: characters.values.firstOrNull { it.hp > 0 && it.isPlayer != characters[sourceId]?.isPlayer }?.id
+            ?: return this
+        return copy(projectiles = projectiles + ProjectileEvent(nextEffectId++, sourceId, target, kind, flightMs))
+    }
+
+    /** Ekran zdejmuje pocisk, gdy juz go narysowal (sam lot trwa dalej po stronie ekranu). */
+    fun consumeProjectile(id: Long) {
+        _uiState.update { it.copy(projectiles = it.projectiles.filterNot { p -> p.id == id }) }
     }
 
     /** Atakujacy skonczyl caly swoj krok (wszystkie pociski doleciały) - czas na kolejny krok salwy. */
@@ -382,6 +424,7 @@ class BattleViewModel(
         // Unik ([CompanionPassive.Evasion]) - rzucany przy budowaniu ciosu, tu tylko go pokazujemy.
         // Przed garda, zeby unik nie zjadal ladunku tarczy.
         if (hit.dodged) {
+            Sounds.play(Sfx.Whoosh)
             return spawnEffect(targetId = target.id, amount = 0, kind = HitKind.Dodge, sourceId = attackerId)
         }
 
@@ -400,6 +443,7 @@ class BattleViewModel(
         // Zaklecie leczace nie zadaje obrazen - laduje wprost w [healCharacter], razem z bonusem
         // z [EndlessBuff.Blessing], tak samo jak kazde inne leczenie w grze.
         if (hit.heals) {
+            Sounds.play(Sfx.Heal)
             return healCharacter(hit.targetId, hit.amount.toFloat())
         }
 
@@ -411,6 +455,15 @@ class BattleViewModel(
         }
 
         if (hit.freezeTurns > 0) frozenTurns[target.id] = hit.freezeTurns
+
+        // Cios: krytyk brzmi mocniej, a trafienie w NASZYCH - ciezej niz nasze w nich.
+        Sounds.play(
+            when {
+                hit.isCrit -> Sfx.Crit
+                target.isPlayer -> Sfx.Hurt
+                else -> Sfx.Hit
+            }
+        )
 
         val raw = (target.hp - hit.amount).coerceAtLeast(0)
         // Drugi oddech: zamiast paść, bohater zostaje na resztce HP - raz na fale za kazdy stak.
@@ -1339,6 +1392,7 @@ class BattleViewModel(
      * [quiz] to juz gotowy, odsloniety stan pytania - tylko on rozni sie miedzy wariantami quizu.
      */
     private fun BattleUiState.resolveQuizOutcome(quiz: LiveQuizState, isCorrect: Boolean, reward: Int): BattleUiState {
+        Sounds.play(if (isCorrect) Sfx.Correct else Sfx.Wrong)
         val streakOutcome = streak.record(isCorrect)
         runTally.recordAnswer(
             correct = isCorrect,
@@ -1516,6 +1570,7 @@ class BattleViewModel(
             state.copy(
                 characters = characters,
                 bossEvent = run {
+                    Sounds.play(Sfx.Boss)
                     // Wlasna talia moze niesc swoje pytania "oszacuj" - gdy nie niesie zadnego,
                     // boss i tak musi miec czym zaatakowac, wiec wracamy do banku wbudowanego.
                     val question = runSession.customDeck
@@ -2246,6 +2301,7 @@ class BattleViewModel(
                 endless = request.isEndless,
                 gold = banked,
                 bossDefeated = false,
+                droppedItemIds = endlessDrops.toList(),
                 masteredCategory = masteryEarnedFor(),
                 xpMultiplier = masteryRewardMultiplier(),
                 payoutFraction = payoutFraction
@@ -2274,9 +2330,13 @@ class BattleViewModel(
     /** Fala oczyszczona: lup do sakwy, nastepna fala wchodzi bez przerwy - to jest endless run. */
     private fun BattleUiState.spawnNextWave(): BattleUiState {
         val nextWave = wave + 1
+        Sounds.play(if (kindForWave(nextWave) == BattleKind.Boss) Sfx.Boss else Sfx.Wave)
         undyingUsed.clear()
         runSession.savePartyHp(playerHp(), playerMaxHp())
         runSession.addLoot(calculateWaveCoins(this))
+        if (request.isEndless && kindForWave(wave) == BattleKind.Boss) {
+            StageLoot.rollEndlessBoss(wave, runSession.difficulty)?.let { endlessDrops += it.id }
+        }
         val clearedKind = kindForWave(wave)
         runTally.recordWaveCleared(
             wave,
@@ -2458,9 +2518,13 @@ class BattleViewModel(
 
     /** Ostatnia fala z [BattleRequest.waves] oczyszczona - walka wygrana, caly lup wraca na konto. */
     private fun BattleUiState.finishVictory(): BattleUiState {
+        Sounds.play(Sfx.Victory)
         runSession.savePartyHp(playerHp(), playerMaxHp())
         runSession.lastBattleWon = true
         runSession.addLoot(calculateWaveCoins(this))
+        if (request.isEndless && kindForWave(wave) == BattleKind.Boss) {
+            StageLoot.rollEndlessBoss(wave, runSession.difficulty)?.let { endlessDrops += it.id }
+        }
         runTally.recordWaveCleared(
             wave,
             kindForWave(wave),
@@ -2479,7 +2543,9 @@ class BattleViewModel(
             StageLoot.roll(
                 globalStage = storyStage,
                 tier = runSession.difficulty,
-                isBoss = request.kind == BattleKind.Boss
+                isBoss = request.kind == BattleKind.Boss,
+                // Pelna stawka = nikt jeszcze tej planszy na tym tierze nie zdobyl (StageRepeats).
+                firstClear = payoutFraction >= 1f
             )
         } else {
             null
@@ -2490,7 +2556,7 @@ class BattleViewModel(
             endless = request.isEndless,
             gold = banked,
             bossDefeated = request.kind == BattleKind.Boss,
-            droppedItemIds = listOfNotNull(dropped?.id),
+            droppedItemIds = endlessDrops + listOfNotNull(dropped?.id),
             masteredCategory = masteryEarnedFor(),
             xpMultiplier = masteryRewardMultiplier(),
             payoutFraction = payoutFraction
@@ -2513,6 +2579,7 @@ class BattleViewModel(
 
     /** Cala druzyna padla - koniec biegu, rozliczamy czesc sakwy. */
     private fun BattleUiState.finishDefeat(): BattleUiState {
+        Sounds.play(Sfx.Defeat)
         runSession.savePartyHp(playerHp(), playerMaxHp())
         runSession.lastBattleWon = false
         runSession.addLoot(calculateDefeatCoins(this))
@@ -2524,6 +2591,7 @@ class BattleViewModel(
             endless = request.isEndless,
             gold = banked,
             bossDefeated = false,
+            droppedItemIds = endlessDrops.toList(),
             masteredCategory = masteryEarnedFor(),
             xpMultiplier = masteryRewardMultiplier(),
             payoutFraction = payoutFraction
@@ -2783,9 +2851,9 @@ class BattleViewModel(
         // Poziom tematu podbija lup tym samym mnoznikiem, ktorym podbija XP - patrz [CategoryMastery].
         // Glebokosc planszy podbija go tym samym, ktorym podbija XP i materialy - patrz
         // [RunLoot.depthMultiplier]. Bez tego plansza 36 placila dokladnie tyle co plansza 1.
-        return (raw * runSession.difficulty.coinMultiplier * masteryRewardMultiplier() *
-            ladderRewardMultiplier(state.wave) *
-            RunLoot.depthMultiplier(campaignStage()) * payoutFraction * heroGoldMultiplier)
+        return (raw * runSession.difficulty.goldMultiplier * masteryRewardMultiplier() *
+            RunLoot.goldLadderMultiplier(ladderRewardMultiplier(state.wave)) *
+            RunLoot.goldDepthMultiplier(campaignStage()) * payoutFraction * heroGoldMultiplier)
             .roundToInt().coerceAtLeast(8)
     }
 
@@ -2858,9 +2926,9 @@ class BattleViewModel(
     /** Pocieszenie za koniec biegu - kilka monet za dotarcie do fali i wiedze z quizu. */
     private fun calculateDefeatCoins(state: BattleUiState): Int =
         ((8 + (state.wave - 1) * 6 + state.totalScore / 20) *
-            runSession.difficulty.coinMultiplier * masteryRewardMultiplier() *
-            ladderRewardMultiplier(state.wave) *
-            RunLoot.depthMultiplier(campaignStage()) * payoutFraction * heroGoldMultiplier)
+            runSession.difficulty.goldMultiplier * masteryRewardMultiplier() *
+            RunLoot.goldLadderMultiplier(ladderRewardMultiplier(state.wave)) *
+            RunLoot.goldDepthMultiplier(campaignStage()) * payoutFraction * heroGoldMultiplier)
             .roundToInt().coerceAtLeast(5)
 
     /**

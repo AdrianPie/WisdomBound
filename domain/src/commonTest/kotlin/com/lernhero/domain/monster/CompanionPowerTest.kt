@@ -61,7 +61,7 @@ class CompanionPowerTest {
         val gearAttack = companionSet.sumOf { it.first.toDouble() }.toFloat()
         val gearHp = companionSet.sumOf { it.second.toDouble() }.toFloat()
 
-        val heroSet = ItemSlot.entries.map { bestIn(ItemCatalog.all, it) }
+        val heroSet = ItemSlot.ACTIVE.map { bestIn(ItemCatalog.all, it) }
         val heroAttack = heroSet.sumOf { it.first.toDouble() }.toFloat()
         val heroHp = heroSet.sumOf { it.second.toDouble() }.toFloat()
 

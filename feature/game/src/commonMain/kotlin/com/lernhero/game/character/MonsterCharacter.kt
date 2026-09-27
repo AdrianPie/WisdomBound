@@ -77,7 +77,7 @@ fun MonsterCharacter(
     LaunchedEffect(state) {
         if (state == CharacterState.HIT) {
             hitFlash.snapTo(1f)
-            hitFlash.animateTo(0f, tween(220, easing = LinearOutSlowInEasing))
+            hitFlash.animateTo(0f, tween(300, easing = LinearOutSlowInEasing))
         }
     }
 
@@ -147,13 +147,15 @@ fun MonsterCharacter(
             drawIdleMonster(image = image, style = preset.idle, t = t, pivotY = pivotY)
             val flash = hitFlash.value
             if (flash > 0f) {
+                // Najpierw BIALA klatka uderzenia (jak w bijatykach), potem gasnaca czerwien.
+                val white = ((flash - 0.6f) / 0.4f).coerceIn(0f, 1f)
                 drawIdleMonster(
                     image = image,
                     style = preset.idle,
                     t = t,
                     pivotY = pivotY,
-                    alpha = flash * 0.65f,
-                    colorFilter = ColorFilter.tint(Color(0xFFFF3B30), BlendMode.SrcIn),
+                    alpha = (flash * 0.7f).coerceAtMost(0.85f),
+                    colorFilter = ColorFilter.tint(androidx.compose.ui.graphics.lerp(Color(0xFFFF3B30), Color.White, white), BlendMode.SrcIn),
                     particles = false
                 )
             }

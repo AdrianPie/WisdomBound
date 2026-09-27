@@ -171,7 +171,11 @@ fun CampaignBoard(
     }
 
     if (lootOpen && stage != null) {
-        StageLootDialog(stage = stage, onDismiss = { lootOpen = false })
+        StageLootDialog(
+            stage = stage,
+            onDismiss = { lootOpen = false },
+            firstClear = StageRepeats.isFirstClear(state.stageClears, stage.tier, stage.globalIndex)
+        )
     }
 }
 

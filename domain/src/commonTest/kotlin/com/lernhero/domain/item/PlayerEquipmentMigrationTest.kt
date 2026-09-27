@@ -18,11 +18,11 @@ class PlayerEquipmentMigrationTest {
 
     @Test
     fun `stary zapis z flagami zamienia sie na przedmioty`() {
-        val legacy = PlayerEquipment(head = true, mainHand = true)
+        val legacy = PlayerEquipment(hands = true, mainHand = true)
 
         val migrated = legacy.migrated()
 
-        assertEquals(Armors.PLATE_HELM.id, migrated.equipped[ItemSlot.Head.name])
+        assertEquals(Armors.PLATE_GAUNTLETS.id, migrated.equipped[ItemSlot.Hands.name])
         assertEquals(Weapons.PLATE_SWORD.id, migrated.equipped[ItemSlot.MainHand.name])
         assertEquals(2, migrated.equipped.size, "Reszta slotow zostaje pusta")
     }
@@ -75,27 +75,27 @@ class PlayerEquipmentMigrationTest {
 
     @Test
     fun `zdjecie przedmiotu oproznia slot`() {
-        val bag = bagOf(Armors.PLATE_HELM)
+        val bag = bagOf(Armors.PLATE_GAUNTLETS)
         val equipment = PlayerEquipment()
-            .equip(bag.of(Armors.PLATE_HELM), ItemSlot.Head)
-            .unequip(ItemSlot.Head)
+            .equip(bag.of(Armors.PLATE_GAUNTLETS), ItemSlot.Hands)
+            .unequip(ItemSlot.Hands)
 
-        assertNull(equipment.itemIn(ItemSlot.Head, bag))
+        assertNull(equipment.itemIn(ItemSlot.Hands, bag))
     }
 
     @Test
     fun `ekwipunek gracza sklada sie do statystyk i efektow walki`() {
-        val bag = bagOf(Weapons.REAPER_GLAIVE, Armors.PLATE_HELM)
+        val bag = bagOf(Weapons.REAPER_GLAIVE, Armors.AEGIS_SHIELD)
         val loadout = PlayerEquipment()
             .equip(bag.of(Weapons.REAPER_GLAIVE), ItemSlot.MainHand)
-            .equip(bag.of(Armors.PLATE_HELM), ItemSlot.Head)
+            .equip(bag.of(Armors.AEGIS_SHIELD), ItemSlot.OffHand)
             .toLoadout(bag)
 
         assertEquals(9f, loadout.stats[StatType.Attack], "Atak z kosy")
-        assertEquals(12f, loadout.stats[StatType.MaxHp], "Zdrowie z helmu")
+        assertEquals(20f, loadout.stats[StatType.MaxHp], "Zdrowie z tarczy")
         assertTrue(
-            loadout.effects.size >= 3,
-            "Kosa (2 efekty) i helm (1 efekt) wnosza swoje zachowania do walki"
+            loadout.effects.size >= 4,
+            "Kosa (2 efekty) i tarcza (2 efekty) wnosza swoje zachowania do walki"
         )
     }
 
@@ -105,15 +105,14 @@ class PlayerEquipmentMigrationTest {
         val player = Player(
             equipment = PlayerEquipment(head = true, hands = true, mainHand = true),
             ownedItems = listOf(
-                Armors.PLATE_HELM.id,
                 Armors.PLATE_GAUNTLETS.id,
                 Weapons.PLATE_SWORD.id
             )
         )
         val loadout = player.migratedHeroEquipment().toLoadout(player.heroBag())
 
-        assertEquals(Armors.PLATE_HELM, loadout[ItemSlot.Head])
         assertEquals(Armors.PLATE_GAUNTLETS, loadout[ItemSlot.Hands])
+        assertEquals(null, loadout[ItemSlot.Head], "Helmy wycofane - flaga head nic juz nie zaklada")
         assertEquals(Weapons.PLATE_SWORD, loadout[ItemSlot.MainHand])
     }
 }

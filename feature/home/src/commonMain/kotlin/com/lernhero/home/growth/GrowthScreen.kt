@@ -84,45 +84,17 @@ fun GrowthScreen(
     }
 }
 
+/** Te same zakladki co w Swiatyni ([com.lernhero.home.ui.PaperTabs]) - jeden styl w calej grze. */
 @Composable
 private fun GrowthTabBar(
     selected: GrowthTab,
     onSelect: (GrowthTab) -> Unit,
     modifier: Modifier = Modifier
 ) {
-    Row(
-        modifier = modifier.fillMaxWidth(),
-        horizontalArrangement = Arrangement.spacedBy(8.dp)
-    ) {
-        GrowthTab.entries.forEach { entry ->
-            val isSelected = entry == selected
-            Row(
-                modifier = Modifier
-                    .weight(1f)
-                    .clip(RoundedCornerShape(12.dp))
-                    .background(
-                        if (isSelected) androidx.compose.ui.graphics.Brush.verticalGradient(listOf(Color(0xFF5BB8FF), Color(0xFF2C7BD6)))
-                        else androidx.compose.ui.graphics.Brush.verticalGradient(listOf(Color(0xFFE9D6B4), Color(0xFFC9AE84)))
-                    )
-                    .border(2.5.dp, if (isSelected) Color(0xFF123A6B) else Color(0xFF6B4A24), RoundedCornerShape(12.dp))
-                    .clickable { onSelect(entry) }
-                    .padding(vertical = 9.dp),
-                horizontalArrangement = Arrangement.Center,
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Text(text = entry.icon, fontSize = 15.sp)
-                if (isSelected) {
-                    com.lernhero.home.ui.OutlinedText(text = "  ${entry.label}", size = 14.sp, color = Color.White, strokeWidth = 5f)
-                } else {
-                    Text(
-                        text = "  ${entry.label}",
-                        color = Color(0xFF4A3218),
-                        fontFamily = FontFirst(),
-                        fontWeight = FontWeight.Black,
-                        fontSize = 14.sp
-                    )
-                }
-            }
-        }
-    }
+    com.lernhero.home.ui.PaperTabs(
+        labels = GrowthTab.entries.map { it.label },
+        selected = selected.ordinal,
+        onSelect = { onSelect(GrowthTab.entries[it]) },
+        modifier = modifier
+    )
 }

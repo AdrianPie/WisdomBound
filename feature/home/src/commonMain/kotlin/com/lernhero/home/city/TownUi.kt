@@ -1,5 +1,8 @@
 package com.lernhero.home.city
 
+import com.lernhero.shared.theme.GlyphText
+import com.lernhero.shared.audio.Sounds
+import com.lernhero.shared.audio.Sfx
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
@@ -131,7 +134,7 @@ private fun ToastPill(toast: TownToast) {
                 )
                 .padding(horizontal = 16.dp, vertical = 8.dp)
         ) {
-            Text(
+            GlyphText(
                 text = toast.text,
                 color = if (toast.emphasis) Color(0xFF08130C) else Gold,
                 fontFamily = FontPixel(),
@@ -267,7 +270,7 @@ internal fun ResourcePill(icon: String, value: Int, modifier: Modifier = Modifie
                 .border(1.5.dp, Outline, RoundedCornerShape(50))
                 .padding(start = 18.dp, end = 10.dp, top = 4.dp, bottom = 4.dp)
         ) {
-            Text(
+            GlyphText(
                 text = value.compact(),
                 color = Color.White,
                 fontFamily = FontFirst(),
@@ -276,7 +279,7 @@ internal fun ResourcePill(icon: String, value: Int, modifier: Modifier = Modifie
                 maxLines = 1
             )
         }
-        Text(text = icon, fontSize = 18.sp)
+        GlyphText(text = icon, fontSize = 18.sp)
     }
 }
 
@@ -325,7 +328,7 @@ internal fun TownActionButton(
             .clip(RoundedCornerShape(14.dp))
             .background(Brush.verticalGradient(colors))
             .border(2.5.dp, Outline, RoundedCornerShape(14.dp))
-            .clickable(enabled = enabled, onClick = onClick),
+            .clickable(enabled = enabled, onClick = { Sounds.play(Sfx.Tap); onClick() }),
         contentAlignment = Alignment.Center
     ) {
         // Jasny polysk na gornej polowie.
@@ -345,7 +348,7 @@ internal fun TownActionButton(
         ) {
             OutlinedText(text = text, size = 17.sp, color = if (enabled) Color.White else Color(0xFFD8D0C4))
             subtitle?.let {
-                Text(
+                GlyphText(
                     text = it,
                     color = if (enabled) Color.White else Color(0xFFD8D0C4),
                     fontFamily = FontFirst(),

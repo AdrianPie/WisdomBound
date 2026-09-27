@@ -10,7 +10,9 @@ import com.lernhero.domain.reading.BundledBooks
 import com.lernhero.domain.reading.PdfTextNormalizer
 import com.lernhero.domain.reading.ReaderSettings
 import com.lernhero.domain.reading.SavedWord
+import com.lernhero.domain.reading.EpubParser
 import com.lernhero.domain.reading.PlainTextParser
+import com.lernhero.domain.reading.ReadingAnchor
 import com.lernhero.domain.reading.ReadingDayProgress
 import com.lernhero.domain.reading.ReadingGoal
 import com.lernhero.domain.reading.ReadingStats
@@ -22,6 +24,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import com.lernhero.shared.resources.Resources
 import com.lernhero.shared.resources.readFileBytes
 
@@ -32,6 +35,7 @@ data class LibraryUiState(
     val readingStats: ReadingStats = ReadingStats(),
     val readingToday: ReadingDayProgress = ReadingDayProgress(),
     val bookProgress: Map<String, Int> = emptyMap(),
+    val bookOffsets: Map<String, Int> = emptyMap(),
     val dailyGoalClaims: Map<String, String> = emptyMap(),
     /** Typografia czytnika zapisana na koncie - zeby nie wracala do domyslnej przy kazdej ksiazce. */
     val readerSettings: ReaderSettings = ReaderSettings(),
@@ -43,6 +47,9 @@ data class LibraryUiState(
 ) {
     fun claimedToday(goal: ReadingGoal): Boolean = dailyGoalClaims[goal.id] == readingToday.dateKey
     fun pageFor(book: Book): Int = bookProgress[book.id] ?: 0
+
+    /** Dokladne miejsce w ksiazce reflow - akapit i znak w nim, nie tylko poczatek akapitu. */
+    fun anchorFor(book: Book): ReadingAnchor = ReadingAnchor(pageFor(book), bookOffsets[book.id] ?: 0)
 
     /** Wszystkie ksiazki na polce - wbudowane i wgrane razem, bo dla gracza to jedna biblioteka. */
     val allBooks: List<Book> get() = importedBooks + bundledBooks
@@ -87,12 +94,28 @@ class LibraryViewModel(
                     readingStats = player?.readingStats ?: state.readingStats,
                     readingToday = (player?.readingToday ?: state.readingToday).forToday(today),
                     bookProgress = player?.bookProgress ?: state.bookProgress,
+                    bookOffsets = player?.bookOffsets ?: state.bookOffsets,
                     dailyGoalClaims = player?.dailyGoalClaims ?: state.dailyGoalClaims,
                     readerSettings = player?.readerSettings ?: state.readerSettings,
                     savedWords = (player?.savedWords ?: state.savedWords).sortedByDescending { it.savedAt }
                 )
             }
         }
+    }
+
+    /**
+     * Zapisuje miejsce w ksiazce. Stan lokalny od razu - ponowne otwarcie tuz po zamknieciu nie
+     * czeka na odswiezenie z bazy - a zapis w [viewModelScope], ktory przezywa zamkniecie
+     * czytnika (zakres ekranu czytnika ginal razem z nim i ostatnia kartka nie trafiala do bazy).
+     */
+    fun savePosition(book: Book, anchor: ReadingAnchor) {
+        _uiState.update {
+            it.copy(
+                bookProgress = it.bookProgress + (book.id to anchor.blockIndex),
+                bookOffsets = it.bookOffsets + (book.id to anchor.charOffset)
+            )
+        }
+        viewModelScope.launch { playerRepository.updateBookProgress(book.id, anchor.blockIndex, anchor.charOffset) }
     }
 
     /** Dopisuje wybrany plik do biblioteki i zwraca gotowa [Book] do natychmiastowego otwarcia. */
@@ -127,8 +150,9 @@ class LibraryViewModel(
         return when (book.format) {
             BookFormat.Txt -> PlainTextParser.parse(bytes.decodeToString())
             BookFormat.Pdf -> extractPdfContent(bytes)
-            // EPUB wymaga rozpakowania zipa - dochodzi w etapie 2.
-            BookFormat.Epub -> null
+            // Rozpakowanie i przejscie po wszystkich rozdzialach to kilkadziesiat ms przy grubej
+            // ksiazce - poza watkiem UI.
+            BookFormat.Epub -> withContext(Dispatchers.Default) { EpubParser.parse(bytes, ::inflateRaw) }
         }
     }
 

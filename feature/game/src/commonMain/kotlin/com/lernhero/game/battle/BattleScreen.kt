@@ -140,6 +140,7 @@ fun BattleScreen(
                     onAttackFinished = viewModel::onAttackFinished,
                     onHitRecovered = viewModel::onHitRecovered,
                     onEffectShown = viewModel::consumeFloatingEffect,
+                    onProjectileShown = viewModel::consumeProjectile,
                     onCapitulate = viewModel::capitulate,
                     modifier = Modifier.fillMaxSize()
                 )

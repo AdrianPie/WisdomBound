@@ -30,6 +30,12 @@ object ItemUpgrades {
     const val ESSENCE_FROM_LEVEL = 6
 
     /**
+     * Zloto za poziom jako ulamek ceny przedmiotu (koszt poziomu N = cena * ten ulamek * N).
+     * Pelny tor do +10 kosztuje wiec ~33x cene - przy 80-780 to od ~2,6 tys. do ~26 tys.
+     */
+    const val UPGRADE_GOLD_PER_LEVEL = 0.6f
+
+    /**
      * Poziom ze STAREGO formatu zapisu (mapa `id -> poziom`). Uzywane juz wylacznie przez
      * migracje plecaka - patrz [com.lernhero.domain.item.heroBag].
      */
@@ -57,7 +63,8 @@ object ItemUpgrades {
             stone = 12 * tier * targetLevel,
             iron = 6 * tier * targetLevel,
             essence = if (targetLevel >= ESSENCE_FROM_LEVEL) 2 * (targetLevel - ESSENCE_FROM_LEVEL + 1) else 0,
-            gold = (item.cost * 0.15f * targetLevel).toInt()
+            // Zloto jest glownym kosztem ulepszen - to one maja byc tym, na co idzie zloto z walk.
+            gold = (item.cost * UPGRADE_GOLD_PER_LEVEL * targetLevel).toInt()
         )
     }
 

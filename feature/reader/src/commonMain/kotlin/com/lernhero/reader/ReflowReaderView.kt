@@ -66,7 +66,9 @@ import org.koin.compose.koinInject
 fun ReflowReaderView(
     book: Book,
     content: BookContent,
-    startBlockIndex: Int,
+    startAnchor: ReadingAnchor,
+    /** Kazda zmiana strony - zapis miejsca per ksiazka, patrz LibraryViewModel.savePosition. */
+    onPositionChanged: (ReadingAnchor) -> Unit,
     initialSettings: ReaderSettings,
     /** Wolane raz, przy zamknieciu czytnika - patrz PlayerRepository.updateReaderSettings. */
     onSettingsChanged: (ReaderSettings) -> Unit,
@@ -87,7 +89,7 @@ fun ReflowReaderView(
     var settings by remember { mutableStateOf(initialSettings) }
     var chromeVisible by remember { mutableStateOf(false) }
     var settingsVisible by remember { mutableStateOf(false) }
-    var anchor by remember(book.id) { mutableStateOf(ReadingAnchor(startBlockIndex, 0)) }
+    var anchor by remember(book.id) { mutableStateOf(startAnchor) }
     // Zaznaczenie zyje tutaj, nie w ReflowReader - popup tlumaczenia jest nad calym ekranem
     // czytnika, wiec musi widziec ten sam stan, ktory ReflowReader tylko zglasza wyzej.
     var selection by remember { mutableStateOf<WordSelection?>(null) }
@@ -121,10 +123,15 @@ fun ReflowReaderView(
             palette = palette,
             selection = selection,
             onAnchorChanged = { newAnchor ->
-                anchor = newAnchor
-                // Postep zapisujemy jako indeks bloku, nie numer strony: strona w reflow zmienia
-                // znaczenie przy kazdej zmianie czcionki, akapit zostaje tym samym akapitem.
-                scope.launch { playerRepository.updateBookProgress(book.id, newAnchor.blockIndex) }
+                // Kotwica to dokladny poczatek strony, wiec po powrocie pageIndexOf trafia na te
+                // sama strone. Zapisywany dawniej sam indeks akapitu cofal na strone, na ktorej
+                // akapit sie ZACZYNAL.
+                if (newAnchor != anchor) {
+                    anchor = newAnchor
+                    // Kotwica znakowa, nie numer strony: strona w reflow zmienia znaczenie przy
+                    // kazdej zmianie czcionki, a akapit + znak zostaje tym samym miejscem.
+                    onPositionChanged(newAnchor)
+                }
             },
             onPageAdvanced = { words -> clock.onPageAdvanced(words) },
             onWordTapped = {

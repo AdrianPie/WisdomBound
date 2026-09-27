@@ -95,29 +95,29 @@ internal fun EndlessBuffRow(buffs: Map<EndlessBuff, Int>, modifier: Modifier = M
         horizontalArrangement = Arrangement.spacedBy(4.dp)
     ) {
         buffs.entries.sortedBy { it.key.ordinal }.forEach { (buff, stacks) ->
-            // Ten sam kolor co na karcie wyboru (UpgradeChoiceDialog) - po nim widac klase ulepszenia.
-            val accent = when (buff.rarity) {
-                UpgradeRarity.Common -> Color(0xFFB9B9B9)
-                UpgradeRarity.Rare -> Color(0xFF6FB7FF)
-                UpgradeRarity.Epic -> Color(0xFFC77DFF)
-                UpgradeRarity.Legendary -> Color(0xFFFFC04D)
-            }
-            Box(
+            // Ta sama ikona i kolor klasy co na karcie wyboru (UpgradeChoiceDialog).
+            val accent = buff.rarity.color()
+            Row(
                 modifier = Modifier
-                    .clip(RoundedCornerShape(6.dp))
+                    .clip(RoundedCornerShape(50))
                     // Maly i polprzezroczysty - lezy nad polem bitwy i nie moze zaslaniac postaci.
-                    .background(HudInk.copy(alpha = 0.7f))
-                    .border(1.dp, accent.copy(alpha = 0.8f), RoundedCornerShape(6.dp))
-                    .padding(horizontal = 5.dp, vertical = 2.dp)
+                    .background(HudInk.copy(alpha = 0.72f))
+                    .border(1.dp, accent.copy(alpha = 0.85f), RoundedCornerShape(50))
+                    .padding(horizontal = 4.dp, vertical = 1.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(1.dp)
             ) {
-                Text(
-                    text = if (stacks > 1) "${buff.title} x$stacks" else buff.title,
-                    color = accent,
-                    fontFamily = FontFirst(),
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 8.sp,
-                    lineHeight = 10.sp
-                )
+                Text(text = buff.icon(), fontSize = 9.sp, lineHeight = 11.sp)
+                if (stacks > 1) {
+                    Text(
+                        text = "x$stacks",
+                        color = accent,
+                        fontFamily = FontFirst(),
+                        fontWeight = FontWeight.Black,
+                        fontSize = 8.sp,
+                        lineHeight = 10.sp
+                    )
+                }
             }
         }
     }

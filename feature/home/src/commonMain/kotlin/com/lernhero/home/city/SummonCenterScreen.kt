@@ -1,22 +1,17 @@
 package com.lernhero.home.city
 
 import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.Animatable
-import androidx.compose.animation.core.EaseOutBack
-import androidx.compose.animation.core.FastOutSlowInEasing
-import androidx.compose.animation.core.LinearEasing
-import androidx.compose.animation.core.RepeatMode
-import androidx.compose.animation.core.animateFloat
-import androidx.compose.animation.core.infiniteRepeatable
-import androidx.compose.animation.core.rememberInfiniteTransition
+import androidx.compose.animation.core.AnimationVector1D
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.scaleIn
-import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
@@ -24,8 +19,6 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -33,49 +26,56 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.SideEffect
+import androidx.compose.runtime.State
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.Offset
-import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.geometry.Rect
 import androidx.compose.ui.geometry.Size
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.TransformOrigin
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.layout.LayoutCoordinates
+import androidx.compose.ui.layout.onGloballyPositioned
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.unit.toSize
 import com.lernhero.domain.common.Rarity
-import com.lernhero.domain.monster.MonsterCard
-import com.lernhero.domain.monster.MonsterEquipment
 import com.lernhero.domain.craft.CraftCost
-import com.lernhero.domain.craft.SummonCosts
+import com.lernhero.domain.monster.MonsterCard
 import com.lernhero.domain.monster.MonsterCatalog
-import com.lernhero.domain.spell.Spell
+import com.lernhero.domain.monster.MonsterEquipment
 import com.lernhero.domain.summon.FreeSummon
-import kotlin.time.Clock
-import org.jetbrains.compose.resources.DrawableResource
-import com.lernhero.home.player.PlayerViewModel
-import com.lernhero.home.ui.RarityPalette
-import com.lernhero.home.ui.icon
+import com.lernhero.game.character.ElementEmblem
 import com.lernhero.game.character.MonsterVisualPresets
+import com.lernhero.home.player.PlayerViewModel
+import com.lernhero.home.rememberAmbienceClock
+import com.lernhero.home.ui.RarityPalette
 import com.lernhero.shared.resources.Resources
 import com.lernhero.shared.theme.FontFirst
 import com.lernhero.shared.theme.FontPixel
-import kotlinx.coroutines.launch
+import com.lernhero.shared.theme.StrokedText
 import kotlinx.coroutines.delay
+import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.painterResource
-import org.koin.compose.viewmodel.koinViewModel
-import kotlin.math.sin
-import kotlin.math.cos
 import kotlin.math.PI
+import kotlin.math.cos
+import kotlin.math.sin
 import kotlin.random.Random
+import kotlin.time.Clock
 
 /**
  * Rodzaj bannera - jak w idlach: tanszy losuje glownie pospolite, drozszy realnie podbija szanse
@@ -128,9 +128,6 @@ private enum class SummonBanner(
     )
 }
 
-/** Etapy rytualu - patrz [SummonCenterScreen]. */
-private enum class SummonPhase { Idle, Charging, Flash, Reveal, Result }
-
 /** Dwie polowy budynku: oltarz (zdobywanie kart) i kolekcja (zamiana kart na sile). */
 private enum class SummonSection(val label: String) {
     Ritual("Summon"),
@@ -140,13 +137,13 @@ private enum class SummonSection(val label: String) {
 }
 
 /**
- * Summon Center w stylu mobilnych idle RPG: po lewej wybor bannera, na srodku oltarz, a po
- * nacisnieciu summona odpala sie rytual - oltarz sie laduje, strzela blysk i dopiero z niego
- * WYCHODZI potwor (skala + wyjazd z dolu + aura w kolorze rzadkosci), jak wyjscie zawodnika.
+ * Summon Center w stylu mobilnych idle RPG: u gory wybor bannera, na srodku oltarz, a po
+ * nacisnieciu summona odpala sie pokaz rezyserowany przez [SummonShow] - energia zbiera sie
+ * w kule, slup swiatla zdradza (i potrafi podbic) rzadkosc, wybuch, sylweta w swietle jak
+ * zawodnik przy walkoucie w FIFA, a na koniec karta kompana odkrywana po kawalku.
  *
  * Losowanie idzie po prawdziwym [MonsterCatalog], wiec wypadaja te same potwory, ktorymi sie gra -
- * i od teraz KAZDY wylosowany kompan faktycznie laduje w kolekcji (wczesniej caly rytual konczyl sie
- * niczym: `pulled` zylo tylko w pamieci ekranu).
+ * i KAZDY wylosowany kompan faktycznie laduje w kolekcji.
  *
  * Waluta: losy ze skrzyn po bossach placa za kompanow, a esencja z lochow za zaklecia. Obie
  * pochodza wylacznie z wypraw - to one zastapily dawne kupowanie jednego i drugiego za zloto.
@@ -159,49 +156,19 @@ fun SummonCenterScreen(
     val state by playerViewModel.uiState.collectAsState()
 
     var section by remember { mutableStateOf(SummonSection.Ritual) }
-
     var banner by remember { mutableStateOf(SummonBanner.Basic) }
-    var phase by remember { mutableStateOf(SummonPhase.Idle) }
-    var pulled by remember { mutableStateOf<List<MonsterCard>>(emptyList()) }
 
-    // Jedna os czasu calego rytualu - kazdy etap ma wlasna animacje, ale sterowane sa stad.
-    val charge = remember { Animatable(0f) }
-    val flash = remember { Animatable(0f) }
-    val rise = remember { Animatable(0f) }
-    // Fala uderzeniowa - biegnie ROWNOLEGLE do blysku i wyjscia potwora, zeby pierscienie
-    // rozchodzily sie jeszcze w trakcie, gdy summon juz wstaje, a nie dopiero po wszystkim.
-    val burst = remember { Animatable(0f) }
-
-    LaunchedEffect(phase) {
-        when (phase) {
-            SummonPhase.Charging -> {
-                rise.snapTo(0f)
-                flash.snapTo(0f)
-                burst.snapTo(0f)
-                charge.snapTo(0f)
-                charge.animateTo(1f, tween(CHARGE_MS, easing = FastOutSlowInEasing))
-                phase = SummonPhase.Flash
-            }
-
-            SummonPhase.Flash -> {
-                flash.snapTo(1f)
-                burst.snapTo(0f)
-                launch { burst.animateTo(1f, tween(BURST_MS, easing = FastOutSlowInEasing)) }
-                flash.animateTo(0f, tween(FLASH_MS, easing = LinearEasing))
-                phase = SummonPhase.Reveal
-            }
-
-            SummonPhase.Reveal -> {
-                rise.animateTo(1f, tween(RISE_MS, easing = EaseOutBack))
-                delay(REVEAL_HOLD_MS)
-                phase = SummonPhase.Result
-            }
-
-            SummonPhase.Idle, SummonPhase.Result -> Unit
-        }
-    }
-
-    val busy = phase != SummonPhase.Idle && phase != SummonPhase.Result
+    val scope = rememberCoroutineScope()
+    val show = remember { SummonShow(scope) }
+    val anchors = remember { SummonAnchors() }
+    val time = rememberAmbienceClock()
+    // Kolor calej pirotechniki: w spoczynku kolor bannera, w trakcie pokazu - biezacy kolor slupa.
+    val fxColor = animateColorAsState(
+        targetValue = if (show.stage == ShowStage.Idle) banner.accent else show.tease.fx(),
+        animationSpec = tween(240),
+        label = "summonFx"
+    )
+    val busy = show.busy
 
     // Zegar odliczania darmowych summonow. Tyka tylko na tym ekranie i tylko w sekcji rytualu -
     // nie ma po co budzic rekompozycji, gdy gracz oglada kolekcje.
@@ -213,21 +180,41 @@ fun SummonCenterScreen(
         }
     }
 
-    // Naglowek jest ZAWSZE zbity (compact), niezaleznie od sekcji. Wczesniej rytual dostawal pelny
-    // naglowek z szescioma surowcami, a kolekcja zbity - przez co przelacznik sekcji przeskakiwal
-    // w pionie przy kazdym tapnieciu i wygladalo to, jakby zakladki zamienialy sie miejscami.
-    // Poza tym drewno/kamien/ruda nie maja tu czego szukac: w Summon Center placi sie LOSAMI,
-    // a te licza sie przy samych bannerach.
+    val noRipple = remember { MutableInteractionSource() }
+
     // Tlo CALEGO Summon Center - pod naglowkiem, zakladkami i obiema sekcjami. Siedzi POZA
     // scaffoldem, zeby nie bylo nad nim widac globalnego tla aplikacji.
-    Box(modifier = Modifier.fillMaxSize()) {
+    Box(modifier = Modifier.fillMaxSize().onGloballyPositioned { anchors.root = it }) {
       Image(
           painter = painterResource(Resources.Image.summonerCollectionBackground),
           contentDescription = null,
           contentScale = ContentScale.Crop,
           modifier = Modifier.matchParentSize()
       )
+      // W trakcie pokazu wszystko poza oltarzem gasnie - reflektor na krag.
+      Box(
+          modifier = Modifier
+              .matchParentSize()
+              .graphicsLayer { alpha = show.dim.value * 0.62f }
+              .background(Color.Black)
+      )
 
+      // Trzesienie obejmuje caly ekran z oltarzem; nakladki (blysk, karta) juz nie.
+      Box(
+          modifier = Modifier
+              .fillMaxSize()
+              .graphicsLayer {
+                  val amp = show.shake.value * density
+                  if (amp > 0f) {
+                      val t = time.value
+                      translationX = amp * (sin(t * 53f) + 0.5f * sin(t * 31f)) / 1.5f
+                      translationY = amp * (cos(t * 47f) + 0.5f * sin(t * 23f)) / 1.5f
+                  } else {
+                      translationX = 0f
+                      translationY = 0f
+                  }
+              }
+      ) {
       TownScreenScaffold(
         title = "Summon Center",
         resources = state.resources,
@@ -243,7 +230,19 @@ fun SummonCenterScreen(
                 .padding(start = 8.dp, end = 8.dp, top = 4.dp, bottom = 6.dp),
             verticalArrangement = Arrangement.spacedBy(6.dp)
         ) {
-            SectionTabs(selected = section, onSelect = { section = it }, enabled = !busy)
+            // Zakladki, bannery i przyciski przygasaja razem ze scena - wzrok ma isc na krag.
+            val fade = Modifier.graphicsLayer { alpha = 1f - 0.8f * show.dim.value }
+
+            Box(modifier = fade) {
+                SectionTabs(
+                    selected = section,
+                    onSelect = { section = it },
+                    enabled = !busy,
+                    bump = show.collectionBump,
+                    arrived = show.arrived,
+                    onCollectionPlaced = { anchors.collectionTab = it }
+                )
+            }
 
             if (section == SummonSection.Collection) {
                 MonsterCollectionTab(
@@ -276,54 +275,60 @@ fun SummonCenterScreen(
                 return@Column
             }
 
-            BannerList(
-                selected = banner,
-                tickets = state.resources.summonTickets,
-                claims = state.freeSummonClaims,
-                now = now,
-                enabled = !busy,
-                onSelect = { banner = it }
-            )
+            Box(modifier = fade) {
+                BannerList(
+                    selected = banner,
+                    tickets = state.resources.summonTickets,
+                    claims = state.freeSummonClaims,
+                    now = now,
+                    enabled = !busy,
+                    onSelect = { banner = it }
+                )
+            }
 
-            // Scena rytualu bez ramki i bez panelu - tlo bedzie wlasna grafika, a obwodka tylko
+            // Scena rytualu bez ramki i bez panelu - tlo jest wlasna grafika, a obwodka tylko
             // dzielila ekran na pudelka.
             AltarStage(
-                banner = banner,
-                phase = phase,
-                pulled = pulled,
-                chargeValue = charge.value,
-                flashValue = flash.value,
-                riseValue = rise.value,
-                burstValue = burst.value,
-                modifier = Modifier.weight(1f)
+                show = show,
+                time = time,
+                fxColor = fxColor,
+                anchors = anchors,
+                modifier = Modifier
+                    .weight(1f)
+                    .onGloballyPositioned { anchors.stage = it }
             )
 
             val freeReady = FreeSummon.isReady(state.freeSummonClaims[banner.id], banner.cooldownMs, now)
 
-            SummonButtons(
-                banner = banner,
-                tickets = state.resources.summonTickets,
-                freeReady = freeReady,
-                enabled = !busy,
-                onSummon = { count ->
-                    val rolled = List(count) { banner.roll() }
-                    pulled = rolled
-                    // Darmowy summon x1 idzie osobna sciezka - bez kosztu, ze stemplem czasu.
-                    if (count == 1 && freeReady) {
-                        playerViewModel.claimFreeSummon(banner.id, banner.cooldownMs, rolled.first(), now)
-                    } else {
-                        // Placimy losami bannera za caly ciag - jeden zapis na cale losowanie.
-                        playerViewModel.summonMonsters(rolled, CraftCost(tickets = banner.ticketCost * count))
+            Box(modifier = fade) {
+                SummonButtons(
+                    banner = banner,
+                    tickets = state.resources.summonTickets,
+                    freeReady = freeReady,
+                    enabled = !busy,
+                    onSummon = { count ->
+                        val rolled = List(count) { banner.roll() }
+                        // "NEW!" liczymy PRZED zapisem: pierwsza kopia w tym losowaniu jest nowa,
+                        // druga tego samego kompana w tym samym x10 juz nie.
+                        val owned = state.collection.mapTo(mutableSetOf()) { it.card.id }
+                        val fresh = rolled.map { owned.add(it.id) }
+                        // Darmowy summon x1 idzie osobna sciezka - bez kosztu, ze stemplem czasu.
+                        if (count == 1 && freeReady) {
+                            playerViewModel.claimFreeSummon(banner.id, banner.cooldownMs, rolled.first(), now)
+                        } else {
+                            // Placimy losami bannera za caly ciag - jeden zapis na cale losowanie.
+                            playerViewModel.summonMonsters(rolled, CraftCost(tickets = banner.ticketCost * count))
+                        }
+                        show.start(rolled, fresh)
                     }
-                    phase = SummonPhase.Charging
-                }
-            )
+                )
+            }
         }
 
         // Komunikat jako NAKLADKA, nie element ukladu - wczesniej pojawiajaca sie linijka tekstu
-        // spychala cala zawartosc w gore i ekran skakal przy kazdym summonie. Siedzi NAD rzedem
-        // przyciskow, zeby ich nie przykrywac.
-        state.message?.let { message ->
+        // spychala cala zawartosc w gore i ekran skakal przy kazdym summonie. W trakcie pokazu
+        // milczy: "Joining your team: ..." w polowie rytualu zdradzalo wynik.
+        state.message?.takeIf { !busy }?.let { message ->
             Text(
                 text = message,
                 color = Gold,
@@ -342,18 +347,109 @@ fun SummonCenterScreen(
         }
       }
     }
+      }
+
+      // ---- nakladki pokazu: na calym ekranie, nad naglowkiem i zakladkami ----
+      if (section == SummonSection.Ritual && show.stage != ShowStage.Idle) {
+          ScreenFlash(show = show, color = fxColor, focus = { anchors.orb() }, modifier = Modifier.fillMaxSize())
+
+          val hero = show.hero
+          if (hero != null && !show.isMulti && hero.rarity >= Rarity.Epic) {
+              RarityShout(
+                  rarity = hero.rarity,
+                  show = show,
+                  centerY = { anchors.stageRect().let { it.top + it.height * 0.2f } },
+                  modifier = Modifier.fillMaxSize()
+              )
+          }
+
+          ConfettiRain(show = show, modifier = Modifier.fillMaxSize())
+
+          if (show.stage == ShowStage.Card && hero != null) {
+              RevealCardOverlay(
+                  show = show,
+                  card = hero,
+                  fresh = show.heroFresh,
+                  origin = { anchors.chest(show) },
+                  target = { anchors.stageRect().let { Offset(it.center.x, it.top + it.height * 0.47f) } },
+                  stowTo = { anchors.collectionCenter() },
+                  maxHeightPx = { anchors.stageRect().height },
+                  time = time
+              )
+          }
+
+          if (show.stage == ShowStage.Grid) {
+              GridOverlay(
+                  show = show,
+                  area = { anchors.stageRect() },
+                  origin = { anchors.orb() },
+                  stowTo = { anchors.collectionCenter() },
+                  time = time
+              )
+          }
+
+          // Tapniecie w trakcie rytualu przewija od razu do wyniku.
+          if (show.stage == ShowStage.Ritual || show.stage == ShowStage.Walkout) {
+              Box(
+                  modifier = Modifier
+                      .fillMaxSize()
+                      .clickable(interactionSource = noRipple, indication = null) { show.skip() }
+              )
+          }
+      }
+    }
+}
+
+/**
+ * Gdzie na ekranie sa oltarz i zakladka kolekcji. Trzymane jako ZWYKLE referencje, nie stan:
+ * przy trzesieniu ekranem pozycje zmieniaja sie co klatke, a nakladki i tak czytaja je dopiero
+ * przy rysowaniu - jako stan przebudowywalyby caly ekran 60 razy na sekunde.
+ */
+private class SummonAnchors {
+    var root: LayoutCoordinates? = null
+    var stage: LayoutCoordinates? = null
+    var collectionTab: LayoutCoordinates? = null
+    var geo: AltarGeometry? = null
+
+    private fun offsetOf(child: LayoutCoordinates?): Offset {
+        val r = root ?: return Offset.Zero
+        val c = child ?: return Offset.Zero
+        if (!r.isAttached || !c.isAttached) return Offset.Zero
+        return r.localPositionOf(c, Offset.Zero)
+    }
+
+    fun stageRect(): Rect = Rect(offsetOf(stage), stage?.size?.toSize() ?: Size.Zero)
+
+    fun orb(): Offset = geo?.let { offsetOf(stage) + it.orb } ?: stageRect().center
+
+    /** Srodek sylwetki z poprawka na najazd kamery (skala wokol kuli). */
+    fun chest(show: SummonShow): Offset {
+        val g = geo ?: return stageRect().center
+        val scale = 1f + 0.07f * show.zoom.value + 0.045f * show.punch.value
+        val scaled = g.orb + (g.chest - g.orb) * scale
+        return offsetOf(stage) + scaled
+    }
+
+    fun collectionCenter(): Offset {
+        val tab = collectionTab ?: return Offset(stageRect().center.x, 0f)
+        return offsetOf(tab) + Offset(tab.size.width / 2f, tab.size.height / 2f)
     }
 }
 
 /**
  * Przelacznik polowek budynku. Kolekcja siedzi TUTAJ, a nie w osobnej zakladce na dole ekranu, bo
  * to ta sama czynnosc co przyzywanie - zdobywasz kompana i od razu chcesz zobaczyc, co z nim zrobic.
+ *
+ * Zakladka Collection podskakuje z dymkiem "+N", gdy wpadaja do niej karty z losowania.
  */
 @Composable
 private fun SectionTabs(
     selected: SummonSection,
     onSelect: (SummonSection) -> Unit,
-    enabled: Boolean
+    enabled: Boolean,
+    bump: Animatable<Float, AnimationVector1D>,
+    arrived: Int,
+    onCollectionPlaced: (LayoutCoordinates) -> Unit
 ) {
     Row(
         modifier = Modifier.fillMaxWidth(),
@@ -361,27 +457,67 @@ private fun SectionTabs(
     ) {
         SummonSection.entries.forEach { entry ->
             val isSelected = entry == selected
+            val isCollection = entry == SummonSection.Collection
             Box(
                 modifier = Modifier
                     .weight(1f)
-                    .clip(RoundedCornerShape(10.dp))
-                    .background(if (isSelected) Ink else Ink.copy(alpha = 0.5f))
-                    .border(
-                        width = if (isSelected) 2.dp else 1.dp,
-                        color = if (isSelected) Gold else GoldDim.copy(alpha = 0.5f),
-                        shape = RoundedCornerShape(10.dp)
+                    .then(
+                        if (isCollection) {
+                            Modifier
+                                .onGloballyPositioned(onCollectionPlaced)
+                                .graphicsLayer {
+                                    // Szybki "pop" w gore i sprezyste osiadanie.
+                                    val p = bump.value
+                                    val s = if (p <= 0f || p >= 1f) 1f
+                                    else 1f + 0.3f * sin(PI.toFloat() * (p * 3f).coerceAtMost(1f)) * (1f - p)
+                                    scaleX = s
+                                    scaleY = s
+                                }
+                        } else Modifier
                     )
-                    .clickable(enabled = enabled) { onSelect(entry) }
-                    .padding(vertical = 6.dp),
-                contentAlignment = Alignment.Center
             ) {
-                Text(
-                    text = entry.label,
-                    color = if (isSelected) Gold else Muted,
-                    fontFamily = FontFirst(),
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 12.sp
-                )
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .clip(RoundedCornerShape(10.dp))
+                        .background(if (isSelected) Ink else Ink.copy(alpha = 0.5f))
+                        .border(
+                            width = if (isSelected) 2.dp else 1.dp,
+                            color = if (isSelected) Gold else GoldDim.copy(alpha = 0.5f),
+                            shape = RoundedCornerShape(10.dp)
+                        )
+                        .clickable(enabled = enabled) { onSelect(entry) }
+                        .padding(vertical = 6.dp),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text(
+                        text = entry.label,
+                        color = if (isSelected) Gold else Muted,
+                        fontFamily = FontFirst(),
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 12.sp
+                    )
+                }
+                if (isCollection && arrived > 0) {
+                    StrokedText(
+                        text = "+$arrived",
+                        size = 13.sp,
+                        color = Color(0xFF7CF08A),
+                        outline = Color(0xFF0B1A0E),
+                        strokeWidth = 5f,
+                        modifier = Modifier
+                            .align(Alignment.TopEnd)
+                            .offset(x = 4.dp, y = (-12).dp)
+                            .graphicsLayer {
+                                val p = bump.value
+                                alpha = if (p <= 0f || p >= 1f) 0f else ((1f - p) / 0.3f).coerceIn(0f, 1f)
+                                translationY = -p * 16.dp.toPx()
+                                val pop = 1f + 0.4f * (1f - (p * 4f).coerceAtMost(1f))
+                                scaleX = pop
+                                scaleY = pop
+                            }
+                    )
+                }
             }
         }
     }
@@ -506,134 +642,118 @@ private fun BannerCard(
 }
 
 /**
- * Oltarz + cala scena rytualu. Warstwy od dolu: aura/krag -> oltarz -> potwor -> blysk.
- * Potwor jest rysowany NAD oltarzem i wyjezdza od jego podstawy, wiec czyta sie to jak wylanianie
- * sie z kregu, a nie doklejenie obrazka.
+ * Oltarz + cala scena pokazu. Warstwy od dolu: oltarz -> swiatlo, krag, promienie, slup, kula
+ * ([RitualUnderFx]) -> kompan -> iskry, fale, kurz ([RitualOverFx]). Najazd kamery skaluje wszystko
+ * razem wokol kuli energii, wiec efekty nie rozjezdzaja sie z kamieniem.
  */
 @Composable
 private fun AltarStage(
-    banner: SummonBanner,
-    phase: SummonPhase,
-    pulled: List<MonsterCard>,
-    chargeValue: Float,
-    flashValue: Float,
-    riseValue: Float,
-    burstValue: Float,
+    show: SummonShow,
+    time: State<Float>,
+    fxColor: State<Color>,
+    anchors: SummonAnchors,
     modifier: Modifier = Modifier
 ) {
-    val hero = pulled.firstOrNull()
-    val accent = hero?.rarity?.color() ?: banner.accent
-    // Im rzadszy summon, tym wiekszy i mocniejszy caly pokaz - to po tym gracz ma poznac, ze
-    // wypadlo mu cos dobrego, jeszcze zanim przeczyta tabliczke.
-    val power = hero?.rarity?.effectPower() ?: 1f
+    val hero = show.hero
+    val stage = show.stage
 
-    // Bez TownPanel: zadnej ramki ani tla. Scena ma byc otwarta - docelowo pod spodem stanie
-    // wlasna grafika tla, a obwodka tylko robilaby z niej "pudelko na ekranie".
     Box(modifier = modifier.fillMaxWidth()) {
         BoxWithConstraints(modifier = Modifier.fillMaxSize()) {
-            // ContentScale.Fit na fillMaxSize() dobiera rozmiar SAM, z obu wymiarow naraz - bez
-            // recznie dobieranego mnoznika, ktory trzeba przeliczac za kazdym razem, gdy podmienia
-            // sie PNG (poprzedni "1.75x" byl skalibrowany pod stary plik, gdzie oltarz zajmowal
-            // tylko 52% wlasnego kadru - przy nowym, ktory wypelnia 94%, dawal zle wyniki). Oltarz
-            // jest kwadratowy, wiec renderowany bok = krotszy wymiar dostepnej przestrzeni.
-            // Krag jest teraz WIEKSZY niz krotszy bok sceny ([ALTAR_SCALE]) - przy zwyklym
-            // ContentScale.Fit w wysokiej, waskiej scenie oltarz zajmowal tylko jej srodek i
-            // ginal w tle, a rytual wygladal jak miniaturka.
+            val density = LocalDensity.current
+            // Krag jest WIEKSZY niz krotszy bok sceny ([ALTAR_SCALE]) - przy zwyklym Fit w wysokiej,
+            // waskiej scenie oltarz zajmowal tylko jej srodek i rytual wygladal jak miniaturka.
             val altarSide = minOf(maxWidth, maxHeight) * ALTAR_SCALE
-            // Plyta kregu (= stopy przyzwanego potwora) ladujaca na TEJ SAMEJ wysokosci sceny co
-            // kamien z kompanem w zakladce Collection. Wczesniej oltarz byl po prostu wysrodkowany
-            // w pionie, wiec przy przelaczeniu zakladki postac przeskakiwala.
+            // Plyta kregu (= stopy kompana) na TEJ SAMEJ wysokosci sceny co kamien z kompanem
+            // w zakladce Collection - przelaczanie zakladek nie przesuwa postaci.
             val platformY = maxHeight * ALTAR_PLATFORM_SCENE_FRACTION
-            // Wysokosc plyty kregu w kadrze (ulamek CALEGO kwadratowego PNG, zmierzone z pliku).
             val altarTop = platformY - altarSide * ALTAR_PLATFORM_Y_FRACTION
-            // Ta sama wysokosc, ale jako ulamek CALEJ sceny - Canvas efektow liczy w pikselach.
-            val platformFraction = platformY / maxHeight
+            val preset = hero?.let { MonsterVisualPresets.forSpecies(it.spriteKey) }
+            val monsterSize = (preset?.baseSizeDp ?: 100.dp) * SUMMONED_MONSTER_SCALE
+            val stageWidth = maxWidth
 
-            // Poswiata POD oltarzem - tylko delikatne podswietlenie tla sceny.
-            RitualGlow(
-                accent = accent,
-                // Poswiata ZOSTAJE po rytuale - to ona daje wrazenie oswietlonej sceny. Nie mnozymy
-                // jej juz przez `power`: to wlasnie ten mnoznik wypychal alfe do maksimum przy
-                // rzadszych summonach i zamiast swiatla robil jednolity zielony/niebieski filtr.
-                intensity = chargeValue,
-                platformFraction = platformFraction,
-                modifier = Modifier.fillMaxSize()
-            )
+            val geo = remember(maxWidth, maxHeight, hero?.spriteKey) {
+                with(density) {
+                    val w = maxWidth.toPx()
+                    val h = maxHeight.toPx()
+                    val side = altarSide.toPx()
+                    val top = altarTop.toPx()
+                    val circleCenter = Offset(w / 2f, top + side * CIRCLE_Y_IN_ALTAR)
+                    val feet = Offset(w / 2f, platformY.toPx())
+                    val body = monsterSize.toPx() * (preset?.visualScale ?: 1f) * (1f - SPRITE_EDGE_PADDING)
+                    AltarGeometry(
+                        size = Size(w, h),
+                        circleCenter = circleCenter,
+                        circleRx = side * CIRCLE_RADIUS_IN_ALTAR,
+                        feet = feet,
+                        orb = Offset(w / 2f, circleCenter.y - side * ORB_LIFT_IN_ALTAR),
+                        chest = Offset(w / 2f, feet.y - body * 0.5f),
+                        base = minOf(w, h) * 0.5f * EFFECT_SCALE
+                    )
+                }
+            }
+            SideEffect { anchors.geo = geo }
 
-            // Oltarz i jego swiatla siedza w JEDNYM pudelku - inaczej znaki musialyby powtarzac
-            // caly rachunek pozycji i skali, i rozjezdzalyby sie z grafika przy kazdej zmianie
-            // [ALTAR_SCALE] albo rozmiaru sceny.
             Box(
                 modifier = Modifier
-                    .align(Alignment.TopCenter)
-                    .offset(y = altarTop)
-                    .size(altarSide)
+                    .fillMaxSize()
                     .graphicsLayer {
-                        // Oltarz lekko "oddycha" w trakcie ladowania rytualu.
-                        val pulse = 1f + 0.05f * chargeValue
-                        scaleX = pulse
-                        scaleY = pulse
+                        // Najazd kamery na krag + szarpniecie w chwili wybuchu.
+                        val s = 1f + 0.07f * show.zoom.value + 0.045f * show.punch.value
+                        scaleX = s
+                        scaleY = s
+                        transformOrigin = TransformOrigin(0.5f, (geo.orb.y / geo.size.height).coerceIn(0f, 1f))
                     }
             ) {
                 Image(
                     painter = painterResource(Resources.CityIsland.altar),
                     contentDescription = "Altar",
                     contentScale = ContentScale.Fit,
-                    modifier = Modifier.fillMaxSize()
-                )
-
-                // Runy, krag i swiece zapalaja sie w kolorze rzadkosci - patrz [AltarRuneLights].
-                AltarRuneLights(
-                    accent = accent,
-                    // W spoczynku znaki tylko sie tla; po kliknieciu summona rozpalaja sie razem z
-                    // ladowaniem rytualu i dostaja dodatkowy kop w momencie blysku.
-                    intensity = (ALTAR_RUNE_IDLE + (1f - ALTAR_RUNE_IDLE) * chargeValue + flashValue)
-                        .coerceIn(0f, 1f),
-                    charge = chargeValue,
-                    modifier = Modifier.fillMaxSize()
-                )
-            }
-
-            // Fala uderzeniowa NAD oltarzem - wczesniej cala warstwa efektow szla pod grafika,
-            // wiec oltarz ja zasłaniał i po podmianie na nieprzezroczysty PNG zrobila sie
-            // praktycznie niewidoczna.
-            SummonBurst(
-                accent = accent,
-                charge = chargeValue,
-                burst = burstValue,
-                power = power,
-                platformFraction = platformFraction,
-                modifier = Modifier.fillMaxSize()
-            )
-
-            if (hero != null && phase >= SummonPhase.Reveal) {
-                val preset = MonsterVisualPresets.forSpecies(hero.spriteKey)
-                SummonedMonster(
-                    card = hero,
-                    rise = riseValue,
                     modifier = Modifier
                         .align(Alignment.TopCenter)
-                        // Stopy potwora dokladnie na plycie kregu, niezaleznie od tego jak wysoki
-                        // jest sprite danego gatunku. +SPRITE_EDGE_PADDING: kadr sprite'a ma pod
-                        // stopami wlasny pusty margines (~13% wysokosci), wiec bez tej poprawki
-                        // bohater wisi nad kregiem - tym bardziej, im wiekszy go rysujemy.
-                        .offset(
-                            y = platformY - preset.baseSizeDp * SUMMONED_MONSTER_SCALE *
-                                (1f - SPRITE_EDGE_PADDING)
+                        .offset(y = altarTop)
+                        .size(altarSide)
+                )
+
+                RitualUnderFx(show = show, geo = geo, color = fxColor, time = time, modifier = Modifier.fillMaxSize())
+
+                val heroVisible = hero != null && when (stage) {
+                    ShowStage.Walkout, ShowStage.Card -> !show.isMulti
+                    ShowStage.Done -> true
+                    else -> false
+                }
+                if (heroVisible && hero != null) {
+                    RevealedMonster(
+                        card = hero,
+                        show = show,
+                        glow = fxColor,
+                        time = time,
+                        size = monsterSize,
+                        feetPivot = 1f - SPRITE_EDGE_PADDING,
+                        silhouette = stage == ShowStage.Walkout,
+                        modifier = Modifier
+                            .align(Alignment.TopCenter)
+                            // Stopy dokladnie na plycie kregu. Kadr sprite'a ma pod stopami wlasny
+                            // pusty margines ([SPRITE_EDGE_PADDING]) - bez poprawki kompan wisi.
+                            .offset(y = platformY - monsterSize * (1f - SPRITE_EDGE_PADDING))
+                    )
+                    if (hero.rarity >= Rarity.Rare && (stage == ShowStage.Walkout || stage == ShowStage.Card)) {
+                        ElementClue(
+                            element = hero.element,
+                            show = show,
+                            modifier = Modifier
+                                .align(Alignment.TopCenter)
+                                .offset(
+                                    x = -minOf(monsterSize * 0.42f + 46.dp, stageWidth / 2 - 50.dp),
+                                    y = platformY - monsterSize * 0.98f
+                                )
                         )
-                )
+                    }
+                }
+
+                RitualOverFx(show = show, geo = geo, color = fxColor, time = time, modifier = Modifier.fillMaxSize())
             }
 
-            // Tabliczka na samej gorze sceny - wczesniej siedziala pod potworem i zaslaniala oltarz.
-            if (hero != null && phase == SummonPhase.Result) {
-                NamePlate(
-                    card = hero,
-                    accent = accent,
-                    modifier = Modifier.align(Alignment.TopCenter).padding(top = 6.dp)
-                )
-            }
-
-            if (phase == SummonPhase.Idle) {
+            if (stage == ShowStage.Idle) {
                 Text(
                     text = "Pick a banner and start the ritual.",
                     color = Muted,
@@ -643,238 +763,50 @@ private fun AltarStage(
                 )
             }
 
-            // Wynik x10 - siatka kart nad oltarzem, gdy rytual sie skonczy.
-            if (phase == SummonPhase.Result && pulled.size > 1) {
-                MultiPullGrid(
-                    pulled = pulled,
-                    modifier = Modifier.align(Alignment.BottomCenter).padding(8.dp)
-                )
-            }
-
-            // Blysk na wierzchu wszystkiego - moment "puf" miedzy ladowaniem a wyjsciem potwora.
-            if (flashValue > 0f) {
-                Box(
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .background(
-                            Brush.radialGradient(
-                                colors = listOf(
-                                    Color.White.copy(alpha = flashValue),
-                                    accent.copy(alpha = flashValue * 0.9f),
-                                    Color.Transparent
-                                )
-                            )
-                        )
-                )
+            // Po pokazie: tabliczka z imieniem nad kompanem, ktory zostal na oltarzu.
+            AnimatedVisibility(
+                visible = stage == ShowStage.Done && hero != null,
+                enter = fadeIn(tween(400)) + scaleIn(tween(400), initialScale = 0.85f),
+                modifier = Modifier.align(Alignment.TopCenter).padding(top = 6.dp)
+            ) {
+                hero?.let { NamePlate(card = it) }
             }
         }
     }
 }
 
-/** Miekka poswiata pod oltarzem - jedyna warstwa efektow rysowana POD grafika. */
 @Composable
-private fun RitualGlow(
-    accent: Color,
-    intensity: Float,
-    platformFraction: Float,
-    modifier: Modifier = Modifier
-) {
-    if (intensity <= 0.01f) return
-
-    val transition = rememberInfiniteTransition(label = "glow")
-    val pulse by transition.animateFloat(
-        initialValue = 0.92f,
-        targetValue = 1.15f,
-        animationSpec = infiniteRepeatable(
-            animation = tween(1200, easing = FastOutSlowInEasing),
-            repeatMode = RepeatMode.Reverse
-        ),
-        label = "glowPulse"
-    )
-
-    Canvas(modifier = modifier) {
-        val center = Offset(size.width / 2f, size.height * platformFraction)
-        val radius = size.minDimension * 0.72f * EFFECT_SCALE * pulse * (0.7f + 0.3f * intensity)
-        drawCircle(
-            brush = Brush.radialGradient(
-                colors = listOf(accent.copy(alpha = GLOW_MAX_ALPHA * intensity.coerceIn(0f, 1f)), Color.Transparent),
-                center = center,
-                radius = radius
-            ),
-            radius = radius,
-            center = center
-        )
-    }
-}
-
-/**
- * Cala "pirotechnika" rytualu, rysowana NAD oltarzem: zbierajaca sie energia w trakcie ladowania,
- * a potem rozchodzace sie pierscienie uderzeniowe, slup swiatla i iskry.
- *
- * Wszystko skaluje sie [power] (rzadkosc summona) - pospolity dostaje jeden skromny pierscien,
- * legendarny pelny pokaz z kilkoma falami i szerokim slupem swiatla.
- */
-@Composable
-private fun SummonBurst(
-    accent: Color,
-    charge: Float,
-    burst: Float,
-    power: Float,
-    platformFraction: Float,
-    modifier: Modifier = Modifier
-) {
-    if (charge <= 0.01f && burst <= 0.01f) return
-
-    val transition = rememberInfiniteTransition(label = "beam")
-    val breathe by transition.animateFloat(
-        initialValue = 0.82f,
-        targetValue = 1f,
-        animationSpec = infiniteRepeatable(
-            animation = tween(1800, easing = FastOutSlowInEasing),
-            repeatMode = RepeatMode.Reverse
-        ),
-        label = "beamBreathe"
-    )
-
-    Canvas(modifier = modifier) {
-        val center = Offset(size.width / 2f, size.height * platformFraction)
-        val baseRadius = size.minDimension * 0.5f * EFFECT_SCALE
-
-        // 1. Ladowanie - jasny rdzen zbierajacy sie na plycie kregu, zanim strzeli.
-        if (charge > 0f && burst <= 0f) {
-            val coreRadius = baseRadius * (0.10f + 0.22f * charge) * power
-            drawCircle(
-                brush = Brush.radialGradient(
-                    colors = listOf(
-                        Color.White.copy(alpha = 0.85f * charge),
-                        accent.copy(alpha = 0.7f * charge),
-                        Color.Transparent
-                    ),
-                    center = center,
-                    radius = coreRadius
-                ),
-                radius = coreRadius,
-                center = center
-            )
-        }
-
-        if (burst <= 0f) return@Canvas
-
-        // 2. Slup swiatla nad kregiem - prosty prostokat z OSTRYMI bokami, jak promien teleportu.
-        //
-        // Swiadomie bez rozmywania krawedzi bocznych i bez stozka: ten twardy, pionowy slup czyta
-        // sie jak "cos sie tu wlasnie zmaterializowalo", a proby zmiekczania bokow (gradient
-        // poziomy, rozszerzanie ku dolowi) odbieraly mu ten charakter.
-        //
-        // Caly efekt siedzi w gradiencie PIONOWYM: przy plycie kregu slup jest calkiem
-        // przezroczysty i nie zaslania summona, a im wyzej, tym bardziej lity.
-        val beamFade = breathe
-        val beamWidth = baseRadius * (0.22f + 0.16f * power)
-
-        // Slup WYSUWA sie z sufitu: rosnie w dol od gornej krawedzi az do plyty kregu. Rozciaga
-        // sie w pierwszych ~40% fali, potem juz tylko stoi (i delikatnie oddycha).
-        val beamExtend = (burst * BEAM_EXTEND_SPEED).coerceIn(0f, 1f)
-        val beamBottom = center.y * beamExtend
-
-        if (beamBottom > 1f) {
-            drawRect(
-                brush = Brush.verticalGradient(
-                    colors = listOf(
-                        Color.White.copy(alpha = BEAM_TOP_ALPHA * beamFade),
-                        accent.copy(alpha = BEAM_TOP_ALPHA * 0.75f * beamFade),
-                        Color.Transparent
-                    ),
-                    startY = 0f,
-                    // Gradient konczy sie na BIEZACEJ dlugosci slupa, nie na docelowej - dzieki
-                    // temu jego czolo jest zawsze wygaszone do zera i "zjezdza" w dol, zamiast
-                    // ciac scene twarda pozioma krawedzia w polowie jasnosci.
-                    endY = beamBottom
-                ),
-                topLeft = Offset(center.x - beamWidth / 2f, 0f),
-                size = Size(beamWidth, beamBottom)
-            )
-        }
-
-        // 3. Iskry rozlatujace sie od kregu - proste, ale mocno podbijaja wrazenie wybuchu.
-        val sparkCount = (6 * power).toInt().coerceIn(6, 20)
-        val sparkAlpha = ((1f - burst) * 0.95f).coerceIn(0f, 1f)
-        repeat(sparkCount) { index ->
-            val angle = (index.toFloat() / sparkCount) * 2f * PI.toFloat()
-            val distance = baseRadius * (0.2f + 1.0f * burst) * (0.8f + 0.35f * power)
-            val sparkCenter = Offset(
-                x = center.x + cos(angle) * distance,
-                y = center.y + sin(angle) * distance * 0.55f
-            )
-            drawCircle(
-                color = Color.White.copy(alpha = sparkAlpha),
-                radius = (3f + 3f * power) * (1f - burst * 0.6f),
-                center = sparkCenter
-            )
-        }
-    }
-}
-
-/**
- * Wychodzacy potwor - jednoczesnie wyjezdza z dolu, rosnie i sie rozjasnia. [rise] 0..1 z
- * [EaseOutBack], wiec na koncu lekko "przestrzeliwuje" i osiada - stad wrazenie wejscia z impetem.
- */
-@Composable
-private fun SummonedMonster(
-    card: MonsterCard,
-    rise: Float,
-    modifier: Modifier = Modifier
-) {
-    val preset = MonsterVisualPresets.forSpecies(card.spriteKey)
-
-    Image(
-        painter = painterResource(preset.drawable),
-        contentDescription = card.name,
-        contentScale = ContentScale.Fit,
-        modifier = modifier
-            // Bohater po wyjsciu z kregu byl mniejszy niz sam krag - na scenie, ktora jest
-            // punktem kulminacyjnym calego ekranu, to gubilo caly efekt.
-            .size(preset.baseSizeDp * SUMMONED_MONSTER_SCALE)
-            .graphicsLayer {
-                val scale = (0.55f + 0.45f * rise) * preset.visualScale
-                scaleX = scale
-                scaleY = scale
-                translationY = (1f - rise) * MONSTER_RISE_DISTANCE_PX
-                alpha = rise.coerceIn(0f, 1f)
-            }
-    )
-}
-
-@Composable
-private fun NamePlate(card: MonsterCard, accent: Color, modifier: Modifier = Modifier) {
-    Column(
+private fun NamePlate(card: MonsterCard, modifier: Modifier = Modifier) {
+    val accent = card.rarity.fx()
+    Row(
         modifier = modifier
             .clip(RoundedCornerShape(10.dp))
-            .background(Ink.copy(alpha = 0.9f))
+            .background(Ink.copy(alpha = 0.88f))
             .border(2.dp, accent, RoundedCornerShape(10.dp))
-            .padding(horizontal = 14.dp, vertical = 6.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(2.dp)
+            .padding(start = 6.dp, end = 12.dp, top = 4.dp, bottom = 4.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(6.dp)
     ) {
-        Text(
-            text = card.rarity.label(),
-            color = accent,
-            fontFamily = FontPixel(),
-            fontWeight = FontWeight.Bold,
-            fontSize = 11.sp
-        )
-        Text(
-            text = card.name,
-            color = Color.White,
-            fontFamily = FontPixel(),
-            fontWeight = FontWeight.Bold,
-            fontSize = 13.sp
-        )
-        Text(
-            text = "❤ ${card.hp}   ⚔ ${card.attack}",
-            color = TextBody.copy(alpha = 0.85f),
-            fontFamily = FontFirst(),
-            fontSize = 10.sp
-        )
+        ElementEmblem(element = card.element, size = 26.dp)
+        Column {
+            Text(
+                text = RarityPalette.label(card.rarity).uppercase(),
+                color = accent,
+                fontFamily = FontFirst(),
+                fontWeight = FontWeight.Black,
+                fontSize = 9.sp,
+                lineHeight = 10.sp,
+                letterSpacing = 0.8.sp
+            )
+            Text(
+                text = card.name,
+                color = Color.White,
+                fontFamily = FontFirst(),
+                fontWeight = FontWeight.Black,
+                fontSize = 13.sp,
+                lineHeight = 15.sp
+            )
+        }
     }
 }
 
@@ -973,49 +905,6 @@ private fun SummonPill(
     }
 }
 
-/** Wynik summona x10 - male karty wszystkich wylosowanych kompanow, w rzedach po piec. */
-@Composable
-private fun MultiPullGrid(pulled: List<MonsterCard>, modifier: Modifier = Modifier) {
-    Column(
-        modifier = modifier,
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(4.dp)
-    ) {
-        pulled.chunked(5).forEach { row ->
-            Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
-                row.forEach { card ->
-                    val accent = card.rarity.color()
-                    Column(
-                        modifier = Modifier
-                            .size(width = 52.dp, height = 62.dp)
-                            .clip(RoundedCornerShape(8.dp))
-                            .background(Ink.copy(alpha = 0.9f))
-                            .border(1.5.dp, accent, RoundedCornerShape(8.dp))
-                            .padding(3.dp),
-                        horizontalAlignment = Alignment.CenterHorizontally,
-                        verticalArrangement = Arrangement.spacedBy(2.dp)
-                    ) {
-                        Image(
-                            painter = painterResource(MonsterVisualPresets.forSpecies(card.spriteKey).drawable),
-                            contentDescription = null,
-                            contentScale = ContentScale.Fit,
-                            modifier = Modifier.weight(1f)
-                        )
-                        Text(
-                            text = card.rarity.label(),
-                            color = accent,
-                            fontFamily = FontFirst(),
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 7.sp,
-                            maxLines = 1
-                        )
-                    }
-                }
-            }
-        }
-    }
-}
-
 /** Losuje rzadkosc wg wag bannera, a potem konkretnego potwora z tej rzadkosci. */
 private fun SummonBanner.roll(): MonsterCard {
     val total = weights.values.sum().coerceAtLeast(1)
@@ -1034,56 +923,17 @@ private fun SummonBanner.roll(): MonsterCard {
     return pool[Random.nextInt(pool.size)]
 }
 
-private fun Rarity.color(): Color = when (this) {
-    Rarity.Common -> Color(0xFF9DB2C4)
-    Rarity.Uncommon -> Color(0xFF22A55E)
-    Rarity.Rare -> Color(0xFF2F8FE0)
-    Rarity.Epic -> Color(0xFF8B5CF6)
-    Rarity.Legendary -> Color(0xFFFFB020)
-}
-
-/** Mnoznik rozmachu efektow - patrz [SummonBurst]. */
-private fun Rarity.effectPower(): Float = when (this) {
-    Rarity.Common -> 1.0f
-    Rarity.Uncommon -> 1.35f
-    Rarity.Rare -> 1.75f
-    Rarity.Epic -> 2.2f
-    Rarity.Legendary -> 2.8f
-}
-
-private fun Rarity.label(): String = when (this) {
-    Rarity.Common -> "POSPOLITY"
-    Rarity.Uncommon -> "NIEZWYKLY"
-    Rarity.Rare -> "RZADKI"
-    Rarity.Epic -> "EPICKI"
-    Rarity.Legendary -> "LEGENDARNY"
-}
-
-private const val CHARGE_MS = 750
-private const val FLASH_MS = 260
-
-/** Fala uderzeniowa biegnie dluzej niz sam blysk - jeszcze w trakcie wstawania potwora. */
-private const val BURST_MS = 900
-
-/** Krycie slupa u samej gory; przy plycie kregu schodzi do zera - patrz [SummonBurst]. */
-private const val BEAM_TOP_ALPHA = 0.8f
-
-/** Jak szybko slup wysuwa sie z sufitu wzgledem calej fali (2.5 = pelna dlugosc po ~40% fali). */
-private const val BEAM_EXTEND_SPEED = 2.5f
-
-/** Krycie duzej poswiaty na scenie. Powyzej ~0.45 przestaje oswietlac, a zaczyna barwic. */
-private const val GLOW_MAX_ALPHA = 0.38f
-private const val RISE_MS = 720
-private const val REVEAL_HOLD_MS = 500L
-
-/** O ile pikseli nizej startuje potwor, zanim "wyjdzie" z oltarza. */
-private const val MONSTER_RISE_DISTANCE_PX = 140f
-
-/** Gdzie w (kwadratowym) kadrze oltarza jest powierzchnia kregu (zmierzone z pliku PNG). */
-// Wysokosc kregu rytualnego w kadrze summon_center.png (ulamek calego kwadratowego PNG) - tu
-// laduja stopy przyzwanego potwora. Zmierzone z pliku: srodek gwiazdy ~0.61, przednia krawedz
-// plyty ~0.76; stopy na srodku-przodzie kregu.
+/** Gdzie w (kwadratowym) kadrze oltarza stoja stopy kompana - srodek-przod plyty kregu. */
 private const val ALTAR_PLATFORM_Y_FRACTION = 0.66f
+
+/** Srodek wyrytego kregu na plycie oltarza (ulamek kadru) - zmierzone na summon_center.webp. */
+private const val CIRCLE_Y_IN_ALTAR = 0.60f
+
+/** Promien wyrytego kregu (ulamek szerokosci kadru oltarza). */
+private const val CIRCLE_RADIUS_IN_ALTAR = 0.215f
+
+/** O ile nad srodkiem kregu wisi kula energii (ulamek kadru oltarza). */
+private const val ORB_LIFT_IN_ALTAR = 0.085f
 
 /** O ile krag jest wiekszy od krotszego boku sceny - powyzej 1 celowo wychodzi poza kadr. */
 private const val ALTAR_SCALE = 1.25f
@@ -1095,13 +945,13 @@ private const val ALTAR_SCALE = 1.25f
  */
 private const val ALTAR_PLATFORM_SCENE_FRACTION = 0.60f
 
-/** O ile wiekszy jest przyzwany bohater od swojego bazowego rozmiaru z presetu. */
+/** O ile wiekszy jest przyzwany kompan od swojego bazowego rozmiaru z presetu. */
 private const val SUMMONED_MONSTER_SCALE = 1.55f
 
 /** Przezroczysty margines w kadrze sprite'a potwora - zmierzone na plikach, jak w FloatingIsland. */
 private const val SPRITE_EDGE_PADDING = 0.13f
 
-/** Mnoznik promieni poswiaty i fali rytualu - efekty maja byc widoczne, nie subtelne. */
+/** Mnoznik skali efektow rytualu - maja byc widoczne, nie subtelne. */
 private const val EFFECT_SCALE = 1.35f
 
 /** Ile miejsca zostawic pod komunikatem, zeby nie wszedl na rzad przyciskow summona. */

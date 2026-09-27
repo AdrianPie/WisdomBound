@@ -1,5 +1,6 @@
 package com.lernhero.shared.monetization
 
+import com.lernhero.shared.theme.GlyphText
 import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.RepeatMode
 import androidx.compose.animation.core.animateFloat
@@ -43,6 +44,7 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.StrokeJoin
+import androidx.compose.ui.graphics.drawscope.Fill
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.drawscope.rotate
 import androidx.compose.ui.graphics.graphicsLayer
@@ -69,9 +71,6 @@ private val Green = Color(0xFF5FD08A)
 private val Violet = Color(0xFF6B2FC4)
 
 /** Ceny zapasowe - pokazywane, dopoki sklep nie poda wlasnych (np. przed podpieciem RevenueCat). */
-private const val FALLBACK_MONTH = "29,99 zł"
-private const val FALLBACK_YEAR = "199,99 zł"
-private const val YEAR_DISCOUNT = "-44%"
 
 /**
  * Okno subskrypcji premium - jedno dla calej gry. Otwieraja je panel generowania AI i czytnik po
@@ -126,11 +125,16 @@ fun PremiumPaywallContent(
     var yearly by remember { mutableStateOf(true) }
 
     LaunchedEffect(Unit) {
-        offers = if (subscription.isAvailable) subscription.offers() else emptyList()
+        offers = if (subscription.isAvailable) subscription.offers().also { StorePriceCache.putOffers(it) } else emptyList()
     }
     val monthOffer = offers?.firstOrNull { it.period == "month" }
     val yearOffer = offers?.firstOrNull { it.period == "year" }
     val chosen = if (yearly) yearOffer else monthOffer
+    // Ceny zawsze ze sklepu (waluta gracza); zanim odpowie - ostatnie zapamietane, nigdy zlotowki na sztywno.
+    val monthPrice = monthOffer?.price ?: StorePriceCache.get(StorePriceCache.SUB_MONTH) ?: StorePriceCache.PENDING
+    val yearPrice = yearOffer?.price ?: StorePriceCache.get(StorePriceCache.SUB_YEAR) ?: StorePriceCache.PENDING
+    val yearPerMonth = yearOffer?.pricePerMonth ?: StorePriceCache.get(StorePriceCache.SUB_YEAR_PER_MONTH)
+    val discount = StorePriceCache.yearlyDiscount(monthOffer, yearOffer) ?: StorePriceCache.get(StorePriceCache.SUB_DISCOUNT)
 
     val infinite = rememberInfiniteTransition()
     val spin by infinite.animateFloat(0f, 360f, infiniteRepeatable(tween(20_000, easing = LinearEasing)))
@@ -168,7 +172,7 @@ fun PremiumPaywallContent(
                 drawCircle(Brush.radialGradient(listOf(Gold.copy(alpha = 0.45f), Color.Transparent), c, 110f * density), 110f * density, c)
             }
             Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                Text(
+                GlyphText(
                     text = "👑",
                     fontSize = 64.sp,
                     modifier = Modifier.graphicsLayer {
@@ -177,7 +181,7 @@ fun PremiumPaywallContent(
                     }
                 )
                 Outlined("PREMIUM", 34.sp, Gold)
-                Text(
+                GlyphText(
                     text = reason ?: "Learn faster. Play without limits.",
                     color = Cream,
                     fontFamily = FontFirst(),
@@ -188,7 +192,7 @@ fun PremiumPaywallContent(
                 )
             }
             if (onClose != null) {
-                Text(
+                GlyphText(
                     text = "✕",
                     color = Cream,
                     fontWeight = FontWeight.Black,
@@ -229,7 +233,7 @@ fun PremiumPaywallContent(
             }
 
             when {
-                isPremium -> Text(
+                isPremium -> GlyphText(
                     text = "✓ PREMIUM IS ACTIVE",
                     color = Green,
                     fontFamily = FontPixel(),
@@ -243,7 +247,7 @@ fun PremiumPaywallContent(
                     Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(10.dp)) {
                         PlanCard(
                             title = "Monthly",
-                            price = monthOffer?.price ?: FALLBACK_MONTH,
+                            price = monthPrice,
                             per = "/ month",
                             sub = "Cancel anytime",
                             selected = !yearly,
@@ -253,11 +257,11 @@ fun PremiumPaywallContent(
                         )
                         PlanCard(
                             title = "Yearly",
-                            price = yearOffer?.price ?: FALLBACK_YEAR,
+                            price = yearPrice,
                             per = "/ year",
-                            sub = "Only 16,67 zł / month",
+                            sub = yearPerMonth?.let { "Only $it / month" } ?: "Save vs monthly",
                             selected = yearly,
-                            badge = "BEST VALUE $YEAR_DISCOUNT",
+                            badge = listOfNotNull("BEST VALUE", discount).joinToString(" "),
                             onClick = { yearly = true },
                             modifier = Modifier.weight(1f)
                         )
@@ -310,8 +314,8 @@ fun PremiumPaywallContent(
                     }
 
                     when {
-                        offers == null -> Text("Loading prices...", color = Muted, fontFamily = FontFirst(), fontSize = 11.sp)
-                        chosen == null -> Text(
+                        offers == null -> GlyphText("Loading prices...", color = Muted, fontFamily = FontFirst(), fontSize = 11.sp)
+                        chosen == null -> GlyphText(
                             "Subscriptions open soon - the store isn't connected yet.",
                             color = Muted,
                             fontFamily = FontFirst(),
@@ -322,10 +326,10 @@ fun PremiumPaywallContent(
                 }
             }
 
-            note?.let { Text(text = it, color = Color(0xFFE7A08A), fontFamily = FontFirst(), fontSize = 11.sp, textAlign = TextAlign.Center) }
+            note?.let { GlyphText(text = it, color = Color(0xFFE7A08A), fontFamily = FontFirst(), fontSize = 11.sp, textAlign = TextAlign.Center) }
 
             if (subscription.isAvailable && !isPremium) {
-                Text(
+                GlyphText(
                     text = "Restore purchases",
                     color = Muted,
                     fontFamily = FontFirst(),
@@ -339,7 +343,7 @@ fun PremiumPaywallContent(
                     }.padding(4.dp)
                 )
             }
-            Text(
+            GlyphText(
                 text = "Renews automatically until cancelled in your store account.",
                 color = Muted.copy(alpha = 0.7f),
                 fontFamily = FontFirst(),
@@ -356,8 +360,8 @@ private fun CompareRow(icon: String, title: String, free: String, premium: Strin
         modifier = Modifier.fillMaxWidth().padding(horizontal = 12.dp, vertical = 5.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
-        Text(text = icon, fontSize = 15.sp, modifier = Modifier.widthIn(min = 24.dp))
-        Text(
+        GlyphText(text = icon, fontSize = 15.sp, modifier = Modifier.widthIn(min = 24.dp))
+        GlyphText(
             text = title,
             color = Cream,
             fontFamily = FontFirst(),
@@ -365,7 +369,7 @@ private fun CompareRow(icon: String, title: String, free: String, premium: Strin
             fontSize = 13.sp,
             modifier = Modifier.weight(1f)
         )
-        Text(
+        GlyphText(
             text = free,
             color = if (header) Muted else Muted,
             fontFamily = FontFirst(),
@@ -374,7 +378,7 @@ private fun CompareRow(icon: String, title: String, free: String, premium: Strin
             textAlign = TextAlign.Center,
             modifier = Modifier.widthIn(min = 64.dp)
         )
-        Text(
+        GlyphText(
             text = premium,
             color = Gold,
             fontFamily = FontFirst(),
@@ -416,13 +420,13 @@ private fun PlanCard(
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.spacedBy(2.dp)
         ) {
-            Text(text = title.uppercase(), color = if (selected) Gold else Muted, fontFamily = FontPixel(), fontWeight = FontWeight.Bold, fontSize = 12.sp)
+            GlyphText(text = title.uppercase(), color = if (selected) Gold else Muted, fontFamily = FontPixel(), fontWeight = FontWeight.Bold, fontSize = 12.sp)
             Outlined(price, 24.sp, Color.White)
-            Text(text = per, color = Cream, fontFamily = FontFirst(), fontSize = 11.sp)
-            Text(text = sub, color = if (selected) Green else Muted, fontFamily = FontFirst(), fontWeight = FontWeight.Bold, fontSize = 10.sp, textAlign = TextAlign.Center)
+            GlyphText(text = per, color = Cream, fontFamily = FontFirst(), fontSize = 11.sp)
+            GlyphText(text = sub, color = if (selected) Green else Muted, fontFamily = FontFirst(), fontWeight = FontWeight.Bold, fontSize = 10.sp, textAlign = TextAlign.Center)
         }
         if (badge != null) {
-            Text(
+            GlyphText(
                 text = badge,
                 color = Color.White,
                 fontFamily = FontFirst(),
@@ -438,7 +442,7 @@ private fun PlanCard(
             )
         }
         if (selected) {
-            Text(
+            GlyphText(
                 text = "✓",
                 color = Color(0xFF1C1408),
                 fontWeight = FontWeight.Black,
@@ -458,7 +462,7 @@ private fun PlanCard(
 @Composable
 private fun Outlined(text: String, size: TextUnit, color: Color) {
     Box(contentAlignment = Alignment.Center) {
-        Text(
+        GlyphText(
             text = text,
             color = Color(0xFF1A0E02),
             fontFamily = FontFirst(),
@@ -466,6 +470,10 @@ private fun Outlined(text: String, size: TextUnit, color: Color) {
             fontSize = size,
             style = TextStyle(drawStyle = Stroke(width = 8f, join = StrokeJoin.Round))
         )
-        Text(text = text, color = color, fontFamily = FontFirst(), fontWeight = FontWeight.Black, fontSize = size)
+        // Jawne Fill - patrz StrokedText: bez niego stary Android rysuje i ten napis konturem.
+        GlyphText(
+            text = text, color = color, fontFamily = FontFirst(), fontWeight = FontWeight.Black, fontSize = size,
+            style = TextStyle(drawStyle = Fill)
+        )
     }
 }

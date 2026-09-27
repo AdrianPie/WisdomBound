@@ -1,5 +1,6 @@
 package com.lernhero.home.fitness
 
+import com.lernhero.shared.theme.GlyphText
 import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.RepeatMode
@@ -99,15 +100,15 @@ internal fun DailyStepsCard(
                     ring(w * 1.35f, inner, if (inner >= 1f) KGreen else KGold)
                 }
                 Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                    Text("👟", fontSize = 16.sp)
+                    GlyphText("👟", fontSize = 16.sp)
                     OutlinedText(text = steps.grouped(), size = 19.sp, color = Color.White, maxLines = 1)
-                    Text("steps", color = Color(0xFFA8D8BE), fontFamily = FontFirst(), fontWeight = FontWeight.Bold, fontSize = 10.sp)
+                    GlyphText("steps", color = Color(0xFFA8D8BE), fontFamily = FontFirst(), fontWeight = FontWeight.Bold, fontSize = 10.sp)
                 }
             }
             Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
                 OutlinedText(text = "Daily Steps", size = 20.sp, color = KGold)
                 val next = goals.firstOrNull { steps < it.threshold }
-                Text(
+                GlyphText(
                     text = if (next == null) "Both rewards unlocked - legendary legs!"
                     else "${(next.threshold - steps).grouped()} steps to the ${if (next == goals.first()) "first" else "big"} reward",
                     color = Color.White,
@@ -115,7 +116,7 @@ internal fun DailyStepsCard(
                     fontWeight = FontWeight.Bold,
                     fontSize = 12.sp
                 )
-                Text(
+                GlyphText(
                     text = "${snapshot.activeMinutes} active min  ·  ${snapshot.workouts.size} workouts",
                     color = Color(0xFFA8D8BE),
                     fontFamily = FontFirst(),
@@ -157,12 +158,12 @@ private fun StepGoalRow(goal: FitnessGoal, steps: Int, big: Boolean, claimed: Bo
                 .border(2.dp, Outline, RoundedCornerShape(10.dp)),
             contentAlignment = Alignment.Center
         ) {
-            Text(text = if (claimed) "✅" else if (big) "🏆" else "🎁", fontSize = 22.sp)
+            GlyphText(text = if (claimed) "✅" else if (big) "🏆" else "🎁", fontSize = 22.sp)
         }
         Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(3.dp)) {
             Row(horizontalArrangement = Arrangement.spacedBy(6.dp), verticalAlignment = Alignment.CenterVertically) {
                 OutlinedText(text = goal.title, size = 14.sp, color = Color.White, strokeWidth = 4f)
-                Text("${goal.threshold.grouped()}", color = KGold, fontFamily = FontFirst(), fontWeight = FontWeight.Black, fontSize = 11.sp)
+                GlyphText("${goal.threshold.grouped()}", color = KGold, fontFamily = FontFirst(), fontWeight = FontWeight.Black, fontSize = 11.sp)
             }
             Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
                 RewardChip("💰 ${goal.reward}")
@@ -171,7 +172,7 @@ private fun StepGoalRow(goal: FitnessGoal, steps: Int, big: Boolean, claimed: Bo
             }
         }
         when {
-            claimed -> Text("Claimed", color = KGreen, fontFamily = FontFirst(), fontWeight = FontWeight.Black, fontSize = 12.sp)
+            claimed -> GlyphText("Claimed", color = KGreen, fontFamily = FontFirst(), fontWeight = FontWeight.Black, fontSize = 12.sp)
             claimable -> Box(
                 modifier = Modifier
                     .clip(RoundedCornerShape(12.dp))
@@ -180,7 +181,7 @@ private fun StepGoalRow(goal: FitnessGoal, steps: Int, big: Boolean, claimed: Bo
                     .clickable(onClick = onClaim)
                     .padding(horizontal = 12.dp, vertical = 8.dp)
             ) { OutlinedText(text = "CLAIM", size = 13.sp, color = Color.White, strokeWidth = 4f) }
-            else -> Text(
+            else -> GlyphText(
                 text = "${(goal.threshold - steps).grouped()}\nto go",
                 color = KMuted,
                 fontFamily = FontFirst(),
@@ -194,7 +195,7 @@ private fun StepGoalRow(goal: FitnessGoal, steps: Int, big: Boolean, claimed: Bo
 
 @Composable
 private fun RewardChip(text: String) {
-    Text(
+    GlyphText(
         text = text,
         color = Color.White,
         fontFamily = FontFirst(),
@@ -260,7 +261,7 @@ internal fun StepChestBanner(snapshot: FitnessSnapshot, openedToday: Boolean, on
             }
             Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(6.dp)) {
                 OutlinedText(text = "Step Chest", size = 18.sp, color = KGold, strokeWidth = 5f)
-                Text(
+                GlyphText(
                     text = when {
                         openedToday -> "Opened today - a new one tomorrow."
                         ready -> "Unlocked! Open it for random loot."

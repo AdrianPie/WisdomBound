@@ -307,7 +307,7 @@ object AchievementCatalog {
         Achievement(
             id = "crafted_5",
             title = "Blacksmith",
-            description = "Forge 5 items.",
+            description = "Upgrade gear 5 times at the Forge.",
             group = AchievementGroup.Wealth,
             tier = AchievementTier.Bronze,
             target = 5,

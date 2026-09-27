@@ -85,8 +85,8 @@ object StoryStageCatalog {
      */
     private fun rewardGoldFor(globalIndex: Int, kind: BattleKind, tier: RunDifficulty, waves: Int): Int {
         val kindBonus = if (kind == BattleKind.Boss) 2.4f else 1f
-        return (GOLD_PER_WAVE * waves * kindBonus * tier.coinMultiplier *
-            RunLoot.depthMultiplier(globalIndex)).roundToInt()
+        return (GOLD_PER_WAVE * waves * kindBonus * tier.goldMultiplier *
+            RunLoot.goldDepthMultiplier(globalIndex)).roundToInt()
     }
 
     private fun rewardXpFor(globalIndex: Int, kind: BattleKind, tier: RunDifficulty, waves: Int): Int {

@@ -1,5 +1,7 @@
 package com.lernhero.home.player
 
+import com.lernhero.shared.audio.Sounds
+import com.lernhero.shared.audio.Sfx
 import com.lernhero.domain.jewel.Jewels
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -376,6 +378,13 @@ class PlayerViewModel(
 
     init {
         refresh()
+        // Ceny ze sklepu od razu przy starcie - sklep w grze ma je gotowe, zanim gracz tam wejdzie.
+        refreshLegendPack()
+        viewModelScope.launch {
+            if (subscription.isAvailable) {
+                com.lernhero.shared.monetization.StorePriceCache.putOffers(subscription.offers())
+            }
+        }
     }
 
     fun refresh() {
@@ -586,6 +595,7 @@ class PlayerViewModel(
                 return@launch
             }
             applyPurchase(updated)
+            Sounds.play(Sfx.Purchase)
             _uiState.update { it.copy(message = null) }
             onGranted(bundle)
         }
@@ -639,11 +649,19 @@ class PlayerViewModel(
     fun refreshLegendPack() {
         viewModelScope.launch {
             val pack = com.lernhero.domain.monetization.LegendPack
-            val price = oneTime.price(pack.PRODUCT_ID)
-            val gemPrices = com.lernhero.domain.monetization.GemPack.entries
-                .mapNotNull { gp -> oneTime.price(gp.productId)?.let { gp.productId to it } }
-                .toMap()
-            _uiState.update { it.copy(legendPackPrice = price, gemPackPrices = gemPrices) }
+            // Najpierw ostatnie zapamietane ceny (od razu, w walucie gracza), potem swieze ze sklepu.
+            val cache = com.lernhero.shared.monetization.StorePriceCache
+            val ids = listOf(pack.PRODUCT_ID) + com.lernhero.domain.monetization.GemPack.entries.map { it.productId }
+            fun publish(prices: Map<String, String>) = _uiState.update { state ->
+                state.copy(
+                    legendPackPrice = prices[pack.PRODUCT_ID] ?: state.legendPackPrice,
+                    gemPackPrices = state.gemPackPrices + (prices - pack.PRODUCT_ID)
+                )
+            }
+            publish(ids.mapNotNull { id -> cache.get(id)?.let { id to it } }.toMap())
+            val fresh = ids.mapNotNull { id -> oneTime.price(id)?.let { id to it } }.toMap()
+            fresh.forEach { (id, price) -> cache.put(id, price) }
+            publish(fresh)
             if (!_uiState.value.legendPackClaimed && oneTime.owns(pack.PRODUCT_ID)) grantLegendPack()
         }
     }
@@ -678,6 +696,7 @@ class PlayerViewModel(
                     val updated = withContext(Dispatchers.IO) { playerRepository.grantGemPack(pack) }
                     if (updated != null) {
                         applyPurchase(updated)
+                        Sounds.play(Sfx.Purchase)
                         onGranted(updated.gems - before)
                     } else {
                         _uiState.update { it.copy(message = "Purchase went through but saving failed - restart the app.") }
@@ -792,7 +811,7 @@ class PlayerViewModel(
         val state = _uiState.value
         val item = instance.resolve()
         if (item == null || Inventory.byUid(state.heroBag, instance.uid) == null) {
-            _uiState.update { it.copy(message = "Forge this item first.") }
+            _uiState.update { it.copy(message = "You don't own this item.") }
             return
         }
         persistEquipment(state.equipment.equip(instance, item.slot))
@@ -897,6 +916,7 @@ class PlayerViewModel(
     fun collectIdleRewards(now: Long) {
         viewModelScope.launch(Dispatchers.IO) {
             val updated = playerRepository.collectIdleRewards(now) ?: return@launch
+            Sounds.play(Sfx.Coins)
             _uiState.update {
                 it.copy(
                     money = updated.money,
@@ -967,7 +987,7 @@ class PlayerViewModel(
             ?: Inventory.byUid(state.monsterBag, instance.uid)
         val item = owned?.base()
         if (owned == null || item == null) {
-            _uiState.update { it.copy(message = "You have to forge this item first.") }
+            _uiState.update { it.copy(message = "You don't own this item.") }
             return
         }
         val cost = ItemUpgrades.nextCost(item, owned.level)
@@ -988,6 +1008,7 @@ class PlayerViewModel(
                 } else {
                     val bags = updated.heroBag() + updated.monsterBag()
                     val level = Inventory.byUid(bags, instance.uid)?.level ?: owned.level
+                    Sounds.play(Sfx.Upgrade)
                     current.copy(
                         money = updated.money,
                         resources = updated.townResources,
@@ -1006,6 +1027,7 @@ class PlayerViewModel(
      */
     fun summonMonsters(cards: List<MonsterCard>, cost: CraftCost) {
         if (cards.isEmpty()) return
+        // Dzwiek i wynik pokazuje rytual w Summon Center (patrz SummonShow) - tu tylko zapis.
         val state = _uiState.value
         if (!cost.canAfford(state.resources, state.money)) {
             _uiState.update { it.copy(message = "Not enough tickets or essence.") }
@@ -1023,11 +1045,8 @@ class PlayerViewModel(
                         resources = updated.townResources,
                         ownedMonsters = updated.ownedMonsters,
                         stats = updated.stats,
-                        message = if (cards.size == 1) {
-                            "Joining your team: ${cards.first().name}"
-                        } else {
-                            "Summoned ${cards.size} companions"
-                        }
+                        // Bez "Joining your team: X" - napis wyskakiwal w polowie rytualu i zdradzal wynik.
+                        message = null
                     )
                 }
             }
@@ -1049,7 +1068,7 @@ class PlayerViewModel(
                         ownedMonsters = updated.ownedMonsters,
                         freeSummonClaims = updated.freeSummonClaims,
                         stats = updated.stats,
-                        message = "Free summon: ${card.name}"
+                        message = null
                     )
                 }
             }

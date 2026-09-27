@@ -15,8 +15,8 @@ package com.lernhero.domain.item
  * za to z regula walki (patrz [com.lernhero.domain.item.catalog.AccessoriesExtra]).
  */
 enum class ItemCategory(val label: String, val icon: String) {
-    Weapon("Weapons", "⚔"),
-    Armor("Armor", "🛡"),
+    Weapon("Weapons", "⚔️"),
+    Armor("Armor", "🛡️"),
     Trinket("Trinkets", "💍");
 
     companion object {

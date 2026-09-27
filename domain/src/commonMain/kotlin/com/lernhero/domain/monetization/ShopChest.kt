@@ -216,15 +216,14 @@ object LegendPack {
     const val GEMS = 2500
     const val TICKETS = 30
     val ITEM_IDS = listOf("dawnbreaker", "thousand_cuts", "worldroot_staff", "titans_carapace")
-    /** Cena pokazywana, zanim sklep poda wlasna (w walucie gracza). */
-    const val FALLBACK_PRICE = "49,99 zł"
 }
 
 /**
  * Pakiet diamentow za prawdziwe pieniadze - produkt "consumable" w sklepie (mozna kupowac wiele
  * razy). [bonus] to diamenty ekstra ponad baze - rosna z wielkoscia pakietu, zeby wiekszy pakiet
- * byl realnie oplacalniejszy, a nie tylko drozszy. Cena ze sklepu ma pierwszenstwo przed
- * [fallbackPrice], ktora pokazujemy tylko, dopoki sklep nie odpowie.
+ * byl realnie oplacalniejszy, a nie tylko drozszy. [referencePrice] to cena bazowa w PLN do
+ * ustawienia w Play Console (reszte walut przelicza sklep) i do testu oplacalnosci - graczowi
+ * NIGDY jej nie pokazujemy: w grze widac wylacznie cene ze sklepu, w jego walucie.
  *
  * Pierwszy zakup KAZDEGO pakietu daje podwojna liczbe diamentow ([firstPurchaseTotal]) - klasyczna
  * zacheta z gier mobilnych: pierwsza wplata ma byc wyraznie oplacalna, zeby w ogole sie wydarzyla.
@@ -234,7 +233,7 @@ enum class GemPack(
     val title: String,
     val base: Int,
     val bonus: Int,
-    val fallbackPrice: String,
+    val referencePrice: String,
     val tag: String? = null
 ) {
     Handful("gems_100", "Handful", 100, 0, "4,99 zł"),

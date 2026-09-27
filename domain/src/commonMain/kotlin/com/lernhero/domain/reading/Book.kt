@@ -59,6 +59,32 @@ data class Book(
  */
 object BundledBooks {
     val ALL: List<Book> = listOf(
+        // Project Gutenberg, domena publiczna rowniez w UE (autor/tlumacz zmarl ponad 70 lat temu).
+        Book(
+            id = "bundled_pride_and_prejudice",
+            title = "Pride and Prejudice",
+            author = "Jane Austen",
+            format = BookFormat.Epub,
+            source = BookSource.Bundled,
+            locator = "files/books/pride_and_prejudice.epub"
+        ),
+        Book(
+            id = "bundled_sherlock_holmes",
+            title = "The Adventures of Sherlock Holmes",
+            author = "Arthur Conan Doyle",
+            format = BookFormat.Epub,
+            source = BookSource.Bundled,
+            locator = "files/books/sherlock_holmes.epub"
+        ),
+        Book(
+            // Przeklad Constance Garnett (zm. 1946).
+            id = "bundled_crime_and_punishment",
+            title = "Crime and Punishment",
+            author = "Fyodor Dostoevsky",
+            format = BookFormat.Epub,
+            source = BookSource.Bundled,
+            locator = "files/books/crime_and_punishment.epub"
+        ),
         Book(
             id = "bundled_lantern_keeper",
             title = "The Lantern Keeper",

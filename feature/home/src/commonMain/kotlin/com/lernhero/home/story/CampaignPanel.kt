@@ -1,5 +1,6 @@
 package com.lernhero.home.story
 
+import com.lernhero.shared.theme.GlyphText
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -174,7 +175,7 @@ private fun IdleHeader(
             horizontalArrangement = Arrangement.spacedBy(8.dp)
         ) {
             Column(modifier = Modifier.weight(1f)) {
-                Text(
+                GlyphText(
                     text = worldName,
                     color = GoldText,
                     fontFamily = FontPixel(),
@@ -182,7 +183,7 @@ private fun IdleHeader(
                     fontSize = 14.sp,
                     maxLines = 1
                 )
-                Text(
+                GlyphText(
                     text = "Stage $stageLabel",
                     color = Muted,
                     fontFamily = FontFirst(),
@@ -196,7 +197,7 @@ private fun IdleHeader(
                 IdleChip("✨", reward.essence)
             }
 
-            Text(
+            GlyphText(
                 text = "GET",
                 color = if (reward.isEmpty) Color(0xFF4A4038) else Color.White,
                 fontFamily = FontPixel(),
@@ -214,7 +215,7 @@ private fun IdleHeader(
                     .padding(horizontal = 12.dp, vertical = 7.dp)
             )
 
-            Text(
+            GlyphText(
                 text = "✕",
                 color = Muted,
                 fontFamily = FontPixel(),
@@ -250,8 +251,8 @@ private fun IdleHeader(
 @Composable
 private fun IdleChip(icon: String, value: Int) {
     Row(horizontalArrangement = Arrangement.spacedBy(2.dp), verticalAlignment = Alignment.CenterVertically) {
-        Text(text = icon, fontSize = 10.sp)
-        Text(
+        GlyphText(text = icon, fontSize = 10.sp)
+        GlyphText(
             text = value.compactAmount(),
             color = if (value > 0) Cream else Muted,
             fontFamily = FontFirst(),
@@ -290,7 +291,7 @@ private fun StageScene(stage: StoryStage, world: StoryWorld, modifier: Modifier 
 
         // Brak PNG tla - zostaje nazwa oczekiwanego pliku, zeby bylo wiadomo, co podmienic.
         if (art.background == null) {
-            Text(
+            GlyphText(
                 text = art.expectedFile,
                 color = Color(0xFF6E6152),
                 fontFamily = FontFirst(),
@@ -318,7 +319,7 @@ private fun StageScene(stage: StoryStage, world: StoryWorld, modifier: Modifier 
         }
 
         if (stage.isBoss) {
-            Text(
+            GlyphText(
                 text = "BOSS",
                 color = Color.White,
                 fontFamily = FontPixel(),
@@ -359,28 +360,28 @@ private fun StageReward(stage: StoryStage, clears: Int) {
         horizontalArrangement = Arrangement.spacedBy(10.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
-        Text(
+        GlyphText(
             text = "💰 ${gold.compactAmount()}",
             color = Cream,
             fontFamily = FontFirst(),
             fontWeight = FontWeight.Bold,
             fontSize = 11.sp
         )
-        Text(
+        GlyphText(
             text = "⭐ ${xp.compactAmount()}",
             color = Cream,
             fontFamily = FontFirst(),
             fontWeight = FontWeight.Bold,
             fontSize = 11.sp
         )
-        Text(
+        GlyphText(
             text = "⚔ ${stage.waves} " + if (stage.waves == 1) "wave" else "waves",
             color = Muted,
             fontFamily = FontFirst(),
             fontSize = 11.sp,
             modifier = Modifier.weight(1f)
         )
-        Text(
+        GlyphText(
             text = payoutLabel(clears),
             color = if (clears == 0) Green else Muted,
             fontFamily = FontFirst(),
@@ -409,7 +410,7 @@ private fun ActionRow(
     ) {
         SideAction(icon = "🗺", label = "MAP", onClick = onOpenMap, modifier = Modifier.weight(1f))
 
-        Text(
+        GlyphText(
             // Cena stoi NA przycisku, a nie w komunikacie po kliknieciu - gracz ma wiedziec,
             // ile kosztuje wejscie, zanim je wyda.
             text = "BATTLE  ⚡${EnergyRules.BATTLE_COST}",
@@ -443,8 +444,8 @@ private fun SideAction(icon: String, label: String, onClick: () -> Unit, modifie
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(2.dp)
     ) {
-        Text(text = icon, fontSize = 15.sp)
-        Text(
+        GlyphText(text = icon, fontSize = 15.sp)
+        GlyphText(
             text = label,
             color = Muted,
             fontFamily = FontFirst(),
@@ -541,16 +542,16 @@ private fun StageBubble(
             contentAlignment = Alignment.Center
         ) {
             when {
-                !playable -> Text(text = "🔒", fontSize = 14.sp)
-                stage.isBoss -> Text(text = "👑", fontSize = if (selected) 22.sp else 18.sp)
-                cleared && !selected -> Text(
+                !playable -> GlyphText(text = "🔒", fontSize = 14.sp)
+                stage.isBoss -> GlyphText(text = "👑", fontSize = if (selected) 22.sp else 18.sp)
+                cleared && !selected -> GlyphText(
                     text = "✓",
                     color = Color(0xFF5FD08A),
                     fontFamily = FontPixel(),
                     fontWeight = FontWeight.Bold,
                     fontSize = 16.sp
                 )
-                else -> Text(
+                else -> GlyphText(
                     text = stage.label,
                     color = if (selected) GoldText else Cream,
                     fontFamily = FontPixel(),
@@ -562,7 +563,7 @@ private fun StageBubble(
 
         // Miejsce pod licznik jest zarezerwowane ZAWSZE - inaczej kolka z licznikiem i bez niego
         // mialyby rozna wysokosc i caly pasek falowalby przy kazdym przejsciu planszy.
-        Text(
+        GlyphText(
             text = if (clears > 0) "×$clears" else "",
             color = if (selected) GoldText else Muted,
             fontFamily = FontFirst(),

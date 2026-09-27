@@ -1,5 +1,6 @@
 package com.lernhero.home.ui
 
+import com.lernhero.shared.theme.GlyphText
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -120,8 +121,8 @@ fun GameTopBar(
                 horizontalArrangement = Arrangement.spacedBy(4.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Text(text = "🛡", fontSize = 12.sp)
-                Text(text = "$power", color = Color.White, fontFamily = FontFirst(), fontWeight = FontWeight.Black, fontSize = 13.sp)
+                GlyphText(text = "🛡", fontSize = 12.sp)
+                GlyphText(text = "$power", color = Color.White, fontFamily = FontFirst(), fontWeight = FontWeight.Black, fontSize = 13.sp)
             }
 
             // Warstwa 3: zawartosc plyty.
@@ -134,7 +135,7 @@ fun GameTopBar(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Column(modifier = Modifier.weight(1f).clickable(onClick = onOpenCharacter)) {
-                    Text(
+                    GlyphText(
                         text = name.ifBlank { "Sir Lernhero" },
                         color = Color.White,
                         fontFamily = FontFirst(),
@@ -144,7 +145,7 @@ fun GameTopBar(
                         maxLines = 1,
                         overflow = TextOverflow.Ellipsis
                     )
-                    Text(
+                    GlyphText(
                         text = HeroRank.titleFor(level),
                         color = RankViolet,
                         fontFamily = FontFirst(),
@@ -176,7 +177,7 @@ fun GameTopBar(
                     contentAlignment = Alignment.Center
                 ) {
                     Box(modifier = Modifier.align(Alignment.CenterStart).width(2.dp).fillMaxHeight().background(PanelEdge))
-                    Text(text = "⚙", fontSize = 20.sp, color = Color(0xFFBFD3F0))
+                    GlyphText(text = "⚙", fontSize = 20.sp, color = Color(0xFFBFD3F0))
                 }
             }
 
@@ -232,7 +233,7 @@ private fun HeroPortrait(knight: KnightEquipment, look: HeroLook, level: Int) {
                 .border(1.5.dp, PortraitEdge, CircleShape),
             contentAlignment = Alignment.Center
         ) {
-            Text(text = "$level", color = Color.White, fontFamily = FontFirst(), fontWeight = FontWeight.Bold, fontSize = 9.sp)
+            GlyphText(text = "$level", color = Color.White, fontFamily = FontFirst(), fontWeight = FontWeight.Bold, fontSize = 9.sp)
         }
     }
 }
@@ -247,21 +248,42 @@ private fun ResourcePill(icon: String, value: String, caption: String? = null, o
         modifier = if (onPlus != null) Modifier.clickable(onClick = onPlus) else Modifier,
         contentAlignment = Alignment.CenterStart
     ) {
-        Column(
+        // Pigulka ma ZAWSZE jedna linijke - wszystkie trzy stoja rowno, niezaleznie od timera.
+        Box(
             modifier = Modifier
                 .padding(start = 12.dp)
                 .clip(RoundedCornerShape(50))
                 .background(SlotFill)
-                .padding(start = 14.dp, end = 7.dp, top = 2.dp, bottom = 2.dp),
-            horizontalAlignment = Alignment.CenterHorizontally
+                .padding(start = 18.dp, end = 7.dp, top = 2.dp, bottom = 2.dp),
+            contentAlignment = Alignment.Center
         ) {
-            Text(text = value, color = Color.White, fontFamily = FontFirst(), fontWeight = FontWeight.Black, fontSize = 12.sp, maxLines = 1)
-            if (caption != null) {
-                Text(text = caption, color = Color(0xFF8FA3C4), fontFamily = FontFirst(), fontSize = 8.sp, maxLines = 1)
+            GlyphText(text = value, color = Color.White, fontFamily = FontFirst(), fontWeight = FontWeight.Black, fontSize = 12.sp, maxLines = 1)
+        }
+        // Timer wisi POD pigulka jak znaczek na dolnej krawedzi plyty - nie sciska liczby
+        // i nie rozpycha paska (offset nie zajmuje miejsca w ukladzie).
+        if (caption != null) {
+            Box(
+                modifier = Modifier
+                    .align(Alignment.BottomCenter)
+                    .offset(x = 6.dp, y = 15.dp)
+                    .clip(RoundedCornerShape(50))
+                    .background(TimerFill)
+                    .border(1.dp, PanelEdge, RoundedCornerShape(50))
+                    .padding(horizontal = 6.dp, vertical = 1.dp)
+            ) {
+                GlyphText(
+                    text = caption,
+                    color = Color(0xFFFFE08A),
+                    fontFamily = FontFirst(),
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 9.sp,
+                    lineHeight = 10.sp,
+                    maxLines = 1
+                )
             }
         }
         Box {
-            Text(text = icon, fontSize = 20.sp)
+            GlyphText(text = icon, fontSize = 20.sp)
             if (onPlus != null) {
                 Box(
                     modifier = Modifier
@@ -272,19 +294,19 @@ private fun ResourcePill(icon: String, value: String, caption: String? = null, o
                         .background(PlusGreen),
                     contentAlignment = Alignment.Center
                 ) {
-                    Text(text = "+", color = Color.White, fontWeight = FontWeight.Black, fontSize = 10.sp, lineHeight = 10.sp)
+                    GlyphText(text = "+", color = Color.White, fontWeight = FontWeight.Black, fontSize = 10.sp, lineHeight = 10.sp)
                 }
             }
         }
     }
 }
 
-/** "8m 55s" / "59s" - tak, jak odliczaja to gry mobilne: bez zer wiodacych i bez godzin. */
+/** "7:01" - zegarowo, krotko, zeby zmiescilo sie w znaczku pod pigulka. */
 private fun shortTime(millis: Long): String {
     val total = (millis / 1000).coerceAtLeast(0)
     val minutes = total / 60
     val seconds = total % 60
-    return if (minutes > 0) "${minutes}m ${seconds}s" else "${seconds}s"
+    return "$minutes:${seconds.toString().padStart(2, '0')}"
 }
 
 /**
@@ -328,6 +350,7 @@ private val PanelBottom = Color(0xFF141C33)
 private val PanelEdge = Color(0xFF3A4D78)
 private val PortraitEdge = Color(0xFFBFD3F0)
 private val SlotFill = Color(0xFF0C1322)
+private val TimerFill = Color(0xFF1A2440)
 private val RankViolet = Color(0xFFB48BFF)
 private val LevelBlue = Color(0xFF2F6FB5)
 private val GoldTint = Color(0xFFF2C14B)

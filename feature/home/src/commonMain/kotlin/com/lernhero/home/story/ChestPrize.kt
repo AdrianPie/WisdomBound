@@ -1,5 +1,6 @@
 package com.lernhero.home.story
 
+import com.lernhero.domain.item.Item
 import com.lernhero.domain.item.ItemCatalog
 import com.lernhero.domain.run.ChestSlot
 import com.lernhero.home.city.TownViewModel
@@ -19,7 +20,9 @@ class ChestPrize(
     val icon: String,
     val name: String,
     val label: String,
-    val grant: (PlayerViewModel, TownViewModel) -> Unit
+    val grant: (PlayerViewModel, TownViewModel) -> Unit,
+    /** Wylosowany przedmiot - skrzynia pokazuje wtedy jego grafike zamiast [icon]. */
+    val item: Item? = null
 )
 
 fun resolveChestPrize(slot: ChestSlot, random: Random): ChestPrize {
@@ -32,7 +35,8 @@ fun resolveChestPrize(slot: ChestSlot, random: Random): ChestPrize {
                 icon = item.icon(),
                 name = item.name,
                 label = "${item.name} (${item.rarity.name})",
-                grant = { player, _ -> player.grantItem(item, fallbackGold) }
+                grant = { player, _ -> player.grantItem(item, fallbackGold) },
+                item = item
             )
         }
         val consolation = 120

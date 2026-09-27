@@ -62,6 +62,8 @@ interface AppStrings {
     val settingsBattle: String
     val settingsBattleSpeed: String
     val settingsBattleSpeedHint: String
+    val settingsSound: String
+    val settingsSoundHint: String
     val settingsAccount: String
     val settingsSignedInAs: String
     val settingsSignedInUnknown: String
@@ -205,6 +207,8 @@ object EnStrings : AppStrings {
     override val settingsBattleSpeed = "Starting speed"
     override val settingsBattleSpeedHint =
         "Every battle starts at this pace. You can still change it mid-fight in the HUD."
+    override val settingsSound = "Sound effects"
+    override val settingsSoundHint = "Hits, answers, chests and rewards."
 
     override val settingsAccount = "Account"
     override val settingsSignedInAs = "Signed in as"
@@ -355,6 +359,8 @@ object PlStrings : AppStrings {
     override val settingsBattleSpeed = "Tempo startowe"
     override val settingsBattleSpeedHint =
         "Od tego tempa startuje kazda walka. W trakcie dalej zmienisz je w HUD-zie."
+    override val settingsSound = "Efekty dzwiekowe"
+    override val settingsSoundHint = "Ciosy, odpowiedzi, skrzynie i nagrody."
 
     override val settingsAccount = "Konto"
     override val settingsSignedInAs = "Zalogowany jako"

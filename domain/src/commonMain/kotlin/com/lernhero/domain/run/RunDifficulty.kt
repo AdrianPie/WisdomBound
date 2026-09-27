@@ -17,7 +17,14 @@ enum class RunDifficulty(
     val icon: String,
     val enemyHpMultiplier: Float,
     val enemyAttackMultiplier: Float,
-    val coinMultiplier: Float
+    /** Mnoznik XP i materialow. */
+    val coinMultiplier: Float,
+    /**
+     * Mnoznik ZLOTA - osobno i dużo lagodniej niz [coinMultiplier]. Przy wspolnym mnozniku Death
+     * placil 3.6x, a razem z glebokoscia planszy i premia za poziom plansza dawala ~50 tys.
+     * i zloto przestawalo cokolwiek znaczyc (skrzynie ze sklepu i farmienie traciły sens).
+     */
+    val goldMultiplier: Float
 ) {
     Normal(
         label = "Normal",
@@ -25,7 +32,8 @@ enum class RunDifficulty(
         icon = "⚔",
         enemyHpMultiplier = 1f,
         enemyAttackMultiplier = 1f,
-        coinMultiplier = 1f
+        coinMultiplier = 1f,
+        goldMultiplier = 1f
     ),
     Nightmare(
         label = "Nightmare",
@@ -33,7 +41,8 @@ enum class RunDifficulty(
         icon = "💀",
         enemyHpMultiplier = 1.5f,
         enemyAttackMultiplier = 1.35f,
-        coinMultiplier = 1.6f
+        coinMultiplier = 1.6f,
+        goldMultiplier = 1.25f
     ),
     Hell(
         label = "Hell",
@@ -41,7 +50,8 @@ enum class RunDifficulty(
         icon = "👹",
         enemyHpMultiplier = 2.2f,
         enemyAttackMultiplier = 1.8f,
-        coinMultiplier = 2.4f
+        coinMultiplier = 2.4f,
+        goldMultiplier = 1.5f
     ),
     Death(
         label = "Death",
@@ -49,7 +59,8 @@ enum class RunDifficulty(
         icon = "🔥",
         enemyHpMultiplier = 3.2f,
         enemyAttackMultiplier = 2.4f,
-        coinMultiplier = 3.6f
+        coinMultiplier = 3.6f,
+        goldMultiplier = 1.75f
     );
 
     /**

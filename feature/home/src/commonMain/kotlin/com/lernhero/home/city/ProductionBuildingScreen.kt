@@ -1,5 +1,6 @@
 package com.lernhero.home.city
 
+import com.lernhero.shared.theme.GlyphText
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.LinearEasing
@@ -241,9 +242,9 @@ private fun ProductionStage(
             horizontalArrangement = Arrangement.spacedBy(8.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Text(text = building.resourceIcon(), fontSize = 26.sp)
+            GlyphText(text = building.resourceIcon(), fontSize = 26.sp)
             OutlinedText(text = "$pending", size = 28.sp, color = Gold)
-            Text(
+            GlyphText(
                 text = "+${ratePerHour.roundToInt()}/h",
                 color = Color.White,
                 fontFamily = FontFirst(),
@@ -280,9 +281,9 @@ private fun StatTile(
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.spacedBy(2.dp)
         ) {
-            Text(text = icon, fontSize = 18.sp)
+            GlyphText(text = icon, fontSize = 18.sp)
             OutlinedText(text = value, size = 18.sp, color = valueColor, maxLines = 1)
-            Text(
+            GlyphText(
                 text = caption ?: label.uppercase(),
                 color = Muted,
                 fontFamily = FontFirst(),
@@ -333,7 +334,7 @@ private fun ProductionPulse(
         horizontalArrangement = Arrangement.spacedBy(8.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
-        Text(
+        GlyphText(
             text = if (rapidFire) "⚡ MAX SPEED" else "next +1",
             color = if (rapidFire) AppPalette.Warning else Muted,
             fontFamily = FontFirst(),
@@ -348,7 +349,7 @@ private fun ProductionPulse(
             )
             PulsePop(pulseId = pulseId, icon = resourceIcon)
         }
-        Text(
+        GlyphText(
             text = cycleMillis.asPulseLabel(),
             color = Muted,
             fontFamily = FontFirst(),
@@ -375,7 +376,7 @@ private fun PulsePop(pulseId: Long, icon: String) {
         enter = fadeIn(tween(40)) + scaleIn(initialScale = 0.6f, animationSpec = tween(80)),
         exit = fadeOut(tween(120))
     ) {
-        Text(
+        GlyphText(
             text = "+1 $icon",
             color = Color.White,
             fontFamily = FontPixel(),
@@ -433,7 +434,7 @@ private fun GainPopups(
             enter = fadeIn(tween(120)),
             exit = fadeOut(tween(600)) + slideOutVertically(tween(600)) { -it }
         ) {
-            Text(
+            GlyphText(
                 text = "+$gain $icon",
                 color = AppPalette.Success,
                 fontFamily = FontPixel(),

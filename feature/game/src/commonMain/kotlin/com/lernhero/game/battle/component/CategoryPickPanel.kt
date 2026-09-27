@@ -31,6 +31,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -73,12 +74,17 @@ fun CategoryPickPanel(
     /** Zywioly zywych kompanow - ile kafel realnie wzmocni. Pusta mapa = bez podpowiedzi. */
     teamElements: Map<Element, Int> = emptyMap()
 ) {
-    Column(
+    Box(
         modifier = modifier
             .fillMaxSize()
             .clip(PanelShape)
-            .background(PanelGradient)
+            .background(DarkPanelGradient)
             .border(3.dp, FrameGradient, PanelShape)
+    ) {
+    PanelInnerLine()
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
             .padding(horizontal = 12.dp, vertical = 10.dp),
         verticalArrangement = Arrangement.spacedBy(8.dp)
     ) {
@@ -86,16 +92,17 @@ fun CategoryPickPanel(
             modifier = Modifier.fillMaxWidth(),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Text(
-                text = "Choose your next question",
-                color = InkStrong,
-                fontFamily = FontFirst(),
-                fontWeight = FontWeight.Bold,
-                fontSize = 16.sp
+            com.lernhero.shared.theme.StrokedText(
+                text = "CHOOSE YOUR TOPIC",
+                size = 17.sp,
+                color = PanelGold,
+                outline = Color(0xFF120B05),
+                strokeWidth = 6f,
+                maxLines = 1
             )
             Text(
-                text = "Topic decides the question · element boosts your team",
-                color = InkMuted,
+                text = "The topic picks the question · its element powers up your team",
+                color = PanelCream.copy(alpha = 0.7f),
                 fontFamily = FontFirst(),
                 fontSize = 11.sp,
                 textAlign = TextAlign.Center
@@ -131,6 +138,7 @@ fun CategoryPickPanel(
                 repeat(2 - row.size) { Box(modifier = Modifier.weight(1f)) }
             }
         }
+    }
     }
 }
 
@@ -174,40 +182,38 @@ private fun CategoryTile(
                 translationY = (1f - appear) * 24f * density
             }
             .clip(TileShape)
-            .background(Brush.verticalGradient(listOf(Color(0xFF4A3524), Color(0xFF2A1D12))))
+            .background(Brush.verticalGradient(listOf(Color(0xFF4E3826), Color(0xFF2E2015), Color(0xFF22170F))))
             .background(
                 Brush.radialGradient(
-                    listOf(main.copy(alpha = if (relevant) 0.45f else 0.22f), Color.Transparent),
-                    center = Offset(0f, 0f),
-                    radius = 420f
+                    listOf(main.copy(alpha = if (relevant) 0.5f else 0.25f), Color.Transparent),
+                    center = Offset(Float.POSITIVE_INFINITY, 0f),
+                    radius = 380f
                 )
             )
             .border(
                 width = if (relevant) 2.5.dp else 1.5.dp,
-                brush = if (colors.size > 1) {
-                    Brush.linearGradient(colors.map { it.copy(alpha = if (relevant) glowAlpha else 0.6f) })
+                brush = if (relevant) {
+                    Brush.linearGradient(colors.map { it.copy(alpha = glowAlpha) } + PanelBorder.copy(alpha = 0.7f))
                 } else {
-                    Brush.linearGradient(
-                        listOf(
-                            main.copy(alpha = if (relevant) glowAlpha else 0.45f),
-                            Color(0xFF8A6B3A).copy(alpha = 0.6f)
-                        )
-                    )
+                    Brush.verticalGradient(listOf(PanelBorder.copy(alpha = 0.7f), Color(0xFF6A4E2A).copy(alpha = 0.6f)))
                 },
                 shape = TileShape
             )
             .clickable(interactionSource = interaction, indication = null, onClick = onClick)
             .padding(10.dp)
     ) {
-        // Ikona tematu na gorze, podpis zywiolu na dole - osobne pasy, zeby duza ikona nie
-        // wchodzila na tekst bonusu.
-        Text(
-            text = option.category.icon,
-            fontSize = 34.sp,
+        // Ikona tematu w medalionie w prawym gornym rogu - w kolorze zywiolu, ktory ten kafel wzmacnia.
+        Box(
             modifier = Modifier
                 .align(Alignment.TopEnd)
-                .graphicsLayer { rotationZ = 8f }
-        )
+                .size(44.dp)
+                .clip(CircleShape)
+                .background(Brush.radialGradient(listOf(main.copy(alpha = 0.45f), Color(0xFF140D08))))
+                .border(2.dp, Brush.verticalGradient(listOf(Color(0xFFFFE9A8), PanelBorder, Color(0xFF8A6B34))), CircleShape),
+            contentAlignment = Alignment.Center
+        ) {
+            Text(text = option.category.icon, fontSize = 24.sp)
+        }
 
         Column(
             modifier = Modifier.fillMaxSize(),
@@ -215,12 +221,12 @@ private fun CategoryTile(
         ) {
             Text(
                 text = option.category.label,
-                color = Color.White,
+                color = PanelCream,
                 fontFamily = FontFirst(),
-                fontWeight = FontWeight.Bold,
+                fontWeight = FontWeight.Black,
                 fontSize = 16.sp,
                 maxLines = 1,
-                modifier = Modifier.padding(end = 40.dp)
+                modifier = Modifier.padding(end = 48.dp)
             )
             Row(
                 verticalAlignment = Alignment.CenterVertically,
@@ -234,7 +240,7 @@ private fun CategoryTile(
                         overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis,
                         color = if (relevant) main else Color.White.copy(alpha = 0.75f),
                         fontFamily = FontFirst(),
-                        fontWeight = FontWeight.Bold,
+                        fontWeight = FontWeight.Black,
                         fontSize = 11.sp,
                         maxLines = 1
                     )

@@ -1,6 +1,13 @@
 package com.lernhero.home.ui
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.offset
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.ui.draw.rotate
+import com.lernhero.shared.resources.Resources
+import com.lernhero.shared.theme.StrokedText
+import org.jetbrains.compose.resources.painterResource
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -24,6 +31,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontStyle
@@ -291,53 +299,178 @@ private fun ItemHeader(item: Item, level: Int, rarity: Color) {
 }
 
 /**
- * Kafel z ikona przedmiotu i plakietka poziomu w rogu.
+ * Kafel przedmiotu - wspolny dla plecaka, ekranu postaci, kuzni i lupu, bo to on niesie cala
+ * tozsamosc przedmiotu:
  *
- * Wspoldzielony z ekranem postaci i plecakiem, bo to WLASNIE ten kafel niesie cala tozsamosc
- * przedmiotu: kolor ramki = rzadkosc, liczba w rogu = ile w niego wlozono.
+ * - **beżowa rama z ciemnym obrysem**, a w srodku **tlo w kolorze rzadkosci** z jasna poswiata,
+ * - **klejnot u gory** w kolorze rzadkosci,
+ * - **ranga w lewym dolnym rogu** (D, C, B, A, S - [rankOf]), malutka,
+ * - **czerwona strzalka w prawym gornym rogu**, gdy [canUpgrade] (stac cie na kolejny poziom),
+ * - **poziom** (+N) w prawym dolnym rogu.
+ *
+ * Grafika to PNG z [Resources.itemArt], a do czasu jego wrzucenia - emoji.
  */
 @Composable
 fun ItemIcon(
     item: Item,
     level: Int,
-    rarity: Color,
+    @Suppress("UNUSED_PARAMETER") rarity: Color = RarityPalette.frame(item.rarity),
     size: androidx.compose.ui.unit.Dp,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    canUpgrade: Boolean = false
 ) {
-    Box(
-        modifier = modifier
-            .size(size)
-            .clip(RoundedCornerShape(size * 0.17f))
-            .background(
-                Brush.verticalGradient(
-                    listOf(rarity.copy(alpha = 0.45f), rarity.copy(alpha = 0.18f))
-                )
-            )
-            .border(3.dp, rarity, RoundedCornerShape(size * 0.17f)),
-        contentAlignment = Alignment.Center
-    ) {
-        Text(text = item.icon(), fontSize = (size.value * 0.46f).sp)
-
-        if (level > ItemUpgrades.MIN_LEVEL) {
+    val fill = RarityPalette.frame(item.rarity)
+    val corner = size * 0.16f
+    val innerCorner = corner * 0.62f
+    val frameWidth = (size * 0.06f).coerceAtLeast(3.dp)
+    val outerShape = RoundedCornerShape(corner)
+    val innerShape = RoundedCornerShape(innerCorner)
+    Box(modifier = modifier.size(size)) {
+        // Rama jak w kartach z gier: cienki cieply obrys (nie czarny), zlocisty bevel z jasna
+        // krawedzia od srodka i miekki cien pod calym kaflem.
+        Box(
+            modifier = Modifier
+                .matchParentSize()
+                .shadow(3.dp, outerShape, ambientColor = FrameEdge, spotColor = FrameEdge)
+                .clip(outerShape)
+                .background(Brush.verticalGradient(listOf(Color(0xFFFAEACB), Color(0xFFE3C390), Color(0xFFC39A60))))
+                .border(1.dp, FrameEdge, outerShape)
+                .padding(1.dp)
+                .border(1.dp, Color.White.copy(alpha = 0.55f), RoundedCornerShape(corner - 1.dp))
+                .padding(frameWidth - 1.dp)
+                .clip(innerShape)
+                // Rowne tlo w kolorze rzadkosci, lekko ciemniejsze u dolu - bez jasnej plamy na srodku.
+                .background(Brush.verticalGradient(listOf(fill.darken(0.02f), fill.darken(0.28f))))
+                .border(1.dp, fill.darken(0.55f), innerShape),
+            contentAlignment = Alignment.Center
+        ) {
+            // Wglebienie: waski cien przy gornej krawedzi, jakby tlo lezalo pod rama.
             Box(
                 modifier = Modifier
-                    .align(Alignment.TopStart)
-                    .padding(3.dp)
-                    .clip(RoundedCornerShape(7.dp))
-                    .background(ParchmentPalette.Frame)
-                    .padding(horizontal = 5.dp, vertical = 1.dp)
+                    .align(Alignment.TopCenter)
+                    .fillMaxWidth()
+                    .height(size * 0.12f)
+                    .background(Brush.verticalGradient(listOf(Color.Black.copy(alpha = 0.22f), Color.Transparent)))
+            )
+            ItemArtImage(item = item, size = size * 0.8f)
+        }
+
+        // Klejnot u gory, na styku ramy.
+        Box(
+            modifier = Modifier
+                .align(Alignment.TopCenter)
+                .offset(y = -(size * 0.05f))
+                .size(size * 0.17f)
+                .rotate(45f)
+                .clip(RoundedCornerShape(size * 0.03f))
+                .background(Brush.linearGradient(listOf(fill.lighten(0.6f), fill, fill.darken(0.3f))))
+                .border(1.dp, FrameEdge, RoundedCornerShape(size * 0.03f))
+        )
+
+        if (canUpgrade) {
+            Box(
+                modifier = Modifier
+                    .align(Alignment.TopEnd)
+                    .offset(x = size * 0.05f, y = -(size * 0.05f))
+                    .size((size * 0.22f).coerceAtLeast(14.dp))
+                    .clip(CircleShape)
+                    .background(Brush.verticalGradient(listOf(Color(0xFFFF5A4E), Color(0xFFC21E1A))))
+                    .border(1.dp, Color.White, CircleShape),
+                contentAlignment = Alignment.Center
             ) {
                 Text(
-                    text = "Lv.$level",
+                    text = "▲",
                     color = Color.White,
-                    fontFamily = FontFirst(),
-                    fontWeight = FontWeight.Bold,
-                    fontSize = (size.value * 0.13f).coerceIn(8f, 12f).sp
+                    fontWeight = FontWeight.Black,
+                    fontSize = (size.value * 0.11f).coerceAtLeast(7f).sp,
+                    lineHeight = (size.value * 0.11f).coerceAtLeast(7f).sp
                 )
             }
         }
+
+        // Ranga - malutka moneta w lewym dolnym rogu, wystajaca troche poza rame.
+        val rank = rankOf(item.rarity)
+        Box(
+            modifier = Modifier
+                .align(Alignment.BottomStart)
+                .offset(x = -(size * 0.04f), y = size * 0.04f)
+                .size((size * 0.24f).coerceAtLeast(14.dp))
+                .clip(CircleShape)
+                .background(Brush.verticalGradient(rank.colors))
+                .border(1.dp, FrameEdge, CircleShape),
+            contentAlignment = Alignment.Center
+        ) {
+            StrokedText(
+                text = rank.letter,
+                size = (size.value * 0.15f).coerceAtLeast(8f).sp,
+                color = Color.White,
+                outline = ItemOutline,
+                strokeWidth = 3f,
+                tight = true
+            )
+        }
+
+        if (level > ItemUpgrades.MIN_LEVEL) {
+            StrokedText(
+                text = "+$level",
+                size = (size.value * 0.15f).coerceIn(8f, 14f).sp,
+                color = Color(0xFFFFE066),
+                outline = ItemOutline,
+                strokeWidth = 4f,
+                modifier = Modifier.align(Alignment.BottomEnd).padding(end = frameWidth + 2.dp, bottom = frameWidth)
+            )
+        }
     }
 }
+
+/**
+ * Sama grafika przedmiotu, bez ramki - PNG z [Resources.itemArt], a do czasu jego wrzucenia emoji.
+ * Uzywac WSZEDZIE tam, gdzie pokazuje sie przedmiot, zeby nigdzie nie zostalo stare emoji.
+ */
+@Composable
+fun ItemArtImage(item: Item, size: androidx.compose.ui.unit.Dp, modifier: Modifier = Modifier) {
+    val art = remember(item.id) { Resources.itemArt(item.artKey()) }
+    if (art != null) {
+        Image(
+            painter = painterResource(art),
+            contentDescription = item.name,
+            modifier = modifier.size(size)
+        )
+    } else {
+        Box(modifier = modifier.size(size), contentAlignment = Alignment.Center) {
+            Text(text = item.icon(), fontSize = (size.value * 0.55f).sp, lineHeight = (size.value * 0.6f).sp)
+        }
+    }
+}
+
+/** Ranga przedmiotu: litera i kolor monety. S to najlepsza (legendarny). */
+enum class ItemRank(val letter: String, val colors: List<Color>) {
+    D("D", listOf(Color(0xFFB9BEC6), Color(0xFF6F757E))),
+    C("C", listOf(Color(0xFF7BE39A), Color(0xFF2E9A55))),
+    B("B", listOf(Color(0xFF7CC3FF), Color(0xFF2667C4))),
+    A("A", listOf(Color(0xFFD7A0FF), Color(0xFF7A34C9))),
+    S("S", listOf(Color(0xFFFFE27A), Color(0xFFD08A10)))
+}
+
+fun rankOf(rarity: com.lernhero.domain.common.Rarity): ItemRank = when (rarity) {
+    com.lernhero.domain.common.Rarity.Common -> ItemRank.D
+    com.lernhero.domain.common.Rarity.Uncommon -> ItemRank.C
+    com.lernhero.domain.common.Rarity.Rare -> ItemRank.B
+    com.lernhero.domain.common.Rarity.Epic -> ItemRank.A
+    com.lernhero.domain.common.Rarity.Legendary -> ItemRank.S
+}
+
+private val ItemOutline = Color(0xFF1E130A)
+
+/** Cieply, ciemnobrazowy obrys ramy - czern byla za ciezka przy malych kaflach. */
+private val FrameEdge = Color(0xFF5E3F1F)
+
+private fun Color.lighten(amount: Float): Color = Color(
+    red = red + (1f - red) * amount,
+    green = green + (1f - green) * amount,
+    blue = blue + (1f - blue) * amount,
+    alpha = alpha
+)
 
 /**
  * Sekcja karty: belka tytulowa w ciemniejszym tanie, tresc na jasnej karcie pod nia.

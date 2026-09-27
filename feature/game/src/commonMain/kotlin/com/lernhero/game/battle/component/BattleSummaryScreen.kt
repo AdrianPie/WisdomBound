@@ -1,5 +1,8 @@
 package com.lernhero.game.battle.component
 
+import com.lernhero.shared.theme.GlyphText
+import com.lernhero.shared.audio.Sounds
+import com.lernhero.shared.audio.Sfx
 import androidx.compose.animation.core.EaseOutBack
 import androidx.compose.animation.core.EaseOutCubic
 import androidx.compose.animation.core.animateFloatAsState
@@ -126,7 +129,7 @@ fun BattleSummaryScreen(
             }
 
             state.message?.let { message ->
-                Text(
+                GlyphText(
                     text = message,
                     color = Muted,
                     fontFamily = FontFirst(),
@@ -136,7 +139,7 @@ fun BattleSummaryScreen(
                 )
             }
 
-            Text(
+            GlyphText(
                 text = "BACK",
                 color = GoldText,
                 fontFamily = FontPixel(),
@@ -162,15 +165,15 @@ private fun Header(won: Boolean, accent: Color, wave: Int, endless: Boolean) {
         verticalArrangement = Arrangement.spacedBy(4.dp),
         modifier = Modifier.graphicsLayer { scaleX = pop; scaleY = pop }
     ) {
-        Text(text = if (won) "🏆" else "💀", fontSize = 44.sp)
-        Text(
+        GlyphText(text = if (won) "🏆" else "💀", fontSize = 44.sp)
+        GlyphText(
             text = if (won) "VICTORY" else "RUN OVER",
             color = accent,
             fontFamily = FontPixel(),
             fontWeight = FontWeight.Bold,
             fontSize = 20.sp
         )
-        Text(
+        GlyphText(
             text = if (endless) "You reached wave $wave" else "Wave $wave",
             color = Muted,
             fontFamily = FontFirst(),
@@ -181,6 +184,7 @@ private fun Header(won: Boolean, accent: Color, wave: Int, endless: Boolean) {
 
 @Composable
 private fun LevelUpBanner(levels: Int) {
+    LaunchedEffect(levels) { Sounds.play(Sfx.LevelUp) }
     val pop by animateFloatAsState(targetValue = 1f, animationSpec = tween(520, easing = EaseOutBack))
 
     Row(
@@ -194,16 +198,16 @@ private fun LevelUpBanner(levels: Int) {
         horizontalArrangement = Arrangement.spacedBy(10.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
-        Text(text = "⭐", fontSize = 24.sp)
+        GlyphText(text = "⭐", fontSize = 24.sp)
         Column {
-            Text(
+            GlyphText(
                 text = if (levels > 1) "LEVEL UP x$levels!" else "LEVEL UP!",
                 color = GoldText,
                 fontFamily = FontPixel(),
                 fontWeight = FontWeight.Bold,
                 fontSize = 15.sp
             )
-            Text(
+            GlyphText(
                 text = "You have new stat points to spend in the Progress tab.",
                 color = Cream,
                 fontFamily = FontFirst(),
@@ -245,16 +249,16 @@ private fun LootBanner(item: Item) {
         horizontalArrangement = Arrangement.spacedBy(10.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
-        Text(text = "🎁", fontSize = 24.sp)
+        GlyphText(text = "🎁", fontSize = 24.sp)
         Column {
-            Text(
+            GlyphText(
                 text = "LOOT!",
                 color = accent,
                 fontFamily = FontPixel(),
                 fontWeight = FontWeight.Bold,
                 fontSize = 15.sp
             )
-            Text(
+            GlyphText(
                 text = "${item.name} (${item.rarity.name}) went into your bag.",
                 color = Cream,
                 fontFamily = FontFirst(),
@@ -321,15 +325,15 @@ private fun SummaryRow(row: SummaryRow, visible: Boolean, accent: Color) {
             verticalAlignment = Alignment.CenterVertically
         ) {
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {
-                Text(text = row.icon, fontSize = 15.sp)
-                Text(
+                GlyphText(text = row.icon, fontSize = 15.sp)
+                GlyphText(
                     text = row.label,
                     color = Muted,
                     fontFamily = FontFirst(),
                     fontSize = 13.sp
                 )
             }
-            Text(
+            GlyphText(
                 text = row.value,
                 color = if (row.emphasis) accent else Cream,
                 fontFamily = FontFirst(),

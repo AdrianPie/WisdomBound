@@ -1,5 +1,8 @@
 package com.lernhero.home.equipment
 
+import com.lernhero.shared.theme.StrokedText
+import com.lernhero.home.city.compact
+
 import com.lernhero.home.ui.JewelPickerDialog
 import com.lernhero.domain.jewel.Sockets
 import com.lernhero.domain.item.socketedJewels
@@ -8,6 +11,18 @@ import com.lernhero.domain.item.Inventory
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
+import com.lernhero.home.ui.darken
+import androidx.compose.ui.unit.LayoutDirection
+import androidx.compose.ui.unit.IntOffset
+import androidx.compose.ui.unit.IntSize
+import androidx.compose.ui.unit.IntRect
+import androidx.compose.ui.window.PopupPositionProvider
+import androidx.compose.ui.window.Popup
+import kotlin.math.roundToInt
+import androidx.compose.ui.draw.rotate
+import androidx.compose.foundation.layout.offset
+import androidx.compose.ui.graphics.drawscope.scale
+import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -107,7 +122,7 @@ private val Green = Color(0xFF3F8F3F)
  * Sufit rozmiaru slotu. Sloty sa RAMA ekranu, a nie jego trescia - to postac ma byc najwieksza
  * rzecza na karcie.
  */
-private val SLOT_MAX = 58.dp
+private val SLOT_MAX = 76.dp
 
 /** Odstep miedzy slotami w bocznej kolumnie - wchodzi tez w rachunek ich rozmiaru w [PaperDoll]. */
 private val SLOT_GAP = 8.dp
@@ -115,7 +130,7 @@ private val SLOT_GAP = 8.dp
 private val BACKPACK_ICON = 60.dp
 
 /** Szerokosc slotu jako ulamek szerokosci karty - zmierzone na karcie postaci ze wzorca. */
-private const val SLOT_WIDTH_FRACTION = 0.155f
+private const val SLOT_WIDTH_FRACTION = 0.2f
 
 /** Sufit szerokosci calej karty. Na tablecie panel ma zostac panelem, a nie rozlac sie na ekran. */
 private val BOARD_MAX_WIDTH = 380.dp
@@ -139,8 +154,8 @@ private const val DOLL_HEIGHT_LIMIT = 0.62f
  */
 private const val KNIGHT_WIDTH_FRACTION = 0.58f
 
-private val LEFT_SLOTS = listOf(ItemSlot.Head, ItemSlot.Chest, ItemSlot.Amulet)
-private val RIGHT_SLOTS = listOf(ItemSlot.Hands, ItemSlot.Legs, ItemSlot.Feet)
+private val LEFT_SLOTS = listOf(ItemSlot.Chest, ItemSlot.Amulet)
+private val RIGHT_SLOTS = listOf(ItemSlot.Hands, ItemSlot.Feet)
 private val BOTTOM_SLOTS = listOf(ItemSlot.MainHand, ItemSlot.OffHand, ItemSlot.Ring)
 
 /**
@@ -404,11 +419,9 @@ private fun Section(content: @Composable () -> Unit) {
 /* ------------------------------------------ Naglowek ---------------------------------------- */
 
 /**
- * Pasek tozsamosci: portret z poziomem, imie, klasa, pasek XP i zloto.
- *
- * Wzorowany na karcie gracza z mobilnych RPG - portret po lewej, a po prawej WIERSZE "etykieta ->
- * wartosc" rozdzielone cienka kreska. Wiersz czyta sie szybciej niz kafelek, bo oko skanuje jedna
- * kolumne etykiet zamiast szukac liczby w kazdym pudelku osobno.
+ * Pasek tozsamosci jak w mobilnych RPG: tarcza z poziomem, imie, wstazka "You" zwisajaca z
+ * gornej krawedzi karty, zloto w ciemnej pigulce z moneta, a pod spodem pasek doswiadczenia.
+ * Wszystko rysowane w kodzie - bez grafik, wiec ostre na kazdej gestosci ekranu.
  */
 @Composable
 private fun HeroHeader(
@@ -420,108 +433,194 @@ private fun HeroHeader(
 ) {
     val fill by animateFloatAsState(targetValue = progress.xpProgress, animationSpec = tween(600))
 
-    Column(
-        modifier = Modifier.fillMaxWidth().padding(horizontal = 3.dp),
-        verticalArrangement = Arrangement.spacedBy(6.dp)
-    ) {
-        Row(
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(8.dp)
+    Box(modifier = Modifier.fillMaxWidth()) {
+        Column(
+            modifier = Modifier.fillMaxWidth().padding(horizontal = 3.dp),
+            verticalArrangement = Arrangement.spacedBy(6.dp)
         ) {
-            // Portret niesie poziom - jedna rzecz zamiast dwoch, i od razu widac, gdzie sie patrzy.
-            Box(
-                modifier = Modifier
-                    .size(36.dp)
-                    .clip(RoundedCornerShape(10.dp))
-                    .background(Brush.verticalGradient(listOf(Color(0xFF6FA8DC), Color(0xFF4A7FB5))))
-                    .border(2.dp, Frame, RoundedCornerShape(10.dp)),
-                contentAlignment = Alignment.Center
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(10.dp)
             ) {
+                LevelShield(level = progress.level)
+
                 Text(
-                    text = "${progress.level}",
-                    color = Color.White,
+                    text = name.ifBlank { "Sir Lernhero" },
+                    color = Ink,
                     fontFamily = FontFirst(),
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 15.sp
+                    fontWeight = FontWeight.Black,
+                    fontSize = 19.sp,
+                    lineHeight = 22.sp,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.weight(1f)
                 )
-            }
 
-            Text(
-                text = name.ifBlank { "Sir Lernhero" },
-                color = Ink,
-                fontFamily = FontFirst(),
-                fontWeight = FontWeight.Bold,
-                fontStyle = FontStyle.Italic,
-                fontSize = 15.sp,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-                modifier = Modifier.weight(1f)
-            )
+                GoldPill(money = money)
 
-            TagPill(text = "You", background = ClassRed)
-            GoldPill(money = money)
-
-            // Zestaw testowy WYLACZNIE dla kont z [com.lernhero.domain.player.AdminAccounts] -
-            // jako maly kafelek przy imieniu, a nie jako trzecia zakladka na dole.
-            if (isAdmin) {
-                Box(
-                    modifier = Modifier
-                        .size(28.dp)
-                        .clip(RoundedCornerShape(9.dp))
-                        .background(Inset)
-                        .border(1.5.dp, Frame, RoundedCornerShape(9.dp))
-                        .clickable(onClick = onAdminKit),
-                    contentAlignment = Alignment.Center
-                ) {
-                    Text(text = "\u2699", fontSize = 13.sp)
+                // Zestaw testowy WYLACZNIE dla kont z [com.lernhero.domain.player.AdminAccounts].
+                if (isAdmin) {
+                    Box(
+                        modifier = Modifier
+                            .size(32.dp)
+                            .clip(RoundedCornerShape(9.dp))
+                            .background(Brush.verticalGradient(listOf(Color(0xFFE9D9B8), Color(0xFFCDB48A))))
+                            .border(2.dp, Frame, RoundedCornerShape(9.dp))
+                            .clickable(onClick = onAdminKit),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        Text(text = "\u2699", fontSize = 17.sp, color = Frame)
+                    }
                 }
             }
-        }
 
-        Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
-            Text(
-                text = "Experience",
-                color = InkMuted,
-                fontFamily = FontFirst(),
-                fontSize = 10.sp,
-                modifier = Modifier.weight(1f)
-            )
-            // Mala premia do zlota z poziomu - patrz [com.lernhero.domain.player.LevelGoldBonus].
-            val goldBonus = com.lernhero.domain.player.LevelGoldBonus.percent(progress.level)
-            if (goldBonus > 0) {
+            Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
                 Text(
-                    text = "🪙 +$goldBonus% gold   ",
-                    color = Color(0xFF9A6A12),
+                    text = "Experience",
+                    color = Ink,
+                    fontFamily = FontFirst(),
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 11.sp,
+                    modifier = Modifier.weight(1f)
+                )
+                // Mala premia do zlota z poziomu - patrz [com.lernhero.domain.player.LevelGoldBonus].
+                val goldBonus = com.lernhero.domain.player.LevelGoldBonus.percent(progress.level)
+                if (goldBonus > 0) {
+                    GoldCoin(size = 12.dp)
+                    Text(
+                        text = " +$goldBonus% gold   ",
+                        color = Ink,
+                        fontFamily = FontFirst(),
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 10.sp
+                    )
+                }
+                Text(
+                    text = "${progress.xp} / ${progress.xpForNextLevel}",
+                    color = Ink,
                     fontFamily = FontFirst(),
                     fontWeight = FontWeight.Bold,
                     fontSize = 10.sp
                 )
             }
-            Text(
-                text = "${progress.xp} / ${progress.xpForNextLevel}",
-                color = Ink,
-                fontFamily = FontFirst(),
-                fontWeight = FontWeight.Bold,
-                fontSize = 10.sp
-            )
-        }
 
-        Box(
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(7.dp)
-                .clip(RoundedCornerShape(50))
-                .background(Inset)
-                .border(1.dp, FrameLight.copy(alpha = 0.6f), RoundedCornerShape(50))
-        ) {
+            // Pasek XP: ciemny rowek i zloty, lekko blyszczacy wypelniacz.
             Box(
                 modifier = Modifier
-                    .fillMaxWidth(fill)
-                    .fillMaxSize()
+                    .fillMaxWidth()
+                    .height(9.dp)
                     .clip(RoundedCornerShape(50))
-                    .background(Button)
+                    .background(Color(0xFF2A2118))
+                    .border(1.5.dp, Color(0xFF1A140E), RoundedCornerShape(50))
+                    .padding(1.5.dp)
+            ) {
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth(fill)
+                        .fillMaxHeight()
+                        .clip(RoundedCornerShape(50))
+                        .background(Brush.verticalGradient(listOf(Color(0xFFFFE27A), Color(0xFFF2A922), Color(0xFFC77A0E))))
+                )
+            }
+        }
+
+        // Wstazka "You" zwisa z gornej krawedzi karty - nie zajmuje miejsca w wierszu z imieniem.
+        YouRibbon(modifier = Modifier.align(Alignment.TopCenter).offset(y = (-9).dp))
+    }
+}
+
+/** Heraldyczna tarcza z numerem poziomu: zlota oprawa, niebieskie pole, bialy obrysowany numer. */
+@Composable
+private fun LevelShield(level: Int) {
+    Box(modifier = Modifier.size(width = 50.dp, height = 58.dp), contentAlignment = Alignment.Center) {
+        Canvas(modifier = Modifier.fillMaxSize()) {
+            fun shield(inset: Float): androidx.compose.ui.graphics.Path {
+                val w = size.width; val h = size.height
+                return androidx.compose.ui.graphics.Path().apply {
+                    moveTo(inset, inset + h * 0.06f)
+                    quadraticTo(w * 0.25f, inset + h * 0.01f, w / 2f, inset)
+                    quadraticTo(w * 0.75f, inset + h * 0.01f, w - inset, inset + h * 0.06f)
+                    lineTo(w - inset, h * 0.55f)
+                    quadraticTo(w - inset, h * 0.82f, w / 2f, h - inset)
+                    quadraticTo(inset, h * 0.82f, inset, h * 0.55f)
+                    close()
+                }
+            }
+            val d = density
+            drawPath(shield(0f), Color(0xFF3A2410))
+            drawPath(shield(2f * d), Brush.verticalGradient(listOf(Color(0xFFFFE28A), Color(0xFFD7A13A), Color(0xFF9C6A1C))))
+            drawPath(shield(5f * d), Color(0xFF1D3252))
+            drawPath(shield(6.5f * d), Brush.verticalGradient(listOf(Color(0xFF4E8BD6), Color(0xFF2A5BA6), Color(0xFF1B3E7A))))
+            // Polysk w gornej czesci pola.
+            drawPath(
+                shield(6.5f * d),
+                Brush.verticalGradient(
+                    0f to Color.White.copy(alpha = 0.28f),
+                    0.45f to Color.Transparent,
+                    endY = size.height
+                )
             )
         }
+        StrokedText(
+            text = "$level",
+            size = 20.sp,
+            color = Color.White,
+            outline = Color(0xFF0E1C33),
+            strokeWidth = 7f,
+            tight = true,
+            modifier = Modifier.offset(y = (-3).dp)
+        )
+    }
+}
+
+/** Czerwona wstazka z wcieciem na dole, jak proporzec. */
+@Composable
+private fun YouRibbon(modifier: Modifier = Modifier) {
+    Box(modifier = modifier.size(width = 58.dp, height = 36.dp), contentAlignment = Alignment.Center) {
+        Canvas(modifier = Modifier.fillMaxSize()) {
+            val w = size.width; val h = size.height; val notch = h * 0.24f
+            fun banner(inset: Float) = androidx.compose.ui.graphics.Path().apply {
+                moveTo(inset, 0f)
+                lineTo(w - inset, 0f)
+                lineTo(w - inset, h - inset)
+                lineTo(w / 2f, h - notch - inset * 0.3f)
+                lineTo(inset, h - inset)
+                close()
+            }
+            drawPath(banner(0f), Color(0xFF3A0E0A))
+            drawPath(banner(2f * density), Brush.verticalGradient(listOf(Color(0xFF8E1F18), Color(0xFFC63A2B), Color(0xFF9E2A1F))))
+            // Ciemniejszy pasek u gory - wstazka "wychodzi" spod krawedzi karty.
+            drawRect(Color.Black.copy(alpha = 0.25f), size = androidx.compose.ui.geometry.Size(w, h * 0.16f))
+        }
+        StrokedText(
+            text = "You",
+            size = 13.sp,
+            color = Color.White,
+            outline = Color(0xFF3A0E0A),
+            strokeWidth = 5f,
+            modifier = Modifier.offset(y = (-3).dp)
+        )
+    }
+}
+
+/** Zlota moneta ze znakiem - ta sama w pigulce zlota i przy premii do zlota. */
+@Composable
+private fun GoldCoin(size: androidx.compose.ui.unit.Dp) {
+    Box(modifier = Modifier.size(size), contentAlignment = Alignment.Center) {
+        Canvas(modifier = Modifier.fillMaxSize()) {
+            val r = this.size.minDimension / 2f
+            drawCircle(Color(0xFF7A4A0C), r)
+            drawCircle(Brush.verticalGradient(listOf(Color(0xFFFFE070), Color(0xFFE9A21C))), r * 0.86f)
+            drawCircle(Color(0xFFB9720F), r * 0.62f, style = androidx.compose.ui.graphics.drawscope.Stroke(r * 0.1f))
+        }
+        Text(
+            text = "$",
+            color = Color(0xFF8A560E),
+            fontFamily = FontFirst(),
+            fontWeight = FontWeight.Black,
+            fontSize = (size.value * 0.55f).sp,
+            lineHeight = (size.value * 0.6f).sp
+        )
     }
 }
 
@@ -591,7 +690,7 @@ private fun PaperDoll(
         // Slot to staly UŁAMEK szerokosci karty, a nie funkcja wolnej wysokosci ekranu: na kazdym
         // telefonie ma wyjsc ta sama, spokojna siatka, a nie szesc coraz wiekszych kwadratow.
         val slot = (maxWidth * SLOT_WIDTH_FRACTION).coerceIn(38.dp, SLOT_MAX)
-        val columnHeight = slot * 3 + SLOT_GAP * 2
+        val columnHeight = slot * LEFT_SLOTS.size + SLOT_GAP * (LEFT_SLOTS.size - 1)
         val dollHeight = maxOf(columnHeight, maxWidth * DOLL_HEIGHT_LIMIT)
 
         Column(
@@ -685,22 +784,34 @@ private fun Viewport(knight: KnightEquipment, look: HeroLook, modifier: Modifier
                     .background(
                         Brush.radialGradient(
                             colors = listOf(
-                                Color(0x55FFF3D6),
-                                Color(0x22C9A96E),
+                                Color(0x40FFF3D6),
+                                Color(0x14C9A96E),
                                 Color.Transparent
                             )
                         )
                     )
             )
-            Box(
+            // Miekka elipsa, ktorej SRODEK lezy na linii podeszew - wczesniej byl to plaski pasek
+            // na wysokosci lydek, wiec wygladal jak cos za nogami, a nie cien pod nimi.
+            Canvas(
                 modifier = Modifier
                     .align(Alignment.BottomCenter)
-                    .padding(bottom = size * 0.12f)
-                    .fillMaxWidth(0.46f)
-                    .height(size * 0.045f)
-                    .clip(RoundedCornerShape(50))
-                    .background(Color(0x38705030))
-            )
+                    .padding(bottom = size * 0.075f)
+                    .fillMaxWidth(0.5f)
+                    .height(size * 0.08f)
+            ) {
+                scale(scaleX = 1f, scaleY = this.size.height / this.size.width, pivot = center) {
+                    drawCircle(
+                        brush = Brush.radialGradient(
+                            colors = listOf(Color(0x80503018), Color(0x40503018), Color.Transparent),
+                            center = center,
+                            radius = this.size.width / 2f
+                        ),
+                        radius = this.size.width / 2f,
+                        center = center
+                    )
+                }
+            }
             ModularKnight(
                 equipment = knight,
                 look = look,
@@ -820,92 +931,248 @@ private fun CombatPill(icon: String, tint: Color, value: String, modifier: Modif
 @Composable
 private fun AttributesSection(progress: PlayerProgress, onSpend: (HeroStat) -> Unit) {
     val canSpend = progress.unspentPoints > 0
+    // Tapniecie w karte pokazuje NAD nia dymek z tym, co atrybut robi; drugie tapniecie chowa.
+    var explained by remember { mutableStateOf<HeroStat?>(null) }
 
-    Column(modifier = Modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(3.dp)) {
+    Column(modifier = Modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(8.dp)) {
         Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .clip(RoundedCornerShape(8.dp))
-                .background(if (canSpend) Green.copy(alpha = 0.22f) else Inset)
-                .padding(horizontal = 8.dp, vertical = 4.dp),
+            modifier = Modifier.fillMaxWidth().padding(horizontal = 2.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
             Text(
                 text = "Attributes",
                 color = Ink,
                 fontFamily = FontFirst(),
-                fontWeight = FontWeight.Bold,
-                fontSize = 12.sp,
+                fontWeight = FontWeight.Black,
+                fontSize = 15.sp,
                 modifier = Modifier.weight(1f)
             )
             if (canSpend) {
                 Box(
                     modifier = Modifier
                         .clip(RoundedCornerShape(20.dp))
-                        .background(Green)
-                        .padding(horizontal = 7.dp, vertical = 1.dp)
+                        .background(Brush.verticalGradient(listOf(Color(0xFF5CC84A), Color(0xFF2F8A2A))))
+                        .border(1.dp, Color(0xFF1F5E1C), RoundedCornerShape(20.dp))
+                        .padding(horizontal = 9.dp, vertical = 3.dp)
                 ) {
                     Text(
-                        text = "${progress.unspentPoints} PTS",
+                        text = "${progress.unspentPoints} points to spend",
                         color = Color.White,
                         fontFamily = FontFirst(),
                         fontWeight = FontWeight.Bold,
                         fontSize = 10.sp
                     )
                 }
+            } else {
+                Text(
+                    text = "Tap a stat for details",
+                    color = InkMuted,
+                    fontFamily = FontFirst(),
+                    fontSize = 10.sp
+                )
             }
         }
-        HeroStat.entries.forEachIndexed { index, stat ->
-            if (index > 0) Hairline()
-            Row(
-                modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp),
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Text(
-                    text = stat.label,
-                    color = Ink,
-                    fontFamily = FontFirst(),
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 12.sp,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
-                    modifier = Modifier.weight(1f)
-                )
-                Text(
-                    text = "${progress.stats[stat]}",
-                    color = Green,
-                    fontFamily = FontFirst(),
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 13.sp
-                )
-                if (canSpend) {
-                    Box(
-                        modifier = Modifier
-                            .padding(start = 8.dp)
-                            .size(22.dp)
-                            .clip(RoundedCornerShape(7.dp))
-                            .background(Button)
-                            .border(1.5.dp, ParchmentPalette.ButtonEdge, RoundedCornerShape(7.dp))
-                            .clickable { onSpend(stat) },
-                        contentAlignment = Alignment.Center
-                    ) {
-                        Text(
-                            text = "+",
-                            color = Ink,
-                            fontFamily = FontFirst(),
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 14.sp
-                        )
-                    }
+        HeroStat.entries.chunked(2).forEach { pair ->
+            Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                pair.forEach { stat ->
+                    StatCard(
+                        stat = stat,
+                        points = progress.stats[stat],
+                        canSpend = canSpend,
+                        explained = explained == stat,
+                        onToggle = { explained = if (explained == stat) null else stat },
+                        onDismiss = { explained = null },
+                        onSpend = { onSpend(stat) },
+                        modifier = Modifier.weight(1f)
+                    )
                 }
             }
         }
     }
 }
 
+/**
+ * Karta jednego atrybutu: kolorowe kolko z ikona, nazwa, duza wartosc i krotki efekt pod nia.
+ * Kolor niesie tozsamosc atrybutu (sila - czerwien, zywotnosc - zielen...), wiec cztery karty
+ * da sie odroznic bez czytania.
+ */
+@Composable
+private fun StatCard(
+    stat: HeroStat,
+    points: Int,
+    canSpend: Boolean,
+    explained: Boolean,
+    onToggle: () -> Unit,
+    onDismiss: () -> Unit,
+    onSpend: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    val look = stat.look()
+    val shape = RoundedCornerShape(12.dp)
+    Row(
+        modifier = modifier
+            .clip(shape)
+            .background(Brush.verticalGradient(listOf(Color.White.copy(alpha = 0.55f), look.color.copy(alpha = 0.14f))))
+            .border(1.dp, look.color.copy(alpha = 0.45f), shape)
+            .clickable(onClick = onToggle)
+            .padding(horizontal = 8.dp, vertical = 7.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(8.dp)
+    ) {
+        Box(
+            modifier = Modifier
+                .size(34.dp)
+                .clip(CircleShape)
+                .background(Brush.verticalGradient(listOf(look.color.lightened(0.35f), look.color)))
+                .border(1.5.dp, Color.White.copy(alpha = 0.8f), CircleShape),
+            contentAlignment = Alignment.Center
+        ) {
+            Text(text = look.icon, fontSize = 16.sp, lineHeight = 18.sp)
+        }
+        Column(modifier = Modifier.weight(1f)) {
+            Text(
+                text = stat.label.uppercase(),
+                color = InkMuted,
+                fontFamily = FontFirst(),
+                fontWeight = FontWeight.Bold,
+                fontSize = 9.sp,
+                lineHeight = 10.sp,
+                letterSpacing = 0.6.sp
+            )
+            Text(
+                text = "$points",
+                color = Ink,
+                fontFamily = FontFirst(),
+                fontWeight = FontWeight.Black,
+                fontSize = 20.sp,
+                lineHeight = 22.sp
+            )
+            Text(
+                text = stat.shortEffect(points),
+                color = look.color.darken(0.25f),
+                fontFamily = FontFirst(),
+                fontWeight = FontWeight.Bold,
+                fontSize = 10.sp,
+                lineHeight = 11.sp,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis
+            )
+        }
+        if (canSpend) {
+            Box(
+                modifier = Modifier
+                    .size(26.dp)
+                    .clip(CircleShape)
+                    .background(Brush.verticalGradient(listOf(Color(0xFF6FD85A), Color(0xFF2F8A2A))))
+                    .border(1.dp, Color(0xFF1F5E1C), CircleShape)
+                    .clickable(onClick = onSpend),
+                contentAlignment = Alignment.Center
+            ) {
+                Text(
+                    text = "+",
+                    color = Color.White,
+                    fontFamily = FontFirst(),
+                    fontWeight = FontWeight.Black,
+                    fontSize = 16.sp,
+                    lineHeight = 16.sp
+                )
+            }
+        }
+        if (explained) {
+            // Nakladka NAD karta - nie wpycha sie w uklad, nic pod nia sie nie przesuwa.
+            Popup(popupPositionProvider = AboveAnchor, onDismissRequest = onDismiss) {
+                StatBubble(stat = stat, points = points)
+            }
+        }
+    }
+}
+
+private class StatLook(val icon: String, val color: Color)
+
+private fun HeroStat.look(): StatLook = when (this) {
+    HeroStat.Strength -> StatLook("⚔️", Color(0xFFD9503F))
+    HeroStat.Vitality -> StatLook("❤️", Color(0xFF3FA356))
+    HeroStat.Focus -> StatLook("🧠", Color(0xFF3F7FD9))
+    HeroStat.Luck -> StatLook("🍀", Color(0xFFD9A020))
+}
+
+/** Krotki efekt pod wartoscia na karcie - pelne zdanie jest w dymku ([StatBubble]). */
+private fun HeroStat.shortEffect(points: Int): String = when (this) {
+    HeroStat.Strength -> "+${points * 2} attack"
+    HeroStat.Vitality -> "+${points * 8} HP"
+    HeroStat.Focus -> "+${points * 2}% quiz dmg"
+    HeroStat.Luck -> "+${((points * 0.6f) * 10).roundToInt() / 10f}% crit"
+}
+
+private fun Color.lightened(amount: Float): Color = Color(
+    red = red + (1f - red) * amount,
+    green = green + (1f - green) * amount,
+    blue = blue + (1f - blue) * amount,
+    alpha = alpha
+)
+
 /* ------------------------------------- Wspolne klocki --------------------------------------- */
 
 /** Panel z papieru w grubej brazowej oprawie - podstawowy budulec tego ekranu. */
+/** Dymek pod wierszem atrybutu: co robi jeden punkt i ile daja punkty juz rozdane. */
+@Composable
+private fun StatBubble(stat: HeroStat, points: Int) {
+    val total = when (stat) {
+        HeroStat.Strength -> "+${points * 2} party attack"
+        HeroStat.Vitality -> "+${points * 8} max party HP"
+        HeroStat.Focus -> "+${points * 2}% damage from correct answers"
+        HeroStat.Luck -> "+${((points * 0.6f) * 10).roundToInt() / 10f}% critical hit chance"
+    }
+    Column(modifier = Modifier.widthIn(max = 300.dp)) {
+        Column(
+            modifier = Modifier
+                .clip(RoundedCornerShape(10.dp))
+                .background(BubbleInk)
+                .padding(horizontal = 10.dp, vertical = 7.dp),
+            verticalArrangement = Arrangement.spacedBy(2.dp)
+        ) {
+            Text(
+                text = stat.description,
+                color = Color(0xFFF4E9D7),
+                fontFamily = FontFirst(),
+                fontWeight = FontWeight.Bold,
+                fontSize = 11.sp
+            )
+            Text(
+                text = "Now: $total",
+                color = Color(0xFFFFD34D),
+                fontFamily = FontFirst(),
+                fontWeight = FontWeight.Bold,
+                fontSize = 11.sp
+            )
+        }
+        // Ogonek dymka wskazujacy w dol, na wiersz.
+        Box(
+            modifier = Modifier
+                .padding(start = 18.dp)
+                .size(10.dp)
+                .offset(y = (-5).dp)
+                .rotate(45f)
+                .background(BubbleInk)
+        )
+    }
+}
+
+/** Stawia dymek tuz nad kotwica (wierszem atrybutu), wyrownany do jego lewej krawedzi. */
+private val AboveAnchor = object : PopupPositionProvider {
+    override fun calculatePosition(
+        anchorBounds: IntRect,
+        windowSize: IntSize,
+        layoutDirection: LayoutDirection,
+        popupContentSize: IntSize
+    ): IntOffset = IntOffset(
+        x = anchorBounds.left.coerceAtMost(windowSize.width - popupContentSize.width).coerceAtLeast(0),
+        y = (anchorBounds.top - popupContentSize.height).coerceAtLeast(0)
+    )
+}
+
+private val BubbleInk = Color(0xFF3A2A1C)
+
 @Composable
 private fun PaperPanel(modifier: Modifier = Modifier, content: @Composable () -> Unit) {
     Box(
@@ -964,23 +1231,27 @@ private fun PowerPill(power: Int) {
 
 @Composable
 private fun GoldPill(money: Int) {
-    Row(
-        modifier = Modifier
-            .clip(RoundedCornerShape(20.dp))
-            .background(Button)
-            .border(2.dp, ParchmentPalette.ButtonEdge, RoundedCornerShape(20.dp))
-            .padding(horizontal = 10.dp, vertical = 4.dp),
-        horizontalArrangement = Arrangement.spacedBy(4.dp),
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        Text(text = "💰", fontSize = 12.sp)
-        Text(
-            text = "$money",
-            color = Ink,
-            fontFamily = FontFirst(),
-            fontWeight = FontWeight.Bold,
-            fontSize = 12.sp
-        )
+    // Ciemna pigulka z moneta wystajaca z lewej krawedzi - jak licznik waluty w grach.
+    Box(contentAlignment = Alignment.CenterStart) {
+        Box(
+            modifier = Modifier
+                .padding(start = 14.dp)
+                .clip(RoundedCornerShape(20.dp))
+                .background(Brush.verticalGradient(listOf(Color(0xFF4A3A2A), Color(0xFF2A2018))))
+                .border(2.dp, Color(0xFF1A130C), RoundedCornerShape(20.dp))
+                .padding(start = 18.dp, end = 10.dp, top = 4.dp, bottom = 4.dp)
+        ) {
+            Text(
+                // Skrot jak na gornym pasku (10.0M) - pelna liczba wpychala sie pod wstazke "You".
+                text = money.compact(),
+                color = Color(0xFFFFE08A),
+                fontFamily = FontFirst(),
+                fontWeight = FontWeight.Black,
+                fontSize = 14.sp,
+                lineHeight = 16.sp
+            )
+        }
+        GoldCoin(size = 28.dp)
     }
 }
 
@@ -1125,7 +1396,7 @@ private fun BackpackDialog(
         text = {
             if (items.isEmpty()) {
                 Text(
-                    text = "Backpack is empty. Forge gear at the Forge.",
+                    text = "Backpack is empty. Gear drops from chests and bosses.",
                     color = InkMuted,
                     fontFamily = FontFirst(),
                     fontSize = 12.sp
@@ -1204,7 +1475,7 @@ private fun ItemPickerDialog(
         text = {
             if (items.isEmpty()) {
                 Text(
-                    text = "You have nothing for this slot. Forge gear at the Forge.",
+                    text = "You have nothing for this slot yet. Gear drops from chests and bosses.",
                     color = InkMuted,
                     fontFamily = FontFirst(),
                     fontSize = 12.sp

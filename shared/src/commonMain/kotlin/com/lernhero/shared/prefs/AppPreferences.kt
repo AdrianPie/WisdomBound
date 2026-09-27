@@ -24,6 +24,7 @@ import com.russhwolf.settings.set
  * Czytelnicy (stan na dzis):
  * - [remindersEnabled] / [isReminderEnabled] / [dailyGoalHour] -> PlayerViewModel.rescheduleReminders
  * - [battleSpeed] -> BattleViewModel (tempo, od ktorego startuje kazda walka)
+ * - [soundEnabled] -> Sounds (efekty dzwiekowe, podpinane w App)
  */
 class AppPreferences(private val settings: Settings = Settings()) {
 
@@ -36,6 +37,15 @@ class AppPreferences(private val settings: Settings = Settings()) {
         settings[KEY_DAILY_HOUR, ReminderPlan.DAILY_GOAL_HOUR].coerceIn(MIN_HOUR, MAX_HOUR)
     )
         private set
+
+    /** Efekty dzwiekowe gry - czyta je [com.lernhero.shared.audio.Sounds]. */
+    var soundEnabled: Boolean by mutableStateOf(settings[KEY_SOUND, true])
+        private set
+
+    fun chooseSound(enabled: Boolean) {
+        soundEnabled = enabled
+        settings[KEY_SOUND] = enabled
+    }
 
     /** Tempo, od ktorego startuje kazda walka. W HUD-zie dalej da sie je zmienic na chwile. */
     var battleSpeed: Float by mutableStateOf(settings[KEY_BATTLE_SPEED, DEFAULT_BATTLE_SPEED])
@@ -93,6 +103,7 @@ class AppPreferences(private val settings: Settings = Settings()) {
         settings[KEY_MUTED_REMINDERS] = ""
         chooseDailyGoalHour(ReminderPlan.DAILY_GOAL_HOUR)
         chooseBattleSpeed(DEFAULT_BATTLE_SPEED)
+        chooseSound(true)
     }
 
     companion object {
@@ -106,6 +117,7 @@ class AppPreferences(private val settings: Settings = Settings()) {
         private const val KEY_MUTED_REMINDERS = "prefs_reminders_muted"
         private const val KEY_DAILY_HOUR = "prefs_daily_goal_hour"
         private const val KEY_BATTLE_SPEED = "prefs_battle_speed"
+        private const val KEY_SOUND = "prefs_sound_enabled"
         private const val SEPARATOR = ','
     }
 }

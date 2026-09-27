@@ -65,6 +65,96 @@ fun Item.icon(): String = when (iconKey) {
     else -> "\u2754"
 }
 
+/**
+ * Nazwa grafiki przedmiotu (`drawable/item_<nazwa>.png`, patrz
+ * [com.lernhero.shared.resources.Resources.itemArt]).
+ *
+ * Jedna grafika sluzy kilku przedmiotom - jak w grach, gdzie ten sam miecz wystepuje w wersji D
+ * i S: rozni je kolor tla i ranga na kafelku ([ItemIcon]), a nie osobny rysunek. Przedmiot
+ * spoza tej mapy szuka grafiki po swoim [Item.iconKey], a gdy i jej nie ma - zostaje emoji.
+ */
+fun Item.artKey(): String = ITEM_ART[id] ?: iconKey
+
+private val ITEM_ART: Map<String, String> = mapOf(
+    // Miecze
+    "plate_sword" to "sword",
+    "torchblade" to "sword",
+    "frostbrand" to "sword",
+    "silver_sabre" to "sabre",
+    "dawnbreaker" to "greatsword",
+    // Sztylety
+    "hunting_knife" to "venomdagger",
+    "venom_dagger" to "venomdagger",
+    "twin_fangs" to "daggers",
+    "thousand_cuts" to "daggers",
+    // Topory i obuchy
+    "rusty_axe" to "axe",
+    "executioners_axe" to "waraxe",
+    "oak_club" to "club",
+    "bronze_warhammer" to "woodenmace",
+    "sundering_maul" to "woodenmace",
+    // Drzewcowe
+    "soldiers_spear" to "spear",
+    "stormpiercer" to "spear",
+    "tide_trident" to "trident",
+    "reaper_glaive" to "glaive",
+    "blight_sickle" to "sickle",
+    // Kostury - kazdy w swoim zywiole
+    "ember_staff" to "firestaff",
+    "withering_crook" to "deathstaff",
+    "worldroot_staff" to "naturestaff",
+    // Zbroje (korpus)
+    "leather_jerkin" to "leatherarmor",
+    "hide_wrap" to "leatherarmor",
+    "chain_hauberk" to "chainarmor",
+    "chitin_plate" to "chainarmor",
+    "wardens_plate" to "platearmor",
+    "titans_carapace" to "platearmor",
+    "aeonplate" to "platearmor",
+    "revenant_mail" to "skullarmor",
+    "grave_shroud" to "skullarmor",
+    "darksteel_armor" to "darkarmor",
+    "cloak_of_shadows" to "darkarmor",
+    // Buty
+    "leather_boots" to "leatherboots",
+    "phantom_treads" to "leatherboots",
+    "scouts_boots" to "scoutboots",
+    "plate_boots" to "plateboots",
+    // Rekawice
+    "plate_gauntlets" to "plategloves",
+    "iron_gauntlets" to "plategloves",
+    "spiked_pauldrons" to "plategloves",
+    // Tarcze
+    "worn_buckler" to "woodenshield",
+    "blessed_shield" to "blessedshield",
+    "bulwark_of_dawn" to "blessedshield",
+    "aegis_shield" to "blessedshield",
+    // Pierscienie
+    "copper_band" to "copperring",
+    "blood_band" to "copperring",
+    "band_of_haste" to "copperring",
+    "ironwood_ring" to "copperring",
+    "ring_of_the_duellist" to "gemring",
+    "ring_of_fury" to "gemring",
+    "ring_of_tempo" to "gemring",
+    "leech_signet" to "signetring",
+    "signet_of_the_first_blow" to "signetring",
+    "soulbinder_band" to "soulring",
+    "seed_ring" to "soulring",
+    // Amulety
+    "bone_charm" to "bonecharm",
+    "emberheart_charm" to "bonecharm",
+    "pendant_of_the_medic" to "pendant",
+    "tide_pearl" to "pendant",
+    "amulet_of_frost" to "frostamulet",
+    "torc_of_command" to "torc",
+    "banner_of_valor" to "torc",
+    "sigil_of_dread" to "sigil",
+    "heart_of_the_grove" to "naturecharm",
+    "spirit_totem" to "totem",
+    "totem_of_ages" to "totem"
+)
+
 /** Wszystkie klucze ikon, ktore ta mapa obsluguje - do testu pokrycia katalogu. */
 internal val MAPPED_ICON_KEYS: Set<String> = setOf(
     "knife", "dagger", "daggers", "sword", "sabre", "greatsword", "axe", "hammer", "club",

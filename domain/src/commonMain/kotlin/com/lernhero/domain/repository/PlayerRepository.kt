@@ -257,8 +257,11 @@ interface PlayerRepository {
         charactersDelta: Int
     ): Player?
 
-    /** Zapamietuje ostatnia przeczytana strone danej ksiazki. */
-    suspend fun updateBookProgress(bookId: String, page: Int)
+    /**
+     * Zapamietuje miejsce w danej ksiazce: numer strony (PDF) albo akapit + znak w nim (reflow).
+     * Kazda ksiazka ma wlasny wpis.
+     */
+    suspend fun updateBookProgress(bookId: String, page: Int, charOffset: Int = 0)
 
     /** Dopisuje ksiazke wgrana przez gracza do biblioteki. */
     suspend fun addImportedBook(book: Book)

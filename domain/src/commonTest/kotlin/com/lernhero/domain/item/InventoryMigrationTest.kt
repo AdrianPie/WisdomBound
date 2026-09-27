@@ -19,7 +19,7 @@ import kotlin.test.assertTrue
 class InventoryMigrationTest {
 
     private val sword = Weapons.PLATE_SWORD.id
-    private val helm = Armors.PLATE_HELM.id
+    private val helm = Armors.PLATE_GAUNTLETS.id
 
     @Test
     fun `stary plecak czyta sie jako sztuki, z zachowaniem poziomow ulepszen`() {

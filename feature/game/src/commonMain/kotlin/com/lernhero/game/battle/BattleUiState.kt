@@ -36,6 +36,20 @@ data class ReviveOffer(
     val note: String? = null
 )
 
+/**
+ * Pocisk w locie: strzala, kula zywiolu, kula ognia z zaklecia. Leci [flightMs] (juz po
+ * [BattleSpeed]), a trafienie - obrazenia, reakcja celu, wybuch - przychodzi dopiero PO nim
+ * (patrz BattleViewModel.onAttackFinished). Wczesniej HP spadalo w chwili wystrzalu i cel
+ * drgal, zanim cokolwiek do niego doleciało.
+ */
+data class ProjectileEvent(
+    val id: Long,
+    val sourceId: String,
+    val targetId: String,
+    val kind: com.lernhero.game.battle.fx.ProjectileKind,
+    val flightMs: Int
+)
+
 data class FloatingEffect(
     val id: Long,
     val targetId: String,
@@ -139,6 +153,8 @@ data class BattleUiState(
     val quiz: LiveQuizState? = null,
     /** Pływajace liczby obrazen czekajace na odegranie. */
     val floatingEffects: List<FloatingEffect> = emptyList(),
+    /** Pociski wystrzelone, ale jeszcze nie narysowane - ekran zdejmuje je przez consumeProjectile. */
+    val projectiles: List<ProjectileEvent> = emptyList(),
     val message: String? = null,
     /** Ile jeszcze tur druzyna stoi oszolomiona po przegranym zakladzie z bossem - patrz [BossEventState]. */
     val stunTurnsRemaining: Int = 0,

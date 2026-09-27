@@ -39,8 +39,34 @@ object StageLoot {
         return pool.shuffled(random).take(POOL_SIZE)
     }
 
-    /** Szansa, ze po wygranej wypadnie JAKIKOLWIEK przedmiot (boss ma wyraznie wieksza). */
-    fun dropChance(isBoss: Boolean): Float = if (isBoss) 0.35f else 0.08f
+    /**
+     * Szansa, ze po wygranej wypadnie JAKIKOLWIEK przedmiot. Kuznia juz nie wykuwa, wiec lup to
+     * glowne zrodlo sprzetu: boss przy PIERWSZYM pokonaniu daje przedmiot zawsze, pozniej co ktorys
+     * raz; zwykla plansza - rzadko.
+     */
+    fun dropChance(isBoss: Boolean, firstClear: Boolean = false): Float = when {
+        isBoss && firstClear -> 1f
+        isBoss -> 0.35f
+        else -> 0.1f
+    }
+
+    /** Szansa na przedmiot z bossa w endless (co [com.lernhero.domain.run.EndlessMilestones.BOSS_INTERVAL] fal). */
+    const val ENDLESS_BOSS_DROP_CHANCE = 0.5f
+
+    /**
+     * Przedmiot z bossa w endless - null, gdy nic nie wypadlo. Endless nie ma planszy, wiec
+     * glebokosc puli bierzemy z numeru fali: im dalej gracz zaszedl, tym rzadszy sprzet.
+     */
+    fun rollEndlessBoss(
+        wave: Int,
+        tier: com.lernhero.domain.run.RunDifficulty,
+        random: Random = Random.Default
+    ): Item? {
+        if (random.nextFloat() >= ENDLESS_BOSS_DROP_CHANCE) return null
+        val pool = itemPool(wave.coerceAtLeast(1), tier)
+        if (pool.isEmpty()) return null
+        return pool[random.nextInt(pool.size)]
+    }
 
     /**
      * Losuje lup po WYGRANEJ walce na planszy kampanii - null, gdy nic nie wypadlo.
@@ -55,9 +81,10 @@ object StageLoot {
         globalStage: Int,
         tier: com.lernhero.domain.run.RunDifficulty,
         isBoss: Boolean,
+        firstClear: Boolean = false,
         random: Random = Random.Default
     ): Item? {
-        if (random.nextFloat() >= dropChance(isBoss)) return null
+        if (random.nextFloat() >= dropChance(isBoss, firstClear)) return null
         val pool = itemPool(globalStage, tier)
         if (pool.isEmpty()) return null
         return pool[random.nextInt(pool.size)]

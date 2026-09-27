@@ -128,6 +128,12 @@ data class Player(
     val readingToday: ReadingDayProgress = ReadingDayProgress(),
     /** Ostatnia przeczytana strona per ksiazka (id ksiazki -> numer strony). */
     val bookProgress: Map<String, Int> = emptyMap(),
+    /**
+     * Pozycja znaku W akapicie z [bookProgress] (ksiazki w reflow). Sam indeks akapitu nie
+     * wystarcza: dlugi akapit ciagnie sie przez kilka stron, a powrot na jego poczatek cofal
+     * czytelnika o strone albo dwie.
+     */
+    val bookOffsets: Map<String, Int> = emptyMap(),
     /** Ksiazki wgrane przez gracza - te wbudowane (BundledBooks) nie musza tu siedziec. */
     val importedBooks: List<Book> = emptyList(),
     /** Slowa zapisane z czytnika przyciskiem "zakladka" - surowiec pod quiz ze slowek. */

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+        Android 10+: zakaz "wymuszonego trybu ciemnego". Gra ma wlasne, ciemne kolory, a system
+        (zwlaszcza MIUI/HyperOS, ktore robi to kazdej aplikacji) odwracal je na sile: ciemny tekst
+        pytan wychodzil bialy na kremowej ramce, a ciemne obrysy napisow - jasne, przez co napisy
+        zlewaly sie w biale plamy. Te same style co w values/, tylko z forceDarkAllowed=false.
+    -->
+    <style parent="Theme.SplashScreen" name="Theme.HeroQuiz.Splash">
+        <item name="windowSplashScreenBackground">#0E1626</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:forceDarkAllowed">false</item>
+        <item name="postSplashScreenTheme">@style/Theme.HeroQuiz</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_icon</item>
+    </style>
+
+    <style parent="android:Theme.Material.NoActionBar" name="Theme.HeroQuiz">
+        <item name="android:windowBackground">@color/app_background</item>
+        <item name="android:forceDarkAllowed">false</item>
+    </style>
+</resources>

@@ -1,18 +1,17 @@
 package com.lernhero.game.battle.component
 
-import androidx.compose.animation.animateColorAsState
-import androidx.compose.animation.core.Animatable
+import androidx.compose.animation.core.EaseInOutSine
 import androidx.compose.animation.core.FastOutSlowInEasing
+import androidx.compose.animation.core.RepeatMode
+import androidx.compose.animation.core.animateFloat
 import androidx.compose.animation.core.animateFloatAsState
-import androidx.compose.animation.core.spring
+import androidx.compose.animation.core.infiniteRepeatable
+import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.animation.core.tween
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -20,253 +19,152 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.Shadow
-import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.graphics.graphicsLayer
-import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.lernhero.game.character.CharacterUiModel
-import com.lernhero.shared.resources.Resources
-import com.lernhero.shared.theme.FontFirst
-import kotlin.math.roundToInt
-import org.jetbrains.compose.resources.DrawableResource
-import org.jetbrains.compose.resources.painterResource
+import com.lernhero.game.character.ElementEmblem
+import com.lernhero.shared.theme.StrokedText
 
 /**
- * Tabliczka walczacego nad glowa: u gory rzad `[poziom] (serce HP) (miecz ATK) (tarcza DEF)`,
- * a pod nim `[zywiol]` i cienki pasek HP na reszte szerokosci.
+ * Tabliczka nad glowa - tylko to, co trzeba widziec W TRAKCIE walki: poziom, pasek HP i zywiol.
  *
- * - **Poziom** - okragla odznaka ze zlota (nasi) albo czerwona (wrogowie) obwodka.
- * - **Zywiol** - emblemat ([elementBadge]); u naszych pulsuje, gdy kafel tematu go wzmocnil.
- * - **HP / ATK / DEF** - ciemne "pigulki" z ikona i liczba.
- * - **ATK NA TE TURE** - po odpowiedzi mnoznik salwy wchodzi od razu: liczba dolicza sie, pigulka
- *   "pompuje", a liczba zmienia kolor (jasne zloto = dobrze dla gracza, czerwien = zle).
- * - **DEF** - pancerz w procentach ([com.lernhero.domain.combat.Armor]).
- * - **Pasek HP** z "cieniem obrazen" (jasny kawalek znika chwile po ciosie).
+ * Wczesniej byl tu rzad czterech pigulek (poziom, HP, atak, pancerz) z pieciopunktowym pismem -
+ * przy szesciu potworach po stronie zlewaly sie w jeden szum, nad ktorym nie bylo widac ani
+ * pasekow, ani postaci. Liczby sa teraz pod tapnieciem w postac ([InspectCard]).
  *
- * Tabliczka stoi CALA nad glowa - jej dolna krawedz jest na wysokosci czubka glowy (patrz
- * BattleField.HealthBarsOverlay), wiec nie przykrywa postaci.
+ * Mnoznik ataku tury (dobra/zla odpowiedz) zostaje jako mala strzalka przy pasku: w gore na zloto,
+ * w dol na czerwono - kolor mowi o KORZYSCI gracza, tak jak wczesniej.
  */
 @Composable
 internal fun UnitPlate(
     character: CharacterUiModel,
-    barWidth: Dp,
     attackMultiplier: Float,
-    modifier: Modifier = Modifier,
-    elementBadge: (@Composable () -> Unit)? = null
+    boosted: Boolean,
+    modifier: Modifier = Modifier
 ) {
-    Column(
-        modifier = modifier.width(IntrinsicSize.Max),
-        verticalArrangement = Arrangement.spacedBy(1.dp)
-    ) {
-        Row(
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(1.dp)
-        ) {
-            LevelBadge(level = character.level, isPlayer = character.isPlayer)
-            StatPill(icon = Resources.Icon.PlateHeart, text = "${character.hp.coerceAtLeast(0)}")
-            AttackPill(base = character.attack, multiplier = attackMultiplier, isPlayer = character.isPlayer)
-            StatPill(icon = Resources.Icon.PlateShield, text = "${(character.armor * 100).roundToInt()}")
-        }
-        // Zywiol z lewej przy pasku zycia, pasek zajmuje reszte szerokosci rzedu.
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(2.dp)
-        ) {
-            elementBadge?.invoke()
-            HpBar(
-                hp = character.hp,
-                maxHp = character.maxHp,
-                modifier = Modifier.weight(1f).widthIn(min = barWidth)
-            )
-        }
-    }
-}
-
-/**
- * Grafiki pod odznakami tabliczki. `null` = odznaka rysowana w kodzie (kolo/szesciokat z gradientem).
- * Po wgraniu PNG wystarczy tu podpiac zasob - liczba zostaje rysowana na wierzchu.
- */
-internal object PlateArt {
-    val level: DrawableResource? = null
-}
-
-@Composable
-private fun LevelBadge(level: Int, isPlayer: Boolean) {
-    val rim = if (isPlayer) Color(0xFFFFD66B) else Color(0xFFFF8A7A)
-    BadgeFrame(
-        art = PlateArt.level,
-        shape = CircleShape,
-        fill = Brush.verticalGradient(listOf(Color(0xFF3A4458), Color(0xFF151A24))),
-        rim = rim
-    ) {
-        BadgeNumber(text = "$level", color = Color.White)
-    }
-}
-
-@Composable
-private fun AttackPill(base: Int, multiplier: Float, isPlayer: Boolean) {
-    val target = (base * multiplier).roundToInt()
-    val value by animateFloatAsState(target.toFloat(), tween(650, easing = FastOutSlowInEasing), label = "atk")
-    val up = multiplier > 1.001f
-    val down = multiplier < 0.999f
-    val goodForPlayer = if (isPlayer) up else down
-    // Kolor = korzysc dla GRACZA: nasz atak w gore albo wroga w dol to jasne zloto, odwrotnie czerwien.
-    val textColor by animateColorAsState(
-        when {
-            !up && !down -> Color.White
-            goodForPlayer -> Color(0xFFFFE066)
-            else -> Color(0xFFFF6B5E)
-        }, label = "atkText"
-    )
-    val pulse = remember { Animatable(1f) }
-    LaunchedEffect(target) {
-        if (!up && !down && target == base) return@LaunchedEffect
-        pulse.snapTo(1f)
-        pulse.animateTo(1.35f, tween(140, easing = FastOutSlowInEasing))
-        pulse.animateTo(1f, spring(dampingRatio = 0.35f, stiffness = 420f))
-    }
-    StatPill(
-        icon = Resources.Icon.PlateSword,
-        text = "${value.roundToInt()}",
-        textColor = textColor,
-        modifier = Modifier.graphicsLayer {
-            scaleX = pulse.value
-            scaleY = pulse.value
-        }
-    )
-}
-
-/** Ciemna pigulka: ikona z lewej, liczba z prawej. */
-@Composable
-private fun StatPill(
-    icon: DrawableResource,
-    text: String,
-    modifier: Modifier = Modifier,
-    textColor: Color = Color.White
-) {
+    val giant = character.battleScale > 1.9f
+    val barWidth = if (giant) 78.dp else if (character.knightEquipment != null) 50.dp else 42.dp
+    val barHeight = if (giant) 7.dp else 5.dp
     Row(
-        modifier = modifier
-            .height(STAT_BADGE)
-            .clip(RoundedCornerShape(50))
-            .background(Color(0xCC0E1118))
-            .padding(start = 1.5.dp, end = 3.dp),
+        modifier = modifier,
         verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(1.dp)
+        horizontalArrangement = Arrangement.spacedBy(2.dp)
     ) {
-        Image(
-            painter = painterResource(icon),
-            contentDescription = null,
-            modifier = Modifier.size(7.5.dp)
+        LevelBadge(level = character.level, isPlayer = character.isPlayer, giant = giant)
+        HpBar(
+            hp = character.hp,
+            maxHp = character.maxHp,
+            isPlayer = character.isPlayer,
+            modifier = Modifier.width(barWidth).height(barHeight)
         )
-        Text(
-            text = text,
-            color = textColor,
-            fontFamily = FontFirst(),
-            fontWeight = FontWeight.Black,
-            fontSize = 5.sp,
-            lineHeight = 5.sp,
-            style = HeavyOutline
-        )
+        character.element?.let { element -> ElementDot(element = element, boosted = boosted) }
+        AttackArrow(multiplier = attackMultiplier, isPlayer = character.isPlayer)
     }
 }
 
-/** Wspolna rama odznaki: grafika z [PlateArt], a bez niej ksztalt z gradientem i obwodka. */
 @Composable
-private fun BadgeFrame(
-    art: DrawableResource?,
-    shape: Shape,
-    fill: Brush,
-    rim: Color,
-    modifier: Modifier = Modifier,
-    content: @Composable () -> Unit
-) {
+private fun LevelBadge(level: Int, isPlayer: Boolean, giant: Boolean) {
+    val rim = if (isPlayer) Color(0xFFFFD66B) else Color(0xFFFF8A7A)
     Box(
-        modifier = modifier.size(STAT_BADGE),
+        modifier = Modifier
+            .size(if (giant) 18.dp else 14.dp)
+            .clip(CircleShape)
+            .background(Brush.verticalGradient(listOf(Color(0xFF3A4458), Color(0xFF12161F))))
+            .border(1.2.dp, rim, CircleShape),
         contentAlignment = Alignment.Center
     ) {
-        if (art != null) {
-            Image(
-                painter = painterResource(art),
-                contentDescription = null,
-                modifier = Modifier.matchParentSize()
-            )
-        } else {
-            Box(
-                modifier = Modifier
-                    .matchParentSize()
-                    .clip(shape)
-                    .background(fill)
-                    .border(1.dp, rim, shape)
-            )
-        }
-        content()
+        StrokedText(
+            text = "$level",
+            size = if (level >= 100) 5.5.sp else if (giant) 8.sp else 7.sp,
+            color = Color.White,
+            outline = Color(0xFF0A0A10),
+            strokeWidth = 3f,
+            tight = true
+        )
     }
 }
 
-/** Liczba na odznace - im wiecej cyfr, tym mniejsza, zeby zmiescila sie w kole. */
+/** Zywiol przy pasku; u naszych pulsuje, gdy kafel tematu go wzmocnil. */
 @Composable
-private fun BadgeNumber(text: String, color: Color) {
-    Text(
-        text = text,
-        color = color,
-        fontFamily = FontFirst(),
-        fontWeight = FontWeight.Black,
-        fontSize = when {
-            text.length <= 2 -> 5.5.sp
-            text.length == 3 -> 5.sp
-            else -> 4.sp
-        },
-        lineHeight = 5.5.sp,
-        style = HeavyOutline
+private fun ElementDot(element: com.lernhero.domain.monster.Element, boosted: Boolean) {
+    val color = Color(element.colorHex)
+    val pulse = rememberInfiniteTransition(label = "elementPulse")
+    val glow by pulse.animateFloat(
+        initialValue = if (boosted) 0.35f else 0f,
+        targetValue = if (boosted) 1f else 0f,
+        animationSpec = infiniteRepeatable(tween(760, easing = EaseInOutSine), RepeatMode.Reverse),
+        label = "elementGlow"
+    )
+    Box(modifier = Modifier.size(12.dp), contentAlignment = Alignment.Center) {
+        if (boosted) {
+            Box(
+                modifier = Modifier
+                    .size(13.dp)
+                    .graphicsLayer {
+                        alpha = glow
+                        scaleX = 1f + 0.25f * glow
+                        scaleY = 1f + 0.25f * glow
+                    }
+                    .clip(CircleShape)
+                    .background(color.copy(alpha = 0.6f))
+            )
+        }
+        ElementEmblem(element = element, size = 12.dp)
+    }
+}
+
+@Composable
+private fun AttackArrow(multiplier: Float, isPlayer: Boolean) {
+    val up = multiplier > 1.001f
+    val down = multiplier < 0.999f
+    if (!up && !down) return
+    val good = if (isPlayer) up else down
+    StrokedText(
+        text = if (up) "▲" else "▼",
+        size = 8.sp,
+        color = if (good) Color(0xFFFFE066) else Color(0xFFFF6B5E),
+        outline = Color(0xFF1A0E04),
+        strokeWidth = 3f,
+        tight = true
     )
 }
 
-private val HeavyOutline = TextStyle(shadow = Shadow(color = Color(0xFF1A0E04), blurRadius = 2f))
-
-/** Wysokosc rzedu statystyk (odznaka poziomu i pigulki) na tabliczce. */
-internal val STAT_BADGE = 12.dp
-
+/** Pasek HP z ciemna oprawa i "cieniem obrazen" - jasny kawalek znika chwile po ciosie. */
 @Composable
-private fun HpBar(hp: Int, maxHp: Int, modifier: Modifier = Modifier) {
+private fun HpBar(hp: Int, maxHp: Int, isPlayer: Boolean, modifier: Modifier = Modifier) {
     val fraction = if (maxHp > 0) (hp.toFloat() / maxHp).coerceIn(0f, 1f) else 0f
-    val shown by animateFloatAsState(fraction, tween(180), label = "hp")
-    // Cien obrazen: dogania pasek z opoznieniem, wiec przez chwile widac zabrany kawalek.
-    val ghost by animateFloatAsState(fraction, tween(520, delayMillis = 260, easing = FastOutSlowInEasing), label = "hpGhost")
+    val shown by animateFloatAsState(fraction, tween(160), label = "hp")
+    val ghost by animateFloatAsState(fraction, tween(520, delayMillis = 280, easing = FastOutSlowInEasing), label = "hpGhost")
+    // Nasi sa zieloni, wrogowie czerwoni - od razu widac, czyj pasek sie kurczy.
     val fill = when {
-        fraction > 0.5f -> listOf(Color(0xFF7CF25A), Color(0xFF2FB344))
+        !isPlayer -> listOf(Color(0xFFFF7A6B), Color(0xFFC8261C))
+        fraction > 0.5f -> listOf(Color(0xFF8CF76A), Color(0xFF2FB344))
         fraction > 0.25f -> listOf(Color(0xFFFFE066), Color(0xFFE0A21C))
         else -> listOf(Color(0xFFFF7A6B), Color(0xFFD42A1E))
     }
     Box(
         modifier = modifier
-            .height(3.dp)
             .clip(RoundedCornerShape(50))
-            .background(Color(0xE6120C08))
+            .background(Color(0xF0100A08))
+            .border(0.8.dp, Color(0xFF000000), RoundedCornerShape(50))
+            .padding(0.8.dp)
     ) {
         Box(
             modifier = Modifier
                 .fillMaxWidth(ghost.coerceAtLeast(shown))
                 .fillMaxHeight()
                 .clip(RoundedCornerShape(50))
-                .background(Color(0xFFFFF1D6).copy(alpha = 0.85f))
+                .background(Color(0xFFFFF1D6).copy(alpha = 0.9f))
         )
         Box(
             modifier = Modifier
@@ -274,6 +172,15 @@ private fun HpBar(hp: Int, maxHp: Int, modifier: Modifier = Modifier) {
                 .fillMaxHeight()
                 .clip(RoundedCornerShape(50))
                 .background(Brush.verticalGradient(fill))
+        )
+        // Gorny blik - pasek wyglada na szklany, a nie plaski.
+        Box(
+            modifier = Modifier
+                .fillMaxWidth(shown)
+                .fillMaxHeight(0.4f)
+                .padding(horizontal = 1.dp)
+                .clip(RoundedCornerShape(50))
+                .background(Color.White.copy(alpha = 0.35f))
         )
     }
 }

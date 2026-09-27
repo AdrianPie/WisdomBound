@@ -156,7 +156,8 @@ fun ReadingScreen(
             ReflowReaderView(
                 book = book,
                 content = content,
-                startBlockIndex = state.pageFor(book),
+                startAnchor = state.anchorFor(book),
+                onPositionChanged = { viewModel.savePosition(book, it) },
                 initialSettings = state.readerSettings,
                 onSettingsChanged = viewModel::saveReaderSettings,
                 onClose = ::closeReader,
@@ -320,32 +321,27 @@ private fun HeaderChip(icon: String, value: String) {
 /** Liczby calego czytania - na dole, bo to podsumowanie, a nie powod wejscia do biblioteki. */
 @Composable
 private fun StatsPanel(state: LibraryUiState) {
-    KitPanel(modifier = Modifier.fillMaxWidth()) {
-        Column(modifier = Modifier.fillMaxWidth().padding(14.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-            KitText(text = "Your Reading", size = 17.sp, color = KitGold, strokeWidth = 5f)
-            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                StatTile("⏱", state.readingStats.activeSeconds.asHoursMinutes(), "Total time", Modifier.weight(1f))
-                StatTile("📄", "${state.readingStats.totalPages}", "Pages", Modifier.weight(1f))
-                StatTile("⚡", "${state.readingStats.averageWpm}", "Words/min", Modifier.weight(1f))
-            }
+    PaperPanel {
+        Text("Your Reading", color = PaperInkColor, fontFamily = FontFirst(), fontWeight = FontWeight.Black, fontSize = 16.sp, lineHeight = 18.sp)
+        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            StatTile(state.readingStats.activeSeconds.asHoursMinutes(), "Total time", Modifier.weight(1f))
+            StatTile("${state.readingStats.totalPages}", "Pages", Modifier.weight(1f))
+            StatTile("${state.readingStats.averageWpm}", "Words/min", Modifier.weight(1f))
         }
     }
 }
 
 @Composable
-private fun StatTile(icon: String, value: String, label: String, modifier: Modifier = Modifier) {
+private fun StatTile(value: String, label: String, modifier: Modifier = Modifier) {
     Column(
         modifier = modifier
             .clip(RoundedCornerShape(12.dp))
-            .background(Color(0x66000000))
-            .border(2.dp, KitOutline, RoundedCornerShape(12.dp))
-            .padding(vertical = 10.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(2.dp)
+            .background(PaperCardFill)
+            .border(1.dp, PaperCardEdge, RoundedCornerShape(12.dp))
+            .padding(horizontal = 10.dp, vertical = 8.dp)
     ) {
-        Text(icon, fontSize = 16.sp)
-        KitText(text = value, size = 17.sp, color = Color.White, maxLines = 1)
-        Text(label.uppercase(), color = KitMuted, fontFamily = FontFirst(), fontWeight = FontWeight.Bold, fontSize = 9.sp)
+        PaperCaption(label)
+        Text(value, color = PaperInkColor, fontFamily = FontFirst(), fontWeight = FontWeight.Black, fontSize = 18.sp, lineHeight = 20.sp, maxLines = 1)
     }
 }
 
@@ -361,21 +357,30 @@ private fun ContinueCard(
     loadCover: suspend (Book) -> ByteArray?,
     onClick: () -> Unit
 ) {
-    KitPanel(modifier = Modifier.fillMaxWidth()) {
+    PaperPanel(modifier = Modifier.clickable(onClick = onClick)) {
         Row(
-            modifier = Modifier.fillMaxWidth().clickable(onClick = onClick).padding(14.dp),
+            modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.spacedBy(14.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Box(modifier = Modifier.width(92.dp)) {
+            Box(modifier = Modifier.width(88.dp)) {
                 CoverArt(book = book, loadCover = loadCover)
             }
-            Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(5.dp)) {
-                Text("CONTINUE READING", color = KitGold, fontFamily = FontFirst(), fontWeight = FontWeight.Black, fontSize = 10.sp)
-                KitText(text = book.title, size = 18.sp, color = Color.White, maxLines = 2)
+            Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                PaperCaption("Continue reading", color = PaperAmber)
+                Text(
+                    text = book.title,
+                    color = PaperInkColor,
+                    fontFamily = FontFirst(),
+                    fontWeight = FontWeight.Black,
+                    fontSize = 17.sp,
+                    lineHeight = 19.sp,
+                    maxLines = 2,
+                    overflow = TextOverflow.Ellipsis
+                )
                 Text(
                     text = book.author,
-                    color = KitMuted,
+                    color = PaperInkMuted,
                     fontFamily = FontFirst(),
                     fontWeight = FontWeight.Bold,
                     fontSize = 12.sp,
@@ -383,15 +388,15 @@ private fun ContinueCard(
                     overflow = TextOverflow.Ellipsis
                 )
                 Text(
-                    text = if (page > 0) "📍 Section ${page + 1}" else "📍 Start from the beginning",
-                    color = Cream,
+                    text = if (page > 0) "Section ${page + 1}" else "Start from the beginning",
+                    color = PaperInkMuted,
                     fontFamily = FontFirst(),
                     fontSize = 11.sp
                 )
                 if (loading) {
-                    CircularProgressIndicator(color = Gold, modifier = Modifier.size(24.dp))
+                    CircularProgressIndicator(color = PaperAmber, modifier = Modifier.size(24.dp))
                 } else {
-                    KitButton(label = "▶  READ", colors = GreenButton, onClick = onClick, modifier = Modifier.fillMaxWidth())
+                    KitButton(label = "▶  READ", colors = GreenButton, onClick = onClick, modifier = Modifier.fillMaxWidth().padding(top = 4.dp))
                 }
             }
         }
@@ -401,29 +406,30 @@ private fun ContinueCard(
 /** Wejscie do osobnej instancji Slowek - z licznikiem obu archiwow, zeby bylo po co klikac. */
 @Composable
 private fun VocabularyCard(learning: Int, mastered: Int, onClick: () -> Unit) {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clip(RoundedCornerShape(16.dp))
-            .background(Brush.horizontalGradient(listOf(Color(0xFF1E4F95), Color(0xFF12305E))))
-            .border(2.5.dp, KitOutline, RoundedCornerShape(16.dp))
-            .clickable(onClick = onClick)
-            .padding(horizontal = 14.dp, vertical = 12.dp),
-        horizontalArrangement = Arrangement.spacedBy(12.dp),
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        Text("🔤", fontSize = 30.sp)
-        Column(modifier = Modifier.weight(1f)) {
-            KitText(text = "Words", size = 18.sp, color = Color.White, strokeWidth = 5f)
-            Text(
-                text = "$learning to learn  ·  $mastered mastered",
-                color = Color(0xFFBFD3F0),
-                fontFamily = FontFirst(),
-                fontWeight = FontWeight.Bold,
-                fontSize = 12.sp
-            )
+    PaperPanel(modifier = Modifier.clickable(onClick = onClick)) {
+        Row(horizontalArrangement = Arrangement.spacedBy(12.dp), verticalAlignment = Alignment.CenterVertically) {
+            Box(
+                modifier = Modifier
+                    .size(42.dp)
+                    .clip(RoundedCornerShape(10.dp))
+                    .background(Brush.verticalGradient(listOf(Color(0xFF5B95DA), Color(0xFF2A5BA6))))
+                    .border(1.5.dp, Color.White.copy(alpha = 0.75f), RoundedCornerShape(10.dp)),
+                contentAlignment = Alignment.Center
+            ) {
+                KitText(text = "Aa", size = 16.sp, color = Color.White, strokeWidth = 5f)
+            }
+            Column(modifier = Modifier.weight(1f)) {
+                Text("Words", color = PaperInkColor, fontFamily = FontFirst(), fontWeight = FontWeight.Black, fontSize = 16.sp, lineHeight = 18.sp)
+                Text(
+                    text = "$learning to learn  ·  $mastered mastered",
+                    color = PaperInkMuted,
+                    fontFamily = FontFirst(),
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 12.sp
+                )
+            }
+            Text("›", color = PaperFrame, fontFamily = FontFirst(), fontWeight = FontWeight.Black, fontSize = 26.sp)
         }
-        KitText(text = "›", size = 26.sp, color = KitGold)
     }
 }
 

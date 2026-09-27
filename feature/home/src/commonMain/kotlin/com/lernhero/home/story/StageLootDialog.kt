@@ -1,6 +1,8 @@
 package com.lernhero.home.story
 
+import com.lernhero.shared.theme.GlyphText
 import androidx.compose.foundation.background
+import com.lernhero.home.ui.ItemArtImage
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -50,6 +52,8 @@ private val GoldText = Color(0xFFFFD34D)
 fun StageLootDialog(
     stage: StoryStage,
     onDismiss: () -> Unit,
+    /** Nikt jeszcze tej planszy na tym tierze nie zdobyl - boss daje wtedy przedmiot na pewno. */
+    firstClear: Boolean = false,
     modifier: Modifier = Modifier
 ) {
     val items = remember(stage.globalIndex, stage.tier) {
@@ -58,7 +62,7 @@ fun StageLootDialog(
     val maxRarity = remember(stage.globalIndex, stage.tier) {
         StageLoot.maxRarity(stage.globalIndex, stage.tier)
     }
-    val dropChance = (StageLoot.dropChance(stage.isBoss) * 100).roundToInt()
+    val dropChance = (StageLoot.dropChance(stage.isBoss, firstClear) * 100).roundToInt()
 
     Box(
         modifier = modifier
@@ -79,7 +83,7 @@ fun StageLootDialog(
             verticalArrangement = Arrangement.spacedBy(10.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Text(
+            GlyphText(
                 text = "STAGE ${stage.label} LOOT",
                 color = GoldText,
                 fontFamily = FontPixel(),
@@ -93,10 +97,10 @@ fun StageLootDialog(
             ) {
                 LootStat("💰", "${stage.rewardGold}", "gold")
                 LootStat("⭐", "${stage.rewardXp}", "XP")
-                LootStat("🎲", "$dropChance%", "item drop")
+                LootStat("🎲", "$dropChance%", if (dropChance >= 100) "item - first clear" else "item drop")
             }
 
-            Text(
+            GlyphText(
                 text = "Best possible drop here: ${RarityPalette.label(maxRarity)}",
                 color = RarityPalette.frame(maxRarity),
                 fontFamily = FontFirst(),
@@ -123,17 +127,17 @@ fun StageLootDialog(
                             .background(RarityPalette.cardBackground(item.rarity)),
                         contentAlignment = Alignment.Center
                     ) {
-                        Text(text = item.icon(), fontSize = 17.sp)
+                        ItemArtImage(item = item, size = 28.dp)
                     }
                     Column(modifier = Modifier.weight(1f)) {
-                        Text(
+                        GlyphText(
                             text = item.name,
                             color = Cream,
                             fontFamily = FontFirst(),
                             fontWeight = FontWeight.Bold,
                             fontSize = 12.sp
                         )
-                        Text(
+                        GlyphText(
                             text = RarityPalette.label(item.rarity),
                             color = RarityPalette.frame(item.rarity),
                             fontFamily = FontFirst(),
@@ -144,7 +148,7 @@ fun StageLootDialog(
             }
 
             if (stage.isBoss) {
-                Text(
+                GlyphText(
                     text = "The boss also opens a chest wheel of fortune.",
                     color = Muted,
                     fontFamily = FontFirst(),
@@ -153,7 +157,7 @@ fun StageLootDialog(
                 )
             }
 
-            Text(
+            GlyphText(
                 text = "CLOSE",
                 color = GoldText,
                 fontFamily = FontPixel(),
@@ -173,14 +177,14 @@ fun StageLootDialog(
 @Composable
 private fun LootStat(icon: String, value: String, label: String) {
     Column(horizontalAlignment = Alignment.CenterHorizontally) {
-        Text(text = icon, fontSize = 15.sp)
-        Text(
+        GlyphText(text = icon, fontSize = 15.sp)
+        GlyphText(
             text = value,
             color = Cream,
             fontFamily = FontFirst(),
             fontWeight = FontWeight.Bold,
             fontSize = 13.sp
         )
-        Text(text = label, color = Muted, fontFamily = FontFirst(), fontSize = 9.sp)
+        GlyphText(text = label, color = Muted, fontFamily = FontFirst(), fontSize = 9.sp)
     }
 }

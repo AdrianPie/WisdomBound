@@ -6,7 +6,7 @@ package com.lernhero.domain.player
  * Celowo MALA. Glowna krzywa zlota idzie z GLEBOKOSCI planszy ([com.lernhero.domain.run.RunLoot.depthMultiplier]),
  * czyli z tego, jak daleko gracz doszedl - poziom ma byc tylko odczuwalnym dodatkiem ("awansowalem,
  * sakwa troche urosla"), a nie drugim mnoznikiem, ktory razem z pierwszym wystrzeliwuje zloto
- * w kosmos. 20. poziom = +19%, 51. i dalej = +50%.
+ * w kosmos. 11. poziom = +10%, 21. i dalej = +20%.
  *
  * Dziala na zloto z walk (fale i pocieszenie po porazce) i z kapaczki idle. Nagrody o stalej,
  * z gory podanej kwocie (cele dzienne, osiagniecia) zostaja stale - gracz ma widziec dokladnie te
@@ -15,7 +15,7 @@ package com.lernhero.domain.player
 object LevelGoldBonus {
 
     const val PER_LEVEL = 0.01f
-    const val MAX_BONUS = 0.5f
+    const val MAX_BONUS = 0.2f
 
     /** Mnoznik zlota na tym poziomie: 1.0 na pierwszym, najwyzej 1.5. */
     fun multiplier(heroLevel: Int): Float =

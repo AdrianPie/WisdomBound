@@ -1,5 +1,7 @@
 package com.lernhero.home.navigation
 
+import com.lernhero.shared.audio.Sounds
+import com.lernhero.shared.audio.Sfx
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.animateDpAsState
@@ -134,7 +136,7 @@ fun NavBottomBar(
                 NavItem(
                     destination = destination,
                     selected = selected == destination,
-                    onClick = { onSelect(destination) },
+                    onClick = { Sounds.play(Sfx.Tap); onSelect(destination) },
                     modifier = Modifier.weight(1f)
                 )
             }

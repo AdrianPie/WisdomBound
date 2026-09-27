@@ -56,7 +56,7 @@ fun ReadingGoalsPanel(modifier: Modifier = Modifier, onRewardClaimed: () -> Unit
             onClaim = { goal -> viewModel.claim(goal, onRewardClaimed) }
         )
         state.message?.let {
-            Text(text = it, color = Green, fontFamily = FontFirst(), fontWeight = FontWeight.Bold, fontSize = 12.sp)
+            Text(text = it, color = Color(0xFF6FD04A), fontFamily = FontFirst(), fontWeight = FontWeight.Bold, fontSize = 12.sp)
         }
         ReadingTotals(
             minutes = state.readingStats.activeSeconds / 60,
@@ -70,26 +70,27 @@ fun ReadingGoalsPanel(modifier: Modifier = Modifier, onRewardClaimed: () -> Unit
 /** Sumaryczne liczby z czytania - w Czytelni zostal juz tylko ich skrot w naglowku. */
 @Composable
 private fun ReadingTotals(minutes: Int, pages: Int, words: Int, wpm: Int) {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clip(RoundedCornerShape(10.dp))
-            .background(Ink)
-            .border(1.dp, GoldDim, RoundedCornerShape(10.dp))
-            .padding(vertical = 12.dp),
-        horizontalArrangement = Arrangement.SpaceAround
-    ) {
-        Total(label = "Minutes", value = "$minutes")
-        Total(label = "Pages", value = "$pages")
-        Total(label = "Words", value = "$words")
-        Total(label = "Pace", value = "$wpm/min")
+    PaperPanel {
+        Text("Your Reading", color = PaperInkColor, fontFamily = FontFirst(), fontWeight = FontWeight.Black, fontSize = 16.sp, lineHeight = 18.sp)
+        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            Total(label = "Minutes", value = "$minutes", modifier = Modifier.weight(1f))
+            Total(label = "Pages", value = "$pages", modifier = Modifier.weight(1f))
+            Total(label = "Words", value = "$words", modifier = Modifier.weight(1f))
+            Total(label = "Pace/min", value = "$wpm", modifier = Modifier.weight(1f))
+        }
     }
 }
 
 @Composable
-private fun Total(label: String, value: String) {
-    Column(horizontalAlignment = Alignment.CenterHorizontally) {
-        Text(text = value, color = Gold, fontFamily = FontPixel(), fontWeight = FontWeight.Bold, fontSize = 14.sp)
-        Text(text = label, color = Muted, fontFamily = FontFirst(), fontSize = 9.sp)
+private fun Total(label: String, value: String, modifier: Modifier = Modifier) {
+    Column(
+        modifier = modifier
+            .clip(RoundedCornerShape(12.dp))
+            .background(PaperCardFill)
+            .border(1.dp, PaperCardEdge, RoundedCornerShape(12.dp))
+            .padding(horizontal = 8.dp, vertical = 8.dp)
+    ) {
+        PaperCaption(label)
+        Text(text = value, color = PaperInkColor, fontFamily = FontFirst(), fontWeight = FontWeight.Black, fontSize = 17.sp, lineHeight = 19.sp, maxLines = 1)
     }
 }

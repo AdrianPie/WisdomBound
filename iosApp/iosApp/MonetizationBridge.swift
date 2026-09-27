@@ -74,7 +74,9 @@ private final class RevenueCatProvider: NSObject, IosPurchasesProvider {
                     id: pkg.identifier,
                     title: pkg.storeProduct.localizedTitle,
                     price: pkg.storeProduct.localizedPriceString,
-                    period: Self.period(pkg.storeProduct.subscriptionPeriod)
+                    period: Self.period(pkg.storeProduct.subscriptionPeriod),
+                    priceMicros: Int64(truncating: (pkg.storeProduct.priceDecimalNumber.multiplying(byPowerOf10: 6))),
+                    pricePerMonth: pkg.storeProduct.localizedPricePerMonth
                 )
             })
         }

@@ -1,6 +1,8 @@
 package com.lernhero.home.city
 
+import com.lernhero.shared.theme.GlyphText
 import androidx.compose.foundation.Image
+import com.lernhero.home.ui.ItemArtImage
 import androidx.compose.ui.draw.alpha
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -33,6 +35,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.geometry.CornerRadius
 import androidx.compose.ui.graphics.PathEffect
 import androidx.compose.ui.graphics.Brush
@@ -123,6 +126,7 @@ fun MonsterCollectionTab(
     }
     var pane by remember { mutableStateOf(Pane.Info) }
     var pickerSlot by remember { mutableStateOf<ItemSlot?>(null) }
+    var spellSheet by remember { mutableStateOf<CompanionSpell?>(null) }
 
     val index = collection.indexOfFirst { it.card.id == selectedId }.coerceAtLeast(0)
     val selected = collection[index]
@@ -152,7 +156,9 @@ fun MonsterCollectionTab(
             onUpgrade = { onUpgrade(selected) },
             onAscend = { onAscend(selected) },
             onDissolve = { onDissolve(selected) },
-            onUpgradeSpell = { onUpgradeSpell(selected, it) },
+            // Tapniecie w czar otwiera jego karte (co robi, co da nastepny poziom, ile kosztuje) -
+            // ulepszenie dopiero stamtad, swiadomie, a nie przypadkiem przy probie podejrzenia.
+            onUpgradeSpell = { spellSheet = it },
             onSlotClick = { slot ->
                 // Zajety slot ZDEJMUJE, pusty otwiera liste - dwa rozne gesty na jednym
                 // kafelku byłyby nie do odgadniecia.
@@ -167,6 +173,17 @@ fun MonsterCollectionTab(
             collection = collection,
             selectedId = selected.card.id,
             onSelect = { selectedId = it }
+        )
+    }
+
+    spellSheet?.let { spell ->
+        SpellSheet(
+            spell = spell,
+            level = selected.spellLevel(spell),
+            essence = essence,
+            element = selected.card.element,
+            onUpgrade = { onUpgradeSpell(selected, spell) },
+            onDismiss = { spellSheet = null }
         )
     }
 
@@ -222,7 +239,7 @@ private fun Stage(
             horizontalArrangement = Arrangement.spacedBy(5.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Text(
+            GlyphText(
                 text = card.name,
                 color = Color(0xFFFFF1D6),
                 fontFamily = FontFirst(),
@@ -240,7 +257,7 @@ private fun Stage(
             horizontalArrangement = Arrangement.spacedBy(1.dp)
         ) {
             repeat(5) { i ->
-                Text(
+                GlyphText(
                     text = "★",
                     color = if (i < monster.stars) Color(0xFFFFC93C) else Color(0x88FFFFFF),
                     fontSize = 20.sp,
@@ -254,7 +271,7 @@ private fun Stage(
         Arrow(text = "‹", modifier = Modifier.align(Alignment.CenterStart).padding(start = 4.dp), onClick = onPrev)
         Arrow(text = "›", modifier = Modifier.align(Alignment.CenterEnd).padding(end = 4.dp), onClick = onNext)
 
-        Text(
+        GlyphText(
             text = "x${monster.count}",
             color = Color(0xFFEADFC8),
             fontFamily = FontFirst(),
@@ -281,7 +298,7 @@ private fun Arrow(text: String, modifier: Modifier = Modifier, onClick: () -> Un
             .clickable(onClick = onClick),
         contentAlignment = Alignment.Center
     ) {
-        Text(text = text, color = ParchmentPalette.Button, fontSize = 26.sp, fontWeight = FontWeight.Black)
+        GlyphText(text = text, color = ParchmentPalette.Button, fontSize = 26.sp, fontWeight = FontWeight.Black)
     }
 }
 
@@ -293,14 +310,23 @@ private fun ElementDot(element: Element) {
 /* ------------------------------------------- Panel dolny ---------------------------------------- */
 
 /**
- * Wysokosc TRESCI panelu - identyczna dla obu zakladek.
- *
- * Stala, a nie wrapContent, z dwoch powodow: karta ma zajmowac okolo jednej piatej ekranu (reszta
- * nalezy do sylwetki), a przelaczanie Info/Ekwipunek nie moze podskakiwac calym ekranem. Kazda
- * zakladka musi sie w tym zmiescic - stad wszystko upchniete w trzy waskie wiersze zamiast
- * listy sekcji z naglowkami.
+ * Wysokosc TRESCI panelu - identyczna dla obu zakladek, zeby przelaczanie Info/Gear nie
+ * podskakiwalo calym ekranem.
  */
-private val PANE_HEIGHT = 132.dp
+private val PANE_HEIGHT = 136.dp
+
+/*
+ * Ciemny panel ze zlota oprawa - ten sam jezyk co zakladki i bannery Summon Center. Jasny
+ * pergamin wygladal tu jak wklejka z innego ekranu, a drobne emoji i plaskie przyciski ginely.
+ */
+private val BoardTop = Color(0xFF36271A)
+private val BoardMid = Color(0xFF23180F)
+private val BoardBottom = Color(0xFF170F09)
+private val BoardGold = Color(0xFFE8C56A)
+private val BoardCream = Color(0xFFF3E6C8)
+private val BoardMuted = Color(0xFFB09C7C)
+private val SocketFill = Color(0xFF120B06)
+private val GoldFrame = Brush.verticalGradient(listOf(Color(0xFFFFE9A8), Color(0xFFC8A45A), Color(0xFF8A6B34)))
 
 @Composable
 private fun Board(
@@ -322,11 +348,11 @@ private fun Board(
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .clip(RoundedCornerShape(11.dp))
-            .background(ParchmentPalette.Paper)
-            .border(3.dp, ParchmentPalette.Frame, RoundedCornerShape(11.dp))
-            .padding(5.dp),
-        verticalArrangement = Arrangement.spacedBy(4.dp)
+            .clip(RoundedCornerShape(16.dp))
+            .background(Brush.verticalGradient(listOf(BoardTop, BoardMid, BoardBottom)))
+            .border(2.5.dp, GoldFrame, RoundedCornerShape(16.dp))
+            .padding(7.dp),
+        verticalArrangement = Arrangement.spacedBy(7.dp)
     ) {
         PaneTabs(pane = pane, onPane = onPane)
 
@@ -357,33 +383,41 @@ private fun Board(
     }
 }
 
+/** Zakladki segmentowe: ciemne gniazdo, aktywna to zloty "guzik" z ciemnym napisem. */
 @Composable
 private fun PaneTabs(pane: Pane, onPane: (Pane) -> Unit) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .clip(RoundedCornerShape(7.dp))
-            .background(ParchmentPalette.TitleBar)
-            .padding(2.dp),
-        horizontalArrangement = Arrangement.spacedBy(2.dp)
+            .clip(RoundedCornerShape(10.dp))
+            .background(SocketFill)
+            .border(1.dp, BoardGold.copy(alpha = 0.3f), RoundedCornerShape(10.dp))
+            .padding(3.dp),
+        horizontalArrangement = Arrangement.spacedBy(3.dp)
     ) {
         Pane.entries.forEach { entry ->
             val active = entry == pane
             Box(
                 modifier = Modifier
                     .weight(1f)
-                    .clip(RoundedCornerShape(5.dp))
-                    .background(if (active) ParchmentPalette.TabActive else Color.Transparent)
+                    .clip(RoundedCornerShape(8.dp))
+                    .then(
+                        if (active) Modifier
+                            .background(Brush.verticalGradient(listOf(Color(0xFFFFE08A), Color(0xFFE8A63C))))
+                            .border(1.dp, Color(0xFF8A5A10), RoundedCornerShape(8.dp))
+                        else Modifier
+                    )
                     .clickable { onPane(entry) }
-                    .padding(vertical = 7.dp),
+                    .padding(vertical = 6.dp),
                 contentAlignment = Alignment.Center
             ) {
-                Text(
-                    text = entry.label,
-                    color = if (active) ParchmentPalette.Ink else ParchmentPalette.Paper.copy(alpha = 0.8f),
+                GlyphText(
+                    text = entry.label.uppercase(),
+                    color = if (active) Color(0xFF2A1A08) else BoardCream.copy(alpha = 0.7f),
                     fontFamily = FontFirst(),
                     fontWeight = FontWeight.Black,
-                    fontSize = 14.sp
+                    fontSize = 12.sp,
+                    letterSpacing = 1.sp
                 )
             }
         }
@@ -393,16 +427,13 @@ private fun PaneTabs(pane: Pane, onPane: (Pane) -> Unit) {
 /* -------------------------------------------- Info ---------------------------------------------- */
 
 /**
- * Trzy wiersze zamiast szesciu sekcji:
+ * Trzy wiersze:
  *
  * ```
- * 💪 423    ⬢⬢⬡⬡  ★2/5        LV 30/30
- * ❤️ 298   ⚔️ 92   🛡️ 0%   👟 3
- * [💰 1 234        ] [⬆]   (·)(·)
+ * ⚡381 POWER   ◆◆◇◇ [★0/2]            LV 1/10
+ * [ HP 426 ][ ATK 56 ][ ARMOR 30% ][ SPEED 0 ]
+ * [ LEVEL UP        💰 145 ]   (czar)(czar)
  * ```
- *
- * Etykiety "Tier"/"Awans poziomu" wylecialy swiadomie - klejnoty i moneta ze strzalka mowia
- * to samo, a kazdy naglowek kosztowal tu tyle wysokosci, co caly wiersz statystyk.
  */
 @Composable
 private fun InfoPane(
@@ -416,17 +447,13 @@ private fun InfoPane(
     onDissolve: () -> Unit,
     onUpgradeSpell: (CompanionSpell) -> Unit
 ) {
-    // Statystyki pokazujemy JUZ z ekwipunkiem - karta ma mowic, czym kompan naprawde walczy,
-    // a nie ile mial na sucho przed zalozeniem czegokolwiek.
-    // Sprzet i baza sa w TEJ SAMEJ skali (walki) - patrz [CompanionPower]. Wczesniej nie byly:
-    // statystyki szly ze skali karty (70 HP), a sprzet ze skali walki (+120 HP z pancerza), wiec
-    // karta obiecywala trzy razy wiecej, niz sprzet naprawde dawal.
+    // Statystyki pokazujemy JUZ z ekwipunkiem, w tej samej skali co walka (patrz [CompanionPower]).
     val gear = MonsterEquipment.statsOf(equipment, monster.card.element, bag)
     val hp = CompanionPower.hpAt(monster.card, monster.stars, monster.level, gear)
     val attack = CompanionPower.attackAt(monster.card, monster.stars, monster.level, gear)
-    // Pancerz = obrona gatunku + sprzet, dokladnie to, co odcina walka (patrz [CompanionPower.armorAt]).
     val armor = (CompanionPower.armorAt(monster.card, gear) * 100f).roundToInt()
     val speed = gear[StatType.Speed].toInt()
+    val accent = monster.card.element.badgeColor()
 
     Column(
         modifier = Modifier.fillMaxSize(),
@@ -437,110 +464,88 @@ private fun InfoPane(
             horizontalArrangement = Arrangement.spacedBy(6.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Text(text = "💪", fontSize = 15.sp)
-            Text(
-                text = "${attack * 3 + hp / 2}",
-                color = ParchmentPalette.Ink,
-                fontFamily = FontFirst(),
-                fontWeight = FontWeight.Black,
-                fontSize = 17.sp
-            )
-
-            Spacer(modifier = Modifier.width(2.dp))
+            Row(verticalAlignment = Alignment.Bottom, horizontalArrangement = Arrangement.spacedBy(3.dp)) {
+                com.lernhero.shared.theme.StrokedText(
+                    text = "⚡${attack * 3 + hp / 2}",
+                    size = 18.sp,
+                    color = BoardGold,
+                    outline = Color(0xFF0E0804),
+                    strokeWidth = 6f,
+                    maxLines = 1
+                )
+                GlyphText(
+                    text = "POWER",
+                    color = BoardMuted,
+                    fontFamily = FontFirst(),
+                    fontWeight = FontWeight.Black,
+                    fontSize = 8.sp,
+                    letterSpacing = 0.8.sp,
+                    modifier = Modifier.padding(bottom = 3.dp)
+                )
+            }
             // Cztery klejnoty = cztery awanse gwiazdki ponad startowa.
-            repeat(4) { i ->
-                TierGem(filled = i < monster.stars - 1, accent = monster.card.element.badgeColor())
+            Row(horizontalArrangement = Arrangement.spacedBy(2.dp)) {
+                repeat(4) { i -> TierGem(filled = i < monster.stars - 1, accent = accent) }
             }
             TinyButton(
                 text = if (monster.maxStars) "MAX" else "★${monster.duplicates}/${monster.ascendCost}",
                 enabled = monster.canAscend,
-                color = ParchmentPalette.Button,
+                color = Color(0xFFF2B832),
                 onClick = onAscend
             )
             if (monster.canDissolve) {
-                TinyButton(text = "✨", enabled = true, color = Color(0xFFB08CD6), onClick = onDissolve)
+                TinyButton(text = "✨", enabled = true, color = Color(0xFF9A6AD6), onClick = onDissolve)
             }
-
             Box(modifier = Modifier.weight(1f))
-            Text(
-                text = "LV ${monster.level}/${monster.levelCap}",
-                color = Color(0xFF9E3B24),
-                fontFamily = FontFirst(),
-                fontWeight = FontWeight.Black,
-                fontSize = 15.sp
-            )
-        }
-
-        // Cztery statystyki w JEDNYM pasku - pionowa lista byla czytelniejsza, ale zjadala
-        // ponad sto punktow wysokosci, czyli wiecej niz caly reszta panelu.
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .clip(RoundedCornerShape(7.dp))
-                .background(ParchmentPalette.Card)
-                .border(1.dp, ParchmentPalette.CardEdge, RoundedCornerShape(7.dp))
-                .padding(vertical = 6.dp)
-        ) {
-            StatCell("❤️", "$hp", "HP", Modifier.weight(1f))
-            StatCell("⚔️", "$attack", "Attack", Modifier.weight(1f))
-            StatCell("🛡️", "$armor%", "Armor", Modifier.weight(1f))
-            StatCell("👟", "$speed", "Speed", Modifier.weight(1f))
+            Row(verticalAlignment = Alignment.Bottom) {
+                GlyphText(
+                    text = "LV ",
+                    color = BoardGold,
+                    fontFamily = FontFirst(),
+                    fontWeight = FontWeight.Black,
+                    fontSize = 11.sp
+                )
+                GlyphText(
+                    text = "${monster.level}/${monster.levelCap}",
+                    color = BoardCream,
+                    fontFamily = FontFirst(),
+                    fontWeight = FontWeight.Black,
+                    fontSize = 15.sp
+                )
+            }
         }
 
         Row(
             modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.spacedBy(5.dp),
+            horizontalArrangement = Arrangement.spacedBy(5.dp)
+        ) {
+            StatCell("❤️", "$hp", "HP", Color(0xFFFF6B6B), Modifier.weight(1f))
+            StatCell("⚔️", "$attack", "ATTACK", Color(0xFFFFB347), Modifier.weight(1f))
+            StatCell("🛡️", "$armor%", "ARMOR", Color(0xFF7FB3FF), Modifier.weight(1f))
+            StatCell("👟", "$speed", "SPEED", Color(0xFF7CE08A), Modifier.weight(1f))
+        }
+
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.spacedBy(6.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Row(
-                modifier = Modifier
-                    .weight(1f)
-                    .clip(RoundedCornerShape(7.dp))
-                    .background(ParchmentPalette.Card)
-                    .border(1.dp, ParchmentPalette.CardEdge, RoundedCornerShape(7.dp))
-                    .padding(horizontal = 8.dp, vertical = 5.dp),
-                horizontalArrangement = Arrangement.spacedBy(5.dp),
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                if (monster.atLevelCap) {
-                    Text(
-                        text = "Capped - ascend a star",
-                        color = ParchmentPalette.InkMuted,
-                        fontFamily = FontFirst(),
-                        fontSize = 11.sp,
-                        maxLines = 1
-                    )
-                } else {
-                    Text(text = "💰", fontSize = 13.sp)
-                    Text(
-                        text = "${monster.levelUpCost}",
-                        color = ParchmentPalette.Ink,
-                        fontFamily = FontFirst(),
-                        fontWeight = FontWeight.Black,
-                        fontSize = 14.sp
-                    )
-                }
-            }
-
             val canUp = !monster.atLevelCap && money >= monster.levelUpCost
-            Box(
-                modifier = Modifier
-                    .size(width = 48.dp, height = 32.dp)
-                    .clip(RoundedCornerShape(7.dp))
-                    .background(if (canUp) Color(0xFF57C24A) else ParchmentPalette.ButtonDisabled)
-                    .border(2.dp, if (canUp) Color(0xFF3E8F34) else ParchmentPalette.CardEdge, RoundedCornerShape(7.dp))
-                    .clickable(enabled = canUp, onClick = onUpgrade),
-                contentAlignment = Alignment.Center
-            ) {
-                Text(text = "⬆", fontSize = 13.sp)
-            }
-
+            LevelUpButton(
+                capped = monster.atLevelCap,
+                cost = monster.levelUpCost,
+                affordable = money >= monster.levelUpCost,
+                enabled = canUp,
+                onClick = onUpgrade,
+                modifier = Modifier.weight(1f)
+            )
             monster.card.spells.take(3).forEach { spell ->
                 val level = monster.spellLevel(spell)
                 val cost = MonsterSpellLevels.upgradeCost(level)
                 SpellDisc(
                     spell = spell,
                     level = level,
+                    accent = accent,
                     canUpgrade = !MonsterSpellLevels.isMaxed(level) && essence >= cost,
                     onClick = { onUpgradeSpell(spell) }
                 )
@@ -549,85 +554,288 @@ private fun InfoPane(
     }
 }
 
-/** Jedna statystyka w pasku: ikona i wartosc w linii, malutka etykieta pod spodem. */
+/** Jedna statystyka: kolorowa kreska u gory, etykieta i wartosc w ciemnym gniezdzie. */
 @Composable
-private fun StatCell(icon: String, value: String, label: String, modifier: Modifier = Modifier) {
+private fun StatCell(icon: String, value: String, label: String, tint: Color, modifier: Modifier = Modifier) {
     Column(
-        modifier = modifier,
+        modifier = modifier
+            .clip(RoundedCornerShape(9.dp))
+            .background(Brush.verticalGradient(listOf(Color(0xFF2C2016), SocketFill)))
+            .border(1.dp, tint.copy(alpha = 0.45f), RoundedCornerShape(9.dp))
+            .drawBehind {
+                drawRect(tint, size = androidx.compose.ui.geometry.Size(size.width, 2.dp.toPx()))
+            }
+            .padding(vertical = 5.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Row(
-            horizontalArrangement = Arrangement.spacedBy(3.dp),
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            Text(text = icon, fontSize = 14.sp)
-            Text(
-                text = value,
-                color = ParchmentPalette.Ink,
+        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(2.dp)) {
+            GlyphText(text = icon, fontSize = 9.sp)
+            GlyphText(
+                text = label,
+                color = BoardMuted,
                 fontFamily = FontFirst(),
                 fontWeight = FontWeight.Black,
-                fontSize = 16.sp,
+                fontSize = 8.sp,
+                letterSpacing = 0.5.sp,
                 maxLines = 1
             )
         }
-        Text(
-            text = label,
-            color = ParchmentPalette.InkMuted,
+        GlyphText(
+            text = value,
+            color = BoardCream,
             fontFamily = FontFirst(),
-            fontWeight = FontWeight.Bold,
-            fontSize = 10.sp,
+            fontWeight = FontWeight.Black,
+            fontSize = 16.sp,
             maxLines = 1
         )
     }
 }
 
-/** Szescioboczny klejnot tieru - wypelniony kolorem zywiolu albo wglebiony, gdy jeszcze pusty. */
+/** Klejnot gwiazdki: romb w kolorze zywiolu z blikiem albo puste, zlocone gniazdo. */
 @Composable
 private fun TierGem(filled: Boolean, accent: Color) {
     Box(
         modifier = Modifier
-            .size(15.dp)
-            .clip(RoundedCornerShape(4.dp))
-            .background(if (filled) accent else Color(0xFF9A7B54))
-            .border(1.dp, if (filled) ParchmentPalette.Frame else ParchmentPalette.CardEdge, RoundedCornerShape(4.dp))
+            .size(13.dp)
+            .graphicsLayer { rotationZ = 45f }
+            .clip(RoundedCornerShape(3.dp))
+            .background(
+                if (filled) Brush.linearGradient(listOf(Color.White, accent, accent.copy(red = accent.red * 0.6f, green = accent.green * 0.6f, blue = accent.blue * 0.6f)))
+                else Brush.linearGradient(listOf(Color(0xFF2A1D12), SocketFill))
+            )
+            .border(1.dp, if (filled) Color.White.copy(alpha = 0.7f) else BoardGold.copy(alpha = 0.45f), RoundedCornerShape(3.dp))
     )
 }
 
-/** Krazek zaklecia z poziomem w rogu - swieci na zielono, gdy stac na ulepszenie. */
+/**
+ * Krazek zaklecia z poziomem w rogu. Tapniecie otwiera karte czaru ([SpellSheet]); zielona
+ * strzalka w gornym rogu znaczy "stac cie na ulepszenie".
+ */
 @Composable
 private fun SpellDisc(
     spell: CompanionSpell,
     level: Int,
+    accent: Color,
     canUpgrade: Boolean,
     onClick: () -> Unit
 ) {
-    Box(contentAlignment = Alignment.BottomEnd) {
+    Box(modifier = Modifier.size(40.dp)) {
         Box(
             modifier = Modifier
-                .size(26.dp)
+                .align(Alignment.Center)
+                .size(36.dp)
                 .clip(CircleShape)
-                .background(ParchmentPalette.SlotFill)
+                .background(Brush.radialGradient(listOf(accent.copy(alpha = 0.45f), SocketFill)))
                 .border(
                     width = 2.dp,
-                    color = if (canUpgrade) Color(0xFF57C24A) else ParchmentPalette.CardEdge,
+                    brush = if (canUpgrade) Brush.verticalGradient(listOf(Color(0xFFB8FF9A), Color(0xFF3FA83A)))
+                    else GoldFrame,
                     shape = CircleShape
                 )
-                .clickable(enabled = canUpgrade, onClick = onClick),
+                .clickable(onClick = onClick),
             contentAlignment = Alignment.Center
         ) {
-            Text(text = spell.icon, fontSize = 12.sp)
+            GlyphText(text = spell.icon, fontSize = 17.sp)
         }
-        Text(
-            text = "$level",
-            color = ParchmentPalette.Paper,
-            fontFamily = FontPixel(),
-            fontWeight = FontWeight.Bold,
-            fontSize = 7.sp,
+        Box(
             modifier = Modifier
+                .align(Alignment.BottomEnd)
+                .size(15.dp)
                 .clip(CircleShape)
-                .background(ParchmentPalette.Frame)
-                .padding(horizontal = 2.dp)
+                .background(Color(0xFF2A1A08))
+                .border(1.dp, BoardGold, CircleShape),
+            contentAlignment = Alignment.Center
+        ) {
+            GlyphText(text = "$level", color = BoardCream, fontFamily = FontFirst(), fontWeight = FontWeight.Black, fontSize = 8.sp, lineHeight = 9.sp)
+        }
+        if (canUpgrade) {
+            Box(
+                modifier = Modifier
+                    .align(Alignment.TopEnd)
+                    .size(15.dp)
+                    .clip(CircleShape)
+                    .background(Brush.verticalGradient(listOf(Color(0xFF8BE05A), Color(0xFF2F8A2A))))
+                    .border(1.dp, Color.White.copy(alpha = 0.8f), CircleShape),
+                contentAlignment = Alignment.Center
+            ) {
+                GlyphText(text = "▲", color = Color.White, fontWeight = FontWeight.Black, fontSize = 7.sp, lineHeight = 8.sp)
+            }
+        }
+    }
+}
+
+/**
+ * Karta czaru kompana: co robi, jak czesto wchodzi w walce, co da nastepny poziom i ile kosztuje.
+ * Czary dzialaja w walce same - kompan zamiast zwyklego ciosu rzuca je z podana szansa.
+ */
+@Composable
+private fun SpellSheet(
+    spell: CompanionSpell,
+    level: Int,
+    essence: Int,
+    element: Element,
+    onUpgrade: () -> Unit,
+    onDismiss: () -> Unit
+) {
+    val maxed = MonsterSpellLevels.isMaxed(level)
+    val cost = MonsterSpellLevels.upgradeCost(level)
+    val canUpgrade = !maxed && essence >= cost
+    val accent = element.badgeColor()
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(Color(0xCC07050B))
+            .clickable(onClick = onDismiss),
+        contentAlignment = Alignment.Center
+    ) {
+        Column(
+            modifier = Modifier
+                .padding(24.dp)
+                .clip(RoundedCornerShape(16.dp))
+                .background(Brush.verticalGradient(listOf(BoardTop, BoardMid, BoardBottom)))
+                .border(2.5.dp, GoldFrame, RoundedCornerShape(16.dp))
+                .clickable(enabled = false) {}
+                .padding(14.dp),
+            verticalArrangement = Arrangement.spacedBy(10.dp)
+        ) {
+            Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                Box(
+                    modifier = Modifier
+                        .size(52.dp)
+                        .clip(CircleShape)
+                        .background(Brush.radialGradient(listOf(accent.copy(alpha = 0.5f), SocketFill)))
+                        .border(2.dp, GoldFrame, CircleShape),
+                    contentAlignment = Alignment.Center
+                ) {
+                    GlyphText(text = spell.icon, fontSize = 26.sp)
+                }
+                Column(modifier = Modifier.weight(1f)) {
+                    com.lernhero.shared.theme.StrokedText(
+                        text = spell.name,
+                        size = 17.sp,
+                        color = BoardCream,
+                        outline = Color(0xFF0E0804),
+                        strokeWidth = 5f,
+                        maxLines = 1
+                    )
+                    GlyphText(
+                        text = "${spell.kind.label.uppercase()} · LV $level/${MonsterSpellLevels.MAX_LEVEL}",
+                        color = BoardGold,
+                        fontFamily = FontFirst(),
+                        fontWeight = FontWeight.Black,
+                        fontSize = 10.sp,
+                        letterSpacing = 0.6.sp
+                    )
+                }
+            }
+            GlyphText(text = spell.description, color = BoardCream, fontFamily = FontFirst(), fontSize = 12.sp)
+            SpellLine(label = "NOW", text = MonsterSpellLevels.describe(spell, level), tint = BoardGold)
+            if (!maxed) {
+                SpellLine(label = "NEXT", text = MonsterSpellLevels.describe(spell, level + 1), tint = Color(0xFF8BE05A))
+            }
+            GlyphText(
+                text = "Cast automatically in battle instead of a normal hit.",
+                color = BoardMuted,
+                fontFamily = FontFirst(),
+                fontSize = 10.sp
+            )
+            com.lernhero.home.ui.ChunkyButton(
+                text = when {
+                    maxed -> "MAX LEVEL"
+                    else -> "UPGRADE  ✨ $cost"
+                },
+                color = Color(0xFF4FAE3A),
+                enabled = canUpgrade,
+                textSize = 13,
+                modifier = Modifier.fillMaxWidth(),
+                onClick = onUpgrade
+            )
+            if (!maxed && !canUpgrade) {
+                GlyphText(
+                    text = "Need $cost essence (you have $essence) - dissolve duplicates to get more.",
+                    color = Color(0xFFFF8A7A),
+                    fontFamily = FontFirst(),
+                    fontSize = 10.sp,
+                    textAlign = TextAlign.Center,
+                    modifier = Modifier.fillMaxWidth()
+                )
+            }
+        }
+    }
+}
+
+@Composable
+private fun SpellLine(label: String, text: String, tint: Color) {
+    Row(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.Top) {
+        GlyphText(
+            text = label,
+            color = SocketFill,
+            fontFamily = FontFirst(),
+            fontWeight = FontWeight.Black,
+            fontSize = 9.sp,
+            modifier = Modifier
+                .clip(RoundedCornerShape(5.dp))
+                .background(tint)
+                .padding(horizontal = 5.dp, vertical = 1.dp)
         )
+        GlyphText(text = text, color = BoardCream, fontFamily = FontFirst(), fontWeight = FontWeight.Bold, fontSize = 12.sp)
+    }
+}
+
+/** Gruby przycisk awansu: napis LEVEL UP i koszt w srodku, zamiast golej strzalki obok liczby. */
+@Composable
+private fun LevelUpButton(
+    capped: Boolean,
+    cost: Int,
+    affordable: Boolean,
+    enabled: Boolean,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    val shape = RoundedCornerShape(11.dp)
+    val face = if (enabled) Color(0xFF4FAE3A) else Color(0xFF3A2C20)
+    Row(
+        modifier = modifier
+            .height(38.dp)
+            .clip(shape)
+            .background(if (enabled) Color(0xFF245418) else SocketFill)
+            .padding(bottom = if (enabled) 3.dp else 0.dp)
+            .clip(shape)
+            .background(Brush.verticalGradient(listOf(face.copy(red = (face.red + 0.15f).coerceAtMost(1f), green = (face.green + 0.15f).coerceAtMost(1f)), face)))
+            .border(1.5.dp, if (enabled) Color(0xFF1E4A14) else BoardGold.copy(alpha = 0.3f), shape)
+            .clickable(enabled = enabled, onClick = onClick)
+            .padding(horizontal = 10.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        if (capped) {
+            GlyphText(
+                text = "LEVEL CAP · ascend a ★",
+                color = BoardMuted,
+                fontFamily = FontFirst(),
+                fontWeight = FontWeight.Black,
+                fontSize = 11.sp,
+                maxLines = 1
+            )
+        } else {
+            com.lernhero.shared.theme.StrokedText(
+                text = "LEVEL UP",
+                size = 13.sp,
+                color = if (enabled) Color.White else BoardMuted,
+                outline = if (enabled) Color(0xFF123A0C) else Color(0xFF0E0804),
+                strokeWidth = 5f,
+                maxLines = 1
+            )
+            Box(modifier = Modifier.weight(1f))
+            GlyphText(text = "💰", fontSize = 12.sp)
+            GlyphText(
+                text = " $cost",
+                color = if (affordable) Color(0xFFFFE08A) else Color(0xFFFF7A6B),
+                fontFamily = FontFirst(),
+                fontWeight = FontWeight.Black,
+                fontSize = 13.sp,
+                maxLines = 1
+            )
+        }
     }
 }
 
@@ -638,22 +846,25 @@ private fun TinyButton(
     color: Color,
     onClick: () -> Unit
 ) {
+    val shape = RoundedCornerShape(7.dp)
     Box(
         modifier = Modifier
-            .clip(RoundedCornerShape(5.dp))
-            .background(if (enabled) color else ParchmentPalette.ButtonDisabled)
-            .border(1.dp, if (enabled) ParchmentPalette.ButtonEdge else ParchmentPalette.CardEdge, RoundedCornerShape(5.dp))
+            .clip(shape)
+            .background(if (enabled) color.copy(red = color.red * 0.55f, green = color.green * 0.55f, blue = color.blue * 0.55f) else SocketFill)
+            .padding(bottom = if (enabled) 2.dp else 0.dp)
+            .clip(shape)
+            .background(if (enabled) color else Color(0xFF2A1D12))
+            .border(1.dp, if (enabled) Color.White.copy(alpha = 0.5f) else BoardGold.copy(alpha = 0.3f), shape)
             .clickable(enabled = enabled, onClick = onClick)
-            .padding(horizontal = 5.dp, vertical = 3.dp),
+            .padding(horizontal = 6.dp, vertical = 3.dp),
         contentAlignment = Alignment.Center
     ) {
-        Text(
+        GlyphText(
             text = text,
-            color = if (enabled) ParchmentPalette.Ink else ParchmentPalette.InkMuted,
-            // FontFirst, nie FontPixel: font pikselowy rysuje 'Z' i 'J' odbite lustrzanie.
+            color = if (enabled) Color(0xFF1E1206) else BoardMuted,
             fontFamily = FontFirst(),
-            fontWeight = FontWeight.Bold,
-            fontSize = 9.sp,
+            fontWeight = FontWeight.Black,
+            fontSize = 10.sp,
             maxLines = 1
         )
     }
@@ -661,13 +872,7 @@ private fun TinyButton(
 
 /* ------------------------------------------ Ekwipunek -------------------------------------------- */
 
-/**
- * Szesc kwadratowych slotow w JEDNYM rzedzie plus dwa przyciski.
- *
- * Heksagram z pierwowzoru wypadl swiadomie: szesc slotow rozstawionych wokol gwiazdy potrzebuje
- * ze dwustu punktow wysokosci, a caly panel ma miescic sie w [PANE_HEIGHT]. Uklad w linii daje te
- * same szesc slotow i ta sama informacje za jedna trzecia miejsca.
- */
+/** Rzad gniazd na sprzet i dwa grube przyciski pod spodem. */
 @Composable
 private fun GearPane(
     monster: OwnedMonster,
@@ -679,11 +884,11 @@ private fun GearPane(
 ) {
     Column(
         modifier = Modifier.fillMaxSize(),
-        verticalArrangement = Arrangement.spacedBy(6.dp)
+        verticalArrangement = Arrangement.SpaceBetween
     ) {
         Row(
             modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.spacedBy(4.dp)
+            horizontalArrangement = Arrangement.spacedBy(6.dp)
         ) {
             MonsterGear.SLOTS.forEach { slot ->
                 GearSlot(
@@ -696,22 +901,30 @@ private fun GearPane(
                 )
             }
         }
-
+        GlyphText(
+            text = "Tap an empty slot to equip · tap gear to take it off",
+            color = BoardMuted,
+            fontFamily = FontFirst(),
+            fontSize = 9.sp,
+            textAlign = TextAlign.Center,
+            modifier = Modifier.fillMaxWidth()
+        )
         Row(
             modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.spacedBy(6.dp)
+            horizontalArrangement = Arrangement.spacedBy(8.dp)
         ) {
-            WideButton(
-                text = "Unequip",
+            com.lernhero.home.ui.ChunkyButton(
+                text = "UNEQUIP ALL",
+                color = Color(0xFFB8442E),
                 enabled = equipment.isNotEmpty(),
-                color = Color(0xFFE0713A),
+                textSize = 12,
                 modifier = Modifier.weight(1f),
                 onClick = onUnequipAll
             )
-            WideButton(
-                text = "Auto-equip",
-                enabled = true,
-                color = Color(0xFF57C24A),
+            com.lernhero.home.ui.ChunkyButton(
+                text = "AUTO-EQUIP",
+                color = Color(0xFF4FAE3A),
+                textSize = 12,
                 modifier = Modifier.weight(1f),
                 onClick = onAutoEquip
             )
@@ -729,75 +942,77 @@ private fun GearSlot(
     onClick: () -> Unit
 ) {
     val item = MonsterEquipment.itemIn(equipment, slot, bag)
-    // Niezgodny zywiol podswietlamy juz na slocie - inaczej gracz zobaczy kare dopiero
-    // w liczbach i nie skojarzy jej z konkretnym przedmiotem.
+    // Niezgodny zywiol podswietlamy juz na slocie - inaczej kara wyjdzie dopiero w liczbach.
     val mismatch = item != null && MonsterGear.elementFor(item.id).let { it != null && it != element }
-
-    // Pusty slot ma sie roznic TLEM, nie drobnym znaczkiem w rogu. Wczesniej pusty i zajety
-    // wygladaly identycznie (ta sama ciemna plomba, ta sama ramka, przygaszona ikonka slotu w
-    // srodku) i jedyna roznica byla zielona plakietka 13 dp - na pergaminie nie do wylapania.
-    // Teraz: zajety = ciemne gniazdo z ramka rzadkosci, pusty = jasne wglebienie z PRZERYWANA
-    // ramka. Roznice widac z drugiego konca ekranu, bez czytania.
-    val shape = RoundedCornerShape(8.dp)
+    val shape = RoundedCornerShape(10.dp)
     val frame = when {
-        mismatch -> Color(0xFF9E2B20)
+        mismatch -> Color(0xFFD8402A)
         item != null -> RarityPalette.frame(item.rarity)
-        else -> ParchmentPalette.FrameLight
+        else -> BoardGold.copy(alpha = 0.35f)
     }
 
     Box(
         modifier = modifier
-            .fillMaxWidth()
             .height(GEAR_SLOT_HEIGHT)
             .clip(shape)
-            .background(if (item != null) ParchmentPalette.SlotFill else ParchmentPalette.Inset)
+            .background(
+                if (item != null) Brush.radialGradient(listOf(frame.copy(alpha = 0.35f), SocketFill))
+                else Brush.verticalGradient(listOf(SocketFill, Color(0xFF22170E)))
+            )
             .then(
-                if (item != null) {
-                    Modifier.border(2.dp, frame, shape)
-                } else {
-                    // Przerywana ramka to uniwersalny znak "tu czegos brakuje" - Compose nie ma
-                    // jej w border(), wiec rysujemy ja recznie.
-                    Modifier.drawBehind {
-                        drawRoundRect(
-                            color = frame,
-                            cornerRadius = CornerRadius(8.dp.toPx()),
-                            style = Stroke(
-                                width = 2.dp.toPx(),
-                                pathEffect = PathEffect.dashPathEffect(
-                                    floatArrayOf(5.dp.toPx(), 4.dp.toPx())
-                                )
-                            )
+                if (item != null) Modifier.border(2.dp, frame, shape)
+                else Modifier.drawBehind {
+                    drawRoundRect(
+                        color = frame,
+                        cornerRadius = CornerRadius(10.dp.toPx()),
+                        style = Stroke(
+                            width = 1.5.dp.toPx(),
+                            pathEffect = PathEffect.dashPathEffect(floatArrayOf(5.dp.toPx(), 4.dp.toPx()))
                         )
-                    }
+                    )
                 }
             )
             .clickable(onClick = onClick),
         contentAlignment = Alignment.Center
     ) {
         if (item != null) {
-            Text(text = item.icon(), fontSize = 22.sp)
-        } else {
-            // Pusty slot dalej mowi, CO w niego wchodzi - ale juz jako blady zarys na jasnym tle,
-            // z plusem obok, zeby nie dalo sie go pomylic z zalozonym przedmiotem.
-            Row(
-                horizontalArrangement = Arrangement.spacedBy(1.dp),
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Text(text = slot.slotGlyph(), fontSize = 15.sp, modifier = Modifier.alpha(0.30f))
-                Text(
-                    text = "+",
-                    color = ParchmentPalette.InkMuted,
-                    fontFamily = FontPixel(),
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 14.sp
+            ItemArtImage(item = item, size = 38.dp)
+            if (mismatch) {
+                GlyphText(
+                    text = "!",
+                    color = Color.White,
+                    fontFamily = FontFirst(),
+                    fontWeight = FontWeight.Black,
+                    fontSize = 9.sp,
+                    modifier = Modifier
+                        .align(Alignment.TopEnd)
+                        .padding(2.dp)
+                        .clip(CircleShape)
+                        .background(Color(0xFFD8402A))
+                        .padding(horizontal = 4.dp)
                 )
+            }
+        } else {
+            // Pusty slot mowi, CO w niego wchodzi - blady zarys i zloty plusik w rogu.
+            GlyphText(text = slot.slotGlyph(), fontSize = 20.sp, modifier = Modifier.alpha(0.28f))
+            Box(
+                modifier = Modifier
+                    .align(Alignment.BottomEnd)
+                    .padding(3.dp)
+                    .size(14.dp)
+                    .clip(CircleShape)
+                    .background(Brush.verticalGradient(listOf(Color(0xFFFFE08A), Color(0xFFD99A1C))))
+                    .border(1.dp, Color(0xFF6A4208), CircleShape),
+                contentAlignment = Alignment.Center
+            ) {
+                GlyphText(text = "+", color = Color(0xFF2A1A08), fontWeight = FontWeight.Black, fontSize = 10.sp, lineHeight = 10.sp)
             }
         }
     }
 }
 
-/** Wysokosc kafla slotu - o oczko wyzszy niz wczesniej, bo ikona 20 sp gubila sie w 44 dp. */
-private val GEAR_SLOT_HEIGHT = 50.dp
+/** Wysokosc kafla slotu. */
+private val GEAR_SLOT_HEIGHT = 58.dp
 
 /** Podpowiedz, co wchodzi w slot - szary zarys zamiast pustego kwadratu. */
 private fun ItemSlot.slotGlyph(): String = when (this) {
@@ -808,33 +1023,6 @@ private fun ItemSlot.slotGlyph(): String = when (this) {
     ItemSlot.Amulet -> "📿"
     ItemSlot.Ring -> "💍"
     else -> "➕"
-}
-
-@Composable
-private fun WideButton(
-    text: String,
-    enabled: Boolean,
-    color: Color,
-    modifier: Modifier = Modifier,
-    onClick: () -> Unit
-) {
-    Box(
-        modifier = modifier
-            .clip(RoundedCornerShape(8.dp))
-            .background(if (enabled) color else ParchmentPalette.ButtonDisabled)
-            .border(2.dp, ParchmentPalette.Frame.copy(alpha = if (enabled) 0.9f else 0.35f), RoundedCornerShape(8.dp))
-            .clickable(enabled = enabled, onClick = onClick)
-            .padding(vertical = 6.dp),
-        contentAlignment = Alignment.Center
-    ) {
-        Text(
-            text = text,
-            color = if (enabled) Color.White else ParchmentPalette.InkMuted,
-            fontFamily = FontFirst(),
-            fontWeight = FontWeight.Bold,
-            fontSize = 11.sp
-        )
-    }
 }
 
 /* --------------------------------------- Pasek kolekcji ------------------------------------------ */
@@ -910,7 +1098,7 @@ private fun StripArrow(text: String, onClick: () -> Unit) {
             .clickable(onClick = onClick),
         contentAlignment = Alignment.Center
     ) {
-        Text(text = text, color = ParchmentPalette.Ink, fontSize = 12.sp, fontWeight = FontWeight.Bold)
+        GlyphText(text = text, color = ParchmentPalette.Ink, fontSize = 12.sp, fontWeight = FontWeight.Bold)
     }
 }
 
@@ -948,7 +1136,7 @@ private fun MiniAvatar(
                 contentScale = ContentScale.Fit,
                 modifier = Modifier.fillMaxSize().padding(2.dp)
             )
-            Text(
+            GlyphText(
                 text = "${monster.level}",
                 color = Color(0xFFF4E9D7),
                 fontFamily = FontPixel(),
@@ -974,7 +1162,7 @@ private fun MiniAvatar(
             horizontalArrangement = Arrangement.Center
         ) {
             repeat(monster.stars.coerceAtMost(5)) {
-                Text(text = "★", color = Color(0xFFFFC93C), fontSize = 6.sp)
+                GlyphText(text = "★", color = Color(0xFFFFC93C), fontSize = 6.sp)
             }
         }
     }
@@ -1008,7 +1196,7 @@ private fun GearPicker(
                 .padding(10.dp),
             verticalArrangement = Arrangement.spacedBy(6.dp)
         ) {
-            Text(
+            GlyphText(
                 text = slot.shortLabel(),
                 color = ParchmentPalette.Ink,
                 fontFamily = FontPixel(),
@@ -1017,8 +1205,8 @@ private fun GearPicker(
             )
 
             if (items.isEmpty()) {
-                Text(
-                    text = "No gear for this slot.\nForge some in the Forge, Summons tab.",
+                GlyphText(
+                    text = "No gear for this slot.\nIt drops from chests and bosses.",
                     color = ParchmentPalette.InkMuted,
                     fontFamily = FontFirst(),
                     fontSize = 11.sp,
@@ -1038,9 +1226,9 @@ private fun GearPicker(
                         horizontalArrangement = Arrangement.spacedBy(7.dp),
                         verticalAlignment = Alignment.CenterVertically
                     ) {
-                        Text(text = item.icon(), fontSize = 18.sp)
+                        ItemArtImage(item = item, size = 28.dp)
                         Column(modifier = Modifier.weight(1f)) {
-                            Text(
+                            GlyphText(
                                 // Poziom przy nazwie: dwie kopie tego samego pazura roznia sie
                                 // tylko nim, wiec bez niego picker pokazywalby dwa identyczne wiersze.
                                 text = if (instance.level > 0) "${item.name} +${instance.level}" else item.name,
@@ -1051,7 +1239,7 @@ private fun GearPicker(
                             )
                             // Liczby, ktore ten pazur naprawde daje - bez nich picker byl lista
                             // nazw i gracz wybieral po ikonie.
-                            Text(
+                            GlyphText(
                                 text = item.stats.asMap()
                                     .filterValues { it != 0f }
                                     .entries
@@ -1063,7 +1251,7 @@ private fun GearPicker(
                                 fontWeight = FontWeight.Bold,
                                 fontSize = 10.sp
                             )
-                            Text(
+                            GlyphText(
                                 text = if (matches) "Matches element" else "Mismatched element",
                                 color = if (matches) Color(0xFF2F7D32) else Color(0xFF9E2B20),
                                 fontFamily = FontFirst(),
@@ -1074,10 +1262,10 @@ private fun GearPicker(
                 }
             }
 
-            WideButton(
-                text = "Close",
-                enabled = true,
+            com.lernhero.home.ui.ChunkyButton(
+                text = "CLOSE",
                 color = ParchmentPalette.Frame,
+                textSize = 13,
                 modifier = Modifier.fillMaxWidth(),
                 onClick = onDismiss
             )
@@ -1098,15 +1286,15 @@ private fun EmptyCollection(modifier: Modifier) {
         contentAlignment = Alignment.Center
     ) {
         Column(horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(6.dp)) {
-            Text(text = "🗿", fontSize = 34.sp)
-            Text(
+            GlyphText(text = "🗿", fontSize = 34.sp)
+            GlyphText(
                 text = "You don't have any companions yet.",
                 color = ParchmentPalette.Ink,
                 fontFamily = FontPixel(),
                 fontWeight = FontWeight.Bold,
                 fontSize = 12.sp
             )
-            Text(
+            GlyphText(
                 text = "Start a ritual in the Summon tab.",
                 color = ParchmentPalette.InkMuted,
                 fontFamily = FontFirst(),

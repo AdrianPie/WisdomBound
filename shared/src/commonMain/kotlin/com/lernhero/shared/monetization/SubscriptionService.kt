@@ -44,7 +44,11 @@ data class SubscriptionOffer(
     /** Cena sformatowana przez sklep, w walucie gracza ("19,99 zl"). */
     val price: String,
     /** "month", "year", "week" - albo pusty, gdy sklep nie podal okresu. */
-    val period: String
+    val period: String,
+    /** Cena w milionowych czesciach waluty - do liczenia znizki rocznej niezaleznie od kraju. */
+    val priceMicros: Long,
+    /** Cena przeliczona na miesiac, sformatowana przez sklep ("€4.17") albo null. */
+    val pricePerMonth: String?
 )
 
 sealed interface PurchaseOutcome {

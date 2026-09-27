@@ -17,23 +17,6 @@ import com.lernhero.domain.common.Rarity
  */
 object Armors {
 
-    val PLATE_HELM = Item(
-        id = "plate_helm",
-        name = "Plate Helm",
-        description = "A heavy helm. The first hit in battle bounces off it harmlessly.",
-        slot = ItemSlot.Head,
-        rarity = Rarity.Uncommon,
-        iconKey = "plate_head",
-        stats = Stats.of(
-            StatType.MaxHp to 12f,
-            StatType.Defense to 2f
-        ),
-        effects = listOf(
-            IgnoreFirstHitEffect()
-        ),
-        cost = 90
-    )
-
     val PLATE_GAUNTLETS = Item(
         id = "plate_gauntlets",
         name = "Plate Gauntlets",
@@ -49,20 +32,6 @@ object Armors {
             LifestealEffect(percent = 0.15f)
         ),
         cost = 110
-    )
-
-    val PLATE_LEGS = Item(
-        id = "plate_legs",
-        name = "Plate Greaves",
-        description = "Sturdy leg guards. More health, less risk.",
-        slot = ItemSlot.Legs,
-        rarity = Rarity.Common,
-        iconKey = "plate_legs",
-        stats = Stats.of(
-            StatType.MaxHp to 10f,
-            StatType.Defense to 2f
-        ),
-        cost = 90
     )
 
     val PLATE_BOOTS = Item(
@@ -97,5 +66,5 @@ object Armors {
         cost = 420
     )
 
-    val all: List<Item> = listOf(PLATE_HELM, PLATE_GAUNTLETS, PLATE_LEGS, PLATE_BOOTS, AEGIS_SHIELD)
+    val all: List<Item> = listOf(PLATE_GAUNTLETS, PLATE_BOOTS, AEGIS_SHIELD)
 }

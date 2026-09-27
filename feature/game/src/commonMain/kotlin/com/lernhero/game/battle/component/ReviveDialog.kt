@@ -1,5 +1,6 @@
 package com.lernhero.game.battle.component
 
+import com.lernhero.shared.theme.GlyphText
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.LinearEasing
@@ -129,11 +130,11 @@ internal fun ReviveDialog(
                         .border(2.dp, Color(0xFFE0B35A).copy(alpha = 0.7f + 0.3f * halo), CircleShape),
                     contentAlignment = Alignment.Center
                 ) {
-                    Text(text = "💀", fontSize = 40.sp)
+                    GlyphText(text = "💀", fontSize = 40.sp)
                 }
             }
 
-            Text(
+            GlyphText(
                 text = "YOUR PARTY HAS FALLEN",
                 color = Color(0xFFE7A08A),
                 fontFamily = FontPixel(),
@@ -141,7 +142,7 @@ internal fun ReviveDialog(
                 fontSize = 17.sp,
                 textAlign = TextAlign.Center
             )
-            Text(
+            GlyphText(
                 text = "Bring everyone back at $percent% HP and keep fighting this wave. One revive per battle.",
                 color = Color(0xFFCDBB99),
                 fontFamily = FontFirst(),
@@ -151,7 +152,7 @@ internal fun ReviveDialog(
 
             // Reklama (albo darmowe wskrzeszenie z subskrypcja) - glowna droga, gdy jest dostepna.
             if (offer.adAvailable || offer.free) {
-                Text(
+                GlyphText(
                     text = when {
                         offer.watching -> "⏳ LOADING..."
                         offer.free -> "👑 REVIVE"
@@ -180,7 +181,7 @@ internal fun ReviveDialog(
             // Diamenty - zawsze jako druga droga (subskrybent jej nie potrzebuje).
             if (!offer.free) {
                 val canPay = offer.gems >= AdRewards.REVIVE_GEMS
-                Text(
+                GlyphText(
                     text = if (offer.watching && !offer.adAvailable) "⏳ ..." else "💎 ${AdRewards.REVIVE_GEMS}  REVIVE",
                     color = if (canPay) Color.White else Color(0xFF8FA3C4),
                     fontFamily = FontPixel(),
@@ -199,7 +200,7 @@ internal fun ReviveDialog(
                         .clickable(enabled = canPay && !offer.watching, onClick = onReviveWithGems)
                         .padding(vertical = 12.dp)
                 )
-                Text(
+                GlyphText(
                     text = "You have 💎 ${offer.gems}",
                     color = Color(0xFF8FA3C4),
                     fontFamily = FontFirst(),
@@ -208,10 +209,10 @@ internal fun ReviveDialog(
             }
 
             offer.note?.let {
-                Text(text = it, color = Color(0xFFE7A08A), fontFamily = FontFirst(), fontSize = 12.sp, textAlign = TextAlign.Center)
+                GlyphText(text = it, color = Color(0xFFE7A08A), fontFamily = FontFirst(), fontSize = 12.sp, textAlign = TextAlign.Center)
             }
 
-            Text(
+            GlyphText(
                 text = "Give up",
                 color = Color(0xFF9D8B6A),
                 fontFamily = FontFirst(),

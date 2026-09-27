@@ -49,6 +49,7 @@ import dev.gitlive.firebase.Firebase
 import dev.gitlive.firebase.auth.FirebaseUser
 import dev.gitlive.firebase.auth.auth
 import dev.gitlive.firebase.firestore.DocumentReference
+import dev.gitlive.firebase.firestore.FieldPath
 import dev.gitlive.firebase.firestore.firestore
 
 class PlayerRepositoryImpl: PlayerRepository {
@@ -246,7 +247,9 @@ class PlayerRepositoryImpl: PlayerRepository {
                 money = player.money - cost.gold,
                 townResources = cost.deductFrom(player.townResources),
                 heroInventory = if (forMonster) player.heroInventory else raised,
-                monsterInventory = if (forMonster) raised else player.monsterInventory
+                monsterInventory = if (forMonster) raised else player.monsterInventory,
+                // Od kiedy kuznia nie wykuwa, ten licznik liczy ulepszenia (osiagniecie "Blacksmith").
+                stats = player.stats.copy(itemsCrafted = player.stats.itemsCrafted + 1)
             )
             document.set(updated)
             updated
@@ -852,11 +855,16 @@ class PlayerRepositoryImpl: PlayerRepository {
         }
     }
 
-    override suspend fun updateBookProgress(bookId: String, page: Int) {
+    override suspend fun updateBookProgress(bookId: String, page: Int, charOffset: Int) {
         try {
             val document = playerDocument() ?: return
-            val player = getPlayer() ?: return
-            document.set(player.copy(bookProgress = player.bookProgress + (bookId to page)))
+            // Aktualizacja samych pol, a nie get() + set() calego gracza: zapis pozycji leci przy
+            // kazdym przewroceniu kartki i rownolegle z zapisem statystyk czytania, a przy
+            // odczyt-modyfikacja-zapis ktorys z nich nadpisywal drugi starsza kopia.
+            document.update(
+                FieldPath("bookProgress", bookId) to page,
+                FieldPath("bookOffsets", bookId) to charOffset
+            )
         } catch (_: Exception) {
         }
     }
@@ -944,7 +952,8 @@ class PlayerRepositoryImpl: PlayerRepository {
                 importedBooks = player.importedBooks.filterNot { it.id == bookId },
                 // Postep bez ksiazki byl by tylko smieciem w zapisie - fiszki zostaja, bo slowko
                 // raz nauczone jest warte tyle samo, nawet gdy ksiazka zniknela z polki.
-                bookProgress = player.bookProgress - bookId
+                bookProgress = player.bookProgress - bookId,
+                bookOffsets = player.bookOffsets - bookId
             )
             document.set(updated)
             updated

@@ -76,7 +76,7 @@ class ItemUpgradesTest {
     /** Rzadszy przedmiot to wieksza sciana materialow na tym samym poziomie. */
     @Test
     fun rzadkosc_podbija_koszt() {
-        val common = ItemUpgrades.costFor(Armors.PLATE_LEGS, 3)!!
+        val common = ItemUpgrades.costFor(Armors.PLATE_BOOTS, 3)!!
         val epic = ItemUpgrades.costFor(Armors.AEGIS_SHIELD, 3)!!
         assertTrue(epic.iron > common.iron)
     }

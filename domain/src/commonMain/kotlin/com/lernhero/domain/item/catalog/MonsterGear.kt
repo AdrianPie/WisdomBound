@@ -49,7 +49,6 @@ object MonsterGear {
     val SLOTS: List<ItemSlot> = listOf(
         ItemSlot.MainHand,
         ItemSlot.Chest,
-        ItemSlot.Head,
         ItemSlot.Feet,
         ItemSlot.Amulet,
         ItemSlot.Ring
@@ -188,29 +187,6 @@ object MonsterGear {
 
     /* ----------------------------------- Helm i buty ---------------------------------- */
 
-    val HORN_CROWN = gear(
-        id = "horn_crown",
-        name = "Horned Crown",
-        description = "The bigger the horn, the fewer the questions.",
-        slot = ItemSlot.Head,
-        rarity = Rarity.Common,
-        iconKey = "horns",
-        stats = Stats.of(StatType.MaxHp to 13f, StatType.Attack to 1f),
-        cost = 95
-    )
-
-    val EMBER_MASK = gear(
-        id = "ember_mask",
-        name = "Ember Mask",
-        description = "Breathes smoke and it does nothing to it.",
-        slot = ItemSlot.Head,
-        rarity = Rarity.Uncommon,
-        iconKey = "mask",
-        stats = Stats.of(StatType.Attack to 4f, StatType.CritDamage to 0.10f),
-        cost = 200,
-        element = Element.Fire
-    )
-
     val SWIFT_PAWS = gear(
         id = "swift_paws",
         name = "Swift Paws",
@@ -327,18 +303,6 @@ object MonsterGear {
         element = Element.Nature
     )
 
-    val TOMB_HELM = gear(
-        id = "tomb_helm",
-        name = "Tomb Helm",
-        description = "Cold to the touch, and heavier than it looks.",
-        slot = ItemSlot.Head,
-        rarity = Rarity.Epic,
-        iconKey = "helm",
-        stats = Stats.of(StatType.Attack to 6f, StatType.MaxHp to 28f),
-        cost = 440,
-        element = Element.Death
-    )
-
     val GALE_HOOVES = gear(
         id = "gale_hooves",
         name = "Gale Hooves",
@@ -402,18 +366,6 @@ object MonsterGear {
         cost = 740
     )
 
-    val CROWN_OF_TIDES = gear(
-        id = "crown_of_tides",
-        name = "Crown of Tides",
-        description = "The sea keeps what it takes, and gives some of it back.",
-        slot = ItemSlot.Head,
-        rarity = Rarity.Legendary,
-        iconKey = "crown",
-        stats = Stats.of(StatType.MaxHp to 46f, StatType.HealPower to 0.25f, StatType.Attack to 5f),
-        cost = 690,
-        element = Element.Water
-    )
-
     val SOULBINDER_BAND = gear(
         id = "soulbinder_band",
         name = "Soulbinder Band",
@@ -455,11 +407,11 @@ object MonsterGear {
     val all: List<Item> = listOf(
         BONE_CLAW, EMBER_FANG, TIDE_SPINE, THORN_LASH,
         HIDE_WRAP, CHITIN_PLATE, GRAVE_SHROUD,
-        HORN_CROWN, EMBER_MASK, SWIFT_PAWS, DEEP_FINS,
+        SWIFT_PAWS, DEEP_FINS,
         SPIRIT_TOTEM, TIDE_PEARL, BLOOD_BAND, SEED_RING,
-        DRAGON_TALON, ABYSS_HOOK, BARKHIDE_SHELL, TOMB_HELM, GALE_HOOVES,
+        DRAGON_TALON, ABYSS_HOOK, BARKHIDE_SHELL, GALE_HOOVES,
         EMBERHEART_CHARM, IRONWOOD_RING,
-        WORLDEATER_MAW, AEONPLATE, CROWN_OF_TIDES, SOULBINDER_BAND,
+        WORLDEATER_MAW, AEONPLATE, SOULBINDER_BAND,
         TOTEM_OF_AGES, STORMSTRIDE_CLAWS
     )
 

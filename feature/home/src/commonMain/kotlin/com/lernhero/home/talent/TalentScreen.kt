@@ -23,7 +23,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.navigationBarsPadding
-import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
@@ -38,25 +37,22 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateMapOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.aspectRatio
+import androidx.compose.ui.layout.ContentScale
+import com.lernhero.shared.resources.Resources
+import org.jetbrains.compose.resources.painterResource
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.clipToBounds
-import androidx.compose.ui.draw.drawBehind
-import androidx.compose.ui.draw.rotate
-import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathEffect
-import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.graphicsLayer
-import androidx.compose.ui.layout.LayoutCoordinates
-import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -79,9 +75,8 @@ import com.lernhero.shared.theme.FontFirst
 /**
  * Drzewko talentow - trzy sciezki, po kilkanascie wezlow kazda, odblokowywane rzedami.
  *
- * Wyglad jak w grach mobilnych: kazde drzewko ma wlasny kolor, wezly to medaliony polaczone
- * liniami (zwykly przeplyw rzad pod rzedem + zlote linie wymagan), zamkniety rzad niesie klodke
- * z postepem "3/6", a wezel, na ktory stac gracza, pulsuje zielonym plusem.
+ * Wyglad jak okno talentow w WoW Classic: zakladki drzewek u gory, pod nimi jedno drzewko na
+ * wlasnym tle - kwadratowe ikony w siatce, stopien w rogu ikony i strzalki wymagan ([TalentTreePanel]).
  *
  * Ekran nie liczy NICZEGO sam - o tym, co wolno wykupic i ile punktow siedzi w drzewku, mowi
  * [TalentRules]. Dzieki temu wygaszony wezel i odrzucony zapis maja dokladnie ten sam powod.
@@ -98,16 +93,12 @@ fun TalentDialog(
     var confirmReset by remember { mutableStateOf(false) }
 
     val points = state.talentPoints
-    val nodes = remember(selectedTree, state.talentRanks, points) {
-        TalentRules.statesOf(selectedTree, state.talentRanks, points)
-    }
     val spent = TalentRules.totalSpent(state.talentRanks)
-    val colors = selectedTree.colors()
 
     Box(modifier = Modifier.fillMaxSize()) {
         DialogScrim(onDismiss = onClose)
 
-        Column(
+        Box(
             modifier = Modifier
                 .align(Alignment.Center)
                 .widthIn(max = DIALOG_MAX_WIDTH)
@@ -117,10 +108,24 @@ fun TalentDialog(
                 .padding(horizontal = 12.dp, vertical = 12.dp)
                 .padding(bottom = DIALOG_CLOSE_LANE)
                 .clip(RoundedCornerShape(20.dp))
-                .background(Brush.verticalGradient(listOf(colors.deep, Color(0xFF0C0A10))))
+                .background(Brush.verticalGradient(listOf(Color(0xFF231C12), Color(0xFF0C0A08))))
                 .border(3.dp, Color(0xFF05040A), RoundedCornerShape(20.dp))
-                .border(1.5.dp, colors.light.copy(alpha = 0.35f), RoundedCornerShape(20.dp))
-                .padding(12.dp),
+                .border(1.5.dp, Color(0xFFC8A45A).copy(alpha = 0.45f), RoundedCornerShape(20.dp))
+        ) {
+            // Tlo wybranego drzewka na calym oknie - pod naglowkiem, zakladkami i drzewkiem.
+            val bg = remember(selectedTree) { Resources.drawableNamed("talent_bg_${selectedTree.fileKey()}") }
+            if (bg != null) {
+                Image(
+                    painter = painterResource(bg),
+                    contentDescription = null,
+                    contentScale = ContentScale.Crop,
+                    modifier = Modifier.matchParentSize()
+                )
+                // Mgla na calym oknie jak w WoW - tlo widac, ale ikony i napisy sie od niego odcinaja.
+                Box(modifier = Modifier.matchParentSize().background(Color.Black.copy(alpha = 0.55f)))
+            }
+        Column(
+            modifier = Modifier.fillMaxSize().padding(12.dp),
             verticalArrangement = Arrangement.spacedBy(10.dp)
         ) {
             Header(points = points, spent = spent, onReset = { confirmReset = true })
@@ -134,14 +139,14 @@ fun TalentDialog(
                     .verticalScroll(rememberScrollState()),
                 verticalArrangement = Arrangement.spacedBy(12.dp)
             ) {
-                TreeBoard(
+                // Jedno drzewko naraz (wybierane zakladkami), w stylu WoW Classic - patrz [TalentTreePanel].
+                TalentTreePanel(
                     tree = selectedTree,
-                    nodes = nodes,
-                    pointsInTree = TalentRules.pointsIn(state.talentRanks, selectedTree),
+                    ranks = state.talentRanks,
+                    points = points,
                     onNodeClick = { inspected = it.talent.id }
                 )
 
-                BonusSummary(bonuses = state.talentBonuses)
 
                 state.message?.let {
                     Text(
@@ -156,6 +161,7 @@ fun TalentDialog(
                 Spacer(modifier = Modifier.height(8.dp))
             }
         }
+        }
 
         DialogCloseButton(
             onClick = onClose,
@@ -168,7 +174,9 @@ fun TalentDialog(
 
     inspected?.let { id ->
         // Wezel czytamy ZE SWIEZEGO stanu - po wykupieniu stopnia karta od razu pokazuje nowy stopien.
-        nodes.firstOrNull { it.talent.id == id }?.let { live ->
+        val tree = TalentCatalog.byId(id)?.tree
+        tree?.let { TalentRules.statesOf(it, state.talentRanks, points) }
+            ?.firstOrNull { it.talent.id == id }?.let { live ->
             TalentDetailSheet(
                 node = live,
                 points = points,
@@ -204,7 +212,6 @@ private fun TalentTree.colors(): TreeColors = when (this) {
 private val GoldLight = Color(0xFFFFE27A)
 private val GoldDark = Color(0xFFC8901E)
 private val Outline = Color(0xFF05040A)
-private val LockedGrey = Color(0xFF4A4658)
 
 /* ------------------------------------------ Naglowek ------------------------------------------ */
 
@@ -290,424 +297,61 @@ private fun TreeTabs(selected: TalentTree, ranks: Map<String, Int>, onSelect: (T
         TalentTree.entries.forEach { tree ->
             val active = tree == selected
             val c = tree.colors()
-            Column(
-                modifier = Modifier
-                    .weight(1f)
-                    .graphicsLayer { translationY = if (active) 0f else 3f * density }
-                    .clip(RoundedCornerShape(14.dp))
-                    .background(
-                        Brush.verticalGradient(
-                            if (active) listOf(c.light, c.mid, c.dark) else listOf(c.deep, Color(0xFF14111A))
-                        )
-                    )
-                    .border(2.5.dp, if (active) Outline else c.dark, RoundedCornerShape(14.dp))
-                    .clickable { onSelect(tree) }
-                    .padding(vertical = 8.dp),
-                horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.spacedBy(1.dp)
-            ) {
-                Text(text = tree.icon, fontSize = 20.sp, modifier = Modifier.alpha(if (active) 1f else 0.7f))
-                OutlinedText(
-                    text = tree.label,
-                    size = 13.sp,
-                    color = if (active) Color.White else c.light,
-                    strokeWidth = if (active) 6f else 3f
-                )
-                Text(
-                    text = "${TalentRules.pointsIn(ranks, tree)} pts",
-                    color = if (active) Color.White else c.light.copy(alpha = 0.7f),
-                    fontFamily = FontFirst(),
-                    fontWeight = FontWeight.Black,
-                    fontSize = 10.sp
-                )
-            }
-        }
-    }
-}
-
-/* -------------------------------------------- Plansza ------------------------------------------ */
-
-/**
- * Plansza drzewka. Pozycje medalionow zbieramy przy ukladaniu ([onGloballyPositioned]) i dopiero
- * z nich rysujemy linie POD wezlami - dzieki temu polaczenia zawsze trafiaja w srodki, niezaleznie
- * od szerokosci ekranu i wysokosci podpisow.
- */
-@Composable
-private fun TreeBoard(
-    tree: TalentTree,
-    nodes: List<TalentNodeState>,
-    pointsInTree: Int,
-    onNodeClick: (TalentNodeState) -> Unit
-) {
-    val c = tree.colors()
-    val rows = remember(tree) { TalentCatalog.rowsOf(tree) }
-    val byId = remember(nodes) { nodes.associateBy { it.talent.id } }
-    val centers = remember(tree) { mutableStateMapOf<String, Offset>() }
-    var board by remember(tree) { mutableStateOf<LayoutCoordinates?>(null) }
-    val links = remember(tree) { linksOf(TalentCatalog.forTree(tree)) }
-
-    Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clip(RoundedCornerShape(16.dp))
-            .background(Brush.radialGradient(listOf(c.dark.copy(alpha = 0.55f), c.deep.copy(alpha = 0.4f), Color(0x00000000))))
-            .border(2.dp, c.mid.copy(alpha = 0.35f), RoundedCornerShape(16.dp))
-            .onGloballyPositioned { board = it }
-            .drawBehind {
-                links.forEach { link ->
-                    val from = centers[link.from] ?: return@forEach
-                    val to = centers[link.to] ?: return@forEach
-                    val child = byId[link.to]
-                    val lit = child?.isLearned == true
-                    val open = child?.isReachable == true
-                    val color = when {
-                        lit -> if (link.requirement) GoldLight else c.light
-                        open -> (if (link.requirement) GoldLight else c.mid).copy(alpha = 0.55f)
-                        else -> LockedGrey.copy(alpha = 0.6f)
-                    }
-                    val width = (if (lit) 5f else 3.5f) * density
-                    // Obrys pod linia, zeby odcinala sie od tla jak reszta grubych konturow w grze.
-                    drawLine(Outline, from, to, strokeWidth = width + 3f * density, cap = StrokeCap.Round)
-                    drawLine(
-                        color,
-                        from,
-                        to,
-                        strokeWidth = width,
-                        cap = StrokeCap.Round,
-                        pathEffect = if (link.requirement && !lit) PathEffect.dashPathEffect(floatArrayOf(10f * density, 7f * density)) else null
-                    )
-                }
-            }
-            .padding(horizontal = 8.dp, vertical = 12.dp),
-        verticalArrangement = Arrangement.spacedBy(6.dp)
-    ) {
-        Text(
-            text = tree.tagline,
-            color = c.light,
-            fontFamily = FontFirst(),
-            fontWeight = FontWeight.Bold,
-            fontSize = 12.sp,
-            textAlign = TextAlign.Center,
-            modifier = Modifier.fillMaxWidth().padding(bottom = 4.dp)
-        )
-
-        rows.forEachIndexed { tier, row ->
-            val required = TalentRules.pointsRequiredFor(tier)
-            val open = pointsInTree >= required
-            if (tier > 0) TierGate(open = open, have = pointsInTree, required = required, tree = tree)
-
-            Row(modifier = Modifier.fillMaxWidth()) {
-                // Kolumny sa stale (0..2), zeby wezly z roznych rzedow staly jeden pod drugim.
-                (0..2).forEach { column ->
-                    val node = row.firstOrNull { it.column == column }?.let { byId[it.id] }
-                    Box(modifier = Modifier.weight(1f), contentAlignment = Alignment.TopCenter) {
-                        if (node != null) {
-                            TalentNode(
-                                node = node,
-                                colors = c,
-                                onClick = { onNodeClick(node) },
-                                onCenter = { coords ->
-                                    val parent = board ?: return@TalentNode
-                                    if (!parent.isAttached || !coords.isAttached) return@TalentNode
-                                    val size = coords.size
-                                    centers[node.talent.id] = parent.localPositionOf(
-                                        coords,
-                                        Offset(size.width / 2f, size.height / 2f)
-                                    )
-                                }
-                            )
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-/** Polaczenie na planszy: [requirement] = zlota strzalka wymagania, inaczej zwykly przeplyw w kolumnie. */
-private data class Link(val from: String, val to: String, val requirement: Boolean)
-
-/**
- * Kazdy wezel laczy sie z najblizszym wezlem NAD nim w tej samej kolumnie (przeplyw drzewka),
- * a wezel z wymaganiem - dodatkowo ze swoim rodzicem. Gdy rodzic jest akurat wezlem nad nim,
- * zostaje jedna, zlota linia zamiast dwoch.
- */
-private fun linksOf(talents: List<Talent>): List<Link> = buildList {
-    talents.forEach { talent ->
-        val parent = talent.requires
-        val above = talents
-            .filter { it.column == talent.column && it.tier < talent.tier }
-            .maxByOrNull { it.tier }
-        if (above != null && above.id != parent) add(Link(above.id, talent.id, requirement = false))
-        if (parent != null) add(Link(parent, talent.id, requirement = true))
-    }
-}
-
-/** Brama rzedu: otwarty = cienka linia w kolorze drzewka, zamkniety = klodka z postepem. */
-@Composable
-private fun TierGate(open: Boolean, have: Int, required: Int, tree: TalentTree) {
-    val c = tree.colors()
-    Box(modifier = Modifier.fillMaxWidth().height(22.dp), contentAlignment = Alignment.Center) {
-        if (!open) {
-            Row(
-                modifier = Modifier
-                    .clip(RoundedCornerShape(50))
-                    .background(Color(0xE6100D16))
-                    .border(1.5.dp, LockedGrey, RoundedCornerShape(50))
-                    .padding(horizontal = 10.dp, vertical = 2.dp),
-                horizontalArrangement = Arrangement.spacedBy(6.dp),
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Text(text = "🔒", fontSize = 10.sp)
-                Text(
-                    text = "$have / $required pts in ${tree.label}",
-                    color = Color(0xFFBFB3D6),
-                    fontFamily = FontFirst(),
-                    fontWeight = FontWeight.Black,
-                    fontSize = 10.sp
-                )
-                // Maly pasek postepu - ile jeszcze do otwarcia rzedu.
-                Box(
-                    modifier = Modifier
-                        .width(36.dp)
-                        .height(5.dp)
-                        .clip(RoundedCornerShape(50))
-                        .background(Color(0xFF26232F))
-                ) {
-                    Box(
-                        modifier = Modifier
-                            .fillMaxHeight()
-                            .fillMaxWidth((have.toFloat() / required).coerceIn(0f, 1f))
-                            .background(c.mid)
-                    )
-                }
-            }
-        }
-    }
-}
-
-/**
- * Medalion talentu. Stany na pierwszy rzut oka:
- * - wymaksowany: zloty pierscien i poswiata,
- * - wykupiony: pierscien w kolorze drzewka,
- * - do kupienia teraz: pulsujacy pierscien i zielony plus,
- * - osiagalny, ale bez punktu: przygaszony kolor drzewka,
- * - zamkniety: szary, z klodka.
- */
-@Composable
-private fun TalentNode(
-    node: TalentNodeState,
-    colors: TreeColors,
-    onClick: () -> Unit,
-    onCenter: (LayoutCoordinates) -> Unit
-) {
-    val infinite = rememberInfiniteTransition()
-    val pulse by infinite.animateFloat(0f, 1f, infiniteRepeatable(tween(850, easing = FastOutSlowInEasing), RepeatMode.Reverse))
-    val spin by infinite.animateFloat(0f, 360f, infiniteRepeatable(tween(9000, easing = LinearEasing)))
-
-    val talent = node.talent
-    val ring = when {
-        node.isMaxed -> listOf(GoldLight, GoldDark)
-        node.isLearned -> listOf(colors.light, colors.dark)
-        node.canSpend -> listOf(colors.light, colors.mid)
-        node.isReachable -> listOf(colors.mid.copy(alpha = 0.6f), colors.dark.copy(alpha = 0.6f))
-        else -> listOf(LockedGrey, Color(0xFF26232F))
-    }
-    val capstone = talent.maxRank == 1 && talent.tier >= 3
-
-    Column(
-        modifier = Modifier
-            .width(96.dp)
-            .clickable(
-                interactionSource = remember { MutableInteractionSource() },
-                indication = null,
-                onClick = onClick
-            ),
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        Box(modifier = Modifier.size(MEDALLION + 12.dp), contentAlignment = Alignment.Center) {
-            // Poswiata za medalionem - zlota dla kompletu, pulsujaca dla "stac cie teraz".
-            if (node.isMaxed || node.canSpend) {
-                Box(
-                    modifier = Modifier
-                        .size(MEDALLION + 12.dp)
-                        .rotate(spin)
-                        .alpha(if (node.isMaxed) 0.55f else 0.25f + 0.45f * pulse)
-                        .background(
-                            Brush.sweepGradient(
-                                List(12) { if (it % 2 == 0) (if (node.isMaxed) GoldLight else colors.light) else Color.Transparent }
-                            ),
-                            CircleShape
-                        )
-                )
-            }
+            // Przycisk to grafika `talent_tab_<drzewko>` - na niej tylko napis i punkty.
+            // Nieaktywne sa przygaszone i lekko opuszczone, aktywny "wyskakuje" w gore.
+            val art = remember(tree) { Resources.drawableNamed("talent_tab_${tree.fileKey()}") }
             Box(
                 modifier = Modifier
-                    .size(MEDALLION)
-                    .onGloballyPositioned(onCenter)
+                    .weight(1f)
+                    .aspectRatio(224f / 126f)
                     .graphicsLayer {
-                        val s = if (node.canSpend) 1f + 0.04f * pulse else 1f
-                        scaleX = s
-                        scaleY = s
+                        translationY = if (active) 0f else 3f * density
+                        val s = if (active) 1f else 0.94f
+                        scaleX = s; scaleY = s
                     }
-                    .clip(if (capstone) RoundedCornerShape(16.dp) else CircleShape)
-                    .background(Brush.verticalGradient(ring))
-                    .border(2.5.dp, Outline, if (capstone) RoundedCornerShape(16.dp) else CircleShape)
-                    .padding(4.dp)
-                    .clip(if (capstone) RoundedCornerShape(12.dp) else CircleShape)
-                    .background(
-                        Brush.radialGradient(
-                            if (node.isReachable) listOf(colors.mid.copy(alpha = 0.55f), colors.deep, Color(0xFF08070C))
-                            else listOf(Color(0xFF2A2733), Color(0xFF121017))
-                        )
-                    ),
+                    .clip(RoundedCornerShape(14.dp))
+                    .clickable { onSelect(tree) },
                 contentAlignment = Alignment.Center
             ) {
-                Text(
-                    text = talent.icon,
-                    fontSize = 26.sp,
-                    modifier = Modifier.alpha(if (node.isReachable) 1f else 0.35f)
-                )
-            }
-
-            if (!node.isReachable) {
-                Text(text = "🔒", fontSize = 13.sp, modifier = Modifier.align(Alignment.TopEnd).padding(top = 2.dp, end = 4.dp))
-            } else if (node.canSpend) {
-                Box(
-                    modifier = Modifier
-                        .align(Alignment.TopEnd)
-                        .padding(top = 2.dp, end = 2.dp)
-                        .size(20.dp)
-                        .graphicsLayer {
-                            val s = 1f + 0.15f * pulse
-                            scaleX = s
-                            scaleY = s
-                        }
-                        .clip(CircleShape)
-                        .background(Brush.verticalGradient(listOf(Color(0xFF8BE05A), Color(0xFF3F9E2B))))
-                        .border(2.dp, Outline, CircleShape),
-                    contentAlignment = Alignment.Center
+                if (art != null) {
+                    Image(
+                        painter = painterResource(art),
+                        contentDescription = null,
+                        contentScale = ContentScale.FillBounds,
+                        modifier = Modifier.fillMaxSize()
+                    )
+                } else {
+                    Box(
+                        modifier = Modifier.fillMaxSize()
+                            .background(Brush.verticalGradient(listOf(c.light, c.mid, c.dark)))
+                    )
+                }
+                if (!active) Box(modifier = Modifier.fillMaxSize().background(Color.Black.copy(alpha = 0.45f)))
+                Column(
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    verticalArrangement = Arrangement.spacedBy(0.dp)
                 ) {
-                    Text(text = "+", color = Color.White, fontWeight = FontWeight.Black, fontSize = 14.sp, lineHeight = 14.sp)
+                    OutlinedText(
+                        text = tree.label,
+                        size = 14.sp,
+                        color = if (active) Color.White else Color.White.copy(alpha = 0.75f),
+                        strokeWidth = 6f
+                    )
+                    OutlinedText(
+                        text = "${TalentRules.pointsIn(ranks, tree)} pts",
+                        size = 11.sp,
+                        color = if (active) Color(0xFFFFE08A) else Color(0xFFFFE08A).copy(alpha = 0.7f),
+                        strokeWidth = 5f
+                    )
                 }
             }
-
-            // Stopien w pigulce na dole medalionu.
-            Text(
-                text = "${node.rank}/${talent.maxRank}",
-                color = when {
-                    node.isMaxed -> Color(0xFF3A2405)
-                    node.isLearned -> Color.White
-                    else -> Color(0xFF9D93B5)
-                },
-                fontFamily = FontFirst(),
-                fontWeight = FontWeight.Black,
-                fontSize = 10.sp,
-                modifier = Modifier
-                    .align(Alignment.BottomCenter)
-                    .clip(RoundedCornerShape(50))
-                    .background(
-                        when {
-                            node.isMaxed -> Brush.verticalGradient(listOf(GoldLight, GoldDark))
-                            node.isLearned -> Brush.verticalGradient(listOf(colors.mid, colors.dark))
-                            else -> Brush.verticalGradient(listOf(Color(0xFF26232F), Color(0xFF14111A)))
-                        }
-                    )
-                    .border(1.5.dp, Outline, RoundedCornerShape(50))
-                    .padding(horizontal = 7.dp, vertical = 1.dp)
-            )
         }
-        Text(
-            text = talent.name,
-            color = when {
-                node.isMaxed -> GoldLight
-                node.isLearned -> Color.White
-                node.isReachable -> Color(0xFFD9D1EA)
-                else -> Color(0xFF6E6880)
-            },
-            fontFamily = FontFirst(),
-            fontWeight = FontWeight.Black,
-            fontSize = 10.sp,
-            lineHeight = 12.sp,
-            textAlign = TextAlign.Center,
-            maxLines = 2,
-            // Ciemna pigulka pod podpisem - linie polaczen biegna POD nia, a nie przez litery.
-            modifier = Modifier
-                .padding(top = 1.dp)
-                .clip(RoundedCornerShape(6.dp))
-                .background(Color(0xE60C0A10))
-                .padding(horizontal = 5.dp, vertical = 1.dp)
-        )
-        Spacer(modifier = Modifier.height(4.dp))
     }
 }
 
 /* ------------------------------------------ Podsumowanie --------------------------------------- */
 
 /** Co drzewko realnie daje TERAZ - chipy ze wszystkimi bonusami naraz. */
-@Composable
-private fun BonusSummary(bonuses: TalentBonuses) {
-    if (bonuses.isEmpty) return
-
-    val chips = buildList {
-        if (bonuses.attack != 0) add("⚔️" to "+${bonuses.attack} attack")
-        if (bonuses.maxHp != 0) add("❤️" to "+${bonuses.maxHp} max HP")
-        if (bonuses.critChance != 0f) add("🎯" to "+${(bonuses.critChance * 100).toInt()}% crit")
-        if (bonuses.quizDamage != 0f) add("🧠" to "+${(bonuses.quizDamage * 100).toInt()}% quiz dmg")
-        bonuses.buffStacks.forEach { (buff, stacks) -> add("✦" to "${buff.title} x$stacks") }
-        bonuses.spellChances.forEach { (spellId, chance) ->
-            add("🔮" to "${SpellCatalog.byId(spellId)?.name ?: spellId} $chance%")
-        }
-    }
-
-    Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clip(RoundedCornerShape(16.dp))
-            .background(Brush.verticalGradient(listOf(Color(0xFF2A2436), Color(0xFF17131F))))
-            .border(2.dp, Outline, RoundedCornerShape(16.dp))
-            .padding(12.dp),
-        verticalArrangement = Arrangement.spacedBy(6.dp)
-    ) {
-        OutlinedText(text = "ACTIVE BONUSES", size = 14.sp, color = GoldLight, modifier = Modifier.fillMaxWidth())
-        chips.chunked(2).forEach { pair ->
-            Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-                pair.forEach { (icon, label) ->
-                    Row(
-                        modifier = Modifier
-                            .weight(1f)
-                            .clip(RoundedCornerShape(10.dp))
-                            .background(Color(0x33FFFFFF))
-                            .padding(horizontal = 8.dp, vertical = 5.dp),
-                        horizontalArrangement = Arrangement.spacedBy(5.dp),
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        Text(text = icon, fontSize = 12.sp, color = GoldLight)
-                        Text(
-                            text = label,
-                            color = Color.White,
-                            fontFamily = FontFirst(),
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 11.sp,
-                            maxLines = 1
-                        )
-                    }
-                }
-                if (pair.size == 1) Spacer(modifier = Modifier.weight(1f))
-            }
-        }
-        Text(
-            text = "Talents fill at most half of each battle effect - the rest comes from run upgrades.",
-            color = Color(0xFF9D93B5),
-            fontFamily = FontFirst(),
-            fontSize = 10.sp,
-            lineHeight = 12.sp
-        )
-    }
-}
-
-/* --------------------------------------------- Karty ------------------------------------------- */
-
 @Composable
 private fun TalentDetailSheet(
     node: TalentNodeState,

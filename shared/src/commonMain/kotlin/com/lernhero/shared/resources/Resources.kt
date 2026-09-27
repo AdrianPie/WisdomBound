@@ -5,6 +5,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import org.jetbrains.compose.resources.DrawableResource
 import lernhero.shared.generated.resources.Res
+import lernhero.shared.generated.resources.allDrawableResources
 import lernhero.shared.generated.resources.back_arrow
 import lernhero.shared.generated.resources.background
 import lernhero.shared.generated.resources.town_home_screen
@@ -160,6 +161,19 @@ import lernhero.shared.generated.resources.answer_badge_gem
 import lernhero.shared.generated.resources.ramka
 
 object Resources {
+    /**
+     * Grafika przedmiotu po kluczu ikony ([com.lernhero.domain.item.Item.iconKey]) - plik
+     * `drawable/item_<klucz>.png`. Szukana po NAZWIE, wiec wrzucenie PNG wystarczy: bez niego
+     * zwraca null i kafel rysuje emoji. Jedna grafika sluzy wszystkim przedmiotom z tym kluczem.
+     */
+    fun itemArt(iconKey: String): DrawableResource? = Res.allDrawableResources["item_$iconKey"]
+
+    /**
+     * Dowolna grafika po NAZWIE pliku (bez rozszerzenia) - dla zasobow wrzucanych "na nazwe",
+     * np. ikony talentow `talent_<id>` i tla drzewek `talent_bg_<drzewko>`. Null = pliku jeszcze nie ma.
+     */
+    fun drawableNamed(name: String): DrawableResource? = Res.allDrawableResources[name]
+
     object Icon {
         val Plus = Res.drawable.plus
         val Minus = Res.drawable.minus

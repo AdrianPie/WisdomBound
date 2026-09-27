@@ -33,7 +33,7 @@ object IdleRewards {
     fun ratePerHour(highestClearedStage: Int): IdleRate {
         if (highestClearedStage <= 0) return IdleRate()
         return IdleRate(
-            gold = 30f + highestClearedStage * 6f,
+            gold = 30f + highestClearedStage * 2f,
             iron = 2f + highestClearedStage * 0.5f,
             essence = 3f + highestClearedStage * 0.7f
         )

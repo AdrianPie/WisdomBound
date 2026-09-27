@@ -1,5 +1,6 @@
 package com.lernhero.reader
 
+import com.lernhero.shared.theme.GlyphText
 import androidx.compose.animation.core.RepeatMode
 import androidx.compose.animation.core.animateFloat
 import androidx.compose.animation.core.animateFloatAsState
@@ -86,6 +87,56 @@ internal fun KitPanel(modifier: Modifier = Modifier, content: @Composable () -> 
     }
 }
 
+/*
+ * Pergamin jak na karcie postaci (kopia [com.lernhero.home.ui.PaperCard] - modul czytnika nie widzi
+ * :feature:home). Uzywany przez karty z trescia: dzienne czytanie, "czytaj dalej", statystyki.
+ */
+internal val PaperFrame = Color(0xFF6B4A2B)
+internal val PaperFrameLight = Color(0xFF9A7043)
+internal val PaperTop = Color(0xFFE8D5B0)
+internal val PaperBottom = Color(0xFFD8BF93)
+internal val PaperCardFill = Color(0xFFF3E6C8)
+internal val PaperCardEdge = Color(0xFFB9945E)
+internal val PaperInkColor = Color(0xFF4A3620)
+internal val PaperInkMuted = Color(0xFF7A6244)
+internal val PaperGood = Color(0xFF3E8A2E)
+internal val PaperAmber = Color(0xFFB7791F)
+
+@Composable
+internal fun PaperPanel(
+    modifier: Modifier = Modifier,
+    content: @Composable androidx.compose.foundation.layout.ColumnScope.() -> Unit
+) {
+    Column(
+        modifier = modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(18.dp))
+            .background(PaperFrame)
+            .padding(3.dp)
+            .clip(RoundedCornerShape(15.dp))
+            .background(Brush.verticalGradient(listOf(PaperTop, PaperBottom)))
+            .border(1.5.dp, PaperFrameLight.copy(alpha = 0.6f), RoundedCornerShape(15.dp))
+            .padding(12.dp),
+        verticalArrangement = Arrangement.spacedBy(10.dp),
+        content = content
+    )
+}
+
+/** Mala etykieta nad liczba: drukowane litery, przygaszony tusz. */
+@Composable
+internal fun PaperCaption(text: String, color: Color = PaperInkMuted) {
+    GlyphText(
+        text = text.uppercase(),
+        color = color,
+        fontFamily = FontFirst(),
+        fontWeight = FontWeight.Bold,
+        fontSize = 9.sp,
+        lineHeight = 10.sp,
+        letterSpacing = 0.6.sp,
+        maxLines = 1
+    )
+}
+
 @Composable
 internal fun KitButton(
     label: String,
@@ -95,16 +146,23 @@ internal fun KitButton(
     size: TextUnit = 15.sp,
     onClick: () -> Unit
 ) {
+    // Gruby przycisk z ciemniejsza "warga" pod spodem - wyglada na wciskany, jak w grach.
+    val face = if (enabled) colors else listOf(Color(0xFFB8AC96), Color(0xFF9A8E78))
+    val lip = face.last().copy(red = face.last().red * 0.62f, green = face.last().green * 0.62f, blue = face.last().blue * 0.62f)
+    val shape = RoundedCornerShape(11.dp)
     Box(
         modifier = modifier
-            .clip(RoundedCornerShape(12.dp))
-            .background(Brush.verticalGradient(if (enabled) colors else listOf(Color(0xFF7D7468), Color(0xFF4F483F))))
-            .border(2.5.dp, KitOutline, RoundedCornerShape(12.dp))
+            .clip(shape)
+            .background(lip)
+            .padding(bottom = 3.dp)
+            .clip(shape)
+            .background(Brush.verticalGradient(face))
+            .border(1.5.dp, lip, shape)
             .clickable(enabled = enabled, onClick = onClick)
-            .padding(horizontal = 14.dp, vertical = 9.dp),
+            .padding(horizontal = 14.dp, vertical = 8.dp),
         contentAlignment = Alignment.Center
     ) {
-        KitText(text = label, size = size, color = if (enabled) Color.White else Color(0xFFD8D0C4), strokeWidth = 5f, maxLines = 1)
+        StrokedText(label, size, Color.White, lip.copy(red = lip.red * 0.6f, green = lip.green * 0.6f, blue = lip.blue * 0.6f), strokeWidth = 5f, maxLines = 1)
     }
 }
 
@@ -145,8 +203,8 @@ internal fun GoalRings(seconds: Int, modifier: Modifier = Modifier, stroke: Floa
             drawArc(track, -90f, 360f, false, topLeft, arc, style = Stroke(w))
             drawArc(color, -90f, 360f * fraction, false, topLeft, arc, style = Stroke(w, cap = StrokeCap.Round))
         }
-        ring(0f, outer, Color(0xFFB48BFF))
-        ring(w * 1.35f, inner, if (inner >= 1f) KitGreen else KitGold)
+        ring(0f, outer, Color(0xFF8B5CD6))
+        ring(w * 1.35f, inner, if (inner >= 1f) KitGreen else Color(0xFFE5A823))
     }
 }
 
@@ -161,15 +219,15 @@ internal fun RewardChips(goal: ReadingGoal, size: TextUnit = 11.sp) {
 
 @Composable
 private fun Chip(text: String, size: TextUnit) {
-    Text(
+    GlyphText(
         text = text,
-        color = Color.White,
+        color = PaperInkColor,
         fontFamily = FontFirst(),
         fontWeight = FontWeight.Black,
         fontSize = size,
         modifier = Modifier
             .clip(RoundedCornerShape(50))
-            .background(Color(0xCC0C0806))
+            .background(Color(0x264A3620))
             .padding(horizontal = 7.dp, vertical = 2.dp)
     )
 }
@@ -177,6 +235,7 @@ private fun Chip(text: String, size: TextUnit) {
 /**
  * Karta dziennego czytania: pierscienie celu, dzisiejszy czas i dwie nagrody (15 min / 1 h),
  * kazda z wlasnym przyciskiem odbioru. To ona ma byc powodem, zeby codziennie siasc do ksiazki.
+ * Pergamin jak karta postaci - bez fioletowego gradientu, bialego tekstu z obrysem i emoji.
  */
 @Composable
 internal fun DailyReadingCard(
@@ -186,39 +245,47 @@ internal fun DailyReadingCard(
     modifier: Modifier = Modifier
 ) {
     val seconds = today.activeSeconds
-    Column(
-        modifier = modifier
-            .fillMaxWidth()
-            .clip(RoundedCornerShape(18.dp))
-            .background(Brush.linearGradient(listOf(Color(0xFF4A2A6E), Color(0xFF24133A), Color(0xFF160C22))))
-            .border(3.dp, Brush.verticalGradient(listOf(KitGold, Color(0xFFE08A1E))), RoundedCornerShape(18.dp))
-            .padding(14.dp),
-        verticalArrangement = Arrangement.spacedBy(12.dp)
-    ) {
+    PaperPanel(modifier = modifier) {
         Row(horizontalArrangement = Arrangement.spacedBy(14.dp), verticalAlignment = Alignment.CenterVertically) {
-            Box(modifier = Modifier.size(104.dp), contentAlignment = Alignment.Center) {
-                GoalRings(seconds = seconds, modifier = Modifier.fillMaxSize())
+            Box(modifier = Modifier.size(90.dp), contentAlignment = Alignment.Center) {
+                GoalRings(seconds = seconds, modifier = Modifier.fillMaxSize(), stroke = 9f, track = Color(0x334A3620))
                 Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                    KitText(text = "${seconds / 60}", size = 26.sp, color = Color.White)
-                    Text("min today", color = Color(0xFFBFA9DE), fontFamily = FontFirst(), fontWeight = FontWeight.Bold, fontSize = 10.sp)
+                    GlyphText(
+                        text = "${seconds / 60}",
+                        color = PaperInkColor,
+                        fontFamily = FontFirst(),
+                        fontWeight = FontWeight.Black,
+                        fontSize = 24.sp,
+                        lineHeight = 26.sp
+                    )
+                    PaperCaption("min today")
                 }
             }
-            Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
-                KitText(text = "Daily Reading", size = 20.sp, color = KitGold)
-                val next = ReadingGoalCatalog.DAILY.firstOrNull { seconds < it.threshold * 60 }
-                Text(
-                    text = if (next == null) "Both rewards unlocked today - legendary!"
-                    else "${((next.threshold * 60 - seconds + 59) / 60)} min to the ${if (next == ReadingGoalCatalog.DAILY.first()) "first" else "big"} reward",
-                    color = Color.White,
+            Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(3.dp)) {
+                GlyphText(
+                    text = "Daily Reading",
+                    color = PaperInkColor,
                     fontFamily = FontFirst(),
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 12.sp
+                    fontWeight = FontWeight.Black,
+                    fontSize = 18.sp,
+                    lineHeight = 20.sp
                 )
-                Text(
-                    text = "Only active reading counts - turn pages to keep the clock running.",
-                    color = Color(0xFFBFA9DE),
+                val next = ReadingGoalCatalog.DAILY.firstOrNull { seconds < it.threshold * 60 }
+                GlyphText(
+                    text = if (next == null) "Both rewards unlocked today!"
+                    else "${((next.threshold * 60 - seconds + 59) / 60)} min to the ${if (next == ReadingGoalCatalog.DAILY.first()) "first" else "big"} reward",
+                    color = PaperAmber,
                     fontFamily = FontFirst(),
-                    fontSize = 10.sp
+                    fontWeight = FontWeight.Black,
+                    fontSize = 12.sp,
+                    lineHeight = 14.sp
+                )
+                GlyphText(
+                    text = "Only active reading counts - turn pages to keep the clock running.",
+                    color = PaperInkMuted,
+                    fontFamily = FontFirst(),
+                    fontSize = 11.sp,
+                    lineHeight = 14.sp
                 )
             }
         }
@@ -233,55 +300,62 @@ private fun GoalRow(goal: ReadingGoal, seconds: Int, big: Boolean, claimed: Bool
     val complete = seconds >= goal.threshold * 60
     val claimable = complete && !claimed
     val pulse by rememberInfiniteTransition().animateFloat(0.94f, 1.06f, infiniteRepeatable(tween(600), RepeatMode.Reverse))
+    val shape = RoundedCornerShape(12.dp)
+    val badge = if (big) listOf(Color(0xFF9C74E0), Color(0xFF5E36A8)) else listOf(Color(0xFFF2B845), Color(0xFFB8701E))
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .clip(RoundedCornerShape(12.dp))
-            .background(if (claimable) Color(0x553F9E2B) else Color(0x66000000))
-            .border(2.dp, if (claimable) KitGreen else KitOutline, RoundedCornerShape(12.dp))
-            .padding(10.dp),
+            .clip(shape)
+            .background(if (claimable) Color(0xFFE3EFCB) else PaperCardFill)
+            .border(if (claimable) 1.5.dp else 1.dp, if (claimable) PaperGood else PaperCardEdge, shape)
+            .padding(horizontal = 10.dp, vertical = 8.dp),
         horizontalArrangement = Arrangement.spacedBy(10.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
+        // Znaczek z progiem celu ("15m" / "1h") zamiast emoji prezentu i korony.
         Box(
             modifier = Modifier
-                .size(44.dp)
+                .size(40.dp)
                 .graphicsLayer { if (claimable) { scaleX = pulse; scaleY = pulse } }
                 .clip(RoundedCornerShape(10.dp))
-                .background(
-                    Brush.verticalGradient(
-                        if (big) listOf(Color(0xFFB48BFF), Color(0xFF5A2DA8)) else listOf(Color(0xFFFFC94A), Color(0xFFB8701E))
-                    )
-                )
-                .border(2.dp, KitOutline, RoundedCornerShape(10.dp)),
+                .background(Brush.verticalGradient(badge))
+                .border(1.5.dp, Color.White.copy(alpha = 0.75f), RoundedCornerShape(10.dp)),
             contentAlignment = Alignment.Center
         ) {
-            Text(text = if (claimed) "✅" else if (big) "👑" else "🎁", fontSize = 22.sp)
+            StrokedText(
+                text = if (goal.threshold >= 60) "${goal.threshold / 60}h" else "${goal.threshold}m",
+                size = 14.sp,
+                color = Color.White,
+                outline = badge.last().copy(red = badge.last().red * 0.5f, green = badge.last().green * 0.5f, blue = badge.last().blue * 0.5f),
+                strokeWidth = 5f,
+                tight = true
+            )
         }
-        Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(3.dp)) {
-            Row(horizontalArrangement = Arrangement.spacedBy(6.dp), verticalAlignment = Alignment.CenterVertically) {
-                KitText(text = goal.title, size = 14.sp, color = Color.White, strokeWidth = 4f)
-                Text(
-                    text = if (goal.threshold >= 60) "${goal.threshold / 60} h" else "${goal.threshold} min",
-                    color = KitGold,
-                    fontFamily = FontFirst(),
-                    fontWeight = FontWeight.Black,
-                    fontSize = 11.sp
-                )
-            }
+        Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+            GlyphText(
+                text = goal.title,
+                color = PaperInkColor,
+                fontFamily = FontFirst(),
+                fontWeight = FontWeight.Black,
+                fontSize = 14.sp,
+                lineHeight = 16.sp
+            )
             RewardChips(goal)
         }
         when {
-            claimed -> Text("Claimed", color = KitGreen, fontFamily = FontFirst(), fontWeight = FontWeight.Black, fontSize = 12.sp)
+            claimed -> GlyphText("✓ Claimed", color = PaperGood, fontFamily = FontFirst(), fontWeight = FontWeight.Black, fontSize = 12.sp)
             claimable -> KitButton(label = "CLAIM", colors = GreenButton, size = 13.sp, onClick = onClaim)
-            else -> Text(
-                text = "${((goal.threshold * 60 - seconds + 59) / 60)} min\nleft",
-                color = KitMuted,
-                fontFamily = FontFirst(),
-                fontWeight = FontWeight.Bold,
-                fontSize = 11.sp,
-                textAlign = TextAlign.Center
-            )
+            else -> Column(horizontalAlignment = Alignment.End) {
+                GlyphText(
+                    text = "${((goal.threshold * 60 - seconds + 59) / 60)} min",
+                    color = PaperInkColor,
+                    fontFamily = FontFirst(),
+                    fontWeight = FontWeight.Black,
+                    fontSize = 13.sp,
+                    lineHeight = 15.sp
+                )
+                PaperCaption("left")
+            }
         }
     }
 }
@@ -302,7 +376,7 @@ internal fun ReadingGoalPill(todaySeconds: Int, paused: Boolean, ink: Color, mod
         verticalAlignment = Alignment.CenterVertically
     ) {
         GoalRings(seconds = todaySeconds, modifier = Modifier.size(22.dp), stroke = 2.5f, track = ink.copy(alpha = 0.15f))
-        Text(
+        GlyphText(
             text = if (paused) "paused" else todaySeconds.asTimer(),
             color = if (paused) Color(0xFFE0913A) else ink.copy(alpha = 0.7f),
             fontFamily = FontFirst(),
@@ -344,10 +418,10 @@ internal fun GoalReachedBanner(todaySeconds: Int, modifier: Modifier = Modifier)
             horizontalArrangement = Arrangement.spacedBy(10.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Text("🎁", fontSize = 26.sp)
+            GlyphText("🎁", fontSize = 26.sp)
             Column {
                 KitText(text = "${goal.title} unlocked!", size = 15.sp, color = KitGold, strokeWidth = 4f)
-                Text("Claim it in the Library", color = Color.White, fontFamily = FontFirst(), fontWeight = FontWeight.Bold, fontSize = 11.sp)
+                GlyphText("Claim it in the Library", color = Color.White, fontFamily = FontFirst(), fontWeight = FontWeight.Bold, fontSize = 11.sp)
             }
         }
     }

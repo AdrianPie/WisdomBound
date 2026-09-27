@@ -70,18 +70,6 @@ object ArmorsExtra {
         defense = 1f
     )
 
-    val PADDED_CAP = armor(
-        id = "padded_cap",
-        name = "Padded Cap",
-        description = "Stops the first headache of the day.",
-        slot = ItemSlot.Head,
-        rarity = Rarity.Common,
-        iconKey = "cap",
-        cost = 80,
-        hp = 8f,
-        defense = 1f
-    )
-
     val WORN_BUCKLER = armor(
         id = "worn_buckler",
         name = "Worn Buckler",
@@ -95,7 +83,33 @@ object ArmorsExtra {
         effects = listOf(DodgeChanceEffect(percent = 0.05f))
     )
 
+    val LEATHER_BOOTS = armor(
+        id = "leather_boots",
+        name = "Leather Boots",
+        description = "Soft soles, quick feet. Nobody hears you coming.",
+        slot = ItemSlot.Feet,
+        rarity = Rarity.Common,
+        iconKey = "boots",
+        cost = 85,
+        hp = 5f,
+        defense = 1f,
+        effects = listOf(SpeedEffect(amount = 3f))
+    )
+
     /* ------------------------------ Sturdy (Uncommon) ----------------------------- */
+
+    val IRON_GAUNTLETS = armor(
+        id = "iron_gauntlets",
+        name = "Iron Gauntlets",
+        description = "Heavy knuckles. Every block turns into a small punch back.",
+        slot = ItemSlot.Hands,
+        rarity = Rarity.Uncommon,
+        iconKey = "plate_hands",
+        cost = 170,
+        hp = 10f,
+        defense = 2f,
+        effects = listOf(ReflectDamageEffect(percent = 0.1f))
+    )
 
     val CHAIN_HAUBERK = armor(
         id = "chain_hauberk",
@@ -151,33 +165,33 @@ object ArmorsExtra {
         effects = listOf(DamageReductionEffect(percent = 0.1f))
     )
 
-    val SHADOWSTEP_GREAVES = armor(
-        id = "shadowstep_greaves",
-        name = "Shadowstep Greaves",
-        description = "Armour for people who would rather not be hit at all.",
-        slot = ItemSlot.Legs,
+    val BLESSED_SHIELD = armor(
+        id = "blessed_shield",
+        name = "Blessed Shield",
+        description = "A temple blessing in steel. Blows land softer behind it.",
+        slot = ItemSlot.OffHand,
         rarity = Rarity.Rare,
-        iconKey = "greaves",
-        cost = 290,
-        hp = 12f,
-        defense = 2f,
-        effects = listOf(DodgeChanceEffect(percent = 0.15f), SpeedEffect(amount = 3f))
-    )
-
-    val FROSTGUARD_HELM = armor(
-        id = "frostguard_helm",
-        name = "Frostguard Helm",
-        description = "Rimed steel. Whoever swings at you may find their arm frozen mid-air.",
-        slot = ItemSlot.Head,
-        rarity = Rarity.Rare,
-        iconKey = "helm",
-        cost = 305,
-        hp = 22f,
-        defense = 3f,
-        effects = listOf(FrostThornsEffect(chance = 0.18f, turns = 1))
+        iconKey = "shield",
+        cost = 310,
+        hp = 24f,
+        defense = 4f,
+        effects = listOf(DamageReductionEffect(percent = 0.08f))
     )
 
     /* ------------------------------- Master (Epic) -------------------------------- */
+
+    val DARKSTEEL_ARMOR = armor(
+        id = "darksteel_armor",
+        name = "Darksteel Armor",
+        description = "Forged in the dark and sharp at every edge. Hit it and bleed.",
+        slot = ItemSlot.Chest,
+        rarity = Rarity.Epic,
+        iconKey = "plate",
+        cost = 500,
+        hp = 32f,
+        defense = 5f,
+        effects = listOf(ReflectDamageEffect(percent = 0.15f), DamageReductionEffect(percent = 0.08f))
+    )
 
     val BULWARK_OF_DAWN = armor(
         id = "bulwark_of_dawn",
@@ -234,27 +248,11 @@ object ArmorsExtra {
         effects = listOf(DamageReductionEffect(percent = 0.18f), IgnoreFirstHitEffect())
     )
 
-    val CROWN_OF_THE_UNBROKEN = armor(
-        id = "crown_of_the_unbroken",
-        name = "Crown of the Unbroken",
-        description = "Keeps the team clean of poison and fire, and refuses to let you fall quietly.",
-        slot = ItemSlot.Head,
-        rarity = Rarity.Legendary,
-        iconKey = "crown",
-        cost = 700,
-        hp = 30f,
-        defense = 5f,
-        effects = listOf(
-            CleanseAlliesEffect(everyTurns = 3),
-            LastStandEffect(hpFraction = 0.3f, shield = 45f)
-        )
-    )
-
     val all: List<Item> = listOf(
-        LEATHER_JERKIN, PADDED_CAP, WORN_BUCKLER,
-        CHAIN_HAUBERK, SCOUTS_BOOTS, SPIKED_PAULDRONS,
-        WARDENS_PLATE, SHADOWSTEP_GREAVES, FROSTGUARD_HELM,
-        BULWARK_OF_DAWN, REVENANT_MAIL, PHANTOM_TREADS,
-        TITANS_CARAPACE, CROWN_OF_THE_UNBROKEN
+        LEATHER_JERKIN, WORN_BUCKLER, LEATHER_BOOTS,
+        CHAIN_HAUBERK, SCOUTS_BOOTS, SPIKED_PAULDRONS, IRON_GAUNTLETS,
+        WARDENS_PLATE, BLESSED_SHIELD,
+        BULWARK_OF_DAWN, REVENANT_MAIL, PHANTOM_TREADS, DARKSTEEL_ARMOR,
+        TITANS_CARAPACE
     )
 }

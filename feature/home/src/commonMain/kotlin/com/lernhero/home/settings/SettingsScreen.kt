@@ -143,6 +143,14 @@ fun SettingsScreen(
                         }
                     )
                     SettingsRow(
+                        icon = "🔊",
+                        iconTint = Color(0xFF6FD08C),
+                        title = strings.settingsSound,
+                        subtitle = strings.settingsSoundHint,
+                        onClick = { preferences.chooseSound(!preferences.soundEnabled) },
+                        trailing = { SettingsSwitch(checked = preferences.soundEnabled) }
+                    )
+                    SettingsRow(
                         icon = "⚔️",
                         iconTint = Color(0xFFFF8A4C),
                         title = strings.settingsBattleSpeed,

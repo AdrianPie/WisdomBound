@@ -98,7 +98,8 @@ fun BossEventQuizBar(
                 questionId = event.question.id,
                 revealed = event.resolved,
                 label = "QUIZ RESULT",
-                showMultiplier = false
+                showMultiplier = false,
+                dark = false
             )
 
             // Tresc miedzy naglowkiem a przyciskiem - to ona oddaje miejsce, gdy go brakuje.

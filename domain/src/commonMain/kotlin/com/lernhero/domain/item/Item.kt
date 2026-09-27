@@ -14,7 +14,15 @@ enum class ItemSlot {
     MainHand,
     OffHand,
     Ring,
-    Amulet
+    Amulet;
+
+    companion object {
+        /**
+         * Sloty, ktore faktycznie sa w grze. [Head] i [Legs] zostaly WYCOFANE (bez helmow i spodni) -
+         * wartosci zostaja w enumie tylko po to, zeby stare zapisy dalo sie wczytac.
+         */
+        val ACTIVE: List<ItemSlot> = entries - Head - Legs
+    }
 }
 
 /**

@@ -58,16 +58,15 @@ object ItemCatalog {
 /**
  * Przerabia zapis sprzed zmiany formatu (piec flag) na mape slot -> id przedmiotu.
  *
- * Gracz, ktory mial "head = true", dostaje helm plytowy - czyli dokladnie ten przedmiot,
- * ktory wtedy oznaczala ta flaga. Nowe zapisy wchodza tu i wychodza nietkniete.
+ * Gracz, ktory mial "hands = true", dostaje rekawice plytowe - czyli dokladnie ten przedmiot,
+ * ktory wtedy oznaczala ta flaga. Flagi helmu i nog sa pomijane: tych slotow juz nie ma w grze.
+ * Nowe zapisy wchodza tu i wychodza nietkniete.
  */
 fun PlayerEquipment.migrated(): PlayerEquipment {
     if (equipped.isNotEmpty()) return this
 
     val legacy = buildMap {
-        if (head) put(ItemSlot.Head.name, Armors.PLATE_HELM.id)
         if (hands) put(ItemSlot.Hands.name, Armors.PLATE_GAUNTLETS.id)
-        if (legs) put(ItemSlot.Legs.name, Armors.PLATE_LEGS.id)
         if (feet) put(ItemSlot.Feet.name, Armors.PLATE_BOOTS.id)
         if (mainHand) put(ItemSlot.MainHand.name, Weapons.PLATE_SWORD.id)
     }

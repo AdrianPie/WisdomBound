@@ -34,7 +34,7 @@ class CatalogBalanceTest {
     @Test
     fun `kazdy slot bohatera ma z czego wybierac`() {
         // Jeden przedmiot w slocie to nie wybor, tylko obowiazek.
-        ItemSlot.entries.forEach { slot ->
+        ItemSlot.ACTIVE.forEach { slot ->
             val count = hero.count { it.slot == slot }
             assertTrue(count >= 2, "Slot $slot ma tylko $count przedmiotow")
         }

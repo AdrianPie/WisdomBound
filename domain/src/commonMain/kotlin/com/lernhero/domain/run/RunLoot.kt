@@ -57,6 +57,18 @@ object RunLoot {
     fun depthMultiplier(stage: Int): Float =
         1f + (stage - 1).coerceAtLeast(0) * DEPTH_STEP
 
+    /**
+     * To samo dla ZLOTA, tylko trzy razy lagodniej ([GOLD_DEPTH_STEP]). XP i materialy musza
+     * nadazac za wrogami, ale zloto rosnace tak samo szybko robilo z planszy 36 zrodlo tylu monet,
+     * ze nic w grze nie bylo juz drogie - ani skrzynie, ani ulepszenia.
+     */
+    fun goldDepthMultiplier(stage: Int): Float =
+        1f + (stage - 1).coerceAtLeast(0) * GOLD_DEPTH_STEP
+
+    /** Premia drabinki endless dla zlota - polowa premii, ktora dostaja XP i materialy. */
+    fun goldLadderMultiplier(ladderMultiplier: Float): Float =
+        1f + (ladderMultiplier - 1f) * GOLD_LADDER_SHARE
+
     // ---------------------------------------------------------- Materialy
 
     /** Esencja z fali - paliwo Summon Center (kompani i zaklecia). */
@@ -116,6 +128,12 @@ object RunLoot {
 
     /** O tyle hojniejsza jest kazda kolejna plansza kampanii - patrz [depthMultiplier]. */
     private const val DEPTH_STEP = 0.12f
+
+    /** Krok glebokosci dla zlota - patrz [goldDepthMultiplier]. */
+    private const val GOLD_DEPTH_STEP = 0.04f
+
+    /** Jaka czesc premii drabinki endless trafia do zlota - patrz [goldLadderMultiplier]. */
+    private const val GOLD_LADDER_SHARE = 0.5f
 }
 
 data class BossBonus(

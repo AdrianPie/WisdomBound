@@ -1,5 +1,6 @@
 package com.lernhero.home
 
+import com.lernhero.shared.theme.GlyphText
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.LinearEasing
@@ -143,7 +144,7 @@ internal fun AdGoldButton(
                         .clip(RoundedCornerShape(50))
                         .background(Color.White.copy(alpha = if (available) 0.35f else 0.12f))
                 )
-                Text(text = if (busy) "⏳" else "💰", fontSize = 30.sp, modifier = Modifier.offset(y = 2.dp))
+                GlyphText(text = if (busy) "⏳" else "💰", fontSize = 30.sp, modifier = Modifier.offset(y = 2.dp))
                 // Blysk przejezdzajacy po skosie.
                 if (available && shine in 0.001f..0.999f) {
                     Box(
@@ -159,7 +160,7 @@ internal fun AdGoldButton(
             }
 
             // Plakietka AD / korona w lewym gornym rogu.
-            Text(
+            GlyphText(
                 text = if (isPremium) "👑" else "AD",
                 color = Color.White,
                 fontFamily = FontFirst(),
@@ -173,7 +174,7 @@ internal fun AdGoldButton(
                     .padding(horizontal = 5.dp, vertical = 1.dp)
             )
             // Licznik prob na dzis.
-            Text(
+            GlyphText(
                 text = "$remaining/$perDay",
                 color = Color.White,
                 fontFamily = FontFirst(),
@@ -200,8 +201,8 @@ internal fun AdGoldButton(
             horizontalArrangement = Arrangement.spacedBy(3.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            if (available) Text(text = "🪙", fontSize = 10.sp)
-            Text(
+            if (available) GlyphText(text = "🪙", fontSize = 10.sp)
+            GlyphText(
                 text = if (available) "+$reward" else "Tomorrow",
                 color = if (available) Color(0xFFFFD34D) else Color(0xFF9D8B6A),
                 fontFamily = FontFirst(),
@@ -211,7 +212,7 @@ internal fun AdGoldButton(
         }
 
         note?.let {
-            Text(
+            GlyphText(
                 text = it,
                 color = Color(0xFFF4E9D7),
                 fontFamily = FontFirst(),
@@ -243,7 +244,7 @@ private fun CoinBurst(progress: Float, amount: Int) {
                 val spread = (index - (COINS - 1) / 2f) / ((COINS - 1) / 2f)
                 val vx = spread * 55f
                 val vy = -130f - (index % 3) * 18f
-                Text(
+                GlyphText(
                     text = "🪙",
                     fontSize = 15.sp,
                     modifier = Modifier.graphicsLayer {
@@ -256,7 +257,7 @@ private fun CoinBurst(progress: Float, amount: Int) {
             }
         }
         val pop = (progress / 0.25f).coerceIn(0f, 1f)
-        Text(
+        GlyphText(
             text = "+$amount",
             color = Color(0xFFFFE27A),
             fontFamily = FontFirst(),

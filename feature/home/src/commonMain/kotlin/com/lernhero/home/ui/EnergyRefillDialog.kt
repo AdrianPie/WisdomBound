@@ -1,5 +1,6 @@
 package com.lernhero.home.ui
 
+import com.lernhero.shared.theme.GlyphText
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.LinearEasing
@@ -109,7 +110,7 @@ fun EnergyRefillDialog(
         ) {
             Box(modifier = Modifier.fillMaxWidth().padding(top = 12.dp), contentAlignment = Alignment.Center) {
                 OutlinedText(text = if (current.amount < EnergyRules.BATTLE_COST) "Out of Energy!" else "Energy", size = 22.sp, color = Color.White)
-                Text(
+                GlyphText(
                     text = "✕",
                     color = Color.White,
                     fontWeight = FontWeight.Black,
@@ -140,7 +141,7 @@ fun EnergyRefillDialog(
                         .size(110.dp)
                         .background(Brush.radialGradient(listOf(Color(0x99FFE27A), Color.Transparent)), CircleShape)
                 )
-                Text(
+                GlyphText(
                     text = "⚡",
                     fontSize = 70.sp,
                     modifier = Modifier.graphicsLayer {
@@ -168,11 +169,11 @@ fun EnergyRefillDialog(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Column {
-                    Text("You have", color = Color(0xFF8FA3C4), fontFamily = FontFirst(), fontSize = 11.sp)
+                    GlyphText("You have", color = Color(0xFF8FA3C4), fontFamily = FontFirst(), fontSize = 11.sp)
                     OutlinedText(text = "⚡ ${current.amount}/${EnergyRules.MAX}", size = 16.sp, color = Color.White)
                 }
                 Column(horizontalAlignment = Alignment.End) {
-                    Text("Full for free in", color = Color(0xFF8FA3C4), fontFamily = FontFirst(), fontSize = 11.sp)
+                    GlyphText("Full for free in", color = Color(0xFF8FA3C4), fontFamily = FontFirst(), fontSize = 11.sp)
                     OutlinedText(
                         text = EnergyRules.millisToFull(current, now).let { if (it == 0L) "Full" else waitLabel(it) },
                         size = 16.sp,
@@ -181,7 +182,7 @@ fun EnergyRefillDialog(
                 }
             }
 
-            Text(
+            GlyphText(
                 text = "One refill = ${EnergyRefill.AMOUNT / EnergyRules.BATTLE_COST} more battles. Bought energy can go above the bar.",
                 color = Color(0xFFBFD3F0),
                 fontFamily = FontFirst(),
@@ -232,7 +233,7 @@ fun EnergyRefillDialog(
                 )
             }
 
-            Text(
+            GlyphText(
                 text = if (price == null) "Refills reset tomorrow." else "$left of ${EnergyRefill.MAX_PER_DAY} refills left today · you have 💎 $gems",
                 color = Color(0xFF8FA3C4),
                 fontFamily = FontFirst(),

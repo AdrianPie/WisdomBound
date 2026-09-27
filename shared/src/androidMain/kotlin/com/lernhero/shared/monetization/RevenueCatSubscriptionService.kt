@@ -53,7 +53,9 @@ internal class RevenueCatSubscriptionService : SubscriptionService {
                 id = pkg.identifier,
                 title = pkg.product.title,
                 price = pkg.product.price.formatted,
-                period = pkg.product.period?.unit?.name?.lowercase().orEmpty()
+                period = pkg.product.period?.unit?.name?.lowercase().orEmpty(),
+                priceMicros = pkg.product.price.amountMicros,
+                pricePerMonth = pkg.product.pricePerMonth()?.formatted
             )
         }
     } catch (_: PurchasesException) {

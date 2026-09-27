@@ -1,6 +1,10 @@
 package com.lernhero.home.story
 
+import com.lernhero.shared.theme.GlyphText
+import com.lernhero.shared.audio.Sounds
+import com.lernhero.shared.audio.Sfx
 import androidx.compose.animation.core.Animatable
+import com.lernhero.home.ui.ItemIcon
 import androidx.compose.animation.core.EaseInOutSine
 import androidx.compose.animation.core.EaseOutBounce
 import androidx.compose.animation.core.LinearEasing
@@ -120,6 +124,7 @@ fun BossChestOverlay(
     LaunchedEffect(phase) {
         when (phase) {
             ChestPhase.Opening -> {
+                Sounds.play(Sfx.Chest)
                 open.snapTo(0f)
                 open.animateTo(1f, tween(OPEN_MS, easing = LinearEasing))
                 flash.snapTo(1f)
@@ -129,6 +134,7 @@ fun BossChestOverlay(
             ChestPhase.Revealed -> {
                 launch { flash.animateTo(0f, tween(FLASH_MS)) }
                 if (slot.goldAmount > 0 || prize.icon == "💰") {
+                    Sounds.play(Sfx.Coins)
                     launch {
                         fountain.snapTo(0f)
                         fountain.animateTo(1f, tween(FOUNTAIN_MS, easing = LinearEasing))
@@ -174,9 +180,9 @@ fun BossChestOverlay(
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.spacedBy(10.dp)
         ) {
-            Text(text = title, color = Color(0xFFFFD34D), fontFamily = FontPixel(), fontWeight = FontWeight.Bold, fontSize = 18.sp)
+            GlyphText(text = title, color = Color(0xFFFFD34D), fontFamily = FontPixel(), fontWeight = FontWeight.Bold, fontSize = 18.sp)
 
-            Text(
+            GlyphText(
                 text = when (phase) {
                     ChestPhase.Dropping -> " "
                     ChestPhase.Ready -> "Tap the chest to open it"
@@ -269,7 +275,7 @@ fun BossChestOverlay(
                 verticalArrangement = Arrangement.spacedBy(4.dp)
             ) {
             if (phase == ChestPhase.Revealed) {
-                Text(
+                GlyphText(
                     text = prize.name,
                     color = accent,
                     fontFamily = FontPixel(),
@@ -279,9 +285,9 @@ fun BossChestOverlay(
                     modifier = Modifier.graphicsLayer { alpha = reveal.value.coerceIn(0f, 1f) }
                 )
                 if (prize.label != prize.name) {
-                    Text(text = prize.label, color = Color(0xFFCDBB99), fontFamily = FontFirst(), fontSize = 12.sp, textAlign = TextAlign.Center)
+                    GlyphText(text = prize.label, color = Color(0xFFCDBB99), fontFamily = FontFirst(), fontSize = 12.sp, textAlign = TextAlign.Center)
                 }
-                Text(
+                GlyphText(
                     text = "${slot.label} - ${((chanceOf?.invoke(slot) ?: ChestWheel.chanceOf(slot, dungeonLevel)) * 100).roundToInt()}% chance",
                     color = Color(0xFF6E6250),
                     fontFamily = FontFirst(),
@@ -298,7 +304,7 @@ fun BossChestOverlay(
                     horizontalArrangement = Arrangement.spacedBy(6.dp),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    Text(text = "+", color = Color(0xFF9D8B6A), fontFamily = FontPixel(), fontSize = 14.sp)
+                    GlyphText(text = "+", color = Color(0xFF9D8B6A), fontFamily = FontPixel(), fontSize = 14.sp)
                     extras.forEach { (icon, amount) ->
                         Row(
                             modifier = Modifier
@@ -309,8 +315,8 @@ fun BossChestOverlay(
                             horizontalArrangement = Arrangement.spacedBy(3.dp),
                             verticalAlignment = Alignment.CenterVertically
                         ) {
-                            Text(text = icon, fontSize = 12.sp)
-                            Text(
+                            GlyphText(text = icon, fontSize = 12.sp)
+                            GlyphText(
                                 text = amount.toString().reversed().chunked(3).joinToString(",").reversed(),
                                 color = Color(0xFFFFE9A8),
                                 fontFamily = FontFirst(),
@@ -323,7 +329,7 @@ fun BossChestOverlay(
             }
 
             val buttonVisible = phase == ChestPhase.Ready || (phase == ChestPhase.Revealed && reveal.value > 0.6f)
-            Text(
+            GlyphText(
                 text = if (phase == ChestPhase.Revealed) "CLAIM" else "OPEN",
                 color = Color(0xFF1C1408),
                 fontFamily = FontPixel(),
@@ -379,15 +385,17 @@ private fun PrizeBurst(prize: ChestPrize, accent: Color, reveal: Float, twinkle:
                 )
         )
         Sparkles(twinkle = twinkle, color = accent, radius = 78f, count = 8, seed = 11)
-        Text(
-            text = prize.icon,
-            fontSize = 60.sp,
-            modifier = Modifier.graphicsLayer {
-                scaleX = reveal
-                scaleY = reveal
-                rotationZ = (1f - reveal.coerceIn(0f, 1f)) * -30f
-            }
-        )
+        val prizeItem = prize.item
+        val revealLayer = Modifier.graphicsLayer {
+            scaleX = reveal
+            scaleY = reveal
+            rotationZ = (1f - reveal.coerceIn(0f, 1f)) * -30f
+        }
+        if (prizeItem != null) {
+            ItemIcon(item = prizeItem, level = 0, size = 96.dp, modifier = revealLayer)
+        } else {
+            GlyphText(text = prize.icon, fontSize = 60.sp, modifier = revealLayer)
+        }
     }
 }
 
@@ -462,7 +470,7 @@ private fun Sparkles(twinkle: Float, color: Color, radius: Float, count: Int, se
     points.forEach { (angle, distance, phase) ->
         val t = (twinkle + phase) % 1f
         val glow = sin(t * PI.toFloat()).coerceAtLeast(0f)
-        Text(
+        GlyphText(
             text = "✦",
             color = color,
             fontSize = 14.sp,
@@ -493,7 +501,7 @@ private fun CoinFountain(progress: Float) {
         coins.forEach { (vx, vy, delayFraction) ->
             val t = ((progress - delayFraction) / (1f - delayFraction)).coerceIn(0f, 1f)
             if (t <= 0f) return@forEach
-            Text(
+            GlyphText(
                 text = "🪙",
                 fontSize = 16.sp,
                 modifier = Modifier

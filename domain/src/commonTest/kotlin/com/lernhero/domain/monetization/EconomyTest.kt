@@ -70,7 +70,7 @@ class EconomyTest {
 
     @Test
     fun biggerGemPacksGiveMoreGemsPerZloty() {
-        val perZloty = GemPack.entries.map { it.total / it.fallbackPrice.substringBefore(" ").replace(",", ".").toFloat() }
+        val perZloty = GemPack.entries.map { it.total / it.referencePrice.substringBefore(" ").replace(",", ".").toFloat() }
         assertTrue(perZloty.zipWithNext().all { (a, b) -> b > a }, "Gems per zloty should grow: $perZloty")
     }
 
@@ -150,7 +150,7 @@ class EconomyTest {
     fun levelGoldBonusIsSmall() {
         assertEquals(1f, LevelGoldBonus.multiplier(1))
         assertEquals(19, LevelGoldBonus.percent(20))
-        assertEquals(1.5f, LevelGoldBonus.multiplier(200))
+        assertEquals(1.2f, LevelGoldBonus.multiplier(200))
         // Sklep i reklamy rosna z poziomem lagodnie: 50. poziom to mniej niz 3x pierwszego.
         assertTrue(GemValue.progressFactor(50) < 3f)
     }

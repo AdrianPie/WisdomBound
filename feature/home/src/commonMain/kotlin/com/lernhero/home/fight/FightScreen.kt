@@ -1,5 +1,6 @@
 package com.lernhero.home.fight
 
+import com.lernhero.shared.theme.GlyphText
 import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.RepeatMode
 import androidx.compose.animation.core.animateDpAsState
@@ -244,14 +245,6 @@ fun FightScreen(
                 )
             }
 
-            StartButton(
-                label = "START",
-                cost = EnergyRules.BATTLE_COST,
-                enabled = affordable,
-                onClick = onStart,
-                modifier = Modifier.fillMaxWidth(0.82f)
-            )
-
             // Zarezerwowana na STALE wysokosc - to, co w niej stoi, zmienia sie miedzy trybami
             // (kropki kampanii kontra poziom tematu), ale sama wysokosc nie, bo siedzi PRZED
             // przyciskiem START na dnie kolumny: gdyby znikala calkiem, "weight(1f)" nad nia
@@ -260,7 +253,7 @@ fun FightScreen(
             // materialu.
             Box(
                 modifier = Modifier
-                    .padding(top = 10.dp)
+                    .padding(top = 4.dp)
                     .height(FOOTER_HEIGHT),
                 contentAlignment = Alignment.Center
             ) {
@@ -277,7 +270,7 @@ fun FightScreen(
             }
 
             Row(
-                modifier = Modifier.padding(top = 8.dp, bottom = 4.dp),
+                modifier = Modifier.padding(top = 4.dp, bottom = 10.dp),
                 horizontalArrangement = Arrangement.spacedBy(8.dp)
             ) {
                 FightMode.entries.forEach { entry ->
@@ -288,6 +281,16 @@ fun FightScreen(
                     )
                 }
             }
+            // START na samym dole, pod przelacznikiem trybu. Stal nad nim i na nizszych ekranach
+            // (stare telefony z paskiem 3 przyciskow) zaslanial idacego bohatera - teraz caly
+            // srodek ekranu zostaje dla sceny.
+            StartButton(
+                label = "START",
+                cost = EnergyRules.BATTLE_COST,
+                enabled = affordable,
+                onClick = onStart,
+                modifier = Modifier.fillMaxWidth(0.82f)
+            )
         }
     }
 }
@@ -318,7 +321,7 @@ private fun PlacePlate(place: String, stage: String, best: String, onClick: (() 
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(2.dp)
     ) {
-        Text(
+        GlyphText(
             text = stage,
             color = PlateMuted,
             fontFamily = FontFirst(),
@@ -328,7 +331,7 @@ private fun PlacePlate(place: String, stage: String, best: String, onClick: (() 
             maxLines = 1,
             overflow = TextOverflow.Ellipsis
         )
-        Text(
+        GlyphText(
             // Strzalka mowi, ze w tabliczke da sie tapnac - tak samo jak w pigulce materialu.
             text = if (onClick != null) "$place ▾" else place,
             color = Color.White,
@@ -349,7 +352,7 @@ private fun PlacePlate(place: String, stage: String, best: String, onClick: (() 
                 )
             )
         )
-        Text(
+        GlyphText(
             text = best,
             color = PlateAccent,
             fontFamily = FontFirst(),
@@ -415,8 +418,8 @@ private fun CompanionStrip(
                 when {
                     // Klodka + "Lv N": sama liczba nic nie mowila - wygladala jak licznik.
                     !unlocked -> Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                        Text(text = "🔒", fontSize = 15.sp, modifier = Modifier.alpha(0.8f))
-                        Text(
+                        GlyphText(text = "🔒", fontSize = 15.sp, modifier = Modifier.alpha(0.8f))
+                        GlyphText(
                             text = "Lv ${PartySlots.requiredLevel(index)}",
                             color = PlateMuted,
                             fontFamily = FontFirst(),
@@ -425,7 +428,7 @@ private fun CompanionStrip(
                         )
                     }
 
-                    card == null -> Text(
+                    card == null -> GlyphText(
                         text = "+",
                         color = PlateMuted,
                         fontFamily = FontFirst(),
@@ -441,7 +444,7 @@ private fun CompanionStrip(
                             contentDescription = card.name,
                             modifier = Modifier.fillMaxSize().padding(3.dp)
                         )
-                        Text(
+                        GlyphText(
                             text = "${levelOf(card.id)}",
                             color = Color.White,
                             fontFamily = FontFirst(),
@@ -594,7 +597,7 @@ private fun StartButton(
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.spacedBy(1.dp)
             ) {
-                Text(
+                GlyphText(
                     text = label,
                     color = if (enabled) Color(0xFF3A2405) else Color(0xFF6B6250),
                     fontFamily = FontPixel(),
@@ -605,8 +608,8 @@ private fun StartButton(
                     horizontalArrangement = Arrangement.spacedBy(3.dp),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    Text(text = "⚡", fontSize = 13.sp)
-                    Text(
+                    GlyphText(text = "⚡", fontSize = 13.sp)
+                    GlyphText(
                         text = "$cost",
                         color = if (enabled) Color(0xFF3A2405) else Color(0xFF6B6250),
                         fontFamily = FontFirst(),
@@ -665,7 +668,7 @@ private fun RunDots(
             ) {
                 // Bossa znaczy korona, a nie inny kolor - kolor niesie juz "przeszedlem / nie".
                 if (boss) {
-                    Text(text = "\uD83D\uDC51", fontSize = 7.sp)
+                    GlyphText(text = "\uD83D\uDC51", fontSize = 7.sp)
                 }
             }
         }
@@ -688,8 +691,8 @@ private fun TopicLevelBadge(level: Int, modifier: Modifier = Modifier) {
         horizontalArrangement = Arrangement.spacedBy(5.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
-        Text(text = "⭐", fontSize = 11.sp)
-        Text(
+        GlyphText(text = "⭐", fontSize = 11.sp)
+        GlyphText(
             text = "Level $level",
             color = PlateAccent,
             fontFamily = FontFirst(),
@@ -726,8 +729,8 @@ private fun MaterialPill(
         horizontalArrangement = Arrangement.spacedBy(6.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
-        Text(text = icon, fontSize = 12.sp)
-        Text(
+        GlyphText(text = icon, fontSize = 12.sp)
+        GlyphText(
             text = label,
             color = PlateAccent,
             fontFamily = FontFirst(),
@@ -738,7 +741,7 @@ private fun MaterialPill(
             modifier = Modifier.widthIn(max = 180.dp)
         )
         // Strzalka w dol, a nie olowek: lista otwiera sie POD pigulka i tak sie ja czyta.
-        Text(text = "▾", color = PlateMuted, fontFamily = FontFirst(), fontSize = 12.sp)
+        GlyphText(text = "▾", color = PlateMuted, fontFamily = FontFirst(), fontSize = 12.sp)
     }
 }
 
@@ -757,7 +760,7 @@ private fun ModeChip(mode: FightMode, selected: Boolean, onClick: () -> Unit) {
             .clickable(onClick = onClick)
             .padding(horizontal = 18.dp, vertical = 7.dp)
     ) {
-        Text(
+        GlyphText(
             text = mode.label,
             color = if (selected) Color(0xFF2A1C06) else Color(0xFFB9A98A),
             fontFamily = FontFirst(),
@@ -791,9 +794,9 @@ private fun SideButton(
                 .clickable(enabled = enabled, onClick = onClick),
             contentAlignment = Alignment.Center
         ) {
-            Text(text = icon, fontSize = 20.sp)
+            GlyphText(text = icon, fontSize = 20.sp)
         }
-        Text(
+        GlyphText(
             text = label,
             color = PlateMuted,
             fontFamily = FontFirst(),

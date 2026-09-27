@@ -1,6 +1,10 @@
 package com.lernhero.home.shop
 
+import com.lernhero.shared.theme.GlyphText
+import com.lernhero.shared.audio.Sounds
+import com.lernhero.shared.audio.Sfx
 import androidx.compose.foundation.background
+import com.lernhero.home.ui.ItemArtImage
 import kotlinx.coroutines.launch
 import androidx.compose.animation.core.spring
 import androidx.compose.animation.core.Animatable
@@ -166,7 +170,7 @@ fun ShopScreen(viewModel: PlayerViewModel) {
                         )
                         if (!state.legendPackClaimed) {
                             LegendPackCard(
-                                price = state.legendPackPrice ?: LegendPack.FALLBACK_PRICE,
+                                price = state.legendPackPrice ?: com.lernhero.shared.monetization.StorePriceCache.PENDING,
                                 busy = state.buyingLegendPack,
                                 onBuy = { viewModel.buyLegendPack { legendCelebration = true } }
                             )
@@ -194,9 +198,9 @@ fun ShopScreen(viewModel: PlayerViewModel) {
                             }
                         }
                         state.message?.let {
-                            Text(text = it, color = Muted, fontFamily = FontFirst(), fontSize = 12.sp, modifier = Modifier.fillMaxWidth(), textAlign = TextAlign.Center)
+                            GlyphText(text = it, color = Muted, fontFamily = FontFirst(), fontSize = 12.sp, modifier = Modifier.fillMaxWidth(), textAlign = TextAlign.Center)
                         }
-                        Text(
+                        GlyphText(
                             text = "Chest contents grow with your hero level.",
                             color = Muted,
                             fontFamily = FontFirst(),
@@ -250,9 +254,9 @@ fun ShopScreen(viewModel: PlayerViewModel) {
                             )
                         }
                         state.message?.let {
-                            Text(text = it, color = Muted, fontFamily = FontFirst(), fontSize = 12.sp, modifier = Modifier.fillMaxWidth(), textAlign = TextAlign.Center)
+                            GlyphText(text = it, color = Muted, fontFamily = FontFirst(), fontSize = 12.sp, modifier = Modifier.fillMaxWidth(), textAlign = TextAlign.Center)
                         }
-                        Text(
+                        GlyphText(
                             text = "Gold and material amounts grow with your hero level.",
                             color = Muted,
                             fontFamily = FontFirst(),
@@ -269,7 +273,7 @@ fun ShopScreen(viewModel: PlayerViewModel) {
                                     GemPackCard(
                                         pack = pack,
                                         firstBuy = pack.productId !in state.gemPacksBought,
-                                        price = state.gemPackPrices[pack.productId] ?: pack.fallbackPrice,
+                                        price = state.gemPackPrices[pack.productId] ?: com.lernhero.shared.monetization.StorePriceCache.PENDING,
                                         busy = state.buyingGemPack == pack.productId,
                                         onBuy = { viewModel.buyGemPack(pack) { reward = RewardBurst("💎", it) } },
                                         modifier = Modifier.weight(1f)
@@ -278,9 +282,9 @@ fun ShopScreen(viewModel: PlayerViewModel) {
                             }
                         }
                         state.message?.let {
-                            Text(text = it, color = Muted, fontFamily = FontFirst(), fontSize = 12.sp, modifier = Modifier.fillMaxWidth(), textAlign = TextAlign.Center)
+                            GlyphText(text = it, color = Muted, fontFamily = FontFirst(), fontSize = 12.sp, modifier = Modifier.fillMaxWidth(), textAlign = TextAlign.Center)
                         }
-                        Text(
+                        GlyphText(
                             text = "Your first purchase of every pack gives DOUBLE gems.",
                             color = GoldText,
                             fontFamily = FontFirst(),
@@ -447,7 +451,7 @@ private fun DailyChestCard(
                     .fillMaxWidth(0.82f)
                     .graphicsLayer { translationY = -bob * 4f * density }
             )
-            Text(
+            GlyphText(
                 text = "FREE",
                 color = Color.White,
                 fontFamily = FontFirst(),
@@ -467,7 +471,7 @@ private fun DailyChestCard(
             guaranteed.entries().chunked(2).forEach { row ->
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                     row.forEach { (icon, amount) ->
-                        Text(
+                        GlyphText(
                             text = "$icon ${amount.grouped()}",
                             color = Color.White,
                             fontFamily = FontFirst(),
@@ -477,7 +481,7 @@ private fun DailyChestCard(
                     }
                 }
             }
-            Text(
+            GlyphText(
                 text = chest.pitch(),
                 color = Color(0xFFFFE27A),
                 fontFamily = FontFirst(),
@@ -561,7 +565,7 @@ private fun ChestCard(
                         .graphicsLayer { translationY = -bob * 6f * density }
                 )
                 // Mnoznik wartosci - to jest odpowiedz na "czy to sie oplaca", zanim ktos zapyta.
-                Text(
+                GlyphText(
                     text = chest.valueLabel(level),
                     color = Color.White,
                     fontFamily = FontFirst(),
@@ -577,7 +581,7 @@ private fun ChestCard(
                 )
                 if (chest == ShopChest.Epic) {
                     val left = ShopChest.opensToLegendary(pity)
-                    Text(
+                    GlyphText(
                         text = if (left == 1) "✨ NEXT = LEGENDARY" else "✨ Legendary in ≤$left",
                         color = Color(0xFFFFE27A),
                         fontFamily = FontFirst(),
@@ -593,7 +597,7 @@ private fun ChestCard(
                     )
                 }
             }
-            Text(
+            GlyphText(
                 text = if (showOdds) "✕" else "i",
                 color = Color.White,
                 fontWeight = FontWeight.Black,
@@ -618,11 +622,11 @@ private fun ChestCard(
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.spacedBy(3.dp)
         ) {
-            Text("ALWAYS INSIDE", color = Color(0xFFBFE3FF), fontFamily = FontFirst(), fontWeight = FontWeight.Black, fontSize = 9.sp)
+            GlyphText("ALWAYS INSIDE", color = Color(0xFFBFE3FF), fontFamily = FontFirst(), fontWeight = FontWeight.Black, fontSize = 9.sp)
             guaranteed.entries().chunked(2).forEach { row ->
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                     row.forEach { (icon, amount) ->
-                        Text(
+                        GlyphText(
                             text = "$icon ${amount.grouped()}",
                             color = Color.White,
                             fontFamily = FontFirst(),
@@ -632,7 +636,7 @@ private fun ChestCard(
                     }
                 }
             }
-            Text(
+            GlyphText(
                 text = chest.pitch(),
                 color = Color(0xFFFFE27A),
                 fontFamily = FontFirst(),
@@ -658,11 +662,11 @@ private fun ChestCard(
 @Composable
 private fun OddsTable(chest: ShopChest) {
     Column(modifier = Modifier.padding(10.dp), verticalArrangement = Arrangement.spacedBy(2.dp)) {
-        Text("PRIZE ODDS", color = Color(0xFF1A1208), fontFamily = FontFirst(), fontWeight = FontWeight.Black, fontSize = 10.sp)
+        GlyphText("PRIZE ODDS", color = Color(0xFF1A1208), fontFamily = FontFirst(), fontWeight = FontWeight.Black, fontSize = 10.sp)
         chest.slots.forEach { slot ->
             Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-                Text("${slot.emoji} ${slot.shortLabel}", color = Color(0xFF1A1208), fontFamily = FontFirst(), fontSize = 10.sp)
-                Text(
+                GlyphText("${slot.emoji} ${slot.shortLabel}", color = Color(0xFF1A1208), fontFamily = FontFirst(), fontSize = 10.sp)
+                GlyphText(
                     text = formatChance(chest.chanceOf(slot)),
                     color = Color(0xFF1A1208),
                     fontFamily = FontFirst(),
@@ -672,7 +676,7 @@ private fun OddsTable(chest: ShopChest) {
             }
         }
         if (chest == ShopChest.Epic) {
-            Text(
+            GlyphText(
                 "Legendary guaranteed at least every ${ShopChest.EPIC_PITY} Epic Chests.",
                 color = Color(0xFF6A2DA6),
                 fontFamily = FontFirst(),
@@ -739,7 +743,7 @@ private fun AdConfirmDialog(chest: ShopChest, onCancel: () -> Unit, onWatch: () 
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.spacedBy(10.dp)
             ) {
-                Text("Watch an ad to open the ${chest.title}", color = Color(0xFF6B4A2A), fontFamily = FontFirst(), fontWeight = FontWeight.Bold, fontSize = 14.sp, textAlign = TextAlign.Center)
+                GlyphText("Watch an ad to open the ${chest.title}", color = Color(0xFF6B4A2A), fontFamily = FontFirst(), fontWeight = FontWeight.Bold, fontSize = 14.sp, textAlign = TextAlign.Center)
                 Image(painter = painterResource(chest.image()), contentDescription = null, modifier = Modifier.width(140.dp))
             }
             Row(modifier = Modifier.fillMaxWidth().padding(14.dp), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
@@ -779,8 +783,8 @@ private fun CurrencyPill(icon: String, value: String, color: Color) {
         horizontalArrangement = Arrangement.spacedBy(4.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
-        Text(text = icon, fontSize = 14.sp)
-        Text(text = value, color = color, fontFamily = FontFirst(), fontWeight = FontWeight.Bold, fontSize = 14.sp)
+        GlyphText(text = icon, fontSize = 14.sp)
+        GlyphText(text = value, color = color, fontFamily = FontFirst(), fontWeight = FontWeight.Bold, fontSize = 14.sp)
     }
 }
 
@@ -813,7 +817,7 @@ private fun LegendPackCard(price: String, busy: Boolean, onBuy: () -> Unit) {
                 horizontalArrangement = Arrangement.spacedBy(8.dp)
             ) {
                 OutlinedLabel("Legend Pack", 24.sp, Color(0xFFFFE27A))
-                Text(
+                GlyphText(
                     text = "ONE TIME",
                     color = Color.White,
                     fontFamily = FontFirst(),
@@ -864,10 +868,10 @@ private fun LegendPackCard(price: String, busy: Boolean, onBuy: () -> Unit) {
                     verticalArrangement = Arrangement.spacedBy(6.dp)
                 ) {
                     Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-                        items.take(3).forEach { RewardTile(it.icon(), null, Color(0xFFFFB02E), Modifier.weight(1f)) }
+                        items.take(3).forEach { RewardTile(it.icon(), null, Color(0xFFFFB02E), Modifier.weight(1f), item = it) }
                     }
                     Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-                        items.drop(3).forEach { RewardTile(it.icon(), null, Color(0xFFFFB02E), Modifier.weight(1f)) }
+                        items.drop(3).forEach { RewardTile(it.icon(), null, Color(0xFFFFB02E), Modifier.weight(1f), item = it) }
                         RewardTile("💎", "${LegendPack.GEMS}", GemBlue, Modifier.weight(1f))
                         RewardTile("🎟", "x${LegendPack.TICKETS}", Color(0xFF8BE05A), Modifier.weight(1f))
                     }
@@ -878,7 +882,7 @@ private fun LegendPackCard(price: String, busy: Boolean, onBuy: () -> Unit) {
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(10.dp)
             ) {
-                Text(
+                GlyphText(
                     text = "4 Legendary items, ${LegendPack.GEMS} gems and ${LegendPack.TICKETS} summon tickets.",
                     color = Color(0xFFFFE9C9),
                     fontFamily = FontFirst(),
@@ -914,7 +918,13 @@ private fun LegendPackCard(price: String, busy: Boolean, onBuy: () -> Unit) {
 }
 
 @Composable
-private fun RewardTile(icon: String, label: String?, rim: Color, modifier: Modifier = Modifier) {
+private fun RewardTile(
+    icon: String,
+    label: String?,
+    rim: Color,
+    modifier: Modifier = Modifier,
+    item: com.lernhero.domain.item.Item? = null
+) {
     Box(
         modifier = modifier
             .aspectRatio(1f)
@@ -923,7 +933,11 @@ private fun RewardTile(icon: String, label: String?, rim: Color, modifier: Modif
             .border(2.dp, rim, RoundedCornerShape(10.dp)),
         contentAlignment = Alignment.Center
     ) {
-        Text(text = icon, fontSize = 22.sp)
+        if (item != null) {
+            ItemArtImage(item = item, size = 34.dp)
+        } else {
+            GlyphText(text = icon, fontSize = 22.sp)
+        }
         if (label != null) {
             OutlinedLabel(label, 10.sp, Color.White, modifier = Modifier.align(Alignment.BottomCenter).padding(bottom = 1.dp))
         }
@@ -991,13 +1005,13 @@ private fun LegendPackCelebration(onDone: () -> Unit) {
             OutlinedLabel("LEGEND PACK", 30.sp, Color(0xFFFFE27A))
             OutlinedLabel("UNLOCKED!", 22.sp, Color.White)
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.padding(horizontal = 24.dp)) {
-                items.forEach { RewardTile(it.icon(), null, Color(0xFFFFB02E), Modifier.weight(1f)) }
+                items.forEach { RewardTile(it.icon(), null, Color(0xFFFFB02E), Modifier.weight(1f), item = it) }
             }
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.padding(horizontal = 80.dp)) {
                 RewardTile("💎", "${LegendPack.GEMS}", GemBlue, Modifier.weight(1f))
                 RewardTile("🎟", "x${LegendPack.TICKETS}", Color(0xFF8BE05A), Modifier.weight(1f))
             }
-            Text("Tap to continue", color = Muted, fontFamily = FontFirst(), fontSize = 12.sp)
+            GlyphText("Tap to continue", color = Muted, fontFamily = FontFirst(), fontSize = 12.sp)
         }
     }
 }
@@ -1063,7 +1077,7 @@ private fun GemPackCard(pack: GemPack, firstBuy: Boolean, price: String, busy: B
                 )
                 GemPile(tier = tier, modifier = Modifier.graphicsLayer { translationY = -bob * 4f * density })
             }
-            Text(
+            GlyphText(
                 text = pack.title.uppercase(),
                 color = Color(0xFFBFD3F0),
                 fontFamily = FontFirst(),
@@ -1074,7 +1088,7 @@ private fun GemPackCard(pack: GemPack, firstBuy: Boolean, price: String, busy: B
             Box(modifier = Modifier.height(26.dp), contentAlignment = Alignment.Center) {
             if (firstBuy) {
                 // Pierwszy zakup x2 - najmocniejszy argument w calym sklepie, wiec wypiera zwykly bonus.
-                Text(
+                GlyphText(
                     text = "x2 FIRST BUY",
                     color = Color.White,
                     fontFamily = FontFirst(),
@@ -1088,7 +1102,7 @@ private fun GemPackCard(pack: GemPack, firstBuy: Boolean, price: String, busy: B
                         .padding(horizontal = 8.dp, vertical = 2.dp)
                 )
             } else if (pack.bonus > 0) {
-                Text(
+                GlyphText(
                     text = "+${pack.bonusPercent}% BONUS",
                     color = Color.White,
                     fontFamily = FontFirst(),
@@ -1128,7 +1142,7 @@ private fun GemPackCard(pack: GemPack, firstBuy: Boolean, price: String, busy: B
             }
         }
         pack.tag?.let { tag ->
-            Text(
+            GlyphText(
                 text = tag,
                 color = Color.White,
                 fontFamily = FontFirst(),
@@ -1167,7 +1181,7 @@ private fun GemPile(tier: Int, modifier: Modifier = Modifier) {
     )[tier.coerceIn(0, 5)]
     Box(modifier = modifier.size(100.dp), contentAlignment = Alignment.Center) {
         layout.forEachIndexed { i, (x, y, size) ->
-            Text(
+            GlyphText(
                 text = "💎",
                 fontSize = size.sp,
                 modifier = Modifier.offset(x = x.dp, y = y.dp).rotate(if (i % 2 == 0) -8f else 10f)
@@ -1198,13 +1212,13 @@ private fun TicketPackCard(pack: TicketPack, affordable: Boolean, onBuy: () -> U
             contentAlignment = Alignment.Center
         ) {
             repeat((pack.ordinal + 1).coerceAtMost(3)) { i ->
-                Text(text = "🎟", fontSize = 26.sp, modifier = Modifier.offset(x = (i * 6 - 6).dp, y = (-i * 4 + 4).dp).rotate(-10f + i * 10f))
+                GlyphText(text = "🎟", fontSize = 26.sp, modifier = Modifier.offset(x = (i * 6 - 6).dp, y = (-i * 4 + 4).dp).rotate(-10f + i * 10f))
             }
         }
         Column(modifier = Modifier.weight(1f)) {
             OutlinedLabel(pack.title, 16.sp, Color(0xFFFFE27A))
-            Text("${pack.tickets} summon tickets", color = Color.White, fontFamily = FontFirst(), fontWeight = FontWeight.Bold, fontSize = 12.sp)
-            pack.note?.let { Text(it, color = Color(0xFF8BE05A), fontFamily = FontFirst(), fontWeight = FontWeight.Black, fontSize = 11.sp) }
+            GlyphText("${pack.tickets} summon tickets", color = Color.White, fontFamily = FontFirst(), fontWeight = FontWeight.Bold, fontSize = 12.sp)
+            pack.note?.let { GlyphText(it, color = Color(0xFF8BE05A), fontFamily = FontFirst(), fontWeight = FontWeight.Black, fontSize = 11.sp) }
         }
         ChunkyButton(
             top = "💎",
@@ -1225,6 +1239,7 @@ private fun RewardBurstOverlay(burst: RewardBurst, onDone: () -> Unit) {
     val pop = remember { Animatable(0f) }
     val count = remember { Animatable(0f) }
     LaunchedEffect(burst) {
+        Sounds.play(Sfx.Coins)
         launch { pop.animateTo(1f, spring(dampingRatio = 0.45f, stiffness = 220f)) }
         count.animateTo(1f, tween(1100, easing = FastOutSlowInEasing))
     }
@@ -1252,7 +1267,7 @@ private fun RewardBurstOverlay(burst: RewardBurst, onDone: () -> Unit) {
         // Fontanna: klejnoty rozlatuja sie po lukach z grawitacja.
         repeat(16) { i ->
             val angle = (i / 16f) * 2f * kotlin.math.PI.toFloat()
-            Text(
+            GlyphText(
                 text = burst.icon,
                 fontSize = 22.sp,
                 modifier = Modifier.graphicsLayer {
@@ -1268,9 +1283,9 @@ private fun RewardBurstOverlay(burst: RewardBurst, onDone: () -> Unit) {
             horizontalAlignment = Alignment.CenterHorizontally,
             modifier = Modifier.graphicsLayer { scaleX = pop.value; scaleY = pop.value }
         ) {
-            Text(text = burst.icon, fontSize = 88.sp)
+            GlyphText(text = burst.icon, fontSize = 88.sp)
             OutlinedLabel("+${(burst.amount * count.value).toInt().grouped()}", 40.sp, Color(0xFFFFE27A))
-            Text("Tap to continue", color = Muted, fontFamily = FontFirst(), fontSize = 12.sp, modifier = Modifier.padding(top = 10.dp))
+            GlyphText("Tap to continue", color = Muted, fontFamily = FontFirst(), fontSize = 12.sp, modifier = Modifier.padding(top = 10.dp))
         }
     }
 }
@@ -1282,7 +1297,8 @@ private fun ChestOpening.displayPrize(): ChestPrize {
             icon = item.icon(),
             name = item.name,
             label = "${item.name} (${item.rarity.name})" + if (pityTriggered) " - guaranteed!" else "",
-            grant = { _, _ -> }
+            grant = { _, _ -> },
+            item = item
         )
     }
     val tickets = total.tickets - guaranteed.tickets
@@ -1327,12 +1343,12 @@ private fun PremiumDailyCard(isPremium: Boolean, claimedToday: Boolean, onClaim:
                     .alpha(if (ready) 0.5f + 0.4f * pulse else 0.35f)
                     .background(Brush.radialGradient(listOf(Color(0xFFBFE3FF), Color.Transparent)), CircleShape)
             )
-            Text(text = "💎", fontSize = 30.sp)
-            Text(text = "👑", fontSize = 16.sp, modifier = Modifier.align(Alignment.TopEnd))
+            GlyphText(text = "💎", fontSize = 30.sp)
+            GlyphText(text = "👑", fontSize = 16.sp, modifier = Modifier.align(Alignment.TopEnd))
         }
         Column(modifier = Modifier.weight(1f)) {
             OutlinedLabel("${PremiumLimits.DAILY_GEMS} gems every day", 15.sp, Color.White)
-            Text(
+            GlyphText(
                 text = when {
                     !isPremium -> "With Premium: ${PremiumLimits.DAILY_GEMS * 30} gems a month"
                     claimedToday -> "Claimed today - come back tomorrow"
@@ -1400,18 +1416,18 @@ private fun EnergyDealCard(refillsToday: Int, gems: Int, onBuy: () -> Unit) {
                 .border(2.dp, Color(0xFFFFE27A), RoundedCornerShape(12.dp)),
             contentAlignment = Alignment.Center
         ) {
-            Text(text = "⚡", fontSize = 34.sp)
+            GlyphText(text = "⚡", fontSize = 34.sp)
         }
         Column(modifier = Modifier.weight(1f)) {
             OutlinedLabel("Energy Refill +${EnergyRefill.AMOUNT}", 16.sp, Color(0xFFFFE27A))
-            Text(
+            GlyphText(
                 "${EnergyRefill.AMOUNT / com.lernhero.domain.energy.EnergyRules.BATTLE_COST} more battles right now",
                 color = Color.White,
                 fontFamily = FontFirst(),
                 fontWeight = FontWeight.Bold,
                 fontSize = 12.sp
             )
-            Text(
+            GlyphText(
                 text = if (price == null) "Daily limit reached" else "${EnergyRefill.MAX_PER_DAY - refillsToday}/${EnergyRefill.MAX_PER_DAY} left today · price rises",
                 color = Color(0xFF8FA3C4),
                 fontFamily = FontFirst(),
@@ -1455,9 +1471,9 @@ private fun SupplyCard(deal: SupplyDeal, bundle: Bundle, affordable: Boolean, on
                     .background(Brush.radialGradient(listOf(Color(0x66FFFFFF), Color.Transparent)), CircleShape),
                 contentAlignment = Alignment.Center
             ) {
-                Text(text = deal.icon, fontSize = 32.sp)
+                GlyphText(text = deal.icon, fontSize = 32.sp)
             }
-            Text(
+            GlyphText(
                 text = deal.title.uppercase(),
                 color = Color(0xFFF4E9D7),
                 fontFamily = FontFirst(),
@@ -1476,7 +1492,7 @@ private fun SupplyCard(deal: SupplyDeal, bundle: Bundle, affordable: Boolean, on
             )
         }
         if (deal.bonusPercent > 0) {
-            Text(
+            GlyphText(
                 text = "+${deal.bonusPercent}%",
                 color = Color.White,
                 fontFamily = FontFirst(),

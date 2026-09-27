@@ -398,6 +398,8 @@ private fun OutlinedText(text: String, color: Color, size: TextUnit, modifier: M
             fontWeight = FontWeight.Bold,
             fontSize = size,
             style = TextStyle(
+                // Jawne Fill - patrz StrokedText: bez niego stary Android rysuje napis konturem.
+                drawStyle = androidx.compose.ui.graphics.drawscope.Fill,
                 brush = Brush.verticalGradient(listOf(Color.White, color, color)),
                 shadow = Shadow(color.copy(alpha = 0.8f), blurRadius = 18f)
             )
