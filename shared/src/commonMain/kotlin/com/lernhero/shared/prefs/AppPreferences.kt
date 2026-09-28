@@ -87,6 +87,25 @@ class AppPreferences(private val settings: Settings = Settings()) {
         settings[KEY_DAILY_HOUR] = dailyGoalHour
     }
 
+    /**
+     * Czy przy wejsciu do gry pokazac krotki samouczek. Ustawiany TYLKO przy stworzeniu postaci
+     * (i przyciskiem "Jak grac" w Ustawieniach) - nie z poziomu gracza, bo ten wczytuje sie z bazy
+     * z opoznieniem i doswiadczony gracz mignalby przez chwile samouczkiem. Obecni gracze po
+     * aktualizacji go wiec nie zobacza, a nowi - dokladnie raz.
+     */
+    var introPending: Boolean by mutableStateOf(settings[KEY_INTRO_PENDING, false])
+        private set
+
+    fun requestIntro() {
+        introPending = true
+        settings[KEY_INTRO_PENDING] = true
+    }
+
+    fun finishIntro() {
+        introPending = false
+        settings[KEY_INTRO_PENDING] = false
+    }
+
     fun chooseBattleSpeed(multiplier: Float) {
         battleSpeed = multiplier
         settings[KEY_BATTLE_SPEED] = multiplier
@@ -118,6 +137,7 @@ class AppPreferences(private val settings: Settings = Settings()) {
         private const val KEY_DAILY_HOUR = "prefs_daily_goal_hour"
         private const val KEY_BATTLE_SPEED = "prefs_battle_speed"
         private const val KEY_SOUND = "prefs_sound_enabled"
+        private const val KEY_INTRO_PENDING = "prefs_intro_pending"
         private const val SEPARATOR = ','
     }
 }

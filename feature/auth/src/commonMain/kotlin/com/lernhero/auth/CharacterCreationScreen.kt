@@ -64,7 +64,9 @@ import com.lernhero.game.character.ModularKnight
 import com.lernhero.shared.i18n.strings
 import com.lernhero.shared.theme.AppPalette
 import com.lernhero.shared.theme.FontFirst
+import org.koin.compose.koinInject
 import org.koin.compose.viewmodel.koinViewModel
+import com.lernhero.shared.prefs.AppPreferences
 
 /**
  * Tworzenie postaci: JEDEN duzy bohater na scenie i jedna karta z wyborami pod nim. Zadnych
@@ -84,6 +86,7 @@ fun CharacterCreationScreen(
     onDevPreviewExit: () -> Unit = {}
 ) {
     val viewModel = koinViewModel<AuthViewModel>()
+    val preferences = koinInject<AppPreferences>()
     val t = strings
 
     var name by remember { mutableStateOf("") }
@@ -117,6 +120,8 @@ fun CharacterCreationScreen(
             starterGift = gift,
             onSuccess = {
                 isSaving = false
+                // Nowa postac = nowy gracz: na wejsciu do gry czeka na niego krotki samouczek.
+                preferences.requestIntro()
                 navigateToHome()
             },
             onFailure = { error ->

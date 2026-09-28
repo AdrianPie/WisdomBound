@@ -58,6 +58,8 @@ import com.lernhero.home.quiz.DeckEditorScreen
 import com.lernhero.home.settings.SettingsScreen
 import com.lernhero.home.progress.ProgressScreen
 import com.lernhero.home.quiz.QuizStudioScreen
+import com.lernhero.home.ui.IntroTutorial
+import com.lernhero.shared.prefs.AppPreferences
 import com.lernhero.reader.ReaderChrome
 import com.lernhero.reader.VocabularyScreen
 import com.lernhero.home.shop.ShopScreen
@@ -195,6 +197,7 @@ fun HomeNavGraph(
         derivedStateOf { currentRoute.value.isOnRoute<Screen.Home>() }
     }
     val runSession = koinInject<RunSession>()
+    val preferences = koinInject<AppPreferences>()
     // Ta sama instancja, ktora czyta [CampaignBoard] - "gdzie na mapie stoje" ma byc JEDNYM
     // stanem, dzielonym miedzy kropkami na scenie i plansza, ktora otworzy sie po START.
     val selection = koinInject<CampaignSelection>()
@@ -795,6 +798,12 @@ fun HomeNavGraph(
                 navController.navigate(Screen.Shop) { launchSingleTop = true }
             }
         )
+
+        // Samouczek na samym wierzchu - nad paskami i oknami. Wlacza go stworzenie postaci albo
+        // "Jak grac" w Ustawieniach (patrz [AppPreferences.introPending]).
+        if (preferences.introPending) {
+            IntroTutorial(onDone = preferences::finishIntro)
+        }
     }
 }
 

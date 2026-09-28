@@ -188,6 +188,18 @@ fun SettingsScreen(
                         )
                     }
                     SettingsRow(
+                        icon = "📖",
+                        iconTint = Color(0xFFFFD34D),
+                        title = strings.settingsHowToPlay,
+                        subtitle = strings.settingsHowToPlayHint,
+                        onClick = {
+                            // Samouczek rysuje sie nad cala gra (HomeNavGraph) - wracamy na ekran,
+                            // z ktorego przyszedl gracz, i tam go zobaczy.
+                            preferences.requestIntro()
+                            onBack()
+                        }
+                    )
+                    SettingsRow(
                         icon = "↺",
                         iconTint = Color(0xFFB38CFF),
                         title = strings.settingsReset,

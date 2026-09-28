@@ -160,7 +160,21 @@ interface AppStrings {
     val creationRandomName: String
     val creationTapHero: String
     val creationNamePlaceholder: String
+
+    /* ---- intro tutorial (raz, po stworzeniu postaci; potem z Ustawien) ---- */
+    val introSkip: String
+    val introNext: String
+    val introStart: String
+    val introPages: List<IntroPage>
+    val settingsHowToPlay: String
+    val settingsHowToPlayHint: String
 }
+
+/**
+ * Jedna karta samouczka. [icon] to emoji - emoji walut (⚡, 💎) rysuja sie w tresci jako
+ * obrazki gry, patrz CurrencyGlyph.
+ */
+data class IntroPage(val icon: String, val title: String, val body: String)
 
 /** English - the default and the language the app ships with. */
 object EnStrings : AppStrings {
@@ -312,6 +326,36 @@ object EnStrings : AppStrings {
     override val creationRandomName = "Random"
     override val creationTapHero = "Tap the hero to swing"
     override val creationNamePlaceholder = "Nameless"
+    override val introSkip = "Skip"
+    override val introNext = "Next"
+    override val introStart = "Let's go!"
+    override val introPages = listOf(
+        IntroPage(
+            icon = "🧙",
+            title = "Welcome, hero!",
+            body = "Here you get stronger by learning. Every battle is a quiz - answer right and fast to hit hard."
+        ),
+        IntroPage(
+            icon = "⚔️",
+            title = "Fight",
+            body = "In the Fight tab, Campaign takes you land by land and Endless sends wave after wave. " +
+                "Each battle costs ⚡ energy, which refills on its own."
+        ),
+        IntroPage(
+            icon = "🐉",
+            title = "Grow your party",
+            body = "Summon monsters to fight at your side, upgrade your gear and unlock talents. " +
+                "Gold and 💎 gems come from battles, chests and daily goals."
+        ),
+        IntroPage(
+            icon = "📚",
+            title = "Learn what you want",
+            body = "In Quizzes, write your own questions or let AI make them - then battle with them. " +
+                "In Growth, read books and train to earn extra rewards."
+        )
+    )
+    override val settingsHowToPlay = "How to play"
+    override val settingsHowToPlayHint = "Replay the short intro"
 }
 
 /** Polish - the original dev language, kept as a full alternative. */
@@ -464,6 +508,36 @@ object PlStrings : AppStrings {
     override val creationRandomName = "Losuj"
     override val creationTapHero = "Tapnij bohatera, zeby machnal mieczem"
     override val creationNamePlaceholder = "Bezimienny"
+    override val introSkip = "Pomin"
+    override val introNext = "Dalej"
+    override val introStart = "Zaczynamy!"
+    override val introPages = listOf(
+        IntroPage(
+            icon = "🧙",
+            title = "Witaj, bohaterze!",
+            body = "Tutaj stajesz sie silniejszy, uczac sie. Kazda walka to quiz - odpowiadaj dobrze i szybko, a zadasz mocne ciosy."
+        ),
+        IntroPage(
+            icon = "⚔️",
+            title = "Walka",
+            body = "W zakladce Walcz kampania prowadzi cie kraina po krainie, a Endless rzuca fala za fala. " +
+                "Kazda walka kosztuje ⚡ energie, ktora odnawia sie sama."
+        ),
+        IntroPage(
+            icon = "🐉",
+            title = "Rozwijaj druzyne",
+            body = "Przyzywaj potwory, ktore walcza u twojego boku, ulepszaj ekwipunek i odblokowuj talenty. " +
+                "Zloto i 💎 klejnoty zdobywasz w walkach, skrzyniach i celach dziennych."
+        ),
+        IntroPage(
+            icon = "📚",
+            title = "Ucz sie tego, czego chcesz",
+            body = "W Quizach napiszesz wlasne pytania albo wygenerujesz je przez AI - i walczysz nimi. " +
+                "W zakladce Rozwoj czytaj ksiazki i trenuj, zeby zdobywac dodatkowe nagrody."
+        )
+    )
+    override val settingsHowToPlay = "Jak grac"
+    override val settingsHowToPlayHint = "Obejrzyj jeszcze raz krotki samouczek"
 }
 
 fun stringsFor(language: AppLanguage): AppStrings = when (language) {
