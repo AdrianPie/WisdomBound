@@ -2410,7 +2410,7 @@ class BattleViewModel(
             guardCharges = emptyMap(),
             secondWindUses = emptyMap(),
             upgradeOffer = offer,
-            message = "Wave $nextWave incoming..."
+            message = null
         ).applyWaveRegeneration(clearedWave = wave)
     }
 
@@ -2821,12 +2821,12 @@ class BattleViewModel(
                         turnPhase = TurnPhase.CategoryPick,
                         categoryOffer = CategoryOffer.roll(quizRandom, offerableCategories),
                         quiz = null,
-                        message = "Wave incoming..."
+                        message = null
                     )
                 }
             } else {
                 _uiState.update { state ->
-                    state.copy(phase = GamePhase.Battle, quiz = drawNextQuestion(state.wave), message = "Wave incoming...")
+                    state.copy(phase = GamePhase.Battle, quiz = drawNextQuestion(state.wave), message = null)
                 }
             }
         }
