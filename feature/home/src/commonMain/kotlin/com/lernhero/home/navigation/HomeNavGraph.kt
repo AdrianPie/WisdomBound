@@ -208,6 +208,10 @@ fun HomeNavGraph(
     // Material przezywa zmiane zakladki i powrot z walki - inaczej po kazdym wejsciu trzeba by
     // wybierac swoja talie od nowa.
     var materialKey by rememberSaveable { mutableStateOf(RunMaterial.Mixed.key) }
+    // Tryb walki zyje tu, obok materialu, a nie w samej zakladce - przycisk BATTLE na talii w
+    // Quizach przestawia oba naraz (talia jako material, tryb Endless) i dopiero wtedy przechodzi
+    // na Walke.
+    var fightMode by rememberSaveable { mutableStateOf(FightMode.Endless.name) }
     // Pasek systemowy + wysokosc paska gry - tyle miejsca u gory nalezy do chromu, nie do ekranu.
     val topBarSpace = WindowInsets.systemBars.asPaddingValues().calculateTopPadding() + TOP_BAR_HEIGHT
     Box(modifier = Modifier.fillMaxSize()) {
@@ -371,7 +375,6 @@ fun HomeNavGraph(
                     // NA tej scenie - sklad ([PartySheet]) i material ([MaterialSheet]) - zeby
                     // gracz ani na chwile nie tracil z oczu tego, dokad idzie.
                     var boardOpen by remember { mutableStateOf(false) }
-                    var fightMode by rememberSaveable { mutableStateOf(FightMode.Endless.name) }
 
                     val playerState by playerViewModel.uiState.collectAsState()
                     val quizState by customQuizViewModel.uiState.collectAsState()
@@ -575,6 +578,20 @@ fun HomeNavGraph(
                             onEditDeck = { deckId, startWithAi ->
                                 navController.navigate(Screen.DeckEditor(deckId, startWithAi)) {
                                     launchSingleTop = true
+                                }
+                            },
+                            // Talia idzie do walki tak samo, jak z okna materialu na Walce: staje sie
+                            // materialem wyprawy, a gracz laduje przed START z ta talia na pigulce.
+                            onPlayDeck = { deckId ->
+                                materialKey = RunMaterial.Deck(deckId).key
+                                fightMode = FightMode.Endless.name
+                                navController.navigate(BottomBarDestination.Fight.route) {
+                                    launchSingleTop = true
+                                    popUpTo<Screen.Home> {
+                                        saveState = true
+                                        inclusive = false
+                                    }
+                                    restoreState = true
                                 }
                             }
                         )

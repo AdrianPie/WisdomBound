@@ -38,7 +38,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
@@ -46,6 +45,7 @@ import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.drawscope.rotate
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -53,31 +53,33 @@ import com.lernhero.domain.monetization.PremiumLimits
 import com.lernhero.domain.quiz.custom.CustomDeck
 import com.lernhero.domain.quiz.custom.DeckOrigin
 import com.lernhero.home.navigation.bottomBarSpace
+import com.lernhero.home.ui.ChunkyButton
 import com.lernhero.home.ui.CountChip
 import com.lernhero.home.ui.GrooveBar
 import com.lernhero.home.ui.OutlinedText
-import com.lernhero.home.ui.PaperCard
-import com.lernhero.home.ui.PaperInk
-import com.lernhero.home.ui.ParchmentPalette
 import com.lernhero.home.ui.darkenBy
 import com.lernhero.home.ui.lightenBy
 import com.lernhero.shared.monetization.PremiumPaywall
 import com.lernhero.shared.monetization.SubscriptionService
 import com.lernhero.shared.theme.FontFirst
+import com.lernhero.shared.theme.StrokedText
 import org.koin.compose.koinInject
 
-
 /**
- * Biblioteka Medrca - miejsce, w ktorym gracz robi material do nauki, zamiast tylko go zuzywac.
+ * Warsztat quizow - miejsce, w ktorym gracz robi material do nauki, a potem nim walczy.
  *
- * Na gorze scena z medrcem (placeholder do podmiany na grafike budynku/postaci), pod nia dwa
- * wejscia: "napisz sam" i "zwoj AI" (Premium - bez subskrypcji otwiera od razu paywall, zamiast
- * wpuszczac do edytora, zeby tam dopiero powiedziec "nie"). Nizej polka z taliami jak ksiegi.
+ * Poprzednia wersja ("Biblioteka Medrca") byla ladna jako scena, ale nie mowila, PO CO tu jestesmy:
+ * medrzec rzucal ogolnik w dymku, a z gotowa talia nie dalo sie tu nic zrobic poza edycja - zeby nia
+ * zagrac, trzeba bylo wiedziec, ze wybiera sie ja w Walce -> Endless -> pigulka materialu. Teraz:
+ *  - naglowek mowi wprost, do czego sluzy ekran, i pokazuje trzy kroki, ktore same sie odhaczaja,
+ *  - kazda gotowa talia ma przycisk BATTLE, ktory ustawia ja jako material wyprawy i przenosi na
+ *    Walke ([onPlayDeck]); niegotowa - "dodaj pytania", czyli jedyna rzecz, jakiej jej brakuje.
  */
 @Composable
 fun QuizStudioScreen(
     viewModel: CustomQuizViewModel,
-    onEditDeck: (deckId: String, startWithAi: Boolean) -> Unit
+    onEditDeck: (deckId: String, startWithAi: Boolean) -> Unit,
+    onPlayDeck: (deckId: String) -> Unit
 ) {
     val state by viewModel.uiState.collectAsState()
     val isPremium by viewModel.isPremium.collectAsState()
@@ -86,10 +88,13 @@ fun QuizStudioScreen(
     if (paywallOpen) {
         PremiumPaywall(
             subscription = koinInject<SubscriptionService>(),
-            reason = "The AI Scroll writes whole decks for you - up to ${PremiumLimits.PREMIUM_AI_QUIZZES_PER_MONTH} a month.",
+            reason = "AI writes whole decks for you - up to ${PremiumLimits.PREMIUM_AI_QUIZZES_PER_MONTH} a month.",
             onDismiss = { paywallOpen = false }
         )
     }
+
+    val startAi = { if (isPremium) onEditDeck(viewModel.newDeck(), true) else paywallOpen = true }
+    val startManual = { onEditDeck(viewModel.newDeck(), false) }
 
     Column(
         modifier = Modifier
@@ -98,44 +103,46 @@ fun QuizStudioScreen(
             .padding(horizontal = 14.dp, vertical = 8.dp),
         verticalArrangement = Arrangement.spacedBy(14.dp)
     ) {
-        SageScene(deckCount = state.decks.size)
+        WorkshopHeader(decks = state.decks)
 
         Row(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.spacedBy(10.dp)
         ) {
             CreateButton(
-                icon = "🪶",
+                icon = "✍️",
                 title = "Write",
-                subtitle = "Your questions,\nyour rules",
+                subtitle = "Type your own\nquestions",
                 color = Color(0xFF3C82D0),
                 badge = null,
-                onClick = { onEditDeck(viewModel.newDeck(), false) },
+                onClick = startManual,
                 modifier = Modifier.weight(1f)
             )
             CreateButton(
-                icon = "📜",
-                title = "AI Scroll",
-                subtitle = "Give a topic,\nget a deck",
+                icon = "✨",
+                title = "AI Deck",
+                subtitle = "Give a topic,\nAI writes it",
                 color = Color(0xFF8A52CC),
                 badge = if (isPremium) null else "PREMIUM",
-                onClick = {
-                    if (isPremium) onEditDeck(viewModel.newDeck(), true) else paywallOpen = true
-                },
+                onClick = startAi,
                 modifier = Modifier.weight(1f)
             )
         }
 
         Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-            OutlinedText(text = "Your Tomes", size = 20.sp, color = DeckGold, strokeWidth = 5f)
+            OutlinedText(text = "Your Decks", size = 20.sp, color = DeckGold, strokeWidth = 5f)
             if (state.decks.isNotEmpty()) CountChip("${state.decks.size}")
         }
 
         when {
             state.loading -> Hint("Dusting off the shelves...")
-            state.decks.isEmpty() -> EmptyShelf()
+            state.decks.isEmpty() -> EmptyShelf(onCreate = startManual)
             else -> state.decks.forEach { deck ->
-                TomeCard(deck = deck, onClick = { onEditDeck(deck.id, false) })
+                DeckCard(
+                    deck = deck,
+                    onEdit = { onEditDeck(deck.id, false) },
+                    onPlay = { onPlayDeck(deck.id) }
+                )
             }
         }
 
@@ -145,106 +152,167 @@ fun QuizStudioScreen(
 }
 
 /**
- * Naglowek Biblioteki: medrzec w okraglym "oknie" (obracajace sie promienie zostaja - sa lubiane)
- * i jego dymek na pergaminie. Wczesniej to byla fioletowa scena ze zlota ramka, polprzezroczystymi
- * ksiazkami i poswiata - wygladala jak z generatora, a nie jak czesc gry.
+ * Naglowek: medrzec w okraglym oknie (obracajace sie promienie zostaja - sa lubiane), tytul z jednym
+ * zdaniem "po co" i trzy kroki od zera do walki. Kroki odhaczaja sie z samych talii, wiec nowy gracz
+ * widzi, co zrobic dalej, a stary - ze wszystko ma juz za soba.
  */
 @Composable
-private fun SageScene(deckCount: Int) {
+private fun WorkshopHeader(decks: List<CustomDeck>) {
+    val shape = RoundedCornerShape(18.dp)
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clip(shape)
+            .background(Brush.verticalGradient(listOf(Color(0xFF342760), Color(0xFF1B1433))))
+            .border(2.dp, DeckFrame, shape)
+            .padding(14.dp),
+        verticalArrangement = Arrangement.spacedBy(12.dp)
+    ) {
+        Row(horizontalArrangement = Arrangement.spacedBy(12.dp), verticalAlignment = Alignment.CenterVertically) {
+            SagePortrait()
+            Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                StrokedText(
+                    text = "Your Quizzes",
+                    size = 21.sp,
+                    color = DeckGold,
+                    outline = Color(0xFF120B05),
+                    strokeWidth = 5f,
+                    maxLines = 1
+                )
+                Text(
+                    text = "Make your own questions - then fight monsters with them.",
+                    color = DeckCream,
+                    fontFamily = FontFirst(),
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 12.sp,
+                    lineHeight = 15.sp
+                )
+            }
+        }
+
+        val hasDeck = decks.isNotEmpty()
+        val hasPlayable = decks.any { it.isPlayable }
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .clip(RoundedCornerShape(12.dp))
+                .background(Color(0x66000000))
+                .padding(horizontal = 6.dp, vertical = 8.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Step(number = 1, label = "Create\na deck", done = hasDeck, current = !hasDeck, modifier = Modifier.weight(1f))
+            StepArrow()
+            Step(
+                number = 2,
+                label = "Add ${CustomDeck.MIN_QUESTIONS}+\nquestions",
+                done = hasPlayable,
+                current = hasDeck && !hasPlayable,
+                modifier = Modifier.weight(1f)
+            )
+            StepArrow()
+            Step(number = 3, label = "Battle\nwith it", done = false, current = hasPlayable, modifier = Modifier.weight(1f))
+        }
+    }
+}
+
+@Composable
+private fun SagePortrait() {
     val infinite = rememberInfiniteTransition()
     val spin by infinite.animateFloat(0f, 360f, infiniteRepeatable(tween(24_000, easing = LinearEasing)))
     val bob by infinite.animateFloat(0f, 1f, infiniteRepeatable(tween(1800, easing = FastOutSlowInEasing), RepeatMode.Reverse))
 
-    PaperCard {
-        Row(horizontalArrangement = Arrangement.spacedBy(12.dp), verticalAlignment = Alignment.CenterVertically) {
-            // TODO grafika: podmienic emoji medrca na Image(painterResource(Resources.Image.sage)).
-            Box(
-                modifier = Modifier
-                    .size(104.dp)
-                    .clip(CircleShape)
-                    .background(ParchmentPalette.Frame)
-                    .padding(3.dp)
-                    .clip(CircleShape)
-                    .background(Brush.verticalGradient(listOf(Color(0xFF34285A), Color(0xFF1A1330))))
-                    .border(1.5.dp, Color(0xFFE0B75A), CircleShape),
-                contentAlignment = Alignment.Center
-            ) {
-                Canvas(modifier = Modifier.fillMaxSize().rotate(spin)) {
-                    val r = size.minDimension * 0.7f
-                    for (i in 0 until 12) {
-                        rotate(i * 30f) {
-                            val path = Path().apply {
-                                moveTo(center.x, center.y)
-                                lineTo(center.x - r * 0.1f, center.y - r)
-                                lineTo(center.x + r * 0.1f, center.y - r)
-                                close()
-                            }
-                            drawPath(path, Brush.radialGradient(listOf(Color(0x55FFD98A), Color.Transparent), center, r))
-                        }
+    // TODO grafika: podmienic emoji medrca na Image(painterResource(Resources.Image.sage)).
+    Box(
+        modifier = Modifier
+            .size(82.dp)
+            .clip(CircleShape)
+            .background(DeckFrame)
+            .padding(3.dp)
+            .clip(CircleShape)
+            .background(Brush.verticalGradient(listOf(Color(0xFF4A3A7E), Color(0xFF1A1330)))),
+        contentAlignment = Alignment.Center
+    ) {
+        Canvas(modifier = Modifier.fillMaxSize().rotate(spin)) {
+            val r = size.minDimension * 0.7f
+            for (i in 0 until 12) {
+                rotate(i * 30f) {
+                    val path = Path().apply {
+                        moveTo(center.x, center.y)
+                        lineTo(center.x - r * 0.1f, center.y - r)
+                        lineTo(center.x + r * 0.1f, center.y - r)
+                        close()
                     }
+                    drawPath(path, Brush.radialGradient(listOf(Color(0x55FFD98A), Color.Transparent), center, r))
                 }
-                Text(
-                    text = "🧙",
-                    fontSize = 60.sp,
-                    modifier = Modifier.graphicsLayer { translationY = (4f - bob * 6f) * density }
-                )
-            }
-            Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(6.dp)) {
-                Text(
-                    text = "The Sage's Library",
-                    color = ParchmentPalette.Ink,
-                    fontFamily = FontFirst(),
-                    fontWeight = FontWeight.Black,
-                    fontSize = 17.sp,
-                    lineHeight = 19.sp
-                )
-                SpeechBubble(
-                    text = when {
-                        deckCount == 0 -> "Every hero writes their own spellbook. Shall we start yours?"
-                        deckCount < 3 -> "A fine start! The more you write, the sharper your mind."
-                        else -> "$deckCount tomes already! The library grows wiser with you."
-                    }
-                )
             }
         }
+        Text(
+            text = "🧙",
+            fontSize = 46.sp,
+            modifier = Modifier.graphicsLayer { translationY = (3f - bob * 5f) * density }
+        )
     }
 }
 
-/** Dymek z ogonkiem wskazujacym w lewo, na medrca. */
+/** Jeden krok przewodnika: kolko z numerem (albo ptaszkiem) i podpis. Biezacy krok swieci na zloto. */
 @Composable
-private fun SpeechBubble(text: String) {
-    Box {
+private fun Step(number: Int, label: String, done: Boolean, current: Boolean, modifier: Modifier = Modifier) {
+    val fill = when {
+        done -> Brush.verticalGradient(listOf(Color(0xFF7BE06A), Color(0xFF2E9A3E)))
+        current -> Brush.verticalGradient(listOf(Color(0xFFFFE27A), Color(0xFFE0A21E)))
+        else -> Brush.verticalGradient(listOf(Color(0xFF3A3150), Color(0xFF241D36)))
+    }
+    Column(
+        modifier = modifier,
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.spacedBy(4.dp)
+    ) {
+        Box(
+            modifier = Modifier
+                .size(30.dp)
+                .clip(CircleShape)
+                .background(fill)
+                .border(2.dp, Color(0xFF120B05), CircleShape),
+            contentAlignment = Alignment.Center
+        ) {
+            StrokedText(
+                text = if (done) "✓" else "$number",
+                size = 14.sp,
+                color = if (done || current) Color.White else DeckMuted,
+                outline = Color(0xFF120B05),
+                strokeWidth = if (done || current) 4f else 0f,
+                tight = true
+            )
+        }
         Text(
-            text = text,
-            color = ParchmentPalette.Ink,
+            text = label,
+            color = when {
+                current -> DeckGold
+                done -> DeckCream
+                else -> DeckMuted
+            },
             fontFamily = FontFirst(),
             fontWeight = FontWeight.Bold,
-            fontStyle = androidx.compose.ui.text.font.FontStyle.Italic,
-            fontSize = 12.sp,
-            lineHeight = 15.sp,
-            modifier = Modifier
-                .padding(start = 7.dp)
-                .clip(RoundedCornerShape(12.dp))
-                .background(ParchmentPalette.Card)
-                .border(1.dp, ParchmentPalette.CardEdge, RoundedCornerShape(12.dp))
-                .padding(horizontal = 10.dp, vertical = 8.dp)
+            fontSize = 10.sp,
+            lineHeight = 12.sp,
+            textAlign = TextAlign.Center
         )
-        Canvas(modifier = Modifier.size(width = 9.dp, height = 14.dp).align(Alignment.CenterStart)) {
-            val tail = Path().apply {
-                moveTo(size.width + 1f, 0f)
-                lineTo(0f, size.height / 2f)
-                lineTo(size.width + 1f, size.height)
-                close()
-            }
-            drawPath(tail, ParchmentPalette.Card)
-            drawLine(ParchmentPalette.CardEdge, androidx.compose.ui.geometry.Offset(size.width, 0f), androidx.compose.ui.geometry.Offset(0f, size.height / 2f), 1.dp.toPx())
-            drawLine(ParchmentPalette.CardEdge, androidx.compose.ui.geometry.Offset(0f, size.height / 2f), androidx.compose.ui.geometry.Offset(size.width, size.height), 1.dp.toPx())
-        }
     }
+}
+
+@Composable
+private fun StepArrow() {
+    Text(
+        text = "›",
+        color = DeckFrame,
+        fontSize = 22.sp,
+        fontWeight = FontWeight.Black,
+        modifier = Modifier.padding(bottom = 18.dp)
+    )
 }
 
 /**
- * Wejscie "napisz" / "zwoj AI" jako gruby przycisk z warga pod spodem - wyglada na wciskany.
+ * Wejscie "napisz" / "AI" jako gruby przycisk z warga pod spodem - wyglada na wciskany.
  * Jedna ikona w ciemnym okienku, bez poswiaty i migajacych gwiazdek.
  */
 @Composable
@@ -291,7 +359,7 @@ private fun CreateButton(
                 fontWeight = FontWeight.Bold,
                 fontSize = 11.sp,
                 lineHeight = 13.sp,
-                textAlign = androidx.compose.ui.text.style.TextAlign.Center
+                textAlign = TextAlign.Center
             )
         }
         badge?.let {
@@ -315,70 +383,49 @@ private fun CreateButton(
 }
 
 /**
- * Talia jako ksiega: skorzany grzbiet z inicjalem (AI - fiolet, reczna - braz), a obok pergamin
- * z tytulem, tematem i paskiem "gotowa do walki". Liczba gotowych pytan jest tu wazniejsza od
- * nazwy, bo mowi, czy talia nadaje sie juz do boju; niedokonczone pytania pokazujemy na czerwono.
+ * Talia jako ksiega: okladka w kolorze pochodzenia (AI - fiolet, wlasna - niebieski), obok nazwa,
+ * temat i stan. Najwazniejsza rzecz na karcie to jedno pytanie "czy moge tym juz walczyc?":
+ * gotowa talia ma zielony BATTLE, niegotowa - pasek do [CustomDeck.MIN_QUESTIONS] i przycisk
+ * dodania pytan. Tapniecie w reszte karty otwiera edytor, jak dotad.
  */
 @Composable
-private fun TomeCard(deck: CustomDeck, onClick: () -> Unit) {
-    val ai = deck.origin == DeckOrigin.Ai
-    val leather = if (ai) Color(0xFF6E3FB0) else Color(0xFF8A4E22)
+private fun DeckCard(deck: CustomDeck, onEdit: () -> Unit, onPlay: () -> Unit) {
+    val cover = when (deck.origin) {
+        DeckOrigin.Manual -> Color(0xFF2F7FC8)
+        DeckOrigin.Ai -> Color(0xFF7B4FC9)
+        DeckOrigin.AiEdited -> Color(0xFF5B5FD0)
+    }
     val ready = deck.turnReady.size
     val playable = deck.isPlayable
-    val outer = RoundedCornerShape(14.dp)
-    val inner = RoundedCornerShape(11.5.dp)
+    val shape = RoundedCornerShape(16.dp)
 
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .height(92.dp)
-            .clip(outer)
-            .background(ParchmentPalette.Frame)
-            .padding(2.5.dp)
-            .clip(inner)
-            .background(Brush.verticalGradient(listOf(ParchmentPalette.Paper, ParchmentPalette.PaperDark)))
-            .clickable(onClick = onClick),
+            .clip(shape)
+            .background(Brush.verticalGradient(listOf(Color(0xFF2B2016), DeckPanel)))
+            .border(2.dp, if (playable) DeckFrame else DeckFrameDim, shape)
+            .clickable(onClick = onEdit)
+            .padding(10.dp),
+        horizontalArrangement = Arrangement.spacedBy(12.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
-        // Grzbiet ksiegi: skora, dwa zlote paski i inicjal tytulu.
-        Box(
-            modifier = Modifier
-                .fillMaxHeight()
-                .width(52.dp)
-                .background(Brush.horizontalGradient(listOf(leather.darkenBy(0.25f), leather, leather.darkenBy(0.35f)))),
-            contentAlignment = Alignment.Center
-        ) {
-            Column(
-                modifier = Modifier.fillMaxHeight().padding(vertical = 12.dp),
-                verticalArrangement = Arrangement.SpaceBetween
-            ) {
-                Box(modifier = Modifier.width(52.dp).height(3.dp).background(Color(0xFFE0B75A)))
-                Box(modifier = Modifier.width(52.dp).height(3.dp).background(Color(0xFFE0B75A)))
-            }
-            OutlinedText(
-                text = if (ai) "AI" else deck.name.trim().firstOrNull()?.uppercase() ?: "?",
-                size = 20.sp,
-                color = Color(0xFFFFE08A),
-                strokeWidth = 5f
-            )
-        }
-        Column(
-            modifier = Modifier.weight(1f).padding(horizontal = 12.dp),
-            verticalArrangement = Arrangement.spacedBy(3.dp)
-        ) {
+        DeckCover(color = cover, origin = deck.origin)
+
+        Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(5.dp)) {
             Text(
-                text = deck.name.ifBlank { "Untitled tome" },
-                color = ParchmentPalette.Ink,
+                text = deck.displayName,
+                color = DeckCream,
                 fontFamily = FontFirst(),
                 fontWeight = FontWeight.Black,
-                fontSize = 15.sp,
-                lineHeight = 17.sp,
+                fontSize = 16.sp,
+                lineHeight = 18.sp,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis
             )
             Text(
-                text = deck.topic.ifBlank { "No topic" },
-                color = ParchmentPalette.InkMuted,
+                text = deck.topic.ifBlank { deck.origin.label },
+                color = DeckMuted,
                 fontFamily = FontFirst(),
                 fontWeight = FontWeight.Bold,
                 fontSize = 11.sp,
@@ -386,47 +433,146 @@ private fun TomeCard(deck: CustomDeck, onClick: () -> Unit) {
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis
             )
-            GrooveBar(
-                progress = (ready.toFloat() / CustomDeck.MIN_QUESTIONS).coerceAtMost(1f),
-                fill = if (playable) PaperInk.Good else PaperInk.Warn,
-                height = 17.dp,
-                label = if (playable) "$ready questions · ready!" else "$ready / ${CustomDeck.MIN_QUESTIONS} to battle"
-            )
+            if (playable) {
+                Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                    StatusChip(text = "✓ READY", color = Color(0xFF2E9A3E))
+                    Text(
+                        text = "$ready questions",
+                        color = DeckCream,
+                        fontFamily = FontFirst(),
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 11.sp
+                    )
+                }
+            } else {
+                GrooveBar(
+                    progress = ready.toFloat() / CustomDeck.MIN_QUESTIONS,
+                    fill = Color(0xFFE0A21E),
+                    height = 17.dp,
+                    label = "$ready / ${CustomDeck.MIN_QUESTIONS} questions"
+                )
+            }
             if (deck.brokenCount > 0) {
                 Text(
-                    text = "${deck.brokenCount} unfinished",
-                    color = PaperInk.Bad,
+                    text = "${deck.brokenCount} unfinished - tap to fix",
+                    color = DeckRed,
                     fontFamily = FontFirst(),
                     fontWeight = FontWeight.Bold,
                     fontSize = 10.sp,
                     lineHeight = 12.sp
                 )
             }
+            Row(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.padding(top = 2.dp)) {
+                if (playable) {
+                    ChunkyButton(
+                        text = "⚔️ BATTLE",
+                        color = Color(0xFF3FA84A),
+                        textSize = 14,
+                        onClick = onPlay,
+                        modifier = Modifier.weight(1f)
+                    )
+                    ChunkyButton(
+                        text = "EDIT",
+                        color = Color(0xFF8A6A44),
+                        textSize = 13,
+                        onClick = onEdit
+                    )
+                } else {
+                    ChunkyButton(
+                        text = "+ ADD QUESTIONS",
+                        color = Color(0xFFE0852A),
+                        textSize = 13,
+                        onClick = onEdit,
+                        modifier = Modifier.weight(1f)
+                    )
+                }
+            }
         }
-        Text(
-            text = "›",
-            color = ParchmentPalette.Frame,
-            fontSize = 26.sp,
-            fontWeight = FontWeight.Black,
-            modifier = Modifier.padding(end = 12.dp)
-        )
+    }
+}
+
+/** Okladka ksiegi: skora w kolorze pochodzenia talii, dwa zlote paski i znak pochodzenia. */
+@Composable
+private fun DeckCover(color: Color, origin: DeckOrigin) {
+    val shape = RoundedCornerShape(10.dp)
+    Box(
+        modifier = Modifier
+            .width(62.dp)
+            .height(86.dp)
+            .clip(shape)
+            .background(Brush.horizontalGradient(listOf(color.darkenBy(0.35f), color, color.darkenBy(0.25f))))
+            .border(2.dp, color.darkenBy(0.55f), shape),
+        contentAlignment = Alignment.Center
+    ) {
+        Column(
+            modifier = Modifier.fillMaxHeight().padding(vertical = 9.dp),
+            verticalArrangement = Arrangement.SpaceBetween
+        ) {
+            Box(modifier = Modifier.width(62.dp).height(3.dp).background(Color(0xFFE0B75A)))
+            Box(modifier = Modifier.width(62.dp).height(3.dp).background(Color(0xFFE0B75A)))
+        }
+        Column(horizontalAlignment = Alignment.CenterHorizontally) {
+            Text(text = if (origin == DeckOrigin.Manual) "✍️" else "✨", fontSize = 26.sp, lineHeight = 28.sp)
+            StrokedText(
+                text = if (origin == DeckOrigin.Manual) "OWN" else "AI",
+                size = 11.sp,
+                color = Color(0xFFFFE08A),
+                outline = color.darkenBy(0.6f),
+                strokeWidth = 4f,
+                tight = true
+            )
+        }
     }
 }
 
 @Composable
-private fun EmptyShelf() {
-    PaperCard {
-        Column(modifier = Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(4.dp)) {
-            Text("The shelf is empty", color = ParchmentPalette.Ink, fontFamily = FontFirst(), fontWeight = FontWeight.Black, fontSize = 15.sp)
-            Text(
-                text = "Write your first tome above - a school subject, a driving test, anything you want to remember.",
-                color = ParchmentPalette.InkMuted,
-                fontFamily = FontFirst(),
-                fontSize = 12.sp,
-                lineHeight = 15.sp,
-                textAlign = androidx.compose.ui.text.style.TextAlign.Center
-            )
-        }
+private fun StatusChip(text: String, color: Color) {
+    Text(
+        text = text,
+        color = Color.White,
+        fontFamily = FontFirst(),
+        fontWeight = FontWeight.Black,
+        fontSize = 10.sp,
+        lineHeight = 12.sp,
+        modifier = Modifier
+            .clip(RoundedCornerShape(6.dp))
+            .background(color)
+            .border(1.dp, color.darkenBy(0.45f), RoundedCornerShape(6.dp))
+            .padding(horizontal = 6.dp, vertical = 2.dp)
+    )
+}
+
+@Composable
+private fun EmptyShelf(onCreate: () -> Unit) {
+    val shape = RoundedCornerShape(16.dp)
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clip(shape)
+            .background(Brush.verticalGradient(listOf(Color(0xFF2B2016), DeckPanel)))
+            .border(2.dp, DeckFrameDim, shape)
+            .padding(18.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.spacedBy(8.dp)
+    ) {
+        Text(text = "📚", fontSize = 40.sp)
+        Text("No decks yet", color = DeckCream, fontFamily = FontFirst(), fontWeight = FontWeight.Black, fontSize = 16.sp)
+        Text(
+            text = "A school subject, a language, a driving test - anything you want to remember. " +
+                "Write ${CustomDeck.MIN_QUESTIONS} questions and it's ready for battle.",
+            color = DeckMuted,
+            fontFamily = FontFirst(),
+            fontSize = 12.sp,
+            lineHeight = 15.sp,
+            textAlign = TextAlign.Center
+        )
+        ChunkyButton(
+            text = "CREATE MY FIRST DECK",
+            color = Color(0xFF3C82D0),
+            textSize = 13,
+            onClick = onCreate,
+            modifier = Modifier.padding(top = 4.dp)
+        )
     }
 }
 
