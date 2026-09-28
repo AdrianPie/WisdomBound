@@ -279,7 +279,7 @@ private data class SummaryRow(
 
 private fun summaryRows(summary: RunStats?, wave: Int): List<SummaryRow> {
     if (summary == null) {
-        return listOf(SummaryRow("⚔", "Wave", "$wave"))
+        return listOf(SummaryRow("⚔️", "Wave", "$wave"))
     }
 
     return buildList {

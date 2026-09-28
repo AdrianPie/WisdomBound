@@ -26,6 +26,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
@@ -100,7 +101,7 @@ fun WorldMapScreen(
                 Text(text = "←", color = GoldText, fontFamily = FontPixel(), fontSize = 15.sp)
             }
             Text(
-                text = "MAPA SWIATA",
+                text = "WORLD MAP",
                 color = GoldText,
                 fontFamily = FontPixel(),
                 fontWeight = FontWeight.Bold,
@@ -262,7 +263,7 @@ private fun WorldCard(
                         text = if (locked) {
                             "Clear the previous land to enter here"
                         } else {
-                            "$clearedStages / ${world.stageCount} plansz"
+                            "$clearedStages / ${world.stageCount} stages"
                         },
                         color = Muted,
                         fontFamily = FontFirst(),
@@ -272,19 +273,21 @@ private fun WorldCard(
             }
         }
 
+        // Kraina jeszcze bez grafiki - zamiast pustki duzy, przygaszony symbol krainy po prawej.
         if (art.background == null) {
             Text(
-                text = art.expectedFile,
-                color = Color(0xFF6E6152),
-                fontFamily = FontFirst(),
-                fontSize = 8.sp,
-                modifier = Modifier.align(Alignment.BottomEnd).padding(6.dp)
+                text = if (locked) "🔒" else art.emoji,
+                fontSize = 64.sp,
+                modifier = Modifier
+                    .align(Alignment.CenterEnd)
+                    .padding(end = 20.dp)
+                    .alpha(if (locked) 0.12f else 0.28f)
             )
         }
 
         if (selected && !locked) {
             Text(
-                text = "TU JESTES",
+                text = "YOU ARE HERE",
                 color = Color(0xFF0B0805),
                 fontFamily = FontPixel(),
                 fontWeight = FontWeight.Bold,

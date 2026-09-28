@@ -25,6 +25,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
@@ -289,14 +290,15 @@ private fun StageScene(stage: StoryStage, world: StoryWorld, modifier: Modifier 
             )
         }
 
-        // Brak PNG tla - zostaje nazwa oczekiwanego pliku, zeby bylo wiadomo, co podmienic.
+        // Kraina bez grafiki tla - duzy, przygaszony symbol krainy nad przeciwnikami zamiast pustki.
         if (art.background == null) {
             GlyphText(
-                text = art.expectedFile,
-                color = Color(0xFF6E6152),
-                fontFamily = FontFirst(),
-                fontSize = 8.sp,
-                modifier = Modifier.align(Alignment.TopStart).padding(6.dp)
+                text = art.emoji,
+                fontSize = 72.sp,
+                modifier = Modifier
+                    .align(Alignment.TopCenter)
+                    .padding(top = 6.dp)
+                    .alpha(0.22f)
             )
         }
 

@@ -701,7 +701,7 @@ fun ResolvingStrip(state: BattleUiState, modifier: Modifier = Modifier) {
                 horizontalArrangement = Arrangement.spacedBy(10.dp)
             ) {
                 Text(
-                    text = "⚔",
+                    text = "⚔️",
                     fontSize = 18.sp,
                     color = PanelGold,
                     modifier = Modifier.graphicsLayer {

@@ -134,7 +134,7 @@ fun PartySheet(
 
         SheetStatRow {
             StatCell(icon = "❤", value = "$teamHp", tint = SheetRed)
-            StatCell(icon = "⚔", value = "$teamAttack", tint = Color(0xFFF97316))
+            StatCell(icon = "⚔️", value = "$teamAttack", tint = Color(0xFFF97316))
             Spacer(modifier = Modifier.weight(1f))
             Text(
                 text = "$openSlots/${PartySlots.TOTAL} slots",

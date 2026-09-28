@@ -29,7 +29,7 @@ enum class RunDifficulty(
     Normal(
         label = "Normal",
         description = "Balanced fights and questions from easy to hard.",
-        icon = "⚔",
+        icon = "⚔️",
         enemyHpMultiplier = 1f,
         enemyAttackMultiplier = 1f,
         coinMultiplier = 1f,

@@ -129,7 +129,7 @@ fun ProductionBuildingScreen(
             ) {
                 StatTile("⭐", "Level", "${production.level}", Modifier.weight(1f))
                 StatTile(
-                    "⛏",
+                    "⛏️",
                     "Rate",
                     "${ratePerHour.roundToInt()}/h",
                     Modifier.weight(1f),

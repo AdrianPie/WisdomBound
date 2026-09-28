@@ -333,7 +333,7 @@ private fun AttackCounter(entry: TurnOutcome, progress: Float, accent: Color) {
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(8.dp)
     ) {
-        Text(text = "⚔", fontSize = 13.sp)
+        Text(text = "⚔️", fontSize = 13.sp)
         Text(
             text = "TEAM ATK",
             color = Color.White.copy(alpha = 0.6f),

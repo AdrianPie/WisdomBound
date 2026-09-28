@@ -27,7 +27,7 @@ enum class ChestSlot(
     GoldLarge("400 coins", "400 gold", "💰", weight = 6f, depthScaling = 0.5f),
     SummonTicket("Summon Center ticket", "1 ticket", "🎟", weight = 15f, depthScaling = 0.3f),
     ItemCommon("Item (common)", "Item", "🗡", weight = 27f, depthScaling = 0f),
-    ItemRare("Item (rare)", "Rare", "⚔", weight = 12f, depthScaling = 0.6f),
+    ItemRare("Item (rare)", "Rare", "⚔️", weight = 12f, depthScaling = 0.6f),
     HeroicTicket("HEROIC COMPANION TICKET", "3 tickets", "👑", weight = 2f, depthScaling = 1f),
     ItemLegendary("LEGENDARY ITEM", "Legendary", "✨", weight = 1f, depthScaling = 1f);
 

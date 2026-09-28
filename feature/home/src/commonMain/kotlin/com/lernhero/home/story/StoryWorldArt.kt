@@ -8,8 +8,8 @@ import org.jetbrains.compose.resources.DrawableResource
 
 /**
  * Grafika krainy. [background] = null oznacza "PNG jeszcze nie ma" - wtedy karta krainy rysuje
- * sie jako gradient w [tint] plus nazwa oczekiwanego pliku, dokladnie tak jak przy zdarzeniach
- * lochu (patrz dawne CorridorEventArt - ten sam pomysl).
+ * sie jako gradient w [tint] z duzym, przygaszonym [emoji] krainy w tle. Dawniej stala tam nazwa
+ * brakujacego pliku, ale to widzieli gracze - wygladalo jak blad, nie jak zamierzony wyglad.
  *
  * Dorzucenie mapy: wrzuc PNG do shared/composeResources/drawable, dopisz w Resources.Image i
  * podmien [background] na wlasciwy zasob. Nic innego sie nie zmienia.
@@ -17,8 +17,7 @@ import org.jetbrains.compose.resources.DrawableResource
 data class StoryWorldArt(
     val background: DrawableResource?,
     val emoji: String,
-    val tint: Color,
-    val expectedFile: String
+    val tint: Color
 )
 
 fun StoryWorld.art(): StoryWorldArt {
@@ -31,16 +30,16 @@ fun StoryWorld.art(): StoryWorldArt {
     val bg = Resources.Image.battleBackground(id) ?: Resources.Image.worldBackground(id)
     val (emoji, tint) = when (id) {
         "forest" -> "🌲" to Color(0xFF3FA96A)
-        "mine" -> "⛏" to Color(0xFF9B2C3D)
+        "mine" -> "⛏️" to Color(0xFF9B2C3D)
         "icefield" -> "❄" to Color(0xFF4E8AB8)
         "heat" -> "🌋" to Color(0xFFC7532F)
         "heaven" -> "☁" to Color(0xFF8A5FD0)
         "abyss" -> "🕳" to Color(0xFF6B5A38)
         else -> "🗺" to Color(0xFF6B5A38)
     }
-    // Nazwa pliku, ktorego brakuje - te trzy krainy nie maja jeszcze wlasnej areny i dlatego
-    // wchodzi pod nie generyczne pole bitwy.
-    return StoryWorldArt(bg, emoji, tint, "${id}_new.png")
+    // "heat", "heaven" i "abyss" nie maja jeszcze grafiki - karta pokazuje wtedy sam gradient
+    // i emoji (patrz [StoryWorldArt]).
+    return StoryWorldArt(bg, emoji, tint)
 }
 
 fun StoryWorldArt.gradient(): Brush = Brush.verticalGradient(
