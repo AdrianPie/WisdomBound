@@ -17,7 +17,7 @@ import GoogleMobileAds
 /// Dopoki pakietow nie ma, `canImport` wycina ten kod i gra dziala bez sklepu i reklam.
 enum MonetizationBridge {
     /// Publiczny klucz SDK RevenueCat dla iOS (appl_...). Ten sam co MonetizationConfig.REVENUECAT_IOS_KEY.
-    static let revenueCatKey = ""
+    static let revenueCatKey = "appl_igrzWtgdTKUxgJElwXFLyNrZrii"
 
     static func install() {
         #if canImport(RevenueCat)

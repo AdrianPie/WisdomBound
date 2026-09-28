@@ -14,7 +14,7 @@ package com.lernhero.shared.monetization
  */
 object MonetizationConfig {
     const val REVENUECAT_ANDROID_KEY: String = "goog_ErTlUcrIkcTGLANcFCVjWOSlqxU"
-    const val REVENUECAT_IOS_KEY: String = ""
+    const val REVENUECAT_IOS_KEY: String = "appl_igrzWtgdTKUxgJElwXFLyNrZrii"
 
     /** Identyfikator uprawnienia w RevenueCat, ktore odblokowuje premium. */
     const val PREMIUM_ENTITLEMENT: String = "premium"
