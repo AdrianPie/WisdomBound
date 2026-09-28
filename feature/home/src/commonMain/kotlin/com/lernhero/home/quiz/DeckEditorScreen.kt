@@ -359,9 +359,13 @@ private fun AiSection(
             horizontalArrangement = Arrangement.spacedBy(10.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            GlyphText(text = "📜", fontSize = 28.sp)
+            androidx.compose.foundation.Image(
+                painter = org.jetbrains.compose.resources.painterResource(com.lernhero.shared.resources.Resources.UiArt.aiQuiz),
+                contentDescription = null,
+                modifier = Modifier.size(44.dp)
+            )
             Column(modifier = Modifier.weight(1f)) {
-                OutlinedText(text = "AI Scroll", size = 18.sp, color = Color.White, strokeWidth = 5f)
+                OutlinedText(text = "AI Deck", size = 18.sp, color = Color.White, strokeWidth = 5f)
                 GlyphText(
                     text = if (isPremium) "Give a topic - get a ready deck" else "Premium - the Sage writes decks for you",
                     color = Color(0xFFCBB6F0),

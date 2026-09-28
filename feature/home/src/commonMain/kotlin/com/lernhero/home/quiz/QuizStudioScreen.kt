@@ -1,5 +1,9 @@
 package com.lernhero.home.quiz
 
+import com.lernhero.shared.resources.Resources
+import androidx.compose.foundation.Image
+import org.jetbrains.compose.resources.DrawableResource
+import org.jetbrains.compose.resources.painterResource
 import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.RepeatMode
@@ -110,7 +114,7 @@ fun QuizStudioScreen(
             horizontalArrangement = Arrangement.spacedBy(10.dp)
         ) {
             CreateButton(
-                icon = "✍️",
+                icon = Resources.UiArt.writeQuiz,
                 title = "Write",
                 subtitle = "Type your own\nquestions",
                 color = Color(0xFF3C82D0),
@@ -119,7 +123,7 @@ fun QuizStudioScreen(
                 modifier = Modifier.weight(1f)
             )
             CreateButton(
-                icon = "✨",
+                icon = Resources.UiArt.aiQuiz,
                 title = "AI Deck",
                 subtitle = "Give a topic,\nAI writes it",
                 color = Color(0xFF8A52CC),
@@ -221,7 +225,6 @@ private fun SagePortrait() {
     val spin by infinite.animateFloat(0f, 360f, infiniteRepeatable(tween(24_000, easing = LinearEasing)))
     val bob by infinite.animateFloat(0f, 1f, infiniteRepeatable(tween(1800, easing = FastOutSlowInEasing), RepeatMode.Reverse))
 
-    // TODO grafika: podmienic emoji medrca na Image(painterResource(Resources.Image.sage)).
     Box(
         modifier = Modifier
             .size(82.dp)
@@ -246,10 +249,13 @@ private fun SagePortrait() {
                 }
             }
         }
-        Text(
-            text = "🧙",
-            fontSize = 46.sp,
-            modifier = Modifier.graphicsLayer { translationY = (3f - bob * 5f) * density }
+        Image(
+            painter = painterResource(Resources.UiArt.quizWizard),
+            contentDescription = null,
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(4.dp)
+                .graphicsLayer { translationY = (3f - bob * 5f) * density }
         )
     }
 }
@@ -317,7 +323,7 @@ private fun StepArrow() {
  */
 @Composable
 private fun CreateButton(
-    icon: String,
+    icon: DrawableResource,
     title: String,
     subtitle: String,
     color: Color,
@@ -326,7 +332,7 @@ private fun CreateButton(
     modifier: Modifier = Modifier
 ) {
     val shape = RoundedCornerShape(16.dp)
-    Box(modifier = modifier.padding(top = 8.dp)) {
+    Box(modifier = modifier.padding(top = ICON_LIFT + 6.dp)) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
@@ -337,20 +343,13 @@ private fun CreateButton(
                 .background(Brush.verticalGradient(listOf(color.lightenBy(0.18f), color, color.darkenBy(0.12f))))
                 .border(2.dp, color.darkenBy(0.5f), shape)
                 .clickable(onClick = onClick)
-                .padding(vertical = 12.dp, horizontal = 10.dp),
+                .padding(top = 0.dp, bottom = 12.dp, start = 10.dp, end = 10.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.spacedBy(4.dp)
+            verticalArrangement = Arrangement.spacedBy(2.dp)
         ) {
-            Box(
-                modifier = Modifier
-                    .size(50.dp)
-                    .clip(RoundedCornerShape(12.dp))
-                    .background(color.darkenBy(0.4f))
-                    .border(1.5.dp, Color.White.copy(alpha = 0.35f), RoundedCornerShape(12.dp)),
-                contentAlignment = Alignment.Center
-            ) {
-                Text(text = icon, fontSize = 28.sp, lineHeight = 30.sp)
-            }
+            // Miejsce na ikone - sama ikona lezy NAD przyciskiem (nizej), bo przycisk jest
+            // przyciety do ksztaltu i ucialby jej czesc wystajaca ponad krawedz.
+            Spacer(modifier = Modifier.height(ICON_SIZE - ICON_LIFT))
             OutlinedText(text = title, size = 18.sp, color = Color.White, strokeWidth = 5f)
             Text(
                 text = subtitle,
@@ -362,6 +361,15 @@ private fun CreateButton(
                 textAlign = TextAlign.Center
             )
         }
+        // Duza ikona wystaje ponad gorna krawedz przycisku - to ona ma przyciagac wzrok.
+        Image(
+            painter = painterResource(icon),
+            contentDescription = null,
+            modifier = Modifier
+                .align(Alignment.TopCenter)
+                .offset(y = -ICON_LIFT)
+                .size(ICON_SIZE)
+        )
         badge?.let {
             Text(
                 text = it,
@@ -512,7 +520,11 @@ private fun DeckCover(color: Color, origin: DeckOrigin) {
             Box(modifier = Modifier.width(62.dp).height(3.dp).background(Color(0xFFE0B75A)))
         }
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
-            Text(text = if (origin == DeckOrigin.Manual) "✍️" else "✨", fontSize = 26.sp, lineHeight = 28.sp)
+            Image(
+                painter = painterResource(if (origin == DeckOrigin.Manual) Resources.UiArt.writeQuiz else Resources.UiArt.aiQuiz),
+                contentDescription = null,
+                modifier = Modifier.size(40.dp)
+            )
             StrokedText(
                 text = if (origin == DeckOrigin.Manual) "OWN" else "AI",
                 size = 11.sp,
@@ -586,3 +598,7 @@ private fun Hint(text: String) {
         modifier = Modifier.padding(vertical = 8.dp)
     )
 }
+
+/** Ikona przycisku tworzenia i to, o ile wystaje ponad jego gorna krawedz. */
+private val ICON_SIZE = 104.dp
+private val ICON_LIFT = 26.dp

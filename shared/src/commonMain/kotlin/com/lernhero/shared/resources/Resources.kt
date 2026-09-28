@@ -4,6 +4,12 @@ import androidx.compose.ui.graphics.TransformOrigin
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import org.jetbrains.compose.resources.DrawableResource
+import lernhero.shared.generated.resources.icon_team
+import lernhero.shared.generated.resources.icon_map
+import lernhero.shared.generated.resources.icon_aiquizmaker
+import lernhero.shared.generated.resources.icon_writequiz
+import lernhero.shared.generated.resources.tutorial_wizzard
+import lernhero.shared.generated.resources.quizmaker_wizard
 import lernhero.shared.generated.resources.Res
 import lernhero.shared.generated.resources.allDrawableResources
 import lernhero.shared.generated.resources.back_arrow
@@ -347,6 +353,15 @@ object Resources {
         }
     }
     /** Wyspy-budynki na ekranie Miasta (Dom) - kazda to osobna klikalna "instancja" (patrz HomeScreen). */
+    /** Grafiki Warsztatu quizow, samouczka i bocznych przyciskow ekranu Walki. */
+    object UiArt {
+        val quizWizard = Res.drawable.quizmaker_wizard
+        val tutorialWizard = Res.drawable.tutorial_wizzard
+        val writeQuiz = Res.drawable.icon_writequiz
+        val aiQuiz = Res.drawable.icon_aiquizmaker
+        val map = Res.drawable.icon_map
+        val team = Res.drawable.icon_team
+    }
     object CityIsland {
         /** Pusty oltarz w Summon Center - scena, na ktorej "wychodzi" wylosowany summon. */
         val altar = Res.drawable.summon_center

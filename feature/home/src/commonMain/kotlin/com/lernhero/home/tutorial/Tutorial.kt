@@ -1,5 +1,8 @@
 package com.lernhero.home.tutorial
 
+import com.lernhero.shared.resources.Resources
+import androidx.compose.foundation.Image
+import org.jetbrains.compose.resources.painterResource
 import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.RepeatMode
 import androidx.compose.animation.core.animateFloat
@@ -359,7 +362,11 @@ private fun SageBubble(
                     .background(Brush.verticalGradient(listOf(Color(0xFF4A3A7E), Color(0xFF1A1330)))),
                 contentAlignment = Alignment.Center
             ) {
-                Text(text = "🧙", fontSize = if (showNext) 42.sp else 32.sp)
+                Image(
+                    painter = painterResource(Resources.UiArt.tutorialWizard),
+                    contentDescription = null,
+                    modifier = Modifier.fillMaxSize().padding(3.dp)
+                )
             }
             // GlyphText - emoji walut w tresci rysuja sie jako ikony gry.
             GlyphText(

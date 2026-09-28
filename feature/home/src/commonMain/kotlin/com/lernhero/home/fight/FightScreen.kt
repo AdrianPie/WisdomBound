@@ -1,5 +1,6 @@
 package com.lernhero.home.fight
 
+import org.jetbrains.compose.resources.DrawableResource
 import com.lernhero.home.tutorial.TutorialTarget
 import com.lernhero.home.tutorial.tutorialTarget
 import com.lernhero.shared.theme.GlyphText
@@ -220,6 +221,7 @@ fun FightScreen(
                 ) {
                     SideButton(
                         icon = "🛡",
+                        image = Resources.UiArt.team,
                         label = "Party",
                         onClick = onOpenParty,
                         modifier = Modifier.tutorialTarget(TutorialTarget.PartyButton)
@@ -235,6 +237,7 @@ fun FightScreen(
                     val hasMap = mode == FightMode.Campaign
                     SideButton(
                         icon = "🗺",
+                        image = Resources.UiArt.map,
                         label = "Map",
                         onClick = onOpenMap,
                         enabled = hasMap,
@@ -782,6 +785,8 @@ private fun ModeChip(mode: FightMode, selected: Boolean, onClick: () -> Unit) {
 @Composable
 private fun SideButton(
     icon: String,
+    /** Grafika zamiast emoji [icon] - gdy jest, emoji zostaje tylko jako zapas. */
+    image: DrawableResource? = null,
     label: String,
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
@@ -802,7 +807,11 @@ private fun SideButton(
                 .clickable(enabled = enabled, onClick = onClick),
             contentAlignment = Alignment.Center
         ) {
-            GlyphText(text = icon, fontSize = 20.sp)
+            if (image != null) {
+                Image(painter = painterResource(image), contentDescription = label, modifier = Modifier.size(38.dp))
+            } else {
+                GlyphText(text = icon, fontSize = 20.sp)
+            }
         }
         GlyphText(
             text = label,
