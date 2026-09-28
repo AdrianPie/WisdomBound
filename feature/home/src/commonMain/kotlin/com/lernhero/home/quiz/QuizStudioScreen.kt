@@ -1,5 +1,6 @@
 package com.lernhero.home.quiz
 
+import androidx.compose.ui.draw.drawBehind
 import androidx.compose.foundation.layout.requiredSize
 import com.lernhero.shared.resources.Resources
 import androidx.compose.foundation.Image
@@ -171,7 +172,18 @@ private fun WorkshopHeader(decks: List<CustomDeck>) {
         modifier = Modifier
             .fillMaxWidth()
             .background(Brush.verticalGradient(listOf(Color(0xFF342760), Color(0xFF1B1433))), shape)
-            .border(2.dp, DeckFrame, shape)
+            // Obwodka POD trescia (drawBehind), nie border - border rysuje sie na wierzchu
+            // i przecinal czarodzieja, ktory wychodzi poza panel.
+            .drawBehind {
+                val stroke = 2.dp.toPx()
+                drawRoundRect(
+                    color = DeckFrame,
+                    topLeft = androidx.compose.ui.geometry.Offset(stroke / 2, stroke / 2),
+                    size = androidx.compose.ui.geometry.Size(size.width - stroke, size.height - stroke),
+                    cornerRadius = androidx.compose.ui.geometry.CornerRadius(18.dp.toPx()),
+                    style = androidx.compose.ui.graphics.drawscope.Stroke(stroke)
+                )
+            }
             .padding(14.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp)
     ) {
