@@ -2,23 +2,31 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>GIDServerClientID</key>
-	<string>792351484406-gnr1qsv8m5h449av9k0p7pf1140qkvij.apps.googleusercontent.com</string>
-	<key>GIDClientID</key>
-	<string>792351484406-me2iq0cpj9ogh5fdpphoammjprcetnqe.apps.googleusercontent.com</string>
+	<key>CADisableMinimumFrameDurationOnPhone</key>
+	<true/>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>com.googleusercontent.apps.792351484406-me2iq0cpj9ogh5fdpphoammjprcetnqe</string>
-			</array>
 			<key>CFBundleURLName</key>
 			<string></string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.792351484406-7gedv9o0sh1jgudnv4vog6fb5haqm9q6</string>
+			</array>
 		</dict>
 	</array>
 	<key>GADApplicationIdentifier</key>
 	<string>ca-app-pub-3940256099942544~1458002511</string>
+	<key>GIDClientID</key>
+	<string>792351484406-7gedv9o0sh1jgudnv4vog6fb5haqm9q6.apps.googleusercontent.com</string>
+	<key>GIDServerClientID</key>
+	<string>792351484406-gnr1qsv8m5h449av9k0p7pf1140qkvij.apps.googleusercontent.com</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
+	<key>NSHealthShareUsageDescription</key>
+	<string>WisdomBound reads your steps and workouts to reward you for activity.</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>WisdomBound does not write health data - this permission stays unused.</string>
 	<key>SKAdNetworkItems</key>
 	<array>
 		<dict>
@@ -26,13 +34,5 @@
 			<string>cstr6suwn9.skadnetwork</string>
 		</dict>
 	</array>
-	<key>ITSAppUsesNonExemptEncryption</key>
-	<false/>
-	<key>CADisableMinimumFrameDurationOnPhone</key>
-	<true/>
-	<key>NSHealthShareUsageDescription</key>
-	<string>WisdomBound reads your steps and workouts to reward you for activity.</string>
-	<key>NSHealthUpdateUsageDescription</key>
-	<string>WisdomBound does not write health data - this permission stays unused.</string>
 </dict>
 </plist>
