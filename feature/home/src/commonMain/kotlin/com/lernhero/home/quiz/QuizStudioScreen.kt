@@ -1,5 +1,6 @@
 package com.lernhero.home.quiz
 
+import androidx.compose.foundation.layout.requiredSize
 import com.lernhero.shared.resources.Resources
 import androidx.compose.foundation.Image
 import org.jetbrains.compose.resources.DrawableResource
@@ -107,6 +108,8 @@ fun QuizStudioScreen(
             .padding(horizontal = 14.dp, vertical = 8.dp),
         verticalArrangement = Arrangement.spacedBy(14.dp)
     ) {
+        // Miejsce na czubek kapelusza czarodzieja, ktory wystaje ponad panel.
+        Spacer(modifier = Modifier.height(WIZARD_LIFT))
         WorkshopHeader(decks = state.decks)
 
         Row(
@@ -164,17 +167,18 @@ fun QuizStudioScreen(
 private fun WorkshopHeader(decks: List<CustomDeck>) {
     val shape = RoundedCornerShape(18.dp)
     Column(
+        // Bez clip - czarodziej celowo wychodzi poza ramke panelu (tlo i obwodka rysuja sie ksztaltem).
         modifier = Modifier
             .fillMaxWidth()
-            .clip(shape)
-            .background(Brush.verticalGradient(listOf(Color(0xFF342760), Color(0xFF1B1433))))
+            .background(Brush.verticalGradient(listOf(Color(0xFF342760), Color(0xFF1B1433))), shape)
             .border(2.dp, DeckFrame, shape)
             .padding(14.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp)
     ) {
         Row(horizontalArrangement = Arrangement.spacedBy(12.dp), verticalAlignment = Alignment.CenterVertically) {
             SagePortrait()
-            Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+            // Odstep od czarodzieja, ktory wychodzi poza swoje kolko w prawo.
+            Column(modifier = Modifier.weight(1f).padding(start = 46.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
                 StrokedText(
                     text = "Your Quizzes",
                     size = 21.sp,
@@ -222,40 +226,20 @@ private fun WorkshopHeader(decks: List<CustomDeck>) {
 @Composable
 private fun SagePortrait() {
     val infinite = rememberInfiniteTransition()
-    val spin by infinite.animateFloat(0f, 360f, infiniteRepeatable(tween(24_000, easing = LinearEasing)))
     val bob by infinite.animateFloat(0f, 1f, infiniteRepeatable(tween(1800, easing = FastOutSlowInEasing), RepeatMode.Reverse))
 
-    Box(
-        modifier = Modifier
-            .size(82.dp)
-            .clip(CircleShape)
-            .background(DeckFrame)
-            .padding(3.dp)
-            .clip(CircleShape)
-            .background(Brush.verticalGradient(listOf(Color(0xFF4A3A7E), Color(0xFF1A1330)))),
-        contentAlignment = Alignment.Center
-    ) {
-        Canvas(modifier = Modifier.fillMaxSize().rotate(spin)) {
-            val r = size.minDimension * 0.7f
-            for (i in 0 until 12) {
-                rotate(i * 30f) {
-                    val path = Path().apply {
-                        moveTo(center.x, center.y)
-                        lineTo(center.x - r * 0.1f, center.y - r)
-                        lineTo(center.x + r * 0.1f, center.y - r)
-                        close()
-                    }
-                    drawPath(path, Brush.radialGradient(listOf(Color(0x55FFD98A), Color.Transparent), center, r))
-                }
-            }
-        }
+    // Sam czarodziej, bez ramki - wiekszy niz jego miejsce w ukladzie (requiredSize) i wychodzi
+    // ponad gorna krawedz panelu.
+    Box(modifier = Modifier.size(82.dp), contentAlignment = Alignment.Center) {
         Image(
             painter = painterResource(Resources.UiArt.quizWizard),
             contentDescription = null,
             modifier = Modifier
-                .fillMaxSize()
-                .padding(4.dp)
-                .graphicsLayer { translationY = (3f - bob * 5f) * density }
+                .requiredSize(WIZARD_SIZE)
+                .graphicsLayer {
+                    translationX = 12f * density
+                    translationY = (-WIZARD_LIFT.value + 3f - bob * 5f) * density
+                }
         )
     }
 }
@@ -602,3 +586,7 @@ private fun Hint(text: String) {
 /** Ikona przycisku tworzenia i to, o ile wystaje ponad jego gorna krawedz. */
 private val ICON_SIZE = 104.dp
 private val ICON_LIFT = 26.dp
+
+/** Czarodziej w naglowku - dwa razy wiekszy od kolka i o tyle podniesiony ponad panel. */
+private val WIZARD_SIZE = 160.dp
+private val WIZARD_LIFT = 30.dp
