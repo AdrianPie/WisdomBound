@@ -1,10 +1,9 @@
-TEAM_ID=
+TEAM_ID=74WMHPKVZ9
 
 PRODUCT_NAME=LernHero
-// Nazwa na ekranie glownym. PRODUCT_NAME i bundle id zostaja - sa
-// zarejestrowane w App Store Connect, zmiana = inna aplikacja.
+// Nazwa na ekranie glownym. Bundle id ten sam co applicationId na Androidzie.
 INFOPLIST_KEY_CFBundleDisplayName=WisdomBound
-PRODUCT_BUNDLE_IDENTIFIER=org.apie.lernhero.LernHero
+PRODUCT_BUNDLE_IDENTIFIER=com.intelligentape.wisdombound
 
 CURRENT_PROJECT_VERSION=1
-MARKETING_VERSION=1.7
+MARKETING_VERSION=1.0
