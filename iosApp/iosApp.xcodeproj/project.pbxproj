@@ -19,6 +19,8 @@
 		F7762DD92E5F8562009CFA9B /* FirebaseInAppMessaging-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = F7762DD82E5F8562009CFA9B /* FirebaseInAppMessaging-Beta */; };
 		F7762DDB2E5F8562009CFA9B /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = F7762DDA2E5F8562009CFA9B /* FirebaseMessaging */; };
 		F7762DDD2E5F8562009CFA9B /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = F7762DDC2E5F8562009CFA9B /* FirebaseStorage */; };
+		AA11000000000000000000C1 /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = AA11000000000000000000B1 /* RevenueCat */; };
+		AA11000000000000000000C2 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = AA11000000000000000000B2 /* GoogleMobileAds */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +70,8 @@
 				F7762DCF2E5F8562009CFA9B /* FirebaseAuthCombine-Community in Frameworks */,
 				F7762DDB2E5F8562009CFA9B /* FirebaseMessaging in Frameworks */,
 				F7762DD92E5F8562009CFA9B /* FirebaseInAppMessaging-Beta in Frameworks */,
+				AA11000000000000000000C1 /* RevenueCat in Frameworks */,
+				AA11000000000000000000C2 /* GoogleMobileAds in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +128,8 @@
 				F7762DD82E5F8562009CFA9B /* FirebaseInAppMessaging-Beta */,
 				F7762DDA2E5F8562009CFA9B /* FirebaseMessaging */,
 				F7762DDC2E5F8562009CFA9B /* FirebaseStorage */,
+				AA11000000000000000000B1 /* RevenueCat */,
+				AA11000000000000000000B2 /* GoogleMobileAds */,
 			);
 			productName = iosApp;
 			productReference = B9DA97B12DC1472C00A4DA20 /* LernHero.app */;
@@ -156,6 +162,8 @@
 			packageReferences = (
 				F7762DC42E5F6AF5009CFA9B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				F7762DC52E5F810F009CFA9B /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				AA11000000000000000000A1 /* XCRemoteSwiftPackageReference "purchases-ios-spm" */,
+				AA11000000000000000000A2 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = B9DA97B22DC1472C00A4DA20 /* Products */;
@@ -439,6 +447,22 @@
 				minimumVersion = 9.0.0;
 			};
 		};
+		AA11000000000000000000A1 /* XCRemoteSwiftPackageReference "purchases-ios-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RevenueCat/purchases-ios-spm";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		AA11000000000000000000A2 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -501,6 +525,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F7762DC42E5F6AF5009CFA9B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		AA11000000000000000000B1 /* RevenueCat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA11000000000000000000A1 /* XCRemoteSwiftPackageReference "purchases-ios-spm" */;
+			productName = RevenueCat;
+		};
+		AA11000000000000000000B2 /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA11000000000000000000A2 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

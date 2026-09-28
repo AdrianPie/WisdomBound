@@ -25,6 +25,7 @@ enum MonetizationBridge {
             Purchases.configure(withAPIKey: revenueCatKey)
             Purchases.shared.delegate = PurchasesDelegateHolder.shared
             IosMonetizationBridge.shared.purchases = RevenueCatProvider()
+            IosMonetizationBridge.shared.oneTime = RevenueCatOneTimeProvider()
         }
         #endif
         #if canImport(GoogleMobileAds)
@@ -106,6 +107,45 @@ private final class RevenueCatProvider: NSObject, IosPurchasesProvider {
         case .month: return "month"
         case .year: return "year"
         default: return ""
+        }
+    }
+}
+#endif
+
+#if canImport(RevenueCat)
+/// Paczki diamentow i Legend Pack - te same identyfikatory produktow co w Google Play.
+private final class RevenueCatOneTimeProvider: NSObject, IosOneTimeProvider {
+    private var cache: [String: StoreProduct] = [:]
+
+    private func product(_ id: String, _ completion: @escaping (StoreProduct?) -> Void) {
+        if let cached = cache[id] { completion(cached); return }
+        Purchases.shared.getProducts([id]) { products in
+            let found = products.first { $0.productIdentifier == id }
+            if let found = found { self.cache[id] = found }
+            completion(found)
+        }
+    }
+
+    func price(productId: String, completion: @escaping (String?) -> Void) {
+        product(productId) { completion($0?.localizedPriceString) }
+    }
+
+    func buy(productId: String, completion: @escaping (String) -> Void) {
+        product(productId) { product in
+            guard let product = product else { completion("This offer is not available yet."); return }
+            Purchases.shared.purchase(product: product) { _, info, error, cancelled in
+                publish(info)
+                if cancelled { completion("cancelled") }
+                else if let error = error { completion(error.localizedDescription) }
+                else { completion("success") }
+            }
+        }
+    }
+
+    func owns(productId: String, completion: @escaping (KotlinBoolean) -> Void) {
+        Purchases.shared.getCustomerInfo { info, _ in
+            let owned = info?.nonSubscriptions.contains { $0.productIdentifier == productId } ?? false
+            completion(KotlinBoolean(value: owned))
         }
     }
 }

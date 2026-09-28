@@ -15,6 +15,8 @@ import kotlin.coroutines.resume
 object IosMonetizationBridge {
     var ads: IosAdsProvider? = null
     var purchases: IosPurchasesProvider? = null
+    /** Osobny provider na zakupy jednorazowe - patrz [OneTimePurchases], dlaczego nie w [IosPurchasesProvider]. */
+    var oneTime: IosOneTimeProvider? = null
 
     /** Wolane ze Swifta przy kazdej zmianie CustomerInfo (zakup, odnowienie, wygasniecie). */
     fun setPremium(active: Boolean) {
@@ -36,6 +38,14 @@ interface IosPurchasesProvider {
     /** [completion] dostaje "success", "cancelled" albo tresc bledu. */
     fun purchase(offerId: String, completion: (String) -> Unit)
     fun restore(completion: () -> Unit)
+}
+
+interface IosOneTimeProvider {
+    /** [completion] dostaje cene w walucie gracza albo null, gdy sklep nie zna produktu. */
+    fun price(productId: String, completion: (String?) -> Unit)
+    /** [completion] dostaje "success", "cancelled" albo tresc bledu. */
+    fun buy(productId: String, completion: (String) -> Unit)
+    fun owns(productId: String, completion: (Boolean) -> Unit)
 }
 
 actual fun platformSubscriptionService(): SubscriptionService =
@@ -93,5 +103,30 @@ private class IosRewardedAds(private val provider: IosAdsProvider) : RewardedAds
     }
 }
 
-/** Jednorazowe zakupy na iOS jeszcze nie sa podpiete do mostu Swift. */
-actual fun platformOneTimePurchases(): OneTimePurchases = OneTimePurchases.None
+actual fun platformOneTimePurchases(): OneTimePurchases =
+    IosMonetizationBridge.oneTime?.let(::IosOneTimePurchases) ?: OneTimePurchases.None
+
+private class IosOneTimePurchases(private val provider: IosOneTimeProvider) : OneTimePurchases {
+    override val isAvailable: Boolean = true
+
+    override suspend fun price(productId: String): String? = suspendCancellableCoroutine { cont ->
+        provider.price(productId) { if (cont.isActive) cont.resume(it) }
+    }
+
+    override suspend fun buy(productId: String): PurchaseOutcome = suspendCancellableCoroutine { cont ->
+        provider.buy(productId) { result ->
+            if (!cont.isActive) return@buy
+            cont.resume(
+                when (result) {
+                    "success" -> PurchaseOutcome.Success
+                    "cancelled" -> PurchaseOutcome.Cancelled
+                    else -> PurchaseOutcome.Failed(result)
+                }
+            )
+        }
+    }
+
+    override suspend fun owns(productId: String): Boolean = suspendCancellableCoroutine { cont ->
+        provider.owns(productId) { if (cont.isActive) cont.resume(it) }
+    }
+}
