@@ -1,5 +1,6 @@
 package com.lernhero.home.story
 
+import androidx.compose.foundation.layout.safeDrawingPadding
 import com.lernhero.shared.theme.GlyphText
 import com.lernhero.shared.audio.Sounds
 import com.lernhero.shared.audio.Sfx
@@ -171,12 +172,17 @@ fun BossChestOverlay(
             .fillMaxSize()
             .background(Brush.radialGradient(listOf(Color(0xFF1E1426), Color(0xFF07050B))))
             .clickable(interactionSource = remember { MutableInteractionSource() }, indication = null) {}
-            .padding(16.dp),
+            .safeDrawingPadding()
+            .padding(start = 16.dp, end = 16.dp, top = 16.dp, bottom = 16.dp + bottomInset),
         contentAlignment = Alignment.Center
     ) {
-        // Scena ma pusta gore (tam wyskakuje nagroda), wiec bez podniesienia skrzynia siedzi pod srodkiem.
+      // Przycisk CLAIM/OPEN jest PRZYPIETY do dolu ekranu, a scena nad nim dostaje reszte miejsca.
+      // Wczesniej wszystko bylo jedna wysrodkowana kolumna o stalych wysokosciach - na nizszych
+      // telefonach byla wyzsza niz ekran i przycisk wypadal pod dolna krawedz (nie dalo sie odebrac).
+      Column(modifier = Modifier.fillMaxSize(), horizontalAlignment = Alignment.CenterHorizontally) {
+        ScaleToFit(modifier = Modifier.fillMaxWidth().weight(1f)) {
         Column(
-            modifier = Modifier.fillMaxWidth().padding(bottom = 40.dp + bottomInset),
+            modifier = Modifier.fillMaxWidth(),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.spacedBy(10.dp)
         ) {
@@ -328,6 +334,9 @@ fun BossChestOverlay(
                 }
             }
 
+        }
+        }
+
             val buttonVisible = phase == ChestPhase.Ready || (phase == ChestPhase.Revealed && reveal.value > 0.6f)
             GlyphText(
                 text = if (phase == ChestPhase.Revealed) "CLAIM" else "OPEN",
@@ -346,7 +355,7 @@ fun BossChestOverlay(
                     }
                     .padding(horizontal = 32.dp, vertical = 11.dp)
             )
-        }
+      }
 
         // Blysk w chwili otwarcia - na caly ekran, w kolorze nagrody przechodzacym w biel.
         if (flash.value > 0f) {
@@ -548,3 +557,31 @@ private const val SHAKE_MS = 380
 private const val OPEN_MS = 2000
 private const val FLASH_MS = 550
 private const val FOUNTAIN_MS = 1500
+
+/**
+ * Uklada tresc w jej naturalnej wysokosci i - jesli nie miesci sie w przydzielonym miejscu -
+ * pomniejsza ja proporcjonalnie, wysrodkowana. Scena skrzyni ma stale wymiary (animacje licza
+ * sie w dp), wiec zamiast ja przebudowywac pod kazdy ekran, po prostu ja skalujemy.
+ */
+@Composable
+private fun ScaleToFit(modifier: Modifier = Modifier, content: @Composable () -> Unit) {
+    androidx.compose.ui.layout.Layout(content = content, modifier = modifier) { measurables, constraints ->
+        val placeable = measurables.first().measure(
+            constraints.copy(minHeight = 0, maxHeight = androidx.compose.ui.unit.Constraints.Infinity)
+        )
+        val scale = if (placeable.height > constraints.maxHeight && placeable.height > 0) {
+            constraints.maxHeight.toFloat() / placeable.height
+        } else {
+            1f
+        }
+        layout(constraints.maxWidth, constraints.maxHeight) {
+            placeable.placeWithLayer(
+                x = (constraints.maxWidth - placeable.width) / 2,
+                y = (constraints.maxHeight - placeable.height) / 2
+            ) {
+                scaleX = scale
+                scaleY = scale
+            }
+        }
+    }
+}
