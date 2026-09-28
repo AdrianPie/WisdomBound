@@ -1,5 +1,7 @@
 package com.lernhero.home
 
+import com.lernhero.home.tutorial.TutorialTarget
+import com.lernhero.home.tutorial.tutorialTarget
 import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
@@ -112,7 +114,8 @@ private data class TownSpot(
     val y: Float,
     val width: Float,
     val height: Float,
-    val onClick: () -> Unit
+    val onClick: () -> Unit,
+    val target: TutorialTarget? = null
 )
 
 /**
@@ -162,7 +165,8 @@ fun HomeScreen(
         TownSpot(
             label = "Summon",
             x = 0.280f, y = 0.612f, width = 0.40f, height = 0.164f,
-            onClick = onOpenSummonCenter
+            onClick = onOpenSummonCenter,
+            target = TutorialTarget.SummonAltar
         ),
         TownSpot(
             label = "Forge",
@@ -385,6 +389,7 @@ private fun TownMap(
                         indication = null,
                         onClick = spot.onClick
                     )
+                    .then(spot.target?.let { Modifier.tutorialTarget(it) } ?: Modifier)
             )
 
             // Podpis NIE jest dzieckiem bryly, tylko osobno przypietym elementem - i to celowo.

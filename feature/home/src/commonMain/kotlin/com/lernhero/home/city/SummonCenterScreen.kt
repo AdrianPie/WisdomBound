@@ -1,5 +1,9 @@
 package com.lernhero.home.city
 
+import androidx.compose.runtime.DisposableEffect
+import com.lernhero.home.tutorial.LocalTutorial
+import com.lernhero.home.tutorial.TutorialTarget
+import com.lernhero.home.tutorial.tutorialTarget
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.Animatable
@@ -169,6 +173,11 @@ fun SummonCenterScreen(
         label = "summonFx"
     )
     val busy = show.busy
+
+    // Pokaz summona gra na pelnym ekranie - samouczek chowa sie na ten czas (patrz TutorialController.held).
+    val tutorial = LocalTutorial.current
+    LaunchedEffect(tutorial, busy) { tutorial?.held = busy }
+    DisposableEffect(tutorial) { onDispose { tutorial?.held = false } }
 
     // Zegar odliczania darmowych summonow. Tyka tylko na tym ekranie i tylko w sekcji rytualu -
     // nie ma po co budzic rekompozycji, gdy gracz oglada kolekcje.
@@ -838,7 +847,8 @@ private fun SummonButtons(
             badge = if (freeReady) "★" else "$singleCost",
             highlighted = true,
             enabled = enabled && (freeReady || tickets >= singleCost),
-            onClick = { onSummon(1) }
+            onClick = { onSummon(1) },
+            modifier = Modifier.tutorialTarget(TutorialTarget.FreeSummon)
         )
         SummonPill(
             label = "Summon x10",
@@ -856,13 +866,14 @@ private fun SummonPill(
     badge: String,
     highlighted: Boolean,
     enabled: Boolean,
-    onClick: () -> Unit
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier
 ) {
     val top = if (highlighted) Color(0xFFFFD98A) else Color(0xFFE9C069)
     val bottom = if (highlighted) Color(0xFFEDA429) else Color(0xFFC38C24)
 
     Row(
-        modifier = Modifier
+        modifier = modifier
             .clip(RoundedCornerShape(50))
             .background(
                 if (enabled) Brush.verticalGradient(listOf(top, bottom))

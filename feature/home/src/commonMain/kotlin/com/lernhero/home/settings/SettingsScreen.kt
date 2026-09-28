@@ -193,9 +193,9 @@ fun SettingsScreen(
                         title = strings.settingsHowToPlay,
                         subtitle = strings.settingsHowToPlayHint,
                         onClick = {
-                            // Samouczek rysuje sie nad cala gra (HomeNavGraph) - wracamy na ekran,
-                            // z ktorego przyszedl gracz, i tam go zobaczy.
-                            preferences.requestIntro()
+                            // Samouczek rysuje sie nad cala gra (HomeNavGraph) - wracamy do gry i tam
+                            // zaczyna sie od powitania medrca.
+                            preferences.startTutorial()
                             onBack()
                         }
                     )

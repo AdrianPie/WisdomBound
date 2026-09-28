@@ -94,7 +94,9 @@ fun CharacterCreationScreen(
     // tez na razie schowany (barwienie wygladalo zle) - zostaje domyslny odcien z presetu.
     val appearanceBase = remember { HeroPresets.appearanceOf(HeroPresets.Default) }
     var appearance by remember { mutableStateOf(appearanceBase) }
-    var gift by remember { mutableStateOf(StarterGifts.Default) }
+    // Dar startowy nie jest juz wyborem: kazdy dostaje miecz do plecaka, a zaklada go sam
+    // w samouczku - to jego ostatni krok przed pierwsza walka.
+    val gift = StarterGifts.Sword
     var isSaving by remember { mutableStateOf(false) }
     var errorMessage by remember { mutableStateOf<String?>(null) }
 
@@ -120,8 +122,9 @@ fun CharacterCreationScreen(
             starterGift = gift,
             onSuccess = {
                 isSaving = false
-                // Nowa postac = nowy gracz: na wejsciu do gry czeka na niego krotki samouczek.
-                preferences.requestIntro()
+                // Nowa postac = nowy gracz: w grze czeka na niego samouczek medrca (zakonczy sie
+                // zalozeniem tego miecza i pierwsza walka).
+                preferences.startTutorial()
                 navigateToHome()
             },
             onFailure = { error ->
@@ -154,8 +157,8 @@ fun CharacterCreationScreen(
                 name = name.trim().ifEmpty { t.creationNamePlaceholder },
                 named = name.isNotBlank(),
                 hint = t.creationTapHero,
-                // Dar startowy jest na postaci od pierwszej sekundy gry, wiec zakladamy go juz tutaj.
-                equipment = gift.previewEquipment(),
+                // Bez broni - miecz lezy w plecaku, zaklada go dopiero samouczek.
+                equipment = KnightEquipment(),
                 modifier = Modifier.weight(1f)
             )
 
@@ -192,28 +195,6 @@ fun CharacterCreationScreen(
                     selected = appearance.skinTone,
                     onSelect = { appearance = appearance.copy(skinTone = it) }
                 )
-
-                Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
-                    Row(verticalAlignment = Alignment.Bottom, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                        GameText(text = t.creationGiftTitle, size = 16.sp, color = Color(0xFFFFD34D), strokeWidth = 5f)
-                        Text(t.creationGiftHint, color = Color(0xFFBFA878), fontFamily = FontFirst(), fontSize = 11.sp)
-                    }
-                    // IntrinsicSize.Min - karty maja rozne dlugosci opisow, a bez tego kazda jest
-                    // innej wysokosci i najdluzsza sie przycina.
-                    Row(
-                        modifier = Modifier.fillMaxWidth().height(IntrinsicSize.Min),
-                        horizontalArrangement = Arrangement.spacedBy(8.dp)
-                    ) {
-                        StarterGifts.all.forEach { option ->
-                            GiftCard(
-                                gift = option,
-                                selected = option.id == gift.id,
-                                onClick = { gift = option },
-                                modifier = Modifier.weight(1f).fillMaxHeight()
-                            )
-                        }
-                    }
-                }
 
                 errorMessage?.let { message ->
                     Text(
@@ -357,87 +338,6 @@ private fun SkinRow(
             }
         }
     }
-}
-
-@Composable
-private fun GiftCard(
-    gift: StarterGift,
-    selected: Boolean,
-    onClick: () -> Unit,
-    modifier: Modifier = Modifier
-) {
-    val item = gift.item
-    val scale by animateFloatAsState(if (selected) 1.03f else 1f)
-    Column(
-        modifier = modifier
-            .graphicsLayer { scaleX = scale; scaleY = scale }
-            .clip(RoundedCornerShape(14.dp))
-            .background(
-                if (selected) Brush.verticalGradient(listOf(Color(0xFF4A3212), Color(0xFF2A1A0A)))
-                else Brush.verticalGradient(listOf(Color(0xCC1E1428), Color(0xCC120B1A)))
-            )
-            .border(if (selected) 2.5.dp else 1.5.dp, if (selected) Color(0xFFFFD34D) else Color(0xFF5A4630), RoundedCornerShape(14.dp))
-            .clickable(
-                interactionSource = remember { MutableInteractionSource() },
-                indication = null,
-                onClick = onClick
-            )
-            .padding(horizontal = 6.dp, vertical = 8.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(3.dp)
-    ) {
-        Text(gift.icon(), fontSize = 26.sp)
-        Text(
-            text = item?.name.orEmpty(),
-            color = if (selected) Color(0xFFFFD34D) else Color(0xFFEADFC8),
-            fontFamily = FontFirst(),
-            fontWeight = FontWeight.Black,
-            fontSize = 12.sp,
-            textAlign = TextAlign.Center,
-            maxLines = 2
-        )
-        Text(
-            text = gift.statLine(),
-            color = Color(0xFF8BE05A),
-            fontFamily = FontFirst(),
-            fontWeight = FontWeight.Bold,
-            fontSize = 11.sp,
-            textAlign = TextAlign.Center
-        )
-    }
-}
-
-/* --------------------------------- pomocnicze --------------------------------- */
-
-/**
- * Podglad daru na postaci. Rysowanie bohatera zna tylko sloty ("cos w rece"), nie konkretne
- * przedmioty - patrz [KnightEquipment].
- */
-private fun StarterGift.previewEquipment(): KnightEquipment = when (id) {
-    StarterGifts.Sword.id -> KnightEquipment(mainHand = true)
-    StarterGifts.Armor.id -> KnightEquipment(chest = true)
-    StarterGifts.Boots.id -> KnightEquipment(feet = true)
-    else -> KnightEquipment.Empty
-}
-
-private fun StarterGift.icon(): String = when (id) {
-    StarterGifts.Sword.id -> "⚔️"
-    StarterGifts.Armor.id -> "🦺"
-    StarterGifts.Boots.id -> "🥾"
-    else -> "🎁"
-}
-
-/** Krotko, co dar daje - "Atk +5", "HP +12 Def +1" - zeby wybor nie byl w ciemno. */
-private fun StarterGift.statLine(): String {
-    val stats = item?.stats ?: return ""
-    return listOf(
-        StatType.Attack to "Atk",
-        StatType.MaxHp to "HP",
-        StatType.Defense to "Def",
-        StatType.Speed to "Spd"
-    ).mapNotNull { (stat, label) ->
-        stats[stat].takeIf { it != 0f }?.let { "$label +${it.toInt()}" }
-    }.joinToString(" ")
 }
 
 private object HeroNames {

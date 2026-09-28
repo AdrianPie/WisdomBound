@@ -1,5 +1,7 @@
 package com.lernhero.home.equipment
 
+import com.lernhero.home.tutorial.TutorialTarget
+import com.lernhero.home.tutorial.tutorialTarget
 import com.lernhero.shared.theme.StrokedText
 import com.lernhero.home.city.compact
 
@@ -223,7 +225,14 @@ fun EquipmentDialog(
             // Tapniecie zajetego slotu POKAZUJE przedmiot, a nie zdejmuje go po cichu - to jedyny
             // moment, w ktorym da sie zobaczyc, co ta rzecz w ogole robi.
             val equipped = state.instanceIn(slot)
-            if (equipped != null) inspected = equipped else pickerSlot = slot
+            val owned = state.ownedFor(slot)
+            when {
+                equipped != null -> inspected = equipped
+                // Jedyna rzecz, ktora pasuje do slotu (np. miecz nowego gracza) - od razu jej karta
+                // z EQUIP, bez listy z jedna pozycja. Tak tez idzie krok samouczka "zaloz miecz".
+                owned.size == 1 -> inspected = owned.first().first
+                else -> pickerSlot = slot
+            }
         },
         onBackpack = { backpackOpen = true },
         onTalents = { talentsOpen = true },
@@ -236,6 +245,7 @@ fun EquipmentDialog(
             .align(Alignment.BottomCenter)
             .navigationBarsPadding()
             .padding(bottom = 14.dp)
+            .tutorialTarget(TutorialTarget.HeroClose)
     )
   }
 
@@ -838,8 +848,10 @@ private fun GearSlot(
     size: Dp,
     onClick: () -> Unit
 ) {
+    // Slot broni to cel samouczka - "zaloz miecz" zaczyna sie od tapniecia w niego.
+    val tutorial = if (slot == ItemSlot.MainHand) Modifier.tutorialTarget(TutorialTarget.WeaponSlot) else Modifier
     if (item != null) {
-        Box(modifier = Modifier.clickable(onClick = onClick)) {
+        Box(modifier = Modifier.clickable(onClick = onClick).then(tutorial)) {
             ItemIcon(item = item, level = level, rarity = RarityPalette.frame(item.rarity), size = size)
         }
         return
@@ -851,7 +863,8 @@ private fun GearSlot(
             .clip(RoundedCornerShape(size * 0.17f))
             .background(Inset)
             .border(2.dp, FrameLight, RoundedCornerShape(size * 0.17f))
-            .clickable(onClick = onClick),
+            .clickable(onClick = onClick)
+            .then(tutorial),
         contentAlignment = Alignment.Center
     ) {
         Text(

@@ -74,8 +74,9 @@ class PlayerRepositoryImpl: PlayerRepository {
         try {
             if (user != null) {
                 val playerCollection = Firebase.firestore.collection(collectionPath = "player")
-                // Dar startowy trafia i do plecaka, i do zalozonego ekwipunku - gracz ma go miec
-                // na sobie w pierwszej walce, a nie do odszukania w menu.
+                // Dar startowy (miecz) trafia TYLKO do plecaka - zaklada go sam gracz w ostatnim
+                // kroku samouczka, tuz przed pierwsza walka. Kto samouczek pominie, dostaje go
+                // zalozonego automatycznie (patrz HomeNavGraph, TutorialHost.onSkip).
                 val giftItem = starterGift?.item
                 val player = Player(
                     id = user.uid,
@@ -86,11 +87,6 @@ class PlayerRepositoryImpl: PlayerRepository {
                     // Nowe konto rodzi sie juz w formacie sztuk - zaden nowy gracz nie przechodzi
                     // przez migracje starego plecaka.
                     heroInventory = giftItem?.let { Inventory.add(emptyList(), it.id) } ?: emptyList(),
-                    equipment = PlayerEquipment(
-                        equipped = giftItem?.let {
-                            mapOf(it.slot.name to "${it.id}${Inventory.UID_SEPARATOR}0")
-                        } ?: emptyMap()
-                    ),
                 )
 
                 val playerExists = playerCollection.document(user.uid).get().exists

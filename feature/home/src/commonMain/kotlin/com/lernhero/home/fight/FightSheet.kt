@@ -1,5 +1,7 @@
 package com.lernhero.home.fight
 
+import com.lernhero.home.tutorial.TutorialTarget
+import com.lernhero.home.tutorial.tutorialTarget
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
@@ -51,6 +53,8 @@ fun FightSheet(
     modifier: Modifier = Modifier,
     /** Jedna linijka pod tytulem - po co tu wlasciwie jestesmy. */
     subtitle: String? = null,
+    /** Cel samouczka na krzyzyku - okno druzyny prosi o zamkniecie w jednym z krokow. */
+    closeTarget: TutorialTarget? = null,
     content: @Composable ColumnScope.() -> Unit
 ) {
     Box(modifier = modifier.fillMaxSize()) {
@@ -89,6 +93,7 @@ fun FightSheet(
                 .align(Alignment.BottomCenter)
                 .navigationBarsPadding()
                 .padding(bottom = 14.dp)
+                .then(closeTarget?.let { Modifier.tutorialTarget(it) } ?: Modifier)
         )
     }
 }

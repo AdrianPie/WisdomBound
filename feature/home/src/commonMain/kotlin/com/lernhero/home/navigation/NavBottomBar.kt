@@ -1,5 +1,7 @@
 package com.lernhero.home.navigation
 
+import com.lernhero.home.tutorial.TutorialTarget
+import com.lernhero.home.tutorial.tutorialTarget
 import com.lernhero.shared.audio.Sounds
 import com.lernhero.shared.audio.Sfx
 import androidx.compose.animation.animateColorAsState
@@ -137,7 +139,15 @@ fun NavBottomBar(
                     destination = destination,
                     selected = selected == destination,
                     onClick = { Sounds.play(Sfx.Tap); onSelect(destination) },
-                    modifier = Modifier.weight(1f)
+                    modifier = Modifier
+                        .weight(1f)
+                        .then(
+                            if (destination == BottomBarDestination.Fight) {
+                                Modifier.tutorialTarget(TutorialTarget.NavFight)
+                            } else {
+                                Modifier
+                            }
+                        )
                 )
             }
         }

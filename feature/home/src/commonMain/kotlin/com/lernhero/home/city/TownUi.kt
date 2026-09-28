@@ -1,5 +1,7 @@
 package com.lernhero.home.city
 
+import com.lernhero.home.tutorial.TutorialTarget
+import com.lernhero.home.tutorial.tutorialTarget
 import com.lernhero.shared.theme.GlyphText
 import com.lernhero.shared.audio.Sounds
 import com.lernhero.shared.audio.Sfx
@@ -244,7 +246,8 @@ private fun BackButton(onBack: () -> Unit) {
             .clip(CircleShape)
             .background(Brush.verticalGradient(listOf(Color(0xFF5A3F24), Color(0xFF2C1D10))))
             .border(2.5.dp, Outline, CircleShape)
-            .clickable(onClick = onBack),
+            .clickable(onClick = onBack)
+            .tutorialTarget(TutorialTarget.TownBack),
         contentAlignment = Alignment.Center
     ) {
         Box(

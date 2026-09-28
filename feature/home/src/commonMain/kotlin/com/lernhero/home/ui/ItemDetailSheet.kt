@@ -1,5 +1,7 @@
 package com.lernhero.home.ui
 
+import com.lernhero.home.tutorial.TutorialTarget
+import com.lernhero.home.tutorial.tutorialTarget
 import androidx.compose.foundation.background
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.offset
@@ -230,7 +232,9 @@ fun ItemDetailSheet(
                     ParchmentButton(
                         text = "EQUIP",
                         onClick = onEquip,
-                        modifier = Modifier.weight(1f)
+                        modifier = Modifier
+                            .weight(1f)
+                            .tutorialTarget(TutorialTarget.EquipButton)
                     )
                 }
                 ParchmentButton(

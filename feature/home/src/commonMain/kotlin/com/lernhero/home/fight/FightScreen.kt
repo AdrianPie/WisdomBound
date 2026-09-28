@@ -1,5 +1,7 @@
 package com.lernhero.home.fight
 
+import com.lernhero.home.tutorial.TutorialTarget
+import com.lernhero.home.tutorial.tutorialTarget
 import com.lernhero.shared.theme.GlyphText
 import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.RepeatMode
@@ -216,7 +218,12 @@ fun FightScreen(
                     modifier = Modifier.align(Alignment.TopStart),
                     verticalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
-                    SideButton(icon = "🛡", label = "Party", onClick = onOpenParty)
+                    SideButton(
+                        icon = "🛡",
+                        label = "Party",
+                        onClick = onOpenParty,
+                        modifier = Modifier.tutorialTarget(TutorialTarget.PartyButton)
+                    )
                     // Mapa wybiera KRAINE kampanii - w wyprawie nie ma jej czym wypelnic, bo
                     // wyprawa nie zna krain, tylko poziom drabinki. Przycisk, ktory nic by nie
                     // otwieral, jest gorszy niz jego brak - wiec w wyprawie go nie widac.
@@ -565,6 +572,7 @@ private fun StartButton(
     Box(
         modifier = modifier
             .height(BUTTON_HEIGHT + DEPTH)
+            .tutorialTarget(TutorialTarget.StartButton)
             // Klikalny ZAWSZE: bez energii tapniecie otwiera okno doladowania (patrz
             // [com.lernhero.home.ui.EnergyRefillDialog]), a nie martwy, szary przycisk.
             .clickable(

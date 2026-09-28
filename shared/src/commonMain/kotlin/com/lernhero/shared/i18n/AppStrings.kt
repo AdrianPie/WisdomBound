@@ -161,20 +161,26 @@ interface AppStrings {
     val creationTapHero: String
     val creationNamePlaceholder: String
 
-    /* ---- intro tutorial (raz, po stworzeniu postaci; potem z Ustawien) ---- */
-    val introSkip: String
-    val introNext: String
-    val introStart: String
-    val introPages: List<IntroPage>
+    /* ---- samouczek (po stworzeniu postaci; powtorka z Ustawien) ---- */
+    val tutorialNext: String
+    val tutorialSkip: String
+    fun tutorialWelcome(name: String): String
+    val tutorialSummonAltar: String
+    val tutorialFreeSummon: String
+    val tutorialLeaveSummon: String
+    val tutorialFightTab: String
+    val tutorialOpenParty: String
+    val tutorialPlaceMonster: String
+    val tutorialCloseParty: String
+    val tutorialOpenHero: String
+    val tutorialWeaponSlot: String
+    val tutorialEquip: String
+    val tutorialCloseHero: String
+    val tutorialStart: String
     val settingsHowToPlay: String
     val settingsHowToPlayHint: String
 }
 
-/**
- * Jedna karta samouczka. [icon] to emoji - emoji walut (⚡, 💎) rysuja sie w tresci jako
- * obrazki gry, patrz CurrencyGlyph.
- */
-data class IntroPage(val icon: String, val title: String, val body: String)
 
 /** English - the default and the language the app ships with. */
 object EnStrings : AppStrings {
@@ -326,36 +332,24 @@ object EnStrings : AppStrings {
     override val creationRandomName = "Random"
     override val creationTapHero = "Tap the hero to swing"
     override val creationNamePlaceholder = "Nameless"
-    override val introSkip = "Skip"
-    override val introNext = "Next"
-    override val introStart = "Let's go!"
-    override val introPages = listOf(
-        IntroPage(
-            icon = "🧙",
-            title = "Welcome, hero!",
-            body = "Here you get stronger by learning. Every battle is a quiz - answer right and fast to hit hard."
-        ),
-        IntroPage(
-            icon = "⚔️",
-            title = "Fight",
-            body = "In the Fight tab, Campaign takes you land by land and Endless sends wave after wave. " +
-                "Each battle costs ⚡ energy, which refills on its own."
-        ),
-        IntroPage(
-            icon = "🐉",
-            title = "Grow your party",
-            body = "Summon monsters to fight at your side, upgrade your gear and unlock talents. " +
-                "Gold and 💎 gems come from battles, chests and daily goals."
-        ),
-        IntroPage(
-            icon = "📚",
-            title = "Learn what you want",
-            body = "In Quizzes, write your own questions or let AI make them - then battle with them. " +
-                "In Growth, read books and train to earn extra rewards."
-        )
-    )
+    override val tutorialNext = "Let's go!"
+    override val tutorialSkip = "Skip tutorial"
+    override fun tutorialWelcome(name: String) =
+        "Welcome, $name! I'm the Sage. Let's get you ready for your first battle - it only takes a minute."
+    override val tutorialSummonAltar = "Heroes never fight alone. Tap the Summon altar to call your first companion."
+    override val tutorialFreeSummon = "Your first summon is free - tap it!"
+    override val tutorialLeaveSummon = "What a catch! Now head back to town."
+    override val tutorialFightTab = "Time to get ready for battle. Open the Fight tab."
+    override val tutorialOpenParty = "Open your Party - your new companion is waiting to join."
+    override val tutorialPlaceMonster = "Tap your companion to put it in the party."
+    override val tutorialCloseParty = "Great team! Close the party window."
+    override val tutorialOpenHero = "You got a sword at the start, but you're not holding it yet. Tap your portrait."
+    override val tutorialWeaponSlot = "Your weapon slot is empty. Tap it and pick the sword."
+    override val tutorialEquip = "Tap EQUIP to take up your sword."
+    override val tutorialCloseHero = "Now you look like a hero! Close your hero card."
+    override val tutorialStart = "All set. Tap START! Answer right and fast to hit hard."
     override val settingsHowToPlay = "How to play"
-    override val settingsHowToPlayHint = "Replay the short intro"
+    override val settingsHowToPlayHint = "Replay the tutorial"
 }
 
 /** Polish - the original dev language, kept as a full alternative. */
@@ -508,36 +502,24 @@ object PlStrings : AppStrings {
     override val creationRandomName = "Losuj"
     override val creationTapHero = "Tapnij bohatera, zeby machnal mieczem"
     override val creationNamePlaceholder = "Bezimienny"
-    override val introSkip = "Pomin"
-    override val introNext = "Dalej"
-    override val introStart = "Zaczynamy!"
-    override val introPages = listOf(
-        IntroPage(
-            icon = "🧙",
-            title = "Witaj, bohaterze!",
-            body = "Tutaj stajesz sie silniejszy, uczac sie. Kazda walka to quiz - odpowiadaj dobrze i szybko, a zadasz mocne ciosy."
-        ),
-        IntroPage(
-            icon = "⚔️",
-            title = "Walka",
-            body = "W zakladce Walcz kampania prowadzi cie kraina po krainie, a Endless rzuca fala za fala. " +
-                "Kazda walka kosztuje ⚡ energie, ktora odnawia sie sama."
-        ),
-        IntroPage(
-            icon = "🐉",
-            title = "Rozwijaj druzyne",
-            body = "Przyzywaj potwory, ktore walcza u twojego boku, ulepszaj ekwipunek i odblokowuj talenty. " +
-                "Zloto i 💎 klejnoty zdobywasz w walkach, skrzyniach i celach dziennych."
-        ),
-        IntroPage(
-            icon = "📚",
-            title = "Ucz sie tego, czego chcesz",
-            body = "W Quizach napiszesz wlasne pytania albo wygenerujesz je przez AI - i walczysz nimi. " +
-                "W zakladce Rozwoj czytaj ksiazki i trenuj, zeby zdobywac dodatkowe nagrody."
-        )
-    )
+    override val tutorialNext = "Zaczynamy!"
+    override val tutorialSkip = "Pomin samouczek"
+    override fun tutorialWelcome(name: String) =
+        "Witaj, $name! Jestem Medrzec. Przygotujmy cie do pierwszej walki - to zajmie tylko chwile."
+    override val tutorialSummonAltar = "Bohater nigdy nie walczy sam. Tapnij oltarz przyzywania, zeby wezwac pierwszego towarzysza."
+    override val tutorialFreeSummon = "Pierwsze przyzwanie jest darmowe - tapnij!"
+    override val tutorialLeaveSummon = "Swietny nabytek! Wracaj do miasta."
+    override val tutorialFightTab = "Czas przygotowac sie do walki. Otworz zakladke Walcz."
+    override val tutorialOpenParty = "Otworz Party - twoj nowy towarzysz czeka, zeby dolaczyc."
+    override val tutorialPlaceMonster = "Tapnij towarzysza, zeby dodac go do druzyny."
+    override val tutorialCloseParty = "Swietna druzyna! Zamknij okno."
+    override val tutorialOpenHero = "Na start dostales miecz, ale jeszcze go nie trzymasz. Tapnij swoj portret."
+    override val tutorialWeaponSlot = "Slot broni jest pusty. Tapnij go i wybierz miecz."
+    override val tutorialEquip = "Tapnij EQUIP, zeby chwycic miecz."
+    override val tutorialCloseHero = "Teraz wygladasz jak bohater! Zamknij karte postaci."
+    override val tutorialStart = "Wszystko gotowe. Tapnij START! Odpowiadaj dobrze i szybko, a zadasz mocne ciosy."
     override val settingsHowToPlay = "Jak grac"
-    override val settingsHowToPlayHint = "Obejrzyj jeszcze raz krotki samouczek"
+    override val settingsHowToPlayHint = "Przejdz samouczek jeszcze raz"
 }
 
 fun stringsFor(language: AppLanguage): AppStrings = when (language) {

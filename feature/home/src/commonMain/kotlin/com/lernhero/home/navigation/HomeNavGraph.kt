@@ -58,7 +58,11 @@ import com.lernhero.home.quiz.DeckEditorScreen
 import com.lernhero.home.settings.SettingsScreen
 import com.lernhero.home.progress.ProgressScreen
 import com.lernhero.home.quiz.QuizStudioScreen
-import com.lernhero.home.ui.IntroTutorial
+import com.lernhero.home.tutorial.LocalTutorial
+import com.lernhero.home.tutorial.TutorialController
+import com.lernhero.home.tutorial.TutorialHost
+import com.lernhero.home.tutorial.TutorialStep
+import com.lernhero.domain.item.ItemSlot
 import com.lernhero.shared.prefs.AppPreferences
 import com.lernhero.reader.ReaderChrome
 import com.lernhero.reader.VocabularyScreen
@@ -198,6 +202,7 @@ fun HomeNavGraph(
     }
     val runSession = koinInject<RunSession>()
     val preferences = koinInject<AppPreferences>()
+    val tutorial = remember(preferences) { TutorialController(preferences) }
     // Ta sama instancja, ktora czyta [CampaignBoard] - "gdzie na mapie stoje" ma byc JEDNYM
     // stanem, dzielonym miedzy kropkami na scenie i plansza, ktora otworzy sie po START.
     val selection = koinInject<CampaignSelection>()
@@ -215,8 +220,14 @@ fun HomeNavGraph(
     // Quizach przestawia oba naraz (talia jako material, tryb Endless) i dopiero wtedy przechodzi
     // na Walke.
     var fightMode by rememberSaveable { mutableStateOf(FightMode.Endless.name) }
+    // Ostatni krok samouczka to pierwsza walka w KAMPANII (plansza 1-1), a nie w wyprawie -
+    // wiec zanim gracz dojdzie do START-u, przelacznik trybu musi stac na kampanii.
+    LaunchedEffect(tutorial.step) {
+        if (tutorial.step == TutorialStep.StartBattle) fightMode = FightMode.Campaign.name
+    }
     // Pasek systemowy + wysokosc paska gry - tyle miejsca u gory nalezy do chromu, nie do ekranu.
     val topBarSpace = WindowInsets.systemBars.asPaddingValues().calculateTopPadding() + TOP_BAR_HEIGHT
+    CompositionLocalProvider(LocalTutorial provides tutorial) {
     Box(modifier = Modifier.fillMaxSize()) {
         // Tlo calej apki - jedna warstwa pod wszystkim, widoczna na kazdej zakladce
         // (rowniez pod bottom barem/top barem, ktore nakladaja sie na wierzchu).
@@ -800,10 +811,31 @@ fun HomeNavGraph(
         )
 
         // Samouczek na samym wierzchu - nad paskami i oknami. Wlacza go stworzenie postaci albo
-        // "Jak grac" w Ustawieniach (patrz [AppPreferences.introPending]).
-        if (preferences.introPending) {
-            IntroTutorial(onDone = preferences::finishIntro)
+        // "Jak grac" w Ustawieniach (patrz [AppPreferences.tutorialStep]).
+        if (tutorial.step != null) {
+            val tutorialState by playerViewModel.uiState.collectAsState()
+            TutorialHost(
+                controller = tutorial,
+                heroName = tutorialState.name,
+                freeSummonReady = FreeSummon.isReady(
+                    tutorialState.freeSummonClaims[FreeSummon.BASIC_BANNER],
+                    FreeSummon.BASIC_COOLDOWN_MS,
+                    Clock.System.now().toEpochMilliseconds()
+                ),
+                partyFilled = tutorialState.partyMonsters.any { it != null },
+                weaponEquipped = tutorialState.instanceIn(ItemSlot.MainHand) != null,
+                onSkip = {
+                    // Kto pomija samouczek, nie moze zostac z mieczem w plecaku - zakladamy go sami.
+                    if (tutorialState.instanceIn(ItemSlot.MainHand) == null) {
+                        tutorialState.ownedFor(ItemSlot.MainHand).firstOrNull()?.let { (instance, _) ->
+                            playerViewModel.equipItem(instance)
+                        }
+                    }
+                    tutorial.finish()
+                }
+            )
         }
+    }
     }
 }
 

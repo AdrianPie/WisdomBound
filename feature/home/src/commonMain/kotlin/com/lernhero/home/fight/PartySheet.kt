@@ -1,5 +1,7 @@
 package com.lernhero.home.fight
 
+import com.lernhero.home.tutorial.TutorialTarget
+import com.lernhero.home.tutorial.tutorialTarget
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.animateDpAsState
@@ -113,7 +115,8 @@ fun PartySheet(
     FightSheet(
         title = "PARTY",
         subtitle = "Tap a slot, then pick who stands there.",
-        onClose = onClose
+        onClose = onClose,
+        closeTarget = TutorialTarget.PartyClose
     ) {
         Row(
             modifier = Modifier.fillMaxWidth(),
@@ -207,12 +210,14 @@ fun PartySheet(
                 horizontalArrangement = Arrangement.spacedBy(gap),
                 verticalArrangement = Arrangement.spacedBy(gap)
             ) {
-                shown.forEach { card ->
+                shown.forEachIndexed { index, card ->
                     CompanionAvatar(
                         card = card,
                         level = levelOf(card.id),
                         stars = starsOf(card.id),
-                        modifier = Modifier.width(tile),
+                        modifier = Modifier
+                            .width(tile)
+                            .then(if (index == 0) Modifier.tutorialTarget(TutorialTarget.ReserveMonster) else Modifier),
                         onClick = {
                             // Wstawiamy w zaznaczone miejsce, a potem przesuwamy zaznaczenie na
                             // kolejne wolne - kompletowanie skladu ma byc ciagiem tapniec, a nie

@@ -88,22 +88,20 @@ class AppPreferences(private val settings: Settings = Settings()) {
     }
 
     /**
-     * Czy przy wejsciu do gry pokazac krotki samouczek. Ustawiany TYLKO przy stworzeniu postaci
-     * (i przyciskiem "Jak grac" w Ustawieniach) - nie z poziomu gracza, bo ten wczytuje sie z bazy
-     * z opoznieniem i doswiadczony gracz mignalby przez chwile samouczkiem. Obecni gracze po
-     * aktualizacji go wiec nie zobacza, a nowi - dokladnie raz.
+     * Biezacy krok samouczka (nazwa kroku z feature/home `TutorialStep`), null = brak samouczka.
+     *
+     * Zaczyna sie TYLKO przy stworzeniu postaci (i przyciskiem "Jak grac" w Ustawieniach) - nie
+     * z poziomu gracza, bo ten wczytuje sie z bazy z opoznieniem i doswiadczony gracz mignalby
+     * samouczkiem. Krok jest zapisywany, wiec zamkniecie apki w polowie wraca do tego samego miejsca.
      */
-    var introPending: Boolean by mutableStateOf(settings[KEY_INTRO_PENDING, false])
+    var tutorialStep: String? by mutableStateOf(settings.getStringOrNull(KEY_TUTORIAL_STEP))
         private set
 
-    fun requestIntro() {
-        introPending = true
-        settings[KEY_INTRO_PENDING] = true
-    }
+    fun startTutorial() = moveTutorialTo(TUTORIAL_FIRST_STEP)
 
-    fun finishIntro() {
-        introPending = false
-        settings[KEY_INTRO_PENDING] = false
+    fun moveTutorialTo(step: String?) {
+        tutorialStep = step
+        if (step == null) settings.remove(KEY_TUTORIAL_STEP) else settings[KEY_TUTORIAL_STEP] = step
     }
 
     fun chooseBattleSpeed(multiplier: Float) {
@@ -137,7 +135,10 @@ class AppPreferences(private val settings: Settings = Settings()) {
         private const val KEY_DAILY_HOUR = "prefs_daily_goal_hour"
         private const val KEY_BATTLE_SPEED = "prefs_battle_speed"
         private const val KEY_SOUND = "prefs_sound_enabled"
-        private const val KEY_INTRO_PENDING = "prefs_intro_pending"
+        private const val KEY_TUTORIAL_STEP = "prefs_tutorial_step"
+
+        /** Musi byc nazwa pierwszego wpisu `TutorialStep` w feature/home. */
+        const val TUTORIAL_FIRST_STEP = "Welcome"
         private const val SEPARATOR = ','
     }
 }

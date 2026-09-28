@@ -1,5 +1,7 @@
 package com.lernhero.home.ui
 
+import com.lernhero.home.tutorial.TutorialTarget
+import com.lernhero.home.tutorial.tutorialTarget
 import com.lernhero.shared.theme.GlyphText
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -186,6 +188,7 @@ fun GameTopBar(
                 modifier = Modifier
                     .offset(x = 4.dp, y = 6.dp)
                     .clickable(onClick = onOpenCharacter)
+                    .tutorialTarget(TutorialTarget.Portrait)
             ) {
                 HeroPortrait(knight = knight, look = look, level = level)
             }
