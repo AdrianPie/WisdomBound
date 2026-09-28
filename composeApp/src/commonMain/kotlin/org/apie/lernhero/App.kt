@@ -6,7 +6,9 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.navigationBars
+import androidx.compose.foundation.layout.WindowInsetsSides
+import androidx.compose.foundation.layout.only
+import androidx.compose.foundation.layout.tappableElement
 import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.safeContentPadding
@@ -68,14 +70,15 @@ fun App() {
             appReady = true
         }
         AnimatedVisibility(
-            // Gra rysuje sie pod paskami systemowymi, ale NIE pod dolna nawigacja telefonu: na
-            // telefonach z trzema przyciskami zakrywala dolne menu i przyciski typu CONFIRM.
-            // Odstep tutaj, w korzeniu, zalatwia to dla kazdego ekranu naraz; pasek pod spodem
-            // dostaje ciemne tlo gry zamiast przypadkowego fragmentu ekranu.
+            // Gra rysuje sie pod paskami systemowymi, ale NIE pod przyciskami nawigacji telefonu:
+            // na telefonach z trzema przyciskami zakrywaly dolne menu i przyciski typu CONFIRM.
+            // tappableElement to tylko to, w co mozna kliknac - trzy przyciski maja wysokosc, a
+            // cienka belka nawigacji gestami ma zero. Dzieki temu przy gestach menu schodzi do
+            // samego dolu jak wczesniej, bez pustego paska pod spodem.
             modifier = Modifier
                 .fillMaxSize()
                 .background(AppBackground)
-                .windowInsetsPadding(WindowInsets.navigationBars),
+                .windowInsetsPadding(WindowInsets.tappableElement.only(WindowInsetsSides.Bottom)),
             visible = appReady
         ) {
 
