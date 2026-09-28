@@ -1,5 +1,11 @@
 package com.lernhero.home.story
 
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.graphics.lerp
+import com.lernhero.shared.theme.StrokedText
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -164,45 +170,126 @@ private fun TierTabs(
             .fillMaxWidth()
             .background(Ink)
             .padding(horizontal = 10.dp, vertical = 8.dp),
-        horizontalArrangement = Arrangement.spacedBy(6.dp)
+        horizontalArrangement = Arrangement.spacedBy(6.dp),
+        verticalAlignment = Alignment.CenterVertically
     ) {
         RunDifficulty.entries.forEach { entry ->
-            val unlocked = StoryProgress.isTierUnlocked(cleared, entry)
-            val isSelected = entry == selected
+            TierTab(
+                entry = entry,
+                unlocked = StoryProgress.isTierUnlocked(cleared, entry),
+                selected = entry == selected,
+                onClick = { onSelect(entry) },
+                modifier = Modifier.weight(1f)
+            )
+        }
+    }
+}
+
+/**
+ * Zakladka trudnosci jako growy przycisk: lico na ciemnej "wardze", ktora daje mu glebokosc.
+ *
+ * Kazdy poziom ma wlasny kolor (patrz [accent]) - od chlodnego Normal po ognisty Death - zeby
+ * wybrany poziom bylo widac z daleka, a nie tylko po cienkiej ramce. Wybrana zakladka jest pelna
+ * i blyszczaca, pozostale przygaszone w swoim kolorze, zablokowane - ciemne z klodka.
+ */
+@Composable
+private fun TierTab(
+    entry: RunDifficulty,
+    unlocked: Boolean,
+    selected: Boolean,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    val accent = entry.accent()
+    val shape = RoundedCornerShape(10.dp)
+    val scale by animateFloatAsState(if (selected) 1f else 0.94f, label = "tierScale")
+
+    val face = when {
+        !unlocked -> Brush.verticalGradient(listOf(Color(0xFF1A1611), Color(0xFF110E0A)))
+        selected -> Brush.verticalGradient(
+            listOf(lerp(accent, Color.White, 0.22f), accent, lerp(accent, Color.Black, 0.35f))
+        )
+        else -> Brush.verticalGradient(
+            listOf(lerp(accent, Color(0xFF15110C), 0.72f), Color(0xFF15110C))
+        )
+    }
+    val edge = when {
+        !unlocked -> Color(0xFF2A241C)
+        selected -> lerp(accent, Color.White, 0.45f)
+        else -> accent.copy(alpha = 0.45f)
+    }
+    val lip = if (selected) lerp(accent, Color.Black, 0.6f) else Color(0xFF080604)
+
+    Box(
+        modifier = modifier
+            .graphicsLayer {
+                scaleX = scale
+                scaleY = scale
+            }
+            .clip(shape)
+            .background(lip)
+            .clickable(enabled = unlocked, onClick = onClick)
+            .padding(bottom = 3.dp)
+    ) {
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(TIER_TAB_HEIGHT)
+                .clip(shape)
+                .background(face)
+                .border(if (selected) 2.dp else 1.dp, edge, shape)
+        ) {
+            // Polysk na gornej polowie lica - tylko na wybranej, reszta ma zostac matowa.
+            if (selected) {
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .fillMaxHeight(0.5f)
+                        .background(Brush.verticalGradient(listOf(Color.White.copy(alpha = 0.28f), Color.Transparent)))
+                )
+            }
             Column(
-                modifier = Modifier
-                    .weight(1f)
-                    .clip(RoundedCornerShape(9.dp))
-                    .background(if (isSelected) Panel else Color.Transparent)
-                    .border(
-                        width = if (isSelected) 2.dp else 1.dp,
-                        color = when {
-                            !unlocked -> Color(0xFF2A241C)
-                            isSelected -> GoldText
-                            else -> FrameDim
-                        },
-                        shape = RoundedCornerShape(9.dp)
-                    )
-                    .clickable(enabled = unlocked) { onSelect(entry) }
-                    .padding(vertical = 7.dp),
+                modifier = Modifier.align(Alignment.Center),
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.spacedBy(1.dp)
             ) {
-                Text(text = if (unlocked) entry.icon else "🔒", fontSize = 14.sp)
                 Text(
-                    text = entry.label,
-                    color = when {
-                        !unlocked -> Color(0xFF4A4038)
-                        isSelected -> GoldText
-                        else -> Muted
-                    },
-                    fontFamily = FontFirst(),
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 9.sp
+                    text = if (unlocked) entry.icon else "🔒",
+                    fontSize = if (selected) 20.sp else 16.sp,
+                    modifier = Modifier.alpha(if (unlocked) 1f else 0.45f)
                 )
+                if (selected) {
+                    StrokedText(
+                        text = entry.label,
+                        size = 11.sp,
+                        color = Color.White,
+                        outline = lerp(accent, Color.Black, 0.65f),
+                        strokeWidth = 4f,
+                        maxLines = 1
+                    )
+                } else {
+                    Text(
+                        text = entry.label,
+                        color = if (unlocked) lerp(accent, Color.White, 0.55f) else Color(0xFF4A4038),
+                        fontFamily = FontFirst(),
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 10.sp,
+                        maxLines = 1
+                    )
+                }
             }
         }
     }
+}
+
+/** Stala wysokosc lica - wybrana zakladka ma wieksza ikone, ale rzad nie moze od tego skakac. */
+private val TIER_TAB_HEIGHT = 52.dp
+
+private fun RunDifficulty.accent(): Color = when (this) {
+    RunDifficulty.Normal -> Color(0xFF3D8BD9)
+    RunDifficulty.Nightmare -> Color(0xFF8A5CE0)
+    RunDifficulty.Hell -> Color(0xFFD9412E)
+    RunDifficulty.Death -> Color(0xFFF07A1A)
 }
 
 /** Kafel krainy - duzy, bo to jest wlasciwa tresc tego ekranu. Tlo to placeholder do czasu PNG. */
