@@ -79,7 +79,12 @@ monster/         karty kompanow i cala ekonomia kolekcji
                      (szklany, bije jak elita), Warden, Ravager. Wchodza wraz z fala i mnoza sie
                      przez archetyp gatunku - dwadziescia fal tych samych szkieletow to dwadziescia
                      razy ta sama walka. Zero nowych grafik: role widac w nazwie wroga
-quiz/            bank pytan; bank/ to tresc podzielona na kategorie
+quiz/            bank pytan; bank/ to tresc: JEDEN plik na temat (BiologyQuestions, AnimalQuestions...,
+                 w srodku szczeblami Easy -> Expert) plus po jednym pliku na typ specjalny
+                 (TrueFalse/MultiSelect/Ordering). Nowe pytanie dopisuje sie do pliku swojego
+                 tematu, nie do kolejnej partii "Extra3" - zasady pisania pytan (zadnych definicji
+                 z podrecznika i pytan-zerowek, dystraktory z tej samej polki, jeden fakt = jedno
+                 pytanie) siedza w KDoc QuizBank i czesci pilnuja QuizBankTest/QuizBankAuditTest
   QuestionHistory    pamiec zadanych pytan (wszystkie typy, cala sesja gry - zyje w RunSession).
                      Losowanie bierze najpierw pytania jeszcze nie widziane; specjalne typy
                      (ukladanka, zaznacz-wszystkie, prawda/falsz) biora WYLACZNIE niewidziane, a gdy
@@ -207,7 +212,7 @@ run/             stan pojedynczej walki/zejscia
 ```
 
 **Dodajesz miecz?** `item/catalog/Weapons.kt`. **Nowa mechanika?** `combat/effects/`.
-**Nowe pytanie?** `quiz/bank/`. **Podpinasz model AI?** implementacja `QuizGenerator` w `:data`
+**Nowe pytanie?** plik jego tematu w `quiz/bank/`. **Podpinasz model AI?** implementacja `QuizGenerator` w `:data`
 i jedna linijka w `:di`. Silnika nie dotykasz w zadnym z tych przypadkow - to jest caly
 sens tego podzialu.
 

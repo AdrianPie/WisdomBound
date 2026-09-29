@@ -1,65 +1,19 @@
 package com.lernhero.domain.quiz
 
 import com.lernhero.domain.quiz.bank.AnimalQuestions
-import com.lernhero.domain.quiz.bank.AnimalQuestionsExtra
-import com.lernhero.domain.quiz.bank.AnimalQuestionsExtra2
 import com.lernhero.domain.quiz.bank.BiologyQuestions
-import com.lernhero.domain.quiz.bank.BiologyQuestionsExtra
-import com.lernhero.domain.quiz.bank.BiologyQuestionsExtra2
 import com.lernhero.domain.quiz.bank.CapitalQuestions
-import com.lernhero.domain.quiz.bank.CapitalQuestionsExtra
-import com.lernhero.domain.quiz.bank.CapitalQuestionsExtra2
 import com.lernhero.domain.quiz.bank.ElementQuestions
-import com.lernhero.domain.quiz.bank.ElementQuestionsExtra
-import com.lernhero.domain.quiz.bank.ElementQuestionsExtra2
-import com.lernhero.domain.quiz.bank.EverydayQuestions
 import com.lernhero.domain.quiz.bank.FlagQuestions
 import com.lernhero.domain.quiz.bank.GeographyQuestions
-import com.lernhero.domain.quiz.bank.GeographyQuestionsExtra
-import com.lernhero.domain.quiz.bank.GeographyQuestionsExtra2
-import com.lernhero.domain.quiz.bank.GeographyQuestionsCompare
 import com.lernhero.domain.quiz.bank.HistoryQuestions
-import com.lernhero.domain.quiz.bank.HistoryQuestionsExtra
-import com.lernhero.domain.quiz.bank.HistoryQuestionsExtra2
-import com.lernhero.domain.quiz.bank.WorldHistoryQuestions
 import com.lernhero.domain.quiz.bank.LiteratureQuestions
-import com.lernhero.domain.quiz.bank.LiteratureQuestionsExtra
-import com.lernhero.domain.quiz.bank.LiteratureQuestionsExtra2
-import com.lernhero.domain.quiz.bank.MasteryDepthQuestions
 import com.lernhero.domain.quiz.bank.MathQuestions
-import com.lernhero.domain.quiz.bank.MathQuestionsExtra
-import com.lernhero.domain.quiz.bank.MathQuestionsExtra2
 import com.lernhero.domain.quiz.bank.MythologyQuestions
-import com.lernhero.domain.quiz.bank.MythologyQuestionsExtra
-import com.lernhero.domain.quiz.bank.MythologyQuestionsExtra2
-import com.lernhero.domain.quiz.bank.HistoryQuestionsExtra3
-import com.lernhero.domain.quiz.bank.LandmarkQuestions
-import com.lernhero.domain.quiz.bank.LiteratureQuestionsExtra3
 import com.lernhero.domain.quiz.bank.PolandQuestions
-import com.lernhero.domain.quiz.bank.PolandQuestionsExtra
-import com.lernhero.domain.quiz.bank.PolandQuestionsMoved
 import com.lernhero.domain.quiz.bank.ScienceQuestions
-import com.lernhero.domain.quiz.bank.SpaceQuestions
-import com.lernhero.domain.quiz.bank.CultureQuestionsWorld
-import com.lernhero.domain.quiz.bank.EverydayQuestionsExtra
-import com.lernhero.domain.quiz.bank.ScienceQuestionsExtra
-import com.lernhero.domain.quiz.bank.ScienceQuestionsExtra2
-import com.lernhero.domain.quiz.bank.ScienceQuestionsCompare
 import com.lernhero.domain.quiz.bank.SportQuestions
-import com.lernhero.domain.quiz.bank.SportQuestionsExtra
-import com.lernhero.domain.quiz.bank.SportQuestionsExtra2
-import com.lernhero.domain.quiz.bank.SportQuestionsWorld
 import com.lernhero.domain.quiz.bank.TechnologyQuestions
-import com.lernhero.domain.quiz.bank.TechnologyQuestionsExtra
-import com.lernhero.domain.quiz.bank.TechnologyQuestionsExtra2
-import com.lernhero.domain.quiz.bank.TriviaQuestionsCulture
-import com.lernhero.domain.quiz.bank.TriviaQuestionsNature
-import com.lernhero.domain.quiz.bank.TriviaQuestionsExtremes
-import com.lernhero.domain.quiz.bank.TriviaQuestionsMastery
-import com.lernhero.domain.quiz.bank.TriviaQuestionsOrigins
-import com.lernhero.domain.quiz.bank.QuestionsRefresh
-import com.lernhero.domain.quiz.bank.QuestionsCurious
-import com.lernhero.domain.quiz.bank.QuestionsWorld
 import kotlin.random.Random
 
 /**
@@ -67,6 +21,30 @@ import kotlin.random.Random
  *
  * Quiz dziala jak drabinka w "Milionerach": pierwsze pytanie jest rozgrzewka, ostatnie potrafi
  * zabolec. Im dalsza fala, tym wyzej zaczyna sie drabinka - w fali 5 nie ma juz latwych pytan.
+ *
+ * **Jeden temat = jeden plik** w `quiz/bank` ([BiologyQuestions], [AnimalQuestions], ...), w srodku
+ * ulozony szczeblami Easy -> Expert. Nowe pytanie dopisuje sie do pliku swojego tematu - nie do
+ * kolejnego "Extra3". Bank rozrosl sie wczesniej do kilkudziesieciu plikow-partii, w ktorych ten sam
+ * fakt siedzial po trzy razy, a nikt nie widzial calego tematu naraz.
+ *
+ * Zasady dla kazdego pytania (czesci pilnuja testy, patrz QuizBankTest i QuizBankAuditTest):
+ * 1. **Ma zaskakiwac albo bawic.** Po dobrym pytaniu gracz chce komus opowiedziec, czego sie
+ *    dowiedzial. Definicje z podrecznika ("czym jest homeostaza?"), fiszki ("symbol O to...?")
+ *    i rachunki z tabliczki mnozenia nie wchodza.
+ * 2. **Latwe to nie zerowe.** Easy to fakt, ktory wiekszosc doroslych zna, ale musi sobie
+ *    przypomniec - a nie cos, czego nie da sie nie wiedziec ("ile nog ma pajak?").
+ * 3. **Dystraktory z tej samej polki.** Kazda bledna odpowiedz musi byc wiarygodna; najlepiej
+ *    popularnym bledem (Sydney jako stolica Australii).
+ * 4. **Dlugosc nie zdradza odpowiedzi.** Jedna rozwlekla odpowiedz wsrod trzech krotkich to
+ *    najtansza sciaga w kazdym quizie.
+ * 5. **Jeden fakt - jedno pytanie**, takze miedzy typami (wybor, prawda/falsz, zaznacz-wszystkie).
+ * 6. **Tresci znane tylko w Polsce** trafiaja do [QuizCategory.Poland], ktora widza wylacznie
+ *    gracze z polskim jezykiem aplikacji.
+ * 7. **Nic, co sie zdezaktualizuje za rok** ("aktualny mistrz", "najnowszy telefon") - chyba ze
+ *    pytanie mowi wprost o konkretnym roku.
+ *
+ * Id pytan zachowuja historyczne prefiksy (bio2_, trv_, wld_...) - musza byc tylko unikalne.
+ * Nigdzie nie sa zapisywane na koncie gracza, pamieta je jedynie [QuestionHistory] w pamieci.
  */
 object QuizBank {
 
@@ -78,82 +56,15 @@ object QuizBank {
             ElementQuestions.all +
             CapitalQuestions.all +
             ScienceQuestions.all +
-            // Nowe pule pod dwudziestofalowy bieg - patrz [SpaceQuestions]/[EverydayQuestionsExtra].
-            SpaceQuestions.all +
-            EverydayQuestionsExtra.all +
-            CultureQuestionsWorld.all +
             GeographyQuestions.all +
             SportQuestions.all +
             MathQuestions.all +
             LiteratureQuestions.all +
             TechnologyQuestions.all +
             MythologyQuestions.all +
-            BiologyQuestionsExtra.all +
-            AnimalQuestionsExtra.all +
-            HistoryQuestionsExtra.all +
-            ElementQuestionsExtra.all +
-            CapitalQuestionsExtra.all +
-            ScienceQuestionsExtra.all +
-            GeographyQuestionsExtra.all +
-            SportQuestionsExtra.all +
-            MathQuestionsExtra.all +
-            LiteratureQuestionsExtra.all +
-            TechnologyQuestionsExtra.all +
-            MythologyQuestionsExtra.all +
-            BiologyQuestionsExtra2.all +
-            AnimalQuestionsExtra2.all +
-            HistoryQuestionsExtra2.all +
-            ElementQuestionsExtra2.all +
-            CapitalQuestionsExtra2.all +
-            ScienceQuestionsExtra2.all +
-            GeographyQuestionsExtra2.all +
-            SportQuestionsExtra2.all +
-            MathQuestionsExtra2.all +
-            LiteratureQuestionsExtra2.all +
-            TechnologyQuestionsExtra2.all +
-            MythologyQuestionsExtra2.all +
-            // Historia powszechna - druga noga banku, celowo bez watkow polskich.
-            WorldHistoryQuestions.all +
             // Temat lokalny - w banku siedzi zawsze, ale do wyboru trafia tylko przy jezyku PL
             // (patrz QuizCategory.builtinFor). Bank zna wszystko, filtruje dopiero UI.
-            PolandQuestions.all +
-            PolandQuestionsExtra.all +
-            // Druga tura przeprowadzki do tematu lokalnego - patrz [PolandQuestionsMoved].
-            PolandQuestionsMoved.all +
-            // Swiat poza Europa - dowazenie banku po wyjezdzie watkow polskich.
-            HistoryQuestionsExtra3.all +
-            LiteratureQuestionsExtra3.all +
-            // Pytania porownawcze ("gdzie wiecej", odd one out) - format, w ktorym da sie wygrac
-            // rozumowaniem, a nie tylko pamiecia. Patrz [GeographyQuestionsCompare].
-            GeographyQuestionsCompare.all +
-            ScienceQuestionsCompare.all +
-            // Wiedza codzienna - kuchnia, dom, muzyka, gry. Patrz [EverydayQuestions].
-            EverydayQuestions.all +
-            // Partia po audycie banku: pytania "chce sie zapamietac" w miejsce wycietych
-            // pytan-zerowek ("ile oczu ma czlowiek"). Patrz [TriviaQuestionsNature].
-            TriviaQuestionsNature.all +
-            TriviaQuestionsCulture.all +
-            // Sport bez watkow lokalnych - dowazenie kategorii po przeniesieniu pytan o polskich
-            // sportowcach do tematu polskiego. Patrz [SportQuestionsWorld].
-            SportQuestionsWorld.all +
-            // Zabytki, rzeki i nieoczywiste stolice - patrz [LandmarkQuestions].
-            LandmarkQuestions.all +
-            // Skad sie wziely nazwy, slowa i wynalazki - patrz [TriviaQuestionsOrigins].
-            TriviaQuestionsOrigins.all +
-            // Rekordy i skrajnosci - patrz [TriviaQuestionsExtremes].
-            TriviaQuestionsExtremes.all +
-            // Dowazenie gornych szczebli pod tryb opanowania tematu - patrz [TriviaQuestionsMastery].
-            TriviaQuestionsMastery.all +
-            // Po czternascie pytan Hard/Expert na KAZDY temat - dokonczenie tego samego dowazenia,
-            // tym razem rozlozone po kategoriach po rowno. Patrz [MasteryDepthQuestions].
-            MasteryDepthQuestions.all +
-            // Po przegladzie banku (wyciete duble, mity i pytania-zerowki) - dosypane gorne
-            // szczeble i polska historia przeniesiona do tematu lokalnego. Patrz [QuestionsRefresh].
-            QuestionsRefresh.all +
-            // Ciekawostki z zaskakujacym, sprawdzonym faktem - patrz [QuestionsCurious].
-            QuestionsCurious.all +
-            // Duza paczka pytan z wiedzy przydatnej na co dzien - patrz [QuestionsWorld].
-            QuestionsWorld.all
+            PolandQuestions.all
 
     fun all(random: Random = Random.Default): List<QuizEntry> =
         textEntries + FlagQuestions.entries(random)

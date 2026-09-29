@@ -4,144 +4,203 @@ import com.lernhero.domain.quiz.QuizCategory
 import com.lernhero.domain.quiz.QuizDifficulty
 import com.lernhero.domain.quiz.QuizEntry
 
-/** Math - numbers, shapes and quick mental arithmetic. */
+/**
+ * Matematyka, ktora da sie ROZWIAZAC w dziesiec sekund albo ktora zaskakuje: zagadki, paradoksy,
+ * prawdopodobienstwo, liczby z historia.
+ *
+ * Wylecialy tabliczka mnozenia ("ile to 7 x 8?") i recytowanie wzorow ("wzor na pole trapezu") -
+ * sprawdzaly szkole, a nie myslenie, i byly najnudniejsza czescia banku.
+ *
+ * Zasady pisania pytan dla calego banku - patrz [com.lernhero.domain.quiz.QuizBank].
+ */
 object MathQuestions {
 
-    private fun ask(
-        id: String,
-        prompt: String,
-        correct: String,
-        wrong: List<String>,
-        difficulty: QuizDifficulty
-    ) = QuizEntry(
-        id = "mat_$id",
-        prompt = prompt,
-        correct = correct,
-        wrong = wrong,
-        category = QuizCategory.Math,
-        difficulty = difficulty
-    )
+    private val E = QuizDifficulty.Easy
+    private val M = QuizDifficulty.Medium
+    private val H = QuizDifficulty.Hard
+    private val X = QuizDifficulty.Expert
+
+    private fun q(id: String, prompt: String, correct: String, wrong: List<String>, difficulty: QuizDifficulty) =
+        QuizEntry(id = id, prompt = prompt, correct = correct, wrong = wrong, category = QuizCategory.Math, difficulty = difficulty)
 
     val all: List<QuizEntry> = listOf(
+        /* ------------------------------ Easy ------------------------------ */
+        q("mat_suma_katow", "What is the sum of angles in a triangle?", "180 degrees", listOf("360 degrees", "90 degrees", "270 degrees"), E),
+        q("mat3_kat_polny_stopnie", "How many degrees is a straight angle?", "180", listOf("90", "360", "45"), E),
+        q("mat3_liczba_rzymska_m", "What number does the Roman numeral M represent?", "1000", listOf("500", "100", "5000"), E),
+        q("scicmp_najwiecej_bokow", "Which of these shapes has the most sides?", "An octagon", listOf("A triangle", "A pentagon", "A hexagon"), E),
+        q("scicmp_kat_rozwarty", "Which of these angles is obtuse?", "120 degrees", listOf("45 degrees", "90 degrees", "30 degrees"), E),
+        q("day_szachownica_pola", "How many squares does a chessboard have?", "64", listOf("81", "100", "49"), E),
+        q("day_blackjack_liczba", "In which card game do players aim for a total of 21?", "Blackjack", listOf("Poker", "Bridge", "Rummy"), E),
+        q("trv2_parzysta_pierwsza", "What is the only even prime number?", "2", listOf("0", "4", "6"), E),
+        q("trv2_milion_zera", "How many zeros are in one million?", "6", listOf("5", "7", "9"), E),
+        q("trv2_obwod_srednica", "A circle's circumference divided by its diameter always equals what?", "Pi", listOf("2", "Its radius", "The square root of 2"), E),
+        q("wld_mat_zegar_kat", "What angle do a clock's hands make at 3 o'clock?", "90 degrees", listOf("45 degrees", "180 degrees", "30 degrees"), E),
+        q("mat_trzy_jablka", "You have 3 apples and you take away 2. How many apples do you have?", "2", listOf("1", "3", "0"), E),
+        q("mat_28_dni", "How many months of the year have 28 days?", "All 12", listOf("1", "2", "6"), E),
+        q("mat_ciag_podwajanie", "What comes next: 2, 4, 8, 16, ...?", "32", listOf("24", "20", "30"), E),
+        q("mat_ciag_kwadraty", "What comes next: 1, 4, 9, 16, 25, ...?", "36", listOf("30", "35", "49"), E),
+        q("mat_suma_1_10", "What is 1 + 2 + 3 + ... + 10?", "55", listOf("45", "50", "65"), E),
+        q("mat_miliard_zera", "How many zeros are in one billion?", "Nine", listOf("Six", "Twelve", "Eight"), E),
+        q("mat_sekundy_godzina", "How many seconds are in one hour?", "3,600", listOf("360", "6,000", "1,440"), E),
+        q("mat_znak_stop", "What shape is a standard stop sign?", "An octagon", listOf("A hexagon", "A pentagon", "A heptagon"), E),
+        q("mat_plaster_miodu", "What shape are the cells of a honeycomb?", "Hexagons", listOf("Pentagons", "Squares", "Octagons"), E),
+        q("mat_kostka_przeciwne", "On a standard die, opposite faces always add up to what?", "7", listOf("6", "8", "10"), E),
+        q("mat_kiery", "How many hearts are in a standard deck of cards?", "13", listOf("12", "10", "26"), E),
+        q("mat_tuzin_piekarza", "How many is a 'baker's dozen'?", "13", listOf("12", "11", "14"), E),
+        q("mat_dwa_tygodnie", "How long is a fortnight?", "Two weeks", listOf("Four nights", "Ten days", "One month"), E),
+        q("mat_nieskonczonosc", "What does the infinity symbol look like?", "A sideways figure eight", listOf("A circle with a dot", "A double arrow", "A crossed-out zero"), E),
+        q("mat_procent_znaczenie", "What does 'per cent' literally mean?", "Per hundred", listOf("Per thousand", "Per ten", "Per person"), E),
+        q("mat_palindrom", "What do you call a number that reads the same backwards, like 12321?", "A palindrome", listOf("A mirror number", "A prime", "A square"), E),
+        q("mat_szescian_rogi", "How many corners does a cube have?", "8", listOf("6", "12", "4"), E),
+        q("mat_zgiecie_kartki", "If you fold a sheet of paper in half three times, how many layers do you get?", "8", listOf("6", "9", "3"), E),
+        q("mat_dzien_pi", "On which date is 'Pi Day' celebrated?", "14 March", listOf("3 April", "1 April", "31 March"), E),
+        q("mat_pitagoras_wzor", "Which famous theorem says a² + b² = c²?", "Pythagoras' theorem", listOf("Thales' theorem", "Fermat's Last Theorem", "Euclid's theorem"), E),
+        q("mat_minuty_150", "How many minutes are in two and a half hours?", "150", listOf("130", "250", "120"), E),
+        q("mat_pizza_ulamek", "A pizza is cut into 8 slices and you eat 2. What fraction is left?", "3/4", listOf("2/3", "5/8", "1/4"), E),
+        q("mat_pajaki_nogi", "How many legs do three spiders have altogether?", "24", listOf("18", "30", "32"), E),
+        q("mat_godziny_trzy_dni", "How many hours are in three days?", "72", listOf("60", "48", "96"), E),
+        q("mat_zegar_15", "What is 15:00 on a 12-hour clock?", "3 p.m.", listOf("5 p.m.", "1 p.m.", "3 a.m."), E),
+        q("mat_20_procent_ulamek", "What is 20% written as a fraction?", "1/5", listOf("1/20", "1/4", "2/5"), E),
 
-        /* ------------------------------- Easy ------------------------------- */
-        ask(
-            id = "7x8",
-            prompt = "What is 7 x 8?",
-            correct = "56",
-            wrong = listOf("54", "58", "64"),
-            difficulty = QuizDifficulty.Easy
-        ),
-        ask(
-            id = "9kw",
-            prompt = "What is 9 squared?",
-            correct = "81",
-            wrong = listOf("72", "89", "91"),
-            difficulty = QuizDifficulty.Easy
-        ),
+        /* ----------------------------- Medium ----------------------------- */
+        q("day2_procent_skladany", "What is compound interest?", "Interest earned on interest already added", listOf("A one-time fee", "A fixed monthly cost", "Interest paid only at the end"), M),
+        q("day2_inflacja", "What does inflation mean for your savings?", "The same money buys less over time", listOf("Your balance shrinks", "Interest rates always fall", "Prices stay fixed"), M),
+        q("mat_pi", "What is the approximate value of pi?", "3.14", listOf("3.41", "2.71", "3.04"), M),
+        q("mat_rzym_l", "What number does the Roman numeral L represent?", "50", listOf("100", "40", "500"), M),
+        q("mat_pitagoras", "A triangle with legs of 3 and 4 has a hypotenuse of...", "5", listOf("6", "7", "4.5"), M),
+        q("mat3_procent_120_zniz", "An item costs \$120 and is discounted by 25%. What does it cost now?", "\$90", listOf("\$100", "\$95", "\$80"), M),
+        q("mat3_dwa_do_dziesiatej", "What is 2 to the power of 10?", "1024", listOf("512", "2048", "100"), M),
+        q("scicmp_ktora_pierwsza", "Which of these three-digit numbers is prime?", "101", listOf("111", "121", "141"), M),
+        q("scicmp_liczba_niewymierna", "Which of these is an irrational number?", "The square root of 2", listOf("The fraction 3 over 7", "The number 0.5", "Minus four"), M),
+        q("day_kostka_oczka", "How many pips are there in total on a standard six-sided die?", "21", listOf("18", "24", "27"), M),
+        q("trv2_dziesieciokat", "What is a polygon with ten sides called?", "A decagon", listOf("A hexagon", "A dodecagon", "A nonagon"), M),
+        q("trv2_sekundy_doba", "How many seconds are in a day?", "86,400", listOf("3,600", "1,440", "864,000"), M),
+        q("trv2_rzymskie_2024", "What is 2024 in Roman numerals?", "MMXXIV", listOf("MMXXVI", "MXXIV", "MMXIV"), M),
+        q("trv2_moneta_3_orly", "If you flip a fair coin three times, what is the chance of getting heads every time?", "1 in 8", listOf("1 in 3", "1 in 6", "1 in 4"), M),
+        q("trv2_ulamki_suma", "What is 1/3 + 1/6?", "1/2", listOf("2/9", "1/9", "2/3"), M),
+        q("trv2_szescian_krawedzie", "How many edges does a cube have?", "12", listOf("8", "6", "10"), M),
+        q("trv2_ciag_potegi", "What comes next in the sequence 2, 6, 18, 54, ...?", "162", listOf("108", "216", "158"), M),
+        q("trv2_kostka_suma", "What is the most likely total when you roll two dice?", "7", listOf("6", "8", "12"), M),
+        q("trv2_trojkat_rownoboczny_katy", "How big is each angle of an equilateral triangle?", "60 degrees", listOf("45 degrees", "90 degrees", "30 degrees"), M),
+        q("trv2_ile_minut_dwa_dni", "How many hours are in a week?", "168", listOf("144", "196", "172"), M),
+        q("mst_fibonacci_natura", "The Fibonacci sequence shows up in nature most famously in what?", "Spiral arrangements in plants", listOf("Animal migration routes", "Snowflake symmetry", "Tidal cycles"), M),
+        q("wld_potega_zero", "What is any non-zero number raised to the power of 0?", "1", listOf("0", "The number itself", "Undefined"), M),
+        q("mat_jutro_czwartek", "If the day before yesterday was Monday, what day will it be tomorrow?", "Thursday", listOf("Wednesday", "Friday", "Tuesday"), M),
+        q("mat_ojcowie_synowie", "Two fathers and two sons catch three fish, and each gets exactly one. How many people are there?", "Three", listOf("Four", "Two", "Five"), M),
+        q("mat_kij_pilka", "A bat and a ball cost \$1.10 in total. The bat costs \$1.00 more than the ball. How much is the ball?", "5 cents", listOf("10 cents", "1 cent", "15 cents"), M),
+        q("mat_trzy_tabletki", "You must take 3 pills, one every half hour. How long will they last?", "One hour", listOf("An hour and a half", "Two hours", "Three hours"), M),
+        q("mat_ciag_trojkatne", "What comes next: 1, 3, 6, 10, 15, ...?", "21", listOf("20", "25", "18"), M),
+        q("mat_ciag_pierwsze", "What comes next: 2, 3, 5, 7, 11, 13, ...?", "17", listOf("15", "16", "19"), M),
+        q("mat_minuty_doba", "How many minutes are in a day?", "1,440", listOf("1,200", "2,400", "3,600"), M),
+        q("mat_cztery_litery", "Which number, written in English, has as many letters as its value?", "Four", listOf("Three", "Five", "Six"), M),
+        q("mat_czworoscian", "How many edges does a triangular pyramid (tetrahedron) have?", "6", listOf("4", "5", "8"), M),
+        q("mat_roznoboczny", "What is a triangle with three sides of different lengths called?", "Scalene", listOf("Isosceles", "Equilateral", "Obtuse"), M),
+        q("mat_dublet", "What is the chance of rolling a double with two dice?", "1 in 6", listOf("1 in 12", "1 in 36", "1 in 3"), M),
+        q("mat_hazard", "A fair coin has landed heads ten times in a row. What is the chance of heads on the next flip?", "50%", listOf("Less than 50%", "More than 50%", "0%"), M),
+        q("mat_37_razy_12", "37 x 3 = 111. What is 37 x 12?", "444", listOf("333", "412", "456"), M),
+        q("mat_gros", "How many items are in a 'gross'?", "144", listOf("100", "120", "1,000"), M),
+        q("mat_kopa_score", "How many is a 'score', as in 'four score and seven years ago'?", "20", listOf("10", "12", "50"), M),
+        q("mat_rzymianie_zero", "Which number did the Romans have no numeral for?", "Zero", listOf("One hundred", "Five hundred", "Nine"), M),
+        q("mat_euklides", "Who is known as the 'father of geometry'?", "Euclid", listOf("Pythagoras", "Archimedes", "Thales"), M),
+        q("mat_trojkat_pascala", "What is the famous triangle of numbers where each is the sum of the two above it?", "Pascal's triangle", listOf("Euler's triangle", "Newton's triangle", "Fermat's triangle"), M),
+        q("mat_dominanta", "What is the mode of 2, 3, 3, 5 and 7?", "3", listOf("4", "5", "2"), M),
+        q("mat_lilie", "Lily pads on a lake double every day and cover it completely on day 48. On which day was it half covered?", "Day 47", listOf("Day 24", "Day 46", "Day 36"), M),
+        q("mat_dzielenie_zero", "What is 1 divided by 0?", "It is undefined", listOf("0", "1", "Exactly infinity"), M),
+        q("mat_as_talia", "What is the chance of drawing an ace from a shuffled 52-card deck?", "1 in 13", listOf("1 in 4", "1 in 52", "1 in 26"), M),
+        q("mat_wlazy", "Why are manhole covers usually round?", "A round cover can't fall through its hole", listOf("Round covers are cheaper to make", "Round holes are easier to dig", "Circles are stronger than squares"), M),
+        q("mat_pechowa_czworka", "Which number is avoided in China and Japan because it sounds like the word for 'death'?", "4", listOf("13", "7", "8"), M),
+        q("mat_wskazowka_minutowa", "How many degrees does a clock's minute hand turn in one minute?", "6", listOf("1", "10", "12"), M),
+        q("mat_kwadrat_symetria", "How many lines of symmetry does a square have?", "4", listOf("2", "8", "1"), M),
+        q("mat_kula_sciany", "Which 3D shape has no edges and no corners at all?", "A sphere", listOf("A cone", "A cylinder", "A cube"), M),
+        q("mat_wiek_siostry", "Tom is 10 and his sister is half his age. When Tom is 30, how old will his sister be?", "25", listOf("15", "20", "35"), M),
+        q("mat_zysk_procent", "You buy something for \$80 and sell it for \$100. What is your profit as a percentage?", "25%", listOf("20%", "80%", "10%"), M),
+        q("mat_pociag_predkosc", "A train covers 60 km in 30 minutes. What is its speed in km/h?", "120", listOf("60", "90", "30"), M),
+        q("mat_pierwiastek_dwoch", "Which famous number starts 1.41421...?", "The square root of 2", listOf("The golden ratio", "Pi", "e"), M),
+        q("mat_bilion_zera", "How many zeros are in one trillion?", "12", listOf("9", "15", "18"), M),
 
-        /* ------------------------------ Medium ------------------------------ */
-        ask(
-            id = "pi",
-            prompt = "What is the approximate value of pi?",
-            correct = "3.14",
-            wrong = listOf("3.41", "2.71", "3.04"),
-            difficulty = QuizDifficulty.Medium
-        ),
-        ask(
-            id = "liczba_pierwsza",
-            prompt = "Which of these numbers is prime?",
-            correct = "17",
-            wrong = listOf("15", "21", "27"),
-            difficulty = QuizDifficulty.Medium
-        ),
-        ask(
-            id = "kat_prosty",
-            prompt = "How many degrees is a right angle?",
-            correct = "90",
-            wrong = listOf("45", "180", "60"),
-            difficulty = QuizDifficulty.Medium
-        ),
-        ask(
-            id = "procent",
-            prompt = "What is 20% of 150?",
-            correct = "30",
-            wrong = listOf("25", "35", "20"),
-            difficulty = QuizDifficulty.Medium
-        ),
-        ask(
-            id = "szesc_szescian",
-            prompt = "How many faces does a cube have?",
-            correct = "6",
-            wrong = listOf("8", "4", "12"),
-            difficulty = QuizDifficulty.Medium
-        ),
-        ask(
-            id = "rzym_l",
-            prompt = "What number does the Roman numeral L represent?",
-            correct = "50",
-            wrong = listOf("100", "40", "500"),
-            difficulty = QuizDifficulty.Medium
-        ),
+        /* ------------------------------ Hard ------------------------------ */
+        q("mat_silnia_5", "What is 5! (5 factorial)?", "120", listOf("100", "60", "150"), H),
+        q("mat_fibonacci", "What number comes next in the sequence 1, 1, 2, 3, 5, 8...?", "13", listOf("11", "12", "16"), H),
+        q("mat2_logarytm_2_8", "What is log base 2 of 8?", "3", listOf("2", "4", "8"), H),
+        q("mat2_kombinacje", "In how many ways can you arrange 4 different books in a row?", "24", listOf("12", "16", "36"), H),
+        q("scicmp_najwiekszy_ulamek", "Which of these fractions is the largest?", "3/4", listOf("2/3", "5/8", "7/12"), H),
+        q("scicmp_najwieksza_potega", "Which of these is the largest?", "2 to the power of 10", listOf("10 cubed", "5 to the power of 4", "3 to the power of 6"), H),
+        q("trv2_szesciokat_katy", "What do the interior angles of a hexagon add up to?", "720 degrees", listOf("540 degrees", "360 degrees", "900 degrees"), H),
+        q("trv2_jeden_ani", "Which number is neither prime nor composite?", "1", listOf("2", "0", "9"), H),
+        q("trv2_podzielne_9", "A number is divisible by 9 if...", "The sum of its digits is divisible by 9", listOf("Its last digit happens to be a nine", "It is an odd number, not an even", "Its very first digit is a nine"), H),
+        q("trv2_liczby_1_100_suma", "What is the sum of all whole numbers from 1 to 100?", "5050", listOf("5000", "10100", "4950"), H),
+        q("ext_tasowanie_talii", "A shuffled deck of 52 cards has likely landed in an order that has what property?", "Never occurred before in history", listOf("Repeats roughly yearly", "Repeats every million shuffles", "Is one of a few billion"), H),
+        q("ext_ziarna_szachownica", "Doubling one grain of wheat on each of a chessboard's 64 squares gives a total closest to what?", "More than all wheat ever grown", listOf("One full granary", "A year's world harvest", "A single field's yield"), H),
+        q("mst_zero_indie", "Zero as a number in its own right was first fully developed where?", "India", listOf("Greece", "Egypt", "Rome"), H),
+        q("mst_wstega_mobiusa", "How many sides does a Mobius strip have?", "One", listOf("Two", "Three", "None"), H),
+        q("dpt_mat_pierwsze_20", "How many prime numbers are there below 20?", "Eight", listOf("Seven", "Nine", "Ten"), H),
+        q("ref_mat_szesciokat_przekatne", "How many diagonals does a hexagon have?", "9", listOf("6", "12", "8"), H),
+        q("ref_mat_procent_procentu", "What is 15% of 15% of 1000?", "22.5", listOf("2.25", "225", "30"), H),
+        q("cur_urodziny_paradoks", "How many people must be in a room for a better-than-even chance that two share a birthday?", "23", listOf("183", "57", "366"), H),
+        q("cur_zero_silnia", "What is 0! (zero factorial)?", "1", listOf("0", "Undefined", "Infinity"), H),
+        q("wld_rzymskie_mcm", "What year is written as MCMXC in Roman numerals?", "1990", listOf("1910", "2090", "1490"), H),
+        q("wld_mat_milion_sekund", "Roughly how long is one million seconds?", "About 11.5 days", listOf("About 1 year", "About 11 hours", "About 3 months"), H),
+        q("wld_mat_procent_procent", "A price rises by 10% and then falls by 10%. Compared with the start, it is...", "1% lower", listOf("Exactly the same", "1% higher", "10% lower"), H),
+        q("mat_pilka_szesciokaty", "A classic football is stitched from 12 pentagons and how many hexagons?", "20", listOf("12", "18", "32"), H),
+        q("mat_monty_hall", "In the Monty Hall puzzle, what is your chance of winning if you switch doors?", "2 in 3", listOf("1 in 2", "1 in 3", "1 in 4"), H),
+        q("mat_wskazowki_nakladanie", "How many times do a clock's hour and minute hands overlap in 12 hours?", "11", listOf("12", "10", "24"), H),
+        q("mat_uscisk_dloni", "If 10 people each shake hands with everyone else once, how many handshakes is that?", "45", listOf("100", "90", "20"), H),
+        q("mat_150_lat", "How many years does a 'sesquicentennial' mark?", "150", listOf("125", "175", "250"), H),
+        q("mat_gauss", "Which mathematician is said to have added up 1 to 100 in seconds as a schoolboy?", "Carl Friedrich Gauss", listOf("Isaac Newton", "Leonhard Euler", "Blaise Pascal"), H),
+        q("mat_slimak_studnia", "A snail climbs 3 m up a 10 m well each day and slips back 2 m each night. On which day does it reach the top?", "Day 8", listOf("Day 10", "Day 7", "Day 9"), H),
+        q("mat_maszyny", "If 5 machines make 5 widgets in 5 minutes, how long do 100 machines take to make 100 widgets?", "5 minutes", listOf("100 minutes", "20 minutes", "1 minute"), H),
+        q("mat_kolo_pole", "For a fixed perimeter, which shape encloses the largest area?", "A circle", listOf("A square", "An equilateral triangle", "A regular hexagon"), H),
+        q("mat_100_dni", "If today is Wednesday, what day of the week will it be in 100 days?", "Friday", listOf("Thursday", "Saturday", "Wednesday"), H),
+        q("mat_ramanujan", "Which self-taught Indian mathematician inspired the film 'The Man Who Knew Infinity'?", "Srinivasa Ramanujan", listOf("Aryabhata", "Brahmagupta", "C. R. Rao"), H),
+        q("mat_medal_fieldsa", "Which top mathematics award is given only to mathematicians under 40?", "The Fields Medal", listOf("The Abel Prize", "The Wolf Prize", "The Turing Award"), H),
+        q("mat_liczba_eulera", "The constant e, about 2.718, is named after which mathematician?", "Leonhard Euler", listOf("Isaac Newton", "Carl Friedrich Gauss", "John Napier"), H),
+        q("mat_dwie_szostki", "What is the chance of rolling at least one six with two dice?", "11 in 36", listOf("1 in 3", "1 in 6", "1 in 36"), H),
+        q("mat_2_do_30", "Which is larger: 2 to the power of 30, or one billion?", "2 to the power of 30", listOf("One billion", "They are exactly equal", "It depends on the base"), H),
+        q("mat_dziewiatki", "How many times does the digit 9 appear when you write the numbers from 1 to 100?", "20", listOf("10", "11", "19"), H),
+        q("mat_biegun_polnocny", "You walk 1 km south, 1 km east and 1 km north, and end up where you started. Where did you start?", "The North Pole", listOf("The equator", "The South Pole", "The prime meridian"), H),
+        q("mat_zegar_bicie", "A clock takes 5 seconds to strike six o'clock. How long does it take to strike twelve?", "11 seconds", listOf("10 seconds", "12 seconds", "9 seconds"), H),
 
-        /* ------------------------------ Hard ------------------------------- */
-        ask(
-            id = "silnia_5",
-            prompt = "What is 5! (5 factorial)?",
-            correct = "120",
-            wrong = listOf("100", "60", "150"),
-            difficulty = QuizDifficulty.Hard
-        ),
-        ask(
-            id = "pitagoras",
-            prompt = "A triangle with legs of 3 and 4 has a hypotenuse of...",
-            correct = "5",
-            wrong = listOf("6", "7", "4.5"),
-            difficulty = QuizDifficulty.Medium
-        ),
-        ask(
-            id = "suma_katow",
-            prompt = "What is the sum of angles in a triangle?",
-            correct = "180 degrees",
-            wrong = listOf("360 degrees", "90 degrees", "270 degrees"),
-            difficulty = QuizDifficulty.Easy
-        ),
-        ask(
-            id = "fibonacci",
-            prompt = "What number comes next in the sequence 1, 1, 2, 3, 5, 8...?",
-            correct = "13",
-            wrong = listOf("11", "12", "16"),
-            difficulty = QuizDifficulty.Hard
-        ),
-        ask(
-            id = "log_100",
-            prompt = "What is the base-10 logarithm of 100?",
-            correct = "2",
-            wrong = listOf("10", "1", "100"),
-            difficulty = QuizDifficulty.Hard
-        ),
-
-        /* ----------------------------- Expert ---------------------------- */
-        ask(
-            id = "liczba_e",
-            prompt = "What is the approximate value of e?",
-            correct = "2.72",
-            wrong = listOf("3.14", "1.62", "2.24"),
-            difficulty = QuizDifficulty.Expert
-        ),
-        ask(
-            id = "liczby_doskonale",
-            prompt = "Which of these numbers is perfect (equal to the sum of its divisors)?",
-            correct = "28",
-            wrong = listOf("24", "30", "36"),
-            difficulty = QuizDifficulty.Expert
-        ),
-        ask(
-            id = "duzy_pierwszy",
-            prompt = "Which of these numbers is NOT prime?",
-            correct = "91",
-            wrong = listOf("89", "97", "83"),
-            difficulty = QuizDifficulty.Expert
-        )
+        /* ----------------------------- Expert ----------------------------- */
+        q("mat_liczba_e", "What is the approximate value of e?", "2.72", listOf("3.14", "1.62", "2.24"), X),
+        q("mat_liczby_doskonale", "Which of these numbers is perfect (equal to the sum of its divisors)?", "28", listOf("24", "30", "36"), X),
+        q("mat_duzy_pierwszy", "Which of these numbers is NOT prime?", "91", listOf("89", "97", "83"), X),
+        q("mat2_euler_wzor", "What does Euler's identity relate?", "The numbers e, i, pi, 1 and 0", listOf("Only pi and e", "Areas and perimeters", "Derivatives and integrals"), X),
+        q("mat2_pochodna_x2", "What is the derivative of x squared?", "2x", listOf("x", "x cubed / 3", "2"), X),
+        q("mat2_hipoteza_riemanna", "What does the Riemann hypothesis concern?", "The distribution of the zeta function's zeros", listOf("The solutions of differential equations", "The colouring of maps with four colours", "The shortest path through a large graph"), X),
+        q("mat2_fermat", "How many years passed before Fermat's Last Theorem was proven?", "Over 350", listOf("About 50", "About 100", "Over 1000"), X),
+        q("mat2_godel", "What do Godel's incompleteness theorems state?", "Any sufficiently rich system has undecidable statements", listOf("Every true theorem can in the end be proven", "Mathematics contains a hidden contradiction", "There are only finitely many prime numbers"), X),
+        q("mat2_liczba_pierwsza_najwieksza", "What form do the largest known prime numbers take?", "Mersenne primes", listOf("Fermat numbers", "Fibonacci numbers", "Perfect numbers"), X),
+        q("mat2_topologia_kubek", "Which shape does a topologist consider equivalent to a coffee mug?", "A torus (donut)", listOf("A sphere", "A cube", "A Mobius strip"), X),
+        q("mat2_zloty_podzial", "What is the approximate value of the golden ratio?", "1.618", listOf("1.414", "2.718", "3.142"), X),
+        q("mat2_p_np", "What does the P vs NP problem concern?", "The computational complexity of problems", listOf("Non-Euclidean geometry", "Measure theory", "The Navier-Stokes equations"), X),
+        q("mat2_banach_tarski", "What does the Banach-Tarski paradox state?", "A ball can be split apart and reassembled into two identical balls", listOf("A sphere cannot be turned inside out without tearing", "Pi can be written as a ratio of two whole numbers", "All infinite sets are exactly the same size"), X),
+        q("mat3_liczby_zespolone", "What is the imaginary unit i?", "The square root of -1", listOf("An irrational number equal to pi", "A symbol for infinity", "The base of the natural logarithm"), X),
+        q("mat3_szereg_harmoniczny", "Does the harmonic series (sum of 1/n) converge?", "No, it diverges", listOf("Yes, it converges to 2", "Yes, it converges to pi", "Yes, it converges to e"), X),
+        q("mat3_liczby_pierwsze_blizniacze", "What do we call pairs of primes differing by 2, like 11 and 13?", "Twin primes", listOf("Perfect numbers", "Amicable numbers", "Mersenne primes"), X),
+        q("mat3_teoria_grafow_euler", "Which problem gave rise to graph theory?", "The Seven Bridges of Konigsberg problem", listOf("The four color problem", "The traveling salesman problem", "Zeno's paradox"), X),
+        q("mat3_cztery_barwy", "What does the four color theorem state?", "Any map can be colored with four colors with no adjacent regions sharing one", listOf("Every graph contains a cycle passing through all of its vertices", "Every whole number has exactly four divisors", "Every triangle has four distinct altitudes"), X),
+        q("ext_kartka_skladanie", "Folded in half 42 times, a sheet of paper would be thick enough to reach what?", "The Moon", listOf("The top of Everest", "Low Earth orbit", "The Sun"), X),
+        q("mst_nieskonczonosc_rozne", "Mathematically, how do the infinity of whole numbers and of real numbers compare?", "The reals are a larger infinity", listOf("They are equal", "The whole numbers are larger", "Neither can be compared"), X),
+        q("dpt_mat_dwunastoscian", "How many faces does a regular dodecahedron have?", "Twelve", listOf("Ten", "Twenty", "Eight"), X),
+        q("ref_mat_szereg_polowki", "What is the sum of the endless series 1/2 + 1/4 + 1/8 + ...?", "1", listOf("2", "Infinity", "0.99"), X),
+        q("ref_mat_dwa_razy_cyfry", "Which two-digit number is exactly twice the sum of its digits?", "18", listOf("12", "27", "36"), X),
+        q("ref_mat_dwudziestoscian", "How many edges does a regular icosahedron have?", "30", listOf("20", "12", "60"), X),
+        q("ref_mat_hex_ff", "What is the hexadecimal number FF in decimal?", "255", listOf("256", "240", "1515"), X),
+        q("cur_najmniejsza_2520", "What is the smallest number divisible by every whole number from 1 to 10?", "2520", listOf("3628800", "1260", "5040"), X),
+        q("cur_kwadrat_111", "What is 111,111,111 × 111,111,111?", "12,345,678,987,654,321", listOf("1,234,567,890", "11,111,111,111", "123,456,789,123,456,789"), X),
+        q("wld_mat_miliard_sekund", "Roughly how long is one billion seconds?", "About 31.7 years", listOf("About 3 years", "About 317 years", "About 1 year"), X),
+        q("mat_ciag_patrz_i_mow", "What comes next in this sequence: 1, 11, 21, 1211, 111221, ...?", "312211", listOf("1112211", "212211", "3122111"), X),
+        q("mat_forty", "Which number, written in English, has its letters in alphabetical order?", "Forty", listOf("Thirty", "Sixty", "Eighty"), X),
+        q("mat_142857", "142857 x 2 = 285714. What is 142857 x 7?", "999,999", listOf("1,000,000", "999,000", "857,142"), X),
+        q("mat_silnia_zera", "How many zeros are at the end of 10! (10 factorial)?", "2", listOf("1", "3", "10"), X),
+        q("mat_zegar_315", "What is the angle between a clock's hands at 3:15?", "7.5 degrees", listOf("0 degrees", "15 degrees", "30 degrees"), X),
+        q("mat_1729", "What is the smallest number that is the sum of two cubes in two different ways?", "1729", listOf("1001", "2025", "4104"), X),
+        q("mat_mirzakhani", "Who was the first woman to win the Fields Medal, in 2014?", "Maryam Mirzakhani", listOf("Emmy Noether", "Sophie Germain", "Ada Lovelace"), X),
+        q("mat_perelman", "Which Millennium Prize problem did Grigori Perelman solve before turning down the million dollars?", "The Poincare conjecture", listOf("The Riemann hypothesis", "P versus NP", "The Goldbach conjecture"), X),
+        q("mat_ruletka", "What do all the numbers on a roulette wheel add up to?", "666", listOf("555", "777", "1,000"), X),
+        q("mat_nasa_pi", "About how many decimal places of pi does NASA use for its most precise spacecraft navigation?", "15", listOf("5", "100", "1,000"), X),
+        q("mat_szachownica_kwadraty", "Counting squares of every size, how many squares are on a chessboard?", "204", listOf("64", "128", "1,296"), X),
+        q("mat_nieparzyste_100", "What is the sum of the first 100 odd numbers?", "10,000", listOf("5,000", "5,050", "9,900"), X)
     )
 }

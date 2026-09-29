@@ -5,208 +5,227 @@ import com.lernhero.domain.quiz.QuizDifficulty
 import com.lernhero.domain.quiz.QuizEntry
 
 /**
- * Biology and the human body. Adding a question is one entry in the list - nothing more.
+ * Biologia: cialo czlowieka, komorka, geny, rosliny, zdrowie.
+ *
+ * Pytamy o to, co w organizmie ZASKAKUJE (dlaczego zoladek nie trawi sam siebie, ile metrow DNA
+ * siedzi w jednej komorce), a nie o definicje z podrecznika. "Czym jest homeostaza?" i dziesiatki
+ * podobnych wylecialy - na takie pytanie odpowiada sie wkutym zdaniem, a nie wiedza. Zwierzeta maja
+ * wlasny temat ([AnimalQuestions]).
+ *
+ * Zasady pisania pytan dla calego banku - patrz [com.lernhero.domain.quiz.QuizBank].
  */
 object BiologyQuestions {
 
-    private fun ask(
-        id: String,
-        prompt: String,
-        correct: String,
-        wrong: List<String>,
-        difficulty: QuizDifficulty
-    ) = QuizEntry(
-        id = "bio_$id",
-        prompt = prompt,
-        correct = correct,
-        wrong = wrong,
-        category = QuizCategory.Biology,
-        difficulty = difficulty
-    )
+    private val E = QuizDifficulty.Easy
+    private val M = QuizDifficulty.Medium
+    private val H = QuizDifficulty.Hard
+    private val X = QuizDifficulty.Expert
+
+    private fun q(id: String, prompt: String, correct: String, wrong: List<String>, difficulty: QuizDifficulty) =
+        QuizEntry(id = id, prompt = prompt, correct = correct, wrong = wrong, category = QuizCategory.Biology, difficulty = difficulty)
 
     val all: List<QuizEntry> = listOf(
+        /* ------------------------------ Easy ------------------------------ */
+        q("bio_skora", "Which human organ is the largest?", "Skin", listOf("Liver", "Lungs", "Small intestine"), E),
+        q("bio_kosci", "How many bones does an adult human skeleton have?", "206", listOf("152", "300", "180"), E),
+        q("bio2_zeby", "How many teeth does an adult human have, wisdom teeth included?", "32", listOf("28", "36", "24"), E),
+        q("bio2_wlosy_rosna", "What are hair and nails made of?", "Keratin", listOf("Collagen", "Chitin", "Cellulose"), E),
+        q("bio2_kosc_najdluzsza", "Which human bone is the longest?", "The femur", listOf("The humerus", "The tibia", "The clavicle"), E),
+        q("bio2_wzrok_narzad", "Which part of the eye regulates how much light enters?", "The pupil", listOf("The cornea", "The sclera", "The optic nerve"), E),
+        q("bio3_ucho_funkcja", "Besides hearing, what is the ear responsible for?", "Balance", listOf("Smell", "Taste", "Sight"), E),
+        q("bio3_owad_nogi", "How many legs does an insect have?", "Six", listOf("Four", "Eight", "Ten"), E),
+        q("bio3_roslina_oddycha", "What does a plant use to exchange gases?", "Stomata in its leaves", listOf("Lungs", "Gills", "Roots only"), E),
+        q("trv_melanina", "Which pigment gives skin, hair and eyes their colour?", "Melanin", listOf("Keratin", "Hemoglobin", "Carotene"), E),
+        q("trv_aorta", "What is the largest artery in the human body?", "The aorta", listOf("The carotid", "The femoral artery", "The pulmonary artery"), E),
+        q("trv_mleko_laktoza", "What is lactose?", "The sugar in milk", listOf("The fat in milk", "The protein in milk", "A milk vitamin"), E),
+        q("trv_gluten_co", "What is gluten?", "A protein found in wheat", listOf("A sugar found in wheat", "A fat found in bread", "A preservative added to flour"), E),
+        q("wld_fotosynteza_gaz", "Which gas do plants take in to carry out photosynthesis?", "Carbon dioxide", listOf("Oxygen", "Nitrogen", "Hydrogen"), E),
+        q("wld_mitochondria", "Which part of a cell is often called its 'powerhouse'?", "The mitochondrion", listOf("The nucleus", "The ribosome", "The cell wall"), E),
+        q("bio_wyrostek", "Which organ attached to the large intestine often has to be removed when it gets inflamed?", "The appendix", listOf("The spleen", "The pancreas", "The kidney"), E),
+        q("bio_szkorbut", "Sailors once got scurvy from a lack of which vitamin?", "Vitamin C", listOf("Vitamin A", "Vitamin D", "Vitamin B12"), E),
+        q("bio_mozg_strony", "The right half of the brain mainly controls which side of the body?", "The left side", listOf("The right side", "Both sides equally", "Only the face"), E),
+        q("bio_smaki_piec", "How many basic tastes are commonly recognised, including umami?", "Five", listOf("Three", "Four", "Seven"), E),
+        q("bio_kosc_lokciowa", "What is the 'funny bone' that tingles when you knock your elbow?", "A nerve", listOf("A small bone", "A tendon", "A muscle"), E),
+        q("bio_zeby_madrosci", "Wisdom teeth are the last of which kind of teeth to come through?", "Molars", listOf("Incisors", "Canines", "Premolars"), E),
+        q("bio_placebo", "What is it called when a fake pill makes someone feel better?", "The placebo effect", listOf("The nocebo effect", "The Hawthorne effect", "The domino effect"), E),
+        q("bio_homo_sapiens", "What is the scientific name for modern humans?", "Homo sapiens", listOf("Homo erectus", "Homo habilis", "Homo neanderthalensis"), E),
+        q("bio_dermatolog", "What is a doctor who specialises in skin called?", "A dermatologist", listOf("A cardiologist", "A neurologist", "An ophthalmologist"), E),
+        q("bio_owca_dolly", "What kind of animal was Dolly, the first mammal cloned from an adult cell?", "A sheep", listOf("A cow", "A goat", "A mouse"), E),
+        q("bio_melatonina", "Which hormone makes you feel sleepy when it gets dark?", "Melatonin", listOf("Adrenaline", "Insulin", "Oxytocin"), E),
+        q("bio_adrenalina_walka", "Which hormone floods your body in a 'fight or flight' moment?", "Adrenaline", listOf("Melatonin", "Insulin", "Serotonin"), E),
+        q("bio_bambus", "Which plant can grow almost a metre in a single day?", "Bamboo", listOf("Ivy", "Sunflower", "Oak"), E),
+        q("bio_cynamon", "Cinnamon comes from which part of a tree?", "The bark", listOf("The seeds", "The roots", "The leaves"), E),
+        q("bio_zoledz", "Which tree grows acorns?", "The oak", listOf("The beech", "The chestnut", "The maple"), E),
+        q("bio_czekolada", "Chocolate is made from the seeds of which tree?", "The cacao tree", listOf("The carob tree", "The coffee tree", "The coconut palm"), E),
+        q("bio_herbata", "After water, what is the most widely drunk drink in the world?", "Tea", listOf("Coffee", "Beer", "Milk"), E),
+        q("bio_daltonizm", "Red-green colour blindness is far more common in whom?", "Men", listOf("Women", "Children", "Older people"), E),
+        q("bio_woda_przezycie", "Roughly how long can a person survive without drinking water?", "About three days", listOf("About three hours", "About three weeks", "About three months"), E),
+        q("bio_weganin", "What do you call someone who eats no animal products at all?", "A vegan", listOf("A vegetarian", "A pescatarian", "A flexitarian"), E),
+        q("bio_marcepan", "Which nut is marzipan made from?", "Almonds", listOf("Hazelnuts", "Walnuts", "Cashews"), E),
+        q("bio_tofu", "What is tofu made from?", "Soybeans", listOf("Rice", "Chickpeas", "Wheat"), E),
+        q("bio_hummus", "What is hummus mainly made from?", "Chickpeas", listOf("Lentils", "Soybeans", "Peas"), E),
+        q("bio_kurkuma", "Which yellow spice, made from a root, gives curry its colour?", "Turmeric", listOf("Saffron", "Cumin", "Paprika"), E),
+        q("bio_szparagi", "Eating which vegetable famously makes many people's urine smell?", "Asparagus", listOf("Broccoli", "Spinach", "Celery"), E),
 
-        /* ------------------------------- Easy ------------------------------- */
-        ask(
-            id = "serce",
-            prompt = "Which organ pumps blood through the human body?",
-            correct = "Heart",
-            wrong = listOf("Liver", "Lungs", "Kidneys"),
-            difficulty = QuizDifficulty.Easy
-        ),
-        ask(
-            id = "fotosynteza",
-            prompt = "What is the process called in which plants make food from light?",
-            correct = "Photosynthesis",
-            wrong = listOf("Fermentation", "Transpiration", "Cellular respiration"),
-            difficulty = QuizDifficulty.Easy
-        ),
-        ask(
-            id = "skora",
-            prompt = "Which human organ is the largest?",
-            correct = "Skin",
-            wrong = listOf("Liver", "Lungs", "Small intestine"),
-            difficulty = QuizDifficulty.Easy
-        ),
-        ask(
-            id = "komorka",
-            prompt = "What is the smallest building block of an organism called?",
-            correct = "Cell",
-            wrong = listOf("Tissue", "Organ", "Atom"),
-            difficulty = QuizDifficulty.Easy
-        ),
-        ask(
-            id = "krew_tlen",
-            prompt = "What do red blood cells carry?",
-            correct = "Oxygen",
-            wrong = listOf("Sugar", "Proteins", "Vitamins"),
-            difficulty = QuizDifficulty.Easy
-        ),
-        ask(
-            id = "kosci",
-            prompt = "How many bones does an adult human skeleton have?",
-            correct = "206",
-            wrong = listOf("152", "300", "180"),
-            difficulty = QuizDifficulty.Easy
-        ),
+        /* ----------------------------- Medium ----------------------------- */
+        q("bio_chromosomy", "How many chromosomes does a healthy human cell have?", "46", listOf("23", "48", "44"), M),
+        q("bio_chlorofil", "Which pigment gives plants their green color?", "Chlorophyll", listOf("Carotene", "Melanin", "Hemoglobin"), M),
+        q("bio_insulina", "Which organ produces insulin?", "Pancreas", listOf("Liver", "Kidneys", "Thyroid"), M),
+        q("bio_darwin", "Who formulated the theory of evolution by natural selection?", "Charles Darwin", listOf("Gregor Mendel", "Louis Pasteur", "Carl Linnaeus"), M),
+        q("bio_jamy_serca", "How many chambers does the human heart have?", "4", listOf("2", "3", "6"), M),
+        q("bio_witamina_d", "Which vitamin does the body produce from sunlight?", "Vitamin D", listOf("Vitamin C", "Vitamin A", "Vitamin B12"), M),
+        q("bio_zoladek", "Which acid helps digest food in the stomach?", "Hydrochloric acid", listOf("Sulfuric acid", "Acetic acid", "Nitric acid"), M),
+        q("day2_kofeina", "Roughly how long does half the caffeine leave an adult's body?", "About 5 hours", listOf("About 30 minutes", "About 24 hours", "About 3 days"), M),
+        q("bio2_dna_zasady", "How many different nitrogenous bases occur in DNA?", "Four", listOf("Two", "Five", "Twenty"), M),
+        q("bio2_plyny_ustrojowe", "What percentage of human body mass is water?", "About 60%", listOf("About 20%", "About 90%", "About 40%"), M),
+        q("bio2_wirus_zycie", "Why are viruses not considered fully-fledged living organisms?", "They can't reproduce without a host cell", listOf("They have no genetic material", "They can't mutate", "They don't respond to temperature"), M),
+        q("bio3_ropucha_aga", "Which animal, brought to Australia in 1935 to protect sugar cane, became a plague itself?", "The cane toad", listOf("The rabbit", "The dingo", "The emu"), M),
+        q("bio3_uv_dna", "Which part of sunlight damages DNA in skin cells and causes sunburn?", "Ultraviolet radiation", listOf("Infrared radiation", "Visible light", "Radio waves"), M),
+        q("bio3_las_gatunki", "Which land habitat holds the greatest number of species?", "Tropical rainforest", listOf("Boreal forest (taiga)", "Temperate grassland", "Tundra"), M),
+        q("trv_kosc_najmniejsza", "What is the smallest bone in the human body?", "The stapes, in the ear", listOf("The fibula", "The hyoid", "A finger bone"), M),
+        q("trv_serce_dziennie", "Roughly how many times does the human heart beat in a day?", "About 100,000", listOf("About 10,000", "About 1,000,000", "About 25,000"), M),
+        q("trv_krtan", "What is the medical name for the voice box?", "The larynx", listOf("The pharynx", "The trachea", "The epiglottis"), M),
+        q("trv_zebra_pary", "How many pairs of ribs does a typical adult have?", "12", listOf("10", "14", "8"), M),
+        q("trv_watroba_regeneracja", "Which organ can regrow most of itself after part of it is removed?", "The liver", listOf("The heart", "The lung", "The kidney"), M),
+        q("trv_paznokcie_wzrost", "Which grow faster?", "Fingernails", listOf("Toenails", "They grow at the same rate", "It depends on the season only"), M),
+        q("trv_pecherzyki", "What are the tiny air sacs in the lungs called?", "Alveoli", listOf("Bronchi", "Villi", "Capillaries"), M),
+        q("trv_zoladek_kwas", "Why doesn't stomach acid digest the stomach itself?", "A layer of mucus protects the stomach wall", listOf("The acid is too weak", "The stomach wall is made of bone", "The acid only works on meat"), M),
+        q("trv_goraczka_cel", "What is the purpose of a fever?", "Making the body a worse place for germs", listOf("Cooling the brain during an illness", "Burning off the body's spare fat", "Speeding up digestion while ill"), M),
+        q("trv_bakterie_jelita", "Which organ hosts most of the body's helpful bacteria?", "The large intestine", listOf("The stomach", "The liver", "The lungs"), M),
+        q("mst_czkawka_przepona", "A hiccup is a sudden spasm of which muscle?", "The diaphragm", listOf("The stomach wall", "The throat", "The heart"), M),
+        q("cur_kosci_niemowle", "Do babies have more or fewer bones than adults?", "More - around 300 that fuse over time", listOf("Fewer - bones split as we grow", "Exactly the same, 206", "Fewer - around 150"), M),
+        q("wld_krew_grupa_dawca", "Which blood type is known as the universal donor for red cells?", "O negative", listOf("AB positive", "A negative", "B positive"), M),
+        q("wld_szkliwo", "What is the hardest substance in the human body?", "Tooth enamel", listOf("Thigh bone", "Fingernail keratin", "Skull bone"), M),
+        q("wld_bio_smak_nos", "Why does food taste bland when you have a blocked nose?", "Most flavour comes from smell", listOf("The tongue swells up", "Mucus coats the taste buds completely", "Fever switches off taste"), M),
+        q("wld_bio_krew_kolor", "Why is blood red?", "Iron-containing haemoglobin", listOf("Copper in the plasma", "Red white blood cells", "Oxygen gas bubbles"), M),
+        q("bio_miod_egipt", "Which food has been found still edible in ancient Egyptian tombs?", "Honey", listOf("Bread", "Olive oil", "Dates"), M),
+        q("bio_umami", "Which fifth basic taste was named by a Japanese chemist in 1908?", "Umami", listOf("Kokumi", "Piquant", "Astringent"), M),
+        q("bio_wech_pamiec", "Which sense is most strongly tied to memory and emotion?", "Smell", listOf("Sight", "Hearing", "Touch"), M),
+        q("bio_jelito_dlugosc", "Roughly how long is an adult's small intestine?", "About 6 metres", listOf("About 1 metre", "About 20 metres", "About 50 metres"), M),
+        q("bio_mozg_lod", "An 'ice-cream headache' is triggered by cold on which part of the mouth?", "The roof of the mouth", listOf("The tip of the tongue", "The front teeth", "The back of the throat"), M),
+        q("bio_glos_nagranie", "Why does your own voice sound strange on a recording?", "You normally hear it through your skull too", listOf("Microphones raise its pitch", "Your ears adapt to it over time", "Recordings lose the echo of a room"), M),
+        q("bio_wlosy_liczba", "About how many hairs grow on an average human head?", "About 100,000", listOf("About 10,000", "About 1 million", "About 20,000"), M),
+        q("bio_dna_ludzie", "Roughly what share of their DNA do any two people have in common?", "About 99.9%", listOf("About 50%", "About 75%", "About 90%"), M),
+        q("bio_siatkowka_slonce", "Which part of the eye gets damaged by staring at the Sun?", "The retina", listOf("The cornea", "The iris", "The lens"), M),
+        q("bio_nie_narzad", "Which of these is NOT an organ of the human body?", "The gizzard", listOf("The spleen", "The thymus", "The gallbladder"), M),
+        q("bio_watroba_ciezka", "Which is the heaviest internal organ in the human body?", "The liver", listOf("The brain", "The lungs", "The heart"), M),
+        q("bio_nerki_filtr", "Which organs filter roughly 180 litres of blood plasma every day?", "The kidneys", listOf("The lungs", "The liver", "The spleen"), M),
+        q("bio_witamina_a", "Which vitamin helps the eyes see in dim light?", "Vitamin A", listOf("Vitamin B12", "Vitamin C", "Vitamin E"), M),
+        q("bio_biorca_uniwersalny", "People with which blood type can receive red cells of any type?", "AB positive", listOf("O negative", "A positive", "B negative"), M),
+        q("bio_noworodek_wzrok", "Which sense is the least developed in a newborn baby?", "Sight", listOf("Hearing", "Smell", "Touch"), M),
+        q("bio_noworodek_rzepka", "Newborn babies don't yet have a bony version of which bone?", "The kneecap", listOf("The skull", "The jawbone", "The collarbone"), M),
+        q("bio_trawa_celuloza", "Why can't humans digest grass?", "We lack enzymes that break down cellulose", listOf("Our teeth are too weak to chew it", "Our stomach is too small for it", "Grass is poisonous to people"), M),
+        q("bio_neandertal", "Which extinct human species left traces in the DNA of many people alive today?", "Neanderthals", listOf("Homo erectus", "Australopithecus", "Homo habilis"), M),
+        q("bio_sekwoja", "Which is the tallest species of tree on Earth?", "The coast redwood", listOf("The giant sequoia", "The mountain ash", "The Douglas fir"), M),
+        q("bio_orzeszki", "Botanically, what are peanuts?", "Legumes", listOf("Tree nuts", "Berries", "Grains"), M),
+        q("bio_brokul", "Which of these vegetables is really a bunch of flower buds?", "Broccoli", listOf("Carrot", "Potato", "Onion"), M),
+        q("bio_kawa_nasiona", "Coffee 'beans' are actually the seeds of what?", "A cherry-like fruit", listOf("A bean pod", "A palm nut", "A flower bulb"), M),
+        q("bio_rabarbar", "Which part of the rhubarb plant is safe to eat?", "The stalks", listOf("The leaves", "The roots", "The flowers"), M),
+        q("bio_marchew_fiolet", "What colour were most of the first cultivated carrots?", "Purple", listOf("Orange", "Red", "Blue"), M),
+        q("bio_len", "Linen is woven from the fibres of which plant?", "Flax", listOf("Cotton", "Hemp", "Jute"), M),
+        q("bio_tequila", "Tequila is made from which plant?", "The blue agave", listOf("A cactus", "Sugar cane", "Aloe vera"), M),
+        q("bio_jenner", "Who created the first vaccine, against smallpox, in 1796?", "Edward Jenner", listOf("Louis Pasteur", "Robert Koch", "Joseph Lister"), M),
+        q("bio_ospa", "Which is the only human disease that has been wiped out worldwide?", "Smallpox", listOf("Polio", "Measles", "Malaria"), M),
+        q("bio_hdl", "Which type of cholesterol is often called 'good' cholesterol?", "HDL", listOf("LDL", "VLDL", "IDL"), M),
+        q("bio_oddechy", "Roughly how many breaths does an adult take in a day?", "About 20,000", listOf("About 2,000", "About 200,000", "About 500"), M),
+        q("bio_miesien_najwiekszy", "Which is the largest muscle in the human body?", "The gluteus maximus", listOf("The biceps", "The latissimus dorsi", "The heart"), M),
+        q("bio_burczenie", "What makes your stomach 'growl'?", "Gas and fluid moving through the gut", listOf("The stomach shrinking", "Acid bubbling up", "Muscles cramping from hunger"), M),
+        q("bio_oksytocyna", "Which hormone is nicknamed the 'cuddle hormone'?", "Oxytocin", listOf("Adrenaline", "Cortisol", "Melatonin"), M),
+        q("bio_mozg_waga", "Roughly how much does an adult human brain weigh?", "About 1.4 kg", listOf("About 400 g", "About 3 kg", "About 5 kg"), M),
+        q("bio_kichanie_slonce", "About one in four people sneeze when they look into bright light. What is this called?", "The photic sneeze reflex", listOf("A sunlight allergy", "Solar hay fever", "Light sensitivity syndrome"), M),
+        q("bio_szczepionka_mrna", "The first mRNA vaccines approved for wide use protected against which disease?", "COVID-19", listOf("Measles", "Influenza", "Polio"), M),
 
-        /* ------------------------------ Medium ------------------------------ */
-        ask(
-            id = "mitochondrium",
-            prompt = "Which part of a cell is called its powerhouse?",
-            correct = "Mitochondrion",
-            wrong = listOf("Cell nucleus", "Ribosome", "Golgi apparatus"),
-            difficulty = QuizDifficulty.Medium
-        ),
-        ask(
-            id = "chromosomy",
-            prompt = "How many chromosomes does a healthy human cell have?",
-            correct = "46",
-            wrong = listOf("23", "48", "44"),
-            difficulty = QuizDifficulty.Medium
-        ),
-        ask(
-            id = "chlorofil",
-            prompt = "Which pigment gives plants their green color?",
-            correct = "Chlorophyll",
-            wrong = listOf("Carotene", "Melanin", "Hemoglobin"),
-            difficulty = QuizDifficulty.Medium
-        ),
-        ask(
-            id = "insulina",
-            prompt = "Which organ produces insulin?",
-            correct = "Pancreas",
-            wrong = listOf("Liver", "Kidneys", "Thyroid"),
-            difficulty = QuizDifficulty.Medium
-        ),
-        ask(
-            id = "darwin",
-            prompt = "Who formulated the theory of evolution by natural selection?",
-            correct = "Charles Darwin",
-            wrong = listOf("Gregor Mendel", "Louis Pasteur", "Carl Linnaeus"),
-            difficulty = QuizDifficulty.Medium
-        ),
-        ask(
-            id = "jamy_serca",
-            prompt = "How many chambers does the human heart have?",
-            correct = "4",
-            wrong = listOf("2", "3", "6"),
-            difficulty = QuizDifficulty.Medium
-        ),
-        ask(
-            id = "witamina_d",
-            prompt = "Which vitamin does the body produce from sunlight?",
-            correct = "Vitamin D",
-            wrong = listOf("Vitamin C", "Vitamin A", "Vitamin B12"),
-            difficulty = QuizDifficulty.Medium
-        ),
-        ask(
-            id = "zoladek",
-            prompt = "Which acid helps digest food in the stomach?",
-            correct = "Hydrochloric acid",
-            wrong = listOf("Sulfuric acid", "Acetic acid", "Nitric acid"),
-            difficulty = QuizDifficulty.Medium
-        ),
+        /* ------------------------------ Hard ------------------------------ */
+        q("bio_mejoza", "What is the cell division that produces sex cells called?", "Meiosis", listOf("Mitosis", "Cytokinesis", "Apoptosis"), H),
+        q("bio_mendel", "Who is considered the father of genetics for his research on peas?", "Gregor Mendel", listOf("Charles Darwin", "James Watson", "Francis Crick"), H),
+        q("bio_mozdzek", "Which part of the brain is responsible for balance and movement coordination?", "Cerebellum", listOf("Cerebral cortex", "Medulla oblongata", "Hypothalamus"), H),
+        q("bio_neuron", "What is the place where one neuron passes a signal to another called?", "Synapse", listOf("Axon", "Dendrite", "Myelin"), H),
+        q("bio_nefron", "What is the kidney's basic filtration unit called?", "Nephron", listOf("Alveolus", "Vesicle", "Bile duct"), H),
+        q("day2_pasteryzacja", "What does pasteurization do?", "Kills most harmful microbes with heat", listOf("Removes all bacteria permanently", "Adds preservatives", "Freezes the product"), H),
+        q("bio2_krew_ph", "What is the normal pH of human blood?", "About 7.4", listOf("About 5.5", "About 8.5", "Exactly 7.0"), H),
+        q("bio2_hormon_wzrostu", "Which gland secretes growth hormone?", "The pituitary gland", listOf("The thyroid", "The thymus", "The adrenal gland"), H),
+        q("bio2_kodon", "How many nucleotides make up one codon?", "Three", listOf("Two", "Four", "Six"), H),
+        q("bio3_leki_mozg", "Why do many drugs that work elsewhere in the body fail to treat brain disease?", "They cannot cross the blood-brain barrier", listOf("The brain has no blood supply", "The brain destroys every drug at once", "Brain cells have no receptors"), H),
+        q("wh_dna_struktura", "Which scientists described the DNA double helix in 1953?", "Watson and Crick", listOf("Mendel and Morgan", "Pasteur and Koch", "Fleming and Florey"), H),
+        q("day_witamina_gotowanie", "Which vitamin is most easily destroyed by cooking?", "Vitamin C", listOf("Vitamin D", "Vitamin K", "Vitamin E"), H),
+        q("day_grupa_krwi_czesta", "Which is the most common blood type worldwide?", "O positive", listOf("A negative", "AB positive", "B negative"), H),
+        q("day_wanilia_roslina", "Vanilla flavouring comes from the pods of which plant family?", "An orchid", listOf("A palm", "A cactus", "A fern"), H),
+        q("trv_miesien_najsilniejszy", "Which muscle exerts the most force for its size?", "The masseter (jaw muscle)", listOf("The biceps", "The calf muscle", "The heart"), H),
+        q("trv_witamina_krzepniecie", "Which vitamin is essential for blood clotting?", "Vitamin K", listOf("Vitamin C", "Vitamin A", "Vitamin B12"), H),
+        q("trv_erytrocyt_zycie", "How long does a red blood cell live, on average?", "About 120 days", listOf("About 12 days", "About a year", "About 5 years"), H),
+        q("trv_mrugniecie", "Roughly how many times does a person blink per minute while awake?", "About 15-20", listOf("About 2-3", "About 50", "About 100"), H),
+        q("trv_dna_dlugosc", "If you stretched out the DNA from a single human cell, roughly how long would it be?", "About 2 metres", listOf("About 2 millimetres", "About 2 centimetres", "About 200 metres"), H),
+        q("trv_kichniecie", "What really happens if you try to sneeze with your eyes open?", "Nothing bad - the eyes just close by reflex", listOf("The eyes could be forced out of their sockets", "The sneeze comes out much weaker", "You cannot sneeze at all that way"), H),
+        q("trv_kofeina_dziala", "How does caffeine keep you awake?", "It blocks the brain's 'sleepy' signal, adenosine", listOf("It raises the level of sugar in the blood", "It cools the brain by a fraction", "It thickens the blood a little"), H),
+        q("trv_skora_odnowa", "Roughly how often does the outer layer of your skin fully replace itself?", "About once a month", listOf("Once a day", "Once a year", "Once every 7 years"), H),
+        q("trv_odruch_kolanowy", "Where does the signal for the knee-jerk reflex get processed?", "In the spinal cord", listOf("In the brain's frontal lobe", "In the knee itself", "In the cerebellum"), H),
+        q("ext_jelito_powierzchnia", "Spread flat, the lining of the human small intestine would cover roughly what?", "A tennis court", listOf("A dinner table", "A car park space", "A football pitch"), H),
+        q("ext_oko_rozdzielczosc", "On a clear night the unaided human eye can see a candle flame from about how far?", "A few kilometres", listOf("A few hundred metres", "About 50 kilometres", "Over 100 kilometres"), H),
+        q("mst_bakterie_liczba", "Roughly how do bacterial cells in your body compare with your own cells?", "Comparable in number", listOf("A thousand times fewer", "A million times more", "Only a few thousand total"), H),
+        q("dpt_bio_karotenoidy", "Which pigments turn leaves yellow once chlorophyll fades?", "Carotenoids", listOf("Anthocyanins", "Phycocyanins", "Melanins"), H),
+        q("cur_banan_geny", "Humans share roughly what share of their genes with a banana?", "About 60%", listOf("About 5%", "About 25%", "About 95%"), H),
+        q("wld_czerwone_krwinki_jadro", "What do mature human red blood cells lack?", "A nucleus", listOf("A membrane", "Haemoglobin", "Water"), H),
+        q("wld_mozg_energia", "The brain is about 2% of body weight. Roughly what share of the body's energy does it use?", "About 20%", listOf("About 2%", "About 50%", "About 5%"), H),
+        q("wld_bio_ziewanie", "Which of these is thought to be one purpose of yawning?", "Cooling the brain", listOf("Refilling the stomach with air", "Cleaning the ears", "Resetting the heartbeat"), H),
+        q("wld_bio_gesia_skorka", "Goosebumps are a leftover reflex that once did what for our ancestors?", "Fluffed up body hair", listOf("Released a warning smell", "Toughened the skin", "Stopped bleeding"), H),
+        q("wld_bio_wlosy_rosna", "Roughly how fast does hair on your head grow?", "About 1 cm a month", listOf("About 1 mm a month", "About 5 cm a month", "About 1 cm a year"), H),
+        q("bio_rafflesia", "Which plant produces the largest single flower in the world?", "Rafflesia", listOf("The titan arum", "The giant water lily", "The sunflower"), H),
+        q("bio_mucholowka", "Where does the Venus flytrap grow in the wild?", "The Carolinas in the USA", listOf("The Amazon rainforest", "Borneo", "Madagascar"), H),
+        q("bio_truskawka_nasiona", "Botanically, what are the little 'seeds' on the outside of a strawberry?", "Tiny fruits", listOf("Pollen grains", "Hairs", "Buds"), H),
+        q("bio_trzcina", "Which crop is grown in the greatest quantity worldwide?", "Sugar cane", listOf("Wheat", "Rice", "Maize"), H),
+        q("bio_kiwi_nazwa", "Kiwifruit used to be sold under which name?", "Chinese gooseberry", listOf("Jungle plum", "Hairy lemon", "Fuzzy fig"), H),
+        q("bio_komorki_liczba", "Roughly how many cells make up a human body?", "About 30 trillion", listOf("About 30 million", "About 30 billion", "About 30 quadrillion"), H),
+        q("bio_hemofilia_krolewska", "Which illness was called 'the royal disease' because it ran through Queen Victoria's descendants?", "Haemophilia", listOf("Gout", "Porphyria", "Smallpox"), H),
+        q("bio_plamka_slepa", "Why does each eye have a blind spot?", "The optic nerve leaves the retina there", listOf("Eyelashes block the light there", "The iris covers that part", "Tears drain away there"), H),
+        q("bio_preciki", "In very dim light we see mostly in shades of grey. Which cells take over then?", "Rods", listOf("Cones", "Ganglion cells", "Iris muscles"), H),
+        q("bio_hooke", "Who first looked at cells under a microscope and named them, in 1665?", "Robert Hooke", listOf("Antonie van Leeuwenhoek", "Galileo Galilei", "Isaac Newton"), H),
+        q("bio_ab_minus", "Which of the eight common blood types is the rarest?", "AB negative", listOf("O negative", "B positive", "A negative"), H),
+        q("bio_powieki", "Where is the skin on your body the thinnest?", "On the eyelids", listOf("On the lips", "On the fingertips", "On the earlobes"), H),
+        q("bio_franklin", "Whose X-ray image 'Photo 51' was key to working out the structure of DNA?", "Rosalind Franklin's", listOf("Marie Curie's", "Barbara McClintock's", "Dorothy Hodgkin's"), H),
+        q("bio_przeszczep_nerka", "Which organ was the first to be transplanted successfully, in 1954?", "A kidney", listOf("A heart", "A liver", "A lung"), H),
+        q("bio_komorka_jajowa", "Which is the largest cell in the human body?", "The egg cell", listOf("The red blood cell", "The white blood cell", "The skin cell"), H),
+        q("bio_naczynia_dlugosc", "Laid end to end, roughly how long would all the blood vessels of an adult be?", "About 100,000 km", listOf("About 100 km", "About 1,000 km", "About 10,000 km"), H),
+        q("bio_pluca_plywaja", "Which organ would float if you put it in water?", "The lungs", listOf("The heart", "The liver", "The brain"), H),
+        q("bio_azot_wydech", "Which gas makes up most of the air you breathe out?", "Nitrogen", listOf("Carbon dioxide", "Oxygen", "Water vapour"), H),
+        q("bio_dlonie_stopy", "Together, the hands and feet hold roughly what share of the body's bones?", "More than half", listOf("About a tenth", "About a quarter", "About a third"), H),
+        q("bio_nerwy_predkosc", "The fastest nerve signals travel at roughly what speed?", "About 400 km/h", listOf("About 5 km/h", "About 40 km/h", "The speed of light"), H),
+        q("bio_mozg_tluszcz", "Roughly what share of the human brain is fat?", "About 60%", listOf("About 10%", "About 30%", "About 90%"), H),
+        q("bio_pomarszczone_palce", "What makes your fingertips wrinkle after a long bath?", "Nerves narrowing blood vessels", listOf("Skin soaking up water", "Salt washing out of the skin", "Skin cells dying off"), H),
+        q("bio_gardlo_kosc", "Which bone is the only one not connected to any other bone?", "The hyoid", listOf("The kneecap", "The tailbone", "The stapes"), H),
+        q("bio_pot_gruczoly", "Where does the skin have the most sweat glands per square centimetre?", "The soles of the feet", listOf("The armpits", "The forehead", "The back"), H),
+        q("bio_plankton_tlen", "Roughly half of the oxygen we breathe is made where?", "By ocean plankton", listOf("In rainforests", "On grasslands", "By farm crops"), H),
 
-        /* ------------------------------ Hard ------------------------------- */
-        ask(
-            id = "mejoza",
-            prompt = "What is the cell division that produces sex cells called?",
-            correct = "Meiosis",
-            wrong = listOf("Mitosis", "Cytokinesis", "Apoptosis"),
-            difficulty = QuizDifficulty.Hard
-        ),
-        ask(
-            id = "mendel",
-            prompt = "Who is considered the father of genetics for his research on peas?",
-            correct = "Gregor Mendel",
-            wrong = listOf("Charles Darwin", "James Watson", "Francis Crick"),
-            difficulty = QuizDifficulty.Hard
-        ),
-        ask(
-            id = "mozdzek",
-            prompt = "Which part of the brain is responsible for balance and movement coordination?",
-            correct = "Cerebellum",
-            wrong = listOf("Cerebral cortex", "Medulla oblongata", "Hypothalamus"),
-            difficulty = QuizDifficulty.Hard
-        ),
-        ask(
-            id = "dawca",
-            prompt = "Which blood type is the universal donor?",
-            correct = "O Rh-",
-            wrong = listOf("AB Rh+", "A Rh+", "B Rh-"),
-            difficulty = QuizDifficulty.Hard
-        ),
-        ask(
-            id = "neuron",
-            prompt = "What is the place where one neuron passes a signal to another called?",
-            correct = "Synapse",
-            wrong = listOf("Axon", "Dendrite", "Myelin"),
-            difficulty = QuizDifficulty.Hard
-        ),
-        ask(
-            id = "nefron",
-            prompt = "What is the kidney's basic filtration unit called?",
-            correct = "Nephron",
-            wrong = listOf("Alveolus", "Vesicle", "Bile duct"),
-            difficulty = QuizDifficulty.Hard
-        ),
-
-        /* ----------------------------- Expert ---------------------------- */
-        ask(
-            id = "amylaza",
-            prompt = "Which enzyme in saliva breaks down starch?",
-            correct = "Amylase",
-            wrong = listOf("Pepsin", "Lipase", "Trypsin"),
-            difficulty = QuizDifficulty.Expert
-        ),
-        ask(
-            id = "mrna",
-            prompt = "Which type of RNA carries genetic information from the nucleus to the ribosome?",
-            correct = "mRNA",
-            wrong = listOf("tRNA", "rRNA", "siRNA"),
-            difficulty = QuizDifficulty.Expert
-        ),
-        ask(
-            id = "ektoderma",
-            prompt = "Which germ layer does the nervous system develop from?",
-            correct = "Ectoderm",
-            wrong = listOf("Mesoderm", "Endoderm", "Notochord"),
-            difficulty = QuizDifficulty.Expert
-        ),
-        ask(
-            id = "atp",
-            prompt = "What is the compound that's the cell's main energy carrier called?",
-            correct = "ATP",
-            wrong = listOf("DNA", "NADH", "Glucose"),
-            difficulty = QuizDifficulty.Expert
-        ),
-        ask(
-            id = "krebs",
-            prompt = "What is the Krebs cycle also known as?",
-            correct = "The citric acid cycle",
-            wrong = listOf("The urea cycle", "The Calvin cycle", "Glycolysis"),
-            difficulty = QuizDifficulty.Expert
-        )
+        /* ----------------------------- Expert ----------------------------- */
+        q("bio_amylaza", "Which enzyme in saliva breaks down starch?", "Amylase", listOf("Pepsin", "Lipase", "Trypsin"), X),
+        q("bio_mrna", "Which type of RNA carries genetic information from the nucleus to the ribosome?", "mRNA", listOf("tRNA", "rRNA", "siRNA"), X),
+        q("bio_ektoderma", "Which germ layer does the nervous system develop from?", "Ectoderm", listOf("Mesoderm", "Endoderm", "Notochord"), X),
+        q("bio_atp", "What is the compound that's the cell's main energy carrier called?", "ATP", listOf("DNA", "NADH", "Glucose"), X),
+        q("bio2_telomer", "What protects chromosome ends from shortening?", "Telomeres", listOf("Centromeres", "Histones", "Introns"), X),
+        q("bio2_prion", "What is a prion?", "An infectious, misfolded protein", listOf("An RNA virus", "An anaerobic bacterium", "A DNA fragment"), X),
+        q("bio2_krzyzowka_mendel", "What phenotype ratio does a cross of two heterozygotes give in single-gene inheritance?", "3:1", listOf("1:1", "9:3:3:1", "2:2"), X),
+        q("bio2_stromatolit", "Which organisms are credited with putting oxygen into Earth's atmosphere?", "Cyanobacteria", listOf("Fungi", "Methanogenic archaea", "Diatoms"), X),
+        q("bio3_optogenetyka", "What is optogenetics used for?", "Controlling neuron activity with light", listOf("Imaging bone through the soft tissue", "Producing insulin in modified yeast", "Cloning a whole animal from one cell"), X),
+        q("bio3_bioluminescencja_mechanizm", "What accounts for bioluminescence in most organisms?", "A luciferase reaction with luciferin", listOf("Reflection of moonlight", "Fluorescence of photosynthetic proteins", "Electric discharges"), X),
+        q("bio3_crispr_pochodzenie", "Where does the CRISPR-Cas system used for gene editing today originally come from?", "Bacteria's natural defense mechanism against viruses", listOf("A protein designed from scratch in a laboratory", "The chloroplasts found inside plant cells", "A protein borrowed from the HIV virus"), X),
+        q("bio3_hipokamp_pamiec", "Which brain structure turned out to be essential for forming new long-term memories?", "The hippocampus", listOf("The cerebellum", "The amygdala", "The thalamus"), X),
+        q("dpt_bio_hayflick", "What does the Hayflick limit describe?", "How often a normal cell can divide", listOf("How long an enzyme stays active", "How fast a nerve signal travels", "How much oxygen blood carries"), X),
+        q("dpt_bio_endosymbioza", "What does endosymbiotic theory explain?", "Where mitochondria came from", listOf("How viruses infect bacteria", "How one species splits in two", "How enzymes settled on shape"), X),
+        q("dpt_bio_hox", "What do Hox genes set up in an embryo?", "The body plan along its main axis", listOf("The number of chromosomes in it", "The rate of cell respiration in it", "The colour of its first tissues"), X),
+        q("cur_rogowka_tlen", "Which part of the body gets its oxygen straight from the air rather than from blood?", "The cornea", listOf("The eardrum", "The fingernails", "The tongue"), X),
+        q("wld_dna_zasady", "Which base is found in RNA but not in DNA?", "Uracil", listOf("Thymine", "Adenine", "Guanine"), X),
+        q("wld_bio_zoladek_nowy", "How often does the lining of your stomach renew itself?", "Every few days", listOf("Every few years", "Once in a lifetime", "Every hour"), X),
+        q("bio_mitochondria_matka", "Which part of your DNA is inherited only from your mother?", "Mitochondrial DNA", listOf("Nuclear DNA", "The Y chromosome", "Ribosomal RNA"), X),
+        q("bio_zlota_krew", "Rh-null blood, found in only a few dozen known people, is nicknamed what?", "Golden blood", listOf("Royal blood", "Blue blood", "Silver blood"), X),
+        q("bio_geny_liczba", "Roughly how many protein-coding genes does a human have?", "About 20,000", listOf("About 2,000", "About 200,000", "About 2 million"), X),
+        q("bio_krwinki_sekunda", "Roughly how many new red blood cells does your body make every second?", "About 2 million", listOf("About 200", "About 20,000", "About 2 billion"), X),
+        q("bio_landsteiner", "Who discovered the ABO blood groups in 1901?", "Karl Landsteiner", listOf("Louis Pasteur", "Robert Koch", "William Harvey"), X),
+        q("bio_harvey", "Who first described how the heart pumps blood around the body, in 1628?", "William Harvey", listOf("Galen", "Andreas Vesalius", "Leonardo da Vinci"), X),
+        q("bio_hela", "Which famous line of human cells, taken in 1951, still grows in labs today?", "HeLa cells", listOf("CHO cells", "Vero cells", "Jurkat cells"), X),
+        q("bio_propriocepcja", "What is the sense that tells you where your limbs are without looking?", "Proprioception", listOf("Interoception", "Nociception", "Equilibrioception"), X),
+        q("bio_matuzalem", "Which kind of tree includes some of the oldest known individual trees, nearly 5,000 years old?", "The bristlecone pine", listOf("The giant sequoia", "The English yew", "The baobab"), X),
+        q("bio_leeuwenhoek", "Who was the first person to see bacteria, through his own home-made microscopes?", "Antonie van Leeuwenhoek", listOf("Robert Hooke", "Louis Pasteur", "Robert Koch"), X),
+        q("bio_barnard", "Who performed the first human-to-human heart transplant, in 1967?", "Christiaan Barnard", listOf("Michael DeBakey", "Denton Cooley", "Joseph Murray"), X),
+        q("bio_neuron_dlugi", "Which human cells can be the longest, stretching up to about a metre?", "Nerve cells", listOf("Muscle fibres", "Egg cells", "Skin cells"), X),
+        q("bio_kofeina_pestycyd", "Why do coffee plants produce caffeine in the first place?", "To poison insects that eat them", listOf("To store energy for winter", "To survive night frosts", "To attract birds to the seeds"), X)
     )
 }

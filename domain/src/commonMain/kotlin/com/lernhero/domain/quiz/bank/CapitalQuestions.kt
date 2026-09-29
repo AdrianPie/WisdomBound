@@ -5,80 +5,201 @@ import com.lernhero.domain.quiz.QuizDifficulty
 import com.lernhero.domain.quiz.QuizEntry
 
 /**
- * "What's the capital of this?" - and the reverse. Easy ones end at Paris, expert ones start
- * right where most people trip up (Sydney, Rio, Istanbul).
+ * Stolice - w obie strony ("stolica X?" i "X to stolica czego?") plus historie stolic: zmiany
+ * nazw, przeprowadzki, rekordy, zabytki.
+ *
+ * Wylecialy dwie skrajnosci: stolice, ktorych nie da sie nie znac (Paryz, Berlin, Rzym) i stolice
+ * mikropanstw Pacyfiku, ktorych nie da sie zgadnac ani wyprowadzic. Najciekawsze sa pulapki - miasto
+ * wieksze i slynniejsze od stolicy (Sydney, Toronto, Stambul).
+ *
+ * Zasady pisania pytan dla calego banku - patrz [com.lernhero.domain.quiz.QuizBank].
  */
 object CapitalQuestions {
 
-    private fun capital(
-        country: String,
-        correct: String,
-        wrong: List<String>,
-        difficulty: QuizDifficulty
-    ) = QuizEntry(
-        id = "cap_${correct.lowercase().replace(" ", "_")}",
-        prompt = "What is the capital of $country?",
-        correct = correct,
-        wrong = wrong,
-        category = QuizCategory.Capitals,
-        difficulty = difficulty
-    )
+    private val E = QuizDifficulty.Easy
+    private val M = QuizDifficulty.Medium
+    private val H = QuizDifficulty.Hard
+    private val X = QuizDifficulty.Expert
 
-    /** Reverse: we give the city, the player names the country. */
-    private fun country(
-        city: String,
-        correct: String,
-        wrong: List<String>,
-        difficulty: QuizDifficulty
-    ) = QuizEntry(
-        id = "cap_kraj_${city.lowercase().replace(" ", "_")}",
-        prompt = "$city is the capital of which country?",
-        correct = correct,
-        wrong = wrong,
-        category = QuizCategory.Capitals,
-        difficulty = difficulty
-    )
+    private fun q(id: String, prompt: String, correct: String, wrong: List<String>, difficulty: QuizDifficulty) =
+        QuizEntry(id = id, prompt = prompt, correct = correct, wrong = wrong, category = QuizCategory.Capitals, difficulty = difficulty)
 
     val all: List<QuizEntry> = listOf(
+        /* ------------------------------ Easy ------------------------------ */
+        q("cap2_prague", "What is the capital of Czechia?", "Prague", listOf("Brno", "Ostrava", "Pilsen"), E),
+        q("cap2_bratislava", "What is the capital of Slovakia?", "Bratislava", listOf("Kosice", "Zilina", "Nitra"), E),
+        q("cap2_vienna", "What is the capital of Austria?", "Vienna", listOf("Salzburg", "Graz", "Linz"), E),
+        q("cap2_budapest", "What is the capital of Hungary?", "Budapest", listOf("Debrecen", "Szeged", "Miskolc"), E),
+        q("cap2_cairo", "What is the capital of Egypt?", "Cairo", listOf("Alexandria", "Giza", "Luxor"), E),
+        q("cap2_kraj_stockholm", "Stockholm is the capital of which country?", "Sweden", listOf("Norway", "Finland", "Denmark"), E),
+        q("cap2_kraj_amsterdam", "Amsterdam is the capital of which country?", "Netherlands", listOf("Belgium", "Denmark", "Germany"), E),
+        q("cap3_caracas", "What is the capital of Venezuela?", "Caracas", listOf("Bogota", "Lima", "Quito"), E),
+        q("cap3_quito", "What is the capital of Ecuador?", "Quito", listOf("Bogota", "Lima", "Caracas"), E),
+        q("cap3_kuwait_city", "What is the capital of Kuwait?", "Kuwait City", listOf("Riyadh", "Doha", "Manama"), E),
+        q("cap3_doha", "What is the capital of Qatar?", "Doha", listOf("Dubai", "Abu Dhabi", "Manama"), E),
+        q("cap3_abu_dhabi", "What is the capital of United Arab Emirates?", "Abu Dhabi", listOf("Dubai", "Doha", "Manama"), E),
+        q("wld_cap_new_york", "Is New York the capital of the United States?", "No - it's Washington, D.C.", listOf("Yes, since 1776", "No - it's Philadelphia", "No - it's Boston"), E),
+        q("cap_budapest_dunaj", "Which capital city grew out of two towns, Buda and Pest, on the Danube?", "Budapest", listOf("Bucharest", "Belgrade", "Bratislava"), E),
+        q("cap_kreml", "In which capital city is the Kremlin?", "Moscow", listOf("Kyiv", "Minsk", "Saint Petersburg"), E),
+        q("cap_zakazane_miasto", "In which capital city is the Forbidden City?", "Beijing", listOf("Tokyo", "Seoul", "Shanghai"), E),
+        q("cap_miasto_swiatla", "Which capital city is nicknamed 'the City of Light'?", "Paris", listOf("Rome", "Vienna", "Madrid"), E),
+        q("cap_wieczne_miasto", "Which capital city is nicknamed 'the Eternal City'?", "Rome", listOf("Athens", "Jerusalem", "Istanbul"), E),
+        q("cap_szkocja", "What is the capital of Scotland?", "Edinburgh", listOf("Glasgow", "Aberdeen", "Dundee"), E),
+        q("cap_katalonia", "Which city is the capital of Catalonia?", "Barcelona", listOf("Madrid", "Valencia", "Seville"), E),
+        q("cap_hawaje", "What is the capital of the US state of Hawaii?", "Honolulu", listOf("Hilo", "Kona", "Lahaina"), E),
 
-        /* ------------------------------- Easy ------------------------------- */
-        capital("Poland", "Warsaw", listOf("Krakow", "Lodz", "Gdansk"), QuizDifficulty.Easy),
-        capital("France", "Paris", listOf("Lyon", "Marseille", "Nice"), QuizDifficulty.Easy),
-        capital("Germany", "Berlin", listOf("Munich", "Hamburg", "Frankfurt"), QuizDifficulty.Easy),
-        capital("Italy", "Rome", listOf("Milan", "Naples", "Turin"), QuizDifficulty.Easy),
-        capital("Spain", "Madrid", listOf("Barcelona", "Seville", "Valencia"), QuizDifficulty.Easy),
-        capital("United Kingdom", "London", listOf("Manchester", "Edinburgh", "Liverpool"), QuizDifficulty.Easy),
-        capital("Japan", "Tokyo", listOf("Osaka", "Kyoto", "Nagoya"), QuizDifficulty.Easy),
+        /* ----------------------------- Medium ----------------------------- */
+        q("cap_canberra", "What is the capital of Australia?", "Canberra", listOf("Sydney", "Melbourne", "Perth"), M),
+        q("cap_ottawa", "What is the capital of Canada?", "Ottawa", listOf("Toronto", "Montreal", "Vancouver"), M),
+        q("cap_brasilia", "What is the capital of Brazil?", "Brasilia", listOf("Rio de Janeiro", "Sao Paulo", "Salvador"), M),
+        q("cap_ankara", "What is the capital of Turkey?", "Ankara", listOf("Istanbul", "Izmir", "Bursa"), M),
+        q("cap_bern", "What is the capital of Switzerland?", "Bern", listOf("Zurich", "Geneva", "Basel"), M),
+        q("cap_lisbon", "What is the capital of Portugal?", "Lisbon", listOf("Porto", "Braga", "Faro"), M),
+        q("cap_oslo", "What is the capital of Norway?", "Oslo", listOf("Bergen", "Trondheim", "Stavanger"), M),
+        q("cap_kyiv", "What is the capital of Ukraine?", "Kyiv", listOf("Lviv", "Odesa", "Kharkiv"), M),
+        q("cap_kraj_copenhagen", "Copenhagen is the capital of which country?", "Denmark", listOf("Sweden", "Norway", "Netherlands"), M),
+        q("cap_kraj_brussels", "Brussels is the capital of which country?", "Belgium", listOf("Netherlands", "Luxembourg", "France"), M),
+        q("cap2_helsinki", "What is the capital of Finland?", "Helsinki", listOf("Tampere", "Turku", "Espoo"), M),
+        q("cap2_dublin", "What is the capital of Ireland?", "Dublin", listOf("Cork", "Galway", "Limerick"), M),
+        q("cap2_bucharest", "What is the capital of Romania?", "Bucharest", listOf("Cluj-Napoca", "Timisoara", "Iasi"), M),
+        q("cap2_sofia", "What is the capital of Bulgaria?", "Sofia", listOf("Plovdiv", "Varna", "Burgas"), M),
+        q("cap2_zagreb", "What is the capital of Croatia?", "Zagreb", listOf("Split", "Rijeka", "Dubrovnik"), M),
+        q("cap2_belgrade", "What is the capital of Serbia?", "Belgrade", listOf("Novi Sad", "Nis", "Subotica"), M),
+        q("cap2_new_delhi", "What is the capital of India?", "New Delhi", listOf("Mumbai", "Kolkata", "Bangalore"), M),
+        q("cap2_buenos_aires", "What is the capital of Argentina?", "Buenos Aires", listOf("Cordoba", "Rosario", "Mendoza"), M),
+        q("cap2_mexico_city", "What is the capital of Mexico?", "Mexico City", listOf("Guadalajara", "Monterrey", "Cancun"), M),
+        q("cap2_seoul", "What is the capital of South Korea?", "Seoul", listOf("Busan", "Incheon", "Daegu"), M),
+        q("cap2_jerusalem", "What is the capital of Israel?", "Jerusalem", listOf("Tel Aviv", "Haifa", "Eilat"), M),
+        q("cap2_kraj_ljubljana", "Ljubljana is the capital of which country?", "Slovenia", listOf("Croatia", "Slovakia", "Austria"), M),
+        q("cap2_kraj_vilnius", "Vilnius is the capital of which country?", "Lithuania", listOf("Latvia", "Estonia", "Belarus"), M),
+        q("cap2_kraj_riga", "Riga is the capital of which country?", "Latvia", listOf("Lithuania", "Estonia", "Finland"), M),
+        q("cap3_montevideo", "What is the capital of Uruguay?", "Montevideo", listOf("Buenos Aires", "Santiago", "Asuncion"), M),
+        q("cap3_asuncion", "What is the capital of Paraguay?", "Asuncion", listOf("Montevideo", "La Paz", "Santa Cruz"), M),
+        q("cap3_la_paz", "What is the capital of Bolivia (seat of government)?", "La Paz", listOf("Sucre", "Santa Cruz", "Cochabamba"), M),
+        q("cap3_san_jose", "What is the capital of Costa Rica?", "San Jose", listOf("Panama City", "Managua", "Tegucigalpa"), M),
+        q("cap3_panama_city", "What is the capital of Panama?", "Panama City", listOf("San Jose", "Managua", "Bogota"), M),
+        q("cap3_kuala_lumpur", "What is the capital of Malaysia?", "Kuala Lumpur", listOf("Singapore", "Jakarta", "Bangkok"), M),
+        q("cap3_singapore", "What is the capital of Singapore?", "Singapore", listOf("Kuala Lumpur", "Jakarta", "Manila"), M),
+        q("cap3_bangkok", "What is the capital of Thailand?", "Bangkok", listOf("Hanoi", "Phnom Penh", "Vientiane"), M),
+        q("cap3_algiers", "What is the capital of Algeria?", "Algiers", listOf("Tunis", "Tripoli", "Rabat"), M),
+        q("cap3_tunis", "What is the capital of Tunisia?", "Tunis", listOf("Algiers", "Tripoli", "Rabat"), M),
+        q("cap3_tripoli", "What is the capital of Libya?", "Tripoli", listOf("Tunis", "Algiers", "Cairo"), M),
+        q("mst_stolica_dwie_nazwy", "Which country's seat of government sits in Amsterdam's rival city, The Hague?", "The Netherlands", listOf("Belgium", "Denmark", "Luxembourg"), M),
+        q("cur_kazachstan_stolica", "What is the capital of Kazakhstan?", "Astana", listOf("Almaty", "Bishkek", "Tashkent"), M),
+        q("cap_moskwa_ludnosc", "Which is the most populous capital city in Europe?", "Moscow", listOf("London", "Paris", "Berlin"), M),
+        q("cap_edo", "Which capital city was once called Edo?", "Tokyo", listOf("Kyoto", "Osaka", "Seoul"), M),
+        q("cap_sztokholm_wyspy", "Which capital city is spread across 14 islands?", "Stockholm", listOf("Copenhagen", "Helsinki", "Oslo"), M),
+        q("cap_manneken", "In which capital city is the Manneken Pis statue?", "Brussels", listOf("Amsterdam", "Copenhagen", "Bern"), M),
+        q("cap_petronas", "In which capital city are the Petronas Towers?", "Kuala Lumpur", listOf("Singapore", "Jakarta", "Bangkok"), M),
+        q("cap_most_karola", "In which capital city is the Charles Bridge?", "Prague", listOf("Vienna", "Budapest", "Warsaw"), M),
+        q("cap_buenos_aires_nazwa", "Which capital city's name means 'good airs'?", "Buenos Aires", listOf("Montevideo", "Asuncion", "Santiago"), M),
+        q("cap_walia", "What is the capital of Wales?", "Cardiff", listOf("Swansea", "Newport", "Bangor"), M),
+        q("cap_belfast_titanic", "In which city, now the capital of Northern Ireland, was the Titanic built?", "Belfast", listOf("Dublin", "Glasgow", "Liverpool"), M),
+        q("cap_kalifornia", "What is the capital of California?", "Sacramento", listOf("Los Angeles", "San Francisco", "San Diego"), M),
+        q("cap_nowy_jork", "What is the capital of New York State?", "Albany", listOf("New York City", "Buffalo", "Rochester"), M),
+        q("cap_teksas", "What is the capital of Texas?", "Austin", listOf("Houston", "Dallas", "San Antonio"), M),
+        q("cap_quebec", "What is the capital of the Canadian province of Quebec?", "Quebec City", listOf("Montreal", "Laval", "Gatineau"), M),
+        q("cap_bawaria", "Which city is the capital of Bavaria?", "Munich", listOf("Nuremberg", "Augsburg", "Stuttgart"), M),
+        q("cap_portoryko", "What is the capital of Puerto Rico?", "San Juan", listOf("Ponce", "Havana", "Santo Domingo"), M),
+        q("cap_bangkok_palac", "In which capital city is the Grand Palace with its Emerald Buddha temple?", "Bangkok", listOf("Hanoi", "Phnom Penh", "Yangon"), M),
+        q("cap_tivoli", "In which capital city is the Tivoli Gardens amusement park?", "Copenhagen", listOf("Oslo", "Stockholm", "Vienna"), M),
+        q("cap_metro_londyn", "Which capital city opened the world's first underground railway, in 1863?", "London", listOf("Paris", "Budapest", "New York"), M),
 
-        /* ------------------------------ Medium ------------------------------ */
-        capital("Australia", "Canberra", listOf("Sydney", "Melbourne", "Perth"), QuizDifficulty.Medium),
-        capital("Canada", "Ottawa", listOf("Toronto", "Montreal", "Vancouver"), QuizDifficulty.Medium),
-        capital("Brazil", "Brasilia", listOf("Rio de Janeiro", "Sao Paulo", "Salvador"), QuizDifficulty.Medium),
-        capital("Turkey", "Ankara", listOf("Istanbul", "Izmir", "Bursa"), QuizDifficulty.Medium),
-        capital("Switzerland", "Bern", listOf("Zurich", "Geneva", "Basel"), QuizDifficulty.Medium),
-        capital("Portugal", "Lisbon", listOf("Porto", "Braga", "Faro"), QuizDifficulty.Medium),
-        capital("Norway", "Oslo", listOf("Bergen", "Trondheim", "Stavanger"), QuizDifficulty.Medium),
-        capital("Ukraine", "Kyiv", listOf("Lviv", "Odesa", "Kharkiv"), QuizDifficulty.Medium),
-        country("Copenhagen", "Denmark", listOf("Sweden", "Norway", "Netherlands"), QuizDifficulty.Medium),
-        country("Brussels", "Belgium", listOf("Netherlands", "Luxembourg", "France"), QuizDifficulty.Medium),
+        /* ------------------------------ Hard ------------------------------ */
+        q("cap_wellington", "What is the capital of New Zealand?", "Wellington", listOf("Auckland", "Christchurch", "Dunedin"), H),
+        q("cap_hanoi", "What is the capital of Vietnam?", "Hanoi", listOf("Ho Chi Minh City", "Da Nang", "Hue"), H),
+        q("cap_rabat", "What is the capital of Morocco?", "Rabat", listOf("Casablanca", "Marrakesh", "Fez"), H),
+        q("cap_abuja", "What is the capital of Nigeria?", "Abuja", listOf("Lagos", "Kano", "Ibadan"), H),
+        q("cap_reykjavik", "What is the capital of Iceland?", "Reykjavik", listOf("Akureyri", "Keflavik", "Selfoss"), H),
+        q("cap_nairobi", "What is the capital of Kenya?", "Nairobi", listOf("Mombasa", "Kisumu", "Nakuru"), H),
+        q("cap_manila", "What is the capital of Philippines?", "Manila", listOf("Cebu", "Davao", "Quezon City"), H),
+        q("cap_kraj_pretoria", "Pretoria is the capital of which country?", "South Africa", listOf("Kenya", "Zimbabwe", "Namibia"), H),
+        q("cap2_tallinn", "What is the capital of Estonia?", "Tallinn", listOf("Riga", "Vilnius", "Helsinki"), H),
+        q("cap2_tirana", "What is the capital of Albania?", "Tirana", listOf("Durres", "Vlore", "Shkoder"), H),
+        q("cap2_minsk", "What is the capital of Belarus?", "Minsk", listOf("Gomel", "Brest", "Vitebsk"), H),
+        q("cap2_lima", "What is the capital of Peru?", "Lima", listOf("Cusco", "Arequipa", "Trujillo"), H),
+        q("cap2_santiago", "What is the capital of Chile?", "Santiago", listOf("Valparaiso", "Concepcion", "Antofagasta"), H),
+        q("cap2_bogota", "What is the capital of Colombia?", "Bogota", listOf("Medellin", "Cali", "Cartagena"), H),
+        q("cap2_havana", "What is the capital of Cuba?", "Havana", listOf("Santiago de Cuba", "Camaguey", "Holguin"), H),
+        q("cap2_jakarta", "What is the capital of Indonesia?", "Jakarta", listOf("Surabaya", "Bandung", "Medan"), H),
+        q("cap2_islamabad", "What is the capital of Pakistan?", "Islamabad", listOf("Karachi", "Lahore", "Peshawar"), H),
+        q("cap2_riyadh", "What is the capital of Saudi Arabia?", "Riyadh", listOf("Jeddah", "Mecca", "Medina"), H),
+        q("cap2_tehran", "What is the capital of Iran?", "Tehran", listOf("Isfahan", "Mashhad", "Shiraz"), H),
+        q("cap2_addis_ababa", "What is the capital of Ethiopia?", "Addis Ababa", listOf("Dire Dawa", "Gondar", "Mekelle"), H),
+        q("cap2_dodoma", "What is the capital of Tanzania?", "Dodoma", listOf("Dar es Salaam", "Arusha", "Mwanza"), H),
+        q("cap3_accra", "What is the capital of Ghana?", "Accra", listOf("Lagos", "Abidjan", "Lome"), H),
+        q("cap3_dakar", "What is the capital of Senegal?", "Dakar", listOf("Bamako", "Conakry", "Nouakchott"), H),
+        q("cap3_bamako", "What is the capital of Mali?", "Bamako", listOf("Dakar", "Ouagadougou", "Niamey"), H),
+        q("cap3_lusaka", "What is the capital of Zambia?", "Lusaka", listOf("Harare", "Lilongwe", "Gaborone"), H),
+        q("cap3_harare", "What is the capital of Zimbabwe?", "Harare", listOf("Lusaka", "Maputo", "Gaborone"), H),
+        q("cap3_luanda", "What is the capital of Angola?", "Luanda", listOf("Maputo", "Kinshasa", "Windhoek"), H),
+        q("cap3_kinshasa", "What is the capital of Democratic Republic of the Congo?", "Kinshasa", listOf("Brazzaville", "Luanda", "Kigali"), H),
+        q("cap3_kampala", "What is the capital of Uganda?", "Kampala", listOf("Nairobi", "Kigali", "Bujumbura"), H),
+        q("cap3_kigali", "What is the capital of Rwanda?", "Kigali", listOf("Bujumbura", "Kampala", "Nairobi"), H),
+        q("cap3_dhaka", "What is the capital of Bangladesh?", "Dhaka", listOf("Chittagong", "Kolkata", "Karachi"), H),
+        q("lmk_stolica_malta", "What is the capital of Malta?", "Valletta", listOf("Mdina", "Sliema", "Birgu"), H),
+        q("lmk_stolica_sri_lanka_handlowa", "Which city is Sri Lanka's largest city and commercial centre?", "Colombo", listOf("Kandy", "Galle", "Jaffna"), H),
+        q("mst_stolica_najdalej_polnoc", "Which of these capital cities lies furthest north?", "Reykjavik", listOf("Helsinki", "Oslo", "Tallinn"), H),
+        q("mst_stolica_australia", "Canberra became Australia's capital mainly to settle a dispute between which cities?", "Sydney and Melbourne", listOf("Perth and Adelaide", "Brisbane and Sydney", "Hobart and Melbourne"), H),
+        q("mst_stolica_brazylia", "Brasilia was built from nothing in the 1950s to replace which capital?", "Rio de Janeiro", listOf("Sao Paulo", "Salvador", "Belo Horizonte"), H),
+        q("dpt_sto_surinam", "What is the capital of Suriname?", "Paramaribo", listOf("Nieuw Nickerie", "Albina", "Lelydorp"), H),
+        q("cur_rpa_trzy_stolice", "Which country has three capital cities?", "South Africa", listOf("Switzerland", "Malaysia", "Nigeria"), H),
+        q("cap_christiania", "Which capital city was called Christiania until 1925?", "Oslo", listOf("Copenhagen", "Stockholm", "Helsinki"), H),
+        q("cap_batawia", "Which capital city was known as Batavia under Dutch rule?", "Jakarta", listOf("Manila", "Kuala Lumpur", "Singapore"), H),
+        q("cap_nur_sultan", "Which capital city was called Nur-Sultan from 2019 to 2022?", "Astana", listOf("Almaty", "Tashkent", "Bishkek"), H),
+        q("cap_ulan_bator_zimno", "Which is the coldest national capital, on average?", "Ulaanbaatar", listOf("Reykjavik", "Moscow", "Ottawa"), H),
+        q("cap_quito_rownik", "Which of these capital cities lies closest to the equator?", "Quito", listOf("Nairobi", "Singapore", "Jakarta"), H),
+        q("cap_nusantara", "Indonesia has been building a new capital, Nusantara, on which island?", "Borneo", listOf("Sumatra", "Java", "Sulawesi"), H),
+        q("cap_bratyslawa_granice", "Which is the only national capital that borders two other countries?", "Bratislava", listOf("Vienna", "Luxembourg", "Andorra la Vella"), H),
+        q("cap_ontario", "Which city is the capital of the Canadian province of Ontario?", "Toronto", listOf("Ottawa", "Hamilton", "Kingston"), H),
+        q("cap_floryda", "What is the capital of Florida?", "Tallahassee", listOf("Miami", "Orlando", "Tampa"), H),
+        q("cap_alaska", "What is the capital of Alaska?", "Juneau", listOf("Anchorage", "Fairbanks", "Nome"), H),
+        q("cap_sycylia", "Which city is the capital of Sicily?", "Palermo", listOf("Catania", "Messina", "Syracuse"), H),
+        q("cap_grenlandia", "What is the capital of Greenland?", "Nuuk", listOf("Tromso", "Longyearbyen", "Torshavn"), H),
+        q("cap_tybet", "Which city is the capital of Tibet?", "Lhasa", listOf("Kathmandu", "Thimphu", "Shigatse"), H),
+        q("cap_polkula_poludniowa", "Which of these capital cities lies in the Southern Hemisphere?", "Nairobi", listOf("Bogota", "Kampala", "Singapore"), H),
+        q("cap_najdalej_zachod", "Which of these capital cities lies furthest west?", "Lisbon", listOf("Dublin", "Madrid", "London"), H),
 
-        /* ------------------------------ Hard ------------------------------- */
-        capital("New Zealand", "Wellington", listOf("Auckland", "Christchurch", "Dunedin"), QuizDifficulty.Hard),
-        capital("Vietnam", "Hanoi", listOf("Ho Chi Minh City", "Da Nang", "Hue"), QuizDifficulty.Hard),
-        capital("Morocco", "Rabat", listOf("Casablanca", "Marrakesh", "Fez"), QuizDifficulty.Hard),
-        capital("Nigeria", "Abuja", listOf("Lagos", "Kano", "Ibadan"), QuizDifficulty.Hard),
-        capital("Iceland", "Reykjavik", listOf("Akureyri", "Keflavik", "Selfoss"), QuizDifficulty.Hard),
-        capital("Kenya", "Nairobi", listOf("Mombasa", "Kisumu", "Nakuru"), QuizDifficulty.Hard),
-        capital("Philippines", "Manila", listOf("Cebu", "Davao", "Quezon City"), QuizDifficulty.Hard),
-        country("Pretoria", "South Africa", listOf("Kenya", "Zimbabwe", "Namibia"), QuizDifficulty.Hard),
-
-        /* ----------------------------- Expert ---------------------------- */
-        capital("Myanmar", "Naypyidaw", listOf("Yangon", "Mandalay", "Bago"), QuizDifficulty.Expert),
-        capital("Bhutan", "Thimphu", listOf("Paro", "Punakha", "Phuentsholing"), QuizDifficulty.Expert),
-        capital("Mongolia", "Ulaanbaatar", listOf("Erdenet", "Darkhan", "Khovd"), QuizDifficulty.Expert),
-        capital("Kyrgyzstan", "Bishkek", listOf("Osh", "Naryn", "Karakol"), QuizDifficulty.Expert),
-        capital("Eritrea", "Asmara", listOf("Massawa", "Keren", "Assab"), QuizDifficulty.Expert),
-        country("Ouagadougou", "Burkina Faso", listOf("Mali", "Niger", "Chad"), QuizDifficulty.Expert),
-        country("Tbilisi", "Georgia", listOf("Armenia", "Azerbaijan", "Uzbekistan"), QuizDifficulty.Expert)
+        /* ----------------------------- Expert ----------------------------- */
+        q("cap_thimphu", "What is the capital of Bhutan?", "Thimphu", listOf("Paro", "Punakha", "Phuentsholing"), X),
+        q("cap_ulaanbaatar", "What is the capital of Mongolia?", "Ulaanbaatar", listOf("Erdenet", "Darkhan", "Khovd"), X),
+        q("cap_bishkek", "What is the capital of Kyrgyzstan?", "Bishkek", listOf("Osh", "Naryn", "Karakol"), X),
+        q("cap_asmara", "What is the capital of Eritrea?", "Asmara", listOf("Massawa", "Keren", "Assab"), X),
+        q("cap_kraj_ouagadougou", "Ouagadougou is the capital of which country?", "Burkina Faso", listOf("Mali", "Niger", "Chad"), X),
+        q("cap_kraj_tbilisi", "Tbilisi is the capital of which country?", "Georgia", listOf("Armenia", "Azerbaijan", "Uzbekistan"), X),
+        q("cap2_sucre", "What is the capital of Bolivia (constitutional capital)?", "Sucre", listOf("La Paz", "Santa Cruz", "Cochabamba"), X),
+        q("cap2_yamoussoukro", "What is the capital of Ivory Coast?", "Yamoussoukro", listOf("Abidjan", "Bouake", "Korhogo"), X),
+        q("cap2_sri_jayawardenepura_kotte", "What is the capital of Sri Lanka (administrative capital)?", "Sri Jayawardenepura Kotte", listOf("Nuwara Eliya", "Trincomalee", "Batticaloa"), X),
+        q("cap2_dushanbe", "What is the capital of Tajikistan?", "Dushanbe", listOf("Khujand", "Kulob", "Qurghonteppa"), X),
+        q("cap2_ashgabat", "What is the capital of Turkmenistan?", "Ashgabat", listOf("Turkmenbashy", "Mary", "Dashoguz"), X),
+        q("cap2_baku", "What is the capital of Azerbaijan?", "Baku", listOf("Ganja", "Sumgait", "Lankaran"), X),
+        q("cap2_kathmandu", "What is the capital of Nepal?", "Kathmandu", listOf("Pokhara", "Lalitpur", "Biratnagar"), X),
+        q("cap2_vientiane", "What is the capital of Laos?", "Vientiane", listOf("Luang Prabang", "Pakse", "Savannakhet"), X),
+        q("cap2_phnom_penh", "What is the capital of Cambodia?", "Phnom Penh", listOf("Siem Reap", "Battambang", "Sihanoukville"), X),
+        q("cap2_antananarivo", "What is the capital of Madagascar?", "Antananarivo", listOf("Toamasina", "Mahajanga", "Toliara"), X),
+        q("cap2_windhoek", "What is the capital of Namibia?", "Windhoek", listOf("Walvis Bay", "Swakopmund", "Oshakati"), X),
+        q("cap2_port_moresby", "What is the capital of Papua New Guinea?", "Port Moresby", listOf("Lae", "Mount Hagen", "Madang"), X),
+        q("cap2_kraj_suva", "Suva is the capital of which country?", "Fiji", listOf("Samoa", "Tonga", "Vanuatu"), X),
+        q("cap2_kraj_nicosia", "Nicosia is the capital of which country?", "Cyprus", listOf("Malta", "Greece", "Lebanon"), X),
+        q("cap3_gaborone", "What is the capital of Botswana?", "Gaborone", listOf("Windhoek", "Lusaka", "Maseru"), X),
+        q("cap3_maseru", "What is the capital of Lesotho?", "Maseru", listOf("Mbabane", "Gaborone", "Bloemfontein"), X),
+        q("cap3_mbabane", "What is the capital of Eswatini?", "Mbabane", listOf("Maseru", "Pretoria", "Maputo"), X),
+        q("cap3_lilongwe", "What is the capital of Malawi?", "Lilongwe", listOf("Blantyre", "Lusaka", "Harare"), X),
+        q("cap3_khartoum", "What is the capital of Sudan?", "Khartoum", listOf("Cairo", "Addis Ababa", "Juba"), X),
+        q("cap3_juba", "What is the capital of South Sudan?", "Juba", listOf("Khartoum", "Kampala", "Nairobi"), X),
+        q("cap3_sanaa", "What is the capital of Yemen?", "Sanaa", listOf("Aden", "Muscat", "Riyadh"), X),
+        q("cap3_muscat", "What is the capital of Oman?", "Muscat", listOf("Sanaa", "Manama", "Abu Dhabi"), X),
+        q("cap3_bandar_seri_begawan", "What is the capital of Brunei?", "Bandar Seri Begawan", listOf("Kuala Lumpur", "Manila", "Jakarta"), X),
+        q("cap3_nouakchott", "What is the capital of Mauritania?", "Nouakchott", listOf("Dakar", "Bamako", "Nouadhibou"), X),
+        q("dpt_sto_palau", "What is the capital of Palau?", "Ngerulmud", listOf("Koror", "Melekeok", "Airai"), X),
+        q("dpt_sto_benin", "What is the official capital of Benin?", "Porto-Novo", listOf("Cotonou", "Parakou", "Abomey"), X),
+        q("cur_birma_stolica", "Myanmar moved its capital in 2006 to which purpose-built city?", "Naypyidaw", listOf("Yangon", "Mandalay", "Bagan"), X),
+        q("cap_salisbury", "Which capital city was called Salisbury until 1982?", "Harare", listOf("Lusaka", "Gaborone", "Windhoek"), X),
+        q("cap_leopoldville", "Which capital city was once called Leopoldville?", "Kinshasa", listOf("Brazzaville", "Kigali", "Bujumbura"), X),
+        q("cap_kuala_lumpur_nazwa", "Which capital city's name means 'muddy confluence' in Malay?", "Kuala Lumpur", listOf("Jakarta", "Singapore", "Bandar Seri Begawan"), X),
+        q("cap_nairobi_nazwa", "Which capital city's name comes from a Maasai phrase meaning 'cool water'?", "Nairobi", listOf("Kampala", "Dodoma", "Kigali"), X),
+        q("cap_monrowia", "Which African capital is named after a US president?", "Monrovia", listOf("Freetown", "Accra", "Banjul"), X),
+        q("cap_kinszasa_brazzaville", "Apart from Rome and Vatican City, which two capitals lie closest to each other?", "Kinshasa and Brazzaville", listOf("Vienna and Bratislava", "Buenos Aires and Montevideo", "Copenhagen and Oslo"), X),
+        q("cap_addis_nazwa", "The name of which capital city means 'new flower'?", "Addis Ababa", listOf("Asmara", "Nairobi", "Kampala"), X)
     )
 }

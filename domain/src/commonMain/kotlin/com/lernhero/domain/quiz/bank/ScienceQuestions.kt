@@ -4,144 +4,246 @@ import com.lernhero.domain.quiz.QuizCategory
 import com.lernhero.domain.quiz.QuizDifficulty
 import com.lernhero.domain.quiz.QuizEntry
 
-/** Science, space and physics. */
+/**
+ * Nauka: fizyka, chemia i kosmos od strony zjawisk, ktore gracz widzi na co dzien (dlaczego niebo
+ * jest niebieskie, dlaczego lod plywa) i od strony rekordow Ukladu Slonecznego.
+ *
+ * Jednostki SI, definicje metody naukowej i nazwiska filozofow nauki wylecialy - to byla wiedza
+ * z tablicy, a nie o swiecie.
+ *
+ * Zasady pisania pytan dla calego banku - patrz [com.lernhero.domain.quiz.QuizBank].
+ */
 object ScienceQuestions {
 
-    private fun ask(
-        id: String,
-        prompt: String,
-        correct: String,
-        wrong: List<String>,
-        difficulty: QuizDifficulty
-    ) = QuizEntry(
-        id = "sci_$id",
-        prompt = prompt,
-        correct = correct,
-        wrong = wrong,
-        category = QuizCategory.Science,
-        difficulty = difficulty
-    )
+    private val E = QuizDifficulty.Easy
+    private val M = QuizDifficulty.Medium
+    private val H = QuizDifficulty.Hard
+    private val X = QuizDifficulty.Expert
+
+    private fun q(id: String, prompt: String, correct: String, wrong: List<String>, difficulty: QuizDifficulty) =
+        QuizEntry(id = id, prompt = prompt, correct = correct, wrong = wrong, category = QuizCategory.Science, difficulty = difficulty)
 
     val all: List<QuizEntry> = listOf(
+        /* ------------------------------ Easy ------------------------------ */
+        q("sci_merkury", "Which planet is closest to the Sun?", "Mercury", listOf("Venus", "Earth", "Mars"), E),
+        q("sci_planety", "How many planets does the Solar System have?", "8", listOf("9", "7", "10"), E),
+        q("sci_richter", "What does the Richter scale measure?", "Earthquake magnitude", listOf("Temperature", "Pressure", "Wind speed"), E),
+        q("space_pierscienie", "Which planet is famous for its bright ring system?", "Saturn", listOf("Uranus", "Mars", "Venus"), E),
+        q("space_galaktyka", "What is the name of our galaxy?", "The Milky Way", listOf("Andromeda", "Orion", "Centaurus"), E),
+        q("sci2_pory_roku", "What causes the seasons?", "The tilt of Earth's axis", listOf("Changing distance from the Sun", "The Moon's phase", "Earth's rotation speed"), E),
+        q("sci3_barometr_funkcja", "What does a barometer measure?", "Atmospheric pressure", listOf("Temperature", "Humidity", "Speed of sound"), E),
+        q("sci3_silnik_parowy", "Who improved the steam engine, paving the way for the Industrial Revolution?", "James Watt", listOf("Thomas Edison", "Alexander Graham Bell", "Isaac Newton"), E),
+        q("sci3_radio_wynalazca", "Who is credited with inventing radio?", "Guglielmo Marconi", listOf("Thomas Edison", "Alexander Bell", "Nikola Tesla, undisputedly alone"), E),
+        q("sci3_newton_jablko", "What supposedly inspired Newton's thinking on gravity?", "A falling apple", listOf("A comet in the sky", "A solar eclipse", "An earthquake"), E),
+        q("scicmp_co_najszybsze", "Which of these travels fastest?", "Light", listOf("Sound", "A passenger jet", "The Earth along its orbit"), E),
+        q("day_ph_siedem", "What does a pH of 7 mean?", "The solution is neutral", listOf("The solution is strongly acidic", "The solution is strongly basic", "The solution conducts no current"), E),
+        q("day_sejsmograf_mierzy", "What does a seismograph record?", "Ground motion during earthquakes", listOf("Ocean currents", "Solar flares", "Volcanic gas output"), E),
+        q("trv_swiatlo_predkosc", "Roughly how fast does light travel?", "300,000 km per second", listOf("300,000 km per hour", "3,000 km per second", "30 million km per second"), E),
+        q("trv_lakmus_kwas", "What colour does blue litmus paper turn in an acid?", "Red", listOf("Green", "Yellow", "It stays blue"), E),
+        q("trv_elektron_ladunek", "Which subatomic particle carries a negative charge?", "The electron", listOf("The proton", "The neutron", "The photon"), E),
+        q("trv_rok_swietlny", "What does a light-year measure?", "Distance", listOf("Time", "Brightness", "Speed"), E),
+        q("trv_nie_promieniowanie", "Which of these is NOT electromagnetic radiation?", "Sound waves", listOf("X-rays", "Radio waves", "Visible light"), E),
+        q("trv_piorun_grzmot", "Why do you see lightning before you hear thunder?", "Light travels much faster than sound", listOf("Thunder happens later than lightning", "The ears react slower than the eyes", "Clouds block the sound at first"), E),
+        q("cur_woda_rozszerzanie", "Why do water pipes burst in hard frost?", "Water expands when it freezes", listOf("Ice is heavier than water", "Cold makes metal soft", "Frozen water releases gas"), E),
+        q("wld_dzwiek_proznia", "Why can't sound travel through space?", "There is no air to carry the vibrations", listOf("Space is far too cold for waves", "Sunlight drowns out all vibrations", "Gravity is too weak to hold it"), E),
+        q("wld_przyplywy", "What mainly causes ocean tides?", "The Moon's gravity", listOf("Wind", "Earth's rotation alone", "Underwater volcanoes"), E),
+        q("sci_spadajaca_gwiazda", "What is a 'shooting star' really?", "A meteor burning up in the air", listOf("A small star falling", "A comet passing by", "A satellite catching the light"), E),
+        q("sci_wenus_jasna", "Which planet shines brightest in the night sky?", "Venus", listOf("Mars", "Jupiter", "Saturn"), E),
+        q("sci_lyzeczka_refrakcja", "A spoon in a glass of water looks bent. What causes this?", "Refraction of light", listOf("Reflection of light", "Magnetism", "The glass bending"), E),
+        q("sci_hawking", "Which scientist wrote 'A Brief History of Time'?", "Stephen Hawking", listOf("Carl Sagan", "Richard Feynman", "Neil deGrasse Tyson"), E),
+        q("sci_galileusz_ksiezyce", "Who first spotted four moons of Jupiter through a telescope, in 1610?", "Galileo Galilei", listOf("Nicolaus Copernicus", "Johannes Kepler", "Isaac Newton"), E),
+        q("sci_ziemia_nazwa", "Which planet is the only one not named after a god?", "Earth", listOf("Mars", "Venus", "Uranus"), E),
+        q("sci_neptun_bog", "Which planet is named after the Roman god of the sea?", "Neptune", listOf("Uranus", "Saturn", "Mercury"), E),
+        q("sci_kometa_halleya", "Which famous comet returns roughly every 76 years?", "Halley's Comet", listOf("Hale-Bopp", "Shoemaker-Levy 9", "Comet Encke"), E),
+        q("sci_zacmienie_slonca", "What causes a solar eclipse?", "The Moon passing in front of the Sun", listOf("Earth's shadow falling on the Sun", "A cloud of cosmic dust", "The Sun briefly cooling down"), E),
+        q("sci_gwiazda_polarna", "Which star is known as the North Star?", "Polaris", listOf("Sirius", "Vega", "Betelgeuse"), E),
+        q("sci_kot_schrodingera", "Which physicist is famous for a thought experiment about a cat in a box?", "Erwin Schrodinger", listOf("Werner Heisenberg", "Niels Bohr", "Max Planck"), E),
+        q("sci_foton", "What is a particle of light called?", "A photon", listOf("An electron", "A neutron", "A proton"), E),
+        q("sci_rok_przestepny", "Why do we have leap years?", "A year lasts about 365 and a quarter days", listOf("The Moon's orbit changes", "To keep daylight saving in step", "Earth speeds up every four years"), E),
+        q("sci_oko_cyklonu", "What is it like in the eye of a hurricane?", "Calm", listOf("The windiest part", "The rainiest part", "Full of hail"), E),
+        q("sci_balon_wlosy", "Why does a balloon rubbed on your hair stick to a wall?", "Static electricity", listOf("Magnetism", "Air pressure", "Moisture"), E),
+        q("sci_pierze_stal", "Which is heavier: a kilo of feathers or a kilo of steel?", "Neither - they weigh the same", listOf("The steel", "The feathers", "It depends on the air"), E),
+        q("sci_eureka", "Which Greek scientist supposedly shouted 'Eureka!' in his bath?", "Archimedes", listOf("Pythagoras", "Euclid", "Aristotle"), E),
 
-        /* ------------------------------- Easy ------------------------------- */
-        ask(
-            id = "merkury",
-            prompt = "Which planet is closest to the Sun?",
-            correct = "Mercury",
-            wrong = listOf("Venus", "Earth", "Mars"),
-            difficulty = QuizDifficulty.Easy
-        ),
-        ask(
-            id = "planety",
-            prompt = "How many planets does the Solar System have?",
-            correct = "8",
-            wrong = listOf("9", "7", "10"),
-            difficulty = QuizDifficulty.Easy
-        ),
-        ask(
-            id = "satelita",
-            prompt = "What is Earth's natural satellite called?",
-            correct = "The Moon",
-            wrong = listOf("Phobos", "Titan", "Europa"),
-            difficulty = QuizDifficulty.Easy
-        ),
-        ask(
-            id = "mars",
-            prompt = "Which planet do we call the Red Planet?",
-            correct = "Mars",
-            wrong = listOf("Venus", "Mercury", "Jupiter"),
-            difficulty = QuizDifficulty.Easy
-        ),
-        ask(
-            id = "richter",
-            prompt = "What does the Richter scale measure?",
-            correct = "Earthquake magnitude",
-            wrong = listOf("Temperature", "Pressure", "Wind speed"),
-            difficulty = QuizDifficulty.Easy
-        ),
+        /* ----------------------------- Medium ----------------------------- */
+        q("sci_jowisz", "Which planet of the Solar System is the largest?", "Jupiter", listOf("Saturn", "Neptune", "Uranus"), M),
+        q("sci_kopernik", "Who proved that the Earth orbits the Sun, not the other way around?", "Nicolaus Copernicus", listOf("Isaac Newton", "Galileo Galilei", "Johannes Kepler"), M),
+        q("sci_grawitacja", "Who formulated the law of universal gravitation?", "Isaac Newton", listOf("Albert Einstein", "Nikola Tesla", "Michael Faraday"), M),
+        q("space_najgoretsza", "Which planet has the hottest surface?", "Venus", listOf("Mercury", "Mars", "Jupiter"), M),
+        q("space_pas_planetoid", "Between which two planets does the main asteroid belt lie?", "Mars and Jupiter", listOf("Earth and Mars", "Jupiter and Saturn", "Venus and Earth"), M),
+        q("space_plamy_sloneczne", "What are sunspots?", "Cooler regions of the Sun's surface", listOf("Holes punched through the Sun", "Clouds of interstellar dust", "Shadows cast by the planets"), M),
+        q("space_kometa_ogon", "Why does a comet grow a tail near the Sun?", "Its ice turns to gas and is blown outward", listOf("It burns up in the solar wind", "It spins fast enough to shed rock", "It collides with belts of dust"), M),
+        q("space_iss_orbita", "Roughly how long does the ISS take to orbit Earth once?", "About 90 minutes", listOf("About 24 hours", "About 12 hours", "About 3 hours"), M),
+        q("space_faza_ksiezyca", "What causes the phases of the Moon?", "The changing angle of sunlight we see", listOf("The shadow Earth casts on it", "Clouds drifting between the two", "Light the Moon produces itself"), M),
+        q("space_meteor_meteoryt", "What do we call a space rock that survives and lands on Earth?", "A meteorite", listOf("A meteor", "A meteoroid", "A comet"), M),
+        q("space_wenus_obrot", "Which planet rotates in the opposite direction to most others?", "Venus", listOf("Mars", "Neptune", "Mercury"), M),
+        q("day2_mydlo", "Why does soap clean grease?", "Its molecules bind both water and fat", listOf("It dissolves fat into acid", "It boils the grease away", "It makes water hotter"), M),
+        q("sci2_atom_jadro", "What's inside an atom's nucleus?", "Protons and neutrons", listOf("Only electrons", "Protons and electrons", "Only neutrons"), M),
+        q("sci2_ksiezyc_fazy", "How long is a full cycle of Moon phases?", "About 29.5 days", listOf("About 24 days", "Exactly 30 days", "About 365 days"), M),
+        q("sci2_stan_plazmy", "Which state of matter dominates in stars?", "Plasma", listOf("Gas", "Liquid", "Solid"), M),
+        q("sci3_darwin_statek", "What was the name of the ship Charles Darwin sailed on?", "HMS Beagle", listOf("Endeavour", "Santa Maria", "Mayflower"), M),
+        q("sci3_rentgen_promienie", "Who discovered X-rays?", "Wilhelm Rontgen", listOf("Marie Curie", "Max Planck", "Niels Bohr"), M),
+        q("scicmp_co_najmniejsze", "Which of these is the smallest?", "An atom", listOf("A virus", "A bacterium", "A human cell"), M),
+        q("day_ciasto_rosnie", "Why does bread dough rise?", "Yeast releases carbon dioxide", listOf("Water evaporates from it", "Gluten expands when heated", "Salt draws in moisture"), M),
+        q("day_papryka_ostra", "Which compound makes chilli peppers hot?", "Capsaicin", listOf("Menthol", "Tannin", "Caffeine"), M),
+        q("day_jablko_brazowieje", "Why does a cut apple turn brown?", "Its compounds oxidize in air", listOf("It starts to ferment", "Bacteria colonise it", "It loses water"), M),
+        q("day_cebula_lzy", "Why does cutting an onion make your eyes water?", "It releases a sulfur compound that irritates the eyes", listOf("It releases a puff of pure ammonia into the air", "Its acid evaporates into the air", "Its fine dust scratches the eye"), M),
+        q("day_suchy_lod", "What is dry ice?", "Frozen carbon dioxide", listOf("Very cold water ice", "Frozen nitrogen", "Compressed helium"), M),
+        q("day_lod_plywa", "Why does ice float on water?", "Ice is less dense than liquid water", listOf("Ice is warmer than water", "Air bubbles hold it up", "Water pushes it up by surface tension"), M),
+        q("day_szklo_surowiec", "What is the main raw material of glass?", "Sand", listOf("Limestone", "Clay", "Quartz crystal"), M),
+        q("day_tecza_powstaje", "What causes a rainbow?", "Light refracting and dispersing in water droplets", listOf("Sunlight reflecting off the tops of clouds", "Dust in the air scattering the light", "Earth's magnetic field bending the light"), M),
+        q("day_higrometr_mierzy", "What does a hygrometer measure?", "Air humidity", listOf("Air pressure", "Wind speed", "Rainfall"), M),
+        q("trv_ciezar_planety", "On which of these planets would you weigh the most?", "Jupiter", listOf("Mars", "Venus", "Earth"), M),
+        q("trv_uran_bok", "Which planet spins on its side, with its axis nearly in the plane of its orbit?", "Uranus", listOf("Neptune", "Saturn", "Mars"), M),
+        q("trv_proxima", "What is the nearest star to Earth after the Sun?", "Proxima Centauri", listOf("Sirius", "Betelgeuse", "Polaris"), M),
+        q("trv_dzwiek_najszybciej", "Through which of these does sound travel fastest?", "Steel", listOf("Water", "Air", "A vacuum"), M),
+        q("trv_minus_40", "At what temperature do the Celsius and Fahrenheit scales show the same number?", "-40 degrees", listOf("0 degrees", "-20 degrees", "100 degrees"), M),
+        q("trv_dna_rozwiniecie", "What does DNA stand for?", "Deoxyribonucleic acid", listOf("Dinucleic acid", "Deoxyribose nitrogen acid", "Double nucleic arrangement"), M),
+        q("trv_zero_absolutne", "What is absolute zero, roughly, in Celsius?", "-273 C", listOf("-100 C", "-459 C", "-1000 C"), M),
+        q("trv_tecza_ksztalt", "What shape is a full rainbow when seen from an aircraft?", "A complete circle", listOf("A half-circle", "A straight band", "A spiral"), M),
+        q("trv_slonce_swiatlo_minuty", "How long does sunlight take to reach Earth?", "About 8 minutes", listOf("About 8 seconds", "About 8 hours", "About 1 day"), M),
+        q("trv_olympus_mons", "On which planet is Olympus Mons, the tallest known volcano in the Solar System?", "Mars", listOf("Venus", "Earth", "Jupiter's moon Io"), M),
+        q("trv_mikrofala_dziala", "How does a microwave oven heat food?", "It makes water molecules vibrate", listOf("It heats the air inside", "It uses infrared light", "It passes electricity through the food"), M),
+        q("trv_ziemia_wiek", "How old is the Earth, approximately?", "About 4.5 billion years", listOf("About 4.5 million years", "About 450 million years", "About 45 billion years"), M),
+        q("org_uran_teleskop", "Which planet was the first ever found with a telescope rather than the naked eye?", "Uranus", listOf("Neptune", "Saturn", "Mercury"), M),
+        q("org_wolt_volta", "Which unit honours the Italian who built the first battery?", "The volt", listOf("The ampere", "The ohm", "The joule"), M),
+        q("org_szczepionka_krowa", "The word 'vaccine' comes from the Latin name for which animal?", "Cow", listOf("Horse", "Sheep", "Goat"), M),
+        q("ext_slonce_masa", "The Sun accounts for roughly what share of the Solar System's total mass?", "Over 99%", listOf("About 70%", "About 85%", "About 95%"), M),
+        q("mst_swiatlo_diament", "Light slows down the most while passing through which of these?", "Diamond", listOf("Air", "Water", "Window glass"), M),
+        q("mst_efekt_dopplera", "The rising then falling pitch of a passing siren is explained by what?", "The Doppler effect", listOf("Refraction", "Resonance", "Diffraction"), M),
+        q("wld_niebo_niebieskie", "Why is the daytime sky blue?", "Air scatters blue light more than red", listOf("It reflects the colour of oceans", "Space behind the air is blue", "The ozone layer is coloured blue"), M),
+        q("wld_woda_wrzenie_gory", "Why does water boil at a lower temperature on a high mountain?", "The air pressure is lower", listOf("The air is colder", "There is less oxygen", "The water is purer"), M),
+        q("wld_czarna_dziura", "Why is a black hole black?", "Not even light can escape its gravity", listOf("It is made of dark matter", "It is very cold", "It absorbs only visible colours"), M),
+        q("wld_sci_mars_kolor", "Why is Mars red?", "Its soil is rich in iron oxide - rust", listOf("It is extremely hot", "It reflects the Sun's red light", "Its atmosphere is red gas"), M),
+        q("sci_jowisz_doba", "Which planet has the shortest day, lasting under 10 hours?", "Jupiter", listOf("Mercury", "Mars", "Earth"), M),
+        q("sci_saturn_ksiezyce", "Which planet has the most known moons?", "Saturn", listOf("Jupiter", "Uranus", "Neptune"), M),
+        q("sci_andromeda", "Which is the nearest large galaxy to the Milky Way?", "Andromeda", listOf("Triangulum", "Sombrero", "Whirlpool"), M),
+        q("sci_slonce_ziemie", "Roughly how many Earths could fit inside the Sun?", "About 1.3 million", listOf("About 100", "About 1,000", "About 1 billion"), M),
+        q("sci_swieca_plomien", "Which part of a candle flame is the hottest?", "The blue part near the wick", listOf("The bright yellow tip", "The orange middle part", "The dark inner core"), M),
+        q("sci_slonce_kolor", "Seen from space, what colour is the Sun?", "White", listOf("Yellow", "Orange", "Red"), M),
+        q("sci_emc2", "In E = mc², what does the 'c' stand for?", "The speed of light", listOf("Electric charge", "Carbon", "The gravitational constant"), M),
+        q("sci_predkosc_dzwieku", "Roughly how fast does sound travel through air?", "About 340 m/s", listOf("About 34 m/s", "About 3,400 m/s", "About 34,000 m/s"), M),
+        q("sci_astronauta_wyzszy", "What happens to astronauts' height during a long stay in space?", "They grow a few centimetres taller", listOf("They shrink a few centimetres", "It does not change at all", "Only their arms get longer"), M),
+        q("sci_ksiezyc_ludzie", "How many people have walked on the Moon?", "Twelve", listOf("Six", "Two", "Twenty-four"), M),
+        q("sci_perseverance", "Which NASA rover landed on Mars in 2021?", "Perseverance", listOf("Curiosity", "Opportunity", "Spirit"), M),
+        q("sci_webb", "Which space telescope, launched in 2021, observes mainly in infrared?", "The James Webb Space Telescope", listOf("The Hubble Space Telescope", "The Kepler Space Telescope", "The Chandra X-ray Observatory"), M),
+        q("sci_niebieski_ksiezyc", "What is a 'blue moon' usually taken to mean?", "A second full moon in one month", listOf("A moon that looks blue", "A full moon during an eclipse", "The first full moon of spring"), M),
+        q("sci_krwawy_ksiezyc", "What colour does the Moon turn during a total lunar eclipse?", "Red", listOf("Blue", "Green", "White"), M),
+        q("sci_syriusz", "Which is the brightest star in the night sky?", "Sirius", listOf("Polaris", "Betelgeuse", "Vega"), M),
+        q("sci_wiek_wszechswiata", "Roughly how old is the universe?", "About 13.8 billion years", listOf("About 4.5 billion years", "About 1 trillion years", "About 500 million years"), M),
+        q("sci_boska_czastka", "Which particle is popularly nicknamed 'the God particle'?", "The Higgs boson", listOf("The neutrino", "The graviton", "The quark"), M),
+        q("sci_czerwien_fala", "Which colour of visible light has the longest wavelength?", "Red", listOf("Violet", "Green", "Blue"), M),
+        q("sci_petrichor", "What is 'petrichor'?", "The smell of rain on dry ground", listOf("The smell after lightning", "Sea fog rolling inland", "A type of storm cloud"), M),
+        q("sci_cumulonimbus", "Which kind of cloud grows into a towering thundercloud?", "Cumulonimbus", listOf("Cirrus", "Stratus", "Altostratus"), M),
+        q("sci_huragan_tajfun", "What is the difference between a hurricane and a typhoon?", "Only where in the world it forms", listOf("A typhoon is always stronger", "A hurricane has no eye", "Typhoons only happen in winter"), M),
+        q("sci_termos", "How does a vacuum flask keep drinks hot?", "A vacuum between its two walls", listOf("A hidden heating coil", "A layer of ice around it", "Very thick plastic"), M),
+        q("sci_lod_metal", "Why does an ice cube melt faster on a metal plate than on a plastic one?", "Metal conducts heat better", listOf("Metal is always warmer", "Plastic keeps the cold in", "Metal attracts water"), M),
+        q("sci_troposfera", "In which layer of the atmosphere does almost all weather happen?", "The troposphere", listOf("The stratosphere", "The mesosphere", "The thermosphere"), M),
+        q("sci_freony", "Which chemicals, once used in spray cans and fridges, damaged the ozone layer?", "CFCs", listOf("Carbon monoxide", "Methane", "Radon"), M),
+        q("sci_kelwin", "On which temperature scale is zero equal to absolute zero?", "Kelvin", listOf("Celsius", "Fahrenheit", "Reaumur"), M),
+        q("sci_galileusz_proces", "Which Italian scientist was put on trial by the Church for backing a Sun-centred universe?", "Galileo Galilei", listOf("Giordano Bruno", "Leonardo da Vinci", "Evangelista Torricelli"), M),
+        q("sci_strefa_zycia", "What is a star's 'Goldilocks zone'?", "Where a planet could have liquid water", listOf("Its hottest inner layer", "A ring of gold-rich asteroids", "The area its light cannot reach"), M),
+        q("sci_chicxulub", "The asteroid that wiped out the dinosaurs left a crater in which country?", "Mexico", listOf("The United States", "Australia", "Russia"), M),
+        q("sci_swiatlo_biale", "What do you get when you mix all colours of light together?", "White light", listOf("Black", "Brown", "Grey"), M),
 
-        /* ------------------------------ Medium ------------------------------ */
-        ask(
-            id = "jowisz",
-            prompt = "Which planet of the Solar System is the largest?",
-            correct = "Jupiter",
-            wrong = listOf("Saturn", "Neptune", "Uranus"),
-            difficulty = QuizDifficulty.Medium
-        ),
-        ask(
-            id = "kopernik",
-            prompt = "Who proved that the Earth orbits the Sun, not the other way around?",
-            correct = "Nicolaus Copernicus",
-            wrong = listOf("Isaac Newton", "Galileo Galilei", "Johannes Kepler"),
-            difficulty = QuizDifficulty.Medium
-        ),
-        ask(
-            id = "grawitacja",
-            prompt = "Who formulated the law of universal gravitation?",
-            correct = "Isaac Newton",
-            wrong = listOf("Albert Einstein", "Nikola Tesla", "Michael Faraday"),
-            difficulty = QuizDifficulty.Medium
-        ),
+        /* ------------------------------ Hard ------------------------------ */
+        q("sci_einstein", "Who formulated the theory of relativity?", "Albert Einstein", listOf("Isaac Newton", "Niels Bohr", "Max Planck"), H),
+        q("sci_penicylina", "Who discovered penicillin?", "Alexander Fleming", listOf("Louis Pasteur", "Robert Koch", "Jonas Salk"), H),
+        q("sci_sila", "What is the SI unit of force?", "Newton", listOf("Joule", "Watt", "Pascal"), H),
+        q("space_pluton_status", "What is Pluto classified as today?", "A dwarf planet", listOf("A planet", "A moon", "A comet"), H),
+        q("space_najwiekszy_ksiezyc", "Which is the largest moon in the Solar System?", "Ganymede", listOf("Titan", "Europa", "The Moon"), H),
+        q("space_europa_ocean", "Which moon of Jupiter is thought to hide an ocean under its ice?", "Europa", listOf("Io", "Callisto", "Titan"), H),
+        q("space_tytan_atmosfera", "Which moon has a thick nitrogen atmosphere?", "Titan", listOf("Europa", "Phobos", "Triton"), H),
+        q("space_czerwony_olbrzym", "What will the Sun become near the end of its life?", "A red giant, then a white dwarf", listOf("A black hole, then nothing", "A supernova, then a nebula", "A neutron star, then a pulsar"), H),
+        q("space_efekt_dopplera", "What does redshift tell astronomers about a distant galaxy?", "It is moving away from us", listOf("It is hotter", "It is younger", "It is closer"), H),
+        q("space_voyager", "Which spacecraft was the first to leave the heliosphere?", "Voyager 1", listOf("Voyager 2", "Pioneer 10", "New Horizons"), H),
+        q("space_mleczna_droga_typ", "What type of galaxy is the Milky Way?", "A barred spiral", listOf("An elliptical", "An irregular", "A lenticular"), H),
+        q("space_jowisz_plama", "What is Jupiter's Great Red Spot?", "A giant long-lived storm", listOf("A volcano", "A crater", "A dust cloud"), H),
+        q("space_neptun_odkrycie", "Neptune was discovered mainly thanks to what?", "Mathematical prediction of its orbit", listOf("A lucky photograph of the sky", "A radio signal from its moons", "A comet passing right by it"), H),
+        q("day2_led_zysk", "Why does an LED bulb use less power than an incandescent one?", "It converts far less energy into heat", listOf("It runs at lower voltage", "It shines less brightly", "It uses no current"), H),
+        q("sci2_newton_trzecia", "What does Newton's third law state?", "Every action has an equal and opposite reaction", listOf("A body with no force moves at constant velocity", "Force equals mass times acceleration", "Energy is never lost"), H),
+        q("sci2_czastka_higgsa", "At which facility was the Higgs boson discovered?", "CERN", listOf("NASA", "Fermilab", "MIT"), H),
+        q("sci2_nadprzewodnik", "What happens to a superconductor's resistance below its critical temperature?", "It drops to zero", listOf("It rises sharply", "It stays the same", "It changes sign"), H),
+        q("sci2_moly_liczba", "How many particles does one mole of a substance contain?", "About 6.02 x 10^23", listOf("About 3.14 x 10^12", "Exactly one million", "About 10^100"), H),
+        q("sci3_michelson_morley", "What was the Michelson-Morley experiment trying to detect?", "The ether as a medium for light", listOf("Background radiation", "Radioactive decay", "Gravitational waves"), H),
+        q("sci3_eksperyment_podwojnej_szczeliny", "What does the double-slit experiment show?", "The wave-particle duality of light and matter", listOf("That matter always behaves as a wave", "That light carries no mass at all", "That electrons do not really exist"), H),
+        q("day_zorza_polarna", "What causes the aurora?", "Charged particles from the Sun hitting the atmosphere", listOf("Ice crystals refracting the light of the Moon", "Lightning discharged high in the atmosphere", "Sunlight reflecting off the polar ice caps"), H),
+        q("trv_wenus_dzien", "Which planet has a day that lasts longer than its year?", "Venus", listOf("Mercury", "Mars", "Jupiter"), H),
+        q("trv_mars_atmosfera", "Which gas makes up most of the atmosphere of Mars?", "Carbon dioxide", listOf("Nitrogen", "Oxygen", "Methane"), H),
+        q("trv_everest_wrzenie", "Roughly at what temperature does water boil on the summit of Mount Everest?", "About 70 C", listOf("About 100 C", "About 90 C", "About 50 C"), H),
+        q("trv_przewodnik_najlepszy", "Which metal conducts electricity best?", "Silver", listOf("Copper", "Gold", "Aluminium"), H),
+        q("trv_ksiezyc_oddala", "What is happening to the distance between the Earth and the Moon?", "It grows by a few centimetres a year", listOf("It shrinks by a few centimetres a year", "It never changes", "It changes only during eclipses"), H),
+        q("trv_saturn_plywa", "Which planet is less dense than water and would float, in theory, in a big enough bathtub?", "Saturn", listOf("Jupiter", "Neptune", "Mars"), H),
+        q("trv_neutron_gwiazda", "A teaspoon of material from which object would weigh billions of tonnes?", "A neutron star", listOf("The Sun", "A white dwarf", "Jupiter's core"), H),
+        q("trv_dzien_dluzszy", "What is slowly happening to the length of a day on Earth?", "It is getting longer", listOf("It is getting shorter", "It stays exactly the same", "It changes with the seasons only"), H),
+        q("org_celsjusz_odwrotnie", "On the original Celsius scale, what did 0 degrees mark?", "The boiling point of water", listOf("Absolute zero", "Human body temperature", "The freezing point of water"), H),
+        q("org_ytterby_wioska", "Four chemical elements are named after a quarry in a village in which country?", "Sweden", listOf("Norway", "Germany", "Scotland"), H),
+        q("org_algorytm_uczony", "The word 'algorithm' comes from the name of a scholar from where?", "Persia", listOf("Greece", "Egypt", "India"), H),
+        q("mst_blyskawica_temperatura", "A lightning bolt can be roughly how hot compared with the Sun's surface?", "Several times hotter", listOf("About the same", "Half as hot", "A tenth as hot"), H),
+        q("mst_antymateria_zderzenie", "When matter meets antimatter, what happens?", "Both convert to energy", listOf("They repel each other", "They form a new element", "Nothing measurable"), H),
+        q("dpt_nau_klatka_faradaya", "What does a Faraday cage do?", "Blocks outside electric fields", listOf("Stores charge for later use", "Turns current into light", "Cools a magnet towards zero"), H),
+        q("dpt_nau_coriolis", "What is the Coriolis effect?", "Motion deflected by Earth's spin", listOf("The Moon's pull on the oceans", "Light bent by layers of air", "Wind dragging waves along"), H),
+        q("dpt_nau_sily_jadro", "What holds an atomic nucleus together?", "The strong nuclear force", listOf("The electromagnetic force", "The weak nuclear force", "Gravity between the parts"), H),
+        q("dpt_nau_masa_ciezar", "How does weight differ from mass?", "Weight depends on local gravity", listOf("Mass depends on local gravity", "They are the very same thing", "Mass is measured in newtons"), H),
+        q("cur_mars_zachod", "What colour are sunsets on Mars?", "Blue", listOf("Red", "Green", "Purple"), H),
+        q("wld_ksiezyc_strona", "Why do we always see the same side of the Moon?", "It spins once for every orbit of Earth", listOf("It doesn't spin at all", "The other side is always dark", "Earth's shadow hides it"), H),
+        q("sci_uran_zimny", "Which planet has the coldest recorded atmosphere in the Solar System?", "Uranus", listOf("Neptune", "Saturn", "Mars"), H),
+        q("sci_ksiezyc_doba", "How long is one day on the Moon, from sunrise to sunrise?", "About a month", listOf("About 24 hours", "About a week", "About a year"), H),
+        q("sci_ingenuity", "What made the first powered flight on another planet, in 2021?", "A small helicopter on Mars", listOf("A drone above Venus", "A balloon on Titan", "A glider on the Moon"), H),
+        q("sci_halley_2061", "In which year is Halley's Comet next expected to be close to the Sun?", "2061", listOf("2031", "2046", "2086"), H),
+        q("sci_karman", "At roughly what height does space 'officially' begin, at the Karman line?", "100 km", listOf("10 km", "1,000 km", "36,000 km"), H),
+        q("sci_banka_kolory", "What gives a soap bubble its swirling rainbow colours?", "Light waves interfering", listOf("Dye in the soap", "The sky reflecting", "Air trapped inside"), H),
+        q("sci_fujita", "Which scale rates the strength of tornadoes?", "The Enhanced Fujita scale", listOf("The Beaufort scale", "The Saffir-Simpson scale", "The Richter scale"), H),
+        q("sci_ozon_stratosfera", "In which layer of the atmosphere is the ozone layer?", "The stratosphere", listOf("The troposphere", "The mesosphere", "The exosphere"), H),
+        q("sci_becquerel", "Who discovered radioactivity in 1896?", "Henri Becquerel", listOf("Marie Curie", "Ernest Rutherford", "Wilhelm Rontgen"), H),
+        q("sci_rutherford", "Who discovered the atomic nucleus by firing particles at thin gold foil?", "Ernest Rutherford", listOf("J. J. Thomson", "Niels Bohr", "James Chadwick"), H),
+        q("sci_spaghettifikacja", "What does 'spaghettification' describe?", "Objects stretched by a black hole", listOf("Noodles cooked in space", "Light split into thin beams", "Galaxies pulled into long arms"), H),
+        q("sci_ceres", "Which dwarf planet is the largest body in the asteroid belt?", "Ceres", listOf("Vesta", "Pluto", "Eris"), H),
+        q("sci_rosetta", "On what did the Philae probe, carried by Rosetta, land in 2014?", "A comet", listOf("An asteroid", "Mars's moon Phobos", "Venus"), H),
+        q("sci_tunguska", "The giant 1908 Tunguska blast flattened forest in which country?", "Russia", listOf("Canada", "Mongolia", "Finland"), H),
+        q("sci_neptun_rok", "On which planet does one year last about 165 Earth years?", "Neptune", listOf("Uranus", "Saturn", "Jupiter"), H),
+        q("sci_wegener", "Who proposed in 1912 that the continents slowly drift apart?", "Alfred Wegener", listOf("Charles Lyell", "James Hutton", "Arthur Holmes"), H),
 
-        /* ------------------------------ Hard ------------------------------- */
-        ask(
-            id = "einstein",
-            prompt = "Who formulated the theory of relativity?",
-            correct = "Albert Einstein",
-            wrong = listOf("Isaac Newton", "Niels Bohr", "Max Planck"),
-            difficulty = QuizDifficulty.Hard
-        ),
-        ask(
-            id = "penicylina",
-            prompt = "Who discovered penicillin?",
-            correct = "Alexander Fleming",
-            wrong = listOf("Louis Pasteur", "Robert Koch", "Jonas Salk"),
-            difficulty = QuizDifficulty.Hard
-        ),
-        ask(
-            id = "sila",
-            prompt = "What is the SI unit of force?",
-            correct = "Newton",
-            wrong = listOf("Joule", "Watt", "Pascal"),
-            difficulty = QuizDifficulty.Hard
-        ),
-
-        /* ----------------------------- Expert ---------------------------- */
-        ask(
-            id = "kwant",
-            prompt = "Who launched quantum theory?",
-            correct = "Max Planck",
-            wrong = listOf("Albert Einstein", "Werner Heisenberg", "Erwin Schrodinger"),
-            difficulty = QuizDifficulty.Expert
-        ),
-        ask(
-            id = "entropia",
-            prompt = "Which law of thermodynamics states that entropy increases?",
-            correct = "The second",
-            wrong = listOf("The first", "The third", "The zeroth"),
-            difficulty = QuizDifficulty.Expert
-        ),
-        ask(
-            id = "hubble",
-            prompt = "Who discovered that the Universe is expanding?",
-            correct = "Edwin Hubble",
-            wrong = listOf("Albert Einstein", "Carl Sagan", "Georges Lemaitre"),
-            difficulty = QuizDifficulty.Expert
-        ),
-        ask(
-            id = "czarna_dziura",
-            prompt = "What is the boundary of a black hole called, beyond which nothing can escape?",
-            correct = "The event horizon",
-            wrong = listOf("The singularity", "The accretion disk", "The Roche limit"),
-            difficulty = QuizDifficulty.Expert
-        ),
-        ask(
-            id = "neutrino",
-            prompt = "Which particle barely interacts with matter and passes straight through Earth?",
-            correct = "Neutrino",
-            wrong = listOf("Proton", "Electron", "Photon"),
-            difficulty = QuizDifficulty.Expert
-        )
+        /* ----------------------------- Expert ----------------------------- */
+        q("sci_kwant", "Who launched quantum theory?", "Max Planck", listOf("Albert Einstein", "Werner Heisenberg", "Erwin Schrodinger"), X),
+        q("sci_entropia", "Which law of thermodynamics states that entropy increases?", "The second", listOf("The first", "The third", "The zeroth"), X),
+        q("sci_hubble", "Who discovered that the Universe is expanding?", "Edwin Hubble", listOf("Albert Einstein", "Carl Sagan", "Georges Lemaitre"), X),
+        q("sci_czarna_dziura", "What is the boundary of a black hole called, beyond which nothing can escape?", "The event horizon", listOf("The singularity", "The accretion disk", "The Roche limit"), X),
+        q("sci_neutrino", "Which particle barely interacts with matter and passes straight through Earth?", "Neutrino", listOf("Proton", "Electron", "Photon"), X),
+        q("space_chandrasekhar", "What does the Chandrasekhar limit describe?", "The maximum mass of a stable white dwarf", listOf("The largest size a galaxy reaches", "The fastest spin a pulsar can hold", "The longest life of a red giant"), X),
+        q("space_pulsar", "What is a pulsar?", "A rapidly rotating neutron star emitting beams", listOf("A red giant pulsating as it cools", "A pair of black holes in orbit", "A protostar still gathering mass"), X),
+        q("space_soczewkowanie", "What is gravitational lensing?", "Mass bending the path of light", listOf("A telescope defect", "Light slowing in vacuum", "Refraction in the atmosphere"), X),
+        q("space_supernowa_ia", "Why are Type Ia supernovae useful in astronomy?", "They have a known brightness, so they measure distance", listOf("They are the brightest objects ever observed", "They repeat on a fixed, predictable schedule", "They emit nothing except radio waves"), X),
+        q("space_oort", "What is the Oort cloud believed to be?", "A distant shell of icy bodies around the Sun", listOf("A dust ring around Jupiter", "A nebula near Orion", "A belt between Mars and Jupiter"), X),
+        q("space_lagrange", "What is special about a Lagrange point?", "Gravity lets an object hold position relative to two bodies", listOf("Gravity there cancels out to exactly zero", "It is the hottest point along the whole orbit", "It marks the outer edge of a solar system"), X),
+        q("space_parallaksa", "What does stellar parallax allow astronomers to measure?", "The distance to nearby stars", listOf("A star's temperature", "A star's chemical makeup", "A star's rotation"), X),
+        q("day2_efekt_cieplarniany", "Why do greenhouse gases warm the planet?", "They absorb outgoing infrared radiation", listOf("They block incoming sunlight", "They thicken the ozone layer", "They raise air pressure"), X),
+        q("sci2_heisenberg", "What does Heisenberg's uncertainty principle concern?", "The limit on simultaneously measuring momentum and position", listOf("The conservation of energy in any closed system", "The way a nucleus emits a beta particle", "The speed of light inside a dense medium"), X),
+        q("sci2_splatanie", "What is quantum entanglement?", "Correlated particle states regardless of distance", listOf("A head-on collision of two single photons", "Current that flows on without resistance", "A particle decaying into three lighter ones"), X),
+        q("sci2_cmb", "What is the cosmic microwave background radiation?", "A remnant of the early Universe", listOf("Emission from the Milky Way", "Radiation from the Sun", "Detector noise"), X),
+        q("sci2_fale_graw", "When were gravitational waves first directly detected?", "2015", listOf("1998", "2020", "1974"), X),
+        q("sci2_hawking", "What does Hawking radiation predict?", "That black holes slowly evaporate", listOf("That the Universe is shrinking", "That gravity is a strong force", "That time flows backward"), X),
+        q("sci2_model_standardowy", "How many fundamental interactions does the Standard Model describe?", "Three", listOf("Four", "Two", "Five"), X),
+        q("sci2_kwark_rodzaje", "How many types (flavors) of quarks are there?", "Six", listOf("Three", "Four", "Eight"), X),
+        q("sci2_bose_einstein", "What is a Bose-Einstein condensate?", "A state of matter near absolute zero", listOf("The plasma inside a hot young star", "A fluid held above its critical point", "A crystal of tightly packed metal"), X),
+        q("sci2_efekt_fotoelektryczny", "For explaining which phenomenon did Einstein win the Nobel Prize?", "The photoelectric effect", listOf("The theory of relativity", "Brownian motion", "Mass-energy equivalence"), X),
+        q("sci3_occam_brzytwa", "What does Occam's razor state?", "Among equally valid explanations, pick the simplest", listOf("Every theory must be written in mathematics", "A complex theory always beats a simple one", "Science can never make anything simple"), X),
+        q("org_gaz_slowo", "The word 'gas' was made up by a 17th-century chemist based on which Greek word?", "Chaos", listOf("Kosmos", "Pneuma", "Aither"), X),
+        q("mst_szklo_ciecz", "What is the truth about old window glass being thicker at the bottom?", "It is a result of how it was made", listOf("Glass slowly flows downward", "Gravity compresses it", "Moisture settles in it"), X),
+        q("dpt_nau_slonce_fuzja", "What powers the Sun?", "Hydrogen fusing into helium", listOf("Hydrogen burning in oxygen", "Decay of heavy elements", "Friction deep in its core"), X),
+        q("dpt_nau_ciemna_materia", "How does dark matter reveal itself?", "By its pull on whole galaxies", listOf("By the faint light it gives off", "By the radio waves it absorbs", "By the heat it leaves in dust"), X),
+        q("cur_kosmos_zapach", "Astronauts say space smells like what, on their suits after a spacewalk?", "Seared steak and hot metal", listOf("Fresh rain", "Nothing at all", "Rotten eggs"), X),
+        q("sci_materia_zwykla", "Roughly what share of the universe is made of ordinary matter?", "About 5%", listOf("About 25%", "About 50%", "About 90%"), X),
+        q("sci_salut", "What was the name of the first space station, launched in 1971?", "Salyut 1", listOf("Mir", "Skylab", "Tiangong 1"), X),
+        q("sci_demon_maxwella", "Which physicist imagined a tiny 'demon' sorting fast and slow molecules?", "James Clerk Maxwell", listOf("Ludwig Boltzmann", "Rudolf Clausius", "Lord Kelvin"), X),
+        q("sci_eratostenes", "Who first measured Earth's size, around 240 BC, using shadows at noon?", "Eratosthenes", listOf("Aristotle", "Ptolemy", "Archimedes"), X),
+        q("sci_foucault", "What did Foucault's famous swinging pendulum demonstrate in 1851?", "Earth's rotation", listOf("Earth's magnetic field", "The speed of light", "The strength of gravity"), X),
+        q("sci_saturn_szesciokat", "Which planet has a hexagon-shaped storm at its north pole?", "Saturn", listOf("Jupiter", "Neptune", "Uranus"), X),
+        q("sci_tryton", "Which planet has a large moon, Triton, that orbits it backwards?", "Neptune", listOf("Uranus", "Saturn", "Jupiter"), X),
+        q("sci_dirac", "Which physicist predicted the existence of antimatter in 1928?", "Paul Dirac", listOf("Enrico Fermi", "Niels Bohr", "Wolfgang Pauli"), X),
+        q("sci_shoemaker", "Which comet smashed into Jupiter in 1994?", "Shoemaker-Levy 9", listOf("Halley's Comet", "Hale-Bopp", "Tempel 1"), X),
+        q("sci_betelgeza", "Which red supergiant in Orion dimmed dramatically in 2019 and 2020?", "Betelgeuse", listOf("Rigel", "Sirius", "Antares"), X),
+        q("sci_grawiton", "What is the name of the hypothetical particle that would carry gravity?", "The graviton", listOf("The gluon", "The photon", "The Higgs boson"), X),
+        q("sci_change4", "Which probe made the first soft landing on the far side of the Moon, in 2019?", "Chang'e 4", listOf("Luna 9", "Apollo 16", "Chandrayaan-2"), X)
     )
 }

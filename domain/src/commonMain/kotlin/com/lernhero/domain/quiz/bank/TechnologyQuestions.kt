@@ -4,116 +4,231 @@ import com.lernhero.domain.quiz.QuizCategory
 import com.lernhero.domain.quiz.QuizDifficulty
 import com.lernhero.domain.quiz.QuizEntry
 
-/** Technology - computers, the internet and inventions. */
+/**
+ * Technologia: gry, internet, gadzety, wynalazki i historie firm.
+ *
+ * Definicje z informatyki ("czym jest API", "czym jest kernel") wylecialy prawie w calosci -
+ * brzmialy jak kartkowka. Zostala technika, z ktorej gracz korzysta, i historie, po ktorych chce
+ * sie ja opowiedziec dalej (pierwszy "bug" byl prawdziwa cma).
+ *
+ * Zasady pisania pytan dla calego banku - patrz [com.lernhero.domain.quiz.QuizBank].
+ */
 object TechnologyQuestions {
 
-    private fun ask(
-        id: String,
-        prompt: String,
-        correct: String,
-        wrong: List<String>,
-        difficulty: QuizDifficulty
-    ) = QuizEntry(
-        id = "tec_$id",
-        prompt = prompt,
-        correct = correct,
-        wrong = wrong,
-        category = QuizCategory.Technology,
-        difficulty = difficulty
-    )
+    private val E = QuizDifficulty.Easy
+    private val M = QuizDifficulty.Medium
+    private val H = QuizDifficulty.Hard
+    private val X = QuizDifficulty.Expert
+
+    private fun q(id: String, prompt: String, correct: String, wrong: List<String>, difficulty: QuizDifficulty) =
+        QuizEntry(id = id, prompt = prompt, correct = correct, wrong = wrong, category = QuizCategory.Technology, difficulty = difficulty)
 
     val all: List<QuizEntry> = listOf(
+        /* ------------------------------ Easy ------------------------------ */
+        q("day2_gasnica", "What should you never use to put out a burning pan of oil?", "Water", listOf("A lid", "A fire blanket", "Baking soda"), E),
+        q("tec_www", "What does the abbreviation WWW stand for?", "World Wide Web", listOf("World Web Wide", "Wide World Web", "Web World Wide"), E),
+        q("tec_zarowka", "Who is credited with popularizing the light bulb?", "Thomas Edison", listOf("Nikola Tesla", "Alexander Bell", "James Watt"), E),
+        q("tec2_ikona_dysk", "What does a floppy disk icon usually mean in software?", "Save", listOf("Print", "Delete", "Undo"), E),
+        q("tec3_google_zalozyciele", "Who founded Google?", "Larry Page and Sergey Brin", listOf("Bill Gates and Paul Allen", "Steve Jobs and Steve Wozniak", "Jeff Bezos and Elon Musk"), E),
+        q("tec3_usb_skrot", "What does the abbreviation USB stand for?", "Universal Serial Bus", listOf("United System Board", "Universal System Bus is a wrong variant", "Unified Serial Base"), E),
+        q("wh_gutenberg_wynalazek", "What did Johannes Gutenberg popularize in Europe?", "Movable-type printing", listOf("Paper", "The hydraulic press", "Printer's ink"), E),
+        q("wh_bracia_wright", "Who made the first successful powered airplane flight in 1903?", "The Wright brothers", listOf("Louis Bleriot", "Otto Lilienthal", "Alberto Santos-Dumont"), E),
+        q("scicmp_co_pierwsze_wynalazek", "Which of these came first?", "The printing press", listOf("The steam engine", "The telephone", "Radio"), E),
+        q("scicmp_co_pierwsze_internet", "Which of these appeared first?", "The World Wide Web", listOf("Google", "Facebook", "YouTube"), E),
+        q("scicmp_jednostka_najwieksza", "Which of these data units is the largest?", "A terabyte", listOf("A kilobyte", "A megabyte", "A gigabyte"), E),
+        q("day_gitara_struny", "How many strings does a standard guitar have?", "Six", listOf("Four", "Five", "Seven"), E),
+        q("day_mario_firma", "Which company created the Mario series?", "Nintendo", listOf("Sega", "Sony", "Atari"), E),
+        q("day_bity_w_bajcie", "How many bits are in one byte?", "Eight", listOf("Four", "Ten", "Sixteen"), E),
+        q("trv2_wifi_fale", "What does Wi-Fi use to carry data through the air?", "Radio waves", listOf("Infrared light", "Sound waves", "Microscopic wires"), E),
+        q("trv2_playstation", "Which company makes the PlayStation?", "Sony", listOf("Nintendo", "Microsoft", "Sega"), E),
+        q("trv2_phishing", "What is 'phishing'?", "Tricking people into revealing passwords or data", listOf("Speeding up a computer that has got slow", "Copying the contents of a hard drive", "Blocking the adverts shown on a page"), E),
+        q("trv2_curiosity", "On which planet did the Curiosity rover land in 2012?", "Mars", listOf("Venus", "The Moon", "Mercury"), E),
+        q("trv2_pixel", "What is a pixel?", "The smallest dot in a digital image", listOf("A unit of internet speed", "A type of processor", "A file format"), E),
+        q("org_amazon_ksiazki", "Amazon spent its first years selling almost nothing but what?", "Books", listOf("Music CDs", "Computer parts", "Toys"), E),
+        q("org_facebook_harvard", "Facebook was open only to students of which university at launch?", "Harvard", listOf("Stanford", "MIT", "Yale"), E),
+        q("cur_captcha", "What is a CAPTCHA designed to tell apart?", "Humans from bots", listOf("Adults from children", "Phones from computers", "Real emails from spam"), E),
+        q("wld_haslo_bezpieczne", "Which password is hardest to crack?", "A long random phrase of several words", listOf("Your name plus 123", "A single dictionary word", "Your birthday"), E),
+        q("tec_mario_zawod", "What is Mario's job in Nintendo's games?", "Plumber", listOf("Carpenter", "Electrician", "Chef"), E),
+        q("tec_luigi", "What is the name of Mario's taller brother?", "Luigi", listOf("Wario", "Toad", "Yoshi"), E),
+        q("tec_peach", "Which princess does Mario usually set out to rescue?", "Princess Peach", listOf("Princess Zelda", "Princess Daisy", "Princess Rosalina"), E),
+        q("tec_sonic_kolor", "What colour is Sonic the Hedgehog?", "Blue", listOf("Red", "Green", "Yellow"), E),
+        q("tec_pacman_duchy", "What chases Pac-Man around the maze?", "Ghosts", listOf("Monsters", "Robots", "Snakes"), E),
+        q("tec_creeper", "In Minecraft, which green creature sneaks up on players and explodes?", "A Creeper", listOf("A Zombie", "An Enderman", "A Skeleton"), E),
+        q("tec_fortnite", "In which game do 100 players jump out of a flying 'Battle Bus'?", "Fortnite", listOf("PUBG", "Apex Legends", "Call of Duty: Warzone"), E),
+        q("tec_pikachu", "Which yellow Pokemon is Ash Ketchum's famous partner?", "Pikachu", listOf("Raichu", "Jigglypuff", "Psyduck"), E),
+        q("tec_gg", "In online games, what does 'GG' usually mean?", "Good game", listOf("Great goal", "Get going", "Game guide"), E),
+        q("tec_afk", "What does 'AFK' mean in online chat?", "Away from keyboard", listOf("Always fighting kings", "Ask for keys", "All friends known"), E),
+        q("tec_switch", "Which Nintendo console can be played both on a TV and as a handheld?", "The Switch", listOf("The Wii", "The GameCube", "The 3DS"), E),
+        q("tec_xbox", "Which company makes the Xbox consoles?", "Microsoft", listOf("Sony", "Nintendo", "Sega"), E),
+        q("tec_donkey_kong", "In which classic arcade game does a gorilla throw barrels at the hero?", "Donkey Kong", listOf("Pac-Man", "Space Invaders", "Frogger"), E),
+        q("tec_rpg", "What does 'RPG' stand for in gaming?", "Role-playing game", listOf("Real player game", "Rapid play game", "Random power grid"), E),
+        q("tec_email_e", "What does the 'e' in 'email' stand for?", "Electronic", listOf("Easy", "Express", "External"), E),
+        q("tec_siri", "What is the name of Apple's voice assistant?", "Siri", listOf("Alexa", "Cortana", "Bixby"), E),
+        q("tec_alexa", "Which company makes the Alexa voice assistant?", "Amazon", listOf("Google", "Apple", "Microsoft"), E),
+        q("tec_tiktok", "Which short-video app is owned by the Chinese company ByteDance?", "TikTok", listOf("Instagram", "Snapchat", "YouTube"), E),
+        q("tec_ctrl_z", "On most computers, what does the shortcut Ctrl + Z do?", "Undo the last action", listOf("Save the file", "Close the window", "Zoom in"), E),
+        q("tec_qwerty_nazwa", "Where does the QWERTY keyboard get its name?", "The first six letters of its top row", listOf("The surname of its inventor", "A Greek word meaning 'to type'", "The company that first made it"), E),
+        q("tec_tesla_model3", "Which company makes the Model S and Model 3 electric cars?", "Tesla", listOf("Toyota", "BMW", "Ford"), E),
+        q("tec_model_t", "Which company built the Model T, the first mass-produced car?", "Ford", listOf("General Motors", "Chrysler", "Cadillac"), E),
+        q("tec_roomba", "What is a Roomba?", "A robot vacuum cleaner", listOf("A smart speaker", "A drone", "A video game console"), E),
+        q("tec_sms_short", "What does the 'S' at the start of 'SMS' stand for?", "Short", listOf("Simple", "Secure", "Standard"), E),
+        q("tec_spotify", "Which music streaming service was founded in Sweden?", "Spotify", listOf("SoundCloud", "Deezer", "Tidal"), E),
 
-        /* ------------------------------- Easy ------------------------------- */
-        ask(
-            id = "www",
-            prompt = "What does the abbreviation WWW stand for?",
-            correct = "World Wide Web",
-            wrong = listOf("World Web Wide", "Wide World Web", "Web World Wide"),
-            difficulty = QuizDifficulty.Easy
-        ),
-        ask(
-            id = "iphone_firma",
-            prompt = "Which company makes the iPhone?",
-            correct = "Apple",
-            wrong = listOf("Samsung", "Google", "Nokia"),
-            difficulty = QuizDifficulty.Easy
-        ),
-        ask(
-            id = "zarowka",
-            prompt = "Who is credited with popularizing the light bulb?",
-            correct = "Thomas Edison",
-            wrong = listOf("Nikola Tesla", "Alexander Bell", "James Watt"),
-            difficulty = QuizDifficulty.Easy
-        ),
+        /* ----------------------------- Medium ----------------------------- */
+        q("tec_cpu", "What does the abbreviation CPU stand for?", "Central Processing Unit", listOf("Random-access memory", "Graphics card", "Hard drive"), M),
+        q("tec_android_firma", "Which company develops the Android operating system?", "Google", listOf("Apple", "Microsoft", "Meta"), M),
+        q("tec_telefon_bell", "Who patented the telephone?", "Alexander Graham Bell", listOf("Thomas Edison", "Guglielmo Marconi", "Samuel Morse"), M),
+        q("tec2_https_co", "What does HTTPS add over HTTP?", "Encryption of the connection", listOf("Faster downloads", "Automatic translation", "Image compression"), M),
+        q("tec2_linux_torvalds", "Who released the first version of the Linux kernel in 1991?", "Linus Torvalds", listOf("Richard Stallman", "Ken Thompson", "Andrew Tanenbaum"), M),
+        q("tec3_bitcoin_tworca", "Under what pseudonym was the original Bitcoin paper published?", "Satoshi Nakamoto", listOf("John Doe", "Anonymous", "Craig Wright, indisputably"), M),
+        q("tec3_email_pierwszy_rok", "In which decade was the first email sent?", "The 1970s", listOf("The 1990s", "The 1950s", "The 21st century"), M),
+        q("scicmp_firma_najstarsza", "Which of these companies was founded first?", "IBM", listOf("Microsoft", "Apple", "Google"), M),
+        q("scicmp_nie_jezyk_programowania", "Which of these is NOT a programming language?", "Docker", listOf("Python", "Java", "Ruby"), M),
+        q("scicmp_najwiecej_danych", "Which of these holds the most data?", "A Blu-ray disc", listOf("A CD", "A DVD", "A floppy disk"), M),
+        q("scicmp_wynalazek_najnowszy", "Which of these was invented most recently?", "The smartphone", listOf("The transistor", "The laser", "The microprocessor"), M),
+        q("day_minecraft_sprzedaz", "Which is the best-selling video game of all time?", "Minecraft", listOf("Tetris", "Grand Theft Auto V", "Wii Sports"), M),
+        q("day_netflix_poczatki", "Which streaming service started out renting DVDs by mail?", "Netflix", listOf("Hulu", "Disney+", "Amazon Prime Video"), M),
+        q("day_piatka_g", "In '5G', what does the G stand for?", "Generation", listOf("Gigahertz", "Global", "Gateway"), M),
+        q("trv2_python_nazwa", "The programming language Python is named after what?", "A comedy troupe", listOf("A snake", "Its creator's pet", "A Greek myth"), M),
+        q("trv2_iphone_rok", "In which year was the first iPhone released?", "2007", listOf("2004", "2010", "2001"), M),
+        q("trv2_binarne_1010", "What is the binary number 1010 in decimal?", "10", listOf("5", "12", "20"), M),
+        q("trv2_googol", "Which company's name comes from a misspelling of 'googol', the number 1 followed by 100 zeros?", "Google", listOf("Yahoo", "Microsoft", "Oracle"), M),
+        q("trv2_internet_uzytkownicy", "Which country has the most internet users?", "China", listOf("The United States", "India", "Russia"), M),
+        q("trv2_qr", "What does 'QR' stand for in 'QR code'?", "Quick Response", listOf("Quality Reader", "Quantum Register", "Quick Reference"), M),
+        q("trv2_arpanet", "What was ARPANET?", "The forerunner of the internet", listOf("The first home computer", "An early video game", "A satellite TV network"), M),
+        q("trv2_turing_test", "What does the Turing test try to judge?", "Whether a machine can pass as human in conversation", listOf("How fast a computer can carry out its sums", "Whether a cipher can ever be broken", "How much memory a program needs"), M),
+        q("trv2_tetris_kraj", "In which country was Tetris created?", "The Soviet Union", listOf("Japan", "The United States", "Finland"), M),
+        q("org_lego_stolarz", "Before plastic bricks, the Lego workshop made toys out of what?", "Wood", listOf("Tin", "Rubber", "Cardboard"), M),
+        q("org_mikrofalowka_batonik", "The microwave oven was discovered when an engineer noticed what melting in his pocket?", "A chocolate bar", listOf("A plastic comb", "A wax crayon", "A rubber band"), M),
+        q("org_rzep_ost", "Velcro was invented after its creator studied what stuck to his dog's fur?", "Burrs", listOf("Pine resin", "Thistledown", "Wet clay"), M),
+        q("org_motorola_komorka", "Which company placed the first handheld mobile phone call in 1973?", "Motorola", listOf("Nokia", "Ericsson", "Bell Labs"), M),
+        q("org_biro_dlugopis", "Hungarian journalist Laszlo Biro gave the world which writing tool?", "The ballpoint pen", listOf("The fountain pen", "The mechanical pencil", "The felt-tip marker"), M),
+        q("org_spam_skecz", "Junk email got the name 'spam' from what?", "A comedy sketch", listOf("An acronym", "A brand of software", "A programmer's surname"), M),
+        q("wld_gps_satelity", "How does a phone's GPS find your position?", "By timing signals from satellites", listOf("By asking nearby Wi-Fi only", "By measuring the Earth's magnetism", "By reading cell towers' names"), M),
+        q("wld_ram_skrot", "What happens to data in RAM when a computer loses power?", "It is lost", listOf("It is saved automatically", "It moves to the CPU", "It is sent to the cloud"), M),
+        q("wld_open_source", "What does 'open source' software mean?", "Its code is public and can be changed", listOf("It is always free of bugs", "It only runs online", "It was made by a government"), M),
+        q("wld_tec_emoji_kraj", "In which country were emoji invented?", "Japan", listOf("The USA", "South Korea", "Finland"), M),
+        q("tec_link", "What is the name of the hero in 'The Legend of Zelda' games?", "Link", listOf("Zelda", "Ganon", "Navi"), M),
+        q("tec_sega", "Which company created Sonic the Hedgehog?", "Sega", listOf("Nintendo", "Sony", "Atari"), M),
+        q("tec_tetris_klocki", "How many squares make up each falling piece in Tetris?", "Four", listOf("Three", "Five", "Six"), M),
+        q("tec_halo", "Which video game series stars the super-soldier Master Chief?", "Halo", listOf("Doom", "Gears of War", "Mass Effect"), M),
+        q("tec_pokemon_151", "How many Pokemon could be caught in the original Red and Blue games?", "151", listOf("100", "200", "251"), M),
+        q("tec_npc", "In video games, what does 'NPC' stand for?", "Non-player character", listOf("New player challenge", "Normal power class", "Network player client"), M),
+        q("tec_game_boy", "Which handheld console did Nintendo launch in 1989?", "The Game Boy", listOf("The Game Gear", "The Nintendo DS", "The Game and Watch"), M),
+        q("tec_wii", "Which Nintendo console of 2006 was famous for its motion-sensing remote?", "The Wii", listOf("The GameCube", "The Switch", "The Nintendo 64"), M),
+        q("tec_emoji_nazwa", "The word 'emoji' comes from Japanese words meaning what?", "Picture character", listOf("Emotion icon", "Smiling face", "Small drawing"), M),
+        q("tec_y2k", "What was the 'Y2K bug' about?", "Computers storing years as two digits", listOf("A virus set to strike in 2000", "A flaw in every Intel chip", "Running out of web addresses"), M),
+        q("tec_wiki", "The 'wiki' in Wikipedia comes from a Hawaiian word meaning what?", "Quick", listOf("Free", "Shared", "Knowledge"), M),
+        q("tec_walkman", "Which company launched the Walkman portable cassette player in 1979?", "Sony", listOf("Panasonic", "Philips", "Toshiba"), M),
+        q("tec_vhs", "Which videotape format won the 1980s 'format war' against Betamax?", "VHS", listOf("LaserDisc", "Video 2000", "Betacam"), M),
+        q("tec_benz", "Who built the first practical petrol-powered car, in 1886?", "Karl Benz", listOf("Henry Ford", "Ferdinand Porsche", "Rudolf Diesel"), M),
+        q("tec_concorde", "Which supersonic airliner carried passengers from 1976 to 2003?", "Concorde", listOf("The Tupolev Tu-144", "The Boeing 747", "The Airbus A380"), M),
+        q("tec_a380", "What is the largest passenger airliner ever built?", "The Airbus A380", listOf("The Boeing 747", "The Boeing 777", "The Antonov An-225"), M),
+        q("tec_dynamit", "Who invented dynamite?", "Alfred Nobel", listOf("Thomas Edison", "Nikola Tesla", "Hiram Maxim"), M),
+        q("tec_tesla_wynalazca", "Which inventor championed alternating current and has a unit of magnetism named after him?", "Nikola Tesla", listOf("Thomas Edison", "Michael Faraday", "James Watt"), M),
+        q("tec_paul_allen", "Who co-founded Microsoft with Bill Gates in 1975?", "Paul Allen", listOf("Steve Wozniak", "Steve Ballmer", "Larry Ellison"), M),
+        q("tec_wozniak", "Who co-founded Apple with Steve Jobs and designed its first computer?", "Steve Wozniak", listOf("Paul Allen", "Tim Cook", "Larry Page"), M),
+        q("tec_alphago", "Which AI beat the world's top Go player, Lee Sedol, in 2016?", "AlphaGo", listOf("Deep Blue", "Watson", "Siri"), M),
+        q("tec_watson", "Which IBM computer beat human champions on the quiz show 'Jeopardy!' in 2011?", "Watson", listOf("Deep Blue", "AlphaGo", "HAL 9000"), M),
+        q("tec_hal", "Which fictional computer says 'I'm sorry, Dave. I'm afraid I can't do that'?", "HAL 9000", listOf("Skynet", "The Matrix", "Deep Thought"), M),
+        q("tec_hello_world", "Which phrase is traditionally the first thing a beginner's program prints?", "Hello, World!", listOf("Good morning!", "Test one two", "Start now"), M),
+        q("tec_ryzen", "Which company makes Ryzen processors?", "AMD", listOf("Intel", "Nvidia", "Qualcomm"), M),
+        q("tec_geforce", "Which company makes GeForce graphics cards?", "Nvidia", listOf("AMD", "Intel", "Asus"), M),
+        q("tec_4k", "What does '4K' refer to on a TV or monitor?", "About 4,000 pixels across", listOf("4 kilograms of weight", "4,000 colours", "Four times the sound"), M),
+        q("tec_napster", "Which music file-sharing service was shut down in 2001 after lawsuits?", "Napster", listOf("Spotify", "LimeWire", "iTunes"), M),
+        q("tec_post_it", "The Post-it note grew out of a failed attempt to make what?", "A super-strong glue", listOf("A new kind of paper", "A fire-proof tape", "A shopping list pad"), M),
+        q("tec_lego_nazwa", "The name LEGO comes from Danish words meaning what?", "Play well", listOf("Build big", "Little bricks", "Good toy"), M),
+        q("tec_youtube_google", "Which company bought YouTube in 2006?", "Google", listOf("Microsoft", "Yahoo", "Facebook"), M),
+        q("tec_miyamoto", "Which game designer created both Mario and The Legend of Zelda?", "Shigeru Miyamoto", listOf("Hideo Kojima", "Satoru Iwata", "Yu Suzuki"), M),
 
-        /* ------------------------------ Medium ------------------------------ */
-        ask(
-            id = "cpu",
-            prompt = "What does the abbreviation CPU stand for?",
-            correct = "Central Processing Unit",
-            wrong = listOf("Random-access memory", "Graphics card", "Hard drive"),
-            difficulty = QuizDifficulty.Medium
-        ),
-        ask(
-            id = "android_firma",
-            prompt = "Which company develops the Android operating system?",
-            correct = "Google",
-            wrong = listOf("Apple", "Microsoft", "Meta"),
-            difficulty = QuizDifficulty.Medium
-        ),
-        ask(
-            id = "telefon_bell",
-            prompt = "Who patented the telephone?",
-            correct = "Alexander Graham Bell",
-            wrong = listOf("Thomas Edison", "Guglielmo Marconi", "Samuel Morse"),
-            difficulty = QuizDifficulty.Medium
-        ),
-        ask(
-            id = "html",
-            prompt = "What is the HTML language used for?",
-            correct = "Building web pages",
-            wrong = listOf("Controlling robots", "Scientific calculations", "Creating databases"),
-            difficulty = QuizDifficulty.Medium
-        ),
+        /* ------------------------------ Hard ------------------------------ */
+        q("day2_ram_vs_dysk", "Why does a computer slow down when RAM runs out?", "It starts swapping data to much slower storage", listOf("The processor overheats and throttles", "The screen starts refreshing slower", "The network connection is throttled"), H),
+        q("tec_turing", "Who is regarded as the father of computer science and cracked the Enigma cipher?", "Alan Turing", listOf("John von Neumann", "Charles Babbage", "Claude Shannon"), H),
+        q("tec_enigma_polacy", "Which Pole co-created the first break of the Enigma cipher?", "Marian Rejewski", listOf("Stefan Banach", "Jan Czochralski", "Kazimierz Funk"), H),
+        q("tec_pierwszy_program", "Who is regarded as the first programmer in history?", "Ada Lovelace", listOf("Grace Hopper", "Margaret Hamilton", "Marie Curie"), H),
+        q("tec2_ram_vs_cache", "Which memory is the fastest?", "The processor's cache", listOf("RAM", "SSD", "A network drive"), H),
+        q("tec2_ipv6", "How many bits does an IPv6 address have?", "128", listOf("32", "64", "256"), H),
+        q("tec2_kompresja_stratna", "Which image format uses lossy compression?", "JPEG", listOf("PNG", "BMP", "GIF"), H),
+        q("tec2_blockchain", "What is a blockchain?", "A distributed ledger of linked data blocks", listOf("A relational database queried with SQL", "A protocol for sending electronic mail", "A file system used on modern drives"), H),
+        q("wh_radio_marconi", "Who carried out the first transatlantic radio transmission?", "Guglielmo Marconi", listOf("Nikola Tesla", "Heinrich Hertz", "Lee de Forest"), H),
+        q("day_luthier_buduje", "What does a luthier build?", "Stringed instruments", listOf("Organs", "Drums", "Brass instruments"), H),
+        q("day_pong_gra", "Which early arcade game was the first commercial hit?", "Pong", listOf("Pac-Man", "Space Invaders", "Breakout"), H),
+        q("day_hashtag_serwis", "On which platform did the hashtag first catch on?", "Twitter", listOf("Facebook", "Instagram", "MySpace"), H),
+        q("trv2_youtube_zoo", "Where was the very first YouTube video, uploaded in 2005, filmed?", "At a zoo", listOf("In a garage", "At a concert", "In a lecture hall"), H),
+        q("trv2_mosaic", "Which early web browser, released in 1993, made the web popular by showing images inline?", "Mosaic", listOf("Netscape", "Internet Explorer", "Opera"), H),
+        q("trv2_engelbart", "Who invented the computer mouse?", "Douglas Engelbart", listOf("Steve Wozniak", "Alan Kay", "Xerox's Steve Jobs"), H),
+        q("trv2_bug_cma", "What was the first computer 'bug', found in 1947, literally?", "A moth stuck in a relay", listOf("A typo in a program", "A loose wire", "A power surge"), H),
+        q("trv2_bluetooth_nazwa", "Bluetooth is named after what?", "A 10th-century Scandinavian king", listOf("Its inventor", "A type of radio wave", "A blue LED on the first device"), H),
+        q("trv2_mac_pierwszy", "In which year did Apple release the first Macintosh?", "1984", listOf("1977", "1991", "1980"), H),
+        q("trv2_nintendo_karty", "What did Nintendo originally make when it was founded in 1889?", "Playing cards", listOf("Toys", "Radios", "Bicycles"), H),
+        q("org_nokia_papier", "Nokia began in 1865 as a mill producing what?", "Paper", listOf("Rubber boots", "Copper wire", "Gunpowder"), H),
+        q("org_google_backrub", "Before it was renamed, Google ran under what project name?", "BackRub", listOf("PageRank", "WebCrawl", "Stanford Search"), H),
+        q("org_twitter_twttr", "Twitter launched under which vowel-free spelling of its name?", "twttr", listOf("Chirp", "Jttr", "Status"), H),
+        q("org_samsung_gwiazdy", "The name Samsung means what in Korean?", "Three stars", listOf("Bright future", "Great river", "New dawn"), H),
+        q("org_bubble_tapeta", "Bubble wrap was first put on sale as which product?", "Wallpaper", listOf("Greenhouse insulation", "A children's toy", "Mattress padding"), H),
+        q("org_playdoh_czyscik", "Play-Doh was originally sold as a cleaner for what?", "Wallpaper", listOf("Car upholstery", "Silverware", "Chalkboards"), H),
+        q("org_slinky_sprezyna", "The Slinky toy came from an engineer's work on springs meant to steady what?", "Ship instruments", listOf("Aircraft landing gear", "Railway carriages", "Factory lathes"), H),
+        q("org_ebay_wskaznik", "The first item ever sold on eBay was a broken what?", "Laser pointer", listOf("Wristwatch", "Camera lens", "Games console"), H),
+        q("org_faks_przed_telefonem", "Which of these was patented first?", "The fax machine", listOf("The telephone", "The radio", "The light bulb"), H),
+        q("org_malpa_email", "Who picked the @ sign as the separator in email addresses?", "Ray Tomlinson", listOf("Tim Berners-Lee", "Vint Cerf", "Linus Torvalds"), H),
+        q("mst_pierwsza_strona", "The world's first website was created to explain what?", "The World Wide Web itself", listOf("A physics experiment", "A university timetable", "An email system"), H),
+        q("cur_qwerty", "Why was the QWERTY layout designed?", "To stop typewriter keys from jamming", listOf("To make typing as fast as possible", "To spell 'typewriter' on one row for sales demos only", "To match the alphabet"), H),
+        q("cur_apollo_pamiec", "The Apollo 11 guidance computer had roughly how much memory?", "About 4 KB of RAM", listOf("About 4 MB of RAM", "About 4 GB of RAM", "No memory at all"), H),
+        q("tec_xerox", "Which company's research lab invented the mouse-driven desktop interface that inspired the Mac?", "Xerox", listOf("IBM", "Microsoft", "Atari"), H),
+        q("tec_iloveyou", "In 2000, a computer worm spread around the world in emails with which subject line?", "ILOVEYOU", listOf("YOU WON", "HAPPY99", "URGENT"), H),
+        q("tec_imac_i", "According to Steve Jobs, what did the 'i' in iMac first stand for?", "Internet", listOf("Intelligent", "Interface", "Innovation"), H),
+        q("tec_cd_philips", "Which company developed the compact disc together with Sony?", "Philips", listOf("Panasonic", "Toshiba", "Samsung"), H),
+        q("tec_java_sun", "Which company created the Java programming language?", "Sun Microsystems", listOf("Microsoft", "IBM", "Oracle"), H),
+        q("tec_java_nazwa", "The programming language Java was named after what?", "A kind of coffee", listOf("An island volcano", "A programmer's dog", "A Greek letter"), H),
+        q("tec_toyota_krosna", "Before making cars, the Toyota group built what?", "Weaving looms", listOf("Bicycles", "Sewing machines", "Radios"), H),
+        q("tec_baird", "Who demonstrated the first working television, in 1926?", "John Logie Baird", listOf("Philo Farnsworth", "Guglielmo Marconi", "Thomas Edison"), H),
+        q("tec_sms_160", "How many characters could a classic SMS text message hold?", "160", listOf("140", "100", "255"), H),
+        q("tec_pierwszy_sms", "What did the first text message ever sent, in 1992, say?", "Merry Christmas", listOf("Hello world", "Happy New Year", "Can you read this"), H),
+        q("tec_javascript", "Which programming language was famously designed in about ten days in 1995?", "JavaScript", listOf("Java", "Python", "PHP"), H),
+        q("tec_gif_wymowa", "According to its inventor, how should 'GIF' be pronounced?", "Like 'jif', with a soft G", listOf("With a hard G, like 'gift'", "Letter by letter", "Like 'gyff'"), H),
+        q("tec_kamerka_kawa", "What did the world's first webcam, in 1991, keep an eye on?", "A coffee pot", listOf("A fish tank", "A car park", "A cat"), H),
+        q("tec_kod_kreskowy", "What was the first product ever scanned with a barcode, in 1974?", "A pack of chewing gum", listOf("A can of soup", "A box of cereal", "A bottle of cola"), H),
+        q("tec_rubik_cel", "Why did Erno Rubik first build his famous cube?", "To teach students about 3D shapes", listOf("As a puzzle for NASA astronauts", "As a toy for his own children", "As a new kind of safe lock"), H),
+        q("tec_nike", "Which sportswear company started out as 'Blue Ribbon Sports'?", "Nike", listOf("Adidas", "Reebok", "Puma"), H),
+        q("tec_skype", "Which video-calling app was built by Estonian developers in 2003?", "Skype", listOf("Zoom", "FaceTime", "WhatsApp"), H),
+        q("tec_minecraft_microsoft", "Which company bought the makers of Minecraft in 2014?", "Microsoft", listOf("Sony", "Nintendo", "Electronic Arts"), H),
+        q("tec_notch", "Who created Minecraft?", "Markus 'Notch' Persson", listOf("Hideo Kojima", "Gabe Newell", "Shigeru Miyamoto"), H),
+        q("tec_bit_skrot", "The word 'bit' is short for what?", "Binary digit", listOf("Basic information token", "Byte item", "Binary instruction"), H),
 
-        /* ------------------------------ Hard ------------------------------- */
-        ask(
-            id = "turing",
-            prompt = "Who is regarded as the father of computer science and cracked the Enigma cipher?",
-            correct = "Alan Turing",
-            wrong = listOf("John von Neumann", "Charles Babbage", "Claude Shannon"),
-            difficulty = QuizDifficulty.Hard
-        ),
-        ask(
-            id = "enigma_polacy",
-            prompt = "Which Pole co-created the first break of the Enigma cipher?",
-            correct = "Marian Rejewski",
-            wrong = listOf("Stefan Banach", "Jan Czochralski", "Kazimierz Funk"),
-            difficulty = QuizDifficulty.Hard
-        ),
-        ask(
-            id = "pierwszy_program",
-            prompt = "Who is regarded as the first programmer in history?",
-            correct = "Ada Lovelace",
-            wrong = listOf("Grace Hopper", "Margaret Hamilton", "Marie Curie"),
-            difficulty = QuizDifficulty.Hard
-        ),
-
-        /* ----------------------------- Expert ---------------------------- */
-        ask(
-            id = "moore",
-            prompt = "What does Moore's law concern?",
-            correct = "The doubling of transistor count in chips",
-            wrong = listOf("The doubling of internet speed each year", "The steady fall in the price of memory", "The rise in server power consumption"),
-            difficulty = QuizDifficulty.Expert
-        ),
-        ask(
-            id = "c_jezyk",
-            prompt = "Who created the C programming language?",
-            correct = "Dennis Ritchie",
-            wrong = listOf("Bjarne Stroustrup", "James Gosling", "Guido van Rossum"),
-            difficulty = QuizDifficulty.Expert
-        )
+        /* ----------------------------- Expert ----------------------------- */
+        q("day2_klucz_publiczny", "In public-key cryptography, what may be shared freely?", "The public key", listOf("The private key", "Both keys", "Neither key"), X),
+        q("tec_moore", "What does Moore's law concern?", "The doubling of transistor count in chips", listOf("The doubling of internet speed each year", "The steady fall in the price of memory", "The rise in server power consumption"), X),
+        q("tec_c_jezyk", "Who created the C programming language?", "Dennis Ritchie", listOf("Bjarne Stroustrup", "James Gosling", "Guido van Rossum"), X),
+        q("tec2_enigma_bomba", "What was the Polish machine for breaking Enigma called?", "The cryptologic bomb", listOf("Colossus", "Difference Engine", "Mark I"), X),
+        q("tec2_colossus", "What was the British Colossus used for?", "Breaking German ciphers", listOf("Ballistics calculations", "Controlling radar", "Census counting"), X),
+        q("tec2_mikroprocesor_pierwszy", "What was Intel's first commercial microprocessor called?", "The 4004", listOf("The 8086", "The Z80", "The 6502"), X),
+        q("tec2_unix_autorzy", "Who created the Unix operating system at Bell Labs?", "Ken Thompson and Dennis Ritchie", listOf("Bill Gates and Paul Allen", "Steve Jobs and Steve Wozniak", "Linus Torvalds"), X),
+        q("tec2_www_autor", "Who invented the World Wide Web?", "Tim Berners-Lee", listOf("Vint Cerf", "Marc Andreessen", "Robert Kahn"), X),
+        q("tec2_halting", "What does the halting problem state?", "There's no general way to decide whether a program will halt", listOf("Every program can in the end be optimised further", "A recursive function always terminates in time", "Loops always run faster than recursion does"), X),
+        q("tec2_kwantowy_qubit", "How does a qubit differ from a classical bit?", "It can be in a superposition of states", listOf("It stores two bytes", "It's faster at every task", "It needs no power"), X),
+        q("tec2_rsa", "What is RSA encryption's security based on?", "The difficulty of factoring large numbers", listOf("The length of the user's password", "Keeping the algorithm secret", "Processor speed"), X),
+        q("tec3_blockchain_konsensus", "What is the consensus mechanism Bitcoin originally used called?", "Proof of Work", listOf("Proof of Stake, first", "Proof of Authority", "Byzantine Fault Tolerance, first"), X),
+        q("mst_gps_relatywistyka", "GPS satellites must correct their clocks for what?", "Relativistic time differences", listOf("Magnetic interference", "Solar wind drag", "Atmospheric pressure"), X),
+        q("dpt_tec_notacja_o", "What does big O notation describe?", "How cost grows with input size", listOf("How much memory a chip holds", "How fast a network moves data", "How many bugs a program has"), X),
+        q("dpt_tec_zero_day", "What is a zero-day vulnerability?", "A flaw with no fix available yet", listOf("A bug that takes a day to fix", "An attack lasting under a day", "A password that expires at once"), X),
+        q("cur_wifi_skrot", "What does the 'Wi' in Wi-Fi actually stand for?", "Nothing - it's a brand name", listOf("Wireless fidelity, like hi-fi", "Wide-area frequency", "Wave-integrated fibre"), X),
+        q("tec_wirus_brain", "What was the name of the first virus for IBM PCs, written in Pakistan in 1986?", "Brain", listOf("ILOVEYOU", "Creeper", "Morris"), X),
+        q("tec_rok_2038", "In which year will many older 32-bit computer clocks overflow, like a second Y2K?", "2038", listOf("2030", "2048", "2100"), X),
+        q("tec_unix_1970", "Unix time counts the seconds since which date?", "1 January 1970", listOf("1 January 1900", "1 January 1980", "1 January 2000"), X),
+        q("tec_symbolics", "Which was the first .com domain ever registered, in 1985?", "symbolics.com", listOf("ibm.com", "apple.com", "google.com"), X),
+        q("tec_pierwsza_przegladarka", "What was the first web browser, written by Tim Berners-Lee, called?", "WorldWideWeb", listOf("Mosaic", "Netscape Navigator", "Lynx"), X),
+        q("tec_spacewar", "Which early video game, written in 1962 on a PDP-1 computer, pitted two spaceships against each other?", "Spacewar!", listOf("Asteroids", "Space Invaders", "Galaxian"), X),
+        q("tec_sony_ryzowar", "What was the Sony company's first product, which flopped?", "A rice cooker", listOf("A transistor radio", "A tape recorder", "A calculator"), X),
+        q("tec_comet", "Which was the world's first commercial jet airliner?", "The de Havilland Comet", listOf("The Boeing 707", "The Douglas DC-8", "The Sud Aviation Caravelle"), X),
+        q("tec_mp3", "Which German research institute developed the MP3 audio format?", "Fraunhofer", listOf("Max Planck", "Siemens", "Bosch"), X),
+        q("tec_rubik_pozycje", "Roughly how many different positions can a Rubik's Cube be in?", "About 43 quintillion", listOf("About 43 million", "About 43 billion", "About 43 trillion"), X),
+        q("tec_liczba_boga", "Any Rubik's Cube position can be solved in at most how many moves?", "20", listOf("12", "36", "54"), X),
+        q("tec_arm_acorn", "The ARM chips inside most phones were first designed by which British computer maker?", "Acorn Computers", listOf("Sinclair Research", "Amstrad", "Psion"), X),
+        q("tec_zuse_z3", "What was Konrad Zuse's 1941 machine, often called the first programmable computer?", "The Z3", listOf("ENIAC", "Colossus", "The Harvard Mark I"), X),
+        q("tec_cobol", "Which business programming language did Grace Hopper help create?", "COBOL", listOf("Fortran", "BASIC", "Pascal"), X),
+        q("tec_arpanet_lo", "The first message sent over ARPANET in 1969 was meant to be 'LOGIN'. What actually arrived?", "LO", listOf("LOG", "L", "Nothing at all"), X),
+        q("tec_dynatac", "Roughly how much did the first handheld mobile phone, the Motorola DynaTAC, weigh?", "About 1 kg", listOf("About 100 g", "About 300 g", "About 3 kg"), X),
+        q("tec_ibm_simon", "Which 1994 device is often called the first smartphone?", "The IBM Simon", listOf("The Nokia Communicator", "The BlackBerry 850", "The Palm Pilot"), X),
+        q("tec_blackberry", "Which Canadian company made BlackBerry phones?", "Research In Motion", listOf("Nortel", "Sierra Wireless", "Corel"), X)
     )
 }

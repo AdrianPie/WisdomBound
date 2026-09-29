@@ -60,15 +60,22 @@ class QuizBankAuditTest {
      */
     @Test
     fun `tresci tylko polskie siedza w kategorii Poland`() {
-        val misplaced = all
-            .filter { it.category != QuizCategory.Poland }
-            .filter { entry ->
-                // Tylko pytanie i POPRAWNA odpowiedz. Polskie nazwisko wsrod dystraktorow
-                // ("Kto stworzyl Muminki?" z Tuwimem do odrzucenia) nie czyni pytania lokalnym.
-                val text = entry.prompt + " " + entry.correct
+        // Tylko pytanie i POPRAWNE odpowiedzi. Polskie nazwisko wsrod dystraktorow
+        // ("Kto stworzyl Muminki?" z Tuwimem do odrzucenia) nie czyni pytania lokalnym.
+        // Typy specjalne tez: ukladanka "polscy krolowie od najstarszego" siedziala w globalnej
+        // Historii, bo ten test patrzyl dotad tylko na pytania z wyborem.
+        val texts: List<Triple<String, QuizCategory, String>> =
+            all.map { Triple(it.id, it.category, it.prompt + " " + it.correct) } +
+                TrueFalseBank.all.map { Triple(it.id, it.category, it.statement) } +
+                MultiSelectBank.all.map { Triple(it.id, it.category, it.prompt + " " + it.correct.joinToString(" ")) } +
+                OrderingBank.all.map { Triple(it.id, it.category, it.prompt + " " + it.items.joinToString(" ")) }
+
+        val misplaced = texts
+            .filter { (_, category, _) -> category != QuizCategory.Poland }
+            .filter { (_, _, text) ->
                 POLAND_ONLY.any { marker -> Regex("\\b$marker", RegexOption.IGNORE_CASE).containsMatchIn(text) }
             }
-            .map { "${it.id} (${it.category.label}): ${it.prompt}" }
+            .map { (id, category, text) -> "$id (${category.label}): $text" }
 
         assertTrue(misplaced.isEmpty(), "Polskie tresci poza kategoria Poland: $misplaced")
     }
@@ -112,8 +119,8 @@ class QuizBankAuditTest {
      * byc trzecim miejscem, ktore trzeba pamietac przy dopisywaniu pytania.
      *
      * Znalezione tamtym testem pytania zostaly poprawione recznie (patrz historia zmian
-     * BiologyQuestionsExtra2, GeographyQuestionsExtra2, ElementQuestionsExtra2,
-     * TechnologyQuestionsExtra).
+     * dawnych plikow BiologyQuestionsExtra2, GeographyQuestionsExtra2, ElementQuestionsExtra2
+     * i TechnologyQuestionsExtra - dzis wchlonietych przez pliki swoich tematow).
      */
 
     private companion object {
@@ -131,7 +138,8 @@ class QuizBankAuditTest {
         val POLAND_ONLY = listOf(
             "Malysz", "Stoch", "Radwanska", "Wlodarczyk", "Kubica", "Mickiewicz", "Reymont",
             "Szymborska", "Tokarczuk", "Rysy", "Giewont", "Wawel", "Poniatowski", "Piast",
-            "Jagiell", "Sniardwy", "Hancza", "Brzechwa", "Tuwim", "Konopnicka", "Kochanowski"
+            "Jagiell", "Sniardwy", "Hancza", "Brzechwa", "Tuwim", "Konopnicka", "Kochanowski",
+            "Matejko", "Mieszko", "Swiatek", "Wigilia"
         )
 
         val STOP = setOf(
@@ -141,8 +149,10 @@ class QuizBankAuditTest {
             "called", "its", "it"
         )
 
+        // Apostrof nie skleja sie ze slowem: "'powerhouse'" i "powerhouse" to to samo slowo, a przy
+        // [a-z']+ byly dwoma roznymi - i dubel rozniacy sie samym cudzyslowem przechodzil test.
         fun String.keywords(): Set<String> =
-            Regex("[a-z']+").findAll(lowercase())
+            Regex("[a-z]+").findAll(lowercase().replace('\'', ' '))
                 .map { it.value }
                 .filter { it.length > 3 && it !in STOP }
                 .toSet()

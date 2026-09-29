@@ -4,137 +4,241 @@ import com.lernhero.domain.quiz.QuizCategory
 import com.lernhero.domain.quiz.QuizDifficulty
 import com.lernhero.domain.quiz.QuizEntry
 
-/** Sports - soccer, the Olympics, records. */
+/**
+ * Sport: rekordy, historie, zasady, ktorych kibic uzywa co tydzien, i dyscypliny spoza europejskiego
+ * kanonu.
+ *
+ * Liczenie zawodnikow na boisku ("ilu graczy ma druzyna siatkowki?") zostalo zredukowane do minimum -
+ * takich pytan bylo kilkanascie i wszystkie brzmialy tak samo.
+ *
+ * Zasady pisania pytan dla calego banku - patrz [com.lernhero.domain.quiz.QuizBank].
+ */
 object SportQuestions {
 
-    private fun ask(
-        id: String,
-        prompt: String,
-        correct: String,
-        wrong: List<String>,
-        difficulty: QuizDifficulty
-    ) = QuizEntry(
-        id = "spo_$id",
-        prompt = prompt,
-        correct = correct,
-        wrong = wrong,
-        category = QuizCategory.Sport,
-        difficulty = difficulty
-    )
+    private val E = QuizDifficulty.Easy
+    private val M = QuizDifficulty.Medium
+    private val H = QuizDifficulty.Hard
+    private val X = QuizDifficulty.Expert
+
+    private fun q(id: String, prompt: String, correct: String, wrong: List<String>, difficulty: QuizDifficulty) =
+        QuizEntry(id = id, prompt = prompt, correct = correct, wrong = wrong, category = QuizCategory.Sport, difficulty = difficulty)
 
     val all: List<QuizEntry> = listOf(
+        /* ------------------------------ Easy ------------------------------ */
+        q("spo_kosz", "How many points is a shot from behind the line worth in basketball?", "3", listOf("2", "4", "1"), E),
+        q("spo_szachy_figury", "Which chess piece moves only diagonally?", "The bishop", listOf("The rook", "The knight", "The queen"), E),
+        q("spo2_tenis_zero", "What is a score of zero points in a tennis game called?", "Love", listOf("Deuce", "Ace", "Let"), E),
+        q("spo2_plywanie_styl", "Which swimming stroke is the fastest?", "Freestyle (front crawl)", listOf("Breaststroke", "Backstroke", "Butterfly"), E),
+        q("spo2_boks_ring", "What shape is a boxing ring?", "Square", listOf("Round", "Hexagonal", "Oval"), E),
+        q("spo3_plywanie_basen_dlugosc", "How many meters long is a standard Olympic pool?", "50", listOf("25", "100", "33"), E),
+        q("scicmp_nie_zimowy_sport", "Which of these is NOT a Winter Olympic sport?", "Field hockey", listOf("Curling", "Biathlon", "Luge"), E),
+        q("day_golf_dolki", "How many holes are played in a standard round of golf?", "18", listOf("9", "12", "24"), E),
+        q("trv2_stanley_cup", "In which sport is the Stanley Cup awarded?", "Ice hockey", listOf("Baseball", "Basketball", "Lacrosse"), E),
+        q("trv2_maraton_dystans", "How long is a marathon?", "42.195 km", listOf("40 km", "50 km", "45.5 km"), E),
+        q("trv2_tenis_as", "In tennis, what is a serve called that the receiver cannot touch?", "An ace", listOf("A let", "A winner", "A lob"), E),
+        q("spw_hat_trick", "What is a 'hat-trick' in football?", "Three goals by one player in a match", listOf("Three saves in a row", "Three matches without conceding", "Three yellow cards"), E),
+        q("spw_tenis_set_gemy", "How many games do you normally need to win a set in tennis?", "Six, with a two-game lead", listOf("Five, with any lead", "Seven, always", "Four, with a two-game lead"), E),
+        q("spw_olimpijskie_haslo", "What does the Olympic motto 'Citius, Altius, Fortius' mean?", "Faster, Higher, Stronger", listOf("Peace, Unity, Sport", "Body, Mind, Spirit", "Honour, Courage, Glory"), E),
+        q("wld_spo_olimpiada_zima", "In which winter sport do players sweep the ice in front of a sliding stone?", "Curling", listOf("Biathlon", "Skeleton", "Bobsleigh"), E),
+        q("spo_rio_2016", "Which country hosted the 2016 Summer Olympics?", "Brazil", listOf("Argentina", "Mexico", "Spain"), E),
+        q("spo_paryz_2024", "Which city hosted the 2024 Summer Olympics?", "Paris", listOf("London", "Los Angeles", "Tokyo"), E),
+        q("spo_piekna_gra", "Which sport is often called 'the beautiful game'?", "Football", listOf("Tennis", "Cricket", "Rugby"), E),
+        q("spo_cr7", "Which footballer is known by the nickname 'CR7'?", "Cristiano Ronaldo", listOf("Ronaldinho", "Ronaldo Nazario", "Roberto Carlos"), E),
+        q("spo_messi_kraj", "Which country does Lionel Messi play for?", "Argentina", listOf("Spain", "Brazil", "Uruguay"), E),
+        q("spo_kregle_strike", "In which sport do players try to get a 'strike' or a 'spare'?", "Bowling", listOf("Baseball", "Cricket", "Golf"), E),
+        q("spo_globetrotters", "Which sport do the Harlem Globetrotters play?", "Basketball", listOf("Baseball", "Volleyball", "American football"), E),
+        q("spo_super_bowl", "The Super Bowl is the final of which sport?", "American football", listOf("Baseball", "Basketball", "Ice hockey"), E),
+        q("spo_kanada_hokej", "Which is Canada's official national winter sport?", "Ice hockey", listOf("Curling", "Skiing", "Figure skating"), E),
+        q("spo_taekwondo", "Which martial art from Korea is famous for its high, spinning kicks?", "Taekwondo", listOf("Karate", "Judo", "Kung fu"), E),
+        q("spo_mundial_2026", "Which three countries hosted the 2026 FIFA World Cup?", "USA, Canada and Mexico", listOf("Spain, Portugal and Morocco", "Brazil, Argentina and Chile", "Japan, South Korea and China"), E),
+        q("spo_baseball_diament", "Which sport is played on a field called a 'diamond'?", "Baseball", listOf("Cricket", "Rugby", "Hockey"), E),
+        q("spo_polo", "Which team sport is played on horseback?", "Polo", listOf("Lacrosse", "Hurling", "Cricket"), E),
+        q("spo_haka", "Which country's rugby team performs the haka before matches?", "New Zealand", listOf("Australia", "Fiji", "South Africa"), E),
+        q("spo_world_series", "The World Series is the championship of which sport?", "Baseball", listOf("Basketball", "American football", "Ice hockey"), E),
+        q("spo_ali_najwiekszy", "Which boxer called himself 'The Greatest'?", "Muhammad Ali", listOf("Mike Tyson", "Joe Frazier", "Floyd Mayweather"), E),
+        q("spo_sand_wedge", "In which sport would you use a 'sand wedge'?", "Golf", listOf("Beach volleyball", "Cricket", "Polo"), E),
+        q("spo_pionek", "Which chess piece moves straight forward but captures diagonally?", "The pawn", listOf("The bishop", "The rook", "The knight"), E),
+        q("spo_camp_nou", "Which football club plays at the Camp Nou?", "FC Barcelona", listOf("Real Madrid", "Atletico Madrid", "Valencia"), E),
+        q("spo_reka_boga", "Which footballer scored the famous 'Hand of God' goal in 1986?", "Diego Maradona", listOf("Pele", "Lionel Messi", "Zinedine Zidane"), E),
+        q("spo_deuce", "In which sport is a 40-40 score called 'deuce'?", "Tennis", listOf("Badminton", "Squash", "Table tennis"), E),
+        q("spo_hamilton", "In which sport does Lewis Hamilton compete?", "Formula 1", listOf("MotoGP", "Rally", "NASCAR"), E),
+        q("spo_mlyn_rugby", "In which sport would you see a 'scrum'?", "Rugby", listOf("Cricket", "Handball", "Water polo"), E),
+        q("spo_wimbledon_pilki", "What colour have Wimbledon tennis balls been since 1986?", "Yellow", listOf("White", "Green", "Orange"), E),
+        q("spo_kij_bilardowy", "In which of these sports do players use a cue?", "Snooker", listOf("Croquet", "Cricket", "Hockey"), E),
 
-        /* ------------------------------- Easy ------------------------------- */
-        ask(
-            id = "druzyna_pilka",
-            prompt = "How many players does a soccer team have on the field?",
-            correct = "11",
-            wrong = listOf("10", "12", "9"),
-            difficulty = QuizDifficulty.Easy
-        ),
-        ask(
-            id = "kolarstwo",
-            prompt = "The Tour de France is a race in which sport?",
-            correct = "Cycling",
-            wrong = listOf("Running", "Rowing", "Car rallying"),
-            difficulty = QuizDifficulty.Easy
-        ),
-        ask(
-            id = "kosz",
-            prompt = "How many points is a shot from behind the line worth in basketball?",
-            correct = "3",
-            wrong = listOf("2", "4", "1"),
-            difficulty = QuizDifficulty.Easy
-        ),
-        ask(
-            id = "olimpiada_kolka",
-            prompt = "How many rings does the Olympic flag have?",
-            correct = "5",
-            wrong = listOf("4", "6", "7"),
-            difficulty = QuizDifficulty.Easy
-        ),
-        ask(
-            id = "szachy_figury",
-            prompt = "Which chess piece moves only diagonally?",
-            correct = "The bishop",
-            wrong = listOf("The rook", "The knight", "The queen"),
-            difficulty = QuizDifficulty.Easy
-        ),
+        /* ----------------------------- Medium ----------------------------- */
+        q("spo_mundial_2018", "Who won the soccer World Cup in 2018?", "France", listOf("Croatia", "Brazil", "Germany"), M),
+        q("spo_lewandowski", "At which club did Robert Lewandowski become the Bundesliga's top scorer?", "Bayern Munich", listOf("Real Madrid", "Manchester United", "Juventus"), M),
+        q("spo_hokej", "How long is one period in an ice hockey game?", "20 minutes", listOf("15 minutes", "25 minutes", "30 minutes"), M),
+        q("spo_siatkowka_sety", "How many sets won does it take to win a volleyball match?", "3", listOf("2", "4", "5"), M),
+        q("spo2_rugby_zawodnicy", "How many players make up a rugby union team?", "Fifteen", listOf("Thirteen", "Eleven", "Seventeen"), M),
+        q("spo2_tour_de_france", "What jersey does the Tour de France leader wear?", "Yellow", listOf("Green", "Pink", "Polka-dot"), M),
+        q("spo2_giro_koszulka", "What jersey does the Giro d'Italia leader wear?", "Pink", listOf("Yellow", "White", "Red"), M),
+        q("spo2_f1_punkty", "How many points does a Formula 1 race winner get?", "25", listOf("20", "18", "30"), M),
+        q("spo2_golf_dolek", "What does a birdie mean in golf?", "A score of one stroke under par", listOf("A score of one stroke over par", "Sinking it on the first stroke", "Hitting off the course"), M),
+        q("spo2_dziesiecioboj_kobiety", "What is the women's equivalent of the decathlon called?", "The heptathlon", listOf("The pentathlon", "The octathlon", "The enneathlon"), M),
+        q("spo2_siatkowka_libero", "What can a libero not do in volleyball?", "Attack with a jump above the net", listOf("Receive serves", "Play defense", "Sub in for another player"), M),
+        q("spo2_malysz_dyscyplina_klub", "In which countries is the Four Hills Tournament held?", "Germany and Austria", listOf("Poland and Czechia", "Norway and Finland", "Switzerland and Italy"), M),
+        q("spo3_biathlon_dyscypliny", "What two disciplines make up biathlon?", "Cross-country skiing and shooting", listOf("Running and swimming", "Skiing and jumping", "Skating and shooting"), M),
+        q("spo3_bilard_ile_bil", "How many balls (cue ball included) are used in classic American pool (8-ball)?", "16", listOf("10", "12", "20"), M),
+        q("spo3_olimpiada_letnia_dyscyplin", "Which of these disciplines is NOT held at the Summer Olympics?", "Cross-country skiing", listOf("Swimming", "Track and field", "Judo"), M),
+        q("spo3_hokej_krazek", "What is a hockey puck made of?", "Vulcanized rubber", listOf("Metal", "Wood", "Bone"), M),
+        q("spo3_koszykowka_kosz_wysokosc", "At what height is the hoop mounted in basketball?", "10 ft (3.05 m)", listOf("8 ft", "11.5 ft", "9 ft"), M),
+        q("scicmp_najwieksza_pilka", "Which of these sports uses the largest ball?", "Basketball", listOf("Football", "Volleyball", "Handball"), M),
+        q("scicmp_ryder_cup", "In which sport is the Ryder Cup contested?", "Golf", listOf("Tennis", "Sailing", "Cycling"), M),
+        q("scicmp_najwiecej_zawodnikow", "Which of these sports fields the most players per team?", "Rugby union", listOf("Football", "Ice hockey", "Basketball"), M),
+        q("day_boks_runda", "How long is one round in professional men's boxing?", "Three minutes", listOf("Two minutes", "Four minutes", "Five minutes"), M),
+        q("day_kola_olimpijskie_znaczenie", "What do the five Olympic rings represent?", "The five inhabited continents", listOf("The five founding countries", "The five original sports", "The five Olympic virtues"), M),
+        q("trv2_krykiet_over", "In cricket, how many balls make up an over?", "Six", listOf("Four", "Eight", "Ten"), M),
+        q("trv2_judo_znaczenie", "Which martial art's name means 'the gentle way'?", "Judo", listOf("Karate", "Taekwondo", "Kung fu"), M),
+        q("trv2_londyn_igrzyska", "Which city was the first to host the Summer Olympics three times?", "London", listOf("Paris", "Athens", "Los Angeles"), M),
+        q("trv2_golf_eagle", "In golf, what is a score of two under par on a hole called?", "An eagle", listOf("A birdie", "An albatross", "A bogey"), M),
+        q("trv2_ashes", "In which sport do England and Australia compete for 'the Ashes'?", "Cricket", listOf("Rugby", "Rowing", "Sailing"), M),
+        q("trv2_touchdown", "How many points is a touchdown worth in American football?", "6", listOf("3", "7", "5"), M),
+        q("trv2_golf_szkocja", "Which country is the birthplace of golf?", "Scotland", listOf("England", "The United States", "The Netherlands"), M),
+        q("trv2_maraton_nazwa", "The marathon is named after a battle in which country?", "Greece", listOf("Italy", "Turkey", "Egypt"), M),
+        q("trv2_siatkowka_wynalazek", "In which country was volleyball invented?", "The United States", listOf("Brazil", "Japan", "Italy"), M),
+        q("trv2_f1_rekordy", "Which driver has won the most Formula 1 world championships (tied at seven)?", "Michael Schumacher and Lewis Hamilton", listOf("Ayrton Senna and Alain Prost", "Sebastian Vettel and Max Verstappen", "Juan Manuel Fangio and Niki Lauda"), M),
+        q("trv2_baseball_inningi", "How many innings are in a standard baseball game?", "9", listOf("7", "10", "12"), M),
+        q("spw_kolarstwo_peleton", "What is the main group of riders in a road race called?", "The peloton", listOf("The breakaway", "The domestique", "The prologue"), M),
+        q("spw_plywanie_delfin", "Which swimming stroke requires both arms to move together over the water?", "Butterfly", listOf("Front crawl", "Backstroke", "Breaststroke"), M),
+        q("spw_koszykowka_sekundy", "How long does an NBA team have to attempt a shot?", "24 seconds", listOf("30 seconds", "20 seconds", "35 seconds"), M),
+        q("ext_pilka_dolki", "Why is a golf ball covered in dimples?", "They make it fly farther", listOf("They improve grip", "They reduce its weight", "They help it roll straight"), M),
+        q("ext_tour_kalorie", "A Tour de France rider can burn roughly how many calories on a hard mountain stage?", "Around 8,000", listOf("Around 2,000", "Around 4,000", "Around 20,000"), M),
+        q("mst_koszykowka_kosz", "The first basketball games used what as the goal?", "A peach basket", listOf("A barrel", "A metal hoop", "A painted square"), M),
+        q("mst_wimbledon_kolor", "Wimbledon is unique among tennis majors for requiring what?", "Almost entirely white clothing", listOf("Wooden rackets", "No line judges", "Matches only in daylight"), M),
+        q("cur_golf_ksiezyc", "Which sport has been played on the Moon?", "Golf", listOf("Tennis", "Baseball", "Frisbee"), M),
+        q("wld_tenis_wielki_szlem", "Which of these is NOT a tennis Grand Slam tournament?", "The Davis Cup", listOf("Wimbledon", "The US Open", "Roland Garros"), M),
+        q("spo_los_angeles_2028", "Which city was chosen to host the 2028 Summer Olympics?", "Los Angeles", listOf("Brisbane", "Paris", "Madrid"), M),
+        q("spo_messi_zlota_pilka", "Which footballer has won the most Ballon d'Or awards?", "Lionel Messi", listOf("Cristiano Ronaldo", "Michel Platini", "Johan Cruyff"), M),
+        q("spo_pele", "Which Brazilian legend won three World Cups as a player?", "Pele", listOf("Ronaldo", "Zico", "Garrincha"), M),
+        q("spo_rzutki_180", "What is the highest score possible with three darts?", "180", listOf("150", "170", "200"), M),
+        q("spo_kregle_300", "What is a perfect score in ten-pin bowling?", "300", listOf("200", "250", "500"), M),
+        q("spo_zielona_marynarka", "What does the winner of the Masters golf tournament put on?", "A green jacket", listOf("A yellow jersey", "A red blazer", "A white cap"), M),
+        q("spo_rpa_rugby", "Which country has won the most Rugby World Cups?", "South Africa", listOf("New Zealand", "Australia", "England"), M),
+        q("spo_brazylia_kazdy_mundial", "Which is the only country to have played at every FIFA World Cup?", "Brazil", listOf("Germany", "Argentina", "Italy"), M),
+        q("spo_djokovic", "Which man has won the most Grand Slam singles titles in tennis?", "Novak Djokovic", listOf("Rafael Nadal", "Roger Federer", "Pete Sampras"), M),
+        q("spo_clay", "What was Muhammad Ali's name at birth?", "Cassius Clay", listOf("Joe Louis", "Sonny Liston", "George Foreman"), M),
+        q("spo_wimbledon_najstarszy", "Which is the oldest of the four tennis Grand Slam tournaments?", "Wimbledon", listOf("The US Open", "Roland Garros", "The Australian Open"), M),
+        q("spo_puchar_ameryki", "In which sport is the America's Cup contested?", "Sailing", listOf("Rowing", "Golf", "Polo"), M),
+        q("spo_ferrari", "Which team has won the most Formula 1 constructors' championships?", "Ferrari", listOf("McLaren", "Williams", "Mercedes"), M),
+        q("spo_monako", "Which Formula 1 race is famous for running through a tunnel on narrow city streets?", "The Monaco Grand Prix", listOf("The British Grand Prix", "The Italian Grand Prix", "The Belgian Grand Prix"), M),
+        q("spo_wielki_szlem_baseball", "What is a 'grand slam' in baseball?", "A home run with the bases loaded", listOf("Winning four big tournaments", "Striking out three batters", "A game with no hits allowed"), M),
+        q("spo_lbw", "In cricket, what does 'LBW' stand for?", "Leg before wicket", listOf("Long ball wide", "Lost ball waiting", "Left behind wicket"), M),
+        q("spo_anglia_1966", "Which country won the 1966 FIFA World Cup on home soil?", "England", listOf("Germany", "Brazil", "Italy"), M),
+        q("spo_zidane", "Which French star was sent off for a head-butt in the 2006 World Cup final?", "Zinedine Zidane", listOf("Thierry Henry", "Franck Ribery", "Patrick Vieira"), M),
+        q("spo_jordan_23", "Which shirt number did Michael Jordan make famous?", "23", listOf("33", "32", "8"), M),
+        q("spo_promocja", "What is it called when a pawn reaches the far side of the board and becomes a queen?", "Promotion", listOf("Castling", "En passant", "Check"), M),
+        q("spo_pat", "What is 'stalemate' in chess?", "A draw when a player has no legal move", listOf("A win for the player who moves next", "A king captured by a pawn", "A game lost because of time"), M),
+        q("spo_podnoszenie", "In which sport do athletes perform the 'snatch' and the 'clean and jerk'?", "Weightlifting", listOf("Wrestling", "Gymnastics", "Judo"), M),
+        q("spo_ateny_2004", "In which country were the 2004 Summer Olympics held?", "Greece", listOf("Italy", "Spain", "Australia"), M),
+        q("spo_hang_ten", "In which sport would you 'hang ten'?", "Surfing", listOf("Skateboarding", "Skiing", "Windsurfing"), M),
+        q("spo_breaking", "Which dance sport made its Olympic debut at Paris 2024?", "Breaking", listOf("Ballroom dancing", "Cheerleading", "Zumba"), M),
+        q("spo_snooker_czarna", "In snooker, which ball is worth the most points?", "The black", listOf("The pink", "The blue", "The red"), M),
+        q("spo_czerwone_diably", "Which English football club is nicknamed 'the Red Devils'?", "Manchester United", listOf("Liverpool", "Arsenal", "Manchester City"), M),
+        q("spo_real_liga_mistrzow", "Which club has won the most European Cup and Champions League titles?", "Real Madrid", listOf("AC Milan", "Bayern Munich", "Liverpool"), M),
+        q("spo_biles", "Which gymnast has won the most World Championship medals in history?", "Simone Biles", listOf("Larisa Latynina", "Nadia Comaneci", "Vitaly Scherbo"), M),
+        q("spo_armstrong", "Which cyclist was stripped of seven Tour de France titles for doping?", "Lance Armstrong", listOf("Chris Froome", "Miguel Indurain", "Eddy Merckx"), M),
+        q("spo_regaty", "Oxford and Cambridge universities race each other every year in which sport?", "Rowing", listOf("Sailing", "Cycling", "Swimming"), M),
+        q("spo_niemcy_2014", "Which country won the 2014 FIFA World Cup?", "Germany", listOf("Argentina", "Brazil", "The Netherlands"), M),
+        q("spo_capoeira", "Which Brazilian martial art blends fighting with dance and music?", "Capoeira", listOf("Krav Maga", "Jiu-jitsu", "Savate"), M),
+        q("spo_tenis_stolowy_chiny", "Which country has dominated Olympic table tennis for decades?", "China", listOf("Japan", "South Korea", "Sweden"), M),
+        q("spo_nadal_rg", "Which player has won the French Open (Roland Garros) the most times?", "Rafael Nadal", listOf("Novak Djokovic", "Bjorn Borg", "Roger Federer"), M),
 
-        /* ------------------------------ Medium ------------------------------ */
-        ask(
-            id = "mundial_2018",
-            prompt = "Who won the soccer World Cup in 2018?",
-            correct = "France",
-            wrong = listOf("Croatia", "Brazil", "Germany"),
-            difficulty = QuizDifficulty.Medium
-        ),
-        ask(
-            id = "lewandowski",
-            prompt = "At which club did Robert Lewandowski become the Bundesliga's top scorer?",
-            correct = "Bayern Munich",
-            wrong = listOf("Real Madrid", "Manchester United", "Juventus"),
-            difficulty = QuizDifficulty.Medium
-        ),
-        ask(
-            id = "hokej",
-            prompt = "How long is one period in an ice hockey game?",
-            correct = "20 minutes",
-            wrong = listOf("15 minutes", "25 minutes", "30 minutes"),
-            difficulty = QuizDifficulty.Medium
-        ),
-        ask(
-            id = "siatkowka_sety",
-            prompt = "How many sets won does it take to win a volleyball match?",
-            correct = "3",
-            wrong = listOf("2", "4", "5"),
-            difficulty = QuizDifficulty.Medium
-        ),
+        /* ------------------------------ Hard ------------------------------ */
+        q("spo_bolt", "What is Usain Bolt's world record in the 100 m?", "9.58 s", listOf("9.69 s", "9.72 s", "9.49 s"), H),
+        q("spo_olimpiada_1896", "Where were the first modern Olympic Games held?", "Athens", listOf("Paris", "Rome", "London"), H),
+        q("spo_wimbledon", "What surface is Wimbledon played on?", "Grass", listOf("Sand", "Concrete", "Clay and hard court, alternating"), H),
+        q("spo_szachy_mistrz", "Which chess player held the world championship title the longest in the 20th century?", "Emanuel Lasker", listOf("Garry Kasparov", "Bobby Fischer", "Anatoly Karpov"), H),
+        q("spo2_mundial_najwiecej", "Which national team has won the most soccer World Cups?", "Brazil", listOf("Germany", "Italy", "Argentina"), H),
+        q("spo2_mundial_2022", "Who won the 2022 soccer World Cup?", "Argentina", listOf("France", "Brazil", "Croatia"), H),
+        q("spo2_igrzyska_1980", "Which city hosted the 1980 Summer Olympics?", "Moscow", listOf("Munich", "Montreal", "Los Angeles"), H),
+        q("spo2_wielki_szlem_tenis", "How many tournaments make up tennis's Grand Slam?", "Four", listOf("Three", "Five", "Six"), H),
+        q("spo2_roland_garros", "What surface is Roland Garros played on?", "Clay", listOf("Grass", "Hard court", "Concrete"), H),
+        q("spo2_nba_najwiecej_tytulow", "Which clubs have the most NBA titles?", "The Boston Celtics and Los Angeles Lakers", listOf("The Chicago Bulls and Miami Heat", "Golden State and the Spurs", "The Knicks and the Nets"), H),
+        q("spo2_kolarstwo_gorska", "What is the mountains classification jersey called in the Tour de France?", "The polka-dot jersey", listOf("The green jersey", "The white jersey", "The blue jersey"), H),
+        q("spo2_bolt_200", "What is Usain Bolt's world record in the 200 m?", "19.19 s", listOf("19.59 s", "18.99 s", "19.79 s"), H),
+        q("spo2_igrzyska_zimowe_polska", "Which city hosted the 2022 Winter Olympics?", "Beijing", listOf("Sochi", "Pyeongchang", "Vancouver"), H),
+        q("spo3_rugby_punktacja", "How many points is a try worth in rugby union?", "Five", listOf("Three", "Seven", "Ten"), H),
+        q("spo3_krykiet_kraj", "In which country is cricket one of the most popular sports?", "India", listOf("Canada", "Germany", "Brazil"), H),
+        q("spo3_paraolimpiada_start", "In which decade were the first official Paralympic Games held?", "The 1960s", listOf("The 1930s", "The 1980s", "The 1990s"), H),
+        q("spo3_olimpiada_letnia_1936", "In which city were the controversial 1936 Olympics held?", "Berlin", listOf("Rome", "London", "Paris"), H),
+        q("scicmp_najwiecej_zlota", "Which country has won the most Summer Olympic gold medals overall?", "The United States", listOf("The Soviet Union", "China", "Great Britain"), H),
+        q("trv2_snooker_147", "What is the maximum break in snooker?", "147", listOf("100", "180", "155"), H),
+        q("trv2_ping_pong_kraj", "In which country did table tennis originate?", "England", listOf("China", "Japan", "Germany"), H),
+        q("trv2_flaga_biala", "In NASCAR, what does a white flag signal?", "The final lap", listOf("The race is stopped", "Slippery track", "A driver must pit"), H),
+        q("trv2_skoczek_ruchy", "From the centre of an empty chessboard, how many squares can a knight move to?", "8", listOf("4", "6", "12"), H),
+        q("trv2_sumo_ring", "What is a sumo wrestling ring called?", "A dohyo", listOf("A dojo", "A tatami", "A kumite"), H),
+        q("trv2_kregle_turkey", "In bowling, what are three strikes in a row called?", "A turkey", listOf("A hat-trick", "A triple", "An eagle"), H),
+        q("trv2_tour_de_france_start", "In which year was the first Tour de France held?", "1903", listOf("1923", "1889", "1948"), H),
+        q("trv2_curling_kamien", "In curling, what is the stone traditionally made of?", "Granite", listOf("Marble", "Steel", "Basalt"), H),
+        q("trv2_koszykowka_wynalazek", "Who invented basketball in 1891?", "James Naismith", listOf("Walter Camp", "Abner Doubleday", "Pierre de Coubertin"), H),
+        q("trv2_igrzyska_zimowe_pierwsze", "In which country were the first Winter Olympics held, in 1924?", "France", listOf("Switzerland", "Norway", "Austria"), H),
+        q("spw_krykiet_test", "How many days can a cricket Test match last?", "Five", listOf("Three", "One", "Seven"), H),
+        q("spw_maraton_kobiet_pierwszy", "At which Olympics did women first run the marathon?", "Los Angeles 1984", listOf("Munich 1972", "Montreal 1976", "Seoul 1988"), H),
+        q("spw_triathlon_ironman", "How long is the run in a full Ironman triathlon?", "A full marathon, 42.2 km", listOf("A half marathon", "10 km", "21 km"), H),
+        q("spw_szachy_roszada", "In chess, what does castling move?", "The king and one rook, in a single move", listOf("The king and the queen, side by side", "Two pawns moved on the same turn", "A rook and a knight, swapping places"), H),
+        q("ext_badminton_lotka", "Which sport features the fastest recorded projectile hit by a player?", "Badminton", listOf("Tennis", "Golf", "Ice hockey"), H),
+        q("ext_maraton_dystans", "The marathon's odd distance of 42.195 km was fixed to suit what?", "A royal viewing box", listOf("A stadium's track length", "A city's ring road", "An ancient road's length"), H),
+        q("ext_olimpiada_sztuka", "Between 1912 and 1948, Olympic medals were also awarded for what?", "Art", listOf("Chess", "Debating", "Ballooning"), H),
+        q("mst_pilka_lata", "A standard football match clock runs for 90 minutes, but the ball is typically in play for how long?", "Under an hour", listOf("About 80 minutes", "The full 90", "About 75 minutes"), H),
+        q("mst_boks_rundy", "Professional championship boxing bouts were shortened from 15 rounds to 12 mainly for what reason?", "Fighter safety", listOf("Television schedules", "Judging disputes", "Crowd attention"), H),
+        q("dpt_spo_davis", "In which sport is the Davis Cup contested?", "Tennis", listOf("Golf", "Rugby", "Sailing"), H),
+        q("spo_lombardi", "The NFL's Super Bowl winners receive which trophy?", "The Vince Lombardi Trophy", listOf("The Stanley Cup", "The Larry O'Brien Trophy", "The Commissioner's Trophy"), H),
+        q("spo_albatros", "In golf, what is a score of three under par on one hole called?", "An albatross", listOf("A condor", "An eagle", "A birdie"), H),
+        q("spo_court", "Which woman has won the most Grand Slam singles titles in tennis, 24?", "Margaret Court", listOf("Serena Williams", "Steffi Graf", "Martina Navratilova"), H),
+        q("spo_spitz", "Which swimmer won seven gold medals at the 1972 Munich Olympics?", "Mark Spitz", listOf("Michael Phelps", "Ian Thorpe", "Johnny Weissmuller"), H),
+        q("spo_kentucky", "Which horse race is known as 'the Run for the Roses'?", "The Kentucky Derby", listOf("The Grand National", "The Melbourne Cup", "The Epsom Derby"), H),
+        q("spo_grand_national", "Which famous steeplechase is run at Aintree, with fences like 'Becher's Brook'?", "The Grand National", listOf("The Kentucky Derby", "The Prix de l'Arc de Triomphe", "The Cheltenham Gold Cup"), H),
+        q("spo_krykiet_1975", "Which team won the first Cricket World Cup, in 1975?", "The West Indies", listOf("Australia", "England", "India"), H),
+        q("spo_tiger_imie", "What is golfer Tiger Woods' real first name?", "Eldrick", listOf("Earl", "Edward", "Elliott"), H),
+        q("spo_usa_igrzyska", "Counting Summer and Winter Games, which country has hosted the Olympics the most times?", "The USA", listOf("France", "Japan", "Britain"), H),
+        q("spo_krykiet_2028", "Which sport was brought back for the Los Angeles 2028 Olympics, 128 years after its only appearance?", "Cricket", listOf("Rugby", "Baseball", "Polo"), H),
+        q("spo_hurling", "Which fast Irish field sport is played with a stick called a hurley?", "Hurling", listOf("Shinty", "Lacrosse", "Camogie"), H),
+        q("spo_tyson", "Who became the youngest heavyweight boxing champion, at just 20?", "Mike Tyson", listOf("Muhammad Ali", "George Foreman", "Floyd Patterson"), H),
+        q("spo_golf_dolki", "Roughly how many dimples does a typical golf ball have?", "300 to 400", listOf("50 to 100", "1,000 to 1,200", "About 20"), H),
+        q("spo_crucible", "Which sport's World Championship is played at the Crucible Theatre in Sheffield?", "Snooker", listOf("Darts", "Chess", "Table tennis"), H),
 
-        /* ------------------------------ Hard ------------------------------- */
-        ask(
-            id = "bolt",
-            prompt = "What is Usain Bolt's world record in the 100 m?",
-            correct = "9.58 s",
-            wrong = listOf("9.69 s", "9.72 s", "9.49 s"),
-            difficulty = QuizDifficulty.Hard
-        ),
-        ask(
-            id = "olimpiada_1896",
-            prompt = "Where were the first modern Olympic Games held?",
-            correct = "Athens",
-            wrong = listOf("Paris", "Rome", "London"),
-            difficulty = QuizDifficulty.Hard
-        ),
-        ask(
-            id = "wimbledon",
-            prompt = "What surface is Wimbledon played on?",
-            correct = "Grass",
-            wrong = listOf("Sand", "Concrete", "Clay and hard court, alternating"),
-            difficulty = QuizDifficulty.Hard
-        ),
-        ask(
-            id = "szachy_mistrz",
-            prompt = "Which chess player held the world championship title the longest in the 20th century?",
-            correct = "Emanuel Lasker",
-            wrong = listOf("Garry Kasparov", "Bobby Fischer", "Anatoly Karpov"),
-            difficulty = QuizDifficulty.Hard
-        ),
-
-        /* ----------------------------- Expert ---------------------------- */
-        ask(
-            id = "dekatlon",
-            prompt = "Which event closes the men's Olympic decathlon on the second day?",
-            correct = "The 1500 metres",
-            wrong = listOf("The javelin throw", "The pole vault", "The 110 m hurdles"),
-            difficulty = QuizDifficulty.Expert
-        ),
-        ask(
-            id = "nba_wilt",
-            prompt = "Who scored 100 points in a single NBA game?",
-            correct = "Wilt Chamberlain",
-            wrong = listOf("Michael Jordan", "Kobe Bryant", "LeBron James"),
-            difficulty = QuizDifficulty.Expert
-        )
+        /* ----------------------------- Expert ----------------------------- */
+        q("spo_dekatlon", "Which event closes the men's Olympic decathlon on the second day?", "The 1500 metres", listOf("The javelin throw", "The pole vault", "The 110 m hurdles"), X),
+        q("spo_nba_wilt", "Who scored 100 points in a single NBA game?", "Wilt Chamberlain", listOf("Michael Jordan", "Kobe Bryant", "LeBron James"), X),
+        q("spo2_fosbury", "Who revolutionized the high jump with the backward flop technique?", "Dick Fosbury", listOf("Jesse Owens", "Carl Lewis", "Javier Sotomayor"), X),
+        q("spo2_sotomayor", "Who holds the men's high jump world record?", "Javier Sotomayor", listOf("Mutaz Barshim", "Dick Fosbury", "Patrik Sjoberg"), X),
+        q("spo2_duplantis", "Who has repeatedly broken the pole vault world record?", "Armand Duplantis", listOf("Sergey Bubka", "Renaud Lavillenie", "Piotr Lisek"), X),
+        q("spo2_szachy_mistrz", "Who was the first official World Chess Champion?", "Wilhelm Steinitz", listOf("Emanuel Lasker", "Jose Raul Capablanca", "Paul Morphy"), X),
+        q("spo2_kasparov_deep_blue", "In which year did Deep Blue defeat Garry Kasparov in a match?", "1997", listOf("1996", "1999", "2001"), X),
+        q("spo2_tour_najwiecej", "Who was the first to win the Tour de France five times?", "Jacques Anquetil", listOf("Eddy Merckx", "Bernard Hinault", "Miguel Indurain"), X),
+        q("spo2_nba_punkty_kariera", "Who is the NBA's all-time leading scorer?", "LeBron James", listOf("Kareem Abdul-Jabbar", "Michael Jordan", "Karl Malone"), X),
+        q("spo2_phelps_medale", "How many Olympic gold medals has Michael Phelps won?", "23", listOf("18", "28", "15"), X),
+        q("spo3_owens_1936", "How many gold medals did Jesse Owens win at the 1936 Berlin Olympics?", "Four", listOf("Two", "Three", "Five"), X),
+        q("spo3_nadia_comaneci", "Who was the first gymnast in Olympic history to receive a perfect 10.0?", "Nadia Comaneci", listOf("Simone Biles", "Larisa Latynina", "Olga Korbut"), X),
+        q("spo3_latynina_medale", "Which gymnast was, for decades, the most decorated Olympian in history?", "Larisa Latynina", listOf("Nadia Comaneci", "Simone Biles", "Olga Korbut"), X),
+        q("spo3_kipchoge_maraton", "Who was the first to run a marathon distance in under two hours (an exhibition run)?", "Eliud Kipchoge", listOf("Mo Farah", "Haile Gebrselassie", "Kenenisa Bekele"), X),
+        q("spo3_pierwsza_kobieta_igrzyska", "Starting with which Games could women officially compete in the modern Olympics?", "1900 (Paris)", listOf("1896", "1924", "1948"), X),
+        q("spw_olimpiada_odwolane", "How many Olympic Games were cancelled because of the world wars?", "Five", listOf("Two", "Three", "Seven"), X),
+        q("spw_bannister_mila", "Who was the first man to run a mile in under four minutes?", "Roger Bannister", listOf("Jim Ryun", "Herb Elliott", "John Landy"), X),
+        q("spw_kraj_najwiecej_medali_zimowe", "Which country has won the most Winter Olympic medals overall?", "Norway", listOf("The United States", "Germany", "Russia"), X),
+        q("spw_krykiet_bradman", "Which cricketer finished with a Test batting average of 99.94?", "Don Bradman", listOf("Sachin Tendulkar", "Jack Hobbs", "Vivian Richards"), X),
+        q("spw_maraton_najstarszy", "Which is the oldest annual marathon in the world, first run in 1897?", "The Boston Marathon", listOf("The London Marathon", "The New York City Marathon", "The Berlin Marathon"), X),
+        q("ext_krykiet_mecz", "The longest official cricket match in history lasted how long before being abandoned?", "Twelve days", listOf("Three days", "Five days", "Eight days"), X),
+        q("dpt_spo_nutmeg", "What is a 'nutmeg' in football?", "Putting the ball through an opponent's legs", listOf("A shot struck from the halfway line", "A tackle made from behind the player", "A pass hit with the outside of the boot"), X),
+        q("dpt_spo_indy_500", "How many laps make up the Indianapolis 500?", "200", listOf("100", "250", "500"), X),
+        q("dpt_spo_rugby_league", "How many players make up a rugby league team?", "Thirteen", listOf("Fifteen", "Eleven", "Twelve"), X),
+        q("dpt_spo_f1_flaga", "What does a black and white diagonal flag mean in Formula 1?", "A warning for unsporting driving", listOf("The driver must pit immediately", "The session has been suspended", "A faster car is about to lap you"), X),
+        q("dpt_spo_zmienny_sztafeta", "Which stroke opens a medley relay?", "Backstroke", listOf("Butterfly", "Breaststroke", "Freestyle"), X),
+        q("ref_spo_mundial_1930", "Which country won the first FIFA World Cup, in 1930?", "Uruguay", listOf("Argentina", "Brazil", "Italy"), X),
+        q("ref_spo_yurchenko", "In which sport would you perform a 'Yurchenko'?", "Gymnastics", listOf("Figure skating", "Diving", "Trampolining"), X),
+        q("ref_spo_eagan", "Who is the only person to win Olympic gold in both Summer and Winter Games in different sports?", "Eddie Eagan", listOf("Clara Hughes", "Christa Luding-Rothenburger", "Lauryn Williams"), X),
+        q("spo_graf_zloty_szlem", "Who won the 'Golden Slam' in 1988: all four majors plus Olympic gold?", "Steffi Graf", listOf("Martina Navratilova", "Chris Evert", "Monica Seles"), X),
+        q("spo_isner_mahut", "The longest tennis match ever, at Wimbledon in 2010, lasted about how long in total?", "11 hours", listOf("5 hours", "7 hours", "16 hours"), X),
+        q("spo_malinin", "Who landed the first quadruple Axel in figure skating competition, in 2022?", "Ilia Malinin", listOf("Nathan Chen", "Yuzuru Hanyu", "Evgeni Plushenko"), X),
+        q("spo_mundial_kobiet", "In which year was the first FIFA Women's World Cup held?", "1991", listOf("1971", "1983", "1999"), X),
+        q("spo_kanada_1920", "Which country won the first Olympic ice hockey tournament, in 1920?", "Canada", listOf("The United States", "Sweden", "Czechoslovakia"), X),
+        q("spo_badminton_nazwa", "Badminton is named after a country house in which country?", "England", listOf("India", "Scotland", "China"), X),
+        q("spo_davis_usa", "Which country has won the Davis Cup the most times?", "The United States", listOf("Australia", "France", "Spain"), X),
+        q("spo_super_bowl_pierwszy", "Which team won the first Super Bowl, in 1967?", "Green Bay Packers", listOf("Kansas City Chiefs", "New York Jets", "Dallas Cowboys"), X),
+        q("spo_switzer", "Who was the first woman to run the Boston Marathon with an official number, in 1967?", "Kathrine Switzer", listOf("Bobbi Gibb", "Joan Benoit", "Grete Waitz"), X),
+        q("spo_jaszyn", "Which Soviet player is the only goalkeeper to win the Ballon d'Or?", "Lev Yashin", listOf("Gianluigi Buffon", "Oliver Kahn", "Dino Zoff"), X),
+        q("spo_sekwana_1900", "In which river were the swimming races of the 1900 Paris Olympics held?", "The Seine", listOf("The Thames", "The Rhine", "The Loire"), X)
     )
 }

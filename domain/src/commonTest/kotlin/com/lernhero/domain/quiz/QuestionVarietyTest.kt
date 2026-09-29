@@ -61,8 +61,10 @@ class QuestionVarietyTest {
         val all = TrueFalseBank.all
         assertEquals(all.size, all.map { it.id }.toSet().size)
         assertEquals(all.size, all.map { it.statement.lowercase() }.toSet().size)
+        // Prawda/falsz to co piata tura, a bierze WYLACZNIE pytania jeszcze nie widziane (patrz
+        // drawFresh) - przy dziesieciu na temat wyczerpywaly sie w polowie jednego biegu.
         QuizCategory.builtin.filter { it != QuizCategory.Flags }.forEach { category ->
-            assertTrue(all.count { it.category == category } >= 10, "Za malo prawda/falsz w ${category.label}")
+            assertTrue(all.count { it.category == category } >= 20, "Za malo prawda/falsz w ${category.label}")
         }
     }
 

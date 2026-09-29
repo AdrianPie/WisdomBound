@@ -4,136 +4,203 @@ import com.lernhero.domain.quiz.QuizCategory
 import com.lernhero.domain.quiz.QuizDifficulty
 import com.lernhero.domain.quiz.QuizEntry
 
-/** "What element is this?" - periodic table symbols and chemistry basics. */
+/**
+ * Pierwiastki i chemia z zycia: z czego cos jest zrobione, co swieci, co wybucha, skad nazwa.
+ *
+ * Fiszki "symbol O to...?" wylecialy prawie w calosci - zostaly tylko symbole, ktore nie wynikaja
+ * z angielskiej nazwy (Fe, Au, Ag, Na, K, Cu, Pb, Sn, Sb), bo tam jest czego sie nauczyc.
+ *
+ * Zasady pisania pytan dla calego banku - patrz [com.lernhero.domain.quiz.QuizBank].
+ */
 object ElementQuestions {
 
-    private fun ask(
-        id: String,
-        prompt: String,
-        correct: String,
-        wrong: List<String>,
-        difficulty: QuizDifficulty
-    ) = QuizEntry(
-        id = "ele_$id",
-        prompt = prompt,
-        correct = correct,
-        wrong = wrong,
-        category = QuizCategory.Elements,
-        difficulty = difficulty
-    )
+    private val E = QuizDifficulty.Easy
+    private val M = QuizDifficulty.Medium
+    private val H = QuizDifficulty.Hard
+    private val X = QuizDifficulty.Expert
 
-    /** Shorthand for the most common question type: "Which element has the symbol X?". */
-    private fun symbol(
-        symbol: String,
-        correct: String,
-        wrong: List<String>,
-        difficulty: QuizDifficulty
-    ) = ask(
-        id = "symbol_${symbol.lowercase()}",
-        prompt = "Which element hides behind the symbol $symbol?",
-        correct = correct,
-        wrong = wrong,
-        difficulty = difficulty
-    )
+    private fun q(id: String, prompt: String, correct: String, wrong: List<String>, difficulty: QuizDifficulty) =
+        QuizEntry(id = id, prompt = prompt, correct = correct, wrong = wrong, category = QuizCategory.Elements, difficulty = difficulty)
 
     val all: List<QuizEntry> = listOf(
+        /* ------------------------------ Easy ------------------------------ */
+        q("ele_symbol_fe", "Which element hides behind the symbol Fe?", "Iron", listOf("Fluorine", "Phosphorus", "Francium"), E),
+        q("ele_symbol_au", "Which element hides behind the symbol Au?", "Gold", listOf("Silver", "Copper", "Aluminum"), E),
+        q("ele_powietrze", "Which gas is most abundant in air?", "Nitrogen", listOf("Oxygen", "Carbon dioxide", "Argon"), E),
+        q("ele_sol", "Which elements make up table salt?", "Sodium and chlorine", listOf("Potassium and chlorine", "Sodium and sulfur", "Calcium and chlorine"), E),
+        q("pie2_gaz_balony", "Which gas fills balloons so they float and don't ignite?", "Helium", listOf("Hydrogen", "Nitrogen", "Oxygen"), E),
+        q("pie2_metal_puszki", "Which metal are lightweight drink cans made of?", "Aluminum", listOf("Lead", "Zinc", "Chromium"), E),
+        q("pie2_wapn_kosci", "Which element builds bones and teeth?", "Calcium", listOf("Iron", "Potassium", "Sodium"), E),
+        q("scicmp_nie_gaz_szlachetny", "Which of these is NOT a noble gas?", "Nitrogen", listOf("Helium", "Neon", "Argon"), E),
+        q("day_miedz_przewody", "Which metal is used in most household electrical wiring?", "Copper", listOf("Aluminium", "Iron", "Zinc"), E),
+        q("trv2_banan_potas", "Which element are bananas famously rich in?", "Potassium", listOf("Calcium", "Iron", "Zinc"), E),
+        q("trv2_chlor_basen", "Which element is used to disinfect swimming pools?", "Chlorine", listOf("Fluorine", "Bromine", "Iodine"), E),
+        q("trv2_krzem_chipy", "Which element is the basis of most computer chips?", "Silicon", listOf("Carbon", "Germanium", "Copper"), E),
+        q("trv2_uran_reaktor", "Which element is the usual fuel in nuclear power plants?", "Uranium", listOf("Plutonium only", "Radium", "Thorium"), E),
+        q("trv2_wegiel_diament_grafit", "Diamond and graphite are both made of which element?", "Carbon", listOf("Silicon", "Boron", "Sulfur"), E),
+        q("trv2_fluor_pasta", "Which element is added to toothpaste to strengthen tooth enamel?", "Fluorine (as fluoride)", listOf("Calcium", "Chlorine", "Sodium"), E),
+        q("ext_diament_twardosc", "On the Mohs scale, which mineral sits at the very top?", "Diamond", listOf("Corundum", "Topaz", "Quartz"), E),
+        q("cur_zloto_jadalne", "Which metal can be eaten as leaf decoration on cakes without harm?", "Gold", listOf("Lead", "Mercury", "Copper"), E),
+        q("ele_wegiel_zycie", "Organic chemistry is the chemistry of compounds built around which element?", "Carbon", listOf("Oxygen", "Nitrogen", "Hydrogen"), E),
+        q("ele_napoje_gazowane", "Which gas puts the fizz in fizzy drinks?", "Carbon dioxide", listOf("Oxygen", "Nitrogen", "Helium"), E),
+        q("ele_olowek", "A pencil 'lead' contains no lead at all. What is it mostly made of?", "Graphite and clay", listOf("Lead oxide and wax", "Charcoal and glue", "Iron and soot"), E),
+        q("ele_karat", "What does the karat number tell you about a piece of gold?", "How pure it is", listOf("How heavy it is", "How old it is", "How hard it is"), E),
+        q("ele_krowy_metan", "Which gas do cows release in huge amounts when they burp?", "Methane", listOf("Oxygen", "Hydrogen", "Helium"), E),
+        q("ele_kryptonit", "Which of these is NOT a real chemical element?", "Kryptonite", listOf("Krypton", "Xenon", "Radon"), E),
+        q("ele_czad", "Which colourless, odourless gas from faulty boilers can poison people?", "Carbon monoxide", listOf("Carbon dioxide", "Methane", "Nitrogen"), E),
+        q("ele_sacharoza", "What is the chemical name for ordinary table sugar?", "Sucrose", listOf("Glucose", "Fructose", "Lactose"), E),
+        q("ele_geiger", "What does a Geiger counter detect?", "Radiation", listOf("Magnetism", "Sound", "Gas leaks"), E),
+        q("ele_zarowka_wolfram", "Which metal was used for the glowing filaments of old light bulbs?", "Tungsten", listOf("Copper", "Iron", "Gold"), E),
+        q("ele_metan_gaz", "What is the main gas in the natural gas used for cooking and heating?", "Methane", listOf("Propane", "Butane", "Hydrogen"), E),
+        q("ele_rtec_termometr", "Why were mercury thermometers phased out in many countries?", "Mercury is toxic", listOf("Mercury is too expensive", "Mercury freezes too easily", "Mercury eats through glass"), E),
+        q("ele_azot_lody", "Which super-cold liquid do some cafes use to freeze ice cream in seconds?", "Liquid nitrogen", listOf("Liquid oxygen", "Liquid helium", "Liquid hydrogen"), E),
 
-        /* ------------------------------- Easy ------------------------------- */
-        symbol("O", "Oxygen", listOf("Gold", "Osmium", "Lead"), QuizDifficulty.Easy),
-        symbol("H", "Hydrogen", listOf("Helium", "Mercury", "Calcium"), QuizDifficulty.Easy),
-        symbol("Fe", "Iron", listOf("Fluorine", "Phosphorus", "Francium"), QuizDifficulty.Easy),
-        symbol("Au", "Gold", listOf("Silver", "Copper", "Aluminum"), QuizDifficulty.Easy),
-        symbol("C", "Carbon", listOf("Calcium", "Chlorine", "Cesium"), QuizDifficulty.Easy),
-        ask(
-            id = "woda",
-            prompt = "What is the chemical formula of water?",
-            correct = "H2O",
-            wrong = listOf("CO2", "O2", "H2O2"),
-            difficulty = QuizDifficulty.Easy
-        ),
-        ask(
-            id = "powietrze",
-            prompt = "Which gas is most abundant in air?",
-            correct = "Nitrogen",
-            wrong = listOf("Oxygen", "Carbon dioxide", "Argon"),
-            difficulty = QuizDifficulty.Easy
-        ),
-        ask(
-            id = "sol",
-            prompt = "Which elements make up table salt?",
-            correct = "Sodium and chlorine",
-            wrong = listOf("Potassium and chlorine", "Sodium and sulfur", "Calcium and chlorine"),
-            difficulty = QuizDifficulty.Easy
-        ),
+        /* ----------------------------- Medium ----------------------------- */
+        q("ele_symbol_ag", "Which element hides behind the symbol Ag?", "Silver", listOf("Gold", "Argon", "Aluminum"), M),
+        q("ele_symbol_na", "Which element hides behind the symbol Na?", "Sodium", listOf("Nitrogen", "Nickel", "Neon"), M),
+        q("ele_symbol_k", "Which element hides behind the symbol K?", "Potassium", listOf("Krypton", "Calcium", "Cobalt"), M),
+        q("ele_symbol_cu", "Which element hides behind the symbol Cu?", "Copper", listOf("Cobalt", "Chromium", "Cesium"), M),
+        q("ele_symbol_pb", "Which element hides behind the symbol Pb?", "Lead", listOf("Platinum", "Palladium", "Polonium"), M),
+        q("pie2_gaz_szlachetny", "Which group of elements almost never forms chemical compounds?", "The noble gases", listOf("Alkali metals", "Halogens", "Lanthanides"), M),
+        q("pie2_baterie_lit", "Which element is key in phone batteries?", "Lithium", listOf("Zinc", "Nickel", "Cadmium"), M),
+        q("pie2_neon_reklamy", "Which gas glows red in classic sign tubes?", "Neon", listOf("Argon", "Krypton", "Xenon"), M),
+        q("pie2_stal_sklad", "What is steel mainly made of?", "Iron and carbon", listOf("Iron and zinc", "Copper and tin", "Aluminum and silicon"), M),
+        q("pie2_braz_stop", "What is bronze, an alloy known since antiquity, made of?", "Copper and tin", listOf("Copper and zinc", "Iron and nickel", "Lead and silver"), M),
+        q("pie3_gaz_cieplarniany", "Which gas is the main greenhouse gas from human activity?", "Carbon dioxide", listOf("Oxygen", "Nitrogen", "Argon"), M),
+        q("pie3_rdza_reakcja", "What does iron react with to form rust?", "Oxygen and water", listOf("Nitrogen", "Hydrogen", "Argon"), M),
+        q("pie3_ocet_kwas", "Which acid is found in vinegar?", "Acetic acid", listOf("Hydrochloric acid", "Sulfuric acid", "Citric acid"), M),
+        q("pie3_cytryna_kwas", "Which acid gives lemon its sour taste?", "Citric acid", listOf("Acetic acid", "Lactic acid", "Hydrochloric acid"), M),
+        q("scicmp_najgestszy_metal_cmp", "Which of these metals is the densest?", "Gold", listOf("Iron", "Aluminium", "Lead"), M),
+        q("trv2_jod_sol", "Which element is added to table salt to prevent thyroid problems?", "Iodine", listOf("Fluorine", "Zinc", "Magnesium"), M),
+        q("trv2_rad_curie", "Which glowing radioactive element did the Curies discover in 1898, alongside polonium?", "Radium", listOf("Uranium", "Plutonium", "Thorium"), M),
+        q("trv2_tytan_lekki", "Which strong, lightweight metal is used in aircraft and hip implants?", "Titanium", listOf("Tungsten", "Nickel", "Lead"), M),
+        q("trv2_miedz_zielona", "Why do copper roofs and statues turn green over time?", "Copper reacts with air and water to form a green patina", listOf("Green algae slowly spread across the surface of the metal", "The green paint underneath begins to show", "Copper naturally holds green minerals"), M),
+        q("trv2_kobalt_niebieski", "Which metal gives 'cobalt blue' glass and ceramics their colour?", "Cobalt", listOf("Copper", "Chromium", "Nickel"), M),
+        q("ext_wolfram_topnienie", "Which metal has the highest melting point?", "Tungsten", listOf("Titanium", "Platinum", "Iron"), M),
+        q("cur_hel_glos", "Why does helium make your voice sound higher?", "Sound travels faster through it", listOf("It tightens your vocal cords", "It is lighter than your tongue", "It cools your throat"), M),
+        q("wld_ozon", "Ozone is a molecule made of three atoms of what?", "Oxygen", listOf("Nitrogen", "Carbon", "Hydrogen"), M),
+        q("wld_ele_tlen_atmosfera", "Roughly what share of the air we breathe is oxygen?", "About 21%", listOf("About 78%", "About 50%", "About 1%"), M),
+        q("wld_ele_zelazo_krew", "Lack of which element in the diet can cause anaemia?", "Iron", listOf("Zinc", "Iodine", "Calcium"), M),
+        q("ele_linie_wysokiego", "High-voltage overhead power lines mostly use cables of which metal?", "Aluminium", listOf("Copper", "Silver", "Iron"), M),
+        q("ele_poduszki_azot", "Car airbags inflate in a split second by filling with which gas?", "Nitrogen", listOf("Helium", "Carbon dioxide", "Oxygen"), M),
+        q("ele_srebro_argentyna", "Which country is named after the Latin word for silver?", "Argentina", listOf("Chile", "Peru", "Uruguay"), M),
+        q("ele_wodor_zeppelin", "Which gas filled the Hindenburg airship that burned in 1937?", "Hydrogen", listOf("Helium", "Methane", "Neon"), M),
+        q("ele_sod_lampy", "Which element gives old street lamps their orange-yellow glow?", "Sodium", listOf("Neon", "Mercury", "Argon"), M),
+        q("ele_siarkowodor", "Which gas smells of rotten eggs?", "Hydrogen sulfide", listOf("Ammonia", "Methane", "Chlorine"), M),
+        q("ele_gaz_zapach", "Natural gas has no smell of its own. What makes a gas leak smell?", "An added sulfur compound", listOf("Methane itself", "Traces of chlorine", "Impurities from the ground"), M),
+        q("ele_gaz_rozweselajacy", "'Laughing gas' is an oxide of which element?", "Nitrogen", listOf("Helium", "Hydrogen", "Chlorine"), M),
+        q("ele_uran_planeta", "Which element is named after a planet discovered in 1781?", "Uranium", listOf("Neptunium", "Plutonium", "Cerium"), M),
+        q("ele_skand", "Which element is named after Scandinavia?", "Scandium", listOf("Francium", "Germanium", "Polonium"), M),
+        q("ele_tytan_nazwa", "Titanium is named after whom?", "The Titans of Greek myth", listOf("A Roman emperor", "A German chemist", "A Norse giant"), M),
+        q("ele_tor", "Which element is named after the Norse god of thunder?", "Thorium", listOf("Titanium", "Tantalum", "Promethium"), M),
+        q("ele_uran_naturalny", "Which is the heaviest element found naturally in large amounts?", "Uranium", listOf("Plutonium", "Lead", "Radium"), M),
+        q("ele_arszenik", "Which element did poisoners' victims fear as 'inheritance powder'?", "Arsenic", listOf("Mercury", "Lead", "Thallium"), M),
+        q("ele_sod_olej", "Which metal is stored under oil because it reacts violently with water?", "Sodium", listOf("Magnesium", "Aluminium", "Zinc"), M),
+        q("ele_cynk_ocynk", "Steel is 'galvanised' against rust by coating it with which metal?", "Zinc", listOf("Tin", "Chromium", "Copper"), M),
+        q("ele_wodor_nazwa", "Which element's name means 'water-former'?", "Hydrogen", listOf("Oxygen", "Nitrogen", "Helium"), M),
+        q("ele_ozon_burza", "The sharp, clean smell in the air after lightning comes from which gas?", "Ozone", listOf("Nitrogen", "Chlorine", "Argon"), M),
+        q("ele_magnez_flesz", "Early photographers made their flashes by burning which metal?", "Magnesium", listOf("Sodium", "Copper", "Zinc"), M),
+        q("ele_biale_zloto", "What is 'white gold'?", "Gold mixed with white metals", listOf("A rare natural pale gold", "Silver with a gold coating", "Platinum under a trade name"), M),
+        q("ele_piryt", "What is 'fool's gold'?", "Pyrite", listOf("Brass", "Bronze", "Quartz"), M),
+        q("ele_srebro_sterling", "Sterling silver is silver mixed with a little of which metal?", "Copper", listOf("Tin", "Lead", "Nickel"), M),
+        q("ele_soda_nazwa", "What is baking soda's chemical name?", "Sodium bicarbonate", listOf("Sodium chloride", "Calcium carbonate", "Potassium nitrate"), M),
+        q("ele_wybielacz", "Sodium hypochlorite is better known as what?", "Bleach", listOf("Baking soda", "Vinegar", "Epsom salt"), M),
+        q("ele_woda_utleniona", "Which chemical with the formula H2O2 is used to bleach hair?", "Hydrogen peroxide", listOf("Ammonia", "Chlorine bleach", "Acetone"), M),
+        q("ele_nawozy_azot", "Besides phosphorus and potassium, which element is a key ingredient of most fertilisers?", "Nitrogen", listOf("Carbon", "Calcium", "Sulfur"), M),
+        q("ele_wibranium", "Which of these metals is fictional?", "Vibranium", listOf("Rhodium", "Osmium", "Tantalum"), M),
+        q("ele_zelazo_produkcja", "Which metal is produced in by far the largest amounts worldwide?", "Iron", listOf("Aluminium", "Copper", "Zinc"), M),
+        q("ele_jod_rany", "Which element's brown tincture was a classic disinfectant for cuts?", "Iodine", listOf("Bromine", "Chlorine", "Sulfur"), M),
+        q("ele_siarka", "Which yellow element was once known as 'brimstone'?", "Sulfur", listOf("Phosphorus", "Gold", "Chlorine"), M),
+        q("ele_argon_zarowki", "Which gas was sealed inside many old light bulbs to protect the filament?", "Argon", listOf("Oxygen", "Hydrogen", "Chlorine"), M),
 
-        /* ------------------------------ Medium ------------------------------ */
-        symbol("Ag", "Silver", listOf("Gold", "Argon", "Aluminum"), QuizDifficulty.Medium),
-        symbol("Na", "Sodium", listOf("Nitrogen", "Nickel", "Neon"), QuizDifficulty.Medium),
-        symbol("K", "Potassium", listOf("Krypton", "Calcium", "Cobalt"), QuizDifficulty.Medium),
-        symbol("Cu", "Copper", listOf("Cobalt", "Chromium", "Cesium"), QuizDifficulty.Medium),
-        symbol("Pb", "Lead", listOf("Platinum", "Palladium", "Polonium"), QuizDifficulty.Medium),
-        symbol("N", "Nitrogen", listOf("Neon", "Nickel", "Sodium"), QuizDifficulty.Medium),
-        symbol("S", "Sulfur", listOf("Sodium", "Selenium", "Silicon"), QuizDifficulty.Medium),
-        ask(
-            id = "co2",
-            prompt = "Which gas do we exhale from the lungs after cellular respiration?",
-            correct = "Carbon dioxide",
-            wrong = listOf("Oxygen", "Nitrogen", "Methane"),
-            difficulty = QuizDifficulty.Medium
-        ),
+        /* ------------------------------ Hard ------------------------------ */
+        q("ele_symbol_sn", "Which element hides behind the symbol Sn?", "Tin", listOf("Scandium", "Selenium", "Strontium"), H),
+        q("ele_najczestszy", "Which element is the most abundant in the Universe?", "Hydrogen", listOf("Helium", "Oxygen", "Carbon"), H),
+        q("ele_ilosc", "How many elements does today's periodic table have?", "118", listOf("108", "92", "120"), H),
+        q("ele_cieklym", "Which metal is liquid at room temperature?", "Mercury", listOf("Lead", "Tin", "Gallium"), H),
+        q("pie2_mosiadz_sklad", "What is brass made of?", "Copper and zinc", listOf("Copper and tin", "Iron and chromium", "Aluminum and magnesium"), H),
+        q("pie2_stal_nierdzewna", "Which addition makes steel stainless?", "Chromium", listOf("Zinc", "Lead", "Calcium"), H),
+        q("pie2_najgestszy_metal", "Which element is the densest?", "Osmium", listOf("Lead", "Gold", "Platinum"), H),
+        q("scicmp_najczestszy_skorupa", "Which element is the most abundant in the Earth's crust?", "Oxygen", listOf("Silicon", "Aluminium", "Iron"), H),
+        q("scicmp_najwyzsza_wrzenia", "Which of these has the highest boiling point?", "Iron", listOf("Water", "Ethanol", "Mercury"), H),
+        q("trv2_europ", "Which element is named after a continent?", "Europium", listOf("Americium", "Germanium", "Polonium"), H),
+        q("trv2_stront_fajerwerki", "Which element gives fireworks a deep red colour?", "Strontium", listOf("Copper", "Sodium", "Barium"), H),
+        q("trv2_lit_najlzejszy", "Which is the lightest metal?", "Lithium", listOf("Aluminium", "Magnesium", "Sodium"), H),
+        q("trv2_argon_leniwy", "Which element's name comes from the Greek word for 'lazy' or 'idle'?", "Argon", listOf("Neon", "Krypton", "Xenon"), H),
+        q("trv2_brom_ciecz", "Which halogen is a liquid at room temperature?", "Bromine", listOf("Chlorine", "Iodine", "Fluorine"), H),
+        q("trv2_boksyt_glin", "Which metal is extracted from the ore bauxite?", "Aluminium", listOf("Copper", "Zinc", "Titanium"), H),
+        q("trv2_rtec_hg", "Why is mercury's symbol Hg?", "From its Latin name 'hydrargyrum'", listOf("From its discoverer's initials", "From the Greek for 'heavy gas'", "It was assigned at random"), H),
+        q("trv2_hel_slonce", "Which element was discovered in the Sun before it was found on Earth?", "Helium", listOf("Hydrogen", "Neon", "Argon"), H),
+        q("ext_hel_temperatura", "Which element refuses to freeze solid at normal pressure, no matter how cold it gets?", "Helium", listOf("Nitrogen", "Hydrogen", "Neon"), H),
+        q("ext_zloto_kowalnosc", "A single gram of gold can be beaten into a sheet of roughly what size?", "About a square metre", listOf("A postage stamp", "A sheet of paper", "A tennis court"), H),
+        q("mst_fosfor_nazwa", "Phosphorus takes its name from a Greek phrase meaning what?", "Light-bearer", listOf("Bone-maker", "Fire-eater", "Sea-salt"), H),
+        q("cur_gal_dlon", "Which metal melts in your hand, at about 30 °C?", "Gallium", listOf("Aluminium", "Tin", "Magnesium"), H),
+        q("cur_wolfram_litera", "Why is tungsten's symbol W?", "From its other name, wolfram", listOf("W stands for 'white metal'", "It was the 23rd element found", "Its discoverer was named Weber"), H),
+        q("wld_ele_platyna", "Which precious metal is used in car catalytic converters?", "Platinum", listOf("Silver", "Gold", "Titanium"), H),
+        q("ele_medal_zloty", "What is an Olympic gold medal mostly made of?", "Silver", listOf("Gold", "Bronze", "Copper"), H),
+        q("ele_chlor_zielony", "Which element's name comes from the Greek word for 'pale green'?", "Chlorine", listOf("Chromium", "Iodine", "Cobalt"), H),
+        q("ele_glin_drogi", "Which metal was more precious than gold until a cheap way to make it was found in 1886?", "Aluminium", listOf("Titanium", "Platinum", "Silver"), H),
+        q("ele_argon_procent", "Which gas makes up about 1% of the air, far more than carbon dioxide?", "Argon", listOf("Neon", "Helium", "Hydrogen"), H),
+        q("ele_fosfor_mocz", "Which element did an alchemist first isolate in 1669 by boiling down urine?", "Phosphorus", listOf("Sulfur", "Mercury", "Arsenic"), H),
+        q("ele_kobalt_kobold", "Which metal is named after the kobold, a goblin German miners blamed for poisonous ores?", "Cobalt", listOf("Zinc", "Bismuth", "Tungsten"), H),
+        q("ele_radium_girls", "The 'Radium Girls' were poisoned at work in the 1920s while painting what?", "Glowing watch dials", listOf("Toy soldiers", "Porcelain plates", "Road signs"), H),
+        q("ele_zelazo_ziemia", "Which element makes up the largest share of the Earth as a whole, by mass?", "Iron", listOf("Oxygen", "Silicon", "Magnesium"), H),
+        q("ele_ksenon", "Which noble gas takes its name from the Greek word for 'stranger'?", "Xenon", listOf("Neon", "Radon", "Helium"), H),
+        q("ele_rubin_korund", "Rubies and sapphires are both forms of which mineral?", "Corundum", listOf("Quartz", "Beryl", "Topaz"), H),
+        q("ele_ciezka_woda", "What is 'heavy water'?", "Water made with deuterium", listOf("Water with extra oxygen", "Water full of dissolved metal", "Water frozen under pressure"), H),
+        q("ele_cent_cynk", "Since 1982, US one-cent coins have been made mostly of which metal?", "Zinc", listOf("Copper", "Nickel", "Steel"), H),
+        q("ele_wodor_cialo", "Counted atom by atom rather than by weight, which element is most common in your body?", "Hydrogen", listOf("Oxygen", "Carbon", "Nitrogen"), H),
+        q("ele_wapien", "Limestone and marble are both made mostly of what?", "Calcium carbonate", listOf("Calcium sulfate", "Silicon dioxide", "Sodium carbonate"), H),
+        q("ele_kwarc", "Quartz is made of silicon and which other element?", "Oxygen", listOf("Carbon", "Aluminium", "Calcium"), H),
+        q("ele_sol_epsom", "Epsom salt is a sulfate of which metal?", "Magnesium", listOf("Sodium", "Calcium", "Potassium"), H),
+        q("ele_wolfram_nazwa", "Tungsten's name means 'heavy stone' in which language?", "Swedish", listOf("German", "Latin", "Greek"), H),
+        q("ele_tlen_ciekly", "What colour is liquid oxygen?", "Pale blue", listOf("Clear", "Pale green", "Pale pink"), H),
+        q("ele_hel_nurkowie", "Which gas do deep-sea divers breathe with oxygen to avoid nitrogen narcosis?", "Helium", listOf("Neon", "Argon", "Hydrogen"), H),
+        q("ele_miedz_klamki", "Door handles made of which metal kill many germs on their own?", "Copper", listOf("Steel", "Aluminium", "Chrome"), H),
+        q("ele_bizmut", "Which metal forms rainbow-coloured crystals shaped like staircases?", "Bismuth", listOf("Gallium", "Tin", "Cobalt"), H),
+        q("ele_hel_ucieka", "Why is helium slowly running out on Earth?", "Once released, it escapes into space", listOf("The Sun keeps absorbing it", "It turns into hydrogen over time", "It sinks deep into the core"), H),
+        q("ele_lit_leki", "Which light metal is also used as a medicine for bipolar disorder?", "Lithium", listOf("Magnesium", "Potassium", "Zinc"), H),
+        q("ele_uran_szklo", "Before the nuclear age, uranium was mainly used for what?", "Colouring glass and pottery", listOf("Printing banknotes", "Dyeing hair blonde", "Making candles brighter"), H),
+        q("ele_chlor_wojna", "Which element was used in the first large-scale poison gas attack of World War I?", "Chlorine", listOf("Fluorine", "Bromine", "Nitrogen"), H),
+        q("ele_fluor_teflon", "The non-stick coating Teflon is built from carbon and which element?", "Fluorine", listOf("Chlorine", "Silicon", "Sulfur"), H),
+        q("ele_neodym", "The strongest permanent magnets contain which rare-earth element?", "Neodymium", listOf("Lanthanum", "Cerium", "Gadolinium"), H),
 
-        /* ------------------------------ Hard ------------------------------- */
-        symbol("Hg", "Mercury", listOf("Helium", "Hafnium", "Holmium"), QuizDifficulty.Hard),
-        symbol("Sn", "Tin", listOf("Scandium", "Selenium", "Strontium"), QuizDifficulty.Hard),
-        symbol("Si", "Silicon", listOf("Sulfur", "Silver", "Sodium"), QuizDifficulty.Hard),
-        symbol("Zn", "Zinc", listOf("Zirconium", "Tin", "Cesium"), QuizDifficulty.Hard),
-        symbol("W", "Tungsten", listOf("Vanadium", "Hydrogen", "Calcium"), QuizDifficulty.Hard),
-        ask(
-            id = "najczestszy",
-            prompt = "Which element is the most abundant in the Universe?",
-            correct = "Hydrogen",
-            wrong = listOf("Helium", "Oxygen", "Carbon"),
-            difficulty = QuizDifficulty.Hard
-        ),
-        ask(
-            id = "ilosc",
-            prompt = "How many elements does today's periodic table have?",
-            correct = "118",
-            wrong = listOf("108", "92", "120"),
-            difficulty = QuizDifficulty.Hard
-        ),
-        ask(
-            id = "cieklym",
-            prompt = "Which metal is liquid at room temperature?",
-            correct = "Mercury",
-            wrong = listOf("Lead", "Tin", "Gallium"),
-            difficulty = QuizDifficulty.Hard
-        ),
-
-        /* ----------------------------- Expert ---------------------------- */
-        symbol("Sb", "Antimony", listOf("Strontium", "Silver", "Selenium"), QuizDifficulty.Expert),
-        symbol("Kr", "Krypton", listOf("Chromium", "Cobalt", "Potassium"), QuizDifficulty.Expert),
-        symbol("Mn", "Manganese", listOf("Magnesium", "Molybdenum", "Copper"), QuizDifficulty.Expert),
-        ask(
-            id = "curie",
-            prompt = "Which element did Marie Sklodowska-Curie name after her homeland?",
-            correct = "Polonium",
-            wrong = listOf("Radium", "Uranium", "Radon"),
-            difficulty = QuizDifficulty.Expert
-        ),
-        ask(
-            id = "mendelejew",
-            prompt = "Who devised the periodic table of elements?",
-            correct = "Dmitri Mendeleev",
-            wrong = listOf("Niels Bohr", "Antoine Lavoisier", "John Dalton"),
-            difficulty = QuizDifficulty.Expert
-        ),
-        ask(
-            id = "szlachetne",
-            prompt = "Which of these gases is a noble gas?",
-            correct = "Argon",
-            wrong = listOf("Nitrogen", "Methane", "Hydrogen"),
-            difficulty = QuizDifficulty.Expert
-        ),
+        /* ----------------------------- Expert ----------------------------- */
+        q("ele_symbol_sb", "Which element hides behind the symbol Sb?", "Antimony", listOf("Strontium", "Silver", "Selenium"), X),
+        q("ele_symbol_mn", "Which element hides behind the symbol Mn?", "Manganese", listOf("Magnesium", "Molybdenum", "Copper"), X),
+        q("ele_curie", "Which element did Marie Sklodowska-Curie name after her homeland?", "Polonium", listOf("Radium", "Uranium", "Radon"), X),
+        q("ele_mendelejew", "Who devised the periodic table of elements?", "Dmitri Mendeleev", listOf("Niels Bohr", "Antoine Lavoisier", "John Dalton"), X),
+        q("pie2_pierwiastek_sztuczny", "Which element was the first to be artificially produced?", "Technetium", listOf("Plutonium", "Francium", "Astatine"), X),
+        q("pie2_uran_izotop", "Which uranium isotope is fissile and used in reactors?", "Uranium-235", listOf("Uranium-238", "Uranium-234", "Uranium-240"), X),
+        q("pie2_pierwiastek_kopernik", "Who is the element with atomic number 112 named after?", "Nicolaus Copernicus", listOf("Marie Sklodowska-Curie", "Enrico Fermi", "Niels Bohr"), X),
+        q("pie2_aqua_regia", "Which acid mixture dissolves gold?", "Aqua regia", listOf("Sulfuric acid", "Acetic acid", "Hydrogen peroxide"), X),
+        q("pie3_pierwiastek_najciezszy_stabilny", "Which is the heaviest element with stable isotopes?", "Lead", listOf("Bismuth", "Uranium", "Radium"), X),
+        q("pie3_astat_rzadki", "Which is the rarest naturally occurring element in Earth's crust?", "Astatine", listOf("Francium", "Promethium", "Polonium"), X),
+        q("trv2_magnez_chlorofil", "Which metal sits at the centre of the chlorophyll molecule?", "Magnesium", listOf("Iron", "Zinc", "Copper"), X),
+        q("mst_cez_zegar", "The modern definition of the second is based on which element?", "Caesium", listOf("Rubidium", "Strontium", "Hydrogen"), X),
+        q("dpt_pie_krypton_nazwa", "Which noble gas is named from the Greek for 'hidden'?", "Krypton", listOf("Xenon", "Argon", "Radon"), X),
+        q("dpt_pie_itr_ytterby", "Four elements are named after one Swedish village - which is one of them?", "Yttrium", listOf("Scandium", "Thulium", "Lutetium"), X),
+        q("dpt_pie_lantanowce", "The lanthanides are better known under which name?", "The rare earth elements", listOf("The noble gases", "The alkali metals", "The transition metals"), X),
+        q("dpt_pie_wegiel_14", "Which isotope is used to date organic remains?", "Carbon-14", listOf("Uranium-238", "Potassium-40", "Argon-40"), X),
+        q("ref_ele_selen_ksiezyc", "Which element takes its name from the Greek word for the Moon?", "Selenium", listOf("Tellurium", "Cerium", "Palladium"), X),
+        q("ref_ele_tellur_ziemia", "Which element takes its name from the Latin word for the Earth?", "Tellurium", listOf("Selenium", "Terbium", "Germanium"), X),
+        q("ref_ele_elektroujemnosc", "Which element has the highest electronegativity?", "Fluorine", listOf("Oxygen", "Chlorine", "Nitrogen"), X),
+        q("ref_ele_cialo_masa", "Which element makes up the largest share of the human body by mass?", "Oxygen", listOf("Carbon", "Hydrogen", "Nitrogen"), X),
+        q("ref_ele_radon_piwnice", "Which radioactive noble gas can build up in basements?", "Radon", listOf("Xenon", "Krypton", "Argon"), X),
+        q("ref_ele_glin_skorupa", "Which is the most abundant metal in Earth's crust?", "Aluminium", listOf("Iron", "Calcium", "Sodium"), X),
+        q("ref_ele_tryt", "Tritium, used in glowing watch dials, is an isotope of which element?", "Hydrogen", listOf("Helium", "Lithium", "Radium"), X),
+        q("ref_ele_eka_glin", "Which element did Mendeleev predict as 'eka-aluminium' before it was found?", "Gallium", listOf("Germanium", "Scandium", "Indium"), X),
+        q("ele_miedz_cypr", "Copper's Latin name, cuprum, comes from which island?", "Cyprus", listOf("Crete", "Sicily", "Sardinia"), X),
+        q("ele_lutet", "Which element is named after the Latin name for Paris?", "Lutetium", listOf("Francium", "Gallium", "Europium"), X),
+        q("ele_tantal", "Which element is named after a mythical king tormented in the underworld?", "Tantalum", listOf("Thorium", "Promethium", "Titanium"), X),
+        q("ele_ameryk", "Many household smoke detectors contain a tiny amount of which radioactive element?", "Americium", listOf("Uranium", "Radium", "Polonium"), X),
+        q("ele_tlen_nazwa", "The name 'oxygen' comes from Greek words meaning what?", "Acid-former", listOf("Life-giver", "Fire-maker", "Air-bringer"), X),
+        q("ele_rubin_chrom", "Which element gives rubies their red colour?", "Chromium", listOf("Iron", "Copper", "Gold"), X),
+        q("ele_uran_datowanie", "The decay of which element is used to date rocks billions of years old?", "Uranium", listOf("Carbon", "Radium", "Radon"), X),
+        q("ele_meitner", "Which physicist, a co-discoverer of nuclear fission, has element 109 named after her?", "Lise Meitner", listOf("Marie Curie", "Irene Joliot-Curie", "Rosalind Franklin"), X),
+        q("ele_seaborg", "Who was the first person to have an element named after him while still alive?", "Glenn Seaborg", listOf("Albert Einstein", "Enrico Fermi", "Dmitri Mendeleev"), X),
+        q("ele_platyna", "Platinum's name comes from the Spanish 'platina', meaning what?", "Little silver", listOf("White gold", "Heavy stone", "River metal"), X),
+        q("ele_ind_ekrany", "Touchscreens rely on a see-through oxide of which rare metal?", "Indium", listOf("Gallium", "Germanium", "Tellurium"), X),
+        q("ele_osm_zapach", "Osmium's name comes from the Greek word for what?", "Smell", listOf("Heavy", "Blue", "Dense"), X)
     )
 }

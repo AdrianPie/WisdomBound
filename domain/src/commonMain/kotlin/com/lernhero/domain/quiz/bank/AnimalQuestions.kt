@@ -4,200 +4,234 @@ import com.lernhero.domain.quiz.QuizCategory
 import com.lernhero.domain.quiz.QuizDifficulty
 import com.lernhero.domain.quiz.QuizEntry
 
-/** Animals - from the kangaroo to the giant squid. */
+/**
+ * Zwierzeta: rekordy, zachowania, dziwne ciala i sprytne strategie przetrwania.
+ *
+ * Najlepiej dzialaja tu fakty, po ktorych gracz mowi "serio?" (wombat robi kostki, slimak ma
+ * tysiace zebow). Pytania-zerowki w rodzaju "co je panda?" czy "czym oddycha ryba?" wylecialy -
+ * nie da sie ich nie wiedziec, wiec nic nie sprawdzaja.
+ *
+ * Zasady pisania pytan dla calego banku - patrz [com.lernhero.domain.quiz.QuizBank].
+ */
 object AnimalQuestions {
 
-    private fun ask(
-        id: String,
-        prompt: String,
-        correct: String,
-        wrong: List<String>,
-        difficulty: QuizDifficulty
-    ) = QuizEntry(
-        id = "ani_$id",
-        prompt = prompt,
-        correct = correct,
-        wrong = wrong,
-        category = QuizCategory.Animals,
-        difficulty = difficulty
-    )
+    private val E = QuizDifficulty.Easy
+    private val M = QuizDifficulty.Medium
+    private val H = QuizDifficulty.Hard
+    private val X = QuizDifficulty.Expert
+
+    private fun q(id: String, prompt: String, correct: String, wrong: List<String>, difficulty: QuizDifficulty) =
+        QuizEntry(id = id, prompt = prompt, correct = correct, wrong = wrong, category = QuizCategory.Animals, difficulty = difficulty)
 
     val all: List<QuizEntry> = listOf(
+        /* ------------------------------ Easy ------------------------------ */
+        q("ani_najwieksze", "Which animal is the largest on Earth?", "Blue whale", listOf("African elephant", "Giraffe", "Whale shark"), E),
+        q("ani_gepard", "Which animal is the fastest on land?", "Cheetah", listOf("Lion", "Horse", "Antelope"), E),
+        q("ani_zyrafa", "Which land animal is the tallest?", "Giraffe", listOf("Elephant", "Camel", "Moose"), E),
+        q("zwi2_wielblad_garby", "What does a camel store in its hump?", "Fat", listOf("Water", "Air", "Salt"), E),
+        q("zwi2_wilk_grupa", "What is a group of wolves called?", "A pack", listOf("A flock", "A swarm", "A shoal"), E),
+        q("scicmp_najciezsze_ladowe", "Which is the heaviest land animal?", "The African elephant", listOf("The hippopotamus", "The white rhinoceros", "The giraffe"), E),
+        q("scicmp_nie_ssak", "Which of these animals is NOT a mammal?", "The penguin", listOf("The bat", "The dolphin", "The platypus"), E),
+        q("trv_flaming_kolor", "Where do flamingos get their pink colour from?", "Pigments in the food they eat", listOf("Sunlight on their feathers", "Their blood showing through", "Minerals in the water"), E),
+        q("trv_sowa_glowa", "Which bird can turn its head about 270 degrees?", "The owl", listOf("The eagle", "The parrot", "The crow"), E),
+        q("trv_nietoperz_lot", "Which is the only mammal capable of true, powered flight?", "The bat", listOf("The flying squirrel", "The sugar glider", "The colugo"), E),
+        q("wld_pajak_owad", "Why is a spider not an insect?", "It has eight legs and two body parts", listOf("It cannot fly and has no wings", "It spins silk instead of wax", "It has no antennae on its head"), E),
+        q("ani_kangur_mlode", "What is a baby kangaroo called?", "A joey", listOf("A kit", "A cub", "A calf"), E),
+        q("ani_lwy_stado", "What is a group of lions called?", "A pride", listOf("A pack", "A herd", "A troop"), E),
+        q("ani_wielblad_statek", "Which animal is nicknamed the 'ship of the desert'?", "The camel", listOf("The horse", "The ostrich", "The donkey"), E),
+        q("ani_tygrys_najwiekszy", "Which is the largest of the big cats?", "The tiger", listOf("The lion", "The jaguar", "The leopard"), E),
+        q("ani_waz_jezyk", "What does a snake mainly use its flicking tongue for?", "Smelling", listOf("Tasting its prey", "Hearing", "Cooling down"), E),
+        q("ani_koala_sen", "Which animal can sleep up to 22 hours a day?", "The koala", listOf("The house cat", "The panda", "The meerkat"), E),
+        q("ani_komar_zabojca", "Which animal causes the most human deaths every year?", "The mosquito", listOf("The shark", "The crocodile", "The lion"), E),
+        q("ani_lew_grupa", "Which is the only big cat that lives in large family groups?", "The lion", listOf("The tiger", "The leopard", "The jaguar"), E),
+        q("ani_truten", "What is a male honeybee called?", "A drone", listOf("A worker", "A soldier", "A king"), E),
+        q("ani_pszczoly_nektar", "What do bees collect from flowers to turn into honey?", "Nectar", listOf("Pollen", "Sap", "Dew"), E),
+        q("ani_komodo", "What is the largest living lizard?", "The Komodo dragon", listOf("The marine iguana", "The Gila monster", "The frilled lizard"), E),
+        q("ani_kapibara", "What is the largest rodent in the world?", "The capybara", listOf("The beaver", "The porcupine", "The coypu"), E),
+        q("ani_rekin_wielorybi", "What is the largest fish in the world?", "The whale shark", listOf("The great white shark", "The basking shark", "The oarfish"), E),
+        q("ani_laika", "Which kind of animal was the first to orbit the Earth, in 1957?", "A dog", listOf("A monkey", "A cat", "A mouse"), E),
+        q("ani_chart", "Which dog breed is the fastest runner?", "The greyhound", listOf("The Dalmatian", "The husky", "The border collie"), E),
+        q("ani_chihuahua", "Which is the smallest dog breed?", "The Chihuahua", listOf("The pug", "The dachshund", "The beagle"), E),
+        q("ani_sfinks_kot", "Which cat breed is famous for being hairless?", "The Sphynx", listOf("The Siamese", "The Persian", "The Maine Coon"), E),
+        q("ani_opos_udaje", "Which animal is famous for 'playing dead' when it is threatened?", "The opossum", listOf("The raccoon", "The skunk", "The badger"), E),
+        q("ani_zolw_skorupa", "Can a turtle crawl out of its shell?", "No - it is fused to its skeleton", listOf("Yes, when it outgrows it", "Yes, to escape a predator", "Only sea turtles can"), E),
+        q("ani_pingwin_ojciec", "Which parent keeps an emperor penguin's egg warm through the winter?", "The father", listOf("The mother", "Both, taking turns", "Neither - it is buried"), E),
+        q("ani_arachnofobia", "What is the fear of spiders called?", "Arachnophobia", listOf("Claustrophobia", "Agoraphobia", "Acrophobia"), E),
+        q("ani_wydry_lapki", "Why do sea otters often hold paws while they sleep?", "So they don't drift apart", listOf("To keep each other warm", "To show who is in charge", "To protect their food"), E),
+        q("ani_szop_mycie", "Raccoons are famous for seeming to do what with their food?", "Wash it", listOf("Bury it", "Share it", "Hide it in trees"), E),
 
-        /* ------------------------------- Easy ------------------------------- */
-        ask(
-            id = "najwieksze",
-            prompt = "Which animal is the largest on Earth?",
-            correct = "Blue whale",
-            wrong = listOf("African elephant", "Giraffe", "Whale shark"),
-            difficulty = QuizDifficulty.Easy
-        ),
-        ask(
-            id = "pajak_nogi",
-            prompt = "How many legs does a spider have?",
-            correct = "8",
-            wrong = listOf("6", "10", "4"),
-            difficulty = QuizDifficulty.Easy
-        ),
-        ask(
-            id = "gepard",
-            prompt = "Which animal is the fastest on land?",
-            correct = "Cheetah",
-            wrong = listOf("Lion", "Horse", "Antelope"),
-            difficulty = QuizDifficulty.Easy
-        ),
-        ask(
-            id = "panda",
-            prompt = "What does the giant panda eat?",
-            correct = "Bamboo",
-            wrong = listOf("Meat", "Fish", "Nuts"),
-            difficulty = QuizDifficulty.Easy
-        ),
-        ask(
-            id = "kangur",
-            prompt = "Which animal carries its young in a pouch?",
-            correct = "Kangaroo",
-            wrong = listOf("Llama", "Dingo", "Tapir"),
-            difficulty = QuizDifficulty.Easy
-        ),
-        ask(
-            id = "zyrafa",
-            prompt = "Which land animal is the tallest?",
-            correct = "Giraffe",
-            wrong = listOf("Elephant", "Camel", "Moose"),
-            difficulty = QuizDifficulty.Easy
-        ),
-        ask(
-            id = "miod",
-            prompt = "Which insect produces honey?",
-            correct = "Bee",
-            wrong = listOf("Wasp", "Ant", "Butterfly"),
-            difficulty = QuizDifficulty.Easy
-        ),
-        ask(
-            id = "krolowa_dzungli",
-            prompt = "Which of these animals is a mammal?",
-            correct = "Dolphin",
-            wrong = listOf("Shark", "Crocodile", "Snake"),
-            difficulty = QuizDifficulty.Easy
-        ),
+        /* ----------------------------- Medium ----------------------------- */
+        q("ani_osmiornica_serca", "How many hearts does an octopus have?", "3", listOf("1", "2", "5"), M),
+        q("ani_kameleon", "Which reptile is famous for changing skin color?", "Chameleon", listOf("Iguana", "Gecko", "Monitor lizard"), M),
+        q("ani_ciaza_slonia", "Which land animal has the longest pregnancy?", "Elephant", listOf("Rhinoceros", "Horse", "Giraffe"), M),
+        q("ani_nietoperz", "Which sense does a bat use to navigate in the dark?", "Echolocation", listOf("Night vision", "Smell", "Magnetoreception"), M),
+        q("ani_kolibr", "Which bird can fly backwards?", "Hummingbird", listOf("Sparrow", "Kingfisher", "Stork"), M),
+        q("zwi2_rekin_szkielet", "What is a shark's skeleton made of?", "Cartilage", listOf("Bone", "Chitin", "Horn"), M),
+        q("zwi2_pszczola_rodzina", "How many queens live in one healthy bee colony?", "One", listOf("Three", "Ten", "None"), M),
+        q("zwi2_lososie_wedrowka", "Where do salmon return to spawn?", "The river where they hatched", listOf("The open ocean", "Polar lakes", "The Nile delta"), M),
+        q("zwi2_strus_jajo", "Which living animal lays the largest eggs?", "Ostrich", listOf("Condor", "Pelican", "Albatross"), M),
+        q("zwi2_orka_grupa", "Which family do orcas belong to?", "Dolphins (Delphinidae)", listOf("Sharks", "Seals", "Porpoises"), M),
+        q("zwi2_plaszczka_bron", "How do most stingrays defend themselves?", "A venomous barb on their tail", listOf("An electric shock from their mouth", "Ink", "Spikes on their back"), M),
+        q("zwi2_kameleon_jezyk", "How does a chameleon catch insects?", "With a long, sticky tongue", listOf("With its front paws", "With its tail", "With spikes"), M),
+        q("zwi2_pingwin_gatunek", "Which penguin is the largest?", "Emperor penguin", listOf("White-flippered penguin", "King penguin", "Adelie penguin"), M),
+        q("zwi2_papuga_mowa", "Which parrot is famous for the best mimicry of speech?", "African grey parrot", listOf("Cockatiel", "Macaw", "Pink cockatoo"), M),
+        q("zwi2_meduza_uklad", "What does a jellyfish not have?", "A brain", listOf("A mouth", "Tentacles", "Stinging cells"), M),
+        q("zwi3_mrowkolew", "How does an antlion larva hunt?", "It digs a pit trap in the sand and waits for prey", listOf("It runs its prey down on foot in the open", "It catches insects in mid-air while flying", "It spins a sticky web the way a spider does"), M),
+        q("zwi3_panda_kciuk", "What helps a panda hold bamboo?", "An extra 'thumb' made from an enlarged wrist bone", listOf("Rough suction pads on the soles of its paws", "Unusually long claws and nothing else", "A tail it can curl round the stem"), M),
+        q("zwi3_mrowki_feromony", "What do ants mark a trail to food with?", "Pheromones", listOf("Saliva", "Droppings alone", "Sound"), M),
+        q("zwi3_kon_zeby_wiek", "What can a horse's age be roughly judged by?", "Its teeth", listOf("The length of its tail", "The color of its eyes", "The growth of its hooves"), M),
+        q("scicmp_najwiekszy_ptak", "Which of these birds is the largest?", "The ostrich", listOf("The emu", "The Andean condor", "The albatross"), M),
+        q("scicmp_ktory_gad", "Which of these animals is a reptile?", "The crocodile", listOf("The frog", "The salamander", "The newt"), M),
+        q("scicmp_najwiecej_nog", "Which of these creatures has the most legs?", "The millipede", listOf("The spider", "The beetle", "The crab"), M),
+        q("trv_koala_odciski", "Which animal has fingerprints so similar to a human's that they could confuse a crime lab?", "The koala", listOf("The chimpanzee", "The raccoon", "The otter"), M),
+        q("trv_niedzwiedz_skora", "What colour is a polar bear's skin under its white fur?", "Black", listOf("White", "Pink", "Grey"), M),
+        q("trv_delfin_sen", "Which animal sleeps with one half of its brain at a time?", "The dolphin", listOf("The horse", "The sloth", "The hedgehog"), M),
+        q("trv_rybitwa_migracja", "Which bird makes the longest yearly migration, roughly from the Arctic to the Antarctic and back?", "The Arctic tern", listOf("The swallow", "The white stork", "The Canada goose"), M),
+        q("trv_wrony_stado", "What is a group of crows called?", "A murder", listOf("A parliament", "A gaggle", "A pride"), M),
+        q("trv_homar_wzrost", "Which animal keeps growing for its whole life?", "The lobster", listOf("The cat", "The eagle", "The gorilla"), M),
+        q("trv_kaczor_nazwa", "What is a male duck called?", "A drake", listOf("A gander", "A cob", "A buck"), M),
+        q("trv_zyrafa_noworodek", "Which of these newborns can usually stand and walk within an hour of birth?", "A giraffe calf", listOf("A kitten", "A kangaroo joey", "A human baby"), M),
+        q("trv_wielblad_powieka", "What is a camel's transparent third eyelid for?", "Wiping sand off the eye while still seeing", listOf("Sleeping with its eyes open", "Seeing in the dark", "Keeping the eye warm at night"), M),
+        q("trv_pies_pot", "Where does a dog mostly sweat from?", "Its paw pads", listOf("Its tongue", "Its back", "Its ears"), M),
+        q("trv_koza_zrenice", "Which animal has rectangular, horizontal pupils?", "The goat", listOf("The cat", "The owl", "The frog"), M),
+        q("trv_konik_morski_ryba", "Which of these sea creatures is actually a fish?", "The seahorse", listOf("The jellyfish", "The starfish", "The cuttlefish"), M),
+        q("trv_kolibr_serce", "Which bird's heart can beat more than 1,000 times per minute?", "The hummingbird", listOf("The sparrow", "The pigeon", "The swift"), M),
+        q("trv_pszczola_taniec", "How do honeybees tell each other where flowers are?", "With a 'waggle dance'", listOf("By buzzing at different pitches", "By leaving a trail of wax", "By flashing their wings"), M),
+        q("ext_gepard_rozped", "A cheetah reaches its top speed in roughly how long?", "About three seconds", listOf("About ten seconds", "About thirty seconds", "Just under a minute"), M),
+        q("ext_wieloryb_jezyk", "A blue whale's tongue alone can weigh about as much as what?", "An elephant", listOf("A horse", "A cow", "A small car"), M),
+        q("ext_mrowka_ciezar", "Leafcutter ants routinely carry loads of roughly what multiple of their body weight?", "Fifty times", listOf("Twice", "Five times", "Fifteen times"), M),
+        q("cur_zyrafa_jezyk", "What colour is a giraffe's tongue?", "Dark blue-purple", listOf("Pink", "Grey", "Bright red"), M),
+        q("cur_slon_skok", "Which large land mammal is unable to jump?", "The elephant", listOf("The hippopotamus", "The rhinoceros", "The giraffe"), M),
+        q("wld_ani_ptaki_dinozaury", "Which living animals are the direct descendants of dinosaurs?", "Birds", listOf("Crocodiles", "Lizards", "Sharks"), M),
+        q("wld_ani_ryba_pila", "Which fish uses a long saw-toothed snout to slash at prey?", "The sawfish", listOf("The swordfish", "The marlin", "The needlefish"), M),
+        q("ani_pies_udomowiony", "Which animal was domesticated first?", "The dog", listOf("The cat", "The horse", "The cow"), M),
+        q("ani_hipopotam_nazwa", "The word 'hippopotamus' comes from Greek words meaning what?", "River horse", listOf("Water pig", "Big mouth", "Mud cow"), M),
+        q("ani_dinozaur_nazwa", "What does the word 'dinosaur' mean?", "Terrible lizard", listOf("Giant beast", "Ancient dragon", "Thunder foot"), M),
+        q("ani_orangutan_nazwa", "The name 'orangutan' comes from Malay words meaning what?", "Person of the forest", listOf("King of the trees", "Red monkey", "Wise old man"), M),
+        q("ani_kolibr_najmniejszy", "What is the smallest bird in the world?", "The bee hummingbird", listOf("The goldcrest", "The wren", "The sunbird"), M),
+        q("ani_zyrafa_szyja", "How many vertebrae are in a giraffe's neck?", "Seven", listOf("Twelve", "Nineteen", "Twenty-six"), M),
+        q("ani_delfin_imiona", "Dolphins are known to call each other using what?", "Signature whistles, like names", listOf("Unique colour flashes", "Slaps of the tail", "Rings of bubbles"), M),
+        q("ani_nosorozec_rog", "Which animal's horn is made of keratin, the stuff of fingernails?", "The rhinoceros", listOf("The narwhal", "The deer", "The walrus"), M),
+        q("ani_mlody_labedz", "What is a young swan called?", "A cygnet", listOf("A gosling", "A duckling", "An eaglet"), M),
+        q("ani_samica_lisa", "What is a female fox called?", "A vixen", listOf("A doe", "A sow", "A jenny"), M),
+        q("ani_pyton", "Which is the longest snake species in the world?", "The reticulated python", listOf("The green anaconda", "The king cobra", "The black mamba"), M),
+        q("ani_kaszalot_mozg", "Which animal has the largest brain on Earth?", "The sperm whale", listOf("The blue whale", "The African elephant", "The orca"), M),
+        q("ani_lirogon", "Which bird can imitate chainsaws and camera shutters?", "The lyrebird", listOf("The mockingbird", "The starling", "The myna"), M),
+        q("ani_kura_liczba", "Counting farm animals, which is the most numerous bird on Earth?", "The chicken", listOf("The pigeon", "The sparrow", "The duck"), M),
+        q("ani_jamnik", "The dachshund was bred in Germany to hunt which animal?", "The badger", listOf("The rabbit", "The deer", "The rat"), M),
+        q("ani_chow_chow", "Which dog breed is famous for its blue-black tongue?", "The Chow Chow", listOf("The Dalmatian", "The Shiba Inu", "The Great Dane"), M),
+        q("ani_krokodyl_lzy", "Do crocodiles really shed 'crocodile tears' while eating?", "Yes, but not from emotion", listOf("No, it is only a saying", "Only when they are hurt", "Only in salt water"), M),
+        q("ani_aligator_zeby", "Which one shows its lower teeth when its mouth is shut?", "The crocodile", listOf("The alligator", "Both of them", "Neither of them"), M),
+        q("ani_tygrys_skora", "What does a tiger's skin look like under its fur?", "Striped, like the fur", listOf("Plain orange", "Pure white", "Spotted"), M),
+        q("ani_slon_traba", "Roughly how many muscles are in an elephant's trunk?", "Tens of thousands", listOf("About a hundred", "About a thousand", "About a dozen"), M),
+        q("ani_modliszka", "What is the female praying mantis infamous for?", "Sometimes eating the male", listOf("Carrying her young on her back", "Laying eggs in other nests", "Stinging her rivals"), M),
+        q("ani_psi_nos", "Which part of a dog is as unique as a human fingerprint?", "Its nose print", listOf("Its bark", "Its tail", "Its bite"), M),
+        q("ani_bobr_zeby", "Why are a beaver's front teeth orange?", "They contain iron", listOf("They are stained by bark", "They are stained by mud", "They are rusting from water"), M),
+        q("ani_sowa_cicho", "Why can owls fly almost silently?", "Soft, fringed wing feathers", listOf("They only glide, never flap", "Their bones are hollow", "They fly very slowly"), M),
+        q("ani_lemury", "Where do wild lemurs live?", "Madagascar", listOf("Borneo", "Sri Lanka", "New Guinea"), M),
+        q("ani_wydra_kamien", "Why do sea otters often carry a favourite stone?", "To crack open shellfish", listOf("To weigh themselves down", "To mark their territory", "To sharpen their teeth"), M),
+        q("ani_pingwin_kamyk", "Male Adelie penguins court females by offering what?", "A pebble", listOf("A fish", "A feather", "A shell"), M),
 
-        /* ------------------------------ Medium ------------------------------ */
-        ask(
-            id = "strus",
-            prompt = "Which bird cannot fly?",
-            correct = "Ostrich",
-            wrong = listOf("Falcon", "Swallow", "Heron"),
-            difficulty = QuizDifficulty.Medium
-        ),
-        ask(
-            id = "osmiornica_serca",
-            prompt = "How many hearts does an octopus have?",
-            correct = "3",
-            wrong = listOf("1", "2", "5"),
-            difficulty = QuizDifficulty.Medium
-        ),
-        ask(
-            id = "kameleon",
-            prompt = "Which reptile is famous for changing skin color?",
-            correct = "Chameleon",
-            wrong = listOf("Iguana", "Gecko", "Monitor lizard"),
-            difficulty = QuizDifficulty.Medium
-        ),
-        ask(
-            id = "ciaza_slonia",
-            prompt = "Which land animal has the longest pregnancy?",
-            correct = "Elephant",
-            wrong = listOf("Rhinoceros", "Horse", "Giraffe"),
-            difficulty = QuizDifficulty.Medium
-        ),
-        ask(
-            id = "nietoperz",
-            prompt = "Which sense does a bat use to navigate in the dark?",
-            correct = "Echolocation",
-            wrong = listOf("Night vision", "Smell", "Magnetoreception"),
-            difficulty = QuizDifficulty.Medium
-        ),
-        ask(
-            id = "mlode_konia",
-            prompt = "What is a baby horse called?",
-            correct = "Foal",
-            wrong = listOf("Calf", "Piglet", "Kid"),
-            difficulty = QuizDifficulty.Medium
-        ),
-        ask(
-            id = "kolibr",
-            prompt = "Which bird can fly backwards?",
-            correct = "Hummingbird",
-            wrong = listOf("Sparrow", "Kingfisher", "Stork"),
-            difficulty = QuizDifficulty.Medium
-        ),
+        /* ------------------------------ Hard ------------------------------ */
+        q("ani_dziobak", "Which mammal lays eggs?", "Platypus", listOf("Armadillo", "Sloth", "Hedgehog"), H),
+        q("ani_krowa_zoladek", "How many chambers does a cow's stomach have?", "4", listOf("1", "2", "3"), H),
+        q("ani_kalmar_oczy", "Which animal has an eye that can grow to the size of a dinner plate?", "Giant squid", listOf("Owl", "Whale", "Elephant seal"), H),
+        q("ani_gepard_pazury", "Which big cat cannot roar, but purrs instead?", "Cheetah", listOf("Lion", "Tiger", "Jaguar"), H),
+        q("zwi2_okapi_krewny", "Which animal is the okapi's closest living relative?", "Giraffe", listOf("Zebra", "Antelope", "Tapir"), H),
+        q("zwi2_aksolotl_kraj", "Which country does the axolotl come from?", "Mexico", listOf("Brazil", "China", "Australia"), H),
+        q("zwi2_mrowkojad_zeby", "How many teeth does a giant anteater have?", "None at all", listOf("Eight", "Twenty", "Forty-two"), H),
+        q("zwi2_albatros_lot", "What is the wandering albatross famous for?", "The largest wingspan among birds", listOf("The fastest dive of any seabird", "The longest legs among seabirds", "The loudest call of any seabird"), H),
+        q("zwi2_nagi_kretoszczur", "What makes the naked mole-rat unusual?", "It lives in a colony with a queen, like social insects", listOf("It flies between burrows like a bat", "It changes sex halfway through its life", "It hibernates for ten years at a stretch"), H),
+        q("zwi2_sokolwedrowny", "Which animal is the fastest in the world during a dive?", "Peregrine falcon", listOf("Swift", "Golden eagle", "Hummingbird"), H),
+        q("zwi2_wal_grenlandzki", "Which mammal has the longest lifespan of all?", "Bowhead whale", listOf("African elephant", "Human", "Sperm whale"), H),
+        q("zwi2_skorpion_uv", "What happens to a scorpion under ultraviolet light?", "It glows blue-green", listOf("It becomes transparent", "It turns red", "It faints"), H),
+        q("zwi2_cykada_cykl", "Every how many years do periodical cicadas emerge en masse in the USA?", "Every 13 or 17 years", listOf("Every 2 years", "Every 7 years", "Every 25 years"), H),
+        q("zwi2_dziobak_jad", "What does a male platypus have on its hind legs?", "Venomous spurs", listOf("Webbed membranes with suckers", "Regrowing claws", "Scent glands"), H),
+        q("zwi2_koral_zwierze", "What are corals really?", "Animals", listOf("Plants", "Fungi", "Minerals"), H),
+        q("zwi3_slon_infradzwieki", "How do elephants communicate over long distances?", "Infrasound felt through the ground", listOf("Trumpeting alone", "Long-range urine scent", "Flapping their ears in daylight"), H),
+        q("zwi3_motyl_monarcha", "How far do monarch butterflies migrate?", "Thousands of kilometers between Canada and Mexico", listOf("A few dozen kilometres around one meadow", "Only inside a single flowering meadow", "They do not migrate anywhere at all"), H),
+        q("zwi3_kalmar_kamuflaz", "How do cephalopods like squid change skin color?", "Through chromatophores - pigment cells", listOf("By changing body temperature", "By secreting paint", "By changing their diet"), H),
+        q("zwi3_mrowki_niewolnictwo", "What do some ant species called 'slave-making ants' do?", "They steal other ants' pupae to work in their own colony", listOf("They trade food with other colonies", "They only farm aphids like cattle", "They only build bridges from their own bodies"), H),
+        q("zwi3_wieloryb_babelkowanie", "How do humpback whales hunt together using 'bubble netting'?", "They surround fish with a ring of air bubbles", listOf("They stun fish with sound", "They release poison into the water", "They use rays as bait"), H),
+        q("trv_kiwi_jajo", "Which bird lays the largest egg relative to its own body size?", "The kiwi", listOf("The ostrich", "The hummingbird", "The emu"), H),
+        q("trv_sowy_stado", "What is a group of owls called?", "A parliament", listOf("A murder", "A congress", "A choir"), H),
+        q("trv_strus_oczy", "Which land animal has the largest eyes?", "The ostrich", listOf("The horse", "The giraffe", "The elephant"), H),
+        q("trv_zuk_sila", "Relative to its weight, which animal is the strongest, pulling over 1,000 times its own mass?", "The dung beetle", listOf("The ant", "The gorilla", "The elephant"), H),
+        q("trv_zaba_mroz", "Which animal can survive being frozen solid through the winter?", "The wood frog", listOf("The garden snail", "The brown bear", "The garter snake"), H),
+        q("trv_homar_nogi", "How many legs does a lobster have, counting its claws?", "Ten", listOf("Six", "Eight", "Twelve"), H),
+        q("trv_opos_torbacz", "Which is the only marsupial native to North America?", "The Virginia opossum", listOf("The raccoon", "The armadillo", "The porcupine"), H),
+        q("trv_mrowka_krolowa", "How long can a queen ant of some species live?", "Over 20 years", listOf("About a month", "About a year", "About 3 years"), H),
+        q("trv_wombat_kupa", "Which animal produces cube-shaped droppings?", "The wombat", listOf("The koala", "The rabbit", "The beaver"), H),
+        q("trv_zebra_paski", "What is the leading explanation for a zebra's stripes?", "They confuse biting flies", listOf("They keep the zebra warm", "They attract mates", "They help it hide in grass"), H),
+        q("ext_jerzyk_lot", "The common swift can stay airborne without landing for how long?", "Months", listOf("Hours", "A few days", "A couple of weeks"), H),
+        q("ext_slimak_zeby", "Which of these animals has the most teeth, by a wide margin?", "A garden snail", listOf("A crocodile", "A dolphin", "A shark"), H),
+        q("ext_rekin_wiek", "The Greenland shark is thought to live for how long?", "Centuries", listOf("About 30 years", "About 60 years", "About 90 years"), H),
+        q("mst_sowa_oczy", "Why must an owl turn its whole head to look sideways?", "Its eyes cannot rotate", listOf("Its eyes have no lids", "Its neck is rigid", "It sees only in front"), H),
+        q("mst_rekin_wiek_luski", "Shark skin feels like sandpaper because it is covered in what?", "Tiny tooth-like scales", listOf("Dried salt crystals", "Hardened mucus", "Bony plates"), H),
+        q("dpt_zwi_krokodyl_zgryz", "Which living animal has the strongest measured bite?", "The saltwater crocodile", listOf("The great white shark", "The spotted hyena", "The Bengal tiger"), H),
+        q("dpt_zwi_rekin_pole", "Which organs let sharks sense electric fields?", "The ampullae of Lorenzini", listOf("The lateral line canals", "The nictitating membranes", "The spiracles behind the eyes"), H),
+        q("dpt_zwi_pingwin_nurek", "How long can an emperor penguin stay down on one dive?", "Over twenty minutes", listOf("About two minutes", "About five minutes", "Almost two hours"), H),
+        q("dpt_zwi_kontrcien", "What is countershading in animals?", "Dark on top, pale below, to hide", listOf("Bright colours warning of poison", "Stripes that confuse a chasing eye", "A coat that changes with the season"), H),
+        q("cur_krewetka_modliszkowa", "Which sea creature punches so fast it boils the water around its claw?", "The mantis shrimp", listOf("The pistol crab", "The lobster", "The cuttlefish"), H),
+        q("cur_krowy_najlepsi", "Studies show cows get stressed when separated from whom?", "Their best friend in the herd", listOf("Their calf only", "The farmer", "Any other cow"), H),
+        q("cur_niesporczak", "Which tiny animal has survived exposure to the vacuum of space?", "The tardigrade", listOf("The flea", "The springtail", "The rotifer"), H),
+        q("wld_kameleon_kolor", "Chameleons change colour mainly to do what?", "Signal mood and control temperature", listOf("Hide from every predator", "Match any background exactly", "Attract prey"), H),
+        q("wld_ani_leniwiec", "How often does a sloth usually climb down from its tree to go to the toilet?", "About once a week", listOf("Several times a day", "Once a year", "Never - it goes from the branches"), H),
+        q("ani_pszczola_oczy", "How many eyes does a honeybee have?", "Five", listOf("Two", "Four", "Eight"), H),
+        q("ani_meduzy_grupa", "What is a group of jellyfish called?", "A smack", listOf("A school", "A flock", "A swarm"), H),
+        q("ani_nosorozce_grupa", "What is a group of rhinos called?", "A crash", listOf("A charge", "A bloat", "A thunder"), H),
+        q("ani_mlody_zajac", "What is a young hare called?", "A leveret", listOf("A kit", "A kid", "A pup"), H),
+        q("ani_taipan", "Which snake has the most toxic venom in laboratory tests?", "The inland taipan", listOf("The black mamba", "The king cobra", "The rattlesnake"), H),
+        q("ani_kakapo", "Which flightless parrot is the heaviest parrot in the world?", "The kakapo", listOf("The kea", "The macaw", "The cockatoo"), H),
+        q("ani_blazenek", "In a group of clownfish, what happens when the female dies?", "The biggest male turns female", listOf("The group splits up", "A female joins from outside", "The eggs stop hatching"), H),
+        q("ani_kon_wymioty", "Which of these animals is physically unable to vomit?", "The horse", listOf("The dog", "The cat", "The pig"), H),
+        q("ani_rozgwiazda_zoladek", "How does a starfish eat a clam?", "It pushes its stomach into the shell", listOf("It crushes the shell with its arms", "It drills through with its teeth", "It waits until the clam dies"), H),
+        q("ani_kiwi_nozdrza", "What is unusual about a kiwi's nostrils?", "They are at the tip of its beak", listOf("It has none at all", "They sit on its forehead", "They close underwater"), H),
+        q("ani_kot_slodycz", "Which taste can cats not detect?", "Sweetness", listOf("Saltiness", "Bitterness", "Sourness"), H),
+        q("ani_osmiornica_neurony", "Where are most of an octopus's neurons?", "In its arms", listOf("In its head", "In its three hearts", "Behind its eyes"), H),
+        q("ani_krowa_magnes", "Why do some farmers feed their cows magnets?", "To catch swallowed bits of metal", listOf("To calm them down", "To make their milk richer", "To help them find the way home"), H),
+        q("ani_panda_noworodek", "A newborn giant panda weighs about as much as what?", "A stick of butter", listOf("A house cat", "A bag of flour", "A bowling ball"), H),
+        q("ani_mors_kly", "What does a walrus use its tusks for, among other things?", "Hauling itself onto the ice", listOf("Spearing fish to eat", "Digging dens in the snow", "Digging clams out of the mud"), H),
+        q("ani_rekin_zeby", "How many teeth can a shark lose and regrow over its lifetime?", "Thousands", listOf("About twenty", "About a hundred", "None at all"), H),
+        q("ani_kot_przodek", "Domestic cats descend from which wild cat?", "The African wildcat", listOf("The European wildcat", "The lynx", "The serval"), H),
+        q("ani_czerwona_panda", "Which animal was called a 'panda' first, decades before the giant panda was described?", "The red panda", listOf("The raccoon", "The binturong", "The sun bear"), H),
 
-        /* ------------------------------ Hard ------------------------------- */
-        ask(
-            id = "dziobak",
-            prompt = "Which mammal lays eggs?",
-            correct = "Platypus",
-            wrong = listOf("Armadillo", "Sloth", "Hedgehog"),
-            difficulty = QuizDifficulty.Hard
-        ),
-        ask(
-            id = "krowa_zoladek",
-            prompt = "How many chambers does a cow's stomach have?",
-            correct = "4",
-            wrong = listOf("1", "2", "3"),
-            difficulty = QuizDifficulty.Hard
-        ),
-        ask(
-            id = "kalmar_oczy",
-            prompt = "Which animal has an eye that can grow to the size of a dinner plate?",
-            correct = "Giant squid",
-            wrong = listOf("Owl", "Whale", "Elephant seal"),
-            difficulty = QuizDifficulty.Hard
-        ),
-        ask(
-            id = "pingwiny_arktyka",
-            prompt = "How many penguin species live wild at the North Pole?",
-            correct = "None",
-            wrong = listOf("Three", "Five", "Eight"),
-            difficulty = QuizDifficulty.Hard
-        ),
-        ask(
-            id = "gepard_pazury",
-            prompt = "Which big cat cannot roar, but purrs instead?",
-            correct = "Cheetah",
-            wrong = listOf("Lion", "Tiger", "Jaguar"),
-            difficulty = QuizDifficulty.Hard
-        ),
-
-        /* ----------------------------- Expert ---------------------------- */
-        ask(
-            id = "hemocyjanina",
-            prompt = "Which animal has blue blood?",
-            correct = "Octopus",
-            wrong = listOf("Frog", "Snake", "Carp"),
-            difficulty = QuizDifficulty.Expert
-        ),
-        ask(
-            id = "aksolotl",
-            prompt = "Which amphibian is famous for regrowing lost limbs?",
-            correct = "Axolotl",
-            wrong = listOf("Toad", "Alpine newt", "Tree frog"),
-            difficulty = QuizDifficulty.Expert
-        ),
-        ask(
-            id = "narwal",
-            prompt = "Which marine mammal has a long, spiral tusk growing from its head?",
-            correct = "Narwhal",
-            wrong = listOf("Beluga whale", "Porpoise", "Manatee"),
-            difficulty = QuizDifficulty.Expert
-        ),
-        ask(
-            id = "echidna",
-            prompt = "Which animal, alongside the platypus, is a monotreme?",
-            correct = "Echidna",
-            wrong = listOf("Opossum", "Wombat", "Koala"),
-            difficulty = QuizDifficulty.Expert
-        )
+        /* ----------------------------- Expert ----------------------------- */
+        q("ani_hemocyjanina", "Which animal has blue blood?", "Octopus", listOf("Frog", "Snake", "Carp"), X),
+        q("ani_narwal", "Which marine mammal has a long, spiral tusk growing from its head?", "Narwhal", listOf("Beluga whale", "Porpoise", "Manatee"), X),
+        q("ani_echidna", "Which animal, alongside the platypus, is a monotreme?", "Echidna", listOf("Opossum", "Wombat", "Koala"), X),
+        q("zwi2_mantis_wzrok", "What makes the mantis shrimp's vision unusual?", "It has a dozen or so types of color receptors", listOf("It sees only in black and white shades", "It has no compound eyes at all", "It sees only in the infrared range"), X),
+        q("zwi2_wieloryb_piesn", "Which whale is famous for the most complex mating songs?", "Humpback whale", listOf("Narwhal", "Killer whale", "Porpoise"), X),
+        q("zwi2_pistolet_krewetka", "How does a pistol shrimp stun its prey?", "A shockwave from its snapping claw", listOf("Neurotoxic venom", "An electric discharge", "An ink cloud"), X),
+        q("zwi2_ptak_jadowity", "Which bird is venomous thanks to toxins in its feathers?", "Hooded pitohui", listOf("Andean condor", "Toucan", "Kea parrot"), X),
+        q("zwi2_axolotl_regeneracja", "What else can an axolotl regenerate besides its limbs?", "Parts of its heart and brain", listOf("Only the tip of its tail", "Only patches of its skin", "Nothing beyond its limbs"), X),
+        q("zwi2_zabka_jad", "Which frog is considered the most poisonous land animal?", "Golden poison frog", listOf("Cane toad", "Tree frog", "African clawed frog"), X),
+        q("zwi2_konik_morski", "What's unusual about seahorse reproduction?", "The male carries the pregnancy", listOf("Eggs develop on the seabed", "Young are born live from the female", "It reproduces by splitting"), X),
+        q("zwi3_ryba_elektryczna", "How does an electric eel generate its discharges?", "Using specialized cells called electrocytes", listOf("Using a magnet in its head", "By rubbing its scales together", "By absorbing current from its surroundings"), X),
+        q("zwi3_mrowki_rolnictwo", "What do leafcutter ants of the genus Atta do?", "Farm fungus on the leaves they bring as their main food", listOf("They hunt other insects and eat nothing else", "Live in symbiosis with fish in flooded nests", "Migrate to another continent every year"), X),
+        q("scicmp_jadowity_nie_trujacy", "Which of these animals is venomous rather than poisonous?", "The cobra", listOf("The poison dart frog", "The pufferfish", "The monarch butterfly"), X),
+        q("dpt_zwi_slon_uszy", "How does an elephant shed excess heat?", "Through its huge, blood-rich ears", listOf("By sweating across its whole back", "By rolling in a bath of cool dust", "By slowing its heart in the heat"), X),
+        q("dpt_zwi_luskowiec", "What is a pangolin's armour made of?", "Keratin, like fingernails", listOf("Fused plates of bone", "Hardened plates of chitin", "Layers of calcified skin"), X),
+        q("dpt_zwi_gepard_limit", "Why must a cheetah break off a long chase?", "It overheats within a minute", listOf("Its claws wear down too fast", "It cannot breathe at full speed", "Its eyes lose focus at speed"), X),
+        q("dpt_zwi_wal_dziobowy", "Which mammal holds the record for the deepest dive?", "Cuvier's beaked whale", listOf("The sperm whale", "The southern right whale", "The leopard seal"), X),
+        q("dpt_zwi_koliber_serce", "What is unusual about a hummingbird at night?", "It drops into a torpor to save energy", listOf("It keeps flying while it is asleep", "It buries itself under leaf litter", "It shares a nest with other birds"), X),
+        q("ref_ani_neotenia", "An axolotl keeps its larval features for life. What is this called?", "Neoteny", listOf("Metamorphosis", "Diapause", "Estivation"), X),
+        q("ref_ani_wydra_futro", "Which mammal has the densest fur of any animal?", "The sea otter", listOf("The polar bear", "The beaver", "The musk ox"), X),
+        q("ref_ani_dziobak_elektro", "How does a platypus find prey underwater with its eyes closed?", "It senses electric fields with its bill", listOf("It uses echolocation", "It sees in infrared", "It smells through its tail"), X),
+        q("ref_ani_flamingi_grupa", "What is a group of flamingos called?", "A flamboyance", listOf("A parade", "A blush", "A pageant"), X),
+        q("ref_ani_poskoczek", "Which fish can walk on mudflats using its fins and breathe air through its skin?", "The mudskipper", listOf("The coelacanth", "The pufferfish", "The ocean sunfish"), X),
+        q("ref_ani_mleko_foka", "Which animal produces the fattiest known milk, at around 60% fat?", "The hooded seal", listOf("The blue whale", "The reindeer", "The domestic cow"), X),
+        q("ref_ani_kukulka", "What is the cuckoo's famous breeding trick called?", "Brood parasitism", listOf("Kleptoparasitism", "Parthenogenesis", "Cooperative breeding"), X),
+        q("cur_niesmiertelna_meduza", "Which jellyfish can turn back into a juvenile polyp and start its life over?", "Turritopsis dohrnii", listOf("The box jellyfish", "The lion's mane jellyfish", "The moon jellyfish"), X),
+        q("ani_fretki_grupa", "What is a group of ferrets called?", "A business", listOf("A gang", "A mischief", "A parade"), X),
+        q("ani_pingwin_papuaski", "Which bird is the fastest swimmer?", "The gentoo penguin", listOf("The emperor penguin", "The cormorant", "The puffin"), X),
+        q("ani_kwelea", "Which is thought to be the most numerous wild bird on Earth?", "The red-billed quelea", listOf("The house sparrow", "The common starling", "The rock pigeon"), X),
+        q("ani_matwa_zrenice", "Which animal has W-shaped pupils?", "The cuttlefish", listOf("The goat", "The gecko", "The octopus"), X),
+        q("ani_pustulka_uv", "Kestrels can see ultraviolet light. What does it help them find?", "Urine trails of voles", listOf("Ripe berries", "Water in the desert", "Their own nests"), X),
+        q("ani_argentynska_mrowka", "The Argentine ant formed one 'supercolony' about 6,000 km long in which region?", "Southern Europe", listOf("California", "Eastern Australia", "Southern Japan"), X),
+        q("ani_kret_gwiazdonosy", "Which mammal is considered the fastest eater, finding and swallowing prey in about a quarter of a second?", "The star-nosed mole", listOf("The pygmy shrew", "The anteater", "The aardvark"), X),
+        q("ani_wieloryb_krewny", "Which land animals are whales' closest living relatives?", "Hippos", listOf("Seals", "Elephants", "Manatees"), X),
+        q("ani_ptasie_mleko", "Which birds feed their chicks a milk-like substance called 'crop milk'?", "Pigeons", listOf("Eagles", "Ostriches", "Parrots"), X),
+        q("ani_orki_menopauza", "Besides humans, which animals are known to go through menopause?", "Orcas and pilot whales", listOf("Chimpanzees and gorillas", "Elephants and rhinos", "Lions and tigers"), X)
     )
 }
