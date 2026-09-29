@@ -74,6 +74,8 @@ object SportQuestions {
         q("spox_mat", "What is it called when a king is under attack and cannot escape?", "Checkmate", listOf("Stalemate", "Castling", "En passant"), E),
         q("spox_skoczek", "Which chess piece moves in an L-shape?", "The knight", listOf("The bishop", "The rook", "The queen"), E),
         q("spox_koszykowka_piatka", "How many players does a basketball team have on court at one time?", "Five", listOf("Six", "Seven", "Four"), E),
+        q("spoy_czarny_pas", "In judo and karate, which belt colour usually marks a master?", "Black", listOf("Red", "Gold", "White"), E),
+        q("spoy_hokej_szostka", "How many players does each ice hockey team have on the ice, goalie included?", "Six", listOf("Five", "Seven", "Eleven"), E),
 
         /* ----------------------------- Medium ----------------------------- */
         q("spo_mundial_2018", "Who won the soccer World Cup in 2018?", "France", listOf("Croatia", "Brazil", "Germany"), M),
@@ -168,6 +170,12 @@ object SportQuestions {
         q("spox_triathlon", "In what order are the three parts of a triathlon done?", "Swim, bike, run", listOf("Run, bike, swim", "Bike, swim, run", "Swim, run, bike"), M),
         q("spox_pilka_reczna", "In which sport must players not step inside the semicircle around the goal?", "Handball", listOf("Water polo", "Netball", "Lacrosse"), M),
         q("spox_el_clasico", "Which two clubs meet in 'El Clasico'?", "Real Madrid and Barcelona", listOf("Barcelona and Atletico", "Real Madrid and Sevilla", "Valencia and Barcelona"), M),
+        q("spoy_jules_rimet", "What was the FIFA World Cup trophy called before 1974?", "The Jules Rimet Trophy", listOf("The Henri Delaunay Cup", "The Stanley Cup", "The Webb Ellis Cup"), M),
+        q("spoy_coubertin", "Who founded the modern Olympic Games?", "Pierre de Coubertin", listOf("Jules Rimet", "Avery Brundage", "Juan Antonio Samaranch"), M),
+        q("spoy_st_andrews", "Which Scottish town is known as 'the home of golf'?", "St Andrews", listOf("Edinburgh", "Glasgow", "Aberdeen"), M),
+        q("spoy_karate", "In which country did karate develop?", "Japan", listOf("China", "Korea", "Thailand"), M),
+        q("spoy_muay_thai", "Muay Thai, 'the art of eight limbs', comes from which country?", "Thailand", listOf("Vietnam", "Cambodia", "Japan"), M),
+        q("spoy_rzutki_20", "On a standard dartboard, which number sits at the top?", "20", listOf("1", "10", "6"), M),
 
         /* ------------------------------ Hard ------------------------------ */
         q("spo_bolt", "What is Usain Bolt's world record in the 100 m?", "9.58 s", listOf("9.69 s", "9.72 s", "9.49 s"), H),
@@ -232,6 +240,12 @@ object SportQuestions {
         q("spox_rugby_szkola", "The sport of rugby is named after what?", "An English school", listOf("A Welsh town", "A Scottish king", "A Roman game"), H),
         q("spox_eddie_orzel", "Which British ski jumper became a cult hero at the 1988 Winter Olympics despite finishing last?", "Eddie 'the Eagle' Edwards", listOf("Alberto 'La Bomba' Tomba", "Franz Klammer", "Matti Nykanen"), H),
         q("spox_mundial_kobiet_usa", "Which country has won the most FIFA Women's World Cups?", "The USA", listOf("Germany", "Norway", "Japan"), H),
+        q("spoy_webb_ellis", "The Rugby World Cup trophy is named after whom?", "William Webb Ellis", listOf("Jules Rimet", "Pierre de Coubertin", "Tom Richards"), H),
+        q("spoy_augusta", "In which US state is the Masters golf tournament played every year?", "Georgia", listOf("Florida", "California", "Texas"), H),
+        q("spoy_monza", "Which Formula 1 circuit is nicknamed 'the Temple of Speed'?", "Monza", listOf("Silverstone", "Spa", "Suzuka"), H),
+        q("spoy_thrilla", "What was the 1975 fight between Muhammad Ali and Joe Frazier called?", "The Thrilla in Manila", listOf("The Rumble in the Jungle", "The Fight of the Century", "The Brawl in Manila"), H),
+        q("spoy_zair", "Where did the 1974 'Rumble in the Jungle' between Ali and Foreman take place?", "Zaire", listOf("Kenya", "Nigeria", "Brazil"), H),
+        q("spoy_snooker_czerwone", "How many red balls are on the table at the start of a snooker frame?", "15", listOf("10", "12", "21"), H),
 
         /* ----------------------------- Expert ----------------------------- */
         q("spo_dekatlon", "Which event closes the men's Olympic decathlon on the second day?", "The 1500 metres", listOf("The javelin throw", "The pole vault", "The 110 m hurdles"), X),
@@ -281,6 +295,10 @@ object SportQuestions {
         q("spox_ali_znicz", "Which boxing legend lit the Olympic cauldron at the 1996 Atlanta Games?", "Muhammad Ali", listOf("Joe Frazier", "George Foreman", "Evander Holyfield"), X),
         q("spox_freeman", "Which Aboriginal athlete lit the Olympic flame and then won 400 m gold at Sydney 2000?", "Cathy Freeman", listOf("Nova Peris", "Evonne Goolagong", "Sally Pearson"), X),
         q("spox_grecja_2004", "Which huge outsiders won the European Football Championship in 2004?", "Greece", listOf("Denmark", "Portugal", "Czechia"), X),
-        q("spox_leicester", "Which 5000-to-1 outsiders won the English Premier League in 2016?", "Leicester City", listOf("Blackburn Rovers", "Aston Villa", "Nottingham Forest"), X)
+        q("spox_leicester", "Which 5000-to-1 outsiders won the English Premier League in 2016?", "Leicester City", listOf("Blackburn Rovers", "Aston Villa", "Nottingham Forest"), X),
+        q("spoy_beamon", "Whose 1968 long jump of 8.90 m stood as the world record for 23 years?", "Bob Beamon", listOf("Carl Lewis", "Mike Powell", "Jesse Owens"), X),
+        q("spoy_indy_mleko", "What does the winner of the Indianapolis 500 traditionally drink?", "Milk", listOf("Champagne", "Lemonade", "Beer"), X),
+        q("spoy_merckx", "Which Belgian cyclist, nicknamed 'the Cannibal', won five Tours de France?", "Eddy Merckx", listOf("Jacques Anquetil", "Bernard Hinault", "Miguel Indurain"), X),
+        q("spoy_tahiti", "Where were the surfing events of the 2024 Summer Olympics held, far from the host city?", "Tahiti", listOf("Biarritz", "Hawaii", "Portugal"), X)
     )
 }

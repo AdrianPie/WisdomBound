@@ -93,6 +93,8 @@ object GeographyQuestions {
         q("geox_golden_gate", "In which city is the Golden Gate Bridge?", "San Francisco", listOf("Los Angeles", "Seattle", "New York"), E),
         q("geox_opera_sydney", "Which Australian city is famous for its Opera House with sail-shaped roofs?", "Sydney", listOf("Melbourne", "Brisbane", "Perth"), E),
         q("geox_polnocne_slonce", "In the far north of Norway, the Sun stays up all night in summer. What is this called?", "The midnight sun", listOf("The polar night", "The green flash", "The solstice glow"), E),
+        q("geoy_szmaragdowa_wyspa", "Which country is nicknamed 'the Emerald Isle'?", "Ireland", listOf("Iceland", "New Zealand", "Sri Lanka"), E),
+        q("geoy_kanada_jezyki", "Which two official languages does Canada have?", "English and French", listOf("English and Spanish", "French and Inuktitut", "English and German"), E),
 
         /* ----------------------------- Medium ----------------------------- */
         q("geo_everest", "In which mountain range is Mount Everest?", "Himalayas", listOf("Andes", "Alps", "Caucasus"), M),
@@ -208,6 +210,15 @@ object GeographyQuestions {
         q("geox_ren", "Which river flows through Switzerland, Germany and the Netherlands to the North Sea?", "The Rhine", listOf("The Danube", "The Elbe", "The Rhone"), M),
         q("geox_amazonka_woda", "Which river carries more water than any other in the world?", "The Amazon", listOf("The Nile", "The Congo", "The Yangtze"), M),
         q("geox_sw_patryk", "According to legend, which saint drove all the snakes out of Ireland?", "Saint Patrick", listOf("Saint George", "Saint Andrew", "Saint David"), M),
+        q("geoy_mont_blanc_granica", "Mont Blanc stands on the border of France and which other country?", "Italy", listOf("Switzerland", "Austria", "Germany"), M),
+        q("geoy_zatoka_perska", "Which body of water lies between Iran and the Arabian Peninsula?", "The Persian Gulf", listOf("The Red Sea", "The Caspian Sea", "The Gulf of Aden"), M),
+        q("geoy_japonia_trzesienia", "Which country suffers about a fifth of the world's strongest earthquakes?", "Japan", listOf("Chile", "Italy", "Iceland"), M),
+        q("geoy_pampa", "What are the vast grassy plains of Argentina called?", "The Pampas", listOf("The Steppes", "The Prairies", "The Savannah"), M),
+        q("geoy_biegun_poludniowy", "What lies beneath the ice at the South Pole?", "A continent of rock", listOf("Open ocean", "A frozen lake", "Nothing but ice"), M),
+        q("geoy_singapur", "Which Southeast Asian island nation is also a single city?", "Singapore", listOf("Brunei", "Malaysia", "Taiwan"), M),
+        q("geoy_madera", "The island of Madeira belongs to which country?", "Portugal", listOf("Spain", "Italy", "Greece"), M),
+        q("geoy_korsyka", "The island of Corsica belongs to which country?", "France", listOf("Italy", "Spain", "Greece"), M),
+        q("geoy_sardynia", "Sardinia is an island belonging to which country?", "Italy", listOf("France", "Spain", "Malta"), M),
 
         /* ------------------------------ Hard ------------------------------ */
         q("geo_bajkal", "Which lake is the deepest in the world?", "Baikal", listOf("Tanganyika", "Caspian Sea", "Superior"), H),
@@ -290,6 +301,12 @@ object GeographyQuestions {
         q("geox_bhutan", "Which Himalayan kingdom measures its progress in 'Gross National Happiness'?", "Bhutan", listOf("Nepal", "Tibet", "Sikkim"), H),
         q("geox_mekong", "Which great river flows through Laos, Cambodia and Vietnam to the sea?", "The Mekong", listOf("The Irrawaddy", "The Yangtze", "The Salween"), H),
         q("geox_egipt_nil", "Roughly what share of Egypt's people live along the Nile and its delta?", "About 95%", listOf("About 50%", "About 25%", "About 75%"), H),
+        q("geoy_amazonia_kraje", "The Amazon rainforest spreads across roughly how many countries and territories?", "Nine", listOf("Three", "Five", "Twelve"), H),
+        q("geoy_islandia_plyty", "Which country sits on the boundary between the North American and Eurasian plates?", "Iceland", listOf("Ireland", "Norway", "Greenland"), H),
+        q("geoy_boliwia_morze", "Bolivia lost its sea coast to which neighbour in a 19th-century war?", "Chile", listOf("Peru", "Brazil", "Argentina"), H),
+        q("geoy_tajga", "What is the vast northern forest stretching across Russia and Canada called?", "The taiga", listOf("The tundra", "The steppe", "The pampas"), H),
+        q("geoy_rownik", "Roughly how long is the equator?", "About 40,000 km", listOf("About 4,000 km", "About 400,000 km", "About 12,000 km"), H),
+        q("geoy_makau", "Which former Portuguese territory in China is famous for its casinos?", "Macau", listOf("Hong Kong", "Shanghai", "Taipei"), H),
 
         /* ----------------------------- Expert ----------------------------- */
         q("geo_row_marianski", "What is the deepest point in the oceans called?", "Challenger Deep", listOf("Tonga Trench", "Java Trench", "Milwaukee Deep"), X),
@@ -333,6 +350,7 @@ object GeographyQuestions {
         q("geox_tristan", "Which British territory in the South Atlantic is the most remote inhabited archipelago?", "Tristan da Cunha", listOf("The Falkland Islands", "Saint Helena", "Ascension Island"), X),
         q("geox_nauru", "Which Pacific island nation is the smallest republic in the world?", "Nauru", listOf("Tuvalu", "Palau", "Kiribati"), X),
         q("geox_tuvalu_tv", "Which tiny Pacific nation earns money from its '.tv' internet domain?", "Tuvalu", listOf("Tonga", "Tokelau", "Taiwan"), X),
-        q("geox_colca", "Which canyon in Peru is about twice as deep as the Grand Canyon?", "The Colca Canyon", listOf("The Copper Canyon", "The Fish River Canyon", "Tiger Leaping Gorge"), X)
+        q("geox_colca", "Which canyon in Peru is about twice as deep as the Grand Canyon?", "The Colca Canyon", listOf("The Copper Canyon", "The Fish River Canyon", "Tiger Leaping Gorge"), X),
+        q("geoy_rosja_sasiedzi", "Russia shares land borders with how many countries?", "14", listOf("8", "20", "5"), X)
     )
 }

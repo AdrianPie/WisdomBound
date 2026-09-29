@@ -95,6 +95,7 @@ object LiteratureQuestions {
         q("litx_jas_malgosia", "In 'Hansel and Gretel', what is the witch's house made of?", "Gingerbread and sweets", listOf("Frozen ice blocks", "Straw and mud", "Coloured glass"), E),
         q("litx_trzy_swinki", "In 'The Three Little Pigs', what is the strongest house made of?", "Bricks", listOf("Sticks", "Straw", "Stone"), E),
         q("litx_pieciolinia", "How many lines make up a musical stave?", "Five", listOf("Four", "Six", "Seven"), E),
+        q("lity_brzydkie_kaczatko", "In Andersen's tale, what does the 'ugly duckling' grow up to be?", "A swan", listOf("A goose", "An eagle", "A peacock"), E),
 
         /* ----------------------------- Medium ----------------------------- */
         q("cultw_wojna_pokoj", "Who wrote War and Peace?", "Leo Tolstoy", listOf("Fyodor Dostoevsky", "Anton Chekhov", "Ivan Turgenev"), M),
@@ -199,6 +200,8 @@ object LiteratureQuestions {
         q("litx_piata_symfonia", "Whose Fifth Symphony opens with the famous 'da-da-da-DUM'?", "Beethoven", listOf("Mozart", "Bach", "Brahms"), M),
         q("litx_mozart_salzburg", "In which city was Mozart born?", "Salzburg", listOf("Vienna", "Prague", "Munich"), M),
         q("litx_czajkowski", "Which composer wrote the ballets 'Swan Lake' and 'The Nutcracker'?", "Pyotr Tchaikovsky", listOf("Sergei Prokofiev", "Igor Stravinsky", "Nikolai Rimsky-Korsakov"), M),
+        q("lity_biala_czarownica", "Which villain keeps Narnia locked in endless winter?", "The White Witch", listOf("The Snow Queen", "Maleficent", "Morgan le Fay"), M),
+        q("lity_huck_finn", "Which Mark Twain hero sails down the Mississippi on a raft?", "Huckleberry Finn", listOf("Tom Sawyer", "Oliver Twist", "David Copperfield"), M),
 
         /* ------------------------------ Hard ------------------------------ */
         q("cultw_boska_komedia", "How many parts does Dante's Divine Comedy have?", "Three", listOf("Two", "Four", "Seven"), H),
@@ -263,6 +266,14 @@ object LiteratureQuestions {
         q("litx_churchill_nobel", "Which wartime prime minister won the Nobel Prize in Literature?", "Winston Churchill", listOf("Charles de Gaulle", "Franklin Roosevelt", "Clement Attlee"), H),
         q("litx_limeryk", "How many lines does a limerick have?", "Five", listOf("Three", "Four", "Fourteen"), H),
         q("litx_carmen", "In which Spanish city is the opera 'Carmen' set?", "Seville", listOf("Madrid", "Barcelona", "Valencia"), H),
+        q("lity_dulcynea", "Who is the lady of Don Quixote's dreams?", "Dulcinea", listOf("Rosalind", "Beatrice", "Isabella"), H),
+        q("lity_szare_komorki", "Hercule Poirot credits his success to his 'little grey' what?", "Cells", listOf("Cats", "Notebooks", "Friends"), H),
+        q("lity_po_drugiej_stronie", "What is the sequel to 'Alice's Adventures in Wonderland'?", "Through the Looking-Glass", listOf("Alice in Dreamland", "The Hunting of the Snark", "Sylvie and Bruno"), H),
+        q("lity_pinokio_rekin", "In the original book, inside what does Pinocchio find his father?", "A giant shark", listOf("A whale", "A cave", "A ship"), H),
+        q("lity_steinbeck", "Who wrote 'The Grapes of Wrath' and 'Of Mice and Men'?", "John Steinbeck", listOf("William Faulkner", "Ernest Hemingway", "Mark Twain"), H),
+        q("lity_strzelba_czechowa", "Which Russian writer's rule says a gun shown in act one must be fired by the end?", "Anton Chekhov", listOf("Leo Tolstoy", "Nikolai Gogol", "Maxim Gorky"), H),
+        q("lity_klimt", "Which Austrian painter is famous for 'The Kiss', glittering with gold leaf?", "Gustav Klimt", listOf("Egon Schiele", "Oskar Kokoschka", "Franz Marc"), H),
+        q("lity_hokusai", "Who made the famous Japanese print 'The Great Wave off Kanagawa'?", "Hokusai", listOf("Hiroshige", "Utamaro", "Sesshu"), H),
 
         /* ----------------------------- Expert ----------------------------- */
         q("cultw_genji", "The Tale of Genji, often called the first novel, came from which country?", "Japan", listOf("China", "Korea", "India"), X),
@@ -304,6 +315,11 @@ object LiteratureQuestions {
         q("litx_chata_wuja_toma", "Which 1852 anti-slavery novel outsold every book but the Bible in 19th-century America?", "Uncle Tom's Cabin", listOf("Little Women", "Moby-Dick", "The Scarlet Letter"), X),
         q("litx_impression", "The word 'Impressionism' came from the title of a painting by whom?", "Claude Monet", listOf("Edouard Manet", "Edgar Degas", "Camille Pissarro"), X),
         q("litx_nobel_1901", "Who won the very first Nobel Prize in Literature, in 1901?", "Sully Prudhomme", listOf("Leo Tolstoy", "Emile Zola", "Henrik Ibsen"), X),
-        q("litx_sonety", "How many sonnets did Shakespeare publish?", "154", listOf("14", "54", "300"), X)
+        q("litx_sonety", "How many sonnets did Shakespeare publish?", "154", listOf("14", "54", "300"), X),
+        q("lity_julia_wiek", "How old is Juliet in 'Romeo and Juliet'?", "13", listOf("16", "18", "21"), X),
+        q("lity_mycroft", "What is the name of Sherlock Holmes's cleverer older brother?", "Mycroft", listOf("Mortimer", "Magnus", "Montague"), X),
+        q("lity_wojna_swiatow", "A 1938 radio adaptation of which novel reportedly caused panic in America?", "The War of the Worlds", listOf("Dracula", "Frankenstein", "The Time Machine"), X),
+        q("lity_magritte", "Which painter wrote 'This is not a pipe' beneath a picture of a pipe?", "Rene Magritte", listOf("Salvador Dali", "Marcel Duchamp", "Joan Miro"), X),
+        q("lity_fontanna", "Which artist shocked the art world by exhibiting a urinal titled 'Fountain'?", "Marcel Duchamp", listOf("Andy Warhol", "Rene Magritte", "Pablo Picasso"), X)
     )
 }

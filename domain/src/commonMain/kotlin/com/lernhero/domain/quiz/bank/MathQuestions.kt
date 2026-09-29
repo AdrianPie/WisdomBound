@@ -123,6 +123,9 @@ object MathQuestions {
         q("matx_procenty", "Which is bigger: 30% of 50 or 50% of 30?", "They are equal", listOf("30% of 50", "50% of 30", "It depends"), M),
         q("matx_sudoku", "In a standard Sudoku, which digits must each row contain?", "1 to 9, once each", listOf("0 to 9, once each", "Any nine digits", "1 to 9, repeats allowed"), M),
         q("matx_cyfry_indie", "The digits 0 to 9 we use today, called 'Arabic numerals', first developed where?", "India", listOf("Arabia", "Egypt", "Greece"), M),
+        q("maty_piramida_sciany", "Counting the base, how many faces does a square-based pyramid have?", "Five", listOf("Four", "Six", "Eight"), M),
+        q("maty_podzielne_15", "How many whole numbers from 1 to 100 are divisible by both 3 and 5?", "6", listOf("5", "7", "15"), M),
+        q("maty_tarcza_zegara", "What do all the numbers on a standard clock face add up to?", "78", listOf("60", "72", "66"), M),
 
         /* ------------------------------ Hard ------------------------------ */
         q("mat_silnia_5", "What is 5! (5 factorial)?", "120", listOf("100", "60", "150"), H),
@@ -170,6 +173,8 @@ object MathQuestions {
         q("matx_kwadrat_magiczny", "In a 3x3 magic square using the numbers 1 to 9, what does every row, column and diagonal add up to?", "15", listOf("12", "18", "45"), H),
         q("matx_a4", "Why does A4 paper keep the same shape when cut in half?", "Its sides are in the ratio 1 : root 2", listOf("Its sides follow the golden ratio", "It is almost a perfect square", "Its sides are in the ratio 2 : 3"), H),
         q("matx_kroliki", "The Fibonacci sequence first appeared in a puzzle about breeding which animals?", "Rabbits", listOf("Mice", "Sheep", "Chickens"), H),
+        q("maty_platonskie", "How many 'Platonic solids' (perfectly regular 3D shapes) are there?", "Five", listOf("Four", "Seven", "Infinitely many"), H),
+        q("maty_dwie_szostki", "What is the chance of rolling a total of 12 with two dice?", "1 in 36", listOf("1 in 12", "1 in 6", "1 in 18"), H),
 
         /* ----------------------------- Expert ----------------------------- */
         q("mat_liczba_e", "What is the approximate value of e?", "2.72", listOf("3.14", "1.62", "2.24"), X),
@@ -216,6 +221,8 @@ object MathQuestions {
         q("matx_archimedes_pi", "Which ancient Greek pinned down pi by drawing polygons with 96 sides?", "Archimedes", listOf("Euclid", "Pythagoras", "Ptolemy"), X),
         q("matx_hypatia", "Which woman mathematician and astronomer of ancient Egypt was killed by a mob in 415?", "Hypatia", listOf("Sappho", "Aspasia", "Cleopatra"), X),
         q("matx_ziemniaki", "A 100 kg sack of potatoes is 99% water. After drying it is 98% water. What does it weigh now?", "50 kg", listOf("98 kg", "99 kg", "90 kg"), X),
-        q("matx_ujemne_chiny", "Negative numbers were long rejected in Europe, but used centuries earlier by mathematicians in which country?", "China", listOf("Greece", "Egypt", "England"), X)
+        q("matx_ujemne_chiny", "Negative numbers were long rejected in Europe, but used centuries earlier by mathematicians in which country?", "China", listOf("Greece", "Egypt", "England"), X),
+        q("maty_hotel_hilberta", "In 'Hilbert's Hotel', a full hotel with infinitely many rooms can still do what?", "Take in more guests", listOf("Only close its doors", "Charge infinite money", "Fit just one more guest"), X),
+        q("maty_zenon", "Which Greek thinker argued that swift Achilles could never overtake a tortoise?", "Zeno of Elea", listOf("Pythagoras", "Euclid", "Archimedes"), X)
     )
 }

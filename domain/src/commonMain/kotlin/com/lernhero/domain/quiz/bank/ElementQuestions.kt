@@ -55,6 +55,8 @@ object ElementQuestions {
         q("ele_rtec_termometr", "Why were mercury thermometers phased out in many countries?", "Mercury is toxic", listOf("Mercury is too expensive", "Mercury freezes too easily", "Mercury eats through glass"), E),
         q("ele_azot_lody", "Which super-cold liquid do some cafes use to freeze ice cream in seconds?", "Liquid nitrogen", listOf("Liquid oxygen", "Liquid helium", "Liquid hydrogen"), E),
         q("elex_magnes", "Which of these metals is strongly attracted to a magnet?", "Iron", listOf("Copper", "Aluminium", "Gold"), E),
+        q("eley_zloto_blask", "Why does gold jewellery stay shiny for centuries?", "Gold hardly reacts with anything", listOf("It is coated with wax", "It is mixed with plastic", "Gold is too heavy to rust"), E),
+        q("eley_ogien_tlen", "Which gas from the air does a fire need to keep burning?", "Oxygen", listOf("Nitrogen", "Carbon dioxide", "Helium"), E),
 
         /* ----------------------------- Medium ----------------------------- */
         q("ele_symbol_ag", "Which element hides behind the symbol Ag?", "Silver", listOf("Gold", "Argon", "Aluminum"), M),
@@ -117,6 +119,8 @@ object ElementQuestions {
         q("elex_pluton", "Plutonium is named after what?", "The dwarf planet Pluto", listOf("A mountain in Greece", "The scientist who found it", "The Latin word for 'heavy'"), M),
         q("elex_kalifornia", "Which of these US states has a chemical element named after it?", "California", listOf("Texas", "Florida", "Nevada"), M),
         q("elex_nikiel", "The US five-cent coin is nicknamed after which metal?", "Nickel", listOf("Copper", "Zinc", "Tin"), M),
+        q("eley_halit", "What is the mineral name of rock salt?", "Halite", listOf("Calcite", "Gypsum", "Quartz"), M),
+        q("eley_talk", "Which is the softest mineral on the Mohs scale?", "Talc", listOf("Gypsum", "Calcite", "Graphite"), M),
 
         /* ------------------------------ Hard ------------------------------ */
         q("ele_symbol_sn", "Which element hides behind the symbol Sn?", "Tin", listOf("Scandium", "Selenium", "Strontium"), H),
@@ -176,6 +180,9 @@ object ElementQuestions {
         q("elex_proch", "Gunpowder is a mix of sulfur, charcoal and what?", "Saltpetre", listOf("Table salt", "Sugar", "Chalk"), H),
         q("elex_krysztal_olow", "Adding which metal to glass makes sparkling 'crystal' glassware?", "Lead", listOf("Tin", "Zinc", "Nickel"), H),
         q("elex_zloto_baseny", "All the gold ever mined would roughly fill how many Olympic swimming pools?", "About four", listOf("About 400", "About 40", "Less than one"), H),
+        q("eley_platyna", "Which precious metal is rarer than gold in the Earth's crust?", "Platinum", listOf("Silver", "Copper", "Aluminium"), H),
+        q("eley_gips", "Which soft mineral is used to make plaster and much blackboard chalk?", "Gypsum", listOf("Talc", "Quartz", "Feldspar"), H),
+        q("eley_azot_opony", "Why are some racing car and aircraft tyres filled with nitrogen instead of air?", "It expands less with heat", listOf("It is lighter than helium", "It stops punctures", "It smells less"), H),
 
         /* ----------------------------- Expert ----------------------------- */
         q("ele_symbol_sb", "Which element hides behind the symbol Sb?", "Antimony", listOf("Strontium", "Silver", "Selenium"), X),
@@ -218,6 +225,10 @@ object ElementQuestions {
         q("elex_moskow", "Which element, number 115, is named after the region around Moscow?", "Moscovium", listOf("Dubnium", "Livermorium", "Tennessine"), X),
         q("elex_ksenon", "Which noble gas fills the bright bluish-white headlamps of many cars?", "Xenon", listOf("Neon", "Argon", "Radon"), X),
         q("elex_zloto_ocean", "Roughly how much gold is dissolved in the world's oceans?", "Millions of tonnes", listOf("A few kilograms", "About 100 tonnes", "None at all"), X),
-        q("elex_tal", "Which element, 'the poisoner's poison', is the murder weapon in Agatha Christie's 'The Pale Horse'?", "Thallium", listOf("Arsenic", "Cyanide", "Strychnine"), X)
+        q("elex_tal", "Which element, 'the poisoner's poison', is the murder weapon in Agatha Christie's 'The Pale Horse'?", "Thallium", listOf("Arsenic", "Cyanide", "Strychnine"), X),
+        q("eley_diament_cieplo", "Diamond hardly conducts electricity, but it is an excellent conductor of what?", "Heat", listOf("Sound only", "Magnetism", "Radio waves"), X),
+        q("eley_iryd", "A worldwide layer rich in which element supports the idea that an asteroid killed the dinosaurs?", "Iridium", listOf("Uranium", "Titanium", "Cobalt"), X),
+        q("eley_chrom", "Chromium's name comes from the Greek word for what?", "Colour", listOf("Mirror", "Metal", "Shine"), X),
+        q("eley_brom", "Bromine's name comes from the Greek word for what?", "Stench", listOf("Brown", "Bright", "Water"), X)
     )
 }

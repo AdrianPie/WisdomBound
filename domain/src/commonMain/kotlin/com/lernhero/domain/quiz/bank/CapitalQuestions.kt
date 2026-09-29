@@ -50,6 +50,7 @@ object CapitalQuestions {
         q("capx_dc", "What does the 'D.C.' in Washington, D.C. stand for?", "District of Columbia", listOf("Direct Capital", "Democratic Centre", "Department of Congress"), E),
         q("capx_luksemburg", "Which of these countries has a capital with exactly the same name as the country?", "Luxembourg", listOf("Belgium", "Austria", "Denmark"), E),
         q("capx_trafalgar", "Nelson's Column stands in which London square?", "Trafalgar Square", listOf("Piccadilly Circus", "Leicester Square", "Covent Garden"), E),
+        q("capy_berlin_mis", "Which animal appears on the coat of arms of Berlin?", "A bear", listOf("An eagle", "A lion", "A wolf"), E),
 
         /* ----------------------------- Medium ----------------------------- */
         q("cap_canberra", "What is the capital of Australia?", "Canberra", listOf("Sydney", "Melbourne", "Perth"), M),
@@ -117,6 +118,11 @@ object CapitalQuestions {
         q("capx_atomium", "Which capital city is home to the Atomium, a giant model of an iron crystal?", "Brussels", listOf("Paris", "Berlin", "Amsterdam"), M),
         q("capx_siedem_wzgorz", "Rome is famously said to be built on how many hills?", "Seven", listOf("Three", "Twelve", "Five"), M),
         q("capx_metro_moskwa", "Which capital's underground stations are famous for their chandeliers and marble halls?", "Moscow", listOf("London", "Paris", "Vienna"), M),
+        q("capy_madryt_srodek", "Which European capital lies almost exactly at the centre of its country?", "Madrid", listOf("Paris", "Rome", "Berlin"), M),
+        q("capy_wieden_kawiarnie", "Which capital's grand coffee houses are listed by UNESCO as a cultural tradition?", "Vienna", listOf("Rome", "Paris", "Budapest"), M),
+        q("capy_praga_wieze", "Which capital city is nicknamed 'the City of a Hundred Spires'?", "Prague", listOf("Vienna", "Budapest", "Riga"), M),
+        q("capy_budapeszt_termy", "Which capital is famous for thermal baths such as the Szechenyi Baths?", "Budapest", listOf("Prague", "Vienna", "Sofia"), M),
+        q("capy_hawana", "Which capital city is famous for streets full of 1950s American cars?", "Havana", listOf("Mexico City", "San Juan", "Panama City"), M),
 
         /* ------------------------------ Hard ------------------------------ */
         q("cap_wellington", "What is the capital of New Zealand?", "Wellington", listOf("Auckland", "Christchurch", "Dunedin"), H),
@@ -177,6 +183,10 @@ object CapitalQuestions {
         q("capx_damaszek", "Which capital is often called the oldest continuously inhabited capital city in the world?", "Damascus", listOf("Athens", "Rome", "Cairo"), H),
         q("capx_filadelfia", "Which city served as the US capital for most of the 1790s?", "Philadelphia", listOf("Boston", "Baltimore", "Richmond"), H),
         q("capx_valletta_mala", "Which is the smallest national capital in the European Union by area?", "Valletta", listOf("Luxembourg", "Nicosia", "Ljubljana"), H),
+        q("capy_holmenkollen", "Which capital city has the famous Holmenkollen ski jump?", "Oslo", listOf("Stockholm", "Helsinki", "Vienna"), H),
+        q("capy_reykjavik_nazwa", "What does the name 'Reykjavik' mean?", "Smoky bay", listOf("Ice harbour", "North town", "Fire mountain"), H),
+        q("capy_nairobi_park", "Which capital city has a national park with lions and giraffes right beside its skyline?", "Nairobi", listOf("Addis Ababa", "Pretoria", "Kampala"), H),
+        q("capy_wellington_wiatr", "Which capital is famous as one of the windiest cities in the world?", "Wellington", listOf("Reykjavik", "Oslo", "Dublin"), H),
 
         /* ----------------------------- Expert ----------------------------- */
         q("cap_thimphu", "What is the capital of Bhutan?", "Thimphu", listOf("Paro", "Punakha", "Phuentsholing"), X),
@@ -224,6 +234,11 @@ object CapitalQuestions {
         q("capx_brasilia_samolot", "Seen from above, the plan of Brasilia is often said to look like what?", "An aeroplane", listOf("A star", "A fish", "A tree"), X),
         q("capx_lenfant", "Which French-born engineer drew up the original street plan of Washington, D.C.?", "Pierre L'Enfant", listOf("Gustave Eiffel", "Georges Haussmann", "Le Corbusier"), X),
         q("capx_haussmann", "Which planner rebuilt much of Paris with wide boulevards in the 1850s and 1860s?", "Baron Haussmann", listOf("Gustave Eiffel", "Le Corbusier", "Pierre L'Enfant"), X),
-        q("capx_canberra_konkurs", "The winning design for Canberra came from architects of which country?", "The USA", listOf("Britain", "France", "Germany"), X)
+        q("capx_canberra_konkurs", "The winning design for Canberra came from architects of which country?", "The USA", listOf("Britain", "France", "Germany"), X),
+        q("capy_canberra_nazwa", "The name 'Canberra' is thought to come from an Aboriginal word meaning what?", "Meeting place", listOf("Big river", "Red earth", "Sky camp"), X),
+        q("capy_dublin_nazwa", "Dublin's name comes from Irish words meaning what?", "Black pool", listOf("Green hill", "River mouth", "Old fort"), X),
+        q("capy_unia_afrykanska", "In which capital city is the headquarters of the African Union?", "Addis Ababa", listOf("Nairobi", "Cairo", "Pretoria"), X),
+        q("capy_rideau", "Which canal in Ottawa turns into a skating rink almost 8 km long in winter?", "The Rideau Canal", listOf("The Welland Canal", "The Lachine Canal", "The Erie Canal"), X),
+        q("capy_tbilisi", "The name of the Caucasus capital Tbilisi comes from its what?", "Warm springs", listOf("High mountains", "Many churches", "Old walls"), X)
     )
 }

@@ -82,6 +82,7 @@ object MythologyQuestions {
         q("mytx_wrozka_zebuszka", "In many countries, which folklore figure leaves money for a child's lost tooth?", "The Tooth Fairy", listOf("Santa Claus", "The Sandman", "The Easter Bunny"), E),
         q("mytx_laponia", "According to Finnish tradition, in which region does Santa Claus live?", "Lapland", listOf("Greenland", "Siberia", "Iceland"), E),
         q("mytx_robin_hood", "In which forest did Robin Hood and his Merry Men hide?", "Sherwood Forest", listOf("The Black Forest", "Epping Forest", "The New Forest"), E),
+        q("myty_sezamie", "What are the magic words that open the robbers' cave in 'Ali Baba'?", "Open sesame", listOf("Abracadabra", "Hocus pocus", "Alakazam"), E),
 
         /* ----------------------------- Medium ----------------------------- */
         q("cultw_odyn_ptaki", "Which two ravens brought Odin news of the world?", "Huginn and Muninn", listOf("Geri and Freki", "Sleipnir and Fenrir", "Vidar and Vali"), M),
@@ -162,6 +163,9 @@ object MythologyQuestions {
         q("mytx_el_dorado", "What was El Dorado, sought by Spanish explorers?", "A legendary city or king of gold", listOf("A fountain of eternal youth", "A lost Roman legion", "A giant emerald mine"), M),
         q("mytx_pani_jeziora", "According to legend, who gave King Arthur his famous sword?", "The Lady of the Lake", listOf("Merlin", "Morgan le Fay", "Guinevere"), M),
         q("mytx_wilhelm_tell", "Which Swiss folk hero shot an apple off his son's head with a crossbow?", "William Tell", listOf("Robin Hood", "Roland", "El Cid"), M),
+        q("myty_persefona_pory", "Which Greek myth explained why the seasons change?", "Persephone's time in the underworld", listOf("Apollo's chariot race", "Zeus's anger at mortals", "Poseidon's tides"), M),
+        q("myty_lakszmi", "Which Hindu goddess brings wealth and good fortune?", "Lakshmi", listOf("Kali", "Durga", "Saraswati"), M),
+        q("myty_sindbad", "Which sailor of 'One Thousand and One Nights' made seven famous voyages?", "Sinbad", listOf("Aladdin", "Ali Baba", "Harun"), M),
 
         /* ------------------------------ Hard ------------------------------ */
         q("cultw_izanagi", "In Japanese myth, which pair created the islands of Japan?", "Izanagi and Izanami", listOf("Amaterasu and Susanoo", "Raijin and Fujin", "Inari and Hachiman"), H),
@@ -229,6 +233,12 @@ object MythologyQuestions {
         q("mytx_ponce_de_leon", "Which Spanish explorer is linked in legend to the search for the Fountain of Youth in Florida?", "Juan Ponce de Leon", listOf("Hernan Cortes", "Francisco Pizarro", "Hernando de Soto"), H),
         q("mytx_lancelot", "Which knight of the Round Table fell in love with Queen Guinevere?", "Sir Lancelot", listOf("Sir Gawain", "Sir Galahad", "Sir Percival"), H),
         q("mytx_grendel", "Which monster does the hero Beowulf fight first?", "Grendel", listOf("Smaug", "The Kraken", "Fafnir"), H),
+        q("myty_argus", "Which giant of Greek myth had a hundred eyes?", "Argus", listOf("Cyclops", "Typhon", "Talos"), H),
+        q("myty_oliwka", "What gift did Athena give the Athenians to win their city from Poseidon?", "An olive tree", listOf("A spring of water", "A golden owl", "A horse"), H),
+        q("myty_serce_mumii", "Which organ did Egyptians usually leave inside a mummy, as it was needed in the afterlife?", "The heart", listOf("The brain", "The liver", "The stomach"), H),
+        q("myty_kali", "Which fierce Hindu goddess wears a garland of skulls and sticks out a red tongue?", "Kali", listOf("Lakshmi", "Saraswati", "Parvati"), H),
+        q("myty_tanuki", "In Japanese folklore, which shape-shifter looks like a raccoon dog?", "The tanuki", listOf("The kitsune", "The kappa", "The tengu"), H),
+        q("myty_zar_ptak", "In Slavic tales, which glowing bird's feathers light up a whole room?", "The Firebird", listOf("The Phoenix", "The Thunderbird", "The Roc"), H),
 
         /* ----------------------------- Expert ----------------------------- */
         q("cultw_mahabharata", "Which Sanskrit epic contains the Bhagavad Gita?", "The Mahabharata", listOf("The Ramayana", "The Rigveda", "The Upanishads"), X),
@@ -276,6 +286,12 @@ object MythologyQuestions {
         q("mytx_golem_praga", "The most famous golem legend comes from which city?", "Prague", listOf("Vienna", "Krakow", "Budapest"), X),
         q("mytx_bunyip", "The bunyip is a legendary creature said to lurk in the swamps of which country?", "Australia", listOf("Canada", "Brazil", "India"), X),
         q("mytx_kelpie", "What is a kelpie in Scottish folklore?", "A water spirit in horse form", listOf("A bagpipe-playing fairy", "A giant sea eagle", "A ghost that guards castles"), X),
-        q("mytx_fafnir", "Which dragon did the hero Sigurd (Siegfried) slay?", "Fafnir", listOf("Smaug", "Nidhogg", "Jormungand"), X)
+        q("mytx_fafnir", "Which dragon did the hero Sigurd (Siegfried) slay?", "Fafnir", listOf("Smaug", "Nidhogg", "Jormungand"), X),
+        q("myty_talos", "Which giant bronze man guarded the island of Crete?", "Talos", listOf("Colossus", "Antaeus", "Tityos"), X),
+        q("myty_loki_losos", "When the gods hunted him, what did Loki turn into to hide in a waterfall?", "A salmon", listOf("A seal", "An eel", "A frog"), X),
+        q("myty_walhalla_dach", "According to Norse myth, what is the roof of Valhalla made of?", "Shields", listOf("Gold", "Antlers", "Ice"), X),
+        q("myty_bes", "Which dwarf god of ancient Egypt protected households and children?", "Bes", listOf("Ptah", "Khnum", "Apis"), X),
+        q("myty_koszczej", "Which Slavic villain is 'deathless' because his death is hidden in a needle inside an egg?", "Koschei", listOf("Baba Yaga", "Zmey Gorynych", "Leshy"), X),
+        q("myty_leszy", "What is a leshy in Slavic folklore?", "A forest spirit", listOf("A water horse", "A house elf", "A storm giant"), X)
     )
 }

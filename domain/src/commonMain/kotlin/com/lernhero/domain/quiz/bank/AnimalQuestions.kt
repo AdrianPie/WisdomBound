@@ -70,6 +70,8 @@ object AnimalQuestions {
         q("anix_swietlik", "Which insects light up in the dark to attract mates?", "Fireflies", listOf("Crickets", "Moths", "Ladybirds"), E),
         q("anix_atrament", "What does an octopus squirt to escape from predators?", "Ink", listOf("Water", "Venom", "Sand"), E),
         q("anix_czekolada_pies", "Which common human treat is poisonous to dogs?", "Chocolate", listOf("Carrots", "Plain rice", "Cucumber"), E),
+        q("aniy_kot_sen", "Roughly how many hours a day does a typical house cat sleep?", "12 to 16", listOf("4 to 6", "20 to 22", "Exactly 8"), E),
+        q("aniy_meduza_woda", "Roughly how much of a jellyfish's body is water?", "About 95%", listOf("About 50%", "About 70%", "About 30%"), E),
 
         /* ----------------------------- Medium ----------------------------- */
         q("ani_osmiornica_serca", "How many hearts does an octopus have?", "3", listOf("1", "2", "5"), M),
@@ -156,6 +158,12 @@ object AnimalQuestions {
         q("anix_bielik", "Which bird is the national symbol of the United States?", "The bald eagle", listOf("The golden eagle", "The wild turkey", "The condor"), M),
         q("anix_wibrysy", "What do cats mainly use their whiskers for?", "Sensing their surroundings", listOf("Keeping warm", "Attracting mates", "Cleaning their fur"), M),
         q("anix_bernardyn", "Which dog breed is famous for mountain rescues in the Swiss Alps?", "The St. Bernard", listOf("The Husky", "The Labrador", "The Great Dane"), M),
+        q("aniy_zebra_skora", "What colour is a zebra's skin under its stripes?", "Black", listOf("White", "Pink", "Grey"), M),
+        q("aniy_lew_ryk", "From roughly how far away can a lion's roar be heard?", "About 8 km", listOf("About 80 metres", "About 800 metres", "About 80 km"), M),
+        q("aniy_osmiornica_szpara", "An octopus can squeeze through any gap bigger than which part of its body?", "Its beak", listOf("Its eye", "Its brain", "Its heart"), M),
+        q("aniy_gekon", "How do geckos cling to walls and ceilings?", "Millions of tiny hairs on their toes", listOf("Sticky glue from their feet", "Suction cups on their toes", "Tiny hooked claws"), M),
+        q("aniy_motyl_zycie", "How long does an adult butterfly usually live?", "A few weeks", listOf("A single day", "Several years", "About a year"), M),
+        q("aniy_waz_powieki", "Why do snakes never seem to blink?", "They have no eyelids", listOf("They sleep with open eyes", "They blink too fast to see", "Their eyes are dry"), M),
 
         /* ------------------------------ Hard ------------------------------ */
         q("ani_dziobak", "Which mammal lays eggs?", "Platypus", listOf("Armadillo", "Sloth", "Hedgehog"), H),
@@ -234,6 +242,12 @@ object AnimalQuestions {
         q("anix_wedkarz", "How does the deep-sea anglerfish attract prey in the dark?", "A glowing lure on its head", listOf("A loud humming song", "A cloud of sweet scent", "Flashing its silver teeth"), H),
         q("anix_karaluch", "Roughly how long can a cockroach survive without its head?", "About a week", listOf("About a minute", "About an hour", "About a year"), H),
         q("anix_dalmatynczyk", "What colour are Dalmatian puppies when they are born?", "Pure white", listOf("Black with white spots", "Grey", "Brown"), H),
+        q("aniy_mrowki_liczba", "Roughly how many ants are thought to live on Earth?", "About 20 quadrillion", listOf("About 20 million", "About 20 billion", "About 2,000"), H),
+        q("aniy_mrowkojad_jezyk", "Roughly how long can a giant anteater's tongue reach?", "About 60 cm", listOf("About 6 cm", "About 2 metres", "About 15 cm"), H),
+        q("aniy_papuga_wiek", "Roughly how long can large parrots such as macaws live?", "Over 50 years", listOf("About 5 years", "About 15 years", "About 200 years"), H),
+        q("aniy_pingwin_galapagos", "Which is the only penguin that lives wild at the equator?", "The Galapagos penguin", listOf("The emperor penguin", "The king penguin", "The little penguin"), H),
+        q("aniy_jetka", "Which insect is famous for living as an adult for only about a day?", "The mayfly", listOf("The dragonfly", "The housefly", "The moth"), H),
+        q("aniy_kobra_krolewska", "What does the king cobra mainly eat?", "Other snakes", listOf("Birds' eggs", "Frogs", "Monkeys"), H),
 
         /* ----------------------------- Expert ----------------------------- */
         q("ani_hemocyjanina", "Which animal has blue blood?", "Octopus", listOf("Frog", "Snake", "Carp"), X),
@@ -275,6 +289,9 @@ object AnimalQuestions {
         q("anix_leniwiec_plywanie", "Sloths are surprisingly good at what?", "Swimming", listOf("Jumping", "Running", "Digging"), X),
         q("anix_szklana_zaba", "Which frog has see-through belly skin that shows its beating heart?", "The glass frog", listOf("The tree frog", "The bullfrog", "The dart frog"), X),
         q("anix_skorpena", "Which fish is considered the most venomous in the world?", "The stonefish", listOf("The lionfish", "The pufferfish", "The stingray"), X),
-        q("anix_swierszcz", "By counting what can you roughly work out the air temperature?", "A cricket's chirps", listOf("A frog's croaks", "An owl's hoots", "A bee's buzzes"), X)
+        q("anix_swierszcz", "By counting what can you roughly work out the air temperature?", "A cricket's chirps", listOf("A frog's croaks", "An owl's hoots", "A bee's buzzes"), X),
+        q("aniy_kaszalot_sen", "How do sperm whales sleep?", "Floating upright in short naps", listOf("Lying on the sea floor", "Swimming in slow circles", "Beached on sand"), X),
+        q("aniy_strus_oko", "An ostrich's eye is bigger than which of its organs?", "Its brain", listOf("Its heart", "Its stomach", "Its liver"), X),
+        q("aniy_zolwie_morskie", "How do newly hatched sea turtles find the sea at night?", "They head for the brighter horizon", listOf("They follow their mother", "They smell the salt", "They listen for waves"), X)
     )
 }

@@ -84,6 +84,10 @@ object PolandQuestions {
         q("polx_mis_uszatek", "Which Polish cartoon teddy bear has one floppy ear?", "Mis Uszatek", listOf("Reksio", "Pampalini", "Koziolek Matolek"), E),
         q("polx_11_listopada", "On which date does Poland celebrate Independence Day?", "11 November", listOf("3 May", "1 September", "15 August"), E),
         q("polx_1_wrzesnia", "On what date in 1939 did Germany invade Poland?", "1 September", listOf("11 November", "17 September", "1 August"), E),
+        q("poly_schabowy", "What is 'kotlet schabowy'?", "A breaded pork cutlet", listOf("A beef stew", "A fish soup", "A potato pancake"), E),
+        q("poly_placki", "What are 'placki ziemniaczane'?", "Potato pancakes", listOf("Potato dumplings", "Mashed potato soup", "Baked potatoes"), E),
+        q("poly_makowiec", "What is the filling of a Polish 'makowiec' roll?", "Poppy seeds", listOf("Walnuts", "Apples", "Chocolate"), E),
+        q("poly_kevin", "Which American film has been a Polish Christmas TV tradition since the 1990s?", "Home Alone", listOf("Die Hard", "Love Actually", "Elf"), E),
 
         /* ----------------------------- Medium ----------------------------- */
         q("pol_geo2_wisla_zrodlo", "Where does the Vistula river originate?", "In the Silesian Beskids", listOf("In the Tatras", "In the Sudetes", "In the Masurian Lake District"), M),
@@ -177,6 +181,12 @@ object PolandQuestions {
         q("polx_szarik", "What was the name of the dog in the TV series 'Four Tank-Men and a Dog'?", "Szarik", listOf("Reksio", "Burek", "Azor"), M),
         q("polx_monte_cassino", "Which Italian hilltop monastery did Polish soldiers capture in 1944?", "Monte Cassino", listOf("Montecatini", "San Marino", "Monte Carlo"), M),
         q("polx_jasna_gora", "In which city is the Jasna Gora monastery with the Black Madonna icon?", "Czestochowa", listOf("Krakow", "Wadowice", "Lichen"), M),
+        q("poly_sernik", "What is the main ingredient of Polish 'sernik'?", "Twarog (white cheese)", listOf("Poppy seeds", "Apples", "Plums"), M),
+        q("poly_disco_polo", "Which cheerful Polish pop style became hugely popular in the 1990s?", "Disco polo", listOf("Polo rock", "Mazurka pop", "Krakow house"), M),
+        q("poly_maryla", "Which Polish singer is famous for 'Niech zyje bal' and a career stretching back to the 1960s?", "Maryla Rodowicz", listOf("Edyta Gorniak", "Kayah", "Doda"), M),
+        q("poly_kiepscy", "In which city is the sitcom 'Swiat wedlug Kiepskich' set?", "Wroclaw", listOf("Lodz", "Warsaw", "Krakow"), M),
+        q("poly_westerplatte", "Which Gdansk peninsula held out for seven days in September 1939?", "Westerplatte", listOf("Hel", "Oksywie", "Sobieszewo"), M),
+        q("poly_piotrkowska", "Which city's main street is the long Piotrkowska Street?", "Lodz", listOf("Poznan", "Katowice", "Lublin"), M),
 
         /* ------------------------------ Hard ------------------------------ */
         q("pol_his2_bitwa_grunwald_kto", "Who commanded the Polish-Lithuanian forces at Grunwald?", "Wladyslaw Jagiello", listOf("Casimir the Great", "Vytautas alone", "Boleslaw the Wrymouth"), H),
@@ -245,6 +255,13 @@ object PolandQuestions {
         q("polx_zamosc", "Which Renaissance 'ideal city' in eastern Poland is on the UNESCO list?", "Zamosc", listOf("Sandomierz", "Kazimierz Dolny", "Lublin"), H),
         q("polx_orle_gniazda", "The 'Trail of the Eagles' Nests' links medieval castles across which upland?", "The Krakow-Czestochowa Upland", listOf("The Lublin Upland", "The Masurian Lakeland", "The Silesian Lowland"), H),
         q("polx_biskupin", "What is Biskupin famous for?", "An ancient wooden settlement", listOf("A Gothic cathedral", "A deep salt mine", "A Renaissance castle"), H),
+        q("poly_zenek", "Which disco polo star sang 'Przez Twe Oczy Zielone'?", "Zenon Martyniuk", listOf("Shazza", "Boys", "Bayer Full"), H),
+        q("poly_niemen", "Which singer recorded 'Dziwny jest ten swiat' in 1967?", "Czeslaw Niemen", listOf("Marek Grechuta", "Krzysztof Krawczyk", "Seweryn Krajewski"), H),
+        q("poly_gorniak", "Which singer gave Poland its best-ever Eurovision result, second place in 1994?", "Edyta Gorniak", listOf("Maryla Rodowicz", "Doda", "Justyna Steczkowska"), H),
+        q("poly_ranczo", "In which fictional village is the TV series 'Ranczo' set?", "Wilkowyje", listOf("Sielsko", "Kozie Wolki", "Brzozowka"), H),
+        q("poly_seksmisja", "In the cult comedy 'Seksmisja', the heroes wake up in a world without what?", "Men", listOf("Cars", "Sunlight", "Money"), H),
+        q("poly_babia_gora", "Which mountain is the highest peak of the Beskids?", "Babia Gora", listOf("Pilsko", "Skrzyczne", "Turbacz"), H),
+        q("poly_moszna", "Which fairy-tale Polish castle is famous for its 99 towers and turrets?", "Moszna", listOf("Malbork", "Ksiaz", "Czocha"), H),
 
         /* ----------------------------- Expert ----------------------------- */
         q("pol_his3_polski_rzad_na_uchodzstwie", "Where did the Polish government-in-exile operate during World War II?", "London (earlier in France)", listOf("Moscow, alongside the Red Army", "Washington, with the Allies", "Rome, after the Italian campaign"), X),
@@ -287,6 +304,8 @@ object PolandQuestions {
         q("polx_everest_zima", "Polish climbers made the first winter ascent of an 8,000 m peak in 1980. Which one?", "Mount Everest", listOf("K2", "Annapurna", "Nanga Parbat"), X),
         q("polx_pilecki", "Which Polish officer let himself be imprisoned in Auschwitz to report on it?", "Witold Pilecki", listOf("Jan Karski", "Stanislaw Sosabowski", "Emil Fieldorf"), X),
         q("polx_lysica", "Which is the highest peak of the Swietokrzyskie Mountains?", "Lysica", listOf("Lysa Gora", "Sniezka", "Babia Gora"), X),
-        q("polx_kanal_elblaski", "What is unusual about the Elblag Canal?", "Boats cross dry land on rails", listOf("It flows uphill", "It freezes in summer", "It runs underground"), X)
+        q("polx_kanal_elblaski", "What is unusual about the Elblag Canal?", "Boats cross dry land on rails", listOf("It flows uphill", "It freezes in summer", "It runs underground"), X),
+        q("poly_ksiaz", "Which Silesian castle, one of Poland's largest, hides secret wartime tunnels?", "Ksiaz", listOf("Czocha", "Moszna", "Niedzica"), X),
+        q("poly_dar_pomorza", "Which famous sailing ship, 'the white frigate', is now a museum in Gdynia?", "Dar Pomorza", listOf("Dar Mlodziezy", "Fryderyk Chopin", "Zawisza Czarny"), X)
     )
 }

@@ -71,6 +71,8 @@ object BiologyQuestions {
         q("biox_sen_tercja", "Roughly what share of their life does a person spend asleep?", "About a third", listOf("About a tenth", "About half", "About two-thirds"), E),
         q("biox_ryz", "Which grain is the main food for more than half of the world's people?", "Rice", listOf("Wheat", "Maize", "Oats"), E),
         q("biox_oczy_brazowe", "Which is the most common eye colour in the world?", "Brown", listOf("Blue", "Green", "Grey"), E),
+        q("bioy_serce_strona", "On which side of the chest does most of the human heart sit?", "The left", listOf("The right", "Exactly in the middle", "It moves around"), E),
+        q("bioy_sloje", "How can you tell the age of a tree that has been cut down?", "By counting its rings", listOf("By measuring its height", "By its bark colour", "By counting its branches"), E),
 
         /* ----------------------------- Medium ----------------------------- */
         q("bio_chromosomy", "How many chromosomes does a healthy human cell have?", "46", listOf("23", "48", "44"), M),
@@ -147,6 +149,12 @@ object BiologyQuestions {
         q("biox_leworeczni", "Roughly what share of people are left-handed?", "About 10%", listOf("About 1%", "About 30%", "About 50%"), M),
         q("biox_baobab", "Which African tree can store thousands of litres of water in its huge trunk?", "The baobab", listOf("The acacia", "The mahogany", "The ebony"), M),
         q("biox_grzyby_zwierzeta", "Mushrooms are more closely related to which group of living things?", "Animals", listOf("Plants", "Bacteria", "Algae"), M),
+        q("bioy_pot_zapach", "Fresh sweat has almost no smell. What causes body odour?", "Bacteria breaking down sweat", listOf("Salt in the sweat", "Hormones in the skin", "Sweat drying in the air"), M),
+        q("bioy_ziewanie_psy", "Which of these animals has been shown to catch yawns from humans?", "Dogs", listOf("Snakes", "Goldfish", "Tortoises"), M),
+        q("bioy_kokos", "Botanically, what is a coconut?", "A drupe (stone fruit)", listOf("A true nut", "A berry", "A seed pod"), M),
+        q("bioy_kaktus_kolce", "What are a cactus's spines, botanically?", "Modified leaves", listOf("Hardened hairs", "Tiny branches", "Dried flowers"), M),
+        q("bioy_rano_wyzszy", "At what time of day are most people slightly taller?", "In the morning", listOf("In the evening", "At noon", "At midnight"), M),
+        q("bioy_ziemniak_trujacy", "Which part of a potato plant is poisonous?", "The leaves and green berries", listOf("The white flesh of the tuber", "Only the roots", "No part at all"), M),
 
         /* ------------------------------ Hard ------------------------------ */
         q("bio_mejoza", "What is the cell division that produces sex cells called?", "Meiosis", listOf("Mitosis", "Cytokinesis", "Apoptosis"), H),
@@ -218,6 +226,11 @@ object BiologyQuestions {
         q("biox_sekwoja", "Which is the largest tree on Earth by volume?", "The giant sequoia", listOf("The baobab", "The kauri", "The Douglas fir"), H),
         q("biox_mimoza", "Which plant folds up its leaves the moment you touch it?", "The sensitive plant", listOf("The fern", "The aloe vera", "The spider plant"), H),
         q("biox_dzbanecznik", "How does a pitcher plant catch insects?", "Insects slip into digestive juice", listOf("It snaps shut like a jaw", "It shoots sticky threads", "It stings them with hairs"), H),
+        q("bioy_neurony", "Roughly how many neurons are there in the human brain?", "About 86 billion", listOf("About 86 million", "About 8,600", "About 86 trillion"), H),
+        q("bioy_cavendish", "Almost all bananas sold in shops belong to which single variety?", "Cavendish", listOf("Gros Michel", "Plantain", "Lady Finger"), H),
+        q("bioy_serce_litry", "Roughly how much blood does the heart pump in one day?", "About 7,000 litres", listOf("About 70 litres", "About 700 litres", "About 70,000 litres"), H),
+        q("bioy_ananas_enzym", "Why does fresh pineapple make your tongue tingle?", "Its enzyme digests proteins", listOf("It is very acidic", "It has tiny spines", "It contains natural caffeine"), H),
+        q("bioy_papryka_c", "Weight for weight, which of these has more vitamin C than an orange?", "A red pepper", listOf("A banana", "A potato", "An apple"), H),
 
         /* ----------------------------- Expert ----------------------------- */
         q("bio_amylaza", "Which enzyme in saliva breaks down starch?", "Amylase", listOf("Pepsin", "Lipase", "Trypsin"), X),
@@ -255,6 +268,9 @@ object BiologyQuestions {
         q("biox_lzy_rodzaje", "How many kinds of tears do human eyes make?", "Three", listOf("One", "Two", "Five"), X),
         q("biox_zielone_oczy", "Which is thought to be the rarest of the common natural eye colours?", "Green", listOf("Brown", "Blue", "Hazel"), X),
         q("biox_grzyb_oregon", "The largest known living organism by area is a fungus growing in which US state?", "Oregon", listOf("Alaska", "Texas", "Florida"), X),
-        q("biox_drzewa_siec", "Trees in a forest can share nutrients through underground networks of what?", "Fungi", listOf("Earthworms", "Ant tunnels", "Rainwater channels"), X)
+        q("biox_drzewa_siec", "Trees in a forest can share nutrients through underground networks of what?", "Fungi", listOf("Earthworms", "Ant tunnels", "Rainwater channels"), X),
+        q("bioy_zielone_pomarancze", "Why are many ripe oranges in the tropics still green?", "Warm nights keep their chlorophyll", listOf("They are a different species", "They are picked too early", "The soil lacks iron"), X),
+        q("bioy_zapach_trawy", "What is the smell of freshly cut grass, really?", "A chemical distress signal", listOf("Chlorophyll evaporating", "Soil bacteria waking up", "Pollen bursting open"), X),
+        q("bioy_insulina", "In which country was insulin first used to treat diabetes, in 1922?", "Canada", listOf("Germany", "Britain", "The USA"), X)
     )
 }

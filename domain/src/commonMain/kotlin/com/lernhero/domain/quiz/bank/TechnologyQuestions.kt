@@ -133,6 +133,11 @@ object TechnologyQuestions {
         q("tecx_spacex", "Which company developed the reusable Falcon 9 rocket?", "SpaceX", listOf("Blue Origin", "Boeing", "NASA"), M),
         q("tecx_cookies", "What are 'cookies' on a website?", "Small files that remember you", listOf("Viruses hidden in ads", "Pop-up windows", "Deleted web pages"), M),
         q("tecx_404", "What does 'Error 404' on a website mean?", "The page was not found", listOf("The server is on fire", "You have no internet", "Your password is wrong"), M),
+        q("tecy_newton_logo", "Which company's very first logo showed Isaac Newton sitting under a tree?", "Apple", listOf("Microsoft", "IBM", "Intel"), M),
+        q("tecy_amazon_strzalka", "The arrow in Amazon's logo points from which letter to which?", "A to Z", listOf("A to N", "M to Z", "O to N"), M),
+        q("tecy_tux", "What is the name of Linux's penguin mascot?", "Tux", listOf("Pingu", "Linus", "Waddles"), M),
+        q("tecy_deepfake", "What is a 'deepfake'?", "A fake video or voice made by AI", listOf("A scan of a very deep lake", "A fraud on a banking app", "A fake social media profile"), M),
+        q("tecy_bialy_kapelusz", "What is a 'white hat' hacker?", "One who hacks to find and fix flaws", listOf("One who steals data for money", "One who spreads viruses", "One who attacks governments"), M),
 
         /* ------------------------------ Hard ------------------------------ */
         q("day2_ram_vs_dysk", "Why does a computer slow down when RAM runs out?", "It starts swapping data to much slower storage", listOf("The processor overheats and throttles", "The screen starts refreshing slower", "The network connection is throttled"), H),
@@ -195,6 +200,9 @@ object TechnologyQuestions {
         q("tecx_microsoft_nazwa", "The name Microsoft is a blend of which two words?", "Microcomputer and software", listOf("Microchip and soft drink", "Microwave and software", "Micro and softness"), H),
         q("tecx_rakieta_stephenson", "What was the name of George Stephenson's famous 1829 locomotive?", "The Rocket", listOf("The Flyer", "The Comet", "The Arrow"), H),
         q("tecx_saturn_v", "Which giant rocket launched the Apollo astronauts to the Moon?", "Saturn V", listOf("Atlas", "Titan", "Falcon 9"), H),
+        q("tecy_android_slodycze", "Until 2019, Android versions were named after what?", "Desserts and sweets", listOf("Famous robots", "Planets", "Animals"), H),
+        q("tecy_sikorsky", "Which engineer built the first practical single-rotor helicopter, in 1939?", "Igor Sikorsky", listOf("Juan de la Cierva", "Howard Hughes", "Frank Whittle"), H),
+        q("tecy_gps_cztery", "How many satellites must a phone hear, at minimum, to fix its position in 3D?", "Four", listOf("One", "Two", "Twelve"), H),
 
         /* ----------------------------- Expert ----------------------------- */
         q("day2_klucz_publiczny", "In public-key cryptography, what may be shared freely?", "The public key", listOf("The private key", "Both keys", "Neither key"), X),
@@ -234,6 +242,10 @@ object TechnologyQuestions {
         q("tecx_tranzystor", "Which tiny invention of 1947, from Bell Labs, made modern electronics possible?", "The transistor", listOf("The microchip", "The vacuum tube", "The laser"), X),
         q("tecx_cd_74", "The CD's 74-minute length was reportedly chosen to fit which piece of music?", "Beethoven's Ninth Symphony", listOf("The Beatles' 'Abbey Road'", "Vivaldi's 'Four Seasons'", "Mozart's 'Requiem'"), X),
         q("tecx_lazy_bones", "What was one of the first TV remote controls, attached by a cable in 1950, called?", "Lazy Bones", listOf("Couch King", "Click Master", "Zapper"), X),
-        q("tecx_zmywarka", "Who invented one of the first successful dishwashers, in 1886?", "Josephine Cochrane", listOf("Marie Curie", "Ada Lovelace", "Florence Nightingale"), X)
+        q("tecx_zmywarka", "Who invented one of the first successful dishwashers, in 1886?", "Josephine Cochrane", listOf("Marie Curie", "Ada Lovelace", "Florence Nightingale"), X),
+        q("tecy_dyskietka", "Roughly how much data could a standard 3.5-inch floppy disk hold?", "1.44 MB", listOf("144 MB", "14.4 GB", "144 KB"), X),
+        q("tecy_whittle", "Which British engineer patented the turbojet engine in 1930?", "Frank Whittle", listOf("Igor Sikorsky", "Barnes Wallis", "Isambard Kingdom Brunel"), X),
+        q("tecy_brunel", "Which Victorian engineer built the giant steamship 'Great Eastern'?", "Isambard Kingdom Brunel", listOf("George Stephenson", "James Watt", "Thomas Telford"), X),
+        q("tecy_elektryk_xix", "In which century was the first electric car built?", "The 19th", listOf("The 20th", "The 21st", "The 18th"), X)
     )
 }

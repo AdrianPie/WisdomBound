@@ -67,6 +67,7 @@ object ScienceQuestions {
         q("scix_slady_ksiezyc", "Why will the footprints left on the Moon last for millions of years?", "No wind or rain erases them", listOf("The dust there is frozen", "They were sealed with glue", "The Moon has no gravity"), E),
         q("scix_tecza_kolory", "How many colours are traditionally named in a rainbow?", "Seven", listOf("Five", "Six", "Nine"), E),
         q("scix_magnesy", "What happens when you push the north poles of two magnets together?", "They push each other away", listOf("They snap together", "They lose their magnetism", "They start to spin"), E),
+        q("sciy_poranna_gwiazda", "Which planet is often called the 'Morning Star' and the 'Evening Star'?", "Venus", listOf("Mars", "Jupiter", "Mercury"), E),
 
         /* ----------------------------- Medium ----------------------------- */
         q("sci_jowisz", "Which planet of the Solar System is the largest?", "Jupiter", listOf("Saturn", "Neptune", "Uranus"), M),
@@ -155,6 +156,11 @@ object ScienceQuestions {
         q("scix_gromowy_huk", "What is the loud bang when a plane flies faster than sound called?", "A sonic boom", listOf("A jet crack", "A thunderclap", "An air snap"), M),
         q("scix_rgb", "What are the three primary colours of light used in screens?", "Red, green and blue", listOf("Red, yellow and blue", "Cyan, magenta and yellow", "Orange, green and violet"), M),
         q("scix_ksiezyc_sekunda", "Roughly how long does light take to travel from the Moon to the Earth?", "About 1 second", listOf("About 8 minutes", "About 1 hour", "About 1 day"), M),
+        q("sciy_ksiezyc_horyzont", "Why does the Moon look bigger when it is near the horizon?", "It is an illusion in our brain", listOf("It is closer to us then", "The air magnifies it", "It swells with the tides"), M),
+        q("sciy_iss_wysokosc", "At roughly what height does the International Space Station orbit?", "About 400 km", listOf("About 40 km", "About 4,000 km", "About 40,000 km"), M),
+        q("sciy_pierscienie_lod", "What are Saturn's rings mostly made of?", "Chunks of ice", listOf("Gold dust", "Clouds of gas", "Molten rock"), M),
+        q("sciy_wielki_woz", "The Big Dipper (the Plough) is part of which constellation?", "Ursa Major", listOf("Orion", "Cassiopeia", "Ursa Minor"), M),
+        q("sciy_nobel_dziedziny", "Which of these was NOT one of Alfred Nobel's original prize categories?", "Mathematics", listOf("Physics", "Literature", "Peace"), M),
 
         /* ------------------------------ Hard ------------------------------ */
         q("sci_einstein", "Who formulated the theory of relativity?", "Albert Einstein", listOf("Isaac Newton", "Niels Bohr", "Max Planck"), H),
@@ -226,6 +232,10 @@ object ScienceQuestions {
         q("scix_gwiazdy_oko", "Roughly how many stars can you see with the naked eye on a very dark, clear night?", "A few thousand", listOf("A few hundred", "A few million", "About a billion"), H),
         q("scix_droga_mleczna", "Roughly how many stars are there in the Milky Way?", "100 to 400 billion", listOf("About a million", "About a billion", "About 10 trillion"), H),
         q("scix_leonow", "Who made the first ever spacewalk, in 1965?", "Alexei Leonov", listOf("Yuri Gagarin", "Neil Armstrong", "Ed White"), H),
+        q("sciy_podwojna_tecza", "In a double rainbow, what is special about the fainter second bow?", "Its colours are reversed", listOf("It is always white", "It is upside down", "It has no red"), H),
+        q("sciy_obrot_ziemi", "At the equator, roughly how fast does the Earth's surface spin?", "About 1,670 km/h", listOf("About 167 km/h", "About 16,700 km/h", "About 16 km/h"), H),
+        q("sciy_pluton_serce", "What huge shape did the New Horizons probe spot on Pluto in 2015?", "A heart", listOf("A smiley face", "A star", "A cross"), H),
+        q("sciy_pioruny_sekunda", "Roughly how many times does lightning strike the Earth every second?", "About 50", listOf("About 5", "About 500", "About 5,000"), H),
 
         /* ----------------------------- Expert ----------------------------- */
         q("sci_kwant", "Who launched quantum theory?", "Max Planck", listOf("Albert Einstein", "Werner Heisenberg", "Erwin Schrodinger"), X),
@@ -271,6 +281,10 @@ object ScienceQuestions {
         q("scix_neptun_wiatr", "Which planet has the fastest winds in the Solar System?", "Neptune", listOf("Jupiter", "Saturn", "Venus"), X),
         q("scix_lustra_ksiezyc", "What did Apollo astronauts leave on the Moon that scientists still bounce lasers off?", "Mirror reflectors", listOf("Radio beacons", "Solar panels", "Metal flags"), X),
         q("scix_wieza_eiffla_lato", "Why is the Eiffel Tower up to about 15 cm taller in summer?", "Its iron expands in the heat", listOf("The ground beneath it rises", "It gets a new coat of paint", "Summer winds stretch it"), X),
-        q("scix_geostacjonarna", "At about what height do geostationary satellites orbit, staying above one spot on Earth?", "About 36,000 km", listOf("About 400 km", "About 3,600 km", "About 360,000 km"), X)
+        q("scix_geostacjonarna", "At about what height do geostationary satellites orbit, staying above one spot on Earth?", "About 36,000 km", listOf("About 400 km", "About 3,600 km", "About 360,000 km"), X),
+        q("sciy_fobos_dejmos", "What are the names of Mars's two moons?", "Phobos and Deimos", listOf("Io and Europa", "Titan and Rhea", "Castor and Pollux"), X),
+        q("sciy_krakatau", "The 1883 eruption of which volcano made one of the loudest sounds in recorded history?", "Krakatoa", listOf("Vesuvius", "Mount St Helens", "Etna"), X),
+        q("sciy_punkt_potrojny", "At its 'triple point', water can exist in which states at once?", "Solid, liquid and gas", listOf("Only liquid and gas", "Only ice and steam", "Plasma and liquid"), X),
+        q("sciy_kosmos_temperatura", "What is the background temperature of deep space?", "About -270 °C", listOf("About -50 °C", "About 0 °C", "About -1,000 °C"), X)
     )
 }
