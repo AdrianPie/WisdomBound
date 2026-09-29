@@ -47,6 +47,9 @@ object CapitalQuestions {
         q("cap_szkocja", "What is the capital of Scotland?", "Edinburgh", listOf("Glasgow", "Aberdeen", "Dundee"), E),
         q("cap_katalonia", "Which city is the capital of Catalonia?", "Barcelona", listOf("Madrid", "Valencia", "Seville"), E),
         q("cap_hawaje", "What is the capital of the US state of Hawaii?", "Honolulu", listOf("Hilo", "Kona", "Lahaina"), E),
+        q("capx_dc", "What does the 'D.C.' in Washington, D.C. stand for?", "District of Columbia", listOf("Direct Capital", "Democratic Centre", "Department of Congress"), E),
+        q("capx_luksemburg", "Which of these countries has a capital with exactly the same name as the country?", "Luxembourg", listOf("Belgium", "Austria", "Denmark"), E),
+        q("capx_trafalgar", "Nelson's Column stands in which London square?", "Trafalgar Square", listOf("Piccadilly Circus", "Leicester Square", "Covent Garden"), E),
 
         /* ----------------------------- Medium ----------------------------- */
         q("cap_canberra", "What is the capital of Australia?", "Canberra", listOf("Sydney", "Melbourne", "Perth"), M),
@@ -104,6 +107,16 @@ object CapitalQuestions {
         q("cap_bangkok_palac", "In which capital city is the Grand Palace with its Emerald Buddha temple?", "Bangkok", listOf("Hanoi", "Phnom Penh", "Yangon"), M),
         q("cap_tivoli", "In which capital city is the Tivoli Gardens amusement park?", "Copenhagen", listOf("Oslo", "Stockholm", "Vienna"), M),
         q("cap_metro_londyn", "Which capital city opened the world's first underground railway, in 1863?", "London", listOf("Paris", "Budapest", "New York"), M),
+        q("capx_plac_czerwony", "Which famous square lies at the heart of Moscow?", "Red Square", listOf("Tiananmen Square", "Palace Square", "Freedom Square"), M),
+        q("capx_tiananmen", "Which huge square lies at the heart of Beijing?", "Tiananmen Square", listOf("Red Square", "Times Square", "Wenceslas Square"), M),
+        q("capx_dublin_guinness", "Which capital city is home to the Guinness Storehouse brewery?", "Dublin", listOf("London", "Edinburgh", "Cardiff"), M),
+        q("capx_wieden_muzyka", "Which capital was home to Mozart, Beethoven and Schubert for much of their careers?", "Vienna", listOf("Berlin", "Prague", "Paris"), M),
+        q("capx_fontanna_trevi", "Visitors to Rome toss coins over their shoulder into which fountain?", "The Trevi Fountain", listOf("The Fountain of Neptune", "The Four Rivers Fountain", "The Fountain of Youth"), M),
+        q("capx_kair_piramidy", "On the edge of which capital city do the Pyramids of Giza stand?", "Cairo", listOf("Khartoum", "Tripoli", "Amman"), M),
+        q("capx_praga_zegar", "Which capital city has the oldest astronomical clock still working, dating from 1410?", "Prague", listOf("Vienna", "Bern", "Budapest"), M),
+        q("capx_atomium", "Which capital city is home to the Atomium, a giant model of an iron crystal?", "Brussels", listOf("Paris", "Berlin", "Amsterdam"), M),
+        q("capx_siedem_wzgorz", "Rome is famously said to be built on how many hills?", "Seven", listOf("Three", "Twelve", "Five"), M),
+        q("capx_metro_moskwa", "Which capital's underground stations are famous for their chandeliers and marble halls?", "Moscow", listOf("London", "Paris", "Vienna"), M),
 
         /* ------------------------------ Hard ------------------------------ */
         q("cap_wellington", "What is the capital of New Zealand?", "Wellington", listOf("Auckland", "Christchurch", "Dunedin"), H),
@@ -159,6 +172,11 @@ object CapitalQuestions {
         q("cap_tybet", "Which city is the capital of Tibet?", "Lhasa", listOf("Kathmandu", "Thimphu", "Shigatse"), H),
         q("cap_polkula_poludniowa", "Which of these capital cities lies in the Southern Hemisphere?", "Nairobi", listOf("Bogota", "Kampala", "Singapore"), H),
         q("cap_najdalej_zachod", "Which of these capital cities lies furthest west?", "Lisbon", listOf("Dublin", "Madrid", "London"), H),
+        q("capx_meksyk_jezioro", "Mexico City was built on the site of what?", "A drained lake", listOf("A volcano crater", "An old silver mine", "A desert oasis"), H),
+        q("capx_oslo_nobel", "In which capital city is the Nobel Peace Prize awarded?", "Oslo", listOf("Stockholm", "Copenhagen", "Geneva"), H),
+        q("capx_damaszek", "Which capital is often called the oldest continuously inhabited capital city in the world?", "Damascus", listOf("Athens", "Rome", "Cairo"), H),
+        q("capx_filadelfia", "Which city served as the US capital for most of the 1790s?", "Philadelphia", listOf("Boston", "Baltimore", "Richmond"), H),
+        q("capx_valletta_mala", "Which is the smallest national capital in the European Union by area?", "Valletta", listOf("Luxembourg", "Nicosia", "Ljubljana"), H),
 
         /* ----------------------------- Expert ----------------------------- */
         q("cap_thimphu", "What is the capital of Bhutan?", "Thimphu", listOf("Paro", "Punakha", "Phuentsholing"), X),
@@ -200,6 +218,12 @@ object CapitalQuestions {
         q("cap_nairobi_nazwa", "Which capital city's name comes from a Maasai phrase meaning 'cool water'?", "Nairobi", listOf("Kampala", "Dodoma", "Kigali"), X),
         q("cap_monrowia", "Which African capital is named after a US president?", "Monrovia", listOf("Freetown", "Accra", "Banjul"), X),
         q("cap_kinszasa_brazzaville", "Apart from Rome and Vatican City, which two capitals lie closest to each other?", "Kinshasa and Brazzaville", listOf("Vienna and Bratislava", "Buenos Aires and Montevideo", "Copenhagen and Oslo"), X),
-        q("cap_addis_nazwa", "The name of which capital city means 'new flower'?", "Addis Ababa", listOf("Asmara", "Nairobi", "Kampala"), X)
+        q("cap_addis_nazwa", "The name of which capital city means 'new flower'?", "Addis Ababa", listOf("Asmara", "Nairobi", "Kampala"), X),
+        q("capx_bangkok_nazwa", "Which capital city has one of the longest place names in the world, beginning 'Krung Thep'?", "Bangkok", listOf("Phnom Penh", "Vientiane", "Kathmandu"), X),
+        q("capx_lizbona_1755", "Which capital city was flattened by a huge earthquake and tsunami in 1755?", "Lisbon", listOf("Madrid", "Rome", "Athens"), X),
+        q("capx_brasilia_samolot", "Seen from above, the plan of Brasilia is often said to look like what?", "An aeroplane", listOf("A star", "A fish", "A tree"), X),
+        q("capx_lenfant", "Which French-born engineer drew up the original street plan of Washington, D.C.?", "Pierre L'Enfant", listOf("Gustave Eiffel", "Georges Haussmann", "Le Corbusier"), X),
+        q("capx_haussmann", "Which planner rebuilt much of Paris with wide boulevards in the 1850s and 1860s?", "Baron Haussmann", listOf("Gustave Eiffel", "Le Corbusier", "Pierre L'Enfant"), X),
+        q("capx_canberra_konkurs", "The winning design for Canberra came from architects of which country?", "The USA", listOf("Britain", "France", "Germany"), X)
     )
 }

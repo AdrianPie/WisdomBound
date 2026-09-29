@@ -65,6 +65,15 @@ object SportQuestions {
         q("spo_mlyn_rugby", "In which sport would you see a 'scrum'?", "Rugby", listOf("Cricket", "Handball", "Water polo"), E),
         q("spo_wimbledon_pilki", "What colour have Wimbledon tennis balls been since 1986?", "Yellow", listOf("White", "Green", "Orange"), E),
         q("spo_kij_bilardowy", "In which of these sports do players use a cue?", "Snooker", listOf("Croquet", "Cricket", "Hockey"), E),
+        q("spox_bolt_kraj", "Which country is sprinter Usain Bolt from?", "Jamaica", listOf("The USA", "Trinidad and Tobago", "Kenya"), E),
+        q("spox_sumo", "Sumo wrestling is the national sport of which country?", "Japan", listOf("China", "Mongolia", "Korea"), E),
+        q("spox_czerwona_kartka", "What does a red card mean in football?", "The player is sent off", listOf("A penalty kick", "A free kick", "A first warning"), E),
+        q("spox_federer", "Which country is tennis great Roger Federer from?", "Switzerland", listOf("Sweden", "Austria", "Germany"), E),
+        q("spox_hole_in_one", "In golf, what is it called when the ball drops into the hole with a single shot?", "A hole in one", listOf("An eagle", "A birdie", "A bogey"), E),
+        q("spox_ferrari_kolor", "What colour are Ferrari's Formula 1 cars traditionally?", "Red", listOf("Yellow", "Silver", "Green"), E),
+        q("spox_mat", "What is it called when a king is under attack and cannot escape?", "Checkmate", listOf("Stalemate", "Castling", "En passant"), E),
+        q("spox_skoczek", "Which chess piece moves in an L-shape?", "The knight", listOf("The bishop", "The rook", "The queen"), E),
+        q("spox_koszykowka_piatka", "How many players does a basketball team have on court at one time?", "Five", listOf("Six", "Seven", "Four"), E),
 
         /* ----------------------------- Medium ----------------------------- */
         q("spo_mundial_2018", "Who won the soccer World Cup in 2018?", "France", listOf("Croatia", "Brazil", "Germany"), M),
@@ -144,6 +153,21 @@ object SportQuestions {
         q("spo_capoeira", "Which Brazilian martial art blends fighting with dance and music?", "Capoeira", listOf("Krav Maga", "Jiu-jitsu", "Savate"), M),
         q("spo_tenis_stolowy_chiny", "Which country has dominated Olympic table tennis for decades?", "China", listOf("Japan", "South Korea", "Sweden"), M),
         q("spo_nadal_rg", "Which player has won the French Open (Roland Garros) the most times?", "Rafael Nadal", listOf("Novak Djokovic", "Bjorn Borg", "Roger Federer"), M),
+        q("spox_znicz", "Where is the Olympic flame lit before each Games?", "Olympia, Greece", listOf("Athens' old stadium", "Mount Olympus", "The host city"), M),
+        q("spox_jordan_bulls", "For which NBA team did Michael Jordan win six championships?", "The Chicago Bulls", listOf("The Los Angeles Lakers", "The Boston Celtics", "The New York Knicks"), M),
+        q("spox_katar", "Which country hosted the 2022 FIFA World Cup?", "Qatar", listOf("Saudi Arabia", "The UAE", "Russia"), M),
+        q("spox_karny", "From how far away is a football penalty kick taken?", "11 metres", listOf("9 metres", "16 metres", "20 metres"), M),
+        q("spox_var", "What does 'VAR' stand for in football?", "Video Assistant Referee", listOf("Visual Action Replay", "Video Area Review", "Verified Action Result"), M),
+        q("spox_serena", "Which tennis star won 23 Grand Slam singles titles in the Open Era?", "Serena Williams", listOf("Venus Williams", "Steffi Graf", "Martina Navratilova"), M),
+        q("spox_bogey", "In golf, what is a score of one over par on a hole called?", "A bogey", listOf("A birdie", "A condor", "A double"), M),
+        q("spox_tyson_ucho", "Which boxer bit off part of Evander Holyfield's ear in 1997?", "Mike Tyson", listOf("Muhammad Ali", "George Foreman", "Lennox Lewis"), M),
+        q("spox_le_mans", "Which famous motor race lasts 24 hours?", "Le Mans", listOf("The Monaco Grand Prix", "The Indianapolis 500", "The Dakar Rally"), M),
+        q("spox_cool_runnings", "Which tropical country's bobsleigh team inspired the film 'Cool Runnings'?", "Jamaica", listOf("Kenya", "Fiji", "Brazil"), M),
+        q("spox_gretzky", "Which ice hockey legend was nicknamed 'The Great One'?", "Wayne Gretzky", listOf("Mario Lemieux", "Bobby Orr", "Gordie Howe"), M),
+        q("spox_babe_ruth", "Which baseball legend was nicknamed 'the Bambino'?", "Babe Ruth", listOf("Joe DiMaggio", "Lou Gehrig", "Jackie Robinson"), M),
+        q("spox_triathlon", "In what order are the three parts of a triathlon done?", "Swim, bike, run", listOf("Run, bike, swim", "Bike, swim, run", "Swim, run, bike"), M),
+        q("spox_pilka_reczna", "In which sport must players not step inside the semicircle around the goal?", "Handball", listOf("Water polo", "Netball", "Lacrosse"), M),
+        q("spox_el_clasico", "Which two clubs meet in 'El Clasico'?", "Real Madrid and Barcelona", listOf("Barcelona and Atletico", "Real Madrid and Sevilla", "Valencia and Barcelona"), M),
 
         /* ------------------------------ Hard ------------------------------ */
         q("spo_bolt", "What is Usain Bolt's world record in the 100 m?", "9.58 s", listOf("9.69 s", "9.72 s", "9.49 s"), H),
@@ -198,6 +222,16 @@ object SportQuestions {
         q("spo_tyson", "Who became the youngest heavyweight boxing champion, at just 20?", "Mike Tyson", listOf("Muhammad Ali", "George Foreman", "Floyd Patterson"), H),
         q("spo_golf_dolki", "Roughly how many dimples does a typical golf ball have?", "300 to 400", listOf("50 to 100", "1,000 to 1,200", "About 20"), H),
         q("spo_crucible", "Which sport's World Championship is played at the Crucible Theatre in Sheffield?", "Snooker", listOf("Darts", "Chess", "Table tennis"), H),
+        q("spox_rpa_2010", "Which country hosted the first FIFA World Cup in Africa, in 2010?", "South Africa", listOf("Egypt", "Morocco", "Nigeria"), H),
+        q("spox_silver_arrows", "Which Formula 1 team's cars are nicknamed 'the Silver Arrows'?", "Mercedes", listOf("McLaren", "Williams", "Red Bull"), H),
+        q("spox_senna", "Which Brazilian F1 legend died after a crash at Imola in 1994?", "Ayrton Senna", listOf("Nelson Piquet", "Rubens Barrichello", "Emerson Fittipaldi"), H),
+        q("spox_tour_dlugosc", "Roughly how long does the Tour de France last?", "About three weeks", listOf("About one week", "About two months", "About ten days"), H),
+        q("spox_jackie_robinson", "Who broke Major League Baseball's colour barrier in 1947?", "Jackie Robinson", listOf("Hank Aaron", "Willie Mays", "Satchel Paige"), H),
+        q("spox_carlsen", "Which Norwegian player became World Chess Champion in 2013?", "Magnus Carlsen", listOf("Viswanathan Anand", "Sergey Karjakin", "Fabiano Caruana"), H),
+        q("spox_fischer", "Which American won the 1972 chess 'Match of the Century' against Boris Spassky?", "Bobby Fischer", listOf("Paul Morphy", "Hikaru Nakamura", "Reuben Fine"), H),
+        q("spox_rugby_szkola", "The sport of rugby is named after what?", "An English school", listOf("A Welsh town", "A Scottish king", "A Roman game"), H),
+        q("spox_eddie_orzel", "Which British ski jumper became a cult hero at the 1988 Winter Olympics despite finishing last?", "Eddie 'the Eagle' Edwards", listOf("Alberto 'La Bomba' Tomba", "Franz Klammer", "Matti Nykanen"), H),
+        q("spox_mundial_kobiet_usa", "Which country has won the most FIFA Women's World Cups?", "The USA", listOf("Germany", "Norway", "Japan"), H),
 
         /* ----------------------------- Expert ----------------------------- */
         q("spo_dekatlon", "Which event closes the men's Olympic decathlon on the second day?", "The 1500 metres", listOf("The javelin throw", "The pole vault", "The 110 m hurdles"), X),
@@ -239,6 +273,14 @@ object SportQuestions {
         q("spo_super_bowl_pierwszy", "Which team won the first Super Bowl, in 1967?", "Green Bay Packers", listOf("Kansas City Chiefs", "New York Jets", "Dallas Cowboys"), X),
         q("spo_switzer", "Who was the first woman to run the Boston Marathon with an official number, in 1967?", "Kathrine Switzer", listOf("Bobbi Gibb", "Joan Benoit", "Grete Waitz"), X),
         q("spo_jaszyn", "Which Soviet player is the only goalkeeper to win the Ballon d'Or?", "Lev Yashin", listOf("Gianluigi Buffon", "Oliver Kahn", "Dino Zoff"), X),
-        q("spo_sekwana_1900", "In which river were the swimming races of the 1900 Paris Olympics held?", "The Seine", listOf("The Thames", "The Rhine", "The Loire"), X)
+        q("spo_sekwana_1900", "In which river were the swimming races of the 1900 Paris Olympics held?", "The Seine", listOf("The Thames", "The Rhine", "The Loire"), X),
+        q("spox_kartki", "Football's yellow and red cards were inspired by what?", "Traffic lights", listOf("Playing cards", "Railway signals", "Ship flags"), X),
+        q("spox_bikila", "Which Ethiopian runner won the 1960 Olympic marathon barefoot?", "Abebe Bikila", listOf("Haile Gebrselassie", "Kenenisa Bekele", "Miruts Yifter"), X),
+        q("spox_zatopek", "Which Czech runner won the 5,000 m, 10,000 m and marathon at the 1952 Olympics?", "Emil Zatopek", listOf("Paavo Nurmi", "Lasse Viren", "Abebe Bikila"), X),
+        q("spox_nurmi", "Which 'Flying Finn' won nine Olympic golds in running in the 1920s?", "Paavo Nurmi", listOf("Lasse Viren", "Hannes Kolehmainen", "Emil Zatopek"), X),
+        q("spox_ali_znicz", "Which boxing legend lit the Olympic cauldron at the 1996 Atlanta Games?", "Muhammad Ali", listOf("Joe Frazier", "George Foreman", "Evander Holyfield"), X),
+        q("spox_freeman", "Which Aboriginal athlete lit the Olympic flame and then won 400 m gold at Sydney 2000?", "Cathy Freeman", listOf("Nova Peris", "Evonne Goolagong", "Sally Pearson"), X),
+        q("spox_grecja_2004", "Which huge outsiders won the European Football Championship in 2004?", "Greece", listOf("Denmark", "Portugal", "Czechia"), X),
+        q("spox_leicester", "Which 5000-to-1 outsiders won the English Premier League in 2016?", "Leicester City", listOf("Blackburn Rovers", "Aston Villa", "Nottingham Forest"), X)
     )
 }

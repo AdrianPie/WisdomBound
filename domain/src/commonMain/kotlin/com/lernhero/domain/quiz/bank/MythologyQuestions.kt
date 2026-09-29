@@ -65,7 +65,6 @@ object MythologyQuestions {
         q("myt_pan", "Which Greek god of the wild had the legs of a goat and played pipes?", "Pan", listOf("Dionysus", "Hermes", "Apollo"), E),
         q("myt_helena", "Whose beauty was said to have 'launched a thousand ships'?", "Helen of Troy", listOf("Penelope", "Cleopatra", "Aphrodite"), E),
         q("myt_nic_tezeusza", "What did Theseus use to find his way back out of the labyrinth?", "A ball of thread", listOf("A trail of breadcrumbs", "A map on a shield", "A burning torch"), E),
-        q("myt_loki_marvel", "In the Marvel films, who is Thor's mischievous adopted brother?", "Loki", listOf("Heimdall", "Hela", "Balder"), E),
         q("myt_leprechaun", "In Irish folklore, which little creatures hide pots of gold?", "Leprechauns", listOf("Pixies", "Elves", "Gnomes"), E),
         q("myt_excalibur", "What is the name of King Arthur's legendary sword?", "Excalibur", listOf("Durendal", "Joyeuse", "Gram"), E),
         q("myt_merlin", "Who is the wizard who advises King Arthur?", "Merlin", listOf("Gandalf", "Morgana", "Lancelot"), E),
@@ -76,6 +75,13 @@ object MythologyQuestions {
         q("myt_srebrna_kula", "In folklore, what is needed to kill a werewolf?", "A silver bullet", listOf("A wooden stake", "Holy water", "A golden arrow"), E),
         q("myt_smok_walia", "Which mythical creature appears on the flag of Wales?", "A red dragon", listOf("A griffin", "A unicorn", "A phoenix"), E),
         q("myt_romulus_remus", "Which twins, raised by a she-wolf, are said to have founded Rome?", "Romulus and Remus", listOf("Castor and Pollux", "Apollo and Artemis", "Cain and Abel"), E),
+        q("mytx_hera", "Who was the queen of the Greek gods?", "Hera", listOf("Athena", "Aphrodite", "Demeter"), E),
+        q("mytx_ares_mars", "What is the Roman name for the Greek god Ares?", "Mars", listOf("Jupiter", "Mercury", "Neptune"), E),
+        q("mytx_trojzab", "What three-pronged weapon does Poseidon carry?", "A trident", listOf("A spear", "A bow", "A sickle"), E),
+        q("mytx_zodiak", "How many animals are there in the Chinese zodiac?", "12", listOf("10", "8", "13"), E),
+        q("mytx_wrozka_zebuszka", "In many countries, which folklore figure leaves money for a child's lost tooth?", "The Tooth Fairy", listOf("Santa Claus", "The Sandman", "The Easter Bunny"), E),
+        q("mytx_laponia", "According to Finnish tradition, in which region does Santa Claus live?", "Lapland", listOf("Greenland", "Siberia", "Iceland"), E),
+        q("mytx_robin_hood", "In which forest did Robin Hood and his Merry Men hide?", "Sherwood Forest", listOf("The Black Forest", "Epping Forest", "The New Forest"), E),
 
         /* ----------------------------- Medium ----------------------------- */
         q("cultw_odyn_ptaki", "Which two ravens brought Odin news of the world?", "Huginn and Muninn", listOf("Geri and Freki", "Sleipnir and Fenrir", "Vidar and Vali"), M),
@@ -143,6 +149,19 @@ object MythologyQuestions {
         q("myt_dzinn", "In Arabian folklore, what is a djinn (genie) made of?", "Smokeless fire", listOf("Sand and wind", "Moonlight", "Clay and water"), M),
         q("myt_szeherezada", "Who tells the stories night after night in 'One Thousand and One Nights'?", "Scheherazade", listOf("Aladdin", "Sinbad", "Ali Baba"), M),
         q("myt_maui", "Which Polynesian demigod is said to have fished up islands with his magic hook?", "Maui", listOf("Tangaroa", "Pele", "Kamapua'a"), M),
+        q("mytx_lew_nemejski", "What was the first of Heracles's famous labours?", "Killing the Nemean lion", listOf("Cleaning the Augean stables", "Capturing Cerberus", "Slaying the Hydra"), M),
+        q("mytx_europa_byk", "In the form of which animal did Zeus carry off the princess Europa?", "A white bull", listOf("An eagle", "A swan", "A golden horse"), M),
+        q("mytx_dwunastu", "How many major Olympian gods were there traditionally?", "Twelve", listOf("Seven", "Nine", "Twenty"), M),
+        q("mytx_hermes_merkury", "What is the Roman name for the Greek god Hermes?", "Mercury", listOf("Mars", "Apollo", "Vulcan"), M),
+        q("mytx_chinski_smok", "In Chinese tradition, dragons are mostly seen as what?", "Bringers of luck and rain", listOf("Evil fire-breathers", "Guardians of the dead", "Messengers of war"), M),
+        q("mytx_zodiak_kot", "According to legend, which animal missed out on the Chinese zodiac because the rat tricked it?", "The cat", listOf("The dog", "The fox", "The duck"), M),
+        q("mytx_zodiak_szczur", "Which animal comes first in the Chinese zodiac?", "The rat", listOf("The ox", "The dragon", "The tiger"), M),
+        q("mytx_chupacabra", "Which legendary creature is said to drink the blood of goats in Latin America?", "The chupacabra", listOf("The wendigo", "The kappa", "The bunyip"), M),
+        q("mytx_troll_slonce", "In Scandinavian folklore, what happens to trolls caught in sunlight?", "They turn to stone", listOf("They melt", "They vanish in smoke", "They shrink"), M),
+        q("mytx_atlantyda", "Which ancient philosopher first told the story of the lost island of Atlantis?", "Plato", listOf("Homer", "Aristotle", "Herodotus"), M),
+        q("mytx_el_dorado", "What was El Dorado, sought by Spanish explorers?", "A legendary city or king of gold", listOf("A fountain of eternal youth", "A lost Roman legion", "A giant emerald mine"), M),
+        q("mytx_pani_jeziora", "According to legend, who gave King Arthur his famous sword?", "The Lady of the Lake", listOf("Merlin", "Morgan le Fay", "Guinevere"), M),
+        q("mytx_wilhelm_tell", "Which Swiss folk hero shot an apple off his son's head with a crossbow?", "William Tell", listOf("Robin Hood", "Roland", "El Cid"), M),
 
         /* ------------------------------ Hard ------------------------------ */
         q("cultw_izanagi", "In Japanese myth, which pair created the islands of Japan?", "Izanagi and Izanami", listOf("Amaterasu and Susanoo", "Raijin and Fujin", "Inari and Hachiman"), H),
@@ -199,6 +218,17 @@ object MythologyQuestions {
         q("myt_gaja", "Which primordial Greek goddess personified the Earth itself?", "Gaia", listOf("Rhea", "Hera", "Demeter"), H),
         q("myt_rea", "Who was the mother of Zeus, who saved him from being swallowed?", "Rhea", listOf("Gaia", "Hera", "Themis"), H),
         q("myt_pele", "Which Hawaiian goddess rules over volcanoes and fire?", "Pele", listOf("Hina", "Laka", "Namaka"), H),
+        q("mytx_achilles_styks", "Who dipped the baby Achilles in a magic river to make him invulnerable?", "His mother Thetis", listOf("His father Peleus", "The centaur Chiron", "The goddess Athena"), H),
+        q("mytx_andromeda", "Which princess, chained to a rock as an offering to a sea monster, was rescued by Perseus?", "Andromeda", listOf("Ariadne", "Psyche", "Eurydice"), H),
+        q("mytx_hades_pluton", "Which Roman god is the equivalent of the Greek Hades?", "Pluto", listOf("Saturn", "Vulcan", "Janus"), H),
+        q("mytx_harpie", "What were the Harpies in Greek myth?", "Winged monsters with women's faces", listOf("Giant one-eyed blacksmiths", "Three-headed guard dogs", "Nymphs of the deep sea"), H),
+        q("mytx_thor_panna", "In one old tale, the thunder god dresses up as what to trick the giant who stole his weapon?", "A bride", listOf("A giant", "A beggar", "A cow"), H),
+        q("mytx_thot_ibis", "The Egyptian god Thoth usually has the head of which bird?", "An ibis", listOf("A falcon", "A vulture", "A heron"), H),
+        q("mytx_krampus", "Which horned creature of Alpine folklore punishes naughty children at Christmas?", "Krampus", listOf("The Grinch", "A troll", "The Erlking"), H),
+        q("mytx_golem", "In Jewish folklore, what is a golem?", "A clay figure brought to life", listOf("A demon of the desert", "A wise old rabbi", "A cursed silver ring"), H),
+        q("mytx_ponce_de_leon", "Which Spanish explorer is linked in legend to the search for the Fountain of Youth in Florida?", "Juan Ponce de Leon", listOf("Hernan Cortes", "Francisco Pizarro", "Hernando de Soto"), H),
+        q("mytx_lancelot", "Which knight of the Round Table fell in love with Queen Guinevere?", "Sir Lancelot", listOf("Sir Gawain", "Sir Galahad", "Sir Percival"), H),
+        q("mytx_grendel", "Which monster does the hero Beowulf fight first?", "Grendel", listOf("Smaug", "The Kraken", "Fafnir"), H),
 
         /* ----------------------------- Expert ----------------------------- */
         q("cultw_mahabharata", "Which Sanskrit epic contains the Bhagavad Gita?", "The Mahabharata", listOf("The Ramayana", "The Rigveda", "The Upanishads"), X),
@@ -236,6 +266,16 @@ object MythologyQuestions {
         q("myt_klitajmestra", "Which queen murdered her husband Agamemnon when he came home from Troy?", "Clytemnestra", listOf("Jocasta", "Hecuba", "Andromache"), X),
         q("myt_nut", "Which Egyptian goddess was the sky, arching her body over the Earth?", "Nut", listOf("Geb", "Hathor", "Tefnut"), X),
         q("myt_skoll", "In Norse myth, which wolf chases the Sun across the sky?", "Skoll", listOf("Fenrir", "Hati", "Garm"), X),
-        q("myt_narasimha", "Which avatar of Vishnu has the head of a lion and the body of a man?", "Narasimha", listOf("Varaha", "Matsya", "Kurma"), X)
+        q("myt_narasimha", "Which avatar of Vishnu has the head of a lion and the body of a man?", "Narasimha", listOf("Varaha", "Matsya", "Kurma"), X),
+        q("mytx_midas_uszy", "Apollo punished King Midas by giving him the ears of which animal?", "A donkey", listOf("A rabbit", "A bat", "A goat"), X),
+        q("mytx_gorgony", "Medusa was one of three monstrous sisters known as what?", "The Gorgons", listOf("The Graeae", "The Harpies", "The Sirens"), X),
+        q("mytx_idun", "Which Norse goddess guards the golden apples that keep the gods young?", "Idun", listOf("Freyja", "Frigg", "Sif"), X),
+        q("mytx_sif", "The trickster god cut off the golden hair of which goddess, Thor's wife?", "Sif", listOf("Freyja", "Frigg", "Idun"), X),
+        q("mytx_befana", "In Italian folklore, which kindly old witch brings children presents on 5 January?", "La Befana", listOf("Baba Yaga", "Perchta", "Frau Holle"), X),
+        q("mytx_kot_bozonarodzeniowy", "In Icelandic folklore, which creature eats people who get no new clothes for Christmas?", "The Yule Cat", listOf("The Yule Goat", "The Snow Wolf", "The Frost Bear"), X),
+        q("mytx_golem_praga", "The most famous golem legend comes from which city?", "Prague", listOf("Vienna", "Krakow", "Budapest"), X),
+        q("mytx_bunyip", "The bunyip is a legendary creature said to lurk in the swamps of which country?", "Australia", listOf("Canada", "Brazil", "India"), X),
+        q("mytx_kelpie", "What is a kelpie in Scottish folklore?", "A water spirit in horse form", listOf("A bagpipe-playing fairy", "A giant sea eagle", "A ghost that guards castles"), X),
+        q("mytx_fafnir", "Which dragon did the hero Sigurd (Siegfried) slay?", "Fafnir", listOf("Smaug", "Nidhogg", "Jormungand"), X)
     )
 }

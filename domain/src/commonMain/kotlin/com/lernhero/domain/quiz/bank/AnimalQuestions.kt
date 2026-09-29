@@ -59,6 +59,17 @@ object AnimalQuestions {
         q("ani_arachnofobia", "What is the fear of spiders called?", "Arachnophobia", listOf("Claustrophobia", "Agoraphobia", "Acrophobia"), E),
         q("ani_wydry_lapki", "Why do sea otters often hold paws while they sleep?", "So they don't drift apart", listOf("To keep each other warm", "To show who is in charge", "To protect their food"), E),
         q("ani_szop_mycie", "Raccoons are famous for seeming to do what with their food?", "Wash it", listOf("Bury it", "Share it", "Hide it in trees"), E),
+        q("anix_wieloryb_oddech", "Through what does a whale breathe?", "A blowhole", listOf("Gills", "Its skin", "Its tail"), E),
+        q("anix_nietoperz_spanie", "How do bats usually rest?", "Hanging upside down", listOf("Lying on their backs", "Standing on one leg", "Floating on water"), E),
+        q("anix_flaming_noga", "Which pink bird often rests standing on one leg?", "The flamingo", listOf("The heron", "The stork", "The spoonbill"), E),
+        q("anix_jez", "What does a hedgehog do when it feels threatened?", "Rolls into a spiky ball", listOf("Plays dead", "Sprays a bad smell", "Spits at the attacker"), E),
+        q("anix_skunks", "Which black-and-white animal sprays a foul smell to defend itself?", "The skunk", listOf("The badger", "The raccoon", "The panda"), E),
+        q("anix_bobr_tama", "Which animal builds dams across streams?", "The beaver", listOf("The otter", "The muskrat", "The water vole"), E),
+        q("anix_krab_bokiem", "Which animal is famous for walking sideways?", "The crab", listOf("The lobster", "The shrimp", "The scorpion"), E),
+        q("anix_paw", "Which bird fans out a huge tail covered in 'eyes' to impress females?", "The peacock", listOf("The turkey", "The pheasant", "The parrot"), E),
+        q("anix_swietlik", "Which insects light up in the dark to attract mates?", "Fireflies", listOf("Crickets", "Moths", "Ladybirds"), E),
+        q("anix_atrament", "What does an octopus squirt to escape from predators?", "Ink", listOf("Water", "Venom", "Sand"), E),
+        q("anix_czekolada_pies", "Which common human treat is poisonous to dogs?", "Chocolate", listOf("Carrots", "Plain rice", "Cucumber"), E),
 
         /* ----------------------------- Medium ----------------------------- */
         q("ani_osmiornica_serca", "How many hearts does an octopus have?", "3", listOf("1", "2", "5"), M),
@@ -131,6 +142,20 @@ object AnimalQuestions {
         q("ani_lemury", "Where do wild lemurs live?", "Madagascar", listOf("Borneo", "Sri Lanka", "New Guinea"), M),
         q("ani_wydra_kamien", "Why do sea otters often carry a favourite stone?", "To crack open shellfish", listOf("To weigh themselves down", "To mark their territory", "To sharpen their teeth"), M),
         q("ani_pingwin_kamyk", "Male Adelie penguins court females by offering what?", "A pebble", listOf("A fish", "A feather", "A shell"), M),
+        q("anix_zolw_dlugowiecznosc", "Which land animal can live the longest, sometimes past 150 years?", "The giant tortoise", listOf("The elephant", "The parrot", "The crocodile"), M),
+        q("anix_wrona_narzedzia", "Which bird is famous for making tools, like hooks bent from twigs?", "The New Caledonian crow", listOf("The African grey parrot", "The common magpie", "The European starling"), M),
+        q("anix_dodo", "On which island did the dodo live before it was wiped out?", "Mauritius", listOf("Madagascar", "Sri Lanka", "Tahiti"), M),
+        q("anix_nietoperz_wampir", "What do vampire bats feed on?", "Blood", listOf("Fruit", "Insects", "Nectar"), M),
+        q("anix_komar_samice", "Which mosquitoes bite people to drink blood?", "Only the females", listOf("Only the males", "Both equally", "Only the young"), M),
+        q("anix_pszczola_zadlo", "What usually happens to a honeybee after it stings a person?", "It dies", listOf("It loses its wings", "It becomes a queen", "Nothing at all"), M),
+        q("anix_konie_sen", "Horses can sleep while doing what?", "Standing up", listOf("Walking", "Swimming", "Eating"), M),
+        q("anix_wyjec", "Which monkey is one of the loudest land animals on Earth?", "The howler monkey", listOf("The spider monkey", "The capuchin", "The macaque"), M),
+        q("anix_diabel_tasmanski", "Which noisy marsupial with a powerful bite now lives wild only on Tasmania?", "The Tasmanian devil", listOf("The quokka", "The wombat", "The numbat"), M),
+        q("anix_rozdymka", "Which fish puffs itself up into a spiky ball when threatened?", "The pufferfish", listOf("The lionfish", "The stonefish", "The angelfish"), M),
+        q("anix_golab_pocztowy", "What were homing pigeons famously used for?", "Carrying messages", listOf("Hunting rabbits", "Guarding castles", "Finding water"), M),
+        q("anix_bielik", "Which bird is the national symbol of the United States?", "The bald eagle", listOf("The golden eagle", "The wild turkey", "The condor"), M),
+        q("anix_wibrysy", "What do cats mainly use their whiskers for?", "Sensing their surroundings", listOf("Keeping warm", "Attracting mates", "Cleaning their fur"), M),
+        q("anix_bernardyn", "Which dog breed is famous for mountain rescues in the Swiss Alps?", "The St. Bernard", listOf("The Husky", "The Labrador", "The Great Dane"), M),
 
         /* ------------------------------ Hard ------------------------------ */
         q("ani_dziobak", "Which mammal lays eggs?", "Platypus", listOf("Armadillo", "Sloth", "Hedgehog"), H),
@@ -195,6 +220,20 @@ object AnimalQuestions {
         q("ani_rekin_zeby", "How many teeth can a shark lose and regrow over its lifetime?", "Thousands", listOf("About twenty", "About a hundred", "None at all"), H),
         q("ani_kot_przodek", "Domestic cats descend from which wild cat?", "The African wildcat", listOf("The European wildcat", "The lynx", "The serval"), H),
         q("ani_czerwona_panda", "Which animal was called a 'panda' first, decades before the giant panda was described?", "The red panda", listOf("The raccoon", "The binturong", "The sun bear"), H),
+        q("anix_hipopotam_pot", "What is the reddish 'blood sweat' of a hippo actually?", "A natural sunscreen", listOf("Real blood", "Muddy water", "Poison"), H),
+        q("anix_slon_lustro", "Which of these animals can recognise itself in a mirror?", "The elephant", listOf("The dog", "The cat", "The horse"), H),
+        q("anix_wrony_twarze", "Crows can remember what for years, and hold grudges against it?", "Individual human faces", listOf("Car number plates", "Their own reflection", "The sound of thunder"), H),
+        q("anix_wilk_tasmanski", "The thylacine, declared extinct in the 20th century, was better known as what?", "The Tasmanian tiger", listOf("The Australian lion", "The marsupial bear", "The dingo wolf"), H),
+        q("anix_termity", "Termite mounds are admired by architects for what?", "Natural air conditioning", listOf("Perfect round shapes", "Glass-like walls", "Underwater tunnels"), H),
+        q("anix_strus_predkosc", "About how fast can an ostrich run?", "About 70 km/h", listOf("About 30 km/h", "About 110 km/h", "About 15 km/h"), H),
+        q("anix_zyrafa_sen", "About how long does a giraffe sleep in a whole day?", "Under two hours", listOf("About six hours", "About ten hours", "About fourteen hours"), H),
+        q("anix_kaszalot_glos", "Which animal makes the loudest sounds of any animal on Earth?", "The sperm whale", listOf("The humpback whale", "The elephant", "The lion"), H),
+        q("anix_uszy_foki", "How can you tell a sea lion from a true seal?", "Sea lions have ear flaps", listOf("Seals have whiskers", "Sea lions lack flippers", "Seals are always bigger"), H),
+        q("anix_manat", "Sailors' tales of mermaids may have come from sightings of which animal?", "The manatee", listOf("The walrus", "The seal", "The dolphin"), H),
+        q("anix_quokka", "Which small Australian marsupial is famous for seeming to smile?", "The quokka", listOf("The bilby", "The bandicoot", "The sugar glider"), H),
+        q("anix_wedkarz", "How does the deep-sea anglerfish attract prey in the dark?", "A glowing lure on its head", listOf("A loud humming song", "A cloud of sweet scent", "Flashing its silver teeth"), H),
+        q("anix_karaluch", "Roughly how long can a cockroach survive without its head?", "About a week", listOf("About a minute", "About an hour", "About a year"), H),
+        q("anix_dalmatynczyk", "What colour are Dalmatian puppies when they are born?", "Pure white", listOf("Black with white spots", "Grey", "Brown"), H),
 
         /* ----------------------------- Expert ----------------------------- */
         q("ani_hemocyjanina", "Which animal has blue blood?", "Octopus", listOf("Frog", "Snake", "Carp"), X),
@@ -232,6 +271,10 @@ object AnimalQuestions {
         q("ani_kret_gwiazdonosy", "Which mammal is considered the fastest eater, finding and swallowing prey in about a quarter of a second?", "The star-nosed mole", listOf("The pygmy shrew", "The anteater", "The aardvark"), X),
         q("ani_wieloryb_krewny", "Which land animals are whales' closest living relatives?", "Hippos", listOf("Seals", "Elephants", "Manatees"), X),
         q("ani_ptasie_mleko", "Which birds feed their chicks a milk-like substance called 'crop milk'?", "Pigeons", listOf("Eagles", "Ostriches", "Parrots"), X),
-        q("ani_orki_menopauza", "Besides humans, which animals are known to go through menopause?", "Orcas and pilot whales", listOf("Chimpanzees and gorillas", "Elephants and rhinos", "Lions and tigers"), X)
+        q("ani_orki_menopauza", "Besides humans, which animals are known to go through menopause?", "Orcas and pilot whales", listOf("Chimpanzees and gorillas", "Elephants and rhinos", "Lions and tigers"), X),
+        q("anix_leniwiec_plywanie", "Sloths are surprisingly good at what?", "Swimming", listOf("Jumping", "Running", "Digging"), X),
+        q("anix_szklana_zaba", "Which frog has see-through belly skin that shows its beating heart?", "The glass frog", listOf("The tree frog", "The bullfrog", "The dart frog"), X),
+        q("anix_skorpena", "Which fish is considered the most venomous in the world?", "The stonefish", listOf("The lionfish", "The pufferfish", "The stingray"), X),
+        q("anix_swierszcz", "By counting what can you roughly work out the air temperature?", "A cricket's chirps", listOf("A frog's croaks", "An owl's hoots", "A bee's buzzes"), X)
     )
 }

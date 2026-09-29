@@ -371,7 +371,8 @@ object AchievementCatalog {
         QuizCategory.Math to JewelType.Topaz,
         QuizCategory.Literature to JewelType.Amethyst,
         QuizCategory.Technology to JewelType.Topaz,
-        QuizCategory.Mythology to JewelType.Emerald
+        QuizCategory.Mythology to JewelType.Emerald,
+        QuizCategory.PopCulture to JewelType.Amethyst
     )
 
     fun byGroup(group: AchievementGroup): List<Achievement> = all.filter { it.group == group }

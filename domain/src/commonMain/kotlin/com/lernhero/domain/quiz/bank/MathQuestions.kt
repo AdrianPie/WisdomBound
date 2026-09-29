@@ -62,6 +62,8 @@ object MathQuestions {
         q("mat_godziny_trzy_dni", "How many hours are in three days?", "72", listOf("60", "48", "96"), E),
         q("mat_zegar_15", "What is 15:00 on a 12-hour clock?", "3 p.m.", listOf("5 p.m.", "1 p.m.", "3 a.m."), E),
         q("mat_20_procent_ulamek", "What is 20% written as a fraction?", "1/5", listOf("1/20", "1/4", "2/5"), E),
+        q("matx_pentagon", "How many sides does the Pentagon building near Washington have?", "Five", listOf("Six", "Eight", "Four"), E),
+        q("matx_13", "Fear of which number is called 'triskaidekaphobia'?", "13", listOf("7", "4", "666"), E),
 
         /* ----------------------------- Medium ----------------------------- */
         q("day2_procent_skladany", "What is compound interest?", "Interest earned on interest already added", listOf("A one-time fee", "A fixed monthly cost", "Interest paid only at the end"), M),
@@ -118,6 +120,9 @@ object MathQuestions {
         q("mat_pociag_predkosc", "A train covers 60 km in 30 minutes. What is its speed in km/h?", "120", listOf("60", "90", "30"), M),
         q("mat_pierwiastek_dwoch", "Which famous number starts 1.41421...?", "The square root of 2", listOf("The golden ratio", "Pi", "e"), M),
         q("mat_bilion_zera", "How many zeros are in one trillion?", "12", listOf("9", "15", "18"), M),
+        q("matx_procenty", "Which is bigger: 30% of 50 or 50% of 30?", "They are equal", listOf("30% of 50", "50% of 30", "It depends"), M),
+        q("matx_sudoku", "In a standard Sudoku, which digits must each row contain?", "1 to 9, once each", listOf("0 to 9, once each", "Any nine digits", "1 to 9, repeats allowed"), M),
+        q("matx_cyfry_indie", "The digits 0 to 9 we use today, called 'Arabic numerals', first developed where?", "India", listOf("Arabia", "Egypt", "Greece"), M),
 
         /* ------------------------------ Hard ------------------------------ */
         q("mat_silnia_5", "What is 5! (5 factorial)?", "120", listOf("100", "60", "150"), H),
@@ -160,6 +165,11 @@ object MathQuestions {
         q("mat_dziewiatki", "How many times does the digit 9 appear when you write the numbers from 1 to 100?", "20", listOf("10", "11", "19"), H),
         q("mat_biegun_polnocny", "You walk 1 km south, 1 km east and 1 km north, and end up where you started. Where did you start?", "The North Pole", listOf("The equator", "The South Pole", "The prime meridian"), H),
         q("mat_zegar_bicie", "A clock takes 5 seconds to strike six o'clock. How long does it take to strike twelve?", "11 seconds", listOf("10 seconds", "12 seconds", "9 seconds"), H),
+        q("matx_rok_2000", "Was the year 2000 a leap year?", "Yes - it divides by 400", listOf("No - century years never are", "No - it was skipped", "Yes - like every even year"), H),
+        q("matx_pizza", "Which gives you more pizza: one 18-inch pizza or two 12-inch pizzas?", "One 18-inch pizza", listOf("Two 12-inch pizzas", "Exactly the same", "It depends on the crust"), H),
+        q("matx_kwadrat_magiczny", "In a 3x3 magic square using the numbers 1 to 9, what does every row, column and diagonal add up to?", "15", listOf("12", "18", "45"), H),
+        q("matx_a4", "Why does A4 paper keep the same shape when cut in half?", "Its sides are in the ratio 1 : root 2", listOf("Its sides follow the golden ratio", "It is almost a perfect square", "Its sides are in the ratio 2 : 3"), H),
+        q("matx_kroliki", "The Fibonacci sequence first appeared in a puzzle about breeding which animals?", "Rabbits", listOf("Mice", "Sheep", "Chickens"), H),
 
         /* ----------------------------- Expert ----------------------------- */
         q("mat_liczba_e", "What is the approximate value of e?", "2.72", listOf("3.14", "1.62", "2.24"), X),
@@ -201,6 +211,11 @@ object MathQuestions {
         q("mat_ruletka", "What do all the numbers on a roulette wheel add up to?", "666", listOf("555", "777", "1,000"), X),
         q("mat_nasa_pi", "About how many decimal places of pi does NASA use for its most precise spacecraft navigation?", "15", listOf("5", "100", "1,000"), X),
         q("mat_szachownica_kwadraty", "Counting squares of every size, how many squares are on a chessboard?", "204", listOf("64", "128", "1,296"), X),
-        q("mat_nieparzyste_100", "What is the sum of the first 100 odd numbers?", "10,000", listOf("5,000", "5,050", "9,900"), X)
+        q("mat_nieparzyste_100", "What is the sum of the first 100 odd numbers?", "10,000", listOf("5,000", "5,050", "9,900"), X),
+        q("matx_a0", "How big is a sheet of A0 paper?", "Exactly one square metre", listOf("Exactly one square foot", "Half a square metre", "Two square metres"), X),
+        q("matx_archimedes_pi", "Which ancient Greek pinned down pi by drawing polygons with 96 sides?", "Archimedes", listOf("Euclid", "Pythagoras", "Ptolemy"), X),
+        q("matx_hypatia", "Which woman mathematician and astronomer of ancient Egypt was killed by a mob in 415?", "Hypatia", listOf("Sappho", "Aspasia", "Cleopatra"), X),
+        q("matx_ziemniaki", "A 100 kg sack of potatoes is 99% water. After drying it is 98% water. What does it weigh now?", "50 kg", listOf("98 kg", "99 kg", "90 kg"), X),
+        q("matx_ujemne_chiny", "Negative numbers were long rejected in Europe, but used centuries earlier by mathematicians in which country?", "China", listOf("Greece", "Egypt", "England"), X)
     )
 }

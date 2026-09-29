@@ -53,6 +53,9 @@ enum class QuizCategory(
     Technology("Technology", icon = "💻"),
     Mythology("Mythology", icon = "🐉"),
 
+    /** Film, muzyka, seriale, gry wideo, komiksy i zabawki - patrz [com.lernhero.domain.quiz.bank.PopCultureQuestions]. */
+    PopCulture("Pop culture", icon = "🎬"),
+
     /** Temat lokalny: historia, kultura i geografia Polski. Widoczny tylko przy jezyku polskim. */
     Poland("Poland", icon = "🇵🇱", localeCode = "pl"),
 

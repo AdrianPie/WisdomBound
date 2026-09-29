@@ -66,6 +66,11 @@ object BiologyQuestions {
         q("bio_hummus", "What is hummus mainly made from?", "Chickpeas", listOf("Lentils", "Soybeans", "Peas"), E),
         q("bio_kurkuma", "Which yellow spice, made from a root, gives curry its colour?", "Turmeric", listOf("Saffron", "Cumin", "Paprika"), E),
         q("bio_szparagi", "Eating which vegetable famously makes many people's urine smell?", "Asparagus", listOf("Broccoli", "Spinach", "Celery"), E),
+        q("biox_mleczaki", "How many baby teeth does a child usually have?", "20", listOf("32", "16", "24"), E),
+        q("biox_serce_piesc", "A human heart is roughly the size of what?", "A fist", listOf("A grape", "A football", "A melon"), E),
+        q("biox_sen_tercja", "Roughly what share of their life does a person spend asleep?", "About a third", listOf("About a tenth", "About half", "About two-thirds"), E),
+        q("biox_ryz", "Which grain is the main food for more than half of the world's people?", "Rice", listOf("Wheat", "Maize", "Oats"), E),
+        q("biox_oczy_brazowe", "Which is the most common eye colour in the world?", "Brown", listOf("Blue", "Green", "Grey"), E),
 
         /* ----------------------------- Medium ----------------------------- */
         q("bio_chromosomy", "How many chromosomes does a healthy human cell have?", "46", listOf("23", "48", "44"), M),
@@ -134,6 +139,14 @@ object BiologyQuestions {
         q("bio_mozg_waga", "Roughly how much does an adult human brain weigh?", "About 1.4 kg", listOf("About 400 g", "About 3 kg", "About 5 kg"), M),
         q("bio_kichanie_slonce", "About one in four people sneeze when they look into bright light. What is this called?", "The photic sneeze reflex", listOf("A sunlight allergy", "Solar hay fever", "Light sensitivity syndrome"), M),
         q("bio_szczepionka_mrna", "The first mRNA vaccines approved for wide use protected against which disease?", "COVID-19", listOf("Measles", "Influenza", "Polio"), M),
+        q("biox_krew_litry", "Roughly how much blood is in an adult's body?", "About 5 litres", listOf("About 1 litre", "About 12 litres", "About 20 litres"), M),
+        q("biox_oczy_niemowlat", "Many babies of European descent are born with eyes of which colour, which may change later?", "Blue or grey", listOf("Green", "Dark brown", "Hazel"), M),
+        q("biox_bambus_trawa", "Bamboo is actually a giant kind of what?", "Grass", listOf("Tree", "Fern", "Palm"), M),
+        q("biox_awokado", "Botanically, an avocado is a kind of what?", "Berry", listOf("Nut", "Vegetable", "Legume"), M),
+        q("biox_rem", "In which stage of sleep do most vivid dreams happen?", "REM sleep", listOf("Deep sleep", "Light sleep", "Just before waking"), M),
+        q("biox_leworeczni", "Roughly what share of people are left-handed?", "About 10%", listOf("About 1%", "About 30%", "About 50%"), M),
+        q("biox_baobab", "Which African tree can store thousands of litres of water in its huge trunk?", "The baobab", listOf("The acacia", "The mahogany", "The ebony"), M),
+        q("biox_grzyby_zwierzeta", "Mushrooms are more closely related to which group of living things?", "Animals", listOf("Plants", "Bacteria", "Algae"), M),
 
         /* ------------------------------ Hard ------------------------------ */
         q("bio_mejoza", "What is the cell division that produces sex cells called?", "Meiosis", listOf("Mitosis", "Cytokinesis", "Apoptosis"), H),
@@ -194,6 +207,17 @@ object BiologyQuestions {
         q("bio_gardlo_kosc", "Which bone is the only one not connected to any other bone?", "The hyoid", listOf("The kneecap", "The tailbone", "The stapes"), H),
         q("bio_pot_gruczoly", "Where does the skin have the most sweat glands per square centimetre?", "The soles of the feet", listOf("The armpits", "The forehead", "The back"), H),
         q("bio_plankton_tlen", "Roughly half of the oxygen we breathe is made where?", "By ocean plankton", listOf("In rainforests", "On grasslands", "By farm crops"), H),
+        q("biox_ananas", "Roughly how long does a pineapple plant take to grow a single fruit?", "About two years", listOf("About two weeks", "About two months", "About ten years"), H),
+        q("biox_banan_ziolo", "The banana plant is botanically what, rather than a tree?", "A giant herb", listOf("A grass", "A vine", "A cactus"), H),
+        q("biox_mieta", "Why does mint make your mouth feel cold?", "Menthol triggers cold-sensing nerves", listOf("It lowers the mouth's temperature", "It numbs the tongue with oil", "It releases tiny ice crystals"), H),
+        q("biox_obieg_krwi", "Roughly how long does it take blood to travel once around the whole body?", "About a minute", listOf("About an hour", "About ten seconds", "About a day"), H),
+        q("biox_slina", "Roughly how much saliva does a person produce each day?", "About a litre", listOf("About a teaspoon", "About five litres", "About ten litres"), H),
+        q("biox_miesnie_liczba", "Roughly how many muscles are there in the human body?", "About 600", listOf("About 60", "About 2,000", "About 206"), H),
+        q("biox_mozg_bol", "Why can surgeons operate on an awake patient's brain without it hurting?", "The brain has no pain receptors", listOf("The skull blocks the pain", "The brain heals instantly", "Brain cells are already numb"), H),
+        q("biox_rude_wlosy", "Which is the rarest natural hair colour?", "Red", listOf("Blond", "Black", "Brown"), H),
+        q("biox_sekwoja", "Which is the largest tree on Earth by volume?", "The giant sequoia", listOf("The baobab", "The kauri", "The Douglas fir"), H),
+        q("biox_mimoza", "Which plant folds up its leaves the moment you touch it?", "The sensitive plant", listOf("The fern", "The aloe vera", "The spider plant"), H),
+        q("biox_dzbanecznik", "How does a pitcher plant catch insects?", "Insects slip into digestive juice", listOf("It snaps shut like a jaw", "It shoots sticky threads", "It stings them with hairs"), H),
 
         /* ----------------------------- Expert ----------------------------- */
         q("bio_amylaza", "Which enzyme in saliva breaks down starch?", "Amylase", listOf("Pepsin", "Lipase", "Trypsin"), X),
@@ -226,6 +250,11 @@ object BiologyQuestions {
         q("bio_leeuwenhoek", "Who was the first person to see bacteria, through his own home-made microscopes?", "Antonie van Leeuwenhoek", listOf("Robert Hooke", "Louis Pasteur", "Robert Koch"), X),
         q("bio_barnard", "Who performed the first human-to-human heart transplant, in 1967?", "Christiaan Barnard", listOf("Michael DeBakey", "Denton Cooley", "Joseph Murray"), X),
         q("bio_neuron_dlugi", "Which human cells can be the longest, stretching up to about a metre?", "Nerve cells", listOf("Muscle fibres", "Egg cells", "Skin cells"), X),
-        q("bio_kofeina_pestycyd", "Why do coffee plants produce caffeine in the first place?", "To poison insects that eat them", listOf("To store energy for winter", "To survive night frosts", "To attract birds to the seeds"), X)
+        q("bio_kofeina_pestycyd", "Why do coffee plants produce caffeine in the first place?", "To poison insects that eat them", listOf("To store energy for winter", "To survive night frosts", "To attract birds to the seeds"), X),
+        q("biox_miesien_ucho", "Where is the smallest muscle in the human body?", "In the ear", listOf("In the eyelid", "In the little finger", "In the nose"), X),
+        q("biox_lzy_rodzaje", "How many kinds of tears do human eyes make?", "Three", listOf("One", "Two", "Five"), X),
+        q("biox_zielone_oczy", "Which is thought to be the rarest of the common natural eye colours?", "Green", listOf("Brown", "Blue", "Hazel"), X),
+        q("biox_grzyb_oregon", "The largest known living organism by area is a fungus growing in which US state?", "Oregon", listOf("Alaska", "Texas", "Florida"), X),
+        q("biox_drzewa_siec", "Trees in a forest can share nutrients through underground networks of what?", "Fungi", listOf("Earthworms", "Ant tunnels", "Rainwater channels"), X)
     )
 }

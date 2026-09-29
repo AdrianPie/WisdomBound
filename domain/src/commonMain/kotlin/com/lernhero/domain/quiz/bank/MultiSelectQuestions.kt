@@ -36,6 +36,7 @@ object MultiSelectQuestions {
     private val Lit = QuizCategory.Literature
     private val Tec = QuizCategory.Technology
     private val Myt = QuizCategory.Mythology
+    private val Pop = QuizCategory.PopCulture
     private val Pol = QuizCategory.Poland
 
     val all: List<MultiSelectEntry> = listOf(
@@ -75,10 +76,12 @@ object MultiSelectQuestions {
         ms("ms_dictators", "Which of these figures were 20th-century authoritarian leaders?", listOf("Stalin", "Mussolini", "Franco", "Mao Zedong"), listOf("Churchill", "Roosevelt", "de Gaulle"), His, M),
         ms("mst_wladcy_francja", "Which of these people ruled France?", listOf("Louis XIV", "Napoleon Bonaparte", "Charles de Gaulle"), listOf("Otto von Bismarck", "Oliver Cromwell", "Philip II of Spain", "Maria Theresa"), His, M),
         ms("mst_xx_wiek_wydarzenia", "Which of these happened in the 20th century?", listOf("The sinking of the Titanic", "The first Moon landing", "The fall of the Berlin Wall", "The Chernobyl disaster"), listOf("The French Revolution", "The American Civil War", "The invention of the telephone"), His, M),
+        ms("ms_hx_wladczynie", "Which of these women ruled as monarchs in their own right?", listOf("Elizabeth I", "Catherine the Great", "Queen Victoria", "Maria Theresa"), listOf("Marie Antoinette", "Anne Boleyn", "Josephine Bonaparte"), His, M),
         ms("ms_roman_emperors", "Which of these figures were Roman emperors?", listOf("Nero", "Trajan", "Hadrian", "Caligula"), listOf("Pericles", "Hannibal", "Spartacus"), His, H),
         ms("ms_ancient_wonders", "Which of these belong to the Seven Wonders of the Ancient World?", listOf("The Great Pyramid of Giza", "The Colossus of Rhodes", "The Hanging Gardens of Babylon", "The Lighthouse of Alexandria"), listOf("The Colosseum", "Machu Picchu", "The Great Wall"), His, H),
         ms("ms_un_security", "Which countries hold a permanent seat on the UN Security Council?", listOf("USA", "China", "Russia", "France"), listOf("Germany", "India", "Japan"), His, H),
         ms("mst_wynalazki_chinskie", "Which of these were invented in ancient or medieval China?", listOf("Paper", "Gunpowder", "The compass", "Printing"), listOf("The wheel", "Glass", "The steam engine"), His, H),
+        ms("ms_hx_afryka", "Which of these were empires or kingdoms in Africa?", listOf("Songhai", "Benin", "Kush", "Kongo"), listOf("Khmer", "Toltec", "Parthia"), His, H),
 
         /* ---------------------------- Elements ---------------------------- */
         ms("ms_metals", "Which of these elements are metals?", listOf("Iron", "Copper", "Zinc", "Lead"), listOf("Sulfur", "Phosphorus", "Iodine"), Ele, E),
@@ -206,6 +209,15 @@ object MultiSelectQuestions {
         ms("mst_potwory_wiele_glow", "Which of these mythical creatures have more than one head?", listOf("Cerberus", "The Hydra", "The Chimera"), listOf("The Minotaur", "The Cyclops", "Pegasus", "The Sphinx"), Myt, M),
         ms("ms_heracles", "Which of these are labors of Heracles?", listOf("The Nemean lion", "The Lernaean Hydra", "The Augean stables", "The apples of the Hesperides"), listOf("The Minotaur in the labyrinth", "The Golden Fleece", "The Trojan Horse"), Myt, H),
         ms("mst_bogowie_nordyccy_2", "Which of these belong to Norse mythology?", listOf("Yggdrasil", "Fenrir", "Valkyries", "Mjolnir"), listOf("Excalibur", "The Golden Fleece", "Cerberus"), Myt, H),
+
+        /* --------------------------- PopCulture --------------------------- */
+        ms("ms_pop_pixar", "Which of these films were made by Pixar?", listOf("Ratatouille", "Finding Nemo", "Up", "Cars"), listOf("Shrek", "Frozen", "Madagascar"), Pop, E),
+        ms("ms_pop_ksiezniczki", "Which of these are Disney princesses?", listOf("Ariel", "Belle", "Mulan", "Jasmine"), listOf("Fiona", "Anastasia", "Dorothy"), Pop, E),
+        ms("ms_pop_beatles", "Which of these were members of The Beatles?", listOf("John Lennon", "Paul McCartney", "George Harrison", "Ringo Starr"), listOf("Mick Jagger", "Keith Moon", "Eric Clapton"), Pop, M),
+        ms("ms_pop_nintendo", "Which of these game characters were created by Nintendo?", listOf("Link", "Kirby", "Donkey Kong", "Yoshi"), listOf("Sonic", "Crash Bandicoot", "Lara Croft"), Pop, M),
+        ms("ms_pop_marvel", "Which of these superheroes come from Marvel, not DC?", listOf("Spider-Man", "Iron Man", "Wolverine", "Black Panther"), listOf("Batman", "Superman", "Wonder Woman"), Pop, M),
+        ms("ms_pop_bond", "Which of these actors have played James Bond?", listOf("Timothy Dalton", "Roger Moore", "Pierce Brosnan", "Daniel Craig"), listOf("Hugh Grant", "Tom Cruise", "Christian Bale"), Pop, H),
+        ms("ms_pop_szwecja", "Which of these music acts come from Sweden?", listOf("Roxette", "Avicii", "Europe", "The Cardigans"), listOf("a-ha", "Bjork", "Aqua"), Pop, H),
 
         /* ----------------------------- Poland ----------------------------- */
         ms("ms_polish_kings", "Which of these figures were Kings of Poland?", listOf("Casimir the Great", "Wladyslaw Jagiello", "John III Sobieski", "Boleslaw the Brave"), listOf("Tadeusz Kosciuszko", "Jozef Pilsudski", "Nicolaus Copernicus"), Pol, M),

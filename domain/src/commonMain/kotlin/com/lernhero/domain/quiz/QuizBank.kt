@@ -11,6 +11,7 @@ import com.lernhero.domain.quiz.bank.LiteratureQuestions
 import com.lernhero.domain.quiz.bank.MathQuestions
 import com.lernhero.domain.quiz.bank.MythologyQuestions
 import com.lernhero.domain.quiz.bank.PolandQuestions
+import com.lernhero.domain.quiz.bank.PopCultureQuestions
 import com.lernhero.domain.quiz.bank.ScienceQuestions
 import com.lernhero.domain.quiz.bank.SportQuestions
 import com.lernhero.domain.quiz.bank.TechnologyQuestions
@@ -62,6 +63,7 @@ object QuizBank {
             LiteratureQuestions.all +
             TechnologyQuestions.all +
             MythologyQuestions.all +
+            PopCultureQuestions.all +
             // Temat lokalny - w banku siedzi zawsze, ale do wyboru trafia tylko przy jezyku PL
             // (patrz QuizCategory.builtinFor). Bank zna wszystko, filtruje dopiero UI.
             PolandQuestions.all

@@ -37,6 +37,7 @@ object OrderingQuestions {
     private val Lit = QuizCategory.Literature
     private val Tec = QuizCategory.Technology
     private val Myt = QuizCategory.Mythology
+    private val Pop = QuizCategory.PopCulture
     private val Pol = QuizCategory.Poland
 
     val all: List<OrderingEntry> = listOf(
@@ -72,16 +73,20 @@ object OrderingQuestions {
         ord("ordw_dekolonizacja", "Order these by when they gained independence, earliest first.", listOf("The United States", "Brazil", "India", "Namibia"), His, M),
         ord("ordt_odkrycia_geo", "Order these voyages chronologically, earliest first.", listOf("Columbus reaches the Americas", "Magellan's expedition sails around the world", "Cook reaches Australia's east coast", "Amundsen reaches the South Pole"), His, M),
         ord("ordt_wojny_usa", "Order these American conflicts chronologically, earliest first.", listOf("The War of Independence", "The Civil War", "The Vietnam War", "The Gulf War"), His, M),
+        ord("ord_hx_budowle", "Order these structures from oldest to newest.", listOf("Stonehenge", "The Colosseum", "The Taj Mahal", "The Eiffel Tower"), His, M),
         ord("ord3_wojny_europa", "Order these European conflicts from oldest.", listOf("The Hundred Years' War", "The Thirty Years' War", "The Napoleonic Wars", "World War I"), His, H),
         ord("ordw_cesarze_rzymu", "Order these Roman emperors chronologically, earliest first.", listOf("Augustus", "Nero", "Trajan", "Constantine the Great"), His, H),
         ord("ordw_imperia_azji", "Order these empires chronologically, earliest first.", listOf("The Han dynasty", "The Mongol Empire", "The Mughal Empire", "The Meiji Empire of Japan"), His, H),
         ord("ordt_imperia_upadek", "Order these empires by when they ended, earliest first.", listOf("The Western Roman Empire", "The Byzantine Empire", "The Mughal Empire", "The Ottoman Empire"), His, H),
         ord("ordt_rewolucje", "Order these revolutions chronologically, earliest first.", listOf("The American Revolution", "The French Revolution", "The Russian Revolution", "The Chinese Communist Revolution"), His, H),
+        ord("ord_hx_monarchowie", "Order these British monarchs by reign, earliest first.", listOf("Henry VIII", "Elizabeth I", "Queen Victoria", "Elizabeth II"), His, H),
+        ord("ord_hx_lotnictwo", "Order these milestones of flight from earliest.", listOf("The first hot-air balloon flight", "The Wright brothers' first flight", "Lindbergh's solo Atlantic crossing", "The Moon landing"), His, H),
         ord("ord2_historia_starozytnosc", "Order these civilizations by when they began to flourish, from oldest.", listOf("Sumer", "Ancient Egypt", "Classical Greece", "The Roman Empire"), His, X),
         ord("ord2_krolowie_anglii", "Order these events from English history from oldest.", listOf("The Battle of Hastings", "The Magna Carta", "The Wars of the Roses", "The Industrial Revolution"), His, X),
         ord("ord3_cywilizacje_ameryka", "Order these pre-Columbian civilizations by their peak, from oldest.", listOf("The Olmecs", "The Maya", "The Aztecs", "The Incas"), His, X),
         ord("ord3_dynastie_chiny", "Order these Chinese dynasties from oldest.", listOf("Han", "Tang", "Song", "Ming"), His, X),
         ord("ordt_cesarstwa_powierzchnia", "Order these empires by their greatest land area, smallest first.", listOf("The Roman Empire", "The Spanish Empire", "The Mongol Empire", "The British Empire"), His, X),
+        ord("ord_hx_starozytni", "Order these ancient figures by when they lived, earliest first.", listOf("Hammurabi", "Tutankhamun", "Alexander the Great", "Julius Caesar"), His, X),
 
         /* ---------------------------- Elements ---------------------------- */
         ord("ordw_liczba_atomowa", "Order these elements by atomic number, lowest first.", listOf("Hydrogen", "Carbon", "Iron", "Gold"), Ele, E),
@@ -198,6 +203,13 @@ object OrderingQuestions {
         ord("ordt_mitologia_wojna_trojanska", "Order these events of the Trojan War story, first to last.", listOf("The judgement of Paris", "The abduction of Helen", "The death of Hector", "The wooden horse"), Myt, H),
         ord("ordt_odyseusz_droga", "Order these stops on Odysseus's journey home, first to last.", listOf("The Cyclops Polyphemus", "Circe's island", "The Sirens", "Calypso's island"), Myt, H),
         ord("ord2_mitologia_nordycka", "Order these Norse mythology events in story order.", listOf("The world forming from Ymir", "The building of Asgard", "Baldur's death", "Ragnarok"), Myt, X),
+
+        /* --------------------------- PopCulture --------------------------- */
+        ord("ord_pop_star_wars", "Order these 'Star Wars' films by release, oldest first.", listOf("A New Hope", "The Empire Strikes Back", "Return of the Jedi", "The Phantom Menace"), Pop, M),
+        ord("ord_pop_style_muzyczne", "Order these music styles by when they first appeared, oldest first.", listOf("Jazz", "Rock and roll", "Hip hop", "Grunge"), Pop, M),
+        ord("ord_pop_disney", "Order these Disney animated films from oldest to newest.", listOf("Bambi", "Cinderella", "The Little Mermaid", "Frozen"), Pop, H),
+        ord("ord_pop_pixar", "Order these Pixar films from oldest to newest.", listOf("A Bug's Life", "Finding Nemo", "Up", "Coco"), Pop, H),
+        ord("ord_pop_gry", "Order these video games by release, oldest first.", listOf("Pong", "Pac-Man", "Tetris", "Minecraft"), Pop, H),
 
         /* ----------------------------- Poland ----------------------------- */
         ord("ord2_miasta_polska", "Order these Polish cities from least to most populous.", listOf("Bialystok", "Wroclaw", "Krakow", "Warsaw"), Pol, M),

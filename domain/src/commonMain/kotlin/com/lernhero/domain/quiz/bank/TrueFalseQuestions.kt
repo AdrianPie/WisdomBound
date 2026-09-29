@@ -34,6 +34,7 @@ object TrueFalseQuestions {
     private val Lit = QuizCategory.Literature
     private val Tec = QuizCategory.Technology
     private val Myt = QuizCategory.Mythology
+    private val Pop = QuizCategory.PopCulture
     private val Pol = QuizCategory.Poland
 
     val all: List<TrueFalseEntry> = listOf(
@@ -55,6 +56,7 @@ object TrueFalseQuestions {
         tf("tf_bio_cukier_dzieci", "Eating sugar makes children hyperactive.", false, Bio, M),
         tf("tf_bio_czytanie_ciemno", "Reading in dim light permanently damages your eyes.", false, Bio, M),
         tf("tf_bio_kichniecie_serce", "Your heart stops for a moment every time you sneeze.", false, Bio, M),
+        tf("tf_biox_oczy_rozmiar", "A person's eyeballs stay the same size from birth to adulthood.", false, Bio, M),
         tf("tf_bio_bakterie_gwiazdy", "There are more bacterial cells in your gut than stars in the Milky Way.", true, Bio, H),
         tf("tf_bio_blizniaki_odciski", "Identical twins have identical fingerprints.", false, Bio, H),
         tf("tf_bio_serce_poza_cialem", "A heart can keep beating for a while after being removed from the body.", true, Bio, H),
@@ -62,6 +64,7 @@ object TrueFalseQuestions {
         tf("tf_bio_ludzie_swieca", "The human body gives off a very faint glow of light, too dim for our eyes to see.", true, Bio, H),
         tf("tf_bio_paznokcie_smierc", "Fingernails and hair keep growing after a person dies.", false, Bio, H),
         tf("tf_bio_slonecznik", "Sunflowers keep turning to follow the Sun even when fully grown.", false, Bio, H),
+        tf("tf_biox_kawa", "Drinking a cup of coffee leaves you with less water in your body than before.", false, Bio, H),
         tf("tf_bio_mitochondria_dna", "Mitochondria carry their own DNA, separate from the cell nucleus.", true, Bio, X),
         tf("tf_bio_pomidor_ziemniak", "Tomatoes and potatoes belong to the same plant family.", true, Bio, X),
 
@@ -73,6 +76,7 @@ object TrueFalseQuestions {
         tf("tf_ani_byk_czerwony", "Bulls are enraged by the colour red.", false, Ani, E),
         tf("tf_ani_kot_lapy", "Cats always land on their feet, whatever height they fall from.", false, Ani, E),
         tf("tf_ani_psy_kolory", "Dogs see the world only in black and white.", false, Ani, E),
+        tf("tf_anix_wieloryb_ryba", "Whales are a kind of fish.", false, Ani, E),
         tf("tf_ani_zlota_rybka", "A goldfish's memory lasts only about three seconds.", false, Ani, M),
         tf("tf_ani_strus_piasek", "Ostriches bury their heads in the sand when frightened.", false, Ani, M),
         tf("tf_ani_rekin_plywanie", "Some sharks must keep swimming to keep breathing.", true, Ani, M),
@@ -84,6 +88,8 @@ object TrueFalseQuestions {
         tf("tf_ani_dzdzownica", "An earthworm cut in half grows into two new worms.", false, Ani, M),
         tf("tf_ani_flaming_piskle", "Flamingo chicks are pink when they hatch.", false, Ani, M),
         tf("tf_ani_swinie_pot", "Pigs roll in mud because they sweat too much.", false, Ani, M),
+        tf("tf_anix_kot_mleko", "Most adult cats digest cow's milk easily.", false, Ani, M),
+        tf("tf_anix_panda_mieso", "Giant pandas are classed as carnivores and sometimes eat meat.", true, Ani, M),
         tf("tf_ani_rozgwiazda_mozg", "Starfish have no brain.", true, Ani, H),
         tf("tf_ani_zolw_kloaka", "Some turtles can absorb oxygen through their rear end.", true, Ani, H),
         tf("tf_ani_krewetka_serce", "A shrimp's heart is located in its head region.", true, Ani, H),
@@ -92,6 +98,10 @@ object TrueFalseQuestions {
         tf("tf_ani_kosarz", "The daddy longlegs is the world's most venomous spider but its fangs are too short to bite.", false, Ani, H),
         tf("tf_ani_rekiny_drzewa", "Sharks existed on Earth before the first trees.", true, Ani, H),
         tf("tf_ani_krokodyl_jezyk", "Crocodiles cannot stick out their tongues.", true, Ani, H),
+        tf("tf_anix_hipopotam", "Hippos are strong swimmers.", false, Ani, H),
+        tf("tf_anix_pingwin_kolana", "Penguins have knees, hidden under their feathers.", true, Ani, H),
+        tf("tf_anix_zyrafa_nucenie", "Giraffes have been recorded humming at night.", true, Ani, H),
+        tf("tf_anix_wydra_kieszen", "Sea otters keep food in pouches of loose skin under their forelegs.", true, Ani, H),
         tf("tf_ani_pletwal_serce", "A blue whale's heart is roughly the size of a small car.", true, Ani, X),
         tf("tf_ani_pszczoly_twarze", "Honeybees can learn to recognise human faces.", true, Ani, X),
         tf("tf_ani_kangur_do_tylu", "Kangaroos can easily walk backwards.", false, Ani, X),
@@ -101,6 +111,7 @@ object TrueFalseQuestions {
         tf("tf_his_kleopatra_egipcjanka", "Cleopatra was of Egyptian descent.", false, His, E),
         tf("tf_his_sredniowiecze_kula", "Educated people in medieval Europe knew the Earth was round.", true, His, E),
         tf("tf_his_mur_wiek", "The Great Wall of China was built within a single century.", false, His, E),
+        tf("tf_hx_tutanchamon", "Tutankhamun became pharaoh when he was still a child.", true, His, E),
         tf("tf_his_ciastko_antonina", "There is solid evidence that Marie Antoinette said 'Let them eat cake'.", false, His, M),
         tf("tf_his_einstein_matma", "Albert Einstein failed mathematics at school.", false, His, M),
         tf("tf_his_stuletnia_100", "The Hundred Years' War lasted exactly one hundred years.", false, His, M),
@@ -111,6 +122,11 @@ object TrueFalseQuestions {
         tf("tf_his_elzbieta_mechanik", "Queen Elizabeth II trained as a truck mechanic during World War II.", true, His, M),
         tf("tf_his_podatek_broda", "Tsar Peter the Great made Russian men pay a tax for wearing a beard.", true, His, M),
         tf("tf_his_ketchup_lek", "Ketchup was once sold as a medicine.", true, His, M),
+        tf("tf_hx_wikingowie_brud", "Vikings were known for being dirtier than other Europeans of their time.", false, His, M),
+        tf("tf_hx_mur_ryz", "Sticky rice was mixed into the mortar of parts of the Great Wall of China.", true, His, M),
+        tf("tf_hx_waszyngton_wisnia", "There is solid evidence that young George Washington confessed to chopping down a cherry tree.", false, His, M),
+        tf("tf_hx_piwo_piramidy", "Workers who built the Egyptian pyramids received beer as part of their pay.", true, His, M),
+        tf("tf_hx_gwardia_szwajcarska", "The Pope's Swiss Guard has protected the Vatican since the 1500s.", true, His, M),
         tf("tf_his_bizancjum_xv", "The Byzantine Empire survived into the 15th century.", true, His, H),
         tf("tf_his_magna_carta_monarchia", "The Magna Carta abolished the English monarchy.", false, His, H),
         tf("tf_his_pazdziernik_listopad", "By today's calendar, Russia's October Revolution happened in November.", true, His, H),
@@ -121,9 +137,17 @@ object TrueFalseQuestions {
         tf("tf_his_koloseum_woda", "The Colosseum was flooded in its early years to stage mock sea battles.", true, His, H),
         tf("tf_his_pozar_londynu", "The Great Fire of London in 1666 killed thousands of people.", false, His, H),
         tf("tf_his_olow_wino", "Ancient Romans sweetened wine with syrup boiled down in lead pots.", true, His, H),
+        tf("tf_hx_kartagina_sol", "Ancient writers record that the Romans sowed salt over Carthage's fields in 146 BC.", false, His, H),
+        tf("tf_hx_samuraj_kobiety", "Some women of the samurai class trained and fought as warriors.", true, His, H),
+        tf("tf_hx_salem_stos", "The people executed in the Salem witch trials were burned at the stake.", false, His, H),
+        tf("tf_hx_panteon", "The Pantheon in Rome, nearly 1,900 years old, still has the world's largest unreinforced concrete dome.", true, His, H),
+        tf("tf_hx_gladiatorki", "Women sometimes fought as gladiators in ancient Rome.", true, His, H),
+        tf("tf_hx_mongolowie_poczta", "The Mongol Empire ran a relay system of mounted messengers across Asia.", true, His, H),
+        tf("tf_hx_mur_pomylka", "The Berlin Wall was opened partly because an East German official misread his notes at a press conference.", true, His, H),
         tf("tf_his_trzydziestoletnia_rzesza", "The Thirty Years' War was fought mainly in the Holy Roman Empire.", true, His, X),
         tf("tf_his_druk_chiny", "Movable-type printing existed in China centuries before Gutenberg.", true, His, X),
         tf("tf_his_piotr_petersburg", "Peter the Great moved Russia's capital from Moscow to St Petersburg.", true, His, X),
+        tf("tf_hx_lincoln_patent", "Abraham Lincoln is the only US president to have held a patent.", true, His, X),
 
         /* ---------------------------- Elements ---------------------------- */
         tf("tf_ele_zloto_magnes", "Gold is attracted to a magnet.", false, Ele, E),
@@ -195,6 +219,7 @@ object TrueFalseQuestions {
         tf("tf_sci_mikrofala_srodek", "Microwave ovens cook food from the inside out.", false, Sci, M),
         tf("tf_sci_podczerwien_aparat", "Many phone cameras can see infrared light that human eyes cannot.", true, Sci, M),
         tf("tf_sci_chmury_para", "Clouds are made of water vapour.", false, Sci, M),
+        tf("tf_scix_ciemna_strona", "The far side of the Moon is always in darkness.", false, Sci, M),
         tf("tf_sci_elektron_proton", "An electron is heavier than a proton.", false, Sci, H),
         tf("tf_sci_diament_wegiel", "Most diamonds form from compressed coal.", false, Sci, H),
         tf("tf_sci_atom_pusty", "Most of an atom's volume is empty space.", true, Sci, H),
@@ -202,9 +227,12 @@ object TrueFalseQuestions {
         tf("tf_sci_mpemba", "Under some conditions, hot water can freeze faster than cold water.", true, Sci, H),
         tf("tf_sci_merkury_rok_doba", "A year on Mercury is shorter than one full day-and-night cycle there.", true, Sci, H),
         tf("tf_sci_drzewa_gwiazdy", "There are more trees on Earth than stars in the Milky Way.", true, Sci, H),
+        tf("tf_scix_kompas", "A compass needle points exactly at the geographic North Pole.", false, Sci, H),
+        tf("tf_elex_rtec_mroz", "Mercury can freeze solid in a cold Siberian winter.", true, Sci, H),
         tf("tf_sci_splatanie_szybciej", "Quantum entanglement lets information travel faster than light.", false, Sci, X),
         tf("tf_sci_czas_gora", "Time passes very slightly faster on a mountaintop than at sea level.", true, Sci, X),
         tf("tf_sci_galaktyki_rozciagaja", "The expansion of the universe stretches galaxies themselves apart.", false, Sci, X),
+        tf("tf_scix_meteoryt", "Meteorites are always red-hot when they hit the ground.", false, Sci, X),
 
         /* --------------------------- Geography ---------------------------- */
         tf("tf_geo_everest_najwyzszy", "Mount Everest is the highest mountain above sea level.", true, Geo, E),
@@ -310,9 +338,11 @@ object TrueFalseQuestions {
         tf("tf_lit_christie_znikniecie", "Agatha Christie once went missing for 11 days.", true, Lit, H),
         tf("tf_lit_twain_kometa", "Mark Twain was born and died in years when Halley's Comet appeared.", true, Lit, H),
         tf("tf_lit_hathaway", "William Shakespeare's wife was called Anne Hathaway.", true, Lit, H),
+        tf("tf_litx_kamien_usa", "In the USA, the first Harry Potter book was retitled 'the Sorcerer's Stone' instead of 'the Philosopher's Stone'.", true, Lit, H),
         tf("tf_lit_dickinson_wiersze", "Emily Dickinson published only a handful of poems in her lifetime.", true, Lit, X),
         tf("tf_lit_hemingway_pulitzer", "'The Old Man and the Sea' won Hemingway the Pulitzer Prize.", true, Lit, X),
         tf("tf_lit_cervantes_szekspir", "Cervantes and Shakespeare died in the same year.", true, Lit, X),
+        tf("tf_litx_hemingway", "There is solid proof that Hemingway wrote the six-word story 'For sale: baby shoes, never worn'.", false, Lit, X),
 
         /* --------------------------- Technology --------------------------- */
         tf("tf_tec_www_internet", "The World Wide Web and the Internet are the same thing.", false, Tec, E),
@@ -368,6 +398,35 @@ object TrueFalseQuestions {
         tf("tf_myt_horus_oko", "Horus lost an eye fighting Set.", true, Myt, X),
         tf("tf_myt_minotaur_minos", "The Minotaur was King Minos's own son.", false, Myt, X),
         tf("tf_myt_cerber_glowy", "Cerberus has three heads in every ancient telling of his myth.", false, Myt, X),
+
+        /* --------------------------- PopCulture --------------------------- */
+        tf("tf_pop_simpsonowie_palce", "The Simpsons have only four fingers on each hand.", true, Pop, E),
+        tf("tf_pop_eurowizja_usa", "The United States takes part in the Eurovision Song Contest.", false, Pop, E),
+        tf("tf_pop_batman_moce", "Batman has superpowers.", false, Pop, E),
+        tf("tf_pop_abba_litery", "The name ABBA is made from the first letters of the four members' first names.", true, Pop, E),
+        tf("tf_pop_mickey_hot_dogs", "Mickey Mouse's first spoken words on screen were 'Hot dogs!'", true, Pop, M),
+        tf("tf_pop_pikachu_mysz", "Ash Ketchum's famous yellow partner is officially a 'mouse' Pokemon.", true, Pop, M),
+        tf("tf_pop_titanic_dluzszy", "The film 'Titanic' lasts longer than the real ship took to sink.", true, Pop, M),
+        tf("tf_pop_kubus_niedzwiedz", "Winnie-the-Pooh was named after a real bear at London Zoo.", true, Pop, M),
+        tf("tf_pop_frozen_andersen", "Disney's 'Frozen' was inspired by Hans Christian Andersen's 'The Snow Queen'.", true, Pop, M),
+        tf("tf_pop_mercury_zanzibar", "Freddie Mercury was born in Zanzibar.", true, Pop, M),
+        tf("tf_pop_vader_cytat", "In 'The Empire Strikes Back', Darth Vader says the words 'Luke, I am your father.'", false, Pop, H),
+        tf("tf_pop_play_it_again", "In 'Casablanca', Humphrey Bogart says 'Play it again, Sam.'", false, Pop, H),
+        tf("tf_pop_lustereczko", "In Disney's 'Snow White', the queen begins her spell with 'Mirror, mirror on the wall'.", false, Pop, H),
+        tf("tf_pop_mario_nazwa", "Mario was named after the landlord of his creators' first American warehouse.", true, Pop, H),
+        tf("tf_pop_beatles_nuty", "None of The Beatles could read sheet music when they became famous.", true, Pop, H),
+        tf("tf_pop_lego_opony", "LEGO has made more tyres than any car-tyre company in the world.", true, Pop, H),
+        tf("tf_pop_superman_skok", "In his first comics, Superman could not fly - he could only leap very far.", true, Pop, H),
+        tf("tf_pop_oz_sepia", "'The Wizard of Oz' (1939) opens in sepia tones and bursts into colour when Dorothy reaches Oz.", true, Pop, H),
+        tf("tf_pop_velociraptor", "Real Velociraptors were as tall as a grown man, like the ones in 'Jurassic Park'.", false, Pop, H),
+        tf("tf_pop_elvis_blond", "Elvis Presley's natural hair colour was dark blond, not black.", true, Pop, H),
+        tf("tf_pop_vader_dwoch_aktorow", "Darth Vader's body and voice were played by two different actors.", true, Pop, H),
+        tf("tf_pop_chewbacca_niedzwiedz", "Chewbacca's roar was built partly from real bear recordings.", true, Pop, H),
+        tf("tf_pop_beam_me_up", "Captain Kirk says the exact words 'Beam me up, Scotty' in the original 'Star Trek' series.", false, Pop, X),
+        tf("tf_pop_bond_ornitolog", "James Bond was named after a real American expert on birds.", true, Pop, X),
+        tf("tf_pop_puck_man", "Pac-Man was first released in Japan under the name 'Puck Man'.", true, Pop, X),
+        tf("tf_pop_hulk_szary", "When the Hulk first appeared in 1962, he was grey rather than green.", true, Pop, X),
+        tf("tf_pop_scooby_sinatra", "Scooby-Doo's name was inspired by the 'doo-be-doo-be-doo' in Frank Sinatra's 'Strangers in the Night'.", true, Pop, X),
 
         /* ----------------------------- Poland ----------------------------- */
         tf("tf_pol_curie_warszawa", "Marie Curie was born in Warsaw.", true, Pol, E),

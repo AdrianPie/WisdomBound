@@ -17,21 +17,22 @@ class QuizBankTest {
     @Test
     fun `bank ma duzo pytan w kazdej kategorii i na kazdym poziomie`() {
         // Drugi przeglad banku wycial ~820 pytan (ten sam fakt w kilku plikach, definicje
-        // z podrecznika, tabliczka mnozenia, pytania-zerowki) i dopisal ~1040 nowych. Progi
-        // poszly w gore razem z nim - bank ma nie wrocic do rozmiaru sprzed przegladu.
-        assertTrue(all.size >= 2600, "Bank powinien miec ponad 2600 pytan, ma ${all.size}")
+        // z podrecznika, tabliczka mnozenia, pytania-zerowki) i dopisal ~1040 nowych, a kolejna
+        // partia nastepny tysiac (glownie historia i nowa popkultura). Progi ida w gore razem
+        // z bankiem - ma nie wrocic do rozmiaru, przy ktorym pytania zaczynaly sie powtarzac.
+        assertTrue(all.size >= 3500, "Bank powinien miec ponad 3500 pytan, ma ${all.size}")
 
         // Slowka i wlasne talie nie sa w tym banku - powstaja z materialu gracza (patrz QuizCategory.builtin).
         // Flagi sa ograniczone liczba dostepnych grafik krajow, wiec maja nizszy prog.
         QuizCategory.builtin.filter { it != QuizCategory.Flags }.forEach { category ->
             val count = all.count { it.category == category }
-            assertTrue(count >= 150, "Kategoria ${category.label} ma tylko $count pytan")
+            assertTrue(count >= 180, "Kategoria ${category.label} ma tylko $count pytan")
         }
         assertTrue(all.count { it.category == QuizCategory.Flags } >= 40, "Kategoria flag ma za malo pytan")
 
         QuizDifficulty.entries.forEach { difficulty ->
             val count = all.count { it.difficulty == difficulty }
-            assertTrue(count >= 450, "Poziom ${difficulty.label} ma tylko $count pytan")
+            assertTrue(count >= 600, "Poziom ${difficulty.label} ma tylko $count pytan")
         }
     }
 

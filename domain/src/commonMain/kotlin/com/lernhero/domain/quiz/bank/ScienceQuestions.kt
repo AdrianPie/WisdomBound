@@ -64,6 +64,9 @@ object ScienceQuestions {
         q("sci_balon_wlosy", "Why does a balloon rubbed on your hair stick to a wall?", "Static electricity", listOf("Magnetism", "Air pressure", "Moisture"), E),
         q("sci_pierze_stal", "Which is heavier: a kilo of feathers or a kilo of steel?", "Neither - they weigh the same", listOf("The steel", "The feathers", "It depends on the air"), E),
         q("sci_eureka", "Which Greek scientist supposedly shouted 'Eureka!' in his bath?", "Archimedes", listOf("Pythagoras", "Euclid", "Aristotle"), E),
+        q("scix_slady_ksiezyc", "Why will the footprints left on the Moon last for millions of years?", "No wind or rain erases them", listOf("The dust there is frozen", "They were sealed with glue", "The Moon has no gravity"), E),
+        q("scix_tecza_kolory", "How many colours are traditionally named in a rainbow?", "Seven", listOf("Five", "Six", "Nine"), E),
+        q("scix_magnesy", "What happens when you push the north poles of two magnets together?", "They push each other away", listOf("They snap together", "They lose their magnetism", "They start to spin"), E),
 
         /* ----------------------------- Medium ----------------------------- */
         q("sci_jowisz", "Which planet of the Solar System is the largest?", "Jupiter", listOf("Saturn", "Neptune", "Uranus"), M),
@@ -145,6 +148,13 @@ object ScienceQuestions {
         q("sci_strefa_zycia", "What is a star's 'Goldilocks zone'?", "Where a planet could have liquid water", listOf("Its hottest inner layer", "A ring of gold-rich asteroids", "The area its light cannot reach"), M),
         q("sci_chicxulub", "The asteroid that wiped out the dinosaurs left a crater in which country?", "Mexico", listOf("The United States", "Australia", "Russia"), M),
         q("sci_swiatlo_biale", "What do you get when you mix all colours of light together?", "White light", listOf("Black", "Brown", "Grey"), M),
+        q("scix_ksiezyc_ziemia", "Roughly how many Moons would fit side by side across the Earth?", "About four", listOf("About ten", "About one and a half", "About forty"), M),
+        q("scix_hubble", "Which space telescope, launched in 1990, is famous for its deep-space photos?", "Hubble", listOf("Kepler", "Spitzer", "Chandra"), M),
+        q("scix_nobel_dynamit", "Alfred Nobel, who founded the Nobel Prizes, made his fortune from which invention?", "Dynamite", listOf("The telephone", "The steam turbine", "Rubber tyres"), M),
+        q("scix_platek_sniegu", "How many sides do natural snowflakes almost always have?", "Six", listOf("Four", "Five", "Eight"), M),
+        q("scix_gromowy_huk", "What is the loud bang when a plane flies faster than sound called?", "A sonic boom", listOf("A jet crack", "A thunderclap", "An air snap"), M),
+        q("scix_rgb", "What are the three primary colours of light used in screens?", "Red, green and blue", listOf("Red, yellow and blue", "Cyan, magenta and yellow", "Orange, green and violet"), M),
+        q("scix_ksiezyc_sekunda", "Roughly how long does light take to travel from the Moon to the Earth?", "About 1 second", listOf("About 8 minutes", "About 1 hour", "About 1 day"), M),
 
         /* ------------------------------ Hard ------------------------------ */
         q("sci_einstein", "Who formulated the theory of relativity?", "Albert Einstein", listOf("Isaac Newton", "Niels Bohr", "Max Planck"), H),
@@ -203,6 +213,19 @@ object ScienceQuestions {
         q("sci_tunguska", "The giant 1908 Tunguska blast flattened forest in which country?", "Russia", listOf("Canada", "Mongolia", "Finland"), H),
         q("sci_neptun_rok", "On which planet does one year last about 165 Earth years?", "Neptune", listOf("Uranus", "Saturn", "Jupiter"), H),
         q("sci_wegener", "Who proposed in 1912 that the continents slowly drift apart?", "Alfred Wegener", listOf("Charles Lyell", "James Hutton", "Arthur Holmes"), H),
+        q("scix_mars_doba", "How long is a day on Mars?", "A little over 24 hours", listOf("About 10 hours", "About 3 Earth days", "About a week"), H),
+        q("scix_voyager_plyta", "What did NASA send aboard the Voyager probes as a message to any aliens who find them?", "A golden record", listOf("A silver flag", "A copy of the Bible", "A DNA sample"), H),
+        q("scix_czarna_dziura_foto", "In 2019, scientists showed the world the first image of what?", "A black hole", listOf("A planet orbiting another star", "A cloud of dark matter", "A neutron star"), H),
+        q("scix_ziemia_predkosc", "Roughly how fast does the Earth travel around the Sun?", "About 30 km per second", listOf("About 30 km per hour", "About 300 km per second", "About 3 km per second"), H),
+        q("scix_gwiazdy_niebieskie", "What colour are the hottest stars?", "Blue", listOf("Red", "Yellow", "Orange"), H),
+        q("scix_ksiezyc_powstanie", "According to the leading theory, how did the Moon form?", "From debris of a giant impact on Earth", listOf("It was captured as it passed by", "It split off a fast-spinning Earth", "It grew from the Sun's leftovers"), H),
+        q("scix_mach_2", "A plane flying at 'Mach 2' is going how fast?", "Twice the speed of sound", listOf("200 km/h", "Twice as fast as a car", "2,000 km/h"), H),
+        q("scix_ciecz_nienewtonowska", "Custard that turns hard when you punch it is an example of what kind of fluid?", "Non-Newtonian", listOf("Supercritical", "Superfluid", "Ionic"), H),
+        q("scix_slonce_powierzchnia", "Roughly how hot is the surface of the Sun?", "About 5,500 °C", listOf("About 550 °C", "About 55,000 °C", "About 5.5 million °C"), H),
+        q("scix_jadro_ziemi", "Roughly how hot is the Earth's inner core?", "As hot as the Sun's surface", listOf("As hot as boiling water", "As hot as a candle flame", "As cold as ice"), H),
+        q("scix_gwiazdy_oko", "Roughly how many stars can you see with the naked eye on a very dark, clear night?", "A few thousand", listOf("A few hundred", "A few million", "About a billion"), H),
+        q("scix_droga_mleczna", "Roughly how many stars are there in the Milky Way?", "100 to 400 billion", listOf("About a million", "About a billion", "About 10 trillion"), H),
+        q("scix_leonow", "Who made the first ever spacewalk, in 1965?", "Alexei Leonov", listOf("Yuri Gagarin", "Neil Armstrong", "Ed White"), H),
 
         /* ----------------------------- Expert ----------------------------- */
         q("sci_kwant", "Who launched quantum theory?", "Max Planck", listOf("Albert Einstein", "Werner Heisenberg", "Erwin Schrodinger"), X),
@@ -244,6 +267,10 @@ object ScienceQuestions {
         q("sci_shoemaker", "Which comet smashed into Jupiter in 1994?", "Shoemaker-Levy 9", listOf("Halley's Comet", "Hale-Bopp", "Tempel 1"), X),
         q("sci_betelgeza", "Which red supergiant in Orion dimmed dramatically in 2019 and 2020?", "Betelgeuse", listOf("Rigel", "Sirius", "Antares"), X),
         q("sci_grawiton", "What is the name of the hypothetical particle that would carry gravity?", "The graviton", listOf("The gluon", "The photon", "The Higgs boson"), X),
-        q("sci_change4", "Which probe made the first soft landing on the far side of the Moon, in 2019?", "Chang'e 4", listOf("Luna 9", "Apollo 16", "Chandrayaan-2"), X)
+        q("sci_change4", "Which probe made the first soft landing on the far side of the Moon, in 2019?", "Chang'e 4", listOf("Luna 9", "Apollo 16", "Chandrayaan-2"), X),
+        q("scix_neptun_wiatr", "Which planet has the fastest winds in the Solar System?", "Neptune", listOf("Jupiter", "Saturn", "Venus"), X),
+        q("scix_lustra_ksiezyc", "What did Apollo astronauts leave on the Moon that scientists still bounce lasers off?", "Mirror reflectors", listOf("Radio beacons", "Solar panels", "Metal flags"), X),
+        q("scix_wieza_eiffla_lato", "Why is the Eiffel Tower up to about 15 cm taller in summer?", "Its iron expands in the heat", listOf("The ground beneath it rises", "It gets a new coat of paint", "Summer winds stretch it"), X),
+        q("scix_geostacjonarna", "At about what height do geostationary satellites orbit, staying above one spot on Earth?", "About 36,000 km", listOf("About 400 km", "About 3,600 km", "About 360,000 km"), X)
     )
 }

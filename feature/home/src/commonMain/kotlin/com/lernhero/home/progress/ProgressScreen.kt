@@ -406,6 +406,7 @@ private fun QuizCategory.icon(): String = when (this) {
     QuizCategory.Literature -> "📚"
     QuizCategory.Technology -> "💻"
     QuizCategory.Mythology -> "⚡"
+    QuizCategory.PopCulture -> "🎬"
     QuizCategory.Poland -> "🇵🇱"
     QuizCategory.Vocabulary -> "🔤"
     QuizCategory.Custom -> "✏️"

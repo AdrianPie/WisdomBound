@@ -54,6 +54,7 @@ object ElementQuestions {
         q("ele_metan_gaz", "What is the main gas in the natural gas used for cooking and heating?", "Methane", listOf("Propane", "Butane", "Hydrogen"), E),
         q("ele_rtec_termometr", "Why were mercury thermometers phased out in many countries?", "Mercury is toxic", listOf("Mercury is too expensive", "Mercury freezes too easily", "Mercury eats through glass"), E),
         q("ele_azot_lody", "Which super-cold liquid do some cafes use to freeze ice cream in seconds?", "Liquid nitrogen", listOf("Liquid oxygen", "Liquid helium", "Liquid hydrogen"), E),
+        q("elex_magnes", "Which of these metals is strongly attracted to a magnet?", "Iron", listOf("Copper", "Aluminium", "Gold"), E),
 
         /* ----------------------------- Medium ----------------------------- */
         q("ele_symbol_ag", "Which element hides behind the symbol Ag?", "Silver", listOf("Gold", "Argon", "Aluminum"), M),
@@ -112,6 +113,10 @@ object ElementQuestions {
         q("ele_jod_rany", "Which element's brown tincture was a classic disinfectant for cuts?", "Iodine", listOf("Bromine", "Chlorine", "Sulfur"), M),
         q("ele_siarka", "Which yellow element was once known as 'brimstone'?", "Sulfur", listOf("Phosphorus", "Gold", "Chlorine"), M),
         q("ele_argon_zarowki", "Which gas was sealed inside many old light bulbs to protect the filament?", "Argon", listOf("Oxygen", "Hydrogen", "Chlorine"), M),
+        q("elex_fajerwerki_zielen", "Which element gives fireworks a bright green colour?", "Barium", listOf("Strontium", "Sodium", "Calcium"), M),
+        q("elex_pluton", "Plutonium is named after what?", "The dwarf planet Pluto", listOf("A mountain in Greece", "The scientist who found it", "The Latin word for 'heavy'"), M),
+        q("elex_kalifornia", "Which of these US states has a chemical element named after it?", "California", listOf("Texas", "Florida", "Nevada"), M),
+        q("elex_nikiel", "The US five-cent coin is nicknamed after which metal?", "Nickel", listOf("Copper", "Zinc", "Tin"), M),
 
         /* ------------------------------ Hard ------------------------------ */
         q("ele_symbol_sn", "Which element hides behind the symbol Sn?", "Tin", listOf("Scandium", "Selenium", "Strontium"), H),
@@ -164,6 +169,13 @@ object ElementQuestions {
         q("ele_chlor_wojna", "Which element was used in the first large-scale poison gas attack of World War I?", "Chlorine", listOf("Fluorine", "Bromine", "Nitrogen"), H),
         q("ele_fluor_teflon", "The non-stick coating Teflon is built from carbon and which element?", "Fluorine", listOf("Chlorine", "Silicon", "Sulfur"), H),
         q("ele_neodym", "The strongest permanent magnets contain which rare-earth element?", "Neodymium", listOf("Lanthanum", "Cerium", "Gadolinium"), H),
+        q("elex_fajerwerki_blekit", "Which metal's compounds give fireworks their hard-to-make blue colour?", "Copper", listOf("Barium", "Sodium", "Lithium"), H),
+        q("elex_grafen", "What is graphene?", "A single layer of carbon atoms", listOf("A new kind of glass", "A liquid metal", "A form of frozen hydrogen"), H),
+        q("elex_einstein", "Which scientist is element 99 named after?", "Albert Einstein", listOf("Isaac Newton", "Niels Bohr", "Enrico Fermi"), H),
+        q("elex_srebro_mikroby", "Why have silver cups and coins long been used to keep water fresh?", "Silver kills many microbes", listOf("Silver keeps water cold", "Silver adds healthy minerals", "Silver takes out the salt"), H),
+        q("elex_proch", "Gunpowder is a mix of sulfur, charcoal and what?", "Saltpetre", listOf("Table salt", "Sugar", "Chalk"), H),
+        q("elex_krysztal_olow", "Adding which metal to glass makes sparkling 'crystal' glassware?", "Lead", listOf("Tin", "Zinc", "Nickel"), H),
+        q("elex_zloto_baseny", "All the gold ever mined would roughly fill how many Olympic swimming pools?", "About four", listOf("About 400", "About 40", "Less than one"), H),
 
         /* ----------------------------- Expert ----------------------------- */
         q("ele_symbol_sb", "Which element hides behind the symbol Sb?", "Antimony", listOf("Strontium", "Silver", "Selenium"), X),
@@ -201,6 +213,11 @@ object ElementQuestions {
         q("ele_seaborg", "Who was the first person to have an element named after him while still alive?", "Glenn Seaborg", listOf("Albert Einstein", "Enrico Fermi", "Dmitri Mendeleev"), X),
         q("ele_platyna", "Platinum's name comes from the Spanish 'platina', meaning what?", "Little silver", listOf("White gold", "Heavy stone", "River metal"), X),
         q("ele_ind_ekrany", "Touchscreens rely on a see-through oxide of which rare metal?", "Indium", listOf("Gallium", "Germanium", "Tellurium"), X),
-        q("ele_osm_zapach", "Osmium's name comes from the Greek word for what?", "Smell", listOf("Heavy", "Blue", "Dense"), X)
+        q("ele_osm_zapach", "Osmium's name comes from the Greek word for what?", "Smell", listOf("Heavy", "Blue", "Dense"), X),
+        q("elex_nihonium", "Nihonium, element 113, was the first element discovered in which Asian country?", "Japan", listOf("China", "South Korea", "India"), X),
+        q("elex_moskow", "Which element, number 115, is named after the region around Moscow?", "Moscovium", listOf("Dubnium", "Livermorium", "Tennessine"), X),
+        q("elex_ksenon", "Which noble gas fills the bright bluish-white headlamps of many cars?", "Xenon", listOf("Neon", "Argon", "Radon"), X),
+        q("elex_zloto_ocean", "Roughly how much gold is dissolved in the world's oceans?", "Millions of tonnes", listOf("A few kilograms", "About 100 tonnes", "None at all"), X),
+        q("elex_tal", "Which element, 'the poisoner's poison', is the murder weapon in Agatha Christie's 'The Pale Horse'?", "Thallium", listOf("Arsenic", "Cyanide", "Strychnine"), X)
     )
 }
