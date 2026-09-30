@@ -101,7 +101,13 @@ service cloud.firestore {
       // Flaga uprawnien - klient nie moze jej czytac ani ustawiac. Moze ja tylko skasowac razem
       // z wlasnym kontem; skasowanie nikomu nie daje uprawnien.
       match /privateData/{docId} {
-        allow read, create, update: if false;
+        allow read, update: if false;
+        // Build 1.0 na iOS (i starsze buildy Androida) zapisuje przy tworzeniu postaci
+        // role = {isAdmin: false}. Bez tego wyjatku pierwsze "START" konczy sie bledem.
+        // Tylko ten jeden ksztalt - nikt nie nada sobie tak uprawnien, a nic tego i tak nie czyta.
+        allow create: if isOwner(uid) && docId == 'role'
+          && request.resource.data.keys().hasOnly(['isAdmin'])
+          && request.resource.data.isAdmin == false;
         allow delete: if isOwner(uid);
       }
 

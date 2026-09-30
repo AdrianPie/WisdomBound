@@ -94,11 +94,10 @@ class PlayerRepositoryImpl: PlayerRepository {
                 if (playerExists) {
                     onSuccess()
                 } else {
+                    // Bez zapisu privateData/role: reguly Firestore zabraniaja klientowi tworzyc
+                    // cokolwiek w privateData, wiec ten zapis zawsze padal PO utworzeniu gracza -
+                    // pierwsze "START" konczylo sie bledem, drugie przechodzilo (gracz juz byl).
                     playerCollection.document(user.uid).set(player)
-                    playerCollection.document(user.uid)
-                        .collection("privateData")
-                        .document("role")
-                        .set(mapOf("isAdmin" to false))
                     onSuccess()
                 }
             } else {
