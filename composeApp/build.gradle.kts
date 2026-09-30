@@ -112,21 +112,26 @@ android {
         }
     }
 
+    // Bez keystore.properties (swiezy klon repo) nie ma konfiguracji podpisu - debug buduje sie
+    // normalnie, a release wychodzi niepodpisany zamiast wywalac cala konfiguracje Gradle.
+    val hasReleaseKeystore = keystorePropertiesFile.exists()
     signingConfigs {
-        create("release") {
-            storeFile = rootProject.file(
-                keystoreProperties["storeFile"] as String
-            )
-            storePassword = keystoreProperties["storePassword"] as String
-            keyAlias = keystoreProperties["keyAlias"] as String
-            keyPassword = keystoreProperties["keyPassword"] as String
+        if (hasReleaseKeystore) {
+            create("release") {
+                storeFile = rootProject.file(
+                    keystoreProperties["storeFile"] as String
+                )
+                storePassword = keystoreProperties["storePassword"] as String
+                keyAlias = keystoreProperties["keyAlias"] as String
+                keyPassword = keystoreProperties["keyPassword"] as String
+            }
         }
     }
 
     buildTypes {
         getByName("release") {
             isMinifyEnabled = false
-            signingConfig = signingConfigs.getByName("release")
+            if (hasReleaseKeystore) signingConfig = signingConfigs.getByName("release")
             // Symbole natywne (libtranslate_jni.so itd.) do Play - czytelne stacktrace crashy
             // z warstwy C++ zamiast surowych adresow.
             ndk { debugSymbolLevel = "FULL" }

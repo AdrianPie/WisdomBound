@@ -22,3 +22,6 @@ upload-keystore.jks
 # Podpisywanie release - NIGDY do repo
 keystore.properties
 art/
+
+# Sekrety serwera
+.env
