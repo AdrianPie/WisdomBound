@@ -9,6 +9,7 @@ Built with **Kotlin Multiplatform + Compose Multiplatform**: one shared codebase
 ## What's in the game
 
 - **Quiz battles:** each battle is simulated ahead of time by a deterministic engine, then replayed on screen. Your quiz answers during the fight add damage multipliers based on speed and streaks.
+- **Ultimates:** answer 3–7 questions in a row (depending on the equipped power orb) to charge a cinematic ultimate: area damage, a single heavy strike, team heals with revives, shields or life drain. Power orbs drop as loot and go in their own equipment slot.
 - **Campaign map:** stages generated from a seed, with enemy species and roles, bosses and a difficulty tier.
 - **Built-in question bank:** thousands of hand-curated questions in 15 categories, including science, history, geography, flags, literature, mythology, pop culture and more.
 - **Your own decks and AI decks:** write your own question decks, or type a topic and get a generated deck from the AI server.
@@ -29,7 +30,7 @@ All purchases go through **RevenueCat**, on Google Play and the App Store:
 
 How it's built:
 - The client uses the RevenueCat SDK: native on Android, and through Swift Package Manager on iOS, bridged into Kotlin in `iosApp/iosApp/MonetizationBridge.swift`. Offerings, prices, purchases and restore all come from RevenueCat.
-- **The paywall is a RevenueCat Paywall** (RevenueCatUI), designed in the RevenueCat dashboard, so its look, copy and A/B tests change without a new build. On Android it is `PaywallDialog`; on iOS a `PaywallViewController` presented from Swift. Both sit behind one Kotlin `expect/actual` call (`shared/.../monetization/RevenueCatPaywall.kt`).
+- **The paywall is a RevenueCat Paywall** (RevenueCatUI), designed in the RevenueCat dashboard, so its look, copy and A/B tests change without a new build. On Android it is the `Paywall` composable in a full-screen dialog; on iOS a `PaywallViewController` presented from Swift. Both sit behind one Kotlin `expect/actual` call (`shared/.../monetization/RevenueCatPaywall.kt`).
 - **Placements:** every place that opens the paywall passes its own placement (`quiz_creation`, `ai_decks`, `translations`, `shop`). Each one can get its own offering and paywall in the dashboard, and falls back to the current offering if none is set.
 - **What's gated:** free players can write 1 custom quiz deck, and Premium unlocks unlimited decks. AI-generated decks are Premium-only. Free players get 5 reader translations per day.
 - If RevenueCat can't show a paywall (no store on the platform, or offerings failed to load), a built-in fallback paywall with the same products appears instead of a dead end.
