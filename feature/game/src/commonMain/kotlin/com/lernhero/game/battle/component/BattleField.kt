@@ -111,6 +111,8 @@ internal fun BattleField(
     onEffectShown: (Long) -> Unit,
     onProjectileShown: (Long) -> Unit = {},
     onCapitulate: () -> Unit = {},
+    /** Animacja wystrzalu ulti dobiegla konca - view model zdejmuje go, zeby nie zagral drugi raz. */
+    onUltimateShown: (Long) -> Unit = {},
     modifier: Modifier = Modifier
 ) {
     val allCharacters = state.characters.values.toList()
@@ -132,12 +134,14 @@ internal fun BattleField(
     val measure: (String, CharacterRect) -> Unit = { id, rect -> if (characterRects[id] != rect) characterRects[id] = rect }
     var inspected by remember { mutableStateOf<String?>(null) }
 
-    // Piec dobrych odpowiedzi z rzedu odpala ulti - cale pole bitwy mruga na zloto na chwile.
-    val ultiFlash = remember { Animatable(0f) }
-    LaunchedEffect(state.ultiPulseId) {
-        if (state.ultiPulseId == 0L) return@LaunchedEffect
-        ultiFlash.snapTo(0.5f)
-        ultiFlash.animateTo(0f, animationSpec = tween(durationMillis = 550, easing = LinearEasing))
+    // Wystrzal ulti jako scena (patrz UltimateCinematic.kt): kamera, ciemnosc, baner, uderzenie.
+    val ultimateScene = rememberUltimateScene(state.ultimateCast, onUltimateShown)
+    val releasedCast = state.ultimateCast?.takeIf { it.released }
+    LaunchedEffect(releasedCast?.id) {
+        if (releasedCast == null) return@LaunchedEffect
+        // Uderzenie: porzadne trzesienie i zwolnione tempo wybuchow, ktore wlasnie ruszaja.
+        kick(if (releasedCast.spec.isHealing) 6f else 16f, 700)
+        vfx.slowMotion(scale = 0.3f, holdMs = BattleSpeed.scale(260), recoverMs = BattleSpeed.scale(560))
     }
 
     CombatFxCoordinator(
@@ -159,6 +163,17 @@ internal fun BattleField(
             modifier = Modifier
                 .fillMaxSize()
                 .graphicsLayer {
+                    // Najazd kamery na cel ulti - cala arena (tlo, postacie, efekty) razem, HUD nie.
+                    val scene = ultimateScene
+                    if (scene != null && !scene.finished) {
+                        val focus = scene.focusPoint(characterRects, size)
+                        scaleX = scene.zoom
+                        scaleY = scene.zoom
+                        transformOrigin = TransformOrigin(focus.x, focus.y)
+                    } else {
+                        scaleX = 1f
+                        scaleY = 1f
+                    }
                     val amp = shake.value * density
                     if (amp > 0.05f) {
                         val t = VfxEngine.monoNow() / 1_000_000_000f
@@ -177,6 +192,8 @@ internal fun BattleField(
                     modifier = Modifier.fillMaxSize(),
                     contentScale = ContentScale.FillBounds
                 )
+
+                UltimateBackdrop(scene = ultimateScene, rects = characterRects)
 
                 val bossEvent = state.bossEvent
                 val formationCallbacks = FormationCallbacks(
@@ -206,7 +223,10 @@ internal fun BattleField(
                         characters = players,
                         isEnemySide = false,
                         stunnedIds = state.stunnedCharacterIds,
-                        guardCharges = state.guardCharges,
+                        // Garda z tury i garda z ulti wygladaja dla gracza tak samo - jedna tarcza z licznikiem.
+                        guardCharges = (state.guardCharges.keys + state.wardCharges.keys).associateWith {
+                            (state.guardCharges[it] ?: 0) + (state.wardCharges[it] ?: 0)
+                        },
                         callbacks = formationCallbacks,
                         modifier = Modifier.fillMaxSize()
                     )
@@ -224,6 +244,8 @@ internal fun BattleField(
                         modifier = Modifier.fillMaxSize()
                     )
                 }
+
+                UltimateForeground(scene = ultimateScene, rects = characterRects, characters = allCharacters)
 
                 VfxLayer(engine = vfx, modifier = Modifier.fillMaxSize())
 
@@ -254,13 +276,7 @@ internal fun BattleField(
         }
 
         // ----- HUD (nie trzesie sie) -----
-        if (ultiFlash.value > 0f) {
-            Box(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .background(Color(0xFFFFD100).copy(alpha = ultiFlash.value))
-            )
-        }
+        UltimateCutIn(scene = ultimateScene, modifier = Modifier.fillMaxSize())
 
         val hero = state.characters[HERO_ID]
         val heroHpFraction = if (hero != null && hero.maxHp > 0) hero.hp.toFloat() / hero.maxHp.toFloat() else 1f
@@ -289,9 +305,11 @@ internal fun BattleField(
                 .padding(start = 10.dp, bottom = 8.dp, end = 60.dp)
         )
 
+        // W turze z ulti karta rozliczenia odpowiedzi ustepuje scenie kuli - obie naraz sie zaslanialy.
+        val ultimateTurn = state.turnOutcome?.ultiTriggered == true
         TurnImpactOverlay(
-            outcome = state.turnOutcome,
-            visible = state.turnPhase == TurnPhase.Impact,
+            outcome = state.turnOutcome?.takeUnless { ultimateTurn },
+            visible = state.turnPhase == TurnPhase.Impact && !ultimateTurn,
             modifier = Modifier.fillMaxSize()
         )
 
@@ -389,7 +407,7 @@ private fun CombatFxCoordinator(
                 val target = state.characters[effect.targetId]
                 val rect = rects[effect.targetId]
                 if (target != null && rect != null) {
-                    playImpact(effect.kind, effect.amount, target, rect, effect.sourceId?.let { state.characters[it] }, vfx, popups, kick)
+                    playImpact(effect.kind, effect.amount, target, rect, effect.sourceId?.let { state.characters[it] }, vfx, popups, kick, effect.tint?.let(::Color))
                 }
                 onEffectShown(effect.id)
             }
@@ -418,7 +436,9 @@ private fun playImpact(
     source: CharacterUiModel?,
     vfx: VfxEngine,
     popups: DamagePopupController,
-    kick: (Float, Int) -> Unit
+    kick: (Float, Int) -> Unit,
+    /** Kolor ulti (kula mocy) - uderzenie z nieba w jej barwie zamiast domyslnego zlota. */
+    tint: Color? = null
 ) {
     val anchors = anchorsFor(target)
     val hit = rect.resolve(anchors.hitPoint)
@@ -433,8 +453,14 @@ private fun playImpact(
     val giantSource = (source?.battleScale ?: 1f) > AttackStyles.GIANT_SCALE
 
     when (kind) {
-        HitKind.Heal -> vfx.impact(ImpactType.Heal, body, Color(0xFF6BF08A), scale = scale)
-        HitKind.Shield -> vfx.impact(ImpactType.Shield, body, Color(0xFF7FC8FF), scale = scale)
+        HitKind.Heal -> if (tint != null) {
+            // Leczenie z ulti: slup swiatla z nieba w kolorze kuli i dopiero w nim zielone leczenie.
+            vfx.impact(ImpactType.SkyStrike, hit, tint, scale = scale)
+            vfx.impact(ImpactType.Heal, body, tint.copy(red = (tint.red + 0.3f).coerceAtMost(1f)), scale = scale * 1.4f)
+        } else {
+            vfx.impact(ImpactType.Heal, body, Color(0xFF6BF08A), scale = scale)
+        }
+        HitKind.Shield -> vfx.impact(ImpactType.Shield, body, tint ?: Color(0xFF7FC8FF), scale = if (tint != null) scale * 1.5f else scale)
         HitKind.Block -> vfx.impact(ImpactType.Block, hit, Color(0xFF9FD8FF), dir = dir, scale = scale)
         HitKind.Dodge -> vfx.impact(ImpactType.Dodge, hit, Color.White, dir = dir, scale = scale)
         HitKind.Reflect -> vfx.impact(ImpactType.Thorns, hit, Color(0xFFFF4A3A), dir = -dir, scale = scale)
@@ -447,12 +473,23 @@ private fun playImpact(
         HitKind.Burn -> vfx.impact(ImpactType.Burst, hit, Color(0xFFFF7A1A), dir = dir, scale = scale * 1.2f, element = Element.Fire)
         HitKind.Skill ->
             if (source == null) {
-                vfx.impact(ImpactType.SkyStrike, hit, Color(0xFFFFD34D), scale = scale)
-                kick(5f, 360)
+                vfx.impact(ImpactType.SkyStrike, hit, tint ?: Color(0xFFFFD34D), scale = scale * if (tint != null) 1.4f else 1f)
+                if (tint != null) {
+                    // Ulti: wybuch na celu i fala po ziemi pod nim - kazdy wrog dostaje swoje uderzenie.
+                    vfx.impact(ImpactType.Burst, hit, tint, scale = scale * 1.6f, crit = true)
+                    vfx.impact(ImpactType.Smash, rect.feet(), tint, scale = scale * 1.3f)
+                }
+                kick(if (tint != null) 8f else 5f, 420)
             } else {
                 vfx.impact(ImpactType.Burst, hit, Color(0xFFB98CFF), dir = dir, scale = scale * 1.15f)
             }
-        HitKind.Hit, HitKind.Crit -> if (source == null) {
+        HitKind.Hit, HitKind.Crit -> if (source == null && tint != null) {
+            // Smite z kuli mocy: jeden slup z nieba, ale dwa razy grubszy, i porzadne trzesienie.
+            vfx.impact(ImpactType.SkyStrike, hit, tint, scale = scale * 2f)
+            vfx.impact(ImpactType.Burst, hit, tint, scale = scale * 2.2f, crit = true)
+            vfx.impact(ImpactType.BossLanding, rect.feet(), tint, scale = scale * 1.2f)
+            kick(18f, 700)
+        } else if (source == null) {
             vfx.impact(ImpactType.Burst, hit, Color(0xFFFF8A5A), dir = dir, scale = scale, crit = crit, element = Element.Fire)
         } else when (styleOf(source)) {
             AttackStyle.Melee -> vfx.impact(
@@ -473,7 +510,16 @@ private fun playImpact(
         HitKind.Heal -> "+$amount"
         else -> "-$amount"
     }
-    popups.show(target.id, Offset(hit.x, hit.y - 18f), label, kind.popupLook())
+    // Liczby z ulti sa WIEKSZE i w kolorze kuli - to one sa nagroda za serie odpowiedzi.
+    val look = if (tint != null && kind != HitKind.Shield) kind.popupLook().copy(
+        color = if (kind == HitKind.Heal) Color(0xFF8CF5A0) else Color(
+            red = (tint.red + 1f) / 2f, green = (tint.green + 1f) / 2f, blue = (tint.blue + 1f) / 2f
+        ),
+        sizeSp = if (kind == HitKind.Heal) 24f else 32f,
+        label = if (kind == HitKind.Heal) null else "ULTI!",
+        durationMs = 1500
+    ) else kind.popupLook()
+    popups.show(target.id, Offset(hit.x, hit.y - 18f), label, look)
 
     when {
         crit -> kick(6f, 300)

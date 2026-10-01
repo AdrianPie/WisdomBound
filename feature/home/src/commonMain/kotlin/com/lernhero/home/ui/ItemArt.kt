@@ -4,6 +4,7 @@ import androidx.compose.ui.graphics.Color
 import com.lernhero.domain.item.Item
 import com.lernhero.domain.monster.Element
 import com.lernhero.domain.item.ItemSlot
+import com.lernhero.domain.ultimate.Ultimates
 import com.lernhero.domain.spell.Spell
 
 /**
@@ -62,7 +63,10 @@ fun Item.icon(): String = when (iconKey) {
     // Znak zapytania to BLAD DANYCH, nie ozdobnik: znaczy, ze przedmiot ma iconKey, ktorego
     // nikt tu nie dopisal. Pilnuje tego [ItemArtTest], zeby nie wrocila sytuacja, w ktorej
     // pol katalogu wyglada na ekranie jak rzad pytajnikow.
-    else -> "\u2754"
+    //
+    // Kule mocy (ulti) maja iconKey = wlasne id (orb_ember...), zeby kazda mogla dostac osobny
+    // PNG (item_orb_ember.png). Do tego czasu [ItemArtImage] rysuje je kodem - emoji to ostatnia deska.
+    else -> if (iconKey in ORB_ICON_KEYS) "\uD83D\uDD2E" else "\u2754"
 }
 
 /**
@@ -156,7 +160,12 @@ private val ITEM_ART: Map<String, String> = mapOf(
 )
 
 /** Wszystkie klucze ikon, ktore ta mapa obsluguje - do testu pokrycia katalogu. */
-internal val MAPPED_ICON_KEYS: Set<String> = setOf(
+/** Klucze ikon kul mocy - wszystkie z [Ultimates], wiec nowa kula nie wymaga dopisywania tutaj. */
+private val ORB_ICON_KEYS: Set<String> by lazy { Ultimates.items.mapTo(mutableSetOf()) { it.iconKey } }
+
+internal val MAPPED_ICON_KEYS: Set<String> get() = BASE_ICON_KEYS + ORB_ICON_KEYS
+
+private val BASE_ICON_KEYS: Set<String> = setOf(
     "knife", "dagger", "daggers", "sword", "sabre", "greatsword", "axe", "hammer", "club",
     "spear", "trident", "glaive", "sickle", "staff", "bark",
     "plate_head", "helm", "cap", "crown", "plate_hands", "pauldrons", "plate_legs", "greaves",
@@ -181,6 +190,7 @@ fun ItemSlot.label(): String = when (this) {
     ItemSlot.OffHand -> "Off Hand"
     ItemSlot.Ring -> "Ring"
     ItemSlot.Amulet -> "Amulet"
+    ItemSlot.Ultimate -> "Ultimate"
 }
 
 /** Krotka etykieta pod slotem na postaci - dluzsze nazwy nie mieszcza sie w kafelku. */
@@ -194,6 +204,7 @@ fun ItemSlot.shortLabel(): String = when (this) {
     ItemSlot.OffHand -> "Shield"
     ItemSlot.Ring -> "Ring"
     ItemSlot.Amulet -> "Amulet"
+    ItemSlot.Ultimate -> "Ulti"
 }
 
 fun Spell.icon(): String = when (iconKey) {

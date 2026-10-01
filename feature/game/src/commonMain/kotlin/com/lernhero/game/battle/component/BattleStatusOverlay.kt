@@ -62,11 +62,11 @@ internal fun TeamStatusBar(
         }
 
         if (streak > 0) {
-            val toUlti = (ULTI_STREAK - streak).coerceAtLeast(0)
+            val toUlti = if (state.ultimateQueued) 0 else (state.ultimate.streak - state.streak.ultiCharge).coerceAtLeast(0)
             StatusChip(
                 icon = "🔥",
                 label = "STREAK $streak",
-                detail = if (toUlti > 0) "$toUlti to ULTI" else "ULTI!",
+                detail = if (toUlti > 0) "$toUlti to ${state.ultimate.name}" else "ULTI!",
                 accent = Accent
             )
         }
@@ -121,5 +121,3 @@ private fun StatusChip(
     }
 }
 
-/** Tyle poprawnych z rzedu odpala ulti - zgodne z ULTI_STREAK w domain.combat.live. */
-private const val ULTI_STREAK = 5

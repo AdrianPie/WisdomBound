@@ -17,7 +17,10 @@ package com.lernhero.domain.item
 enum class ItemCategory(val label: String, val icon: String) {
     Weapon("Weapons", "⚔️"),
     Armor("Armor", "🛡️"),
-    Trinket("Trinkets", "💍");
+    Trinket("Trinkets", "💍"),
+
+    /** Kule mocy (ulti). Kuznia ich nie pokazuje - nie ulepsza sie ich, patrz [com.lernhero.domain.ultimate.Ultimates]. */
+    Ultimate("Ultimates", "🔮");
 
     companion object {
         fun of(slot: ItemSlot): ItemCategory = when (slot) {
@@ -27,6 +30,7 @@ enum class ItemCategory(val label: String, val icon: String) {
             ItemSlot.OffHand,
             ItemSlot.Head, ItemSlot.Chest, ItemSlot.Hands, ItemSlot.Legs, ItemSlot.Feet -> Armor
             ItemSlot.Ring, ItemSlot.Amulet -> Trinket
+            ItemSlot.Ultimate -> Ultimate
         }
 
         fun of(item: Item): ItemCategory = of(item.slot)

@@ -28,7 +28,11 @@ All purchases go through **RevenueCat**, on Google Play and the App Store:
 | `gems_100` … `gems_15000` | consumables | gem packs; the first purchase of each pack gives double gems |
 
 How it's built:
-- The client uses the RevenueCat SDK: native on Android, and through Swift Package Manager on iOS, bridged into Kotlin in `iosApp/iosApp/MonetizationBridge.swift`. Offerings, prices, purchases and restore all come from RevenueCat, and the paywall shows the store's localized prices.
+- The client uses the RevenueCat SDK: native on Android, and through Swift Package Manager on iOS, bridged into Kotlin in `iosApp/iosApp/MonetizationBridge.swift`. Offerings, prices, purchases and restore all come from RevenueCat.
+- **The paywall is a RevenueCat Paywall** (RevenueCatUI), designed in the RevenueCat dashboard, so its look, copy and A/B tests change without a new build. On Android it is `PaywallDialog`; on iOS a `PaywallViewController` presented from Swift. Both sit behind one Kotlin `expect/actual` call (`shared/.../monetization/RevenueCatPaywall.kt`).
+- **Placements:** every place that opens the paywall passes its own placement (`quiz_creation`, `ai_decks`, `translations`, `shop`). Each one can get its own offering and paywall in the dashboard, and falls back to the current offering if none is set.
+- **What's gated:** free players can write 1 custom quiz deck, and Premium unlocks unlimited decks. AI-generated decks are Premium-only. Free players get 5 reader translations per day.
+- If RevenueCat can't show a paywall (no store on the platform, or offerings failed to load), a built-in fallback paywall with the same products appears instead of a dead end.
 - The **server does not trust the client** for premium status. Before it spends money on an AI call, it checks the `premium` entitlement directly with the RevenueCat REST API, using a secret key that only the server holds (`server/.../Entitlements.kt`).
 - Optional rewarded ads (AdMob) are the free alternative to paying.
 

@@ -1,6 +1,9 @@
 package com.lernhero.home.ui
 
 import com.lernhero.home.tutorial.TutorialTarget
+import com.lernhero.domain.ultimate.Ultimates
+import com.lernhero.game.battle.component.PowerOrb
+import com.lernhero.game.battle.component.color
 import com.lernhero.home.tutorial.tutorialTarget
 import androidx.compose.foundation.background
 import androidx.compose.foundation.Image
@@ -88,6 +91,8 @@ fun ItemDetailSheet(
     val rows = remember(item, comparedTo) { statRows(item, comparedTo) }
     val power = remember(item) { GearPower.of(item) }
     val powerDelta = remember(item, comparedTo) { comparedTo?.let { power - GearPower.of(it) } }
+    // Kula mocy (ulti) nie ma statystyk, poziomow ani kamieni - jej karta mowi co innego.
+    val orb = remember(item.id) { Ultimates.specFor(item.id) }
 
     Box(
         modifier = modifier
@@ -110,7 +115,7 @@ fun ItemDetailSheet(
                 .border(1.5.dp, ParchmentPalette.FrameLight.copy(alpha = 0.6f), InnerShape)
                 .clickable(enabled = false) {}
         ) {
-            ItemHeader(item = item, level = level, rarity = rarity)
+            ItemHeader(item = item, level = level, rarity = rarity, orbStreak = orb?.streak)
 
             Column(
                 modifier = Modifier
@@ -120,6 +125,9 @@ fun ItemDetailSheet(
                     .padding(horizontal = 10.dp, vertical = 10.dp),
                 verticalArrangement = Arrangement.spacedBy(10.dp)
             ) {
+              if (orb != null) {
+                UltimateSections(item = item, spec = orb, comparedTo = comparedTo?.let { Ultimates.specFor(it.id) })
+              } else {
                 Section(
                     title = "Stats",
                     badge = { PowerBadge(power = power, delta = powerDelta) }
@@ -204,6 +212,7 @@ fun ItemDetailSheet(
                 }
 
                 UpgradeTrack(level = level)
+              }
 
                 comparedTo?.let { current ->
                     Text(
@@ -249,13 +258,106 @@ fun ItemDetailSheet(
 }
 
 /**
+ * Karta kuli mocy: co robi ulti, ile dobrych odpowiedzi z rzedu je laduje (rzad rombow jak na
+ * liczniku w walce) i czym rozni sie od zalozonej kuli.
+ */
+@Composable
+private fun UltimateSections(
+    item: Item,
+    spec: com.lernhero.domain.ultimate.UltimateSpec,
+    comparedTo: com.lernhero.domain.ultimate.UltimateSpec?
+) {
+    Section(title = "Ultimate") {
+        Row(
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Text(text = spec.kind.icon, fontSize = 18.sp)
+            Text(
+                text = spec.kind.label,
+                color = spec.color.darken(0.45f),
+                fontFamily = FontFirst(),
+                fontWeight = FontWeight.Black,
+                fontSize = 15.sp
+            )
+        }
+        Text(
+            text = spec.effectText,
+            color = ParchmentPalette.Ink,
+            fontFamily = FontFirst(),
+            fontWeight = FontWeight.Bold,
+            fontSize = 13.sp,
+            lineHeight = 17.sp,
+            modifier = Modifier.padding(top = 6.dp)
+        )
+        Row(
+            modifier = Modifier.padding(top = 10.dp),
+            horizontalArrangement = Arrangement.spacedBy(6.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            repeat(spec.streak) {
+                Box(
+                    modifier = Modifier
+                        .size(12.dp)
+                        .rotate(45f)
+                        .clip(RoundedCornerShape(2.dp))
+                        .background(Brush.linearGradient(listOf(spec.color.copy(alpha = 0.55f), spec.color)))
+                        .border(1.dp, spec.color.darken(0.5f), RoundedCornerShape(2.dp))
+                )
+            }
+            Text(
+                text = spec.chargeText,
+                color = ParchmentPalette.InkMuted,
+                fontFamily = FontFirst(),
+                fontWeight = FontWeight.Bold,
+                fontSize = 11.sp,
+                modifier = Modifier.padding(start = 4.dp)
+            )
+        }
+        Text(
+            text = "A wrong answer empties the charge. Shorter charges fire more often, longer ones hit harder.",
+            color = ParchmentPalette.InkMuted,
+            fontFamily = FontFirst(),
+            fontSize = 10.sp,
+            lineHeight = 13.sp,
+            modifier = Modifier.padding(top = 8.dp)
+        )
+    }
+
+    if (item.description.isNotBlank()) {
+        Text(
+            text = item.description,
+            color = ParchmentPalette.InkMuted,
+            fontFamily = FontFirst(),
+            fontStyle = androidx.compose.ui.text.font.FontStyle.Italic,
+            fontSize = 12.sp,
+            lineHeight = 16.sp,
+            textAlign = TextAlign.Center,
+            modifier = Modifier.fillMaxWidth()
+        )
+    }
+
+    comparedTo?.let { current ->
+        Section(title = "Now equipped") {
+            Text(
+                text = "${current.name} - ${current.streak} in a row. ${current.effectText}",
+                color = ParchmentPalette.Ink,
+                fontFamily = FontFirst(),
+                fontSize = 11.sp,
+                lineHeight = 15.sp
+            )
+        }
+    }
+}
+
+/**
  * Gora karty: ikona z poziomem, plakietka rzadkosci i dwie linijki "czym to jest".
  *
  * Siedzi na JASNIEJSZYM pasku niz reszta papieru - dzieki temu czyta sie jak naglowek, a nie jak
  * pierwszy wiersz tresci, i nie trzeba do tego ani jednej dodatkowej kreski.
  */
 @Composable
-private fun ItemHeader(item: Item, level: Int, rarity: Color) {
+private fun ItemHeader(item: Item, level: Int, rarity: Color, orbStreak: Int? = null) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -285,7 +387,9 @@ private fun ItemHeader(item: Item, level: Int, rarity: Color) {
                 )
             }
             Text(
-                text = "Lv. ${level.coerceAtLeast(ItemUpgrades.MIN_LEVEL)}/${ItemUpgrades.MAX_LEVEL}",
+                // Kula nie ma poziomow - w tym miejscu stoi to, co o niej najwazniejsze: dlugosc serii.
+                text = orbStreak?.let { "Charge: $it in a row" }
+                    ?: "Lv. ${level.coerceAtLeast(ItemUpgrades.MIN_LEVEL)}/${ItemUpgrades.MAX_LEVEL}",
                 color = ParchmentPalette.Ink,
                 fontFamily = FontFirst(),
                 fontWeight = FontWeight.Bold,
@@ -434,12 +538,16 @@ fun ItemIcon(
 @Composable
 fun ItemArtImage(item: Item, size: androidx.compose.ui.unit.Dp, modifier: Modifier = Modifier) {
     val art = remember(item.id) { Resources.itemArt(item.artKey()) }
+    val orb = remember(item.id) { Ultimates.specFor(item.id) }
     if (art != null) {
         Image(
             painter = painterResource(art),
             contentDescription = item.name,
             modifier = modifier.size(size)
         )
+    } else if (orb != null) {
+        // Kula mocy bez wlasnego PNG - rysowana w kolorze swojego ulti, zamiast jednego emoji dla wszystkich.
+        PowerOrb(color = orb.color, size = size, modifier = modifier)
     } else {
         Box(modifier = modifier.size(size), contentAlignment = Alignment.Center) {
             Text(text = item.icon(), fontSize = (size.value * 0.55f).sp, lineHeight = (size.value * 0.6f).sp)

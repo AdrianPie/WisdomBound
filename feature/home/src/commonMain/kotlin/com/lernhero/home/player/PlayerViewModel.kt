@@ -1264,7 +1264,7 @@ class PlayerViewModel(
         persistMonsterEquipment(
             monsterId,
             MonsterEquipment.with(current, instance, item.slot),
-            "Zalozono: ${item.name}"
+            "Equipped: ${item.name}"
         )
     }
 

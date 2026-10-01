@@ -63,6 +63,9 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.foundation.text.TextAutoSize
+import androidx.compose.foundation.text.BasicText
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -296,10 +299,7 @@ fun LiveQuizBar(
 
         // W miejscu zarezerwowanym przez padding(top = STREAK_ROW_GAP) na zlotym panelu wyzej -
         // widocznie NAD panelem, nad plansza walki, bez wychodzenia poza wlasne granice.
-        StreakPipRow(
-            streak = state.streak,
-            modifier = Modifier.align(Alignment.TopCenter)
-        )
+        MomentumRow(state = state, modifier = Modifier.align(Alignment.TopCenter))
     }
 }
 
@@ -403,18 +403,32 @@ internal fun QuestionBubble(prompt: String, modifier: Modifier = Modifier) {
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.FillBounds
         )
-        Text(
-            text = prompt,
-            // Tlo ramki jest jasne, kremowe - napis musi byc ciemny, inaczej znika.
-            color = InkStrong,
-            fontFamily = FontFirst(),
-            fontSize = QUESTION_TEXT_SIZE,
-            fontWeight = FontWeight.Bold,
-            textAlign = TextAlign.Center,
-            maxLines = QUESTION_MAX_LINES,
-            overflow = TextOverflow.Ellipsis,
-            modifier = Modifier.fillMaxWidth(Resources.QuizArt.QUESTION_TEXT_WIDTH_FRACTION)
-        )
+        // Pole na tekst = plaskie wnetrze ramki. Dluzsze pytanie (nowe z banku, wlasne, z AI)
+        // zmniejsza pismo, zamiast urwac sie wielokropkiem albo wyjsc na zlota oprawe.
+        Box(
+            modifier = Modifier
+                .fillMaxWidth(Resources.QuizArt.QUESTION_TEXT_WIDTH_FRACTION)
+                .fillMaxHeight(QUESTION_TEXT_HEIGHT_FRACTION),
+            contentAlignment = Alignment.Center
+        ) {
+            BasicText(
+                text = prompt,
+                // Tlo ramki jest jasne, kremowe - napis musi byc ciemny, inaczej znika.
+                style = TextStyle(
+                    color = InkStrong,
+                    fontFamily = FontFirst(),
+                    fontWeight = FontWeight.Bold,
+                    textAlign = TextAlign.Center
+                ),
+                maxLines = QUESTION_MAX_LINES,
+                overflow = TextOverflow.Ellipsis,
+                autoSize = TextAutoSize.StepBased(
+                    minFontSize = QUESTION_MIN_TEXT_SIZE,
+                    maxFontSize = QUESTION_TEXT_SIZE,
+                    stepSize = 0.5.sp
+                )
+            )
+        }
     }
 }
 
@@ -426,7 +440,11 @@ internal fun QuestionBubble(prompt: String, modifier: Modifier = Modifier) {
  * wielokropkiem, zamiast wyjsc na zlota oprawe.
  */
 private val QUESTION_TEXT_SIZE = 14.sp
-private const val QUESTION_MAX_LINES = 3
+private val QUESTION_MIN_TEXT_SIZE = 10.sp
+private const val QUESTION_MAX_LINES = 4
+
+/** Jaka czesc wysokosci ramki pytania to plaskie wnetrze, w ktorym moze stac tekst. */
+private const val QUESTION_TEXT_HEIGHT_FRACTION = 0.62f
 
 /**
  * Rzad krazkow-slotow nad pytaniem "ulóz w kolejnosci" - jeden slot na kazdy element, polaczone
@@ -724,10 +742,29 @@ fun ResolvingStrip(state: BattleUiState, modifier: Modifier = Modifier) {
             }
         }
 
-        StreakPipRow(
-            streak = state.streak,
-            modifier = Modifier.align(Alignment.TopCenter)
+        MomentumRow(state = state, modifier = Modifier.align(Alignment.TopCenter))
+    }
+}
+
+/**
+ * Pasek nad quizem: po lewej ladowanie ulti ([UltimateMeter] - ile jeszcze dobrych z rzedu),
+ * po prawej dziesiec kratek cyklu (buff/debuff). Dwie rozne rzeczy, wiec dwa rozne klocki - kiedy
+ * byly jednym rzedem kratek, nie dalo sie z niego odczytac, ile brakuje do ulti.
+ */
+@Composable
+private fun MomentumRow(state: BattleUiState, modifier: Modifier = Modifier) {
+    Row(
+        modifier = modifier,
+        horizontalArrangement = Arrangement.spacedBy(6.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        UltimateMeter(
+            spec = state.ultimate,
+            // Naladowana kula czeka na scene (quiz jeszcze zjezdza) - licznik stoi wtedy pelny.
+            charge = if (state.ultimateQueued) state.ultimate.streak else state.streak.ultiCharge,
+            castId = state.ultiPulseId
         )
+        StreakPipRow(streak = state.streak)
     }
 }
 
@@ -749,8 +786,8 @@ private fun StreakPipRow(streak: StreakTracker, modifier: Modifier = Modifier) {
             .clip(RoundedCornerShape(50))
             .background(Color(0xE0140D08))
             .border(1.dp, PanelBorder.copy(alpha = 0.7f), RoundedCornerShape(50))
-            .padding(horizontal = 6.dp, vertical = 3.dp),
-        horizontalArrangement = Arrangement.spacedBy(3.dp),
+            .padding(horizontal = 6.dp, vertical = 4.dp),
+        horizontalArrangement = Arrangement.spacedBy(2.5.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
         streak.pips.forEach { pip ->
@@ -759,11 +796,11 @@ private fun StreakPipRow(streak: StreakTracker, modifier: Modifier = Modifier) {
                 false -> Color(0xFFE0453A)
                 null -> null
             }
-            Box(modifier = Modifier.size(12.dp), contentAlignment = Alignment.Center) {
+            Box(modifier = Modifier.size(10.dp), contentAlignment = Alignment.Center) {
                 if (gem != null && pip == true && hot) {
                     Box(
                         modifier = Modifier
-                            .size(12.dp)
+                            .size(10.dp)
                             .graphicsLayer {
                                 alpha = glow
                                 scaleX = 1.35f
@@ -775,7 +812,7 @@ private fun StreakPipRow(streak: StreakTracker, modifier: Modifier = Modifier) {
                 }
                 Box(
                     modifier = Modifier
-                        .size(11.dp)
+                        .size(9.dp)
                         .clip(CircleShape)
                         .background(
                             if (gem != null) Brush.radialGradient(listOf(Color.White, gem, gem.copy(red = gem.red * 0.55f, green = gem.green * 0.55f, blue = gem.blue * 0.55f)))
@@ -963,10 +1000,15 @@ private fun QuizQuestion.toAnswerOptions(
  * Powyzej [ANSWER_MAX_COLUMNS] nie idziemy: przy trzech kolumnach na dymek zostaje mniej niz
  * sto dp szerokosci i tekst dluzszy niz jedno slowo i tak zostalby przyciety.
  */
-private fun answerColumns(count: Int, available: Dp): Int {
+private fun answerColumns(count: Int, available: Dp, longestAnswer: Int): Int {
     if (count <= 2) return 1
     val perTile = (available - ANSWER_TILE_GAP * (count - 1)) / count
-    return if (perTile < ANSWER_TILE_READABLE_HEIGHT) ANSWER_MAX_COLUMNS else 1
+    if (perTile >= ANSWER_TILE_READABLE_HEIGHT) return 1
+    // Dluga odpowiedz potrzebuje SZEROKOSCI, nie wysokosci: w polowie panelu miesci sie kilka
+    // liter na linie i nawet cztery linie nie wystarczaly - stad "Poczatek odpo...". Jedna kolumna
+    // daje jej caly panel; napis sam zmniejsza sie do wysokosci kafla (autoSize w [QuizOptionTile]).
+    if (longestAnswer >= ANSWER_LONG_TEXT_CHARS && perTile >= ANSWER_TILE_SINGLE_COLUMN_FLOOR) return 1
+    return ANSWER_MAX_COLUMNS
 }
 
 /**
@@ -994,7 +1036,8 @@ private fun AnswerGrid(
         if (!revealed) {
             lockedHeight = maxHeight
         }
-        val columns = answerColumns(options.size, lockedHeight)
+        val longest = remember(questionId) { options.maxOfOrNull { it.text.length } ?: 0 }
+        val columns = answerColumns(options.size, lockedHeight, longest)
         val rows = options.chunked(columns)
 
         // Rzedy dziela wysokosc po rowno, ale nie rosna ponad [ANSWER_TILE_MAX_HEIGHT] - przy dwoch
@@ -1118,17 +1161,17 @@ private fun QuizOptionTile(
         // krazek o stalej srednicy 58 dp bylby wyzszy od calego dymka, ktory ma zdobic.
         // Wczesniej wysokosc brala sie z tekstu, bo panel siedzial w verticalScroll i miejsca
         // "na dole" bylo nieskonczenie wiele.
+        // W waskim kaflu (dwie kolumny) krazek z numerem jest mniejszy - pelne 58 dp zjadalo
+        // prawie polowe szerokosci dymka, ktora powinna isc na tekst.
+        val narrow = maxWidth < ANSWER_NARROW_TILE_WIDTH
         val badgeSize = (maxHeight * ANSWER_BADGE_HEIGHT_RATIO)
-            .coerceIn(ANSWER_BADGE_MIN_SIZE, ANSWER_BADGE_SIZE)
+            .coerceIn(ANSWER_BADGE_MIN_SIZE, if (narrow) ANSWER_BADGE_NARROW_SIZE else ANSWER_BADGE_SIZE)
         val textSize = when {
-            maxHeight < 52.dp -> 11.sp
-            maxHeight < 66.dp -> 12.sp
+            maxHeight < 52.dp -> 12.sp
+            maxHeight < 66.dp -> 13.sp
             else -> 14.sp
         }
-        // Dwie kolumny zwezaja dymek na tyle, ze dluzsza odpowiedz musi dostac wiecej wierszy,
-        // a nie mniej - inaczej urywalaby sie w polowie slowa.
-        val textLines = if (maxWidth < ANSWER_NARROW_TILE_WIDTH) 4 else 3
-        val textPadding = (maxHeight * 0.14f).coerceIn(6.dp, 20.dp)
+        val textPadding = (maxHeight * 0.1f).coerceIn(4.dp, 14.dp)
 
         // Wszystkie trzy warstwy leza na tym samym canvasie, wiec wystarczy ten sam modifier i
         // FillBounds; krazek z numerem wystaje w lewo poza dymek i czesciowo go przykrywa.
@@ -1163,26 +1206,35 @@ private fun QuizOptionTile(
             colorFilter = ColorFilter.tint(gem, BlendMode.Modulate)
         )
 
-        // Napis nalezy do DYMKA, nie do kafla - dlatego siedzi we wlasnym Boxie przystajacym do
-        // dymka i jest w nim wysrodkowany. Wysrodkowanie w calym kaflu (czyli w przestrzeni "po
-        // krazku") przesuwaloby go w prawo wzgledem kamieni, ktore w grafice leza dokladnie na
-        // srodku dymka - i wlasnie z nimi napis ma sie pokrywac.
+        // Napis zajmuje dymek OD KRAZKA do prawej krawedzi. Wczesniej mial takie samo wciecie z obu
+        // stron (zeby lezal dokladnie na srodku dymka), czyli po prawej marnowal tyle miejsca, ile
+        // zabieral krazek - w dwoch kolumnach zostawalo na tekst ~45 dp i kazda dluzsza odpowiedz
+        // konczyla sie wielokropkiem.
+        //
+        // Rozmiar pisma dopasowuje sie sam ([TextAutoSize]): najpierw [textSize], a gdy caly tekst
+        // sie nie miesci - mniejszy, az do [ANSWER_MIN_TEXT_SIZE]. Lepiej mniejsza litera niz
+        // polowa odpowiedzi.
         Box(
-            modifier = Modifier.matchParentSize().padding(start = bubbleStart),
+            modifier = Modifier
+                .matchParentSize()
+                .padding(start = bubbleStart + textInset, end = ANSWER_TEXT_END_INSET)
+                .padding(vertical = textPadding),
             contentAlignment = Alignment.Center
         ) {
-            Text(
+            BasicText(
                 text = text,
-                color = ink,
-                fontFamily = FontFirst(),
-                fontWeight = if (visual == OptionVisual.CORRECT) FontWeight.Bold else FontWeight.Normal,
-                fontSize = textSize,
-                maxLines = textLines,
+                style = TextStyle(
+                    color = ink,
+                    fontFamily = FontFirst(),
+                    fontWeight = if (visual == OptionVisual.CORRECT) FontWeight.Bold else FontWeight.Normal,
+                    textAlign = TextAlign.Center
+                ),
                 overflow = TextOverflow.Ellipsis,
-                textAlign = TextAlign.Center,
-                // Takie samo wciecie z obu stron - inaczej napis przestalby byc na srodku dymka.
-                // Musi wystarczyc, by ominac krazek nachodzacy na lewa krawedz.
-                modifier = Modifier.padding(horizontal = textInset, vertical = textPadding)
+                autoSize = TextAutoSize.StepBased(
+                    minFontSize = ANSWER_MIN_TEXT_SIZE,
+                    maxFontSize = textSize,
+                    stepSize = 0.5.sp
+                )
             )
         }
 
@@ -1294,6 +1346,21 @@ private const val ANSWER_BADGE_HEIGHT_RATIO = 0.74f
  * przyciecia.
  */
 private val ANSWER_NARROW_TILE_WIDTH = 200.dp
+
+/** Krazek z numerem w waskim kaflu - patrz [QuizOptionTile]. */
+private val ANSWER_BADGE_NARROW_SIZE = 40.dp
+
+/** Od tylu znakow odpowiedz uznajemy za dluga - woli wtedy jedna kolumne (patrz [answerColumns]). */
+private const val ANSWER_LONG_TEXT_CHARS = 22
+
+/** Nizej niz tyle kafel w jednej kolumnie juz nie schodzi, nawet dla dlugich odpowiedzi. */
+private val ANSWER_TILE_SINGLE_COLUMN_FLOOR = 38.dp
+
+/** Najmniejsze pismo, do jakiego odpowiedz moze sie zmniejszyc, zeby zmiescic sie w calosci. */
+private val ANSWER_MIN_TEXT_SIZE = 9.sp
+
+/** Luz miedzy napisem a prawa krawedzia dymka (ramka ma tam zdobienia). */
+private val ANSWER_TEXT_END_INSET = 14.dp
 
 /**
  * Przesuniecie krazka w prawo wzgledem lewej krawedzi kafla. Jego srodek ma leciec nieco ZA

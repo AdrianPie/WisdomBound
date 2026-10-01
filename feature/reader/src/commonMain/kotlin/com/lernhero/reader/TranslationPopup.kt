@@ -1,5 +1,6 @@
 package com.lernhero.reader
 
+import com.lernhero.shared.monetization.PaywallTrigger
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -92,6 +93,7 @@ fun TranslationPopup(
     if (paywallOpen) {
         PremiumPaywall(
             subscription = koinInject(),
+            trigger = PaywallTrigger.Translations,
             reason = "You've used today's ${PremiumLimits.FREE_TRANSLATIONS_PER_DAY} free translations.",
             onDismiss = { paywallOpen = false }
         )

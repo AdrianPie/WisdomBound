@@ -88,7 +88,7 @@ actual object FitnessTracker {
                 ReadRecordsRequest(recordType = ExerciseSessionRecord::class, timeRangeFilter = range)
             ).records.map { record ->
                 WorkoutSummary(
-                    type = "Trening",
+                    type = "Workout",
                     durationMinutes = Duration.between(record.startTime, record.endTime).toMinutes().toInt()
                 )
             }

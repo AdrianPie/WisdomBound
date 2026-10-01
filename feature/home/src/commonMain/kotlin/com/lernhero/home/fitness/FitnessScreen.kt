@@ -526,9 +526,9 @@ private fun GoalCard(
 }
 
 private fun FitnessGoal.unitSuffix(): String = when (kind) {
-    FitnessGoalKind.Steps -> " krokow"
+    FitnessGoalKind.Steps -> " steps"
     FitnessGoalKind.ActiveMinutes -> " min"
-    FitnessGoalKind.Workout -> " treningow"
+    FitnessGoalKind.Workout -> " workouts"
 }
 
 @Composable

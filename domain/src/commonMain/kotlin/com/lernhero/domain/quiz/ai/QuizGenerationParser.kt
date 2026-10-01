@@ -103,8 +103,8 @@ object QuizGenerationParser {
             if (issues.isEmpty()) {
                 questions += question
             } else {
-                val label = question.prompt.take(40).ifBlank { "bez tresci" }
-                warnings += "Pominieto \"$label\": ${issues.joinToString(" ")}"
+                val label = question.prompt.take(40).ifBlank { "no text" }
+                warnings += "Skipped \"$label\": ${issues.joinToString(" ")}"
             }
         }
 

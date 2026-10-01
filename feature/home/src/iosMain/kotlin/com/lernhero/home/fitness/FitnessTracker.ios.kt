@@ -99,7 +99,7 @@ private suspend fun readWorkoutsToday(): List<WorkoutSummary> = suspendCancellab
         null
     ) { _, samples, _ ->
         val workouts = samples.orEmpty().filterIsInstance<HKWorkout>().map { workout ->
-            WorkoutSummary(type = "Trening", durationMinutes = (workout.duration / 60.0).toInt())
+            WorkoutSummary(type = "Workout", durationMinutes = (workout.duration / 60.0).toInt())
         }
         continuation.resume(workouts)
     }

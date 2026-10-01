@@ -43,6 +43,8 @@ kotlin {
             implementation(libs.androidx.core.ktx)
             // Subskrypcja premium i reklamy z nagroda - patrz shared/monetization.
             implementation(libs.revenuecat.purchases)
+            // Paywalle projektowane w panelu RevenueCat (RevenueCatUI) - patrz RevenueCatPaywall.android.kt.
+            implementation(libs.revenuecat.purchases.ui)
             implementation(libs.play.services.ads)
             // Zgoda RODO na reklamy (Google UMP) - bez niej AdMob w UE ogranicza albo wstrzymuje reklamy.
             implementation(libs.user.messaging.platform)

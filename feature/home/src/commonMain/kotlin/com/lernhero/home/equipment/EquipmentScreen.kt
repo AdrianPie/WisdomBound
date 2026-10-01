@@ -32,8 +32,6 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
-import androidx.compose.foundation.layout.ExperimentalLayoutApi
-import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
@@ -44,6 +42,7 @@ import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.navigationBarsPadding
+import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.rememberScrollState
@@ -94,6 +93,9 @@ import com.lernhero.home.ui.RarityPalette
 import com.lernhero.home.ui.label
 import com.lernhero.home.ui.shortLabel
 import com.lernhero.shared.theme.FontFirst
+import com.lernhero.domain.ultimate.Ultimates
+import com.lernhero.game.battle.component.PowerOrb
+import com.lernhero.game.battle.component.color
 
 /* ---------------------------------------------------------------------------------------------
  *  Karta postaci jest PERGAMINOWA, nie ciemna.
@@ -129,13 +131,11 @@ private val SLOT_MAX = 76.dp
 /** Odstep miedzy slotami w bocznej kolumnie - wchodzi tez w rachunek ich rozmiaru w [PaperDoll]. */
 private val SLOT_GAP = 8.dp
 
-private val BACKPACK_ICON = 60.dp
-
 /** Szerokosc slotu jako ulamek szerokosci karty - zmierzone na karcie postaci ze wzorca. */
-private const val SLOT_WIDTH_FRACTION = 0.2f
+private const val SLOT_WIDTH_FRACTION = 0.185f
 
 /** Sufit szerokosci calej karty. Na tablecie panel ma zostac panelem, a nie rozlac sie na ekran. */
-private val BOARD_MAX_WIDTH = 380.dp
+private val BOARD_MAX_WIDTH = 350.dp
 
 /**
  * Ile wysokosci podgladu zajmuje sam rycerz. Nie 1f, bo sprite jest kwadratem z postacia stojaca
@@ -147,7 +147,7 @@ private const val KNIGHT_HEIGHT_FRACTION = 0.92f
  * Sufit wysokosci bloku z postacia, liczony z SZEROKOSCI panelu. Bez niego na wysokim telefonie
  * blok rozciagalby sie w pionowy slup, w ktorym sylwetka (ograniczona szerokoscia) tonelaby w pustce.
  */
-private const val DOLL_HEIGHT_LIMIT = 0.62f
+private const val DOLL_HEIGHT_LIMIT = 0.54f
 
 /**
  * Ile SZEROKOSCI panelu zajmuje sam bohater. Wiecej niz zostaje miedzy kolumnami slotow - i o to
@@ -158,7 +158,8 @@ private const val KNIGHT_WIDTH_FRACTION = 0.58f
 
 private val LEFT_SLOTS = listOf(ItemSlot.Chest, ItemSlot.Amulet)
 private val RIGHT_SLOTS = listOf(ItemSlot.Hands, ItemSlot.Feet)
-private val BOTTOM_SLOTS = listOf(ItemSlot.MainHand, ItemSlot.OffHand, ItemSlot.Ring)
+/** Ulti na koncu rzedu - obok broni, bo tak jak ona decyduje o tym, jak sie bije. */
+private val BOTTOM_SLOTS = listOf(ItemSlot.MainHand, ItemSlot.OffHand, ItemSlot.Ring, ItemSlot.Ultimate)
 
 /**
  * Karta postaci jako NAKLADKA nad ekranem, z ktorego ja otwarto - a nie jako osobny ekran.
@@ -364,11 +365,15 @@ internal fun EquipmentBoard(
     // jeden pod drugim - a nie jak jedna karta postaci. Oprawa jest teraz na zewnatrz, a sekcje
     // w srodku sa lekkimi wglebieniami w papierze. To ta sama zasada, ktora trzyma razem karte
     // przedmiotu: jedno pudelko, kilka sekcji.
+    // statusBarsPadding: bez niego na telefonach z wycieciem/wyspa gora karty (wstazka "You",
+    // imie) wchodzila pod pasek statusu i byla ucieta. Dodatkowe 18 dp u gory sadza karte nieco
+    // nizej - blizej kciuka i krzyzyka pod nia.
     PaperPanel(
         modifier = Modifier
             .widthIn(max = BOARD_MAX_WIDTH)
+            .statusBarsPadding()
             .navigationBarsPadding()
-            .padding(horizontal = 14.dp, vertical = 12.dp)
+            .padding(start = 16.dp, end = 16.dp, top = 18.dp, bottom = 6.dp)
     ) {
         Column(
             modifier = Modifier.fillMaxWidth().padding(7.dp),
@@ -377,9 +382,7 @@ internal fun EquipmentBoard(
             HeroHeader(
                 name = name,
                 money = money,
-                progress = progress,
-                isAdmin = isAdmin,
-                onAdminKit = onAdminKit
+                progress = progress
             )
 
             Section {
@@ -389,6 +392,8 @@ internal fun EquipmentBoard(
                     itemAt = itemAt,
                     levelAt = levelAt,
                     combat = combat,
+                    isAdmin = isAdmin,
+                    onAdminKit = onAdminKit,
                     onSlotClick = onSlotClick
                 )
             }
@@ -437,9 +442,7 @@ private fun Section(content: @Composable () -> Unit) {
 private fun HeroHeader(
     name: String,
     money: Int,
-    progress: PlayerProgress,
-    isAdmin: Boolean,
-    onAdminKit: () -> Unit
+    progress: PlayerProgress
 ) {
     val fill by animateFloatAsState(targetValue = progress.xpProgress, animationSpec = tween(600))
 
@@ -466,22 +469,9 @@ private fun HeroHeader(
                     modifier = Modifier.weight(1f)
                 )
 
+                // Zloto przy PRAWEJ krawedzi i nic za nim - wstazka "You" wisi na srodku, wiec
+                // kazdy dodatkowy przycisk w tym wierszu spychal pigulke pod nia.
                 GoldPill(money = money)
-
-                // Zestaw testowy WYLACZNIE dla kont z [com.lernhero.domain.player.AdminAccounts].
-                if (isAdmin) {
-                    Box(
-                        modifier = Modifier
-                            .size(32.dp)
-                            .clip(RoundedCornerShape(9.dp))
-                            .background(Brush.verticalGradient(listOf(Color(0xFFE9D9B8), Color(0xFFCDB48A))))
-                            .border(2.dp, Frame, RoundedCornerShape(9.dp))
-                            .clickable(onClick = onAdminKit),
-                        contentAlignment = Alignment.Center
-                    ) {
-                        Text(text = "\u2699", fontSize = 17.sp, color = Frame)
-                    }
-                }
             }
 
             Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
@@ -651,6 +641,8 @@ private fun CharacterSection(
     itemAt: (ItemSlot) -> Item?,
     levelAt: (ItemSlot) -> Int,
     combat: HeroCombatStats,
+    isAdmin: Boolean,
+    onAdminKit: () -> Unit,
     onSlotClick: (ItemSlot) -> Unit
 ) {
     Column(
@@ -660,6 +652,22 @@ private fun CharacterSection(
         Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
             TagPill(text = "\u2694 Knight", background = ClassRed)
             Box(modifier = Modifier.weight(1f))
+            // Zestaw testowy WYLACZNIE dla kont z [com.lernhero.domain.player.AdminAccounts].
+            // Stoi tu, a nie w naglowku, bo tam wpychal zloto pod wstazke "You".
+            if (isAdmin) {
+                Box(
+                    modifier = Modifier
+                        .padding(end = 6.dp)
+                        .size(28.dp)
+                        .clip(RoundedCornerShape(8.dp))
+                        .background(Brush.verticalGradient(listOf(Color(0xFFE9D9B8), Color(0xFFCDB48A))))
+                        .border(2.dp, Frame, RoundedCornerShape(8.dp))
+                        .clickable(onClick = onAdminKit),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text(text = "\u2699", fontSize = 15.sp, color = Frame)
+                }
+            }
             PowerPill(power = GearPower.of(combat))
         }
 
@@ -853,7 +861,14 @@ private fun GearSlot(
     if (item != null) {
         Box(modifier = Modifier.clickable(onClick = onClick).then(tutorial)) {
             ItemIcon(item = item, level = level, rarity = RarityPalette.frame(item.rarity), size = size)
+            Ultimates.specFor(item.id)?.let { spec ->
+                OrbChargeBadge(spec = spec, modifier = Modifier.align(Alignment.TopEnd).offset(x = 4.dp, y = (-4).dp))
+            }
         }
+        return
+    }
+    if (slot == ItemSlot.Ultimate) {
+        EmptyUltimateSlot(size = size, onClick = onClick)
         return
     }
 
@@ -877,6 +892,54 @@ private fun GearSlot(
             overflow = TextOverflow.Ellipsis,
             textAlign = TextAlign.Center,
             modifier = Modifier.padding(horizontal = 2.dp)
+        )
+    }
+}
+
+/**
+ * Pusty slot ulti - wglebienie z przygaszona kula, zeby bylo widac, ze wchodzi tu cos innego niz
+ * zbroja. Bez kuli bohater i tak ma wbudowane ulti ([Ultimates.BASIC]), stad podpis z seria.
+ */
+@Composable
+private fun EmptyUltimateSlot(size: Dp, onClick: () -> Unit) {
+    Box(
+        modifier = Modifier
+            .size(size)
+            .clip(RoundedCornerShape(size * 0.17f))
+            .background(Brush.radialGradient(listOf(Color(0xFF6B4A8F), Color(0xFF3A2748))))
+            .border(2.dp, Color(0xFFB88AE0), RoundedCornerShape(size * 0.17f))
+            .clickable(onClick = onClick),
+        contentAlignment = Alignment.Center
+    ) {
+        PowerOrb(color = Color(0xFFB88AE0), size = size * 0.62f, glow = 0.4f, modifier = Modifier.offset(y = -(size * 0.08f)))
+        Text(
+            text = "ULTI",
+            color = Color.White.copy(alpha = 0.85f),
+            fontFamily = FontFirst(),
+            fontWeight = FontWeight.Black,
+            fontSize = 9.sp,
+            modifier = Modifier.align(Alignment.BottomCenter).padding(bottom = 3.dp)
+        )
+    }
+}
+
+/** Malutka pigulka z dlugoscia serii kuli ("5🔥") - rog kafla w slocie, plecaku i liscie wyboru. */
+@Composable
+private fun OrbChargeBadge(spec: com.lernhero.domain.ultimate.UltimateSpec, modifier: Modifier = Modifier) {
+    Box(
+        modifier = modifier
+            .clip(RoundedCornerShape(50))
+            .background(Color(0xFF231830))
+            .border(1.dp, spec.color, RoundedCornerShape(50))
+            .padding(horizontal = 4.dp, vertical = 1.dp)
+    ) {
+        Text(
+            text = "${spec.streak}\uD83D\uDD25",
+            color = Color.White,
+            fontFamily = FontFirst(),
+            fontWeight = FontWeight.Black,
+            fontSize = 8.sp,
+            lineHeight = 9.sp
         )
     }
 }
@@ -911,23 +974,24 @@ private fun CombatPill(icon: String, tint: Color, value: String, modifier: Modif
             .background(Inset)
             .border(2.dp, FrameLight, RoundedCornerShape(50))
             .padding(3.dp),
-        horizontalArrangement = Arrangement.spacedBy(4.dp),
+        horizontalArrangement = Arrangement.spacedBy(3.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
         // Kolorowe kolko z ikona - to ono niesie ZNACZENIE pigulki; sama liczba bez niego
         // wygladalaby jak cztery takie same kafelki z roznymi cyframi.
         Box(
-            modifier = Modifier.size(22.dp).clip(CircleShape).background(tint),
+            modifier = Modifier.size(20.dp).clip(CircleShape).background(tint),
             contentAlignment = Alignment.Center
         ) {
-            Text(text = icon, fontSize = 11.sp)
+            Text(text = icon, fontSize = 10.sp)
         }
+        // 11 sp: przy wezszej karcie "+105%" przy 12 sp konczylo sie wielokropkiem.
         Text(
             text = value,
             color = Ink,
             fontFamily = FontFirst(),
             fontWeight = FontWeight.Bold,
-            fontSize = 12.sp,
+            fontSize = 11.sp,
             maxLines = 1,
             overflow = TextOverflow.Ellipsis,
             modifier = Modifier.weight(1f)
@@ -947,7 +1011,7 @@ private fun AttributesSection(progress: PlayerProgress, onSpend: (HeroStat) -> U
     // Tapniecie w karte pokazuje NAD nia dymek z tym, co atrybut robi; drugie tapniecie chowa.
     var explained by remember { mutableStateOf<HeroStat?>(null) }
 
-    Column(modifier = Modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+    Column(modifier = Modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(6.dp)) {
         Row(
             modifier = Modifier.fillMaxWidth().padding(horizontal = 2.dp),
             verticalAlignment = Alignment.CenterVertically
@@ -986,7 +1050,7 @@ private fun AttributesSection(progress: PlayerProgress, onSpend: (HeroStat) -> U
             }
         }
         HeroStat.entries.chunked(2).forEach { pair ->
-            Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(6.dp)) {
                 pair.forEach { stat ->
                     StatCard(
                         stat = stat,
@@ -1028,19 +1092,19 @@ private fun StatCard(
             .background(Brush.verticalGradient(listOf(Color.White.copy(alpha = 0.55f), look.color.copy(alpha = 0.14f))))
             .border(1.dp, look.color.copy(alpha = 0.45f), shape)
             .clickable(onClick = onToggle)
-            .padding(horizontal = 8.dp, vertical = 7.dp),
+            .padding(horizontal = 8.dp, vertical = 5.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(8.dp)
     ) {
         Box(
             modifier = Modifier
-                .size(34.dp)
+                .size(30.dp)
                 .clip(CircleShape)
                 .background(Brush.verticalGradient(listOf(look.color.lightened(0.35f), look.color)))
                 .border(1.5.dp, Color.White.copy(alpha = 0.8f), CircleShape),
             contentAlignment = Alignment.Center
         ) {
-            Text(text = look.icon, fontSize = 16.sp, lineHeight = 18.sp)
+            Text(text = look.icon, fontSize = 14.sp, lineHeight = 16.sp)
         }
         Column(modifier = Modifier.weight(1f)) {
             Text(
@@ -1057,8 +1121,8 @@ private fun StatCard(
                 color = Ink,
                 fontFamily = FontFirst(),
                 fontWeight = FontWeight.Black,
-                fontSize = 20.sp,
-                lineHeight = 22.sp
+                fontSize = 18.sp,
+                lineHeight = 20.sp
             )
             Text(
                 text = stat.shortEffect(points),
@@ -1336,7 +1400,7 @@ private fun BottomTab(
                 shape = RoundedCornerShape(12.dp)
             )
             .clickable(onClick = onClick)
-            .padding(horizontal = 10.dp, vertical = 10.dp),
+            .padding(horizontal = 10.dp, vertical = 8.dp),
         horizontalArrangement = Arrangement.spacedBy(6.dp, Alignment.CenterHorizontally),
         verticalAlignment = Alignment.CenterVertically
     ) {
@@ -1384,81 +1448,240 @@ private fun HintBar(message: String) {
 
 /* ------------------------------------------ Backpack --------------------------------------- */
 
+/** Ile kafli w rzedzie plecaka - cztery to jeszcze czytelna ikona i nazwa na waskim telefonie. */
+private const val BACKPACK_COLUMNS = 4
+
+/** Grupy filtra plecaka. Pusta lista slotow = wszystko. */
+private enum class BackpackFilter(val label: String, val slots: Set<ItemSlot>) {
+    All("All", emptySet()),
+    Weapons("Weapons", setOf(ItemSlot.MainHand, ItemSlot.OffHand)),
+    Armor("Armor", setOf(ItemSlot.Head, ItemSlot.Chest, ItemSlot.Hands, ItemSlot.Legs, ItemSlot.Feet)),
+    Jewelry("Jewelry", setOf(ItemSlot.Ring, ItemSlot.Amulet)),
+    Ulti("Ulti", setOf(ItemSlot.Ultimate));
+
+    fun accepts(item: Item) = slots.isEmpty() || item.slot in slots
+}
+
 /**
- * Plecak jako NAKLADKA, nie sekcja ekranu.
+ * Plecak jako NAKLADKA, nie sekcja ekranu - i to w tej samej oprawie co karta postaci, spod ktorej
+ * sie go otwiera (papier w brazowej ramie, krzyzyk pod oknem).
  *
- * Jako sekcja mial dwie wady naraz: pusty zajmowal miejsce, zeby powiedziec, ze jest pusty, a pelny
- * rosl i spychal wszystko pod nim. Jako nakladka nie kosztuje nic, dopoki gracz go nie otworzy.
+ * Wczesniej byl to systemowy AlertDialog: waski, z trzema kaflami przyklejonymi do lewej krawedzi,
+ * nazwami, ktore wylazily z komorek, i ostatnim rzedem uscietym w pol. Teraz siatka zawsze wypelnia
+ * cala szerokosc, kazda komorka ma miejsce na dwie linie nazwy (rzedy sa rowne), a najlepsze rzeczy
+ * stoja na gorze - przy 60+ przedmiotach szukanie legendarnego miecza w kolejnosci zdobycia to
+ * przewijanie na slepo.
  */
-@OptIn(ExperimentalLayoutApi::class)
 @Composable
 private fun BackpackDialog(
     items: List<Pair<ItemInstance, Item>>,
     onDismiss: () -> Unit,
     onInspect: (ItemInstance) -> Unit
 ) {
-    AlertDialog(
-        onDismissRequest = onDismiss,
-        containerColor = Paper,
-        titleContentColor = Ink,
-        textContentColor = Ink,
-        shape = RoundedCornerShape(18.dp),
-        title = {
-            Text(text = "Backpack", color = Ink, fontFamily = FontFirst(), fontWeight = FontWeight.Bold)
-        },
-        text = {
-            if (items.isEmpty()) {
-                Text(
-                    text = "Backpack is empty. Gear drops from chests and bosses.",
-                    color = InkMuted,
-                    fontFamily = FontFirst(),
-                    fontSize = 12.sp
-                )
-            } else {
-                FlowRow(
+    var filter by remember { mutableStateOf(BackpackFilter.All) }
+    val sorted = remember(items) {
+        items.sortedWith(
+            compareByDescending<Pair<ItemInstance, Item>> { it.second.rarity.ordinal }
+                .thenByDescending { it.first.level }
+                .thenBy { it.second.name }
+        )
+    }
+    val shown = sorted.filter { filter.accepts(it.second) }
+
+    Box(modifier = Modifier.fillMaxSize()) {
+        DialogScrim(onDismiss = onDismiss)
+
+        PaperPanel(
+            modifier = Modifier
+                .align(Alignment.Center)
+                .widthIn(max = BOARD_MAX_WIDTH)
+                .statusBarsPadding()
+                .navigationBarsPadding()
+                .padding(start = 14.dp, end = 14.dp, top = 16.dp, bottom = DIALOG_CLOSE_LANE)
+        ) {
+            Column(
+                modifier = Modifier.fillMaxWidth().padding(10.dp),
+                verticalArrangement = Arrangement.spacedBy(9.dp)
+            ) {
+                Row(
+                    modifier = Modifier.fillMaxWidth().padding(horizontal = 2.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(8.dp)
+                ) {
+                    Text(text = "\uD83C\uDF92", fontSize = 20.sp)
+                    Text(
+                        text = "Backpack",
+                        color = Ink,
+                        fontFamily = FontFirst(),
+                        fontWeight = FontWeight.Black,
+                        fontSize = 20.sp,
+                        modifier = Modifier.weight(1f)
+                    )
+                    TagPill(
+                        text = if (items.size == 1) "1 item" else "${items.size} items",
+                        background = Navy
+                    )
+                }
+
+                if (items.isNotEmpty()) {
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(6.dp)
+                    ) {
+                        BackpackFilter.entries.forEach { f ->
+                            FilterChip(
+                                label = f.label,
+                                count = items.count { f.accepts(it.second) },
+                                selected = f == filter,
+                                onClick = { filter = f },
+                                modifier = Modifier.weight(1f)
+                            )
+                        }
+                    }
+                }
+
+                // Siatka w jasnym wglebieniu - ta sama "sekcja" co postac i atrybuty na karcie.
+                // Przewija sie SAMA siatka: naglowek i filtry zostaja na miejscu.
+                Box(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .heightIn(max = 420.dp)
-                        .verticalScroll(rememberScrollState()),
-                    horizontalArrangement = Arrangement.spacedBy(8.dp),
-                    verticalArrangement = Arrangement.spacedBy(8.dp)
+                        .weight(1f, fill = false)
+                        .clip(RoundedCornerShape(12.dp))
+                        .background(Card)
+                        .border(1.5.dp, ParchmentPalette.CardEdge, RoundedCornerShape(12.dp))
                 ) {
-                    items.forEach { (instance, item) ->
-                        BackpackItem(
-                            item = item,
-                            level = instance.level,
-                            onClick = { onInspect(instance) }
-                        )
+                    if (shown.isEmpty()) {
+                        Column(
+                            modifier = Modifier.fillMaxWidth().padding(vertical = 34.dp, horizontal = 16.dp),
+                            horizontalAlignment = Alignment.CenterHorizontally,
+                            verticalArrangement = Arrangement.spacedBy(6.dp)
+                        ) {
+                            Text(text = "\uD83C\uDF92", fontSize = 34.sp)
+                            Text(
+                                text = if (items.isEmpty()) "Your backpack is empty." else "Nothing here yet.",
+                                color = Ink,
+                                fontFamily = FontFirst(),
+                                fontWeight = FontWeight.Bold,
+                                fontSize = 13.sp
+                            )
+                            Text(
+                                text = "Gear drops from chests and bosses.",
+                                color = InkMuted,
+                                fontFamily = FontFirst(),
+                                fontSize = 11.sp,
+                                textAlign = TextAlign.Center
+                            )
+                        }
+                    } else {
+                        BoxWithConstraints(modifier = Modifier.fillMaxWidth()) {
+                            val gap = 8.dp
+                            val pad = 10.dp
+                            val cell = (maxWidth - pad * 2 - gap * (BACKPACK_COLUMNS - 1)) / BACKPACK_COLUMNS
+                            Column(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .verticalScroll(rememberScrollState())
+                                    // Wiecej miejsca u gory: klejnot rzadkosci wystaje ponad kafel.
+                                    .padding(start = pad, end = pad, top = pad + 4.dp, bottom = pad),
+                                verticalArrangement = Arrangement.spacedBy(10.dp)
+                            ) {
+                                shown.chunked(BACKPACK_COLUMNS).forEach { row ->
+                                    Row(horizontalArrangement = Arrangement.spacedBy(gap)) {
+                                        row.forEach { (instance, item) ->
+                                            BackpackItem(
+                                                item = item,
+                                                level = instance.level,
+                                                size = cell,
+                                                onClick = { onInspect(instance) }
+                                            )
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
-        },
-        confirmButton = {
-            TextButton(onClick = onDismiss) {
-                Text(text = "Close", color = Ink, fontFamily = FontFirst(), fontWeight = FontWeight.Bold)
-            }
         }
-    )
+
+        DialogCloseButton(
+            onClick = onDismiss,
+            modifier = Modifier
+                .align(Alignment.BottomCenter)
+                .navigationBarsPadding()
+                .padding(bottom = 14.dp)
+        )
+    }
+}
+
+/** Zakladka filtra: zolta, gdy wybrana, z licznikiem - zeby bylo widac, ze np. bizuterii nie masz wcale. */
+@Composable
+private fun FilterChip(
+    label: String,
+    count: Int,
+    selected: Boolean,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    val shape = RoundedCornerShape(10.dp)
+    Column(
+        modifier = modifier
+            .clip(shape)
+            .background(if (selected) Button else Card)
+            .border(if (selected) 2.dp else 1.5.dp, if (selected) ParchmentPalette.ButtonEdge else ParchmentPalette.CardEdge, shape)
+            .clickable(onClick = onClick)
+            .padding(vertical = 5.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Text(
+            text = label,
+            color = Ink,
+            fontFamily = FontFirst(),
+            fontWeight = FontWeight.Bold,
+            fontSize = 11.sp,
+            lineHeight = 12.sp,
+            maxLines = 1
+        )
+        Text(
+            text = "$count",
+            color = if (selected) Ink else InkMuted,
+            fontFamily = FontFirst(),
+            fontSize = 9.sp,
+            lineHeight = 10.sp
+        )
+    }
 }
 
 @Composable
-private fun BackpackItem(item: Item, level: Int, onClick: () -> Unit) {
+private fun BackpackItem(item: Item, level: Int, size: Dp, onClick: () -> Unit) {
     Column(
         modifier = Modifier
-            .width(BACKPACK_ICON + 10.dp)
+            .width(size)
+            .clip(RoundedCornerShape(8.dp))
             .clickable(onClick = onClick),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(4.dp)
     ) {
-        ItemIcon(item = item, level = level, rarity = RarityPalette.frame(item.rarity), size = BACKPACK_ICON)
+        Box {
+            ItemIcon(item = item, level = level, rarity = RarityPalette.frame(item.rarity), size = size)
+            Ultimates.specFor(item.id)?.let { spec ->
+                OrbChargeBadge(spec = spec, modifier = Modifier.align(Alignment.TopEnd).offset(x = 3.dp, y = (-3).dp))
+            }
+        }
+        // Zawsze DWIE linie miejsca na nazwe - inaczej rzad z "Bronze Warhammer" jest wyzszy
+        // od sasiedniego i siatka sie rozjezdza.
         Text(
             text = item.name,
             color = Ink,
             fontFamily = FontFirst(),
+            fontWeight = FontWeight.Bold,
             fontSize = 9.sp,
+            lineHeight = 10.sp,
+            minLines = 2,
             maxLines = 2,
             overflow = TextOverflow.Ellipsis,
-            textAlign = TextAlign.Center
+            textAlign = TextAlign.Center,
+            modifier = Modifier.fillMaxWidth()
         )
     }
 }
@@ -1488,7 +1711,12 @@ private fun ItemPickerDialog(
         text = {
             if (items.isEmpty()) {
                 Text(
-                    text = "You have nothing for this slot yet. Gear drops from chests and bosses.",
+                    text = if (slot == ItemSlot.Ultimate) {
+                        "No power orbs yet - they drop from chests and bosses. Until then your hero uses " +
+                            "${Ultimates.BASIC.name} (${Ultimates.BASIC.streak} correct in a row)."
+                    } else {
+                        "You have nothing for this slot yet. Gear drops from chests and bosses."
+                    },
                     color = InkMuted,
                     fontFamily = FontFirst(),
                     fontSize = 12.sp
@@ -1524,12 +1752,21 @@ private fun ItemPickerDialog(
                                     fontWeight = FontWeight.Bold,
                                     fontSize = 12.sp
                                 )
+                                val orb = Ultimates.specFor(item.id)
                                 Text(
-                                    text = "🛡 ${GearPower.of(item)}",
+                                    text = orb?.let { "${it.kind.icon} ${it.streak} in a row" } ?: "🛡 ${GearPower.of(item)}",
                                     color = InkMuted,
                                     fontFamily = FontFirst(),
                                     fontSize = 10.sp
                                 )
+                                orb?.let {
+                                    Text(
+                                        text = "✦ ${it.effectText}",
+                                        color = Green,
+                                        fontFamily = FontFirst(),
+                                        fontSize = 9.sp
+                                    )
+                                }
                                 item.effects.forEach { effect ->
                                     Text(
                                         text = "✦ ${effect.description}",

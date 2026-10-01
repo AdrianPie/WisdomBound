@@ -102,7 +102,8 @@ enum class ForgeTrack(val label: String, val icon: String) {
     Monster("Summons", "\uD83D\uDC3E");
 
     fun catalog(): List<Item> = when (this) {
-        Hero -> ItemCatalog.all
+        // Kule mocy (ulti) nie maja receptur ani ulepszen - ich sila to rzadkosc.
+        Hero -> ItemCatalog.all.filter { it.slot != com.lernhero.domain.item.ItemSlot.Ultimate }
         Monster -> MonsterGear.all
     }
 }

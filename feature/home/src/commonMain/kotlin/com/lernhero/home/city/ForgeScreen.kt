@@ -21,6 +21,7 @@ import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.grid.GridCells
@@ -102,6 +103,8 @@ fun ForgeScreen(
     val entries = remember(bag) {
         bag.mapNotNull { instance ->
             val item = instance.base() ?: return@mapNotNull null
+            // Kule mocy (ulti) sie nie ulepsza - ich sila to rzadkosc, wiec w kuzni ich nie ma.
+            if (item.slot == com.lernhero.domain.item.ItemSlot.Ultimate) return@mapNotNull null
             ForgeEntry(
                 key = instance.uid,
                 item = item,
@@ -468,11 +471,14 @@ private fun UpgradeBench(
             )
             LevelPips(level = level)
 
-            // Tabelka PRZED -> PO w bloku o STALEJ wysokosci - liczba statystyk rozni sie miedzy
-            // przedmiotami, a panel nie moze skakac przy zmianie sztuki.
-            Box(modifier = Modifier.fillMaxWidth().height(UPGRADE_INFO_HEIGHT)) {
+            // Tabelka PRZED -> PO i zdolnosci. Blok ma MINIMALNA wysokosc (typowy przedmiot miesci
+            // sie w niej, wiec panel nie skacze przy przegladaniu), ale rosnie, gdy tresci jest wiecej.
+            // Wczesniej byl sztywny, a zdolnosci siedzialy w drugim, 40-dp okienku z wlasnym
+            // przewijaniem - drugi opis konczyl sie w polowie linijki i nikt nie wiedzial, ze da sie
+            // go przewinac. Roznice wysokosci zabiera siatka pod spodem (weight), nie ekran.
+            Box(modifier = Modifier.fillMaxWidth().heightIn(min = UPGRADE_INFO_HEIGHT)) {
                 Column(
-                    modifier = Modifier.fillMaxWidth().verticalScroll(rememberScrollState()),
+                    modifier = Modifier.fillMaxWidth(),
                     verticalArrangement = Arrangement.spacedBy(4.dp)
                 ) {
                     val statTypes = current.asMap().keys.toList()
@@ -506,8 +512,17 @@ private fun UpgradeBench(
                             }
                         }
                     }
-                    if (item.effects.isNotEmpty()) {
-                        ItemInfoBlock(item = item, height = UPGRADE_EFFECTS_HEIGHT, showDescription = false, showStats = false)
+                    item.effects.forEach { effect ->
+                        GlyphText(
+                            text = "✦ ${effect.description}",
+                            color = Gold,
+                            fontFamily = FontFirst(),
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 11.sp,
+                            lineHeight = 14.sp,
+                            textAlign = TextAlign.Center,
+                            modifier = Modifier.fillMaxWidth().padding(top = 2.dp)
+                        )
                     }
                 }
             }
@@ -700,10 +715,10 @@ private fun RecipeTile(
     }
 }
 
-/** Staly budzet miejsca na tabelke PRZED -> PO i zdolnosci w warsztacie ulepszania. */
+/**
+ * Minimalna wysokosc tabelki PRZED -> PO i zdolnosci - miesci typowy przedmiot (jedna-dwie
+ * statystyki i zdolnosc), wiec przy przegladaniu panel stoi w miejscu. Bogatszy przedmiot go wydluza.
+ */
 private val UPGRADE_INFO_HEIGHT = 96.dp
-
-/** Ile z tego przypada na liste zdolnosci. */
-private val UPGRADE_EFFECTS_HEIGHT = 40.dp
 
 private const val COLUMNS = 4

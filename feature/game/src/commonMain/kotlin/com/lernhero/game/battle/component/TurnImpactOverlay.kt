@@ -233,7 +233,7 @@ internal fun TurnImpactOverlay(
                         if (buffed) Good else Bad
                     )
                 }
-                if (entry.ultiTriggered) Chip("⚡", "ULTI!", Gold)
+                if (entry.ultiTriggered) Chip("⚡", entry.ultiName?.uppercase() ?: "ULTI!", Gold)
             }
 
             AttackCounter(entry = entry, progress = counter.value, accent = accent)

@@ -1,5 +1,10 @@
 package com.lernhero.game.battle
 
+import kotlin.time.TimeMark
+import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.coroutines.flow.map
+import com.lernhero.domain.ultimate.UltimateKind
+import com.lernhero.domain.ultimate.Ultimates
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.lernhero.domain.combat.StatType
@@ -312,6 +317,26 @@ class BattleViewModel(
     init {
         loadSavedPlayer()
         playBattleIntro()
+        watchUltimateCasts()
+    }
+
+    /**
+     * Kazdy nowy, jeszcze nie wystrzelony [UltimateCast] dostaje swoje uderzenie po
+     * [UltimateTiming.IMPACT_MS]. Planowane tutaj, a nie w miejscu odpowiedzi, bo odpowiedz
+     * rozstrzyga sie wewnatrz `_uiState.update { }` - a ta lambda moze sie wykonac wiecej niz
+     * raz i odpalilaby uderzenie podwojnie.
+     */
+    private fun watchUltimateCasts() {
+        viewModelScope.launch {
+            _uiState
+                .map { state -> state.ultimateCast?.takeIf { !it.released }?.id }
+                .distinctUntilChanged()
+                .collect { castId ->
+                    if (castId == null) return@collect
+                    delay(BattleSpeed.scale(UltimateTiming.IMPACT_MS.toLong()))
+                    _uiState.update { it.releaseUltimate(castId) }
+                }
+        }
     }
 
     /**
@@ -440,6 +465,14 @@ class BattleViewModel(
             return blocked
         }
 
+        // Garda z ulti ([UltimateKind.Ward]) - zuzywana po zwyklej gardzie, bo tamta i tak
+        // przepada na koniec tury, a ta czeka na nastepny cios.
+        val ward = wardCharges[target.id] ?: 0
+        if (!attacker.isPlayer && target.isPlayer && ward > 0) {
+            return copy(wardCharges = wardCharges + (target.id to ward - 1))
+                .spawnEffect(targetId = target.id, amount = 0, kind = HitKind.Block, sourceId = attackerId)
+        }
+
         // Zaklecie leczace nie zadaje obrazen - laduje wprost w [healCharacter], razem z bonusem
         // z [EndlessBuff.Blessing], tak samo jak kazde inne leczenie w grze.
         if (hit.heals) {
@@ -489,7 +522,7 @@ class BattleViewModel(
             ),
             secondWindUses = if (rescued) secondWindUses + (target.id to alreadyUsed + 1) else secondWindUses,
             message = when {
-                rescued -> "${target.name} lapie drugi oddech!"
+                rescued -> "${target.name} catches a second wind!"
                 undying -> "${target.name} refuses to die!"
                 else -> message
             }
@@ -551,7 +584,9 @@ class BattleViewModel(
         characterId: String,
         rawAmount: Float,
         /** false dla wrogow - [EndlessBuff.Blessing] to ulepszenie DRUZYNY. */
-        boosted: Boolean = true
+        boosted: Boolean = true,
+        /** Kolor efektu leczenia - ulti leczy w barwie swojej kuli. */
+        tint: Long? = null
     ): BattleUiState {
         val character = characters[characterId] ?: return this
         if (character.hp <= 0) return this
@@ -560,7 +595,7 @@ class BattleViewModel(
         val healed = (character.hp + amount).coerceAtMost(character.maxHp)
         if (healed == character.hp) return this
         return copy(characters = characters.plus(characterId to character.copy(hp = healed)))
-            .spawnEffect(targetId = characterId, amount = healed - character.hp, kind = HitKind.Heal)
+            .spawnEffect(targetId = characterId, amount = healed - character.hp, kind = HitKind.Heal, tint = tint)
     }
 
     /** Mnoznik KAZDEGO leczenia druzyny - patrz [EndlessBuff.Blessing]. */
@@ -1330,9 +1365,15 @@ class BattleViewModel(
         targetId: String,
         amount: Int,
         kind: HitKind,
-        sourceId: String? = null
+        sourceId: String? = null,
+        tint: Long? = null
     ): BattleUiState =
-        copy(floatingEffects = floatingEffects + FloatingEffect(nextEffectId++, targetId, amount, kind, sourceId))
+        copy(floatingEffects = floatingEffects + FloatingEffect(nextEffectId++, targetId, amount, kind, sourceId, tint))
+
+    /** Pole bitwy odegralo wystrzal ulti - zdejmujemy go, zeby po powrocie na ekran nie zagral drugi raz. */
+    fun consumeUltimateCast(id: Long) {
+        _uiState.update { if (it.ultimateCast?.id == id) it.copy(ultimateCast = null) else it }
+    }
 
     /** Ekran zdejmuje efekt, gdy jego animacja dobiegnie konca. */
     fun consumeFloatingEffect(id: Long) {
@@ -1393,7 +1434,7 @@ class BattleViewModel(
      */
     private fun BattleUiState.resolveQuizOutcome(quiz: LiveQuizState, isCorrect: Boolean, reward: Int): BattleUiState {
         Sounds.play(if (isCorrect) Sfx.Correct else Sfx.Wrong)
-        val streakOutcome = streak.record(isCorrect)
+        val streakOutcome = streak.record(isCorrect, ultiStreak = ultimate.streak)
         runTally.recordAnswer(
             correct = isCorrect,
             category = currentQuestionCategory,
@@ -1439,6 +1480,7 @@ class BattleViewModel(
                 damageMultiplier = currentTurnMultiplier,
                 reward = if (isCorrect) reward else 0,
                 ultiTriggered = streakOutcome.ultiTriggered,
+                ultiName = ultimate.name.takeIf { streakOutcome.ultiTriggered },
                 cycleLabel = streakOutcome.cycleResult?.label,
                 answerSeconds = answeredAfterMs / 1000f,
                 speedMultiplier = speedMultiplier,
@@ -1449,7 +1491,8 @@ class BattleViewModel(
             )
         )
 
-        if (streakOutcome.ultiTriggered) next = next.fireUlti()
+        // Kula naladowana - ale scena ruszy dopiero w [continueQuiz], gdy quiz zjedzie z ekranu.
+        if (streakOutcome.ultiTriggered) next = next.copy(ultimateQueued = true)
 
         streakOutcome.cycleResult?.let { outcome ->
             next = next.copy(
@@ -1616,8 +1659,8 @@ class BattleViewModel(
             BossEventKind.Heal -> {
                 val missingHp = boss?.let { (it.maxHp - it.hp).coerceAtLeast(0) } ?: 0
                 BossEventProjection(
-                    attackName = "PIESN KOSCI",
-                    valueLabel = "LECZENIE",
+                    attackName = "BONE SONG",
+                    valueLabel = "HEALING",
                     chargedValue = (missingHp * BOSS_HEAL_MAX_FRACTION).roundToInt()
                 )
             }
@@ -1627,8 +1670,8 @@ class BattleViewModel(
                     .filter { it.isPlayer && it.hp > 0 }
                     .sumOf { (it.maxHp * BOSS_POISON_MAX_FRACTION).roundToInt().coerceAtLeast(1) }
                 BossEventProjection(
-                    attackName = "TRUJACY ODDECH",
-                    valueLabel = "OBRAZENIA",
+                    attackName = "TOXIC BREATH",
+                    valueLabel = "DAMAGE",
                     chargedValue = total
                 )
             }
@@ -1637,14 +1680,14 @@ class BattleViewModel(
                 val perPlayer = ((boss?.attack ?: 0) * BOSS_STRIKE_MAX_ATTACK_MULTIPLIER).roundToInt()
                 BossEventProjection(
                     attackName = "HEAVY BLOW",
-                    valueLabel = "OBRAZENIA",
+                    valueLabel = "DAMAGE",
                     chargedValue = perPlayer * alivePlayers
                 )
             }
 
             BossEventKind.StunGamble -> BossEventProjection(
-                attackName = "KLATWA BEZRUCHU",
-                valueLabel = "OGLUSZENIE",
+                attackName = "CURSE OF STILLNESS",
+                valueLabel = "STUN",
                 chargedValue = (BOSS_STUN_MAX_FRACTION * 100f).roundToInt(),
                 unit = "%"
             )
@@ -1990,33 +2033,116 @@ class BattleViewModel(
         )
     }
 
-    /** Piec dobrych odpowiedzi z rzedu: cala druzyna wali raz w kazdego wroga widocznego na ekranie. */
-    private fun BattleUiState.fireUlti(): BattleUiState {
+    /**
+     * Kula mocy sie naladowala - START sceny. Nikt jeszcze nic nie dostaje: ustalamy tylko, na
+     * kogo patrzy kamera ([UltimateCast.focusIds]), a samo uderzenie zadaje [releaseUltimate]
+     * po [UltimateTiming.IMPACT_MS] (patrz [watchUltimateCasts]).
+     */
+    private fun BattleUiState.beginUltimate(): BattleUiState {
+        val spec = ultimate
+        val enemies = characters.values.filter { !it.isPlayer && it.hp > 0 }
+        val allies = characters.values.filter { it.isPlayer && (it.hp > 0 || spec.revive) }
+        val (focus, onAllies) = when (spec.kind) {
+            UltimateKind.Nova, UltimateKind.Drain -> enemies.map { it.id } to false
+            UltimateKind.Smite -> listOfNotNull(enemies.maxByOrNull { it.hp }?.id) to false
+            UltimateKind.Mend, UltimateKind.Ward -> allies.map { it.id } to true
+        }
+        val cast = UltimateCast(id = ultiPulseId + 1, spec = spec, focusIds = focus.toSet(), focusAllies = onAllies)
+        Sounds.play(Sfx.SummonCharge)
+        return copy(ultiPulseId = cast.id, ultimateCast = cast, ultimateQueued = false, message = "${spec.name}!")
+    }
+
+    /**
+     * Uderzenie kuli mocy ([BattleUiState.ultimate]). Co robi, zalezy od jej rodzaju
+     * ([UltimateKind]) - obrazenia licza sie z ataku ZYWEJ druzyny, leczenie z max HP kazdego
+     * sojusznika. [EndlessBuff.Overload] wzmacnia KAZDE ulti, nie tylko obrazenia.
+     *
+     * Liczone z HP z TEJ chwili (a nie z chwili odpowiedzi) i tylko raz na [castId] - wynik laduje
+     * w [BattleUiState.ultimateCast] z [UltimateCast.released] = true, a z niego scena bierze liczby.
+     */
+    private fun BattleUiState.releaseUltimate(castId: Long): BattleUiState {
+        val pending = ultimateCast?.takeIf { it.id == castId && !it.released } ?: return this
+        if (phase != GamePhase.Battle) return copy(ultimateCast = pending.copy(released = true))
+        val spec = pending.spec
+        val overload = 1f + (endlessBuffs[EndlessBuff.Overload] ?: 0) * OVERLOAD_ULTI_BONUS_PER_STACK
         val teamAttack = characters.values.filter { it.isPlayer && it.hp > 0 }.sumOf { it.attack }
-        if (teamAttack <= 0) return this
         val mightStacks = endlessBuffs[EndlessBuff.Might] ?: 0
         val avatarStacks = endlessBuffs[EndlessBuff.Avatar] ?: 0
-        val overloadStacks = endlessBuffs[EndlessBuff.Overload] ?: 0
         val statBonus = 1f + mightStacks * MIGHT_ATTACK_BONUS_PER_STACK + avatarStacks * AVATAR_BONUS_PER_STACK
-        val overload = 1f + overloadStacks * OVERLOAD_ULTI_BONUS_PER_STACK
-        val amount = (teamAttack * activeCycleMultiplier() * ULTI_FACTOR * statBonus * overload)
-            .roundToInt().coerceAtLeast(1)
+        fun damageOf(power: Float) =
+            (teamAttack * activeCycleMultiplier() * power * statBonus * overload).roundToInt().coerceAtLeast(1)
 
-        var updatedCharacters = characters
-        var effects = floatingEffects
-        characters.values.filter { !it.isPlayer && it.hp > 0 }.forEach { enemy ->
-            val after = (enemy.hp - amount).coerceAtLeast(0)
-            updatedCharacters = updatedCharacters.plus(
-                enemy.id to enemy.copy(hp = after, state = if (after <= 0) CharacterState.DEAD else enemy.state)
-            )
-            effects = effects + FloatingEffect(nextEffectId++, enemy.id, amount, HitKind.Skill)
+        var next = this
+        var cast = pending.copy(released = true)
+
+        fun hitEnemies(targets: List<CharacterUiModel>, amount: Int) {
+            targets.forEach { enemy ->
+                val current = next.characters[enemy.id] ?: return@forEach
+                val after = (current.hp - amount).coerceAtLeast(0)
+                next = next.copy(
+                    characters = next.characters.plus(
+                        enemy.id to current.copy(hp = after, state = if (after <= 0) CharacterState.DEAD else CharacterState.HIT)
+                    )
+                ).spawnEffect(
+                    targetId = enemy.id,
+                    amount = amount,
+                    kind = if (spec.kind == UltimateKind.Smite) HitKind.Crit else HitKind.Skill,
+                    tint = spec.colorHex
+                )
+            }
+            cast = cast.copy(damage = amount, targets = targets.size)
         }
 
-        return copy(
-            characters = updatedCharacters,
-            floatingEffects = effects,
-            ultiPulseId = ultiPulseId + 1,
-            message = "ULTI! The whole wave took $amount"
+        fun healParty(fraction: Float) {
+            var total = 0
+            next.characters.values.filter { it.isPlayer && it.hp > 0 }.forEach { ally ->
+                val before = next.characters[ally.id]?.hp ?: return@forEach
+                next = next.healCharacter(ally.id, ally.maxHp * fraction * overload, tint = spec.colorHex)
+                total += (next.characters[ally.id]?.hp ?: before) - before
+            }
+            cast = cast.copy(healed = cast.healed + total)
+        }
+
+        val enemies = characters.values.filter { !it.isPlayer && it.hp > 0 }
+        when (spec.kind) {
+            UltimateKind.Nova -> if (teamAttack > 0) hitEnemies(enemies, damageOf(spec.power))
+            UltimateKind.Smite -> if (teamAttack > 0) {
+                enemies.maxByOrNull { it.hp }?.let { hitEnemies(listOf(it), damageOf(spec.power)) }
+            }
+            UltimateKind.Drain -> {
+                if (teamAttack > 0) hitEnemies(enemies, damageOf(spec.power))
+                healParty(spec.heal)
+            }
+            UltimateKind.Mend -> {
+                healParty(spec.power)
+                if (spec.revive) {
+                    val fallen = next.characters.values.filter { it.isPlayer && it.hp <= 0 }
+                    fallen.forEach { ally ->
+                        val hp = (ally.maxHp * spec.heal * overload).roundToInt().coerceIn(1, ally.maxHp)
+                        next = next.copy(
+                            characters = next.characters.plus(
+                                ally.id to ally.copy(hp = hp, state = CharacterState.IDLE, currentTargetId = null, animSlot = null)
+                            ),
+                            stunnedCharacterIds = next.stunnedCharacterIds - ally.id
+                        ).spawnEffect(targetId = ally.id, amount = hp, kind = HitKind.Heal, tint = spec.colorHex)
+                    }
+                    cast = cast.copy(revived = fallen.size, healed = cast.healed + fallen.sumOf { next.characters[it.id]?.hp ?: 0 })
+                }
+            }
+            UltimateKind.Ward -> {
+                val allies = next.characters.values.filter { it.isPlayer && it.hp > 0 }
+                val charges = allies.associate { it.id to (next.wardCharges[it.id] ?: 0) + spec.wardCharges }
+                next = next.copy(wardCharges = next.wardCharges + charges)
+                allies.forEach { next = next.spawnEffect(targetId = it.id, amount = 0, kind = HitKind.Shield, tint = spec.colorHex) }
+                cast = cast.copy(warded = allies.size)
+                healParty(spec.heal)
+            }
+        }
+
+        Sounds.play(if (spec.isHealing) Sfx.Heal else Sfx.SummonBoom)
+        return next.copy(
+            ultimateCast = cast,
+            message = "${spec.name}! ${cast.summary}"
         )
     }
 
@@ -2038,12 +2164,23 @@ class BattleViewModel(
 
         // Najpierw sam takt rozliczenia odpowiedzi: pole bitwy juz sie rozsuwa, ale nikt jeszcze nie
         // bije - gracz ma chwile, zeby zobaczyc, co jego odpowiedz zrobila z sila druzyny.
+        val ultimateTurn = state.ultimateQueued
         _uiState.update { it.copy(turnPhase = TurnPhase.Impact, message = null) }
         // Ten sam straznik co w [scheduleVolley]: gdy tura zostanie w miedzyczasie porzucona
         // (koniec fali, przegrana, wyjscie z ekranu), takt Impact nie odpali juz salwy.
         val token = volleyToken
         viewModelScope.launch {
-            delay(BattleSpeed.scale(IMPACT_HOLD_MILLIS))
+            if (ultimateTurn) {
+                // Tura z ulti: quiz zjezdza, pole bitwy rozwija sie na caly ekran - dopiero WTEDY
+                // scena kuli, a salwa po niej. Karta rozliczenia odpowiedzi w tej turze sie nie
+                // pokazuje (TurnImpactOverlay) - zaslanialaby scene, a ulti jest tu pointa.
+                delay(BattleSpeed.scale(UltimateTiming.START_AFTER_EXPAND_MS))
+                if (token != volleyToken) return@launch
+                _uiState.update { it.beginUltimate() }
+                delay(BattleSpeed.scale(UltimateTiming.TOTAL_MS.toLong()))
+            } else {
+                delay(BattleSpeed.scale(IMPACT_HOLD_MILLIS))
+            }
             if (token != volleyToken) return@launch
             startResolving()
         }
@@ -3044,7 +3181,12 @@ class BattleViewModel(
                 )
             }
         }
-        return copy(characters = updatedCharacters)
+        // Kula mocy w slocie ulti decyduje o dlugosci serii i o tym, co ulti robi - bez niej
+        // zostaje wbudowane [Ultimates.BASIC].
+        return copy(
+            characters = updatedCharacters,
+            ultimate = Ultimates.forEquipped(equipment.itemIn(ItemSlot.Ultimate, heroBag))
+        )
     }
 
     /** Nadpisuje HP graczy wartosciami zapamietanymi po poprzedniej walce w tym runie. */
@@ -3779,7 +3921,6 @@ private const val PRE_ENEMY_ENTRANCE_PAUSE_MS = 350L
 private const val PRE_QUIZ_REVEAL_PAUSE_MS = 350L
 
 /** Jaki ulamek lacznego ataku druzyny leci w kazdego wroga przy ulti. */
-private const val ULTI_FACTOR = 0.9f
 
 /** Czesc sakwy uratowana przy porazce - reszta zostaje w lochu. */
 /** Cala sakwa wraca na konto po wygranej - to jedyna droga do 100% lupu. */

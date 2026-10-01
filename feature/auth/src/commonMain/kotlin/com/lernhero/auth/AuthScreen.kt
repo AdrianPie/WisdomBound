@@ -348,7 +348,7 @@ fun AuthScreen(
                 // isDebugBuild() jest false i tego przycisku po prostu nie ma.
                 if (isDebugBuild()) {
                     Text(
-                        text = "DEV: tworzenie postaci",
+                        text = "DEV: create character",
                         color = AppPalette.Warning,
                         fontFamily = FontFirst(),
                         fontSize = 12.sp,

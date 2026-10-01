@@ -66,6 +66,7 @@ import com.lernhero.home.ui.OutlinedText
 import com.lernhero.home.ui.darkenBy
 import com.lernhero.home.ui.lightenBy
 import com.lernhero.shared.monetization.PremiumPaywall
+import com.lernhero.shared.monetization.PaywallTrigger
 import com.lernhero.shared.monetization.SubscriptionService
 import com.lernhero.shared.theme.FontFirst
 import com.lernhero.shared.theme.StrokedText
@@ -89,18 +90,28 @@ fun QuizStudioScreen(
 ) {
     val state by viewModel.uiState.collectAsState()
     val isPremium by viewModel.isPremium.collectAsState()
-    var paywallOpen by remember { mutableStateOf(false) }
+    /** Paywall otwarty z konkretnego powodu - null = zamkniety. */
+    var paywall by remember { mutableStateOf<PaywallTrigger?>(null) }
 
-    if (paywallOpen) {
+    paywall?.let { trigger ->
         PremiumPaywall(
             subscription = koinInject<SubscriptionService>(),
-            reason = "AI writes whole decks for you - up to ${PremiumLimits.PREMIUM_AI_QUIZZES_PER_MONTH} a month.",
-            onDismiss = { paywallOpen = false }
+            trigger = trigger,
+            reason = if (trigger == PaywallTrigger.QuizCreation) {
+                "Free players can keep ${PremiumLimits.FREE_CUSTOM_DECKS} own deck - you've already made yours."
+            } else {
+                null
+            },
+            onDismiss = { paywall = null }
         )
     }
 
-    val startAi = { if (isPremium) onEditDeck(viewModel.newDeck(), true) else paywallOpen = true }
-    val startManual = { onEditDeck(viewModel.newDeck(), false) }
+    // Wlasna talia: pierwsza [PremiumLimits.FREE_CUSTOM_DECKS] za darmo, kolejne z Premium. Istniejace
+    // talie zawsze da sie edytowac i nimi grac - blokujemy tylko TWORZENIE nowych.
+    val freeDecksLeft = (PremiumLimits.FREE_CUSTOM_DECKS - state.decks.size).coerceAtLeast(0)
+    val canWrite = isPremium || freeDecksLeft > 0
+    val startAi = { if (isPremium) onEditDeck(viewModel.newDeck(), true) else paywall = PaywallTrigger.AiDecks }
+    val startManual = { if (canWrite) onEditDeck(viewModel.newDeck(), false) else paywall = PaywallTrigger.QuizCreation }
 
     Column(
         modifier = Modifier
@@ -122,7 +133,11 @@ fun QuizStudioScreen(
                 title = "Write",
                 subtitle = "Type your own\nquestions",
                 color = Color(0xFF3C82D0),
-                badge = null,
+                badge = when {
+                    isPremium -> null
+                    canWrite -> "$freeDecksLeft FREE"
+                    else -> "PREMIUM"
+                },
                 onClick = startManual,
                 modifier = Modifier.weight(1f)
             )

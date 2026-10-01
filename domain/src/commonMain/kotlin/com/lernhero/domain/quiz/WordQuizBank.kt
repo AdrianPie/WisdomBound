@@ -78,8 +78,8 @@ object WordQuizBank {
 
     private fun wordPrompt(word: SavedWord): String =
         if (word.sentence.isBlank()) {
-            "Co znaczy \"${word.text}\"?"
+            "What does \"${word.text}\" mean?"
         } else {
-            "Co znaczy \"${word.text}\" w tym zdaniu?\n\"${word.sentence}\""
+            "What does \"${word.text}\" mean in this sentence?\n\"${word.sentence}\""
         }
 }

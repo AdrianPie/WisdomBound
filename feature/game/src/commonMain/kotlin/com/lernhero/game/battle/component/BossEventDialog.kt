@@ -155,7 +155,7 @@ fun BossEventQuizBar(
                 }
 
                 Text(
-                    text = "${bossEventHint(event.kind)}  •  +/-${event.question.tolerance} = trafienie",
+                    text = "${bossEventHint(event.kind)}  •  within ±${event.question.tolerance} counts as a hit",
                     color = InkMuted,
                     fontFamily = FontFirst(),
                     fontSize = 10.sp

@@ -14,7 +14,13 @@ enum class ItemSlot {
     MainHand,
     OffHand,
     Ring,
-    Amulet;
+    Amulet,
+
+    /**
+     * Kula mocy - ulti bohatera ([com.lernhero.domain.ultimate.Ultimates]). Ostatnia w enumie,
+     * bo porzadek slotow wchodzi w sortowanie list (kuznia), a zapisy trzymaja NAZWY, nie numery.
+     */
+    Ultimate;
 
     companion object {
         /**

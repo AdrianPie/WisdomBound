@@ -83,7 +83,7 @@ data class CustomQuestion(
                 val bad = wrong.filter { it.isNotBlank() }
                 if (good.isEmpty()) problems += "Mark at least one correct answer."
                 if (bad.isEmpty()) problems += "At least one wrong answer is needed."
-                if (good.size + bad.size > MAX_OPTIONS) problems += "Za duzo opcji (max. $MAX_OPTIONS)."
+                if (good.size + bad.size > MAX_OPTIONS) problems += "Too many options (max. $MAX_OPTIONS)."
                 if (hasDuplicateAnswers(good + bad)) problems += "Options repeat."
             }
 
@@ -93,7 +93,7 @@ data class CustomQuestion(
                     problems += "An ordering question needs at least $MIN_ORDERING_ITEMS items."
                 }
                 if (steps.size > MAX_ORDERING_ITEMS) {
-                    problems += "Ukladanka miesci max. $MAX_ORDERING_ITEMS elementow."
+                    problems += "An ordering question holds at most $MAX_ORDERING_ITEMS items."
                 }
                 if (hasDuplicateAnswers(steps)) problems += "Items repeat."
             }
@@ -103,12 +103,12 @@ data class CustomQuestion(
                 val min = minValue
                 val max = maxValue
                 if (value == null || min == null || max == null) {
-                    problems += "Podaj szukana wartosc oraz zakres od-do."
+                    problems += "Enter the correct value and the range (from - to)."
                 } else {
-                    if (min >= max) problems += "Zakres musi rosnac: \"od\" mniejsze niz \"do\"."
-                    if (value < min || value > max) problems += "Szukana wartosc lezy poza zakresem."
+                    if (min >= max) problems += "\"Range from\" must be smaller than \"Range to\"."
+                    if (value < min || value > max) problems += "The correct value lies outside the range."
                 }
-                tolerance?.let { if (it <= 0) problems += "Tolerancja musi byc dodatnia." }
+                tolerance?.let { if (it <= 0) problems += "Tolerance must be greater than zero." }
             }
         }
         return problems

@@ -66,8 +66,8 @@ enum class Element(
         /** Jak nazwac starcie w UI - podpowiedz nad paskiem HP, zeby gracz wiedzial, czemu bije mocniej. */
         fun relationLabel(attacker: Element?, defender: Element?): String? = when {
             attacker == null || defender == null -> null
-            defender == attacker.beats -> "Przewaga"
-            defender == attacker.losesTo -> "Slabosc"
+            defender == attacker.beats -> "Advantage"
+            defender == attacker.losesTo -> "Weakness"
             else -> null
         }
     }

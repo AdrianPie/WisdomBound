@@ -249,17 +249,24 @@ private fun LootBanner(item: Item) {
         horizontalArrangement = Arrangement.spacedBy(10.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
-        GlyphText(text = "🎁", fontSize = 24.sp)
+        // Kula mocy to nowe ULTI, a nie kolejny kawalek zbroi - wiec baner mowi to wprost i od
+        // razu podaje, co robi i ile trzeba z rzedu.
+        val orb = com.lernhero.domain.ultimate.Ultimates.specFor(item.id)
+        if (orb != null) PowerOrb(color = orb.color, size = 40.dp) else GlyphText(text = "🎁", fontSize = 24.sp)
         Column {
             GlyphText(
-                text = "LOOT!",
-                color = accent,
+                text = if (orb != null) "NEW ULTIMATE!" else "LOOT!",
+                color = orb?.color ?: accent,
                 fontFamily = FontPixel(),
                 fontWeight = FontWeight.Bold,
                 fontSize = 15.sp
             )
             GlyphText(
-                text = "${item.name} (${item.rarity.name}) went into your bag.",
+                text = if (orb != null) {
+                    "${item.name} (${item.rarity.name}) - ${orb.kind.label}, ${orb.streak} in a row. Equip it in the Ulti slot."
+                } else {
+                    "${item.name} (${item.rarity.name}) went into your bag."
+                },
                 color = Cream,
                 fontFamily = FontFirst(),
                 fontSize = 11.sp

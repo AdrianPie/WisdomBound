@@ -82,12 +82,18 @@ object AnswerTimer {
 }
 
 /**
- * Licznik ostatnich odpowiedzi - dziesiec "kratek", jak seria karnych. Piec trafien z rzedu (nawet
- * miedzy cyklami) odpala ulti; pelne dziesiec zamyka cykl i rozlicza wynik na buff albo debuff.
+ * Licznik ostatnich odpowiedzi - dziesiec "kratek", jak seria karnych. Pelne dziesiec zamyka cykl
+ * i rozlicza wynik na buff albo debuff.
+ *
+ * Osobno od kratek biegnie [ultiCharge] - ladowanie kuli mocy. Rosnie z kazda dobra odpowiedzia,
+ * zeruje sie na blednej i PO WYSTRZALE. Ile trzeba, mowi zalozona kula
+ * ([com.lernhero.domain.ultimate.UltimateSpec.streak]) - dlatego to osobne pole, a nie reszta z
+ * dzielenia [consecutiveCorrect], ktora dzialala tylko przy jednej, stalej dlugosci serii.
  */
 data class StreakTracker(
     val pips: List<Boolean?> = List(CYCLE_SIZE) { null },
-    val consecutiveCorrect: Int = 0
+    val consecutiveCorrect: Int = 0,
+    val ultiCharge: Int = 0
 )
 
 data class StreakOutcome(
@@ -106,9 +112,9 @@ enum class CycleOutcome(val attackMultiplier: Float, val label: String) {
 const val CYCLE_BUFF_DURATION_MS = 12_000L
 
 private const val CYCLE_SIZE = 10
-private const val ULTI_STREAK = 5
 
-fun StreakTracker.record(correct: Boolean): StreakOutcome {
+/** [ultiStreak] = ile dobrych z rzedu laduje zalozona kule (patrz [StreakTracker.ultiCharge]). */
+fun StreakTracker.record(correct: Boolean, ultiStreak: Int = 5): StreakOutcome {
     val filledIndex = pips.indexOfFirst { it == null }
     val nextPips = if (filledIndex == -1) {
         List(CYCLE_SIZE) { index -> if (index == 0) correct else null }
@@ -116,7 +122,9 @@ fun StreakTracker.record(correct: Boolean): StreakOutcome {
         pips.toMutableList().also { it[filledIndex] = correct }
     }
     val consecutive = if (correct) consecutiveCorrect + 1 else 0
-    val ulti = correct && consecutive > 0 && consecutive % ULTI_STREAK == 0
+    val charged = if (correct) ultiCharge + 1 else 0
+    val ulti = charged >= ultiStreak.coerceAtLeast(1)
+    val nextCharge = if (ulti) 0 else charged
 
     val cycleComplete = nextPips.none { it == null }
     return if (cycleComplete) {
@@ -127,13 +135,13 @@ fun StreakTracker.record(correct: Boolean): StreakOutcome {
             else -> CycleOutcome.Neutral
         }
         StreakOutcome(
-            tracker = StreakTracker(pips = List(CYCLE_SIZE) { null }, consecutiveCorrect = consecutive),
+            tracker = StreakTracker(pips = List(CYCLE_SIZE) { null }, consecutiveCorrect = consecutive, ultiCharge = nextCharge),
             ultiTriggered = ulti,
             cycleResult = outcome
         )
     } else {
         StreakOutcome(
-            tracker = StreakTracker(pips = nextPips, consecutiveCorrect = consecutive),
+            tracker = StreakTracker(pips = nextPips, consecutiveCorrect = consecutive, ultiCharge = nextCharge),
             ultiTriggered = ulti,
             cycleResult = null
         )

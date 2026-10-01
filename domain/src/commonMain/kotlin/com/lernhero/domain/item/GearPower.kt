@@ -48,7 +48,12 @@ object GearPower {
      * legendarny pierscien "odbija 30% obrazen" wygladalby na slabszy od pospolitego z +10 HP -
      * a to on wygrywa walki.
      */
-    fun of(item: Item): Int = of(item.stats) + item.effects.size * EFFECT_POWER
+    fun of(item: Item): Int {
+        // Kula mocy nie ma statystyk ani efektow - bez tego kazda pokazywalaby moc 0, choc
+        // legendarna wygrywa walki. Wycena rosnie z rzadkoscia, tak jak moc samego ulti.
+        if (item.slot == ItemSlot.Ultimate) return ULTIMATE_BASE_POWER + item.rarity.ordinal * ULTIMATE_POWER_PER_RARITY
+        return of(item.stats) + item.effects.size * EFFECT_POWER
+    }
 
     /**
      * Moc BOHATERA - ta sama skala co przedmioty, bo liczy sie z jego gotowych liczb bojowych.
@@ -66,4 +71,7 @@ object GearPower {
 
     /** Ile "warta" jest jedna zdolnosc. Grubo przyblizone - patrz KDoc klasy. */
     private const val EFFECT_POWER = 40
+
+    private const val ULTIMATE_BASE_POWER = 60
+    private const val ULTIMATE_POWER_PER_RARITY = 45
 }

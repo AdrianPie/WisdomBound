@@ -86,10 +86,46 @@ class VfxEngine {
     /** Zegar czytany przy rysowaniu - pisze go petla klatek w [VfxLayer], tylko gdy cos zyje. */
     internal var nowNs by mutableLongStateOf(0L)
 
+    /**
+     * Zegar EFEKTOW - biegnie jak zegar prawdziwy, dopoki [slowMotion] go nie przyhamuje. Efekty
+     * startuja i koncza sie wedlug niego, wiec w zwolnieniu wybuch trwa dluzej, a nie przeskakuje.
+     */
+    private var virtualNs = 0L
+    private var lastRealNs = monoNow()
+    private var slowScale = 1f
+    private var slowHoldEndNs = 0L
+    private var slowEndNs = 0L
+
+    private fun timeScaleAt(realNs: Long): Float = when {
+        realNs < slowHoldEndNs -> slowScale
+        realNs < slowEndNs -> slowScale + (1f - slowScale) * ((realNs - slowHoldEndNs).toFloat() / (slowEndNs - slowHoldEndNs))
+        else -> 1f
+    }
+
+    private fun clock(): Long {
+        val real = monoNow()
+        virtualNs += ((real - lastRealNs) * timeScaleAt(real)).toLong()
+        lastRealNs = real
+        return virtualNs
+    }
+
+    /**
+     * Zwolnienie czasu efektow ("bullet time") - na [holdMs] czas plynie z predkoscia [scale],
+     * potem przez [recoverMs] wraca plynnie do normy. Czasy podaje wolajacy, juz przepuszczone
+     * przez [BattleSpeed] - na 8x zwolnienie tez ma byc krotsze.
+     */
+    fun slowMotion(scale: Float, holdMs: Int, recoverMs: Int) {
+        clock() // dotychczasowy czas liczy sie jeszcze po staremu
+        val now = monoNow()
+        slowScale = scale.coerceIn(0.05f, 1f)
+        slowHoldEndNs = now + holdMs * 1_000_000L
+        slowEndNs = slowHoldEndNs + recoverMs.coerceAtLeast(1) * 1_000_000L
+    }
+
     fun projectile(kind: ProjectileKind, from: Offset, to: Offset, durationMs: Int, element: Element?) {
         active += ProjectileVfx(
             id = nextId++,
-            startNs = monoNow(),
+            startNs = clock(),
             durationNs = durationMs.toLong() * 1_000_000L,
             kind = kind,
             from = from,
@@ -111,7 +147,7 @@ class VfxEngine {
     ) {
         active += ImpactVfx(
             id = nextId++,
-            startNs = monoNow(),
+            startNs = clock(),
             durationNs = BattleSpeed.scale(durationMs).toLong() * 1_000_000L,
             type = type,
             at = at,
@@ -125,7 +161,7 @@ class VfxEngine {
 
     /** Wolane co klatke przez [VfxLayer]: przesuwa zegar i sprzata efekty, ktore sie skonczyly. */
     internal fun onFrame() {
-        val now = monoNow()
+        val now = clock()
         nowNs = now
         if (active.any { now - it.startNs >= it.durationNs }) {
             active.removeAll { now - it.startNs >= it.durationNs }

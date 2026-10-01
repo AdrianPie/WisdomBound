@@ -259,8 +259,11 @@ object MonsterCatalog {
         skills = listOf(MonsterSkill("Bubble Wrap", "Absorbs blows in a wobbling bubble."))
     )
     val MURLOC = MonsterCard(
+        // Wyswietlana nazwa wlasna - "Murloc" to znak towarowy Blizzarda (World of Warcraft), a
+        // regulamin Shipaton zabrania cudzej wlasnosci intelektualnej. Id i sprite zostaja, zeby
+        // nie zepsuc zapisow graczy, ktorzy juz tego kompana maja.
         id = "murloc",
-        name = "Murloc",
+        name = "Mirefin",
         hp = 58,
         attack = 18,
         rarity = Rarity.Common,

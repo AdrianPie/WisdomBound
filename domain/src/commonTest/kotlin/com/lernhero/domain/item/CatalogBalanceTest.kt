@@ -68,6 +68,12 @@ class CatalogBalanceTest {
     @Test
     fun `zaden przedmiot nie jest pusty`() {
         (hero + monster).forEach { item ->
+            // Kula mocy nie daje statystyk - daje ulti (com.lernhero.domain.ultimate.Ultimates).
+            if (item.slot == ItemSlot.Ultimate) {
+                assertTrue(com.lernhero.domain.ultimate.Ultimates.specFor(item.id) != null, "Kula '${item.id}' nie ma ulti")
+                assertTrue(item.cost > 0, "Przedmiot '${item.id}' jest za darmo")
+                return@forEach
+            }
             val hasStats = StatType.entries.any { item.stats[it] != 0f }
             assertTrue(
                 hasStats || item.effects.isNotEmpty(),

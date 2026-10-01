@@ -12,8 +12,10 @@ class CraftingTest {
 
     @Test
     fun `kazdy przedmiot z katalogu ma recepture`() {
-        assertEquals(ItemCatalog.all.size, Forge.recipes.size)
-        ItemCatalog.all.forEach { item ->
+        // Kule mocy (ulti) celowo nie maja receptur - patrz UltimatesTest.forgeNeverOffersOrbs.
+        val forgeable = ItemCatalog.all.filter { it.slot != com.lernhero.domain.item.ItemSlot.Ultimate }
+        assertEquals(forgeable.size, Forge.recipes.size)
+        forgeable.forEach { item ->
             assertTrue(Forge.recipeFor(item.id) != null, "brak receptury dla ${item.id}")
         }
     }

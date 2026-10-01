@@ -115,7 +115,7 @@ actual fun rememberBookFilePicker(onPicked: (PickedFile) -> Unit): () -> Unit {
                 context.contentResolver.takePersistableUriPermission(uri, Intent.FLAG_GRANT_READ_URI_PERMISSION)
             }
             val bytes = context.contentResolver.openInputStream(uri)?.use { it.readBytes() } ?: return@launch
-            val name = displayNameOf(context.contentResolver, uri) ?: "Ksiazka"
+            val name = displayNameOf(context.contentResolver, uri) ?: "Book"
             withContext(Dispatchers.Main) {
                 onPicked(PickedFile(name = name, bytes = bytes, persistentLocator = uri.toString()))
             }
@@ -144,7 +144,7 @@ actual fun rememberCoverImagePicker(onPicked: (PickedFile) -> Unit): () -> Unit 
                 context.contentResolver.takePersistableUriPermission(uri, Intent.FLAG_GRANT_READ_URI_PERMISSION)
             }
             val bytes = context.contentResolver.openInputStream(uri)?.use { it.readBytes() } ?: return@launch
-            val name = displayNameOf(context.contentResolver, uri) ?: "Okladka"
+            val name = displayNameOf(context.contentResolver, uri) ?: "Cover"
             withContext(Dispatchers.Main) {
                 onPicked(PickedFile(name = name, bytes = bytes, persistentLocator = uri.toString()))
             }

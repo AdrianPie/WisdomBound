@@ -69,7 +69,7 @@ class CustomDeckTest {
             maxValue = 200,
             unit = "m"
         )
-        assertTrue(question.issues().any { it.contains("poza zakresem") }, question.issues().toString())
+        assertTrue(question.issues().any { it.contains("outside the range") }, question.issues().toString())
         assertTrue(question.copy(minValue = 10, maxValue = 200).isValid)
     }
 

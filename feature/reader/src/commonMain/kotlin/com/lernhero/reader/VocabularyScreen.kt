@@ -170,7 +170,7 @@ private fun Header(learning: Int, mastered: Int, onBack: () -> Unit) {
                 fontSize = 18.sp
             )
             Text(
-                text = "$learning do nauki  ·  $mastered opanowanych",
+                text = "$learning to learn  ·  $mastered mastered",
                 color = Muted,
                 fontFamily = FontFirst(),
                 fontSize = 10.sp
@@ -266,7 +266,7 @@ private fun WordTile(word: SavedWord, onClick: () -> Unit) {
 
         if (mastered) {
             Text(
-                text = "✓ umiem",
+                text = "✓ known",
                 color = Green,
                 fontFamily = FontFirst(),
                 fontWeight = FontWeight.Bold,
@@ -336,7 +336,7 @@ private fun WordDetailDialog(word: SavedWord, onDismiss: () -> Unit, onRemove: (
                 fontSize = 18.sp
             )
             Text(
-                text = word.translation.ifBlank { "bez tlumaczenia" },
+                text = word.translation.ifBlank { "no translation" },
                 color = if (word.translation.isBlank()) Amber else Cream,
                 fontFamily = FontFirst(),
                 fontSize = 13.sp

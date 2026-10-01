@@ -90,21 +90,21 @@ data class QuizBoost(
         val ALL: List<QuizBoost> = listOf(
             attack(
                 id = "sharp_mind",
-                title = "Bystry umysl",
+                title = "Sharp Mind",
                 fairAtk = 5,
                 goodAtk = 10,
                 runAtk = 2
             ),
             health(
                 id = "iron_body",
-                title = "Zelazna kondycja",
+                title = "Iron Body",
                 fairHp = 20,
                 goodHp = 40,
                 runHp = 8
             ),
             stat(
                 id = "hawk_eye",
-                title = "Sokoli wzrok",
+                title = "Hawk Eye",
                 statType = StatType.CritChance,
                 fairValue = 0.06f,
                 goodValue = 0.12f,
@@ -122,7 +122,7 @@ data class QuizBoost(
             ),
             stat(
                 id = "bloodlust",
-                title = "Glod krwi",
+                title = "Bloodlust",
                 statType = StatType.Lifesteal,
                 fairValue = 0.06f,
                 goodValue = 0.12f,
@@ -131,7 +131,7 @@ data class QuizBoost(
             ),
             stat(
                 id = "nimble_steps",
-                title = "Zwinne kroki",
+                title = "Nimble Steps",
                 statType = StatType.Dodge,
                 fairValue = 0.05f,
                 goodValue = 0.1f,
@@ -140,7 +140,7 @@ data class QuizBoost(
             ),
             stat(
                 id = "stone_skin",
-                title = "Kamienna skora",
+                title = "Stone Skin",
                 statType = StatType.DamageReduction,
                 fairValue = 0.05f,
                 goodValue = 0.1f,
@@ -149,7 +149,7 @@ data class QuizBoost(
             ),
             stat(
                 id = "arcane_spark",
-                title = "Iskra arkanow",
+                title = "Arcane Spark",
                 statType = StatType.SpellPower,
                 fairValue = 0.15f,
                 goodValue = 0.3f,
@@ -158,7 +158,7 @@ data class QuizBoost(
             ),
             stat(
                 id = "quickened_reflex",
-                title = "Przyspieszony refleks",
+                title = "Quickened Reflexes",
                 statType = StatType.Speed,
                 fairValue = 2f,
                 goodValue = 4f,
@@ -168,7 +168,7 @@ data class QuizBoost(
             // Boosty zlozone - dwie mniejsze statystyki naraz, dla odmiany od pojedynczych.
             QuizBoost(
                 id = "battle_trance",
-                title = "Bojowy trans",
+                title = "Battle Trance",
                 fair = QuizBoostEffect(
                     attackBonus = 3,
                     stats = Stats.of(StatType.CritChance to 0.04f),
@@ -188,7 +188,7 @@ data class QuizBoost(
             ),
             QuizBoost(
                 id = "stubborn_warrior",
-                title = "Uparty wojownik",
+                title = "Stubborn Warrior",
                 fair = QuizBoostEffect(
                     hpBonus = 12,
                     stats = Stats.of(StatType.DamageReduction to 0.04f),
@@ -208,7 +208,7 @@ data class QuizBoost(
             ),
             QuizBoost(
                 id = "rune_master",
-                title = "Mistrz run",
+                title = "Rune Master",
                 fair = QuizBoostEffect(
                     stats = Stats.of(StatType.SpellPower to 0.1f, StatType.CritDamage to 0.1f),
                     description = "+10% spell power and +10% crit damage for this fight"

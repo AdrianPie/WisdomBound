@@ -47,6 +47,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.foundation.text.BasicText
+import androidx.compose.foundation.text.TextAutoSize
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.lernhero.game.battle.BossEventKind
@@ -391,15 +394,21 @@ private fun VerdictCard(event: BossEventState, beat: Int) {
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(12.dp)
     ) {
-        // Takt 1 - werdykt wielkimi literami.
+        // Takt 1 - werdykt wielkimi literami. Jedna linia, ktora sama maleje do szerokosci karty:
+        // "ALMOST PERFECT" w pikselowej czcionce 30 sp wychodzilo na waskim telefonie poza ekran
+        // ("MOST PERFE").
         VerdictBeat(visible = beat >= 1) {
-            Text(
+            BasicText(
                 text = verdict,
-                color = verdictColor,
-                fontFamily = FontPixel(),
-                fontWeight = FontWeight.Bold,
-                fontSize = 30.sp,
-                textAlign = TextAlign.Center
+                style = TextStyle(
+                    color = verdictColor,
+                    fontFamily = FontPixel(),
+                    fontWeight = FontWeight.Bold,
+                    textAlign = TextAlign.Center
+                ),
+                maxLines = 1,
+                autoSize = TextAutoSize.StepBased(minFontSize = 14.sp, maxFontSize = 30.sp, stepSize = 1.sp),
+                modifier = Modifier.fillMaxWidth()
             )
         }
 

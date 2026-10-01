@@ -1,5 +1,7 @@
 package com.lernhero.game.battle
 
+import com.lernhero.domain.ultimate.UltimateSpec
+import com.lernhero.domain.ultimate.Ultimates
 import com.lernhero.domain.combat.live.CycleOutcome
 import com.lernhero.domain.quiz.QuizCategory
 import com.lernhero.domain.combat.live.AnswerTimer
@@ -55,7 +57,9 @@ data class FloatingEffect(
     val targetId: String,
     val amount: Int,
     val kind: HitKind,
-    val sourceId: String? = null
+    val sourceId: String? = null,
+    /** Kolor efektu (ARGB) - ulti rysuje uderzenie w kolorze swojej kuli. Null = kolor domyslny. */
+    val tint: Long? = null
 )
 
 enum class GamePhase {
@@ -100,6 +104,43 @@ data class CycleBuffState(
  *
  * [id] rosnie z kazda odpowiedzia, zeby dwie takie same z rzedu odpalily animacje dwa razy.
  */
+/**
+ * Jeden wystrzal ulti, odgrywany na polu bitwy jako scena (patrz UltimateCinematic).
+ *
+ * Wystrzal ma dwa etapy. Najpierw [released] = false: scena laduje sie (tlo gasnie, kamera
+ * najezdza na [focusIds], leci baner), ale nikt jeszcze nic nie dostal. Po
+ * [com.lernhero.game.battle.UltimateTiming.IMPACT_MS] view model zadaje obrazenia/leczenie i
+ * ustawia [released] = true razem z liczbami - dzieki temu cyfry wyskakuja w chwili uderzenia,
+ * a nie sekunde wczesniej, w chwili odpowiedzi.
+ *
+ * [id] rosnie z kazdym wystrzalem - dwa takie same ulti z rzedu odgrywaja sie dwa razy.
+ * [damage] to obrazenia w JEDEN cel (Nova/Drain: w kazdego, Smite: w ten jeden), [healed] -
+ * laczne leczenie druzyny, [revived] - ilu polegych wstalo, [warded] - ilu dostalo garde.
+ */
+data class UltimateCast(
+    val id: Long,
+    val spec: UltimateSpec,
+    /** Na kogo patrzy kamera i kogo oswietla scena: cele obrazen albo leczeni sojusznicy. */
+    val focusIds: Set<String> = emptySet(),
+    /** true, gdy w centrum uwagi jest NASZA druzyna (leczenie, oslona) - wtedy przygasaja wrogowie. */
+    val focusAllies: Boolean = false,
+    val released: Boolean = false,
+    val damage: Int = 0,
+    val targets: Int = 0,
+    val healed: Int = 0,
+    val revived: Int = 0,
+    val warded: Int = 0
+) {
+    /** Jedna linijka skutku - pod nazwa kuli na polu bitwy i w pasku wiadomosci. */
+    val summary: String
+        get() = buildList {
+            if (damage > 0) add(if (targets > 1) "$damage to every enemy" else "$damage damage")
+            if (healed > 0) add("+$healed HP to the party")
+            if (revived > 0) add(if (revived == 1) "1 ally revived" else "$revived allies revived")
+            if (warded > 0) add("party shielded")
+        }.joinToString(" · ").ifEmpty { "Nothing to hit." }
+}
+
 data class TurnOutcome(
     val id: Long,
     val correct: Boolean,
@@ -107,6 +148,8 @@ data class TurnOutcome(
     val damageMultiplier: Float,
     val reward: Int,
     val ultiTriggered: Boolean,
+    /** Nazwa kuli, ktora wlasnie wystrzelila - chip na banerze zamiast golego "ULTI!". */
+    val ultiName: String? = null,
     /** Etykieta zamknietego cyklu dziesieciu odpowiedzi, jesli akurat sie domknal. */
     val cycleLabel: String? = null,
     /** Po ilu sekundach padla odpowiedz - to z niej bierze sie [speedMultiplier]. */
@@ -150,6 +193,19 @@ data class BattleUiState(
     val turnOutcome: TurnOutcome? = null,
     /** Rosnace id - kazda zmiana odpala na ekranie krotki rozblysk ulti. Zero = jeszcze nic. */
     val ultiPulseId: Long = 0L,
+    /**
+     * Ulti bohatera na te walke - z zalozonej kuli mocy albo wbudowane [Ultimates.BASIC]. Stad
+     * bierze sie dlugosc serii do naladowania, ktora pokazuje licznik nad quizem.
+     */
+    val ultimate: UltimateSpec = Ultimates.BASIC,
+    /** Ostatni wystrzal ulti - pole bitwy odgrywa go raz na kazde nowe [UltimateCast.id]. */
+    val ultimateCast: UltimateCast? = null,
+    /**
+     * Seria wlasnie naladowala kule, ale scena jeszcze nie ruszyla - czeka, az quiz zjedzie i pole
+     * bitwy sie rozwinie (patrz [UltimateTiming.START_AFTER_EXPAND_MS]). Licznik nad quizem pokazuje
+     * wtedy pelna kule i "ULTI!".
+     */
+    val ultimateQueued: Boolean = false,
     val quiz: LiveQuizState? = null,
     /** Pływajace liczby obrazen czekajace na odegranie. */
     val floatingEffects: List<FloatingEffect> = emptyList(),
@@ -182,6 +238,12 @@ data class BattleUiState(
      * Odnawiane na starcie tury, a przy Egidzie - na starcie kazdej rundy.
      */
     val guardCharges: Map<CharacterId, Int> = emptyMap(),
+    /**
+     * Garda z ulti ([com.lernhero.domain.ultimate.UltimateKind.Ward]) - osobno od [guardCharges],
+     * bo tamte odnawiaja sie (i kasuja) na starcie kazdej tury, a ulti pada PRZED tura. Trzyma
+     * sie, dopoki wrog jej nie zbije.
+     */
+    val wardCharges: Map<CharacterId, Int> = emptyMap(),
     /** Ile razy w TEJ fali kazdy bohater byl juz uratowany przez [EndlessBuff.SecondWind]. */
     val secondWindUses: Map<CharacterId, Int> = emptyMap(),
     /** Wybor ulepszenia czekajacy na decyzje gracza - dopoki jest, walka stoi. */

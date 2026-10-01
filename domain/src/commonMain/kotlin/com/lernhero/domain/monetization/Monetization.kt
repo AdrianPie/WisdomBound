@@ -11,6 +11,13 @@ object PremiumLimits {
     /** Tlumaczen slow/zdan w czytniku dziennie bez subskrypcji. Z subskrypcja - bez limitu. */
     const val FREE_TRANSLATIONS_PER_DAY = 5
 
+    /**
+     * Ile WLASNYCH talii moze stworzyc gracz bez subskrypcji. Jedna - zeby sprawdzil, jak to dziala,
+     * i zagral wlasnymi pytaniami; kolejna otwiera paywall. Istniejace talie zawsze da sie edytowac
+     * i nimi grac (takze po wygasnieciu subskrypcji). 0 = tworzenie tylko z Premium.
+     */
+    const val FREE_CUSTOM_DECKS = 1
+
     /** Generowan talii przez AI miesiecznie Z subskrypcja. Bez niej generowanie jest zablokowane. */
     const val PREMIUM_AI_QUIZZES_PER_MONTH = 200
 

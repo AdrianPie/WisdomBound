@@ -4,6 +4,9 @@ import ComposeApp
 #if canImport(RevenueCat)
 import RevenueCat
 #endif
+#if canImport(RevenueCatUI)
+import RevenueCatUI
+#endif
 #if canImport(GoogleMobileAds)
 import GoogleMobileAds
 #endif
@@ -26,6 +29,10 @@ enum MonetizationBridge {
             Purchases.shared.delegate = PurchasesDelegateHolder.shared
             IosMonetizationBridge.shared.purchases = RevenueCatProvider()
             IosMonetizationBridge.shared.oneTime = RevenueCatOneTimeProvider()
+            #if canImport(RevenueCatUI)
+            // Paywalle projektowane w panelu RevenueCat - patrz RevenueCatPaywall.ios.kt.
+            IosMonetizationBridge.shared.paywall = RevenueCatPaywallPresenter()
+            #endif
         }
         #endif
         #if canImport(GoogleMobileAds)
@@ -179,6 +186,69 @@ private final class AdMobProvider: NSObject, IosAdsProvider, FullScreenContentDe
     private func finish(_ result: String) {
         completion?(result)
         completion = nil
+    }
+
+    private static func topController() -> UIViewController? {
+        let scene = UIApplication.shared.connectedScenes.first { $0.activationState == .foregroundActive } as? UIWindowScene
+        var top = scene?.windows.first { $0.isKeyWindow }?.rootViewController
+        while let presented = top?.presentedViewController { top = presented }
+        return top
+    }
+}
+#endif
+
+#if canImport(RevenueCat) && canImport(RevenueCatUI)
+/// Paywall zaprojektowany w panelu RevenueCat (RevenueCatUI) - modal `PaywallViewController` nad
+/// cala aplikacja. Wyglad, ceny i testy A/B zmienia sie w panelu, bez nowego builda.
+///
+/// Oferta idzie z placementu (Targeting -> Placements w panelu); bez placementu - biezaca oferta.
+/// Po zakupie/przywroceniu Premium wlacza sie przez `publish` (i tak samo przez `PurchasesDelegate`),
+/// a `onDismiss` leci do Kotlina dokladnie raz - niezaleznie od tego, jak okno zniknelo.
+private final class RevenueCatPaywallPresenter: NSObject, IosPaywallPresenter, PaywallViewControllerDelegate {
+    private weak var shown: PaywallViewController?
+    private var onDismiss: (() -> Void)?
+
+    func present(placementId: String, onDismiss: @escaping () -> Void) {
+        finish() // poprzedni paywall, jesli jakis jeszcze wisial
+        self.onDismiss = onDismiss
+        Purchases.shared.getOfferings { [weak self] offerings, _ in
+            DispatchQueue.main.async {
+                // Kotlin zdazyl zamknac paywall, zanim oferty przyszly - nic nie pokazujemy.
+                guard let self = self, self.onDismiss != nil else { return }
+                guard let top = Self.topController() else { self.finish(); return }
+                let offering = offerings?.currentOffering(forPlacement: placementId) ?? offerings?.current
+                let controller = PaywallViewController(offering: offering, displayCloseButton: true)
+                controller.delegate = self
+                self.shown = controller
+                top.present(controller, animated: true)
+            }
+        }
+    }
+
+    func dismiss() {
+        // Zamyka Kotlin (ekran zniknal) - nie odsylamy mu jego wlasnego zamkniecia.
+        onDismiss = nil
+        shown?.dismiss(animated: true)
+        shown = nil
+    }
+
+    func paywallViewController(_ controller: PaywallViewController, didFinishPurchasingWith customerInfo: CustomerInfo) {
+        publish(customerInfo)
+    }
+
+    func paywallViewController(_ controller: PaywallViewController, didFinishRestoringWith customerInfo: CustomerInfo) {
+        publish(customerInfo)
+    }
+
+    func paywallViewControllerWasDismissed(_ controller: PaywallViewController) {
+        finish()
+    }
+
+    private func finish() {
+        let callback = onDismiss
+        onDismiss = nil
+        shown = nil
+        callback?()
     }
 
     private static func topController() -> UIViewController? {

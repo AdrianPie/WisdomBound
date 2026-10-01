@@ -8,6 +8,7 @@ import com.lernhero.domain.item.catalog.ArmorsExtra
 import com.lernhero.domain.item.catalog.Weapons
 import com.lernhero.domain.item.catalog.WeaponsExtra
 import com.lernhero.domain.player.PlayerEquipment
+import com.lernhero.domain.ultimate.Ultimates
 
 /**
  * Rejestr wszystkich przedmiotow w grze.
@@ -27,6 +28,7 @@ object ItemCatalog {
         register(ArmorsExtra.all)
         register(Accessories.all)
         register(AccessoriesExtra.all)
+        register(Ultimates.items)
     }
 
     fun register(items: List<Item>) {

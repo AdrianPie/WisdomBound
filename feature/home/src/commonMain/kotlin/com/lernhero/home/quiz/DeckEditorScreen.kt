@@ -1,5 +1,6 @@
 package com.lernhero.home.quiz
 
+import com.lernhero.shared.monetization.PaywallTrigger
 import com.lernhero.shared.theme.GlyphText
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.size
@@ -174,7 +175,7 @@ fun DeckEditorScreen(
                 DeckSectionLabel("Questions (${deck.turnReady.size} ready of ${deck.questions.size})")
                 if (deck.brokenCount > 0) {
                     GlyphText(
-                        text = "${deck.brokenCount} do dokonczenia",
+                        text = "${deck.brokenCount} unfinished",
                         color = DeckRed,
                         fontFamily = FontFirst(),
                         fontSize = 10.sp
@@ -259,7 +260,7 @@ fun DeckEditorScreen(
     if (paywallOpen || state.subscriptionRequired) {
         PremiumPaywall(
             subscription = koinInject(),
-            reason = "AI generation is a Premium feature.",
+            trigger = PaywallTrigger.AiDecks,
             onDismiss = {
                 paywallOpen = false
                 viewModel.dismissSubscriptionPrompt()
@@ -489,7 +490,7 @@ private fun AiSection(
         DeckField(
             value = notes,
             onValueChange = { notes = it },
-            label = "Dodatkowe wytyczne (opcjonalnie)",
+            label = "Extra instructions (optional)",
             singleLine = false,
             minLines = 2,
             modifier = Modifier.fillMaxWidth()
@@ -570,7 +571,7 @@ private fun QuestionRow(
             verticalArrangement = Arrangement.spacedBy(3.dp)
         ) {
             GlyphText(
-                text = question.prompt.ifBlank { "(bez tresci)" },
+                text = question.prompt.ifBlank { "(no text)" },
                 color = DeckCream,
                 fontFamily = FontFirst(),
                 fontSize = 12.sp,

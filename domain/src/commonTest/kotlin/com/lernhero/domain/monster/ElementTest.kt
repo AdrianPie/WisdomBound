@@ -74,8 +74,8 @@ class ElementTest {
 
     @Test
     fun `etykieta starcia pojawia sie tylko przy przewadze i slabosci`() {
-        assertEquals("Przewaga", Element.relationLabel(Element.Fire, Element.Fire.beats))
-        assertEquals("Slabosc", Element.relationLabel(Element.Fire, Element.Fire.losesTo))
+        assertEquals("Advantage", Element.relationLabel(Element.Fire, Element.Fire.beats))
+        assertEquals("Weakness", Element.relationLabel(Element.Fire, Element.Fire.losesTo))
         assertNull(Element.relationLabel(Element.Fire, Element.Fire))
         assertNull(Element.relationLabel(null, Element.Fire))
     }

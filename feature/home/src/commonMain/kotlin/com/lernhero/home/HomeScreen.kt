@@ -216,6 +216,28 @@ fun HomeScreen(
             if (bestiaryOpen) {
                 com.lernhero.home.dev.BestiaryDevOverlay(onClose = { bestiaryOpen = false })
             }
+            // Podglad paywalla z panelu RevenueCat - niezaleznie od tego, czy konto ma juz Premium
+            // (normalnie paywall otwiera sie tylko graczom bez subskrypcji).
+            var paywallOpen by remember { mutableStateOf(false) }
+            Text(
+                text = "dev: paywall",
+                color = Color(0xFFFFD34D),
+                fontFamily = FontFirst(),
+                fontWeight = FontWeight.Bold,
+                fontSize = 10.sp,
+                modifier = Modifier
+                    .align(Alignment.BottomStart)
+                    .padding(contentPadding)
+                    .padding(start = 8.dp, bottom = 34.dp)
+                    .clickable { paywallOpen = true }
+                    .padding(8.dp)
+            )
+            if (paywallOpen) {
+                com.lernhero.shared.monetization.PremiumPaywall(
+                    subscription = org.koin.compose.koinInject(),
+                    onDismiss = { paywallOpen = false }
+                )
+            }
         }
     }
 }

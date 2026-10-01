@@ -16,23 +16,23 @@ enum class RunPerk(
     val apply: (RunModifiers) -> RunModifiers
 ) {
     Focus(
-        title = "Skupienie",
-        description = "+15% sily zaklec do konca runu.",
+        title = "Focus",
+        description = "+15% spell power for the rest of the run.",
         apply = { it.copy(bonusSpellPower = it.bonusSpellPower + 0.15f) }
     ),
     Edge(
-        title = "Ostrze",
-        description = "+6 do ataku do konca runu.",
+        title = "Edge",
+        description = "+6 attack for the rest of the run.",
         apply = { it.copy(bonusAttack = it.bonusAttack + 6) }
     ),
     Vitality(
-        title = "Wigor",
+        title = "Vigor",
         description = "+25 max health for the rest of the run.",
         apply = { it.copy(bonusMaxHp = it.bonusMaxHp + 25) }
     ),
     Arcana(
-        title = "Arkana",
-        description = "+30% sily zaklec do konca runu.",
+        title = "Arcana",
+        description = "+30% spell power for the rest of the run.",
         apply = { it.copy(bonusSpellPower = it.bonusSpellPower + 0.3f) }
     );
 

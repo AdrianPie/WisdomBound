@@ -17,6 +17,8 @@ object IosMonetizationBridge {
     var purchases: IosPurchasesProvider? = null
     /** Osobny provider na zakupy jednorazowe - patrz [OneTimePurchases], dlaczego nie w [IosPurchasesProvider]. */
     var oneTime: IosOneTimeProvider? = null
+    /** Paywall z RevenueCat (RevenueCatUI) - patrz [RevenueCatPaywall]. Null = wlasny paywall. */
+    var paywall: IosPaywallPresenter? = null
 
     /** Wolane ze Swifta przy kazdej zmianie CustomerInfo (zakup, odnowienie, wygasniecie). */
     fun setPremium(active: Boolean) {
@@ -38,6 +40,15 @@ interface IosPurchasesProvider {
     /** [completion] dostaje "success", "cancelled" albo tresc bledu. */
     fun purchase(offerId: String, completion: (String) -> Unit)
     fun restore(completion: () -> Unit)
+}
+
+/**
+ * Pokazuje paywall zaprojektowany w RevenueCat jako modal (PaywallViewController). [onDismiss]
+ * leci dokladnie raz, niezaleznie od tego, czy gracz kupil, zamknal krzyzykiem czy zsunal okno.
+ */
+interface IosPaywallPresenter {
+    fun present(placementId: String, onDismiss: () -> Unit)
+    fun dismiss()
 }
 
 interface IosOneTimeProvider {
