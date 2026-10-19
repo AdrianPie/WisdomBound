@@ -1,0 +1,53 @@
+# Minojczycy, Mykeny, Troja, Ateny i Sparta, wojny perskie, filozofowie, igrzyska. Aleksander i swiat
+# hellenistyczny maja osobny dzial.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+hx_maraton	Easy	The marathon race recalls a messenger who ran from Marathon to which city?	Athens	Sparta	Troy	Corinth
+hx_demokracja	Easy	Which ancient city-state is known as the birthplace of democracy?	Athens	Sparta	Rome	Carthage
+his_temple_athena_stands	Easy	Which temple to Athena stands on the Acropolis in Athens?	The Parthenon	The Pantheon	The Temple of Apollo	The Temple of Zeus
+his_battle_490_athenians	Easy	At which battle of 490 BC did the Athenians beat a Persian army on the coast near their city?	Marathon	Thermopylae	Salamis	Plataea
+his_greek_city_state	Easy	Which Greek city-state was famous for its tough warriors and harsh military training?	Sparta	Athens	Corinth	Delphi
+his_word_democracy_comes	Easy	The word 'democracy' comes from Greek words meaning what?	Rule by the people	Rule by the wise	Rule by the rich	Rule by the gods
+wh_termopile	Medium	Which city-state defended the pass of Thermopylae against the Persians?	Sparta	Athens	Thebes	Corinth
+his_olimpia_zeus	Medium	The ancient Olympic Games were held in honour of which god?	Zeus	Apollo	Athena	Heracles
+his_herodot	Medium	Which ancient Greek is called 'the Father of History'?	Herodotus	Thucydides	Plutarch	Homer
+his_sokrates	Medium	Which Greek philosopher was sentenced to death by drinking hemlock?	Socrates	Plato	Aristotle	Diogenes
+hx_sparta_chlopcy	Medium	At what age did Spartan boys usually leave home for military training?	7	12	16	4
+hx_leonidas_300	Medium	How many Spartans famously fought beside King Leonidas at Thermopylae?	300	30	3,000	30,000
+hy_platon_akademia	Medium	Which Greek philosopher founded the Academy in Athens?	Plato	Aristotle	Socrates	Pythagoras
+his_city_state_defeated	Medium	Which city-state defeated Athens in the Peloponnesian War?	Sparta	Thebes	Corinth	Troy
+his_word_mausoleum_comes	Medium	The word 'mausoleum' comes from the tomb of which ancient ruler?	King Mausolus	Pharaoh Khufu	Emperor Augustus	King Darius
+his_philosopher_teacher_plato	Medium	Which philosopher was the teacher of Plato?	Socrates	Aristotle	Pythagoras	Homer
+his_ancient_greeks_call	Medium	What did the ancient Greeks call a city-state?	A polis	A forum	An agora	A satrapy
+his_island_minoan_civilisation	Medium	On which island did the Minoan civilisation flourish?	Crete	Cyprus	Rhodes	Sicily
+his_sanctuary_priestess_pythia	Medium	At which sanctuary did a priestess called the Pythia give prophecies from Apollo?	Delphi	Olympia	Delos	Dodona
+his_heavily_armed_foot	Medium	What were the heavily armed foot soldiers of ancient Greece called?	Hoplites	Helots	Centurions	Legionaries
+his_tight_formation_greek	Medium	In what tight formation did Greek hoplites fight, with shields overlapping?	The phalanx	The testudo	The wedge	The square
+his_winners_ancient_olympic	Medium	What did winners at the ancient Olympic Games receive?	An olive wreath	A gold medal	A bag of silver	A bronze shield
+his_agora_greek_city	Medium	What was the 'agora' in a Greek city?	The marketplace and meeting place	The fortified hilltop	The open-air theatre	The athletes' training ground
+his_spartan_girls_shocked	Medium	What did Spartan girls do that shocked other Greeks?	Trained and raced in public	Served as soldiers	Voted in assemblies	Became kings
+his_greek_trireme	Medium	What was a Greek 'trireme'?	A warship with three rows of oars	A temple with three columns	A three-day festival	A three-horse chariot
+his_diogenes	Hard	Which Greek philosopher is said to have lived in a large clay jar in Athens?	Diogenes	Socrates	Plato	Epicurus
+hx_olimpiada_776	Hard	According to tradition, in which year were the first ancient Olympic Games held?	776 BC	1200 BC	480 BC	44 BC
+hx_ostracyzm	Hard	In ancient Athens, what did citizens scratch on pieces of pottery to banish a politician?	His name	A skull	The word 'no'	A black cross
+hx_schliemann	Hard	Which German businessman dug up the ruins of Troy in the 1870s?	Heinrich Schliemann	Arthur Evans	Howard Carter	Max Mallowan
+hy_perykles	Hard	Which statesman led Athens in its golden age and had the Parthenon built?	Pericles	Solon	Themistocles	Draco
+his_seven_wonders_ancient	Hard	Which of the Seven Wonders of the Ancient World stood at Olympia?	The Statue of Zeus	The Temple of Artemis	The Colossus of Rhodes	The Mausoleum
+his_ancient_city_stood	Hard	In which ancient city stood the Temple of Artemis, one of the Seven Wonders?	Ephesus	Athens	Rhodes	Alexandria
+his_athenian_lawmaker_cancelled	Hard	Which Athenian lawmaker cancelled debts and freed debt slaves around 594 BC?	Solon	Draco	Cleisthenes	Pericles
+his_father_athenian_democracy	Hard	Who is called 'the father of Athenian democracy' for his reforms of 508 BC?	Cleisthenes	Solon	Pericles	Draco
+his_enslaved_farm_workers	Hard	What were the enslaved farm workers of Sparta called?	Helots	Hoplites	Perioikoi	Ephors
+his_greek_writer_anabasis	Hard	Which Greek writer's 'Anabasis' tells of 10,000 Greek soldiers fighting their way home from Persia?	Xenophon	Thucydides	Herodotus	Plutarch
+his_athenian_general_won	Hard	Which Athenian general won the Battle of Marathon in 490 BC?	Miltiades	Themistocles	Pericles	Leonidas
+his_athenian_leader_persuaded	Hard	Which Athenian leader persuaded his city to build a great fleet before the Persians returned?	Themistocles	Miltiades	Pericles	Alcibiades
+his_struck_athens_430	Hard	What struck Athens in 430 BC, killing Pericles soon afterwards?	A plague	An earthquake	A great fire	A Persian siege
+his_schliemann_gold_death	Hard	Schliemann named a gold death mask he found at Mycenae after which king?	Agamemnon	Priam	Odysseus	Menelaus
+his_greek_thinker_taught	Hard	Which Greek thinker taught that everything is made of tiny, uncuttable atoms?	Democritus	Plato	Pythagoras	Thales
+his_thirty_tyrants	Hard	Who were the 'Thirty Tyrants'?	A pro-Spartan junta in defeated Athens	Thirty Persian governors	Kings of the Greek colonies	Judges of the Olympic Games
+hx_knossos	Expert	Which British archaeologist excavated the Minoan palace of Knossos on Crete?	Arthur Evans	Heinrich Schliemann	Leonard Woolley	Flinders Petrie
+hy_drakon	Expert	Which Athenian lawgiver's rules were so harsh that his name became a word for 'severe'?	Draco	Solon	Cleisthenes	Pericles
+hy_salamina	Expert	At which sea battle of 480 BC did the Greek fleet crush the Persians?	Salamis	Actium	Lepanto	Marathon
+his_ancient_greek_historian	Expert	Which ancient Greek historian wrote the history of the Peloponnesian War?	Thucydides	Herodotus	Xenophon	Plutarch
+his_brilliant_but_treacherous	Expert	Which brilliant but treacherous Athenian general switched sides to Sparta in the Peloponnesian War?	Alcibiades	Themistocles	Nicias	Cleon
+his_city_state_sacred	Expert	Which city-state's 'Sacred Band' was an elite unit of 150 pairs of soldiers?	Thebes	Sparta	Athens	Corinth
+his_theban_general_broke	Expert	Which Theban general broke Sparta's power at the Battle of Leuctra in 371 BC?	Epaminondas	Lysander	Pausanias	Brasidas
+his_spartan_admiral_finally	Expert	Which Spartan admiral finally beat the Athenian fleet at Aegospotami in 405 BC?	Lysander	Leonidas	Pausanias	Brasidas

@@ -1,0 +1,55 @@
+# Od pierwszych faraonow do Kleopatry: piramidy, mumie, hieroglify, bogowie i odkrycia archeologow.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+wh_faraon_maska	Easy	Which pharaoh's golden death mask is the most famous in the world?	Tutankhamun	Ramesses II	Khufu	Akhenaten
+trv_cud_stoi	Easy	Which of the Seven Wonders of the Ancient World still stands?	The Great Pyramid of Giza	The Colossus of Rhodes	The Hanging Gardens of Babylon	The Lighthouse of Alexandria
+his_kleopatra_antoniusz	Easy	Which Egyptian queen had a famous love affair with the Roman general Mark Antony?	Cleopatra	Nefertiti	Hatshepsut	Nefertari
+hx_kleopatra_waz	Easy	According to legend, how did Cleopatra take her own life?	With a snake bite	With a sword	With poisoned wine	By leaping from a tower
+hx_papirus	Easy	What did ancient Egyptians write on, made from a river reed?	Papyrus	Parchment	Clay tablets	Bamboo strips
+his_call_picture_writing	Easy	What do we call the picture writing of ancient Egypt?	Hieroglyphs	Cuneiform	Runes	Sanskrit
+his_great_sphinx_body	Easy	The Great Sphinx has the body of a lion and the head of what?	A human	A falcon	A ram	A jackal
+trv_faraon_ostatni	Medium	Who was the last active pharaoh of ancient Egypt?	Cleopatra VII	Tutankhamun	Ramesses II	Nefertiti
+his_cheops	Medium	For which pharaoh was the Great Pyramid of Giza built?	Khufu	Tutankhamun	Ramesses II	Akhenaten
+his_mumia_mozg	Medium	During mummification, which organ did Egyptians pull out through the nose?	The brain	The heart	The eyes	The tongue
+hx_nil_wylew	Medium	What made farming possible along the Nile in ancient Egypt?	Its yearly flood	Heavy spring rain	Underground springs	Melting mountain snow
+hy_kot_egipt	Medium	In ancient Egypt, what could happen to someone who killed a cat, even by accident?	They could be put to death	Nothing at all	They had to buy a new cat	They were sent to Nubia
+his_egyptian_queen_painted	Medium	Which Egyptian queen is famous for her painted bust, now in a Berlin museum?	Nefertiti	Cleopatra	Hatshepsut	Nefertari
+his_egyptian_embalmers_store	Medium	What did Egyptian embalmers store a mummy's organs in?	Canopic jars	Sarcophagi	Ushabti boxes	Amphorae
+his_valley_near_luxor	Medium	In which valley near Luxor were many great pharaohs buried in rock-cut tombs?	The Valley of the Kings	The Valley of the Temples	The Valley of the Nile	The Valley of the Sun
+his_according_dna_tests	Medium	According to DNA tests, who was Tutankhamun's father?	Akhenaten	Ramesses II	Khufu	Thutmose III
+his_roughly_old_tutankhamun	Medium	Roughly how old was Tutankhamun when he died?	About 19	About 9	About 35	About 50
+his_egyptian_afterlife_dead	Medium	In the Egyptian afterlife, a dead person's heart was weighed against what?	A feather	A gold coin	A scarab beetle	A loaf of bread
+his_beetle_sacred_ancient	Medium	Which beetle was sacred in ancient Egypt and worn as a lucky charm?	The scarab	The ladybird	The stag beetle	The firefly
+his_roughly_long_ancient	Medium	Roughly how long did ancient Egypt last as a kingdom ruled by pharaohs?	About 3,000 years	About 500 years	About 1,000 years	About 10,000 years
+his_both_men_women	Medium	Why did both men and women in ancient Egypt wear dark eye make-up?	It protected against glare and infection	It showed they were married	It scared away crocodiles	Only priests were allowed to
+his_ancient_egyptians_believe	Medium	What did ancient Egyptians believe their pharaoh was?	A living god	An elected chief	A foreign general	A simple high priest
+wh_kleopatra_dynastia	Hard	Which dynasty did Cleopatra VII belong to?	The Ptolemies	The Seleucids	The Achaemenids	The Nubian Ptolemies
+wh_rosetta	Hard	Who deciphered Egyptian hieroglyphs thanks to the Rosetta Stone?	Jean-Francois Champollion	Howard Carter	Heinrich Schliemann	Thomas Young
+trv_kleopatra_czas	Hard	Which event is closer in time to Cleopatra's reign?	The Moon landing	The building of the Great Pyramid	They are equally far	The founding of Rome
+trv_hatszepsut	Hard	Which Egyptian queen ruled as pharaoh and built the temple at Deir el-Bahari?	Hatshepsut	Nefertiti	Cleopatra	Nefertari
+trv_tutanchamon_odkrycie	Hard	Who discovered Tutankhamun's tomb in 1922?	Howard Carter	Heinrich Schliemann	Flinders Petrie	Jean-Francois Champollion
+wld_his_piramidy_budowniczowie	Hard	Who is now believed to have built the Egyptian pyramids?	Paid skilled workers and labourers	Slaves captured in war	Greek architects	Roman engineers
+his_ramzes	Hard	Which pharaoh built the giant temples of Abu Simbel?	Ramesses II	Tutankhamun	Khufu	Seti I
+his_piramida_najwyzsza	Hard	Which building was the tallest in the world for about 3,800 years?	The Great Pyramid of Giza	The Lighthouse of Alexandria	Lincoln Cathedral	The Colossus of Rhodes
+hx_sfinks_nos	Hard	The Great Sphinx of Giza is famously missing what?	Its nose	One of its ears	Its tail	A front paw
+hy_piramida_bloki	Hard	Roughly how many stone blocks make up the Great Pyramid of Giza?	About 2.3 million	About 23,000	About 230,000	About 23 million
+his_great_egyptian_capital	Hard	What was the great Egyptian capital on the site of today's Luxor called?	Thebes	Memphis	Alexandria	Amarna
+his_egyptian_capital_founded	Hard	Which Egyptian capital, founded in the 1340s BC, was abandoned soon after its founder died?	Amarna	Thebes	Memphis	Giza
+his_little_figures_put	Hard	What were the little figures put in Egyptian tombs to work for the dead in the afterlife?	Shabtis	Canopics	Scarabs	Obelisks
+his_natural_salt_egyptians	Hard	Which natural salt did Egyptians use to dry out bodies for mummification?	Natron	Saltpetre	Rock salt	Borax
+his_pyramid_dahshur_changes	Hard	Which pyramid at Dahshur changes its angle halfway up?	The Bent Pyramid	The Red Pyramid	The Step Pyramid	The Black Pyramid
+his_son_khufu_built	Hard	Which son of Khufu built the second-largest pyramid at Giza?	Khafre	Menkaure	Sneferu	Djoser
+his_city_egypt_capital	Hard	Which city was Egypt's capital when the Giza pyramids were built?	Memphis	Thebes	Alexandria	Amarna
+his_board_game_found	Hard	Which board game, found in Tutankhamun's tomb, was popular in ancient Egypt?	Senet	Chess	Backgammon	Go
+his_cartouche_egyptian_writing	Hard	What was a 'cartouche' in Egyptian writing?	An oval ring around a royal name	A golden royal staff	A crown with a cobra	A sealed burial chamber
+his_uraeus_pharaoh_crown	Hard	What was the 'uraeus' on a pharaoh's crown?	A rearing cobra	A falcon's wing	A golden sun disc	A ram's horn
+his_lord_carnarvon_paid	Hard	Lord Carnarvon, who paid for the search for Tutankhamun, died in 1923 of what?	An infected mosquito bite	A cobra bite	Food poisoning	A fall inside the tomb
+his_kingdom_south_egypt	Hard	Which kingdom south of Egypt, home of the 'black pharaohs', ruled Egypt around 700 BC?	Kush	Punt	Libya	Sinai
+wld_his_kleopatra_jezyk	Expert	Cleopatra VII was famous as the first of her dynasty to speak which language?	Egyptian	Latin	Greek	Persian
+his_echnaton	Expert	Which pharaoh tried to replace Egypt's gods with the worship of one sun disc, the Aten?	Akhenaten	Tutankhamun	Ramesses II	Thutmose III
+hx_kleopatra_syn	Expert	What was the name of Cleopatra's son with Julius Caesar?	Caesarion	Ptolemy XIII	Octavian	Antyllus
+hx_dzoser	Expert	Which pharaoh's Step Pyramid at Saqqara is the oldest Egyptian pyramid?	Djoser	Khufu	Sneferu	Menkaure
+hx_imhotep	Expert	Which Egyptian architect of the first pyramid was later worshipped as a god of medicine?	Imhotep	Senenmut	Hemiunu	Ineni
+hy_kadesz	Expert	The Battle of Kadesh, around 1274 BC, was fought between Egypt and which empire?	The Hittites	The Assyrians	The Persians	The Babylonians
+his_warrior_pharaoh_expanded	Expert	Which warrior pharaoh, who expanded Egypt to its greatest size, is called 'the Napoleon of Egypt'?	Thutmose III	Ramesses II	Seti I	Amenhotep III
+his_pharaoh_khufu_father	Expert	Which pharaoh, Khufu's father, built the first true smooth-sided pyramid?	Sneferu	Djoser	Khafre	Menkaure
+his_egyptians_call_own	Expert	What did Egyptians call their own country, after the dark soil of the Nile?	Kemet	Deshret	Nubia	Punt

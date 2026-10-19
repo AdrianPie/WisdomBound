@@ -90,6 +90,9 @@ enum class QuizCategory(
  * Kolejnosc odpowiedzi ustala sie dopiero przy losowaniu, wiec bank nie zdradza, ktora jest ktora.
  *
  * [flagCode] to dwuliterowy kod kraju. Domena nie zna obrazkow - warstwa UI zamienia kod na flage.
+ *
+ * [section] to sciezka dzialu ("history/antiquity/roman_empire") w temacie podzielonym na dzialy,
+ * a null w temacie bez podzialu - patrz [QuizSection].
  */
 data class QuizEntry(
     val id: String,
@@ -98,7 +101,8 @@ data class QuizEntry(
     val wrong: List<String>,
     val category: QuizCategory,
     val difficulty: QuizDifficulty,
-    val flagCode: String? = null
+    val flagCode: String? = null,
+    val section: String? = null
 ) {
     val answers: List<String> get() = listOf(correct) + wrong
 }

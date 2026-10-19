@@ -1,0 +1,35 @@
+# Anglia i Szkocja od Alfreda Wielkiego do Ryszarda III: podboj normanski, Magna Carta, Wallace,
+# Wojna Dwoch Roz.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+wh_hastings_zwyciezca	Medium	Who won the Battle of Hastings in 1066?	William the Conqueror	Harold II	Richard the Lionheart	Canute the Great
+hx_normanowie	Medium	The Normans who conquered England in 1066 came from which present-day country?	France	Norway	Denmark	Germany
+hx_wallace	Medium	Which Scottish hero, shown in the film 'Braveheart', led a revolt against England in 1297?	William Wallace	Robert the Bruce	Rob Roy	Bonnie Prince Charlie
+his_scottish_king_defeated	Medium	Which Scottish king defeated the English at Bannockburn in 1314?	Robert the Bruce	William Wallace	James IV	Macbeth
+his_wars_roses_colour	Medium	In the Wars of the Roses, which colour of rose stood for the House of Lancaster?	Red	White	Yellow	Pink
+his_battle_1485_richard	Medium	At which battle of 1485 was Richard III killed?	Bosworth Field	Towton	Tewkesbury	Barnet
+his_english_king_angry	Medium	Which English king's angry words led four knights to murder his archbishop in 1170?	Henry II	Henry I	Stephen	Richard I
+his_powerful_woman_queen	Medium	Which powerful woman was queen of France and then of England in the 1100s?	Eleanor of Aquitaine	Matilda of Flanders	Isabella of France	Margaret of Anjou
+his_legendary_outlaw_lived	Medium	Which legendary outlaw lived in Sherwood Forest and robbed the rich to help the poor?	Robin Hood	Dick Turpin	Rob Roy	Hereward the Wake
+his_english_uprising_1381	Medium	What was the English uprising of 1381, led by Wat Tyler, called?	The Peasants' Revolt	The Pilgrimage of Grace	The Barons' War	Jack Cade's Rebellion
+his_stone_used_crown	Medium	Which stone, used to crown Scottish kings, did Edward I carry off to London?	The Stone of Scone	The Blarney Stone	The Rosetta Stone	The Kingstone
+his_real_scottish_king	Medium	Which real Scottish king, who killed Duncan in 1040, later starred in a Shakespeare play?	Macbeth	Malcolm	Kenneth	Duncan
+his_london_fortress_now	Medium	Which London fortress, now home to the Crown Jewels, was begun by William the Conqueror?	The Tower of London	Windsor Castle	Westminster Palace	Hampton Court
+his_300_years_1066	Medium	For about 300 years after 1066, which language did England's kings and nobles speak?	French	Latin	Old English	Danish
+his_family_kings_ruled	Medium	Which family of kings ruled England from 1154 to 1485?	The Plantagenets	The Tudors	The Stuarts	The Normans
+wh_wojna_dwoch_roz	Hard	The houses of York and Lancaster fought each other during...	The Wars of the Roses	The Hundred Years' War	The English Revolution	The Seven Years' War
+wld_magna_carta	Hard	Which English king sealed the Magna Carta in 1215?	King John	Richard the Lionheart	Henry VIII	William the Conqueror
+hx_bayeux	Hard	Which famous embroidery tells the story of the Norman conquest of England?	The Bayeux Tapestry	The Book of Kells	The Lewis Chessmen	The Domesday Book
+hx_harold_oko	Hard	According to the famous story, how was King Harold killed at Hastings?	By an arrow in the eye	In a sword duel	By falling from his horse	Drowned in a river
+hy_domesday	Hard	What was William the Conqueror's great survey of England, made in 1086, called?	The Domesday Book	The Magna Carta	The Bayeux Tapestry	The Book of Kells
+hy_becket	Hard	Which Archbishop of Canterbury was murdered in his own cathedral in 1170?	Thomas Becket	Thomas More	Thomas Cranmer	Anselm
+his_english_king_nicknamed	Hard	Which English king was nicknamed 'Longshanks'?	Edward I	Henry II	Richard III	William II
+his_two_boys_disappeared	Hard	Which two boys disappeared in the Tower of London in 1483, possibly on their uncle's orders?	Edward V and his brother Richard	Henry VI and his son Edward	Arthur and Henry Tudor	Edmund and his brother Jasper
+his_hated_tax_sparked	Hard	Which hated tax sparked the Peasants' Revolt of 1381?	The poll tax	The window tax	The salt tax	The ship money
+his_scottish_letter_1320	Hard	Which Scottish letter of 1320 to the pope declared Scotland's independence?	The Declaration of Arbroath	The Treaty of Perth	The Auld Alliance	The Declaration of Scone
+his_english_king_deposed	Hard	Which English king was deposed and murdered at Berkeley Castle in 1327?	Edward II	Richard II	Henry VI	Edward V
+his_rebel_baron_parliament	Hard	Which rebel baron called a parliament in 1265 that included ordinary townsmen?	Simon de Montfort	Hubert de Burgh	William Marshal	Roger Mortimer
+his_hastings	Expert	In which year was the Battle of Hastings?	1066	1215	1096	1013
+hx_ryszard_iii	Expert	The remains of which English king were found under a car park in Leicester in 2012?	Richard III	Henry VI	Edward V	Harold II
+hx_alfred_ciastka	Expert	According to legend, which English king was scolded by a peasant woman for letting her cakes burn?	Alfred the Great	Harold II	William the Conqueror	Edward the Confessor
+his_last_native_prince	Expert	Who was the last native Prince of Wales, killed fighting the English in 1282?	Llywelyn ap Gruffudd	Owain Glyndwr	Rhodri the Great	Hywel Dda
+his_harrying_north_1069	Expert	What was the 'Harrying of the North' in 1069-1070?	William's wasting of northern England	A Viking raid on Northumbria	A Scottish invasion of York	A plague in Yorkshire

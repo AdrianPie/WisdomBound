@@ -1,0 +1,34 @@
+# Anglia przeciw Francji w latach 1337-1453: Crecy, Poitiers, Azincourt, Joanna d'Arc.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+his_french_teenage_heroine	Easy	Which French teenage heroine led armies against the English in 1429?	Joan of Arc	Eleanor of Aquitaine	Marie Antoinette	Catherine de' Medici
+his2_wojna_stuletnia	Medium	Between which countries was the Hundred Years' War fought?	England and France	Spain and Portugal	Sweden and Denmark	Austria and Prussia
+wh_joanna_darc	Medium	During which conflict did Joan of Arc fight?	The Hundred Years' War	The Thirty Years' War	The Wars of the Roses	The Reconquista
+hx_joanna_stos	Medium	How did Joan of Arc die in 1431?	She was burned at the stake	She fell in battle	She was poisoned	She died of the plague
+his_weapon_credited_england	Medium	Which weapon is credited with England's victory at Agincourt in 1415?	The longbow	The crossbow	The cannon	The pike
+his_years_hundred_years	Medium	How many years did the Hundred Years' War actually last?	116	100	99	124
+his_english_king_won	Medium	Which English king won the Battle of Agincourt in 1415?	Henry V	Henry IV	Edward III	Richard II
+his_french_city_joan	Medium	Which French city did Joan of Arc help free from an English siege in 1429?	Orleans	Paris	Reims	Calais
+his_french_king_joan	Medium	Which French king did Joan of Arc lead to his coronation at Reims?	Charles VII	Louis XI	Philip VI	Charles VI
+his_english_prince_son	Medium	Which English prince, son of Edward III, won the Battle of Poitiers in 1356?	The Black Prince	The Red Prince	The Prince of Gascony	The Young King
+his_joan_arc_say	Medium	What did Joan of Arc say had told her to drive the English out of France?	The voices of saints	A dream of a white horse	A prophecy in a book	An old hermit
+his_according_popular_legend	Medium	According to a popular legend, the rude 'two-fingered salute' was first made by whom?	English archers at Agincourt	Roman soldiers in Gaul	Viking raiders in Paris	Scottish rebels at Bannockburn
+his_new_weapon_appeared	Medium	Which new weapon first appeared on battlefields during the Hundred Years' War?	The cannon	The crossbow	The musket	The trebuchet
+his_roughly_far_english	Medium	Roughly how far could an English longbow shoot an arrow?	About 250 metres	About 25 metres	About 1,000 metres	About 2,500 metres
+his_main_charge_joan	Medium	On which main charge was Joan of Arc condemned to death in 1431?	Heresy	Treason	Murder	Theft
+hx_joanna_wiek	Hard	How old was Joan of Arc when she was executed?	About 19	About 29	About 39	About 14
+his_city_joan_arc	Hard	In which city was Joan of Arc burned at the stake?	Rouen	Paris	Orleans	Reims
+his_allies_english_captured	Hard	Which allies of the English captured Joan of Arc and sold her to them?	The Burgundians	The Bretons	The Scots	The Flemish
+his_english_king_claim	Hard	Which English king's claim to the French throne began the Hundred Years' War in 1337?	Edward III	Edward I	Henry V	Richard II
+his_battle_1346_english	Hard	At which battle of 1346 did English longbowmen destroy the French cavalry?	Crecy	Poitiers	Agincourt	Castillon
+his_french_port_england	Hard	Which French port was England's last foothold in France, finally lost in 1558?	Calais	Bordeaux	Le Havre	Cherbourg
+his_year_joan_arc	Hard	In which year was Joan of Arc made a saint?	1920	1456	1789	1871
+his_wine_region_south	Hard	Which wine region of south-west France, held by English kings, was a cause of the war?	Gascony	Burgundy	Champagne	Alsace
+his_henry_victor_agincourt	Hard	How did Henry V, the victor of Agincourt, die in 1422?	Of dysentery on campaign	In a jousting accident	Killed by an arrow	Poisoned by his brother
+his_baby_became_king	Hard	Which baby became king of both England and France in 1422?	Henry VI	Edward IV	Charles VII	Richard II
+his_french_royal_house	Hard	Which French royal house fought England's kings in the Hundred Years' War?	The Valois	The Bourbons	The Capetians	The Orleans
+his_bands_jobless_soldiers	Hard	What were the bands of jobless soldiers who plundered France during lulls in the war called?	The Free Companies	The Lost Legions	The Black Bands	The Iron Guards
+his_french_king_taken	Expert	Which French king was taken prisoner at Poitiers in 1356?	John II	Philip VI	Charles V	Louis IX
+his_battle_1453_ended	Expert	Which battle of 1453 ended the Hundred Years' War with a French victory?	Castillon	Formigny	Patay	Orleans
+his_treaty_1420_made	Expert	Which treaty of 1420 made Henry V heir to the French throne?	The Treaty of Troyes	The Treaty of Bretigny	The Treaty of Arras	The Treaty of Picquigny
+his_ugly_but_brilliant	Expert	Which ugly but brilliant French commander won back land from the English with hit-and-run tactics?	Bertrand du Guesclin	Gilles de Rais	Jean de Dunois	La Hire
+his_french_bishop_ally	Expert	Which French bishop, an ally of the English, led Joan of Arc's trial?	Pierre Cauchon	Jean Gerson	Georges d'Amboise	Guillaume Briconnet

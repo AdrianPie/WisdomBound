@@ -1,0 +1,37 @@
+# Chiny od dynastii Sui do upadku Qing w 1912 oraz Korea: Tang, Song, Ming, wynalazki, egzaminy
+# urzednicze, wyprawy Zheng He.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+hy_porcelana	Easy	Which fine ceramic is so linked with China that in English it is simply called 'china'?	Porcelain	Terracotta	Stoneware	Earthenware
+his_explosive_invention_discovered	Easy	Which explosive invention was discovered by Chinese alchemists seeking an elixir of life?	Gunpowder	Dynamite	Nitroglycerine	Greek fire
+his_pieniadz_papierowy	Medium	Which country was the first to use paper money?	China	Italy	Persia	Egypt
+hx_zakazane_miasto	Medium	What was the imperial palace in Beijing, closed to ordinary people, called?	The Forbidden City	The Summer Palace	The Jade Palace	The Temple of Heaven
+his_last_imperial_dynasty	Medium	Which was the last imperial dynasty of China?	Qing	Ming	Han	Tang
+his_dynasty_golden_age	Medium	Which dynasty is the golden age of Chinese poetry, the age of Li Bai and Du Fu?	Tang	Han	Qing	Yuan
+his_world_longest_artificial	Medium	Which is the world's longest artificial waterway, linking Beijing and Hangzhou?	The Grand Canal	The Suez Canal	The Yellow Canal	The Imperial Canal
+his_painful_custom_forced	Medium	Which painful custom, forced on girls for about a thousand years, began around the Song dynasty?	Foot binding	Neck rings	Teeth filing	Head shaping
+his_empress_dowager_controlled	Medium	Which empress dowager controlled China's court for much of its last fifty years?	Cixi	Wu Zetian	Lu Zhi	Soong Mei-ling
+his_colour_reserved_emperor	Medium	Which colour was reserved for the emperor in imperial China?	Yellow	Purple	Red	White
+his_dynasty_especially_blue	Medium	Which dynasty is especially famous for its blue-and-white porcelain?	The Ming	The Han	The Qin	The Zhou
+his_people_north_east	Medium	Which people from the north-east founded China's last dynasty, the Qing?	The Manchus	The Mongols	The Tibetans	The Uyghurs
+his_hairstyle_qing_rulers	Medium	Which hairstyle did the Qing rulers force all Chinese men to wear?	A shaved forehead and long braid	A topknot	Long loose hair	A fully shaved head
+his_board_game_black	Medium	Which board game of black and white stones was invented in China over 2,500 years ago?	Go	Mahjong	Xiangqi	Backgammon
+his_title_chinese_emperors	Medium	By which title were Chinese emperors known?	Son of Heaven	King of Kings	Lord of the Earth	Light of Asia
+dpt_his_mur_ming	Hard	Which dynasty built most of the Great Wall as it stands today?	The Ming dynasty	The Han dynasty	The Qin dynasty	The Tang dynasty
+hy_egzaminy_chiny	Hard	How did imperial China choose many of its officials?	Through tough written exams	By drawing lots	By sword fights	Only by noble birth
+his_under_dynasty_china	Hard	Under which dynasty did China print the world's first official paper money?	Song	Han	Qin	Qing
+his_oldest_dated_printed	Hard	What is the oldest dated printed book in the world, from 868?	The Diamond Sutra	The Gutenberg Bible	The Analects	The Jikji
+his_short_lived_dynasty	Hard	Which short-lived dynasty built most of the Grand Canal around 600?	The Sui	The Tang	The Han	The Song
+his_former_peasant_monk	Hard	Which former peasant and monk founded the Ming dynasty in 1368?	Zhu Yuanzhang	Kublai Khan	Zheng He	Li Shimin
+his_ming_emperor_moved	Hard	Which Ming emperor moved the capital to Beijing and built the Forbidden City?	Yongle	Hongwu	Kangxi	Qianlong
+his_korean_dynasty_ruled	Hard	Which Korean dynasty ruled from 1392 until Japan took over in 1910?	Joseon	Goryeo	Silla	Baekje
+his_korean_kingdom_founded	Hard	Which Korean kingdom, founded in 918, gave its name to 'Korea'?	Goryeo	Joseon	Silla	Gaya
+his_chinese_craftsman_invented	Hard	Which Chinese craftsman invented movable type made of clay in the 1040s?	Bi Sheng	Cai Lun	Zhang Heng	Shen Kuo
+his2_dynastia_ming	Expert	Which dynasty ruled China before the Qing?	Ming	Tang	Han	Song
+his2_rewolta_taiping	Expert	In which country did the Taiping Rebellion break out?	China	Japan	India	Korea
+his_zheng_he	Expert	Which Chinese admiral led huge 'treasure fleets' across the Indian Ocean in the 1400s?	Zheng He	Kublai Khan	Sun Tzu	Koxinga
+hx_yi_sun_sin	Expert	Which Korean admiral used armoured 'turtle ships' against Japanese invaders in the 1590s?	Yi Sun-sin	Sejong the Great	Wang Geon	Gwanggaeto
+hx_hangul	Expert	Which Korean king created the Hangul alphabet in the 1440s?	Sejong the Great	Taejo	Gojong	Yeongjo
+hy_wu_zetian	Expert	Who was the only woman to rule China as emperor in her own name?	Wu Zetian	Cixi	Yang Guifei	Lady Meng
+his_jikji_printed_korea	Expert	What is the Jikji, printed in Korea in 1377?	The oldest surviving book printed with metal type	The first Korean map of the whole world	A royal law code of the Joseon kings	The oldest surviving Korean poem
+his_general_rebellion_755	Expert	Which general's rebellion of 755 nearly destroyed the Tang dynasty?	An Lushan	Huang Chao	Li Zicheng	Wu Sangui
+his_song_capital_perhaps	Expert	Which Song capital was perhaps the largest city in the world around 1100?	Kaifeng	Chang'an	Nanjing	Luoyang

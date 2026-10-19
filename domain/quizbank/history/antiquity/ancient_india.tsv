@@ -1,0 +1,33 @@
+# Cywilizacja doliny Indusu, wedy, Budda, imperium Maurjow i Asoka, Guptowie.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+his_religion_rooted_vedic	Easy	Which religion, rooted in the Vedic tradition, is India's largest today?	Hinduism	Buddhism	Jainism	Sikhism
+his_ancient_indian_system	Easy	What is the ancient Indian system of social classes inherited at birth called?	The caste system	The feudal system	The guild system	The clan system
+his_religion_founded_siddhartha	Easy	Which religion was founded by Siddhartha Gautama?	Buddhism	Hinduism	Jainism	Sikhism
+his_river_holiest_hinduism	Easy	Which river is the holiest in Hinduism?	The Ganges	The Indus	The Nile	The Mekong
+hy_budda_nepal	Medium	In which present-day country was the Buddha born?	Nepal	India	Tibet	Sri Lanka
+his_buddha_birth	Medium	What was the Buddha's birth name?	Siddhartha Gautama	Mahavira	Ashoka	Nagarjuna
+his_river_gave_india	Medium	Which river gave India its name?	The Indus	The Ganges	The Brahmaputra	The Godavari
+his_ancient_civilisation_built	Medium	Which ancient civilisation built the carefully planned cities of Harappa and Mohenjo-daro?	The Indus Valley civilisation	The Maurya Empire	The Gupta Empire	The Vedic kingdoms
+his_present_day_country_3	Medium	In which present-day country are the ruins of Mohenjo-daro?	Pakistan	India	Afghanistan	Bangladesh
+his_ancient_indian_hymns	Medium	Which ancient Indian hymns are among the oldest religious texts still in use?	The Vedas	The Upanishads	The Puranas	The Sutras
+his_under_kind_tree	Medium	Under what kind of tree did the Buddha reach enlightenment?	A fig tree	An oak tree	A palm tree	A mango tree
+his_religion_strict_non	Medium	Which religion, known for its strict non-violence, was shaped by Mahavira in the Buddha's time?	Jainism	Sikhism	Zoroastrianism	Taoism
+his_spoked_wheel_ashoka	Medium	Where does the 24-spoked wheel of Ashoka appear today?	On India's flag	On the Olympic flag	On the UN flag	On Japan's flag
+his_children_board_game	Medium	Which children's board game came from an ancient Indian game about virtue and vice?	Snakes and ladders	Ludo	Monopoly	Draughts
+his_ancient_language_sacred	Medium	Which ancient language is the sacred language of Hindu scriptures?	Sanskrit	Pali	Tamil	Persian
+his_emperor_ashoka_spread	Medium	How did Emperor Ashoka spread his messages across his empire?	Carved on stone pillars and rocks	Painted on temple walls	Sung by travelling poets	Printed on silk scrolls
+his_indian_city_ganges	Medium	Which Indian city on the Ganges, sacred to Hindus, is one of the oldest living cities in the world?	Varanasi	Mumbai	Kolkata	Bangalore
+his_indian_town_buddha	Hard	In which Indian town did the Buddha reach enlightenment?	Bodh Gaya	Varanasi	Lumbini	Kushinagar
+his_founded_india_maurya	Hard	Who founded India's Maurya Empire around 321 BC?	Chandragupta Maurya	Ashoka	Bindusara	Chandragupta II
+his_animals_pillar_emperor	Hard	Which animals, from a pillar of Emperor Ashoka, appear on India's national emblem?	Four lions	Two elephants	A tiger and a bull	Three peacocks
+his_indian_empire_rule	Hard	Which Indian empire's rule, from about 320 to 550, is called a 'golden age'?	The Gupta Empire	The Maurya Empire	The Mughal Empire	The Chola Empire
+his_indian_astronomer_argued	Hard	Which Indian astronomer argued around AD 500 that the Earth spins on its axis?	Aryabhata	Brahmagupta	Chanakya	Kalidasa
+his_indian_game_gupta	Hard	Which Indian game from the Gupta era is the ancestor of chess?	Chaturanga	Pachisi	Kabaddi	Carrom
+his_sanskrit_epic_tells	Hard	Which Sanskrit epic tells of Prince Rama's quest to rescue his wife Sita?	The Ramayana	The Mahabharata	The Rigveda	The Bhagavad Gita
+his_buddhist_caves_western	Hard	Which Buddhist caves in western India are famous for 2,000-year-old wall paintings?	The Ajanta Caves	The Elephanta Caves	The Mogao Caves	The Batu Caves
+his_capital_maurya_empire	Hard	What was the capital of the Maurya Empire, near today's Patna?	Pataliputra	Taxila	Ujjain	Varanasi
+his_great_buddhist_university	Hard	Which great Buddhist university in India was destroyed by raiders around 1193?	Nalanda	Taxila	Vikramashila	Sarnath
+his_plant_fibre_indus	Hard	Which plant fibre were the Indus Valley people among the first in the world to spin and weave?	Cotton	Flax	Hemp	Jute
+his_aszoka	Expert	Which Indian emperor turned to Buddhism after his bloody conquest of Kalinga?	Ashoka	Chandragupta Maurya	Akbar	Harsha
+his_adviser_maurya_emperor	Expert	Which adviser to the first Maurya emperor wrote the 'Arthashastra', a guide to ruling?	Chanakya	Kalidasa	Aryabhata	Panini
+his_kushan_emperor_helped	Expert	Which Kushan emperor helped spread Buddhism along the Silk Road in the 100s AD?	Kanishka	Ashoka	Harsha	Menander

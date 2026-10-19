@@ -1,0 +1,38 @@
+# Ameryka XIX wieku poza wojna secesyjna: ekspansja na zachod, goraczka zlota, kowboje, rewolwerowcy,
+# Indianie, imigranci.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+trv_statua_wolnosci	Easy	Which country gave the Statue of Liberty to the United States?	France	The United Kingdom	Italy	Spain
+hx_statua_kolor	Easy	What colour was the Statue of Liberty when it was first put up?	Shiny copper brown	Pure white	Gold	Dark grey
+his_outlaw_robbed_trains	Easy	Which outlaw robbed trains and banks in the Wild West with his brother Frank?	Jesse James	Billy the Kid	Butch Cassidy	Sam Bass
+his_lawman_took_part	Easy	Which lawman took part in the gunfight at the O.K. Corral in 1881?	Wyatt Earp	Wild Bill Hickok	Pat Garrett	Bat Masterson
+his_huge_herds_almost	Easy	Which huge herds were almost wiped out on the Great Plains in the late 1800s?	The bison	The wild horses	The elk	The longhorn cattle
+his_alaska	Medium	From which country did the USA buy Alaska in 1867?	Russia	Canada	Britain	Spain
+hx_goraczka_zlota	Medium	The gold rush of 1849 drew huge crowds of fortune-seekers to which US state?	California	Alaska	Texas	Colorado
+hx_ellis_island	Medium	Through which island did millions of immigrants enter New York between 1892 and 1954?	Ellis Island	Staten Island	Long Island	Coney Island
+his_alamo_site_siege	Medium	The Alamo, site of a famous siege in 1836, is in which US state?	Texas	New Mexico	Arizona	California
+his_apache_leader_became	Medium	Which Apache leader became famous for resisting US and Mexican troops?	Geronimo	Sitting Bull	Crazy Horse	Tecumseh
+his_trail_american_pioneers	Medium	Which famous trail did American pioneers follow west to the Pacific Northwest?	The Oregon Trail	The Silk Road	Route 66	The Santa Fe Trail
+his_president_made_louisiana	Medium	Which US president made the Louisiana Purchase of 1803, doubling the country's size?	Thomas Jefferson	John Adams	James Madison	James Monroe
+his_shoshone_woman_guided	Medium	Which Shoshone woman guided the first US overland expedition to the Pacific in 1805?	Sacagawea	Pocahontas	Wilma Mankiller	Sarah Winnemucca
+his_klondike_gold_rush	Medium	The Klondike Gold Rush of the 1890s took place in which Canadian territory?	Yukon	Alberta	Ontario	Manitoba
+his_french_sculptor_designed	Medium	Which French sculptor designed the Statue of Liberty?	Frederic Bartholdi	Gustave Eiffel	Auguste Rodin	Camille Claudel
+his_sharpshooter_little_sure	Medium	Which sharpshooter, called 'Little Sure Shot', starred in Buffalo Bill's Wild West show?	Annie Oakley	Calamity Jane	Belle Starr	Pearl Hart
+his_lakota_holy_man	Medium	Which Lakota holy man led his people at the Battle of the Little Bighorn?	Sitting Bull	Geronimo	Red Cloud	Cochise
+his_forced_march_cherokee	Medium	What is the forced march of the Cherokee from their homeland in 1838 called?	The Trail of Tears	The Long Walk	The Oregon Trail	The Death March
+his_law_1862_offered	Medium	Which law of 1862 offered settlers free land in the West if they farmed it?	The Homestead Act	The Land Rush Act	The Pioneer Act	The Frontier Act
+his_outlaw_fled_south	Medium	Which outlaw fled to South America with the Sundance Kid?	Butch Cassidy	Jesse James	Billy the Kid	Black Bart
+his_manifest_destiny	Medium	What was 'Manifest Destiny'?	The belief the USA must spread across the continent	A timetable for the first railway west	A peace treaty signed with the Sioux	The first complete map of America
+his_usa_gain_winning	Medium	What did the USA gain by winning the Mexican-American War of 1846-1848?	California and the South-West	Florida and Cuba	Texas and Alaska	Louisiana and Oregon
+his_luizjana	Hard	From which country did the USA buy the vast Louisiana territory in 1803?	France	Spain	Britain	Mexico
+hx_bialy_dom_1814	Hard	Which country's troops burned the White House in 1814?	Britain	France	Mexico	Spain
+hx_pony_express	Hard	For how long did the famous Pony Express mail service actually run?	About 18 months	About 10 years	About 30 years	About 5 years
+hx_little_bighorn	Hard	Which battle of 1876 is also known as 'Custer's Last Stand'?	Little Bighorn	Wounded Knee	Gettysburg	The Alamo
+his_wild_west_outlaw	Hard	Which Wild West outlaw was shot dead by Sheriff Pat Garrett in 1881?	Billy the Kid	Jesse James	Butch Cassidy	Wyatt Earp
+his_arizona_town_gunfight	Hard	In which Arizona town did the 'Gunfight at the O.K. Corral' take place?	Tombstone	Dodge City	Deadwood	Laredo
+his_american_frontiersman_died	Hard	Which American frontiersman died defending the Alamo in 1836?	Davy Crockett	Daniel Boone	Buffalo Bill	Kit Carson
+his_two_explorers_led	Hard	Which two explorers led the first US expedition overland to the Pacific, in 1804-1806?	Lewis and Clark	Stanley and Livingstone	Burke and Wills	Mason and Dixon
+his_massacre_lakota_people	Hard	Which massacre of Lakota people in 1890 marked the end of the Indian Wars?	Wounded Knee	Sand Creek	Little Bighorn	Fort Pitt
+his_missouri_town_wagon	Hard	From which Missouri town did many wagon trains set off on the Oregon Trail?	Independence	St Louis	Kansas City	Springfield
+hx_wojna_o_swinie	Expert	The 1859 'Pig War' was a border standoff between the USA and which country?	Britain	Russia	Mexico	Spain
+hx_teksas_republika	Expert	Before joining the USA in 1845, Texas was an independent country for about how long?	Nine years	Two months	Forty years	A single day
+hy_kolej_1869	Expert	In which year was America's first transcontinental railroad completed?	1869	1829	1899	1912

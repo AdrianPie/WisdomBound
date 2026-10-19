@@ -1,0 +1,38 @@
+# Dzial przekrojowy: prezydenci USA od Waszyngtona - ciekawostki, przezwiska, zamachy, rekordy.
+# Pytanie o wojne, ktora prezydent prowadzil, zostaje w dziale tej wojny.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+his_kennedy_dallas	Easy	Which US president was assassinated in Dallas in 1963?	John F. Kennedy	Abraham Lincoln	Richard Nixon	William McKinley
+his_waszyngton_dolar	Easy	Whose portrait is on the US one-dollar bill?	George Washington	Abraham Lincoln	Thomas Jefferson	Benjamin Franklin
+his_reagan	Easy	Which US president was once a Hollywood film actor?	Ronald Reagan	John F. Kennedy	Jimmy Carter	Gerald Ford
+hx_obama	Easy	Who was the first African American president of the United States?	Barack Obama	Colin Powell	Jesse Jackson	Martin Luther King Jr.
+hx_rushmore	Easy	How many US presidents are carved into Mount Rushmore?	Four	Three	Five	Six
+his_american_president_nicknamed	Easy	Which American president was nicknamed 'Honest Abe'?	Abraham Lincoln	Andrew Jackson	George Washington	Thomas Jefferson
+his_catholic_president_united	Easy	Who was the first Catholic president of the United States?	John F. Kennedy	Woodrow Wilson	Harry Truman	Herbert Hoover
+his_president_impeached_1998	Easy	Which US president was impeached in 1998 over the Monica Lewinsky affair?	Bill Clinton	George W. Bush	Richard Nixon	Ronald Reagan
+his_years_president_serve	Easy	How many years does a US president serve in one term?	Four	Two	Five	Six
+his_waszyngton	Medium	Who was the first President of the United States?	George Washington	Abraham Lincoln	Thomas Jefferson	John Adams
+his_nixon	Medium	Who is the only US president to have resigned from office?	Richard Nixon	Bill Clinton	Andrew Johnson	Lyndon B. Johnson
+hx_lincoln_teatr	Medium	Where was Abraham Lincoln shot in 1865?	In a theatre	At a railway station	In the White House	Outside a church
+hx_waszyngton_zeby	Medium	What were George Washington's false teeth partly made from?	Human and animal teeth	Carved oak wood	Solid silver plates	Painted porcelain
+hx_watergate	Medium	Which scandal forced Richard Nixon to resign?	Watergate	Iran-Contra	Teapot Dome	Whitewater
+hy_roosevelt_4	Medium	Which US president was elected four times?	Franklin D. Roosevelt	Theodore Roosevelt	Woodrow Wilson	Ronald Reagan
+his_presidents_not_carved	Medium	Which of these presidents is NOT carved into Mount Rushmore?	Franklin D. Roosevelt	Theodore Roosevelt	Thomas Jefferson	Abraham Lincoln
+his_face_appears_five	Medium	Whose face appears on the US five-dollar bill?	Abraham Lincoln	George Washington	Thomas Jefferson	Alexander Hamilton
+his_president_war_1812	Medium	Who was US president during the War of 1812 against Britain?	James Madison	Thomas Jefferson	James Monroe	John Adams
+his_president_appears_bill	Medium	Which president appears on the US $20 bill?	Andrew Jackson	Abraham Lincoln	Thomas Jefferson	Ulysses S. Grant
+his_father_son_both	Medium	Who were the first father and son both to become US president?	John Adams and John Quincy Adams	George Bush and George W. Bush	Andrew and Andrew Jackson Jr.	Theodore and Franklin Roosevelt
+his_president_designed_lived	Medium	Which president designed and lived at the Virginia house called Monticello?	Thomas Jefferson	George Washington	James Madison	James Monroe
+his_heavy_president_rumoured	Medium	Which heavy president was rumoured to have got stuck in the White House bathtub?	William Howard Taft	Grover Cleveland	Chester Arthur	Herbert Hoover
+his_president_stock_market	Medium	Who was US president when the stock market crashed in 1929?	Herbert Hoover	Calvin Coolidge	Franklin D. Roosevelt	Warren Harding
+hw_booth	Hard	Who shot Abraham Lincoln?	John Wilkes Booth	Lee Harvey Oswald	Charles Guiteau	Leon Czolgosz
+hw_oswald	Hard	Who was accused of assassinating President John F. Kennedy?	Lee Harvey Oswald	John Wilkes Booth	Jack Ruby	James Earl Ray
+his_president_live_white	Hard	Who was the first US president to live in the White House?	John Adams	George Washington	Thomas Jefferson	James Madison
+his_presidents_assassinated_while	Hard	How many US presidents have been assassinated while in office?	Four	Two	Three	Six
+his_president_peanut_farmer	Hard	Which US president had been a peanut farmer in Georgia?	Jimmy Carter	Lyndon B. Johnson	Bill Clinton	Gerald Ford
+his_president_impeached	Hard	Who was the first US president to be impeached?	Andrew Johnson	Richard Nixon	Bill Clinton	Andrew Jackson
+his_youngest_person_ever	Hard	Who was the youngest person ever to become US president?	Theodore Roosevelt	John F. Kennedy	Bill Clinton	Barack Obama
+his_president_signed_law	Hard	Which president signed the law creating Yellowstone, the world's first national park, in 1872?	Ulysses S. Grant	Abraham Lincoln	Theodore Roosevelt	Rutherford Hayes
+his_president_never_married	Hard	Which US president never married?	James Buchanan	James Monroe	Andrew Jackson	John Tyler
+hy_waszyngton_whisky	Expert	After leaving office, George Washington ran one of America's largest what?	Whiskey distilleries	Horse racing stables	Newspaper presses	Cotton factories
+his_president_died_just	Expert	Which US president died just a month after taking office, in 1841?	William Henry Harrison	James Garfield	Zachary Taylor	Warren Harding
+his_donald_trump_president	Expert	Before Donald Trump, who was the only US president to serve two non-consecutive terms?	Grover Cleveland	Theodore Roosevelt	Andrew Jackson	Woodrow Wilson

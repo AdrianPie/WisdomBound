@@ -1,0 +1,34 @@
+# Od upadku Rzymu do roku 1000: Frankowie i Karol Wielki, Anglosasi, papiestwo, klasztory,
+# misjonarze. Wikingowie i Bizancjum maja osobne dzialy.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+his_gloomy_long_given	Easy	Which gloomy name was long given to the centuries after the fall of Rome?	The Dark Ages	The Iron Age	The Silent Age	The Grey Ages
+his_people_charlemagne_king	Easy	Which people was Charlemagne the king of?	The Franks	The Goths	The Saxons	The Vandals
+his_king_wessex_fought	Easy	Which king of Wessex, who fought off the Vikings, is known as 'the Great'?	Alfred	Athelstan	Edgar	Harold
+hx_frankowie	Medium	Which Germanic people gave their name to France?	The Franks	The Gauls	The Goths	The Normans
+his_city_favourite_seat	Medium	Which city was the favourite seat of Charlemagne, where he is buried?	Aachen	Paris	Rome	Cologne
+his_england_germanic_people	Medium	England is named after which Germanic people who settled there after the Romans left?	The Angles	The Saxons	The Jutes	The Franks
+his_empire_voltaire_mock	Medium	Which empire did Voltaire mock as 'neither holy, nor Roman, nor an empire'?	The Holy Roman Empire	The Byzantine Empire	The Ottoman Empire	The Russian Empire
+his_illuminated_gospel_book	Medium	Which famous illuminated Gospel book is kept at Trinity College Dublin?	The Book of Kells	The Lindisfarne Gospels	The Domesday Book	The Book of Durrow
+his_language_educated_people	Medium	Which language did educated people across western Europe write in during the Middle Ages?	Latin	Greek	French	Gothic
+his_dynasty_charlemagne	Medium	What is the dynasty of Charlemagne called?	The Carolingians	The Merovingians	The Capetians	The Habsburgs
+his_karol_wielki	Hard	Who was crowned Emperor of the Romans by the Pope on Christmas Day in 800?	Charlemagne	Otto I	Clovis	Constantine
+his_frankish_king_baptised	Hard	Which Frankish king was baptised around 496 and united most of the Franks?	Clovis I	Pepin the Short	Charles Martel	Dagobert I
+his_dynasty_founded_clovis	Hard	Which dynasty, founded by Clovis, ruled the Franks before Charlemagne's family?	The Merovingians	The Carolingians	The Capetians	The Ottonians
+his_treaty_843_split	Hard	Which treaty of 843 split Charlemagne's empire between his three grandsons?	The Treaty of Verdun	The Treaty of Aachen	The Treaty of Paris	The Treaty of Worms
+his_german_king_crowned	Hard	Which German king was crowned emperor in 962, starting the Holy Roman Empire's long line?	Otto I	Henry the Fowler	Conrad II	Frederick Barbarossa
+his_monk_jarrow_wrote	Hard	Which monk of Jarrow wrote the 'Ecclesiastical History of the English People' in 731?	Bede	Alcuin	Gildas	Columba
+his_hilltop_monastery_italy	Hard	Which hilltop monastery in Italy did Saint Benedict found around 529?	Monte Cassino	Cluny	Assisi	Montserrat
+his_pope_sent_missionaries	Hard	Which pope sent missionaries led by Augustine to convert the Anglo-Saxons in 597?	Gregory the Great	Leo the Great	Urban II	Innocent III
+his_raiders_hungarian_plain	Hard	Which raiders from the Hungarian plain were finally beaten at Lechfeld in 955?	The Magyars	The Avars	The Huns	The Bulgars
+his_anglo_saxon_ship	Hard	Which Anglo-Saxon ship burial in Suffolk held a famous iron helmet?	Sutton Hoo	Lindisfarne	Jarrow	Whitby
+his_charlemagne_father_carolingian	Hard	Who was Charlemagne's father, the first Carolingian king of the Franks?	Pepin the Short	Charles Martel	Clovis I	Louis the Pious
+his_kingdom_spain_fell	Hard	Whose kingdom in Spain fell to the Arab and Berber invasion of 711?	The Visigoths'	The Ostrogoths'	The Vandals'	The Franks'
+his_king_mercia_built	Hard	Which king of Mercia built a great earth bank along the Welsh border?	Offa	Alfred	Penda	Athelstan
+his_island_off_scotland	Hard	Which island off Scotland, where Saint Columba founded a monastery, was a centre of Celtic Christianity?	Iona	Skye	Lindisfarne	Orkney
+his_title_charles_martel	Hard	Which title did Charles Martel hold before his family took the Frankish crown?	Mayor of the Palace	Count of Paris	Duke of Burgundy	Archbishop of Reims
+hx_karol_mlot	Expert	Which Frankish leader stopped the Umayyad advance into Europe at the Battle of Tours in 732?	Charles Martel	Charlemagne	Clovis	Pepin the Short
+his_scholar_york_ran	Expert	Which scholar from York ran Charlemagne's palace school?	Alcuin	Bede	Einhard	Boethius
+his_monk_worked_out	Expert	Which monk worked out the 'AD' system of counting years, in 525?	Dionysius Exiguus	Bede	Gregory of Tours	Isidore of Seville
+his_wergild_early_germanic	Expert	What was 'wergild' in early Germanic law?	A payment for killing someone	A tax on land	A chief's war band	A trial by combat
+his_document_later_proved	Expert	Which document, later proved a forgery, claimed Constantine had handed the West to the pope?	The Donation of Constantine	The Edict of Milan	The Golden Bull	The Pragmatic Sanction
+his_elephant_caliph_harun	Expert	What was the elephant that the caliph Harun al-Rashid sent to Charlemagne called?	Abul-Abbas	Hanno	Jumbo	Suleiman

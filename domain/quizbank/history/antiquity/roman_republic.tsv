@@ -1,0 +1,46 @@
+# Rzym od zalozenia (krolowie i Etruskowie) do bitwy pod Akcjum: wojny punickie, Spartakus, Cezar,
+# Cyceron, Galia.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+wh_cezar_zabojstwo	Easy	Who was murdered in the Roman senate on the Ides of March, 44 BC?	Julius Caesar	Augustus	Nero	Mark Antony
+his_according_legend_twin	Easy	According to legend, which twin brothers founded Rome?	Romulus and Remus	Castor and Pollux	Cain and Abel	Jacob and Esau
+his_julius_caesar_famously	Easy	What did Julius Caesar famously say as he led his army into Italy in 49 BC?	'The die is cast'	'I came, I saw, I conquered'	'Rome was not built in a day'	'Beware the Ides of March'
+wh_kartagina_wodz	Medium	Which Carthaginian general led elephants across the Alps?	Hannibal	Hasdrubal	Scipio	Vercingetorix
+wh_wojny_punickie	Medium	Between which powers were the Punic Wars fought?	Rome and Carthage	Rome and Greece	Greece and Persia	Rome and Egypt
+his_rubikon	Medium	Who led his army across the river Rubicon in 49 BC, starting a civil war?	Julius Caesar	Mark Antony	Pompey	Augustus
+hx_spartakus	Medium	Which gladiator led a huge slave revolt against Rome in 73 BC?	Spartacus	Commodus	Crixus	Maximus
+hx_lipiec_cezar	Medium	Which month is named after Julius Caesar?	July	June	March	August
+hx_galia	Medium	What did the Romans call the land that is mostly France today?	Gaul	Hispania	Germania	Britannia
+hy_spqr	Medium	What do the letters SPQR on Roman standards stand for?	The Senate and People of Rome	Strength, Power, Quality, Rule	Soldiers Protect Queen Rome	The Sacred Palace of Rome
+his_roman_general_dictator	Medium	Which Roman general and dictator was the adoptive father of Augustus?	Julius Caesar	Pompey	Mark Antony	Sulla
+his_roman_orator_attacked	Medium	Which Roman orator attacked Catiline and Mark Antony in famous speeches?	Cicero	Cato	Seneca	Pliny
+his_two_top_officials	Medium	What were the two top officials of the Roman Republic, elected every year, called?	Consuls	Tribunes	Praetors	Censors
+his_three_words_caesar	Medium	Which three words did Caesar use to report a quick victory in 47 BC?	'Veni, vidi, vici'	'Alea iacta est'	'Carpe diem'	'Et tu, Brute'
+his_general_formed_triumvirate	Medium	Which general formed the First Triumvirate with Julius Caesar and Crassus?	Pompey	Mark Antony	Cicero	Lepidus
+his_rome_carthage_end	Medium	What did Rome do to Carthage at the end of the Third Punic War in 146 BC?	It razed the city	It made it an ally	It sold it to Egypt	It made it the capital
+his_famously_rich_roman	Medium	Which famously rich Roman died after his army was crushed at Carrhae in 53 BC?	Crassus	Pompey	Cicero	Lucullus
+his_calendar_julius_caesar	Medium	Which calendar did Julius Caesar bring in, starting in 45 BC?	The Julian calendar	The Gregorian calendar	The Augustan calendar	The lunar calendar
+his_main_duty_rome	Medium	What was the main duty of Rome's Vestal Virgins?	Keeping the sacred fire burning	Weaving the Senate's robes	Training young gladiators	Guarding the city gates
+his_pyrrhic_victory_won	Medium	A 'Pyrrhic victory', won at too great a cost, is named after which king who fought Rome?	Pyrrhus of Epirus	Philip V of Macedon	Antiochus III	Mithridates VI
+hy_akcjum	Hard	At which sea battle in 31 BC did Octavian defeat Mark Antony's fleet?	Actium	Pharsalus	Philippi	Alesia
+hy_rzym_753	Hard	According to tradition, in which year was Rome founded?	753 BC	1066 BC	509 BC	300 BC
+his_road_ancient_rome	Hard	What was the most famous road of ancient Rome, running south from the city?	The Appian Way	The Silk Road	The Royal Road	The Amber Road
+his_roman_wrote_own	Hard	Which Roman wrote his own account of conquering Gaul?	Julius Caesar	Augustus	Cicero	Pompey
+his_formed_second_triumvirate	Hard	Who formed the Second Triumvirate after Caesar's murder?	Octavian, Antony and Lepidus	Caesar, Pompey and Crassus	Brutus, Cassius and Cicero	Sulla, Marius and Cato
+his_battle_216_hannibal	Hard	At which battle of 216 BC did Hannibal surround and destroy a huge Roman army?	Cannae	Zama	Trasimene	Trebia
+his_roman_senator_ended	Hard	Which Roman senator ended his speeches with 'Carthage must be destroyed'?	Cato the Elder	Cicero	Scipio Africanus	Seneca
+his_two_brothers_tried	Hard	Which two brothers tried to give land to poor Romans and were both killed for it?	The Gracchi	Romulus and Remus	The Scipios	Castor and Pollux
+his_roman_general_marched	Hard	Which Roman general marched his army on Rome in 88 BC and later posted death lists of his enemies?	Sulla	Marius	Pompey	Crassus
+his_romans_call_mediterranean	Hard	What did the Romans call the Mediterranean, meaning 'our sea'?	Mare Nostrum	Mare Magnum	Mare Internum	Mare Romanum
+his_legendary_roman_held	Hard	Which legendary Roman held a bridge over the Tiber against an Etruscan army?	Horatius	Cincinnatus	Coriolanus	Camillus
+his_roman_farmer_made	Hard	Which Roman farmer was made dictator, saved Rome, and went back to his plough within weeks?	Cincinnatus	Camillus	Coriolanus	Horatius
+his_last_king_rome	Hard	Who was the last king of Rome, driven out in 509 BC?	Tarquin the Proud	Numa Pompilius	Servius Tullius	Ancus Marcius
+his_word_veto_latin	Hard	The word 'veto', Latin for 'I forbid', comes from the power of which Roman officials?	The tribunes of the plebs	The consuls	The censors	The Vestal Virgins
+his_island_rome_win	Hard	Which island did Rome win from Carthage in the First Punic War?	Sicily	Sardinia	Corsica	Crete
+his_king_pontus_fought	Hard	Which king of Pontus fought Rome in three wars and was said to have made himself immune to poison?	Mithridates VI	Pyrrhus	Jugurtha	Tigranes
+org_kartagina_nazwa	Expert	The name Carthage meant what in Phoenician?	New city	Great harbour	Sea gate	Red hill
+hx_etruskowie	Expert	Which people ruled much of Italy, including early Rome, before the Romans rose to power?	The Etruscans	The Samnites	The Gauls	The Carthaginians
+hx_cezar_piraci	Expert	As a young man, Julius Caesar was kidnapped and held for ransom by whom?	Pirates	Gauls	Egyptian priests	Carthaginians
+hy_alezja	Expert	At which siege of 52 BC did Caesar defeat the Gaulish chief Vercingetorix?	Alesia	Gergovia	Carthage	Numantia
+hy_scypion	Expert	Which Roman general won the Battle of Zama in 202 BC?	Scipio Africanus	Julius Caesar	Pompey	Fabius Maximus
+hw_gesi_rzym	Expert	According to legend, which animals saved Rome from a night attack by the Gauls in 390 BC?	Geese	Dogs	Horses	Owls
+his_general_opened_roman	Expert	Which general opened the Roman army to poor volunteers around 107 BC?	Gaius Marius	Sulla	Scipio Africanus	Cato the Elder

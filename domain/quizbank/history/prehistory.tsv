@@ -1,0 +1,43 @@
+# Od pierwszych ludzi do wynalezienia pisma: epoka kamienia, brazu, malowidla jaskiniowe, Stonehenge.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+trv_dinozaury_ludzie	Easy	Did humans and dinosaurs ever live at the same time?	No, dinosaurs died out some 65 million years earlier	Yes, but only for a very brief period at the end	Yes, for several thousand years	Only on the continent of Australia
+his_age_came_between	Easy	Which age came between the Stone Age and the Iron Age?	The Bronze Age	The Golden Age	The Silver Age	The Steel Age
+his_call_long_period	Easy	What do we call the long period before people invented writing?	Prehistory	Antiquity	The Dark Ages	The Middle Ages
+his_paleolithic_people_made	Easy	Paleolithic people made most of their cutting tools by chipping which stone?	Flint	Marble	Granite	Limestone
+his_hairy_relatives_elephants	Easy	Which hairy relatives of elephants did Ice Age hunters chase across Europe?	Woolly mammoths	Woolly rhinos	Sabre-toothed cats	Giant sloths
+his_human_species_lived	Easy	Which human species lived in Europe before us and died out about 40,000 years ago?	The Neanderthals	Homo habilis	Australopithecus	The Cro-Magnons
+his_continent_modern_humans	Easy	On which continent did modern humans first evolve?	Africa	Asia	Europe	Australia
+his_call_people_lived	Easy	What do we call people who lived by hunting animals and collecting wild plants?	Hunter-gatherers	Herdsmen	Settlers	Craftsmen
+his_animals_ice_age	Easy	Which animals did Ice Age artists paint most often on cave walls?	Bison, horses and deer	Cats, dogs and birds	Fish and whales	Snakes and lizards
+hx_stonehenge_wiek	Medium	Roughly how old is Stonehenge?	About 5,000 years	About 1,000 years	About 2,000 years	About 20,000 years
+his_lucy_found_ethiopia	Medium	What is 'Lucy', found in Ethiopia in 1974?	The skeleton of an early human ancestor	A buried royal treasure	A lost city of the Queen of Sheba	The oldest known written text
+his_great_change_neolithic	Medium	What was the great change of the 'Neolithic Revolution'?	People began farming	People first used fire	People learned to write	People first made tools
+his_roughly_farming_begin	Medium	Roughly when did farming begin in the Middle East's 'Fertile Crescent'?	About 12,000 years ago	About 3,000 years ago	About 50,000 years ago	About 200,000 years ago
+his_english_monument_built	Medium	Which English monument was built from giant stones called sarsens and bluestones?	Stonehenge	Avebury	Hadrian's Wall	Silbury Hill
+his_caves_northern_spain	Medium	Which caves in northern Spain are famous for Ice Age paintings of bison on the ceiling?	Altamira	Lascaux	Chauvet	Cheddar Gorge
+his_menhir	Medium	What is a 'menhir'?	A single tall standing stone	A stone burial chamber	A circular ditch and bank	A wooden longhouse
+his_stone_age_venus	Medium	What were the Stone Age 'Venus figurines'?	Small carved statues of women	Bronze coins with a goddess	Clay lamps for temples	Painted shells used as money
+his_metal_people_learn	Medium	Which metal did people first learn to work, giving its name to the 'Age' before bronze?	Copper	Iron	Tin	Silver
+his_word_paleolithic_mean	Medium	What does the word 'Paleolithic' mean?	Old Stone Age	New Stone Age	Middle Stone Age	Age of Copper
+his_early_human_ancestor	Medium	Which early human ancestor's Latin name means 'handy man', for its stone tools?	Homo habilis	Homo erectus	Homo sapiens	Homo ergaster
+his_village_carnac_brittany	Medium	The village of Carnac in Brittany is famous for what?	Thousands of standing stones in rows	The oldest cave paintings	A buried Stone Age village	A giant chalk horse
+his_iron_age_britons	Medium	What did Iron Age Britons build on hilltops, protected by ditches and earth banks?	Hill forts	Stone castles	Ziggurats	Watchtowers
+his_prehistoric_artists_mostly	Medium	What did prehistoric artists mostly use to paint cave walls?	Charcoal and red ochre	Squid ink and chalk	Crushed rubies and oil	Beetroot juice and milk
+his_bluestones_stonehenge_dragged	Hard	The bluestones of Stonehenge were dragged there from hills over 200 km away in which country?	Wales	Scotland	Ireland	France
+his_land_bridge_let	Hard	Which land bridge let Ice Age people walk from Asia into the Americas?	Beringia	Doggerland	Sundaland	Gondwana
+his_neolithic_village_scotland	Hard	Which Neolithic village in Scotland's Orkney Islands was uncovered by a storm in 1850?	Skara Brae	Newgrange	Catalhoyuk	Jarlshof
+his_stone_age_town	Hard	Which Stone Age town in Turkey, about 9,000 years old, had houses entered through holes in the roof?	Catalhoyuk	Gobekli Tepe	Jericho	Troy
+his_town_west_bank	Hard	Which town in the West Bank had a stone tower and walls built over 10,000 years ago?	Jericho	Damascus	Byblos	Hebron
+his_french_cave_found	Hard	Which French cave, found in 1994, holds some of the oldest known cave paintings, over 30,000 years old?	Chauvet Cave	Lascaux	Altamira	Font-de-Gaume
+his_country_venus_willendorf	Hard	In which country was the famous Venus of Willendorf figurine found?	Austria	Germany	France	Czechia
+his_scientists_discover_2001	Hard	What did scientists discover in 2001 had killed Otzi the Iceman?	An arrow in his shoulder	Freezing in a storm	A fall into a crevasse	Starvation on the mountain
+his_small_early_human	Hard	Which small early human, found on the Indonesian island of Flores, is nicknamed 'the Hobbit'?	Homo floresiensis	Homo naledi	Homo erectus	Homo habilis
+his_family_fossil_hunters	Hard	Which family of fossil hunters made famous finds at Olduvai Gorge in Tanzania?	The Leakeys	The Carters	The Wheelers	The Darwins
+his_neolithic_tomb_ireland	Hard	Which Neolithic tomb in Ireland is lit inside by the rising sun on the winter solstice?	Newgrange	Skara Brae	Maeshowe	Avebury
+cur_mamuty_piramidy	Expert	Were woolly mammoths still alive when the Great Pyramid of Giza was built?	Yes, on a remote Arctic island	No, they died out 50,000 years earlier	No, they died out with the dinosaurs	Only in zoos of the pharaohs
+hx_lascaux	Expert	The Lascaux caves in France are famous for what?	Prehistoric animal paintings	Ancient Roman baths	Viking treasure	Dinosaur footprints
+hx_gobekli	Expert	Which site in Turkey, over 11,000 years old, is among the oldest known temples?	Gobekli Tepe	Catalhoyuk	Troy	Ephesus
+hx_otzi	Expert	What is Otzi, found in the Alps in 1991?	A 5,300-year-old frozen man	A Roman gold hoard	A mammoth skeleton	A Viking ship burial
+his_lost_land_once	Expert	What is the name of the lost land that once joined Britain to Europe, now under the North Sea?	Doggerland	Beringia	Lyonesse	Atlantis
+his_stone_circle_wiltshire	Expert	Which stone circle in Wiltshire, far bigger than Stonehenge, has a village built inside it?	Avebury	Callanish	Castlerigg	Carnac
+his_figure_cut_chalk	Expert	Which figure cut into a chalk hillside in England is about 3,000 years old?	The Uffington White Horse	The Cerne Abbas Giant	The Long Man of Wilmington	The Westbury White Horse

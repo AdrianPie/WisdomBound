@@ -1,0 +1,36 @@
+# Codziennosc sredniowiecza: miasta, cechy, kosciol, uniwersytety, jedzenie, medycyna i Czarna Smierc.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+wh_czarna_smierc	Easy	What is the plague epidemic called that killed about a third of Europeans in the 14th century?	The Black Death	The Spanish Flu	Asiatic Cholera	The English Sweat
+hy_wieza_piza	Easy	Why does the Leaning Tower of Pisa lean?	Its foundations sank into soft ground	It was built to lean on purpose	An earthquake tipped it over	A cannonball hit it in a war
+his_black_death_mainly	Easy	How did the Black Death mainly spread?	Through fleas carried by rats	Through contaminated water	Through spoiled grain	Through mosquito bites
+his_roughly_period_european	Easy	Roughly which period of European history ran from about 500 to 1500?	The Middle Ages	The Renaissance	Antiquity	The Enlightenment
+his_people_medieval_europe	Easy	How did most people in medieval Europe earn their living?	By farming	By trading	By fighting	By weaving
+his_mead_favourite_medieval	Easy	What was mead, a favourite medieval drink, made from?	Honey	Apples	Barley	Grapes
+his_balwierz	Medium	Besides cutting hair, what else did many medieval barbers do?	Surgery and pulling teeth	Collecting taxes	Brewing beer	Baking bread
+his_associations_medieval_craftsmen	Medium	What were the associations of medieval craftsmen and merchants in a town called?	Guilds	Unions	Councils	Leagues
+his_three_ranks_medieval	Medium	What were the three ranks of a medieval craftsman, from lowest to highest?	Apprentice, journeyman, master	Page, squire, knight	Serf, freeman, lord	Novice, monk, abbot
+his_oldest_university_english	Medium	Which is the oldest university in the English-speaking world?	Oxford	Cambridge	St Andrews	Harvard
+his_medieval_people_often	Medium	What did medieval people often drink instead of water, which could be unsafe?	Weak ale	Fruit juice	Fresh milk	Green tea
+his_wooden_frame_locked	Medium	Which wooden frame locked an offender's head and hands for the public to mock?	The pillory	The rack	The gallows	The ducking stool
+his_tithe_medieval_people	Medium	What was the 'tithe' that medieval people paid to the Church?	A tenth of what they produced	A coin for every child	A goose at Christmas	One day's work a year
+his_medieval_troubadour	Medium	What was a medieval troubadour?	A travelling poet and singer	A royal tax collector	A wandering knight	A seller of relics
+his_medieval_doctors_believed	Medium	Medieval doctors believed health depended on balancing four what?	Humours	Elements	Spirits	Organs
+his_common_treatment_let	Medium	Which common treatment let 'bad blood' out of a sick person, sometimes using leeches?	Bloodletting	Cupping	Trepanning	Purging
+his_black_death_flagellants	Medium	During the Black Death, what did the 'flagellants' do?	Whipped themselves in public	Burned the bodies of victims	Sold charms against plague	Hid in sealed cellars
+his_word_quarantine_comes	Medium	The word 'quarantine' comes from the Italian for how many days ships had to wait offshore?	Forty	Ten	Seven	Thirty
+his_style_building_pointed	Medium	Which style of building with pointed arches and flying buttresses spread from France in the 1100s?	Gothic	Romanesque	Baroque	Byzantine
+his_medieval_villagers_know	Medium	How did most medieval villagers know the time of day?	By the church bells	By pocket watches	By town criers	By sundials at home
+his_food_medieval_christians	Medium	What food were medieval Christians supposed to give up during Lent?	Meat	Bread	Salt	Fruit
+trv_pierwsza_uni	Hard	Which is the oldest continuously operating university in the world?	The University of Bologna	The University of Oxford	The Sorbonne	Harvard University
+hx_hanza	Hard	What was the medieval Hanseatic League an alliance of?	Trading towns	Knightly orders	Pirate crews	Monasteries
+hy_czarna_smierc_krym	Hard	The Black Death reached Europe in 1347 on ships coming from which sea?	The Black Sea	The North Sea	The Red Sea	The Baltic Sea
+hy_widelec	Hard	Which eating tool was once mocked in Europe as a sinful luxury, before spreading from Italy?	The fork	The spoon	The knife	Chopsticks
+his_plague_doctors_wear	Hard	Why did plague doctors wear masks with long beaks?	To hold herbs against 'bad air'	To scare away evil spirits	To hide their identity	To keep their faces warm
+his_spice_valuable_medieval	Hard	Which spice was so valuable in medieval Europe that it was used to pay rent and taxes?	Pepper	Salt	Cinnamon	Saffron
+his_medieval_trial_ordeal	Hard	In a medieval trial by ordeal, how might guilt be decided?	By whether a burn healed cleanly	By a vote of the villagers	By the toss of a coin	By the length of a candle
+his_medieval_mystery_plays	Hard	What were medieval 'mystery plays'?	Bible stories acted by town guilds	Detective stories in verse	Secret rituals of knights	Puppet shows for children
+his_plaga_tanca	Expert	What happened in Strasbourg during the 'Dancing Plague' of 1518?	People danced uncontrollably for days	A disease spread at dances	All dancing was banned	A dance was used to ward off plague
+hx_wojna_o_wiadro	Expert	The 'War of the Bucket' in 1325 was fought between which two Italian cities?	Modena and Bologna	Florence and Pisa	Venice and Genoa	Rome and Naples
+hx_awinion	Expert	In the 1300s, the popes lived for about 70 years in which French city?	Avignon	Lyon	Paris	Reims
+his_cordwainer_make_medieval	Expert	What did a 'cordwainer' make in a medieval town?	Shoes	Ropes	Barrels	Candles
+his_medieval_french_game	Expert	Which medieval French game, first played with the bare hand, grew into tennis?	Jeu de paume	Pelota	Soule	Paille-maille

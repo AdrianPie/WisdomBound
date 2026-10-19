@@ -1,0 +1,33 @@
+# Wyprawy krzyzowe 1095-1291, zakony rycerskie, Saladyn, krolestwa krzyzowcow.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+his_city_main_goal	Easy	Which city was the main goal of the First Crusade?	Jerusalem	Constantinople	Rome	Mecca
+his_symbol_crusaders_sew	Easy	Which symbol did crusaders sew onto their clothes?	A cross	A crescent	A lion	An eagle
+his_krucjaty	Medium	What were the medieval Crusades mainly fought over?	Control of the Holy Land	Spices from India	Gold mines in Africa	The throne of France
+hx_ryszard_lwie	Medium	Which English king was nicknamed 'the Lionheart'?	Richard I	Henry V	Edward I	John
+his_year_crusade_capture	Medium	In which year did the First Crusade capture Jerusalem?	1099	1066	1187	1204
+his_military_order_founded	Medium	Which military order, founded to care for sick pilgrims, later ruled Rhodes and then Malta?	The Knights Hospitaller	The Knights Templar	The Teutonic Knights	The Knights of Santiago
+his_german_military_order	Medium	Which German military order later conquered lands along the Baltic Sea?	The Teutonic Knights	The Knights Hospitaller	The Knights Templar	The Order of the Garter
+his_children_crusade_1212	Medium	What was the 'Children's Crusade' of 1212?	A doomed march of young pilgrims	A crusade led by a boy king	A war fought by teenage knights	A pilgrimage of Roman schoolboys
+his_unlucky_sounding_date	Medium	On which unlucky-sounding date did Philip IV of France have a whole military order arrested in 1307?	Friday the 13th	Halloween night	The Ides of March	The first of April
+his_crusade_led_richard	Medium	Which crusade was led by Richard the Lionheart, Philip II of France and Frederick Barbarossa?	The Third Crusade	The First Crusade	The Fifth Crusade	The Seventh Crusade
+his_long_christian_campaign	Medium	What was the long Christian campaign to retake Spain and Portugal from the Moors called?	The Reconquista	The Inquisition	The Crusade of Iberia	The Conquista
+his_templariusze	Hard	Which order of knights, who wore red crosses, had its members arrested across France in 1307?	The Knights Templar	The Teutonic Knights	The Knights Hospitaller	The Order of the Garter
+hx_saladyn	Hard	Which Muslim sultan retook Jerusalem from the Crusaders in 1187?	Saladin	Baibars	Mehmed II	Harun al-Rashid
+hx_urban_ii	Hard	Which pope launched the First Crusade in 1095?	Urban II	Gregory VII	Innocent III	Leo IX
+his_french_king_later	Hard	Which French king, later made a saint, died near Tunis on crusade in 1270?	Louis IX	Philip II	Louis VII	Philip IV
+his_crusader_castle_syria	Hard	Which crusader castle in Syria is one of the best preserved in the world?	Krak des Chevaliers	Kerak	Montfort	Belvoir
+his_german_emperor_drowned	Hard	Which German emperor drowned in a river in Turkey on the Third Crusade?	Frederick Barbarossa	Frederick II	Henry VI	Otto IV
+his_battle_1187_destroyed	Hard	Which battle of 1187 destroyed the crusader army and opened Jerusalem to Saladin?	Hattin	Acre	Arsuf	Montgisard
+his_port_last_big	Hard	Which port was the last big crusader city in the Holy Land, falling in 1291?	Acre	Tyre	Jaffa	Antioch
+his_knights_templar_get	Hard	Where did the Knights Templar get their name?	Their base on Jerusalem's Temple Mount	A temple they built in Paris	Their founder, Hugh Temple	The Temple church in London
+his_preacher_led_poorly	Hard	Which preacher led the poorly armed 'People's Crusade' of 1096?	Peter the Hermit	Bernard of Clairvaux	Francis of Assisi	Godfrey of Bouillon
+his_crusade_against_cathar	Hard	What was the crusade against the Cathar heretics of southern France called?	The Albigensian Crusade	The Wendish Crusade	The Northern Crusade	The Shepherds' Crusade
+his_real_cid_castilian	Hard	What was the real name of El Cid, the Castilian knight who took Valencia in 1094?	Rodrigo Diaz de Vivar	Alfonso VI of Leon	Fernan Gonzalez	Gonzalo de Cordoba
+his_medieval_sect_feared	Hard	Which medieval sect, feared for killing leaders, gave English the word 'assassin'?	The Hashashin	The Thuggees	The Zealots	The Templars
+his_great_city_crusade	Hard	Which great city did the First Crusade capture in 1098 after a long siege, on its way to Jerusalem?	Antioch	Damascus	Aleppo	Edessa
+his_crusade_leader_became	Hard	Which crusade leader became the first ruler of Jerusalem but refused to be called king?	Godfrey of Bouillon	Baldwin I	Bohemond of Taranto	Raymond of Toulouse
+hy_czwarta_krucjata	Expert	Which Christian city was sacked by the Fourth Crusade in 1204?	Constantinople	Jerusalem	Antioch	Rome
+his_given_crusader_states	Expert	What was the name given to the crusader states in the Levant, meaning 'overseas'?	Outremer	Levant	Oltremare	Terra Santa
+his_pope_dissolved_crusading	Expert	Which pope dissolved a famous crusading order under pressure from Philip IV in 1312?	Clement V	Boniface VIII	Urban II	Innocent III
+his_excommunicated_emperor_won	Expert	Which excommunicated emperor won Jerusalem back by treaty, without a battle, in 1229?	Frederick II	Frederick Barbarossa	Henry VI	Conrad III
+his_byzantine_emperor_appeal	Expert	Which Byzantine emperor's appeal for help led the pope to launch the First Crusade?	Alexios I Komnenos	Basil II	Manuel I	Constantine XI

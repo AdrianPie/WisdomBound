@@ -1,0 +1,32 @@
+# Od Mahometa przez kalifaty, Bagdad i Kordobe po Safawidow. Osmanowie i Mogolowie maja osobne dzialy.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+his_holy_book_islam	Easy	What is the holy book of Islam called?	The Quran	The Torah	The Vedas	The Avesta
+his_muslim_pilgrimage_mecca	Easy	What is the Muslim pilgrimage to Mecca called?	The Hajj	The Hijra	Ramadan	The Umrah
+his_towers_mosque_call	Easy	What are the towers of a mosque, from which the call to prayer is made, called?	Minarets	Domes	Spires	Pagodas
+hy_mekka	Medium	In which city was the Prophet Muhammad born?	Mecca	Medina	Jerusalem	Baghdad
+his_cube_shaped_shrine	Medium	What is the cube-shaped shrine at the centre of the Great Mosque of Mecca called?	The Kaaba	The Dome of the Rock	The Minbar	The Mihrab
+his_golden_domed_shrine	Medium	Which golden-domed shrine, built in 691, stands on Jerusalem's Temple Mount?	The Dome of the Rock	Hagia Sophia	The Blue Mosque	The Kaaba
+his_palace_fortress_granada	Medium	Which palace-fortress in Granada was built by Spain's last Muslim dynasty?	The Alhambra	The Alcazar	The Mezquita	El Escorial
+his_christian_europeans_call	Medium	What did Christian Europeans call the Muslims of medieval Spain and North Africa?	The Moors	The Saracens	The Berbers	The Turks
+his_title_leaders_succeeded	Medium	What was the title of the leaders who succeeded Muhammad at the head of the Muslim community?	Caliph	Sultan	Shah	Emir
+his_two_main_branches	Medium	Into which two main branches did Islam split over who should succeed Muhammad?	Sunni and Shia	Sufi and Salafi	Ismaili and Druze	Hanafi and Maliki
+his_country_coffee_drinking	Medium	From which country did coffee drinking spread across the Islamic world in the 1400s?	Yemen	Egypt	Persia	Morocco
+his_city_capital_umayyad	Medium	Which city was the capital of the Umayyad Caliphate?	Damascus	Baghdad	Cairo	Medina
+his4_kalifat_abbasydzki_stolica	Hard	Which city was the Abbasid Caliphate's capital?	Baghdad	Damascus	Cairo	Cordoba
+hx_ibn_battuta	Hard	Which Moroccan traveller journeyed some 120,000 km across the medieval Islamic world?	Ibn Battuta	Ibn Khaldun	Al-Idrisi	Ibn Sina
+hx_granada_1492	Hard	Besides Columbus's voyage, what else happened in Spain in 1492?	Granada, the last Moorish state, fell	The Armada was destroyed	The Inquisition was abolished	Madrid became the capital
+hw_kordoba	Hard	Which Spanish city was the glittering capital of Muslim al-Andalus in the 900s?	Cordoba	Granada	Seville	Toledo
+his_dynasty_ruling_damascus	Hard	Which dynasty, ruling from Damascus, was the first to pass the caliphate from father to son?	The Umayyads	The Abbasids	The Fatimids	The Ottomans
+his_persian_scholar_canon	Hard	Which Persian scholar's 'Canon of Medicine' was used in European universities for centuries?	Avicenna	Averroes	Al-Khwarizmi	Ibn Battuta
+his_year_muslim_conquest	Hard	In which year did the Muslim conquest of Spain begin?	711	632	846	1031
+his_gibraltar_comes_muslim	Hard	The name 'Gibraltar' comes from which Muslim commander who landed there in 711?	Tariq ibn Ziyad	Musa ibn Nusayr	Abd al-Rahman	Saladin
+his_caliph_death_muhammad	Hard	Who was the first caliph after the death of Muhammad?	Abu Bakr	Ali	Umar	Uthman
+his_caliph_baghdad_appears	Hard	Which caliph of Baghdad appears in many tales of the 'Thousand and One Nights'?	Harun al-Rashid	Al-Mansur	Al-Mamun	Saladin
+his_dynasty_founded_city	Hard	Which dynasty founded the city of Cairo in 969?	The Fatimids	The Abbasids	The Mamluks	The Umayyads
+his_slave_soldiers_seized	Hard	Which slave-soldiers seized power in Egypt in 1250 and later stopped the Mongols?	The Mamluks	The Janissaries	The Ghulams	The Varangians
+hy_hidzra	Expert	The Islamic calendar counts from Muhammad's move in 622 to which city?	Medina	Mecca	Damascus	Jerusalem
+hw_dom_madrosci	Expert	In which city stood the 'House of Wisdom', a great centre of learning in the 800s?	Baghdad	Cairo	Cordoba	Damascus
+his_empire_ruled_shahs	Expert	Which empire was ruled by shahs from the city of Isfahan in the 1600s?	The Safavid Empire	The Mughal Empire	The Ottoman Empire	The Seljuk Empire
+his_arab_scholar_around	Expert	Which Arab scholar of around 1000 is called 'the father of optics'?	Ibn al-Haytham	Al-Biruni	Al-Kindi	Avicenna
+his_battle_751_against	Expert	Which battle of 751 against Tang China is said to have brought papermaking to the Islamic world?	Talas	Badr	Yarmouk	Qadisiyyah
+his_philosopher_cordoba_europe	Expert	Which philosopher of Cordoba was famous in Europe for his commentaries on Aristotle?	Averroes	Avicenna	Maimonides	Al-Farabi

@@ -1,0 +1,35 @@
+# Europa po Napoleonie: Wiosna Ludow, zjednoczenie Wloch i Niemiec, wojna krymska, Habsburgowie
+# i Romanowowie.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+his_italian_city_birthplace	Easy	Which Italian city is the birthplace of pizza?	Naples	Rome	Milan	Venice
+his_humanitarian_movement_uses	Easy	Which humanitarian movement uses a red crescent in many Muslim countries?	The Red Cross	Doctors Without Borders	UNICEF	Oxfam
+his4_wojna_krymska_strony	Medium	In the Crimean War, Russia fought a coalition led by which two powers?	Britain and France	Prussia and Austria	Spain and Portugal	Sweden and Denmark
+trv_manifest	Medium	Who wrote 'The Communist Manifesto'?	Karl Marx and Friedrich Engels	Vladimir Lenin, while in exile	Leon Trotsky and his circle	Rosa Luxemburg and her party
+hx_bismarck	Medium	Which 'Iron Chancellor' united Germany in 1871?	Otto von Bismarck	Kaiser Wilhelm II	Frederick the Great	Klemens von Metternich
+hx_garibaldi	Medium	Which general and his 'Redshirts' fought to unite Italy?	Giuseppe Garibaldi	Benito Mussolini	Camillo Cavour	Victor Emmanuel II
+hy_sisi	Medium	Which Austrian empress was known by the nickname 'Sisi'?	Elisabeth	Maria Theresa	Marie Louise	Zita
+his_classic_pizza_margherita	Medium	The classic pizza Margherita is said to be named after whom?	An Italian queen	A Naples baker's wife	A famous opera singer	A saint from Naples
+his_dynasty_ruled_prussia	Medium	Which dynasty ruled Prussia and, from 1871, the German Empire?	Hohenzollern	Habsburg	Wittelsbach	Wettin
+his_year_revolutions_break	Medium	In which year did revolutions break out across Europe, the 'Springtime of Nations'?	1848	1789	1815	1871
+his_country_proclaimed_united	Medium	Which country was proclaimed a united kingdom under Victor Emmanuel II in 1861?	Italy	Germany	Belgium	Greece
+his_war_1870_1871	Medium	Which war of 1870-1871 led to the founding of the German Empire?	The Franco-Prussian War	The Crimean War	The Austro-Prussian War	The Napoleonic Wars
+his_palace_german_empire	Medium	In which palace was the German Empire proclaimed in January 1871?	Versailles	Sanssouci	Schonbrunn	The Hofburg
+his_revolutionary_government_ran	Medium	What was the revolutionary government that ran Paris for two months in 1871 called?	The Paris Commune	The Directory	The Jacobin Club	The Paris Soviet
+his_english_poet_died	Medium	Which English poet died in 1824 while helping the Greeks fight for independence?	Lord Byron	Percy Shelley	John Keats	William Wordsworth
+his_country_broke_away	Medium	Which country broke away from the Netherlands in 1830?	Belgium	Luxembourg	Denmark	Switzerland
+his_banking_family_branches	Medium	Which banking family had branches in London, Paris, Vienna, Naples and Frankfurt?	The Rothschilds	The Medici	The Fuggers	The Barings
+his_dual_monarchy_created	Medium	Which 'dual monarchy' was created by a compromise in 1867?	Austria-Hungary	Sweden-Norway	Denmark-Iceland	Spain-Portugal
+his_austrian_emperor_reigned	Medium	Which Austrian emperor reigned for 68 years, from 1848 until 1916?	Franz Joseph I	Ferdinand I	Charles I	Joseph II
+his_city_became_capital_2	Medium	Which city became the capital of united Italy in 1871?	Rome	Turin	Florence	Milan
+his_country_norway_peacefully	Medium	From which country did Norway peacefully break away in 1905?	Sweden	Denmark	Russia	Finland
+org_kardigan_wojna	Hard	The cardigan is named after a commander who fought in which war?	The Crimean War	The Boer War	The Napoleonic Wars	The American Civil War
+his_french_emperor_napoleon	Hard	Which French emperor was Napoleon Bonaparte's nephew?	Napoleon III	Napoleon II	Louis XVIII	Louis-Philippe
+his_russian_tsar_freed	Hard	Which Russian tsar freed the serfs in 1861?	Alexander II	Nicholas II	Alexander III	Nicholas I
+his_prime_minister_piedmont	Hard	Which prime minister of Piedmont was the master planner of Italian unification?	Count Cavour	Giuseppe Mazzini	Giuseppe Garibaldi	Victor Emmanuel II
+his_austrian_statesman_dominated	Hard	Which Austrian statesman dominated European politics in the decades after Napoleon?	Klemens von Metternich	Otto von Bismarck	Franz Joseph	Count Cavour
+his_led_hungary_revolution	Hard	Who led Hungary's revolution against Austrian rule in 1848?	Lajos Kossuth	Ferenc Deak	Sandor Petofi	Istvan Szechenyi
+his_swiss_businessman_founded	Hard	Which Swiss businessman founded the Red Cross after seeing the Battle of Solferino?	Henri Dunant	Alfred Nobel	Jean Calvin	Gustave Moynier
+his_italian_revolutionary_founded	Hard	Which Italian revolutionary founded the movement 'Young Italy' in 1831?	Giuseppe Mazzini	Count Cavour	Giuseppe Garibaldi	Gabriele D'Annunzio
+his_russian_tsar_killed	Hard	Which Russian tsar was killed by a revolutionary's bomb in Saint Petersburg in 1881?	Alexander II	Nicholas I	Alexander III	Nicholas II
+his_year_crimean_war	Hard	In which year did the Crimean War begin?	1853	1815	1848	1870
+his_tambora	Expert	The 1815 eruption of which volcano led to 'the year without a summer'?	Tambora	Krakatoa	Vesuvius	Pinatubo

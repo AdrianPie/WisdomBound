@@ -1,0 +1,32 @@
+# Wielka Brytania krolowej Wiktorii i imperium brytyjskie XIX wieku: od Australii po Indie.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+hx_wiktorianska	Easy	Which British queen gave her name to a whole era of the 1800s?	Victoria	Anne	Mary	Elizabeth I
+his_colony_jewel_crown	Easy	Which colony was called the 'Jewel in the Crown' of the British Empire?	India	Egypt	Canada	Australia
+his_unknown_killer_terrorised	Easy	Which unknown killer terrorised the Whitechapel area of London in 1888?	Jack the Ripper	Sweeney Todd	Spring-heeled Jack	Dr Crippen
+his_colour_queen_victoria	Easy	Which colour did Queen Victoria wear for the forty years of her widowhood?	Black	White	Purple	Grey
+org_znaczek_kraj	Medium	Which country issued the world's first adhesive postage stamp?	The United Kingdom	France	The United States	Austria
+his_imperium_slonce	Medium	Which empire was famously said to be 'the empire on which the sun never sets' in the 1800s?	The British Empire	The Ottoman Empire	The Russian Empire	The French Empire
+hx_australia_skazancy	Medium	Britain first used its colony in Australia for what?	Sending convicts	Growing tea	Mining gold	Hunting whales
+hy_albert	Medium	What was the name of Queen Victoria's beloved husband?	Prince Albert	Prince Philip	Prince Edward	Prince George
+his_australian_outlaw_wore	Medium	Which Australian outlaw wore a suit of homemade iron armour in his last stand?	Ned Kelly	Captain Thunderbolt	Ben Hall	Jack Donahue
+his_ship_found_drifting	Medium	What was the name of the ship found drifting in 1872 with no one aboard?	Mary Celeste	Flying Dutchman	Bounty	Endurance
+his_prime_minister_canada	Medium	Who was the first prime minister of Canada, in 1867?	John A. Macdonald	Wilfrid Laurier	Pierre Trudeau	Lester Pearson
+his_long_queen_victoria	Medium	For about how long did Queen Victoria reign?	63 years	43 years	53 years	73 years
+his_victorian_prime_minister	Medium	Which Victorian prime minister and novelist was a great favourite of the queen?	Benjamin Disraeli	William Gladstone	Lord Palmerston	Robert Peel
+his_disastrous_cavalry_attack	Medium	Which disastrous cavalry attack of the Crimean War was made famous by a Tennyson poem?	The Charge of the Light Brigade	The Charge of the Heavy Brigade	The Thin Red Line	The Ride of the Six Hundred
+his_victorian_workhouses	Medium	What were Victorian 'workhouses'?	Places where the poor toiled for food and a bed	Factories owned and run by the Crown	Prisons that held only debtors	Schools for working children
+his_london_open_1863	Medium	What did London open in 1863, the first in the world?	An underground railway	A public telephone	A traffic light	An electric tram
+his_policemen_britain_nicknamed	Medium	Policemen in Britain are nicknamed 'bobbies' after which founder of the Metropolitan Police?	Robert Peel	Bobby Moore	Robert Walpole	Robert Baden-Powell
+his_christmas_tradition_germany	Medium	Which Christmas tradition from Germany did Prince Albert make popular in Britain?	The Christmas tree	The Advent calendar	Christmas crackers	Christmas cards
+wh_wielki_glod_irlandia	Hard	A failed harvest of which crop caused the Great Famine in Ireland in the 1840s?	The potato	Wheat	Oats	Barley
+org_bojkot_nazwisko	Hard	The word 'boycott' comes from what?	A land agent's surname	An Irish village	A trade union slogan	A Dutch verb
+hx_wiktoria_indie	Hard	Which extra title did Queen Victoria take in 1876?	Empress of India	Queen of Canada	Empress of China	Queen of Egypt
+his_british_officers_india	Hard	Why did British officers in India drink tonic water?	Its quinine fought malaria	It purified dirty water	It cured seasickness	It kept them awake on duty
+his_liberal_politician_prime	Hard	Which Liberal politician was prime minister four times under Queen Victoria?	William Gladstone	Benjamin Disraeli	Lord Salisbury	Lord Melbourne
+his_british_law_1832	Hard	Which British law of 1832 gave the vote to more men and abolished 'rotten boroughs'?	The Great Reform Act	The Factory Act	The Poor Law	The Corn Laws
+his_jamaican_born_nurse	Hard	Which Jamaican-born nurse ran a 'British Hotel' for sick soldiers in the Crimean War?	Mary Seacole	Florence Nightingale	Edith Cavell	Elizabeth Fry
+his_british_general_killed	Hard	Which British general was killed when Khartoum fell to the Mahdi's army in 1885?	Charles Gordon	Herbert Kitchener	Garnet Wolseley	Redvers Buller
+his_eureka_stockade_1854	Hard	What was the Eureka Stockade of 1854 in Australia?	A gold miners' rebellion	A convict escape	A cattle drive	A shipwreck
+his_irish_leader_campaigned	Hard	Which Irish leader campaigned for Home Rule in the 1880s?	Charles Stewart Parnell	Daniel O'Connell	Michael Collins	Eamon de Valera
+hx_waitangi	Expert	Which 1840 treaty between the British Crown and Maori chiefs is New Zealand's founding document?	The Treaty of Waitangi	The Treaty of Auckland	The Treaty of Rotorua	The Treaty of Aotearoa
+hx_babcia_europy	Expert	Why was Queen Victoria nicknamed 'the grandmother of Europe'?	Her grandchildren wore many crowns	She ruled most of Europe	She lived to be 100	She founded the Red Cross

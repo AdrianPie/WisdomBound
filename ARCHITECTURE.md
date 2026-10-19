@@ -87,6 +87,11 @@ quiz/            bank pytan; bank/ to tresc: JEDEN plik na temat (BiologyQuestio
                  w domain/quizbank/README.md). Zasady pisania pytan (zadnych definicji
                  z podrecznika i pytan-zerowek, dystraktory z tej samej polki, jeden fakt = jedno
                  pytanie) siedza w KDoc QuizBank i czesci pilnuja QuizBankTest/QuizBankAuditTest
+  QuizSection        dzialy duzego tematu: Historia to katalog quizbank/history/<epoka>/<dzial>.tsv
+                     (np. history/antiquity/roman_empire), nazwy i kolejnosc w quizbank/sections.tsv
+                     -> wygenerowany QuizSectionCatalog. Kazde pytanie takiego tematu niesie
+                     QuizEntry.section; QuizSections daje drzewo (epoki, poddzialy, okruszki),
+                     QuizBank.inSection - pytania galezi. UI na razie wybiera tylko temat
   QuestionHistory    pamiec zadanych pytan (wszystkie typy, cala sesja gry - zyje w RunSession).
                      Losowanie bierze najpierw pytania jeszcze nie widziane; specjalne typy
                      (ukladanka, zaznacz-wszystkie, prawda/falsz) biora WYLACZNIE niewidziane, a gdy

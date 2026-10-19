@@ -1,0 +1,33 @@
+# Cesarstwo wschodniorzymskie od Konstantynopola do upadku w 1453.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+his_roman_emperor_refounded	Easy	Which Roman emperor refounded the city of Byzantium and gave it his own name?	Constantine the Great	Justinian I	Theodosius I	Augustus
+his_great_church_constantinople	Easy	Which great church in Constantinople was the largest in the world for nearly a thousand years?	Hagia Sophia	St Peter's Basilica	Notre-Dame	Westminster Abbey
+his_branch_christianity_byzantine	Easy	Which branch of Christianity did the Byzantine Empire follow?	Orthodox	Catholic	Protestant	Coptic
+wh_konstantynopol_zdobywca	Medium	Which state captured Constantinople in 1453?	The Ottoman Empire	Venice	Bulgaria	Persia
+wh_bizancjum_nazwa	Medium	What was the Byzantine Empire otherwise known as?	The Eastern Roman Empire	The Latin Empire	The Empire of Trebizond	The Carolingian Empire
+trv_bizancjum_stolica	Medium	Which city was the capital of the Byzantine Empire?	Constantinople	Athens	Rome	Alexandria
+hy_hagia_sophia	Medium	Which great church in Istanbul did Emperor Justinian build in the 530s?	Hagia Sophia	The Blue Mosque	St Mark's Basilica	The Pantheon
+his_ottoman_sultan_conquered	Medium	Which Ottoman sultan conquered Constantinople?	Mehmed II	Suleiman the Magnificent	Osman I	Selim I
+his_byzantine_imperial_bodyguard	Medium	Which Byzantine imperial bodyguard was made up largely of Vikings and later Anglo-Saxons?	The Varangian Guard	The Praetorian Guard	The Janissaries	The Immortals
+his_split_1054_between	Medium	What is the split of 1054 between the Catholic and Orthodox churches called?	The Great Schism	The Reformation	The Investiture Contest	The Babylonian Captivity
+his_people_call_byzantines	Medium	What did the people we call 'Byzantines' call themselves?	Romans	Greeks	Byzantines	Christians
+his_great_plague_struck	Medium	Which great plague struck the Byzantine Empire in 541?	The Plague of Justinian	The Antonine Plague	The Black Death	The Plague of Athens
+his_cyrillic_alphabet_byzantine	Medium	The Cyrillic alphabet is named after which Byzantine missionary to the Slavs?	Saint Cyril	Saint Basil	Saint Nicholas	Saint Gregory
+his_religious_paintings_wooden	Medium	Which religious paintings on wooden panels are typical of Byzantine art?	Icons	Frescoes	Tapestries	Murals
+his_constantinople_fell_city	Medium	After Constantinople fell, which city claimed to be the 'Third Rome'?	Moscow	Kiev	Vienna	Venice
+his_constantinople_stood_narrow	Medium	Constantinople stood on which narrow strait between Europe and Asia?	The Bosphorus	The Dardanelles	The Strait of Messina	The Strait of Otranto
+his_last_byzantine_emperor	Hard	Who was the last Byzantine emperor, killed defending the walls of Constantinople?	Constantine XI	Justinian II	Basil II	Alexios I
+his_huge_land_walls	Hard	Which huge land walls protected Constantinople for about a thousand years?	The Theodosian Walls	The Aurelian Walls	The Long Walls	The Servian Wall
+his_byzantine_general_won	Hard	Which Byzantine general won back Italy and North Africa for Emperor Justinian?	Belisarius	Narses	Heraclius	Stilicho
+his_rival_chariot_racing	Hard	Which rival chariot-racing fan clubs started the Nika riots of 532?	The Blues and the Greens	The Reds and the Whites	The Golds and the Silvers	The Eagles and the Lions
+his_byzantine_emperor_nicknamed	Hard	Which Byzantine emperor was nicknamed 'the Bulgar-Slayer'?	Basil II	Justinian I	Heraclius	Leo III
+his_basil_reportedly_000	Hard	What did Basil II reportedly do to about 15,000 Bulgarian prisoners in 1014?	Blinded them	Freed them all	Sold them to Venice	Enlisted them
+his_italian_city_glittering	Hard	Which Italian city is famous for its glittering mosaics of Justinian and Theodora?	Ravenna	Venice	Naples	Palermo
+his_battle_1071_seljuk	Hard	At which battle of 1071 did the Seljuk Turks crush a Byzantine army, opening Anatolia?	Manzikert	Myriokephalon	Kosovo	Nicopolis
+his_byzantine_dispute_700s	Hard	Which Byzantine dispute of the 700s and 800s was about destroying holy images?	Iconoclasm	Arianism	The Great Schism	The Filioque
+his_byzantine_gold_coin	Hard	What was the Byzantine gold coin, trusted across the medieval world for centuries?	The solidus	The denarius	The florin	The ducat
+his2_bizancjum_justynian	Expert	Which Byzantine emperor had the famous Roman law code compiled?	Justinian I	Constantine the Great	Heraclius	Basil II
+his_teodora	Expert	Which Byzantine empress famously refused to flee during the Nika riots of 532?	Theodora	Irene	Zoe	Helena
+hx_ogien_grecki	Expert	What was the Byzantine navy's secret weapon, 'Greek fire'?	Fire that burned on water	A signal beacon system	An early bronze cannon	A flaming catapult shot
+his_byzantine_princess_wrote	Expert	Which Byzantine princess wrote 'The Alexiad', a history of her father's reign?	Anna Komnene	Theodora	Zoe	Irene of Athens
+his_empress_ruled_byzantium	Expert	Which empress ruled Byzantium alone in her own name from 797?	Irene of Athens	Theodora	Zoe	Anna Komnene

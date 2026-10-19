@@ -1,0 +1,80 @@
+# Lata 1945-1991: zelazna kurtyna, Berlin, Korea i Wietnam, kryzys kubanski, upadek komunizmu.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+his_mur	Easy	In which year did the Berlin Wall fall?	1989	1991	1985	1993
+hx_zimna_wojna	Easy	Which two superpowers faced each other in the Cold War?	The USA and the Soviet Union	Britain and Germany	France and China	Japan and India
+hy_zelazna_kurtyna	Easy	Who famously said in 1946 that an 'iron curtain' had come down across Europe?	Winston Churchill	Harry Truman	Joseph Stalin	Charles de Gaulle
+his_soviet_union_main	Easy	What was the name of the Soviet Union's main spy and security agency from 1954?	The KGB	The CIA	The Stasi	MI6
+his_last_leader_soviet	Easy	Who was the last leader of the Soviet Union?	Mikhail Gorbachev	Boris Yeltsin	Leonid Brezhnev	Vladimir Putin
+his_president_declared_ich	Easy	Which US president declared 'Ich bin ein Berliner' in 1963?	John F. Kennedy	Ronald Reagan	Dwight D. Eisenhower	Lyndon B. Johnson
+his_country_ruled_kim	Easy	Which country has been ruled by the Kim family since 1948?	North Korea	China	Vietnam	Laos
+his_cold_war_ended	Easy	The Cold War ended with the collapse of which state in 1991?	The Soviet Union	Yugoslavia	East Germany	China
+his_east_germany_secret	Easy	What was the name of East Germany's secret police?	Stasi	Securitate	Gestapo	KGB
+his_bikini_atoll_1946	Easy	What was named after Bikini Atoll in 1946, just days after US nuclear tests there?	A swimsuit	A cocktail	A haircut	A dance
+his_san_francisco_hippie	Easy	San Francisco's hippie gathering of 1967 is remembered as the 'Summer of...' what?	Love	Peace	Flowers	Music
+wh_zsrr_rozpad	Medium	In which year was the Soviet Union formally dissolved?	1991	1989	1990	1993
+wh_wojna_wietnamska	Medium	Which power withdrew from Vietnam in 1973?	The United States	France	The Soviet Union	Great Britain
+his_czarnobyl	Medium	In which year did the Chernobyl nuclear disaster happen?	1986	1979	1991	1984
+his_woodstock	Medium	Which 1969 music festival drew around 400,000 people to a farm in New York State?	Woodstock	Glastonbury	Live Aid	Coachella
+hx_mur_budowa	Medium	In which year was the Berlin Wall put up?	1961	1949	1953	1968
+hx_zjednoczenie_niemiec	Medium	In which year were East and West Germany reunified?	1990	1989	1991	1993
+hx_38_rownoleznik	Medium	Along which line of latitude was Korea divided after World War II?	The 38th parallel	The equator	The 49th parallel	The Tropic of Cancer
+hx_castro	Medium	Who led the Cuban Revolution to victory in 1959?	Fidel Castro	Fulgencio Batista	Raul Castro	Camilo Cienfuegos
+hy_plan_marshalla	Medium	What was the Marshall Plan?	US aid to rebuild Europe after the war	A plan to invade Japan	A new map of divided Germany	The founding charter of NATO
+hy_uklad_warszawski	Medium	What was the Soviet-led military alliance of the Cold War called?	The Warsaw Pact	The Iron Curtain	Comecon	The Eastern Bloc Treaty
+hy_sajgon	Medium	What was Ho Chi Minh City called before 1976?	Saigon	Hanoi	Hue	Da Nang
+hy_falklandy	Medium	Britain and Argentina fought a war in 1982 over which islands?	The Falklands	The Canaries	The Azores	The Galapagos
+his_president_told_gorbachev	Medium	Which US president told Gorbachev in 1987 to 'tear down this wall'?	Ronald Reagan	Richard Nixon	Jimmy Carter	George H. W. Bush
+his_soviet_leader_faced	Medium	Which Soviet leader faced John F. Kennedy in the Cuban Missile Crisis?	Nikita Khrushchev	Leonid Brezhnev	Joseph Stalin	Yuri Andropov
+his_country_soviet_union	Medium	Which country did the Soviet Union invade in 1979, starting a ten-year war?	Afghanistan	Iran	Poland	Finland
+his_present_day_country	Medium	In which present-day country is the Chernobyl nuclear plant?	Ukraine	Russia	Belarus	Lithuania
+his_country_muammar_gaddafi	Medium	Which country did Muammar Gaddafi rule for over 40 years?	Libya	Egypt	Tunisia	Syria
+his_nato_stand	Medium	What does NATO stand for?	North Atlantic Treaty Organization	North American Trade Organization	Northern Alliance Treaty Office	National Allied Troops Organization
+his_territory_became_50th	Medium	Which territory became the 50th US state in 1959?	Hawaii	Alaska	Puerto Rico	Guam
+his_president_berlin_wall	Medium	Who was US president when the Berlin Wall fell?	George H. W. Bush	Ronald Reagan	Bill Clinton	Jimmy Carter
+his_gorbachev_policy_glasnost	Medium	What did Gorbachev's policy of 'glasnost' mean?	Openness	Restructuring	Peace	Equality
+his_became_president_france	Medium	Who became the first president of France's Fifth Republic, in 1959?	Charles de Gaulle	Francois Mitterrand	Georges Pompidou	Philippe Petain
+his_led_east_germany	Medium	Who led East Germany for 18 years until just before the Berlin Wall fell?	Erich Honecker	Walter Ulbricht	Egon Krenz	Willi Stoph
+his_egyptian_president_made	Medium	Which Egyptian president made peace with Israel and was assassinated in 1981?	Anwar Sadat	Gamal Abdel Nasser	Hosni Mubarak	Mohamed Naguib
+his_soviet_leader_denounced	Medium	Which Soviet leader denounced Stalin in a 'Secret Speech' in 1956?	Nikita Khrushchev	Leonid Brezhnev	Georgy Malenkov	Vyacheslav Molotov
+his_country_1956_uprising	Medium	In which country was a 1956 uprising against Soviet rule crushed by Red Army tanks?	Hungary	Czechoslovakia	Romania	Bulgaria
+his_surprise_attack_north	Medium	Which surprise attack by North Vietnam in 1968 shocked the American public?	Tet Offensive	Easter Offensive	Spring Offensive	Hue Offensive
+his_year_vietnam_war	Medium	In which year did the Vietnam War end with the fall of South Vietnam?	1975	1973	1972	1979
+his_country_usa_invade	Medium	Which country did the USA invade in 1989 to capture its leader Manuel Noriega?	Panama	Nicaragua	Grenada	Colombia
+his_1957_treaty_founded	Medium	Which 1957 treaty founded the European Economic Community?	Treaty of Rome	Treaty of Paris	Maastricht Treaty	Treaty of Brussels
+his_against_country_britain	Medium	Against which country did Britain fight the 'Cod Wars' over fishing rights?	Iceland	Norway	Denmark	Faroe Islands
+his_soviet_leader_rule	Medium	Which Soviet leader's rule from 1964 to 1982 became known as the 'Era of Stagnation'?	Leonid Brezhnev	Nikita Khrushchev	Yuri Andropov	Konstantin Chernenko
+his_1974_coup_portugal	Medium	Which 1974 coup in Portugal is named after a flower?	Carnation Revolution	Rose Revolution	Tulip Revolution	Orange Revolution
+his_reagan_1983_missile	Medium	What was Reagan's 1983 missile shield plan, nicknamed 'Star Wars', officially called?	Strategic Defense Initiative	Space Shield Program	Orbital Defense Plan	Strategic Air Command
+his_baltic_state_soviet	Medium	Which Baltic state was the first Soviet republic to declare independence, in March 1990?	Lithuania	Latvia	Estonia	Georgia
+his_caribbean_country_ruled	Medium	Which Caribbean country was ruled by the dictators 'Papa Doc' and 'Baby Doc' Duvalier?	Haiti	Dominican Republic	Cuba	Jamaica
+his_secretary_general_united	Medium	Who was the first Secretary-General of the United Nations?	Trygve Lie	Dag Hammarskjold	U Thant	Kofi Annan
+his_medical_charity_founded	Medium	Which medical charity was founded in 1971 by French doctors and journalists?	Doctors Without Borders	The Red Cross	Amnesty International	Oxfam
+his_cold_war_nuclear	Medium	What did the Cold War nuclear doctrine 'MAD' stand for?	Mutually assured destruction	Massive atomic defence	Military alert duty	Missiles at the ready
+his_senator_led_fierce	Medium	Which US senator led a fierce hunt for 'communists' in the early 1950s?	Joseph McCarthy	Richard Nixon	Barry Goldwater	J. Edgar Hoover
+his_domino_theory_cold	Medium	What was the 'domino theory' of the Cold War?	Communism would spread country by country	Nuclear war would start by accident	The USSR would collapse on its own	Germany would reunite by 2000
+his_country_divided_17th	Medium	Which country was divided at the 17th parallel in 1954?	Vietnam	Korea	Germany	Laos
+his_trade_union_led	Medium	Which trade union, led by Lech Walesa, challenged communist rule in Poland in the 1980s?	Solidarity	Charter 77	The Velvet Union	Freedom Front
+his2_kryzys_kubanski	Hard	In which year did the Cuban Missile Crisis erupt?	1962	1959	1968	1956
+his2_mur_upadek_kto	Hard	Which Soviet leader announced perestroika?	Mikhail Gorbachev	Leonid Brezhnev	Nikita Khrushchev	Yuri Andropov
+his_most_powietrzny	Hard	What did the Berlin Airlift of 1948 and 1949 do?	Flew food and fuel into West Berlin	Evacuated all of West Berlin	Flew troops to invade the East	Dropped leaflets over Moscow
+his_chruszczow_but	Hard	Which Soviet leader is famous for waving his shoe at the United Nations in 1960?	Nikita Khrushchev	Leonid Brezhnev	Joseph Stalin	Mikhail Gorbachev
+hx_checkpoint_charlie	Hard	What was the most famous crossing point in the Berlin Wall called?	Checkpoint Charlie	Checkpoint Alpha	Gate 17	Brandenburg Crossing
+hx_che	Hard	In which country was the revolutionary Che Guevara born?	Argentina	Cuba	Bolivia	Mexico
+hy_nato_1949	Hard	In which year was NATO founded?	1949	1945	1955	1961
+hy_korea_wojna	Hard	In which years was the Korean War fought?	1950-1953	1945-1948	1960-1965	1939-1945
+hy_praska_wiosna	Hard	The 1968 'Prague Spring' was crushed by troops of which alliance?	The Warsaw Pact	NATO	The United Nations	The Axis
+hy_iran_1979	Hard	Which country's 1979 revolution brought Ayatollah Khomeini to power?	Iran	Iraq	Afghanistan	Saudi Arabia
+hy_czerwoni_khmerzy	Hard	Which regime, led by Pol Pot, ruled Cambodia from 1975 to 1979?	The Khmer Rouge	The Viet Cong	The Pathet Lao	The Red Guards
+hw_goraca_linia	Hard	What was the 'hotline' set up in 1963 between Washington and Moscow?	A direct link to avoid nuclear war	A radio station for spies	A shared weather service	A space race news channel
+his_general_seized_power	Hard	Which general seized power in Chile in a 1973 coup?	Augusto Pinochet	Fidel Castro	Juan Peron	Manuel Noriega
+his_led_yugoslavia_end	Hard	Who led Yugoslavia from the end of World War II until his death in 1980?	Josip Broz Tito	Slobodan Milosevic	Enver Hoxha	Nicolae Ceausescu
+his_romanian_dictator_overthrown	Hard	Which Romanian dictator was overthrown and executed on Christmas Day 1989?	Nicolae Ceausescu	Todor Zhivkov	Erich Honecker	Enver Hoxha
+his_playwright_became_president	Hard	Which playwright became president of Czechoslovakia after the 1989 Velvet Revolution?	Vaclav Havel	Lech Walesa	Alexander Dubcek	Milan Kundera
+his_american_couple_executed	Hard	Which American couple were executed in 1953 for passing atomic secrets to the Soviets?	Julius and Ethel Rosenberg	Alger and Priscilla Hiss	Klaus and Anna Fuchs	Harry and Ruth Gold
+his_spy_ring_british	Hard	Which spy ring of British men, recruited at a top university, worked for the Soviets?	The Cambridge Five	The Oxford Group	The London Seven	The Eton Circle
+his_american_pilot_shot	Hard	Which American pilot was shot down in a U-2 spy plane over the USSR in 1960?	Francis Gary Powers	Chuck Yeager	John Glenn	Alan Shepard
+his_paperclip	Expert	What was Operation Paperclip after World War II?	Bringing German scientists to the USA	Smuggling Nazi gold out of Europe	Spying on Soviet rocket bases	Breaking Japanese naval codes
+his_pietrow	Expert	Which Soviet officer ignored a false missile alarm in 1983 and averted nuclear war?	Stanislav Petrov	Vasili Arkhipov	Yuri Andropov	Andrei Sakharov
+hx_zatoka_swin	Expert	The failed 1961 invasion of Cuba by US-backed exiles is known as what?	The Bay of Pigs	The Gulf of Tonkin	The Cuban Thaw	Operation Mongoose
+hx_wojna_futbolowa	Expert	The 1969 'Football War' was fought between which two countries?	El Salvador and Honduras	Brazil and Argentina	Peru and Chile	Mexico and Guatemala
+hy_nixon_chiny	Expert	Which US president made a historic visit to China in 1972?	Richard Nixon	John F. Kennedy	Jimmy Carter	Gerald Ford

@@ -1,0 +1,33 @@
+# Zloty wiek piractwa i morskie historie XVI-XVIII wieku: korsarze, bukanierzy, Czarnobrody, bunty na
+# statkach.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+hx_jolly_roger	Easy	What is the traditional pirate flag with a skull and crossbones called?	The Jolly Roger	The Black Bess	The Salty Dog	The Grim Rover
+hx_pirat_czarnobrody	Easy	Which pirate captain was known as 'Blackbeard'?	Edward Teach	William Kidd	Henry Morgan	Francis Drake
+his_spanish_silver_coins	Easy	What were the Spanish silver coins that pirates prized often called?	Pieces of eight	Doubloons of four	Silver crowns	Gold ducats
+his_sea_main_hunting	Easy	Which sea was the main hunting ground of pirates in the 'Golden Age of Piracy'?	The Caribbean	The Baltic	The Black Sea	The Red Sea
+his_big_spanish_ships	Easy	What were the big Spanish ships that carried silver home from the Americas called?	Galleons	Longships	Junks	Triremes
+his_jamaican_port_pirate	Medium	Which Jamaican port, a pirate haven, was called 'the wickedest city on Earth' before an earthquake in 1692?	Port Royal	Kingston	Tortuga	Nassau
+his_scottish_captain_hanged	Medium	Which Scottish captain, hanged in London in 1701, was rumoured to have buried a great treasure?	William Kidd	Henry Morgan	Edward Low	Charles Vane
+his_welsh_buccaneer_sacked	Medium	Which Welsh buccaneer sacked Panama in 1671 and was later knighted and made deputy governor of Jamaica?	Henry Morgan	William Kidd	Bartholomew Roberts	Howell Davis
+his_two_women_sailed	Medium	Which two women sailed as pirates with 'Calico Jack' Rackham?	Anne Bonny and Mary Read	Grace O'Malley and Mary Read	Anne Bonny and Ching Shih	Jacquotte Delahaye and Anne Bonny
+his_sea_captains_government	Medium	What were sea captains with a government licence to attack enemy ships called?	Privateers	Buccaneers	Corsairs	Freebooters
+his_north_african_pirates	Medium	What were the North African pirates who raided Europe's coasts for slaves called?	Barbary corsairs	Vikings	Moriscos	Buccaneers
+his_blackbeard_make_himself	Medium	How did Blackbeard make himself look terrifying in battle?	He tucked smoking fuses into his beard	He painted his face red	He wore a skull as a helmet	He sharpened his teeth
+his_blackbeard_flagship	Medium	What was the name of Blackbeard's flagship?	Queen Anne's Revenge	The Black Pearl	The Jolly Roger	The Golden Hind
+his_common_walking_plank	Medium	How common was 'walking the plank' among real pirates?	It was very rare	It was the usual punishment	It was only for captains	It happened on every ship
+his_marooning_sailor_mean	Medium	What did 'marooning' a sailor mean?	Leaving him on a deserted island	Tying him to the mast	Throwing him overboard	Locking him in the hold
+his_remote_pacific_island	Medium	On which remote Pacific island did the Bounty mutineers hide?	Pitcairn Island	Easter Island	Tahiti	Norfolk Island
+his_english_french_dutch	Medium	What were the English, French and Dutch pirates of the Caribbean in the 1600s called?	Buccaneers	Vikings	Corsairs	Cossacks
+hx_drake	Hard	Which English sailor, called a pirate by the Spanish, sailed around the world in 1577-1580?	Francis Drake	Walter Raleigh	Henry Morgan	John Hawkins
+hx_bounty	Hard	The crew of which British ship mutinied against Captain Bligh in 1789?	HMS Bounty	HMS Beagle	HMS Endeavour	HMS Resolution
+his_welsh_pirate_black	Hard	Which Welsh pirate, 'Black Bart', captured over 400 ships in the early 1700s?	Bartholomew Roberts	Henry Morgan	Edward Teach	Stede Bonnet
+his_letter_marque	Hard	What was a 'letter of marque'?	A licence to raid enemy ships	A pirate's treasure map	A ransom note	A death sentence
+his_town_bahamas_became	Hard	Which town in the Bahamas became a 'pirate republic' in the early 1700s?	Nassau	Havana	Port Royal	Kingston
+his_barbary_corsair_nicknamed	Hard	Which Barbary corsair, nicknamed Barbarossa, became the Ottoman navy's admiral?	Hayreddin	Dragut	Oruc	Murat Reis
+his_off_coast_american	Hard	Off the coast of which American colony was Blackbeard killed in 1718?	North Carolina	Florida	Massachusetts	New York
+his_scottish_sailor_marooned	Hard	Which Scottish sailor, marooned on a Pacific island in 1704, inspired 'Robinson Crusoe'?	Alexander Selkirk	William Dampier	Ben Gunn	John Silver
+his_chinese_pirate_queen	Hard	Which Chinese pirate queen commanded a fleet of tens of thousands in the early 1800s?	Ching Shih	Cheng I	Lai Choi San	Koxinga
+his_written_rules_pirate	Hard	What were the written rules that a pirate crew swore to obey called?	Articles	Commandments	Statutes	Charters
+his_irish_pirate_queen	Hard	Which Irish pirate queen met Elizabeth I in 1593?	Grace O'Malley	Anne Bonny	Mary Read	Maeve
+his_former_privateer_became	Hard	Which former privateer became governor of the Bahamas and drove out the pirates in 1718?	Woodes Rogers	Henry Morgan	Francis Drake	William Dampier
+his_mutiny_bounty_roughly	Expert	After the mutiny on the Bounty, roughly how far did Captain Bligh sail in an open boat?	About 6,700 km	About 670 km	About 67 km	About 67,000 km

@@ -1,0 +1,77 @@
+# Druga wojna swiatowa 1939-1945 na wszystkich frontach - od Blitzkriegu do Hiroszimy i Norymbergi.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+his_ii_wojna	Easy	In which year did World War II break out?	1939	1914	1945	1918
+his2_ww2_koniec	Easy	In which year did World War II end?	1945	1944	1946	1943
+wh_pearl_harbor	Easy	Which country attacked Pearl Harbor in 1941?	Japan	Germany	Italy	The Soviet Union
+his_churchill	Easy	Who was Britain's prime minister for most of World War II?	Winston Churchill	Neville Chamberlain	Clement Attlee	Anthony Eden
+hx_nagasaki	Easy	Which Japanese city was hit by the second atomic bomb, in 1945?	Nagasaki	Kyoto	Osaka	Tokyo
+hy_norymberga	Easy	In which German city were leading Nazis put on trial after World War II?	Nuremberg	Berlin	Munich	Hamburg
+hy_dunkierka	Easy	From which French port were over 300,000 Allied soldiers rescued by boat in 1940?	Dunkirk	Calais	Le Havre	Brest
+his_led_soviet_union	Easy	Who led the Soviet Union during World War II?	Joseph Stalin	Vladimir Lenin	Nikita Khrushchev	Leon Trotsky
+his_germany_fast_lightning	Easy	What was Germany's fast 'lightning war' tactic called in World War II?	Blitzkrieg	Anschluss	Lebensraum	Wehrmacht
+his_may_1945_day	Easy	What is 8 May 1945, the day Nazi Germany surrendered, called in the West?	VE Day	D-Day	VJ Day	Armistice Day
+his_nazi_germany_secret	Easy	What was the name of Nazi Germany's secret police?	The Gestapo	The Stasi	The KGB	The Luftwaffe
+his_country_famously_stayed	Easy	Which country famously stayed neutral through both World Wars?	Switzerland	Belgium	The Netherlands	Norway
+his_event_brought_united	Easy	Which event brought the United States into World War II?	The attack on Pearl Harbor	The invasion of Poland	The fall of France	The Battle of Britain
+his_city_adolf_hitler	Easy	In which city did Adolf Hitler die in 1945?	Berlin	Munich	Vienna	Nuremberg
+his_nazi_germany_propaganda	Easy	Who was Nazi Germany's propaganda minister?	Joseph Goebbels	Hermann Goring	Heinrich Himmler	Rudolf Hess
+his_country_germany_invade	Easy	Which country did Germany invade on 1 September 1939, starting World War II?	Poland	France	Czechoslovakia	Belgium
+his_nazi_genocide_six	Easy	What is the Nazi genocide of about six million European Jews called?	The Holocaust	The Pogrom	The Blitz	The Inquisition
+his2_hiroszima	Medium	In which year was the atomic bomb dropped on Hiroshima?	1945	1944	1946	1949
+wh_d_day	Medium	In which region of France did the Allied D-Day landings begin?	Normandy	Brittany	Provence	Alsace
+wh_onz_rok	Medium	In which year was the United Nations founded?	1945	1919	1948	1950
+trv_manhattan	Medium	What was the Manhattan Project?	The US programme to build the atomic bomb	The building of New York's subway	A plan to land on the Moon	A secret code-breaking effort
+hx_stalingrad	Medium	Which battle, ending in 1943, turned the tide against Germany on the Eastern Front?	Stalingrad	Moscow	Kursk	Kyiv
+hx_de_gaulle	Medium	Which general led the Free French from London during World War II?	Charles de Gaulle	Philippe Petain	Ferdinand Foch	Jean Moulin
+hy_bitwa_o_anglie	Medium	Which 1940 air campaign saw the RAF fight off the German Luftwaffe?	The Battle of Britain	The Blitzkrieg	The Battle of the Bulge	Operation Sea Lion
+his_british_king_reigned	Medium	Which British king reigned during World War II?	George VI	George V	Edward VIII	Edward VII
+his_president_ordered_atomic	Medium	Which US president ordered the atomic bombings of Japan in 1945?	Harry S. Truman	Franklin D. Roosevelt	Dwight D. Eisenhower	Woodrow Wilson
+his_allied_commander_day	Medium	Which Allied commander of the D-Day landings later became US president?	Dwight D. Eisenhower	George S. Patton	Douglas MacArthur	Omar Bradley
+his_president_pearl_harbor	Medium	Which US president called Pearl Harbor 'a date which will live in infamy'?	Franklin D. Roosevelt	Harry S. Truman	Woodrow Wilson	Herbert Hoover
+his_british_fighter_plane	Medium	Which British fighter plane became the symbol of the Battle of Britain?	The Spitfire	The Lancaster	The Mosquito	The Mustang
+his_allies_land_europe	Medium	Where did the Allies first land in Europe, in July 1943?	Sicily	Normandy	Greece	Norway
+his_physicist_led_laboratory	Medium	Which physicist led the laboratory that built the first atomic bombs?	J. Robert Oppenheimer	Albert Einstein	Enrico Fermi	Niels Bohr
+his_country_run_collaborating	Medium	Which country was run by the collaborating Vichy regime during World War II?	France	Belgium	Norway	Italy
+his_german_rocket_hit	Medium	What was the German rocket that hit London in 1944, the first long-range ballistic missile?	V-2	Big Bertha	Panzerfaust	Stuka
+his_japanese_warship_world	Medium	Which Japanese warship of World War II was the largest battleship ever built?	Yamato	Bismarck	Missouri	Tirpitz
+his_1943_clash_eastern	Medium	Which 1943 clash on the Eastern Front is often called the largest tank battle in history?	Kursk	Stalingrad	El Alamein	Moscow
+his_1945_conference_near	Medium	At which 1945 conference near Berlin did the Allied leaders decide Germany's future?	Potsdam	Yalta	Tehran	Casablanca
+his_1942_battle_egypt	Medium	Which 1942 battle in Egypt turned the North African campaign in the Allies' favour?	El Alamein	Tobruk	Kasserine Pass	Benghazi
+his_swedish_diplomat_saved	Medium	Which Swedish diplomat saved thousands of Hungarian Jews in 1944?	Raoul Wallenberg	Oskar Schindler	Folke Bernadotte	Dag Hammarskjold
+his_french_marshal_world	Medium	Which French marshal, a World War I hero, led the collaborationist Vichy regime?	Philippe Petain	Ferdinand Foch	Joseph Joffre	Charles de Gaulle
+his_soviet_marshal_led	Medium	Which Soviet marshal led the capture of Berlin in 1945?	Georgy Zhukov	Ivan Konev	Semyon Timoshenko	Kliment Voroshilov
+his_russian_city_stalingrad	Medium	What is the Russian city of Stalingrad called today?	Volgograd	Saint Petersburg	Yekaterinburg	Nizhny Novgorod
+his_largest_nazi_death	Medium	What was the largest Nazi death camp called?	Auschwitz-Birkenau	Dachau	Bergen-Belsen	Buchenwald
+his_german_businessman_saved	Medium	Which German businessman saved more than a thousand Jews by employing them in his factories?	Oskar Schindler	Raoul Wallenberg	Albert Speer	Claus von Stauffenberg
+his_day_beach_saw	Medium	Which D-Day beach saw the heaviest American losses?	Omaha	Utah	Gold	Juno
+his_british_general_beat	Medium	Which British general beat Rommel at El Alamein in 1942?	Bernard Montgomery	Harold Alexander	Archibald Wavell	Alan Brooke
+his_day_japan_surrender	Medium	What is the day of Japan's surrender in 1945 called in Britain and the USA?	VJ Day	VE Day	D-Day	Armistice Day
+dpt_his_leningrad	Hard	Which city endured a siege of 872 days in the Second World War?	Leningrad	Stalingrad	Sevastopol	Budapest
+his_overlord	Hard	What was the code name for the Allied invasion of Normandy in 1944?	Operation Overlord	Operation Barbarossa	Operation Market Garden	Operation Torch
+his_little_boy	Hard	What was 'Little Boy' in World War II?	The bomb dropped on Hiroshima	A British light tank	A German submarine	A Japanese fighter plane
+his_marchewki_radar	Hard	The idea that carrots help you see in the dark was spread in World War II to hide what?	British radar	A new vitamin pill	Night-vision goggles	A food shortage
+his_monuments_men	Hard	What was the job of the Allied 'Monuments Men' in World War II?	Saving art from the Nazis	Building war memorials	Guarding generals	Mapping bomb damage
+hx_d_day_data	Hard	On what date did the D-Day landings take place?	6 June 1944	1 September 1939	8 May 1945	11 November 1918
+hx_midway	Hard	Which 1942 naval battle is seen as the turning point of the war in the Pacific?	Midway	Leyte Gulf	Coral Sea	Iwo Jima
+hx_rommel	Hard	Which German general was nicknamed 'the Desert Fox'?	Erwin Rommel	Heinz Guderian	Erich von Manstein	Paul von Hindenburg
+hy_ribbentrop	Hard	What was the 1939 non-aggression deal between Nazi Germany and the Soviet Union called?	The Molotov-Ribbentrop Pact	The Munich Agreement	The Warsaw Pact	The Yalta Agreement
+hy_barbarossa	Hard	What was the code name for Germany's 1941 invasion of the Soviet Union?	Operation Barbarossa	Operation Sea Lion	Operation Market Garden	Operation Torch
+hy_ardeny	Hard	Which German offensive of December 1944 is known as the Battle of the Bulge?	The Ardennes offensive	The Kursk offensive	The Italian campaign	The Rhine crossing
+hy_jalta	Hard	At which 1945 conference did Churchill, Roosevelt and Stalin plan post-war Europe?	Yalta	Potsdam	Tehran	Casablanca
+hy_iwo_jima	Hard	On which island was the famous 1945 photo of US Marines raising a flag taken?	Iwo Jima	Okinawa	Guadalcanal	Saipan
+hy_hirohito	Hard	Who was Emperor of Japan during World War II?	Hirohito	Meiji	Akihito	Taisho
+his_american_general_vowed	Hard	Which American general vowed 'I shall return' when forced out of the Philippines in 1942?	Douglas MacArthur	George S. Patton	Dwight D. Eisenhower	Chester Nimitz
+his_plane_dropped_atomic	Hard	What was the name of the plane that dropped the atomic bomb on Hiroshima?	Enola Gay	Bockscar	Memphis Belle	Spirit of St. Louis
+his_english_country_house	Hard	At which English country house did codebreakers crack Germany's Enigma messages?	Bletchley Park	Chequers	Blenheim Palace	Highclere Castle
+his_beat_winston_churchill	Hard	Who beat Winston Churchill in the British general election of 1945?	Clement Attlee	Neville Chamberlain	Anthony Eden	Harold Wilson
+his_code_allies_give	Hard	What code name did the Allies give to intelligence from cracked Enigma messages?	Ultra	Magic	Overlord	Bodyguard
+his_german_battleship_hunted	Hard	Which German battleship was hunted down and sunk by the Royal Navy in 1941?	The Bismarck	The Tirpitz	The Graf Spee	The Scharnhorst
+his_norwegian_collaborator_became	Hard	Which Norwegian collaborator's name became a byword for 'traitor'?	Vidkun Quisling	Knut Hamsun	Roald Amundsen	Fridtjof Nansen
+his_soviet_tank_built	Hard	Which Soviet tank was built in greater numbers than any other in the war?	The T-34	The KV-1	The IS-2	The T-26
+his_lend_lease	Hard	What was 'Lend-Lease'?	US weapons and supplies sent to the Allies	A German plan to rent French factories	A treaty on prisoners of war	Japan's lease of Chinese ports
+his_american_admiral_took	Hard	Which American admiral took command of the Pacific Fleet after Pearl Harbor?	Chester Nimitz	William Halsey	Douglas MacArthur	Raymond Spruance
+his_japanese_admiral_planned	Hard	Which Japanese admiral planned the attack on Pearl Harbor?	Isoroku Yamamoto	Hideki Tojo	Chuichi Nagumo	Mitsuo Fuchida
+wh_bretton_woods	Expert	The 1944 Bretton Woods conference established, among other things...	The International Monetary Fund	NATO	The European Union	The Bank of England
+hx_nawaho	Expert	Which Native American people's language served as an unbreakable code for US Marines in World War II?	The Navajo	The Cherokee	The Sioux	The Apache
+hy_missouri	Expert	On which ship did Japan formally surrender in 1945?	USS Missouri	USS Arizona	USS Enterprise	HMS Victory
+his_code_1940_evacuation	Expert	What was the code name of the 1940 evacuation of Allied troops from Dunkirk?	Operation Dynamo	Operation Overlord	Operation Sea Lion	Operation Torch

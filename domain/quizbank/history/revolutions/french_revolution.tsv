@@ -1,0 +1,34 @@
+# Francja 1789-1799: Bastylia, gilotyna, terror, Marsylianka.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+wh_bastylia	Easy	The storming of which fortress is considered the start of the French Revolution?	The Bastille	The Louvre	Versailles	The Conciergerie
+his_maria_antonina	Easy	Which French queen was executed by guillotine during the Revolution?	Marie Antoinette	Catherine de' Medici	Anne of Austria	Josephine
+hx_marsylianka	Easy	Which song was born in the French Revolution and became France's national anthem?	La Marseillaise	Le Chant du Depart	La Parisienne	Ode to Joy
+his_main_method_execution	Easy	What was the main method of execution during the Reign of Terror?	The guillotine	Hanging	The firing squad	Burning at the stake
+his_date_france_national	Easy	On which date is France's national day, marking an attack on a Paris prison in 1789?	14 July	1 May	11 November	4 July
+his_motto_french_revolution	Easy	What was the famous motto of the French Revolution?	'Liberty, equality, fraternity'	'God, king and country'	'Peace, land and bread'	'Unity, faith, discipline'
+his_colours_make_french	Easy	Which colours make up the French tricolour flag born in the Revolution?	Blue, white and red	Green, white and red	Black, red and gold	Blue and yellow
+his_rewolucja_fr	Medium	In which year did the French Revolution break out?	1789	1799	1776	1804
+his_french_king_guillotined	Medium	Which French king was guillotined in 1793?	Louis XVI	Louis XIV	Louis XV	Charles X
+his_royal_family_ruled	Medium	Which royal family ruled France at the time of the French Revolution?	Bourbon	Valois	Habsburg	Plantagenet
+his_document_august_1789	Medium	Which document of August 1789 proclaimed that men are born free and equal in rights?	The Declaration of the Rights of Man	The Napoleonic Code	The Social Contract	The Constitution of 1791
+his_radical_political_club	Medium	Which radical political club did Robespierre lead?	The Jacobins	The Girondins	The Cordeliers	The Feuillants
+his_thousands_paris_women	Medium	Why did thousands of Paris women march on Versailles in October 1789?	To demand bread	To free prisoners	To vote	To see the queen's jewels
+his_system_measurement_revolutionary	Medium	Which system of measurement did revolutionary France give the world?	The metric system	The imperial system	The decimal clock	The Celsius scale
+his_happened_french_monarchy	Medium	What happened to the French monarchy in September 1792?	It was abolished	It was restored	It moved to Lyon	It became elected
+his_instead_monsieur_french	Medium	Instead of 'monsieur', what did French revolutionaries call each other?	Citizen	Comrade	Brother	Friend
+org_gilotyna_lekarz	Hard	The man behind the guillotine's name actually did what?	Proposed it as a humane method	Built the first one	Was executed by it	Sharpened its blade
+hx_robespierre	Hard	Which revolutionary led the 'Reign of Terror' before being guillotined himself in 1794?	Maximilien Robespierre	Georges Danton	Jean-Paul Marat	Napoleon Bonaparte
+his_assembly_met_1789	Hard	Which assembly met in 1789 for the first time since 1614, setting off the Revolution?	The Estates-General	The National Convention	The Directory	The Paris Commune
+his_oath_sworn_third	Hard	What was the oath sworn by the Third Estate's deputies in June 1789 called?	The Tennis Court Oath	The Oath of the Horatii	The Bastille Oath	The Versailles Oath
+his_working_class_paris	Hard	What were the working-class Paris revolutionaries, who wore trousers instead of breeches, called?	Sans-culottes	Girondins	Chouans	Emigres
+his_revolutionary_leader_guillotined	Hard	Which revolutionary leader was guillotined in 1794 for urging an end to the Terror?	Georges Danton	Maximilien Robespierre	Jean-Paul Marat	Louis de Saint-Just
+his_young_woman_stabbed	Hard	Which young woman stabbed Jean-Paul Marat to death in 1793?	Charlotte Corday	Olympe de Gouges	Madame Roland	Lucile Desmoulins
+his_directory_ruled_france	Hard	What was the 'Directory' that ruled France from 1795 to 1799?	A government of five men	A list of enemies of the state	A royal council	A secret police
+his_painter_showed_murdered	Hard	Which painter showed the murdered Marat in his bath in a famous painting?	Jacques-Louis David	Eugene Delacroix	Francisco Goya	Jean-Auguste Ingres
+hx_marat_wanna	Expert	Revolutionary Jean-Paul Marat was murdered in 1793 while doing what?	Taking a bath	Giving a speech	Eating dinner	Riding in a carriage
+hx_bastylia_wiezniowie	Expert	How many prisoners were inside the Bastille when it was stormed in 1789?	Seven	About 70	About 700	None
+hx_gilotyna_1977	Expert	In which year did France carry out its last execution by guillotine?	1977	1871	1918	1946
+hx_kalendarz_rewolucyjny	Expert	The French Revolutionary calendar split months into 'weeks' of how many days?	10	5	6	8
+hy_varennes	Expert	Where were Louis XVI and Marie Antoinette caught trying to flee France in 1791?	Varennes	Versailles	Calais	Strasbourg
+his_coup_july_1794	Expert	What is the coup of July 1794 that brought down Robespierre called?	Thermidor	Brumaire	Fructidor	Vendemiaire
+his_royalist_catholic_uprising	Expert	Which royalist and Catholic uprising in western France was savagely crushed in 1793-1796?	The War in the Vendee	The Fronde	The Camisard revolt	The Jacquerie

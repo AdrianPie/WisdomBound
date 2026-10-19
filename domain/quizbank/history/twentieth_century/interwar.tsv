@@ -1,0 +1,35 @@
+# Lata 1919-1939: szalone lata dwudzieste, prohibicja, wielki kryzys, dyktatorzy i droga do wojny.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+hx_prohibicja	Easy	What was banned in the USA during Prohibition, from 1920 to 1933?	Alcohol	Tobacco	Gambling	Jazz
+his_italian_dictator_himself	Easy	Which Italian dictator called himself 'Il Duce'?	Benito Mussolini	Francisco Franco	Giuseppe Garibaldi	Victor Emmanuel III
+his_lively_dance_craze	Easy	Which lively dance was the craze of the 'Roaring Twenties'?	The Charleston	The Twist	The Jive	The Tango
+his_party_adolf_hitler	Easy	Which party did Adolf Hitler lead?	The Nazi Party	The Communist Party	The Fascist Party	The Christian Democrats
+wh_wielki_kryzys	Medium	The crash of which stock exchange started the Great Depression in 1929?	New York's	London's	Frankfurt's	Tokyo's
+his_edward_viii	Medium	Which British king gave up the throne in 1936 to marry an American divorcee?	Edward VIII	George VI	George V	Edward VII
+hx_capone	Medium	For which crime was gangster Al Capone finally sent to prison?	Tax evasion	Murder	Bank robbery	Smuggling
+hx_hitler_kraj	Medium	In which country was Adolf Hitler born?	Austria	Germany	Switzerland	Hungary
+hx_ataturk	Medium	Who founded the modern Republic of Turkey in 1923?	Mustafa Kemal Ataturk	Enver Pasha	Suleiman the Magnificent	Selim III
+hx_bonnie_clyde	Medium	Bonnie and Clyde were famous in 1930s America as what?	Bank robbers	Jazz singers	Stunt pilots	Film stars
+hx_alcatraz	Medium	Which island prison stands in San Francisco Bay?	Alcatraz	Robben Island	Rikers Island	Devil's Island
+hx_hitler_malarz	Medium	What did Adolf Hitler hope to become as a young man, before an art academy in Vienna rejected him?	A painter	An opera singer	A priest	An engineer
+hy_new_deal	Medium	Which US president launched the 'New Deal' to fight the Great Depression?	Franklin D. Roosevelt	Herbert Hoover	Harry Truman	Woodrow Wilson
+hy_hitler_1933	Medium	In which year did Hitler come to power in Germany?	1933	1929	1939	1923
+his_british_prime_minister	Medium	Which British prime minister promised 'peace for our time' after meeting Hitler in 1938?	Neville Chamberlain	Winston Churchill	Stanley Baldwin	Clement Attlee
+his_maginot_line	Medium	What was the Maginot Line?	French forts facing Germany	A German wall on the Atlantic	The border between the Koreas	A Cold War spy network
+his_dictator_ruled_spain	Medium	Which dictator ruled Spain from the end of its civil war until 1975?	Francisco Franco	Antonio Salazar	Benito Mussolini	Miguel Primo de Rivera
+his_dust_storms_ruined	Medium	What were the dust storms that ruined farms on the American Great Plains in the 1930s called?	The Dust Bowl	The Black Blizzards	The Sand Storms	The Great Drought
+his_hidden_bars_prohibition	Medium	What were the hidden bars of the Prohibition era called?	Speakeasies	Saloons	Taverns	Juke joints
+his_hitler_failed_attempt	Medium	What was Hitler's failed attempt to seize power in Munich in 1923 called?	The Beer Hall Putsch	The Kapp Putsch	The Reichstag Fire	The Night of the Long Knives
+his_book_hitler_write	Medium	Which book did Hitler write while in prison in the 1920s?	'Mein Kampf'	'Das Kapital'	'The Prince'	'Der Sturmer'
+his_bombing_basque_town	Medium	The bombing of which Basque town in 1937 inspired a famous painting by Picasso?	Guernica	Bilbao	Madrid	Toledo
+his_march_1922_brought	Medium	Which march of 1922 brought Mussolini to power in Italy?	The March on Rome	The March on Milan	The Long March	The Salt March
+his_kristallnacht_november_1938	Medium	What was 'Kristallnacht', in November 1938?	A night of Nazi violence against Jews	A festival of the Nazi Party	A bombing raid on Berlin	A famous opera premiere
+his_year_german_money	Medium	In which year did German money become almost worthless in a wave of hyperinflation?	1923	1929	1933	1919
+his_african_country_mussolini	Medium	Which African country did Mussolini's Italy invade in 1935?	Ethiopia	Libya	Somalia	Egypt
+his_wojna_emu	Hard	In 1932, Australian soldiers with machine guns fought, and lost, a 'war' against which animals?	Emus	Kangaroos	Rabbits	Dingoes
+hx_liga_narodow	Hard	Which international body, founded after World War I, came before the United Nations?	The League of Nations	The Council of Europe	The Hague Tribunal	The Concert of Europe
+hy_monachium	Hard	Which 1938 agreement let Hitler take part of Czechoslovakia?	The Munich Agreement	The Treaty of Versailles	The Molotov-Ribbentrop Pact	The Yalta Agreement
+his_country_nazi_germany	Hard	Which country did Nazi Germany annex in 1938, in the 'Anschluss'?	Austria	Czechoslovakia	Poland	Hungary
+his_night_long_knives	Hard	What was the 'Night of the Long Knives' in 1934?	Hitler's purge of his own Nazi rivals	A Nazi attack on Jewish shops	The burning of the Reichstag	A failed plot to kill Hitler
+his_german_region_next	Hard	Which German region next to France did Hitler send troops into in 1936, breaking the Treaty of Versailles?	The Rhineland	Alsace	The Saarland	Bavaria
+his_treaty_1921_created	Hard	Which treaty of 1921 created the Irish Free State?	The Anglo-Irish Treaty	The Good Friday Agreement	The Treaty of Limerick	The Act of Union

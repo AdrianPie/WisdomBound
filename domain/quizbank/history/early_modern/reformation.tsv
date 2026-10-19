@@ -1,0 +1,32 @@
+# Od Husa i Lutra do pokoju westfalskiego: Kalwin, kontrreformacja, wojny religijne, wojna trzydziestoletnia.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+wh_reformacja_luter	Easy	Who started the Reformation by posting 95 theses?	Martin Luther	John Calvin	Ulrich Zwingli	Jan Hus
+his_feared_spanish_church	Easy	Which feared Spanish church court hunted down heretics from 1478?	The Spanish Inquisition	The Star Chamber	The Holy Office of Rome	The Royal Tribunal
+his_recent_invention_helped	Easy	Which recent invention helped Luther's ideas spread across Europe in weeks?	The printing press	The telescope	The postal service	The newspaper
+his_pardons_sins_sold	Medium	What were the pardons for sins, sold by the Church, that angered Martin Luther?	Indulgences	Tithes	Relics	Sacraments
+his_language_martin_luther	Medium	Into which language did Martin Luther translate the Bible?	German	English	French	Dutch
+his_french_theologian_led	Medium	Which French theologian led the Reformation in Geneva?	John Calvin	John Knox	Ulrich Zwingli	Thomas Cranmer
+his_given_reformers_protested	Medium	Which name was given to the reformers after they protested at the Diet of Speyer in 1529?	Protestants	Puritans	Lutherans	Calvinists
+his_catholic_order_ignatius	Medium	Which Catholic order did Ignatius of Loyola found in 1540?	The Jesuits	The Franciscans	The Dominicans	The Benedictines
+his_church_council_meeting	Medium	Which church council, meeting from 1545 to 1563, led the Catholic Counter-Reformation?	The Council of Trent	The Council of Nicaea	The Council of Constance	The First Vatican Council
+his_killing_thousands_french	Medium	What is the killing of thousands of French Protestants in Paris in 1572 called?	The St Bartholomew's Day Massacre	The Sicilian Vespers	The Night of the Long Knives	The Massacre of Glencoe
+his_protestants_france	Medium	What were the Protestants of France called?	Huguenots	Puritans	Anabaptists	Hussites
+his_thirty_years_war	Medium	Where did the Thirty Years' War kill perhaps a third of the population?	In the German lands	In England	In Spain	In Scandinavia
+hx_kalendarz_grzegorz	Hard	Which pope gave his name to the calendar most of the world uses today?	Gregory XIII	Julius II	Leo X	Sixtus V
+hx_wittenberga	Hard	On the door of a church in which German town did Luther post his 95 Theses?	Wittenberg	Worms	Leipzig	Erfurt
+his_assembly_1521_luther	Hard	At which assembly of 1521 did Luther refuse to take back his writings?	The Diet of Worms	The Council of Trent	The Diet of Augsburg	The Council of Constance
+his_swiss_reformer_led	Hard	Which Swiss reformer led the Reformation in Zurich?	Ulrich Zwingli	John Calvin	Martin Bucer	Philip Melanchthon
+his_french_king_protestant	Hard	Which French king, a Protestant who turned Catholic, is said to have joked 'Paris is well worth a Mass'?	Henry IV	Louis XIII	Francis I	Charles IX
+his_edict_1598_gave	Hard	Which edict of 1598 gave French Protestants the right to worship?	The Edict of Nantes	The Edict of Milan	The Edict of Worms	The Edict of Fontainebleau
+his_swedish_king_lion	Hard	Which Swedish king, 'the Lion of the North', was killed at the Battle of Lutzen in 1632?	Gustavus Adolphus	Charles XII	Gustav Vasa	Christian IV
+his_catholic_general_thirty	Hard	Which Catholic general of the Thirty Years' War was murdered on his emperor's orders in 1634?	Albrecht von Wallenstein	Count Tilly	Prince Eugene	Count Pappenheim
+his_scholar_executed_1536	Hard	Which scholar was executed in 1536 for translating the Bible into English?	William Tyndale	John Wycliffe	Thomas More	Thomas Cranmer
+his_catholic_church_official	Hard	What was the Catholic Church's official list of banned books called?	The Index	The Canon	The Codex	The Register
+his_medici_pope_excommunicated	Hard	Which Medici pope excommunicated Martin Luther in 1521?	Leo X	Julius II	Clement VII	Paul III
+his_peace_1555_let	Hard	Which peace of 1555 let each German prince choose his lands' religion?	The Peace of Augsburg	The Peace of Westphalia	The Peace of Prague	The Peace of Utrecht
+his_long_dutch_revolt	Hard	Which long Dutch revolt against Spain, from 1568, created the Dutch Republic?	The Eighty Years' War	The Thirty Years' War	The Hundred Years' War	The Seven Years' War
+his_led_dutch_revolt	Hard	Who led the Dutch revolt against Spain until he was shot dead in 1584?	William the Silent	Maurice of Nassau	Count Egmont	The Duke of Alba
+his_westfalski	Expert	In which year did the Peace of Westphalia end the Thirty Years' War?	1648	1618	1659	1667
+dpt_his_defenestracja	Expert	The Defenestration of Prague set off which war?	The Thirty Years' War	The Hussite Wars	The Seven Years' War	The War of the Roses
+hy_hus	Expert	Which Czech reformer was burned at the stake in 1415, a century before Luther?	Jan Hus	John Wycliffe	Jan Zizka	Thomas Muntzer
+his_radical_protestant_sect	Expert	Which radical Protestant sect seized the German city of Munster in 1534?	The Anabaptists	The Calvinists	The Hussites	The Quakers

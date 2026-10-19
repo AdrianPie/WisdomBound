@@ -1,0 +1,33 @@
+# Dzial przekrojowy: wladczynie, przywodczynie, uczone i dzialaczki, ktore zapisaly sie w historii.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+trv_curie_nobel	Easy	Who was the first woman to win a Nobel Prize?	Marie Curie	Rosalind Franklin	Lise Meitner	Florence Nightingale
+his_elzbieta_ii	Easy	Which monarch reigned for over 70 years, the longest in British history?	Elizabeth II	Victoria	Elizabeth I	George III
+his_zelazna_dama	Easy	Which leader was nicknamed 'the Iron Lady'?	Margaret Thatcher	Angela Merkel	Indira Gandhi	Golda Meir
+his_nightingale	Easy	Which nurse was known as 'the Lady with the Lamp'?	Florence Nightingale	Mary Seacole	Clara Barton	Edith Cavell
+his_germany_female_chancellor	Easy	Who was Germany's first female chancellor?	Angela Merkel	Ursula von der Leyen	Annalena Baerbock	Christine Lagarde
+his_catholic_nun_won	Easy	Which Catholic nun won the 1979 Nobel Peace Prize for her work in Calcutta?	Mother Teresa	Florence Nightingale	Edith Cavell	Clara Barton
+his_pakistani_activist_became	Easy	Which Pakistani activist became the youngest Nobel Peace Prize winner, in 2014?	Malala Yousafzai	Greta Thunberg	Benazir Bhutto	Shirin Ebadi
+his_argentine_lady_nicknamed	Medium	Which Argentine first lady, nicknamed 'Evita', inspired a famous musical?	Eva Peron	Isabel Peron	Cristina Kirchner	Mercedes Sosa
+his_woman_become_vice	Medium	Who was the first woman to become Vice President of the United States?	Kamala Harris	Hillary Clinton	Nancy Pelosi	Sarah Palin
+his_lady_chaired_committee	Medium	Which first lady chaired the committee that drafted the Universal Declaration of Human Rights?	Eleanor Roosevelt	Jacqueline Kennedy	Edith Wilson	Bess Truman
+his_became_woman_secretary	Medium	Who became the first woman US Secretary of State, in 1997?	Madeleine Albright	Hillary Clinton	Condoleezza Rice	Nancy Pelosi
+his_kenyan_environmentalist_won	Medium	Which Kenyan environmentalist won the Nobel Peace Prize in 2004 for planting millions of trees?	Wangari Maathai	Ellen Johnson Sirleaf	Leymah Gbowee	Graca Machel
+his_burmese_democracy_leader	Medium	Which Burmese democracy leader won the Nobel Peace Prize in 1991 while under house arrest?	Aung San Suu Kyi	Benazir Bhutto	Corazon Aquino	Megawati Sukarnoputri
+his_american_campaigner_arrested	Medium	Which American campaigner was arrested for casting a vote in the 1872 election?	Susan B. Anthony	Rosa Parks	Eleanor Roosevelt	Amelia Earhart
+his_deaf_blind_american	Medium	Which deaf and blind American woman became a world-famous author and activist?	Helen Keller	Anne Sullivan	Louisa May Alcott	Harriet Beecher Stowe
+his_nasa_mathematician_shown	Medium	Which NASA mathematician, shown in the film 'Hidden Figures', calculated flight paths for early astronauts?	Katherine Johnson	Grace Hopper	Margaret Hamilton	Sally Ride
+his_english_pilot_woman	Medium	Which English pilot was the first woman to fly solo from Britain to Australia, in 1930?	Amy Johnson	Amelia Earhart	Beryl Markham	Jean Batten
+his_mathematician_lord_byron	Medium	Which mathematician, Lord Byron's daughter, is often called the first computer programmer?	Ada Lovelace	Mary Somerville	Grace Hopper	Emmy Noether
+hy_indira	Hard	Who was India's first woman prime minister?	Indira Gandhi	Sonia Gandhi	Benazir Bhutto	Pratibha Patil
+his_became_africa_elected	Hard	Who became Africa's first elected female head of state, in Liberia in 2006?	Ellen Johnson Sirleaf	Joyce Banda	Wangari Maathai	Graca Machel
+his_nurse_founded_american	Hard	Which nurse founded the American Red Cross in 1881?	Clara Barton	Dorothea Dix	Florence Nightingale	Mary Seacole
+his_english_writer_argued	Hard	Which English writer argued for women's equality in 'A Vindication of the Rights of Woman' in 1792?	Mary Wollstonecraft	Jane Austen	Mary Shelley	Emmeline Pankhurst
+his_campaigner_organised_women	Hard	Which campaigner organised the first women's rights convention, at Seneca Falls in 1848?	Elizabeth Cady Stanton	Susan B. Anthony	Harriet Tubman	Sojourner Truth
+his_indian_queen_jhansi	Hard	Which Indian queen of Jhansi died fighting the British during the rebellion of 1857?	Rani Lakshmibai	Rani Padmini	Razia Sultana	Begum Hazrat Mahal
+his_woman_qualify_doctor	Hard	Who was the first woman to qualify as a doctor in Britain, in 1865?	Elizabeth Garrett Anderson	Elsie Inglis	Florence Nightingale	Sophia Jex-Blake
+hy_bhutto	Expert	Who became the first woman to lead a Muslim-majority country, in Pakistan in 1988?	Benazir Bhutto	Indira Gandhi	Tansu Ciller	Megawati Sukarnoputri
+hy_golda_meir	Expert	Which woman became Israel's prime minister in 1969?	Golda Meir	Indira Gandhi	Margaret Thatcher	Benazir Bhutto
+hy_sirimavo	Expert	Who became the world's first woman prime minister, in Ceylon in 1960?	Sirimavo Bandaranaike	Indira Gandhi	Golda Meir	Margaret Thatcher
+his_became_world_democratically	Expert	Who became the world's first democratically elected female president, in Iceland in 1980?	Vigdis Finnbogadottir	Golda Meir	Indira Gandhi	Gro Harlem Brundtland
+his_woman_win_nobel	Expert	Who was the first woman to win the Nobel Peace Prize, in 1905?	Bertha von Suttner	Jane Addams	Marie Curie	Mother Teresa
+his_indian_poet_freedom	Expert	Which Indian poet and freedom fighter was called 'the Nightingale of India'?	Sarojini Naidu	Indira Gandhi	Annie Besant	Kasturba Gandhi

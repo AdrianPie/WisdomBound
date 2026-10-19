@@ -1,0 +1,36 @@
+# Olmekowie, Majowie, Aztekowie i Inkowie - oraz ich upadek z rak konkwistadorow.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+his4_tenochtitlan_kto	Easy	Which empire was ruled from the city of Tenochtitlan?	The Aztec empire	The Inca empire	The Maya city-states	The Olmec
+trv_machu_picchu	Easy	Which civilisation built Machu Picchu?	The Inca	The Aztecs	The Maya	The Olmecs
+hx_aztekowie_orzel	Easy	According to legend, the Aztecs built their capital where they saw an eagle perched on what?	A cactus	A volcano	A pyramid	A rainbow
+his_capital_city_built	Easy	Which capital city was built on the ruins of the Aztec capital Tenochtitlan?	Mexico City	Lima	Guatemala City	Havana
+his_animal_inca_use	Easy	Which animal did the Inca use to carry loads through the Andes?	The llama	The camel	The donkey	The horse
+his_present_day_country_4	Easy	In which present-day country did the Aztec Empire rule?	Mexico	Peru	Guatemala	Colombia
+wh_aztekowie_zdobywca	Medium	Which conquistador toppled the Aztec empire?	Hernan Cortes	Francisco Pizarro	Vasco Nunez de Balboa	Diego de Almagro
+his_chichen_itza	Medium	Which civilisation built the pyramid city of Chichen Itza?	The Maya	The Aztecs	The Inca	The Olmecs
+hx_majowie_2012	Medium	Which civilisation's calendar was wrongly said to predict the end of the world in 2012?	The Maya	The Aztecs	The Inca	The Olmecs
+hy_czekolada_aztekow	Medium	How did the Aztecs drink their chocolate?	As a bitter, spicy drink	As hot sweet cocoa	Frozen into ice	Mixed with fresh milk
+his_capital_inca_empire	Medium	What was the capital of the Inca Empire?	Cusco	Lima	Quito	La Paz
+his_mesoamerican_people_built	Medium	Which Mesoamerican people built the giant stone heads found in Mexico's Gulf Coast?	Olmecs	Aztecs	Maya	Toltecs
+his_language_still_spoken	Medium	Which language, still spoken by millions in the Andes, did the Inca speak?	Quechua	Nahuatl	Aymara	Guarani
+his_civilisation_played_ritual	Medium	Which civilisation played a ritual ball game in which players hit a rubber ball through stone hoops?	The Maya	The Inca	The Olmec	The Navajo
+his_ancient_city_near	Medium	Which ancient city near Mexico City has the huge Pyramids of the Sun and the Moon?	Teotihuacan	Chichen Itza	Tikal	Palenque
+his_aztecs_believe_offer	Medium	What did the Aztecs believe they had to offer the gods to keep the sun moving?	Human hearts	Gold jewellery	Maize cakes	Jaguar skins
+his_disease_killed_aztecs	Medium	Which disease killed most of the Aztecs during the Spanish conquest?	Smallpox	Malaria	The plague	Cholera
+his_crop_ancient_mexicans	Medium	Which crop did ancient Mexicans breed from a wild grass called teosinte?	Maize	Wheat	Rice	Potatoes
+his_inca_build_walls	Medium	How did the Inca build walls so well that a knife blade cannot fit between the stones?	By cutting the stones to fit exactly	By using a strong mortar	By melting the stone edges	By using metal clamps
+his_nazca_lines_peru	Medium	What are the Nazca Lines in Peru?	Giant drawings scratched into the desert	Ancient Inca roads	Rows of stone statues	Canals cut through the hills
+his2_inkowie_kraj	Hard	The heartland of the Inca empire lay in which present-day country?	Peru	Mexico	Brazil	Colombia
+wh_inkowie_zdobywca	Hard	Which conquistador conquered the Inca empire?	Francisco Pizarro	Hernan Cortes	Juan Ponce de Leon	Hernando de Soto
+his_aztekowie_kakao	Hard	What did the Aztecs use as a kind of money?	Cocoa beans	Gold coins	Salt blocks	Sea shells
+hx_inkowie_kolo	Hard	The Inca built some 40,000 km of roads, yet never used what for transport?	Wheeled vehicles	Llamas	Rope bridges	Relay runners
+his_emperor_ruled_aztecs	Hard	Which emperor ruled the Aztecs when the Spanish arrived in 1519?	Moctezuma II	Atahualpa	Cuauhtemoc	Pachacuti
+his_aztec_language_gave	Hard	Which Aztec language gave English the words 'chocolate' and 'tomato'?	Nahuatl	Quechua	Maya	Guarani
+his_great_maya_city	Hard	Which great Maya city in the jungles of Guatemala has temples rising above the trees?	Tikal	Palenque	Copan	Uxmal
+his_floating_garden_fields	Hard	What were the floating garden fields of the Aztecs called?	Chinampas	Milpas	Terraces	Haciendas
+his_inca_ruler_means	Hard	Which Inca ruler, whose name means 'earth-shaker', turned Cusco's kingdom into an empire?	Pachacuti	Atahualpa	Huascar	Manco Capac
+dpt_his_kipu	Expert	Which civilisation kept records on knotted cords called quipu?	The Inca	The Maya	The Aztecs	The Toltecs
+cur_oxford_aztekowie	Expert	Which is older: the University of Oxford or the Aztec Empire?	The University of Oxford	The Aztec Empire	They were founded the same year	Neither - both date from the 1700s
+hx_atahualpa	Expert	Which Inca emperor offered to fill a room with gold in exchange for his freedom?	Atahualpa	Huascar	Pachacuti	Manco Capac
+his_maya_city_lies	Expert	In which Maya city lies the tomb of King Pakal, inside the Temple of the Inscriptions?	Palenque	Tikal	Copan	Calakmul
+his_great_inca_road	Expert	What was the great Inca road network, now a World Heritage Site, called?	Qhapaq Nan	Camino Real	Inca Way	Ruta del Sol

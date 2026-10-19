@@ -1,0 +1,32 @@
+# Rycerze, zamki, oblezenia, turnieje, herby i feudalizm - zycie wojownika sredniowiecza.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+his_boy_trained_become	Easy	What was a boy who trained to become a knight called, after serving as a page?	A squire	A herald	A yeoman	A jester
+his_medieval_sport_knights	Easy	What was the medieval sport of knights charging at each other with lances called?	Jousting	Fencing	Archery	Falconry
+his_water_filled_ditch	Easy	What was the water-filled ditch around a castle called?	A moat	A keep	A rampart	A bailey
+his_strongest_tower_heart	Easy	What was the strongest tower at the heart of a castle called?	The keep	The bailey	The gatehouse	The bastion
+his_bridge_over_castle	Easy	What was the bridge over a castle moat that could be pulled up called?	A drawbridge	A portcullis	A rampart	A causeway
+his_medieval_code_brave	Easy	What was the medieval code of brave and courteous knightly behaviour called?	Chivalry	Bushido	Heraldry	Courtesy
+his_armour_linked_metal	Easy	Which armour of linked metal rings did knights wear before plate armour?	Chain mail	Leather jerkins	Bronze scales	Padded silk
+his_peasants_bound_work	Easy	What were peasants who were bound to work their lord's land called?	Serfs	Knights	Squires	Burghers
+his_part_knight_body	Easy	Which part of a knight's body did his gauntlets protect?	His hands	His feet	His neck	His knees
+his_giant_medieval_siege	Medium	What was the giant medieval siege engine that hurled stones using a counterweight called?	A trebuchet	A battering ram	A ballista	A siege tower
+his_heavy_grille_dropped	Medium	What was the heavy grille that could be dropped to block a castle gateway called?	A portcullis	A drawbridge	A barbican	A parapet
+his_squire_usually_made	Medium	How was a squire usually made into a knight?	With a tap on the shoulder by a sword	By winning three tournaments	By killing a dragon	By swearing on a shield
+his_system_coats_arms	Medium	What is the system of coats of arms painted on knights' shields called?	Heraldry	Chivalry	Calligraphy	Iconography
+his_roughly_full_suit	Medium	Roughly how much did a full suit of 15th-century plate armour weigh?	About 20 kg	About 5 kg	About 60 kg	About 100 kg
+his_narrow_openings_castle	Medium	What were the narrow openings in castle walls for shooting through called?	Arrow slits	Murder holes	Battlements	Garderobes
+his_tooth_like_top	Medium	What is the tooth-like top of a castle wall, with gaps for archers, called?	Battlements	Buttresses	Turrets	Gables
+his_system_land_given	Medium	What was the system of land given in return for military service and loyalty called?	Feudalism	Mercantilism	Monarchy	Serfdom
+his_earliest_kind_norman	Medium	What was the earliest kind of Norman castle, a wooden tower on an earth mound?	A motte-and-bailey	A concentric castle	A shell keep	A tower house
+his_besiegers_dig_under	Medium	What did besiegers dig under castle walls to bring them crashing down?	Tunnels	Moats	Trenches	Wells
+his_weapon_spiked_ball	Medium	What is the weapon with a spiked ball on a chain attached to a handle called?	A flail	A mace	A halberd	A glaive
+his_pole_weapon_combines	Medium	Which pole weapon combines an axe blade with a spear point?	A halberd	A lance	A pike	A trident
+his_usually_happened_noble	Medium	What usually happened to a noble knight captured in battle?	He was held for ransom	He was executed at once	He became a monk	He was made a serf
+his_knight_big_strong	Hard	What was a knight's big, strong war horse called?	A destrier	A palfrey	A pony	A courser
+his_openings_overhanging_parapet	Hard	What were the openings in an overhanging parapet, for dropping stones on attackers, called?	Machicolations	Crenellations	Embrasures	Buttresses
+his_english_king_built	Hard	Which English king built a ring of great castles in Wales, including Caernarfon and Harlech?	Edward I	Henry II	Richard I	William the Conqueror
+his_medieval_castle_toilet	Hard	What was a medieval castle toilet, often a seat over a shaft in the wall, called?	A garderobe	A buttery	A solar	An oubliette
+his_token_such_scarf	Hard	What token, such as a scarf or a sleeve, might a lady give her chosen knight at a tournament?	A favour	A pledge	A banner	A gauntlet
+his_scutage_shield_money	Expert	What was 'scutage', or 'shield money'?	A payment instead of military service	A tax on armour makers	A reward for a captured knight	A fee to enter a tournament
+his_church_council_1139	Expert	Which church council of 1139 tried to ban the use of crossbows against Christians?	The Second Lateran Council	The Council of Trent	The Council of Nicaea	The Council of Clermont
+his_french_knight_famed	Expert	Which French knight was famed as the knight 'without fear and beyond reproach'?	Bayard	Roland	Lancelot	Du Guesclin

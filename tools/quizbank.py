@@ -2,25 +2,32 @@
 """
 Baza pytan quizu LernHero: podglad, sprawdzanie, dopisywanie i generowanie kodu.
 
-Pytania wyboru (jedna poprawna + trzy bledne odpowiedzi) mieszkaja w domain/quizbank/<temat>.tsv:
-jedno pytanie = jedna linia, kolumny rozdzielone tabulatorem. To jest ZRODLO PRAWDY. Pliki
-<Temat>Questions.kt w domain/src/commonMain/.../quiz/bank sa z niego GENEROWANE - recznych zmian
-w nich sie nie robi, bo nastepne `generate` je nadpisze (a QuizBankTsvSyncTest wylapie rozjazd).
+Pytania wyboru (jedna poprawna + trzy bledne odpowiedzi) mieszkaja w domain/quizbank: jedno pytanie
+= jedna linia TSV, kolumny rozdzielone tabulatorem. To jest ZRODLO PRAWDY. Pliki <Temat>Questions.kt
+w domain/src/commonMain/.../quiz/bank sa z niego GENEROWANE - recznych zmian w nich sie nie robi,
+bo nastepne `generate` je nadpisze (a QuizBankTsvSyncTest wylapie rozjazd).
+
+Temat to albo jeden plik (biology.tsv), albo katalog podzielony na DZIALY (history/antiquity/
+roman_empire.tsv). Nazwy i kolejnosc dzialow stoja w domain/quizbank/sections.tsv, a z niego
+powstaje QuizSectionCatalog.kt.
 
 Typowa sesja dopisywania pytan (szczegoly: domain/quizbank/README.md):
 
-    python3 tools/quizbank.py stats                  # ile pytan w ktorym temacie i na ktorym poziomie
-    python3 tools/quizbank.py list history -d E      # podglad tematu (opcjonalnie poziomu / frazy)
+    python3 tools/quizbank.py stats                  # ile pytan w ktorym temacie, dziale i na ktorym poziomie
+    python3 tools/quizbank.py list history/antiquity -d E   # podglad tematu albo dzialu
     python3 tools/quizbank.py find churchill         # szukaj w CALYM banku, wszystkie typy pytan
     python3 tools/quizbank.py check nowe.txt         # sprawdz nowe pytania - niczego nie zapisuje
     python3 tools/quizbank.py add nowe.txt           # check + dopisz do TSV + wygeneruj Kotlin
+    python3 tools/quizbank.py move ID... --to DZIAL  # przenies pytania do innego dzialu
     python3 tools/quizbank.py generate [--check]     # TSV -> Kotlin (--check: tylko porownaj)
 
 Plik z nowymi pytaniami: naglowek + jedna linia na pytanie, kolumny rozdzielone tabulatorem albo
-znakiem '|'. Kolumna id jest opcjonalna - bez niej skrypt nada unikalne id sam.
+znakiem '|'. Kolumna id jest opcjonalna - bez niej skrypt nada unikalne id sam. W kolumnie topic
+stoi temat (biology) albo, w temacie z dzialami, dzial: pelna sciezka (history/antiquity/roman_empire)
+albo sama nazwa liscia, jesli jest jednoznaczna (roman_empire).
 
     topic | difficulty | prompt | correct | wrong1 | wrong2 | wrong3
-    history | Easy | Who led the Soviet Union during World War II? | Joseph Stalin | Vladimir Lenin | ...
+    world_war_2 | Easy | Who led the Soviet Union during World War II? | Joseph Stalin | ...
 
 `check` odtwarza warunki z QuizBankTest i QuizBankAuditTest (te same progi i listy, czytane wprost
 z pliku testu) i dorzuca ostrzezenia, ktorych testy nie lapia: podobny fakt przy tej samej
@@ -34,6 +41,7 @@ import argparse
 import glob
 import os
 import re
+import signal
 import sys
 import unicodedata
 from collections import Counter, defaultdict
@@ -41,7 +49,9 @@ from dataclasses import dataclass, field
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(ROOT, "domain", "quizbank")
+SECTIONS_TSV = os.path.join(DATA_DIR, "sections.tsv")
 KOTLIN_DIR = os.path.join(ROOT, "domain", "src", "commonMain", "kotlin", "com", "lernhero", "domain", "quiz", "bank")
+CATALOG_KT = os.path.join(KOTLIN_DIR, "QuizSectionCatalog.kt")
 AUDIT_TEST = os.path.join(
     ROOT, "domain", "src", "commonTest", "kotlin", "com", "lernhero", "domain", "quiz", "QuizBankAuditTest.kt"
 )
@@ -54,11 +64,13 @@ for _level, _letter in LETTER.items():
     LEVEL_BY_ALIAS[_letter.lower()] = _level
 
 COLUMNS = ["id", "difficulty", "prompt", "correct", "wrong1", "wrong2", "wrong3"]
+SECTION_COLUMNS = ["path", "label", "icon"]
+SEGMENT = re.compile(r"^[a-z][a-z0-9_]*$")
 
 
 @dataclass(frozen=True)
 class Topic:
-    key: str  # nazwa pliku TSV i nazwa tematu w plikach z nowymi pytaniami
+    key: str  # nazwa pliku TSV (albo katalogu z dzialami) i nazwa tematu w plikach z nowymi pytaniami
     obj: str  # generowany obiekt Kotlin
     category: str  # QuizCategory
     prefix: str  # prefiks id nadawanych nowym pytaniom
@@ -68,8 +80,17 @@ class Topic:
         return os.path.join(DATA_DIR, self.key + ".tsv")
 
     @property
+    def dir(self) -> str:
+        return os.path.join(DATA_DIR, self.key)
+
+    @property
     def kt(self) -> str:
         return os.path.join(KOTLIN_DIR, self.obj + ".kt")
+
+    @property
+    def split(self) -> bool:
+        """Czy temat jest podzielony na dzialy (katalog zamiast jednego pliku)."""
+        return os.path.isdir(self.dir)
 
 
 TOPICS = [
@@ -98,6 +119,7 @@ TOPIC_BY_NAME: dict[str, Topic] = {}
 for _t in TOPICS:
     for _alias in (_t.key, _t.obj, _t.category, _t.obj.replace("Questions", ""), _t.prefix):
         TOPIC_BY_NAME[_name_key(_alias)] = _t
+TOPIC_BY_KEY = {t.key: t for t in TOPICS}
 
 
 def topic_named(name: str) -> Topic | None:
@@ -105,14 +127,156 @@ def topic_named(name: str) -> Topic | None:
 
 
 # ------------------------------------------------------------------------------------------------
+# Dzialy (sections.tsv)
+
+
+@dataclass(frozen=True)
+class Section:
+    path: str  # history/antiquity/roman_empire
+    label: str  # Roman Empire
+    icon: str  # emoji pod przyszla grafike, jak QuizCategory.icon
+
+    @property
+    def topic(self) -> Topic | None:
+        return TOPIC_BY_KEY.get(self.path.split("/")[0])
+
+    @property
+    def parent(self) -> str | None:
+        """Sciezka dzialu nadrzednego albo None, gdy dzial wisi wprost pod tematem."""
+        head = self.path.rsplit("/", 1)[0]
+        return head if "/" in head else None
+
+    @property
+    def depth(self) -> int:
+        return self.path.count("/")
+
+    @property
+    def tsv(self) -> str:
+        return os.path.join(DATA_DIR, *self.path.split("/")) + ".tsv"
+
+    @property
+    def is_leaf(self) -> bool:
+        return os.path.isfile(self.tsv)
+
+
+def read_sections() -> list[Section]:
+    if not os.path.exists(SECTIONS_TSV):
+        return []
+    sections: list[Section] = []
+    header = None
+    with open(SECTIONS_TSV, encoding="utf-8") as f:
+        for lineno, raw in enumerate(f, 1):
+            line = raw.rstrip("\r\n")
+            if not line.strip() or line.startswith("#"):
+                continue
+            cells = line.split("\t")
+            if header is None:
+                header = cells
+                if header != SECTION_COLUMNS:
+                    sys.exit(f"{SECTIONS_TSV}:{lineno}: zly naglowek {header}, oczekiwany {SECTION_COLUMNS}")
+                continue
+            if len(cells) != len(SECTION_COLUMNS):
+                sys.exit(f"{SECTIONS_TSV}:{lineno}: {len(cells)} kolumn zamiast {len(SECTION_COLUMNS)}")
+            sections.append(Section(*[c.strip() for c in cells]))
+    return sections
+
+
+def validate_sections(sections: list[Section]) -> list[str]:
+    """Bledy spojnosci sections.tsv z katalogami na dysku. Pusta lista = wszystko gra."""
+    problems: list[str] = []
+    seen: dict[str, Section] = {}
+    for s in sections:
+        segments = s.path.split("/")
+        if s.path in seen:
+            problems.append(f"dzial {s.path} wystepuje dwa razy")
+        if s.topic is None or not s.topic.split:
+            problems.append(f"dzial {s.path}: {segments[0]!r} nie jest tematem podzielonym na katalog")
+        if len(segments) < 2 or not all(SEGMENT.match(seg) for seg in segments):
+            problems.append(f"dzial {s.path}: sciezka to temat/dzial[/poddzial], same male litery, cyfry i _")
+        if not s.label or not s.icon:
+            problems.append(f"dzial {s.path}: brak nazwy albo ikony")
+        if s.parent and s.parent not in seen:
+            problems.append(f"dzial {s.path}: dzial nadrzedny {s.parent} musi stac w sections.tsv wyzej")
+        is_dir = os.path.isdir(os.path.join(DATA_DIR, *segments))
+        if s.is_leaf and is_dir:
+            problems.append(f"dzial {s.path}: jest i plik {s.path}.tsv, i katalog {s.path}/ - zostaw jedno")
+        elif not s.is_leaf and not is_dir:
+            problems.append(f"dzial {s.path}: brak pliku {s.path}.tsv (lisc) albo katalogu {s.path}/ (galaz)")
+        elif is_dir and not any(o.path.startswith(s.path + "/") for o in sections):
+            problems.append(f"dzial {s.path}: katalog bez poddzialow w sections.tsv")
+        seen[s.path] = s
+    for topic in TOPICS:
+        if not topic.split:
+            continue
+        if os.path.exists(topic.tsv):
+            problems.append(f"temat {topic.key} ma i katalog, i plik {topic.key}.tsv - zostaw jedno")
+        for path in sorted(glob.glob(os.path.join(topic.dir, "**", "*.tsv"), recursive=True)):
+            rel = os.path.relpath(path, DATA_DIR)[: -len(".tsv")].replace(os.sep, "/")
+            if rel not in seen:
+                problems.append(f"plik {rel}.tsv nie ma wpisu w sections.tsv")
+    return problems
+
+
+def checked_sections() -> list[Section]:
+    sections = read_sections()
+    problems = validate_sections(sections)
+    if problems:
+        sys.exit("sections.tsv nie zgadza sie z katalogami:\n  " + "\n  ".join(problems))
+    return sections
+
+
+def leaves_of(topic: Topic, sections: list[Section]) -> list[Section]:
+    return [s for s in sections if s.topic == topic and s.is_leaf]
+
+
+@dataclass(frozen=True)
+class Target:
+    """Gdzie trafia pytanie: temat i - w temacie z dzialami - lisc drzewa."""
+
+    topic: Topic
+    section: Section | None = None
+
+    @property
+    def tsv(self) -> str:
+        return self.section.tsv if self.section else self.topic.tsv
+
+    @property
+    def name(self) -> str:
+        return self.section.path if self.section else self.topic.key
+
+
+def resolve_target(name: str, sections: list[Section]) -> tuple[Target | None, str]:
+    """Temat albo dzial po nazwie: 'biology', 'history/antiquity/roman_empire', 'antiquity/roman_empire',
+    'roman_empire'. Zwraca (cel, opis problemu)."""
+    clean = name.strip().strip("/").lower()
+    leaves = [s for s in sections if s.is_leaf]
+    exact = [s for s in leaves if s.path == clean]
+    if not exact:
+        exact = [s for s in leaves if s.path.endswith("/" + clean)]
+    if len(exact) == 1:
+        return Target(exact[0].topic, exact[0]), ""
+    if len(exact) > 1:
+        return None, f"niejednoznaczny dzial {name!r}: " + ", ".join(s.path for s in exact)
+    topic = topic_named(clean)
+    if topic is None:
+        return None, f"nieznany temat albo dzial {name!r} (tematy: {', '.join(t.key for t in TOPICS)})"
+    if topic.split:
+        return None, (
+            f"temat {topic.key} jest podzielony na dzialy - podaj dzial, np. "
+            + ", ".join(s.path for s in leaves_of(topic, sections)[:3]) + " (lista: `stats`)"
+        )
+    return Target(topic), ""
+
+
+def under(path: str | None, prefix: str) -> bool:
+    return path is not None and (path == prefix or path.startswith(prefix + "/"))
+
+
+# ------------------------------------------------------------------------------------------------
 # Kotlin: escapowanie i parsowanie
 
 STR = r'"((?:[^"\\]|\\.)*)"'
 STR_NC = r'"(?:[^"\\]|\\.)*"'
-Q_LINE = re.compile(
-    r"^\s*q\(\s*" + STR + r"\s*,\s*" + STR + r"\s*,\s*" + STR + r"\s*,\s*listOf\(\s*" + STR + r"\s*,\s*"
-    + STR + r"\s*,\s*" + STR + r"\s*\)\s*,\s*([EMHX])\s*\),?\s*$"
-)
 LIST_OF = r"listOf\(\s*((?:" + STR_NC + r"\s*,?\s*)*)\)"
 TF_CALL = re.compile(r"tf\(\s*" + STR + r"\s*,\s*" + STR + r"\s*,\s*(true|false)\s*,\s*(\w+)\s*,\s*(\w+)\s*\)")
 MS_CALL = re.compile(r"ms\(\s*" + STR + r"\s*,\s*" + STR + r"\s*,\s*" + LIST_OF + r"\s*,\s*" + LIST_OF + r"\s*,\s*(\w+)\s*,\s*(\w+)\s*\)")
@@ -155,10 +319,15 @@ class Question:
     correct: str
     wrong: list[str]
     where: str = ""  # plik:linia - do raportow
+    section: str | None = None  # sciezka dzialu w temacie z dzialami
 
     @property
     def answers(self) -> list[str]:
         return [self.correct] + self.wrong
+
+    @property
+    def place(self) -> str:
+        return self.section or self.topic.key
 
     def tsv_line(self) -> str:
         cells = [self.id, self.level, self.prompt, self.correct] + self.wrong
@@ -183,7 +352,7 @@ class Other:
 class Bank:
     choice: list[Question]
     others: list[Other]
-    comments: dict[str, list[str]] = field(default_factory=dict)
+    sections: list[Section] = field(default_factory=list)
 
     def all_ids(self) -> set[str]:
         return {q.id for q in self.choice} | {o.id for o in self.others}
@@ -193,11 +362,12 @@ class Bank:
 # TSV
 
 
-def read_topic(topic: Topic) -> tuple[list[str], list[Question]]:
+def read_tsv(path: str, topic: Topic, section: str | None) -> tuple[list[str], list[Question]]:
     comments: list[str] = []
     rows: list[Question] = []
     header = None
-    with open(topic.tsv, encoding="utf-8") as f:
+    name = os.path.relpath(path, DATA_DIR)
+    with open(path, encoding="utf-8") as f:
         for lineno, raw in enumerate(f, 1):
             line = raw.rstrip("\r\n")
             if not line.strip():
@@ -210,25 +380,40 @@ def read_topic(topic: Topic) -> tuple[list[str], list[Question]]:
             if header is None:
                 header = cells
                 if header != COLUMNS:
-                    sys.exit(f"{topic.tsv}:{lineno}: zly naglowek {header}, oczekiwany {COLUMNS}")
+                    sys.exit(f"{path}:{lineno}: zly naglowek {header}, oczekiwany {COLUMNS}")
                 continue
             if len(cells) != len(COLUMNS):
-                sys.exit(f"{topic.tsv}:{lineno}: {len(cells)} kolumn zamiast {len(COLUMNS)}")
+                sys.exit(f"{path}:{lineno}: {len(cells)} kolumn zamiast {len(COLUMNS)}")
             qid, level, prompt, correct, w1, w2, w3 = cells
             level_name = LEVEL_BY_ALIAS.get(level.strip().lower())
             if level_name is None:
-                sys.exit(f"{topic.tsv}:{lineno}: nieznany poziom {level!r}")
-            rows.append(Question(topic, level_name, qid, prompt, correct, [w1, w2, w3], f"{topic.key}.tsv:{lineno}"))
+                sys.exit(f"{path}:{lineno}: nieznany poziom {level!r}")
+            rows.append(Question(topic, level_name, qid, prompt, correct, [w1, w2, w3], f"{name}:{lineno}", section))
     return comments, rows
 
 
-def write_topic(topic: Topic, comments: list[str], rows: list[Question]) -> None:
-    os.makedirs(DATA_DIR, exist_ok=True)
-    lines = [("# " + c) if c else "#" for c in comments]
-    lines.append("\t".join(COLUMNS))
-    lines += [q.tsv_line() for q in rows]
-    with open(topic.tsv, "w", encoding="utf-8") as f:
-        f.write("\n".join(lines) + "\n")
+@dataclass
+class TopicData:
+    """Calosc tematu: komentarz pliku (temat bez dzialow) albo komentarze i pytania kazdego dzialu."""
+
+    topic: Topic
+    comments: list[str]
+    parts: list[tuple[Section | None, list[str], list[Question]]]
+
+    @property
+    def rows(self) -> list[Question]:
+        return [q for _, _, rows in self.parts for q in rows]
+
+
+def read_topic(topic: Topic, sections: list[Section]) -> TopicData:
+    if not topic.split:
+        comments, rows = read_tsv(topic.tsv, topic, None)
+        return TopicData(topic, comments, [(None, comments, rows)])
+    parts = []
+    for s in leaves_of(topic, sections):
+        comments, rows = read_tsv(s.tsv, topic, s.path)
+        parts.append((s, comments, rows))
+    return TopicData(topic, [], parts)
 
 
 # ------------------------------------------------------------------------------------------------
@@ -242,9 +427,14 @@ SECTION = {
 }
 
 
-def render_kotlin(topic: Topic, comments: list[str], rows: list[Question]) -> str:
-    out = [
-        f"// PLIK GENEROWANY z domain/quizbank/{topic.key}.tsv przez `python3 tools/quizbank.py generate`.",
+def _q_line(q: Question) -> str:
+    wrong = ", ".join(kt_string(w) for w in q.wrong)
+    return f"        q({kt_string(q.id)}, {kt_string(q.prompt)}, {kt_string(q.correct)}, listOf({wrong}), {LETTER[q.level]}),"
+
+
+def _kotlin_head(topic: Topic, source: str) -> list[str]:
+    return [
+        f"// PLIK GENEROWANY z {source} przez `python3 tools/quizbank.py generate`.",
         "// Nie edytuj go recznie - pytania dopisuje sie do TSV (patrz domain/quizbank/README.md).",
         "package com.lernhero.domain.quiz.bank",
         "",
@@ -253,11 +443,10 @@ def render_kotlin(topic: Topic, comments: list[str], rows: list[Question]) -> st
         "import com.lernhero.domain.quiz.QuizEntry",
         "",
     ]
-    if comments:
-        out.append("/**")
-        out += [(" * " + c) if c else " *" for c in comments]
-        out.append(" */")
-    out += [
+
+
+def _kotlin_helpers(topic: Topic) -> list[str]:
+    return [
         f"object {topic.obj} {{",
         "",
         "    private val E = QuizDifficulty.Easy",
@@ -269,6 +458,25 @@ def render_kotlin(topic: Topic, comments: list[str], rows: list[Question]) -> st
         f"        QuizEntry(id = id, prompt = prompt, correct = correct, wrong = wrong, category = QuizCategory.{topic.category}, difficulty = difficulty)",
         "",
     ]
+
+
+def section_function(section: Section) -> str:
+    """history/antiquity/roman_empire -> antiquityRomanEmpire"""
+    words = [w for seg in section.path.split("/")[1:] for w in seg.split("_") if w]
+    return words[0] + "".join(w[:1].upper() + w[1:] for w in words[1:])
+
+
+def render_kotlin(data: TopicData, sections: list[Section]) -> str:
+    topic = data.topic
+    if topic.split:
+        return render_kotlin_sections(data, sections)
+    rows = data.rows
+    out = _kotlin_head(topic, f"domain/quizbank/{topic.key}.tsv")
+    if data.comments:
+        out.append("/**")
+        out += [(" * " + c) if c else " *" for c in data.comments]
+        out.append(" */")
+    out += _kotlin_helpers(topic)
     by_level = {level: [q for q in rows if q.level == level] for level in LEVELS}
     levels = [level for level in LEVELS if by_level[level]]
     out += [
@@ -279,57 +487,86 @@ def render_kotlin(topic: Topic, comments: list[str], rows: list[Question]) -> st
     ]
     for level in levels:
         out += ["", "    " + SECTION[level], f"    private fun {level.lower()}(): List<QuizEntry> = listOf("]
-        entries = []
-        for q in by_level[level]:
-            wrong = ", ".join(kt_string(w) for w in q.wrong)
-            entries.append(
-                f"        q({kt_string(q.id)}, {kt_string(q.prompt)}, {kt_string(q.correct)}, listOf({wrong}), {LETTER[level]}),"
-            )
+        entries = [_q_line(q) for q in by_level[level]]
         entries[-1] = entries[-1][:-1]
         out += entries + ["    )"]
     out += ["}", ""]
     return "\n".join(out)
 
 
-def parse_kotlin_topic(topic: Topic) -> tuple[list[str], list[Question]]:
-    """Czyta recznie pisany (albo wygenerowany) plik Kotlin tematu - uzywane przy migracji."""
-    with open(topic.kt, encoding="utf-8") as f:
-        text = f.read()
-    comments: list[str] = []
-    doc = re.search(r"/\*\*(.*?)\*/\s*object\s+" + re.escape(topic.obj) + r"\b", text, re.S)
-    if doc:
-        for raw in doc.group(1).split("\n"):
-            line = raw.strip()
-            if line.startswith("*"):
-                line = line[1:]
-            if line.startswith(" "):
-                line = line[1:]
-            comments.append(line.rstrip())
-        while comments and not comments[0]:
-            comments.pop(0)
-        while comments and not comments[-1]:
-            comments.pop()
-    rows: list[Question] = []
-    level_by_letter = {v: k for k, v in LETTER.items()}
-    for lineno, line in enumerate(text.split("\n"), 1):
-        if not re.match(r"^\s*q\(", line):
-            continue
-        m = Q_LINE.match(line)
-        if not m:
-            sys.exit(f"{topic.kt}:{lineno}: nie umiem przeczytac linii pytania:\n{line}")
-        qid, prompt, correct, w1, w2, w3, letter = m.groups()
-        rows.append(
-            Question(
-                topic,
-                level_by_letter[letter],
-                kt_unescape(qid),
-                kt_unescape(prompt),
-                kt_unescape(correct),
-                [kt_unescape(w1), kt_unescape(w2), kt_unescape(w3)],
-                f"{topic.obj}.kt:{lineno}",
-            )
+def section_title(section: Section, sections: list[Section]) -> str:
+    """Antiquity / Roman Empire"""
+    labels = {s.path: s.label for s in sections}
+    trail, path = [], section.path
+    while "/" in path:
+        trail.append(labels.get(path, path))
+        path = path.rsplit("/", 1)[0]
+    return " / ".join(reversed(trail))
+
+
+def render_kotlin_sections(data: TopicData, sections: list[Section]) -> str:
+    topic = data.topic
+    parts = [(s, c, rows) for s, c, rows in data.parts if rows]
+    out = _kotlin_head(topic, f"domain/quizbank/{topic.key}/ (dzialy: domain/quizbank/sections.tsv)")
+    out += [
+        "/**",
+        f" * Temat podzielony na dzialy - kazdy plik w domain/quizbank/{topic.key}/ to jeden dzial, a nazwy",
+        " * i kolejnosc dzialow stoja w domain/quizbank/sections.tsv (patrz [QuizSectionCatalog]).",
+        " * Kazde pytanie niesie sciezke swojego dzialu w [QuizEntry.section].",
+        " */",
+    ]
+    out += _kotlin_helpers(topic)
+    out += [
+        "    private fun section(path: String, vararg entries: QuizEntry): List<QuizEntry> =",
+        "        entries.map { it.copy(section = path) }",
+        "",
+        "    val all: List<QuizEntry> = listOf(",
+    ]
+    calls = [f"        {section_function(s)}()," for s, _, _ in parts]
+    calls[-1] = calls[-1][:-1]
+    out += calls + [
+        "    ).flatten()",
+        "",
+        "    // Kazdy dzial w osobnej funkcji - jedna wielka lista przekroczylaby limit 64 KB kodu na metode JVM.",
+    ]
+    for s, comments, rows in parts:
+        out += ["", f"    /* {section_title(s, sections)} - {s.path}.tsv */"]
+        out += [("    // " + c).rstrip() for c in comments]
+        out += [f"    private fun {section_function(s)}(): List<QuizEntry> = section(", f"        {kt_string(s.path)},"]
+        entries = [_q_line(q) for q in rows]
+        entries[-1] = entries[-1][:-1]
+        out += entries + ["    )"]
+    out += ["}", ""]
+    return "\n".join(out)
+
+
+def render_catalog(sections: list[Section]) -> str:
+    out = [
+        "// PLIK GENEROWANY z domain/quizbank/sections.tsv przez `python3 tools/quizbank.py generate`.",
+        "// Nie edytuj go recznie - dzialy dopisuje sie do sections.tsv (patrz domain/quizbank/README.md).",
+        "package com.lernhero.domain.quiz.bank",
+        "",
+        "import com.lernhero.domain.quiz.QuizCategory",
+        "import com.lernhero.domain.quiz.QuizSection",
+        "",
+        "/**",
+        " * Wszystkie dzialy tematow podzielonych na katalogi, w kolejnosci z sections.tsv - galaz zawsze",
+        " * przed swoimi poddzialami. Wygodny dostep do drzewa daje [com.lernhero.domain.quiz.QuizSections].",
+        " */",
+        "object QuizSectionCatalog {",
+        "",
+        "    val all: List<QuizSection> = listOf(",
+    ]
+    lines = []
+    for s in sections:
+        lines.append(
+            f"        QuizSection({kt_string(s.path)}, {kt_string(s.label)}, {kt_string(s.icon)}, "
+            f"QuizCategory.{s.topic.category}),"
         )
-    return comments, rows
+    if lines:
+        lines[-1] = lines[-1][:-1]
+    out += lines + ["    )", "}", ""]
+    return "\n".join(out)
 
 
 # ------------------------------------------------------------------------------------------------
@@ -368,17 +605,12 @@ def load_others() -> list[Other]:
     return others
 
 
-def load_bank(from_kotlin: bool = False) -> Bank:
+def load_bank() -> Bank:
+    sections = checked_sections()
     choice: list[Question] = []
-    comments: dict[str, list[str]] = {}
     for topic in TOPICS:
-        if from_kotlin or not os.path.exists(topic.tsv):
-            c, rows = parse_kotlin_topic(topic)
-        else:
-            c, rows = read_topic(topic)
-        comments[topic.key] = c
-        choice += rows
-    return Bank(choice, load_others(), comments)
+        choice += read_topic(topic, sections).rows
+    return Bank(choice, load_others(), sections)
 
 
 # ------------------------------------------------------------------------------------------------
@@ -468,7 +700,7 @@ def answers_match(a: str, b: str) -> bool:
 # Plik z nowymi pytaniami
 
 NEW_COLUMN_ALIASES = {
-    "topic": "topic", "temat": "topic", "category": "topic",
+    "topic": "topic", "temat": "topic", "category": "topic", "section": "topic", "dzial": "topic",
     "difficulty": "difficulty", "level": "difficulty", "poziom": "difficulty",
     "prompt": "prompt", "question": "prompt", "pytanie": "prompt",
     "correct": "correct", "answer": "correct",
@@ -477,7 +709,7 @@ NEW_COLUMN_ALIASES = {
 }
 
 
-def read_new(path: str) -> tuple[list[Question], list[str]]:
+def read_new(path: str, sections: list[Section]) -> tuple[list[Question], list[str]]:
     questions: list[Question] = []
     problems: list[str] = []
     header: list[str] | None = None
@@ -501,17 +733,18 @@ def read_new(path: str) -> tuple[list[Question], list[str]]:
                 problems.append(f"{where}: {len(cells)} kolumn zamiast {len(header)} - linia pominieta")
                 continue
             row = dict(zip(header, cells))
-            topic = topic_named(row["topic"])
+            target, problem = resolve_target(row["topic"], sections)
             level = LEVEL_BY_ALIAS.get(row["difficulty"].lower())
-            if topic is None:
-                problems.append(f"{where}: nieznany temat {row['topic']!r} (znane: {', '.join(t.key for t in TOPICS)})")
+            if target is None:
+                problems.append(f"{where}: {problem}")
                 continue
             if level is None:
                 problems.append(f"{where}: nieznany poziom {row['difficulty']!r} (Easy/Medium/Hard/Expert albo E/M/H/X)")
                 continue
             questions.append(
-                Question(topic, level, row.get("id", ""), row["prompt"], row["correct"],
-                         [row["wrong1"], row["wrong2"], row["wrong3"]], where)
+                Question(target.topic, level, row.get("id", ""), row["prompt"], row["correct"],
+                         [row["wrong1"], row["wrong2"], row["wrong3"]], where,
+                         target.section.path if target.section else None)
             )
     return questions, problems
 
@@ -529,7 +762,7 @@ class Report:
 
 
 def _short(q: Question) -> str:
-    return f"[{q.topic.key}/{LETTER[q.level]} {q.where or q.id}] '{q.prompt}' -> {q.correct}"
+    return f"[{q.place}/{LETTER[q.level]} {q.where or q.id}] '{q.prompt}' -> {q.correct}"
 
 
 def check_questions(new: list[Question], bank: Bank, rules: Rules) -> Report:
@@ -659,7 +892,7 @@ def print_report(new: list[Question], report: Report, problems: list[str], show_
         errs, warns = report.errors.get(i, []), report.warnings.get(i, [])
         if not errs and not warns and not show_ok:
             continue
-        print(f"\n{q.where}  {q.topic.key}/{q.level}  '{q.prompt}' -> {q.correct}")
+        print(f"\n{q.where}  {q.place}/{q.level}  '{q.prompt}' -> {q.correct}")
         for e in errs:
             print(f"  BLAD   {e}")
         for w in warns:
@@ -699,9 +932,15 @@ def make_id(q: Question, taken: set[str]) -> str:
     return candidate
 
 
-def insert_into_tsv(topic: Topic, rows: list[Question]) -> None:
-    with open(topic.tsv, encoding="utf-8") as f:
-        lines = f.read().rstrip("\n").split("\n")
+def insert_into_tsv(path: str, rows: list[Question]) -> None:
+    """Wstawia kazde pytanie na koniec bloku jego poziomu, wiec plik zostaje ulozony Easy -> Expert.
+    Nowy plik dzialu dostaje sam naglowek kolumn."""
+    lines = []
+    if os.path.exists(path):
+        with open(path, encoding="utf-8") as f:
+            lines = f.read().rstrip("\n").split("\n")
+    if not any(line and not line.startswith("#") for line in lines):
+        lines.append("\t".join(COLUMNS))
     order = {level: k for k, level in enumerate(LEVELS)}
     for q in rows:
         header_at, insert_at = None, None
@@ -716,8 +955,17 @@ def insert_into_tsv(topic: Topic, rows: list[Question]) -> None:
             if order[level] <= order[q.level]:
                 insert_at = idx
         lines.insert(insert_at + 1, q.tsv_line())
-    with open(topic.tsv, "w", encoding="utf-8") as f:
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, "w", encoding="utf-8") as f:
         f.write("\n".join(lines) + "\n")
+
+
+def remove_from_tsv(path: str, ids: set[str]) -> None:
+    with open(path, encoding="utf-8") as f:
+        lines = f.read().rstrip("\n").split("\n")
+    kept = [line for line in lines if line.startswith("#") or line.split("\t")[0] not in ids]
+    with open(path, "w", encoding="utf-8") as f:
+        f.write("\n".join(kept) + "\n")
 
 
 # ------------------------------------------------------------------------------------------------
@@ -725,22 +973,26 @@ def insert_into_tsv(topic: Topic, rows: list[Question]) -> None:
 
 
 def cmd_generate(args) -> int:
-    stale = []
+    sections = checked_sections()
+    outputs: list[tuple[str, str]] = []
     for topic in TOPICS:
-        comments, rows = read_topic(topic)
-        content = render_kotlin(topic, comments, rows)
-        current = open(topic.kt, encoding="utf-8").read() if os.path.exists(topic.kt) else ""
+        data = read_topic(topic, sections)
+        outputs.append((topic.kt, render_kotlin(data, sections)))
+    outputs.append((CATALOG_KT, render_catalog(sections)))
+    stale = []
+    for path, content in outputs:
+        current = open(path, encoding="utf-8").read() if os.path.exists(path) else ""
         if current == content:
             continue
-        stale.append(topic)
+        stale.append(path)
         if not args.check:
-            with open(topic.kt, "w", encoding="utf-8") as f:
+            with open(path, "w", encoding="utf-8") as f:
                 f.write(content)
     if args.check:
         if stale:
             print("Nieaktualne pliki Kotlin (uruchom `python3 tools/quizbank.py generate`):")
-            for t in stale:
-                print("  " + os.path.relpath(t.kt, ROOT))
+            for path in stale:
+                print("  " + os.path.relpath(path, ROOT))
             return 1
         print("Pliki Kotlin sa zgodne z TSV.")
         return 0
@@ -748,19 +1000,9 @@ def cmd_generate(args) -> int:
     return 0
 
 
-def cmd_migrate(args) -> int:
-    existing = [t for t in TOPICS if os.path.exists(t.tsv)]
-    if existing and not args.force:
-        print("TSV juz istnieja (" + ", ".join(t.key for t in existing) + "). --force, zeby nadpisac z Kotlina.")
-        return 1
-    total = 0
-    for topic in TOPICS:
-        comments, rows = parse_kotlin_topic(topic)
-        write_topic(topic, comments, rows)
-        total += len(rows)
-        print(f"{topic.key:12s} {len(rows):5d} pytan -> {os.path.relpath(topic.tsv, ROOT)}")
-    print(f"Razem {total} pytan.")
-    return 0
+def _level_counts(rows: list[Question]) -> str:
+    counts = Counter(q.level for q in rows)
+    return " ".join(f"{counts[level]:7d}" for level in LEVELS) + f"   {len(rows):5d}"
 
 
 def cmd_stats(args) -> int:
@@ -772,28 +1014,56 @@ def cmd_stats(args) -> int:
         print(f"{topic.key:12s} " + " ".join(f"{n:7d}" for n in row) + f"   {sum(row):5d}")
     totals = [sum(counts[(t.key, level)] for t in TOPICS) for level in LEVELS]
     print(f"{'RAZEM':12s} " + " ".join(f"{n:7d}" for n in totals) + f"   {sum(totals):5d}")
+
+    for topic in TOPICS:
+        if not topic.split:
+            continue
+        print(f"\nDzialy tematu {topic.key}:")
+        width = max(len("  " * (s.depth - 1) + s.path.split("/")[-1]) for s in bank.sections if s.topic == topic) + 2
+        print(f"{'':{width}s} " + " ".join(f"{level:>7s}" for level in LEVELS) + "   razem")
+        for s in bank.sections:
+            if s.topic != topic:
+                continue
+            rows = [q for q in bank.choice if under(q.section, s.path)]
+            name = "  " * (s.depth - 1) + s.path.split("/")[-1]
+            print(f"{name:{width}s} " + _level_counts(rows) + f"   {s.label}")
+
     kinds = Counter(o.kind for o in bank.others)
     print("\nInne typy (w Kotlinie): " + ", ".join(f"{k}: {n}" for k, n in sorted(kinds.items())))
     print("Flagi losuja sie w FlagQuestions.kt i nie sa w TSV.")
     return 0
 
 
+def _matches_place(q: Question, name: str, sections: list[Section]) -> bool | None:
+    """Czy pytanie lezy w temacie/dziale `name`; None, gdy nazwa nic nie znaczy."""
+    if name.lower() == "all":
+        return True
+    clean = name.strip().strip("/").lower()
+    branch = [s.path for s in sections if s.path == clean or s.path.endswith("/" + clean)]
+    if len(branch) == 1:
+        return under(q.section, branch[0])
+    topic = topic_named(clean)
+    if topic is None:
+        return None
+    return q.topic == topic
+
+
 def cmd_list(args) -> int:
     bank = load_bank()
-    topics = TOPICS if args.topic.lower() == "all" else [topic_named(args.topic)]
-    if topics == [None]:
-        print(f"Nieznany temat {args.topic!r}. Znane: all, " + ", ".join(t.key for t in TOPICS))
+    if bank.choice and _matches_place(bank.choice[0], args.topic, bank.sections) is None:
+        print(f"Nieznany temat albo dzial {args.topic!r}. Znane tematy: all, " + ", ".join(t.key for t in TOPICS)
+              + " (dzialy: `stats`)")
         return 1
     level = LEVEL_BY_ALIAS.get(args.difficulty.lower()) if args.difficulty else None
     pattern = re.compile(args.grep, re.I) if args.grep else None
-    for q in bank.choice:
-        if q.topic not in topics or (level and q.level != level):
-            continue
+    picked = [q for q in bank.choice if _matches_place(q, args.topic, bank.sections) and not (level and q.level != level)]
+    wide = len({q.place for q in picked}) > 1
+    for q in picked:
         line = f"{LETTER[q.level]} | {q.prompt} -> {q.correct}"
         if args.wrong:
             line += "  (" + " / ".join(q.wrong) + ")"
-        if len(topics) > 1:
-            line = f"{q.topic.key:11s} " + line
+        if wide:
+            line = f"{q.place:40s} " + line
         if pattern and not pattern.search(line + " " + " ".join(q.wrong)):
             continue
         print(line)
@@ -807,7 +1077,7 @@ def cmd_find(args) -> int:
     for q in bank.choice:
         text = f"{q.prompt} -> {q.correct}  ({' / '.join(q.wrong)})"
         if pattern.search(text):
-            print(f"wybor      {q.topic.key}/{LETTER[q.level]} {q.id}: {text}")
+            print(f"wybor      {q.place}/{LETTER[q.level]} {q.id}: {text}")
             hits += 1
     for o in bank.others:
         if pattern.search(o.text):
@@ -817,26 +1087,27 @@ def cmd_find(args) -> int:
     return 0
 
 
-def _load_new(paths: list[str]) -> tuple[list[Question], list[str]]:
+def _load_new(paths: list[str], sections: list[Section]) -> tuple[list[Question], list[str]]:
     new: list[Question] = []
     problems: list[str] = []
     for path in paths:
-        q, p = read_new(path)
+        q, p = read_new(path, sections)
         new += q
         problems += p
     return new, problems
 
 
 def cmd_check(args) -> int:
-    new, problems = _load_new(args.files)
-    report = check_questions(new, load_bank(), load_rules())
+    bank = load_bank()
+    new, problems = _load_new(args.files, bank.sections)
+    report = check_questions(new, bank, load_rules())
     print_report(new, report, problems, show_ok=args.all)
     return 1 if problems or any(report.errors.values()) else 0
 
 
 def cmd_add(args) -> int:
-    new, problems = _load_new(args.files)
     bank = load_bank()
+    new, problems = _load_new(args.files, bank.sections)
     report = check_questions(new, bank, load_rules())
     blocked = problems or any(report.errors.values())
     if blocked and not args.force:
@@ -846,34 +1117,63 @@ def cmd_add(args) -> int:
     if args.verbose:
         print_report(new, report, problems)
     taken = bank.all_ids()
-    by_topic: dict[str, list[Question]] = defaultdict(list)
+    by_file: dict[str, list[Question]] = defaultdict(list)
     for i, q in enumerate(new):
         if report.errors.get(i) and not args.force:
             continue
         q.id = q.id or make_id(q, taken)
         taken.add(q.id)
-        by_topic[q.topic.key].append(q)
-    for topic in TOPICS:
-        if by_topic.get(topic.key):
-            insert_into_tsv(topic, by_topic[topic.key])
-    added = sum(len(v) for v in by_topic.values())
-    levels = Counter(q.level for v in by_topic.values() for q in v)
-    print(f"Dopisano {added} pytan: " + ", ".join(f"{t}: {len(v)}" for t, v in sorted(by_topic.items())))
+        target, _ = resolve_target(q.place, bank.sections)
+        by_file[target.tsv].append(q)
+    for path, rows in by_file.items():
+        insert_into_tsv(path, rows)
+    # Kotlin najpierw: przerwany wydruk (np. `add ... | head`) nie moze zostawic TSV bez wygenerowanego kodu.
+    result = cmd_generate(argparse.Namespace(check=False))
+    added = [q for rows in by_file.values() for q in rows]
+    places = Counter(q.place for q in added)
+    levels = Counter(q.level for q in added)
+    print(f"Dopisano {len(added)} pytan: " + ", ".join(f"{p}: {n}" for p, n in sorted(places.items())))
     print("Poziomy: " + ", ".join(f"{level}: {levels[level]}" for level in LEVELS))
     n_warn = sum(1 for i in range(len(new)) if report.warnings.get(i))
     if n_warn and not args.verbose:
         print(f"({n_warn} pytan mialo uwagi - `check` pokaze je przed dopisaniem)")
-    return cmd_generate(argparse.Namespace(check=False))
+    return result
+
+
+def cmd_move(args) -> int:
+    bank = load_bank()
+    target, problem = resolve_target(args.to, bank.sections)
+    if target is None:
+        print(problem)
+        return 1
+    by_id = {q.id: q for q in bank.choice}
+    missing = [i for i in args.ids if i not in by_id]
+    if missing:
+        print("Nie ma pytan o id: " + ", ".join(missing))
+        return 1
+    moving = [by_id[i] for i in dict.fromkeys(args.ids) if by_id[i].place != target.name]
+    sources: dict[str, set[str]] = defaultdict(set)
+    for q in moving:
+        source, _ = resolve_target(q.place, bank.sections)
+        sources[source.tsv].add(q.id)
+    for path, ids in sources.items():
+        remove_from_tsv(path, ids)
+    for q in moving:
+        q.topic, q.section = target.topic, target.section.path if target.section else None
+    insert_into_tsv(target.tsv, moving)
+    result = cmd_generate(argparse.Namespace(check=False))
+    print(f"Przeniesiono {len(moving)} pytan do {target.name}.")
+    return result
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = parser.add_subparsers(dest="command", required=True)
 
-    sub.add_parser("stats", help="ile pytan w kazdym temacie i na kazdym poziomie")
+    sub.add_parser("stats", help="ile pytan w kazdym temacie, dziale i na kazdym poziomie")
 
-    p = sub.add_parser("list", help="podglad pytan tematu (albo 'all')")
-    p.add_argument("topic")
+    p = sub.add_parser("list", help="podglad pytan tematu albo dzialu (albo 'all')")
+    p.add_argument("topic", help="temat (biology), dzial (history/antiquity, roman_empire) albo all")
     p.add_argument("-d", "--difficulty", help="E/M/H/X albo Easy/Medium/Hard/Expert")
     p.add_argument("-g", "--grep", help="tylko linie pasujace do wyrazenia regularnego")
     p.add_argument("-w", "--wrong", action="store_true", help="pokaz tez bledne odpowiedzi")
@@ -890,19 +1190,23 @@ def main() -> int:
     p.add_argument("--force", action="store_true", help="dopisz mimo bledow")
     p.add_argument("-v", "--verbose", action="store_true", help="wypisz tez uwagi")
 
+    p = sub.add_parser("move", help="przenies pytania (po id) do innego dzialu albo tematu")
+    p.add_argument("ids", nargs="+")
+    p.add_argument("--to", required=True, help="dzial docelowy (history/antiquity/roman_empire) albo temat")
+
     p = sub.add_parser("generate", help="TSV -> pliki Kotlin")
     p.add_argument("--check", action="store_true", help="tylko sprawdz, czy Kotlin jest aktualny")
-
-    p = sub.add_parser("migrate", help="(jednorazowo) zrob TSV z obecnych plikow Kotlin")
-    p.add_argument("--force", action="store_true")
 
     args = parser.parse_args()
     handlers = {
         "stats": cmd_stats, "list": cmd_list, "find": cmd_find, "check": cmd_check,
-        "add": cmd_add, "generate": cmd_generate, "migrate": cmd_migrate,
+        "add": cmd_add, "move": cmd_move, "generate": cmd_generate,
     }
     return handlers[args.command](args)
 
 
 if __name__ == "__main__":
+    # `stats | head` ma sie po prostu urwac, a nie konczyc stosem wyjatkow BrokenPipeError.
+    if hasattr(signal, "SIGPIPE"):
+        signal.signal(signal.SIGPIPE, signal.SIG_DFL)
     sys.exit(main())

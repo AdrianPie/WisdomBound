@@ -1,0 +1,73 @@
+# Dzialy tematow podzielonych na katalogi. Sciezka = temat/dzial[/poddzial], dokladnie jak katalogi
+# i pliki obok: history/antiquity/roman_empire to plik history/antiquity/roman_empire.tsv, a galaz
+# (history/antiquity) to katalog. Kolejnosc wierszy to kolejnosc dzialow w grze - w historii
+# chronologiczna, z dzialami przekrojowymi (prezydenci USA, kobiety, ...) na koncu. Galaz stoi
+# zawsze przed swoimi poddzialami.
+#
+# label to nazwa w interfejsie (po angielsku, jak reszta UI), icon - emoji pod przyszla grafike.
+# Z tego pliku `python3 tools/quizbank.py generate` robi QuizSectionCatalog.kt.
+path	label	icon
+history/prehistory	Prehistory	🦴
+history/antiquity	Antiquity	🏺
+history/antiquity/near_east	Mesopotamia & the Near East	🧱
+history/antiquity/ancient_egypt	Ancient Egypt	🐫
+history/antiquity/ancient_greece	Ancient Greece	🏛️
+history/antiquity/ancient_persia	Ancient Persia	🦁
+history/antiquity/alexander_the_great	Alexander & the Hellenistic World	🐎
+history/antiquity/roman_republic	Roman Republic	⚖️
+history/antiquity/roman_empire	Roman Empire	🦅
+history/antiquity/ancient_china	Ancient China	🏮
+history/antiquity/ancient_india	Ancient India	🐘
+history/middle_ages	Middle Ages	🏰
+history/middle_ages/byzantium	Byzantine Empire	⛪
+history/middle_ages/early_middle_ages	Franks & the Early Middle Ages	🗡️
+history/middle_ages/vikings	Vikings	⛵
+history/middle_ages/islamic_world	Islamic World	🕌
+history/middle_ages/crusades	Crusades	✝️
+history/middle_ages/knights_castles	Knights & Castles	🛡️
+history/middle_ages/medieval_britain	Medieval Britain	📜
+history/middle_ages/hundred_years_war	Hundred Years' War	⚜️
+history/middle_ages/medieval_life	Medieval Life & the Black Death	🐀
+history/middle_ages/mongols	Mongol Empire	🏹
+history/middle_ages/imperial_china	Imperial China & Korea	🐉
+history/middle_ages/feudal_japan	Samurai Japan	⛩️
+history/middle_ages/african_kingdoms	African Kingdoms	🌍
+history/pre_columbian	Aztecs, Maya & Inca	☀️
+history/early_modern	Early Modern Era	🕰️
+history/early_modern/renaissance	Renaissance	🎨
+history/early_modern/age_of_discovery	Age of Discovery	🧭
+history/early_modern/reformation	Reformation & Wars of Religion	📖
+history/early_modern/tudors_stuarts	Tudors & Stuarts	🌹
+history/early_modern/absolutism	Age of Absolutism	👑
+history/early_modern/ottoman_empire	Ottoman Empire	🌙
+history/early_modern/mughal_india	Mughal India	💎
+history/early_modern/pirates	Pirates & the High Seas	☠️
+history/early_modern/colonial_america	Colonial America	🌽
+history/early_modern/enlightenment	Science & Enlightenment	🔭
+history/revolutions	Age of Revolutions	🔥
+history/revolutions/american_revolution	American Revolution	🔔
+history/revolutions/french_revolution	French Revolution	🗼
+history/revolutions/napoleon	Napoleonic Era	🎖️
+history/nineteenth_century	19th Century	⚙️
+history/nineteenth_century/industrial_revolution	Industrial Revolution	🏭
+history/nineteenth_century/victorian_era	Victorian Britain & the Empire	🎩
+history/nineteenth_century/europe	Europe in the 1800s	🚂
+history/nineteenth_century/us_civil_war	American Civil War	🎺
+history/nineteenth_century/wild_west	Wild West & 1800s America	🤠
+history/nineteenth_century/latin_america	Latin America	🌎
+history/nineteenth_century/imperialism	Age of Imperialism	🗺️
+history/twentieth_century	20th Century	📻
+history/twentieth_century/world_war_1	World War I	🪖
+history/twentieth_century/titanic	Titanic	🚢
+history/twentieth_century/russian_revolution	Russian Revolution & the USSR	🚩
+history/twentieth_century/interwar	Between the Wars	🎷
+history/twentieth_century/world_war_2	World War II	✈️
+history/twentieth_century/cold_war	Cold War	☢️
+history/twentieth_century/space_race	Space Race	🚀
+history/twentieth_century/decolonization	End of Empires	🕊️
+history/twentieth_century/civil_rights	Civil Rights & Suffrage	✊
+history/twentieth_century/modern_china	Modern China	🐼
+history/twentieth_century/explorers	Explorers & Aviators	🧗
+history/since_1990	Since 1990	🌐
+history/us_presidents	US Presidents	🇺🇸
+history/famous_women	Women in History	👩

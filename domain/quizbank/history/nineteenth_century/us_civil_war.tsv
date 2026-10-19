@@ -1,0 +1,33 @@
+# Wojna secesyjna 1861-1865 i niewolnictwo, ktore do niej doprowadzilo.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+wh_wojna_secesyjna	Easy	Which US president led the country during the Civil War?	Abraham Lincoln	George Washington	Thomas Jefferson	Ulysses Grant
+hx_harriet_tubman	Easy	Which woman guided enslaved people to freedom on the 'Underground Railroad'?	Harriet Tubman	Rosa Parks	Sojourner Truth	Susan B. Anthony
+his_side_won_american	Easy	Which side won the American Civil War?	The North	The South	Neither side	The West
+his_alliance_southern_states	Easy	What was the alliance of Southern states that broke away from the USA called?	The Confederacy	The Commonwealth	The Federation	The Dixie Union
+his_issue_heart_american	Easy	Which issue was at the heart of the American Civil War?	Slavery	Taxes on tea	Votes for women	Gold mining rights
+his_colours_uniforms_union	Easy	What colours were the uniforms of the Union and the Confederacy?	Blue and grey	Red and white	Green and brown	Black and gold
+hy_emancypacja	Medium	Which 1863 order by Abraham Lincoln declared slaves in the rebel states free?	The Emancipation Proclamation	The Gettysburg Address	The Monroe Doctrine	The Bill of Rights
+hy_lee	Medium	Who was the top general of the Confederate army in the American Civil War?	Robert E. Lee	Ulysses S. Grant	Stonewall Jackson	William Sherman
+his_battle_1863_seen	Medium	Which battle of 1863 is seen as the turning point of the American Civil War?	Gettysburg	Bull Run	Antietam	Shiloh
+his_fort_south_carolina	Medium	At which fort in South Carolina were the first shots of the Civil War fired in 1861?	Fort Sumter	Fort Knox	Fort Alamo	Fort Ticonderoga
+his_virginia_village_robert	Medium	In which Virginia village did Robert E. Lee surrender in April 1865?	Appomattox Court House	Gettysburg	Richmond	Harpers Ferry
+his_president_confederate_states	Medium	Who was the president of the Confederate States?	Jefferson Davis	Robert E. Lee	Stonewall Jackson	Andrew Johnson
+his_union_general_led	Medium	Which Union general led the destructive 'March to the Sea' through Georgia in 1864?	William T. Sherman	George McClellan	George Meade	Philip Sheridan
+his_confederate_general_earned	Medium	Which Confederate general earned the nickname 'Stonewall'?	Thomas Jackson	Robert E. Lee	James Longstreet	J. E. B. Stuart
+his_novel_harriet_beecher	Medium	Which novel by Harriet Beecher Stowe turned many Americans against slavery?	'Uncle Tom's Cabin'	'Gone with the Wind'	'Huckleberry Finn'	'Little Women'
+his_amendment_constitution_abolished	Medium	Which amendment to the Constitution abolished slavery in 1865?	The 13th	The 1st	The 19th	The 5th
+his_man_escaped_slavery	Medium	Which man, who escaped from slavery, became the most famous abolitionist speaker?	Frederick Douglass	Booker T. Washington	Nat Turner	W. E. B. Du Bois
+his_roughly_soldiers_died	Medium	Roughly how many soldiers died in the American Civil War?	About 700,000	About 70,000	About 200,000	About 2 million
+his_state_split_away	Medium	Which state split away from Virginia during the war to stay in the Union?	West Virginia	Kentucky	Maryland	Tennessee
+his_june_holiday_marks	Medium	Which June holiday marks the day in 1865 when enslaved people in Texas learned they were free?	Juneteenth	Emancipation Day	Freedom Monday	Liberty Day
+org_bokobrody_burnside	Hard	'Sideburns' is a scrambled version of which general's surname?	Burnside	Sherman	Custer	Hooker
+hx_gettysburg	Hard	Which short speech by Abraham Lincoln begins 'Four score and seven years ago'?	The Gettysburg Address	The Emancipation Proclamation	His second inaugural	The House Divided speech
+hy_grant	Hard	Which Union general of the Civil War later became US president?	Ulysses S. Grant	Robert E. Lee	George McClellan	William Sherman
+his_city_capital_confederate	Hard	Which city was the capital of the Confederate States during most of the American Civil War?	Richmond	Atlanta	Charleston	New Orleans
+his_battle_1862_bloodiest	Hard	Which battle of 1862 was the bloodiest single day in American history?	Antietam	Shiloh	Fredericksburg	Bull Run
+his_abolitionist_led_raid	Hard	Which abolitionist led a raid on the arsenal at Harpers Ferry in 1859?	John Brown	Frederick Douglass	Nat Turner	William Lloyd Garrison
+his_major_battle_civil	Hard	What was the first major battle of the Civil War, near Washington in 1861, called?	First Bull Run	Gettysburg	Antietam	Shiloh
+his_two_ironclad_warships	Hard	Which two ironclad warships fought the first duel of armoured ships in 1862?	USS Monitor and CSS Virginia	USS Maine and CSS Alabama	USS Constitution and HMS Java	USS Hartford and CSS Tennessee
+his_supreme_court_ruling	Hard	Which Supreme Court ruling of 1857 said that Black Americans could not be citizens?	Dred Scott v. Sandford	Brown v. Board of Education	Plessy v. Ferguson	Marbury v. Madison
+his_confederate_general_led	Expert	The doomed Confederate charge on the last day of Gettysburg is named after which general?	George Pickett	James Longstreet	J. E. B. Stuart	Jubal Early
+his_confederate_submarine_sink	Expert	Which Confederate submarine was the first to sink an enemy warship, in 1864?	H. L. Hunley	CSS Alabama	Nautilus	Turtle

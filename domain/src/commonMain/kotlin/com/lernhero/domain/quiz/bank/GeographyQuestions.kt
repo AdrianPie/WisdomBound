@@ -205,7 +205,8 @@ object GeographyQuestions {
         q("geo_spanish_island_world", "Which Spanish island is world-famous for its nightclubs?", "Ibiza", listOf("Mallorca", "Tenerife", "Menorca"), E),
         q("geo_chinese_dam_world", "Which Chinese dam is the world's biggest power station?", "Three Gorges Dam", listOf("Hoover Dam", "Itaipu Dam", "Aswan High Dam"), E),
         q("geo_sea_nile_flow", "Into which sea does the Nile flow?", "The Mediterranean", listOf("The Red Sea", "The Arabian Sea", "The Indian Ocean"), E),
-        q("geo_french_city_gave", "Which French city gave its name to a famous mustard?", "Dijon", listOf("Nice", "Lille", "Toulouse"), E)
+        q("geo_french_city_gave", "Which French city gave its name to a famous mustard?", "Dijon", listOf("Nice", "Lille", "Toulouse"), E),
+        q("org_ekwador_rownik", "Ecuador is named after which geographical feature running through it?", "The equator", listOf("The Andes", "The Amazon", "The Pacific coast"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */

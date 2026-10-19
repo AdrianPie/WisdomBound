@@ -1,0 +1,32 @@
+# Napoleon od Korsyki do Swietej Heleny i Europa jego wojen - az do kongresu wiedenskiego.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+hx_waterloo_kraj	Easy	In which present-day country is Waterloo, site of Napoleon's final defeat?	Belgium	France	The Netherlands	Germany
+hx_napoleon_rosja	Easy	In 1812, Napoleon's huge army invaded which country and was destroyed by its winter?	Russia	Sweden	Austria	Prussia
+his_city_napoleon_buried	Easy	In which city is Napoleon buried, under the dome of Les Invalides?	Paris	Ajaccio	Rome	Vienna
+his2_napoleon_kraj	Medium	Where did Napoleon Bonaparte come from?	Corsica	Sicily	Provence	Sardinia
+wh_napoleon_zeslanie	Medium	On which island did Napoleon Bonaparte die?	Saint Helena	Elba	Corsica	Malta
+hx_elba	Medium	To which island was Napoleon first exiled, in 1814?	Elba	Corsica	Sardinia	Malta
+hx_wellington	Medium	Which British commander defeated Napoleon at Waterloo?	The Duke of Wellington	Admiral Nelson	The Duke of Marlborough	General Wolfe
+his_napoleon_wife_crowned	Medium	What was the name of Napoleon's first wife, whom he crowned empress?	Josephine	Marie Louise	Marie Antoinette	Desiree
+his_ruler_ordered_building	Medium	Which ruler ordered the building of Paris's Arc de Triomphe?	Napoleon Bonaparte	Louis XIV	Charles de Gaulle	Louis XVI
+his_napoleon_continental_system	Medium	What did Napoleon's 'Continental System' try to do?	Stop all European trade with Britain	Unite Europe's railways	Abolish slavery in Europe	Make French the language of Europe
+his_prussian_field_marshal	Medium	Which Prussian field marshal arrived to help Wellington win at Waterloo?	Gebhard von Blucher	Carl von Clausewitz	Frederick the Great	Helmuth von Moltke
+his_long_war_spain	Medium	Which long war in Spain and Portugal, from 1807 to 1814, drained Napoleon's armies?	The Peninsular War	The Iberian Campaign	The War of the Pyrenees	The Spanish Succession
+his_composer_dedicated_eroica	Medium	Which composer dedicated his 'Eroica' symphony to Napoleon, then scratched out the name?	Beethoven	Mozart	Haydn	Schubert
+his_order_merit_napoleon	Medium	Which order of merit did Napoleon create in 1802, still France's highest award?	The Legion of Honour	The Order of the Garter	The Iron Cross	The Golden Fleece
+his_waterloo	Hard	In which year did Napoleon lose the Battle of Waterloo?	1815	1812	1805	1821
+his_austerlitz	Hard	Which 1805 battle is often called Napoleon's greatest victory?	Austerlitz	Waterloo	Borodino	Leipzig
+his_victory_trafalgar	Hard	Which ship was Admiral Nelson's flagship at Trafalgar?	HMS Victory	HMS Beagle	HMS Bounty	HMS Endeavour
+hx_napoleon_koronacja	Hard	In which year did Napoleon crown himself Emperor of the French?	1804	1799	1812	1815
+hx_kodeks_napoleona	Hard	Which law code, introduced in France in 1804, still shapes the law of many countries?	The Napoleonic Code	The Code of Hammurabi	Justinian's Code	The Magna Carta
+hx_rosetta_egipt	Hard	During which campaign did French soldiers find the Rosetta Stone?	Napoleon's invasion of Egypt	Napoleon's invasion of Russia	The Crusades	The Hundred Years' War
+hy_sto_dni	Hard	Napoleon's return from exile in 1815, ending at Waterloo, is known as what?	The Hundred Days	The Long March	The Lost Summer	The Last Campaign
+hy_kongres_wiedenski	Hard	Which meeting of 1814-1815 redrew the map of Europe after Napoleon?	The Congress of Vienna	The Treaty of Versailles	The Peace of Westphalia	The Congress of Berlin
+his_1813_battle_largest	Hard	Which 1813 battle, the largest in Europe before World War I, is called the 'Battle of the Nations'?	Leipzig	Austerlitz	Borodino	Jena
+his_russian_commander_gave	Hard	Which Russian commander gave up Moscow to Napoleon in 1812 rather than risk his army?	Mikhail Kutuzov	Alexander Suvorov	Pyotr Bagration	Grigory Potemkin
+his_austrian_archduchess_napoleon	Hard	Which Austrian archduchess did Napoleon marry in 1810?	Marie Louise	Marie Antoinette	Maria Theresa	Elisabeth
+his_marshal_napoleon_bravest	Hard	Which marshal of Napoleon was called 'the bravest of the brave'?	Michel Ney	Joachim Murat	Louis Davout	Jean Lannes
+cur_napoleon_wzrost	Expert	Napoleon's 'short' reputation largely came from what?	Confusion between French and English inches	His height of 1.40 m	A painting of him sitting down	A false death certificate
+hx_napoleon_kroliki	Expert	In 1807, Napoleon was reportedly 'attacked' during a hunt by what?	Hundreds of rabbits	A swarm of bees	A herd of deer	A flock of geese
+his_title_napoleon_give	Expert	Which title did Napoleon give his baby son at birth in 1811?	King of Rome	Prince of Paris	Duke of Corsica	Emperor of the West
+his_siege_1793_young	Expert	At which siege of 1793 did the young artillery officer Napoleon first make his name?	Toulon	Marseille	Lyon	Nice

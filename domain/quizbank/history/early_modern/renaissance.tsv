@@ -1,0 +1,32 @@
+# Wlochy XIV-XVI wieku i ich echo w Europie: Medyceusze, Leonardo, Michal Aniol, druk, Machiavelli.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+his_mona_lisa	Easy	Who painted the Mona Lisa?	Leonardo da Vinci	Michelangelo	Raphael	Pablo Picasso
+hx_mona_lisa_kradziez	Easy	What happened to the Mona Lisa in 1911?	It was stolen	It was sold to America	It was cut in half	It was painted over
+his_renaissance_genius_painted	Easy	Which Renaissance genius painted 'The Last Supper'?	Leonardo da Vinci	Michelangelo	Raphael	Titian
+his_renaissance_city_canals	Easy	Which Renaissance city is famous for its canals and the glass-makers of Murano?	Venice	Florence	Genoa	Milan
+his2_renesans_kraj	Medium	In which country did the Renaissance begin?	Italy	France	Germany	England
+wh_kaplica_sykstynska	Medium	Who painted the ceiling of the Sistine Chapel?	Michelangelo	Leonardo da Vinci	Raphael	Caravaggio
+his_medyceusze	Medium	Which Italian city did the Medici family rule?	Florence	Venice	Milan	Genoa
+hx_leonardo_maszyny	Medium	Which Renaissance genius filled his notebooks with designs for flying machines?	Leonardo da Vinci	Michelangelo	Galileo Galilei	Raphael
+hx_biblia_gutenberga	Medium	Which book was the first major book printed with movable type in Europe?	The Bible	The Odyssey	The Koran	Don Quixote
+hx_doza	Medium	What was the elected ruler of the Republic of Venice called?	The Doge	The Consul	The Prince	The Podesta
+his_word_renaissance_mean	Medium	What does the word 'Renaissance' mean?	Rebirth	Discovery	Golden age	Awakening
+his_painted_school_athens	Medium	Who painted 'The School of Athens' in the Vatican?	Raphael	Michelangelo	Leonardo da Vinci	Giotto
+his_architect_built_giant	Medium	Which architect built the giant dome of Florence Cathedral?	Filippo Brunelleschi	Leon Battista Alberti	Donato Bramante	Andrea Palladio
+his_medici_ruler_florence	Medium	Which Medici ruler of Florence was nicknamed 'the Magnificent'?	Lorenzo	Cosimo	Giovanni	Piero
+his_dutch_scholar_wrote	Medium	Which Dutch scholar wrote the satire 'In Praise of Folly'?	Erasmus	Thomas More	Rembrandt	Spinoza
+his_spanish_born_family	Medium	Which Spanish-born family produced the notorious Renaissance pope Alexander VI?	The Borgias	The Medici	The Sforzas	The Este
+his_technique_renaissance_painters	Medium	Which technique did Renaissance painters master to make flat pictures look deep?	Linear perspective	Pointillism	Cubism	Gold leaf
+his_someone_renaissance_man	Medium	Someone called a 'Renaissance man' is what?	Skilled in many different fields	A lover of old buildings	A painter of religious scenes	A patron of the arts
+his_venetian_painter_rich	Medium	Which Venetian painter, famous for his rich colours, died of plague in 1576?	Titian	Tintoretto	Veronese	Giorgione
+his_family_ruled_milan	Medium	Which family ruled Milan, employing Leonardo da Vinci for years?	The Sforzas	The Medici	The Borgias	The Gonzagas
+his_florentine_sculptor_made	Medium	Which Florentine sculptor made a bronze David, the first free-standing nude since ancient times?	Donatello	Ghiberti	Cellini	Verrocchio
+his_druk	Hard	Who popularized movable-type printing in Europe?	Johannes Gutenberg	Nicolaus Copernicus	Leonardo da Vinci	Galileo
+his_german_artist_engravings	Hard	Which German artist is famous for his engravings and self-portraits around 1500?	Albrecht Durer	Hans Holbein	Lucas Cranach	Matthias Grunewald
+his_flemish_master_painted	Hard	Which Flemish master painted the 'Arnolfini Portrait' in 1434?	Jan van Eyck	Pieter Bruegel	Hieronymus Bosch	Rogier van der Weyden
+his_ruthless_son_pope	Hard	Which ruthless son of a pope is thought to have inspired Machiavelli's 'The Prince'?	Cesare Borgia	Lorenzo de' Medici	Ludovico Sforza	Francesco Gonzaga
+his_city_brutally_sacked	Hard	Which city was brutally sacked by the troops of Emperor Charles V in 1527?	Rome	Florence	Venice	Milan
+his_french_king_invited	Hard	Which French king invited Leonardo to France, where the artist died in 1519?	Francis I	Louis XII	Henry II	Charles VIII
+his_machiavelli	Expert	Who wrote the treatise 'The Prince'?	Niccolo Machiavelli	Dante Alighieri	Erasmus of Rotterdam	Thomas More
+hy_savonarola	Expert	Which Florentine friar organised the 'Bonfire of the Vanities' in 1497?	Girolamo Savonarola	Niccolo Machiavelli	Lorenzo de' Medici	Cesare Borgia
+his_young_florentine_painter	Expert	Which young Florentine painter's frescoes in the Brancacci Chapel pioneered perspective?	Masaccio	Giotto	Fra Angelico	Uccello

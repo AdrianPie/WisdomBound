@@ -1,0 +1,33 @@
+# Wyscig mocarstw o kolonie w XIX wieku: podzial Afryki, wojny opiumowe, kanaly, Kongo.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+his_continent_european_powers	Easy	Which continent did European powers carve up in the 'Scramble' of the late 1800s?	Africa	Asia	South America	Australia
+his4_kanal_sueski_rok	Medium	In which decade was the Suez Canal opened?	The 1860s	The 1830s	The 1890s	The 1910s
+hx_kanal_panamski	Medium	Which country built the Panama Canal and ran it for most of the 20th century?	The United States	France	Britain	Spain
+his_missing_scottish_explorer	Medium	Which missing Scottish explorer did the journalist Henry Morton Stanley track down in Africa in 1871?	David Livingstone	Mungo Park	Richard Burton	John Speke
+his_british_businessman_colonialist	Medium	Which British businessman and colonialist gave his name to Rhodesia?	Cecil Rhodes	David Livingstone	Henry Stanley	Lord Kitchener
+his_southeast_asian_country	Medium	Which Southeast Asian country was never colonised by a European power?	Thailand	Vietnam	Myanmar	Malaysia
+his_french_diplomat_led	Medium	Which French diplomat led the building of the Suez Canal?	Ferdinand de Lesseps	Gustave Eiffel	Baron Haussmann	Louis Pasteur
+his_country_took_philippines	Medium	Which country took the Philippines from Spain in 1898?	The United States	The Netherlands	Great Britain	The German Empire
+his_european_country_ruled_3	Medium	Which European country ruled Libya as a colony from 1911?	Italy	France	Britain	Spain
+his_european_country_ruled_4	Medium	Which European country ruled Namibia as a colony before World War I?	Germany	Britain	Portugal	Belgium
+his_henry_morton_stanley	Medium	What did Henry Morton Stanley supposedly say when he found the explorer in Africa in 1871?	'Dr Livingstone, I presume?'	'At last, my friend!'	'The search is over!'	'Thank God you're alive!'
+his_island_china_hand	Medium	Which island did China hand over to Britain in 1842 after the First Opium War?	Hong Kong	Macau	Taiwan	Singapore
+his_two_african_countries	Medium	Which two African countries stayed free of European rule during the Scramble for Africa?	Ethiopia and Liberia	Egypt and Morocco	Kenya and Ghana	Sudan and Somalia
+his_war_1898_cost	Medium	Which war of 1898 cost Spain Cuba, Puerto Rico and the Philippines?	The Spanish-American War	The Boer War	The Opium War	The Pacific War
+wh_wojna_opiumowa	Hard	Between which countries was the First Opium War fought?	China and Great Britain	China and Japan	India and Great Britain	China and Russia
+cur_wojna_angielsko_zanzibarska	Hard	The shortest war in recorded history, in 1896, lasted about how long?	38 minutes	3 days	6 hours	2 weeks
+hx_liberia	Hard	Which African country was founded in the 1800s by freed slaves from the USA?	Liberia	Ghana	Gabon	Cameroon
+hx_hawaje	Hard	Before becoming part of the USA, Hawaii was what?	An independent kingdom	A French colony	A Japanese province	A Spanish colony
+hx_kompania_wschodnioindyjska	Hard	Which company ruled much of India before the British Crown took over in 1858?	The East India Company	The Hudson's Bay Company	The Royal African Company	The Levant Company
+hy_japonia_1905	Hard	Which Asian country shocked the world by defeating Russia in the war of 1904-1905?	Japan	China	Korea	Siam
+his_battle_1879_zulu	Hard	At which battle of 1879 did a Zulu army wipe out a British force?	Isandlwana	Rorke's Drift	Ulundi	Majuba Hill
+his_1879_battle_saw	Hard	Which 1879 battle saw about 150 British soldiers hold off thousands of Zulus?	Rorke's Drift	Isandlwana	Omdurman	Spion Kop
+his_explosion_american_warship	Hard	The explosion of which American warship in Havana harbour in 1898 helped start a war with Spain?	USS Maine	USS Arizona	USS Monitor	USS Constitution
+his_great_game_1800s	Hard	What was the 'Great Game' of the 1800s?	Britain and Russia's rivalry over Central Asia	A famous cricket match in India	A race between explorers to Tibet	A royal chess match by telegraph
+his_city_capital_british	Hard	Which city was the capital of British India until 1911?	Calcutta	Bombay	Delhi	Madras
+wh_kongres_berlinski_afryka	Expert	Which 1884-1885 conference sanctioned the partition of Africa among the powers?	The Berlin Conference	The Congress of Vienna	The Yalta Conference	The Congress of Paris
+his4_wojna_boerska	Expert	The Boer Wars were fought between Britain and settlers of what descent?	Dutch	Portuguese	German	French
+his4_rewolta_bokserow	Expert	Against whom was the Boxer Rebellion directed?	Foreign influence in China	The Japanese emperor	The Mughal court	Russian serfdom
+his_menelik	Expert	Which Ethiopian emperor defeated an Italian army at the Battle of Adwa in 1896?	Menelik II	Haile Selassie	Tewodros II	Yohannes IV
+hx_leopold_kongo	Expert	Which European king personally owned the Congo Free State as his private colony?	Leopold II of Belgium	Wilhelm II of Germany	Umberto I of Italy	Christian IX of Denmark
+his_peoples_namibia_suffered	Expert	Which peoples of Namibia suffered a genocide under German rule in 1904-1908?	The Herero and Nama	The Zulu and Xhosa	The Ashanti and Fante	The Hutu and Tutsi

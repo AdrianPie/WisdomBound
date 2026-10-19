@@ -1,0 +1,39 @@
+# Anglia 1485-1714: Henryk VIII i jego zony, Elzbieta I, Armada, spisek prochowy, wojna domowa,
+# Cromwell, wielki pozar Londynu.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+his_henryk_viii	Easy	Which English king married six times?	Henry VIII	Henry VII	Edward VI	Richard III
+his_armada	Easy	Which English queen saw off the Spanish Armada in 1588?	Elizabeth I	Mary I	Victoria	Anne
+his_royal_house_henry	Easy	To which royal house did Henry VIII and Elizabeth I belong?	The Tudors	The Stuarts	The Windsors	The Plantagenets
+trv_londyn_pozar	Medium	In which year was the Great Fire of London?	1666	1566	1766	1616
+his_krwawa_maria	Medium	Which English queen was nicknamed 'Bloody Mary'?	Mary I	Mary, Queen of Scots	Mary II	Mary of Teck
+hx_anna_boleyn	Medium	Which wife of Henry VIII was beheaded in 1536?	Anne Boleyn	Catherine of Aragon	Jane Seymour	Anne of Cleves
+hx_krolowa_dziewica	Medium	Which English queen was known as 'the Virgin Queen'?	Elizabeth I	Mary I	Victoria	Anne
+hx_henryk_rozwod	Medium	Why did Henry VIII break with the Pope and set up the Church of England?	He wanted his marriage annulled	He wanted to seize church gold	He lost a war with Rome	The Pope insulted his mother
+hx_guy_fawkes	Medium	What did Guy Fawkes and his fellow plotters try to blow up in 1605?	The Houses of Parliament	The Tower of London	St Paul's Cathedral	Buckingham Palace
+his_ruled_england_lord	Medium	Who ruled England as 'Lord Protector' after King Charles I was beheaded?	Oliver Cromwell	Thomas Cromwell	Robert Walpole	Thomas More
+his_henry_viii_wife	Medium	Who was Henry VIII's first wife?	Catherine of Aragon	Anne Boleyn	Jane Seymour	Catherine Parr
+his_scottish_queen_executed	Medium	Which Scottish queen was executed on the orders of Elizabeth I?	Mary, Queen of Scots	Margaret Tudor	Anne of Cleves	Mary of Guise
+his_mother_queen_elizabeth	Medium	Who was the mother of Queen Elizabeth I?	Anne Boleyn	Catherine of Aragon	Jane Seymour	Mary of Guise
+his_henry_viii_sixth	Medium	Who was Henry VIII's sixth and last wife?	Catherine Parr	Catherine Howard	Jane Seymour	Anne of Cleves
+his_spanish_king_sent	Medium	Which Spanish king sent the Armada against England in 1588?	Philip II	Charles V	Philip IV	Ferdinand II
+his_tudor_warship_sank	Medium	Which Tudor warship sank in 1545 and was raised from the seabed in 1982?	Mary Rose	Golden Hind	Great Harry	Revenge
+his_king_gave_english	Medium	Which king gave his name to the famous English Bible of 1611?	James I	Henry VIII	Charles I	Edward VI
+his_tudor_king_england	Medium	Who was the first Tudor king of England?	Henry VII	Henry VIII	Edward IV	Richard III
+his_wife_henry_viii	Medium	Which wife of Henry VIII gave birth to his only legitimate son?	Jane Seymour	Anne Boleyn	Catherine of Aragon	Anne of Cleves
+his_wife_henry_viii_2	Medium	Which wife did Henry VIII divorce after six months, supposedly finding her unattractive?	Anne of Cleves	Catherine Howard	Jane Seymour	Catherine Parr
+his_courtier_said_spread	Medium	Which courtier is said to have spread his cloak over a puddle for Elizabeth I?	Walter Raleigh	Francis Drake	Robert Dudley	William Cecil
+his_english_civil_war	Medium	In the English Civil War, what were Parliament's short-haired soldiers nicknamed?	Roundheads	Cavaliers	Redcoats	Ironsides
+his_king_restored_english	Medium	Which king was restored to the English throne in 1660?	Charles II	James II	Charles I	William III
+his_disaster_killed_quarter	Medium	Which disaster killed about a quarter of London's people in 1665?	The Great Plague	The Great Fire	The Great Flood	The Great Frost
+his_glorious_revolution_1688	Medium	What was the 'Glorious Revolution' of 1688?	James II replaced by William and Mary	Cromwell's victory over the king	The union of England and Scotland	A revolt against high taxes
+his_king_scotland_became	Medium	Which king of Scotland also became King of England in 1603?	James VI	Charles I	Robert III	Malcolm IV
+his_law_1707_joined	Medium	Which law of 1707 joined England and Scotland into Great Britain?	The Act of Union	The Bill of Rights	The Act of Settlement	The Magna Carta
+his_henry_viii_close	Medium	What did Henry VIII close down across England, seizing their land and treasure?	The monasteries	The universities	The theatres	The guilds
+hx_kruki_tower	Hard	Legend says the kingdom will fall if which birds leave the Tower of London?	Ravens	Crows	Pigeons	Owls
+his_old_edward_became	Hard	How old was Edward VI when he became king in 1547?	Nine	Fourteen	Three	Eighteen
+his_sea_captain_said	Hard	Which sea captain is said to have finished his game of bowls before sailing to fight the Armada?	Francis Drake	Walter Raleigh	John Hawkins	Martin Frobisher
+his_dutch_ruler_took	Hard	Which Dutch ruler took the English throne together with his wife Mary in 1689?	William III of Orange	Maurice of Nassau	Frederick Henry	Philip of Spain
+his_pilgrimage_grace_1536	Hard	What was the 'Pilgrimage of Grace' of 1536?	A northern revolt against Henry VIII	A royal tour of shrines	A crusade to Jerusalem	A Puritan voyage to America
+his_chief_minister_henry	Hard	Which chief minister of Henry VIII, who closed the monasteries, was beheaded in 1540?	Thomas Cromwell	Thomas Wolsey	Thomas More	Thomas Cranmer
+his_jane_grey	Expert	Who ruled England for just nine days in 1553?	Lady Jane Grey	Edward V	Mary, Queen of Scots	Matilda
+hy_pepys_parmezan	Expert	During the Great Fire of London, the diarist Samuel Pepys buried which treasures in his garden?	His Parmesan cheese and wine	His gold and silver plate	His books and papers	His best clothes

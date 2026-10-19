@@ -1,0 +1,33 @@
+# Ameryka Lacinska od rewolucji na Haiti i Bolivara po rewolucje meksykanska.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+his_south_american_country	Easy	Which South American country is named after Simon Bolivar?	Bolivia	Venezuela	Colombia	Ecuador
+his_european_country_latin	Easy	From which European country did most of Latin America win independence in the 1800s?	Spain	Portugal	France	Britain
+his_simon_bolivar_nickname	Easy	What was Simon Bolivar's famous nickname?	The Liberator	The Conqueror	The Great	The Lion
+his4_simon_bolivar	Medium	Simon Bolivar is known for liberating which continent's colonies?	South America	Africa	Southeast Asia	Central Europe
+his_argentine_general_crossed	Medium	Which Argentine general crossed the Andes to free Chile and Peru from Spain?	Jose de San Martin	Simon Bolivar	Bernardo O'Higgins	Antonio Jose de Sucre
+his_date_mexico_celebrate	Medium	On which date does Mexico celebrate its Independence Day?	16 September	5 May	4 July	12 October
+his_cinco_mayo_celebrate	Medium	What does 'Cinco de Mayo' celebrate?	A Mexican victory over France in 1862	Mexico's independence from Spain	The end of the Mexican Revolution	The founding of Mexico City
+his_mexican_general_besieged	Medium	Which Mexican general besieged the Alamo and later lost Texas?	Antonio Lopez de Santa Anna	Pancho Villa	Porfirio Diaz	Benito Juarez
+his_mexican_revolutionary_fought	Medium	Which Mexican revolutionary fought under the slogan 'Land and Liberty'?	Emiliano Zapata	Pancho Villa	Porfirio Diaz	Francisco Madero
+his_declared_brazil_independent	Medium	Who declared Brazil independent from Portugal in 1822 and became its first emperor?	Pedro I	Pedro II	Joao VI	Maximilian
+his_policy_1823_warned	Medium	Which US policy of 1823 warned European powers to stay out of the Americas?	The Monroe Doctrine	The Truman Doctrine	The Open Door Policy	Manifest Destiny
+his_country_panama_break	Medium	From which country did Panama break away in 1903, with US backing?	Colombia	Mexico	Costa Rica	Venezuela
+his_mexican_dictator_ruled	Medium	Which Mexican dictator ruled for more than 30 years until the revolution of 1910?	Porfirio Diaz	Santa Anna	Benito Juarez	Pancho Villa
+his4_rewolucja_haiti	Hard	Haiti's revolution is notable as the first successful large-scale revolt of which group?	Enslaved people	Colonial merchants	Indigenous nobility	Naval officers
+his_mexican_revolutionary_general	Hard	Which Mexican revolutionary general led a raid into the United States in 1916?	Pancho Villa	Emiliano Zapata	Benito Juarez	Porfirio Diaz
+his_mexican_priest_cry	Hard	Which Mexican priest's 'Cry of Dolores' in 1810 began Mexico's war of independence?	Miguel Hidalgo	Jose Maria Morelos	Benito Juarez	Agustin de Iturbide
+his_mexican_president_born	Hard	Which Mexican president, born a Zapotec, led the fight against the French?	Benito Juarez	Porfirio Diaz	Santa Anna	Venustiano Carranza
+his_country_bernardo_higgins	Hard	Which country did Bernardo O'Higgins lead to independence?	Chile	Peru	Argentina	Uruguay
+his_war_1864_1870	Hard	Which war of 1864-1870 killed a huge share of Paraguay's people?	The War of the Triple Alliance	The War of the Pacific	The Chaco War	The Cisplatine War
+his_war_1879_1884	Hard	Which war of 1879-1884 cost Bolivia its coastline?	The War of the Pacific	The Chaco War	The War of the Triple Alliance	The Football War
+his_year_brazil_abolish	Hard	In which year did Brazil abolish slavery, the last country in the Americas to do so?	1888	1822	1850	1865
+his_cuban_poet_national	Hard	Which Cuban poet and national hero died fighting Spain in 1895?	Jose Marti	Fidel Castro	Antonio Maceo	Carlos Manuel de Cespedes
+his_venezuelan_general_won	Hard	Which Venezuelan general won the decisive Battle of Ayacucho in 1824?	Antonio Jose de Sucre	Simon Bolivar	Jose de San Martin	Francisco de Miranda
+his_country_uruguay_win	Hard	From which country did Uruguay win its independence in 1828?	Brazil	Spain	Argentina	Portugal
+hx_brazylia_cesarstwo	Expert	Which country in the Americas was ruled by its own emperors until 1889?	Brazil	Mexico	Argentina	Peru
+hx_rio_portugalia	Expert	Which European country moved its royal court to Brazil in 1808, fleeing Napoleon?	Portugal	Spain	France	The Netherlands
+hx_toussaint	Expert	Which former slave became the best-known leader of the Haitian Revolution?	Toussaint Louverture	Francois Mackandal	Simon Bolivar	Jose de San Martin
+hw_maksymilian	Expert	Which Austrian archduke was made Emperor of Mexico in 1864, and later executed?	Maximilian	Franz Joseph	Rudolf	Leopold
+his_venezuelan_precursor_fought	Expert	Which Venezuelan, called 'the Precursor', fought for independence before Bolivar?	Francisco de Miranda	Antonio Jose de Sucre	Jose Antonio Paez	Rafael Urdaneta
+his_haitian_leader_crowned	Expert	Which Haitian leader crowned himself emperor in 1804?	Jean-Jacques Dessalines	Toussaint Louverture	Henri Christophe	Alexandre Petion
+his_argentine_strongman_ruled	Expert	Which Argentine strongman ruled Buenos Aires province with an iron hand from 1829 to 1852?	Juan Manuel de Rosas	Juan Peron	Domingo Sarmiento	Bartolome Mitre

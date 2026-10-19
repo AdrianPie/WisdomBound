@@ -1,0 +1,43 @@
+# Sumer, Akad, Babilon, Asyria, Hetyci, Fenicjanie, Lidia i starozytny Izrael - wszystko na wschod od
+# Egiptu i Grecji az do podbojow Persji.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+his_ogrody_babilon	Easy	In which ancient city were the famous Hanging Gardens said to grow?	Babylon	Athens	Carthage	Memphis
+his_city_holy_jews	Easy	Which city is holy to Jews, Christians and Muslims alike?	Jerusalem	Mecca	Rome	Cairo
+his_mesopotamia_means_land	Easy	The name 'Mesopotamia' means 'the land between' what?	Two rivers	Two seas	Two mountains	Two deserts
+his_people_mesopotamia_usually	Easy	What did the people of Mesopotamia usually write on?	Clay tablets	Papyrus	Parchment	Bamboo strips
+his_phoenicians_above_all	Easy	The Phoenicians were famous above all as what?	Sailors and traders	Pyramid builders	Horse breeders	Desert nomads
+his_present_day_country_5	Easy	In which present-day country does most of ancient Mesopotamia lie?	Iraq	Egypt	Turkey	Saudi Arabia
+wh_hammurabi	Medium	Which Babylonian ruler is known for compiling one of the oldest law codes?	Hammurabi	Nebuchadnezzar II	Sargon the Great	Ashurbanipal
+wh_pismo_klinowe	Medium	Which civilization created cuneiform writing?	The Sumerians	The Egyptians	The Phoenicians	The Hittites
+hx_sumerowie_kolo	Medium	Which ancient people are credited with one of the earliest uses of the wheel?	The Sumerians	The Egyptians	The Greeks	The Chinese
+hx_hammurabi_oko	Medium	The Code of Hammurabi is famous for which principle of punishment?	'An eye for an eye'	'Innocent until proven guilty'	'The king is above the law'	'Every first crime is forgiven'
+hy_zigurat	Medium	What were the stepped temple towers of ancient Mesopotamia called?	Ziggurats	Pyramids	Stupas	Pagodas
+his_ancient_poem_tells	Medium	Which ancient poem tells of a Sumerian king's search for eternal life?	The Epic of Gilgamesh	The Iliad	The Book of the Dead	The Mahabharata
+his_empire_ruled_nineveh	Medium	Which empire, ruled from Nineveh, was feared across the Near East for its brutal siege warfare?	Assyria	Babylonia	Phoenicia	Lydia
+his_because_sumerians_counted	Medium	Because the Sumerians counted in sixties, we still have 60 of what?	Minutes in an hour	Hours in a day	Days in a month	Months in a decade
+his_king_israel_said	Medium	Which king of Israel is said to have built the First Temple in Jerusalem?	Solomon	David	Saul	Herod
+his_dead_sea_scrolls	Medium	What are the Dead Sea Scrolls, found in caves from 1947 onwards?	Ancient Jewish religious texts	Egyptian tax records	Roman army letters	Phoenician trade maps
+his_tower_bible_may	Medium	Which tower in the Bible may have been inspired by the great ziggurat of Babylon?	The Tower of Babel	The Tower of David	The Tower of Siloam	The Tower of Jericho
+his_king_lydia_wealthy	Medium	Which king of Lydia was so wealthy that 'rich as' him is still a saying?	Croesus	Midas	Cyrus	Darius
+his_writing_invented_sumer	Medium	What was writing first invented for in Sumer?	Recording trade and taxes	Writing down poems	Praying to the gods	Letters between kings
+hx_fenicjanie	Hard	Which seafaring people created the alphabet that Greek and Latin letters grew from?	The Phoenicians	The Egyptians	The Sumerians	The Hittites
+hy_nebukadnezar	Hard	Which Babylonian king is said to have built the Hanging Gardens?	Nebuchadnezzar II	Hammurabi	Sargon	Ashurbanipal
+his_babylonian_gate_covered	Hard	Which Babylonian gate, covered in blue glazed bricks, was rebuilt inside a Berlin museum?	The Ishtar Gate	The Lion Gate	The Gate of All Nations	The Golden Gate
+his_according_tradition_phoenician	Hard	According to tradition, which Phoenician city founded Carthage?	Tyre	Sidon	Byblos	Ugarit
+his_king_judea_ruling	Hard	Which king of Judea, ruling under Rome, rebuilt the Temple in Jerusalem on a grand scale?	Herod the Great	Herod Antipas	King David	Judas Maccabeus
+his_western_wall_jerusalem	Hard	The Western Wall in Jerusalem is a surviving part of what?	The Second Temple's platform	Solomon's palace	A Roman army fortress	The city's Crusader walls
+his_babylonian_king_captured	Hard	Which Babylonian king captured Jerusalem in 587 BC and took its people into exile?	Nebuchadnezzar II	Hammurabi	Ashurbanipal	Sargon of Akkad
+his_sumerian_city_bible	Hard	Which Sumerian city is named in the Bible as the home of Abraham?	Ur	Uruk	Nippur	Lagash
+his_sumerian_city_home	Hard	Which Sumerian city, home of the legendary Gilgamesh, was one of the world's first true cities?	Uruk	Nineveh	Babylon	Kish
+his_standard_found_royal	Hard	What is the 'Standard of Ur', found in a royal tomb?	A Sumerian box showing war and peace	A bronze banner carried in battle	A clay tablet listing the laws	A royal crown made of gold
+his_laws_hammurabi_carved	Hard	The laws of Hammurabi were carved on what?	A tall black stone pillar	A golden temple door	The walls of a ziggurat	A bronze shield
+wh_hetyci_zelazo	Expert	Which ancient people were among the first to master ironworking?	The Hittites	The Phoenicians	The Scythians	The Thracians
+his_nabatejczycy	Expert	Which people carved the rock city of Petra?	The Nabataeans	The Romans	The Phoenicians	The Persians
+hx_lidia_monety	Expert	Which ancient kingdom is credited with minting the first coins, around 600 BC?	Lydia	Egypt	Babylon	Phoenicia
+hx_purpura	Expert	Which dye, made from sea snails, was so costly it became a mark of royalty?	Tyrian purple	Egyptian blue	Venetian red	Indian yellow
+hy_asurbanipal	Expert	Which Assyrian king gathered a great library of clay tablets at Nineveh?	Ashurbanipal	Sennacherib	Nebuchadnezzar II	Sargon II
+hy_sargon	Expert	Who founded the Akkadian Empire, often called the first empire in history?	Sargon of Akkad	Hammurabi	Gilgamesh	Cyrus the Great
+his_word_bible_comes	Expert	The word 'Bible' comes from which Phoenician port, famous for exporting papyrus?	Byblos	Tyre	Sidon	Gaza
+his_title_meaning_big	Expert	Which title, meaning 'big man', did Sumerian kings use?	Lugal	Pharaoh	Satrap	Tyrant
+his_hittite_capital_lies	Expert	Which Hittite capital lies in ruins near the Turkish village of Bogazkale?	Hattusa	Troy	Ephesus	Nineveh
+his_sumerian_priestess_often	Expert	Which Sumerian priestess is often named as the first author known by name?	Enheduanna	Puabi	Nefertiti	Sappho

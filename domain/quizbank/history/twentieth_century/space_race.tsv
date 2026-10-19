@@ -1,0 +1,32 @@
+# Wyscig w kosmos: Sputnik, Gagarin, Apollo, wahadlowce i stacje kosmiczne.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+his_ksiezyc	Easy	Who was the first person to walk on the Moon?	Neil Armstrong	Buzz Aldrin	Yuri Gagarin	Michael Collins
+his_ksiezyc_rok	Easy	In which year did humans first land on the Moon?	1969	1959	1972	1965
+hx_armstrong_krok	Easy	What did the first man on the Moon say as he stepped onto it?	That's one small step for man...	The Eagle has landed...	Houston, we are here...	What a view from up here...
+his_dog_became_animal	Easy	Which dog became the first animal to orbit the Earth, in 1957?	Laika	Belka	Strelka	Lassie
+his_space_agency_created	Easy	What is the name of the US space agency, created in 1958?	NASA	ESA	JPL	NORAD
+his_country_launched_sputnik	Easy	Which country launched Sputnik, the first artificial satellite?	The Soviet Union	The USA	Britain	France
+his_apollo_astronauts_bring	Easy	What did the Apollo astronauts bring back from the Moon?	Moon rocks	Moon water	Alien bacteria	Nothing at all
+his_gagarin	Medium	Who was the first human to travel into space?	Yuri Gagarin	Neil Armstrong	Alan Shepard	Valentina Tereshkova
+his2_czlowiek_kosmos_rok	Medium	In which year did Yuri Gagarin fly into space?	1961	1957	1969	1965
+his2_sputnik	Medium	What was Earth's first artificial satellite called?	Sputnik 1	Vostok 1	Explorer 1	Luna 1
+his_tierieszkowa	Medium	Who was the first woman to travel into space?	Valentina Tereshkova	Sally Ride	Svetlana Savitskaya	Mae Jemison
+hx_apollo_13	Medium	Which Apollo mission radioed 'Houston, we've had a problem'?	Apollo 13	Apollo 11	Apollo 1	Apollo 8
+hx_aldrin	Medium	Who was the second person to walk on the Moon?	Buzz Aldrin	Michael Collins	Pete Conrad	Alan Shepard
+his_president_apollo_landed	Medium	Who was US president when Apollo 11 landed on the Moon?	Richard Nixon	John F. Kennedy	Lyndon B. Johnson	Gerald Ford
+his_astronaut_stayed_lunar	Medium	Which astronaut stayed in lunar orbit while Armstrong and Aldrin walked on the Moon?	Michael Collins	John Glenn	Jim Lovell	Alan Shepard
+his_american_woman_space	Medium	Who was the first American woman in space, in 1983?	Sally Ride	Christa McAuliffe	Mae Jemison	Eileen Collins
+his_became_briton_space	Medium	Who became the first Briton in space, in 1991?	Helen Sharman	Tim Peake	Michael Foale	Richard Branson
+his_mission_crew_died	Medium	Which mission's crew died in a fire on the launch pad in 1967?	Apollo 1	Apollo 13	Gemini 4	Soyuz 11
+his_space_shuttle_broke_2	Medium	Which space shuttle broke apart while coming back to Earth in 2003?	Columbia	Challenger	Discovery	Atlantis
+his_german_born_engineer	Medium	Which German-born engineer led the design of the Saturn V Moon rocket?	Wernher von Braun	Sergei Korolev	Robert Goddard	Hermann Oberth
+his_became_american_space	Medium	Who became the first American in space, in May 1961?	Alan Shepard	John Glenn	Neil Armstrong	Gus Grissom
+hx_ksiezyc_ostatni	Hard	In which year did humans last walk on the Moon?	1972	1969	1979	1985
+hy_wostok	Hard	What was the name of Yuri Gagarin's spacecraft?	Vostok 1	Sputnik 2	Soyuz 1	Apollo 1
+hy_mir	Hard	Which Soviet space station orbited Earth from 1986 to 2001?	Mir	Salyut 7	Skylab	Tiangong
+his_space_shuttle_broke	Hard	Which space shuttle broke apart just after launch in 1986?	Challenger	Columbia	Discovery	Atlantis
+his_american_orbit_earth	Hard	Who was the first American to orbit the Earth, in 1962?	John Glenn	Alan Shepard	Neil Armstrong	Gus Grissom
+his_programme_put_american	Hard	Which programme put the first American astronauts into space in the early 1960s?	Mercury	Gemini	Apollo	Skylab
+his_mission_1975_american	Hard	In which mission of 1975 did American and Soviet spacecraft dock in orbit?	Apollo-Soyuz	Gemini-Vostok	Skylab-Mir	Atlantis-Salyut
+hx_earthrise	Expert	Which mission took the famous 'Earthrise' photo from lunar orbit in 1968?	Apollo 8	Apollo 11	Apollo 13	Gemini 7
+his_soviet_probe_made	Expert	Which Soviet probe made the first soft landing on the Moon, in 1966?	Luna 9	Sputnik 3	Lunokhod 1	Vostok 2

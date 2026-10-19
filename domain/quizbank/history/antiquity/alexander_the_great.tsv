@@ -1,0 +1,36 @@
+# Filip II, Aleksander i jego podboje, a po nim krolestwa diadochow: Ptolemeusze, Seleucydzi,
+# Aleksandria, Rodos.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+hx_biblioteka	Easy	Which city had the most famous library of the ancient world?	Alexandria	Athens	Rome	Babylon
+his_macedonian_king_conquered	Easy	Which Macedonian king conquered the Persian Empire before he was 30?	Alexander the Great	Philip II	Ptolemy I	Seleucus I
+wh_aleksander_nauczyciel	Medium	Which philosopher was the teacher of Alexander the Great?	Aristotle	Plato	Socrates	Epicurus
+his_kolos_rodyjski	Medium	Which ancient wonder was a giant bronze statue at a Greek harbour?	The Colossus of Rhodes	The Statue of Zeus	The Lighthouse of Alexandria	The Mausoleum
+hx_aleksander_wiek	Medium	At about what age did Alexander the Great die, after conquering an empire from Greece to India?	32	45	58	25
+his_alexander_great_king	Medium	Alexander the Great was king of which ancient kingdom?	Macedon	Sparta	Persia	Thrace
+his_ancient_wonder_guided	Medium	Which ancient wonder guided ships into the harbour of Alexandria?	The Pharos lighthouse	The Colossus of Rhodes	The Hanging Gardens	The Temple of Artemis
+his_father_alexander_great	Medium	Who was the father of Alexander the Great?	Philip II	Darius III	Leonidas I	Pericles
+his_egyptian_city_alexander	Medium	Which Egyptian city did Alexander the Great found and name after himself?	Alexandria	Cairo	Memphis	Thebes
+his_alexander_great_turn	Medium	Why did Alexander the Great turn back from India?	His soldiers refused to go on	He was defeated in battle	A plague hit his army	Persia rose in revolt
+his_according_legend_alexander	Medium	According to legend, what did Alexander do when told there were no more worlds to conquer?	He wept	He laughed	He abdicated	He fell asleep
+hx_bucefal	Hard	What was the name of Alexander the Great's famous horse?	Bucephalus	Pegasus	Incitatus	Marengo
+hx_wezel_gordyjski	Hard	What did Alexander the Great famously do with the Gordian Knot?	Cut it with his sword	Untied it in seconds	Burned it	Gave it to a priest
+hy_aleksander_babilon	Hard	In which city did Alexander the Great die?	Babylon	Alexandria	Athens	Persepolis
+his_persian_king_alexander	Hard	Which Persian king did Alexander the Great defeat?	Darius III	Xerxes I	Cyrus the Great	Artaxerxes II
+his_battle_331_alexander	Hard	At which battle of 331 BC did Alexander finally crush Darius III's army?	Gaugamela	Issus	Granicus	Hydaspes
+his_indian_king_fought	Hard	Which Indian king fought Alexander at the Hydaspes River with war elephants?	Porus	Chandragupta	Ashoka	Bindusara
+his_bactrian_noblewoman_became	Hard	Which Bactrian noblewoman became Alexander's wife in 327 BC?	Roxana	Olympias	Thais	Cleopatra
+his_alexander_great_mother	Hard	What was the name of Alexander the Great's mother?	Olympias	Roxana	Antigone	Berenice
+his_alexander_generals_fought	Hard	What were Alexander's generals, who fought over his empire after his death, called?	The Diadochi	The Ephors	The Tetrarchs	The Satraps
+his_dynasty_founded_alexander	Hard	Which dynasty founded by one of Alexander's generals ruled from Syria to Persia?	The Seleucids	The Ptolemies	The Antigonids	The Attalids
+his_battle_333_alexander	Hard	At which battle of 333 BC did Alexander rout Darius III and capture his family?	Issus	Gaugamela	Granicus	Chaeronea
+his_writing_material_supposedly	Hard	Which writing material was supposedly invented at Pergamon when Egypt stopped selling it papyrus?	Parchment	Paper	Silk	Wax tablets
+his_athenian_orator_warned	Hard	Which Athenian orator warned his city against Philip II in speeches called the 'Philippics'?	Demosthenes	Cicero	Pericles	Isocrates
+his_elite_cavalry_alexander	Hard	What was the elite cavalry that Alexander led into battle called?	The Companions	The Immortals	The Sacred Band	The Myrmidons
+his_very_long_pike	Hard	What was the very long pike that made the Macedonian phalanx so deadly?	The sarissa	The pilum	The javelin	The halberd
+his_modern_word_comes	Hard	Which modern word comes from the research institute at the heart of ancient Alexandria?	Museum	Academy	Lyceum	Gymnasium
+his_greek_city_afghanistan	Expert	Which Greek city in Afghanistan, founded in Alexander's wake, had its own theatre and gymnasium?	Ai-Khanoum	Kandahar	Bactra	Taxila
+his_island_city_alexander	Expert	Which island city did Alexander besiege for seven months, building a causeway to reach it?	Tyre	Rhodes	Sidon	Halicarnassus
+his_desert_oasis_oracle	Expert	At which desert oasis did an oracle hail Alexander as the son of a god?	Siwa	Kharga	Palmyra	Petra
+his_close_friend_death	Expert	Which close friend's death in 324 BC left Alexander overcome with grief?	Hephaestion	Ptolemy	Parmenion	Cleitus
+his_battle_338_philip	Expert	At which battle of 338 BC did Philip II of Macedon defeat Athens and Thebes?	Chaeronea	Leuctra	Mantinea	Issus
+his_stabbed_philip_macedon	Expert	Who stabbed Philip II of Macedon to death in 336 BC?	His bodyguard Pausanias	His son Alexander	His wife Olympias	A Persian spy

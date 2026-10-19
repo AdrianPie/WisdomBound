@@ -1,0 +1,36 @@
+# Od herbatki bostonskiej do Konstytucji: wojna o niepodleglosc i ojcowie zalozyciele.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+his_boston_herbata	Easy	American colonists dumped tea into Boston Harbour in 1773 to protest against what?	British taxes	The price of coffee	A ban on alcohol	Spanish pirates
+his_date_americans_celebrate	Easy	On which date do Americans celebrate Independence Day?	4 July	14 July	1 May	11 November
+his_american_revolution_army	Easy	During the American Revolution, which army's soldiers were nicknamed 'Redcoats'?	The British army	The French army	The Spanish army	The American army
+his_british_colonies_declared	Easy	How many British colonies declared independence to form the United States?	13	10	15	50
+his_founding_father_killed	Easy	Which US founding father was killed in a duel with Aaron Burr in 1804?	Alexander Hamilton	John Jay	Thomas Paine	Samuel Adams
+his_against_country_thirteen	Easy	Against which country did the thirteen American colonies fight for independence?	Great Britain	France	Spain	The Netherlands
+his_commanded_american_army	Easy	Who commanded the American army in the War of Independence?	George Washington	Benjamin Franklin	John Adams	Thomas Jefferson
+his3_deklaracja_niepodleglosci_usa	Medium	In which year was the US Declaration of Independence signed?	1776	1789	1800	1765
+hx_jefferson	Medium	Who was the main author of the US Declaration of Independence?	Thomas Jefferson	George Washington	Benjamin Franklin	John Adams
+hx_delaware	Medium	Which river did George Washington famously cross on Christmas night, 1776?	The Delaware	The Potomac	The Hudson	The Mississippi
+hw_franklin_piorun	Medium	Which American Founding Father invented the lightning rod?	Benjamin Franklin	Thomas Jefferson	George Washington	John Adams
+his_british_king_lost	Medium	Which British king lost the American colonies in the War of Independence?	George III	George I	William IV	Charles II
+his_founding_document_begins	Medium	Which founding document begins with the words 'We the People'?	The US Constitution	The Declaration of Independence	The Bill of Rights	The Magna Carta
+his_cracked_bell_symbol	Medium	Which famous cracked bell is a symbol of American independence?	The Liberty Bell	Big Ben	The Freedom Bell	The Tsar Bell
+his_american_patriot_declared	Medium	Which American patriot declared 'Give me liberty, or give me death!' in 1775?	Patrick Henry	Paul Revere	Samuel Adams	Nathan Hale
+his_slogan_summed_colonists	Medium	Which slogan summed up the colonists' anger at being taxed by Parliament?	'No taxation without representation'	'Liberty, equality, fraternity'	'Workers of the world, unite'	'Peace, land and bread'
+his_tax_1765_newspapers	Medium	Which tax of 1765 on newspapers and legal papers outraged the colonies?	The Stamp Act	The Sugar Act	The Tea Act	The Townshend Acts
+his_shots_american_revolution	Medium	Where were the first shots of the American Revolution fired in 1775?	Lexington and Concord	Bunker Hill	Yorktown	Saratoga
+his_british_army_surrender	Medium	Where did the British army surrender in 1781, ending the main fighting?	Yorktown	Saratoga	Boston	Philadelphia
+his_pamphlet_thomas_paine	Medium	Which pamphlet by Thomas Paine urged Americans to break with Britain in 1776?	'Common Sense'	'The Federalist'	'Rights of Man'	'Poor Richard's Almanack'
+his_american_general_became	Medium	Which American general's name became a byword for 'traitor' after he plotted to hand West Point to the British?	Benedict Arnold	Charles Lee	Horatio Gates	Nathanael Greene
+his_according_legend_philadelphia	Medium	According to legend, which Philadelphia seamstress sewed the first Stars and Stripes?	Betsy Ross	Martha Washington	Abigail Adams	Molly Pitcher
+his_shooting_five_colonists	Medium	What is the shooting of five colonists by British soldiers in 1770 called?	The Boston Massacre	The Boston Tea Party	The Lexington Raid	The Bloody Assizes
+his_colonial_militiamen_ready	Medium	What were the colonial militiamen who could be ready to fight at once called?	Minutemen	Redcoats	Rangers	Patriots
+his_ten_amendments_constitution	Medium	What are the first ten amendments to the US Constitution called?	The Bill of Rights	The Articles of Confederation	The Federalist Papers	The Great Compromise
+trv_franklin_banknot	Hard	Whose face is on the US $100 bill, even though he was never president?	Benjamin Franklin's	Thomas Jefferson's	Ulysses Grant's	Abraham Lincoln's
+his_nowy_jork_stolica	Hard	Which city was the first capital of the United States under its Constitution?	New York City	Philadelphia	Boston	Washington, D.C.
+hx_paul_revere	Hard	Which silversmith made a famous midnight ride in 1775 to warn that British troops were coming?	Paul Revere	Benjamin Franklin	Samuel Adams	John Hancock
+hy_lafayette	Hard	Which young French nobleman became a hero of the American Revolution?	The Marquis de Lafayette	The Comte de Rochambeau	Napoleon Bonaparte	Cardinal Richelieu
+his_state_ratify_constitution	Hard	Which was the first state to ratify the US Constitution, earning the nickname 'the First State'?	Delaware	Virginia	Massachusetts	Pennsylvania
+his_american_victory_1777	Hard	Which American victory of 1777 persuaded France to join the war?	Saratoga	Trenton	Bunker Hill	Long Island
+his_british_general_surrendered	Hard	Which British general surrendered at Yorktown in 1781?	Lord Cornwallis	General Howe	General Burgoyne	General Gage
+his_treaty_1783_recognised	Hard	Which treaty of 1783 recognised the independence of the United States?	The Treaty of Paris	The Treaty of Ghent	The Treaty of Versailles	The Treaty of London
+his_washington_army_survive	Hard	Where did Washington's army survive the bitter winter of 1777-1778?	Valley Forge	Bunker Hill	Mount Vernon	Fort Ticonderoga

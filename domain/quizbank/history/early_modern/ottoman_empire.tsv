@@ -1,0 +1,33 @@
+# Imperium osmanskie od 1299 do 1922: zdobycie Konstantynopola, Sulejman Wspanialy, janczarzy, Wieden
+# 1683, 'chory czlowiek Europy'.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+his_title_ruler_ottoman	Easy	What was the title of the ruler of the Ottoman Empire?	Sultan	Shah	Tsar	Pharaoh
+his_private_quarters_sultan	Easy	What were the private quarters of the sultan's wives and concubines called?	The harem	The divan	The seraglio gate	The bazaar
+his_modern_country_grew	Easy	Which modern country grew from the heartland of the Ottoman Empire?	Turkey	Greece	Egypt	Iran
+his_covered_market_istanbul	Easy	Which covered market in Istanbul, opened in the 1400s, is one of the largest in the world?	The Grand Bazaar	The Spice Souk	The Silk Hall	The Golden Market
+hx_janczarzy	Medium	Who were the Janissaries?	Elite Ottoman soldiers	Persian court poets	Byzantine priests	Mongol messengers
+his_founded_ottoman_state	Medium	Who founded the Ottoman state around 1299, giving it his name?	Osman I	Mehmed II	Orhan	Bayezid I
+his_main_palace_ottoman	Medium	What was the main palace of the Ottoman sultans in Istanbul called?	Topkapi Palace	Dolmabahce Palace	The Alhambra	The Blue Palace
+his_habsburg_capital_ottomans	Medium	Which Habsburg capital did the Ottomans besiege and fail to take in 1529 and 1683?	Vienna	Budapest	Prague	Venice
+his_side_ottoman_empire	Medium	On which side did the Ottoman Empire fight in World War I?	With Germany and Austria-Hungary	With Britain and France	With Russia	It stayed neutral
+his_wallachian_prince_impaled	Medium	Which Wallachian prince, who impaled Ottoman prisoners, helped inspire the legend of Dracula?	Vlad the Impaler	Stephen the Great	Mircea the Elder	Michael the Brave
+his_title_ottoman_sultan	Medium	What was the title of the Ottoman sultan's chief minister?	Grand Vizier	Grand Mufti	Pasha of Pashas	High Khan
+his_empire_greece_win	Medium	From which empire did Greece win its independence in 1830?	The Ottoman Empire	The Austrian Empire	The Russian Empire	The British Empire
+his_1915_crime_ottoman	Medium	Which 1915 crime of the Ottoman government killed over a million of its Christian subjects?	The Armenian genocide	The Great Fire of Smyrna	The Greek expulsion	The Kurdish revolt
+his_red_felt_hat	Medium	Which red felt hat was a symbol of Ottoman Turkey until Ataturk banned it in 1925?	The fez	The turban	The kalpak	The beret
+hx_osmanowie_koniec	Hard	In which year did the Ottoman sultanate come to an end?	1922	1878	1945	1908
+his_crumbling_empire_nicknamed	Hard	Which crumbling empire was nicknamed 'the sick man of Europe' in the 1800s?	The Ottoman Empire	The Austrian Empire	The Russian Empire	The Spanish Empire
+his_great_architect_built	Hard	Which great architect built the Suleymaniye Mosque for Suleiman the Magnificent?	Mimar Sinan	Mehmed Agha	Ali Pasha	Ibrahim Pasha
+his_devshirme_ottoman_empire	Hard	What was the 'devshirme' in the Ottoman Empire?	Taking Christian boys to be Janissaries	The sultan's tax on coffee	The sultan's council of ministers	The ban on printing presses
+his_battle_1526_suleiman	Hard	At which battle of 1526 did Suleiman the Magnificent crush the Hungarian army?	Mohacs	Varna	Nicopolis	Kosovo
+his_ottoman_title_high	Hard	Which Ottoman title for a high official survives in English as a word for a grand lord?	Pasha	Bey	Vizier	Agha
+his_reformist_movement_forced	Hard	Which reformist movement forced the sultan to bring back the constitution in 1908?	The Young Turks	The Janissaries	The Tanzimat	The Ataturk Party
+his_happened_janissaries_1826	Hard	What happened to the Janissaries in 1826?	The sultan had them destroyed	They took over the empire	They were sent to Egypt	They became the police
+his2_bitwa_lepanto	Expert	Who lost the Battle of Lepanto in 1571?	The Ottoman Empire	The Republic of Venice	Spain	The Papal States
+his4_imperium_ottomanskie_szczyt	Expert	Under which sultan did the Ottoman Empire reach its greatest expansion in Europe?	Suleiman the Magnificent	Osman the First	Mehmed the Conqueror	Selim the Grim
+mst_faks_lincoln	Expert	Which empire was still standing when the first fax machine was patented?	The Ottoman Empire	The Roman Empire	The Aztec Empire	The Mongol Empire
+his_sultan_conquered_syria	Expert	Which sultan conquered Syria and Egypt from the Mamluks in 1516-1517?	Selim I	Suleiman I	Mehmed II	Murad II
+his_tulip_era_1718	Expert	What was the 'Tulip Era' of 1718 to 1730 in the Ottoman Empire?	A time of peace and luxury at court	A famine caused by crop failure	A war with the Dutch	A ban on European fashion
+his_albanian_hero_fought	Expert	Which Albanian hero fought off the Ottomans for 25 years in the 1400s?	Skanderbeg	Janos Hunyadi	Vlad Tepes	Stefan Lazarevic
+his_city_north_west	Expert	Which city in north-west Anatolia was the first Ottoman capital?	Bursa	Edirne	Konya	Izmir
+his_last_ottoman_sultan	Expert	Who was the last Ottoman sultan, who fled Istanbul on a British warship in 1922?	Mehmed VI	Abdulhamid II	Mehmed V	Abdulmejid II

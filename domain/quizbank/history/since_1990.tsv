@@ -1,0 +1,43 @@
+# Swiat po zimnej wojnie: Unia Europejska, wojny na Balkanach, 11 wrzesnia, kryzysy i rewolucje.
+# Tylko fakty przypiete do konkretnego roku - nic, co sie zdezaktualizuje.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+hx_diana	Easy	In which city did Diana, Princess of Wales, die in a car crash in 1997?	Paris	London	Rome	Monaco
+his_saddam_hussein_dictator	Easy	Saddam Hussein was the dictator of which country until 2003?	Iraq	Iran	Syria	Libya
+his_president_attacks_2001	Easy	Who was US president during the 9/11 attacks in 2001?	George W. Bush	Bill Clinton	Barack Obama	George H. W. Bush
+his_peninsula_russia_annex	Easy	Which peninsula did Russia annex from Ukraine in 2014?	Crimea	Kamchatka	Kola	Yamal
+his_japanese_nuclear_power	Easy	Which Japanese nuclear power plant was wrecked by a tsunami in 2011?	Fukushima	Hiroshima	Nagasaki	Kobe
+his_queen_elizabeth_husband	Easy	What was the name of Queen Elizabeth II's husband?	Prince Philip	Prince Charles	Prince Albert	Prince Edward
+his_slovenia_croatia_bosnia	Easy	Slovenia, Croatia and Bosnia were all once part of which country?	Yugoslavia	Czechoslovakia	Bulgaria	Albania
+his_currency_germany_use	Easy	Which currency did Germany use before the euro?	The Deutsche Mark	The schilling	The franc	The guilder
+his_princess_diana_elder	Easy	What is the name of Princess Diana's elder son?	Prince William	Prince Harry	Prince Edward	Prince Andrew
+his_became_king_united	Easy	Who became King of the United Kingdom in 2022?	Charles III	William V	George VII	Edward IX
+his_bosnian_city_endured	Easy	Which Bosnian city endured a siege of almost four years during the 1990s?	Sarajevo	Mostar	Srebrenica	Tuzla
+his_country_iraq_invade	Easy	Which country did Iraq invade in 1990, triggering the Gulf War?	Kuwait	Iran	Saudi Arabia	Syria
+his_territory_declared_independence	Easy	Which territory declared independence from Serbia in 2008?	Kosovo	Montenegro	Bosnia	Macedonia
+his_country_2004_orange	Easy	In which country did the 2004 'Orange Revolution' take place?	Ukraine	Georgia	Belarus	Moldova
+his_british_prime_minister_3	Easy	Which British prime minister won the 2019 election promising to 'Get Brexit Done'?	Boris Johnson	Theresa May	David Cameron	Rishi Sunak
+his_british_prime_minister_4	Easy	Which British prime minister lasted just 49 days in office in 2022?	Liz Truss	Theresa May	Rishi Sunak	Boris Johnson
+his_swedish_teenager_began	Easy	Which Swedish teenager began 'school strikes for the climate' in 2018?	Greta Thunberg	Malala Yousafzai	Vanessa Nakate	Luisa Neubauer
+his_disease_caused_worldwide	Easy	Which disease caused a worldwide pandemic starting in 2020?	COVID-19	Ebola	SARS	Bird flu
+hx_euro_2002	Medium	In which year did euro notes and coins go into circulation?	2002	1999	1995	2008
+hx_brexit	Medium	In which year did the UK vote in a referendum to leave the European Union?	2016	2012	2019	2020
+his_british_prime_minister_2	Medium	Which British prime minister called the 2016 Brexit referendum, then resigned after losing it?	David Cameron	Theresa May	Boris Johnson	Tony Blair
+his_britain_prime_minister	Medium	Who was Britain's prime minister when it joined the 2003 invasion of Iraq?	Tony Blair	Gordon Brown	John Major	David Cameron
+his_currency_italy_use	Medium	Which currency did Italy use before the euro?	The lira	The peseta	The drachma	The escudo
+his_1998_deal_largely	Medium	Which 1998 deal largely ended the Troubles in Northern Ireland?	Good Friday Agreement	Treaty of Belfast	Downing Street Accord	Anglo-Irish Pact
+his_israeli_prime_minister	Medium	Which Israeli prime minister was assassinated at a peace rally in 1995?	Yitzhak Rabin	Menachem Begin	Shimon Peres	Ariel Sharon
+his_code_1991_led	Medium	What was the code name of the 1991 US-led campaign to drive Iraq out of Kuwait?	Operation Desert Storm	Operation Iraqi Freedom	Operation Enduring Freedom	Operation Overlord
+his_country_east_timor	Medium	From which country did East Timor become independent in 2002?	Indonesia	Portugal	Australia	Malaysia
+his_country_2003_rose	Medium	Which country's 2003 'Rose Revolution' brought a pro-Western government to power?	Georgia	Armenia	Ukraine	Kyrgyzstan
+his_country_genocide_kill	Medium	In which country did a genocide kill about 800,000 people in 1994?	Rwanda	Burundi	Uganda	Somalia
+his_1997_climate_treaty	Medium	Which 1997 climate treaty was named after a Japanese city?	The Kyoto Protocol	The Tokyo Accord	The Osaka Agreement	The Hiroshima Pact
+his_year_united_kingdom	Medium	In which year did the United Kingdom formally leave the European Union?	2020	2016	2018	2022
+his_country_osama_bin	Medium	In which country was Osama bin Laden killed by US forces in 2011?	Pakistan	Afghanistan	Iraq	Yemen
+hx_czechoslowacja	Hard	In which year did Czechoslovakia peacefully split into two countries?	1993	1989	1991	1999
+hy_jelcyn	Hard	Who was the first president of the Russian Federation?	Boris Yeltsin	Mikhail Gorbachev	Vladimir Putin	Dmitry Medvedev
+his_country_arab_spring	Hard	In which country did the 'Arab Spring' protests begin, in late 2010?	Tunisia	Egypt	Libya	Syria
+his_collapse_bank_2008	Hard	The collapse of which US bank in 2008 set off a global financial crisis?	Lehman Brothers	Goldman Sachs	JPMorgan Chase	Morgan Stanley
+his_agreement_reached_air	Hard	Which agreement, reached at a US air base in Ohio in 1995, ended the war in Bosnia?	The Dayton Agreement	The Camp David Accords	The Oslo Accords	The Paris Peace Treaty
+his_country_joined_european	Hard	Which country joined the European Union in 2013?	Croatia	Serbia	Bulgaria	Slovenia
+his_country_asian_financial	Hard	In which country did the Asian financial crisis of 1997 begin?	Thailand	South Korea	Indonesia	Japan
+hy_maastricht	Expert	Which 1992 treaty created the European Union?	The Maastricht Treaty	The Treaty of Rome	The Lisbon Treaty	The Schengen Agreement

@@ -1,0 +1,61 @@
+# Od Augusta do upadku Zachodu w 476: cesarze, legiony, Koloseum, Pompeje, chrzescijanstwo, barbarzyncy
+# pod bramami. Bizancjum ma osobny dzial w sredniowieczu.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+lmk_pompeje_wulkan	Easy	Which ancient city did Vesuvius bury in AD 79?	Pompeii	Ostia	Capua	Syracuse
+his_neron_rzym	Easy	Which Roman emperor supposedly played music while Rome burned?	Nero	Caligula	Tiberius	Commodus
+hx_koloseum	Easy	In which Roman arena did gladiators fight in front of huge crowds?	The Colosseum	The Pantheon	The Forum	The Parthenon
+hx_legion	Easy	What was a large unit of the Roman army called?	A legion	A phalanx	A regiment	A horde
+hy_akwedukty	Easy	What did the Romans build to carry fresh water into their cities?	Aqueducts	Canals	Windmills	Water towers
+his_romans_call_island	Easy	What did the Romans call the island of Great Britain?	Britannia	Gaul	Hibernia	Caledonia
+his_loose_formal_garment	Easy	What loose formal garment did Roman citizens wear?	A toga	A kilt	A kimono	A sari
+trv_hadrian_mur	Medium	In which present-day country is Hadrian's Wall?	The United Kingdom	Germany	Italy	France
+trv_pompeje_odkopanie	Medium	Roughly how long was Pompeii buried before it was rediscovered?	About 1,700 years	About 200 years	About 700 years	About 3,000 years
+org_pensja_sol	Medium	The word 'salary' traces back to Roman payments made in what?	Salt	Grain	Wine	Bronze
+his_kaligula_kon	Medium	Which Roman emperor supposedly planned to make his horse a consul?	Caligula	Nero	Commodus	Tiberius
+his_rzym_mocz	Medium	What did some ancient Romans use as mouthwash?	Urine	Vinegar	Wine	Olive oil
+his_attyla	Medium	Which people did Attila lead against the Roman Empire?	The Huns	The Goths	The Vandals	The Mongols
+hx_koloseum_widzowie	Medium	Roughly how many spectators could the Colosseum hold?	About 50,000	About 5,000	About 200,000	About a million
+hx_londinium	Medium	What was London called when the Romans founded it?	Londinium	Lugdunum	Londonia	Aquae Sulis
+hy_drogi_rzymskie	Medium	Roughly how many kilometres of paved roads did the Roman Empire build?	Over 80,000	About 800	About 8,000	Over 8 million
+his_main_public_square	Medium	What was the main public square at the heart of ancient Rome called?	The Forum	The Agora	The Piazza	The Acropolis
+his_according_catholic_tradition	Medium	According to Catholic tradition, who was the first pope?	Saint Peter	Saint Paul	Saint John	Saint Andrew
+his_roman_governor_judaea	Medium	Which Roman governor of Judaea ordered the crucifixion of Jesus?	Pontius Pilate	Herod the Great	Julius Caesar	Mark Antony
+his_stand_dates_such	Medium	What does 'AD' stand for in dates such as AD 79?	Anno Domini	After Death	Ante Diem	Age of Discovery
+his_ancient_rome_huge	Medium	What was the name of ancient Rome's huge chariot-racing stadium?	The Circus Maximus	The Colosseum	The Pantheon	The Forum
+his_language_new_testament	Medium	In which language was the New Testament first written?	Greek	Latin	Hebrew	Aramaic
+his_month_roman_emperor	Medium	Which month is named after the first Roman emperor?	August	June	March	January
+his_pax_romana	Medium	What was the 'Pax Romana'?	Two centuries of peace across the empire	Rome's peace treaty with Carthage	The emperor's private army	A tax paid by conquered peoples
+his_elite_bodyguard_roman	Medium	What was the elite bodyguard of the Roman emperors, which often made and killed them, called?	The Praetorian Guard	The Varangian Guard	The Immortals	The Swiss Guard
+his_short_stabbing_sword	Medium	What was the short stabbing sword of the Roman legionary called?	The gladius	The pilum	The spatha	The falchion
+his_romans_use_public	Medium	What did Romans use in public latrines instead of toilet paper?	A sponge on a stick	Dried leaves	Linen rags	Smooth pebbles
+his_rzym	Hard	In which year did the Western Roman Empire fall?	476	410	395	527
+trv_konstantyn_chrzescijanstwo	Hard	Which Roman emperor was the first to convert to Christianity?	Constantine the Great	Nero	Augustus	Marcus Aurelius
+his_herkulanum	Hard	Which Roman town was buried by Vesuvius along with Pompeii?	Herculaneum	Ostia	Paestum	Capua
+his_vomitorium	Hard	What was a 'vomitorium' in an ancient Roman arena?	A passage for crowds to exit	A room for vomiting at feasts	A public bath	A cell for prisoners
+his_boudika	Hard	Which warrior queen led a great revolt against the Romans in Britain?	Boudica	Zenobia	Cleopatra	Matilda
+his_wandalowie	Hard	Which people sacked Rome in 455, giving us a word for senseless destruction?	The Vandals	The Goths	The Huns	The Franks
+hx_trajan	Hard	Under which emperor did the Roman Empire reach its greatest size, in AD 117?	Trajan	Augustus	Hadrian	Marcus Aurelius
+hx_marek_aureliusz	Hard	Which Roman emperor wrote the philosophical 'Meditations'?	Marcus Aurelius	Nero	Hadrian	Diocletian
+hx_testudo	Hard	What was the Roman 'testudo' (tortoise) formation?	Shields locked overhead	A siege tower on wheels	A slow cavalry charge	A bridge of boats
+hx_cloaca_maxima	Hard	What was the Cloaca Maxima in ancient Rome?	A great sewer	A giant arena	A royal palace	A city gate
+hx_wizygoci	Hard	Which people, led by Alaric, sacked Rome in 410?	The Visigoths	The Huns	The Franks	The Ostrogoths
+his_language_mostly_spoken	Hard	Which language was mostly spoken in the eastern half of the Roman Empire?	Greek	Latin	Aramaic	Coptic
+his_roman_emperor_built	Hard	Which Roman emperor built a turf wall across Scotland, north of Hadrian's Wall?	Antoninus Pius	Trajan	Septimius Severus	Marcus Aurelius
+his_roman_paris	Hard	What was the Roman name for Paris?	Lutetia	Lugdunum	Massilia	Burdigala
+his_germanic_chieftain_deposed	Hard	Which Germanic chieftain deposed the last Western Roman emperor in 476?	Odoacer	Alaric	Theodoric	Attila
+his_great_public_bath	Hard	What were the great public bath complexes of ancient Rome called?	Thermae	Basilicas	Forums	Insulae
+his_emperor_split_roman	Hard	Which emperor split the Roman Empire between four rulers, the 'Tetrarchy'?	Diocletian	Constantine	Theodosius	Hadrian
+his_emperor_began_building	Hard	Which emperor began building the Colosseum, paid for with loot from Jerusalem?	Vespasian	Nero	Augustus	Hadrian
+his_three_roman_legions	Hard	In AD 9, three Roman legions were wiped out by Germanic tribes in which forest?	The Teutoburg Forest	The Black Forest	The Ardennes	The Bavarian Forest
+his_roman_emperor_fought	Hard	Which Roman emperor fought as a gladiator in the arena?	Commodus	Caligula	Nero	Domitian
+his_gladiator_fought_net	Hard	What was a gladiator who fought with a net and a trident called?	A retiarius	A murmillo	A secutor	A thraex
+his_queen_palmyra_rebelled	Hard	Which queen of Palmyra rebelled against Rome and was defeated by Aurelian in 272?	Zenobia	Boudica	Cleopatra	Dido
+his_garum_poured_almost	Hard	What was 'garum', poured on almost everything in Roman kitchens?	A fermented fish sauce	A honey and wine syrup	A spicy pepper paste	A sour cheese dip
+his_oktawian	Expert	Who was the first Roman emperor?	Augustus (Octavian)	Julius Caesar	Nero	Tiberius
+hx_masada	Expert	Which desert fortress in Israel saw a famous last stand against Rome in AD 73?	Masada	Petra	Jericho	Megiddo
+hy_pliniusz	Expert	Which Roman writer described the eruption of Vesuvius in letters, after his uncle died in it?	Pliny the Younger	Tacitus	Seneca	Cicero
+his_last_emperor_western	Expert	Who was the last emperor of the Western Roman Empire, deposed in 476?	Romulus Augustulus	Constantine XI	Theodosius I	Justinian I
+his_country_adopt_christianity	Expert	Which was the first country to adopt Christianity as its state religion, around 301?	Armenia	Italy	Greece	Ethiopia
+his_italian_city_capital	Expert	Which Italian city was the capital of the Western Roman Empire in its last decades?	Ravenna	Milan	Naples	Florence
+his_germanic_chief_trained	Expert	Which Germanic chief, trained in the Roman army, destroyed three legions in AD 9?	Arminius	Alaric	Odoacer	Vercingetorix
+his_emperor_edict_212	Expert	Which emperor's edict of 212 made every free man in the empire a Roman citizen?	Caracalla	Hadrian	Trajan	Septimius Severus

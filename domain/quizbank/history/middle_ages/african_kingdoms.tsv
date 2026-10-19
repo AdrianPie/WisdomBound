@@ -1,0 +1,34 @@
+# Krolestwa Afryki przed kolonizacja: Aksum, Mali i Mansa Musa, Songhaj, Wielkie Zimbabwe, Benin,
+# Etiopia, Zulusi.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+his_animal_made_possible	Easy	Which animal made it possible for traders to cross the Sahara?	The camel	The horse	The elephant	The donkey
+hy_kaldi	Medium	According to legend, coffee was discovered in Ethiopia by a goatherd named what?	Kaldi	Menelik	Haile	Abebe
+his_huge_mud_brick	Medium	Which huge mud-brick mosque in Mali is the largest mud building in the world?	The Great Mosque of Djenne	The Sankore Mosque	The Hassan II Mosque	The Great Mosque of Kairouan
+his_west_african_empire	Medium	Which West African empire, older than Mali, was called 'the land of gold' by Arab writers?	The Ghana Empire	The Songhai Empire	The Kanem Empire	The Benin Empire
+his_mansa_musa_passed	Medium	When Mansa Musa passed through Cairo on pilgrimage in 1324, what did his gifts do?	Made the price of gold crash	Paid for a new pyramid	Started a war with Egypt	Bought the city's freedom
+his_ethiopian_town_lalibela	Medium	The Ethiopian town of Lalibela is famous for what?	Churches carved out of solid rock	The oldest mosque in Africa	Giant stone heads	A palace of ivory
+his_language_grew_trade	Medium	Which language grew from trade between Bantu peoples and Arab merchants on Africa's east coast?	Swahili	Amharic	Zulu	Yoruba
+his_west_african_people	Medium	Which West African people kept their power in a sacred Golden Stool?	The Ashanti	The Zulu	The Maasai	The Berbers
+his_west_african_kingdom	Medium	Which West African kingdom had a famous army of women warriors?	Dahomey	Mali	Ethiopia	Kongo
+his_ethiopia_emperors_claimed	Medium	Ethiopia's emperors claimed descent from King Solomon and which legendary queen?	The Queen of Sheba	Cleopatra	Nefertiti	Dido
+his_great_caravans_crossing	Medium	What did the great caravans crossing the Sahara mostly trade?	Gold for salt	Silk for spices	Iron for horses	Ivory for wine
+his_empire_based_gao	Medium	Which empire, based at Gao, replaced Mali as the great power of West Africa in the 1400s?	Songhai	Ghana	Kanem-Bornu	Ashanti
+his_empire_rulers_held	Medium	Which empire's rulers held the title 'mansa'?	Mali	Ethiopia	Zimbabwe	Kongo
+his_island_off_east	Medium	Which island off East Africa was a great market for spices, especially cloves, and enslaved people?	Zanzibar	Madagascar	Mauritius	Socotra
+his_holy_relic_ethiopian	Medium	Which holy relic does the Ethiopian Church say is kept in a chapel at Aksum?	The Ark of the Covenant	The Holy Grail	The Crown of Thorns	The Spear of Destiny
+wh_mansa_musa	Hard	Mansa Musa, regarded as the richest person in history, ruled which African empire?	Mali	Songhai	Ethiopia	Zimbabwe
+his4_wielki_zimbabwe	Hard	Great Zimbabwe was the centre of a state on which continent?	Africa	South America	Asia	Australia
+hx_timbuktu	Hard	Which city in Mali was a famous medieval centre of trade and Islamic learning?	Timbuktu	Marrakesh	Zanzibar	Kano
+his_emperor_ruled_ethiopia	Hard	Which emperor ruled Ethiopia from 1930 to 1974 and is revered by Rastafarians?	Haile Selassie	Menelik II	Mobutu Sese Seko	Jomo Kenyatta
+his_hero_founded_mali	Hard	Which hero founded the Mali Empire after defeating the Sosso king around 1235?	Sundiata Keita	Mansa Musa	Askia Muhammad	Sonni Ali
+his_central_african_kingdom	Hard	Which central African kingdom's king became a Christian after the Portuguese arrived in 1491?	Kongo	Benin	Ndongo	Dahomey
+his_kingdom_built_hundreds	Hard	Which kingdom built hundreds of small, steep pyramids at Meroe, in today's Sudan?	Kush	Aksum	Egypt	Ethiopia
+his_ancient_ethiopian_city	Hard	Which ancient Ethiopian city is famous for its giant carved stone obelisks?	Aksum	Lalibela	Gondar	Harar
+his_family_languages_spread	Hard	Which family of languages spread across central and southern Africa with early farmers?	Bantu	Berber	Semitic	Khoisan
+his4_imperium_songhaj	Expert	The Songhai Empire controlled trade around which river?	The Niger	The Congo	The Zambezi	The Orange
+hx_szaka	Expert	Which king built the Zulu nation into a military power in the early 1800s?	Shaka	Cetshwayo	Moshoeshoe	Mzilikazi
+hx_aksum	Expert	Which ancient kingdom in today's Ethiopia was one of the first states to adopt Christianity?	Aksum	Kush	Carthage	Meroe
+hx_benin_brazy	Expert	The famous 'Benin Bronzes' come from a kingdom in which present-day country?	Nigeria	Benin	Ghana	Senegal
+his_ruler_took_songhai	Expert	Which ruler took the Songhai Empire to its height and made a famous pilgrimage in 1497?	Askia Muhammad	Sonni Ali	Mansa Musa	Sundiata Keita
+his_moroccan_dynasty_army	Expert	Which Moroccan dynasty's army, armed with guns, conquered the Songhai Empire in 1591?	The Saadi	The Almohads	The Almoravids	The Alaouites
+his_swahili_city_state	Expert	Which Swahili city-state, visited by Ibn Battuta, minted its own coins?	Kilwa	Mombasa	Zanzibar	Malindi

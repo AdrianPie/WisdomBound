@@ -1,0 +1,34 @@
+# Ostatni carowie, rewolucje 1917, Lenin, Stalin i Zwiazek Radziecki do 1941.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+wh_rewolucja_pazdziernikowa	Easy	Who led the Bolsheviks during the October Revolution?	Vladimir Lenin	Joseph Stalin	Leon Trotsky	Alexander Kerensky
+hx_ostatni_car	Easy	Who was the last Tsar of Russia?	Nicholas II	Alexander III	Peter the Great	Ivan the Terrible
+his_colour_flag_soviet	Easy	Which colour was the flag of the Soviet Union?	Red	White	Blue	Black
+his_city_capital_soviet	Easy	Which city was the capital of the Soviet Union?	Moscow	Saint Petersburg	Kiev	Minsk
+his2_rewolucja_pazdziernikowa	Medium	In which year did the October Revolution occur in Russia?	1917	1905	1918	1921
+hx_rasputin	Medium	Which Siberian mystic gained huge influence over Russia's last royal family?	Grigori Rasputin	Leon Trotsky	Ivan Susanin	Yemelyan Pugachev
+hw_lenin_mauzoleum	Medium	Whose embalmed body has been on display in a Moscow mausoleum since 1924?	Vladimir Lenin	Joseph Stalin	Leon Trotsky	Nikita Khrushchev
+his_daughter_last_tsar	Medium	Which daughter of the last Tsar was long rumoured to have survived her family's execution?	Anastasia	Olga	Tatiana	Maria
+his_lenin_revolutionary_party	Medium	What was Lenin's revolutionary party called, from the Russian word for 'majority'?	The Bolsheviks	The Mensheviks	The Narodniks	The Decembrists
+his_hammer_sickle_soviet	Medium	What did the hammer and sickle on the Soviet flag stand for?	Workers and peasants	War and harvest	Iron and gold	Strength and wisdom
+his_three_word_slogan	Medium	Which three-word slogan did the Bolsheviks use in 1917?	'Peace, land and bread'	'Liberty, equality, fraternity'	'Blood and iron'	'Faith, tsar, fatherland'
+his_shooting_peaceful_marchers	Medium	What is the shooting of peaceful marchers outside the tsar's palace in January 1905 called?	Bloody Sunday	Black Friday	The Night of Fire	Red Monday
+his_palace_petrograd_bolsheviks	Medium	Which palace in Petrograd did the Bolsheviks storm in October 1917?	The Winter Palace	The Kremlin	Peterhof	The Catherine Palace
+his_two_sides_fought	Medium	Which two sides fought the Russian Civil War of 1917-1922?	The Reds and the Whites	The Blues and the Greens	The Tsarists and the Cossacks	The Russians and the Poles
+his_soviet_system_prison	Medium	What was the Soviet system of prison labour camps called?	The Gulag	The Kolkhoz	The Politburo	The Comintern
+his_soviet_leader_launched	Medium	Which Soviet leader launched the 'Five-Year Plans' to industrialise the country?	Joseph Stalin	Vladimir Lenin	Leon Trotsky	Nikita Khrushchev
+his_wave_arrests_executions	Medium	What is the wave of arrests and executions in the USSR in 1936-1938 called?	The Great Terror	The Red Dawn	The Long Night	The Iron Winter
+his_peasants_forced_join	Medium	What were peasants forced to join when Stalin took their land in the 1930s?	Collective farms	Trade unions	Workers' councils	Youth brigades
+his_letters_ussr_stand	Medium	What did the letters USSR stand for?	Union of Soviet Socialist Republics	United States of Soviet Russia	Union of Socialist Soviet Regions	United Soviet State Republics
+his_soviet_russian_revolution	Medium	What was a 'soviet' in the Russian Revolution?	A council of workers and soldiers	A secret police unit	A collective farm	A type of rifle
+his_city_last_tsar	Hard	In which city were the last tsar and his family executed in 1918?	Yekaterinburg	Tobolsk	Omsk	Novosibirsk
+his_led_provisional_government	Hard	Who led the Provisional Government that the Bolsheviks overthrew?	Alexander Kerensky	Leon Trotsky	Grigori Rasputin	Pyotr Stolypin
+his_soviet_secret_police	Hard	What was the first Soviet secret police, founded in December 1917, called?	The Cheka	The KGB	The Okhrana	The Stasi
+his_man_made_famine	Hard	What is the man-made famine in Ukraine in 1932-1933 called?	The Holodomor	The Great Leap	The Pogrom	The Collapse
+his_policy_1920s_let	Hard	Which policy of the 1920s let Russian peasants and small traders sell for profit again?	The New Economic Policy	Perestroika	War Communism	The Five-Year Plan
+his_according_legend_rasputin	Hard	According to legend, how did Rasputin finally die in 1916?	Poisoned, shot and drowned	Hanged in a prison cell	Struck by lightning	Killed in a duel
+his_mutiny_russian_battleship	Hard	The mutiny on which Russian battleship in 1905 became a famous silent film?	The Potemkin	The Aurora	The Varyag	The Kursk
+his_year_soviet_union	Hard	In which year was the Soviet Union officially founded?	1922	1917	1918	1924
+his_top_decision_making	Hard	What was the top decision-making body of the Soviet Communist Party called?	The Politburo	The Duma	The Kremlin	The Comintern
+hx_lenin_pociag	Expert	In 1917, Germany helped Lenin get back to Russia by sending him in what?	A sealed train	A zeppelin	A submarine	A hot-air balloon
+hx_stalin_stal	Expert	What does the adopted name 'Stalin' roughly mean?	Man of steel	Man of iron	Red leader	Son of the people
+hw_trocki	Expert	In which country was Leon Trotsky assassinated in 1940?	Mexico	France	Norway	Turkey

@@ -1,0 +1,33 @@
+# Krolowie i carowie XVI-XVIII wieku: Ludwik XIV i Wersal, Piotr Wielki, Katarzyna Wielka, Fryderyk
+# Wielki, Habsburgowie.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+his_city_capital_russia	Easy	Which city was the capital of Russia from 1712 to 1918?	Saint Petersburg	Moscow	Novgorod	Kazan
+his_french_cardinal_powerful	Easy	Which French cardinal was the powerful chief minister of Louis XIII?	Cardinal Richelieu	Cardinal Mazarin	Cardinal Wolsey	Cardinal Fleury
+his_palace_outside_paris	Easy	To which palace outside Paris did Louis XIV move the French court in 1682?	Versailles	Fontainebleau	The Louvre	Chambord
+his_tsar_founded_city	Easy	Which tsar founded the city of Saint Petersburg in 1703?	Peter the Great	Ivan the Terrible	Catherine the Great	Alexander I
+his_krol_slonce	Medium	Which French king was known as 'the Sun King'?	Louis XIV	Louis XVI	Francis I	Henry IV
+his_katarzyna_wielka	Medium	Which Russian empress was born a German princess?	Catherine the Great	Elizabeth of Russia	Anna Ivanovna	Maria Theresa
+hx_iwan_grozny	Medium	Which ruler was the first to be crowned 'Tsar of all Russia', in 1547?	Ivan the Terrible	Peter the Great	Catherine the Great	Boris Godunov
+hx_sala_lustrzana	Medium	The most famous room of the Palace of Versailles is the Hall of what?	Mirrors	Kings	Swords	Clocks
+hy_habsburgowie	Medium	Which royal family ruled Austria for over 600 years?	The Habsburgs	The Bourbons	The Hohenzollerns	The Romanovs
+his_swedish_warship_sank	Medium	Which Swedish warship sank on its maiden voyage in 1628 and is now a famous museum?	Vasa	Kronan	Gustav	Mars
+his_french_king_supposed	Medium	Which French king is supposed to have said 'L'etat, c'est moi' ('I am the state')?	Louis XIV	Louis XVI	Napoleon	Henry IV
+his_peter_great_make	Medium	What did Peter the Great make Russian men pay if they wanted to keep their beards?	A beard tax	A fine in furs	A day in prison	A tribute of vodka
+his_war_1756_1763	Medium	Which war of 1756 to 1763, fought on several continents, is sometimes called the first world war?	The Seven Years' War	The Thirty Years' War	The War of the Spanish Succession	The Hundred Years' War
+his_potemkin_villages_said	Medium	What were 'Potemkin villages' said to be?	Fake villages to fool Catherine the Great	Villages built for retired soldiers	Prison camps in Siberia	Villages burned in a war
+his_habsburg_emperor_ruled	Medium	Which Habsburg emperor ruled Spain, the Netherlands, much of Italy and the Americas in the 1500s?	Charles V	Philip II	Maximilian I	Ferdinand I
+his_great_art_museum	Medium	Which great art museum in Saint Petersburg grew from Catherine the Great's collection?	The Hermitage	The Pushkin Museum	The Tretyakov Gallery	The Kremlin Armoury
+hx_piotr_stocznia	Hard	Peter the Great toured Europe in disguise, working for a time as what?	A shipbuilder	A painter	A soldier	A baker
+hy_romanowowie	Hard	Which dynasty ruled Russia from 1613 until 1917?	The Romanovs	The Rurikids	The Habsburgs	The Godunovs
+hy_maria_teresa	Hard	Which Habsburg empress was the mother of Marie Antoinette?	Maria Theresa	Catherine the Great	Elisabeth of Austria	Isabella of Castile
+his_king_built_palace	Hard	Which king built the palace of Sanssouci, meaning 'without worries', at Potsdam?	Frederick the Great	Frederick William I	Louis XV	Peter the Great
+his_war_broke_out	Hard	Which war broke out after the last Habsburg king of Spain died childless in 1700?	The War of the Spanish Succession	The War of Jenkins' Ear	The Seven Years' War	The Thirty Years' War
+his_swedish_king_invaded	Hard	Which Swedish king invaded Russia and was crushed at Poltava in 1709?	Charles XII	Gustavus Adolphus	Charles XI	Gustav III
+his_finance_minister_louis	Hard	Which finance minister of Louis XIV built up French industry and the navy?	Jean-Baptiste Colbert	Cardinal Mazarin	Nicolas Fouquet	Jacques Necker
+his_spanish_king_built	Hard	Which Spanish king built the huge palace-monastery of El Escorial?	Philip II	Charles V	Philip V	Ferdinand II
+his_italian_born_cardinal	Hard	Which Italian-born cardinal ran France after Richelieu, while Louis XIV was a boy?	Mazarin	Fleury	Colbert	Dubois
+hx_ludwik_72	Expert	For about how long did Louis XIV reign over France?	72 years	42 years	55 years	31 years
+hx_fryderyk_ziemniaki	Expert	Which Prussian king is said to have got his people to grow potatoes by posting guards on his potato fields?	Frederick the Great	Wilhelm I	Frederick William I	Otto von Bismarck
+his_cossack_led_huge	Expert	Which Cossack led a huge peasant revolt against Catherine the Great in 1773?	Yemelyan Pugachev	Stenka Razin	Bogdan Khmelnytsky	Ivan Mazepa
+his_emperor_charles_spend	Expert	Where did Emperor Charles V spend his last years after giving up his crowns?	In a Spanish monastery	In a castle in Vienna	In exile in Italy	On a ship at sea
+his_rebellion_french_nobles	Expert	Which rebellion of French nobles and Parisians in 1648-1653 terrified the young Louis XIV?	The Fronde	The Jacquerie	The Camisard revolt	The Vendee

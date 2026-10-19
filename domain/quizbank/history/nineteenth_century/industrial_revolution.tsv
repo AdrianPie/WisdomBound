@@ -1,0 +1,33 @@
+# Maszyna parowa, fabryki, koleje i wynalazki XVIII-XIX wieku, ktore zmienily codziennosc.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+his_kind_engine_powered	Easy	Which kind of engine powered the factories and trains of the Industrial Revolution?	The steam engine	The petrol engine	The electric motor	The jet engine
+his_fuel_dug_mines	Easy	Which fuel, dug from mines, powered the Industrial Revolution?	Coal	Oil	Natural gas	Peat
+his_plant_fibre_spun	Easy	Which plant fibre was spun into thread in the great mills of Lancashire?	Cotton	Wool	Silk	Linen
+org_cola_lek	Medium	Coca-Cola was first sold at pharmacy counters as a remedy for what?	Headaches	Sore throats	Insomnia	Toothache
+his_scottish_engineer_made	Medium	Which Scottish engineer made the steam engine far more efficient in the 1760s and 1770s?	James Watt	George Stephenson	Thomas Newcomen	Richard Trevithick
+his_built_rocket_locomotive	Medium	Who built the famous 'Rocket' locomotive that won the Rainhill Trials in 1829?	George and Robert Stephenson	James Watt and his son	Isambard Kingdom Brunel	Richard Trevithick
+his_spinning_jenny_invented	Medium	What was the 'spinning jenny', invented by James Hargreaves?	A machine spinning many threads at once	A loom driven by a steam engine	A machine for picking cotton	An early railway engine
+his_english_city_nicknamed	Medium	Which English city was nicknamed 'Cottonopolis' for its huge cotton mills?	Manchester	Birmingham	Leeds	Bristol
+his_children_sent_inside	Medium	Which children were sent up inside chimneys to clean them in the 1800s?	Climbing boys	Mudlarks	Tosher boys	Link boys
+his_british_engineer_built	Medium	Which British engineer built the Great Western Railway and the steamship SS Great Britain?	Isambard Kingdom Brunel	George Stephenson	Thomas Telford	James Watt
+his_glass_iron_building	Medium	In which glass and iron building was the Great Exhibition of 1851 held?	The Crystal Palace	The Albert Hall	Westminster Hall	The Glass Pavilion
+his_cotton_gin_1793	Medium	Whose cotton gin of 1793 made cotton farming, and slavery, boom in the American South?	Eli Whitney	Samuel Colt	Cyrus McCormick	Robert Fulton
+his_city_largest_world	Medium	Which city was the largest in the world for much of the 1800s?	London	Paris	New York	Beijing
+his_roughly_hours_day	Medium	Roughly how many hours a day did many early factory workers labour?	12 to 14	6 to 8	8 to 10	18 to 20
+his_carmaker_brought_moving	Medium	Which carmaker brought the moving assembly line to car factories in 1913?	Henry Ford	Karl Benz	Louis Renault	Ransom Olds
+his_disease_spread_dirty	Medium	Which disease, spread by dirty water, did John Snow trace to a London water pump in 1854?	Cholera	Typhus	Smallpox	The plague
+his2_rewolucja_przemyslowa	Hard	In which country did the Industrial Revolution begin?	The United Kingdom	Germany	France	The USA
+org_denim_nimes	Hard	Which fabric takes its name from the French city of Nimes?	Denim	Chiffon	Tweed	Satin
+hx_luddysci	Hard	What were the Luddites of early 1800s England famous for?	Smashing weaving machines	Burning down banks	Stealing steam engines	Refusing to pay taxes
+his_alarm_clocks_common	Hard	Before alarm clocks were common, what did a 'knocker-upper' do?	Tapped on windows to wake people	Collected rent from tenants	Lit the street lamps at night	Called out the news in town
+his_line_opened_1825	Hard	Which line, opened in 1825, was the world's first public railway to use steam locomotives?	The Stockton and Darlington	The Liverpool and Manchester	The Great Western	The London and Birmingham
+his_water_powered_spinning	Hard	Which water-powered spinning machine did Richard Arkwright patent in 1769?	The water frame	The spinning jenny	The flying shuttle	The spinning mule
+his_english_river_spanned	Hard	Which English river is spanned by the world's first iron bridge, built in 1779?	The Severn	The Thames	The Mersey	The Tyne
+his_british_law_1833	Hard	Which British law of 1833 banned children under nine from working in textile mills?	The Factory Act	The Poor Law	The Reform Act	The Corn Laws
+his_bessemer_process_invented	Hard	What did the Bessemer process, invented in 1856, make cheaply for the first time?	Steel	Glass	Rubber	Paper
+his_potter_built_factory	Hard	Which potter built a famous factory and gave his name to blue-and-white jasperware?	Josiah Wedgwood	Josiah Spode	Thomas Minton	William Morris
+his_mill_owner_built	Hard	Which mill owner built a model village with schools for his workers at New Lanark?	Robert Owen	Titus Salt	George Cadbury	Richard Arkwright
+his_happened_peterloo_massacre	Hard	What happened at the 'Peterloo Massacre' in Manchester in 1819?	Cavalry charged a crowd demanding reform	Luddites burned a cotton mill	A boiler exploded in a factory	Police fired on striking miners
+his_invention_edmund_cartwright	Hard	Which invention by Edmund Cartwright brought machines to weaving in the 1780s?	The power loom	The spinning mule	The cotton gin	The steam hammer
+his_london_great_stink	Hard	What was London's 'Great Stink' of 1858?	The Thames reeking of sewage in a hot summer	A fire at a soap factory	A fog of coal smoke	A strike of rubbish collectors
+his_canal_opened_1761	Expert	Which canal, opened in 1761 to carry coal to Manchester, started Britain's 'canal mania'?	The Bridgewater Canal	The Grand Union Canal	The Leeds and Liverpool Canal	The Caledonian Canal

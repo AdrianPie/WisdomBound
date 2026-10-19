@@ -1,0 +1,33 @@
+# Rewolucja naukowa i oswiecenie XVII-XVIII wieku: Galileusz, Newton, filozofowie, encyklopedysci.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+his_instrument_galileo_improve	Easy	Which instrument did Galileo improve and use to discover the moons of Jupiter?	The telescope	The microscope	The barometer	The compass
+his_above_all_enlightenment	Easy	Above all, what did Enlightenment thinkers want to put in place of tradition and superstition?	Reason	Religion	Royal power	Magic
+his_great_upheaval_1789	Easy	Which great upheaval of 1789 was inspired by Enlightenment ideas?	The French Revolution	The Reformation	The Glorious Revolution	The Russian Revolution
+org_kanapka_tytul	Medium	The sandwich is named after a nobleman holding which title?	Earl	Duke	Baron	Viscount
+hx_galileusz	Medium	Which astronomer spent his last years under house arrest for saying the Earth moves around the Sun?	Galileo Galilei	Nicolaus Copernicus	Johannes Kepler	Tycho Brahe
+his_movement_1700s_celebrated	Medium	Which movement of the 1700s celebrated reason, science and individual rights?	The Enlightenment	The Reformation	The Renaissance	Romanticism
+his_geneva_born_philosopher	Medium	Which Geneva-born philosopher wrote 'The Social Contract'?	Jean-Jacques Rousseau	Voltaire	Denis Diderot	John Locke
+his_english_philosopher_argued	Medium	Which English philosopher argued that people have natural rights to 'life, liberty and property'?	John Locke	Thomas Hobbes	David Hume	Edmund Burke
+his_elegant_gatherings_often	Medium	What were the elegant gatherings, often hosted by women, where Enlightenment thinkers debated?	Salons	Seminars	Symposia	Councils
+his_french_mathematician_built	Medium	Which French mathematician built one of the first mechanical calculators as a teenager?	Blaise Pascal	Rene Descartes	Pierre de Fermat	Joseph Fourier
+his_german_thinker_quarrelled	Medium	Which German thinker quarrelled with Newton over who had invented calculus?	Gottfried Leibniz	Immanuel Kant	Carl Gauss	Leonhard Euler
+his_astronomer_correctly_predicted	Medium	Which astronomer correctly predicted that a famous comet would return in 1758?	Edmond Halley	Isaac Newton	William Herschel	Tycho Brahe
+his_montgolfier_brothers_send	Medium	What did the Montgolfier brothers send into the air with people aboard in 1783?	A hot-air balloon	A glider	A kite	An airship
+his_rulers_such_frederick	Medium	What were rulers such as Frederick the Great, who used Enlightenment ideas to reform their states, called?	Enlightened despots	Constitutional kings	Philosopher popes	People's monarchs
+his_18th_century_britain	Hard	In 18th-century Britain, which exotic fruit was so prized that people rented it to show off at parties?	The pineapple	The banana	The mango	The orange
+his_french_thinker_argued	Hard	Which French thinker argued that government power should be split into separate branches?	Montesquieu	Rousseau	Voltaire	Diderot
+his_huge_french_reference	Hard	Which huge French reference work, edited by Diderot, spread Enlightenment ideas?	The Encyclopedie	The Spectator	The Almanac	The Lexicon
+his_disaster_1755_struck	Hard	Which disaster of 1755, which struck on All Saints' Day, shook Europe's faith?	The Lisbon earthquake	The eruption of Vesuvius	The Great Fire of Rome	The Dutch flood
+his_german_philosopher_summed	Hard	Which German philosopher summed up the Enlightenment as 'Dare to know'?	Immanuel Kant	Gottfried Leibniz	Georg Hegel	Friedrich Schiller
+his_scientific_society_founded	Hard	Which scientific society was founded in London in 1660, with Isaac Newton later its president?	The Royal Society	The Royal Academy	The British Museum	The Royal Institution
+his_prussian_king_himself	Hard	Which Prussian king called himself 'the first servant of the state'?	Frederick the Great	Frederick William I	Wilhelm I	Frederick I
+his_english_philosopher_wrote	Hard	Which English philosopher wrote that life without government is 'nasty, brutish, and short'?	Thomas Hobbes	John Locke	Francis Bacon	Jeremy Bentham
+his_london_coffee_house	Hard	Which London coffee house grew into the world's most famous insurance market?	Lloyd's	Garraway's	White's	Button's
+his_scottish_philosopher_wrote	Hard	Which Scottish philosopher wrote 'A Treatise of Human Nature'?	David Hume	Adam Smith	Thomas Reid	John Locke
+his_french_writer_locked	Hard	Which French writer was locked in the Bastille in 1717 for mocking the regent?	Voltaire	Rousseau	Diderot	Montesquieu
+his_newton_great_book	Hard	What is the name of Newton's great book of 1687 on motion and gravity?	'Principia'	'Opticks'	'Leviathan'	'Novum Organum'
+his_english_statesman_novum	Hard	Which English statesman's 'Novum Organum' of 1620 championed the scientific method?	Francis Bacon	Thomas Hobbes	John Locke	Isaac Newton
+his_habsburg_emperor_son	Hard	Which Habsburg emperor, son of Maria Theresa, abolished serfdom as an 'enlightened' ruler?	Joseph II	Leopold II	Charles VI	Francis I
+hx_kalendarz_1752	Expert	When Britain switched to the Gregorian calendar in 1752, how many days were skipped?	11	3	7	14
+hw_newton_mennica	Expert	Which scientist spent his later years running England's Royal Mint and hunting forgers?	Isaac Newton	Robert Hooke	Edmond Halley	Christopher Wren
+his_usually_regarded_britain	Expert	Who is usually regarded as Britain's first prime minister?	Robert Walpole	William Pitt the Younger	Benjamin Disraeli	Oliver Cromwell

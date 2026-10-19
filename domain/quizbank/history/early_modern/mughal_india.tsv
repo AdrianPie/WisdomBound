@@ -1,0 +1,33 @@
+# Indie Wielkich Mogolow od Babura do 1857: Akbar, Szahdzahan i Tadz Mahal, sikhowie.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+his_golden_roofed_temple	Easy	Which golden-roofed temple in Amritsar is the holiest shrine of the Sikhs?	The Golden Temple	The Lotus Temple	The Red Fort	The Jama Masjid
+his_religion_mughal_emperors	Easy	Which religion did the Mughal emperors follow?	Islam	Hinduism	Buddhism	Sikhism
+his_white_marble_tomb	Easy	Which white marble tomb is the most famous building in India?	The Taj Mahal	The Red Fort	The Lotus Temple	The Gateway of India
+hx_shah_jahan	Medium	Which Mughal emperor built the Taj Mahal in memory of his wife?	Shah Jahan	Akbar	Babur	Aurangzeb
+his_religion_founded_guru	Medium	Which religion was founded by Guru Nanak in the Punjab?	Sikhism	Jainism	Buddhism	Bahai Faith
+his_empire_built_delhi	Medium	Which empire built Delhi's Red Fort?	The Mughal Empire	The Maurya Empire	The British Raj	The Gupta Empire
+his_empress_lies_taj	Medium	Which empress lies in the Taj Mahal, built for her by her grieving husband?	Mumtaz Mahal	Nur Jahan	Jodha Bai	Roshanara
+his_shah_jahan_spend	Medium	How did Shah Jahan spend his last years?	Imprisoned by his own son	Ruling from a new capital	Exiled to Persia	On pilgrimage to Mecca
+his_diamond_once_owned	Medium	Which famous diamond, once owned by the Mughals, is now among the British Crown Jewels?	The Koh-i-Noor	The Hope Diamond	The Cullinan	The Orlov
+his_great_uprising_1857	Medium	Which great uprising of 1857 brought the Mughal dynasty to an end?	The Indian Rebellion	The Salt March	The Partition of India	The Anglo-Mysore War
+his_language_mixing_persian	Medium	Which language, mixing Persian and Hindi, grew up in the camps of the Mughal armies?	Urdu	Bengali	Punjabi	Tamil
+his_mughal_emperors_descended	Medium	The Mughal emperors were descended from which two great conquerors?	Timur and Genghis Khan	Alexander and Darius	Saladin and Suleiman	Cyrus and Ashoka
+his_language_mughal_court	Medium	Which language did the Mughal court use for government and poetry?	Persian	Arabic	Hindi	Turkish
+his_ruler_tiger_mysore	Medium	Which ruler, the 'Tiger of Mysore', fought the British East India Company until 1799?	Tipu Sultan	Shivaji	Ranjit Singh	Haidar Ali
+his_british_commander_victory	Medium	Which British commander's victory at Plassey in 1757 made Britain the master of Bengal?	Robert Clive	Arthur Wellesley	Warren Hastings	Charles Cornwallis
+his_kind_painting_small	Medium	Which kind of painting, small and full of detail, flourished at the Mughal court?	Miniature painting	Fresco painting	Oil portraits	Ink landscapes
+his4_dynastia_mogolow	Hard	The Mughal Empire ruled mainly over which region?	The Indian subcontinent	Persia	Anatolia	Central China
+hy_akbar	Hard	Which Mughal emperor, known for religious tolerance, was called 'the Great'?	Akbar	Aurangzeb	Babur	Humayun
+his_strict_mughal_emperor	Hard	Which strict Mughal emperor locked up his father and pushed the empire to its greatest size?	Aurangzeb	Akbar	Jahangir	Humayun
+his_battle_1526_gave	Hard	Which battle of 1526 gave Babur northern India and founded the Mughal Empire?	The First Battle of Panipat	The Battle of Plassey	The Battle of Haldighati	The Battle of Talikota
+his_hindu_warrior_king	Hard	Which Hindu warrior king fought the Mughals and founded the Maratha state in the 1600s?	Shivaji	Prithviraj	Rana Pratap	Tipu Sultan
+his_red_sandstone_city	Hard	Which red sandstone city did Akbar build as his capital, then abandon?	Fatehpur Sikri	Amber	Jodhpur	Gwalior
+his_mughal_emperor_lost	Hard	Which Mughal emperor lost his throne for 15 years, won it back, then died after falling down stairs?	Humayun	Babur	Jahangir	Aurangzeb
+his_empress_wife_jahangir	Hard	Which empress, wife of Jahangir, was the real power behind the Mughal throne?	Nur Jahan	Mumtaz Mahal	Jodha Bai	Gulbadan Begum
+hy_babur	Expert	Who founded the Mughal Empire in India in 1526?	Babur	Akbar	Shah Jahan	Timur
+his_persian_conqueror_plundered	Expert	Which Persian conqueror plundered Delhi in 1739 and carried off the Peacock Throne?	Nader Shah	Shah Abbas	Ahmad Shah Durrani	Ismail I
+his_mughal_emperor_means	Expert	Which Mughal emperor's name means 'conqueror of the world'?	Jahangir	Aurangzeb	Shah Jahan	Humayun
+his_new_faith_blending	Expert	What was the new faith, blending several religions, that Emperor Akbar created?	Din-i Ilahi	Sufism	Bhakti	Sikhism
+his_last_mughal_emperor	Expert	Who was the last Mughal emperor, exiled by the British to Burma in 1858?	Bahadur Shah II	Shah Alam II	Akbar II	Aurangzeb
+his_sikh_guru_executed	Expert	Which Sikh guru was executed on Aurangzeb's orders in 1675?	Guru Tegh Bahadur	Guru Nanak	Guru Gobind Singh	Guru Arjan
+his_sikh_ruler_lion	Expert	Which Sikh ruler, 'the Lion of the Punjab', built an empire in the early 1800s?	Ranjit Singh	Gobind Singh	Hari Singh	Dalip Singh

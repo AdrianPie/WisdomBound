@@ -1,0 +1,34 @@
+# Walka o rowne prawa: sufrazystki, ruch praw obywatelskich w USA, koniec apartheidu.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+wh_mandela	Easy	Who became President of South Africa after 27 years in prison?	Nelson Mandela	Desmond Tutu	Thabo Mbeki	Steve Biko
+his_king_marzenie	Easy	Who gave the famous 'I Have a Dream' speech in 1963?	Martin Luther King Jr.	Malcolm X	Rosa Parks	Nelson Mandela
+his_country_ruled_racial	Easy	Which country was ruled by the racial segregation system known as apartheid?	South Africa	Nigeria	Kenya	Zimbabwe
+his_black_leader_assassinated	Easy	Which Black leader was assassinated in New York in 1965, a year after leaving the Nation of Islam?	Malcolm X	Martin Luther King Jr.	Medgar Evers	Marcus Garvey
+trv_nowa_zelandia_glos	Medium	Which country was the first to give all women the right to vote, in 1893?	New Zealand	The United States	The United Kingdom	Finland
+his_rosa_parks	Medium	Whose refusal to give up her bus seat in 1955 sparked a famous boycott?	Rosa Parks	Harriet Tubman	Coretta Scott King	Ruby Bridges
+hx_sufrazystki	Medium	What did the suffragettes campaign for?	Women's right to vote	An end to child labour	Free schooling for all	Shorter working days
+his_civil_rights_leader	Medium	Which civil rights leader was assassinated in Memphis in 1968?	Martin Luther King Jr.	Malcolm X	Robert F. Kennedy	Medgar Evers
+his_president_signed_civil	Medium	Which US president signed the Civil Rights Act of 1964?	Lyndon B. Johnson	John F. Kennedy	Richard Nixon	Dwight Eisenhower
+his_alabama_city_year	Medium	In which Alabama city did a year-long bus boycott begin in December 1955?	Montgomery	Birmingham	Selma	Mobile
+his_1954_supreme_court	Medium	Which 1954 Supreme Court ruling banned racial segregation in US public schools?	Brown v. Board of Education	Roe v. Wade	Plessy v. Ferguson	Miranda v. Arizona
+his_huge_rally_1963	Medium	At which huge rally of 1963 was the 'I Have a Dream' speech given?	The March on Washington	The Selma March	The Million Man March	The Poor People's March
+his_alabama_town_starting	Medium	Which Alabama town was the starting point of the 1965 marches for voting rights?	Selma	Montgomery	Birmingham	Tuskegee
+his_nine_black_students	Medium	Which nine Black students had to be escorted by soldiers into an Arkansas school in 1957?	The Little Rock Nine	The Greensboro Nine	The Selma Nine	The Memphis Nine
+his_segregation_laws_american	Medium	What were the segregation laws of the American South nicknamed?	Jim Crow laws	Black Codes	Dixie laws	Uncle Sam laws
+his_year_some_british	Medium	In which year did some British women first win the right to vote?	1918	1900	1928	1945
+his_amendment_gave_american	Medium	Which amendment gave American women the right to vote in 1920?	The 19th	The 13th	The 21st	The 1st
+his_riots_new_york	Medium	Which riots at a New York bar in 1969 launched the modern gay rights movement?	The Stonewall riots	The Harlem riots	The Watts riots	The Chelsea riots
+his_freedom_riders_1961	Medium	What did the 'Freedom Riders' of 1961 do?	Rode buses to defy segregation	Marched from Selma to Montgomery	Boycotted shops in the South	Registered Black voters by post
+his_country_europe_give	Medium	Which was the first country in Europe to give women the vote, in 1906?	Finland	Britain	France	Switzerland
+hx_robben_island	Hard	On which island was Nelson Mandela imprisoned for 18 years?	Robben Island	Alcatraz	Devil's Island	Goree Island
+hx_pankhurst	Hard	Which British activist led the suffragette movement?	Emmeline Pankhurst	Florence Nightingale	Mary Wollstonecraft	Queen Victoria
+hx_mandela_1990	Hard	In which year was South Africa's most famous political prisoner set free?	1990	1985	1994	1979
+his_last_president_south	Hard	Who was the last president of South Africa under apartheid?	F. W. de Klerk	P. W. Botha	Thabo Mbeki	Jacob Zuma
+his_south_african_archbishop	Hard	Which South African archbishop won the 1984 Nobel Peace Prize for opposing apartheid?	Desmond Tutu	Steve Biko	Oliver Tambo	Walter Sisulu
+his_steps_washington_monument	Hard	On the steps of which Washington monument was the 'I Have a Dream' speech given?	The Lincoln Memorial	The Washington Monument	The US Capitol	The Jefferson Memorial
+his_store_lunch_counter	Hard	At which store's lunch counter did the Greensboro sit-ins begin in 1960?	Woolworth's	Sears	Macy's	Walmart
+his_south_african_township	Hard	At which South African township did police kill 69 protesters in 1960?	Sharpeville	Soweto	Langa	Alexandra
+his_township_student_uprising	Hard	Which township's student uprising of 1976 became a turning point against apartheid?	Soweto	Sharpeville	Durban	Pretoria
+his_suffragette_died_stepping	Hard	Which suffragette died after stepping in front of the King's horse at the Derby in 1913?	Emily Davison	Emmeline Pankhurst	Sylvia Pankhurst	Millicent Fawcett
+his_radical_group_founded	Hard	Which radical group was founded in Oakland, California, in 1966?	The Black Panther Party	The Nation of Islam	The NAACP	The Freedom Riders
+his_territory_give_women	Hard	Which US territory was the first to give women the vote, in 1869?	Wyoming	California	New York	Texas

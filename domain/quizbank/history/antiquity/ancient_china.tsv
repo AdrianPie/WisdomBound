@@ -1,0 +1,35 @@
+# Od dynastii Shang do Han: Konfucjusz, Sun Zi, pierwszy cesarz, Wielki Mur, Jedwabny Szlak, wynalazki.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+his4_terakotowa_armia	Easy	In which country does the Terracotta Army guard an emperor's tomb?	China	Japan	India	Korea
+trv_papier_chiny	Easy	Which civilisation invented paper?	Ancient China	Ancient Egypt	Ancient Greece	The Maya
+wld_his_mur_chinski_cel	Easy	The Great Wall of China was mainly built to do what?	Keep out raiders from the north	Hold back floods	Mark a trade route	Protect the emperor's palace
+hx_jedwabny_szlak	Easy	What was the ancient trade route between China and the Mediterranean called?	The Silk Road	The Spice Way	The Amber Road	The Tea Trail
+his_ancient_chinese_thinker	Easy	Which ancient Chinese thinker's sayings are collected in 'The Analects'?	Confucius	Lao Tzu	Sun Tzu	Mencius
+his_ancient_chinese_general	Easy	Which ancient Chinese general is credited with the book 'The Art of War'?	Sun Tzu	Confucius	Lao Tzu	Genghis Khan
+trv_wielki_mur_ksiezyc	Medium	Is the Great Wall of China visible to the naked eye from the Moon?	No, that is a myth	Yes, clearly	Only at night	Only from the far side
+his_dynasty_gave_china	Medium	Which dynasty gave China its name in many languages?	Qin	Han	Tang	Ming
+his_river_cradle_chinese	Medium	Which river is called the cradle of Chinese civilisation?	The Yellow River	The Yangtze	The Mekong	The Pearl River
+his_kings_shang_dynasty	Medium	What did kings of the Shang dynasty use 'oracle bones' for?	Telling the future	Keeping tax records	Building city walls	Playing a board game
+his_mandate_heaven_ancient	Medium	What was the 'Mandate of Heaven' in ancient China?	The gods' approval of a just ruler	The emperor's calendar	A law against rebellion	A tax paid to temples
+his_chinese_philosophy_linked	Medium	Which Chinese philosophy, linked with Laozi, teaches living in harmony with 'the Way'?	Taoism	Confucianism	Legalism	Mohism
+his_roughly_terracotta_soldiers	Medium	Roughly how many terracotta soldiers are thought to guard the First Emperor's tomb?	About 8,000	About 800	About 80,000	About 500
+his_emperor_china_hoping	Medium	What was the First Emperor of China hoping to gain by swallowing mercury pills?	Eternal life	Great strength	Second sight	A son and heir
+his_including_all_branches	Medium	Including all its branches, roughly how long is the Great Wall of China?	About 21,000 km	About 2,100 km	About 6,000 km	About 50,000 km
+his_silk_made	Medium	What is silk made from?	The cocoons of silkworm caterpillars	The bark of mulberry trees	The webs of giant spiders	The fibres of cotton plants
+his_discovered_terracotta_army	Medium	Who discovered the Terracotta Army in 1974?	Farmers digging a well	A British archaeologist	Soldiers building a road	Children chasing a goat
+his2_cesarz_chin_pierwszy	Hard	Who unified China as its first emperor?	Qin Shi Huang	Kublai Khan	Confucius	Sun Tzu
+hy_jedwab_sekret	Hard	For centuries, China kept secret how to make what?	Silk	Paper money	Glass	Steel
+his_earliest_chinese_dynasty	Hard	Which is the earliest Chinese dynasty known from writings of its own time?	Shang	Xia	Zhou	Qin
+his_dynasty_ruling_four	Hard	Which dynasty, ruling for about four centuries, gave its name to China's largest ethnic group?	Han	Qin	Zhou	Tang
+his_dynasty_ruled_china	Hard	Which dynasty ruled China the longest, for almost 800 years?	Zhou	Han	Shang	Ming
+his_according_tradition_china	Hard	According to tradition, what did China's first emperor order in 213 BC?	The burning of books	The building of the Grand Canal	The ban on silk exports	A census of all peasants
+his_besides_coins_weights	Hard	Besides coins and weights, what did China's first emperor make the same everywhere so carts fit the roads?	The width of cart axles	The length of a day's march	The size of horses	The colour of wheels
+his_chinese_invention_used	Hard	Which Chinese invention was used for fortune-telling long before it guided ships?	The magnetic compass	The kite	The abacus	The water clock
+his_era_475_221	Hard	What is the era of 475 to 221 BC, before China was unified, called?	The Warring States period	The Spring and Autumn period	The Three Kingdoms period	The Five Dynasties period
+his_era_made_classic	Hard	Which era, made famous by a classic novel, followed the fall of the Han dynasty?	The Three Kingdoms	The Warring States	The Spring and Autumn	The Six Dynasties
+his_han_court_official	Hard	Which Han court official is traditionally credited with inventing paper in AD 105?	Cai Lun	Zhang Heng	Sima Qian	Zhang Qian
+his_capital_han_tang	Hard	What was Xi'an called when it was the capital of the Han and Tang dynasties?	Chang'an	Luoyang	Kaifeng	Peking
+his_han_emperor_sent	Expert	Which Han emperor sent the envoy Zhang Qian west, opening the way for the Silk Road?	Emperor Wu	Emperor Gaozu	Emperor Wen	Emperor Guangwu
+his_follower_confucius_argued	Expert	Which follower of Confucius argued that human nature is basically good?	Mencius	Laozi	Mozi	Han Feizi
+his_han_scholar_built	Expert	Which Han scholar built a bronze jar that could detect distant earthquakes?	Zhang Heng	Cai Lun	Zhang Qian	Sima Qian
+his_legendary_empress_said	Expert	Which legendary empress is said to have discovered silk when a cocoon fell into her tea?	Leizu	Wu Zetian	Cixi	Nuwa

@@ -1,0 +1,32 @@
+# Najslynniejszy statek swiata: budowa, rejs, katastrofa w kwietniu 1912 i odnaleziony wrak.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+hx_titanic_gora	Easy	What did the Titanic hit before it sank?	An iceberg	A reef	Another ship	A sea mine
+his_ocean_titanic_sink	Easy	In which ocean did the Titanic sink?	The Atlantic	The Pacific	The Indian Ocean	The Arctic
+his_month_1912_titanic	Easy	In which month of 1912 did the Titanic sink?	April	January	August	December
+his_ship_band_famously	Easy	What did the ship's band famously do as the Titanic sank?	Kept on playing	Jumped overboard	Took the first lifeboat	Hid in the hold
+his_titanic	Medium	In which year did the Titanic sink?	1912	1905	1918	1923
+wh_titanic_rejs	Medium	During which voyage did the Titanic sink?	Its maiden voyage	Its second voyage	Its tenth voyage	Its return trip from New York
+his_titanic_cel	Medium	Which city was the Titanic sailing to when it sank?	New York	Boston	Halifax	Southampton
+his_ship_rescued_survivors	Medium	Which ship rescued the survivors of the Titanic?	Carpathia	Californian	Olympic	Lusitania
+his_english_port_titanic	Medium	From which English port did the Titanic set sail on 10 April 1912?	Southampton	Liverpool	Plymouth	Dover
+his_captain_titanic	Medium	Who was the captain of the Titanic?	Edward Smith	Arthur Rostron	William Turner	Stanley Lord
+his_roughly_people_died	Medium	Roughly how many people died when the Titanic sank?	About 1,500	About 150	About 500	About 5,000
+his_people_die_titanic	Medium	Why did so many people die on the Titanic?	There were too few lifeboats	The ship exploded	It sank in seconds	Sharks attacked the survivors
+his_led_team_found	Medium	Who led the team that found the wreck of the Titanic in 1985?	Robert Ballard	Jacques Cousteau	James Cameron	Clive Cussler
+his_funnels_titanic_just	Medium	How many funnels did the Titanic have, one of them just for show?	Four	Two	Three	Five
+his_wealthy_american_survivor	Medium	Which wealthy American survivor was later nicknamed 'the Unsinkable'?	Molly Brown	Rose DeWitt	Madeleine Astor	Edith Rosenbaum
+his_distress_signal_quite	Medium	Which distress signal, then quite new, did the Titanic's radio operators send?	SOS	Mayday	Pan-pan	Code Red
+hw_titanic_czas	Hard	Roughly how long did the Titanic take to sink after its fatal collision?	About 2 hours 40 minutes	About 20 minutes	About 8 hours	About 2 days
+his_year_wreck_titanic	Hard	In which year was the wreck of the Titanic found?	1985	1962	1999	1971
+his_shipping_company_owned	Hard	Which shipping company owned the Titanic?	The White Star Line	The Cunard Line	The Hamburg America Line	P&O
+his_shipyard_built_titanic	Hard	Which shipyard built the Titanic?	Harland and Wolff	Cammell Laird	John Brown and Company	Swan Hunter
+his_lifeboats_titanic_carry	Hard	How many lifeboats did the Titanic carry?	20	8	48	64
+his_roughly_deep_wreck	Hard	Roughly how deep does the wreck of the Titanic lie?	About 3,800 metres	About 380 metres	About 800 metres	About 11,000 metres
+his_nearby_ship_failed	Hard	Which nearby ship failed to come to the Titanic's aid because its radio operator had gone to bed?	The Californian	The Carpathia	The Olympic	The Lusitania
+his_titanic_chief_designer	Hard	Who was the Titanic's chief designer, who went down with the ship?	Thomas Andrews	Bruce Ismay	William Pirrie	Charles Lightoller
+his_chairman_white_star	Hard	Which chairman of the White Star Line survived the sinking, to public scorn?	J. Bruce Ismay	J. P. Morgan	Thomas Andrews	John Jacob Astor
+his_french_port_titanic	Hard	Which French port was the Titanic's first stop after leaving England?	Cherbourg	Le Havre	Calais	Brest
+his_richest_passenger_aboard	Hard	Who was the richest passenger aboard the Titanic, who died in the sinking?	John Jacob Astor IV	J. P. Morgan	Benjamin Guggenheim	Isidor Straus
+hy_jessop	Expert	Violet Jessop survived the Titanic and accidents on which two of its sister ships?	The Olympic and the Britannic	The Lusitania and the Carpathia	The Queen Mary and the Olympic	The Britannic and the Lusitania
+his_canadian_city_150	Expert	In which Canadian city are about 150 of the Titanic's victims buried?	Halifax	Quebec City	Montreal	St John's
+his_irish_port_titanic	Expert	At which Irish port did the Titanic make its last stop before crossing the Atlantic?	Queenstown	Dublin	Belfast	Galway

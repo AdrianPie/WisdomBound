@@ -23,9 +23,10 @@ import kotlin.random.Random
  * Quiz dziala jak drabinka w "Milionerach": pierwsze pytanie jest rozgrzewka, ostatnie potrafi
  * zabolec. Im dalsza fala, tym wyzej zaczyna sie drabinka - w fali 5 nie ma juz latwych pytan.
  *
- * **Jeden temat = jeden plik TSV** w `domain/quizbank` (history.tsv, biology.tsv, ...), ulozony
- * szczeblami Easy -> Expert. Z niego `tools/quizbank.py generate` robi [BiologyQuestions],
- * [AnimalQuestions], ... - tych plikow Kotlin nie edytuje sie recznie. Nowe pytania dopisuje
+ * **Jeden temat = jeden plik TSV** w `domain/quizbank` (biology.tsv, ...), ulozony szczeblami
+ * Easy -> Expert - albo, gdy temat jest duzy, katalog DZIALOW (history/antiquity/roman_empire.tsv,
+ * patrz [QuizSection]). Z nich `tools/quizbank.py generate` robi [BiologyQuestions],
+ * [HistoryQuestions], ... - tych plikow Kotlin nie edytuje sie recznie. Nowe pytania dopisuje
  * `tools/quizbank.py add`, ktore najpierw szuka dubli w calym banku (instrukcja:
  * domain/quizbank/README.md). Bank rozrosl sie wczesniej do kilkudziesieciu plikow-partii, w ktorych
  * ten sam fakt siedzial po trzy razy, a nikt nie widzial calego tematu naraz.
@@ -149,4 +150,7 @@ object QuizBank {
 
     fun byCategory(category: QuizCategory, random: Random = Random.Default): List<QuizEntry> =
         all(random).filter { it.category == category }
+
+    /** Pytania z dzialu i wszystkich jego poddzialow - "Antiquity" to cala starozytnosc. */
+    fun inSection(section: QuizSection): List<QuizEntry> = textEntries.filter(section::covers)
 }
