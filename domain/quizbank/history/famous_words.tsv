@@ -1,0 +1,43 @@
+# Dzial przekrojowy: slynne zdania, hasla i okrzyki z historii - kto je powiedzial i przy jakiej okazji.
+# Cytaty z literatury i filmow siedza w literature i pop_culture.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+his_british_leader_promised	Easy	Which British leader promised in 1940 that 'we shall fight on the beaches'?	Winston Churchill	Neville Chamberlain	Clement Attlee	George VI
+his_president_said_ask	Easy	Which US president said 'Ask not what your country can do for you'?	John F. Kennedy	Franklin D. Roosevelt	Abraham Lincoln	Ronald Reagan
+his_2008_presidential_campaign	Easy	Whose 2008 presidential campaign slogan was 'Yes we can'?	Barack Obama's	Hillary Clinton's	John McCain's	Joe Biden's
+his_queen_told_troops	Easy	Which queen told her troops at Tilbury in 1588, 'I have the heart and stomach of a king'?	Elizabeth I	Mary I	Victoria	Anne
+his_said_small_step	Easy	Who said 'That's one small step for man' as he stepped onto the Moon?	Neil Armstrong	Buzz Aldrin	Yuri Gagarin	John Glenn
+his_president_told_americans	Medium	Which president told Americans in 1933 that 'the only thing we have to fear is fear itself'?	Franklin D. Roosevelt	Herbert Hoover	Woodrow Wilson	Harry S. Truman
+his_prime_minister_told	Medium	Which prime minister told her party in 1980, 'The lady's not for turning'?	Margaret Thatcher	Golda Meir	Indira Gandhi	Theresa May
+his_signal_nelson_send	Medium	Which signal did Nelson send to his fleet before the Battle of Trafalgar?	'England expects that every man will do his duty'	'Engage the enemy more closely and win'	'God save the King and the fleet'	'Every ship must fight to the last man'
+his_battle_cry_texans	Medium	Which battle cry did Texans shout as they beat the Mexican army at San Jacinto in 1836?	'Remember the Alamo!'	'Don't tread on me!'	'Liberty or death!'	'Forward to Mexico!'
+his_battle_american_militiamen	Medium	At which battle were American militiamen told 'Don't fire until you see the whites of their eyes'?	Bunker Hill	Yorktown	Gettysburg	Saratoga
+his_said_declared_here	Medium	Who is said to have declared 'Here I stand, I can do no other' when ordered to take back his writings?	Martin Luther	Jan Hus	Galileo Galilei	Thomas More
+his_president_kept_sign	Medium	Which US president kept a sign on his desk saying 'The buck stops here'?	Harry S. Truman	Dwight D. Eisenhower	Lyndon B. Johnson	Jimmy Carter
+his_president_motto_speak	Medium	Which US president's motto was 'Speak softly and carry a big stick'?	Theodore Roosevelt	Andrew Jackson	Ulysses S. Grant	Woodrow Wilson
+his_president_insisted_reporters	Medium	Which US president insisted to reporters in 1973, 'I am not a crook'?	Richard Nixon	Gerald Ford	Lyndon B. Johnson	Bill Clinton
+his_1992_presidential_campaign	Medium	Whose 1992 presidential campaign lived by the line 'It's the economy, stupid'?	Bill Clinton's	George H. W. Bush's	Ross Perot's	Al Gore's
+his_spartan_king_answered	Medium	Which Spartan king answered 'Come and take them' when the Persians demanded his weapons?	Leonidas	Lysander	Agesilaus	Pausanias
+his_scientist_said_muttered	Medium	Which scientist is said to have muttered 'And yet it moves' after being forced to deny that the Earth moves?	Galileo Galilei	Nicolaus Copernicus	Johannes Kepler	Giordano Bruno
+his_emperor_boasted_found	Medium	Which emperor boasted that he found Rome a city of bricks and left it a city of marble?	Augustus	Nero	Hadrian	Trajan
+his_prussian_statesman_said	Medium	Which Prussian statesman said the great questions of the day would be decided by 'iron and blood'?	Otto von Bismarck	Kaiser Wilhelm II	Frederick the Great	Helmuth von Moltke
+his_leader_wrote_political	Medium	Which leader wrote that 'political power grows out of the barrel of a gun'?	Mao Zedong	Joseph Stalin	Fidel Castro	Vladimir Lenin
+his_american_general_told	Medium	Which American general told Congress in 1951 that 'old soldiers never die; they just fade away'?	Douglas MacArthur	Dwight D. Eisenhower	George Patton	Omar Bradley
+his_union_general_famously	Medium	Which Union general famously summed up his view of fighting with 'War is hell'?	William T. Sherman	Ulysses S. Grant	George Meade	Joseph Hooker
+his_french_general_declared	Medium	Which French general declared in 1940 that 'France has lost a battle, but France has not lost the war'?	Charles de Gaulle	Philippe Petain	Ferdinand Foch	Maxime Weygand
+his_founding_father_warned	Medium	Which Founding Father warned 'We must all hang together, or most assuredly we shall all hang separately'?	Benjamin Franklin	John Adams	George Washington	Patrick Henry
+his_roman_general_reported	Medium	Which Roman general reported his quick victory with 'I came, I saw, I conquered'?	Julius Caesar	Pompey	Augustus	Scipio Africanus
+his_churchill_words_owed	Medium	Churchill's words 'so much owed by so many to so few' praised the pilots of which battle?	The Battle of Britain	The Battle of the Atlantic	The Battle of El Alamein	The Battle of Dunkirk
+his_admiral_last_words	Medium	Which admiral's last words at Trafalgar are said to have been 'Kiss me, Hardy'?	Horatio Nelson	Francis Drake	Lord Howe	Cuthbert Collingwood
+his_roman_emperor_last	Medium	Which Roman emperor's last words were said to be 'What an artist dies in me!'?	Nero	Caligula	Commodus	Domitian
+his_french_king_supposed_2	Hard	Which French king is supposed to have said 'After me, the flood'?	Louis XV	Louis XIV	Louis XVI	Henry IV
+his_presidential_candidate_promised	Hard	Which presidential candidate promised in 1988, 'Read my lips: no new taxes'?	George H. W. Bush	Ronald Reagan	Bill Clinton	Michael Dukakis
+his_spanish_communist_made	Hard	Which Spanish communist made the cry 'No pasaran!' ('They shall not pass') famous in 1936?	Dolores Ibarruri	Francisco Franco	Federica Montseny	Buenaventura Durruti
+his_revolutionary_ended_defence	Hard	Which revolutionary ended his defence at his trial in 1953 with 'History will absolve me'?	Fidel Castro	Che Guevara	Ho Chi Minh	Nelson Mandela
+his_roman_emperor_said	Hard	Which Roman emperor said 'Money does not stink' about his tax on public urinals?	Vespasian	Caligula	Tiberius	Claudius
+his_british_prime_minister_6	Hard	Which British prime minister said 'A week is a long time in politics'?	Harold Wilson	Harold Macmillan	Winston Churchill	Tony Blair
+his_wrote_times_try	Hard	Who wrote 'These are the times that try men's souls' in December 1776?	Thomas Paine	Thomas Jefferson	Samuel Adams	John Hancock
+his_union_admiral_cried	Hard	Which Union admiral cried 'Damn the torpedoes, full speed ahead!' at Mobile Bay in 1864?	David Farragut	John Paul Jones	David Porter	Andrew Foote
+his_roman_emperor_said_2	Hard	Which Roman emperor is said to have cried 'Varus, give me back my legions!'?	Augustus	Tiberius	Claudius	Nero
+his_frenchwoman_cried_liberty	Hard	Which Frenchwoman cried 'O Liberty, what crimes are committed in thy name!' on her way to the guillotine?	Madame Roland	Marie Antoinette	Charlotte Corday	Olympe de Gouges
+his_leader_spoke_india	Hard	Which leader spoke of India's 'tryst with destiny' as it became independent in 1947?	Jawaharlal Nehru	Mahatma Gandhi	Indira Gandhi	Muhammad Ali Jinnah
+his_greek_king_said	Hard	Which Greek king said after a costly win, 'Another such victory and we are ruined'?	Pyrrhus	Philip II	Leonidas	Agesilaus

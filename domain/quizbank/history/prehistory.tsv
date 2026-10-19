@@ -9,6 +9,8 @@ his_human_species_lived	Easy	Which human species lived in Europe before us and d
 his_continent_modern_humans	Easy	On which continent did modern humans first evolve?	Africa	Asia	Europe	Australia
 his_call_people_lived	Easy	What do we call people who lived by hunting animals and collecting wild plants?	Hunter-gatherers	Herdsmen	Settlers	Craftsmen
 his_animals_ice_age	Easy	Which animals did Ice Age artists paint most often on cave walls?	Bison, horses and deer	Cats, dogs and birds	Fish and whales	Snakes and lizards
+his_early_humans_learn	Easy	What did early humans learn to control that let them cook food and keep warm?	Fire	Water	Electricity	Steam
+his_animals_farmers_keep	Easy	Which animals did the first farmers keep for meat, milk and wool?	Sheep and goats	Horses and camels	Pigs and chickens	Llamas and alpacas
 hx_stonehenge_wiek	Medium	Roughly how old is Stonehenge?	About 5,000 years	About 1,000 years	About 2,000 years	About 20,000 years
 his_lucy_found_ethiopia	Medium	What is 'Lucy', found in Ethiopia in 1974?	The skeleton of an early human ancestor	A buried royal treasure	A lost city of the Queen of Sheba	The oldest known written text
 his_great_change_neolithic	Medium	What was the great change of the 'Neolithic Revolution'?	People began farming	People first used fire	People learned to write	People first made tools
@@ -23,6 +25,14 @@ his_early_human_ancestor	Medium	Which early human ancestor's Latin name means 'h
 his_village_carnac_brittany	Medium	The village of Carnac in Brittany is famous for what?	Thousands of standing stones in rows	The oldest cave paintings	A buried Stone Age village	A giant chalk horse
 his_iron_age_britons	Medium	What did Iron Age Britons build on hilltops, protected by ditches and earth banks?	Hill forts	Stone castles	Ziggurats	Watchtowers
 his_prehistoric_artists_mostly	Medium	What did prehistoric artists mostly use to paint cave walls?	Charcoal and red ochre	Squid ink and chalk	Crushed rubies and oil	Beetroot juice and milk
+his_crops_among_farmers	Medium	Which crops were among the first that farmers grew in the Fertile Crescent?	Wheat and barley	Rice and millet	Maize and beans	Potatoes and oats
+his_animal_people_steppes	Medium	Which animal did people on the steppes first tame for riding, around 3500 BC?	The horse	The camel	The ox	The donkey
+his_stone_tool_early	Medium	Which stone tool did early humans use for over a million years for cutting, chopping and digging?	The hand axe	The bow drill	The harpoon	The sickle
+his_prehistoric_barrow	Medium	What is a prehistoric 'barrow'?	A burial mound	A stone axe	A storage pit	A fishing trap
+his_earliest_boats	Medium	What were the earliest known boats?	Hollowed-out log canoes	Reed rafts with sails	Leather-covered coracles	Wooden rowing galleys
+his_oldest_musical_instruments	Medium	What are the oldest known musical instruments, about 40,000 years old?	Flutes made of bone	Drums made of skin	Harps made of horn	Bells made of copper
+his_older_stonehenge_great	Medium	Which is older: Stonehenge or the Great Pyramid of Giza?	Stonehenge	The Great Pyramid	They were built the same year	Neither, both are Roman
+his_quern_used_stone	Medium	What was a 'quern' used for in the Stone Age?	Grinding grain into flour	Carving wood	Lighting fires	Catching fish
 his_bluestones_stonehenge_dragged	Hard	The bluestones of Stonehenge were dragged there from hills over 200 km away in which country?	Wales	Scotland	Ireland	France
 his_land_bridge_let	Hard	Which land bridge let Ice Age people walk from Asia into the Americas?	Beringia	Doggerland	Sundaland	Gondwana
 his_neolithic_village_scotland	Hard	Which Neolithic village in Scotland's Orkney Islands was uncovered by a storm in 1850?	Skara Brae	Newgrange	Catalhoyuk	Jarlshof
@@ -34,6 +44,9 @@ his_scientists_discover_2001	Hard	What did scientists discover in 2001 had kille
 his_small_early_human	Hard	Which small early human, found on the Indonesian island of Flores, is nicknamed 'the Hobbit'?	Homo floresiensis	Homo naledi	Homo erectus	Homo habilis
 his_family_fossil_hunters	Hard	Which family of fossil hunters made famous finds at Olduvai Gorge in Tanzania?	The Leakeys	The Carters	The Wheelers	The Darwins
 his_neolithic_tomb_ireland	Hard	Which Neolithic tomb in Ireland is lit inside by the rising sun on the winter solstice?	Newgrange	Skara Brae	Maeshowe	Avebury
+his_early_human_species	Hard	Which early human species was probably the first to leave Africa?	Homo erectus	Homo sapiens	Homo habilis	Australopithecus
+his_600_year_old	Hard	What does the 3,600-year-old Nebra sky disc, found in Germany, show?	The Sun, the Moon and the stars	A map of the Rhine	The face of a king	A hunting scene
+his_prehistoric_man_found	Hard	Which prehistoric man, found in a Danish peat bog in 1950, still has the stubble on his chin?	Tollund Man	Otzi	Lindow Man	Cheddar Man
 cur_mamuty_piramidy	Expert	Were woolly mammoths still alive when the Great Pyramid of Giza was built?	Yes, on a remote Arctic island	No, they died out 50,000 years earlier	No, they died out with the dinosaurs	Only in zoos of the pharaohs
 hx_lascaux	Expert	The Lascaux caves in France are famous for what?	Prehistoric animal paintings	Ancient Roman baths	Viking treasure	Dinosaur footprints
 hx_gobekli	Expert	Which site in Turkey, over 11,000 years old, is among the oldest known temples?	Gobekli Tepe	Catalhoyuk	Troy	Ephesus
@@ -41,3 +54,6 @@ hx_otzi	Expert	What is Otzi, found in the Alps in 1991?	A 5,300-year-old frozen 
 his_lost_land_once	Expert	What is the name of the lost land that once joined Britain to Europe, now under the North Sea?	Doggerland	Beringia	Lyonesse	Atlantis
 his_stone_circle_wiltshire	Expert	Which stone circle in Wiltshire, far bigger than Stonehenge, has a village built inside it?	Avebury	Callanish	Castlerigg	Carnac
 his_figure_cut_chalk	Expert	Which figure cut into a chalk hillside in England is about 3,000 years old?	The Uffington White Horse	The Cerne Abbas Giant	The Long Man of Wilmington	The Westbury White Horse
+his_roughly_tattoos_found	Expert	Roughly how many tattoos were found on the body of Otzi the Iceman?	About 60	About 6	About 300	None at all
+his_group_ancient_humans	Expert	Which group of ancient humans was discovered in 2010 from DNA in a finger bone from a Siberian cave?	The Denisovans	The Neanderthals	Homo naledi	The Cro-Magnons
+his_huge_chalk_mound	Expert	Which huge chalk mound near Avebury is the largest prehistoric man-made mound in Europe?	Silbury Hill	Glastonbury Tor	Maiden Castle	Newgrange

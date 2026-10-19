@@ -1,0 +1,38 @@
+# Bliski Wschod od upadku Imperium Osmanskiego: Izrael i wojny arabsko-izraelskie, ropa, Iran,
+# wojny w Zatoce. Tylko fakty przypiete do konkretnego roku.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+his_country_iraq_invade	Easy	Which country did Iraq invade in 1990, triggering the Gulf War?	Kuwait	Iran	Saudi Arabia	Syria
+his_saddam_hussein_dictator	Easy	Saddam Hussein was the dictator of which country until 2003?	Iraq	Iran	Syria	Libya
+his_two_neighbouring_countries	Easy	Which two neighbouring countries fought a long war from 1980 to 1988?	Iran and Iraq	Egypt and Libya	Syria and Turkey	Israel and Jordan
+hw_izrael_1948	Medium	In which year was the modern State of Israel founded?	1948	1945	1956	1967
+his_egyptian_president_made	Medium	Which Egyptian president made peace with Israel and was assassinated in 1981?	Anwar Sadat	Gamal Abdel Nasser	Hosni Mubarak	Mohamed Naguib
+his_israeli_prime_minister	Medium	Which Israeli prime minister was assassinated at a peace rally in 1995?	Yitzhak Rabin	Menachem Begin	Shimon Peres	Ariel Sharon
+his_code_1991_led	Medium	What was the code name of the 1991 US-led campaign to drive Iraq out of Kuwait?	Operation Desert Storm	Operation Iraqi Freedom	Operation Enduring Freedom	Operation Overlord
+his_year_israel_fight	Medium	In which year did Israel fight the Six-Day War against Egypt, Jordan and Syria?	1967	1948	1956	1973
+his_two_countries_launched	Medium	Which two countries launched a surprise attack on Israel on Yom Kippur in 1973?	Egypt and Syria	Jordan and Iraq	Lebanon and Syria	Egypt and Jordan
+his_retreat_jimmy_carter	Medium	At which US retreat did Jimmy Carter broker peace accords between Egypt and Israel in 1978?	Camp David	Pearl Harbor	Martha's Vineyard	Fort Knox
+his_british_letter_1917	Medium	Which British letter of 1917 backed 'a national home for the Jewish people' in Palestine?	The Balfour Declaration	The Sykes-Picot Agreement	The Churchill White Paper	The McMahon Letter
+his_led_palestine_liberation	Medium	Who led the Palestine Liberation Organization from 1969 until his death in 2004?	Yasser Arafat	Mahmoud Abbas	Gamal Abdel Nasser	King Hussein
+his_1993_accords_sealed	Medium	Which 1993 accords, sealed with a handshake on the White House lawn, were the first Israeli-Palestinian peace deal?	The Oslo Accords	The Camp David Accords	The Madrid Accords	The Geneva Accords
+his_arabic_palestinian_uprisings	Medium	What is the Arabic name for the Palestinian uprisings that began in 1987?	Intifada	Nakba	Jihad	Hijra
+his_shah_overthrown_iran	Medium	Which shah was overthrown in Iran's revolution of 1979?	Mohammad Reza Pahlavi	Reza Shah Pahlavi	Nasser al-Din Shah	Ahmad Shah Qajar
+his_group_oil_exporting	Medium	Which group of oil-exporting countries was founded in Baghdad in 1960?	OPEC	NATO	The Arab League	The UN
+his_happened_price_oil	Medium	What happened to the price of oil after the Arab oil embargo of 1973?	It roughly quadrupled	It fell by half	It stayed the same	It doubled for one day
+his_king_founded_modern	Medium	Which king founded the modern Kingdom of Saudi Arabia in 1932?	Ibn Saud	King Faisal	King Fahd	King Hussein
+his_country_civil_war	Medium	Which country's civil war from 1975 to 1990 wrecked its capital, Beirut?	Lebanon	Syria	Jordan	Cyprus
+his_two_powers_ruled	Medium	Which two powers ruled most of the Arab Middle East as 'mandates' after World War I?	Britain and France	Italy and Spain	Germany and Russia	The USA and Britain
+his_prime_minister_israel	Medium	Who was the first prime minister of Israel?	David Ben-Gurion	Golda Meir	Menachem Begin	Moshe Dayan
+his_palestinians_call_flight	Medium	What do Palestinians call the flight and expulsion of their people in 1948?	The Nakba	The Intifada	The Hijra	The Diaspora
+hy_iran_1979	Hard	Which country's 1979 revolution brought Ayatollah Khomeini to power?	Iran	Iraq	Afghanistan	Saudi Arabia
+his_egyptian_president_nationalised	Hard	Which Egyptian president nationalised the Suez Canal in 1956?	Gamal Abdel Nasser	Anwar Sadat	Hosni Mubarak	King Farouk
+his_iranian_prime_minister	Hard	Which Iranian prime minister nationalised his country's oil and was toppled in a 1953 coup?	Mohammad Mosaddegh	Ruhollah Khomeini	Abolhassan Banisadr	Amir Abbas Hoveyda
+his_days_american_diplomats	Hard	For how many days were American diplomats held hostage in Tehran from 1979 to 1981?	444	44	144	1,044
+his_short_lived_country	Hard	Which short-lived country joined Egypt and Syria together from 1958 to 1961?	The United Arab Republic	The Arab Federation	Greater Syria	The Nile Republic
+his_kurdish_town_iraq	Hard	Which Kurdish town in Iraq was attacked with poison gas by Saddam Hussein's forces in 1988?	Halabja	Mosul	Kirkuk	Erbil
+his_king_ruled_jordan	Hard	Which king ruled Jordan from 1952 until his death in 1999?	Hussein	Abdullah I	Talal	Faisal
+his_israeli_prime_minister_2	Hard	Which Israeli prime minister signed the 1979 peace treaty with Egypt?	Menachem Begin	Golda Meir	Yitzhak Rabin	Shimon Peres
+his_year_oil_struck	Hard	In which year was oil first struck in commercial amounts in Saudi Arabia?	1938	1908	1958	1973
+his_british_traveller_archaeologist	Hard	Which British traveller and archaeologist helped draw the borders of Iraq in 1921?	Gertrude Bell	Freya Stark	Agatha Christie	Isabella Bird
+his_deadly_clashes_between	Expert	What were the deadly clashes between Jordan's army and Palestinian fighters in 1970 called?	Black September	The Days of Rage	The Night of Fire	Red October
+his_hashemite_prince_became	Expert	Which Hashemite prince became the first king of Iraq in 1921?	Faisal I	Abdullah I	Hussein bin Ali	Ghazi
+his_young_king_iraq	Expert	Which young king of Iraq was killed in the revolution of 1958?	Faisal II	Ghazi	Hussein	Abdullah II

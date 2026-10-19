@@ -4,6 +4,8 @@ his_mona_lisa	Easy	Who painted the Mona Lisa?	Leonardo da Vinci	Michelangelo	Rap
 hx_mona_lisa_kradziez	Easy	What happened to the Mona Lisa in 1911?	It was stolen	It was sold to America	It was cut in half	It was painted over
 his_renaissance_genius_painted	Easy	Which Renaissance genius painted 'The Last Supper'?	Leonardo da Vinci	Michelangelo	Raphael	Titian
 his_renaissance_city_canals	Easy	Which Renaissance city is famous for its canals and the glass-makers of Murano?	Venice	Florence	Genoa	Milan
+his_italian_city_seen	Easy	Which Italian city is seen as the birthplace of the Renaissance?	Florence	Rome	Venice	Naples
+his_past_age_renaissance	Easy	Which past age did Renaissance thinkers and artists look back to for inspiration?	Ancient Greece and Rome	The Viking Age	The Stone Age	Ancient Egypt
 his2_renesans_kraj	Medium	In which country did the Renaissance begin?	Italy	France	Germany	England
 wh_kaplica_sykstynska	Medium	Who painted the ceiling of the Sistine Chapel?	Michelangelo	Leonardo da Vinci	Raphael	Caravaggio
 his_medyceusze	Medium	Which Italian city did the Medici family rule?	Florence	Venice	Milan	Genoa
@@ -21,12 +23,23 @@ his_someone_renaissance_man	Medium	Someone called a 'Renaissance man' is what?	S
 his_venetian_painter_rich	Medium	Which Venetian painter, famous for his rich colours, died of plague in 1576?	Titian	Tintoretto	Veronese	Giorgione
 his_family_ruled_milan	Medium	Which family ruled Milan, employing Leonardo da Vinci for years?	The Sforzas	The Medici	The Borgias	The Gonzagas
 his_florentine_sculptor_made	Medium	Which Florentine sculptor made a bronze David, the first free-standing nude since ancient times?	Donatello	Ghiberti	Cellini	Verrocchio
+his_renaissance_master_designed	Medium	Which Renaissance master designed the great dome of St Peter's Basilica in Rome?	Michelangelo	Leonardo da Vinci	Raphael	Botticelli
+his_warrior_pope_laid	Medium	Which 'warrior pope' laid the first stone of the new St Peter's Basilica in 1506?	Julius II	Leo X	Alexander VI	Sixtus IV
+his_painter_showed_spring	Medium	Which painter showed spring with dancing nymphs in 'Primavera'?	Botticelli	Titian	Raphael	Caravaggio
+his_kind_machine_gutenberg	Medium	Which kind of machine did Gutenberg adapt to build his printing press?	A wine press	A water wheel	A spinning wheel	A grain mill
+his_florentine_woman_believed	Medium	Which Florentine woman is believed to be the sitter of the Mona Lisa?	Lisa Gherardini	Lucrezia Borgia	Isabella d'Este	Simonetta Vespucci
+his_florentine_writer_argued	Medium	Which Florentine writer argued that it is safer for a prince to be feared than loved?	Niccolo Machiavelli	Lorenzo de' Medici	Dante Alighieri	Baldassare Castiglione
 his_druk	Hard	Who popularized movable-type printing in Europe?	Johannes Gutenberg	Nicolaus Copernicus	Leonardo da Vinci	Galileo
 his_german_artist_engravings	Hard	Which German artist is famous for his engravings and self-portraits around 1500?	Albrecht Durer	Hans Holbein	Lucas Cranach	Matthias Grunewald
 his_flemish_master_painted	Hard	Which Flemish master painted the 'Arnolfini Portrait' in 1434?	Jan van Eyck	Pieter Bruegel	Hieronymus Bosch	Rogier van der Weyden
 his_ruthless_son_pope	Hard	Which ruthless son of a pope is thought to have inspired Machiavelli's 'The Prince'?	Cesare Borgia	Lorenzo de' Medici	Ludovico Sforza	Francesco Gonzaga
 his_city_brutally_sacked	Hard	Which city was brutally sacked by the troops of Emperor Charles V in 1527?	Rome	Florence	Venice	Milan
 his_french_king_invited	Hard	Which French king invited Leonardo to France, where the artist died in 1519?	Francis I	Louis XII	Henry II	Charles VIII
+his_bronze_doors_florence	Hard	Whose bronze doors of the Florence Baptistery did Michelangelo call 'the Gates of Paradise'?	Lorenzo Ghiberti's	Donatello's	Brunelleschi's	Cellini's
+his_italian_poet_often	Hard	Which Italian poet is often called 'the father of humanism'?	Petrarch	Dante	Boccaccio	Ariosto
+his_german_city_gutenberg	Hard	In which German city did Gutenberg print his famous Bible?	Mainz	Cologne	Nuremberg	Hamburg
+his_banker_made_medici	Hard	Which banker made the Medici the real rulers of Florence from 1434?	Cosimo de' Medici	Lorenzo de' Medici	Piero de' Medici	Giovanni de' Medici
+his_pazzi_conspiracy_1478	Hard	What was the Pazzi conspiracy of 1478 in Florence?	A plot to murder the Medici during Mass	A scheme to flood the city	A forgery of famous paintings	A plan to sell Florence to Venice
 his_machiavelli	Expert	Who wrote the treatise 'The Prince'?	Niccolo Machiavelli	Dante Alighieri	Erasmus of Rotterdam	Thomas More
 hy_savonarola	Expert	Which Florentine friar organised the 'Bonfire of the Vanities' in 1497?	Girolamo Savonarola	Niccolo Machiavelli	Lorenzo de' Medici	Cesare Borgia
 his_young_florentine_painter	Expert	Which young Florentine painter's frescoes in the Brancacci Chapel pioneered perspective?	Masaccio	Giotto	Fra Angelico	Uccello

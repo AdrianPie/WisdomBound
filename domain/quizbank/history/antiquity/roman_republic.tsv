@@ -4,6 +4,8 @@ id	difficulty	prompt	correct	wrong1	wrong2	wrong3
 wh_cezar_zabojstwo	Easy	Who was murdered in the Roman senate on the Ides of March, 44 BC?	Julius Caesar	Augustus	Nero	Mark Antony
 his_according_legend_twin	Easy	According to legend, which twin brothers founded Rome?	Romulus and Remus	Castor and Pollux	Cain and Abel	Jacob and Esau
 his_julius_caesar_famously	Easy	What did Julius Caesar famously say as he led his army into Italy in 49 BC?	'The die is cast'	'I came, I saw, I conquered'	'Rome was not built in a day'	'Beware the Ides of March'
+his_old_noble_families	Easy	What were the old noble families of ancient Rome called?	Patricians	Plebeians	Equestrians	Senators
+his_friend_julius_caesar	Easy	Which friend of Julius Caesar was among his assassins?	Brutus	Mark Antony	Octavian	Lepidus
 wh_kartagina_wodz	Medium	Which Carthaginian general led elephants across the Alps?	Hannibal	Hasdrubal	Scipio	Vercingetorix
 wh_wojny_punickie	Medium	Between which powers were the Punic Wars fought?	Rome and Carthage	Rome and Greece	Greece and Persia	Rome and Egypt
 his_rubikon	Medium	Who led his army across the river Rubicon in 49 BC, starting a civil war?	Julius Caesar	Mark Antony	Pompey	Augustus
@@ -21,6 +23,8 @@ his_famously_rich_roman	Medium	Which famously rich Roman died after his army was
 his_calendar_julius_caesar	Medium	Which calendar did Julius Caesar bring in, starting in 45 BC?	The Julian calendar	The Gregorian calendar	The Augustan calendar	The lunar calendar
 his_main_duty_rome	Medium	What was the main duty of Rome's Vestal Virgins?	Keeping the sacred fire burning	Weaving the Senate's robes	Training young gladiators	Guarding the city gates
 his_pyrrhic_victory_won	Medium	A 'Pyrrhic victory', won at too great a cost, is named after which king who fought Rome?	Pyrrhus of Epirus	Philip V of Macedon	Antiochus III	Mithridates VI
+his_julius_caesar_great	Medium	Who was Julius Caesar's great rival, defeated at Pharsalus in 48 BC?	Pompey	Crassus	Cicero	Cato
+his_fasces_carried_roman	Medium	What were the 'fasces' carried before Roman officials, which gave their name to fascism?	A bundle of rods with an axe	A pair of crossed swords	A golden eagle on a pole	A wreath of laurel
 hy_akcjum	Hard	At which sea battle in 31 BC did Octavian defeat Mark Antony's fleet?	Actium	Pharsalus	Philippi	Alesia
 hy_rzym_753	Hard	According to tradition, in which year was Rome founded?	753 BC	1066 BC	509 BC	300 BC
 his_road_ancient_rome	Hard	What was the most famous road of ancient Rome, running south from the city?	The Appian Way	The Silk Road	The Royal Road	The Amber Road
@@ -37,6 +41,12 @@ his_last_king_rome	Hard	Who was the last king of Rome, driven out in 509 BC?	Tar
 his_word_veto_latin	Hard	The word 'veto', Latin for 'I forbid', comes from the power of which Roman officials?	The tribunes of the plebs	The consuls	The censors	The Vestal Virgins
 his_island_rome_win	Hard	Which island did Rome win from Carthage in the First Punic War?	Sicily	Sardinia	Corsica	Crete
 his_king_pontus_fought	Hard	Which king of Pontus fought Rome in three wars and was said to have made himself immune to poison?	Mithridates VI	Pyrrhus	Jugurtha	Tigranes
+his_country_pompey_murdered	Hard	In which country was Pompey murdered after fleeing there in 48 BC?	Egypt	Greece	Syria	Spain
+his_stab_wounds_julius	Hard	How many stab wounds did Julius Caesar receive, according to ancient writers?	23	3	50	100
+his_rome_written_law	Hard	What was Rome's first written law code, displayed in the Forum around 450 BC?	The Twelve Tables	The Ten Commandments	The Code of Justinian	The Lex Romana
+his_greek_city_rome	Hard	Which Greek city did Rome destroy in 146 BC, the same year as Carthage?	Corinth	Athens	Sparta	Syracuse
+his_roman_officials_counted	Hard	Which Roman officials counted the citizens and could expel senators for bad behaviour?	Censors	Consuls	Tribunes	Quaestors
+his_carthaginian_general_fought	Hard	Which Carthaginian general fought Rome in Sicily in the First Punic War and then conquered much of Spain?	Hamilcar Barca	Hasdrubal	Mago	Hanno
 org_kartagina_nazwa	Expert	The name Carthage meant what in Phoenician?	New city	Great harbour	Sea gate	Red hill
 hx_etruskowie	Expert	Which people ruled much of Italy, including early Rome, before the Romans rose to power?	The Etruscans	The Samnites	The Gauls	The Carthaginians
 hx_cezar_piraci	Expert	As a young man, Julius Caesar was kidnapped and held for ransom by whom?	Pirates	Gauls	Egyptian priests	Carthaginians
@@ -44,3 +54,5 @@ hy_alezja	Expert	At which siege of 52 BC did Caesar defeat the Gaulish chief Ver
 hy_scypion	Expert	Which Roman general won the Battle of Zama in 202 BC?	Scipio Africanus	Julius Caesar	Pompey	Fabius Maximus
 hw_gesi_rzym	Expert	According to legend, which animals saved Rome from a night attack by the Gauls in 390 BC?	Geese	Dogs	Horses	Owls
 his_general_opened_roman	Expert	Which general opened the Roman army to poor volunteers around 107 BC?	Gaius Marius	Sulla	Scipio Africanus	Cato the Elder
+his_roman_general_captured	Expert	Which Roman general captured Syracuse in 212 BC, during which Archimedes was killed?	Marcellus	Scipio Africanus	Fabius Maximus	Flamininus
+his_roman_general_conquered	Expert	Which Roman general conquered Macedon at the Battle of Pydna in 168 BC?	Aemilius Paullus	Scipio Africanus	Fabius Maximus	Marcellus

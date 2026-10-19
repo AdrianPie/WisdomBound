@@ -7,6 +7,7 @@ his_british_colonies_declared	Easy	How many British colonies declared independen
 his_founding_father_killed	Easy	Which US founding father was killed in a duel with Aaron Burr in 1804?	Alexander Hamilton	John Jay	Thomas Paine	Samuel Adams
 his_against_country_thirteen	Easy	Against which country did the thirteen American colonies fight for independence?	Great Britain	France	Spain	The Netherlands
 his_commanded_american_army	Easy	Who commanded the American army in the War of Independence?	George Washington	Benjamin Franklin	John Adams	Thomas Jefferson
+his_city_declaration_independence	Easy	In which city was the Declaration of Independence signed?	Philadelphia	Boston	New York	Washington
 his3_deklaracja_niepodleglosci_usa	Medium	In which year was the US Declaration of Independence signed?	1776	1789	1800	1765
 hx_jefferson	Medium	Who was the main author of the US Declaration of Independence?	Thomas Jefferson	George Washington	Benjamin Franklin	John Adams
 hx_delaware	Medium	Which river did George Washington famously cross on Christmas night, 1776?	The Delaware	The Potomac	The Hudson	The Mississippi
@@ -25,6 +26,12 @@ his_according_legend_philadelphia	Medium	According to legend, which Philadelphia
 his_shooting_five_colonists	Medium	What is the shooting of five colonists by British soldiers in 1770 called?	The Boston Massacre	The Boston Tea Party	The Lexington Raid	The Bloody Assizes
 his_colonial_militiamen_ready	Medium	What were the colonial militiamen who could be ready to fight at once called?	Minutemen	Redcoats	Rangers	Patriots
 his_ten_amendments_constitution	Medium	What are the first ten amendments to the US Constitution called?	The Bill of Rights	The Articles of Confederation	The Federalist Papers	The Great Compromise
+his_american_naval_captain	Medium	Which American naval captain is said to have shouted 'I have not yet begun to fight!'?	John Paul Jones	Stephen Decatur	Oliver Hazard Perry	David Farragut
+his_huge_signature_declaration	Medium	Whose huge signature on the Declaration of Independence became a word for any signature?	John Hancock	Thomas Jefferson	Samuel Adams	Benjamin Franklin
+his_german_soldiers_hired	Medium	What were the German soldiers hired by Britain to fight the Americans called?	Hessians	Prussians	Bavarians	Saxons
+his_future_lady_urged	Medium	Which future first lady urged her husband to 'remember the ladies' in the new laws?	Abigail Adams	Martha Washington	Dolley Madison	Martha Jefferson
+his_document_begins_course	Medium	Which famous document begins 'When in the Course of human events'?	The Declaration of Independence	The US Constitution	The Bill of Rights	The Gettysburg Address
+his_george_washington_vice	Medium	Who was George Washington's vice president?	John Adams	Thomas Jefferson	Alexander Hamilton	John Jay
 trv_franklin_banknot	Hard	Whose face is on the US $100 bill, even though he was never president?	Benjamin Franklin's	Thomas Jefferson's	Ulysses Grant's	Abraham Lincoln's
 his_nowy_jork_stolica	Hard	Which city was the first capital of the United States under its Constitution?	New York City	Philadelphia	Boston	Washington, D.C.
 hx_paul_revere	Hard	Which silversmith made a famous midnight ride in 1775 to warn that British troops were coming?	Paul Revere	Benjamin Franklin	Samuel Adams	John Hancock
@@ -34,3 +41,7 @@ his_american_victory_1777	Hard	Which American victory of 1777 persuaded France t
 his_british_general_surrendered	Hard	Which British general surrendered at Yorktown in 1781?	Lord Cornwallis	General Howe	General Burgoyne	General Gage
 his_treaty_1783_recognised	Hard	Which treaty of 1783 recognised the independence of the United States?	The Treaty of Paris	The Treaty of Ghent	The Treaty of Versailles	The Treaty of London
 his_washington_army_survive	Hard	Where did Washington's army survive the bitter winter of 1777-1778?	Valley Forge	Bunker Hill	Mount Vernon	Fort Ticonderoga
+his_hill_battle_bunker	Hard	On which hill was the 'Battle of Bunker Hill' of 1775 actually fought?	Breed's Hill	Beacon Hill	Capitol Hill	Nob Hill
+his_constitution_united_states	Hard	What was the first constitution of the United States, from 1781, called?	The Articles of Confederation	The Bill of Rights	The Federalist Papers	The Northwest Ordinance
+his_british_general_surrendered_2	Hard	Which British general surrendered his army at Saratoga in 1777?	John Burgoyne	Lord Cornwallis	William Howe	Henry Clinton
+his_french_admiral_fleet	Expert	Which French admiral's fleet trapped the British at Yorktown in 1781?	The Comte de Grasse	The Marquis de Lafayette	Admiral de Suffren	The Comte de Rochambeau

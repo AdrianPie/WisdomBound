@@ -11,6 +11,8 @@ his_cold_war_ended	Easy	The Cold War ended with the collapse of which state in 1
 his_east_germany_secret	Easy	What was the name of East Germany's secret police?	Stasi	Securitate	Gestapo	KGB
 his_bikini_atoll_1946	Easy	What was named after Bikini Atoll in 1946, just days after US nuclear tests there?	A swimsuit	A cocktail	A haircut	A dance
 his_san_francisco_hippie	Easy	San Francisco's hippie gathering of 1967 is remembered as the 'Summer of...' what?	Love	Peace	Flowers	Music
+his_guarded_strip_land	Easy	What is the guarded strip of land between North and South Korea called?	The Demilitarized Zone	The Iron Curtain	The Green Line	No man's land
+his_city_divided_wall	Easy	Which city was divided by a wall from 1961 to 1989?	Berlin	Vienna	Prague	Warsaw
 wh_zsrr_rozpad	Medium	In which year was the Soviet Union formally dissolved?	1991	1989	1990	1993
 wh_wojna_wietnamska	Medium	Which power withdrew from Vietnam in 1973?	The United States	France	The Soviet Union	Great Britain
 his_czarnobyl	Medium	In which year did the Chernobyl nuclear disaster happen?	1986	1979	1991	1984
@@ -34,7 +36,6 @@ his_president_berlin_wall	Medium	Who was US president when the Berlin Wall fell?
 his_gorbachev_policy_glasnost	Medium	What did Gorbachev's policy of 'glasnost' mean?	Openness	Restructuring	Peace	Equality
 his_became_president_france	Medium	Who became the first president of France's Fifth Republic, in 1959?	Charles de Gaulle	Francois Mitterrand	Georges Pompidou	Philippe Petain
 his_led_east_germany	Medium	Who led East Germany for 18 years until just before the Berlin Wall fell?	Erich Honecker	Walter Ulbricht	Egon Krenz	Willi Stoph
-his_egyptian_president_made	Medium	Which Egyptian president made peace with Israel and was assassinated in 1981?	Anwar Sadat	Gamal Abdel Nasser	Hosni Mubarak	Mohamed Naguib
 his_soviet_leader_denounced	Medium	Which Soviet leader denounced Stalin in a 'Secret Speech' in 1956?	Nikita Khrushchev	Leonid Brezhnev	Georgy Malenkov	Vyacheslav Molotov
 his_country_1956_uprising	Medium	In which country was a 1956 uprising against Soviet rule crushed by Red Army tanks?	Hungary	Czechoslovakia	Romania	Bulgaria
 his_surprise_attack_north	Medium	Which surprise attack by North Vietnam in 1968 shocked the American public?	Tet Offensive	Easter Offensive	Spring Offensive	Hue Offensive
@@ -54,6 +55,13 @@ his_senator_led_fierce	Medium	Which US senator led a fierce hunt for 'communists
 his_domino_theory_cold	Medium	What was the 'domino theory' of the Cold War?	Communism would spread country by country	Nuclear war would start by accident	The USSR would collapse on its own	Germany would reunite by 2000
 his_country_divided_17th	Medium	Which country was divided at the 17th parallel in 1954?	Vietnam	Korea	Germany	Laos
 his_trade_union_led	Medium	Which trade union, led by Lech Walesa, challenged communist rule in Poland in the 1980s?	Solidarity	Charter 77	The Velvet Union	Freedom Front
+his_policy_1947_promising	Medium	What was the US policy of 1947 promising to help countries resist communism called?	The Truman Doctrine	The Monroe Doctrine	The Marshall Plan	The Eisenhower Plan
+his_small_city_rhine	Medium	Which small city on the Rhine was the capital of West Germany?	Bonn	Frankfurt	Cologne	Munich
+his_olympic_games_usa	Medium	Which Olympic Games did the USA and many other countries boycott in 1980?	The Moscow Games	The Los Angeles Games	The Montreal Games	The Munich Games
+his_pope_elected_1978	Medium	Which pope, elected in 1978, inspired the opposition to communism in his native Poland?	John Paul II	Paul VI	Benedict XVI	John XXIII
+his_radio_free_europe	Medium	What was Radio Free Europe?	A US-funded station for the Eastern bloc	A Soviet channel for Western Europe	A pirate music station	The BBC's French service
+his_easing_cold_war	Medium	What was the easing of Cold War tensions in the 1970s called?	Detente	Glasnost	Perestroika	Ostpolitik
+his_czechoslovak_leader_tried	Medium	Which Czechoslovak leader tried to build 'socialism with a human face' in 1968?	Alexander Dubcek	Vaclav Havel	Gustav Husak	Jan Masaryk
 his2_kryzys_kubanski	Hard	In which year did the Cuban Missile Crisis erupt?	1962	1959	1968	1956
 his2_mur_upadek_kto	Hard	Which Soviet leader announced perestroika?	Mikhail Gorbachev	Leonid Brezhnev	Nikita Khrushchev	Yuri Andropov
 his_most_powietrzny	Hard	What did the Berlin Airlift of 1948 and 1949 do?	Flew food and fuel into West Berlin	Evacuated all of West Berlin	Flew troops to invade the East	Dropped leaflets over Moscow
@@ -63,7 +71,6 @@ hx_che	Hard	In which country was the revolutionary Che Guevara born?	Argentina	C
 hy_nato_1949	Hard	In which year was NATO founded?	1949	1945	1955	1961
 hy_korea_wojna	Hard	In which years was the Korean War fought?	1950-1953	1945-1948	1960-1965	1939-1945
 hy_praska_wiosna	Hard	The 1968 'Prague Spring' was crushed by troops of which alliance?	The Warsaw Pact	NATO	The United Nations	The Axis
-hy_iran_1979	Hard	Which country's 1979 revolution brought Ayatollah Khomeini to power?	Iran	Iraq	Afghanistan	Saudi Arabia
 hy_czerwoni_khmerzy	Hard	Which regime, led by Pol Pot, ruled Cambodia from 1975 to 1979?	The Khmer Rouge	The Viet Cong	The Pathet Lao	The Red Guards
 hw_goraca_linia	Hard	What was the 'hotline' set up in 1963 between Washington and Moscow?	A direct link to avoid nuclear war	A radio station for spies	A shared weather service	A space race news channel
 his_general_seized_power	Hard	Which general seized power in Chile in a 1973 coup?	Augusto Pinochet	Fidel Castro	Juan Peron	Manuel Noriega
@@ -73,8 +80,17 @@ his_playwright_became_president	Hard	Which playwright became president of Czecho
 his_american_couple_executed	Hard	Which American couple were executed in 1953 for passing atomic secrets to the Soviets?	Julius and Ethel Rosenberg	Alger and Priscilla Hiss	Klaus and Anna Fuchs	Harry and Ruth Gold
 his_spy_ring_british	Hard	Which spy ring of British men, recruited at a top university, worked for the Soviets?	The Cambridge Five	The Oxford Group	The London Seven	The Eton Circle
 his_american_pilot_shot	Hard	Which American pilot was shot down in a U-2 spy plane over the USSR in 1960?	Francis Gary Powers	Chuck Yeager	John Glenn	Alan Shepard
+his_year_soviet_union_2	Hard	In which year did the Soviet Union test its first atomic bomb?	1949	1945	1953	1961
+his_kitchen_debate_1959	Hard	What was the 'Kitchen Debate' of 1959?	A Nixon-Khrushchev row in a show kitchen	A row over American food aid to Cuba	A UN vote on Soviet grain exports	A televised cookery contest in Moscow
+his_vietnamese_village_soldiers	Hard	In which Vietnamese village did US soldiers massacre hundreds of civilians in 1968?	My Lai	Hue	Khe Sanh	Da Nang
+his_icelandic_city_reagan	Hard	In which Icelandic city did Reagan and Gorbachev nearly agree to scrap all nuclear weapons in 1986?	Reykjavik	Akureyri	Keflavik	Husavik
+his_west_german_chancellor	Hard	Which West German chancellor knelt in silence at the Warsaw Ghetto memorial in 1970?	Willy Brandt	Konrad Adenauer	Helmut Kohl	Helmut Schmidt
+his_treaty_1963_banned	Hard	Which treaty of 1963 banned nuclear tests in the air, in space and under water?	The Partial Test Ban Treaty	The SALT Treaty	The Non-Proliferation Treaty	The INF Treaty
+his_gave_british_party	Hard	Who first gave a British party leader the nickname 'the Iron Lady', in 1976?	A Soviet army newspaper	The Daily Mail	Ronald Reagan	The Queen
 his_paperclip	Expert	What was Operation Paperclip after World War II?	Bringing German scientists to the USA	Smuggling Nazi gold out of Europe	Spying on Soviet rocket bases	Breaking Japanese naval codes
 his_pietrow	Expert	Which Soviet officer ignored a false missile alarm in 1983 and averted nuclear war?	Stanislav Petrov	Vasili Arkhipov	Yuri Andropov	Andrei Sakharov
 hx_zatoka_swin	Expert	The failed 1961 invasion of Cuba by US-backed exiles is known as what?	The Bay of Pigs	The Gulf of Tonkin	The Cuban Thaw	Operation Mongoose
 hx_wojna_futbolowa	Expert	The 1969 'Football War' was fought between which two countries?	El Salvador and Honduras	Brazil and Argentina	Peru and Chile	Mexico and Guatemala
 hy_nixon_chiny	Expert	Which US president made a historic visit to China in 1972?	Richard Nixon	John F. Kennedy	Jimmy Carter	Gerald Ford
+his_former_kgb_chief	Expert	Which former KGB chief led the Soviet Union from 1982 to 1984?	Yuri Andropov	Konstantin Chernenko	Leonid Brezhnev	Mikhail Gorbachev
+his_nato_exercise_1983	Expert	Which NATO exercise of 1983 was nearly mistaken by Moscow for a real nuclear attack?	Able Archer 83	Operation Mongoose	Reforger 83	Northern Wedding

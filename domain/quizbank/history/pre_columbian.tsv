@@ -6,6 +6,7 @@ hx_aztekowie_orzel	Easy	According to legend, the Aztecs built their capital wher
 his_capital_city_built	Easy	Which capital city was built on the ruins of the Aztec capital Tenochtitlan?	Mexico City	Lima	Guatemala City	Havana
 his_animal_inca_use	Easy	Which animal did the Inca use to carry loads through the Andes?	The llama	The camel	The donkey	The horse
 his_present_day_country_4	Easy	In which present-day country did the Aztec Empire rule?	Mexico	Peru	Guatemala	Colombia
+his_civilisation_central_america	Easy	Which civilisation of Central America had a full writing system of hieroglyphs?	The Maya	The Inca	The Aztecs	The Olmec
 wh_aztekowie_zdobywca	Medium	Which conquistador toppled the Aztec empire?	Hernan Cortes	Francisco Pizarro	Vasco Nunez de Balboa	Diego de Almagro
 his_chichen_itza	Medium	Which civilisation built the pyramid city of Chichen Itza?	The Maya	The Aztecs	The Inca	The Olmecs
 hx_majowie_2012	Medium	Which civilisation's calendar was wrongly said to predict the end of the world in 2012?	The Maya	The Aztecs	The Inca	The Olmecs
@@ -20,6 +21,12 @@ his_disease_killed_aztecs	Medium	Which disease killed most of the Aztecs during 
 his_crop_ancient_mexicans	Medium	Which crop did ancient Mexicans breed from a wild grass called teosinte?	Maize	Wheat	Rice	Potatoes
 his_inca_build_walls	Medium	How did the Inca build walls so well that a knife blade cannot fit between the stones?	By cutting the stones to fit exactly	By using a strong mortar	By melting the stone edges	By using metal clamps
 his_nazca_lines_peru	Medium	What are the Nazca Lines in Peru?	Giant drawings scratched into the desert	Ancient Inca roads	Rows of stone statues	Canals cut through the hills
+his_aztec_god_sun	Medium	Which Aztec god of the sun and war was fed with human hearts?	Huitzilopochtli	Quetzalcoatl	Tlaloc	Tezcatlipoca
+his_base_maya_count	Medium	In what base did the Maya count?	Base 20	Base 10	Base 12	Base 60
+his_people_call_aztecs	Medium	What did the people we call the Aztecs call themselves?	The Mexica	The Toltecs	The Olmecs	The Mixtecs
+his_two_brothers_fought	Medium	Which two brothers fought a civil war for the Inca throne just before the Spanish arrived?	Atahualpa and Huascar	Pachacuti and Tupac	Manco and Paullu	Cuauhtemoc and Cuitlahuac
+his_inca_capital_said	Medium	Which Inca capital's name is said to mean 'navel of the world'?	Cusco	Quito	Lima	Machu Picchu
+his_feathered_serpent_great	Medium	Which feathered serpent was one of the great gods of the Aztecs and Toltecs?	Quetzalcoatl	Huitzilopochtli	Tlaloc	Viracocha
 his2_inkowie_kraj	Hard	The heartland of the Inca empire lay in which present-day country?	Peru	Mexico	Brazil	Colombia
 wh_inkowie_zdobywca	Hard	Which conquistador conquered the Inca empire?	Francisco Pizarro	Hernan Cortes	Juan Ponce de Leon	Hernando de Soto
 his_aztekowie_kakao	Hard	What did the Aztecs use as a kind of money?	Cocoa beans	Gold coins	Salt blocks	Sea shells
@@ -29,8 +36,13 @@ his_aztec_language_gave	Hard	Which Aztec language gave English the words 'chocol
 his_great_maya_city	Hard	Which great Maya city in the jungles of Guatemala has temples rising above the trees?	Tikal	Palenque	Copan	Uxmal
 his_floating_garden_fields	Hard	What were the floating garden fields of the Aztecs called?	Chinampas	Milpas	Terraces	Haciendas
 his_inca_ruler_means	Hard	Which Inca ruler, whose name means 'earth-shaker', turned Cusco's kingdom into an empire?	Pachacuti	Atahualpa	Huascar	Manco Capac
+his_lake_aztecs_build	Hard	In which lake did the Aztecs build their island capital?	Lake Texcoco	Lake Titicaca	Lake Nicaragua	Lake Chapala
+his_inca_fortress_giant	Hard	Which Inca fortress with giant zigzag walls stands above Cusco?	Sacsayhuaman	Machu Picchu	Ollantaytambo	Pisac
+his_colombian_people_ritual	Hard	Which Colombian people's ritual of covering a ruler in gold dust gave rise to the El Dorado legend?	The Muisca	The Inca	The Aztecs	The Maya
+his_last_aztec_emperor	Hard	Who was the last Aztec emperor, executed by Cortes in 1525?	Cuauhtemoc	Moctezuma II	Cuitlahuac	Ahuitzotl
 dpt_his_kipu	Expert	Which civilisation kept records on knotted cords called quipu?	The Inca	The Maya	The Aztecs	The Toltecs
 cur_oxford_aztekowie	Expert	Which is older: the University of Oxford or the Aztec Empire?	The University of Oxford	The Aztec Empire	They were founded the same year	Neither - both date from the 1700s
 hx_atahualpa	Expert	Which Inca emperor offered to fill a room with gold in exchange for his freedom?	Atahualpa	Huascar	Pachacuti	Manco Capac
 his_maya_city_lies	Expert	In which Maya city lies the tomb of King Pakal, inside the Temple of the Inscriptions?	Palenque	Tikal	Copan	Calakmul
 his_great_inca_road	Expert	What was the great Inca road network, now a World Heritage Site, called?	Qhapaq Nan	Camino Real	Inca Way	Ruta del Sol
+his_huge_mud_brick_2	Expert	Which huge mud-brick city on Peru's coast was the capital of the Chimu kingdom?	Chan Chan	Caral	Cusco	Tiwanaku

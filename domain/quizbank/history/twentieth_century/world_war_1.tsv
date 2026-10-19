@@ -7,6 +7,8 @@ hy_rozejm_11	Easy	At what time of day on 11 November 1918 did the World War I ar
 his_red_flower_britons	Easy	Which red flower do Britons wear to remember soldiers who died in war?	The poppy	The rose	The tulip	The carnation
 his_world_war_deadly	Easy	In World War I, what was the deadly strip of ground between enemy trenches called?	No man's land	The buffer zone	The firing line	The dead zone
 his_german_submarines_both	Easy	What were German submarines called in both World Wars?	U-boats	Panzers	Stukas	Zeppelins
+his_two_countries_western	Easy	In which two countries were most of the Western Front battles fought?	France and Belgium	Germany and Poland	Italy and Austria	Spain and Portugal
+his_neutral_country_germany	Easy	Which neutral country did Germany invade in August 1914 on its way to attack France?	Belgium	Switzerland	The Netherlands	Denmark
 his_i_wojna	Medium	In which year did World War I break out?	1914	1912	1918	1939
 wh_ww1_iskra	Medium	The assassination of whom in Sarajevo sparked World War I?	Archduke Franz Ferdinand	Kaiser Wilhelm II	Tsar Nicholas II	King Peter I
 hx_czerwony_baron	Medium	The First World War flying ace Manfred von Richthofen was better known as what?	The Red Baron	The Black Knight	The Flying Dutchman	The Iron Eagle
@@ -24,6 +26,18 @@ his_year_united_states	Medium	In which year did the United States enter World Wa
 his_british_officer_lawrence	Medium	Which British officer, known as 'Lawrence of Arabia', helped lead the Arab Revolt?	T. E. Lawrence	D. H. Lawrence	Thomas Lawrence	Lawrence Oates
 his_germany_plan_knock	Medium	What was Germany's plan to knock out France quickly by marching through Belgium called?	The Schlieffen Plan	Operation Barbarossa	The Marshall Plan	Plan XVII
 his_battle_1914_stopped	Medium	Which battle of 1914 stopped the German advance on Paris, partly thanks to troops rushed in taxis?	The First Battle of the Marne	The Battle of the Somme	The Battle of Verdun	The Battle of Ypres
+his_shell_shock_world	Medium	What was 'shell shock' in World War I?	Mental trauma caused by battle	A new kind of grenade	An illness from bad water	The noise of a big gun
+his_british_war_poet	Medium	Which British war poet wrote 'Dulce et Decorum Est' and was killed a week before the armistice?	Wilfred Owen	Siegfried Sassoon	Rupert Brooke	Robert Graves
+his_pointing_face_appeared	Medium	Whose pointing face appeared on the famous 'Your Country Needs You' recruiting poster?	Lord Kitchener	King George V	David Lloyd George	Douglas Haig
+his_battle_1917_flanders	Medium	Which battle of 1917 in Flanders is remembered above all for its sea of mud?	Passchendaele	The Somme	Verdun	Cambrai
+his_giant_german_airships	Medium	Which giant German airships bombed British towns during World War I?	Zeppelins	Fokkers	Gothas	Stukas
+his_battle_1916_full	Medium	Which battle of 1916 was the only full clash of the British and German battle fleets?	Jutland	Gallipoli	The Falklands	The Dogger Bank
+his_canadian_doctor_wrote	Medium	Which Canadian doctor wrote the poem 'In Flanders Fields'?	John McCrae	Wilfred Owen	Rupert Brooke	Laurence Binyon
+his_british_pals_battalions	Medium	What were the British 'Pals battalions' of 1914-1915?	Units of friends from the same town	Teams of army chaplains	Squads of cycling messengers	Groups of nurses
+his_roughly_soldiers_killed	Medium	Roughly how many soldiers were killed in World War I?	About 10 million	About 1 million	About 50 million	About 300,000
+his_lies_tomb_unknown	Medium	Who lies in the Tomb of the Unknown Warrior in Westminster Abbey?	An unidentified soldier of World War I	The first soldier to die in the war	A general killed at the Somme	A sailor from the Lusitania
+his_tanks_given_1915	Medium	Why were the first tanks given that name in 1915?	They were disguised as water tanks	Their inventor was called Tank	They carried fuel tanks	They looked like fish tanks
+his_big_bertha_world	Medium	What was 'Big Bertha' in World War I?	A giant German siege gun	A British battleship	A French nurse	A Zeppelin
 hx_lusitania	Hard	The sinking of which liner by a German submarine in 1915 turned many Americans against Germany?	The Lusitania	The Britannic	The Olympic	The Carpathia
 hx_czolgi	Hard	In which war were tanks first used in battle?	World War I	The Boer War	World War II	The Crimean War
 hy_gallipoli	Hard	Which two countries remember the 1915 Gallipoli campaign every year on Anzac Day?	Australia and New Zealand	Canada and Britain	India and Pakistan	France and Belgium
@@ -34,6 +48,9 @@ his_country_broke_german	Hard	Which country broke with its German allies and joi
 his_treaty_march_1918	Hard	Which treaty of March 1918 took Russia out of World War I?	Brest-Litovsk	Versailles	Trianon	Sevres
 his_british_nurse_shot	Hard	Which British nurse was shot by the Germans in 1915 for helping Allied soldiers escape?	Edith Cavell	Florence Nightingale	Mary Seacole	Vera Brittain
 his_french_forest_armistice	Hard	In which French forest was the armistice signed in a railway carriage in 1918?	Compiegne	Fontainebleau	The Ardennes	Argonne
+his_american_general_led	Hard	Which American general led the US army in France in 1917-1918?	John Pershing	Douglas MacArthur	George Patton	Dwight Eisenhower
+his_ridge_northern_france	Hard	Which ridge in northern France, stormed in 1917, became a symbol of Canada's nationhood?	Vimy Ridge	Messines Ridge	Hill 60	Chemin des Dames
+his_battle_1917_italy	Hard	At which battle of 1917 did Italy suffer a crushing defeat by Austria-Hungary and Germany?	Caporetto	Isonzo	Vittorio Veneto	Piave
 wh_sykes_picot	Expert	Which secret agreement divided the Middle East between Great Britain and France?	Sykes-Picot	Molotov-Ribbentrop	The Balfour Declaration	Locarno
 hx_hiszpanka	Expert	Why was the deadly flu of 1918 named after Spain?	Spain's press reported it freely	It started in Madrid	Spanish troops spread it	A Spanish doctor found it
 hx_zimmermann	Expert	Which intercepted 1917 message offered Mexico US land if it joined Germany in the war?	The Zimmermann Telegram	The Ems Dispatch	The Balfour Declaration	The Schlieffen Plan

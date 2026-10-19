@@ -17,6 +17,10 @@ his_city_adolf_hitler	Easy	In which city did Adolf Hitler die in 1945?	Berlin	Mu
 his_nazi_germany_propaganda	Easy	Who was Nazi Germany's propaganda minister?	Joseph Goebbels	Hermann Goring	Heinrich Himmler	Rudolf Hess
 his_country_germany_invade	Easy	Which country did Germany invade on 1 September 1939, starting World War II?	Poland	France	Czechoslovakia	Belgium
 his_nazi_genocide_six	Easy	What is the Nazi genocide of about six million European Jews called?	The Holocaust	The Pogrom	The Blitz	The Inquisition
+his_city_bombed_night	Easy	Which city was bombed night after night during 'the Blitz' of 1940-1941?	London	Paris	Moscow	Warsaw
+his_poster_heroine_rolled	Easy	Which poster heroine, with rolled-up sleeves, stood for American women working in factories?	Rosie the Riveter	Molly Pitcher	Lady Liberty	Betty Crocker
+his_country_nazi_germany_2	Easy	Which country did Nazi Germany invade in June 1941, breaking the pact between them?	The Soviet Union	Britain	Sweden	Turkey
+his_evacuees_wartime_britain	Easy	Who were the 'evacuees' in wartime Britain?	City children sent to the countryside	Soldiers rescued from Dunkirk	Refugees from Germany	Prisoners of war
 his2_hiroszima	Medium	In which year was the atomic bomb dropped on Hiroshima?	1945	1944	1946	1949
 wh_d_day	Medium	In which region of France did the Allied D-Day landings begin?	Normandy	Brittany	Provence	Alsace
 wh_onz_rok	Medium	In which year was the United Nations founded?	1945	1919	1948	1950
@@ -46,6 +50,21 @@ his_german_businessman_saved	Medium	Which German businessman saved more than a t
 his_day_beach_saw	Medium	Which D-Day beach saw the heaviest American losses?	Omaha	Utah	Gold	Juno
 his_british_general_beat	Medium	Which British general beat Rommel at El Alamein in 1942?	Bernard Montgomery	Harold Alexander	Archibald Wavell	Alan Brooke
 his_day_japan_surrender	Medium	What is the day of Japan's surrender in 1945 called in Britain and the USA?	VJ Day	VE Day	D-Day	Armistice Day
+his_capital_liberated_allied	Medium	Which capital was liberated by Allied and Free French troops in August 1944?	Paris	Brussels	Rome	Amsterdam
+his_german_officer_planted	Medium	Which German officer planted the briefcase bomb in the July 1944 plot to kill Hitler?	Claus von Stauffenberg	Erwin Rommel	Wilhelm Canaris	Rudolf Hess
+his_japanese_island_saw	Medium	Which Japanese island saw the bloodiest battle of the Pacific war, in 1945?	Okinawa	Iwo Jima	Guam	Hokkaido
+his_allied_operation_september	Medium	Which Allied operation of September 1944 failed to win the bridge at Arnhem?	Operation Market Garden	Operation Torch	Operation Dragoon	Operation Cobra
+his_happened_over_100	Medium	What happened to over 100,000 Japanese Americans in 1942?	They were held in internment camps	They were drafted into the navy	They were sent back to Japan	They were given free land
+his_head_nazi	Medium	Who was the head of the Nazi SS?	Heinrich Himmler	Hermann Goring	Joseph Goebbels	Martin Bormann
+his_operation_sea_lion	Medium	What was 'Operation Sea Lion'?	Germany's planned invasion of Britain	The Allied landing in Sicily	The rescue at Dunkirk	A raid on Norway
+his_long_struggle_between	Medium	What was the long struggle between Allied convoys and German U-boats called?	The Battle of the Atlantic	The Battle of Britain	The Battle of the Bulge	The War at Sea
+his_mediterranean_island_awarded	Medium	Which Mediterranean island was awarded the George Cross in 1942 for withstanding a siege?	Malta	Crete	Sicily	Cyprus
+his_adolf_hitler_marry	Medium	Whom did Adolf Hitler marry the day before his death?	Eva Braun	Leni Riefenstahl	Magda Goebbels	Unity Mitford
+his_raf_raid_1943	Medium	Which RAF raid of 1943 used 'bouncing bombs' to smash German dams?	The Dambusters raid	The Doolittle raid	The Peenemunde raid	The Ruhr raid
+his_tuskegee_airmen_world	Medium	Who were the Tuskegee Airmen of World War II?	The first Black pilots of the US military	American volunteers in the RAF	Women who ferried warplanes	Navajo radio operators
+his_german_city_largely	Medium	Which German city was largely destroyed by Allied firebombing in February 1945?	Dresden	Hamburg	Munich	Cologne
+his_japanese_soldier_kept	Medium	Which Japanese soldier kept fighting in the Philippine jungle until 1974, not believing the war was over?	Hiroo Onoda	Shoichi Yokoi	Saburo Sakai	Tomoyuki Yamashita
+his_code_words_told	Medium	Which code words told Japanese commanders that the attack on Pearl Harbor had achieved surprise?	'Tora! Tora! Tora!'	'Banzai! Banzai!'	'Climb Mount Niitaka'	'East wind, rain'
 dpt_his_leningrad	Hard	Which city endured a siege of 872 days in the Second World War?	Leningrad	Stalingrad	Sevastopol	Budapest
 his_overlord	Hard	What was the code name for the Allied invasion of Normandy in 1944?	Operation Overlord	Operation Barbarossa	Operation Market Garden	Operation Torch
 his_little_boy	Hard	What was 'Little Boy' in World War II?	The bomb dropped on Hiroshima	A British light tank	A German submarine	A Japanese fighter plane
@@ -71,7 +90,13 @@ his_soviet_tank_built	Hard	Which Soviet tank was built in greater numbers than a
 his_lend_lease	Hard	What was 'Lend-Lease'?	US weapons and supplies sent to the Allies	A German plan to rent French factories	A treaty on prisoners of war	Japan's lease of Chinese ports
 his_american_admiral_took	Hard	Which American admiral took command of the Pacific Fleet after Pearl Harbor?	Chester Nimitz	William Halsey	Douglas MacArthur	Raymond Spruance
 his_japanese_admiral_planned	Hard	Which Japanese admiral planned the attack on Pearl Harbor?	Isoroku Yamamoto	Hideki Tojo	Chuichi Nagumo	Mitsuo Fuchida
+his_german_field_marshal	Hard	Which German field marshal surrendered his army at Stalingrad in 1943?	Friedrich Paulus	Erwin Rommel	Gerd von Rundstedt	Erich von Manstein
+his_hilltop_monastery_italy_2	Hard	Which hilltop monastery in Italy was bombed to ruins in 1944?	Monte Cassino	San Marino	Montserrat	Assisi
+his_wolf_lair	Hard	What was the 'Wolf's Lair'?	Hitler's headquarters in East Prussia	A German submarine base	Rommel's desert camp	A secret rocket factory
+his_doolittle_raid_april	Hard	What was the Doolittle Raid of April 1942?	The first American air raid on Tokyo	A British attack on the Bismarck	A German raid on London	A Japanese attack on Australia
+his_battle_may_1942	Hard	Which battle of May 1942 was the first in which the opposing fleets never saw each other?	The Coral Sea	Midway	Leyte Gulf	Guadalcanal
 wh_bretton_woods	Expert	The 1944 Bretton Woods conference established, among other things...	The International Monetary Fund	NATO	The European Union	The Bank of England
 hx_nawaho	Expert	Which Native American people's language served as an unbreakable code for US Marines in World War II?	The Navajo	The Cherokee	The Sioux	The Apache
 hy_missouri	Expert	On which ship did Japan formally surrender in 1945?	USS Missouri	USS Arizona	USS Enterprise	HMS Victory
 his_code_1940_evacuation	Expert	What was the code name of the 1940 evacuation of Allied troops from Dunkirk?	Operation Dynamo	Operation Overlord	Operation Sea Lion	Operation Torch
+his_american_general_replied	Expert	Which American general replied 'Nuts!' when the Germans asked him to surrender Bastogne?	Anthony McAuliffe	George Patton	Omar Bradley	Mark Clark

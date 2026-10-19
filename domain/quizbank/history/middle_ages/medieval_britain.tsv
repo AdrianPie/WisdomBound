@@ -1,6 +1,9 @@
 # Anglia i Szkocja od Alfreda Wielkiego do Ryszarda III: podboj normanski, Magna Carta, Wallace,
 # Wojna Dwoch Roz.
 id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+his_scottish_hero_won	Easy	Which Scottish hero won the Battle of Stirling Bridge in 1297?	William Wallace	Robert the Bruce	Rob Roy	Macbeth
+his_english_cathedral_city	Easy	Which English cathedral city were Chaucer's pilgrims travelling to?	Canterbury	York	Winchester	Salisbury
+his_language_spoken_england	Easy	Which language was spoken in England before the Norman Conquest?	Old English	Old French	Latin	Gaelic
 wh_hastings_zwyciezca	Medium	Who won the Battle of Hastings in 1066?	William the Conqueror	Harold II	Richard the Lionheart	Canute the Great
 hx_normanowie	Medium	The Normans who conquered England in 1066 came from which present-day country?	France	Norway	Denmark	Germany
 hx_wallace	Medium	Which Scottish hero, shown in the film 'Braveheart', led a revolt against England in 1297?	William Wallace	Robert the Bruce	Rob Roy	Bonnie Prince Charlie
@@ -16,6 +19,11 @@ his_real_scottish_king	Medium	Which real Scottish king, who killed Duncan in 104
 his_london_fortress_now	Medium	Which London fortress, now home to the Crown Jewels, was begun by William the Conqueror?	The Tower of London	Windsor Castle	Westminster Palace	Hampton Court
 his_300_years_1066	Medium	For about 300 years after 1066, which language did England's kings and nobles speak?	French	Latin	Old English	Danish
 his_family_kings_ruled	Medium	Which family of kings ruled England from 1154 to 1485?	The Plantagenets	The Tudors	The Stuarts	The Normans
+his_english_king_nicknamed_2	Medium	Which English king, nicknamed 'Lackland', lost most of England's lands in France?	King John	Richard I	Henry III	Stephen
+his_according_legend_lady	Medium	According to legend, Lady Godiva rode naked through which English city?	Coventry	Oxford	Chester	Norwich
+his_english_king_confessor	Medium	Which English king, called 'the Confessor', built the first great Westminster Abbey?	Edward	Harold	Alfred	Ethelred
+his_english_cathedral_built	Medium	Which English cathedral, built in the 1200s, has the tallest church spire in Britain?	Salisbury	Canterbury	York Minster	Lincoln
+his_english_king_lost	Medium	Which English king lost the Battle of Bannockburn in 1314?	Edward II	Edward I	Edward III	Henry III
 wh_wojna_dwoch_roz	Hard	The houses of York and Lancaster fought each other during...	The Wars of the Roses	The Hundred Years' War	The English Revolution	The Seven Years' War
 wld_magna_carta	Hard	Which English king sealed the Magna Carta in 1215?	King John	Richard the Lionheart	Henry VIII	William the Conqueror
 hx_bayeux	Hard	Which famous embroidery tells the story of the Norman conquest of England?	The Bayeux Tapestry	The Book of Kells	The Lewis Chessmen	The Domesday Book
@@ -28,8 +36,14 @@ his_hated_tax_sparked	Hard	Which hated tax sparked the Peasants' Revolt of 1381?
 his_scottish_letter_1320	Hard	Which Scottish letter of 1320 to the pope declared Scotland's independence?	The Declaration of Arbroath	The Treaty of Perth	The Auld Alliance	The Declaration of Scone
 his_english_king_deposed	Hard	Which English king was deposed and murdered at Berkeley Castle in 1327?	Edward II	Richard II	Henry VI	Edward V
 his_rebel_baron_parliament	Hard	Which rebel baron called a parliament in 1265 that included ordinary townsmen?	Simon de Montfort	Hubert de Burgh	William Marshal	Roger Mortimer
+his_welsh_prince_led	Hard	Which Welsh prince led a great rising against English rule from 1400?	Owain Glyndwr	Llywelyn the Great	Rhys ap Gruffydd	Hywel Dda
+his_son_william_conqueror	Hard	Which son of William the Conqueror was killed by an arrow while hunting in the New Forest in 1100?	William II	Robert Curthose	Henry I	Richard of Normandy
+his_civil_war_between	Hard	What is the civil war between King Stephen and Empress Matilda in 1135-1154 called?	The Anarchy	The Wars of the Roses	The Barons' War	The Great Rebellion
+his_old_richard_faced	Hard	How old was Richard II when he faced the rebels of the Peasants' Revolt in 1381?	14	8	21	30
+his_oxford_scholar_1300s	Hard	Which Oxford scholar of the 1300s inspired the first complete Bible in English?	John Wycliffe	William Tyndale	Thomas Cranmer	Thomas More
 his_hastings	Expert	In which year was the Battle of Hastings?	1066	1215	1096	1013
 hx_ryszard_iii	Expert	The remains of which English king were found under a car park in Leicester in 2012?	Richard III	Henry VI	Edward V	Harold II
 hx_alfred_ciastka	Expert	According to legend, which English king was scolded by a peasant woman for letting her cakes burn?	Alfred the Great	Harold II	William the Conqueror	Edward the Confessor
 his_last_native_prince	Expert	Who was the last native Prince of Wales, killed fighting the English in 1282?	Llywelyn ap Gruffudd	Owain Glyndwr	Rhodri the Great	Hywel Dda
 his_harrying_north_1069	Expert	What was the 'Harrying of the North' in 1069-1070?	William's wasting of northern England	A Viking raid on Northumbria	A Scottish invasion of York	A plague in Yorkshire
+his_english_friar_1200s	Expert	Which English friar of the 1200s is often called one of the first scientists?	Roger Bacon	William of Ockham	Duns Scotus	Robert Grosseteste

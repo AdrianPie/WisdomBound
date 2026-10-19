@@ -3,6 +3,7 @@ id	difficulty	prompt	correct	wrong1	wrong2	wrong3
 hx_waterloo_kraj	Easy	In which present-day country is Waterloo, site of Napoleon's final defeat?	Belgium	France	The Netherlands	Germany
 hx_napoleon_rosja	Easy	In 1812, Napoleon's huge army invaded which country and was destroyed by its winter?	Russia	Sweden	Austria	Prussia
 his_city_napoleon_buried	Easy	In which city is Napoleon buried, under the dome of Les Invalides?	Paris	Ajaccio	Rome	Vienna
+his_city_napoleon_capture	Easy	Which city did Napoleon capture in 1812, only to find it burning and empty?	Moscow	Saint Petersburg	Kiev	Warsaw
 his2_napoleon_kraj	Medium	Where did Napoleon Bonaparte come from?	Corsica	Sicily	Provence	Sardinia
 wh_napoleon_zeslanie	Medium	On which island did Napoleon Bonaparte die?	Saint Helena	Elba	Corsica	Malta
 hx_elba	Medium	To which island was Napoleon first exiled, in 1814?	Elba	Corsica	Sardinia	Malta
@@ -14,6 +15,10 @@ his_prussian_field_marshal	Medium	Which Prussian field marshal arrived to help W
 his_long_war_spain	Medium	Which long war in Spain and Portugal, from 1807 to 1814, drained Napoleon's armies?	The Peninsular War	The Iberian Campaign	The War of the Pyrenees	The Spanish Succession
 his_composer_dedicated_eroica	Medium	Which composer dedicated his 'Eroica' symphony to Napoleon, then scratched out the name?	Beethoven	Mozart	Haydn	Schubert
 his_order_merit_napoleon	Medium	Which order of merit did Napoleon create in 1802, still France's highest award?	The Legion of Honour	The Order of the Garter	The Iron Cross	The Golden Fleece
+his_painted_picture_napoleon	Medium	Who painted the famous picture of Napoleon crossing the Alps on a rearing horse?	Jacques-Louis David	Eugene Delacroix	Francisco Goya	Antoine-Jean Gros
+his_british_admiral_destroyed	Medium	Which British admiral destroyed Napoleon's fleet at the Battle of the Nile in 1798?	Horatio Nelson	Lord Howe	Cuthbert Collingwood	John Jervis
+his_historians_now_think	Medium	What do most historians now think killed Napoleon on Saint Helena?	Stomach cancer	Arsenic poisoning	A heart attack	Pneumonia
+his_roughly_soldiers_marched	Medium	Roughly how many soldiers marched into Russia with Napoleon in 1812?	About 600,000	About 60,000	About 2 million	About 150,000
 his_waterloo	Hard	In which year did Napoleon lose the Battle of Waterloo?	1815	1812	1805	1821
 his_austerlitz	Hard	Which 1805 battle is often called Napoleon's greatest victory?	Austerlitz	Waterloo	Borodino	Leipzig
 his_victory_trafalgar	Hard	Which ship was Admiral Nelson's flagship at Trafalgar?	HMS Victory	HMS Beagle	HMS Bounty	HMS Endeavour
@@ -26,7 +31,13 @@ his_1813_battle_largest	Hard	Which 1813 battle, the largest in Europe before Wor
 his_russian_commander_gave	Hard	Which Russian commander gave up Moscow to Napoleon in 1812 rather than risk his army?	Mikhail Kutuzov	Alexander Suvorov	Pyotr Bagration	Grigory Potemkin
 his_austrian_archduchess_napoleon	Hard	Which Austrian archduchess did Napoleon marry in 1810?	Marie Louise	Marie Antoinette	Maria Theresa	Elisabeth
 his_marshal_napoleon_bravest	Hard	Which marshal of Napoleon was called 'the bravest of the brave'?	Michel Ney	Joachim Murat	Louis Davout	Jean Lannes
+his_battle_1798_fought	Hard	Which battle of 1798, fought in sight of Giza, gave Napoleon control of Egypt?	The Battle of the Pyramids	The Battle of the Nile	The Battle of Aboukir	The Battle of Alexandria
+his_double_battle_1806	Hard	At which double battle of 1806 did Napoleon smash the Prussian army?	Jena and Auerstedt	Leipzig and Dresden	Ulm and Austerlitz	Eylau and Friedland
+his_brother_napoleon_made	Hard	Which brother of Napoleon was made King of Spain in 1808?	Joseph	Louis	Jerome	Lucien
+his_napoleon_marshals_became	Hard	Which of Napoleon's marshals became King of Sweden?	Jean-Baptiste Bernadotte	Michel Ney	Joachim Murat	Louis Davout
+his_coup_1799_brought	Hard	What is the coup of 1799 that brought Napoleon to power usually called?	The 18th of Brumaire	The 9th of Thermidor	The 14th of July	The 10th of August
 cur_napoleon_wzrost	Expert	Napoleon's 'short' reputation largely came from what?	Confusion between French and English inches	His height of 1.40 m	A painting of him sitting down	A false death certificate
 hx_napoleon_kroliki	Expert	In 1807, Napoleon was reportedly 'attacked' during a hunt by what?	Hundreds of rabbits	A swarm of bees	A herd of deer	A flock of geese
 his_title_napoleon_give	Expert	Which title did Napoleon give his baby son at birth in 1811?	King of Rome	Prince of Paris	Duke of Corsica	Emperor of the West
 his_siege_1793_young	Expert	At which siege of 1793 did the young artillery officer Napoleon first make his name?	Toulon	Marseille	Lyon	Nice
+his_great_battle_near	Expert	Which great battle near Vienna in 1809 was one of Napoleon's last big victories over Austria?	Wagram	Aspern	Marengo	Ulm

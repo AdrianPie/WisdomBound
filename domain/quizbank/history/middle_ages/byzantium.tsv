@@ -3,6 +3,7 @@ id	difficulty	prompt	correct	wrong1	wrong2	wrong3
 his_roman_emperor_refounded	Easy	Which Roman emperor refounded the city of Byzantium and gave it his own name?	Constantine the Great	Justinian I	Theodosius I	Augustus
 his_great_church_constantinople	Easy	Which great church in Constantinople was the largest in the world for nearly a thousand years?	Hagia Sophia	St Peter's Basilica	Notre-Dame	Westminster Abbey
 his_branch_christianity_byzantine	Easy	Which branch of Christianity did the Byzantine Empire follow?	Orthodox	Catholic	Protestant	Coptic
+his_modern_country_capital	Easy	In which modern country was the capital of the Byzantine Empire?	Turkey	Greece	Italy	Bulgaria
 wh_konstantynopol_zdobywca	Medium	Which state captured Constantinople in 1453?	The Ottoman Empire	Venice	Bulgaria	Persia
 wh_bizancjum_nazwa	Medium	What was the Byzantine Empire otherwise known as?	The Eastern Roman Empire	The Latin Empire	The Empire of Trebizond	The Carolingian Empire
 trv_bizancjum_stolica	Medium	Which city was the capital of the Byzantine Empire?	Constantinople	Athens	Rome	Alexandria
@@ -16,6 +17,9 @@ his_cyrillic_alphabet_byzantine	Medium	The Cyrillic alphabet is named after whic
 his_religious_paintings_wooden	Medium	Which religious paintings on wooden panels are typical of Byzantine art?	Icons	Frescoes	Tapestries	Murals
 his_constantinople_fell_city	Medium	After Constantinople fell, which city claimed to be the 'Third Rome'?	Moscow	Kiev	Vienna	Venice
 his_constantinople_stood_narrow	Medium	Constantinople stood on which narrow strait between Europe and Asia?	The Bosphorus	The Dardanelles	The Strait of Messina	The Strait of Otranto
+his_byzantines_stop_enemy	Medium	How did the Byzantines stop enemy ships entering the Golden Horn harbour?	With a huge chain across the water	With a wall of sunken ships	With burning rafts	With a giant bronze gate
+his_greek_justinian_great	Medium	What does the Greek name of Justinian's great church in Constantinople mean?	Holy Wisdom	Saint Sophie	Golden Dome	Divine Peace
+his_italian_sea_republic	Medium	Which Italian sea republic grew rich running much of the Byzantine Empire's trade?	Venice	Florence	Milan	Naples
 his_last_byzantine_emperor	Hard	Who was the last Byzantine emperor, killed defending the walls of Constantinople?	Constantine XI	Justinian II	Basil II	Alexios I
 his_huge_land_walls	Hard	Which huge land walls protected Constantinople for about a thousand years?	The Theodosian Walls	The Aurelian Walls	The Long Walls	The Servian Wall
 his_byzantine_general_won	Hard	Which Byzantine general won back Italy and North Africa for Emperor Justinian?	Belisarius	Narses	Heraclius	Stilicho
@@ -26,8 +30,18 @@ his_italian_city_glittering	Hard	Which Italian city is famous for its glittering
 his_battle_1071_seljuk	Hard	At which battle of 1071 did the Seljuk Turks crush a Byzantine army, opening Anatolia?	Manzikert	Myriokephalon	Kosovo	Nicopolis
 his_byzantine_dispute_700s	Hard	Which Byzantine dispute of the 700s and 800s was about destroying holy images?	Iconoclasm	Arianism	The Great Schism	The Filioque
 his_byzantine_gold_coin	Hard	What was the Byzantine gold coin, trusted across the medieval world for centuries?	The solidus	The denarius	The florin	The ducat
+his_byzantines_proudly_call	Hard	What did the Byzantines proudly call Constantinople?	The Queen of Cities	The City of Gold	The Eternal City	The Pearl of the East
+his_mehmed_get_warships	Hard	How did Mehmed II get his warships into the Golden Horn in 1453?	He dragged them overland on greased logs	He broke the chain with cannon	He dug a canal around it	He bribed the guards
+his_byzantine_emperor_won	Hard	Which Byzantine emperor won back the True Cross from the Persians in 630?	Heraclius	Justinian I	Basil II	Constantine V
+his_caliphate_besieged_constantinople	Hard	Which caliphate besieged Constantinople in the 670s and again in 717-718?	The Umayyads	The Abbasids	The Fatimids	The Ottomans
+his_mean_born_purple	Hard	What did it mean to be 'born in the purple' in Byzantium?	To be born to a reigning emperor	To be born on a holy day	To be born a slave	To be born in the palace garden
+his_bronze_statues_looted	Hard	Which bronze statues, looted from Constantinople in 1204, now stand in Venice?	The Horses of Saint Mark	The Lions of the Arsenal	The Four Tetrarchs	The Winged Bulls
+his_city_second_city	Hard	Which city was the second city of the Byzantine Empire?	Thessalonica	Athens	Antioch	Nicaea
 his2_bizancjum_justynian	Expert	Which Byzantine emperor had the famous Roman law code compiled?	Justinian I	Constantine the Great	Heraclius	Basil II
 his_teodora	Expert	Which Byzantine empress famously refused to flee during the Nika riots of 532?	Theodora	Irene	Zoe	Helena
 hx_ogien_grecki	Expert	What was the Byzantine navy's secret weapon, 'Greek fire'?	Fire that burned on water	A signal beacon system	An early bronze cannon	A flaming catapult shot
 his_byzantine_princess_wrote	Expert	Which Byzantine princess wrote 'The Alexiad', a history of her father's reign?	Anna Komnene	Theodora	Zoe	Irene of Athens
 his_empress_ruled_byzantium	Expert	Which empress ruled Byzantium alone in her own name from 797?	Irene of Athens	Theodora	Zoe	Anna Komnene
+his_hungarian_engineer_cast	Expert	Which Hungarian engineer cast the giant cannons that battered Constantinople in 1453?	Orban	Hunyadi	Giustiniani	Corvinus
+his_emperor_won_constantinople	Expert	Which emperor won Constantinople back from the crusaders' Latin Empire in 1261?	Michael VIII Palaiologos	Alexios I Komnenos	John II Komnenos	Constantine XI
+his_byzantine_emperor_nose	Expert	Which Byzantine emperor had his nose cut off but still won back his throne in 705?	Justinian II	Leo III	Basil I	Romanos IV

@@ -1,0 +1,44 @@
+# Dzial przekrojowy: szpiedzy, wywiad i lamanie szyfrow od Walsinghama po zimna wojne.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+his_cia_stand	Easy	What does CIA stand for?	Central Intelligence Agency	Central Investigation Authority	Civil Intelligence Association	Counter Intelligence Army
+his_israel_foreign_intelligence	Easy	What is the name of Israel's foreign intelligence agency?	Mossad	Shin Bet	Stasi	Interpol
+his_kitchen_liquid_used	Easy	Which kitchen liquid can be used as an invisible ink that appears when the paper is heated?	Lemon juice	Olive oil	Vinegar	Tea
+his_german_cipher_machine	Easy	What was the name of the German cipher machine whose codes were broken in World War II?	Enigma	Colossus	Purple	Ultra
+his_statesman_ran_queen	Medium	Which statesman ran Queen Elizabeth I's network of spies?	Francis Walsingham	Thomas Cromwell	Robert Dudley	Walter Raleigh
+his_trick_operation_mincemeat	Medium	What was the trick of 'Operation Mincemeat' in 1943?	A corpse carrying fake plans	A fake army of rubber tanks	A spy hidden in a meat delivery	Poisoned food sent to Hitler
+his_member_cambridge_five	Medium	Which member of the Cambridge Five rose high in MI6 before fleeing to Moscow in 1963?	Kim Philby	Guy Burgess	Anthony Blunt	Donald Maclean
+his_bulgarian_dissident_georgi	Medium	How was the Bulgarian dissident Georgi Markov killed in London in 1978?	With a poisoned umbrella tip	With a car bomb	With a sniper's rifle	With poisoned tea
+his_organiser_holocaust_israeli	Medium	Which organiser of the Holocaust did Israeli agents capture in Argentina in 1960?	Adolf Eichmann	Josef Mengele	Martin Bormann	Klaus Barbie
+his_young_american_spy	Medium	Which young American spy, hanged by the British in 1776, said he regretted having only one life to give?	Nathan Hale	Paul Revere	John Andre	Benedict Arnold
+his_mole_world_spies	Medium	What is a 'mole' in the world of spies?	An agent hidden deep inside the other side	A secret tunnel under an embassy	A tiny hidden camera	A coded radio signal
+his_dead_drop_spying	Medium	What is a 'dead drop' in spying?	A hidden spot for leaving messages	A spy who has been killed	A failed parachute jump	A false name on a passport
+his_according_herodotus_greek	Medium	According to Herodotus, how did one Greek ruler send a secret message on a slave?	Tattooed it on his shaved head	Hid it in his shoe	Sewed it into his cloak	Made him swallow it
+his_american_wartime_spy	Medium	Which American wartime spy agency, founded in 1942, was the forerunner of the CIA?	The OSS	The FBI	The NSA	The DIA
+his_british_secret_agency	Medium	Which British secret agency of World War II was ordered to 'set Europe ablaze'?	The SOE	MI5	GCHQ	The SAS
+his_american_born_singer	Medium	Which famous American-born singer and dancer in Paris secretly worked for the French Resistance?	Josephine Baker	Edith Piaf	Marlene Dietrich	Ella Fitzgerald
+his_spies_call_hidden	Medium	What do spies call a hidden spot where they leave messages for each other?	A dead drop	A safe house	A cut-out	A honey trap
+his_mole_world_spying	Medium	What is a 'mole' in the world of spying?	An agent planted inside the enemy's camp	A tunnel dug under an enemy embassy	A code hidden inside an ordinary letter	A spy who works only from home
+his_spies_call_secret	Medium	What do spies call a secret house where agents can hide or meet in safety?	A safe house	A dead drop	A listening post	A honey trap
+his_author_james_bond	Medium	Which author of the James Bond novels worked in British naval intelligence during World War II?	Ian Fleming	John le Carre	Graham Greene	Roald Dahl
+his_plot_put_mary	Hard	Which plot to put Mary, Queen of Scots, on the throne was uncovered by Walsingham's spies in 1586?	The Babington Plot	The Gunpowder Plot	The Ridolfi Plot	The Throckmorton Plot
+his_russian_born_agent	Hard	Which Russian-born agent of British intelligence was nicknamed 'the Ace of Spies'?	Sidney Reilly	Kim Philby	Richard Sorge	Ian Fleming
+his_spanish_double_agent	Hard	Which Spanish double agent, codenamed 'Garbo', fooled the Germans about the D-Day landings?	Juan Pujol Garcia	Dusko Popov	Eddie Chapman	Roman Czerniawski
+his_american_spy_wooden	Hard	Which American spy, who called her wooden leg 'Cuthbert', organised Resistance networks in France?	Virginia Hall	Josephine Baker	Nancy Wake	Violette Szabo
+his_british_secret_agent	Hard	Which British secret agent, a descendant of an Indian ruler, was executed at Dachau in 1944?	Noor Inayat Khan	Violette Szabo	Odette Sansom	Krystyna Skarbek
+his_soviet_spy_tokyo	Hard	Which Soviet spy in Tokyo warned Stalin of the coming German invasion in 1941?	Richard Sorge	Kim Philby	Klaus Fuchs	Rudolf Abel
+his_cia_officer_sold	Hard	Which CIA officer sold the names of American agents to Moscow in the 1980s?	Aldrich Ames	Robert Hanssen	Edward Snowden	Jonathan Pollard
+his_british_naval_codebreaking	Hard	What was the British naval codebreaking office that cracked the Zimmermann Telegram in 1917?	Room 40	Hut 8	Section D	Station X
+his_secret_american_spy	Hard	Which secret American spy ring reported to George Washington from British-held New York?	The Culper Ring	The Sons of Liberty	The Minutemen	The Liberty Circle
+his_single_letter_head	Hard	By which single letter is the head of Britain's MI6 traditionally known?	C	M	Q	X
+his_british_scandal_1963	Hard	Which British scandal of 1963 linked a government minister, a model and a Soviet naval officer?	The Profumo affair	The Lynskey affair	The Crabb affair	The Vassall affair
+his_german_admiral_ran	Hard	Which German admiral ran the Abwehr, Hitler's military intelligence, and secretly plotted against him?	Wilhelm Canaris	Karl Donitz	Erich Raeder	Reinhard Heydrich
+his_soviet_spy_swapped	Hard	Which Soviet spy was swapped for the U-2 pilot Gary Powers in 1962?	Rudolf Abel	Kim Philby	Klaus Fuchs	Oleg Penkovsky
+his_bridge_between_berlin	Hard	Which bridge between Berlin and Potsdam, used for swapping captured spies, is called 'the Bridge of Spies'?	The Glienicke Bridge	The Oberbaum Bridge	The Charles Bridge	The Bornholmer Bridge
+his_new_zealand_born	Hard	Which New Zealand-born agent, nicknamed 'the White Mouse' by the Gestapo, led French Resistance fighters?	Nancy Wake	Violette Szabo	Virginia Hall	Odette Sansom
+his_polish_mathematician_broke	Hard	Which Polish mathematician first broke the German Enigma code in the 1930s?	Marian Rejewski	Alan Turing	Dilly Knox	Gordon Welchman
+his_soviet_colonel_passed	Hard	Which Soviet colonel passed missile secrets to the West before the Cuban Missile Crisis?	Oleg Penkovsky	Oleg Gordievsky	Vasili Mitrokhin	Yuri Nosenko
+his_british_safecracker_became	Hard	Which British safecracker became the double agent 'Agent Zigzag' in World War II?	Eddie Chapman	Kim Philby	Duncan Hamilton	Harry Houdini
+his_secret_cia_tunnel	Hard	What was the secret CIA tunnel dug under East Berlin in the 1950s used for?	Tapping Soviet phone lines	Smuggling people west	Storing secret weapons	Hiding Soviet defectors
+his_german_born_physicist	Hard	Which German-born physicist passed atomic bomb secrets from Los Alamos to the Soviets?	Klaus Fuchs	Klaus Barbie	Werner Heisenberg	Otto Hahn
+his_teenage_confederate_spy	Expert	Which teenage Confederate spy passed secrets to Stonewall Jackson in 1862?	Belle Boyd	Rose Greenhow	Harriet Tubman	Pauline Cushman
+his_east_german_spymaster	Expert	Which East German spymaster was nicknamed 'the man without a face'?	Markus Wolf	Erich Mielke	Erich Honecker	Gunter Guillaume

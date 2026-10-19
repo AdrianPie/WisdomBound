@@ -1,6 +1,8 @@
 # Wyprawy i rekordy przelomu XIX i XX wieku: bieguny, Everest, pierwsze loty i samotne rejsy.
 id	difficulty	prompt	correct	wrong1	wrong2	wrong3
 his_animals_pulled_sledges	Easy	Which animals pulled the sledges of the first expedition to reach the South Pole?	Dogs	Ponies	Reindeer	Motor sledges
+his_country_roald_amundsen	Easy	Which country did Roald Amundsen come from?	Norway	Sweden	Denmark	Finland
+his_wright_brothers_build	Easy	What did the Wright brothers build and fly in 1903?	The first powered aeroplane	The first hot-air balloon	The first helicopter	The first glider
 his_earhart	Medium	Who was the first woman to fly solo across the Atlantic?	Amelia Earhart	Bessie Coleman	Amy Johnson	Valentina Tereshkova
 his_amundsen	Medium	Who led the first expedition to reach the South Pole, in 1911?	Roald Amundsen	Robert Falcon Scott	Ernest Shackleton	Richard Byrd
 his_everest_1953	Medium	Who were the first climbers confirmed to reach the top of Everest, in 1953?	Edmund Hillary and Tenzing Norgay	George Mallory and Andrew Irvine	Reinhold Messner and Peter Habeler	Jim Whittaker and Nawang Gombu
@@ -15,6 +17,7 @@ his_climber_lost_everest	Medium	Which climber, lost on Everest in 1924, explaine
 his_besides_dogs_scott	Medium	Besides dogs, what did Scott bring to haul sledges, which failed in the cold?	Ponies and motor sledges	Camels and yaks	Reindeer and mules	Oxen and elephants
 his_french_undersea_explorer	Medium	Which French undersea explorer co-invented the Aqua-Lung for scuba diving?	Jacques Cousteau	Jacques Piccard	Auguste Piccard	Jules Verne
 his_german_airship_fiery	Medium	Which German airship's fiery crash in New Jersey in 1937 ended the age of passenger airships?	The Hindenburg	The Graf Zeppelin	The R101	The Akron
+his_two_british_airmen	Medium	Which two British airmen made the first non-stop flight across the Atlantic, in 1919?	Alcock and Brown	Lindbergh and Byrd	Wright and Curtiss	Hawker and Grieve
 his_kitty_hawk	Hard	Near which town did the Wright brothers make their first powered flight?	Kitty Hawk	Dayton	Detroit	Cape Canaveral
 hx_earhart	Hard	Over which ocean did Amelia Earhart disappear in 1937?	The Pacific	The Atlantic	The Indian Ocean	The Arctic Ocean
 his_ship_endurance_crushed	Hard	Whose ship 'Endurance' was crushed by Antarctic ice in 1915?	Ernest Shackleton	Robert Falcon Scott	Roald Amundsen	James Cook
@@ -25,8 +28,13 @@ his_reached_bottom_mariana	Hard	Who reached the bottom of the Mariana Trench wit
 his_led_voyage_through	Hard	Who led the first voyage through the Northwest Passage, completed in 1906?	Roald Amundsen	Robert Peary	John Franklin	Ernest Shackleton
 his_two_men_made	Hard	Which two men made the first non-stop balloon flight around the world, in 1999?	Bertrand Piccard and Brian Jones	Richard Branson and Per Lindstrand	Steve Fossett and Dick Rutan	Jacques and Auguste Piccard
 his_became_woman_climb	Hard	Who became the first woman to climb Mount Everest, in 1975?	Junko Tabei	Wanda Rutkiewicz	Alison Hargreaves	Lydia Bradey
+his_woman_fly_across	Hard	Who was the first woman to fly across the English Channel, in 1912?	Harriet Quimby	Amelia Earhart	Amy Johnson	Bessie Coleman
+his_australian_pilot_made	Hard	Which Australian pilot made the first flight across the Pacific, in 1928?	Charles Kingsford Smith	Bert Hinkler	Ross Smith	Charles Ulm
+his_african_american_explorer	Hard	Which African American explorer took part in American Arctic expeditions from 1891 to 1909?	Matthew Henson	Frederick Douglass	George Washington Carver	Jesse Owens
 his_slocum	Expert	Who was the first person to sail alone around the world, in 1895-1898?	Joshua Slocum	Francis Chichester	Robin Knox-Johnston	Ellen MacArthur
 hy_zeppelin	Expert	Airships are often called zeppelins after whom?	A German count	A Swiss engineer	A French balloonist	An American inventor
 his_american_aviator_claimed	Expert	Which American aviator claimed the first flight over the North Pole, in 1926?	Richard Byrd	Charles Lindbergh	Howard Hughes	Wiley Post
 his_led_crossing_antarctica	Expert	Who led the first crossing of Antarctica by land, completed in 1958?	Vivian Fuchs	Ernest Shackleton	Edmund Hillary	Richard Byrd
 his_made_solo_flight	Expert	Who made the first solo flight around the world, in 1933?	Wiley Post	Charles Lindbergh	Howard Hughes	Amelia Earhart
+his_climbers_country_reached	Expert	Climbers from which country first reached the top of K2, in 1954?	Italy	Britain	Switzerland	Pakistan
+his_small_lifeboat_shackleton	Expert	In which small lifeboat did Shackleton sail 1,300 km to South Georgia to get help in 1916?	The James Caird	The Endurance	The Discovery	The Nimrod

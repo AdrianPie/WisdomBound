@@ -3,6 +3,8 @@
 id	difficulty	prompt	correct	wrong1	wrong2	wrong3
 hy_porcelana	Easy	Which fine ceramic is so linked with China that in English it is simply called 'china'?	Porcelain	Terracotta	Stoneware	Earthenware
 his_explosive_invention_discovered	Easy	Which explosive invention was discovered by Chinese alchemists seeking an elixir of life?	Gunpowder	Dynamite	Nitroglycerine	Greek fire
+his_beijing_forbidden_city	Easy	What is Beijing's Forbidden City today?	A museum	The president's home	A hotel	An army barracks
+his_traditional_chinese_sailing	Easy	What are traditional Chinese sailing ships with ribbed sails called?	Junks	Dhows	Galleys	Sampans
 his_pieniadz_papierowy	Medium	Which country was the first to use paper money?	China	Italy	Persia	Egypt
 hx_zakazane_miasto	Medium	What was the imperial palace in Beijing, closed to ordinary people, called?	The Forbidden City	The Summer Palace	The Jade Palace	The Temple of Heaven
 his_last_imperial_dynasty	Medium	Which was the last imperial dynasty of China?	Qing	Ming	Han	Tang
@@ -16,6 +18,9 @@ his_people_north_east	Medium	Which people from the north-east founded China's la
 his_hairstyle_qing_rulers	Medium	Which hairstyle did the Qing rulers force all Chinese men to wear?	A shaved forehead and long braid	A topknot	Long loose hair	A fully shaved head
 his_board_game_black	Medium	Which board game of black and white stones was invented in China over 2,500 years ago?	Go	Mahjong	Xiangqi	Backgammon
 his_title_chinese_emperors	Medium	By which title were Chinese emperors known?	Son of Heaven	King of Kings	Lord of the Earth	Light of Asia
+his_method_printing_whole	Medium	Which method of printing whole pages from carved wooden blocks was used in China centuries before Gutenberg?	Woodblock printing	Screen printing	Lithography	Etching
+his_tang_poet_said	Medium	Which Tang poet is said to have drowned trying to embrace the Moon's reflection?	Li Bai	Du Fu	Wang Wei	Bai Juyi
+his_chinese_chess_played	Medium	What is Chinese chess, played on a board with a 'river' across the middle, called?	Xiangqi	Go	Mahjong	Shogi
 dpt_his_mur_ming	Hard	Which dynasty built most of the Great Wall as it stands today?	The Ming dynasty	The Han dynasty	The Qin dynasty	The Tang dynasty
 hy_egzaminy_chiny	Hard	How did imperial China choose many of its officials?	Through tough written exams	By drawing lots	By sword fights	Only by noble birth
 his_under_dynasty_china	Hard	Under which dynasty did China print the world's first official paper money?	Song	Han	Qin	Qing
@@ -26,6 +31,9 @@ his_ming_emperor_moved	Hard	Which Ming emperor moved the capital to Beijing and 
 his_korean_dynasty_ruled	Hard	Which Korean dynasty ruled from 1392 until Japan took over in 1910?	Joseon	Goryeo	Silla	Baekje
 his_korean_kingdom_founded	Hard	Which Korean kingdom, founded in 918, gave its name to 'Korea'?	Goryeo	Joseon	Silla	Gaya
 his_chinese_craftsman_invented	Hard	Which Chinese craftsman invented movable type made of clay in the 1040s?	Bi Sheng	Cai Lun	Zhang Heng	Shen Kuo
+his_tang_emperor_took	Hard	Which Tang emperor, who took power in 626, is remembered as one of China's greatest rulers?	Taizong	Gaozu	Xuanzong	Yongle
+his_qing_emperor_reigned	Hard	Which Qing emperor reigned for 61 years, the longest in Chinese history?	Kangxi	Qianlong	Yongzheng	Guangxu
+his_qing_emperor_told	Hard	Which Qing emperor told King George III's envoy that China needed nothing from Britain?	Qianlong	Kangxi	Daoguang	Jiaqing
 his2_dynastia_ming	Expert	Which dynasty ruled China before the Qing?	Ming	Tang	Han	Song
 his2_rewolta_taiping	Expert	In which country did the Taiping Rebellion break out?	China	Japan	India	Korea
 his_zheng_he	Expert	Which Chinese admiral led huge 'treasure fleets' across the Indian Ocean in the 1400s?	Zheng He	Kublai Khan	Sun Tzu	Koxinga
@@ -35,3 +43,5 @@ hy_wu_zetian	Expert	Who was the only woman to rule China as emperor in her own n
 his_jikji_printed_korea	Expert	What is the Jikji, printed in Korea in 1377?	The oldest surviving book printed with metal type	The first Korean map of the whole world	A royal law code of the Joseon kings	The oldest surviving Korean poem
 his_general_rebellion_755	Expert	Which general's rebellion of 755 nearly destroyed the Tang dynasty?	An Lushan	Huang Chao	Li Zicheng	Wu Sangui
 his_song_capital_perhaps	Expert	Which Song capital was perhaps the largest city in the world around 1100?	Kaifeng	Chang'an	Nanjing	Luoyang
+his_song_scholar_built	Expert	Which Song scholar built a huge water-powered astronomical clock tower in 1088?	Su Song	Shen Kuo	Bi Sheng	Zhang Heng
+his_british_envoy_mission	Expert	Which British envoy's mission to the Qing court in 1793 failed to win trade rights?	Lord Macartney	Lord Elgin	Lord Amherst	Lord Napier

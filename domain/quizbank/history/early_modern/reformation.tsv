@@ -3,6 +3,7 @@ id	difficulty	prompt	correct	wrong1	wrong2	wrong3
 wh_reformacja_luter	Easy	Who started the Reformation by posting 95 theses?	Martin Luther	John Calvin	Ulrich Zwingli	Jan Hus
 his_feared_spanish_church	Easy	Which feared Spanish church court hunted down heretics from 1478?	The Spanish Inquisition	The Star Chamber	The Holy Office of Rome	The Royal Tribunal
 his_recent_invention_helped	Easy	Which recent invention helped Luther's ideas spread across Europe in weeks?	The printing press	The telescope	The postal service	The newspaper
+his_country_spanish_armada	Easy	Which country did the Spanish Armada of 1588 hope to win back for the Catholic faith?	England	France	The Netherlands	Sweden
 his_pardons_sins_sold	Medium	What were the pardons for sins, sold by the Church, that angered Martin Luther?	Indulgences	Tithes	Relics	Sacraments
 his_language_martin_luther	Medium	Into which language did Martin Luther translate the Bible?	German	English	French	Dutch
 his_french_theologian_led	Medium	Which French theologian led the Reformation in Geneva?	John Calvin	John Knox	Ulrich Zwingli	Thomas Cranmer
@@ -12,6 +13,12 @@ his_church_council_meeting	Medium	Which church council, meeting from 1545 to 156
 his_killing_thousands_french	Medium	What is the killing of thousands of French Protestants in Paris in 1572 called?	The St Bartholomew's Day Massacre	The Sicilian Vespers	The Night of the Long Knives	The Massacre of Glencoe
 his_protestants_france	Medium	What were the Protestants of France called?	Huguenots	Puritans	Anabaptists	Hussites
 his_thirty_years_war	Medium	Where did the Thirty Years' War kill perhaps a third of the population?	In the German lands	In England	In Spain	In Scandinavia
+his_preacher_led_protestant	Medium	Which preacher led the Protestant Reformation in Scotland?	John Knox	John Calvin	Thomas Cranmer	John Wesley
+his_great_revolt_german	Medium	What was the great revolt of German peasants in 1524-1525 called?	The Peasants' War	The Hussite War	The Thirty Years' War	The Schmalkaldic War
+his_english_protestants_wanted	Medium	Which English Protestants wanted to 'purify' the Church of all Catholic ways?	The Puritans	The Quakers	The Methodists	The Anglicans
+his_grand_style_art	Medium	Which grand style of art and architecture did the Catholic Church use to impress worshippers in the 1600s?	Baroque	Gothic	Romanesque	Art Nouveau
+his_queen_mother_france	Medium	Which queen mother of France is usually blamed for the St Bartholomew's Day Massacre?	Catherine de' Medici	Marie de' Medici	Mary, Queen of Scots	Anne of Austria
+his_christian_movement_founded	Medium	Which Christian movement, founded by George Fox, refuses to swear oaths or fight in wars?	The Quakers	The Puritans	The Methodists	The Baptists
 hx_kalendarz_grzegorz	Hard	Which pope gave his name to the calendar most of the world uses today?	Gregory XIII	Julius II	Leo X	Sixtus V
 hx_wittenberga	Hard	On the door of a church in which German town did Luther post his 95 Theses?	Wittenberg	Worms	Leipzig	Erfurt
 his_assembly_1521_luther	Hard	At which assembly of 1521 did Luther refuse to take back his writings?	The Diet of Worms	The Council of Trent	The Diet of Augsburg	The Council of Constance
@@ -26,7 +33,15 @@ his_medici_pope_excommunicated	Hard	Which Medici pope excommunicated Martin Luth
 his_peace_1555_let	Hard	Which peace of 1555 let each German prince choose his lands' religion?	The Peace of Augsburg	The Peace of Westphalia	The Peace of Prague	The Peace of Utrecht
 his_long_dutch_revolt	Hard	Which long Dutch revolt against Spain, from 1568, created the Dutch Republic?	The Eighty Years' War	The Thirty Years' War	The Hundred Years' War	The Seven Years' War
 his_led_dutch_revolt	Hard	Who led the Dutch revolt against Spain until he was shot dead in 1584?	William the Silent	Maurice of Nassau	Count Egmont	The Duke of Alba
+his_castle_martin_luther	Hard	In which castle did Martin Luther hide while translating the New Testament?	The Wartburg	Neuschwanstein	Heidelberg Castle	Hohenzollern Castle
+his_martin_luther_wife	Hard	Who was Martin Luther's wife, a former nun?	Katharina von Bora	Anne Boleyn	Idelette de Bure	Catherine Parr
+his_hymn_martin_luther	Hard	Which famous hymn did Martin Luther write?	'A Mighty Fortress Is Our God'	'O Come, All Ye Faithful'	'Silent Night, Holy Night'	'Amazing Grace'
+his_dominican_friar_fundraising	Hard	Which Dominican friar's fundraising sermons of 1517 provoked the 95 Theses?	Johann Tetzel	Johann Eck	Thomas Muntzer	Philip Melanchthon
+his_archbishop_wrote_english	Hard	Which archbishop wrote the English Book of Common Prayer and was burned at the stake in 1556?	Thomas Cranmer	Thomas Becket	Thomas Wolsey	Thomas More
+his_protestant_city_germany	Hard	Which Protestant city in Germany was sacked with terrible slaughter in 1631?	Magdeburg	Dresden	Leipzig	Berlin
+his_spanish_decree_1492	Hard	Which Spanish decree of 1492 forced all Jews to convert or leave Spain?	The Alhambra Decree	The Edict of Toledo	The Pragmatic Sanction	The Granada Charter
 his_westfalski	Expert	In which year did the Peace of Westphalia end the Thirty Years' War?	1648	1618	1659	1667
 dpt_his_defenestracja	Expert	The Defenestration of Prague set off which war?	The Thirty Years' War	The Hussite Wars	The Seven Years' War	The War of the Roses
 hy_hus	Expert	Which Czech reformer was burned at the stake in 1415, a century before Luther?	Jan Hus	John Wycliffe	Jan Zizka	Thomas Muntzer
 his_radical_protestant_sect	Expert	Which radical Protestant sect seized the German city of Munster in 1534?	The Anabaptists	The Calvinists	The Hussites	The Quakers
+his_protestant_admiral_victim	Expert	Which Protestant admiral was the first famous victim of the St Bartholomew's Day Massacre?	Gaspard de Coligny	Henry of Navarre	Louis de Conde	Francis Drake

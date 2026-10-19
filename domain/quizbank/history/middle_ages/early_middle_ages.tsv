@@ -4,6 +4,10 @@ id	difficulty	prompt	correct	wrong1	wrong2	wrong3
 his_gloomy_long_given	Easy	Which gloomy name was long given to the centuries after the fall of Rome?	The Dark Ages	The Iron Age	The Silent Age	The Grey Ages
 his_people_charlemagne_king	Easy	Which people was Charlemagne the king of?	The Franks	The Goths	The Saxons	The Vandals
 his_king_wessex_fought	Easy	Which king of Wessex, who fought off the Vikings, is known as 'the Great'?	Alfred	Athelstan	Edgar	Harold
+his_religion_franks_adopt	Easy	Which religion did the Franks adopt under King Clovis?	Christianity	Islam	Judaism	Paganism
+his_island_saint_patrick	Easy	Which island did Saint Patrick bring Christianity to in the 400s?	Ireland	Britain	Iceland	Sicily
+his_germanic_people_gave	Easy	Which Germanic people gave their name to Essex, Sussex and Wessex?	The Saxons	The Franks	The Goths	The Jutes
+his_legendary_king_britons	Easy	Which legendary king of the Britons sat with his knights at a Round Table?	King Arthur	King Alfred	King Lear	King Harold
 hx_frankowie	Medium	Which Germanic people gave their name to France?	The Franks	The Gauls	The Goths	The Normans
 his_city_favourite_seat	Medium	Which city was the favourite seat of Charlemagne, where he is buried?	Aachen	Paris	Rome	Cologne
 his_england_germanic_people	Medium	England is named after which Germanic people who settled there after the Romans left?	The Angles	The Saxons	The Jutes	The Franks
@@ -11,6 +15,7 @@ his_empire_voltaire_mock	Medium	Which empire did Voltaire mock as 'neither holy,
 his_illuminated_gospel_book	Medium	Which famous illuminated Gospel book is kept at Trinity College Dublin?	The Book of Kells	The Lindisfarne Gospels	The Domesday Book	The Book of Durrow
 his_language_educated_people	Medium	Which language did educated people across western Europe write in during the Middle Ages?	Latin	Greek	French	Gothic
 his_dynasty_charlemagne	Medium	What is the dynasty of Charlemagne called?	The Carolingians	The Merovingians	The Capetians	The Habsburgs
+his_according_biographer_charlemagne	Medium	According to his biographer, what did Charlemagne try and fail to learn, keeping tablets under his pillow?	Writing	Swimming	Latin prayers	Playing the harp
 his_karol_wielki	Hard	Who was crowned Emperor of the Romans by the Pope on Christmas Day in 800?	Charlemagne	Otto I	Clovis	Constantine
 his_frankish_king_baptised	Hard	Which Frankish king was baptised around 496 and united most of the Franks?	Clovis I	Pepin the Short	Charles Martel	Dagobert I
 his_dynasty_founded_clovis	Hard	Which dynasty, founded by Clovis, ruled the Franks before Charlemagne's family?	The Merovingians	The Carolingians	The Capetians	The Ottonians
@@ -26,9 +31,20 @@ his_kingdom_spain_fell	Hard	Whose kingdom in Spain fell to the Arab and Berber i
 his_king_mercia_built	Hard	Which king of Mercia built a great earth bank along the Welsh border?	Offa	Alfred	Penda	Athelstan
 his_island_off_scotland	Hard	Which island off Scotland, where Saint Columba founded a monastery, was a centre of Celtic Christianity?	Iona	Skye	Lindisfarne	Orkney
 his_title_charles_martel	Hard	Which title did Charles Martel hold before his family took the Frankish crown?	Mayor of the Palace	Count of Paris	Duke of Burgundy	Archbishop of Reims
+his_pope_crowned_frankish	Hard	Which pope crowned a Frankish king as emperor on Christmas Day in 800?	Leo III	Gregory the Great	Urban II	Stephen II
+his_pyrenees_pass_charlemagne	Hard	In which Pyrenees pass was Charlemagne's rearguard wiped out in 778?	Roncevaux	Somport	Andorra	Le Perthus
+his_germanic_people_ruled	Hard	Which Germanic people ruled Italy under King Theodoric the Great?	The Ostrogoths	The Visigoths	The Lombards	The Vandals
+his_english_missionary_apostle	Hard	Which English missionary, 'the Apostle of the Germans', was killed in Frisia in 754?	Saint Boniface	Saint Columba	Saint Aidan	Saint Willibrord
+his_seven_early_anglo	Hard	What is the name for the seven early Anglo-Saxon kingdoms of England?	The Heptarchy	The Septimate	The Danelaw	The Seven Shires
+his_dynasty_took_throne	Hard	Which dynasty took the throne of France in 987 and ruled for over 300 years?	The Capetians	The Carolingians	The Merovingians	The Valois
+his_king_wessex_became	Hard	Which king of Wessex became the first king of all England, in 927?	Athelstan	Edward the Elder	Edgar	Aethelred
+his_old_frankish_law	Hard	Which old Frankish law code was later used to bar women from the French throne?	The Salic law	The Code of Clovis	The Frankish Pact	The Lex Carolina
+his_neat_handwriting_developed	Hard	Which neat handwriting, developed at Charlemagne's court, is the ancestor of our lowercase letters?	Carolingian minuscule	Gothic blackletter	Roman capitals	Irish uncial
 hx_karol_mlot	Expert	Which Frankish leader stopped the Umayyad advance into Europe at the Battle of Tours in 732?	Charles Martel	Charlemagne	Clovis	Pepin the Short
 his_scholar_york_ran	Expert	Which scholar from York ran Charlemagne's palace school?	Alcuin	Bede	Einhard	Boethius
 his_monk_worked_out	Expert	Which monk worked out the 'AD' system of counting years, in 525?	Dionysius Exiguus	Bede	Gregory of Tours	Isidore of Seville
 his_wergild_early_germanic	Expert	What was 'wergild' in early Germanic law?	A payment for killing someone	A tax on land	A chief's war band	A trial by combat
 his_document_later_proved	Expert	Which document, later proved a forgery, claimed Constantine had handed the West to the pope?	The Donation of Constantine	The Edict of Milan	The Golden Bull	The Pragmatic Sanction
 his_elephant_caliph_harun	Expert	What was the elephant that the caliph Harun al-Rashid sent to Charlemagne called?	Abul-Abbas	Hanno	Jumbo	Suleiman
+his_roman_writer_wrote	Expert	Which Roman writer wrote 'The Consolation of Philosophy' while awaiting execution under Theodoric?	Boethius	Cassiodorus	Augustine	Jerome
+his_irish_monk_founded	Expert	Which Irish monk founded monasteries across Europe, including Bobbio in Italy?	Columbanus	Columba	Brendan	Patrick

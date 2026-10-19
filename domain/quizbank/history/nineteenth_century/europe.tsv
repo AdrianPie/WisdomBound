@@ -3,6 +3,8 @@
 id	difficulty	prompt	correct	wrong1	wrong2	wrong3
 his_italian_city_birthplace	Easy	Which Italian city is the birthplace of pizza?	Naples	Rome	Milan	Venice
 his_humanitarian_movement_uses	Easy	Which humanitarian movement uses a red crescent in many Muslim countries?	The Red Cross	Doctors Without Borders	UNICEF	Oxfam
+his_german_state_led	Easy	Which German state led the unification of Germany?	Prussia	Bavaria	Saxony	Austria
+his_capital_rebuilt_grand	Easy	Which capital was rebuilt with grand boulevards by Baron Haussmann in the 1850s and 1860s?	Paris	Vienna	London	Berlin
 his4_wojna_krymska_strony	Medium	In the Crimean War, Russia fought a coalition led by which two powers?	Britain and France	Prussia and Austria	Spain and Portugal	Sweden and Denmark
 trv_manifest	Medium	Who wrote 'The Communist Manifesto'?	Karl Marx and Friedrich Engels	Vladimir Lenin, while in exile	Leon Trotsky and his circle	Rosa Luxemburg and her party
 hx_bismarck	Medium	Which 'Iron Chancellor' united Germany in 1871?	Otto von Bismarck	Kaiser Wilhelm II	Frederick the Great	Klemens von Metternich
@@ -22,6 +24,8 @@ his_dual_monarchy_created	Medium	Which 'dual monarchy' was created by a compromi
 his_austrian_emperor_reigned	Medium	Which Austrian emperor reigned for 68 years, from 1848 until 1916?	Franz Joseph I	Ferdinand I	Charles I	Joseph II
 his_city_became_capital_2	Medium	Which city became the capital of united Italy in 1871?	Rome	Turin	Florence	Milan
 his_country_norway_peacefully	Medium	From which country did Norway peacefully break away in 1905?	Sweden	Denmark	Russia	Finland
+his_war_1866_prussia	Medium	Which war of 1866 did Prussia win against Austria in just seven weeks?	The Austro-Prussian War	The Franco-Prussian War	The Crimean War	The Seven Years' War
+his_wife_emperor_franz	Medium	How was the wife of Emperor Franz Joseph killed in Geneva in 1898?	She was stabbed by an anarchist	She fell from a horse	She drowned in a lake	She died of plague
 org_kardigan_wojna	Hard	The cardigan is named after a commander who fought in which war?	The Crimean War	The Boer War	The Napoleonic Wars	The American Civil War
 his_french_emperor_napoleon	Hard	Which French emperor was Napoleon Bonaparte's nephew?	Napoleon III	Napoleon II	Louis XVIII	Louis-Philippe
 his_russian_tsar_freed	Hard	Which Russian tsar freed the serfs in 1861?	Alexander II	Nicholas II	Alexander III	Nicholas I
@@ -32,4 +36,12 @@ his_swiss_businessman_founded	Hard	Which Swiss businessman founded the Red Cross
 his_italian_revolutionary_founded	Hard	Which Italian revolutionary founded the movement 'Young Italy' in 1831?	Giuseppe Mazzini	Count Cavour	Giuseppe Garibaldi	Gabriele D'Annunzio
 his_russian_tsar_killed	Hard	Which Russian tsar was killed by a revolutionary's bomb in Saint Petersburg in 1881?	Alexander II	Nicholas I	Alexander III	Nicholas II
 his_year_crimean_war	Hard	In which year did the Crimean War begin?	1853	1815	1848	1870
+his_french_king_1830	Hard	Which French king of 1830-1848 was called 'the Citizen King'?	Louis Philippe	Charles X	Louis XVIII	Napoleon III
+his_revolution_1830_drove	Hard	Which revolution of 1830 drove King Charles X out of France?	The July Revolution	The February Revolution	The Paris Commune	The Revolution of the Barricades
+his_officers_rising_against	Hard	What was the officers' rising against the new tsar in St Petersburg in December 1825 called?	The Decembrist revolt	The Winter rising	The Nevsky mutiny	The Narodnik rebellion
+his_italian_kingdom_ruled	Hard	Which Italian kingdom, ruled from Turin, led the unification of Italy?	Piedmont-Sardinia	The Kingdom of Naples	Tuscany	The Papal States
+his_pope_himself_prisoner	Hard	Which pope called himself 'the prisoner of the Vatican' after losing Rome in 1870?	Pius IX	Leo XIII	Gregory XVI	Pius X
+his_meeting_1878_chaired	Hard	Which meeting of 1878, chaired by Bismarck, redrew the map of the Balkans?	The Congress of Berlin	The Congress of Vienna	The Treaty of Paris	The London Conference
+his_french_republic_born	Hard	Which French republic was born in the revolution of 1848?	The Second Republic	The First Republic	The Third Republic	The Fourth Republic
 his_tambora	Expert	The 1815 eruption of which volcano led to 'the year without a summer'?	Tambora	Krakatoa	Vesuvius	Pinatubo
+his_habsburg_crown_prince	Expert	Which Habsburg crown prince died with his lover at Mayerling in 1889?	Rudolf	Franz Ferdinand	Maximilian	Charles

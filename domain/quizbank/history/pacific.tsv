@@ -1,0 +1,40 @@
+# Dzial regionalny przez wszystkie epoki: Aborygeni, Maorysi, Polinezja i Wyspa Wielkanocna, Hawaje,
+# kolonia karna w Australii, Nowa Zelandia. Wyprawy Cooka i Tasmana zostaja w Age of Discovery.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+his_country_maori_people	Easy	In which country do the Maori people live?	New Zealand	Australia	Fiji	Hawaii
+his_giant_stone_figures	Easy	What are the giant stone figures of Easter Island called?	Moai	Tiki	Totems	Menhirs
+his_soldiers_country_remembered	Easy	Soldiers of which country are remembered alongside Australia's on Anzac Day?	New Zealand	Canada	Britain	South Africa
+hx_australia_skazancy	Medium	Britain first used its colony in Australia for what?	Sending convicts	Growing tea	Mining gold	Hunting whales
+his_australian_outlaw_wore	Medium	Which Australian outlaw wore a suit of homemade iron armour in his last stand?	Ned Kelly	Captain Thunderbolt	Ben Hall	Jack Donahue
+his_roughly_long_aboriginal	Medium	For roughly how long have Aboriginal people lived in Australia?	Over 50,000 years	About 5,000 years	About 500 years	About 1 million years
+his_australia_day_january	Medium	What does Australia Day on 26 January mark?	The First Fleet's landing at Sydney Cove	The end of convict transport	Captain Cook's first landing	The union of the colonies
+his_year_australian_colonies	Medium	In which year did the Australian colonies unite into one nation?	1901	1788	1851	1945
+his_ancestors_maori_sail	Medium	From where did the ancestors of the Maori sail to New Zealand around 1300?	Eastern Polynesia	Australia	Japan	South America
+his_chief_united_hawaiian	Medium	Which chief united the Hawaiian Islands into one kingdom by 1810?	Kamehameha I	Liliuokalani	Kalakaua	Keoua
+his_conflicts_between_maori	Medium	What were the conflicts between Maori and British forces in the 1800s called?	The New Zealand Wars	The Waitangi Wars	The Pacific Wars	The Kiwi Wars
+his_aboriginal_children_taken	Medium	What are the Aboriginal children taken from their families by Australian governments in the 1900s called?	The Stolen Generations	The Lost Tribes	The Forgotten Children	The Taken Ones
+his_european_mapmakers_call	Medium	What did European mapmakers call the imagined great continent of the south?	Terra Australis	Atlantis	El Dorado	Antipodea
+his_animal_released_hunting	Medium	Which animal, released for hunting in 1859, became a plague across Australia?	The rabbit	The fox	The cane toad	The camel
+his_pacific_island_capital	Medium	Which Pacific island, with its capital Papeete, is part of French Polynesia?	Tahiti	Fiji	Samoa	Tonga
+his_pacific_country_won	Medium	Which Pacific country won its independence from Australia in 1975?	Papua New Guinea	Fiji	Vanuatu	Samoa
+his_dutch_navigator_reached	Medium	Which Dutch navigator reached New Zealand in 1642, over a century before Cook?	Abel Tasman	Willem Janszoon	Dirk Hartog	Jacob Roggeveen
+his_wojna_emu	Hard	In 1932, Australian soldiers with machine guns fought, and lost, a 'war' against which animals?	Emus	Kangaroos	Rabbits	Dingoes
+hx_hawaje	Hard	Before becoming part of the USA, Hawaii was what?	An independent kingdom	A French colony	A Japanese province	A Spanish colony
+his_eureka_stockade_1854	Hard	What was the Eureka Stockade of 1854 in Australia?	A gold miners' rebellion	A convict escape	A cattle drive	A shipwreck
+his_led_fleet_became	Hard	Who led the First Fleet and became the first governor of New South Wales?	Arthur Phillip	James Cook	Lachlan Macquarie	William Bligh
+his_ancient_polynesian_navigators	Hard	How did ancient Polynesian navigators cross the Pacific without instruments?	By reading stars, swells and birds	By following floating logs	By using magnetic stones	By hugging the coasts
+his_last_monarch_hawaii	Hard	Who was the last monarch of Hawaii, overthrown in 1893?	Queen Liliuokalani	King Kamehameha V	Queen Emma	King Kalakaua
+his_island_tasmania_until	Hard	What was the island of Tasmania called until 1856?	Van Diemen's Land	New Holland	New Zealand	Botany Island
+his_two_explorers_died	Hard	Which two explorers died in 1861 after crossing Australia from south to north?	Burke and Wills	Lewis and Clark	Hume and Hovell	Mason and Dixon
+his_navigator_sailed_right	Hard	Which navigator first sailed right round Australia and popularised its name?	Matthew Flinders	James Cook	Abel Tasman	George Bass
+his_policy_1901_restricted	Hard	Which policy of 1901 restricted non-European immigration to Australia?	The White Australia policy	The Southern Cross Act	The Ballarat Law	The Colonial Exclusion Act
+his_island_solomons_japanese	Hard	On which island in the Solomons did US and Japanese forces fight for six months from August 1942?	Guadalcanal	Iwo Jima	Okinawa	Tarawa
+his_australian_city_bombed	Hard	Which Australian city was bombed by Japanese aircraft in February 1942?	Darwin	Perth	Brisbane	Cairns
+his_torres_strait_islander	Hard	Which Torres Strait Islander won a landmark court case for Indigenous land rights in Australia in 1992?	Eddie Mabo	Albert Namatjira	Neville Bonner	Charles Perkins
+his_city_served_australia	Hard	Which city served as Australia's capital before Canberra was ready?	Melbourne	Sydney	Adelaide	Brisbane
+his_campaigner_led_fight	Hard	Which campaigner led the fight that won New Zealand women the vote in 1893?	Kate Sheppard	Emmeline Pankhurst	Vida Goldstein	Susan B. Anthony
+his_pacific_islands_german	Hard	Which Pacific islands were a German colony until New Zealand seized them in 1914?	Western Samoa	Fiji	Tonga	The Cook Islands
+his_island_nation_gilbert	Hard	Which island nation, then called the Gilbert Islands, saw the bloody Battle of Tarawa in 1943?	Kiribati	Tuvalu	Nauru	Vanuatu
+his_country_tested_nuclear	Hard	Which country tested nuclear bombs on Mururoa atoll in the Pacific until 1996?	France	The United States	Britain	China
+hx_waitangi	Expert	Which 1840 treaty between the British Crown and Maori chiefs is New Zealand's founding document?	The Treaty of Waitangi	The Treaty of Auckland	The Treaty of Rotorua	The Treaty of Aotearoa
+his_tahitian_navigator_priest	Expert	Which Tahitian navigator and priest guided Captain Cook's Endeavour through the Pacific?	Tupaia	Omai	Kupe	Hotu Matua

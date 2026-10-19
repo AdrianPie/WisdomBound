@@ -1,0 +1,38 @@
+# Khmerowie i Angkor, Borobudur, Srivijaya i Majapahit, Bagan, Ayutthaya, Dai Viet, Malakka -
+# az do przybycia Europejczykow.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+his_temple_appears_national	Easy	Which famous temple appears on the national flag of Cambodia?	Angkor Wat	Borobudur	Shwedagon	Wat Arun
+his_people_built_temples	Medium	Which people built the temples of Angkor?	The Khmer	The Thai	The Burmese	The Cham
+his_giant_buddhist_monument	Medium	Which giant Buddhist monument on the island of Java is the largest Buddhist temple in the world?	Borobudur	Angkor Wat	Prambanan	Shwedagon
+his_plain_myanmar_covered	Medium	Which plain in Myanmar is covered with over 2,000 ancient Buddhist temples?	Bagan	Mandalay	Ayutthaya	Pegu
+his_british_official_founded	Medium	Which British official founded the trading post of modern Singapore in 1819?	Stamford Raffles	Francis Light	Robert Clive	James Brooke
+his_spanish_treasure_ships	Medium	Which Spanish treasure ships sailed between Manila and Mexico for 250 years?	The Manila galleons	The Silver Armada	The Pacific Fleet	The Acapulco caravels
+his_form_buddhism_followed	Medium	Which form of Buddhism is followed by most people in Thailand, Myanmar and Cambodia?	Theravada	Zen	Tibetan	Pure Land
+his_spice_tiny_banda	Medium	Which spice from the tiny Banda Islands was worth more than its weight in gold in the 1600s?	Nutmeg	Pepper	Cinnamon	Saffron
+his_dutch_built_city	Medium	Which Dutch-built city on Java, today's Jakarta, was the headquarters of the Dutch East India Company?	Batavia	Surabaya	Bandung	Semarang
+his_royal_city_luang	Medium	The royal city of Luang Prabang was the old capital of which country?	Laos	Cambodia	Myanmar	Thailand
+his_religion_brought_traders	Medium	Which religion, brought by traders from the 1200s onward, is the largest in Indonesia today?	Islam	Buddhism	Hinduism	Christianity
+his_golden_pagoda_dominates	Medium	Which golden pagoda dominates the skyline of Yangon in Myanmar?	Shwedagon	Borobudur	Angkor Wat	Wat Arun
+his_indonesian_island_hindu	Medium	On which Indonesian island did Hindu culture survive after most of the country became Muslim?	Bali	Java	Sumatra	Borneo
+his_leader_declared_indonesia	Medium	Which leader declared Indonesia's independence from the Dutch in 1945?	Sukarno	Suharto	Tunku Abdul Rahman	B. J. Habibie
+his_volcano_krakatoa_blew	Medium	The volcano Krakatoa, which blew apart in 1883, lies in which modern country?	Indonesia	The Philippines	Malaysia	Papua New Guinea
+his_hindu_god_angkor	Hard	To which Hindu god was Angkor Wat first dedicated?	Vishnu	Shiva	Brahma	Ganesh
+his_temple_angkor_dozens	Hard	Which temple at Angkor is famous for its dozens of giant smiling stone faces?	The Bayon	Ta Prohm	Banteay Srei	Preah Khan
+his_hindu_temple_complex	Hard	Which Hindu temple complex near Yogyakarta was built for Shiva in the 800s?	Prambanan	Borobudur	Besakih	Ta Prohm
+his_sea_empire_based	Hard	Which sea empire based on Sumatra controlled the Strait of Malacca from about 700 to 1200?	Srivijaya	Majapahit	Funan	Champa
+his_javanese_empire_1300s	Hard	Which Javanese empire of the 1300s is remembered as one of Indonesia's greatest?	Majapahit	Srivijaya	Mataram	Aceh
+his_royal_capital_siam	Hard	Which royal capital of Siam was burned by a Burmese army in 1767?	Ayutthaya	Sukhothai	Chiang Mai	Bangkok
+his_two_sisters_led	Hard	Which two sisters led a Vietnamese revolt against Chinese rule in AD 40?	The Trung sisters	The Nguyen sisters	The Le sisters	The Tran sisters
+his_rich_port_sultanate	Hard	Which rich port sultanate on the Malay Peninsula was captured by the Portuguese in 1511?	Malacca	Aceh	Brunei	Johor
+his_local_chief_warriors	Hard	Which local chief's warriors killed Ferdinand Magellan on the island of Mactan in 1521?	Lapulapu	Humabon	Sulayman	Rajah Matanda
+his_great_lake_fed	Hard	Which great lake fed the rice fields of the Khmer Empire?	Tonle Sap	Inle Lake	Lake Toba	Lake Taal
+his_hindu_kingdom_coast	Hard	Which Hindu kingdom on the coast of central Vietnam is famous for its red-brick towers?	Champa	Funan	Lan Xang	Dai Viet
+his_according_legend_vietnamese	Hard	According to legend, which Vietnamese hero gave his magic sword back to a golden turtle in a Hanoi lake?	Le Loi	Tran Hung Dao	Ho Chi Minh	Ly Thai To
+his_thai_king_credited	Hard	Which Thai king is credited with creating the Thai alphabet in 1283?	Ramkhamhaeng	Naresuan	Chulalongkorn	Taksin
+his_vietnamese_dynasty_ruled	Hard	Which Vietnamese dynasty ruled from its capital at Hue from 1802 to 1945?	The Nguyen	The Tran	The Le	The Ly
+his_filipino_writer_national	Hard	Which Filipino writer and national hero was executed by the Spanish in 1896?	Jose Rizal	Emilio Aguinaldo	Andres Bonifacio	Apolinario Mabini
+his_khmer_king_built	Expert	Which Khmer king built Angkor Wat in the first half of the 1100s?	Suryavarman II	Jayavarman VII	Jayavarman II	Indravarman I
+his_buddhist_king_khmer	Expert	Which Buddhist king of the Khmer built the walled city of Angkor Thom around 1200?	Jayavarman VII	Suryavarman II	Yasovarman I	Rajendravarman II
+his_vietnamese_general_beat	Expert	Which Vietnamese general beat back the Mongol invasions of the 1280s?	Tran Hung Dao	Le Loi	Ngo Quyen	Ly Thuong Kiet
+his_king_founded_pagan	Expert	Which king founded the Pagan Empire in Burma in the 1000s?	Anawrahta	Bayinnaung	Alaungpaya	Kyansittha
+his_tiny_nutmeg_island	Expert	Which tiny nutmeg island did England give up to the Dutch in a deal that left it Manhattan in 1667?	Run	Ambon	Ternate	Banda Neira

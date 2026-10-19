@@ -8,6 +8,8 @@ his_british_captain_charted	Easy	Which British captain charted the east coast of
 his_foods_came_europe	Easy	Which of these foods first came to Europe from the Americas?	The tomato	The onion	The cabbage	The carrot
 his_country_vasco_gama	Easy	For which country did Vasco da Gama sail?	Portugal	Spain	England	Italy
 his_legendary_city_gold	Easy	What was the legendary city of gold that the Spanish searched for in South America?	El Dorado	Atlantis	Shangri-La	Camelot
+his_country_ferdinand_magellan	Easy	For which country did Ferdinand Magellan sail on his voyage around the world?	Spain	Portugal	England	Italy
+his_spanish_soldiers_conquered	Easy	What were the Spanish soldiers who conquered much of the Americas called?	Conquistadors	Crusaders	Musketeers	Matadors
 his_kolumb	Medium	In which year did Christopher Columbus reach America?	1492	1453	1500	1488
 his3_magellan	Medium	Who led the first expedition to circumnavigate the globe?	Ferdinand Magellan	Christopher Columbus	Vasco da Gama	James Cook
 trv_kolumb_gdzie	Medium	Where did Columbus first land in 1492?	In the Bahamas	In Florida	In Mexico	In Brazil
@@ -24,6 +26,11 @@ his_instrument_sailors_use	Medium	Which instrument did sailors use to measure th
 his_explorer_seeking_passage	Medium	Which explorer seeking a passage to Asia has a huge Canadian bay named after him?	Henry Hudson	John Cabot	Martin Frobisher	James Cook
 his_columbian_exchange	Medium	What was the 'Columbian Exchange'?	The swap of crops, animals and germs	A bank founded by Columbus	A treaty dividing the Atlantic	The trade of slaves for gold
 his_animal_brought_spanish	Medium	Which animal, brought by the Spanish, transformed the lives of the Plains peoples of North America?	The horse	The cow	The pig	The sheep
+his_large_bird_americas	Medium	Which large bird from the Americas did Spanish ships bring to Europe in the 1500s?	The turkey	The ostrich	The peacock	The flamingo
+his_voyages_christopher_columbus	Medium	How many voyages did Christopher Columbus make to the Americas?	Four	One	Two	Seven
+his_columbus_die_1506	Medium	Where did Columbus die in 1506, still sure he had reached Asia?	In Spain	In the Bahamas	At sea	In Genoa
+his_port_india_west	Medium	Which port on India's west coast did Portugal seize in 1510 and keep until 1961?	Goa	Bombay	Calicut	Madras
+his_flemish_mapmaker_projection	Medium	Which Flemish mapmaker's projection of 1569 is still used on many world maps?	Gerardus Mercator	Abraham Ortelius	Martin Waldseemuller	Willem Blaeu
 his4_traktat_tordesillas	Hard	What did the 1494 Treaty of Tordesillas divide?	Newly discovered lands between Spain and Portugal	The lands of the Holy Roman Empire among its princes	The Baltic trade between the Hanseatic cities	Italy between the crowns of France and Austria
 dpt_his_vasco_da_gama	Hard	Which sea route did Vasco da Gama open in 1498?	Europe to India round Africa	Europe to China across the north	Spain to the Caribbean islands	Portugal to Brazil and back
 hx_magellan_smierc	Hard	Where was Ferdinand Magellan killed during his voyage around the world?	In the Philippines	In Patagonia	In Indonesia	In Guam
@@ -37,6 +44,11 @@ his_spanish_explorer_led	Hard	Which Spanish explorer led the first European expe
 his_french_navigator_sailed	Hard	Which French navigator sailed up the St Lawrence River and gave Canada its name?	Jacques Cartier	Samuel de Champlain	Robert de La Salle	Jean Ribault
 his_happened_henry_hudson	Hard	What happened to Henry Hudson in 1611?	His mutinous crew set him adrift	He was eaten by a polar bear	He reached China by sea	He was knighted by the king
 his_conquistador_explored_american	Hard	Which conquistador explored the American south-west hunting for the Seven Cities of Gold?	Francisco de Coronado	Hernando de Soto	Pedro de Alvarado	Diego de Almagro
+his_italian_navigator_sailing	Hard	Which Italian navigator, sailing for France, was the first European to enter New York harbour, in 1524?	Giovanni da Verrazzano	John Cabot	Amerigo Vespucci	Jacques Cartier
+his_columbus_island_reached	Hard	What did Columbus name the first island he reached in the Americas?	San Salvador	Hispaniola	Cuba	Santa Maria
+his_british_explorer_vanished	Hard	Which British explorer vanished in the Arctic with two ships in the 1840s while seeking the Northwest Passage?	John Franklin	Henry Hudson	James Cook	Robert Scott
+his_ship_english_captain	Hard	What was the name of the ship in which an English captain sailed round the world in 1577-1580?	The Golden Hind	The Mayflower	The Revenge	The Victory
+his_spanish_explorer_european	Hard	Which Spanish explorer was the first European to sail the length of the Amazon, in 1542?	Francisco de Orellana	Francisco Pizarro	Pedro de Valdivia	Hernando de Soto
 his_henryk_zeglarz	Expert	Which Portuguese prince sponsored early voyages along the African coast in the 1400s?	Henry the Navigator	Manuel I	Afonso Henriques	John of Gaunt
 hx_elcano	Expert	Who captained the ship that completed the first voyage around the world after Magellan died?	Juan Sebastian Elcano	Francis Drake	Vasco Nunez de Balboa	Bartolomeu Dias
 hx_tasman	Expert	Which Dutch explorer was the first European known to reach New Zealand, in 1642?	Abel Tasman	James Cook	Willem Janszoon	Dirk Hartog

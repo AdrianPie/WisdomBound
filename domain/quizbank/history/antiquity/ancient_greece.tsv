@@ -7,6 +7,7 @@ his_temple_athena_stands	Easy	Which temple to Athena stands on the Acropolis in 
 his_battle_490_athenians	Easy	At which battle of 490 BC did the Athenians beat a Persian army on the coast near their city?	Marathon	Thermopylae	Salamis	Plataea
 his_greek_city_state	Easy	Which Greek city-state was famous for its tough warriors and harsh military training?	Sparta	Athens	Corinth	Delphi
 his_word_democracy_comes	Easy	The word 'democracy' comes from Greek words meaning what?	Rule by the people	Rule by the wise	Rule by the rich	Rule by the gods
+his_actors_ancient_greek	Easy	What did actors in ancient Greek theatre wear over their faces?	Masks	Veils	Paint	Helmets
 wh_termopile	Medium	Which city-state defended the pass of Thermopylae against the Persians?	Sparta	Athens	Thebes	Corinth
 his_olimpia_zeus	Medium	The ancient Olympic Games were held in honour of which god?	Zeus	Apollo	Athena	Heracles
 his_herodot	Medium	Which ancient Greek is called 'the Father of History'?	Herodotus	Thucydides	Plutarch	Homer
@@ -26,6 +27,14 @@ his_winners_ancient_olympic	Medium	What did winners at the ancient Olympic Games
 his_agora_greek_city	Medium	What was the 'agora' in a Greek city?	The marketplace and meeting place	The fortified hilltop	The open-air theatre	The athletes' training ground
 his_spartan_girls_shocked	Medium	What did Spartan girls do that shocked other Greeks?	Trained and raced in public	Served as soldiers	Voted in assemblies	Became kings
 his_greek_trireme	Medium	What was a Greek 'trireme'?	A warship with three rows of oars	A temple with three columns	A three-day festival	A three-horse chariot
+his_greek_city_state_2	Medium	Which Greek city-state was ruled by two kings at the same time?	Sparta	Athens	Corinth	Thebes
+his_ancient_greek_athletes	Medium	What did ancient Greek athletes rub into their skin before competing?	Olive oil	Honey	Goat's milk	Sand
+his_courtier_made_sit	Medium	Which courtier was made to sit beneath a sword hanging by a single hair?	Damocles	Diogenes	Dionysius	Demosthenes
+his_spartan_mothers_told	Medium	Spartan mothers told their sons to come home with their shield, or how?	On it	Without it	Behind it	Under it
+his_greek_symposium	Medium	What was a Greek 'symposium'?	A drinking party with debate	A wrestling contest for men	A funeral feast for heroes	A choir singing in a temple
+his_greeks_call_all	Medium	What did the Greeks call all foreigners who did not speak Greek?	Barbarians	Helots	Metics	Pagans
+his_word_laconic_meaning	Medium	The word 'laconic', meaning short of words, comes from which Greek region, home of Sparta?	Laconia	Attica	Boeotia	Arcadia
+his_civilisation_built_great	Medium	Which civilisation built the great palace of Knossos?	The Minoans	The Mycenaeans	The Dorians	The Phoenicians
 his_diogenes	Hard	Which Greek philosopher is said to have lived in a large clay jar in Athens?	Diogenes	Socrates	Plato	Epicurus
 hx_olimpiada_776	Hard	According to tradition, in which year were the first ancient Olympic Games held?	776 BC	1200 BC	480 BC	44 BC
 hx_ostracyzm	Hard	In ancient Athens, what did citizens scratch on pieces of pottery to banish a politician?	His name	A skull	The word 'no'	A black cross
@@ -43,6 +52,13 @@ his_struck_athens_430	Hard	What struck Athens in 430 BC, killing Pericles soon a
 his_schliemann_gold_death	Hard	Schliemann named a gold death mask he found at Mycenae after which king?	Agamemnon	Priam	Odysseus	Menelaus
 his_greek_thinker_taught	Hard	Which Greek thinker taught that everything is made of tiny, uncuttable atoms?	Democritus	Plato	Pythagoras	Thales
 his_thirty_tyrants	Hard	Who were the 'Thirty Tyrants'?	A pro-Spartan junta in defeated Athens	Thirty Persian governors	Kings of the Greek colonies	Judges of the Olympic Games
+his_greek_island_hippocrates	Hard	On which Greek island was Hippocrates born?	Kos	Crete	Rhodes	Samos
+his_french_city_began	Hard	Which French city began as the Greek colony of Massalia?	Marseille	Nice	Lyon	Bordeaux
+his_delian_league	Hard	What was the Delian League?	An alliance of Greek cities led by Athens	A league of Spartan allies	The council of the Olympic Games	A union of Greek colonies in Italy
+his_battle_479_greeks	Hard	At which battle of 479 BC did the Greeks defeat the Persian army on land for good?	Plataea	Marathon	Thermopylae	Salamis
+his_legendary_lawgiver_said	Hard	Which legendary lawgiver is said to have created Sparta's harsh way of life?	Lycurgus	Solon	Draco	Cleisthenes
+his_volcanic_island_huge	Hard	Which volcanic island's huge eruption around 1600 BC may have helped end Minoan power?	Thera	Etna	Stromboli	Vesuvius
+his_ancient_greek_script	Hard	Which ancient Greek script was deciphered by the architect Michael Ventris in 1952?	Linear B	Linear A	Cuneiform	Demotic
 hx_knossos	Expert	Which British archaeologist excavated the Minoan palace of Knossos on Crete?	Arthur Evans	Heinrich Schliemann	Leonard Woolley	Flinders Petrie
 hy_drakon	Expert	Which Athenian lawgiver's rules were so harsh that his name became a word for 'severe'?	Draco	Solon	Cleisthenes	Pericles
 hy_salamina	Expert	At which sea battle of 480 BC did the Greek fleet crush the Persians?	Salamis	Actium	Lepanto	Marathon
@@ -51,3 +67,6 @@ his_brilliant_but_treacherous	Expert	Which brilliant but treacherous Athenian ge
 his_city_state_sacred	Expert	Which city-state's 'Sacred Band' was an elite unit of 150 pairs of soldiers?	Thebes	Sparta	Athens	Corinth
 his_theban_general_broke	Expert	Which Theban general broke Sparta's power at the Battle of Leuctra in 371 BC?	Epaminondas	Lysander	Pausanias	Brasidas
 his_spartan_admiral_finally	Expert	Which Spartan admiral finally beat the Athenian fleet at Aegospotami in 405 BC?	Lysander	Leonidas	Pausanias	Brasidas
+his_greek_city_founded	Expert	Which Greek city founded the colony of Byzantium?	Megara	Athens	Corinth	Sparta
+his_greek_city_destroyed	Expert	Which Greek city destroyed the great Athenian expedition sent against it in 415-413 BC?	Syracuse	Sparta	Corinth	Thebes
+his_greek_explorer_massalia	Expert	Which Greek explorer from Massalia sailed around Britain in about 325 BC?	Pytheas	Hanno	Nearchus	Scylax

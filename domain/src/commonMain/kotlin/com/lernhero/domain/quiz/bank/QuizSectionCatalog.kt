@@ -23,6 +23,7 @@ object QuizSectionCatalog {
         QuizSection("history/antiquity/roman_empire", "Roman Empire", "🦅", QuizCategory.History),
         QuizSection("history/antiquity/ancient_china", "Ancient China", "🏮", QuizCategory.History),
         QuizSection("history/antiquity/ancient_india", "Ancient India", "🐘", QuizCategory.History),
+        QuizSection("history/antiquity/celts", "Celts & Barbarians", "☘️", QuizCategory.History),
         QuizSection("history/middle_ages", "Middle Ages", "🏰", QuizCategory.History),
         QuizSection("history/middle_ages/byzantium", "Byzantine Empire", "⛪", QuizCategory.History),
         QuizSection("history/middle_ages/early_middle_ages", "Franks & the Early Middle Ages", "🗡️", QuizCategory.History),
@@ -34,8 +35,10 @@ object QuizSectionCatalog {
         QuizSection("history/middle_ages/hundred_years_war", "Hundred Years' War", "⚜️", QuizCategory.History),
         QuizSection("history/middle_ages/medieval_life", "Medieval Life & the Black Death", "🐀", QuizCategory.History),
         QuizSection("history/middle_ages/mongols", "Mongol Empire", "🏹", QuizCategory.History),
+        QuizSection("history/middle_ages/medieval_russia", "Kievan Rus & Muscovy", "🐻", QuizCategory.History),
         QuizSection("history/middle_ages/imperial_china", "Imperial China & Korea", "🐉", QuizCategory.History),
         QuizSection("history/middle_ages/feudal_japan", "Samurai Japan", "⛩️", QuizCategory.History),
+        QuizSection("history/middle_ages/southeast_asia", "Angkor & Southeast Asia", "🛕", QuizCategory.History),
         QuizSection("history/middle_ages/african_kingdoms", "African Kingdoms", "🌍", QuizCategory.History),
         QuizSection("history/pre_columbian", "Aztecs, Maya & Inca", "☀️", QuizCategory.History),
         QuizSection("history/early_modern", "Early Modern Era", "🕰️", QuizCategory.History),
@@ -72,9 +75,15 @@ object QuizSectionCatalog {
         QuizSection("history/twentieth_century/decolonization", "End of Empires", "🕊️", QuizCategory.History),
         QuizSection("history/twentieth_century/civil_rights", "Civil Rights & Suffrage", "✊", QuizCategory.History),
         QuizSection("history/twentieth_century/modern_china", "Modern China", "🐼", QuizCategory.History),
+        QuizSection("history/twentieth_century/middle_east", "Modern Middle East", "🛢️", QuizCategory.History),
         QuizSection("history/twentieth_century/explorers", "Explorers & Aviators", "🧗", QuizCategory.History),
         QuizSection("history/since_1990", "Since 1990", "🌐", QuizCategory.History),
         QuizSection("history/us_presidents", "US Presidents", "🇺🇸", QuizCategory.History),
-        QuizSection("history/famous_women", "Women in History", "👩", QuizCategory.History)
+        QuizSection("history/famous_women", "Women in History", "👩", QuizCategory.History),
+        QuizSection("history/pacific", "Australia & the Pacific", "🦘", QuizCategory.History),
+        QuizSection("history/medicine", "History of Medicine", "💉", QuizCategory.History),
+        QuizSection("history/spies", "Spies & Codebreakers", "🕵️", QuizCategory.History),
+        QuizSection("history/famous_words", "Famous Words", "💬", QuizCategory.History),
+        QuizSection("history/royal_nicknames", "Royal Nicknames", "🏷️", QuizCategory.History)
     )
 }

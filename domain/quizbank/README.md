@@ -24,6 +24,7 @@ history/
     vikings.tsv, crusades.tsv, ...
   ...
   us_presidents.tsv                  US Presidents (dzial przekrojowy)
+  medicine.tsv, spies.tsv, ...       kolejne dzialy przekrojowe
 ```
 
 Sciezka pliku to sciezka dzialu: `history/antiquity/roman_empire`. Pytania leza tylko w lisciach
@@ -98,8 +99,9 @@ tresci znane tylko w Polsce ida do `poland`, nic, co sie zdezaktualizuje za rok.
 - Daty tylko te, ktore kazdy powinien kojarzyc (1492, 1789, 1914, 1989). Zamiast traktatow i sejmow
   znanych wylacznie z podrecznika - historie z puenta: kto, dlaczego i co z tego wyszlo.
 - Dzial wybiera sie po epoce i temacie pytania. Dzialy przekrojowe (`us_presidents`,
-  `famous_women`) dostaja pytania, w ktorych sedno to sama postac; pytanie o wojne, ktora prezydent
-  prowadzil, zostaje w dziale tej wojny. Zakres kazdego dzialu opisuje komentarz na gorze jego pliku.
+  `famous_women`, `pacific`, `medicine`, `spies`, `famous_words`, `royal_nicknames`) dostaja
+  pytania, w ktorych sedno to sama postac, cytat, przydomek albo watek; pytanie o wojne, ktora
+  prezydent prowadzil, zostaje w dziale tej wojny. Zakres kazdego dzialu opisuje komentarz na gorze jego pliku.
 - `QuizSectionTest` pilnuje, zeby kazdy lisc mial co najmniej 25 pytan, w tym 10 Easy/Medium.
 
 ## Nowy temat albo nowy dzial

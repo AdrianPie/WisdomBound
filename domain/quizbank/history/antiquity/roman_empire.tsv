@@ -8,6 +8,9 @@ hx_legion	Easy	What was a large unit of the Roman army called?	A legion	A phalan
 hy_akwedukty	Easy	What did the Romans build to carry fresh water into their cities?	Aqueducts	Canals	Windmills	Water towers
 his_romans_call_island	Easy	What did the Romans call the island of Great Britain?	Britannia	Gaul	Hibernia	Caledonia
 his_loose_formal_garment	Easy	What loose formal garment did Roman citizens wear?	A toga	A kilt	A kimono	A sari
+his_officer_charge_roman	Easy	What was the officer in charge of about 80 Roman soldiers called?	A centurion	A legate	A tribune	A consul
+his_language_ancient_romans	Easy	Which language did the ancient Romans speak?	Latin	Greek	Italian	Etruscan
+his_large_roman_country	Easy	What was a large Roman country house with farmland called?	A villa	A forum	A basilica	A domus
 trv_hadrian_mur	Medium	In which present-day country is Hadrian's Wall?	The United Kingdom	Germany	Italy	France
 trv_pompeje_odkopanie	Medium	Roughly how long was Pompeii buried before it was rediscovered?	About 1,700 years	About 200 years	About 700 years	About 3,000 years
 org_pensja_sol	Medium	The word 'salary' traces back to Roman payments made in what?	Salt	Grain	Wine	Bronze
@@ -28,6 +31,9 @@ his_pax_romana	Medium	What was the 'Pax Romana'?	Two centuries of peace across t
 his_elite_bodyguard_roman	Medium	What was the elite bodyguard of the Roman emperors, which often made and killed them, called?	The Praetorian Guard	The Varangian Guard	The Immortals	The Swiss Guard
 his_short_stabbing_sword	Medium	What was the short stabbing sword of the Roman legionary called?	The gladius	The pilum	The spatha	The falchion
 his_romans_use_public	Medium	What did Romans use in public latrines instead of toilet paper?	A sponge on a stick	Dried leaves	Linen rags	Smooth pebbles
+his_roman_triumph	Medium	What was a Roman 'triumph'?	A victory parade for a general	A chariot race	A gladiator's prize	A new law
+his_english_city_grew	Medium	Which English city grew around Roman baths fed by hot springs?	Bath	York	London	Chester
+his_roman_winter_festival	Medium	Which Roman winter festival of feasting and gift-giving influenced Christmas customs?	Saturnalia	Lupercalia	Floralia	Bacchanalia
 his_rzym	Hard	In which year did the Western Roman Empire fall?	476	410	395	527
 trv_konstantyn_chrzescijanstwo	Hard	Which Roman emperor was the first to convert to Christianity?	Constantine the Great	Nero	Augustus	Marcus Aurelius
 his_herkulanum	Hard	Which Roman town was buried by Vesuvius along with Pompeii?	Herculaneum	Ostia	Paestum	Capua
@@ -51,6 +57,18 @@ his_roman_emperor_fought	Hard	Which Roman emperor fought as a gladiator in the a
 his_gladiator_fought_net	Hard	What was a gladiator who fought with a net and a trident called?	A retiarius	A murmillo	A secutor	A thraex
 his_queen_palmyra_rebelled	Hard	Which queen of Palmyra rebelled against Rome and was defeated by Aurelian in 272?	Zenobia	Boudica	Cleopatra	Dido
 his_garum_poured_almost	Hard	What was 'garum', poured on almost everything in Roman kitchens?	A fermented fish sauce	A honey and wine syrup	A spicy pepper paste	A sour cheese dip
+his_emperor_built_vast	Hard	Which emperor built a vast villa at Tivoli, near Rome?	Hadrian	Nero	Augustus	Diocletian
+his_emperor_made_christianity	Hard	Which emperor made Christianity the official religion of the empire in 380?	Theodosius I	Constantine	Julian	Diocletian
+his_crowded_apartment_blocks	Hard	What were the crowded apartment blocks of ancient Rome called?	Insulae	Domus	Villae	Thermae
+his_according_tradition_slave	Hard	According to tradition, what did a slave whisper to a general riding in his triumph?	'Remember you are mortal'	'Rome is yours'	'Beware the Ides of March'	'The gods are watching'
+his_philosopher_tutor_emperor	Hard	Which philosopher was the tutor of Emperor Nero, who later forced him to kill himself?	Seneca	Cicero	Marcus Aurelius	Epictetus
+his_roman_emperor_jesus	Hard	Who was the Roman emperor when Jesus was crucified?	Tiberius	Augustus	Nero	Caligula
+his_jewish_historian_described	Hard	Which Jewish historian described the Roman destruction of Jerusalem in AD 70?	Josephus	Philo	Herod	Tacitus
+his_future_emperor_led	Hard	Which future emperor led the Roman army that destroyed the Temple in Jerusalem in AD 70?	Titus	Vespasian	Trajan	Domitian
+his_emperor_born_spain	Hard	Which emperor, born in Spain, was the first Roman ruler from outside Italy?	Trajan	Hadrian	Claudius	Vespasian
+his_roman_engineer_wrote	Hard	Which Roman engineer wrote 'On Architecture', the only such book to survive from antiquity?	Vitruvius	Frontinus	Apollodorus	Agrippa
+his_roman_poet_banished	Hard	Which Roman poet was banished by Augustus to a town on the Black Sea?	Ovid	Virgil	Horace	Catullus
+his_roman_writer_huge	Hard	Which Roman writer of the huge encyclopedia 'Natural History' died in the eruption of Vesuvius?	Pliny the Elder	Pliny the Younger	Seneca	Tacitus
 his_oktawian	Expert	Who was the first Roman emperor?	Augustus (Octavian)	Julius Caesar	Nero	Tiberius
 hx_masada	Expert	Which desert fortress in Israel saw a famous last stand against Rome in AD 73?	Masada	Petra	Jericho	Megiddo
 hy_pliniusz	Expert	Which Roman writer described the eruption of Vesuvius in letters, after his uncle died in it?	Pliny the Younger	Tacitus	Seneca	Cicero
@@ -59,3 +77,4 @@ his_country_adopt_christianity	Expert	Which was the first country to adopt Chris
 his_italian_city_capital	Expert	Which Italian city was the capital of the Western Roman Empire in its last decades?	Ravenna	Milan	Naples	Florence
 his_germanic_chief_trained	Expert	Which Germanic chief, trained in the Roman army, destroyed three legions in AD 9?	Arminius	Alaric	Odoacer	Vercingetorix
 his_emperor_edict_212	Expert	Which emperor's edict of 212 made every free man in the empire a Roman citizen?	Caracalla	Hadrian	Trajan	Septimius Severus
+his_roman_emperor_died	Expert	Which Roman emperor died at York in 211?	Septimius Severus	Hadrian	Constantine	Claudius

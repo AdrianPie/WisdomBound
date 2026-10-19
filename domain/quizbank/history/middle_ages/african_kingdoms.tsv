@@ -16,6 +16,8 @@ his_empire_based_gao	Medium	Which empire, based at Gao, replaced Mali as the gre
 his_empire_rulers_held	Medium	Which empire's rulers held the title 'mansa'?	Mali	Ethiopia	Zimbabwe	Kongo
 his_island_off_east	Medium	Which island off East Africa was a great market for spices, especially cloves, and enslaved people?	Zanzibar	Madagascar	Mauritius	Socotra
 his_holy_relic_ethiopian	Medium	Which holy relic does the Ethiopian Church say is kept in a chapel at Aksum?	The Ark of the Covenant	The Holy Grail	The Crown of Thorns	The Spear of Destiny
+his_west_african_storytellers	Medium	What are the West African storytellers who keep the history of families and kings in song called?	Griots	Shamans	Imams	Marabouts
+his_queen_ndongo_matamba	Medium	Which queen of Ndongo and Matamba fought the Portuguese in today's Angola in the 1600s?	Nzinga	Amina	Nefertari	Yaa Asantewaa
 wh_mansa_musa	Hard	Mansa Musa, regarded as the richest person in history, ruled which African empire?	Mali	Songhai	Ethiopia	Zimbabwe
 his4_wielki_zimbabwe	Hard	Great Zimbabwe was the centre of a state on which continent?	Africa	South America	Asia	Australia
 hx_timbuktu	Hard	Which city in Mali was a famous medieval centre of trade and Islamic learning?	Timbuktu	Marrakesh	Zanzibar	Kano
@@ -25,6 +27,14 @@ his_central_african_kingdom	Hard	Which central African kingdom's king became a C
 his_kingdom_built_hundreds	Hard	Which kingdom built hundreds of small, steep pyramids at Meroe, in today's Sudan?	Kush	Aksum	Egypt	Ethiopia
 his_ancient_ethiopian_city	Hard	Which ancient Ethiopian city is famous for its giant carved stone obelisks?	Aksum	Lalibela	Gondar	Harar
 his_family_languages_spread	Hard	Which family of languages spread across central and southern Africa with early farmers?	Bantu	Berber	Semitic	Khoisan
+his_kingdom_shores_lake	Hard	Which kingdom on the shores of Lake Victoria grew into a great power in the 1700s and 1800s?	Buganda	Ashanti	Dahomey	Kongo
+his_empire_around_lake	Hard	Which empire around Lake Chad lasted for about a thousand years?	Kanem-Bornu	Songhai	Mali	Aksum
+his_kenyan_port_portuguese	Hard	In which Kenyan port did the Portuguese build Fort Jesus in 1593?	Mombasa	Malindi	Lamu	Kilwa
+his_ethiopian_emperor_took	Hard	Which Ethiopian emperor took his own life at Magdala in 1868 as a British army closed in?	Tewodros II	Menelik II	Haile Selassie	Yohannes IV
+his_ancient_ethiopian_script	Hard	Which ancient Ethiopian script is still used to write Amharic?	Ge'ez	Coptic	Nubian	Tifinagh
+his_ancestors_people_built	Hard	Ancestors of which people built the stone city of Great Zimbabwe?	The Shona	The Zulu	The Maasai	The Xhosa
+his_berber_dynasty_sahara	Hard	Which Berber dynasty from the Sahara founded the city of Marrakesh around 1070?	The Almoravids	The Almohads	The Fatimids	The Saadi
+his_queen_mother_led	Hard	Which queen mother led the Ashanti in a war against the British in 1900?	Yaa Asantewaa	Nzinga	Amina	Nandi
 his4_imperium_songhaj	Expert	The Songhai Empire controlled trade around which river?	The Niger	The Congo	The Zambezi	The Orange
 hx_szaka	Expert	Which king built the Zulu nation into a military power in the early 1800s?	Shaka	Cetshwayo	Moshoeshoe	Mzilikazi
 hx_aksum	Expert	Which ancient kingdom in today's Ethiopia was one of the first states to adopt Christianity?	Aksum	Kush	Carthage	Meroe
@@ -32,3 +42,4 @@ hx_benin_brazy	Expert	The famous 'Benin Bronzes' come from a kingdom in which pr
 his_ruler_took_songhai	Expert	Which ruler took the Songhai Empire to its height and made a famous pilgrimage in 1497?	Askia Muhammad	Sonni Ali	Mansa Musa	Sundiata Keita
 his_moroccan_dynasty_army	Expert	Which Moroccan dynasty's army, armed with guns, conquered the Songhai Empire in 1591?	The Saadi	The Almohads	The Almoravids	The Alaouites
 his_swahili_city_state	Expert	Which Swahili city-state, visited by Ibn Battuta, minted its own coins?	Kilwa	Mombasa	Zanzibar	Malindi
+his_people_ruled_kingdom	Expert	Which people ruled a kingdom over most of Madagascar in the 1800s?	The Merina	The Betsileo	The Antandroy	The Swahili

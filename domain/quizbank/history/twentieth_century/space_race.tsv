@@ -7,6 +7,7 @@ his_dog_became_animal	Easy	Which dog became the first animal to orbit the Earth,
 his_space_agency_created	Easy	What is the name of the US space agency, created in 1958?	NASA	ESA	JPL	NORAD
 his_country_launched_sputnik	Easy	Which country launched Sputnik, the first artificial satellite?	The Soviet Union	The USA	Britain	France
 his_apollo_astronauts_bring	Easy	What did the Apollo astronauts bring back from the Moon?	Moon rocks	Moon water	Alien bacteria	Nothing at all
+his_neil_armstrong_buzz	Easy	What did Neil Armstrong and Buzz Aldrin plant on the Moon in 1969?	The American flag	A tree	A cross	A time capsule
 his_gagarin	Medium	Who was the first human to travel into space?	Yuri Gagarin	Neil Armstrong	Alan Shepard	Valentina Tereshkova
 his2_czlowiek_kosmos_rok	Medium	In which year did Yuri Gagarin fly into space?	1961	1957	1969	1965
 his2_sputnik	Medium	What was Earth's first artificial satellite called?	Sputnik 1	Vostok 1	Explorer 1	Luna 1
@@ -21,6 +22,10 @@ his_mission_crew_died	Medium	Which mission's crew died in a fire on the launch p
 his_space_shuttle_broke_2	Medium	Which space shuttle broke apart while coming back to Earth in 2003?	Columbia	Challenger	Discovery	Atlantis
 his_german_born_engineer	Medium	Which German-born engineer led the design of the Saturn V Moon rocket?	Wernher von Braun	Sergei Korolev	Robert Goddard	Hermann Oberth
 his_became_american_space	Medium	Who became the first American in space, in May 1961?	Alan Shepard	John Glenn	Neil Armstrong	Gus Grissom
+his_two_man_nasa	Medium	Which two-man NASA programme came between Mercury and Apollo?	Gemini	Skylab	Vanguard	Explorer
+his_astronaut_alan_shepard	Medium	What did astronaut Alan Shepard famously do on the Moon in 1971?	Hit golf balls	Play a guitar	Plant a tree	Fly a kite
+his_last_apollo_mission	Medium	Which was the last Apollo mission to land on the Moon?	Apollo 17	Apollo 11	Apollo 13	Apollo 20
+his_america_space_station	Medium	What was America's first space station, launched in 1973?	Skylab	Mir	Salyut	Freedom
 hx_ksiezyc_ostatni	Hard	In which year did humans last walk on the Moon?	1972	1969	1979	1985
 hy_wostok	Hard	What was the name of Yuri Gagarin's spacecraft?	Vostok 1	Sputnik 2	Soyuz 1	Apollo 1
 hy_mir	Hard	Which Soviet space station orbited Earth from 1986 to 2001?	Mir	Salyut 7	Skylab	Tiangong
@@ -28,5 +33,11 @@ his_space_shuttle_broke	Hard	Which space shuttle broke apart just after launch i
 his_american_orbit_earth	Hard	Who was the first American to orbit the Earth, in 1962?	John Glenn	Alan Shepard	Neil Armstrong	Gus Grissom
 his_programme_put_american	Hard	Which programme put the first American astronauts into space in the early 1960s?	Mercury	Gemini	Apollo	Skylab
 his_mission_1975_american	Hard	In which mission of 1975 did American and Soviet spacecraft dock in orbit?	Apollo-Soyuz	Gemini-Vostok	Skylab-Mir	Atlantis-Salyut
+his_soviet_rocket_designer	Hard	Which Soviet rocket designer, whose name was kept secret until his death, led the early space programme?	Sergei Korolev	Andrei Sakharov	Mikhail Kalashnikov	Igor Kurchatov
+his_chimpanzee_nasa_sent	Hard	What was the name of the chimpanzee NASA sent into space in 1961?	Ham	Bonzo	Cheeta	Laika
+his_remote_controlled_rover	Hard	What was the first remote-controlled rover to roam the Moon, landed in 1970?	Lunokhod 1	Sojourner	Luna 9	Pathfinder
+his_two_dogs_became	Hard	Which two dogs became the first animals to come back alive from orbit, in 1960?	Belka and Strelka	Laika and Albina	Ham and Enos	Tsygan and Dezik
 hx_earthrise	Expert	Which mission took the famous 'Earthrise' photo from lunar orbit in 1968?	Apollo 8	Apollo 11	Apollo 13	Gemini 7
 his_soviet_probe_made	Expert	Which Soviet probe made the first soft landing on the Moon, in 1966?	Luna 9	Sputnik 3	Lunokhod 1	Vostok 2
+his_became_woman_walk	Expert	Who became the first woman to walk in space, in 1984?	Svetlana Savitskaya	Valentina Tereshkova	Sally Ride	Kathryn Sullivan
+his_soviet_cosmonaut_died	Expert	Which Soviet cosmonaut died when his capsule's parachute failed in 1967?	Vladimir Komarov	Yuri Gagarin	Alexei Leonov	Gherman Titov

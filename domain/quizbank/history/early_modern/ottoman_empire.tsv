@@ -5,6 +5,8 @@ his_title_ruler_ottoman	Easy	What was the title of the ruler of the Ottoman Empi
 his_private_quarters_sultan	Easy	What were the private quarters of the sultan's wives and concubines called?	The harem	The divan	The seraglio gate	The bazaar
 his_modern_country_grew	Easy	Which modern country grew from the heartland of the Ottoman Empire?	Turkey	Greece	Egypt	Iran
 his_covered_market_istanbul	Easy	Which covered market in Istanbul, opened in the 1400s, is one of the largest in the world?	The Grand Bazaar	The Spice Souk	The Silk Hall	The Golden Market
+his_sweet_lokum_turkey	Easy	Which sweet, called 'lokum' in Turkey, is made from starch and sugar?	Turkish delight	Baklava	Halva	Marzipan
+his_traditional_turkish_steam	Easy	What is a traditional Turkish steam bath called?	A hammam	A sauna	A banya	An onsen
 hx_janczarzy	Medium	Who were the Janissaries?	Elite Ottoman soldiers	Persian court poets	Byzantine priests	Mongol messengers
 his_founded_ottoman_state	Medium	Who founded the Ottoman state around 1299, giving it his name?	Osman I	Mehmed II	Orhan	Bayezid I
 his_main_palace_ottoman	Medium	What was the main palace of the Ottoman sultans in Istanbul called?	Topkapi Palace	Dolmabahce Palace	The Alhambra	The Blue Palace
@@ -15,6 +17,7 @@ his_title_ottoman_sultan	Medium	What was the title of the Ottoman sultan's chief
 his_empire_greece_win	Medium	From which empire did Greece win its independence in 1830?	The Ottoman Empire	The Austrian Empire	The Russian Empire	The British Empire
 his_1915_crime_ottoman	Medium	Which 1915 crime of the Ottoman government killed over a million of its Christian subjects?	The Armenian genocide	The Great Fire of Smyrna	The Greek expulsion	The Kurdish revolt
 his_red_felt_hat	Medium	Which red felt hat was a symbol of Ottoman Turkey until Ataturk banned it in 1925?	The fez	The turban	The kalpak	The beret
+his_hurrem_sultan_roxelana	Medium	Who was Hurrem Sultan, also known as Roxelana?	The powerful wife of Suleiman the Magnificent	The mother of Mehmed the Conqueror	The first woman to rule the empire	A famous Ottoman poet
 hx_osmanowie_koniec	Hard	In which year did the Ottoman sultanate come to an end?	1922	1878	1945	1908
 his_crumbling_empire_nicknamed	Hard	Which crumbling empire was nicknamed 'the sick man of Europe' in the 1800s?	The Ottoman Empire	The Austrian Empire	The Russian Empire	The Spanish Empire
 his_great_architect_built	Hard	Which great architect built the Suleymaniye Mosque for Suleiman the Magnificent?	Mimar Sinan	Mehmed Agha	Ali Pasha	Ibrahim Pasha
@@ -23,6 +26,13 @@ his_battle_1526_suleiman	Hard	At which battle of 1526 did Suleiman the Magnifice
 his_ottoman_title_high	Hard	Which Ottoman title for a high official survives in English as a word for a grand lord?	Pasha	Bey	Vizier	Agha
 his_reformist_movement_forced	Hard	Which reformist movement forced the sultan to bring back the constitution in 1908?	The Young Turks	The Janissaries	The Tanzimat	The Ataturk Party
 his_happened_janissaries_1826	Hard	What happened to the Janissaries in 1826?	The sultan had them destroyed	They took over the empire	They were sent to Egypt	They became the police
+his_cage_ottoman_palace	Hard	What was 'the Cage' in the Ottoman palace?	Locked rooms for royal princes	The sultan's private zoo	A prison for foreign spies	The treasury vault
+his_island_ottomans_take	Hard	Which island did the Ottomans take from Venice in 1669 after a siege of over 20 years?	Crete	Cyprus	Rhodes	Corfu
+his_battle_1389_ottomans	Hard	At which battle of 1389 did the Ottomans defeat the Serbs?	Kosovo	Mohacs	Varna	Nicopolis
+his_conqueror_defeated_captured	Hard	Which conqueror defeated and captured Sultan Bayezid I at Ankara in 1402?	Timur	Genghis Khan	Skanderbeg	Vlad the Impaler
+his_great_ottoman_reforms	Hard	What were the great Ottoman reforms of 1839-1876 called?	The Tanzimat	The Devshirme	The Millet	The Divan
+his_city_now_greece	Hard	In which city, now in Greece, was Mustafa Kemal Ataturk born?	Thessaloniki	Athens	Edirne	Izmir
+his_europeans_call_ottoman	Hard	What did Europeans call the Ottoman government, after the gate of the grand vizier's offices?	The Sublime Porte	The Golden Gate	The High Door	The Royal Arch
 his2_bitwa_lepanto	Expert	Who lost the Battle of Lepanto in 1571?	The Ottoman Empire	The Republic of Venice	Spain	The Papal States
 his4_imperium_ottomanskie_szczyt	Expert	Under which sultan did the Ottoman Empire reach its greatest expansion in Europe?	Suleiman the Magnificent	Osman the First	Mehmed the Conqueror	Selim the Grim
 mst_faks_lincoln	Expert	Which empire was still standing when the first fax machine was patented?	The Ottoman Empire	The Roman Empire	The Aztec Empire	The Mongol Empire
@@ -31,3 +41,4 @@ his_tulip_era_1718	Expert	What was the 'Tulip Era' of 1718 to 1730 in the Ottoma
 his_albanian_hero_fought	Expert	Which Albanian hero fought off the Ottomans for 25 years in the 1400s?	Skanderbeg	Janos Hunyadi	Vlad Tepes	Stefan Lazarevic
 his_city_north_west	Expert	Which city in north-west Anatolia was the first Ottoman capital?	Bursa	Edirne	Konya	Izmir
 his_last_ottoman_sultan	Expert	Who was the last Ottoman sultan, who fled Istanbul on a British warship in 1922?	Mehmed VI	Abdulhamid II	Mehmed V	Abdulmejid II
+his_sultan_ruling_1876	Expert	Which sultan, ruling from 1876 to 1909, was nicknamed 'the Red Sultan' by his enemies?	Abdulhamid II	Mehmed V	Mahmud II	Selim III

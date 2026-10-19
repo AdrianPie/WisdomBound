@@ -19,6 +19,10 @@ his_oldest_university_usa	Medium	Which is the oldest university in the USA, foun
 his_confederacy_native_american	Medium	Which confederacy of Native American nations held power in what is now upstate New York?	The Iroquois	The Sioux	The Cherokee	The Apache
 his_colony_virginia_monarch	Medium	The colony of Virginia was named after which monarch?	Elizabeth I	Mary I	Victoria	Anne
 his_native_american_spoke	Medium	Which Native American, who spoke English, helped the Pilgrims learn to grow corn?	Squanto	Pocahontas	Sitting Bull	Geronimo
+his_city_puritan_settlers	Medium	Which city did Puritan settlers found in 1630, which became the capital of Massachusetts?	Boston	Plymouth	Salem	Hartford
+his_canadian_city_founded	Medium	Which Canadian city was founded by French settlers in 1642?	Montreal	Toronto	Halifax	Vancouver
+his_indentured_servants_colonies	Medium	What were 'indentured servants' in the colonies?	Workers bound for years to pay their fare	Slaves freed by their masters	Soldiers paid in land	Children sent to school in England
+his_puritan_colony_john	Medium	Which Puritan colony did John Winthrop lead from 1630?	The Massachusetts Bay Colony	The Plymouth Colony	The Virginia Colony	The Providence Colony
 hy_jamestown	Hard	What was the first permanent English settlement in North America, founded in 1607?	Jamestown	Plymouth	Boston	New Amsterdam
 his_french_explorer_founded	Hard	Which French explorer founded Quebec City in 1608?	Samuel de Champlain	Jacques Cartier	Robert de La Salle	Jacques Marquette
 his_french_explorer_claimed	Hard	Which French explorer claimed the whole Mississippi basin for France in 1682?	Robert de La Salle	Jacques Cartier	Samuel de Champlain	Jacques Marquette
@@ -26,6 +30,12 @@ his_british_general_captured	Hard	Which British general captured Quebec in 1759 
 his_colony_founded_1733	Hard	Which colony was founded in 1733 partly as a fresh start for debtors?	Georgia	Virginia	Maryland	Delaware
 his_colony_lord_baltimore	Hard	Which colony did Lord Baltimore found as a refuge for English Catholics?	Maryland	Pennsylvania	Rhode Island	Virginia
 his_colony_roger_williams	Hard	Which colony did Roger Williams found as a haven of religious freedom in 1636?	Rhode Island	Connecticut	New Hampshire	Delaware
+his_pilgrim_governor_wrote	Hard	Which Pilgrim governor wrote the history 'Of Plymouth Plantation'?	William Bradford	John Winthrop	Miles Standish	John Carver
+his_spanish_town_founded	Hard	Which Spanish town, founded around 1610, is the oldest state capital in the USA?	Santa Fe	San Antonio	Los Angeles	Tucson
+his_uprising_virginia_settlers	Hard	What was the uprising of Virginia settlers against their governor in 1676 called?	Bacon's Rebellion	Shays' Rebellion	Leisler's Rebellion	The Whiskey Rebellion
+his_year_recorded_enslaved	Hard	In which year did the first recorded enslaved Africans arrive in English Virginia?	1619	1565	1700	1776
+his_legged_dutch_governor	Hard	Which one-legged Dutch governor surrendered New Amsterdam to the English in 1664?	Peter Stuyvesant	Peter Minuit	Henry Hudson	Adriaen Block
+his_crop_slaves_grow	Hard	Which crop did slaves grow on the vast plantations of colonial South Carolina?	Rice	Tea	Wheat	Coffee
 hy_manhattan	Expert	According to legend, the Dutch bought Manhattan in 1626 for goods worth about how much?	60 guilders	6,000 guilders	600,000 guilders	A single gold coin
 his_european_country_small	Expert	Which European country had a small colony on the Delaware River from 1638 to 1655?	Sweden	Denmark	Prussia	Scotland
 his_wampanoag_leader_king	Expert	Which Wampanoag leader, called 'King Philip' by the English, led a war against New England in 1675?	Metacom	Massasoit	Squanto	Pontiac
