@@ -23,10 +23,12 @@ import kotlin.random.Random
  * Quiz dziala jak drabinka w "Milionerach": pierwsze pytanie jest rozgrzewka, ostatnie potrafi
  * zabolec. Im dalsza fala, tym wyzej zaczyna sie drabinka - w fali 5 nie ma juz latwych pytan.
  *
- * **Jeden temat = jeden plik** w `quiz/bank` ([BiologyQuestions], [AnimalQuestions], ...), w srodku
- * ulozony szczeblami Easy -> Expert. Nowe pytanie dopisuje sie do pliku swojego tematu - nie do
- * kolejnego "Extra3". Bank rozrosl sie wczesniej do kilkudziesieciu plikow-partii, w ktorych ten sam
- * fakt siedzial po trzy razy, a nikt nie widzial calego tematu naraz.
+ * **Jeden temat = jeden plik TSV** w `domain/quizbank` (history.tsv, biology.tsv, ...), ulozony
+ * szczeblami Easy -> Expert. Z niego `tools/quizbank.py generate` robi [BiologyQuestions],
+ * [AnimalQuestions], ... - tych plikow Kotlin nie edytuje sie recznie. Nowe pytania dopisuje
+ * `tools/quizbank.py add`, ktore najpierw szuka dubli w calym banku (instrukcja:
+ * domain/quizbank/README.md). Bank rozrosl sie wczesniej do kilkudziesieciu plikow-partii, w ktorych
+ * ten sam fakt siedzial po trzy razy, a nikt nie widzial calego tematu naraz.
  *
  * Zasady dla kazdego pytania (czesci pilnuja testy, patrz QuizBankTest i QuizBankAuditTest):
  * 1. **Ma zaskakiwac albo bawic.** Po dobrym pytaniu gracz chce komus opowiedziec, czego sie

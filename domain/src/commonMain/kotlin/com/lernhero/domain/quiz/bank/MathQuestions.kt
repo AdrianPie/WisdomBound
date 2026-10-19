@@ -1,3 +1,5 @@
+// PLIK GENEROWANY z domain/quizbank/math.tsv przez `python3 tools/quizbank.py generate`.
+// Nie edytuj go recznie - pytania dopisuje sie do TSV (patrz domain/quizbank/README.md).
 package com.lernhero.domain.quiz.bank
 
 import com.lernhero.domain.quiz.QuizCategory
@@ -23,8 +25,13 @@ object MathQuestions {
     private fun q(id: String, prompt: String, correct: String, wrong: List<String>, difficulty: QuizDifficulty) =
         QuizEntry(id = id, prompt = prompt, correct = correct, wrong = wrong, category = QuizCategory.Math, difficulty = difficulty)
 
-    val all: List<QuizEntry> = listOf(
-        /* ------------------------------ Easy ------------------------------ */
+    val all: List<QuizEntry> = easy() + medium() + hard() + expert()
+
+    // Kazdy poziom w osobnej funkcji: jedna wielka lista w inicjalizatorze obiektu przekroczylaby
+    // z czasem limit 64 KB kodu na metode JVM (735 pytan historii zajmowalo w nim juz ~36 KB).
+
+    /* ------------------------------ Easy ------------------------------ */
+    private fun easy(): List<QuizEntry> = listOf(
         q("mat_suma_katow", "What is the sum of angles in a triangle?", "180 degrees", listOf("360 degrees", "90 degrees", "270 degrees"), E),
         q("mat3_kat_polny_stopnie", "How many degrees is a straight angle?", "180", listOf("90", "360", "45"), E),
         q("mat3_liczba_rzymska_m", "What number does the Roman numeral M represent?", "1000", listOf("500", "100", "5000"), E),
@@ -64,8 +71,29 @@ object MathQuestions {
         q("mat_20_procent_ulamek", "What is 20% written as a fraction?", "1/5", listOf("1/20", "1/4", "2/5"), E),
         q("matx_pentagon", "How many sides does the Pentagon building near Washington have?", "Five", listOf("Six", "Eight", "Four"), E),
         q("matx_13", "Fear of which number is called 'triskaidekaphobia'?", "13", listOf("7", "4", "666"), E),
+        q("mat_degrees_full_circle", "How many degrees are there in a full circle?", "360", listOf("180", "100", "400"), E),
+        q("mat_longest_side_right", "What is the longest side of a right-angled triangle called?", "The hypotenuse", listOf("The diagonal", "The base", "The radius"), E),
+        q("mat_straight_line_centre", "What is a straight line from the centre of a circle to its edge called?", "The radius", listOf("The diameter", "The chord", "The tangent"), E),
+        q("mat_wedding_anniversary_silver", "Which wedding anniversary is the 'silver' one?", "25th", listOf("10th", "50th", "40th"), E),
+        q("mat_cards_standard_deck", "How many cards are in a standard deck, not counting jokers?", "52", listOf("54", "48", "56"), E),
+        q("mat_number_considered_especially", "Which number is considered especially lucky in China?", "8", listOf("4", "7", "13"), E),
+        q("mat_small_coloured_squares", "How many small coloured squares are on one face of a standard Rubik's Cube?", "Nine", listOf("Six", "Twelve", "Sixteen"), E),
+        q("mat_kilo_mean_words", "What does 'kilo' mean in words like 'kilogram'?", "A thousand", listOf("A hundred", "A million", "Ten"), E),
+        q("mat_straight_line_through", "What is a straight line through the centre of a circle, from edge to edge, called?", "The diameter", listOf("The radius", "The chord", "The arc"), E),
+        q("mat_wedding_anniversary_golden", "Which wedding anniversary is the 'golden' one?", "50th", listOf("25th", "40th", "60th"), E),
+        q("mat_shape_traditional_give", "What shape is a traditional 'Give way' road sign?", "A triangle", listOf("A circle", "A square", "An octagon"), E),
+        q("mat_triangle_all_three", "What is a triangle with all three sides equal called?", "Equilateral", listOf("Isosceles", "Scalene", "Right-angled"), E),
+        q("mat_roman_numeral_stands_2", "Which Roman numeral stands for 100?", "C", listOf("X", "L", "M"), E),
+        q("mat_chance_drawing_heart", "What is the chance of drawing a heart from a full 52-card deck?", "1 in 4", listOf("1 in 13", "1 in 2", "1 in 52"), E),
+        q("mat_farmer_sheep_all", "A farmer has 17 sheep and all but 9 run away. How many are left?", "9", listOf("8", "17", "0"), E),
+        q("mat_race_overtake_runner", "In a race, you overtake the runner in second place. What place are you in now?", "Second", listOf("First", "Third", "Last"), E),
+        q("mat_q", "What is 2 + 2 x 2?", "6", listOf("8", "4", "10"), E),
+        q("mat_letter_comes_next", "Which letter comes next: J, F, M, A, M, J, ...?", "J", listOf("A", "S", "N"), E),
+        q("mat_chance_rolling_six", "What is the chance of rolling a six with one fair die?", "1 in 6", listOf("1 in 3", "1 in 12", "1 in 36"), E)
+    )
 
-        /* ----------------------------- Medium ----------------------------- */
+    /* ----------------------------- Medium ----------------------------- */
+    private fun medium(): List<QuizEntry> = listOf(
         q("day2_procent_skladany", "What is compound interest?", "Interest earned on interest already added", listOf("A one-time fee", "A fixed monthly cost", "Interest paid only at the end"), M),
         q("day2_inflacja", "What does inflation mean for your savings?", "The same money buys less over time", listOf("Your balance shrinks", "Interest rates always fall", "Prices stay fixed"), M),
         q("mat_pi", "What is the approximate value of pi?", "3.14", listOf("3.41", "2.71", "3.04"), M),
@@ -126,8 +154,38 @@ object MathQuestions {
         q("maty_piramida_sciany", "Counting the base, how many faces does a square-based pyramid have?", "Five", listOf("Four", "Six", "Eight"), M),
         q("maty_podzielne_15", "How many whole numbers from 1 to 100 are divisible by both 3 and 5?", "6", listOf("5", "7", "15"), M),
         q("maty_tarcza_zegara", "What do all the numbers on a standard clock face add up to?", "78", listOf("60", "72", "66"), M),
+        q("mat_sided_polygon", "What is a 12-sided polygon called?", "A dodecagon", listOf("A decagon", "A hexagon", "A nonagon"), M),
+        q("mat_triangle_two_equal", "What is a triangle with two equal sides called?", "Isosceles", listOf("Scalene", "Equilateral", "Obtuse"), M),
+        q("mat_roman_numeral_stands", "Which Roman numeral stands for 500?", "D", listOf("C", "M", "L"), M),
+        q("mat_years_diamond_jubilee", "How many years does a 'diamond jubilee' celebrate?", "60", listOf("50", "75", "100"), M),
+        q("mat_roughly_centimetres_inch", "Roughly how many centimetres are in an inch?", "2.54", listOf("1.5", "3.6", "5.08"), M),
+        q("mat_roughly_kilometres_mile", "Roughly how many kilometres are in a mile?", "1.6", listOf("1.2", "2.2", "0.6"), M),
+        q("mat_feet_yard", "How many feet are in a yard?", "Three", listOf("Two", "Twelve", "Five"), M),
+        q("mat_besides_liberia_myanmar", "Besides Liberia and Myanmar, which country has never fully adopted the metric system?", "The United States", listOf("The United Kingdom", "Canada", "Australia"), M),
+        q("mat_word_algebra_comes", "The word 'algebra' comes from which language?", "Arabic", listOf("Greek", "Latin", "Persian"), M),
+        q("mat_french_thinker_gave", "Which French thinker gave his name to 'Cartesian' coordinates?", "Rene Descartes", listOf("Blaise Pascal", "Pierre de Fermat", "Joseph Fourier"), M),
+        q("mat_film_troubled_mathematician", "Which film is about the troubled mathematician John Nash?", "A Beautiful Mind", listOf("Good Will Hunting", "The Imitation Game", "The Theory of Everything"), M),
+        q("mat_film_tells_story", "Which film tells the story of Black women mathematicians who helped NASA reach space?", "Hidden Figures", listOf("Apollo 13", "The Right Stuff", "First Man"), M),
+        q("mat_prefix_mega_mean", "What does the prefix 'mega' mean in words like 'megawatt'?", "A million", listOf("A thousand", "A billion", "A hundred"), M),
+        q("mat_sides_heptagon", "How many sides does a heptagon have?", "Seven", listOf("Six", "Eight", "Nine"), M),
+        q("mat_five_pointed_star", "What is a five-pointed star drawn with one continuous line called?", "A pentagram", listOf("A pentagon", "A hexagram", "A heptagon"), M),
+        q("mat_prefix_centi_mean", "What does the prefix 'centi' mean in words like 'centimetre'?", "A hundredth", listOf("A thousandth", "A hundred", "A tenth"), M),
+        q("mat_sorted_list_numbers", "In a sorted list of numbers, what is the middle value called?", "The median", listOf("The mean", "The mode", "The range"), M),
+        q("mat_comes_next", "What comes next: 1, 8, 27, 64, ...?", "125", listOf("100", "81", "128"), M),
+        q("mat_comes_next_100", "What comes next: 100, 50, 25, ...?", "12.5", listOf("10", "15", "0"), M),
+        q("mat_sides_nonagon", "How many sides does a nonagon have?", "Nine", listOf("Seven", "Eight", "Eleven"), M),
+        q("mat_times_subtract", "How many times can you subtract 5 from 25?", "Once", listOf("Five times", "Four times", "Twenty times"), M),
+        q("mat_divide_half_add", "Divide 30 by a half and add 10. What do you get?", "70", listOf("25", "40", "50"), M),
+        q("mat_comes_next_2", "What comes next: 1, 2, 4, 7, 11, ...?", "16", listOf("15", "14", "18"), M),
+        q("mat_letter_comes_next_2", "Which letter comes next: O, T, T, F, F, S, S, E, ...?", "N", listOf("E", "T", "O"), M),
+        q("mat_different_orders_arrange", "In how many different orders can you arrange the letters C, A and T?", "6", listOf("3", "9", "27"), M),
+        q("mat_angle_clock_hands", "What angle do a clock's hands make at exactly 6 o'clock?", "180 degrees", listOf("90 degrees", "120 degrees", "360 degrees"), M),
+        q("mat_birds_make_brace", "How many birds make 'a brace'?", "Two", listOf("Three", "Six", "Twelve"), M),
+        q("mat_ancient_greek_counting", "In ancient Greek counting, how many was a 'myriad'?", "10,000", listOf("1,000", "100", "1,000,000"), M)
+    )
 
-        /* ------------------------------ Hard ------------------------------ */
+    /* ------------------------------ Hard ------------------------------ */
+    private fun hard(): List<QuizEntry> = listOf(
         q("mat_silnia_5", "What is 5! (5 factorial)?", "120", listOf("100", "60", "150"), H),
         q("mat_fibonacci", "What number comes next in the sequence 1, 1, 2, 3, 5, 8...?", "13", listOf("11", "12", "16"), H),
         q("mat2_logarytm_2_8", "What is log base 2 of 8?", "3", listOf("2", "4", "8"), H),
@@ -175,8 +233,17 @@ object MathQuestions {
         q("matx_kroliki", "The Fibonacci sequence first appeared in a puzzle about breeding which animals?", "Rabbits", listOf("Mice", "Sheep", "Chickens"), H),
         q("maty_platonskie", "How many 'Platonic solids' (perfectly regular 3D shapes) are there?", "Five", listOf("Four", "Seven", "Infinitely many"), H),
         q("maty_dwie_szostki", "What is the chance of rolling a total of 12 with two dice?", "1 in 36", listOf("1 in 12", "1 in 6", "1 in 18"), H),
+        q("mat_pounds_stone", "How many pounds are in a stone?", "14", listOf("12", "16", "10"), H),
+        q("mat_feet_mile", "How many feet are in a mile?", "5,280", listOf("3,000", "5,000", "1,760"), H),
+        q("mat_german_mathematician_developed", "Which German mathematician developed calculus at the same time as Isaac Newton?", "Gottfried Leibniz", listOf("Carl Friedrich Gauss", "Leonhard Euler", "Bernhard Riemann"), H),
+        q("mat_ancient_people_counted", "Which ancient people counted in base 60, giving us 60 minutes in an hour?", "The Babylonians", listOf("The Egyptians", "The Greeks", "The Romans"), H),
+        q("mat_prefix_nano_mean", "What does the prefix 'nano' mean?", "A billionth", listOf("A millionth", "A thousandth", "A trillionth"), H),
+        q("mat_roughly_grams_pound", "Roughly how many grams are in a pound?", "454", listOf("254", "354", "554"), H),
+        q("mat_roughly_litres_gallon", "Roughly how many litres are in a US gallon?", "3.8", listOf("2.5", "4.5", "5.2"), H)
+    )
 
-        /* ----------------------------- Expert ----------------------------- */
+    /* ----------------------------- Expert ----------------------------- */
+    private fun expert(): List<QuizEntry> = listOf(
         q("mat_liczba_e", "What is the approximate value of e?", "2.72", listOf("3.14", "1.62", "2.24"), X),
         q("mat_liczby_doskonale", "Which of these numbers is perfect (equal to the sum of its divisors)?", "28", listOf("24", "30", "36"), X),
         q("mat_duzy_pierwszy", "Which of these numbers is NOT prime?", "91", listOf("89", "97", "83"), X),

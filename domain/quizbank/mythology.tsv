@@ -1,0 +1,326 @@
+# Mitologia: Grecja, Rzym, Polnoc, Egipt, Slowianie, Azja i obie Ameryki - plus slady mitow
+# w dzisiejszym jezyku, nazwach i markach.
+#
+# Ten sam mit potrafil siedziec w banku trzy razy (piete Achillesa, oko Odyna, Syzyfa) - zostalo
+# po jednym pytaniu na fakt.
+#
+# Zasady pisania pytan dla calego banku - patrz [com.lernhero.domain.quiz.QuizBank].
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+mit_zeus	Easy	Who was king of the Greek gods?	Zeus	Poseidon	Hades	Apollo
+mit_posejdon	Easy	Which Greek god ruled the seas?	Poseidon	Zeus	Ares	Hermes
+mit_thor	Easy	What weapon did the Norse god Thor use?	A hammer	A sword	A spear	A bow
+mit_olimp	Easy	On which mountain did the Greek gods live?	Olympus	Parnassus	Etna	Ida
+mit_meduza	Easy	What did the monster Medusa have on her head instead of hair?	Snakes	Flames	Feathers	Worms
+mit2_afrodyta	Easy	Which Greek goddess presided over love and beauty?	Aphrodite	Hera	Artemis	Demeter
+mit2_ares	Easy	Which Greek god was the god of war?	Ares	Apollo	Hermes	Hephaestus
+mit2_hermes	Easy	Which god was the messenger of the Greek gods?	Hermes	Ares	Dionysus	Poseidon
+mit2_zeus_bron	Easy	What weapon did Zeus wield?	A thunderbolt	A trident	A flaming sword	A bow
+mit2_kon_trojanski	Easy	What did the Greeks use to capture Troy?	A wooden horse	A battering ram	A tunnel	The queen's betrayal
+mit2_syreny	Easy	What did sirens lure sailors with?	Singing	Gold	Lighthouse light	Scent
+mit2_centaur	Easy	What was a centaur?	Half man, half horse	Half man, half bull	Half bird, half lion	A giant one-eyed being
+mit2_cyklop	Easy	What set a cyclops apart?	One eye	Wings	A snake's tail	Three heads
+mit3_apollo_domena	Easy	What was Apollo the god of?	The sun, music and prophecy	War	The sea	Blacksmithing
+mit3_demeter_domena	Easy	What was Demeter the goddess of?	Harvest and fertility	War	The sea	The underworld
+mit3_herakles_ojciec	Easy	Who was Heracles's divine father?	Zeus	Poseidon	Ares	Hades
+mit3_pegaz	Easy	What was Pegasus?	A winged horse	A winged lion	A winged dog	A winged snake
+mit3_horus	Easy	Which animal/symbol often accompanies the Egyptian god Horus?	A falcon	A cat	A crocodile	A jackal
+mit3_bastet	Easy	Which animal did the Egyptian goddess Bastet represent?	A cat	A crocodile	A falcon	A snake
+scicmp_odpowiednik_zeusa	Easy	Who is the Roman equivalent of the Greek god Zeus?	Jupiter	Mars	Neptune	Saturn
+scicmp_nie_grecki_bog	Easy	Which of these is NOT a Greek god?	Odin	Zeus	Hades	Poseidon
+scicmp_nordycki_bog	Easy	Which of these gods comes from Norse mythology?	Thor	Apollo	Osiris	Vishnu
+trv2_ikar	Easy	Who flew too close to the Sun on wings of feathers and wax?	Icarus	Daedalus	Perseus	Hermes
+trv2_midas	Easy	What did everything King Midas touched turn into?	Gold	Stone	Silver	Dust
+trv2_cerber	Easy	What is the three-headed dog that guards the Greek underworld called?	Cerberus	Orthrus	Fenrir	Argos
+trv2_achilles_pieta	Easy	Which hero could only be wounded in his heel?	Achilles	Hector	Ajax	Odysseus
+trv2_pandora	Easy	Who opened a jar (or box) that released all the evils into the world?	Pandora	Persephone	Psyche	Helen
+trv2_feniks	Easy	Which mythical bird is reborn from its own ashes?	The phoenix	The griffin	The roc	The harpy
+trv2_hermes_buty	Easy	What did Hermes wear that let him fly?	Winged sandals	A winged helmet only	A magic cloak	A feathered belt
+trv2_dionizos	Easy	Which Greek god presided over wine and festivity?	Dionysus	Apollo	Hephaestus	Hermes
+org_czwartek_thor	Easy	Thursday is named after which Norse god?	Thor	Odin	Freyr	Tyr
+wld_meduza_wzrok	Easy	What happened to anyone who looked at Medusa?	They turned to stone	They went blind	They fell asleep forever	They forgot who they were
+wld_myt_loki	Easy	Which Norse god is famous as a shape-shifting trickster?	Loki	Tyr	Baldr	Heimdall
+myt_afrodyta_wenus	Easy	The Roman goddess Venus is the same as which Greek goddess?	Aphrodite	Athena	Hera	Artemis
+myt_nike_marka	Easy	Which sportswear brand is named after the Greek goddess of victory?	Nike	Adidas	Puma	Reebok
+myt_amazonki	Easy	Which online retailer shares its name with a legendary tribe of warrior women?	Amazon	eBay	Etsy	Alibaba
+myt_hydra	Easy	Which monster grew two new heads for every one that was cut off?	The Hydra	The Chimera	Cerberus	The Kraken
+myt_pan	Easy	Which Greek god of the wild had the legs of a goat and played pipes?	Pan	Dionysus	Hermes	Apollo
+myt_helena	Easy	Whose beauty was said to have 'launched a thousand ships'?	Helen of Troy	Penelope	Cleopatra	Aphrodite
+myt_nic_tezeusza	Easy	What did Theseus use to find his way back out of the labyrinth?	A ball of thread	A trail of breadcrumbs	A map on a shield	A burning torch
+myt_leprechaun	Easy	In Irish folklore, which little creatures hide pots of gold?	Leprechauns	Pixies	Elves	Gnomes
+myt_excalibur	Easy	What is the name of King Arthur's legendary sword?	Excalibur	Durendal	Joyeuse	Gram
+myt_merlin	Easy	Who is the wizard who advises King Arthur?	Merlin	Gandalf	Morgana	Lancelot
+myt_nessie	Easy	Which famous monster is said to live in a Scottish lake?	Nessie	Bigfoot	The Yeti	The Kraken
+myt_yeti	Easy	Which creature of Himalayan legend is also called 'the Abominable Snowman'?	The Yeti	Bigfoot	The Wendigo	The Chupacabra
+myt_bigfoot	Easy	Which ape-like creature of North American legend is also called Sasquatch?	Bigfoot	The Yeti	The Mothman	The Jersey Devil
+myt_czosnek	Easy	In folklore, which plant are vampires said to fear?	Garlic	Onion	Mint	Basil
+myt_srebrna_kula	Easy	In folklore, what is needed to kill a werewolf?	A silver bullet	A wooden stake	Holy water	A golden arrow
+myt_smok_walia	Easy	Which mythical creature appears on the flag of Wales?	A red dragon	A griffin	A unicorn	A phoenix
+myt_romulus_remus	Easy	Which twins, raised by a she-wolf, are said to have founded Rome?	Romulus and Remus	Castor and Pollux	Apollo and Artemis	Cain and Abel
+mytx_hera	Easy	Who was the queen of the Greek gods?	Hera	Athena	Aphrodite	Demeter
+mytx_ares_mars	Easy	What is the Roman name for the Greek god Ares?	Mars	Jupiter	Mercury	Neptune
+mytx_trojzab	Easy	What three-pronged weapon does Poseidon carry?	A trident	A spear	A bow	A sickle
+mytx_zodiak	Easy	How many animals are there in the Chinese zodiac?	12	10	8	13
+mytx_wrozka_zebuszka	Easy	In many countries, which folklore figure leaves money for a child's lost tooth?	The Tooth Fairy	Santa Claus	The Sandman	The Easter Bunny
+mytx_laponia	Easy	According to Finnish tradition, in which region does Santa Claus live?	Lapland	Greenland	Siberia	Iceland
+mytx_robin_hood	Easy	In which forest did Robin Hood and his Merry Men hide?	Sherwood Forest	The Black Forest	Epping Forest	The New Forest
+myty_sezamie	Easy	What are the magic words that open the robbers' cave in 'Ali Baba'?	Open sesame	Abracadabra	Hocus pocus	Alakazam
+myt_thor_father_norse	Easy	Who is Thor's father in Norse mythology?	Odin	Loki	Tyr	Heimdall
+myt_minotaur	Easy	What was the Minotaur?	Half man, half bull	Half man, half horse	Half woman, half bird	Half lion, half eagle
+myt_saint_inspired_santa	Easy	Which saint, who inspired Santa Claus, is celebrated on 6 December?	Saint Nicholas	Saint Valentine	Saint Patrick	Saint Stephen
+myt_saint_said_slain	Easy	Which saint, said to have slain a dragon, is the patron saint of England?	Saint George	Saint Michael	Saint Andrew	Saint David
+myt_robin_hood_legends	Easy	In the Robin Hood legends, who is Robin's great enemy?	The Sheriff of Nottingham	The Earl of Warwick	The Black Knight	The Green Knight
+myt_day_week_roman	Easy	Which day of the week is named after the Roman god Saturn?	Saturday	Sunday	Thursday	Tuesday
+myt_according_legend_see	Easy	According to legend, what can't you see when a vampire stands before a mirror?	Its reflection	Its fangs	Its eyes	Its cloak
+myt_stories_magical_comes	Easy	In stories, which magical being comes out of a lamp to grant three wishes?	A genie	A fairy	A wizard	An elf
+myt_pulled_sword_stone	Easy	Who pulled the sword from the stone to prove he was the true king?	Arthur	Lancelot	Merlin	Galahad
+myt_according_american_tradition	Easy	According to American tradition, where does Santa Claus live?	At the North Pole	In Lapland	In Greenland	In Iceland
+myt_fairy_tale_three	Easy	In the fairy tale 'The Three Billy Goats Gruff', who lives under the bridge?	A troll	A giant	A witch	A dragon
+myt_romans_call_poseidon	Easy	What did the Romans call Poseidon, the god of the sea?	Neptune	Mercury	Vulcan	Saturn
+myt_king_arthur_queen	Easy	Who was King Arthur's queen?	Guinevere	Morgan le Fay	Isolde	Elaine
+myt_robin_hood_sweetheart	Easy	Who is Robin Hood's sweetheart in the English legends?	Maid Marian	Lady Godiva	Guinevere	Rowena
+myt_mythical_creature_half	Easy	Which mythical creature is half man and half goat?	Satyr	Centaur	Minotaur	Griffin
+cultw_odyn_ptaki	Medium	Which two ravens brought Odin news of the world?	Huginn and Muninn	Geri and Freki	Sleipnir and Fenrir	Vidar and Vali
+mit_hades	Medium	Who ruled the Greek underworld?	Hades	Poseidon	Cronus	Dionysus
+mit_atena	Medium	Which goddess was the patron of wisdom and Athens?	Athena	Hera	Aphrodite	Artemis
+mit_odyn	Medium	What was the chief Norse god called?	Odin	Thor	Loki	Baldur
+mit_anubis	Medium	Which Egyptian god had the head of a jackal?	Anubis	Ra	Horus	Osiris
+mit_minotaur	Medium	Where did the Minotaur live?	In the labyrinth on Crete	On the slopes of Olympus	Behind the walls of Troy	In the depths of Hades
+mit2_artemida	Medium	What was Artemis the patron of?	The hunt and the moon	The hearth	Trade	The vine
+mit2_prometeusz	Medium	What did Prometheus steal from the gods for humanity?	Fire	Gold	Nectar	Ambrosia
+mit2_syzyf	Medium	What punishment was Sisyphus sentenced to?	Endlessly pushing a boulder uphill	Eternal hunger and thirst	Being chained to a rock	Wandering a labyrinth forever
+mit2_tantal	Medium	What was Tantalus's torment?	Water and fruit slipping away whenever he reached	Carrying the whole sky on his shoulders	Being devoured each day by an eagle	Rolling a boulder up a hill for ever
+mit2_atlas	Medium	What did Atlas carry?	The vault of the sky	Mount Olympus	The Earth	The gates of Hades
+mit2_jazon	Medium	What was Jason searching for with the Argonauts?	The Golden Fleece	The Holy Grail	The apples of the Hesperides	Medusa's hair
+mit2_tezeusz	Medium	Who killed the Minotaur?	Theseus	Heracles	Perseus	Achilles
+mit2_perseusz	Medium	Who killed Medusa?	Perseus	Theseus	Odysseus	Jason
+mit2_walhalla	Medium	Who was admitted to Valhalla?	Warriors fallen in battle	All the dead	Priests	Kings
+mit2_ra	Medium	Which Egyptian god ruled over the sun?	Ra	Osiris	Set	Horus
+mit3_dedal	Medium	Who was Daedalus in Greek mythology?	An inventor, builder of the labyrinth on Crete	A god of war worshipped across Greece	A king who ruled the city of Athens	A hero who fought outside the walls of Troy
+mit3_orfeusz	Medium	Who did Orpheus descend into the underworld for?	His wife Eurydice	His mother	His friend Heracles	The Golden Fleece
+mit3_narcyz	Medium	What happened to Narcissus in the Greek myth?	He fell in love with his own reflection	He was turned into a laurel tree	He was taken up among the gods	He was killed in single combat
+mit3_echo_nimfa	Medium	What happened to the nymph Echo in mythology?	She could only repeat others' words	She turned into a flower	She became a goddess	She fled to Olympus
+mit3_sobek	Medium	Which animal does the Egyptian god Sobek represent?	A crocodile	A falcon	A jackal	A scarab
+mit3_quetzalcoatl	Medium	Who was Quetzalcoatl in Aztec mythology?	The feathered serpent god	The rain god only	A human king	A mountain spirit
+mit3_inti	Medium	What was Inti the god of in Inca mythology?	The sun	The moon	The sea	The earth
+wh_mit_wisznu	Medium	In which religion do the gods Brahma, Vishnu and Shiva appear?	Hinduism	Buddhism	Sikhism	Jainism
+trv2_mjolnir	Medium	What is the name of Thor's hammer?	Mjolnir	Gungnir	Gram	Skidbladnir
+trv2_atena_glowa	Medium	Which goddess was born fully grown from the head of Zeus?	Athena	Aphrodite	Artemis	Hera
+trv2_marzec_mars	Medium	The month of March is named after which Roman god?	Mars	Mercury	Jupiter	Janus
+trv2_ganesha	Medium	Which Hindu god has the head of an elephant?	Ganesha	Hanuman	Vishnu	Shiva
+trv2_chimera	Medium	Which monster had a lion's head, a goat's body and a serpent's tail?	The Chimera	The Hydra	The Sphinx	The Manticore
+trv2_persefona	Medium	Who was abducted by Hades and made queen of the underworld?	Persephone	Aphrodite	Ariadne	Eurydice
+trv2_ozyrys	Medium	Which Egyptian god ruled the afterlife and was killed by his brother Set?	Osiris	Ra	Horus	Anubis
+trv2_hefajstos	Medium	Which Greek god was the smith who forged the gods' weapons?	Hephaestus	Ares	Hermes	Poseidon
+trv2_sfinks_zagadka	Medium	What did the Sphinx do to travellers who could not answer her riddle?	Devoured them	Turned them to stone	Sent them home	Made them her servants
+org_sroda_odyn	Medium	Wednesday takes its name from which Norse god?	Odin	Thor	Loki	Balder
+org_panika_pan	Medium	The word 'panic' comes from which Greek god?	Pan	Ares	Phobos	Hades
+org_platki_ceres	Medium	The word 'cereal' comes from which Roman goddess?	Ceres	Flora	Vesta	Pomona
+org_muzeum_muzy	Medium	The word 'museum' originally meant a place dedicated to whom?	The Muses	Athena	Apollo	The Fates
+mst_puszka_pandory	Medium	What was left inside Pandora's container after everything escaped?	Hope	Fear	Wisdom	Time
+cur_thor_kozy	Medium	What pulls the Norse god Thor's chariot?	Two goats	Two wolves	Eight-legged horse	Two ravens
+wld_atena_symbol	Medium	Which bird is the symbol of Athena?	The owl	The eagle	The peacock	The dove
+myt_hermes_moda	Medium	Which Paris fashion house, famous for silk scarves and Birkin bags, bears the name of a Greek god?	Hermes	Chanel	Dior	Versace
+myt_penelopa	Medium	What was the name of Odysseus's wife, who waited 20 years for him?	Penelope	Helen	Andromache	Clytemnestra
+myt_parys	Medium	Which Trojan prince carried off Helen, starting the Trojan War?	Paris	Hector	Aeneas	Priam
+myt_achilles_hektor	Medium	Which Greek hero killed the Trojan prince Hector?	Achilles	Odysseus	Ajax	Agamemnon
+myt_argo	Medium	What was the name of Jason's ship?	The Argo	The Nautilus	The Trireme	The Pegasus
+myt_ariadna	Medium	Which princess gave Theseus the thread that led him out of the labyrinth?	Ariadne	Medea	Phaedra	Andromeda
+myt_heimdall	Medium	Which Norse god guards the rainbow bridge to Asgard?	Heimdall	Tyr	Baldr	Freyr
+myt_midgard	Medium	What is the world of humans called in Norse myth?	Midgard	Asgard	Jotunheim	Vanaheim
+myt_piatek_frigg	Medium	Which day of the week is named after the Norse goddess Frigg?	Friday	Thursday	Tuesday	Saturday
+myt_kryszna	Medium	Which Hindu god is often shown with blue skin, playing a flute?	Krishna	Shiva	Ganesha	Hanuman
+myt_sun_wukong	Medium	Which monkey king of Chinese legend wields a magic staff that can change size?	Sun Wukong	Hanuman	Nezha	Zhu Bajie
+myt_banshee	Medium	In Irish folklore, what does a banshee do?	Wails to warn of a coming death	Steals babies from their cradles	Grants three wishes	Guards buried treasure
+myt_camelot	Medium	What was the name of King Arthur's castle and court?	Camelot	Avalon	Tintagel	Lyonesse
+myt_graal	Medium	What sacred object did King Arthur's knights go searching for?	The Holy Grail	The Golden Fleece	The Ark of the Covenant	The Spear of Destiny
+myt_tytani_slowo	Medium	The word 'titanic' comes from which race of giant gods?	The Titans	The Cyclopes	The Gorgons	The Olympians
+myt_kon_trojanski_it	Medium	In computing, what is a 'Trojan horse'?	Malware disguised as harmless software	A very fast new processor	A backup copy of a hard disk	A kind of wireless game controller
+myt_starbucks	Medium	Which company's logo shows a twin-tailed siren from mythology?	Starbucks	McDonald's	Costa Coffee	Dunkin'
+myt_orion	Medium	Which constellation is named after a giant hunter from Greek myth?	Orion	Perseus	Hercules	Cepheus
+myt_kraken	Medium	What is the Kraken?	A giant sea monster from Nordic folklore	A fire-breathing bull from Crete	A river spirit from Ireland	A desert demon from Egypt
+myt_prometeusz_watroba	Medium	Which Titan was chained to a rock while an eagle ate his liver every day?	Prometheus	Atlas	Cronus	Epimetheus
+myt_minerwa	Medium	The Roman goddess Minerva is the same as which Greek goddess?	Athena	Hera	Demeter	Artemis
+myt_obol	Medium	What did the ancient Greeks place with the dead to pay the ferryman Charon?	A coin	A key	A seed	A feather
+myt_dzinn	Medium	In Arabian folklore, what is a djinn (genie) made of?	Smokeless fire	Sand and wind	Moonlight	Clay and water
+myt_szeherezada	Medium	Who tells the stories night after night in 'One Thousand and One Nights'?	Scheherazade	Aladdin	Sinbad	Ali Baba
+myt_maui	Medium	Which Polynesian demigod is said to have fished up islands with his magic hook?	Maui	Tangaroa	Pele	Kamapua'a
+mytx_lew_nemejski	Medium	What was the first of Heracles's famous labours?	Killing the Nemean lion	Cleaning the Augean stables	Capturing Cerberus	Slaying the Hydra
+mytx_europa_byk	Medium	In the form of which animal did Zeus carry off the princess Europa?	A white bull	An eagle	A swan	A golden horse
+mytx_dwunastu	Medium	How many major Olympian gods were there traditionally?	Twelve	Seven	Nine	Twenty
+mytx_hermes_merkury	Medium	What is the Roman name for the Greek god Hermes?	Mercury	Mars	Apollo	Vulcan
+mytx_chinski_smok	Medium	In Chinese tradition, dragons are mostly seen as what?	Bringers of luck and rain	Evil fire-breathers	Guardians of the dead	Messengers of war
+mytx_zodiak_kot	Medium	According to legend, which animal missed out on the Chinese zodiac because the rat tricked it?	The cat	The dog	The fox	The duck
+mytx_zodiak_szczur	Medium	Which animal comes first in the Chinese zodiac?	The rat	The ox	The dragon	The tiger
+mytx_chupacabra	Medium	Which legendary creature is said to drink the blood of goats in Latin America?	The chupacabra	The wendigo	The kappa	The bunyip
+mytx_troll_slonce	Medium	In Scandinavian folklore, what happens to trolls caught in sunlight?	They turn to stone	They melt	They vanish in smoke	They shrink
+mytx_atlantyda	Medium	Which ancient philosopher first told the story of the lost island of Atlantis?	Plato	Homer	Aristotle	Herodotus
+mytx_el_dorado	Medium	What was El Dorado, sought by Spanish explorers?	A legendary city or king of gold	A fountain of eternal youth	A lost Roman legion	A giant emerald mine
+mytx_pani_jeziora	Medium	According to legend, who gave King Arthur his famous sword?	The Lady of the Lake	Merlin	Morgan le Fay	Guinevere
+mytx_wilhelm_tell	Medium	Which Swiss folk hero shot an apple off his son's head with a crossbow?	William Tell	Robin Hood	Roland	El Cid
+myty_persefona_pory	Medium	Which Greek myth explained why the seasons change?	Persephone's time in the underworld	Apollo's chariot race	Zeus's anger at mortals	Poseidon's tides
+myty_lakszmi	Medium	Which Hindu goddess brings wealth and good fortune?	Lakshmi	Kali	Durga	Saraswati
+myty_sindbad	Medium	Which sailor of 'One Thousand and One Nights' made seven famous voyages?	Sinbad	Aladdin	Ali Baba	Harun
+myt_giant_man_robin	Medium	Which giant of a man is Robin Hood's loyal friend, despite his name?	Little John	Friar Tuck	Will Scarlet	Much the Miller's Son
+myt_roman_greek_god	Medium	What is the Roman name for the Greek god Dionysus?	Bacchus	Vulcan	Pluto	Faunus
+myt_roman_artemis_goddess	Medium	What is the Roman name for Artemis, goddess of the hunt?	Diana	Juno	Minerva	Vesta
+myt_month_june_roman	Medium	The month of June is named after which Roman goddess?	Juno	Venus	Diana	Minerva
+myt_word_volcano_comes	Medium	The word 'volcano' comes from the name of which Roman god?	Vulcan	Mars	Neptune	Pluto
+myt_titan_drove_chariot	Medium	Which Titan drove the chariot of the Sun across the sky in Greek myth?	Helios	Atlas	Cronus	Prometheus
+myt_basilisk_legend	Medium	What is a basilisk in legend?	A serpent whose gaze kills	A bird reborn from fire	A horse with a single horn	A dog with three heads
+myt_patron_saint_scotland	Medium	Which patron saint of Scotland gave the flag its white X-shaped cross?	Saint Andrew	Saint George	Saint Patrick	Saint Columba
+myt_ghost_ship_legend	Medium	Which ghost ship of legend is doomed never to reach port?	The Flying Dutchman	The Mary Celeste	The Black Pearl	The Nautilus
+myt_german_legend_town	Medium	In the German legend, which town's children did the Pied Piper lead away?	Hamelin	Bremen	Nuremberg	Cologne
+myt_animal_chinese_zodiac	Medium	Which animal of the Chinese zodiac ruled the year 2024?	The dragon	The rabbit	The snake	The tiger
+myt_ancient_celtic_festival	Medium	Which ancient Celtic festival is the origin of Halloween?	Samhain	Beltane	Yule	Ostara
+myt_roman_myth_mother	Medium	In Roman myth, who is the mother of Cupid?	Venus	Juno	Diana	Minerva
+myt_roman_greek_hero	Medium	What is the Roman name for the Greek hero Odysseus?	Ulysses	Aeneas	Achilles	Hercules
+myt_greek_god_dreams	Medium	Which Greek god of dreams gave his name to a character in 'The Matrix'?	Morpheus	Hypnos	Thanatos	Oneiros
+myt_bird_sacred_zeus	Medium	Which bird was sacred to Zeus?	The eagle	The owl	The peacock	The swan
+myt_close_friend_achilles	Medium	Which close friend of Achilles was killed while wearing Achilles' armour?	Patroclus	Ajax	Odysseus	Menelaus
+myt_old_king_troy	Medium	Who was the old king of Troy during the Trojan War?	Priam	Menelaus	Agamemnon	Nestor
+myt_eyed_giant_odysseus	Medium	Which one-eyed giant did Odysseus blind to escape his cave?	Polyphemus	Antaeus	Typhon	Argus
+myt_sorceress_turned_odysseus	Medium	Which sorceress turned Odysseus's men into pigs?	Circe	Calypso	Medea	Hecate
+myt_prometheus_punishment_giving	Medium	What was Prometheus's punishment for giving fire to humans?	An eagle ate his liver daily	He held up the sky forever	He rolled a boulder uphill	He was turned to stone
+myt_greek_goddess_moon	Medium	Who was the Greek goddess of the Moon?	Selene	Eos	Nyx	Gaia
+myt_goddess_discord_tossed	Medium	Which goddess of discord tossed in the golden apple that led to the Trojan War?	Eris	Nemesis	Hera	Athena
+myt_egyptian_goddess_mother	Medium	Which Egyptian goddess was the mother of Horus?	Isis	Hathor	Nut	Bastet
+myt_hindu_god_preserver	Medium	Which Hindu god, the preserver, has avatars such as Rama and Krishna?	Vishnu	Brahma	Shiva	Indra
+myt_handsome_youth_loved	Medium	Which handsome youth, loved by Aphrodite, was killed by a wild boar?	Adonis	Narcissus	Ganymede	Hyacinthus
+myt_trojan_hero_fled	Medium	Which Trojan hero fled the burning city and became an ancestor of the Romans?	Aeneas	Hector	Paris	Priam
+myt_roman_goddess_dawn	Medium	Who was the Roman goddess of the dawn?	Aurora	Luna	Flora	Vesta
+myt_roman_goddess_luck	Medium	Who was the Roman goddess of luck?	Fortuna	Victoria	Fides	Felicitas
+myt_giant_serpent_apollo	Medium	Which giant serpent did Apollo kill at Delphi?	Python	Ladon	Typhon	Echidna
+myt_oracle_ancient_greece	Medium	Where was the most famous oracle of ancient Greece?	Delphi	Olympia	Dodona	Sparta
+myt_mythical_beast_lion	Medium	Which mythical beast has a lion's body, a human face and a scorpion's tail?	Manticore	Sphinx	Griffin	Chimera
+cultw_izanagi	Hard	In Japanese myth, which pair created the islands of Japan?	Izanagi and Izanami	Amaterasu and Susanoo	Raijin and Fujin	Inari and Hachiman
+cultw_anansi	Hard	In West African folklore, what kind of creature is Anansi?	A spider	A lion	A crocodile	A hawk
+mit_yggdrasil	Hard	What is the cosmic tree in Norse mythology called?	Yggdrasil	Valhalla	Bifrost	Midgard
+mit_perun	Hard	Which Slavic god ruled thunder?	Perun	Svarog	Veles	Svetovid
+mit2_hades_rzeka	Hard	Which river had to be crossed to enter the land of the dead?	The Styx	The Nile	The Tiber	The Euphrates
+mit2_charon	Hard	Who ferried souls across the river of the dead?	Charon	Hermes	Thanatos	Cerberus
+mit2_mojry	Hard	How many Fates (Moirai), spinners of human destiny, were there?	Three	Two	Four	Nine
+mit2_muzy	Hard	How many Muses were there in Greek mythology?	Nine	Three	Seven	Twelve
+mit2_herakles_prace	Hard	How many labors did Heracles complete?	Twelve	Seven	Ten	Fifteen
+mit2_nemezis	Hard	What was Nemesis the goddess of?	Vengeance and just retribution	Wisdom and skilled craft	Fertility and the harvest	Sleep and quiet dreams
+mit2_hypnos	Hard	Who was the Greek god of sleep?	Hypnos	Morpheus	Thanatos	Nyx
+mit2_odyn_ofiara	Hard	What did Odin sacrifice for wisdom?	One eye	A hand	His hair	His spear
+mit2_jormungand	Hard	What was Jormungand?	A serpent encircling the world	A dragon guarding gold	Odin's steed	A god of the sea
+mit2_anubis_rola	Hard	What did Anubis do?	Embalming and guiding the dead	Waging war	Overseeing harvests	Navigating the Nile
+mit3_rusalka_slowianska	Hard	What was a rusalka in Slavic beliefs?	A water spirit, often the soul of a drowned girl	A goddess of fertile fields and the harvest	A god who ruled the depths of the forest	A friendly spirit that guarded the house
+mit3_domowik	Hard	What was a domovoi in Slavic beliefs?	A guardian spirit of the home and household	An evil demon that haunted the deep forest	A goddess who watched over the harvest	A spirit that rode in with the storms
+mit3_mokosz	Hard	What was the Slavic goddess Mokosh the patron of?	Fertility, women and the earth	War, weapons and the fortress	Thunder, lightning and oaks	The sea, rivers and fishing
+mit3_baba_jaga	Hard	Where does Baba Yaga usually live in Slavic folk tales?	In a hut on chicken legs in the forest	In a castle standing by the sea	In a cave high in the mountains	On an island in a wide river
+mit3_huitzilopochtli	Hard	What was the Aztec god Huitzilopochtli the god of?	The sun and war	Rain	The moon	The underworld
+mit3_amaterasu	Hard	What is Amaterasu the goddess of in Japanese mythology?	The sun	The moon	The sea	War
+trv2_arachne	Hard	Who was turned into a spider by Athena after a weaving contest?	Arachne	Medusa	Niobe	Daphne
+trv2_sleipnir	Hard	What is the name of Odin's eight-legged horse?	Sleipnir	Fenrir	Jormungandr	Huginn
+trv2_fenrir	Hard	Which Norse god is fated to be swallowed by the wolf Fenrir at Ragnarok?	Odin	Thor	Loki	Heimdall
+trv2_pegaz_narodziny	Hard	From whose blood was Pegasus born?	Medusa's	The Hydra's	Achilles's	Zeus's
+org_tantal_kara	Hard	'Tantalize' comes from the endless punishment of which mythological figure?	Tantalus	Sisyphus	Ixion	Prometheus
+org_prometeusz_imie	Hard	The name Prometheus means what in Greek?	Forethought	Fire-bringer	Chained one	Sky-holder
+org_katastrofa_gwiazda	Hard	The word 'disaster' comes from an old belief and literally means what?	Bad star	Broken road	Lost harvest	Dark day
+mst_kasandra_klatwa	Hard	Which figure could foresee the future but was cursed never to be believed?	Cassandra	Medea	Circe	Antigone
+dpt_mit_tyr_fenrir	Hard	Which Norse god loses a hand to the wolf Fenrir?	Tyr	Odin	Baldr	Heimdall
+dpt_mit_sfinks	Hard	Which Greek creature had a lion's body and a woman's head?	The Sphinx	The Chimera	The Harpy	The Gorgon
+dpt_mit_siwa	Hard	Which Hindu god is known as the destroyer?	Shiva	Vishnu	Brahma	Indra
+ref_myt_maat	Hard	Which Egyptian goddess of truth weighed the hearts of the dead against her feather?	Ma'at	Isis	Hathor	Sekhmet
+ref_myt_freja_koty	Hard	Which Norse goddess rides a chariot pulled by two cats?	Freyja	Frigg	Hel	Sif
+ref_myt_iris	Hard	Which Greek goddess of the rainbow carried messages for the gods?	Iris	Hebe	Eos	Nike
+ref_myt_hermes_lira	Hard	What did the infant Hermes make from a tortoise shell?	The lyre	The flute	A drum	A shield
+ref_myt_janus	Hard	Which two-faced Roman god ruled beginnings, doorways and January?	Janus	Terminus	Vesta	Saturn
+ref_myt_hanuman	Hard	Which monkey god helps Rama rescue Sita in the Ramayana?	Hanuman	Ganesha	Garuda	Krishna
+ref_myt_asgard	Hard	What is the realm of the Aesir gods called in Norse myth?	Asgard	Midgard	Niflheim	Jotunheim
+ref_myt_eos	Hard	Who was the Greek goddess of the dawn?	Eos	Selene	Iris	Hemera
+ref_myt_augiasz	Hard	Which hero cleaned the Augean stables in a day by diverting two rivers?	Heracles	Theseus	Perseus	Jason
+cur_pandora_naczynie	Hard	In the original Greek myth, what did Pandora open?	A jar	A box	A chest	A door
+myt_agamemnon	Hard	Which king of Mycenae led the Greek army against Troy?	Agamemnon	Menelaus	Priam	Nestor
+myt_medea	Hard	Which sorceress helped Jason win the Golden Fleece?	Medea	Circe	Calypso	Hecate
+myt_frigg	Hard	Who was Odin's wife and the queen of Asgard?	Frigg	Freyja	Sif	Hel
+myt_wtorek_tyr	Hard	Which day of the week is named after the Norse god Tyr?	Tuesday	Wednesday	Thursday	Monday
+myt_sachmet	Hard	Which lion-headed Egyptian goddess almost destroyed mankind in a rage?	Sekhmet	Bastet	Hathor	Nut
+myt_garuda	Hard	Which giant bird carries the Hindu god Vishnu?	Garuda	Jatayu	Hamsa	Simurgh
+myt_kappa	Hard	In Japanese folklore, what is a kappa?	A water imp with a dish on its head	A fox spirit that grows extra tails	A long-nosed mountain goblin	A ghostly cat that walks upright
+myt_dafne	Hard	Which nymph was turned into a laurel tree to escape Apollo?	Daphne	Echo	Io	Callisto
+myt_ksiezyce_jowisza	Hard	Which planet's large moons are named after lovers of Zeus?	Jupiter	Saturn	Neptune	Mars
+myt_westa	Hard	Which Roman goddess of the hearth was served by the Vestal Virgins?	Vesta	Juno	Minerva	Diana
+myt_gaja	Hard	Which primordial Greek goddess personified the Earth itself?	Gaia	Rhea	Hera	Demeter
+myt_rea	Hard	Who was the mother of Zeus, who saved him from being swallowed?	Rhea	Gaia	Hera	Themis
+myt_pele	Hard	Which Hawaiian goddess rules over volcanoes and fire?	Pele	Hina	Laka	Namaka
+mytx_achilles_styks	Hard	Who dipped the baby Achilles in a magic river to make him invulnerable?	His mother Thetis	His father Peleus	The centaur Chiron	The goddess Athena
+mytx_andromeda	Hard	Which princess, chained to a rock as an offering to a sea monster, was rescued by Perseus?	Andromeda	Ariadne	Psyche	Eurydice
+mytx_hades_pluton	Hard	Which Roman god is the equivalent of the Greek Hades?	Pluto	Saturn	Vulcan	Janus
+mytx_harpie	Hard	What were the Harpies in Greek myth?	Winged monsters with women's faces	Giant one-eyed blacksmiths	Three-headed guard dogs	Nymphs of the deep sea
+mytx_thor_panna	Hard	In one old tale, the thunder god dresses up as what to trick the giant who stole his weapon?	A bride	A giant	A beggar	A cow
+mytx_thot_ibis	Hard	The Egyptian god Thoth usually has the head of which bird?	An ibis	A falcon	A vulture	A heron
+mytx_krampus	Hard	Which horned creature of Alpine folklore punishes naughty children at Christmas?	Krampus	The Grinch	A troll	The Erlking
+mytx_golem	Hard	In Jewish folklore, what is a golem?	A clay figure brought to life	A demon of the desert	A wise old rabbi	A cursed silver ring
+mytx_ponce_de_leon	Hard	Which Spanish explorer is linked in legend to the search for the Fountain of Youth in Florida?	Juan Ponce de Leon	Hernan Cortes	Francisco Pizarro	Hernando de Soto
+mytx_lancelot	Hard	Which knight of the Round Table fell in love with Queen Guinevere?	Sir Lancelot	Sir Gawain	Sir Galahad	Sir Percival
+mytx_grendel	Hard	Which monster does the hero Beowulf fight first?	Grendel	Smaug	The Kraken	Fafnir
+myty_argus	Hard	Which giant of Greek myth had a hundred eyes?	Argus	Cyclops	Typhon	Talos
+myty_oliwka	Hard	What gift did Athena give the Athenians to win their city from Poseidon?	An olive tree	A spring of water	A golden owl	A horse
+myty_serce_mumii	Hard	Which organ did Egyptians usually leave inside a mummy, as it was needed in the afterlife?	The heart	The brain	The liver	The stomach
+myty_kali	Hard	Which fierce Hindu goddess wears a garland of skulls and sticks out a red tongue?	Kali	Lakshmi	Saraswati	Parvati
+myty_tanuki	Hard	In Japanese folklore, which shape-shifter looks like a raccoon dog?	The tanuki	The kitsune	The kappa	The tengu
+myty_zar_ptak	Hard	In Slavic tales, which glowing bird's feathers light up a whole room?	The Firebird	The Phoenix	The Thunderbird	The Roc
+myt_greek_god_medicine	Hard	Which Greek god of medicine carried a staff with a snake coiled round it?	Asclepius	Apollo	Hermes	Hippocrates
+myt_roman_titan_cronus	Hard	What is the Roman name for the Titan Cronus?	Saturn	Jupiter	Uranus	Janus
+myt_traitorous_knight_fought	Hard	Which traitorous knight fought King Arthur at the Battle of Camlann?	Mordred	Lancelot	Gawain	Galahad
+myt_real_bishop_behind	Hard	The real bishop behind Santa Claus lived in Myra, in which present-day country?	Turkey	Greece	Italy	The Netherlands
+myt_word_jovial_comes	Hard	The word 'jovial' comes from another name for which Roman god?	Jupiter	Janus	Juno	Mercury
+myt_roman_greek_goddess	Hard	What is the Roman name for the Greek goddess Persephone?	Proserpina	Ceres	Juno	Vesta
+myt_hero_rode_pegasus	Hard	Which hero rode Pegasus to kill the monster Chimera?	Bellerophon	Perseus	Theseus	Jason
+myt_greek_goddess_hearth	Hard	Who was the Greek goddess of the hearth and home?	Hestia	Hera	Demeter	Athena
+myt_greek_keeper_winds	Hard	Who was the Greek keeper of the winds, who gave Odysseus a bag of them?	Aeolus	Boreas	Zephyrus	Triton
+cultw_mahabharata	Expert	Which Sanskrit epic contains the Bhagavad Gita?	The Mahabharata	The Ramayana	The Rigveda	The Upanishads
+cultw_tyche	Expert	Which Greek goddess personified luck and fortune?	Tyche	Nemesis	Hecate	Eris
+cultw_mabinogion	Expert	The Mabinogion collects the myths of which people?	The Welsh	The Irish	The Scots	The Bretons
+mit_ragnarok	Expert	What is the Norse end of the world called?	Ragnarok	Valhalla	Niflheim	Ginnungagap
+mit_sfinks_zagadka	Expert	Who solved the Sphinx's riddle at Thebes?	Oedipus	Theseus	Perseus	Jason
+mit2_hekate	Expert	What was Hecate the patron of?	Magic and crossroads	Harvests	Naval warfare	Blacksmithing
+mit2_erynie	Expert	Who were the Furies (Erinyes)?	Goddesses of vengeance pursuing wrongdoers	Nymphs who brought in the spring	Goddesses of fertile fields	Guardians of the gates of Olympus
+mit2_hesperydy	Expert	What did the Hesperides guard?	Golden apples	The Golden Fleece	Prometheus's fire	The gates of Hades
+mit2_grif	Expert	What was a griffin made up of?	A lion and an eagle	A horse and a fish	A goat and a snake	A bull and bat wings
+mit2_mimir	Expert	Who guarded the well of wisdom in Norse mythology?	Mimir	Heimdall	Bragi	Ullr
+mit2_bifrost	Expert	What was Bifrost?	The rainbow bridge to Asgard	Odin's sword	The ship of the dead	Thor's shield
+mit2_valkirie	Expert	What did the Valkyries do?	Chose the slain for Valhalla	Guarded the Nibelung treasure	Brewed the mead of poetry	Watched over Bifrost
+mit2_swietowit	Expert	How many faces did the Slavic god Svetovid have?	Four	Two	Three	Six
+mit2_weles	Expert	What was the Slavic god Veles the god of?	The underworld, cattle and oaths	War, thunder and storms	The sun, fire and the forge	Wind, sailing and travel
+mit2_thot	Expert	What was the Egyptian god Thoth the patron of?	Writing and knowledge	War	Harvests	Sailing
+mit2_izyda	Expert	What was Isis to Osiris?	His sister and wife	His daughter	His mother	His enemy
+mit3_tezkatlipoka	Expert	What is the Aztec god Tezcatlipoca associated with?	Night, fate and a magical obsidian mirror	The harvest and nothing else besides	The sea and everything in it	Craftsmanship and fine metalwork
+mit3_marzanna	Expert	What does the Slavic figure Marzanna symbolize?	Winter and death, drowned to welcome spring	The summer harvest, burnt to bring rain	Love, courtship and marriage	War and the defence of the tribe
+mit3_coyote_mit	Expert	What role does Coyote often play in Native American mythologies?	A trickster figure	The supreme creator god	A god of war	A god of the underworld
+org_olimpiada_gory	Expert	The Olympic Games take their name from a sanctuary in which region of Greece?	Elis	Attica	Laconia	Thessaly
+dpt_mit_leta	Expert	Which underworld river made the Greek dead forget?	The Lethe	The Styx	The Acheron	The Cocytus
+dpt_mit_kitsune	Expert	What is a kitsune in Japanese folklore?	A fox spirit that gains tails with age	A mountain demon with bright red skin	A drowned soul that haunts the rivers	A dragon set to guard a hidden shrine
+ref_myt_kronos_dzieci	Expert	What did the Titan Cronus do with his children as soon as they were born?	Swallowed them	Buried them in the earth	Turned them to stone	Cast them into the sea
+ref_myt_baldr	Expert	Which Norse god was killed by a dart made of mistletoe?	Baldr	Freyr	Heimdall	Tyr
+ref_myt_set	Expert	Which Egyptian god ruled chaos, storms and the desert?	Set	Apep	Horus	Ptah
+ref_myt_cuchulainn	Expert	Who is the great hero of the Irish Ulster Cycle?	Cu Chulainn	Fionn mac Cumhaill	Lugh	Bran the Blessed
+ref_myt_susanoo	Expert	Which Japanese storm god slew the eight-headed serpent Yamata no Orochi?	Susanoo	Raijin	Hachiman	Tsukuyomi
+ref_myt_ambrozja	Expert	What was ambrosia in Greek myth?	The food of the gods	Dionysus's sacred wine	The fire stolen by Prometheus	Water from the river Lethe
+myt_chepri	Expert	Which Egyptian god took the form of a scarab beetle rolling the sun across the sky?	Khepri	Sobek	Ptah	Atum
+myt_egida	Expert	What was the name of the shield or goatskin carried by Zeus and Athena?	The aegis	The pelta	The hoplon	The scutum
+myt_bohaterscy_blizniacy	Expert	In Maya myth, who beat the lords of the underworld at a sacred ball game?	The Hero Twins	Romulus and Remus	Castor and Pollux	The Pandavas
+myt_naglfar	Expert	In Norse myth, which ship is built from the fingernails and toenails of the dead?	Naglfar	Skidbladnir	Hringhorni	Ellida
+myt_klitajmestra	Expert	Which queen murdered her husband Agamemnon when he came home from Troy?	Clytemnestra	Jocasta	Hecuba	Andromache
+myt_nut	Expert	Which Egyptian goddess was the sky, arching her body over the Earth?	Nut	Geb	Hathor	Tefnut
+myt_skoll	Expert	In Norse myth, which wolf chases the Sun across the sky?	Skoll	Fenrir	Hati	Garm
+myt_narasimha	Expert	Which avatar of Vishnu has the head of a lion and the body of a man?	Narasimha	Varaha	Matsya	Kurma
+mytx_midas_uszy	Expert	Apollo punished King Midas by giving him the ears of which animal?	A donkey	A rabbit	A bat	A goat
+mytx_gorgony	Expert	Medusa was one of three monstrous sisters known as what?	The Gorgons	The Graeae	The Harpies	The Sirens
+mytx_idun	Expert	Which Norse goddess guards the golden apples that keep the gods young?	Idun	Freyja	Frigg	Sif
+mytx_sif	Expert	The trickster god cut off the golden hair of which goddess, Thor's wife?	Sif	Freyja	Frigg	Idun
+mytx_befana	Expert	In Italian folklore, which kindly old witch brings children presents on 5 January?	La Befana	Baba Yaga	Perchta	Frau Holle
+mytx_kot_bozonarodzeniowy	Expert	In Icelandic folklore, which creature eats people who get no new clothes for Christmas?	The Yule Cat	The Yule Goat	The Snow Wolf	The Frost Bear
+mytx_golem_praga	Expert	The most famous golem legend comes from which city?	Prague	Vienna	Krakow	Budapest
+mytx_bunyip	Expert	The bunyip is a legendary creature said to lurk in the swamps of which country?	Australia	Canada	Brazil	India
+mytx_kelpie	Expert	What is a kelpie in Scottish folklore?	A water spirit in horse form	A bagpipe-playing fairy	A giant sea eagle	A ghost that guards castles
+mytx_fafnir	Expert	Which dragon did the hero Sigurd (Siegfried) slay?	Fafnir	Smaug	Nidhogg	Jormungand
+myty_talos	Expert	Which giant bronze man guarded the island of Crete?	Talos	Colossus	Antaeus	Tityos
+myty_loki_losos	Expert	When the gods hunted him, what did Loki turn into to hide in a waterfall?	A salmon	A seal	An eel	A frog
+myty_walhalla_dach	Expert	According to Norse myth, what is the roof of Valhalla made of?	Shields	Gold	Antlers	Ice
+myty_bes	Expert	Which dwarf god of ancient Egypt protected households and children?	Bes	Ptah	Khnum	Apis
+myty_koszczej	Expert	Which Slavic villain is 'deathless' because his death is hidden in a needle inside an egg?	Koschei	Baba Yaga	Zmey Gorynych	Leshy
+myty_leszy	Expert	What is a leshy in Slavic folklore?	A forest spirit	A water horse	A house elf	A storm giant

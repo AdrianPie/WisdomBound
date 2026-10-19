@@ -1,3 +1,5 @@
+// PLIK GENEROWANY z domain/quizbank/poland.tsv przez `python3 tools/quizbank.py generate`.
+// Nie edytuj go recznie - pytania dopisuje sie do TSV (patrz domain/quizbank/README.md).
 package com.lernhero.domain.quiz.bank
 
 import com.lernhero.domain.quiz.QuizCategory
@@ -29,8 +31,13 @@ object PolandQuestions {
     private fun q(id: String, prompt: String, correct: String, wrong: List<String>, difficulty: QuizDifficulty) =
         QuizEntry(id = id, prompt = prompt, correct = correct, wrong = wrong, category = QuizCategory.Poland, difficulty = difficulty)
 
-    val all: List<QuizEntry> = listOf(
-        /* ------------------------------ Easy ------------------------------ */
+    val all: List<QuizEntry> = easy() + medium() + hard() + expert()
+
+    // Kazdy poziom w osobnej funkcji: jedna wielka lista w inicjalizatorze obiektu przekroczylaby
+    // z czasem limit 64 KB kodu na metode JVM (735 pytan historii zajmowalo w nim juz ~36 KB).
+
+    /* ------------------------------ Easy ------------------------------ */
+    private fun easy(): List<QuizEntry> = listOf(
         q("pol_geo2_gory_polska_pd", "Which mountains form Poland's southern border with Slovakia?", "The Tatras", listOf("The Alps", "The Karkonosze", "The Bieszczady"), E),
         q("pol_geo2_polska_sasiedzi", "How many countries border Poland?", "Seven", listOf("Five", "Six", "Eight"), E),
         q("pol_his2_husaria_kto", "What was the Polish winged hussars famous for?", "Heavy cavalry with wings", listOf("Marine infantry", "Siege artillery", "Light archery"), E),
@@ -88,8 +95,57 @@ object PolandQuestions {
         q("poly_placki", "What are 'placki ziemniaczane'?", "Potato pancakes", listOf("Potato dumplings", "Mashed potato soup", "Baked potatoes"), E),
         q("poly_makowiec", "What is the filling of a Polish 'makowiec' roll?", "Poppy seeds", listOf("Walnuts", "Apples", "Chocolate"), E),
         q("poly_kevin", "Which American film has been a Polish Christmas TV tradition since the 1990s?", "Home Alone", listOf("Die Hard", "Love Actually", "Elf"), E),
+        q("pol_river_flows_through", "Which river flows through both Krakow and Warsaw?", "The Vistula", listOf("The Oder", "The Warta", "The Bug"), E),
+        q("pol_three_cities_make", "Which three cities make up the Tri-City on the Baltic coast?", "Gdansk, Gdynia and Sopot", listOf("Gdansk, Elblag and Hel", "Gdynia, Sopot and Leba", "Gdansk, Gdynia and Puck"), E),
+        q("pol_zapiekanka", "What is a 'zapiekanka'?", "A toasted half-baguette with mushrooms and cheese", listOf("A roll stuffed with cabbage and minced meat", "A fried potato pancake with sour cream", "A sweet bun filled with poppy seed jam"), E),
+        q("pol_rosol", "What is 'rosol'?", "A clear chicken broth", listOf("A beetroot soup", "A cabbage stew", "A sour rye soup"), E),
+        q("pol_mizeria", "What is 'mizeria'?", "A cucumber salad with cream", listOf("A mushroom and onion sauce", "A potato salad with mayo", "Herring in sour cream"), E),
+        q("pol_kompot", "What is 'kompot'?", "A drink of fruit boiled in water", listOf("A thick plum jam cooked for hours", "A fruit cake soaked in vodka", "A cold dessert of whipped cream"), E),
+        q("pol_golonka", "What is 'golonka'?", "Roasted pork knuckle", listOf("Smoked cheese", "Beef stew", "Fried fish"), E),
+        q("pol_motorcycle_sport_raced", "Which motorcycle sport, raced on oval cinder tracks, packs Polish stadiums?", "Speedway", listOf("Motocross", "Enduro", "Trial"), E),
+        q("pol_polish_children_traditionally", "What do Polish children traditionally find under their pillows on the morning of 6 December?", "Small presents", listOf("Coal", "Easter eggs", "Birthday cards"), E),
+        q("pol_poles_call_new", "What do Poles call New Year's Eve?", "Sylwester", listOf("Wigilia", "Andrzejki", "Zaduszki"), E),
+        q("pol_two_children_sienkiewicz", "Who are the two children in Sienkiewicz's 'In Desert and Wilderness'?", "Stas and Nel", listOf("Jas and Malgosia", "Bolek and Lolek", "Zbyszko and Danusia"), E),
+        q("pol_poland_national_airline", "What is the name of Poland's national airline?", "LOT", listOf("PLL", "Polair", "Orlik"), E),
+        q("pol_poles_say_meal", "What do Poles say before a meal to wish everyone a good appetite?", "Smacznego", listOf("Na zdrowie", "Dzien dobry", "Sto lat"), E),
+        q("pol_polish_birthday_song", "What does the Polish birthday song 'Sto lat' wish someone?", "A hundred years of life", listOf("A hundred presents", "A happy new year", "Good luck in love"), E),
+        q("pol_pierogi_jagodami", "What are 'pierogi z jagodami'?", "Dumplings filled with blueberries", listOf("Pancakes with cherry jam", "Dumplings with sauerkraut", "Doughnuts with plum jam"), E),
+        q("pol_smalec", "What is 'smalec'?", "Lard spread with crispy bits", listOf("Smoked sheep's cheese", "Sour cream with herbs", "A thick barley soup"), E),
+        q("pol_babka_polish_easter", "What is a 'babka' at a Polish Easter table?", "A tall ring-shaped cake", listOf("A painted egg", "A lamb made of butter", "A bowl of sour soup"), E),
+        q("pol_prince_polo", "What is 'Prince Polo'?", "A chocolate-covered wafer bar", listOf("A brand of mineral water", "A brand of crisps", "A brand of chewing gum"), E),
+        q("pol_day_polish_children", "Which day do Polish children celebrate on 21 January?", "Grandmother's Day", listOf("Children's Day", "Women's Day", "Name Day"), E),
+        q("pol_two_football_clubs", "Which two famous football clubs share the city of Krakow?", "Wisla and Cracovia", listOf("Legia and Polonia", "Lech and Warta", "Gornik and Ruch"), E),
+        q("pol_football_club_polish", "Which football club do Polish fans call 'the Military Men' ('Wojskowi')?", "Legia Warsaw", listOf("Lech Poznan", "Wisla Krakow", "Slask Wroclaw"), E),
+        q("pol_1920_battle_warsaw", "What is the 1920 Battle of Warsaw popularly called?", "The Miracle on the Vistula", listOf("The Miracle of Grunwald", "The Warsaw Wonder", "The Eagle's Victory"), E),
+        q("pol_painted_huge_canvas", "Who painted the huge canvas 'The Battle of Grunwald'?", "Jan Matejko", listOf("Jozef Chelmonski", "Jacek Malczewski", "Wojciech Kossak"), E),
+        q("pol_1970s_series_followed", "Which 1970s TV series followed the engineer Stefan Karwowski?", "Czterdziestolatek", listOf("Alternatywy 4", "Zmiennicy", "Wojna domowa"), E),
+        q("pol_actor_played_ferdynand", "Which actor played Ferdynand Kiepski for over 20 years?", "Andrzej Grabowski", listOf("Marian Opania", "Jerzy Stuhr", "Cezary Pazura"), E),
+        q("pol_founded_great_orchestra", "Who founded the Great Orchestra of Christmas Charity?", "Jerzy Owsiak", listOf("Janina Ochojska", "Marek Kotanski", "Jerzy Urban"), E),
+        q("pol_city_hosted_national", "Which city has hosted the National Festival of Polish Song since 1963?", "Opole", listOf("Sopot", "Kolobrzeg", "Jarocin"), E),
+        q("pol_lower_house_polish", "What is the lower house of the Polish parliament called?", "Sejm", listOf("Senat", "Rada", "Duma"), E),
+        q("pol_poland_currency", "What is the name of Poland's currency?", "Zloty", listOf("Grosz", "Korona", "Marka"), E),
+        q("pol_polish_president_died", "Which Polish president died in the 2010 plane crash near Smolensk?", "Lech Kaczynski", listOf("Aleksander Kwasniewski", "Bronislaw Komorowski", "Lech Walesa"), E),
+        q("pol_poland_president_1995", "Who was Poland's president from 1995 to 2005?", "Aleksander Kwasniewski", listOf("Lech Walesa", "Lech Kaczynski", "Wojciech Jaruzelski"), E),
+        q("pol_priest_murdered_communist", "Which priest was murdered by the communist secret police in 1984?", "Jerzy Popieluszko", listOf("Stefan Wyszynski", "Maksymilian Kolbe", "Jozef Tischner"), E),
+        q("pol_polish_nun_apostle", "Which Polish nun is known as the 'Apostle of Divine Mercy'?", "Faustina Kowalska", listOf("Urszula Ledochowska", "Jadwiga", "Teresa of Calcutta"), E),
+        q("pol_franciscan_friar_gave", "Which Franciscan friar gave his life in Auschwitz in place of another prisoner?", "Maksymilian Kolbe", listOf("Jerzy Popieluszko", "Adam Chmielowski", "Rafal Kalinowski"), E),
+        q("pol_wrote_words_polish", "Who wrote the words of the Polish national anthem?", "Jozef Wybicki", listOf("Jan Henryk Dabrowski", "Adam Mickiewicz", "Juliusz Slowacki"), E),
+        q("pol_world_pianist_became", "Which world-famous pianist became Polish prime minister in 1919?", "Ignacy Jan Paderewski", listOf("Frederic Chopin", "Artur Rubinstein", "Karol Szymanowski"), E),
+        q("pol_tatra_highwayman_legend", "Which Tatra highwayman of legend robbed the rich to give to the poor?", "Janosik", listOf("Kmicic", "Zawisza", "Wernyhora"), E),
+        q("pol_directed_cult_comedies", "Who directed the cult comedies 'Seksmisja' and 'Va banque'?", "Juliusz Machulski", listOf("Stanislaw Bareja", "Marek Piwowski", "Sylwester Checinski"), E),
+        q("pol_played_andrzej_kmicic", "Who played Andrzej Kmicic in the 1974 film 'The Deluge'?", "Daniel Olbrychski", listOf("Jan Nowicki", "Tadeusz Lomnicki", "Jerzy Zelnik"), E),
+        q("pol_town_silesian_stadium", "In which town is the Silesian Stadium, known as the 'Witches' Cauldron'?", "Chorzow", listOf("Katowice", "Gliwice", "Zabrze"), E),
+        q("pol_zurek_sometimes_served", "In what is zurek sometimes served instead of a bowl?", "A bread loaf", listOf("A clay pot", "A pumpkin", "A cabbage leaf"), E),
+        q("pol_szarlotka", "What is 'szarlotka'?", "An apple pie", listOf("A cheesecake", "A poppy-seed cake", "A jam doughnut"), E),
+        q("pol_nalesniki", "What are 'nalesniki'?", "Thin pancakes", listOf("Potato pancakes", "Dumplings", "Doughnuts"), E),
+        q("pol_juwenalia_poland", "What are 'Juwenalia' in Poland?", "Student festivals", listOf("Harvest feasts", "Christmas carols", "Name days"), E),
+        q("pol_band_fronted_singer", "Which band was fronted by the singer Kora?", "Maanam", listOf("Perfect", "Republika", "Lady Pank"), E),
+        q("pol_polish_city_leonardo", "In which Polish city does Leonardo's 'Lady with an Ermine' hang?", "Krakow", listOf("Warsaw", "Wroclaw", "Gdansk"), E),
+        q("pol_poland_national_stadium", "What is the name of Poland's national stadium in Warsaw?", "Stadion Narodowy", listOf("Stadion Slaski", "Stadion Dziesieciolecia", "Stadion Wojska Polskiego"), E)
+    )
 
-        /* ----------------------------- Medium ----------------------------- */
+    /* ----------------------------- Medium ----------------------------- */
+    private fun medium(): List<QuizEntry> = listOf(
         q("pol_geo2_wisla_zrodlo", "Where does the Vistula river originate?", "In the Silesian Beskids", listOf("In the Tatras", "In the Sudetes", "In the Masurian Lake District"), M),
         q("pol_geo2_polska_jezioro", "Which lake is the largest in Poland?", "Sniardwy", listOf("Mamry", "Hancza", "Lebsko"), M),
         q("pol_geo2_polska_najglebsze", "Which lake is the deepest in Poland?", "Hancza", listOf("Sniardwy", "Wigry", "Mamry"), M),
@@ -187,8 +243,99 @@ object PolandQuestions {
         q("poly_kiepscy", "In which city is the sitcom 'Swiat wedlug Kiepskich' set?", "Wroclaw", listOf("Lodz", "Warsaw", "Krakow"), M),
         q("poly_westerplatte", "Which Gdansk peninsula held out for seven days in September 1939?", "Westerplatte", listOf("Hel", "Oksywie", "Sobieszewo"), M),
         q("poly_piotrkowska", "Which city's main street is the long Piotrkowska Street?", "Lodz", listOf("Poznan", "Katowice", "Lublin"), M),
+        q("pol_polish_band_1960s", "Which Polish band of the 1960s was nicknamed 'the Polish Beatles'?", "Czerwone Gitary", listOf("Skaldowie", "Trubadurzy", "No To Co"), M),
+        q("pol_poland_chief_state", "Who was Poland's Chief of State when it regained independence in 1918?", "Jozef Pilsudski", listOf("Roman Dmowski", "Ignacy Paderewski", "Wojciech Korfanty"), M),
+        q("pol_communist_leader_declared", "Which communist leader declared martial law in Poland in 1981?", "Wojciech Jaruzelski", listOf("Edward Gierek", "Wladyslaw Gomulka", "Boleslaw Bierut"), M),
+        q("pol_wrote_kamienie_szaniec", "Who wrote 'Kamienie na szaniec' (Stones for the Rampart)?", "Aleksander Kaminski", listOf("Krzysztof Kamil Baczynski", "Tadeusz Borowski", "Zofia Kossak"), M),
+        q("pol_polish_comedy_follows", "Which Polish comedy follows the feuding Kargul and Pawlak families?", "Sami swoi", listOf("Mis", "Rejs", "Kiler"), M),
+        q("pol_1997_comedy_stars", "Which 1997 comedy stars Cezary Pazura as a taxi driver mistaken for a hitman?", "Kiler", listOf("Chlopaki nie placza", "Psy", "Vabank"), M),
+        q("pol_priest_solves_crimes", "Which TV priest solves crimes in the town of Sandomierz?", "Ojciec Mateusz", listOf("Ksiadz Robert", "Brat Jan", "Proboszcz Kazimierz"), M),
+        q("pol_polish_soap_opera", "Which Polish TV soap opera has been on air the longest, since 1997?", "Klan", listOf("M jak milosc", "Na Wspolnej", "Barwy szczescia"), M),
+        q("pol_krakow_district_historic", "Which Krakow district was the historic Jewish quarter?", "Kazimierz", listOf("Podgorze", "Nowa Huta", "Kleparz"), M),
+        q("pol_warsaw_palace_often", "Which Warsaw palace is often called 'the Polish Versailles'?", "Wilanow Palace", listOf("Lazienki Palace", "The Royal Castle", "Belweder"), M),
+        q("pol_city_football_club", "In which city does the football club Lech play?", "Poznan", listOf("Warsaw", "Gdansk", "Krakow"), M),
+        q("pol_coached_poland_third", "Who coached Poland to third place at the 1974 World Cup?", "Kazimierz Gorski", listOf("Antoni Piechniczek", "Jacek Gmoch", "Leo Beenhakker"), M),
+        q("pol_polish_footballer_starred", "Which Polish footballer starred at the 1982 World Cup and then for Juventus?", "Zbigniew Boniek", listOf("Grzegorz Lato", "Wlodzimierz Smolarek", "Andrzej Szarmach"), M),
+        q("pol_polish_ski_jumper", "Which Polish ski jumper won all four Four Hills Tournament events in 2017/18?", "Kamil Stoch", listOf("Adam Malysz", "Dawid Kubacki", "Piotr Zyla"), M),
+        q("pol_polish_player_beat", "Which Polish player beat Roger Federer at Wimbledon in 2021, winning the last set 6-0?", "Hubert Hurkacz", listOf("Kamil Majchrzak", "Jerzy Janowicz", "Lukasz Kubot"), M),
+        q("pol_kopytka", "What are 'kopytka'?", "Small potato dumplings", listOf("Pork sausages", "Plum dumplings", "Cabbage pancakes"), M),
+        q("pol_kogel_mogel", "What is 'kogel-mogel'?", "Egg yolks whipped with sugar", listOf("A hot honey liqueur", "A fried pastry bow", "A pickled herring dish"), M),
+        q("pol_chlodnik", "What is 'chlodnik'?", "A cold beetroot soup", listOf("A hot fish soup", "A pickled cucumber", "A sweet cheese spread"), M),
+        q("pol_faworki_eaten_lent", "What are 'faworki', eaten before Lent?", "Crispy fried pastry ribbons", listOf("Doughnuts with rose jam", "Potato pancakes", "Poppy seed cakes"), M),
+        q("pol_flaki", "What is 'flaki'?", "Tripe soup", listOf("Pea soup", "Mushroom soup", "Fish soup"), M),
+        q("pol_kaszanka", "What is 'kaszanka'?", "A blood sausage with buckwheat", listOf("A smoked pork sausage", "A buckwheat porridge", "A barley soup"), M),
+        q("pol_celebrated_dozynki", "What is celebrated at 'dozynki'?", "The end of the harvest", listOf("The first day of spring", "The longest night", "The miners' saint"), M),
+        q("pol_sang_hit_parostatek", "Who sang the hit 'Parostatek'?", "Krzysztof Krawczyk", listOf("Zbigniew Wodecki", "Czeslaw Niemen", "Andrzej Rosiewicz"), M),
+        q("pol_polish_chocolate_maker", "Which famous Polish chocolate maker produces 'Ptasie mleczko'?", "E. Wedel", listOf("Wawel", "Goplana", "Milka"), M),
+        q("pol_mazurek", "What is a 'mazurek'?", "A flat Easter cake", listOf("A winter hat", "A Christmas carol", "A fish dish"), M),
+        q("pol_kutia_eaten_christmas", "What is 'kutia', eaten on Christmas Eve in eastern Poland?", "Wheat with poppy seeds and honey", listOf("Fried carp in aspic", "Dumplings with mushrooms", "Beetroot soup with sour cream"), M),
+        q("pol_date_mother_day", "On which date is Mother's Day celebrated in Poland?", "26 May", listOf("8 March", "1 June", "11 May"), M),
+        q("pol_poles_celebrate_processions", "What do Poles celebrate with processions on 'Boze Cialo'?", "Corpus Christi", listOf("Easter Monday", "All Saints' Day", "Epiphany"), M),
+        q("pol_poles_write_chalk", "What do Poles write in chalk above their doors on 6 January?", "K+M+B and the year", listOf("The family's names", "A cross and a star", "A prayer for rain"), M),
+        q("pol_between_world_wars", "Between the world wars, which city was a 'Free City' under League of Nations protection?", "Gdansk", listOf("Szczecin", "Wroclaw", "Krakow"), M),
+        q("pol_happened_poland_june", "What happened in Poland on 4 June 1989?", "The first partly free elections", listOf("The founding of Solidarity", "The end of martial law", "Poland joined NATO"), M),
+        q("pol_polish_band_fronted", "Which Polish band is fronted by Kazik Staszewski?", "Kult", listOf("Perfect", "Lady Pank", "Dzem"), M),
+        q("pol_polish_band_sang_2", "Which Polish band sang 'Autobiografia'?", "Perfect", listOf("Kult", "Republika", "Budka Suflera"), M),
+        q("pol_polish_band_sang_3", "Which Polish band sang 'Jolka, Jolka pamietasz'?", "Budka Suflera", listOf("Perfect", "Dzem", "Lady Pank"), M),
+        q("pol_polish_cross_country", "Which Polish cross-country skier won Olympic gold in 2010 and 2014?", "Justyna Kowalczyk", listOf("Iga Swiatek", "Anita Wlodarczyk", "Otylia Jedrzejczak"), M),
+        q("pol_wrote_nad_niemnem", "Who wrote 'Nad Niemnem'?", "Eliza Orzeszkowa", listOf("Maria Konopnicka", "Gabriela Zapolska", "Zofia Nalkowska"), M),
+        q("pol_wrote_treny_poems", "Who wrote 'Treny', poems of mourning for his little daughter?", "Jan Kochanowski", listOf("Mikolaj Rej", "Adam Mickiewicz", "Juliusz Slowacki"), M),
+        q("pol_city_open_music", "In which city is the Open'er music festival held?", "Gdynia", listOf("Gdansk", "Sopot", "Krakow"), M),
+        q("pol_city_capital_warmia", "Which city is the capital of the Warmia-Masuria region?", "Olsztyn", listOf("Elblag", "Gizycko", "Elk"), M),
+        q("pol_city_capital_podlasie", "Which city is the capital of the Podlasie region?", "Bialystok", listOf("Lomza", "Suwalki", "Siedlce"), M),
+        q("pol_maczuga_herkulesa_near", "What is the 'Maczuga Herkulesa' near Krakow?", "A tall limestone rock", listOf("A royal sword", "A castle tower", "A giant oak tree"), M),
+        q("pol_poland_highest_waterfall", "Which is Poland's highest waterfall?", "Wielka Siklawa", listOf("Wodogrzmoty Mickiewicza", "Kamienczyk", "Szklarka"), M),
+        q("pol_commanded_defence_westerplatte", "Who commanded the defence of Westerplatte in September 1939?", "Henryk Sucharski", listOf("Stefan Starzynski", "Tadeusz Kutrzeba", "Wladyslaw Raginis"), M),
+        q("pol_according_legend_three", "According to legend, which of three brothers founded Poland after seeing a white eagle's nest?", "Lech", listOf("Czech", "Rus", "Piast"), M),
+        q("pol_legendary_princess_chose", "Which legendary princess chose to drown in the Vistula rather than marry a German prince?", "Wanda", listOf("Jadwiga", "Dabrowka", "Rzepicha"), M),
+        q("pol_wicked_legendary_ruler", "Which wicked legendary ruler is said to have been eaten by mice in a tower?", "Popiel", listOf("Krak", "Lestek", "Siemowit"), M),
+        q("pol_tricked_wawel_dragon", "Who tricked the Wawel Dragon with a sheep stuffed with sulphur?", "Shoemaker Dratewka", listOf("Prince Krakus", "Knight Zawisza", "Prince Popiel"), M),
+        q("pol_polish_desert_used", "Which Polish 'desert' was used for training by German troops headed for Africa?", "Bledow Desert", listOf("Leba Dunes", "Kampinos Sands", "Pustynia Siedlecka"), M),
+        q("pol_polish_painter_nightmarish", "Which Polish painter is famous for nightmarish, dystopian landscapes?", "Zdzislaw Beksinski", listOf("Jacek Malczewski", "Tamara de Lempicka", "Jerzy Duda-Gracz"), M),
+        q("pol_polish_composer_wrote", "Which Polish composer wrote 'Threnody to the Victims of Hiroshima'?", "Krzysztof Penderecki", listOf("Witold Lutoslawski", "Henryk Gorecki", "Karol Szymanowski"), M),
+        q("pol_polish_jazz_pianist", "Which Polish jazz pianist composed the lullaby for Polanski's 'Rosemary's Baby'?", "Krzysztof Komeda", listOf("Zbigniew Namyslowski", "Tomasz Stanko", "Wojciech Kilar"), M),
+        q("pol_band_sang_1980s", "Which band sang the 1980s anthem 'Kocham wolnosc'?", "Chlopcy z Placu Broni", listOf("Elektryczne Gitary", "Budka Suflera", "Czerwone Gitary"), M),
+        q("pol_disco_polo_band", "Which disco polo band had a huge hit with 'Ona tanczy dla mnie'?", "Weekend", listOf("Akcent", "Boys", "Bayer Full"), M),
+        q("pol_film_won_andrzej", "Which film won Andrzej Wajda the Palme d'Or in Cannes in 1981?", "Man of Iron", listOf("Man of Marble", "Ashes and Diamonds", "The Promised Land"), M),
+        q("pol_directed_oscar_nominated", "Who directed the Oscar-nominated film 'Cold War' (2018)?", "Pawel Pawlikowski", listOf("Agnieszka Holland", "Wojciech Smarzowski", "Jan Komasa"), M),
+        q("pol_won_poland_ever", "Who won Poland's first ever Olympic gold medal, in the discus in 1928?", "Halina Konopacka", listOf("Irena Szewinska", "Stanislawa Walasiewicz", "Jadwiga Wajs"), M),
+        q("pol_key_ingredient_traditional", "What is the key ingredient of the traditional 'czernina' soup?", "Duck blood", listOf("Beetroot", "Sour rye", "Dried mushrooms"), M),
+        q("pol_polish_inventor_nicknamed", "Which Polish inventor, nicknamed 'the Polish Edison', designed a bulletproof vest?", "Jan Szczepanik", listOf("Jan Czochralski", "Ignacy Lukasiewicz", "Stefan Drzewiecki"), M),
+        q("pol_polish_astronomer_discovered", "Which Polish astronomer discovered the first confirmed planets outside the Solar System, in 1992?", "Aleksander Wolszczan", listOf("Bohdan Paczynski", "Andrzej Udalski", "Jan Heweliusz"), M),
+        q("pol_bialystok_born_eye", "Which Bialystok-born eye doctor created the language Esperanto?", "Ludwik Zamenhof", listOf("Bronislaw Malinowski", "Florian Znaniecki", "Jan Baudouin de Courtenay"), M),
+        q("pol_small_town_hosted", "Which small town hosted Poland's legendary rock festival of the 1980s?", "Jarocin", listOf("Opole", "Sopot", "Wegorzewo"), M),
+        q("pol_cardinal_primate_poland", "Which cardinal, Primate of Poland, was called the 'Primate of the Millennium'?", "Stefan Wyszynski", listOf("Jozef Glemp", "Karol Wojtyla", "August Hlond"), M),
+        q("pol_commanded_home_army", "Who commanded the Home Army during the Warsaw Uprising?", "Tadeusz Bor-Komorowski", listOf("Stefan Rowecki", "Wladyslaw Sikorski", "Leopold Okulicki"), M),
+        q("pol_last_king_jagiellonian", "Who was the last king of the Jagiellonian dynasty?", "Sigismund II Augustus", listOf("Sigismund I the Old", "Stefan Batory", "Wladyslaw IV"), M),
+        q("pol_created_comic_tytus", "Who created the comic 'Tytus, Romek i A'Tomek'?", "Henryk Jerzy Chmielewski", listOf("Janusz Christa", "Tadeusz Baranowski", "Grzegorz Rosinski"), M),
+        q("pol_polish_artist_drew", "Which Polish artist drew the fantasy comic 'Thorgal'?", "Grzegorz Rosinski", listOf("Janusz Christa", "Tadeusz Baranowski", "Boguslaw Polch"), M),
+        q("pol_polish_cinematographer_won", "Which Polish cinematographer won Oscars for 'Schindler's List' and 'Saving Private Ryan'?", "Janusz Kaminski", listOf("Slawomir Idziak", "Pawel Edelman", "Witold Sobocinski"), M),
+        q("pol_polish_composer_won", "Which Polish composer won an Oscar for the score of 'Finding Neverland'?", "Jan A. P. Kaczmarek", listOf("Zbigniew Preisner", "Wojciech Kilar", "Abel Korzeniowski"), M),
+        q("pol_band_sang_dlugosc", "Which band sang 'Dlugosc dzwieku samotnosci'?", "Myslovitz", listOf("Hey", "Kult", "T.Love"), M),
+        q("pol_band_sang_1980s_2", "Which band sang the 1980s hit 'Przezyj to sam'?", "Lombard", listOf("Perfect", "Republika", "Maanam"), M),
+        q("pol_polish_club_reached", "Which Polish club reached the European Cup Winners' Cup final in 1970?", "Gornik Zabrze", listOf("Legia Warsaw", "Wisla Krakow", "Ruch Chorzow"), M),
+        q("pol_kupala_night_young", "On Kupala Night, what do young women traditionally float on the water?", "Wreaths", listOf("Candles", "Paper boats", "Eggs"), M),
+        q("pol_hitler_wolf_lair", "Hitler's 'Wolf's Lair' headquarters stood in which Polish region?", "Masuria", listOf("Silesia", "Pomerania", "Podlasie"), M),
+        q("pol_polish_port_city", "Which Polish port city was called Stettin before 1945?", "Szczecin", listOf("Gdansk", "Kolobrzeg", "Elblag"), M),
+        q("pol_coached_poland_third_2", "Who coached Poland to third place at the 1982 World Cup?", "Antoni Piechniczek", listOf("Kazimierz Gorski", "Jacek Gmoch", "Leo Beenhakker"), M),
+        q("pol_country_poland_beat", "Which country did Poland beat in the third-place match of the 1974 World Cup?", "Brazil", listOf("Netherlands", "West Germany", "Italy"), M),
+        q("pol_against_team_poland", "Against which team did Poland play the waterlogged 'water match' in 1974?", "West Germany", listOf("Brazil", "Argentina", "Sweden"), M),
+        q("pol_band_fronted_grzegorz", "Which band was fronted by Grzegorz Ciechowski?", "Republika", listOf("Maanam", "Perfect", "Kult"), M),
+        q("pol_sang_zegarmistrz_swiatla", "Who sang 'Zegarmistrz swiatla'?", "Tadeusz Wozniak", listOf("Marek Grechuta", "Czeslaw Niemen", "Jacek Kaczmarski"), M),
+        q("pol_sang_dni_ktorych", "Who sang 'Dni, ktorych nie znamy'?", "Marek Grechuta", listOf("Tadeusz Wozniak", "Krzysztof Krawczyk", "Seweryn Krajewski"), M),
+        q("pol_comedy_follows_franek", "Which comedy follows Franek Dolas, who believes he started World War II?", "Jak rozpetalem druga wojne swiatowa", listOf("Czterej pancerni i pies", "Stawka wieksza niz zycie", "Zezowate szczescie"), M),
+        q("pol_kluski_slaskie", "What are 'kluski slaskie'?", "Potato dumplings with a dimple", listOf("Noodles with poppy seeds", "Fried dough balls with jam", "Pancakes rolled with cheese"), M),
+        q("pol_nalewka", "What is a 'nalewka'?", "A homemade fruit liqueur", listOf("A sour rye soup", "A herbal tea", "A pickled cucumber"), M),
+        q("pol_mieszko_czech_wife", "What was the name of Mieszko I's Czech wife?", "Dobrawa", listOf("Jadwiga", "Rycheza", "Wanda"), M),
+        q("pol_last_leader_january", "Who was the last leader of the January Uprising, executed in 1864?", "Romuald Traugutt", listOf("Ludwik Mieroslawski", "Marian Langiewicz", "Jaroslaw Dabrowski"), M),
+        q("pol_polish_prime_minister", "Which Polish prime minister-in-exile died in a plane crash at Gibraltar in 1943?", "Wladyslaw Sikorski", listOf("Stanislaw Mikolajczyk", "Ignacy Moscicki", "Jozef Beck"), M),
+        q("pol_politician_led_national", "Which politician led the National Democrats and signed the Treaty of Versailles for Poland?", "Roman Dmowski", listOf("Jozef Pilsudski", "Wincenty Witos", "Ignacy Daszynski"), M),
+        q("pol_communist_leader_came", "Which communist leader came to power during the 'thaw' of October 1956?", "Wladyslaw Gomulka", listOf("Boleslaw Bierut", "Edward Gierek", "Wojciech Jaruzelski"), M),
+        q("pol_frederic_chopin_heart", "Where is Frederic Chopin's heart kept?", "In a church in Warsaw", listOf("In Paris, with his body", "In Zelazowa Wola", "In Wawel Cathedral"), M)
+    )
 
-        /* ------------------------------ Hard ------------------------------ */
+    /* ------------------------------ Hard ------------------------------ */
+    private fun hard(): List<QuizEntry> = listOf(
         q("pol_his2_bitwa_grunwald_kto", "Who commanded the Polish-Lithuanian forces at Grunwald?", "Wladyslaw Jagiello", listOf("Casimir the Great", "Vytautas alone", "Boleslaw the Wrymouth"), H),
         q("pol_his2_konstytucja_3maja_rok", "What was the Constitution of May 3 in Europe?", "The first in Europe", listOf("The third in Europe", "The first in the world", "The last of the 18th century"), H),
         q("pol_his2_bitwa_warszawska", "In which year was the Battle of Warsaw, called the Miracle at the Vistula?", "1920", listOf("1919", "1921", "1918"), H),
@@ -262,8 +409,28 @@ object PolandQuestions {
         q("poly_seksmisja", "In the cult comedy 'Seksmisja', the heroes wake up in a world without what?", "Men", listOf("Cars", "Sunlight", "Money"), H),
         q("poly_babia_gora", "Which mountain is the highest peak of the Beskids?", "Babia Gora", listOf("Pilsko", "Skrzyczne", "Turbacz"), H),
         q("poly_moszna", "Which fairy-tale Polish castle is famous for its 99 towers and turrets?", "Moszna", listOf("Malbork", "Ksiaz", "Czocha"), H),
+        q("pol_poland_president_assassinated", "Who was Poland's first president, assassinated just days after taking office in 1922?", "Gabriel Narutowicz", listOf("Stanislaw Wojciechowski", "Ignacy Moscicki", "Jozef Pilsudski"), H),
+        q("pol_city_workers_rise", "In which city did workers rise up against the communist authorities in June 1956?", "Poznan", listOf("Gdansk", "Radom", "Lodz"), H),
+        q("pol_led_poland_communist", "Who led Poland's communist government through most of the 1970s?", "Edward Gierek", listOf("Wladyslaw Gomulka", "Wojciech Jaruzelski", "Stanislaw Kania"), H),
+        q("pol_general_led_polish", "Which general led a Polish army out of the Soviet Union to the Middle East in 1942?", "Wladyslaw Anders", listOf("Wladyslaw Sikorski", "Stanislaw Maczek", "Tadeusz Bor-Komorowski"), H),
+        q("pol_bareja_series_set", "Which Bareja TV series is set in a new Warsaw housing block run by caretaker Aniol?", "Alternatywy 4", listOf("Czterdziestolatek", "Zmiennicy", "Dom"), H),
+        q("pol_polish_band_sang", "Which Polish band sang 'Mniej niz zero'?", "Lady Pank", listOf("Perfect", "Republika", "Kult"), H),
+        q("pol_blues_rock_band", "Which blues-rock band was fronted by Ryszard Riedel?", "Dzem", listOf("Budka Suflera", "Breakout", "T.Love"), H),
+        q("pol_wrote_pan_samochodzik", "Who wrote the 'Pan Samochodzik' adventure novels?", "Zbigniew Nienacki", listOf("Edmund Niziurski", "Adam Bahdaj", "Alfred Szklarski"), H),
+        q("pol_wrote_psie_ktory", "Who wrote 'O psie, ktory jezdzil koleja' about the dog Lampo?", "Roman Pisarski", listOf("Kornel Makuszynski", "Jan Brzechwa", "Julian Tuwim"), H),
+        q("pol_polish_shot_putter", "Which Polish shot putter won Olympic gold in 2008 and 2012?", "Tomasz Majewski", listOf("Konrad Bukowiecki", "Michal Haratyk", "Piotr Malachowski"), H),
+        q("pol_spa_town_huge", "Which spa town is famous for its huge wooden graduation towers for brine?", "Ciechocinek", listOf("Krynica-Zdroj", "Naleczow", "Zakopane"), H),
+        q("pol_warsaw_district_right", "Which Warsaw district on the right bank of the Vistula is famous for its pre-war tenements?", "Praga", listOf("Mokotow", "Wola", "Zoliborz"), H),
+        q("pol_largest_island_lying", "Which is the largest island lying entirely in Poland?", "Wolin", listOf("Uznam", "Hel", "Sobieszewo"), H),
+        q("pol_polish_general_led", "Which Polish general led the 1st Armoured Division in Normandy in 1944?", "Stanislaw Maczek", listOf("Wladyslaw Anders", "Stanislaw Sosabowski", "Wladyslaw Sikorski"), H),
+        q("pol_polish_courier_brought", "Which Polish courier brought the Allies some of the first eyewitness reports of the Holocaust?", "Jan Karski", listOf("Witold Pilecki", "Jan Nowak-Jezioranski", "Irena Sendler"), H),
+        q("pol_became_poland_female", "Who became Poland's first female prime minister, in 1992?", "Hanna Suchocka", listOf("Ewa Kopacz", "Beata Szydlo", "Henryka Bochniak"), H),
+        q("pol_actor_played_lead", "Which actor played the lead spy in 'Stawka wieksza niz zycie'?", "Stanislaw Mikulski", listOf("Daniel Olbrychski", "Janusz Gajos", "Wojciech Pszoniak"), H),
+        q("pol_wrote_medaliony_short", "Who wrote 'Medaliony', short stories about the German occupation?", "Zofia Nalkowska", listOf("Eliza Orzeszkowa", "Maria Dabrowska", "Zofia Kossak"), H)
+    )
 
-        /* ----------------------------- Expert ----------------------------- */
+    /* ----------------------------- Expert ----------------------------- */
+    private fun expert(): List<QuizEntry> = listOf(
         q("pol_his3_polski_rzad_na_uchodzstwie", "Where did the Polish government-in-exile operate during World War II?", "London (earlier in France)", listOf("Moscow, alongside the Red Army", "Washington, with the Allies", "Rome, after the Italian campaign"), X),
         q("pol_his3_dywizjon_303", "What was 303 Squadron known for in the Battle of Britain?", "It was one of the RAF's most effective fighter squadrons", listOf("It defended Warsaw through September 1939", "It fought its way up the hill at Monte Cassino", "It was a naval unit escorting convoys"), X),
         q("pol_lit2_herbert_bohater", "What is the character of Zbigniew Herbert's poem cycle called?", "Mr. Cogito", listOf("Mr. Tadeusz", "Mr. Wolodyjowski", "Mr. Kleks"), X),
@@ -306,6 +473,9 @@ object PolandQuestions {
         q("polx_lysica", "Which is the highest peak of the Swietokrzyskie Mountains?", "Lysica", listOf("Lysa Gora", "Sniezka", "Babia Gora"), X),
         q("polx_kanal_elblaski", "What is unusual about the Elblag Canal?", "Boats cross dry land on rails", listOf("It flows uphill", "It freezes in summer", "It runs underground"), X),
         q("poly_ksiaz", "Which Silesian castle, one of Poland's largest, hides secret wartime tunnels?", "Ksiaz", listOf("Czocha", "Moszna", "Niedzica"), X),
-        q("poly_dar_pomorza", "Which famous sailing ship, 'the white frigate', is now a museum in Gdynia?", "Dar Pomorza", listOf("Dar Mlodziezy", "Fryderyk Chopin", "Zawisza Czarny"), X)
+        q("poly_dar_pomorza", "Which famous sailing ship, 'the white frigate', is now a museum in Gdynia?", "Dar Pomorza", listOf("Dar Mlodziezy", "Fryderyk Chopin", "Zawisza Czarny"), X),
+        q("pol_1939_battle_often", "Which 1939 battle is often called 'the Polish Thermopylae'?", "Wizna", listOf("Mokra", "Bzura", "Kock"), X),
+        q("pol_wrote_inny_swiat", "Who wrote 'Inny swiat' (A World Apart), about a Soviet labour camp?", "Gustaw Herling-Grudzinski", listOf("Aleksander Wat", "Stanislaw Ignacy Witkiewicz", "Jozef Czapski"), X),
+        q("pol_translated_winnie_pooh", "Who translated 'Winnie the Pooh' into Polish as 'Kubus Puchatek'?", "Irena Tuwim", listOf("Julian Tuwim", "Jan Brzechwa", "Maria Konopnicka"), X)
     )
 }

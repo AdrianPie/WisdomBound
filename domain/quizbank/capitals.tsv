@@ -1,0 +1,289 @@
+# Stolice - w obie strony ("stolica X?" i "X to stolica czego?") plus historie stolic: zmiany
+# nazw, przeprowadzki, rekordy, zabytki.
+#
+# Wylecialy dwie skrajnosci: stolice, ktorych nie da sie nie znac (Paryz, Berlin, Rzym) i stolice
+# mikropanstw Pacyfiku, ktorych nie da sie zgadnac ani wyprowadzic. Najciekawsze sa pulapki - miasto
+# wieksze i slynniejsze od stolicy (Sydney, Toronto, Stambul).
+#
+# Zasady pisania pytan dla calego banku - patrz [com.lernhero.domain.quiz.QuizBank].
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+cap2_prague	Easy	What is the capital of Czechia?	Prague	Brno	Ostrava	Pilsen
+cap2_bratislava	Easy	What is the capital of Slovakia?	Bratislava	Kosice	Zilina	Nitra
+cap2_vienna	Easy	What is the capital of Austria?	Vienna	Salzburg	Graz	Linz
+cap2_budapest	Easy	What is the capital of Hungary?	Budapest	Debrecen	Szeged	Miskolc
+cap2_cairo	Easy	What is the capital of Egypt?	Cairo	Alexandria	Giza	Luxor
+cap2_kraj_stockholm	Easy	Stockholm is the capital of which country?	Sweden	Norway	Finland	Denmark
+cap2_kraj_amsterdam	Easy	Amsterdam is the capital of which country?	Netherlands	Belgium	Denmark	Germany
+cap3_caracas	Easy	What is the capital of Venezuela?	Caracas	Bogota	Lima	Quito
+cap3_quito	Easy	What is the capital of Ecuador?	Quito	Bogota	Lima	Caracas
+cap3_kuwait_city	Easy	What is the capital of Kuwait?	Kuwait City	Riyadh	Doha	Manama
+cap3_doha	Easy	What is the capital of Qatar?	Doha	Dubai	Abu Dhabi	Manama
+cap3_abu_dhabi	Easy	What is the capital of United Arab Emirates?	Abu Dhabi	Dubai	Doha	Manama
+wld_cap_new_york	Easy	Is New York the capital of the United States?	No - it's Washington, D.C.	Yes, since 1776	No - it's Philadelphia	No - it's Boston
+cap_budapest_dunaj	Easy	Which capital city grew out of two towns, Buda and Pest, on the Danube?	Budapest	Bucharest	Belgrade	Bratislava
+cap_kreml	Easy	In which capital city is the Kremlin?	Moscow	Kyiv	Minsk	Saint Petersburg
+cap_zakazane_miasto	Easy	In which capital city is the Forbidden City?	Beijing	Tokyo	Seoul	Shanghai
+cap_miasto_swiatla	Easy	Which capital city is nicknamed 'the City of Light'?	Paris	Rome	Vienna	Madrid
+cap_wieczne_miasto	Easy	Which capital city is nicknamed 'the Eternal City'?	Rome	Athens	Jerusalem	Istanbul
+cap_szkocja	Easy	What is the capital of Scotland?	Edinburgh	Glasgow	Aberdeen	Dundee
+cap_katalonia	Easy	Which city is the capital of Catalonia?	Barcelona	Madrid	Valencia	Seville
+cap_hawaje	Easy	What is the capital of the US state of Hawaii?	Honolulu	Hilo	Kona	Lahaina
+capx_dc	Easy	What does the 'D.C.' in Washington, D.C. stand for?	District of Columbia	Direct Capital	Democratic Centre	Department of Congress
+capx_luksemburg	Easy	Which of these countries has a capital with exactly the same name as the country?	Luxembourg	Belgium	Austria	Denmark
+capx_trafalgar	Easy	Nelson's Column stands in which London square?	Trafalgar Square	Piccadilly Circus	Leicester Square	Covent Garden
+capy_berlin_mis	Easy	Which animal appears on the coat of arms of Berlin?	A bear	An eagle	A lion	A wolf
+cap_capital_iraq	Easy	What is the capital of Iraq?	Baghdad	Basra	Tehran	Damascus
+cap_canberra	Medium	What is the capital of Australia?	Canberra	Sydney	Melbourne	Perth
+cap_ottawa	Medium	What is the capital of Canada?	Ottawa	Toronto	Montreal	Vancouver
+cap_brasilia	Medium	What is the capital of Brazil?	Brasilia	Rio de Janeiro	Sao Paulo	Salvador
+cap_ankara	Medium	What is the capital of Turkey?	Ankara	Istanbul	Izmir	Bursa
+cap_bern	Medium	What is the capital of Switzerland?	Bern	Zurich	Geneva	Basel
+cap_lisbon	Medium	What is the capital of Portugal?	Lisbon	Porto	Braga	Faro
+cap_oslo	Medium	What is the capital of Norway?	Oslo	Bergen	Trondheim	Stavanger
+cap_kyiv	Medium	What is the capital of Ukraine?	Kyiv	Lviv	Odesa	Kharkiv
+cap_kraj_copenhagen	Medium	Copenhagen is the capital of which country?	Denmark	Sweden	Norway	Netherlands
+cap_kraj_brussels	Medium	Brussels is the capital of which country?	Belgium	Netherlands	Luxembourg	France
+cap2_helsinki	Medium	What is the capital of Finland?	Helsinki	Tampere	Turku	Espoo
+cap2_dublin	Medium	What is the capital of Ireland?	Dublin	Cork	Galway	Limerick
+cap2_bucharest	Medium	What is the capital of Romania?	Bucharest	Cluj-Napoca	Timisoara	Iasi
+cap2_sofia	Medium	What is the capital of Bulgaria?	Sofia	Plovdiv	Varna	Burgas
+cap2_zagreb	Medium	What is the capital of Croatia?	Zagreb	Split	Rijeka	Dubrovnik
+cap2_belgrade	Medium	What is the capital of Serbia?	Belgrade	Novi Sad	Nis	Subotica
+cap2_new_delhi	Medium	What is the capital of India?	New Delhi	Mumbai	Kolkata	Bangalore
+cap2_buenos_aires	Medium	What is the capital of Argentina?	Buenos Aires	Cordoba	Rosario	Mendoza
+cap2_mexico_city	Medium	What is the capital of Mexico?	Mexico City	Guadalajara	Monterrey	Cancun
+cap2_seoul	Medium	What is the capital of South Korea?	Seoul	Busan	Incheon	Daegu
+cap2_jerusalem	Medium	What is the capital of Israel?	Jerusalem	Tel Aviv	Haifa	Eilat
+cap2_kraj_ljubljana	Medium	Ljubljana is the capital of which country?	Slovenia	Croatia	Slovakia	Austria
+cap2_kraj_vilnius	Medium	Vilnius is the capital of which country?	Lithuania	Latvia	Estonia	Belarus
+cap2_kraj_riga	Medium	Riga is the capital of which country?	Latvia	Lithuania	Estonia	Finland
+cap3_montevideo	Medium	What is the capital of Uruguay?	Montevideo	Buenos Aires	Santiago	Asuncion
+cap3_asuncion	Medium	What is the capital of Paraguay?	Asuncion	Montevideo	La Paz	Santa Cruz
+cap3_la_paz	Medium	What is the capital of Bolivia (seat of government)?	La Paz	Sucre	Santa Cruz	Cochabamba
+cap3_san_jose	Medium	What is the capital of Costa Rica?	San Jose	Panama City	Managua	Tegucigalpa
+cap3_panama_city	Medium	What is the capital of Panama?	Panama City	San Jose	Managua	Bogota
+cap3_kuala_lumpur	Medium	What is the capital of Malaysia?	Kuala Lumpur	Singapore	Jakarta	Bangkok
+cap3_singapore	Medium	What is the capital of Singapore?	Singapore	Kuala Lumpur	Jakarta	Manila
+cap3_bangkok	Medium	What is the capital of Thailand?	Bangkok	Hanoi	Phnom Penh	Vientiane
+cap3_algiers	Medium	What is the capital of Algeria?	Algiers	Tunis	Tripoli	Rabat
+cap3_tunis	Medium	What is the capital of Tunisia?	Tunis	Algiers	Tripoli	Rabat
+cap3_tripoli	Medium	What is the capital of Libya?	Tripoli	Tunis	Algiers	Cairo
+mst_stolica_dwie_nazwy	Medium	Which country's seat of government sits in Amsterdam's rival city, The Hague?	The Netherlands	Belgium	Denmark	Luxembourg
+cur_kazachstan_stolica	Medium	What is the capital of Kazakhstan?	Astana	Almaty	Bishkek	Tashkent
+cap_moskwa_ludnosc	Medium	Which is the most populous capital city in Europe?	Moscow	London	Paris	Berlin
+cap_edo	Medium	Which capital city was once called Edo?	Tokyo	Kyoto	Osaka	Seoul
+cap_sztokholm_wyspy	Medium	Which capital city is spread across 14 islands?	Stockholm	Copenhagen	Helsinki	Oslo
+cap_manneken	Medium	In which capital city is the Manneken Pis statue?	Brussels	Amsterdam	Copenhagen	Bern
+cap_petronas	Medium	In which capital city are the Petronas Towers?	Kuala Lumpur	Singapore	Jakarta	Bangkok
+cap_most_karola	Medium	In which capital city is the Charles Bridge?	Prague	Vienna	Budapest	Warsaw
+cap_buenos_aires_nazwa	Medium	Which capital city's name means 'good airs'?	Buenos Aires	Montevideo	Asuncion	Santiago
+cap_walia	Medium	What is the capital of Wales?	Cardiff	Swansea	Newport	Bangor
+cap_belfast_titanic	Medium	In which city, now the capital of Northern Ireland, was the Titanic built?	Belfast	Dublin	Glasgow	Liverpool
+cap_kalifornia	Medium	What is the capital of California?	Sacramento	Los Angeles	San Francisco	San Diego
+cap_nowy_jork	Medium	What is the capital of New York State?	Albany	New York City	Buffalo	Rochester
+cap_teksas	Medium	What is the capital of Texas?	Austin	Houston	Dallas	San Antonio
+cap_quebec	Medium	What is the capital of the Canadian province of Quebec?	Quebec City	Montreal	Laval	Gatineau
+cap_bawaria	Medium	Which city is the capital of Bavaria?	Munich	Nuremberg	Augsburg	Stuttgart
+cap_portoryko	Medium	What is the capital of Puerto Rico?	San Juan	Ponce	Havana	Santo Domingo
+cap_bangkok_palac	Medium	In which capital city is the Grand Palace with its Emerald Buddha temple?	Bangkok	Hanoi	Phnom Penh	Yangon
+cap_tivoli	Medium	In which capital city is the Tivoli Gardens amusement park?	Copenhagen	Oslo	Stockholm	Vienna
+cap_metro_londyn	Medium	Which capital city opened the world's first underground railway, in 1863?	London	Paris	Budapest	New York
+capx_plac_czerwony	Medium	Which famous square lies at the heart of Moscow?	Red Square	Tiananmen Square	Palace Square	Freedom Square
+capx_tiananmen	Medium	Which huge square lies at the heart of Beijing?	Tiananmen Square	Red Square	Times Square	Wenceslas Square
+capx_dublin_guinness	Medium	Which capital city is home to the Guinness Storehouse brewery?	Dublin	London	Edinburgh	Cardiff
+capx_wieden_muzyka	Medium	Which capital was home to Mozart, Beethoven and Schubert for much of their careers?	Vienna	Berlin	Prague	Paris
+capx_fontanna_trevi	Medium	Visitors to Rome toss coins over their shoulder into which fountain?	The Trevi Fountain	The Fountain of Neptune	The Four Rivers Fountain	The Fountain of Youth
+capx_kair_piramidy	Medium	On the edge of which capital city do the Pyramids of Giza stand?	Cairo	Khartoum	Tripoli	Amman
+capx_praga_zegar	Medium	Which capital city has the oldest astronomical clock still working, dating from 1410?	Prague	Vienna	Bern	Budapest
+capx_atomium	Medium	Which capital city is home to the Atomium, a giant model of an iron crystal?	Brussels	Paris	Berlin	Amsterdam
+capx_siedem_wzgorz	Medium	Rome is famously said to be built on how many hills?	Seven	Three	Twelve	Five
+capx_metro_moskwa	Medium	Which capital's underground stations are famous for their chandeliers and marble halls?	Moscow	London	Paris	Vienna
+capy_madryt_srodek	Medium	Which European capital lies almost exactly at the centre of its country?	Madrid	Paris	Rome	Berlin
+capy_wieden_kawiarnie	Medium	Which capital's grand coffee houses are listed by UNESCO as a cultural tradition?	Vienna	Rome	Paris	Budapest
+capy_praga_wieze	Medium	Which capital city is nicknamed 'the City of a Hundred Spires'?	Prague	Vienna	Budapest	Riga
+capy_budapeszt_termy	Medium	Which capital is famous for thermal baths such as the Szechenyi Baths?	Budapest	Prague	Vienna	Sofia
+capy_hawana	Medium	Which capital city is famous for streets full of 1950s American cars?	Havana	Mexico City	San Juan	Panama City
+cap_capital_afghanistan	Medium	What is the capital of Afghanistan?	Kabul	Kandahar	Tashkent	Islamabad
+cap_capital_north_korea	Medium	What is the capital of North Korea?	Pyongyang	Seoul	Busan	Kaesong
+cap_capital_taiwan	Medium	What is the capital of Taiwan?	Taipei	Kaohsiung	Taichung	Hong Kong
+cap_capital_lebanon	Medium	What is the capital of Lebanon?	Beirut	Damascus	Amman	Tripoli
+cap_capital_bosnia_herzegovina	Medium	What is the capital of Bosnia and Herzegovina?	Sarajevo	Mostar	Banja Luka	Skopje
+cap_capital_jamaica	Medium	What is the capital of Jamaica?	Kingston	Montego Bay	Port of Spain	Nassau
+cap_capital_guatemala	Medium	What is the capital of Guatemala?	Guatemala City	Antigua	San Salvador	Managua
+cap_capital_state_massachusetts	Medium	What is the capital of the US state of Massachusetts?	Boston	Springfield	Worcester	Cambridge
+cap_capital_state_georgia	Medium	What is the capital of the US state of Georgia?	Atlanta	Savannah	Augusta	Macon
+cap_city_capital_australian	Medium	Which city is the capital of the Australian state of Victoria?	Melbourne	Sydney	Adelaide	Geelong
+cap_city_capital_lombardy	Medium	Which city is the capital of Lombardy, Italy's richest region?	Milan	Turin	Venice	Bologna
+cap_capital_syria	Medium	What is the capital of Syria?	Damascus	Aleppo	Beirut	Baghdad
+cap_capital_bahamas	Medium	What is the capital of the Bahamas?	Nassau	Kingston	Havana	Bridgetown
+cap_capital_state_arizona	Medium	What is the capital of the US state of Arizona?	Phoenix	Tucson	Flagstaff	Santa Fe
+cap_capital_state_colorado	Medium	What is the capital of the US state of Colorado?	Denver	Boulder	Aspen	Colorado Springs
+cap_capital_state_utah	Medium	What is the capital of the US state of Utah?	Salt Lake City	Provo	Ogden	Boise
+cap_city_capital_australian_2	Medium	Which city is the capital of the Australian state of Queensland?	Brisbane	Cairns	Gold Coast	Townsville
+cap_city_capital_australian_3	Medium	Which city is the capital of the Australian state of Western Australia?	Perth	Fremantle	Darwin	Broome
+cap_city_capital_australian_4	Medium	Which city is the capital of the Australian state of South Australia?	Adelaide	Darwin	Hobart	Alice Springs
+cap_european_capital_hosts	Medium	Which European capital hosts the headquarters of OPEC?	Vienna	Bern	London	Brussels
+cap_capital_australia_northern	Medium	The capital of Australia's Northern Territory is named after which scientist?	Charles Darwin	James Cook	Isaac Newton	Joseph Banks
+cap_hobart_capital_australian	Medium	Hobart is the capital of which Australian state?	Tasmania	Victoria	Queensland	South Australia
+cap_melbourne_19th_century	Medium	Melbourne is named after a 19th-century British...?	Prime minister	Admiral	Explorer	Bishop
+cap_minneapolis_forms_twin	Medium	Minneapolis forms the 'Twin Cities' with which city, Minnesota's capital?	Saint Paul	Duluth	Rochester	Bloomington
+cap_vaduz_capital_country	Medium	Vaduz is the capital of which country?	Liechtenstein	Luxembourg	Andorra	San Marino
+cap_city_capital_andalusia	Medium	Which city is the capital of Andalusia in southern Spain?	Seville	Granada	Malaga	Cordoba
+cap_capital_city_home	Medium	Which capital city is home to the Spanish Riding School and its white Lipizzaner horses?	Vienna	Madrid	Budapest	Prague
+cap_capital_medieval_old	Medium	In which capital is the medieval old town called Gamla stan?	Stockholm	Oslo	Copenhagen	Tallinn
+cap_capital_home_palace	Medium	Which capital is home to the Palace of the Parliament, one of the heaviest buildings in the world?	Bucharest	Budapest	Belgrade	Sofia
+cap_capital_city_home_2	Medium	Which capital city is home to the vast Sheikh Zayed Grand Mosque?	Abu Dhabi	Doha	Riyadh	Muscat
+cap_capital_home_vigeland	Medium	Which capital is home to the Vigeland sculpture park?	Oslo	Stockholm	Copenhagen	Helsinki
+cap_capital_see_medieval	Medium	In which capital can you see the medieval 'Book of Kells'?	Dublin	Edinburgh	London	Cardiff
+cap_wellington	Hard	What is the capital of New Zealand?	Wellington	Auckland	Christchurch	Dunedin
+cap_hanoi	Hard	What is the capital of Vietnam?	Hanoi	Ho Chi Minh City	Da Nang	Hue
+cap_rabat	Hard	What is the capital of Morocco?	Rabat	Casablanca	Marrakesh	Fez
+cap_abuja	Hard	What is the capital of Nigeria?	Abuja	Lagos	Kano	Ibadan
+cap_reykjavik	Hard	What is the capital of Iceland?	Reykjavik	Akureyri	Keflavik	Selfoss
+cap_nairobi	Hard	What is the capital of Kenya?	Nairobi	Mombasa	Kisumu	Nakuru
+cap_manila	Hard	What is the capital of Philippines?	Manila	Cebu	Davao	Quezon City
+cap_kraj_pretoria	Hard	Pretoria is the capital of which country?	South Africa	Kenya	Zimbabwe	Namibia
+cap2_tallinn	Hard	What is the capital of Estonia?	Tallinn	Riga	Vilnius	Helsinki
+cap2_tirana	Hard	What is the capital of Albania?	Tirana	Durres	Vlore	Shkoder
+cap2_minsk	Hard	What is the capital of Belarus?	Minsk	Gomel	Brest	Vitebsk
+cap2_lima	Hard	What is the capital of Peru?	Lima	Cusco	Arequipa	Trujillo
+cap2_santiago	Hard	What is the capital of Chile?	Santiago	Valparaiso	Concepcion	Antofagasta
+cap2_bogota	Hard	What is the capital of Colombia?	Bogota	Medellin	Cali	Cartagena
+cap2_havana	Hard	What is the capital of Cuba?	Havana	Santiago de Cuba	Camaguey	Holguin
+cap2_jakarta	Hard	What is the capital of Indonesia?	Jakarta	Surabaya	Bandung	Medan
+cap2_islamabad	Hard	What is the capital of Pakistan?	Islamabad	Karachi	Lahore	Peshawar
+cap2_riyadh	Hard	What is the capital of Saudi Arabia?	Riyadh	Jeddah	Mecca	Medina
+cap2_tehran	Hard	What is the capital of Iran?	Tehran	Isfahan	Mashhad	Shiraz
+cap2_addis_ababa	Hard	What is the capital of Ethiopia?	Addis Ababa	Dire Dawa	Gondar	Mekelle
+cap2_dodoma	Hard	What is the capital of Tanzania?	Dodoma	Dar es Salaam	Arusha	Mwanza
+cap3_accra	Hard	What is the capital of Ghana?	Accra	Lagos	Abidjan	Lome
+cap3_dakar	Hard	What is the capital of Senegal?	Dakar	Bamako	Conakry	Nouakchott
+cap3_bamako	Hard	What is the capital of Mali?	Bamako	Dakar	Ouagadougou	Niamey
+cap3_lusaka	Hard	What is the capital of Zambia?	Lusaka	Harare	Lilongwe	Gaborone
+cap3_harare	Hard	What is the capital of Zimbabwe?	Harare	Lusaka	Maputo	Gaborone
+cap3_luanda	Hard	What is the capital of Angola?	Luanda	Maputo	Kinshasa	Windhoek
+cap3_kinshasa	Hard	What is the capital of Democratic Republic of the Congo?	Kinshasa	Brazzaville	Luanda	Kigali
+cap3_kampala	Hard	What is the capital of Uganda?	Kampala	Nairobi	Kigali	Bujumbura
+cap3_kigali	Hard	What is the capital of Rwanda?	Kigali	Bujumbura	Kampala	Nairobi
+cap3_dhaka	Hard	What is the capital of Bangladesh?	Dhaka	Chittagong	Kolkata	Karachi
+lmk_stolica_malta	Hard	What is the capital of Malta?	Valletta	Mdina	Sliema	Birgu
+lmk_stolica_sri_lanka_handlowa	Hard	Which city is Sri Lanka's largest city and commercial centre?	Colombo	Kandy	Galle	Jaffna
+mst_stolica_najdalej_polnoc	Hard	Which of these capital cities lies furthest north?	Reykjavik	Helsinki	Oslo	Tallinn
+mst_stolica_australia	Hard	Canberra became Australia's capital mainly to settle a dispute between which cities?	Sydney and Melbourne	Perth and Adelaide	Brisbane and Sydney	Hobart and Melbourne
+mst_stolica_brazylia	Hard	Brasilia was built from nothing in the 1950s to replace which capital?	Rio de Janeiro	Sao Paulo	Salvador	Belo Horizonte
+dpt_sto_surinam	Hard	What is the capital of Suriname?	Paramaribo	Nieuw Nickerie	Albina	Lelydorp
+cur_rpa_trzy_stolice	Hard	Which country has three capital cities?	South Africa	Switzerland	Malaysia	Nigeria
+cap_christiania	Hard	Which capital city was called Christiania until 1925?	Oslo	Copenhagen	Stockholm	Helsinki
+cap_batawia	Hard	Which capital city was known as Batavia under Dutch rule?	Jakarta	Manila	Kuala Lumpur	Singapore
+cap_nur_sultan	Hard	Which capital city was called Nur-Sultan from 2019 to 2022?	Astana	Almaty	Tashkent	Bishkek
+cap_ulan_bator_zimno	Hard	Which is the coldest national capital, on average?	Ulaanbaatar	Reykjavik	Moscow	Ottawa
+cap_quito_rownik	Hard	Which of these capital cities lies closest to the equator?	Quito	Nairobi	Singapore	Jakarta
+cap_nusantara	Hard	Indonesia has been building a new capital, Nusantara, on which island?	Borneo	Sumatra	Java	Sulawesi
+cap_bratyslawa_granice	Hard	Which is the only national capital that borders two other countries?	Bratislava	Vienna	Luxembourg	Andorra la Vella
+cap_ontario	Hard	Which city is the capital of the Canadian province of Ontario?	Toronto	Ottawa	Hamilton	Kingston
+cap_floryda	Hard	What is the capital of Florida?	Tallahassee	Miami	Orlando	Tampa
+cap_alaska	Hard	What is the capital of Alaska?	Juneau	Anchorage	Fairbanks	Nome
+cap_sycylia	Hard	Which city is the capital of Sicily?	Palermo	Catania	Messina	Syracuse
+cap_grenlandia	Hard	What is the capital of Greenland?	Nuuk	Tromso	Longyearbyen	Torshavn
+cap_tybet	Hard	Which city is the capital of Tibet?	Lhasa	Kathmandu	Thimphu	Shigatse
+cap_polkula_poludniowa	Hard	Which of these capital cities lies in the Southern Hemisphere?	Nairobi	Bogota	Kampala	Singapore
+cap_najdalej_zachod	Hard	Which of these capital cities lies furthest west?	Lisbon	Dublin	Madrid	London
+capx_meksyk_jezioro	Hard	Mexico City was built on the site of what?	A drained lake	A volcano crater	An old silver mine	A desert oasis
+capx_oslo_nobel	Hard	In which capital city is the Nobel Peace Prize awarded?	Oslo	Stockholm	Copenhagen	Geneva
+capx_damaszek	Hard	Which capital is often called the oldest continuously inhabited capital city in the world?	Damascus	Athens	Rome	Cairo
+capx_filadelfia	Hard	Which city served as the US capital for most of the 1790s?	Philadelphia	Boston	Baltimore	Richmond
+capx_valletta_mala	Hard	Which is the smallest national capital in the European Union by area?	Valletta	Luxembourg	Nicosia	Ljubljana
+capy_holmenkollen	Hard	Which capital city has the famous Holmenkollen ski jump?	Oslo	Stockholm	Helsinki	Vienna
+capy_reykjavik_nazwa	Hard	What does the name 'Reykjavik' mean?	Smoky bay	Ice harbour	North town	Fire mountain
+capy_nairobi_park	Hard	Which capital city has a national park with lions and giraffes right beside its skyline?	Nairobi	Addis Ababa	Pretoria	Kampala
+capy_wellington_wiatr	Hard	Which capital is famous as one of the windiest cities in the world?	Wellington	Reykjavik	Oslo	Dublin
+cap_capital_jordan	Hard	What is the capital of Jordan?	Amman	Petra	Aqaba	Irbid
+cap_capital_montenegro	Hard	What is the capital of Montenegro?	Podgorica	Kotor	Budva	Tirana
+cap_capital_north_macedonia	Hard	What is the capital of North Macedonia?	Skopje	Ohrid	Bitola	Sofia
+cap_capital_armenia	Hard	What is the capital of Armenia?	Yerevan	Tbilisi	Baku	Gyumri
+cap_capital_dominican_republic	Hard	What is the capital of the Dominican Republic?	Santo Domingo	San Juan	Port-au-Prince	Punta Cana
+cap_capital_haiti	Hard	What is the capital of Haiti?	Port-au-Prince	Santo Domingo	Cap-Haitien	Kingston
+cap_capital_salvador	Hard	What is the capital of El Salvador?	San Salvador	San Jose	Tegucigalpa	Santa Ana
+cap_capital_somalia	Hard	What is the capital of Somalia?	Mogadishu	Hargeisa	Djibouti	Asmara
+cap_capital_state_washington	Hard	What is the capital of the US state of Washington?	Olympia	Seattle	Spokane	Tacoma
+cap_capital_state_illinois	Hard	What is the capital of the US state of Illinois?	Springfield	Chicago	Peoria	Rockford
+cap_capital_state_nevada	Hard	What is the capital of the US state of Nevada?	Carson City	Las Vegas	Reno	Henderson
+cap_city_capital_canadian	Hard	Which city is the capital of the Canadian province of British Columbia?	Victoria	Vancouver	Kelowna	Surrey
+cap_state_capital_german	Hard	Which US state capital is named after a German chancellor?	Bismarck	Frankfort	Lincoln	Madison
+cap_city_seat_australia	Hard	Which city was the seat of Australia's government from 1901 to 1927?	Melbourne	Sydney	Adelaide	Brisbane
+cap_port_city_pakistan	Hard	Which port city was Pakistan's first capital, from 1947?	Karachi	Lahore	Rawalpindi	Peshawar
+cap_capital_city_means	Hard	Which capital city's name means 'northern capital'?	Beijing	Seoul	Tokyo	Hanoi
+cap_capital_city_means_2	Hard	Which capital city's name means 'eastern capital'?	Tokyo	Beijing	Seoul	Taipei
+cap_capital_state_louisiana	Hard	What is the capital of the US state of Louisiana?	Baton Rouge	New Orleans	Shreveport	Lafayette
+cap_capital_state_oregon	Hard	What is the capital of the US state of Oregon?	Salem	Portland	Eugene	Bend
+cap_capital_maldives	Hard	What is the capital of the Maldives?	Male	Colombo	Port Louis	Victoria
+cap_capital_bahrain	Hard	What is the capital of Bahrain?	Manama	Doha	Muscat	Kuwait City
+cap_capital_sierra_leone	Hard	What is the capital of Sierra Leone?	Freetown	Monrovia	Conakry	Banjul
+cap_capital_trinidad_tobago	Hard	What is the capital of Trinidad and Tobago?	Port of Spain	Kingston	Bridgetown	Castries
+cap_capital_belize	Hard	What is the capital of Belize?	Belmopan	Belize City	San Salvador	Tegucigalpa
+cap_capital_state_michigan	Hard	What is the capital of the US state of Michigan?	Lansing	Detroit	Grand Rapids	Ann Arbor
+cap_capital_state_ohio	Hard	What is the capital of the US state of Ohio?	Columbus	Cleveland	Cincinnati	Dayton
+cap_city_capital_canadian_2	Hard	Which city is the capital of the Canadian province of Alberta?	Edmonton	Calgary	Banff	Red Deer
+cap_city_capital_german	Hard	Which city is the capital of the German state of Saxony?	Dresden	Leipzig	Chemnitz	Magdeburg
+cap_port_louis_capital	Hard	Port Louis is the capital of which island country?	Mauritius	Seychelles	Maldives	Madagascar
+cap_thimphu	Expert	What is the capital of Bhutan?	Thimphu	Paro	Punakha	Phuentsholing
+cap_ulaanbaatar	Expert	What is the capital of Mongolia?	Ulaanbaatar	Erdenet	Darkhan	Khovd
+cap_bishkek	Expert	What is the capital of Kyrgyzstan?	Bishkek	Osh	Naryn	Karakol
+cap_asmara	Expert	What is the capital of Eritrea?	Asmara	Massawa	Keren	Assab
+cap_kraj_ouagadougou	Expert	Ouagadougou is the capital of which country?	Burkina Faso	Mali	Niger	Chad
+cap_kraj_tbilisi	Expert	Tbilisi is the capital of which country?	Georgia	Armenia	Azerbaijan	Uzbekistan
+cap2_sucre	Expert	What is the capital of Bolivia (constitutional capital)?	Sucre	La Paz	Santa Cruz	Cochabamba
+cap2_yamoussoukro	Expert	What is the capital of Ivory Coast?	Yamoussoukro	Abidjan	Bouake	Korhogo
+cap2_sri_jayawardenepura_kotte	Expert	What is the capital of Sri Lanka (administrative capital)?	Sri Jayawardenepura Kotte	Nuwara Eliya	Trincomalee	Batticaloa
+cap2_dushanbe	Expert	What is the capital of Tajikistan?	Dushanbe	Khujand	Kulob	Qurghonteppa
+cap2_ashgabat	Expert	What is the capital of Turkmenistan?	Ashgabat	Turkmenbashy	Mary	Dashoguz
+cap2_baku	Expert	What is the capital of Azerbaijan?	Baku	Ganja	Sumgait	Lankaran
+cap2_kathmandu	Expert	What is the capital of Nepal?	Kathmandu	Pokhara	Lalitpur	Biratnagar
+cap2_vientiane	Expert	What is the capital of Laos?	Vientiane	Luang Prabang	Pakse	Savannakhet
+cap2_phnom_penh	Expert	What is the capital of Cambodia?	Phnom Penh	Siem Reap	Battambang	Sihanoukville
+cap2_antananarivo	Expert	What is the capital of Madagascar?	Antananarivo	Toamasina	Mahajanga	Toliara
+cap2_windhoek	Expert	What is the capital of Namibia?	Windhoek	Walvis Bay	Swakopmund	Oshakati
+cap2_port_moresby	Expert	What is the capital of Papua New Guinea?	Port Moresby	Lae	Mount Hagen	Madang
+cap2_kraj_suva	Expert	Suva is the capital of which country?	Fiji	Samoa	Tonga	Vanuatu
+cap2_kraj_nicosia	Expert	Nicosia is the capital of which country?	Cyprus	Malta	Greece	Lebanon
+cap3_gaborone	Expert	What is the capital of Botswana?	Gaborone	Windhoek	Lusaka	Maseru
+cap3_maseru	Expert	What is the capital of Lesotho?	Maseru	Mbabane	Gaborone	Bloemfontein
+cap3_mbabane	Expert	What is the capital of Eswatini?	Mbabane	Maseru	Pretoria	Maputo
+cap3_lilongwe	Expert	What is the capital of Malawi?	Lilongwe	Blantyre	Lusaka	Harare
+cap3_khartoum	Expert	What is the capital of Sudan?	Khartoum	Cairo	Addis Ababa	Juba
+cap3_juba	Expert	What is the capital of South Sudan?	Juba	Khartoum	Kampala	Nairobi
+cap3_sanaa	Expert	What is the capital of Yemen?	Sanaa	Aden	Muscat	Riyadh
+cap3_muscat	Expert	What is the capital of Oman?	Muscat	Sanaa	Manama	Abu Dhabi
+cap3_bandar_seri_begawan	Expert	What is the capital of Brunei?	Bandar Seri Begawan	Kuala Lumpur	Manila	Jakarta
+cap3_nouakchott	Expert	What is the capital of Mauritania?	Nouakchott	Dakar	Bamako	Nouadhibou
+dpt_sto_palau	Expert	What is the capital of Palau?	Ngerulmud	Koror	Melekeok	Airai
+dpt_sto_benin	Expert	What is the official capital of Benin?	Porto-Novo	Cotonou	Parakou	Abomey
+cur_birma_stolica	Expert	Myanmar moved its capital in 2006 to which purpose-built city?	Naypyidaw	Yangon	Mandalay	Bagan
+cap_salisbury	Expert	Which capital city was called Salisbury until 1982?	Harare	Lusaka	Gaborone	Windhoek
+cap_leopoldville	Expert	Which capital city was once called Leopoldville?	Kinshasa	Brazzaville	Kigali	Bujumbura
+cap_kuala_lumpur_nazwa	Expert	Which capital city's name means 'muddy confluence' in Malay?	Kuala Lumpur	Jakarta	Singapore	Bandar Seri Begawan
+cap_nairobi_nazwa	Expert	Which capital city's name comes from a Maasai phrase meaning 'cool water'?	Nairobi	Kampala	Dodoma	Kigali
+cap_monrowia	Expert	Which African capital is named after a US president?	Monrovia	Freetown	Accra	Banjul
+cap_kinszasa_brazzaville	Expert	Apart from Rome and Vatican City, which two capitals lie closest to each other?	Kinshasa and Brazzaville	Vienna and Bratislava	Buenos Aires and Montevideo	Copenhagen and Oslo
+cap_addis_nazwa	Expert	The name of which capital city means 'new flower'?	Addis Ababa	Asmara	Nairobi	Kampala
+capx_bangkok_nazwa	Expert	Which capital city has one of the longest place names in the world, beginning 'Krung Thep'?	Bangkok	Phnom Penh	Vientiane	Kathmandu
+capx_lizbona_1755	Expert	Which capital city was flattened by a huge earthquake and tsunami in 1755?	Lisbon	Madrid	Rome	Athens
+capx_brasilia_samolot	Expert	Seen from above, the plan of Brasilia is often said to look like what?	An aeroplane	A star	A fish	A tree
+capx_lenfant	Expert	Which French-born engineer drew up the original street plan of Washington, D.C.?	Pierre L'Enfant	Gustave Eiffel	Georges Haussmann	Le Corbusier
+capx_haussmann	Expert	Which planner rebuilt much of Paris with wide boulevards in the 1850s and 1860s?	Baron Haussmann	Gustave Eiffel	Le Corbusier	Pierre L'Enfant
+capx_canberra_konkurs	Expert	The winning design for Canberra came from architects of which country?	The USA	Britain	France	Germany
+capy_canberra_nazwa	Expert	The name 'Canberra' is thought to come from an Aboriginal word meaning what?	Meeting place	Big river	Red earth	Sky camp
+capy_dublin_nazwa	Expert	Dublin's name comes from Irish words meaning what?	Black pool	Green hill	River mouth	Old fort
+capy_unia_afrykanska	Expert	In which capital city is the headquarters of the African Union?	Addis Ababa	Nairobi	Cairo	Pretoria
+capy_rideau	Expert	Which canal in Ottawa turns into a skating rink almost 8 km long in winter?	The Rideau Canal	The Welland Canal	The Lachine Canal	The Erie Canal
+capy_tbilisi	Expert	The name of the Caucasus capital Tbilisi comes from its what?	Warm springs	High mountains	Many churches	Old walls
+cap_capital_moldova	Expert	What is the capital of Moldova?	Chisinau	Tiraspol	Balti	Bucharest
+cap_capital_uzbekistan	Expert	What is the capital of Uzbekistan?	Tashkent	Samarkand	Bukhara	Almaty
+cap_capital_honduras	Expert	What is the capital of Honduras?	Tegucigalpa	San Pedro Sula	Managua	Belmopan
+cap_capital_nicaragua	Expert	What is the capital of Nicaragua?	Managua	Leon	Granada	Tegucigalpa
+cap_capital_cameroon	Expert	What is the capital of Cameroon?	Yaounde	Douala	Lagos	Libreville
+cap_capital_mozambique	Expert	What is the capital of Mozambique?	Maputo	Beira	Lusaka	Harare
+cap_capital_guyana	Expert	What is the capital of Guyana?	Georgetown	Paramaribo	Cayenne	Bridgetown
+cap_capital_state_pennsylvania	Expert	What is the capital of the US state of Pennsylvania?	Harrisburg	Philadelphia	Pittsburgh	Scranton
+cap_city_italy_capital	Expert	Which city was Italy's capital before Rome, from 1865 to 1871?	Florence	Turin	Milan	Naples
+cap_capital_niger	Expert	What is the capital of Niger?	Niamey	Abuja	N'Djamena	Bamako

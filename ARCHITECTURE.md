@@ -81,8 +81,10 @@ monster/         karty kompanow i cala ekonomia kolekcji
                      razy ta sama walka. Zero nowych grafik: role widac w nazwie wroga
 quiz/            bank pytan; bank/ to tresc: JEDEN plik na temat (BiologyQuestions, AnimalQuestions...,
                  w srodku szczeblami Easy -> Expert) plus po jednym pliku na typ specjalny
-                 (TrueFalse/MultiSelect/Ordering). Nowe pytanie dopisuje sie do pliku swojego
-                 tematu, nie do kolejnej partii "Extra3" - zasady pisania pytan (zadnych definicji
+                 (TrueFalse/MultiSelect/Ordering). Pytania wyboru maja zrodlo w domain/quizbank/
+                 <temat>.tsv, a pliki *Questions.kt tematow sa z nich generowane - nowe pytania
+                 dopisuje `python3 tools/quizbank.py add` (szuka dubli w calym banku, instrukcja
+                 w domain/quizbank/README.md). Zasady pisania pytan (zadnych definicji
                  z podrecznika i pytan-zerowek, dystraktory z tej samej polki, jeden fakt = jedno
                  pytanie) siedza w KDoc QuizBank i czesci pilnuja QuizBankTest/QuizBankAuditTest
   QuestionHistory    pamiec zadanych pytan (wszystkie typy, cala sesja gry - zyje w RunSession).

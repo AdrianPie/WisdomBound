@@ -1,0 +1,441 @@
+# Temat LOKALNY: historia, kultura, geografia i sport Polski - widoczny WYLACZNIE przy polskim
+# jezyku aplikacji (patrz [QuizCategory.builtinFor]). Dla gracza spoza Polski "w ktorym roku wybuchlo
+# powstanie styczniowe?" nie jest pytaniem trudnym, tylko niemozliwym.
+#
+# Granica przebiega tam, gdzie konczy sie rozpoznawalnosc poza Polska, a nie tam, gdzie pada slowo
+# "Polska" - Kopernik, Curie, Solidarnosc czy Lewandowski zostaja w puli globalnej. Kategoria ma byc
+# przyjemnoscia rozpoznawania swojego podworka, a nie druga klasowka z historii, dlatego obok dat
+# sa tu kuchnia, zwyczaje, wynalazki, gry i sport. Pytania, ktorych Polak nie moze nie znac (kolory
+# flagi, waluta), wylecialy.
+#
+# Id zachowuja stare prefiksy (pol_his2_..., pol_lit3_...) - to slad, skad pytanie przyszlo.
+#
+# Zasady pisania pytan dla calego banku - patrz [com.lernhero.domain.quiz.QuizBank].
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+pol_geo2_gory_polska_pd	Easy	Which mountains form Poland's southern border with Slovakia?	The Tatras	The Alps	The Karkonosze	The Bieszczady
+pol_geo2_polska_sasiedzi	Easy	How many countries border Poland?	Seven	Five	Six	Eight
+pol_his2_husaria_kto	Easy	What was the Polish winged hussars famous for?	Heavy cavalry with wings	Marine infantry	Siege artillery	Light archery
+pol_his3_piastowie	Easy	What was the first ruling dynasty of Poland called?	The Piasts	The Jagiellons	The Vasas	The Habsburgs
+pol_his3_jagiellonowie	Easy	Which dynasty ruled Poland after the Piasts (with an Angevin interlude)?	The Jagiellons	The Vasas	The Habsburgs	The Romanovs
+pol_his3_polska_stolica_pierwsza	Easy	Which city was Poland's first capital?	Gniezno	Warsaw	Krakow	Poznan
+pol_lit2_lokomotywa	Easy	Who wrote the poem 'The Locomotive'?	Julian Tuwim	Jan Brzechwa	Adam Mickiewicz	Maria Konopnicka
+pol_lit2_akademia_pana_kleksa	Easy	Who wrote 'The Academy of Mr. Kleks'?	Jan Brzechwa	Julian Tuwim	Kornel Makuszynski	Janusz Korczak
+pol_lit3_gucio_zaczarowany	Easy	Who wrote 'About the Dwarves and Orphan Marysia'?	Maria Konopnicka	Julian Tuwim	Jan Brzechwa	Ignacy Krasicki
+pol_mit3_smok_wawelski	Easy	Who did the legendary Krakus (or a clever cobbler) defeat in Polish legend?	The Wawel Dragon	A basilisk	Cerberus	The Minotaur
+pol2_chopin_instrument	Easy	Which instrument did Frederic Chopin compose for above all?	The piano	The violin	The organ	The cello
+pol2_zubr_gdzie	Easy	In which forest does Poland's best-known bison population live?	The Bialowieza Forest	The Kampinos Forest	The Tuchola Forest	The Augustow Forest
+pol2_wejscie_ue	Easy	In which year did Poland join the European Union?	2004	1999	2007	2011
+pol3_pan_tadeusz	Easy	Who wrote 'Pan Tadeusz'?	Adam Mickiewicz	Juliusz Slowacki	Henryk Sienkiewicz	Boleslaw Prus
+pol3_chrzest	Easy	In which year did Poland adopt Christianity?	966	1000	1025	1050
+pol3_niepodleglosc	Easy	In which year did Poland regain independence?	1918	1920	1945	1989
+pol3_najwyzszy_szczyt	Easy	What is the name of Poland's highest peak?	Rysy	Giewont	Sniezka	Babia Gora
+pol_krasnale	Easy	Which Polish city is famous for hundreds of little bronze dwarf statues?	Wroclaw	Krakow	Gdansk	Poznan
+pol_pierniki	Easy	Which Polish city is famous for its gingerbread?	Torun	Krakow	Gniezno	Lodz
+pol_wigilia	Easy	What is the traditional Polish Christmas Eve supper called?	Wigilia	Andrzejki	Dozynki	Tlusty Czwartek
+pol_wigilia_nakrycie	Easy	Why is an extra place set at the Polish Christmas Eve table?	For an unexpected guest	For a lucky coin	For the Christmas tree angel	For leftovers the next day
+pol_smigus_dyngus	Easy	What do people do to each other on Smigus-dyngus, Easter Monday?	Splash each other with water	Throw flour at each other	Swap painted eggs	Ring bells at each other's doors
+pol_tlusty_czwartek	Easy	Which treat do Poles eat by the dozen on Fat Thursday?	Paczki	Pierogi	Bigos	Oscypek
+pol_zurek	Easy	What is zurek?	A sour rye soup	A beetroot soup	A tripe soup	A cucumber soup
+pol_barszcz	Easy	Which soup, made from beetroot, is served with little dumplings on Christmas Eve?	Barszcz	Zurek	Rosol	Flaki
+pol_cd_projekt	Easy	Which Polish studio made 'The Witcher 3' and 'Cyberpunk 2077'?	CD Projekt Red	Techland	11 bit studios	People Can Fly
+pol_lewandowski_rekord	Easy	Who is the all-time top scorer for Poland's national football team?	Robert Lewandowski	Grzegorz Lato	Zbigniew Boniek	Jakub Blaszczykowski
+pol_swiatek	Easy	Which Polish tennis player became world number one in 2022?	Iga Swiatek	Agnieszka Radwanska	Magda Linette	Magdalena Frech
+pol_syrenka	Easy	What is shown on Warsaw's coat of arms?	A mermaid	A dragon	A white eagle	A lion
+pol_wszystkich_swietych	Easy	What do Poles traditionally do on 1 November, All Saints' Day?	Visit graves and light candles	Splash each other with water	Burn a straw doll	Eat doughnuts
+pol_swieconka	Easy	What do Poles take to church in small baskets on Holy Saturday?	Food to be blessed	Painted stones	Candles for the dead	Palm branches
+pol_bolek_lolek	Easy	Which Polish cartoon follows two adventurous brothers?	Bolek and Lolek	Reksio	Mis Uszatek	Pampalini
+pol_matolek	Easy	What kind of animal is Koziolek Matolek, who searches for the town of Pacanow?	A goat	A dog	A bear	A hare
+pol_maluch	Easy	What nickname did Poles give the tiny Fiat 126p car?	Maluch	Syrenka	Polonez	Warszawa
+pol_pisanki	Easy	What are pisanki?	Decorated Easter eggs	Paper cut-outs	Christmas biscuits	Wooden toys
+pol_morskie_oko	Easy	What is the name of the famous lake in the Tatras whose name means 'Eye of the Sea'?	Morskie Oko	Czarny Staw	Wielki Staw	Solina
+pol_na_zdrowie	Easy	What does the Polish toast 'Na zdrowie!' mean?	To your health!	Good luck!	Bottoms up!	Welcome!
+polx_wisla_baltyk	Easy	Into which sea does the Vistula flow?	The Baltic Sea	The Black Sea	The North Sea	The Adriatic Sea
+polx_flaga	Easy	What are the colours of the Polish flag, from top to bottom?	White and red	Red and white	White and blue	Red and yellow
+polx_godlo	Easy	What is shown on Poland's coat of arms?	A white eagle with a crown	A red lion	A black bear	A golden griffin
+polx_pierogi_ruskie	Easy	What are 'pierogi ruskie' traditionally filled with?	Potato and white cheese	Minced meat	Cabbage and mushrooms	Strawberries
+polx_bigos	Easy	Which Polish 'hunter's stew' is made of sauerkraut and meat?	Bigos	Zurek	Golabki	Flaki
+polx_karp_wanna	Easy	Which fish do many Polish families famously keep alive in the bathtub before Christmas?	Carp	Pike	Herring	Trout
+polx_lotnisko_chopin	Easy	Which composer is Warsaw's main airport named after?	Frederic Chopin	Stanislaw Moniuszko	Karol Szymanowski	Krzysztof Penderecki
+polx_palac_kultury	Easy	Which tall Warsaw landmark was a 'gift' from Stalin?	The Palace of Culture and Science	The Royal Castle on the Vistula	The Warsaw Spire skyscraper	The Wilanow Palace
+polx_zakopane	Easy	Which town is called Poland's 'winter capital'?	Zakopane	Szczyrk	Karpacz	Krynica
+polx_bursztyn	Easy	Which fossilised tree resin washes up on Poland's Baltic beaches?	Amber	Jade	Coral	Obsidian
+polx_krowki	Easy	Which fudge-like Polish sweets are named after little cows?	Krowki	Michalki	Kukulki	Irysy
+polx_hymn_slowa	Easy	What are the opening words of Poland's national anthem?	'Poland is not yet lost'	'Poland, my homeland'	'Rise up, Poland'	'Glory to Poland'
+polx_reksio	Easy	What kind of animal is Reksio, the Polish cartoon hero?	A dog	A cat	A bear	A rabbit
+polx_mis_uszatek	Easy	Which Polish cartoon teddy bear has one floppy ear?	Mis Uszatek	Reksio	Pampalini	Koziolek Matolek
+polx_11_listopada	Easy	On which date does Poland celebrate Independence Day?	11 November	3 May	1 September	15 August
+polx_1_wrzesnia	Easy	On what date in 1939 did Germany invade Poland?	1 September	11 November	17 September	1 August
+poly_schabowy	Easy	What is 'kotlet schabowy'?	A breaded pork cutlet	A beef stew	A fish soup	A potato pancake
+poly_placki	Easy	What are 'placki ziemniaczane'?	Potato pancakes	Potato dumplings	Mashed potato soup	Baked potatoes
+poly_makowiec	Easy	What is the filling of a Polish 'makowiec' roll?	Poppy seeds	Walnuts	Apples	Chocolate
+poly_kevin	Easy	Which American film has been a Polish Christmas TV tradition since the 1990s?	Home Alone	Die Hard	Love Actually	Elf
+pol_river_flows_through	Easy	Which river flows through both Krakow and Warsaw?	The Vistula	The Oder	The Warta	The Bug
+pol_three_cities_make	Easy	Which three cities make up the Tri-City on the Baltic coast?	Gdansk, Gdynia and Sopot	Gdansk, Elblag and Hel	Gdynia, Sopot and Leba	Gdansk, Gdynia and Puck
+pol_zapiekanka	Easy	What is a 'zapiekanka'?	A toasted half-baguette with mushrooms and cheese	A roll stuffed with cabbage and minced meat	A fried potato pancake with sour cream	A sweet bun filled with poppy seed jam
+pol_rosol	Easy	What is 'rosol'?	A clear chicken broth	A beetroot soup	A cabbage stew	A sour rye soup
+pol_mizeria	Easy	What is 'mizeria'?	A cucumber salad with cream	A mushroom and onion sauce	A potato salad with mayo	Herring in sour cream
+pol_kompot	Easy	What is 'kompot'?	A drink of fruit boiled in water	A thick plum jam cooked for hours	A fruit cake soaked in vodka	A cold dessert of whipped cream
+pol_golonka	Easy	What is 'golonka'?	Roasted pork knuckle	Smoked cheese	Beef stew	Fried fish
+pol_motorcycle_sport_raced	Easy	Which motorcycle sport, raced on oval cinder tracks, packs Polish stadiums?	Speedway	Motocross	Enduro	Trial
+pol_polish_children_traditionally	Easy	What do Polish children traditionally find under their pillows on the morning of 6 December?	Small presents	Coal	Easter eggs	Birthday cards
+pol_poles_call_new	Easy	What do Poles call New Year's Eve?	Sylwester	Wigilia	Andrzejki	Zaduszki
+pol_two_children_sienkiewicz	Easy	Who are the two children in Sienkiewicz's 'In Desert and Wilderness'?	Stas and Nel	Jas and Malgosia	Bolek and Lolek	Zbyszko and Danusia
+pol_poland_national_airline	Easy	What is the name of Poland's national airline?	LOT	PLL	Polair	Orlik
+pol_poles_say_meal	Easy	What do Poles say before a meal to wish everyone a good appetite?	Smacznego	Na zdrowie	Dzien dobry	Sto lat
+pol_polish_birthday_song	Easy	What does the Polish birthday song 'Sto lat' wish someone?	A hundred years of life	A hundred presents	A happy new year	Good luck in love
+pol_pierogi_jagodami	Easy	What are 'pierogi z jagodami'?	Dumplings filled with blueberries	Pancakes with cherry jam	Dumplings with sauerkraut	Doughnuts with plum jam
+pol_smalec	Easy	What is 'smalec'?	Lard spread with crispy bits	Smoked sheep's cheese	Sour cream with herbs	A thick barley soup
+pol_babka_polish_easter	Easy	What is a 'babka' at a Polish Easter table?	A tall ring-shaped cake	A painted egg	A lamb made of butter	A bowl of sour soup
+pol_prince_polo	Easy	What is 'Prince Polo'?	A chocolate-covered wafer bar	A brand of mineral water	A brand of crisps	A brand of chewing gum
+pol_day_polish_children	Easy	Which day do Polish children celebrate on 21 January?	Grandmother's Day	Children's Day	Women's Day	Name Day
+pol_two_football_clubs	Easy	Which two famous football clubs share the city of Krakow?	Wisla and Cracovia	Legia and Polonia	Lech and Warta	Gornik and Ruch
+pol_football_club_polish	Easy	Which football club do Polish fans call 'the Military Men' ('Wojskowi')?	Legia Warsaw	Lech Poznan	Wisla Krakow	Slask Wroclaw
+pol_1920_battle_warsaw	Easy	What is the 1920 Battle of Warsaw popularly called?	The Miracle on the Vistula	The Miracle of Grunwald	The Warsaw Wonder	The Eagle's Victory
+pol_painted_huge_canvas	Easy	Who painted the huge canvas 'The Battle of Grunwald'?	Jan Matejko	Jozef Chelmonski	Jacek Malczewski	Wojciech Kossak
+pol_1970s_series_followed	Easy	Which 1970s TV series followed the engineer Stefan Karwowski?	Czterdziestolatek	Alternatywy 4	Zmiennicy	Wojna domowa
+pol_actor_played_ferdynand	Easy	Which actor played Ferdynand Kiepski for over 20 years?	Andrzej Grabowski	Marian Opania	Jerzy Stuhr	Cezary Pazura
+pol_founded_great_orchestra	Easy	Who founded the Great Orchestra of Christmas Charity?	Jerzy Owsiak	Janina Ochojska	Marek Kotanski	Jerzy Urban
+pol_city_hosted_national	Easy	Which city has hosted the National Festival of Polish Song since 1963?	Opole	Sopot	Kolobrzeg	Jarocin
+pol_lower_house_polish	Easy	What is the lower house of the Polish parliament called?	Sejm	Senat	Rada	Duma
+pol_poland_currency	Easy	What is the name of Poland's currency?	Zloty	Grosz	Korona	Marka
+pol_polish_president_died	Easy	Which Polish president died in the 2010 plane crash near Smolensk?	Lech Kaczynski	Aleksander Kwasniewski	Bronislaw Komorowski	Lech Walesa
+pol_poland_president_1995	Easy	Who was Poland's president from 1995 to 2005?	Aleksander Kwasniewski	Lech Walesa	Lech Kaczynski	Wojciech Jaruzelski
+pol_priest_murdered_communist	Easy	Which priest was murdered by the communist secret police in 1984?	Jerzy Popieluszko	Stefan Wyszynski	Maksymilian Kolbe	Jozef Tischner
+pol_polish_nun_apostle	Easy	Which Polish nun is known as the 'Apostle of Divine Mercy'?	Faustina Kowalska	Urszula Ledochowska	Jadwiga	Teresa of Calcutta
+pol_franciscan_friar_gave	Easy	Which Franciscan friar gave his life in Auschwitz in place of another prisoner?	Maksymilian Kolbe	Jerzy Popieluszko	Adam Chmielowski	Rafal Kalinowski
+pol_wrote_words_polish	Easy	Who wrote the words of the Polish national anthem?	Jozef Wybicki	Jan Henryk Dabrowski	Adam Mickiewicz	Juliusz Slowacki
+pol_world_pianist_became	Easy	Which world-famous pianist became Polish prime minister in 1919?	Ignacy Jan Paderewski	Frederic Chopin	Artur Rubinstein	Karol Szymanowski
+pol_tatra_highwayman_legend	Easy	Which Tatra highwayman of legend robbed the rich to give to the poor?	Janosik	Kmicic	Zawisza	Wernyhora
+pol_directed_cult_comedies	Easy	Who directed the cult comedies 'Seksmisja' and 'Va banque'?	Juliusz Machulski	Stanislaw Bareja	Marek Piwowski	Sylwester Checinski
+pol_played_andrzej_kmicic	Easy	Who played Andrzej Kmicic in the 1974 film 'The Deluge'?	Daniel Olbrychski	Jan Nowicki	Tadeusz Lomnicki	Jerzy Zelnik
+pol_town_silesian_stadium	Easy	In which town is the Silesian Stadium, known as the 'Witches' Cauldron'?	Chorzow	Katowice	Gliwice	Zabrze
+pol_zurek_sometimes_served	Easy	In what is zurek sometimes served instead of a bowl?	A bread loaf	A clay pot	A pumpkin	A cabbage leaf
+pol_szarlotka	Easy	What is 'szarlotka'?	An apple pie	A cheesecake	A poppy-seed cake	A jam doughnut
+pol_nalesniki	Easy	What are 'nalesniki'?	Thin pancakes	Potato pancakes	Dumplings	Doughnuts
+pol_juwenalia_poland	Easy	What are 'Juwenalia' in Poland?	Student festivals	Harvest feasts	Christmas carols	Name days
+pol_band_fronted_singer	Easy	Which band was fronted by the singer Kora?	Maanam	Perfect	Republika	Lady Pank
+pol_polish_city_leonardo	Easy	In which Polish city does Leonardo's 'Lady with an Ermine' hang?	Krakow	Warsaw	Wroclaw	Gdansk
+pol_poland_national_stadium	Easy	What is the name of Poland's national stadium in Warsaw?	Stadion Narodowy	Stadion Slaski	Stadion Dziesieciolecia	Stadion Wojska Polskiego
+pol_geo2_wisla_zrodlo	Medium	Where does the Vistula river originate?	In the Silesian Beskids	In the Tatras	In the Sudetes	In the Masurian Lake District
+pol_geo2_polska_jezioro	Medium	Which lake is the largest in Poland?	Sniardwy	Mamry	Hancza	Lebsko
+pol_geo2_polska_najglebsze	Medium	Which lake is the deepest in Poland?	Hancza	Sniardwy	Wigry	Mamry
+pol_geo2_polska_wojewodztwa	Medium	How many provinces (voivodeships) does Poland have?	16	14	18	12
+pol_geo3_wiatr_halny	Medium	What is the warm, gusty wind blowing from the Tatras called?	The Halny	The Mistral	The Sirocco	Only the alpine Foehn
+pol_his2_potop_szwedzki	Medium	Which invasion do we call 'the Swedish Deluge'?	Sweden's invasion of Poland in the 17th century	Denmark's invasion of Norway	Russia's invasion in the 18th century	The Teutonic Knights' invasion
+pol_his2_rozbior_pierwszy	Medium	In which year did the first partition of Poland occur?	1772	1793	1795	1764
+pol_his2_powstanie_styczniowe	Medium	In which year did the January Uprising break out?	1863	1830	1846	1905
+pol_his2_powstanie_warszawskie	Medium	In which year did the Warsaw Uprising break out?	1944	1943	1939	1945
+pol_his2_chrzest_kto	Medium	Which ruler adopted the baptism of Poland?	Mieszko I	Boleslaw the Brave	Casimir the Restorer	Wladyslaw the Elbow-high
+pol_his2_unia_lubelska_co	Medium	What was formed by the Union of Lublin?	The Polish-Lithuanian Commonwealth	The Hanseatic League	The Congress Kingdom	The Teutonic Order's state
+pol_his2_wielka_emigracja	Medium	After which uprising did the Great Emigration take place?	The November Uprising	The January Uprising	The Greater Poland Uprising	The Kosciuszko Uprising
+pol_his2_kosciuszko_bitwa	Medium	Near which town did Kosciuszko win a battle in 1794?	Raclawice	Maciejowice	Grochow	Ostroleka
+pol_his3_zygmunt_iii_stolica	Medium	Which king moved Poland's capital to Warsaw?	Sigismund III Vasa	Wladyslaw Jagiello	Casimir the Great	John III Sobieski
+pol_his3_akademia_krakowska	Medium	Who founded the Krakow Academy (today's Jagiellonian University)?	Casimir the Great	Wladyslaw Jagiello	Boleslaw the Brave	Sigismund the Old
+pol_lit2_przedwiosnie	Medium	Who wrote 'The Coming Spring'?	Stefan Zeromski	Wladyslaw Reymont	Zofia Nalkowska	Maria Dabrowska
+pol_lit2_ferdydurke	Medium	Who wrote 'Ferdydurke'?	Witold Gombrowicz	Bruno Schulz	Stanislaw Witkiewicz	Tadeusz Rozewicz
+pol_lit2_sklepy_cynamonowe	Medium	Who wrote 'The Street of Crocodiles' (Cinnamon Shops)?	Bruno Schulz	Witold Gombrowicz	Julian Tuwim	Jaroslaw Iwaszkiewicz
+pol_lit2_dziady_autor	Medium	Who wrote 'Forefathers' Eve'?	Adam Mickiewicz	Juliusz Slowacki	Zygmunt Krasinski	Cyprian Norwid
+pol_lit2_balladyna	Medium	Who wrote 'Balladyna'?	Juliusz Slowacki	Adam Mickiewicz	Aleksander Fredro	Stanislaw Wyspianski
+pol_lit2_wesele_autor	Medium	Who wrote 'The Wedding'?	Stanislaw Wyspianski	Gabriela Zapolska	Stefan Zeromski	Juliusz Slowacki
+pol_lit2_zemsta	Medium	Who wrote the comedy 'The Revenge'?	Aleksander Fredro	Stanislaw Wyspianski	Michal Balucki	Gabriela Zapolska
+pol_lit3_pan_tadeusz_bohater	Medium	Who is the main character of 'Pan Tadeusz'?	Tadeusz Soplica	Jacek Soplica	Gerwazy	The Judge
+pol_lit3_pan_tadeusz_miejsce	Medium	Where is 'Pan Tadeusz' set?	Lithuania (in Soplicowo)	Krakow and its outskirts	Warsaw under the Tsar	France, in exile in Paris
+pol_lit3_lalka_bohater	Medium	Who is the main character of Boleslaw Prus's 'The Doll'?	Stanislaw Wokulski	Ignacy Rzecki	Julian Ochocki	Tomasz Lecki
+pol_lit3_krzyzacy_bohater	Medium	Who is one of the main characters of Sienkiewicz's 'The Knights of the Cross'?	Zbyszko of Bogdaniec	Zagloba	Wolodyjowski	Kmicic
+pol_lit3_potop_bohater	Medium	Who is the main character of Sienkiewicz's 'The Deluge'?	Andrzej Kmicic	Zbyszko of Bogdaniec	Wolodyjowski	Skrzetuski
+pol2_kopalnia_soli	Medium	Which Polish salt mine is a UNESCO World Heritage site?	Wieliczka	Klodawa	Bochnia alone	Inowroclaw
+pol2_nato_rok	Medium	In which year did Poland join NATO?	1999	1991	2004	1997
+pol2_hymn_nazwa	Medium	What is the Polish national anthem called?	Dabrowski's Mazurka	Rota	Boze cos Polske	Warszawianka
+pol2_noblistki_ile	Medium	How many Nobel Prizes did Maria Sklodowska-Curie win?	Two	One	Three	Four
+pol2_papiez_polak	Medium	Which Pole became pope in 1978?	John Paul II	John XXIII	Paul VI	Benedict XVI
+pol2_walesa_funkcja	Medium	What office did Lech Walesa hold in the 1990s?	President of Poland	Prime Minister	Speaker of the Sejm	Mayor of Gdansk
+pol2_skoki_narciarskie_obiekt	Medium	In which Polish town is the Wielka Krokiew ski jumping hill?	Zakopane	Szczyrk	Karpacz	Wisla
+pol3_nobel_szymborska	Medium	Which Polish poet won the Nobel Prize in Literature?	Wislawa Szymborska	Maria Konopnicka	Halina Poswiatowska	Agnieszka Osiecka
+pol3_chrobry	Medium	Who was the first crowned King of Poland?	Boleslaw the Brave	Mieszko I	Casimir the Great	Wladyslaw the Elbow-high
+pol3_malysz	Medium	Which sport was Adam Malysz famous for?	Ski jumping	Cross-country skiing	Biathlon	Snowboarding
+ref_pol_grunwald_rok	Medium	In which year was the Battle of Grunwald fought?	1410	1385	1466	1525
+ref_pol_sobieski_wieden	Medium	Which Polish king led the relief of Vienna in 1683?	John III Sobieski	Stephen Bathory	Sigismund III Vasa	Wladyslaw IV Vasa
+ref_pol_konstytucja_rok	Medium	The Constitution of 3 May was adopted in which year?	1791	1772	1795	1807
+ref_pol_solidarnosc_miasto	Medium	In which city's shipyard was the Solidarity movement born?	Gdansk	Gdynia	Szczecin	Warsaw
+ref_pol_kopernik_torun	Medium	In which city was Nicolaus Copernicus born?	Torun	Krakow	Frombork	Gdansk
+pol_12_potraw	Medium	How many dishes are traditionally served at the Polish Christmas Eve supper?	Twelve	Seven	Nine	Twenty
+pol_sianko	Medium	What is traditionally placed under the tablecloth at Wigilia?	Hay	Coins	Salt	Pine needles
+pol_kremowka	Medium	Which cream cake from Wadowice became famous as a favourite of Pope John Paul II?	Kremowka	Sernik	Makowiec	Szarlotka
+pol_techland	Medium	Which Polish studio made the zombie game 'Dying Light'?	Techland	CD Projekt Red	11 bit studios	Bloober Team
+pol_siatkowka	Medium	In which team sport did Poland's men become world champions in 2014 and 2018?	Volleyball	Handball	Basketball	Ice hockey
+pol_swiatek_rg	Medium	Which Grand Slam tournament has Iga Swiatek won most often?	Roland Garros	Wimbledon	The US Open	The Australian Open
+pol_jedrzejczak	Medium	In which sport did Otylia Jedrzejczak win Olympic gold in 2004?	Swimming	Canoeing	Athletics	Cycling
+pol_lukasiewicz	Medium	What did Ignacy Lukasiewicz invent in the 1850s?	The modern kerosene lamp	The bulletproof vest	The windscreen wiper	The electric telegraph
+pol_walesa_nobel	Medium	Which Pole won the Nobel Peace Prize in 1983?	Lech Walesa	John Paul II	Tadeusz Mazowiecki	Bronislaw Geremek
+pol_hejnal	Medium	Why does Krakow's hourly bugle call stop suddenly in the middle?	To honour a trumpeter shot by an arrow	The tune was never finished	To let the church bells ring	The player runs out of breath
+pol_rynek_krakow	Medium	Which city has one of the largest medieval market squares in Europe, with the Cloth Hall?	Krakow	Wroclaw	Poznan	Gdansk
+pol_koziolki	Medium	In which city do two mechanical goats butt heads on the town hall at noon?	Poznan	Wroclaw	Lublin	Torun
+pol_neptun	Medium	Which city is famous for its Neptune Fountain and the Long Market?	Gdansk	Szczecin	Gdynia	Elblag
+pol_molo_sopot	Medium	Which seaside town has the longest wooden pier in Europe?	Sopot	Gdynia	Kolobrzeg	Miedzyzdroje
+pol_odra_wroclaw	Medium	Which river flows through Wroclaw?	The Oder	The Vistula	The Warta	The Bug
+pol_bieszczady	Medium	Which remote mountains in south-eastern Poland are known for wolves, bears and empty valleys?	The Bieszczady	The Karkonosze	The Pieniny	The Beskidy
+pol_sniezka	Medium	What is the highest peak of the Karkonosze mountains?	Sniezka	Babia Gora	Kasprowy Wierch	Tarnica
+pol_lodz_manchester	Medium	Which city was called 'the Polish Manchester' for its textile mills?	Lodz	Katowice	Bielsko-Biala	Gdansk
+pol_spodek	Medium	In which city is the Spodek arena, shaped like a flying saucer?	Katowice	Lodz	Krakow	Poznan
+pol_andrzejki	Medium	What do people traditionally do on Andrzejki, St Andrew's Eve?	Tell fortunes by pouring hot wax	Light candles on graves	Splash each other with water	Bless baskets of food
+pol_zubrowka	Medium	Which Polish vodka has a blade of bison grass in each bottle?	Zubrowka	Wyborowa	Chopin	Belvedere
+pol_pianista	Medium	Which director won an Oscar for 'The Pianist'?	Roman Polanski	Andrzej Wajda	Krzysztof Kieslowski	Agnieszka Holland
+pol_bar_mleczny	Medium	What is a Polish 'bar mleczny'?	A cheap canteen with home cooking	A shop selling only milk	A dairy farm cafe	A cocktail bar
+pol_hermaszewski	Medium	Who was the first Pole in space, in 1978?	Miroslaw Hermaszewski	Slawosz Uznanski	Jerzy Kukuczka	Wojciech Fibak
+pol_warszawa_unesco	Medium	Which Polish Old Town, rebuilt from rubble after World War II, is on the UNESCO list for its reconstruction?	Warsaw	Gdansk	Wroclaw	Poznan
+pol_wycinanki	Medium	What are wycinanki?	Colourful paper cut-outs	Painted Easter eggs	Wooden carvings	Lace doilies
+pol_mazurek_taniec	Medium	Which Polish folk dance in triple time inspired dozens of Chopin's piano pieces?	The mazurka	The polka	The krakowiak	The waltz
+pol_polonez_studniowka	Medium	Which stately dance opens the Polish 'studniowka' ball, 100 days before final exams?	The polonaise	The mazurka	The waltz	The tango
+pol_giewont	Medium	Which Tatra peak, with an iron cross on top, is said to look like a sleeping knight?	Giewont	Rysy	Kasprowy Wierch	Swinica
+pol_euro_2012	Medium	In which year did Poland co-host the European Football Championship with Ukraine?	2012	2008	2016	2004
+polx_golabki	Medium	What are golabki?	Cabbage rolls stuffed with meat and rice	Roasted little pigeons	Plum-filled dumplings	Pancakes with white cheese
+polx_obwarzanek	Medium	Which ring-shaped bread is sold from street carts all over Krakow?	Obwarzanek	Kajzerka	Precel	Rogal
+polx_wojtek	Medium	What kind of animal was Wojtek, who served with the Polish army in World War II?	A bear	A dog	A horse	A goat
+polx_oplatek	Medium	What do Polish families share and break before the Christmas Eve supper?	A thin wafer	A loaf of bread	A honey cake	An apple
+polx_zelazowa_wola	Medium	In which village was Frederic Chopin born?	Zelazowa Wola	Nieborow	Kazimierz Dolny	Zakopane
+polx_lotnisko_krakow	Medium	Which famous Pole is Krakow's airport named after?	John Paul II	Nicolaus Copernicus	Lech Walesa	Tadeusz Kosciuszko
+polx_lotnisko_gdansk	Medium	Gdansk's airport is named after which Pole?	Lech Walesa	John Paul II	Frederic Chopin	Nicolaus Copernicus
+polx_dzwon_zygmunta	Medium	What is the famous great bell of Wawel Cathedral called?	The Sigismund Bell	The Liberty Bell	The Wawel Drum	The Jagiellon Gong
+polx_lazienki	Medium	In which Warsaw park does the famous Chopin monument sit under a willow tree?	Lazienki Park	The Saxon Garden	Pole Mokotowskie	Skaryszewski Park
+polx_kolumna	Medium	Whose column stands in Warsaw's Castle Square?	Sigismund III Vasa	John III Sobieski	Jozef Poniatowski	Casimir the Great
+polx_hel	Medium	What is the long, thin peninsula on Poland's Baltic coast called?	Hel	Wolin	Sambia	Usedom
+polx_bocian	Medium	Which bird breeds in Poland in such numbers that about a fifth of the world's population nests there?	The white stork	The swallow	The crane	The heron
+polx_polonez_auto	Medium	Which Polish car shares its name with a stately dance?	The Polonez	The Mazurek	The Krakowiak	The Oberek
+polx_ptasie_mleczko	Medium	Which Polish sweet's name means 'bird's milk'?	Ptasie mleczko	Krowka	Michalki	Pierniczki
+polx_kazimierz_kamien	Medium	Which king supposedly found Poland built of wood and left it built of stone?	Casimir the Great	Boleslaw the Brave	Sigismund the Old	Wladyslaw Jagiello
+polx_kajko_kokosz	Medium	Which pair of Slavic warriors star in Janusz Christa's classic comics?	Kajko and Kokosz	Bolek and Lolek	Tytus and Romek	Jacek and Placek
+polx_szarik	Medium	What was the name of the dog in the TV series 'Four Tank-Men and a Dog'?	Szarik	Reksio	Burek	Azor
+polx_monte_cassino	Medium	Which Italian hilltop monastery did Polish soldiers capture in 1944?	Monte Cassino	Montecatini	San Marino	Monte Carlo
+polx_jasna_gora	Medium	In which city is the Jasna Gora monastery with the Black Madonna icon?	Czestochowa	Krakow	Wadowice	Lichen
+poly_sernik	Medium	What is the main ingredient of Polish 'sernik'?	Twarog (white cheese)	Poppy seeds	Apples	Plums
+poly_disco_polo	Medium	Which cheerful Polish pop style became hugely popular in the 1990s?	Disco polo	Polo rock	Mazurka pop	Krakow house
+poly_maryla	Medium	Which Polish singer is famous for 'Niech zyje bal' and a career stretching back to the 1960s?	Maryla Rodowicz	Edyta Gorniak	Kayah	Doda
+poly_kiepscy	Medium	In which city is the sitcom 'Swiat wedlug Kiepskich' set?	Wroclaw	Lodz	Warsaw	Krakow
+poly_westerplatte	Medium	Which Gdansk peninsula held out for seven days in September 1939?	Westerplatte	Hel	Oksywie	Sobieszewo
+poly_piotrkowska	Medium	Which city's main street is the long Piotrkowska Street?	Lodz	Poznan	Katowice	Lublin
+pol_polish_band_1960s	Medium	Which Polish band of the 1960s was nicknamed 'the Polish Beatles'?	Czerwone Gitary	Skaldowie	Trubadurzy	No To Co
+pol_poland_chief_state	Medium	Who was Poland's Chief of State when it regained independence in 1918?	Jozef Pilsudski	Roman Dmowski	Ignacy Paderewski	Wojciech Korfanty
+pol_communist_leader_declared	Medium	Which communist leader declared martial law in Poland in 1981?	Wojciech Jaruzelski	Edward Gierek	Wladyslaw Gomulka	Boleslaw Bierut
+pol_wrote_kamienie_szaniec	Medium	Who wrote 'Kamienie na szaniec' (Stones for the Rampart)?	Aleksander Kaminski	Krzysztof Kamil Baczynski	Tadeusz Borowski	Zofia Kossak
+pol_polish_comedy_follows	Medium	Which Polish comedy follows the feuding Kargul and Pawlak families?	Sami swoi	Mis	Rejs	Kiler
+pol_1997_comedy_stars	Medium	Which 1997 comedy stars Cezary Pazura as a taxi driver mistaken for a hitman?	Kiler	Chlopaki nie placza	Psy	Vabank
+pol_priest_solves_crimes	Medium	Which TV priest solves crimes in the town of Sandomierz?	Ojciec Mateusz	Ksiadz Robert	Brat Jan	Proboszcz Kazimierz
+pol_polish_soap_opera	Medium	Which Polish TV soap opera has been on air the longest, since 1997?	Klan	M jak milosc	Na Wspolnej	Barwy szczescia
+pol_krakow_district_historic	Medium	Which Krakow district was the historic Jewish quarter?	Kazimierz	Podgorze	Nowa Huta	Kleparz
+pol_warsaw_palace_often	Medium	Which Warsaw palace is often called 'the Polish Versailles'?	Wilanow Palace	Lazienki Palace	The Royal Castle	Belweder
+pol_city_football_club	Medium	In which city does the football club Lech play?	Poznan	Warsaw	Gdansk	Krakow
+pol_coached_poland_third	Medium	Who coached Poland to third place at the 1974 World Cup?	Kazimierz Gorski	Antoni Piechniczek	Jacek Gmoch	Leo Beenhakker
+pol_polish_footballer_starred	Medium	Which Polish footballer starred at the 1982 World Cup and then for Juventus?	Zbigniew Boniek	Grzegorz Lato	Wlodzimierz Smolarek	Andrzej Szarmach
+pol_polish_ski_jumper	Medium	Which Polish ski jumper won all four Four Hills Tournament events in 2017/18?	Kamil Stoch	Adam Malysz	Dawid Kubacki	Piotr Zyla
+pol_polish_player_beat	Medium	Which Polish player beat Roger Federer at Wimbledon in 2021, winning the last set 6-0?	Hubert Hurkacz	Kamil Majchrzak	Jerzy Janowicz	Lukasz Kubot
+pol_kopytka	Medium	What are 'kopytka'?	Small potato dumplings	Pork sausages	Plum dumplings	Cabbage pancakes
+pol_kogel_mogel	Medium	What is 'kogel-mogel'?	Egg yolks whipped with sugar	A hot honey liqueur	A fried pastry bow	A pickled herring dish
+pol_chlodnik	Medium	What is 'chlodnik'?	A cold beetroot soup	A hot fish soup	A pickled cucumber	A sweet cheese spread
+pol_faworki_eaten_lent	Medium	What are 'faworki', eaten before Lent?	Crispy fried pastry ribbons	Doughnuts with rose jam	Potato pancakes	Poppy seed cakes
+pol_flaki	Medium	What is 'flaki'?	Tripe soup	Pea soup	Mushroom soup	Fish soup
+pol_kaszanka	Medium	What is 'kaszanka'?	A blood sausage with buckwheat	A smoked pork sausage	A buckwheat porridge	A barley soup
+pol_celebrated_dozynki	Medium	What is celebrated at 'dozynki'?	The end of the harvest	The first day of spring	The longest night	The miners' saint
+pol_sang_hit_parostatek	Medium	Who sang the hit 'Parostatek'?	Krzysztof Krawczyk	Zbigniew Wodecki	Czeslaw Niemen	Andrzej Rosiewicz
+pol_polish_chocolate_maker	Medium	Which famous Polish chocolate maker produces 'Ptasie mleczko'?	E. Wedel	Wawel	Goplana	Milka
+pol_mazurek	Medium	What is a 'mazurek'?	A flat Easter cake	A winter hat	A Christmas carol	A fish dish
+pol_kutia_eaten_christmas	Medium	What is 'kutia', eaten on Christmas Eve in eastern Poland?	Wheat with poppy seeds and honey	Fried carp in aspic	Dumplings with mushrooms	Beetroot soup with sour cream
+pol_date_mother_day	Medium	On which date is Mother's Day celebrated in Poland?	26 May	8 March	1 June	11 May
+pol_poles_celebrate_processions	Medium	What do Poles celebrate with processions on 'Boze Cialo'?	Corpus Christi	Easter Monday	All Saints' Day	Epiphany
+pol_poles_write_chalk	Medium	What do Poles write in chalk above their doors on 6 January?	K+M+B and the year	The family's names	A cross and a star	A prayer for rain
+pol_between_world_wars	Medium	Between the world wars, which city was a 'Free City' under League of Nations protection?	Gdansk	Szczecin	Wroclaw	Krakow
+pol_happened_poland_june	Medium	What happened in Poland on 4 June 1989?	The first partly free elections	The founding of Solidarity	The end of martial law	Poland joined NATO
+pol_polish_band_fronted	Medium	Which Polish band is fronted by Kazik Staszewski?	Kult	Perfect	Lady Pank	Dzem
+pol_polish_band_sang_2	Medium	Which Polish band sang 'Autobiografia'?	Perfect	Kult	Republika	Budka Suflera
+pol_polish_band_sang_3	Medium	Which Polish band sang 'Jolka, Jolka pamietasz'?	Budka Suflera	Perfect	Dzem	Lady Pank
+pol_polish_cross_country	Medium	Which Polish cross-country skier won Olympic gold in 2010 and 2014?	Justyna Kowalczyk	Iga Swiatek	Anita Wlodarczyk	Otylia Jedrzejczak
+pol_wrote_nad_niemnem	Medium	Who wrote 'Nad Niemnem'?	Eliza Orzeszkowa	Maria Konopnicka	Gabriela Zapolska	Zofia Nalkowska
+pol_wrote_treny_poems	Medium	Who wrote 'Treny', poems of mourning for his little daughter?	Jan Kochanowski	Mikolaj Rej	Adam Mickiewicz	Juliusz Slowacki
+pol_city_open_music	Medium	In which city is the Open'er music festival held?	Gdynia	Gdansk	Sopot	Krakow
+pol_city_capital_warmia	Medium	Which city is the capital of the Warmia-Masuria region?	Olsztyn	Elblag	Gizycko	Elk
+pol_city_capital_podlasie	Medium	Which city is the capital of the Podlasie region?	Bialystok	Lomza	Suwalki	Siedlce
+pol_maczuga_herkulesa_near	Medium	What is the 'Maczuga Herkulesa' near Krakow?	A tall limestone rock	A royal sword	A castle tower	A giant oak tree
+pol_poland_highest_waterfall	Medium	Which is Poland's highest waterfall?	Wielka Siklawa	Wodogrzmoty Mickiewicza	Kamienczyk	Szklarka
+pol_commanded_defence_westerplatte	Medium	Who commanded the defence of Westerplatte in September 1939?	Henryk Sucharski	Stefan Starzynski	Tadeusz Kutrzeba	Wladyslaw Raginis
+pol_according_legend_three	Medium	According to legend, which of three brothers founded Poland after seeing a white eagle's nest?	Lech	Czech	Rus	Piast
+pol_legendary_princess_chose	Medium	Which legendary princess chose to drown in the Vistula rather than marry a German prince?	Wanda	Jadwiga	Dabrowka	Rzepicha
+pol_wicked_legendary_ruler	Medium	Which wicked legendary ruler is said to have been eaten by mice in a tower?	Popiel	Krak	Lestek	Siemowit
+pol_tricked_wawel_dragon	Medium	Who tricked the Wawel Dragon with a sheep stuffed with sulphur?	Shoemaker Dratewka	Prince Krakus	Knight Zawisza	Prince Popiel
+pol_polish_desert_used	Medium	Which Polish 'desert' was used for training by German troops headed for Africa?	Bledow Desert	Leba Dunes	Kampinos Sands	Pustynia Siedlecka
+pol_polish_painter_nightmarish	Medium	Which Polish painter is famous for nightmarish, dystopian landscapes?	Zdzislaw Beksinski	Jacek Malczewski	Tamara de Lempicka	Jerzy Duda-Gracz
+pol_polish_composer_wrote	Medium	Which Polish composer wrote 'Threnody to the Victims of Hiroshima'?	Krzysztof Penderecki	Witold Lutoslawski	Henryk Gorecki	Karol Szymanowski
+pol_polish_jazz_pianist	Medium	Which Polish jazz pianist composed the lullaby for Polanski's 'Rosemary's Baby'?	Krzysztof Komeda	Zbigniew Namyslowski	Tomasz Stanko	Wojciech Kilar
+pol_band_sang_1980s	Medium	Which band sang the 1980s anthem 'Kocham wolnosc'?	Chlopcy z Placu Broni	Elektryczne Gitary	Budka Suflera	Czerwone Gitary
+pol_disco_polo_band	Medium	Which disco polo band had a huge hit with 'Ona tanczy dla mnie'?	Weekend	Akcent	Boys	Bayer Full
+pol_film_won_andrzej	Medium	Which film won Andrzej Wajda the Palme d'Or in Cannes in 1981?	Man of Iron	Man of Marble	Ashes and Diamonds	The Promised Land
+pol_directed_oscar_nominated	Medium	Who directed the Oscar-nominated film 'Cold War' (2018)?	Pawel Pawlikowski	Agnieszka Holland	Wojciech Smarzowski	Jan Komasa
+pol_won_poland_ever	Medium	Who won Poland's first ever Olympic gold medal, in the discus in 1928?	Halina Konopacka	Irena Szewinska	Stanislawa Walasiewicz	Jadwiga Wajs
+pol_key_ingredient_traditional	Medium	What is the key ingredient of the traditional 'czernina' soup?	Duck blood	Beetroot	Sour rye	Dried mushrooms
+pol_polish_inventor_nicknamed	Medium	Which Polish inventor, nicknamed 'the Polish Edison', designed a bulletproof vest?	Jan Szczepanik	Jan Czochralski	Ignacy Lukasiewicz	Stefan Drzewiecki
+pol_polish_astronomer_discovered	Medium	Which Polish astronomer discovered the first confirmed planets outside the Solar System, in 1992?	Aleksander Wolszczan	Bohdan Paczynski	Andrzej Udalski	Jan Heweliusz
+pol_bialystok_born_eye	Medium	Which Bialystok-born eye doctor created the language Esperanto?	Ludwik Zamenhof	Bronislaw Malinowski	Florian Znaniecki	Jan Baudouin de Courtenay
+pol_small_town_hosted	Medium	Which small town hosted Poland's legendary rock festival of the 1980s?	Jarocin	Opole	Sopot	Wegorzewo
+pol_cardinal_primate_poland	Medium	Which cardinal, Primate of Poland, was called the 'Primate of the Millennium'?	Stefan Wyszynski	Jozef Glemp	Karol Wojtyla	August Hlond
+pol_commanded_home_army	Medium	Who commanded the Home Army during the Warsaw Uprising?	Tadeusz Bor-Komorowski	Stefan Rowecki	Wladyslaw Sikorski	Leopold Okulicki
+pol_last_king_jagiellonian	Medium	Who was the last king of the Jagiellonian dynasty?	Sigismund II Augustus	Sigismund I the Old	Stefan Batory	Wladyslaw IV
+pol_created_comic_tytus	Medium	Who created the comic 'Tytus, Romek i A'Tomek'?	Henryk Jerzy Chmielewski	Janusz Christa	Tadeusz Baranowski	Grzegorz Rosinski
+pol_polish_artist_drew	Medium	Which Polish artist drew the fantasy comic 'Thorgal'?	Grzegorz Rosinski	Janusz Christa	Tadeusz Baranowski	Boguslaw Polch
+pol_polish_cinematographer_won	Medium	Which Polish cinematographer won Oscars for 'Schindler's List' and 'Saving Private Ryan'?	Janusz Kaminski	Slawomir Idziak	Pawel Edelman	Witold Sobocinski
+pol_polish_composer_won	Medium	Which Polish composer won an Oscar for the score of 'Finding Neverland'?	Jan A. P. Kaczmarek	Zbigniew Preisner	Wojciech Kilar	Abel Korzeniowski
+pol_band_sang_dlugosc	Medium	Which band sang 'Dlugosc dzwieku samotnosci'?	Myslovitz	Hey	Kult	T.Love
+pol_band_sang_1980s_2	Medium	Which band sang the 1980s hit 'Przezyj to sam'?	Lombard	Perfect	Republika	Maanam
+pol_polish_club_reached	Medium	Which Polish club reached the European Cup Winners' Cup final in 1970?	Gornik Zabrze	Legia Warsaw	Wisla Krakow	Ruch Chorzow
+pol_kupala_night_young	Medium	On Kupala Night, what do young women traditionally float on the water?	Wreaths	Candles	Paper boats	Eggs
+pol_hitler_wolf_lair	Medium	Hitler's 'Wolf's Lair' headquarters stood in which Polish region?	Masuria	Silesia	Pomerania	Podlasie
+pol_polish_port_city	Medium	Which Polish port city was called Stettin before 1945?	Szczecin	Gdansk	Kolobrzeg	Elblag
+pol_coached_poland_third_2	Medium	Who coached Poland to third place at the 1982 World Cup?	Antoni Piechniczek	Kazimierz Gorski	Jacek Gmoch	Leo Beenhakker
+pol_country_poland_beat	Medium	Which country did Poland beat in the third-place match of the 1974 World Cup?	Brazil	Netherlands	West Germany	Italy
+pol_against_team_poland	Medium	Against which team did Poland play the waterlogged 'water match' in 1974?	West Germany	Brazil	Argentina	Sweden
+pol_band_fronted_grzegorz	Medium	Which band was fronted by Grzegorz Ciechowski?	Republika	Maanam	Perfect	Kult
+pol_sang_zegarmistrz_swiatla	Medium	Who sang 'Zegarmistrz swiatla'?	Tadeusz Wozniak	Marek Grechuta	Czeslaw Niemen	Jacek Kaczmarski
+pol_sang_dni_ktorych	Medium	Who sang 'Dni, ktorych nie znamy'?	Marek Grechuta	Tadeusz Wozniak	Krzysztof Krawczyk	Seweryn Krajewski
+pol_comedy_follows_franek	Medium	Which comedy follows Franek Dolas, who believes he started World War II?	Jak rozpetalem druga wojne swiatowa	Czterej pancerni i pies	Stawka wieksza niz zycie	Zezowate szczescie
+pol_kluski_slaskie	Medium	What are 'kluski slaskie'?	Potato dumplings with a dimple	Noodles with poppy seeds	Fried dough balls with jam	Pancakes rolled with cheese
+pol_nalewka	Medium	What is a 'nalewka'?	A homemade fruit liqueur	A sour rye soup	A herbal tea	A pickled cucumber
+pol_mieszko_czech_wife	Medium	What was the name of Mieszko I's Czech wife?	Dobrawa	Jadwiga	Rycheza	Wanda
+pol_last_leader_january	Medium	Who was the last leader of the January Uprising, executed in 1864?	Romuald Traugutt	Ludwik Mieroslawski	Marian Langiewicz	Jaroslaw Dabrowski
+pol_polish_prime_minister	Medium	Which Polish prime minister-in-exile died in a plane crash at Gibraltar in 1943?	Wladyslaw Sikorski	Stanislaw Mikolajczyk	Ignacy Moscicki	Jozef Beck
+pol_politician_led_national	Medium	Which politician led the National Democrats and signed the Treaty of Versailles for Poland?	Roman Dmowski	Jozef Pilsudski	Wincenty Witos	Ignacy Daszynski
+pol_communist_leader_came	Medium	Which communist leader came to power during the 'thaw' of October 1956?	Wladyslaw Gomulka	Boleslaw Bierut	Edward Gierek	Wojciech Jaruzelski
+pol_frederic_chopin_heart	Medium	Where is Frederic Chopin's heart kept?	In a church in Warsaw	In Paris, with his body	In Zelazowa Wola	In Wawel Cathedral
+pol_his2_bitwa_grunwald_kto	Hard	Who commanded the Polish-Lithuanian forces at Grunwald?	Wladyslaw Jagiello	Casimir the Great	Vytautas alone	Boleslaw the Wrymouth
+pol_his2_konstytucja_3maja_rok	Hard	What was the Constitution of May 3 in Europe?	The first in Europe	The third in Europe	The first in the world	The last of the 18th century
+pol_his2_bitwa_warszawska	Hard	In which year was the Battle of Warsaw, called the Miracle at the Vistula?	1920	1919	1921	1918
+pol_his2_liberum_veto	Hard	What allowed a single deputy's vote to dissolve the Commonwealth's parliament?	Liberum veto	Rokosz	Confederation	Election viritim
+pol_his3_wojna_o_niepodleglosc_usa_pomoc	Hard	Which Pole fought in the American War of Independence?	Tadeusz Kosciuszko	Jozef Pilsudski	John III Sobieski	Wladyslaw Sikorski
+pol_his3_pulaski	Hard	Which Pole died fighting for the American side in the War of Independence?	Casimir Pulaski	Tadeusz Kosciuszko	Jozef Bem	Ignacy Moscicki
+pol_lit2_nobel_milosz	Hard	Which Polish poet won the Nobel Prize in 1980?	Czeslaw Milosz	Zbigniew Herbert	Tadeusz Rozewicz	Julian Przybos
+pol_lit3_dziady_czesc_iii_miejsce	Hard	In which city is Part III of 'Forefathers' Eve' set?	Vilnius	Warsaw	Krakow	Paris
+pol_lit3_ludzie_bezdomni_bohater	Hard	Who is the main character of Zeromski's 'Homeless People'?	Tomasz Judym	Cezary Baryka	Stanislaw Wokulski	Janko the Musician
+pol2_malbork_co	Hard	What is Malbork best known for?	The largest brick castle in the world	A salt mine	A Gothic cathedral	A Renaissance town hall
+pol2_rejewski_co	Hard	What did Marian Rejewski achieve in the 1930s?	The first break of the Enigma cipher	The first Polish radio broadcast	The design of a jet engine	A theory of radioactivity
+pol2_penderecki_dziedzina	Hard	In which field was Krzysztof Penderecki famous?	Classical composition	Film directing	Architecture	Painting
+pol2_wajda_dziedzina	Hard	What was Andrzej Wajda known for?	Film directing	Poetry	Sculpture	Conducting
+pol2_konstytucja_1997	Hard	In which year was Poland's current constitution adopted?	1997	1989	1992	2004
+pol2_okragly_stol_rok	Hard	In which year did the Round Table Talks take place?	1989	1980	1981	1990
+pol2_stan_wojenny_rok	Hard	In which year was martial law introduced in Poland?	1981	1976	1980	1983
+pol3_chlopi_nobel	Hard	For which novel did Reymont win the Nobel Prize?	The Peasants	The Promised Land	The Comedienne	Fermenty
+pol3_nobel_tokarczuk	Hard	What did Olga Tokarczuk win the Nobel Prize for?	Her entire body of literary work	A single historical novel	Journalism	Poetry
+pol3_ostatni_krol	Hard	Who was the last King of Poland?	Stanislaw August Poniatowski	John III Sobieski	Augustus III	Stanislaw Leszczynski
+pol3_f1_pierwszy_polak	Hard	Which Pole was the first to win a Formula 1 race?	Robert Kubica	Krzysztof Holowczyc	Kajetan Kajetanowicz	Sobieslaw Zasada
+pol3_kubica_wygrana	Hard	Which Grand Prix did Robert Kubica win?	The Canadian Grand Prix	The Monaco Grand Prix	The Italian Grand Prix	The Belgian Grand Prix
+pol3_radwanska_final	Hard	Agnieszka Radwanska played the final of which Grand Slam tournament?	Wimbledon	The US Open	Roland Garros	The Australian Open
+dpt_pol_nihil_novi	Hard	What did the Nihil Novi act of 1505 establish?	No new law without the parliament	A ban on all foreign merchants	A permanent tax for the king	A truce with the Teutonic Order
+dpt_pol_oscypek	Hard	What is oscypek?	A smoked sheep's cheese from the mountains	A sour rye soup served at Easter time	A folk dance from the southern highlands	A carved wooden figure of a shepherd
+dpt_pol_wyspy_wroclaw	Hard	Which Polish city is built across the most islands?	Wroclaw	Szczecin	Torun	Bydgoszcz
+dpt_pol_mazury	Hard	What are the Masurian lands known for?	A landscape full of lakes	A range of active volcanoes	A vast inland salt desert	The country's highest peaks
+ref_pol_pilsudski_1920	Hard	Who was the Polish commander-in-chief at the Battle of Warsaw in 1920?	Jozef Pilsudski	Wladyslaw Sikorski	Jozef Haller	Roman Dmowski
+ref_pol_getto_rok	Hard	In which year did the Warsaw Ghetto Uprising break out?	1943	1939	1944	1945
+ref_pol_armia_krajowa	Hard	What was the main Polish underground army of World War II called?	The Home Army	The People's Army	The Polish Legions	The Blue Army
+pol_11_bit	Hard	Which Polish studio made the games 'This War of Mine' and 'Frostpunk'?	11 bit studios	Techland	CD Projekt Red	Bloober Team
+pol_szewinska	Hard	In which sport did Irena Szewinska win seven Olympic medals?	Athletics	Swimming	Fencing	Gymnastics
+pol_kukuczka	Hard	Which Polish climber was the second person to climb all 14 of the world's 8,000-metre peaks?	Jerzy Kukuczka	Krzysztof Wielicki	Wanda Rutkiewicz	Andrzej Zawada
+pol_rutkiewicz	Hard	Who was the first woman to reach the summit of K2, in 1986?	Wanda Rutkiewicz	Junko Tabei	Kinga Baranowska	Alison Hargreaves
+pol_mazowiecki	Hard	Who became the first non-communist prime minister in the Eastern Bloc, in 1989?	Tadeusz Mazowiecki	Lech Walesa	Bronislaw Geremek	Jacek Kuron
+pol_mariacki	Hard	From which church tower is Krakow's hourly bugle call played?	St Mary's Basilica	Wawel Cathedral	St Andrew's Church	The Church of St Peter and Paul
+pol_ruchome_wydmy	Hard	Which national park on the Baltic coast is famous for its moving sand dunes?	Slowinski National Park	Wolin National Park	Kampinos National Park	Biebrza National Park
+pol_pieniny	Hard	In which mountains do tourists float on rafts down the Dunajec gorge?	The Pieniny	The Tatras	The Bieszczady	The Karkonosze
+pol_moniuszko	Hard	Which composer wrote 'Halka', often called the Polish national opera?	Stanislaw Moniuszko	Fryderyk Chopin	Karol Szymanowski	Ignacy Paderewski
+pol_ida	Hard	Which Polish film won the Oscar for Best Foreign Language Film in 2015?	Ida	Cold War	Corpus Christi	Katyn
+pol_kieslowski	Hard	Which Polish director made the 'Three Colours' trilogy?	Krzysztof Kieslowski	Andrzej Wajda	Roman Polanski	Pawel Pawlikowski
+pol_uznanski	Hard	Which Pole flew to the International Space Station in 2025?	Slawosz Uznanski-Wisniewski	Miroslaw Hermaszewski	Marek Kaminski	Jerzy Kukuczka
+pol_kaminski	Hard	Which Polish explorer reached both the North and the South Pole on foot in 1995?	Marek Kaminski	Jerzy Kukuczka	Tony Halik	Wojciech Cejrowski
+pol_funk	Hard	Which Polish biochemist coined the word 'vitamin' in 1912?	Kazimierz Funk	Ludwik Hirszfeld	Rudolf Weigl	Hilary Koprowski
+pol_polka_czeska	Hard	The polka dance, often thought to be Polish, actually comes from which country?	The Czech lands	Poland	Hungary	Austria
+pol_kozakiewicz	Hard	Which Polish pole vaulter made a famous rude gesture at the Moscow crowd after winning gold in 1980?	Wladyslaw Kozakiewicz	Tadeusz Slusarski	Robert Korzeniowski	Tomasz Majewski
+pol_gorecki	Hard	Which Polish composer wrote the 'Symphony of Sorrowful Songs'?	Henryk Gorecki	Krzysztof Penderecki	Wojciech Kilar	Witold Lutoslawski
+polx_rogal	Hard	Which city is famous for St Martin's croissants filled with white poppy seeds?	Poznan	Krakow	Gdansk	Torun
+polx_lajkonik	Hard	Which Krakow folk figure 'rides' a hobby horse through the city every June?	Lajkonik	Krakus	Wernyhora	Twardowski
+polx_frombork	Hard	In which town, where he is buried, did Copernicus spend most of his later life?	Frombork	Torun	Krakow	Olsztyn
+polx_konkurs_chopina	Hard	How often is the famous International Chopin Competition held in Warsaw?	Every five years	Every year	Every two years	Every ten years
+polx_kopiec	Hard	What was raised in Krakow in the 1820s to honour Tadeusz Kosciuszko?	A huge earth mound	A marble palace	A bronze horse statue	A bell tower
+polx_krzywy_domek	Hard	In which seaside town is the 'Crooked House', a building that looks as if it is melting?	Sopot	Gdynia	Kolobrzeg	Leba
+polx_kasprowy	Hard	Which Tatra peak can you reach by cable car from Zakopane?	Kasprowy Wierch	Rysy	Giewont	Swinica
+polx_jadwiga	Hard	Which ruler of Poland was crowned 'king', not queen, in 1384?	Jadwiga	Bona Sforza	Anna Jagiellon	Marie Casimire
+polx_bona	Hard	Which Italian-born queen is said to have brought leeks, celery and other vegetables to Poland?	Bona Sforza	Marie Casimire	Marie Louise Gonzaga	Cecilia Renata
+polx_kapuscinski	Hard	Which Polish reporter wrote 'The Emperor' and 'Travels with Herodotus'?	Ryszard Kapuscinski	Melchior Wankowicz	Hanna Krall	Mariusz Szczygiel
+polx_tytus	Hard	Who is Tytus in the comics 'Tytus, Romek i A'Tomek'?	A chimpanzee	A robot	A dog	A pirate
+polx_kloss	Hard	What was the name of the Polish spy hero of the TV series 'Stawka wieksza niz zycie'?	Hans Kloss	Hans Brunner	Otto Weiss	Karl Mayer
+polx_mis_bareja	Hard	Which cult 1981 comedy by Stanislaw Bareja mocks everyday life in communist Poland?	Mis	Rejs	Seksmisja	Kiler
+polx_lato	Hard	Which Polish forward was top scorer at the 1974 World Cup?	Grzegorz Lato	Zbigniew Boniek	Andrzej Szarmach	Kazimierz Deyna
+polx_17_wrzesnia	Hard	Which country invaded Poland from the east on 17 September 1939?	The Soviet Union	Lithuania	Romania	Hungary
+polx_sendlerowa	Hard	Which Polish social worker saved about 2,500 Jewish children from the Warsaw Ghetto?	Irena Sendler	Zofia Kossak	Wanda Rutkiewicz	Maria Dabrowska
+polx_gory_stolowe	Hard	Which Polish mountains are famous for their flat tops and rock mazes like 'Bledne Skaly'?	The Table Mountains	The Pieniny	The Beskids	The Swietokrzyskie Mountains
+polx_zamosc	Hard	Which Renaissance 'ideal city' in eastern Poland is on the UNESCO list?	Zamosc	Sandomierz	Kazimierz Dolny	Lublin
+polx_orle_gniazda	Hard	The 'Trail of the Eagles' Nests' links medieval castles across which upland?	The Krakow-Czestochowa Upland	The Lublin Upland	The Masurian Lakeland	The Silesian Lowland
+polx_biskupin	Hard	What is Biskupin famous for?	An ancient wooden settlement	A Gothic cathedral	A deep salt mine	A Renaissance castle
+poly_zenek	Hard	Which disco polo star sang 'Przez Twe Oczy Zielone'?	Zenon Martyniuk	Shazza	Boys	Bayer Full
+poly_niemen	Hard	Which singer recorded 'Dziwny jest ten swiat' in 1967?	Czeslaw Niemen	Marek Grechuta	Krzysztof Krawczyk	Seweryn Krajewski
+poly_gorniak	Hard	Which singer gave Poland its best-ever Eurovision result, second place in 1994?	Edyta Gorniak	Maryla Rodowicz	Doda	Justyna Steczkowska
+poly_ranczo	Hard	In which fictional village is the TV series 'Ranczo' set?	Wilkowyje	Sielsko	Kozie Wolki	Brzozowka
+poly_seksmisja	Hard	In the cult comedy 'Seksmisja', the heroes wake up in a world without what?	Men	Cars	Sunlight	Money
+poly_babia_gora	Hard	Which mountain is the highest peak of the Beskids?	Babia Gora	Pilsko	Skrzyczne	Turbacz
+poly_moszna	Hard	Which fairy-tale Polish castle is famous for its 99 towers and turrets?	Moszna	Malbork	Ksiaz	Czocha
+pol_poland_president_assassinated	Hard	Who was Poland's first president, assassinated just days after taking office in 1922?	Gabriel Narutowicz	Stanislaw Wojciechowski	Ignacy Moscicki	Jozef Pilsudski
+pol_city_workers_rise	Hard	In which city did workers rise up against the communist authorities in June 1956?	Poznan	Gdansk	Radom	Lodz
+pol_led_poland_communist	Hard	Who led Poland's communist government through most of the 1970s?	Edward Gierek	Wladyslaw Gomulka	Wojciech Jaruzelski	Stanislaw Kania
+pol_general_led_polish	Hard	Which general led a Polish army out of the Soviet Union to the Middle East in 1942?	Wladyslaw Anders	Wladyslaw Sikorski	Stanislaw Maczek	Tadeusz Bor-Komorowski
+pol_bareja_series_set	Hard	Which Bareja TV series is set in a new Warsaw housing block run by caretaker Aniol?	Alternatywy 4	Czterdziestolatek	Zmiennicy	Dom
+pol_polish_band_sang	Hard	Which Polish band sang 'Mniej niz zero'?	Lady Pank	Perfect	Republika	Kult
+pol_blues_rock_band	Hard	Which blues-rock band was fronted by Ryszard Riedel?	Dzem	Budka Suflera	Breakout	T.Love
+pol_wrote_pan_samochodzik	Hard	Who wrote the 'Pan Samochodzik' adventure novels?	Zbigniew Nienacki	Edmund Niziurski	Adam Bahdaj	Alfred Szklarski
+pol_wrote_psie_ktory	Hard	Who wrote 'O psie, ktory jezdzil koleja' about the dog Lampo?	Roman Pisarski	Kornel Makuszynski	Jan Brzechwa	Julian Tuwim
+pol_polish_shot_putter	Hard	Which Polish shot putter won Olympic gold in 2008 and 2012?	Tomasz Majewski	Konrad Bukowiecki	Michal Haratyk	Piotr Malachowski
+pol_spa_town_huge	Hard	Which spa town is famous for its huge wooden graduation towers for brine?	Ciechocinek	Krynica-Zdroj	Naleczow	Zakopane
+pol_warsaw_district_right	Hard	Which Warsaw district on the right bank of the Vistula is famous for its pre-war tenements?	Praga	Mokotow	Wola	Zoliborz
+pol_largest_island_lying	Hard	Which is the largest island lying entirely in Poland?	Wolin	Uznam	Hel	Sobieszewo
+pol_polish_general_led	Hard	Which Polish general led the 1st Armoured Division in Normandy in 1944?	Stanislaw Maczek	Wladyslaw Anders	Stanislaw Sosabowski	Wladyslaw Sikorski
+pol_polish_courier_brought	Hard	Which Polish courier brought the Allies some of the first eyewitness reports of the Holocaust?	Jan Karski	Witold Pilecki	Jan Nowak-Jezioranski	Irena Sendler
+pol_became_poland_female	Hard	Who became Poland's first female prime minister, in 1992?	Hanna Suchocka	Ewa Kopacz	Beata Szydlo	Henryka Bochniak
+pol_actor_played_lead	Hard	Which actor played the lead spy in 'Stawka wieksza niz zycie'?	Stanislaw Mikulski	Daniel Olbrychski	Janusz Gajos	Wojciech Pszoniak
+pol_wrote_medaliony_short	Hard	Who wrote 'Medaliony', short stories about the German occupation?	Zofia Nalkowska	Eliza Orzeszkowa	Maria Dabrowska	Zofia Kossak
+pol_his3_polski_rzad_na_uchodzstwie	Expert	Where did the Polish government-in-exile operate during World War II?	London (earlier in France)	Moscow, alongside the Red Army	Washington, with the Allies	Rome, after the Italian campaign
+pol_his3_dywizjon_303	Expert	What was 303 Squadron known for in the Battle of Britain?	It was one of the RAF's most effective fighter squadrons	It defended Warsaw through September 1939	It fought its way up the hill at Monte Cassino	It was a naval unit escorting convoys
+pol_lit2_herbert_bohater	Expert	What is the character of Zbigniew Herbert's poem cycle called?	Mr. Cogito	Mr. Tadeusz	Mr. Wolodyjowski	Mr. Kleks
+pol_lit3_kordian_bohater	Expert	What is the title character of Slowacki's play called?	Kordian	Konrad	Gustaw	Wallenrod
+pol_lit3_nieboska_komedia	Expert	Who wrote 'The Undivine Comedy'?	Zygmunt Krasinski	Juliusz Slowacki	Adam Mickiewicz	Cyprian Norwid
+pol_lit3_trans_atlantyk	Expert	Which Gombrowicz novel was written in exile in Argentina?	Trans-Atlantyk	Ferdydurke	Cosmos	Pornografia
+pol_lit3_tango_mrozek	Expert	Who wrote the play 'Tango'?	Slawomir Mrozek	Tadeusz Rozewicz	Witold Gombrowicz	Jerzy Andrzejewski
+pol2_banach_dziedzina	Expert	In which field did Stefan Banach work?	Mathematics	Chemistry	Medicine	Astronomy
+pol2_szkola_lwowsko_warszawska	Expert	The Lwow-Warsaw School was a school of what?	Logic and philosophy	Painting	Architecture	Military engineering
+pol2_elekcja_pierwsza	Expert	Who was the first king elected in a free election in Poland?	Henry of Valois	Stephen Bathory	Sigismund III Vasa	Wladyslaw IV
+pol2_polska_ludowa_nazwa	Expert	What was the official name of the Polish state between 1952 and 1989?	The Polish People's Republic	The Second Polish Republic	The Congress Kingdom	The Polish Commonwealth
+pol2_traktat_ryski	Expert	The 1921 Treaty of Riga ended a war between Poland and which state?	Soviet Russia	Germany	Lithuania	Czechoslovakia
+pol2_gdynia_port_rok	Expert	In which decade was the port of Gdynia built from scratch?	The 1920s	The 1900s	The 1940s	The 1950s
+pol3_mundial_1974	Expert	What place did Poland finish at the 1974 World Cup?	3rd	1st	2nd	4th
+pol3_wlodarczyk	Expert	In which event did Anita Wlodarczyk set world records?	The hammer throw	The shot put	The javelin throw	The discus throw
+pol3_malysz_puchary	Expert	How many times did Adam Malysz win the Ski Jumping World Cup?	Four times	Twice	Three times	Five times
+pol3_stoch_igrzyska	Expert	How many Olympic gold medals has Kamil Stoch won?	Three	One	Two	Four
+dpt_pol_rozbiory_panstwa	Expert	Which three powers partitioned the country in the 18th century?	Russia, Prussia and Austria	Russia, Sweden and Turkey	Prussia, France and Austria	Austria, Hungary and Russia
+dpt_pol_nowa_huta	Expert	What was Nowa Huta built as?	A model workers' town by a steelworks	A fortress guarding the river crossing	A spa resort in the southern mountains	A port district added after the war
+dpt_pol_bialowieza	Expert	What makes the Bialowieza Forest exceptional?	It is Europe's last primeval lowland forest	It is the largest planted pine forest in Europe	It grows inside a canyon cut through limestone	It holds the oldest vineyards north of the Alps
+pol_rotblat	Expert	Which Polish-born physicist won the 1995 Nobel Peace Prize for campaigning against nuclear weapons?	Jozef Rotblat	Lech Walesa	Czeslaw Milosz	Leopold Infeld
+pol_biebrza	Expert	Which is Poland's largest national park?	Biebrza National Park	Bialowieza National Park	Tatra National Park	Bieszczady National Park
+pol_tlen_ciekly	Expert	Which two Krakow scientists were the first to liquefy oxygen from the air, in 1883?	Wroblewski and Olszewski	Banach and Steinhaus	Rejewski and Zygalski	Funk and Weigl
+pol_weigl	Expert	Which scientist made a typhus vaccine in Lwow by breeding lice fed on human volunteers?	Rudolf Weigl	Kazimierz Funk	Ludwik Hirszfeld	Hilary Koprowski
+pol_koprowski	Expert	Which Polish-born scientist created the first live polio vaccine?	Hilary Koprowski	Albert Sabin	Rudolf Weigl	Ludwik Hirszfeld
+pol_krzywy_las	Expert	Where is Poland's mysterious 'Crooked Forest' of J-shaped pine trees?	Near Gryfino	In Bialowieza	In the Bieszczady	Near Zakopane
+pol_bochnia	Expert	Which Polish salt mine, even older than Wieliczka, is also on the UNESCO list?	Bochnia	Klodawa	Inowroclaw	Wapno
+pol_korzeniowski	Expert	Which Polish race walker won four Olympic gold medals?	Robert Korzeniowski	Tomasz Majewski	Wladyslaw Kozakiewicz	Jan Mela
+pol_czochralski	Expert	Which Polish chemist invented the method still used to grow silicon crystals for computer chips?	Jan Czochralski	Ignacy Lukasiewicz	Stefan Kudelski	Jacek Karpinski
+pol_kudelski	Expert	Which Polish-born engineer created the Nagra portable tape recorder used by film crews?	Stefan Kudelski	Jan Czochralski	Kazimierz Proszynski	Jacek Karpinski
+pol_proszynski	Expert	Which Polish inventor built the 'aeroskop', one of the first hand-held film cameras?	Kazimierz Proszynski	Stefan Kudelski	Jan Szczepanik	Jacek Karpinski
+pol_karpinski	Expert	Which Polish engineer designed the K-202 minicomputer in the early 1970s?	Jacek Karpinski	Jan Czochralski	Stefan Kudelski	Kazimierz Proszynski
+pol_kilar	Expert	Which Polish composer wrote the score for Francis Ford Coppola's 'Dracula' (1992)?	Wojciech Kilar	Zbigniew Preisner	Jan A. P. Kaczmarek	Krzysztof Komeda
+polx_bogurodzica	Expert	Which medieval hymn, sung by knights before Grunwald, is the oldest known Polish poem?	Bogurodzica	Gaude Mater Polonia	Rota	Te Deum
+polx_rej	Expert	Which Renaissance writer declared that Poles 'are not geese' and have their own language?	Mikolaj Rej	Jan Kochanowski	Andrzej Frycz Modrzewski	Piotr Skarga
+polx_tomaszewski	Expert	Which Polish goalkeeper, mocked as a 'clown', stopped England at Wembley in 1973?	Jan Tomaszewski	Jozef Mlynarczyk	Artur Boruc	Jerzy Dudek
+polx_dudek	Expert	Whose 'spaghetti legs' helped Liverpool win the 2005 Champions League final on penalties?	Jerzy Dudek	Artur Boruc	Wojciech Szczesny	Lukasz Fabianski
+polx_everest_zima	Expert	Polish climbers made the first winter ascent of an 8,000 m peak in 1980. Which one?	Mount Everest	K2	Annapurna	Nanga Parbat
+polx_pilecki	Expert	Which Polish officer let himself be imprisoned in Auschwitz to report on it?	Witold Pilecki	Jan Karski	Stanislaw Sosabowski	Emil Fieldorf
+polx_lysica	Expert	Which is the highest peak of the Swietokrzyskie Mountains?	Lysica	Lysa Gora	Sniezka	Babia Gora
+polx_kanal_elblaski	Expert	What is unusual about the Elblag Canal?	Boats cross dry land on rails	It flows uphill	It freezes in summer	It runs underground
+poly_ksiaz	Expert	Which Silesian castle, one of Poland's largest, hides secret wartime tunnels?	Ksiaz	Czocha	Moszna	Niedzica
+poly_dar_pomorza	Expert	Which famous sailing ship, 'the white frigate', is now a museum in Gdynia?	Dar Pomorza	Dar Mlodziezy	Fryderyk Chopin	Zawisza Czarny
+pol_1939_battle_often	Expert	Which 1939 battle is often called 'the Polish Thermopylae'?	Wizna	Mokra	Bzura	Kock
+pol_wrote_inny_swiat	Expert	Who wrote 'Inny swiat' (A World Apart), about a Soviet labour camp?	Gustaw Herling-Grudzinski	Aleksander Wat	Stanislaw Ignacy Witkiewicz	Jozef Czapski
+pol_translated_winnie_pooh	Expert	Who translated 'Winnie the Pooh' into Polish as 'Kubus Puchatek'?	Irena Tuwim	Julian Tuwim	Jan Brzechwa	Maria Konopnicka

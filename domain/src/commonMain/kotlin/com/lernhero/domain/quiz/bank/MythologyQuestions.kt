@@ -1,3 +1,5 @@
+// PLIK GENEROWANY z domain/quizbank/mythology.tsv przez `python3 tools/quizbank.py generate`.
+// Nie edytuj go recznie - pytania dopisuje sie do TSV (patrz domain/quizbank/README.md).
 package com.lernhero.domain.quiz.bank
 
 import com.lernhero.domain.quiz.QuizCategory
@@ -23,8 +25,13 @@ object MythologyQuestions {
     private fun q(id: String, prompt: String, correct: String, wrong: List<String>, difficulty: QuizDifficulty) =
         QuizEntry(id = id, prompt = prompt, correct = correct, wrong = wrong, category = QuizCategory.Mythology, difficulty = difficulty)
 
-    val all: List<QuizEntry> = listOf(
-        /* ------------------------------ Easy ------------------------------ */
+    val all: List<QuizEntry> = easy() + medium() + hard() + expert()
+
+    // Kazdy poziom w osobnej funkcji: jedna wielka lista w inicjalizatorze obiektu przekroczylaby
+    // z czasem limit 64 KB kodu na metode JVM (735 pytan historii zajmowalo w nim juz ~36 KB).
+
+    /* ------------------------------ Easy ------------------------------ */
+    private fun easy(): List<QuizEntry> = listOf(
         q("mit_zeus", "Who was king of the Greek gods?", "Zeus", listOf("Poseidon", "Hades", "Apollo"), E),
         q("mit_posejdon", "Which Greek god ruled the seas?", "Poseidon", listOf("Zeus", "Ares", "Hermes"), E),
         q("mit_thor", "What weapon did the Norse god Thor use?", "A hammer", listOf("A sword", "A spear", "A bow"), E),
@@ -83,8 +90,25 @@ object MythologyQuestions {
         q("mytx_laponia", "According to Finnish tradition, in which region does Santa Claus live?", "Lapland", listOf("Greenland", "Siberia", "Iceland"), E),
         q("mytx_robin_hood", "In which forest did Robin Hood and his Merry Men hide?", "Sherwood Forest", listOf("The Black Forest", "Epping Forest", "The New Forest"), E),
         q("myty_sezamie", "What are the magic words that open the robbers' cave in 'Ali Baba'?", "Open sesame", listOf("Abracadabra", "Hocus pocus", "Alakazam"), E),
+        q("myt_thor_father_norse", "Who is Thor's father in Norse mythology?", "Odin", listOf("Loki", "Tyr", "Heimdall"), E),
+        q("myt_minotaur", "What was the Minotaur?", "Half man, half bull", listOf("Half man, half horse", "Half woman, half bird", "Half lion, half eagle"), E),
+        q("myt_saint_inspired_santa", "Which saint, who inspired Santa Claus, is celebrated on 6 December?", "Saint Nicholas", listOf("Saint Valentine", "Saint Patrick", "Saint Stephen"), E),
+        q("myt_saint_said_slain", "Which saint, said to have slain a dragon, is the patron saint of England?", "Saint George", listOf("Saint Michael", "Saint Andrew", "Saint David"), E),
+        q("myt_robin_hood_legends", "In the Robin Hood legends, who is Robin's great enemy?", "The Sheriff of Nottingham", listOf("The Earl of Warwick", "The Black Knight", "The Green Knight"), E),
+        q("myt_day_week_roman", "Which day of the week is named after the Roman god Saturn?", "Saturday", listOf("Sunday", "Thursday", "Tuesday"), E),
+        q("myt_according_legend_see", "According to legend, what can't you see when a vampire stands before a mirror?", "Its reflection", listOf("Its fangs", "Its eyes", "Its cloak"), E),
+        q("myt_stories_magical_comes", "In stories, which magical being comes out of a lamp to grant three wishes?", "A genie", listOf("A fairy", "A wizard", "An elf"), E),
+        q("myt_pulled_sword_stone", "Who pulled the sword from the stone to prove he was the true king?", "Arthur", listOf("Lancelot", "Merlin", "Galahad"), E),
+        q("myt_according_american_tradition", "According to American tradition, where does Santa Claus live?", "At the North Pole", listOf("In Lapland", "In Greenland", "In Iceland"), E),
+        q("myt_fairy_tale_three", "In the fairy tale 'The Three Billy Goats Gruff', who lives under the bridge?", "A troll", listOf("A giant", "A witch", "A dragon"), E),
+        q("myt_romans_call_poseidon", "What did the Romans call Poseidon, the god of the sea?", "Neptune", listOf("Mercury", "Vulcan", "Saturn"), E),
+        q("myt_king_arthur_queen", "Who was King Arthur's queen?", "Guinevere", listOf("Morgan le Fay", "Isolde", "Elaine"), E),
+        q("myt_robin_hood_sweetheart", "Who is Robin Hood's sweetheart in the English legends?", "Maid Marian", listOf("Lady Godiva", "Guinevere", "Rowena"), E),
+        q("myt_mythical_creature_half", "Which mythical creature is half man and half goat?", "Satyr", listOf("Centaur", "Minotaur", "Griffin"), E)
+    )
 
-        /* ----------------------------- Medium ----------------------------- */
+    /* ----------------------------- Medium ----------------------------- */
+    private fun medium(): List<QuizEntry> = listOf(
         q("cultw_odyn_ptaki", "Which two ravens brought Odin news of the world?", "Huginn and Muninn", listOf("Geri and Freki", "Sleipnir and Fenrir", "Vidar and Vali"), M),
         q("mit_hades", "Who ruled the Greek underworld?", "Hades", listOf("Poseidon", "Cronus", "Dionysus"), M),
         q("mit_atena", "Which goddess was the patron of wisdom and Athens?", "Athena", listOf("Hera", "Aphrodite", "Artemis"), M),
@@ -166,8 +190,42 @@ object MythologyQuestions {
         q("myty_persefona_pory", "Which Greek myth explained why the seasons change?", "Persephone's time in the underworld", listOf("Apollo's chariot race", "Zeus's anger at mortals", "Poseidon's tides"), M),
         q("myty_lakszmi", "Which Hindu goddess brings wealth and good fortune?", "Lakshmi", listOf("Kali", "Durga", "Saraswati"), M),
         q("myty_sindbad", "Which sailor of 'One Thousand and One Nights' made seven famous voyages?", "Sinbad", listOf("Aladdin", "Ali Baba", "Harun"), M),
+        q("myt_giant_man_robin", "Which giant of a man is Robin Hood's loyal friend, despite his name?", "Little John", listOf("Friar Tuck", "Will Scarlet", "Much the Miller's Son"), M),
+        q("myt_roman_greek_god", "What is the Roman name for the Greek god Dionysus?", "Bacchus", listOf("Vulcan", "Pluto", "Faunus"), M),
+        q("myt_roman_artemis_goddess", "What is the Roman name for Artemis, goddess of the hunt?", "Diana", listOf("Juno", "Minerva", "Vesta"), M),
+        q("myt_month_june_roman", "The month of June is named after which Roman goddess?", "Juno", listOf("Venus", "Diana", "Minerva"), M),
+        q("myt_word_volcano_comes", "The word 'volcano' comes from the name of which Roman god?", "Vulcan", listOf("Mars", "Neptune", "Pluto"), M),
+        q("myt_titan_drove_chariot", "Which Titan drove the chariot of the Sun across the sky in Greek myth?", "Helios", listOf("Atlas", "Cronus", "Prometheus"), M),
+        q("myt_basilisk_legend", "What is a basilisk in legend?", "A serpent whose gaze kills", listOf("A bird reborn from fire", "A horse with a single horn", "A dog with three heads"), M),
+        q("myt_patron_saint_scotland", "Which patron saint of Scotland gave the flag its white X-shaped cross?", "Saint Andrew", listOf("Saint George", "Saint Patrick", "Saint Columba"), M),
+        q("myt_ghost_ship_legend", "Which ghost ship of legend is doomed never to reach port?", "The Flying Dutchman", listOf("The Mary Celeste", "The Black Pearl", "The Nautilus"), M),
+        q("myt_german_legend_town", "In the German legend, which town's children did the Pied Piper lead away?", "Hamelin", listOf("Bremen", "Nuremberg", "Cologne"), M),
+        q("myt_animal_chinese_zodiac", "Which animal of the Chinese zodiac ruled the year 2024?", "The dragon", listOf("The rabbit", "The snake", "The tiger"), M),
+        q("myt_ancient_celtic_festival", "Which ancient Celtic festival is the origin of Halloween?", "Samhain", listOf("Beltane", "Yule", "Ostara"), M),
+        q("myt_roman_myth_mother", "In Roman myth, who is the mother of Cupid?", "Venus", listOf("Juno", "Diana", "Minerva"), M),
+        q("myt_roman_greek_hero", "What is the Roman name for the Greek hero Odysseus?", "Ulysses", listOf("Aeneas", "Achilles", "Hercules"), M),
+        q("myt_greek_god_dreams", "Which Greek god of dreams gave his name to a character in 'The Matrix'?", "Morpheus", listOf("Hypnos", "Thanatos", "Oneiros"), M),
+        q("myt_bird_sacred_zeus", "Which bird was sacred to Zeus?", "The eagle", listOf("The owl", "The peacock", "The swan"), M),
+        q("myt_close_friend_achilles", "Which close friend of Achilles was killed while wearing Achilles' armour?", "Patroclus", listOf("Ajax", "Odysseus", "Menelaus"), M),
+        q("myt_old_king_troy", "Who was the old king of Troy during the Trojan War?", "Priam", listOf("Menelaus", "Agamemnon", "Nestor"), M),
+        q("myt_eyed_giant_odysseus", "Which one-eyed giant did Odysseus blind to escape his cave?", "Polyphemus", listOf("Antaeus", "Typhon", "Argus"), M),
+        q("myt_sorceress_turned_odysseus", "Which sorceress turned Odysseus's men into pigs?", "Circe", listOf("Calypso", "Medea", "Hecate"), M),
+        q("myt_prometheus_punishment_giving", "What was Prometheus's punishment for giving fire to humans?", "An eagle ate his liver daily", listOf("He held up the sky forever", "He rolled a boulder uphill", "He was turned to stone"), M),
+        q("myt_greek_goddess_moon", "Who was the Greek goddess of the Moon?", "Selene", listOf("Eos", "Nyx", "Gaia"), M),
+        q("myt_goddess_discord_tossed", "Which goddess of discord tossed in the golden apple that led to the Trojan War?", "Eris", listOf("Nemesis", "Hera", "Athena"), M),
+        q("myt_egyptian_goddess_mother", "Which Egyptian goddess was the mother of Horus?", "Isis", listOf("Hathor", "Nut", "Bastet"), M),
+        q("myt_hindu_god_preserver", "Which Hindu god, the preserver, has avatars such as Rama and Krishna?", "Vishnu", listOf("Brahma", "Shiva", "Indra"), M),
+        q("myt_handsome_youth_loved", "Which handsome youth, loved by Aphrodite, was killed by a wild boar?", "Adonis", listOf("Narcissus", "Ganymede", "Hyacinthus"), M),
+        q("myt_trojan_hero_fled", "Which Trojan hero fled the burning city and became an ancestor of the Romans?", "Aeneas", listOf("Hector", "Paris", "Priam"), M),
+        q("myt_roman_goddess_dawn", "Who was the Roman goddess of the dawn?", "Aurora", listOf("Luna", "Flora", "Vesta"), M),
+        q("myt_roman_goddess_luck", "Who was the Roman goddess of luck?", "Fortuna", listOf("Victoria", "Fides", "Felicitas"), M),
+        q("myt_giant_serpent_apollo", "Which giant serpent did Apollo kill at Delphi?", "Python", listOf("Ladon", "Typhon", "Echidna"), M),
+        q("myt_oracle_ancient_greece", "Where was the most famous oracle of ancient Greece?", "Delphi", listOf("Olympia", "Dodona", "Sparta"), M),
+        q("myt_mythical_beast_lion", "Which mythical beast has a lion's body, a human face and a scorpion's tail?", "Manticore", listOf("Sphinx", "Griffin", "Chimera"), M)
+    )
 
-        /* ------------------------------ Hard ------------------------------ */
+    /* ------------------------------ Hard ------------------------------ */
+    private fun hard(): List<QuizEntry> = listOf(
         q("cultw_izanagi", "In Japanese myth, which pair created the islands of Japan?", "Izanagi and Izanami", listOf("Amaterasu and Susanoo", "Raijin and Fujin", "Inari and Hachiman"), H),
         q("cultw_anansi", "In West African folklore, what kind of creature is Anansi?", "A spider", listOf("A lion", "A crocodile", "A hawk"), H),
         q("mit_yggdrasil", "What is the cosmic tree in Norse mythology called?", "Yggdrasil", listOf("Valhalla", "Bifrost", "Midgard"), H),
@@ -239,8 +297,19 @@ object MythologyQuestions {
         q("myty_kali", "Which fierce Hindu goddess wears a garland of skulls and sticks out a red tongue?", "Kali", listOf("Lakshmi", "Saraswati", "Parvati"), H),
         q("myty_tanuki", "In Japanese folklore, which shape-shifter looks like a raccoon dog?", "The tanuki", listOf("The kitsune", "The kappa", "The tengu"), H),
         q("myty_zar_ptak", "In Slavic tales, which glowing bird's feathers light up a whole room?", "The Firebird", listOf("The Phoenix", "The Thunderbird", "The Roc"), H),
+        q("myt_greek_god_medicine", "Which Greek god of medicine carried a staff with a snake coiled round it?", "Asclepius", listOf("Apollo", "Hermes", "Hippocrates"), H),
+        q("myt_roman_titan_cronus", "What is the Roman name for the Titan Cronus?", "Saturn", listOf("Jupiter", "Uranus", "Janus"), H),
+        q("myt_traitorous_knight_fought", "Which traitorous knight fought King Arthur at the Battle of Camlann?", "Mordred", listOf("Lancelot", "Gawain", "Galahad"), H),
+        q("myt_real_bishop_behind", "The real bishop behind Santa Claus lived in Myra, in which present-day country?", "Turkey", listOf("Greece", "Italy", "The Netherlands"), H),
+        q("myt_word_jovial_comes", "The word 'jovial' comes from another name for which Roman god?", "Jupiter", listOf("Janus", "Juno", "Mercury"), H),
+        q("myt_roman_greek_goddess", "What is the Roman name for the Greek goddess Persephone?", "Proserpina", listOf("Ceres", "Juno", "Vesta"), H),
+        q("myt_hero_rode_pegasus", "Which hero rode Pegasus to kill the monster Chimera?", "Bellerophon", listOf("Perseus", "Theseus", "Jason"), H),
+        q("myt_greek_goddess_hearth", "Who was the Greek goddess of the hearth and home?", "Hestia", listOf("Hera", "Demeter", "Athena"), H),
+        q("myt_greek_keeper_winds", "Who was the Greek keeper of the winds, who gave Odysseus a bag of them?", "Aeolus", listOf("Boreas", "Zephyrus", "Triton"), H)
+    )
 
-        /* ----------------------------- Expert ----------------------------- */
+    /* ----------------------------- Expert ----------------------------- */
+    private fun expert(): List<QuizEntry> = listOf(
         q("cultw_mahabharata", "Which Sanskrit epic contains the Bhagavad Gita?", "The Mahabharata", listOf("The Ramayana", "The Rigveda", "The Upanishads"), X),
         q("cultw_tyche", "Which Greek goddess personified luck and fortune?", "Tyche", listOf("Nemesis", "Hecate", "Eris"), X),
         q("cultw_mabinogion", "The Mabinogion collects the myths of which people?", "The Welsh", listOf("The Irish", "The Scots", "The Bretons"), X),

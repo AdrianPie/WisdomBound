@@ -1,0 +1,471 @@
+# Sport: rekordy, historie, zasady, ktorych kibic uzywa co tydzien, i dyscypliny spoza europejskiego
+# kanonu.
+#
+# Liczenie zawodnikow na boisku ("ilu graczy ma druzyna siatkowki?") zostalo zredukowane do minimum -
+# takich pytan bylo kilkanascie i wszystkie brzmialy tak samo.
+#
+# Zasady pisania pytan dla calego banku - patrz [com.lernhero.domain.quiz.QuizBank].
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+spo_kosz	Easy	How many points is a shot from behind the line worth in basketball?	3	2	4	1
+spo_szachy_figury	Easy	Which chess piece moves only diagonally?	The bishop	The rook	The knight	The queen
+spo2_tenis_zero	Easy	What is a score of zero points in a tennis game called?	Love	Deuce	Ace	Let
+spo2_plywanie_styl	Easy	Which swimming stroke is the fastest?	Freestyle (front crawl)	Breaststroke	Backstroke	Butterfly
+spo2_boks_ring	Easy	What shape is a boxing ring?	Square	Round	Hexagonal	Oval
+spo3_plywanie_basen_dlugosc	Easy	How many meters long is a standard Olympic pool?	50	25	100	33
+scicmp_nie_zimowy_sport	Easy	Which of these is NOT a Winter Olympic sport?	Field hockey	Curling	Biathlon	Luge
+day_golf_dolki	Easy	How many holes are played in a standard round of golf?	18	9	12	24
+trv2_stanley_cup	Easy	In which sport is the Stanley Cup awarded?	Ice hockey	Baseball	Basketball	Lacrosse
+trv2_maraton_dystans	Easy	How long is a marathon?	42.195 km	40 km	50 km	45.5 km
+trv2_tenis_as	Easy	In tennis, what is a serve called that the receiver cannot touch?	An ace	A let	A winner	A lob
+spw_hat_trick	Easy	What is a 'hat-trick' in football?	Three goals by one player in a match	Three saves in a row	Three matches without conceding	Three yellow cards
+spw_tenis_set_gemy	Easy	How many games do you normally need to win a set in tennis?	Six, with a two-game lead	Five, with any lead	Seven, always	Four, with a two-game lead
+spw_olimpijskie_haslo	Easy	What does the Olympic motto 'Citius, Altius, Fortius' mean?	Faster, Higher, Stronger	Peace, Unity, Sport	Body, Mind, Spirit	Honour, Courage, Glory
+wld_spo_olimpiada_zima	Easy	In which winter sport do players sweep the ice in front of a sliding stone?	Curling	Biathlon	Skeleton	Bobsleigh
+spo_rio_2016	Easy	Which country hosted the 2016 Summer Olympics?	Brazil	Argentina	Mexico	Spain
+spo_paryz_2024	Easy	Which city hosted the 2024 Summer Olympics?	Paris	London	Los Angeles	Tokyo
+spo_piekna_gra	Easy	Which sport is often called 'the beautiful game'?	Football	Tennis	Cricket	Rugby
+spo_cr7	Easy	Which footballer is known by the nickname 'CR7'?	Cristiano Ronaldo	Ronaldinho	Ronaldo Nazario	Roberto Carlos
+spo_messi_kraj	Easy	Which country does Lionel Messi play for?	Argentina	Spain	Brazil	Uruguay
+spo_kregle_strike	Easy	In which sport do players try to get a 'strike' or a 'spare'?	Bowling	Baseball	Cricket	Golf
+spo_globetrotters	Easy	Which sport do the Harlem Globetrotters play?	Basketball	Baseball	Volleyball	American football
+spo_super_bowl	Easy	The Super Bowl is the final of which sport?	American football	Baseball	Basketball	Ice hockey
+spo_kanada_hokej	Easy	Which is Canada's official national winter sport?	Ice hockey	Curling	Skiing	Figure skating
+spo_taekwondo	Easy	Which martial art from Korea is famous for its high, spinning kicks?	Taekwondo	Karate	Judo	Kung fu
+spo_mundial_2026	Easy	Which three countries hosted the 2026 FIFA World Cup?	USA, Canada and Mexico	Spain, Portugal and Morocco	Brazil, Argentina and Chile	Japan, South Korea and China
+spo_baseball_diament	Easy	Which sport is played on a field called a 'diamond'?	Baseball	Cricket	Rugby	Hockey
+spo_polo	Easy	Which team sport is played on horseback?	Polo	Lacrosse	Hurling	Cricket
+spo_haka	Easy	Which country's rugby team performs the haka before matches?	New Zealand	Australia	Fiji	South Africa
+spo_world_series	Easy	The World Series is the championship of which sport?	Baseball	Basketball	American football	Ice hockey
+spo_ali_najwiekszy	Easy	Which boxer called himself 'The Greatest'?	Muhammad Ali	Mike Tyson	Joe Frazier	Floyd Mayweather
+spo_sand_wedge	Easy	In which sport would you use a 'sand wedge'?	Golf	Beach volleyball	Cricket	Polo
+spo_pionek	Easy	Which chess piece moves straight forward but captures diagonally?	The pawn	The bishop	The rook	The knight
+spo_camp_nou	Easy	Which football club plays at the Camp Nou?	FC Barcelona	Real Madrid	Atletico Madrid	Valencia
+spo_reka_boga	Easy	Which footballer scored the famous 'Hand of God' goal in 1986?	Diego Maradona	Pele	Lionel Messi	Zinedine Zidane
+spo_deuce	Easy	In which sport is a 40-40 score called 'deuce'?	Tennis	Badminton	Squash	Table tennis
+spo_hamilton	Easy	In which sport does Lewis Hamilton compete?	Formula 1	MotoGP	Rally	NASCAR
+spo_mlyn_rugby	Easy	In which sport would you see a 'scrum'?	Rugby	Cricket	Handball	Water polo
+spo_wimbledon_pilki	Easy	What colour have Wimbledon tennis balls been since 1986?	Yellow	White	Green	Orange
+spo_kij_bilardowy	Easy	In which of these sports do players use a cue?	Snooker	Croquet	Cricket	Hockey
+spox_bolt_kraj	Easy	Which country is sprinter Usain Bolt from?	Jamaica	The USA	Trinidad and Tobago	Kenya
+spox_sumo	Easy	Sumo wrestling is the national sport of which country?	Japan	China	Mongolia	Korea
+spox_czerwona_kartka	Easy	What does a red card mean in football?	The player is sent off	A penalty kick	A free kick	A first warning
+spox_federer	Easy	Which country is tennis great Roger Federer from?	Switzerland	Sweden	Austria	Germany
+spox_hole_in_one	Easy	In golf, what is it called when the ball drops into the hole with a single shot?	A hole in one	An eagle	A birdie	A bogey
+spox_ferrari_kolor	Easy	What colour are Ferrari's Formula 1 cars traditionally?	Red	Yellow	Silver	Green
+spox_mat	Easy	What is it called when a king is under attack and cannot escape?	Checkmate	Stalemate	Castling	En passant
+spox_skoczek	Easy	Which chess piece moves in an L-shape?	The knight	The bishop	The rook	The queen
+spox_koszykowka_piatka	Easy	How many players does a basketball team have on court at one time?	Five	Six	Seven	Four
+spoy_czarny_pas	Easy	In judo and karate, which belt colour usually marks a master?	Black	Red	Gold	White
+spoy_hokej_szostka	Easy	How many players does each ice hockey team have on the ice, goalie included?	Six	Five	Seven	Eleven
+spo_sport_players_perform	Easy	In which sport do players perform a 'slam dunk'?	Basketball	Volleyball	Handball	Netball
+spo_sport_played_shuttlecock	Easy	Which sport is played with a shuttlecock?	Badminton	Squash	Table tennis	Tennis
+spo_country_tennis_star	Easy	Which country is tennis star Novak Djokovic from?	Serbia	Croatia	Montenegro	Bosnia and Herzegovina
+spo_national_team_kylian	Easy	Which national team does Kylian Mbappe play for?	France	Belgium	Cameroon	Portugal
+spo_club_lionel_messi	Easy	For which club did Lionel Messi play from boyhood until 2021?	FC Barcelona	Real Madrid	Paris Saint-Germain	Inter Miami
+spo_england_captain_curling	Easy	Which England captain was famous for his curling free kicks and No. 7 shirt?	David Beckham	Wayne Rooney	Steven Gerrard	Frank Lampard
+spo_players_volleyball_team	Easy	How many players does a volleyball team have on court?	Six	Five	Seven	Eight
+spo_city_hosted_2012	Easy	Which city hosted the 2012 Summer Olympics?	London	Beijing	Rio de Janeiro	Athens
+spo_2020_summer_olympics	Easy	The 2020 Summer Olympics were delayed a year by COVID-19. Where were they held?	Tokyo	Paris	Beijing	Seoul
+spo_spectators_traditionally_eat	Easy	What do spectators traditionally eat at Wimbledon?	Strawberries and cream	Fish and chips	Scones with jam	Pimm's and cucumber
+spo_london_stadium_home	Easy	Which London stadium is the home of England's national football team?	Wembley	Twickenham	Old Trafford	Stamford Bridge
+spo_very_centre_dartboard	Easy	What is the very centre of a dartboard called?	The bullseye	The bullring	The centre spot	The hotspot
+spo_chess_piece_powerful	Easy	Which chess piece is the most powerful?	The queen	The king	The rook	The bishop
+spo_pieces_each_player	Easy	How many pieces does each player start with in chess?	16	12	18	20
+spo_nba_stand	Easy	What does 'NBA' stand for?	National Basketball Association	North American Basketball Alliance	National Ball Association	Nationwide Basketball Authority
+spo_mma_stand_combat	Easy	What does 'MMA' stand for in combat sports?	Mixed martial arts	Modern military arts	Multiple melee attacks	Major martial arena
+spo_sport_caddies_carry	Easy	In which sport do caddies carry the players' clubs?	Golf	Polo	Hockey	Cricket
+spo_tennis_score_comes	Easy	In tennis, which score comes after 30?	40	45	35	50
+spo_points_free_throw	Easy	How many points is a free throw worth in basketball?	One	Two	Three	Half a point
+spo_grand_slam_tennis	Easy	Which Grand Slam tennis tournament is played in New York?	The US Open	Wimbledon	Roland Garros	The Australian Open
+spo_football_marked_area	Easy	In football, in which marked area may the goalkeeper handle the ball?	The penalty area	The centre circle	The corner arc	The halfway line
+spo_country_striker_erling	Easy	Which country does the striker Erling Haaland play for?	Norway	Denmark	Sweden	Iceland
+spo_sport_played_bat	Easy	Which sport is played with a bat, wickets and bails?	Cricket	Baseball	Rounders	Croquet
+spo_colour_card_football	Easy	What colour card does a football referee show as a warning?	Yellow	Red	Blue	Green
+spo_country_bundesliga_top	Easy	In which country is the Bundesliga the top football league?	Germany	Austria	Switzerland	The Netherlands
+spo_country_serie_top	Easy	In which country is Serie A the top football league?	Italy	Spain	Portugal	France
+spo_country_cristiano_ronaldo	Easy	Which country does Cristiano Ronaldo play for?	Portugal	Spain	Brazil	Italy
+spo_country_footballer_neymar	Easy	Which country does the footballer Neymar play for?	Brazil	Argentina	Portugal	Colombia
+spo_country_footballer_zlatan	Easy	Which country is the footballer Zlatan Ibrahimovic from?	Sweden	Bosnia and Herzegovina	Croatia	Denmark
+spo_country_tennis_legend	Easy	Which country is tennis legend Rafael Nadal from?	Spain	Argentina	Italy	France
+spo_country_racing_driver	Easy	Which country does the racing driver Lewis Hamilton come from?	Britain	Germany	Australia	Canada
+spo_nba_team_los	Easy	Which NBA team from Los Angeles plays in purple and gold?	The Lakers	The Clippers	The Bulls	The Celtics
+spo_swimming_stroke_uses	Easy	Which swimming stroke uses a frog-like kick?	Breaststroke	Butterfly	Backstroke	Freestyle
+spo_athletics_event_heavy	Easy	In which athletics event is a heavy metal ball pushed from the shoulder?	Shot put	Discus	Hammer throw	Javelin
+spo_kind_sport_includes	Easy	Which kind of sport includes dressage and show jumping?	Horse riding	Gymnastics	Skiing	Diving
+spo_sport_played_sand	Easy	Which sport is played on sand, two against two, with a ball and a net?	Beach volleyball	Badminton	Tennis	Sepak takraw
+spo_pattern_flag_waved	Easy	What pattern is the flag waved at the end of a motor race?	Black and white checks	Red and yellow stripes	Plain green	Plain blue
+spo_golf_starting_area	Easy	In golf, what is the starting area for each hole called?	The tee	The green	The fairway	The rough
+spo_sport_made_sachin	Easy	Which sport made Sachin Tendulkar a national hero in India?	Cricket	Field hockey	Tennis	Badminton
+spo_country_won_euro	Easy	Which country won Euro 2024 in Germany?	Spain	England	France	Germany
+spo_amsterdam_football_club	Easy	Which Amsterdam football club is famous for its youth academy?	Ajax	PSV Eindhoven	Feyenoord	AZ Alkmaar
+spo_city_hosted_2016	Easy	Which city hosted the 2016 Summer Olympics?	Rio de Janeiro	Tokyo	London	Beijing
+spo_italian_motorcycle_racer	Easy	Which Italian motorcycle racer was nicknamed 'The Doctor'?	Valentino Rossi	Max Biaggi	Giacomo Agostini	Marco Simoncelli
+spo_nickname_nba_legend	Easy	By what nickname is the NBA legend Earvin Johnson known?	Magic	Air	Dr. J	Shaq
+spo_quarterback_won_record	Easy	Which quarterback won a record seven Super Bowls?	Tom Brady	Peyton Manning	Joe Montana	Patrick Mahomes
+spo_sport_tour_france	Easy	In which sport is the Tour de France's 'maillot jaune' worn?	Cycling	Motor racing	Sailing	Running
+spo_sport_played_wimbledon	Easy	Which sport is played at Wimbledon, Roland Garros and Flushing Meadows?	Tennis	Golf	Cycling	Horse racing
+spo_formula_race_held	Easy	What is the name of the Formula 1 race held at Silverstone?	British Grand Prix	English Grand Prix	London Grand Prix	European Grand Prix
+spo_sport_players_score	Easy	In which sport do players score a 'try'?	Rugby	Cricket	American football	Lacrosse
+spo_italian_star_missed	Easy	Which Italian star missed the decisive penalty in the 1994 World Cup final?	Roberto Baggio	Gianluca Vialli	Paolo Maldini	Paolo Rossi
+spo_american_motor_racing	Easy	Which American motor-racing series is famous for the Daytona 500?	NASCAR	IndyCar	Formula 1	World Rally
+spo_german_driver_won	Easy	Which German driver won four Formula 1 titles in a row with Red Bull, from 2010 to 2013?	Sebastian Vettel	Nico Rosberg	Michael Schumacher	Ralf Schumacher
+spo_sport_uses_weapons	Easy	Which sport uses weapons called the foil, the epee and the sabre?	Fencing	Kendo	Archery	Biathlon
+spo_london_club_plays	Easy	Which London club plays at Stamford Bridge?	Chelsea	Arsenal	Tottenham	Fulham
+spo_london_club_moved	Easy	Which London club moved to the Emirates Stadium in 2006?	Arsenal	Chelsea	West Ham	Tottenham
+spo_london_football_club	Easy	Which London football club is known as 'Spurs'?	Tottenham Hotspur	Arsenal	Chelsea	Crystal Palace
+spo_chess_colour_always	Easy	In chess, which colour always moves first?	White	Black	Whoever wins a coin toss	The younger player
+spo_tennis_star_famously	Easy	Which tennis star famously shouted 'You cannot be serious!' at an umpire?	John McEnroe	Jimmy Connors	Andre Agassi	Ilie Nastase
+spo_swede_won_five	Easy	Which Swede won five Wimbledon titles in a row, from 1976 to 1980?	Bjorn Borg	Mats Wilander	Stefan Edberg	Ivan Lendl
+spo_sport_tony_hawk	Easy	In which sport is Tony Hawk a legend?	Skateboarding	Surfing	Snowboarding	BMX
+spo_scottish_manager_led	Easy	Which Scottish manager led Manchester United for 26 years?	Alex Ferguson	Matt Busby	Kenny Dalglish	David Moyes
+spo_french_manager_led	Easy	Which French manager led Arsenal for 22 years?	Arsene Wenger	Gerard Houllier	Didier Deschamps	Claude Puel
+spo_coach_barcelona_team	Easy	Which coach's Barcelona team of 2008-2012 made 'tiki-taka' famous?	Pep Guardiola	Luis Enrique	Frank Rijkaard	Johan Cruyff
+spo_german_coach_led	Easy	Which German coach led Liverpool to the 2019 Champions League title?	Jurgen Klopp	Joachim Low	Thomas Tuchel	Hansi Flick
+spo_mundial_2018	Medium	Who won the soccer World Cup in 2018?	France	Croatia	Brazil	Germany
+spo_lewandowski	Medium	At which club did Robert Lewandowski become the Bundesliga's top scorer?	Bayern Munich	Real Madrid	Manchester United	Juventus
+spo_hokej	Medium	How long is one period in an ice hockey game?	20 minutes	15 minutes	25 minutes	30 minutes
+spo_siatkowka_sety	Medium	How many sets won does it take to win a volleyball match?	3	2	4	5
+spo2_rugby_zawodnicy	Medium	How many players make up a rugby union team?	Fifteen	Thirteen	Eleven	Seventeen
+spo2_tour_de_france	Medium	What jersey does the Tour de France leader wear?	Yellow	Green	Pink	Polka-dot
+spo2_giro_koszulka	Medium	What jersey does the Giro d'Italia leader wear?	Pink	Yellow	White	Red
+spo2_f1_punkty	Medium	How many points does a Formula 1 race winner get?	25	20	18	30
+spo2_golf_dolek	Medium	What does a birdie mean in golf?	A score of one stroke under par	A score of one stroke over par	Sinking it on the first stroke	Hitting off the course
+spo2_dziesiecioboj_kobiety	Medium	What is the women's equivalent of the decathlon called?	The heptathlon	The pentathlon	The octathlon	The enneathlon
+spo2_siatkowka_libero	Medium	What can a libero not do in volleyball?	Attack with a jump above the net	Receive serves	Play defense	Sub in for another player
+spo2_malysz_dyscyplina_klub	Medium	In which countries is the Four Hills Tournament held?	Germany and Austria	Poland and Czechia	Norway and Finland	Switzerland and Italy
+spo3_biathlon_dyscypliny	Medium	What two disciplines make up biathlon?	Cross-country skiing and shooting	Running and swimming	Skiing and jumping	Skating and shooting
+spo3_bilard_ile_bil	Medium	How many balls (cue ball included) are used in classic American pool (8-ball)?	16	10	12	20
+spo3_olimpiada_letnia_dyscyplin	Medium	Which of these disciplines is NOT held at the Summer Olympics?	Cross-country skiing	Swimming	Track and field	Judo
+spo3_hokej_krazek	Medium	What is a hockey puck made of?	Vulcanized rubber	Metal	Wood	Bone
+spo3_koszykowka_kosz_wysokosc	Medium	At what height is the hoop mounted in basketball?	10 ft (3.05 m)	8 ft	11.5 ft	9 ft
+scicmp_najwieksza_pilka	Medium	Which of these sports uses the largest ball?	Basketball	Football	Volleyball	Handball
+scicmp_ryder_cup	Medium	In which sport is the Ryder Cup contested?	Golf	Tennis	Sailing	Cycling
+scicmp_najwiecej_zawodnikow	Medium	Which of these sports fields the most players per team?	Rugby union	Football	Ice hockey	Basketball
+day_boks_runda	Medium	How long is one round in professional men's boxing?	Three minutes	Two minutes	Four minutes	Five minutes
+day_kola_olimpijskie_znaczenie	Medium	What do the five Olympic rings represent?	The five inhabited continents	The five founding countries	The five original sports	The five Olympic virtues
+trv2_krykiet_over	Medium	In cricket, how many balls make up an over?	Six	Four	Eight	Ten
+trv2_judo_znaczenie	Medium	Which martial art's name means 'the gentle way'?	Judo	Karate	Taekwondo	Kung fu
+trv2_londyn_igrzyska	Medium	Which city was the first to host the Summer Olympics three times?	London	Paris	Athens	Los Angeles
+trv2_golf_eagle	Medium	In golf, what is a score of two under par on a hole called?	An eagle	A birdie	An albatross	A bogey
+trv2_ashes	Medium	In which sport do England and Australia compete for 'the Ashes'?	Cricket	Rugby	Rowing	Sailing
+trv2_touchdown	Medium	How many points is a touchdown worth in American football?	6	3	7	5
+trv2_golf_szkocja	Medium	Which country is the birthplace of golf?	Scotland	England	The United States	The Netherlands
+trv2_maraton_nazwa	Medium	The marathon is named after a battle in which country?	Greece	Italy	Turkey	Egypt
+trv2_siatkowka_wynalazek	Medium	In which country was volleyball invented?	The United States	Brazil	Japan	Italy
+trv2_f1_rekordy	Medium	Which driver has won the most Formula 1 world championships (tied at seven)?	Michael Schumacher and Lewis Hamilton	Ayrton Senna and Alain Prost	Sebastian Vettel and Max Verstappen	Juan Manuel Fangio and Niki Lauda
+trv2_baseball_inningi	Medium	How many innings are in a standard baseball game?	9	7	10	12
+spw_kolarstwo_peleton	Medium	What is the main group of riders in a road race called?	The peloton	The breakaway	The domestique	The prologue
+spw_plywanie_delfin	Medium	Which swimming stroke requires both arms to move together over the water?	Butterfly	Front crawl	Backstroke	Breaststroke
+spw_koszykowka_sekundy	Medium	How long does an NBA team have to attempt a shot?	24 seconds	30 seconds	20 seconds	35 seconds
+ext_pilka_dolki	Medium	Why is a golf ball covered in dimples?	They make it fly farther	They improve grip	They reduce its weight	They help it roll straight
+ext_tour_kalorie	Medium	A Tour de France rider can burn roughly how many calories on a hard mountain stage?	Around 8,000	Around 2,000	Around 4,000	Around 20,000
+mst_koszykowka_kosz	Medium	The first basketball games used what as the goal?	A peach basket	A barrel	A metal hoop	A painted square
+mst_wimbledon_kolor	Medium	Wimbledon is unique among tennis majors for requiring what?	Almost entirely white clothing	Wooden rackets	No line judges	Matches only in daylight
+cur_golf_ksiezyc	Medium	Which sport has been played on the Moon?	Golf	Tennis	Baseball	Frisbee
+wld_tenis_wielki_szlem	Medium	Which of these is NOT a tennis Grand Slam tournament?	The Davis Cup	Wimbledon	The US Open	Roland Garros
+spo_los_angeles_2028	Medium	Which city was chosen to host the 2028 Summer Olympics?	Los Angeles	Brisbane	Paris	Madrid
+spo_messi_zlota_pilka	Medium	Which footballer has won the most Ballon d'Or awards?	Lionel Messi	Cristiano Ronaldo	Michel Platini	Johan Cruyff
+spo_pele	Medium	Which Brazilian legend won three World Cups as a player?	Pele	Ronaldo	Zico	Garrincha
+spo_rzutki_180	Medium	What is the highest score possible with three darts?	180	150	170	200
+spo_kregle_300	Medium	What is a perfect score in ten-pin bowling?	300	200	250	500
+spo_zielona_marynarka	Medium	What does the winner of the Masters golf tournament put on?	A green jacket	A yellow jersey	A red blazer	A white cap
+spo_rpa_rugby	Medium	Which country has won the most Rugby World Cups?	South Africa	New Zealand	Australia	England
+spo_brazylia_kazdy_mundial	Medium	Which is the only country to have played at every FIFA World Cup?	Brazil	Germany	Argentina	Italy
+spo_djokovic	Medium	Which man has won the most Grand Slam singles titles in tennis?	Novak Djokovic	Rafael Nadal	Roger Federer	Pete Sampras
+spo_clay	Medium	What was Muhammad Ali's name at birth?	Cassius Clay	Joe Louis	Sonny Liston	George Foreman
+spo_wimbledon_najstarszy	Medium	Which is the oldest of the four tennis Grand Slam tournaments?	Wimbledon	The US Open	Roland Garros	The Australian Open
+spo_puchar_ameryki	Medium	In which sport is the America's Cup contested?	Sailing	Rowing	Golf	Polo
+spo_ferrari	Medium	Which team has won the most Formula 1 constructors' championships?	Ferrari	McLaren	Williams	Mercedes
+spo_monako	Medium	Which Formula 1 race is famous for running through a tunnel on narrow city streets?	The Monaco Grand Prix	The British Grand Prix	The Italian Grand Prix	The Belgian Grand Prix
+spo_wielki_szlem_baseball	Medium	What is a 'grand slam' in baseball?	A home run with the bases loaded	Winning four big tournaments	Striking out three batters	A game with no hits allowed
+spo_lbw	Medium	In cricket, what does 'LBW' stand for?	Leg before wicket	Long ball wide	Lost ball waiting	Left behind wicket
+spo_anglia_1966	Medium	Which country won the 1966 FIFA World Cup on home soil?	England	Germany	Brazil	Italy
+spo_zidane	Medium	Which French star was sent off for a head-butt in the 2006 World Cup final?	Zinedine Zidane	Thierry Henry	Franck Ribery	Patrick Vieira
+spo_jordan_23	Medium	Which shirt number did Michael Jordan make famous?	23	33	32	8
+spo_promocja	Medium	What is it called when a pawn reaches the far side of the board and becomes a queen?	Promotion	Castling	En passant	Check
+spo_pat	Medium	What is 'stalemate' in chess?	A draw when a player has no legal move	A win for the player who moves next	A king captured by a pawn	A game lost because of time
+spo_podnoszenie	Medium	In which sport do athletes perform the 'snatch' and the 'clean and jerk'?	Weightlifting	Wrestling	Gymnastics	Judo
+spo_ateny_2004	Medium	In which country were the 2004 Summer Olympics held?	Greece	Italy	Spain	Australia
+spo_hang_ten	Medium	In which sport would you 'hang ten'?	Surfing	Skateboarding	Skiing	Windsurfing
+spo_breaking	Medium	Which dance sport made its Olympic debut at Paris 2024?	Breaking	Ballroom dancing	Cheerleading	Zumba
+spo_snooker_czarna	Medium	In snooker, which ball is worth the most points?	The black	The pink	The blue	The red
+spo_czerwone_diably	Medium	Which English football club is nicknamed 'the Red Devils'?	Manchester United	Liverpool	Arsenal	Manchester City
+spo_real_liga_mistrzow	Medium	Which club has won the most European Cup and Champions League titles?	Real Madrid	AC Milan	Bayern Munich	Liverpool
+spo_biles	Medium	Which gymnast has won the most World Championship medals in history?	Simone Biles	Larisa Latynina	Nadia Comaneci	Vitaly Scherbo
+spo_armstrong	Medium	Which cyclist was stripped of seven Tour de France titles for doping?	Lance Armstrong	Chris Froome	Miguel Indurain	Eddy Merckx
+spo_regaty	Medium	Oxford and Cambridge universities race each other every year in which sport?	Rowing	Sailing	Cycling	Swimming
+spo_niemcy_2014	Medium	Which country won the 2014 FIFA World Cup?	Germany	Argentina	Brazil	The Netherlands
+spo_capoeira	Medium	Which Brazilian martial art blends fighting with dance and music?	Capoeira	Krav Maga	Jiu-jitsu	Savate
+spo_tenis_stolowy_chiny	Medium	Which country has dominated Olympic table tennis for decades?	China	Japan	South Korea	Sweden
+spo_nadal_rg	Medium	Which player has won the French Open (Roland Garros) the most times?	Rafael Nadal	Novak Djokovic	Bjorn Borg	Roger Federer
+spox_znicz	Medium	Where is the Olympic flame lit before each Games?	Olympia, Greece	Athens' old stadium	Mount Olympus	The host city
+spox_jordan_bulls	Medium	For which NBA team did Michael Jordan win six championships?	The Chicago Bulls	The Los Angeles Lakers	The Boston Celtics	The New York Knicks
+spox_katar	Medium	Which country hosted the 2022 FIFA World Cup?	Qatar	Saudi Arabia	The UAE	Russia
+spox_karny	Medium	From how far away is a football penalty kick taken?	11 metres	9 metres	16 metres	20 metres
+spox_var	Medium	What does 'VAR' stand for in football?	Video Assistant Referee	Visual Action Replay	Video Area Review	Verified Action Result
+spox_serena	Medium	Which tennis star won 23 Grand Slam singles titles in the Open Era?	Serena Williams	Venus Williams	Steffi Graf	Martina Navratilova
+spox_bogey	Medium	In golf, what is a score of one over par on a hole called?	A bogey	A birdie	A condor	A double
+spox_tyson_ucho	Medium	Which boxer bit off part of Evander Holyfield's ear in 1997?	Mike Tyson	Muhammad Ali	George Foreman	Lennox Lewis
+spox_le_mans	Medium	Which famous motor race lasts 24 hours?	Le Mans	The Monaco Grand Prix	The Indianapolis 500	The Dakar Rally
+spox_cool_runnings	Medium	Which tropical country's bobsleigh team inspired the film 'Cool Runnings'?	Jamaica	Kenya	Fiji	Brazil
+spox_gretzky	Medium	Which ice hockey legend was nicknamed 'The Great One'?	Wayne Gretzky	Mario Lemieux	Bobby Orr	Gordie Howe
+spox_babe_ruth	Medium	Which baseball legend was nicknamed 'the Bambino'?	Babe Ruth	Joe DiMaggio	Lou Gehrig	Jackie Robinson
+spox_triathlon	Medium	In what order are the three parts of a triathlon done?	Swim, bike, run	Run, bike, swim	Bike, swim, run	Swim, run, bike
+spox_pilka_reczna	Medium	In which sport must players not step inside the semicircle around the goal?	Handball	Water polo	Netball	Lacrosse
+spox_el_clasico	Medium	Which two clubs meet in 'El Clasico'?	Real Madrid and Barcelona	Barcelona and Atletico	Real Madrid and Sevilla	Valencia and Barcelona
+spoy_jules_rimet	Medium	What was the FIFA World Cup trophy called before 1974?	The Jules Rimet Trophy	The Henri Delaunay Cup	The Stanley Cup	The Webb Ellis Cup
+spoy_coubertin	Medium	Who founded the modern Olympic Games?	Pierre de Coubertin	Jules Rimet	Avery Brundage	Juan Antonio Samaranch
+spoy_st_andrews	Medium	Which Scottish town is known as 'the home of golf'?	St Andrews	Edinburgh	Glasgow	Aberdeen
+spoy_karate	Medium	In which country did karate develop?	Japan	China	Korea	Thailand
+spoy_muay_thai	Medium	Muay Thai, 'the art of eight limbs', comes from which country?	Thailand	Vietnam	Cambodia	Japan
+spoy_rzutki_20	Medium	On a standard dartboard, which number sits at the top?	20	1	10	6
+spo_country_hosted_2018	Medium	Which country hosted the 2018 FIFA World Cup?	Russia	Qatar	Brazil	Germany
+spo_country_won_2010	Medium	Which country won the 2010 FIFA World Cup?	Spain	The Netherlands	Germany	Brazil
+spo_country_won_2006	Medium	Which country won the 2006 FIFA World Cup?	Italy	France	Germany	Portugal
+spo_country_won_european	Medium	Which country won the European Championship in 2016?	Portugal	France	Germany	Wales
+spo_country_2026_winter	Medium	In which country were the 2026 Winter Olympics held?	Italy	Switzerland	Austria	France
+spo_city_hosted_2000	Medium	Which city hosted the 2000 Summer Olympics?	Sydney	Athens	Atlanta	Beijing
+spo_city_hosted_1992	Medium	Which city hosted the 1992 Summer Olympics?	Barcelona	Atlanta	Seoul	Madrid
+spo_golfer_won_record	Medium	Which golfer won a record 18 men's major championships?	Jack Nicklaus	Tiger Woods	Arnold Palmer	Gary Player
+spo_basketball_legend_died	Medium	Which basketball legend died in a helicopter crash in 2020?	Kobe Bryant	Shaquille O'Neal	Magic Johnson	Kareem Abdul-Jabbar
+spo_sport_teams_compete	Medium	In which sport do teams compete in the Six Nations Championship?	Rugby union	Football	Cricket	Field hockey
+spo_english_club_plays	Medium	Which English club plays its home games at Anfield?	Liverpool	Everton	Manchester City	Chelsea
+spo_song_liverpool_fans	Medium	Which song do Liverpool fans famously sing before matches?	You'll Never Walk Alone	Sweet Caroline	Hey Jude	We Are the Champions
+spo_london_club_nicknamed	Medium	Which London club is nicknamed 'the Gunners'?	Arsenal	Chelsea	Tottenham Hotspur	West Ham United
+spo_club_plays_santiago	Medium	Which club plays at the Santiago Bernabeu stadium?	Real Madrid	Atletico Madrid	FC Barcelona	Sevilla
+spo_city_san_siro	Medium	In which city is the San Siro stadium, shared by AC Milan and Inter?	Milan	Turin	Rome	Naples
+spo_sport_athletes_perform	Medium	In which sport do athletes perform jumps called the Salchow and the Lutz?	Figure skating	Ski jumping	Gymnastics	Trampolining
+spo_long_rugby_union	Medium	How long does a rugby union match last, not counting stoppages?	80 minutes	90 minutes	70 minutes	60 minutes
+spo_country_game_chess	Medium	In which country did the game of chess originate?	India	China	Persia	Egypt
+spo_dutch_driver_won	Medium	Which Dutch driver won four Formula 1 world titles in a row, from 2021 to 2024?	Max Verstappen	Lewis Hamilton	Charles Leclerc	Sebastian Vettel
+spo_footballer_nicknamed_egyptian	Medium	Which footballer is nicknamed 'the Egyptian King'?	Mohamed Salah	Mohamed Elneny	Riyad Mahrez	Sadio Mane
+spo_footballer_scored_goals	Medium	Which footballer has scored the most goals for a men's national team?	Cristiano Ronaldo	Lionel Messi	Ali Daei	Pele
+spo_sport_raced_steeply	Medium	Which sport is raced on a steeply banked track called a velodrome?	Track cycling	Speed skating	Motor racing	Greyhound racing
+spo_grand_slam_tennis_2	Medium	Which Grand Slam tennis tournament is played every January?	The Australian Open	The US Open	Wimbledon	The French Open
+spo_players_handball_team	Medium	How many players does a handball team have on court?	Seven	Six	Five	Eleven
+spo_players_baseball_team	Medium	How many players does a baseball team have in the field?	Nine	Eleven	Ten	Eight
+spo_american_swimmer_won	Medium	Which American swimmer won eight gold medals at the 2008 Olympics?	Michael Phelps	Ryan Lochte	Mark Spitz	Ian Thorpe
+spo_sport_played_teams	Medium	Which sport is played by teams of 18 on a huge oval field, mainly in Australia?	Aussie rules football	Rugby league	Gaelic football	Cricket
+spo_sport_might_bowler	Medium	In which sport might a bowler send down a 'googly'?	Cricket	Bowling	Baseball	Golf
+spo_martial_art_karate	Medium	What does the name of the martial art 'karate' mean?	Empty hand	Way of the fist	Gentle way	Strong spirit
+spo_sport_sport_kings	Medium	Which sport is known as 'the sport of kings'?	Horse racing	Polo	Fencing	Falconry
+spo_sport_cox_steer	Medium	In which sport does a 'cox' steer the boat and call the rhythm?	Rowing	Sailing	Canoeing	Rafting
+spo_animal_logo_lacoste	Medium	What animal is the logo of the Lacoste brand, founded by a French tennis champion?	A crocodile	A tiger	A swan	An eagle
+spo_country_won_european_2	Medium	Which country won the European Championship in 2024?	Spain	England	France	Germany
+spo_ronnie_sullivan_legend	Medium	Ronnie O'Sullivan is a legend of which sport?	Snooker	Darts	Golf	Tennis
+spo_shohei_ohtani_superstar	Medium	Shohei Ohtani is a superstar of which sport?	Baseball	Basketball	American football	Ice hockey
+spo_footballer_nicknamed_pulga	Medium	Which footballer is nicknamed 'La Pulga', meaning 'the Flea'?	Lionel Messi	Diego Maradona	Neymar	Luka Modric
+spo_football_manager_famously	Medium	Which football manager famously called himself 'the Special One'?	Jose Mourinho	Pep Guardiola	Jurgen Klopp	Carlo Ancelotti
+spo_club_pep_guardiola	Medium	Which club did Pep Guardiola lead to a treble of trophies in 2023?	Manchester City	FC Barcelona	Bayern Munich	Liverpool
+spo_sport_penalty_corners	Medium	Which sport has 'penalty corners' and is played with curved sticks on grass?	Field hockey	Lacrosse	Polo	Hurling
+spo_country_footballer_luka	Medium	Which country is footballer Luka Modric from?	Croatia	Serbia	Slovenia	Bosnia and Herzegovina
+spo_country_marathon_great	Medium	Which country is marathon great Eliud Kipchoge from?	Kenya	Ethiopia	Uganda	Tanzania
+spo_sets_man_need	Medium	How many sets does a man need to win a Grand Slam tennis match?	Three	Two	Four	Five
+spo_country_hosted_1998	Medium	Which country hosted the 1998 FIFA World Cup, and won it?	France	Brazil	Italy	Germany
+spo_country_hosted_2002	Medium	Which country co-hosted the 2002 FIFA World Cup with Japan?	South Korea	China	Australia	Thailand
+spo_russian_city_2014	Medium	In which Russian city were the 2014 Winter Olympics held?	Sochi	Moscow	Kazan	Saint Petersburg
+spo_irish_fighter_nicknamed	Medium	Which Irish fighter is nicknamed 'The Notorious'?	Conor McGregor	Katie Taylor	Barry McGuigan	Tyson Fury
+spo_snooker_points_red	Medium	In snooker, how many points is a red ball worth?	One	Two	Five	Seven
+spo_city_tour_france	Medium	In which city does the Tour de France traditionally finish?	Paris	Lyon	Nice	Marseille
+spo_country_ice_hockey	Medium	In which country was ice hockey developed into the modern game?	Canada	The USA	Sweden	Russia
+spo_country_modern_lawn	Medium	In which country was modern lawn tennis invented?	England	France	The USA	Australia
+spo_american_often_greatest	Medium	Which American is often called the greatest surfer of all time?	Kelly Slater	Tony Hawk	Laird Hamilton	Shaun White
+spo_sport_phil_power	Medium	In which sport did Phil 'The Power' Taylor win 16 world titles?	Darts	Snooker	Bowling	Golf
+spo_sport_made_giant	Medium	Which sport made the giant New Zealand winger Jonah Lomu a superstar?	Rugby union	American football	Basketball	Cricket
+spo_country_won_2023	Medium	Which country won the 2023 Rugby World Cup in France?	South Africa	New Zealand	Ireland	France
+spo_football_club_plays	Medium	Which football club plays its home games at the Parc des Princes?	Paris Saint-Germain	Olympique Marseille	Olympique Lyon	AS Monaco
+spo_two_glasgow_clubs	Medium	Which two Glasgow clubs make up football's 'Old Firm'?	Celtic and Rangers	Hearts and Hibernian	Aberdeen and Dundee	Celtic and Hearts
+spo_american_won_nine	Medium	Which American won nine Olympic golds in sprinting and long jump between 1984 and 1996?	Carl Lewis	Jesse Owens	Michael Johnson	Maurice Greene
+spo_baseball_team_nicknamed	Medium	Which baseball team is nicknamed 'the Bronx Bombers'?	New York Yankees	New York Mets	Boston Red Sox	Chicago Cubs
+spo_baseball_team_ended	Medium	Which baseball team ended the 86-year 'Curse of the Bambino' in 2004?	Boston Red Sox	Chicago Cubs	New York Yankees	Cleveland Guardians
+spo_nickname_south_africa	Medium	What is the nickname of South Africa's national rugby team?	Springboks	Wallabies	All Blacks	Pumas
+spo_nickname_australia_national	Medium	What is the nickname of Australia's national football team?	Socceroos	Wallabies	Kangaroos	Matildas
+spo_brazilian_striker_nicknamed	Medium	Which Brazilian striker was nicknamed 'O Fenomeno'?	Ronaldo	Romario	Rivaldo	Ronaldinho
+spo_trophy_nicknamed_big	Medium	Which trophy is nicknamed 'Big Ears' because of its huge handles?	Champions League	FA Cup	Copa America	Stanley Cup
+spo_national_football_team	Medium	Which national football team is nicknamed 'La Albiceleste' after its sky-blue and white shirts?	Argentina	Uruguay	Italy	Greece
+spo_sport_riders_compete	Medium	In which sport do riders compete in dressage, show jumping and cross-country?	Eventing	Polo	Steeplechase	Rodeo
+spo_golfer_wearing_red	Medium	Which golfer is famous for wearing red on the final day of tournaments?	Tiger Woods	Rory McIlroy	Phil Mickelson	Seve Ballesteros
+spo_sport_players_bully	Medium	In which sport do players 'bully off' to start a game?	Field hockey	Ice hockey	Lacrosse	Polo
+spo_heavyweight_boxer_retired	Medium	Which heavyweight boxer retired undefeated at 49-0 in 1956?	Rocky Marciano	Joe Louis	Floyd Mayweather	Jack Dempsey
+spo_annual_race_between	Medium	Which annual race between Oxford and Cambridge takes place on the Thames?	The Boat Race	The Henley Cup	The Varsity Sprint	The Thames Trophy
+spo_japanese_sport_involves	Medium	Which Japanese sport involves fencing with bamboo swords?	Kendo	Aikido	Kyudo	Sumo
+spo_sport_thomas_cup	Medium	In which sport is the Thomas Cup the men's world team championship?	Badminton	Table tennis	Squash	Tennis
+spo_canadian_city_hosted	Medium	Which Canadian city hosted the 1976 Summer Olympics?	Montreal	Toronto	Vancouver	Calgary
+spo_city_hosted_1956	Medium	Which city hosted the 1956 Summer Olympics, the first in the Southern Hemisphere?	Melbourne	Sydney	Buenos Aires	Johannesburg
+spo_city_hosted_olympic	Medium	Which city hosted the first Olympic Games held in Asia, in 1964?	Tokyo	Seoul	Beijing	Sapporo
+spo_city_hosted_1988	Medium	Which city hosted the 1988 Summer Olympics?	Seoul	Tokyo	Barcelona	Los Angeles
+spo_japanese_island_karate	Medium	On which Japanese island did karate develop?	Okinawa	Hokkaido	Kyushu	Honshu
+spo_spanish_striker_nicknamed	Medium	Which Spanish striker was nicknamed 'El Nino'?	Fernando Torres	Raul	David Villa	Fernando Morientes
+spo_england_striker_scored	Medium	Which England striker scored a hat-trick in the 1966 World Cup final?	Geoff Hurst	Bobby Charlton	Jimmy Greaves	Roger Hunt
+spo_brazilian_club_pele	Medium	For which Brazilian club did Pele play for most of his career?	Santos	Flamengo	Corinthians	Sao Paulo
+spo_portuguese_club_cristiano	Medium	At which Portuguese club did Cristiano Ronaldo begin his professional career?	Sporting Lisbon	Benfica	Porto	Braga
+spo_english_football_club	Medium	Which English football club is nicknamed 'the Toffees'?	Everton	Liverpool	Aston Villa	Fulham
+spo_english_football_club_2	Medium	Which English football club is nicknamed 'the Magpies'?	Newcastle United	Tottenham Hotspur	West Ham United	Leeds United
+spo_french_club_won	Medium	Which French club won the first Champions League final under that name, in 1993?	Marseille	Paris Saint-Germain	Monaco	Bordeaux
+spo_spanish_cyclist_won	Medium	Which Spanish cyclist won the Tour de France five years in a row, from 1991 to 1995?	Miguel Indurain	Alberto Contador	Pedro Delgado	Carlos Sastre
+spo_became_briton_win	Medium	Who became the first Briton to win the Tour de France, in 2012?	Bradley Wiggins	Chris Froome	Mark Cavendish	Geraint Thomas
+spo_vendee_globe_non	Medium	The Vendee Globe is a non-stop, single-handed race around the world in which sport?	Sailing	Cycling	Rallying	Rowing
+spo_sport_playing_field	Medium	In which sport is the playing field nicknamed the 'gridiron'?	American football	Rugby	Lacrosse	Baseball
+spo_german_club_plays	Medium	Which German club plays at Signal Iduna Park, with its famous 'Yellow Wall'?	Borussia Dortmund	Bayern Munich	Schalke 04	Bayer Leverkusen
+spo_portuguese_club_nicknamed	Medium	Which Portuguese club is nicknamed 'the Eagles'?	Benfica	Porto	Sporting Lisbon	Braga
+spo_city_fierce_rivals	Medium	In which city do the fierce rivals Boca Juniors and River Plate play?	Buenos Aires	Montevideo	Rosario	Sao Paulo
+spo_sport_nicknamed_sweet	Medium	Which sport is nicknamed 'the sweet science'?	Boxing	Fencing	Chess	Snooker
+spo_american_won_seven	Medium	Which American won seven Wimbledon titles between 1993 and 2000?	Pete Sampras	Andre Agassi	Jim Courier	Michael Chang
+spo_player_won_record	Medium	Which player won a record nine Wimbledon women's singles titles?	Martina Navratilova	Serena Williams	Steffi Graf	Chris Evert
+spo_australian_golfer_nicknamed	Medium	Which Australian golfer was nicknamed 'the Great White Shark'?	Greg Norman	Adam Scott	Jason Day	Ian Baker-Finch
+spo_racehorse_won_triple	Medium	Which racehorse won the US Triple Crown in 1973, winning the Belmont by 31 lengths?	Secretariat	Seabiscuit	Red Rum	Man o' War
+spo_horse_won_grand	Medium	Which horse won the Grand National a record three times in the 1970s?	Red Rum	Secretariat	Shergar	Desert Orchid
+spo_island_motorcycle_race	Medium	On which island is the famous TT motorcycle race held?	Isle of Man	Isle of Wight	Anglesey	Jersey
+spo_norwegian_town_hosted	Medium	Which Norwegian town hosted the 1994 Winter Olympics?	Lillehammer	Oslo	Trondheim	Bergen
+spo_hockey_team_miracle	Medium	Where did the US hockey team's 'Miracle on Ice' take place, at the 1980 Winter Olympics?	Lake Placid	Squaw Valley	Calgary	Sarajevo
+spo_american_won_three	Medium	Which American won three Olympic golds in the snowboard halfpipe?	Shaun White	Tony Hawk	Chloe Kim	Mark McMorris
+spo_kabaddi_contact_sport	Medium	Kabaddi, a contact sport of tagging while holding your breath, is most popular in which country?	India	Brazil	Japan	Egypt
+spo_sport_invented_native	Medium	Which sport was invented by Native Americans and named by French settlers?	Lacrosse	Baseball	Ice hockey	Basketball
+spo_coach_led_france	Medium	Which coach led France to victory at the 2018 World Cup?	Didier Deschamps	Zinedine Zidane	Laurent Blanc	Arsene Wenger
+spo_bolt	Hard	What is Usain Bolt's world record in the 100 m?	9.58 s	9.69 s	9.72 s	9.49 s
+spo_olimpiada_1896	Hard	Where were the first modern Olympic Games held?	Athens	Paris	Rome	London
+spo_wimbledon	Hard	What surface is Wimbledon played on?	Grass	Sand	Concrete	Clay and hard court, alternating
+spo_szachy_mistrz	Hard	Which chess player held the world championship title the longest in the 20th century?	Emanuel Lasker	Garry Kasparov	Bobby Fischer	Anatoly Karpov
+spo2_mundial_najwiecej	Hard	Which national team has won the most soccer World Cups?	Brazil	Germany	Italy	Argentina
+spo2_mundial_2022	Hard	Who won the 2022 soccer World Cup?	Argentina	France	Brazil	Croatia
+spo2_igrzyska_1980	Hard	Which city hosted the 1980 Summer Olympics?	Moscow	Munich	Montreal	Los Angeles
+spo2_wielki_szlem_tenis	Hard	How many tournaments make up tennis's Grand Slam?	Four	Three	Five	Six
+spo2_roland_garros	Hard	What surface is Roland Garros played on?	Clay	Grass	Hard court	Concrete
+spo2_nba_najwiecej_tytulow	Hard	Which clubs have the most NBA titles?	The Boston Celtics and Los Angeles Lakers	The Chicago Bulls and Miami Heat	Golden State and the Spurs	The Knicks and the Nets
+spo2_kolarstwo_gorska	Hard	What is the mountains classification jersey called in the Tour de France?	The polka-dot jersey	The green jersey	The white jersey	The blue jersey
+spo2_bolt_200	Hard	What is Usain Bolt's world record in the 200 m?	19.19 s	19.59 s	18.99 s	19.79 s
+spo2_igrzyska_zimowe_polska	Hard	Which city hosted the 2022 Winter Olympics?	Beijing	Sochi	Pyeongchang	Vancouver
+spo3_rugby_punktacja	Hard	How many points is a try worth in rugby union?	Five	Three	Seven	Ten
+spo3_krykiet_kraj	Hard	In which country is cricket one of the most popular sports?	India	Canada	Germany	Brazil
+spo3_paraolimpiada_start	Hard	In which decade were the first official Paralympic Games held?	The 1960s	The 1930s	The 1980s	The 1990s
+spo3_olimpiada_letnia_1936	Hard	In which city were the controversial 1936 Olympics held?	Berlin	Rome	London	Paris
+scicmp_najwiecej_zlota	Hard	Which country has won the most Summer Olympic gold medals overall?	The United States	The Soviet Union	China	Great Britain
+trv2_snooker_147	Hard	What is the maximum break in snooker?	147	100	180	155
+trv2_ping_pong_kraj	Hard	In which country did table tennis originate?	England	China	Japan	Germany
+trv2_flaga_biala	Hard	In NASCAR, what does a white flag signal?	The final lap	The race is stopped	Slippery track	A driver must pit
+trv2_skoczek_ruchy	Hard	From the centre of an empty chessboard, how many squares can a knight move to?	8	4	6	12
+trv2_sumo_ring	Hard	What is a sumo wrestling ring called?	A dohyo	A dojo	A tatami	A kumite
+trv2_kregle_turkey	Hard	In bowling, what are three strikes in a row called?	A turkey	A hat-trick	A triple	An eagle
+trv2_tour_de_france_start	Hard	In which year was the first Tour de France held?	1903	1923	1889	1948
+trv2_curling_kamien	Hard	In curling, what is the stone traditionally made of?	Granite	Marble	Steel	Basalt
+trv2_koszykowka_wynalazek	Hard	Who invented basketball in 1891?	James Naismith	Walter Camp	Abner Doubleday	Pierre de Coubertin
+trv2_igrzyska_zimowe_pierwsze	Hard	In which country were the first Winter Olympics held, in 1924?	France	Switzerland	Norway	Austria
+spw_krykiet_test	Hard	How many days can a cricket Test match last?	Five	Three	One	Seven
+spw_maraton_kobiet_pierwszy	Hard	At which Olympics did women first run the marathon?	Los Angeles 1984	Munich 1972	Montreal 1976	Seoul 1988
+spw_triathlon_ironman	Hard	How long is the run in a full Ironman triathlon?	A full marathon, 42.2 km	A half marathon	10 km	21 km
+spw_szachy_roszada	Hard	In chess, what does castling move?	The king and one rook, in a single move	The king and the queen, side by side	Two pawns moved on the same turn	A rook and a knight, swapping places
+ext_badminton_lotka	Hard	Which sport features the fastest recorded projectile hit by a player?	Badminton	Tennis	Golf	Ice hockey
+ext_maraton_dystans	Hard	The marathon's odd distance of 42.195 km was fixed to suit what?	A royal viewing box	A stadium's track length	A city's ring road	An ancient road's length
+ext_olimpiada_sztuka	Hard	Between 1912 and 1948, Olympic medals were also awarded for what?	Art	Chess	Debating	Ballooning
+mst_pilka_lata	Hard	A standard football match clock runs for 90 minutes, but the ball is typically in play for how long?	Under an hour	About 80 minutes	The full 90	About 75 minutes
+mst_boks_rundy	Hard	Professional championship boxing bouts were shortened from 15 rounds to 12 mainly for what reason?	Fighter safety	Television schedules	Judging disputes	Crowd attention
+dpt_spo_davis	Hard	In which sport is the Davis Cup contested?	Tennis	Golf	Rugby	Sailing
+spo_lombardi	Hard	The NFL's Super Bowl winners receive which trophy?	The Vince Lombardi Trophy	The Stanley Cup	The Larry O'Brien Trophy	The Commissioner's Trophy
+spo_albatros	Hard	In golf, what is a score of three under par on one hole called?	An albatross	A condor	An eagle	A birdie
+spo_court	Hard	Which woman has won the most Grand Slam singles titles in tennis, 24?	Margaret Court	Serena Williams	Steffi Graf	Martina Navratilova
+spo_spitz	Hard	Which swimmer won seven gold medals at the 1972 Munich Olympics?	Mark Spitz	Michael Phelps	Ian Thorpe	Johnny Weissmuller
+spo_kentucky	Hard	Which horse race is known as 'the Run for the Roses'?	The Kentucky Derby	The Grand National	The Melbourne Cup	The Epsom Derby
+spo_grand_national	Hard	Which famous steeplechase is run at Aintree, with fences like 'Becher's Brook'?	The Grand National	The Kentucky Derby	The Prix de l'Arc de Triomphe	The Cheltenham Gold Cup
+spo_krykiet_1975	Hard	Which team won the first Cricket World Cup, in 1975?	The West Indies	Australia	England	India
+spo_tiger_imie	Hard	What is golfer Tiger Woods' real first name?	Eldrick	Earl	Edward	Elliott
+spo_usa_igrzyska	Hard	Counting Summer and Winter Games, which country has hosted the Olympics the most times?	The USA	France	Japan	Britain
+spo_krykiet_2028	Hard	Which sport was brought back for the Los Angeles 2028 Olympics, 128 years after its only appearance?	Cricket	Rugby	Baseball	Polo
+spo_hurling	Hard	Which fast Irish field sport is played with a stick called a hurley?	Hurling	Shinty	Lacrosse	Camogie
+spo_tyson	Hard	Who became the youngest heavyweight boxing champion, at just 20?	Mike Tyson	Muhammad Ali	George Foreman	Floyd Patterson
+spo_golf_dolki	Hard	Roughly how many dimples does a typical golf ball have?	300 to 400	50 to 100	1,000 to 1,200	About 20
+spo_crucible	Hard	Which sport's World Championship is played at the Crucible Theatre in Sheffield?	Snooker	Darts	Chess	Table tennis
+spox_rpa_2010	Hard	Which country hosted the first FIFA World Cup in Africa, in 2010?	South Africa	Egypt	Morocco	Nigeria
+spox_silver_arrows	Hard	Which Formula 1 team's cars are nicknamed 'the Silver Arrows'?	Mercedes	McLaren	Williams	Red Bull
+spox_senna	Hard	Which Brazilian F1 legend died after a crash at Imola in 1994?	Ayrton Senna	Nelson Piquet	Rubens Barrichello	Emerson Fittipaldi
+spox_tour_dlugosc	Hard	Roughly how long does the Tour de France last?	About three weeks	About one week	About two months	About ten days
+spox_jackie_robinson	Hard	Who broke Major League Baseball's colour barrier in 1947?	Jackie Robinson	Hank Aaron	Willie Mays	Satchel Paige
+spox_carlsen	Hard	Which Norwegian player became World Chess Champion in 2013?	Magnus Carlsen	Viswanathan Anand	Sergey Karjakin	Fabiano Caruana
+spox_fischer	Hard	Which American won the 1972 chess 'Match of the Century' against Boris Spassky?	Bobby Fischer	Paul Morphy	Hikaru Nakamura	Reuben Fine
+spox_rugby_szkola	Hard	The sport of rugby is named after what?	An English school	A Welsh town	A Scottish king	A Roman game
+spox_eddie_orzel	Hard	Which British ski jumper became a cult hero at the 1988 Winter Olympics despite finishing last?	Eddie 'the Eagle' Edwards	Alberto 'La Bomba' Tomba	Franz Klammer	Matti Nykanen
+spox_mundial_kobiet_usa	Hard	Which country has won the most FIFA Women's World Cups?	The USA	Germany	Norway	Japan
+spoy_webb_ellis	Hard	The Rugby World Cup trophy is named after whom?	William Webb Ellis	Jules Rimet	Pierre de Coubertin	Tom Richards
+spoy_augusta	Hard	In which US state is the Masters golf tournament played every year?	Georgia	Florida	California	Texas
+spoy_monza	Hard	Which Formula 1 circuit is nicknamed 'the Temple of Speed'?	Monza	Silverstone	Spa	Suzuka
+spoy_thrilla	Hard	What was the 1975 fight between Muhammad Ali and Joe Frazier called?	The Thrilla in Manila	The Rumble in the Jungle	The Fight of the Century	The Brawl in Manila
+spoy_zair	Hard	Where did the 1974 'Rumble in the Jungle' between Ali and Foreman take place?	Zaire	Kenya	Nigeria	Brazil
+spoy_snooker_czerwone	Hard	How many red balls are on the table at the start of a snooker frame?	15	10	12	21
+spo_city_became_host	Hard	Which city became the first to host both the Summer and the Winter Olympics?	Beijing	Los Angeles	Paris	Tokyo
+spo_australian_city_chosen	Hard	Which Australian city was chosen to host the 2032 Summer Olympics?	Brisbane	Melbourne	Perth	Adelaide
+spo_title_sumo_grand	Hard	What is the title of a sumo grand champion?	Yokozuna	Ozeki	Sensei	Shogun
+spo_italian_club_nicknamed	Hard	Which Italian club is nicknamed 'the Old Lady'?	Juventus	AC Milan	Inter Milan	AS Roma
+spo_rio_janeiro_legendary	Hard	What is Rio de Janeiro's legendary football stadium called?	The Maracana	The Azteca	The Monumental	La Bombonera
+spo_sliding_sport_athletes	Hard	In which sliding sport do athletes race head-first down an ice track on a small sled?	Skeleton	Luge	Bobsleigh	Curling
+spo_long_quarter_nba	Hard	How long is a quarter in an NBA game?	12 minutes	10 minutes	15 minutes	20 minutes
+spo_chess_move_lets	Hard	Which chess move lets a pawn capture an enemy pawn that has just moved two squares past it?	En passant	Castling	Promotion	Fianchetto
+spo_colour_points_sprinters	Hard	What colour is the points (sprinters') jersey in the Tour de France?	Green	Polka-dot	White	Pink
+spo_uefa_stand	Hard	What does UEFA stand for?	Union of European Football Associations	United European Football Alliance	Union of Elite Football Academies	United Euro Federation of Athletics
+spo_team_ice_hockey	Hard	Which team did the US ice hockey team beat in the 1980 'Miracle on Ice'?	The Soviet Union	Canada	Finland	Sweden
+spo_german_defender_nicknamed	Hard	Which German defender, nicknamed 'Der Kaiser', won the World Cup as player and as coach?	Franz Beckenbauer	Gerd Muller	Lothar Matthaus	Jurgen Klinsmann
+spo_dutch_star_gave	Hard	Which Dutch star gave his name to the famous 'turn' he invented?	Johan Cruyff	Marco van Basten	Ruud Gullit	Dennis Bergkamp
+spo_australian_horse_race	Hard	Which Australian horse race is called 'the race that stops a nation'?	The Melbourne Cup	The Sydney Cup	The Caulfield Cup	The Golden Slipper
+spo_players_water_polo	Hard	How many players are in a water polo team in the water?	Seven	Six	Five	Eight
+spo_players_polo_team	Hard	How many players are in a polo team?	Four	Six	Five	Seven
+spo_maximum_number_clubs	Hard	What is the maximum number of clubs a golfer may carry in competition?	14	12	10	16
+spo_formula_champion_nicknamed	Hard	Which Formula 1 champion was nicknamed 'the Iceman'?	Kimi Raikkonen	Mika Hakkinen	Niki Lauda	Alain Prost
+spo_sport_mushers_race	Hard	In which sport do mushers race in Alaska's Iditarod?	Sled dog racing	Cross-country skiing	Snowmobile racing	Ice speedway
+spo_city_hosted_2018	Hard	Which city hosted the 2018 Winter Olympics?	Pyeongchang	Sochi	Sapporo	Nagano
+spo_boxer_retired_unbeaten	Hard	Which boxer retired unbeaten with a record of 50 wins?	Floyd Mayweather	Muhammad Ali	Mike Tyson	Manny Pacquiao
+spo_athletics_distance_nicknamed	Hard	Which athletics distance is nicknamed 'the metric mile'?	1500 metres	1000 metres	1609 metres	2000 metres
+spo_golfer_nicknamed_golden	Hard	Which golfer was nicknamed 'the Golden Bear'?	Jack Nicklaus	Arnold Palmer	Greg Norman	Gary Player
+spo_sport_combines_cross	Hard	Which sport combines cross-country skiing with ski jumping?	Nordic combined	Biathlon	Telemark	Freestyle skiing
+spo_dekatlon	Expert	Which event closes the men's Olympic decathlon on the second day?	The 1500 metres	The javelin throw	The pole vault	The 110 m hurdles
+spo_nba_wilt	Expert	Who scored 100 points in a single NBA game?	Wilt Chamberlain	Michael Jordan	Kobe Bryant	LeBron James
+spo2_fosbury	Expert	Who revolutionized the high jump with the backward flop technique?	Dick Fosbury	Jesse Owens	Carl Lewis	Javier Sotomayor
+spo2_sotomayor	Expert	Who holds the men's high jump world record?	Javier Sotomayor	Mutaz Barshim	Dick Fosbury	Patrik Sjoberg
+spo2_duplantis	Expert	Who has repeatedly broken the pole vault world record?	Armand Duplantis	Sergey Bubka	Renaud Lavillenie	Piotr Lisek
+spo2_szachy_mistrz	Expert	Who was the first official World Chess Champion?	Wilhelm Steinitz	Emanuel Lasker	Jose Raul Capablanca	Paul Morphy
+spo2_kasparov_deep_blue	Expert	In which year did Deep Blue defeat Garry Kasparov in a match?	1997	1996	1999	2001
+spo2_tour_najwiecej	Expert	Who was the first to win the Tour de France five times?	Jacques Anquetil	Eddy Merckx	Bernard Hinault	Miguel Indurain
+spo2_nba_punkty_kariera	Expert	Who is the NBA's all-time leading scorer?	LeBron James	Kareem Abdul-Jabbar	Michael Jordan	Karl Malone
+spo2_phelps_medale	Expert	How many Olympic gold medals has Michael Phelps won?	23	18	28	15
+spo3_owens_1936	Expert	How many gold medals did Jesse Owens win at the 1936 Berlin Olympics?	Four	Two	Three	Five
+spo3_nadia_comaneci	Expert	Who was the first gymnast in Olympic history to receive a perfect 10.0?	Nadia Comaneci	Simone Biles	Larisa Latynina	Olga Korbut
+spo3_latynina_medale	Expert	Which gymnast was, for decades, the most decorated Olympian in history?	Larisa Latynina	Nadia Comaneci	Simone Biles	Olga Korbut
+spo3_kipchoge_maraton	Expert	Who was the first to run a marathon distance in under two hours (an exhibition run)?	Eliud Kipchoge	Mo Farah	Haile Gebrselassie	Kenenisa Bekele
+spo3_pierwsza_kobieta_igrzyska	Expert	Starting with which Games could women officially compete in the modern Olympics?	1900 (Paris)	1896	1924	1948
+spw_olimpiada_odwolane	Expert	How many Olympic Games were cancelled because of the world wars?	Five	Two	Three	Seven
+spw_bannister_mila	Expert	Who was the first man to run a mile in under four minutes?	Roger Bannister	Jim Ryun	Herb Elliott	John Landy
+spw_kraj_najwiecej_medali_zimowe	Expert	Which country has won the most Winter Olympic medals overall?	Norway	The United States	Germany	Russia
+spw_krykiet_bradman	Expert	Which cricketer finished with a Test batting average of 99.94?	Don Bradman	Sachin Tendulkar	Jack Hobbs	Vivian Richards
+spw_maraton_najstarszy	Expert	Which is the oldest annual marathon in the world, first run in 1897?	The Boston Marathon	The London Marathon	The New York City Marathon	The Berlin Marathon
+ext_krykiet_mecz	Expert	The longest official cricket match in history lasted how long before being abandoned?	Twelve days	Three days	Five days	Eight days
+dpt_spo_nutmeg	Expert	What is a 'nutmeg' in football?	Putting the ball through an opponent's legs	A shot struck from the halfway line	A tackle made from behind the player	A pass hit with the outside of the boot
+dpt_spo_indy_500	Expert	How many laps make up the Indianapolis 500?	200	100	250	500
+dpt_spo_rugby_league	Expert	How many players make up a rugby league team?	Thirteen	Fifteen	Eleven	Twelve
+dpt_spo_f1_flaga	Expert	What does a black and white diagonal flag mean in Formula 1?	A warning for unsporting driving	The driver must pit immediately	The session has been suspended	A faster car is about to lap you
+dpt_spo_zmienny_sztafeta	Expert	Which stroke opens a medley relay?	Backstroke	Butterfly	Breaststroke	Freestyle
+ref_spo_mundial_1930	Expert	Which country won the first FIFA World Cup, in 1930?	Uruguay	Argentina	Brazil	Italy
+ref_spo_yurchenko	Expert	In which sport would you perform a 'Yurchenko'?	Gymnastics	Figure skating	Diving	Trampolining
+ref_spo_eagan	Expert	Who is the only person to win Olympic gold in both Summer and Winter Games in different sports?	Eddie Eagan	Clara Hughes	Christa Luding-Rothenburger	Lauryn Williams
+spo_graf_zloty_szlem	Expert	Who won the 'Golden Slam' in 1988: all four majors plus Olympic gold?	Steffi Graf	Martina Navratilova	Chris Evert	Monica Seles
+spo_isner_mahut	Expert	The longest tennis match ever, at Wimbledon in 2010, lasted about how long in total?	11 hours	5 hours	7 hours	16 hours
+spo_malinin	Expert	Who landed the first quadruple Axel in figure skating competition, in 2022?	Ilia Malinin	Nathan Chen	Yuzuru Hanyu	Evgeni Plushenko
+spo_mundial_kobiet	Expert	In which year was the first FIFA Women's World Cup held?	1991	1971	1983	1999
+spo_kanada_1920	Expert	Which country won the first Olympic ice hockey tournament, in 1920?	Canada	The United States	Sweden	Czechoslovakia
+spo_badminton_nazwa	Expert	Badminton is named after a country house in which country?	England	India	Scotland	China
+spo_davis_usa	Expert	Which country has won the Davis Cup the most times?	The United States	Australia	France	Spain
+spo_super_bowl_pierwszy	Expert	Which team won the first Super Bowl, in 1967?	Green Bay Packers	Kansas City Chiefs	New York Jets	Dallas Cowboys
+spo_switzer	Expert	Who was the first woman to run the Boston Marathon with an official number, in 1967?	Kathrine Switzer	Bobbi Gibb	Joan Benoit	Grete Waitz
+spo_jaszyn	Expert	Which Soviet player is the only goalkeeper to win the Ballon d'Or?	Lev Yashin	Gianluigi Buffon	Oliver Kahn	Dino Zoff
+spo_sekwana_1900	Expert	In which river were the swimming races of the 1900 Paris Olympics held?	The Seine	The Thames	The Rhine	The Loire
+spox_kartki	Expert	Football's yellow and red cards were inspired by what?	Traffic lights	Playing cards	Railway signals	Ship flags
+spox_bikila	Expert	Which Ethiopian runner won the 1960 Olympic marathon barefoot?	Abebe Bikila	Haile Gebrselassie	Kenenisa Bekele	Miruts Yifter
+spox_zatopek	Expert	Which Czech runner won the 5,000 m, 10,000 m and marathon at the 1952 Olympics?	Emil Zatopek	Paavo Nurmi	Lasse Viren	Abebe Bikila
+spox_nurmi	Expert	Which 'Flying Finn' won nine Olympic golds in running in the 1920s?	Paavo Nurmi	Lasse Viren	Hannes Kolehmainen	Emil Zatopek
+spox_ali_znicz	Expert	Which boxing legend lit the Olympic cauldron at the 1996 Atlanta Games?	Muhammad Ali	Joe Frazier	George Foreman	Evander Holyfield
+spox_freeman	Expert	Which Aboriginal athlete lit the Olympic flame and then won 400 m gold at Sydney 2000?	Cathy Freeman	Nova Peris	Evonne Goolagong	Sally Pearson
+spox_grecja_2004	Expert	Which huge outsiders won the European Football Championship in 2004?	Greece	Denmark	Portugal	Czechia
+spox_leicester	Expert	Which 5000-to-1 outsiders won the English Premier League in 2016?	Leicester City	Blackburn Rovers	Aston Villa	Nottingham Forest
+spoy_beamon	Expert	Whose 1968 long jump of 8.90 m stood as the world record for 23 years?	Bob Beamon	Carl Lewis	Mike Powell	Jesse Owens
+spoy_indy_mleko	Expert	What does the winner of the Indianapolis 500 traditionally drink?	Milk	Champagne	Lemonade	Beer
+spoy_merckx	Expert	Which Belgian cyclist, nicknamed 'the Cannibal', won five Tours de France?	Eddy Merckx	Jacques Anquetil	Bernard Hinault	Miguel Indurain
+spoy_tahiti	Expert	Where were the surfing events of the 2024 Summer Olympics held, far from the host city?	Tahiti	Biarritz	Hawaii	Portugal
+spo_country_won_rugby	Expert	Which country won the first Rugby World Cup, in 1987?	New Zealand	Australia	South Africa	England
+spo_boxer_nicknamed_brown	Expert	Which boxer was nicknamed 'the Brown Bomber'?	Joe Louis	Joe Frazier	Sugar Ray Robinson	Rocky Marciano
+spo_won_very_ballon	Expert	Who won the very first Ballon d'Or, in 1956?	Stanley Matthews	Alfredo Di Stefano	Ferenc Puskas	Raymond Kopa

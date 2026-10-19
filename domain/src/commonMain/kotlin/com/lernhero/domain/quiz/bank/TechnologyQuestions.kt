@@ -1,3 +1,5 @@
+// PLIK GENEROWANY z domain/quizbank/technology.tsv przez `python3 tools/quizbank.py generate`.
+// Nie edytuj go recznie - pytania dopisuje sie do TSV (patrz domain/quizbank/README.md).
 package com.lernhero.domain.quiz.bank
 
 import com.lernhero.domain.quiz.QuizCategory
@@ -23,8 +25,13 @@ object TechnologyQuestions {
     private fun q(id: String, prompt: String, correct: String, wrong: List<String>, difficulty: QuizDifficulty) =
         QuizEntry(id = id, prompt = prompt, correct = correct, wrong = wrong, category = QuizCategory.Technology, difficulty = difficulty)
 
-    val all: List<QuizEntry> = listOf(
-        /* ------------------------------ Easy ------------------------------ */
+    val all: List<QuizEntry> = easy() + medium() + hard() + expert()
+
+    // Kazdy poziom w osobnej funkcji: jedna wielka lista w inicjalizatorze obiektu przekroczylaby
+    // z czasem limit 64 KB kodu na metode JVM (735 pytan historii zajmowalo w nim juz ~36 KB).
+
+    /* ------------------------------ Easy ------------------------------ */
+    private fun easy(): List<QuizEntry> = listOf(
         q("day2_gasnica", "What should you never use to put out a burning pan of oil?", "Water", listOf("A lid", "A fire blanket", "Baking soda"), E),
         q("tec_www", "What does the abbreviation WWW stand for?", "World Wide Web", listOf("World Web Wide", "Wide World Web", "Web World Wide"), E),
         q("tec_zarowka", "Who is credited with popularizing the light bulb?", "Thomas Edison", listOf("Nikola Tesla", "Alexander Bell", "James Watt"), E),
@@ -66,8 +73,58 @@ object TechnologyQuestions {
         q("tecx_zuckerberg", "Who started Facebook in his university dorm room?", "Mark Zuckerberg", listOf("Jeff Bezos", "Jack Dorsey", "Larry Page"), E),
         q("tecx_garaz", "According to legend, where were Apple's first computers put together?", "In a garage", listOf("In a university lab", "In a factory", "In a hotel room"), E),
         q("tecx_haslo", "Which of these is one of the most common (and worst) passwords?", "123456", listOf("Tr0ub4dor&3", "Xk!9#pL2vQ", "mY-c@t_Is-8"), E),
+        q("tec_founded_spacex_2002", "Who founded SpaceX in 2002?", "Elon Musk", listOf("Jeff Bezos", "Richard Branson", "Bill Gates"), E),
+        q("tec_twitter_renamed_2023", "What was Twitter renamed in 2023?", "X", listOf("Threads", "Bluesky", "Meta"), E),
+        q("tec_gps_stand", "What does 'GPS' stand for?", "Global Positioning System", listOf("General Positioning Satellite", "Global Pathfinding Service", "Geo Pointing System"), E),
+        q("tec_pin_stand_bank", "What does 'PIN' stand for, as in a bank card PIN?", "Personal identification number", listOf("Private internet number", "Protected identity note", "Personal input number"), E),
+        q("tec_stand_television", "What does 'HD' stand for, as in HD television?", "High definition", listOf("Home display", "Hyper digital", "Half-depth"), E),
+        q("tec_company_makes_galaxy", "Which company makes the Galaxy smartphones?", "Samsung", listOf("Apple", "Huawei", "Sony"), E),
+        q("tec_country_furniture_company", "In which country was the furniture company IKEA founded?", "Sweden", listOf("Denmark", "Norway", "Finland"), E),
+        q("tec_country_phone_maker", "In which country is the phone maker Nokia based?", "Finland", listOf("Sweden", "Norway", "Denmark"), E),
+        q("tec_car_maker_logo", "Which car maker's logo is four interlocking rings?", "Audi", listOf("Volkswagen", "Opel", "Mercedes-Benz"), E),
+        q("tec_car_maker_logo_2", "Which car maker's logo is a three-pointed star in a circle?", "Mercedes-Benz", listOf("BMW", "Audi", "Porsche"), E),
+        q("tec_car_maker_means", "Which car maker's name means 'people's car' in German?", "Volkswagen", listOf("Mercedes-Benz", "Opel", "Audi"), E),
+        q("tec_car_maker_logo_3", "Which car maker's logo is a black prancing horse on a yellow shield?", "Ferrari", listOf("Lamborghini", "Maserati", "Alfa Romeo"), E),
+        q("tec_japanese_car_maker", "Which Japanese car maker makes the Prius hybrid?", "Toyota", listOf("Honda", "Nissan", "Mazda"), E),
+        q("tec_country_car_makers", "Which country do the car makers Hyundai and Kia come from?", "South Korea", listOf("Japan", "China", "Taiwan"), E),
+        q("tec_country_car_maker", "Which country does the car maker Fiat come from?", "Italy", listOf("France", "Spain", "Germany"), E),
+        q("tec_app_logo_white", "Which app's logo is a white ghost on a yellow background?", "Snapchat", listOf("WhatsApp", "TikTok", "Telegram"), E),
+        q("tec_messaging_app_green", "Which messaging app has a green logo with a white phone in a speech bubble?", "WhatsApp", listOf("Signal", "Messenger", "Viber"), E),
+        q("tec_web_browser_retired", "Which web browser, retired in 2022, had a blue letter 'e' as its logo?", "Internet Explorer", listOf("Netscape Navigator", "Firefox", "Safari"), E),
+        q("tec_microsoft_search_engine", "What is the name of Microsoft's search engine?", "Bing", listOf("Yahoo", "Ask", "DuckDuckGo"), E),
+        q("tec_operating_system_runs", "What is the name of the operating system that runs on iPhones?", "iOS", listOf("Android", "Windows", "Symbian"), E),
+        q("tec_company_makes_pixel", "Which company makes Pixel smartphones?", "Google", listOf("Samsung", "Sony", "Nokia"), E),
+        q("tec_car_maker_builds_2", "Which car maker builds the Mustang?", "Ford", listOf("Chevrolet", "Dodge", "Toyota"), E),
+        q("tec_country_car_maker_3", "Which country does the car maker Renault come from?", "France", listOf("Italy", "Germany", "Spain"), E),
+        q("tec_suv_stand", "What does 'SUV' stand for?", "Sport utility vehicle", listOf("Super urban van", "Safe universal vehicle", "Standard utility van"), E),
+        q("tec_stand_modern_cars", "What does 'EV' stand for on modern cars?", "Electric vehicle", listOf("Energy valve", "Engine version", "Extra volume"), E),
+        q("tec_video_calling_app", "Which video-calling app became hugely popular during the 2020 lockdowns?", "Zoom", listOf("Snapchat", "Twitch", "Pinterest"), E),
+        q("tec_google_email_service", "What is the name of Google's email service?", "Gmail", listOf("Outlook", "Yahoo Mail", "Proton Mail"), E),
+        q("tec_microsoft_spreadsheet_program", "What is Microsoft's spreadsheet program called?", "Excel", listOf("Word", "Access", "Numbers"), E),
+        q("tec_apple_web_browser", "What is the name of Apple's web browser?", "Safari", listOf("Chrome", "Edge", "Opera"), E),
+        q("tec_company_builds_787", "Which company builds the 787 'Dreamliner'?", "Boeing", listOf("Airbus", "Embraer", "Bombardier"), E),
+        q("tec_company_bought_instagram", "Which company bought Instagram in 2012?", "Facebook", listOf("Google", "Twitter", "Microsoft"), E),
+        q("tec_alessandro_volta_invent", "What did Alessandro Volta invent in 1800?", "The electric battery", listOf("The light bulb", "The telegraph", "The electric motor"), E),
+        q("tec_louis_braille_blinded", "Louis Braille, blinded as a child, is famous for inventing what?", "A raised-dot alphabet", listOf("A hearing aid", "A typewriter", "A sign language"), E),
+        q("tec_kind_media_original", "What kind of media did the original 1979 Sony Walkman play?", "Cassette tapes", listOf("CDs", "Vinyl records", "MiniDiscs"), E),
+        q("tec_car_maker_built", "Which car maker built James Bond's DB5 in 'Goldfinger'?", "Aston Martin", listOf("Jaguar", "Bentley", "Lotus"), E),
+        q("tec_american_motorcycle_maker", "Which American motorcycle maker from Milwaukee is famous for its big cruisers?", "Harley-Davidson", listOf("Indian", "Ducati", "Triumph"), E),
+        q("tec_camera_company_became", "Which camera company's name became a byword for a perfect photo moment?", "Kodak", listOf("Canon", "Nikon", "Polaroid"), E),
+        q("tec_invented_practical_revolver", "Who invented the first practical revolver, patented in 1836?", "Samuel Colt", listOf("Richard Gatling", "Oliver Winchester", "Eliphalet Remington"), E),
+        q("tec_enigma_machine", "What did the 'Enigma' machine do?", "Encrypt messages", listOf("Calculate missile paths", "Detect aircraft", "Break codes"), E),
+        q("tec_animal_appears_badge", "Which animal appears on the badge of Peugeot cars?", "A lion", listOf("A horse", "A bull", "A jaguar"), E),
+        q("tec_founded_wikipedia_2001", "Who co-founded Wikipedia in 2001?", "Jimmy Wales", listOf("Larry Page", "Mark Zuckerberg", "Jack Dorsey"), E),
+        q("tec_former_english_teacher", "Which former English teacher founded the Chinese e-commerce giant Alibaba?", "Jack Ma", listOf("Pony Ma", "Ren Zhengfei", "Robin Li"), E),
+        q("tec_american_businessman_made", "Which American businessman made the disposable razor blade a success?", "King C. Gillette", listOf("Henry Ford", "Isaac Singer", "George Eastman"), E),
+        q("tec_animal_appears_tail", "Which animal appears on the tail fins of Qantas planes?", "A kangaroo", listOf("A koala", "An emu", "A kookaburra"), E),
+        q("tec_car_maker_builds_5", "Which car maker builds the Golf hatchback?", "Volkswagen", listOf("Opel", "Peugeot", "Ford"), E),
+        q("tec_car_maker_builds_6", "Which car maker builds the tiny '500' city car?", "Fiat", listOf("Renault", "Seat", "Skoda"), E),
+        q("tec_german_engineer_gave", "Which German engineer gave his name to an engine that ignites fuel by compression?", "Rudolf Diesel", listOf("Nikolaus Otto", "Gottlieb Daimler", "Karl Benz"), E),
+        q("tec_lets_maglev_trains", "What lets maglev trains float above the track?", "Magnets", listOf("Air cushions", "Hydrogen jets", "Steam"), E)
+    )
 
-        /* ----------------------------- Medium ----------------------------- */
+    /* ----------------------------- Medium ----------------------------- */
+    private fun medium(): List<QuizEntry> = listOf(
         q("tec_cpu", "What does the abbreviation CPU stand for?", "Central Processing Unit", listOf("Random-access memory", "Graphics card", "Hard drive"), M),
         q("tec_android_firma", "Which company develops the Android operating system?", "Google", listOf("Apple", "Microsoft", "Meta"), M),
         q("tec_telefon_bell", "Who patented the telephone?", "Alexander Graham Bell", listOf("Thomas Edison", "Guglielmo Marconi", "Samuel Morse"), M),
@@ -138,8 +195,70 @@ object TechnologyQuestions {
         q("tecy_tux", "What is the name of Linux's penguin mascot?", "Tux", listOf("Pingu", "Linus", "Waddles"), M),
         q("tecy_deepfake", "What is a 'deepfake'?", "A fake video or voice made by AI", listOf("A scan of a very deep lake", "A fraud on a banking app", "A fake social media profile"), M),
         q("tecy_bialy_kapelusz", "What is a 'white hat' hacker?", "One who hacks to find and fix flaws", listOf("One who steals data for money", "One who spreads viruses", "One who attacks governments"), M),
+        q("tec_pdf_stand", "What does 'PDF' stand for?", "Portable Document Format", listOf("Printable Data File", "Public Document Form", "Personal Digital Folder"), M),
+        q("tec_led_stand", "What does 'LED' stand for?", "Light-emitting diode", listOf("Low-energy display", "Laser electric device", "Light energy distributor"), M),
+        q("tec_html_stand", "What does 'HTML' stand for?", "HyperText Markup Language", listOf("High Tech Modern Language", "Hyperlink Text Management Logic", "Home Tool Markup Language"), M),
+        q("tec_gpu_stand", "What does 'GPU' stand for?", "Graphics processing unit", listOf("General processing unit", "Graphic power upgrade", "Global processing unit"), M),
+        q("tec_vpn_stand", "What does 'VPN' stand for?", "Virtual private network", listOf("Verified public node", "Visual processing network", "Virtual personal number"), M),
+        q("tec_atm_stand_cash", "What does 'ATM' stand for, as in a cash machine?", "Automated teller machine", listOf("Automatic transfer method", "Any-time money", "Account transaction module"), M),
+        q("tec_country_car_maker_2", "Which country is the car maker Skoda from?", "Czechia", listOf("Slovakia", "Poland", "Hungary"), M),
+        q("tec_bmw_stand", "What does BMW stand for?", "Bavarian Motor Works", listOf("Berlin Machine Works", "British Motor Wagons", "Bavarian Mechanical Workshop"), M),
+        q("tec_animal_appears_lamborghini", "Which animal appears on the Lamborghini logo?", "A bull", listOf("A horse", "A lion", "A snake"), M),
+        q("tec_car_maker_builds", "Which car maker builds the 911 sports car?", "Porsche", listOf("Ferrari", "Audi", "Lotus"), M),
+        q("tec_inventor_created_phonograph", "Which inventor created the phonograph, the first machine to record sound?", "Thomas Edison", listOf("Alexander Graham Bell", "Emile Berliner", "Nikola Tesla"), M),
+        q("tec_year_facebook_launched", "In which year was Facebook launched?", "2004", listOf("2001", "2007", "2010"), M),
+        q("tec_organisation_makes_firefox", "Which organisation makes the Firefox web browser?", "Mozilla", listOf("Google", "Opera", "Apple"), M),
+        q("tec_company_makes_photoshop", "Which company makes Photoshop?", "Adobe", listOf("Microsoft", "Apple", "Corel"), M),
+        q("tec_company_owns_linkedin", "Which company owns LinkedIn?", "Microsoft", listOf("Google", "Meta", "Oracle"), M),
+        q("tec_rocket_company_jeff", "Which rocket company did Jeff Bezos found?", "Blue Origin", listOf("SpaceX", "Virgin Galactic", "Rocket Lab"), M),
+        q("tec_new_york_skyscraper", "Which New York skyscraper has 102 floors and was the world's tallest for nearly 40 years?", "The Empire State Building", listOf("The Chrysler Building", "One World Trade Center", "The Woolworth Building"), M),
+        q("tec_apple_product_went", "Which Apple product first went on sale in 2010?", "The iPad", listOf("The iPod", "The iPhone", "The Apple Watch"), M),
+        q("tec_apple_gadget_2001", "Which Apple gadget of 2001 promised '1,000 songs in your pocket'?", "The iPod", listOf("The iPhone", "The iPad", "The Walkman"), M),
+        q("tec_jeff_bezos_amazon", "Jeff Bezos named Amazon after what?", "The world's largest river", listOf("A warrior tribe from myth", "His favourite book", "A rainforest he visited"), M),
+        q("tec_key_web_browsers", "What does the F5 key do in most web browsers?", "Refreshes the page", listOf("Opens a new tab", "Saves the page", "Closes the window"), M),
+        q("tec_phone_maker_sold", "Which phone maker sold the hugely popular Razr flip phone?", "Motorola", listOf("Nokia", "Samsung", "Sony Ericsson"), M),
+        q("tec_clippy", "What was 'Clippy'?", "Microsoft Office's paperclip assistant", listOf("A tiny robot vacuum from the 1990s", "The first Google search mascot", "A computer virus spread by email"), M),
+        q("tec_iot_stand", "What does 'IoT' stand for?", "Internet of Things", listOf("Input or Transfer", "Index of Technology", "Integration of Tools"), M),
+        q("tec_company_makes_kindle", "Which company makes the Kindle e-readers?", "Amazon", listOf("Apple", "Sony", "Barnes & Noble"), M),
+        q("tec_company_makes_thinkpad", "Which company makes the ThinkPad laptops today?", "Lenovo", listOf("IBM", "Dell", "HP"), M),
+        q("tec_company_makes_surface", "Which company makes the Surface tablets and laptops?", "Microsoft", listOf("Apple", "Samsung", "Lenovo"), M),
+        q("tec_car_maker_builds_3", "Which car maker builds the Corvette sports car?", "Chevrolet", listOf("Ford", "Dodge", "Cadillac"), M),
+        q("tec_car_maker_builds_4", "Which car maker builds the Civic?", "Honda", listOf("Toyota", "Nissan", "Mazda"), M),
+        q("tec_country_car_maker_4", "Which country does the car maker Jaguar come from?", "Britain", listOf("Germany", "Italy", "Sweden"), M),
+        q("tec_abs_stand_car", "What does 'ABS' stand for in a car?", "Anti-lock braking system", listOf("Automatic balance steering", "Air bag system", "Advanced battery saver"), M),
+        q("tec_stand_address", "What does 'IP' stand for in 'IP address'?", "Internet Protocol", listOf("Internal Port", "Information Path", "Instant Provider"), M),
+        q("tec_rom_stand_computing", "What does 'ROM' stand for in computing?", "Read-only memory", listOf("Random operating mode", "Remote online module", "Rapid output memory"), M),
+        q("tec_cctv_stand", "What does 'CCTV' stand for?", "Closed-circuit television", listOf("Central camera television", "Coded colour TV", "Computer-controlled TV"), M),
+        q("tec_company_makes_xperia", "Which company makes the Xperia phones?", "Sony", listOf("Samsung", "LG", "Huawei"), M),
+        q("tec_sent_message_hath", "Who sent the message 'What hath God wrought' over the first long-distance telegraph line in 1844?", "Samuel Morse", listOf("Alexander Graham Bell", "Thomas Edison", "Nikola Tesla"), M),
+        q("tec_tractor_maker_started", "Which tractor maker started building sports cars after a quarrel with Enzo Ferrari?", "Ferruccio Lamborghini", listOf("Ferdinand Porsche", "Ettore Bugatti", "Alfieri Maserati"), M),
+        q("tec_small_british_car", "Which small British car starred in the chase of 'The Italian Job' (1969)?", "Mini Cooper", listOf("Austin Healey", "Morris Minor", "Triumph Spitfire"), M),
+        q("tec_italian_scooter_means", "Which Italian scooter's name means 'wasp'?", "Vespa", listOf("Lambretta", "Piaggio", "Aprilia"), M),
+        q("tec_company_invented_post", "Which company invented the Post-it note?", "3M", listOf("Xerox", "Staples", "Kodak"), M),
+        q("tec_kind_energy_photovoltaic", "Which kind of energy do photovoltaic panels turn into electricity?", "Sunlight", listOf("Wind", "Heat from the ground", "Moving water"), M),
+        q("tec_german_sports_car", "Which German sports car maker has a black prancing horse at the centre of its crest?", "Porsche", listOf("BMW", "Audi", "Mercedes-Benz"), M),
+        q("tec_sent_very_tweet", "Who sent the very first tweet, in 2006?", "Jack Dorsey", listOf("Elon Musk", "Biz Stone", "Evan Williams"), M),
+        q("tec_founded_netflix_led", "Who co-founded Netflix and led it for over 20 years?", "Reed Hastings", listOf("Jeff Bezos", "Steve Jobs", "Brian Chesky"), M),
+        q("tec_founded_chip_maker", "Who co-founded the chip maker Nvidia in 1993 and became its long-time CEO?", "Jensen Huang", listOf("Lisa Su", "Andy Grove", "Gordon Moore"), M),
+        q("tec_operating_system_ran", "Which operating system ran most Nokia smartphones before 2011?", "Symbian", listOf("Android", "Windows Mobile", "Palm OS"), M),
+        q("tec_guitar_maker_created", "Which guitar maker created the famous 'Stratocaster'?", "Fender", listOf("Gibson", "Ibanez", "Yamaha"), M),
+        q("tec_guitar_maker_produces", "Which guitar maker produces the 'Les Paul' electric guitar?", "Gibson", listOf("Fender", "Gretsch", "Rickenbacker"), M),
+        q("tec_jeff_bezos_choose", "Which name did Jeff Bezos first choose for Amazon?", "Cadabra", listOf("Relentless", "Bookworld", "Sesame"), M),
+        q("tec_french_car_maker", "Which French car maker built the 2CV, nicknamed the 'tin snail'?", "Citroen", listOf("Renault", "Peugeot", "Simca"), M),
+        q("tec_company_trademarked_jet", "Which company trademarked the name 'Jet Ski'?", "Kawasaki", listOf("Yamaha", "Honda", "Suzuki"), M),
+        q("tec_engineer_built_digital", "Whose engineer built the first digital camera, in 1975, though the company stuck with film?", "Kodak", listOf("Canon", "Sony", "Nikon"), M),
+        q("tec_billionaire_aviator_built", "Which billionaire aviator built the giant wooden flying boat nicknamed the 'Spruce Goose'?", "Howard Hughes", listOf("William Boeing", "Charles Lindbergh", "Glenn Curtiss"), M),
+        q("tec_concorde_built_jointly", "Concorde was built jointly by France and which other country?", "Britain", listOf("Germany", "United States", "Italy"), M),
+        q("tec_letters_france_tgv", "What do the letters of France's TGV trains mean in English?", "High-speed train", listOf("Great green train", "Very big train", "Grand tour train"), M),
+        q("tec_swiss_rail_tunnel", "Which Swiss rail tunnel, opened in 2016, runs 57 km under the Alps?", "Gotthard Base Tunnel", listOf("Simplon Tunnel", "Channel Tunnel", "Mont Blanc Tunnel"), M),
+        q("tec_official_colour_golden", "What is the official colour of the Golden Gate Bridge?", "International orange", listOf("Golden yellow", "Rust red", "Copper brown"), M),
+        q("tec_programming_language_apple", "Which programming language did Apple introduce in 2014 for its apps?", "Swift", listOf("Kotlin", "Rust", "Go"), M),
+        q("tec_programming_language_google", "Which programming language has Google preferred for Android apps since 2019?", "Kotlin", listOf("Swift", "Ruby", "Perl"), M),
+        q("tec_created_python_programming", "Who created the Python programming language?", "Guido van Rossum", listOf("Bjarne Stroustrup", "James Gosling", "Linus Torvalds"), M)
+    )
 
-        /* ------------------------------ Hard ------------------------------ */
+    /* ------------------------------ Hard ------------------------------ */
+    private fun hard(): List<QuizEntry> = listOf(
         q("day2_ram_vs_dysk", "Why does a computer slow down when RAM runs out?", "It starts swapping data to much slower storage", listOf("The processor overheats and throttles", "The screen starts refreshing slower", "The network connection is throttled"), H),
         q("tec_turing", "Who is regarded as the father of computer science and cracked the Enigma cipher?", "Alan Turing", listOf("John von Neumann", "Charles Babbage", "Claude Shannon"), H),
         q("tec_enigma_polacy", "Which Pole co-created the first break of the Enigma cipher?", "Marian Rejewski", listOf("Stefan Banach", "Jan Czochralski", "Kazimierz Funk"), H),
@@ -203,8 +322,25 @@ object TechnologyQuestions {
         q("tecy_android_slodycze", "Until 2019, Android versions were named after what?", "Desserts and sweets", listOf("Famous robots", "Planets", "Animals"), H),
         q("tecy_sikorsky", "Which engineer built the first practical single-rotor helicopter, in 1939?", "Igor Sikorsky", listOf("Juan de la Cierva", "Howard Hughes", "Frank Whittle"), H),
         q("tecy_gps_cztery", "How many satellites must a phone hear, at minimum, to fix its position in 3D?", "Four", listOf("One", "Two", "Twelve"), H),
+        q("tec_sim_stand_sim", "What does 'SIM' stand for in SIM card?", "Subscriber Identity Module", listOf("Secure Information Memory", "System Integrated Module", "Single Input Mobile"), H),
+        q("tec_laser_stand", "What does 'laser' stand for?", "Light Amplification by Stimulated Emission of Radiation", listOf("Light Activated Source of Energetic Radiation", "Linear Amplified Signal of Emitted Rays", "Long-range Amplified Source of Electronic Rays"), H),
+        q("tec_dvd_stand", "What does 'DVD' stand for?", "Digital Versatile Disc", listOf("Digital Video Drive", "Direct Visual Data", "Dual Video Disc"), H),
+        q("tec_video_website_original", "Which video website's original slogan was 'Broadcast Yourself'?", "YouTube", listOf("Vimeo", "Twitch", "MySpace"), H),
+        q("tec_best_selling_single", "What is the best-selling single home computer model of all time?", "The Commodore 64", listOf("The ZX Spectrum", "The Apple II", "The IBM PC"), H),
+        q("tec_charles_babbage_design", "What did Charles Babbage design in the 1800s?", "A mechanical computer", listOf("The first steam train", "The electric telegraph", "An early typewriter"), H),
+        q("tec_skyscraper_world_tallest", "Which skyscraper was the world's tallest building just before the Burj Khalifa?", "Taipei 101", listOf("The Petronas Towers", "The Shanghai Tower", "The Sears Tower"), H),
+        q("tec_engineer_designed_iron", "Which engineer designed the iron framework inside the Statue of Liberty?", "Gustave Eiffel", listOf("Isambard Kingdom Brunel", "John Roebling", "Ferdinand de Lesseps"), H),
+        q("tec_scottish_inventor_developed", "Which Scottish inventor developed the first practical pneumatic tyre?", "John Boyd Dunlop", listOf("Charles Goodyear", "Andre Michelin", "Karl Benz"), H),
+        q("tec_sony_robot_dog", "What was the name of Sony's robot dog, first sold in 1999?", "AIBO", listOf("ASIMO", "Furby", "Rover"), H),
+        q("tec_url_stand", "What does 'URL' stand for?", "Uniform Resource Locator", listOf("Universal Remote Link", "Unified Routing Language", "User Request Log"), H),
+        q("tec_nfc_used_contactless", "What does 'NFC', used for contactless payments, stand for?", "Near-field communication", listOf("New fast connection", "Network file control", "Non-financial card"), H),
+        q("tec_css_language_styling", "What does 'CSS', the language for styling web pages, stand for?", "Cascading Style Sheets", listOf("Computer Styling System", "Coded Site Scripts", "Creative Screen Styles"), H),
+        q("tec_jpeg_stand", "What does 'JPEG' stand for?", "Joint Photographic Experts Group", listOf("Java Picture Encoding Group", "Joint Pixel Exchange Graphics", "Just Plain Edited Graphics"), H),
+        q("tec_gif_stand", "What does 'GIF' stand for?", "Graphics Interchange Format", listOf("General Image File", "Graphic Internet Frame", "Grid Image Format"), H)
+    )
 
-        /* ----------------------------- Expert ----------------------------- */
+    /* ----------------------------- Expert ----------------------------- */
+    private fun expert(): List<QuizEntry> = listOf(
         q("day2_klucz_publiczny", "In public-key cryptography, what may be shared freely?", "The public key", listOf("The private key", "Both keys", "Neither key"), X),
         q("tec_moore", "What does Moore's law concern?", "The doubling of transistor count in chips", listOf("The doubling of internet speed each year", "The steady fall in the price of memory", "The rise in server power consumption"), X),
         q("tec_c_jezyk", "Who created the C programming language?", "Dennis Ritchie", listOf("Bjarne Stroustrup", "James Gosling", "Guido van Rossum"), X),
@@ -246,6 +382,8 @@ object TechnologyQuestions {
         q("tecy_dyskietka", "Roughly how much data could a standard 3.5-inch floppy disk hold?", "1.44 MB", listOf("144 MB", "14.4 GB", "144 KB"), X),
         q("tecy_whittle", "Which British engineer patented the turbojet engine in 1930?", "Frank Whittle", listOf("Igor Sikorsky", "Barnes Wallis", "Isambard Kingdom Brunel"), X),
         q("tecy_brunel", "Which Victorian engineer built the giant steamship 'Great Eastern'?", "Isambard Kingdom Brunel", listOf("George Stephenson", "James Watt", "Thomas Telford"), X),
-        q("tecy_elektryk_xix", "In which century was the first electric car built?", "The 19th", listOf("The 20th", "The 21st", "The 18th"), X)
+        q("tecy_elektryk_xix", "In which century was the first electric car built?", "The 19th", listOf("The 20th", "The 21st", "The 18th"), X),
+        q("tec_very_home_video", "What was the very first home video game console?", "The Magnavox Odyssey", listOf("The Atari 2600", "The Fairchild Channel F", "The Intellivision"), X),
+        q("tec_german_inventor_built", "Which German inventor built the 'running machine', a two-wheeled ancestor of the bicycle, in 1817?", "Karl Drais", listOf("Karl Benz", "Gottlieb Daimler", "Rudolf Diesel"), X)
     )
 }

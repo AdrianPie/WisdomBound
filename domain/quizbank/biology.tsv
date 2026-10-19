@@ -1,0 +1,362 @@
+# Biologia: cialo czlowieka, komorka, geny, rosliny, zdrowie.
+#
+# Pytamy o to, co w organizmie ZASKAKUJE (dlaczego zoladek nie trawi sam siebie, ile metrow DNA
+# siedzi w jednej komorce), a nie o definicje z podrecznika. "Czym jest homeostaza?" i dziesiatki
+# podobnych wylecialy - na takie pytanie odpowiada sie wkutym zdaniem, a nie wiedza. Zwierzeta maja
+# wlasny temat ([AnimalQuestions]).
+#
+# Zasady pisania pytan dla calego banku - patrz [com.lernhero.domain.quiz.QuizBank].
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+bio_skora	Easy	Which human organ is the largest?	Skin	Liver	Lungs	Small intestine
+bio_kosci	Easy	How many bones does an adult human skeleton have?	206	152	300	180
+bio2_zeby	Easy	How many teeth does an adult human have, wisdom teeth included?	32	28	36	24
+bio2_wlosy_rosna	Easy	What are hair and nails made of?	Keratin	Collagen	Chitin	Cellulose
+bio2_kosc_najdluzsza	Easy	Which human bone is the longest?	The femur	The humerus	The tibia	The clavicle
+bio2_wzrok_narzad	Easy	Which part of the eye regulates how much light enters?	The pupil	The cornea	The sclera	The optic nerve
+bio3_ucho_funkcja	Easy	Besides hearing, what is the ear responsible for?	Balance	Smell	Taste	Sight
+bio3_owad_nogi	Easy	How many legs does an insect have?	Six	Four	Eight	Ten
+bio3_roslina_oddycha	Easy	What does a plant use to exchange gases?	Stomata in its leaves	Lungs	Gills	Roots only
+trv_melanina	Easy	Which pigment gives skin, hair and eyes their colour?	Melanin	Keratin	Hemoglobin	Carotene
+trv_aorta	Easy	What is the largest artery in the human body?	The aorta	The carotid	The femoral artery	The pulmonary artery
+trv_mleko_laktoza	Easy	What is lactose?	The sugar in milk	The fat in milk	The protein in milk	A milk vitamin
+trv_gluten_co	Easy	What is gluten?	A protein found in wheat	A sugar found in wheat	A fat found in bread	A preservative added to flour
+wld_fotosynteza_gaz	Easy	Which gas do plants take in to carry out photosynthesis?	Carbon dioxide	Oxygen	Nitrogen	Hydrogen
+wld_mitochondria	Easy	Which part of a cell is often called its 'powerhouse'?	The mitochondrion	The nucleus	The ribosome	The cell wall
+bio_wyrostek	Easy	Which organ attached to the large intestine often has to be removed when it gets inflamed?	The appendix	The spleen	The pancreas	The kidney
+bio_szkorbut	Easy	Sailors once got scurvy from a lack of which vitamin?	Vitamin C	Vitamin A	Vitamin D	Vitamin B12
+bio_mozg_strony	Easy	The right half of the brain mainly controls which side of the body?	The left side	The right side	Both sides equally	Only the face
+bio_smaki_piec	Easy	How many basic tastes are commonly recognised, including umami?	Five	Three	Four	Seven
+bio_kosc_lokciowa	Easy	What is the 'funny bone' that tingles when you knock your elbow?	A nerve	A small bone	A tendon	A muscle
+bio_zeby_madrosci	Easy	Wisdom teeth are the last of which kind of teeth to come through?	Molars	Incisors	Canines	Premolars
+bio_placebo	Easy	What is it called when a fake pill makes someone feel better?	The placebo effect	The nocebo effect	The Hawthorne effect	The domino effect
+bio_homo_sapiens	Easy	What is the scientific name for modern humans?	Homo sapiens	Homo erectus	Homo habilis	Homo neanderthalensis
+bio_dermatolog	Easy	What is a doctor who specialises in skin called?	A dermatologist	A cardiologist	A neurologist	An ophthalmologist
+bio_owca_dolly	Easy	What kind of animal was Dolly, the first mammal cloned from an adult cell?	A sheep	A cow	A goat	A mouse
+bio_melatonina	Easy	Which hormone makes you feel sleepy when it gets dark?	Melatonin	Adrenaline	Insulin	Oxytocin
+bio_adrenalina_walka	Easy	Which hormone floods your body in a 'fight or flight' moment?	Adrenaline	Melatonin	Insulin	Serotonin
+bio_bambus	Easy	Which plant can grow almost a metre in a single day?	Bamboo	Ivy	Sunflower	Oak
+bio_cynamon	Easy	Cinnamon comes from which part of a tree?	The bark	The seeds	The roots	The leaves
+bio_zoledz	Easy	Which tree grows acorns?	The oak	The beech	The chestnut	The maple
+bio_czekolada	Easy	Chocolate is made from the seeds of which tree?	The cacao tree	The carob tree	The coffee tree	The coconut palm
+bio_herbata	Easy	After water, what is the most widely drunk drink in the world?	Tea	Coffee	Beer	Milk
+bio_daltonizm	Easy	Red-green colour blindness is far more common in whom?	Men	Women	Children	Older people
+bio_woda_przezycie	Easy	Roughly how long can a person survive without drinking water?	About three days	About three hours	About three weeks	About three months
+bio_weganin	Easy	What do you call someone who eats no animal products at all?	A vegan	A vegetarian	A pescatarian	A flexitarian
+bio_marcepan	Easy	Which nut is marzipan made from?	Almonds	Hazelnuts	Walnuts	Cashews
+bio_tofu	Easy	What is tofu made from?	Soybeans	Rice	Chickpeas	Wheat
+bio_hummus	Easy	What is hummus mainly made from?	Chickpeas	Lentils	Soybeans	Peas
+bio_kurkuma	Easy	Which yellow spice, made from a root, gives curry its colour?	Turmeric	Saffron	Cumin	Paprika
+bio_szparagi	Easy	Eating which vegetable famously makes many people's urine smell?	Asparagus	Broccoli	Spinach	Celery
+biox_mleczaki	Easy	How many baby teeth does a child usually have?	20	32	16	24
+biox_serce_piesc	Easy	A human heart is roughly the size of what?	A fist	A grape	A football	A melon
+biox_sen_tercja	Easy	Roughly what share of their life does a person spend asleep?	About a third	About a tenth	About half	About two-thirds
+biox_ryz	Easy	Which grain is the main food for more than half of the world's people?	Rice	Wheat	Maize	Oats
+biox_oczy_brazowe	Easy	Which is the most common eye colour in the world?	Brown	Blue	Green	Grey
+bioy_serce_strona	Easy	On which side of the chest does most of the human heart sit?	The left	The right	Exactly in the middle	It moves around
+bioy_sloje	Easy	How can you tell the age of a tree that has been cut down?	By counting its rings	By measuring its height	By its bark colour	By counting its branches
+bio_normal_human_body	Easy	What is the normal human body temperature?	About 37 °C	About 35 °C	About 39 °C	About 33 °C
+bio_blood_cells_fight	Easy	Which blood cells fight infections?	White blood cells	Red blood cells	Platelets	Nerve cells
+bio_blood_vessels_carry	Easy	Which blood vessels carry blood away from the heart?	Arteries	Veins	Capillaries	Lymph vessels
+bio_body_system_fights	Easy	Which body system fights off germs and disease?	The immune system	The nervous system	The digestive system	The endocrine system
+bio_coloured_part_eye	Easy	What is the coloured part of the eye called?	The iris	The pupil	The retina	The cornea
+bio_disease_affects_body	Easy	Which disease affects how the body uses insulin to control blood sugar?	Diabetes	Asthma	Anaemia	Arthritis
+bio_ancient_greek_doctor	Easy	Which ancient Greek doctor is called 'the father of medicine'?	Hippocrates	Aristotle	Galen	Archimedes
+bio_bees_carry_flower	Easy	What do bees carry from flower to flower, helping plants make seeds?	Pollen	Nectar	Honey	Wax
+bio_tree_pink_spring	Easy	Which tree's pink spring blossom is celebrated all over Japan with 'hanami' picnics?	The cherry	The magnolia	The almond	The apple
+bio_plant_national_symbol	Easy	Which plant is a national symbol of Ireland?	The shamrock	The thistle	The rose	The daffodil
+bio_fruit_mashed_make	Easy	Which fruit is mashed to make guacamole?	Avocado	Lime	Mango	Kiwi
+bio_prunes_dried_versions	Easy	Prunes are dried versions of which fruit?	Plums	Grapes	Figs	Apricots
+bio_fruit_classically_used	Easy	Which fruit is classically used to make marmalade?	Oranges	Strawberries	Apples	Plums
+bio_herb_main_flavour	Easy	Which herb is the main flavour in Italian pesto?	Basil	Parsley	Oregano	Mint
+bio_hops_used_flavour	Easy	Hops are used to flavour which drink?	Beer	Wine	Cider	Gin
+bio_vegetable_fermented_make	Easy	Which vegetable is fermented to make sauerkraut?	Cabbage	Cucumber	Carrot	Beetroot
+bio_shiver_cold	Easy	Why do we shiver when we are cold?	Twitching muscles make heat	It pumps blood faster	It shakes off cold air	It burns stored fat
+bio_heimlich_manoeuvre_used	Easy	What is the Heimlich manoeuvre used for?	Helping someone who is choking	Waking someone who has fainted	Setting a broken arm	Stopping a nosebleed
+bio_hay_fever_allergy	Easy	What is hay fever an allergy to?	Pollen	Dust	Hay	Cat hair
+bio_disease_mosquitoes_spread	Easy	Which disease do mosquitoes spread in tropical countries, causing fever and chills?	Malaria	Cholera	Tuberculosis	Measles
+bio_conjunctivitis_infection_part	Easy	Conjunctivitis is an infection of which part of the body?	The eye	The ear	The throat	The skin
+bio_instrument_doctor_use	Easy	Which instrument does a doctor use to listen to your heart and lungs?	A stethoscope	A thermometer	An otoscope	A sphygmomanometer
+bio_bony_cage_protects	Easy	Which bony cage protects the heart and lungs?	The rib cage	The pelvis	The skull	The spine
+bio_organ_damaged_stroke	Easy	Which organ is damaged by a stroke?	The brain	The heart	The lungs	The liver
+bio_fracture	Easy	What is a fracture?	A broken bone	A torn muscle	A deep cut	A bad bruise
+bio_insomnia	Easy	What is insomnia?	Trouble sleeping	Fear of heights	Loss of memory	A skin rash
+bio_body_achilles_tendon	Easy	Where in the body is the Achilles tendon?	At the back of the heel	Behind the knee	In the shoulder	In the wrist
+bio_red_blood_cells	Easy	What do red blood cells carry around the body?	Oxygen	Hormones	Germs	Fat
+bio_flower_classic_symbol	Easy	Which flower is the classic symbol of romantic love?	The red rose	The white lily	The yellow tulip	The daisy
+bio_nuts_main_ingredient	Easy	Which nuts are the main ingredient of Nutella?	Hazelnuts	Almonds	Peanuts	Walnuts
+bio_herb_muddled_mojito	Easy	Which herb is muddled into a mojito cocktail?	Mint	Basil	Parsley	Coriander
+bio_foods_source_omega	Easy	Which of these foods is a famous source of omega-3 fats?	Salmon	White bread	Potatoes	Rice
+bio_organ_asthma_affect	Easy	Which organ does asthma affect?	The lungs	The heart	The stomach	The liver
+bio_tree_winged_seeds	Easy	Which tree's winged seeds spin down like little helicopters?	Maple	Oak	Pine	Birch
+bio_wine_corks_made	Easy	Wine corks are made from the bark of which tree?	Cork oak	Birch	Pine	Beech
+bio_austrian_doctor_founded	Easy	Which Austrian doctor founded psychoanalysis?	Sigmund Freud	Carl Jung	Alfred Adler	Viktor Frankl
+bio_russian_scientist_trained	Easy	Which Russian scientist trained dogs to drool at a signal that meant food was coming?	Ivan Pavlov	Dmitri Mendeleev	Ivan Sechenov	Lev Vygotsky
+bio_carnivorous_plant_snaps	Easy	Which carnivorous plant snaps its leaves shut on insects?	Venus flytrap	Pitcher plant	Sundew	Bladderwort
+bio_popcorn_special_variety	Easy	Popcorn is a special variety of which grain?	Maize	Rice	Wheat	Sorghum
+bio_scale_measures_heat	Easy	Which scale measures the heat of chili peppers?	Scoville	Mohs	Richter	Beaufort
+bio_prized_fungi_pigs	Easy	Which prized fungi do pigs and dogs sniff out underground?	Truffles	Morels	Chanterelles	Porcini
+bio_flower_young_heads	Easy	Which flower's young heads turn to follow the Sun across the sky?	Sunflower	Daisy	Tulip	Marigold
+bio_body_blood_cells	Easy	Where in the body are most blood cells made?	In the bone marrow	In the liver	In the heart	In the spleen
+bio_common_weed_spreads	Easy	Which common weed spreads its seeds on tiny white 'parachutes'?	Dandelion	Nettle	Clover	Ivy
+bio_chromosomy	Medium	How many chromosomes does a healthy human cell have?	46	23	48	44
+bio_chlorofil	Medium	Which pigment gives plants their green color?	Chlorophyll	Carotene	Melanin	Hemoglobin
+bio_insulina	Medium	Which organ produces insulin?	Pancreas	Liver	Kidneys	Thyroid
+bio_darwin	Medium	Who formulated the theory of evolution by natural selection?	Charles Darwin	Gregor Mendel	Louis Pasteur	Carl Linnaeus
+bio_jamy_serca	Medium	How many chambers does the human heart have?	4	2	3	6
+bio_witamina_d	Medium	Which vitamin does the body produce from sunlight?	Vitamin D	Vitamin C	Vitamin A	Vitamin B12
+bio_zoladek	Medium	Which acid helps digest food in the stomach?	Hydrochloric acid	Sulfuric acid	Acetic acid	Nitric acid
+day2_kofeina	Medium	Roughly how long does half the caffeine leave an adult's body?	About 5 hours	About 30 minutes	About 24 hours	About 3 days
+bio2_dna_zasady	Medium	How many different nitrogenous bases occur in DNA?	Four	Two	Five	Twenty
+bio2_plyny_ustrojowe	Medium	What percentage of human body mass is water?	About 60%	About 20%	About 90%	About 40%
+bio2_wirus_zycie	Medium	Why are viruses not considered fully-fledged living organisms?	They can't reproduce without a host cell	They have no genetic material	They can't mutate	They don't respond to temperature
+bio3_ropucha_aga	Medium	Which animal, brought to Australia in 1935 to protect sugar cane, became a plague itself?	The cane toad	The rabbit	The dingo	The emu
+bio3_uv_dna	Medium	Which part of sunlight damages DNA in skin cells and causes sunburn?	Ultraviolet radiation	Infrared radiation	Visible light	Radio waves
+bio3_las_gatunki	Medium	Which land habitat holds the greatest number of species?	Tropical rainforest	Boreal forest (taiga)	Temperate grassland	Tundra
+trv_kosc_najmniejsza	Medium	What is the smallest bone in the human body?	The stapes, in the ear	The fibula	The hyoid	A finger bone
+trv_serce_dziennie	Medium	Roughly how many times does the human heart beat in a day?	About 100,000	About 10,000	About 1,000,000	About 25,000
+trv_krtan	Medium	What is the medical name for the voice box?	The larynx	The pharynx	The trachea	The epiglottis
+trv_zebra_pary	Medium	How many pairs of ribs does a typical adult have?	12	10	14	8
+trv_watroba_regeneracja	Medium	Which organ can regrow most of itself after part of it is removed?	The liver	The heart	The lung	The kidney
+trv_paznokcie_wzrost	Medium	Which grow faster?	Fingernails	Toenails	They grow at the same rate	It depends on the season only
+trv_pecherzyki	Medium	What are the tiny air sacs in the lungs called?	Alveoli	Bronchi	Villi	Capillaries
+trv_zoladek_kwas	Medium	Why doesn't stomach acid digest the stomach itself?	A layer of mucus protects the stomach wall	The acid is too weak	The stomach wall is made of bone	The acid only works on meat
+trv_goraczka_cel	Medium	What is the purpose of a fever?	Making the body a worse place for germs	Cooling the brain during an illness	Burning off the body's spare fat	Speeding up digestion while ill
+trv_bakterie_jelita	Medium	Which organ hosts most of the body's helpful bacteria?	The large intestine	The stomach	The liver	The lungs
+mst_czkawka_przepona	Medium	A hiccup is a sudden spasm of which muscle?	The diaphragm	The stomach wall	The throat	The heart
+cur_kosci_niemowle	Medium	Do babies have more or fewer bones than adults?	More - around 300 that fuse over time	Fewer - bones split as we grow	Exactly the same, 206	Fewer - around 150
+wld_krew_grupa_dawca	Medium	Which blood type is known as the universal donor for red cells?	O negative	AB positive	A negative	B positive
+wld_szkliwo	Medium	What is the hardest substance in the human body?	Tooth enamel	Thigh bone	Fingernail keratin	Skull bone
+wld_bio_smak_nos	Medium	Why does food taste bland when you have a blocked nose?	Most flavour comes from smell	The tongue swells up	Mucus coats the taste buds completely	Fever switches off taste
+wld_bio_krew_kolor	Medium	Why is blood red?	Iron-containing haemoglobin	Copper in the plasma	Red white blood cells	Oxygen gas bubbles
+bio_miod_egipt	Medium	Which food has been found still edible in ancient Egyptian tombs?	Honey	Bread	Olive oil	Dates
+bio_umami	Medium	Which fifth basic taste was named by a Japanese chemist in 1908?	Umami	Kokumi	Piquant	Astringent
+bio_wech_pamiec	Medium	Which sense is most strongly tied to memory and emotion?	Smell	Sight	Hearing	Touch
+bio_jelito_dlugosc	Medium	Roughly how long is an adult's small intestine?	About 6 metres	About 1 metre	About 20 metres	About 50 metres
+bio_mozg_lod	Medium	An 'ice-cream headache' is triggered by cold on which part of the mouth?	The roof of the mouth	The tip of the tongue	The front teeth	The back of the throat
+bio_glos_nagranie	Medium	Why does your own voice sound strange on a recording?	You normally hear it through your skull too	Microphones raise its pitch	Your ears adapt to it over time	Recordings lose the echo of a room
+bio_wlosy_liczba	Medium	About how many hairs grow on an average human head?	About 100,000	About 10,000	About 1 million	About 20,000
+bio_dna_ludzie	Medium	Roughly what share of their DNA do any two people have in common?	About 99.9%	About 50%	About 75%	About 90%
+bio_siatkowka_slonce	Medium	Which part of the eye gets damaged by staring at the Sun?	The retina	The cornea	The iris	The lens
+bio_nie_narzad	Medium	Which of these is NOT an organ of the human body?	The gizzard	The spleen	The thymus	The gallbladder
+bio_watroba_ciezka	Medium	Which is the heaviest internal organ in the human body?	The liver	The brain	The lungs	The heart
+bio_nerki_filtr	Medium	Which organs filter roughly 180 litres of blood plasma every day?	The kidneys	The lungs	The liver	The spleen
+bio_witamina_a	Medium	Which vitamin helps the eyes see in dim light?	Vitamin A	Vitamin B12	Vitamin C	Vitamin E
+bio_biorca_uniwersalny	Medium	People with which blood type can receive red cells of any type?	AB positive	O negative	A positive	B negative
+bio_noworodek_wzrok	Medium	Which sense is the least developed in a newborn baby?	Sight	Hearing	Smell	Touch
+bio_noworodek_rzepka	Medium	Newborn babies don't yet have a bony version of which bone?	The kneecap	The skull	The jawbone	The collarbone
+bio_trawa_celuloza	Medium	Why can't humans digest grass?	We lack enzymes that break down cellulose	Our teeth are too weak to chew it	Our stomach is too small for it	Grass is poisonous to people
+bio_neandertal	Medium	Which extinct human species left traces in the DNA of many people alive today?	Neanderthals	Homo erectus	Australopithecus	Homo habilis
+bio_sekwoja	Medium	Which is the tallest species of tree on Earth?	The coast redwood	The giant sequoia	The mountain ash	The Douglas fir
+bio_orzeszki	Medium	Botanically, what are peanuts?	Legumes	Tree nuts	Berries	Grains
+bio_brokul	Medium	Which of these vegetables is really a bunch of flower buds?	Broccoli	Carrot	Potato	Onion
+bio_kawa_nasiona	Medium	Coffee 'beans' are actually the seeds of what?	A cherry-like fruit	A bean pod	A palm nut	A flower bulb
+bio_rabarbar	Medium	Which part of the rhubarb plant is safe to eat?	The stalks	The leaves	The roots	The flowers
+bio_marchew_fiolet	Medium	What colour were most of the first cultivated carrots?	Purple	Orange	Red	Blue
+bio_len	Medium	Linen is woven from the fibres of which plant?	Flax	Cotton	Hemp	Jute
+bio_tequila	Medium	Tequila is made from which plant?	The blue agave	A cactus	Sugar cane	Aloe vera
+bio_jenner	Medium	Who created the first vaccine, against smallpox, in 1796?	Edward Jenner	Louis Pasteur	Robert Koch	Joseph Lister
+bio_ospa	Medium	Which is the only human disease that has been wiped out worldwide?	Smallpox	Polio	Measles	Malaria
+bio_hdl	Medium	Which type of cholesterol is often called 'good' cholesterol?	HDL	LDL	VLDL	IDL
+bio_oddechy	Medium	Roughly how many breaths does an adult take in a day?	About 20,000	About 2,000	About 200,000	About 500
+bio_miesien_najwiekszy	Medium	Which is the largest muscle in the human body?	The gluteus maximus	The biceps	The latissimus dorsi	The heart
+bio_burczenie	Medium	What makes your stomach 'growl'?	Gas and fluid moving through the gut	The stomach shrinking	Acid bubbling up	Muscles cramping from hunger
+bio_oksytocyna	Medium	Which hormone is nicknamed the 'cuddle hormone'?	Oxytocin	Adrenaline	Cortisol	Melatonin
+bio_mozg_waga	Medium	Roughly how much does an adult human brain weigh?	About 1.4 kg	About 400 g	About 3 kg	About 5 kg
+bio_kichanie_slonce	Medium	About one in four people sneeze when they look into bright light. What is this called?	The photic sneeze reflex	A sunlight allergy	Solar hay fever	Light sensitivity syndrome
+bio_szczepionka_mrna	Medium	The first mRNA vaccines approved for wide use protected against which disease?	COVID-19	Measles	Influenza	Polio
+biox_krew_litry	Medium	Roughly how much blood is in an adult's body?	About 5 litres	About 1 litre	About 12 litres	About 20 litres
+biox_oczy_niemowlat	Medium	Many babies of European descent are born with eyes of which colour, which may change later?	Blue or grey	Green	Dark brown	Hazel
+biox_bambus_trawa	Medium	Bamboo is actually a giant kind of what?	Grass	Tree	Fern	Palm
+biox_awokado	Medium	Botanically, an avocado is a kind of what?	Berry	Nut	Vegetable	Legume
+biox_rem	Medium	In which stage of sleep do most vivid dreams happen?	REM sleep	Deep sleep	Light sleep	Just before waking
+biox_leworeczni	Medium	Roughly what share of people are left-handed?	About 10%	About 1%	About 30%	About 50%
+biox_baobab	Medium	Which African tree can store thousands of litres of water in its huge trunk?	The baobab	The acacia	The mahogany	The ebony
+biox_grzyby_zwierzeta	Medium	Mushrooms are more closely related to which group of living things?	Animals	Plants	Bacteria	Algae
+bioy_pot_zapach	Medium	Fresh sweat has almost no smell. What causes body odour?	Bacteria breaking down sweat	Salt in the sweat	Hormones in the skin	Sweat drying in the air
+bioy_ziewanie_psy	Medium	Which of these animals has been shown to catch yawns from humans?	Dogs	Snakes	Goldfish	Tortoises
+bioy_kokos	Medium	Botanically, what is a coconut?	A drupe (stone fruit)	A true nut	A berry	A seed pod
+bioy_kaktus_kolce	Medium	What are a cactus's spines, botanically?	Modified leaves	Hardened hairs	Tiny branches	Dried flowers
+bioy_rano_wyzszy	Medium	At what time of day are most people slightly taller?	In the morning	In the evening	At noon	At midnight
+bioy_ziemniak_trujacy	Medium	Which part of a potato plant is poisonous?	The leaves and green berries	The white flesh of the tuber	Only the roots	No part at all
+bio_prickly_plant_national	Medium	Which prickly plant is the national emblem of Scotland?	The thistle	The shamrock	The heather	The gorse
+bio_flower_national_flower	Medium	Which flower is the national flower of India?	The lotus	The rose	The jasmine	The marigold
+bio_common_clavicle	Medium	What is the common name for the clavicle?	The collarbone	The shinbone	The breastbone	The kneecap
+bio_tibia_better_bone	Medium	The tibia is better known as which bone?	The shinbone	The thighbone	The collarbone	The breastbone
+bio_connects_muscles_bones	Medium	What connects muscles to bones?	Tendons	Ligaments	Cartilage	Nerves
+bio_tiny_blood_vessels	Medium	What are the tiny blood vessels linking arteries and veins called?	Capillaries	Valves	Ventricles	Alveoli
+bio_organ_stores_bile	Medium	Which organ stores the bile made by the liver?	The gallbladder	The pancreas	The spleen	The bladder
+bio_platelets_blood	Medium	What do platelets in the blood do?	Help blood to clot	Carry oxygen	Fight germs	Carry hormones
+bio_cpr_stand	Medium	What does CPR stand for?	Cardiopulmonary resuscitation	Cardiac pressure release	Central pulse recovery	Critical patient revival
+bio_defibrillator	Medium	What does a defibrillator do?	Shocks the heart back into rhythm	Helps a patient to breathe	Measures blood sugar	Filters the blood
+bio_organ_hepatitis_attack	Medium	Which organ does hepatitis attack?	The liver	The kidneys	The lungs	The heart
+bio_medical_short_sightedness	Medium	What is the medical name for short-sightedness?	Myopia	Hyperopia	Astigmatism	Glaucoma
+bio_medical_high_blood	Medium	What is the medical name for high blood pressure?	Hypertension	Hypotension	Hyperglycaemia	Tachycardia
+bio_common_painkiller_made	Medium	Which common painkiller was first made from a chemical in willow bark?	Aspirin	Paracetamol	Ibuprofen	Morphine
+bio_everyday_varicella_itchy	Medium	What is the everyday name for varicella, an itchy childhood illness?	Chickenpox	Measles	Mumps	Rubella
+bio_gram_gram_gives	Medium	Gram for gram, which of these gives the body the most energy?	Fat	Protein	Sugar	Fibre
+bio_natural_sugar_found	Medium	What is the natural sugar found in fruit called?	Fructose	Lactose	Sucrose	Maltose
+bio_trees_lose_leaves	Medium	What are trees that lose their leaves in autumn called?	Deciduous	Evergreen	Coniferous	Perennial
+bio_nuts_traditionally_used	Medium	Which nuts are traditionally used in pesto?	Pine nuts	Walnuts	Almonds	Cashews
+bio_tahini_paste_made	Medium	Tahini is a paste made from which seeds?	Sesame	Sunflower	Pumpkin	Poppy
+bio_alcoholic_drink_made	Medium	Which alcoholic drink is made by fermenting honey?	Mead	Cider	Sake	Kvass
+bio_japanese_sake_brewed	Medium	Japanese sake is brewed from which grain?	Rice	Barley	Wheat	Millet
+bio_scotch_whisky_made	Medium	Scotch whisky is made mainly from which grain?	Barley	Rice	Maize	Oats
+bio_juniper_berries_give	Medium	Juniper berries give its flavour to which spirit?	Gin	Vodka	Rum	Brandy
+bio_fruit_king_fruits	Medium	Which fruit, called 'the king of fruits', is famous for its terrible smell?	The durian	The jackfruit	The mangosteen	The lychee
+bio_largest_part_human	Medium	What is the largest part of the human brain?	The cerebrum	The cerebellum	The brainstem	The thalamus
+bio_besides_measles_mumps	Medium	Besides measles and mumps, which disease does the MMR vaccine protect against?	Rubella	Malaria	Rabies	Tetanus
+bio_vertigo	Medium	What is vertigo?	A spinning kind of dizziness	A fear of tight spaces	Ringing in the ears	Night blindness
+bio_sternum_better	Medium	What is the sternum better known as?	The breastbone	The collarbone	The shinbone	The tailbone
+bio_pointed_teeth_beside	Medium	What are the pointed teeth beside the front teeth called?	Canines	Molars	Incisors	Premolars
+bio_substance_gives_carrots	Medium	Which substance gives carrots their orange colour?	Beta-carotene	Chlorophyll	Melanin	Anthocyanin
+bio_created_vaccine_against	Medium	Who created the first vaccine against rabies, in 1885?	Louis Pasteur	Edward Jenner	Robert Koch	Joseph Lister
+bio_part_body_cochlea	Medium	In which part of the body is the cochlea?	The ear	The eye	The nose	The knee
+bio_body_humerus	Medium	Where in the body is the humerus?	In the upper arm	In the thigh	In the lower leg	In the spine
+bio_part_mouth_gingivitis	Medium	Which part of the mouth does gingivitis affect?	The gums	The tongue	The teeth	The lips
+bio_tree_produces_shiny	Medium	Which tree produces the shiny 'conkers' children play with?	Horse chestnut	Sweet chestnut	Oak	Beech
+bio_wood_tree_used	Medium	The wood of which tree is used for cricket bats?	Willow	Ash	Oak	Maple
+bio_yellow_flower_national	Medium	Which yellow flower is a national emblem of Wales?	Daffodil	Tulip	Primrose	Buttercup
+bio_fruit_fermented_make	Medium	Which fruit is fermented to make perry?	Pears	Apples	Plums	Cherries
+bio_american_bourbon_whiskey	Medium	American bourbon whiskey is made mainly from which grain?	Corn	Barley	Rye	Wheat
+bio_friendly_bacteria_turn	Medium	Which friendly bacteria turn milk into yogurt?	Lactobacillus	Salmonella	Listeria	Clostridium
+bio_swiss_psychiatrist_introduced	Medium	Which Swiss psychiatrist introduced the ideas of 'introverts' and 'extroverts'?	Carl Jung	Sigmund Freud	Jean Piaget	Hermann Rorschach
+bio_roughly_share_dna	Medium	Roughly what share of our DNA do we share with chimpanzees?	About 98%	About 75%	About 50%	About 90%
+bio_sweet_orange_natural	Medium	The sweet orange is a natural hybrid of the pomelo and which other fruit?	Mandarin	Lemon	Lime	Grapefruit
+bio_europe_sugar_made	Medium	Most of Europe's sugar is made from which crop?	Sugar beet	Sugar cane	Corn	Sorghum
+bio_disease_once_consumption	Medium	Which disease was once called 'consumption'?	Tuberculosis	Cholera	Leprosy	Typhoid
+bio_disease_spread_bite	Medium	Which disease is spread by the bite of the tsetse fly?	Sleeping sickness	Malaria	Yellow fever	Dengue
+bio_disease_lockjaw	Medium	Which disease is also known as 'lockjaw'?	Tetanus	Rabies	Diphtheria	Polio
+bio_gout_disease_kings	Medium	Gout, the 'disease of kings', most often strikes which part of the body?	The big toe	The knee	The elbow	The spine
+bio_cataracts_cloud_part	Medium	Cataracts cloud which part of the eye?	The lens	The retina	The cornea	The iris
+bio_vegetable_mostly_purple	Medium	Which vegetable was mostly purple or yellow before orange varieties spread in the 1600s?	Carrot	Beetroot	Pumpkin	Sweet potato
+bio_doctor_discovered_insulin	Medium	Which doctor discovered insulin with Charles Best in 1921?	Frederick Banting	Alexander Fleming	Joseph Lister	William Osler
+bio_yellowish_liquid_makes	Medium	What is the yellowish liquid that makes up about half of our blood called?	Plasma	Lymph	Serum	Bile
+bio_roughly_vertebrae_make	Medium	Roughly how many vertebrae make up the human spine?	33	12	52	206
+bio_ribs_typical_human	Medium	How many ribs does a typical human have?	24	12	20	32
+bio_mejoza	Hard	What is the cell division that produces sex cells called?	Meiosis	Mitosis	Cytokinesis	Apoptosis
+bio_mendel	Hard	Who is considered the father of genetics for his research on peas?	Gregor Mendel	Charles Darwin	James Watson	Francis Crick
+bio_mozdzek	Hard	Which part of the brain is responsible for balance and movement coordination?	Cerebellum	Cerebral cortex	Medulla oblongata	Hypothalamus
+bio_neuron	Hard	What is the place where one neuron passes a signal to another called?	Synapse	Axon	Dendrite	Myelin
+bio_nefron	Hard	What is the kidney's basic filtration unit called?	Nephron	Alveolus	Vesicle	Bile duct
+day2_pasteryzacja	Hard	What does pasteurization do?	Kills most harmful microbes with heat	Removes all bacteria permanently	Adds preservatives	Freezes the product
+bio2_krew_ph	Hard	What is the normal pH of human blood?	About 7.4	About 5.5	About 8.5	Exactly 7.0
+bio2_hormon_wzrostu	Hard	Which gland secretes growth hormone?	The pituitary gland	The thyroid	The thymus	The adrenal gland
+bio2_kodon	Hard	How many nucleotides make up one codon?	Three	Two	Four	Six
+bio3_leki_mozg	Hard	Why do many drugs that work elsewhere in the body fail to treat brain disease?	They cannot cross the blood-brain barrier	The brain has no blood supply	The brain destroys every drug at once	Brain cells have no receptors
+wh_dna_struktura	Hard	Which scientists described the DNA double helix in 1953?	Watson and Crick	Mendel and Morgan	Pasteur and Koch	Fleming and Florey
+day_witamina_gotowanie	Hard	Which vitamin is most easily destroyed by cooking?	Vitamin C	Vitamin D	Vitamin K	Vitamin E
+day_grupa_krwi_czesta	Hard	Which is the most common blood type worldwide?	O positive	A negative	AB positive	B negative
+day_wanilia_roslina	Hard	Vanilla flavouring comes from the pods of which plant family?	An orchid	A palm	A cactus	A fern
+trv_miesien_najsilniejszy	Hard	Which muscle exerts the most force for its size?	The masseter (jaw muscle)	The biceps	The calf muscle	The heart
+trv_witamina_krzepniecie	Hard	Which vitamin is essential for blood clotting?	Vitamin K	Vitamin C	Vitamin A	Vitamin B12
+trv_erytrocyt_zycie	Hard	How long does a red blood cell live, on average?	About 120 days	About 12 days	About a year	About 5 years
+trv_mrugniecie	Hard	Roughly how many times does a person blink per minute while awake?	About 15-20	About 2-3	About 50	About 100
+trv_dna_dlugosc	Hard	If you stretched out the DNA from a single human cell, roughly how long would it be?	About 2 metres	About 2 millimetres	About 2 centimetres	About 200 metres
+trv_kichniecie	Hard	What really happens if you try to sneeze with your eyes open?	Nothing bad - the eyes just close by reflex	The eyes could be forced out of their sockets	The sneeze comes out much weaker	You cannot sneeze at all that way
+trv_kofeina_dziala	Hard	How does caffeine keep you awake?	It blocks the brain's 'sleepy' signal, adenosine	It raises the level of sugar in the blood	It cools the brain by a fraction	It thickens the blood a little
+trv_skora_odnowa	Hard	Roughly how often does the outer layer of your skin fully replace itself?	About once a month	Once a day	Once a year	Once every 7 years
+trv_odruch_kolanowy	Hard	Where does the signal for the knee-jerk reflex get processed?	In the spinal cord	In the brain's frontal lobe	In the knee itself	In the cerebellum
+ext_jelito_powierzchnia	Hard	Spread flat, the lining of the human small intestine would cover roughly what?	A tennis court	A dinner table	A car park space	A football pitch
+ext_oko_rozdzielczosc	Hard	On a clear night the unaided human eye can see a candle flame from about how far?	A few kilometres	A few hundred metres	About 50 kilometres	Over 100 kilometres
+mst_bakterie_liczba	Hard	Roughly how do bacterial cells in your body compare with your own cells?	Comparable in number	A thousand times fewer	A million times more	Only a few thousand total
+dpt_bio_karotenoidy	Hard	Which pigments turn leaves yellow once chlorophyll fades?	Carotenoids	Anthocyanins	Phycocyanins	Melanins
+cur_banan_geny	Hard	Humans share roughly what share of their genes with a banana?	About 60%	About 5%	About 25%	About 95%
+wld_czerwone_krwinki_jadro	Hard	What do mature human red blood cells lack?	A nucleus	A membrane	Haemoglobin	Water
+wld_mozg_energia	Hard	The brain is about 2% of body weight. Roughly what share of the body's energy does it use?	About 20%	About 2%	About 50%	About 5%
+wld_bio_ziewanie	Hard	Which of these is thought to be one purpose of yawning?	Cooling the brain	Refilling the stomach with air	Cleaning the ears	Resetting the heartbeat
+wld_bio_gesia_skorka	Hard	Goosebumps are a leftover reflex that once did what for our ancestors?	Fluffed up body hair	Released a warning smell	Toughened the skin	Stopped bleeding
+wld_bio_wlosy_rosna	Hard	Roughly how fast does hair on your head grow?	About 1 cm a month	About 1 mm a month	About 5 cm a month	About 1 cm a year
+bio_rafflesia	Hard	Which plant produces the largest single flower in the world?	Rafflesia	The titan arum	The giant water lily	The sunflower
+bio_mucholowka	Hard	Where does the Venus flytrap grow in the wild?	The Carolinas in the USA	The Amazon rainforest	Borneo	Madagascar
+bio_truskawka_nasiona	Hard	Botanically, what are the little 'seeds' on the outside of a strawberry?	Tiny fruits	Pollen grains	Hairs	Buds
+bio_trzcina	Hard	Which crop is grown in the greatest quantity worldwide?	Sugar cane	Wheat	Rice	Maize
+bio_kiwi_nazwa	Hard	Kiwifruit used to be sold under which name?	Chinese gooseberry	Jungle plum	Hairy lemon	Fuzzy fig
+bio_komorki_liczba	Hard	Roughly how many cells make up a human body?	About 30 trillion	About 30 million	About 30 billion	About 30 quadrillion
+bio_hemofilia_krolewska	Hard	Which illness was called 'the royal disease' because it ran through Queen Victoria's descendants?	Haemophilia	Gout	Porphyria	Smallpox
+bio_plamka_slepa	Hard	Why does each eye have a blind spot?	The optic nerve leaves the retina there	Eyelashes block the light there	The iris covers that part	Tears drain away there
+bio_preciki	Hard	In very dim light we see mostly in shades of grey. Which cells take over then?	Rods	Cones	Ganglion cells	Iris muscles
+bio_hooke	Hard	Who first looked at cells under a microscope and named them, in 1665?	Robert Hooke	Antonie van Leeuwenhoek	Galileo Galilei	Isaac Newton
+bio_ab_minus	Hard	Which of the eight common blood types is the rarest?	AB negative	O negative	B positive	A negative
+bio_powieki	Hard	Where is the skin on your body the thinnest?	On the eyelids	On the lips	On the fingertips	On the earlobes
+bio_franklin	Hard	Whose X-ray image 'Photo 51' was key to working out the structure of DNA?	Rosalind Franklin's	Marie Curie's	Barbara McClintock's	Dorothy Hodgkin's
+bio_przeszczep_nerka	Hard	Which organ was the first to be transplanted successfully, in 1954?	A kidney	A heart	A liver	A lung
+bio_komorka_jajowa	Hard	Which is the largest cell in the human body?	The egg cell	The red blood cell	The white blood cell	The skin cell
+bio_naczynia_dlugosc	Hard	Laid end to end, roughly how long would all the blood vessels of an adult be?	About 100,000 km	About 100 km	About 1,000 km	About 10,000 km
+bio_pluca_plywaja	Hard	Which organ would float if you put it in water?	The lungs	The heart	The liver	The brain
+bio_azot_wydech	Hard	Which gas makes up most of the air you breathe out?	Nitrogen	Carbon dioxide	Oxygen	Water vapour
+bio_dlonie_stopy	Hard	Together, the hands and feet hold roughly what share of the body's bones?	More than half	About a tenth	About a quarter	About a third
+bio_nerwy_predkosc	Hard	The fastest nerve signals travel at roughly what speed?	About 400 km/h	About 5 km/h	About 40 km/h	The speed of light
+bio_mozg_tluszcz	Hard	Roughly what share of the human brain is fat?	About 60%	About 10%	About 30%	About 90%
+bio_pomarszczone_palce	Hard	What makes your fingertips wrinkle after a long bath?	Nerves narrowing blood vessels	Skin soaking up water	Salt washing out of the skin	Skin cells dying off
+bio_gardlo_kosc	Hard	Which bone is the only one not connected to any other bone?	The hyoid	The kneecap	The tailbone	The stapes
+bio_pot_gruczoly	Hard	Where does the skin have the most sweat glands per square centimetre?	The soles of the feet	The armpits	The forehead	The back
+bio_plankton_tlen	Hard	Roughly half of the oxygen we breathe is made where?	By ocean plankton	In rainforests	On grasslands	By farm crops
+biox_ananas	Hard	Roughly how long does a pineapple plant take to grow a single fruit?	About two years	About two weeks	About two months	About ten years
+biox_banan_ziolo	Hard	The banana plant is botanically what, rather than a tree?	A giant herb	A grass	A vine	A cactus
+biox_mieta	Hard	Why does mint make your mouth feel cold?	Menthol triggers cold-sensing nerves	It lowers the mouth's temperature	It numbs the tongue with oil	It releases tiny ice crystals
+biox_obieg_krwi	Hard	Roughly how long does it take blood to travel once around the whole body?	About a minute	About an hour	About ten seconds	About a day
+biox_slina	Hard	Roughly how much saliva does a person produce each day?	About a litre	About a teaspoon	About five litres	About ten litres
+biox_miesnie_liczba	Hard	Roughly how many muscles are there in the human body?	About 600	About 60	About 2,000	About 206
+biox_mozg_bol	Hard	Why can surgeons operate on an awake patient's brain without it hurting?	The brain has no pain receptors	The skull blocks the pain	The brain heals instantly	Brain cells are already numb
+biox_rude_wlosy	Hard	Which is the rarest natural hair colour?	Red	Blond	Black	Brown
+biox_sekwoja	Hard	Which is the largest tree on Earth by volume?	The giant sequoia	The baobab	The kauri	The Douglas fir
+biox_mimoza	Hard	Which plant folds up its leaves the moment you touch it?	The sensitive plant	The fern	The aloe vera	The spider plant
+biox_dzbanecznik	Hard	How does a pitcher plant catch insects?	Insects slip into digestive juice	It snaps shut like a jaw	It shoots sticky threads	It stings them with hairs
+bioy_neurony	Hard	Roughly how many neurons are there in the human brain?	About 86 billion	About 86 million	About 8,600	About 86 trillion
+bioy_cavendish	Hard	Almost all bananas sold in shops belong to which single variety?	Cavendish	Gros Michel	Plantain	Lady Finger
+bioy_serce_litry	Hard	Roughly how much blood does the heart pump in one day?	About 7,000 litres	About 70 litres	About 700 litres	About 70,000 litres
+bioy_ananas_enzym	Hard	Why does fresh pineapple make your tongue tingle?	Its enzyme digests proteins	It is very acidic	It has tiny spines	It contains natural caffeine
+bioy_papryka_c	Hard	Weight for weight, which of these has more vitamin C than an orange?	A red pepper	A banana	A potato	An apple
+bio_developed_widely_used	Hard	Who developed the first widely used polio vaccine, in 1955?	Jonas Salk	Louis Pasteur	Edward Jenner	Alexander Fleming
+bio_scientist_gave_plants	Hard	Which scientist gave plants and animals their two-part Latin names?	Carl Linnaeus	Charles Darwin	Gregor Mendel	Louis Pasteur
+bio_part_brain_controls	Hard	Which part of the brain controls breathing and heartbeat?	The brainstem	The cerebellum	The frontal lobe	The hippocampus
+bio_largest_joint_human	Hard	Which is the largest joint in the human body?	The knee	The hip	The shoulder	The elbow
+bio_roughly_bones_human	Hard	Roughly how many bones are there in one human hand?	27	12	19	35
+bio_saffron_comes_part	Hard	Saffron comes from which part of a flower?	The stigmas of a crocus	The petals of a rose	The seeds of a poppy	The roots of a lily
+bio_spice_made_dried	Hard	Which spice is made from the dried flower buds of a tree?	Cloves	Cinnamon	Nutmeg	Pepper
+bio_mri_scanner_use	Hard	What does an MRI scanner use to see inside the body?	Strong magnets and radio waves	A low dose of X-rays	High-frequency sound waves	Radioactive tracers in the blood
+bio_tea_leaves_come	Hard	Tea leaves come from a species of which flowering shrub?	Camellia	Jasmine	Magnolia	Gardenia
+bio_medical_heart_attack	Hard	What is the medical name for a heart attack?	Myocardial infarction	Cardiac arrhythmia	Pulmonary embolism	Cerebral aneurysm
+bio_daisy_comes_old	Hard	The name of the daisy comes from an old phrase meaning what?	Day's eye	Sun's child	Field star	Little pearl
+bio_fruit_once_love	Hard	Which fruit was once called the 'love apple'?	The tomato	The apple	The peach	The fig
+bio_body_not_repair	Hard	Which of these can the body NOT repair or regrow on its own?	Tooth enamel	Skin	Bone	The liver
+bio_common_pertussis	Hard	What is the common name for pertussis?	Whooping cough	Chickenpox	Measles	Mumps
+bio_amylaza	Expert	Which enzyme in saliva breaks down starch?	Amylase	Pepsin	Lipase	Trypsin
+bio_mrna	Expert	Which type of RNA carries genetic information from the nucleus to the ribosome?	mRNA	tRNA	rRNA	siRNA
+bio_ektoderma	Expert	Which germ layer does the nervous system develop from?	Ectoderm	Mesoderm	Endoderm	Notochord
+bio_atp	Expert	What is the compound that's the cell's main energy carrier called?	ATP	DNA	NADH	Glucose
+bio2_telomer	Expert	What protects chromosome ends from shortening?	Telomeres	Centromeres	Histones	Introns
+bio2_prion	Expert	What is a prion?	An infectious, misfolded protein	An RNA virus	An anaerobic bacterium	A DNA fragment
+bio2_krzyzowka_mendel	Expert	What phenotype ratio does a cross of two heterozygotes give in single-gene inheritance?	3:1	1:1	9:3:3:1	2:2
+bio2_stromatolit	Expert	Which organisms are credited with putting oxygen into Earth's atmosphere?	Cyanobacteria	Fungi	Methanogenic archaea	Diatoms
+bio3_optogenetyka	Expert	What is optogenetics used for?	Controlling neuron activity with light	Imaging bone through the soft tissue	Producing insulin in modified yeast	Cloning a whole animal from one cell
+bio3_bioluminescencja_mechanizm	Expert	What accounts for bioluminescence in most organisms?	A luciferase reaction with luciferin	Reflection of moonlight	Fluorescence of photosynthetic proteins	Electric discharges
+bio3_crispr_pochodzenie	Expert	Where does the CRISPR-Cas system used for gene editing today originally come from?	Bacteria's natural defense mechanism against viruses	A protein designed from scratch in a laboratory	The chloroplasts found inside plant cells	A protein borrowed from the HIV virus
+bio3_hipokamp_pamiec	Expert	Which brain structure turned out to be essential for forming new long-term memories?	The hippocampus	The cerebellum	The amygdala	The thalamus
+dpt_bio_hayflick	Expert	What does the Hayflick limit describe?	How often a normal cell can divide	How long an enzyme stays active	How fast a nerve signal travels	How much oxygen blood carries
+dpt_bio_endosymbioza	Expert	What does endosymbiotic theory explain?	Where mitochondria came from	How viruses infect bacteria	How one species splits in two	How enzymes settled on shape
+dpt_bio_hox	Expert	What do Hox genes set up in an embryo?	The body plan along its main axis	The number of chromosomes in it	The rate of cell respiration in it	The colour of its first tissues
+cur_rogowka_tlen	Expert	Which part of the body gets its oxygen straight from the air rather than from blood?	The cornea	The eardrum	The fingernails	The tongue
+wld_dna_zasady	Expert	Which base is found in RNA but not in DNA?	Uracil	Thymine	Adenine	Guanine
+wld_bio_zoladek_nowy	Expert	How often does the lining of your stomach renew itself?	Every few days	Every few years	Once in a lifetime	Every hour
+bio_mitochondria_matka	Expert	Which part of your DNA is inherited only from your mother?	Mitochondrial DNA	Nuclear DNA	The Y chromosome	Ribosomal RNA
+bio_zlota_krew	Expert	Rh-null blood, found in only a few dozen known people, is nicknamed what?	Golden blood	Royal blood	Blue blood	Silver blood
+bio_geny_liczba	Expert	Roughly how many protein-coding genes does a human have?	About 20,000	About 2,000	About 200,000	About 2 million
+bio_krwinki_sekunda	Expert	Roughly how many new red blood cells does your body make every second?	About 2 million	About 200	About 20,000	About 2 billion
+bio_landsteiner	Expert	Who discovered the ABO blood groups in 1901?	Karl Landsteiner	Louis Pasteur	Robert Koch	William Harvey
+bio_harvey	Expert	Who first described how the heart pumps blood around the body, in 1628?	William Harvey	Galen	Andreas Vesalius	Leonardo da Vinci
+bio_hela	Expert	Which famous line of human cells, taken in 1951, still grows in labs today?	HeLa cells	CHO cells	Vero cells	Jurkat cells
+bio_propriocepcja	Expert	What is the sense that tells you where your limbs are without looking?	Proprioception	Interoception	Nociception	Equilibrioception
+bio_matuzalem	Expert	Which kind of tree includes some of the oldest known individual trees, nearly 5,000 years old?	The bristlecone pine	The giant sequoia	The English yew	The baobab
+bio_leeuwenhoek	Expert	Who was the first person to see bacteria, through his own home-made microscopes?	Antonie van Leeuwenhoek	Robert Hooke	Louis Pasteur	Robert Koch
+bio_barnard	Expert	Who performed the first human-to-human heart transplant, in 1967?	Christiaan Barnard	Michael DeBakey	Denton Cooley	Joseph Murray
+bio_neuron_dlugi	Expert	Which human cells can be the longest, stretching up to about a metre?	Nerve cells	Muscle fibres	Egg cells	Skin cells
+bio_kofeina_pestycyd	Expert	Why do coffee plants produce caffeine in the first place?	To poison insects that eat them	To store energy for winter	To survive night frosts	To attract birds to the seeds
+biox_miesien_ucho	Expert	Where is the smallest muscle in the human body?	In the ear	In the eyelid	In the little finger	In the nose
+biox_lzy_rodzaje	Expert	How many kinds of tears do human eyes make?	Three	One	Two	Five
+biox_zielone_oczy	Expert	Which is thought to be the rarest of the common natural eye colours?	Green	Brown	Blue	Hazel
+biox_grzyb_oregon	Expert	The largest known living organism by area is a fungus growing in which US state?	Oregon	Alaska	Texas	Florida
+biox_drzewa_siec	Expert	Trees in a forest can share nutrients through underground networks of what?	Fungi	Earthworms	Ant tunnels	Rainwater channels
+bioy_zielone_pomarancze	Expert	Why are many ripe oranges in the tropics still green?	Warm nights keep their chlorophyll	They are a different species	They are picked too early	The soil lacks iron
+bioy_zapach_trawy	Expert	What is the smell of freshly cut grass, really?	A chemical distress signal	Chlorophyll evaporating	Soil bacteria waking up	Pollen bursting open
+bioy_insulina	Expert	In which country was insulin first used to treat diabetes, in 1922?	Canada	Germany	Britain	The USA

@@ -1,0 +1,236 @@
+# Pierwiastki i chemia z zycia: z czego cos jest zrobione, co swieci, co wybucha, skad nazwa.
+#
+# Fiszki "symbol O to...?" wylecialy prawie w calosci - zostaly tylko symbole, ktore nie wynikaja
+# z angielskiej nazwy (Fe, Au, Ag, Na, K, Cu, Pb, Sn, Sb), bo tam jest czego sie nauczyc.
+#
+# Zasady pisania pytan dla calego banku - patrz [com.lernhero.domain.quiz.QuizBank].
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+ele_symbol_fe	Easy	Which element hides behind the symbol Fe?	Iron	Fluorine	Phosphorus	Francium
+ele_symbol_au	Easy	Which element hides behind the symbol Au?	Gold	Silver	Copper	Aluminum
+ele_powietrze	Easy	Which gas is most abundant in air?	Nitrogen	Oxygen	Carbon dioxide	Argon
+ele_sol	Easy	Which elements make up table salt?	Sodium and chlorine	Potassium and chlorine	Sodium and sulfur	Calcium and chlorine
+pie2_gaz_balony	Easy	Which gas fills balloons so they float and don't ignite?	Helium	Hydrogen	Nitrogen	Oxygen
+pie2_metal_puszki	Easy	Which metal are lightweight drink cans made of?	Aluminum	Lead	Zinc	Chromium
+pie2_wapn_kosci	Easy	Which element builds bones and teeth?	Calcium	Iron	Potassium	Sodium
+scicmp_nie_gaz_szlachetny	Easy	Which of these is NOT a noble gas?	Nitrogen	Helium	Neon	Argon
+day_miedz_przewody	Easy	Which metal is used in most household electrical wiring?	Copper	Aluminium	Iron	Zinc
+trv2_banan_potas	Easy	Which element are bananas famously rich in?	Potassium	Calcium	Iron	Zinc
+trv2_chlor_basen	Easy	Which element is used to disinfect swimming pools?	Chlorine	Fluorine	Bromine	Iodine
+trv2_krzem_chipy	Easy	Which element is the basis of most computer chips?	Silicon	Carbon	Germanium	Copper
+trv2_uran_reaktor	Easy	Which element is the usual fuel in nuclear power plants?	Uranium	Plutonium only	Radium	Thorium
+trv2_wegiel_diament_grafit	Easy	Diamond and graphite are both made of which element?	Carbon	Silicon	Boron	Sulfur
+trv2_fluor_pasta	Easy	Which element is added to toothpaste to strengthen tooth enamel?	Fluorine (as fluoride)	Calcium	Chlorine	Sodium
+ext_diament_twardosc	Easy	On the Mohs scale, which mineral sits at the very top?	Diamond	Corundum	Topaz	Quartz
+cur_zloto_jadalne	Easy	Which metal can be eaten as leaf decoration on cakes without harm?	Gold	Lead	Mercury	Copper
+ele_wegiel_zycie	Easy	Organic chemistry is the chemistry of compounds built around which element?	Carbon	Oxygen	Nitrogen	Hydrogen
+ele_napoje_gazowane	Easy	Which gas puts the fizz in fizzy drinks?	Carbon dioxide	Oxygen	Nitrogen	Helium
+ele_olowek	Easy	A pencil 'lead' contains no lead at all. What is it mostly made of?	Graphite and clay	Lead oxide and wax	Charcoal and glue	Iron and soot
+ele_karat	Easy	What does the karat number tell you about a piece of gold?	How pure it is	How heavy it is	How old it is	How hard it is
+ele_krowy_metan	Easy	Which gas do cows release in huge amounts when they burp?	Methane	Oxygen	Hydrogen	Helium
+ele_kryptonit	Easy	Which of these is NOT a real chemical element?	Kryptonite	Krypton	Xenon	Radon
+ele_czad	Easy	Which colourless, odourless gas from faulty boilers can poison people?	Carbon monoxide	Carbon dioxide	Methane	Nitrogen
+ele_sacharoza	Easy	What is the chemical name for ordinary table sugar?	Sucrose	Glucose	Fructose	Lactose
+ele_geiger	Easy	What does a Geiger counter detect?	Radiation	Magnetism	Sound	Gas leaks
+ele_zarowka_wolfram	Easy	Which metal was used for the glowing filaments of old light bulbs?	Tungsten	Copper	Iron	Gold
+ele_metan_gaz	Easy	What is the main gas in the natural gas used for cooking and heating?	Methane	Propane	Butane	Hydrogen
+ele_rtec_termometr	Easy	Why were mercury thermometers phased out in many countries?	Mercury is toxic	Mercury is too expensive	Mercury freezes too easily	Mercury eats through glass
+ele_azot_lody	Easy	Which super-cold liquid do some cafes use to freeze ice cream in seconds?	Liquid nitrogen	Liquid oxygen	Liquid helium	Liquid hydrogen
+elex_magnes	Easy	Which of these metals is strongly attracted to a magnet?	Iron	Copper	Aluminium	Gold
+eley_zloto_blask	Easy	Why does gold jewellery stay shiny for centuries?	Gold hardly reacts with anything	It is coated with wax	It is mixed with plastic	Gold is too heavy to rust
+eley_ogien_tlen	Easy	Which gas from the air does a fire need to keep burning?	Oxygen	Nitrogen	Carbon dioxide	Helium
+ele_coal_made_mostly	Easy	Coal is made mostly of which element?	Carbon	Sulfur	Iron	Silicon
+ele_gas_powers_fuel	Easy	Which gas powers fuel-cell cars, leaving only water behind?	Hydrogen	Methane	Propane	Helium
+ele_trumpets_trombones_usually	Easy	Trumpets and trombones are usually made of which alloy?	Brass	Bronze	Steel	Pewter
+ele_dihydrogen_monoxide_chemical	Easy	What is 'dihydrogen monoxide', a chemical sometimes 'banned' in prank petitions?	Water	Salt	Bleach	Alcohol
+ele_eiffel_tower_built	Easy	The Eiffel Tower is built mainly from which metal?	Iron	Steel	Aluminium	Copper
+ele_symbol_ag	Medium	Which element hides behind the symbol Ag?	Silver	Gold	Argon	Aluminum
+ele_symbol_na	Medium	Which element hides behind the symbol Na?	Sodium	Nitrogen	Nickel	Neon
+ele_symbol_k	Medium	Which element hides behind the symbol K?	Potassium	Krypton	Calcium	Cobalt
+ele_symbol_cu	Medium	Which element hides behind the symbol Cu?	Copper	Cobalt	Chromium	Cesium
+ele_symbol_pb	Medium	Which element hides behind the symbol Pb?	Lead	Platinum	Palladium	Polonium
+pie2_gaz_szlachetny	Medium	Which group of elements almost never forms chemical compounds?	The noble gases	Alkali metals	Halogens	Lanthanides
+pie2_baterie_lit	Medium	Which element is key in phone batteries?	Lithium	Zinc	Nickel	Cadmium
+pie2_neon_reklamy	Medium	Which gas glows red in classic sign tubes?	Neon	Argon	Krypton	Xenon
+pie2_stal_sklad	Medium	What is steel mainly made of?	Iron and carbon	Iron and zinc	Copper and tin	Aluminum and silicon
+pie2_braz_stop	Medium	What is bronze, an alloy known since antiquity, made of?	Copper and tin	Copper and zinc	Iron and nickel	Lead and silver
+pie3_gaz_cieplarniany	Medium	Which gas is the main greenhouse gas from human activity?	Carbon dioxide	Oxygen	Nitrogen	Argon
+pie3_rdza_reakcja	Medium	What does iron react with to form rust?	Oxygen and water	Nitrogen	Hydrogen	Argon
+pie3_ocet_kwas	Medium	Which acid is found in vinegar?	Acetic acid	Hydrochloric acid	Sulfuric acid	Citric acid
+pie3_cytryna_kwas	Medium	Which acid gives lemon its sour taste?	Citric acid	Acetic acid	Lactic acid	Hydrochloric acid
+scicmp_najgestszy_metal_cmp	Medium	Which of these metals is the densest?	Gold	Iron	Aluminium	Lead
+trv2_jod_sol	Medium	Which element is added to table salt to prevent thyroid problems?	Iodine	Fluorine	Zinc	Magnesium
+trv2_rad_curie	Medium	Which glowing radioactive element did the Curies discover in 1898, alongside polonium?	Radium	Uranium	Plutonium	Thorium
+trv2_tytan_lekki	Medium	Which strong, lightweight metal is used in aircraft and hip implants?	Titanium	Tungsten	Nickel	Lead
+trv2_miedz_zielona	Medium	Why do copper roofs and statues turn green over time?	Copper reacts with air and water to form a green patina	Green algae slowly spread across the surface of the metal	The green paint underneath begins to show	Copper naturally holds green minerals
+trv2_kobalt_niebieski	Medium	Which metal gives 'cobalt blue' glass and ceramics their colour?	Cobalt	Copper	Chromium	Nickel
+ext_wolfram_topnienie	Medium	Which metal has the highest melting point?	Tungsten	Titanium	Platinum	Iron
+cur_hel_glos	Medium	Why does helium make your voice sound higher?	Sound travels faster through it	It tightens your vocal cords	It is lighter than your tongue	It cools your throat
+wld_ozon	Medium	Ozone is a molecule made of three atoms of what?	Oxygen	Nitrogen	Carbon	Hydrogen
+wld_ele_tlen_atmosfera	Medium	Roughly what share of the air we breathe is oxygen?	About 21%	About 78%	About 50%	About 1%
+wld_ele_zelazo_krew	Medium	Lack of which element in the diet can cause anaemia?	Iron	Zinc	Iodine	Calcium
+ele_linie_wysokiego	Medium	High-voltage overhead power lines mostly use cables of which metal?	Aluminium	Copper	Silver	Iron
+ele_poduszki_azot	Medium	Car airbags inflate in a split second by filling with which gas?	Nitrogen	Helium	Carbon dioxide	Oxygen
+ele_srebro_argentyna	Medium	Which country is named after the Latin word for silver?	Argentina	Chile	Peru	Uruguay
+ele_wodor_zeppelin	Medium	Which gas filled the Hindenburg airship that burned in 1937?	Hydrogen	Helium	Methane	Neon
+ele_sod_lampy	Medium	Which element gives old street lamps their orange-yellow glow?	Sodium	Neon	Mercury	Argon
+ele_siarkowodor	Medium	Which gas smells of rotten eggs?	Hydrogen sulfide	Ammonia	Methane	Chlorine
+ele_gaz_zapach	Medium	Natural gas has no smell of its own. What makes a gas leak smell?	An added sulfur compound	Methane itself	Traces of chlorine	Impurities from the ground
+ele_gaz_rozweselajacy	Medium	'Laughing gas' is an oxide of which element?	Nitrogen	Helium	Hydrogen	Chlorine
+ele_uran_planeta	Medium	Which element is named after a planet discovered in 1781?	Uranium	Neptunium	Plutonium	Cerium
+ele_skand	Medium	Which element is named after Scandinavia?	Scandium	Francium	Germanium	Polonium
+ele_tytan_nazwa	Medium	Titanium is named after whom?	The Titans of Greek myth	A Roman emperor	A German chemist	A Norse giant
+ele_tor	Medium	Which element is named after the Norse god of thunder?	Thorium	Titanium	Tantalum	Promethium
+ele_uran_naturalny	Medium	Which is the heaviest element found naturally in large amounts?	Uranium	Plutonium	Lead	Radium
+ele_arszenik	Medium	Which element did poisoners' victims fear as 'inheritance powder'?	Arsenic	Mercury	Lead	Thallium
+ele_sod_olej	Medium	Which metal is stored under oil because it reacts violently with water?	Sodium	Magnesium	Aluminium	Zinc
+ele_cynk_ocynk	Medium	Steel is 'galvanised' against rust by coating it with which metal?	Zinc	Tin	Chromium	Copper
+ele_wodor_nazwa	Medium	Which element's name means 'water-former'?	Hydrogen	Oxygen	Nitrogen	Helium
+ele_ozon_burza	Medium	The sharp, clean smell in the air after lightning comes from which gas?	Ozone	Nitrogen	Chlorine	Argon
+ele_magnez_flesz	Medium	Early photographers made their flashes by burning which metal?	Magnesium	Sodium	Copper	Zinc
+ele_biale_zloto	Medium	What is 'white gold'?	Gold mixed with white metals	A rare natural pale gold	Silver with a gold coating	Platinum under a trade name
+ele_piryt	Medium	What is 'fool's gold'?	Pyrite	Brass	Bronze	Quartz
+ele_srebro_sterling	Medium	Sterling silver is silver mixed with a little of which metal?	Copper	Tin	Lead	Nickel
+ele_soda_nazwa	Medium	What is baking soda's chemical name?	Sodium bicarbonate	Sodium chloride	Calcium carbonate	Potassium nitrate
+ele_wybielacz	Medium	Sodium hypochlorite is better known as what?	Bleach	Baking soda	Vinegar	Epsom salt
+ele_woda_utleniona	Medium	Which chemical with the formula H2O2 is used to bleach hair?	Hydrogen peroxide	Ammonia	Chlorine bleach	Acetone
+ele_nawozy_azot	Medium	Besides phosphorus and potassium, which element is a key ingredient of most fertilisers?	Nitrogen	Carbon	Calcium	Sulfur
+ele_wibranium	Medium	Which of these metals is fictional?	Vibranium	Rhodium	Osmium	Tantalum
+ele_zelazo_produkcja	Medium	Which metal is produced in by far the largest amounts worldwide?	Iron	Aluminium	Copper	Zinc
+ele_jod_rany	Medium	Which element's brown tincture was a classic disinfectant for cuts?	Iodine	Bromine	Chlorine	Sulfur
+ele_siarka	Medium	Which yellow element was once known as 'brimstone'?	Sulfur	Phosphorus	Gold	Chlorine
+ele_argon_zarowki	Medium	Which gas was sealed inside many old light bulbs to protect the filament?	Argon	Oxygen	Hydrogen	Chlorine
+elex_fajerwerki_zielen	Medium	Which element gives fireworks a bright green colour?	Barium	Strontium	Sodium	Calcium
+elex_pluton	Medium	Plutonium is named after what?	The dwarf planet Pluto	A mountain in Greece	The scientist who found it	The Latin word for 'heavy'
+elex_kalifornia	Medium	Which of these US states has a chemical element named after it?	California	Texas	Florida	Nevada
+elex_nikiel	Medium	The US five-cent coin is nicknamed after which metal?	Nickel	Copper	Zinc	Tin
+eley_halit	Medium	What is the mineral name of rock salt?	Halite	Calcite	Gypsum	Quartz
+eley_talk	Medium	Which is the softest mineral on the Mohs scale?	Talc	Gypsum	Calcite	Graphite
+ele_metal_oxide_white	Medium	Which metal's oxide is the white stuff in many mineral sunscreens?	Zinc	Lead	Tin	Silver
+ele_hat_makers_once	Medium	Hat makers once went 'mad' from breathing the fumes of which metal?	Mercury	Lead	Arsenic	Tin
+ele_metal_used_ordinary	Medium	Which metal is used in most ordinary car batteries?	Lead	Lithium	Nickel	Zinc
+ele_element_greek_word	Medium	Which element is named after the Greek word for the Sun?	Helium	Hydrogen	Selenium	Phosphorus
+ele_precious_metal_traditionally	Medium	Which precious metal was traditionally used to coat the backs of mirrors?	Silver	Gold	Platinum	Palladium
+ele_besides_uranium_element	Medium	Besides uranium, which element fuelled the first atomic bombs?	Plutonium	Thorium	Radium	Polonium
+ele_element_gives_fireworks	Medium	Which element gives fireworks a bright yellow colour?	Sodium	Sulfur	Potassium	Calcium
+ele_popeye_spinach_famously	Medium	Popeye's spinach was famously, and wrongly, thought to be super-rich in which element?	Iron	Calcium	Zinc	Potassium
+ele_gas_bubbles_swamps	Medium	Which gas bubbles up from swamps and was once called 'marsh gas'?	Methane	Ammonia	Ozone	Chlorine
+ele_ethanol_chemical	Medium	Ethanol is the chemical name for what?	The alcohol in drinks	Cooking gas	Vinegar	Nail polish remover
+ele_acid_fills_ordinary	Medium	Which acid fills an ordinary car battery?	Sulfuric acid	Hydrochloric acid	Nitric acid	Citric acid
+ele_acid_builds_milk	Medium	Which acid builds up in milk as it turns sour?	Lactic acid	Citric acid	Acetic acid	Formic acid
+ele_food_tin_cans	Medium	Food 'tin cans' are really steel coated with a thin layer of which metal?	Tin	Zinc	Aluminium	Nickel
+ele_purple_gemstone_variety	Medium	Which purple gemstone is a variety of quartz?	Amethyst	Sapphire	Garnet	Tanzanite
+ele_metal_mixed_gold	Medium	Which metal is mixed with gold to make 'rose gold'?	Copper	Silver	Zinc	Nickel
+ele_symbol_sn	Hard	Which element hides behind the symbol Sn?	Tin	Scandium	Selenium	Strontium
+ele_najczestszy	Hard	Which element is the most abundant in the Universe?	Hydrogen	Helium	Oxygen	Carbon
+ele_ilosc	Hard	How many elements does today's periodic table have?	118	108	92	120
+ele_cieklym	Hard	Which metal is liquid at room temperature?	Mercury	Lead	Tin	Gallium
+pie2_mosiadz_sklad	Hard	What is brass made of?	Copper and zinc	Copper and tin	Iron and chromium	Aluminum and magnesium
+pie2_stal_nierdzewna	Hard	Which addition makes steel stainless?	Chromium	Zinc	Lead	Calcium
+pie2_najgestszy_metal	Hard	Which element is the densest?	Osmium	Lead	Gold	Platinum
+scicmp_najczestszy_skorupa	Hard	Which element is the most abundant in the Earth's crust?	Oxygen	Silicon	Aluminium	Iron
+scicmp_najwyzsza_wrzenia	Hard	Which of these has the highest boiling point?	Iron	Water	Ethanol	Mercury
+trv2_europ	Hard	Which element is named after a continent?	Europium	Americium	Germanium	Polonium
+trv2_stront_fajerwerki	Hard	Which element gives fireworks a deep red colour?	Strontium	Copper	Sodium	Barium
+trv2_lit_najlzejszy	Hard	Which is the lightest metal?	Lithium	Aluminium	Magnesium	Sodium
+trv2_argon_leniwy	Hard	Which element's name comes from the Greek word for 'lazy' or 'idle'?	Argon	Neon	Krypton	Xenon
+trv2_brom_ciecz	Hard	Which halogen is a liquid at room temperature?	Bromine	Chlorine	Iodine	Fluorine
+trv2_boksyt_glin	Hard	Which metal is extracted from the ore bauxite?	Aluminium	Copper	Zinc	Titanium
+trv2_rtec_hg	Hard	Why is mercury's symbol Hg?	From its Latin name 'hydrargyrum'	From its discoverer's initials	From the Greek for 'heavy gas'	It was assigned at random
+trv2_hel_slonce	Hard	Which element was discovered in the Sun before it was found on Earth?	Helium	Hydrogen	Neon	Argon
+ext_hel_temperatura	Hard	Which element refuses to freeze solid at normal pressure, no matter how cold it gets?	Helium	Nitrogen	Hydrogen	Neon
+ext_zloto_kowalnosc	Hard	A single gram of gold can be beaten into a sheet of roughly what size?	About a square metre	A postage stamp	A sheet of paper	A tennis court
+mst_fosfor_nazwa	Hard	Phosphorus takes its name from a Greek phrase meaning what?	Light-bearer	Bone-maker	Fire-eater	Sea-salt
+cur_gal_dlon	Hard	Which metal melts in your hand, at about 30 °C?	Gallium	Aluminium	Tin	Magnesium
+cur_wolfram_litera	Hard	Why is tungsten's symbol W?	From its other name, wolfram	W stands for 'white metal'	It was the 23rd element found	Its discoverer was named Weber
+wld_ele_platyna	Hard	Which precious metal is used in car catalytic converters?	Platinum	Silver	Gold	Titanium
+ele_medal_zloty	Hard	What is an Olympic gold medal mostly made of?	Silver	Gold	Bronze	Copper
+ele_chlor_zielony	Hard	Which element's name comes from the Greek word for 'pale green'?	Chlorine	Chromium	Iodine	Cobalt
+ele_glin_drogi	Hard	Which metal was more precious than gold until a cheap way to make it was found in 1886?	Aluminium	Titanium	Platinum	Silver
+ele_argon_procent	Hard	Which gas makes up about 1% of the air, far more than carbon dioxide?	Argon	Neon	Helium	Hydrogen
+ele_fosfor_mocz	Hard	Which element did an alchemist first isolate in 1669 by boiling down urine?	Phosphorus	Sulfur	Mercury	Arsenic
+ele_kobalt_kobold	Hard	Which metal is named after the kobold, a goblin German miners blamed for poisonous ores?	Cobalt	Zinc	Bismuth	Tungsten
+ele_radium_girls	Hard	The 'Radium Girls' were poisoned at work in the 1920s while painting what?	Glowing watch dials	Toy soldiers	Porcelain plates	Road signs
+ele_zelazo_ziemia	Hard	Which element makes up the largest share of the Earth as a whole, by mass?	Iron	Oxygen	Silicon	Magnesium
+ele_ksenon	Hard	Which noble gas takes its name from the Greek word for 'stranger'?	Xenon	Neon	Radon	Helium
+ele_rubin_korund	Hard	Rubies and sapphires are both forms of which mineral?	Corundum	Quartz	Beryl	Topaz
+ele_ciezka_woda	Hard	What is 'heavy water'?	Water made with deuterium	Water with extra oxygen	Water full of dissolved metal	Water frozen under pressure
+ele_cent_cynk	Hard	Since 1982, US one-cent coins have been made mostly of which metal?	Zinc	Copper	Nickel	Steel
+ele_wodor_cialo	Hard	Counted atom by atom rather than by weight, which element is most common in your body?	Hydrogen	Oxygen	Carbon	Nitrogen
+ele_wapien	Hard	Limestone and marble are both made mostly of what?	Calcium carbonate	Calcium sulfate	Silicon dioxide	Sodium carbonate
+ele_kwarc	Hard	Quartz is made of silicon and which other element?	Oxygen	Carbon	Aluminium	Calcium
+ele_sol_epsom	Hard	Epsom salt is a sulfate of which metal?	Magnesium	Sodium	Calcium	Potassium
+ele_wolfram_nazwa	Hard	Tungsten's name means 'heavy stone' in which language?	Swedish	German	Latin	Greek
+ele_tlen_ciekly	Hard	What colour is liquid oxygen?	Pale blue	Clear	Pale green	Pale pink
+ele_hel_nurkowie	Hard	Which gas do deep-sea divers breathe with oxygen to avoid nitrogen narcosis?	Helium	Neon	Argon	Hydrogen
+ele_miedz_klamki	Hard	Door handles made of which metal kill many germs on their own?	Copper	Steel	Aluminium	Chrome
+ele_bizmut	Hard	Which metal forms rainbow-coloured crystals shaped like staircases?	Bismuth	Gallium	Tin	Cobalt
+ele_hel_ucieka	Hard	Why is helium slowly running out on Earth?	Once released, it escapes into space	The Sun keeps absorbing it	It turns into hydrogen over time	It sinks deep into the core
+ele_lit_leki	Hard	Which light metal is also used as a medicine for bipolar disorder?	Lithium	Magnesium	Potassium	Zinc
+ele_uran_szklo	Hard	Before the nuclear age, uranium was mainly used for what?	Colouring glass and pottery	Printing banknotes	Dyeing hair blonde	Making candles brighter
+ele_chlor_wojna	Hard	Which element was used in the first large-scale poison gas attack of World War I?	Chlorine	Fluorine	Bromine	Nitrogen
+ele_fluor_teflon	Hard	The non-stick coating Teflon is built from carbon and which element?	Fluorine	Chlorine	Silicon	Sulfur
+ele_neodym	Hard	The strongest permanent magnets contain which rare-earth element?	Neodymium	Lanthanum	Cerium	Gadolinium
+elex_fajerwerki_blekit	Hard	Which metal's compounds give fireworks their hard-to-make blue colour?	Copper	Barium	Sodium	Lithium
+elex_grafen	Hard	What is graphene?	A single layer of carbon atoms	A new kind of glass	A liquid metal	A form of frozen hydrogen
+elex_einstein	Hard	Which scientist is element 99 named after?	Albert Einstein	Isaac Newton	Niels Bohr	Enrico Fermi
+elex_srebro_mikroby	Hard	Why have silver cups and coins long been used to keep water fresh?	Silver kills many microbes	Silver keeps water cold	Silver adds healthy minerals	Silver takes out the salt
+elex_proch	Hard	Gunpowder is a mix of sulfur, charcoal and what?	Saltpetre	Table salt	Sugar	Chalk
+elex_krysztal_olow	Hard	Adding which metal to glass makes sparkling 'crystal' glassware?	Lead	Tin	Zinc	Nickel
+elex_zloto_baseny	Hard	All the gold ever mined would roughly fill how many Olympic swimming pools?	About four	About 400	About 40	Less than one
+eley_platyna	Hard	Which precious metal is rarer than gold in the Earth's crust?	Platinum	Silver	Copper	Aluminium
+eley_gips	Hard	Which soft mineral is used to make plaster and much blackboard chalk?	Gypsum	Talc	Quartz	Feldspar
+eley_azot_opony	Hard	Why are some racing car and aircraft tyres filled with nitrogen instead of air?	It expands less with heat	It is lighter than helium	It stops punctures	It smells less
+ele_acid_makes_ant	Hard	Which acid makes ant bites and nettle stings burn?	Formic acid	Citric acid	Acetic acid	Lactic acid
+ele_acid_gives_cola	Hard	Which acid gives cola drinks their tangy bite?	Phosphoric acid	Citric acid	Acetic acid	Sulfuric acid
+ele_pewter_alloy_made	Hard	Pewter is an alloy made mostly of which metal?	Tin	Lead	Zinc	Silver
+ele_element_greek_word_2	Hard	Which element is named after the Greek word for 'violet', the colour of its vapour?	Iodine	Indium	Iridium	Vanadium
+ele_sodium_hydroxide_better	Hard	Sodium hydroxide is better known by which name?	Caustic soda	Baking soda	Washing soda	Rock salt
+ele_acid_strong_used	Hard	Which acid is so strong it is used to etch glass?	Hydrofluoric acid	Citric acid	Acetic acid	Carbonic acid
+ele_lightweight_mag_wheels	Hard	Lightweight 'mag' wheels for cars were originally made from which metal?	Magnesium	Manganese	Mercury	Molybdenum
+ele_symbol_sb	Expert	Which element hides behind the symbol Sb?	Antimony	Strontium	Silver	Selenium
+ele_symbol_mn	Expert	Which element hides behind the symbol Mn?	Manganese	Magnesium	Molybdenum	Copper
+ele_curie	Expert	Which element did Marie Sklodowska-Curie name after her homeland?	Polonium	Radium	Uranium	Radon
+ele_mendelejew	Expert	Who devised the periodic table of elements?	Dmitri Mendeleev	Niels Bohr	Antoine Lavoisier	John Dalton
+pie2_pierwiastek_sztuczny	Expert	Which element was the first to be artificially produced?	Technetium	Plutonium	Francium	Astatine
+pie2_uran_izotop	Expert	Which uranium isotope is fissile and used in reactors?	Uranium-235	Uranium-238	Uranium-234	Uranium-240
+pie2_pierwiastek_kopernik	Expert	Who is the element with atomic number 112 named after?	Nicolaus Copernicus	Marie Sklodowska-Curie	Enrico Fermi	Niels Bohr
+pie2_aqua_regia	Expert	Which acid mixture dissolves gold?	Aqua regia	Sulfuric acid	Acetic acid	Hydrogen peroxide
+pie3_pierwiastek_najciezszy_stabilny	Expert	Which is the heaviest element with stable isotopes?	Lead	Bismuth	Uranium	Radium
+pie3_astat_rzadki	Expert	Which is the rarest naturally occurring element in Earth's crust?	Astatine	Francium	Promethium	Polonium
+trv2_magnez_chlorofil	Expert	Which metal sits at the centre of the chlorophyll molecule?	Magnesium	Iron	Zinc	Copper
+mst_cez_zegar	Expert	The modern definition of the second is based on which element?	Caesium	Rubidium	Strontium	Hydrogen
+dpt_pie_krypton_nazwa	Expert	Which noble gas is named from the Greek for 'hidden'?	Krypton	Xenon	Argon	Radon
+dpt_pie_itr_ytterby	Expert	Four elements are named after one Swedish village - which is one of them?	Yttrium	Scandium	Thulium	Lutetium
+dpt_pie_lantanowce	Expert	The lanthanides are better known under which name?	The rare earth elements	The noble gases	The alkali metals	The transition metals
+dpt_pie_wegiel_14	Expert	Which isotope is used to date organic remains?	Carbon-14	Uranium-238	Potassium-40	Argon-40
+ref_ele_selen_ksiezyc	Expert	Which element takes its name from the Greek word for the Moon?	Selenium	Tellurium	Cerium	Palladium
+ref_ele_tellur_ziemia	Expert	Which element takes its name from the Latin word for the Earth?	Tellurium	Selenium	Terbium	Germanium
+ref_ele_elektroujemnosc	Expert	Which element has the highest electronegativity?	Fluorine	Oxygen	Chlorine	Nitrogen
+ref_ele_cialo_masa	Expert	Which element makes up the largest share of the human body by mass?	Oxygen	Carbon	Hydrogen	Nitrogen
+ref_ele_radon_piwnice	Expert	Which radioactive noble gas can build up in basements?	Radon	Xenon	Krypton	Argon
+ref_ele_glin_skorupa	Expert	Which is the most abundant metal in Earth's crust?	Aluminium	Iron	Calcium	Sodium
+ref_ele_tryt	Expert	Tritium, used in glowing watch dials, is an isotope of which element?	Hydrogen	Helium	Lithium	Radium
+ref_ele_eka_glin	Expert	Which element did Mendeleev predict as 'eka-aluminium' before it was found?	Gallium	Germanium	Scandium	Indium
+ele_miedz_cypr	Expert	Copper's Latin name, cuprum, comes from which island?	Cyprus	Crete	Sicily	Sardinia
+ele_lutet	Expert	Which element is named after the Latin name for Paris?	Lutetium	Francium	Gallium	Europium
+ele_tantal	Expert	Which element is named after a mythical king tormented in the underworld?	Tantalum	Thorium	Promethium	Titanium
+ele_ameryk	Expert	Many household smoke detectors contain a tiny amount of which radioactive element?	Americium	Uranium	Radium	Polonium
+ele_tlen_nazwa	Expert	The name 'oxygen' comes from Greek words meaning what?	Acid-former	Life-giver	Fire-maker	Air-bringer
+ele_rubin_chrom	Expert	Which element gives rubies their red colour?	Chromium	Iron	Copper	Gold
+ele_uran_datowanie	Expert	The decay of which element is used to date rocks billions of years old?	Uranium	Carbon	Radium	Radon
+ele_meitner	Expert	Which physicist, a co-discoverer of nuclear fission, has element 109 named after her?	Lise Meitner	Marie Curie	Irene Joliot-Curie	Rosalind Franklin
+ele_seaborg	Expert	Who was the first person to have an element named after him while still alive?	Glenn Seaborg	Albert Einstein	Enrico Fermi	Dmitri Mendeleev
+ele_platyna	Expert	Platinum's name comes from the Spanish 'platina', meaning what?	Little silver	White gold	Heavy stone	River metal
+ele_ind_ekrany	Expert	Touchscreens rely on a see-through oxide of which rare metal?	Indium	Gallium	Germanium	Tellurium
+ele_osm_zapach	Expert	Osmium's name comes from the Greek word for what?	Smell	Heavy	Blue	Dense
+elex_nihonium	Expert	Nihonium, element 113, was the first element discovered in which Asian country?	Japan	China	South Korea	India
+elex_moskow	Expert	Which element, number 115, is named after the region around Moscow?	Moscovium	Dubnium	Livermorium	Tennessine
+elex_ksenon	Expert	Which noble gas fills the bright bluish-white headlamps of many cars?	Xenon	Neon	Argon	Radon
+elex_zloto_ocean	Expert	Roughly how much gold is dissolved in the world's oceans?	Millions of tonnes	A few kilograms	About 100 tonnes	None at all
+elex_tal	Expert	Which element, 'the poisoner's poison', is the murder weapon in Agatha Christie's 'The Pale Horse'?	Thallium	Arsenic	Cyanide	Strychnine
+eley_diament_cieplo	Expert	Diamond hardly conducts electricity, but it is an excellent conductor of what?	Heat	Sound only	Magnetism	Radio waves
+eley_iryd	Expert	A worldwide layer rich in which element supports the idea that an asteroid killed the dinosaurs?	Iridium	Uranium	Titanium	Cobalt
+eley_chrom	Expert	Chromium's name comes from the Greek word for what?	Colour	Mirror	Metal	Shine
+eley_brom	Expert	Bromine's name comes from the Greek word for what?	Stench	Brown	Bright	Water
+ele_element_greek_word_3	Expert	Which element is named after the Greek word for 'rainbow', for its colourful salts?	Iridium	Chromium	Rhodium	Bismuth
+ele_metal_comes_greek	Expert	Which metal's name comes from the Greek for 'stone', as it was first found in a mineral?	Lithium	Calcium	Barium	Strontium

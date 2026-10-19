@@ -1,3 +1,5 @@
+// PLIK GENEROWANY z domain/quizbank/elements.tsv przez `python3 tools/quizbank.py generate`.
+// Nie edytuj go recznie - pytania dopisuje sie do TSV (patrz domain/quizbank/README.md).
 package com.lernhero.domain.quiz.bank
 
 import com.lernhero.domain.quiz.QuizCategory
@@ -22,8 +24,13 @@ object ElementQuestions {
     private fun q(id: String, prompt: String, correct: String, wrong: List<String>, difficulty: QuizDifficulty) =
         QuizEntry(id = id, prompt = prompt, correct = correct, wrong = wrong, category = QuizCategory.Elements, difficulty = difficulty)
 
-    val all: List<QuizEntry> = listOf(
-        /* ------------------------------ Easy ------------------------------ */
+    val all: List<QuizEntry> = easy() + medium() + hard() + expert()
+
+    // Kazdy poziom w osobnej funkcji: jedna wielka lista w inicjalizatorze obiektu przekroczylaby
+    // z czasem limit 64 KB kodu na metode JVM (735 pytan historii zajmowalo w nim juz ~36 KB).
+
+    /* ------------------------------ Easy ------------------------------ */
+    private fun easy(): List<QuizEntry> = listOf(
         q("ele_symbol_fe", "Which element hides behind the symbol Fe?", "Iron", listOf("Fluorine", "Phosphorus", "Francium"), E),
         q("ele_symbol_au", "Which element hides behind the symbol Au?", "Gold", listOf("Silver", "Copper", "Aluminum"), E),
         q("ele_powietrze", "Which gas is most abundant in air?", "Nitrogen", listOf("Oxygen", "Carbon dioxide", "Argon"), E),
@@ -57,8 +64,15 @@ object ElementQuestions {
         q("elex_magnes", "Which of these metals is strongly attracted to a magnet?", "Iron", listOf("Copper", "Aluminium", "Gold"), E),
         q("eley_zloto_blask", "Why does gold jewellery stay shiny for centuries?", "Gold hardly reacts with anything", listOf("It is coated with wax", "It is mixed with plastic", "Gold is too heavy to rust"), E),
         q("eley_ogien_tlen", "Which gas from the air does a fire need to keep burning?", "Oxygen", listOf("Nitrogen", "Carbon dioxide", "Helium"), E),
+        q("ele_coal_made_mostly", "Coal is made mostly of which element?", "Carbon", listOf("Sulfur", "Iron", "Silicon"), E),
+        q("ele_gas_powers_fuel", "Which gas powers fuel-cell cars, leaving only water behind?", "Hydrogen", listOf("Methane", "Propane", "Helium"), E),
+        q("ele_trumpets_trombones_usually", "Trumpets and trombones are usually made of which alloy?", "Brass", listOf("Bronze", "Steel", "Pewter"), E),
+        q("ele_dihydrogen_monoxide_chemical", "What is 'dihydrogen monoxide', a chemical sometimes 'banned' in prank petitions?", "Water", listOf("Salt", "Bleach", "Alcohol"), E),
+        q("ele_eiffel_tower_built", "The Eiffel Tower is built mainly from which metal?", "Iron", listOf("Steel", "Aluminium", "Copper"), E)
+    )
 
-        /* ----------------------------- Medium ----------------------------- */
+    /* ----------------------------- Medium ----------------------------- */
+    private fun medium(): List<QuizEntry> = listOf(
         q("ele_symbol_ag", "Which element hides behind the symbol Ag?", "Silver", listOf("Gold", "Argon", "Aluminum"), M),
         q("ele_symbol_na", "Which element hides behind the symbol Na?", "Sodium", listOf("Nitrogen", "Nickel", "Neon"), M),
         q("ele_symbol_k", "Which element hides behind the symbol K?", "Potassium", listOf("Krypton", "Calcium", "Cobalt"), M),
@@ -121,8 +135,25 @@ object ElementQuestions {
         q("elex_nikiel", "The US five-cent coin is nicknamed after which metal?", "Nickel", listOf("Copper", "Zinc", "Tin"), M),
         q("eley_halit", "What is the mineral name of rock salt?", "Halite", listOf("Calcite", "Gypsum", "Quartz"), M),
         q("eley_talk", "Which is the softest mineral on the Mohs scale?", "Talc", listOf("Gypsum", "Calcite", "Graphite"), M),
+        q("ele_metal_oxide_white", "Which metal's oxide is the white stuff in many mineral sunscreens?", "Zinc", listOf("Lead", "Tin", "Silver"), M),
+        q("ele_hat_makers_once", "Hat makers once went 'mad' from breathing the fumes of which metal?", "Mercury", listOf("Lead", "Arsenic", "Tin"), M),
+        q("ele_metal_used_ordinary", "Which metal is used in most ordinary car batteries?", "Lead", listOf("Lithium", "Nickel", "Zinc"), M),
+        q("ele_element_greek_word", "Which element is named after the Greek word for the Sun?", "Helium", listOf("Hydrogen", "Selenium", "Phosphorus"), M),
+        q("ele_precious_metal_traditionally", "Which precious metal was traditionally used to coat the backs of mirrors?", "Silver", listOf("Gold", "Platinum", "Palladium"), M),
+        q("ele_besides_uranium_element", "Besides uranium, which element fuelled the first atomic bombs?", "Plutonium", listOf("Thorium", "Radium", "Polonium"), M),
+        q("ele_element_gives_fireworks", "Which element gives fireworks a bright yellow colour?", "Sodium", listOf("Sulfur", "Potassium", "Calcium"), M),
+        q("ele_popeye_spinach_famously", "Popeye's spinach was famously, and wrongly, thought to be super-rich in which element?", "Iron", listOf("Calcium", "Zinc", "Potassium"), M),
+        q("ele_gas_bubbles_swamps", "Which gas bubbles up from swamps and was once called 'marsh gas'?", "Methane", listOf("Ammonia", "Ozone", "Chlorine"), M),
+        q("ele_ethanol_chemical", "Ethanol is the chemical name for what?", "The alcohol in drinks", listOf("Cooking gas", "Vinegar", "Nail polish remover"), M),
+        q("ele_acid_fills_ordinary", "Which acid fills an ordinary car battery?", "Sulfuric acid", listOf("Hydrochloric acid", "Nitric acid", "Citric acid"), M),
+        q("ele_acid_builds_milk", "Which acid builds up in milk as it turns sour?", "Lactic acid", listOf("Citric acid", "Acetic acid", "Formic acid"), M),
+        q("ele_food_tin_cans", "Food 'tin cans' are really steel coated with a thin layer of which metal?", "Tin", listOf("Zinc", "Aluminium", "Nickel"), M),
+        q("ele_purple_gemstone_variety", "Which purple gemstone is a variety of quartz?", "Amethyst", listOf("Sapphire", "Garnet", "Tanzanite"), M),
+        q("ele_metal_mixed_gold", "Which metal is mixed with gold to make 'rose gold'?", "Copper", listOf("Silver", "Zinc", "Nickel"), M)
+    )
 
-        /* ------------------------------ Hard ------------------------------ */
+    /* ------------------------------ Hard ------------------------------ */
+    private fun hard(): List<QuizEntry> = listOf(
         q("ele_symbol_sn", "Which element hides behind the symbol Sn?", "Tin", listOf("Scandium", "Selenium", "Strontium"), H),
         q("ele_najczestszy", "Which element is the most abundant in the Universe?", "Hydrogen", listOf("Helium", "Oxygen", "Carbon"), H),
         q("ele_ilosc", "How many elements does today's periodic table have?", "118", listOf("108", "92", "120"), H),
@@ -183,8 +214,17 @@ object ElementQuestions {
         q("eley_platyna", "Which precious metal is rarer than gold in the Earth's crust?", "Platinum", listOf("Silver", "Copper", "Aluminium"), H),
         q("eley_gips", "Which soft mineral is used to make plaster and much blackboard chalk?", "Gypsum", listOf("Talc", "Quartz", "Feldspar"), H),
         q("eley_azot_opony", "Why are some racing car and aircraft tyres filled with nitrogen instead of air?", "It expands less with heat", listOf("It is lighter than helium", "It stops punctures", "It smells less"), H),
+        q("ele_acid_makes_ant", "Which acid makes ant bites and nettle stings burn?", "Formic acid", listOf("Citric acid", "Acetic acid", "Lactic acid"), H),
+        q("ele_acid_gives_cola", "Which acid gives cola drinks their tangy bite?", "Phosphoric acid", listOf("Citric acid", "Acetic acid", "Sulfuric acid"), H),
+        q("ele_pewter_alloy_made", "Pewter is an alloy made mostly of which metal?", "Tin", listOf("Lead", "Zinc", "Silver"), H),
+        q("ele_element_greek_word_2", "Which element is named after the Greek word for 'violet', the colour of its vapour?", "Iodine", listOf("Indium", "Iridium", "Vanadium"), H),
+        q("ele_sodium_hydroxide_better", "Sodium hydroxide is better known by which name?", "Caustic soda", listOf("Baking soda", "Washing soda", "Rock salt"), H),
+        q("ele_acid_strong_used", "Which acid is so strong it is used to etch glass?", "Hydrofluoric acid", listOf("Citric acid", "Acetic acid", "Carbonic acid"), H),
+        q("ele_lightweight_mag_wheels", "Lightweight 'mag' wheels for cars were originally made from which metal?", "Magnesium", listOf("Manganese", "Mercury", "Molybdenum"), H)
+    )
 
-        /* ----------------------------- Expert ----------------------------- */
+    /* ----------------------------- Expert ----------------------------- */
+    private fun expert(): List<QuizEntry> = listOf(
         q("ele_symbol_sb", "Which element hides behind the symbol Sb?", "Antimony", listOf("Strontium", "Silver", "Selenium"), X),
         q("ele_symbol_mn", "Which element hides behind the symbol Mn?", "Manganese", listOf("Magnesium", "Molybdenum", "Copper"), X),
         q("ele_curie", "Which element did Marie Sklodowska-Curie name after her homeland?", "Polonium", listOf("Radium", "Uranium", "Radon"), X),
@@ -229,6 +269,8 @@ object ElementQuestions {
         q("eley_diament_cieplo", "Diamond hardly conducts electricity, but it is an excellent conductor of what?", "Heat", listOf("Sound only", "Magnetism", "Radio waves"), X),
         q("eley_iryd", "A worldwide layer rich in which element supports the idea that an asteroid killed the dinosaurs?", "Iridium", listOf("Uranium", "Titanium", "Cobalt"), X),
         q("eley_chrom", "Chromium's name comes from the Greek word for what?", "Colour", listOf("Mirror", "Metal", "Shine"), X),
-        q("eley_brom", "Bromine's name comes from the Greek word for what?", "Stench", listOf("Brown", "Bright", "Water"), X)
+        q("eley_brom", "Bromine's name comes from the Greek word for what?", "Stench", listOf("Brown", "Bright", "Water"), X),
+        q("ele_element_greek_word_3", "Which element is named after the Greek word for 'rainbow', for its colourful salts?", "Iridium", listOf("Chromium", "Rhodium", "Bismuth"), X),
+        q("ele_metal_comes_greek", "Which metal's name comes from the Greek for 'stone', as it was first found in a mineral?", "Lithium", listOf("Calcium", "Barium", "Strontium"), X)
     )
 }

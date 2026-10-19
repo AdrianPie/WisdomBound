@@ -1,3 +1,5 @@
+// PLIK GENEROWANY z domain/quizbank/biology.tsv przez `python3 tools/quizbank.py generate`.
+// Nie edytuj go recznie - pytania dopisuje sie do TSV (patrz domain/quizbank/README.md).
 package com.lernhero.domain.quiz.bank
 
 import com.lernhero.domain.quiz.QuizCategory
@@ -24,8 +26,13 @@ object BiologyQuestions {
     private fun q(id: String, prompt: String, correct: String, wrong: List<String>, difficulty: QuizDifficulty) =
         QuizEntry(id = id, prompt = prompt, correct = correct, wrong = wrong, category = QuizCategory.Biology, difficulty = difficulty)
 
-    val all: List<QuizEntry> = listOf(
-        /* ------------------------------ Easy ------------------------------ */
+    val all: List<QuizEntry> = easy() + medium() + hard() + expert()
+
+    // Kazdy poziom w osobnej funkcji: jedna wielka lista w inicjalizatorze obiektu przekroczylaby
+    // z czasem limit 64 KB kodu na metode JVM (735 pytan historii zajmowalo w nim juz ~36 KB).
+
+    /* ------------------------------ Easy ------------------------------ */
+    private fun easy(): List<QuizEntry> = listOf(
         q("bio_skora", "Which human organ is the largest?", "Skin", listOf("Liver", "Lungs", "Small intestine"), E),
         q("bio_kosci", "How many bones does an adult human skeleton have?", "206", listOf("152", "300", "180"), E),
         q("bio2_zeby", "How many teeth does an adult human have, wisdom teeth included?", "32", listOf("28", "36", "24"), E),
@@ -73,8 +80,54 @@ object BiologyQuestions {
         q("biox_oczy_brazowe", "Which is the most common eye colour in the world?", "Brown", listOf("Blue", "Green", "Grey"), E),
         q("bioy_serce_strona", "On which side of the chest does most of the human heart sit?", "The left", listOf("The right", "Exactly in the middle", "It moves around"), E),
         q("bioy_sloje", "How can you tell the age of a tree that has been cut down?", "By counting its rings", listOf("By measuring its height", "By its bark colour", "By counting its branches"), E),
+        q("bio_normal_human_body", "What is the normal human body temperature?", "About 37 °C", listOf("About 35 °C", "About 39 °C", "About 33 °C"), E),
+        q("bio_blood_cells_fight", "Which blood cells fight infections?", "White blood cells", listOf("Red blood cells", "Platelets", "Nerve cells"), E),
+        q("bio_blood_vessels_carry", "Which blood vessels carry blood away from the heart?", "Arteries", listOf("Veins", "Capillaries", "Lymph vessels"), E),
+        q("bio_body_system_fights", "Which body system fights off germs and disease?", "The immune system", listOf("The nervous system", "The digestive system", "The endocrine system"), E),
+        q("bio_coloured_part_eye", "What is the coloured part of the eye called?", "The iris", listOf("The pupil", "The retina", "The cornea"), E),
+        q("bio_disease_affects_body", "Which disease affects how the body uses insulin to control blood sugar?", "Diabetes", listOf("Asthma", "Anaemia", "Arthritis"), E),
+        q("bio_ancient_greek_doctor", "Which ancient Greek doctor is called 'the father of medicine'?", "Hippocrates", listOf("Aristotle", "Galen", "Archimedes"), E),
+        q("bio_bees_carry_flower", "What do bees carry from flower to flower, helping plants make seeds?", "Pollen", listOf("Nectar", "Honey", "Wax"), E),
+        q("bio_tree_pink_spring", "Which tree's pink spring blossom is celebrated all over Japan with 'hanami' picnics?", "The cherry", listOf("The magnolia", "The almond", "The apple"), E),
+        q("bio_plant_national_symbol", "Which plant is a national symbol of Ireland?", "The shamrock", listOf("The thistle", "The rose", "The daffodil"), E),
+        q("bio_fruit_mashed_make", "Which fruit is mashed to make guacamole?", "Avocado", listOf("Lime", "Mango", "Kiwi"), E),
+        q("bio_prunes_dried_versions", "Prunes are dried versions of which fruit?", "Plums", listOf("Grapes", "Figs", "Apricots"), E),
+        q("bio_fruit_classically_used", "Which fruit is classically used to make marmalade?", "Oranges", listOf("Strawberries", "Apples", "Plums"), E),
+        q("bio_herb_main_flavour", "Which herb is the main flavour in Italian pesto?", "Basil", listOf("Parsley", "Oregano", "Mint"), E),
+        q("bio_hops_used_flavour", "Hops are used to flavour which drink?", "Beer", listOf("Wine", "Cider", "Gin"), E),
+        q("bio_vegetable_fermented_make", "Which vegetable is fermented to make sauerkraut?", "Cabbage", listOf("Cucumber", "Carrot", "Beetroot"), E),
+        q("bio_shiver_cold", "Why do we shiver when we are cold?", "Twitching muscles make heat", listOf("It pumps blood faster", "It shakes off cold air", "It burns stored fat"), E),
+        q("bio_heimlich_manoeuvre_used", "What is the Heimlich manoeuvre used for?", "Helping someone who is choking", listOf("Waking someone who has fainted", "Setting a broken arm", "Stopping a nosebleed"), E),
+        q("bio_hay_fever_allergy", "What is hay fever an allergy to?", "Pollen", listOf("Dust", "Hay", "Cat hair"), E),
+        q("bio_disease_mosquitoes_spread", "Which disease do mosquitoes spread in tropical countries, causing fever and chills?", "Malaria", listOf("Cholera", "Tuberculosis", "Measles"), E),
+        q("bio_conjunctivitis_infection_part", "Conjunctivitis is an infection of which part of the body?", "The eye", listOf("The ear", "The throat", "The skin"), E),
+        q("bio_instrument_doctor_use", "Which instrument does a doctor use to listen to your heart and lungs?", "A stethoscope", listOf("A thermometer", "An otoscope", "A sphygmomanometer"), E),
+        q("bio_bony_cage_protects", "Which bony cage protects the heart and lungs?", "The rib cage", listOf("The pelvis", "The skull", "The spine"), E),
+        q("bio_organ_damaged_stroke", "Which organ is damaged by a stroke?", "The brain", listOf("The heart", "The lungs", "The liver"), E),
+        q("bio_fracture", "What is a fracture?", "A broken bone", listOf("A torn muscle", "A deep cut", "A bad bruise"), E),
+        q("bio_insomnia", "What is insomnia?", "Trouble sleeping", listOf("Fear of heights", "Loss of memory", "A skin rash"), E),
+        q("bio_body_achilles_tendon", "Where in the body is the Achilles tendon?", "At the back of the heel", listOf("Behind the knee", "In the shoulder", "In the wrist"), E),
+        q("bio_red_blood_cells", "What do red blood cells carry around the body?", "Oxygen", listOf("Hormones", "Germs", "Fat"), E),
+        q("bio_flower_classic_symbol", "Which flower is the classic symbol of romantic love?", "The red rose", listOf("The white lily", "The yellow tulip", "The daisy"), E),
+        q("bio_nuts_main_ingredient", "Which nuts are the main ingredient of Nutella?", "Hazelnuts", listOf("Almonds", "Peanuts", "Walnuts"), E),
+        q("bio_herb_muddled_mojito", "Which herb is muddled into a mojito cocktail?", "Mint", listOf("Basil", "Parsley", "Coriander"), E),
+        q("bio_foods_source_omega", "Which of these foods is a famous source of omega-3 fats?", "Salmon", listOf("White bread", "Potatoes", "Rice"), E),
+        q("bio_organ_asthma_affect", "Which organ does asthma affect?", "The lungs", listOf("The heart", "The stomach", "The liver"), E),
+        q("bio_tree_winged_seeds", "Which tree's winged seeds spin down like little helicopters?", "Maple", listOf("Oak", "Pine", "Birch"), E),
+        q("bio_wine_corks_made", "Wine corks are made from the bark of which tree?", "Cork oak", listOf("Birch", "Pine", "Beech"), E),
+        q("bio_austrian_doctor_founded", "Which Austrian doctor founded psychoanalysis?", "Sigmund Freud", listOf("Carl Jung", "Alfred Adler", "Viktor Frankl"), E),
+        q("bio_russian_scientist_trained", "Which Russian scientist trained dogs to drool at a signal that meant food was coming?", "Ivan Pavlov", listOf("Dmitri Mendeleev", "Ivan Sechenov", "Lev Vygotsky"), E),
+        q("bio_carnivorous_plant_snaps", "Which carnivorous plant snaps its leaves shut on insects?", "Venus flytrap", listOf("Pitcher plant", "Sundew", "Bladderwort"), E),
+        q("bio_popcorn_special_variety", "Popcorn is a special variety of which grain?", "Maize", listOf("Rice", "Wheat", "Sorghum"), E),
+        q("bio_scale_measures_heat", "Which scale measures the heat of chili peppers?", "Scoville", listOf("Mohs", "Richter", "Beaufort"), E),
+        q("bio_prized_fungi_pigs", "Which prized fungi do pigs and dogs sniff out underground?", "Truffles", listOf("Morels", "Chanterelles", "Porcini"), E),
+        q("bio_flower_young_heads", "Which flower's young heads turn to follow the Sun across the sky?", "Sunflower", listOf("Daisy", "Tulip", "Marigold"), E),
+        q("bio_body_blood_cells", "Where in the body are most blood cells made?", "In the bone marrow", listOf("In the liver", "In the heart", "In the spleen"), E),
+        q("bio_common_weed_spreads", "Which common weed spreads its seeds on tiny white 'parachutes'?", "Dandelion", listOf("Nettle", "Clover", "Ivy"), E)
+    )
 
-        /* ----------------------------- Medium ----------------------------- */
+    /* ----------------------------- Medium ----------------------------- */
+    private fun medium(): List<QuizEntry> = listOf(
         q("bio_chromosomy", "How many chromosomes does a healthy human cell have?", "46", listOf("23", "48", "44"), M),
         q("bio_chlorofil", "Which pigment gives plants their green color?", "Chlorophyll", listOf("Carotene", "Melanin", "Hemoglobin"), M),
         q("bio_insulina", "Which organ produces insulin?", "Pancreas", listOf("Liver", "Kidneys", "Thyroid"), M),
@@ -155,8 +208,65 @@ object BiologyQuestions {
         q("bioy_kaktus_kolce", "What are a cactus's spines, botanically?", "Modified leaves", listOf("Hardened hairs", "Tiny branches", "Dried flowers"), M),
         q("bioy_rano_wyzszy", "At what time of day are most people slightly taller?", "In the morning", listOf("In the evening", "At noon", "At midnight"), M),
         q("bioy_ziemniak_trujacy", "Which part of a potato plant is poisonous?", "The leaves and green berries", listOf("The white flesh of the tuber", "Only the roots", "No part at all"), M),
+        q("bio_prickly_plant_national", "Which prickly plant is the national emblem of Scotland?", "The thistle", listOf("The shamrock", "The heather", "The gorse"), M),
+        q("bio_flower_national_flower", "Which flower is the national flower of India?", "The lotus", listOf("The rose", "The jasmine", "The marigold"), M),
+        q("bio_common_clavicle", "What is the common name for the clavicle?", "The collarbone", listOf("The shinbone", "The breastbone", "The kneecap"), M),
+        q("bio_tibia_better_bone", "The tibia is better known as which bone?", "The shinbone", listOf("The thighbone", "The collarbone", "The breastbone"), M),
+        q("bio_connects_muscles_bones", "What connects muscles to bones?", "Tendons", listOf("Ligaments", "Cartilage", "Nerves"), M),
+        q("bio_tiny_blood_vessels", "What are the tiny blood vessels linking arteries and veins called?", "Capillaries", listOf("Valves", "Ventricles", "Alveoli"), M),
+        q("bio_organ_stores_bile", "Which organ stores the bile made by the liver?", "The gallbladder", listOf("The pancreas", "The spleen", "The bladder"), M),
+        q("bio_platelets_blood", "What do platelets in the blood do?", "Help blood to clot", listOf("Carry oxygen", "Fight germs", "Carry hormones"), M),
+        q("bio_cpr_stand", "What does CPR stand for?", "Cardiopulmonary resuscitation", listOf("Cardiac pressure release", "Central pulse recovery", "Critical patient revival"), M),
+        q("bio_defibrillator", "What does a defibrillator do?", "Shocks the heart back into rhythm", listOf("Helps a patient to breathe", "Measures blood sugar", "Filters the blood"), M),
+        q("bio_organ_hepatitis_attack", "Which organ does hepatitis attack?", "The liver", listOf("The kidneys", "The lungs", "The heart"), M),
+        q("bio_medical_short_sightedness", "What is the medical name for short-sightedness?", "Myopia", listOf("Hyperopia", "Astigmatism", "Glaucoma"), M),
+        q("bio_medical_high_blood", "What is the medical name for high blood pressure?", "Hypertension", listOf("Hypotension", "Hyperglycaemia", "Tachycardia"), M),
+        q("bio_common_painkiller_made", "Which common painkiller was first made from a chemical in willow bark?", "Aspirin", listOf("Paracetamol", "Ibuprofen", "Morphine"), M),
+        q("bio_everyday_varicella_itchy", "What is the everyday name for varicella, an itchy childhood illness?", "Chickenpox", listOf("Measles", "Mumps", "Rubella"), M),
+        q("bio_gram_gram_gives", "Gram for gram, which of these gives the body the most energy?", "Fat", listOf("Protein", "Sugar", "Fibre"), M),
+        q("bio_natural_sugar_found", "What is the natural sugar found in fruit called?", "Fructose", listOf("Lactose", "Sucrose", "Maltose"), M),
+        q("bio_trees_lose_leaves", "What are trees that lose their leaves in autumn called?", "Deciduous", listOf("Evergreen", "Coniferous", "Perennial"), M),
+        q("bio_nuts_traditionally_used", "Which nuts are traditionally used in pesto?", "Pine nuts", listOf("Walnuts", "Almonds", "Cashews"), M),
+        q("bio_tahini_paste_made", "Tahini is a paste made from which seeds?", "Sesame", listOf("Sunflower", "Pumpkin", "Poppy"), M),
+        q("bio_alcoholic_drink_made", "Which alcoholic drink is made by fermenting honey?", "Mead", listOf("Cider", "Sake", "Kvass"), M),
+        q("bio_japanese_sake_brewed", "Japanese sake is brewed from which grain?", "Rice", listOf("Barley", "Wheat", "Millet"), M),
+        q("bio_scotch_whisky_made", "Scotch whisky is made mainly from which grain?", "Barley", listOf("Rice", "Maize", "Oats"), M),
+        q("bio_juniper_berries_give", "Juniper berries give its flavour to which spirit?", "Gin", listOf("Vodka", "Rum", "Brandy"), M),
+        q("bio_fruit_king_fruits", "Which fruit, called 'the king of fruits', is famous for its terrible smell?", "The durian", listOf("The jackfruit", "The mangosteen", "The lychee"), M),
+        q("bio_largest_part_human", "What is the largest part of the human brain?", "The cerebrum", listOf("The cerebellum", "The brainstem", "The thalamus"), M),
+        q("bio_besides_measles_mumps", "Besides measles and mumps, which disease does the MMR vaccine protect against?", "Rubella", listOf("Malaria", "Rabies", "Tetanus"), M),
+        q("bio_vertigo", "What is vertigo?", "A spinning kind of dizziness", listOf("A fear of tight spaces", "Ringing in the ears", "Night blindness"), M),
+        q("bio_sternum_better", "What is the sternum better known as?", "The breastbone", listOf("The collarbone", "The shinbone", "The tailbone"), M),
+        q("bio_pointed_teeth_beside", "What are the pointed teeth beside the front teeth called?", "Canines", listOf("Molars", "Incisors", "Premolars"), M),
+        q("bio_substance_gives_carrots", "Which substance gives carrots their orange colour?", "Beta-carotene", listOf("Chlorophyll", "Melanin", "Anthocyanin"), M),
+        q("bio_created_vaccine_against", "Who created the first vaccine against rabies, in 1885?", "Louis Pasteur", listOf("Edward Jenner", "Robert Koch", "Joseph Lister"), M),
+        q("bio_part_body_cochlea", "In which part of the body is the cochlea?", "The ear", listOf("The eye", "The nose", "The knee"), M),
+        q("bio_body_humerus", "Where in the body is the humerus?", "In the upper arm", listOf("In the thigh", "In the lower leg", "In the spine"), M),
+        q("bio_part_mouth_gingivitis", "Which part of the mouth does gingivitis affect?", "The gums", listOf("The tongue", "The teeth", "The lips"), M),
+        q("bio_tree_produces_shiny", "Which tree produces the shiny 'conkers' children play with?", "Horse chestnut", listOf("Sweet chestnut", "Oak", "Beech"), M),
+        q("bio_wood_tree_used", "The wood of which tree is used for cricket bats?", "Willow", listOf("Ash", "Oak", "Maple"), M),
+        q("bio_yellow_flower_national", "Which yellow flower is a national emblem of Wales?", "Daffodil", listOf("Tulip", "Primrose", "Buttercup"), M),
+        q("bio_fruit_fermented_make", "Which fruit is fermented to make perry?", "Pears", listOf("Apples", "Plums", "Cherries"), M),
+        q("bio_american_bourbon_whiskey", "American bourbon whiskey is made mainly from which grain?", "Corn", listOf("Barley", "Rye", "Wheat"), M),
+        q("bio_friendly_bacteria_turn", "Which friendly bacteria turn milk into yogurt?", "Lactobacillus", listOf("Salmonella", "Listeria", "Clostridium"), M),
+        q("bio_swiss_psychiatrist_introduced", "Which Swiss psychiatrist introduced the ideas of 'introverts' and 'extroverts'?", "Carl Jung", listOf("Sigmund Freud", "Jean Piaget", "Hermann Rorschach"), M),
+        q("bio_roughly_share_dna", "Roughly what share of our DNA do we share with chimpanzees?", "About 98%", listOf("About 75%", "About 50%", "About 90%"), M),
+        q("bio_sweet_orange_natural", "The sweet orange is a natural hybrid of the pomelo and which other fruit?", "Mandarin", listOf("Lemon", "Lime", "Grapefruit"), M),
+        q("bio_europe_sugar_made", "Most of Europe's sugar is made from which crop?", "Sugar beet", listOf("Sugar cane", "Corn", "Sorghum"), M),
+        q("bio_disease_once_consumption", "Which disease was once called 'consumption'?", "Tuberculosis", listOf("Cholera", "Leprosy", "Typhoid"), M),
+        q("bio_disease_spread_bite", "Which disease is spread by the bite of the tsetse fly?", "Sleeping sickness", listOf("Malaria", "Yellow fever", "Dengue"), M),
+        q("bio_disease_lockjaw", "Which disease is also known as 'lockjaw'?", "Tetanus", listOf("Rabies", "Diphtheria", "Polio"), M),
+        q("bio_gout_disease_kings", "Gout, the 'disease of kings', most often strikes which part of the body?", "The big toe", listOf("The knee", "The elbow", "The spine"), M),
+        q("bio_cataracts_cloud_part", "Cataracts cloud which part of the eye?", "The lens", listOf("The retina", "The cornea", "The iris"), M),
+        q("bio_vegetable_mostly_purple", "Which vegetable was mostly purple or yellow before orange varieties spread in the 1600s?", "Carrot", listOf("Beetroot", "Pumpkin", "Sweet potato"), M),
+        q("bio_doctor_discovered_insulin", "Which doctor discovered insulin with Charles Best in 1921?", "Frederick Banting", listOf("Alexander Fleming", "Joseph Lister", "William Osler"), M),
+        q("bio_yellowish_liquid_makes", "What is the yellowish liquid that makes up about half of our blood called?", "Plasma", listOf("Lymph", "Serum", "Bile"), M),
+        q("bio_roughly_vertebrae_make", "Roughly how many vertebrae make up the human spine?", "33", listOf("12", "52", "206"), M),
+        q("bio_ribs_typical_human", "How many ribs does a typical human have?", "24", listOf("12", "20", "32"), M)
+    )
 
-        /* ------------------------------ Hard ------------------------------ */
+    /* ------------------------------ Hard ------------------------------ */
+    private fun hard(): List<QuizEntry> = listOf(
         q("bio_mejoza", "What is the cell division that produces sex cells called?", "Meiosis", listOf("Mitosis", "Cytokinesis", "Apoptosis"), H),
         q("bio_mendel", "Who is considered the father of genetics for his research on peas?", "Gregor Mendel", listOf("Charles Darwin", "James Watson", "Francis Crick"), H),
         q("bio_mozdzek", "Which part of the brain is responsible for balance and movement coordination?", "Cerebellum", listOf("Cerebral cortex", "Medulla oblongata", "Hypothalamus"), H),
@@ -231,8 +341,24 @@ object BiologyQuestions {
         q("bioy_serce_litry", "Roughly how much blood does the heart pump in one day?", "About 7,000 litres", listOf("About 70 litres", "About 700 litres", "About 70,000 litres"), H),
         q("bioy_ananas_enzym", "Why does fresh pineapple make your tongue tingle?", "Its enzyme digests proteins", listOf("It is very acidic", "It has tiny spines", "It contains natural caffeine"), H),
         q("bioy_papryka_c", "Weight for weight, which of these has more vitamin C than an orange?", "A red pepper", listOf("A banana", "A potato", "An apple"), H),
+        q("bio_developed_widely_used", "Who developed the first widely used polio vaccine, in 1955?", "Jonas Salk", listOf("Louis Pasteur", "Edward Jenner", "Alexander Fleming"), H),
+        q("bio_scientist_gave_plants", "Which scientist gave plants and animals their two-part Latin names?", "Carl Linnaeus", listOf("Charles Darwin", "Gregor Mendel", "Louis Pasteur"), H),
+        q("bio_part_brain_controls", "Which part of the brain controls breathing and heartbeat?", "The brainstem", listOf("The cerebellum", "The frontal lobe", "The hippocampus"), H),
+        q("bio_largest_joint_human", "Which is the largest joint in the human body?", "The knee", listOf("The hip", "The shoulder", "The elbow"), H),
+        q("bio_roughly_bones_human", "Roughly how many bones are there in one human hand?", "27", listOf("12", "19", "35"), H),
+        q("bio_saffron_comes_part", "Saffron comes from which part of a flower?", "The stigmas of a crocus", listOf("The petals of a rose", "The seeds of a poppy", "The roots of a lily"), H),
+        q("bio_spice_made_dried", "Which spice is made from the dried flower buds of a tree?", "Cloves", listOf("Cinnamon", "Nutmeg", "Pepper"), H),
+        q("bio_mri_scanner_use", "What does an MRI scanner use to see inside the body?", "Strong magnets and radio waves", listOf("A low dose of X-rays", "High-frequency sound waves", "Radioactive tracers in the blood"), H),
+        q("bio_tea_leaves_come", "Tea leaves come from a species of which flowering shrub?", "Camellia", listOf("Jasmine", "Magnolia", "Gardenia"), H),
+        q("bio_medical_heart_attack", "What is the medical name for a heart attack?", "Myocardial infarction", listOf("Cardiac arrhythmia", "Pulmonary embolism", "Cerebral aneurysm"), H),
+        q("bio_daisy_comes_old", "The name of the daisy comes from an old phrase meaning what?", "Day's eye", listOf("Sun's child", "Field star", "Little pearl"), H),
+        q("bio_fruit_once_love", "Which fruit was once called the 'love apple'?", "The tomato", listOf("The apple", "The peach", "The fig"), H),
+        q("bio_body_not_repair", "Which of these can the body NOT repair or regrow on its own?", "Tooth enamel", listOf("Skin", "Bone", "The liver"), H),
+        q("bio_common_pertussis", "What is the common name for pertussis?", "Whooping cough", listOf("Chickenpox", "Measles", "Mumps"), H)
+    )
 
-        /* ----------------------------- Expert ----------------------------- */
+    /* ----------------------------- Expert ----------------------------- */
+    private fun expert(): List<QuizEntry> = listOf(
         q("bio_amylaza", "Which enzyme in saliva breaks down starch?", "Amylase", listOf("Pepsin", "Lipase", "Trypsin"), X),
         q("bio_mrna", "Which type of RNA carries genetic information from the nucleus to the ribosome?", "mRNA", listOf("tRNA", "rRNA", "siRNA"), X),
         q("bio_ektoderma", "Which germ layer does the nervous system develop from?", "Ectoderm", listOf("Mesoderm", "Endoderm", "Notochord"), X),

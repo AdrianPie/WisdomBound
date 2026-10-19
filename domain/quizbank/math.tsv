@@ -1,0 +1,255 @@
+# Matematyka, ktora da sie ROZWIAZAC w dziesiec sekund albo ktora zaskakuje: zagadki, paradoksy,
+# prawdopodobienstwo, liczby z historia.
+#
+# Wylecialy tabliczka mnozenia ("ile to 7 x 8?") i recytowanie wzorow ("wzor na pole trapezu") -
+# sprawdzaly szkole, a nie myslenie, i byly najnudniejsza czescia banku.
+#
+# Zasady pisania pytan dla calego banku - patrz [com.lernhero.domain.quiz.QuizBank].
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+mat_suma_katow	Easy	What is the sum of angles in a triangle?	180 degrees	360 degrees	90 degrees	270 degrees
+mat3_kat_polny_stopnie	Easy	How many degrees is a straight angle?	180	90	360	45
+mat3_liczba_rzymska_m	Easy	What number does the Roman numeral M represent?	1000	500	100	5000
+scicmp_najwiecej_bokow	Easy	Which of these shapes has the most sides?	An octagon	A triangle	A pentagon	A hexagon
+scicmp_kat_rozwarty	Easy	Which of these angles is obtuse?	120 degrees	45 degrees	90 degrees	30 degrees
+day_szachownica_pola	Easy	How many squares does a chessboard have?	64	81	100	49
+day_blackjack_liczba	Easy	In which card game do players aim for a total of 21?	Blackjack	Poker	Bridge	Rummy
+trv2_parzysta_pierwsza	Easy	What is the only even prime number?	2	0	4	6
+trv2_milion_zera	Easy	How many zeros are in one million?	6	5	7	9
+trv2_obwod_srednica	Easy	A circle's circumference divided by its diameter always equals what?	Pi	2	Its radius	The square root of 2
+wld_mat_zegar_kat	Easy	What angle do a clock's hands make at 3 o'clock?	90 degrees	45 degrees	180 degrees	30 degrees
+mat_trzy_jablka	Easy	You have 3 apples and you take away 2. How many apples do you have?	2	1	3	0
+mat_28_dni	Easy	How many months of the year have 28 days?	All 12	1	2	6
+mat_ciag_podwajanie	Easy	What comes next: 2, 4, 8, 16, ...?	32	24	20	30
+mat_ciag_kwadraty	Easy	What comes next: 1, 4, 9, 16, 25, ...?	36	30	35	49
+mat_suma_1_10	Easy	What is 1 + 2 + 3 + ... + 10?	55	45	50	65
+mat_miliard_zera	Easy	How many zeros are in one billion?	Nine	Six	Twelve	Eight
+mat_sekundy_godzina	Easy	How many seconds are in one hour?	3,600	360	6,000	1,440
+mat_znak_stop	Easy	What shape is a standard stop sign?	An octagon	A hexagon	A pentagon	A heptagon
+mat_plaster_miodu	Easy	What shape are the cells of a honeycomb?	Hexagons	Pentagons	Squares	Octagons
+mat_kostka_przeciwne	Easy	On a standard die, opposite faces always add up to what?	7	6	8	10
+mat_kiery	Easy	How many hearts are in a standard deck of cards?	13	12	10	26
+mat_tuzin_piekarza	Easy	How many is a 'baker's dozen'?	13	12	11	14
+mat_dwa_tygodnie	Easy	How long is a fortnight?	Two weeks	Four nights	Ten days	One month
+mat_nieskonczonosc	Easy	What does the infinity symbol look like?	A sideways figure eight	A circle with a dot	A double arrow	A crossed-out zero
+mat_procent_znaczenie	Easy	What does 'per cent' literally mean?	Per hundred	Per thousand	Per ten	Per person
+mat_palindrom	Easy	What do you call a number that reads the same backwards, like 12321?	A palindrome	A mirror number	A prime	A square
+mat_szescian_rogi	Easy	How many corners does a cube have?	8	6	12	4
+mat_zgiecie_kartki	Easy	If you fold a sheet of paper in half three times, how many layers do you get?	8	6	9	3
+mat_dzien_pi	Easy	On which date is 'Pi Day' celebrated?	14 March	3 April	1 April	31 March
+mat_pitagoras_wzor	Easy	Which famous theorem says a² + b² = c²?	Pythagoras' theorem	Thales' theorem	Fermat's Last Theorem	Euclid's theorem
+mat_minuty_150	Easy	How many minutes are in two and a half hours?	150	130	250	120
+mat_pizza_ulamek	Easy	A pizza is cut into 8 slices and you eat 2. What fraction is left?	3/4	2/3	5/8	1/4
+mat_pajaki_nogi	Easy	How many legs do three spiders have altogether?	24	18	30	32
+mat_godziny_trzy_dni	Easy	How many hours are in three days?	72	60	48	96
+mat_zegar_15	Easy	What is 15:00 on a 12-hour clock?	3 p.m.	5 p.m.	1 p.m.	3 a.m.
+mat_20_procent_ulamek	Easy	What is 20% written as a fraction?	1/5	1/20	1/4	2/5
+matx_pentagon	Easy	How many sides does the Pentagon building near Washington have?	Five	Six	Eight	Four
+matx_13	Easy	Fear of which number is called 'triskaidekaphobia'?	13	7	4	666
+mat_degrees_full_circle	Easy	How many degrees are there in a full circle?	360	180	100	400
+mat_longest_side_right	Easy	What is the longest side of a right-angled triangle called?	The hypotenuse	The diagonal	The base	The radius
+mat_straight_line_centre	Easy	What is a straight line from the centre of a circle to its edge called?	The radius	The diameter	The chord	The tangent
+mat_wedding_anniversary_silver	Easy	Which wedding anniversary is the 'silver' one?	25th	10th	50th	40th
+mat_cards_standard_deck	Easy	How many cards are in a standard deck, not counting jokers?	52	54	48	56
+mat_number_considered_especially	Easy	Which number is considered especially lucky in China?	8	4	7	13
+mat_small_coloured_squares	Easy	How many small coloured squares are on one face of a standard Rubik's Cube?	Nine	Six	Twelve	Sixteen
+mat_kilo_mean_words	Easy	What does 'kilo' mean in words like 'kilogram'?	A thousand	A hundred	A million	Ten
+mat_straight_line_through	Easy	What is a straight line through the centre of a circle, from edge to edge, called?	The diameter	The radius	The chord	The arc
+mat_wedding_anniversary_golden	Easy	Which wedding anniversary is the 'golden' one?	50th	25th	40th	60th
+mat_shape_traditional_give	Easy	What shape is a traditional 'Give way' road sign?	A triangle	A circle	A square	An octagon
+mat_triangle_all_three	Easy	What is a triangle with all three sides equal called?	Equilateral	Isosceles	Scalene	Right-angled
+mat_roman_numeral_stands_2	Easy	Which Roman numeral stands for 100?	C	X	L	M
+mat_chance_drawing_heart	Easy	What is the chance of drawing a heart from a full 52-card deck?	1 in 4	1 in 13	1 in 2	1 in 52
+mat_farmer_sheep_all	Easy	A farmer has 17 sheep and all but 9 run away. How many are left?	9	8	17	0
+mat_race_overtake_runner	Easy	In a race, you overtake the runner in second place. What place are you in now?	Second	First	Third	Last
+mat_q	Easy	What is 2 + 2 x 2?	6	8	4	10
+mat_letter_comes_next	Easy	Which letter comes next: J, F, M, A, M, J, ...?	J	A	S	N
+mat_chance_rolling_six	Easy	What is the chance of rolling a six with one fair die?	1 in 6	1 in 3	1 in 12	1 in 36
+day2_procent_skladany	Medium	What is compound interest?	Interest earned on interest already added	A one-time fee	A fixed monthly cost	Interest paid only at the end
+day2_inflacja	Medium	What does inflation mean for your savings?	The same money buys less over time	Your balance shrinks	Interest rates always fall	Prices stay fixed
+mat_pi	Medium	What is the approximate value of pi?	3.14	3.41	2.71	3.04
+mat_rzym_l	Medium	What number does the Roman numeral L represent?	50	100	40	500
+mat_pitagoras	Medium	A triangle with legs of 3 and 4 has a hypotenuse of...	5	6	7	4.5
+mat3_procent_120_zniz	Medium	An item costs $120 and is discounted by 25%. What does it cost now?	$90	$100	$95	$80
+mat3_dwa_do_dziesiatej	Medium	What is 2 to the power of 10?	1024	512	2048	100
+scicmp_ktora_pierwsza	Medium	Which of these three-digit numbers is prime?	101	111	121	141
+scicmp_liczba_niewymierna	Medium	Which of these is an irrational number?	The square root of 2	The fraction 3 over 7	The number 0.5	Minus four
+day_kostka_oczka	Medium	How many pips are there in total on a standard six-sided die?	21	18	24	27
+trv2_dziesieciokat	Medium	What is a polygon with ten sides called?	A decagon	A hexagon	A dodecagon	A nonagon
+trv2_sekundy_doba	Medium	How many seconds are in a day?	86,400	3,600	1,440	864,000
+trv2_rzymskie_2024	Medium	What is 2024 in Roman numerals?	MMXXIV	MMXXVI	MXXIV	MMXIV
+trv2_moneta_3_orly	Medium	If you flip a fair coin three times, what is the chance of getting heads every time?	1 in 8	1 in 3	1 in 6	1 in 4
+trv2_ulamki_suma	Medium	What is 1/3 + 1/6?	1/2	2/9	1/9	2/3
+trv2_szescian_krawedzie	Medium	How many edges does a cube have?	12	8	6	10
+trv2_ciag_potegi	Medium	What comes next in the sequence 2, 6, 18, 54, ...?	162	108	216	158
+trv2_kostka_suma	Medium	What is the most likely total when you roll two dice?	7	6	8	12
+trv2_trojkat_rownoboczny_katy	Medium	How big is each angle of an equilateral triangle?	60 degrees	45 degrees	90 degrees	30 degrees
+trv2_ile_minut_dwa_dni	Medium	How many hours are in a week?	168	144	196	172
+mst_fibonacci_natura	Medium	The Fibonacci sequence shows up in nature most famously in what?	Spiral arrangements in plants	Animal migration routes	Snowflake symmetry	Tidal cycles
+wld_potega_zero	Medium	What is any non-zero number raised to the power of 0?	1	0	The number itself	Undefined
+mat_jutro_czwartek	Medium	If the day before yesterday was Monday, what day will it be tomorrow?	Thursday	Wednesday	Friday	Tuesday
+mat_ojcowie_synowie	Medium	Two fathers and two sons catch three fish, and each gets exactly one. How many people are there?	Three	Four	Two	Five
+mat_kij_pilka	Medium	A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much is the ball?	5 cents	10 cents	1 cent	15 cents
+mat_trzy_tabletki	Medium	You must take 3 pills, one every half hour. How long will they last?	One hour	An hour and a half	Two hours	Three hours
+mat_ciag_trojkatne	Medium	What comes next: 1, 3, 6, 10, 15, ...?	21	20	25	18
+mat_ciag_pierwsze	Medium	What comes next: 2, 3, 5, 7, 11, 13, ...?	17	15	16	19
+mat_minuty_doba	Medium	How many minutes are in a day?	1,440	1,200	2,400	3,600
+mat_cztery_litery	Medium	Which number, written in English, has as many letters as its value?	Four	Three	Five	Six
+mat_czworoscian	Medium	How many edges does a triangular pyramid (tetrahedron) have?	6	4	5	8
+mat_roznoboczny	Medium	What is a triangle with three sides of different lengths called?	Scalene	Isosceles	Equilateral	Obtuse
+mat_dublet	Medium	What is the chance of rolling a double with two dice?	1 in 6	1 in 12	1 in 36	1 in 3
+mat_hazard	Medium	A fair coin has landed heads ten times in a row. What is the chance of heads on the next flip?	50%	Less than 50%	More than 50%	0%
+mat_37_razy_12	Medium	37 x 3 = 111. What is 37 x 12?	444	333	412	456
+mat_gros	Medium	How many items are in a 'gross'?	144	100	120	1,000
+mat_kopa_score	Medium	How many is a 'score', as in 'four score and seven years ago'?	20	10	12	50
+mat_rzymianie_zero	Medium	Which number did the Romans have no numeral for?	Zero	One hundred	Five hundred	Nine
+mat_euklides	Medium	Who is known as the 'father of geometry'?	Euclid	Pythagoras	Archimedes	Thales
+mat_trojkat_pascala	Medium	What is the famous triangle of numbers where each is the sum of the two above it?	Pascal's triangle	Euler's triangle	Newton's triangle	Fermat's triangle
+mat_dominanta	Medium	What is the mode of 2, 3, 3, 5 and 7?	3	4	5	2
+mat_lilie	Medium	Lily pads on a lake double every day and cover it completely on day 48. On which day was it half covered?	Day 47	Day 24	Day 46	Day 36
+mat_dzielenie_zero	Medium	What is 1 divided by 0?	It is undefined	0	1	Exactly infinity
+mat_as_talia	Medium	What is the chance of drawing an ace from a shuffled 52-card deck?	1 in 13	1 in 4	1 in 52	1 in 26
+mat_wlazy	Medium	Why are manhole covers usually round?	A round cover can't fall through its hole	Round covers are cheaper to make	Round holes are easier to dig	Circles are stronger than squares
+mat_pechowa_czworka	Medium	Which number is avoided in China and Japan because it sounds like the word for 'death'?	4	13	7	8
+mat_wskazowka_minutowa	Medium	How many degrees does a clock's minute hand turn in one minute?	6	1	10	12
+mat_kwadrat_symetria	Medium	How many lines of symmetry does a square have?	4	2	8	1
+mat_kula_sciany	Medium	Which 3D shape has no edges and no corners at all?	A sphere	A cone	A cylinder	A cube
+mat_wiek_siostry	Medium	Tom is 10 and his sister is half his age. When Tom is 30, how old will his sister be?	25	15	20	35
+mat_zysk_procent	Medium	You buy something for $80 and sell it for $100. What is your profit as a percentage?	25%	20%	80%	10%
+mat_pociag_predkosc	Medium	A train covers 60 km in 30 minutes. What is its speed in km/h?	120	60	90	30
+mat_pierwiastek_dwoch	Medium	Which famous number starts 1.41421...?	The square root of 2	The golden ratio	Pi	e
+mat_bilion_zera	Medium	How many zeros are in one trillion?	12	9	15	18
+matx_procenty	Medium	Which is bigger: 30% of 50 or 50% of 30?	They are equal	30% of 50	50% of 30	It depends
+matx_sudoku	Medium	In a standard Sudoku, which digits must each row contain?	1 to 9, once each	0 to 9, once each	Any nine digits	1 to 9, repeats allowed
+matx_cyfry_indie	Medium	The digits 0 to 9 we use today, called 'Arabic numerals', first developed where?	India	Arabia	Egypt	Greece
+maty_piramida_sciany	Medium	Counting the base, how many faces does a square-based pyramid have?	Five	Four	Six	Eight
+maty_podzielne_15	Medium	How many whole numbers from 1 to 100 are divisible by both 3 and 5?	6	5	7	15
+maty_tarcza_zegara	Medium	What do all the numbers on a standard clock face add up to?	78	60	72	66
+mat_sided_polygon	Medium	What is a 12-sided polygon called?	A dodecagon	A decagon	A hexagon	A nonagon
+mat_triangle_two_equal	Medium	What is a triangle with two equal sides called?	Isosceles	Scalene	Equilateral	Obtuse
+mat_roman_numeral_stands	Medium	Which Roman numeral stands for 500?	D	C	M	L
+mat_years_diamond_jubilee	Medium	How many years does a 'diamond jubilee' celebrate?	60	50	75	100
+mat_roughly_centimetres_inch	Medium	Roughly how many centimetres are in an inch?	2.54	1.5	3.6	5.08
+mat_roughly_kilometres_mile	Medium	Roughly how many kilometres are in a mile?	1.6	1.2	2.2	0.6
+mat_feet_yard	Medium	How many feet are in a yard?	Three	Two	Twelve	Five
+mat_besides_liberia_myanmar	Medium	Besides Liberia and Myanmar, which country has never fully adopted the metric system?	The United States	The United Kingdom	Canada	Australia
+mat_word_algebra_comes	Medium	The word 'algebra' comes from which language?	Arabic	Greek	Latin	Persian
+mat_french_thinker_gave	Medium	Which French thinker gave his name to 'Cartesian' coordinates?	Rene Descartes	Blaise Pascal	Pierre de Fermat	Joseph Fourier
+mat_film_troubled_mathematician	Medium	Which film is about the troubled mathematician John Nash?	A Beautiful Mind	Good Will Hunting	The Imitation Game	The Theory of Everything
+mat_film_tells_story	Medium	Which film tells the story of Black women mathematicians who helped NASA reach space?	Hidden Figures	Apollo 13	The Right Stuff	First Man
+mat_prefix_mega_mean	Medium	What does the prefix 'mega' mean in words like 'megawatt'?	A million	A thousand	A billion	A hundred
+mat_sides_heptagon	Medium	How many sides does a heptagon have?	Seven	Six	Eight	Nine
+mat_five_pointed_star	Medium	What is a five-pointed star drawn with one continuous line called?	A pentagram	A pentagon	A hexagram	A heptagon
+mat_prefix_centi_mean	Medium	What does the prefix 'centi' mean in words like 'centimetre'?	A hundredth	A thousandth	A hundred	A tenth
+mat_sorted_list_numbers	Medium	In a sorted list of numbers, what is the middle value called?	The median	The mean	The mode	The range
+mat_comes_next	Medium	What comes next: 1, 8, 27, 64, ...?	125	100	81	128
+mat_comes_next_100	Medium	What comes next: 100, 50, 25, ...?	12.5	10	15	0
+mat_sides_nonagon	Medium	How many sides does a nonagon have?	Nine	Seven	Eight	Eleven
+mat_times_subtract	Medium	How many times can you subtract 5 from 25?	Once	Five times	Four times	Twenty times
+mat_divide_half_add	Medium	Divide 30 by a half and add 10. What do you get?	70	25	40	50
+mat_comes_next_2	Medium	What comes next: 1, 2, 4, 7, 11, ...?	16	15	14	18
+mat_letter_comes_next_2	Medium	Which letter comes next: O, T, T, F, F, S, S, E, ...?	N	E	T	O
+mat_different_orders_arrange	Medium	In how many different orders can you arrange the letters C, A and T?	6	3	9	27
+mat_angle_clock_hands	Medium	What angle do a clock's hands make at exactly 6 o'clock?	180 degrees	90 degrees	120 degrees	360 degrees
+mat_birds_make_brace	Medium	How many birds make 'a brace'?	Two	Three	Six	Twelve
+mat_ancient_greek_counting	Medium	In ancient Greek counting, how many was a 'myriad'?	10,000	1,000	100	1,000,000
+mat_silnia_5	Hard	What is 5! (5 factorial)?	120	100	60	150
+mat_fibonacci	Hard	What number comes next in the sequence 1, 1, 2, 3, 5, 8...?	13	11	12	16
+mat2_logarytm_2_8	Hard	What is log base 2 of 8?	3	2	4	8
+mat2_kombinacje	Hard	In how many ways can you arrange 4 different books in a row?	24	12	16	36
+scicmp_najwiekszy_ulamek	Hard	Which of these fractions is the largest?	3/4	2/3	5/8	7/12
+scicmp_najwieksza_potega	Hard	Which of these is the largest?	2 to the power of 10	10 cubed	5 to the power of 4	3 to the power of 6
+trv2_szesciokat_katy	Hard	What do the interior angles of a hexagon add up to?	720 degrees	540 degrees	360 degrees	900 degrees
+trv2_jeden_ani	Hard	Which number is neither prime nor composite?	1	2	0	9
+trv2_podzielne_9	Hard	A number is divisible by 9 if...	The sum of its digits is divisible by 9	Its last digit happens to be a nine	It is an odd number, not an even	Its very first digit is a nine
+trv2_liczby_1_100_suma	Hard	What is the sum of all whole numbers from 1 to 100?	5050	5000	10100	4950
+ext_tasowanie_talii	Hard	A shuffled deck of 52 cards has likely landed in an order that has what property?	Never occurred before in history	Repeats roughly yearly	Repeats every million shuffles	Is one of a few billion
+ext_ziarna_szachownica	Hard	Doubling one grain of wheat on each of a chessboard's 64 squares gives a total closest to what?	More than all wheat ever grown	One full granary	A year's world harvest	A single field's yield
+mst_zero_indie	Hard	Zero as a number in its own right was first fully developed where?	India	Greece	Egypt	Rome
+mst_wstega_mobiusa	Hard	How many sides does a Mobius strip have?	One	Two	Three	None
+dpt_mat_pierwsze_20	Hard	How many prime numbers are there below 20?	Eight	Seven	Nine	Ten
+ref_mat_szesciokat_przekatne	Hard	How many diagonals does a hexagon have?	9	6	12	8
+ref_mat_procent_procentu	Hard	What is 15% of 15% of 1000?	22.5	2.25	225	30
+cur_urodziny_paradoks	Hard	How many people must be in a room for a better-than-even chance that two share a birthday?	23	183	57	366
+cur_zero_silnia	Hard	What is 0! (zero factorial)?	1	0	Undefined	Infinity
+wld_rzymskie_mcm	Hard	What year is written as MCMXC in Roman numerals?	1990	1910	2090	1490
+wld_mat_milion_sekund	Hard	Roughly how long is one million seconds?	About 11.5 days	About 1 year	About 11 hours	About 3 months
+wld_mat_procent_procent	Hard	A price rises by 10% and then falls by 10%. Compared with the start, it is...	1% lower	Exactly the same	1% higher	10% lower
+mat_pilka_szesciokaty	Hard	A classic football is stitched from 12 pentagons and how many hexagons?	20	12	18	32
+mat_monty_hall	Hard	In the Monty Hall puzzle, what is your chance of winning if you switch doors?	2 in 3	1 in 2	1 in 3	1 in 4
+mat_wskazowki_nakladanie	Hard	How many times do a clock's hour and minute hands overlap in 12 hours?	11	12	10	24
+mat_uscisk_dloni	Hard	If 10 people each shake hands with everyone else once, how many handshakes is that?	45	100	90	20
+mat_150_lat	Hard	How many years does a 'sesquicentennial' mark?	150	125	175	250
+mat_gauss	Hard	Which mathematician is said to have added up 1 to 100 in seconds as a schoolboy?	Carl Friedrich Gauss	Isaac Newton	Leonhard Euler	Blaise Pascal
+mat_slimak_studnia	Hard	A snail climbs 3 m up a 10 m well each day and slips back 2 m each night. On which day does it reach the top?	Day 8	Day 10	Day 7	Day 9
+mat_maszyny	Hard	If 5 machines make 5 widgets in 5 minutes, how long do 100 machines take to make 100 widgets?	5 minutes	100 minutes	20 minutes	1 minute
+mat_kolo_pole	Hard	For a fixed perimeter, which shape encloses the largest area?	A circle	A square	An equilateral triangle	A regular hexagon
+mat_100_dni	Hard	If today is Wednesday, what day of the week will it be in 100 days?	Friday	Thursday	Saturday	Wednesday
+mat_ramanujan	Hard	Which self-taught Indian mathematician inspired the film 'The Man Who Knew Infinity'?	Srinivasa Ramanujan	Aryabhata	Brahmagupta	C. R. Rao
+mat_medal_fieldsa	Hard	Which top mathematics award is given only to mathematicians under 40?	The Fields Medal	The Abel Prize	The Wolf Prize	The Turing Award
+mat_liczba_eulera	Hard	The constant e, about 2.718, is named after which mathematician?	Leonhard Euler	Isaac Newton	Carl Friedrich Gauss	John Napier
+mat_dwie_szostki	Hard	What is the chance of rolling at least one six with two dice?	11 in 36	1 in 3	1 in 6	1 in 36
+mat_2_do_30	Hard	Which is larger: 2 to the power of 30, or one billion?	2 to the power of 30	One billion	They are exactly equal	It depends on the base
+mat_dziewiatki	Hard	How many times does the digit 9 appear when you write the numbers from 1 to 100?	20	10	11	19
+mat_biegun_polnocny	Hard	You walk 1 km south, 1 km east and 1 km north, and end up where you started. Where did you start?	The North Pole	The equator	The South Pole	The prime meridian
+mat_zegar_bicie	Hard	A clock takes 5 seconds to strike six o'clock. How long does it take to strike twelve?	11 seconds	10 seconds	12 seconds	9 seconds
+matx_rok_2000	Hard	Was the year 2000 a leap year?	Yes - it divides by 400	No - century years never are	No - it was skipped	Yes - like every even year
+matx_pizza	Hard	Which gives you more pizza: one 18-inch pizza or two 12-inch pizzas?	One 18-inch pizza	Two 12-inch pizzas	Exactly the same	It depends on the crust
+matx_kwadrat_magiczny	Hard	In a 3x3 magic square using the numbers 1 to 9, what does every row, column and diagonal add up to?	15	12	18	45
+matx_a4	Hard	Why does A4 paper keep the same shape when cut in half?	Its sides are in the ratio 1 : root 2	Its sides follow the golden ratio	It is almost a perfect square	Its sides are in the ratio 2 : 3
+matx_kroliki	Hard	The Fibonacci sequence first appeared in a puzzle about breeding which animals?	Rabbits	Mice	Sheep	Chickens
+maty_platonskie	Hard	How many 'Platonic solids' (perfectly regular 3D shapes) are there?	Five	Four	Seven	Infinitely many
+maty_dwie_szostki	Hard	What is the chance of rolling a total of 12 with two dice?	1 in 36	1 in 12	1 in 6	1 in 18
+mat_pounds_stone	Hard	How many pounds are in a stone?	14	12	16	10
+mat_feet_mile	Hard	How many feet are in a mile?	5,280	3,000	5,000	1,760
+mat_german_mathematician_developed	Hard	Which German mathematician developed calculus at the same time as Isaac Newton?	Gottfried Leibniz	Carl Friedrich Gauss	Leonhard Euler	Bernhard Riemann
+mat_ancient_people_counted	Hard	Which ancient people counted in base 60, giving us 60 minutes in an hour?	The Babylonians	The Egyptians	The Greeks	The Romans
+mat_prefix_nano_mean	Hard	What does the prefix 'nano' mean?	A billionth	A millionth	A thousandth	A trillionth
+mat_roughly_grams_pound	Hard	Roughly how many grams are in a pound?	454	254	354	554
+mat_roughly_litres_gallon	Hard	Roughly how many litres are in a US gallon?	3.8	2.5	4.5	5.2
+mat_liczba_e	Expert	What is the approximate value of e?	2.72	3.14	1.62	2.24
+mat_liczby_doskonale	Expert	Which of these numbers is perfect (equal to the sum of its divisors)?	28	24	30	36
+mat_duzy_pierwszy	Expert	Which of these numbers is NOT prime?	91	89	97	83
+mat2_euler_wzor	Expert	What does Euler's identity relate?	The numbers e, i, pi, 1 and 0	Only pi and e	Areas and perimeters	Derivatives and integrals
+mat2_pochodna_x2	Expert	What is the derivative of x squared?	2x	x	x cubed / 3	2
+mat2_hipoteza_riemanna	Expert	What does the Riemann hypothesis concern?	The distribution of the zeta function's zeros	The solutions of differential equations	The colouring of maps with four colours	The shortest path through a large graph
+mat2_fermat	Expert	How many years passed before Fermat's Last Theorem was proven?	Over 350	About 50	About 100	Over 1000
+mat2_godel	Expert	What do Godel's incompleteness theorems state?	Any sufficiently rich system has undecidable statements	Every true theorem can in the end be proven	Mathematics contains a hidden contradiction	There are only finitely many prime numbers
+mat2_liczba_pierwsza_najwieksza	Expert	What form do the largest known prime numbers take?	Mersenne primes	Fermat numbers	Fibonacci numbers	Perfect numbers
+mat2_topologia_kubek	Expert	Which shape does a topologist consider equivalent to a coffee mug?	A torus (donut)	A sphere	A cube	A Mobius strip
+mat2_zloty_podzial	Expert	What is the approximate value of the golden ratio?	1.618	1.414	2.718	3.142
+mat2_p_np	Expert	What does the P vs NP problem concern?	The computational complexity of problems	Non-Euclidean geometry	Measure theory	The Navier-Stokes equations
+mat2_banach_tarski	Expert	What does the Banach-Tarski paradox state?	A ball can be split apart and reassembled into two identical balls	A sphere cannot be turned inside out without tearing	Pi can be written as a ratio of two whole numbers	All infinite sets are exactly the same size
+mat3_liczby_zespolone	Expert	What is the imaginary unit i?	The square root of -1	An irrational number equal to pi	A symbol for infinity	The base of the natural logarithm
+mat3_szereg_harmoniczny	Expert	Does the harmonic series (sum of 1/n) converge?	No, it diverges	Yes, it converges to 2	Yes, it converges to pi	Yes, it converges to e
+mat3_liczby_pierwsze_blizniacze	Expert	What do we call pairs of primes differing by 2, like 11 and 13?	Twin primes	Perfect numbers	Amicable numbers	Mersenne primes
+mat3_teoria_grafow_euler	Expert	Which problem gave rise to graph theory?	The Seven Bridges of Konigsberg problem	The four color problem	The traveling salesman problem	Zeno's paradox
+mat3_cztery_barwy	Expert	What does the four color theorem state?	Any map can be colored with four colors with no adjacent regions sharing one	Every graph contains a cycle passing through all of its vertices	Every whole number has exactly four divisors	Every triangle has four distinct altitudes
+ext_kartka_skladanie	Expert	Folded in half 42 times, a sheet of paper would be thick enough to reach what?	The Moon	The top of Everest	Low Earth orbit	The Sun
+mst_nieskonczonosc_rozne	Expert	Mathematically, how do the infinity of whole numbers and of real numbers compare?	The reals are a larger infinity	They are equal	The whole numbers are larger	Neither can be compared
+dpt_mat_dwunastoscian	Expert	How many faces does a regular dodecahedron have?	Twelve	Ten	Twenty	Eight
+ref_mat_szereg_polowki	Expert	What is the sum of the endless series 1/2 + 1/4 + 1/8 + ...?	1	2	Infinity	0.99
+ref_mat_dwa_razy_cyfry	Expert	Which two-digit number is exactly twice the sum of its digits?	18	12	27	36
+ref_mat_dwudziestoscian	Expert	How many edges does a regular icosahedron have?	30	20	12	60
+ref_mat_hex_ff	Expert	What is the hexadecimal number FF in decimal?	255	256	240	1515
+cur_najmniejsza_2520	Expert	What is the smallest number divisible by every whole number from 1 to 10?	2520	3628800	1260	5040
+cur_kwadrat_111	Expert	What is 111,111,111 × 111,111,111?	12,345,678,987,654,321	1,234,567,890	11,111,111,111	123,456,789,123,456,789
+wld_mat_miliard_sekund	Expert	Roughly how long is one billion seconds?	About 31.7 years	About 3 years	About 317 years	About 1 year
+mat_ciag_patrz_i_mow	Expert	What comes next in this sequence: 1, 11, 21, 1211, 111221, ...?	312211	1112211	212211	3122111
+mat_forty	Expert	Which number, written in English, has its letters in alphabetical order?	Forty	Thirty	Sixty	Eighty
+mat_142857	Expert	142857 x 2 = 285714. What is 142857 x 7?	999,999	1,000,000	999,000	857,142
+mat_silnia_zera	Expert	How many zeros are at the end of 10! (10 factorial)?	2	1	3	10
+mat_zegar_315	Expert	What is the angle between a clock's hands at 3:15?	7.5 degrees	0 degrees	15 degrees	30 degrees
+mat_1729	Expert	What is the smallest number that is the sum of two cubes in two different ways?	1729	1001	2025	4104
+mat_mirzakhani	Expert	Who was the first woman to win the Fields Medal, in 2014?	Maryam Mirzakhani	Emmy Noether	Sophie Germain	Ada Lovelace
+mat_perelman	Expert	Which Millennium Prize problem did Grigori Perelman solve before turning down the million dollars?	The Poincare conjecture	The Riemann hypothesis	P versus NP	The Goldbach conjecture
+mat_ruletka	Expert	What do all the numbers on a roulette wheel add up to?	666	555	777	1,000
+mat_nasa_pi	Expert	About how many decimal places of pi does NASA use for its most precise spacecraft navigation?	15	5	100	1,000
+mat_szachownica_kwadraty	Expert	Counting squares of every size, how many squares are on a chessboard?	204	64	128	1,296
+mat_nieparzyste_100	Expert	What is the sum of the first 100 odd numbers?	10,000	5,000	5,050	9,900
+matx_a0	Expert	How big is a sheet of A0 paper?	Exactly one square metre	Exactly one square foot	Half a square metre	Two square metres
+matx_archimedes_pi	Expert	Which ancient Greek pinned down pi by drawing polygons with 96 sides?	Archimedes	Euclid	Pythagoras	Ptolemy
+matx_hypatia	Expert	Which woman mathematician and astronomer of ancient Egypt was killed by a mob in 415?	Hypatia	Sappho	Aspasia	Cleopatra
+matx_ziemniaki	Expert	A 100 kg sack of potatoes is 99% water. After drying it is 98% water. What does it weigh now?	50 kg	98 kg	99 kg	90 kg
+matx_ujemne_chiny	Expert	Negative numbers were long rejected in Europe, but used centuries earlier by mathematicians in which country?	China	Greece	Egypt	England
+maty_hotel_hilberta	Expert	In 'Hilbert's Hotel', a full hotel with infinitely many rooms can still do what?	Take in more guests	Only close its doors	Charge infinite money	Fit just one more guest
+maty_zenon	Expert	Which Greek thinker argued that swift Achilles could never overtake a tortoise?	Zeno of Elea	Pythagoras	Euclid	Archimedes

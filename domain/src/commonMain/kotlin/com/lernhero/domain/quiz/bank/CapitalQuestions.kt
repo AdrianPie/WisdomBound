@@ -1,3 +1,5 @@
+// PLIK GENEROWANY z domain/quizbank/capitals.tsv przez `python3 tools/quizbank.py generate`.
+// Nie edytuj go recznie - pytania dopisuje sie do TSV (patrz domain/quizbank/README.md).
 package com.lernhero.domain.quiz.bank
 
 import com.lernhero.domain.quiz.QuizCategory
@@ -24,8 +26,13 @@ object CapitalQuestions {
     private fun q(id: String, prompt: String, correct: String, wrong: List<String>, difficulty: QuizDifficulty) =
         QuizEntry(id = id, prompt = prompt, correct = correct, wrong = wrong, category = QuizCategory.Capitals, difficulty = difficulty)
 
-    val all: List<QuizEntry> = listOf(
-        /* ------------------------------ Easy ------------------------------ */
+    val all: List<QuizEntry> = easy() + medium() + hard() + expert()
+
+    // Kazdy poziom w osobnej funkcji: jedna wielka lista w inicjalizatorze obiektu przekroczylaby
+    // z czasem limit 64 KB kodu na metode JVM (735 pytan historii zajmowalo w nim juz ~36 KB).
+
+    /* ------------------------------ Easy ------------------------------ */
+    private fun easy(): List<QuizEntry> = listOf(
         q("cap2_prague", "What is the capital of Czechia?", "Prague", listOf("Brno", "Ostrava", "Pilsen"), E),
         q("cap2_bratislava", "What is the capital of Slovakia?", "Bratislava", listOf("Kosice", "Zilina", "Nitra"), E),
         q("cap2_vienna", "What is the capital of Austria?", "Vienna", listOf("Salzburg", "Graz", "Linz"), E),
@@ -51,8 +58,11 @@ object CapitalQuestions {
         q("capx_luksemburg", "Which of these countries has a capital with exactly the same name as the country?", "Luxembourg", listOf("Belgium", "Austria", "Denmark"), E),
         q("capx_trafalgar", "Nelson's Column stands in which London square?", "Trafalgar Square", listOf("Piccadilly Circus", "Leicester Square", "Covent Garden"), E),
         q("capy_berlin_mis", "Which animal appears on the coat of arms of Berlin?", "A bear", listOf("An eagle", "A lion", "A wolf"), E),
+        q("cap_capital_iraq", "What is the capital of Iraq?", "Baghdad", listOf("Basra", "Tehran", "Damascus"), E)
+    )
 
-        /* ----------------------------- Medium ----------------------------- */
+    /* ----------------------------- Medium ----------------------------- */
+    private fun medium(): List<QuizEntry> = listOf(
         q("cap_canberra", "What is the capital of Australia?", "Canberra", listOf("Sydney", "Melbourne", "Perth"), M),
         q("cap_ottawa", "What is the capital of Canada?", "Ottawa", listOf("Toronto", "Montreal", "Vancouver"), M),
         q("cap_brasilia", "What is the capital of Brazil?", "Brasilia", listOf("Rio de Janeiro", "Sao Paulo", "Salvador"), M),
@@ -123,8 +133,42 @@ object CapitalQuestions {
         q("capy_praga_wieze", "Which capital city is nicknamed 'the City of a Hundred Spires'?", "Prague", listOf("Vienna", "Budapest", "Riga"), M),
         q("capy_budapeszt_termy", "Which capital is famous for thermal baths such as the Szechenyi Baths?", "Budapest", listOf("Prague", "Vienna", "Sofia"), M),
         q("capy_hawana", "Which capital city is famous for streets full of 1950s American cars?", "Havana", listOf("Mexico City", "San Juan", "Panama City"), M),
+        q("cap_capital_afghanistan", "What is the capital of Afghanistan?", "Kabul", listOf("Kandahar", "Tashkent", "Islamabad"), M),
+        q("cap_capital_north_korea", "What is the capital of North Korea?", "Pyongyang", listOf("Seoul", "Busan", "Kaesong"), M),
+        q("cap_capital_taiwan", "What is the capital of Taiwan?", "Taipei", listOf("Kaohsiung", "Taichung", "Hong Kong"), M),
+        q("cap_capital_lebanon", "What is the capital of Lebanon?", "Beirut", listOf("Damascus", "Amman", "Tripoli"), M),
+        q("cap_capital_bosnia_herzegovina", "What is the capital of Bosnia and Herzegovina?", "Sarajevo", listOf("Mostar", "Banja Luka", "Skopje"), M),
+        q("cap_capital_jamaica", "What is the capital of Jamaica?", "Kingston", listOf("Montego Bay", "Port of Spain", "Nassau"), M),
+        q("cap_capital_guatemala", "What is the capital of Guatemala?", "Guatemala City", listOf("Antigua", "San Salvador", "Managua"), M),
+        q("cap_capital_state_massachusetts", "What is the capital of the US state of Massachusetts?", "Boston", listOf("Springfield", "Worcester", "Cambridge"), M),
+        q("cap_capital_state_georgia", "What is the capital of the US state of Georgia?", "Atlanta", listOf("Savannah", "Augusta", "Macon"), M),
+        q("cap_city_capital_australian", "Which city is the capital of the Australian state of Victoria?", "Melbourne", listOf("Sydney", "Adelaide", "Geelong"), M),
+        q("cap_city_capital_lombardy", "Which city is the capital of Lombardy, Italy's richest region?", "Milan", listOf("Turin", "Venice", "Bologna"), M),
+        q("cap_capital_syria", "What is the capital of Syria?", "Damascus", listOf("Aleppo", "Beirut", "Baghdad"), M),
+        q("cap_capital_bahamas", "What is the capital of the Bahamas?", "Nassau", listOf("Kingston", "Havana", "Bridgetown"), M),
+        q("cap_capital_state_arizona", "What is the capital of the US state of Arizona?", "Phoenix", listOf("Tucson", "Flagstaff", "Santa Fe"), M),
+        q("cap_capital_state_colorado", "What is the capital of the US state of Colorado?", "Denver", listOf("Boulder", "Aspen", "Colorado Springs"), M),
+        q("cap_capital_state_utah", "What is the capital of the US state of Utah?", "Salt Lake City", listOf("Provo", "Ogden", "Boise"), M),
+        q("cap_city_capital_australian_2", "Which city is the capital of the Australian state of Queensland?", "Brisbane", listOf("Cairns", "Gold Coast", "Townsville"), M),
+        q("cap_city_capital_australian_3", "Which city is the capital of the Australian state of Western Australia?", "Perth", listOf("Fremantle", "Darwin", "Broome"), M),
+        q("cap_city_capital_australian_4", "Which city is the capital of the Australian state of South Australia?", "Adelaide", listOf("Darwin", "Hobart", "Alice Springs"), M),
+        q("cap_european_capital_hosts", "Which European capital hosts the headquarters of OPEC?", "Vienna", listOf("Bern", "London", "Brussels"), M),
+        q("cap_capital_australia_northern", "The capital of Australia's Northern Territory is named after which scientist?", "Charles Darwin", listOf("James Cook", "Isaac Newton", "Joseph Banks"), M),
+        q("cap_hobart_capital_australian", "Hobart is the capital of which Australian state?", "Tasmania", listOf("Victoria", "Queensland", "South Australia"), M),
+        q("cap_melbourne_19th_century", "Melbourne is named after a 19th-century British...?", "Prime minister", listOf("Admiral", "Explorer", "Bishop"), M),
+        q("cap_minneapolis_forms_twin", "Minneapolis forms the 'Twin Cities' with which city, Minnesota's capital?", "Saint Paul", listOf("Duluth", "Rochester", "Bloomington"), M),
+        q("cap_vaduz_capital_country", "Vaduz is the capital of which country?", "Liechtenstein", listOf("Luxembourg", "Andorra", "San Marino"), M),
+        q("cap_city_capital_andalusia", "Which city is the capital of Andalusia in southern Spain?", "Seville", listOf("Granada", "Malaga", "Cordoba"), M),
+        q("cap_capital_city_home", "Which capital city is home to the Spanish Riding School and its white Lipizzaner horses?", "Vienna", listOf("Madrid", "Budapest", "Prague"), M),
+        q("cap_capital_medieval_old", "In which capital is the medieval old town called Gamla stan?", "Stockholm", listOf("Oslo", "Copenhagen", "Tallinn"), M),
+        q("cap_capital_home_palace", "Which capital is home to the Palace of the Parliament, one of the heaviest buildings in the world?", "Bucharest", listOf("Budapest", "Belgrade", "Sofia"), M),
+        q("cap_capital_city_home_2", "Which capital city is home to the vast Sheikh Zayed Grand Mosque?", "Abu Dhabi", listOf("Doha", "Riyadh", "Muscat"), M),
+        q("cap_capital_home_vigeland", "Which capital is home to the Vigeland sculpture park?", "Oslo", listOf("Stockholm", "Copenhagen", "Helsinki"), M),
+        q("cap_capital_see_medieval", "In which capital can you see the medieval 'Book of Kells'?", "Dublin", listOf("Edinburgh", "London", "Cardiff"), M)
+    )
 
-        /* ------------------------------ Hard ------------------------------ */
+    /* ------------------------------ Hard ------------------------------ */
+    private fun hard(): List<QuizEntry> = listOf(
         q("cap_wellington", "What is the capital of New Zealand?", "Wellington", listOf("Auckland", "Christchurch", "Dunedin"), H),
         q("cap_hanoi", "What is the capital of Vietnam?", "Hanoi", listOf("Ho Chi Minh City", "Da Nang", "Hue"), H),
         q("cap_rabat", "What is the capital of Morocco?", "Rabat", listOf("Casablanca", "Marrakesh", "Fez"), H),
@@ -187,8 +231,39 @@ object CapitalQuestions {
         q("capy_reykjavik_nazwa", "What does the name 'Reykjavik' mean?", "Smoky bay", listOf("Ice harbour", "North town", "Fire mountain"), H),
         q("capy_nairobi_park", "Which capital city has a national park with lions and giraffes right beside its skyline?", "Nairobi", listOf("Addis Ababa", "Pretoria", "Kampala"), H),
         q("capy_wellington_wiatr", "Which capital is famous as one of the windiest cities in the world?", "Wellington", listOf("Reykjavik", "Oslo", "Dublin"), H),
+        q("cap_capital_jordan", "What is the capital of Jordan?", "Amman", listOf("Petra", "Aqaba", "Irbid"), H),
+        q("cap_capital_montenegro", "What is the capital of Montenegro?", "Podgorica", listOf("Kotor", "Budva", "Tirana"), H),
+        q("cap_capital_north_macedonia", "What is the capital of North Macedonia?", "Skopje", listOf("Ohrid", "Bitola", "Sofia"), H),
+        q("cap_capital_armenia", "What is the capital of Armenia?", "Yerevan", listOf("Tbilisi", "Baku", "Gyumri"), H),
+        q("cap_capital_dominican_republic", "What is the capital of the Dominican Republic?", "Santo Domingo", listOf("San Juan", "Port-au-Prince", "Punta Cana"), H),
+        q("cap_capital_haiti", "What is the capital of Haiti?", "Port-au-Prince", listOf("Santo Domingo", "Cap-Haitien", "Kingston"), H),
+        q("cap_capital_salvador", "What is the capital of El Salvador?", "San Salvador", listOf("San Jose", "Tegucigalpa", "Santa Ana"), H),
+        q("cap_capital_somalia", "What is the capital of Somalia?", "Mogadishu", listOf("Hargeisa", "Djibouti", "Asmara"), H),
+        q("cap_capital_state_washington", "What is the capital of the US state of Washington?", "Olympia", listOf("Seattle", "Spokane", "Tacoma"), H),
+        q("cap_capital_state_illinois", "What is the capital of the US state of Illinois?", "Springfield", listOf("Chicago", "Peoria", "Rockford"), H),
+        q("cap_capital_state_nevada", "What is the capital of the US state of Nevada?", "Carson City", listOf("Las Vegas", "Reno", "Henderson"), H),
+        q("cap_city_capital_canadian", "Which city is the capital of the Canadian province of British Columbia?", "Victoria", listOf("Vancouver", "Kelowna", "Surrey"), H),
+        q("cap_state_capital_german", "Which US state capital is named after a German chancellor?", "Bismarck", listOf("Frankfort", "Lincoln", "Madison"), H),
+        q("cap_city_seat_australia", "Which city was the seat of Australia's government from 1901 to 1927?", "Melbourne", listOf("Sydney", "Adelaide", "Brisbane"), H),
+        q("cap_port_city_pakistan", "Which port city was Pakistan's first capital, from 1947?", "Karachi", listOf("Lahore", "Rawalpindi", "Peshawar"), H),
+        q("cap_capital_city_means", "Which capital city's name means 'northern capital'?", "Beijing", listOf("Seoul", "Tokyo", "Hanoi"), H),
+        q("cap_capital_city_means_2", "Which capital city's name means 'eastern capital'?", "Tokyo", listOf("Beijing", "Seoul", "Taipei"), H),
+        q("cap_capital_state_louisiana", "What is the capital of the US state of Louisiana?", "Baton Rouge", listOf("New Orleans", "Shreveport", "Lafayette"), H),
+        q("cap_capital_state_oregon", "What is the capital of the US state of Oregon?", "Salem", listOf("Portland", "Eugene", "Bend"), H),
+        q("cap_capital_maldives", "What is the capital of the Maldives?", "Male", listOf("Colombo", "Port Louis", "Victoria"), H),
+        q("cap_capital_bahrain", "What is the capital of Bahrain?", "Manama", listOf("Doha", "Muscat", "Kuwait City"), H),
+        q("cap_capital_sierra_leone", "What is the capital of Sierra Leone?", "Freetown", listOf("Monrovia", "Conakry", "Banjul"), H),
+        q("cap_capital_trinidad_tobago", "What is the capital of Trinidad and Tobago?", "Port of Spain", listOf("Kingston", "Bridgetown", "Castries"), H),
+        q("cap_capital_belize", "What is the capital of Belize?", "Belmopan", listOf("Belize City", "San Salvador", "Tegucigalpa"), H),
+        q("cap_capital_state_michigan", "What is the capital of the US state of Michigan?", "Lansing", listOf("Detroit", "Grand Rapids", "Ann Arbor"), H),
+        q("cap_capital_state_ohio", "What is the capital of the US state of Ohio?", "Columbus", listOf("Cleveland", "Cincinnati", "Dayton"), H),
+        q("cap_city_capital_canadian_2", "Which city is the capital of the Canadian province of Alberta?", "Edmonton", listOf("Calgary", "Banff", "Red Deer"), H),
+        q("cap_city_capital_german", "Which city is the capital of the German state of Saxony?", "Dresden", listOf("Leipzig", "Chemnitz", "Magdeburg"), H),
+        q("cap_port_louis_capital", "Port Louis is the capital of which island country?", "Mauritius", listOf("Seychelles", "Maldives", "Madagascar"), H)
+    )
 
-        /* ----------------------------- Expert ----------------------------- */
+    /* ----------------------------- Expert ----------------------------- */
+    private fun expert(): List<QuizEntry> = listOf(
         q("cap_thimphu", "What is the capital of Bhutan?", "Thimphu", listOf("Paro", "Punakha", "Phuentsholing"), X),
         q("cap_ulaanbaatar", "What is the capital of Mongolia?", "Ulaanbaatar", listOf("Erdenet", "Darkhan", "Khovd"), X),
         q("cap_bishkek", "What is the capital of Kyrgyzstan?", "Bishkek", listOf("Osh", "Naryn", "Karakol"), X),
@@ -239,6 +314,16 @@ object CapitalQuestions {
         q("capy_dublin_nazwa", "Dublin's name comes from Irish words meaning what?", "Black pool", listOf("Green hill", "River mouth", "Old fort"), X),
         q("capy_unia_afrykanska", "In which capital city is the headquarters of the African Union?", "Addis Ababa", listOf("Nairobi", "Cairo", "Pretoria"), X),
         q("capy_rideau", "Which canal in Ottawa turns into a skating rink almost 8 km long in winter?", "The Rideau Canal", listOf("The Welland Canal", "The Lachine Canal", "The Erie Canal"), X),
-        q("capy_tbilisi", "The name of the Caucasus capital Tbilisi comes from its what?", "Warm springs", listOf("High mountains", "Many churches", "Old walls"), X)
+        q("capy_tbilisi", "The name of the Caucasus capital Tbilisi comes from its what?", "Warm springs", listOf("High mountains", "Many churches", "Old walls"), X),
+        q("cap_capital_moldova", "What is the capital of Moldova?", "Chisinau", listOf("Tiraspol", "Balti", "Bucharest"), X),
+        q("cap_capital_uzbekistan", "What is the capital of Uzbekistan?", "Tashkent", listOf("Samarkand", "Bukhara", "Almaty"), X),
+        q("cap_capital_honduras", "What is the capital of Honduras?", "Tegucigalpa", listOf("San Pedro Sula", "Managua", "Belmopan"), X),
+        q("cap_capital_nicaragua", "What is the capital of Nicaragua?", "Managua", listOf("Leon", "Granada", "Tegucigalpa"), X),
+        q("cap_capital_cameroon", "What is the capital of Cameroon?", "Yaounde", listOf("Douala", "Lagos", "Libreville"), X),
+        q("cap_capital_mozambique", "What is the capital of Mozambique?", "Maputo", listOf("Beira", "Lusaka", "Harare"), X),
+        q("cap_capital_guyana", "What is the capital of Guyana?", "Georgetown", listOf("Paramaribo", "Cayenne", "Bridgetown"), X),
+        q("cap_capital_state_pennsylvania", "What is the capital of the US state of Pennsylvania?", "Harrisburg", listOf("Philadelphia", "Pittsburgh", "Scranton"), X),
+        q("cap_city_italy_capital", "Which city was Italy's capital before Rome, from 1865 to 1871?", "Florence", listOf("Turin", "Milan", "Naples"), X),
+        q("cap_capital_niger", "What is the capital of Niger?", "Niamey", listOf("Abuja", "N'Djamena", "Bamako"), X)
     )
 }

@@ -18,9 +18,10 @@ class QuizBankTest {
     fun `bank ma duzo pytan w kazdej kategorii i na kazdym poziomie`() {
         // Drugi przeglad banku wycial ~820 pytan (ten sam fakt w kilku plikach, definicje
         // z podrecznika, tabliczka mnozenia, pytania-zerowki) i dopisal ~1040 nowych, a kolejna
-        // partia nastepny tysiac (glownie historia i nowa popkultura). Progi ida w gore razem
-        // z bankiem - ma nie wrocic do rozmiaru, przy ktorym pytania zaczynaly sie powtarzac.
-        assertTrue(all.size >= 4000, "Bank powinien miec ponad 4000 pytan, ma ${all.size}")
+        // partia nastepny tysiac (glownie historia i nowa popkultura), a po niej jeszcze tysiac
+        // wiedzy ogolnej, przewaznie Easy/Medium (potem jeszcze 500 i kolejny tysiac). Progi ida
+        // w gore razem z bankiem - ma nie wrocic do rozmiaru, przy ktorym pytania zaczynaly sie powtarzac.
+        assertTrue(all.size >= 6000, "Bank powinien miec ponad 6000 pytan, ma ${all.size}")
 
         // Slowka i wlasne talie nie sa w tym banku - powstaja z materialu gracza (patrz QuizCategory.builtin).
         // Flagi sa ograniczone liczba dostepnych grafik krajow, wiec maja nizszy prog.

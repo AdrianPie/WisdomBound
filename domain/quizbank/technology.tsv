@@ -1,0 +1,349 @@
+# Technologia: gry, internet, gadzety, wynalazki i historie firm.
+#
+# Definicje z informatyki ("czym jest API", "czym jest kernel") wylecialy prawie w calosci -
+# brzmialy jak kartkowka. Zostala technika, z ktorej gracz korzysta, i historie, po ktorych chce
+# sie ja opowiedziec dalej (pierwszy "bug" byl prawdziwa cma).
+#
+# Zasady pisania pytan dla calego banku - patrz [com.lernhero.domain.quiz.QuizBank].
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+day2_gasnica	Easy	What should you never use to put out a burning pan of oil?	Water	A lid	A fire blanket	Baking soda
+tec_www	Easy	What does the abbreviation WWW stand for?	World Wide Web	World Web Wide	Wide World Web	Web World Wide
+tec_zarowka	Easy	Who is credited with popularizing the light bulb?	Thomas Edison	Nikola Tesla	Alexander Bell	James Watt
+tec2_ikona_dysk	Easy	What does a floppy disk icon usually mean in software?	Save	Print	Delete	Undo
+tec3_google_zalozyciele	Easy	Who founded Google?	Larry Page and Sergey Brin	Bill Gates and Paul Allen	Steve Jobs and Steve Wozniak	Jeff Bezos and Elon Musk
+tec3_usb_skrot	Easy	What does the abbreviation USB stand for?	Universal Serial Bus	United System Board	Universal System Bus is a wrong variant	Unified Serial Base
+wh_gutenberg_wynalazek	Easy	What did Johannes Gutenberg popularize in Europe?	Movable-type printing	Paper	The hydraulic press	Printer's ink
+wh_bracia_wright	Easy	Who made the first successful powered airplane flight in 1903?	The Wright brothers	Louis Bleriot	Otto Lilienthal	Alberto Santos-Dumont
+scicmp_co_pierwsze_wynalazek	Easy	Which of these came first?	The printing press	The steam engine	The telephone	Radio
+scicmp_co_pierwsze_internet	Easy	Which of these appeared first?	The World Wide Web	Google	Facebook	YouTube
+scicmp_jednostka_najwieksza	Easy	Which of these data units is the largest?	A terabyte	A kilobyte	A megabyte	A gigabyte
+day_bity_w_bajcie	Easy	How many bits are in one byte?	Eight	Four	Ten	Sixteen
+trv2_wifi_fale	Easy	What does Wi-Fi use to carry data through the air?	Radio waves	Infrared light	Sound waves	Microscopic wires
+trv2_playstation	Easy	Which company makes the PlayStation?	Sony	Nintendo	Microsoft	Sega
+trv2_phishing	Easy	What is 'phishing'?	Tricking people into revealing passwords or data	Speeding up a computer that has got slow	Copying the contents of a hard drive	Blocking the adverts shown on a page
+trv2_curiosity	Easy	On which planet did the Curiosity rover land in 2012?	Mars	Venus	The Moon	Mercury
+trv2_pixel	Easy	What is a pixel?	The smallest dot in a digital image	A unit of internet speed	A type of processor	A file format
+org_amazon_ksiazki	Easy	Amazon spent its first years selling almost nothing but what?	Books	Music CDs	Computer parts	Toys
+org_facebook_harvard	Easy	Facebook was open only to students of which university at launch?	Harvard	Stanford	MIT	Yale
+cur_captcha	Easy	What is a CAPTCHA designed to tell apart?	Humans from bots	Adults from children	Phones from computers	Real emails from spam
+wld_haslo_bezpieczne	Easy	Which password is hardest to crack?	A long random phrase of several words	Your name plus 123	A single dictionary word	Your birthday
+tec_pacman_duchy	Easy	What chases Pac-Man around the maze?	Ghosts	Monsters	Robots	Snakes
+tec_afk	Easy	What does 'AFK' mean in online chat?	Away from keyboard	Always fighting kings	Ask for keys	All friends known
+tec_switch	Easy	Which Nintendo console can be played both on a TV and as a handheld?	The Switch	The Wii	The GameCube	The 3DS
+tec_xbox	Easy	Which company makes the Xbox consoles?	Microsoft	Sony	Nintendo	Sega
+tec_email_e	Easy	What does the 'e' in 'email' stand for?	Electronic	Easy	Express	External
+tec_siri	Easy	What is the name of Apple's voice assistant?	Siri	Alexa	Cortana	Bixby
+tec_alexa	Easy	Which company makes the Alexa voice assistant?	Amazon	Google	Apple	Microsoft
+tec_tiktok	Easy	Which short-video app is owned by the Chinese company ByteDance?	TikTok	Instagram	Snapchat	YouTube
+tec_ctrl_z	Easy	On most computers, what does the shortcut Ctrl + Z do?	Undo the last action	Save the file	Close the window	Zoom in
+tec_qwerty_nazwa	Easy	Where does the QWERTY keyboard get its name?	The first six letters of its top row	The surname of its inventor	A Greek word meaning 'to type'	The company that first made it
+tec_tesla_model3	Easy	Which company makes the Model S and Model 3 electric cars?	Tesla	Toyota	BMW	Ford
+tec_model_t	Easy	Which company built the Model T, the first mass-produced car?	Ford	General Motors	Chrysler	Cadillac
+tec_roomba	Easy	What is a Roomba?	A robot vacuum cleaner	A smart speaker	A drone	A video game console
+tec_sms_short	Easy	What does the 'S' at the start of 'SMS' stand for?	Short	Simple	Secure	Standard
+tec_spotify	Easy	Which music streaming service was founded in Sweden?	Spotify	SoundCloud	Deezer	Tidal
+tecx_ctrl_c	Easy	On most computers, what does Ctrl + C do?	Copies the selection	Closes the window	Cuts the selection	Creates a new file
+tecx_bezos	Easy	Who founded Amazon?	Jeff Bezos	Elon Musk	Bill Gates	Mark Zuckerberg
+tecx_zuckerberg	Easy	Who started Facebook in his university dorm room?	Mark Zuckerberg	Jeff Bezos	Jack Dorsey	Larry Page
+tecx_garaz	Easy	According to legend, where were Apple's first computers put together?	In a garage	In a university lab	In a factory	In a hotel room
+tecx_haslo	Easy	Which of these is one of the most common (and worst) passwords?	123456	Tr0ub4dor&3	Xk!9#pL2vQ	mY-c@t_Is-8
+tec_founded_spacex_2002	Easy	Who founded SpaceX in 2002?	Elon Musk	Jeff Bezos	Richard Branson	Bill Gates
+tec_twitter_renamed_2023	Easy	What was Twitter renamed in 2023?	X	Threads	Bluesky	Meta
+tec_gps_stand	Easy	What does 'GPS' stand for?	Global Positioning System	General Positioning Satellite	Global Pathfinding Service	Geo Pointing System
+tec_pin_stand_bank	Easy	What does 'PIN' stand for, as in a bank card PIN?	Personal identification number	Private internet number	Protected identity note	Personal input number
+tec_stand_television	Easy	What does 'HD' stand for, as in HD television?	High definition	Home display	Hyper digital	Half-depth
+tec_company_makes_galaxy	Easy	Which company makes the Galaxy smartphones?	Samsung	Apple	Huawei	Sony
+tec_country_furniture_company	Easy	In which country was the furniture company IKEA founded?	Sweden	Denmark	Norway	Finland
+tec_country_phone_maker	Easy	In which country is the phone maker Nokia based?	Finland	Sweden	Norway	Denmark
+tec_car_maker_logo	Easy	Which car maker's logo is four interlocking rings?	Audi	Volkswagen	Opel	Mercedes-Benz
+tec_car_maker_logo_2	Easy	Which car maker's logo is a three-pointed star in a circle?	Mercedes-Benz	BMW	Audi	Porsche
+tec_car_maker_means	Easy	Which car maker's name means 'people's car' in German?	Volkswagen	Mercedes-Benz	Opel	Audi
+tec_car_maker_logo_3	Easy	Which car maker's logo is a black prancing horse on a yellow shield?	Ferrari	Lamborghini	Maserati	Alfa Romeo
+tec_japanese_car_maker	Easy	Which Japanese car maker makes the Prius hybrid?	Toyota	Honda	Nissan	Mazda
+tec_country_car_makers	Easy	Which country do the car makers Hyundai and Kia come from?	South Korea	Japan	China	Taiwan
+tec_country_car_maker	Easy	Which country does the car maker Fiat come from?	Italy	France	Spain	Germany
+tec_app_logo_white	Easy	Which app's logo is a white ghost on a yellow background?	Snapchat	WhatsApp	TikTok	Telegram
+tec_messaging_app_green	Easy	Which messaging app has a green logo with a white phone in a speech bubble?	WhatsApp	Signal	Messenger	Viber
+tec_web_browser_retired	Easy	Which web browser, retired in 2022, had a blue letter 'e' as its logo?	Internet Explorer	Netscape Navigator	Firefox	Safari
+tec_microsoft_search_engine	Easy	What is the name of Microsoft's search engine?	Bing	Yahoo	Ask	DuckDuckGo
+tec_operating_system_runs	Easy	What is the name of the operating system that runs on iPhones?	iOS	Android	Windows	Symbian
+tec_company_makes_pixel	Easy	Which company makes Pixel smartphones?	Google	Samsung	Sony	Nokia
+tec_car_maker_builds_2	Easy	Which car maker builds the Mustang?	Ford	Chevrolet	Dodge	Toyota
+tec_country_car_maker_3	Easy	Which country does the car maker Renault come from?	France	Italy	Germany	Spain
+tec_suv_stand	Easy	What does 'SUV' stand for?	Sport utility vehicle	Super urban van	Safe universal vehicle	Standard utility van
+tec_stand_modern_cars	Easy	What does 'EV' stand for on modern cars?	Electric vehicle	Energy valve	Engine version	Extra volume
+tec_video_calling_app	Easy	Which video-calling app became hugely popular during the 2020 lockdowns?	Zoom	Snapchat	Twitch	Pinterest
+tec_google_email_service	Easy	What is the name of Google's email service?	Gmail	Outlook	Yahoo Mail	Proton Mail
+tec_microsoft_spreadsheet_program	Easy	What is Microsoft's spreadsheet program called?	Excel	Word	Access	Numbers
+tec_apple_web_browser	Easy	What is the name of Apple's web browser?	Safari	Chrome	Edge	Opera
+tec_company_builds_787	Easy	Which company builds the 787 'Dreamliner'?	Boeing	Airbus	Embraer	Bombardier
+tec_company_bought_instagram	Easy	Which company bought Instagram in 2012?	Facebook	Google	Twitter	Microsoft
+tec_alessandro_volta_invent	Easy	What did Alessandro Volta invent in 1800?	The electric battery	The light bulb	The telegraph	The electric motor
+tec_louis_braille_blinded	Easy	Louis Braille, blinded as a child, is famous for inventing what?	A raised-dot alphabet	A hearing aid	A typewriter	A sign language
+tec_kind_media_original	Easy	What kind of media did the original 1979 Sony Walkman play?	Cassette tapes	CDs	Vinyl records	MiniDiscs
+tec_car_maker_built	Easy	Which car maker built James Bond's DB5 in 'Goldfinger'?	Aston Martin	Jaguar	Bentley	Lotus
+tec_american_motorcycle_maker	Easy	Which American motorcycle maker from Milwaukee is famous for its big cruisers?	Harley-Davidson	Indian	Ducati	Triumph
+tec_camera_company_became	Easy	Which camera company's name became a byword for a perfect photo moment?	Kodak	Canon	Nikon	Polaroid
+tec_invented_practical_revolver	Easy	Who invented the first practical revolver, patented in 1836?	Samuel Colt	Richard Gatling	Oliver Winchester	Eliphalet Remington
+tec_enigma_machine	Easy	What did the 'Enigma' machine do?	Encrypt messages	Calculate missile paths	Detect aircraft	Break codes
+tec_animal_appears_badge	Easy	Which animal appears on the badge of Peugeot cars?	A lion	A horse	A bull	A jaguar
+tec_founded_wikipedia_2001	Easy	Who co-founded Wikipedia in 2001?	Jimmy Wales	Larry Page	Mark Zuckerberg	Jack Dorsey
+tec_former_english_teacher	Easy	Which former English teacher founded the Chinese e-commerce giant Alibaba?	Jack Ma	Pony Ma	Ren Zhengfei	Robin Li
+tec_american_businessman_made	Easy	Which American businessman made the disposable razor blade a success?	King C. Gillette	Henry Ford	Isaac Singer	George Eastman
+tec_animal_appears_tail	Easy	Which animal appears on the tail fins of Qantas planes?	A kangaroo	A koala	An emu	A kookaburra
+tec_car_maker_builds_5	Easy	Which car maker builds the Golf hatchback?	Volkswagen	Opel	Peugeot	Ford
+tec_car_maker_builds_6	Easy	Which car maker builds the tiny '500' city car?	Fiat	Renault	Seat	Skoda
+tec_german_engineer_gave	Easy	Which German engineer gave his name to an engine that ignites fuel by compression?	Rudolf Diesel	Nikolaus Otto	Gottlieb Daimler	Karl Benz
+tec_lets_maglev_trains	Easy	What lets maglev trains float above the track?	Magnets	Air cushions	Hydrogen jets	Steam
+tec_cpu	Medium	What does the abbreviation CPU stand for?	Central Processing Unit	Random-access memory	Graphics card	Hard drive
+tec_android_firma	Medium	Which company develops the Android operating system?	Google	Apple	Microsoft	Meta
+tec_telefon_bell	Medium	Who patented the telephone?	Alexander Graham Bell	Thomas Edison	Guglielmo Marconi	Samuel Morse
+tec2_https_co	Medium	What does HTTPS add over HTTP?	Encryption of the connection	Faster downloads	Automatic translation	Image compression
+tec2_linux_torvalds	Medium	Who released the first version of the Linux kernel in 1991?	Linus Torvalds	Richard Stallman	Ken Thompson	Andrew Tanenbaum
+tec3_bitcoin_tworca	Medium	Under what pseudonym was the original Bitcoin paper published?	Satoshi Nakamoto	John Doe	Anonymous	Craig Wright, indisputably
+tec3_email_pierwszy_rok	Medium	In which decade was the first email sent?	The 1970s	The 1990s	The 1950s	The 21st century
+scicmp_firma_najstarsza	Medium	Which of these companies was founded first?	IBM	Microsoft	Apple	Google
+scicmp_nie_jezyk_programowania	Medium	Which of these is NOT a programming language?	Docker	Python	Java	Ruby
+scicmp_najwiecej_danych	Medium	Which of these holds the most data?	A Blu-ray disc	A CD	A DVD	A floppy disk
+scicmp_wynalazek_najnowszy	Medium	Which of these was invented most recently?	The smartphone	The transistor	The laser	The microprocessor
+day_netflix_poczatki	Medium	Which streaming service started out renting DVDs by mail?	Netflix	Hulu	Disney+	Amazon Prime Video
+day_piatka_g	Medium	In '5G', what does the G stand for?	Generation	Gigahertz	Global	Gateway
+trv2_python_nazwa	Medium	The programming language Python is named after what?	A comedy troupe	A snake	Its creator's pet	A Greek myth
+trv2_iphone_rok	Medium	In which year was the first iPhone released?	2007	2004	2010	2001
+trv2_binarne_1010	Medium	What is the binary number 1010 in decimal?	10	5	12	20
+trv2_googol	Medium	Which company's name comes from a misspelling of 'googol', the number 1 followed by 100 zeros?	Google	Yahoo	Microsoft	Oracle
+trv2_internet_uzytkownicy	Medium	Which country has the most internet users?	China	The United States	India	Russia
+trv2_qr	Medium	What does 'QR' stand for in 'QR code'?	Quick Response	Quality Reader	Quantum Register	Quick Reference
+trv2_arpanet	Medium	What was ARPANET?	The forerunner of the internet	The first home computer	An early video game	A satellite TV network
+trv2_turing_test	Medium	What does the Turing test try to judge?	Whether a machine can pass as human in conversation	How fast a computer can carry out its sums	Whether a cipher can ever be broken	How much memory a program needs
+org_mikrofalowka_batonik	Medium	The microwave oven was discovered when an engineer noticed what melting in his pocket?	A chocolate bar	A plastic comb	A wax crayon	A rubber band
+org_rzep_ost	Medium	Velcro was invented after its creator studied what stuck to his dog's fur?	Burrs	Pine resin	Thistledown	Wet clay
+org_motorola_komorka	Medium	Which company placed the first handheld mobile phone call in 1973?	Motorola	Nokia	Ericsson	Bell Labs
+org_biro_dlugopis	Medium	Hungarian journalist Laszlo Biro gave the world which writing tool?	The ballpoint pen	The fountain pen	The mechanical pencil	The felt-tip marker
+org_spam_skecz	Medium	Junk email got the name 'spam' from what?	A comedy sketch	An acronym	A brand of software	A programmer's surname
+wld_gps_satelity	Medium	How does a phone's GPS find your position?	By timing signals from satellites	By asking nearby Wi-Fi only	By measuring the Earth's magnetism	By reading cell towers' names
+wld_ram_skrot	Medium	What happens to data in RAM when a computer loses power?	It is lost	It is saved automatically	It moves to the CPU	It is sent to the cloud
+wld_open_source	Medium	What does 'open source' software mean?	Its code is public and can be changed	It is always free of bugs	It only runs online	It was made by a government
+wld_tec_emoji_kraj	Medium	In which country were emoji invented?	Japan	The USA	South Korea	Finland
+tec_game_boy	Medium	Which handheld console did Nintendo launch in 1989?	The Game Boy	The Game Gear	The Nintendo DS	The Game and Watch
+tec_wii	Medium	Which Nintendo console of 2006 was famous for its motion-sensing remote?	The Wii	The GameCube	The Switch	The Nintendo 64
+tec_emoji_nazwa	Medium	The word 'emoji' comes from Japanese words meaning what?	Picture character	Emotion icon	Smiling face	Small drawing
+tec_y2k	Medium	What was the 'Y2K bug' about?	Computers storing years as two digits	A virus set to strike in 2000	A flaw in every Intel chip	Running out of web addresses
+tec_wiki	Medium	The 'wiki' in Wikipedia comes from a Hawaiian word meaning what?	Quick	Free	Shared	Knowledge
+tec_walkman	Medium	Which company launched the Walkman portable cassette player in 1979?	Sony	Panasonic	Philips	Toshiba
+tec_vhs	Medium	Which videotape format won the 1980s 'format war' against Betamax?	VHS	LaserDisc	Video 2000	Betacam
+tec_benz	Medium	Who built the first practical petrol-powered car, in 1886?	Karl Benz	Henry Ford	Ferdinand Porsche	Rudolf Diesel
+tec_concorde	Medium	Which supersonic airliner carried passengers from 1976 to 2003?	Concorde	The Tupolev Tu-144	The Boeing 747	The Airbus A380
+tec_a380	Medium	What is the largest passenger airliner ever built?	The Airbus A380	The Boeing 747	The Boeing 777	The Antonov An-225
+tec_dynamit	Medium	Who invented dynamite?	Alfred Nobel	Thomas Edison	Nikola Tesla	Hiram Maxim
+tec_tesla_wynalazca	Medium	Which inventor championed alternating current and has a unit of magnetism named after him?	Nikola Tesla	Thomas Edison	Michael Faraday	James Watt
+tec_paul_allen	Medium	Who co-founded Microsoft with Bill Gates in 1975?	Paul Allen	Steve Wozniak	Steve Ballmer	Larry Ellison
+tec_wozniak	Medium	Who co-founded Apple with Steve Jobs and designed its first computer?	Steve Wozniak	Paul Allen	Tim Cook	Larry Page
+tec_alphago	Medium	Which AI beat the world's top Go player, Lee Sedol, in 2016?	AlphaGo	Deep Blue	Watson	Siri
+tec_watson	Medium	Which IBM computer beat human champions on the quiz show 'Jeopardy!' in 2011?	Watson	Deep Blue	AlphaGo	HAL 9000
+tec_hal	Medium	Which fictional computer says 'I'm sorry, Dave. I'm afraid I can't do that'?	HAL 9000	Skynet	The Matrix	Deep Thought
+tec_hello_world	Medium	Which phrase is traditionally the first thing a beginner's program prints?	Hello, World!	Good morning!	Test one two	Start now
+tec_ryzen	Medium	Which company makes Ryzen processors?	AMD	Intel	Nvidia	Qualcomm
+tec_geforce	Medium	Which company makes GeForce graphics cards?	Nvidia	AMD	Intel	Asus
+tec_4k	Medium	What does '4K' refer to on a TV or monitor?	About 4,000 pixels across	4 kilograms of weight	4,000 colours	Four times the sound
+tec_napster	Medium	Which music file-sharing service was shut down in 2001 after lawsuits?	Napster	Spotify	LimeWire	iTunes
+tec_post_it	Medium	The Post-it note grew out of a failed attempt to make what?	A super-strong glue	A new kind of paper	A fire-proof tape	A shopping list pad
+tec_youtube_google	Medium	Which company bought YouTube in 2006?	Google	Microsoft	Yahoo	Facebook
+tecx_sos	Medium	In Morse code, which distress signal is sent as three dots, three dashes, three dots?	SOS	MAYDAY	HELP	CQD
+tecx_czarna_skrzynka	Medium	What colour is an aircraft's 'black box' flight recorder actually painted?	Bright orange	Black	Silver	Yellow and black
+tecx_chatgpt	Medium	Which company released ChatGPT in 2022?	OpenAI	Google	Microsoft	Meta
+tecx_gps_wojsko	Medium	The GPS satellite system was originally built for whom?	The US military	Airlines	Car makers	Weather forecasters
+tecx_pdf	Medium	Which company created the PDF file format?	Adobe	Microsoft	Apple	IBM
+tecx_shinkansen	Medium	Japan's high-speed 'bullet train' network is known by which name?	Shinkansen	Maglev	TGV	Eurostar
+tecx_montgolfier	Medium	Which French brothers launched the first crewed hot-air balloon flight, in 1783?	The Montgolfier brothers	The Lumiere brothers	The Wright brothers	The Grimm brothers
+tecx_jumbo	Medium	Which airliner was nicknamed the 'Jumbo Jet'?	The Boeing 747	The Airbus A380	The Concorde	The Boeing 737
+tecx_spacex	Medium	Which company developed the reusable Falcon 9 rocket?	SpaceX	Blue Origin	Boeing	NASA
+tecx_cookies	Medium	What are 'cookies' on a website?	Small files that remember you	Viruses hidden in ads	Pop-up windows	Deleted web pages
+tecx_404	Medium	What does 'Error 404' on a website mean?	The page was not found	The server is on fire	You have no internet	Your password is wrong
+tecy_newton_logo	Medium	Which company's very first logo showed Isaac Newton sitting under a tree?	Apple	Microsoft	IBM	Intel
+tecy_amazon_strzalka	Medium	The arrow in Amazon's logo points from which letter to which?	A to Z	A to N	M to Z	O to N
+tecy_tux	Medium	What is the name of Linux's penguin mascot?	Tux	Pingu	Linus	Waddles
+tecy_deepfake	Medium	What is a 'deepfake'?	A fake video or voice made by AI	A scan of a very deep lake	A fraud on a banking app	A fake social media profile
+tecy_bialy_kapelusz	Medium	What is a 'white hat' hacker?	One who hacks to find and fix flaws	One who steals data for money	One who spreads viruses	One who attacks governments
+tec_pdf_stand	Medium	What does 'PDF' stand for?	Portable Document Format	Printable Data File	Public Document Form	Personal Digital Folder
+tec_led_stand	Medium	What does 'LED' stand for?	Light-emitting diode	Low-energy display	Laser electric device	Light energy distributor
+tec_html_stand	Medium	What does 'HTML' stand for?	HyperText Markup Language	High Tech Modern Language	Hyperlink Text Management Logic	Home Tool Markup Language
+tec_gpu_stand	Medium	What does 'GPU' stand for?	Graphics processing unit	General processing unit	Graphic power upgrade	Global processing unit
+tec_vpn_stand	Medium	What does 'VPN' stand for?	Virtual private network	Verified public node	Visual processing network	Virtual personal number
+tec_atm_stand_cash	Medium	What does 'ATM' stand for, as in a cash machine?	Automated teller machine	Automatic transfer method	Any-time money	Account transaction module
+tec_country_car_maker_2	Medium	Which country is the car maker Skoda from?	Czechia	Slovakia	Poland	Hungary
+tec_bmw_stand	Medium	What does BMW stand for?	Bavarian Motor Works	Berlin Machine Works	British Motor Wagons	Bavarian Mechanical Workshop
+tec_animal_appears_lamborghini	Medium	Which animal appears on the Lamborghini logo?	A bull	A horse	A lion	A snake
+tec_car_maker_builds	Medium	Which car maker builds the 911 sports car?	Porsche	Ferrari	Audi	Lotus
+tec_inventor_created_phonograph	Medium	Which inventor created the phonograph, the first machine to record sound?	Thomas Edison	Alexander Graham Bell	Emile Berliner	Nikola Tesla
+tec_year_facebook_launched	Medium	In which year was Facebook launched?	2004	2001	2007	2010
+tec_organisation_makes_firefox	Medium	Which organisation makes the Firefox web browser?	Mozilla	Google	Opera	Apple
+tec_company_makes_photoshop	Medium	Which company makes Photoshop?	Adobe	Microsoft	Apple	Corel
+tec_company_owns_linkedin	Medium	Which company owns LinkedIn?	Microsoft	Google	Meta	Oracle
+tec_rocket_company_jeff	Medium	Which rocket company did Jeff Bezos found?	Blue Origin	SpaceX	Virgin Galactic	Rocket Lab
+tec_new_york_skyscraper	Medium	Which New York skyscraper has 102 floors and was the world's tallest for nearly 40 years?	The Empire State Building	The Chrysler Building	One World Trade Center	The Woolworth Building
+tec_apple_product_went	Medium	Which Apple product first went on sale in 2010?	The iPad	The iPod	The iPhone	The Apple Watch
+tec_apple_gadget_2001	Medium	Which Apple gadget of 2001 promised '1,000 songs in your pocket'?	The iPod	The iPhone	The iPad	The Walkman
+tec_jeff_bezos_amazon	Medium	Jeff Bezos named Amazon after what?	The world's largest river	A warrior tribe from myth	His favourite book	A rainforest he visited
+tec_key_web_browsers	Medium	What does the F5 key do in most web browsers?	Refreshes the page	Opens a new tab	Saves the page	Closes the window
+tec_phone_maker_sold	Medium	Which phone maker sold the hugely popular Razr flip phone?	Motorola	Nokia	Samsung	Sony Ericsson
+tec_clippy	Medium	What was 'Clippy'?	Microsoft Office's paperclip assistant	A tiny robot vacuum from the 1990s	The first Google search mascot	A computer virus spread by email
+tec_iot_stand	Medium	What does 'IoT' stand for?	Internet of Things	Input or Transfer	Index of Technology	Integration of Tools
+tec_company_makes_kindle	Medium	Which company makes the Kindle e-readers?	Amazon	Apple	Sony	Barnes & Noble
+tec_company_makes_thinkpad	Medium	Which company makes the ThinkPad laptops today?	Lenovo	IBM	Dell	HP
+tec_company_makes_surface	Medium	Which company makes the Surface tablets and laptops?	Microsoft	Apple	Samsung	Lenovo
+tec_car_maker_builds_3	Medium	Which car maker builds the Corvette sports car?	Chevrolet	Ford	Dodge	Cadillac
+tec_car_maker_builds_4	Medium	Which car maker builds the Civic?	Honda	Toyota	Nissan	Mazda
+tec_country_car_maker_4	Medium	Which country does the car maker Jaguar come from?	Britain	Germany	Italy	Sweden
+tec_abs_stand_car	Medium	What does 'ABS' stand for in a car?	Anti-lock braking system	Automatic balance steering	Air bag system	Advanced battery saver
+tec_stand_address	Medium	What does 'IP' stand for in 'IP address'?	Internet Protocol	Internal Port	Information Path	Instant Provider
+tec_rom_stand_computing	Medium	What does 'ROM' stand for in computing?	Read-only memory	Random operating mode	Remote online module	Rapid output memory
+tec_cctv_stand	Medium	What does 'CCTV' stand for?	Closed-circuit television	Central camera television	Coded colour TV	Computer-controlled TV
+tec_company_makes_xperia	Medium	Which company makes the Xperia phones?	Sony	Samsung	LG	Huawei
+tec_sent_message_hath	Medium	Who sent the message 'What hath God wrought' over the first long-distance telegraph line in 1844?	Samuel Morse	Alexander Graham Bell	Thomas Edison	Nikola Tesla
+tec_tractor_maker_started	Medium	Which tractor maker started building sports cars after a quarrel with Enzo Ferrari?	Ferruccio Lamborghini	Ferdinand Porsche	Ettore Bugatti	Alfieri Maserati
+tec_small_british_car	Medium	Which small British car starred in the chase of 'The Italian Job' (1969)?	Mini Cooper	Austin Healey	Morris Minor	Triumph Spitfire
+tec_italian_scooter_means	Medium	Which Italian scooter's name means 'wasp'?	Vespa	Lambretta	Piaggio	Aprilia
+tec_company_invented_post	Medium	Which company invented the Post-it note?	3M	Xerox	Staples	Kodak
+tec_kind_energy_photovoltaic	Medium	Which kind of energy do photovoltaic panels turn into electricity?	Sunlight	Wind	Heat from the ground	Moving water
+tec_german_sports_car	Medium	Which German sports car maker has a black prancing horse at the centre of its crest?	Porsche	BMW	Audi	Mercedes-Benz
+tec_sent_very_tweet	Medium	Who sent the very first tweet, in 2006?	Jack Dorsey	Elon Musk	Biz Stone	Evan Williams
+tec_founded_netflix_led	Medium	Who co-founded Netflix and led it for over 20 years?	Reed Hastings	Jeff Bezos	Steve Jobs	Brian Chesky
+tec_founded_chip_maker	Medium	Who co-founded the chip maker Nvidia in 1993 and became its long-time CEO?	Jensen Huang	Lisa Su	Andy Grove	Gordon Moore
+tec_operating_system_ran	Medium	Which operating system ran most Nokia smartphones before 2011?	Symbian	Android	Windows Mobile	Palm OS
+tec_guitar_maker_created	Medium	Which guitar maker created the famous 'Stratocaster'?	Fender	Gibson	Ibanez	Yamaha
+tec_guitar_maker_produces	Medium	Which guitar maker produces the 'Les Paul' electric guitar?	Gibson	Fender	Gretsch	Rickenbacker
+tec_jeff_bezos_choose	Medium	Which name did Jeff Bezos first choose for Amazon?	Cadabra	Relentless	Bookworld	Sesame
+tec_french_car_maker	Medium	Which French car maker built the 2CV, nicknamed the 'tin snail'?	Citroen	Renault	Peugeot	Simca
+tec_company_trademarked_jet	Medium	Which company trademarked the name 'Jet Ski'?	Kawasaki	Yamaha	Honda	Suzuki
+tec_engineer_built_digital	Medium	Whose engineer built the first digital camera, in 1975, though the company stuck with film?	Kodak	Canon	Sony	Nikon
+tec_billionaire_aviator_built	Medium	Which billionaire aviator built the giant wooden flying boat nicknamed the 'Spruce Goose'?	Howard Hughes	William Boeing	Charles Lindbergh	Glenn Curtiss
+tec_concorde_built_jointly	Medium	Concorde was built jointly by France and which other country?	Britain	Germany	United States	Italy
+tec_letters_france_tgv	Medium	What do the letters of France's TGV trains mean in English?	High-speed train	Great green train	Very big train	Grand tour train
+tec_swiss_rail_tunnel	Medium	Which Swiss rail tunnel, opened in 2016, runs 57 km under the Alps?	Gotthard Base Tunnel	Simplon Tunnel	Channel Tunnel	Mont Blanc Tunnel
+tec_official_colour_golden	Medium	What is the official colour of the Golden Gate Bridge?	International orange	Golden yellow	Rust red	Copper brown
+tec_programming_language_apple	Medium	Which programming language did Apple introduce in 2014 for its apps?	Swift	Kotlin	Rust	Go
+tec_programming_language_google	Medium	Which programming language has Google preferred for Android apps since 2019?	Kotlin	Swift	Ruby	Perl
+tec_created_python_programming	Medium	Who created the Python programming language?	Guido van Rossum	Bjarne Stroustrup	James Gosling	Linus Torvalds
+day2_ram_vs_dysk	Hard	Why does a computer slow down when RAM runs out?	It starts swapping data to much slower storage	The processor overheats and throttles	The screen starts refreshing slower	The network connection is throttled
+tec_turing	Hard	Who is regarded as the father of computer science and cracked the Enigma cipher?	Alan Turing	John von Neumann	Charles Babbage	Claude Shannon
+tec_enigma_polacy	Hard	Which Pole co-created the first break of the Enigma cipher?	Marian Rejewski	Stefan Banach	Jan Czochralski	Kazimierz Funk
+tec_pierwszy_program	Hard	Who is regarded as the first programmer in history?	Ada Lovelace	Grace Hopper	Margaret Hamilton	Marie Curie
+tec2_ram_vs_cache	Hard	Which memory is the fastest?	The processor's cache	RAM	SSD	A network drive
+tec2_ipv6	Hard	How many bits does an IPv6 address have?	128	32	64	256
+tec2_kompresja_stratna	Hard	Which image format uses lossy compression?	JPEG	PNG	BMP	GIF
+tec2_blockchain	Hard	What is a blockchain?	A distributed ledger of linked data blocks	A relational database queried with SQL	A protocol for sending electronic mail	A file system used on modern drives
+wh_radio_marconi	Hard	Who carried out the first transatlantic radio transmission?	Guglielmo Marconi	Nikola Tesla	Heinrich Hertz	Lee de Forest
+day_luthier_buduje	Hard	What does a luthier build?	Stringed instruments	Organs	Drums	Brass instruments
+day_pong_gra	Hard	Which early arcade game was the first commercial hit?	Pong	Pac-Man	Space Invaders	Breakout
+day_hashtag_serwis	Hard	On which platform did the hashtag first catch on?	Twitter	Facebook	Instagram	MySpace
+trv2_youtube_zoo	Hard	Where was the very first YouTube video, uploaded in 2005, filmed?	At a zoo	In a garage	At a concert	In a lecture hall
+trv2_mosaic	Hard	Which early web browser, released in 1993, made the web popular by showing images inline?	Mosaic	Netscape	Internet Explorer	Opera
+trv2_engelbart	Hard	Who invented the computer mouse?	Douglas Engelbart	Steve Wozniak	Alan Kay	Xerox's Steve Jobs
+trv2_bug_cma	Hard	What was the first computer 'bug', found in 1947, literally?	A moth stuck in a relay	A typo in a program	A loose wire	A power surge
+trv2_bluetooth_nazwa	Hard	Bluetooth is named after what?	A 10th-century Scandinavian king	Its inventor	A type of radio wave	A blue LED on the first device
+trv2_mac_pierwszy	Hard	In which year did Apple release the first Macintosh?	1984	1977	1991	1980
+trv2_nintendo_karty	Hard	What did Nintendo originally make when it was founded in 1889?	Playing cards	Toys	Radios	Bicycles
+org_nokia_papier	Hard	Nokia began in 1865 as a mill producing what?	Paper	Rubber boots	Copper wire	Gunpowder
+org_google_backrub	Hard	Before it was renamed, Google ran under what project name?	BackRub	PageRank	WebCrawl	Stanford Search
+org_twitter_twttr	Hard	Twitter launched under which vowel-free spelling of its name?	twttr	Chirp	Jttr	Status
+org_samsung_gwiazdy	Hard	The name Samsung means what in Korean?	Three stars	Bright future	Great river	New dawn
+org_bubble_tapeta	Hard	Bubble wrap was first put on sale as which product?	Wallpaper	Greenhouse insulation	A children's toy	Mattress padding
+org_playdoh_czyscik	Hard	Play-Doh was originally sold as a cleaner for what?	Wallpaper	Car upholstery	Silverware	Chalkboards
+org_slinky_sprezyna	Hard	The Slinky toy came from an engineer's work on springs meant to steady what?	Ship instruments	Aircraft landing gear	Railway carriages	Factory lathes
+org_ebay_wskaznik	Hard	The first item ever sold on eBay was a broken what?	Laser pointer	Wristwatch	Camera lens	Games console
+org_faks_przed_telefonem	Hard	Which of these was patented first?	The fax machine	The telephone	The radio	The light bulb
+org_malpa_email	Hard	Who picked the @ sign as the separator in email addresses?	Ray Tomlinson	Tim Berners-Lee	Vint Cerf	Linus Torvalds
+mst_pierwsza_strona	Hard	The world's first website was created to explain what?	The World Wide Web itself	A physics experiment	A university timetable	An email system
+cur_qwerty	Hard	Why was the QWERTY layout designed?	To stop typewriter keys from jamming	To make typing as fast as possible	To spell 'typewriter' on one row for sales demos only	To match the alphabet
+cur_apollo_pamiec	Hard	The Apollo 11 guidance computer had roughly how much memory?	About 4 KB of RAM	About 4 MB of RAM	About 4 GB of RAM	No memory at all
+tec_xerox	Hard	Which company's research lab invented the mouse-driven desktop interface that inspired the Mac?	Xerox	IBM	Microsoft	Atari
+tec_iloveyou	Hard	In 2000, a computer worm spread around the world in emails with which subject line?	ILOVEYOU	YOU WON	HAPPY99	URGENT
+tec_imac_i	Hard	According to Steve Jobs, what did the 'i' in iMac first stand for?	Internet	Intelligent	Interface	Innovation
+tec_cd_philips	Hard	Which company developed the compact disc together with Sony?	Philips	Panasonic	Toshiba	Samsung
+tec_java_sun	Hard	Which company created the Java programming language?	Sun Microsystems	Microsoft	IBM	Oracle
+tec_java_nazwa	Hard	The programming language Java was named after what?	A kind of coffee	An island volcano	A programmer's dog	A Greek letter
+tec_toyota_krosna	Hard	Before making cars, the Toyota group built what?	Weaving looms	Bicycles	Sewing machines	Radios
+tec_baird	Hard	Who demonstrated the first working television, in 1926?	John Logie Baird	Philo Farnsworth	Guglielmo Marconi	Thomas Edison
+tec_sms_160	Hard	How many characters could a classic SMS text message hold?	160	140	100	255
+tec_pierwszy_sms	Hard	What did the first text message ever sent, in 1992, say?	Merry Christmas	Hello world	Happy New Year	Can you read this
+tec_javascript	Hard	Which programming language was famously designed in about ten days in 1995?	JavaScript	Java	Python	PHP
+tec_gif_wymowa	Hard	According to its inventor, how should 'GIF' be pronounced?	Like 'jif', with a soft G	With a hard G, like 'gift'	Letter by letter	Like 'gyff'
+tec_kamerka_kawa	Hard	What did the world's first webcam, in 1991, keep an eye on?	A coffee pot	A fish tank	A car park	A cat
+tec_kod_kreskowy	Hard	What was the first product ever scanned with a barcode, in 1974?	A pack of chewing gum	A can of soup	A box of cereal	A bottle of cola
+tec_rubik_cel	Hard	Why did Erno Rubik first build his famous cube?	To teach students about 3D shapes	As a puzzle for NASA astronauts	As a toy for his own children	As a new kind of safe lock
+tec_nike	Hard	Which sportswear company started out as 'Blue Ribbon Sports'?	Nike	Adidas	Reebok	Puma
+tec_skype	Hard	Which video-calling app was built by Estonian developers in 2003?	Skype	Zoom	FaceTime	WhatsApp
+tec_minecraft_microsoft	Hard	Which company bought the makers of Minecraft in 2014?	Microsoft	Sony	Nintendo	Electronic Arts
+tec_bit_skrot	Hard	The word 'bit' is short for what?	Binary digit	Basic information token	Byte item	Binary instruction
+tecx_bell_slowa	Hard	What were the first words spoken over Bell's telephone, in 1876?	'Mr Watson, come here'	'Hello, can you hear me?'	'What hath God wrought'	'Testing, one, two, three'
+tecx_wikipedia	Hard	In which year was Wikipedia launched?	2001	1995	2005	2010
+tecx_eniac	Hard	What was the name of the room-sized American computer unveiled in 1946?	ENIAC	UNIVAC	Colossus	Deep Blue
+tecx_volvo_pasy	Hard	Which car maker gave away its patent for the three-point seat belt so everyone could use it?	Volvo	Mercedes-Benz	Ford	Toyota
+tecx_otis	Hard	Elisha Otis made skyscrapers practical by inventing what?	A safety brake for lifts	Steel girders	The revolving door	Reinforced concrete
+tecx_bankomat	Hard	In which country did the world's first cash machine open, in 1967?	Britain	The USA	Japan	Switzerland
+tecx_microsoft_nazwa	Hard	The name Microsoft is a blend of which two words?	Microcomputer and software	Microchip and soft drink	Microwave and software	Micro and softness
+tecx_rakieta_stephenson	Hard	What was the name of George Stephenson's famous 1829 locomotive?	The Rocket	The Flyer	The Comet	The Arrow
+tecx_saturn_v	Hard	Which giant rocket launched the Apollo astronauts to the Moon?	Saturn V	Atlas	Titan	Falcon 9
+tecy_android_slodycze	Hard	Until 2019, Android versions were named after what?	Desserts and sweets	Famous robots	Planets	Animals
+tecy_sikorsky	Hard	Which engineer built the first practical single-rotor helicopter, in 1939?	Igor Sikorsky	Juan de la Cierva	Howard Hughes	Frank Whittle
+tecy_gps_cztery	Hard	How many satellites must a phone hear, at minimum, to fix its position in 3D?	Four	One	Two	Twelve
+tec_sim_stand_sim	Hard	What does 'SIM' stand for in SIM card?	Subscriber Identity Module	Secure Information Memory	System Integrated Module	Single Input Mobile
+tec_laser_stand	Hard	What does 'laser' stand for?	Light Amplification by Stimulated Emission of Radiation	Light Activated Source of Energetic Radiation	Linear Amplified Signal of Emitted Rays	Long-range Amplified Source of Electronic Rays
+tec_dvd_stand	Hard	What does 'DVD' stand for?	Digital Versatile Disc	Digital Video Drive	Direct Visual Data	Dual Video Disc
+tec_video_website_original	Hard	Which video website's original slogan was 'Broadcast Yourself'?	YouTube	Vimeo	Twitch	MySpace
+tec_best_selling_single	Hard	What is the best-selling single home computer model of all time?	The Commodore 64	The ZX Spectrum	The Apple II	The IBM PC
+tec_charles_babbage_design	Hard	What did Charles Babbage design in the 1800s?	A mechanical computer	The first steam train	The electric telegraph	An early typewriter
+tec_skyscraper_world_tallest	Hard	Which skyscraper was the world's tallest building just before the Burj Khalifa?	Taipei 101	The Petronas Towers	The Shanghai Tower	The Sears Tower
+tec_engineer_designed_iron	Hard	Which engineer designed the iron framework inside the Statue of Liberty?	Gustave Eiffel	Isambard Kingdom Brunel	John Roebling	Ferdinand de Lesseps
+tec_scottish_inventor_developed	Hard	Which Scottish inventor developed the first practical pneumatic tyre?	John Boyd Dunlop	Charles Goodyear	Andre Michelin	Karl Benz
+tec_sony_robot_dog	Hard	What was the name of Sony's robot dog, first sold in 1999?	AIBO	ASIMO	Furby	Rover
+tec_url_stand	Hard	What does 'URL' stand for?	Uniform Resource Locator	Universal Remote Link	Unified Routing Language	User Request Log
+tec_nfc_used_contactless	Hard	What does 'NFC', used for contactless payments, stand for?	Near-field communication	New fast connection	Network file control	Non-financial card
+tec_css_language_styling	Hard	What does 'CSS', the language for styling web pages, stand for?	Cascading Style Sheets	Computer Styling System	Coded Site Scripts	Creative Screen Styles
+tec_jpeg_stand	Hard	What does 'JPEG' stand for?	Joint Photographic Experts Group	Java Picture Encoding Group	Joint Pixel Exchange Graphics	Just Plain Edited Graphics
+tec_gif_stand	Hard	What does 'GIF' stand for?	Graphics Interchange Format	General Image File	Graphic Internet Frame	Grid Image Format
+day2_klucz_publiczny	Expert	In public-key cryptography, what may be shared freely?	The public key	The private key	Both keys	Neither key
+tec_moore	Expert	What does Moore's law concern?	The doubling of transistor count in chips	The doubling of internet speed each year	The steady fall in the price of memory	The rise in server power consumption
+tec_c_jezyk	Expert	Who created the C programming language?	Dennis Ritchie	Bjarne Stroustrup	James Gosling	Guido van Rossum
+tec2_enigma_bomba	Expert	What was the Polish machine for breaking Enigma called?	The cryptologic bomb	Colossus	Difference Engine	Mark I
+tec2_colossus	Expert	What was the British Colossus used for?	Breaking German ciphers	Ballistics calculations	Controlling radar	Census counting
+tec2_mikroprocesor_pierwszy	Expert	What was Intel's first commercial microprocessor called?	The 4004	The 8086	The Z80	The 6502
+tec2_unix_autorzy	Expert	Who created the Unix operating system at Bell Labs?	Ken Thompson and Dennis Ritchie	Bill Gates and Paul Allen	Steve Jobs and Steve Wozniak	Linus Torvalds
+tec2_www_autor	Expert	Who invented the World Wide Web?	Tim Berners-Lee	Vint Cerf	Marc Andreessen	Robert Kahn
+tec2_halting	Expert	What does the halting problem state?	There's no general way to decide whether a program will halt	Every program can in the end be optimised further	A recursive function always terminates in time	Loops always run faster than recursion does
+tec2_kwantowy_qubit	Expert	How does a qubit differ from a classical bit?	It can be in a superposition of states	It stores two bytes	It's faster at every task	It needs no power
+tec2_rsa	Expert	What is RSA encryption's security based on?	The difficulty of factoring large numbers	The length of the user's password	Keeping the algorithm secret	Processor speed
+tec3_blockchain_konsensus	Expert	What is the consensus mechanism Bitcoin originally used called?	Proof of Work	Proof of Stake, first	Proof of Authority	Byzantine Fault Tolerance, first
+mst_gps_relatywistyka	Expert	GPS satellites must correct their clocks for what?	Relativistic time differences	Magnetic interference	Solar wind drag	Atmospheric pressure
+dpt_tec_notacja_o	Expert	What does big O notation describe?	How cost grows with input size	How much memory a chip holds	How fast a network moves data	How many bugs a program has
+dpt_tec_zero_day	Expert	What is a zero-day vulnerability?	A flaw with no fix available yet	A bug that takes a day to fix	An attack lasting under a day	A password that expires at once
+cur_wifi_skrot	Expert	What does the 'Wi' in Wi-Fi actually stand for?	Nothing - it's a brand name	Wireless fidelity, like hi-fi	Wide-area frequency	Wave-integrated fibre
+tec_wirus_brain	Expert	What was the name of the first virus for IBM PCs, written in Pakistan in 1986?	Brain	ILOVEYOU	Creeper	Morris
+tec_rok_2038	Expert	In which year will many older 32-bit computer clocks overflow, like a second Y2K?	2038	2030	2048	2100
+tec_unix_1970	Expert	Unix time counts the seconds since which date?	1 January 1970	1 January 1900	1 January 1980	1 January 2000
+tec_symbolics	Expert	Which was the first .com domain ever registered, in 1985?	symbolics.com	ibm.com	apple.com	google.com
+tec_pierwsza_przegladarka	Expert	What was the first web browser, written by Tim Berners-Lee, called?	WorldWideWeb	Mosaic	Netscape Navigator	Lynx
+tec_spacewar	Expert	Which early video game, written in 1962 on a PDP-1 computer, pitted two spaceships against each other?	Spacewar!	Asteroids	Space Invaders	Galaxian
+tec_sony_ryzowar	Expert	What was the Sony company's first product, which flopped?	A rice cooker	A transistor radio	A tape recorder	A calculator
+tec_comet	Expert	Which was the world's first commercial jet airliner?	The de Havilland Comet	The Boeing 707	The Douglas DC-8	The Sud Aviation Caravelle
+tec_mp3	Expert	Which German research institute developed the MP3 audio format?	Fraunhofer	Max Planck	Siemens	Bosch
+tec_rubik_pozycje	Expert	Roughly how many different positions can a Rubik's Cube be in?	About 43 quintillion	About 43 million	About 43 billion	About 43 trillion
+tec_liczba_boga	Expert	Any Rubik's Cube position can be solved in at most how many moves?	20	12	36	54
+tec_arm_acorn	Expert	The ARM chips inside most phones were first designed by which British computer maker?	Acorn Computers	Sinclair Research	Amstrad	Psion
+tec_zuse_z3	Expert	What was Konrad Zuse's 1941 machine, often called the first programmable computer?	The Z3	ENIAC	Colossus	The Harvard Mark I
+tec_cobol	Expert	Which business programming language did Grace Hopper help create?	COBOL	Fortran	BASIC	Pascal
+tec_arpanet_lo	Expert	The first message sent over ARPANET in 1969 was meant to be 'LOGIN'. What actually arrived?	LO	LOG	L	Nothing at all
+tec_dynatac	Expert	Roughly how much did the first handheld mobile phone, the Motorola DynaTAC, weigh?	About 1 kg	About 100 g	About 300 g	About 3 kg
+tec_ibm_simon	Expert	Which 1994 device is often called the first smartphone?	The IBM Simon	The Nokia Communicator	The BlackBerry 850	The Palm Pilot
+tec_blackberry	Expert	Which Canadian company made BlackBerry phones?	Research In Motion	Nortel	Sierra Wireless	Corel
+tecx_tranzystor	Expert	Which tiny invention of 1947, from Bell Labs, made modern electronics possible?	The transistor	The microchip	The vacuum tube	The laser
+tecx_cd_74	Expert	The CD's 74-minute length was reportedly chosen to fit which piece of music?	Beethoven's Ninth Symphony	The Beatles' 'Abbey Road'	Vivaldi's 'Four Seasons'	Mozart's 'Requiem'
+tecx_lazy_bones	Expert	What was one of the first TV remote controls, attached by a cable in 1950, called?	Lazy Bones	Couch King	Click Master	Zapper
+tecx_zmywarka	Expert	Who invented one of the first successful dishwashers, in 1886?	Josephine Cochrane	Marie Curie	Ada Lovelace	Florence Nightingale
+tecy_dyskietka	Expert	Roughly how much data could a standard 3.5-inch floppy disk hold?	1.44 MB	144 MB	14.4 GB	144 KB
+tecy_whittle	Expert	Which British engineer patented the turbojet engine in 1930?	Frank Whittle	Igor Sikorsky	Barnes Wallis	Isambard Kingdom Brunel
+tecy_brunel	Expert	Which Victorian engineer built the giant steamship 'Great Eastern'?	Isambard Kingdom Brunel	George Stephenson	James Watt	Thomas Telford
+tecy_elektryk_xix	Expert	In which century was the first electric car built?	The 19th	The 20th	The 21st	The 18th
+tec_very_home_video	Expert	What was the very first home video game console?	The Magnavox Odyssey	The Atari 2600	The Fairchild Channel F	The Intellivision
+tec_german_inventor_built	Expert	Which German inventor built the 'running machine', a two-wheeled ancestor of the bicycle, in 1817?	Karl Drais	Karl Benz	Gottlieb Daimler	Rudolf Diesel

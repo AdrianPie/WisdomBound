@@ -1,3 +1,5 @@
+// PLIK GENEROWANY z domain/quizbank/science.tsv przez `python3 tools/quizbank.py generate`.
+// Nie edytuj go recznie - pytania dopisuje sie do TSV (patrz domain/quizbank/README.md).
 package com.lernhero.domain.quiz.bank
 
 import com.lernhero.domain.quiz.QuizCategory
@@ -23,8 +25,13 @@ object ScienceQuestions {
     private fun q(id: String, prompt: String, correct: String, wrong: List<String>, difficulty: QuizDifficulty) =
         QuizEntry(id = id, prompt = prompt, correct = correct, wrong = wrong, category = QuizCategory.Science, difficulty = difficulty)
 
-    val all: List<QuizEntry> = listOf(
-        /* ------------------------------ Easy ------------------------------ */
+    val all: List<QuizEntry> = easy() + medium() + hard() + expert()
+
+    // Kazdy poziom w osobnej funkcji: jedna wielka lista w inicjalizatorze obiektu przekroczylaby
+    // z czasem limit 64 KB kodu na metode JVM (735 pytan historii zajmowalo w nim juz ~36 KB).
+
+    /* ------------------------------ Easy ------------------------------ */
+    private fun easy(): List<QuizEntry> = listOf(
         q("sci_merkury", "Which planet is closest to the Sun?", "Mercury", listOf("Venus", "Earth", "Mars"), E),
         q("sci_planety", "How many planets does the Solar System have?", "8", listOf("9", "7", "10"), E),
         q("sci_richter", "What does the Richter scale measure?", "Earthquake magnitude", listOf("Temperature", "Pressure", "Wind speed"), E),
@@ -68,8 +75,54 @@ object ScienceQuestions {
         q("scix_tecza_kolory", "How many colours are traditionally named in a rainbow?", "Seven", listOf("Five", "Six", "Nine"), E),
         q("scix_magnesy", "What happens when you push the north poles of two magnets together?", "They push each other away", listOf("They snap together", "They lose their magnetism", "They start to spin"), E),
         q("sciy_poranna_gwiazda", "Which planet is often called the 'Morning Star' and the 'Evening Star'?", "Venus", listOf("Mars", "Jupiter", "Mercury"), E),
+        q("sci_star_closest_earth", "Which star is closest to the Earth?", "The Sun", listOf("Proxima Centauri", "Sirius", "Polaris"), E),
+        q("sci_brightest_natural_object", "What is the brightest natural object in the night sky?", "The Moon", listOf("Venus", "Sirius", "Jupiter"), E),
+        q("sci_scientific_northern_lights", "What is the scientific name for the northern lights?", "The aurora borealis", listOf("The aurora australis", "The zodiacal light", "The Milky Way"), E),
+        q("sci_call_scientist_studies", "What do you call a scientist who studies stars and planets?", "An astronomer", listOf("An astrologer", "A geologist", "A meteorologist"), E),
+        q("sci_meteorologist_study", "What does a meteorologist study?", "The weather", listOf("Meteors", "Metals", "Rocks"), E),
+        q("sci_call_recognisable_pattern", "What do we call a recognisable pattern of stars in the sky, like Orion?", "A constellation", listOf("A galaxy", "A nebula", "A solar system"), E),
+        q("sci_makes_compass_needle", "What makes a compass needle point north?", "The Earth's magnetic field", listOf("The Sun's light", "The Earth's rotation", "The pull of the Moon"), E),
+        q("sci_force_slows_down", "Which force slows down a book sliding across a table?", "Friction", listOf("Gravity", "Magnetism", "Inertia"), E),
+        q("sci_renewable_energy_uses", "Which renewable energy uses the heat from deep inside the Earth?", "Geothermal energy", listOf("Tidal energy", "Nuclear energy", "Biomass energy"), E),
+        q("sci_sonar_use_find", "What does sonar use to find objects underwater?", "Sound waves", listOf("Radio waves", "Light beams", "Magnets"), E),
+        q("sci_measured_decibels", "What is measured in decibels?", "Loudness of sound", listOf("Brightness of light", "Strength of earthquakes", "Air pressure"), E),
+        q("sci_measured_watts", "What is measured in watts?", "Power", listOf("Speed", "Pressure", "Temperature"), E),
+        q("sci_sea_speed_traditionally", "At sea, speed is traditionally measured in which unit?", "Knots", listOf("Fathoms", "Leagues", "Miles per hour"), E),
+        q("sci_three_primary_colours", "What are the three primary colours of paint in traditional art?", "Red, yellow and blue", listOf("Red, green and blue", "Yellow, green and purple", "Red, white and blue"), E),
+        q("sci_molten_rock_once", "What is molten rock called once it erupts onto the Earth's surface?", "Lava", listOf("Magma", "Basalt", "Ash"), E),
+        q("sci_earth_thin_outermost", "What is the Earth's thin outermost layer called?", "The crust", listOf("The mantle", "The outer core", "The asthenosphere"), E),
+        q("sci_mainly_causes_earthquakes", "What mainly causes earthquakes?", "Moving tectonic plates", listOf("The Moon's gravity", "Underground rivers", "Changes in the weather"), E),
+        q("sci_popcorn_pop", "Why does popcorn pop?", "Water inside the kernel turns to steam", listOf("Air trapped in the shell expands", "The oil soaks in and boils", "The starch catches fire"), E),
+        q("sci_ears_pop_plane", "Why do your ears 'pop' on a plane?", "The air pressure changes", listOf("The engines vibrate", "The air gets colder", "The air gets drier"), E),
+        q("sci_hot_air_balloon", "Why does a hot-air balloon rise?", "Hot air is less dense than cold air", listOf("The flame pushes it upwards", "Hot air contains helium", "The basket is hollow"), E),
+        q("sci_supernova", "What is a supernova?", "A huge exploding star", listOf("A newly born planet", "A very bright comet", "A galaxy collision"), E),
+        q("sci_comet_mostly_made", "What is a comet mostly made of?", "Ice and dust", listOf("Molten rock", "Pure iron", "Burning gas"), E),
+        q("sci_roads_get_salted", "Why do roads get salted in icy weather?", "Salt lowers the freezing point of water", listOf("Salt warms up the road surface", "Salt makes tyres grip harder", "Salt soaks up the falling snow"), E),
+        q("sci_fog_really", "What is fog, really?", "A cloud touching the ground", listOf("Smoke from distant fires", "Steam rising from the sea", "Air full of fine dust"), E),
+        q("sci_forms_grass_clear", "What forms on grass on a clear night as warm, moist air cools?", "Dew", listOf("Frost smoke", "Hail", "Mist rain"), E),
+        q("sci_call_scientist_studies_2", "What do we call a scientist who studies rocks?", "A geologist", listOf("A biologist", "An astronomer", "A meteorologist"), E),
+        q("sci_preserved_remains_ancient", "What are the preserved remains of ancient plants and animals in rock called?", "Fossils", listOf("Minerals", "Crystals", "Meteorites"), E),
+        q("sci_gas_breathe_out", "Which gas do we breathe out more of than we breathe in?", "Carbon dioxide", listOf("Oxygen", "Nitrogen", "Helium"), E),
+        q("sci_materials_lets_electricity", "Which of these materials lets electricity flow through it best?", "Copper", listOf("Rubber", "Glass", "Wood"), E),
+        q("sci_puddle_slowly_dries", "What is it called when a puddle slowly dries up in the sun?", "Evaporation", listOf("Condensation", "Melting", "Freezing"), E),
+        q("sci_droplets_form_outside", "What is it called when droplets form on the outside of a cold glass?", "Condensation", listOf("Evaporation", "Erosion", "Absorption"), E),
+        q("sci_glass_prism_split", "What does a glass prism split white light into?", "The colours of the rainbow", listOf("Beams of pure white light", "X-rays", "Heat and sound"), E),
+        q("sci_call_moon_see", "What do we call the Moon when we can't see any of its lit side?", "A new moon", listOf("A full moon", "A blue moon", "A half moon"), E),
+        q("sci_according_old_saying", "According to the old saying, what does a red sky at night promise?", "Good weather the next day", listOf("A storm before dawn", "Snow within a week", "A cold, frosty night"), E),
+        q("sci_thick_mix_smoke", "What is the name for a thick mix of smoke and fog?", "Smog", listOf("Haze", "Mist", "Drizzle"), E),
+        q("sci_kind_simple_machine", "What kind of simple machine is a see-saw?", "A lever", listOf("A pulley", "A wheel", "A wedge"), E),
+        q("sci_instrument_collects_measures", "Which instrument collects and measures rainfall?", "A rain gauge", listOf("A barometer", "A thermometer", "An anemometer"), E),
+        q("sci_call_sound_bounces", "What do we call a sound that bounces back off a wall or cliff?", "An echo", listOf("A whistle", "A tremor", "A ripple"), E),
+        q("sci_ships_seem_sink", "Why do ships seem to sink below the horizon as they sail away?", "The Earth is curved", listOf("Waves hide them", "The air bends light", "They really ride lower"), E),
+        q("sci_made_craters_moon", "What made most of the craters on the Moon?", "Impacts of space rocks", listOf("Ancient volcanoes", "Moonquakes", "Old lakes drying up"), E),
+        q("sci_rock_forms_layers", "Which rock forms from layers of sand pressed together?", "Sandstone", listOf("Granite", "Marble", "Basalt"), E),
+        q("sci_country_chandrayaan_mission", "Which country's Chandrayaan-3 mission landed near the Moon's south pole in 2023?", "India", listOf("China", "Japan", "Israel"), E),
+        q("sci_invisible_light_remote", "Which invisible light do TV remote controls use?", "Infrared", listOf("Ultraviolet", "X-rays", "Microwaves"), E),
+        q("sci_cave_formations_hang", "Which cave formations hang down from the ceiling?", "Stalactites", listOf("Stalagmites", "Geodes", "Columns"), E)
+    )
 
-        /* ----------------------------- Medium ----------------------------- */
+    /* ----------------------------- Medium ----------------------------- */
+    private fun medium(): List<QuizEntry> = listOf(
         q("sci_jowisz", "Which planet of the Solar System is the largest?", "Jupiter", listOf("Saturn", "Neptune", "Uranus"), M),
         q("sci_kopernik", "Who proved that the Earth orbits the Sun, not the other way around?", "Nicolaus Copernicus", listOf("Isaac Newton", "Galileo Galilei", "Johannes Kepler"), M),
         q("sci_grawitacja", "Who formulated the law of universal gravitation?", "Isaac Newton", listOf("Albert Einstein", "Nikola Tesla", "Michael Faraday"), M),
@@ -161,8 +214,67 @@ object ScienceQuestions {
         q("sciy_pierscienie_lod", "What are Saturn's rings mostly made of?", "Chunks of ice", listOf("Gold dust", "Clouds of gas", "Molten rock"), M),
         q("sciy_wielki_woz", "The Big Dipper (the Plough) is part of which constellation?", "Ursa Major", listOf("Orion", "Cassiopeia", "Ursa Minor"), M),
         q("sciy_nobel_dziedziny", "Which of these was NOT one of Alfred Nobel's original prize categories?", "Mathematics", listOf("Physics", "Literature", "Peace"), M),
+        q("sci_nasa_stand", "What does NASA stand for?", "National Aeronautics and Space Administration", listOf("North American Space Agency", "National Astronomy and Science Association", "National Agency for Space Advancement"), M),
+        q("sci_physicist_worked_clerk", "Which famous physicist worked as a clerk in a patent office in Bern?", "Albert Einstein", listOf("Max Planck", "Niels Bohr", "Isaac Newton"), M),
+        q("sci_person_win_nobel", "Who is the only person to win Nobel Prizes in two different sciences?", "Marie Curie", listOf("Albert Einstein", "Linus Pauling", "Ernest Rutherford"), M),
+        q("sci_instrument_measures_wind", "Which instrument measures wind speed?", "An anemometer", listOf("A barometer", "A hygrometer", "A seismometer"), M),
+        q("sci_heavy_steel_ship", "How does a heavy steel ship manage to float?", "It pushes aside its own weight in water", listOf("Steel is lighter than sea water", "Its engines hold it up", "Air under the hull lifts it"), M),
+        q("sci_causes_sound_thunder", "What causes the sound of thunder?", "Air expanding fast in lightning's heat", listOf("Clouds bumping into each other", "Rain hitting the ground", "Wind rushing through clouds"), M),
+        q("sci_kind_star_sun", "What kind of star is the Sun?", "A yellow dwarf", listOf("A red giant", "A white dwarf", "A neutron star"), M),
+        q("sci_lies_centre_milky", "What lies at the centre of the Milky Way?", "A supermassive black hole", listOf("A gigantic blue star", "A cloud of dark matter", "An enormous white dwarf"), M),
+        q("sci_nebula", "What is a nebula?", "A cloud of gas and dust in space", listOf("A star in its final stage", "A small irregular galaxy", "A ring of rocks round a planet"), M),
+        q("sci_roughly_far_sun", "Roughly how far is the Sun from the Earth?", "150 million km", listOf("15 million km", "1.5 billion km", "1.5 million km"), M),
+        q("sci_spacex_giant_reusable", "What is the name of SpaceX's giant reusable rocket, the most powerful ever flown?", "Starship", listOf("Falcon Heavy", "Dragon", "New Glenn"), M),
+        q("sci_type_rock_forms", "What type of rock forms when lava or magma cools?", "Igneous", listOf("Sedimentary", "Metamorphic", "Limestone"), M),
+        q("sci_thickest_layer_earth", "Which is the thickest layer of the Earth?", "The mantle", listOf("The crust", "The inner core", "The outer core"), M),
+        q("sci_earth_core_mostly", "What is the Earth's core mostly made of?", "Iron and nickel", listOf("Molten rock and gas", "Carbon and silicon", "Gold and lead"), M),
+        q("sci_sea_taste_salty", "Why does the sea taste salty?", "Rivers wash minerals out of rocks into it", listOf("Underwater volcanoes boil the water", "Salty rain falls on it", "Fish release salt"), M),
+        q("sci_unit_electric_current", "In which unit is electric current measured?", "The ampere", listOf("The volt", "The ohm", "The watt"), M),
+        q("sci_unit_electrical_resistance", "In which unit is electrical resistance measured?", "The ohm", listOf("The volt", "The ampere", "The joule"), M),
+        q("sci_measured_hertz", "What is measured in hertz?", "Frequency", listOf("Force", "Energy", "Pressure"), M),
+        q("sci_temperature_water_freeze", "At what temperature does water freeze on the Fahrenheit scale?", "32 °F", listOf("0 °F", "100 °F", "212 °F"), M),
+        q("sci_titan_moon_thick", "Titan, a moon with a thick atmosphere, orbits which planet?", "Saturn", listOf("Jupiter", "Neptune", "Uranus"), M),
+        q("sci_shields_earth_sun", "What shields the Earth from most of the Sun's charged particles?", "Its magnetic field", listOf("Its ozone layer", "Its clouds", "Its oceans"), M),
+        q("sci_ozone_layer_protect", "What does the ozone layer protect us from?", "Ultraviolet rays", listOf("Meteors", "The solar wind", "Cosmic dust"), M),
+        q("sci_part_sun_hottest", "Which part of the Sun is the hottest?", "The core", listOf("The surface", "The sunspots", "The visible edge"), M),
+        q("sci_type_cloud_looks", "Which type of cloud looks like puffy balls of cotton wool?", "Cumulus", listOf("Cirrus", "Stratus", "Nimbus"), M),
+        q("sci_planet_takes_earth", "Which planet takes about 12 Earth years to orbit the Sun?", "Jupiter", listOf("Saturn", "Mars", "Uranus"), M),
+        q("sci_scientific_study_earthquakes", "What is the scientific study of earthquakes called?", "Seismology", listOf("Meteorology", "Volcanology", "Oceanography"), M),
+        q("sci_planet_closest_size", "Which planet is closest in size to the Earth?", "Venus", listOf("Mars", "Mercury", "Neptune"), M),
+        q("sci_full_moon_nearest", "What is the full moon nearest the autumn equinox traditionally called?", "The harvest moon", listOf("The blood moon", "The hunter's moon", "The wolf moon"), M),
+        q("sci_sun_glowing_outer", "What is the Sun's glowing outer atmosphere, seen during a total eclipse, called?", "The corona", listOf("The aurora", "The halo", "The photosphere"), M),
+        q("sci_nasa_programme_send", "What is the name of NASA's programme to send astronauts back to the Moon?", "Artemis", listOf("Apollo", "Gemini", "Orion"), M),
+        q("sci_quickly_falling_barometer", "What does a quickly falling barometer usually warn of?", "Stormy weather", listOf("A heatwave", "An earthquake", "Clear skies"), M),
+        q("sci_warming_pacific_ocean", "What is the warming of the Pacific Ocean that disrupts weather around the world called?", "El Nino", listOf("The Gulf Stream", "La Tormenta", "The Monsoon"), M),
+        q("sci_black_ice", "What is 'black ice'?", "Thin, almost invisible ice on roads", listOf("Ice made from salt water", "Ice coated with oil and soot", "Ice that forms only on mountains"), M),
+        q("sci_monsoon", "What is a monsoon?", "A seasonal wind that brings heavy rain", listOf("A sudden earthquake under the sea", "A hot, dry wind from the desert", "A tropical storm with no rain"), M),
+        q("sci_volcanic_rock_light", "Which volcanic rock is so light and full of air bubbles that it can float?", "Pumice", listOf("Granite", "Basalt", "Marble"), M),
+        q("sci_shiny_black_volcanic", "Which shiny black volcanic glass was used to make sharp blades?", "Obsidian", listOf("Jet", "Quartz", "Coal"), M),
+        q("sci_largest_active_volcano", "Which is the largest active volcano on Earth?", "Mauna Loa", listOf("Mount Etna", "Mount Fuji", "Krakatoa"), M),
+        q("sci_english_scientist_discovered", "Which English scientist discovered electromagnetic induction and built early electric motors?", "Michael Faraday", listOf("Humphry Davy", "Joseph Priestley", "Robert Boyle"), M),
+        q("sci_french_chemist_executed", "Which French chemist, executed in 1794, is called the father of modern chemistry?", "Antoine Lavoisier", listOf("Louis Pasteur", "Joseph Priestley", "Robert Boyle"), M),
+        q("sci_temperature_fahrenheit_water", "At what temperature in Fahrenheit does water boil at sea level?", "212 °F", listOf("100 °F", "180 °F", "250 °F"), M),
+        q("sci_moon_jupiter_volcanically", "Which moon of Jupiter is the most volcanically active body in the Solar System?", "Io", listOf("Europa", "Callisto", "Ganymede"), M),
+        q("sci_meteor_shower_lights", "Which meteor shower lights up the sky every August?", "Perseids", listOf("Leonids", "Geminids", "Orionids"), M),
+        q("sci_danish_astronomer_wore", "Which Danish astronomer wore a metal nose after losing his own in a duel?", "Tycho Brahe", listOf("Ole Romer", "Niels Bohr", "Johannes Kepler"), M),
+        q("sci_danish_physicist_pictured", "Which Danish physicist pictured electrons orbiting the nucleus in fixed shells?", "Niels Bohr", listOf("Max Planck", "Ernest Rutherford", "Werner Heisenberg"), M),
+        q("sci_italian_physicist_built", "Which Italian physicist built the first nuclear reactor, in Chicago in 1942?", "Enrico Fermi", listOf("Guglielmo Marconi", "Alessandro Volta", "Ettore Majorana"), M),
+        q("sci_supermoon", "What is a 'supermoon'?", "A full moon at its closest to Earth", listOf("A full moon that looks blue", "A full moon during an eclipse", "The first full moon of autumn"), M),
+        q("sci_animals_sent_space", "What were the first animals sent into space, in 1947?", "Fruit flies", listOf("Dogs", "Monkeys", "Mice"), M),
+        q("sci_direction_hurricanes_spin", "In which direction do hurricanes spin in the Northern Hemisphere?", "Anticlockwise", listOf("Clockwise", "It varies randomly", "They do not spin"), M),
+        q("sci_planets_solar_system", "How many planets in our Solar System have rings?", "Four", listOf("One", "Two", "Six"), M),
+        q("sci_stars_twinkle", "Why do stars twinkle?", "Turbulent air bends their light", listOf("They pulse in brightness", "Space dust drifts past them", "They spin very fast"), M),
+        q("sci_last_apollo_astronaut", "Who was the last Apollo astronaut to walk on the Moon, in 1972?", "Eugene Cernan", listOf("Buzz Aldrin", "Alan Shepard", "Jim Lovell"), M),
+        q("sci_apollo_lunar_module", "What was the name of the Apollo 11 lunar module that landed on the Moon?", "Eagle", listOf("Falcon", "Columbia", "Odyssey"), M),
+        q("sci_became_paying_space", "Who became the first paying space tourist, in 2001?", "Dennis Tito", listOf("Richard Branson", "Elon Musk", "Mark Shuttleworth"), M),
+        q("sci_force_makes_soap", "Which force makes soap bubbles round?", "Surface tension", listOf("Gravity", "Air pressure", "Static electricity"), M),
+        q("sci_swedish_astronomer_gave", "Which Swedish astronomer gave his name to the temperature scale used in most of the world?", "Anders Celsius", listOf("Carl Linnaeus", "Anders Angstrom", "Tycho Brahe"), M),
+        q("sci_temperature_scale_still", "Whose temperature scale is still used for everyday weather in the USA?", "Daniel Fahrenheit", listOf("Anders Celsius", "Lord Kelvin", "Rene Reaumur"), M),
+        q("sci_state_meteor_crater", "In which US state is the famous Meteor Crater, over a kilometre wide?", "Arizona", listOf("Nevada", "Utah", "New Mexico"), M)
+    )
 
-        /* ------------------------------ Hard ------------------------------ */
+    /* ------------------------------ Hard ------------------------------ */
+    private fun hard(): List<QuizEntry> = listOf(
         q("sci_einstein", "Who formulated the theory of relativity?", "Albert Einstein", listOf("Isaac Newton", "Niels Bohr", "Max Planck"), H),
         q("sci_penicylina", "Who discovered penicillin?", "Alexander Fleming", listOf("Louis Pasteur", "Robert Koch", "Jonas Salk"), H),
         q("sci_sila", "What is the SI unit of force?", "Newton", listOf("Joule", "Watt", "Pascal"), H),
@@ -236,8 +348,29 @@ object ScienceQuestions {
         q("sciy_obrot_ziemi", "At the equator, roughly how fast does the Earth's surface spin?", "About 1,670 km/h", listOf("About 167 km/h", "About 16,700 km/h", "About 16 km/h"), H),
         q("sciy_pluton_serce", "What huge shape did the New Horizons probe spot on Pluto in 2015?", "A heart", listOf("A smiley face", "A star", "A cross"), H),
         q("sciy_pioruny_sekunda", "Roughly how many times does lightning strike the Earth every second?", "About 50", listOf("About 5", "About 500", "About 5,000"), H),
+        q("sci_average_planet_closest", "On average, which planet is closest to the Earth?", "Mercury", listOf("Venus", "Mars", "Jupiter"), H),
+        q("sci_larger_moon_dwarf", "Which is larger: our Moon or the dwarf planet Pluto?", "Our Moon", listOf("Pluto", "They are almost equal", "Pluto, by twice the size"), H),
+        q("sci_planet_cassini_probe", "Which planet did the Cassini probe orbit for 13 years?", "Saturn", listOf("Jupiter", "Mars", "Venus"), H),
+        q("sci_pluto_orbits_region", "Pluto orbits in which region of icy bodies beyond Neptune?", "The Kuiper Belt", listOf("The asteroid belt", "The Oort cloud", "The Van Allen belt"), H),
+        q("sci_pluto_largest_moon", "What is the name of Pluto's largest moon?", "Charon", listOf("Titan", "Triton", "Europa"), H),
+        q("sci_country_became_third", "Which country became the third to send humans into space on its own rockets, in 2003?", "China", listOf("India", "Japan", "France"), H),
+        q("sci_china_space_station", "What is the name of China's space station?", "Tiangong", listOf("Mir", "Salyut", "Skylab"), H),
+        q("sci_credited_inventing_telescope", "Who is credited with inventing the telescope, in 1608?", "Hans Lippershey", listOf("Galileo Galilei", "Isaac Newton", "Johannes Kepler"), H),
+        q("sci_astronomer_worked_out", "Which astronomer worked out that planets move in ellipses?", "Johannes Kepler", listOf("Galileo Galilei", "Nicolaus Copernicus", "Tycho Brahe"), H),
+        q("sci_scale_rates_hurricanes", "Which scale rates hurricanes from category 1 to 5?", "The Saffir-Simpson scale", listOf("The Beaufort scale", "The Richter scale", "The Fujita scale"), H),
+        q("sci_scale_measures_wind", "Which scale measures wind force from 0, calm, to 12, hurricane?", "The Beaufort scale", listOf("The Saffir-Simpson scale", "The Mercalli scale", "The Fujita scale"), H),
+        q("sci_type_rock_marble", "What type of rock is marble?", "Metamorphic", listOf("Igneous", "Sedimentary", "Volcanic"), H),
+        q("sci_colour_light_bends", "Which colour of light bends the most when it passes through a prism?", "Violet", listOf("Red", "Green", "Yellow"), H),
+        q("sci_kind_lens_used", "Which kind of lens is used in glasses for short-sighted people?", "A concave lens", listOf("A convex lens", "A bifocal lens", "A magnifying lens"), H),
+        q("sci_planet_volcanoes", "Which planet has the most volcanoes?", "Venus", listOf("Mars", "Earth", "Mercury"), H),
+        q("sci_planet_nasa_juno", "Which planet did NASA's Juno probe go to study?", "Jupiter", listOf("Saturn", "Venus", "Mars"), H),
+        q("sci_apparent_force_seems", "Which apparent force seems to push you outwards when a car turns sharply?", "Centrifugal force", listOf("Friction", "Magnetism", "Inertial gravity"), H),
+        q("sci_discovered_electron_1897", "Who discovered the electron, in 1897?", "J. J. Thomson", listOf("Ernest Rutherford", "Niels Bohr", "Max Planck"), H),
+        q("sci_planet_moons_characters", "Which planet has moons named after characters from Shakespeare?", "Uranus", listOf("Neptune", "Saturn", "Jupiter"), H)
+    )
 
-        /* ----------------------------- Expert ----------------------------- */
+    /* ----------------------------- Expert ----------------------------- */
+    private fun expert(): List<QuizEntry> = listOf(
         q("sci_kwant", "Who launched quantum theory?", "Max Planck", listOf("Albert Einstein", "Werner Heisenberg", "Erwin Schrodinger"), X),
         q("sci_entropia", "Which law of thermodynamics states that entropy increases?", "The second", listOf("The first", "The third", "The zeroth"), X),
         q("sci_hubble", "Who discovered that the Universe is expanding?", "Edwin Hubble", listOf("Albert Einstein", "Carl Sagan", "Georges Lemaitre"), X),
@@ -285,6 +418,9 @@ object ScienceQuestions {
         q("sciy_fobos_dejmos", "What are the names of Mars's two moons?", "Phobos and Deimos", listOf("Io and Europa", "Titan and Rhea", "Castor and Pollux"), X),
         q("sciy_krakatau", "The 1883 eruption of which volcano made one of the loudest sounds in recorded history?", "Krakatoa", listOf("Vesuvius", "Mount St Helens", "Etna"), X),
         q("sciy_punkt_potrojny", "At its 'triple point', water can exist in which states at once?", "Solid, liquid and gas", listOf("Only liquid and gas", "Only ice and steam", "Plasma and liquid"), X),
-        q("sciy_kosmos_temperatura", "What is the background temperature of deep space?", "About -270 °C", listOf("About -50 °C", "About 0 °C", "About -1,000 °C"), X)
+        q("sciy_kosmos_temperatura", "What is the background temperature of deep space?", "About -270 °C", listOf("About -50 °C", "About 0 °C", "About -1,000 °C"), X),
+        q("sci_belgian_priest_proposed", "Which Belgian priest first proposed what became the Big Bang theory?", "Georges Lemaitre", listOf("Edwin Hubble", "Fred Hoyle", "Georges Cuvier"), X),
+        q("sci_spacecraft_took_pale", "Which spacecraft took the famous 'Pale Blue Dot' photo of Earth in 1990?", "Voyager 1", listOf("Hubble", "Apollo 17", "Pioneer 10"), X),
+        q("sci_french_mathematician_predicted", "Which French mathematician predicted where Neptune would be found, in 1846?", "Urbain Le Verrier", listOf("Pierre-Simon Laplace", "Joseph-Louis Lagrange", "Henri Poincare"), X)
     )
 }

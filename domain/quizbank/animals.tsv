@@ -1,0 +1,427 @@
+# Zwierzeta: rekordy, zachowania, dziwne ciala i sprytne strategie przetrwania.
+#
+# Najlepiej dzialaja tu fakty, po ktorych gracz mowi "serio?" (wombat robi kostki, slimak ma
+# tysiace zebow). Pytania-zerowki w rodzaju "co je panda?" czy "czym oddycha ryba?" wylecialy -
+# nie da sie ich nie wiedziec, wiec nic nie sprawdzaja.
+#
+# Zasady pisania pytan dla calego banku - patrz [com.lernhero.domain.quiz.QuizBank].
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+ani_najwieksze	Easy	Which animal is the largest on Earth?	Blue whale	African elephant	Giraffe	Whale shark
+ani_gepard	Easy	Which animal is the fastest on land?	Cheetah	Lion	Horse	Antelope
+ani_zyrafa	Easy	Which land animal is the tallest?	Giraffe	Elephant	Camel	Moose
+zwi2_wielblad_garby	Easy	What does a camel store in its hump?	Fat	Water	Air	Salt
+zwi2_wilk_grupa	Easy	What is a group of wolves called?	A pack	A flock	A swarm	A shoal
+scicmp_najciezsze_ladowe	Easy	Which is the heaviest land animal?	The African elephant	The hippopotamus	The white rhinoceros	The giraffe
+scicmp_nie_ssak	Easy	Which of these animals is NOT a mammal?	The penguin	The bat	The dolphin	The platypus
+trv_flaming_kolor	Easy	Where do flamingos get their pink colour from?	Pigments in the food they eat	Sunlight on their feathers	Their blood showing through	Minerals in the water
+trv_sowa_glowa	Easy	Which bird can turn its head about 270 degrees?	The owl	The eagle	The parrot	The crow
+trv_nietoperz_lot	Easy	Which is the only mammal capable of true, powered flight?	The bat	The flying squirrel	The sugar glider	The colugo
+wld_pajak_owad	Easy	Why is a spider not an insect?	It has eight legs and two body parts	It cannot fly and has no wings	It spins silk instead of wax	It has no antennae on its head
+ani_kangur_mlode	Easy	What is a baby kangaroo called?	A joey	A kit	A cub	A calf
+ani_lwy_stado	Easy	What is a group of lions called?	A pride	A pack	A herd	A troop
+ani_wielblad_statek	Easy	Which animal is nicknamed the 'ship of the desert'?	The camel	The horse	The ostrich	The donkey
+ani_tygrys_najwiekszy	Easy	Which is the largest of the big cats?	The tiger	The lion	The jaguar	The leopard
+ani_waz_jezyk	Easy	What does a snake mainly use its flicking tongue for?	Smelling	Tasting its prey	Hearing	Cooling down
+ani_koala_sen	Easy	Which animal can sleep up to 22 hours a day?	The koala	The house cat	The panda	The meerkat
+ani_komar_zabojca	Easy	Which animal causes the most human deaths every year?	The mosquito	The shark	The crocodile	The lion
+ani_lew_grupa	Easy	Which is the only big cat that lives in large family groups?	The lion	The tiger	The leopard	The jaguar
+ani_truten	Easy	What is a male honeybee called?	A drone	A worker	A soldier	A king
+ani_pszczoly_nektar	Easy	What do bees collect from flowers to turn into honey?	Nectar	Pollen	Sap	Dew
+ani_komodo	Easy	What is the largest living lizard?	The Komodo dragon	The marine iguana	The Gila monster	The frilled lizard
+ani_kapibara	Easy	What is the largest rodent in the world?	The capybara	The beaver	The porcupine	The coypu
+ani_rekin_wielorybi	Easy	What is the largest fish in the world?	The whale shark	The great white shark	The basking shark	The oarfish
+ani_laika	Easy	Which kind of animal was the first to orbit the Earth, in 1957?	A dog	A monkey	A cat	A mouse
+ani_chart	Easy	Which dog breed is the fastest runner?	The greyhound	The Dalmatian	The husky	The border collie
+ani_chihuahua	Easy	Which is the smallest dog breed?	The Chihuahua	The pug	The dachshund	The beagle
+ani_sfinks_kot	Easy	Which cat breed is famous for being hairless?	The Sphynx	The Siamese	The Persian	The Maine Coon
+ani_opos_udaje	Easy	Which animal is famous for 'playing dead' when it is threatened?	The opossum	The raccoon	The skunk	The badger
+ani_zolw_skorupa	Easy	Can a turtle crawl out of its shell?	No - it is fused to its skeleton	Yes, when it outgrows it	Yes, to escape a predator	Only sea turtles can
+ani_pingwin_ojciec	Easy	Which parent keeps an emperor penguin's egg warm through the winter?	The father	The mother	Both, taking turns	Neither - it is buried
+ani_arachnofobia	Easy	What is the fear of spiders called?	Arachnophobia	Claustrophobia	Agoraphobia	Acrophobia
+ani_wydry_lapki	Easy	Why do sea otters often hold paws while they sleep?	So they don't drift apart	To keep each other warm	To show who is in charge	To protect their food
+ani_szop_mycie	Easy	Raccoons are famous for seeming to do what with their food?	Wash it	Bury it	Share it	Hide it in trees
+anix_wieloryb_oddech	Easy	Through what does a whale breathe?	A blowhole	Gills	Its skin	Its tail
+anix_nietoperz_spanie	Easy	How do bats usually rest?	Hanging upside down	Lying on their backs	Standing on one leg	Floating on water
+anix_flaming_noga	Easy	Which pink bird often rests standing on one leg?	The flamingo	The heron	The stork	The spoonbill
+anix_jez	Easy	What does a hedgehog do when it feels threatened?	Rolls into a spiky ball	Plays dead	Sprays a bad smell	Spits at the attacker
+anix_skunks	Easy	Which black-and-white animal sprays a foul smell to defend itself?	The skunk	The badger	The raccoon	The panda
+anix_bobr_tama	Easy	Which animal builds dams across streams?	The beaver	The otter	The muskrat	The water vole
+anix_krab_bokiem	Easy	Which animal is famous for walking sideways?	The crab	The lobster	The shrimp	The scorpion
+anix_paw	Easy	Which bird fans out a huge tail covered in 'eyes' to impress females?	The peacock	The turkey	The pheasant	The parrot
+anix_swietlik	Easy	Which insects light up in the dark to attract mates?	Fireflies	Crickets	Moths	Ladybirds
+anix_atrament	Easy	What does an octopus squirt to escape from predators?	Ink	Water	Venom	Sand
+anix_czekolada_pies	Easy	Which common human treat is poisonous to dogs?	Chocolate	Carrots	Plain rice	Cucumber
+aniy_kot_sen	Easy	Roughly how many hours a day does a typical house cat sleep?	12 to 16	4 to 6	20 to 22	Exactly 8
+aniy_meduza_woda	Easy	Roughly how much of a jellyfish's body is water?	About 95%	About 50%	About 70%	About 30%
+ani_baby_goat	Easy	What is a baby goat called?	A kid	A calf	A foal	A cub
+ani_baby_horse	Easy	What is a baby horse called?	A foal	A calf	A kid	A lamb
+ani_baby_elephant	Easy	What is a baby elephant called?	A calf	A cub	A pup	A foal
+ani_female_sheep	Easy	What is a female sheep called?	A ewe	A mare	A sow	A doe
+ani_group_fish_swimming	Easy	What is a group of fish swimming together called?	A school	A pack	A flock	A herd
+ani_african_animal_laughing	Easy	Which African animal is famous for its 'laughing' call?	The hyena	The baboon	The jackal	The warthog
+ani_mammal_slowest_earth	Easy	Which mammal is famous for being the slowest on Earth?	The sloth	The koala	The panda	The wombat
+ani_flightless_bird_new	Easy	Which flightless bird is New Zealand's national symbol?	The kiwi	The emu	The penguin	The ostrich
+ani_bird_symbol_peace	Easy	Which bird is a symbol of peace?	The dove	The swan	The eagle	The owl
+ani_koalas_eat_almost	Easy	What do koalas eat almost exclusively?	Eucalyptus leaves	Bamboo shoots	Grass	Insects
+ani_humps_dromedary_camel	Easy	How many humps does a dromedary camel have?	One	Two	Three	None
+ani_lizards_drop_body	Easy	Many lizards can drop which body part to escape a predator?	Their tail	Their skin	A leg	Their claws
+ani_baby_frog	Easy	What is a baby frog called?	A tadpole	A cub	A fry	A kit
+ani_tropical_bird_huge	Easy	Which tropical bird has a huge, brightly coloured beak?	The toucan	The flamingo	The peacock	The pelican
+ani_animal_logo_wwf	Easy	Which animal is the logo of the WWF conservation group?	The giant panda	The polar bear	The tiger	The elephant
+ani_snake_spreads_hood	Easy	Which snake spreads a 'hood' around its neck when threatened?	The cobra	The python	The rattlesnake	The viper
+ani_venomous_snake_shakes	Easy	Which venomous snake shakes its tail as a warning?	The rattlesnake	The cobra	The anaconda	The mamba
+ani_shellfish_make_pearls	Easy	Which shellfish can make pearls?	The oyster	The lobster	The crab	The shrimp
+ani_baby_owl	Easy	What is a baby owl called?	An owlet	A cygnet	A gosling	A duckling
+ani_baby_seal	Easy	What is a baby seal called?	A pup	A cub	A calf	A kit
+ani_short_legged_dog	Easy	Which short-legged dog breed was Queen Elizabeth II's favourite?	The corgi	The dachshund	The beagle	The pug
+ani_dog_breed_often	Easy	Which dog breed is most often trained as a guide dog?	The Labrador retriever	The German shepherd	The Border collie	The poodle
+ani_wild_dog_roams	Easy	Which wild dog roams across mainland Australia?	The dingo	The coyote	The jackal	The hyena
+ani_south_american_animal	Easy	Which South American animal is a close relative of the camel?	The llama	The tapir	The capybara	The anteater
+ani_female_deer	Easy	What is a female deer called?	A doe	A ewe	A sow	A mare
+ani_birds_famously_migrate	Easy	Which birds famously migrate in a V-shaped formation?	Geese	Crows	Pigeons	Parrots
+ani_group_ants	Easy	What is a group of ants called?	A colony	A herd	A flock	A pride
+ani_baby_sheep	Easy	What is a baby sheep called?	A lamb	A kid	A calf	A foal
+ani_baby_deer	Easy	What is a baby deer called?	A fawn	A cub	A kit	A pup
+ani_group_sheep	Easy	What is a group of sheep called?	A flock	A herd	A pack	A pride
+ani_group_bees	Easy	What is a group of bees called?	A swarm	A pack	A pride	A herd
+ani_male_deer	Easy	What is a male deer called?	A stag	A boar	A ram	A gander
+ani_male_sheep	Easy	What is a male sheep called?	A ram	A buck	A bull	A boar
+ani_bird_huge_pouch	Easy	Which bird has a huge pouch under its beak for scooping up fish?	The pelican	The stork	The flamingo	The heron
+ani_red_beetle_black	Easy	Which red beetle with black spots is a symbol of good luck?	The ladybird	The firefly	The scarab	The cockchafer
+ani_pet_rodent_stores	Easy	Which pet rodent stores food in its cheek pouches?	The hamster	The rabbit	The guinea pig	The chinchilla
+ani_city_birds_often	Easy	Which city birds are often jokingly called 'rats with wings'?	Pigeons	Seagulls	Sparrows	Crows
+ani_group_puppies_born	Easy	What is a group of puppies born together called?	A litter	A flock	A brood	A clutch
+ani_big_cat_lives	Easy	Which big cat lives high in the snowy mountains of Central Asia?	The snow leopard	The jaguar	The cheetah	The lynx
+ani_owl_pale_heart	Easy	Which owl has a pale, heart-shaped face?	Barn owl	Snowy owl	Tawny owl	Eagle owl
+ani_animal_lives_network	Easy	Which animal lives in a network of burrows called a warren?	Rabbit	Badger	Fox	Mole
+ani_adult_female_horse	Easy	What is an adult female horse called?	A mare	A filly	A foal	A colt
+ani_adult_male_pig	Easy	What is an adult male pig called?	A boar	A sow	A gilt	A piglet
+ani_seabird_colourful_striped	Easy	Which seabird with a colourful striped beak is nicknamed the 'clown of the sea'?	Puffin	Toucan	Gannet	Cormorant
+ani_dog_breed_nicknamed	Easy	Which dog breed is nicknamed the 'sausage dog'?	Dachshund	Beagle	Basset Hound	Corgi
+ani_dinosaur_three_horns	Easy	Which dinosaur had three horns and a bony frill around its neck?	Triceratops	Stegosaurus	Ankylosaurus	Brachiosaurus
+ani_dinosaur_large_plates	Easy	Which dinosaur had large plates along its back and a spiked tail?	Stegosaurus	Triceratops	Diplodocus	Velociraptor
+ani_dinosaur_means_tyrant	Easy	Which dinosaur's name means 'tyrant lizard king'?	Tyrannosaurus rex	Velociraptor	Allosaurus	Spinosaurus
+ani_kind_animal_extinct	Easy	What kind of animal was the extinct megalodon?	A giant shark	A giant whale	A sea reptile	A giant squid
+ani_small_red_breasted	Easy	Which small red-breasted bird is Britain's unofficial national bird?	Robin	Wren	Blue tit	Sparrow
+ani_dog_breed_often_2	Easy	Which dog breed is often rated the most intelligent and is famous for herding sheep?	Border Collie	Poodle	German Shepherd	Labrador
+ani_wild_cat_black	Easy	Which wild cat is known for the black tufts on its ears?	Lynx	Puma	Ocelot	Serval
+ani_big_cat_cougar	Easy	Which big cat is also called the cougar or mountain lion?	Puma	Jaguar	Lynx	Leopard
+ani_bird_symbol_long	Easy	Which bird is a symbol of long life in Japan, where people fold a thousand paper ones?	Crane	Swan	Heron	Stork
+ani_silkworm_turn	Easy	What does a silkworm turn into?	A moth	A butterfly	A beetle	A wasp
+ani_male_cat	Easy	What is a male cat called?	A tom	A buck	A billy	A sire
+ani_small_hardy_pony	Easy	Which small, hardy pony comes from the islands north of Scotland?	Shetland pony	Welsh pony	Connemara pony	Exmoor pony
+ani_osmiornica_serca	Medium	How many hearts does an octopus have?	3	1	2	5
+ani_kameleon	Medium	Which reptile is famous for changing skin color?	Chameleon	Iguana	Gecko	Monitor lizard
+ani_ciaza_slonia	Medium	Which land animal has the longest pregnancy?	Elephant	Rhinoceros	Horse	Giraffe
+ani_nietoperz	Medium	Which sense does a bat use to navigate in the dark?	Echolocation	Night vision	Smell	Magnetoreception
+ani_kolibr	Medium	Which bird can fly backwards?	Hummingbird	Sparrow	Kingfisher	Stork
+zwi2_rekin_szkielet	Medium	What is a shark's skeleton made of?	Cartilage	Bone	Chitin	Horn
+zwi2_pszczola_rodzina	Medium	How many queens live in one healthy bee colony?	One	Three	Ten	None
+zwi2_lososie_wedrowka	Medium	Where do salmon return to spawn?	The river where they hatched	The open ocean	Polar lakes	The Nile delta
+zwi2_strus_jajo	Medium	Which living animal lays the largest eggs?	Ostrich	Condor	Pelican	Albatross
+zwi2_orka_grupa	Medium	Which family do orcas belong to?	Dolphins (Delphinidae)	Sharks	Seals	Porpoises
+zwi2_plaszczka_bron	Medium	How do most stingrays defend themselves?	A venomous barb on their tail	An electric shock from their mouth	Ink	Spikes on their back
+zwi2_kameleon_jezyk	Medium	How does a chameleon catch insects?	With a long, sticky tongue	With its front paws	With its tail	With spikes
+zwi2_pingwin_gatunek	Medium	Which penguin is the largest?	Emperor penguin	White-flippered penguin	King penguin	Adelie penguin
+zwi2_papuga_mowa	Medium	Which parrot is famous for the best mimicry of speech?	African grey parrot	Cockatiel	Macaw	Pink cockatoo
+zwi2_meduza_uklad	Medium	What does a jellyfish not have?	A brain	A mouth	Tentacles	Stinging cells
+zwi3_mrowkolew	Medium	How does an antlion larva hunt?	It digs a pit trap in the sand and waits for prey	It runs its prey down on foot in the open	It catches insects in mid-air while flying	It spins a sticky web the way a spider does
+zwi3_panda_kciuk	Medium	What helps a panda hold bamboo?	An extra 'thumb' made from an enlarged wrist bone	Rough suction pads on the soles of its paws	Unusually long claws and nothing else	A tail it can curl round the stem
+zwi3_mrowki_feromony	Medium	What do ants mark a trail to food with?	Pheromones	Saliva	Droppings alone	Sound
+zwi3_kon_zeby_wiek	Medium	What can a horse's age be roughly judged by?	Its teeth	The length of its tail	The color of its eyes	The growth of its hooves
+scicmp_najwiekszy_ptak	Medium	Which of these birds is the largest?	The ostrich	The emu	The Andean condor	The albatross
+scicmp_ktory_gad	Medium	Which of these animals is a reptile?	The crocodile	The frog	The salamander	The newt
+scicmp_najwiecej_nog	Medium	Which of these creatures has the most legs?	The millipede	The spider	The beetle	The crab
+trv_koala_odciski	Medium	Which animal has fingerprints so similar to a human's that they could confuse a crime lab?	The koala	The chimpanzee	The raccoon	The otter
+trv_niedzwiedz_skora	Medium	What colour is a polar bear's skin under its white fur?	Black	White	Pink	Grey
+trv_delfin_sen	Medium	Which animal sleeps with one half of its brain at a time?	The dolphin	The horse	The sloth	The hedgehog
+trv_rybitwa_migracja	Medium	Which bird makes the longest yearly migration, roughly from the Arctic to the Antarctic and back?	The Arctic tern	The swallow	The white stork	The Canada goose
+trv_wrony_stado	Medium	What is a group of crows called?	A murder	A parliament	A gaggle	A pride
+trv_homar_wzrost	Medium	Which animal keeps growing for its whole life?	The lobster	The cat	The eagle	The gorilla
+trv_kaczor_nazwa	Medium	What is a male duck called?	A drake	A gander	A cob	A buck
+trv_zyrafa_noworodek	Medium	Which of these newborns can usually stand and walk within an hour of birth?	A giraffe calf	A kitten	A kangaroo joey	A human baby
+trv_wielblad_powieka	Medium	What is a camel's transparent third eyelid for?	Wiping sand off the eye while still seeing	Sleeping with its eyes open	Seeing in the dark	Keeping the eye warm at night
+trv_pies_pot	Medium	Where does a dog mostly sweat from?	Its paw pads	Its tongue	Its back	Its ears
+trv_koza_zrenice	Medium	Which animal has rectangular, horizontal pupils?	The goat	The cat	The owl	The frog
+trv_konik_morski_ryba	Medium	Which of these sea creatures is actually a fish?	The seahorse	The jellyfish	The starfish	The cuttlefish
+trv_kolibr_serce	Medium	Which bird's heart can beat more than 1,000 times per minute?	The hummingbird	The sparrow	The pigeon	The swift
+trv_pszczola_taniec	Medium	How do honeybees tell each other where flowers are?	With a 'waggle dance'	By buzzing at different pitches	By leaving a trail of wax	By flashing their wings
+ext_gepard_rozped	Medium	A cheetah reaches its top speed in roughly how long?	About three seconds	About ten seconds	About thirty seconds	Just under a minute
+ext_wieloryb_jezyk	Medium	A blue whale's tongue alone can weigh about as much as what?	An elephant	A horse	A cow	A small car
+ext_mrowka_ciezar	Medium	Leafcutter ants routinely carry loads of roughly what multiple of their body weight?	Fifty times	Twice	Five times	Fifteen times
+cur_zyrafa_jezyk	Medium	What colour is a giraffe's tongue?	Dark blue-purple	Pink	Grey	Bright red
+cur_slon_skok	Medium	Which large land mammal is unable to jump?	The elephant	The hippopotamus	The rhinoceros	The giraffe
+wld_ani_ptaki_dinozaury	Medium	Which living animals are the direct descendants of dinosaurs?	Birds	Crocodiles	Lizards	Sharks
+wld_ani_ryba_pila	Medium	Which fish uses a long saw-toothed snout to slash at prey?	The sawfish	The swordfish	The marlin	The needlefish
+ani_pies_udomowiony	Medium	Which animal was domesticated first?	The dog	The cat	The horse	The cow
+ani_hipopotam_nazwa	Medium	The word 'hippopotamus' comes from Greek words meaning what?	River horse	Water pig	Big mouth	Mud cow
+ani_dinozaur_nazwa	Medium	What does the word 'dinosaur' mean?	Terrible lizard	Giant beast	Ancient dragon	Thunder foot
+ani_orangutan_nazwa	Medium	The name 'orangutan' comes from Malay words meaning what?	Person of the forest	King of the trees	Red monkey	Wise old man
+ani_kolibr_najmniejszy	Medium	What is the smallest bird in the world?	The bee hummingbird	The goldcrest	The wren	The sunbird
+ani_zyrafa_szyja	Medium	How many vertebrae are in a giraffe's neck?	Seven	Twelve	Nineteen	Twenty-six
+ani_delfin_imiona	Medium	Dolphins are known to call each other using what?	Signature whistles, like names	Unique colour flashes	Slaps of the tail	Rings of bubbles
+ani_nosorozec_rog	Medium	Which animal's horn is made of keratin, the stuff of fingernails?	The rhinoceros	The narwhal	The deer	The walrus
+ani_mlody_labedz	Medium	What is a young swan called?	A cygnet	A gosling	A duckling	An eaglet
+ani_samica_lisa	Medium	What is a female fox called?	A vixen	A doe	A sow	A jenny
+ani_pyton	Medium	Which is the longest snake species in the world?	The reticulated python	The green anaconda	The king cobra	The black mamba
+ani_kaszalot_mozg	Medium	Which animal has the largest brain on Earth?	The sperm whale	The blue whale	The African elephant	The orca
+ani_lirogon	Medium	Which bird can imitate chainsaws and camera shutters?	The lyrebird	The mockingbird	The starling	The myna
+ani_kura_liczba	Medium	Counting farm animals, which is the most numerous bird on Earth?	The chicken	The pigeon	The sparrow	The duck
+ani_jamnik	Medium	The dachshund was bred in Germany to hunt which animal?	The badger	The rabbit	The deer	The rat
+ani_chow_chow	Medium	Which dog breed is famous for its blue-black tongue?	The Chow Chow	The Dalmatian	The Shiba Inu	The Great Dane
+ani_krokodyl_lzy	Medium	Do crocodiles really shed 'crocodile tears' while eating?	Yes, but not from emotion	No, it is only a saying	Only when they are hurt	Only in salt water
+ani_aligator_zeby	Medium	Which one shows its lower teeth when its mouth is shut?	The crocodile	The alligator	Both of them	Neither of them
+ani_tygrys_skora	Medium	What does a tiger's skin look like under its fur?	Striped, like the fur	Plain orange	Pure white	Spotted
+ani_slon_traba	Medium	Roughly how many muscles are in an elephant's trunk?	Tens of thousands	About a hundred	About a thousand	About a dozen
+ani_modliszka	Medium	What is the female praying mantis infamous for?	Sometimes eating the male	Carrying her young on her back	Laying eggs in other nests	Stinging her rivals
+ani_psi_nos	Medium	Which part of a dog is as unique as a human fingerprint?	Its nose print	Its bark	Its tail	Its bite
+ani_bobr_zeby	Medium	Why are a beaver's front teeth orange?	They contain iron	They are stained by bark	They are stained by mud	They are rusting from water
+ani_sowa_cicho	Medium	Why can owls fly almost silently?	Soft, fringed wing feathers	They only glide, never flap	Their bones are hollow	They fly very slowly
+ani_lemury	Medium	Where do wild lemurs live?	Madagascar	Borneo	Sri Lanka	New Guinea
+ani_wydra_kamien	Medium	Why do sea otters often carry a favourite stone?	To crack open shellfish	To weigh themselves down	To mark their territory	To sharpen their teeth
+ani_pingwin_kamyk	Medium	Male Adelie penguins court females by offering what?	A pebble	A fish	A feather	A shell
+anix_zolw_dlugowiecznosc	Medium	Which land animal can live the longest, sometimes past 150 years?	The giant tortoise	The elephant	The parrot	The crocodile
+anix_wrona_narzedzia	Medium	Which bird is famous for making tools, like hooks bent from twigs?	The New Caledonian crow	The African grey parrot	The common magpie	The European starling
+anix_dodo	Medium	On which island did the dodo live before it was wiped out?	Mauritius	Madagascar	Sri Lanka	Tahiti
+anix_nietoperz_wampir	Medium	What do vampire bats feed on?	Blood	Fruit	Insects	Nectar
+anix_komar_samice	Medium	Which mosquitoes bite people to drink blood?	Only the females	Only the males	Both equally	Only the young
+anix_pszczola_zadlo	Medium	What usually happens to a honeybee after it stings a person?	It dies	It loses its wings	It becomes a queen	Nothing at all
+anix_konie_sen	Medium	Horses can sleep while doing what?	Standing up	Walking	Swimming	Eating
+anix_wyjec	Medium	Which monkey is one of the loudest land animals on Earth?	The howler monkey	The spider monkey	The capuchin	The macaque
+anix_diabel_tasmanski	Medium	Which noisy marsupial with a powerful bite now lives wild only on Tasmania?	The Tasmanian devil	The quokka	The wombat	The numbat
+anix_rozdymka	Medium	Which fish puffs itself up into a spiky ball when threatened?	The pufferfish	The lionfish	The stonefish	The angelfish
+anix_golab_pocztowy	Medium	What were homing pigeons famously used for?	Carrying messages	Hunting rabbits	Guarding castles	Finding water
+anix_bielik	Medium	Which bird is the national symbol of the United States?	The bald eagle	The golden eagle	The wild turkey	The condor
+anix_wibrysy	Medium	What do cats mainly use their whiskers for?	Sensing their surroundings	Keeping warm	Attracting mates	Cleaning their fur
+anix_bernardyn	Medium	Which dog breed is famous for mountain rescues in the Swiss Alps?	The St. Bernard	The Husky	The Labrador	The Great Dane
+aniy_zebra_skora	Medium	What colour is a zebra's skin under its stripes?	Black	White	Pink	Grey
+aniy_lew_ryk	Medium	From roughly how far away can a lion's roar be heard?	About 8 km	About 80 metres	About 800 metres	About 80 km
+aniy_osmiornica_szpara	Medium	An octopus can squeeze through any gap bigger than which part of its body?	Its beak	Its eye	Its brain	Its heart
+aniy_gekon	Medium	How do geckos cling to walls and ceilings?	Millions of tiny hairs on their toes	Sticky glue from their feet	Suction cups on their toes	Tiny hooked claws
+aniy_motyl_zycie	Medium	How long does an adult butterfly usually live?	A few weeks	A single day	Several years	About a year
+aniy_waz_powieki	Medium	Why do snakes never seem to blink?	They have no eyelids	They sleep with open eyes	They blink too fast to see	Their eyes are dry
+ani_call_offspring_male	Medium	What do you call the offspring of a male donkey and a female horse?	A mule	A hinny	A pony	A zebroid
+ani_largest_species_bear	Medium	Which is the largest species of bear?	The polar bear	The sun bear	The black bear	The giant panda
+ani_largest_primate	Medium	Which is the largest primate?	The gorilla	The orangutan	The chimpanzee	The baboon
+ani_apes_humans_closest	Medium	Which apes are humans' closest living relatives?	Chimpanzees and bonobos	Gorillas and orangutans	Gibbons and siamangs	Orangutans and gibbons
+ani_great_ape_lives	Medium	Which great ape lives only on the islands of Borneo and Sumatra?	The orangutan	The gorilla	The bonobo	The chimpanzee
+ani_real_mozzarella_bufala	Medium	Real 'mozzarella di bufala' is made from which animal's milk?	The water buffalo	The cow	The goat	The sheep
+ani_cross_between_male	Medium	What is the cross between a male lion and a female tiger called?	A liger	A tigon	A leopon	A jaglion
+ani_largest_species_deer	Medium	Which is the largest species of deer?	The moose	The red deer	The reindeer	The fallow deer
+ani_north_americans_call	Medium	What do North Americans call wild reindeer?	Caribou	Moose	Elk	Wapiti
+ani_spider_infamous_sometimes	Medium	Which spider is infamous for sometimes eating its mate?	The black widow	The tarantula	The wolf spider	The huntsman
+ani_big_african_animal	Medium	Which big African animal is considered one of the most dangerous to humans?	The hippopotamus	The giraffe	The zebra	The gorilla
+ani_clownfish_live_safely	Medium	Clownfish live safely among the stinging tentacles of what?	Sea anemones	Jellyfish	Corals	Sea urchins
+ani_fastest_fish_sea	Medium	Which is the fastest fish in the sea?	The sailfish	The tuna	The great white shark	The barracuda
+ani_australian_bird_call	Medium	Which Australian bird is famous for a call that sounds like laughter?	The kookaburra	The cockatoo	The emu	The lyrebird
+ani_large_flightless_bird	Medium	Which large flightless bird appears on Australia's coat of arms beside the kangaroo?	The emu	The cassowary	The ostrich	The kiwi
+ani_group_geese_ground	Medium	What is a group of geese on the ground called?	A gaggle	A murder	A parliament	A pride
+ani_small_mammal_fighting	Medium	Which small mammal is famous for fighting and killing cobras?	The mongoose	The meerkat	The ferret	The weasel
+ani_national_animal_india	Medium	What is the national animal of India?	The Bengal tiger	The Indian elephant	The peacock	The cobra
+ani_big_cat_largest	Medium	Which big cat is the largest in the Americas?	The jaguar	The puma	The ocelot	The lynx
+ani_black_panther_usually	Medium	A 'black panther' is usually a dark-coated what?	Leopard or jaguar	Lion or tiger	Cheetah or puma	Lynx or ocelot
+ani_chihuahua_dog_breed	Medium	The Chihuahua dog breed is named after a state in which country?	Mexico	Spain	Peru	Chile
+ani_cat_breed_comes	Medium	Which cat breed comes originally from Thailand?	The Siamese	The Persian	The Maine Coon	The Bengal
+ani_wings_bee	Medium	How many wings does a bee have?	Four	Two	Six	Eight
+ani_caterpillar_form_around	Medium	What does a caterpillar form around itself before it becomes a butterfly?	A chrysalis	An egg sac	A burrow	A web
+ani_word_rhinoceros_mean	Medium	What does the word 'rhinoceros' mean in Greek?	Nose horn	Horned beast	Thick skin	Great beast
+ani_unit_horse_height	Medium	In which unit is a horse's height traditionally measured?	Hands	Feet	Spans	Yards
+ani_counting_two_long	Medium	Counting its two long tentacles, how many limbs does a squid have?	Ten	Eight	Twelve	Six
+ani_caviar_salted_eggs	Medium	Caviar is the salted eggs of which fish?	The sturgeon	The salmon	The cod	The herring
+ani_animal_gives_soft	Medium	Which animal gives us soft cashmere wool?	A goat	A sheep	A rabbit	A llama
+ani_male_goose	Medium	What is a male goose called?	A gander	A drake	A cob	A rooster
+ani_group_whales	Medium	What is a group of whales called?	A pod	A school	A shoal	A fleet
+ani_female_goat	Medium	What is a female goat called?	A nanny	A sow	A mare	A jenny
+ani_animal_lives_underground	Medium	Which animal lives in an underground home called a sett?	The badger	The fox	The rabbit	The mole
+ani_largest_living_reptile	Medium	Which is the largest living reptile?	The saltwater crocodile	The Komodo dragon	The anaconda	The leatherback turtle
+ani_heaviest_snake_world	Medium	Which is the heaviest snake in the world?	The green anaconda	The reticulated python	The king cobra	The boa constrictor
+ani_giant_dog_breed	Medium	Which giant dog breed holds records for the tallest dog?	The Great Dane	The St. Bernard	The Newfoundland	The Rottweiler
+ani_small_wrinkly_faced	Medium	Which small wrinkly-faced dog breed comes from China?	The pug	The bulldog	The boxer	The beagle
+ani_traditional_greek_feta	Medium	Traditional Greek feta cheese is made mainly from which animal's milk?	Sheep	Cow	Camel	Buffalo
+ani_national_bird_india	Medium	What is the national bird of India?	The peacock	The parrot	The eagle	The crane
+ani_national_animal_canada	Medium	What is the national animal of Canada?	The beaver	The moose	The polar bear	The bald eagle
+ani_bird_national_symbol	Medium	Which bird is a national symbol of France?	The rooster	The eagle	The swan	The stork
+ani_colour_polar_bear	Medium	What colour are a polar bear's hairs, really?	See-through	White	Cream	Pale grey
+ani_merino_breed_animal	Medium	Merino is a famous breed of which animal?	Sheep	Goat	Horse	Cattle
+ani_rhode_island_red	Medium	Rhode Island Red is a famous breed of which animal?	Chicken	Pig	Cow	Duck
+ani_tiny_bird_smallest	Medium	Which tiny bird is the smallest in Europe?	Goldcrest	Wren	Blue tit	Robin
+ani_squirrel_nest	Medium	What is a squirrel's nest called?	A drey	A sett	A holt	A form
+ani_group_zebras	Medium	What is a group of zebras called?	A dazzle	A parade	A crash	A tower
+ani_largest_species_turtle	Medium	Which is the largest species of turtle?	Leatherback sea turtle	Galapagos tortoise	Green sea turtle	Loggerhead turtle
+ani_tiny_primate_eyes	Medium	Which tiny primate has eyes each as large as its whole brain?	Tarsier	Loris	Marmoset	Lemur
+ani_largest_living_marsupial	Medium	Which is the largest living marsupial?	Red kangaroo	Koala	Wombat	Tasmanian devil
+ani_arctic_mammal_brown	Medium	Which Arctic mammal's brown summer coat turns white in winter?	Arctic fox	Polar bear	Musk ox	Walrus
+ani_flying_reptiles_lived	Medium	Which flying reptiles lived alongside the dinosaurs but were not dinosaurs themselves?	Pterosaurs	Plesiosaurs	Ichthyosaurs	Mosasaurs
+ani_period_tyrannosaurus_rex	Medium	In which period did Tyrannosaurus rex live?	Cretaceous	Jurassic	Triassic	Permian
+ani_scientific_sabre_toothed	Medium	What was the scientific name of the famous sabre-toothed cat?	Smilodon	Megalodon	Mastodon	Glyptodon
+ani_african_predator_painted	Medium	Which African predator is also called the 'painted wolf'?	African wild dog	Hyena	Jackal	Aardwolf
+ani_white_arctic_whale	Medium	Which white Arctic whale is nicknamed the 'sea canary' for its chirping calls?	Beluga	Narwhal	Orca	Minke whale
+ani_fastest_shark	Medium	Which is the fastest shark?	Shortfin mako	Great white	Tiger shark	Hammerhead
+ani_lizard_sprint_across	Medium	Which lizard can sprint across water on its hind legs?	Basilisk lizard	Komodo dragon	Gecko	Iguana
+ani_australian_bird_decorates	Medium	Which Australian bird decorates its courtship 'bower' with blue objects?	Satin bowerbird	Lyrebird	Kookaburra	Cassowary
+ani_large_flightless_bird_2	Medium	Which large flightless bird of Australia and New Guinea has a dagger-like claw on each foot?	Cassowary	Emu	Ostrich	Rhea
+ani_seabird_male_inflates	Medium	Which seabird male inflates a huge red throat pouch to attract a mate?	Frigatebird	Pelican	Puffin	Gannet
+ani_group_kangaroos	Medium	What is a group of kangaroos called?	A mob	A troop	A pack	A herd
+ani_group_hyenas	Medium	What is a group of hyenas called?	A cackle	A crash	A parade	A tower
+ani_group_cats	Medium	What is a group of cats called?	A clowder	A kindle	A litter	A pack
+ani_wild_relative_llama	Medium	Which wild relative of the llama has the finest and most expensive wool?	Vicuna	Alpaca	Guanaco	Yak
+ani_poodle_originally_bred	Medium	What was the poodle originally bred to do?	Fetch ducks from water	Herd sheep on hills	Hunt rats in barns	Guard royal palaces
+ani_chinese_dog_breed	Medium	Which Chinese dog breed is famous for its deeply wrinkled skin?	Shar Pei	Chow Chow	Pekingese	Shih Tzu
+ani_smallest_species_bear	Medium	Which is the smallest species of bear?	Sun bear	Sloth bear	Black bear	Spectacled bear
+ani_largest_species_seal	Medium	Which is the largest species of seal?	Elephant seal	Leopard seal	Grey seal	Harp seal
+ani_blue_blood_collected	Medium	Whose blue blood is collected to test medicines for bacterial toxins?	Horseshoe crab	Coelacanth	Nautilus	Sea cucumber
+ani_huge_vulture_andes	Medium	Which huge vulture of the Andes is one of the largest flying birds?	Andean condor	Golden eagle	Harpy eagle	Bald eagle
+ani_crickets_make_chirping	Medium	How do crickets make their chirping sound?	Rubbing their wings together	Rubbing their legs together	Vibrating their throats	Clicking their jaws
+ani_penguin_lives_south	Medium	Which penguin lives on South African beaches and brays like a donkey?	African penguin	Galapagos penguin	Humboldt penguin	Little penguin
+ani_young_cow_not	Medium	What is a young cow that has not yet had a calf called?	A heifer	A calf	A steer	A bullock
+ani_adult_female_elephant	Medium	What is an adult female elephant called?	A cow	A doe	A mare	A sow
+ani_baby_hedgehog	Medium	What is a baby hedgehog called?	A hoglet	A kit	A pup	A spikelet
+ani_flock_geese_flying	Medium	What is a flock of geese flying in formation called?	A skein	A gaggle	A charm	A brood
+ani_huge_swirling_flock	Medium	What is a huge, swirling flock of starlings called?	A murmuration	A parliament	A clamour	A congregation
+ani_elephant_tusks	Medium	What are an elephant's tusks?	Enlarged incisor teeth	Horns	Enlarged canine teeth	Bony growths
+ani_heaviest_invertebrate_earth	Medium	Which is the heaviest invertebrate on Earth?	Colossal squid	Giant squid	Giant Pacific octopus	Lion's mane jellyfish
+ani_sea_creature_usually	Medium	Which sea creature is usually ranked the most venomous animal in the ocean?	Box jellyfish	Stonefish	Blue-ringed octopus	Sea snake
+ani_truly_wild_horse	Medium	Which is the only truly wild horse species still living, saved from extinction in Mongolia?	Przewalski's horse	Camargue horse	Akhal-Teke horse	Mongolian mustang
+ani_dziobak	Hard	Which mammal lays eggs?	Platypus	Armadillo	Sloth	Hedgehog
+ani_krowa_zoladek	Hard	How many chambers does a cow's stomach have?	4	1	2	3
+ani_kalmar_oczy	Hard	Which animal has an eye that can grow to the size of a dinner plate?	Giant squid	Owl	Whale	Elephant seal
+ani_gepard_pazury	Hard	Which big cat cannot roar, but purrs instead?	Cheetah	Lion	Tiger	Jaguar
+zwi2_okapi_krewny	Hard	Which animal is the okapi's closest living relative?	Giraffe	Zebra	Antelope	Tapir
+zwi2_aksolotl_kraj	Hard	Which country does the axolotl come from?	Mexico	Brazil	China	Australia
+zwi2_mrowkojad_zeby	Hard	How many teeth does a giant anteater have?	None at all	Eight	Twenty	Forty-two
+zwi2_albatros_lot	Hard	What is the wandering albatross famous for?	The largest wingspan among birds	The fastest dive of any seabird	The longest legs among seabirds	The loudest call of any seabird
+zwi2_nagi_kretoszczur	Hard	What makes the naked mole-rat unusual?	It lives in a colony with a queen, like social insects	It flies between burrows like a bat	It changes sex halfway through its life	It hibernates for ten years at a stretch
+zwi2_sokolwedrowny	Hard	Which animal is the fastest in the world during a dive?	Peregrine falcon	Swift	Golden eagle	Hummingbird
+zwi2_wal_grenlandzki	Hard	Which mammal has the longest lifespan of all?	Bowhead whale	African elephant	Human	Sperm whale
+zwi2_skorpion_uv	Hard	What happens to a scorpion under ultraviolet light?	It glows blue-green	It becomes transparent	It turns red	It faints
+zwi2_cykada_cykl	Hard	Every how many years do periodical cicadas emerge en masse in the USA?	Every 13 or 17 years	Every 2 years	Every 7 years	Every 25 years
+zwi2_dziobak_jad	Hard	What does a male platypus have on its hind legs?	Venomous spurs	Webbed membranes with suckers	Regrowing claws	Scent glands
+zwi2_koral_zwierze	Hard	What are corals really?	Animals	Plants	Fungi	Minerals
+zwi3_slon_infradzwieki	Hard	How do elephants communicate over long distances?	Infrasound felt through the ground	Trumpeting alone	Long-range urine scent	Flapping their ears in daylight
+zwi3_motyl_monarcha	Hard	How far do monarch butterflies migrate?	Thousands of kilometers between Canada and Mexico	A few dozen kilometres around one meadow	Only inside a single flowering meadow	They do not migrate anywhere at all
+zwi3_kalmar_kamuflaz	Hard	How do cephalopods like squid change skin color?	Through chromatophores - pigment cells	By changing body temperature	By secreting paint	By changing their diet
+zwi3_mrowki_niewolnictwo	Hard	What do some ant species called 'slave-making ants' do?	They steal other ants' pupae to work in their own colony	They trade food with other colonies	They only farm aphids like cattle	They only build bridges from their own bodies
+zwi3_wieloryb_babelkowanie	Hard	How do humpback whales hunt together using 'bubble netting'?	They surround fish with a ring of air bubbles	They stun fish with sound	They release poison into the water	They use rays as bait
+trv_kiwi_jajo	Hard	Which bird lays the largest egg relative to its own body size?	The kiwi	The ostrich	The hummingbird	The emu
+trv_sowy_stado	Hard	What is a group of owls called?	A parliament	A murder	A congress	A choir
+trv_strus_oczy	Hard	Which land animal has the largest eyes?	The ostrich	The horse	The giraffe	The elephant
+trv_zuk_sila	Hard	Relative to its weight, which animal is the strongest, pulling over 1,000 times its own mass?	The dung beetle	The ant	The gorilla	The elephant
+trv_zaba_mroz	Hard	Which animal can survive being frozen solid through the winter?	The wood frog	The garden snail	The brown bear	The garter snake
+trv_homar_nogi	Hard	How many legs does a lobster have, counting its claws?	Ten	Six	Eight	Twelve
+trv_opos_torbacz	Hard	Which is the only marsupial native to North America?	The Virginia opossum	The raccoon	The armadillo	The porcupine
+trv_mrowka_krolowa	Hard	How long can a queen ant of some species live?	Over 20 years	About a month	About a year	About 3 years
+trv_wombat_kupa	Hard	Which animal produces cube-shaped droppings?	The wombat	The koala	The rabbit	The beaver
+trv_zebra_paski	Hard	What is the leading explanation for a zebra's stripes?	They confuse biting flies	They keep the zebra warm	They attract mates	They help it hide in grass
+ext_jerzyk_lot	Hard	The common swift can stay airborne without landing for how long?	Months	Hours	A few days	A couple of weeks
+ext_slimak_zeby	Hard	Which of these animals has the most teeth, by a wide margin?	A garden snail	A crocodile	A dolphin	A shark
+ext_rekin_wiek	Hard	The Greenland shark is thought to live for how long?	Centuries	About 30 years	About 60 years	About 90 years
+mst_sowa_oczy	Hard	Why must an owl turn its whole head to look sideways?	Its eyes cannot rotate	Its eyes have no lids	Its neck is rigid	It sees only in front
+mst_rekin_wiek_luski	Hard	Shark skin feels like sandpaper because it is covered in what?	Tiny tooth-like scales	Dried salt crystals	Hardened mucus	Bony plates
+dpt_zwi_krokodyl_zgryz	Hard	Which living animal has the strongest measured bite?	The saltwater crocodile	The great white shark	The spotted hyena	The Bengal tiger
+dpt_zwi_rekin_pole	Hard	Which organs let sharks sense electric fields?	The ampullae of Lorenzini	The lateral line canals	The nictitating membranes	The spiracles behind the eyes
+dpt_zwi_pingwin_nurek	Hard	How long can an emperor penguin stay down on one dive?	Over twenty minutes	About two minutes	About five minutes	Almost two hours
+dpt_zwi_kontrcien	Hard	What is countershading in animals?	Dark on top, pale below, to hide	Bright colours warning of poison	Stripes that confuse a chasing eye	A coat that changes with the season
+cur_krewetka_modliszkowa	Hard	Which sea creature punches so fast it boils the water around its claw?	The mantis shrimp	The pistol crab	The lobster	The cuttlefish
+cur_krowy_najlepsi	Hard	Studies show cows get stressed when separated from whom?	Their best friend in the herd	Their calf only	The farmer	Any other cow
+cur_niesporczak	Hard	Which tiny animal has survived exposure to the vacuum of space?	The tardigrade	The flea	The springtail	The rotifer
+wld_kameleon_kolor	Hard	Chameleons change colour mainly to do what?	Signal mood and control temperature	Hide from every predator	Match any background exactly	Attract prey
+wld_ani_leniwiec	Hard	How often does a sloth usually climb down from its tree to go to the toilet?	About once a week	Several times a day	Once a year	Never - it goes from the branches
+ani_pszczola_oczy	Hard	How many eyes does a honeybee have?	Five	Two	Four	Eight
+ani_meduzy_grupa	Hard	What is a group of jellyfish called?	A smack	A school	A flock	A swarm
+ani_nosorozce_grupa	Hard	What is a group of rhinos called?	A crash	A charge	A bloat	A thunder
+ani_mlody_zajac	Hard	What is a young hare called?	A leveret	A kit	A kid	A pup
+ani_taipan	Hard	Which snake has the most toxic venom in laboratory tests?	The inland taipan	The black mamba	The king cobra	The rattlesnake
+ani_kakapo	Hard	Which flightless parrot is the heaviest parrot in the world?	The kakapo	The kea	The macaw	The cockatoo
+ani_blazenek	Hard	In a group of clownfish, what happens when the female dies?	The biggest male turns female	The group splits up	A female joins from outside	The eggs stop hatching
+ani_kon_wymioty	Hard	Which of these animals is physically unable to vomit?	The horse	The dog	The cat	The pig
+ani_rozgwiazda_zoladek	Hard	How does a starfish eat a clam?	It pushes its stomach into the shell	It crushes the shell with its arms	It drills through with its teeth	It waits until the clam dies
+ani_kiwi_nozdrza	Hard	What is unusual about a kiwi's nostrils?	They are at the tip of its beak	It has none at all	They sit on its forehead	They close underwater
+ani_kot_slodycz	Hard	Which taste can cats not detect?	Sweetness	Saltiness	Bitterness	Sourness
+ani_osmiornica_neurony	Hard	Where are most of an octopus's neurons?	In its arms	In its head	In its three hearts	Behind its eyes
+ani_krowa_magnes	Hard	Why do some farmers feed their cows magnets?	To catch swallowed bits of metal	To calm them down	To make their milk richer	To help them find the way home
+ani_panda_noworodek	Hard	A newborn giant panda weighs about as much as what?	A stick of butter	A house cat	A bag of flour	A bowling ball
+ani_mors_kly	Hard	What does a walrus use its tusks for, among other things?	Hauling itself onto the ice	Spearing fish to eat	Digging dens in the snow	Digging clams out of the mud
+ani_rekin_zeby	Hard	How many teeth can a shark lose and regrow over its lifetime?	Thousands	About twenty	About a hundred	None at all
+ani_kot_przodek	Hard	Domestic cats descend from which wild cat?	The African wildcat	The European wildcat	The lynx	The serval
+ani_czerwona_panda	Hard	Which animal was called a 'panda' first, decades before the giant panda was described?	The red panda	The raccoon	The binturong	The sun bear
+anix_hipopotam_pot	Hard	What is the reddish 'blood sweat' of a hippo actually?	A natural sunscreen	Real blood	Muddy water	Poison
+anix_slon_lustro	Hard	Which of these animals can recognise itself in a mirror?	The elephant	The dog	The cat	The horse
+anix_wrony_twarze	Hard	Crows can remember what for years, and hold grudges against it?	Individual human faces	Car number plates	Their own reflection	The sound of thunder
+anix_wilk_tasmanski	Hard	The thylacine, declared extinct in the 20th century, was better known as what?	The Tasmanian tiger	The Australian lion	The marsupial bear	The dingo wolf
+anix_termity	Hard	Termite mounds are admired by architects for what?	Natural air conditioning	Perfect round shapes	Glass-like walls	Underwater tunnels
+anix_strus_predkosc	Hard	About how fast can an ostrich run?	About 70 km/h	About 30 km/h	About 110 km/h	About 15 km/h
+anix_zyrafa_sen	Hard	About how long does a giraffe sleep in a whole day?	Under two hours	About six hours	About ten hours	About fourteen hours
+anix_kaszalot_glos	Hard	Which animal makes the loudest sounds of any animal on Earth?	The sperm whale	The humpback whale	The elephant	The lion
+anix_uszy_foki	Hard	How can you tell a sea lion from a true seal?	Sea lions have ear flaps	Seals have whiskers	Sea lions lack flippers	Seals are always bigger
+anix_manat	Hard	Sailors' tales of mermaids may have come from sightings of which animal?	The manatee	The walrus	The seal	The dolphin
+anix_quokka	Hard	Which small Australian marsupial is famous for seeming to smile?	The quokka	The bilby	The bandicoot	The sugar glider
+anix_wedkarz	Hard	How does the deep-sea anglerfish attract prey in the dark?	A glowing lure on its head	A loud humming song	A cloud of sweet scent	Flashing its silver teeth
+anix_karaluch	Hard	Roughly how long can a cockroach survive without its head?	About a week	About a minute	About an hour	About a year
+anix_dalmatynczyk	Hard	What colour are Dalmatian puppies when they are born?	Pure white	Black with white spots	Grey	Brown
+aniy_mrowki_liczba	Hard	Roughly how many ants are thought to live on Earth?	About 20 quadrillion	About 20 million	About 20 billion	About 2,000
+aniy_mrowkojad_jezyk	Hard	Roughly how long can a giant anteater's tongue reach?	About 60 cm	About 6 cm	About 2 metres	About 15 cm
+aniy_papuga_wiek	Hard	Roughly how long can large parrots such as macaws live?	Over 50 years	About 5 years	About 15 years	About 200 years
+aniy_pingwin_galapagos	Hard	Which is the only penguin that lives wild at the equator?	The Galapagos penguin	The emperor penguin	The king penguin	The little penguin
+aniy_jetka	Hard	Which insect is famous for living as an adult for only about a day?	The mayfly	The dragonfly	The housefly	The moth
+aniy_kobra_krolewska	Hard	What does the king cobra mainly eat?	Other snakes	Birds' eggs	Frogs	Monkeys
+ani_marsupial_pouch_opens	Hard	Which marsupial's pouch opens backwards, so it doesn't fill with soil while digging?	The wombat	The kangaroo	The wallaby	The sugar glider
+ani_group_giraffes	Hard	What is a group of giraffes called?	A tower	A pride	A parliament	A murder
+ani_paddington_bear_belongs	Hard	Paddington Bear belongs to which real species?	The spectacled bear	The sun bear	The sloth bear	The brown bear
+ani_large_cat_breed	Hard	Which large cat breed is often called the 'gentle giant' of house cats?	The Maine Coon	The Sphynx	The Siamese	The Persian
+ani_baby_rabbit	Hard	What is a baby rabbit called?	A kit	A pup	A cub	A joey
+ani_silkworms_feed	Hard	What do silkworms feed on?	Mulberry leaves	Cotton plants	Oak bark	Rice stalks
+ani_animal_comes_afrikaans	Hard	Which animal's name comes from the Afrikaans for 'earth pig'?	The aardvark	The warthog	The meerkat	The pangolin
+ani_woodpecker_long_tongue	Hard	Where does a woodpecker's long tongue go when it isn't using it?	It wraps around its skull	It coils up in its beak	It folds into its throat	It tucks under its wing
+ani_monkeys_live_wild	Hard	Which monkeys live wild on the Rock of Gibraltar?	Barbary macaques	Rhesus macaques	Capuchins	Baboons
+ani_group_kittens	Hard	What is a group of kittens called?	A kindle	A clowder	A pounce	A litterbox
+ani_largest_amphibian_world	Hard	Which is the largest amphibian in the world?	The Chinese giant salamander	The Japanese giant salamander	The cane toad	The axolotl
+ani_largest_jellyfish	Hard	Which is the largest known jellyfish?	The lion's mane jellyfish	The box jellyfish	The moon jellyfish	The Portuguese man o' war
+ani_living_fossil_fish	Hard	Which 'living fossil' fish, thought extinct for millions of years, was found alive in 1938?	The coelacanth	The lungfish	The sturgeon	The hagfish
+ani_japanese_dog_breed	Hard	Which Japanese dog breed was the famously loyal Hachiko?	The Akita	The Shiba Inu	The Tosa	The Japanese Spitz
+ani_cat_breed_having	Hard	Which cat breed is famous for having no tail?	The Manx	The Sphynx	The Ragdoll	The Burmese
+ani_heaviest_spider_world	Hard	Which is the heaviest spider in the world?	The Goliath birdeater	The black widow	The huntsman	The wolf spider
+ani_hemocyjanina	Expert	Which animal has blue blood?	Octopus	Frog	Snake	Carp
+ani_narwal	Expert	Which marine mammal has a long, spiral tusk growing from its head?	Narwhal	Beluga whale	Porpoise	Manatee
+ani_echidna	Expert	Which animal, alongside the platypus, is a monotreme?	Echidna	Opossum	Wombat	Koala
+zwi2_mantis_wzrok	Expert	What makes the mantis shrimp's vision unusual?	It has a dozen or so types of color receptors	It sees only in black and white shades	It has no compound eyes at all	It sees only in the infrared range
+zwi2_wieloryb_piesn	Expert	Which whale is famous for the most complex mating songs?	Humpback whale	Narwhal	Killer whale	Porpoise
+zwi2_pistolet_krewetka	Expert	How does a pistol shrimp stun its prey?	A shockwave from its snapping claw	Neurotoxic venom	An electric discharge	An ink cloud
+zwi2_ptak_jadowity	Expert	Which bird is venomous thanks to toxins in its feathers?	Hooded pitohui	Andean condor	Toucan	Kea parrot
+zwi2_axolotl_regeneracja	Expert	What else can an axolotl regenerate besides its limbs?	Parts of its heart and brain	Only the tip of its tail	Only patches of its skin	Nothing beyond its limbs
+zwi2_zabka_jad	Expert	Which frog is considered the most poisonous land animal?	Golden poison frog	Cane toad	Tree frog	African clawed frog
+zwi2_konik_morski	Expert	What's unusual about seahorse reproduction?	The male carries the pregnancy	Eggs develop on the seabed	Young are born live from the female	It reproduces by splitting
+zwi3_ryba_elektryczna	Expert	How does an electric eel generate its discharges?	Using specialized cells called electrocytes	Using a magnet in its head	By rubbing its scales together	By absorbing current from its surroundings
+zwi3_mrowki_rolnictwo	Expert	What do leafcutter ants of the genus Atta do?	Farm fungus on the leaves they bring as their main food	They hunt other insects and eat nothing else	Live in symbiosis with fish in flooded nests	Migrate to another continent every year
+scicmp_jadowity_nie_trujacy	Expert	Which of these animals is venomous rather than poisonous?	The cobra	The poison dart frog	The pufferfish	The monarch butterfly
+dpt_zwi_slon_uszy	Expert	How does an elephant shed excess heat?	Through its huge, blood-rich ears	By sweating across its whole back	By rolling in a bath of cool dust	By slowing its heart in the heat
+dpt_zwi_luskowiec	Expert	What is a pangolin's armour made of?	Keratin, like fingernails	Fused plates of bone	Hardened plates of chitin	Layers of calcified skin
+dpt_zwi_gepard_limit	Expert	Why must a cheetah break off a long chase?	It overheats within a minute	Its claws wear down too fast	It cannot breathe at full speed	Its eyes lose focus at speed
+dpt_zwi_wal_dziobowy	Expert	Which mammal holds the record for the deepest dive?	Cuvier's beaked whale	The sperm whale	The southern right whale	The leopard seal
+dpt_zwi_koliber_serce	Expert	What is unusual about a hummingbird at night?	It drops into a torpor to save energy	It keeps flying while it is asleep	It buries itself under leaf litter	It shares a nest with other birds
+ref_ani_neotenia	Expert	An axolotl keeps its larval features for life. What is this called?	Neoteny	Metamorphosis	Diapause	Estivation
+ref_ani_wydra_futro	Expert	Which mammal has the densest fur of any animal?	The sea otter	The polar bear	The beaver	The musk ox
+ref_ani_dziobak_elektro	Expert	How does a platypus find prey underwater with its eyes closed?	It senses electric fields with its bill	It uses echolocation	It sees in infrared	It smells through its tail
+ref_ani_flamingi_grupa	Expert	What is a group of flamingos called?	A flamboyance	A parade	A blush	A pageant
+ref_ani_poskoczek	Expert	Which fish can walk on mudflats using its fins and breathe air through its skin?	The mudskipper	The coelacanth	The pufferfish	The ocean sunfish
+ref_ani_mleko_foka	Expert	Which animal produces the fattiest known milk, at around 60% fat?	The hooded seal	The blue whale	The reindeer	The domestic cow
+ref_ani_kukulka	Expert	What is the cuckoo's famous breeding trick called?	Brood parasitism	Kleptoparasitism	Parthenogenesis	Cooperative breeding
+cur_niesmiertelna_meduza	Expert	Which jellyfish can turn back into a juvenile polyp and start its life over?	Turritopsis dohrnii	The box jellyfish	The lion's mane jellyfish	The moon jellyfish
+ani_fretki_grupa	Expert	What is a group of ferrets called?	A business	A gang	A mischief	A parade
+ani_pingwin_papuaski	Expert	Which bird is the fastest swimmer?	The gentoo penguin	The emperor penguin	The cormorant	The puffin
+ani_kwelea	Expert	Which is thought to be the most numerous wild bird on Earth?	The red-billed quelea	The house sparrow	The common starling	The rock pigeon
+ani_matwa_zrenice	Expert	Which animal has W-shaped pupils?	The cuttlefish	The goat	The gecko	The octopus
+ani_pustulka_uv	Expert	Kestrels can see ultraviolet light. What does it help them find?	Urine trails of voles	Ripe berries	Water in the desert	Their own nests
+ani_argentynska_mrowka	Expert	The Argentine ant formed one 'supercolony' about 6,000 km long in which region?	Southern Europe	California	Eastern Australia	Southern Japan
+ani_kret_gwiazdonosy	Expert	Which mammal is considered the fastest eater, finding and swallowing prey in about a quarter of a second?	The star-nosed mole	The pygmy shrew	The anteater	The aardvark
+ani_wieloryb_krewny	Expert	Which land animals are whales' closest living relatives?	Hippos	Seals	Elephants	Manatees
+ani_ptasie_mleko	Expert	Which birds feed their chicks a milk-like substance called 'crop milk'?	Pigeons	Eagles	Ostriches	Parrots
+ani_orki_menopauza	Expert	Besides humans, which animals are known to go through menopause?	Orcas and pilot whales	Chimpanzees and gorillas	Elephants and rhinos	Lions and tigers
+anix_leniwiec_plywanie	Expert	Sloths are surprisingly good at what?	Swimming	Jumping	Running	Digging
+anix_szklana_zaba	Expert	Which frog has see-through belly skin that shows its beating heart?	The glass frog	The tree frog	The bullfrog	The dart frog
+anix_skorpena	Expert	Which fish is considered the most venomous in the world?	The stonefish	The lionfish	The pufferfish	The stingray
+anix_swierszcz	Expert	By counting what can you roughly work out the air temperature?	A cricket's chirps	A frog's croaks	An owl's hoots	A bee's buzzes
+aniy_kaszalot_sen	Expert	How do sperm whales sleep?	Floating upright in short naps	Lying on the sea floor	Swimming in slow circles	Beached on sand
+aniy_strus_oko	Expert	An ostrich's eye is bigger than which of its organs?	Its brain	Its heart	Its stomach	Its liver
+aniy_zolwie_morskie	Expert	How do newly hatched sea turtles find the sea at night?	They head for the brighter horizon	They follow their mother	They smell the salt	They listen for waves
+ani_small_furry_animal	Expert	Which small furry animal is one of the elephant's closest living relatives?	The rock hyrax	The capybara	The pangolin	The wombat
+ani_baby_echidna	Expert	What is a baby echidna called?	A puggle	A joey	A kit	A cub

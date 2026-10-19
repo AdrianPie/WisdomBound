@@ -1,3 +1,5 @@
+// PLIK GENEROWANY z domain/quizbank/animals.tsv przez `python3 tools/quizbank.py generate`.
+// Nie edytuj go recznie - pytania dopisuje sie do TSV (patrz domain/quizbank/README.md).
 package com.lernhero.domain.quiz.bank
 
 import com.lernhero.domain.quiz.QuizCategory
@@ -23,8 +25,13 @@ object AnimalQuestions {
     private fun q(id: String, prompt: String, correct: String, wrong: List<String>, difficulty: QuizDifficulty) =
         QuizEntry(id = id, prompt = prompt, correct = correct, wrong = wrong, category = QuizCategory.Animals, difficulty = difficulty)
 
-    val all: List<QuizEntry> = listOf(
-        /* ------------------------------ Easy ------------------------------ */
+    val all: List<QuizEntry> = easy() + medium() + hard() + expert()
+
+    // Kazdy poziom w osobnej funkcji: jedna wielka lista w inicjalizatorze obiektu przekroczylaby
+    // z czasem limit 64 KB kodu na metode JVM (735 pytan historii zajmowalo w nim juz ~36 KB).
+
+    /* ------------------------------ Easy ------------------------------ */
+    private fun easy(): List<QuizEntry> = listOf(
         q("ani_najwieksze", "Which animal is the largest on Earth?", "Blue whale", listOf("African elephant", "Giraffe", "Whale shark"), E),
         q("ani_gepard", "Which animal is the fastest on land?", "Cheetah", listOf("Lion", "Horse", "Antelope"), E),
         q("ani_zyrafa", "Which land animal is the tallest?", "Giraffe", listOf("Elephant", "Camel", "Moose"), E),
@@ -72,8 +79,67 @@ object AnimalQuestions {
         q("anix_czekolada_pies", "Which common human treat is poisonous to dogs?", "Chocolate", listOf("Carrots", "Plain rice", "Cucumber"), E),
         q("aniy_kot_sen", "Roughly how many hours a day does a typical house cat sleep?", "12 to 16", listOf("4 to 6", "20 to 22", "Exactly 8"), E),
         q("aniy_meduza_woda", "Roughly how much of a jellyfish's body is water?", "About 95%", listOf("About 50%", "About 70%", "About 30%"), E),
+        q("ani_baby_goat", "What is a baby goat called?", "A kid", listOf("A calf", "A foal", "A cub"), E),
+        q("ani_baby_horse", "What is a baby horse called?", "A foal", listOf("A calf", "A kid", "A lamb"), E),
+        q("ani_baby_elephant", "What is a baby elephant called?", "A calf", listOf("A cub", "A pup", "A foal"), E),
+        q("ani_female_sheep", "What is a female sheep called?", "A ewe", listOf("A mare", "A sow", "A doe"), E),
+        q("ani_group_fish_swimming", "What is a group of fish swimming together called?", "A school", listOf("A pack", "A flock", "A herd"), E),
+        q("ani_african_animal_laughing", "Which African animal is famous for its 'laughing' call?", "The hyena", listOf("The baboon", "The jackal", "The warthog"), E),
+        q("ani_mammal_slowest_earth", "Which mammal is famous for being the slowest on Earth?", "The sloth", listOf("The koala", "The panda", "The wombat"), E),
+        q("ani_flightless_bird_new", "Which flightless bird is New Zealand's national symbol?", "The kiwi", listOf("The emu", "The penguin", "The ostrich"), E),
+        q("ani_bird_symbol_peace", "Which bird is a symbol of peace?", "The dove", listOf("The swan", "The eagle", "The owl"), E),
+        q("ani_koalas_eat_almost", "What do koalas eat almost exclusively?", "Eucalyptus leaves", listOf("Bamboo shoots", "Grass", "Insects"), E),
+        q("ani_humps_dromedary_camel", "How many humps does a dromedary camel have?", "One", listOf("Two", "Three", "None"), E),
+        q("ani_lizards_drop_body", "Many lizards can drop which body part to escape a predator?", "Their tail", listOf("Their skin", "A leg", "Their claws"), E),
+        q("ani_baby_frog", "What is a baby frog called?", "A tadpole", listOf("A cub", "A fry", "A kit"), E),
+        q("ani_tropical_bird_huge", "Which tropical bird has a huge, brightly coloured beak?", "The toucan", listOf("The flamingo", "The peacock", "The pelican"), E),
+        q("ani_animal_logo_wwf", "Which animal is the logo of the WWF conservation group?", "The giant panda", listOf("The polar bear", "The tiger", "The elephant"), E),
+        q("ani_snake_spreads_hood", "Which snake spreads a 'hood' around its neck when threatened?", "The cobra", listOf("The python", "The rattlesnake", "The viper"), E),
+        q("ani_venomous_snake_shakes", "Which venomous snake shakes its tail as a warning?", "The rattlesnake", listOf("The cobra", "The anaconda", "The mamba"), E),
+        q("ani_shellfish_make_pearls", "Which shellfish can make pearls?", "The oyster", listOf("The lobster", "The crab", "The shrimp"), E),
+        q("ani_baby_owl", "What is a baby owl called?", "An owlet", listOf("A cygnet", "A gosling", "A duckling"), E),
+        q("ani_baby_seal", "What is a baby seal called?", "A pup", listOf("A cub", "A calf", "A kit"), E),
+        q("ani_short_legged_dog", "Which short-legged dog breed was Queen Elizabeth II's favourite?", "The corgi", listOf("The dachshund", "The beagle", "The pug"), E),
+        q("ani_dog_breed_often", "Which dog breed is most often trained as a guide dog?", "The Labrador retriever", listOf("The German shepherd", "The Border collie", "The poodle"), E),
+        q("ani_wild_dog_roams", "Which wild dog roams across mainland Australia?", "The dingo", listOf("The coyote", "The jackal", "The hyena"), E),
+        q("ani_south_american_animal", "Which South American animal is a close relative of the camel?", "The llama", listOf("The tapir", "The capybara", "The anteater"), E),
+        q("ani_female_deer", "What is a female deer called?", "A doe", listOf("A ewe", "A sow", "A mare"), E),
+        q("ani_birds_famously_migrate", "Which birds famously migrate in a V-shaped formation?", "Geese", listOf("Crows", "Pigeons", "Parrots"), E),
+        q("ani_group_ants", "What is a group of ants called?", "A colony", listOf("A herd", "A flock", "A pride"), E),
+        q("ani_baby_sheep", "What is a baby sheep called?", "A lamb", listOf("A kid", "A calf", "A foal"), E),
+        q("ani_baby_deer", "What is a baby deer called?", "A fawn", listOf("A cub", "A kit", "A pup"), E),
+        q("ani_group_sheep", "What is a group of sheep called?", "A flock", listOf("A herd", "A pack", "A pride"), E),
+        q("ani_group_bees", "What is a group of bees called?", "A swarm", listOf("A pack", "A pride", "A herd"), E),
+        q("ani_male_deer", "What is a male deer called?", "A stag", listOf("A boar", "A ram", "A gander"), E),
+        q("ani_male_sheep", "What is a male sheep called?", "A ram", listOf("A buck", "A bull", "A boar"), E),
+        q("ani_bird_huge_pouch", "Which bird has a huge pouch under its beak for scooping up fish?", "The pelican", listOf("The stork", "The flamingo", "The heron"), E),
+        q("ani_red_beetle_black", "Which red beetle with black spots is a symbol of good luck?", "The ladybird", listOf("The firefly", "The scarab", "The cockchafer"), E),
+        q("ani_pet_rodent_stores", "Which pet rodent stores food in its cheek pouches?", "The hamster", listOf("The rabbit", "The guinea pig", "The chinchilla"), E),
+        q("ani_city_birds_often", "Which city birds are often jokingly called 'rats with wings'?", "Pigeons", listOf("Seagulls", "Sparrows", "Crows"), E),
+        q("ani_group_puppies_born", "What is a group of puppies born together called?", "A litter", listOf("A flock", "A brood", "A clutch"), E),
+        q("ani_big_cat_lives", "Which big cat lives high in the snowy mountains of Central Asia?", "The snow leopard", listOf("The jaguar", "The cheetah", "The lynx"), E),
+        q("ani_owl_pale_heart", "Which owl has a pale, heart-shaped face?", "Barn owl", listOf("Snowy owl", "Tawny owl", "Eagle owl"), E),
+        q("ani_animal_lives_network", "Which animal lives in a network of burrows called a warren?", "Rabbit", listOf("Badger", "Fox", "Mole"), E),
+        q("ani_adult_female_horse", "What is an adult female horse called?", "A mare", listOf("A filly", "A foal", "A colt"), E),
+        q("ani_adult_male_pig", "What is an adult male pig called?", "A boar", listOf("A sow", "A gilt", "A piglet"), E),
+        q("ani_seabird_colourful_striped", "Which seabird with a colourful striped beak is nicknamed the 'clown of the sea'?", "Puffin", listOf("Toucan", "Gannet", "Cormorant"), E),
+        q("ani_dog_breed_nicknamed", "Which dog breed is nicknamed the 'sausage dog'?", "Dachshund", listOf("Beagle", "Basset Hound", "Corgi"), E),
+        q("ani_dinosaur_three_horns", "Which dinosaur had three horns and a bony frill around its neck?", "Triceratops", listOf("Stegosaurus", "Ankylosaurus", "Brachiosaurus"), E),
+        q("ani_dinosaur_large_plates", "Which dinosaur had large plates along its back and a spiked tail?", "Stegosaurus", listOf("Triceratops", "Diplodocus", "Velociraptor"), E),
+        q("ani_dinosaur_means_tyrant", "Which dinosaur's name means 'tyrant lizard king'?", "Tyrannosaurus rex", listOf("Velociraptor", "Allosaurus", "Spinosaurus"), E),
+        q("ani_kind_animal_extinct", "What kind of animal was the extinct megalodon?", "A giant shark", listOf("A giant whale", "A sea reptile", "A giant squid"), E),
+        q("ani_small_red_breasted", "Which small red-breasted bird is Britain's unofficial national bird?", "Robin", listOf("Wren", "Blue tit", "Sparrow"), E),
+        q("ani_dog_breed_often_2", "Which dog breed is often rated the most intelligent and is famous for herding sheep?", "Border Collie", listOf("Poodle", "German Shepherd", "Labrador"), E),
+        q("ani_wild_cat_black", "Which wild cat is known for the black tufts on its ears?", "Lynx", listOf("Puma", "Ocelot", "Serval"), E),
+        q("ani_big_cat_cougar", "Which big cat is also called the cougar or mountain lion?", "Puma", listOf("Jaguar", "Lynx", "Leopard"), E),
+        q("ani_bird_symbol_long", "Which bird is a symbol of long life in Japan, where people fold a thousand paper ones?", "Crane", listOf("Swan", "Heron", "Stork"), E),
+        q("ani_silkworm_turn", "What does a silkworm turn into?", "A moth", listOf("A butterfly", "A beetle", "A wasp"), E),
+        q("ani_male_cat", "What is a male cat called?", "A tom", listOf("A buck", "A billy", "A sire"), E),
+        q("ani_small_hardy_pony", "Which small, hardy pony comes from the islands north of Scotland?", "Shetland pony", listOf("Welsh pony", "Connemara pony", "Exmoor pony"), E)
+    )
 
-        /* ----------------------------- Medium ----------------------------- */
+    /* ----------------------------- Medium ----------------------------- */
+    private fun medium(): List<QuizEntry> = listOf(
         q("ani_osmiornica_serca", "How many hearts does an octopus have?", "3", listOf("1", "2", "5"), M),
         q("ani_kameleon", "Which reptile is famous for changing skin color?", "Chameleon", listOf("Iguana", "Gecko", "Monitor lizard"), M),
         q("ani_ciaza_slonia", "Which land animal has the longest pregnancy?", "Elephant", listOf("Rhinoceros", "Horse", "Giraffe"), M),
@@ -164,8 +230,92 @@ object AnimalQuestions {
         q("aniy_gekon", "How do geckos cling to walls and ceilings?", "Millions of tiny hairs on their toes", listOf("Sticky glue from their feet", "Suction cups on their toes", "Tiny hooked claws"), M),
         q("aniy_motyl_zycie", "How long does an adult butterfly usually live?", "A few weeks", listOf("A single day", "Several years", "About a year"), M),
         q("aniy_waz_powieki", "Why do snakes never seem to blink?", "They have no eyelids", listOf("They sleep with open eyes", "They blink too fast to see", "Their eyes are dry"), M),
+        q("ani_call_offspring_male", "What do you call the offspring of a male donkey and a female horse?", "A mule", listOf("A hinny", "A pony", "A zebroid"), M),
+        q("ani_largest_species_bear", "Which is the largest species of bear?", "The polar bear", listOf("The sun bear", "The black bear", "The giant panda"), M),
+        q("ani_largest_primate", "Which is the largest primate?", "The gorilla", listOf("The orangutan", "The chimpanzee", "The baboon"), M),
+        q("ani_apes_humans_closest", "Which apes are humans' closest living relatives?", "Chimpanzees and bonobos", listOf("Gorillas and orangutans", "Gibbons and siamangs", "Orangutans and gibbons"), M),
+        q("ani_great_ape_lives", "Which great ape lives only on the islands of Borneo and Sumatra?", "The orangutan", listOf("The gorilla", "The bonobo", "The chimpanzee"), M),
+        q("ani_real_mozzarella_bufala", "Real 'mozzarella di bufala' is made from which animal's milk?", "The water buffalo", listOf("The cow", "The goat", "The sheep"), M),
+        q("ani_cross_between_male", "What is the cross between a male lion and a female tiger called?", "A liger", listOf("A tigon", "A leopon", "A jaglion"), M),
+        q("ani_largest_species_deer", "Which is the largest species of deer?", "The moose", listOf("The red deer", "The reindeer", "The fallow deer"), M),
+        q("ani_north_americans_call", "What do North Americans call wild reindeer?", "Caribou", listOf("Moose", "Elk", "Wapiti"), M),
+        q("ani_spider_infamous_sometimes", "Which spider is infamous for sometimes eating its mate?", "The black widow", listOf("The tarantula", "The wolf spider", "The huntsman"), M),
+        q("ani_big_african_animal", "Which big African animal is considered one of the most dangerous to humans?", "The hippopotamus", listOf("The giraffe", "The zebra", "The gorilla"), M),
+        q("ani_clownfish_live_safely", "Clownfish live safely among the stinging tentacles of what?", "Sea anemones", listOf("Jellyfish", "Corals", "Sea urchins"), M),
+        q("ani_fastest_fish_sea", "Which is the fastest fish in the sea?", "The sailfish", listOf("The tuna", "The great white shark", "The barracuda"), M),
+        q("ani_australian_bird_call", "Which Australian bird is famous for a call that sounds like laughter?", "The kookaburra", listOf("The cockatoo", "The emu", "The lyrebird"), M),
+        q("ani_large_flightless_bird", "Which large flightless bird appears on Australia's coat of arms beside the kangaroo?", "The emu", listOf("The cassowary", "The ostrich", "The kiwi"), M),
+        q("ani_group_geese_ground", "What is a group of geese on the ground called?", "A gaggle", listOf("A murder", "A parliament", "A pride"), M),
+        q("ani_small_mammal_fighting", "Which small mammal is famous for fighting and killing cobras?", "The mongoose", listOf("The meerkat", "The ferret", "The weasel"), M),
+        q("ani_national_animal_india", "What is the national animal of India?", "The Bengal tiger", listOf("The Indian elephant", "The peacock", "The cobra"), M),
+        q("ani_big_cat_largest", "Which big cat is the largest in the Americas?", "The jaguar", listOf("The puma", "The ocelot", "The lynx"), M),
+        q("ani_black_panther_usually", "A 'black panther' is usually a dark-coated what?", "Leopard or jaguar", listOf("Lion or tiger", "Cheetah or puma", "Lynx or ocelot"), M),
+        q("ani_chihuahua_dog_breed", "The Chihuahua dog breed is named after a state in which country?", "Mexico", listOf("Spain", "Peru", "Chile"), M),
+        q("ani_cat_breed_comes", "Which cat breed comes originally from Thailand?", "The Siamese", listOf("The Persian", "The Maine Coon", "The Bengal"), M),
+        q("ani_wings_bee", "How many wings does a bee have?", "Four", listOf("Two", "Six", "Eight"), M),
+        q("ani_caterpillar_form_around", "What does a caterpillar form around itself before it becomes a butterfly?", "A chrysalis", listOf("An egg sac", "A burrow", "A web"), M),
+        q("ani_word_rhinoceros_mean", "What does the word 'rhinoceros' mean in Greek?", "Nose horn", listOf("Horned beast", "Thick skin", "Great beast"), M),
+        q("ani_unit_horse_height", "In which unit is a horse's height traditionally measured?", "Hands", listOf("Feet", "Spans", "Yards"), M),
+        q("ani_counting_two_long", "Counting its two long tentacles, how many limbs does a squid have?", "Ten", listOf("Eight", "Twelve", "Six"), M),
+        q("ani_caviar_salted_eggs", "Caviar is the salted eggs of which fish?", "The sturgeon", listOf("The salmon", "The cod", "The herring"), M),
+        q("ani_animal_gives_soft", "Which animal gives us soft cashmere wool?", "A goat", listOf("A sheep", "A rabbit", "A llama"), M),
+        q("ani_male_goose", "What is a male goose called?", "A gander", listOf("A drake", "A cob", "A rooster"), M),
+        q("ani_group_whales", "What is a group of whales called?", "A pod", listOf("A school", "A shoal", "A fleet"), M),
+        q("ani_female_goat", "What is a female goat called?", "A nanny", listOf("A sow", "A mare", "A jenny"), M),
+        q("ani_animal_lives_underground", "Which animal lives in an underground home called a sett?", "The badger", listOf("The fox", "The rabbit", "The mole"), M),
+        q("ani_largest_living_reptile", "Which is the largest living reptile?", "The saltwater crocodile", listOf("The Komodo dragon", "The anaconda", "The leatherback turtle"), M),
+        q("ani_heaviest_snake_world", "Which is the heaviest snake in the world?", "The green anaconda", listOf("The reticulated python", "The king cobra", "The boa constrictor"), M),
+        q("ani_giant_dog_breed", "Which giant dog breed holds records for the tallest dog?", "The Great Dane", listOf("The St. Bernard", "The Newfoundland", "The Rottweiler"), M),
+        q("ani_small_wrinkly_faced", "Which small wrinkly-faced dog breed comes from China?", "The pug", listOf("The bulldog", "The boxer", "The beagle"), M),
+        q("ani_traditional_greek_feta", "Traditional Greek feta cheese is made mainly from which animal's milk?", "Sheep", listOf("Cow", "Camel", "Buffalo"), M),
+        q("ani_national_bird_india", "What is the national bird of India?", "The peacock", listOf("The parrot", "The eagle", "The crane"), M),
+        q("ani_national_animal_canada", "What is the national animal of Canada?", "The beaver", listOf("The moose", "The polar bear", "The bald eagle"), M),
+        q("ani_bird_national_symbol", "Which bird is a national symbol of France?", "The rooster", listOf("The eagle", "The swan", "The stork"), M),
+        q("ani_colour_polar_bear", "What colour are a polar bear's hairs, really?", "See-through", listOf("White", "Cream", "Pale grey"), M),
+        q("ani_merino_breed_animal", "Merino is a famous breed of which animal?", "Sheep", listOf("Goat", "Horse", "Cattle"), M),
+        q("ani_rhode_island_red", "Rhode Island Red is a famous breed of which animal?", "Chicken", listOf("Pig", "Cow", "Duck"), M),
+        q("ani_tiny_bird_smallest", "Which tiny bird is the smallest in Europe?", "Goldcrest", listOf("Wren", "Blue tit", "Robin"), M),
+        q("ani_squirrel_nest", "What is a squirrel's nest called?", "A drey", listOf("A sett", "A holt", "A form"), M),
+        q("ani_group_zebras", "What is a group of zebras called?", "A dazzle", listOf("A parade", "A crash", "A tower"), M),
+        q("ani_largest_species_turtle", "Which is the largest species of turtle?", "Leatherback sea turtle", listOf("Galapagos tortoise", "Green sea turtle", "Loggerhead turtle"), M),
+        q("ani_tiny_primate_eyes", "Which tiny primate has eyes each as large as its whole brain?", "Tarsier", listOf("Loris", "Marmoset", "Lemur"), M),
+        q("ani_largest_living_marsupial", "Which is the largest living marsupial?", "Red kangaroo", listOf("Koala", "Wombat", "Tasmanian devil"), M),
+        q("ani_arctic_mammal_brown", "Which Arctic mammal's brown summer coat turns white in winter?", "Arctic fox", listOf("Polar bear", "Musk ox", "Walrus"), M),
+        q("ani_flying_reptiles_lived", "Which flying reptiles lived alongside the dinosaurs but were not dinosaurs themselves?", "Pterosaurs", listOf("Plesiosaurs", "Ichthyosaurs", "Mosasaurs"), M),
+        q("ani_period_tyrannosaurus_rex", "In which period did Tyrannosaurus rex live?", "Cretaceous", listOf("Jurassic", "Triassic", "Permian"), M),
+        q("ani_scientific_sabre_toothed", "What was the scientific name of the famous sabre-toothed cat?", "Smilodon", listOf("Megalodon", "Mastodon", "Glyptodon"), M),
+        q("ani_african_predator_painted", "Which African predator is also called the 'painted wolf'?", "African wild dog", listOf("Hyena", "Jackal", "Aardwolf"), M),
+        q("ani_white_arctic_whale", "Which white Arctic whale is nicknamed the 'sea canary' for its chirping calls?", "Beluga", listOf("Narwhal", "Orca", "Minke whale"), M),
+        q("ani_fastest_shark", "Which is the fastest shark?", "Shortfin mako", listOf("Great white", "Tiger shark", "Hammerhead"), M),
+        q("ani_lizard_sprint_across", "Which lizard can sprint across water on its hind legs?", "Basilisk lizard", listOf("Komodo dragon", "Gecko", "Iguana"), M),
+        q("ani_australian_bird_decorates", "Which Australian bird decorates its courtship 'bower' with blue objects?", "Satin bowerbird", listOf("Lyrebird", "Kookaburra", "Cassowary"), M),
+        q("ani_large_flightless_bird_2", "Which large flightless bird of Australia and New Guinea has a dagger-like claw on each foot?", "Cassowary", listOf("Emu", "Ostrich", "Rhea"), M),
+        q("ani_seabird_male_inflates", "Which seabird male inflates a huge red throat pouch to attract a mate?", "Frigatebird", listOf("Pelican", "Puffin", "Gannet"), M),
+        q("ani_group_kangaroos", "What is a group of kangaroos called?", "A mob", listOf("A troop", "A pack", "A herd"), M),
+        q("ani_group_hyenas", "What is a group of hyenas called?", "A cackle", listOf("A crash", "A parade", "A tower"), M),
+        q("ani_group_cats", "What is a group of cats called?", "A clowder", listOf("A kindle", "A litter", "A pack"), M),
+        q("ani_wild_relative_llama", "Which wild relative of the llama has the finest and most expensive wool?", "Vicuna", listOf("Alpaca", "Guanaco", "Yak"), M),
+        q("ani_poodle_originally_bred", "What was the poodle originally bred to do?", "Fetch ducks from water", listOf("Herd sheep on hills", "Hunt rats in barns", "Guard royal palaces"), M),
+        q("ani_chinese_dog_breed", "Which Chinese dog breed is famous for its deeply wrinkled skin?", "Shar Pei", listOf("Chow Chow", "Pekingese", "Shih Tzu"), M),
+        q("ani_smallest_species_bear", "Which is the smallest species of bear?", "Sun bear", listOf("Sloth bear", "Black bear", "Spectacled bear"), M),
+        q("ani_largest_species_seal", "Which is the largest species of seal?", "Elephant seal", listOf("Leopard seal", "Grey seal", "Harp seal"), M),
+        q("ani_blue_blood_collected", "Whose blue blood is collected to test medicines for bacterial toxins?", "Horseshoe crab", listOf("Coelacanth", "Nautilus", "Sea cucumber"), M),
+        q("ani_huge_vulture_andes", "Which huge vulture of the Andes is one of the largest flying birds?", "Andean condor", listOf("Golden eagle", "Harpy eagle", "Bald eagle"), M),
+        q("ani_crickets_make_chirping", "How do crickets make their chirping sound?", "Rubbing their wings together", listOf("Rubbing their legs together", "Vibrating their throats", "Clicking their jaws"), M),
+        q("ani_penguin_lives_south", "Which penguin lives on South African beaches and brays like a donkey?", "African penguin", listOf("Galapagos penguin", "Humboldt penguin", "Little penguin"), M),
+        q("ani_young_cow_not", "What is a young cow that has not yet had a calf called?", "A heifer", listOf("A calf", "A steer", "A bullock"), M),
+        q("ani_adult_female_elephant", "What is an adult female elephant called?", "A cow", listOf("A doe", "A mare", "A sow"), M),
+        q("ani_baby_hedgehog", "What is a baby hedgehog called?", "A hoglet", listOf("A kit", "A pup", "A spikelet"), M),
+        q("ani_flock_geese_flying", "What is a flock of geese flying in formation called?", "A skein", listOf("A gaggle", "A charm", "A brood"), M),
+        q("ani_huge_swirling_flock", "What is a huge, swirling flock of starlings called?", "A murmuration", listOf("A parliament", "A clamour", "A congregation"), M),
+        q("ani_elephant_tusks", "What are an elephant's tusks?", "Enlarged incisor teeth", listOf("Horns", "Enlarged canine teeth", "Bony growths"), M),
+        q("ani_heaviest_invertebrate_earth", "Which is the heaviest invertebrate on Earth?", "Colossal squid", listOf("Giant squid", "Giant Pacific octopus", "Lion's mane jellyfish"), M),
+        q("ani_sea_creature_usually", "Which sea creature is usually ranked the most venomous animal in the ocean?", "Box jellyfish", listOf("Stonefish", "Blue-ringed octopus", "Sea snake"), M),
+        q("ani_truly_wild_horse", "Which is the only truly wild horse species still living, saved from extinction in Mongolia?", "Przewalski's horse", listOf("Camargue horse", "Akhal-Teke horse", "Mongolian mustang"), M)
+    )
 
-        /* ------------------------------ Hard ------------------------------ */
+    /* ------------------------------ Hard ------------------------------ */
+    private fun hard(): List<QuizEntry> = listOf(
         q("ani_dziobak", "Which mammal lays eggs?", "Platypus", listOf("Armadillo", "Sloth", "Hedgehog"), H),
         q("ani_krowa_zoladek", "How many chambers does a cow's stomach have?", "4", listOf("1", "2", "3"), H),
         q("ani_kalmar_oczy", "Which animal has an eye that can grow to the size of a dinner plate?", "Giant squid", listOf("Owl", "Whale", "Elephant seal"), H),
@@ -248,8 +398,26 @@ object AnimalQuestions {
         q("aniy_pingwin_galapagos", "Which is the only penguin that lives wild at the equator?", "The Galapagos penguin", listOf("The emperor penguin", "The king penguin", "The little penguin"), H),
         q("aniy_jetka", "Which insect is famous for living as an adult for only about a day?", "The mayfly", listOf("The dragonfly", "The housefly", "The moth"), H),
         q("aniy_kobra_krolewska", "What does the king cobra mainly eat?", "Other snakes", listOf("Birds' eggs", "Frogs", "Monkeys"), H),
+        q("ani_marsupial_pouch_opens", "Which marsupial's pouch opens backwards, so it doesn't fill with soil while digging?", "The wombat", listOf("The kangaroo", "The wallaby", "The sugar glider"), H),
+        q("ani_group_giraffes", "What is a group of giraffes called?", "A tower", listOf("A pride", "A parliament", "A murder"), H),
+        q("ani_paddington_bear_belongs", "Paddington Bear belongs to which real species?", "The spectacled bear", listOf("The sun bear", "The sloth bear", "The brown bear"), H),
+        q("ani_large_cat_breed", "Which large cat breed is often called the 'gentle giant' of house cats?", "The Maine Coon", listOf("The Sphynx", "The Siamese", "The Persian"), H),
+        q("ani_baby_rabbit", "What is a baby rabbit called?", "A kit", listOf("A pup", "A cub", "A joey"), H),
+        q("ani_silkworms_feed", "What do silkworms feed on?", "Mulberry leaves", listOf("Cotton plants", "Oak bark", "Rice stalks"), H),
+        q("ani_animal_comes_afrikaans", "Which animal's name comes from the Afrikaans for 'earth pig'?", "The aardvark", listOf("The warthog", "The meerkat", "The pangolin"), H),
+        q("ani_woodpecker_long_tongue", "Where does a woodpecker's long tongue go when it isn't using it?", "It wraps around its skull", listOf("It coils up in its beak", "It folds into its throat", "It tucks under its wing"), H),
+        q("ani_monkeys_live_wild", "Which monkeys live wild on the Rock of Gibraltar?", "Barbary macaques", listOf("Rhesus macaques", "Capuchins", "Baboons"), H),
+        q("ani_group_kittens", "What is a group of kittens called?", "A kindle", listOf("A clowder", "A pounce", "A litterbox"), H),
+        q("ani_largest_amphibian_world", "Which is the largest amphibian in the world?", "The Chinese giant salamander", listOf("The Japanese giant salamander", "The cane toad", "The axolotl"), H),
+        q("ani_largest_jellyfish", "Which is the largest known jellyfish?", "The lion's mane jellyfish", listOf("The box jellyfish", "The moon jellyfish", "The Portuguese man o' war"), H),
+        q("ani_living_fossil_fish", "Which 'living fossil' fish, thought extinct for millions of years, was found alive in 1938?", "The coelacanth", listOf("The lungfish", "The sturgeon", "The hagfish"), H),
+        q("ani_japanese_dog_breed", "Which Japanese dog breed was the famously loyal Hachiko?", "The Akita", listOf("The Shiba Inu", "The Tosa", "The Japanese Spitz"), H),
+        q("ani_cat_breed_having", "Which cat breed is famous for having no tail?", "The Manx", listOf("The Sphynx", "The Ragdoll", "The Burmese"), H),
+        q("ani_heaviest_spider_world", "Which is the heaviest spider in the world?", "The Goliath birdeater", listOf("The black widow", "The huntsman", "The wolf spider"), H)
+    )
 
-        /* ----------------------------- Expert ----------------------------- */
+    /* ----------------------------- Expert ----------------------------- */
+    private fun expert(): List<QuizEntry> = listOf(
         q("ani_hemocyjanina", "Which animal has blue blood?", "Octopus", listOf("Frog", "Snake", "Carp"), X),
         q("ani_narwal", "Which marine mammal has a long, spiral tusk growing from its head?", "Narwhal", listOf("Beluga whale", "Porpoise", "Manatee"), X),
         q("ani_echidna", "Which animal, alongside the platypus, is a monotreme?", "Echidna", listOf("Opossum", "Wombat", "Koala"), X),
@@ -292,6 +460,8 @@ object AnimalQuestions {
         q("anix_swierszcz", "By counting what can you roughly work out the air temperature?", "A cricket's chirps", listOf("A frog's croaks", "An owl's hoots", "A bee's buzzes"), X),
         q("aniy_kaszalot_sen", "How do sperm whales sleep?", "Floating upright in short naps", listOf("Lying on the sea floor", "Swimming in slow circles", "Beached on sand"), X),
         q("aniy_strus_oko", "An ostrich's eye is bigger than which of its organs?", "Its brain", listOf("Its heart", "Its stomach", "Its liver"), X),
-        q("aniy_zolwie_morskie", "How do newly hatched sea turtles find the sea at night?", "They head for the brighter horizon", listOf("They follow their mother", "They smell the salt", "They listen for waves"), X)
+        q("aniy_zolwie_morskie", "How do newly hatched sea turtles find the sea at night?", "They head for the brighter horizon", listOf("They follow their mother", "They smell the salt", "They listen for waves"), X),
+        q("ani_small_furry_animal", "Which small furry animal is one of the elephant's closest living relatives?", "The rock hyrax", listOf("The capybara", "The pangolin", "The wombat"), X),
+        q("ani_baby_echidna", "What is a baby echidna called?", "A puggle", listOf("A joey", "A kit", "A cub"), X)
     )
 }
