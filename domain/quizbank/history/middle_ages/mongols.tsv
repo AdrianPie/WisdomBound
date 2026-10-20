@@ -2,6 +2,7 @@
 id	difficulty	prompt	correct	wrong1	wrong2	wrong3
 wh_czyngis_imperium	Easy	Which empire did Genghis Khan found?	The Mongol Empire	The Ottoman Empire	The Chinese Empire	The Persian Empire
 his_mongol_armies_feared	Easy	Mongol armies were feared above all for their skill as what?	Mounted archers	Siege engineers	Sailors	Pikemen
+his_mongol_armies_cover	Easy	Why could Mongol armies cover huge distances so quickly?	Each rider brought spare horses	They rode camels, not horses	They never stopped to sleep	They used chariots on the steppe
 his4_zlota_horda_kto	Medium	The Golden Horde was a state founded by which people?	The Mongols	The Ottomans	The Vikings	The Magyars
 trv_czyngis_potomkowie	Medium	Which ruler is thought to have millions of living descendants today?	Genghis Khan	Julius Caesar	Charlemagne	Alexander the Great
 wld_his_marco_polo	Medium	Which Venetian traveller told Europe about China's Kublai Khan?	Marco Polo	Vasco da Gama	Ferdinand Magellan	Christopher Columbus
@@ -17,6 +18,11 @@ his_mysterious_tomb_genghis	Medium	What is mysterious about the tomb of Genghis 
 his_grandson_genghis_khan_2	Medium	Which grandson of Genghis Khan led the Mongol invasion of Europe in 1241?	Batu	Kublai	Hulagu	Mongke
 his_chinese_dynasty_finally	Medium	Which Chinese dynasty finally fell to Kublai Khan in 1279?	The Song	The Tang	The Ming	The Han
 his_favourite_mongol_battle	Medium	Which favourite Mongol battle trick lured enemies into a trap?	A fake retreat	A night attack in silence	Poisoning the wells	Hiding in the river
+his_mongol_army_besieging	Medium	What did the Mongol army besieging Caffa in 1346 reportedly catapult over its walls?	Plague-infected corpses	Hives of angry bees	Live venomous snakes	Severed horse heads
+his_baghdad_fell_mongols	Medium	After Baghdad fell to the Mongols, the Tigris is said to have run black. Why?	Ink from books thrown into it	Ash from the burning palaces	Soot from the siege fires	Tar from sunken ships
+his_mongol_riders_reportedly	Medium	What did Mongol riders reportedly drink on long marches when food ran out?	Blood from their horses	Wine looted from cities	Honey mixed with water	Soup of boiled leather
+his_according_legend_happened	Medium	According to legend, what happened just days after Soviet scientists opened Tamerlane's tomb in 1941?	Germany invaded the Soviet Union	An earthquake hit Samarkand	Stalin fell seriously ill	A plague broke out in Moscow
+his_mongols_generally_treat	Medium	How did the Mongols generally treat the religions of the peoples they conquered?	They tolerated them	They banned all of them	They forced Buddhism on all	They made all convert to Islam
 hx_kamikaze	Hard	The word 'kamikaze' ('divine wind') first described what?	Storms that sank Mongol fleets	A samurai sword technique	A Buddhist temple chant	A volcanic eruption
 his_city_became_capital	Hard	Which city became the capital of the Mongol Empire under Genghis Khan's son Ogedei?	Karakorum	Samarkand	Beijing	Sarai
 his_grandson_genghis_khan	Hard	Which grandson of Genghis Khan sacked Baghdad in 1258?	Hulagu	Kublai	Batu	Mongke
@@ -29,6 +35,8 @@ his_great_assembly_mongol	Hard	What was the great assembly of Mongol chiefs that
 his_mongol_army_division	Hard	What was a Mongol army division of 10,000 men called?	A tumen	A yam	A ger	A khan
 his_capital_golden_horde	Hard	What was the capital of the Golden Horde, on the lower Volga?	Sarai	Karakorum	Kazan	Astrakhan
 his_according_accounts_led	Hard	According to most accounts, what led to Genghis Khan's death in 1227?	A fall from his horse	A battle wound	Poisoned wine	A snake bite
+his_secret_history_mongols	Hard	What is 'The Secret History of the Mongols'?	The oldest life of Genghis Khan	A spy manual of Kublai Khan	Marco Polo's lost diary	A Chinese book of Mongol crimes
+his_kidnapped_rival_tribe	Hard	Who was kidnapped by a rival tribe, leading the young Genghis Khan into his first great raid?	His wife Borte	His sister Temulun	His brother Khasar	His son Jochi
 hx_temudzyn	Expert	What was Genghis Khan's name at birth?	Temujin	Kublai	Ogedei	Batu
 hy_timur	Expert	Which Central Asian conqueror, also called Tamerlane, built his capital at Samarkand?	Timur	Babur	Genghis Khan	Attila
 hw_marco_polo_wiezienie	Expert	Marco Polo's travel stories were written down while he was where?	In prison in Genoa	At the Mongol court	On a ship to China	In a monastery
@@ -40,3 +48,4 @@ his_kublai_khan_summer	Expert	What was Kublai Khan's summer capital, later made 
 his_central_asian_empire	Expert	Which Central Asian empire did Genghis Khan destroy after it murdered his envoys?	The Khwarazmian Empire	The Seljuk Empire	The Tangut Empire	The Kara-Khitai
 his_great_khan_received	Expert	Which Great Khan received the papal envoy Giovanni da Pian del Carpine in 1246?	Guyuk	Ogedei	Mongke	Kublai
 his_ruler_ilkhanate_made	Expert	Which ruler of the Ilkhanate made Islam its official religion in 1295?	Ghazan	Hulagu	Abaqa	Tamerlane
+his_franciscan_friar_visited	Expert	Which Franciscan friar visited the Mongol capital in 1254 and described a silver tree that poured out drinks?	William of Rubruck	Giovanni da Pian del Carpine	Odoric of Pordenone	Marco Polo

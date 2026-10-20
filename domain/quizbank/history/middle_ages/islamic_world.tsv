@@ -5,6 +5,7 @@ his_muslim_pilgrimage_mecca	Easy	What is the Muslim pilgrimage to Mecca called?	
 his_towers_mosque_call	Easy	What are the towers of a mosque, from which the call to prayer is made, called?	Minarets	Domes	Spires	Pagodas
 his_direction_muslims_around	Easy	In which direction do Muslims around the world face when they pray?	Towards Mecca	Towards Jerusalem	Towards the rising sun	Towards Medina
 his_month_muslims_fast	Easy	During which month do Muslims fast from dawn to dusk?	Ramadan	Muharram	Shawwal	Rajab
+his_language_quran_written	Easy	In which language was the Quran first written down?	Arabic	Persian	Turkish	Hebrew
 hy_mekka	Medium	In which city was the Prophet Muhammad born?	Mecca	Medina	Jerusalem	Baghdad
 his_cube_shaped_shrine	Medium	What is the cube-shaped shrine at the centre of the Great Mosque of Mecca called?	The Kaaba	The Dome of the Rock	The Minbar	The Mihrab
 his_golden_domed_shrine	Medium	Which golden-domed shrine, built in 691, stands on Jerusalem's Temple Mount?	The Dome of the Rock	Hagia Sophia	The Blue Mosque	The Kaaba
@@ -19,6 +20,8 @@ his_islamic_calendar_based	Medium	What is the Islamic calendar based on?	The pha
 his_city_prophet_muhammad	Medium	In which city is the Prophet Muhammad buried?	Medina	Mecca	Jerusalem	Damascus
 his_madrasa	Medium	What is a 'madrasa'?	An Islamic school or college	A covered market	A royal palace	A fortress tower
 his_persian_mathematician_astronomer	Medium	Which Persian mathematician and astronomer also wrote the poems of the 'Rubaiyat'?	Omar Khayyam	Rumi	Hafez	Ferdowsi
+his_built_middle_cordoba	Medium	What was built in the middle of Cordoba's Great Mosque after the Christian conquest?	A cathedral	A royal palace	A bullring	A prison
+his_trees_brought_spain	Medium	Which trees, brought to Spain by its Muslim rulers, now line the streets of Seville in their thousands?	Bitter orange trees	Date palms	Fig trees	Lemon trees
 his4_kalifat_abbasydzki_stolica	Hard	Which city was the Abbasid Caliphate's capital?	Baghdad	Damascus	Cairo	Cordoba
 hx_ibn_battuta	Hard	Which Moroccan traveller journeyed some 120,000 km across the medieval Islamic world?	Ibn Battuta	Ibn Khaldun	Al-Idrisi	Ibn Sina
 hx_granada_1492	Hard	Besides Columbus's voyage, what else happened in Spain in 1492?	Granada, the last Moorish state, fell	The Armada was destroyed	The Inquisition was abolished	Madrid became the capital
@@ -39,6 +42,9 @@ his_caliph_took_jerusalem	Hard	Which caliph took Jerusalem from the Byzantines i
 his_battle_636_arabs	Hard	At which battle of 636 did the Arabs crush a Byzantine army and win Syria?	Yarmouk	Badr	Hattin	Manzikert
 his_spanish_city_retaken	Hard	Which Spanish city, retaken by Christians in 1085, became a centre for translating Arabic science into Latin?	Toledo	Seville	Granada	Valencia
 his_abbasid_caliph_son	Hard	Which Abbasid caliph, son of Harun al-Rashid, paid scholars to translate Greek science at the House of Wisdom?	Al-Mamun	Al-Mansur	Al-Mutasim	Al-Amin
+his_engineer_1206_described	Hard	Which engineer of 1206 described dozens of ingenious machines, including a famous 'elephant clock'?	Al-Jazari	Al-Khwarizmi	Ibn Sina	Al-Biruni
+his_arab_geographer_made	Hard	Which Arab geographer made a famous map of the world for the Norman king Roger II of Sicily in 1154?	Al-Idrisi	Ibn Battuta	Ibn Khaldun	Al-Masudi
+his_poet_finished_shahnameh	Hard	Which poet finished the 'Shahnameh', the great Persian 'Book of Kings', around 1010?	Ferdowsi	Rumi	Hafez	Omar Khayyam
 hy_hidzra	Expert	The Islamic calendar counts from Muhammad's move in 622 to which city?	Medina	Mecca	Damascus	Jerusalem
 hw_dom_madrosci	Expert	In which city stood the 'House of Wisdom', a great centre of learning in the 800s?	Baghdad	Cairo	Cordoba	Damascus
 his_empire_ruled_shahs	Expert	Which empire was ruled by shahs from the city of Isfahan in the 1600s?	The Safavid Empire	The Mughal Empire	The Ottoman Empire	The Seljuk Empire
@@ -46,3 +52,5 @@ his_arab_scholar_around	Expert	Which Arab scholar of around 1000 is called 'the 
 his_battle_751_against	Expert	Which battle of 751 against Tang China is said to have brought papermaking to the Islamic world?	Talas	Badr	Yarmouk	Qadisiyyah
 his_philosopher_cordoba_europe	Expert	Which philosopher of Cordoba was famous in Europe for his commentaries on Aristotle?	Averroes	Avicenna	Maimonides	Al-Farabi
 his_caliph_cordoba_built	Expert	Which caliph of Cordoba built the palace city of Medina Azahara in the 900s?	Abd al-Rahman III	Al-Hakam II	Almanzor	Boabdil
+his_musician_court_cordoba	Expert	Which musician at the court of Cordoba, nicknamed 'the Blackbird', is said to have brought the three-course meal to Spain?	Ziryab	Averroes	Al-Mansur	Maimonides
+his_muezzin_chosen_muhammad	Expert	Who was the first muezzin, chosen by Muhammad for his powerful voice?	Bilal	Ali	Umar	Uthman

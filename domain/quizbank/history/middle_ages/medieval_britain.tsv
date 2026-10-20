@@ -4,6 +4,7 @@ id	difficulty	prompt	correct	wrong1	wrong2	wrong3
 his_scottish_hero_won	Easy	Which Scottish hero won the Battle of Stirling Bridge in 1297?	William Wallace	Robert the Bruce	Rob Roy	Macbeth
 his_english_cathedral_city	Easy	Which English cathedral city were Chaucer's pilgrims travelling to?	Canterbury	York	Winchester	Salisbury
 his_language_spoken_england	Easy	Which language was spoken in England before the Norman Conquest?	Old English	Old French	Latin	Gaelic
+his_according_legend_creature	Easy	According to legend, which creature taught a Scottish king hiding in a cave to 'try, try again'?	A spider	A robin	An eagle	A mouse
 wh_hastings_zwyciezca	Medium	Who won the Battle of Hastings in 1066?	William the Conqueror	Harold II	Richard the Lionheart	Canute the Great
 hx_normanowie	Medium	The Normans who conquered England in 1066 came from which present-day country?	France	Norway	Denmark	Germany
 hx_wallace	Medium	Which Scottish hero, shown in the film 'Braveheart', led a revolt against England in 1297?	William Wallace	Robert the Bruce	Rob Roy	Bonnie Prince Charlie
@@ -24,6 +25,9 @@ his_according_legend_lady	Medium	According to legend, Lady Godiva rode naked thr
 his_english_king_confessor	Medium	Which English king, called 'the Confessor', built the first great Westminster Abbey?	Edward	Harold	Alfred	Ethelred
 his_english_cathedral_built	Medium	Which English cathedral, built in the 1200s, has the tallest church spire in Britain?	Salisbury	Canterbury	York Minster	Lincoln
 his_english_king_lost	Medium	Which English king lost the Battle of Bannockburn in 1314?	Edward II	Edward I	Edward III	Henry III
+his_riverside_meadow_near	Medium	In which riverside meadow near Windsor was Magna Carta sealed?	Runnymede	Hyde Park	Kew	Greenwich
+his_english_earl_1400s	Medium	Which English earl of the 1400s, who put two kings on the throne, was nicknamed 'the Kingmaker'?	The Earl of Warwick	The Earl of Oxford	The Earl of Northumberland	The Earl of Pembroke
+his_abbey_monks_claimed	Medium	Which abbey's monks claimed in 1191 to have found the grave of King Arthur?	Glastonbury	Westminster	Whitby	Tintern
 wh_wojna_dwoch_roz	Hard	The houses of York and Lancaster fought each other during...	The Wars of the Roses	The Hundred Years' War	The English Revolution	The Seven Years' War
 wld_magna_carta	Hard	Which English king sealed the Magna Carta in 1215?	King John	Richard the Lionheart	Henry VIII	William the Conqueror
 hx_bayeux	Hard	Which famous embroidery tells the story of the Norman conquest of England?	The Bayeux Tapestry	The Book of Kells	The Lewis Chessmen	The Domesday Book
@@ -41,9 +45,13 @@ his_son_william_conqueror	Hard	Which son of William the Conqueror was killed by 
 his_civil_war_between	Hard	What is the civil war between King Stephen and Empress Matilda in 1135-1154 called?	The Anarchy	The Wars of the Roses	The Barons' War	The Great Rebellion
 his_old_richard_faced	Hard	How old was Richard II when he faced the rebels of the Peasants' Revolt in 1381?	14	8	21	30
 his_oxford_scholar_1300s	Hard	Which Oxford scholar of the 1300s inspired the first complete Bible in English?	John Wycliffe	William Tyndale	Thomas Cranmer	Thomas More
+his_english_king_said	Hard	Which English king is said to have died from eating 'a surfeit of lampreys'?	Henry I	Henry II	Stephen	William II
+his_according_legend_duke	Hard	According to legend, how was the Duke of Clarence executed in London in 1478?	Drowned in a barrel of wine	Hanged from a window	Fed to the royal lions	Walled up alive
+his_embarrassing_thing_happened	Hard	What embarrassing thing happened at William the Conqueror's funeral in 1087?	His bloated body burst open	His coffin was found empty	The bishop fell into the grave	His horse bolted with the coffin
 his_hastings	Expert	In which year was the Battle of Hastings?	1066	1215	1096	1013
 hx_ryszard_iii	Expert	The remains of which English king were found under a car park in Leicester in 2012?	Richard III	Henry VI	Edward V	Harold II
 hx_alfred_ciastka	Expert	According to legend, which English king was scolded by a peasant woman for letting her cakes burn?	Alfred the Great	Harold II	William the Conqueror	Edward the Confessor
 his_last_native_prince	Expert	Who was the last native Prince of Wales, killed fighting the English in 1282?	Llywelyn ap Gruffudd	Owain Glyndwr	Rhodri the Great	Hywel Dda
 his_harrying_north_1069	Expert	What was the 'Harrying of the North' in 1069-1070?	William's wasting of northern England	A Viking raid on Northumbria	A Scottish invasion of York	A plague in Yorkshire
 his_english_friar_1200s	Expert	Which English friar of the 1200s is often called one of the first scientists?	Roger Bacon	William of Ockham	Duns Scotus	Robert Grosseteste
+his_scottish_castle_countess	Expert	Which Scottish castle did the countess known as 'Black Agnes' hold for five months against the English in 1338?	Dunbar Castle	Stirling Castle	Bothwell Castle	Caerlaverock Castle

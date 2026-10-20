@@ -1,6 +1,7 @@
 # Anglia przeciw Francji w latach 1337-1453: Crecy, Poitiers, Azincourt, Joanna d'Arc.
 id	difficulty	prompt	correct	wrong1	wrong2	wrong3
 his_french_teenage_heroine	Easy	Which French teenage heroine led armies against the English in 1429?	Joan of Arc	Eleanor of Aquitaine	Marie Antoinette	Catherine de' Medici
+his_disaster_forced_pause	Easy	Which disaster forced a pause in the fighting of the Hundred Years' War in 1348?	The Black Death	The Great Famine	A smallpox epidemic	A huge earthquake
 his2_wojna_stuletnia	Medium	Between which countries was the Hundred Years' War fought?	England and France	Spain and Portugal	Sweden and Denmark	Austria and Prussia
 wh_joanna_darc	Medium	During which conflict did Joan of Arc fight?	The Hundred Years' War	The Thirty Years' War	The Wars of the Roses	The Reconquista
 hx_joanna_stos	Medium	How did Joan of Arc die in 1431?	She was burned at the stake	She fell in battle	She was poisoned	She died of the plague
@@ -17,6 +18,10 @@ his_roughly_far_english	Medium	Roughly how far could an English longbow shoot an
 his_main_charge_joan	Medium	On which main charge was Joan of Arc condemned to death in 1431?	Heresy	Treason	Murder	Theft
 his_french_king_mad	Medium	Which French king, called 'the Mad', sometimes believed he was made of glass?	Charles VI	Charles VII	Louis XI	Philip VI
 his_country_france_ally	Medium	Which country was France's ally against England in the 'Auld Alliance'?	Scotland	Spain	Portugal	Wales
+his_saint_day_battle	Medium	On which saint's day was the Battle of Agincourt fought, made famous by a Shakespeare speech?	Saint Crispin's Day	Saint George's Day	Saint Andrew's Day	Saint Martin's Day
+his_six_leading_townsmen	Medium	What did six leading townsmen of a besieged French port offer Edward III in 1347 to save their town?	Their own lives	All their gold	The town's church bells	Their daughters' hands
+his_english_archers_agincourt	Medium	How did English archers at Agincourt protect themselves from the French cavalry?	Sharpened stakes in the ground	Lines of carts chained together	A deep ditch full of water	Bonfires of wet straw
+his_happened_joan_arc	Medium	What happened to Joan of Arc's conviction about 25 years after her death?	It was overturned	The pope confirmed it	It was secretly burned	It was lost in a fire
 hx_joanna_wiek	Hard	How old was Joan of Arc when she was executed?	About 19	About 29	About 39	About 14
 his_city_joan_arc	Hard	In which city was Joan of Arc burned at the stake?	Rouen	Paris	Orleans	Reims
 his_allies_english_captured	Hard	Which allies of the English captured Joan of Arc and sold her to them?	The Burgundians	The Bretons	The Scots	The Flemish
@@ -32,6 +37,8 @@ his_bands_jobless_soldiers	Hard	What were the bands of jobless soldiers who plun
 his_battle_1429_joan	Hard	At which battle of 1429 did Joan of Arc's army crush the English longbowmen?	Patay	Agincourt	Crecy	Formigny
 his_chevauchee_hundred_years	Hard	What was a 'chevauchee' in the Hundred Years' War?	A destructive mounted raid	A formal duel of champions	A royal wedding	A truce for harvest time
 his_roughly_old_black	Hard	Roughly how old was the Black Prince when he fought at Crecy in 1346?	16	10	25	40
+his_joan_arc_prison	Hard	What did Joan of Arc do in prison that sealed her death sentence?	Wore men's clothes again	Cursed the English king	Refused to eat any food	Burned her trial papers
+his_battle_1340_fought	Hard	Which battle of 1340, fought at sea, destroyed most of the French fleet?	Sluys	La Rochelle	Winchelsea	Calais
 his_french_king_taken	Expert	Which French king was taken prisoner at Poitiers in 1356?	John II	Philip VI	Charles V	Louis IX
 his_battle_1453_ended	Expert	Which battle of 1453 ended the Hundred Years' War with a French victory?	Castillon	Formigny	Patay	Orleans
 his_treaty_1420_made	Expert	Which treaty of 1420 made Henry V heir to the French throne?	The Treaty of Troyes	The Treaty of Bretigny	The Treaty of Arras	The Treaty of Picquigny
@@ -39,3 +46,6 @@ his_ugly_but_brilliant	Expert	Which ugly but brilliant French commander won back
 his_french_bishop_ally	Expert	Which French bishop, an ally of the English, led Joan of Arc's trial?	Pierre Cauchon	Jean Gerson	Georges d'Amboise	Guillaume Briconnet
 his_french_poet_wrote	Expert	Which French poet wrote a poem in praise of Joan of Arc in 1429?	Christine de Pizan	Francois Villon	Marie de France	Charles d'Orleans
 his_english_commander_english	Expert	Which English commander, 'the English Achilles', was killed at Castillon in 1453?	John Talbot	John Fastolf	Thomas Montagu	John of Gaunt
+his_duke_burgundy_murdered	Expert	Which Duke of Burgundy was murdered on a bridge at Montereau in 1419?	John the Fearless	Philip the Good	Charles the Bold	Philip the Bold
+his_blind_king_charged	Expert	Which blind king charged into battle against the English in 1346, his horse tied to his knights' horses?	John of Bohemia	Charles of Navarre	Philip VI of France	Louis of Flanders
+his_companion_arms_joan	Expert	Which companion-in-arms of Joan of Arc was later executed as a murderer of children?	Gilles de Rais	La Hire	Jean de Dunois	Arthur de Richemont

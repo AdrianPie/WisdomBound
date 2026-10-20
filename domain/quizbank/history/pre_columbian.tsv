@@ -7,6 +7,9 @@ his_capital_city_built	Easy	Which capital city was built on the ruins of the Azt
 his_animal_inca_use	Easy	Which animal did the Inca use to carry loads through the Andes?	The llama	The camel	The donkey	The horse
 his_present_day_country_4	Easy	In which present-day country did the Aztec Empire rule?	Mexico	Peru	Guatemala	Colombia
 his_civilisation_central_america	Easy	Which civilisation of Central America had a full writing system of hieroglyphs?	The Maya	The Inca	The Aztecs	The Olmec
+his_big_cat_symbol	Easy	Which big cat was a symbol of power for Maya kings and elite Aztec warriors?	The jaguar	The puma	The ocelot	The lynx
+his_maya_number_system	Easy	What did the Maya number system have that Roman numerals lacked?	A symbol for zero	A sign for infinity	Negative numbers	Decimal points
+his_unlike_pyramids_egypt	Easy	Unlike the pyramids of Egypt, what usually stood on top of Maya and Aztec pyramids?	Temples	Tombs	Gold statues	Watchtowers
 wh_aztekowie_zdobywca	Medium	Which conquistador toppled the Aztec empire?	Hernan Cortes	Francisco Pizarro	Vasco Nunez de Balboa	Diego de Almagro
 his_chichen_itza	Medium	Which civilisation built the pyramid city of Chichen Itza?	The Maya	The Aztecs	The Inca	The Olmecs
 hx_majowie_2012	Medium	Which civilisation's calendar was wrongly said to predict the end of the world in 2012?	The Maya	The Aztecs	The Inca	The Olmecs
@@ -27,6 +30,10 @@ his_people_call_aztecs	Medium	What did the people we call the Aztecs call themse
 his_two_brothers_fought	Medium	Which two brothers fought a civil war for the Inca throne just before the Spanish arrived?	Atahualpa and Huascar	Pachacuti and Tupac	Manco and Paullu	Cuauhtemoc and Cuitlahuac
 his_inca_capital_said	Medium	Which Inca capital's name is said to mean 'navel of the world'?	Cusco	Quito	Lima	Machu Picchu
 his_feathered_serpent_great	Medium	Which feathered serpent was one of the great gods of the Aztecs and Toltecs?	Quetzalcoatl	Huitzilopochtli	Tlaloc	Viracocha
+his_inca_chasquis	Medium	What were the Inca 'chasquis'?	Relay message runners	Priests of the Sun	Royal llama herders	Road-building slaves
+his_happened_inca_emperors	Medium	What happened to Inca emperors after they died?	Mummified and treated as alive	Burned along with their wives	Buried at sea with their gold	Left on peaks for the condors
+his_trait_maya_find	Medium	Which trait did the Maya find so beautiful that mothers dangled a bead between their babies' eyes to create it?	Crossed eyes	Long eyelashes	Green eyes	Bushy eyebrows
+his_inca_rope_bridges	Medium	What are Inca rope bridges like the Q'eswachaka, still rebuilt every year, made of?	Woven grass	Llama hair	Jungle vines	Leather straps
 his2_inkowie_kraj	Hard	The heartland of the Inca empire lay in which present-day country?	Peru	Mexico	Brazil	Colombia
 wh_inkowie_zdobywca	Hard	Which conquistador conquered the Inca empire?	Francisco Pizarro	Hernan Cortes	Juan Ponce de Leon	Hernando de Soto
 his_aztekowie_kakao	Hard	What did the Aztecs use as a kind of money?	Cocoa beans	Gold coins	Salt blocks	Sea shells
@@ -40,6 +47,13 @@ his_lake_aztecs_build	Hard	In which lake did the Aztecs build their island capit
 his_inca_fortress_giant	Hard	Which Inca fortress with giant zigzag walls stands above Cusco?	Sacsayhuaman	Machu Picchu	Ollantaytambo	Pisac
 his_colombian_people_ritual	Hard	Which Colombian people's ritual of covering a ruler in gold dust gave rise to the El Dorado legend?	The Muisca	The Inca	The Aztecs	The Maya
 his_last_aztec_emperor	Hard	Who was the last Aztec emperor, executed by Cortes in 1525?	Cuauhtemoc	Moctezuma II	Cuitlahuac	Ahuitzotl
+his_chuno_food_inca	Hard	What is 'chuno', a food the Inca could store for years?	Freeze-dried potatoes	Dried llama meat	Roasted maize cakes	Fermented quinoa
+his_found_giant_carved	Hard	Who found the giant carved stone of the moon goddess Coyolxauhqui in 1978, leading to the dig of the Aztecs' Great Temple?	Electricity company workers	A boy chasing a lost dog	Divers draining a canal	A priest planting a garden
+his_spanish_call_night	Hard	What do the Spanish call the night in 1520 when the conquistadors fled the Aztec capital with heavy losses?	The Sad Night	The Night of Fire	The Bloody Dawn	The Dark Week
+his_roughly_maya_books	Hard	Roughly how many Maya books survived the Spanish conquest?	Four	Forty	About 400	About 4,000
+his_aztec_flower_wars	Hard	What were the Aztec 'flower wars' fought for?	Taking captives for sacrifice	Control of the cocoa groves	Winning brides for the king	Settling disputes over land
+his_juanita_found_frozen	Hard	Who is 'Juanita', found frozen on a Peruvian volcano in 1995?	A sacrificed Inca girl	A mummified Inca queen	A lost Spanish princess	A Moche warrior priestess
+his_city_near_today_2	Hard	Which city near today's St Louis had a giant earth mound and perhaps 20,000 people around 1100?	Cahokia	Mesa Verde	Chaco Canyon	Etowah
 dpt_his_kipu	Expert	Which civilisation kept records on knotted cords called quipu?	The Inca	The Maya	The Aztecs	The Toltecs
 cur_oxford_aztekowie	Expert	Which is older: the University of Oxford or the Aztec Empire?	The University of Oxford	The Aztec Empire	They were founded the same year	Neither - both date from the 1700s
 hx_atahualpa	Expert	Which Inca emperor offered to fill a room with gold in exchange for his freedom?	Atahualpa	Huascar	Pachacuti	Manco Capac

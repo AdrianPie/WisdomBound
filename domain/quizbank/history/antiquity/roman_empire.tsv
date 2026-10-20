@@ -11,6 +11,8 @@ his_loose_formal_garment	Easy	What loose formal garment did Roman citizens wear?
 his_officer_charge_roman	Easy	What was the officer in charge of about 80 Roman soldiers called?	A centurion	A legate	A tribune	A consul
 his_language_ancient_romans	Easy	Which language did the ancient Romans speak?	Latin	Greek	Italian	Etruscan
 his_large_roman_country	Easy	What was a large Roman country house with farmland called?	A villa	A forum	A basilica	A domus
+his_language_jesus_likely	Easy	Which language did Jesus most likely speak in everyday life?	Aramaic	Latin	Greek	Hebrew
+his_archaeologists_make_body	Easy	How did archaeologists make the famous body casts of Pompeii's victims?	Poured plaster into hollows	Carved them out of lava	Moulded clay over skeletons	Cast them from wax figures
 trv_hadrian_mur	Medium	In which present-day country is Hadrian's Wall?	The United Kingdom	Germany	Italy	France
 trv_pompeje_odkopanie	Medium	Roughly how long was Pompeii buried before it was rediscovered?	About 1,700 years	About 200 years	About 700 years	About 3,000 years
 org_pensja_sol	Medium	The word 'salary' traces back to Roman payments made in what?	Salt	Grain	Wine	Bronze
@@ -34,6 +36,13 @@ his_romans_use_public	Medium	What did Romans use in public latrines instead of t
 his_roman_triumph	Medium	What was a Roman 'triumph'?	A victory parade for a general	A chariot race	A gladiator's prize	A new law
 his_english_city_grew	Medium	Which English city grew around Roman baths fed by hot springs?	Bath	York	London	Chester
 his_roman_winter_festival	Medium	Which Roman winter festival of feasting and gift-giving influenced Christmas customs?	Saturnalia	Lupercalia	Floralia	Bacchanalia
+his_publicans_new_testament	Medium	Who were the 'publicans' of the New Testament, despised by almost everyone?	Tax collectors	Innkeepers	Moneylenders	Temple guards
+his_special_ingredient_helped	Medium	What special ingredient helped Roman concrete last for 2,000 years?	Volcanic ash	Crushed glass	Olive oil	Goat's milk
+his_emperor_elagabalus_supposedly	Medium	What did Emperor Elagabalus supposedly smother his dinner guests with?	Rose petals	Goose feathers	Warm honey	Desert sand
+his_unusual_roman_year	Medium	What was unusual about the Roman year AD 69?	Four emperors ruled in turn	It had no emperor at all	A woman ruled the empire	The Senate abolished the throne
+his_193_emperor_own	Medium	In 193, what did the emperor's own bodyguard do with the Roman throne?	Auctioned it to the highest bidder	Offered it to a Persian prince	Handed it back to the Senate	Let gladiators fight for it
+his_according_ancient_writers	Medium	According to ancient writers, how did Agrippina kill her husband, Emperor Claudius?	With poisoned mushrooms	With a dagger at dinner	By drowning him in his bath	By pushing him off a balcony
+his_emperor_wear_full	Medium	Which emperor was the first to wear a full beard, making beards fashionable in Rome?	Hadrian	Trajan	Augustus	Caligula
 his_rzym	Hard	In which year did the Western Roman Empire fall?	476	410	395	527
 trv_konstantyn_chrzescijanstwo	Hard	Which Roman emperor was the first to convert to Christianity?	Constantine the Great	Nero	Augustus	Marcus Aurelius
 his_herkulanum	Hard	Which Roman town was buried by Vesuvius along with Pompeii?	Herculaneum	Ostia	Paestum	Capua
@@ -69,6 +78,8 @@ his_emperor_born_spain	Hard	Which emperor, born in Spain, was the first Roman ru
 his_roman_engineer_wrote	Hard	Which Roman engineer wrote 'On Architecture', the only such book to survive from antiquity?	Vitruvius	Frontinus	Apollodorus	Agrippa
 his_roman_poet_banished	Hard	Which Roman poet was banished by Augustus to a town on the Black Sea?	Ovid	Virgil	Horace	Catullus
 his_roman_writer_huge	Hard	Which Roman writer of the huge encyclopedia 'Natural History' died in the eruption of Vesuvius?	Pliny the Elder	Pliny the Younger	Seneca	Tacitus
+his_vindolanda_tablet_written	Hard	What is the most famous Vindolanda tablet, written by a Roman commander's wife around AD 100?	A birthday party invitation	A recipe for fish sauce	A love poem to her husband	A letter to the emperor
+his_emperor_retired_seaside	Hard	Which emperor retired to his seaside palace in Dalmatia and said he would rather grow cabbages than rule again?	Diocletian	Hadrian	Constantine	Tiberius
 his_oktawian	Expert	Who was the first Roman emperor?	Augustus (Octavian)	Julius Caesar	Nero	Tiberius
 hx_masada	Expert	Which desert fortress in Israel saw a famous last stand against Rome in AD 73?	Masada	Petra	Jericho	Megiddo
 hy_pliniusz	Expert	Which Roman writer described the eruption of Vesuvius in letters, after his uncle died in it?	Pliny the Younger	Tacitus	Seneca	Cicero

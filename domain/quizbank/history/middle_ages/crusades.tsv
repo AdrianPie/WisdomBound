@@ -3,6 +3,7 @@ id	difficulty	prompt	correct	wrong1	wrong2	wrong3
 his_city_main_goal	Easy	Which city was the main goal of the First Crusade?	Jerusalem	Constantinople	Rome	Mecca
 his_symbol_crusaders_sew	Easy	Which symbol did crusaders sew onto their clothes?	A cross	A crescent	A lion	An eagle
 his_followers_two_religions	Easy	Followers of which two religions fought each other in the Crusades?	Christians and Muslims	Christians and Jews	Muslims and Hindus	Buddhists and Christians
+his_legendary_outlaw_said	Easy	Which legendary outlaw is said to have stayed loyal to King Richard while he was away on crusade?	Robin Hood	Dick Turpin	William Tell	Rob Roy
 his_krucjaty	Medium	What were the medieval Crusades mainly fought over?	Control of the Holy Land	Spices from India	Gold mines in Africa	The throne of France
 hx_ryszard_lwie	Medium	Which English king was nicknamed 'the Lionheart'?	Richard I	Henry V	Edward I	John
 his_year_crusade_capture	Medium	In which year did the First Crusade capture Jerusalem?	1099	1066	1187	1204
@@ -14,6 +15,8 @@ his_crusade_led_richard	Medium	Which crusade was led by Richard the Lionheart, P
 his_long_christian_campaign	Medium	What was the long Christian campaign to retake Spain and Portugal from the Moors called?	The Reconquista	The Inquisition	The Crusade of Iberia	The Conquista
 his_church_promise_went	Medium	What did the Church promise those who went on crusade?	Forgiveness of their sins	A castle of their own	Freedom from all taxes	A seat in the Senate
 his_two_spanish_kingdoms	Medium	Which two Spanish kingdoms were joined by the marriage of Ferdinand and Isabella in 1469?	Castile and Aragon	Leon and Navarre	Granada and Valencia	Portugal and Galicia
+his_england_get_richard	Medium	How did England get Richard the Lionheart back after he was captured on his way home from the crusade?	It paid a huge ransom	Robin Hood rescued him	He escaped in disguise	It gave up Normandy for him
+his_according_chroniclers_richard	Medium	According to chroniclers, what did Richard the Lionheart's great Muslim rival send him when he lay ill with fever?	Fruit and mountain snow	A tame lion cub	A golden sword	Holy water from Mecca
 his_templariusze	Hard	Which order of knights, who wore red crosses, had its members arrested across France in 1307?	The Knights Templar	The Teutonic Knights	The Knights Hospitaller	The Order of the Garter
 hx_saladyn	Hard	Which Muslim sultan retook Jerusalem from the Crusaders in 1187?	Saladin	Baibars	Mehmed II	Harun al-Rashid
 hx_urban_ii	Hard	Which pope launched the First Crusade in 1095?	Urban II	Gregory VII	Innocent III	Leo IX
@@ -36,6 +39,10 @@ his_young_leper_king	Hard	Which young 'leper king' of Jerusalem defeated Saladin
 his_island_richard_lionheart	Hard	Which island did Richard the Lionheart conquer on his way to the Holy Land in 1191?	Cyprus	Crete	Sicily	Rhodes
 his_crusade_led_king	Hard	Which crusade was led by King Louis VII of France and Emperor Conrad III?	The Second Crusade	The First Crusade	The Third Crusade	The Fourth Crusade
 his_crusade_1212_said	Hard	Which crusade of 1212, said to be led by a French shepherd boy, never reached the Holy Land?	The Children's Crusade	The Shepherds' Crusade	The People's Crusade	The Fourth Crusade
+his_according_legend_minstrel	Hard	According to legend, how did the minstrel Blondel find the imprisoned Richard the Lionheart?	By singing a song outside castles	By following a trained falcon	By bribing a castle cook	By reading a coded letter
+his_family_background_salah	Hard	What was the family background of Salah ad-Din, the sultan who founded the Ayyubid dynasty?	Kurdish	Arab	Turkish	Persian
+his_old_man_mountain	Hard	Who was 'the Old Man of the Mountain', feared by the crusaders?	The leader of the Assassins	A hermit who foretold battles	The emir of Damascus	The Byzantine spymaster
+his_richard_lionheart_700	Hard	What did Richard the Lionheart do to about 2,700 Muslim prisoners after taking a great port city in 1191?	Had them executed	Set them all free	Sold them in Venice	Swapped them for the True Cross
 hy_czwarta_krucjata	Expert	Which Christian city was sacked by the Fourth Crusade in 1204?	Constantinople	Jerusalem	Antioch	Rome
 his_given_crusader_states	Expert	What was the name given to the crusader states in the Levant, meaning 'overseas'?	Outremer	Levant	Oltremare	Terra Santa
 his_pope_dissolved_crusading	Expert	Which pope dissolved a famous crusading order under pressure from Philip IV in 1312?	Clement V	Boniface VIII	Urban II	Innocent III
@@ -43,3 +50,5 @@ his_excommunicated_emperor_won	Expert	Which excommunicated emperor won Jerusalem
 his_byzantine_emperor_appeal	Expert	Which Byzantine emperor's appeal for help led the pope to launch the First Crusade?	Alexios I Komnenos	Basil II	Manuel I	Constantine XI
 his_treaty_1192_between	Expert	Which treaty of 1192 between Richard the Lionheart and Saladin let Christian pilgrims visit Jerusalem?	The Treaty of Jaffa	The Treaty of Acre	The Treaty of Tyre	The Peace of Ascalon
 his_queen_ruled_crusader	Expert	Which queen ruled the crusader kingdom of Jerusalem in her own right from 1131?	Melisende	Sibylla	Isabella	Eleanor
+his_crusading_order_founded	Expert	Which crusading order was founded for knights suffering from leprosy?	The Order of Saint Lazarus	The Order of Calatrava	The Order of Santiago	The Order of the Swan
+his_blind_elderly_doge	Expert	Which blind, elderly doge of Venice sailed with the Fourth Crusade in 1202?	Enrico Dandolo	Pietro Orseolo	Francesco Foscari	Sebastiano Ziani

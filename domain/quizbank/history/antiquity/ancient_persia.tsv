@@ -2,6 +2,7 @@
 id	difficulty	prompt	correct	wrong1	wrong2	wrong3
 his_present_day_country_2	Easy	In which present-day country was the heart of the ancient Persian Empire?	Iran	Iraq	Turkey	Afghanistan
 his_iran_west_until	Easy	By what name was Iran known in the West until 1935?	Persia	Parthia	Mesopotamia	Babylonia
+his_greek_city_persians	Easy	Which Greek city did the Persians capture and burn in 480 BC?	Athens	Sparta	Corinth	Argos
 his_persian_king_led	Medium	Which Persian king led the huge invasion of Greece that was held up at Thermopylae in 480 BC?	Xerxes I	Darius I	Cyrus the Great	Artaxerxes I
 his_persian_king_built	Medium	Which Persian king built the Royal Road and organised the empire into provinces?	Darius the Great	Cyrus the Great	Xerxes I	Cambyses II
 his_governors_persian_provinces	Medium	What were the governors of the Persian provinces called?	Satraps	Pharaohs	Tetrarchs	Consuls
@@ -17,6 +18,10 @@ his_title_meaning_king	Medium	What title, meaning 'king of kings', did the ruler
 his_tall_windcatcher_towers	Medium	What are the tall 'windcatcher' towers on old Iranian houses for?	Cooling the house	Ringing bells	Storing grain	Watching for enemies
 his_priests_east_perhaps	Medium	Which priests from the east, perhaps Zoroastrians, visited the baby Jesus in the Bible?	The Magi	The Pharisees	The Levites	The Essenes
 his_persian_king_army	Medium	Which Persian king's army crossed the Hellespont on bridges of boats in 480 BC?	Xerxes I	Darius I	Cyrus II	Cambyses II
+his_burned_great_palace	Medium	Who burned the great palace at Persepolis in 330 BC, perhaps after a drunken feast?	Alexander the Great	Philip II of Macedon	Darius III	Seleucus I
+his_phrase_parting_shot	Medium	The phrase 'a parting shot' is thought to come from which people's horse archers, who shot backwards while riding away?	The Parthians	The Scythians	The Huns	The Mongols
+his_zoroastrians_traditionally_bodies	Medium	What did Zoroastrians traditionally do with the bodies of their dead?	Left them in towers for vultures	Burned them on great pyres	Buried them under their houses	Sank them in mountain lakes
+his_according_herodotus_persian	Medium	According to Herodotus, Persian boys were taught three things: to ride, to shoot a bow and what?	To tell the truth	To read and write	To sing temple hymns	To swim in rivers
 wh_persepolis	Hard	Persepolis was the capital of which empire?	The Persian Empire	The Assyrian Empire	The Babylonian Empire	The Macedonian Empire
 hx_cyrus	Hard	Which Persian king, founder of the Achaemenid Empire, let the Jews exiled in Babylon go home?	Cyrus the Great	Darius I	Xerxes	Cambyses
 his_empire_elite_soldiers	Hard	Which empire's elite soldiers were known as 'the Immortals'?	The Persian Empire	The Roman Empire	The Mongol Empire	The Ottoman Empire
@@ -34,8 +39,14 @@ his_people_western_iran	Hard	Which people from western Iran ruled an empire befo
 his_queen_halicarnassus_commanded	Hard	Which queen of Halicarnassus commanded ships for Xerxes at the Battle of Salamis?	Artemisia	Atossa	Roxana	Zenobia
 his_city_near_today	Hard	Which city near today's Baghdad was the capital of the Parthians and the Sassanids?	Ctesiphon	Persepolis	Susa	Ecbatana
 his_city_south_west	Hard	Which city in south-west Iran was one of the main royal capitals of the Persian kings?	Susa	Isfahan	Tabriz	Shiraz
+his_city_cyrus_great	Hard	Which city did Cyrus the Great build as his capital, where his simple stone tomb still stands?	Pasargadae	Persepolis	Susa	Ecbatana
+his_according_herodotus_darius	Hard	According to Herodotus, how did Darius win the Persian throne over six fellow nobles?	His horse neighed first at dawn	He won a chariot race	He was chosen by lot	He beat them in a duel
+his_according_herodotus_happened	Hard	According to Herodotus, what happened to a Persian army of 50,000 sent across the desert to attack an Egyptian oracle?	It vanished in a sandstorm	It found a lost city	It went over to Egypt	It died of a plague
+his_persian_king_inspectors	Hard	What were the Persian king's inspectors, who travelled the empire checking on its officials, called?	The King's Eyes	The King's Hands	The King's Shields	The King's Voices
+his_according_herodotus_warrior	Hard	According to Herodotus, which warrior queen killed Cyrus the Great and plunged his head into blood?	Tomyris	Artemisia	Zenobia	Atossa
 hx_kserkses_morze	Expert	According to Herodotus, what did Xerxes order his men to do to the sea after a storm wrecked his bridge?	Whip it	Fill it with stones	Pray to it	Drain it
 his_roman_emperor_captured	Expert	Which Roman emperor was captured by the Persian king Shapur I in 260?	Valerian	Trajan	Hadrian	Julian
 his_language_persian_empire	Expert	Which language did the Persian Empire's officials use across its lands?	Aramaic	Greek	Latin	Hebrew
 his_founded_sassanid_dynasty	Expert	Who founded the Sassanid dynasty in 224, after overthrowing the Parthians?	Ardashir I	Shapur I	Khosrow I	Darius III
 his_parthian_general_defeated	Expert	Which Parthian general defeated Crassus at Carrhae?	Surena	Orodes	Mithridates	Phraates
+his_religion_founded_prophet	Expert	Which religion, founded by a prophet who died in a Persian prison around 276, once had followers from Rome to China?	Manichaeism	Mithraism	Zoroastrianism	Mandaeism

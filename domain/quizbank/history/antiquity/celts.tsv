@@ -4,6 +4,7 @@ id	difficulty	prompt	correct	wrong1	wrong2	wrong3
 his_priests_wise_men	Easy	What were the priests and wise men of the ancient Celts called?	Druids	Bards	Shamans	Augurs
 his_part_united_kingdom	Easy	Which part of the United Kingdom still speaks the Celtic language Cymraeg?	Wales	Cornwall	The Isle of Man	Northern Ireland
 his_romans_call_ireland	Easy	What did the Romans call Ireland?	Hibernia	Caledonia	Britannia	Gaul
+his_region_france_britons	Easy	Which region of France is named after Britons who fled there from the Anglo-Saxons?	Brittany	Normandy	Burgundy	Provence
 his_blue_dye_ancient	Medium	With what blue dye did ancient Britons paint themselves, according to Julius Caesar?	Woad	Indigo	Saffron	Madder
 his_celtic_torc	Medium	What was a Celtic 'torc'?	A twisted metal neck ring	A war chariot	A sacred oak grove	A bronze helmet
 his_tribe_eastern_britain	Medium	Which tribe of eastern Britain rose against Roman rule in AD 60?	The Iceni	The Brigantes	The Silures	The Catuvellauni
@@ -18,6 +19,10 @@ his_according_pliny_plant	Medium	According to Pliny, which plant did druids cut 
 his_roman_writers_say	Medium	Roman writers say some Celtic warriors went into battle wearing what?	Nothing at all	Bear skins	Gold masks	Iron chains
 his_group_celtic_tribes	Medium	Which group of Celtic tribes in northern Gaul gave their name to a modern country?	The Belgae	The Helvetii	The Arverni	The Gauls
 his_british_queen_chariot	Medium	Which British queen's chariot statue stands beside Westminster Bridge in London?	Boudica	Cartimandua	Victoria	Matilda
+his_according_greek_roman	Medium	According to Greek and Roman writers, what did Celtic warriors nail above their doors as trophies?	The heads of enemies	The tails of horses	The skulls of bears	The paws of wolves
+his_skulls_found_hun	Medium	Why are many skulls found in Hun graves oddly long and pointed?	Babies' heads were tightly bound	They wore heavy iron helmets	They carried loads on their heads	It was a disease of the steppes
+his_attila_die_453	Medium	How did Attila die in 453, according to the usual story?	A nosebleed on his wedding night	Killed in battle with the Romans	Poisoned by his own brother	Thrown from his horse
+his_celtic_festival_may	Medium	Which Celtic festival on 1 May marked the start of summer?	Beltane	Samhain	Imbolc	Lughnasa
 his_gaulish_chieftain_sacked	Hard	Which Gaulish chieftain sacked Rome around 390 BC, saying 'Woe to the conquered'?	Brennus	Vercingetorix	Ambiorix	Dumnorix
 his_celtic_people_central	Hard	Which Celtic people of central Turkey received a famous letter from Saint Paul?	The Galatians	The Corinthians	The Thessalonians	The Ephesians
 his_british_chieftain_fought	Hard	Which British chieftain fought the Roman invaders for years before being handed over to them in AD 51?	Caratacus	Cassivellaunus	Calgacus	Cunobelinus
@@ -28,7 +33,12 @@ his_welsh_island_stronghold	Hard	Which Welsh island, a stronghold of the druids,
 his_germanic_people_founded	Hard	Which Germanic people founded a kingdom in North Africa, with Carthage as its capital, in 439?	The Vandals	The Visigoths	The Ostrogoths	The Lombards
 his_nomadic_people_cousins	Hard	Which nomadic people, cousins of the Scythians, had women warriors who may have inspired the Amazon legend?	The Sarmatians	The Thracians	The Parthians	The Cimmerians
 his_early_irish_alphabet	Hard	Which early Irish alphabet was carved as lines along the edges of standing stones?	Ogham	Runes	Futhark	Glagolitic
+his_according_diodorus_some	Hard	According to Diodorus, what did some Celtic warriors use to spike up and bleach their hair?	Lime wash	Honey	Goose fat	Woad
+his_according_herodotus_scythians	Hard	According to Herodotus, how did the Scythians get intoxicated inside their tents?	Burning hemp seeds on hot stones	Sniffing smoke from burning juniper	Drinking wine mixed with poppy	Eating dried red mushrooms
+his_crannog_ancient_ireland	Hard	What was a 'crannog' in ancient Ireland and Scotland?	A house on a man-made lake island	A stone tomb with a long passage	A light wicker war chariot	A round tower for watching the sea
 his_swiss_lakeside_site	Expert	Which Swiss lakeside site gave its name to the swirling style of later Celtic art?	La Tene	Lausanne	Lucerne	Neuchatel
 his_silver_bowl_covered	Expert	Which silver bowl covered in images of gods was found in a Danish bog in 1891?	The Gundestrup cauldron	The Battersea shield	The Vix krater	The Snettisham hoard
 his_huge_iron_age	Expert	Which huge Iron Age hill fort in Dorset is one of the largest in Europe?	Maiden Castle	Danebury	Old Sarum	Cadbury Castle
 his_gaulish_chieftain_wiped	Expert	Which Gaulish chieftain wiped out a Roman legion and five cohorts in 54 BC?	Ambiorix	Vercingetorix	Brennus	Dumnorix
+his_queen_brigantes_northern	Expert	Which queen of the Brigantes in northern Britain sided with Rome and handed over a famous British rebel in AD 51?	Cartimandua	Boudica	Medb	Teuta
+his_bishop_invented_alphabet	Expert	Which bishop invented an alphabet in the 300s to translate the Bible into the language of the Goths?	Ulfilas	Jerome	Ambrose	Patrick
