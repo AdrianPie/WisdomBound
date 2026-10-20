@@ -17,6 +17,11 @@ geo_noon_london_time	Easy	When it is noon in London, what time is it usually in 
 geo_hottest_continent	Easy	Which is the hottest continent?	Africa	Australia	South America	Asia
 geo_continent_crossed_both	Easy	Which continent is crossed by both the equator and the prime meridian?	Africa	South America	Asia	Europe
 geo_two_countries_british	Easy	Which two countries do the British often call 'the Antipodes'?	Australia and New Zealand	Chile and Argentina	Fiji and Samoa	South Africa and Namibia
+geo_continent_permanent_residents	Easy	Which continent has no permanent residents, only visiting scientists and support staff?	Antarctica	Australia	South America	Europe
+geo_asia_second_largest	Easy	After Asia, which is the second-largest continent?	Africa	North America	South America	Europe
+geo_map_mean_contour	Easy	On a map, what does it mean when contour lines are bunched very close together?	The slope is very steep	The land is very flat	The area is marshy	The land is below sea level
+geo_continent_holds_both	Easy	Which continent holds both the highest mountain on Earth and the lowest point on dry land?	Asia	Africa	South America	North America
+geo_flying_east_london	Easy	Flying east from London to Tokyo, what do you need to do with your watch?	Put it forward	Put it back	Leave it alone	Put it back a day
 geo2_panstwo_dwa_konty	Medium	Which country spans two continents: Europe and Asia?	Turkey	Greece	Egypt	Cyprus
 geo3_pierwszy_dzien	Medium	Which country is the first in the world to start each new day?	Kiribati	New Zealand	Japan	Australia
 geocmp_rownik_kraj	Medium	Which of these countries does the equator cross?	Ecuador	Peru	Bolivia	Chile
@@ -49,6 +54,16 @@ geo_india_single_time	Medium	India's single time zone is set how far ahead of GM
 geo_international_date_line	Medium	Why does the International Date Line zigzag instead of running straight?	To keep island nations on one date	To avoid busy shipping lanes	Because the Earth is not round	To follow the edge of a plate
 geo_geographically_greenland_part	Medium	Geographically, Greenland is part of which continent?	North America	Europe	Asia	Antarctica
 geo_south_pole_colder	Medium	Why is the South Pole much colder than the North Pole?	It lies on high, ice-covered land	It is farther from the Sun	It gets no sunlight at all	Cold sea currents meet there
+geo_sun_rises_east	Medium	The Sun rises in the east, but on which days of the year does it rise almost exactly due east?	On the two equinoxes	On the two solstices	On the first of each month	On every day of the year
+geo_suez_canal_usually	Medium	The Suez Canal is usually taken as the boundary between which two continents?	Africa and Asia	Europe and Africa	Europe and Asia	Asia and Oceania
+geo_roughly_share_world_4	Medium	Roughly what share of the world's people live in Asia?	About 60%	About 35%	About 20%	About 85%
+geo_flights_europe_california	Medium	Why do many flights from Europe to California pass over Greenland?	It is the shortest route on a globe	It avoids the Atlantic jet stream	It keeps planes near emergency airports	It avoids the busiest air corridors
+geo_continent_said_princess	Medium	Which continent is said to be named after a princess carried off by Zeus?	Europe	Asia	Africa	Australia
+geo_sailors_love_mercator	Medium	Why did sailors love the Mercator map, despite its badly stretched polar lands?	A straight line on it keeps one compass bearing	It shows every country at its true size	It shows the shortest route between ports	It needs no grid of latitude and longitude
+geo_continent_glaciers_all	Medium	Which continent has no glaciers at all on its mainland?	Australia	Africa	South America	Europe
+geo_given_europe_asia	Medium	What name is given to Europe and Asia together, seen as one huge landmass?	Eurasia	Laurasia	Pangaea	Afrasia
+geo_seen_above_north	Medium	Seen from above the North Pole, which way does the Earth spin?	Anticlockwise	Clockwise	It changes with the seasons	It does not spin
+geo_south_tropic_capricorn	Medium	South of the Tropic of Capricorn, where does the Sun stand in the sky at midday?	In the north	In the south	Straight overhead	In the east
 geo2_rownolezniki_zwrotnik	Hard	What is the tropic in the southern hemisphere called?	Tropic of Capricorn	Tropic of Cancer	Arctic Circle	Prime Meridian
 geo2_greenwich	Hard	Which city does the prime meridian pass through?	London	Paris	Rome	Madrid
 geo3_linia_zmiany_daty	Hard	Where does the International Date Line run?	Through the middle of the Pacific, near the 180th meridian	Straight through Greenwich, on the edge of London	Along the equator, right round the globe	Along the Ural mountains and the Caspian
@@ -73,6 +88,15 @@ geo_according_snowball_earth	Hard	According to the 'Snowball Earth' theory, what
 geo_tunnel_straight_through	Hard	If you could tunnel straight through the Earth from Beijing, in which country would you come out?	Argentina	Australia	Brazil	South Africa
 geo_canadian_island_keeps	Hard	Which Canadian island keeps its clocks half an hour off the rest of Canada's Atlantic coast?	Newfoundland	Prince Edward Island	Cape Breton Island	Vancouver Island
 geo_roughly_far_earth	Hard	Roughly how far is it from Earth's surface to its centre?	About 6,400 km	About 640 km	About 64,000 km	About 1,600 km
+geo_coordinated_universal_time	Hard	Why is Coordinated Universal Time abbreviated UTC rather than CUT?	It is a compromise between English and French	It stands for 'Universal Time Clock'	It was named after a Swiss observatory	CUT was already used by the US Navy
+geo_point_opposite_side	Hard	The point on the opposite side of the globe from Hawaii lies in which African country?	Botswana	Namibia	Zimbabwe	Madagascar
+geo_180th_meridian_runs	Hard	The 180th meridian runs across land in which island country, so the date line bends around it?	Fiji	Samoa	Tonga	Vanuatu
+geo_country_set_own	Hard	Which country set up its own time zone in 2015, half an hour off its neighbour's, then scrapped it in 2018?	North Korea	Myanmar	Mongolia	Bhutan
+geo_very_slowly_making	Hard	What is very slowly making Earth's days longer?	Tides raised by the Moon	Melting polar ice caps	The solar wind	Earth drifting away from the Sun
+geo_pilots_military_often	Hard	Pilots and the military often call Coordinated Universal Time by what name?	Zulu time	Alpha time	Greenwich zero	Delta time
+geo_new_zealand_antipodes	Hard	New Zealand's Antipodes Islands got their name for lying roughly opposite which city?	London	Paris	Madrid	Lisbon
+geo_along_roughly_line	Hard	Along roughly which line of latitude can a ship sail right round the world without meeting any land?	About 60 degrees south	About 40 degrees south	About 50 degrees north	About 30 degrees south
+geo_continent_reaches_across	Hard	Which is the only continent that reaches across every line of longitude?	Antarctica	Asia	Africa	North America
 geo_world_map_projection	Expert	Which world map projection, championed in the 1970s, shows countries at their true relative areas?	The Gall-Peters	The Mercator	The Robinson	The Winkel tripel
 geo_oldest_surviving_map	Expert	The oldest surviving map of the whole known world was made around 600 BC by which people?	The Babylonians	The Egyptians	The Greeks	The Phoenicians
 geo_agloe_hamlet_appeared	Expert	What was Agloe, a hamlet that appeared on maps of New York State from the 1930s?	A fake town to catch copycats	A town that sank into a lake	A ghost town of the gold rush	A town renamed after a war
@@ -85,3 +109,7 @@ geo_two_neighbours_biggest	Expert	Which two neighbours have the biggest time-zon
 geo_spot_exactly_equator	Expert	The only spot exactly on the equator with snow all year round lies on which volcano?	Cayambe	Chimborazo	Kilimanjaro	Mount Kenya
 geo_1884_conference_chose	Expert	The 1884 conference that chose the prime meridian was held in which city?	Washington	London	Paris	Geneva
 geo_roughly_people_live_2	Expert	Roughly how many people live within 100 km of the coast?	About 40% of the world	About 90% of the world	About 10% of the world	About 2% of the world
+geo_mapping_software_jokingly	Expert	Mapping software jokingly calls the point at 0 degrees latitude and 0 degrees longitude what?	Null Island	Zero Point	Origin Rock	Nowhere Bay
+geo_map_projection_national	Expert	Which map projection did the National Geographic Society adopt for its world maps in 1998?	The Winkel tripel	The Robinson	The Mollweide	The Mercator
+geo_gps_showed_ecuador	Expert	GPS showed that Ecuador's 'Middle of the World' monument actually stands roughly how far from the true equator?	About 240 m	About 2 m	About 5 km	About 40 km
+geo_country_abstained_1884	Expert	Which country abstained in the 1884 vote for Greenwich and kept using its own capital's meridian for decades?	France	Germany	Russia	Spain

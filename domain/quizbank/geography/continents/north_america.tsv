@@ -15,6 +15,13 @@ geo_provinces_canada	Easy	How many provinces does Canada have?	Ten	Thirteen	Eigh
 geo_state_president	Easy	Which is the only US state named after a president?	Washington	Georgia	Virginia	Louisiana
 geo_canadian_province_city	Easy	In which Canadian province is the city of Vancouver?	British Columbia	Alberta	Ontario	Manitoba
 geo_southernmost_state	Easy	Which is the southernmost US state?	Hawaii	Florida	Texas	Louisiana
+geo_canada_populous_province	Easy	Which is Canada's most populous province?	Ontario	Quebec	British Columbia	Alberta
+geo_state_nashville_capital	Easy	In which US state is Nashville, the capital of country music?	Tennessee	Kentucky	Texas	Georgia
+geo_state_city_chicago	Easy	In which US state is the city of Chicago?	Illinois	Indiana	Ohio	Michigan
+geo_state_new_orleans	Easy	In which US state is New Orleans?	Louisiana	Mississippi	Alabama	Texas
+geo_state_nicknamed_aloha	Easy	Which US state is nicknamed 'the Aloha State'?	Hawaii	California	Florida	Alaska
+geo_texas_broke_away	Easy	Texas broke away in 1836 from which country, then spent nearly ten years as an independent republic?	Mexico	Spain	France	Britain
+geo_caribbean_islands_west	Easy	Why are the Caribbean islands called the 'West Indies'?	Columbus thought he had reached Asia	Their first settlers sailed from India	They were once governed from Bombay	Their spices rivalled those of India
 mst_kraj_dwa_oceany	Medium	Panama is unusual in that its Caribbean coast lies where relative to its Pacific coast?	To the north	To the east	To the south	To the west
 geo_rhode_island	Medium	Which is the smallest US state by area?	Rhode Island	Delaware	Connecticut	Vermont
 geo_state_nicknamed_sunshine	Medium	Which US state is nicknamed 'the Sunshine State'?	Florida	California	Arizona	Hawaii
@@ -46,6 +53,19 @@ geo_caribbean_country_nicknamed	Medium	Which Caribbean country is nicknamed 'the
 geo_state_nicknamed_land	Medium	Which US state is nicknamed 'the Land of 10,000 Lakes'?	Minnesota	Wisconsin	Michigan	Maine
 geo_roughly_far_hawaii	Medium	Roughly how far is Hawaii from the US mainland?	About 4,000 km	About 1,000 km	About 10,000 km	About 400 km
 geo_residents_puerto_rico	Medium	Residents of Puerto Rico are US citizens, but they cannot do what?	Vote for the US president	Serve in the US army	Travel freely to the US	Use US dollars
+geo_state_nicknamed_show	Medium	Which US state is nicknamed 'the Show Me State'?	Missouri	Kansas	Iowa	Arkansas
+geo_state_licence_plates	Medium	Which US state's licence plates boast 'First in Flight', after the Wright brothers' 1903 flight at Kitty Hawk?	North Carolina	Ohio	Virginia	South Carolina
+geo_state_nicknamed_keystone	Medium	Which US state is nicknamed 'the Keystone State'?	Pennsylvania	Ohio	Virginia	Maryland
+geo_state_nicknamed_hoosier	Medium	Which US state is nicknamed 'the Hoosier State'?	Indiana	Iowa	Ohio	Kentucky
+geo_state_independent_kingdom	Medium	Which US state was an independent kingdom until its monarchy was overthrown in 1893?	Hawaii	Alaska	Texas	Vermont
+geo_delaware_nicknamed_state	Medium	Delaware is nicknamed 'the First State' because it was the first to do what?	Ratify the US Constitution	Declare independence	Abolish slavery	Give women the vote
+geo_state_flag_not	Medium	Which is the only US state whose flag is not a rectangle?	Ohio	Texas	Alaska	Maryland
+geo_state_comes_spanish	Medium	Which US state's name comes from the Spanish for 'coloured red'?	Colorado	Nevada	Montana	Arizona
+geo_state_honour_queen	Medium	Which US state was named in honour of Queen Elizabeth I, 'the Virgin Queen'?	Virginia	Maryland	Georgia	North Carolina
+geo_mexican_state_gave	Medium	Which Mexican state gave its name to the world's smallest dog breed?	Chihuahua	Sonora	Jalisco	Durango
+geo_mexico_takes_people	Medium	Mexico takes its name from which people, better known today as the Aztecs?	The Mexica	The Maya	The Olmecs	The Toltecs
+geo_populous_country_central	Medium	Which is the most populous country in Central America?	Guatemala	Honduras	Nicaragua	Costa Rica
+geo_quebec_motto_printed	Medium	Quebec's motto, printed on its licence plates, is 'Je me souviens'. What does it mean?	I remember	I will return	I believe	I stand guard
 geox_kostaryka	Hard	Which Central American country abolished its army in 1948?	Costa Rica	Panama	Honduras	Belize
 geo_state_nicknamed_bluegrass	Hard	Which US state is nicknamed 'the Bluegrass State'?	Kentucky	Tennessee	Virginia	Missouri
 geo_largest_country_central	Hard	Which is the largest country in Central America by area?	Nicaragua	Honduras	Guatemala	Panama
@@ -64,6 +84,20 @@ geo_state_independent_republic	Hard	Which US state was an independent republic f
 geo_state_lowest_highest	Hard	Which US state has the lowest 'highest point', just 105 m above sea level?	Florida	Delaware	Louisiana	Rhode Island
 geo_term_banana_republic	Hard	The term 'banana republic' was coined by the writer O. Henry about which country?	Honduras	Guatemala	Costa Rica	Panama
 geo_neighbour_long_claimed	Hard	Which neighbour has long claimed all or part of Belize's territory?	Guatemala	Honduras	Nicaragua	El Salvador
+geo_larger_two_kansas	Hard	The larger of the two Kansas Cities lies in which state?	Missouri	Kansas	Nebraska	Oklahoma
+geo_california_short_lived	Hard	California's short-lived 1846 republic was named after which animal on its flag?	A bear	An eagle	A wolf	A buffalo
+geo_state_house_unicameral	Hard	Which is the only US state with a one-house (unicameral) legislature?	Nebraska	Vermont	Delaware	Wyoming
+geo_state_counties_254	Hard	Which US state has the most counties, 254 of them?	Texas	California	Georgia	Kentucky
+geo_alaska_counties_divided	Hard	Alaska has no counties. What is it divided into instead?	Boroughs	Districts	Townships	Cantons
+geo_two_states_each	Hard	Which two US states each border eight other states, more than any other?	Tennessee and Missouri	Kentucky and Colorado	Texas and Georgia	Idaho and Nevada
+geo_state_nicknamed_sooner	Hard	Which US state is nicknamed 'the Sooner State', after settlers who jumped the gun in the 1889 land rush?	Oklahoma	Kansas	Nebraska	Texas
+geo_state_nicknamed_equality	Hard	Which US state, nicknamed 'the Equality State', let women vote in 1869, decades before the rest of the country?	Wyoming	Utah	Colorado	Idaho
+geo_honduras_spanish	Hard	The name 'Honduras' is Spanish for what?	Depths	Highlands	Harbours	Waterfalls
+geo_states_border_canada	Hard	How many US states border Canada?	Thirteen	Seven	Twenty	Four
+geo_beach_resort_cancun	Hard	The beach resort of Cancun lies in which Mexican state?	Quintana Roo	Yucatan	Campeche	Tabasco
+geo_canadian_province_nicknamed	Hard	Which Canadian province is nicknamed 'The Rock'?	Newfoundland and Labrador	Nova Scotia	New Brunswick	Prince Edward Island
+geo_not_counting_mexico	Hard	Not counting Mexico City, how many states does Mexico have?	31	50	20	12
+geo_smallest_country_central	Hard	Which is the smallest country in Central America by area?	El Salvador	Belize	Costa Rica	Panama
 geo_darien	Expert	The Darien Gap is a missing link in which famous road?	The Pan-American Highway	Route 66	The Silk Road	The Trans-Canada Highway
 geo_mosquito_coast_stretches	Expert	The Mosquito Coast stretches along the Caribbean shores of Nicaragua and which other country?	Honduras	Costa Rica	Panama	Belize
 geo_canadian_territory_means	Expert	Which Canadian territory's name means 'great river'?	Yukon	Nunavut	Northwest Territories	Labrador
@@ -73,3 +107,10 @@ geo_point_roberts_reachable	Expert	Point Roberts, reachable by land from the res
 geo_northwest_angle_part	Expert	The Northwest Angle, the only part of the lower 48 states north of the 49th parallel, belongs to which state?	Minnesota	North Dakota	Michigan	Montana
 geo_roughly_far_apart	Expert	Roughly how far apart are Russia's Big Diomede and America's Little Diomede islands?	About 4 km	About 40 km	About 400 km	About 1 km
 geo_state_owns_stranded	Expert	Which US state owns a stranded loop of land on the Mississippi, reachable by road only through Tennessee?	Kentucky	Missouri	Arkansas	Illinois
+geo_king_charles_pennsylvania	Expert	King Charles II named Pennsylvania, 'Penn's woods', in honour of whom?	William Penn's father	William Penn himself	Quaker founder George Fox	Admiral Lord Nelson
+geo_caribbean_island_settled	Expert	Which Caribbean island, settled by many Irish Catholics, stamps visitors' passports with a shamrock?	Montserrat	Barbados	Antigua	Saint Kitts
+geo_state_town_renamed	Expert	Which US state has a town that renamed itself in 1950 after a radio quiz show?	New Mexico	Arizona	Nevada	Texas
+geo_state_jousting_official	Expert	Which US state has jousting as its official state sport?	Maryland	Virginia	Kentucky	Delaware
+geo_rupert_land_vast	Expert	Rupert's Land, a vast region handed over to Canada in 1870, had been owned by whom?	The Hudson's Bay Company	The East India Company	The French Crown	The Russian-American Company
+geo_maryland_queen	Expert	Maryland is named after which queen?	Henrietta Maria	Mary I	Mary, Queen of Scots	Mary II
+geo_california	Expert	California is named after what?	An island in a Spanish novel	A Spanish word for 'hot oven'	A Native American chief	A Spanish queen

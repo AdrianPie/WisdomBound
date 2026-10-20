@@ -11,6 +11,14 @@ geo_african_country_highest	Easy	Which African country is named after its highes
 geo_west_african_country	Easy	Which West African country's name comes from Portuguese words meaning 'Lion Mountains'?	Sierra Leone	Liberia	Cameroon	Guinea
 geo_desert_home_planet	Easy	The desert home planet of Luke Skywalker in 'Star Wars' was named after a town in which country?	Tunisia	Morocco	Egypt	Libya
 geo_african_country_coastlines	Easy	Which is the only African country with coastlines on both the Atlantic and the Mediterranean?	Morocco	Algeria	Tunisia	Mauritania
+geo_two_african_countries	Easy	Which two African countries are both named after the same great river?	Niger and Nigeria	Chad and Sudan	Mali and Senegal	Ghana and Togo
+geo_country_nicknamed_giant	Easy	Which country is nicknamed 'the Giant of Africa'?	Nigeria	DR Congo	Ethiopia	South Africa
+geo_african_country_lies	Easy	Which African country lies only about 14 km from Spain across the sea?	Morocco	Algeria	Tunisia	Libya
+geo_populous_arab_country	Easy	Which is the most populous Arab country in the world?	Egypt	Saudi Arabia	Algeria	Iraq
+geo_country_own_people_3	Easy	Which country do its own people call 'Misr'?	Egypt	Morocco	Sudan	Tunisia
+geo_country_zulu_people	Easy	In which country do most of the Zulu people live?	South Africa	Kenya	Nigeria	Zimbabwe
+geo_island_country_nicknamed_2	Easy	Which island country is nicknamed 'the Great Red Island' for its red soil?	Madagascar	Mauritius	Sri Lanka	Cyprus
+geo_european_country_ruled	Easy	Which European country ruled Kenya, Uganda and Nigeria as colonies?	Britain	France	Portugal	Germany
 geocmp_panstwo_afryka_pow	Medium	Which is the largest country in Africa by area?	Algeria	Sudan	Libya	The Democratic Republic of the Congo
 trv_etiopia_kolonia	Medium	Which African country was never colonised by a European power?	Ethiopia	Kenya	Ghana	Algeria
 geo_country_lies_tip	Medium	Which country lies at the tip of the 'Horn of Africa'?	Somalia	Kenya	Sudan	Eritrea
@@ -41,6 +49,20 @@ geo_african_country_banned	Medium	Which African country banned plastic bags back
 geo_world_populous_landlocked	Medium	Which is the world's most populous landlocked country?	Ethiopia	Uganda	Afghanistan	Kazakhstan
 geo_durban_largest_city	Medium	Durban is the largest city of which South African province?	KwaZulu-Natal	Eastern Cape	Gauteng	Western Cape
 geo_roughly_languages_spoken	Medium	Roughly how many languages are spoken in Nigeria?	Over 500	About 5	About 30	About 80
+geo_country_south_west	Medium	Which country was called South West Africa until its independence in 1990?	Namibia	Botswana	Angola	Zambia
+geo_country_asks_world	Medium	Which country asks the world to call it only by its French name, never a translation?	Ivory Coast	Senegal	Cameroon	Gabon
+geo_african_country_lake	Medium	Which African country is named after a lake?	Chad	Malawi	Uganda	Burundi
+geo_kingdom_buganda_king	Medium	The Kingdom of Buganda, whose king still holds a ceremonial throne, lies within which country?	Uganda	Kenya	Tanzania	Rwanda
+geo_african_land_once	Medium	Which African land was once the personal property of King Leopold II of Belgium?	The Congo	Rwanda	Angola	Cameroon
+geo_country_nicknamed_kingdom	Medium	Which country is nicknamed 'the Kingdom in the Sky'?	Lesotho	Eswatini	Ethiopia	Rwanda
+geo_country_calendar_months	Medium	Which country's calendar has 13 months, so tourists are promised '13 months of sunshine'?	Ethiopia	Egypt	Morocco	Kenya
+geo_country_arabic_maghrib	Medium	Which country's Arabic name, al-Maghrib, means 'the west'?	Morocco	Algeria	Libya	Mauritania
+geo_roman_province_africa	Medium	The Roman province of 'Africa', which gave the whole continent its name, lay mainly in which country?	Tunisia	Egypt	Morocco	Libya
+geo_country_nicknamed_silicon	Medium	Which country is nicknamed 'the Silicon Savannah' for its tech start-ups?	Kenya	Nigeria	South Africa	Ghana
+geo_nubian_homeland_along	Medium	The Nubian homeland along the Nile is split between Egypt and which country?	Sudan	Ethiopia	Libya	Chad
+geo_west_african_country_2	Medium	Which West African country began as a British settlement for freed slaves, with a capital named to match?	Sierra Leone	Ghana	The Gambia	Nigeria
+geo_indian_ocean_island	Medium	Which Indian Ocean island country was called 'Ile de France' under French rule?	Mauritius	Madagascar	Seychelles	Comoros
+geo_swahili_coast_old	Medium	The 'Swahili Coast', with its old trading towns like Mombasa, runs along which side of Africa?	The east coast	The west coast	The north coast	The south coast
 geo2_panstwa_afryka	Hard	How many countries does Africa have according to the UN?	54	47	60	51
 geo_rodezja	Hard	Which country was once known as Southern Rhodesia?	Zimbabwe	Zambia	Malawi	Botswana
 geo_sudan_piramidy	Hard	Which country has the most ancient pyramids?	Sudan	Egypt	Mexico	Peru
@@ -64,6 +86,19 @@ geo_country_world_longest	Hard	In which country does one of the world's longest 
 geo_country_africa_largest	Hard	Which country has Africa's largest proven oil reserves?	Libya	Nigeria	Algeria	Angola
 geo_madagascar_ancestors_sailed	Hard	Many of Madagascar's ancestors sailed there some 1,500 years ago from which faraway region?	Southeast Asia	India	Arabia	South America
 geo_country_french_somaliland	Hard	Which country was called French Somaliland until 1967?	Djibouti	Somalia	Eritrea	Madagascar
+geo_country_bechuanaland_under	Hard	Which country was called Bechuanaland under British rule?	Botswana	Lesotho	Zambia	Malawi
+geo_country_french_sudan	Hard	Which country was called French Sudan before 1960?	Mali	Chad	Niger	Senegal
+geo_country_nicknamed_africa	Hard	Which country is nicknamed 'Africa in miniature' for its huge variety of landscapes?	Cameroon	Kenya	Gabon	Tanzania
+geo_country_nicknamed_smiling	Hard	Which country is nicknamed 'the Smiling Coast of Africa'?	The Gambia	Ghana	Senegal	Togo
+geo_old_slave_coast	Hard	The old 'Slave Coast' stretched along the shores of Togo, Benin and which other country?	Nigeria	Ghana	Cameroon	Liberia
+geo_ogaden_fought_over	Hard	The Ogaden, fought over in a war with Somalia in 1977-1978, belongs to which country?	Ethiopia	Kenya	Djibouti	Eritrea
+geo_casamance_region_almost	Hard	Casamance, a region almost cut off by The Gambia, belongs to which country?	Senegal	Guinea	Mali	Guinea-Bissau
+geo_kabylie_mountainous_homeland	Hard	Kabylie, the mountainous homeland of many Berbers, is a region of which country?	Algeria	Morocco	Tunisia	Libya
+geo_morocco_english_comes	Hard	Morocco's English name comes from which of its cities?	Marrakesh	Fez	Casablanca	Rabat
+geo_ethiopia_comes_greek	Hard	Ethiopia's name comes from Greek words thought to mean what?	Burnt faces	Land of gold	High plateau	Coffee land
+geo_puntland_self_governing	Hard	Puntland, a self-governing state on the Horn of Africa, is officially part of which country?	Somalia	Ethiopia	Djibouti	Kenya
+geo_country_proudly_calls	Hard	Which country proudly calls itself 'Umm al-Dunya', the Mother of the World?	Egypt	Morocco	Ethiopia	Sudan
+geo_ancient_greeks_used	Hard	Ancient Greeks used which modern country's name for all of Africa they knew west of Egypt?	Libya	Tunisia	Morocco	Ethiopia
 geo_namibia_long_thin	Expert	Why does Namibia have the long, thin Caprivi Strip in its north-east?	Germany wanted a route to the Zambezi	Britain gave it as a war prize	It follows an old caravan road	It was a royal hunting ground
 geo_near_kazungula_borders	Expert	Near Kazungula, the borders of Zambia, Botswana and Zimbabwe almost meet at one point with which fourth country?	Namibia	Angola	Malawi	Mozambique
 geo_country_highest_lowest	Expert	Which country has the highest 'lowest point' in the world, with all its land above 1,000 m?	Lesotho	Bhutan	Nepal	Andorra
@@ -73,3 +108,10 @@ geo_coined_nigeria_1897	Expert	Who coined the name 'Nigeria', in 1897?	A British
 geo_1995_former_portuguese	Expert	In 1995, which former Portuguese colony became the first Commonwealth member never ruled by Britain?	Mozambique	Angola	Cape Verde	Guinea-Bissau
 geo_ilemi_triangle_patch	Expert	The Ilemi Triangle is a patch of land disputed between Kenya and which country?	South Sudan	Uganda	Somalia	Tanzania
 geo_roughly_long_defensive	Expert	Roughly how long is the defensive sand wall, the Berm, that cuts across Western Sahara?	About 2,700 km	About 270 km	About 27 km	About 9,000 km
+geo_country_french_colony	Expert	Which country was the French colony of Ubangi-Shari?	Central African Republic	Chad	Republic of the Congo	Gabon
+geo_country_shore_traders	Expert	Which country's shore was known to traders as the 'Pepper Coast' or 'Grain Coast'?	Liberia	Ghana	Nigeria	Benin
+geo_cyrenaica_historic_eastern	Expert	Cyrenaica, the historic eastern region around Benghazi, belongs to which country?	Libya	Egypt	Tunisia	Sudan
+geo_azawad_declared_independent	Expert	Azawad, declared independent by Tuareg rebels in 2012, lies in which country?	Mali	Niger	Algeria	Chad
+geo_gabon_comes_portuguese	Expert	Gabon's name comes from a Portuguese word for what, after the shape of an estuary?	A hooded cloak	A fishing hook	A ship's sail	A lion's mane
+geo_oil_rich_bakassi	Expert	The oil-rich Bakassi Peninsula, handed over by Nigeria in 2008, belongs to which country?	Cameroon	Benin	Equatorial Guinea	Gabon
+geo_rodrigues_autonomous_island	Expert	Rodrigues, an autonomous island far out in the Indian Ocean, belongs to which country?	Mauritius	Madagascar	Seychelles	Comoros

@@ -13,6 +13,12 @@ geo_inner_mongolia_region	Easy	Inner Mongolia is a region of which country?	Chin
 geo_large_island_sakhalin	Easy	The large island of Sakhalin, just north of Japan, belongs to which country?	Russia	Japan	China	North Korea
 geo_country_constitution_gives	Easy	Which country's constitution gives it a second official name, 'Bharat'?	India	Nepal	Sri Lanka	Bangladesh
 geo_country_traditionally_land	Easy	Which country is traditionally called 'the Land of the Morning Calm'?	Korea	Japan	China	Vietnam
+geo_region_china_nicknamed	Easy	Which region of China is nicknamed 'the Roof of the World'?	Tibet	Sichuan	Yunnan	Guangxi
+geo_asian_country_16th	Easy	Which Asian country is named after a 16th-century king of Spain?	The Philippines	Indonesia	Malaysia	Vietnam
+geo_country_dutch_colony	Easy	Which country was a Dutch colony known as the Dutch East Indies?	Indonesia	Malaysia	Sri Lanka	The Philippines
+geo_2023_country_overtook	Easy	In 2023, which country overtook China as the most populous in the world?	India	Indonesia	Pakistan	Nigeria
+geo_country_emperor_sits	Easy	Which country's emperor sits on the 'Chrysanthemum Throne'?	Japan	China	Korea	Vietnam
+geo_sherpa_people_everest	Easy	The Sherpa people, famous as Everest guides, mostly live in which country?	Nepal	Bhutan	Tibet	Mongolia
 wh_jedwabny_szlak	Medium	Which two regions did the Silk Road connect?	China and Europe	India and Africa	Persia and Scandinavia	Japan and America
 geo_syjam	Medium	Which country was known as Siam until 1939?	Thailand	Vietnam	Cambodia	Laos
 geo_tygrysy_indie	Medium	Which country is home to the most wild tigers?	India	Russia	Indonesia	Bangladesh
@@ -48,6 +54,17 @@ geo_arabian_country_sultanate	Medium	Which Arabian country is a sultanate?	Oman	
 geo_russian_region_lies	Medium	Which Russian region lies just across the Bering Strait from Alaska?	Chukotka	Kamchatka	Yakutia	Magadan
 geo_country_borneo_absolute	Medium	Which country on Borneo is an absolute monarchy ruled by a sultan?	Brunei	Malaysia	Indonesia	East Timor
 geo_roughly_people_per	Medium	Roughly how many people per square km live in Macau, one of the most crowded places on Earth?	About 20,000	About 200	About 2,000	About 200,000
+geo_country_nicknamed_land_3	Medium	Which country is nicknamed 'the Land of the Eternal Blue Sky'?	Mongolia	Kazakhstan	Bhutan	Nepal
+geo_medieval_europeans_like	Medium	Medieval Europeans, like Marco Polo, knew which country as 'Cathay'?	China	India	Japan	Persia
+geo_country_nowadays_often	Medium	Which country is nowadays often called 'the Hermit Kingdom'?	North Korea	Laos	Mongolia	Vietnam
+geo_island_country_nicknamed	Medium	Which island country is nicknamed 'the Pearl of the Indian Ocean'?	Sri Lanka	Madagascar	Mauritius	Indonesia
+geo_punjab_land_five	Medium	Punjab, 'the land of five rivers', is divided between India and which country?	Pakistan	Afghanistan	Nepal	Bangladesh
+geo_hejaz_region_red	Medium	Hejaz, the region on the Red Sea that includes Mecca and Medina, is part of which country?	Saudi Arabia	Yemen	Jordan	Oman
+geo_country_means_land	Medium	Which country's name also means 'land of the pure' in Urdu and Persian?	Pakistan	Afghanistan	Tajikistan	Kazakhstan
+geo_country_promotes_itself	Medium	Which country promotes itself to tourists as 'the Kingdom of Wonder'?	Cambodia	Thailand	Bhutan	Brunei
+geo_levant_old_lands	Medium	The 'Levant', an old name for the lands of the eastern Mediterranean, comes from a French word meaning what?	Rising	Coastal	Holy	Sandy
+geo_three_present_day	Medium	Which three present-day countries made up French Indochina?	Vietnam, Laos and Cambodia	Vietnam, Laos and Thailand	Vietnam, Cambodia and Myanmar	Laos, Cambodia and Thailand
+geo_mountainous_country_often	Medium	Which mountainous country is often nicknamed 'the Switzerland of Central Asia'?	Kyrgyzstan	Tajikistan	Kazakhstan	Uzbekistan
 geo_cejlon	Hard	Which country was called Ceylon until 1972?	Sri Lanka	Bangladesh	Myanmar	Malaysia
 geo_wrota_piekiel	Hard	In which country does the 'Door to Hell' gas crater keep burning?	Turkmenistan	Kazakhstan	Iran	Azerbaijan
 geox_bhutan	Hard	Which Himalayan kingdom measures its progress in 'Gross National Happiness'?	Bhutan	Nepal	Tibet	Sikkim
@@ -70,6 +87,17 @@ geo_china_largest_province	Hard	Which is China's largest province-level region b
 geo_indonesia_comes_greek	Hard	The name 'Indonesia' comes from Greek words meaning what?	Indian islands	Spice islands	Eastern islands	Island empire
 geo_country_narrow_chicken	Hard	Which country's narrow 'Chicken's Neck' corridor links its north-eastern states to the rest of the country?	India	Bangladesh	Myanmar	China
 geo_through_land_reclamation	Hard	Through land reclamation, roughly how much bigger has Singapore grown since 1965?	About a quarter	About 2%	About three times	About ten times
+geo_country_trucial_states	Hard	Which country was known as the Trucial States before 1971?	The UAE	Qatar	Bahrain	Kuwait
+geo_tonkin_annam_cochinchina	Hard	Tonkin, Annam and Cochinchina were the three parts of which present-day country?	Vietnam	Cambodia	Laos	Thailand
+geo_timor_leste_mixing	Hard	Timor-Leste's name, mixing Malay and Portuguese, literally means what?	East East	Sun Island	Far Coast	Dawn Land
+geo_colchis_land_golden	Hard	Colchis, the land of the Golden Fleece in Greek myth, lay in which modern country?	Georgia	Armenia	Turkey	Azerbaijan
+geo_indian_state_madras	Hard	Which Indian state was known as Madras State until 1969?	Tamil Nadu	Kerala	Karnataka	Andhra Pradesh
+geo_populous_state_india	Hard	Which is the most populous state of India?	Uttar Pradesh	Maharashtra	Rajasthan	West Bengal
+geo_balochistan_vast_thinly	Hard	Balochistan, a vast and thinly peopled region, is the largest province of which country?	Pakistan	Iran	Afghanistan	Turkmenistan
+geo_small_country_brunei	Hard	The small country of Brunei is split into two separate pieces by a strip of which country?	Malaysia	Indonesia	Singapore	The Philippines
+geo_communist_state_ever	Hard	Which was the only communist state ever in the Arab world?	South Yemen	Syria	Iraq	Libya
+geo_vietnam_roughly_means	Hard	The name 'Vietnam' roughly means what?	The Viet of the south	Land of rice paddies	The golden peninsula	Land of the dragon
+geo_according_popular_explanation	Hard	According to a popular explanation, the name 'Kyrgyz' comes from words meaning what?	Forty tribes	Mountain people	Free riders	Sky dwellers
 geo2_linia_wallace	Expert	What does the Wallace Line separate?	Asian fauna from Australian fauna	Pacific time zones	African tectonic plates	Humid climate from dry climate
 geo_russian_republic_largest	Expert	Which Russian republic is the largest country subdivision in the world, bigger than Argentina?	Sakha (Yakutia)	Komi	Buryatia	Tuva
 geo_enclave_riddled_fergana	Expert	The enclave-riddled Fergana Valley is shared by Uzbekistan, Kyrgyzstan and which other country?	Tajikistan	Kazakhstan	Turkmenistan	Afghanistan
@@ -79,3 +107,11 @@ geo_pakistan_coined_1933	Expert	The name 'Pakistan', coined in 1933, was partly 
 geo_until_2015_land	Expert	Until a 2015 land swap, the world's only enclave inside an enclave inside an enclave lay on the border of India and which country?	Bangladesh	Nepal	Pakistan	Bhutan
 geo_japanese_prefecture_switched	Expert	Which Japanese prefecture switched from driving on the right to the left in 1978?	Okinawa	Hokkaido	Nagasaki	Kagoshima
 geo_musandam_peninsula_overlooking	Expert	The Musandam Peninsula, overlooking the Strait of Hormuz, is an exclave of which country?	Oman	The UAE	Iran	Qatar
+geo_country_calls_itself_5	Expert	Which country calls itself 'Hayastan'?	Armenia	Azerbaijan	Georgia	Kazakhstan
+geo_arunachal_pradesh_china	Expert	Arunachal Pradesh, which China claims as 'South Tibet', belongs to which country?	India	Bhutan	Nepal	Myanmar
+geo_gorno_badakhshan_high	Expert	Gorno-Badakhshan, a high autonomous region in the Pamirs, belongs to which country?	Tajikistan	Afghanistan	Kyrgyzstan	Pakistan
+geo_karakalpakstan_autonomous_republic	Expert	Karakalpakstan, an autonomous republic by the dried-up Aral Sea, belongs to which country?	Uzbekistan	Kazakhstan	Turkmenistan	Kyrgyzstan
+geo_hatay_province_syria	Expert	Hatay, a province Syria long claimed as its own, was taken over in 1939 by which country?	Turkey	Lebanon	Iraq	Jordan
+geo_old_kingdom_mustang	Expert	The old Kingdom of Mustang, whose king lost his title in 2008, lies in which country?	Nepal	Bhutan	India	China
+geo_roughly_share_uae	Expert	Roughly what share of the UAE's land area does the emirate of Abu Dhabi cover?	About 85%	About 40%	About 20%	About 60%
+geo_gilgit_baltistan_home	Expert	Gilgit-Baltistan, home to K2 and the Karakoram Highway, is administered by which country?	Pakistan	India	China	Afghanistan

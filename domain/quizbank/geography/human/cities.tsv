@@ -45,6 +45,7 @@ geo_city_harbour_bridge	Easy	Which city's harbour bridge is nicknamed 'the Coath
 geo_scottish_city_hosts	Easy	Which Scottish city hosts the Fringe, the world's largest arts festival, every August?	Edinburgh	Glasgow	Aberdeen	Inverness
 geo_canada_largest_mainly	Easy	Which is Canada's largest mainly French-speaking city?	Montreal	Quebec City	Ottawa	Toronto
 geo_city_populous_european	Easy	Which city is the most populous in the European Union?	Berlin	Paris	Madrid	Rome
+geo_italian_city_home	Easy	Which Italian city is home to the most famous leaning tower in the world?	Pisa	Bologna	Venice	Florence
 wh_angkor_wat	Medium	In which country is the Angkor Wat temple complex located?	Cambodia	Thailand	Vietnam	India
 geocmp_miasto_azja	Medium	Which of these urban areas is the most populous?	Delhi	Bangkok	Seoul	Istanbul
 geocmp_najdalej_polnoc_nordyckie	Medium	Which of these cities lies furthest north?	Helsinki	Oslo	Stockholm	Copenhagen
@@ -130,6 +131,9 @@ geo_largest_city_pakistan	Medium	Which is the largest city in Pakistan?	Karachi	
 geo_largest_city_nigeria	Medium	Which is the largest city in Nigeria?	Lagos	Kano	Abuja	Ibadan
 geo_largest_city_south	Medium	Which is the largest city in South Africa?	Johannesburg	Cape Town	Durban	Pretoria
 geo_highest_capital_city	Medium	Which is the highest capital city in Europe?	Andorra la Vella	Madrid	Bern	Vaduz
+geo_zocalo_largest_public	Medium	The Zocalo, one of the largest public squares in the world, is the heart of which city?	Mexico City	Madrid	Buenos Aires	Lima
+geo_jazz_bars_wrought	Medium	Jazz bars and wrought-iron balconies fill the French Quarter of which US city?	New Orleans	Montreal	Quebec City	St. Louis
+geo_pike_place_market	Medium	Pike Place Market, where fishmongers famously throw salmon to each other, is in which city?	Seattle	Boston	San Francisco	Vancouver
 wh_timbuktu	Hard	In which country is the historic city of Timbuktu?	Mali	Niger	Chad	Mauritania
 geocmp_najdalej_poludnie	Hard	Which of these cities lies furthest south?	Auckland	Sydney	Cape Town	Buenos Aires
 geocmp_stolica_najdalej_poludnie	Hard	Which of these capitals lies furthest south?	Wellington	Canberra	Santiago	Pretoria
@@ -159,6 +163,12 @@ geo_country_giant_roman	Hard	In which country are the giant Roman temples of Baa
 geo_country_tiger_nest	Hard	In which country is the Tiger's Nest monastery, clinging to a cliff face?	Bhutan	Nepal	India	Myanmar
 geo_largest_city_kazakhstan	Hard	Which is the largest city in Kazakhstan?	Almaty	Astana	Shymkent	Karaganda
 geo_northernmost_capital_sovereign	Hard	Which is the northernmost capital of a sovereign country?	Reykjavik	Oslo	Helsinki	Nuuk
+geo_city_huge_mirrored	Hard	Which city's huge mirrored sculpture 'Cloud Gate' is better known as 'the Bean'?	Chicago	Toronto	Houston	Minneapolis
+geo_juliet_balcony_visited	Hard	'Juliet's balcony', visited by thousands of romantic tourists, was actually added to a house in the 1930s in which city?	Verona	Padua	Mantua	Vicenza
+geo_registan_square_framed	Hard	The Registan, a square framed by three tiled madrasas, is the centrepiece of which city?	Samarkand	Bukhara	Isfahan	Herat
+geo_castle_like_chateau	Hard	The castle-like Chateau Frontenac hotel towers over which Canadian city?	Quebec City	Montreal	Ottawa	Halifax
+geo_boca_district_brightly	Hard	La Boca, a district of brightly painted tin houses, belongs to which city?	Buenos Aires	Montevideo	Valparaiso	Havana
+geo_santiago_calatrava_futuristic	Hard	Santiago Calatrava's futuristic City of Arts and Sciences is a landmark of which Spanish city?	Valencia	Seville	Bilbao	Malaga
 geocmp_najwyzej_polozona_stolica	Expert	Which of these is the highest-lying capital city?	La Paz	Quito	Bogota	Mexico City
 geo_baku	Expert	Which national capital lies below sea level?	Baku	Cairo	Tehran	Tashkent
 geo_israeli_city_white	Expert	Which Israeli city is called 'the White City' for its thousands of Bauhaus buildings?	Tel Aviv	Haifa	Eilat	Jerusalem
@@ -171,3 +181,7 @@ geo_siberian_city_built	Expert	Which Siberian city, built by Gulag prisoners, is
 geo_rinconada_gold_mining	Expert	La Rinconada, a gold-mining town over 5,000 m up and often called the world's highest, is in which country?	Peru	Bolivia	Nepal	Chile
 geo_bridge_set_new	Expert	The bridge that set a new record for the longest suspension span in 2022 crosses which strait?	The Dardanelles	The Bosphorus	The Strait of Messina	The Akashi Strait
 geo_country_ruins_leptis	Expert	In which country are the ruins of Leptis Magna, one of the best-preserved Roman cities?	Libya	Tunisia	Algeria	Morocco
+geo_kowloon_walled_city	Expert	Kowloon Walled City, once the most crowded place on Earth, was demolished in the 1990s in which city?	Hong Kong	Macau	Singapore	Taipei
+geo_hallgrimskirkja_church_designed	Expert	Hallgrimskirkja, a church designed to look like columns of basalt lava, towers over which city?	Reykjavik	Oslo	Torshavn	Bergen
+geo_state_capital_started	Expert	Which US state capital started life as a settlement called 'Pig's Eye', after a one-eyed tavern keeper?	Saint Paul	Sacramento	Madison	Des Moines
+geo_sobrino_botin_listed	Expert	Sobrino de Botin, listed as the world's oldest restaurant still running, has been serving since 1725 in which city?	Madrid	Paris	Vienna	Lisbon

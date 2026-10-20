@@ -20,6 +20,7 @@ geo_egypt_beach_resorts	Easy	Egypt's beach resorts of Sharm el-Sheikh and Hurgha
 geo_sea_lies_between_3	Easy	Which sea lies between Korea and Japan?	The Sea of Japan	The Yellow Sea	The East China Sea	The Sea of Okhotsk
 geo_body_water_french	Easy	Which body of water do the French call 'La Manche', meaning 'the sleeve'?	The English Channel	The Bay of Biscay	The North Sea	The Strait of Dover
 geo_deepest_world_oceans	Easy	Which is the deepest of the world's oceans on average?	The Pacific	The Atlantic	The Indian Ocean	The Arctic Ocean
+geo_glamorous_resorts_cannes	Easy	The glamorous resorts of Cannes, Nice and Monaco all face which sea?	The Mediterranean	The Adriatic	The Atlantic	The Aegean
 geo2_kanal_sueski	Medium	Which seas does the Suez Canal connect?	The Mediterranean with the Red Sea	The Baltic with the North Sea	The Black Sea with the Aegean	The Pacific with the Atlantic
 geo2_kanal_panamski	Medium	Which oceans does the Panama Canal connect?	The Atlantic with the Pacific	The Pacific with the Indian Ocean	The Atlantic with the Arctic	The Indian with the Southern Ocean
 geo2_ciesnina_bering	Medium	What does the Bering Strait separate?	Asia from North America	Europe from Africa	Australia from Asia	Greenland from Canada
@@ -65,6 +66,9 @@ geo_great_pacific_garbage	Medium	The Great Pacific Garbage Patch floats roughly 
 geo_sea_lies_off	Medium	Which sea lies off the west coast of Thailand and Myanmar?	The Andaman Sea	The Gulf of Thailand	The South China Sea	The Java Sea
 geo_roughly_wide_sea	Medium	Roughly how wide is the sea gap between Spain and Morocco at its narrowest?	About 14 km	About 3 km	About 45 km	About 120 km
 geo_roughly_share_world_3	Medium	Roughly what share of the world's water is salty sea water?	About 97%	About 70%	About 50%	About 85%
+geo_sea_marmara_unusual	Medium	The Sea of Marmara is unusual because it lies entirely within one country. Which?	Turkey	Greece	Bulgaria	Cyprus
+geo_florida_keys_curve	Medium	The Florida Keys curve out between the Atlantic and which body of water?	The Gulf of Mexico	The Caribbean Sea	The Sargasso Sea	The Bay of Campeche
+geo_arm_baltic_sea	Medium	Which arm of the Baltic Sea separates Sweden from Finland?	The Gulf of Bothnia	The Gulf of Riga	The Kattegat	The Skagerrak
 geo3_prad_golfsztrom	Hard	What is the warm ocean current warming Western Europe called?	The Gulf Stream	The Humboldt Current	The Labrador Current	The California Current
 trv_sargassowe	Hard	Which sea has no coastline at all, being bounded only by ocean currents?	The Sargasso Sea	The Caspian Sea	The Coral Sea	The Tasman Sea
 lmk_bosfor_laczy	Hard	Which strait connects the Black Sea with the Sea of Marmara?	The Bosphorus	The Dardanelles	The Strait of Kerch	The Strait of Otranto
@@ -87,6 +91,13 @@ geo_bottom_mariana_trench	Hard	At the bottom of the Mariana Trench, water pressu
 geo_moskstraumen_whirlpool_behind	Hard	The Moskstraumen, the whirlpool behind the word 'maelstrom', swirls off which country?	Norway	Scotland	Iceland	Japan
 geo_according_legend_sea	Hard	According to legend, the sea monsters Scylla and Charybdis guarded which strait?	The Strait of Messina	The Bosphorus	The Strait of Gibraltar	The Dardanelles
 geo_roughly_ocean_floor	Hard	Roughly how much of the ocean floor has been mapped in high detail?	About a quarter	Nearly all of it	About three quarters	Under 1%
+geo_large_shallow_gulf	Hard	Which large, shallow gulf bites deep into the north coast of Australia?	The Gulf of Carpentaria	Spencer Gulf	The Joseph Bonaparte Gulf	The Great Australian Bight
+geo_shallow_strait_between	Hard	Which shallow strait between India and Sri Lanka is edged by Rama's Bridge, a chain of shoals that legend says a monkey army built?	The Palk Strait	The Lombok Strait	The Sunda Strait	The Strait of Malacca
+geo_strait_separating_tasmania	Hard	Which strait, separating Tasmania from mainland Australia, is named after a ship's surgeon?	Bass Strait	Torres Strait	Cook Strait	Foveaux Strait
+geo_strait_otranto_mouth	Hard	The Strait of Otranto, the mouth of the Adriatic, separates Italy from which country?	Albania	Greece	Croatia	Montenegro
+geo_russia_built_long	Hard	Russia built a long road and rail bridge to Crimea across which strait?	The Kerch Strait	The Bosphorus	The Dardanelles	The Strait of Otranto
+geo_strait_scattered_small	Hard	Which strait, scattered with small islands, separates Australia from New Guinea?	Torres Strait	Bass Strait	Makassar Strait	Lombok Strait
+geo_deep_ocean_trench	Hard	Which deep ocean trench runs along the Pacific coast of South America?	The Atacama Trench	The Java Trench	The Kermadec Trench	The Cayman Trench
 geo_row_marianski	Expert	What is the deepest point in the oceans called?	Challenger Deep	Tonga Trench	Java Trench	Milwaukee Deep
 geo_grzbiet_srodoceaniczny	Expert	Which is the longest mountain range on Earth?	The mid-ocean ridge	The Andes	The Himalayas	The Rocky Mountains
 geo_atlantyk_slony	Expert	Which ocean is the saltiest?	The Atlantic	The Pacific	The Indian Ocean	The Arctic Ocean
@@ -99,3 +110,6 @@ geo_sea_russian_port	Expert	On which sea does the Russian port of Arkhangelsk st
 geo_roughly_wide_bosphorus	Expert	Roughly how wide is the Bosphorus at its narrowest?	About 700 m	About 7 km	About 70 m	About 25 km
 geo_roughly_high_locks	Expert	Roughly how high do the locks of the Panama Canal lift ships above sea level?	About 26 m	About 3 m	About 100 m	About 250 m
 geo_roughly_deep_deepest	Expert	Roughly how deep is the deepest point of the Indian Ocean, in the Java Trench?	About 7 km	About 2 km	About 11 km	About 4 km
+geo_deep_sea_hot	Expert	Deep-sea hot springs teeming with life were first discovered in 1977 near which islands?	The Galapagos	The Azores	The Canaries	The Seychelles
+geo_roughly_long_global	Expert	Roughly how long does the 'global conveyor belt' of deep ocean currents take to carry water around the world?	About 1,000 years	About 10 years	About 100 years	About 50,000 years
+geo_atlantic_water_pour	Expert	Why does Atlantic water pour constantly into the Mediterranean at Gibraltar?	Evaporation drains the sea faster than rivers fill it	The Atlantic's tides are far higher than its own	Strong winds blow from the west all year round	Its sea floor is slowly sinking into the crust

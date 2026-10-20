@@ -9,6 +9,15 @@ geo_sami_people_lapland	Easy	The Sami people of Lapland traditionally herd which
 geo_standing_exactly_south	Easy	Standing exactly on the South Pole, which way are you facing, whichever way you turn?	North	South	East	West
 geo_north_pole_roughly	Easy	At the North Pole, roughly how long does the Sun stay below the horizon each winter?	About six months	About one month	About two weeks	About ten months
 geo_svalbard_arctic_archipelago	Easy	Svalbard, an Arctic archipelago famous for polar bears, belongs to which country?	Norway	Denmark	Russia	Iceland
+geo_never_see_polar	Easy	Why will you never see a polar bear hunting penguins in the wild?	They live at opposite poles	Penguins are too fast on ice	Polar bears only eat fish	Penguins hide in burrows
+geo_roughly_iceberg_lies	Easy	Roughly how much of an iceberg lies hidden below the waterline?	About 90%	About half	About a quarter	About 10%
+geo_months_summer_antarctica	Easy	In which months is it summer in Antarctica?	December to February	June to August	March to May	September to November
+geo_country_territory_inside	Easy	Which country has the most territory inside the Arctic Circle?	Russia	Canada	The USA	Norway
+geo_long_winter_period	Easy	What is the long winter period called when the Sun never rises in the far north?	The polar night	The white nights	The blue hour	The dark solstice
+geo_state_reaches_north	Easy	Which US state reaches north of the Arctic Circle?	Alaska	Maine	Washington	Montana
+geo_antarctica_mean	Easy	What does the name 'Antarctica' mean?	Opposite the Arctic	Land of eternal ice	The great south land	Land beyond the sea
+geo_air_bubbles_trapped	Easy	Air bubbles trapped in which Antarctic samples show what Earth's air was like 800,000 years ago?	Ice cores	Fossil penguin eggs	Meteorites	Frozen lake mud
+geo_inuit_hunters_traditionally	Easy	Inuit hunters traditionally waited beside breathing holes in the sea ice to catch which animals?	Seals	Walruses	Polar bears	Narwhals
 trv_pustynia_zimna	Medium	Counting cold deserts, which is the largest desert on Earth?	Antarctica	The Sahara	The Gobi	The Arabian Desert
 wld_najwieksza_wyspa	Medium	What is the largest island in the world (not counting Australia)?	Greenland	New Guinea	Borneo	Madagascar
 geox_ocean_najmniejszy	Medium	Which is the smallest of the world's oceans?	The Arctic Ocean	The Indian Ocean	The Southern Ocean	The Atlantic Ocean
@@ -29,6 +38,27 @@ geo_largest_city_north	Medium	Which is the largest city north of the Arctic Circ
 geo_antarctica_highest_average	Medium	Antarctica has the highest average what of any continent?	Elevation	Rainfall	Humidity	Temperature
 geo_iceberg_sank_titanic	Medium	The iceberg that sank the Titanic most likely broke off a glacier in which land?	Greenland	Iceland	Svalbard	Labrador
 geo_greenland_people_usually	Medium	In Greenland, how do people usually get from one town to another?	By plane, helicopter or boat	On the coastal highway	On the Greenland railway	By car across the ice
+geo_roughly_antarctica_covered	Medium	Roughly how much of Antarctica is covered by ice?	About 98%	About 50%	About 30%	About 10%
+geo_roughly_big_antarctica	Medium	Roughly how big is Antarctica compared with Australia?	Almost twice as big	About the same size	About half as big	About ten times bigger
+geo_roughly_people_live_3	Medium	Roughly how many people live in Greenland?	About 56,000	About 560,000	About 5,000	About 2 million
+geo_roughly_greenland_covered	Medium	Roughly how much of Greenland is covered by ice?	About 80%	About 40%	About 20%	About 5%
+geo_roughly_times_bigger	Medium	Roughly how many times bigger than Denmark is Greenland?	About 50 times	About 5 times	About 15 times	About 500 times
+geo_1959_antarctic_treaty	Medium	The 1959 Antarctic Treaty set the whole continent aside for what?	Peace and science	Whaling and fishing	Shared mining	UN military bases
+geo_outside_settlements_people	Medium	Outside its settlements, why do people on Svalbard usually carry a rifle?	In case of polar bears	To hunt reindeer	To signal for help	To scare off walruses
+geo_northern_sea_route	Medium	The Northern Sea Route, a shortcut between Europe and Asia, runs along which country's Arctic coast?	Russia	Canada	Norway	The USA
+geo_roughly_long_scott	Medium	Roughly how long before Scott's team did Amundsen's reach the South Pole?	About five weeks	About five days	About five months	About a year
+geo_every_winter_swedish	Medium	Every winter, the Swedish village of Jukkasjarvi rebuilds a famous hotel out of what?	Ice from the river	Reindeer hides	Driftwood logs	Salt blocks
+geo_swedish_arctic_town	Medium	The Swedish Arctic town of Kiruna is being moved a few kilometres east. Why?	Its iron mine is undermining it	Its permafrost is thawing	A new dam will flood it	Reindeer herds must pass
+geo_northwest_passage_threads	Medium	The Northwest Passage threads through the Arctic islands of which country?	Canada	Russia	Norway	Denmark
+geo_roughly_cold_typical	Medium	Roughly how cold is a typical winter month at the South Pole?	About -60 C	About -25 C	About -10 C	About -100 C
+geo_antarctica_dry_valleys	Medium	Antarctica's Dry Valleys, almost free of ice and snow, are used by NASA as a stand-in for which world?	Mars	Venus	Mercury	The Moon
+geo_all_antarctica_ice	Medium	If all of Antarctica's ice melted, roughly how much would sea level rise?	About 60 m	About 6 m	About 20 m	About 200 m
+geo_since_1979_roughly	Medium	Since 1979, roughly how fast has the Arctic warmed compared with the world as a whole?	About four times as fast	About the same rate	About ten times as fast	Half as fast
+geo_under_1920_svalbard	Medium	Under the 1920 Svalbard Treaty, citizens of any signatory country may do what there?	Live and work without a visa	Hunt polar bears freely	Mine without paying tax	Vote in Norway's elections
+geo_1961_soviet_doctor	Medium	In 1961, a Soviet doctor stranded at an Antarctic base had to cut out what from himself?	His appendix	A frostbitten toe	A rotten tooth	A gallstone
+geo_month_arctic_sea	Medium	In which month does Arctic sea ice usually shrink to its smallest?	September	June	December	March
+geo_tourist_cruises_antarctica	Medium	Most tourist cruises to Antarctica set sail from which port?	Ushuaia	Cape Town	Hobart	Christchurch
+geo_nenets_reindeer_herders	Medium	The Nenets, reindeer herders of the Yamal Peninsula, live in which country?	Russia	Finland	Norway	Canada
 geox_antarktyda_mroz	Hard	Where was the lowest natural temperature on Earth recorded?	Antarctica	Siberia	Greenland	Alaska
 geo_countries_official_territorial	Hard	How many countries have official territorial claims in Antarctica?	Seven	Three	Twelve	Twenty
 geo_three_countries_overlapping	Hard	Which three countries have overlapping claims to the Antarctic Peninsula?	Britain, Argentina and Chile	Norway, Chile and Argentina	Britain, Norway and France	Australia, Chile and Britain
@@ -41,6 +71,23 @@ geo_countries_territory_north	Hard	How many countries have territory north of th
 geo_1991_madrid_protocol	Hard	The 1991 Madrid Protocol to the Antarctic Treaty bans what in Antarctica?	Mining	Tourism	Fishing	Flights
 geo_recent_decades_north	Hard	In recent decades, the north magnetic pole has been drifting quickly toward which region?	Siberia	Alaska	Greenland	Scandinavia
 geo_ross_ice_shelf	Hard	The Ross Ice Shelf, the largest in Antarctica, is roughly the size of which country?	France	Belgium	Brazil	Ireland
+geo_arctic_archipelago_franz	Hard	The Arctic archipelago of Franz Josef Land, named after an Austrian emperor, belongs to which country?	Russia	Norway	Austria	Denmark
+geo_1910_norwegian_explorer	Hard	In 1910, a Norwegian explorer bound for the North Pole secretly turned south instead. Why?	Others claimed to have reached it	His ship could not break the ice	Norway's king ordered it	He lost most of his dogs
+geo_utqiagvik_northernmost_town	Hard	Utqiagvik, the northernmost town in the USA, goes without a sunrise for roughly how long each winter?	About two months	About two weeks	About six months	About four days
+geo_barentsburg_coal_mining	Hard	Barentsburg, a coal-mining settlement on Norway's Svalbard, is run by which country?	Russia	Sweden	Poland	Finland
+geo_pituffik_space_base	Hard	Pituffik Space Base in Greenland, formerly Thule Air Base, is the northernmost base of which country's military?	The USA	Denmark	Canada	Norway
+geo_inukshuk_stone_figure	Hard	An inukshuk, a stone figure built by the Inuit, was the emblem of which Olympic Games?	Vancouver 2010	Calgary 1988	Lillehammer 1994	Sochi 2014
+geo_arctic_city_norway	Hard	Which Arctic city in Norway is nicknamed 'the Paris of the North'?	Tromso	Hammerfest	Bodo	Kirkenes
+geo_greenland_own_itself	Hard	What does Greenland's own name for itself, Kalaallit Nunaat, mean?	Land of the people	Land of the ice	Green land	Land of the whale
+geo_country_claims_largest	Hard	Which country claims the largest slice of Antarctica, about 42%?	Australia	Norway	Argentina	Britain
+geo_villa_las_estrellas	Hard	Villa Las Estrellas, one of the few Antarctic settlements with families and a school, is run by which country?	Chile	Argentina	Norway	Australia
+geo_new_marker_placed	Hard	Why is a new marker placed at the geographic South Pole every year?	The ice moves it about 10 m a year	Souvenir hunters keep taking it	Each winter's snow buries it	Treaty members take turns
+geo_norge_craft_arrival	Hard	What was the 'Norge', the first craft whose arrival over the North Pole, in 1926, is undisputed?	An airship	A seaplane	A submarine	An icebreaker
+geo_roughly_russia_territory	Hard	Roughly how much of Russia's territory lies on permafrost?	About two-thirds	About a tenth	About a quarter	About 5%
+geo_roughly_thick_ice	Hard	Roughly how thick is the ice at the South Pole?	About 2.7 km	About 300 m	About 30 m	About 10 km
+geo_antarctica_ross_dependency	Hard	Antarctica's Ross Dependency is claimed by which country?	New Zealand	Britain	Australia	The USA
+geo_jan_mayen_volcanic	Hard	Jan Mayen, a volcanic Arctic island with no permanent residents, belongs to which country?	Norway	Iceland	Denmark	Britain
+geo_countries_signed_antarctic	Hard	How many countries first signed the Antarctic Treaty in 1959?	Twelve	Seven	Twenty-five	Fifty
 geo2_najwiekszy_ladolod	Expert	Where is the world's largest ice sheet?	Antarctica	Greenland	Alaska	The Himalayas
 ext_wyspa_grenlandia	Expert	Greenland's ice sheet is thick enough to have done what to the land beneath?	Pushed its centre below sea level	Raised it into a plateau	Split it into two islands	Left it perfectly flat
 geo_vinson	Expert	What is the highest mountain in Antarctica?	Vinson Massif	Mount Erebus	Mount Kirkpatrick	Mount Terror
@@ -50,3 +97,10 @@ geo_marie_byrd_land	Expert	Marie Byrd Land in West Antarctica is notable for bei
 geo_arctic_circle_crosses	Expert	The Arctic Circle crosses Iceland only on which small island?	Grimsey	Heimaey	Surtsey	Flatey
 geo_antarctica_pole_inaccessibility	Expert	At Antarctica's Pole of Inaccessibility, an abandoned Soviet station is still topped by a bust of whom?	Lenin	Stalin	Gagarin	Marx
 geo_antarctica_blood_falls	Expert	Why does Antarctica's Blood Falls run red?	Iron-rich water rusts in the air	Red algae bloom in its water	Volcanic sulphur stains it	Penguin droppings colour it
+geo_antarctica_largest_purely	Expert	Which is Antarctica's largest purely land-dwelling native animal?	A tiny wingless midge	The emperor penguin	The Weddell seal	The snow petrel
+geo_antarctica_internet_country	Expert	What is Antarctica's internet country code?	.aq	.an	.at	.ac
+geo_join_south_pole	Expert	To join the South Pole's '300 Club', you go from a 200 F sauna out into -100 F air wearing what?	Only boots	A full parka	A wetsuit	A swimsuit
+geo_because_earth_tilt	Expert	Because Earth's tilt slowly changes, what is the Arctic Circle doing at the moment?	Drifting north about 15 m a year	Drifting south about 15 m a year	Staying exactly in place	Drifting north about 1 km a year
+geo_largest_iceberg_ever	Expert	B-15, the largest iceberg ever measured, broke off in 2000. It was roughly the size of which country?	Jamaica	Iceland	Luxembourg	Ireland
+geo_denmark_elite_sirius	Expert	How does Denmark's elite Sirius Patrol guard remote north-east Greenland?	On dog sleds	On snowmobiles	In helicopters	In hovercraft
+geo_inuktitut_word_iglu	Expert	In Inuktitut, what does the word 'iglu' actually mean?	Any kind of house	Only a snow dome	A hunting camp	A frozen lake

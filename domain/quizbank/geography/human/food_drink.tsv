@@ -33,6 +33,7 @@ geo_cheddar_cheese_village	Easy	Cheddar cheese is named after a village in which
 geo_matcha_powdered_green	Easy	Matcha, a powdered green tea, is at the heart of which country's tea ceremony?	Japan	China	India	Korea
 geo_vegemite_salty_black	Easy	Vegemite, a salty black yeast spread, is a national favourite of which country?	Australia	New Zealand	The United Kingdom	Canada
 geo_country_claims_invented	Easy	Which country claims to have invented 'French' fries?	Belgium	The Netherlands	Switzerland	Germany
+geo_gazpacho_cold_soup	Easy	Gazpacho, a cold soup of raw tomatoes and peppers, comes from which country?	Spain	Italy	Greece	Mexico
 geocmp_kawa_producent	Medium	Which country produces the most coffee?	Brazil	Colombia	Vietnam	Ethiopia
 day_najdrozsza_przyprawa	Medium	Which spice is the most expensive by weight?	Saffron	Vanilla	Cardamom	Black pepper
 geo_goulash_national_dish	Medium	Goulash is the national dish of which country?	Hungary	Austria	Czechia	Romania
@@ -77,6 +78,9 @@ geo_irn_bru_bright	Medium	Irn-Bru, a bright orange soft drink said to rival Coca
 geo_country_produces_sugar	Medium	Which country produces the most sugar cane?	Brazil	India	Cuba	China
 geo_sherry_takes_spanish	Medium	Sherry takes its name from which Spanish town?	Jerez	Seville	Malaga	Valencia
 geo_cognac_brandy_town	Medium	Cognac, a famous brandy, is named after a town in which country?	France	Spain	Italy	Portugal
+geo_kopi_luwak_world	Medium	Kopi luwak, one of the world's priciest coffees, is made from beans eaten and excreted by which animal?	A civet	A fruit bat	A wild boar	A porcupine
+geo_smorrebrod_open_sandwiches	Medium	Smorrebrod, open sandwiches piled on dark rye bread, are a lunchtime classic of which country?	Denmark	Germany	Finland	Russia
+geo_instant_noodles_invented	Medium	Instant noodles were invented in 1958 by Momofuku Ando in which country?	Japan	China	South Korea	Thailand
 geo_kawa_finlandia	Hard	Which country drinks the most coffee per person?	Finland	Italy	Brazil	The United States
 geo_czekolada_szwajcaria	Hard	Which country's people eat the most chocolate per person?	Switzerland	Belgium	The United States	France
 geo_kakao_wybrzeze	Hard	Which country produces the most cocoa beans?	Ivory Coast	Ghana	Brazil	Switzerland
@@ -96,6 +100,12 @@ geo_sriracha_hot_sauce	Hard	Sriracha hot sauce is named after a seaside town in 
 geo_hawaiian_pizza_topped	Hard	Hawaiian pizza, topped with ham and pineapple, was invented in which country?	Canada	The United States	Italy	Australia
 geo_croissant_said_descend	Hard	The croissant is said to descend from the 'kipferl', a pastry of which country?	Austria	Hungary	Turkey	Germany
 geo_fortune_cookies_served	Hard	Fortune cookies, served in Chinese restaurants, were actually popularised in which country?	The United States	China	Taiwan	Singapore
+geo_gives_earl_grey	Hard	What gives Earl Grey tea its distinctive flavour?	Oil of bergamot	Jasmine flowers	Smoked pine	Lavender oil
+geo_gin_descends_jenever	Hard	Gin descends from 'jenever', a juniper spirit from which country?	The Netherlands	England	Germany	Denmark
+geo_cocktail_created_long	Hard	Which cocktail was created in the Long Bar of a famous colonial hotel around 1915?	The Singapore Sling	The Mai Tai	The Pina Colada	The Cosmopolitan
+geo_bellini_prosecco_white	Hard	The Bellini, prosecco with white peach puree, was invented at Harry's Bar in which city?	Venice	Rome	Milan	Florence
+geo_small_fish_fermented	Hard	Which small fish is fermented to give Worcestershire sauce its savoury kick?	Anchovies	Sardines	Herring	Mackerel
+geo_country_drinks_tea	Hard	Which country drinks the most tea per person, mostly from small tulip-shaped glasses?	Turkey	The United Kingdom	Ireland	China
 geo_czekoladowe_wzgorza	Expert	In which country are the 'Chocolate Hills'?	The Philippines	Indonesia	Malaysia	Vietnam
 geo_surstromming_fermented_herring	Expert	Surstromming, fermented herring so smelly it is often opened outdoors, comes from which country?	Sweden	Norway	Finland	Denmark
 geo_casu_marzu_cheese	Expert	Casu marzu, a cheese containing live maggots, comes from which Italian island?	Sardinia	Sicily	Elba	Capri
@@ -104,3 +114,6 @@ geo_brunost_sweet_brown	Expert	Brunost, a sweet brown cheese made from whey, is 
 geo_law_may_genuine	Expert	By law, where may genuine Stilton cheese NOT be made?	In the village of Stilton	In Leicestershire	In Nottinghamshire	In Derbyshire
 geo_caesar_cocktail_like	Expert	The Caesar, a cocktail like a Bloody Mary made with clam juice, is the national drink of which country?	Canada	Mexico	The United States	Chile
 geo_baijiu_world_best	Expert	Baijiu, the world's best-selling type of spirit, comes from which country?	China	Japan	South Korea	Russia
+geo_country_bright_yellow	Expert	In which country did a bright yellow local soda, Inca Kola, famously outsell Coca-Cola?	Peru	Bolivia	Ecuador	Colombia
+geo_tempura_japanese_classic	Expert	Tempura, a Japanese classic, is thought to have been brought to Japan by missionaries and traders from which country?	Portugal	Spain	The Netherlands	China
+geo_hakarl_cured_shark	Expert	Hakarl, cured shark meat with a strong smell of ammonia, is a traditional food of which country?	Iceland	Norway	Finland	Scotland

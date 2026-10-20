@@ -18,6 +18,11 @@ geo_lake_geneva_shared	Easy	Lake Geneva is shared by Switzerland and which other
 geo_unusual_lake_hillier	Easy	What is unusual about Lake Hillier in Western Australia?	Its water is bright pink	Its water is nearly boiling	It is full of stingless jellyfish	It vanishes underground each winter
 geo_great_river_reaches	Easy	Which great river reaches the sea at Shanghai?	The Yangtze	The Yellow River	The Pearl River	The Mekong
 geo_ocean_siberia_great	Easy	Into which ocean do Siberia's great rivers, the Ob, Yenisei and Lena, flow?	The Arctic Ocean	The Pacific Ocean	The Indian Ocean	The Atlantic Ocean
+geo_river_flows_past	Easy	Which river flows past the great cathedral of Cologne?	The Rhine	The Elbe	The Danube	The Main
+geo_great_lakes_chicago	Easy	Which of the Great Lakes does Chicago stand on?	Lake Michigan	Lake Superior	Lake Erie	Lake Ontario
+geo_temples_luxor_karnak	Easy	The temples of Luxor and Karnak line the banks of which river?	The Nile	The Euphrates	The Tigris	The Jordan
+geo_river_flows_past_2	Easy	Which river flows past both Montreal and Quebec City?	The St. Lawrence	The Hudson	The Mackenzie	The Ottawa
+geo_country_turquoise_lake	Easy	In which country is the turquoise Lake Louise, a famous Rockies beauty spot?	Canada	The USA	Switzerland	New Zealand
 geo2_wodospad_wiktorii	Medium	Victoria Falls lies on the border of which two countries?	Zambia and Zimbabwe	Kenya and Tanzania	South Africa and Botswana	Uganda and Rwanda
 wh_mezopotamia_rzeki	Medium	Between which rivers did Mesopotamia lie?	The Euphrates and the Tigris	The Nile and the Jordan	The Indus and the Ganges	The Danube and the Rhine
 geocmp_najbardziej_slone	Medium	Which of these bodies of water is the saltiest?	The Dead Sea	The Red Sea	The Mediterranean Sea	The Baltic Sea
@@ -78,6 +83,8 @@ geo_city_blue_nile	Medium	In which city do the Blue Nile and the White Nile meet
 geo_reservoir_largest_united	Medium	Which reservoir, the largest in the United States, was created by the Hoover Dam?	Lake Mead	Lake Powell	Lake Havasu	Lake Tahoe
 geo_country_both_tigris	Medium	In which country do both the Tigris and the Euphrates rise?	Turkey	Iraq	Syria	Iran
 geo_roughly_world_fresh_2	Medium	Roughly how much of the world's fresh water is found in rivers and lakes?	Under 1%	About a quarter	About half	About 10%
+geo_river_meets_saone	Medium	Which river meets the Saone in the French city of Lyon?	The Rhone	The Loire	The Garonne	The Seine
+geo_crater_lake_deepest	Medium	Crater Lake, the deepest lake in the USA, fills a collapsed volcano in which state?	Oregon	Washington	Idaho	California
 geo_bajkal	Hard	Which lake is the deepest in the world?	Baikal	Tanganyika	Caspian Sea	Superior
 geo2_jezioro_powierzchnia	Hard	Which lake has the largest surface area in the world?	The Caspian Sea	Lake Superior	Lake Baikal	Lake Victoria
 geo2_najwyzszy_wodospad	Hard	Which waterfall is the highest in the world?	Angel Falls	Niagara Falls	Iguazu Falls	Victoria Falls
@@ -121,6 +128,9 @@ geo_1986_cameroon_lake	Hard	In 1986, Cameroon's Lake Nyos suddenly released a cl
 geo_west_african_river	Hard	Which West African river rises near the Atlantic coast but flows inland, away from the sea?	The Niger	The Senegal	The Volta	The Gambia
 geo_roughly_surface_caspian	Hard	Roughly where is the surface of the Caspian Sea, compared with sea level?	About 28 m below sea level	About 28 m above sea level	About 400 m below sea level	About 1,000 m above sea level
 geo_cano_cristales_river	Hard	Cano Cristales, a river that turns red, yellow and green, is in which country?	Colombia	Peru	Venezuela	Ecuador
+geo_river_flows_through_17	Hard	Which river flows through Seville, once Spain's gateway to the Americas?	The Guadalquivir	The Tagus	The Ebro	The Douro
+geo_river_flows_through_18	Hard	Which river flows through Porto, giving its name to the valley where port wine grows?	The Douro	The Tagus	The Minho	The Guadiana
+geo_central_american_lake	Hard	Which Central American lake is famous for bull sharks that swim up from the sea?	Lake Nicaragua	Lake Managua	Lake Atitlan	Lake Gatun
 geo_kraj_bez_rzek	Expert	Which of these countries has not a single permanent river?	Saudi Arabia	Mongolia	Kazakhstan	Iran
 geo_titicaca	Expert	Lake Titicaca lies on the border of which two countries?	Peru and Bolivia	Chile and Argentina	Ecuador and Colombia	Brazil and Paraguay
 geo2_kaldera_toba	Expert	Where is Lake Toba, formed by a giant caldera?	On Sumatra	On Java	In Japan	In New Zealand
@@ -137,3 +147,7 @@ geo_utah_great_salt	Expert	Utah's Great Salt Lake is a shrunken remnant of which
 geo_lake_source_mississippi	Expert	Which lake is the source of the Mississippi?	Lake Itasca	Lake Superior	Lake of the Woods	Lake Winnebago
 geo_chinese_river_world	Expert	Which Chinese river is famous for the world's biggest tidal bore, the 'Silver Dragon'?	The Qiantang	The Pearl River	The Huai	The Yellow River
 geo_largest_artificial_lake	Expert	Which is the largest artificial lake by surface area?	Lake Volta	Lake Kariba	Lake Nasser	Lake Mead
+geo_tibet_yarlung_tsangpo	Expert	Tibet's Yarlung Tsangpo becomes which great river after it enters India?	The Brahmaputra	The Ganges	The Indus	The Irrawaddy
+geo_lake_baikal_thousands	Expert	Lake Baikal, thousands of km from any ocean, is home to its own species of which sea animal?	Seal	Dolphin	Shark	Octopus
+geo_kaieteur_falls_powerful	Expert	Kaieteur Falls, one of the most powerful single-drop waterfalls on Earth, is in which country?	Guyana	Venezuela	Suriname	Brazil
+geo_longest_river_south	Expert	Which is the longest river in South Africa?	The Orange	The Limpopo	The Vaal	The Tugela

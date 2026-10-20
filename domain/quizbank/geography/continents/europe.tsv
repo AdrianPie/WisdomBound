@@ -20,6 +20,9 @@ geo_netherlands_literally_mean	Easy	What does the name 'Netherlands' literally m
 geo_european_country_official	Easy	Which European country's official name is 'the Hellenic Republic'?	Greece	Cyprus	Albania	Italy
 geo_balkan_country_means	Easy	Which Balkan country's name means 'Black Mountain'?	Montenegro	Albania	Serbia	Slovenia
 geo_european_country_divided	Easy	Which European country is divided into 26 cantons?	Switzerland	Austria	Belgium	Luxembourg
+geo_catalonia_held_disputed	Easy	Catalonia, which held a disputed independence vote in 2017, is a region of which country?	Spain	France	Italy	Portugal
+geo_country_own_irish	Easy	Which country's name in its own Irish language is 'Eire'?	Ireland	Scotland	Wales	Iceland
+geo_part_united_kingdom_3	Easy	Which part of the United Kingdom is nicknamed 'the Land of Song'?	Wales	Scotland	Northern Ireland	Cornwall
 geocmp_nie_nordyckie	Medium	Which of these countries is NOT a Nordic country?	Estonia	Norway	Sweden	Denmark
 trv_islandia_lodowce	Medium	Which country gets most of its electricity from geothermal and hydro power?	Iceland	Ireland	Belgium	Greece
 lmk_dolina_loary	Medium	In which country is the Loire Valley, famous for its chateaux?	France	Belgium	Switzerland	Spain
@@ -56,6 +59,16 @@ geo_declaring_independence_1917	Medium	Before declaring independence in 1917, Fi
 geo_region_forms_heel	Medium	Which region forms the 'heel' of the Italian boot?	Puglia	Calabria	Sicily	Campania
 geo_russian_region_baltic	Medium	Which Russian region on the Baltic is cut off from the rest of Russia, wedged between Poland and Lithuania?	Kaliningrad	Karelia	Pskov	Murmansk
 geo_roughly_share_netherlands	Medium	Roughly what share of the Netherlands' land was reclaimed from the sea or lakes?	About 17%	About 60%	About 2%	About 90%
+geo_smallest_country_european	Medium	Which is the smallest country in the European Union by area?	Malta	Luxembourg	Cyprus	Slovenia
+geo_belarus_literally_means	Medium	The name 'Belarus' literally means what?	White Rus	Black Earth	Free Land	Forest Land
+geo_country_vast_black	Medium	Which country, with its vast black-earth wheat fields, is nicknamed 'the breadbasket of Europe'?	Ukraine	Poland	Hungary	Romania
+geo_region_forms_toe	Medium	Which region forms the 'toe' of the Italian boot?	Calabria	Sicily	Campania	Basilicata
+geo_federal_states_lander	Medium	How many federal states, or Lander, make up Germany?	16	9	12	20
+geo_country_own_people_2	Medium	Which country do its own people call 'Hrvatska'?	Croatia	Slovakia	Slovenia	Serbia
+geo_long_president_swiss	Medium	How long does a President of the Swiss Confederation serve?	One year	Four years	Seven years	Six months
+geo_country_britons_fondly	Medium	Which country do Britons fondly call 'Old Blighty'?	Britain	Ireland	Australia	Canada
+geo_country_traditionally_isle	Medium	Which country is traditionally called 'the Isle of Saints and Scholars'?	Ireland	Iceland	Malta	Cyprus
+geo_tiny_country_led	Medium	Which tiny country is led by two 'Captains Regent' who serve only six months at a time?	San Marino	Andorra	Monaco	Liechtenstein
 geocmp_panstwo_ue_pow	Hard	Which is the largest European Union country by area?	France	Spain	Sweden	Germany
 trv_ukraina_europa	Hard	Which is the largest country lying entirely within Europe?	Ukraine	France	Spain	Germany
 geo_andorra_two_heads	Hard	Andorra has two heads of state: the Bishop of Urgell and who?	The President of France	The King of Spain	The Pope	The Prince of Monaco
@@ -73,6 +86,20 @@ geo_dutch_province_created	Hard	Which Dutch province, created in 1986, was built
 geo_croatia_adriatic_coast	Hard	Croatia's Adriatic coast is cut in two by a short stretch of coastline belonging to which country?	Bosnia and Herzegovina	Montenegro	Slovenia	Serbia
 geo_vatican_city_said	Hard	Vatican City is said to have the only cash machine offering instructions in which language?	Latin	Ancient Greek	Hebrew	Aramaic
 geo_tiny_liechtenstein_world	Hard	Tiny Liechtenstein is one of the world's biggest makers of what?	False teeth	Wristwatches	Pocket knives	Chocolate bars
+geo_english_wales_comes	Hard	The English name 'Wales' comes from an old Germanic word meaning what?	Foreigners	Hill folk	Westerners	Sea people
+geo_country_nicknamed_cockpit	Hard	Which country is nicknamed 'the Cockpit of Europe' because so many battles were fought on its soil?	Belgium	Poland	Luxembourg	Hungary
+geo_english_county_nicknamed	Hard	Which English county is nicknamed 'the Garden of England'?	Kent	Surrey	Devon	Sussex
+geo_saxon_switzerland_region	Hard	Saxon Switzerland, a region of sandstone towers and gorges, lies in which country?	Germany	Switzerland	Austria	Czechia
+geo_2014_people_english	Hard	In 2014, the people of which English county were officially recognised as a national minority?	Cornwall	Yorkshire	Cumbria	Northumberland
+geo_ukraine_usually_explained	Hard	The name 'Ukraine' is usually explained as meaning what?	Borderland	Wheatland	Steppeland	Riverland
+geo_founding_member_nato	Hard	Which founding member of NATO has no standing army of its own?	Iceland	Luxembourg	Norway	Denmark
+geo_heir_country_throne	Hard	The heir to which country's throne carries the title 'Prince of Asturias'?	Spain	Portugal	Belgium	Monaco
+geo_republika_srpska_two	Hard	Republika Srpska is one of the two main parts of which country?	Bosnia and Herzegovina	Serbia	Montenegro	North Macedonia
+geo_self_declared_turkish	Hard	The self-declared Turkish Republic of Northern Cyprus is recognised by which country alone?	Turkey	Russia	Greece	Azerbaijan
+geo_2007_country_soldiers	Hard	In 2007, which country's soldiers accidentally marched into Liechtenstein after getting lost at night?	Switzerland	Austria	Germany	Italy
+geo_balkans_comes_turkish	Hard	The name 'Balkans' comes from a Turkish word meaning what?	Mountains	Peninsula	Borderland	Valleys
+geo_freetown_christiania_self	Hard	Freetown Christiania, a self-governing commune founded by squatters in 1971, lies in which country's capital?	Denmark	Norway	Sweden	The Netherlands
+geo_roughly_share_monaco	Hard	Roughly what share of Monaco's residents are Monegasque citizens?	About a fifth	About half	About 80%	About 5%
 geo_llivia_small_town	Expert	Llivia, a small town completely surrounded by French territory, belongs to which country?	Spain	Andorra	Monaco	Italy
 geo_austrian_valley_kleinwalsertal	Expert	The Austrian valley of Kleinwalsertal can be reached by road only through which country?	Germany	Switzerland	Italy	Liechtenstein
 geo_pheasant_island_tiny	Expert	Pheasant Island, a tiny island in a border river, switches between which two countries every six months?	Spain and France	France and Italy	Spain and Portugal	Germany and Austria
@@ -80,3 +107,10 @@ geo_bonaire_sint_eustatius	Expert	Bonaire, Sint Eustatius and Saba in the Caribb
 geo_vojvodina_home_more	Expert	Vojvodina, home to more than 25 ethnic groups, is an autonomous province of which country?	Serbia	Hungary	Croatia	Romania
 geo_self_declared_principality	Expert	The self-declared 'Principality of Sealand', off the coast of England, sits on what?	A wartime sea fort	An oil rig	A sandbank	A sunken ship
 geo_country_calls_itself_2	Expert	Which country calls itself 'Magyarorszag'?	Hungary	Romania	Bulgaria	Slovakia
+geo_besides_region_spain	Expert	Besides the region in Spain, there is another historic Galicia, now split between which two countries?	Poland and Ukraine	Spain and Portugal	Hungary and Romania	Austria and Czechia
+geo_gagauzia_autonomous_region	Expert	Gagauzia, an autonomous region of Turkic-speaking Christians, is part of which country?	Moldova	Bulgaria	Romania	Ukraine
+geo_eupen_sankt_vith	Expert	Eupen and Sankt Vith, a German-speaking area handed over after World War I, now belong to which country?	Belgium	Denmark	Luxembourg	France
+geo_republic_uzupis_joke	Expert	The Republic of Uzupis, whose joke constitution says 'a dog has the right to be a dog', is part of which country's capital?	Lithuania	Latvia	Estonia	Slovenia
+geo_busingen_german_town	Expert	Busingen, a German town completely surrounded by Switzerland, mostly uses which currency?	The Swiss franc	The euro	The Deutsche Mark	The Austrian schilling
+geo_seborga_village_people	Expert	Seborga, a village whose people claim it is an independent principality, lies in which country?	Italy	France	Spain	Portugal
+geo_2008_channel_island	Expert	In 2008, the Channel Island of Sark became the last place in Europe to abolish what?	Feudalism	Witch trials	Slavery	Duelling

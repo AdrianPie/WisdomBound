@@ -15,6 +15,10 @@ geo_world_tropical_rainforests	Easy	Most of the world's tropical rainforests lie
 geo_national_park_granite	Easy	Which US national park is famous for the granite cliffs El Capitan and Half Dome?	Yosemite	Yellowstone	Zion	Grand Teton
 geo_animals_make_great	Easy	Which animals make up most of the Great Migration across the Serengeti?	Wildebeest	Elephants	Zebras	Buffalo
 geo_crop_main_reason	Easy	Which crop is the main reason rainforests are cleared in Indonesia and Malaysia?	Oil palm	Coffee	Rubber	Tea
+geo_forest_southern_england	Easy	Which forest in southern England, a royal hunting ground since William the Conqueror, is famous for its wild ponies?	The New Forest	Sherwood Forest	Epping Forest	The Forest of Dean
+geo_big_cat_top	Easy	Which big cat is the top predator of the Amazon rainforest?	The jaguar	The leopard	The cheetah	The tiger
+geo_desert_valley_red	Easy	Which desert valley of red buttes on the Arizona-Utah border appears in countless westerns?	Monument Valley	Death Valley	Valley of Fire	Bryce Canyon
+geo_english_national_park	Easy	Which English national park inspired the poet Wordsworth?	The Lake District	The Peak District	Dartmoor	Exmoor
 geo2_pustynia_azja	Medium	Which desert lies in Mongolia and China?	The Gobi	The Kalahari	The Atacama	The Karakum
 lmk_serengeti_kraj	Medium	In which country is the Serengeti National Park?	Tanzania	Kenya	Uganda	Zambia
 lmk_atacama_kraj	Medium	In which country is the Atacama Desert?	Chile	Peru	Bolivia	Argentina
@@ -54,6 +58,10 @@ geo_unusual_places_mangrove	Medium	What is unusual about the places where mangro
 geo_country_europe_tallest	Medium	In which country is Europe's tallest sand dune, the Dune of Pilat?	France	Spain	Portugal	Denmark
 geo_desert_giant_saguaro	Medium	In which desert does the giant saguaro cactus grow wild?	The Sonoran	The Mojave	The Chihuahuan	The Great Basin
 geo_counting_all_forest	Medium	Counting all forest types, which is the largest forest region on Earth?	The boreal forest of the north	The Amazon rainforest	The Congo rainforest	The forests of Borneo
+geo_canadian_town_calls	Medium	Which Canadian town calls itself 'the Polar Bear Capital of the World'?	Churchill	Iqaluit	Yellowknife	Whitehorse
+geo_country_torres_del	Medium	In which country is Torres del Paine National Park, with its granite towers?	Chile	Argentina	Peru	Bolivia
+geo_etosha_national_park	Medium	Etosha National Park, built around a huge salt pan, is in which country?	Namibia	Botswana	Zimbabwe	Zambia
+geo_national_park_desert	Medium	Which US national park is named after a desert tree that Mormon settlers thought looked like a prophet raising his arms?	Joshua Tree	Saguaro	Sequoia	Redwood
 geo2_najsuchsze_miejsce	Hard	Which desert is regarded as the driest place on Earth?	The Atacama	The Sahara	The Gobi	The Namib
 geocmp_las_powierzchnia	Hard	Which country has the largest forest area?	Russia	Brazil	Canada	The United States
 lmk_masai_mara	Hard	In which country is the Maasai Mara reserve?	Kenya	Tanzania	Botswana	Namibia
@@ -89,6 +97,8 @@ geo_tongass_largest_national	Hard	The Tongass, the largest national forest in th
 geo_kakadu_national_park	Hard	Kakadu National Park is in which part of Australia?	Northern Territory	Queensland	Western Australia	Tasmania
 geo_roughly_share_world_2	Hard	Roughly what share of the world's forests grow in Russia?	About a fifth	About half	About 5%	About two thirds
 geo_roughly_big_sahara	Hard	Roughly how big is the Sahara?	About 9 million km2	About 1 million km2	About 30 million km2	About 3 million km2
+geo_bwindi_impenetrable_forest	Hard	Bwindi Impenetrable Forest, home to about half of the world's mountain gorillas, is in which country?	Uganda	Rwanda	Kenya	Tanzania
+geo_satellites_measured_hottest	Hard	Satellites have measured the hottest ground on Earth, over 70 C, in the Lut desert of which country?	Iran	Saudi Arabia	Libya	Pakistan
 dpt_geo_sahel	Expert	What is the Sahel?	The dry belt south of the Sahara	The delta of the river Niger	The highlands of East Africa	The coastal plain of Namibia
 geo_largest_continuous_expanse	Expert	Which is the largest continuous expanse of sand on Earth?	Rub' al Khali	The Grand Erg Oriental	The Taklamakan	The Namib Sand Sea
 geo_chinese_desert_often	Expert	Which Chinese desert's name is often said to mean 'you go in, but you never come out'?	The Taklamakan	The Gobi	The Ordos	The Kumtag
@@ -98,3 +108,8 @@ geo_vast_tropical_savanna	Expert	What is the vast tropical savanna of central Br
 geo_roughly_north_america	Expert	Roughly how much of North America's original tallgrass prairie still survives?	Less than 5%	About a quarter	About half	About three quarters
 geo_largest_temperate_rainforest	Expert	Where is the largest temperate rainforest on Earth?	North America's Pacific coast	The south of Chile and Argentina	The west coast of Tasmania	The fjord coast of Norway
 geo_largest_desert_australia	Expert	Which is the largest desert in Australia?	The Great Victoria	The Simpson	The Gibson	The Tanami
+geo_happens_chile_atacama	Expert	What happens in Chile's Atacama Desert after an unusually rainy winter?	It bursts into a carpet of flowers	Its salt flats turn bright pink	Its dunes sink into quicksand	Swarms of locusts hatch there
+geo_pando_forest_aspen	Expert	Pando, a forest of aspen trees that is really one single organism, grows in which US state?	Utah	Colorado	Montana	Oregon
+geo_desert_welwitschia_grow	Expert	In which desert does the welwitschia grow, a plant that produces only two leaves in its whole long life?	The Namib	The Kalahari	The Karoo	The Sahara
+geo_tsingy_bemaraha_forest	Expert	Tsingy de Bemaraha, a 'forest' of razor-sharp limestone needles, is in which country?	Madagascar	Vietnam	Mexico	Malaysia
+geo_tassili_ajjer_ancient	Expert	Tassili n'Ajjer, where ancient rock art shows hippos and cattle in today's Sahara, is mainly in which country?	Algeria	Libya	Niger	Chad

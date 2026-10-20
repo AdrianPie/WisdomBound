@@ -15,6 +15,11 @@ geo_big_californians_fear	Easy	What is 'the Big One' that Californians fear?	A h
 geo_hurricanes_get_energy	Easy	Where do hurricanes get most of their energy?	From warm ocean water	From the jet stream	From sun-baked land	From lightning bolts
 geo_tropics_instead_four	Easy	In much of the tropics, instead of four seasons, the year is split into what?	A wet and a dry season	A hot and a cold season	A windy and a calm season	A light and a dark season
 geo_usually_coldest_month	Easy	Which is usually the coldest month of the year in the Southern Hemisphere?	July	January	March	October
+geo_strangely_calm_centre	Easy	What is the strangely calm centre of a hurricane called?	The eye	The core	The hub	The well
+geo_japanese_city_devastated	Easy	Which Japanese city was devastated by the Great Kanto earthquake of 1923?	Tokyo	Osaka	Kyoto	Hiroshima
+geo_city_choked_great	Easy	Which city choked in the 'Great Smog' of 1952, which killed thousands of people?	London	Manchester	Glasgow	Birmingham
+geo_hurricane_forms_western	Easy	What is a hurricane called when it forms in the western Pacific and hits Japan or China?	A typhoon	A tornado	A monsoon	A blizzard
+geo_continent_tornado_ever	Easy	Which is the only continent where no tornado has ever been recorded?	Antarctica	Australia	Europe	Africa
 geox_dolina_smierci	Medium	Death Valley, one of the hottest places on Earth, is in which country?	The USA	Mexico	Australia	Egypt
 geoy_japonia_trzesienia	Medium	Which country suffers about a fifth of the world's strongest earthquakes?	Japan	Chile	Italy	Iceland
 geo_roughly_hot_highest	Medium	Roughly how hot is the highest air temperature ever officially recorded on Earth?	About 57 C	About 40 C	About 75 C	About 100 C
@@ -47,6 +52,16 @@ geo_philippine_volcano_1991	Medium	Which Philippine volcano's 1991 eruption cool
 geo_deadliest_earthquake_record	Medium	The deadliest earthquake on record killed over 800,000 people in 1556. Where did it strike?	China	Japan	Persia	Italy
 geo_state_earthquakes	Medium	Which US state has the most earthquakes?	Alaska	California	Hawaii	Nevada
 geo_roughly_world_average	Medium	Roughly how much has the world's average temperature risen since the late 1800s?	About 1.2 C	About 0.1 C	About 5 C	About 12 C
+geo_lightning_bolt_heats	Medium	A lightning bolt heats the air to roughly how many times the temperature of the Sun's surface?	About five times	About half	About 50 times	About 500 times
+geo_cool_counterpart_nino	Medium	What is the cool counterpart of El Nino in the Pacific called?	La Nina	La Seca	La Brisa	El Frio
+geo_hot_dry_santa	Medium	The hot, dry Santa Ana winds are notorious for fanning wildfires in which US state?	California	Texas	Arizona	Colorado
+geo_australian_city_cooled	Medium	Which Australian city is cooled on summer afternoons by a sea breeze nicknamed 'the Fremantle Doctor'?	Perth	Adelaide	Darwin	Brisbane
+geo_2011_earthquake_toppled	Medium	In 2011, an earthquake toppled the cathedral spire of which New Zealand city?	Christchurch	Wellington	Auckland	Dunedin
+geo_since_1979_atlantic	Medium	Since 1979, how have Atlantic hurricane names been chosen?	Alternating male and female names	Named after famous scientists	Only female names	Named after the islands they hit
+geo_word_monsoon_comes	Medium	The word 'monsoon' comes from an Arabic word meaning what?	Season	Rain	Wind	Flood
+geo_dog_days_hottest	Medium	The 'dog days', the hottest stretch of summer, are named after which star?	Sirius	Polaris	Betelgeuse	Vega
+geo_roughly_people_killed	Medium	Roughly how many people were killed by the 2004 Indian Ocean tsunami?	About 230,000	About 23,000	About 2 million	About 80,000
+geo_year_britain_record	Medium	In which year did Britain first record a temperature above 40 C?	2022	2003	1976	2019
 geo3_san_andreas	Hard	Which two tectonic plates grind past each other along California's San Andreas Fault?	The Pacific and North American plates	The Nazca and South American plates	The Eurasian and African plates	The Indian and Australian plates
 geox_tornado	Hard	Which part of the USA is nicknamed 'Tornado Alley'?	The Great Plains	New England	The Pacific Northwest	Florida
 geoy_islandia_plyty	Hard	Which country sits on the boundary between the North American and Eurasian plates?	Iceland	Ireland	Norway	Greenland
@@ -69,6 +84,16 @@ geo_ancient_southern_supercontinent	Hard	Which ancient southern supercontinent j
 geo_year_mount_vesuvius	Hard	In which year did Mount Vesuvius last erupt?	1944	1631	1872	1906
 geo_often_coldest_big	Hard	Which is often called the coldest big city in the world, with January averages near -40 C?	Yakutsk	Norilsk	Ulaanbaatar	Fairbanks
 geo_country_holds_record	Hard	Which country holds the record for the lowest temperature ever measured in the inhabited world, in Siberia?	Russia	Canada	Mongolia	Kazakhstan
+geo_medicane	Hard	What is a 'medicane'?	A Mediterranean hurricane	A heatwave medical alert	A waterspout at sea	A volcanic mudflow
+geo_texas_city_devastated	Hard	Which Texas city was devastated in 1900 by the deadliest natural disaster in US history?	Galveston	Corpus Christi	Houston	Beaumont
+geo_dust_blown_sahara	Hard	Dust blown from the Sahara helps fertilise which far-off place?	The Amazon rainforest	The Siberian taiga	The Great Barrier Reef	The Ganges delta
+geo_pineapple_express_river	Hard	The 'Pineapple Express', a river of moist air from near Hawaii, drenches which region?	The west coast of North America	The Gulf Coast of Mexico	The east coast of Australia	The islands of Japan
+geo_scale_rates_earthquake	Hard	Which scale rates an earthquake by its effects on people and buildings, not by its energy?	The Mercalli scale	The Richter scale	The Beaufort scale	The Mohs scale
+geo_1970_earthquake_triggered	Hard	In 1970, an earthquake-triggered avalanche buried the Andean town of Yungay. In which country?	Peru	Chile	Ecuador	Bolivia
+geo_2021_thermometer_island	Hard	In 2021, a thermometer on which island recorded 48.8 C, the highest temperature ever measured in Europe?	Sicily	Crete	Cyprus	Sardinia
+geo_north_sea_flood	Hard	The North Sea flood of 1953 killed about 1,800 people in which country, which then built its giant Delta Works?	The Netherlands	Belgium	Denmark	Germany
+geo_cyclone_nargis_killed	Hard	Cyclone Nargis killed over 100,000 people in 2008 in which country?	Myanmar	Bangladesh	India	Sri Lanka
+geo_eerie_blue_flames	Hard	The eerie blue flames at Indonesia's Kawah Ijen volcano are really what?	Burning sulphur gas	Glowing blue lava	Light from deep-sea algae	Reflected moonlight on ice
 geo3_strefa_ryftowa	Expert	What is the Great East African Rift?	A zone where continental plates are tearing apart	A chain of volcanoes that went extinct long ago	A desert where no river reaches the sea	A region where the ground never thaws
 geo3_wyspa_wulkaniczna_powstawanie	Expert	How do volcanic island chains like Hawaii most often form?	A plate moves over a stationary hot spot in the mantle	Through a collision of two continents	Through subduction of one plate under another only	Through coastal erosion
 dpt_geo_pierscien_ognia	Expert	What is the Ring of Fire?	A belt of volcanoes round the Pacific	A chain of deserts along the tropics	A band of storms over the equator	A line of reefs in the Indian Ocean
@@ -87,3 +112,5 @@ geo_mountain_held_world	Expert	Which US mountain held the world record for the f
 geo_dallol_holder_record	Expert	Dallol, holder of the record for the highest average yearly temperature ever measured, is in which country?	Ethiopia	Sudan	Libya	Mali
 geo_1943_temperature_spearfish	Expert	In 1943, the temperature in Spearfish, South Dakota, rose by 27 C in how long?	Two minutes	Two hours	Two days	Twelve hours
 geo_tallest_active_geyser	Expert	Which is the tallest active geyser in the world?	Steamboat Geyser	Old Faithful	Strokkur	Geysir
+geo_fujiwhara_effect	Expert	What is the 'Fujiwhara effect'?	Two nearby cyclones circling each other	A tsunami bouncing between two coasts	Lightning striking twice in one spot	A volcano erupting under a glacier
+geo_derecho_spanish_straight	Expert	What is a 'derecho', from the Spanish for 'straight'?	A long, fast-moving straight-line windstorm	A tornado that never touches the ground	A sudden flood along a dry riverbed	A hot wind blowing down a mountainside

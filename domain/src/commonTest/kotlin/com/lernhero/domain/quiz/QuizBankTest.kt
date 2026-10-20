@@ -21,9 +21,9 @@ class QuizBankTest {
         // partia nastepny tysiac (glownie historia i nowa popkultura), a po niej jeszcze tysiac
         // wiedzy ogolnej, przewaznie Easy/Medium (potem jeszcze 500 i kolejny tysiac, a z podzialem
         // historii na dzialy - ponad tysiac pytan historycznych, potem kolejny tysiac, a z podzialem
-        // geografii - tysiac pytan geograficznych i 500 historycznych). Progi ida w gore razem
-        // z bankiem - ma nie wrocic do rozmiaru, przy ktorym pytania zaczynaly sie powtarzac.
-        assertTrue(all.size >= 10000, "Bank powinien miec ponad 10000 pytan, ma ${all.size}")
+        // geografii - tysiac pytan geograficznych i 500 historycznych, potem tura z `plan` - po 500 z obu).
+        // Progi ida w gore razem z bankiem - ma nie wrocic do rozmiaru, przy ktorym pytania zaczynaly sie powtarzac.
+        assertTrue(all.size >= 11000, "Bank powinien miec ponad 11000 pytan, ma ${all.size}")
 
         // Slowka i wlasne talie nie sa w tym banku - powstaja z materialu gracza (patrz QuizCategory.builtin).
         // Flagi sa ograniczone liczba dostepnych grafik krajow, wiec maja nizszy prog.

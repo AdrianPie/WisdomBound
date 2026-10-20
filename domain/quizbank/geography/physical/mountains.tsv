@@ -13,6 +13,9 @@ geo_chamonix_mountaineering_town	Easy	Chamonix, the famous mountaineering town, 
 geo_roughly_deep_grand	Easy	Roughly how deep is the Grand Canyon?	About 1.8 km	About 300 m	About 600 m	About 5 km
 geo_kind_mountain_kilimanjaro	Easy	What kind of mountain is Kilimanjaro?	A dormant volcano	A block of folded rock	A granite dome	An ancient coral reef
 geo_highest_mountain_wales	Easy	Which is the highest mountain in Wales?	Snowdon	Ben Nevis	Scafell Pike	Pen y Fan
+geo_country_zermatt_ski	Easy	In which country is Zermatt, the ski resort at the foot of the Matterhorn?	Switzerland	Italy	Austria	France
+geo_denali_once_mount	Easy	Denali, once known as Mount McKinley, is in which US state?	Alaska	Montana	Wyoming	Colorado
+geo_swiss_mountain_pass	Easy	Which Swiss mountain pass has Europe's highest railway station, billed as the 'Top of Europe'?	The Jungfraujoch	The Gotthard	The Simplon	The Brenner
 geo_everest	Medium	In which mountain range is Mount Everest?	Himalayas	Andes	Alps	Caucasus
 geo_wulkan_wl	Medium	What is the name of the famous volcano near Naples?	Vesuvius	Etna	Stromboli	Krakatoa
 geo2_gory_ameryka_pd	Medium	What is the longest mountain range in South America called?	The Andes	The Cordilleras	The Appalachians	The Sierra Nevada
@@ -58,6 +61,10 @@ geo_khumbu_icefall_deadly	Medium	The Khumbu Icefall is a deadly obstacle on the 
 geo_glacier_covered_volcano	Medium	Which glacier-covered volcano towers over Seattle?	Mount Rainier	Mount St. Helens	Mount Hood	Mount Shasta
 geo_country_franz_josef	Medium	Which country's Franz Josef Glacier flows down almost into a rainforest?	New Zealand	Austria	Canada	Chile
 geo_roughly_mountains_earth	Medium	Roughly how many mountains on Earth rise above 8,000 m?	14	5	40	120
+geo_range_hills_nicknamed	Medium	Which range of hills is nicknamed 'the backbone of England'?	The Pennines	The Cotswolds	The Chilterns	The Cheviots
+geo_rises_not_himalayas	Medium	K2 rises not in the Himalayas but in which neighbouring range?	The Karakoram	The Hindu Kush	The Tian Shan	The Altai
+geo_scots_call_mountains	Medium	What do Scots call their mountains higher than 3,000 feet?	Munros	Corbetts	Grahams	Donalds
+geo_mountain_rio_janeiro	Medium	On which mountain does Rio de Janeiro's Christ the Redeemer statue stand?	Corcovado	Sugarloaf Mountain	Pico da Neblina	Pedra da Gavea
 geo_kilimandzaro	Hard	In which country is Mount Kilimanjaro?	Tanzania	Kenya	Ethiopia	Uganda
 geo_aconcagua	Hard	The highest peak in South America is...	Aconcagua	Chimborazo	Huascaran	Ojos del Salado
 geocmp_nie_alpy	Hard	Which of these countries does NOT have Alpine territory?	Czechia	Austria	Switzerland	Slovenia
@@ -87,6 +94,10 @@ geo_highest_mountain_peru	Hard	Which is the highest mountain in Peru?	Huascaran	
 geo_antelope_canyon_slot	Hard	Antelope Canyon, the famous slot canyon, lies on the land of which Native American nation?	The Navajo	The Apache	The Cherokee	The Sioux
 geo_japan_second_highest	Hard	Which is Japan's second-highest mountain, after Fuji?	Mount Kita	Mount Yari	Mount Hotaka	Mount Tate
 geo_highest_mountain_iran	Hard	Which is the highest mountain in Iran?	Mount Damavand	Mount Sabalan	Alam-Kuh	Mount Taftan
+geo_highest_mountain_ireland	Hard	Which is the highest mountain in Ireland?	Carrauntoohil	Slieve Donard	Croagh Patrick	Lugnaquilla
+geo_mountains_mostly_tajikistan	Hard	Which mountains, mostly in Tajikistan, are traditionally called 'the Roof of the World'?	The Pamirs	The Tian Shan	The Altai	The Zagros
+geo_mount_kinabalu_highest	Hard	Mount Kinabalu, the highest peak of Borneo, is in which country?	Malaysia	Indonesia	Brunei	The Philippines
+geo_mountain_pass_afghanistan	Hard	Which mountain pass on the Afghanistan-Pakistan border was a famous invasion route into India?	The Khyber Pass	The Brenner Pass	The Simplon Pass	The Karakoram Pass
 geo2_najwiecej_wulkanow	Expert	Which country has the most active volcanoes?	Indonesia	Japan	Chile	USA
 dpt_geo_chimborazo	Expert	Whose summit lies farthest from the Earth's centre?	Chimborazo	Everest	Denali	Kilimanjaro
 geox_colca	Expert	Which canyon in Peru is about twice as deep as the Grand Canyon?	The Colca Canyon	The Copper Canyon	The Fish River Canyon	Tiger Leaping Gorge
@@ -99,3 +110,6 @@ geo_portugal_highest_mountain	Expert	Portugal's highest mountain is a volcano on
 geo_highest_mountain_world	Expert	Which is the highest mountain in the world that has never been climbed?	Gangkhar Puensum	Mount Kailash	Namcha Barwa	Saltoro Kangri
 geo_volcano_highest_mountain	Expert	Which volcano is the highest mountain in Mexico?	Pico de Orizaba	Popocatepetl	Iztaccihuatl	Nevado de Toluca
 geo_supervolcano_lies_beneath	Expert	Which supervolcano lies beneath the western suburbs of Naples?	Campi Flegrei	Vesuvius	Vulcano	Ischia
+geo_mount_thor_canada	Expert	Mount Thor on Canada's Baffin Island is famous for what?	Earth's greatest purely vertical drop	The coldest summit ever measured	The fastest-growing peak on Earth	The only active volcano in Canada
+geo_pakistani_peak_grimly	Expert	Which Pakistani peak is grimly nicknamed 'the Killer Mountain'?	Nanga Parbat	Broad Peak	Gasherbrum I	Rakaposhi
+geo_highest_peak_pyrenees	Expert	Which is the highest peak of the Pyrenees?	Aneto	Monte Perdido	Vignemale	Pic du Midi

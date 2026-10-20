@@ -25,6 +25,7 @@ geo_coastline_french_riviera	Easy	Which coastline is also known as the French Ri
 geo_big_sur_famously	Easy	Big Sur, a famously rugged stretch of coastline, is in which US state?	California	Oregon	Washington	Maine
 geo_cancun_merida_lie	Easy	Cancun and Merida lie on which peninsula?	The Yucatan	Baja California	Florida	The Osa Peninsula
 geo_largest_canary_islands	Easy	Which is the largest of the Canary Islands?	Tenerife	Gran Canaria	Lanzarote	Fuerteventura
+geo_island_football_boot	Easy	Which island is the 'football' that the 'boot' of Italy seems to be kicking?	Sicily	Sardinia	Corsica	Malta
 geo2_morze_srodziemne_wyspa	Medium	Which Mediterranean island is the largest?	Sicily	Sardinia	Cyprus	Corsica
 geocmp_wyspa_druga	Medium	Which of these islands is the largest?	Borneo	Madagascar	Sumatra	Honshu
 lmk_galapagos_kraj	Medium	The Galapagos Islands belong to which country?	Ecuador	Peru	Colombia	Chile
@@ -62,6 +63,11 @@ geo_surtsey_island_born	Medium	Surtsey, an island born from the sea in a 1963 er
 geo_thousand_islands_gave	Medium	The Thousand Islands, which gave a salad dressing its name, lie in which river?	The St. Lawrence	The Hudson	The Mississippi	The Niagara
 geo_island_china_southernmost	Medium	Which island, China's southernmost province, is nicknamed 'China's Hawaii'?	Hainan	Taiwan	Hong Kong Island	Zhoushan
 geo_island_home_more	Medium	Which island is home to more than half of Japan's people?	Honshu	Hokkaido	Kyushu	Shikoku
+geo_islands_skye_mull	Medium	The islands of Skye and Mull belong to which Scottish group?	The Inner Hebrides	The Outer Hebrides	Orkney	Shetland
+geo_largest_channel_islands	Medium	Which is the largest of the Channel Islands?	Jersey	Guernsey	Alderney	Sark
+geo_scottish_islands_lie	Medium	Which Scottish islands lie closer to Bergen in Norway than to Edinburgh?	Shetland	Orkney	The Outer Hebrides	The Inner Hebrides
+geo_indonesian_island_shaped	Medium	Which Indonesian island is famous for being shaped like the letter K?	Sulawesi	Sumatra	Java	Timor
+geo_thai_island_full	Medium	On which Thai island is the famous Full Moon Party held?	Ko Pha Ngan	Ko Samui	Phuket	Ko Phi Phi
 geo2_wyspa_borneo	Hard	Between how many countries is the island of Borneo divided?	Three	Two	Four	One
 geo2_najwiekszy_archipelag	Hard	Which country is the largest island nation in the world?	Indonesia	The Philippines	Japan	Madagascar
 geocmp_linia_brzegowa	Hard	Which country has the longest coastline?	Canada	Russia	Indonesia	Australia
@@ -86,6 +92,12 @@ geo_largest_island_baltic	Hard	Which is the largest island in the Baltic Sea?	Go
 geo_largest_island_philippines	Hard	Which is the largest island of the Philippines?	Luzon	Mindanao	Palawan	Cebu
 geo_northernmost_point_mainland_2	Hard	What is the northernmost point of mainland Australia?	Cape York	Cape Byron	Cape Leeuwin	Cape Otway
 geo_roughly_big_greenland	Hard	Roughly how big is Greenland compared with Britain?	About ten times bigger	About twice as big	About the same size	About thirty times bigger
+geo_copenhagen_stands_mainly	Hard	Copenhagen stands mainly on which island?	Zealand	Funen	Bornholm	Lolland
+geo_second_largest_island_2	Hard	Which is the second-largest island in the Mediterranean?	Sardinia	Cyprus	Corsica	Crete
+geo_chalk_stacks_needles	Hard	The chalk stacks called the Needles stand off which English island?	The Isle of Wight	The Isle of Man	Anglesey	Lundy
+geo_bornholm_baltic_island	Hard	Bornholm, a Baltic island lying closer to Sweden, belongs to which country?	Denmark	Sweden	Germany	Finland
+geo_australian_island_largest	Hard	Which Australian island is the largest sand island in the world?	K'gari (Fraser Island)	Kangaroo Island	Magnetic Island	Phillip Island
+geo_scottish_island_smoky	Hard	Which Scottish island is famous for smoky whiskies from distilleries such as Laphroaig?	Islay	Skye	Arran	Mull
 geo2_polwysep_najwiekszy	Expert	Which peninsula is the largest in the world?	The Arabian Peninsula	The Indian Peninsula	Scandinavia	The Balkan Peninsula
 geocmp_najwiecej_wysp	Expert	Which country is made up of the most islands?	Sweden	Indonesia	The Philippines	Japan
 dpt_geo_fiord	Expert	How does a fjord form?	Ice carves a valley, sea floods it	A coral reef closes off a bay	A landslide dams a river mouth	A desert river cuts a canyon
@@ -100,3 +112,5 @@ geo_remote_scottish_archipelago	Expert	Which remote Scottish archipelago was aba
 geo_greek_island_group	Expert	Which Greek island group is named after the circle it forms around sacred Delos?	The Cyclades	The Dodecanese	The Sporades	The Ionian Islands
 geo_new_zealand_ninety	Expert	New Zealand's 'Ninety Mile Beach' is really about how long?	About 55 miles	About 90 miles	About 150 miles	About 20 miles
 geo_marajo_river_island	Expert	Marajo, a river island about the size of Switzerland, lies at the mouth of which river?	The Amazon	The Orinoco	The Parana	The Congo
+geo_norway_north_cape	Expert	Why is Norway's famous North Cape not truly the northernmost point of mainland Europe?	It stands on an island	It lies just inside Russia	It is part of a glacier	It was built up artificially
+geo_manitoulin_largest_island	Expert	Manitoulin, the largest island in any lake on Earth, lies in which of the Great Lakes?	Lake Huron	Lake Superior	Lake Michigan	Lake Ontario

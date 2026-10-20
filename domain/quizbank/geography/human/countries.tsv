@@ -22,6 +22,8 @@ geo_country_flag_shows_4	Easy	Which country's flag shows a white crescent moon a
 geo_central_american_country_2	Easy	Which Central American country's name means 'rich coast' in Spanish?	Costa Rica	Honduras	Panama	Belize
 geo_country_own_people	Easy	Which country do its own people call 'Nippon'?	Japan	China	Korea	Thailand
 geo_organisation_flag_shows	Easy	Which organisation's flag shows a map of the world framed by olive branches?	The United Nations	NATO	The Red Cross	The Olympic Movement
+geo_two_countries_usa	Easy	Which two countries does the USA share land borders with?	Canada and Mexico	Canada and Cuba	Mexico and Guatemala	Canada and Russia
+geo_country_flag_blue	Easy	Which country's flag is blue with a yellow Nordic cross?	Sweden	Norway	Denmark	Iceland
 geo2_najmniejsze_panstwo	Medium	Which country is the smallest in the world?	Vatican City	Monaco	San Marino	Liechtenstein
 geocmp_ludnosc_azja_srednia	Medium	Which of these four countries is home to the most people?	Indonesia	Brazil	Nigeria	Bangladesh
 geocmp_ludnosc_egipt_niemcy	Medium	Which of these countries counts the most inhabitants?	Egypt	Germany	Turkiye	Thailand
@@ -59,6 +61,10 @@ geo_country_flag_dark	Medium	Which country's flag is dark green with a white cre
 geo_country_own_itself	Medium	Which country's own name for itself means 'eastern realm'?	Austria	Hungary	Estonia	Romania
 geo_nickname_given_peaceful	Medium	What nickname was given to the peaceful split of Czechoslovakia in 1993?	The Velvet Divorce	The Velvet Revolution	The Prague Spring	The Quiet Parting
 geo_country_english_ends	Medium	Which is the only country whose English name ends in the letter K?	Denmark	Iraq	Iceland	Kenya
+geo_countries_shares_land	Medium	Which of these countries shares a land border with only one other country?	Portugal	Belgium	Austria	Slovenia
+geo_country_flag_shows_10	Medium	Which country's flag shows a red-and-blue yin-yang circle ringed by four black trigrams?	South Korea	Japan	Taiwan	North Korea
+geo_switzerland_borders_france	Medium	Switzerland borders France, Germany, Austria, Italy and which tiny fifth neighbour?	Liechtenstein	Monaco	Andorra	San Marino
+geo_country_coastlines_both	Medium	Which is the only country with coastlines on both the Black Sea and the Caspian Sea?	Russia	Turkey	Georgia	Azerbaijan
 geo2_najdluzsza_granica	Hard	Which two countries share the longest land border in the world?	Canada and the USA	Russia and China	Argentina and Chile	India and China
 geocmp_nie_ameryka_pd	Hard	Which of these countries is NOT in South America?	Belize	Guyana	Suriname	Paraguay
 geocmp_turystyka_kraj	Hard	Which country receives the most international tourist arrivals?	France	Spain	The United States	Italy
@@ -86,6 +92,12 @@ geo_five_eyes_intelligence	Hard	The 'Five Eyes' intelligence alliance links the 
 geo_haskell_free_library	Hard	The Haskell Free Library has its books in one country and its main door in another. Which two?	Canada and the USA	France and Spain	Austria and Germany	Mexico and the USA
 geo_country_usually_explained	Hard	Which country's name is usually explained as 'land of the Aryans'?	Iran	India	Armenia	Albania
 geo_algeria_capital_arabic	Hard	Algeria is named after its capital, whose Arabic name means what?	The islands	The white city	The fortress	The two rivers
+geo_country_land_neighbours	Hard	Which country has the most land neighbours in Africa, nine of them?	DR Congo	Tanzania	Zambia	Sudan
+geo_balkan_country_flag	Hard	Which Balkan country's flag shows a gold map of its territory under six white stars?	Kosovo	Montenegro	Bosnia and Herzegovina	North Macedonia
+geo_african_country_flag	Hard	Which African country's flag has red, gold and green stripes with a black star in the middle?	Ghana	Senegal	Cameroon	Ethiopia
+geo_country_flag_shows_11	Hard	Which country's flag shows a bird-of-paradise and the stars of the Southern Cross?	Papua New Guinea	Solomon Islands	Samoa	Vanuatu
+geo_caribbean_country_flag_2	Hard	Which Caribbean country's flag shows the head of a broken trident?	Barbados	Jamaica	Bahamas	Grenada
+geo_gulf_country_flag	Hard	Which Gulf country's flag shows a curved khanjar dagger over two crossed swords?	Oman	Yemen	Kuwait	Bahrain
 geo2_panstwo_bez_dostepu	Expert	Which country is Europe's only doubly landlocked state?	Liechtenstein	Switzerland	Austria	Andorra
 geocmp_najwiecej_sasiadow	Expert	Which of these countries borders the most other countries?	Brazil	Mexico	Argentina	Colombia
 geo_kazachstan_srodladowy	Expert	Which is the largest landlocked country in the world?	Kazakhstan	Mongolia	Chad	Bolivia
@@ -98,3 +110,7 @@ geo_country_flag_shows_9	Expert	Which country's flag shows a frigatebird flying 
 geo_short_lived_mali	Expert	The short-lived Mali Federation of 1959-1960 joined today's Mali with which country?	Senegal	Niger	Guinea	Burkina Faso
 geo_sovereign_military_order	Expert	The Sovereign Military Order of Malta, which has no territory of its own, is based in which city?	Rome	Valletta	Vatican City	Rhodes
 geo_senegambia_confederation_1982	Expert	Senegambia, a confederation from 1982 to 1989, joined Senegal with which country?	The Gambia	Mali	Guinea	Mauritania
+geo_country_flag_repeats	Expert	Which country's flag repeats the phrase 'God is great' 22 times along the edges of its stripes?	Iran	Iraq	Saudi Arabia	Afghanistan
+geo_country_flag_shows_12	Expert	Which country's flag shows three towers standing on three mountain peaks?	San Marino	Andorra	Monaco	Liechtenstein
+geo_country_maroon_flag	Expert	Which country's maroon flag has a white band with nine serrated points?	Qatar	Bahrain	Kuwait	The UAE
+geo_world_shortest_land	Expert	The world's shortest land border, only about 85 m long, divides Morocco from which country?	Spain	Algeria	Portugal	Mauritania
