@@ -12,6 +12,14 @@ geo_part_united_kingdom	Easy	Which part of the United Kingdom is NOT on the isla
 geo_country_region_tuscany	Easy	In which country is the region of Tuscany?	Italy	Spain	France	Portugal
 geo_country_region_andalusia	Easy	In which country is the region of Andalusia?	Spain	Portugal	Italy	Greece
 geo_country_ring_kerry	Easy	In which country is the Ring of Kerry, a famous scenic route?	Ireland	Scotland	Wales	New Zealand
+geo_flanders_wallonia_two	Easy	Flanders and Wallonia are the two main regions of which country?	Belgium	The Netherlands	Switzerland	Luxembourg
+geo_european_country_more	Easy	Which European country has more bicycles than people?	The Netherlands	France	Britain	Spain
+geo_country_provence_sunny	Easy	In which country is Provence, the sunny southern region famous for its purple lavender fields?	France	Italy	Spain	Portugal
+geo_bavaria_home_oktoberfest	Easy	Bavaria, the home of Oktoberfest, is a state of which country?	Germany	Austria	Switzerland	Czechia
+geo_netherlands_literally_mean	Easy	What does the name 'Netherlands' literally mean?	Low lands	North lands	Wet lands	Flat fields
+geo_european_country_official	Easy	Which European country's official name is 'the Hellenic Republic'?	Greece	Cyprus	Albania	Italy
+geo_balkan_country_means	Easy	Which Balkan country's name means 'Black Mountain'?	Montenegro	Albania	Serbia	Slovenia
+geo_european_country_divided	Easy	Which European country is divided into 26 cantons?	Switzerland	Austria	Belgium	Luxembourg
 geocmp_nie_nordyckie	Medium	Which of these countries is NOT a Nordic country?	Estonia	Norway	Sweden	Denmark
 trv_islandia_lodowce	Medium	Which country gets most of its electricity from geothermal and hydro power?	Iceland	Ireland	Belgium	Greece
 lmk_dolina_loary	Medium	In which country is the Loire Valley, famous for its chateaux?	France	Belgium	Switzerland	Spain
@@ -27,5 +35,47 @@ geo_largest_country_scandinavia	Medium	Which is the largest country in Scandinav
 geo_tiny_country_lies_2	Medium	Which tiny country lies between Switzerland and Austria?	Liechtenstein	Luxembourg	Andorra	Monaco
 geo_european_countries_cars	Medium	In which of these European countries do cars drive on the left?	Ireland	Portugal	Netherlands	Denmark
 geo_country_calls_itself	Medium	Which country calls itself the 'Land of the Eagles'?	Albania	Montenegro	Serbia	Kosovo
+geo_country_switched_overnight	Medium	Which country switched overnight from driving on the left to the right in 1967, on a day called 'Dagen H'?	Sweden	Norway	Denmark	Finland
+geo_strictly_speaking_holland	Medium	Strictly speaking, what is 'Holland'?	Two Dutch provinces	A Dutch island group	Belgium's old name	The royal family's lands
+geo_country_changed_2019	Medium	Which country changed its name in 2019 to end a long dispute with Greece?	North Macedonia	Montenegro	Albania	Moldova
+geo_aland_islands_people	Medium	The Aland Islands, where most people speak Swedish, belong to which country?	Finland	Sweden	Estonia	Denmark
+geo_british_channel_islands	Medium	The British Channel Islands, such as Jersey and Guernsey, lie much closer to the coast of which country?	France	Belgium	Ireland	Spain
+geo_south_tyrol_people	Medium	South Tyrol, where most people speak German as their first language, belongs to which country?	Italy	Austria	Switzerland	Germany
+geo_french_region_changed	Medium	Which French region changed hands between France and Germany four times between 1871 and 1945?	Alsace	Normandy	Brittany	Burgundy
+geo_country_often_said	Medium	Which country is often said to have more castles per square mile than any other in Europe?	Wales	Scotland	Ireland	Belgium
+geo_2020_country_became	Medium	In 2020, which country became the first to make all of its public transport free?	Luxembourg	Estonia	Monaco	Malta
+geo_country_enough_nuclear	Medium	Which country has enough nuclear fallout shelters to house its entire population?	Switzerland	Sweden	Finland	Austria
+geo_banned_gambling_casino	Medium	Who is banned from gambling at the famous casino of Monte Carlo?	The country's own citizens	Visitors under 25	Professional poker players	Foreign heads of state
+geo_european_country_dotted	Medium	Which European country is dotted with over 150,000 concrete bunkers built under its paranoid communist ruler?	Albania	Bulgaria	Romania	Serbia
+geo_countries_railway_all	Medium	Which of these countries has no railway at all?	Iceland	Norway	Ireland	Denmark
+geo_dalmatia_coastal_region	Medium	Dalmatia, the coastal region that gave the spotty Dalmatian dog its name, is part of which country?	Croatia	Italy	Greece	Slovenia
+geo_historic_lands_bohemia	Medium	The historic lands of Bohemia and Moravia make up most of which country?	Czechia	Slovakia	Austria	Hungary
+geo_country_coins_stamps	Medium	Which country's coins and stamps carry the Latin name 'Helvetia'?	Switzerland	Belgium	Austria	Portugal
+geo_world_remaining_grand	Medium	Which is the world's only remaining grand duchy?	Luxembourg	Liechtenstein	Monaco	Andorra
+geo_declaring_independence_1917	Medium	Before declaring independence in 1917, Finland had been ruled for about a century by which empire?	Russia	Sweden	Germany	Austria-Hungary
+geo_region_forms_heel	Medium	Which region forms the 'heel' of the Italian boot?	Puglia	Calabria	Sicily	Campania
+geo_russian_region_baltic	Medium	Which Russian region on the Baltic is cut off from the rest of Russia, wedged between Poland and Lithuania?	Kaliningrad	Karelia	Pskov	Murmansk
 geocmp_panstwo_ue_pow	Hard	Which is the largest European Union country by area?	France	Spain	Sweden	Germany
 trv_ukraina_europa	Hard	Which is the largest country lying entirely within Europe?	Ukraine	France	Spain	Germany
+geo_andorra_two_heads	Hard	Andorra has two heads of state: the Bishop of Urgell and who?	The President of France	The King of Spain	The Pope	The Prince of Monaco
+geo_country_runs_central	Hard	Which country runs on Central European Time even though its capital lies further west than London?	Spain	Portugal	France	Ireland
+geo_country_went_more	Hard	Which country went more than 500 days without a newly formed government after its 2010 election?	Belgium	Italy	The Netherlands	Spain
+geo_france_longest_land	Hard	France's longest land border is with which country?	Brazil	Spain	Belgium	Switzerland
+geo_caribbean_island_france	Hard	On which Caribbean island do France and the Netherlands share a land border?	Saint Martin	Aruba	Martinique	Curacao
+geo_town_baarle_patchwork	Hard	The town of Baarle is a patchwork of dozens of enclaves belonging to which two countries?	Belgium and the Netherlands	France and Belgium	Germany and Denmark	Austria and Germany
+geo_self_governing_community	Hard	Which self-governing community of Orthodox monks in Greece forbids women from setting foot there?	Mount Athos	Meteora	Mount Olympus	Patmos
+geo_akrotiri_dhekelia_two	Hard	Akrotiri and Dhekelia, two British military territories, lie on which island?	Cyprus	Malta	Crete	Rhodes
+geo_transnistria_breakaway_strip	Hard	Transnistria, a breakaway strip with its own currency and army, is officially part of which country?	Moldova	Ukraine	Romania	Georgia
+geo_according_tradition_san	Hard	According to tradition, San Marino was founded in 301 by a Christian refugee of which trade?	Stonemason	Shepherd	Fisherman	Blacksmith
+geo_according_popular_story	Hard	According to a popular story, how did Liechtenstein's army of 80 men come home from its last war in 1866?	With 81 men	With just 8 men	With none at all	With only 40 men
+geo_dutch_province_created	Hard	Which Dutch province, created in 1986, was built almost entirely on land reclaimed from the sea?	Flevoland	Zeeland	Friesland	Groningen
+geo_croatia_adriatic_coast	Hard	Croatia's Adriatic coast is cut in two by a short stretch of coastline belonging to which country?	Bosnia and Herzegovina	Montenegro	Slovenia	Serbia
+geo_vatican_city_said	Hard	Vatican City is said to have the only cash machine offering instructions in which language?	Latin	Ancient Greek	Hebrew	Aramaic
+geo_tiny_liechtenstein_world	Hard	Tiny Liechtenstein is one of the world's biggest makers of what?	False teeth	Wristwatches	Pocket knives	Chocolate bars
+geo_llivia_small_town	Expert	Llivia, a small town completely surrounded by French territory, belongs to which country?	Spain	Andorra	Monaco	Italy
+geo_austrian_valley_kleinwalsertal	Expert	The Austrian valley of Kleinwalsertal can be reached by road only through which country?	Germany	Switzerland	Italy	Liechtenstein
+geo_pheasant_island_tiny	Expert	Pheasant Island, a tiny island in a border river, switches between which two countries every six months?	Spain and France	France and Italy	Spain and Portugal	Germany and Austria
+geo_bonaire_sint_eustatius	Expert	Bonaire, Sint Eustatius and Saba in the Caribbean are special municipalities of which country?	The Netherlands	France	Britain	Denmark
+geo_vojvodina_home_more	Expert	Vojvodina, home to more than 25 ethnic groups, is an autonomous province of which country?	Serbia	Hungary	Croatia	Romania
+geo_self_declared_principality	Expert	The self-declared 'Principality of Sealand', off the coast of England, sits on what?	A wartime sea fort	An oil rig	A sandbank	A sunken ship
+geo_country_calls_itself_2	Expert	Which country calls itself 'Magyarorszag'?	Hungary	Romania	Bulgaria	Slovakia

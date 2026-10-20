@@ -5,6 +5,14 @@ geo_persja	Easy	Which country was known as Persia until 1935?	Iran	Iraq	Turkey	A
 geo_kraj_wschodzacego_slonca	Easy	Which country is known as 'the Land of the Rising Sun'?	Japan	China	South Korea	Thailand
 geo_vast_region_makes	Easy	Which vast region makes up most of Russia's Asian part?	Siberia	Mongolia	Manchuria	Kamchatka
 geo_country_home_komodo	Easy	Which country is home to the Komodo dragon?	Indonesia	Philippines	Malaysia	Australia
+geo_country_shaped_like	Easy	Which country is shaped like a long, thin letter S?	Vietnam	Laos	Thailand	Cambodia
+geo_emirates_make_united	Easy	How many emirates make up the United Arab Emirates?	Seven	Five	Nine	Twelve
+geo_2022_united_nations	Easy	In 2022, the United Nations agreed to use which new official name for Turkey?	Turkiye	Turkistan	Anatolia	Rumelia
+geo_asian_country_more	Easy	Which Asian country has more horses than people?	Mongolia	Kazakhstan	Kyrgyzstan	Afghanistan
+geo_inner_mongolia_region	Easy	Inner Mongolia is a region of which country?	China	Mongolia	Russia	Kazakhstan
+geo_large_island_sakhalin	Easy	The large island of Sakhalin, just north of Japan, belongs to which country?	Russia	Japan	China	North Korea
+geo_country_constitution_gives	Easy	Which country's constitution gives it a second official name, 'Bharat'?	India	Nepal	Sri Lanka	Bangladesh
+geo_country_traditionally_land	Easy	Which country is traditionally called 'the Land of the Morning Calm'?	Korea	Japan	China	Vietnam
 wh_jedwabny_szlak	Medium	Which two regions did the Silk Road connect?	China and Europe	India and Africa	Persia and Scandinavia	Japan and America
 geo_syjam	Medium	Which country was known as Siam until 1939?	Thailand	Vietnam	Cambodia	Laos
 geo_tygrysy_indie	Medium	Which country is home to the most wild tigers?	India	Russia	Indonesia	Bangladesh
@@ -17,9 +25,56 @@ geo_turkey_territory_lies	Medium	Most of Turkey's territory lies on which contin
 geo_country_nicknamed_land_2	Medium	Which country is nicknamed 'the Land of Fire' for its burning gas vents?	Azerbaijan	Armenia	Georgia	Turkmenistan
 geo_largest_country_lying	Medium	Which is the largest country lying entirely in Asia?	China	India	Mongolia	Indonesia
 geo_landlocked_country_southeast	Medium	Which is the only landlocked country in Southeast Asia?	Laos	Cambodia	Myanmar	Thailand
+geo_middle_eastern_country_2	Medium	Which Middle Eastern country is named after its royal family?	Saudi Arabia	Jordan	Oman	Kuwait
+geo_country_king_chosen	Medium	Which country's king is chosen every five years from among nine hereditary state rulers?	Malaysia	Brunei	Thailand	Jordan
+geo_country_nicknamed_graveyard	Medium	Which country is nicknamed 'the graveyard of empires'?	Afghanistan	Iraq	Vietnam	Mongolia
+geo_kurdistan_region_own	Medium	The Kurdistan Region, with its own parliament and army, is an officially autonomous part of which country?	Iraq	Turkey	Iran	Syria
+geo_baikonur_cosmodrome_russia	Medium	The Baikonur Cosmodrome, Russia's most famous launch site, actually lies in which country?	Kazakhstan	Uzbekistan	Mongolia	Turkmenistan
+geo_island_chain_southernmost	Medium	Which island chain's southernmost islands, seized by Soviet troops in 1945, are still claimed by Japan?	The Kuril Islands	The Ryukyu Islands	The Aleutian Islands	The Commander Islands
+geo_ainu_indigenous_people	Medium	The Ainu are the indigenous people of which Japanese island?	Hokkaido	Okinawa	Kyushu	Shikoku
+geo_roughly_long_trans	Medium	Roughly how long is the Trans-Siberian Railway from Moscow to Vladivostok?	About 9,300 km	About 3,000 km	About 20,000 km	About 5,500 km
+geo_roughly_share_russia	Medium	Roughly what share of Russia's territory lies in Asia?	About three quarters	About a third	About half	About a tenth
+geo_country_heavily_bombed	Medium	Which country is the most heavily bombed in history, per person?	Laos	Vietnam	Cambodia	North Korea
+geo_country_officially_democratic	Medium	Which country was officially called 'Democratic Kampuchea' in the late 1970s?	Cambodia	Laos	Vietnam	Myanmar
+geo_country_split_two	Medium	Which country is split into two main parts by the South China Sea?	Malaysia	Indonesia	Vietnam	Thailand
+geo_arab_country_formed	Medium	Which Arab country was formed in 1990 by the union of its northern and southern halves?	Yemen	Oman	Syria	Sudan
+geo_until_1954_pondicherry	Medium	Until 1954, Pondicherry on India's south-east coast was the capital of which European country's Indian territories?	France	Portugal	The Netherlands	Denmark
+geo_indian_state_backwaters	Medium	Which Indian state, famous for its backwaters, calls itself 'God's Own Country'?	Kerala	Goa	Tamil Nadu	Assam
+geo_country_own_language	Medium	Which country's name in its own language means 'Land of the Free'?	Thailand	Laos	Malaysia	Bhutan
+geo_gulf_country_arabic	Medium	Which Gulf country's Arabic name means 'two seas'?	Bahrain	Qatar	Kuwait	Oman
+geo_golden_triangle_once	Medium	The 'Golden Triangle', once infamous for opium, is where Thailand, Laos and which other country meet?	Myanmar	Cambodia	Vietnam	China
+geo_stan_countries_never	Medium	Which of these '-stan' countries was never part of the Soviet Union?	Afghanistan	Tajikistan	Turkmenistan	Kyrgyzstan
+geo_arabian_country_sultanate	Medium	Which Arabian country is a sultanate?	Oman	Kuwait	Qatar	Bahrain
+geo_russian_region_lies	Medium	Which Russian region lies just across the Bering Strait from Alaska?	Chukotka	Kamchatka	Yakutia	Magadan
+geo_country_borneo_absolute	Medium	Which country on Borneo is an absolute monarchy ruled by a sultan?	Brunei	Malaysia	Indonesia	East Timor
 geo_cejlon	Hard	Which country was called Ceylon until 1972?	Sri Lanka	Bangladesh	Myanmar	Malaysia
 geo_wrota_piekiel	Hard	In which country does the 'Door to Hell' gas crater keep burning?	Turkmenistan	Kazakhstan	Iran	Azerbaijan
 geox_bhutan	Hard	Which Himalayan kingdom measures its progress in 'Gross National Happiness'?	Bhutan	Nepal	Tibet	Sikkim
 geoy_makau	Hard	Which former Portuguese territory in China is famous for its casinos?	Macau	Hong Kong	Shanghai	Taipei
 geo_country_land_thunder	Hard	Which country is known as 'the Land of the Thunder Dragon'?	Bhutan	Nepal	Tibet	Mongolia
+geo_asian_country_switched	Hard	Which Asian country switched overnight to driving on the right in 1970, reportedly on an astrologer's advice?	Myanmar	Thailand	Sri Lanka	Malaysia
+geo_wakhan_corridor_thin	Hard	The Wakhan Corridor, a thin finger of land in the Pamirs, gives which country a short border with China?	Afghanistan	Pakistan	Tajikistan	India
+geo_country_clocks_set	Hard	Which country's clocks are set 5 hours and 45 minutes ahead of GMT?	Nepal	India	Bhutan	Sri Lanka
+geo_prefectures_japan_divided	Hard	How many prefectures is Japan divided into?	47	12	23	88
+geo_japan_annexed_1879	Hard	Before Japan annexed it in 1879, Okinawa was the heart of which independent kingdom?	Ryukyu	Goryeo	Ezo	Champa
+geo_travellers_reach_kamchatka	Hard	How can travellers reach Kamchatka's capital from the rest of Russia?	Only by air or sea	By the Trans-Siberian	By the Kolyma highway	By a tunnel under the sea
+geo_nakhchivan_exclave_country	Hard	Nakhchivan is an exclave of which country, cut off from it by Armenia?	Azerbaijan	Turkey	Iran	Georgia
+geo_abkhazia_black_sea	Hard	Abkhazia, on the Black Sea coast, is a breakaway region of which country?	Georgia	Armenia	Azerbaijan	Ukraine
+geo_asia_doubly_landlocked	Hard	Which is Asia's only doubly landlocked country, surrounded entirely by other landlocked states?	Uzbekistan	Afghanistan	Kazakhstan	Mongolia
+geo_country_nicknamed_switzerland	Hard	Which country was nicknamed 'the Switzerland of the Middle East' for its banks and mountains?	Lebanon	Jordan	Cyprus	Bahrain
+geo_mount_ararat_appears	Hard	Mount Ararat appears on the coat of arms of which country, though it stands across the border in Turkey?	Armenia	Georgia	Iran	Azerbaijan
+geo_india_largest_state	Hard	Which is India's largest state by area?	Rajasthan	Uttar Pradesh	Maharashtra	Madhya Pradesh
+geo_himalayan_kingdom_absorbed	Hard	Which Himalayan kingdom was absorbed into India as a state in 1975?	Sikkim	Bhutan	Ladakh	Mustang
+geo_china_largest_province	Hard	Which is China's largest province-level region by area?	Xinjiang	Tibet	Inner Mongolia	Qinghai
+geo_indonesia_comes_greek	Hard	The name 'Indonesia' comes from Greek words meaning what?	Indian islands	Spice islands	Eastern islands	Island empire
+geo_country_narrow_chicken	Hard	Which country's narrow 'Chicken's Neck' corridor links its north-eastern states to the rest of the country?	India	Bangladesh	Myanmar	China
+geo_through_land_reclamation	Hard	Through land reclamation, roughly how much bigger has Singapore grown since 1965?	About a quarter	About 2%	About three times	About ten times
 geo2_linia_wallace	Expert	What does the Wallace Line separate?	Asian fauna from Australian fauna	Pacific time zones	African tectonic plates	Humid climate from dry climate
+geo_russian_republic_largest	Expert	Which Russian republic is the largest country subdivision in the world, bigger than Argentina?	Sakha (Yakutia)	Komi	Buryatia	Tuva
+geo_enclave_riddled_fergana	Expert	The enclave-riddled Fergana Valley is shared by Uzbekistan, Kyrgyzstan and which other country?	Tajikistan	Kazakhstan	Turkmenistan	Afghanistan
+geo_central_asian_country	Expert	Which Central Asian country's 'permanent neutrality' was formally recognised by the UN in 1995?	Turkmenistan	Kazakhstan	Uzbekistan	Kyrgyzstan
+geo_monument_kyzyl_capital	Expert	A monument in Kyzyl, capital of the Russian republic of Tuva, claims to mark what?	The centre of Asia	The edge of Siberia	The source of the Ob	The coldest spot on Earth
+geo_pakistan_coined_1933	Expert	The name 'Pakistan', coined in 1933, was partly built as an acronym of what?	Names of its regions	Its founders' initials	Its five great rivers	Its first five cities
+geo_until_2015_land	Expert	Until a 2015 land swap, the world's only enclave inside an enclave inside an enclave lay on the border of India and which country?	Bangladesh	Nepal	Pakistan	Bhutan
+geo_japanese_prefecture_switched	Expert	Which Japanese prefecture switched from driving on the right to the left in 1978?	Okinawa	Hokkaido	Nagasaki	Kagoshima
+geo_musandam_peninsula_overlooking	Expert	The Musandam Peninsula, overlooking the Strait of Hormuz, is an exclave of which country?	Oman	The UAE	Iran	Qatar
