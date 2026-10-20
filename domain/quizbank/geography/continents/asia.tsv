@@ -47,6 +47,7 @@ geo_stan_countries_never	Medium	Which of these '-stan' countries was never part 
 geo_arabian_country_sultanate	Medium	Which Arabian country is a sultanate?	Oman	Kuwait	Qatar	Bahrain
 geo_russian_region_lies	Medium	Which Russian region lies just across the Bering Strait from Alaska?	Chukotka	Kamchatka	Yakutia	Magadan
 geo_country_borneo_absolute	Medium	Which country on Borneo is an absolute monarchy ruled by a sultan?	Brunei	Malaysia	Indonesia	East Timor
+geo_roughly_people_per	Medium	Roughly how many people per square km live in Macau, one of the most crowded places on Earth?	About 20,000	About 200	About 2,000	About 200,000
 geo_cejlon	Hard	Which country was called Ceylon until 1972?	Sri Lanka	Bangladesh	Myanmar	Malaysia
 geo_wrota_piekiel	Hard	In which country does the 'Door to Hell' gas crater keep burning?	Turkmenistan	Kazakhstan	Iran	Azerbaijan
 geox_bhutan	Hard	Which Himalayan kingdom measures its progress in 'Gross National Happiness'?	Bhutan	Nepal	Tibet	Sikkim

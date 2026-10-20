@@ -25,6 +25,14 @@ geo_country_home_pasta	Easy	Which country is the home of pasta carbonara?	Italy	
 geo_country_pierogi_bigos	Easy	Which country is famous for 'pierogi', 'bigos' and 'zurek'?	Poland	Ukraine	Lithuania	Slovakia
 geo_country_baklava_kebab	Easy	Which country is famous for 'baklava', 'kebab' and 'Turkish delight'?	Turkey	Greece	Lebanon	Iran
 geo_french_city_gave	Easy	Which French city gave its name to a famous mustard?	Dijon	Nice	Lille	Toulouse
+geo_parmesan_cheese_originally	Easy	Parmesan cheese originally comes from which country?	Italy	Switzerland	France	Greece
+geo_country_produces_world	Easy	Which country produces most of the world's maple syrup?	Canada	The United States	Norway	Russia
+geo_moussaka_layered_aubergine	Easy	Moussaka, layered aubergine and minced meat, is a famous dish of which country?	Greece	Italy	Spain	France
+geo_darjeeling_assam_teas	Easy	Darjeeling and Assam teas come from which country?	India	China	Sri Lanka	Kenya
+geo_cheddar_cheese_village	Easy	Cheddar cheese is named after a village in which country?	England	Ireland	Scotland	Wales
+geo_matcha_powdered_green	Easy	Matcha, a powdered green tea, is at the heart of which country's tea ceremony?	Japan	China	India	Korea
+geo_vegemite_salty_black	Easy	Vegemite, a salty black yeast spread, is a national favourite of which country?	Australia	New Zealand	The United Kingdom	Canada
+geo_country_claims_invented	Easy	Which country claims to have invented 'French' fries?	Belgium	The Netherlands	Switzerland	Germany
 geocmp_kawa_producent	Medium	Which country produces the most coffee?	Brazil	Colombia	Vietnam	Ethiopia
 day_najdrozsza_przyprawa	Medium	Which spice is the most expensive by weight?	Saffron	Vanilla	Cardamom	Black pepper
 geo_goulash_national_dish	Medium	Goulash is the national dish of which country?	Hungary	Austria	Czechia	Romania
@@ -51,10 +59,48 @@ geo_country_cuisine_features	Medium	Which country's cuisine features 'injera', a
 geo_country_biltong_dried	Medium	Which country does 'biltong', dried cured meat, come from?	South Africa	Australia	Argentina	Kenya
 geo_paprika_made	Medium	What is paprika made from?	Dried red peppers	Black peppercorns	Dried tomatoes	Saffron threads
 geo_pilsner_beer_czech	Medium	Pilsner beer is named after which Czech city?	Plzen	Prague	Brno	Ceske Budejovice
+geo_country_produces_tea	Medium	Which country produces the most tea?	China	India	Kenya	Turkey
+geo_country_produces_avocados	Medium	Which country produces the most avocados?	Mexico	Peru	Spain	Brazil
+geo_cachaca_distilled_sugar	Medium	Cachaca, distilled from sugar cane juice, is the national spirit of which country?	Brazil	Cuba	Jamaica	Mexico
+geo_bourbon_whiskey_closely	Medium	Bourbon whiskey is most closely tied to which US state?	Kentucky	Tennessee	Texas	Virginia
+geo_country_drinks_beer	Medium	Which country drinks the most beer per person?	Czechia	Germany	Ireland	Belgium
+geo_bibimbap_rice_topped	Medium	Bibimbap, rice topped with vegetables, egg and chilli paste, comes from which country?	South Korea	Japan	Vietnam	China
+geo_mole_poblano_mexican	Medium	Mole poblano, a famous Mexican sauce, contains which surprising ingredient?	Chocolate	Coffee	Vanilla	Mint
+geo_pastel_nata_custard	Medium	Pastel de nata, a custard tart, is a famous pastry of which country?	Portugal	Spain	Brazil	Italy
+geo_stroopwafels_thin_waffles	Medium	Stroopwafels, thin waffles glued together with caramel syrup, come from which country?	The Netherlands	Belgium	Denmark	Austria
+geo_manchego_cheese_made	Medium	Manchego cheese, made from sheep's milk, comes from which country?	Spain	Italy	Greece	Portugal
+geo_halloumi_squeaky_cheese	Medium	Halloumi, a squeaky cheese that can be grilled, comes from which island?	Cyprus	Crete	Malta	Sicily
+geo_german_city_marzipan	Medium	Which German city is famous for its marzipan?	Lubeck	Nuremberg	Dresden	Bremen
+geo_sweet_pastries_eaten	Medium	Which sweet pastries are eaten at China's Mid-Autumn Festival?	Mooncakes	Fortune cookies	Egg tarts	Sesame balls
+geo_pesto_comes_italian	Medium	Pesto comes from which Italian city?	Genoa	Naples	Bologna	Florence
+geo_irn_bru_bright	Medium	Irn-Bru, a bright orange soft drink said to rival Coca-Cola at home, comes from which country?	Scotland	Ireland	Wales	Australia
+geo_country_produces_sugar	Medium	Which country produces the most sugar cane?	Brazil	India	Cuba	China
+geo_sherry_takes_spanish	Medium	Sherry takes its name from which Spanish town?	Jerez	Seville	Malaga	Valencia
+geo_cognac_brandy_town	Medium	Cognac, a famous brandy, is named after a town in which country?	France	Spain	Italy	Portugal
 geo_kawa_finlandia	Hard	Which country drinks the most coffee per person?	Finland	Italy	Brazil	The United States
 geo_czekolada_szwajcaria	Hard	Which country's people eat the most chocolate per person?	Switzerland	Belgium	The United States	France
 geo_kakao_wybrzeze	Hard	Which country produces the most cocoa beans?	Ivory Coast	Ghana	Brazil	Switzerland
 geo_banany_indie	Hard	Which country grows the most bananas?	India	Ecuador	Brazil	The Philippines
 geo_tokaji_sweet_wine	Hard	Tokaji, a famous sweet wine, comes from which country?	Hungary	Austria	Germany	Croatia
 geo_country_caesar_salad	Hard	In which country was the Caesar salad invented?	Mexico	Italy	United States	Spain
+geo_country_grows_kiwifruit	Hard	Which country grows the most kiwifruit?	China	New Zealand	Italy	Chile
+geo_country_grows_world	Hard	Which country grows most of the world's hazelnuts?	Turkey	Italy	Spain	The United States
+geo_country_produces_world_2	Hard	Which country produces most of the world's saffron?	Iran	Spain	India	Morocco
+geo_country_produces_black	Hard	Which country produces the most black pepper?	Vietnam	India	Indonesia	Brazil
+geo_cloves_once_grown	Hard	Cloves, once grown only on a few islands of Indonesia, are which part of the plant?	Dried flower buds	Dried seed pods	Strips of bark	Dried berries
+geo_wasabi_served_outside	Hard	Most 'wasabi' served outside Japan is actually made mainly from what?	Horseradish	Seaweed	Green chilli	Avocado
+geo_pisco_grape_brandy	Hard	Pisco, a grape brandy, is claimed as a national drink by Peru and which other country?	Chile	Bolivia	Argentina	Ecuador
+geo_2022_unesco_listed	Hard	In 2022 UNESCO listed the culture of cooking borscht as the heritage of which country?	Ukraine	Russia	Belarus	Lithuania
+geo_khachapuri_boat_shaped	Hard	Khachapuri, a boat-shaped bread filled with cheese and egg, comes from which country?	Georgia	Armenia	Turkey	Greece
+geo_sriracha_hot_sauce	Hard	Sriracha hot sauce is named after a seaside town in which country?	Thailand	Vietnam	The United States	China
+geo_hawaiian_pizza_topped	Hard	Hawaiian pizza, topped with ham and pineapple, was invented in which country?	Canada	The United States	Italy	Australia
+geo_croissant_said_descend	Hard	The croissant is said to descend from the 'kipferl', a pastry of which country?	Austria	Hungary	Turkey	Germany
+geo_fortune_cookies_served	Hard	Fortune cookies, served in Chinese restaurants, were actually popularised in which country?	The United States	China	Taiwan	Singapore
 geo_czekoladowe_wzgorza	Expert	In which country are the 'Chocolate Hills'?	The Philippines	Indonesia	Malaysia	Vietnam
+geo_surstromming_fermented_herring	Expert	Surstromming, fermented herring so smelly it is often opened outdoors, comes from which country?	Sweden	Norway	Finland	Denmark
+geo_casu_marzu_cheese	Expert	Casu marzu, a cheese containing live maggots, comes from which Italian island?	Sardinia	Sicily	Elba	Capri
+geo_jollof_rice_takes	Expert	Jollof rice takes its name from the Wolof people of which country?	Senegal	Nigeria	Ghana	Mali
+geo_brunost_sweet_brown	Expert	Brunost, a sweet brown cheese made from whey, is a favourite of which country?	Norway	Switzerland	The Netherlands	Denmark
+geo_law_may_genuine	Expert	By law, where may genuine Stilton cheese NOT be made?	In the village of Stilton	In Leicestershire	In Nottinghamshire	In Derbyshire
+geo_caesar_cocktail_like	Expert	The Caesar, a cocktail like a Bloody Mary made with clam juice, is the national drink of which country?	Canada	Mexico	The United States	Chile
+geo_baijiu_world_best	Expert	Baijiu, the world's best-selling type of spirit, comes from which country?	China	Japan	South Korea	Russia

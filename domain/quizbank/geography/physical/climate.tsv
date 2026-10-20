@@ -14,6 +14,7 @@ geo_disaster_struck_haiti	Easy	Which disaster struck Haiti in 2010, killing over
 geo_big_californians_fear	Easy	What is 'the Big One' that Californians fear?	A huge earthquake	A giant tsunami	A volcanic eruption	A mega-drought
 geo_hurricanes_get_energy	Easy	Where do hurricanes get most of their energy?	From warm ocean water	From the jet stream	From sun-baked land	From lightning bolts
 geo_tropics_instead_four	Easy	In much of the tropics, instead of four seasons, the year is split into what?	A wet and a dry season	A hot and a cold season	A windy and a calm season	A light and a dark season
+geo_usually_coldest_month	Easy	Which is usually the coldest month of the year in the Southern Hemisphere?	July	January	March	October
 geox_dolina_smierci	Medium	Death Valley, one of the hottest places on Earth, is in which country?	The USA	Mexico	Australia	Egypt
 geoy_japonia_trzesienia	Medium	Which country suffers about a fifth of the world's strongest earthquakes?	Japan	Chile	Italy	Iceland
 geo_roughly_hot_highest	Medium	Roughly how hot is the highest air temperature ever officially recorded on Earth?	About 57 C	About 40 C	About 75 C	About 100 C
@@ -45,6 +46,7 @@ geo_mount_waialeale_rainiest	Medium	Mount Waialeale, one of the rainiest spots o
 geo_philippine_volcano_1991	Medium	Which Philippine volcano's 1991 eruption cooled the whole planet by about half a degree?	Pinatubo	Mayon	Taal	Krakatoa
 geo_deadliest_earthquake_record	Medium	The deadliest earthquake on record killed over 800,000 people in 1556. Where did it strike?	China	Japan	Persia	Italy
 geo_state_earthquakes	Medium	Which US state has the most earthquakes?	Alaska	California	Hawaii	Nevada
+geo_roughly_world_average	Medium	Roughly how much has the world's average temperature risen since the late 1800s?	About 1.2 C	About 0.1 C	About 5 C	About 12 C
 geo3_san_andreas	Hard	Which two tectonic plates grind past each other along California's San Andreas Fault?	The Pacific and North American plates	The Nazca and South American plates	The Eurasian and African plates	The Indian and Australian plates
 geox_tornado	Hard	Which part of the USA is nicknamed 'Tornado Alley'?	The Great Plains	New England	The Pacific Northwest	Florida
 geoy_islandia_plyty	Hard	Which country sits on the boundary between the North American and Eurasian plates?	Iceland	Ireland	Norway	Greenland
@@ -66,6 +68,7 @@ geo_roughly_fast_strongest	Hard	Roughly how fast were the strongest winds ever m
 geo_ancient_southern_supercontinent	Hard	Which ancient southern supercontinent joined South America, Africa, India, Antarctica and Australia?	Gondwana	Laurasia	Avalonia	Baltica
 geo_year_mount_vesuvius	Hard	In which year did Mount Vesuvius last erupt?	1944	1631	1872	1906
 geo_often_coldest_big	Hard	Which is often called the coldest big city in the world, with January averages near -40 C?	Yakutsk	Norilsk	Ulaanbaatar	Fairbanks
+geo_country_holds_record	Hard	Which country holds the record for the lowest temperature ever measured in the inhabited world, in Siberia?	Russia	Canada	Mongolia	Kazakhstan
 geo3_strefa_ryftowa	Expert	What is the Great East African Rift?	A zone where continental plates are tearing apart	A chain of volcanoes that went extinct long ago	A desert where no river reaches the sea	A region where the ground never thaws
 geo3_wyspa_wulkaniczna_powstawanie	Expert	How do volcanic island chains like Hawaii most often form?	A plate moves over a stationary hot spot in the mantle	Through a collision of two continents	Through subduction of one plate under another only	Through coastal erosion
 dpt_geo_pierscien_ognia	Expert	What is the Ring of Fire?	A belt of volcanoes round the Pacific	A chain of deserts along the tropics	A band of storms over the equator	A line of reefs in the Indian Ocean

@@ -16,6 +16,15 @@ geo_country_sunny_algarve	Easy	In which country is the sunny Algarve coast?	Port
 geo_two_countries_share	Easy	Which two countries share the island of Ireland?	Ireland and the UK	Ireland and Scotland	Ireland and Wales	Ireland and Iceland
 geo_greek_island_white	Easy	Which Greek island is famous for white houses with blue domes and sunsets at Oia?	Santorini	Mykonos	Crete	Corfu
 geo_spanish_island_world	Easy	Which Spanish island is world-famous for its nightclubs?	Ibiza	Mallorca	Tenerife	Menorca
+geo_country_amalfi_coast	Easy	In which country is the Amalfi Coast?	Italy	Spain	Greece	Croatia
+geo_country_cliffs_moher	Easy	In which country are the Cliffs of Moher?	Ireland	Scotland	Wales	England
+geo_mediterranean_island_split	Easy	Which Mediterranean island has been split since 1974 between a Greek south and a Turkish-held north?	Cyprus	Crete	Rhodes	Malta
+geo_hawaiian_island_waikiki	Easy	On which Hawaiian island is Waikiki Beach?	Oahu	Maui	Kauai	The Big Island
+geo_twelve_apostles_giant	Easy	The Twelve Apostles, giant rock stacks off the Great Ocean Road, stand off which country's coast?	Australia	New Zealand	South Africa	Ireland
+geo_coastline_french_riviera	Easy	Which coastline is also known as the French Riviera?	The Cote d'Azur	The Cote d'Argent	The Costa Brava	The Cote d'Opale
+geo_big_sur_famously	Easy	Big Sur, a famously rugged stretch of coastline, is in which US state?	California	Oregon	Washington	Maine
+geo_cancun_merida_lie	Easy	Cancun and Merida lie on which peninsula?	The Yucatan	Baja California	Florida	The Osa Peninsula
+geo_largest_canary_islands	Easy	Which is the largest of the Canary Islands?	Tenerife	Gran Canaria	Lanzarote	Fuerteventura
 geo2_morze_srodziemne_wyspa	Medium	Which Mediterranean island is the largest?	Sicily	Sardinia	Cyprus	Corsica
 geocmp_wyspa_druga	Medium	Which of these islands is the largest?	Borneo	Madagascar	Sumatra	Honshu
 lmk_galapagos_kraj	Medium	The Galapagos Islands belong to which country?	Ecuador	Peru	Colombia	Chile
@@ -38,6 +47,21 @@ geo_skeleton_coast_littered	Medium	The 'Skeleton Coast', littered with shipwreck
 geo_italian_island_blue	Medium	On which Italian island is the famous Blue Grotto?	Capri	Sicily	Sardinia	Elba
 geo_portuguese_island_cristiano	Medium	On which Portuguese island was Cristiano Ronaldo born?	Madeira	Sao Miguel	Porto Santo	Terceira
 geo_thailand_largest_island	Medium	Which is Thailand's largest island and a famous beach destination?	Phuket	Koh Samui	Koh Phangan	Koh Lanta
+geo_peninsula_forms_mainland	Medium	Which peninsula forms mainland Denmark?	Jutland	Scania	Zealand	Holstein
+geo_village_traditionally_said	Medium	Which village is traditionally said to lie at the opposite end of mainland Britain from Land's End?	John o' Groats	Dunnet Head	Cape Wrath	Thurso
+geo_jeju_volcanic_holiday	Medium	Jeju, a volcanic holiday island, belongs to which country?	South Korea	Japan	China	Taiwan
+geo_peninsula_forms_southern	Medium	Which peninsula forms the southern part of mainland Greece?	The Peloponnese	Chalkidiki	Attica	Epirus
+geo_mainland_europe_westernmost	Medium	Mainland Europe's westernmost point is a cape in which country?	Portugal	Spain	France	Ireland
+geo_russian_peninsula_packed	Medium	Which Russian peninsula is packed with active volcanoes and brown bears?	Kamchatka	Kola	Taimyr	Yamal
+geo_england_jurassic_coast	Medium	England's 'Jurassic Coast' is famous for what?	Dinosaur-age fossils	Smugglers' caves	Chalk hill figures	Roman tin mines
+geo_roughly_islands_make	Medium	Roughly how many islands make up the Maldives?	About 1,200	About 12	About 120	About 12,000
+geo_despite_new_zealand	Medium	Despite its name, New Zealand's Milford Sound is actually what?	A fjord	A river delta	A volcanic crater	A coral lagoon
+geo_fjord_like_bay	Medium	The fjord-like Bay of Kotor is in which country?	Montenegro	Croatia	Albania	Slovenia
+geo_giant_surfing_waves	Medium	The giant surfing waves of Nazare break off which country's coast?	Portugal	Spain	France	Morocco
+geo_surtsey_island_born	Medium	Surtsey, an island born from the sea in a 1963 eruption, lies off which country?	Iceland	Japan	Tonga	Portugal
+geo_thousand_islands_gave	Medium	The Thousand Islands, which gave a salad dressing its name, lie in which river?	The St. Lawrence	The Hudson	The Mississippi	The Niagara
+geo_island_china_southernmost	Medium	Which island, China's southernmost province, is nicknamed 'China's Hawaii'?	Hainan	Taiwan	Hong Kong Island	Zhoushan
+geo_island_home_more	Medium	Which island is home to more than half of Japan's people?	Honshu	Hokkaido	Kyushu	Shikoku
 geo2_wyspa_borneo	Hard	Between how many countries is the island of Borneo divided?	Three	Two	Four	One
 geo2_najwiekszy_archipelag	Hard	Which country is the largest island nation in the world?	Indonesia	The Philippines	Japan	Madagascar
 geocmp_linia_brzegowa	Hard	Which country has the longest coastline?	Canada	Russia	Indonesia	Australia
@@ -49,6 +73,19 @@ geo_second_largest_island	Hard	Which is the second-largest island in the world?	
 geo_populous_island_world	Hard	Which is the most populous island in the world, home to over half of Indonesia's people?	Java	Sumatra	Borneo	Bali
 geo_island_zanzibar_belongs	Hard	The island of Zanzibar belongs to which country?	Tanzania	Kenya	Mozambique	Madagascar
 geo_island_country_once	Hard	Which island country was once called Formosa?	Taiwan	Sri Lanka	The Philippines	Japan
+geo_bikini_atoll_scene	Hard	Bikini Atoll, scene of US nuclear tests, belongs to which country today?	The Marshall Islands	The Solomon Islands	The Cook Islands	Palau
+geo_roughly_islands_make_2	Hard	Roughly how many islands make up Indonesia?	About 17,000	About 1,700	About 170	About 170,000
+geo_youngest_main_hawaiian	Hard	Which is the youngest of the main Hawaiian islands, still growing from fresh lava?	The Big Island	Maui	Oahu	Kauai
+geo_socotra_home_umbrella	Hard	Socotra, home of the umbrella-shaped dragon's blood tree, belongs to which country?	Yemen	Oman	Somalia	Eritrea
+geo_north_sentinel_island	Hard	North Sentinel Island, home of one of the last uncontacted peoples, belongs to which country?	India	Myanmar	Indonesia	Sri Lanka
+geo_norway_longest_deepest	Hard	Which is Norway's longest and deepest fjord?	The Sognefjord	The Geirangerfjord	The Hardangerfjord	The Oslofjord
+geo_cox_bazar_often	Hard	Cox's Bazar, often called the longest natural sea beach in the world, is in which country?	Bangladesh	India	Myanmar	Sri Lanka
+geo_islands_largest_area	Hard	Which of these islands has the largest area?	Baffin Island	Sumatra	Honshu	Great Britain
+geo_island_chain_stretches	Hard	Which island chain stretches about 1,900 km west from Alaska towards Russia?	The Aleutian Islands	The Kuril Islands	The Pribilof Islands	The Commander Islands
+geo_largest_island_baltic	Hard	Which is the largest island in the Baltic Sea?	Gotland	Bornholm	Saaremaa	Oland
+geo_largest_island_philippines	Hard	Which is the largest island of the Philippines?	Luzon	Mindanao	Palawan	Cebu
+geo_northernmost_point_mainland_2	Hard	What is the northernmost point of mainland Australia?	Cape York	Cape Byron	Cape Leeuwin	Cape Otway
+geo_roughly_big_greenland	Hard	Roughly how big is Greenland compared with Britain?	About ten times bigger	About twice as big	About the same size	About thirty times bigger
 geo2_polwysep_najwiekszy	Expert	Which peninsula is the largest in the world?	The Arabian Peninsula	The Indian Peninsula	Scandinavia	The Balkan Peninsula
 geocmp_najwiecej_wysp	Expert	Which country is made up of the most islands?	Sweden	Indonesia	The Philippines	Japan
 dpt_geo_fiord	Expert	How does a fjord form?	Ice carves a valley, sea floods it	A coral reef closes off a bay	A landslide dams a river mouth	A desert river cuts a canyon
@@ -56,3 +93,10 @@ wld_japonia_wyspy	Expert	Roughly how many islands make up Japan?	Over 14,000	Abo
 geox_bouvet	Expert	Bouvet Island, often called the most remote island on Earth, belongs to which country?	Norway	Argentina	Britain	France
 geox_tristan	Expert	Which British territory in the South Atlantic is the most remote inhabited archipelago?	Tristan da Cunha	The Falkland Islands	Saint Helena	Ascension Island
 geox_nauru	Expert	Which Pacific island nation is the smallest republic in the world?	Nauru	Tuvalu	Palau	Kiribati
+geo_coral_atoll_largest	Expert	Which coral atoll has the largest land area in the world?	Kiritimati	Bikini Atoll	Aldabra	Kwajalein
+geo_roughly_islands_islets	Expert	Roughly how many islands and islets does Greece have?	About 6,000	About 60	About 600	About 60,000
+geo_remote_kerguelen_islands	Expert	The remote Kerguelen Islands, nicknamed the 'Desolation Islands', belong to which country?	France	Norway	Britain	Australia
+geo_remote_scottish_archipelago	Expert	Which remote Scottish archipelago was abandoned by its last islanders in 1930?	St Kilda	Fair Isle	Foula	Rockall
+geo_greek_island_group	Expert	Which Greek island group is named after the circle it forms around sacred Delos?	The Cyclades	The Dodecanese	The Sporades	The Ionian Islands
+geo_new_zealand_ninety	Expert	New Zealand's 'Ninety Mile Beach' is really about how long?	About 55 miles	About 90 miles	About 150 miles	About 20 miles
+geo_marajo_river_island	Expert	Marajo, a river island about the size of Switzerland, lies at the mouth of which river?	The Amazon	The Orinoco	The Parana	The Congo

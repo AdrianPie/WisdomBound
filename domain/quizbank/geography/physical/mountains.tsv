@@ -5,6 +5,14 @@ lmk_gory_ameryka_pn	Easy	Which mountain range runs down the west of North Americ
 geo_pireneje	Easy	Which mountain range lies along the border between France and Spain?	The Pyrenees	The Alps	The Apennines	The Carpathians
 geox_everest_wysokosc	Easy	Roughly how tall is Mount Everest?	About 8,850 m	About 5,000 m	About 12,000 m	About 3,500 m
 geox_fuji	Easy	Which snow-capped volcano is the highest mountain in Japan?	Mount Fuji	Mount Aso	Mount Unzen	Mount Kita
+geo_mountains_home_ski	Easy	Which mountains are home to the ski resorts of St. Moritz, Chamonix and Kitzbuhel?	The Alps	The Pyrenees	The Carpathians	The Apennines
+geo_country_dolomites_pale	Easy	In which country are the Dolomites, famous for their pale jagged peaks?	Italy	Austria	Switzerland	Slovenia
+geo_highest_mountain_greece	Easy	Which is the highest mountain in Greece?	Mount Olympus	Mount Parnassus	Mount Athos	Mount Ida
+geo_mountain_range_runs_2	Easy	Which mountain range runs from Alabama up into eastern Canada?	The Appalachians	The Rockies	The Ozarks	The Cascades
+geo_chamonix_mountaineering_town	Easy	Chamonix, the famous mountaineering town, is in which country?	France	Switzerland	Italy	Austria
+geo_roughly_deep_grand	Easy	Roughly how deep is the Grand Canyon?	About 1.8 km	About 300 m	About 600 m	About 5 km
+geo_kind_mountain_kilimanjaro	Easy	What kind of mountain is Kilimanjaro?	A dormant volcano	A block of folded rock	A granite dome	An ancient coral reef
+geo_highest_mountain_wales	Easy	Which is the highest mountain in Wales?	Snowdon	Ben Nevis	Scafell Pike	Pen y Fan
 geo_everest	Medium	In which mountain range is Mount Everest?	Himalayas	Andes	Alps	Caucasus
 geo_wulkan_wl	Medium	What is the name of the famous volcano near Naples?	Vesuvius	Etna	Stromboli	Krakatoa
 geo2_gory_ameryka_pd	Medium	What is the longest mountain range in South America called?	The Andes	The Cordilleras	The Appalachians	The Sierra Nevada
@@ -28,6 +36,28 @@ geo_mountain_range_runs	Medium	Which mountain range runs down the length of Ital
 geo_mountain_range_curves	Medium	Which mountain range curves through Slovakia, Ukraine and Romania?	Carpathians	Balkans	Dinaric Alps	Sudetes
 geo_highest_mountain_spain	Medium	What is the highest mountain in Spain?	Teide	Mulhacen	Aneto	Monte Perdido
 geo_granite_peak_mouth	Medium	Which granite peak at the mouth of Rio's bay is reached by cable car?	Sugarloaf Mountain	Corcovado	Table Mountain	Mount Roraima
+geo_roughly_tall_scotland	Medium	Roughly how tall is Scotland's Ben Nevis?	About 1,350 m	About 600 m	About 2,500 m	About 4,000 m
+geo_active_volcano_looms	Medium	Which active volcano looms over Mexico City?	Popocatepetl	Paricutin	Pico de Orizaba	Colima
+geo_hawaiian_volcano_erupting	Medium	Which Hawaiian volcano has been erupting on and off almost constantly for decades?	Kilauea	Mauna Kea	Haleakala	Diamond Head
+geo_arthur_seat_hill	Medium	What is Arthur's Seat, the hill overlooking Edinburgh?	An extinct volcano	A Roman lookout tower	A medieval royal throne	A glacier-cut granite tor
+geo_mountain_range_forms	Medium	Which mountain range forms the spine of New Zealand's southern island?	The Southern Alps	The Great Dividing Range	The Blue Mountains	The Snowy Mountains
+geo_longest_mountain_range	Medium	Which is the longest mountain range in Australia?	The Great Dividing Range	The Flinders Ranges	The MacDonnell Ranges	The Snowy Mountains
+geo_mountain_range_dominates	Medium	Which mountain range dominates Afghanistan?	The Hindu Kush	The Pamirs	The Zagros	The Tian Shan
+geo_state_bryce_canyon	Medium	In which US state is Bryce Canyon, famous for its rock spires called hoodoos?	Utah	Arizona	Nevada	Colorado
+geo_european_volcanoes_highest	Medium	Which of these European volcanoes is the highest?	Mount Etna	Vesuvius	Hekla	Stromboli
+geo_highest_mountain_new	Medium	Which is the highest mountain in New Zealand?	Aoraki / Mount Cook	Mount Ruapehu	Mount Taranaki	Mount Tongariro
+geo_lies_border_pakistan	Medium	K2 lies on the border of Pakistan and which other country?	China	Afghanistan	Tajikistan	Nepal
+geo_country_home_eight	Medium	Which country is home to eight of the world's ten highest mountains?	Nepal	Pakistan	China	India
+geo_roughly_long_andes	Medium	Roughly how long are the Andes?	About 7,000 km	About 2,000 km	About 15,000 km	About 900 km
+geo_across_countries_alps	Medium	Across how many countries do the Alps stretch?	Eight	Three	Five	Twelve
+geo_above_roughly_altitude	Medium	Above roughly what altitude do climbers enter the 'death zone'?	About 8,000 m	About 5,000 m	About 3,000 m	About 12,000 m
+geo_alpine_peak_north	Medium	Which Alpine peak's north face is nicknamed 'the Murder Wall'?	The Eiger	The Matterhorn	Mont Blanc	The Jungfrau
+geo_italian_volcano_lighthouse	Medium	Which Italian volcano, 'the Lighthouse of the Mediterranean', erupts every few minutes?	Stromboli	Etna	Vulcano	Vesuvius
+geo_workers_cover_parts	Medium	Why do workers cover parts of Switzerland's Rhone Glacier with white blankets each summer?	To slow down its melting	To protect hikers from crevasses	To keep the ice clean for tourists	To stop rocks falling onto it
+geo_khumbu_icefall_deadly	Medium	The Khumbu Icefall is a deadly obstacle on the way up which mountain?	Mount Everest	K2	Annapurna	Kangchenjunga
+geo_glacier_covered_volcano	Medium	Which glacier-covered volcano towers over Seattle?	Mount Rainier	Mount St. Helens	Mount Hood	Mount Shasta
+geo_country_franz_josef	Medium	Which country's Franz Josef Glacier flows down almost into a rainforest?	New Zealand	Austria	Canada	Chile
+geo_roughly_mountains_earth	Medium	Roughly how many mountains on Earth rise above 8,000 m?	14	5	40	120
 geo_kilimandzaro	Hard	In which country is Mount Kilimanjaro?	Tanzania	Kenya	Ethiopia	Uganda
 geo_aconcagua	Hard	The highest peak in South America is...	Aconcagua	Chimborazo	Huascaran	Ojos del Salado
 geocmp_nie_alpy	Hard	Which of these countries does NOT have Alpine territory?	Czechia	Austria	Switzerland	Slovenia
@@ -38,6 +68,34 @@ geox_everest_nazwa	Hard	Mount Everest is named after whom?	A British surveyor	A 
 geo_mountain_highest_turkey	Hard	Which mountain, the highest in Turkey, is linked in legend with Noah's Ark?	Mount Ararat	Mount Sinai	Mount Olympus	Mount Elbrus
 geo_spain_highest_mountain	Hard	Spain's highest mountain is a volcano on which island?	Tenerife	Mallorca	Gran Canaria	Ibiza
 geo_highest_mountain_germany	Hard	Which is the highest mountain in Germany?	The Zugspitze	The Brocken	The Feldberg	The Watzmann
+geo_mount_fuji_last	Hard	Mount Fuji last erupted roughly how long ago?	About 300 years ago	About 30 years ago	About 3,000 years ago	About 30,000 years ago
+geo_nepalis_call_mount	Hard	What do Nepalis call Mount Everest?	Sagarmatha	Chomolungma	Kangchenjunga	Annapurna
+geo_third_highest_mountain	Hard	Which is the third-highest mountain on Earth?	Kangchenjunga	Lhotse	Makalu	Cho Oyu
+geo_highest_peak_contiguous	Hard	The highest peak in the contiguous US stands only about 135 km from the country's lowest point. Which peak?	Mount Whitney	Mount Rainier	Mount Elbert	Mount Shasta
+geo_icelandic_volcano_middle	Hard	Which Icelandic volcano was known in the Middle Ages as the 'Gateway to Hell'?	Hekla	Katla	Laki	Askja
+geo_highest_volcano_earth	Hard	Which is the highest volcano on Earth?	Ojos del Salado	Kilimanjaro	Cotopaxi	Mount Fuji
+geo_rocks_bottom_grand	Hard	Rocks at the bottom of the Grand Canyon are roughly how old?	About 1.8 billion years	About 2 million years	About 200 million years	About 20,000 years
+geo_africa_largest_canyon	Hard	Africa's largest canyon, the Fish River Canyon, is in which country?	Namibia	South Africa	Botswana	Ethiopia
+geo_largest_glacier_alps	Hard	Which is the largest glacier in the Alps?	The Aletsch Glacier	The Mer de Glace	The Pasterze	The Rhone Glacier
+geo_second_highest_mountain	Hard	Which is the second-highest mountain in Africa?	Mount Kenya	Mount Stanley	Mount Meru	Ras Dashen
+geo_sacred_mountain_holy	Hard	Which sacred mountain, holy to four religions, has never been climbed?	Mount Kailash	Mount Sinai	Mount Fuji	Mount Ararat
+geo_went_wrong_ascent	Hard	What went wrong on the first ascent of the Matterhorn in 1865?	Four climbers fell to their deaths	A storm trapped them for a week	They climbed the wrong summit	Their guides abandoned them
+geo_highest_mountain_canada	Hard	Which is the highest mountain in Canada?	Mount Logan	Mount Robson	Mount Waddington	Mount Assiniboine
+geo_highest_mountain_austria	Hard	Which is the highest mountain in Austria?	The Grossglockner	The Zugspitze	The Wildspitze	The Dachstein
+geo_siachen_glacier_often	Hard	The Siachen Glacier, often called the world's highest battlefield, is disputed by India and which country?	Pakistan	China	Nepal	Bhutan
+geo_highest_mountain_peru	Hard	Which is the highest mountain in Peru?	Huascaran	Chimborazo	Aconcagua	El Misti
+geo_antelope_canyon_slot	Hard	Antelope Canyon, the famous slot canyon, lies on the land of which Native American nation?	The Navajo	The Apache	The Cherokee	The Sioux
+geo_japan_second_highest	Hard	Which is Japan's second-highest mountain, after Fuji?	Mount Kita	Mount Yari	Mount Hotaka	Mount Tate
+geo_highest_mountain_iran	Hard	Which is the highest mountain in Iran?	Mount Damavand	Mount Sabalan	Alam-Kuh	Mount Taftan
 geo2_najwiecej_wulkanow	Expert	Which country has the most active volcanoes?	Indonesia	Japan	Chile	USA
 dpt_geo_chimborazo	Expert	Whose summit lies farthest from the Earth's centre?	Chimborazo	Everest	Denali	Kilimanjaro
 geox_colca	Expert	Which canyon in Peru is about twice as deep as the Grand Canyon?	The Colca Canyon	The Copper Canyon	The Fish River Canyon	Tiger Leaping Gorge
+geo_southernmost_active_volcano	Expert	Which is the southernmost active volcano on Earth?	Mount Erebus	Deception Island	Mount Terror	Mount Melbourne
+geo_often_deepest_canyon	Expert	Which is often called the deepest canyon on Earth?	The Yarlung Tsangpo Canyon	The Colca Canyon	The Grand Canyon	The Fish River Canyon
+geo_sweden_highest_point	Expert	Why did Sweden's highest point move to a different peak in 2019?	The glacier on the old summit melted	An earthquake raised the other peak	Surveyors found an error in old maps	A rockfall knocked the old top off
+geo_highest_mountain_switzerland	Expert	Which is the highest mountain in Switzerland?	The Dufourspitze	The Matterhorn	The Jungfrau	The Eiger
+geo_highest_mountain_island	Expert	Which is the highest mountain on the island of New Guinea?	Puncak Jaya	Mount Wilhelm	Mount Giluwe	Puncak Trikora
+geo_portugal_highest_mountain	Expert	Portugal's highest mountain is a volcano on which island?	Pico	Madeira	Sao Miguel	Terceira
+geo_highest_mountain_world	Expert	Which is the highest mountain in the world that has never been climbed?	Gangkhar Puensum	Mount Kailash	Namcha Barwa	Saltoro Kangri
+geo_volcano_highest_mountain	Expert	Which volcano is the highest mountain in Mexico?	Pico de Orizaba	Popocatepetl	Iztaccihuatl	Nevado de Toluca
+geo_supervolcano_lies_beneath	Expert	Which supervolcano lies beneath the western suburbs of Naples?	Campi Flegrei	Vesuvius	Vulcano	Ischia

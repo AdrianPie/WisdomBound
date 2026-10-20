@@ -12,6 +12,12 @@ geox_loch_ness	Easy	In which country is Loch Ness, home of the legendary monster
 geo_country_lake_como	Easy	In which country is Lake Como?	Italy	Switzerland	France	Austria
 geo_river_sacred_hindus	Easy	Which river is sacred to Hindus?	The Ganges	The Indus	The Mekong	The Brahmaputra
 geo_chinese_dam_world	Easy	Which Chinese dam is the world's biggest power station?	Three Gorges Dam	Hoover Dam	Itaipu Dam	Aswan High Dam
+geo_sea_danube_flow	Easy	Into which sea does the Danube flow?	The Black Sea	The Adriatic Sea	The North Sea	The Baltic Sea
+geo_river_flows_down	Easy	Which river flows down the west side of Manhattan?	The Hudson	The Potomac	The Delaware	The Charles
+geo_lake_geneva_shared	Easy	Lake Geneva is shared by Switzerland and which other country?	France	Italy	Germany	Austria
+geo_unusual_lake_hillier	Easy	What is unusual about Lake Hillier in Western Australia?	Its water is bright pink	Its water is nearly boiling	It is full of stingless jellyfish	It vanishes underground each winter
+geo_great_river_reaches	Easy	Which great river reaches the sea at Shanghai?	The Yangtze	The Yellow River	The Pearl River	The Mekong
+geo_ocean_siberia_great	Easy	Into which ocean do Siberia's great rivers, the Ob, Yenisei and Lena, flow?	The Arctic Ocean	The Pacific Ocean	The Indian Ocean	The Atlantic Ocean
 geo2_wodospad_wiktorii	Medium	Victoria Falls lies on the border of which two countries?	Zambia and Zimbabwe	Kenya and Tanzania	South Africa and Botswana	Uganda and Rwanda
 wh_mezopotamia_rzeki	Medium	Between which rivers did Mesopotamia lie?	The Euphrates and the Tigris	The Nile and the Jordan	The Indus and the Ganges	The Danube and the Rhine
 geocmp_najbardziej_slone	Medium	Which of these bodies of water is the saltiest?	The Dead Sea	The Red Sea	The Mediterranean Sea	The Baltic Sea
@@ -51,6 +57,27 @@ geo_river_flows_through_14	Medium	Which river flows through Seoul?	Han	Yalu	Meko
 geo_river_hoover_dam	Medium	On which river was the Hoover Dam built?	Colorado	Columbia	Missouri	Rio Grande
 geo_largest_loch_scotland	Medium	What is the largest loch in Scotland by area?	Loch Lomond	Loch Ness	Loch Tay	Loch Awe
 geo_country_danube_begin	Medium	In which country does the Danube begin?	Germany	Austria	Switzerland	Hungary
+geo_roughly_long_river	Medium	Roughly how long is the River Thames?	About 350 km	About 100 km	About 900 km	About 2,000 km
+geo_river_taj_mahal	Medium	On which river does the Taj Mahal stand?	The Yamuna	The Ganges	The Indus	The Brahmaputra
+geo_body_water_volga	Medium	Into which body of water does the Volga flow?	The Caspian Sea	The Black Sea	The Baltic Sea	The White Sea
+geo_lake_tahoe_straddles	Medium	Lake Tahoe straddles California and which other US state?	Nevada	Oregon	Arizona	Utah
+geo_african_lake_shrunk	Medium	Which African lake has shrunk by about 90% since the 1960s?	Lake Chad	Lake Victoria	Lake Turkana	Lake Malawi
+geo_roughly_tall_horseshoe	Medium	Roughly how tall are the Horseshoe Falls at Niagara?	About 50 m	About 15 m	About 150 m	About 400 m
+geo_thanks_depth_loch	Medium	Thanks to its depth, Loch Ness holds more fresh water than all the lakes of which countries combined?	England and Wales	Sweden and Norway	Switzerland and Austria	Finland and Estonia
+geo_mosi_tunya_local	Medium	What does Mosi-oa-Tunya, the local name for Victoria Falls, mean?	The Smoke That Thunders	The River of Life	The Gate of the Gods	The Roaring Lion
+geo_second_longest_river	Medium	Which is the second-longest river in Africa?	The Congo	The Niger	The Zambezi	The Orange
+geo_river_flows_through_15	Medium	Which river flows through Washington, D.C.?	The Potomac	The Hudson	The Delaware	The Susquehanna
+geo_country_amazon_rise	Medium	In which country does the Amazon rise?	Peru	Brazil	Colombia	Bolivia
+geo_surface_dead_sea	Medium	The surface of the Dead Sea is dropping by roughly how much each year?	About 1 m	About 1 cm	About 10 m	About 10 cm
+geo_river_jordan_end	Medium	Where does the River Jordan end?	In the Dead Sea	In the Sea of Galilee	In the Mediterranean	In the Red Sea
+geo_floating_islands_uros	Medium	What are the floating islands of the Uros people on Lake Titicaca made of?	Totora reeds	Balsa logs	Floating pumice	Woven palm fronds
+geo_river_flows_through_16	Medium	Which river flows through Bangkok?	The Chao Phraya	The Mekong	The Irrawaddy	The Salween
+geo_angel_falls	Medium	Angel Falls is named after what?	An American bush pilot	A Spanish missionary	A legend of falling angels	The white shape of its spray
+geo_countries_border_caspian	Medium	How many countries border the Caspian Sea?	Five	Three	Four	Seven
+geo_city_blue_nile	Medium	In which city do the Blue Nile and the White Nile meet?	Khartoum	Cairo	Juba	Addis Ababa
+geo_reservoir_largest_united	Medium	Which reservoir, the largest in the United States, was created by the Hoover Dam?	Lake Mead	Lake Powell	Lake Havasu	Lake Tahoe
+geo_country_both_tigris	Medium	In which country do both the Tigris and the Euphrates rise?	Turkey	Iraq	Syria	Iran
+geo_roughly_world_fresh_2	Medium	Roughly how much of the world's fresh water is found in rivers and lakes?	Under 1%	About a quarter	About half	About 10%
 geo_bajkal	Hard	Which lake is the deepest in the world?	Baikal	Tanganyika	Caspian Sea	Superior
 geo2_jezioro_powierzchnia	Hard	Which lake has the largest surface area in the world?	The Caspian Sea	Lake Superior	Lake Baikal	Lake Victoria
 geo2_najwyzszy_wodospad	Hard	Which waterfall is the highest in the world?	Angel Falls	Niagara Falls	Iguazu Falls	Victoria Falls
@@ -80,6 +107,20 @@ geo_river_flows_through_8	Hard	Which river flows through Florence?	The Arno	The 
 geo_country_lake_bled	Hard	In which country is Lake Bled, with a church on its tiny island?	Slovenia	Austria	Croatia	Switzerland
 geo_largest_lake_entirely	Hard	Which is the largest lake entirely in Europe?	Lake Ladoga	Lake Geneva	Lake Constance	Lake Vanern
 geo_hungarian_lake_largest	Hard	Which Hungarian lake is the largest in Central Europe?	Lake Balaton	Lake Neusiedl	Lake Bled	Lake Ohrid
+geo_china_two_longest	Hard	China's two longest rivers both rise on which high plateau?	The Tibetan Plateau	The Deccan Plateau	The Mongolian Plateau	The Loess Plateau
+geo_longest_freshwater_lake	Hard	Which is the longest freshwater lake in the world?	Lake Tanganyika	Lake Baikal	Lake Malawi	Lake Victoria
+geo_african_lake_home	Hard	Which African lake is home to more species of fish than any other lake?	Lake Malawi	Lake Victoria	Lake Tanganyika	Lake Chad
+geo_aral_sea_lies	Hard	The Aral Sea lies on the border of Kazakhstan and which other country?	Uzbekistan	Turkmenistan	Kyrgyzstan	Tajikistan
+geo_1900_engineers_reversed	Hard	In 1900, engineers reversed the flow of which city's river to keep sewage out of its drinking water?	Chicago	Detroit	Boston	Toronto
+geo_every_monsoon_season	Hard	Every monsoon season, the river draining Cambodia's great lake does what?	It reverses its flow	It dries up completely	It changes colour to red	It disappears underground
+geo_near_brazilian_city	Hard	Near which Brazilian city do the dark Rio Negro and the sandy Solimoes flow side by side without mixing?	Manaus	Belem	Porto Velho	Santarem
+geo_longest_river_british	Hard	Which is the longest river in the British Isles?	The Shannon	The Severn	The Thames	The Trent
+geo_lake_titicaca_often	Hard	Lake Titicaca, often called the highest navigable lake, lies at roughly what altitude?	About 3,800 m	About 2,000 m	About 6,000 m	About 900 m
+geo_roughly_tall_angel	Hard	Roughly how tall is Angel Falls?	About 980 m	About 100 m	About 400 m	About 2,500 m
+geo_1986_cameroon_lake	Hard	In 1986, Cameroon's Lake Nyos suddenly released a cloud of which gas, killing about 1,700 people?	Carbon dioxide	Chlorine	Sulphur dioxide	Methane
+geo_west_african_river	Hard	Which West African river rises near the Atlantic coast but flows inland, away from the sea?	The Niger	The Senegal	The Volta	The Gambia
+geo_roughly_surface_caspian	Hard	Roughly where is the surface of the Caspian Sea, compared with sea level?	About 28 m below sea level	About 28 m above sea level	About 400 m below sea level	About 1,000 m above sea level
+geo_cano_cristales_river	Hard	Cano Cristales, a river that turns red, yellow and green, is in which country?	Colombia	Peru	Venezuela	Ecuador
 geo_kraj_bez_rzek	Expert	Which of these countries has not a single permanent river?	Saudi Arabia	Mongolia	Kazakhstan	Iran
 geo_titicaca	Expert	Lake Titicaca lies on the border of which two countries?	Peru and Bolivia	Chile and Argentina	Ecuador and Colombia	Brazil and Paraguay
 geo2_kaldera_toba	Expert	Where is Lake Toba, formed by a giant caldera?	On Sumatra	On Java	In Japan	In New Zealand
@@ -88,3 +129,11 @@ geo3_delta_ganges	Expert	Which river delta is considered the largest in the worl
 lmk_okawango_kraj	Expert	In which country is the Okavango Delta?	Botswana	Namibia	Zambia	Angola
 mst_wyspa_w_jeziorze	Expert	Which country contains the largest island within a lake on an island?	Canada	Finland	Indonesia	New Zealand
 geo_kongo_rownik	Expert	Which great river crosses the equator twice?	The Congo	The Amazon	The Nile	The Niger
+geo_two_great_lakes	Expert	Which two Great Lakes are really one body of water at the same level?	Michigan and Huron	Erie and Ontario	Superior and Huron	Michigan and Superior
+geo_kazakh_lake_fresh	Expert	Which Kazakh lake is fresh at one end and salty at the other?	Lake Balkhash	Lake Issyk-Kul	The Aral Sea	Lake Zaysan
+geo_roughly_old_lake	Expert	Roughly how old is Lake Baikal, thought to be the oldest lake on Earth?	About 25 million years	About 10,000 years	About 500,000 years	About 500 million years
+geo_tanzanian_lake_alkaline	Expert	Which Tanzanian lake is so alkaline that it leaves dead birds looking like stone statues?	Lake Natron	Lake Manyara	Lake Eyasi	Lake Rukwa
+geo_utah_great_salt	Expert	Utah's Great Salt Lake is a shrunken remnant of which vast Ice Age lake?	Lake Bonneville	Lake Agassiz	Lake Missoula	Lake Lahontan
+geo_lake_source_mississippi	Expert	Which lake is the source of the Mississippi?	Lake Itasca	Lake Superior	Lake of the Woods	Lake Winnebago
+geo_chinese_river_world	Expert	Which Chinese river is famous for the world's biggest tidal bore, the 'Silver Dragon'?	The Qiantang	The Pearl River	The Huai	The Yellow River
+geo_largest_artificial_lake	Expert	Which is the largest artificial lake by surface area?	Lake Volta	Lake Kariba	Lake Nasser	Lake Mead

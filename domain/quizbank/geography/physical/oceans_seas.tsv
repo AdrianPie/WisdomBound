@@ -12,6 +12,14 @@ geo_ocean_madagascar	Easy	In which ocean is Madagascar?	Indian	Atlantic	Pacific	
 geo_ocean_iceland	Easy	In which ocean is Iceland?	Atlantic	Arctic	Pacific	Indian
 geo_sea_island_nation	Easy	In which sea is the island nation of Malta?	The Mediterranean	The Adriatic	The Aegean	The Black Sea
 geo_sea_nile_flow	Easy	Into which sea does the Nile flow?	The Mediterranean	The Red Sea	The Arabian Sea	The Indian Ocean
+geo_ocean_country	Easy	Which is the only ocean named after a country?	The Indian Ocean	The Atlantic Ocean	The Pacific Ocean	The Arctic Ocean
+geo_caribbean_sea_part	Easy	The Caribbean Sea is part of which ocean?	The Atlantic	The Pacific	The Indian Ocean	The Arctic Ocean
+geo_sea_separates_great	Easy	Which sea separates Great Britain from Ireland?	The Irish Sea	The Celtic Sea	The North Sea	The Norwegian Sea
+geo_huge_bay_frozen	Easy	Which huge bay, frozen for much of the year, cuts deep into northern Canada?	Hudson Bay	Baffin Bay	The Bay of Fundy	The Gulf of St. Lawrence
+geo_egypt_beach_resorts	Easy	Egypt's beach resorts of Sharm el-Sheikh and Hurghada face which sea?	The Red Sea	The Mediterranean	The Arabian Sea	The Dead Sea
+geo_sea_lies_between_3	Easy	Which sea lies between Korea and Japan?	The Sea of Japan	The Yellow Sea	The East China Sea	The Sea of Okhotsk
+geo_body_water_french	Easy	Which body of water do the French call 'La Manche', meaning 'the sleeve'?	The English Channel	The Bay of Biscay	The North Sea	The Strait of Dover
+geo_deepest_world_oceans	Easy	Which is the deepest of the world's oceans on average?	The Pacific	The Atlantic	The Indian Ocean	The Arctic Ocean
 geo2_kanal_sueski	Medium	Which seas does the Suez Canal connect?	The Mediterranean with the Red Sea	The Baltic with the North Sea	The Black Sea with the Aegean	The Pacific with the Atlantic
 geo2_kanal_panamski	Medium	Which oceans does the Panama Canal connect?	The Atlantic with the Pacific	The Pacific with the Indian Ocean	The Atlantic with the Arctic	The Indian with the Southern Ocean
 geo2_ciesnina_bering	Medium	What does the Bering Strait separate?	Asia from North America	Europe from Africa	Australia from Asia	Greenland from Canada
@@ -31,11 +39,63 @@ geo_bay_lies_between	Medium	Which bay lies between western France and northern S
 geo_narrow_strait_links	Medium	Which narrow strait links the Persian Gulf to the open ocean?	Strait of Hormuz	Bab-el-Mandeb	Strait of Malacca	Suez Canal
 geo_strait_between_malaysia	Medium	Which strait between Malaysia and Sumatra is one of the busiest shipping lanes?	Strait of Malacca	Strait of Hormuz	Sunda Strait	Torres Strait
 geo_largest_bay_world	Medium	Which is the largest bay in the world?	Bay of Bengal	Hudson Bay	Bay of Biscay	Gulf of Mexico
+geo_roughly_long_great	Medium	Roughly how long is the Great Barrier Reef?	About 2,300 km	About 300 km	About 800 km	About 7,000 km
+geo_bay_highest_tides	Medium	Which bay has the highest tides in the world, rising and falling up to 16 m?	The Bay of Fundy	The Bay of Bengal	Hudson Bay	The Bay of Biscay
+geo_helsinki_tallinn_saint	Medium	Helsinki, Tallinn and Saint Petersburg all stand on which gulf?	The Gulf of Finland	The Gulf of Bothnia	The Gulf of Riga	The Bay of Kiel
+geo_stretch_water_separates	Medium	Which stretch of water separates Madagascar from the mainland?	The Mozambique Channel	The Zanzibar Channel	The Gulf of Aden	The Bab-el-Mandeb
+geo_strait_separates_two	Medium	Which strait separates the two main islands of New Zealand?	Cook Strait	Bass Strait	Foveaux Strait	Torres Strait
+geo_strait_separates_mainland	Medium	Which strait separates mainland South America from the island of Tierra del Fuego?	The Strait of Magellan	The Drake Passage	The Beagle Channel	The Strait of Le Maire
+geo_roughly_far_cuba	Medium	Roughly how far is Cuba from Key West, Florida?	About 150 km	About 15 km	About 500 km	About 1,500 km
+geo_roughly_far_across	Medium	Roughly how far is it across the Strait of Dover, from England to France?	About 33 km	About 8 km	About 100 km	About 250 km
+geo_warmest_world_oceans	Medium	Which is the warmest of the world's oceans?	The Indian Ocean	The Pacific Ocean	The Atlantic Ocean	The Southern Ocean
+geo_point_nemo_remote	Medium	Point Nemo, the most remote spot in the ocean, is used as a graveyard for what?	Old spacecraft	Nuclear waste	Retired warships	Old oil rigs
+geo_mariana_trench_lies	Medium	The Mariana Trench lies close to which US island territory?	Guam	Hawaii	Puerto Rico	American Samoa
+geo_roughly_deep_ocean	Medium	Roughly how deep is the ocean on average?	About 3.7 km	About 500 m	About 11 km	About 1.5 km
+geo_somali_pirates_made	Medium	Somali pirates made which gulf notorious in the 2000s?	The Gulf of Aden	The Gulf of Oman	The Persian Gulf	The Gulf of Suez
+geo_sea_colour_silt	Medium	Which sea is named after the colour of the silt that Chinese rivers pour into it?	The Yellow Sea	The Red Sea	The Black Sea	The White Sea
+geo_sea_great_barrier	Medium	In which sea does the Great Barrier Reef lie?	The Coral Sea	The Tasman Sea	The Timor Sea	The Arafura Sea
+geo_sea_lies_between_4	Medium	Which sea lies between Sardinia, Sicily and the west coast of mainland Italy?	The Tyrrhenian Sea	The Ionian Sea	The Ligurian Sea	The Adriatic Sea
+geo_mumbai_karachi_both	Medium	Mumbai and Karachi both stand on which sea?	The Arabian Sea	The Bay of Bengal	The Red Sea	The Andaman Sea
+geo_sea_lies_between_5	Medium	Which sea lies between Vietnam, the Philippines and Borneo?	The South China Sea	The East China Sea	The Java Sea	The Philippine Sea
+geo_european_eels_swim	Medium	European eels swim thousands of kilometres to breed in which sea?	The Sargasso Sea	The Caribbean Sea	The Mediterranean	The Baltic Sea
+geo_country_great_blue	Medium	In which country is the Great Blue Hole, a giant underwater sinkhole?	Belize	The Bahamas	Mexico	Honduras
+geo_ocean_takes_titan	Medium	Which ocean takes its name from a Titan of Greek myth?	The Atlantic	The Pacific	The Indian Ocean	The Arctic Ocean
+geo_canal_across_northern	Medium	Which canal across northern Germany links the North Sea with the Baltic?	The Kiel Canal	The Gota Canal	The Main-Danube Canal	The Corinth Canal
+geo_great_pacific_garbage	Medium	The Great Pacific Garbage Patch floats roughly between California and where?	Hawaii	Japan	Alaska	New Zealand
+geo_sea_lies_off	Medium	Which sea lies off the west coast of Thailand and Myanmar?	The Andaman Sea	The Gulf of Thailand	The South China Sea	The Java Sea
+geo_roughly_wide_sea	Medium	Roughly how wide is the sea gap between Spain and Morocco at its narrowest?	About 14 km	About 3 km	About 45 km	About 120 km
+geo_roughly_share_world_3	Medium	Roughly what share of the world's water is salty sea water?	About 97%	About 70%	About 50%	About 85%
 geo3_prad_golfsztrom	Hard	What is the warm ocean current warming Western Europe called?	The Gulf Stream	The Humboldt Current	The Labrador Current	The California Current
 trv_sargassowe	Hard	Which sea has no coastline at all, being bounded only by ocean currents?	The Sargasso Sea	The Caspian Sea	The Coral Sea	The Tasman Sea
 lmk_bosfor_laczy	Hard	Which strait connects the Black Sea with the Sea of Marmara?	The Bosphorus	The Dardanelles	The Strait of Kerch	The Strait of Otranto
 dpt_geo_morze_tasmana	Hard	Which sea lies between Australia and New Zealand?	The Tasman Sea	The Coral Sea	The Timor Sea	The Arafura Sea
 geo_punkt_nemo	Hard	Point Nemo, the spot farthest from any land, lies in which ocean?	The Pacific	The Atlantic	The Indian Ocean	The Arctic Ocean
+geo_seas_largest	Hard	Which of these seas is the largest?	The Philippine Sea	The Mediterranean	The Caribbean Sea	The North Sea
+geo_cold_current_flows	Hard	Which cold current flows north along the coasts of Chile and Peru?	The Humboldt Current	The Benguela Current	The California Current	The Canary Current
+geo_cold_current_carries	Hard	Which cold current carries Arctic icebergs south past Newfoundland?	The Labrador Current	The Humboldt Current	The Canary Current	The Benguela Current
+geo_largest_ocean_current	Hard	Which is the largest ocean current, carrying over 100 times the water of all rivers combined?	The Antarctic Circumpolar Current	The North Atlantic Current	The Kuroshio Current	The Gulf Stream
+geo_strait_between_yemen	Hard	Which strait between Yemen and Djibouti has a name meaning 'Gate of Grief'?	The Bab-el-Mandeb	The Strait of Hormuz	The Strait of Tiran	The Gulf of Suez
+geo_unlike_panama_canal	Hard	Unlike the Panama Canal, the Suez Canal has no what?	Locks	Bridges	Tolls	Lighthouses
+geo_narrow_canal_opened	Hard	Which narrow canal, opened in 1893, slices through an isthmus in Greece?	The Corinth Canal	The Kiel Canal	The Suez Canal	The Gota Canal
+geo_russian_arctic_port	Hard	Why does the Russian Arctic port of Murmansk stay free of ice all year?	Warm Atlantic water reaches it	Icebreakers work round the clock	Hot springs warm its harbour	Its water is too salty to freeze
+geo_sea_between_russia	Hard	Which sea, between Russia and Ukraine, is the shallowest in the world?	The Sea of Azov	The Sea of Marmara	The Caspian Sea	The White Sea
+geo_baltic_sea_far	Hard	Why is the Baltic Sea far less salty than the open ocean?	Many rivers pour fresh water into it	Melting glaciers flow into it each spring	Its cold water cannot hold much salt	It is fed by huge underground springs
+geo_ancient_shipwrecks_well	Hard	Why are ancient shipwrecks so well preserved deep in the Black Sea?	Its deep water has no oxygen	Its deep water is nearly frozen	Its seabed is coated in salt	Its currents bury them in sand
+geo_roughly_wide_bering	Hard	Roughly how wide is the Bering Strait at its narrowest?	About 82 km	About 15 km	About 300 km	About 900 km
+geo_roughly_deep_north	Hard	Roughly how deep is the North Sea on average?	About 95 m	About 950 m	About 10 m	About 3 km
+geo_bottom_mariana_trench	Hard	At the bottom of the Mariana Trench, water pressure is roughly how many times that at the surface?	About 1,000 times	About 10 times	About 100 times	About 10,000 times
+geo_moskstraumen_whirlpool_behind	Hard	The Moskstraumen, the whirlpool behind the word 'maelstrom', swirls off which country?	Norway	Scotland	Iceland	Japan
+geo_according_legend_sea	Hard	According to legend, the sea monsters Scylla and Charybdis guarded which strait?	The Strait of Messina	The Bosphorus	The Strait of Gibraltar	The Dardanelles
+geo_roughly_ocean_floor	Hard	Roughly how much of the ocean floor has been mapped in high detail?	About a quarter	Nearly all of it	About three quarters	Under 1%
 geo_row_marianski	Expert	What is the deepest point in the oceans called?	Challenger Deep	Tonga Trench	Java Trench	Milwaukee Deep
 geo_grzbiet_srodoceaniczny	Expert	Which is the longest mountain range on Earth?	The mid-ocean ridge	The Andes	The Himalayas	The Rocky Mountains
 geo_atlantyk_slony	Expert	Which ocean is the saltiest?	The Atlantic	The Pacific	The Indian Ocean	The Arctic Ocean
+geo_deepest_trench_atlantic	Expert	Which is the deepest trench in the Atlantic Ocean?	The Puerto Rico Trench	The South Sandwich Trench	The Romanche Trench	The Cayman Trough
+geo_trench_holds_second	Expert	Which trench holds the second-deepest point in the oceans?	The Tonga Trench	The Java Trench	The Peru-Chile Trench	The Puerto Rico Trench
+geo_million_years_ago	Expert	About 6 million years ago, what happened to the Mediterranean Sea?	It almost completely dried out	It froze over for thousands of years	It was twice as deep as today	It flooded most of the Sahara
+geo_ocean_receives_more	Expert	Which ocean receives more river water than any other?	The Atlantic	The Pacific	The Indian Ocean	The Arctic Ocean
+geo_warm_current_sweeps	Expert	Which warm current sweeps north past Japan, carrying tropical water into the North Pacific?	The Kuroshio	The Oyashio	The Humboldt Current	The Agulhas Current
+geo_sea_russian_port	Expert	On which sea does the Russian port of Arkhangelsk stand?	The White Sea	The Barents Sea	The Kara Sea	The Baltic Sea
+geo_roughly_wide_bosphorus	Expert	Roughly how wide is the Bosphorus at its narrowest?	About 700 m	About 7 km	About 70 m	About 25 km
+geo_roughly_high_locks	Expert	Roughly how high do the locks of the Panama Canal lift ships above sea level?	About 26 m	About 3 m	About 100 m	About 250 m
+geo_roughly_deep_deepest	Expert	Roughly how deep is the deepest point of the Indian Ocean, in the Java Trench?	About 7 km	About 2 km	About 11 km	About 4 km

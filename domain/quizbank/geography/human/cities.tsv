@@ -37,6 +37,14 @@ geo_near_city_walt	Easy	Near which US city is Walt Disney World?	Orlando	Miami	T
 geo_country_ancient_temples	Easy	In which country are the ancient temples of Bagan?	Myanmar	Thailand	Cambodia	Laos
 geo_european_capital_canals	Easy	Which European capital is famous for its canals, bicycles and narrow houses?	Amsterdam	Copenhagen	Bruges	Venice
 geo_asian_city_state	Easy	Which Asian city-state is famous for its 'Supertree' gardens by the bay?	Singapore	Hong Kong	Dubai	Macau
+geo_london_bridge_two	Easy	Which London bridge has two towers and a road that lifts up to let ships through?	Tower Bridge	London Bridge	Westminster Bridge	Millennium Bridge
+geo_city_nicknamed_city	Easy	Which US city is nicknamed 'the City of Angels'?	Los Angeles	San Francisco	Las Vegas	San Diego
+geo_city_home_ford	Easy	Which US city, home of Ford and General Motors, is nicknamed 'the Motor City'?	Detroit	Chicago	Cleveland	Pittsburgh
+geo_brazilian_city_means	Easy	Which Brazilian city's name means 'River of January'?	Rio de Janeiro	Sao Paulo	Salvador	Recife
+geo_city_harbour_bridge	Easy	Which city's harbour bridge is nicknamed 'the Coathanger'?	Sydney	Melbourne	Auckland	Hong Kong
+geo_scottish_city_hosts	Easy	Which Scottish city hosts the Fringe, the world's largest arts festival, every August?	Edinburgh	Glasgow	Aberdeen	Inverness
+geo_canada_largest_mainly	Easy	Which is Canada's largest mainly French-speaking city?	Montreal	Quebec City	Ottawa	Toronto
+geo_city_populous_european	Easy	Which city is the most populous in the European Union?	Berlin	Paris	Madrid	Rome
 wh_angkor_wat	Medium	In which country is the Angkor Wat temple complex located?	Cambodia	Thailand	Vietnam	India
 geocmp_miasto_azja	Medium	Which of these urban areas is the most populous?	Delhi	Bangkok	Seoul	Istanbul
 geocmp_najdalej_polnoc_nordyckie	Medium	Which of these cities lies furthest north?	Helsinki	Oslo	Stockholm	Copenhagen
@@ -101,6 +109,27 @@ geo_egyptian_city_lies	Medium	Which Egyptian city lies beside the Valley of the 
 geo_indian_city_india	Medium	Which Indian city is known as India's Silicon Valley?	Bengaluru	Hyderabad	Pune	Chennai
 geo_near_chinese_city	Medium	Near which Chinese city was the Terracotta Army discovered?	Xi'an	Beijing	Nanjing	Luoyang
 geo_argentine_city_calls	Medium	Which Argentine city calls itself 'the end of the world'?	Ushuaia	Punta Arenas	Rio Gallegos	Mar del Plata
+geo_florence_bridge_lined	Medium	Which Florence bridge is lined with jewellers' shops?	Ponte Vecchio	Rialto Bridge	Ponte Sisto	Ponte Milvio
+geo_according_legend_sighed	Medium	According to legend, who sighed on Venice's Bridge of Sighs?	Prisoners on their way to the cells	Lovers saying goodbye	Gondoliers at the end of the day	Merchants who had lost their ships
+geo_london_skyscraper_mary	Medium	London's skyscraper at 30 St Mary Axe is better known by which nickname?	The Gherkin	The Shard	The Walkie-Talkie	The Cheesegrater
+geo_chicago_sears_tower	Medium	What is Chicago's Sears Tower called today?	Willis Tower	Trump Tower	Aon Center	John Hancock Center
+geo_paris_landmark_meant	Medium	Which famous Paris landmark was meant to be temporary and nearly came down in 1909?	The Eiffel Tower	The Arc de Triomphe	Sacre-Coeur	The Louvre Pyramid
+geo_world_tallest_statue	Medium	The world's tallest statue, the Statue of Unity, stands in which country?	India	China	Japan	Brazil
+geo_world_longest_bridge	Medium	The world's longest bridge, a railway viaduct over 160 km long, is in which country?	China	Japan	The United States	Saudi Arabia
+geo_oresund_bridge_links	Medium	The Oresund Bridge links Copenhagen with which Swedish city?	Malmo	Gothenburg	Stockholm	Helsingborg
+geo_indian_city_waterfront	Medium	Which Indian city's waterfront is home to the Gateway of India arch?	Mumbai	Delhi	Kolkata	Chennai
+geo_country_meteora_monasteries	Medium	In which country are the Meteora monasteries, perched on top of huge rock pillars?	Greece	Bulgaria	Turkey	Armenia
+geo_city_home_scala	Medium	Which city is home to La Scala, one of the world's most famous opera houses?	Milan	Venice	Naples	Rome
+geo_italian_city_nicknamed	Medium	Which Italian city was nicknamed 'La Serenissima', the most serene?	Venice	Genoa	Florence	Naples
+geo_city_nicknamed_big	Medium	Which city is nicknamed 'the Big Smoke'?	London	Manchester	Birmingham	Glasgow
+geo_indian_city_nicknamed	Medium	Which Indian city is nicknamed 'the City of Joy'?	Kolkata	Mumbai	Chennai	Delhi
+geo_chinese_city_west	Medium	Which Chinese city was known in the West as Canton?	Guangzhou	Shanghai	Nanjing	Hong Kong
+geo_city_spanish_meadows	Medium	Which US city's name is Spanish for 'the meadows'?	Las Vegas	Los Angeles	San Antonio	El Paso
+geo_asian_city_means	Medium	Which Asian city's name means 'fragrant harbour'?	Hong Kong	Singapore	Shanghai	Macau
+geo_largest_city_pakistan	Medium	Which is the largest city in Pakistan?	Karachi	Lahore	Islamabad	Faisalabad
+geo_largest_city_nigeria	Medium	Which is the largest city in Nigeria?	Lagos	Kano	Abuja	Ibadan
+geo_largest_city_south	Medium	Which is the largest city in South Africa?	Johannesburg	Cape Town	Durban	Pretoria
+geo_highest_capital_city	Medium	Which is the highest capital city in Europe?	Andorra la Vella	Madrid	Bern	Vaduz
 wh_timbuktu	Hard	In which country is the historic city of Timbuktu?	Mali	Niger	Chad	Mauritania
 geocmp_najdalej_poludnie	Hard	Which of these cities lies furthest south?	Auckland	Sydney	Cape Town	Buenos Aires
 geocmp_stolica_najdalej_poludnie	Hard	Which of these capitals lies furthest south?	Wellington	Canberra	Santiago	Pretoria
@@ -112,5 +141,33 @@ geo_indian_city_golden	Hard	In which Indian city is the Golden Temple, the holie
 geo_city_giant_steel	Hard	In which US city is the giant steel Gateway Arch?	St. Louis	Chicago	Denver	Kansas City
 geo_moroccan_town_streets	Hard	Which Moroccan town is famous for its streets painted in shades of blue?	Chefchaouen	Marrakesh	Fez	Tangier
 geo_cities_lies_furthest	Hard	Which of these US cities lies furthest west?	Reno	Los Angeles	San Diego	Las Vegas
+geo_indian_city_hawa	Hard	In which Indian city is the Hawa Mahal, the 'Palace of the Winds'?	Jaipur	Jodhpur	Udaipur	Agra
+geo_city_potala_palace	Hard	In which city is the Potala Palace, the former home of the Dalai Lama?	Lhasa	Kathmandu	Thimphu	Shigatse
+geo_city_yerba_buena	Hard	Which US city was called Yerba Buena until 1847?	San Francisco	Los Angeles	San Diego	Sacramento
+geo_turkish_city_thousands	Hard	Which Turkish city was known for thousands of years as Smyrna?	Izmir	Antalya	Bursa	Trabzon
+geo_konigsberg_home_city	Hard	Konigsberg, the home city of the philosopher Kant, is now which Russian city?	Kaliningrad	Klaipeda	Pskov	Vyborg
+geo_german_city_nicknamed	Hard	Which German city is nicknamed 'Mainhattan' for its banking skyscrapers?	Frankfurt	Hamburg	Munich	Cologne
+geo_scottish_city_nicknamed	Hard	Which Scottish city is nicknamed 'Auld Reekie'?	Edinburgh	Glasgow	Aberdeen	Dundee
+geo_scottish_city_granite	Hard	Which Scottish city is known as 'the Granite City'?	Aberdeen	Dundee	Inverness	Glasgow
+geo_indian_city_blue	Hard	Which Indian city is known as 'the Blue City' for its blue-painted houses?	Jodhpur	Jaipur	Udaipur	Varanasi
+geo_city_nicknamed_emerald	Hard	Which US city is nicknamed 'the Emerald City'?	Seattle	Portland	Denver	Atlanta
+geo_ancient_town_near	Hard	Which ancient town near the Dead Sea, about 250 m below sea level, is the lowest city on Earth?	Jericho	Hebron	Bethlehem	Nablus
+geo_bulgarian_city_often	Hard	Which Bulgarian city is often called the oldest continuously inhabited city in Europe?	Plovdiv	Sofia	Varna	Veliko Tarnovo
+geo_millau_viaduct_pylons	Hard	The Millau Viaduct, whose pylons rise higher than the Eiffel Tower, is in which country?	France	Spain	Italy	Switzerland
+geo_country_sigiriya_ancient	Hard	In which country is Sigiriya, an ancient palace built on top of a giant rock?	Sri Lanka	India	Myanmar	Thailand
+geo_country_giant_roman	Hard	In which country are the giant Roman temples of Baalbek?	Lebanon	Syria	Jordan	Israel
+geo_country_tiger_nest	Hard	In which country is the Tiger's Nest monastery, clinging to a cliff face?	Bhutan	Nepal	India	Myanmar
+geo_largest_city_kazakhstan	Hard	Which is the largest city in Kazakhstan?	Almaty	Astana	Shymkent	Karaganda
+geo_northernmost_capital_sovereign	Hard	Which is the northernmost capital of a sovereign country?	Reykjavik	Oslo	Helsinki	Nuuk
 geocmp_najwyzej_polozona_stolica	Expert	Which of these is the highest-lying capital city?	La Paz	Quito	Bogota	Mexico City
 geo_baku	Expert	Which national capital lies below sea level?	Baku	Cairo	Tehran	Tashkent
+geo_israeli_city_white	Expert	Which Israeli city is called 'the White City' for its thousands of Bauhaus buildings?	Tel Aviv	Haifa	Eilat	Jerusalem
+geo_italian_city_nicknamed_2	Expert	Which Italian city is nicknamed 'the learned, the fat and the red'?	Bologna	Florence	Siena	Parma
+geo_yekaterinburg_soviet_times	Expert	What was Yekaterinburg called in Soviet times?	Sverdlovsk	Stalingrad	Kuibyshev	Gorky
+geo_east_german_city	Expert	Which East German city was called Karl-Marx-Stadt from 1953 to 1990?	Chemnitz	Leipzig	Dresden	Rostock
+geo_canadian_city_originally	Expert	Which Canadian city was originally called 'Pile o' Bones'?	Regina	Winnipeg	Calgary	Edmonton
+geo_australian_city_once	Expert	Which Australian city was once proposed to be called 'Batmania', after one of its founders?	Melbourne	Sydney	Brisbane	Adelaide
+geo_siberian_city_built	Expert	Which Siberian city, built by Gulag prisoners, is the northernmost city with over 100,000 people?	Norilsk	Murmansk	Yakutsk	Vorkuta
+geo_rinconada_gold_mining	Expert	La Rinconada, a gold-mining town over 5,000 m up and often called the world's highest, is in which country?	Peru	Bolivia	Nepal	Chile
+geo_bridge_set_new	Expert	The bridge that set a new record for the longest suspension span in 2022 crosses which strait?	The Dardanelles	The Bosphorus	The Strait of Messina	The Akashi Strait
+geo_country_ruins_leptis	Expert	In which country are the ruins of Leptis Magna, one of the best-preserved Roman cities?	Libya	Tunisia	Algeria	Morocco

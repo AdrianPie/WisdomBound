@@ -53,6 +53,7 @@ geo_hunter_gatherer_people	Medium	Which hunter-gatherer people, famous for their
 geo_unusual_places_mangrove	Medium	What is unusual about the places where mangrove trees grow?	They stand in salty tidal water	They grow only on bare rock	They need snow every winter	They grow only in caves
 geo_country_europe_tallest	Medium	In which country is Europe's tallest sand dune, the Dune of Pilat?	France	Spain	Portugal	Denmark
 geo_desert_giant_saguaro	Medium	In which desert does the giant saguaro cactus grow wild?	The Sonoran	The Mojave	The Chihuahuan	The Great Basin
+geo_counting_all_forest	Medium	Counting all forest types, which is the largest forest region on Earth?	The boreal forest of the north	The Amazon rainforest	The Congo rainforest	The forests of Borneo
 geo2_najsuchsze_miejsce	Hard	Which desert is regarded as the driest place on Earth?	The Atacama	The Sahara	The Gobi	The Namib
 geocmp_las_powierzchnia	Hard	Which country has the largest forest area?	Russia	Brazil	Canada	The United States
 lmk_masai_mara	Hard	In which country is the Maasai Mara reserve?	Kenya	Tanzania	Botswana	Namibia
@@ -86,6 +87,8 @@ geo_largest_national_park	Hard	Which is the largest national park in the world?	
 geo_mystery_racetrack_playa	Hard	What is the mystery of Racetrack Playa in Death Valley, solved only in 2014?	Rocks that slide across the ground	Sand that sings at night	Lights that dance in the air	Water that flows uphill
 geo_tongass_largest_national	Hard	The Tongass, the largest national forest in the USA, is in which state?	Alaska	Oregon	Washington	Montana
 geo_kakadu_national_park	Hard	Kakadu National Park is in which part of Australia?	Northern Territory	Queensland	Western Australia	Tasmania
+geo_roughly_share_world_2	Hard	Roughly what share of the world's forests grow in Russia?	About a fifth	About half	About 5%	About two thirds
+geo_roughly_big_sahara	Hard	Roughly how big is the Sahara?	About 9 million km2	About 1 million km2	About 30 million km2	About 3 million km2
 dpt_geo_sahel	Expert	What is the Sahel?	The dry belt south of the Sahara	The delta of the river Niger	The highlands of East Africa	The coastal plain of Namibia
 geo_largest_continuous_expanse	Expert	Which is the largest continuous expanse of sand on Earth?	Rub' al Khali	The Grand Erg Oriental	The Taklamakan	The Namib Sand Sea
 geo_chinese_desert_often	Expert	Which Chinese desert's name is often said to mean 'you go in, but you never come out'?	The Taklamakan	The Gobi	The Ordos	The Kumtag

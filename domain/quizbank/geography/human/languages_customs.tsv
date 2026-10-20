@@ -17,6 +17,15 @@ geo_country_rovaniemi_official	Easy	In which country is Rovaniemi, the official 
 geo_spanish_city_running	Easy	In which Spanish city does the Running of the Bulls take place?	Pamplona	Seville	Madrid	Valencia
 geo_country_hygge_way	Easy	Which country is famous for its 'hygge' way of cosy living?	Denmark	Sweden	Norway	Netherlands
 geo_country_invented_sauna	Easy	Which country invented the sauna?	Finland	Sweden	Russia	Norway
+geo_country_holi_festival	Easy	In which country is Holi, the festival of colours, mainly celebrated?	India	Thailand	Mexico	Brazil
+geo_country_thousands_people	Easy	In which country do thousands of people pelt each other with tomatoes at La Tomatina?	Spain	Italy	Mexico	Portugal
+geo_italian_city_carnival	Easy	Which Italian city's carnival is famous for its elaborate masks?	Venice	Rome	Milan	Naples
+geo_currency_russia	Easy	What is the currency of Russia?	The rouble	The hryvnia	The lev	The kuna
+geo_currency_mexico	Easy	What is the currency of Mexico?	The peso	The real	The sol	The colon
+geo_haka_ceremonial_war	Easy	The haka, a ceremonial war dance, comes from which people?	The Maori	The Samoans	The Aborigines	The Hawaiians
+geo_language_people_switzerland	Easy	Which language do most people in Switzerland speak?	German	French	Italian	Romansh
+geo_country_gives_london	Easy	Which country gives London the Christmas tree in Trafalgar Square every year?	Norway	Sweden	Denmark	Finland
+geo_date_patrick_day	Easy	On which date is St Patrick's Day celebrated?	17 March	1 March	23 April	30 November
 geo_angielski_mowiony	Medium	Counting native and second-language speakers, which language is spoken by the most people?	English	Spanish	Hindi	Arabic
 geo_jednorozec	Medium	Which country's national animal is the unicorn?	Scotland	Wales	Ireland	Norway
 geox_szwajcaria_jezyki	Medium	How many national languages does Switzerland have?	Four	Two	Three	Five
@@ -50,6 +59,55 @@ geo_word_mammoth_came	Medium	The word 'mammoth' came into English from which lan
 geo_word_avatar_comes	Medium	The word 'avatar' comes from which ancient language?	Sanskrit	Latin	Greek	Hebrew
 geo_word_slogan_comes	Medium	The word 'slogan' comes from a battle cry in which language?	Scottish Gaelic	Old Norse	Latin	Welsh
 geo_whisky_comes_gaelic	Medium	'Whisky' comes from a Gaelic phrase meaning what?	Water of life	Golden fire	Barley wine	Strong spirit
+geo_country_official_languages	Medium	Which country's official languages include Zulu, Xhosa and Afrikaans?	South Africa	Namibia	Zimbabwe	Kenya
+geo_afrikaans_grew_out	Medium	Afrikaans grew out of which European language?	Dutch	German	English	Portuguese
+geo_official_language_suriname	Medium	What is the official language of Suriname, in South America?	Dutch	English	Portuguese	French
+geo_south_american_country_5	Medium	In which South American country is English the official language?	Guyana	Suriname	Uruguay	Paraguay
+geo_luxembourg_three_official	Medium	Luxembourg's three official languages are Luxembourgish, French and what?	German	Dutch	English	Italian
+geo_country_living_languages	Medium	Which country has the most living languages, over 800 of them?	Papua New Guinea	India	Nigeria	Indonesia
+geo_tagalog_basis_country	Medium	Tagalog is the basis of which country's national language?	The Philippines	Indonesia	Malaysia	Thailand
+geo_japanese_written_chinese	Medium	Japanese is written with Chinese characters plus two syllabaries: hiragana and what?	Katakana	Hangul	Romaji	Furigana
+geo_word_ski_comes	Medium	The word 'ski' comes from which language?	Norwegian	German	Finnish	Russian
+geo_south_korea_currency	Medium	South Korea's currency shares its name with North Korea's. What is it called?	The won	The yuan	The yen	The rupiah
+geo_currency_brazil	Medium	What is the currency of Brazil?	The real	The peso	The cruzeiro	The escudo
+geo_country_became_make	Medium	Which country became the first to make Bitcoin legal tender, in 2021?	El Salvador	Venezuela	Argentina	Panama
+geo_songkran_new_year	Medium	Songkran, a New Year festival that turns into a giant water fight, belongs to which country?	Thailand	Vietnam	India	Indonesia
+geo_spain_grapes_people	Medium	In Spain, how many grapes do people eat at midnight on New Year's Eve?	Twelve	Seven	Ten	Three
+geo_country_leaving_tip	Medium	In which country is leaving a tip often seen as rude?	Japan	The United States	Egypt	Mexico
+geo_japan_number_unlucky	Medium	In Japan, which number is unlucky because it sounds like the word for 'death'?	Four	Thirteen	Seven	Eight
+geo_cinco_mayo_far	Medium	Cinco de Mayo is a far bigger party in which country than in Mexico itself?	The United States	Spain	Canada	Argentina
+geo_china_lunar_new	Medium	In China, what is the Lunar New Year usually called?	The Spring Festival	The Lantern Festival	The Moon Festival	The Dragon Boat Festival
+geo_person_liverpool	Medium	What is a person from Liverpool called?	A Scouser	A Geordie	A Brummie	A Mancunian
+geo_country_midsummer_celebration	Medium	Which country's Midsummer celebration is famous for dancing round a flower-covered pole?	Sweden	Spain	Italy	Greece
+geo_geordie_comes_english	Medium	A 'Geordie' comes from which English city?	Newcastle	Liverpool	Birmingham	Leeds
+geo_apart_israel_country	Medium	Apart from Israel, which country has the largest Jewish population?	The United States	France	Russia	Argentina
+geo_european_country_national	Medium	Which European country's national anthem has no official words?	Spain	Italy	Portugal	France
 geocmp_jezyk_ojczysty	Hard	Which language has the most native speakers?	Mandarin Chinese	English	Spanish	Hindi
 geo_ancient_language_unrelated	Hard	Which ancient language, unrelated to any other in Europe, is spoken in parts of Spain and France?	Basque	Catalan	Galician	Occitan
 geo_word_shampoo_comes	Hard	The word 'shampoo' comes from which language?	Hindi	Arabic	Persian	Malay
+geo_country_africa_spanish	Hard	Which is the only country in Africa with Spanish as an official language?	Equatorial Guinea	Sao Tome and Principe	Morocco	Cape Verde
+geo_country_official_language	Hard	Which country's only official language is Catalan?	Andorra	Spain	Monaco	Malta
+geo_paraguay_currency_indigenous	Hard	Paraguay's currency is named after which indigenous people, whose language most Paraguayans still speak?	Guarani	Quechua	Aymara	Maya
+geo_direction_traditional_mongolian	Hard	In which direction is the traditional Mongolian script written?	Top to bottom	Right to left	Bottom to top	In a spiral
+geo_silbo_gomero_whistled	Hard	Silbo Gomero, a whistled language, is used on an island belonging to which country?	Spain	Portugal	Greece	France
+geo_word_ketchup_likely	Hard	The word 'ketchup' most likely comes from which language?	Chinese	Hindi	Arabic	Portuguese
+geo_word_avocado_comes	Hard	The word 'avocado' comes from an Aztec word that also meant what?	Testicle	Butter	Green egg	Heart
+geo_word_magazine_comes	Hard	The word 'magazine' comes from an Arabic word meaning what?	Storehouses	Pages	News	Pictures
+geo_words_tea_chai	Hard	The words 'tea' and 'chai' both come from which language?	Chinese	Hindi	Persian	Portuguese
+geo_las_fallas_giant	Hard	Las Fallas, where giant papier-mache figures are burned every March, takes place in which city?	Valencia	Seville	Pamplona	Barcelona
+geo_country_people_smash	Hard	In which country do people smash old plates on their friends' doors on New Year's Eve?	Denmark	Greece	Italy	The Netherlands
+geo_thai_culture_part	Hard	In Thai culture, which part of the body is seen as the most sacred, so it should not be touched?	The head	The feet	The hands	The heart
+geo_country_nod_head	Hard	In which country does a nod of the head traditionally mean 'no'?	Bulgaria	Romania	Hungary	Croatia
+geo_country_highest_share	Hard	Which country has the highest share of Hindus in its population?	Nepal	India	Mauritius	Sri Lanka
+geo_someone_rio_janeiro	Hard	Someone from Rio de Janeiro is called what?	A Carioca	A Paulista	A Gaucho	A Porteno
+geo_costa_rica_people	Hard	In Costa Rica, people affectionately call themselves what?	Ticos	Chapines	Catrachos	Nicas
+geo_country_national_anthem	Hard	Which country's national anthem has the oldest words, taken from a poem over 1,000 years old?	Japan	Greece	The Netherlands	Britain
+geo_zoroastrians_india_ancestors	Hard	What are the Zoroastrians of India, whose ancestors fled from Persia, called?	The Parsis	The Sikhs	The Jains	The Tamils
+geo_maltese_semitic_official	Expert	Maltese, the only Semitic official language of the EU, grew out of which language?	Arabic	Hebrew	Aramaic	Berber
+geo_names_yen_yuan	Expert	The names of the yen, the yuan and the won all come from a word meaning what?	Round	Silver	Coin	Shell
+geo_word_dollar_comes	Expert	The word 'dollar' comes from 'thaler', silver coins first minted in a valley in which present-day country?	Czechia	Germany	Austria	Switzerland
+geo_island_huge_stone	Expert	On which island were huge stone discs called 'rai' used as money?	Yap	Tonga	Fiji	Samoa
+geo_helly_festival_viking	Expert	Up Helly Aa, a festival where a Viking longship is burned, takes place in which part of the UK?	Shetland	Cornwall	The Isle of Man	Anglesey
+geo_religion_world_centre	Expert	Which religion has its world centre and famous terraced gardens in Haifa, Israel?	The Baha'i Faith	Judaism	The Druze faith	Sikhism
+geo_haligonian_lives_city	Expert	A 'Haligonian' lives in which city?	Halifax	Hamilton	Halle	Helsinki
+geo_word_coach_comes	Expert	The word 'coach' comes from the name of a village in which country?	Hungary	Germany	England	Austria

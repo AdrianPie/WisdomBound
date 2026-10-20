@@ -14,6 +14,14 @@ geo_country_flag_shows_2	Easy	Which country's flag shows the blue Star of David?
 geo_three_colours_make	Easy	Which three colours make up the flag of Italy?	Green, white and red	Red, white and blue	Green, yellow and red	Blue, white and red
 geo_three_colours_germany	Easy	Which three colours are on Germany's flag, in horizontal stripes?	Black, red and gold	Black, yellow and green	Red, white and black	Blue, red and gold
 geo_country_flag_red_2	Easy	Which country's flag is a red square with a white cross?	Switzerland	Denmark	Austria	Norway
+geo_czechoslovakia_split_peacefully	Easy	Czechoslovakia split peacefully into the Czech Republic and which other country?	Slovakia	Slovenia	Moldova	Hungary
+geo_european_union_flag	Easy	The European Union's flag keeps the same number of gold stars however many members join. How many are there?	Twelve	Fifteen	Twenty-seven	Ten
+geo_flag_stripe_each	Easy	The US flag has one stripe for each of the original colonies. How many stripes are there?	13	50	7	15
+geo_country_flag_three	Easy	Which country's flag has three vertical stripes of green, white and orange?	Ireland	India	Niger	Italy
+geo_country_flag_shows_4	Easy	Which country's flag shows a white crescent moon and star on a red background?	Turkey	Pakistan	Algeria	Malaysia
+geo_central_american_country_2	Easy	Which Central American country's name means 'rich coast' in Spanish?	Costa Rica	Honduras	Panama	Belize
+geo_country_own_people	Easy	Which country do its own people call 'Nippon'?	Japan	China	Korea	Thailand
+geo_organisation_flag_shows	Easy	Which organisation's flag shows a map of the world framed by olive branches?	The United Nations	NATO	The Red Cross	The Olympic Movement
 geo2_najmniejsze_panstwo	Medium	Which country is the smallest in the world?	Vatican City	Monaco	San Marino	Liechtenstein
 geocmp_ludnosc_azja_srednia	Medium	Which of these four countries is home to the most people?	Indonesia	Brazil	Nigeria	Bangladesh
 geocmp_ludnosc_egipt_niemcy	Medium	Which of these countries counts the most inhabitants?	Egypt	Germany	Turkiye	Thailand
@@ -28,6 +36,29 @@ geo_main_colour_brazil	Medium	What is the main colour of Brazil's flag?	Green	Bl
 geo_country_flag_white	Medium	Which country's flag is white with a blue Nordic cross?	Finland	Sweden	Iceland	Greece
 geo_country_flag_red_3	Medium	Which country's flag is red with a single large yellow star?	Vietnam	China	Morocco	Turkey
 geo_country_flag_shows_3	Medium	Which country's flag shows an eagle devouring a snake?	Mexico	Albania	Egypt	Germany
+geo_himalayan_kingdom_white	Medium	Which Himalayan kingdom has a white thunder dragon on its flag?	Bhutan	Nepal	Mongolia	Laos
+geo_island_country_flag	Medium	Which island country's flag shows an outline map of the island itself?	Cyprus	Malta	Jamaica	Iceland
+geo_according_legend_country	Medium	According to legend, which country's flag fell from the sky during a battle in 1219?	Denmark	Sweden	Norway	England
+geo_country_flag_carries	Medium	Which country's flag carries the motto 'Order and Progress'?	Brazil	Portugal	Mexico	Argentina
+geo_country_flag_shows_5	Medium	Which country's flag shows a Maasai shield with two crossed spears?	Kenya	Tanzania	Uganda	Ethiopia
+geo_country_flag_almost	Medium	Which country's flag is almost identical to Monaco's, only a little longer?	Indonesia	Singapore	Austria	Japan
+geo_part_united_kingdom_2	Medium	Which part of the United Kingdom is not represented on the Union Jack?	Wales	Scotland	Northern Ireland	England
+geo_japan_flag_japanese	Medium	What is Japan's flag called in Japanese, a name meaning 'circle of the sun'?	Hinomaru	Kimigayo	Nippon	Sakura
+geo_country_flag_shows_6	Medium	Which country's flag shows a golden lion holding a sword?	Sri Lanka	Bhutan	Singapore	Ethiopia
+geo_country_calls_itself_3	Medium	Which country calls itself 'Suomi' in its own language?	Finland	Estonia	Sweden	Lithuania
+geo_country_river_indus	Medium	Which country is named after the River Indus?	India	Pakistan	Nepal	Bangladesh
+geo_country_comes_latin	Medium	Which country's name comes from the Latin for 'southern land'?	Australia	Argentina	South Africa	New Zealand
+geo_country_english_begins	Medium	Which is the only country whose English name begins with the letter Q?	Qatar	Kuwait	Oman	Bahrain
+geo_independent_countries_soviet	Medium	Into how many independent countries did the Soviet Union break up in 1991?	15	9	12	21
+geo_microstate_claims_oldest	Medium	Which microstate claims to be the oldest surviving republic in the world?	San Marino	Andorra	Liechtenstein	Monaco
+geo_family_ruled_monaco	Medium	Which family has ruled Monaco, with only short breaks, since 1297?	The Grimaldis	The Habsburgs	The Bourbons	The Medici
+geo_country_suspended_2014	Medium	Which country was suspended from the G8 in 2014, turning it back into the G7?	Russia	China	India	Brazil
+geo_country_flag_features_3	Medium	Which country's flag features a red-and-white chequered shield?	Croatia	Serbia	Austria	Slovenia
+geo_country_flag_shows_8	Medium	Which country's flag shows a black double-headed eagle on a red background?	Albania	Serbia	Montenegro	Russia
+geo_country_flag_dark	Medium	Which country's flag is dark green with a white crescent and star, and a white stripe by the pole?	Pakistan	Algeria	Turkey	Malaysia
+geo_country_own_itself	Medium	Which country's own name for itself means 'eastern realm'?	Austria	Hungary	Estonia	Romania
+geo_nickname_given_peaceful	Medium	What nickname was given to the peaceful split of Czechoslovakia in 1993?	The Velvet Divorce	The Velvet Revolution	The Prague Spring	The Quiet Parting
+geo_country_english_ends	Medium	Which is the only country whose English name ends in the letter K?	Denmark	Iraq	Iceland	Kenya
 geo2_najdluzsza_granica	Hard	Which two countries share the longest land border in the world?	Canada and the USA	Russia and China	Argentina and Chile	India and China
 geocmp_nie_ameryka_pd	Hard	Which of these countries is NOT in South America?	Belize	Guyana	Suriname	Paraguay
 geocmp_turystyka_kraj	Hard	Which country receives the most international tourist arrivals?	France	Spain	The United States	Italy
@@ -36,8 +67,34 @@ lmk_otoczony_rpa	Hard	Which country is completely surrounded by South Africa?	Le
 lmk_otoczony_wlochy	Hard	Which country is completely surrounded by Italy?	San Marino	Monaco	Andorra	Liechtenstein
 geo_niemcy_sasiedzi	Hard	How many countries share a land border with Germany?	Nine	Six	Seven	Eleven
 geo_country_flag_features	Hard	Which country's flag features a green cedar tree?	Lebanon	Cyprus	Canada	Jordan
+geo_country_flag_features_2	Hard	Which country's flag features an AK-47 rifle?	Mozambique	Angola	Zimbabwe	Namibia
+geo_country_flag_different	Hard	Which country's flag has a different emblem on its front and its back?	Paraguay	Uruguay	Bolivia	Ecuador
+geo_country_flag_shows_7	Hard	Which country's flag shows a grey crowned crane?	Uganda	Kenya	Rwanda	Zambia
+geo_1977_2011_country	Hard	From 1977 to 2011, which country's flag was a plain green rectangle with no design at all?	Libya	Saudi Arabia	Pakistan	Algeria
+geo_two_countries_square	Hard	Which is one of only two countries with a square national flag?	Vatican City	San Marino	Monaco	Malta
+geo_country_flies_flag	Hard	Which country flies its flag upside down, with the red stripe on top, in time of war?	The Philippines	Indonesia	Thailand	Haiti
+geo_country_flag_bearing	Hard	Which country's flag, bearing the Islamic declaration of faith, is never lowered to half-mast?	Saudi Arabia	Iran	Pakistan	Egypt
+geo_stars_appear_flag	Hard	How many stars appear on the flag of Brazil?	27	13	50	9
+geo_zimbabwe_mean_shona	Hard	What does 'Zimbabwe' mean in the Shona language?	Houses of stone	Land of rivers	Place of the sun	Great lake
+geo_caribbean_country_comes	Hard	Which Caribbean country's name comes from Portuguese for 'the bearded ones'?	Barbados	The Bahamas	Belize	Grenada
+geo_counting_kosovo_countries	Hard	Counting Kosovo, into how many countries did Yugoslavia break up?	Seven	Four	Five	Ten
+geo_country_joined_united	Hard	Which country joined the United Nations only in 2002, after a referendum?	Switzerland	Austria	Ireland	Norway
+geo_red_disc_bangladesh	Hard	Why is the red disc on Bangladesh's flag set slightly towards the pole?	So it looks centred when the flag flies	To mark where the capital lies	Because of an old printing mistake	To tell it apart from Japan's flag
+geo_caribbean_country_flag	Hard	Which Caribbean country's flag features a purple-breasted Sisserou parrot?	Dominica	Grenada	Saint Lucia	Jamaica
+geo_liechtenstein_add_crown	Hard	Why did Liechtenstein add a crown to its flag in 1937?	Its flag matched Haiti's exactly	Its prince had just been crowned	To mark joining the League of Nations	Its old flag was banned abroad
+geo_five_eyes_intelligence	Hard	The 'Five Eyes' intelligence alliance links the USA, Britain, Canada, Australia and which country?	New Zealand	Ireland	Japan	Israel
+geo_haskell_free_library	Hard	The Haskell Free Library has its books in one country and its main door in another. Which two?	Canada and the USA	France and Spain	Austria and Germany	Mexico and the USA
+geo_country_usually_explained	Hard	Which country's name is usually explained as 'land of the Aryans'?	Iran	India	Armenia	Albania
+geo_algeria_capital_arabic	Hard	Algeria is named after its capital, whose Arabic name means what?	The islands	The white city	The fortress	The two rivers
 geo2_panstwo_bez_dostepu	Expert	Which country is Europe's only doubly landlocked state?	Liechtenstein	Switzerland	Austria	Andorra
 geocmp_najwiecej_sasiadow	Expert	Which of these countries borders the most other countries?	Brazil	Mexico	Argentina	Colombia
 geo_kazachstan_srodladowy	Expert	Which is the largest landlocked country in the world?	Kazakhstan	Mongolia	Chad	Bolivia
 geox_bir_tawil	Expert	Bir Tawil is a patch of African land that no country claims. Which two countries border it?	Egypt and Sudan	Chad and Libya	Mali and Niger	Kenya and Ethiopia
 geoy_rosja_sasiedzi	Expert	Russia shares land borders with how many countries?	14	8	20	5
+geo_caribbean_island_country	Expert	Which Caribbean island country did Columbus name after the day of the week he first saw it, a Sunday?	Dominica	Trinidad and Tobago	Grenada	Barbados
+geo_lebanon_comes_ancient	Expert	Lebanon's name comes from an ancient word for which colour, after its snowy peaks?	White	Green	Blue	Red
+geo_country_calls_itself_4	Expert	Which country calls itself 'Sakartvelo'?	Georgia	Armenia	Azerbaijan	Moldova
+geo_country_flag_shows_9	Expert	Which country's flag shows a frigatebird flying over a rising sun and ocean waves?	Kiribati	Tuvalu	Fiji	Samoa
+geo_short_lived_mali	Expert	The short-lived Mali Federation of 1959-1960 joined today's Mali with which country?	Senegal	Niger	Guinea	Burkina Faso
+geo_sovereign_military_order	Expert	The Sovereign Military Order of Malta, which has no territory of its own, is based in which city?	Rome	Valletta	Vatican City	Rhodes
+geo_senegambia_confederation_1982	Expert	Senegambia, a confederation from 1982 to 1989, joined Senegal with which country?	The Gambia	Mali	Guinea	Mauritania
