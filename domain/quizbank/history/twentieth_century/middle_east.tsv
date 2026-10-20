@@ -4,6 +4,10 @@ id	difficulty	prompt	correct	wrong1	wrong2	wrong3
 his_country_iraq_invade	Easy	Which country did Iraq invade in 1990, triggering the Gulf War?	Kuwait	Iran	Saudi Arabia	Syria
 his_saddam_hussein_dictator	Easy	Saddam Hussein was the dictator of which country until 2003?	Iraq	Iran	Syria	Libya
 his_two_neighbouring_countries	Easy	Which two neighbouring countries fought a long war from 1980 to 1988?	Iran and Iraq	Egypt and Libya	Syria and Turkey	Israel and Jordan
+his_city_split_between	Easy	Which city was split between Israel and Jordan from 1948 until 1967?	Jerusalem	Haifa	Hebron	Bethlehem
+his_country_formed_1971	Easy	Which country was formed in 1971 when six Gulf emirates joined together?	The United Arab Emirates	The Kingdom of Bahrain	The State of Qatar	The Sultanate of Oman
+his_city_olympic_games	Easy	At which city's Olympic Games were 11 members of the Israeli team killed by Palestinian gunmen in 1972?	Munich	Montreal	Mexico City	Rome
+his_israeli_city_founded	Easy	Which Israeli city was founded in 1909 on sand dunes beside the old port of Jaffa?	Tel Aviv	Haifa	Eilat	Beersheba
 hw_izrael_1948	Medium	In which year was the modern State of Israel founded?	1948	1945	1956	1967
 his_egyptian_president_made	Medium	Which Egyptian president made peace with Israel and was assassinated in 1981?	Anwar Sadat	Gamal Abdel Nasser	Hosni Mubarak	Mohamed Naguib
 his_israeli_prime_minister	Medium	Which Israeli prime minister was assassinated at a peace rally in 1995?	Yitzhak Rabin	Menachem Begin	Shimon Peres	Ariel Sharon
@@ -27,6 +31,10 @@ his_country_israeli_commandos	Medium	In which country did Israeli commandos resc
 his_retreating_iraqi_troops	Medium	What did retreating Iraqi troops set on fire in Kuwait in 1991, blackening the sky for months?	Over 600 oil wells	Kuwait City's harbour	Thousands of car tyres	The country's forests
 his_two_european_powers	Medium	Which two European powers secretly planned with Israel to invade Egypt in the Suez Crisis of 1956?	Britain and France	France and Italy	Britain and Greece	Italy and Belgium
 his_country_israel_invade	Medium	Which country did Israel invade in 1982 to drive out the PLO?	Lebanon	Syria	Jordan	Egypt
+his_waterway_trapped_cargo	Medium	Which waterway trapped 14 cargo ships, nicknamed the 'Yellow Fleet', for eight years after the war of 1967?	The Suez Canal	The Strait of Hormuz	The Bosporus	The Shatt al-Arab
+his_desert_peninsula_israel	Medium	Which desert peninsula did Israel hand back to Egypt in 1982?	The Sinai	The Negev	The Gaza Strip	The Golan Heights
+his_novelist_sentenced_death	Medium	Which novelist was sentenced to death in a 1989 fatwa by Iran's Ayatollah Khomeini?	Salman Rushdie	V. S. Naipaul	Vikram Seth	Orhan Pamuk
+his_gulf_war_1991	Medium	During the Gulf War of 1991, which country did Iraq fire Scud missiles at, even though it was not fighting?	Israel	Jordan	Iran	Turkey
 hy_iran_1979	Hard	Which country's 1979 revolution brought Ayatollah Khomeini to power?	Iran	Iraq	Afghanistan	Saudi Arabia
 his_egyptian_president_nationalised	Hard	Which Egyptian president nationalised the Suez Canal in 1956?	Gamal Abdel Nasser	Anwar Sadat	Hosni Mubarak	King Farouk
 his_iranian_prime_minister	Hard	Which Iranian prime minister nationalised his country's oil and was toppled in a 1953 coup?	Mohammad Mosaddegh	Ruhollah Khomeini	Abolhassan Banisadr	Amir Abbas Hoveyda
@@ -39,7 +47,14 @@ his_year_oil_struck	Hard	In which year was oil first struck in commercial amount
 his_british_traveller_archaeologist	Hard	Which British traveller and archaeologist helped draw the borders of Iraq in 1921?	Gertrude Bell	Freya Stark	Agatha Christie	Isabella Bird
 his_british_general_entered	Hard	Which British general entered Jerusalem on foot in December 1917, ending 400 years of Ottoman rule?	Edmund Allenby	Herbert Kitchener	Douglas Haig	Charles Townshend
 his_king_founder_modern	Hard	Which king, founder of modern Jordan, was shot dead at Jerusalem's al-Aqsa Mosque in 1951?	Abdullah I	Faisal I	Talal	Ibn Saud
+his_country_nuclear_reactor	Hard	Which country's nuclear reactor did Israeli jets destroy in a surprise raid in 1981?	Iraq	Syria	Iran	Libya
+his_king_egypt_overthrown	Hard	Which king of Egypt was overthrown by army officers in 1952 and sailed into exile on the royal yacht?	Farouk	Fuad I	Idris	Faisal II
+his_jerusalem_hotel_housing	Hard	Which Jerusalem hotel, housing British offices, was bombed by the Irgun in 1946?	The King David Hotel	The American Colony Hotel	The Imperial Hotel	The Fast Hotel
+his_two_palestinian_refugee	Hard	Which two Palestinian refugee camps in Beirut saw a massacre by Lebanese militiamen in 1982?	Sabra and Shatila	Jenin and Balata	Yarmouk and Baqaa	Deheisheh and Aida
 his_deadly_clashes_between	Expert	What were the deadly clashes between Jordan's army and Palestinian fighters in 1970 called?	Black September	The Days of Rage	The Night of Fire	Red October
 his_hashemite_prince_became	Expert	Which Hashemite prince became the first king of Iraq in 1921?	Faisal I	Abdullah I	Hussein bin Ali	Ghazi
 his_young_king_iraq	Expert	Which young king of Iraq was killed in the revolution of 1958?	Faisal II	Ghazi	Hussein	Abdullah II
 his_king_saudi_arabia	Expert	Which king of Saudi Arabia, who led the 1973 oil embargo, was shot dead by his nephew in 1975?	Faisal	Saud	Khalid	Fahd
+his_ship_carrying_500	Expert	Which ship, carrying 4,500 Jewish refugees to Palestine in 1947, was turned back by the British?	The Exodus	The Altalena	The Struma	The Patria
+his_syrian_president_forces	Expert	Which Syrian president's forces crushed an uprising in the city of Hama in 1982?	Hafez al-Assad	Shukri al-Quwatli	Adib Shishakli	Salah Jadid
+his_holy_site_armed	Expert	Which holy site did armed militants seize and hold for two weeks in November 1979?	The Grand Mosque in Mecca	The Dome of the Rock	The Prophet's Mosque	The Imam Reza Shrine

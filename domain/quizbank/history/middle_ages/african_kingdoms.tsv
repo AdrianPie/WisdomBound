@@ -3,6 +3,7 @@
 id	difficulty	prompt	correct	wrong1	wrong2	wrong3
 his_animal_made_possible	Easy	Which animal made it possible for traders to cross the Sahara?	The camel	The horse	The elephant	The donkey
 his_along_river_ancient	Easy	Along which river did the ancient kingdom of Kush grow up?	The Nile	The Niger	The Congo	The Zambezi
+his_modern_country_takes	Easy	Which modern country takes its name from a ruined medieval stone city?	Zimbabwe	Ghana	Mali	Benin
 hy_kaldi	Medium	According to legend, coffee was discovered in Ethiopia by a goatherd named what?	Kaldi	Menelik	Haile	Abebe
 his_huge_mud_brick	Medium	Which huge mud-brick mosque in Mali is the largest mud building in the world?	The Great Mosque of Djenne	The Sankore Mosque	The Hassan II Mosque	The Great Mosque of Kairouan
 his_west_african_empire	Medium	Which West African empire, older than Mali, was called 'the land of gold' by Arab writers?	The Ghana Empire	The Songhai Empire	The Kanem Empire	The Benin Empire
@@ -23,6 +24,7 @@ his_carved_figure_great	Medium	Which carved figure from Great Zimbabwe appears o
 his_librarians_mali_smuggle	Medium	What did librarians in Mali smuggle out of a famous desert city in 2012 to save them from militants?	Ancient handwritten manuscripts	Gold from a royal tomb	The bones of local saints	Bronze statues of kings
 his_title_king_benin	Medium	What was the title of the king of Benin?	The Oba	The Mansa	The Negus	The Asantehene
 his_legendary_christian_king	Medium	Which legendary Christian king did medieval Europeans hope would help them, finally placing his kingdom in Ethiopia?	Prester John	Saint George	King Lalibela	Melchior
+his_builders_great_zimbabwe	Medium	What did the builders of Great Zimbabwe's huge granite walls manage without?	Any mortar	Any tools	Any slaves	Any foundations
 wh_mansa_musa	Hard	Mansa Musa, regarded as the richest person in history, ruled which African empire?	Mali	Songhai	Ethiopia	Zimbabwe
 his4_wielki_zimbabwe	Hard	Great Zimbabwe was the centre of a state on which continent?	Africa	South America	Asia	Australia
 hx_timbuktu	Hard	Which city in Mali was a famous medieval centre of trade and Islamic learning?	Timbuktu	Marrakesh	Zanzibar	Kano
@@ -44,6 +46,7 @@ his_mansa_musa_holding	Hard	What is Mansa Musa holding in his famous picture on 
 his_according_mansa_musa	Hard	According to Mansa Musa, what had his predecessor done?	Sailed off across the Atlantic	Walked to Mecca barefoot	Given away all his gold	Converted to Christianity
 his_kingdom_benin_surrounded	Hard	The kingdom of Benin surrounded its lands with what, once counted among the largest man-made structures on Earth?	Earth walls and moats	Stone pyramids	Lines of baobab trees	Wooden stockades
 his_according_arab_writer	Hard	According to an Arab writer of 1068, what wore gold collars at the court of a West African king?	His dogs	His camels	His falcons	His lions
+his_short_stabbing_spear	Hard	What was the short stabbing spear that Shaka gave his Zulu warriors, said to be named after its sound?	The iklwa	The knobkerrie	The panga	The kaskara
 his4_imperium_songhaj	Expert	The Songhai Empire controlled trade around which river?	The Niger	The Congo	The Zambezi	The Orange
 hx_szaka	Expert	Which king built the Zulu nation into a military power in the early 1800s?	Shaka	Cetshwayo	Moshoeshoe	Mzilikazi
 hx_aksum	Expert	Which ancient kingdom in today's Ethiopia was one of the first states to adopt Christianity?	Aksum	Kush	Carthage	Meroe

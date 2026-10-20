@@ -4,6 +4,8 @@ his_roman_emperor_refounded	Easy	Which Roman emperor refounded the city of Byzan
 his_great_church_constantinople	Easy	Which great church in Constantinople was the largest in the world for nearly a thousand years?	Hagia Sophia	St Peter's Basilica	Notre-Dame	Westminster Abbey
 his_branch_christianity_byzantine	Easy	Which branch of Christianity did the Byzantine Empire follow?	Orthodox	Catholic	Protestant	Coptic
 his_modern_country_capital	Easy	In which modern country was the capital of the Byzantine Empire?	Turkey	Greece	Italy	Bulgaria
+his_byzantine_emblem_russian	Easy	Which Byzantine emblem did the Russian tsars take up, and still appears on Russia's coat of arms?	The double-headed eagle	The golden lion	The red cross	The rising sun
+his_happened_hagia_sophia	Easy	What happened to Hagia Sophia after the Ottomans took Constantinople in 1453?	It became a mosque	It was torn down	It became a palace	It was left in ruins
 wh_konstantynopol_zdobywca	Medium	Which state captured Constantinople in 1453?	The Ottoman Empire	Venice	Bulgaria	Persia
 wh_bizancjum_nazwa	Medium	What was the Byzantine Empire otherwise known as?	The Eastern Roman Empire	The Latin Empire	The Empire of Trebizond	The Carolingian Empire
 trv_bizancjum_stolica	Medium	Which city was the capital of the Byzantine Empire?	Constantinople	Athens	Rome	Alexandria
@@ -25,6 +27,8 @@ his_two_monks_smuggle	Medium	How did two monks smuggle silkworm eggs to Constant
 his_lies_upside_down	Medium	What lies upside down at the foot of a column in Istanbul's Basilica Cistern?	A stone head of Medusa	A bronze Roman eagle	A marble Christian cross	A statue of Justinian
 his_great_racecourse_beside	Medium	What was the great racecourse beside the imperial palace of Constantinople called?	The Hippodrome	The Colosseum	The Circus Maximus	The Odeon
 his_roughly_long_eastern	Medium	Roughly how long did the Eastern Roman Empire outlast the Western one?	About 1,000 years	About 100 years	About 300 years	About 2,000 years
+his_historians_start_using	Medium	When did historians first start using the name 'Byzantine Empire'?	About a century after it fell	When Constantine founded it	Under Emperor Justinian	After the split of 1054
+his_great_law_books	Medium	The great law books of Justinian, such as the Digest, were written in which language?	Latin	Greek	Aramaic	Coptic
 his_last_byzantine_emperor	Hard	Who was the last Byzantine emperor, killed defending the walls of Constantinople?	Constantine XI	Justinian II	Basil II	Alexios I
 his_huge_land_walls	Hard	Which huge land walls protected Constantinople for about a thousand years?	The Theodosian Walls	The Aurelian Walls	The Long Walls	The Servian Wall
 his_byzantine_general_won	Hard	Which Byzantine general won back Italy and North Africa for Emperor Justinian?	Belisarius	Narses	Heraclius	Stilicho
@@ -43,6 +47,7 @@ his_mean_born_purple	Hard	What did it mean to be 'born in the purple' in Byzanti
 his_bronze_statues_looted	Hard	Which bronze statues, looted from Constantinople in 1204, now stand in Venice?	The Horses of Saint Mark	The Lions of the Arsenal	The Four Tetrarchs	The Winged Bulls
 his_city_second_city	Hard	Which city was the second city of the Byzantine Empire?	Thessalonica	Athens	Antioch	Nicaea
 his_amazed_foreign_envoys	Hard	What amazed foreign envoys at the Byzantine emperor's throne in the 900s?	Mechanical lions that roared	A floor made of solid gold	A fountain flowing with wine	Live tigers on golden chains
+his_byzantine_historian_wrote	Hard	Which Byzantine historian wrote the scandalous 'Secret History', mocking Justinian and Theodora?	Procopius	Anna Komnene	Michael Psellos	Zonaras
 his2_bizancjum_justynian	Expert	Which Byzantine emperor had the famous Roman law code compiled?	Justinian I	Constantine the Great	Heraclius	Basil II
 his_teodora	Expert	Which Byzantine empress famously refused to flee during the Nika riots of 532?	Theodora	Irene	Zoe	Helena
 hx_ogien_grecki	Expert	What was the Byzantine navy's secret weapon, 'Greek fire'?	Fire that burned on water	A signal beacon system	An early bronze cannon	A flaming catapult shot
@@ -52,3 +57,4 @@ his_hungarian_engineer_cast	Expert	Which Hungarian engineer cast the giant canno
 his_emperor_won_constantinople	Expert	Which emperor won Constantinople back from the crusaders' Latin Empire in 1261?	Michael VIII Palaiologos	Alexios I Komnenos	John II Komnenos	Constantine XI
 his_byzantine_emperor_nose	Expert	Which Byzantine emperor had his nose cut off but still won back his throne in 705?	Justinian II	Leo III	Basil I	Romanos IV
 his_bulgar_khan_turned	Expert	Which Bulgar khan turned the skull of the Byzantine emperor Nikephoros I into a drinking cup in 811?	Krum	Boris I	Simeon I	Asparukh
+his_byzantine_emperor_began	Expert	Which Byzantine emperor began as a peasant horse-tamer and murdered his way to the throne in 867?	Basil I	Basil II	Leo VI	Romanos I

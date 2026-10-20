@@ -4,6 +4,10 @@ id	difficulty	prompt	correct	wrong1	wrong2	wrong3
 hx_biblioteka	Easy	Which city had the most famous library of the ancient world?	Alexandria	Athens	Rome	Babylon
 his_macedonian_king_conquered	Easy	Which Macedonian king conquered the Persian Empire before he was 30?	Alexander the Great	Philip II	Ptolemy I	Seleucus I
 his_jewish_festival_celebrates	Easy	Which Jewish festival celebrates the rededication of the Temple after a revolt against the Greek Seleucid kings?	Hanukkah	Passover	Purim	Yom Kippur
+his_alexander_conquests_language	Easy	After Alexander's conquests, which language became the common tongue of trade and rule from Egypt to Afghanistan?	Greek	Latin	Persian	Phoenician
+his_hero_trojan_war	Easy	Which hero of the Trojan War did Alexander the Great idolise, even visiting his tomb at Troy?	Achilles	Odysseus	Hector	Agamemnon
+his_tomb_alexander_great	Easy	Where is the tomb of Alexander the Great today?	Nobody knows: it was lost	In the royal tombs at Vergina	Under a mosque in Babylon	On the Acropolis in Athens
+his_animals_alexander_successors	Easy	Which animals did Alexander's successors, the Seleucid and Ptolemaic kings, use in battle like tanks?	War elephants	War camels	Armoured bulls	Fighting dogs
 wh_aleksander_nauczyciel	Medium	Which philosopher was the teacher of Alexander the Great?	Aristotle	Plato	Socrates	Epicurus
 his_kolos_rodyjski	Medium	Which ancient wonder was a giant bronze statue at a Greek harbour?	The Colossus of Rhodes	The Statue of Zeus	The Lighthouse of Alexandria	The Mausoleum
 hx_aleksander_wiek	Medium	At about what age did Alexander the Great die, after conquering an empire from Greece to India?	32	45	58	25
@@ -22,6 +26,9 @@ his_alexander_great_reportedly_2	Medium	Why did Alexander the Great reportedly o
 his_alexander_city_today	Medium	Alexander named a city in today's Pakistan after whom?	His horse	His mother	His teacher	His sister
 his_egypt_greek_kings	Medium	What did Egypt's Greek kings force every ship entering their capital's harbour to hand over?	Its books, to be copied	Its fresh water	Its largest sail	A tenth of its gold
 his_according_legend_alexander_2	Medium	According to legend, what did Alexander do when his thirsty men in the desert brought him a helmet of water?	He poured it out on the sand	He drank it in one gulp	He gave it to his horse	He shared it with the wounded
+his_god_colossus_rhodes	Medium	Which god did the Colossus of Rhodes portray?	Helios, the sun god	Poseidon, the sea god	Zeus, king of the gods	Ares, the god of war
+his_septuagint_produced_hellenistic	Medium	What is the 'Septuagint', produced in Hellenistic Alexandria?	A Greek translation of the Hebrew Bible	A list of the Seven Wonders	A guide to the city's 70 temples	A Greek map of the known world
+his_headless_hellenistic_statue	Medium	Which headless Hellenistic statue of the goddess Nike stands at the top of a grand staircase in the Louvre?	The Victory of Samothrace	The Venus de Milo	The Laocoon Group	The Dying Gaul
 hx_bucefal	Hard	What was the name of Alexander the Great's famous horse?	Bucephalus	Pegasus	Incitatus	Marengo
 hx_wezel_gordyjski	Hard	What did Alexander the Great famously do with the Gordian Knot?	Cut it with his sword	Untied it in seconds	Burned it	Gave it to a priest
 hy_aleksander_babilon	Hard	In which city did Alexander the Great die?	Babylon	Alexandria	Athens	Persepolis
@@ -39,6 +46,7 @@ his_elite_cavalry_alexander	Hard	What was the elite cavalry that Alexander led i
 his_very_long_pike	Hard	What was the very long pike that made the Macedonian phalanx so deadly?	The sarissa	The pilum	The javelin	The halberd
 his_modern_word_comes	Hard	Which modern word comes from the research institute at the heart of ancient Alexandria?	Museum	Academy	Lyceum	Gymnasium
 his_greek_inventor_built	Hard	Which Greek inventor built the 'aeolipile', a ball that spun on jets of steam?	Hero of Alexandria	Archimedes of Syracuse	Euclid of Alexandria	Ctesibius of Alexandria
+his_alexander_razed_rebellious	Hard	When Alexander razed rebellious Thebes in 335 BC, whose house did he order to be spared?	The poet Pindar's	The general Epaminondas's	The philosopher Plato's	The playwright Sophocles'
 his_greek_city_afghanistan	Expert	Which Greek city in Afghanistan, founded in Alexander's wake, had its own theatre and gymnasium?	Ai-Khanoum	Kandahar	Bactra	Taxila
 his_island_city_alexander	Expert	Which island city did Alexander besiege for seven months, building a causeway to reach it?	Tyre	Rhodes	Sidon	Halicarnassus
 his_desert_oasis_oracle	Expert	At which desert oasis did an oracle hail Alexander as the son of a god?	Siwa	Kharga	Palmyra	Petra
@@ -50,3 +58,4 @@ his_greek_kingdom_ruled	Expert	Which Greek kingdom ruled what is now northern Af
 his_roughly_years_colossus	Expert	For roughly how many years did the Colossus of Rhodes stand before an earthquake toppled it?	About 54	About 5	About 540	About 1,500
 his_greek_writer_roman	Expert	Which Greek writer of the Roman age wrote the main surviving history of Alexander's campaigns?	Arrian	Herodotus	Polybius	Xenophon
 his_hijacked_alexander_great	Expert	Who hijacked Alexander the Great's body on its way to burial and took it to Egypt?	Ptolemy	Seleucus	Antigonus	Cassander
+his_unflattering_title_persian	Expert	Which unflattering title do Persian Zoroastrian texts give Alexander the Great?	'The Accursed'	'The Drunkard'	'The Little Greek'	'The Butcher'

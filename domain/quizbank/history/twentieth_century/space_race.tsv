@@ -8,6 +8,8 @@ his_space_agency_created	Easy	What is the name of the US space agency, created i
 his_country_launched_sputnik	Easy	Which country launched Sputnik, the first artificial satellite?	The Soviet Union	The USA	Britain	France
 his_apollo_astronauts_bring	Easy	What did the Apollo astronauts bring back from the Moon?	Moon rocks	Moon water	Alien bacteria	Nothing at all
 his_neil_armstrong_buzz	Easy	What did Neil Armstrong and Buzz Aldrin plant on the Moon in 1969?	The American flag	A tree	A cross	A time capsule
+his_president_promised_1961	Easy	Which US president promised in 1961 to land a man on the Moon before the decade was out?	John F. Kennedy	Dwight D. Eisenhower	Lyndon B. Johnson	Richard Nixon
+his_astronauts_last_three	Easy	What did the astronauts of the last three Apollo missions drive across the Moon?	An electric 'Moon buggy'	A small hovercraft	A tracked tractor	A rocket-powered sled
 his_gagarin	Medium	Who was the first human to travel into space?	Yuri Gagarin	Neil Armstrong	Alan Shepard	Valentina Tereshkova
 his2_czlowiek_kosmos_rok	Medium	In which year did Yuri Gagarin fly into space?	1961	1957	1969	1965
 his2_sputnik	Medium	What was Earth's first artificial satellite called?	Sputnik 1	Vostok 1	Explorer 1	Luna 1
@@ -28,6 +30,8 @@ his_last_apollo_mission	Medium	Which was the last Apollo mission to land on the 
 his_america_space_station	Medium	What was America's first space station, launched in 1973?	Skylab	Mir	Salyut	Freedom
 his_yuri_gagarin_shout	Medium	What did Yuri Gagarin shout as his rocket lifted off in 1961?	'Let's go!'	'For the Motherland!'	'Goodbye, Earth!'	'Glory to Lenin!'
 his_apollo_astronauts_returning	Medium	What did the Apollo 11 astronauts have to do after returning to Earth?	Spend three weeks in quarantine	Retire from NASA at once	Testify before the UN	Swear never to fly again
+his_russian_word_sputnik	Medium	What does the Russian word 'sputnik' mean?	Fellow traveller	Little star	Red messenger	First voice
+his_radio_call_sign	Medium	What was the radio call sign of the first woman in space?	Seagull	Swallow	Cedar	Skylark
 hx_ksiezyc_ostatni	Hard	In which year did humans last walk on the Moon?	1972	1969	1979	1985
 hy_wostok	Hard	What was the name of Yuri Gagarin's spacecraft?	Vostok 1	Sputnik 2	Soyuz 1	Apollo 1
 hy_mir	Hard	Which Soviet space station orbited Earth from 1986 to 2001?	Mir	Salyut 7	Skylab	Tiangong
@@ -41,8 +45,15 @@ his_remote_controlled_rover	Hard	What was the first remote-controlled rover to r
 his_two_dogs_became	Hard	Which two dogs became the first animals to come back alive from orbit, in 1960?	Belka and Strelka	Laika and Albina	Ham and Enos	Tsygan and Dezik
 his_animals_living_things	Hard	Which animals were the first living things to fly around the Moon, in 1968?	Two tortoises	Two dogs	A pair of mice	A chimpanzee
 his_yuri_gagarin_die	Hard	How did Yuri Gagarin die in 1968?	In a training jet crash	In a rocket explosion	Of radiation sickness	In a car accident
+his_soviet_probe_sent	Hard	Which Soviet probe sent back the first photos of the far side of the Moon, in 1959?	Luna 3	Luna 9	Luna 2	Zond 3
+his_america_satellite_launch	Hard	After America's first satellite launch blew up on the pad, which satellite became its first in orbit, in 1958?	Explorer 1	Vanguard 1	Telstar 1	Pioneer 1
+his_moon_mission_struck	Hard	Which Moon mission was struck by lightning twice in the first minute after launch?	Apollo 12	Apollo 13	Apollo 9	Apollo 15
+his_professional_geologist_walk	Hard	Who was the only professional geologist to walk on the Moon?	Harrison Schmitt	Eugene Cernan	Edgar Mitchell	Charles Duke
 hx_earthrise	Expert	Which mission took the famous 'Earthrise' photo from lunar orbit in 1968?	Apollo 8	Apollo 11	Apollo 13	Gemini 7
 his_soviet_probe_made	Expert	Which Soviet probe made the first soft landing on the Moon, in 1966?	Luna 9	Sputnik 3	Lunokhod 1	Vostok 2
 his_became_woman_walk	Expert	Who became the first woman to walk in space, in 1984?	Svetlana Savitskaya	Valentina Tereshkova	Sally Ride	Kathryn Sullivan
 his_soviet_cosmonaut_died	Expert	Which Soviet cosmonaut died when his capsule's parachute failed in 1967?	Vladimir Komarov	Yuri Gagarin	Alexei Leonov	Gherman Titov
 his_soviet_cosmonauts_carry	Expert	Why did Soviet cosmonauts carry a special gun in their survival kit?	To fend off wild animals after landing	To defend against American astronauts	To break open a jammed capsule hatch	To destroy secret papers if captured
+his_unable_get_life	Expert	Unable to get life insurance, what did the Apollo 11 crew sign by the hundreds for their families?	Envelopes their families could sell	Photos for a charity auction	Letters to the president	Contracts with a TV network
+his_cosmonaut_mir_soviet	Expert	Which cosmonaut was up on Mir as the Soviet Union collapsed, and came home to a different country in 1992?	Sergei Krikalev	Valeri Polyakov	Alexei Leonov	Gennady Padalka
+his_mission_three_cosmonauts	Expert	Which mission's three cosmonauts, lost in 1971, are the only people to have died in space itself?	Soyuz 11	Soyuz 1	Salyut 7	Voskhod 2

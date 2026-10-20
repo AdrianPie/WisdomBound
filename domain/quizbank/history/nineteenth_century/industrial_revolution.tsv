@@ -4,6 +4,8 @@ his_kind_engine_powered	Easy	Which kind of engine powered the factories and trai
 his_fuel_dug_mines	Easy	Which fuel, dug from mines, powered the Industrial Revolution?	Coal	Oil	Natural gas	Peat
 his_plant_fibre_spun	Easy	Which plant fibre was spun into thread in the great mills of Lancashire?	Cotton	Wool	Silk	Linen
 his_american_inventor_laboratory	Easy	Which American inventor's laboratory at Menlo Park produced a long-lasting light bulb in 1879?	Thomas Edison	Nikola Tesla	Alexander Graham Bell	George Westinghouse
+his_novelist_worked_shoe	Easy	Which famous novelist worked in a shoe-polish factory at the age of 12?	Charles Dickens	Thomas Hardy	Anthony Trollope	George Eliot
+his_steam_engines_usually	Easy	Before steam engines, what usually drove the machines in the very first textile mills?	Water wheels	Windmills	Clockwork	Hand cranks
 org_cola_lek	Medium	Coca-Cola was first sold at pharmacy counters as a remedy for what?	Headaches	Sore throats	Insomnia	Toothache
 his_scottish_engineer_made	Medium	Which Scottish engineer made the steam engine far more efficient in the 1760s and 1770s?	James Watt	George Stephenson	Thomas Newcomen	Richard Trevithick
 his_built_rocket_locomotive	Medium	Who built the famous 'Rocket' locomotive that won the Rainhill Trials in 1829?	George and Robert Stephenson	James Watt and his son	Isambard Kingdom Brunel	Richard Trevithick
@@ -28,6 +30,7 @@ his_forced_towns_across	Medium	What forced towns across Britain to adopt one sta
 his_new_kind_lighting	Medium	What new kind of lighting spread through London's streets from the 1810s?	Gas lamps	Electric arc lamps	Paraffin lamps	Limelight
 his_dangerous_job_small	Medium	What dangerous job did small children called 'scavengers' do in cotton mills?	Crawled under machines to clear fluff	Carried coal to the boilers	Climbed chimneys to sweep them	Oiled the moving belts
 his_coal_miners_take	Medium	Why did coal miners take canaries down the pits with them?	To warn them of poisonous gas	To keep away the rats	For good luck underground	To keep them company
+his_unit_steam_engine	Medium	Which unit did a steam-engine maker invent to compare his machines with the animals they replaced?	Horsepower	Foot-pound	Manpower	Mule-load
 his2_rewolucja_przemyslowa	Hard	In which country did the Industrial Revolution begin?	The United Kingdom	Germany	France	The USA
 org_denim_nimes	Hard	Which fabric takes its name from the French city of Nimes?	Denim	Chiffon	Tweed	Satin
 hx_luddysci	Hard	What were the Luddites of early 1800s England famous for?	Smashing weaving machines	Burning down banks	Stealing steam engines	Refusing to pay taxes
@@ -48,6 +51,9 @@ his_chartists_1830s_1840s	Hard	What did the Chartists of the 1830s and 1840s dem
 his_strike_1888_young	Hard	Which strike of 1888 by young women at a London factory became famous?	The matchgirls' strike	The dockers' strike	The weavers' strike	The bakers' strike
 his_scottish_engineer_built	Hard	Which Scottish engineer built the Menai Suspension Bridge, opened in 1826?	Thomas Telford	John Rennie	Robert Stephenson	Isambard Kingdom Brunel
 his_german_family_firm	Hard	Which German family firm from Essen became Europe's best-known maker of steel and guns?	Krupp	Siemens	Thyssen	Bosch
+his_truck_system_19th	Hard	What was the 'truck system' that many 19th-century workers hated?	Pay in tokens for the boss's shop	Hauling coal in carts by hand	Sharing one bed in shifts	Fines for talking on the job
 his_canal_opened_1761	Expert	Which canal, opened in 1761 to carry coal to Manchester, started Britain's 'canal mania'?	The Bridgewater Canal	The Grand Union Canal	The Leeds and Liverpool Canal	The Caledonian Canal
 his_politician_killed_locomotive	Expert	Which politician was killed by the locomotive Rocket at the opening of a railway in 1830?	William Huskisson	Robert Peel	George Canning	Spencer Perceval
 his_terrible_disease_workers	Expert	Which terrible disease did workers in match factories get from white phosphorus?	'Phossy jaw'	'Black lung'	'Mad hatter's disease'	'Brass fever'
+his_samuel_slater_opened	Expert	Why was Samuel Slater, who opened a cotton mill in Rhode Island in 1793, called 'Slater the Traitor' in Britain?	He carried British mill designs in his head	He sold steel secrets to France	He fought for America in the Revolution	He wrecked the mills he managed
+his_britain_locomotive_act	Expert	What did Britain's Locomotive Act of 1865 require ahead of every steam road vehicle?	A man on foot with a red flag	A horse-drawn warning cart	A boy ringing a hand bell	A policeman on horseback

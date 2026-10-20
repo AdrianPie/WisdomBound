@@ -4,6 +4,8 @@ his_city_main_goal	Easy	Which city was the main goal of the First Crusade?	Jerus
 his_symbol_crusaders_sew	Easy	Which symbol did crusaders sew onto their clothes?	A cross	A crescent	A lion	An eagle
 his_followers_two_religions	Easy	Followers of which two religions fought each other in the Crusades?	Christians and Muslims	Christians and Jews	Muslims and Hindus	Buddhists and Christians
 his_legendary_outlaw_said	Easy	Which legendary outlaw is said to have stayed loyal to King Richard while he was away on crusade?	Robin Hood	Dick Turpin	William Tell	Rob Roy
+his_english_king_spent	Easy	Which English king spent only about six months of his ten-year reign in England?	Richard the Lionheart	John Lackland	Henry II	Edward I
+his_brother_richard_lionheart	Easy	Which brother of Richard the Lionheart plotted to seize the throne while Richard was away on crusade?	John	Geoffrey	Henry	Edmund
 his_krucjaty	Medium	What were the medieval Crusades mainly fought over?	Control of the Holy Land	Spices from India	Gold mines in Africa	The throne of France
 hx_ryszard_lwie	Medium	Which English king was nicknamed 'the Lionheart'?	Richard I	Henry V	Edward I	John
 his_year_crusade_capture	Medium	In which year did the First Crusade capture Jerusalem?	1099	1066	1187	1204
@@ -17,6 +19,9 @@ his_church_promise_went	Medium	What did the Church promise those who went on cru
 his_two_spanish_kingdoms	Medium	Which two Spanish kingdoms were joined by the marriage of Ferdinand and Isabella in 1469?	Castile and Aragon	Leon and Navarre	Granada and Valencia	Portugal and Galicia
 his_england_get_richard	Medium	How did England get Richard the Lionheart back after he was captured on his way home from the crusade?	It paid a huge ransom	Robin Hood rescued him	He escaped in disguise	It gave up Normandy for him
 his_according_chroniclers_richard	Medium	According to chroniclers, what did Richard the Lionheart's great Muslim rival send him when he lay ill with fever?	Fruit and mountain snow	A tame lion cub	A golden sword	Holy water from Mecca
+his_even_leaving_europe	Medium	Before even leaving Europe in 1096, crusading bands attacked which communities in Rhineland towns?	Jewish communities	Muslim merchants	Orthodox monks	Pagan villages
+his_saladin_tithe_raised	Medium	What was the 'Saladin tithe', raised in England and France in 1188?	A tax to pay for a crusade	A ransom to free Jerusalem	A gift sent to Saladin's court	A tenth of loot for the pope
+his_saint_crossed_battle	Medium	Which saint crossed the battle lines during the Fifth Crusade in 1219 to try to convert the sultan of Egypt?	Francis of Assisi	Bernard of Clairvaux	Thomas Aquinas	Dominic
 his_templariusze	Hard	Which order of knights, who wore red crosses, had its members arrested across France in 1307?	The Knights Templar	The Teutonic Knights	The Knights Hospitaller	The Order of the Garter
 hx_saladyn	Hard	Which Muslim sultan retook Jerusalem from the Crusaders in 1187?	Saladin	Baibars	Mehmed II	Harun al-Rashid
 hx_urban_ii	Hard	Which pope launched the First Crusade in 1095?	Urban II	Gregory VII	Innocent III	Leo IX
@@ -43,6 +48,7 @@ his_according_legend_minstrel	Hard	According to legend, how did the minstrel Blo
 his_family_background_salah	Hard	What was the family background of Salah ad-Din, the sultan who founded the Ayyubid dynasty?	Kurdish	Arab	Turkish	Persian
 his_old_man_mountain	Hard	Who was 'the Old Man of the Mountain', feared by the crusaders?	The leader of the Assassins	A hermit who foretold battles	The emir of Damascus	The Byzantine spymaster
 his_richard_lionheart_700	Hard	What did Richard the Lionheart do to about 2,700 Muslim prisoners after taking a great port city in 1191?	Had them executed	Set them all free	Sold them in Venice	Swapped them for the True Cross
+his_according_crusader_chroniclers	Hard	According to crusader chroniclers, what did starving crusaders do after taking the town of Maarat al-Numan in 1098?	Ate the bodies of the dead	Burned it and marched home	Turned back to Constantinople	Made peace with the sultan
 hy_czwarta_krucjata	Expert	Which Christian city was sacked by the Fourth Crusade in 1204?	Constantinople	Jerusalem	Antioch	Rome
 his_given_crusader_states	Expert	What was the name given to the crusader states in the Levant, meaning 'overseas'?	Outremer	Levant	Oltremare	Terra Santa
 his_pope_dissolved_crusading	Expert	Which pope dissolved a famous crusading order under pressure from Philip IV in 1312?	Clement V	Boniface VIII	Urban II	Innocent III

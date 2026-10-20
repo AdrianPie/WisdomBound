@@ -3,6 +3,10 @@ id	difficulty	prompt	correct	wrong1	wrong2	wrong3
 his_animals_pulled_sledges	Easy	Which animals pulled the sledges of the first expedition to reach the South Pole?	Dogs	Ponies	Reindeer	Motor sledges
 his_country_roald_amundsen	Easy	Which country did Roald Amundsen come from?	Norway	Sweden	Denmark	Finland
 his_wright_brothers_build	Easy	What did the Wright brothers build and fly in 1903?	The first powered aeroplane	The first hot-air balloon	The first helicopter	The first glider
+his_roughly_long_wright	Easy	Roughly how long did the Wright brothers' first powered flight last, in 1903?	About 12 seconds	About 2 minutes	About 10 minutes	About 1 hour
+his_2022_wreck_explorer	Easy	In 2022, the wreck of which explorer's ship was found 3,000 metres deep in the Weddell Sea?	Ernest Shackleton	Robert Falcon Scott	Roald Amundsen	Douglas Mawson
+his_amelia_earhart_nicknamed	Easy	Amelia Earhart was nicknamed 'Lady Lindy' because she looked like which aviator?	Charles Lindbergh	Howard Hughes	Wiley Post	Chuck Yeager
+his_edmund_hillary_team	Easy	How did Edmund Hillary's team travel to the South Pole in 1958?	Driving farm tractors	By dog sledge	On foot and skis	In army snow tanks
 his_earhart	Medium	Who was the first woman to fly solo across the Atlantic?	Amelia Earhart	Bessie Coleman	Amy Johnson	Valentina Tereshkova
 his_amundsen	Medium	Who led the first expedition to reach the South Pole, in 1911?	Roald Amundsen	Robert Falcon Scott	Ernest Shackleton	Richard Byrd
 his_everest_1953	Medium	Who were the first climbers confirmed to reach the top of Everest, in 1953?	Edmund Hillary and Tenzing Norgay	George Mallory and Andrew Irvine	Reinhold Messner and Peter Habeler	Jim Whittaker and Nawang Gombu
@@ -20,6 +24,11 @@ his_german_airship_fiery	Medium	Which German airship's fiery crash in New Jersey
 his_two_british_airmen	Medium	Which two British airmen made the first non-stop flight across the Atlantic, in 1919?	Alcock and Brown	Lindbergh and Byrd	Wright and Curtiss	Hawker and Grieve
 his_edmund_hillary_job	Medium	What was Edmund Hillary's job before he climbed Everest?	Beekeeper	Schoolteacher	Sheep farmer	Postman
 his_american_journalist_raced	Medium	Which American journalist raced around the world in 72 days in 1889-1890?	Nellie Bly	Amelia Earhart	Ida Tarbell	Annie Londonderry
+his_became_woman_swim	Medium	Who became the first woman to swim the English Channel, in 1926, beating the men's record?	Gertrude Ederle	Florence Chadwick	Esther Williams	Mercedes Gleitze
+his_scott_party_find	Medium	What did Scott's party find waiting for them at the South Pole in January 1912?	A Norwegian tent	A British flag	An empty food depot	A frozen dog team
+his_person_confirmed_reached	Medium	Who was the first person confirmed to have reached both the North and the South Pole?	Roald Amundsen	Robert Peary	Ernest Shackleton	Richard Byrd
+his_tenzing_norgay_leave	Medium	What did Tenzing Norgay leave on the summit of Everest as an offering in 1953?	Sweets and biscuits	A prayer wheel	A lock of his hair	A bottle of rice wine
+his_explorer_said_advertised	Medium	Which explorer is said to have advertised 'Men wanted for hazardous journey... safe return doubtful'?	Ernest Shackleton	Robert Falcon Scott	Roald Amundsen	Fridtjof Nansen
 his_kitty_hawk	Hard	Near which town did the Wright brothers make their first powered flight?	Kitty Hawk	Dayton	Detroit	Cape Canaveral
 hx_earhart	Hard	Over which ocean did Amelia Earhart disappear in 1937?	The Pacific	The Atlantic	The Indian Ocean	The Arctic Ocean
 his_ship_endurance_crushed	Hard	Whose ship 'Endurance' was crushed by Antarctic ice in 1915?	Ernest Shackleton	Robert Falcon Scott	Roald Amundsen	James Cook
@@ -37,6 +46,8 @@ his_roald_amundsen_die	Hard	How did Roald Amundsen die in 1928?	His plane vanish
 his_american_explorer_brought	Hard	Which American explorer brought the Inca city of Machu Picchu to world attention in 1911?	Hiram Bingham	Robert Peary	Percy Fawcett	Howard Carter
 his_climber_south_tyrol	Hard	Which climber from South Tyrol made the first ascent of Everest without bottled oxygen, in 1978, with Peter Habeler?	Reinhold Messner	Walter Bonatti	Achille Compagnoni	Kurt Diemberger
 his_last_diary_entry	Hard	Whose last diary entry, found in a frozen tent in Antarctica, read 'For God's sake look after our people'?	Robert Falcon Scott	Lawrence Oates	Ernest Shackleton	Edward Wilson
+his_australian_survived_alone	Hard	Which Australian survived alone in Antarctica in 1912-1913 after both his companions died?	Douglas Mawson	Hubert Wilkins	Frank Hurley	Edgeworth David
+his_pilot_raised_kenya	Hard	Which pilot, raised in Kenya, became the first woman to fly solo across the Atlantic from east to west, in 1936?	Beryl Markham	Amy Johnson	Jean Batten	Jacqueline Cochran
 his_slocum	Expert	Who was the first person to sail alone around the world, in 1895-1898?	Joshua Slocum	Francis Chichester	Robin Knox-Johnston	Ellen MacArthur
 hy_zeppelin	Expert	Airships are often called zeppelins after whom?	A German count	A Swiss engineer	A French balloonist	An American inventor
 his_american_aviator_claimed	Expert	Which American aviator claimed the first flight over the North Pole, in 1926?	Richard Byrd	Charles Lindbergh	Howard Hughes	Wiley Post
@@ -45,3 +56,4 @@ his_made_solo_flight	Expert	Who made the first solo flight around the world, in 
 his_climbers_country_reached	Expert	Climbers from which country first reached the top of K2, in 1954?	Italy	Britain	Switzerland	Pakistan
 his_small_lifeboat_shackleton	Expert	In which small lifeboat did Shackleton sail 1,300 km to South Georgia to get help in 1916?	The James Caird	The Endurance	The Discovery	The Nimrod
 his_american_doctor_claim	Expert	Which American doctor's claim to have reached the North Pole in 1908 was widely dismissed as a fraud?	Frederick Cook	Richard Byrd	Adolphus Greely	Elisha Kane
+his_american_pilot_claimed	Expert	Which American pilot claimed he had flown to Ireland by mistake in 1938, after being refused permission to cross the Atlantic?	Douglas Corrigan	Clyde Pangborn	Bert Acosta	Howard Hughes

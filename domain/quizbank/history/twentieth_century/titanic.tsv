@@ -6,6 +6,8 @@ his_month_1912_titanic	Easy	In which month of 1912 did the Titanic sink?	April	J
 his_ship_band_famously	Easy	What did the ship's band famously do as the Titanic sank?	Kept on playing	Jumped overboard	Took the first lifeboat	Hid in the hold
 his_titanic_famously_said	Easy	What was the Titanic famously said to be before its first voyage?	Unsinkable	Haunted	The fastest ship ever	Made of steel and gold
 his_hymn_titanic_band	Easy	Which hymn is the Titanic's band said to have played as the ship went down?	'Nearer, My God, to Thee'	'Eternal Father, Strong to Save'	'Amazing Grace'	'Rock of Ages'
+his_rule_titanic_officers	Easy	Which rule did the Titanic's officers follow when filling the lifeboats?	Women and children first	First-class passengers first	Crew members first	Strongest swimmers first
+his_colour_titanic_hull	Easy	What colour was the Titanic's hull?	Black	White	Dark blue	Red
 his_titanic	Medium	In which year did the Titanic sink?	1912	1905	1918	1923
 wh_titanic_rejs	Medium	During which voyage did the Titanic sink?	Its maiden voyage	Its second voyage	Its tenth voyage	Its return trip from New York
 his_titanic_cel	Medium	Which city was the Titanic sailing to when it sank?	New York	Boston	Halifax	Southampton
@@ -23,6 +25,11 @@ his_roughly_time_night	Medium	At roughly what time of night did the Titanic hit 
 his_letters_rms_rms	Medium	What do the letters 'RMS' in 'RMS Titanic' stand for?	Royal Mail Ship	Royal Maritime Service	Registered Merchant Ship	Royal Marine Steamer
 his_main_pieces_wreck	Medium	In how many main pieces does the wreck of the Titanic lie on the seabed?	Two	One	Three	Five
 his_titanic_lookouts_binoculars	Medium	Why did the Titanic's lookouts have no binoculars?	The key to their locker was missing	They were sold in Southampton	The captain banned them	They broke in a storm
+his_class_passengers_use	Medium	Which of these could first-class passengers use aboard the Titanic?	A swimming pool	A small cinema room	A ten-pin bowling alley	An indoor ice rink
+his_day_week_titanic	Medium	On which day of the week did the Titanic hit the iceberg?	Sunday	Friday	Wednesday	Tuesday
+his_novel_1898_giant	Medium	In a novel of 1898, a giant 'unsinkable' liner hits an iceberg in April and sinks. What was the ship called?	The Titan	The Atlantis	The Colossus	The Olympian
+his_roughly_cold_sea	Medium	Roughly how cold was the sea where the Titanic sank?	About -2 C	About 4 C	About 10 C	About 15 C
+his_roughly_long_titanic	Medium	Roughly how long was the Titanic?	About 270 metres	About 120 metres	About 180 metres	About 450 metres
 hw_titanic_czas	Hard	Roughly how long did the Titanic take to sink after its fatal collision?	About 2 hours 40 minutes	About 20 minutes	About 8 hours	About 2 days
 his_year_wreck_titanic	Hard	In which year was the wreck of the Titanic found?	1985	1962	1999	1971
 his_shipping_company_owned	Hard	Which shipping company owned the Titanic?	The White Star Line	The Cunard Line	The Hamburg America Line	P&O
@@ -39,6 +46,8 @@ his_wealthy_couple_owners	Hard	Which wealthy couple, owners of Macy's store, ref
 his_company_employed_titanic	Hard	Which company employed the Titanic's two radio operators?	Marconi	White Star	Cunard	Western Union
 his_watertight_compartments_titanic	Hard	How many of its watertight compartments could the Titanic flood and still stay afloat?	Four	Two	Six	Eight
 his_titanic_bandleader_violin	Hard	What was the name of the Titanic's bandleader, whose violin was found after the sinking?	Wallace Hartley	Jack Phillips	Harold Bride	John Hume
+his_american_banker_shipping	Hard	Which American banker, whose shipping trust ultimately owned the Titanic, cancelled his trip on it at the last minute?	J. P. Morgan	John D. Rockefeller	Andrew Carnegie	Cornelius Vanderbilt
+his_dozen_dogs_sailed	Hard	About a dozen dogs sailed on the Titanic. How many of them survived?	Three	None	One	Seven
 hy_jessop	Expert	Violet Jessop survived the Titanic and accidents on which two of its sister ships?	The Olympic and the Britannic	The Lusitania and the Carpathia	The Queen Mary and the Olympic	The Britannic and the Lusitania
 his_canadian_city_150	Expert	In which Canadian city are about 150 of the Titanic's victims buried?	Halifax	Quebec City	Montreal	St John's
 his_irish_port_titanic	Expert	At which Irish port did the Titanic make its last stop before crossing the Atlantic?	Queenstown	Dublin	Belfast	Galway
@@ -46,3 +55,5 @@ his_lookout_spotted_iceberg	Expert	Which lookout spotted the iceberg from the Ti
 his_nickname_titanic_long	Expert	What was the nickname of the Titanic's long-serving sister ship, the Olympic?	'Old Reliable'	'The Iron Lady'	'The Lucky One'	'Big Sister'
 his_titanic_baker_survived	Expert	Which Titanic baker survived hours in the icy sea, reportedly helped by a lot of whisky?	Charles Joughin	Frederick Fleet	Harold Bride	Arthur Rostron
 his_last_living_survivor	Expert	Who was the last living survivor of the Titanic, who died in 2009?	Millvina Dean	Eva Hart	Ruth Becker	Edith Haisman
+his_fashion_designer_husband	Expert	Which fashion designer and her husband were accused of bribing the crew of their nearly empty lifeboat?	Lady Duff-Gordon	The Countess of Rothes	Madeleine Astor	Helen Churchill Candee
+his_titanic_radio_operator	Expert	What did the Titanic's radio operator snap back when a nearby ship tried to report ice?	'Shut up, I am busy'	'Message received, thanks'	'Stop sending, we know'	'Repeat, signal is weak'

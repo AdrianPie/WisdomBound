@@ -8,6 +8,8 @@ his_date_france_national	Easy	On which date is France's national day, marking an
 his_motto_french_revolution	Easy	What was the famous motto of the French Revolution?	'Liberty, equality, fraternity'	'God, king and country'	'Peace, land and bread'	'Unity, faith, discipline'
 his_colours_make_french	Easy	Which colours make up the French tricolour flag born in the Revolution?	Blue, white and red	Green, white and red	Black, red and gold	Blue and yellow
 his_french_queen_wrongly	Easy	Which French queen is wrongly said to have answered news of hungry peasants with 'Let them eat cake'?	Marie Antoinette	Catherine de' Medici	Josephine	Marie Louise
+his_revolution_group_made	Easy	Before the Revolution, which group made up France's 'First Estate'?	The clergy	The nobility	The peasants	The merchants
+his_great_paris_museum	Easy	Which great Paris museum first opened to the public in 1793, in a former royal palace?	The Louvre	The Musee d'Orsay	The Pompidou Centre	The Musee Carnavalet
 his_rewolucja_fr	Medium	In which year did the French Revolution break out?	1789	1799	1776	1804
 his_french_king_guillotined	Medium	Which French king was guillotined in 1793?	Louis XVI	Louis XIV	Louis XV	Charles X
 his_royal_family_ruled	Medium	Which royal family ruled France at the time of the French Revolution?	Bourbon	Valois	Habsburg	Plantagenet
@@ -23,6 +25,10 @@ his_emigres_french_revolution	Medium	Who were the 'emigres' of the French Revolu
 his_happened_louis_xvi	Medium	What happened to Louis XVI's young son, Louis XVII?	He died in prison as a child	He became emperor	He escaped to America	He was crowned in 1815
 his_tricoteuses_revolution_said	Medium	What were the 'tricoteuses' of the Revolution said to do while watching executions?	Knit	Sing hymns	Sell food	Pray
 his_soft_red_cap	Medium	Which soft red cap became the symbol of liberty in the French Revolution?	The Phrygian cap	The beret	The tricorne	The kepi
+his_french_revolutionaries_tried	Medium	French revolutionaries tried decimal time. How many hours did their day have?	10	12	20	100
+his_wax_modeller_later	Medium	Which wax modeller, who later opened a famous London museum, made death masks of guillotine victims?	Marie Tussaud	Madame de Stael	Elisabeth Vigee Le Brun	Madame Roland
+his_became_bastille_stormed	Medium	What became of the Bastille after it was stormed in 1789?	It was torn down stone by stone	It became a museum of the Revolution	It was turned into army barracks	It became a prison for nobles
+his_louis_xvi_guillotined	Medium	Louis XVI was guillotined in the Paris square that is today called what?	Place de la Concorde	Place de la Bastille	Place Vendome	Place des Vosges
 org_gilotyna_lekarz	Hard	The man behind the guillotine's name actually did what?	Proposed it as a humane method	Built the first one	Was executed by it	Sharpened its blade
 hx_robespierre	Hard	Which revolutionary led the 'Reign of Terror' before being guillotined himself in 1794?	Maximilien Robespierre	Georges Danton	Jean-Paul Marat	Napoleon Bonaparte
 his_assembly_met_1789	Hard	Which assembly met in 1789 for the first time since 1614, setting off the Revolution?	The Estates-General	The National Convention	The Directory	The Paris Commune
@@ -40,6 +46,7 @@ his_moderate_revolutionary_faction	Hard	Which moderate revolutionary faction, na
 his_city_marseillaise_actually	Hard	In which city was 'La Marseillaise' actually written, in 1792?	Strasbourg	Marseille	Paris	Lyon
 his_louis_xvi_tried	Hard	By which name was Louis XVI tried and executed by the revolutionaries?	Louis Capet	Louis Bourbon	Louis Valois	Louis d'Orleans
 his_month_names_french	Hard	What did the month names of the French Revolutionary calendar describe?	Weather and farm life	Heroes of the Revolution	Roman gods and goddesses	Great battles of France
+his_royal_cousin_louis	Hard	Which royal cousin of Louis XVI called himself 'Philippe Egalite' and voted for the king's death?	The Duke of Orleans	The Count of Artois	The Prince of Conde	The Duke of Berry
 hx_marat_wanna	Expert	Revolutionary Jean-Paul Marat was murdered in 1793 while doing what?	Taking a bath	Giving a speech	Eating dinner	Riding in a carriage
 hx_bastylia_wiezniowie	Expert	How many prisoners were inside the Bastille when it was stormed in 1789?	Seven	About 70	About 700	None
 hx_gilotyna_1977	Expert	In which year did France carry out its last execution by guillotine?	1977	1871	1918	1946
@@ -49,3 +56,4 @@ his_coup_july_1794	Expert	What is the coup of July 1794 that brought down Robesp
 his_royalist_catholic_uprising	Expert	Which royalist and Catholic uprising in western France was savagely crushed in 1793-1796?	The War in the Vendee	The Fronde	The Camisard revolt	The Jacquerie
 his_new_state_religion	Expert	Which new state religion did Robespierre celebrate with a huge festival in June 1794?	The cult of the Supreme Being	The cult of Reason	The Church of the Nation	The Temple of Liberty
 his_people_officially_executed	Expert	About how many people were officially executed during the Reign of Terror?	About 17,000	About 1,700	About 170,000	About 500
+his_person_put_death	Expert	Who was the first person put to death by the guillotine, in April 1792?	A common highway robber	A royalist nobleman	A Catholic bishop	A Swiss Guard officer

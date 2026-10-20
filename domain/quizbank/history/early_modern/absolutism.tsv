@@ -5,6 +5,10 @@ his_city_capital_russia	Easy	Which city was the capital of Russia from 1712 to 1
 his_french_cardinal_powerful	Easy	Which French cardinal was the powerful chief minister of Louis XIII?	Cardinal Richelieu	Cardinal Mazarin	Cardinal Wolsey	Cardinal Fleury
 his_palace_outside_paris	Easy	To which palace outside Paris did Louis XIV move the French court in 1682?	Versailles	Fontainebleau	The Louvre	Chambord
 his_tsar_founded_city	Easy	Which tsar founded the city of Saint Petersburg in 1703?	Peter the Great	Ivan the Terrible	Catherine the Great	Alexander I
+his_kingdom_ruled_berlin	Easy	Which kingdom, ruled from Berlin by the Hohenzollern family, became a great military power in the 1700s?	Prussia	Bavaria	Saxony	Hanover
+his_peter_great_built	Easy	Peter the Great built his new capital on the shores of which sea?	The Baltic Sea	The Black Sea	The White Sea	The Caspian Sea
+his_apart_austria_great	Easy	Apart from Austria, which great kingdom did a branch of the Habsburgs rule from 1516 to 1700?	Spain	France	England	Sweden
+his_old_louis_xiv	Easy	How old was Louis XIV when he became King of France in 1643?	Four	Fourteen	Eighteen	Twenty-one
 his_krol_slonce	Medium	Which French king was known as 'the Sun King'?	Louis XIV	Louis XVI	Francis I	Henry IV
 his_katarzyna_wielka	Medium	Which Russian empress was born a German princess?	Catherine the Great	Elizabeth of Russia	Anna Ivanovna	Maria Theresa
 hx_iwan_grozny	Medium	Which ruler was the first to be crowned 'Tsar of all Russia', in 1547?	Ivan the Terrible	Peter the Great	Catherine the Great	Boris Godunov
@@ -27,6 +31,8 @@ his_south_sea_bubble	Medium	What was the 'South Sea Bubble' of 1720?	A stock mar
 his_catherine_great_seized	Medium	Catherine the Great seized the Russian throne in 1762 from whom?	Her husband, Peter III	Her son, Paul	Empress Elizabeth	The boy tsar Ivan VI
 his_room_gift_king	Medium	Which famous room, a gift from the King of Prussia to Peter the Great, vanished during World War II?	The Amber Room	The Hall of Mirrors	The Gold Room	The Malachite Room
 his_instrument_frederick_great	Medium	Which instrument did Frederick the Great play, even composing over 100 sonatas for it?	The flute	The violin	The harpsichord	The cello
+his_language_frederick_great	Medium	Which language did Frederick the Great prefer to speak and write, scorning his native German?	French	Latin	Italian	English
+his_peter_great_towered	Medium	Peter the Great towered over his courtiers at roughly what height?	About 2 metres	About 1.6 metres	About 1.7 metres	About 1.5 metres
 hx_piotr_stocznia	Hard	Peter the Great toured Europe in disguise, working for a time as what?	A shipbuilder	A painter	A soldier	A baker
 hy_romanowowie	Hard	Which dynasty ruled Russia from 1613 until 1917?	The Romanovs	The Rurikids	The Habsburgs	The Godunovs
 hy_maria_teresa	Hard	Which Habsburg empress was the mother of Marie Antoinette?	Maria Theresa	Catherine the Great	Elisabeth of Austria	Isabella of Castile
@@ -44,6 +50,7 @@ his_brilliant_general_savoy	Hard	Which brilliant general of Savoy fought for the
 his_scottish_banker_mississippi	Hard	Which Scottish banker's Mississippi scheme ruined thousands of French investors in 1720?	John Law	Adam Smith	William Paterson	Robert Walpole
 his_young_tsar_pushed	Hard	Which young tsar pushed aside his half-sister Sophia, who ruled as regent, in 1689?	Peter the Great	Ivan V	Alexis I	Feodor III
 his_fashion_louis_xiv	Hard	Which fashion did Louis XIV reserve for nobles in favour at his court?	Red heels on their shoes	Purple silk cloaks	Blue feathers in their hats	Gold buttons on their coats
+his_son_heir_peter	Hard	Which son and heir of Peter the Great died in 1718 after being tortured on his father's orders?	Alexei	Ivan	Paul	Michael
 hx_ludwik_72	Expert	For about how long did Louis XIV reign over France?	72 years	42 years	55 years	31 years
 hx_fryderyk_ziemniaki	Expert	Which Prussian king is said to have got his people to grow potatoes by posting guards on his potato fields?	Frederick the Great	Wilhelm I	Frederick William I	Otto von Bismarck
 his_cossack_led_huge	Expert	Which Cossack led a huge peasant revolt against Catherine the Great in 1773?	Yemelyan Pugachev	Stenka Razin	Bogdan Khmelnytsky	Ivan Mazepa
@@ -51,3 +58,4 @@ his_emperor_charles_spend	Expert	Where did Emperor Charles V spend his last year
 his_rebellion_french_nobles	Expert	Which rebellion of French nobles and Parisians in 1648-1653 terrified the young Louis XIV?	The Fronde	The Jacquerie	The Camisard revolt	The Vendee
 his_russian_empress_made	Expert	Which Russian empress made a prince marry a servant in a palace built of ice in 1740?	Anna	Elizabeth	Catherine I	Catherine the Great
 his_german_doctor_ruled	Expert	Which German doctor ruled Denmark as the queen's lover until he was executed in 1772?	Johann Struensee	Andreas Bernstorff	Ove Guldberg	Peder Griffenfeld
+his_french_philosopher_sold	Expert	Which French philosopher sold his library to Catherine the Great, who let him keep it and paid him to look after it?	Denis Diderot	Voltaire	Montesquieu	Jean d'Alembert

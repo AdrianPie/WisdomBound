@@ -3,6 +3,10 @@ id	difficulty	prompt	correct	wrong1	wrong2	wrong3
 his_golden_roofed_temple	Easy	Which golden-roofed temple in Amritsar is the holiest shrine of the Sikhs?	The Golden Temple	The Lotus Temple	The Red Fort	The Jama Masjid
 his_religion_mughal_emperors	Easy	Which religion did the Mughal emperors follow?	Islam	Hinduism	Buddhism	Sikhism
 his_white_marble_tomb	Easy	Which white marble tomb is the most famous building in India?	The Taj Mahal	The Red Fort	The Lotus Temple	The Gateway of India
+his_animals_carried_mughal	Easy	Which animals carried Mughal emperors into battle and served as living tanks?	Elephants	Camels	Horses	Oxen
+his_lahore_great_mughal	Easy	Lahore's great Mughal fort and Badshahi Mosque stand in which present-day country?	Pakistan	India	Afghanistan	Bangladesh
+his_english_word_powerful	Easy	Which English word for a powerful tycoon, as in 'media ...', comes from the Mughal emperors?	Mogul	Magnate	Baron	Kingpin
+his_cool_mountain_valley	Easy	Which cool mountain valley did the Mughal emperors love as a summer retreat, calling it a paradise on earth?	Kashmir	Nepal	Sikkim	Assam
 hx_shah_jahan	Medium	Which Mughal emperor built the Taj Mahal in memory of his wife?	Shah Jahan	Akbar	Babur	Aurangzeb
 his_religion_founded_guru	Medium	Which religion was founded by Guru Nanak in the Punjab?	Sikhism	Jainism	Buddhism	Bahai Faith
 his_empire_built_delhi	Medium	Which empire built Delhi's Red Fort?	The Mughal Empire	The Maurya Empire	The British Raj	The Gupta Empire
@@ -20,6 +24,11 @@ his_great_mosque_delhi	Medium	Which great mosque in Delhi, built by Shah Jahan, 
 his_witty_minister_emperor	Medium	Which witty minister of Emperor Akbar is the hero of countless Indian folk tales?	Birbal	Tansen	Todar Mal	Abul Fazl
 his_according_legend_shah	Medium	According to legend, what did Shah Jahan plan to build across the river from the Taj Mahal?	A twin Taj in black marble	A twin Taj in red sandstone	A golden palace for his son	A great observatory
 his_great_mughal_emperor	Medium	Which great Mughal emperor, despite collecting a huge library, probably never learned to read?	Akbar	Babur	Aurangzeb	Shah Jahan
+his_founder_mughal_empire	Medium	The founder of the Mughal Empire was born in Andijan, a town in which present-day country?	Uzbekistan	Iran	Afghanistan	Turkey
+his_mughal_emperor_lie	Medium	Where does the first Mughal emperor lie buried, as he had wished?	Kabul	Agra	Delhi	Samarkand
+his_roughly_long_take	Medium	Roughly how long did it take to build the Taj Mahal and its gardens?	About 20 years	About 5 years	About 60 years	About 2 years
+his_art_inlaying_coloured	Medium	What is the art of inlaying coloured stones into marble, used for the flowers on the Taj Mahal, called?	Pietra dura	Cloisonne	Marquetry	Terrazzo
+his_taj_mahal_four	Medium	Why do the Taj Mahal's four minarets lean slightly outwards?	So they would fall away from the tomb	Because the soft ground has sunk	To look straight from the garden	Because of a builder's mistake
 his4_dynastia_mogolow	Hard	The Mughal Empire ruled mainly over which region?	The Indian subcontinent	Persia	Anatolia	Central China
 hy_akbar	Hard	Which Mughal emperor, known for religious tolerance, was called 'the Great'?	Akbar	Aurangzeb	Babur	Humayun
 his_strict_mughal_emperor	Hard	Which strict Mughal emperor locked up his father and pushed the empire to its greatest size?	Aurangzeb	Akbar	Jahangir	Humayun
@@ -33,6 +42,10 @@ his_walled_city_built	Hard	What was the walled city built by Shah Jahan in Delhi
 his_singer_akbar_court	Hard	Which singer at Akbar's court was said to be able to light lamps with the power of his music?	Tansen	Birbal	Amir Khusrau	Mirabai
 his_tax_non_muslims	Hard	Which tax on non-Muslims did Akbar abolish and Aurangzeb bring back?	The jizya	The zakat	The kharaj	The chauth
 his_language_mughal_emperor	Hard	In which language did the first Mughal emperor, Babur, write his memoirs?	Chagatai Turkish	Persian	Arabic	Urdu
+his_mughal_emperor_keen	Hard	Which Mughal emperor, a keen naturalist, had his court artists paint rare animals, including a dodo?	Jahangir	Akbar	Humayun	Shah Jahan
+his_according_legend_akbar	Hard	According to legend, Akbar played which board game in a palace courtyard, using people as the pieces?	Pachisi	Chess	Backgammon	Snakes and ladders
+his_last_great_mughal	Hard	How is the last great Mughal emperor, a strict and austere man, said to have paid for his own plain grave?	By selling caps he had sewn	By selling his war elephants	By melting down his crown	By pawning his rubies
+his_brotherhood_baptised_sikhs	Hard	Which brotherhood of baptised Sikhs did Guru Gobind Singh found in 1699?	The Khalsa	The Akali	The Sangat	The Misl
 hy_babur	Expert	Who founded the Mughal Empire in India in 1526?	Babur	Akbar	Shah Jahan	Timur
 his_persian_conqueror_plundered	Expert	Which Persian conqueror plundered Delhi in 1739 and carried off the Peacock Throne?	Nader Shah	Shah Abbas	Ahmad Shah Durrani	Ismail I
 his_mughal_emperor_means	Expert	Which Mughal emperor's name means 'conqueror of the world'?	Jahangir	Aurangzeb	Shah Jahan	Humayun
@@ -44,3 +57,4 @@ his_persian_style_garden	Expert	What is the Persian-style garden divided into fo
 his_daughter_shah_jahan	Expert	Which daughter of Shah Jahan was one of the richest and most powerful women of her time?	Jahanara	Mumtaz Mahal	Nur Jahan	Gulbadan
 his_emperor_jahangir_hang	Expert	What did Emperor Jahangir hang outside his palace so that anyone could call on him for justice?	A golden chain with bells	A brass gong	A box for written pleas	A huge drum
 his_english_ambassador_spent	Expert	Which English ambassador spent years at the court of Jahangir winning trading rights, from 1615?	Thomas Roe	John Smith	Thomas Gresham	Richard Hakluyt
+his_memoirs_mughal_emperor	Expert	In his memoirs, what did the first Mughal emperor complain that India lacked?	Good melons and grapes	Skilled craftsmen	Gold and silver	Rich farmland
