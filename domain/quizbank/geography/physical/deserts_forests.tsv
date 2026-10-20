@@ -4,6 +4,17 @@ geo2_amazonia_kontynent	Easy	On which continent is the Amazon rainforest?	South 
 geocmp_pustynia_najwieksza	Easy	Which is the largest hot desert?	The Sahara	The Arabian Desert	The Gobi	The Kalahari
 geo_amazon_rainforest_lies	Easy	Most of the Amazon rainforest lies in which country?	Brazil	Peru	Colombia	Venezuela
 geo_australians_call_remote	Easy	What do Australians call the remote, dry interior of their country?	The Outback	The Badlands	The Steppe	The Prairie
+geo_largest_tropical_rainforest	Easy	Which is the largest tropical rainforest on Earth?	The Amazon	The Congo rainforest	The Daintree	The Borneo rainforest
+geo_german_forest_gave	Easy	Which German forest gave its name to a famous chocolate and cherry cake?	The Black Forest	The Bavarian Forest	The Teutoburg Forest	The Harz Forest
+geo_flat_topped_thorny	Easy	Which flat-topped, thorny tree is the classic tree of the African savanna?	The acacia	The baobab	The eucalyptus	The cypress
+geo_everglades_vast_wetland	Easy	The Everglades, a vast wetland full of alligators, is in which US state?	Florida	Louisiana	Georgia	Texas
+geo_nickname_often_given	Easy	Which nickname is often given to the Amazon rainforest?	The lungs of the planet	The roof of the world	The cradle of mankind	The garden of Eden
+geo_animals_not_africa	Easy	Which of these animals is NOT one of Africa's safari 'Big Five'?	The hippo	The leopard	The rhino	The buffalo
+geo_death_valley_national	Easy	Most of Death Valley National Park lies in which US state?	California	Nevada	Arizona	Utah
+geo_world_tropical_rainforests	Easy	Most of the world's tropical rainforests lie close to which line?	The equator	The Tropic of Cancer	The Arctic Circle	The prime meridian
+geo_national_park_granite	Easy	Which US national park is famous for the granite cliffs El Capitan and Half Dome?	Yosemite	Yellowstone	Zion	Grand Teton
+geo_animals_make_great	Easy	Which animals make up most of the Great Migration across the Serengeti?	Wildebeest	Elephants	Zebras	Buffalo
+geo_crop_main_reason	Easy	Which crop is the main reason rainforests are cleared in Indonesia and Malaysia?	Oil palm	Coffee	Rubber	Tea
 geo2_pustynia_azja	Medium	Which desert lies in Mongolia and China?	The Gobi	The Kalahari	The Atacama	The Karakum
 lmk_serengeti_kraj	Medium	In which country is the Serengeti National Park?	Tanzania	Kenya	Uganda	Zambia
 lmk_atacama_kraj	Medium	In which country is the Atacama Desert?	Chile	Peru	Bolivia	Argentina
@@ -17,6 +28,31 @@ geo_desert_surrounds_las	Medium	Which desert surrounds Las Vegas?	The Mojave	The
 geo_desert_covers_southern	Medium	Which desert covers most of southern Israel?	Negev	Sinai	Sahara	Rub' al Khali
 geo_vast_arabian_desert	Medium	Which vast Arabian desert is called the 'Empty Quarter'?	Rub' al Khali	Negev	Syrian Desert	Nafud
 geo_desert_lies_border	Medium	Which desert lies on the border of India and Pakistan?	Thar	Gobi	Karakum	Taklamakan
+geo_roughly_sahara_covered	Medium	Roughly how much of the Sahara is covered by sand dunes?	About a quarter	Nearly all of it	About three quarters	About half
+geo_sahara_comes_arabic	Medium	The name 'Sahara' comes from the Arabic word for what?	Desert	Sand	Heat	Emptiness
+geo_roughly_earth_land	Medium	Roughly how much of Earth's land surface is desert?	About a third	About a tenth	About two thirds	About 3%
+geo_india_shares_sundarbans	Medium	India shares the Sundarbans, the largest mangrove forest on Earth, with which country?	Bangladesh	Myanmar	Sri Lanka	Thailand
+geo_world_second_largest	Medium	Where is the world's second-largest tropical rainforest?	Central Africa	Southeast Asia	Central America	Madagascar
+geo_congo_rainforest_lies	Medium	Most of the Congo rainforest lies in which country?	DR Congo	Gabon	Cameroon	Republic of the Congo
+geo_cleared_amazon_rainforest	Medium	What is most of the cleared Amazon rainforest land used for?	Cattle pasture	Soya fields	Oil palm plantations	Coffee farms
+geo_daintree_often_oldest	Medium	The Daintree, often called the oldest tropical rainforest on Earth, is in which country?	Australia	Brazil	Indonesia	Malaysia
+geo_saharan_people_nicknamed	Medium	Which Saharan people are nicknamed 'the blue men' for their indigo-dyed robes and veils?	The Tuareg	The Bedouin	The Maasai	The Fulani
+geo_country_zhangjiajie_stone	Medium	In which country is Zhangjiajie, whose stone pillars inspired the floating mountains of 'Avatar'?	China	Vietnam	Japan	Thailand
+geo_some_big_desert	Medium	What can some big desert dunes do when sand avalanches down their slopes?	Boom with a deep hum	Glow faintly blue	Give off a smell of sulphur	Grow hot enough to smoke
+geo_roughly_earth_land_2	Medium	Roughly how much of Earth's land is covered by forest?	About 30%	About 10%	About 60%	About 3%
+geo_heavily_forested_country	Medium	Which is the most heavily forested country in Europe, by share of its land?	Finland	Norway	Austria	Germany
+geo_country_wadi_rum	Medium	In which country is Wadi Rum, the red desert valley where films set on Mars were shot?	Jordan	Egypt	Morocco	Oman
+geo_desert_often_oldest	Medium	Which desert, often called the oldest on Earth, has been dry for at least 55 million years?	The Namib	The Sahara	The Gobi	The Atacama
+geo_deserts_regularly_freezes	Medium	Which of these deserts regularly freezes to about -40 C in winter?	The Gobi	The Sahara	The Thar	The Namib
+geo_tanzanian_crater_collapsed	Medium	Which Tanzanian crater, a collapsed volcano, is packed with lions, rhinos and wildebeest?	Ngorongoro	Kilimanjaro	Olduvai	Tarangire
+geo_grasslands_south_africa	Medium	What are the grasslands of South Africa called?	The veld	The pampas	The steppe	The llanos
+geo_salt_flats_utah	Medium	Which salt flats in Utah are famous for land speed record attempts?	Bonneville	Sevier	Badwater	El Mirage
+geo_giant_tree_general	Medium	The giant tree known as 'General Sherman' grows in which US state?	California	Oregon	Washington	Montana
+geo_arashiyama_bamboo_grove	Medium	The famous Arashiyama bamboo grove is on the edge of which Japanese city?	Kyoto	Tokyo	Osaka	Nagasaki
+geo_hunter_gatherer_people	Medium	Which hunter-gatherer people, famous for their click languages, have lived in the Kalahari for thousands of years?	The San	The Zulu	The Maasai	The Tuareg
+geo_unusual_places_mangrove	Medium	What is unusual about the places where mangrove trees grow?	They stand in salty tidal water	They grow only on bare rock	They need snow every winter	They grow only in caves
+geo_country_europe_tallest	Medium	In which country is Europe's tallest sand dune, the Dune of Pilat?	France	Spain	Portugal	Denmark
+geo_desert_giant_saguaro	Medium	In which desert does the giant saguaro cactus grow wild?	The Sonoran	The Mojave	The Chihuahuan	The Great Basin
 geo2_najsuchsze_miejsce	Hard	Which desert is regarded as the driest place on Earth?	The Atacama	The Sahara	The Gobi	The Namib
 geocmp_las_powierzchnia	Hard	Which country has the largest forest area?	Russia	Brazil	Canada	The United States
 lmk_masai_mara	Hard	In which country is the Maasai Mara reserve?	Kenya	Tanzania	Botswana	Namibia
@@ -25,4 +61,37 @@ geo_uyuni	Hard	In which country is Salar de Uyuni, the world's largest salt flat
 geoy_amazonia_kraje	Hard	The Amazon rainforest spreads across roughly how many countries and territories?	Nine	Three	Five	Twelve
 geoy_tajga	Hard	What is the vast northern forest stretching across Russia and Canada called?	The taiga	The tundra	The steppe	The pampas
 geo_state_yellowstone_national	Hard	In which US state is most of Yellowstone National Park?	Wyoming	Montana	Idaho	Colorado
+geo_brilliant_white_dunes	Hard	The brilliant white dunes of White Sands National Park in New Mexico are made of what?	Gypsum	Salt	Crushed shells	Chalk
+geo_country_white_dunes	Hard	In which country do the white dunes of Lencois Maranhenses fill with blue rainwater lagoons each year?	Brazil	Chile	Mexico	Australia
+geo_largest_tropical_wetland	Hard	Which is the largest tropical wetland on Earth?	The Pantanal	The Everglades	The Okavango Delta	The Camargue
+geo_desert_1920s_american	Hard	In which desert did a 1920s American expedition make headlines by finding nests of dinosaur eggs?	The Gobi	The Sahara	The Kalahari	The Mojave
+geo_canada_national_park	Hard	Which was Canada's first national park, founded in the Rockies in 1885?	Banff	Jasper	Yoho	Algonquin
+geo_tropical_grasslands_venezuela	Hard	What are the tropical grasslands of Venezuela and Colombia, flooded each rainy season, called?	The llanos	The pampas	The cerrado	The veld
+geo_hungary_flat_steppe	Hard	What is Hungary's flat, steppe-like grassland traditionally called?	The puszta	The veld	The taiga	The llanos
+geo_monteverde_misty_cloud	Hard	Monteverde, famous for its misty cloud forest, is in which country?	Costa Rica	Panama	Ecuador	Guatemala
+geo_scientists_use_salar	Hard	Why do scientists use the Salar de Uyuni to calibrate satellites?	It is almost perfectly flat	It never has any clouds	It sits right on the equator	It has no magnetic field
+geo_australia_treeless_nullarbor	Hard	The name of Australia's treeless Nullarbor Plain comes from Latin for what?	No tree	Null land	Flat earth	Dry road
+geo_densely_populated_desert	Hard	Which is the most densely populated desert in the world?	The Thar	The Sahara	The Gobi	The Arabian
+geo_eye_sahara_giant	Hard	The 'Eye of the Sahara', a giant ringed formation easily seen from space, is in which country?	Mauritania	Mali	Niger	Algeria
+geo_deadvlei_white_clay	Hard	Deadvlei, a white clay pan dotted with dead trees among red dunes, is in which country?	Namibia	Botswana	Morocco	Egypt
+geo_roughly_sahara_last	Hard	Roughly when did the Sahara last turn from green grassland with lakes into desert?	About 5,000 years ago	About 500 years ago	About 50,000 years ago	About 5 million years ago
+geo_africa_great_green	Hard	What is Africa's 'Great Green Wall' project?	A belt of trees to hold back the Sahara	A dam across the whole river Nile	A chain of parks in the Congo basin	A sea wall to protect the city of Lagos
+geo_roughly_sunlight_reaches	Hard	Roughly how much of the sunlight reaches the floor of a dense tropical rainforest?	About 2%	About 20%	About 50%	About 75%
+geo_roughly_individual_trees	Hard	Roughly how many individual trees grow in the Amazon rainforest?	About 400 billion	About 4 billion	About 40 billion	About 4 trillion
+geo_roughly_share_all	Hard	Roughly what share of all known species on Earth live in the Amazon?	About 10%	About 1%	About 50%	About 90%
+geo_conifer_unusual_shedding	Hard	Which conifer, unusual for shedding its needles every autumn, dominates much of the Siberian taiga?	The larch	The spruce	The fir	The pine
+geo_roughly_northern_hemisphere	Hard	Roughly how much of the Northern Hemisphere's land lies on permafrost?	About a quarter	About 2%	About three quarters	About half
+geo_virunga_africa_oldest	Hard	Virunga, Africa's oldest national park, is famous for which animals?	Mountain gorillas	Cheetahs	Black rhinos	Bonobos
+geo_largest_national_park	Hard	Which is the largest national park in the world?	Northeast Greenland	Wood Buffalo, Canada	Kruger, South Africa	Serengeti, Tanzania
+geo_mystery_racetrack_playa	Hard	What is the mystery of Racetrack Playa in Death Valley, solved only in 2014?	Rocks that slide across the ground	Sand that sings at night	Lights that dance in the air	Water that flows uphill
+geo_tongass_largest_national	Hard	The Tongass, the largest national forest in the USA, is in which state?	Alaska	Oregon	Washington	Montana
+geo_kakadu_national_park	Hard	Kakadu National Park is in which part of Australia?	Northern Territory	Queensland	Western Australia	Tasmania
 dpt_geo_sahel	Expert	What is the Sahel?	The dry belt south of the Sahara	The delta of the river Niger	The highlands of East Africa	The coastal plain of Namibia
+geo_largest_continuous_expanse	Expert	Which is the largest continuous expanse of sand on Earth?	Rub' al Khali	The Grand Erg Oriental	The Taklamakan	The Namib Sand Sea
+geo_chinese_desert_often	Expert	Which Chinese desert's name is often said to mean 'you go in, but you never come out'?	The Taklamakan	The Gobi	The Ordos	The Kumtag
+geo_happened_1973_tree	Expert	What happened in 1973 to the Tree of Tenere, once the most isolated tree on Earth?	A truck knocked it down	Lightning burnt it	Camels ate its bark	A sandstorm buried it
+geo_hallerbos_forest_spring	Expert	Hallerbos, a forest famous for its spring carpet of bluebells, is in which country?	Belgium	Ireland	Denmark	Austria
+geo_vast_tropical_savanna	Expert	What is the vast tropical savanna of central Brazil called?	The Cerrado	The Pampas	The Llanos	The Chaco
+geo_roughly_north_america	Expert	Roughly how much of North America's original tallgrass prairie still survives?	Less than 5%	About a quarter	About half	About three quarters
+geo_largest_temperate_rainforest	Expert	Where is the largest temperate rainforest on Earth?	North America's Pacific coast	The south of Chile and Argentina	The west coast of Tasmania	The fjord coast of Norway
+geo_largest_desert_australia	Expert	Which is the largest desert in Australia?	The Great Victoria	The Simpson	The Gibson	The Tanami

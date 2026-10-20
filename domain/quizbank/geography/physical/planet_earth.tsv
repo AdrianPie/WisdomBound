@@ -9,11 +9,46 @@ trv_stambul_kontynenty	Easy	Which city lies on two continents?	Istanbul	Cairo	Mo
 geo_woda_procent	Easy	Roughly how much of Earth's surface is covered by water?	About 71%	About 50%	About 90%	About 60%
 geo_gmt_stand	Easy	What does the 'G' in GMT stand for?	Greenwich	Global	General	Geographic
 org_ekwador_rownik	Easy	Ecuador is named after which geographical feature running through it?	The equator	The Andes	The Amazon	The Pacific coast
+geo_month_summer_officially	Easy	In which month does summer officially begin in Australia?	December	June	March	September
+geo_around_date_longest	Easy	Around which date is the longest day of the year in the Northern Hemisphere?	21 June	21 March	21 December	21 September
+geo_roughly_long_daylight	Easy	Roughly how long does daylight last at the equator, all year round?	About 12 hours	About 6 hours	About 18 hours	About 24 hours
+geo_oceans_equator_not	Easy	Which of these oceans does the equator NOT cross?	The Arctic Ocean	The Atlantic Ocean	The Pacific Ocean	The Indian Ocean
+geo_noon_london_time	Easy	When it is noon in London, what time is it usually in New York?	7 am	5 pm	9 am	3 am
+geo_hottest_continent	Easy	Which is the hottest continent?	Africa	Australia	South America	Asia
+geo_continent_crossed_both	Easy	Which continent is crossed by both the equator and the prime meridian?	Africa	South America	Asia	Europe
+geo_two_countries_british	Easy	Which two countries do the British often call 'the Antipodes'?	Australia and New Zealand	Chile and Argentina	Fiji and Samoa	South Africa and Namibia
 geo2_panstwo_dwa_konty	Medium	Which country spans two continents: Europe and Asia?	Turkey	Greece	Egypt	Cyprus
 geo3_pierwszy_dzien	Medium	Which country is the first in the world to start each new day?	Kiribati	New Zealand	Japan	Australia
 geocmp_rownik_kraj	Medium	Which of these countries does the equator cross?	Ecuador	Peru	Bolivia	Chile
 geo_australia_poludnie	Medium	Which is the largest country lying entirely in the Southern Hemisphere?	Australia	Brazil	Argentina	South Africa
 geo_pangea	Medium	What was the name of the supercontinent that began breaking up about 200 million years ago?	Pangaea	Gondwana	Laurasia	Rodinia
+geo_dug_straight_down	Medium	If you dug straight down through the Earth from the mainland USA, where would you most likely come out?	In the Indian Ocean	In China	In Australia	In India
+geo_roughly_share_world	Medium	Roughly what share of the world's people live in the Northern Hemisphere?	About 90%	About 50%	About 30%	About 10%
+geo_countries_lies_entirely	Medium	Which of these countries lies entirely in the Southern Hemisphere?	Madagascar	Indonesia	Brazil	Kenya
+geo_zealandia	Medium	What is Zealandia?	A mostly sunken continent	A Danish island in the Baltic	A ridge under the Atlantic	A lost city of legend
+geo_mainland_state_mostly	Medium	Which mainland US state mostly does NOT use daylight saving time?	Arizona	Texas	Nevada	Colorado
+geo_roughly_far_equator	Medium	Roughly how far is it from the equator to the North Pole along the surface?	About 10,000 km	About 1,000 km	About 25,000 km	About 4,000 km
+geo_through_degrees_longitude	Medium	Through how many degrees of longitude does the Earth turn in one hour?	15	24	10	30
+geo_roughly_latitude_arctic	Medium	At roughly what latitude is the Arctic Circle?	About 66 degrees north	About 23 degrees north	About 45 degrees north	About 85 degrees north
+geo_tropic_cancer_runs	Medium	The Tropic of Cancer runs through which of these countries?	India	Thailand	Sri Lanka	Malaysia
+geo_prime_meridian_runs	Medium	The prime meridian runs through which of these countries?	Spain	Portugal	Italy	Morocco
+geo_greenland_africa_look	Medium	Greenland and Africa look similar in size on many world maps. Roughly how many times bigger is Africa?	About 14 times	About 2 times	About 5 times	About 50 times
+geo_standing_beach_roughly	Medium	Standing on a beach, roughly how far away is the horizon?	About 5 km	About 50 km	About 500 m	About 20 km
+geo_schools_latin_america	Medium	Many schools in Latin America teach North and South America as what?	A single continent	Two separate continents	Three continents	Part of Eurasia
+geo_point_equator_meets	Medium	The point where the equator meets the prime meridian lies in which body of water?	The Gulf of Guinea	The Bay of Bengal	The Gulf of Mexico	The Coral Sea
+geo_equinoxes_march_september	Medium	On the equinoxes in March and September, where on Earth are day and night roughly equal?	Everywhere	Only at the equator	Only in the tropics	Only at the poles
+geo_sailing_west_across	Medium	Sailing west across the International Date Line, what happens to the calendar date?	It jumps forward a day	It goes back a day	It stays the same	It jumps forward a week
+geo_big_asian_city	Medium	Which big Asian city lies only about 140 km north of the equator?	Singapore	Bangkok	Manila	Jakarta
+geo_country_lies_almost	Medium	Which country lies almost exactly on the opposite side of the globe from Spain?	New Zealand	Australia	Chile	Japan
+geo_roughly_degrees_earth	Medium	By roughly how many degrees is Earth's axis tilted?	About 23	About 5	About 45	About 12
+geo_time_zones_mainland	Medium	How many time zones does the mainland USA, without Alaska and Hawaii, span?	Four	Two	Seven	Ten
+geo_city_sat_centre	Medium	Which city sat at the centre of many medieval Christian world maps?	Jerusalem	Rome	Constantinople	Athens
+geo_world_deepest_mines	Medium	The world's deepest mines, reaching about 4 km down, dig for gold in which country?	South Africa	Australia	Canada	Russia
+geo_roughly_share_earth	Medium	Roughly what share of Earth's land lies in the Northern Hemisphere?	About two thirds	About a third	About a tenth	Nearly all of it
+geo_india_single_time	Medium	India's single time zone is set how far ahead of GMT?	5 hours 30 minutes	4 hours exactly	6 hours 15 minutes	3 hours 45 minutes
+geo_international_date_line	Medium	Why does the International Date Line zigzag instead of running straight?	To keep island nations on one date	To avoid busy shipping lanes	Because the Earth is not round	To follow the edge of a plate
+geo_geographically_greenland_part	Medium	Geographically, Greenland is part of which continent?	North America	Europe	Asia	Antarctica
+geo_south_pole_colder	Medium	Why is the South Pole much colder than the North Pole?	It lies on high, ice-covered land	It is farther from the Sun	It gets no sunlight at all	Cold sea currents meet there
 geo2_rownolezniki_zwrotnik	Hard	What is the tropic in the southern hemisphere called?	Tropic of Capricorn	Tropic of Cancer	Arctic Circle	Prime Meridian
 geo2_greenwich	Hard	Which city does the prime meridian pass through?	London	Paris	Rome	Madrid
 geo3_linia_zmiany_daty	Hard	Where does the International Date Line run?	Through the middle of the Pacific, near the 180th meridian	Straight through Greenwich, on the edge of London	Along the equator, right round the globe	Along the Ural mountains and the Caspian
@@ -21,3 +56,30 @@ trv_strefy_czasowe	Hard	Which country spans the most time zones, counting its ov
 mst_afryka_rownik	Hard	The equator passes through all of these continents except which?	Australia	Africa	South America	Asia
 cur_rosja_strefy	Hard	How many time zones does Russia span?	11	5	8	15
 geoy_rownik	Hard	Roughly how long is the equator?	About 40,000 km	About 4,000 km	About 400,000 km	About 12,000 km
+geo_medieval_european_world	Hard	Many medieval European world maps put which direction at the top?	East	South	West	North
+geo_roughly_long_degree	Hard	Roughly how long is one degree of latitude on the ground?	About 111 km	About 11 km	About 1,100 km	About 40 km
+geo_nautical_mile_originally	Hard	The nautical mile was originally based on what?	One minute of latitude	A thousand paces of a sailor	The length of a ship's rope	One second of longitude
+geo_roughly_total_surface	Hard	Roughly what is the total surface area of the Earth?	About 510 million km2	About 51 million km2	About 5 billion km2	About 150 million km2
+geo_roughly_deep_soviet	Hard	Roughly how deep did the Soviet Kola Superdeep Borehole, still the deepest hole by vertical depth, reach?	About 12 km	About 2 km	About 40 km	About 120 km
+geo_roughly_thick_earth	Hard	Roughly how thick is Earth's crust beneath the oceans?	About 7 km	About 70 km	About 700 m	About 700 km
+geo_earth_inner_core	Hard	Why is Earth's inner core solid while the outer core is liquid?	Enormous pressure squeezes it	It is made of a different metal	It has cooled down completely	It is made of rock, not metal
+geo_lowest_point_north	Hard	What is the lowest point in North America?	Badwater Basin	The Salton Sea	Lake Okeechobee	The Great Salt Lake
+geo_point_land_farthest	Hard	The point on land farthest from any ocean lies in which country?	China	Russia	Kazakhstan	Mongolia
+geo_australia_update_official	Hard	Why did Australia have to update its official map coordinates by about 1.8 m?	The continent drifts several cm a year	An earthquake shifted the whole island	Its old maps used the wrong equator	Rising seas shrank its coastline
+geo_roughly_countries_equator	Hard	Roughly how many countries does the equator pass through, counting their waters?	About 13	About 4	About 30	About 8
+geo_canadian_city_lies	Hard	Which Canadian city lies directly south of Detroit, across the river?	Windsor	Toronto	Hamilton	London
+geo_1790s_metre_defined	Hard	In the 1790s, the metre was defined as a tiny fraction of the distance between what?	The North Pole and the equator	The Earth and the Moon	The Earth and the Sun	London and Paris
+geo_according_snowball_earth	Hard	According to the 'Snowball Earth' theory, what happened roughly 700 million years ago?	Ice covered almost the whole planet	A comet brought the oceans	The Moon split from the Earth	All the continents sank
+geo_tunnel_straight_through	Hard	If you could tunnel straight through the Earth from Beijing, in which country would you come out?	Argentina	Australia	Brazil	South Africa
+geo_canadian_island_keeps	Hard	Which Canadian island keeps its clocks half an hour off the rest of Canada's Atlantic coast?	Newfoundland	Prince Edward Island	Cape Breton Island	Vancouver Island
+geo_world_map_projection	Expert	Which world map projection, championed in the 1970s, shows countries at their true relative areas?	The Gall-Peters	The Mercator	The Robinson	The Winkel tripel
+geo_oldest_surviving_map	Expert	The oldest surviving map of the whole known world was made around 600 BC by which people?	The Babylonians	The Egyptians	The Greeks	The Phoenicians
+geo_agloe_hamlet_appeared	Expert	What was Agloe, a hamlet that appeared on maps of New York State from the 1930s?	A fake town to catch copycats	A town that sank into a lake	A ghost town of the gold rush	A town renamed after a war
+geo_measured_against_stars	Expert	Measured against the stars rather than the Sun, how long does Earth take to spin once?	About 23 hours 56 minutes	Exactly 24 hours	About 24 hours 4 minutes	About 25 hours
+geo_because_earth_bulges	Expert	Because Earth bulges at the equator, its diameter there is bigger than pole to pole by roughly how much?	About 43 km	About 4 km	About 400 km	About 1,200 km
+geo_country_africa_lowest	Expert	In which country is Africa's lowest point on land, about 155 m below sea level?	Djibouti	Egypt	Ethiopia	Eritrea
+geo_roughly_earth_magnetic	Expert	Roughly when did Earth's magnetic poles last swap places?	About 800,000 years ago	About 8,000 years ago	About 80,000 years ago	About 80 million years ago
+geo_phone_gps_not	Expert	Why does a phone's GPS not read exactly 0 degrees at the famous meridian line in Greenwich?	The modern zero line runs about 100 m east	The line was painted in the wrong spot	Satellites cannot see London clearly	Greenwich sits on a sinking hill
+geo_two_neighbours_biggest	Expert	Which two neighbours have the biggest time-zone jump across their border, three and a half hours?	China and Afghanistan	India and China	Russia and Mongolia	Iran and Pakistan
+geo_spot_exactly_equator	Expert	The only spot exactly on the equator with snow all year round lies on which volcano?	Cayambe	Chimborazo	Kilimanjaro	Mount Kenya
+geo_1884_conference_chose	Expert	The 1884 conference that chose the prime meridian was held in which city?	Washington	London	Paris	Geneva

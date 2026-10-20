@@ -2,14 +2,85 @@
 # wulkanizm jako zjawisko, tornada i huragany.
 id	difficulty	prompt	correct	wrong1	wrong2	wrong3
 geo_country_blue_lagoon	Easy	In which country is the Blue Lagoon geothermal spa?	Iceland	Norway	Finland	New Zealand
+geo_country_gets_more	Easy	Which country gets more tornadoes than any other?	The USA	Canada	Bangladesh	Argentina
+geo_state_hit_hurricanes	Easy	Which US state is hit by hurricanes more often than any other?	Florida	Texas	Louisiana	North Carolina
+geo_caused_1995_disaster	Easy	What caused the 1995 disaster that wrecked the Japanese city of Kobe?	An earthquake	A tsunami	A typhoon	A volcanic eruption
+geo_city_largely_destroyed	Easy	Which city was largely destroyed by an earthquake and the fires that followed in 1906?	San Francisco	Los Angeles	Chicago	Seattle
+geo_hurricanes_strike_india	Easy	What are hurricanes called when they strike India, Bangladesh or Australia?	Cyclones	Typhoons	Tornadoes	Monsoons
+geo_volcano_blew_out	Easy	Which US volcano blew out its whole side in a huge eruption in 1980?	Mount St. Helens	Mount Rainier	Mount Hood	Mount Shasta
+geo_kind_storm_nicknamed	Easy	What kind of storm is nicknamed a 'twister'?	A tornado	A hurricane	A blizzard	A hailstorm
+geo_country_hot_spring	Easy	In which country are hot-spring baths called 'onsen'?	Japan	South Korea	China	Iceland
+geo_disaster_struck_haiti	Easy	Which disaster struck Haiti in 2010, killing over 100,000 people?	An earthquake	A hurricane	A tsunami	A volcanic eruption
+geo_big_californians_fear	Easy	What is 'the Big One' that Californians fear?	A huge earthquake	A giant tsunami	A volcanic eruption	A mega-drought
+geo_hurricanes_get_energy	Easy	Where do hurricanes get most of their energy?	From warm ocean water	From the jet stream	From sun-baked land	From lightning bolts
+geo_tropics_instead_four	Easy	In much of the tropics, instead of four seasons, the year is split into what?	A wet and a dry season	A hot and a cold season	A windy and a calm season	A light and a dark season
 geox_dolina_smierci	Medium	Death Valley, one of the hottest places on Earth, is in which country?	The USA	Mexico	Australia	Egypt
 geoy_japonia_trzesienia	Medium	Which country suffers about a fifth of the world's strongest earthquakes?	Japan	Chile	Italy	Iceland
+geo_roughly_hot_highest	Medium	Roughly how hot is the highest air temperature ever officially recorded on Earth?	About 57 C	About 40 C	About 75 C	About 100 C
+geo_roughly_cold_lowest	Medium	Roughly how cold is the lowest air temperature ever measured at a weather station?	About -90 C	About -60 C	About -40 C	About -130 C
+geo_driest_inhabited_continent	Medium	Which is the driest inhabited continent?	Australia	Africa	Asia	South America
+geo_atlantic_hurricane_season	Medium	When does the Atlantic hurricane season officially run?	June to November	January to April	March to June	October to February
+geo_some_hurricane_names	Medium	Why do some hurricane names get 'retired' from the list?	The storm was very deadly or costly	The name was used for 50 years	A famous person had the same name	Too many babies were named after it
+geo_powerful_earthquake_ever	Medium	Where did the most powerful earthquake ever recorded strike, in 1960?	Chile	Japan	Alaska	Indonesia
+geo_roughly_fast_earth	Medium	Roughly how fast do Earth's tectonic plates move?	As fast as fingernails grow	As fast as a snail crawls	As fast as grass grows	As fast as a glacier flows
+geo_deep_open_ocean	Medium	In the deep open ocean, a tsunami can travel about as fast as what?	A jet airliner	A racing car	A cyclist	A container ship
+geo_1943_brand_new	Medium	In 1943, a brand-new volcano, Paricutin, rose out of a farmer's cornfield in which country?	Mexico	Guatemala	Peru	Chile
+geo_lies_beneath_national	Medium	What lies beneath the US national park famous for the Old Faithful geyser?	A supervolcano	A huge salt dome	An old meteor crater	A giant underground lake
+geo_new_zealand_city	Medium	Which New Zealand city smells of sulphur from its geysers and bubbling mud pools?	Rotorua	Wellington	Dunedin	Christchurch
+geo_pamukkale_white_terraces	Medium	Pamukkale's white terraces, built up by hot springs, are in which country?	Turkey	Greece	Italy	Iran
+geo_around_month_summer	Medium	Around which month does the summer monsoon usually reach the southern tip of India?	June	March	September	December
+geo_hot_dusty_wind	Medium	Which hot, dusty wind blows from the Sahara into southern Europe?	The sirocco	The mistral	The bora	The foehn
+geo_sailors_call_calm	Medium	What did sailors call the calm zone near the equator where ships could sit windless for weeks?	The doldrums	The horse latitudes	The trade winds	The roaring forties
+geo_flight_new_york	Medium	Why is a flight from New York to London usually shorter than the trip back?	It rides the jet stream	Planes fly lower going east	The Earth spins under the plane	London's runways are longer
+geo_steady_winds_carried	Medium	Which steady winds carried Columbus's ships west across the Atlantic?	The trade winds	The westerlies	The jet stream	The monsoon winds
+geo_type_climate_california	Medium	Which type of climate does California share with central Chile and South Africa's Cape?	Mediterranean	Tropical monsoon	Subarctic	Oceanic
+geo_city_new_york	Medium	Which city in New York State is famous for 'lake-effect' snowstorms off Lake Erie?	Buffalo	Albany	Yonkers	Poughkeepsie
+geo_countries_not_part	Medium	Which of these countries is NOT part of the Ring of Fire?	Iceland	Japan	Chile	Indonesia
+geo_roughly_air_cool	Medium	Roughly how much does the air cool for every 1,000 m you climb?	About 6.5 C	About 1 C	About 20 C	About 0.1 C
+geo_warm_dry_foehn	Medium	The warm, dry 'foehn' wind takes its name from winds in which mountains?	The Alps	The Andes	The Rockies	The Pyrenees
+geo_every_seconds_between	Medium	Every 3 seconds between a lightning flash and its thunder means the storm is roughly how far away?	About 1 km	About 100 m	About 10 km	About 3 km
+geo_2015_huge_earthquake	Medium	In 2015, a huge earthquake killed about 9,000 people and set off deadly avalanches on Everest. Which country did it strike?	Nepal	India	Pakistan	Bhutan
+geo_february_2023_huge	Medium	In February 2023, a huge earthquake devastated southern Turkey and which neighbour?	Syria	Iraq	Iran	Greece
+geo_mount_waialeale_rainiest	Medium	Mount Waialeale, one of the rainiest spots on Earth, is in which US state?	Hawaii	Washington	Alaska	Oregon
+geo_philippine_volcano_1991	Medium	Which Philippine volcano's 1991 eruption cooled the whole planet by about half a degree?	Pinatubo	Mayon	Taal	Krakatoa
+geo_deadliest_earthquake_record	Medium	The deadliest earthquake on record killed over 800,000 people in 1556. Where did it strike?	China	Japan	Persia	Italy
+geo_state_earthquakes	Medium	Which US state has the most earthquakes?	Alaska	California	Hawaii	Nevada
 geo3_san_andreas	Hard	Which two tectonic plates grind past each other along California's San Andreas Fault?	The Pacific and North American plates	The Nazca and South American plates	The Eurasian and African plates	The Indian and Australian plates
 geox_tornado	Hard	Which part of the USA is nicknamed 'Tornado Alley'?	The Great Plains	New England	The Pacific Northwest	Florida
 geoy_islandia_plyty	Hard	Which country sits on the boundary between the North American and Eurasian plates?	Iceland	Ireland	Norway	Greenland
+geo_roughly_thunderstorms_raging	Hard	Roughly how many thunderstorms are raging on Earth at any given moment?	About 2,000	About 20	About 200	About 200,000
+geo_russia_valley_geysers	Hard	Russia's 'Valley of Geysers', one of the largest geyser fields on Earth, is on which peninsula?	Kamchatka	Kola	Taymyr	Yamal
+geo_roughly_big_very	Hard	Roughly how big can the very largest hailstones grow?	As big as a melon	As big as a golf ball	As big as a car tyre	As big as a grape
+geo_category_hurricane_winds	Hard	A Category 5 hurricane has winds of at least roughly what speed?	About 250 km/h	About 120 km/h	About 500 km/h	About 60 km/h
+geo_nino_christ_child	Hard	Why is El Nino named after the Christ child?	It tends to arrive around Christmas	It was first seen in Bethlehem	It brings starry skies to Peru	It returns every 12 years
+geo_earthquake_magnitude_releases	Hard	An earthquake of magnitude 7 releases roughly how many times more energy than one of magnitude 6?	About 32 times	About 2 times	About 10 times	About 1,000 times
+geo_deadliest_tropical_cyclone	Hard	The deadliest tropical cyclone on record, in 1970, struck what is now which country?	Bangladesh	India	Myanmar	The Philippines
+geo_everlasting_storm_makes	Hard	Where is the 'everlasting storm' that makes the place with the most lightning on Earth?	Lake Maracaibo, Venezuela	Lake Titicaca, Bolivia	Lake Nicaragua	The Florida Everglades
+geo_haboob	Hard	What is a 'haboob'?	A towering wall of desert dust	A spinning column of fire	A sudden flood in a dry riverbed	A freezing fog in mountain valleys
+geo_strong_cold_wind	Hard	Which strong, cold wind howls down the Rhone valley to France's Mediterranean coast?	The mistral	The sirocco	The bora	The levanter
+geo_warm_dry_wind	Hard	Which warm, dry wind off the Rocky Mountains is nicknamed the 'snow eater'?	The chinook	The mistral	The sirocco	The Santa Ana
+geo_roaring_forties_strong	Hard	Where do the 'Roaring Forties', strong westerly winds loved by sailors, blow?	Between 40 and 50 degrees south	Between 40 and 50 degrees north	Along the 40th meridian east	Over the 40 hottest deserts
+geo_peak_last_ice	Hard	At the peak of the last ice age, about 20,000 years ago, sea level was roughly how much lower than today?	About 120 m	About 12 m	About 1,200 m	About 3 m
+geo_park_ranger_roy	Hard	US park ranger Roy Sullivan holds the record for surviving how many lightning strikes?	Seven	Two	Four	Twelve
+geo_roughly_fast_strongest	Hard	Roughly how fast were the strongest winds ever measured in a tornado?	About 480 km/h	About 150 km/h	About 1,200 km/h	About 250 km/h
+geo_ancient_southern_supercontinent	Hard	Which ancient southern supercontinent joined South America, Africa, India, Antarctica and Australia?	Gondwana	Laurasia	Avalonia	Baltica
+geo_year_mount_vesuvius	Hard	In which year did Mount Vesuvius last erupt?	1944	1631	1872	1906
+geo_often_coldest_big	Hard	Which is often called the coldest big city in the world, with January averages near -40 C?	Yakutsk	Norilsk	Ulaanbaatar	Fairbanks
 geo3_strefa_ryftowa	Expert	What is the Great East African Rift?	A zone where continental plates are tearing apart	A chain of volcanoes that went extinct long ago	A desert where no river reaches the sea	A region where the ground never thaws
 geo3_wyspa_wulkaniczna_powstawanie	Expert	How do volcanic island chains like Hawaii most often form?	A plate moves over a stationary hot spot in the mantle	Through a collision of two continents	Through subduction of one plate under another only	Through coastal erosion
 dpt_geo_pierscien_ognia	Expert	What is the Ring of Fire?	A belt of volcanoes round the Pacific	A chain of deserts along the tropics	A band of storms over the equator	A line of reefs in the Indian Ocean
 dpt_geo_cien_opadowy	Expert	What causes a rain shadow?	Mountains wring the moisture out of air	Cold water chills the coastal strip	Forests soak up most of the rainfall	Deserts heat the wind passing over
 geox_oymyakon	Expert	Oymyakon, often called the coldest permanently inhabited village, is in which country?	Russia	Canada	Norway	Kazakhstan
 geox_mawsynram	Expert	Mawsynram and Cherrapunji, among the wettest places on Earth, are in which country?	India	Indonesia	Brazil	Congo
+geo_hurricanes_almost_never	Expert	Why do hurricanes almost never form right next to the equator?	The Coriolis effect is too weak there	The sea there is too cold	The trade winds tear them apart	There is too little moisture there
+geo_scientists_calculated_japan	Expert	Scientists calculated that Japan's huge 2011 earthquake did what to the length of Earth's day?	Shortened it very slightly	Lengthened it by a second	Lengthened it by a minute	Left it exactly unchanged
+geo_1958_landslide_lituya	Expert	In 1958, a landslide in Lituya Bay, Alaska, sent water surging roughly how high up the hillside?	About 500 m	About 50 m	About 150 m	About 1,500 m
+geo_rogue_wave_reliably	Expert	Where was the first rogue wave reliably measured, on New Year's Day 1995?	At a North Sea gas platform	On a Japanese fishing boat	At a lighthouse in Ireland	On a ship near Cape Horn
+geo_2022_hunga_tonga	Expert	The 2022 Hunga Tonga eruption sent its plume higher than any recorded eruption, into which layer of the atmosphere?	The mesosphere	The troposphere	The thermosphere	The exosphere
+geo_mount_pelee_1902	Expert	Mount Pelee's 1902 eruption killed nearly all of St-Pierre's 28,000 people. Where was its most famous survivor?	In a thick-walled prison cell	In the church bell tower	In a wine cellar	In a boat in the harbour
+geo_icelandic_fissure_1783	Expert	Which Icelandic fissure's 1783 eruption caused a famine that killed about a fifth of Iceland's people?	Laki	Hekla	Katla	Askja
+geo_island_holds_record	Expert	Which island holds the record for the most rain to fall in 24 hours, almost 2 metres?	Reunion	Hawaii	Jamaica	Sri Lanka
+geo_mountain_held_world	Expert	Which US mountain held the world record for the fastest measured wind gust from 1934 to 1996?	Mount Washington	Mount Rainier	Pikes Peak	Mount Mitchell
+geo_dallol_holder_record	Expert	Dallol, holder of the record for the highest average yearly temperature ever measured, is in which country?	Ethiopia	Sudan	Libya	Mali
+geo_1943_temperature_spearfish	Expert	In 1943, the temperature in Spearfish, South Dakota, rose by 27 C in how long?	Two minutes	Two hours	Two days	Twelve hours
+geo_tallest_active_geyser	Expert	Which is the tallest active geyser in the world?	Steamboat Geyser	Old Faithful	Strokkur	Geysir
