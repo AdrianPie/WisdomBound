@@ -20,6 +20,7 @@ Typowa sesja dopisywania pytan (szczegoly: domain/quizbank/README.md):
     python3 tools/quizbank.py check nowe.txt         # sprawdz nowe pytania - niczego nie zapisuje
     python3 tools/quizbank.py add nowe.txt           # check + dopisz do TSV + wygeneruj Kotlin
     python3 tools/quizbank.py move ID... --to DZIAL  # przenies pytania do innego dzialu
+    python3 tools/quizbank.py plan history=500 geography=300   # tura: rozdziel pytania na dzialy, napisz zlecenia
     python3 tools/quizbank.py generate [--check]     # TSV -> Kotlin (--check: tylko porownaj)
 
 Plik z nowymi pytaniami: naglowek + jedna linia na pytanie, kolumny rozdzielone tabulatorem albo
@@ -44,6 +45,7 @@ import os
 import re
 import signal
 import sys
+import tempfile
 import unicodedata
 from collections import Counter, defaultdict
 from dataclasses import dataclass, field
@@ -1238,6 +1240,12 @@ def cmd_check(args) -> int:
     new, problems = _load_new(args.files, bank.sections)
     report = check_questions(new, bank, load_rules())
     print_report(new, report, problems, show_ok=args.all)
+    if args.summary:
+        print(f"\n{'dzial':50s} " + " ".join(f"{level:>6s}" for level in LEVELS) + "   razem")
+        for place in sorted({q.place for q in new}):
+            rows = [q for q in new if q.place == place]
+            levels = Counter(q.level for q in rows)
+            print(f"{place:50s} " + " ".join(f"{levels[level]:6d}" for level in LEVELS) + f"   {len(rows):5d}")
     return 1 if problems or any(report.errors.values()) else 0
 
 
@@ -1302,6 +1310,178 @@ def cmd_move(args) -> int:
     return result
 
 
+# ------------------------------------------------------------------------------------------------
+# Plan tury: N nowych pytan rozdzielonych na dzialy i poziomy + zlecenia dla autorow
+
+WRITING_GUIDE = os.path.join(DATA_DIR, "WRITING_GUIDE.md")
+DEFAULT_MIX = "E=18,M=37,H=30,X=15"
+BATCH_HEADER = "topic | difficulty | prompt | correct | wrong1 | wrong2 | wrong3"
+
+
+@dataclass
+class Place:
+    """Miejsce, do ktorego trafiaja nowe pytania: lisc drzewa albo temat bez dzialow."""
+
+    target: Target
+    comments: list[str]
+    rows: list[Question]
+    quota: int = 0
+    levels: dict[str, int] = field(default_factory=dict)
+
+    @property
+    def label(self) -> str:
+        return self.target.section.label if self.target.section else self.target.topic.key
+
+
+def split_evenly(total: int, weights: list[float]) -> list[int]:
+    """Rozdziela `total` proporcjonalnie do wag metoda najwiekszych reszt (suma zawsze = total)."""
+    if total <= 0 or not weights:
+        return [0] * len(weights)
+    s = sum(weights)
+    if s <= 0:
+        weights, s = [1.0] * len(weights), float(len(weights))
+    exact = [total * w / s for w in weights]
+    parts = [int(x) for x in exact]
+    for i in sorted(range(len(exact)), key=lambda i: parts[i] - exact[i])[: total - sum(parts)]:
+        parts[i] += 1
+    return parts
+
+
+def parse_mix(text: str) -> dict[str, float]:
+    mix: dict[str, float] = {}
+    for part in text.split(","):
+        key, _, value = part.partition("=")
+        level = LEVEL_BY_ALIAS.get(key.strip().lower())
+        if level is None or not value.strip().replace(".", "").isdigit():
+            sys.exit(f"zly --mix {text!r} - przyklad: {DEFAULT_MIX}")
+        mix[level] = float(value)
+    return {level: mix.get(level, 0.0) for level in LEVELS}
+
+
+def places_for(name: str, sections: list[Section]) -> list[Place]:
+    """Temat, galaz albo lisc -> liscie (albo sam temat bez dzialow), w kolejnosci z sections.tsv."""
+    clean = name.strip().strip("/").lower()
+    topic = topic_named(clean)
+    if topic is not None and not topic.split:
+        comments, rows = read_tsv(topic.tsv, topic, None)
+        return [Place(Target(topic), comments, rows)]
+    if topic is not None:
+        prefix = topic.key
+    else:
+        matches = [s for s in sections if s.path == clean] or [s for s in sections if s.path.endswith("/" + clean)]
+        if len(matches) != 1:
+            sys.exit(f"nieznany albo niejednoznaczny temat/dzial {name!r} (lista: `stats`)")
+        prefix = matches[0].path
+    places = []
+    for s in sections:
+        if s.is_leaf and under(s.path, prefix):
+            comments, rows = read_tsv(s.tsv, s.topic, s.path)
+            places.append(Place(Target(s.topic, s), comments, rows))
+    return places
+
+
+def plan_quotas(places: list[Place], total: int, mix: dict[str, float]) -> None:
+    """Polowa puli po rowno, polowa dla najmniejszych dzialow (wyrownywanie). Poziomy: polowa wedlug
+    docelowych proporcji, polowa tam, gdzie dzialowi najbardziej brakuje do tych proporcji."""
+    even = split_evenly(total - total // 2, [1.0] * len(places))
+    filling = [0] * len(places)
+    # Zaden dzial nie dostaje wiecej niz dwie srednie - zeby maly dzial nie musial wyciskac 60 faktow naraz.
+    cap = max(2, -(-2 * total // len(places)))
+    for _ in range(total // 2):
+        open_places = [k for k in range(len(places)) if even[k] + filling[k] < cap] or list(range(len(places)))
+        i = min(open_places, key=lambda k: (len(places[k].rows) + filling[k] + even[k], k))
+        filling[i] += 1
+    share = sum(mix.values())
+    for place, a, b in zip(places, even, filling):
+        place.quota = a + b
+        have = Counter(q.level for q in place.rows)
+        final = len(place.rows) + place.quota
+        deficit = [max(0.0, mix[level] / share * final - have[level]) for level in LEVELS]
+        d_sum = sum(deficit) or 1.0
+        weights = [mix[level] / share + d / d_sum for level, d in zip(LEVELS, deficit)]
+        place.levels = dict(zip(LEVELS, split_evenly(place.quota, weights)))
+
+
+def write_brief(path: str, number: int, batch: list[Place], sections: list[Section], out_file: str) -> None:
+    n = sum(p.quota for p in batch)
+    lines = [
+        f"# Zlecenie {number:02d}: {n} nowych pytan",
+        "",
+        f"Przeczytaj najpierw zasady: `{os.path.relpath(WRITING_GUIDE, ROOT)}`.",
+        f"Wynik zapisz do: `{out_file}` - pierwsza linia to naglowek:",
+        "",
+        "    " + BATCH_HEADER,
+        "",
+        f"Sprawdzaj: `python3 tools/quizbank.py check {out_file}` - az do `0 z bledami`.",
+        "Repo niczego nie zmieniasz (zadnego `add`, `move`, `generate`).",
+        "",
+        "Ile pytan, w ktorym dziale i na jakim poziomie (o 1-2 w gore lub w dol mozna, suma ma sie zgadzac):",
+        "",
+        "| dzial (kolumna topic) | Easy | Medium | Hard | Expert | razem | juz w banku |",
+        "|---|---|---|---|---|---|---|",
+    ]
+    for p in batch:
+        lv = " | ".join(str(p.levels[level]) for level in LEVELS)
+        lines.append(f"| `{p.target.name}` | {lv} | {p.quota} | {len(p.rows)} |")
+    for p in batch:
+        lines += ["", f"## `{p.target.name}` - {p.label}", ""]
+        if p.comments:
+            lines += ["Zakres dzialu: " + " ".join(c.strip() for c in p.comments), ""]
+        if p.target.section:
+            siblings = [s.path.split("/")[-1] for s in sections
+                        if s.is_leaf and s.parent == p.target.section.parent and s != p.target.section
+                        and s.topic == p.target.topic]
+            if siblings:
+                lines += ["Sasiednie dzialy (ich tematy pisz tam, nie tutaj): " + ", ".join(siblings), ""]
+        lines.append(f"Juz w banku ({len(p.rows)}) - tych faktow nie powtarzaj, takze innymi slowami:")
+        lines.append("")
+        lines += [f"- {LETTER[q.level]} {q.prompt} -> {q.correct}" for q in p.rows]
+    with open(path, "w", encoding="utf-8") as f:
+        f.write("\n".join(lines) + "\n")
+
+
+def cmd_plan(args) -> int:
+    sections = checked_sections()
+    mix = parse_mix(args.mix)
+    places: list[Place] = []
+    for spec in args.targets:
+        name, _, count = spec.partition("=")
+        if not count.isdigit():
+            sys.exit(f"zly cel {spec!r} - podaj temat_albo_dzial=liczba, np. history=500 vikings=20")
+        chosen = places_for(name, sections)
+        plan_quotas(chosen, int(count), mix)
+        places += [p for p in chosen if p.quota]
+    total = sum(p.quota for p in places)
+    batches: list[list[Place]] = [[]]
+    for p in places:
+        if batches[-1] and sum(q.quota for q in batches[-1]) + p.quota / 2 > args.batch_size:
+            batches.append([])
+        batches[-1].append(p)
+
+    out = os.path.abspath(args.out)
+    os.makedirs(out, exist_ok=True)
+    stale = glob.glob(os.path.join(out, "brief_*.md"))
+    for path in stale:
+        os.remove(path)
+    print(f"{'dzial':50s} " + " ".join(f"{level:>6s}" for level in LEVELS) + "   razem  w banku")
+    for number, batch in enumerate(batches, 1):
+        brief = os.path.join(out, f"brief_{number:02d}.md")
+        result = os.path.join(out, f"batch_{number:02d}.txt")
+        write_brief(brief, number, batch, sections, result)
+        print(f"-- zlecenie {number:02d}: {sum(p.quota for p in batch)} pytan -> {brief}")
+        for p in batch:
+            print(f"   {p.target.name:47s} " + " ".join(f"{p.levels[level]:6d}" for level in LEVELS)
+                  + f"   {p.quota:5d}  {len(p.rows):7d}")
+    levels = Counter()
+    for p in places:
+        levels.update(p.levels)
+    print(f"\nRazem {total} pytan w {len(batches)} zleceniach: "
+          + ", ".join(f"{level} {levels[level]}" for level in LEVELS))
+    print(f"Zlecenia: {out}/brief_NN.md, wyniki autorow: {out}/batch_NN.txt\n"
+          f"Potem: python3 tools/quizbank.py check {out}/batch_*.txt && python3 tools/quizbank.py add {out}/batch_*.txt")
+    return 0
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = parser.add_subparsers(dest="command", required=True)
@@ -1320,6 +1500,7 @@ def main() -> int:
     p = sub.add_parser("check", help="sprawdz plik(i) z nowymi pytaniami - niczego nie zapisuje")
     p.add_argument("files", nargs="+")
     p.add_argument("--all", action="store_true", help="wypisz tez pytania bez uwag")
+    p.add_argument("-s", "--summary", action="store_true", help="na koncu: ile nowych pytan w kazdym dziale i poziomie")
 
     p = sub.add_parser("add", help="check + dopisz nowe pytania do TSV + wygeneruj Kotlin")
     p.add_argument("files", nargs="+")
@@ -1330,13 +1511,20 @@ def main() -> int:
     p.add_argument("ids", nargs="+")
     p.add_argument("--to", required=True, help="dzial docelowy (history/antiquity/roman_empire) albo temat")
 
+    p = sub.add_parser("plan", help="rozdziel N nowych pytan na dzialy i poziomy, napisz zlecenia dla autorow")
+    p.add_argument("targets", nargs="+", help="temat, galaz albo dzial z liczba: history=500 geography/physical=200")
+    p.add_argument("-o", "--out", default=os.path.join(tempfile.gettempdir(), "quizbank-plan"),
+                   help="katalog na zlecenia (brief_NN.md) i wyniki autorow (batch_NN.txt)")
+    p.add_argument("-b", "--batch-size", type=int, default=100, help="ile pytan na jedno zlecenie (domyslnie 100)")
+    p.add_argument("--mix", default=DEFAULT_MIX, help=f"docelowe proporcje poziomow (domyslnie {DEFAULT_MIX})")
+
     p = sub.add_parser("generate", help="TSV -> pliki Kotlin")
     p.add_argument("--check", action="store_true", help="tylko sprawdz, czy Kotlin jest aktualny")
 
     args = parser.parse_args()
     handlers = {
         "stats": cmd_stats, "list": cmd_list, "find": cmd_find, "check": cmd_check,
-        "add": cmd_add, "move": cmd_move, "generate": cmd_generate,
+        "add": cmd_add, "move": cmd_move, "plan": cmd_plan, "generate": cmd_generate,
     }
     return handlers[args.command](args)
 

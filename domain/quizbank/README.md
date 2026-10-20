@@ -72,16 +72,34 @@ symetrie granic, kody, liczby), a `CountryQuestionsTest` sprawdza kazdy typ pyta
 Recznie pisane pytania o panstwa nie powinny powtarzac tych prostych porownan - lepiej fakty
 z historia (najwiecej sasiadow, jedyna nieprostokatna flaga, co znaczy nazwa).
 
+## Tura nowych pytan (duzo naraz)
+
+Gdy pytan ma przybyc kilkaset, robi sie to turami (skill `.claude/skills/dodaj-pytania`):
+
+```bash
+python3 tools/quizbank.py plan history=500 geography=500 -o /tmp/runda   # rozdziel i napisz zlecenia
+#   kazde zlecenie /tmp/runda/brief_NN.md -> autor pisze /tmp/runda/batch_NN.txt (wg WRITING_GUIDE.md)
+python3 tools/quizbank.py check -s /tmp/runda/batch_*.txt                # razem: duble tez miedzy partiami
+python3 tools/quizbank.py add /tmp/runda/batch_*.txt
+tools/quiztest.sh                                                        # testy quizu, gdy Gradle nie dziala
+```
+
+`plan` dzieli liczbe pytan na liscie (polowa po rowno, polowa dla najmniejszych dzialow, najwyzej
+dwie srednie na dzial) i poziomy (wedlug brakow do proporcji E18/M37/H30/X15, `--mix` zmienia).
+Zlecenie `brief_NN.md` (domyslnie ~100 pytan, `-b`) ma tabele "dzial x poziom", zakres kazdego
+dzialu z komentarza pliku, sasiednie dzialy i liste pytan, ktore juz w dziale sa - autor nie musi
+niczego szukac, zeby nie dublowac. Zasady dla autorow: **`WRITING_GUIDE.md`**.
+
 ## Dopisywanie pytan - cala sesja
 
 ```bash
 python3 tools/quizbank.py stats                  # ile pytan w temacie, w kazdym dziale i na kazdym poziomie
 python3 tools/quizbank.py list history/antiquity -d E   # podglad tematu albo dzialu; -g fraza, -w bledne
 python3 tools/quizbank.py find "titanic"         # czy fakt juz jest - w CALYM banku, wszystkie typy
-python3 tools/quizbank.py check nowe.txt         # sprawdz nowe pytania, niczego nie zapisuje
+python3 tools/quizbank.py check -s nowe.txt      # sprawdz nowe pytania, niczego nie zapisuje (-s: podsumowanie)
 python3 tools/quizbank.py add nowe.txt           # check + dopisz do TSV + wygeneruj Kotlin
 python3 tools/quizbank.py move ID... --to vikings  # przenies pytania do innego dzialu (albo tematu)
-./gradlew :domain:desktopTest --tests 'com.lernhero.domain.quiz.*'
+./gradlew :domain:desktopTest --tests 'com.lernhero.domain.quiz.*'   # albo tools/quiztest.sh bez Gradle
 ```
 
 Plik z nowymi pytaniami (dowolna nazwa, najlepiej poza repo): naglowek i jedna linia na pytanie,
@@ -119,7 +137,7 @@ wyraznie najdluzsza, polskie znaki i cudzyslowy (bank pisze `Krakow`, `Pele` i '
 
 ## Zasady pisania pytan
 
-Pelna lista w KDoc `QuizBank`. W skrocie: pytanie ma zaskakiwac albo bawic (zadnych definicji
+Przewodnik dla autorow: `WRITING_GUIDE.md`, pelna lista w KDoc `QuizBank`. W skrocie: pytanie ma zaskakiwac albo bawic (zadnych definicji
 z podrecznika i fiszek), Easy to fakt znany wiekszosci doroslych, ale do przypomnienia (nie zerowka),
 dystraktory z tej samej polki i podobnej dlugosci, jeden fakt = jedno pytanie (takze miedzy typami),
 tresci znane tylko w Polsce ida do `poland`, nic, co sie zdezaktualizuje za rok.
