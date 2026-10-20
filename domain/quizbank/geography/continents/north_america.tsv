@@ -6,6 +6,15 @@ geox_las_vegas	Easy	In which US state is Las Vegas?	Nevada	Arizona	Utah	New Mexi
 geo_state_walt_disney	Easy	In which US state is Walt Disney World?	Florida	California	Texas	Nevada
 geo_state_silicon_valley	Easy	In which US state is Silicon Valley?	California	Washington	Texas	Massachusetts
 geo_canadian_province_mainly	Easy	Which Canadian province is mainly French-speaking?	Quebec	Ontario	Manitoba	Nova Scotia
+geo_state_nicknamed_golden	Easy	Which US state is nicknamed 'the Golden State'?	California	Nevada	Colorado	Alaska
+geo_state_main_part	Easy	Which US state's main part is famously shaped like a mitten?	Michigan	Wisconsin	Minnesota	Ohio
+geo_two_states_share	Easy	Which two US states share no border with any other US state?	Alaska and Hawaii	Hawaii and Florida	Alaska and Maine	Hawaii and Washington
+geo_canadian_province_nova	Easy	What does the name of the Canadian province 'Nova Scotia' mean?	New Scotland	Northern Shore	New Settlement	Noble Coast
+geo_guantanamo_bay_site	Easy	Guantanamo Bay, site of a US naval base, is on which island?	Cuba	Puerto Rico	Jamaica	Hispaniola
+geo_provinces_canada	Easy	How many provinces does Canada have?	Ten	Thirteen	Eight	Twelve
+geo_state_president	Easy	Which is the only US state named after a president?	Washington	Georgia	Virginia	Louisiana
+geo_canadian_province_city	Easy	In which Canadian province is the city of Vancouver?	British Columbia	Alberta	Ontario	Manitoba
+geo_southernmost_state	Easy	Which is the southernmost US state?	Hawaii	Florida	Texas	Louisiana
 mst_kraj_dwa_oceany	Medium	Panama is unusual in that its Caribbean coast lies where relative to its Pacific coast?	To the north	To the east	To the south	To the west
 geo_rhode_island	Medium	Which is the smallest US state by area?	Rhode Island	Delaware	Connecticut	Vermont
 geo_state_nicknamed_sunshine	Medium	Which US state is nicknamed 'the Sunshine State'?	Florida	California	Arizona	Hawaii
@@ -16,7 +25,51 @@ geo_state_especially_growing	Medium	Which US state is especially famous for grow
 geo_state_nicknamed_big	Medium	Which US state is nicknamed 'Big Sky Country'?	Montana	Wyoming	Colorado	Idaho
 geo_state_nicknamed_garden	Medium	Which US state is nicknamed 'the Garden State'?	New Jersey	Connecticut	Oregon	Virginia
 geo_state_nicknamed_peach	Medium	Which US state is nicknamed 'the Peach State'?	Georgia	South Carolina	Alabama	Texas
+geo_state_borders_just	Medium	Which is the only US state that borders just one other state?	Maine	Florida	Washington	Delaware
+geo_four_states_meet	Medium	Which four US states meet at the 'Four Corners'?	Arizona, Utah, Colorado, New Mexico	Arizona, Nevada, Utah, Colorado	Utah, Colorado, Wyoming, New Mexico	Texas, Oklahoma, Colorado, New Mexico
+geo_louisiana_call_counties	Medium	What does Louisiana call its counties?	Parishes	Boroughs	Townships	Cantons
+geo_canada_smallest_province	Medium	Which is Canada's smallest province?	Prince Edward Island	Nova Scotia	New Brunswick	Newfoundland
+geo_two_canadian_provinces	Medium	Which two Canadian provinces have no coastline?	Alberta and Saskatchewan	Manitoba and Alberta	Saskatchewan and Manitoba	Alberta and Ontario
+geo_canada_largest_province	Medium	Which is Canada's largest province by area?	Quebec	Ontario	British Columbia	Alberta
+geo_canada_comes_iroquoian	Medium	The name 'Canada' comes from an Iroquoian word meaning what?	Village	Big land	Cold north	Many lakes
+geo_canada_motto_mari	Medium	Canada's motto 'A Mari usque ad Mare' means what?	From sea to sea	Land of the free	Strong and free	North and strong
+geo_two_countries_border	Medium	Which two countries border Mexico to the south?	Guatemala and Belize	Guatemala and Honduras	Belize and Honduras	Guatemala and El Salvador
+geo_states_border_mexico	Medium	How many US states border Mexico?	Four	Three	Five	Six
+geo_countries_make_central	Medium	How many countries make up Central America?	Seven	Five	Nine	Six
+geo_country_british_honduras	Medium	Which country was known as British Honduras until 1973?	Belize	Honduras	Guyana	Jamaica
+geo_central_american_country	Medium	Which is the only Central American country with no Caribbean coastline?	El Salvador	Guatemala	Costa Rica	Panama
+geo_aruba_bonaire_curacao	Medium	Aruba, Bonaire and Curacao, the 'ABC islands', belong to the kingdom of which country?	The Netherlands	Venezuela	France	Britain
+geo_trinidad_lies_just	Medium	Trinidad lies just off the coast of which South American country?	Venezuela	Guyana	Colombia	Brazil
+geo_caribbean_island_nicknamed	Medium	Which Caribbean island is nicknamed 'the Pearl of the Antilles'?	Cuba	Jamaica	Puerto Rico	Barbados
+geo_mexico_spanish_colony	Medium	What was Mexico called as a Spanish colony?	New Spain	New Granada	New Castile	New Andalusia
+geo_caribbean_country_nicknamed	Medium	Which Caribbean country is nicknamed 'the Spice Isle' for its nutmeg?	Grenada	Jamaica	Trinidad	Barbados
+geo_state_nicknamed_land	Medium	Which US state is nicknamed 'the Land of 10,000 Lakes'?	Minnesota	Wisconsin	Michigan	Maine
+geo_roughly_far_hawaii	Medium	Roughly how far is Hawaii from the US mainland?	About 4,000 km	About 1,000 km	About 10,000 km	About 400 km
+geo_residents_puerto_rico	Medium	Residents of Puerto Rico are US citizens, but they cannot do what?	Vote for the US president	Serve in the US army	Travel freely to the US	Use US dollars
 geox_kostaryka	Hard	Which Central American country abolished its army in 1948?	Costa Rica	Panama	Honduras	Belize
 geo_state_nicknamed_bluegrass	Hard	Which US state is nicknamed 'the Bluegrass State'?	Kentucky	Tennessee	Virginia	Missouri
 geo_largest_country_central	Hard	Which is the largest country in Central America by area?	Nicaragua	Honduras	Guatemala	Panama
+geo_mexico_official	Hard	What is Mexico's official name?	The United Mexican States	The Republic of Mexico	The Mexican Federation	The Aztec Republic
+geo_country_usa_buy	Hard	From which country did the USA buy the Virgin Islands in 1917?	Denmark	Spain	Britain	The Netherlands
+geo_bermuda_often_lumped	Hard	Bermuda, often lumped in with the Caribbean, lies closest to which US state?	North Carolina	Florida	Texas	Louisiana
+geo_bahamas_often_caribbean	Hard	The Bahamas are often called Caribbean, but in which body of water do they actually lie?	The Atlantic Ocean	The Caribbean Sea	The Gulf of Mexico	The Pacific Ocean
+geo_jamaica_comes_taino	Hard	Jamaica's name comes from a Taino word meaning what?	Land of wood and water	Island of the sun	Green mountain	Home of the hummingbird
+geo_caribbean_island_nicknamed_2	Hard	Which Caribbean island was nicknamed 'Little England'?	Barbados	Jamaica	Bermuda	Antigua
+geo_canadian_province_last	Hard	Which Canadian province was the last to join Canada, in 1949?	Newfoundland	Nova Scotia	British Columbia	Prince Edward Island
+geo_saint_pierre_miquelon	Hard	Saint-Pierre and Miquelon, islands just off Canada's east coast, belong to which country?	France	Britain	Canada	Denmark
+geo_canadian_province_daughter	Hard	Which Canadian province is named after a daughter of Queen Victoria?	Alberta	Manitoba	Saskatchewan	Ontario
+geo_canada_officially_bilingual	Hard	Which is Canada's only officially bilingual province?	New Brunswick	Quebec	Ontario	Manitoba
+geo_three_provinces_make	Hard	Which three provinces make up Canada's 'Maritimes'?	Nova Scotia, New Brunswick, PEI	Nova Scotia, Quebec, PEI	Newfoundland, Nova Scotia, PEI	New Brunswick, Quebec, Ontario
+geo_state_independent_republic	Hard	Which US state was an independent republic from 1777 to 1791?	Vermont	Texas	Hawaii	California
+geo_state_lowest_highest	Hard	Which US state has the lowest 'highest point', just 105 m above sea level?	Florida	Delaware	Louisiana	Rhode Island
+geo_term_banana_republic	Hard	The term 'banana republic' was coined by the writer O. Henry about which country?	Honduras	Guatemala	Costa Rica	Panama
+geo_neighbour_long_claimed	Hard	Which neighbour has long claimed all or part of Belize's territory?	Guatemala	Honduras	Nicaragua	El Salvador
 geo_darien	Expert	The Darien Gap is a missing link in which famous road?	The Pan-American Highway	Route 66	The Silk Road	The Trans-Canada Highway
+geo_mosquito_coast_stretches	Expert	The Mosquito Coast stretches along the Caribbean shores of Nicaragua and which other country?	Honduras	Costa Rica	Panama	Belize
+geo_canadian_territory_means	Expert	Which Canadian territory's name means 'great river'?	Yukon	Nunavut	Northwest Territories	Labrador
+geo_part_canada_issued	Expert	Which part of Canada first issued car licence plates shaped like a polar bear, in 1970?	Northwest Territories	Yukon	Manitoba	Newfoundland and Labrador
+geo_thanks_islands_beyond	Expert	Thanks to islands beyond the 180th meridian, which US state is technically the easternmost as well as the westernmost?	Alaska	Hawaii	Maine	Florida
+geo_point_roberts_reachable	Expert	Point Roberts, reachable by land from the rest of the USA only through Canada, belongs to which state?	Washington	Minnesota	Maine	Montana
+geo_northwest_angle_part	Expert	The Northwest Angle, the only part of the lower 48 states north of the 49th parallel, belongs to which state?	Minnesota	North Dakota	Michigan	Montana
+geo_roughly_far_apart	Expert	Roughly how far apart are Russia's Big Diomede and America's Little Diomede islands?	About 4 km	About 40 km	About 400 km	About 1 km
+geo_state_owns_stranded	Expert	Which US state owns a stranded loop of land on the Mississippi, reachable by road only through Tennessee?	Kentucky	Missouri	Arkansas	Illinois

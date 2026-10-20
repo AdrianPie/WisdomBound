@@ -1,8 +1,60 @@
 # Australia, Nowa Zelandia i panstwa Pacyfiku: stany, przydomki, wyspiarskie panstwa, ciekawostki.
 id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+geo_states_australia	Easy	How many states does Australia have?	Six	Eight	Five	Seven
+geo_australian_state_great	Easy	In which Australian state is the Great Barrier Reef?	Queensland	New South Wales	Western Australia	Northern Territory
+geo_australia_island_state	Easy	Which is Australia's only island state?	Tasmania	Victoria	Queensland	South Australia
+geo_papua_new_guinea	Easy	Papua New Guinea shares the island of New Guinea with which country?	Indonesia	Australia	Malaysia	The Philippines
+geo_australia_largest_state	Easy	Which is Australia's largest state by area?	Western Australia	Queensland	New South Wales	South Australia
+geo_australian_state_lies	Easy	Which Australian state lies directly north of Victoria?	New South Wales	South Australia	Queensland	Tasmania
 lmk_uluru_kraj	Medium	In which country is Uluru?	Australia	New Zealand	South Africa	Namibia
 geo_tahiti	Medium	Tahiti is part of which country's overseas territories?	France	Britain	The United States	New Zealand
 geo_country_aotearoa_land	Medium	Which country is known as Aotearoa, 'the land of the long white cloud'?	New Zealand	Australia	Fiji	Samoa
 geo_australian_state_sydney	Medium	In which Australian state is Sydney?	New South Wales	Victoria	Queensland	South Australia
+geo_two_australian_states	Medium	Which two Australian states are both named after Queen Victoria?	Victoria and Queensland	Victoria and Tasmania	Queensland and South Australia	Victoria and New South Wales
+geo_australian_capital_territory	Medium	The Australian Capital Territory is entirely surrounded by which state?	New South Wales	Victoria	Queensland	South Australia
+geo_uluru_lies_australian	Medium	Uluru lies in which Australian state or territory?	The Northern Territory	Western Australia	South Australia	Queensland
+geo_australia_largest_country	Medium	After Australia, which is the largest country in Oceania by area?	Papua New Guinea	New Zealand	Fiji	The Solomon Islands
+geo_new_zealand_province	Medium	New Zealand was named after a province of which country?	The Netherlands	Denmark	Britain	Belgium
+geo_country_hill_letter	Medium	In which country is the hill with an 85-letter name beginning 'Taumatawhakatangihanga'?	New Zealand	Wales	Hawaii	Thailand
+geo_pacific_region_means	Medium	Which Pacific region's name means 'many islands'?	Polynesia	Micronesia	Melanesia	Australasia
+geo_native_people_call	Medium	What do its native people call Easter Island?	Rapa Nui	Te Ika	Aotearoa	Hiva Oa
+geo_roughly_far_new	Medium	Roughly how far is New Zealand from Australia?	About 2,000 km	About 200 km	About 800 km	About 5,000 km
+geo_guam_motto_says	Medium	Guam, whose motto says it is 'where America's day begins', is a territory of which country?	The USA	Japan	Australia	Spain
+geo_pacific_kingdom_friendly	Medium	Which Pacific kingdom, called 'the Friendly Islands' by Captain Cook, was never fully colonised?	Tonga	Fiji	Samoa	Hawaii
+geo_nickel_rich_new	Medium	Nickel-rich New Caledonia voted three times, from 2018 to 2021, on independence from which country?	France	Britain	Australia	New Zealand
+geo_large_share_fiji	Medium	A large share of Fiji's people descend from labourers brought in the 1800s from which country?	India	China	Japan	Indonesia
+geo_2011_pacific_country	Medium	In 2011, which Pacific country skipped 30 December entirely by moving across the date line?	Samoa	Tonga	Fiji	Kiribati
+geo_not_counting_overseas	Medium	Not counting overseas territories, which is the only country lying in all four hemispheres?	Kiribati	Indonesia	Ecuador	Brazil
+geo_christmas_island_mass	Medium	Christmas Island, famous for its mass migration of red crabs, belongs to which country?	Australia	Indonesia	Britain	New Zealand
+geo_dutch_call_australian	Medium	What did the Dutch call the Australian mainland in the 1600s?	New Holland	New Amsterdam	Van Diemen's Land	New Batavia
+geo_independent_countries_oceania	Medium	How many independent countries does Oceania have?	14	9	20	25
+geo_australians_call_tropical	Medium	What do Australians call the tropical northern part of the country around Darwin?	The Top End	The Red Centre	The Never Never	The Far North
+geo_pitcairn_islands_inhabitants	Medium	The Pitcairn Islands, with only about 50 inhabitants, are a territory of which country?	Britain	New Zealand	France	Australia
+geo_roughly_far_easter	Medium	Roughly how far is Easter Island from the coast of South America?	About 3,500 km	About 350 km	About 1,000 km	About 8,000 km
 lmk_moai_kraj	Hard	The Moai statues of Easter Island belong to which country?	Chile	Peru	New Zealand	Argentina
+geo_cook_islands_niue	Hard	The Cook Islands and Niue are self-governing in 'free association' with which country?	New Zealand	Australia	Britain	France
+geo_country_once_new	Hard	Which country, once the New Hebrides, was ruled jointly by Britain and France?	Vanuatu	Fiji	New Caledonia	The Solomon Islands
+geo_island_nation_official	Hard	Which island nation has no official capital city?	Nauru	Tuvalu	Palau	Kiribati
+geo_2019_island_region	Hard	In 2019, the island region of Bougainville voted almost 98% for independence from which country?	Papua New Guinea	The Solomon Islands	Australia	Indonesia
+geo_solomon_islands_spanish	Hard	The Solomon Islands were named by a Spanish explorer hoping to find what?	King Solomon's gold	The Garden of Eden	The lost tribes of Israel	A route to China
+geo_australian_state_settled	Hard	Which Australian state was settled only by free colonists, never taking convicts?	South Australia	Victoria	Western Australia	Queensland
+geo_roughly_long_australia	Hard	Roughly how long is Australia's Dingo Fence, one of the longest structures ever built?	About 5,600 km	About 560 km	About 1,500 km	About 15,000 km
+geo_roughly_share_australians	Hard	Roughly what share of Australians live within 50 km of the coast?	About 85%	About 50%	About 25%	About 10%
+geo_smallest_state_australian	Hard	Which is the smallest state on the Australian mainland?	Victoria	Tasmania	New South Wales	South Australia
+geo_roughly_share_new	Hard	Roughly what share of New Zealanders live on the North Island?	About three-quarters	About half	About a quarter	About a tenth
+geo_new_guinea_spanish	Hard	New Guinea was named by a Spanish sailor who thought its people looked like those of which region?	Guinea in West Africa	New Spain	Southern India	The Moluccas
+geo_tokelau_places_powered	Hard	Tokelau, one of the first places powered entirely by the sun, is a territory of which country?	New Zealand	Australia	The USA	France
+geo_pacific_nation_makes	Hard	Which Pacific nation makes visitors sign an eco-pledge stamped into their passports?	Palau	Fiji	Vanuatu	Samoa
+geo_three_places_mark	Hard	Which three places mark the corners of the 'Polynesian Triangle'?	Hawaii, New Zealand and Easter Island	Hawaii, Tahiti and Easter Island	Fiji, New Zealand and Easter Island	Hawaii, New Zealand and Tahiti
+geo_self_proclaimed_principality	Hard	The self-proclaimed 'Principality of Hutt River', a farm micronation that lasted 50 years, was in which country?	Australia	New Zealand	Canada	South Africa
+geo_2023_treaty_opened	Hard	A 2023 treaty opened a path for people of low-lying Tuvalu to settle in which country?	Australia	Fiji	Japan	Canada
+geo_under_british_rule_2	Hard	Under British rule, Tuvalu was known as what?	The Ellice Islands	The Gilbert Islands	The Friendly Islands	The New Hebrides
+geo_descendants_bounty_mutineers	Hard	Descendants of the Bounty mutineers resettled in 1856 on which Australian island?	Norfolk Island	Lord Howe Island	Kangaroo Island	Christmas Island
 geox_tuvalu_tv	Expert	Which tiny Pacific nation earns money from its '.tv' internet domain?	Tuvalu	Tonga	Tokelau	Taiwan
+geo_people_born_american	Expert	People born in American Samoa are not automatically US citizens. What are they instead?	US nationals	US residents	Protected persons	Commonwealth subjects
+geo_1933_australian_state	Expert	In 1933, which Australian state voted by a two-thirds majority to leave Australia?	Western Australia	Queensland	Tasmania	South Australia
+geo_canberra_own_sea	Expert	So that Canberra could have its own sea port, the federal government also took which coastal area in 1915?	Jervis Bay	Botany Bay	Port Phillip	Twofold Bay
+geo_big_ben_active	Expert	Big Ben, an active volcano, rises on which remote sub-Antarctic island ruled from Canberra?	Heard Island	Macquarie Island	Christmas Island	Lord Howe Island
+geo_new_zealand_islands	Expert	Which New Zealand islands keep their clocks 45 minutes ahead of the mainland?	The Chatham Islands	Stewart Island	The Kermadec Islands	The Bounty Islands
+geo_some_australian_islands	Expert	Some Australian islands in the Torres Strait lie just a few kilometres off which country's coast?	Papua New Guinea	Indonesia	East Timor	The Solomon Islands
+geo_small_island_nation	Expert	Which small island nation, nicknamed 'the Rock of Polynesia', is one of the world's largest coral islands?	Niue	Nauru	Tuvalu	Tokelau

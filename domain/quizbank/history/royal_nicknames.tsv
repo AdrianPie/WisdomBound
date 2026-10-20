@@ -4,6 +4,7 @@ his_barbarossa_nickname_emperor	Easy	What does 'Barbarossa', the nickname of Emp
 his_english_queen_affectionately	Easy	Which English queen was affectionately called 'Good Queen Bess'?	Elizabeth I	Mary I	Anne	Victoria
 his_emperor_fondly_nicknamed	Easy	Which emperor was fondly nicknamed 'the Little Corporal' by his soldiers?	Napoleon	Wilhelm II	Peter the Great	Franz Joseph
 his_russian_tsar_nicknamed	Easy	Which Russian tsar was nicknamed 'the Terrible'?	Ivan IV	Peter I	Nicholas II	Alexander I
+his_queen_elizabeth_childhood	Easy	What was Queen Elizabeth II's childhood nickname within her family?	Lilibet	Lizzie	Bess	Betty
 his_english_king_nicknamed_3	Medium	Which English king was nicknamed 'the Unready'?	Ethelred	Edgar	Edmund	Edwy
 his_grandson_charlemagne_nicknamed	Medium	Which grandson of Charlemagne was nicknamed 'the Bald'?	Charles	Louis	Lothair	Pepin
 his_martel_nickname_frankish	Medium	What does 'Martel', the nickname of the Frankish victor of Tours in 732, mean?	The Hammer	The Martyr	The Mighty	The Bold
@@ -18,6 +19,9 @@ his_danish_king_brought	Medium	Which Danish king, who brought Christianity to De
 his_ottoman_sultan_europe	Medium	Which Ottoman sultan was known in Europe as 'the Magnificent'?	Suleiman I	Mehmed II	Selim II	Murad III
 his_son_william_conqueror_2	Medium	Which son of William the Conqueror was nicknamed 'Rufus', meaning 'the Red'?	William II	Henry I	Robert Curthose	Stephen
 his_british_king_sailor	Medium	Which British king was called 'the Sailor King' after his years in the navy?	William IV	George V	George III	Edward VII
+his_bavarian_king_nicknamed	Medium	Which Bavarian king, nicknamed 'the Fairy Tale King', built Neuschwanstein Castle?	Ludwig II	Ludwig I	Maximilian II	Otto I
+his_frederick_king_bohemia	Medium	Why was Frederick V, King of Bohemia, nicknamed 'the Winter King'?	He reigned for only one winter	He was crowned in a snowstorm	He loved skating on frozen lakes	He was born on Christmas Day
+his_nickname_british_use	Medium	What nickname did the British use for Napoleon, even to frighten naughty children?	Boney	Old Nick	Frenchy	Bluebeard
 his_unraed_root_ethelred	Hard	What did 'unraed', the root of Ethelred's nickname 'the Unready', really mean?	Badly advised	Always late	Unarmed	Not yet crowned
 his_queen_castile_mother	Hard	Which queen of Castile, mother of Emperor Charles V, was called 'the Mad'?	Joanna	Isabella	Catherine	Blanche
 his_french_king_well	Hard	Which French king was called 'the Well-Beloved' early in his reign?	Louis XV	Louis XIV	Louis XIII	Henry IV
@@ -29,6 +33,10 @@ his_english_king_youngest	Hard	Which English king, the youngest son of William t
 his_spanish_king_1556	Hard	Which Spanish king of 1556-1598 was known as 'the Prudent'?	Philip II	Philip III	Charles V	Ferdinand II
 his_habsburg_emperor_died	Hard	Which Habsburg emperor, who died in 1519, was called 'the Last Knight'?	Maximilian I	Charles V	Frederick III	Sigismund
 his_king_united_crowns	Hard	Which king, who united the crowns of Scotland and England, was mocked as 'the wisest fool in Christendom'?	James VI and I	Charles I	James V	Robert III
+his_british_king_nicknamed	Hard	Which British king was nicknamed 'Prinny' while he was Prince Regent?	George IV	George III	William IV	Edward VII
+his_british_king_nicknamed_2	Hard	Which British king was nicknamed 'the Peacemaker' for his skill at diplomacy?	Edward VII	George V	Edward VI	George VI
+his_nickname_suleiman_magnificent	Hard	By which nickname is Suleiman the Magnificent known in Turkey?	The Lawgiver	The Conqueror	The Grim	The Thunderbolt
+his_stuart_claimant_british	Hard	Which Stuart claimant to the British throne was nicknamed 'the Old Pretender'?	James Francis Edward Stuart	Charles Edward Stuart	Henry Benedict Stuart	James, Duke of Monmouth
 his_king_castile_great	Expert	Which king of Castile, a great patron of learning, was called 'the Wise'?	Alfonso X	Ferdinand III	Pedro I	Sancho IV
 his_scheming_french_king	Expert	Which scheming French king was nicknamed 'the Universal Spider'?	Louis XI	Charles VIII	Louis XII	Philip IV
 his_scottish_king_1058	Expert	Which Scottish king of 1058-1093 was nicknamed 'Canmore', or 'Great Chief'?	Malcolm III	Kenneth I	David I	Duncan II
@@ -37,3 +45,5 @@ his_german_king_900s	Expert	Which German king of the 900s was nicknamed 'the Fow
 his_king_hungary_renaissance	Expert	Which king of Hungary, a Renaissance patron, is remembered as 'the Just'?	Matthias Corvinus	Stephen I	Bela IV	Louis the Great
 his_french_king_died	Expert	Which French king, who died in 1498 after hitting his head on a door frame, was called 'the Affable'?	Charles VIII	Louis XI	Louis XII	Francis I
 his_emperor_1200s_stupor	Expert	Which emperor of the 1200s was called 'Stupor Mundi', the 'Wonder of the World'?	Frederick II	Frederick I	Otto IV	Henry VI
+his_danish_king_children	Expert	Which Danish king, whose children married into many royal houses, was nicknamed 'the father-in-law of Europe'?	Christian IX	Frederick VII	Christian X	Haakon VII
+his_english_king_nicknamed_5	Expert	Which English king was nicknamed 'Old Rowley' after his favourite stallion?	Charles II	James II	William III	George I

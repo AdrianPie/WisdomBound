@@ -4,6 +4,7 @@ id	difficulty	prompt	correct	wrong1	wrong2	wrong3
 his_country_maori_people	Easy	In which country do the Maori people live?	New Zealand	Australia	Fiji	Hawaii
 his_giant_stone_figures	Easy	What are the giant stone figures of Easter Island called?	Moai	Tiki	Totems	Menhirs
 his_soldiers_country_remembered	Easy	Soldiers of which country are remembered alongside Australia's on Anzac Day?	New Zealand	Canada	Britain	South Africa
+his_sport_ancient_hawaiians	Easy	Which sport did ancient Hawaiians, chiefs included, practise long before Europeans arrived?	Surfing	Rugby	Polo	Kayak racing
 hx_australia_skazancy	Medium	Britain first used its colony in Australia for what?	Sending convicts	Growing tea	Mining gold	Hunting whales
 his_australian_outlaw_wore	Medium	Which Australian outlaw wore a suit of homemade iron armour in his last stand?	Ned Kelly	Captain Thunderbolt	Ben Hall	Jack Donahue
 his_roughly_long_aboriginal	Medium	For roughly how long have Aboriginal people lived in Australia?	Over 50,000 years	About 5,000 years	About 500 years	About 1 million years
@@ -18,6 +19,7 @@ his_animal_released_hunting	Medium	Which animal, released for hunting in 1859, b
 his_pacific_island_capital	Medium	Which Pacific island, with its capital Papeete, is part of French Polynesia?	Tahiti	Fiji	Samoa	Tonga
 his_pacific_country_won	Medium	Which Pacific country won its independence from Australia in 1975?	Papua New Guinea	Fiji	Vanuatu	Samoa
 his_dutch_navigator_reached	Medium	Which Dutch navigator reached New Zealand in 1642, over a century before Cook?	Abel Tasman	Willem Janszoon	Dirk Hartog	Jacob Roggeveen
+his_easter_island	Medium	Why is Easter Island so called?	A Dutch captain reached it on Easter Sunday	Its giant statues all face the east	Missionaries held the first Easter there	Its people held a spring egg festival
 his_wojna_emu	Hard	In 1932, Australian soldiers with machine guns fought, and lost, a 'war' against which animals?	Emus	Kangaroos	Rabbits	Dingoes
 hx_hawaje	Hard	Before becoming part of the USA, Hawaii was what?	An independent kingdom	A French colony	A Japanese province	A Spanish colony
 his_eureka_stockade_1854	Hard	What was the Eureka Stockade of 1854 in Australia?	A gold miners' rebellion	A convict escape	A cattle drive	A shipwreck
@@ -36,5 +38,11 @@ his_campaigner_led_fight	Hard	Which campaigner led the fight that won New Zealan
 his_pacific_islands_german	Hard	Which Pacific islands were a German colony until New Zealand seized them in 1914?	Western Samoa	Fiji	Tonga	The Cook Islands
 his_island_nation_gilbert	Hard	Which island nation, then called the Gilbert Islands, saw the bloody Battle of Tarawa in 1943?	Kiribati	Tuvalu	Nauru	Vanuatu
 his_country_tested_nuclear	Hard	Which country tested nuclear bombs on Mururoa atoll in the Pacific until 1996?	France	The United States	Britain	China
+his_governor_new_south	Hard	Which governor of New South Wales was overthrown by his own officers in the 'Rum Rebellion' of 1808?	William Bligh	Arthur Phillip	Lachlan Macquarie	John Macarthur
+his_cargo_cults_grew	Hard	What were the 'cargo cults' that grew up in Melanesia around World War II?	Rituals meant to summon Western goods	Gangs who looted wrecked supply ships	Secret societies of dock workers	Churches built from packing crates
+his_rongorongo_found_carved	Hard	What is 'rongorongo', found carved on wooden tablets from Easter Island?	An undeciphered script	A sacred dance	A type of canoe	A bird-man contest
+his_made_tiny_island	Hard	What made the tiny island nation of Nauru one of the richest per person in the 1970s?	Phosphate mining	Oil drilling	Offshore banking	Pearl farming
+his_pacific_island_kingdom	Hard	Which Pacific island kingdom kept its own monarchy throughout the colonial era?	Tonga	Hawaii	Tahiti	Fiji
 hx_waitangi	Expert	Which 1840 treaty between the British Crown and Maori chiefs is New Zealand's founding document?	The Treaty of Waitangi	The Treaty of Auckland	The Treaty of Rotorua	The Treaty of Aotearoa
 his_tahitian_navigator_priest	Expert	Which Tahitian navigator and priest guided Captain Cook's Endeavour through the Pacific?	Tupaia	Omai	Kupe	Hotu Matua
+his_maori_chief_met	Expert	Which Maori chief, who met King George IV in 1820, came home with muskets and launched devastating raids?	Hongi Hika	Te Rauparaha	Hone Heke	Te Kooti

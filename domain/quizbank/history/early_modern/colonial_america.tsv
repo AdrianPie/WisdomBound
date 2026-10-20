@@ -23,6 +23,11 @@ his_city_puritan_settlers	Medium	Which city did Puritan settlers found in 1630, 
 his_canadian_city_founded	Medium	Which Canadian city was founded by French settlers in 1642?	Montreal	Toronto	Halifax	Vancouver
 his_indentured_servants_colonies	Medium	What were 'indentured servants' in the colonies?	Workers bound for years to pay their fare	Slaves freed by their masters	Soldiers paid in land	Children sent to school in England
 his_puritan_colony_john	Medium	Which Puritan colony did John Winthrop lead from 1630?	The Massachusetts Bay Colony	The Plymouth Colony	The Virginia Colony	The Providence Colony
+his_grim_winter_1609	Medium	What was the grim winter of 1609-1610 at Jamestown called?	The Starving Time	The Dying Season	The Great Hunger	The Long Frost
+his_pocahontas_die_1617	Medium	Where did Pocahontas die in 1617?	In England	In Virginia	In Bermuda	In the Netherlands
+his_almanac_benjamin_franklin	Medium	Which almanac did Benjamin Franklin publish under a made-up name from 1732?	'Poor Richard's Almanack'	'The Farmer's Almanac'	'Common Sense'	'The Federalist'
+his_roughly_passengers_sailed	Medium	Roughly how many passengers sailed to America on the Mayflower in 1620?	About 100	About 400	About 30	About 1,000
+his_king_daughters_sent	Medium	Who were the 'King's Daughters' sent to New France in the 1660s?	Young women sent to marry settlers	Nuns sent to run hospitals	Princesses held as hostages	Orphans sent to work farms
 hy_jamestown	Hard	What was the first permanent English settlement in North America, founded in 1607?	Jamestown	Plymouth	Boston	New Amsterdam
 his_french_explorer_founded	Hard	Which French explorer founded Quebec City in 1608?	Samuel de Champlain	Jacques Cartier	Robert de La Salle	Jacques Marquette
 his_french_explorer_claimed	Hard	Which French explorer claimed the whole Mississippi basin for France in 1682?	Robert de La Salle	Jacques Cartier	Samuel de Champlain	Jacques Marquette
@@ -40,3 +45,4 @@ hy_manhattan	Expert	According to legend, the Dutch bought Manhattan in 1626 for 
 his_european_country_small	Expert	Which European country had a small colony on the Delaware River from 1638 to 1655?	Sweden	Denmark	Prussia	Scotland
 his_wampanoag_leader_king	Expert	Which Wampanoag leader, called 'King Philip' by the English, led a war against New England in 1675?	Metacom	Massasoit	Squanto	Pontiac
 his_american_state_capital	Expert	Which American state capital began as the Dutch trading post of Fort Orange?	Albany	Hartford	Trenton	Richmond
+his_man_crushed_under	Expert	Which man, crushed under stones during the Salem witch trials, is said to have asked only for 'more weight'?	Giles Corey	John Proctor	Cotton Mather	Samuel Parris

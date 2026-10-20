@@ -8,6 +8,7 @@ his_founding_father_killed	Easy	Which US founding father was killed in a duel wi
 his_against_country_thirteen	Easy	Against which country did the thirteen American colonies fight for independence?	Great Britain	France	Spain	The Netherlands
 his_commanded_american_army	Easy	Who commanded the American army in the War of Independence?	George Washington	Benjamin Franklin	John Adams	Thomas Jefferson
 his_city_declaration_independence	Easy	In which city was the Declaration of Independence signed?	Philadelphia	Boston	New York	Washington
+his_european_country_sent	Easy	Which European country sent ships and soldiers to help the Americans win their War of Independence?	France	Russia	Portugal	Prussia
 his3_deklaracja_niepodleglosci_usa	Medium	In which year was the US Declaration of Independence signed?	1776	1789	1800	1765
 hx_jefferson	Medium	Who was the main author of the US Declaration of Independence?	Thomas Jefferson	George Washington	Benjamin Franklin	John Adams
 hx_delaware	Medium	Which river did George Washington famously cross on Christmas night, 1776?	The Delaware	The Potomac	The Hudson	The Mississippi
@@ -32,6 +33,10 @@ his_german_soldiers_hired	Medium	What were the German soldiers hired by Britain 
 his_future_lady_urged	Medium	Which future first lady urged her husband to 'remember the ladies' in the new laws?	Abigail Adams	Martha Washington	Dolley Madison	Martha Jefferson
 his_document_begins_course	Medium	Which famous document begins 'When in the Course of human events'?	The Declaration of Independence	The US Constitution	The Bill of Rights	The Gettysburg Address
 his_george_washington_vice	Medium	Who was George Washington's vice president?	John Adams	Thomas Jefferson	Alexander Hamilton	John Jay
+his_paul_revere_signal	Medium	In Paul Revere's signal 'one if by land, two if by sea', what was hung in the church steeple?	Lanterns	Flags	Torches	Bells
+his_song_sung_british	Medium	Which song was first sung by British soldiers to mock the American colonists, who then made it their own?	'Yankee Doodle'	'The Star-Spangled Banner'	'America the Beautiful'	'Hail, Columbia'
+his_two_founding_fathers	Medium	Which two Founding Fathers both died on 4 July 1826, exactly 50 years after the Declaration?	John Adams and Thomas Jefferson	George Washington and John Jay	Benjamin Franklin and John Adams	Thomas Jefferson and James Madison
+his_new_yorkers_1776	Medium	What did New Yorkers do in 1776 with the gilded statue of the British king on Bowling Green?	Melted it into musket balls	Threw it in the Hudson	Shipped it back to London	Set it up in Philadelphia
 trv_franklin_banknot	Hard	Whose face is on the US $100 bill, even though he was never president?	Benjamin Franklin's	Thomas Jefferson's	Ulysses Grant's	Abraham Lincoln's
 his_nowy_jork_stolica	Hard	Which city was the first capital of the United States under its Constitution?	New York City	Philadelphia	Boston	Washington, D.C.
 hx_paul_revere	Hard	Which silversmith made a famous midnight ride in 1775 to warn that British troops were coming?	Paul Revere	Benjamin Franklin	Samuel Adams	John Hancock
@@ -44,4 +49,6 @@ his_washington_army_survive	Hard	Where did Washington's army survive the bitter 
 his_hill_battle_bunker	Hard	On which hill was the 'Battle of Bunker Hill' of 1775 actually fought?	Breed's Hill	Beacon Hill	Capitol Hill	Nob Hill
 his_constitution_united_states	Hard	What was the first constitution of the United States, from 1781, called?	The Articles of Confederation	The Bill of Rights	The Federalist Papers	The Northwest Ordinance
 his_british_general_surrendered_2	Hard	Which British general surrendered his army at Saratoga in 1777?	John Burgoyne	Lord Cornwallis	William Howe	Henry Clinton
+his_legendary_heroine_took	Hard	Which legendary heroine took her husband's place at a cannon at the Battle of Monmouth in 1778?	Molly Pitcher	Betsy Ross	Deborah Sampson	Abigail Adams
 his_french_admiral_fleet	Expert	Which French admiral's fleet trapped the British at Yorktown in 1781?	The Comte de Grasse	The Marquis de Lafayette	Admiral de Suffren	The Comte de Rochambeau
+his_date_john_adams	Expert	Which date did John Adams predict Americans would celebrate as their day of independence?	2 July	4 July	17 September	19 April

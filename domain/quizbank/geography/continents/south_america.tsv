@@ -1,11 +1,64 @@
 # Panstwa i regiony Ameryki Poludniowej: rekordy krajow, granice, nazwy, ciekawostki.
 id	difficulty	prompt	correct	wrong1	wrong2	wrong3
 geocmp_ludnosc_ameryka_pd	Easy	Which is the most populous country in South America?	Brazil	Argentina	Colombia	Peru
+geo_country_christopher_columbus	Easy	Which country is named after Christopher Columbus?	Colombia	Costa Rica	Venezuela	Ecuador
+geo_argentina_comes_latin	Easy	Argentina's name comes from the Latin word for which metal?	Silver	Gold	Copper	Tin
+geo_country_lies_between	Easy	Which country lies between Argentina and Brazil on the Atlantic coast?	Uruguay	Paraguay	Chile	Bolivia
+geo_roughly_share_south	Easy	Roughly what share of South America's area does Brazil cover?	About half	About a fifth	About 80%	About a tenth
+geo_falkland_islands_territory	Easy	The Falkland Islands are a territory of which country?	Britain	Argentina	Chile	France
+geo_french_guiana_north	Easy	French Guiana, on the north coast of South America, is part of which country?	France	Brazil	The Netherlands	Spain
+geo_south_american_country	Easy	Which is the only South American country with coastlines on both the Pacific and the Caribbean?	Colombia	Venezuela	Ecuador	Peru
+geo_argentinians_call_falkland	Easy	What do Argentinians call the Falkland Islands?	Las Malvinas	Las Galapagos	Las Canarias	Las Azores
 geo_second_populous_country	Medium	Which is the second most populous country in South America?	Colombia	Argentina	Peru	Venezuela
 geo_country_means_little	Medium	Which country's name means 'Little Venice', after villages built on stilts?	Venezuela	Bolivia	Colombia	Ecuador
 geo_two_south_american	Medium	Which two South American countries do not border Brazil?	Chile and Ecuador	Peru and Bolivia	Uruguay and Paraguay	Colombia and Venezuela
 geo_two_south_american_2	Medium	Which two South American countries are landlocked?	Bolivia and Paraguay	Bolivia and Uruguay	Paraguay and Ecuador	Peru and Bolivia
+geo_independent_countries_south	Medium	How many independent countries are there in South America?	12	9	15	20
+geo_landlocked_bolivia_still	Medium	Landlocked Bolivia still keeps a navy. Where does it mostly sail?	On Lake Titicaca and rivers	Off the coast of Chile	In the Amazon delta	On Lake Maracaibo
+geo_europe_launches_rockets	Medium	Europe launches its rockets from Kourou, in which South American territory?	French Guiana	Suriname	Guyana	Brazil
+geo_largest_spanish_speaking	Medium	Which is the largest Spanish-speaking country by area?	Argentina	Mexico	Spain	Colombia
+geo_2013_country_became	Medium	In 2013, which country became the first to fully legalise recreational cannabis?	Uruguay	The Netherlands	Canada	Portugal
+geo_country_british_guiana	Medium	Which country was known as British Guiana until 1966?	Guyana	Suriname	Belize	Trinidad
+geo_chile_very_long	Medium	Chile is very long and thin. Roughly how wide is it on average?	About 175 km	About 50 km	About 600 km	About 1,000 km
+geo_usually_covers_argentina	Medium	Which name usually covers Argentina, Chile and Uruguay as a region?	The Southern Cone	The Andean Belt	The Pampas Rim	The Silver Coast
+geo_three_territories_make	Medium	Which three territories make up 'the Guianas'?	Guyana, Suriname and French Guiana	Guyana, Belize and Suriname	Guyana, Venezuela and Suriname	Suriname, French Guiana and Brazil
+geo_two_south_american_3	Medium	In which two South American countries do cars drive on the left?	Guyana and Suriname	Chile and Peru	Uruguay and Paraguay	Brazil and Guyana
+geo_south_american_country_2	Medium	Which South American country lies closest to Africa?	Brazil	Argentina	Venezuela	Guyana
+geo_small_country_stretches	Medium	Which small country stretches from the Pacific coast over the Andes into the Amazon, and owns the Galapagos?	Ecuador	Peru	Colombia	Bolivia
+geo_triple_frontier_smuggling	Medium	The 'Triple Frontier', a famous smuggling hub, is where Argentina and Brazil meet which country?	Paraguay	Uruguay	Bolivia	Chile
+geo_country_largest_population	Medium	Which country has the largest population of Japanese descent outside Japan?	Brazil	The USA	Peru	Canada
+geo_tierra_del_fuego	Medium	Tierra del Fuego, 'Land of Fire', got its name from what?	Campfires seen by Magellan's crew	Its many active volcanoes	Natural gas burning from the rocks	Red rocks glowing at sunset
+geo_country_largest_proven	Medium	Which country has the largest proven oil reserves in the world?	Venezuela	Saudi Arabia	Russia	Iran
+geo_time_zones_brazil	Medium	How many time zones does Brazil have?	Four	One	Two	Seven
+geo_coffee_axis_unesco	Medium	The 'Coffee Axis', a UNESCO-listed coffee-growing landscape, is in which country?	Colombia	Brazil	Ecuador	Peru
 geox_nazca	Hard	In which country are the giant Nazca Lines drawn in the desert?	Peru	Chile	Mexico	Bolivia
 geoy_boliwia_morze	Hard	Bolivia lost its sea coast to which neighbour in a 19th-century war?	Chile	Peru	Brazil	Argentina
 geo_smallest_country_south	Hard	Which is the smallest country in South America?	Suriname	Uruguay	Guyana	Ecuador
+geo_south_american_country_3	Hard	Which South American country's official name calls it the 'Oriental Republic'?	Uruguay	Paraguay	Ecuador	Venezuela
+geo_since_2009_bolivia	Hard	Since 2009, Bolivia's official name begins with which unusual word?	Plurinational	Bolivarian	Andean	Federal
+geo_1667_dutch_gave	Hard	In 1667 the Dutch gave up their claim to New York in return for keeping which South American colony?	Suriname	Guyana	French Guiana	Venezuela
+geo_puerto_williams_often	Hard	Puerto Williams, often called the southernmost town in the world, belongs to which country?	Chile	Argentina	New Zealand	South Africa
+geo_settlers_country_founded	Hard	Settlers from which country founded towns in Argentine Patagonia in 1865, and their language is still spoken there?	Wales	Ireland	Scotland	Iceland
+geo_country_crossed_both	Hard	Which country is crossed by both the equator and the Tropic of Capricorn?	Brazil	Ecuador	Peru	Bolivia
+geo_brazilian_state_means	Hard	Which Brazilian state's name means 'General Mines'?	Minas Gerais	Mato Grosso	Rio Grande do Sul	Goias
+geo_brazil_largest_state	Hard	Which is Brazil's largest state by area?	Amazonas	Mato Grosso	Para	Bahia
+geo_country_owns_robinson	Hard	Which country owns Robinson Crusoe Island, where a real castaway's stay inspired the novel?	Chile	Peru	Ecuador	Colombia
+geo_country_thought_come	Hard	Which country's name is thought to come from a word meaning 'land of many waters'?	Guyana	Paraguay	Uruguay	Suriname
+geo_roughly_long_border	Hard	Roughly how long is the border between Argentina and Chile?	About 5,000 km	About 1,500 km	About 2,500 km	About 12,000 km
+geo_roughly_share_peru	Hard	Roughly what share of Peru is covered by the Amazon rainforest?	About 60%	About 10%	About 25%	About 95%
+geo_hot_dry_gran	Hard	The hot, dry Gran Chaco covers about 60% of which country, yet holds only a tiny share of its people?	Paraguay	Bolivia	Argentina	Uruguay
+geo_country_claims_essequibo	Hard	Which country claims the Essequibo region, about two-thirds of Guyana's territory?	Venezuela	Brazil	Suriname	Colombia
+geo_two_south_american_4	Hard	Which two South American countries each border only two other countries?	Ecuador and Uruguay	Chile and Ecuador	Uruguay and Paraguay	Ecuador and Guyana
+geo_northernmost_point_mainland	Hard	The northernmost point of mainland South America lies in which country?	Colombia	Venezuela	Guyana	Suriname
+geo_brazilian_state_salvador	Hard	Which Brazilian state, with Salvador as its capital, is the heartland of Afro-Brazilian culture?	Bahia	Pernambuco	Minas Gerais	Maranhao
+geo_brazilian_state_bordering	Hard	Which Brazilian state, bordering Uruguay and Argentina, is the home of Brazil's gauchos?	Rio Grande do Sul	Santa Catarina	Parana	Mato Grosso do Sul
 geo2_panstwo_najdluzsze	Expert	Which country is the longest from north to south?	Chile	Norway	Brazil	Russia
+geo_country_shares_longest	Expert	Which country shares the longest border with Brazil?	Bolivia	Peru	Venezuela	Argentina
+geo_brazil_acquired_state	Expert	Brazil acquired the state of Acre in 1903 from which country?	Bolivia	Paraguay	Colombia	Venezuela
+geo_south_american_country_4	Expert	Which is the only South American country lying entirely south of the Tropic of Capricorn?	Uruguay	Chile	Argentina	Paraguay
+geo_caribbean_islands_san	Expert	The Caribbean islands of San Andres, much closer to Nicaragua, belong to which country?	Colombia	Venezuela	Honduras	Panama
+geo_1929_chile_handed	Expert	In 1929 Chile handed back which city to Peru, while keeping Arica?	Tacna	Iquique	Antofagasta	Arequipa
+geo_cape_froward_southernmost	Expert	Cape Froward, the southernmost point of the South American mainland, lies in which country?	Chile	Argentina	Uruguay	Brazil
+geo_1863_1886_colombia	Expert	From 1863 to 1886, Colombia was officially called what?	The United States of Colombia	The Kingdom of Colombia	The Andean Republic	The Bolivarian Federation
+geo_suriname_sizeable_community	Expert	Suriname has a sizeable community whose ancestors came as contract workers from which island?	Java	Sri Lanka	Madagascar	Borneo
+geo_1860_french_lawyer	Expert	In 1860 a French lawyer proclaimed himself king of which South American region?	Araucania and Patagonia	The Mosquito Coast	The Gran Chaco	Tierra del Fuego

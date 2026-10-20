@@ -4,6 +4,7 @@ his_cia_stand	Easy	What does CIA stand for?	Central Intelligence Agency	Central 
 his_israel_foreign_intelligence	Easy	What is the name of Israel's foreign intelligence agency?	Mossad	Shin Bet	Stasi	Interpol
 his_kitchen_liquid_used	Easy	Which kitchen liquid can be used as an invisible ink that appears when the paper is heated?	Lemon juice	Olive oil	Vinegar	Tea
 his_german_cipher_machine	Easy	What was the name of the German cipher machine whose codes were broken in World War II?	Enigma	Colossus	Purple	Ultra
+his_british_mathematician_led	Easy	Which British mathematician led the codebreaking against Enigma, as shown in the film 'The Imitation Game'?	Alan Turing	Isaac Newton	Charles Babbage	Bertrand Russell
 his_statesman_ran_queen	Medium	Which statesman ran Queen Elizabeth I's network of spies?	Francis Walsingham	Thomas Cromwell	Robert Dudley	Walter Raleigh
 his_trick_operation_mincemeat	Medium	What was the trick of 'Operation Mincemeat' in 1943?	A corpse carrying fake plans	A fake army of rubber tanks	A spy hidden in a meat delivery	Poisoned food sent to Hitler
 his_member_cambridge_five	Medium	Which member of the Cambridge Five rose high in MI6 before fleeing to Moscow in 1963?	Kim Philby	Guy Burgess	Anthony Blunt	Donald Maclean
@@ -20,6 +21,8 @@ his_spies_call_hidden	Medium	What do spies call a hidden spot where they leave m
 his_mole_world_spying	Medium	What is a 'mole' in the world of spying?	An agent planted inside the enemy's camp	A tunnel dug under an enemy embassy	A code hidden inside an ordinary letter	A spy who works only from home
 his_spies_call_secret	Medium	What do spies call a secret house where agents can hide or meet in safety?	A safe house	A dead drop	A listening post	A honey trap
 his_author_james_bond	Medium	Which author of the James Bond novels worked in British naval intelligence during World War II?	Ian Fleming	John le Carre	Graham Greene	Roald Dahl
+his_radioactive_poison_used	Medium	Which radioactive poison was used to murder former Russian spy Alexander Litvinenko in London in 2006?	Polonium-210	Ricin	Novichok	Uranium-235
+his_chef_worked_american	Medium	Which famous TV chef worked for the American spy agency OSS during World War II?	Julia Child	Fanny Cradock	Betty Crocker	Martha Stewart
 his_plot_put_mary	Hard	Which plot to put Mary, Queen of Scots, on the throne was uncovered by Walsingham's spies in 1586?	The Babington Plot	The Gunpowder Plot	The Ridolfi Plot	The Throckmorton Plot
 his_russian_born_agent	Hard	Which Russian-born agent of British intelligence was nicknamed 'the Ace of Spies'?	Sidney Reilly	Kim Philby	Richard Sorge	Ian Fleming
 his_spanish_double_agent	Hard	Which Spanish double agent, codenamed 'Garbo', fooled the Germans about the D-Day landings?	Juan Pujol Garcia	Dusko Popov	Eddie Chapman	Roman Czerniawski
@@ -40,5 +43,11 @@ his_soviet_colonel_passed	Hard	Which Soviet colonel passed missile secrets to th
 his_british_safecracker_became	Hard	Which British safecracker became the double agent 'Agent Zigzag' in World War II?	Eddie Chapman	Kim Philby	Duncan Hamilton	Harry Houdini
 his_secret_cia_tunnel	Hard	What was the secret CIA tunnel dug under East Berlin in the 1950s used for?	Tapping Soviet phone lines	Smuggling people west	Storing secret weapons	Hiding Soviet defectors
 his_german_born_physicist	Hard	Which German-born physicist passed atomic bomb secrets from Los Alamos to the Soviets?	Klaus Fuchs	Klaus Barbie	Werner Heisenberg	Otto Hahn
+his_member_cambridge_spy	Hard	Which member of the Cambridge spy ring was the art adviser to Queen Elizabeth II?	Anthony Blunt	Kim Philby	Guy Burgess	Donald Maclean
+his_soviet_schoolchildren_give	Hard	What did Soviet schoolchildren give the US ambassador in 1945 that hid a listening device for seven years?	A carved wooden Great Seal	A painted Easter egg	A bust of Lincoln	A chess set
+his_britain_world_war	Hard	What was Britain's World War II system for turning captured German spies into double agents called?	The Double Cross System	Operation Fortitude	The Ultra Programme	Operation Mincemeat
+his_elizabethan_playwright_possibly	Hard	Which Elizabethan playwright, possibly a government spy, was stabbed to death in Deptford in 1593?	Christopher Marlowe	Ben Jonson	Thomas Kyd	William Shakespeare
 his_teenage_confederate_spy	Expert	Which teenage Confederate spy passed secrets to Stonewall Jackson in 1862?	Belle Boyd	Rose Greenhow	Harriet Tubman	Pauline Cushman
 his_east_german_spymaster	Expert	Which East German spymaster was nicknamed 'the man without a face'?	Markus Wolf	Erich Mielke	Erich Honecker	Gunter Guillaume
+his_author_robinson_crusoe	Expert	Which author of 'Robinson Crusoe' also worked as a secret government agent?	Daniel Defoe	Jonathan Swift	Henry Fielding	Samuel Richardson
+his_french_diplomat_spy	Expert	Which French diplomat and spy of Louis XV lived the last 33 years of life as a woman?	The Chevalier d'Eon	The Comte de Saint-Germain	Cardinal Mazarin	Beaumarchais

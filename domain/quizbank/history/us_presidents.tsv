@@ -10,6 +10,7 @@ his_american_president_nicknamed	Easy	Which American president was nicknamed 'Ho
 his_catholic_president_united	Easy	Who was the first Catholic president of the United States?	John F. Kennedy	Woodrow Wilson	Harry Truman	Herbert Hoover
 his_president_impeached_1998	Easy	Which US president was impeached in 1998 over the Monica Lewinsky affair?	Bill Clinton	George W. Bush	Richard Nixon	Ronald Reagan
 his_years_president_serve	Easy	How many years does a US president serve in one term?	Four	Two	Five	Six
+his_state_abraham_lincoln	Easy	In which state did Abraham Lincoln build his career as a lawyer before becoming president?	Illinois	Kentucky	Ohio	Virginia
 his_waszyngton	Medium	Who was the first President of the United States?	George Washington	Abraham Lincoln	Thomas Jefferson	John Adams
 his_nixon	Medium	Who is the only US president to have resigned from office?	Richard Nixon	Bill Clinton	Andrew Johnson	Lyndon B. Johnson
 hx_lincoln_teatr	Medium	Where was Abraham Lincoln shot in 1865?	In a theatre	At a railway station	In the White House	Outside a church
@@ -30,6 +31,9 @@ his_president_assassinated_1901	Medium	Which US president was assassinated in 19
 his_harry_truman_stand	Medium	What does the 'S' in Harry S. Truman stand for?	Nothing at all	Samuel	Stephen	Solomon
 his_famously_quiet_president	Medium	Which famously quiet US president was nicknamed 'Silent Cal'?	Calvin Coolidge	Chester Arthur	Herbert Hoover	Warren Harding
 his_portrait_bill	Medium	Whose portrait is on the US $50 bill?	Ulysses S. Grant	Andrew Jackson	Alexander Hamilton	Thomas Jefferson
+his_persuaded_abraham_lincoln	Medium	Who persuaded Abraham Lincoln to grow his famous beard in 1860?	An 11-year-old girl, by letter	His wife Mary	His campaign manager	A newspaper cartoonist
+his_theodore_roosevelt_right	Medium	What did Theodore Roosevelt do right after being shot in the chest in 1912?	Gave his speech for over an hour	Chased the gunman down	Drove himself to hospital	Wrote his will
+his_president_won_every	Medium	Which US president is the only one to have won every single electoral vote?	George Washington	Thomas Jefferson	Abraham Lincoln	James Monroe
 hw_booth	Hard	Who shot Abraham Lincoln?	John Wilkes Booth	Lee Harvey Oswald	Charles Guiteau	Leon Czolgosz
 hw_oswald	Hard	Who was accused of assassinating President John F. Kennedy?	Lee Harvey Oswald	John Wilkes Booth	Jack Ruby	James Earl Ray
 his_president_live_white	Hard	Who was the first US president to live in the White House?	John Adams	George Washington	Thomas Jefferson	James Madison
@@ -43,8 +47,11 @@ his_president_shot_railway	Hard	Which US president was shot at a railway station
 his_wife_dolley_saved	Hard	Whose wife, Dolley, saved George Washington's portrait when the British burned the White House?	James Madison	James Monroe	John Adams	Thomas Jefferson
 his_president_worked_tailor	Hard	Which US president worked as a tailor before going into politics?	Andrew Johnson	Andrew Jackson	Millard Fillmore	James Polk
 his_president_won_fame	Hard	Which US president had won fame as a general in the Mexican-American War?	Zachary Taylor	James Polk	Franklin Pierce	Ulysses S. Grant
+his_president_never_elected	Hard	Which US president was never elected as either president or vice president?	Gerald Ford	Andrew Johnson	Chester Arthur	Lyndon Johnson
+his_president_earned_phd	Hard	Which US president is the only one to have earned a PhD?	Woodrow Wilson	Herbert Hoover	Jimmy Carter	Barack Obama
 hy_waszyngton_whisky	Expert	After leaving office, George Washington ran one of America's largest what?	Whiskey distilleries	Horse racing stables	Newspaper presses	Cotton factories
 his_president_died_just	Expert	Which US president died just a month after taking office, in 1841?	William Henry Harrison	James Garfield	Zachary Taylor	Warren Harding
 his_donald_trump_president	Expert	Before Donald Trump, who was the only US president to serve two non-consecutive terms?	Grover Cleveland	Theodore Roosevelt	Andrew Jackson	Woodrow Wilson
 his_president_born_citizen	Expert	Who was the first US president born as a citizen of the United States?	Martin Van Buren	John Adams	James Madison	Andrew Jackson
 his_sitting_president_appear	Expert	Who was the first sitting US president to appear on television, in 1939?	Franklin D. Roosevelt	Herbert Hoover	Harry S. Truman	Dwight D. Eisenhower
+his_president_personally_hanged	Expert	Which US president had personally hanged two criminals while serving as a county sheriff?	Grover Cleveland	Andrew Jackson	Theodore Roosevelt	Abraham Lincoln

@@ -4,6 +4,8 @@ id	difficulty	prompt	correct	wrong1	wrong2	wrong3
 his_henryk_viii	Easy	Which English king married six times?	Henry VIII	Henry VII	Edward VI	Richard III
 his_armada	Easy	Which English queen saw off the Spanish Armada in 1588?	Elizabeth I	Mary I	Victoria	Anne
 his_royal_house_henry	Easy	To which royal house did Henry VIII and Elizabeth I belong?	The Tudors	The Stuarts	The Windsors	The Plantagenets
+his_rhyme_henry_viii	Easy	In the rhyme about Henry VIII's wives, which word follows 'divorced, beheaded, died, divorced, beheaded'?	Survived	Remarried	Widowed	Forgiven
+his_playwright_part_owner	Easy	Which playwright was a part-owner of the Globe Theatre, built on London's Bankside in 1599?	William Shakespeare	Christopher Marlowe	Ben Jonson	Thomas Kyd
 trv_londyn_pozar	Medium	In which year was the Great Fire of London?	1666	1566	1766	1616
 his_krwawa_maria	Medium	Which English queen was nicknamed 'Bloody Mary'?	Mary I	Mary, Queen of Scots	Mary II	Mary of Teck
 hx_anna_boleyn	Medium	Which wife of Henry VIII was beheaded in 1536?	Anne Boleyn	Catherine of Aragon	Jane Seymour	Anne of Cleves
@@ -38,6 +40,11 @@ his_led_jacobite_rising	Medium	Who led the Jacobite rising of 1745 to win back t
 his_battle_1746_last	Medium	Which battle of 1746 was the last pitched battle on British soil?	Culloden	Sedgemoor	Prestonpans	Killiecrankie
 his_great_fire_london	Medium	Where did the Great Fire of London of 1666 begin?	In a bakery on Pudding Lane	In the Tower of London	At St Paul's Cathedral	In a tavern by London Bridge
 his_17th_century_naval	Medium	What were the 17th-century naval wars between England and the Netherlands over trade called?	The Anglo-Dutch Wars	The Spice Wars	The Channel Wars	The Herring Wars
+his_elizabeth_use_give	Medium	What did Elizabeth I use to give her face its famous pale look?	Makeup made with white lead	Flour mixed with milk	White clay from Cornwall	Chalk and goose fat
+his_happened_oliver_cromwell	Medium	What happened to Oliver Cromwell's body after the monarchy was restored in 1660?	It was dug up and beheaded	It was buried at sea	It was shipped to Holland	It was walled up in the Tower
+his_priest_holes_tudor	Medium	What were 'priest holes' in Tudor and Stuart houses?	Hiding places for Catholic priests	Holes for spying on servants	Secret wine cellars	Escape tunnels to the church
+his_king_henry_viii	Medium	Which king did Henry VIII meet in 1520 at the dazzling 'Field of the Cloth of Gold'?	Francis I of France	Charles V of Spain	James IV of Scotland	Louis XII of France
+his_habit_king_james	Medium	Which habit did King James I attack in his 1604 pamphlet 'A Counterblaste'?	Smoking tobacco	Drinking coffee	Playing cards	Going to the theatre
 hx_kruki_tower	Hard	Legend says the kingdom will fall if which birds leave the Tower of London?	Ravens	Crows	Pigeons	Owls
 his_old_edward_became	Hard	How old was Edward VI when he became king in 1547?	Nine	Fourteen	Three	Eighteen
 his_sea_captain_said	Hard	Which sea captain is said to have finished his game of bowls before sailing to fight the Armada?	Francis Drake	Walter Raleigh	John Hawkins	Martin Frobisher
@@ -47,6 +54,7 @@ his_chief_minister_henry	Hard	Which chief minister of Henry VIII, who closed the
 his_battle_1645_parliament	Hard	At which battle of 1645 did Parliament's army crush King Charles I?	Naseby	Marston Moor	Edgehill	Worcester
 his_scottish_glen_members	Hard	In which Scottish glen were members of the MacDonald clan massacred in 1692?	Glencoe	Glen Affric	Glenfinnan	Glen Lyon
 his_off_port_english	Hard	Off which port did English fireships scatter the Spanish Armada in 1588?	Calais	Gravelines	Dunkirk	Plymouth
+his_favourite_elizabeth_beheaded	Hard	Which favourite of Elizabeth I was beheaded in 1601 after leading a failed rebellion?	The Earl of Essex	Walter Raleigh	Robert Dudley	Francis Drake
 his_jane_grey	Expert	Who ruled England for just nine days in 1553?	Lady Jane Grey	Edward V	Mary, Queen of Scots	Matilda
 hy_pepys_parmezan	Expert	During the Great Fire of London, the diarist Samuel Pepys buried which treasures in his garden?	His Parmesan cheese and wine	His gold and silver plate	His books and papers	His best clothes
 his_man_invented_popish	Expert	Which man invented the 'Popish Plot' of 1678, sending innocent Catholics to their deaths?	Titus Oates	Guy Fawkes	Robert Catesby	Thomas Blood

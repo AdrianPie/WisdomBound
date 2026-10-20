@@ -3,6 +3,7 @@ id	difficulty	prompt	correct	wrong1	wrong2	wrong3
 his_kind_engine_powered	Easy	Which kind of engine powered the factories and trains of the Industrial Revolution?	The steam engine	The petrol engine	The electric motor	The jet engine
 his_fuel_dug_mines	Easy	Which fuel, dug from mines, powered the Industrial Revolution?	Coal	Oil	Natural gas	Peat
 his_plant_fibre_spun	Easy	Which plant fibre was spun into thread in the great mills of Lancashire?	Cotton	Wool	Silk	Linen
+his_american_inventor_laboratory	Easy	Which American inventor's laboratory at Menlo Park produced a long-lasting light bulb in 1879?	Thomas Edison	Nikola Tesla	Alexander Graham Bell	George Westinghouse
 org_cola_lek	Medium	Coca-Cola was first sold at pharmacy counters as a remedy for what?	Headaches	Sore throats	Insomnia	Toothache
 his_scottish_engineer_made	Medium	Which Scottish engineer made the steam engine far more efficient in the 1760s and 1770s?	James Watt	George Stephenson	Thomas Newcomen	Richard Trevithick
 his_built_rocket_locomotive	Medium	Who built the famous 'Rocket' locomotive that won the Rainhill Trials in 1829?	George and Robert Stephenson	James Watt and his son	Isambard Kingdom Brunel	Richard Trevithick
@@ -23,6 +24,10 @@ his_scottish_born_steel	Medium	Which Scottish-born steel tycoon gave away most o
 his_american_founded_standard	Medium	Which American founded the Standard Oil company in 1870?	John D. Rockefeller	Andrew Carnegie	Henry Ford	J. P. Morgan
 his_mudlarks_victorian_london	Medium	Who were the 'mudlarks' of Victorian London?	Children who scavenged in the Thames mud	Workers who built the sewers	Boys who swept chimneys	Girls who sold flowers
 his_american_turned_sewing	Medium	Which American turned the sewing machine into a household item in the 1850s?	Isaac Singer	Elias Howe	Thomas Edison	Samuel Colt
+his_forced_towns_across	Medium	What forced towns across Britain to adopt one standard time in the 1840s?	Railway timetables	Factory shift work	Steamship sailings	Church services
+his_new_kind_lighting	Medium	What new kind of lighting spread through London's streets from the 1810s?	Gas lamps	Electric arc lamps	Paraffin lamps	Limelight
+his_dangerous_job_small	Medium	What dangerous job did small children called 'scavengers' do in cotton mills?	Crawled under machines to clear fluff	Carried coal to the boilers	Climbed chimneys to sweep them	Oiled the moving belts
+his_coal_miners_take	Medium	Why did coal miners take canaries down the pits with them?	To warn them of poisonous gas	To keep away the rats	For good luck underground	To keep them company
 his2_rewolucja_przemyslowa	Hard	In which country did the Industrial Revolution begin?	The United Kingdom	Germany	France	The USA
 org_denim_nimes	Hard	Which fabric takes its name from the French city of Nimes?	Denim	Chiffon	Tweed	Satin
 hx_luddysci	Hard	What were the Luddites of early 1800s England famous for?	Smashing weaving machines	Burning down banks	Stealing steam engines	Refusing to pay taxes
@@ -42,6 +47,7 @@ his_line_opened_1830	Hard	Which line, opened in 1830, was the world's first inte
 his_chartists_1830s_1840s	Hard	What did the Chartists of the 1830s and 1840s demand?	The vote for all men	An end to slavery	Free schools	A shorter working day
 his_strike_1888_young	Hard	Which strike of 1888 by young women at a London factory became famous?	The matchgirls' strike	The dockers' strike	The weavers' strike	The bakers' strike
 his_scottish_engineer_built	Hard	Which Scottish engineer built the Menai Suspension Bridge, opened in 1826?	Thomas Telford	John Rennie	Robert Stephenson	Isambard Kingdom Brunel
+his_german_family_firm	Hard	Which German family firm from Essen became Europe's best-known maker of steel and guns?	Krupp	Siemens	Thyssen	Bosch
 his_canal_opened_1761	Expert	Which canal, opened in 1761 to carry coal to Manchester, started Britain's 'canal mania'?	The Bridgewater Canal	The Grand Union Canal	The Leeds and Liverpool Canal	The Caledonian Canal
 his_politician_killed_locomotive	Expert	Which politician was killed by the locomotive Rocket at the opening of a railway in 1830?	William Huskisson	Robert Peel	George Canning	Spencer Perceval
 his_terrible_disease_workers	Expert	Which terrible disease did workers in match factories get from white phosphorus?	'Phossy jaw'	'Black lung'	'Mad hatter's disease'	'Brass fever'

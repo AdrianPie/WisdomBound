@@ -5,6 +5,7 @@ his_ocean_titanic_sink	Easy	In which ocean did the Titanic sink?	The Atlantic	Th
 his_month_1912_titanic	Easy	In which month of 1912 did the Titanic sink?	April	January	August	December
 his_ship_band_famously	Easy	What did the ship's band famously do as the Titanic sank?	Kept on playing	Jumped overboard	Took the first lifeboat	Hid in the hold
 his_titanic_famously_said	Easy	What was the Titanic famously said to be before its first voyage?	Unsinkable	Haunted	The fastest ship ever	Made of steel and gold
+his_hymn_titanic_band	Easy	Which hymn is the Titanic's band said to have played as the ship went down?	'Nearer, My God, to Thee'	'Eternal Father, Strong to Save'	'Amazing Grace'	'Rock of Ages'
 his_titanic	Medium	In which year did the Titanic sink?	1912	1905	1918	1923
 wh_titanic_rejs	Medium	During which voyage did the Titanic sink?	Its maiden voyage	Its second voyage	Its tenth voyage	Its return trip from New York
 his_titanic_cel	Medium	Which city was the Titanic sailing to when it sank?	New York	Boston	Halifax	Southampton
@@ -19,6 +20,9 @@ his_wealthy_american_survivor	Medium	Which wealthy American survivor was later n
 his_distress_signal_quite	Medium	Which distress signal, then quite new, did the Titanic's radio operators send?	SOS	Mayday	Pan-pan	Code Red
 his_group_titanic_passengers	Medium	Which group of Titanic passengers had the highest survival rate?	First-class women	Third-class men	Second-class men	The ship's crew
 his_roughly_time_night	Medium	At roughly what time of night did the Titanic hit the iceberg?	About 11:40 pm	About 8:00 pm	About 2:20 am	About 5:30 am
+his_letters_rms_rms	Medium	What do the letters 'RMS' in 'RMS Titanic' stand for?	Royal Mail Ship	Royal Maritime Service	Registered Merchant Ship	Royal Marine Steamer
+his_main_pieces_wreck	Medium	In how many main pieces does the wreck of the Titanic lie on the seabed?	Two	One	Three	Five
+his_titanic_lookouts_binoculars	Medium	Why did the Titanic's lookouts have no binoculars?	The key to their locker was missing	They were sold in Southampton	The captain banned them	They broke in a storm
 hw_titanic_czas	Hard	Roughly how long did the Titanic take to sink after its fatal collision?	About 2 hours 40 minutes	About 20 minutes	About 8 hours	About 2 days
 his_year_wreck_titanic	Hard	In which year was the wreck of the Titanic found?	1985	1962	1999	1971
 his_shipping_company_owned	Hard	Which shipping company owned the Titanic?	The White Star Line	The Cunard Line	The Hamburg America Line	P&O
@@ -33,8 +37,12 @@ his_richest_passenger_aboard	Hard	Who was the richest passenger aboard the Titan
 his_senior_titanic_officer	Hard	Who was the most senior Titanic officer to survive the sinking?	Charles Lightoller	William Murdoch	Henry Wilde	Joseph Boxhall
 his_wealthy_couple_owners	Hard	Which wealthy couple, owners of Macy's store, refused to be parted and died together on the Titanic?	Isidor and Ida Straus	John and Madeleine Astor	Benjamin and Florette Guggenheim	Lucile and Cosmo Duff-Gordon
 his_company_employed_titanic	Hard	Which company employed the Titanic's two radio operators?	Marconi	White Star	Cunard	Western Union
+his_watertight_compartments_titanic	Hard	How many of its watertight compartments could the Titanic flood and still stay afloat?	Four	Two	Six	Eight
+his_titanic_bandleader_violin	Hard	What was the name of the Titanic's bandleader, whose violin was found after the sinking?	Wallace Hartley	Jack Phillips	Harold Bride	John Hume
 hy_jessop	Expert	Violet Jessop survived the Titanic and accidents on which two of its sister ships?	The Olympic and the Britannic	The Lusitania and the Carpathia	The Queen Mary and the Olympic	The Britannic and the Lusitania
 his_canadian_city_150	Expert	In which Canadian city are about 150 of the Titanic's victims buried?	Halifax	Quebec City	Montreal	St John's
 his_irish_port_titanic	Expert	At which Irish port did the Titanic make its last stop before crossing the Atlantic?	Queenstown	Dublin	Belfast	Galway
 his_lookout_spotted_iceberg	Expert	Which lookout spotted the iceberg from the Titanic's crow's nest?	Frederick Fleet	Harold Bride	Charles Lightoller	William Murdoch
 his_nickname_titanic_long	Expert	What was the nickname of the Titanic's long-serving sister ship, the Olympic?	'Old Reliable'	'The Iron Lady'	'The Lucky One'	'Big Sister'
+his_titanic_baker_survived	Expert	Which Titanic baker survived hours in the icy sea, reportedly helped by a lot of whisky?	Charles Joughin	Frederick Fleet	Harold Bride	Arthur Rostron
+his_last_living_survivor	Expert	Who was the last living survivor of the Titanic, who died in 2009?	Millvina Dean	Eva Hart	Ruth Becker	Edith Haisman

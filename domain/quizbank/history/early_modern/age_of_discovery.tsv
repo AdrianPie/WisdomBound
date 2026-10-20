@@ -10,6 +10,7 @@ his_country_vasco_gama	Easy	For which country did Vasco da Gama sail?	Portugal	S
 his_legendary_city_gold	Easy	What was the legendary city of gold that the Spanish searched for in South America?	El Dorado	Atlantis	Shangri-La	Camelot
 his_country_ferdinand_magellan	Easy	For which country did Ferdinand Magellan sail on his voyage around the world?	Spain	Portugal	England	Italy
 his_spanish_soldiers_conquered	Easy	What were the Spanish soldiers who conquered much of the Americas called?	Conquistadors	Crusaders	Musketeers	Matadors
+his_spice_nicknamed_black	Easy	Which spice, nicknamed 'black gold', drew Portuguese ships to India's Malabar coast?	Black pepper	Saffron	Vanilla	Paprika
 his_kolumb	Medium	In which year did Christopher Columbus reach America?	1492	1453	1500	1488
 his3_magellan	Medium	Who led the first expedition to circumnavigate the globe?	Ferdinand Magellan	Christopher Columbus	Vasco da Gama	James Cook
 trv_kolumb_gdzie	Medium	Where did Columbus first land in 1492?	In the Bahamas	In Florida	In Mexico	In Brazil
@@ -31,6 +32,10 @@ his_voyages_christopher_columbus	Medium	How many voyages did Christopher Columbu
 his_columbus_die_1506	Medium	Where did Columbus die in 1506, still sure he had reached Asia?	In Spain	In the Bahamas	At sea	In Genoa
 his_port_india_west	Medium	Which port on India's west coast did Portugal seize in 1510 and keep until 1961?	Goa	Bombay	Calicut	Madras
 his_flemish_mapmaker_projection	Medium	Which Flemish mapmaker's projection of 1569 is still used on many world maps?	Gerardus Mercator	Abraham Ortelius	Martin Waldseemuller	Willem Blaeu
+his_stranded_jamaica_1504	Medium	Stranded on Jamaica in 1504, how did Columbus scare the islanders into feeding his crew?	By predicting a lunar eclipse	By firing his ship's cannon	By showing them a mirror	By setting off fireworks
+his_besides_rats_sawdust	Medium	Besides rats and sawdust, what did Magellan's chronicler say the starving crew ate crossing the Pacific?	Ox hides from the rigging	Raw seaweed	Whale blubber	Their pet monkeys
+his_brazil_takes	Medium	Brazil takes its name from what?	A tree with red wood	A Portuguese saint	A local chief	A river delta
+his_english_courtier_led	Medium	Which English courtier led two voyages in search of El Dorado and was beheaded in 1618?	Walter Raleigh	Francis Drake	Martin Frobisher	Humphrey Gilbert
 his4_traktat_tordesillas	Hard	What did the 1494 Treaty of Tordesillas divide?	Newly discovered lands between Spain and Portugal	The lands of the Holy Roman Empire among its princes	The Baltic trade between the Hanseatic cities	Italy between the crowns of France and Austria
 dpt_his_vasco_da_gama	Hard	Which sea route did Vasco da Gama open in 1498?	Europe to India round Africa	Europe to China across the north	Spain to the Caribbean islands	Portugal to Brazil and back
 hx_magellan_smierc	Hard	Where was Ferdinand Magellan killed during his voyage around the world?	In the Philippines	In Patagonia	In Indonesia	In Guam
@@ -49,8 +54,10 @@ his_columbus_island_reached	Hard	What did Columbus name the first island he reac
 his_british_explorer_vanished	Hard	Which British explorer vanished in the Arctic with two ships in the 1840s while seeking the Northwest Passage?	John Franklin	Henry Hudson	James Cook	Robert Scott
 his_ship_english_captain	Hard	What was the name of the ship in which an English captain sailed round the world in 1577-1580?	The Golden Hind	The Mayflower	The Revenge	The Victory
 his_spanish_explorer_european	Hard	Which Spanish explorer was the first European to sail the length of the Amazon, in 1542?	Francisco de Orellana	Francisco Pizarro	Pedro de Valdivia	Hernando de Soto
+his_dutch_navigator_gave	Hard	Which Dutch navigator, who gave his name to an Arctic sea, died after his crew wintered on Novaya Zemlya in 1597?	Willem Barentsz	Abel Tasman	Henry Hudson	Cornelis de Houtman
 his_henryk_zeglarz	Expert	Which Portuguese prince sponsored early voyages along the African coast in the 1400s?	Henry the Navigator	Manuel I	Afonso Henriques	John of Gaunt
 hx_elcano	Expert	Who captained the ship that completed the first voyage around the world after Magellan died?	Juan Sebastian Elcano	Francis Drake	Vasco Nunez de Balboa	Bartolomeu Dias
 hx_tasman	Expert	Which Dutch explorer was the first European known to reach New Zealand, in 1642?	Abel Tasman	James Cook	Willem Janszoon	Dirk Hartog
 hy_balboa	Expert	Who was the first European to see the Pacific Ocean from the Americas, in 1513?	Vasco Nunez de Balboa	Ferdinand Magellan	Hernan Cortes	Francisco Pizarro
 hy_cabral	Expert	Which navigator landed on the coast of Brazil in 1500?	Pedro Alvares Cabral	Vasco da Gama	Bartolomeu Dias	Ferdinand Magellan
+his_german_mapmaker_world	Expert	Which German mapmaker's world map of 1507 was the first to use the name 'America'?	Martin Waldseemuller	Gerardus Mercator	Abraham Ortelius	Martin Behaim

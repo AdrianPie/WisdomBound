@@ -23,6 +23,8 @@ his_country_europe_give	Medium	Which was the first country in Europe to give wom
 his_american_law_1965	Medium	Which American law of 1965 protected the right of Black citizens to vote?	The Voting Rights Act	The Civil Rights Act	The Emancipation Act	The Fair Housing Act
 his_political_party_nelson	Medium	Which political party did Nelson Mandela lead?	The African National Congress	The National Party	The Freedom Front	The Inkatha Party
 his_city_jail_martin	Medium	From which city's jail did Martin Luther King Jr. write a famous letter in 1963?	Birmingham	Selma	Memphis	Atlanta
+his_six_year_old	Medium	Which six-year-old girl integrated an all-white school in New Orleans in 1960?	Ruby Bridges	Rosa Parks	Coretta Scott	Ella Baker
+his_european_country_gave	Medium	Which European country gave women the vote in national elections only in 1971?	Switzerland	Sweden	Norway	Austria
 hx_robben_island	Hard	On which island was Nelson Mandela imprisoned for 18 years?	Robben Island	Alcatraz	Devil's Island	Goree Island
 hx_pankhurst	Hard	Which British activist led the suffragette movement?	Emmeline Pankhurst	Florence Nightingale	Mary Wollstonecraft	Queen Victoria
 hx_mandela_1990	Hard	In which year was South Africa's most famous political prisoner set free?	1990	1985	1994	1979
@@ -39,3 +41,7 @@ his_murder_mississippi_1955	Hard	Whose murder in Mississippi in 1955, at the age
 his_church_birmingham_alabama	Hard	Which church in Birmingham, Alabama, was bombed in 1963, killing four girls?	The 16th Street Baptist Church	Ebenezer Baptist Church	Dexter Avenue Church	Mother Emanuel Church
 his_american_civil_rights	Hard	Which American civil rights group, founded in 1909, is known by the letters NAACP?	The National Association for the Advancement of Colored People	The National Alliance of American Civil Protest	The North American Anti-Colonial Party	The National Assembly for African Civic Progress
 his_militant_british_suffragette	Hard	Which militant British suffragette group used the motto 'Deeds, not words'?	The Women's Social and Political Union	The Women's Freedom League	The Women's Liberal Federation	The National Union of Women Workers
+his_lawyer_won_school	Hard	Which lawyer who won the school desegregation case of 1954 later became the first Black Supreme Court justice?	Thurgood Marshall	Clarence Thomas	Medgar Evers	John Lewis
+his_britain_1913_cat	Hard	What was Britain's 1913 'Cat and Mouse Act' about?	Releasing hunger-striking suffragettes	Stray animals in London streets	Rats in the city sewers	Police spies in trade unions
+his_year_old_arrested	Hard	Which 15-year-old was arrested in Montgomery in March 1955 for refusing to give up her bus seat, nine months before a more famous protest?	Claudette Colvin	Daisy Bates	Diane Nash	Fannie Lou Hamer
+his_nelson_mandela_prison	Expert	What was Nelson Mandela's prison number, later used as the name of his AIDS charity concerts?	46664	27190	19620	10466
