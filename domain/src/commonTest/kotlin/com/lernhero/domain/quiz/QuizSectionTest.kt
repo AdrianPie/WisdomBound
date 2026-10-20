@@ -63,8 +63,9 @@ class QuizSectionTest {
     @Test
     fun `galaz obejmuje dokladnie pytania swoich poddzialow`() {
         QuizSections.all.filter { QuizSections.children(it).isNotEmpty() }.forEach { branch ->
-            val direct = QuizBank.inSection(branch).map { it.id }.toSet()
-            val fromChildren = QuizSections.children(branch).flatMap { QuizBank.inSection(it) }.map { it.id }.toSet()
+            // Ten sam seed przy kazdym wywolaniu - pytania z danych o panstwach losuja sie od nowa.
+            val direct = QuizBank.inSection(branch, Random(5)).map { it.id }.toSet()
+            val fromChildren = QuizSections.children(branch).flatMap { QuizBank.inSection(it, Random(5)) }.map { it.id }.toSet()
             assertEquals(fromChildren, direct, "Galaz ${branch.path} nie pokrywa sie z poddzialami")
         }
     }

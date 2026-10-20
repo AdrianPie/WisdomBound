@@ -1,0 +1,15 @@
+# Klimat i pogoda, rekordy temperatur i opadow, trzesienia ziemi, plyty tektoniczne, gejzery,
+# wulkanizm jako zjawisko, tornada i huragany.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+geo_country_blue_lagoon	Easy	In which country is the Blue Lagoon geothermal spa?	Iceland	Norway	Finland	New Zealand
+geox_dolina_smierci	Medium	Death Valley, one of the hottest places on Earth, is in which country?	The USA	Mexico	Australia	Egypt
+geoy_japonia_trzesienia	Medium	Which country suffers about a fifth of the world's strongest earthquakes?	Japan	Chile	Italy	Iceland
+geo3_san_andreas	Hard	Which two tectonic plates grind past each other along California's San Andreas Fault?	The Pacific and North American plates	The Nazca and South American plates	The Eurasian and African plates	The Indian and Australian plates
+geox_tornado	Hard	Which part of the USA is nicknamed 'Tornado Alley'?	The Great Plains	New England	The Pacific Northwest	Florida
+geoy_islandia_plyty	Hard	Which country sits on the boundary between the North American and Eurasian plates?	Iceland	Ireland	Norway	Greenland
+geo3_strefa_ryftowa	Expert	What is the Great East African Rift?	A zone where continental plates are tearing apart	A chain of volcanoes that went extinct long ago	A desert where no river reaches the sea	A region where the ground never thaws
+geo3_wyspa_wulkaniczna_powstawanie	Expert	How do volcanic island chains like Hawaii most often form?	A plate moves over a stationary hot spot in the mantle	Through a collision of two continents	Through subduction of one plate under another only	Through coastal erosion
+dpt_geo_pierscien_ognia	Expert	What is the Ring of Fire?	A belt of volcanoes round the Pacific	A chain of deserts along the tropics	A band of storms over the equator	A line of reefs in the Indian Ocean
+dpt_geo_cien_opadowy	Expert	What causes a rain shadow?	Mountains wring the moisture out of air	Cold water chills the coastal strip	Forests soak up most of the rainfall	Deserts heat the wind passing over
+geox_oymyakon	Expert	Oymyakon, often called the coldest permanently inhabited village, is in which country?	Russia	Canada	Norway	Kazakhstan
+geox_mawsynram	Expert	Mawsynram and Cherrapunji, among the wettest places on Earth, are in which country?	India	Indonesia	Brazil	Congo

@@ -29,8 +29,10 @@ class QuizBankAuditTest {
      */
     @Test
     fun `ten sam fakt nie wraca w dwoch pytaniach`() {
+        // Pytania losowane z danych (flagi, panstwa) maja wspolny wzor tresci - "ktore z tych ma
+        // najwiecej ludzi?" z China jako odpowiedzia wraca z kazdym zestawem i nie jest powtorka.
         val collisions = all
-            .filter { it.category != QuizCategory.Flags }
+            .filter { !it.generated }
             .groupBy { it.correct.normalizedAnswer() }
             .flatMap { (_, group) ->
                 group.indices.flatMap { i ->
@@ -96,13 +98,13 @@ class QuizBankAuditTest {
      * nazwie wlasnej to niewykonalne - "Sri Jayawardenepura Kotte" nie ma jak sie skrocic), tylko
      * o to, zeby zadna nie odstawala tak, ze widac ja z drugiego konca ekranu.
      *
-     * Flagi sa poza testem: tam wszystkie cztery odpowiedzi to nazwy panstw losowane z tej samej
-     * puli, wiec dlugosc niczego nie zdradza.
+     * Flagi i pytania z danych o panstwach sa poza testem: tam wszystkie cztery odpowiedzi to
+     * nazwy z tej samej puli, a poprawna wybiera tabela, nie autor - dlugosc niczego nie zdradza.
      */
     @Test
     fun `poprawna odpowiedz nie wyroznia sie sama dlugoscia`() {
         val giveaways = all
-            .filter { it.category != QuizCategory.Flags }
+            .filter { !it.generated }
             .filter { entry -> entry.wrong.all { entry.correct.length - it.length >= LENGTH_GIVEAWAY } }
             .map { "${it.id}: '${it.correct}' vs ${it.wrong}" }
 

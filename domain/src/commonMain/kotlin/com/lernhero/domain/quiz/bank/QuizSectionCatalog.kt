@@ -84,6 +84,27 @@ object QuizSectionCatalog {
         QuizSection("history/medicine", "History of Medicine", "💉", QuizCategory.History),
         QuizSection("history/spies", "Spies & Codebreakers", "🕵️", QuizCategory.History),
         QuizSection("history/famous_words", "Famous Words", "💬", QuizCategory.History),
-        QuizSection("history/royal_nicknames", "Royal Nicknames", "🏷️", QuizCategory.History)
+        QuizSection("history/royal_nicknames", "Royal Nicknames", "🏷️", QuizCategory.History),
+        QuizSection("geography/continents", "Continents & Regions", "🌍", QuizCategory.Geography),
+        QuizSection("geography/continents/europe", "Europe", "🏰", QuizCategory.Geography),
+        QuizSection("geography/continents/asia", "Asia", "🏯", QuizCategory.Geography),
+        QuizSection("geography/continents/africa", "Africa", "🦁", QuizCategory.Geography),
+        QuizSection("geography/continents/north_america", "North & Central America", "🗽", QuizCategory.Geography),
+        QuizSection("geography/continents/south_america", "South America", "🦜", QuizCategory.Geography),
+        QuizSection("geography/continents/oceania", "Australia & Oceania", "🦘", QuizCategory.Geography),
+        QuizSection("geography/continents/polar", "Arctic & Antarctica", "🐧", QuizCategory.Geography),
+        QuizSection("geography/physical", "Physical Geography", "⛰️", QuizCategory.Geography),
+        QuizSection("geography/physical/oceans_seas", "Oceans & Seas", "🌊", QuizCategory.Geography),
+        QuizSection("geography/physical/rivers_lakes", "Rivers & Lakes", "🏞️", QuizCategory.Geography),
+        QuizSection("geography/physical/mountains", "Mountains & Volcanoes", "🌋", QuizCategory.Geography),
+        QuizSection("geography/physical/deserts_forests", "Deserts, Forests & Wilderness", "🌵", QuizCategory.Geography),
+        QuizSection("geography/physical/islands", "Islands & Coasts", "🏝️", QuizCategory.Geography),
+        QuizSection("geography/physical/climate", "Climate & Natural Forces", "🌪️", QuizCategory.Geography),
+        QuizSection("geography/physical/planet_earth", "Planet Earth & Maps", "🧭", QuizCategory.Geography),
+        QuizSection("geography/human", "People & Places", "🏙️", QuizCategory.Geography),
+        QuizSection("geography/human/countries", "Countries & Borders", "🗺️", QuizCategory.Geography),
+        QuizSection("geography/human/cities", "Cities & Landmarks", "🏛️", QuizCategory.Geography),
+        QuizSection("geography/human/languages_customs", "Languages, Money & Customs", "🗣️", QuizCategory.Geography),
+        QuizSection("geography/human/food_drink", "Food & Drink", "🍜", QuizCategory.Geography)
     )
 }

@@ -1,0 +1,28 @@
+# Pustynie, lasy (deszczowe, tajga), stepy i pampasy, sawanny, parki narodowe i inne dzikie miejsca.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+geo2_amazonia_kontynent	Easy	On which continent is the Amazon rainforest?	South America	Africa	Asia	Australia
+geocmp_pustynia_najwieksza	Easy	Which is the largest hot desert?	The Sahara	The Arabian Desert	The Gobi	The Kalahari
+geo_amazon_rainforest_lies	Easy	Most of the Amazon rainforest lies in which country?	Brazil	Peru	Colombia	Venezuela
+geo_australians_call_remote	Easy	What do Australians call the remote, dry interior of their country?	The Outback	The Badlands	The Steppe	The Prairie
+geo2_pustynia_azja	Medium	Which desert lies in Mongolia and China?	The Gobi	The Kalahari	The Atacama	The Karakum
+lmk_serengeti_kraj	Medium	In which country is the Serengeti National Park?	Tanzania	Kenya	Uganda	Zambia
+lmk_atacama_kraj	Medium	In which country is the Atacama Desert?	Chile	Peru	Bolivia	Argentina
+geo_namib	Medium	Which coastal desert in southern Africa is famous for its giant red dunes?	The Namib	The Kalahari	The Sahara	The Karoo
+geox_patagonia	Medium	The wild region of Patagonia is shared by Argentina and which other country?	Chile	Bolivia	Uruguay	Peru
+geoy_pampa	Medium	What are the vast grassy plains of Argentina called?	The Pampas	The Steppes	The Prairies	The Savannah
+geo_national_park_old	Medium	In which US national park is the 'Old Faithful' geyser?	Yellowstone	Yosemite	Grand Canyon	Death Valley
+geo_desert_covers_botswana	Medium	Which desert covers much of Botswana?	The Kalahari	The Sahara	The Gobi	The Namib
+geo_country_kruger_national	Medium	In which country is the Kruger National Park?	South Africa	Kenya	Tanzania	Botswana
+geo_desert_surrounds_las	Medium	Which desert surrounds Las Vegas?	The Mojave	The Sahara	The Gobi	The Atacama
+geo_desert_covers_southern	Medium	Which desert covers most of southern Israel?	Negev	Sinai	Sahara	Rub' al Khali
+geo_vast_arabian_desert	Medium	Which vast Arabian desert is called the 'Empty Quarter'?	Rub' al Khali	Negev	Syrian Desert	Nafud
+geo_desert_lies_border	Medium	Which desert lies on the border of India and Pakistan?	Thar	Gobi	Karakum	Taklamakan
+geo2_najsuchsze_miejsce	Hard	Which desert is regarded as the driest place on Earth?	The Atacama	The Sahara	The Gobi	The Namib
+geocmp_las_powierzchnia	Hard	Which country has the largest forest area?	Russia	Brazil	Canada	The United States
+lmk_masai_mara	Hard	In which country is the Maasai Mara reserve?	Kenya	Tanzania	Botswana	Namibia
+wld_sahara_rozmiar	Hard	The Sahara is roughly the size of which country?	The United States	France	Germany	Japan
+geo_uyuni	Hard	In which country is Salar de Uyuni, the world's largest salt flat?	Bolivia	Chile	Peru	Argentina
+geoy_amazonia_kraje	Hard	The Amazon rainforest spreads across roughly how many countries and territories?	Nine	Three	Five	Twelve
+geoy_tajga	Hard	What is the vast northern forest stretching across Russia and Canada called?	The taiga	The tundra	The steppe	The pampas
+geo_state_yellowstone_national	Hard	In which US state is most of Yellowstone National Park?	Wyoming	Montana	Idaho	Colorado
+dpt_geo_sahel	Expert	What is the Sahel?	The dry belt south of the Sahara	The delta of the river Niger	The highlands of East Africa	The coastal plain of Namibia

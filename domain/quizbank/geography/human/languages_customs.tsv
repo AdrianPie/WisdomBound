@@ -1,0 +1,55 @@
+# Jezyki i pochodzenie slow, waluty, religie, swieta i zwyczaje, przydomki mieszkancow.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+geo_brazylia_jezyk	Easy	What is the official language of Brazil?	Portuguese	Spanish	French	Italian
+geoy_kanada_jezyki	Easy	Which two official languages does Canada have?	English and French	English and Spanish	French and Inuktitut	English and German
+geo_city_world_biggest	Easy	Which city is famous for the world's biggest carnival, with samba parades?	Rio de Janeiro	Sao Paulo	Buenos Aires	Havana
+geo_flamenco_music_dance	Easy	Flamenco music and dance come from which country?	Spain	Portugal	Mexico	Argentina
+geo_nickname_new_zealanders	Easy	What nickname do New Zealanders often use for themselves?	Kiwis	Aussies	Pommies	Yanks
+geo_currency_japan	Easy	What is the currency of Japan?	The yen	The yuan	The won	The ringgit
+geo_switzerland_currency	Easy	What is Switzerland's currency?	The Swiss franc	The euro	The Swiss mark	The krone
+geo_main_language_spoken	Easy	What is the main language spoken in Austria?	German	Austrian	Hungarian	Czech
+geo_arigato_mean_japanese	Easy	What does 'arigato' mean in Japanese?	Thank you	Hello	Goodbye	Excuse me
+geo_word_kindergarten_comes	Easy	The word 'kindergarten' comes from which language?	German	Dutch	Danish	Swedish
+geo_language_gave_english	Easy	Which language gave English the word 'karaoke', meaning 'empty orchestra'?	Japanese	Korean	Chinese	Thai
+geo_official_language_israel	Easy	What is the official language of Israel?	Hebrew	Yiddish	Aramaic	Greek
+geo_currency_china	Easy	What is the currency of China?	The yuan	The yen	The won	The baht
+geo_country_rovaniemi_official	Easy	In which country is Rovaniemi, the official 'hometown' of Santa Claus?	Finland	Norway	Sweden	Iceland
+geo_spanish_city_running	Easy	In which Spanish city does the Running of the Bulls take place?	Pamplona	Seville	Madrid	Valencia
+geo_country_hygge_way	Easy	Which country is famous for its 'hygge' way of cosy living?	Denmark	Sweden	Norway	Netherlands
+geo_country_invented_sauna	Easy	Which country invented the sauna?	Finland	Sweden	Russia	Norway
+geo_angielski_mowiony	Medium	Counting native and second-language speakers, which language is spoken by the most people?	English	Spanish	Hindi	Arabic
+geo_jednorozec	Medium	Which country's national animal is the unicorn?	Scotland	Wales	Ireland	Norway
+geox_szwajcaria_jezyki	Medium	How many national languages does Switzerland have?	Four	Two	Three	Five
+geox_gejzer	Medium	The word 'geyser' comes from the name of a hot spring in which country?	Iceland	New Zealand	Norway	Japan
+geox_tsunami	Medium	The word 'tsunami' comes from which language?	Japanese	Hawaiian	Indonesian	Maori
+geox_sw_patryk	Medium	According to legend, which saint drove all the snakes out of Ireland?	Saint Patrick	Saint George	Saint Andrew	Saint David
+geo_tango_born_dance	Medium	The tango was born in the dance halls of which city?	Buenos Aires	Havana	Madrid	Rio de Janeiro
+geo_currency_india	Medium	What is the currency of India?	The rupee	The rupiah	The taka	The baht
+geo_main_language_iran	Medium	What is the main language of Iran?	Persian	Arabic	Turkish	Urdu
+geo_official_language_egypt	Medium	What is the official language of Egypt?	Arabic	Egyptian	Coptic	Persian
+geo_country_blarney_stone	Medium	In which country is the Blarney Stone, said to give the gift of the gab?	Ireland	Scotland	Wales	England
+geo_country_largest_muslim	Medium	Which country has the largest Muslim population?	Indonesia	Saudi Arabia	Egypt	Turkey
+geo_country_catholics	Medium	Which country has the most Catholics?	Brazil	Italy	Spain	Poland
+geo_country_native_spanish	Medium	Which country has the most native Spanish speakers?	Mexico	Spain	Argentina	Colombia
+geo_country_uses_krona	Medium	Which country uses the krona as its currency?	Sweden	Norway	Denmark	Finland
+geo_country_uses_forint	Medium	Which country uses the forint as its currency?	Hungary	Czechia	Romania	Bulgaria
+geo_country_uses_rand	Medium	Which country uses the rand as its currency?	South Africa	Kenya	Nigeria	Namibia
+geo_arabic_greeting_salaam	Medium	What does the Arabic greeting 'salaam' mean?	Peace	Welcome	Friend	God is great
+geo_word_safari_comes	Medium	The word 'safari' comes from which language?	Swahili	Hindi	Portuguese	Zulu
+geo_word_yoghurt_comes	Medium	The word 'yoghurt' comes from which language?	Turkish	Greek	Bulgarian	Arabic
+geo_country_currency_baht	Medium	Which country's currency is the baht?	Thailand	Vietnam	Malaysia	Cambodia
+geo_country_currency_shekel	Medium	Which country's currency is the shekel?	Israel	Jordan	Lebanon	Egypt
+geo_countries_still_uses	Medium	Which of these countries still uses the lira as its currency?	Turkey	Italy	Malta	Greece
+geo_hogmanay_new_year	Medium	Hogmanay is the New Year's Eve celebration of which country?	Scotland	Ireland	Wales	Iceland
+geo_king_day_millions	Medium	On King's Day, millions dress in orange - in which country?	Netherlands	Belgium	Ireland	Denmark
+geo_country_celebrates_thanksgiving	Medium	Which country celebrates Thanksgiving on the second Monday of October?	Canada	United States	Australia	New Zealand
+geo_word_kayak_comes	Medium	The word 'kayak' comes from which people's language?	Inuit	Sami	Maori	Cherokee
+geo_word_tattoo_comes	Medium	The word 'tattoo' comes from which Pacific language?	Tahitian	Hawaiian	Maori	Fijian
+geo_english_word_boss	Medium	The English word 'boss' comes from which language?	Dutch	German	Italian	French
+geo_word_mammoth_came	Medium	The word 'mammoth' came into English from which language?	Russian	Norwegian	Finnish	German
+geo_word_avatar_comes	Medium	The word 'avatar' comes from which ancient language?	Sanskrit	Latin	Greek	Hebrew
+geo_word_slogan_comes	Medium	The word 'slogan' comes from a battle cry in which language?	Scottish Gaelic	Old Norse	Latin	Welsh
+geo_whisky_comes_gaelic	Medium	'Whisky' comes from a Gaelic phrase meaning what?	Water of life	Golden fire	Barley wine	Strong spirit
+geocmp_jezyk_ojczysty	Hard	Which language has the most native speakers?	Mandarin Chinese	English	Spanish	Hindi
+geo_ancient_language_unrelated	Hard	Which ancient language, unrelated to any other in Europe, is spoken in parts of Spain and France?	Basque	Catalan	Galician	Occitan
+geo_word_shampoo_comes	Hard	The word 'shampoo' comes from which language?	Hindi	Arabic	Persian	Malay

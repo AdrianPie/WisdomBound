@@ -1,0 +1,43 @@
+# Gory, szczyty, pasma, wulkany jako miejsca, kaniony i lodowce gorskie.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+geocmp_szczyt_afryka	Easy	Which is the highest mountain in Africa?	Kilimanjaro	Mount Kenya	The Atlas peaks	Mount Meru
+lmk_gory_ameryka_pn	Easy	Which mountain range runs down the west of North America?	The Rocky Mountains	The Appalachians	The Sierra Madre	The Alaska Range
+geo_pireneje	Easy	Which mountain range lies along the border between France and Spain?	The Pyrenees	The Alps	The Apennines	The Carpathians
+geox_everest_wysokosc	Easy	Roughly how tall is Mount Everest?	About 8,850 m	About 5,000 m	About 12,000 m	About 3,500 m
+geox_fuji	Easy	Which snow-capped volcano is the highest mountain in Japan?	Mount Fuji	Mount Aso	Mount Unzen	Mount Kita
+geo_everest	Medium	In which mountain range is Mount Everest?	Himalayas	Andes	Alps	Caucasus
+geo_wulkan_wl	Medium	What is the name of the famous volcano near Naples?	Vesuvius	Etna	Stromboli	Krakatoa
+geo2_gory_ameryka_pd	Medium	What is the longest mountain range in South America called?	The Andes	The Cordilleras	The Appalachians	The Sierra Nevada
+geo2_wulkan_wlochy	Medium	Which volcano on Sicily is the most active in Europe?	Etna	Vesuvius	Stromboli	Hekla
+geocmp_szczyt_europa	Medium	Counting the Caucasus, which is the highest peak in Europe?	Mount Elbrus	Mont Blanc	The Matterhorn	The Zugspitze
+trv_himalaje_kraje	Medium	Mount Everest lies on the border of which two countries?	Nepal and China	India and Nepal	Nepal and Bhutan	India and China
+trv_wielki_kanion	Medium	In which US state is the Grand Canyon?	Arizona	Nevada	Utah	Colorado
+lmk_gory_europa_azja	Medium	Which mountain range is the conventional border between Europe and Asia?	The Urals	The Caucasus	The Carpathians	The Altai
+lmk_gory_maroko	Medium	Which mountain range runs through Morocco and Algeria?	The Atlas Mountains	The Rif alone	The Ahaggar	The Drakensberg
+wld_geo_alpy_szczyt	Medium	What is the highest mountain in the Alps?	Mont Blanc	The Matterhorn	The Eiger	Zugspitze
+wld_geo_himalaje_rosna	Medium	The Himalayas are still growing because of what?	Two tectonic plates pushing together	Volcanoes erupting underneath them	Snow and ice piling up on top	Rivers dropping heavy sediment
+geo_denali	Medium	Which is the highest mountain in North America?	Denali	Mount Whitney	Mount Logan	Mount Rainier
+geo_k2	Medium	Which is the second-highest mountain in the world?	K2	Kangchenjunga	Lhotse	Makalu
+geox_matterhorn	Medium	Which pointed Alpine peak appeared on Toblerone chocolate packs for decades?	The Matterhorn	Mont Blanc	The Eiger	The Jungfrau
+geox_gora_stolowa	Medium	Which flat-topped mountain overlooks Cape Town?	Table Mountain	Mount Kenya	Kilimanjaro	Drakensberg
+geoy_mont_blanc_granica	Medium	Mont Blanc stands on the border of France and which other country?	Italy	Switzerland	Austria	Germany
+geo_country_volcano_eyjafjallajokull	Medium	Which country's volcano Eyjafjallajokull grounded flights across Europe in 2010?	Iceland	Norway	Italy	Greece
+geo_country_mount_sinai	Medium	In which country is Mount Sinai?	Egypt	Israel	Jordan	Saudi Arabia
+geo_highest_mountain_united	Medium	Which is the highest mountain in the United Kingdom?	Ben Nevis	Snowdon	Scafell Pike	Slieve Donard
+geo_mountain_range_runs	Medium	Which mountain range runs down the length of Italy?	Apennines	Dolomites	Alps	Carpathians
+geo_mountain_range_curves	Medium	Which mountain range curves through Slovakia, Ukraine and Romania?	Carpathians	Balkans	Dinaric Alps	Sudetes
+geo_highest_mountain_spain	Medium	What is the highest mountain in Spain?	Teide	Mulhacen	Aneto	Monte Perdido
+geo_granite_peak_mouth	Medium	Which granite peak at the mouth of Rio's bay is reached by cable car?	Sugarloaf Mountain	Corcovado	Table Mountain	Mount Roraima
+geo_kilimandzaro	Hard	In which country is Mount Kilimanjaro?	Tanzania	Kenya	Ethiopia	Uganda
+geo_aconcagua	Hard	The highest peak in South America is...	Aconcagua	Chimborazo	Huascaran	Ojos del Salado
+geocmp_nie_alpy	Hard	Which of these countries does NOT have Alpine territory?	Czechia	Austria	Switzerland	Slovenia
+trv_kontynent_wulkany	Hard	Which continent's mainland has no active volcanoes?	Australia	Europe	Antarctica	North America
+ext_wulkan_mauna	Hard	Measured from its base on the sea floor, which mountain is the tallest on Earth?	Mauna Kea	Mount Everest	Denali	Aconcagua
+geo_kosciuszko	Hard	What is the highest mountain on mainland Australia?	Mount Kosciuszko	Uluru	Mount Cook	Mount Townsend
+geox_everest_nazwa	Hard	Mount Everest is named after whom?	A British surveyor	A Nepalese king	A Tibetan monk	The first man to climb it
+geo_mountain_highest_turkey	Hard	Which mountain, the highest in Turkey, is linked in legend with Noah's Ark?	Mount Ararat	Mount Sinai	Mount Olympus	Mount Elbrus
+geo_spain_highest_mountain	Hard	Spain's highest mountain is a volcano on which island?	Tenerife	Mallorca	Gran Canaria	Ibiza
+geo_highest_mountain_germany	Hard	Which is the highest mountain in Germany?	The Zugspitze	The Brocken	The Feldberg	The Watzmann
+geo2_najwiecej_wulkanow	Expert	Which country has the most active volcanoes?	Indonesia	Japan	Chile	USA
+dpt_geo_chimborazo	Expert	Whose summit lies farthest from the Earth's centre?	Chimborazo	Everest	Denali	Kilimanjaro
+geox_colca	Expert	Which canyon in Peru is about twice as deep as the Grand Canyon?	The Colca Canyon	The Copper Canyon	The Fish River Canyon	Tiger Leaping Gorge

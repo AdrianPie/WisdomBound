@@ -1,0 +1,43 @@
+# Panstwa jako takie: granice i sasiedzi, panstwa bez dostepu do morza i enklawy, najwieksze
+# i najmniejsze, ludnosc i powierzchnia, flagi, organizacje panstw. Tutaj trafiaja tez pytania
+# losowane z tabeli danych o panstwach (CountryQuestions).
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+geocmp_ludnosc_top	Easy	Which of these countries has the largest population?	India	The United States	Indonesia	Brazil
+geocmp_panstwo_powierzchnia	Easy	Which of these countries is the largest by area?	Russia	Canada	Australia	India
+geocmp_nie_afryka	Easy	Which of these countries is NOT in Africa?	Guyana	Ghana	Guinea	Gabon
+geocmp_nie_wyspa	Easy	Which of these countries is NOT an island nation?	Nepal	Malta	Iceland	Sri Lanka
+trv_mongolia_morze	Easy	Which of these countries has no access to the sea?	Mongolia	Vietnam	Chile	Morocco
+geo_stars_flag_united	Easy	How many stars are on the flag of the United States?	50	48	51	52
+geo_country_flag_shows	Easy	Which country's flag shows a red maple leaf?	Canada	Switzerland	Denmark	Austria
+geo_country_flag_red	Easy	Which country's flag is a red circle on a white background?	Japan	Bangladesh	South Korea	China
+geo_country_flag_shows_2	Easy	Which country's flag shows the blue Star of David?	Israel	Greece	Finland	Argentina
+geo_three_colours_make	Easy	Which three colours make up the flag of Italy?	Green, white and red	Red, white and blue	Green, yellow and red	Blue, white and red
+geo_three_colours_germany	Easy	Which three colours are on Germany's flag, in horizontal stripes?	Black, red and gold	Black, yellow and green	Red, white and black	Blue, red and gold
+geo_country_flag_red_2	Easy	Which country's flag is a red square with a white cross?	Switzerland	Denmark	Austria	Norway
+geo2_najmniejsze_panstwo	Medium	Which country is the smallest in the world?	Vatican City	Monaco	San Marino	Liechtenstein
+geocmp_ludnosc_azja_srednia	Medium	Which of these four countries is home to the most people?	Indonesia	Brazil	Nigeria	Bangladesh
+geocmp_ludnosc_egipt_niemcy	Medium	Which of these countries counts the most inhabitants?	Egypt	Germany	Turkiye	Thailand
+geocmp_ludnosc_etiopia	Medium	Which of these African countries has the largest population?	Ethiopia	The Democratic Republic of the Congo	Tanzania	Kenya
+geocmp_ludnosc_najmniej	Medium	Which of these countries has the smallest population?	Iceland	Malta	Luxembourg	Cyprus
+geocmp_gestosc_zaludnienia	Medium	Which of these has the highest population density?	Monaco	Singapore	Malta	Bangladesh
+geocmp_nie_srodladowy	Medium	Which of these countries is NOT landlocked?	Croatia	Austria	Hungary	Slovakia
+trv_nepal_flaga	Medium	Which country's flag is not a rectangle?	Nepal	Bhutan	Switzerland	Vatican City
+geo_sudan_poludniowy	Medium	Which is the world's youngest widely recognised country, independent since 2011?	South Sudan	Kosovo	East Timor	Montenegro
+geo_second_largest_country	Medium	Which is the second-largest country in the world by area?	Canada	China	The United States	Brazil
+geo_main_colour_brazil	Medium	What is the main colour of Brazil's flag?	Green	Blue	Yellow	White
+geo_country_flag_white	Medium	Which country's flag is white with a blue Nordic cross?	Finland	Sweden	Iceland	Greece
+geo_country_flag_red_3	Medium	Which country's flag is red with a single large yellow star?	Vietnam	China	Morocco	Turkey
+geo_country_flag_shows_3	Medium	Which country's flag shows an eagle devouring a snake?	Mexico	Albania	Egypt	Germany
+geo2_najdluzsza_granica	Hard	Which two countries share the longest land border in the world?	Canada and the USA	Russia and China	Argentina and Chile	India and China
+geocmp_nie_ameryka_pd	Hard	Which of these countries is NOT in South America?	Belize	Guyana	Suriname	Paraguay
+geocmp_turystyka_kraj	Hard	Which country receives the most international tourist arrivals?	France	Spain	The United States	Italy
+geocmp_eksport_towary	Hard	Which country exports the largest value of goods?	China	The United States	Germany	Japan
+lmk_otoczony_rpa	Hard	Which country is completely surrounded by South Africa?	Lesotho	Eswatini	Botswana	Namibia
+lmk_otoczony_wlochy	Hard	Which country is completely surrounded by Italy?	San Marino	Monaco	Andorra	Liechtenstein
+geo_niemcy_sasiedzi	Hard	How many countries share a land border with Germany?	Nine	Six	Seven	Eleven
+geo_country_flag_features	Hard	Which country's flag features a green cedar tree?	Lebanon	Cyprus	Canada	Jordan
+geo2_panstwo_bez_dostepu	Expert	Which country is Europe's only doubly landlocked state?	Liechtenstein	Switzerland	Austria	Andorra
+geocmp_najwiecej_sasiadow	Expert	Which of these countries borders the most other countries?	Brazil	Mexico	Argentina	Colombia
+geo_kazachstan_srodladowy	Expert	Which is the largest landlocked country in the world?	Kazakhstan	Mongolia	Chad	Bolivia
+geox_bir_tawil	Expert	Bir Tawil is a patch of African land that no country claims. Which two countries border it?	Egypt and Sudan	Chad and Libya	Mali and Niger	Kenya and Ethiopia
+geoy_rosja_sasiedzi	Expert	Russia shares land borders with how many countries?	14	8	20	5

@@ -3,6 +3,7 @@ package com.lernhero.domain.quiz
 import com.lernhero.domain.quiz.bank.AnimalQuestions
 import com.lernhero.domain.quiz.bank.BiologyQuestions
 import com.lernhero.domain.quiz.bank.CapitalQuestions
+import com.lernhero.domain.quiz.bank.CountryQuestions
 import com.lernhero.domain.quiz.bank.ElementQuestions
 import com.lernhero.domain.quiz.bank.FlagQuestions
 import com.lernhero.domain.quiz.bank.GeographyQuestions
@@ -52,7 +53,10 @@ import kotlin.random.Random
  */
 object QuizBank {
 
-    /** Pytania tekstowe. Flagi dochodza osobno, bo losuja sobie bledne odpowiedzi. */
+    /**
+     * Pytania tekstowe. Flagi i pytania z danych o panstwach dochodza osobno w [all], bo powstaja
+     * przy kazdym losowaniu (bledne odpowiedzi flag, zestawy panstw - patrz [CountryQuestions]).
+     */
     private val textEntries: List<QuizEntry> =
         BiologyQuestions.all +
             AnimalQuestions.all +
@@ -72,7 +76,7 @@ object QuizBank {
             PolandQuestions.all
 
     fun all(random: Random = Random.Default): List<QuizEntry> =
-        textEntries + FlagQuestions.entries(random)
+        textEntries + FlagQuestions.entries(random) + CountryQuestions.choices(random)
 
     /**
      * Drabinka trudnosci dla danej fali. Cztery pytania, coraz ostrzejsze - i coraz ostrzejsze
@@ -151,6 +155,10 @@ object QuizBank {
     fun byCategory(category: QuizCategory, random: Random = Random.Default): List<QuizEntry> =
         all(random).filter { it.category == category }
 
-    /** Pytania z dzialu i wszystkich jego poddzialow - "Antiquity" to cala starozytnosc. */
-    fun inSection(section: QuizSection): List<QuizEntry> = textEntries.filter(section::covers)
+    /**
+     * Pytania z dzialu i wszystkich jego poddzialow - "Antiquity" to cala starozytnosc. Razem
+     * z pytaniami losowanymi z danych o panstwach, ktore mieszkaja w dziale "Countries & Borders".
+     */
+    fun inSection(section: QuizSection, random: Random = Random.Default): List<QuizEntry> =
+        all(random).filter(section::covers)
 }

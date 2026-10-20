@@ -1,0 +1,23 @@
+# Ziemia jako calosc i mapy: kontynenty, rownik i zwrotniki, poludniki, strefy czasowe, linia zmiany
+# daty, wspolrzedne, rekordy calej planety.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+geo_kontynenty	Easy	How many continents are there on Earth?	7	5	6	8
+geo2_kontynent_najwiekszy	Easy	Which continent is the largest?	Asia	Africa	North America	Europe
+geo2_kontynent_najmniejszy	Easy	Which continent is the smallest?	Australia	Europe	Antarctica	South America
+geocmp_kontynent_panstwa	Easy	Which continent has the most countries?	Africa	Asia	Europe	South America
+trv_stambul_kontynenty	Easy	Which city lies on two continents?	Istanbul	Cairo	Moscow	Athens
+geo_woda_procent	Easy	Roughly how much of Earth's surface is covered by water?	About 71%	About 50%	About 90%	About 60%
+geo_gmt_stand	Easy	What does the 'G' in GMT stand for?	Greenwich	Global	General	Geographic
+org_ekwador_rownik	Easy	Ecuador is named after which geographical feature running through it?	The equator	The Andes	The Amazon	The Pacific coast
+geo2_panstwo_dwa_konty	Medium	Which country spans two continents: Europe and Asia?	Turkey	Greece	Egypt	Cyprus
+geo3_pierwszy_dzien	Medium	Which country is the first in the world to start each new day?	Kiribati	New Zealand	Japan	Australia
+geocmp_rownik_kraj	Medium	Which of these countries does the equator cross?	Ecuador	Peru	Bolivia	Chile
+geo_australia_poludnie	Medium	Which is the largest country lying entirely in the Southern Hemisphere?	Australia	Brazil	Argentina	South Africa
+geo_pangea	Medium	What was the name of the supercontinent that began breaking up about 200 million years ago?	Pangaea	Gondwana	Laurasia	Rodinia
+geo2_rownolezniki_zwrotnik	Hard	What is the tropic in the southern hemisphere called?	Tropic of Capricorn	Tropic of Cancer	Arctic Circle	Prime Meridian
+geo2_greenwich	Hard	Which city does the prime meridian pass through?	London	Paris	Rome	Madrid
+geo3_linia_zmiany_daty	Hard	Where does the International Date Line run?	Through the middle of the Pacific, near the 180th meridian	Straight through Greenwich, on the edge of London	Along the equator, right round the globe	Along the Ural mountains and the Caspian
+trv_strefy_czasowe	Hard	Which country spans the most time zones, counting its overseas territories?	France	Russia	The United States	China
+mst_afryka_rownik	Hard	The equator passes through all of these continents except which?	Australia	Africa	South America	Asia
+cur_rosja_strefy	Hard	How many time zones does Russia span?	11	5	8	15
+geoy_rownik	Hard	Roughly how long is the equator?	About 40,000 km	About 4,000 km	About 400,000 km	About 12,000 km

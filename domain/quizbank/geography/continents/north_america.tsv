@@ -1,0 +1,22 @@
+# USA (stany, przydomki), Kanada, Meksyk, Ameryka Srodkowa i Karaiby jako panstwa i regiony.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+trv_alaska	Easy	Which US state is the largest by area?	Alaska	Texas	California	Montana
+geo_kalifornia_ludnosc	Easy	Which US state has the most people?	California	Texas	Florida	New York
+geox_las_vegas	Easy	In which US state is Las Vegas?	Nevada	Arizona	Utah	New Mexico
+geo_state_walt_disney	Easy	In which US state is Walt Disney World?	Florida	California	Texas	Nevada
+geo_state_silicon_valley	Easy	In which US state is Silicon Valley?	California	Washington	Texas	Massachusetts
+geo_canadian_province_mainly	Easy	Which Canadian province is mainly French-speaking?	Quebec	Ontario	Manitoba	Nova Scotia
+mst_kraj_dwa_oceany	Medium	Panama is unusual in that its Caribbean coast lies where relative to its Pacific coast?	To the north	To the east	To the south	To the west
+geo_rhode_island	Medium	Which is the smallest US state by area?	Rhode Island	Delaware	Connecticut	Vermont
+geo_state_nicknamed_sunshine	Medium	Which US state is nicknamed 'the Sunshine State'?	Florida	California	Arizona	Hawaii
+geo_state_nicknamed_lone	Medium	Which US state is nicknamed 'the Lone Star State'?	Texas	Arizona	Nevada	Oklahoma
+geo_state_mount_rushmore	Medium	In which US state is Mount Rushmore?	South Dakota	Wyoming	Montana	Colorado
+geo_state_nicknamed_empire	Medium	Which US state is nicknamed 'the Empire State'?	New York	Texas	California	Pennsylvania
+geo_state_especially_growing	Medium	Which US state is especially famous for growing potatoes?	Idaho	Iowa	Kansas	Ohio
+geo_state_nicknamed_big	Medium	Which US state is nicknamed 'Big Sky Country'?	Montana	Wyoming	Colorado	Idaho
+geo_state_nicknamed_garden	Medium	Which US state is nicknamed 'the Garden State'?	New Jersey	Connecticut	Oregon	Virginia
+geo_state_nicknamed_peach	Medium	Which US state is nicknamed 'the Peach State'?	Georgia	South Carolina	Alabama	Texas
+geox_kostaryka	Hard	Which Central American country abolished its army in 1948?	Costa Rica	Panama	Honduras	Belize
+geo_state_nicknamed_bluegrass	Hard	Which US state is nicknamed 'the Bluegrass State'?	Kentucky	Tennessee	Virginia	Missouri
+geo_largest_country_central	Hard	Which is the largest country in Central America by area?	Nicaragua	Honduras	Guatemala	Panama
+geo_darien	Expert	The Darien Gap is a missing link in which famous road?	The Pan-American Highway	Route 66	The Silk Road	The Trans-Canada Highway

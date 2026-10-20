@@ -88,10 +88,17 @@ quiz/            bank pytan; bank/ to tresc: JEDEN plik na temat (BiologyQuestio
                  z podrecznika i pytan-zerowek, dystraktory z tej samej polki, jeden fakt = jedno
                  pytanie) siedza w KDoc QuizBank i czesci pilnuja QuizBankTest/QuizBankAuditTest
   QuizSection        dzialy duzego tematu: Historia to katalog quizbank/history/<epoka>/<dzial>.tsv
-                     (np. history/antiquity/roman_empire), nazwy i kolejnosc w quizbank/sections.tsv
-                     -> wygenerowany QuizSectionCatalog. Kazde pytanie takiego tematu niesie
-                     QuizEntry.section; QuizSections daje drzewo (epoki, poddzialy, okruszki),
-                     QuizBank.inSection - pytania galezi. UI na razie wybiera tylko temat
+                     (np. history/antiquity/roman_empire), Geografia - quizbank/geography/<galaz>/
+                     <dzial>.tsv; nazwy i kolejnosc w quizbank/sections.tsv -> wygenerowany
+                     QuizSectionCatalog. Kazde pytanie takiego tematu niesie QuizEntry.section;
+                     QuizSections daje drzewo (epoki, poddzialy, okruszki), QuizBank.inSection -
+                     pytania galezi. UI na razie wybiera tylko temat
+  CountryQuestions   pytania LOSOWANE z tabeli panstw (quizbank/data/countries.tsv -> wygenerowany
+                     CountryData): najwiecej ludzi, uloz od najmniejszego, stolice z zachodu na
+                     wschod, kto z kim graniczy, "wyzej czy nizej" jako prawda/falsz, zaznacz
+                     wszystkie. Wchodza do QuizBank.all i do pul ukladanek/prawda-falsz/zaznacz-
+                     wszystkie przy kazdym losowaniu (QuizEntry.generated = true); poziom = slawa
+                     panstw i wielkosc roznicy, poprawnosc kazdego typu pilnuje CountryQuestionsTest
   QuestionHistory    pamiec zadanych pytan (wszystkie typy, cala sesja gry - zyje w RunSession).
                      Losowanie bierze najpierw pytania jeszcze nie widziane; specjalne typy
                      (ukladanka, zaznacz-wszystkie, prawda/falsz) biora WYLACZNIE niewidziane, a gdy

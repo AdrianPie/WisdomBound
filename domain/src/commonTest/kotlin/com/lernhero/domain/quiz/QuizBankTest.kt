@@ -66,8 +66,9 @@ class QuizBankTest {
     @Test
     fun `tresci pytan sie nie powtarzaja`() {
         // Gracz szybciej zauwazy powtorzone pytanie niz powtorzone id - wiec pilnujemy tresci.
+        // Pytania losowane z danych (flagi, panstwa) celowo dziela wzor tresci, a roznia sie odpowiedziami.
         val duplicates = all
-            .filter { it.category != QuizCategory.Flags }
+            .filter { !it.generated }
             .groupBy { it.prompt }
             .filter { it.value.size > 1 }
             .keys

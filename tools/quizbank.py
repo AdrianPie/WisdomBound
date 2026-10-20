@@ -9,7 +9,8 @@ bo nastepne `generate` je nadpisze (a QuizBankTsvSyncTest wylapie rozjazd).
 
 Temat to albo jeden plik (biology.tsv), albo katalog podzielony na DZIALY (history/antiquity/
 roman_empire.tsv). Nazwy i kolejnosc dzialow stoja w domain/quizbank/sections.tsv, a z niego
-powstaje QuizSectionCatalog.kt.
+powstaje QuizSectionCatalog.kt. Tabela danych o panstwach (domain/quizbank/data/countries.tsv) to
+nie pytania, tylko material dla CountryQuestions - z niej powstaje CountryData.kt.
 
 Typowa sesja dopisywania pytan (szczegoly: domain/quizbank/README.md):
 
@@ -52,6 +53,8 @@ DATA_DIR = os.path.join(ROOT, "domain", "quizbank")
 SECTIONS_TSV = os.path.join(DATA_DIR, "sections.tsv")
 KOTLIN_DIR = os.path.join(ROOT, "domain", "src", "commonMain", "kotlin", "com", "lernhero", "domain", "quiz", "bank")
 CATALOG_KT = os.path.join(KOTLIN_DIR, "QuizSectionCatalog.kt")
+COUNTRIES_TSV = os.path.join(DATA_DIR, "data", "countries.tsv")
+COUNTRIES_KT = os.path.join(KOTLIN_DIR, "CountryData.kt")
 AUDIT_TEST = os.path.join(
     ROOT, "domain", "src", "commonTest", "kotlin", "com", "lernhero", "domain", "quiz", "QuizBankAuditTest.kt"
 )
@@ -570,6 +573,138 @@ def render_catalog(sections: list[Section]) -> str:
 
 
 # ------------------------------------------------------------------------------------------------
+# Dane o panstwach (material dla CountryQuestions, nie pytania)
+
+COUNTRY_COLUMNS = [
+    "code", "country", "capital", "continent", "population", "area_km2", "capital_lat", "capital_lon",
+    "landlocked", "neighbours", "fame", "capital_quiz", "unclear",
+]
+CONTINENTS = {
+    "Europe": "Europe", "Asia": "Asia", "Africa": "Africa", "North America": "NorthAmerica",
+    "South America": "SouthAmerica", "Oceania": "Oceania",
+}
+
+
+def read_countries() -> list[dict]:
+    """Czyta countries.tsv i pilnuje spojnosci: kody, liczby, symetria granic, pary niejasne."""
+    rows: list[dict] = []
+    header = None
+    problems: list[str] = []
+    with open(COUNTRIES_TSV, encoding="utf-8") as f:
+        for lineno, raw in enumerate(f, 1):
+            line = raw.rstrip("\r\n")
+            if not line.strip() or line.startswith("#"):
+                continue
+            cells = line.split("\t")
+            if header is None:
+                header = cells
+                if header != COUNTRY_COLUMNS:
+                    sys.exit(f"{COUNTRIES_TSV}:{lineno}: zly naglowek {header}, oczekiwany {COUNTRY_COLUMNS}")
+                continue
+            if len(cells) != len(COUNTRY_COLUMNS):
+                sys.exit(f"{COUNTRIES_TSV}:{lineno}: {len(cells)} kolumn zamiast {len(COUNTRY_COLUMNS)}")
+            row = dict(zip(COUNTRY_COLUMNS, cells))
+            row["line"] = lineno
+            try:
+                row["population"] = int(row["population"])
+                row["area_km2"] = float(row["area_km2"])
+                row["capital_lat"] = float(row["capital_lat"])
+                row["capital_lon"] = float(row["capital_lon"])
+                row["fame"] = int(row["fame"])
+            except ValueError as e:
+                sys.exit(f"{COUNTRIES_TSV}:{lineno}: zla liczba ({e})")
+            row["neighbours"] = row["neighbours"].split()
+            row["unclear"] = row["unclear"].split()
+            rows.append(row)
+    codes = {r["code"] for r in rows}
+    by_code = {r["code"]: r for r in rows}
+    for r in rows:
+        where = f"{COUNTRIES_TSV}:{r['line']} ({r['code']})"
+        if not re.fullmatch(r"[a-z]{2}", r["code"]):
+            problems.append(f"{where}: kod ma byc dwuliterowy, malymi literami")
+        if r["continent"] not in CONTINENTS:
+            problems.append(f"{where}: nieznany kontynent {r['continent']!r}")
+        if r["landlocked"] not in ("0", "1") or r["capital_quiz"] not in ("0", "1"):
+            problems.append(f"{where}: landlocked i capital_quiz to 0 albo 1")
+        if r["fame"] not in (1, 2, 3):
+            problems.append(f"{where}: fame to 1, 2 albo 3")
+        if r["population"] <= 0 or r["area_km2"] <= 0:
+            problems.append(f"{where}: ludnosc i powierzchnia musza byc dodatnie")
+        if not (-90 <= r["capital_lat"] <= 90 and -180 <= r["capital_lon"] <= 180):
+            problems.append(f"{where}: wspolrzedne poza zakresem")
+        if not r["country"].isascii() or not r["capital"].isascii():
+            problems.append(f"{where}: nazwy tylko w ASCII")
+        for n in r["neighbours"]:
+            if n not in codes:
+                problems.append(f"{where}: nieznany sasiad {n}")
+            elif r["code"] not in by_code[n]["neighbours"]:
+                problems.append(f"{where}: {n} nie ma {r['code']} wsrod sasiadow (granica jest symetryczna)")
+        for n in r["unclear"]:
+            if n not in codes:
+                problems.append(f"{where}: nieznany kod w unclear: {n}")
+            elif n in r["neighbours"]:
+                problems.append(f"{where}: {n} jest jednoczesnie sasiadem i para niejasna")
+    if len(codes) != len(rows):
+        problems.append(f"{COUNTRIES_TSV}: zdublowane kody panstw")
+    for field_name in ("country", "capital"):
+        seen = Counter(r[field_name] for r in rows)
+        dup = [name for name, n in seen.items() if n > 1]
+        if dup:
+            problems.append(f"{COUNTRIES_TSV}: powtorzone wartosci w kolumnie {field_name}: {dup}")
+    if problems:
+        sys.exit("\n".join(problems))
+    return rows
+
+
+def render_countries(rows: list[dict]) -> str:
+    out = [
+        "// PLIK GENEROWANY z domain/quizbank/data/countries.tsv przez `python3 tools/quizbank.py generate`.",
+        "// Nie edytuj go recznie - dane panstw poprawia sie w TSV (patrz domain/quizbank/README.md).",
+        "package com.lernhero.domain.quiz.bank",
+        "",
+        "import com.lernhero.domain.quiz.bank.CountryFact.Continent",
+        "",
+        "/** Tabela panstw dla [CountryQuestions] - opis kolumn stoi na gorze countries.tsv. */",
+        "object CountryData {",
+        "",
+        "    private fun c(",
+        "        code: String,",
+        "        name: String,",
+        "        capital: String,",
+        "        continent: Continent,",
+        "        population: Long,",
+        "        areaKm2: Double,",
+        "        capitalLat: Double,",
+        "        capitalLon: Double,",
+        "        landlocked: Boolean,",
+        "        neighbours: String,",
+        "        fame: Int,",
+        "        capitalQuiz: Boolean,",
+        "        unclear: String",
+        "    ) = CountryFact(",
+        "        code, name, capital, continent, population, areaKm2, capitalLat, capitalLon, landlocked,",
+        "        neighbours.split(' ').filter { it.isNotEmpty() }.toSet(), fame, capitalQuiz,",
+        "        unclear.split(' ').filter { it.isNotEmpty() }.toSet()",
+        "    )",
+        "",
+        "    val all: List<CountryFact> = listOf(",
+    ]
+    lines = []
+    for r in rows:
+        lines.append(
+            f"        c({kt_string(r['code'])}, {kt_string(r['country'])}, {kt_string(r['capital'])}, "
+            f"Continent.{CONTINENTS[r['continent']]}, {r['population']}, {r['area_km2']!r}, "
+            f"{r['capital_lat']!r}, {r['capital_lon']!r}, {'true' if r['landlocked'] == '1' else 'false'}, "
+            f"{kt_string(' '.join(r['neighbours']))}, {r['fame']}, {'true' if r['capital_quiz'] == '1' else 'false'}, "
+            f"{kt_string(' '.join(r['unclear']))}),"
+        )
+    if lines:
+        lines[-1] = lines[-1][:-1]
+    out += lines + ["    )", "}", ""]
+    return "\n".join(out)
+
+
+# ------------------------------------------------------------------------------------------------
 # Wczytanie calego banku
 
 
@@ -979,6 +1114,7 @@ def cmd_generate(args) -> int:
         data = read_topic(topic, sections)
         outputs.append((topic.kt, render_kotlin(data, sections)))
     outputs.append((CATALOG_KT, render_catalog(sections)))
+    outputs.append((COUNTRIES_KT, render_countries(read_countries())))
     stale = []
     for path, content in outputs:
         current = open(path, encoding="utf-8").read() if os.path.exists(path) else ""

@@ -1,0 +1,8 @@
+# Australia, Nowa Zelandia i panstwa Pacyfiku: stany, przydomki, wyspiarskie panstwa, ciekawostki.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+lmk_uluru_kraj	Medium	In which country is Uluru?	Australia	New Zealand	South Africa	Namibia
+geo_tahiti	Medium	Tahiti is part of which country's overseas territories?	France	Britain	The United States	New Zealand
+geo_country_aotearoa_land	Medium	Which country is known as Aotearoa, 'the land of the long white cloud'?	New Zealand	Australia	Fiji	Samoa
+geo_australian_state_sydney	Medium	In which Australian state is Sydney?	New South Wales	Victoria	Queensland	South Australia
+lmk_moai_kraj	Hard	The Moai statues of Easter Island belong to which country?	Chile	Peru	New Zealand	Argentina
+geox_tuvalu_tv	Expert	Which tiny Pacific nation earns money from its '.tv' internet domain?	Tuvalu	Tonga	Tokelau	Taiwan

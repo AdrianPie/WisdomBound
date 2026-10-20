@@ -1,0 +1,58 @@
+# Wyspy i archipelagi, polwyspy, przyladki, przesmyki, wybrzeza i fiordy.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+trv_hawaje_stan	Easy	Which US state is made up entirely of islands?	Hawaii	Florida	Alaska	Rhode Island
+trv_madagaskar_kontynent	Easy	Off the coast of which continent is Madagascar?	Africa	Asia	Australia	South America
+lmk_polwysep_hiszpania	Easy	Which peninsula do Spain and Portugal share?	The Iberian Peninsula	The Apennine Peninsula	The Balkan Peninsula	The Jutland Peninsula
+lmk_fiordy_kraj	Easy	Which country is best known for its fjords?	Norway	Sweden	Finland	Denmark
+geo_wyspy_kanaryjskie	Easy	Which country do the Canary Islands belong to?	Spain	Portugal	Morocco	Italy
+geo_bali	Easy	Which country is the island of Bali part of?	Indonesia	Thailand	Malaysia	The Philippines
+geox_nowa_zelandia	Easy	New Zealand is made up mainly of which two islands?	North Island and South Island	East Island and West Island	Big Island and Little Island	Upper Island and Lower Island
+geoy_szmaragdowa_wyspa	Easy	Which country is nicknamed 'the Emerald Isle'?	Ireland	Iceland	New Zealand	Sri Lanka
+geo_island_tasmania_belongs	Easy	The island of Tasmania belongs to which country?	Australia	New Zealand	Indonesia	Papua New Guinea
+geo_crete_largest_island	Easy	Crete is the largest island of which country?	Greece	Italy	Cyprus	Turkey
+geo_white_cliffs_england	Easy	Which famous white cliffs on England's coast look out towards France?	The cliffs of Dover	The cliffs of Moher	Land's End	The Giant's Causeway
+geo_largest_island_caribbean	Easy	Which is the largest island in the Caribbean?	Cuba	Jamaica	Hispaniola	Puerto Rico
+geo_country_sunny_algarve	Easy	In which country is the sunny Algarve coast?	Portugal	Spain	Italy	Greece
+geo_two_countries_share	Easy	Which two countries share the island of Ireland?	Ireland and the UK	Ireland and Scotland	Ireland and Wales	Ireland and Iceland
+geo_greek_island_white	Easy	Which Greek island is famous for white houses with blue domes and sunsets at Oia?	Santorini	Mykonos	Crete	Corfu
+geo_spanish_island_world	Easy	Which Spanish island is world-famous for its nightclubs?	Ibiza	Mallorca	Tenerife	Menorca
+geo2_morze_srodziemne_wyspa	Medium	Which Mediterranean island is the largest?	Sicily	Sardinia	Cyprus	Corsica
+geocmp_wyspa_druga	Medium	Which of these islands is the largest?	Borneo	Madagascar	Sumatra	Honshu
+lmk_galapagos_kraj	Medium	The Galapagos Islands belong to which country?	Ecuador	Peru	Colombia	Chile
+geo_filipiny_wyspy	Medium	Which country is made up of about 7,600 islands?	The Philippines	Japan	Malaysia	New Zealand
+geo_azory	Medium	Which country do the Azores belong to?	Portugal	Spain	France	Britain
+geo_grobla_olbrzyma	Medium	In which part of the UK is the Giant's Causeway?	Northern Ireland	Scotland	Wales	Cornwall
+geox_baleary	Medium	Mallorca and Ibiza belong to which island group?	The Balearic Islands	The Canary Islands	The Azores	The Cyclades
+geox_santorini	Medium	Santorini and Mykonos are islands of which country?	Greece	Italy	Croatia	Cyprus
+geoy_singapur	Medium	Which Southeast Asian island nation is also a single city?	Singapore	Brunei	Malaysia	Taiwan
+geoy_madera	Medium	The island of Madeira belongs to which country?	Portugal	Spain	Italy	Greece
+geoy_korsyka	Medium	The island of Corsica belongs to which country?	France	Italy	Spain	Greece
+geoy_sardynia	Medium	Sardinia is an island belonging to which country?	Italy	France	Spain	Malta
+geo_country_cape_good	Medium	In which country is the Cape of Good Hope?	South Africa	Namibia	Chile	Argentina
+geo_island_country_lies	Medium	Which island country lies just off the southern tip of India?	Sri Lanka	The Maldives	Madagascar	Mauritius
+geo_largest_island_europe	Medium	Which is the largest island in Europe?	Great Britain	Iceland	Ireland	Sicily
+geo_largest_japan_islands	Medium	Which is the largest of Japan's islands?	Honshu	Hokkaido	Kyushu	Okinawa
+geo_narrow_strip_land	Medium	What is the narrow strip of land that joins North and South America called?	The Isthmus of Panama	The Darien Peninsula	The Strait of Magellan	The Yucatan Bridge
+geo_southernmost_point_africa	Medium	What is the southernmost point of Africa?	Cape Agulhas	Cape of Good Hope	Cape Point	Cape Verde
+geo_skeleton_coast_littered	Medium	The 'Skeleton Coast', littered with shipwrecks, lies in which country?	Namibia	Angola	South Africa	Mauritania
+geo_italian_island_blue	Medium	On which Italian island is the famous Blue Grotto?	Capri	Sicily	Sardinia	Elba
+geo_portuguese_island_cristiano	Medium	On which Portuguese island was Cristiano Ronaldo born?	Madeira	Sao Miguel	Porto Santo	Terceira
+geo_thailand_largest_island	Medium	Which is Thailand's largest island and a famous beach destination?	Phuket	Koh Samui	Koh Phangan	Koh Lanta
+geo2_wyspa_borneo	Hard	Between how many countries is the island of Borneo divided?	Three	Two	Four	One
+geo2_najwiekszy_archipelag	Hard	Which country is the largest island nation in the world?	Indonesia	The Philippines	Japan	Madagascar
+geocmp_linia_brzegowa	Hard	Which country has the longest coastline?	Canada	Russia	Indonesia	Australia
+trv_malediwy_plaskie	Hard	Which is the flattest country in the world?	The Maldives	The Netherlands	Denmark	Bangladesh
+mst_hispaniola_podzial	Hard	Haiti and the Dominican Republic share which island?	Hispaniola	Cuba	Jamaica	Puerto Rico
+geo_wyspy_owcze	Hard	Which country do the Faroe Islands belong to?	Denmark	Norway	Iceland	Britain
+geox_przyladek_horn	Hard	Which famously stormy cape marks the southern tip of South America?	Cape Horn	Cape of Good Hope	Cape Verde	Cape Cod
+geo_second_largest_island	Hard	Which is the second-largest island in the world?	New Guinea	Borneo	Madagascar	Baffin Island
+geo_populous_island_world	Hard	Which is the most populous island in the world, home to over half of Indonesia's people?	Java	Sumatra	Borneo	Bali
+geo_island_zanzibar_belongs	Hard	The island of Zanzibar belongs to which country?	Tanzania	Kenya	Mozambique	Madagascar
+geo_island_country_once	Hard	Which island country was once called Formosa?	Taiwan	Sri Lanka	The Philippines	Japan
+geo2_polwysep_najwiekszy	Expert	Which peninsula is the largest in the world?	The Arabian Peninsula	The Indian Peninsula	Scandinavia	The Balkan Peninsula
+geocmp_najwiecej_wysp	Expert	Which country is made up of the most islands?	Sweden	Indonesia	The Philippines	Japan
+dpt_geo_fiord	Expert	How does a fjord form?	Ice carves a valley, sea floods it	A coral reef closes off a bay	A landslide dams a river mouth	A desert river cuts a canyon
+wld_japonia_wyspy	Expert	Roughly how many islands make up Japan?	Over 14,000	About 4	About 70	About 400
+geox_bouvet	Expert	Bouvet Island, often called the most remote island on Earth, belongs to which country?	Norway	Argentina	Britain	France
+geox_tristan	Expert	Which British territory in the South Atlantic is the most remote inhabited archipelago?	Tristan da Cunha	The Falkland Islands	Saint Helena	Ascension Island
+geox_nauru	Expert	Which Pacific island nation is the smallest republic in the world?	Nauru	Tuvalu	Palau	Kiribati

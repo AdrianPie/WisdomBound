@@ -1,0 +1,214 @@
+# Dane o panstwach - z nich CountryQuestions losuje pytania "ktore z tych ma najwiecej ludzi",
+# ukladanki (od najmniejszego, stolice z zachodu na wschod), prawda/falsz i zaznacz-wszystkie.
+# 194 panstwa: czlonkowie ONZ i Watykan (bez Kosowa, Tajwanu i Palestyny - spornych przy pytaniach
+# o granice i stolice). Z tego pliku `python3 tools/quizbank.py generate` robi CountryData.kt.
+#
+# population - liczba mieszkancow, okolo 2024 (szacunki ONZ), zaokraglona. Liczby sie zmieniaja,
+#   dlatego generator porownuje panstwa tylko przy wyraznej roznicy (co najmniej 1.3 raza), ktorej
+#   kilka lat nie odwroci.
+# area_km2 - powierzchnia calkowita (z wodami srodladowymi), Francja razem z terytoriami zamorskimi.
+# capital_lat / capital_lon - wspolrzedne stolicy w stopniach (polnoc i wschod dodatnie).
+# landlocked - 1, gdy panstwo nie ma dostepu do oceanu ani morza otwartego (Morze Kaspijskie to jezioro).
+# neighbours - kody panstw ze wspolna granica LADOWA (tylko panstwa z tej tabeli, relacja symetryczna);
+#   Francja graniczy przez Gujane z Brazylia i Surinamem, Hiszpania przez Ceute i Melille z Marokiem.
+# fame - jak znane jest panstwo: 1 zna kazdy, 2 kojarzy wiekszosc, 3 tylko zapaleni geografowie.
+#   Od tego zalezy poziom wylosowanego pytania.
+# capital_quiz - 0, gdy stolica jest niejednoznaczna (dwie stolice, sporna, swiezo przeniesiona) i nie
+#   nadaje sie do pytan o polozenie stolic.
+# unclear - pary, przy ktorych "czy granicza?" nie ma jednej odpowiedzi (Gibraltar, Saint-Martin,
+#   tunel pod kanalem, Guantanamo...). Generator nie uzyje ich ani jako sasiadow, ani jako nie-sasiadow.
+code	country	capital	continent	population	area_km2	capital_lat	capital_lon	landlocked	neighbours	fame	capital_quiz	unclear
+al	Albania	Tirana	Europe	2790000	28748	41.33	19.82	0	me mk gr	2	1	
+ad	Andorra	Andorra la Vella	Europe	81000	468	42.51	1.52	1	fr es	2	1	
+at	Austria	Vienna	Europe	9130000	83871	48.21	16.37	1	de cz sk hu si it ch li	1	1	
+by	Belarus	Minsk	Europe	9060000	207600	53.90	27.57	1	ru ua pl lt lv	2	1	
+be	Belgium	Brussels	Europe	11800000	30528	50.85	4.35	0	fr lu de nl	1	1	
+ba	Bosnia and Herzegovina	Sarajevo	Europe	3160000	51197	43.86	18.41	0	hr rs me	2	1	
+bg	Bulgaria	Sofia	Europe	6690000	110994	42.70	23.32	0	ro rs mk gr tr	2	1	
+hr	Croatia	Zagreb	Europe	3850000	56594	45.81	15.98	0	si hu rs ba me	2	1	
+cy	Cyprus	Nicosia	Europe	1360000	9251	35.17	33.36	0		2	1	gb
+cz	Czechia	Prague	Europe	10700000	78871	50.08	14.44	1	de pl sk at	1	1	
+dk	Denmark	Copenhagen	Europe	5980000	42933	55.68	12.57	0	de	1	1	ca
+ee	Estonia	Tallinn	Europe	1360000	45339	59.44	24.75	0	lv ru	2	1	
+fi	Finland	Helsinki	Europe	5600000	338455	60.17	24.94	0	se no ru	1	1	
+fr	France	Paris	Europe	66500000	643801	48.86	2.35	0	be lu de ch it mc ad es br sr	1	1	nl gb
+de	Germany	Berlin	Europe	84500000	357592	52.52	13.40	0	dk pl cz at ch fr lu be nl	1	1	
+gr	Greece	Athens	Europe	10050000	131957	37.98	23.73	0	al mk bg tr	1	1	
+hu	Hungary	Budapest	Europe	9680000	93028	47.50	19.04	1	at sk ua ro rs hr si	2	1	
+is	Iceland	Reykjavik	Europe	390000	103000	64.15	-21.94	0		1	1	
+ie	Ireland	Dublin	Europe	5250000	70273	53.35	-6.26	0	gb	1	1	
+it	Italy	Rome	Europe	59000000	301340	41.90	12.50	0	fr ch at si sm va	1	1	
+lv	Latvia	Riga	Europe	1870000	64589	56.95	24.11	0	ee lt by ru	2	1	
+li	Liechtenstein	Vaduz	Europe	40000	160	47.14	9.52	1	ch at	2	1	
+lt	Lithuania	Vilnius	Europe	2870000	65300	54.69	25.28	0	lv by pl ru	2	1	
+lu	Luxembourg	Luxembourg	Europe	670000	2586	49.61	6.13	1	be de fr	2	1	
+mt	Malta	Valletta	Europe	540000	316	35.90	14.51	0		2	1	
+md	Moldova	Chisinau	Europe	3030000	33846	47.01	28.86	1	ro ua	3	1	
+mc	Monaco	Monaco	Europe	39000	2.02	43.73	7.42	0	fr	2	1	
+me	Montenegro	Podgorica	Europe	630000	13812	42.44	19.26	0	hr ba rs al	3	1	
+nl	The Netherlands	Amsterdam	Europe	18200000	41850	52.37	4.90	0	be de	1	1	fr
+mk	North Macedonia	Skopje	Europe	1820000	25713	42.00	21.43	1	rs bg gr al	3	1	
+no	Norway	Oslo	Europe	5550000	385207	59.91	10.75	0	se fi ru	1	1	
+pl	Poland	Warsaw	Europe	38000000	312696	52.23	21.01	0	de cz sk ua by lt ru	1	1	
+pt	Portugal	Lisbon	Europe	10430000	92212	38.72	-9.14	0	es	1	1	
+ro	Romania	Bucharest	Europe	19000000	238397	44.43	26.10	0	hu rs bg md ua	2	1	
+ru	Russia	Moscow	Europe	144800000	17098246	55.76	37.62	0	no fi ee lv lt pl by ua ge az kz cn mn kp	1	1	
+sm	San Marino	San Marino	Europe	34000	61	43.94	12.45	1	it	2	1	
+rs	Serbia	Belgrade	Europe	6700000	77474	44.79	20.45	1	hu ro bg mk me ba hr	2	1	al
+sk	Slovakia	Bratislava	Europe	5430000	49035	48.15	17.11	1	cz pl ua hu at	2	1	
+si	Slovenia	Ljubljana	Europe	2120000	20273	46.06	14.51	0	it at hu hr	2	1	
+es	Spain	Madrid	Europe	48400000	505990	40.42	-3.70	0	pt fr ad ma	1	1	gb
+se	Sweden	Stockholm	Europe	10550000	450295	59.33	18.07	0	no fi	1	1	
+ch	Switzerland	Bern	Europe	8900000	41285	46.95	7.45	1	de fr it at li	1	1	
+ua	Ukraine	Kyiv	Europe	37900000	603550	50.45	30.52	0	pl sk hu ro md by ru	1	1	
+gb	The United Kingdom	London	Europe	69100000	243610	51.51	-0.13	0	ie	1	1	fr es cy
+va	Vatican City	Vatican City	Europe	800	0.44	41.90	12.45	1	it	2	1	
+af	Afghanistan	Kabul	Asia	42600000	652230	34.53	69.17	1	pk ir tm uz tj cn	2	1	in
+am	Armenia	Yerevan	Asia	2970000	29743	40.18	44.51	1	ge az ir tr	2	1	
+az	Azerbaijan	Baku	Asia	10300000	86600	40.41	49.87	1	ru ge am ir tr	2	1	
+bh	Bahrain	Manama	Asia	1600000	786	26.23	50.59	0		3	1	
+bd	Bangladesh	Dhaka	Asia	173600000	148460	23.81	90.41	0	in mm	2	1	
+bt	Bhutan	Thimphu	Asia	790000	38394	27.47	89.64	1	in cn	3	1	
+bn	Brunei	Bandar Seri Begawan	Asia	460000	5765	4.90	114.94	0	my	3	1	
+kh	Cambodia	Phnom Penh	Asia	17600000	181035	11.56	104.92	0	th la vn	2	1	
+cn	China	Beijing	Asia	1419000000	9596961	39.90	116.41	0	kp ru mn kz kg tj af pk in np bt mm la vn	1	1	
+ge	Georgia	Tbilisi	Asia	3800000	69700	41.72	44.79	0	ru az am tr	2	1	
+in	India	New Delhi	Asia	1450900000	3287263	28.61	77.21	0	pk cn np bt bd mm	1	1	af
+id	Indonesia	Jakarta	Asia	283500000	1904569	-6.21	106.85	0	my pg tl	1	1	
+ir	Iran	Tehran	Asia	91600000	1648195	35.69	51.39	0	iq tr am az tm af pk	1	1	
+iq	Iraq	Baghdad	Asia	46000000	438317	33.31	44.37	0	tr ir kw sa jo sy	1	1	
+il	Israel	Jerusalem	Asia	9400000	22072	31.78	35.22	0	eg jo sy lb	1	0	
+jp	Japan	Tokyo	Asia	123800000	377975	35.68	139.69	0		1	1	
+jo	Jordan	Amman	Asia	11550000	89342	31.95	35.93	0	sy iq sa il	2	1	
+kz	Kazakhstan	Astana	Asia	20600000	2724900	51.17	71.45	1	ru cn kg uz tm	2	1	
+kw	Kuwait	Kuwait City	Asia	4930000	17818	29.38	47.98	0	iq sa	2	1	
+kg	Kyrgyzstan	Bishkek	Asia	7190000	199951	42.87	74.59	1	kz cn tj uz	3	1	
+la	Laos	Vientiane	Asia	7770000	236800	17.97	102.63	1	cn mm th kh vn	3	1	
+lb	Lebanon	Beirut	Asia	5800000	10452	33.89	35.50	0	sy il	2	1	
+my	Malaysia	Kuala Lumpur	Asia	35600000	330803	3.14	101.69	0	th id bn	2	1	
+mv	The Maldives	Male	Asia	527000	298	4.18	73.51	0		2	1	
+mn	Mongolia	Ulaanbaatar	Asia	3480000	1564116	47.92	106.92	1	ru cn	2	1	
+mm	Myanmar	Naypyidaw	Asia	54500000	676578	19.76	96.08	0	bd in cn la th	2	1	
+np	Nepal	Kathmandu	Asia	29650000	147181	27.72	85.32	1	cn in	2	1	
+kp	North Korea	Pyongyang	Asia	26500000	120540	39.04	125.76	0	cn kr ru	1	1	
+om	Oman	Muscat	Asia	5280000	309500	23.59	58.41	0	ae sa ye	3	1	
+pk	Pakistan	Islamabad	Asia	251300000	881913	33.68	73.05	0	in af ir cn	1	1	
+ph	The Philippines	Manila	Asia	115800000	300000	14.60	120.98	0		1	1	
+qa	Qatar	Doha	Asia	2860000	11581	25.29	51.53	0	sa	2	1	
+sa	Saudi Arabia	Riyadh	Asia	33960000	2149690	24.71	46.68	0	jo iq kw qa ae om ye	1	1	
+sg	Singapore	Singapore	Asia	5830000	735	1.29	103.85	0		1	1	
+kr	South Korea	Seoul	Asia	51700000	100410	37.57	126.98	0	kp	1	1	
+lk	Sri Lanka	Sri Jayawardenepura Kotte	Asia	23100000	65610	6.90	79.92	0		2	0	
+sy	Syria	Damascus	Asia	24700000	185180	33.51	36.29	0	tr iq jo il lb	2	1	
+tj	Tajikistan	Dushanbe	Asia	10590000	143100	38.56	68.79	1	uz kg cn af	3	1	
+th	Thailand	Bangkok	Asia	71700000	513120	13.76	100.50	0	mm la kh my	1	1	
+tl	East Timor	Dili	Asia	1400000	14874	-8.56	125.57	0	id	3	1	
+tr	Turkey	Ankara	Asia	87500000	783562	39.93	32.86	0	gr bg ge am az ir iq sy	1	1	
+tm	Turkmenistan	Ashgabat	Asia	7490000	488100	37.95	58.38	1	kz uz af ir	3	1	
+ae	The United Arab Emirates	Abu Dhabi	Asia	11000000	83600	24.45	54.38	0	sa om	2	1	
+uz	Uzbekistan	Tashkent	Asia	36400000	448978	41.30	69.24	1	kz kg tj af tm	2	1	
+vn	Vietnam	Hanoi	Asia	100900000	331212	21.03	105.85	0	cn la kh	1	1	
+ye	Yemen	Sanaa	Asia	40600000	527968	15.37	44.19	0	sa om	2	1	
+dz	Algeria	Algiers	Africa	46800000	2381741	36.75	3.06	0	tn ly ne ml mr ma	2	1	
+ao	Angola	Luanda	Africa	37900000	1246700	-8.84	13.23	0	cd cg zm na	2	1	
+bj	Benin	Porto-Novo	Africa	14460000	114763	6.50	2.60	0	tg bf ne ng	3	0	
+bw	Botswana	Gaborone	Africa	2520000	581730	-24.65	25.91	1	za na zm zw	2	1	
+bf	Burkina Faso	Ouagadougou	Africa	23550000	274200	12.37	-1.52	1	ml ne bj tg gh ci	3	1	
+bi	Burundi	Gitega	Africa	14050000	27834	-3.43	29.93	1	rw tz cd	3	0	
+cv	Cape Verde	Praia	Africa	525000	4033	14.93	-23.51	0		3	1	
+cm	Cameroon	Yaounde	Africa	29100000	475442	3.87	11.52	0	ng td cf gq ga cg	2	1	
+cf	The Central African Republic	Bangui	Africa	5330000	622984	4.39	18.56	1	cm td sd ss cd cg	3	1	
+td	Chad	N'Djamena	Africa	20300000	1284000	12.13	15.06	1	ly sd cf cm ng ne	3	1	
+km	Comoros	Moroni	Africa	870000	1861	-11.70	43.26	0		3	1	
+cg	The Republic of the Congo	Brazzaville	Africa	6330000	342000	-4.27	15.28	0	ga cm cf cd ao	3	1	
+cd	DR Congo	Kinshasa	Africa	109300000	2344858	-4.32	15.31	0	cg cf ss ug rw bi tz zm ao	2	1	
+dj	Djibouti	Djibouti	Africa	1170000	23200	11.59	43.15	0	er et so	3	1	
+eg	Egypt	Cairo	Africa	116500000	1001450	30.04	31.24	0	ly sd il	1	1	
+gq	Equatorial Guinea	Malabo	Africa	1890000	28051	3.75	8.78	0	cm ga	3	0	
+er	Eritrea	Asmara	Africa	3540000	117600	15.32	38.93	0	sd et dj	3	1	
+sz	Eswatini	Mbabane	Africa	1240000	17364	-26.31	31.14	1	za mz	3	0	
+et	Ethiopia	Addis Ababa	Africa	132100000	1104300	9.03	38.74	1	er dj so ke ss sd	1	1	
+ga	Gabon	Libreville	Africa	2540000	267668	0.39	9.45	0	gq cm cg	3	1	
+gm	The Gambia	Banjul	Africa	2760000	11295	13.45	-16.58	0	sn	3	1	
+gh	Ghana	Accra	Africa	34400000	238533	5.60	-0.19	0	ci bf tg	2	1	
+gn	Guinea	Conakry	Africa	14750000	245857	9.64	-13.58	0	gw sn ml ci lr sl	3	1	
+gw	Guinea-Bissau	Bissau	Africa	2200000	36125	11.86	-15.60	0	sn gn	3	1	
+ci	Ivory Coast	Yamoussoukro	Africa	31900000	322463	6.82	-5.28	0	lr gn ml bf gh	2	0	
+ke	Kenya	Nairobi	Africa	56400000	580367	-1.29	36.82	0	et so tz ug ss	1	1	
+ls	Lesotho	Maseru	Africa	2340000	30355	-29.31	27.48	1	za	3	1	
+lr	Liberia	Monrovia	Africa	5610000	111369	6.30	-10.80	0	sl gn ci	3	1	
+ly	Libya	Tripoli	Africa	7380000	1759540	32.89	13.19	0	tn dz ne td sd eg	2	1	
+mg	Madagascar	Antananarivo	Africa	31960000	587041	-18.88	47.51	0		1	1	
+mw	Malawi	Lilongwe	Africa	21650000	118484	-13.96	33.79	1	tz mz zm	3	1	
+ml	Mali	Bamako	Africa	24500000	1240192	12.64	-8.00	1	dz ne bf ci gn sn mr	2	1	
+mr	Mauritania	Nouakchott	Africa	5170000	1030700	18.08	-15.98	0	dz ml sn	3	1	ma
+mu	Mauritius	Port Louis	Africa	1270000	2040	-20.16	57.50	0		2	1	
+ma	Morocco	Rabat	Africa	38100000	446550	34.02	-6.83	0	dz es	1	1	mr
+mz	Mozambique	Maputo	Africa	34600000	801590	-25.97	32.57	0	tz mw zm zw za sz	2	1	
+na	Namibia	Windhoek	Africa	3030000	825615	-22.56	17.08	0	ao zm bw za	2	1	
+ne	Niger	Niamey	Africa	27000000	1267000	13.51	2.11	1	dz ly td ng bj bf ml	3	1	
+ng	Nigeria	Abuja	Africa	232700000	923768	9.06	7.50	0	bj ne td cm	1	1	
+rw	Rwanda	Kigali	Africa	14250000	26338	-1.95	30.06	1	ug tz bi cd	2	1	
+st	Sao Tome and Principe	Sao Tome	Africa	235000	964	0.34	6.73	0		3	1	
+sn	Senegal	Dakar	Africa	18500000	196722	14.72	-17.47	0	mr ml gn gw gm	2	1	
+sc	Seychelles	Victoria	Africa	130000	459	-4.62	55.45	0		3	1	
+sl	Sierra Leone	Freetown	Africa	8640000	71740	8.48	-13.23	0	gn lr	3	1	
+so	Somalia	Mogadishu	Africa	19000000	637657	2.05	45.32	0	dj et ke	2	1	
+za	South Africa	Pretoria	Africa	64000000	1221037	-25.75	28.19	0	na bw zw mz sz ls	1	0	
+ss	South Sudan	Juba	Africa	11940000	619745	4.85	31.58	1	sd et ke ug cd cf	3	1	
+sd	Sudan	Khartoum	Africa	50400000	1886068	15.50	32.56	0	eg ly td cf ss et er	2	1	
+tz	Tanzania	Dodoma	Africa	68600000	945087	-6.16	35.75	0	ke ug rw bi cd zm mw mz	2	1	
+tg	Togo	Lome	Africa	9520000	56785	6.13	1.22	0	gh bf bj	3	1	
+tn	Tunisia	Tunis	Africa	12280000	163610	36.81	10.18	0	dz ly	2	1	
+ug	Uganda	Kampala	Africa	50000000	241550	0.35	32.58	1	ke ss cd rw tz	2	1	
+zm	Zambia	Lusaka	Africa	21300000	752612	-15.39	28.32	1	cd tz mw mz zw bw na ao	2	1	
+zw	Zimbabwe	Harare	Africa	16600000	390757	-17.83	31.05	1	zm mz za bw	2	1	
+ag	Antigua and Barbuda	Saint John's	North America	94000	442	17.12	-61.85	0		3	1	
+bs	The Bahamas	Nassau	North America	400000	13943	25.05	-77.35	0		2	1	
+bb	Barbados	Bridgetown	North America	282000	430	13.10	-59.62	0		3	1	
+bz	Belize	Belmopan	North America	418000	22966	17.25	-88.77	0	mx gt	3	1	
+ca	Canada	Ottawa	North America	40100000	9984670	45.42	-75.70	0	us	1	1	dk
+cr	Costa Rica	San Jose	North America	5130000	51100	9.93	-84.09	0	ni pa	2	1	
+cu	Cuba	Havana	North America	10980000	109884	23.11	-82.37	0		1	1	us
+dm	Dominica	Roseau	North America	66000	751	15.30	-61.39	0		3	1	
+do	The Dominican Republic	Santo Domingo	North America	11430000	48671	18.49	-69.93	0	ht	2	1	
+sv	El Salvador	San Salvador	North America	6340000	21041	13.69	-89.22	0	gt hn	2	1	
+gd	Grenada	Saint George's	North America	117000	344	12.06	-61.75	0		3	1	
+gt	Guatemala	Guatemala City	North America	18400000	108889	14.63	-90.51	0	mx bz hn sv	2	1	
+ht	Haiti	Port-au-Prince	North America	11770000	27750	18.59	-72.31	0	do	2	1	
+hn	Honduras	Tegucigalpa	North America	10830000	112492	14.07	-87.19	0	gt sv ni	2	1	
+jm	Jamaica	Kingston	North America	2840000	10991	17.97	-76.79	0		1	1	
+mx	Mexico	Mexico City	North America	130900000	1964375	19.43	-99.13	0	us gt bz	1	1	
+ni	Nicaragua	Managua	North America	6920000	130373	12.11	-86.24	0	hn cr	2	1	
+pa	Panama	Panama City	North America	4520000	75417	8.98	-79.52	0	cr co	2	1	
+kn	Saint Kitts and Nevis	Basseterre	North America	47000	261	17.30	-62.72	0		3	1	
+lc	Saint Lucia	Castries	North America	180000	617	14.01	-60.99	0		3	1	
+vc	Saint Vincent and the Grenadines	Kingstown	North America	101000	389	13.16	-61.22	0		3	1	
+tt	Trinidad and Tobago	Port of Spain	North America	1500000	5130	10.65	-61.51	0		3	1	
+us	The United States	Washington, D.C.	North America	345400000	9833520	38.91	-77.04	0	ca mx	1	1	cu
+ar	Argentina	Buenos Aires	South America	45700000	2780400	-34.60	-58.38	0	cl bo py br uy	1	1	
+bo	Bolivia	Sucre	South America	12400000	1098581	-19.05	-65.26	1	br py ar cl pe	2	0	
+br	Brazil	Brasilia	South America	211900000	8515767	-15.79	-47.88	0	uy ar py bo pe co ve gy sr fr	1	1	
+cl	Chile	Santiago	South America	19760000	756102	-33.45	-70.67	0	pe bo ar	1	1	
+co	Colombia	Bogota	South America	52900000	1141748	4.71	-74.07	0	pa ve br pe ec	1	1	
+ec	Ecuador	Quito	South America	18140000	283561	-0.18	-78.47	0	co pe	2	1	
+gy	Guyana	Georgetown	South America	830000	214969	6.80	-58.16	0	ve br sr	3	1	
+py	Paraguay	Asuncion	South America	6930000	406752	-25.26	-57.58	1	bo br ar	2	1	
+pe	Peru	Lima	South America	34200000	1285216	-12.05	-77.04	0	ec co br bo cl	1	1	
+sr	Suriname	Paramaribo	South America	635000	163820	5.85	-55.20	0	gy br fr	3	1	
+uy	Uruguay	Montevideo	South America	3390000	176215	-34.90	-56.16	0	ar br	2	1	
+ve	Venezuela	Caracas	South America	28400000	916445	10.48	-66.90	0	co br gy	1	1	
+au	Australia	Canberra	Oceania	26700000	7741220	-35.28	149.13	0		1	1	
+fj	Fiji	Suva	Oceania	930000	18274	-18.14	178.44	0		2	1	
+ki	Kiribati	Tarawa	Oceania	134000	811	1.33	172.98	0		3	1	
+mh	The Marshall Islands	Majuro	Oceania	38000	181	7.09	171.38	0		3	1	
+fm	Micronesia	Palikir	Oceania	113000	702	6.92	158.16	0		3	1	
+nr	Nauru	Yaren	Oceania	12000	21	-0.55	166.92	0		3	0	
+nz	New Zealand	Wellington	Oceania	5210000	268838	-41.29	174.78	0		1	1	
+pw	Palau	Ngerulmud	Oceania	18000	459	7.50	134.62	0		3	1	
+pg	Papua New Guinea	Port Moresby	Oceania	10580000	462840	-9.44	147.18	0	id	2	1	
+ws	Samoa	Apia	Oceania	218000	2842	-13.83	-171.76	0		3	1	
+sb	The Solomon Islands	Honiara	Oceania	820000	28896	-9.43	159.95	0		3	1	
+to	Tonga	Nuku'alofa	Oceania	104000	747	-21.14	-175.20	0		3	1	
+tv	Tuvalu	Funafuti	Oceania	10000	26	-8.52	179.20	0		3	1	
+vu	Vanuatu	Port Vila	Oceania	327000	12189	-17.73	168.32	0		3	1	

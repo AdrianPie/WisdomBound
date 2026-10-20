@@ -1,0 +1,25 @@
+# Panstwa i regiony Azji (z Bliskim Wschodem i azjatycka Rosja): dawne nazwy, przydomki, regiony,
+# ciekawostki o krajach. Przyroda i miasta maja swoje dzialy.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+geo_persja	Easy	Which country was known as Persia until 1935?	Iran	Iraq	Turkey	Afghanistan
+geo_kraj_wschodzacego_slonca	Easy	Which country is known as 'the Land of the Rising Sun'?	Japan	China	South Korea	Thailand
+geo_vast_region_makes	Easy	Which vast region makes up most of Russia's Asian part?	Siberia	Mongolia	Manchuria	Kamchatka
+geo_country_home_komodo	Easy	Which country is home to the Komodo dragon?	Indonesia	Philippines	Malaysia	Australia
+wh_jedwabny_szlak	Medium	Which two regions did the Silk Road connect?	China and Europe	India and Africa	Persia and Scandinavia	Japan and America
+geo_syjam	Medium	Which country was known as Siam until 1939?	Thailand	Vietnam	Cambodia	Laos
+geo_tygrysy_indie	Medium	Which country is home to the most wild tigers?	India	Russia	Indonesia	Bangladesh
+geo_kapadocja	Medium	In which country is Cappadocia, famous for its 'fairy chimneys' and balloon flights?	Turkey	Greece	Morocco	Jordan
+geo_country_nicknamed_land	Medium	Which country is nicknamed 'the Land of Smiles'?	Thailand	Vietnam	The Philippines	Malaysia
+geo_country_burma_until	Medium	Which country was known as Burma until 1989?	Myanmar	Thailand	Cambodia	Laos
+geo_goa_former_portuguese	Medium	Goa, a former Portuguese colony, is now part of which country?	India	Sri Lanka	Bangladesh	Brazil
+geo_largest_country_middle	Medium	Which is the largest country in the Middle East?	Saudi Arabia	Iran	Iraq	Turkey
+geo_turkey_territory_lies	Medium	Most of Turkey's territory lies on which continent?	Asia	Europe	Africa	Both equally
+geo_country_nicknamed_land_2	Medium	Which country is nicknamed 'the Land of Fire' for its burning gas vents?	Azerbaijan	Armenia	Georgia	Turkmenistan
+geo_largest_country_lying	Medium	Which is the largest country lying entirely in Asia?	China	India	Mongolia	Indonesia
+geo_landlocked_country_southeast	Medium	Which is the only landlocked country in Southeast Asia?	Laos	Cambodia	Myanmar	Thailand
+geo_cejlon	Hard	Which country was called Ceylon until 1972?	Sri Lanka	Bangladesh	Myanmar	Malaysia
+geo_wrota_piekiel	Hard	In which country does the 'Door to Hell' gas crater keep burning?	Turkmenistan	Kazakhstan	Iran	Azerbaijan
+geox_bhutan	Hard	Which Himalayan kingdom measures its progress in 'Gross National Happiness'?	Bhutan	Nepal	Tibet	Sikkim
+geoy_makau	Hard	Which former Portuguese territory in China is famous for its casinos?	Macau	Hong Kong	Shanghai	Taipei
+geo_country_land_thunder	Hard	Which country is known as 'the Land of the Thunder Dragon'?	Bhutan	Nepal	Tibet	Mongolia
+geo2_linia_wallace	Expert	What does the Wallace Line separate?	Asian fauna from Australian fauna	Pacific time zones	African tectonic plates	Humid climate from dry climate

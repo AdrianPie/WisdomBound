@@ -1,0 +1,60 @@
+# Kuchnie swiata: dania narodowe, sery, wina i inne napoje, przyprawy i uprawy (kto produkuje najwiecej).
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+geo_city_oktoberfest_beer	Easy	In which city is the Oktoberfest beer festival held?	Munich	Berlin	Vienna	Cologne
+geo_paella_rice_dish	Easy	Paella, a rice dish cooked in a wide pan, comes from which country?	Spain	Italy	Portugal	Greece
+geo_haggis_traditional_dish	Easy	Haggis is a traditional dish of which country?	Scotland	Ireland	Wales	Iceland
+geo_cheese_fondue_dish	Easy	Cheese fondue is a famous dish from which country?	Switzerland	Belgium	Austria	Norway
+geo_champagne_gets_region	Easy	Champagne gets its name from a region of which country?	France	Italy	Spain	Belgium
+geo_prosecco_sparkling_wine	Easy	Prosecco, a sparkling wine, comes from which country?	Italy	France	Spain	Portugal
+geo_camembert_cheese_comes	Easy	Camembert cheese comes from which country?	France	Switzerland	Belgium	Italy
+geo_pretzels_bratwurst_sausages	Easy	Pretzels and bratwurst sausages are classic foods of which country?	Germany	Poland	Austria	Czechia
+geo_country_city_porto	Easy	In which country is the city of Porto, home of port wine?	Portugal	Spain	Italy	Brazil
+geo_kimchi_spicy_fermented	Easy	Kimchi, spicy fermented cabbage, is a famous dish of which country?	Korea	Japan	China	Thailand
+geo_pad_thai_dish	Easy	Pad thai, a dish of stir-fried noodles, comes from which country?	Thailand	Vietnam	China	Japan
+geo_tiramisu_coffee_soaked	Easy	Tiramisu, a coffee-soaked dessert, comes from which country?	Italy	France	Spain	Austria
+geo_tzatziki_yoghurt_cucumber	Easy	Tzatziki, a yoghurt and cucumber dip, comes from which country?	Greece	Turkey	Italy	Spain
+geo_wiener_schnitzel_dish	Easy	Wiener schnitzel is a famous dish of which country?	Austria	Germany	Switzerland	Hungary
+geo_gouda_cheese_comes	Easy	Gouda cheese comes from which country?	The Netherlands	Belgium	France	Denmark
+geo_sangria_fruity_wine	Easy	Sangria, a fruity wine punch, comes from which country?	Spain	Italy	Greece	Portugal
+geo_mojito_cocktail_comes	Easy	The mojito cocktail comes from which country?	Cuba	Mexico	Brazil	Jamaica
+geo_scottish_dish_haggis	Easy	What is the Scottish dish haggis traditionally cooked in?	A sheep's stomach	A pig's bladder	A cow's intestine	A goat's skin
+geo_swiss_cheese_big	Easy	Which Swiss cheese is famous for its big holes?	Emmental	Gruyere	Raclette	Appenzeller
+geo_country_original_home	Easy	Which country is the original home of tacos and enchiladas?	Mexico	Spain	Peru	Argentina
+geo_country_tapas_small	Easy	Which country is famous for 'tapas', small shared dishes?	Spain	Portugal	Italy	Greece
+geo_country_home_pasta	Easy	Which country is the home of pasta carbonara?	Italy	France	Spain	Greece
+geo_country_pierogi_bigos	Easy	Which country is famous for 'pierogi', 'bigos' and 'zurek'?	Poland	Ukraine	Lithuania	Slovakia
+geo_country_baklava_kebab	Easy	Which country is famous for 'baklava', 'kebab' and 'Turkish delight'?	Turkey	Greece	Lebanon	Iran
+geo_french_city_gave	Easy	Which French city gave its name to a famous mustard?	Dijon	Nice	Lille	Toulouse
+geocmp_kawa_producent	Medium	Which country produces the most coffee?	Brazil	Colombia	Vietnam	Ethiopia
+day_najdrozsza_przyprawa	Medium	Which spice is the most expensive by weight?	Saffron	Vanilla	Cardamom	Black pepper
+geo_goulash_national_dish	Medium	Goulash is the national dish of which country?	Hungary	Austria	Czechia	Romania
+geo_pho_noodle_soup	Medium	Pho, a noodle soup, is the national dish of which country?	Vietnam	Thailand	Japan	China
+geo_poutine_chips_cheese	Medium	Poutine - chips with cheese curds and gravy - comes from which country?	Canada	The USA	Belgium	Ireland
+geo_ouzo_aniseed_spirit	Medium	Ouzo, an aniseed spirit, is the national drink of which country?	Greece	Italy	Turkey	Spain
+geo_rioja_wine_comes	Medium	Rioja wine comes from which country?	Spain	Italy	France	Portugal
+geo_island_country_produces	Medium	Which island country produces most of the world's vanilla?	Madagascar	Sri Lanka	Jamaica	Cuba
+geo_country_produces_olive	Medium	Which country produces the most olive oil?	Spain	Italy	Greece	Tunisia
+geo_kind_fish_unagi	Medium	What kind of fish is 'unagi' in Japanese cuisine?	Eel	Tuna	Salmon	Mackerel
+geo_smorgasbord_buffet_small	Medium	'Smorgasbord', a buffet of many small dishes, comes from which country?	Sweden	Denmark	Norway	Finland
+geo_ceviche_raw_fish	Medium	Ceviche, raw fish 'cooked' in lime juice, is the national dish of which country?	Peru	Mexico	Chile	Spain
+geo_feijoada_black_bean	Medium	Feijoada, a black bean stew with pork, is the national dish of which country?	Brazil	Portugal	Cuba	Argentina
+geo_couscous_made_grain	Medium	Couscous is made from which grain?	Durum wheat	Rice	Maize	Barley
+geo_chocolate_sachertorte_cake	Medium	The chocolate Sachertorte is a famous cake from which city?	Vienna	Salzburg	Munich	Zurich
+geo_mexican_dish_means	Medium	Which Mexican dish's name means 'little donkey'?	Burrito	Taco	Enchilada	Quesadilla
+geo_ingredient_must_every	Medium	Which ingredient must every kind of sushi contain?	Vinegared rice	Raw fish	Seaweed	Soy sauce
+geo_french_blue_cheese	Medium	Which French blue cheese is aged in natural caves?	Roquefort	Camembert	Brie	Comte
+geo_tom_yum_soup	Medium	'Tom yum' soup is a classic of which country's cuisine?	Thailand	Vietnam	Indonesia	Malaysia
+geo_middle_eastern_country	Medium	Which Middle Eastern country is famous for 'tabbouleh' and 'mezze'?	Lebanon	Iran	Iraq	Saudi Arabia
+geo_chili_con_carne	Medium	Chili con carne, despite its Spanish name, was born in which country?	United States	Mexico	Spain	Argentina
+geo_country_home_jerk	Medium	Which country is the home of 'jerk chicken'?	Jamaica	Cuba	Brazil	Trinidad and Tobago
+geo_country_cuisine_features	Medium	Which country's cuisine features 'injera', a spongy flatbread?	Ethiopia	Morocco	Nigeria	Kenya
+geo_country_biltong_dried	Medium	Which country does 'biltong', dried cured meat, come from?	South Africa	Australia	Argentina	Kenya
+geo_paprika_made	Medium	What is paprika made from?	Dried red peppers	Black peppercorns	Dried tomatoes	Saffron threads
+geo_pilsner_beer_czech	Medium	Pilsner beer is named after which Czech city?	Plzen	Prague	Brno	Ceske Budejovice
+geo_kawa_finlandia	Hard	Which country drinks the most coffee per person?	Finland	Italy	Brazil	The United States
+geo_czekolada_szwajcaria	Hard	Which country's people eat the most chocolate per person?	Switzerland	Belgium	The United States	France
+geo_kakao_wybrzeze	Hard	Which country produces the most cocoa beans?	Ivory Coast	Ghana	Brazil	Switzerland
+geo_banany_indie	Hard	Which country grows the most bananas?	India	Ecuador	Brazil	The Philippines
+geo_tokaji_sweet_wine	Hard	Tokaji, a famous sweet wine, comes from which country?	Hungary	Austria	Germany	Croatia
+geo_country_caesar_salad	Hard	In which country was the Caesar salad invented?	Mexico	Italy	United States	Spain
+geo_czekoladowe_wzgorza	Expert	In which country are the 'Chocolate Hills'?	The Philippines	Indonesia	Malaysia	Vietnam

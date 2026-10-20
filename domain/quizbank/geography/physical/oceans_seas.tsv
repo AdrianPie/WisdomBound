@@ -1,0 +1,41 @@
+# Oceany, morza, ciesniny, zatoki, kanaly, rafy, prady morskie i glebiny.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+geo2_morze_wlochy	Easy	On which sea does Venice sit?	The Adriatic	The Tyrrhenian Sea	The Aegean Sea	The Black Sea
+lmk_wielka_rafa	Easy	Off the coast of which country is the Great Barrier Reef?	Australia	Indonesia	The Philippines	Fiji
+geo_trojkat_bermudzki	Easy	In which ocean is the Bermuda Triangle?	The Atlantic	The Pacific	The Indian Ocean	The Arctic Ocean
+geox_oceany	Easy	How many oceans are commonly named on Earth today?	Five	Three	Four	Seven
+geo_sea_island_jamaica	Easy	In which sea does the island of Jamaica lie?	The Caribbean Sea	The Gulf of Mexico	The Sargasso Sea	The Mediterranean
+geo_ocean_lies_between	Easy	Which ocean lies between Africa and Australia?	The Indian Ocean	The Pacific Ocean	The Atlantic Ocean	The Southern Ocean
+geo_sea_lies_between	Easy	Which sea lies between Great Britain and Scandinavia?	The North Sea	The Baltic Sea	The Irish Sea	The Norwegian Sea
+geo_ocean_hawaiian_islands	Easy	In which ocean are the Hawaiian Islands?	Pacific	Atlantic	Indian	Arctic
+geo_ocean_madagascar	Easy	In which ocean is Madagascar?	Indian	Atlantic	Pacific	Southern
+geo_ocean_iceland	Easy	In which ocean is Iceland?	Atlantic	Arctic	Pacific	Indian
+geo_sea_island_nation	Easy	In which sea is the island nation of Malta?	The Mediterranean	The Adriatic	The Aegean	The Black Sea
+geo_sea_nile_flow	Easy	Into which sea does the Nile flow?	The Mediterranean	The Red Sea	The Arabian Sea	The Indian Ocean
+geo2_kanal_sueski	Medium	Which seas does the Suez Canal connect?	The Mediterranean with the Red Sea	The Baltic with the North Sea	The Black Sea with the Aegean	The Pacific with the Atlantic
+geo2_kanal_panamski	Medium	Which oceans does the Panama Canal connect?	The Atlantic with the Pacific	The Pacific with the Indian Ocean	The Atlantic with the Arctic	The Indian with the Southern Ocean
+geo2_ciesnina_bering	Medium	What does the Bering Strait separate?	Asia from North America	Europe from Africa	Australia from Asia	Greenland from Canada
+geocmp_nie_srodziemne	Medium	Which of these countries does NOT border the Mediterranean Sea?	Portugal	Spain	France	Italy
+geocmp_nie_baltyk	Medium	Which of these countries does NOT have a Baltic Sea coast?	Belarus	Latvia	Lithuania	Estonia
+geocmp_najglebszy_punkt	Medium	In which ocean is the deepest known point on Earth?	The Pacific	The Atlantic	The Indian Ocean	The Arctic Ocean
+lmk_ciesnina_gibraltar	Medium	Which strait separates Europe from Africa at its narrowest point?	The Strait of Gibraltar	The Bosphorus	The Strait of Messina	The Dardanelles
+lmk_morze_wlochy_balkany	Medium	Which sea lies between Italy and the Balkan peninsula?	The Adriatic Sea	The Ionian Sea	The Aegean Sea	The Tyrrhenian Sea
+ext_rowu_glebokosc	Medium	If Mount Everest were dropped into the Mariana Trench, what would happen?	Its peak would still be underwater	It would stick out by a kilometre	It would fit exactly	It would stick out by half
+geo_ha_long	Medium	In which country is Ha Long Bay, with its thousands of limestone islands?	Vietnam	Thailand	The Philippines	China
+geox_eurotunel	Medium	The Channel Tunnel links England with which country?	France	Belgium	The Netherlands	Ireland
+geox_morze_czarne	Medium	Which sea is bordered by Turkey, Ukraine, Romania and Georgia?	The Black Sea	The Caspian Sea	The Red Sea	The Aegean Sea
+geoy_zatoka_perska	Medium	Which body of water lies between Iran and the Arabian Peninsula?	The Persian Gulf	The Red Sea	The Caspian Sea	The Gulf of Aden
+geo_sea_separates_africa	Medium	Which sea separates Africa from the Arabian Peninsula?	The Red Sea	The Arabian Sea	The Dead Sea	The Persian Gulf
+geo_sea_lies_between_2	Medium	Which sea lies between Greece and Turkey?	The Aegean Sea	The Adriatic Sea	The Black Sea	The Ionian Sea
+geo_bay_lies_between	Medium	Which bay lies between western France and northern Spain?	The Bay of Biscay	The Bay of Naples	The Gulf of Lion	The Bay of Bengal
+geo_narrow_strait_links	Medium	Which narrow strait links the Persian Gulf to the open ocean?	Strait of Hormuz	Bab-el-Mandeb	Strait of Malacca	Suez Canal
+geo_strait_between_malaysia	Medium	Which strait between Malaysia and Sumatra is one of the busiest shipping lanes?	Strait of Malacca	Strait of Hormuz	Sunda Strait	Torres Strait
+geo_largest_bay_world	Medium	Which is the largest bay in the world?	Bay of Bengal	Hudson Bay	Bay of Biscay	Gulf of Mexico
+geo3_prad_golfsztrom	Hard	What is the warm ocean current warming Western Europe called?	The Gulf Stream	The Humboldt Current	The Labrador Current	The California Current
+trv_sargassowe	Hard	Which sea has no coastline at all, being bounded only by ocean currents?	The Sargasso Sea	The Caspian Sea	The Coral Sea	The Tasman Sea
+lmk_bosfor_laczy	Hard	Which strait connects the Black Sea with the Sea of Marmara?	The Bosphorus	The Dardanelles	The Strait of Kerch	The Strait of Otranto
+dpt_geo_morze_tasmana	Hard	Which sea lies between Australia and New Zealand?	The Tasman Sea	The Coral Sea	The Timor Sea	The Arafura Sea
+geo_punkt_nemo	Hard	Point Nemo, the spot farthest from any land, lies in which ocean?	The Pacific	The Atlantic	The Indian Ocean	The Arctic Ocean
+geo_row_marianski	Expert	What is the deepest point in the oceans called?	Challenger Deep	Tonga Trench	Java Trench	Milwaukee Deep
+geo_grzbiet_srodoceaniczny	Expert	Which is the longest mountain range on Earth?	The mid-ocean ridge	The Andes	The Himalayas	The Rocky Mountains
+geo_atlantyk_slony	Expert	Which ocean is the saltiest?	The Atlantic	The Pacific	The Indian Ocean	The Arctic Ocean

@@ -93,6 +93,11 @@ enum class QuizCategory(
  *
  * [section] to sciezka dzialu ("history/antiquity/roman_empire") w temacie podzielonym na dzialy,
  * a null w temacie bez podzialu - patrz [QuizSection].
+ *
+ * [generated] = pytanie zbudowane przy losowaniu z tabeli danych (flagi, dane o panstwach - patrz
+ * [com.lernhero.domain.quiz.bank.CountryQuestions]), a nie wpisane do TSV. Tresc jest wtedy wzorem
+ * wspolnym dla wielu pytan ("Which of these countries has the largest population?"), a odpowiedzi
+ * to nazwy z jednej puli, wiec testy tresci (powtorki, dlugosc odpowiedzi, ten sam fakt) je pomijaja.
  */
 data class QuizEntry(
     val id: String,
@@ -102,7 +107,8 @@ data class QuizEntry(
     val category: QuizCategory,
     val difficulty: QuizDifficulty,
     val flagCode: String? = null,
-    val section: String? = null
+    val section: String? = null,
+    val generated: Boolean = false
 ) {
     val answers: List<String> get() = listOf(correct) + wrong
 }

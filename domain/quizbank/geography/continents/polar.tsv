@@ -1,0 +1,16 @@
+# Arktyka, Antarktyda, Grenlandia, bieguny, lodowce i zycie na dalekiej polnocy.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+geocmp_najzimniejszy_kontynent	Easy	Which is the coldest continent?	Antarctica	Asia	Europe	North America
+geo_grenlandia_dania	Easy	Greenland is an autonomous territory of which country?	Denmark	Norway	Canada	Iceland
+geox_polnocne_slonce	Easy	In the far north of Norway, the Sun stays up all night in summer. What is this called?	The midnight sun	The polar night	The green flash	The solstice glow
+geo_ocean_surrounds_antarctica	Easy	Which ocean surrounds Antarctica?	The Southern Ocean	The Arctic Ocean	The Indian Ocean	The Pacific Ocean
+trv_pustynia_zimna	Medium	Counting cold deserts, which is the largest desert on Earth?	Antarctica	The Sahara	The Gobi	The Arabian Desert
+wld_najwieksza_wyspa	Medium	What is the largest island in the world (not counting Australia)?	Greenland	New Guinea	Borneo	Madagascar
+geox_ocean_najmniejszy	Medium	Which is the smallest of the world's oceans?	The Arctic Ocean	The Indian Ocean	The Southern Ocean	The Atlantic Ocean
+geox_biegun_polnocny	Medium	What lies beneath the ice at the North Pole?	Ocean	Solid rock	An island	A frozen lake
+geoy_biegun_poludniowy	Medium	What lies beneath the ice at the South Pole?	A continent of rock	Open ocean	A frozen lake	Nothing but ice
+geo_stormy_stretch_sea	Medium	Which stormy stretch of sea lies between South America and Antarctica?	Drake Passage	Bass Strait	Ross Sea	Magellan Gulf
+geox_antarktyda_mroz	Hard	Where was the lowest natural temperature on Earth recorded?	Antarctica	Siberia	Greenland	Alaska
+geo2_najwiekszy_ladolod	Expert	Where is the world's largest ice sheet?	Antarctica	Greenland	Alaska	The Himalayas
+ext_wyspa_grenlandia	Expert	Greenland's ice sheet is thick enough to have done what to the land beneath?	Pushed its centre below sea level	Raised it into a plateau	Split it into two islands	Left it perfectly flat
+geo_vinson	Expert	What is the highest mountain in Antarctica?	Vinson Massif	Mount Erebus	Mount Kirkpatrick	Mount Terror

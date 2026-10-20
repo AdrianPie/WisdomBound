@@ -1,0 +1,31 @@
+# Panstwa i regiony Europy: ksztalty, przydomki, regiony, ciekawostki o krajach. Rzeki, gory, wyspy i miasta
+# maja swoje dzialy - tu zostaje to, co dotyczy samego kraju albo regionu.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+geocmp_ludnosc_ue	Easy	Which is the most populous country in the European Union?	Germany	France	Italy	Spain
+geocmp_nie_ue	Easy	Which of these countries is NOT a member of the European Union?	Norway	Sweden	Finland	Denmark
+geo_wlochy_but	Easy	Which country is shaped like a boot?	Italy	Greece	Portugal	Croatia
+geo_holandia_tulipany	Easy	Which European country is famous for tulips, windmills and canals?	The Netherlands	Belgium	Denmark	Switzerland
+geo_tiny_country_french	Easy	Which tiny country on the French Riviera is famous for its Monte Carlo casino?	Monaco	Andorra	Liechtenstein	San Marino
+geo_country_land_fire	Easy	Which country is called 'the land of fire and ice'?	Iceland	Norway	Greenland	Finland
+geo_countries_make_united	Easy	How many countries make up the United Kingdom?	Four	Three	Five	Two
+geo_part_united_kingdom	Easy	Which part of the United Kingdom is NOT on the island of Great Britain?	Northern Ireland	Wales	Scotland	England
+geo_country_region_tuscany	Easy	In which country is the region of Tuscany?	Italy	Spain	France	Portugal
+geo_country_region_andalusia	Easy	In which country is the region of Andalusia?	Spain	Portugal	Italy	Greece
+geo_country_ring_kerry	Easy	In which country is the Ring of Kerry, a famous scenic route?	Ireland	Scotland	Wales	New Zealand
+geocmp_nie_nordyckie	Medium	Which of these countries is NOT a Nordic country?	Estonia	Norway	Sweden	Denmark
+trv_islandia_lodowce	Medium	Which country gets most of its electricity from geothermal and hydro power?	Iceland	Ireland	Belgium	Greece
+lmk_dolina_loary	Medium	In which country is the Loire Valley, famous for its chateaux?	France	Belgium	Switzerland	Spain
+geo_transylwania	Medium	In which country is the region of Transylvania?	Romania	Hungary	Bulgaria	Serbia
+geox_holandia	Medium	Roughly what share of the Netherlands lies below sea level?	About a quarter	Almost none	About 90%	Exactly half
+geo_tiny_country_lies	Medium	Which tiny country lies high in the mountains between France and Spain?	Andorra	Monaco	Liechtenstein	San Marino
+geo_gibraltar_southern_tip	Medium	Gibraltar, at the southern tip of Spain, is a territory of which country?	Britain	Spain	Portugal	Morocco
+geo_country_often_hexagon	Medium	Which country is often called 'the Hexagon' because of its shape?	France	Spain	Germany	Poland
+geo_countries_make_benelux	Medium	Which countries make up the Benelux?	Belgium, the Netherlands, Luxembourg	Belgium, Denmark, Luxembourg	Britain, the Netherlands, Luxembourg	Belgium, the Netherlands, Liechtenstein
+geo_three_countries_baltic	Medium	Which three countries are known as the Baltic States?	Estonia, Latvia and Lithuania	Finland, Estonia and Latvia	Latvia, Lithuania and Belarus	Estonia, Lithuania and Poland
+geo_country_santiago_compostela	Medium	In which country is Santiago de Compostela, where the famous Camino pilgrimage ends?	Spain	Portugal	Chile	France
+geo_largest_country_scandinavia	Medium	Which is the largest country in Scandinavia by area?	Sweden	Norway	Finland	Denmark
+geo_tiny_country_lies_2	Medium	Which tiny country lies between Switzerland and Austria?	Liechtenstein	Luxembourg	Andorra	Monaco
+geo_european_countries_cars	Medium	In which of these European countries do cars drive on the left?	Ireland	Portugal	Netherlands	Denmark
+geo_country_calls_itself	Medium	Which country calls itself the 'Land of the Eagles'?	Albania	Montenegro	Serbia	Kosovo
+geocmp_panstwo_ue_pow	Hard	Which is the largest European Union country by area?	France	Spain	Sweden	Germany
+trv_ukraina_europa	Hard	Which is the largest country lying entirely within Europe?	Ukraine	France	Spain	Germany

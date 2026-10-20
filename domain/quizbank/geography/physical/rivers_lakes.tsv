@@ -1,0 +1,90 @@
+# Rzeki (takze: jaka rzeka plynie przez miasto), jeziora, wodospady, delty i tamy.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+geocmp_rzeka_najdluzsza	Easy	Which of these rivers is the longest?	The Nile	The Danube	The Volga	The Rhine
+trv_amazonka_ocean	Easy	Into which ocean does the Amazon River flow?	The Atlantic	The Pacific	The Indian Ocean	The Caribbean Sea
+trv_dunaj_nie	Easy	Through which of these countries does the Danube NOT flow?	Poland	Austria	Hungary	Germany
+lmk_rzeka_paryz	Easy	Which river flows through Paris?	The Seine	The Loire	The Rhone	The Garonne
+lmk_rzeka_londyn	Easy	Which river flows through London?	The Thames	The Severn	The Mersey	The Trent
+lmk_rzeka_egipt_delta	Easy	On which river does Cairo lie?	The Nile	The Euphrates	The Jordan	The Tigris
+geox_niagara	Easy	Niagara Falls lies on the border between which two countries?	The USA and Canada	The USA and Mexico	Canada and Greenland	Brazil and Argentina
+geox_mississippi	Easy	Which great river flows past New Orleans into the Gulf of Mexico?	The Mississippi	The Missouri	The Ohio	The Colorado
+geox_loch_ness	Easy	In which country is Loch Ness, home of the legendary monster?	Scotland	Ireland	Wales	Norway
+geo_country_lake_como	Easy	In which country is Lake Como?	Italy	Switzerland	France	Austria
+geo_river_sacred_hindus	Easy	Which river is sacred to Hindus?	The Ganges	The Indus	The Mekong	The Brahmaputra
+geo_chinese_dam_world	Easy	Which Chinese dam is the world's biggest power station?	Three Gorges Dam	Hoover Dam	Itaipu Dam	Aswan High Dam
+geo2_wodospad_wiktorii	Medium	Victoria Falls lies on the border of which two countries?	Zambia and Zimbabwe	Kenya and Tanzania	South Africa and Botswana	Uganda and Rwanda
+wh_mezopotamia_rzeki	Medium	Between which rivers did Mesopotamia lie?	The Euphrates and the Tigris	The Nile and the Jordan	The Indus and the Ganges	The Danube and the Rhine
+geocmp_najbardziej_slone	Medium	Which of these bodies of water is the saltiest?	The Dead Sea	The Red Sea	The Mediterranean Sea	The Baltic Sea
+trv_morze_martwe_lezy	Medium	Which is the lowest point on land?	The shore of the Dead Sea	Death Valley	The Caspian shore	Lake Eyre
+lmk_morze_martwe_kraje	Medium	The Dead Sea lies between Israel and which other country?	Jordan	Egypt	Syria	Lebanon
+lmk_jezioro_afryka_najwieksze	Medium	Which is the largest lake in Africa by area?	Lake Victoria	Lake Tanganyika	Lake Malawi	Lake Chad
+lmk_rzeka_wieden_budapeszt	Medium	Which river flows through both Vienna and Budapest?	The Danube	The Rhine	The Elbe	The Vltava
+cur_kanada_jeziora	Medium	Which country has the most lakes in the world?	Canada	Finland	Russia	Sweden
+wld_geo_nil_kierunek	Medium	In which direction does the Nile flow?	North	South	East	West
+geo_finlandia_jeziora	Medium	Which country is nicknamed 'the land of a thousand lakes'?	Finland	Canada	Sweden	Norway
+geo_jezioro_gorne	Medium	Which is the largest of North America's Great Lakes?	Lake Superior	Lake Michigan	Lake Huron	Lake Ontario
+geo_rio_grande	Medium	Which river forms much of the border between the USA and Mexico?	The Rio Grande	The Colorado	The Pecos	The Gila
+geox_jangcy	Medium	Which is the longest river in Asia?	The Yangtze	The Yellow River	The Mekong	The Ganges
+geox_ren	Medium	Which river flows through Switzerland, Germany and the Netherlands to the North Sea?	The Rhine	The Danube	The Elbe	The Rhone
+geox_amazonka_woda	Medium	Which river carries more water than any other in the world?	The Amazon	The Nile	The Congo	The Yangtze
+geo_river_flows_through	Medium	Which river flows through Rome?	The Tiber	The Po	The Arno	The Danube
+geo_river_flows_through_2	Medium	Which river flows through Moscow?	The Moskva	The Volga	The Don	The Neva
+geo_river_jesus_baptised	Medium	In which river was Jesus baptised, according to the Gospels?	The Jordan	The Nile	The Euphrates	The Tigris
+geo_longest_river_united	Medium	Which is the longest river in the United Kingdom?	The Severn	The Thames	The Trent	The Tay
+geo_longest_river_france	Medium	Which is the longest river in France?	The Loire	The Seine	The Rhone	The Garonne
+geo_longest_river_italy	Medium	Which is the longest river in Italy?	The Po	The Tiber	The Arno	The Adige
+geo_great_lakes_lies	Medium	Which of the Great Lakes lies entirely within the United States?	Lake Michigan	Lake Superior	Lake Huron	Lake Ontario
+geo_niagara_falls_lies	Medium	Niagara Falls lies on the river flowing from Lake Erie into which lake?	Lake Ontario	Lake Huron	Lake Michigan	Lake Superior
+geo_river_flows_through_9	Medium	Which river flows through Kyiv?	Dnieper	Don	Volga	Dniester
+geo_chinese_river_nicknamed	Medium	Which Chinese river is nicknamed 'China's Sorrow' because of its deadly floods?	Yellow River	Yangtze	Pearl River	Mekong
+geo_victoria_falls_lies	Medium	Victoria Falls lies on which African river?	Zambezi	Limpopo	Orange	Niger
+geo_river_flows_through_10	Medium	Which river flows through Hamburg?	Elbe	Rhine	Weser	Oder
+geo_lake_constance_shared	Medium	Lake Constance is shared by Germany, Switzerland and which other country?	Austria	France	Italy	Liechtenstein
+geo_largest_lake_italy	Medium	Which is the largest lake in Italy?	Lake Garda	Lake Maggiore	Lake Trasimeno	Lake Bolsena
+geo_longest_river_australia	Medium	What is the longest river in Australia?	Murray	Snowy	Fitzroy	Burdekin
+geo_river_forms_border	Medium	Which river forms much of the border between Germany and Poland?	Oder	Elbe	Vistula	Spree
+geo_river_flows_through_11	Medium	Which river flows through Saint Petersburg?	Neva	Volga	Moskva	Don
+geo_river_flows_through_12	Medium	Which river flows through Glasgow?	Clyde	Tay	Forth	Tweed
+geo_river_flows_through_13	Medium	Which river flows through Liverpool?	Mersey	Tyne	Severn	Trent
+geo_river_gave_city	Medium	Which river gave the city of Cambridge its name?	Cam	Isis	Ouse	Trent
+geo_river_flows_through_14	Medium	Which river flows through Seoul?	Han	Yalu	Mekong	Yangtze
+geo_river_hoover_dam	Medium	On which river was the Hoover Dam built?	Colorado	Columbia	Missouri	Rio Grande
+geo_largest_loch_scotland	Medium	What is the largest loch in Scotland by area?	Loch Lomond	Loch Ness	Loch Tay	Loch Awe
+geo_country_danube_begin	Medium	In which country does the Danube begin?	Germany	Austria	Switzerland	Hungary
+geo_bajkal	Hard	Which lake is the deepest in the world?	Baikal	Tanganyika	Caspian Sea	Superior
+geo2_jezioro_powierzchnia	Hard	Which lake has the largest surface area in the world?	The Caspian Sea	Lake Superior	Lake Baikal	Lake Victoria
+geo2_najwyzszy_wodospad	Hard	Which waterfall is the highest in the world?	Angel Falls	Niagara Falls	Iguazu Falls	Victoria Falls
+geo2_najdluzsza_rzeka_europy	Hard	Which river is the longest in Europe?	The Volga	The Danube	The Rhine	The Dnieper
+geo2_morze_aralskie	Hard	What happened to the Aral Sea in the 20th century?	It shrank to a fraction of its former size	It doubled in size	It froze permanently	It merged with the Black Sea
+trv_dunaj_kraje	Hard	Which river flows through the most countries?	The Danube	The Rhine	The Nile	The Amazon
+lmk_blekitny_nil_zrodlo	Hard	In which country does the Blue Nile rise?	Ethiopia	Sudan	Uganda	Kenya
+lmk_delta_dunaju	Hard	In which country is the Danube delta?	Romania	Bulgaria	Ukraine	Serbia
+lmk_jezioro_wiktorii_kraje	Hard	Lake Victoria is shared by Uganda, Kenya and which third country?	Tanzania	Rwanda	Burundi	Sudan
+ext_wodospad_podwodny	Hard	The largest waterfall on the planet is found where?	Underwater	In Venezuela	On the Zambezi	In Norway
+ext_jezioro_bajkal	Hard	Which lake holds about a fifth of the world's unfrozen fresh water?	Lake Baikal	Lake Superior	Lake Victoria	Lake Tanganyika
+ext_amazonka_most	Hard	How many bridges cross the main stretch of the Amazon River?	None	Three	Around twenty	Over a hundred
+dpt_geo_kolorado_kanion	Hard	Which river carved the Grand Canyon?	The Colorado	The Rio Grande	The Snake River	The Columbia
+geo_missouri	Hard	Which is the longest river in the United States?	The Missouri	The Mississippi	The Colorado	The Rio Grande
+geo_plitwickie	Hard	In which country are the Plitvice Lakes?	Croatia	Slovenia	Montenegro	Bosnia and Herzegovina
+geo_iguazu	Hard	Iguazu Falls lies on the border of Argentina and which other country?	Brazil	Paraguay	Uruguay	Chile
+geox_mekong	Hard	Which great river flows through Laos, Cambodia and Vietnam to the sea?	The Mekong	The Irrawaddy	The Yangtze	The Salween
+geox_egipt_nil	Hard	Roughly what share of Egypt's people live along the Nile and its delta?	About 95%	About 50%	About 25%	About 75%
+geo_river_flows_through_3	Hard	Which river flows through Baghdad?	The Tigris	The Euphrates	The Jordan	The Nile
+geo_river_flows_through_4	Hard	Which river flows through Dublin?	The Liffey	The Shannon	The Boyne	The Thames
+geo_river_flows_through_5	Hard	Which river flows through Lisbon?	The Tagus	The Douro	The Ebro	The Guadalquivir
+geo_river_flows_through_6	Hard	Which river flows through Prague?	The Vltava	The Danube	The Elbe	The Oder
+geo_country_perito_moreno	Hard	In which country is the Perito Moreno Glacier, famous for huge chunks crashing into a lake?	Argentina	Chile	Iceland	Norway
+geo_lake_main_source	Hard	Which lake is the main source of the White Nile?	Lake Victoria	Lake Tanganyika	Lake Chad	Lake Malawi
+geo_river_flows_through_7	Hard	Which river flows through Berlin?	The Spree	The Rhine	The Elbe	The Oder
+geo_river_flows_through_8	Hard	Which river flows through Florence?	The Arno	The Tiber	The Po	The Adige
+geo_country_lake_bled	Hard	In which country is Lake Bled, with a church on its tiny island?	Slovenia	Austria	Croatia	Switzerland
+geo_largest_lake_entirely	Hard	Which is the largest lake entirely in Europe?	Lake Ladoga	Lake Geneva	Lake Constance	Lake Vanern
+geo_hungarian_lake_largest	Hard	Which Hungarian lake is the largest in Central Europe?	Lake Balaton	Lake Neusiedl	Lake Bled	Lake Ohrid
+geo_kraj_bez_rzek	Expert	Which of these countries has not a single permanent river?	Saudi Arabia	Mongolia	Kazakhstan	Iran
+geo_titicaca	Expert	Lake Titicaca lies on the border of which two countries?	Peru and Bolivia	Chile and Argentina	Ecuador and Colombia	Brazil and Paraguay
+geo2_kaldera_toba	Expert	Where is Lake Toba, formed by a giant caldera?	On Sumatra	On Java	In Japan	In New Zealand
+geo2_rzeka_kongo	Expert	Which river is the deepest in the world?	The Congo	The Amazon	The Yangtze	The Mississippi
+geo3_delta_ganges	Expert	Which river delta is considered the largest in the world?	The Ganges-Brahmaputra Delta	The Nile Delta	The Mississippi Delta	The Amazon Delta
+lmk_okawango_kraj	Expert	In which country is the Okavango Delta?	Botswana	Namibia	Zambia	Angola
+mst_wyspa_w_jeziorze	Expert	Which country contains the largest island within a lake on an island?	Canada	Finland	Indonesia	New Zealand
+geo_kongo_rownik	Expert	Which great river crosses the equator twice?	The Congo	The Amazon	The Nile	The Niger

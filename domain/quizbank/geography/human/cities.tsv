@@ -1,0 +1,116 @@
+# Miasta (najwieksze, przydomki, dawne nazwy, polozenie) i slynne budowle, pomniki, muzea i ruiny.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+geocmp_miasto_najwieksze	Easy	Which of these metropolitan areas has the most inhabitants?	Tokyo	New York	London	Paris
+geocmp_nie_stolica	Easy	Which of these cities is NOT a national capital?	Zurich	Vienna	Prague	Warsaw
+trv_mumbai_dawniej	Easy	Which city was formerly known as Bombay?	Mumbai	Kolkata	Chennai	Delhi
+trv_stambul_dawniej	Easy	Which city was once called Constantinople?	Istanbul	Athens	Ankara	Sofia
+trv_australia_stolica_nie	Easy	Which of these is NOT the capital of its country?	Sydney	Canberra	Wellington	Ottawa
+lmk_tadz_mahal_kraj	Easy	In which country is the Taj Mahal?	India	Pakistan	Iran	Bangladesh
+lmk_brama_brandenburska	Easy	In which city is the Brandenburg Gate?	Berlin	Munich	Vienna	Hamburg
+lmk_chrystus_odkupiciel	Easy	In which country does the statue of Christ the Redeemer stand?	Brazil	Portugal	Argentina	Mexico
+lmk_stonehenge_kraj	Easy	In which country is Stonehenge?	The United Kingdom	Ireland	France	Denmark
+lmk_akropol_miasto	Easy	In which city is the Acropolis?	Athens	Rome	Istanbul	Alexandria
+lmk_mount_rushmore	Easy	In which country is Mount Rushmore?	The United States	Canada	Mexico	Australia
+geo_wielkie_jablko	Easy	Which city is nicknamed 'the Big Apple'?	New York City	Chicago	Los Angeles	Boston
+geo_burj_khalifa	Easy	In which city is the Burj Khalifa, the world's tallest building?	Dubai	Abu Dhabi	Doha	Riyadh
+geox_machu_picchu	Easy	In which country is Machu Picchu?	Peru	Bolivia	Ecuador	Colombia
+geox_golden_gate	Easy	In which city is the Golden Gate Bridge?	San Francisco	Los Angeles	Seattle	New York
+geox_opera_sydney	Easy	Which Australian city is famous for its Opera House with sail-shaped roofs?	Sydney	Melbourne	Brisbane	Perth
+geo_city_headquarters_united	Easy	In which city is the headquarters of the United Nations?	New York	Geneva	Washington, D.C.	Paris
+geo_city_home_european	Easy	Which city is home to most of the European Union's institutions?	Brussels	Strasbourg	Luxembourg	Geneva
+geo_city_statue_liberty	Easy	In which city is the Statue of Liberty?	New York	Boston	Washington, D.C.	Philadelphia
+geo_city_hollywood	Easy	In which city is Hollywood?	Los Angeles	San Francisco	Las Vegas	San Diego
+geo_largest_city_canada	Easy	Which is the largest city in Canada?	Toronto	Montreal	Vancouver	Ottawa
+geo_new_york_square	Easy	Which New York square fills with crowds every New Year's Eve for the ball drop?	Times Square	Union Square	Washington Square	Madison Square
+geo_new_york_street	Easy	Which New York street is famous worldwide as the home of finance?	Wall Street	Fifth Avenue	Broadway	Park Avenue
+geo_paris_cathedral_badly	Easy	Which Paris cathedral was badly damaged by fire in 2019?	Notre-Dame	Sacre-Coeur	Saint-Sulpice	Sainte-Chapelle
+geo_official_london_residence	Easy	What is the official London residence of the British monarch?	Buckingham Palace	Kensington Palace	Hampton Court Palace	The Tower of London
+geo_country_holy_city	Easy	In which country is the holy city of Mecca?	Saudi Arabia	Iran	Egypt	Turkey
+geo_country_city_marrakesh	Easy	In which country is the city of Marrakesh?	Morocco	Egypt	Tunisia	Algeria
+geo_beijing_old_english	Easy	What was Beijing's old name in English?	Peking	Canton	Nanking	Shanghai
+geo_country_island_abbey	Easy	In which country is the island abbey of Mont Saint-Michel?	France	Belgium	Spain	Ireland
+geo_country_port_city	Easy	In which country is the port city of Marseille?	France	Spain	Italy	Belgium
+geo_country_city_dubai	Easy	In which country is the city of Dubai?	The UAE	Saudi Arabia	Qatar	Oman
+geo_largest_city_germany	Easy	Which is the largest city in Germany?	Berlin	Hamburg	Munich	Frankfurt
+geo_city_nicknamed_sin	Easy	Which US city is nicknamed 'Sin City'?	Las Vegas	Atlantic City	Miami	Reno
+geo_near_city_walt	Easy	Near which US city is Walt Disney World?	Orlando	Miami	Tampa	Jacksonville
+geo_country_ancient_temples	Easy	In which country are the ancient temples of Bagan?	Myanmar	Thailand	Cambodia	Laos
+geo_european_capital_canals	Easy	Which European capital is famous for its canals, bicycles and narrow houses?	Amsterdam	Copenhagen	Bruges	Venice
+geo_asian_city_state	Easy	Which Asian city-state is famous for its 'Supertree' gardens by the bay?	Singapore	Hong Kong	Dubai	Macau
+wh_angkor_wat	Medium	In which country is the Angkor Wat temple complex located?	Cambodia	Thailand	Vietnam	India
+geocmp_miasto_azja	Medium	Which of these urban areas is the most populous?	Delhi	Bangkok	Seoul	Istanbul
+geocmp_najdalej_polnoc_nordyckie	Medium	Which of these cities lies furthest north?	Helsinki	Oslo	Stockholm	Copenhagen
+geocmp_najdalej_wschod_europa	Medium	Which of these cities lies furthest east?	Istanbul	Athens	Rome	Vienna
+lmk_sagrada_familia	Medium	In which city is the Sagrada Familia?	Barcelona	Madrid	Valencia	Seville
+lmk_petra_kraj	Medium	In which country is the rock city of Petra?	Jordan	Egypt	Syria	Israel
+lmk_blekitny_meczet	Medium	In which city is the Blue Mosque?	Istanbul	Cairo	Isfahan	Marrakesh
+lmk_mala_syrenka	Medium	In which city is the Little Mermaid statue?	Copenhagen	Stockholm	Oslo	Helsinki
+lmk_alhambra_kraj	Medium	In which country is the Alhambra?	Spain	Morocco	Portugal	Tunisia
+lmk_neuschwanstein	Medium	In which country is Neuschwanstein Castle?	Germany	Austria	Switzerland	Czechia
+lmk_prado_miasto	Medium	In which city is the Prado Museum?	Madrid	Barcelona	Lisbon	Rome
+lmk_chichen_itza	Medium	In which country is Chichen Itza?	Mexico	Guatemala	Peru	Honduras
+geo_wietrzne_miasto	Medium	Which US city is nicknamed 'the Windy City'?	Chicago	Boston	Seattle	Denver
+geo_big_easy	Medium	Which US city is nicknamed 'the Big Easy'?	New Orleans	Miami	Las Vegas	Nashville
+geo_troja	Medium	In which present-day country are the ruins of ancient Troy?	Turkey	Greece	Italy	Cyprus
+geo_wenecja_wyspy	Medium	Which city is built on about 118 small islands?	Venice	Amsterdam	Stockholm	Saint Petersburg
+geo_largest_city_brazil	Medium	Which is the largest city in Brazil?	Sao Paulo	Rio de Janeiro	Brasilia	Salvador
+geo_largest_city_switzerland	Medium	Which is the largest city in Switzerland?	Zurich	Geneva	Bern	Basel
+geo_largest_city_scotland	Medium	Which is the largest city in Scotland?	Glasgow	Edinburgh	Aberdeen	Dundee
+geo_largest_city_new	Medium	Which is the largest city in New Zealand?	Auckland	Wellington	Christchurch	Dunedin
+geo_paris_avenue_runs	Medium	Which famous Paris avenue runs up to the Arc de Triomphe?	The Champs-Elysees	The Rue de Rivoli	Boulevard Saint-Germain	Avenue Montaigne
+geo_british_crown_jewels	Medium	Where are the British Crown Jewels kept?	In the Tower of London	In Buckingham Palace	In Windsor Castle	In Westminster Abbey
+geo_london_church_british	Medium	In which London church are British monarchs crowned?	Westminster Abbey	St Paul's Cathedral	Canterbury Cathedral	Westminster Cathedral
+geo_city_state_means	Medium	Which city-state's name means 'lion city'?	Singapore	Monaco	Hong Kong	Macau
+geo_country_dubrovnik_walled	Medium	In which country is Dubrovnik, the walled city used to film 'Game of Thrones'?	Croatia	Montenegro	Italy	Greece
+geo_country_ruins_ancient	Medium	In which country are the ruins of ancient Babylon?	Iraq	Iran	Egypt	Syria
+geo_city_international_court	Medium	In which city do the International Court of Justice and the International Criminal Court sit?	The Hague	Amsterdam	Geneva	Strasbourg
+geo_city_city_brotherly	Medium	Which US city is known as 'the City of Brotherly Love'?	Philadelphia	Boston	Baltimore	Pittsburgh
+geo_city_space_needle	Medium	In which US city is the Space Needle tower?	Seattle	Portland	San Francisco	Denver
+geo_city_tower	Medium	In which city is the CN Tower?	Toronto	Vancouver	Montreal	Calgary
+geo_indian_city_taj	Medium	In which Indian city is the Taj Mahal?	Agra	Delhi	Jaipur	Mumbai
+geo_city_onion_domed	Medium	In which city is the onion-domed St Basil's Cathedral?	Moscow	Saint Petersburg	Kyiv	Prague
+geo_city_shard_britain	Medium	In which city is the Shard, Britain's tallest building?	London	Manchester	Birmingham	Leeds
+geo_city_street_royal	Medium	In which city is the street known as the Royal Mile?	Edinburgh	London	Dublin	York
+geo_city_rialto_bridge	Medium	In which city is the Rialto Bridge?	Venice	Florence	Rome	Verona
+geo_city_see_leonardo	Medium	In which city can you see Leonardo da Vinci's 'The Last Supper'?	Milan	Florence	Rome	Paris
+geo_country_canal_city	Medium	In which country is the canal city of Bruges?	Belgium	The Netherlands	Denmark	France
+geo_country_ancient_pyramids	Medium	In which country are the ancient pyramids of Teotihuacan?	Mexico	Peru	Guatemala	Egypt
+geo_indian_city_calcutta	Medium	Which Indian city was known as Calcutta until 2001?	Kolkata	Chennai	Mumbai	Delhi
+geo_largest_city_italy	Medium	Which is the largest city in Italy?	Rome	Milan	Naples	Turin
+geo_since_2012_official	Medium	Since 2012, what is the official name of the tower that houses Big Ben?	Elizabeth Tower	Victoria Tower	St Stephen's Tower	Clock Tower
+geo_art_deco_skyscraper	Medium	Which Art Deco skyscraper with a steel spire was briefly the world's tallest building, in 1930?	Chrysler Building	Empire State Building	Woolworth Building	Flatiron Building
+geo_alhambra_palace_overlooks	Medium	The Alhambra palace overlooks which Spanish city?	Granada	Seville	Cordoba	Toledo
+geo_indian_city_ganges	Medium	Which Indian city on the Ganges is Hinduism's holiest, where pilgrims come to die?	Varanasi	Agra	Jaipur	Amritsar
+geo_indian_city_officially	Medium	Which Indian city was officially called Madras until 1996?	Chennai	Mumbai	Kolkata	Bengaluru
+geo_french_city_european	Medium	In which French city does the European Parliament have its official seat?	Strasbourg	Lyon	Lille	Metz
+geo_swiss_city_international	Medium	In which Swiss city is the International Red Cross based?	Geneva	Zurich	Bern	Basel
+geo_city_nicknamed_mile	Medium	Which US city is nicknamed 'the Mile High City'?	Denver	Salt Lake City	Phoenix	Albuquerque
+geo_city_riverside_promenade	Medium	In which city is the riverside promenade known as the Bund?	Shanghai	Hong Kong	Beijing	Singapore
+geo_texan_city_alamo	Medium	In which Texan city is the Alamo?	San Antonio	Houston	Dallas	El Paso
+geo_harvard_university_stands	Medium	Harvard University stands in Cambridge, next to which big US city?	Boston	New York	Philadelphia	Chicago
+geo_morocco_largest_city	Medium	Which is Morocco's largest city?	Casablanca	Rabat	Marrakesh	Fez
+geo_german_city_more	Medium	Which German city has more bridges than Venice and Amsterdam combined?	Hamburg	Berlin	Munich	Cologne
+geo_italian_city_holds	Medium	Which Italian city holds the famous Palio horse race in its main square?	Siena	Florence	Verona	Pisa
+geo_italian_city_fiat	Medium	In which Italian city was Fiat founded?	Turin	Milan	Modena	Bologna
+geo_german_city_huge	Medium	Which German city's huge twin-spired cathedral took over 600 years to finish?	Cologne	Munich	Berlin	Hamburg
+geo_french_city_french	Medium	In which French city were most French kings crowned?	Reims	Paris	Orleans	Saint-Denis
+geo_belgian_city_world	Medium	Which Belgian city is the world capital of the diamond trade?	Antwerp	Brussels	Ghent	Bruges
+geo_swiss_mountain_town	Medium	In which Swiss mountain town does the World Economic Forum meet?	Davos	Zermatt	St. Moritz	Interlaken
+geo_croatian_city_grew	Medium	Which Croatian city grew inside the palace of the Roman emperor Diocletian?	Split	Dubrovnik	Zadar	Pula
+geo_egyptian_city_lies	Medium	Which Egyptian city lies beside the Valley of the Kings?	Luxor	Cairo	Alexandria	Aswan
+geo_indian_city_india	Medium	Which Indian city is known as India's Silicon Valley?	Bengaluru	Hyderabad	Pune	Chennai
+geo_near_chinese_city	Medium	Near which Chinese city was the Terracotta Army discovered?	Xi'an	Beijing	Nanjing	Luoyang
+geo_argentine_city_calls	Medium	Which Argentine city calls itself 'the end of the world'?	Ushuaia	Punta Arenas	Rio Gallegos	Mar del Plata
+wh_timbuktu	Hard	In which country is the historic city of Timbuktu?	Mali	Niger	Chad	Mauritania
+geocmp_najdalej_poludnie	Hard	Which of these cities lies furthest south?	Auckland	Sydney	Cape Town	Buenos Aires
+geocmp_stolica_najdalej_poludnie	Hard	Which of these capitals lies furthest south?	Wellington	Canberra	Santiago	Pretoria
+lmk_ermitaz_miasto	Hard	In which city is the Hermitage Museum?	Saint Petersburg	Moscow	Kyiv	Warsaw
+lmk_rijksmuseum	Hard	In which city is the Rijksmuseum?	Amsterdam	Brussels	Rotterdam	Antwerp
+geo_rozowe_miasto	Hard	Which Indian city is known as 'the Pink City'?	Jaipur	Jodhpur	Udaipur	Agra
+geo_country_ancient_city	Hard	In which country is the ancient city of Carthage?	Tunisia	Libya	Morocco	Lebanon
+geo_indian_city_golden	Hard	In which Indian city is the Golden Temple, the holiest shrine of Sikhism?	Amritsar	Delhi	Jaipur	Varanasi
+geo_city_giant_steel	Hard	In which US city is the giant steel Gateway Arch?	St. Louis	Chicago	Denver	Kansas City
+geo_moroccan_town_streets	Hard	Which Moroccan town is famous for its streets painted in shades of blue?	Chefchaouen	Marrakesh	Fez	Tangier
+geo_cities_lies_furthest	Hard	Which of these US cities lies furthest west?	Reno	Los Angeles	San Diego	Las Vegas
+geocmp_najwyzej_polozona_stolica	Expert	Which of these is the highest-lying capital city?	La Paz	Quito	Bogota	Mexico City
+geo_baku	Expert	Which national capital lies below sea level?	Baku	Cairo	Tehran	Tashkent

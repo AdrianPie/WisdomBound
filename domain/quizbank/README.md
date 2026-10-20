@@ -10,7 +10,7 @@ his_churchill	Easy	Who was Britain's prime minister for most of World War II?	Wi
 
 Linie z `#` na poczatku pliku to opis - trafia do komentarza w wygenerowanym Kotlinie.
 
-Temat to **jeden plik** (`biology.tsv`, `geography.tsv`, ...) albo, gdy jest duzy, **katalog dzialow**:
+Temat to **jeden plik** (`biology.tsv`, `science.tsv`, ...) albo, gdy jest duzy, **katalog dzialow**:
 
 ```
 history/
@@ -25,6 +25,15 @@ history/
   ...
   us_presidents.tsv                  US Presidents (dzial przekrojowy)
   medicine.tsv, spies.tsv, ...       kolejne dzialy przekrojowe
+geography/
+  continents/                        Continents & Regions
+    europe.tsv, asia.tsv, ...          panstwa i regiony kontynentow
+  physical/                          Physical Geography
+    oceans_seas.tsv, rivers_lakes.tsv, mountains.tsv, climate.tsv, ...
+  human/                             People & Places
+    countries.tsv, cities.tsv, languages_customs.tsv, food_drink.tsv
+data/
+  countries.tsv                      dane o panstwach (nie pytania) - patrz nizej
 ```
 
 Sciezka pliku to sciezka dzialu: `history/antiquity/roman_empire`. Pytania leza tylko w lisciach
@@ -40,6 +49,28 @@ mozna otwierac w arkuszu kalkulacyjnym (zapis: tekst rozdzielany tabulatorami, U
 
 Poza TSV, w Kotlinie, zostaja: flagi (`FlagQuestions`, losuja bledne odpowiedzi), prawda/falsz,
 zaznacz-wszystkie, ukladanki i szacowanie. Skrypt czyta je przy sprawdzaniu dubli.
+
+### Dane o panstwach (`data/countries.tsv`)
+
+Tabela 194 panstw: ludnosc, powierzchnia, wspolrzedne stolicy, dostep do morza, sasiedzi z granica
+ladowa i "slawa" panstwa (1 zna kazdy, 3 tylko zapaleni geografowie). To nie sa pytania, tylko
+material: `CountryQuestions` losuje z niej przy kazdym losowaniu nowe zestawy, tak jak robia to quizy
+geograficzne w sieci (Sporcle, JetPunk, "higher or lower", Worldle):
+
+- wybor z czterech: najwiecej/najmniej ludzi, najwieksze/najmniejsze, najgesciej zaludnione, stolica
+  najdalej na polnoc/poludnie/wschod/zachod, ktore graniczy (albo NIE graniczy) z X, ktore jest bez
+  dostepu do morza, ile mniej wiecej ludzi mieszka w X, ktora stolica jest najblizej Y;
+- ukladanki: od najmniejszej ludnosci/powierzchni, stolice z zachodu na wschod i z poludnia na polnoc;
+- prawda/falsz w stylu "wyzej czy nizej" ("Canada has more people than Poland"), granice, morze;
+- zaznacz wszystkie: sasiedzi X, panstwa bez morza, panstwa ludniejsze/wieksze od X.
+
+Poziom wynika z tego, jak znane sa panstwa i jak wyrazna jest roznica (Easy trzykrotna, Expert
+o 30% i w obrebie jednego kontynentu) - prog chroni przed tym, ze dane sa przyblizone i co roku sie
+zmieniaja. Pytania z tabeli maja `QuizEntry.generated = true` i dzial `geography/human/countries`.
+Po zmianie tabeli `python3 tools/quizbank.py generate` robi `CountryData.kt` (sprawdza tez spojnosc:
+symetrie granic, kody, liczby), a `CountryQuestionsTest` sprawdza kazdy typ pytania z tabela.
+Recznie pisane pytania o panstwa nie powinny powtarzac tych prostych porownan - lepiej fakty
+z historia (najwiecej sasiadow, jedyna nieprostokatna flaga, co znaczy nazwa).
 
 ## Dopisywanie pytan - cala sesja
 
@@ -103,6 +134,18 @@ tresci znane tylko w Polsce ida do `poland`, nic, co sie zdezaktualizuje za rok.
   pytania, w ktorych sedno to sama postac, cytat, przydomek albo watek; pytanie o wojne, ktora
   prezydent prowadzil, zostaje w dziale tej wojny. Zakres kazdego dzialu opisuje komentarz na gorze jego pliku.
 - `QuizSectionTest` pilnuje, zeby kazdy lisc mial co najmniej 25 pytan, w tym 10 Easy/Medium.
+
+### Geografia
+
+- Trzy galezie: `continents` (panstwa i regiony danego kontynentu, polarne), `physical` (oceany,
+  rzeki i jeziora, gory, pustynie i lasy, wyspy i wybrzeza, klimat i sily natury, Ziemia i mapy)
+  i `human` (panstwa i granice, miasta i zabytki, jezyki/waluty/zwyczaje, kuchnia).
+- Obiekt przyrody idzie do dzialu fizycznego, nawet gdy pytanie wymienia kontynent ("najdluzsza rzeka
+  Afryki" to `rivers_lakes`); dzial kontynentu dostaje to, co dotyczy samego kraju albo regionu
+  (dawne nazwy, przydomki, regiony, rekordy panstw). Pytanie "jaka rzeka plynie przez miasto" to
+  `rivers_lakes`, zabytek - `cities`. Stolice panstw maja osobny temat `capitals`.
+- Liczby ("roughly how deep is the Challenger Deep?") z odpowiedziami odleglymi co najmniej
+  o polowe, zeby zaokraglenie nie robilo z dystraktora poprawnej odpowiedzi.
 
 ## Nowy temat albo nowy dzial
 

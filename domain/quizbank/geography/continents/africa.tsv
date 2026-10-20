@@ -1,0 +1,16 @@
+# Panstwa i regiony Afryki: dawne nazwy, przydomki, rekordy krajow, regiony (Rog Afryki, Sahel).
+# Pustynie, rzeki, gory i parki narodowe maja swoje dzialy.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+geocmp_ludnosc_afryka	Easy	Which is the most populous country in Africa?	Nigeria	Egypt	Ethiopia	South Africa
+geocmp_panstwo_afryka_pow	Medium	Which is the largest country in Africa by area?	Algeria	Sudan	Libya	The Democratic Republic of the Congo
+trv_etiopia_kolonia	Medium	Which African country was never colonised by a European power?	Ethiopia	Kenya	Ghana	Algeria
+geo_country_lies_tip	Medium	Which country lies at the tip of the 'Horn of Africa'?	Somalia	Kenya	Sudan	Eritrea
+geo_country_nicknamed_rainbow	Medium	Which country is nicknamed 'the Rainbow Nation'?	South Africa	Brazil	Jamaica	Ireland
+geo_ghana_independence_1957	Medium	What was Ghana called before independence in 1957?	Gold Coast	Ivory Coast	Slave Coast	Pepper Coast
+geo_african_country_land	Medium	Which African country is called the 'Land of a Thousand Hills'?	Rwanda	Uganda	Burundi	Malawi
+geo_second_largest_country_2	Medium	Which is the second-largest country in Africa by area?	DR Congo	Sudan	Libya	Chad
+geo2_panstwa_afryka	Hard	How many countries does Africa have according to the UN?	54	47	60	51
+geo_rodezja	Hard	Which country was once known as Southern Rhodesia?	Zimbabwe	Zambia	Malawi	Botswana
+geo_sudan_piramidy	Hard	Which country has the most ancient pyramids?	Sudan	Egypt	Mexico	Peru
+geo_smallest_country_african	Hard	Which is the smallest country on the African mainland?	The Gambia	Djibouti	Rwanda	Lesotho
+geo_country_winston_churchill	Hard	Which country did Winston Churchill call 'the Pearl of Africa'?	Uganda	Kenya	Tanzania	Rwanda

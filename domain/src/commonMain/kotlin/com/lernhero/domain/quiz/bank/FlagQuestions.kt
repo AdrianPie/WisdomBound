@@ -89,7 +89,8 @@ object FlagQuestions {
             wrong = distractors,
             category = QuizCategory.Flags,
             difficulty = fact.difficulty,
-            flagCode = fact.code
+            flagCode = fact.code,
+            generated = true
         )
     }
 }

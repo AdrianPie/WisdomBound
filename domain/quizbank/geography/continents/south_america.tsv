@@ -1,0 +1,11 @@
+# Panstwa i regiony Ameryki Poludniowej: rekordy krajow, granice, nazwy, ciekawostki.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+geocmp_ludnosc_ameryka_pd	Easy	Which is the most populous country in South America?	Brazil	Argentina	Colombia	Peru
+geo_second_populous_country	Medium	Which is the second most populous country in South America?	Colombia	Argentina	Peru	Venezuela
+geo_country_means_little	Medium	Which country's name means 'Little Venice', after villages built on stilts?	Venezuela	Bolivia	Colombia	Ecuador
+geo_two_south_american	Medium	Which two South American countries do not border Brazil?	Chile and Ecuador	Peru and Bolivia	Uruguay and Paraguay	Colombia and Venezuela
+geo_two_south_american_2	Medium	Which two South American countries are landlocked?	Bolivia and Paraguay	Bolivia and Uruguay	Paraguay and Ecuador	Peru and Bolivia
+geox_nazca	Hard	In which country are the giant Nazca Lines drawn in the desert?	Peru	Chile	Mexico	Bolivia
+geoy_boliwia_morze	Hard	Bolivia lost its sea coast to which neighbour in a 19th-century war?	Chile	Peru	Brazil	Argentina
+geo_smallest_country_south	Hard	Which is the smallest country in South America?	Suriname	Uruguay	Guyana	Ecuador
+geo2_panstwo_najdluzsze	Expert	Which country is the longest from north to south?	Chile	Norway	Brazil	Russia

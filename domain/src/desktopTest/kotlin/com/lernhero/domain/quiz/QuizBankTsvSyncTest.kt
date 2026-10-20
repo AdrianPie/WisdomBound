@@ -1,5 +1,7 @@
 package com.lernhero.domain.quiz
 
+import com.lernhero.domain.quiz.bank.CountryData
+import com.lernhero.domain.quiz.bank.CountryFact
 import java.io.File
 import kotlin.random.Random
 import kotlin.test.Test
@@ -42,6 +44,7 @@ class QuizBankTsvSyncTest {
         assertTrue(dataDir.isDirectory, "Brak katalogu z TSV: ${dataDir.absolutePath}")
         // Sciezka wzgledem katalogu danych: "biology" albo "history/antiquity/roman_empire".
         val files = dataDir.walkTopDown()
+            .onEnter { it.name != DATA_SUBDIR }
             .filter { it.isFile && it.extension == "tsv" && it.name != SECTIONS_FILE }
             .associateBy { it.relativeTo(dataDir).invariantSeparatorsPath.removeSuffix(".tsv") }
         val unknown = files.keys.filter { it.substringBefore('/') !in categoryOf }
@@ -50,7 +53,7 @@ class QuizBankTsvSyncTest {
         val fromTsv = files.flatMap { (path, file) ->
             readTsv(file, categoryOf.getValue(path.substringBefore('/')), section = path.takeIf { '/' in it })
         }.associateBy { it.id }
-        val fromKotlin = QuizBank.all(Random(1)).filter { it.category != QuizCategory.Flags }.associateBy { it.id }
+        val fromKotlin = QuizBank.all(Random(1)).filter { !it.generated }.associateBy { it.id }
 
         val onlyTsv = fromTsv.keys - fromKotlin.keys
         val onlyKotlin = fromKotlin.keys - fromTsv.keys
@@ -86,6 +89,35 @@ class QuizBankTsvSyncTest {
         }
     }
 
+    @Test
+    fun `dane o panstwach sa wygenerowane z aktualnego countries tsv`() {
+        val lines = File(dataDir, "$DATA_SUBDIR/$COUNTRIES_FILE").readLines().filter { it.isNotBlank() && !it.startsWith("#") }
+        assertTrue(lines.first().startsWith("code\tcountry\tcapital\t"), "$COUNTRIES_FILE: zly naglowek ${lines.first()}")
+        val continents = mapOf(
+            "Europe" to CountryFact.Continent.Europe,
+            "Asia" to CountryFact.Continent.Asia,
+            "Africa" to CountryFact.Continent.Africa,
+            "North America" to CountryFact.Continent.NorthAmerica,
+            "South America" to CountryFact.Continent.SouthAmerica,
+            "Oceania" to CountryFact.Continent.Oceania
+        )
+        fun codes(cell: String) = cell.split(' ').filter { it.isNotEmpty() }.toSet()
+        val fromTsv = lines.drop(1).map { line ->
+            val c = line.split('\t')
+            assertTrue(c.size == 13, "$COUNTRIES_FILE: zla liczba kolumn w linii '$line'")
+            CountryFact(
+                code = c[0], name = c[1], capital = c[2], continent = continents.getValue(c[3]),
+                population = c[4].toLong(), areaKm2 = c[5].toDouble(), capitalLat = c[6].toDouble(),
+                capitalLon = c[7].toDouble(), landlocked = c[8] == "1", neighbours = codes(c[9]),
+                fame = c[10].toInt(), capitalQuiz = c[11] == "1", unclear = codes(c[12])
+            )
+        }
+        assertTrue(
+            fromTsv == CountryData.all,
+            "CountryData nie zgadza sie z $COUNTRIES_FILE - uruchom `python3 tools/quizbank.py generate`."
+        )
+    }
+
     private fun readTsv(file: File, category: QuizCategory, section: String?): List<QuizEntry> {
         val lines = file.readLines().filter { it.isNotBlank() && !it.startsWith("#") }
         val header = lines.first().split('\t')
@@ -109,7 +141,11 @@ class QuizBankTsvSyncTest {
     }
 
     private companion object {
-        /** Spis dzialow - jedyny TSV w katalogu danych, ktory nie jest plikiem pytan. */
+        /** Spis dzialow - poza katalogiem [DATA_SUBDIR] jedyny TSV, ktory nie jest plikiem pytan. */
         const val SECTIONS_FILE = "sections.tsv"
+
+        /** Katalog tabel z danymi (nie pytaniami) - z [COUNTRIES_FILE] losuje CountryQuestions. */
+        const val DATA_SUBDIR = "data"
+        const val COUNTRIES_FILE = "countries.tsv"
     }
 }
