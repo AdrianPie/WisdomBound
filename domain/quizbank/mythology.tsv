@@ -79,6 +79,29 @@ myt_romans_call_poseidon	Easy	What did the Romans call Poseidon, the god of the 
 myt_king_arthur_queen	Easy	Who was King Arthur's queen?	Guinevere	Morgan le Fay	Isolde	Elaine
 myt_robin_hood_sweetheart	Easy	Who is Robin Hood's sweetheart in the English legends?	Maid Marian	Lady Godiva	Guinevere	Rowena
 myt_mythical_creature_half	Easy	Which mythical creature is half man and half goat?	Satyr	Centaur	Minotaur	Griffin
+myt_twin_brother_artemis	Easy	Who was the twin brother of Artemis, goddess of the hunt?	Apollo	Hermes	Ares	Dionysus
+myt_force_nature_norse	Easy	Which force of nature did the Norse god Thor rule?	Thunder	Fire	The sea	The wind
+myt_roman_goddess_juno	Easy	The Roman goddess Juno is the same as which Greek goddess?	Hera	Athena	Demeter	Artemis
+myt_medieval_legend_horn	Easy	In medieval legend, what could the horn of a unicorn do?	Cure poison	Grant wishes	Turn lead to gold	Make you invisible
+myt_werewolf_tales_makes	Easy	In most werewolf tales, what makes a man turn into a wolf?	A full moon	A solar eclipse	A thunderstorm	The first frost
+myt_classic_folklore_must	Easy	In classic folklore, what must be driven through a vampire's heart to destroy it?	A wooden stake	A silver dagger	An iron nail	A church key
+myt_according_folklore_vampire	Easy	According to folklore, what does a vampire need before it can enter your home?	An invitation	A full moon	Your true name	A broken lock
+myt_odysseus_hear_sirens	Easy	How did Odysseus hear the Sirens' song without steering his ship onto the rocks?	He had himself tied to the mast	He sang louder than the Sirens	He wore a magic helmet	He sailed past them at night
+myt_european_folklore_bird	Easy	In European folklore, which bird is said to deliver new babies to their parents?	The stork	The swan	The owl	The pelican
+myt_word_aphrodisiac_comes	Easy	The word 'aphrodisiac' comes from the name of which goddess?	Aphrodite	Athena	Artemis	Hera
+myt_according_legend_magical	Easy	According to legend, to which magical island was the mortally wounded King Arthur carried?	Avalon	Camelot	Tintagel	Lyonesse
+myt_greek_hero_credited	Easy	Which Greek hero is credited with the idea of the wooden horse that tricked Troy?	Odysseus	Achilles	Agamemnon	Menelaus
+myt_happens_someone_struck	Easy	What happens to someone struck by one of Cupid's golden arrows?	They fall in love	They fall asleep	They forget their past	They turn to stone
+myt_cheerful_sword_fighting	Easy	Which cheerful, sword-fighting friar is one of Robin Hood's Merry Men?	Friar Tuck	Friar Laurence	Friar Bacon	Friar John
+myt_thor_hammer_always	Easy	What does Thor's hammer always do after he throws it?	Flies back to his hand	Splits into lightning	Turns into a serpent	Buries itself in the earth
+myt_weapon_robin_hood	Easy	Which weapon is Robin Hood most famous for using?	The longbow	The crossbow	The sling	The spear
+myt_king_arthur_table	Easy	Why was King Arthur's table said to be round?	So no knight sat above another	To fit inside the castle tower	So Merlin could see every face	To match the shape of the Grail
+myt_folklore_film_animal	Easy	In folklore and film, which animal can a vampire turn itself into?	A bat	A raven	A rat	A black cat
+myt_according_superstition_should	Easy	According to superstition, what should you do after spilling salt?	Throw a pinch over your left shoulder	Sweep it out of the front door	Sprinkle it on the doorstep	Pour water over it at once
+myt_animal_foot_carried	Easy	Which animal's foot is carried as a good-luck charm in Western folklore?	A rabbit's	A cat's	A fox's	A crow's
+myt_according_superstition_years	Easy	According to superstition, how many years of bad luck follow breaking a mirror?	Seven	Three	Ten	Thirteen
+myt_inventor_made_wings	Easy	Which inventor made wings of feathers and wax so that he and his son could escape Crete?	Daedalus	Theseus	Minos	Archimedes
+myt_perseus_use_approach	Easy	What did Perseus use so that he could approach Medusa without looking straight at her?	A polished shield	A silk blindfold	A magic lantern	A pool of water
 cultw_odyn_ptaki	Medium	Which two ravens brought Odin news of the world?	Huginn and Muninn	Geri and Freki	Sleipnir and Fenrir	Vidar and Vali
 mit_hades	Medium	Who ruled the Greek underworld?	Hades	Poseidon	Cronus	Dionysus
 mit_atena	Medium	Which goddess was the patron of wisdom and Athens?	Athena	Hera	Aphrodite	Artemis
@@ -192,6 +215,51 @@ myt_roman_goddess_luck	Medium	Who was the Roman goddess of luck?	Fortuna	Victori
 myt_giant_serpent_apollo	Medium	Which giant serpent did Apollo kill at Delphi?	Python	Ladon	Typhon	Echidna
 myt_oracle_ancient_greece	Medium	Where was the most famous oracle of ancient Greece?	Delphi	Olympia	Dodona	Sparta
 myt_mythical_beast_lion	Medium	Which mythical beast has a lion's body, a human face and a scorpion's tail?	Manticore	Sphinx	Griffin	Chimera
+myt_disguise_zeus_seduce	Medium	In which disguise did Zeus seduce Leda, the mother of Helen of Troy?	A swan	A bull	A shower of gold	An eagle
+myt_zeus_poseidon_hades	Medium	How did Zeus, Poseidon and Hades decide who would rule the sky, the sea and the underworld?	They drew lots	They held a wrestling match	Their mother Rhea chose	They raced around Olympus
+myt_italian_fashion_house	Medium	Which Italian fashion house uses the head of Medusa as its logo?	Versace	Gucci	Prada	Armani
+myt_irish_folklore_trade	Medium	In Irish folklore, which trade do leprechauns traditionally practise?	Shoemaking	Brewing	Blacksmithing	Weaving
+myt_spain_italy_lives	Medium	In Spain and Italy, how many lives is a cat traditionally said to have?	Seven	Nine	Three	Twelve
+myt_according_legend_saint	Medium	According to legend, which saint nailed a horseshoe to the Devil's hoof, making horseshoes lucky?	Saint Dunstan	Saint Patrick	Saint George	Saint Nicholas
+myt_odysseus_journey_home	Medium	Odysseus's journey home was dragged out by which god, whose son he had blinded?	Poseidon	Zeus	Hades	Ares
+myt_japanese_folk_hero	Medium	Which Japanese folk hero was born from a giant peach found floating down a river?	Momotaro	Urashima Taro	Kintaro	Issun-boshi
+myt_baby_heracles_two	Medium	What did the baby Heracles do to the two serpents that Hera sent into his cradle?	Strangled them	Tamed them as pets	Swallowed them whole	Turned them to stone
+myt_chinese_legend_ruler	Medium	In Chinese legend, which ruler of heaven held the Great Race that set the order of the zodiac?	The Jade Emperor	The Yellow Emperor	The Dragon King	The Queen Mother of the West
+myt_terrible_prophecy_oedipus	Medium	Which terrible prophecy did Oedipus fulfil without knowing it?	He killed his father and wed his mother	He killed his brother and took his throne	He drowned his sons to keep his crown	He blinded the king and stole his bride
+myt_sea_said_theseus	Medium	Which sea is said to be named after Theseus's father, who leapt into it in despair?	The Aegean	The Adriatic	The Tyrrhenian	The Ligurian
+myt_colour_babe_giant	Medium	What colour was Babe, the giant ox of the lumberjack Paul Bunyan?	Blue	White	Red	Golden
+myt_word_mentor_comes	Medium	The word 'mentor' comes from a character in which ancient epic?	The Odyssey	The Iliad	The Aeneid	The Epic of Gilgamesh
+myt_painkiller_takes_greek	Medium	Which painkiller takes its name from the Greek god of dreams?	Morphine	Codeine	Aspirin	Paracetamol
+myt_slavic_tales_witch	Medium	In Slavic tales, what does the witch Baba Yaga fly around in?	A mortar	A cauldron	A sleigh	A barrel
+myt_chinese_legend_flew	Medium	In Chinese legend, who flew to the Moon after swallowing an elixir of immortality?	Chang'e	Nuwa	Guanyin	Mazu
+myt_according_legend_chinese	Medium	According to legend, Chinese New Year firecrackers and red decorations were meant to scare off which beast?	The Nian	The Qilin	The Pixiu	The Taotie
+myt_chinese_legend_colour	Medium	In Chinese legend, what colour is the invisible thread that links people destined to marry?	Red	Gold	White	Silver
+myt_japanese_folklore_rabbit	Medium	In Japanese folklore, what is the rabbit in the Moon busy pounding?	Rice cakes	Gold coins	Moon dust	Tea leaves
+myt_maneki_neko_often	Medium	What is the maneki-neko, often seen in Japanese shop windows?	A lucky beckoning cat	A grinning fox spirit	A laughing frog charm	A smiling badger god
+myt_scottish_irish_folklore	Medium	In Scottish and Irish folklore, selkies shed their skins to change from what into humans?	Seals	Swans	Otters	Salmon
+myt_european_folklore_changeling	Medium	In European folklore, what was a changeling?	A fairy child swapped for a stolen baby	A witch who could turn into a hare	A ghost that stole a living face	A knight cursed to live as a wolf
+myt_ghost_latin_american	Medium	Which ghost of Latin American folklore wanders by rivers, weeping for her drowned children?	La Llorona	La Befana	La Catrina	La Malinche
+myt_australian_predator_said	Medium	Which Australian 'predator', said to pounce from gum trees onto tourists' heads, is a running joke?	The drop bear	The bunyip	The yowie	The hoop snake
+myt_legend_lady_godiva	Medium	In the legend of Lady Godiva, what happened to Peeping Tom, the one man who looked?	He was struck blind	He was turned to stone	He was banished	He went mad
+myt_best_version_legend	Medium	In the best-known version of the legend, why did Romulus kill his twin brother Remus?	Remus mocked him by jumping his new wall	Remus tried to seize the throne of Alba	Remus married the woman Romulus loved	Remus refused to sacrifice to Mars
+myt_baby_hermes_steal	Medium	What did the baby Hermes steal from his brother Apollo on the day he was born?	His cattle	His lyre	His golden bow	His chariot
+myt_hephaestus_catch_wife	Medium	How did Hephaestus catch his wife Aphrodite with the war god Ares?	In an unbreakable golden net	With a mirror that showed all	By turning their bed to stone	With a bell hidden in the room
+myt_young_athenians_sent	Medium	How many young Athenians were sent to be fed to the Minotaur each time?	Seven youths and seven maidens	Three youths and three maidens	Twelve youths and twelve maidens	Fifty youths and fifty maidens
+myt_body_part_horus	Medium	Which body part did Horus lose in his long struggle with Set?	An eye	A hand	An ear	A foot
+myt_egyptian_goddess_hathor	Medium	The Egyptian goddess Hathor is often shown as which animal, or with its horns?	A cow	A ram	A gazelle	A hippo
+myt_set_eventually_osiris	Medium	What did Set eventually do with Osiris's body, to stop Isis bringing him back?	Cut it up and scattered the pieces	Fed it to the crocodiles of the Nile	Buried it under the Great Pyramid	Burned it on a pyre in the desert
+myt_best_hindu_story	Medium	In the best-known Hindu story, why does Parvati's son have an elephant's head?	Shiva cut off his head, then gave him an elephant's	He was born with it as a blessing from Brahma	Vishnu swapped it for his own in a game	He won it from Indra's elephant in a duel
+myt_heads_ravana_demon	Medium	How many heads does Ravana, the demon king of the Ramayana, usually have?	Ten	Three	Seven	A hundred
+myt_japan_setsubun_festival	Medium	At Japan's Setsubun festival, what do people throw to drive demons out of the house?	Roasted soybeans	Grains of rice	Salt crystals	Paper charms
+myt_goggle_eyed_aztec	Medium	Which goggle-eyed Aztec rain god shared the top of the Great Temple in Tenochtitlan?	Tlaloc	Xipe Totec	Mictlantecuhtli	Xolotl
+myt_andes_offerings_still	Medium	In the Andes, offerings are still made to which earth mother goddess?	Pachamama	Mama Quilla	Coatlicue	Ixchel
+myt_mami_wata_honoured	Medium	Mami Wata, honoured across West and Central Africa, is a spirit of what?	Water	Fire	Iron	The harvest
+myt_according_irish_legend	Medium	According to Irish legend, which giant built the Giant's Causeway?	Finn McCool	Cu Chulainn	Balor	Brian Boru
+myt_dullahan_headless_horseman	Medium	What does the dullahan, the headless horseman of Irish folklore, carry under his arm?	His own head	A burning lantern	A bloody sword	A bag of souls
+myt_algonquian_folklore_wendigo	Medium	In Algonquian folklore, the Wendigo is a spirit of what?	Insatiable hunger and cannibalism	Rain, thunder and fertile crops	Healing herbs and medicine	Lost hunters guiding travellers
+myt_scandinavia_should_left	Medium	In Scandinavia, what should be left out for the household elf (nisse or tomte) on Christmas Eve?	A bowl of porridge	A glass of milk	A slice of ham	A pair of socks
+myt_sculptor_fell_love	Medium	Which sculptor fell in love with his ivory statue, which Aphrodite then brought to life?	Pygmalion	Daedalus	Phidias	Praxiteles
+myt_orpheus_lose_eurydice	Medium	Why did Orpheus lose Eurydice on the way out of the underworld?	He looked back at her too soon	He forgot to pay the ferryman	He ate the food of the dead	He stopped to sing for Hades
 cultw_izanagi	Hard	In Japanese myth, which pair created the islands of Japan?	Izanagi and Izanami	Amaterasu and Susanoo	Raijin and Fujin	Inari and Hachiman
 cultw_anansi	Hard	In West African folklore, what kind of creature is Anansi?	A spider	A lion	A crocodile	A hawk
 mit_yggdrasil	Hard	What is the cosmic tree in Norse mythology called?	Yggdrasil	Valhalla	Bifrost	Midgard
@@ -272,6 +340,31 @@ myt_roman_greek_goddess	Hard	What is the Roman name for the Greek goddess Persep
 myt_hero_rode_pegasus	Hard	Which hero rode Pegasus to kill the monster Chimera?	Bellerophon	Perseus	Theseus	Jason
 myt_greek_goddess_hearth	Hard	Who was the Greek goddess of the hearth and home?	Hestia	Hera	Demeter	Athena
 myt_greek_keeper_winds	Hard	Who was the Greek keeper of the winds, who gave Odysseus a bag of them?	Aeolus	Boreas	Zephyrus	Triton
+myt_according_myth_part	Hard	According to myth, from which part of Zeus's body was the god Dionysus born?	His thigh	His head	His heart	His rib
+myt_three_graeae_sisters	Hard	What did the three Graeae sisters share among themselves?	One eye and one tooth	One heart and one voice	A single golden comb	One cloak of invisibility
+myt_flowed_veins_greek	Hard	What flowed in the veins of the Greek gods instead of blood?	Ichor	Nectar	Ambrosia	Quicksilver
+myt_according_greek_myth	Hard	According to Greek myth, the Milky Way was formed from whose spilt milk?	Hera's	Rhea's	Gaia's	Leto's
+myt_son_sun_god	Hard	Which son of the sun god lost control of his father's chariot and scorched the Earth?	Phaethon	Icarus	Ganymede	Hyperion
+myt_eos_asked_zeus	Hard	Eos asked Zeus to make her lover Tithonus immortal, but forgot to ask for what?	Eternal youth	Endless wealth	A seat on Olympus	Lasting love
+myt_trojan_priest_warned	Hard	Which Trojan priest warned against the wooden horse, only to be killed by sea serpents?	Laocoon	Calchas	Tiresias	Chryses
+myt_heracles_get_atlas	Hard	How did Heracles get Atlas to take the sky back after fetching the golden apples?	He asked Atlas to hold it while he got comfortable	He beat Atlas in a long wrestling match	He promised Atlas a place on Olympus	He threatened Atlas with Zeus's thunderbolt
+myt_special_thor_goats	Hard	What is special about Thor's goats, Tanngrisnir and Tanngnjostr?	He can eat them and bring them back to life	They can fly faster than Odin's horse	They can smell giants from a day away	They were born from Thor's own hammer
+myt_according_norse_myth	Hard	According to Norse myth, what causes earthquakes?	Loki writhing as venom drips on his face	Thor's goats stamping across the sky	The World Serpent tightening its coils	Giants hammering in the halls below
+myt_odin_gain_hanging	Hard	What did Odin gain by hanging himself from the world tree for nine nights?	The runes	His spear	Eternal life	His ravens
+myt_giant_serpent_enemy	Hard	Which giant serpent, enemy of the sun god Ra, gave its name to a near-Earth asteroid?	Apophis	Ammit	Wadjet	Mehen
+myt_according_legend_ganesha	Hard	According to legend, what did Ganesha do when his pen broke while writing down the Mahabharata?	He broke off one of his tusks	He dipped his trunk in the ink	He borrowed Shiva's trident	He carved it with a fingernail
+myt_hindu_god_shiva	Hard	Why is the Hindu god Shiva often shown with a blue throat?	He swallowed a poison to save the world	He was strangled by a serpent demon	He drank the ocean dry in a rage	He was cursed by an angry sage
+myt_unable_find_healing	Hard	Unable to find the healing herb that Rama's brother needed, what did Hanuman do?	Carried back the whole mountain	Brought back every plant in India	Flew off to ask the sage Valmiki	Fetched the Moon to light his search
+myt_gods_lure_sun	Hard	How did the gods lure the sun goddess Amaterasu out of the cave where she was hiding?	With a wild dance and roars of laughter	By promising her the throne of heaven	By setting the cave's entrance on fire	By sending her brother to beg forgiveness
+myt_japanese_folklore_thunder	Hard	In Japanese folklore, what does the thunder god Raijin like to steal from children?	Their belly buttons	Their shadows	Their teeth	Their voices
+myt_chinese_legend_suns	Hard	In Chinese legend, how many suns did the archer Hou Yi shoot down to save the scorched Earth?	Nine	Ten	Seven	Three
+myt_chinese_legend_happens	Hard	In Chinese legend, what happens to a carp that leaps over the Dragon Gate waterfall?	It turns into a dragon	It turns into a phoenix	It becomes a river god	It grows a pearl in its mouth
+myt_according_maya_popol	Hard	According to the Maya Popol Vuh, what were the first successful humans made from?	Maize dough	Mud	Wood	Obsidian
+myt_akan_folklore_trickster	Hard	In Akan folklore, from whom did the trickster Anansi win ownership of all stories?	The sky god Nyame	The earth goddess Asase Yaa	The king of the leopards	The river god Tano
+myt_southern_african_folklore	Hard	In southern African folklore, why do some people raise their beds on bricks?	To keep the tokoloshe from reaching them	To honour the ancestors sleeping below	To stop snakes stealing their dreams	To lift their prayers closer to the sky
+myt_according_irish_legend_2	Hard	According to Irish legend, how did Fionn mac Cumhaill gain all the world's knowledge?	By sucking his thumb, burned on a magic salmon	By drinking from a well under an oak	By sleeping one night on a fairy mound	By catching a raven that spoke to him
+myt_korea_founding_myth	Hard	In Korea's founding myth, how did a bear become the woman who bore Dangun?	By eating only garlic and mugwort in a cave	By guarding the king's tomb for a year	By marrying the son of the moon goddess	By drinking dew from a sacred pine
+myt_gives_away_beautiful	Hard	What gives away the beautiful huldra of Scandinavian folklore?	A cow's tail	Webbed feet	Goat's eyes	Icy breath
 cultw_mahabharata	Expert	Which Sanskrit epic contains the Bhagavad Gita?	The Mahabharata	The Ramayana	The Rigveda	The Upanishads
 cultw_tyche	Expert	Which Greek goddess personified luck and fortune?	Tyche	Nemesis	Hecate	Eris
 cultw_mabinogion	Expert	The Mabinogion collects the myths of which people?	The Welsh	The Irish	The Scots	The Bretons
@@ -324,3 +417,8 @@ myty_walhalla_dach	Expert	According to Norse myth, what is the roof of Valhalla 
 myty_bes	Expert	Which dwarf god of ancient Egypt protected households and children?	Bes	Ptah	Khnum	Apis
 myty_koszczej	Expert	Which Slavic villain is 'deathless' because his death is hidden in a needle inside an egg?	Koschei	Baba Yaga	Zmey Gorynych	Leshy
 myty_leszy	Expert	What is a leshy in Slavic folklore?	A forest spirit	A water horse	A house elf	A storm giant
+myt_hall_giant_utgarda	Expert	In the hall of the giant Utgarda-Loki, Thor's drinking horn was secretly connected to what?	The sea	A giant's well	The river of the dead	The roots of Yggdrasil
+myt_went_gleipnir_magic	Expert	Which of these went into Gleipnir, the magic ribbon that binds the wolf Fenrir?	The sound of a cat's footsteps	The shadow of a flying raven	The breath of a sleeping giant	The light of a dying star
+myt_egyptian_creation_myth	Expert	In one Egyptian creation myth, how did the god Atum produce the first gods, Shu and Tefnut?	By sneezing and spitting	By weeping into the sea	By carving them from clay	By splitting a cosmic egg
+myt_eastern_european_folklore	Expert	In Eastern European folklore, why were mustard or poppy seeds scattered around a suspected vampire's grave?	It was thought to be compelled to count them	Their smell was thought to burn its skin	They would sprout and bind its limbs	Birds eating them would warn of its rising
+myt_lunar_new_year	Expert	Before the Lunar New Year, why do Chinese families smear honey or sweets on the Kitchen God's lips?	So he reports only sweet things to heaven	To feed him for his long journey home	To keep him from eating the family's rice	So he will bless the coming year's harvests

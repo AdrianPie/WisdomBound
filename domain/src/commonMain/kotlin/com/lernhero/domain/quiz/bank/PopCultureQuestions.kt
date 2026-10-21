@@ -366,7 +366,16 @@ object PopCultureQuestions {
         q("pop_colour_zero_pocket", "What colour is the zero pocket on a roulette wheel?", "Green", listOf("Red", "Black", "White"), E),
         q("pop_film_studio_logo", "Which film studio's logo shows a mountain ringed by stars?", "Paramount", listOf("Universal", "Columbia", "Warner Bros."), E),
         q("pop_company_bought_marvel", "Which company bought Marvel Entertainment in 2009?", "Disney", listOf("Warner Bros.", "Sony", "Universal"), E),
-        q("pop_network_made_game", "Which TV network made 'Game of Thrones' and 'The Sopranos'?", "HBO", listOf("Netflix", "AMC", "Showtime"), E)
+        q("pop_network_made_game", "Which TV network made 'Game of Thrones' and 'The Sopranos'?", "HBO", listOf("Netflix", "AMC", "Showtime"), E),
+        q("pop_actress_played_han", "Which actress played Han Solo's love interest in the original 'Star Wars' films?", "Carrie Fisher", listOf("Natalie Portman", "Sigourney Weaver", "Jodie Foster"), E),
+        q("pop_singer_huge_1950s", "Which singer had huge 1950s hits with 'Hound Dog' and 'Jailhouse Rock'?", "Elvis Presley", listOf("Chuck Berry", "Little Richard", "Buddy Holly"), E),
+        q("pop_band_hits_hey", "Which band had hits with 'Hey Jude' and 'Let It Be'?", "The Beatles", listOf("The Rolling Stones", "The Beach Boys", "The Kinks"), E),
+        q("pop_singer_1984_hit", "Which singer had a 1984 hit with 'Like a Virgin'?", "Madonna", listOf("Cyndi Lauper", "Whitney Houston", "Kylie Minogue"), E),
+        q("pop_group_sang_dancing", "Which group sang 'Dancing Queen' in 1976?", "ABBA", listOf("Boney M.", "The Bee Gees", "Fleetwood Mac"), E),
+        q("pop_actor_played_time", "Which actor played the time-travelling teenager in 'Back to the Future'?", "Michael J. Fox", listOf("Matthew Broderick", "Tom Cruise", "Rob Lowe"), E),
+        q("pop_irl_mean_online", "What does 'IRL' mean in online slang?", "In real life", listOf("In rapid loop", "I really laughed", "Internet relay link"), E),
+        q("pop_lion_king_simba", "In 'The Lion King', what is the name of Simba's childhood friend who later becomes his queen?", "Nala", listOf("Sarabi", "Shenzi", "Kiara"), E),
+        q("pop_superhero_man_steel", "Which superhero is known as 'the Man of Steel'?", "Superman", listOf("Iron Man", "Captain America", "The Flash"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -814,7 +823,22 @@ object PopCultureQuestions {
         q("pop_spaces_around_standard", "How many spaces are there around a standard Monopoly board?", "40", listOf("36", "44", "52"), M),
         q("pop_animal_appears_every", "Which animal appears on every bottle of Bacardi rum?", "A bat", listOf("A parrot", "A lion", "A rooster"), M),
         q("pop_film_studio_logo_2", "Which film studio's logo shows a woman holding up a torch?", "Columbia", listOf("Paramount", "Universal", "MGM"), M),
-        q("pop_video_game_series", "Which video game series features the thumbs-up mascot 'Vault Boy'?", "Fallout", listOf("BioShock", "Borderlands", "Mass Effect"), M)
+        q("pop_video_game_series", "Which video game series features the thumbs-up mascot 'Vault Boy'?", "Fallout", listOf("BioShock", "Borderlands", "Mass Effect"), M),
+        q("pop_actor_won_oscar", "Which actor won an Oscar as the cannibal psychiatrist in 'The Silence of the Lambs'?", "Anthony Hopkins", listOf("Jack Nicholson", "Gene Hackman", "Robert De Niro"), M),
+        q("pop_actress_played_dorothy", "Which actress played Dorothy in 'The Wizard of Oz' (1939)?", "Judy Garland", listOf("Shirley Temple", "Vivien Leigh", "Ginger Rogers"), M),
+        q("pop_voiced_forgetful_fish", "Who voiced the forgetful fish Dory in 'Finding Nemo'?", "Ellen DeGeneres", listOf("Julia Roberts", "Whoopi Goldberg", "Cameron Diaz"), M),
+        q("pop_shrek_short_villainous", "In 'Shrek', what is the name of the short, villainous ruler of Duloc?", "Lord Farquaad", listOf("Prince Charming", "King Harold", "Rumpelstiltskin"), M),
+        q("pop_actress_starred_lone", "Which actress starred as the lone survivor of the spaceship crew in 'Alien' (1979)?", "Sigourney Weaver", listOf("Jamie Lee Curtis", "Linda Hamilton", "Meryl Streep"), M),
+        q("pop_ghostbusters_team_warned", "In 'Ghostbusters', what are the team warned never to do with their proton beams?", "Cross the streams", listOf("Fire them indoors", "Aim them at the sky", "Use them at night"), M),
+        q("pop_film_features_joker", "Which film features the Joker's line 'Why so serious?'", "The Dark Knight", listOf("Batman Begins", "Batman Returns", "Suicide Squad"), M),
+        q("pop_member_queen_earned", "Which member of Queen also earned a PhD in astrophysics?", "Brian May", listOf("Roger Taylor", "John Deacon", "Freddie Mercury"), M),
+        q("pop_band_abba_come", "Where does the band name ABBA come from?", "The members' first initials", listOf("A Swedish word for 'music'", "Their manager's nickname", "Their first record label"), M),
+        q("pop_brand_beer_homer", "Which brand of beer does Homer Simpson drink?", "Duff", listOf("Bud", "Schlitz", "Buzz"), M),
+        q("pop_tagline_usually_ends", "Which tagline usually ends the opening credits of 'The X-Files'?", "The truth is out there", listOf("We are not alone", "Watch the skies", "Keep looking up"), M),
+        q("pop_star_trek_vulcan", "In 'Star Trek', which Vulcan blessing goes with the split-fingered hand salute?", "Live long and prosper", listOf("May the Force be with you", "Logic guides us all", "Go boldly in peace"), M),
+        q("pop_stranger_things_boys", "In 'Stranger Things', the boys name the first monster after a villain from which game?", "Dungeons & Dragons", listOf("Magic: The Gathering", "Warhammer", "Pac-Man"), M),
+        q("pop_scooby_doo_gang", "Which 'Scooby-Doo' gang member is forever losing her glasses?", "Velma", listOf("Daphne", "Shaggy", "Fred"), M),
+        q("pop_super_mario_games_2", "In the Super Mario games, which kingdom does Mario keep saving from Bowser?", "The Mushroom Kingdom", listOf("Hyrule", "Dream Land", "Green Hill Zone"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -999,7 +1023,36 @@ object PopCultureQuestions {
         q("pop_directed_lost_translation", "Who directed 'Lost in Translation' (2003)?", "Sofia Coppola", listOf("Greta Gerwig", "Kathryn Bigelow", "Jane Campion"), H),
         q("pop_south_korean_director", "Which South Korean director made 'Parasite'?", "Bong Joon-ho", listOf("Park Chan-wook", "Kim Ki-duk", "Lee Chang-dong"), H),
         q("pop_singer_songwriter_wrote", "Which singer-songwriter wrote the much-covered song 'Hallelujah'?", "Leonard Cohen", listOf("Bob Dylan", "Jeff Buckley", "Paul Simon"), H),
-        q("pop_french_singer_nicknamed", "Which French singer, nicknamed 'the Little Sparrow', sang 'Non, je ne regrette rien'?", "Edith Piaf", listOf("Juliette Greco", "Francoise Hardy", "Dalida"), H)
+        q("pop_french_singer_nicknamed", "Which French singer, nicknamed 'the Little Sparrow', sang 'Non, je ne regrette rien'?", "Edith Piaf", listOf("Juliette Greco", "Francoise Hardy", "Dalida"), H),
+        q("pop_voiced_buzz_lightyear", "Who voiced Buzz Lightyear in the original 'Toy Story'?", "Tim Allen", listOf("Billy Crystal", "Robin Williams", "Steve Martin"), H),
+        q("pop_film_features_line_11", "Which film features the line 'Keep the change, ya filthy animal'?", "Home Alone", listOf("Goodfellas", "Gremlins", "Scarface"), H),
+        q("pop_cover_nirvana_nevermind", "On the cover of Nirvana's 'Nevermind', a baby swims towards what?", "A dollar bill", listOf("A goldfish", "A rubber duck", "A beach ball"), H),
+        q("pop_drummer_beatles_sack", "Which drummer did The Beatles sack in 1962, just before they became famous?", "Pete Best", listOf("Stuart Sutcliffe", "Charlie Watts", "Keith Moon"), H),
+        q("pop_1976_photo_shoot", "During a 1976 photo shoot for Pink Floyd's album 'Animals', what broke loose and drifted over London?", "An inflatable pig", listOf("An inflatable sheep", "A hot-air balloon", "A weather balloon"), H),
+        q("pop_singer_became_woman", "Which singer became the first woman to win Eurovision twice, in 2012 and 2023?", "Loreen", listOf("Lena", "Netta", "Emmelie de Forest"), H),
+        q("pop_pop_star_born", "Which pop star was born Stefani Germanotta?", "Lady Gaga", listOf("Gwen Stefani", "Katy Perry", "Christina Aguilera"), H),
+        q("pop_queen_frontman_born", "Queen's frontman was born Farrokh Bulsara on which island?", "Zanzibar", listOf("Mauritius", "Sri Lanka", "Madagascar"), H),
+        q("pop_game_thrones_phrase", "In 'Game of Thrones', what phrase turns out to be the origin of Hodor's name?", "'Hold the door'", listOf("'Hold the horse'", "'Hide the dog'", "'Hear the drums'"), H),
+        q("pop_game_thrones_massacre", "Which 'Game of Thrones' massacre takes place at a feast at the Twins?", "The Red Wedding", listOf("The Purple Wedding", "The Black Feast", "The Bloody Banquet"), H),
+        q("pop_breaking_bad_fried", "In 'Breaking Bad', which fried-chicken chain fronts Gus Fring's drug empire?", "Los Pollos Hermanos", listOf("El Pollo Dorado", "Chicken Royale", "Pollo Feliz"), H),
+        q("pop_seinfeld_character_barking", "Which 'Seinfeld' character is famous for barking 'No soup for you!'?", "The Soup Nazi", listOf("Newman", "Kramer", "Uncle Leo"), H),
+        q("pop_office_crop_grown", "In the US 'The Office', which crop is grown on Dwight Schrute's family farm?", "Beets", listOf("Potatoes", "Corn", "Cabbage"), H),
+        q("pop_doctor_planet_doctor", "In 'Doctor Who', which planet does the Doctor come from?", "Gallifrey", listOf("Skaro", "Telos", "Trenzalore"), H),
+        q("pop_comics_originally_stand", "What did the 'DC' in DC Comics originally stand for?", "Detective Comics", listOf("Dynamic Comics", "Daring Comics", "Drawn Comics"), H),
+        q("pop_boy_becomes_superhero", "Which boy becomes a superhero by shouting 'Shazam!'?", "Billy Batson", listOf("Dick Grayson", "Jimmy Olsen", "Bucky Barnes"), H),
+        q("pop_comic_strip_calvin", "The comic strip 'Calvin and Hobbes' is named after a 16th-century theologian and a 17th-century what?", "Philosopher", listOf("Painter", "Composer", "Explorer"), H),
+        q("pop_toy_story_woody", "In 'Toy Story 2', Woody learns he was the star of a 1950s TV show called what?", "Woody's Roundup", listOf("Woody's Rodeo", "Cowboy Corral", "Sheriff Woody Time"), H),
+        q("pop_link_trusty_horse", "What is the name of Link's trusty horse in 'The Legend of Zelda' games?", "Epona", listOf("Agro", "Roach", "Shadowfax"), H),
+        q("pop_game_last_turns", "In the game 'The Last of Us', what turns people into monsters?", "A fungus", listOf("A virus", "Radiation", "A parasitic worm"), H),
+        q("pop_sarcastic_runs_test", "What is the name of the sarcastic AI that runs the test chambers in 'Portal'?", "GLaDOS", listOf("SHODAN", "Cortana", "HAL 9000"), H),
+        q("pop_street_fighter_ryu", "In 'Street Fighter', what does Ryu shout as he hurls his fireball?", "'Hadoken!'", listOf("'Shoryuken!'", "'Kamehameha!'", "'Sonic Boom!'"), H),
+        q("pop_toy_ever_advertised", "Which toy was the first ever to be advertised on television, in 1952?", "Mr. Potato Head", listOf("The Slinky", "The Hula Hoop", "The Frisbee"), H),
+        q("pop_1999_horror_film", "Which 1999 horror film was marketed as the real footage of three missing students?", "The Blair Witch Project", listOf("Paranormal Activity", "Cloverfield", "The Ring"), H),
+        q("pop_princess_bride_swordsman", "In 'The Princess Bride', which swordsman hunts the six-fingered man who killed his father?", "Inigo Montoya", listOf("Westley", "Fezzik", "Prince Humperdinck"), H),
+        q("pop_indiana_jones_last", "In 'Indiana Jones and the Last Crusade', where does Indy's nickname turn out to come from?", "The family dog", listOf("His home state", "His grandfather", "A school friend"), H),
+        q("pop_film_won_best", "Which film won Best Picture in 2017, after 'La La Land' was announced by mistake?", "Moonlight", listOf("Manchester by the Sea", "Hidden Figures", "Arrival"), H),
+        q("pop_whisky_loving_sea", "Which whisky-loving sea captain is Tintin's best friend?", "Captain Haddock", listOf("Captain Nemo", "Captain Hook", "Captain Flint"), H),
+        q("pop_actress_made_film", "Which actress made her film debut as a girl in 'Leon: The Professional' (1994)?", "Natalie Portman", listOf("Kirsten Dunst", "Scarlett Johansson", "Dakota Fanning"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -1055,6 +1108,23 @@ object PopCultureQuestions {
         q("pop_actor_won_best", "Which actor has won the most Best Actor Oscars, with three?", "Daniel Day-Lewis", listOf("Jack Nicholson", "Tom Hanks", "Marlon Brando"), X),
         q("pop_elton_john_birth", "What was Elton John's name at birth?", "Reginald Dwight", listOf("Elton Hercules", "Gordon Sumner", "Farrokh Bulsara"), X),
         q("pop_best_selling_single", "Which is the best-selling single of all time?", "'White Christmas'", listOf("'Candle in the Wind 1997'", "'Imagine'", "'Billie Jean'"), X),
-        q("pop_number_pikachu_national", "What number is Pikachu in the National Pokedex?", "25", listOf("1", "7", "151"), X)
+        q("pop_number_pikachu_national", "What number is Pikachu in the National Pokedex?", "25", listOf("1", "7", "151"), X),
+        q("pop_under_radiohead_start", "Under which name did Radiohead start out, after the only day they could rehearse?", "On a Friday", listOf("Weekenders", "Sunday Club", "Mondays"), X),
+        q("pop_beatles_song_performed", "Which Beatles song was first performed for the worldwide satellite broadcast 'Our World' in 1967?", "All You Need Is Love", listOf("Hey Jude", "Yellow Submarine", "Let It Be"), X),
+        q("pop_1966_beach_boys", "Which 1966 Beach Boys album is credited with inspiring the Beatles' 'Sgt. Pepper'?", "Pet Sounds", listOf("Surfin' Safari", "Smiley Smile", "All Summer Long"), X),
+        q("pop_homer_simpson_middle", "What is Homer Simpson's middle name?", "Jay", listOf("James", "Joseph", "John"), X),
+        q("pop_seinfeld_kramer_revealed", "In 'Seinfeld', what is Kramer's first name, revealed only in the sixth season?", "Cosmo", listOf("Carl", "Stanley", "Elliot"), X),
+        q("pop_lost_number_oceanic", "In 'Lost', what was the number of the Oceanic flight that crashed on the island?", "815", listOf("316", "42", "108"), X),
+        q("pop_mickey_mouse_walt", "Before Mickey Mouse, Walt Disney lost the rights to which cartoon character to Universal?", "Oswald the Lucky Rabbit", listOf("Felix the Cat", "Krazy Kat", "Woody Woodpecker"), X),
+        q("pop_1962_comic_spider", "In which 1962 comic did Spider-Man first appear?", "Amazing Fantasy", listOf("Tales of Suspense", "Strange Tales", "Journey into Mystery"), X),
+        q("pop_two_teenagers_cleveland", "Which two teenagers from Cleveland created Superman?", "Jerry Siegel and Joe Shuster", listOf("Stan Lee and Jack Kirby", "Bob Kane and Bill Finger", "Will Eisner and Jack Cole"), X),
+        q("pop_classic_silver_age", "In the classic Silver Age comics, the Green Lantern's power ring had no effect on anything of which colour?", "Yellow", listOf("Red", "Black", "Blue"), X),
+        q("pop_pixar_short_became", "Which Pixar short became the first computer-animated film to win an Oscar, in 1989?", "Tin Toy", listOf("Luxo Jr.", "Geri's Game", "For the Birds"), X),
+        q("pop_working_title_minecraft", "What was the working title of Minecraft when Notch first showed it in 2009?", "Cave Game", listOf("Block World", "Dig Deep", "Craft Mine"), X),
+        q("pop_original_1981_donkey", "In the original 1981 'Donkey Kong', who was the woman the hero climbed to rescue?", "Pauline", listOf("Peach", "Daisy", "Rosalina"), X),
+        q("pop_director_made_both_2", "Which director made both 'Mad Max' and the penguin musical 'Happy Feet'?", "George Miller", listOf("Peter Jackson", "Ridley Scott", "Baz Luhrmann"), X),
+        q("pop_became_black_performer", "Who became the first Black performer to win an Oscar, in 1940, for her role as Mammy?", "Hattie McDaniel", listOf("Dorothy Dandridge", "Butterfly McQueen", "Ethel Waters"), X),
+        q("pop_tardis_stand_doctor", "What does TARDIS stand for in 'Doctor Who'?", "Time And Relative Dimension In Space", listOf("Time And Radial Distance In Space", "Travel Across Realms Dimensions In Space", "Time And Reality Displacement In Space"), X),
+        q("pop_wilhelm_scream_heard", "The 'Wilhelm scream', heard in 'Star Wars' and hundreds of other films, is what?", "A stock sound effect", listOf("A horror-film award", "A guitar technique", "A famous stunt fall"), X)
     )
 }

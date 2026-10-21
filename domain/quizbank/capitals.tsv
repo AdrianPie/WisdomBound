@@ -33,6 +33,8 @@ capx_luksemburg	Easy	Which of these countries has a capital with exactly the sam
 capx_trafalgar	Easy	Nelson's Column stands in which London square?	Trafalgar Square	Piccadilly Circus	Leicester Square	Covent Garden
 capy_berlin_mis	Easy	Which animal appears on the coat of arms of Berlin?	A bear	An eagle	A lion	A wolf
 cap_capital_iraq	Easy	What is the capital of Iraq?	Baghdad	Basra	Tehran	Damascus
+cap_1990_newly_reunified	Easy	In 1990, newly reunified Germany chose which city as its capital?	Berlin	Bonn	Frankfurt	Munich
+cap_capital_monaco	Easy	What is the capital of Monaco?	Monaco	Monte Carlo	Fontvieille	Nice
 cap_canberra	Medium	What is the capital of Australia?	Canberra	Sydney	Melbourne	Perth
 cap_ottawa	Medium	What is the capital of Canada?	Ottawa	Toronto	Montreal	Vancouver
 cap_brasilia	Medium	What is the capital of Brazil?	Brasilia	Rio de Janeiro	Sao Paulo	Salvador
@@ -135,6 +137,16 @@ cap_capital_home_palace	Medium	Which capital is home to the Palace of the Parlia
 cap_capital_city_home_2	Medium	Which capital city is home to the vast Sheikh Zayed Grand Mosque?	Abu Dhabi	Doha	Riyadh	Muscat
 cap_capital_home_vigeland	Medium	Which capital is home to the Vigeland sculpture park?	Oslo	Stockholm	Copenhagen	Helsinki
 cap_capital_see_medieval	Medium	In which capital can you see the medieval 'Book of Kells'?	Dublin	Edinburgh	London	Cardiff
+cap_coastal_megacity_nigeria	Medium	Which coastal megacity was Nigeria's capital until 1991?	Lagos	Kano	Ibadan	Port Harcourt
+cap_tanzania_largest_city	Medium	Tanzania's largest city and former capital has an Arabic name meaning what?	Haven of peace	City of gold	Gate of the sea	Place of palms
+cap_south_african_city	Medium	Which South African city is home to the country's parliament?	Cape Town	Johannesburg	Durban	Bloemfontein
+cap_capital_city_home_3	Medium	Which capital city is the home of fado, the mournful Portuguese song style?	Lisbon	Madrid	Rome	Athens
+cap_capital_nobel_prizes	Medium	In which capital are most of the Nobel Prizes handed out each December?	Stockholm	Oslo	Copenhagen	Helsinki
+cap_washington_cherry_blossom	Medium	Washington, D.C.'s famous cherry blossom trees were a 1912 gift from which city?	Tokyo	Kyoto	Osaka	Seoul
+cap_state_capital_third	Medium	Which US state capital is named after the third US president?	Jefferson City	Lincoln	Madison	Jackson
+cap_capital_often_last	Medium	Which capital is often called the last divided capital in Europe?	Nicosia	Berlin	Belfast	Mostar
+cap_planned_indian_city	Medium	Which planned Indian city, laid out by Le Corbusier, is the capital of two states at once?	Chandigarh	Jaipur	Bhubaneswar	Gandhinagar
+cap_capital_receives_dutch	Medium	Which capital receives Dutch tulip bulbs every year, as thanks for sheltering a Dutch princess in World War II?	Ottawa	London	Washington, D.C.	Canberra
 cap_wellington	Hard	What is the capital of New Zealand?	Wellington	Auckland	Christchurch	Dunedin
 cap_hanoi	Hard	What is the capital of Vietnam?	Hanoi	Ho Chi Minh City	Da Nang	Hue
 cap_rabat	Hard	What is the capital of Morocco?	Rabat	Casablanca	Marrakesh	Fez
@@ -226,6 +238,12 @@ cap_capital_state_ohio	Hard	What is the capital of the US state of Ohio?	Columbu
 cap_city_capital_canadian_2	Hard	Which city is the capital of the Canadian province of Alberta?	Edmonton	Calgary	Banff	Red Deer
 cap_city_capital_german	Hard	Which city is the capital of the German state of Saxony?	Dresden	Leipzig	Chemnitz	Magdeburg
 cap_port_louis_capital	Hard	Port Louis is the capital of which island country?	Mauritius	Seychelles	Maldives	Madagascar
+cap_state_capital_cannot	Hard	Which US state capital cannot be reached by road from the rest of the continent?	Juneau	Helena	Bismarck	Cheyenne
+cap_belize_move_capital	Hard	Why did Belize move its capital inland in the 1960s?	A hurricane wrecked the old one	A volcano buried the old one	An earthquake levelled it	The rising sea flooded it
+cap_architect_designed_brasilia	Hard	Which architect designed Brasilia's cathedral and its other modernist landmarks?	Oscar Niemeyer	Le Corbusier	Frank Lloyd Wright	Antoni Gaudi
+cap_north_eastern_city	Hard	Which north-eastern city was Brazil's first colonial capital, from 1549 to 1763?	Salvador	Recife	Fortaleza	Sao Luis
+cap_japanese_city_tame	Hard	Which Japanese city, famous for its tame deer, was the imperial capital for most of the 700s?	Nara	Kamakura	Osaka	Nagasaki
+cap_capital_home_oldest	Hard	Which capital is home to the oldest cathedral in the Americas, completed in 1541?	Santo Domingo	Havana	Mexico City	Lima
 cap_thimphu	Expert	What is the capital of Bhutan?	Thimphu	Paro	Punakha	Phuentsholing
 cap_ulaanbaatar	Expert	What is the capital of Mongolia?	Ulaanbaatar	Erdenet	Darkhan	Khovd
 cap_bishkek	Expert	What is the capital of Kyrgyzstan?	Bishkek	Osh	Naryn	Karakol
@@ -287,3 +305,5 @@ cap_capital_guyana	Expert	What is the capital of Guyana?	Georgetown	Paramaribo	C
 cap_capital_state_pennsylvania	Expert	What is the capital of the US state of Pennsylvania?	Harrisburg	Philadelphia	Pittsburgh	Scranton
 cap_city_italy_capital	Expert	Which city was Italy's capital before Rome, from 1865 to 1871?	Florence	Turin	Milan	Naples
 cap_capital_niger	Expert	What is the capital of Niger?	Niamey	Abuja	N'Djamena	Bamako
+cap_city_lost_role	Expert	Which city lost its role as Canada's capital after a mob burned its parliament building in 1849?	Montreal	Quebec City	Kingston	Toronto
+cap_capital_city_famously	Expert	Which capital city famously has no traffic lights, its junctions run by white-gloved police instead?	Thimphu	Kathmandu	Ulaanbaatar	Vientiane

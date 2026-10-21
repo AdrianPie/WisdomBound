@@ -341,6 +341,15 @@ pop_colour_zero_pocket	Easy	What colour is the zero pocket on a roulette wheel?	
 pop_film_studio_logo	Easy	Which film studio's logo shows a mountain ringed by stars?	Paramount	Universal	Columbia	Warner Bros.
 pop_company_bought_marvel	Easy	Which company bought Marvel Entertainment in 2009?	Disney	Warner Bros.	Sony	Universal
 pop_network_made_game	Easy	Which TV network made 'Game of Thrones' and 'The Sopranos'?	HBO	Netflix	AMC	Showtime
+pop_actress_played_han	Easy	Which actress played Han Solo's love interest in the original 'Star Wars' films?	Carrie Fisher	Natalie Portman	Sigourney Weaver	Jodie Foster
+pop_singer_huge_1950s	Easy	Which singer had huge 1950s hits with 'Hound Dog' and 'Jailhouse Rock'?	Elvis Presley	Chuck Berry	Little Richard	Buddy Holly
+pop_band_hits_hey	Easy	Which band had hits with 'Hey Jude' and 'Let It Be'?	The Beatles	The Rolling Stones	The Beach Boys	The Kinks
+pop_singer_1984_hit	Easy	Which singer had a 1984 hit with 'Like a Virgin'?	Madonna	Cyndi Lauper	Whitney Houston	Kylie Minogue
+pop_group_sang_dancing	Easy	Which group sang 'Dancing Queen' in 1976?	ABBA	Boney M.	The Bee Gees	Fleetwood Mac
+pop_actor_played_time	Easy	Which actor played the time-travelling teenager in 'Back to the Future'?	Michael J. Fox	Matthew Broderick	Tom Cruise	Rob Lowe
+pop_irl_mean_online	Easy	What does 'IRL' mean in online slang?	In real life	In rapid loop	I really laughed	Internet relay link
+pop_lion_king_simba	Easy	In 'The Lion King', what is the name of Simba's childhood friend who later becomes his queen?	Nala	Sarabi	Shenzi	Kiara
+pop_superhero_man_steel	Easy	Which superhero is known as 'the Man of Steel'?	Superman	Iron Man	Captain America	The Flash
 day_zlota_palma	Medium	Which is the top prize at the Cannes Film Festival?	The Palme d'Or	The Golden Bear	The Golden Lion	The Silver Shell
 day_minecraft_sprzedaz	Medium	Which is the best-selling video game of all time?	Minecraft	Tetris	Grand Theft Auto V	Wii Sports
 trv2_tetris_kraj	Medium	In which country was Tetris created?	The Soviet Union	Japan	The United States	Finland
@@ -785,6 +794,21 @@ pop_spaces_around_standard	Medium	How many spaces are there around a standard Mo
 pop_animal_appears_every	Medium	Which animal appears on every bottle of Bacardi rum?	A bat	A parrot	A lion	A rooster
 pop_film_studio_logo_2	Medium	Which film studio's logo shows a woman holding up a torch?	Columbia	Paramount	Universal	MGM
 pop_video_game_series	Medium	Which video game series features the thumbs-up mascot 'Vault Boy'?	Fallout	BioShock	Borderlands	Mass Effect
+pop_actor_won_oscar	Medium	Which actor won an Oscar as the cannibal psychiatrist in 'The Silence of the Lambs'?	Anthony Hopkins	Jack Nicholson	Gene Hackman	Robert De Niro
+pop_actress_played_dorothy	Medium	Which actress played Dorothy in 'The Wizard of Oz' (1939)?	Judy Garland	Shirley Temple	Vivien Leigh	Ginger Rogers
+pop_voiced_forgetful_fish	Medium	Who voiced the forgetful fish Dory in 'Finding Nemo'?	Ellen DeGeneres	Julia Roberts	Whoopi Goldberg	Cameron Diaz
+pop_shrek_short_villainous	Medium	In 'Shrek', what is the name of the short, villainous ruler of Duloc?	Lord Farquaad	Prince Charming	King Harold	Rumpelstiltskin
+pop_actress_starred_lone	Medium	Which actress starred as the lone survivor of the spaceship crew in 'Alien' (1979)?	Sigourney Weaver	Jamie Lee Curtis	Linda Hamilton	Meryl Streep
+pop_ghostbusters_team_warned	Medium	In 'Ghostbusters', what are the team warned never to do with their proton beams?	Cross the streams	Fire them indoors	Aim them at the sky	Use them at night
+pop_film_features_joker	Medium	Which film features the Joker's line 'Why so serious?'	The Dark Knight	Batman Begins	Batman Returns	Suicide Squad
+pop_member_queen_earned	Medium	Which member of Queen also earned a PhD in astrophysics?	Brian May	Roger Taylor	John Deacon	Freddie Mercury
+pop_band_abba_come	Medium	Where does the band name ABBA come from?	The members' first initials	A Swedish word for 'music'	Their manager's nickname	Their first record label
+pop_brand_beer_homer	Medium	Which brand of beer does Homer Simpson drink?	Duff	Bud	Schlitz	Buzz
+pop_tagline_usually_ends	Medium	Which tagline usually ends the opening credits of 'The X-Files'?	The truth is out there	We are not alone	Watch the skies	Keep looking up
+pop_star_trek_vulcan	Medium	In 'Star Trek', which Vulcan blessing goes with the split-fingered hand salute?	Live long and prosper	May the Force be with you	Logic guides us all	Go boldly in peace
+pop_stranger_things_boys	Medium	In 'Stranger Things', the boys name the first monster after a villain from which game?	Dungeons & Dragons	Magic: The Gathering	Warhammer	Pac-Man
+pop_scooby_doo_gang	Medium	Which 'Scooby-Doo' gang member is forever losing her glasses?	Velma	Daphne	Shaggy	Fred
+pop_super_mario_games_2	Medium	In the Super Mario games, which kingdom does Mario keep saving from Bowser?	The Mushroom Kingdom	Hyrule	Dream Land	Green Hill Zone
 day_zloty_lew	Hard	At which film festival is the Golden Lion awarded?	Venice	Cannes	Berlin	San Sebastian
 lit_manga	Hard	The Japanese word 'manga' originally meant what?	Whimsical pictures	Moving pictures	Paper theatre	Ink stories
 pop_gremlins	Hard	In 'Gremlins' (1984), what must you never do to the creatures after midnight?	Feed them	Tickle them	Let them sleep	Take them outside
@@ -966,6 +990,35 @@ pop_directed_lost_translation	Hard	Who directed 'Lost in Translation' (2003)?	So
 pop_south_korean_director	Hard	Which South Korean director made 'Parasite'?	Bong Joon-ho	Park Chan-wook	Kim Ki-duk	Lee Chang-dong
 pop_singer_songwriter_wrote	Hard	Which singer-songwriter wrote the much-covered song 'Hallelujah'?	Leonard Cohen	Bob Dylan	Jeff Buckley	Paul Simon
 pop_french_singer_nicknamed	Hard	Which French singer, nicknamed 'the Little Sparrow', sang 'Non, je ne regrette rien'?	Edith Piaf	Juliette Greco	Francoise Hardy	Dalida
+pop_voiced_buzz_lightyear	Hard	Who voiced Buzz Lightyear in the original 'Toy Story'?	Tim Allen	Billy Crystal	Robin Williams	Steve Martin
+pop_film_features_line_11	Hard	Which film features the line 'Keep the change, ya filthy animal'?	Home Alone	Goodfellas	Gremlins	Scarface
+pop_cover_nirvana_nevermind	Hard	On the cover of Nirvana's 'Nevermind', a baby swims towards what?	A dollar bill	A goldfish	A rubber duck	A beach ball
+pop_drummer_beatles_sack	Hard	Which drummer did The Beatles sack in 1962, just before they became famous?	Pete Best	Stuart Sutcliffe	Charlie Watts	Keith Moon
+pop_1976_photo_shoot	Hard	During a 1976 photo shoot for Pink Floyd's album 'Animals', what broke loose and drifted over London?	An inflatable pig	An inflatable sheep	A hot-air balloon	A weather balloon
+pop_singer_became_woman	Hard	Which singer became the first woman to win Eurovision twice, in 2012 and 2023?	Loreen	Lena	Netta	Emmelie de Forest
+pop_pop_star_born	Hard	Which pop star was born Stefani Germanotta?	Lady Gaga	Gwen Stefani	Katy Perry	Christina Aguilera
+pop_queen_frontman_born	Hard	Queen's frontman was born Farrokh Bulsara on which island?	Zanzibar	Mauritius	Sri Lanka	Madagascar
+pop_game_thrones_phrase	Hard	In 'Game of Thrones', what phrase turns out to be the origin of Hodor's name?	'Hold the door'	'Hold the horse'	'Hide the dog'	'Hear the drums'
+pop_game_thrones_massacre	Hard	Which 'Game of Thrones' massacre takes place at a feast at the Twins?	The Red Wedding	The Purple Wedding	The Black Feast	The Bloody Banquet
+pop_breaking_bad_fried	Hard	In 'Breaking Bad', which fried-chicken chain fronts Gus Fring's drug empire?	Los Pollos Hermanos	El Pollo Dorado	Chicken Royale	Pollo Feliz
+pop_seinfeld_character_barking	Hard	Which 'Seinfeld' character is famous for barking 'No soup for you!'?	The Soup Nazi	Newman	Kramer	Uncle Leo
+pop_office_crop_grown	Hard	In the US 'The Office', which crop is grown on Dwight Schrute's family farm?	Beets	Potatoes	Corn	Cabbage
+pop_doctor_planet_doctor	Hard	In 'Doctor Who', which planet does the Doctor come from?	Gallifrey	Skaro	Telos	Trenzalore
+pop_comics_originally_stand	Hard	What did the 'DC' in DC Comics originally stand for?	Detective Comics	Dynamic Comics	Daring Comics	Drawn Comics
+pop_boy_becomes_superhero	Hard	Which boy becomes a superhero by shouting 'Shazam!'?	Billy Batson	Dick Grayson	Jimmy Olsen	Bucky Barnes
+pop_comic_strip_calvin	Hard	The comic strip 'Calvin and Hobbes' is named after a 16th-century theologian and a 17th-century what?	Philosopher	Painter	Composer	Explorer
+pop_toy_story_woody	Hard	In 'Toy Story 2', Woody learns he was the star of a 1950s TV show called what?	Woody's Roundup	Woody's Rodeo	Cowboy Corral	Sheriff Woody Time
+pop_link_trusty_horse	Hard	What is the name of Link's trusty horse in 'The Legend of Zelda' games?	Epona	Agro	Roach	Shadowfax
+pop_game_last_turns	Hard	In the game 'The Last of Us', what turns people into monsters?	A fungus	A virus	Radiation	A parasitic worm
+pop_sarcastic_runs_test	Hard	What is the name of the sarcastic AI that runs the test chambers in 'Portal'?	GLaDOS	SHODAN	Cortana	HAL 9000
+pop_street_fighter_ryu	Hard	In 'Street Fighter', what does Ryu shout as he hurls his fireball?	'Hadoken!'	'Shoryuken!'	'Kamehameha!'	'Sonic Boom!'
+pop_toy_ever_advertised	Hard	Which toy was the first ever to be advertised on television, in 1952?	Mr. Potato Head	The Slinky	The Hula Hoop	The Frisbee
+pop_1999_horror_film	Hard	Which 1999 horror film was marketed as the real footage of three missing students?	The Blair Witch Project	Paranormal Activity	Cloverfield	The Ring
+pop_princess_bride_swordsman	Hard	In 'The Princess Bride', which swordsman hunts the six-fingered man who killed his father?	Inigo Montoya	Westley	Fezzik	Prince Humperdinck
+pop_indiana_jones_last	Hard	In 'Indiana Jones and the Last Crusade', where does Indy's nickname turn out to come from?	The family dog	His home state	His grandfather	A school friend
+pop_film_won_best	Hard	Which film won Best Picture in 2017, after 'La La Land' was announced by mistake?	Moonlight	Manchester by the Sea	Hidden Figures	Arrival
+pop_whisky_loving_sea	Hard	Which whisky-loving sea captain is Tintin's best friend?	Captain Haddock	Captain Nemo	Captain Hook	Captain Flint
+pop_actress_made_film	Hard	Which actress made her film debut as a girl in 'Leon: The Professional' (1994)?	Natalie Portman	Kirsten Dunst	Scarlett Johansson	Dakota Fanning
 lit_wings	Expert	Which film won the very first Academy Award for Best Picture?	Wings	Sunrise	The Jazz Singer	Metropolis
 pop_obywatel_kane	Expert	Which word is whispered at the very start of 'Citizen Kane'?	Rosebud	Mother	Xanadu	Charles
 pop_spirited_away	Expert	Which was the first non-English-language film to win the Oscar for Best Animated Feature?	Spirited Away	Persepolis	Akira	Princess Mononoke
@@ -1018,3 +1071,20 @@ pop_actor_won_best	Expert	Which actor has won the most Best Actor Oscars, with t
 pop_elton_john_birth	Expert	What was Elton John's name at birth?	Reginald Dwight	Elton Hercules	Gordon Sumner	Farrokh Bulsara
 pop_best_selling_single	Expert	Which is the best-selling single of all time?	'White Christmas'	'Candle in the Wind 1997'	'Imagine'	'Billie Jean'
 pop_number_pikachu_national	Expert	What number is Pikachu in the National Pokedex?	25	1	7	151
+pop_under_radiohead_start	Expert	Under which name did Radiohead start out, after the only day they could rehearse?	On a Friday	Weekenders	Sunday Club	Mondays
+pop_beatles_song_performed	Expert	Which Beatles song was first performed for the worldwide satellite broadcast 'Our World' in 1967?	All You Need Is Love	Hey Jude	Yellow Submarine	Let It Be
+pop_1966_beach_boys	Expert	Which 1966 Beach Boys album is credited with inspiring the Beatles' 'Sgt. Pepper'?	Pet Sounds	Surfin' Safari	Smiley Smile	All Summer Long
+pop_homer_simpson_middle	Expert	What is Homer Simpson's middle name?	Jay	James	Joseph	John
+pop_seinfeld_kramer_revealed	Expert	In 'Seinfeld', what is Kramer's first name, revealed only in the sixth season?	Cosmo	Carl	Stanley	Elliot
+pop_lost_number_oceanic	Expert	In 'Lost', what was the number of the Oceanic flight that crashed on the island?	815	316	42	108
+pop_mickey_mouse_walt	Expert	Before Mickey Mouse, Walt Disney lost the rights to which cartoon character to Universal?	Oswald the Lucky Rabbit	Felix the Cat	Krazy Kat	Woody Woodpecker
+pop_1962_comic_spider	Expert	In which 1962 comic did Spider-Man first appear?	Amazing Fantasy	Tales of Suspense	Strange Tales	Journey into Mystery
+pop_two_teenagers_cleveland	Expert	Which two teenagers from Cleveland created Superman?	Jerry Siegel and Joe Shuster	Stan Lee and Jack Kirby	Bob Kane and Bill Finger	Will Eisner and Jack Cole
+pop_classic_silver_age	Expert	In the classic Silver Age comics, the Green Lantern's power ring had no effect on anything of which colour?	Yellow	Red	Black	Blue
+pop_pixar_short_became	Expert	Which Pixar short became the first computer-animated film to win an Oscar, in 1989?	Tin Toy	Luxo Jr.	Geri's Game	For the Birds
+pop_working_title_minecraft	Expert	What was the working title of Minecraft when Notch first showed it in 2009?	Cave Game	Block World	Dig Deep	Craft Mine
+pop_original_1981_donkey	Expert	In the original 1981 'Donkey Kong', who was the woman the hero climbed to rescue?	Pauline	Peach	Daisy	Rosalina
+pop_director_made_both_2	Expert	Which director made both 'Mad Max' and the penguin musical 'Happy Feet'?	George Miller	Peter Jackson	Ridley Scott	Baz Luhrmann
+pop_became_black_performer	Expert	Who became the first Black performer to win an Oscar, in 1940, for her role as Mammy?	Hattie McDaniel	Dorothy Dandridge	Butterfly McQueen	Ethel Waters
+pop_tardis_stand_doctor	Expert	What does TARDIS stand for in 'Doctor Who'?	Time And Relative Dimension In Space	Time And Radial Distance In Space	Travel Across Realms Dimensions In Space	Time And Reality Displacement In Space
+pop_wilhelm_scream_heard	Expert	The 'Wilhelm scream', heard in 'Star Wars' and hundreds of other films, is what?	A stock sound effect	A horror-film award	A guitar technique	A famous stunt fall

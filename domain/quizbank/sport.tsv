@@ -121,6 +121,31 @@ spo_scottish_manager_led	Easy	Which Scottish manager led Manchester United for 2
 spo_french_manager_led	Easy	Which French manager led Arsenal for 22 years?	Arsene Wenger	Gerard Houllier	Didier Deschamps	Claude Puel
 spo_coach_barcelona_team	Easy	Which coach's Barcelona team of 2008-2012 made 'tiki-taka' famous?	Pep Guardiola	Luis Enrique	Frank Rijkaard	Johan Cruyff
 spo_german_coach_led	Easy	Which German coach led Liverpool to the 2019 Champions League title?	Jurgen Klopp	Joachim Low	Thomas Tuchel	Hansi Flick
+spo_golfers_shout_warn	Easy	What do golfers shout to warn people that a ball is flying towards them?	'Fore!'	'Clear!'	'Hazard!'	'Bogey!'
+spo_sport_long_match	Easy	In which sport does a long match stop for official lunch and tea breaks?	Cricket	Golf	Tennis	Rugby union
+spo_motor_racing_front	Easy	In motor racing, what is the front spot on the starting grid called?	Pole position	Top slot	Lead box	Front gate
+spo_baseball_strikes_take	Easy	In baseball, how many strikes does it take to strike out a batter?	Three	Two	Four	Five
+spo_sport_athletes_compete	Easy	In which sport do athletes compete on the pommel horse and the rings?	Gymnastics	Equestrian	Weightlifting	Diving
+spo_sport_events_slalom	Easy	Which sport has events called slalom, giant slalom and downhill?	Alpine skiing	Ski jumping	Bobsleigh	Cross-country skiing
+spo_american_football_area	Easy	In American football, what is the area at each end of the field where touchdowns are scored?	The end zone	The red zone	The pocket	The backfield
+spo_sport_ball_nicknamed	Easy	Which sport's ball is nicknamed 'the pigskin'?	American football	Basketball	Baseball	Ice hockey
+spo_basketball_superstar_left	Easy	Which basketball superstar left the NBA in 1993 to try his luck in minor-league baseball?	Michael Jordan	Magic Johnson	Larry Bird	Shaquille O'Neal
+spo_boxing_letters_tko	Easy	In boxing, what do the letters 'TKO' stand for?	Technical knockout	Total knockout	Timed knockout	Team knockout
+spo_national_football_team_2	Easy	Which national football team plays in bright orange, the colour of its royal family?	The Netherlands	Belgium	Denmark	Spain
+spo_colour_belt_complete	Easy	What colour belt does a complete beginner usually wear in judo and karate?	White	Yellow	Black	Red
+spo_hollywood_arnold_schwarzenegger	Easy	Before Hollywood, Arnold Schwarzenegger was a world champion in which sport?	Bodybuilding	Wrestling	Boxing	Judo
+spo_cricket_runs_batter	Easy	In cricket, how many runs does a batter get for hitting the ball over the boundary without a bounce?	Six	Four	Five	Ten
+spo_football_penalty_shoot	Easy	In a football penalty shoot-out, how many kicks does each team take before it goes to sudden death?	Five	Three	Ten	Six
+spo_boxing_mean_fighter	Easy	In boxing, what does it mean when a fighter's corner 'throws in the towel'?	They give up the fight	They ask for a timeout	They protest a foul	They want fresh gloves
+spo_1992_olympic_dream	Easy	The 1992 US Olympic 'Dream Team' of Jordan, Magic and Bird played which sport?	Basketball	Ice hockey	Baseball	Volleyball
+spo_sport_play_start	Easy	In which sport does play start with a 'face-off'?	Ice hockey	Basketball	Water polo	Volleyball
+spo_animal_appears_ferrari	Easy	Which animal appears on the Ferrari badge?	A prancing horse	A charging bull	A leaping jaguar	A roaring lion
+spo_ten_pin_bowling	Easy	In ten-pin bowling, what is a ball that rolls off into the side channel called?	A gutter ball	A split	A foul ball	A dead ball
+spo_formula_red_flag	Easy	In Formula 1, what does a red flag tell the drivers?	The race has been stopped	The last lap has begun	A car is in the pits	Overtaking is allowed
+spo_points_bullseye_worth	Easy	How many points is a bullseye worth in darts?	50	25	100	60
+spo_football_goalkeeper_keep	Easy	In football, what does a goalkeeper keep by not conceding a single goal in a match?	A clean sheet	A blank slate	A white wall	A clear net
+spo_basketball_jump_ball	Easy	In basketball, what is the jump ball that starts the game called?	The tip-off	The kick-off	The face-off	The bully-off
+spo_tennis_double_fault	Easy	In tennis, what is a 'double fault'?	Missing both serves	Hitting the ball twice	Touching the net twice	Serving out of turn
 spo_mundial_2018	Medium	Who won the soccer World Cup in 2018?	France	Croatia	Brazil	Germany
 spo_lewandowski	Medium	At which club did Robert Lewandowski become the Bundesliga's top scorer?	Bayern Munich	Real Madrid	Manchester United	Juventus
 spo_hokej	Medium	How long is one period in an ice hockey game?	20 minutes	15 minutes	25 minutes	30 minutes
@@ -322,6 +347,38 @@ spo_american_won_three	Medium	Which American won three Olympic golds in the snow
 spo_kabaddi_contact_sport	Medium	Kabaddi, a contact sport of tagging while holding your breath, is most popular in which country?	India	Brazil	Japan	Egypt
 spo_sport_invented_native	Medium	Which sport was invented by Native Americans and named by French settlers?	Lacrosse	Baseball	Ice hockey	Basketball
 spo_coach_led_france	Medium	Which coach led France to victory at the 2018 World Cup?	Didier Deschamps	Zinedine Zidane	Laurent Blanc	Arsene Wenger
+spo_song_crowds_traditionally	Medium	Which song do crowds traditionally sing during baseball's 'seventh-inning stretch'?	'Take Me Out to the Ball Game'	'The Star-Spangled Banner'	'Yankee Doodle'	'Sweet Caroline'
+spo_sport_might_fielders	Medium	In which sport might the fielders all shout 'Howzat?' at the umpire?	Cricket	Baseball	Lacrosse	Rounders
+spo_national_football_team_3	Medium	Which national football team is called 'the Azzurri', after the blue of its old royal family?	Italy	France	Uruguay	Greece
+spo_coloured_shirts_worn	Medium	What are the coloured shirts worn by jockeys called?	Silks	Satins	Banners	Tabards
+spo_ice_resurfacing_machine	Medium	The ice-resurfacing machine at hockey games is usually called by its inventor's surname. What is it?	Zamboni	Zeppelin	Ziegler	Zamora
+spo_tennis_happens_serve	Medium	In tennis, what happens when a serve clips the net and still lands in the service box?	It is replayed as a 'let'	It counts as a fault	It counts as an ace	The point goes to the server
+spo_standard_game_darts	Medium	In a standard game of darts, how must a player finish?	On a double or the bullseye	On a treble	On any single number	On the outer bull
+spo_according_autobiography_muhammad	Medium	According to his autobiography, what did Muhammad Ali do with his 1960 Olympic gold medal?	Threw it into a river	Sold it to pay for training	Gave it to his mother	Melted it into a ring
+spo_1966_stolen_world	Medium	In 1966 the stolen World Cup trophy turned up under a London hedge. Who found it?	A dog called Pickles	A boy on his paper round	A park gardener	A police constable
+spo_under_football_old	Medium	Under football's old 'golden goal' rule, what happened when a team scored in extra time?	It won the match at once	Extra time was doubled	The goal counted double	The other side got a penalty
+spo_fool_mate_quickest	Medium	'Fool's Mate' is the quickest possible checkmate in chess. On which move does Black deliver it?	The second	The third	The fourth	The sixth
+spo_term_hat_trick	Medium	The term 'hat-trick' first came from which sport?	Cricket	Ice hockey	Football	Horse racing
+spo_boxing_southpaw	Medium	In boxing, what is a 'southpaw'?	A left-handed fighter	A low, illegal punch	A fighter with a long reach	A heavyweight from the South
+spo_sport_perform_eskimo	Medium	In which sport would you perform an 'Eskimo roll'?	Kayaking	Gymnastics	Snowboarding	Bobsleigh
+spo_sepak_takraw_kind	Medium	In sepak takraw, a kind of volleyball from South-East Asia, players may not touch the ball with what?	Their hands	Their heads	Their knees	Their chests
+spo_cooper_hill_england	Medium	At Cooper's Hill in England, daredevils hurl themselves down a steep slope chasing what?	A wheel of cheese	A barrel of beer	A greased pig	A rugby ball
+spo_winners_wife_carrying	Medium	Winners of the Wife Carrying World Championships take home the wife's weight in beer. Where is it held?	Finland	Ireland	Scotland	Germany
+spo_casual_golf_mulligan	Medium	In casual golf, what is a 'mulligan'?	A free do-over of a bad shot	A hole played one-handed	A ball lost in the water	A putt given by your opponent
+spo_horse_racing_long	Medium	In horse racing, how long is a furlong?	An eighth of a mile	A quarter of a mile	A tenth of a mile	Half a mile
+spo_sliding_sport_athletes_2	Medium	In which sliding sport do athletes race feet first, lying on their backs?	Luge	Skeleton	Bobsleigh	Snowboard cross
+spo_dragon_boat_racing	Medium	Dragon boat racing began in which country, in memory of a poet who drowned himself?	China	Japan	Vietnam	Thailand
+spo_billie_jean_king	Medium	Whom did Billie Jean King beat in the famous 1973 'Battle of the Sexes' tennis match?	Bobby Riggs	Jimmy Connors	Rod Laver	Arthur Ashe
+spo_driver_back_racing	Medium	Which F1 driver was back racing just six weeks after being badly burned at the Nurburgring in 1976?	Niki Lauda	James Hunt	Jackie Stewart	Emerson Fittipaldi
+spo_club_won_2005	Medium	Which club won the 2005 Champions League final after trailing 3-0 at half-time in Istanbul?	Liverpool	AC Milan	Manchester United	Chelsea
+spo_husband_arranged_1994	Medium	Whose ex-husband arranged the 1994 attack on the figure skater Nancy Kerrigan?	Tonya Harding	Oksana Baiul	Kristi Yamaguchi	Surya Bonaly
+spo_sumo_wrestlers_toss	Medium	What do sumo wrestlers toss into the ring before a bout to purify it?	Salt	Rice	Sand	Flower petals
+spo_country_team_always	Medium	Which country's team always marches first in the Olympic opening ceremony?	Greece	The host nation	France	Switzerland
+spo_american_football_hail	Medium	In American football, what is a 'Hail Mary'?	A long, desperate last-second pass	A trick play at the kick-off	A kick that hits the goalpost	A prayer before the anthem
+spo_athletics_hammer_hammer	Medium	In athletics, what is the 'hammer' in the hammer throw?	A metal ball on a steel wire	A wooden club with a lead head	A short iron bar	A stone on a leather strap
+spo_baseball_team_curse	Medium	Which baseball team's 'Curse of the Billy Goat' finally ended with its 2016 title?	The Chicago Cubs	The Cleveland Indians	The Boston Red Sox	The Chicago White Sox
+spo_cricket_duck	Medium	In cricket, what is a 'duck'?	Being out without scoring	A ball bowled underarm	A one-handed catch	A ball that hits the stumps
+spo_under_chess_touch	Medium	Under chess's 'touch-move' rule, a player who deliberately touches one of his pieces must do what?	Move that piece	Move his king	Offer a draw	Lose a minute
 spo_bolt	Hard	What is Usain Bolt's world record in the 100 m?	9.58 s	9.69 s	9.72 s	9.49 s
 spo_olimpiada_1896	Hard	Where were the first modern Olympic Games held?	Athens	Paris	Rome	London
 spo_wimbledon	Hard	What surface is Wimbledon played on?	Grass	Sand	Concrete	Clay and hard court, alternating
@@ -414,6 +471,43 @@ spo_boxer_retired_unbeaten	Hard	Which boxer retired unbeaten with a record of 50
 spo_athletics_distance_nicknamed	Hard	Which athletics distance is nicknamed 'the metric mile'?	1500 metres	1000 metres	1609 metres	2000 metres
 spo_golfer_nicknamed_golden	Hard	Which golfer was nicknamed 'the Golden Bear'?	Jack Nicklaus	Arnold Palmer	Greg Norman	Gary Player
 spo_sport_combines_cross	Hard	Which sport combines cross-country skiing with ski jumping?	Nordic combined	Biathlon	Telemark	Freestyle skiing
+spo_sumo_bout_lost	Hard	A sumo bout is lost by stepping out of the ring or by touching the ground with anything except what?	The soles of the feet	The palms of the hands	The knees and shins	The elbows and forearms
+spo_hungary_golden_team	Hard	Hungary's 'Golden Team' had thrashed them 8-3 earlier in the tournament. Who won the 1954 World Cup final, the 'Miracle of Bern'?	West Germany	Hungary	Austria	Switzerland
+spo_2002_short_track	Hard	In 2002 a short-track skater won his country's first Winter Olympic gold after all four rivals crashed on the last bend. Which country?	Australia	New Zealand	Brazil	South Africa
+spo_tour_france_rider	Hard	In the Tour de France, what is the rider in last place overall nicknamed?	The lanterne rouge	The broom wagon	The grupetto	The domestique
+spo_tour_france_created	Hard	The Tour de France was created to boost the sales of what?	A sports newspaper	A bicycle maker	A tyre company	A wine region
+spo_cycling_race_nicknamed	Hard	Which cycling race, nicknamed 'the Hell of the North', gives its winner a cobblestone as a trophy?	Paris-Roubaix	Tour of Flanders	Milan-San Remo	Liege-Bastogne-Liege
+spo_jai_alai_ball	Hard	Jai alai, in which a ball is hurled from a curved wicker basket, is a version of which sport?	Basque pelota	Lacrosse	Squash	Hurling
+spo_bandy_big_sweden	Hard	Bandy, big in Sweden and Russia, is like ice hockey but played with what instead of a puck?	A small ball	A rubber ring	A wooden disc	A shuttlecock
+spo_since_child_jockeys	Hard	Since child jockeys were banned in the 2000s, what rides the camels in Gulf camel races?	Small robot jockeys	Sandbags tied to the hump	Nobody: they run free	Lightweight teenage girls
+spo_curling_hammer	Hard	In curling, what is 'the hammer'?	The last stone of an end	The team captain	A heavy practice stone	The brush used to sweep
+spo_darts_line_player	Hard	In darts, what is the line a player must stand behind called?	The oche	The crease	The baulk line	The bullpen
+spo_william_morgan_call	Hard	What did William G. Morgan call the game he invented in 1895, now known as volleyball?	Mintonette	Netball	Bounceball	Handtennis
+spo_2002_league_match	Hard	In 2002 a league match in Madagascar ended 149-0. Why?	One side kept scoring own goals in protest	The losers fielded only their goalkeeper	The match lasted three days	The losers were a team of children
+spo_1950_world_cup	Hard	At the 1950 World Cup, which team of part-timers stunned England 1-0?	The USA	Canada	Australia	Chile
+spo_brazil_shock_1950	Hard	What is Brazil's shock 1950 World Cup defeat by Uruguay, in Rio, remembered as?	The Maracanazo	The Mineirazo	The Centenario	The Bombonazo
+spo_football_panenka_penalty	Hard	In football, what is a 'Panenka' penalty?	A soft chip down the middle	A shot into the top corner	A run-up stopped halfway	A kick with the heel
+spo_country_won_euro_2	Hard	Which country won Euro 1992 after being called in at the last minute to replace Yugoslavia?	Denmark	Sweden	Greece	Norway
+spo_since_1992_may	Hard	Since 1992, what may a football goalkeeper no longer pick up?	A deliberate pass kicked by a teammate	A ball crossed in from a corner	A shot struck from outside the box	A header back from a teammate
+spo_colombian_goalkeeper_cleared	Hard	Which Colombian goalkeeper cleared a shot with a 'scorpion kick' at Wembley in 1995?	Rene Higuita	Oscar Cordoba	David Ospina	Faryd Mondragon
+spo_man_win_tennis	Hard	Who is the only man to win tennis's calendar Grand Slam twice, in 1962 and 1969?	Rod Laver	Don Budge	Roy Emerson	Ken Rosewall
+spo_1972_olympics_team	Hard	At the 1972 Olympics, which team beat the USA in the basketball final after the last three seconds were replayed?	The Soviet Union	Yugoslavia	Cuba	Italy
+spo_nfl_team_completed	Hard	Which NFL team completed an unbeaten season, Super Bowl included, in 1972?	The Miami Dolphins	The Dallas Cowboys	The Green Bay Packers	The Pittsburgh Steelers
+spo_baseball_team_became	Hard	Which baseball team became the 'Black Sox' after players took bribes to lose the 1919 championship?	The Chicago White Sox	The Boston Red Sox	The Cincinnati Reds	The New York Giants
+spo_tiny_urn_england	Hard	The tiny urn that England and Australia play for in the Ashes is said to hold the ashes of what?	A burnt bail	A burnt scorebook	A burnt umpire's hat	A burnt glove
+spo_outsider_knocked_out	Hard	Which 42-to-1 outsider knocked out Mike Tyson in Tokyo in 1990?	Buster Douglas	Evander Holyfield	Lennox Lewis	Larry Holmes
+spo_boxing_rules_1867	Hard	Boxing's rules of 1867, which made gloves compulsory, are named after which nobleman?	The Marquess of Queensberry	The Duke of Wellington	The Earl of Sandwich	The Duke of Marlborough
+spo_became_driver_win	Hard	Who became the first driver to win motorsport's 'Triple Crown': Monaco, the Indy 500 and Le Mans?	Graham Hill	Jim Clark	Jackie Stewart	Mario Andretti
+spo_1904_olympic_marathon	Hard	At the 1904 Olympic marathon, why was the first man across the line disqualified?	He rode part of the way in a car	He was paid to run as a professional	He took a shortcut through a farm	He was paced by a man on a horse
+spo_modern_olympics_1896	Hard	At the first modern Olympics in 1896, what did the event winners receive?	A silver medal	A gold medal	A bronze cup	A laurel crown only
+spo_eric_moussambani_never	Hard	Eric Moussambani, who had never swum in a 50 m pool before, won hearts at Sydney 2000 swimming for which country?	Equatorial Guinea	Guinea-Bissau	Gabon	Cameroon
+spo_team_sport_played	Hard	Which team sport, played with a flying disc, is normally played with no referee at all?	Ultimate	Netball	Lacrosse	Water polo
+spo_unusual_rule_korfball	Hard	What unusual rule does korfball, invented in the Netherlands, set for every team?	Half men and half women	All players under 21	No player taller than 2 m	One left-hander at least
+spo_sea_creature_detroit	Hard	Which sea creature do Detroit Red Wings fans traditionally throw onto the ice?	An octopus	A lobster	A squid	A catfish
+spo_buzkashi_afghanistan_national	Hard	In buzkashi, Afghanistan's national sport, horsemen fight over what?	A goat carcass	A leather ball	A wooden club	A flag on a pole
+spo_calcio_storico_brutal	Hard	Calcio storico, a brutal Renaissance form of football, is still played every June in which city?	Florence	Siena	Naples	Venice
+spo_perfect_olympic_gymnastics	Hard	When the first perfect 10 in Olympic gymnastics was scored in 1976, what did the scoreboard show?	1.00	10.0	9.99	0.00
+spo_dutch_mother_two	Hard	Which Dutch mother of two, nicknamed 'the Flying Housewife', won four golds at the 1948 Olympics?	Fanny Blankers-Koen	Babe Didrikson	Wilma Rudolph	Betty Cuthbert
 spo_dekatlon	Expert	Which event closes the men's Olympic decathlon on the second day?	The 1500 metres	The javelin throw	The pole vault	The 110 m hurdles
 spo_nba_wilt	Expert	Who scored 100 points in a single NBA game?	Wilt Chamberlain	Michael Jordan	Kobe Bryant	LeBron James
 spo2_fosbury	Expert	Who revolutionized the high jump with the backward flop technique?	Dick Fosbury	Jesse Owens	Carl Lewis	Javier Sotomayor
@@ -469,3 +563,9 @@ spoy_tahiti	Expert	Where were the surfing events of the 2024 Summer Olympics hel
 spo_country_won_rugby	Expert	Which country won the first Rugby World Cup, in 1987?	New Zealand	Australia	South Africa	England
 spo_boxer_nicknamed_brown	Expert	Which boxer was nicknamed 'the Brown Bomber'?	Joe Louis	Joe Frazier	Sugar Ray Robinson	Rocky Marciano
 spo_won_very_ballon	Expert	Who won the very first Ballon d'Or, in 1956?	Stanley Matthews	Alfredo Di Stefano	Ferenc Puskas	Raymond Kopa
+spo_japanese_runner_quit	Expert	A Japanese runner who quit the 1912 Olympic marathon to rest at a family's house 'finished' it in 1967. What was his time?	Over 54 years	About 5 hours	Exactly 12 years	Over 80 years
+spo_world_cup_final	Expert	In the first World Cup final, in 1930, how was the row over the match ball settled?	Each side's ball was used for one half	A coin toss picked one of the two	FIFA flew in a neutral ball	The referee brought his own ball
+spo_longest_gloved_boxing	Expert	The longest gloved boxing fight on record, in New Orleans in 1893, lasted 110 rounds. How did it end?	Neither man won	A knockout in round 110	A win on points	A disqualification
+spo_tennis_golden_set	Expert	In tennis, what is a 'golden set'?	A set won without losing a point	A set won 6-0	A set decided by a tiebreak	A set won with only aces
+spo_formula_posthumous_world	Expert	Who is Formula 1's only posthumous world champion, crowned in 1970?	Jochen Rindt	Jim Clark	Gilles Villeneuve	Ronnie Peterson
+spo_petanque_small_target	Expert	In petanque, the small target ball is called the 'cochonnet'. What does that mean?	Piglet	Little ball	Little goal	Chick
