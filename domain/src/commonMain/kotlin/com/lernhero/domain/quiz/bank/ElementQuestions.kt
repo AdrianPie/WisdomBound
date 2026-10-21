@@ -68,7 +68,23 @@ object ElementQuestions {
         q("ele_gas_powers_fuel", "Which gas powers fuel-cell cars, leaving only water behind?", "Hydrogen", listOf("Methane", "Propane", "Helium"), E),
         q("ele_trumpets_trombones_usually", "Trumpets and trombones are usually made of which alloy?", "Brass", listOf("Bronze", "Steel", "Pewter"), E),
         q("ele_dihydrogen_monoxide_chemical", "What is 'dihydrogen monoxide', a chemical sometimes 'banned' in prank petitions?", "Water", listOf("Salt", "Bleach", "Alcohol"), E),
-        q("ele_eiffel_tower_built", "The Eiffel Tower is built mainly from which metal?", "Iron", listOf("Steel", "Aluminium", "Copper"), E)
+        q("ele_eiffel_tower_built", "The Eiffel Tower is built mainly from which metal?", "Iron", listOf("Steel", "Aluminium", "Copper"), E),
+        q("ele_metal_old_books", "Which metal did old books call 'quicksilver'?", "Mercury", listOf("Tin", "Platinum", "Silver"), E),
+        q("ele_medieval_alchemists_dreamed", "Medieval alchemists dreamed of turning lead into which metal?", "Gold", listOf("Silver", "Copper", "Platinum"), E),
+        q("ele_olympic_bronze_medals", "Olympic bronze medals are made mostly of which metal?", "Copper", listOf("Tin", "Iron", "Zinc"), E),
+        q("ele_solar_panels_made", "Most solar panels are made from which element?", "Silicon", listOf("Carbon", "Lithium", "Copper"), E),
+        q("ele_shiny_chrome_bumpers", "Shiny 'chrome' bumpers and taps are plated with which metal?", "Chromium", listOf("Silver", "Aluminium", "Tin"), E),
+        q("ele_bomb_stand", "What does the 'H' in 'H-bomb' stand for?", "Hydrogen", listOf("Helium", "High-yield", "Heavy"), E),
+        q("ele_gas_pumped_bags", "Which gas is pumped into bags of crisps (potato chips) to keep them fresh?", "Nitrogen", listOf("Oxygen", "Helium", "Carbon monoxide"), E),
+        q("ele_karats_pure_gold", "How many karats is pure gold?", "24", listOf("18", "100", "12"), E),
+        q("ele_hot_air_balloons", "Hot-air balloons heat their air by burning which gas?", "Propane", listOf("Hydrogen", "Helium", "Neon"), E),
+        q("ele_black_soot_smoky", "The black soot from a smoky candle is mostly which element?", "Carbon", listOf("Sulfur", "Lead", "Iron"), E),
+        q("ele_passing_electricity_through", "Passing electricity through water splits it into which two gases?", "Hydrogen and oxygen", listOf("Oxygen and nitrogen", "Hydrogen and helium", "Oxygen and carbon dioxide"), E),
+        q("ele_lead_removed_house", "Why was lead removed from house paint and petrol?", "It is poisonous", listOf("It caused fires", "It was too costly", "It made paint fade"), E),
+        q("ele_mixture_metals_like", "What is a mixture of metals, like steel or brass, called?", "An alloy", listOf("An ore", "An isotope", "A crystal"), E),
+        q("ele_antiperspirants_block_sweat", "Most antiperspirants block sweat using compounds of which metal?", "Aluminium", listOf("Iron", "Copper", "Silver"), E),
+        q("ele_traditional_church_bells", "Traditional church bells are cast from which alloy?", "Bronze", listOf("Brass", "Pewter", "Steel"), E),
+        q("ele_band_led_zeppelin", "The band Led Zeppelin took its name from a joke about a balloon made of which metal?", "Lead", listOf("Iron", "Tin", "Mercury"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -149,7 +165,29 @@ object ElementQuestions {
         q("ele_acid_builds_milk", "Which acid builds up in milk as it turns sour?", "Lactic acid", listOf("Citric acid", "Acetic acid", "Formic acid"), M),
         q("ele_food_tin_cans", "Food 'tin cans' are really steel coated with a thin layer of which metal?", "Tin", listOf("Zinc", "Aluminium", "Nickel"), M),
         q("ele_purple_gemstone_variety", "Which purple gemstone is a variety of quartz?", "Amethyst", listOf("Sapphire", "Garnet", "Tanzanite"), M),
-        q("ele_metal_mixed_gold", "Which metal is mixed with gold to make 'rose gold'?", "Copper", listOf("Silver", "Zinc", "Nickel"), M)
+        q("ele_metal_mixed_gold", "Which metal is mixed with gold to make 'rose gold'?", "Copper", listOf("Silver", "Zinc", "Nickel"), M),
+        q("ele_limescale_builds_kettles", "The limescale that builds up in kettles in hard-water areas is mostly a compound of which metal?", "Calcium", listOf("Iron", "Sodium", "Aluminium"), M),
+        q("ele_word_plumber_comes", "The word 'plumber' comes from the Latin name of which metal, once used for water pipes?", "Lead", listOf("Copper", "Iron", "Tin"), M),
+        q("ele_old_silver_dental", "Old 'silver' dental fillings are actually about half made of which metal?", "Mercury", listOf("Tin", "Nickel", "Zinc"), M),
+        q("ele_strong_chlorine_smell", "A strong 'chlorine' smell at a swimming pool is really a sign of what?", "Chlorine reacting with sweat and urine", listOf("Far too much chlorine in the water", "Bleach leaking from the filters", "Algae growing in the pipes"), M),
+        q("ele_green_glow_northern", "The green glow of the northern lights comes mostly from which gas?", "Oxygen", listOf("Nitrogen", "Neon", "Helium"), M),
+        q("ele_metals_reacts_explosively", "Which of these metals reacts most explosively when dropped into water?", "Caesium", listOf("Lithium", "Sodium", "Potassium"), M),
+        q("ele_element_periodic_table", "Element 93 in the periodic table is named after which planet?", "Neptune", listOf("Pluto", "Saturn", "Jupiter"), M),
+        q("ele_neon_comes_greek", "Neon's name comes from the Greek word for what?", "New", listOf("Bright", "Red", "Glow"), M),
+        q("ele_hospital_mri_scanners", "Hospital MRI scanners use large amounts of which liquid to keep their magnets super-cold?", "Liquid helium", listOf("Liquid nitrogen", "Liquid hydrogen", "Liquid oxygen"), M),
+        q("ele_letters_appears_chemical", "Which of these letters appears in no chemical element symbol at all?", "J", listOf("X", "Z", "W"), M),
+        q("ele_unlike_gold_karat", "Unlike a gold karat, a diamond's 'carat' measures what?", "Its weight", listOf("Its purity", "Its clarity", "Its colour"), M),
+        q("ele_old_fashioned_photographic", "Old-fashioned photographic film relied on light-sensitive compounds of which metal?", "Silver", listOf("Gold", "Copper", "Lead"), M),
+        q("ele_tutankhamun_daggers_blade", "One of Tutankhamun's daggers has a blade of iron that came from where?", "A meteorite", listOf("The Hittite mines", "A sunken ship", "A riverbed"), M),
+        q("ele_elements_spelled_differently", "Which of these elements is spelled differently in British and American English?", "Aluminium", listOf("Magnesium", "Potassium", "Titanium"), M),
+        q("ele_metals_light_enough", "Which of these metals is light enough to float on water?", "Lithium", listOf("Aluminium", "Magnesium", "Titanium"), M),
+        q("ele_breaking_bad_title", "The 'Breaking Bad' title highlights 'Br' for bromine and 'Ba' for which element?", "Barium", listOf("Boron", "Bismuth", "Beryllium"), M),
+        q("ele_element_titan_stole", "Which element is named after the Titan who stole fire from the gods?", "Promethium", listOf("Thorium", "Tantalum", "Plutonium"), M),
+        q("ele_sodium_chemical_symbol", "Why is sodium's chemical symbol Na?", "From its Latin name 'natrium'", listOf("From its discoverer, Nathan", "From the Greek for 'sea'", "From 'new alkali'"), M),
+        q("ele_physicist_element_100", "Which physicist is element 100 named after?", "Enrico Fermi", listOf("Niels Bohr", "Max Planck", "Ernest Rutherford"), M),
+        q("ele_emeralds_green_variety", "Emeralds are a green variety of which mineral?", "Beryl", listOf("Corundum", "Quartz", "Topaz"), M),
+        q("ele_white_chalk_gymnasts", "The white 'chalk' that gymnasts and climbers rub on their hands is a carbonate of which metal?", "Magnesium", listOf("Calcium", "Sodium", "Zinc"), M),
+        q("ele_heated_hot_enough", "If heated hot enough in air, what does a diamond do?", "It burns away", listOf("It melts into glass", "Nothing at all", "It hardens even further"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -220,7 +258,15 @@ object ElementQuestions {
         q("ele_element_greek_word_2", "Which element is named after the Greek word for 'violet', the colour of its vapour?", "Iodine", listOf("Indium", "Iridium", "Vanadium"), H),
         q("ele_sodium_hydroxide_better", "Sodium hydroxide is better known by which name?", "Caustic soda", listOf("Baking soda", "Washing soda", "Rock salt"), H),
         q("ele_acid_strong_used", "Which acid is so strong it is used to etch glass?", "Hydrofluoric acid", listOf("Citric acid", "Acetic acid", "Carbonic acid"), H),
-        q("ele_lightweight_mag_wheels", "Lightweight 'mag' wheels for cars were originally made from which metal?", "Magnesium", listOf("Manganese", "Mercury", "Molybdenum"), H)
+        q("ele_lightweight_mag_wheels", "Lightweight 'mag' wheels for cars were originally made from which metal?", "Magnesium", listOf("Manganese", "Mercury", "Molybdenum"), H),
+        q("ele_potassium_compounds_colour", "Potassium compounds colour a flame which shade?", "Lilac", listOf("Green", "Bright yellow", "Deep red"), H),
+        q("ele_thermite_burns_hot", "Thermite, which burns hot enough to melt steel, is a mix of iron oxide and which metal powder?", "Aluminium", listOf("Magnesium", "Zinc", "Copper"), H),
+        q("ele_blue_sapphires_get", "Blue sapphires get their colour from traces of iron and which other metal?", "Titanium", listOf("Chromium", "Cobalt", "Copper"), H),
+        q("ele_strontium_strontian_village", "Strontium is named after Strontian, a village in which country?", "Scotland", listOf("Sweden", "Wales", "Norway"), H),
+        q("ele_nitinol_memory_metal", "Nitinol, the 'memory metal' in bendable glasses frames, mixes nickel with which metal?", "Titanium", listOf("Tin", "Iron", "Copper"), H),
+        q("ele_element_117_partly", "Element 117, partly discovered at the Oak Ridge laboratory, is named after which US state?", "Tennessee", listOf("Texas", "Ohio", "Nevada"), H),
+        q("ele_nickel_comes_kupfernickel", "Nickel's name comes from 'Kupfernickel', which German miners took to mean what?", "Devil's copper", listOf("Little copper", "False silver", "Grey stone"), H),
+        q("ele_flint_cigarette_lighter", "The 'flint' in a cigarette lighter is mostly an alloy of iron and which element?", "Cerium", listOf("Zinc", "Nickel", "Tungsten"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -271,6 +317,8 @@ object ElementQuestions {
         q("eley_chrom", "Chromium's name comes from the Greek word for what?", "Colour", listOf("Mirror", "Metal", "Shine"), X),
         q("eley_brom", "Bromine's name comes from the Greek word for what?", "Stench", listOf("Brown", "Bright", "Water"), X),
         q("ele_element_greek_word_3", "Which element is named after the Greek word for 'rainbow', for its colourful salts?", "Iridium", listOf("Chromium", "Rhodium", "Bismuth"), X),
-        q("ele_metal_comes_greek", "Which metal's name comes from the Greek for 'stone', as it was first found in a mineral?", "Lithium", listOf("Calcium", "Barium", "Strontium"), X)
+        q("ele_metal_comes_greek", "Which metal's name comes from the Greek for 'stone', as it was first found in a mineral?", "Lithium", listOf("Calcium", "Barium", "Strontium"), X),
+        q("ele_element_118_last", "Element 118, the last in today's periodic table, honours which scientist?", "Yuri Oganessian", listOf("Glenn Seaborg", "Ernest Rutherford", "Niels Bohr"), X),
+        q("ele_caesium_comes_latin", "Caesium's name comes from the Latin for what, after the lines in its spectrum?", "Sky blue", listOf("Blood red", "Pale green", "Pure white"), X)
     )
 }

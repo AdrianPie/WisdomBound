@@ -89,7 +89,22 @@ object MathQuestions {
         q("mat_race_overtake_runner", "In a race, you overtake the runner in second place. What place are you in now?", "Second", listOf("First", "Third", "Last"), E),
         q("mat_q", "What is 2 + 2 x 2?", "6", listOf("8", "4", "10"), E),
         q("mat_letter_comes_next", "Which letter comes next: J, F, M, A, M, J, ...?", "J", listOf("A", "S", "N"), E),
-        q("mat_chance_rolling_six", "What is the chance of rolling a six with one fair die?", "1 in 6", listOf("1 in 3", "1 in 12", "1 in 36"), E)
+        q("mat_chance_rolling_six", "What is the chance of rolling a six with one fair die?", "1 in 6", listOf("1 in 3", "1 in 12", "1 in 36"), E),
+        q("mat_weighs_more_kilogram", "Which weighs more: a kilogram of feathers or a kilogram of iron?", "They weigh the same", listOf("The iron", "The feathers", "It depends on the air"), E),
+        q("mat_restaurant_bill_leave", "Your restaurant bill is \$40 and you leave a 15% tip. How much is the tip?", "\$6", listOf("\$4", "\$8", "\$5.50"), E),
+        q("mat_circle_number_letter", "Pi, the famous circle number, is named after a letter of which alphabet?", "Greek", listOf("Latin", "Hebrew", "Arabic"), E),
+        q("mat_roman_numerals_number", "In Roman numerals, what number would the clothing size 'XL' stand for?", "40", listOf("60", "90", "15"), E),
+        q("mat_protractor_measure", "What does a protractor measure?", "Angles", listOf("Lengths", "Areas", "Weights"), E),
+        q("mat_ancient_counting_tool", "Which ancient counting tool works by sliding beads along rods?", "The abacus", listOf("The sextant", "The astrolabe", "The slide rule"), E),
+        q("mat_buy_get_free", "'Buy one, get one free' on two equal items is the same as what discount?", "50% off", listOf("25% off", "33% off", "100% off"), E),
+        q("mat_box_eggs_costs", "A box of 12 eggs costs \$3. How much does each egg cost?", "25 cents", listOf("30 cents", "20 cents", "36 cents"), E),
+        q("mat_longer_metre_yard", "Which is longer: a metre or a yard?", "A metre", listOf("A yard", "They are exactly the same", "A yard, by about 10 cm"), E),
+        q("mat_recipe_people_needs", "A recipe for 4 people needs 6 eggs. How many eggs do you need for 2 people?", "3", listOf("2", "4", "12"), E),
+        q("mat_shape_base_great", "What shape is the base of the Great Pyramid of Giza?", "A square", listOf("A triangle", "A hexagon", "A circle"), E),
+        q("mat_squares_make_grid", "How many squares make up the grid in a game of noughts and crosses (tic-tac-toe)?", "9", listOf("6", "12", "16"), E),
+        q("mat_number_comes_right", "Which number name comes right after million, billion and trillion?", "Quadrillion", listOf("Quintillion", "Septillion", "Googol"), E),
+        q("mat_least_years_old", "At least how many years old is a 'centenarian'?", "100", listOf("50", "1,000", "80"), E),
+        q("mat_dice_games_roll", "In dice games, what does a roll of 'snake eyes' mean?", "Two ones", listOf("Two sixes", "A one and a six", "Two threes"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -181,7 +196,33 @@ object MathQuestions {
         q("mat_different_orders_arrange", "In how many different orders can you arrange the letters C, A and T?", "6", listOf("3", "9", "27"), M),
         q("mat_angle_clock_hands", "What angle do a clock's hands make at exactly 6 o'clock?", "180 degrees", listOf("90 degrees", "120 degrees", "360 degrees"), M),
         q("mat_birds_make_brace", "How many birds make 'a brace'?", "Two", listOf("Three", "Six", "Twelve"), M),
-        q("mat_ancient_greek_counting", "In ancient Greek counting, how many was a 'myriad'?", "10,000", listOf("1,000", "100", "1,000,000"), M)
+        q("mat_ancient_greek_counting", "In ancient Greek counting, how many was a 'myriad'?", "10,000", listOf("1,000", "100", "1,000,000"), M),
+        q("mat_strictly_speaking_date", "Strictly speaking, on which date did the third millennium begin?", "1 January 2001", listOf("1 January 2000", "1 January 1999", "1 January 2010"), M),
+        q("mat_1980s_third_pound", "In the 1980s, A&W's 'third-pound' burger flopped against McDonald's Quarter Pounder. Why?", "Diners thought 1/3 was less than 1/4", listOf("It cost far more than the rival", "It weighed less than advertised", "Its beef tasted noticeably worse"), M),
+        q("mat_kinds_people_understand", "'There are 10 kinds of people: those who understand binary and those who don't.' How many kinds is that?", "Two", listOf("Ten", "Three", "One"), M),
+        q("mat_three_digits_come", "Which three digits come right after 3.14 in pi?", "159", listOf("156", "285", "141"), M),
+        q("mat_simple_fraction_classic", "Which simple fraction is the classic school approximation of pi?", "22/7", listOf("21/8", "17/5", "11/3"), M),
+        q("mat_regular_shapes_cannot", "Which of these regular shapes cannot tile a flat floor on its own without leaving gaps?", "The pentagon", listOf("The triangle", "The square", "The hexagon"), M),
+        q("mat_using_digits_different", "Using the digits 0 to 9, how many different four-digit PIN codes are possible?", "10,000", listOf("9,999", "6,561", "1,000"), M),
+        q("mat_drawer_holds_black", "A drawer holds only black and white socks. In the dark, how many must you take out to be sure of a matching pair?", "3", listOf("2", "4", "5"), M),
+        q("mat_brick_weighs_plus", "A brick weighs 1 kg plus half a brick. How much does the whole brick weigh?", "2 kg", listOf("1.5 kg", "1 kg", "3 kg"), M),
+        q("mat_nearly_all_people", "Why do nearly all people have more legs than the average person?", "The mean is just under two", listOf("Some people have extra legs", "Averages always round down", "Children count as half"), M),
+        q("mat_mandelbrot_set_edges", "The Mandelbrot set, whose edges show ever more detail the more you zoom in, is a famous example of what?", "A fractal", listOf("A prime spiral", "A tessellation", "A magic square"), M),
+        q("mat_lewis_carroll_author", "Lewis Carroll, author of 'Alice in Wonderland', worked at Oxford as what?", "A mathematics lecturer", listOf("A chemistry professor", "A college librarian", "A history tutor"), M),
+        q("mat_film_young_mit", "In which film does a young MIT janitor secretly solve maths problems left on a blackboard?", "Good Will Hunting", listOf("A Beautiful Mind", "The Imitation Game", "Proof"), M),
+        q("mat_day_birthday_scientist", "Pi Day is also the birthday of which famous scientist?", "Albert Einstein", listOf("Isaac Newton", "Marie Curie", "Galileo Galilei"), M),
+        q("mat_chessboard_puzzle_piece", "The famous chessboard puzzle in which one piece visits every square exactly once is named after which piece?", "The knight", listOf("The bishop", "The rook", "The king"), M),
+        q("mat_coat_reduced_further", "A coat is reduced by 20%, then by a further 20%. What is the total discount?", "36%", listOf("40%", "30%", "44%"), M),
+        q("mat_rather_million_now", "Would you rather have \$1 million now, or a penny doubled every day for 30 days?", "The penny - it passes \$5 million", listOf("The million - it is far more", "They come out roughly equal", "The penny, but only just"), M),
+        q("mat_made_number_not", "Which of these is a made-up number name, not a real one?", "Zillion", listOf("Quadrillion", "Septillion", "Nonillion"), M),
+        q("mat_word_calculus_comes", "The word 'calculus' comes from the Latin word for what?", "A small pebble", listOf("A counting board", "A clever trick", "A measuring rope"), M),
+        q("mat_word_geometry_literally", "The word 'geometry' literally means what?", "Earth measuring", listOf("Shape drawing", "Angle study", "Line drawing"), M),
+        q("mat_word_digit_comes", "The word 'digit' comes from the Latin word for what?", "Finger", listOf("Notch", "Count", "Knot"), M),
+        q("mat_letters_qed_end", "What do the letters 'QED' at the end of a proof stand for?", "Which was to be demonstrated", listOf("Quite easily done", "Question ends definitely", "Quantity equals difference"), M),
+        q("mat_french_number_quatre", "In French, the number 80 is 'quatre-vingts'. What does that literally mean?", "Four twenties", listOf("Eight tens", "Four tens doubled", "Twice forty"), M),
+        q("mat_britain_seven_sided", "Britain's seven-sided 50p coin has curved edges. What special property does that give it?", "The same width in every direction", listOf("It weighs less than a round coin", "It cannot be easily forged", "It stacks without sliding"), M),
+        q("mat_die_hard_vengeance", "In 'Die Hard with a Vengeance', the heroes must measure exactly 4 gallons using jugs of which sizes?", "3 and 5 gallons", listOf("2 and 7 gallons", "6 and 9 gallons", "2 and 8 gallons"), M),
+        q("mat_italy_number_traditionally", "In Italy, which number is traditionally considered unlucky, rather than 13?", "17", listOf("4", "9", "11"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -239,7 +280,23 @@ object MathQuestions {
         q("mat_ancient_people_counted", "Which ancient people counted in base 60, giving us 60 minutes in an hour?", "The Babylonians", listOf("The Egyptians", "The Greeks", "The Romans"), H),
         q("mat_prefix_nano_mean", "What does the prefix 'nano' mean?", "A billionth", listOf("A millionth", "A thousandth", "A trillionth"), H),
         q("mat_roughly_grams_pound", "Roughly how many grams are in a pound?", "454", listOf("254", "354", "554"), H),
-        q("mat_roughly_litres_gallon", "Roughly how many litres are in a US gallon?", "3.8", listOf("2.5", "4.5", "5.2"), H)
+        q("mat_roughly_litres_gallon", "Roughly how many litres are in a US gallon?", "3.8", listOf("2.5", "4.5", "5.2"), H),
+        q("mat_robert_recorde_invented", "Robert Recorde invented the equals sign in 1557. Why did he choose two parallel lines?", "No two things could be more equal", listOf("They looked like a balance scale", "They were quick to carve in wood", "They copied an Arabic letter"), H),
+        q("mat_reportedly_coined_word", "Who reportedly coined the word 'googol' for 1 followed by 100 zeros?", "A nine-year-old boy", listOf("A Google co-founder", "A Harvard astronomer", "A Roman scholar"), H),
+        q("mat_bigger_googol_number", "Which is bigger: a googol, or the number of atoms in the observable universe?", "A googol, by far", listOf("The atoms, by far", "They are about equal", "Nobody can say"), H),
+        q("mat_real_life_data", "In many real-life data sets, like bills or town populations, which first digit turns up most often?", "1", listOf("5", "9", "All equally often"), H),
+        q("mat_halve_number_even", "Halve a number if it is even; if odd, triple it and add 1. Repeat. Every number tested so far ends up at what?", "1", listOf("0", "7", "Infinity"), H),
+        q("mat_according_tradition_entrance", "According to tradition, the entrance to Plato's Academy warned that no one ignorant of what should enter?", "Geometry", listOf("Music", "Astronomy", "Rhetoric"), H),
+        q("mat_finally_proved_fermat", "Who finally proved Fermat's Last Theorem in the 1990s?", "Andrew Wiles", listOf("Grigori Perelman", "Paul Erdos", "John Nash"), H),
+        q("mat_simple_solid_like", "For a simple solid like a cube, corners minus edges plus faces always equals what?", "2", listOf("0", "1", "6"), H),
+        q("mat_largest_number_queens", "What is the largest number of queens you can place on a chessboard so that none can attack another?", "8", listOf("6", "12", "16"), H),
+        q("mat_tower_hanoi_puzzle", "In the Tower of Hanoi puzzle, what is the fewest moves needed to shift a tower of 3 discs?", "7", listOf("3", "6", "9"), H),
+        q("mat_mathematicians_showed_riffle", "Mathematicians showed that about how many riffle shuffles are enough to mix a 52-card deck well?", "7", listOf("3", "20", "52"), H),
+        q("mat_according_friendship_paradox", "According to the 'friendship paradox', how do your friends compare with you, on average?", "They have more friends than you", listOf("They have fewer friends than you", "They have exactly as many", "It is purely random"), H),
+        q("mat_single_true_length", "Why is there no single 'true' length for a coastline like Britain's?", "The finer the ruler, the longer it gets", listOf("Tides move it by kilometres each day", "Countries measure in different units", "Erosion changes it every year"), H),
+        q("mat_1897_lawmakers_state", "In 1897, lawmakers in which US state nearly passed a bill that would have changed the value of pi?", "Indiana", listOf("Texas", "Kansas", "Ohio"), H),
+        q("mat_drive_town_return", "You drive to a town at 60 km/h and return the same way at 40 km/h. What is your average speed?", "48 km/h", listOf("50 km/h", "45 km/h", "52 km/h"), H),
+        q("mat_rule_roughly_long", "By the 'rule of 72', roughly how long does money take to double at 6% interest a year?", "12 years", listOf("6 years", "18 years", "36 years"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -290,6 +347,9 @@ object MathQuestions {
         q("matx_ziemniaki", "A 100 kg sack of potatoes is 99% water. After drying it is 98% water. What does it weigh now?", "50 kg", listOf("98 kg", "99 kg", "90 kg"), X),
         q("matx_ujemne_chiny", "Negative numbers were long rejected in Europe, but used centuries earlier by mathematicians in which country?", "China", listOf("Greece", "Egypt", "England"), X),
         q("maty_hotel_hilberta", "In 'Hilbert's Hotel', a full hotel with infinitely many rooms can still do what?", "Take in more guests", listOf("Only close its doors", "Charge infinite money", "Fit just one more guest"), X),
-        q("maty_zenon", "Which Greek thinker argued that swift Achilles could never overtake a tortoise?", "Zeno of Elea", listOf("Pythagoras", "Euclid", "Archimedes"), X)
+        q("maty_zenon", "Which Greek thinker argued that swift Achilles could never overtake a tortoise?", "Zeno of Elea", listOf("Pythagoras", "Euclid", "Archimedes"), X),
+        q("mat_take_four_digit", "Take a four-digit number (not all digits alike), subtract its digits in ascending order from them in descending order, and repeat. Where do you always end up?", "6174", listOf("1089", "9999", "0"), X),
+        q("mat_220_284_history", "220 and 284 are history's most famous pair of 'amicable numbers'. What links them?", "Each one's divisors add up to the other", listOf("Both are sums of two cubes", "Their product is a perfect square", "Both are triangular numbers"), X),
+        q("mat_euler_stunned_mathematicians", "Euler stunned mathematicians by showing that 1 + 1/4 + 1/9 + 1/16 + ... equals what?", "Pi squared over 6", listOf("Exactly 2", "The golden ratio", "e minus 1"), X)
     )
 }

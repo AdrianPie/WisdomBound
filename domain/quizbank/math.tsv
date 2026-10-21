@@ -64,6 +64,21 @@ mat_race_overtake_runner	Easy	In a race, you overtake the runner in second place
 mat_q	Easy	What is 2 + 2 x 2?	6	8	4	10
 mat_letter_comes_next	Easy	Which letter comes next: J, F, M, A, M, J, ...?	J	A	S	N
 mat_chance_rolling_six	Easy	What is the chance of rolling a six with one fair die?	1 in 6	1 in 3	1 in 12	1 in 36
+mat_weighs_more_kilogram	Easy	Which weighs more: a kilogram of feathers or a kilogram of iron?	They weigh the same	The iron	The feathers	It depends on the air
+mat_restaurant_bill_leave	Easy	Your restaurant bill is $40 and you leave a 15% tip. How much is the tip?	$6	$4	$8	$5.50
+mat_circle_number_letter	Easy	Pi, the famous circle number, is named after a letter of which alphabet?	Greek	Latin	Hebrew	Arabic
+mat_roman_numerals_number	Easy	In Roman numerals, what number would the clothing size 'XL' stand for?	40	60	90	15
+mat_protractor_measure	Easy	What does a protractor measure?	Angles	Lengths	Areas	Weights
+mat_ancient_counting_tool	Easy	Which ancient counting tool works by sliding beads along rods?	The abacus	The sextant	The astrolabe	The slide rule
+mat_buy_get_free	Easy	'Buy one, get one free' on two equal items is the same as what discount?	50% off	25% off	33% off	100% off
+mat_box_eggs_costs	Easy	A box of 12 eggs costs $3. How much does each egg cost?	25 cents	30 cents	20 cents	36 cents
+mat_longer_metre_yard	Easy	Which is longer: a metre or a yard?	A metre	A yard	They are exactly the same	A yard, by about 10 cm
+mat_recipe_people_needs	Easy	A recipe for 4 people needs 6 eggs. How many eggs do you need for 2 people?	3	2	4	12
+mat_shape_base_great	Easy	What shape is the base of the Great Pyramid of Giza?	A square	A triangle	A hexagon	A circle
+mat_squares_make_grid	Easy	How many squares make up the grid in a game of noughts and crosses (tic-tac-toe)?	9	6	12	16
+mat_number_comes_right	Easy	Which number name comes right after million, billion and trillion?	Quadrillion	Quintillion	Septillion	Googol
+mat_least_years_old	Easy	At least how many years old is a 'centenarian'?	100	50	1,000	80
+mat_dice_games_roll	Easy	In dice games, what does a roll of 'snake eyes' mean?	Two ones	Two sixes	A one and a six	Two threes
 day2_procent_skladany	Medium	What is compound interest?	Interest earned on interest already added	A one-time fee	A fixed monthly cost	Interest paid only at the end
 day2_inflacja	Medium	What does inflation mean for your savings?	The same money buys less over time	Your balance shrinks	Interest rates always fall	Prices stay fixed
 mat_pi	Medium	What is the approximate value of pi?	3.14	3.41	2.71	3.04
@@ -152,6 +167,32 @@ mat_different_orders_arrange	Medium	In how many different orders can you arrange
 mat_angle_clock_hands	Medium	What angle do a clock's hands make at exactly 6 o'clock?	180 degrees	90 degrees	120 degrees	360 degrees
 mat_birds_make_brace	Medium	How many birds make 'a brace'?	Two	Three	Six	Twelve
 mat_ancient_greek_counting	Medium	In ancient Greek counting, how many was a 'myriad'?	10,000	1,000	100	1,000,000
+mat_strictly_speaking_date	Medium	Strictly speaking, on which date did the third millennium begin?	1 January 2001	1 January 2000	1 January 1999	1 January 2010
+mat_1980s_third_pound	Medium	In the 1980s, A&W's 'third-pound' burger flopped against McDonald's Quarter Pounder. Why?	Diners thought 1/3 was less than 1/4	It cost far more than the rival	It weighed less than advertised	Its beef tasted noticeably worse
+mat_kinds_people_understand	Medium	'There are 10 kinds of people: those who understand binary and those who don't.' How many kinds is that?	Two	Ten	Three	One
+mat_three_digits_come	Medium	Which three digits come right after 3.14 in pi?	159	156	285	141
+mat_simple_fraction_classic	Medium	Which simple fraction is the classic school approximation of pi?	22/7	21/8	17/5	11/3
+mat_regular_shapes_cannot	Medium	Which of these regular shapes cannot tile a flat floor on its own without leaving gaps?	The pentagon	The triangle	The square	The hexagon
+mat_using_digits_different	Medium	Using the digits 0 to 9, how many different four-digit PIN codes are possible?	10,000	9,999	6,561	1,000
+mat_drawer_holds_black	Medium	A drawer holds only black and white socks. In the dark, how many must you take out to be sure of a matching pair?	3	2	4	5
+mat_brick_weighs_plus	Medium	A brick weighs 1 kg plus half a brick. How much does the whole brick weigh?	2 kg	1.5 kg	1 kg	3 kg
+mat_nearly_all_people	Medium	Why do nearly all people have more legs than the average person?	The mean is just under two	Some people have extra legs	Averages always round down	Children count as half
+mat_mandelbrot_set_edges	Medium	The Mandelbrot set, whose edges show ever more detail the more you zoom in, is a famous example of what?	A fractal	A prime spiral	A tessellation	A magic square
+mat_lewis_carroll_author	Medium	Lewis Carroll, author of 'Alice in Wonderland', worked at Oxford as what?	A mathematics lecturer	A chemistry professor	A college librarian	A history tutor
+mat_film_young_mit	Medium	In which film does a young MIT janitor secretly solve maths problems left on a blackboard?	Good Will Hunting	A Beautiful Mind	The Imitation Game	Proof
+mat_day_birthday_scientist	Medium	Pi Day is also the birthday of which famous scientist?	Albert Einstein	Isaac Newton	Marie Curie	Galileo Galilei
+mat_chessboard_puzzle_piece	Medium	The famous chessboard puzzle in which one piece visits every square exactly once is named after which piece?	The knight	The bishop	The rook	The king
+mat_coat_reduced_further	Medium	A coat is reduced by 20%, then by a further 20%. What is the total discount?	36%	40%	30%	44%
+mat_rather_million_now	Medium	Would you rather have $1 million now, or a penny doubled every day for 30 days?	The penny - it passes $5 million	The million - it is far more	They come out roughly equal	The penny, but only just
+mat_made_number_not	Medium	Which of these is a made-up number name, not a real one?	Zillion	Quadrillion	Septillion	Nonillion
+mat_word_calculus_comes	Medium	The word 'calculus' comes from the Latin word for what?	A small pebble	A counting board	A clever trick	A measuring rope
+mat_word_geometry_literally	Medium	The word 'geometry' literally means what?	Earth measuring	Shape drawing	Angle study	Line drawing
+mat_word_digit_comes	Medium	The word 'digit' comes from the Latin word for what?	Finger	Notch	Count	Knot
+mat_letters_qed_end	Medium	What do the letters 'QED' at the end of a proof stand for?	Which was to be demonstrated	Quite easily done	Question ends definitely	Quantity equals difference
+mat_french_number_quatre	Medium	In French, the number 80 is 'quatre-vingts'. What does that literally mean?	Four twenties	Eight tens	Four tens doubled	Twice forty
+mat_britain_seven_sided	Medium	Britain's seven-sided 50p coin has curved edges. What special property does that give it?	The same width in every direction	It weighs less than a round coin	It cannot be easily forged	It stacks without sliding
+mat_die_hard_vengeance	Medium	In 'Die Hard with a Vengeance', the heroes must measure exactly 4 gallons using jugs of which sizes?	3 and 5 gallons	2 and 7 gallons	6 and 9 gallons	2 and 8 gallons
+mat_italy_number_traditionally	Medium	In Italy, which number is traditionally considered unlucky, rather than 13?	17	4	9	11
 mat_silnia_5	Hard	What is 5! (5 factorial)?	120	100	60	150
 mat_fibonacci	Hard	What number comes next in the sequence 1, 1, 2, 3, 5, 8...?	13	11	12	16
 mat2_logarytm_2_8	Hard	What is log base 2 of 8?	3	2	4	8
@@ -206,6 +247,22 @@ mat_ancient_people_counted	Hard	Which ancient people counted in base 60, giving 
 mat_prefix_nano_mean	Hard	What does the prefix 'nano' mean?	A billionth	A millionth	A thousandth	A trillionth
 mat_roughly_grams_pound	Hard	Roughly how many grams are in a pound?	454	254	354	554
 mat_roughly_litres_gallon	Hard	Roughly how many litres are in a US gallon?	3.8	2.5	4.5	5.2
+mat_robert_recorde_invented	Hard	Robert Recorde invented the equals sign in 1557. Why did he choose two parallel lines?	No two things could be more equal	They looked like a balance scale	They were quick to carve in wood	They copied an Arabic letter
+mat_reportedly_coined_word	Hard	Who reportedly coined the word 'googol' for 1 followed by 100 zeros?	A nine-year-old boy	A Google co-founder	A Harvard astronomer	A Roman scholar
+mat_bigger_googol_number	Hard	Which is bigger: a googol, or the number of atoms in the observable universe?	A googol, by far	The atoms, by far	They are about equal	Nobody can say
+mat_real_life_data	Hard	In many real-life data sets, like bills or town populations, which first digit turns up most often?	1	5	9	All equally often
+mat_halve_number_even	Hard	Halve a number if it is even; if odd, triple it and add 1. Repeat. Every number tested so far ends up at what?	1	0	7	Infinity
+mat_according_tradition_entrance	Hard	According to tradition, the entrance to Plato's Academy warned that no one ignorant of what should enter?	Geometry	Music	Astronomy	Rhetoric
+mat_finally_proved_fermat	Hard	Who finally proved Fermat's Last Theorem in the 1990s?	Andrew Wiles	Grigori Perelman	Paul Erdos	John Nash
+mat_simple_solid_like	Hard	For a simple solid like a cube, corners minus edges plus faces always equals what?	2	0	1	6
+mat_largest_number_queens	Hard	What is the largest number of queens you can place on a chessboard so that none can attack another?	8	6	12	16
+mat_tower_hanoi_puzzle	Hard	In the Tower of Hanoi puzzle, what is the fewest moves needed to shift a tower of 3 discs?	7	3	6	9
+mat_mathematicians_showed_riffle	Hard	Mathematicians showed that about how many riffle shuffles are enough to mix a 52-card deck well?	7	3	20	52
+mat_according_friendship_paradox	Hard	According to the 'friendship paradox', how do your friends compare with you, on average?	They have more friends than you	They have fewer friends than you	They have exactly as many	It is purely random
+mat_single_true_length	Hard	Why is there no single 'true' length for a coastline like Britain's?	The finer the ruler, the longer it gets	Tides move it by kilometres each day	Countries measure in different units	Erosion changes it every year
+mat_1897_lawmakers_state	Hard	In 1897, lawmakers in which US state nearly passed a bill that would have changed the value of pi?	Indiana	Texas	Kansas	Ohio
+mat_drive_town_return	Hard	You drive to a town at 60 km/h and return the same way at 40 km/h. What is your average speed?	48 km/h	50 km/h	45 km/h	52 km/h
+mat_rule_roughly_long	Hard	By the 'rule of 72', roughly how long does money take to double at 6% interest a year?	12 years	6 years	18 years	36 years
 mat_liczba_e	Expert	What is the approximate value of e?	2.72	3.14	1.62	2.24
 mat_liczby_doskonale	Expert	Which of these numbers is perfect (equal to the sum of its divisors)?	28	24	30	36
 mat_duzy_pierwszy	Expert	Which of these numbers is NOT prime?	91	89	97	83
@@ -253,3 +310,6 @@ matx_ziemniaki	Expert	A 100 kg sack of potatoes is 99% water. After drying it is
 matx_ujemne_chiny	Expert	Negative numbers were long rejected in Europe, but used centuries earlier by mathematicians in which country?	China	Greece	Egypt	England
 maty_hotel_hilberta	Expert	In 'Hilbert's Hotel', a full hotel with infinitely many rooms can still do what?	Take in more guests	Only close its doors	Charge infinite money	Fit just one more guest
 maty_zenon	Expert	Which Greek thinker argued that swift Achilles could never overtake a tortoise?	Zeno of Elea	Pythagoras	Euclid	Archimedes
+mat_take_four_digit	Expert	Take a four-digit number (not all digits alike), subtract its digits in ascending order from them in descending order, and repeat. Where do you always end up?	6174	1089	9999	0
+mat_220_284_history	Expert	220 and 284 are history's most famous pair of 'amicable numbers'. What links them?	Each one's divisors add up to the other	Both are sums of two cubes	Their product is a perfect square	Both are triangular numbers
+mat_euler_stunned_mathematicians	Expert	Euler stunned mathematicians by showing that 1 + 1/4 + 1/9 + 1/16 + ... equals what?	Pi squared over 6	Exactly 2	The golden ratio	e minus 1

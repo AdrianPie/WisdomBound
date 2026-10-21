@@ -43,6 +43,22 @@ ele_gas_powers_fuel	Easy	Which gas powers fuel-cell cars, leaving only water beh
 ele_trumpets_trombones_usually	Easy	Trumpets and trombones are usually made of which alloy?	Brass	Bronze	Steel	Pewter
 ele_dihydrogen_monoxide_chemical	Easy	What is 'dihydrogen monoxide', a chemical sometimes 'banned' in prank petitions?	Water	Salt	Bleach	Alcohol
 ele_eiffel_tower_built	Easy	The Eiffel Tower is built mainly from which metal?	Iron	Steel	Aluminium	Copper
+ele_metal_old_books	Easy	Which metal did old books call 'quicksilver'?	Mercury	Tin	Platinum	Silver
+ele_medieval_alchemists_dreamed	Easy	Medieval alchemists dreamed of turning lead into which metal?	Gold	Silver	Copper	Platinum
+ele_olympic_bronze_medals	Easy	Olympic bronze medals are made mostly of which metal?	Copper	Tin	Iron	Zinc
+ele_solar_panels_made	Easy	Most solar panels are made from which element?	Silicon	Carbon	Lithium	Copper
+ele_shiny_chrome_bumpers	Easy	Shiny 'chrome' bumpers and taps are plated with which metal?	Chromium	Silver	Aluminium	Tin
+ele_bomb_stand	Easy	What does the 'H' in 'H-bomb' stand for?	Hydrogen	Helium	High-yield	Heavy
+ele_gas_pumped_bags	Easy	Which gas is pumped into bags of crisps (potato chips) to keep them fresh?	Nitrogen	Oxygen	Helium	Carbon monoxide
+ele_karats_pure_gold	Easy	How many karats is pure gold?	24	18	100	12
+ele_hot_air_balloons	Easy	Hot-air balloons heat their air by burning which gas?	Propane	Hydrogen	Helium	Neon
+ele_black_soot_smoky	Easy	The black soot from a smoky candle is mostly which element?	Carbon	Sulfur	Lead	Iron
+ele_passing_electricity_through	Easy	Passing electricity through water splits it into which two gases?	Hydrogen and oxygen	Oxygen and nitrogen	Hydrogen and helium	Oxygen and carbon dioxide
+ele_lead_removed_house	Easy	Why was lead removed from house paint and petrol?	It is poisonous	It caused fires	It was too costly	It made paint fade
+ele_mixture_metals_like	Easy	What is a mixture of metals, like steel or brass, called?	An alloy	An ore	An isotope	A crystal
+ele_antiperspirants_block_sweat	Easy	Most antiperspirants block sweat using compounds of which metal?	Aluminium	Iron	Copper	Silver
+ele_traditional_church_bells	Easy	Traditional church bells are cast from which alloy?	Bronze	Brass	Pewter	Steel
+ele_band_led_zeppelin	Easy	The band Led Zeppelin took its name from a joke about a balloon made of which metal?	Lead	Iron	Tin	Mercury
 ele_symbol_ag	Medium	Which element hides behind the symbol Ag?	Silver	Gold	Argon	Aluminum
 ele_symbol_na	Medium	Which element hides behind the symbol Na?	Sodium	Nitrogen	Nickel	Neon
 ele_symbol_k	Medium	Which element hides behind the symbol K?	Potassium	Krypton	Calcium	Cobalt
@@ -120,6 +136,28 @@ ele_acid_builds_milk	Medium	Which acid builds up in milk as it turns sour?	Lacti
 ele_food_tin_cans	Medium	Food 'tin cans' are really steel coated with a thin layer of which metal?	Tin	Zinc	Aluminium	Nickel
 ele_purple_gemstone_variety	Medium	Which purple gemstone is a variety of quartz?	Amethyst	Sapphire	Garnet	Tanzanite
 ele_metal_mixed_gold	Medium	Which metal is mixed with gold to make 'rose gold'?	Copper	Silver	Zinc	Nickel
+ele_limescale_builds_kettles	Medium	The limescale that builds up in kettles in hard-water areas is mostly a compound of which metal?	Calcium	Iron	Sodium	Aluminium
+ele_word_plumber_comes	Medium	The word 'plumber' comes from the Latin name of which metal, once used for water pipes?	Lead	Copper	Iron	Tin
+ele_old_silver_dental	Medium	Old 'silver' dental fillings are actually about half made of which metal?	Mercury	Tin	Nickel	Zinc
+ele_strong_chlorine_smell	Medium	A strong 'chlorine' smell at a swimming pool is really a sign of what?	Chlorine reacting with sweat and urine	Far too much chlorine in the water	Bleach leaking from the filters	Algae growing in the pipes
+ele_green_glow_northern	Medium	The green glow of the northern lights comes mostly from which gas?	Oxygen	Nitrogen	Neon	Helium
+ele_metals_reacts_explosively	Medium	Which of these metals reacts most explosively when dropped into water?	Caesium	Lithium	Sodium	Potassium
+ele_element_periodic_table	Medium	Element 93 in the periodic table is named after which planet?	Neptune	Pluto	Saturn	Jupiter
+ele_neon_comes_greek	Medium	Neon's name comes from the Greek word for what?	New	Bright	Red	Glow
+ele_hospital_mri_scanners	Medium	Hospital MRI scanners use large amounts of which liquid to keep their magnets super-cold?	Liquid helium	Liquid nitrogen	Liquid hydrogen	Liquid oxygen
+ele_letters_appears_chemical	Medium	Which of these letters appears in no chemical element symbol at all?	J	X	Z	W
+ele_unlike_gold_karat	Medium	Unlike a gold karat, a diamond's 'carat' measures what?	Its weight	Its purity	Its clarity	Its colour
+ele_old_fashioned_photographic	Medium	Old-fashioned photographic film relied on light-sensitive compounds of which metal?	Silver	Gold	Copper	Lead
+ele_tutankhamun_daggers_blade	Medium	One of Tutankhamun's daggers has a blade of iron that came from where?	A meteorite	The Hittite mines	A sunken ship	A riverbed
+ele_elements_spelled_differently	Medium	Which of these elements is spelled differently in British and American English?	Aluminium	Magnesium	Potassium	Titanium
+ele_metals_light_enough	Medium	Which of these metals is light enough to float on water?	Lithium	Aluminium	Magnesium	Titanium
+ele_breaking_bad_title	Medium	The 'Breaking Bad' title highlights 'Br' for bromine and 'Ba' for which element?	Barium	Boron	Bismuth	Beryllium
+ele_element_titan_stole	Medium	Which element is named after the Titan who stole fire from the gods?	Promethium	Thorium	Tantalum	Plutonium
+ele_sodium_chemical_symbol	Medium	Why is sodium's chemical symbol Na?	From its Latin name 'natrium'	From its discoverer, Nathan	From the Greek for 'sea'	From 'new alkali'
+ele_physicist_element_100	Medium	Which physicist is element 100 named after?	Enrico Fermi	Niels Bohr	Max Planck	Ernest Rutherford
+ele_emeralds_green_variety	Medium	Emeralds are a green variety of which mineral?	Beryl	Corundum	Quartz	Topaz
+ele_white_chalk_gymnasts	Medium	The white 'chalk' that gymnasts and climbers rub on their hands is a carbonate of which metal?	Magnesium	Calcium	Sodium	Zinc
+ele_heated_hot_enough	Medium	If heated hot enough in air, what does a diamond do?	It burns away	It melts into glass	Nothing at all	It hardens even further
 ele_symbol_sn	Hard	Which element hides behind the symbol Sn?	Tin	Scandium	Selenium	Strontium
 ele_najczestszy	Hard	Which element is the most abundant in the Universe?	Hydrogen	Helium	Oxygen	Carbon
 ele_ilosc	Hard	How many elements does today's periodic table have?	118	108	92	120
@@ -187,6 +225,14 @@ ele_element_greek_word_2	Hard	Which element is named after the Greek word for 'v
 ele_sodium_hydroxide_better	Hard	Sodium hydroxide is better known by which name?	Caustic soda	Baking soda	Washing soda	Rock salt
 ele_acid_strong_used	Hard	Which acid is so strong it is used to etch glass?	Hydrofluoric acid	Citric acid	Acetic acid	Carbonic acid
 ele_lightweight_mag_wheels	Hard	Lightweight 'mag' wheels for cars were originally made from which metal?	Magnesium	Manganese	Mercury	Molybdenum
+ele_potassium_compounds_colour	Hard	Potassium compounds colour a flame which shade?	Lilac	Green	Bright yellow	Deep red
+ele_thermite_burns_hot	Hard	Thermite, which burns hot enough to melt steel, is a mix of iron oxide and which metal powder?	Aluminium	Magnesium	Zinc	Copper
+ele_blue_sapphires_get	Hard	Blue sapphires get their colour from traces of iron and which other metal?	Titanium	Chromium	Cobalt	Copper
+ele_strontium_strontian_village	Hard	Strontium is named after Strontian, a village in which country?	Scotland	Sweden	Wales	Norway
+ele_nitinol_memory_metal	Hard	Nitinol, the 'memory metal' in bendable glasses frames, mixes nickel with which metal?	Titanium	Tin	Iron	Copper
+ele_element_117_partly	Hard	Element 117, partly discovered at the Oak Ridge laboratory, is named after which US state?	Tennessee	Texas	Ohio	Nevada
+ele_nickel_comes_kupfernickel	Hard	Nickel's name comes from 'Kupfernickel', which German miners took to mean what?	Devil's copper	Little copper	False silver	Grey stone
+ele_flint_cigarette_lighter	Hard	The 'flint' in a cigarette lighter is mostly an alloy of iron and which element?	Cerium	Zinc	Nickel	Tungsten
 ele_symbol_sb	Expert	Which element hides behind the symbol Sb?	Antimony	Strontium	Silver	Selenium
 ele_symbol_mn	Expert	Which element hides behind the symbol Mn?	Manganese	Magnesium	Molybdenum	Copper
 ele_curie	Expert	Which element did Marie Sklodowska-Curie name after her homeland?	Polonium	Radium	Uranium	Radon
@@ -234,3 +280,5 @@ eley_chrom	Expert	Chromium's name comes from the Greek word for what?	Colour	Mir
 eley_brom	Expert	Bromine's name comes from the Greek word for what?	Stench	Brown	Bright	Water
 ele_element_greek_word_3	Expert	Which element is named after the Greek word for 'rainbow', for its colourful salts?	Iridium	Chromium	Rhodium	Bismuth
 ele_metal_comes_greek	Expert	Which metal's name comes from the Greek for 'stone', as it was first found in a mineral?	Lithium	Calcium	Barium	Strontium
+ele_element_118_last	Expert	Element 118, the last in today's periodic table, honours which scientist?	Yuri Oganessian	Glenn Seaborg	Ernest Rutherford	Niels Bohr
+ele_caesium_comes_latin	Expert	Caesium's name comes from the Latin for what, after the lines in its spectrum?	Sky blue	Blood red	Pale green	Pure white

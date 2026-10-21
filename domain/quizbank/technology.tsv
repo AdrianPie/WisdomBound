@@ -95,6 +95,29 @@ tec_car_maker_builds_5	Easy	Which car maker builds the Golf hatchback?	Volkswage
 tec_car_maker_builds_6	Easy	Which car maker builds the tiny '500' city car?	Fiat	Renault	Seat	Skoda
 tec_german_engineer_gave	Easy	Which German engineer gave his name to an engine that ignites fuel by compression?	Rudolf Diesel	Nikolaus Otto	Gottlieb Daimler	Karl Benz
 tec_lets_maglev_trains	Easy	What lets maglev trains float above the track?	Magnets	Air cushions	Hydrogen jets	Steam
+tec_henry_ford_joked	Easy	Henry Ford joked that customers could have the Model T in any colour, so long as it was which one?	Black	Red	Grey	Dark blue
+tec_1990s_made_loud	Easy	In the 1990s, what made a loud screeching and beeping noise every time you went online?	A dial-up modem	A cooling fan	A dot-matrix printer	A CD-ROM drive
+tec_google_chrome_cannot	Easy	When Google Chrome cannot reach the internet, what kind of animal can you guide over cacti in a hidden game?	A dinosaur	A cat	A penguin	A rabbit
+tec_brand_became_everyday	Easy	Which brand name became the everyday British word for a vacuum cleaner?	Hoover	Dyson	Electrolux	Miele
+tec_windows_keyboard_print	Easy	On a Windows keyboard, what does the 'Print Screen' key usually do today?	Takes a screenshot	Prints the page	Turns off the screen	Zooms in
+tec_parents_signed_off	Easy	Many parents have signed off messages with 'LOL' thinking it meant 'lots of love'. What does it really mean?	Laughing out loud	Lack of luck	Look out, listen	Lots of laughs online
+tec_standard_computer_keyboard	Easy	On a standard computer keyboard, which is the widest key?	The space bar	The Enter key	The Shift key	The Backspace key
+tec_pressing_ctrl_programs	Easy	What does pressing Ctrl + F do in most programs and web browsers?	Finds text	Opens a file	Goes full screen	Adds a favourite
+tec_word_app_phone	Easy	The word 'app', as on a phone, is short for what?	Application	Appliance	Apparatus	Appendix
+tec_website_virtual_pinboards	Easy	Which website is known for virtual pinboards full of recipes, outfits and home ideas?	Pinterest	Tumblr	Reddit	Flickr
+tec_renaissance_artist_sketched	Easy	Which Renaissance artist sketched a flying screw that looks like a helicopter, over 400 years before the real thing?	Leonardo da Vinci	Michelangelo	Raphael	Galileo Galilei
+tec_company_became_verb	Easy	Which company's name became a verb in dictionaries, meaning 'to search for something online'?	Google	Yahoo	Bing	Amazon
+tec_car_maker_logo_4	Easy	Which car maker's logo is known as the 'blue oval'?	Ford	Volkswagen	Peugeot	Renault
+tec_save_photos_cloud	Easy	When you save your photos to 'the cloud', where do they actually end up?	On computers in big data centres	On satellites orbiting Earth	On a spare chip in your phone	In signals bouncing off the sky
+tec_call_malicious_software	Easy	What do you call malicious software that locks your files and demands money to unlock them?	Ransomware	Spyware	Adware	Freeware
+tec_company_builds_a320	Easy	Which company builds the A320 airliner?	Airbus	Boeing	Embraer	Bombardier
+tec_actually_travels_down	Easy	What actually travels down a fibre-optic internet cable?	Pulses of light	Electric current	Radio waves	Sound waves
+tec_game_steer_line	Easy	Which game, in which you steer a line that grows longer as it eats, came built into millions of Nokia phones?	Snake	Tetris	Pong	Frogger
+tec_mobile_phones_pager	Easy	Before mobile phones, what did a pager, or 'beeper', do?	Showed short messages and numbers	Recorded short voice notes	Played music from the radio	Showed the way on a map
+tec_symbol_starts_hashtag	Easy	Which symbol starts a hashtag, as in #throwback?	#	@	&	*
+tec_website_faq_stand	Easy	On a website, what does 'FAQ' stand for?	Frequently asked questions	Fast answer queue	Final account query	File access quota
+tec_airplane_mode_switch	Easy	What does 'airplane mode' switch off on a phone?	Its wireless signals	Its touchscreen	Its speakers	Its alarm clock
+tec_operating_system_made	Easy	Which operating system made the 'Blue Screen of Death' infamous?	Windows	macOS	Linux	Android
 tec_cpu	Medium	What does the abbreviation CPU stand for?	Central Processing Unit	Random-access memory	Graphics card	Hard drive
 tec_android_firma	Medium	Which company develops the Android operating system?	Google	Apple	Microsoft	Meta
 tec_telefon_bell	Medium	Who patented the telephone?	Alexander Graham Bell	Thomas Edison	Guglielmo Marconi	Samuel Morse
@@ -225,6 +248,49 @@ tec_official_colour_golden	Medium	What is the official colour of the Golden Gate
 tec_programming_language_apple	Medium	Which programming language did Apple introduce in 2014 for its apps?	Swift	Kotlin	Rust	Go
 tec_programming_language_google	Medium	Which programming language has Google preferred for Android apps since 2019?	Kotlin	Swift	Ruby	Perl
 tec_created_python_programming	Medium	Who created the Python programming language?	Guido van Rossum	Bjarne Stroustrup	James Gosling	Linus Torvalds
+tec_still_say_dial	Medium	Why do we still say we 'dial' a phone number?	Old phones had a rotating dial	Calls were once timed on a dial	Operators turned a dial to connect	It comes from the word 'dialogue'
+tec_making_powered_airplane	Medium	Before making the first powered airplane flight in 1903, what business did its two pioneers run?	A bicycle shop	A car garage	A watch factory	A sawmill
+tec_swedish_car_maker	Medium	Which Swedish car maker's name is Latin for 'I roll'?	Volvo	Saab	Scania	Koenigsegg
+tec_email_originally_stand	Medium	In an email, what does 'Cc' originally stand for?	Carbon copy	Computer copy	Copy contacts	Common copy
+tec_emoji_oxford_dictionaries	Medium	Which emoji did Oxford Dictionaries choose as its 'Word of the Year' in 2015?	Face with tears of joy	Red heart	Thumbs up	Smiling face with sunglasses
+tec_built_cars_swedish	Medium	Before it built cars, what was the Swedish company Saab founded to make?	Military aircraft	Trucks	Sewing machines	Typewriters
+tec_mary_anderson_invent	Medium	What did Mary Anderson invent in 1903 after watching a tram driver struggle to see through the snow?	The windscreen wiper	The car heater	The traffic light	The snow tyre
+tec_hollywood_star_patented	Medium	Which Hollywood star co-patented a frequency-hopping radio system during World War II, an idea later used in wireless technology?	Hedy Lamarr	Marilyn Monroe	Grace Kelly	Greta Garbo
+tec_silly_putty_accident	Medium	Silly Putty was an accident, discovered during wartime attempts to make a substitute for what?	Rubber	Glass	Steel	Leather
+tec_tech_company_long	Medium	Which tech company was long known for the motto 'Don't be evil'?	Google	Apple	Microsoft	Amazon
+tec_company_ran_1997	Medium	Which company ran the famous 1997 advertising campaign 'Think different'?	Apple	IBM	Microsoft	Sony
+tec_company_early_motto	Medium	Which company's early motto for its programmers was 'Move fast and break things'?	Facebook	Google	Amazon	Twitter
+tec_phone_maker_used	Medium	Which phone maker used the slogan 'Connecting People'?	Nokia	Motorola	Ericsson	Siemens
+tec_microsoft_include_card	Medium	Why did Microsoft include the card game Solitaire in Windows 3.0?	To get people used to the mouse	To test the graphics card	To show off colour screens	As a reward for buying Office
+tec_run_big_cats	Medium	After a run of big cats ending with Mountain Lion, what were Apple's Mac operating systems named after?	Places in California	Famous scientists	Mountain ranges	Apple varieties
+tec_wikipedia_logo_globe	Medium	Wikipedia's logo is a globe made of what?	Jigsaw puzzle pieces	Open books	Hexagonal tiles	Interlocking gears
+tec_encyclopaedia_stopped_printing	Medium	Which famous encyclopaedia stopped printing paper editions in 2012, after 244 years?	Encyclopaedia Britannica	Larousse	World Book	Collier's Encyclopedia
+tec_trying_hide_something	Medium	Trying to hide something online often makes it spread further. Which singer is this effect named after?	Barbra Streisand	Madonna	Cher	Celine Dion
+tec_reflective_studs_percy	Medium	What are the reflective studs that Percy Shaw invented for road centre lines in 1934 called?	Cat's eyes	Owl lights	Glow-worms	Fox eyes
+tec_super_strong_fibre	Medium	Which super-strong fibre, used in bulletproof vests, did chemist Stephanie Kwolek invent at DuPont?	Kevlar	Nylon	Teflon	Lycra
+tec_james_dyson_built	Medium	James Dyson built over 5,000 prototypes before perfecting which invention?	The bagless vacuum cleaner	The bladeless fan	The hand dryer	The hair straightener
+tec_christopher_cockerell_proved	Medium	Christopher Cockerell proved his idea in 1955 with two tin cans and a vacuum cleaner blower. What had he invented?	The hovercraft	The jet ski	The hydrofoil	The jet engine
+tec_computer_company_long	Medium	Which computer company has long been nicknamed 'Big Blue'?	IBM	Intel	Dell	Hewlett-Packard
+tec_country_cheap_credit	Medium	In which country was the cheap, credit-card-sized Raspberry Pi computer created, to teach children coding?	Britain	Finland	Taiwan	Germany
+tec_revolutions_per_minute	Medium	At how many revolutions per minute does a standard LP vinyl record spin?	33 1/3	45	78	60
+tec_automatically_every_new	Medium	Who was automatically every new MySpace user's very first friend?	Tom	Mark	Steve	Jack
+tec_search_engine_originally	Medium	Which search engine originally had a cartoon butler as its mascot?	Ask Jeeves	AltaVista	Lycos	Excite
+tec_word_blog_short	Medium	The word 'blog' is short for what?	Weblog	Binary log	Backlog	Brief log
+tec_word_podcast_blends	Medium	The word 'podcast' blends 'broadcast' with which other word?	iPod	Pocket	Podium	Pod race
+tec_word_pixel_blend	Medium	The word 'pixel' is a blend of which two words?	Picture element	Pixie cell	Pinpoint excel	Print element
+tec_internet_archive_wayback	Medium	What does the Internet Archive's 'Wayback Machine' let you do?	See old versions of websites	Recover deleted emails	Undo changes on your PC	Track a lost phone
+tec_car_maker_built_2	Medium	Which car maker built ASIMO, a walking humanoid robot that could climb stairs and kick a ball?	Honda	Toyota	Nissan	Hyundai
+tec_car_best_selling	Medium	Which car is the best-selling nameplate of all time, with over 50 million sold?	Toyota Corolla	Volkswagen Golf	Volkswagen Beetle	Ford Model T
+tec_silver_lady_figurine	Medium	What is the name of the silver lady figurine on the bonnet of a Rolls-Royce?	The Spirit of Ecstasy	The Flying Lady of Derby	The Silver Ghost	The Winged Victory
+tec_2000_netflix_offered	Medium	In 2000, Netflix offered to sell itself for $50 million to which company, which turned it down?	Blockbuster	Walmart	Amazon	Disney
+tec_characters_tweet_hold	Medium	How many characters could a tweet hold before Twitter doubled the limit in 2017?	140	160	100	200
+tec_british_designer_shaped	Medium	Which British designer shaped the look of Apple's iMac, iPod and iPhone?	Jony Ive	Dieter Rams	James Dyson	Terence Conran
+tec_2008_steve_jobs	Medium	In 2008, Steve Jobs showed how thin the first MacBook Air was by pulling it out of what?	An office envelope	A pizza box	A school folder	A magazine
+tec_spacex_send_orbit	Medium	What did SpaceX send into orbit around the Sun as the test cargo on the first Falcon Heavy launch in 2018?	A red sports car	A wheel of cheese	A grand piano	A statue of a dog
+tec_really_inside_mechanical	Medium	What was really inside 'the Mechanical Turk', the 18th-century chess-playing machine?	A hidden human chess player	A clockwork brain of gears	A trained monkey	A set of magnets steered by wires
+tec_hamburger_menu_icon	Medium	What does the 'hamburger' menu icon in apps look like?	Three horizontal lines	Three vertical dots	A small circle	A square grid
+tec_according_makers_firefox	Medium	According to its makers, the 'firefox' in the browser's name is another name for which animal?	The red panda	The red fox	The fennec fox	The red squirrel
+tec_chinese_tech_company	Medium	Which Chinese tech company makes the Mate and P-series smartphones?	Huawei	Xiaomi	Lenovo	Oppo
 day2_ram_vs_dysk	Hard	Why does a computer slow down when RAM runs out?	It starts swapping data to much slower storage	The processor overheats and throttles	The screen starts refreshing slower	The network connection is throttled
 tec_turing	Hard	Who is regarded as the father of computer science and cracked the Enigma cipher?	Alan Turing	John von Neumann	Charles Babbage	Claude Shannon
 tec_enigma_polacy	Hard	Which Pole co-created the first break of the Enigma cipher?	Marian Rejewski	Stefan Banach	Jan Czochralski	Kazimierz Funk
@@ -303,6 +369,35 @@ tec_nfc_used_contactless	Hard	What does 'NFC', used for contactless payments, st
 tec_css_language_styling	Hard	What does 'CSS', the language for styling web pages, stand for?	Cascading Style Sheets	Computer Styling System	Coded Site Scripts	Creative Screen Styles
 tec_jpeg_stand	Hard	What does 'JPEG' stand for?	Joint Photographic Experts Group	Java Picture Encoding Group	Joint Pixel Exchange Graphics	Just Plain Edited Graphics
 tec_gif_stand	Hard	What does 'GIF' stand for?	Graphics Interchange Format	General Image File	Graphic Internet Frame	Grid Image Format
+tec_peugeot_family_made	Hard	The Peugeot family made which kitchen item before cars, and the Peugeot name is still on it today?	Pepper mills	Toasters	Kettles	Cast-iron pans
+tec_mazda_started_out	Hard	Mazda started out in 1920 as a maker of what?	Cork	Bicycles	Weaving looms	Pianos
+tec_world_traffic_light	Hard	The world's first traffic light, put up outside Parliament in London in 1868, was lit by what?	Gas	Electric bulbs	Candles	Limelight
+tec_super_glue_stumbled	Hard	Super Glue was first stumbled upon by researchers trying to make what?	Clear plastic gun sights	Waterproof bandages	Artificial skin	Rubber shoe soles
+tec_bill_hewlett_dave	Hard	How did Bill Hewlett and Dave Packard decide whose name would come first in 'Hewlett-Packard'?	A coin toss	Their ages	A game of chess	Who put in more money
+tec_price_apple_computer	Hard	What was the price of the Apple I computer when it went on sale in 1976?	$666.66	$99.99	$1,299	$2,495
+tec_google_big_storage	Hard	Google's first big storage unit, at Stanford, had a case built out of what?	LEGO bricks	A pizza box	A shoebox	An old filing cabinet
+tec_google_very_doodle	Hard	Google's very first Doodle, in 1998, told visitors the founders were away at which event?	Burning Man	Woodstock	The Olympics	Comic-Con
+tec_green_hill_under	Hard	The green hill under a blue sky in 'Bliss', the famous Windows XP wallpaper, was photographed where?	In California	In Ireland	In New Zealand	In Switzerland
+tec_musician_composed_start	Hard	Which musician composed the start-up sound of Windows 95?	Brian Eno	Jean-Michel Jarre	Hans Zimmer	Vangelis
+tec_often_photo_ever	Hard	What is often called the first photo ever posted on the web, in 1992?	A comic pop band of CERN staff	Tim Berners-Lee's pet cat	The CERN particle accelerator	A map of Geneva
+tec_according_godwin_law	Hard	According to 'Godwin's law', what will any long enough online argument eventually include?	A comparison to Hitler or the Nazis	A picture of a cat	A correction of someone's spelling	A link to a Wikipedia page
+tec_twitter_bird_logo	Hard	Twitter's bird logo was nicknamed Larry, after which basketball star?	Larry Bird	Magic Johnson	Michael Jordan	Kareem Abdul-Jabbar
+tec_video_game_company	Hard	The video game company Atari took its name from a term in which board game?	Go	Chess	Shogi	Mahjong
+tec_warren_robinett_secretly	Hard	Why did Warren Robinett secretly hide his name inside the 1980 Atari game 'Adventure', creating a famous Easter egg?	Atari did not credit its programmers	He had been fired before release	He wanted to prove he wrote it first	It was a bet with a colleague
+tec_edwin_land_invented	Hard	Edwin Land invented the Polaroid instant camera after his young daughter asked what?	Why she could not see the photo at once	Why photos were not in colour	Why cameras were so heavy	Whether she could take one herself
+tec_1982_computer_scientist	Hard	In 1982, computer scientist Scott Fahlman proposed typing ':-)' in online messages to mark what?	Jokes	Agreement	Affection	Goodbyes
+tec_barcode_inventor_norman	Hard	Barcode inventor Norman Woodland got his idea on a beach by drawing what in the sand?	Morse code stretched into lines	The ripples left by waves	A row of his own footprints	The planks of a boardwalk
+tec_inventor_cash_machine	Hard	The inventor of the cash machine is said to have chosen a four-digit PIN instead of six for what reason?	His wife could only remember four	Bank computers held only four	Six took too long to type	Keypads then had only four keys
+tec_roughly_share_data	Hard	Roughly what share of data travelling between continents goes through undersea cables rather than satellites?	About 99%	About 50%	About 25%	About 10%
+tec_while_proving_human	Hard	While proving they were human, users of the early reCAPTCHA puzzles were unknowingly helping to do what?	Digitise old books and newspapers	Translate websites into other languages	Test new fonts for printers	Count visitors to big websites
+tec_1960s_chatbot_eliza	Hard	The 1960s chatbot ELIZA famously imitated which kind of person?	A psychotherapist	A detective	A schoolteacher	A priest
+tec_maserati_trident_badge	Hard	Maserati's trident badge was inspired by a fountain of Neptune in which city?	Bologna	Rome	Venice	Naples
+tec_alongside_red_cross	Hard	Alongside a red cross, what does the Alfa Romeo badge show?	A serpent swallowing a man	A winged horse in flight	A crowned double eagle	A lion holding a sword
+tec_workplace_chat_app	Hard	The workplace chat app Slack grew out of a tool its makers built while working on what?	An online game	A dating site	A music app	A news site
+tec_youtube_founders_pictured	Hard	YouTube's founders first pictured their site as what?	A video dating site	A music video channel	A cooking show archive	A home for news clips
+tec_according_maker_voice	Hard	According to its maker, the voice assistant Alexa was named partly in honour of what?	The Library of Alexandria	Alexander the Great	Alexander Graham Bell	A founder's daughter
+tec_basic_feature_missing	Hard	Which basic feature was missing from the first iPhone of 2007?	Copy and paste	A touchscreen	A web browser	Email
+tec_bill_gates_later	Hard	Bill Gates later called it a mistake that Windows needed which three-key combination to log in?	Ctrl + Alt + Delete	Ctrl + Shift + Esc	Alt + Tab + Enter	Ctrl + Alt + Insert
 day2_klucz_publiczny	Expert	In public-key cryptography, what may be shared freely?	The public key	The private key	Both keys	Neither key
 tec_moore	Expert	What does Moore's law concern?	The doubling of transistor count in chips	The doubling of internet speed each year	The steady fall in the price of memory	The rise in server power consumption
 tec_c_jezyk	Expert	Who created the C programming language?	Dennis Ritchie	Bjarne Stroustrup	James Gosling	Guido van Rossum
@@ -347,3 +442,8 @@ tecy_brunel	Expert	Which Victorian engineer built the giant steamship 'Great Eas
 tecy_elektryk_xix	Expert	In which century was the first electric car built?	The 19th	The 20th	The 21st	The 18th
 tec_very_home_video	Expert	What was the very first home video game console?	The Magnavox Odyssey	The Atari 2600	The Fairchild Channel F	The Intellivision
 tec_german_inventor_built	Expert	Which German inventor built the 'running machine', a two-wheeled ancestor of the bicycle, in 1817?	Karl Drais	Karl Benz	Gottlieb Daimler	Rudolf Diesel
+tec_almon_strowger_invented	Expert	Almon Strowger invented the automatic telephone exchange because a rival's wife, a switchboard operator, kept diverting his calls. What was his trade?	Undertaker	Plumber	Baker	Tailor
+tec_nokia_ringtone_comes	Expert	Nokia's famous ringtone comes from a 1902 guitar piece by which Spanish composer?	Francisco Tarrega	Isaac Albeniz	Manuel de Falla	Joaquin Rodrigo
+tec_horse_italian_sports	Expert	The horse on an Italian sports car badge was first painted on the plane of which World War I fighter ace?	Francesco Baracca	Manfred von Richthofen	Eddie Rickenbacker	Georges Guynemer
+tec_chip_maker_nvidia	Expert	The chip maker Nvidia takes its name from 'invidia', the Latin word for what?	Envy	Vision	Speed	Light
+tec_hewlett_packard_big	Expert	Hewlett-Packard's first big customer bought eight of its audio oscillators to make which film?	Fantasia	Snow White	Pinocchio	Bambi
