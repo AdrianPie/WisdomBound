@@ -146,6 +146,34 @@ spo_points_bullseye_worth	Easy	How many points is a bullseye worth in darts?	50	
 spo_football_goalkeeper_keep	Easy	In football, what does a goalkeeper keep by not conceding a single goal in a match?	A clean sheet	A blank slate	A white wall	A clear net
 spo_basketball_jump_ball	Easy	In basketball, what is the jump ball that starts the game called?	The tip-off	The kick-off	The face-off	The bully-off
 spo_tennis_double_fault	Easy	In tennis, what is a 'double fault'?	Missing both serves	Hitting the ball twice	Touching the net twice	Serving out of turn
+spo_nickname_new_zealand	Easy	What is the nickname of New Zealand's national rugby union team?	The All Blacks	The Wallabies	The Lions	The Pumas
+spo_sport_players_spike	Easy	In which sport do players 'spike', 'dig' and 'block' the ball?	Volleyball	Basketball	Handball	Netball
+spo_sportswear_company_created	Easy	Which sportswear company created the 'Air Jordan' shoes for Michael Jordan?	Nike	Adidas	Reebok	Puma
+spo_country_national_football	Easy	Which country's national football team is nicknamed 'Les Bleus'?	France	Belgium	Scotland	Greece
+spo_sport_made_sisters	Easy	Which sport made the sisters Venus and Serena Williams famous?	Tennis	Golf	Athletics	Basketball
+spo_often_summer_olympic	Easy	How often are the Summer Olympic Games normally held?	Every four years	Every two years	Every three years	Every five years
+spo_sport_batter_hit	Easy	In which sport can a batter hit a 'home run' by knocking the ball out of the park?	Baseball	Cricket	Lacrosse	Rugby
+spo_basketball_superstar_nicknamed	Easy	Which basketball superstar is nicknamed 'King James'?	LeBron James	Kobe Bryant	Stephen Curry	Kevin Durant
+spo_sport_might_player	Easy	In which sport might a player score with an acrobatic overhead 'bicycle kick'?	Football	Rugby union	Volleyball	Handball
+spo_track_race_makes	Easy	Which track race makes runners leap over barriers and a water pit?	The steeplechase	The hurdles	The relay	The pentathlon
+spo_sport_quarterback_linebacker	Easy	In which sport do the 'quarterback' and the 'linebacker' play?	American football	Baseball	Ice hockey	Basketball
+spo_shape_cage_ufc	Easy	What shape is the cage that UFC fighters compete in?	An octagon	A circle	A square	A triangle
+spo_national_football_team_4	Easy	Which national football team is nicknamed 'the Three Lions'?	England	Wales	Scotland	Belgium
+spo_english_football_club_3	Easy	Which English football club plays its home games at the Etihad Stadium?	Manchester City	Manchester United	Aston Villa	Newcastle United
+spo_city_football_rivals	Easy	In which city do the football rivals Lazio and Roma both play?	Rome	Naples	Turin	Florence
+spo_sport_ollie_kickflip	Easy	In which sport would you do an 'ollie' or a 'kickflip'?	Skateboarding	Surfing	Skiing	BMX racing
+spo_racket_sport_players	Easy	In which racket sport do players hit a small rubber ball against the walls of a closed court?	Squash	Badminton	Tennis	Table tennis
+spo_runners_hand_each	Easy	What do runners hand to each other during a relay race?	A baton	A torch	A flag	A ribbon
+spo_country_national_rugby	Easy	Which country's national rugby union team is nicknamed 'the Wallabies'?	Australia	New Zealand	South Africa	Fiji
+spo_long_lap_standard	Easy	How long is one lap of a standard outdoor running track?	400 metres	200 metres	500 metres	800 metres
+spo_american_lindsey_vonn	Easy	The American Lindsey Vonn won dozens of World Cup races in which sport?	Downhill skiing	Figure skating	Snowboarding	Speed skating
+spo_chess_piece_normally	Easy	Which chess piece normally moves just one square, in any direction?	The king	The queen	The pawn	The rook
+spo_chess_piece_usually	Easy	Which chess piece is usually shaped like a castle tower?	The rook	The bishop	The king	The knight
+spo_golf_closely_mown	Easy	In golf, what is the closely mown area around the hole called?	The green	The fairway	The rough	The bunker
+spo_garden_sport_players	Easy	In which garden sport do players hit balls through hoops with a mallet?	Croquet	Polo	Lawn bowls	Golf
+spo_colour_cloth_snooker	Easy	What colour is the cloth on a snooker table traditionally?	Green	Blue	Red	Grey
+spo_letters_stand_english	Easy	What do the letters 'FA' stand for in the English 'FA Cup'?	Football Association	Football Alliance	Football Academy	Federation of Athletics
+spo_baseball_raised_patch	Easy	In baseball, what is the raised patch of dirt that the pitcher throws from called?	The mound	The plate	The dugout	The bullpen
 spo_mundial_2018	Medium	Who won the soccer World Cup in 2018?	France	Croatia	Brazil	Germany
 spo_lewandowski	Medium	At which club did Robert Lewandowski become the Bundesliga's top scorer?	Bayern Munich	Real Madrid	Manchester United	Juventus
 spo_hokej	Medium	How long is one period in an ice hockey game?	20 minutes	15 minutes	25 minutes	30 minutes
@@ -379,6 +407,46 @@ spo_athletics_hammer_hammer	Medium	In athletics, what is the 'hammer' in the ham
 spo_baseball_team_curse	Medium	Which baseball team's 'Curse of the Billy Goat' finally ended with its 2016 title?	The Chicago Cubs	The Cleveland Indians	The Boston Red Sox	The Chicago White Sox
 spo_cricket_duck	Medium	In cricket, what is a 'duck'?	Being out without scoring	A ball bowled underarm	A one-handed catch	A ball that hits the stumps
 spo_under_chess_touch	Medium	Under chess's 'touch-move' rule, a player who deliberately touches one of his pieces must do what?	Move that piece	Move his king	Offer a draw	Lose a minute
+spo_sport_played_lord	Medium	Which sport is played at Lord's in London?	Cricket	Tennis	Rugby union	Polo
+spo_filipino_boxer_world	Medium	Which Filipino boxer, a world champion in eight weight divisions, also served as a senator?	Manny Pacquiao	Nonito Donaire	Oscar De La Hoya	Juan Manuel Marquez
+spo_golden_state_warriors	Medium	Which Golden State Warriors star holds the NBA record for career three-pointers?	Stephen Curry	Ray Allen	Klay Thompson	James Harden
+spo_seabiscuit_hero_americans	Medium	Seabiscuit, a hero to Americans during the Great Depression, was what?	A racehorse	A greyhound	A baseball pitcher	A boxer
+spo_host_nation_lost	Medium	Which host nation lost 7-1 to Germany in a 2014 World Cup semi-final?	Brazil	Argentina	Mexico	Colombia
+spo_club_won_english	Medium	Which club won the English Premier League in 2003-04 without losing a game, earning the name 'the Invincibles'?	Arsenal	Manchester United	Chelsea	Liverpool
+spo_since_2010_happens	Medium	Since 2010, what happens to a sprinter who makes a false start at a top athletics meeting?	They are disqualified at once	They get a warning	They restart a metre back	They get a time penalty
+spo_big_city_marathon	Medium	Which big-city marathon finishes on The Mall, near Buckingham Palace?	The London Marathon	The Berlin Marathon	The Boston Marathon	The New York Marathon
+spo_american_football_yards	Medium	In American football, how many yards must the attacking team gain to earn a new set of downs?	10	5	20	25
+spo_score_set_tie	Medium	At what score in a set is a tie-break normally played in tennis?	6-6	5-5	7-7	4-4
+spo_formula_flag_tells	Medium	In Formula 1, which flag tells a driver that a faster car is about to lap him?	Blue	Yellow	Green	White
+spo_snooker_colour_ball	Medium	In snooker, which colour ball is worth two points?	Yellow	Green	Brown	Blue
+spo_boxing_weight_classes	Medium	Which of these boxing weight classes is the lightest?	Flyweight	Lightweight	Welterweight	Middleweight
+spo_competitors_hybrid_sport	Medium	What do competitors do in the hybrid sport of chess boxing?	Alternate rounds of chess and boxing	Box while their coaches play chess	Play chess wearing boxing gloves	Box on a giant chessboard
+spo_city_kentucky_derby	Medium	In which US city is the Kentucky Derby run every May?	Louisville	Lexington	Frankfort	Nashville
+spo_british_cyclist_won	Medium	Which British cyclist won the Tour de France four times between 2013 and 2017?	Chris Froome	Geraint Thomas	Mark Cavendish	Bradley Wiggins
+spo_standard_professional_darts	Medium	In a standard professional darts match, from what score does each player count down to zero?	501	500	1000	360
+spo_since_2001_game	Medium	Since 2001, a game of table tennis is won by the first player to reach how many points?	11	15	21	25
+spo_british_runner_won	Medium	Which British runner won both the 5,000 m and the 10,000 m at the 2012 and 2016 Olympics?	Mo Farah	Paula Radcliffe	Steve Cram	Seb Coe
+spo_drop_goal_extra	Medium	Whose drop goal in extra time won England the 2003 Rugby World Cup final?	Jonny Wilkinson	Martin Johnson	Jason Robinson	Will Carling
+spo_country_fans_made	Medium	Which country's fans made the 'Viking thunder clap' famous at Euro 2016?	Iceland	Norway	Denmark	Sweden
+spo_won_wimbledon_2013	Medium	Who won Wimbledon in 2013, becoming the first British men's champion for 77 years?	Andy Murray	Tim Henman	Greg Rusedski	Cameron Norrie
+spo_football_referees_spray	Medium	What do football referees spray on the grass to mark where a defensive wall must stand?	Vanishing foam	Chalk paint	Coloured sand	Plain water
+spo_sport_players_roll	Medium	In which sport do players roll biased balls, called 'woods', towards a small white 'jack'?	Lawn bowls	Croquet	Curling	Ten-pin bowling
+spo_italian_town_ferrari	Medium	In which Italian town is the Ferrari Formula 1 team based?	Maranello	Monza	Imola	Modena
+spo_cricket_batter_scores	Medium	In cricket, what is it called when a batter scores 100 runs in one innings?	A century	A maiden	A wicket	A boundary
+spo_canadian_sprinter_stripped	Medium	Which Canadian sprinter was stripped of his 100 m gold at the 1988 Olympics after failing a drug test?	Ben Johnson	Donovan Bailey	Bruny Surin	Andre De Grasse
+spo_american_club_david	Medium	Which American club did David Beckham join in 2007?	LA Galaxy	New York Red Bulls	Inter Miami	Chicago Fire
+spo_saudi_arabian_club	Medium	Which Saudi Arabian club signed Cristiano Ronaldo at the end of 2022?	Al-Nassr	Al-Hilal	Al-Ittihad	Al-Ahli
+spo_country_tadej_pogacar	Medium	Which country is Tadej Pogacar, a multiple winner of the Tour de France, from?	Slovenia	Croatia	Slovakia	Austria
+spo_golfer_won_2019	Medium	Which golfer won the 2019 Masters, his 15th major, after years of back surgery?	Tiger Woods	Phil Mickelson	Rory McIlroy	Jordan Spieth
+spo_man_won_wimbledon	Medium	Which man has won the most Wimbledon singles titles, with eight?	Roger Federer	Novak Djokovic	Pete Sampras	Bjorn Borg
+spo_german_became_youngest	Medium	Which German became the youngest men's Wimbledon champion in 1985, aged just 17?	Boris Becker	Michael Stich	Michael Chang	Stefan Edberg
+spo_country_beat_england	Medium	Which country beat England on penalties at Wembley in the Euro 2020 final?	Italy	Spain	Germany	Portugal
+spo_country_lost_2018	Medium	Which country lost the 2018 World Cup final 4-2?	Croatia	Belgium	Argentina	Denmark
+spo_uruguayan_striker_bit	Medium	Which Uruguayan striker bit an Italian defender during the 2014 World Cup?	Luis Suarez	Edinson Cavani	Diego Forlan	Darwin Nunez
+spo_club_stadium_nicknamed	Medium	Which club's stadium is nicknamed 'the Theatre of Dreams'?	Manchester United	Real Madrid	FC Barcelona	Liverpool
+spo_player_won_olympic	Medium	Which player won Olympic tennis gold at Paris 2024, completing his 'Career Golden Slam'?	Novak Djokovic	Carlos Alcaraz	Rafael Nadal	Andy Murray
+spo_country_became_african	Medium	Which country became the first African team to reach a World Cup semi-final, in 2022?	Morocco	Senegal	Ghana	Cameroon
+spo_scored_hat_trick	Medium	Who scored a hat-trick in the 2022 World Cup final but still ended up on the losing side?	Kylian Mbappe	Lionel Messi	Olivier Giroud	Antoine Griezmann
 spo_bolt	Hard	What is Usain Bolt's world record in the 100 m?	9.58 s	9.69 s	9.72 s	9.49 s
 spo_olimpiada_1896	Hard	Where were the first modern Olympic Games held?	Athens	Paris	Rome	London
 spo_wimbledon	Hard	What surface is Wimbledon played on?	Grass	Sand	Concrete	Clay and hard court, alternating
@@ -508,6 +576,39 @@ spo_buzkashi_afghanistan_national	Hard	In buzkashi, Afghanistan's national sport
 spo_calcio_storico_brutal	Hard	Calcio storico, a brutal Renaissance form of football, is still played every June in which city?	Florence	Siena	Naples	Venice
 spo_perfect_olympic_gymnastics	Hard	When the first perfect 10 in Olympic gymnastics was scored in 1976, what did the scoreboard show?	1.00	10.0	9.99	0.00
 spo_dutch_mother_two	Hard	Which Dutch mother of two, nicknamed 'the Flying Housewife', won four golds at the 1948 Olympics?	Fanny Blankers-Koen	Babe Didrikson	Wilma Rudolph	Betty Cuthbert
+spo_golf_major_gives	Hard	Which golf major gives its winner a silver trophy called the Claret Jug?	The Open Championship	The Masters	The US Open	The PGA Championship
+spo_sport_match_divided	Hard	In which sport is a match divided into periods called 'chukkas'?	Polo	Cricket	Hurling	Lacrosse
+spo_nba_personal_fouls	Hard	In the NBA, how many personal fouls does it take for a player to foul out of a game?	Six	Five	Four	Seven
+spo_sport_england_scotland	Hard	In which sport do England and Scotland play each other for the Calcutta Cup?	Rugby union	Cricket	Golf	Curling
+spo_sports_made_olympic	Hard	Which of these sports made its Olympic debut at Tokyo 2020?	Sport climbing	Golf	Rugby sevens	Beach volleyball
+spo_dartboard_two_numbers	Hard	On a dartboard, which two numbers sit on either side of the 20?	5 and 1	19 and 3	18 and 12	15 and 2
+spo_octopush_another_sport	Hard	'Octopush' is another name for which sport?	Underwater hockey	Water polo	Synchronised swimming	Underwater rugby
+spo_real_life_sport	Hard	What is the real-life sport adapted from Harry Potter's Quidditch called since 2022?	Quadball	Broomball	Snitchball	Hoopball
+spo_country_world_bog	Hard	In which country are the World Bog Snorkelling Championships held?	Wales	Ireland	Scotland	Finland
+spo_national_sport_himalayan	Hard	What is the national sport of the Himalayan kingdom of Bhutan?	Archery	Polo	Wrestling	Kabaddi
+spo_tennis_star_stabbed	Hard	Which tennis star was stabbed by a spectator during a match in Hamburg in 1993?	Monica Seles	Steffi Graf	Gabriela Sabatini	Jennifer Capriati
+spo_main_stadium_open	Hard	The main stadium of the US Open tennis tournament is named after which player?	Arthur Ashe	Billie Jean King	Andre Agassi	Jimmy Connors
+spo_drs_overtaking_aid	Hard	What does 'DRS', the overtaking aid used in Formula 1 since 2011, stand for?	Drag Reduction System	Driver Response Switch	Downforce Release System	Dynamic Rear Spoiler
+spo_became_formula_race	Hard	Which became the first Formula 1 race held at night, in 2008?	The Singapore Grand Prix	The Bahrain Grand Prix	The Abu Dhabi Grand Prix	The Las Vegas Grand Prix
+spo_four_time_formula	Hard	Which four-time Formula 1 champion was nicknamed 'the Professor'?	Alain Prost	Niki Lauda	Jackie Stewart	Nelson Piquet
+spo_baseball_perfect_game	Hard	In baseball, what is a 'perfect game'?	No opposing batter reaches base	Every batter gets a hit	A game won without errors	A shutout won by ten runs
+spo_als_nerve_disease	Hard	ALS, the nerve disease, is widely known in the USA by the name of which baseball star?	Lou Gehrig	Babe Ruth	Joe DiMaggio	Mickey Mantle
+spo_australian_bowled_ball	Hard	Which Australian bowled 'the Ball of the Century' to England's Mike Gatting in 1993?	Shane Warne	Glenn McGrath	Dennis Lillee	Merv Hughes
+spo_judo_full_point	Hard	In judo, what is the full point that ends a contest at once called?	Ippon	Waza-ari	Yuko	Koka
+spo_fencing_weapon_fencer	Hard	In fencing, with which weapon can a fencer score with the edge of the blade as well as the tip?	The sabre	The foil	The epee	None of them
+spo_may_outfield_players	Hard	What may outfield players in water polo NOT do with the ball?	Hold it with both hands	Swim while pushing it	Throw it with one hand	Pass it backwards
+spo_briton_set_triple	Hard	Which Briton set the triple jump world record of 18.29 m in 1995?	Jonathan Edwards	Christian Olsson	Kenny Harrison	Willie Banks
+spo_set_women_100	Hard	Who set the women's 100 m world record of 10.49 seconds in 1988?	Florence Griffith-Joyner	Shelly-Ann Fraser-Pryce	Elaine Thompson-Herah	Merlene Ottey
+spo_scored_goal_2014	Hard	Who scored the only goal of the 2014 World Cup final in extra time?	Mario Gotze	Thomas Muller	Miroslav Klose	Andre Schurrle
+spo_star_scored_all	Hard	Which star scored in all of Real Madrid's first five European Cup finals, from 1956 to 1960?	Alfredo Di Stefano	Ferenc Puskas	Raymond Kopa	Francisco Gento
+spo_club_became_british	Hard	Which club became the first British winners of the European Cup, in 1967, with a team nicknamed 'the Lisbon Lions'?	Celtic	Manchester United	Rangers	Liverpool
+spo_chess_position_any	Hard	In chess, what is the name for a position where any move a player makes will weaken it?	Zugzwang	Stalemate	Fianchetto	Gambit
+spo_hungarian_widely_seen	Hard	Which Hungarian is widely seen as the strongest female chess player ever?	Judit Polgar	Hou Yifan	Maia Chiburdanidze	Vera Menchik
+spo_roughly_heavy_shot	Hard	Roughly how heavy is the shot used in the men's Olympic shot put?	About 7 kg	About 3 kg	About 12 kg	About 20 kg
+spo_winning_2025_masters	Hard	By winning the 2025 Masters, which golfer finally completed the career Grand Slam?	Rory McIlroy	Phil Mickelson	Jordan Spieth	Scottie Scheffler
+spo_american_won_100	Hard	Which American won the 100 m at the Paris 2024 Olympics by just five thousandths of a second?	Noah Lyles	Fred Kerley	Christian Coleman	Kishane Thompson
+spo_scandal_tokyo_2020	Hard	After a scandal at Tokyo 2020, which discipline is modern pentathlon replacing with an obstacle course?	Horse riding	Fencing	Swimming	Shooting
+spo_team_shocked_eventual	Hard	Which team shocked the eventual champions Argentina by beating them 2-1 at the 2022 World Cup?	Saudi Arabia	Mexico	Poland	Australia
 spo_dekatlon	Expert	Which event closes the men's Olympic decathlon on the second day?	The 1500 metres	The javelin throw	The pole vault	The 110 m hurdles
 spo_nba_wilt	Expert	Who scored 100 points in a single NBA game?	Wilt Chamberlain	Michael Jordan	Kobe Bryant	LeBron James
 spo2_fosbury	Expert	Who revolutionized the high jump with the backward flop technique?	Dick Fosbury	Jesse Owens	Carl Lewis	Javier Sotomayor
@@ -569,3 +670,12 @@ spo_longest_gloved_boxing	Expert	The longest gloved boxing fight on record, in N
 spo_tennis_golden_set	Expert	In tennis, what is a 'golden set'?	A set won without losing a point	A set won 6-0	A set decided by a tiebreak	A set won with only aces
 spo_formula_posthumous_world	Expert	Who is Formula 1's only posthumous world champion, crowned in 1970?	Jochen Rindt	Jim Clark	Gilles Villeneuve	Ronnie Peterson
 spo_petanque_small_target	Expert	In petanque, the small target ball is called the 'cochonnet'. What does that mean?	Piglet	Little ball	Little goal	Chick
+spo_golf_score_four	Expert	In golf, what is a score of four under par on a single hole called?	A condor	An albatross	A falcon	A phoenix
+spo_pato_game_riders	Expert	Pato, a game in which riders fight for a ball with handles, is the national sport of which country?	Argentina	Mexico	Spain	Mongolia
+spo_sport_declared_national	Expert	Which sport was declared the national sport of Sri Lanka in 1991?	Volleyball	Cricket	Kabaddi	Badminton
+spo_pesapallo_fast_version	Expert	Pesapallo, a fast version of baseball, is the national sport of which country?	Finland	Norway	Estonia	Japan
+spo_trophy_given_women	Expert	What is the trophy given to the women's singles champion at Wimbledon called?	The Venus Rosewater Dish	The Silver Salver of Kent	The Rose of England Plate	The Challenge Bowl
+spo_city_hosted_british	Expert	Which city hosted the first British Empire Games, the forerunner of the Commonwealth Games, in 1930?	Hamilton, Canada	London, England	Sydney, Australia	Auckland, New Zealand
+spo_set_men_mile	Expert	Who set the men's mile world record of 3:43.13 in 1999?	Hicham El Guerrouj	Noureddine Morceli	Steve Cram	Sebastian Coe
+spo_became_bowler_take	Expert	Who became the first bowler to take 800 Test wickets in cricket?	Muttiah Muralitharan	Shane Warne	Anil Kumble	James Anderson
+spo_american_won_olympic	Expert	Which American won the Olympic discus at four Games in a row, from 1956 to 1968?	Al Oerter	Bob Mathias	Mac Wilkins	Parry O'Brien

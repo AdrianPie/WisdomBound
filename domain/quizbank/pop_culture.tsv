@@ -350,6 +350,17 @@ pop_actor_played_time	Easy	Which actor played the time-travelling teenager in 'B
 pop_irl_mean_online	Easy	What does 'IRL' mean in online slang?	In real life	In rapid loop	I really laughed	Internet relay link
 pop_lion_king_simba	Easy	In 'The Lion King', what is the name of Simba's childhood friend who later becomes his queen?	Nala	Sarabi	Shenzi	Kiara
 pop_superhero_man_steel	Easy	Which superhero is known as 'the Man of Steel'?	Superman	Iron Man	Captain America	The Flash
+pop_original_star_wars	Easy	In the original 'Star Wars' trilogy, who turns out to be Luke Skywalker's father?	Darth Vader	Obi-Wan Kenobi	Emperor Palpatine	Owen Lars
+pop_band_1991_hit	Easy	Which band had a 1991 hit with 'Smells Like Teen Spirit'?	Nirvana	Pearl Jam	Soundgarden	Foo Fighters
+pop_colour_smurfs	Easy	What colour are the Smurfs?	Blue	Green	Purple	Yellow
+pop_lion_king_kind	Easy	In 'The Lion King', what kind of animals are Scar's cackling henchmen?	Hyenas	Jackals	Vultures	Baboons
+pop_disney_bear_sighs	Easy	Which Disney bear sighs 'Oh, bother!' when things go wrong?	Winnie the Pooh	Baloo	Paddington	Little John
+pop_food_blue_googly	Easy	Which food is the blue, googly-eyed monster of 'Sesame Street' crazy about?	Cookies	Bananas	Pizza	Carrots
+pop_1993_blockbuster_island	Easy	In the 1993 blockbuster about an island of cloned dinosaurs, which dinosaurs stalk two children through a kitchen?	Velociraptors	Tyrannosaurs	Spinosaurs	Dilophosaurs
+pop_superhero_nicknamed_caped	Easy	Which superhero is nicknamed 'the Caped Crusader'?	Batman	Superman	Spider-Man	The Flash
+pop_little_mermaid_ariel	Easy	In 'The Little Mermaid', what does Ariel give up to the sea witch in exchange for legs?	Her voice	Her hair	Her crown	Her memory
+pop_2002_film_spider	Easy	In the 2002 film 'Spider-Man', who tells Peter Parker 'With great power comes great responsibility'?	Uncle Ben	Aunt May	Norman Osborn	Mary Jane
+pop_singer_2009_hit	Easy	Which singer had a 2009 hit with 'Bad Romance'?	Lady Gaga	Katy Perry	Rihanna	Kesha
 day_zlota_palma	Medium	Which is the top prize at the Cannes Film Festival?	The Palme d'Or	The Golden Bear	The Golden Lion	The Silver Shell
 day_minecraft_sprzedaz	Medium	Which is the best-selling video game of all time?	Minecraft	Tetris	Grand Theft Auto V	Wii Sports
 trv2_tetris_kraj	Medium	In which country was Tetris created?	The Soviet Union	Japan	The United States	Finland
@@ -809,6 +820,30 @@ pop_star_trek_vulcan	Medium	In 'Star Trek', which Vulcan blessing goes with the 
 pop_stranger_things_boys	Medium	In 'Stranger Things', the boys name the first monster after a villain from which game?	Dungeons & Dragons	Magic: The Gathering	Warhammer	Pac-Man
 pop_scooby_doo_gang	Medium	Which 'Scooby-Doo' gang member is forever losing her glasses?	Velma	Daphne	Shaggy	Fred
 pop_super_mario_games_2	Medium	In the Super Mario games, which kingdom does Mario keep saving from Bowser?	The Mushroom Kingdom	Hyrule	Dream Land	Green Hill Zone
+pop_red_haired_girl	Medium	Which red-haired girl is Peter Parker's great love in many Spider-Man stories?	Mary Jane Watson	Gwen Stacy	Betty Brant	Felicia Hardy
+pop_actor_played_title	Medium	Which actor played the title role in Tim Burton's 'Edward Scissorhands' (1990)?	Johnny Depp	Keanu Reeves	Nicolas Cage	Christian Slater
+pop_james_bond_villain	Medium	Which James Bond villain is famous for stroking a white cat?	Ernst Stavro Blofeld	Auric Goldfinger	Dr. Julius No	Hugo Drax
+pop_friends_character_keeps	Medium	Which 'Friends' character keeps insisting 'We were on a break!'?	Ross	Chandler	Joey	Rachel
+pop_simpsons_bart_nerdy	Medium	In 'The Simpsons', what is the name of Bart's nerdy best friend?	Milhouse	Nelson	Ralph	Martin
+pop_phil_collins_drummer	Medium	Phil Collins was the drummer and later the singer of which band?	Genesis	Yes	The Police	Supertramp
+pop_singer_led_motown	Medium	Which singer led the Motown group The Supremes?	Diana Ross	Aretha Franklin	Gladys Knight	Martha Reeves
+pop_huge_pokemon_blocks	Medium	Which huge Pokemon blocks the road while it sleeps in Pokemon Red and Blue?	Snorlax	Slowpoke	Onix	Lapras
+pop_toy_story_films	Medium	In the 'Toy Story' films, who is Buzz Lightyear's evil arch-enemy?	Emperor Zurg	Stinky Pete	Al McWhiggin	Big Baby
+pop_version_office_sets	Medium	In the US version of 'The Office', who sets Dwight's stapler in jelly?	Jim Halpert	Andy Bernard	Ryan Howard	Kevin Malone
+pop_actress_played_mother	Medium	Which actress played the 'Mother of Dragons' in 'Game of Thrones'?	Emilia Clarke	Sophie Turner	Maisie Williams	Natalie Dormer
+pop_actress_played_eleven	Medium	Which actress played Eleven in 'Stranger Things'?	Millie Bobby Brown	Sadie Sink	Natalia Dyer	Maya Hawke
+pop_men_hero_control	Medium	Which X-Men hero can control the weather?	Storm	Rogue	Jean Grey	Mystique
+pop_hard_drinking_robot	Medium	What is the name of the hard-drinking robot in 'Futurama'?	Bender	Zoidberg	Hermes	Kif
+pop_family_guy_football	Medium	In 'Family Guy', what is the name of the football-headed baby who plots world domination?	Stewie	Chris	Peter	Meg
+pop_talent_show_susan	Medium	On which TV talent show did Susan Boyle stun the judges in 2009?	Britain's Got Talent	The X Factor	Pop Idol	The Voice UK
+pop_michael_jackson_ranch	Medium	What was the name of Michael Jackson's ranch in California?	Neverland	Graceland	Xanadu	Paisley Park
+pop_1999_film_rule	Medium	Which 1999 film's first rule is that you do not talk about it?	Fight Club	The Matrix	Memento	Se7en
+pop_godfather_film_producer	Medium	In 'The Godfather', what does a film producer find in his bed after refusing a favour?	A horse's head	A dead fish	A severed hand	A pig's head
+pop_horror_killer_white	Medium	Which horror killer is famous for his white hockey mask?	Jason Voorhees	Michael Myers	Leatherface	Freddy Krueger
+pop_green_food_gobbling	Medium	What is the name of the green, food-gobbling ghost in 'Ghostbusters'?	Slimer	Casper	Gozer	Zuul
+pop_2014_animated_film	Medium	Which 2014 animated film features the song 'Everything Is Awesome'?	The Lego Movie	Trolls	Wreck-It Ralph	The Emoji Movie
+pop_manga_anime_notebook	Medium	Which manga and anime is about a notebook that kills anyone whose name is written in it?	Death Note	Bleach	Naruto	Attack on Titan
+pop_phineas_ferb_kind	Medium	In 'Phineas and Ferb', what kind of animal is the secret agent Perry?	A platypus	A beaver	An otter	A raccoon
 day_zloty_lew	Hard	At which film festival is the Golden Lion awarded?	Venice	Cannes	Berlin	San Sebastian
 lit_manga	Hard	The Japanese word 'manga' originally meant what?	Whimsical pictures	Moving pictures	Paper theatre	Ink stories
 pop_gremlins	Hard	In 'Gremlins' (1984), what must you never do to the creatures after midnight?	Feed them	Tickle them	Let them sleep	Take them outside
@@ -1019,6 +1054,46 @@ pop_indiana_jones_last	Hard	In 'Indiana Jones and the Last Crusade', where does 
 pop_film_won_best	Hard	Which film won Best Picture in 2017, after 'La La Land' was announced by mistake?	Moonlight	Manchester by the Sea	Hidden Figures	Arrival
 pop_whisky_loving_sea	Hard	Which whisky-loving sea captain is Tintin's best friend?	Captain Haddock	Captain Nemo	Captain Hook	Captain Flint
 pop_actress_made_film	Hard	Which actress made her film debut as a girl in 'Leon: The Professional' (1994)?	Natalie Portman	Kirsten Dunst	Scarlett Johansson	Dakota Fanning
+pop_actor_voiced_murdered	Hard	Which actor voiced the murdered king in Disney's 1994 'The Lion King'?	James Earl Jones	Morgan Freeman	Samuel L. Jackson	Jeremy Irons
+pop_singer_weeknd_born	Hard	The singer The Weeknd was born with which name?	Abel Tesfaye	Aubrey Graham	Jacques Webster	Kendrick Duckworth
+pop_beatles_song_begins	Hard	Which Beatles song begins 'Picture yourself in a boat on a river'?	Lucy in the Sky with Diamonds	Yellow Submarine	Strawberry Fields Forever	Penny Lane
+pop_pokemon_red_blue	Hard	In Pokemon Red and Blue, in which town does the player's journey begin?	Pallet Town	Viridian City	Pewter City	Cerulean City
+pop_toy_story_pink	Hard	In 'Toy Story 3', which pink, strawberry-scented bear rules the daycare centre?	Lotso	Big Baby	Chunk	Twitch
+pop_return_jedi_officer	Hard	In 'Return of the Jedi', which officer famously cries 'It's a trap!'?	Admiral Ackbar	Admiral Piett	Admiral Thrawn	Admiral Holdo
+pop_ice_planet_empire	Hard	On which ice planet does 'The Empire Strikes Back' open?	Hoth	Endor	Dagobah	Bespin
+pop_film_features_line_12	Hard	Which film features the line 'I'll have what she's having'?	When Harry Met Sally	Sleepless in Seattle	Pretty Woman	Annie Hall
+pop_official_james_bond	Hard	What was the first official James Bond film, released in 1962?	Dr. No	Goldfinger	From Russia with Love	Thunderball
+pop_batman_villain_originally	Hard	Which Batman villain was originally the Joker's psychiatrist at Arkham Asylum?	Harley Quinn	Poison Ivy	Talia al Ghul	Catwoman
+pop_state_cartoon_south	Hard	In which US state is the cartoon 'South Park' set?	Colorado	Wyoming	Montana	Utah
+pop_sonic_hedgehog_red	Hard	What is the name of Sonic the Hedgehog's red echidna rival?	Knuckles	Shadow	Silver	Espio
+pop_video_game_set	Hard	Which video game is set in Rapture, a ruined city at the bottom of the ocean?	BioShock	Fallout 3	Dead Space	Subnautica
+pop_north_america_sega	Hard	In North America, Sega's Mega Drive console was sold under which name?	The Genesis	The Saturn	The Dreamcast	The Master System
+pop_david_bowie_surname	Hard	What was David Bowie's surname at birth?	Jones	Smith	Davies	Bowman
+pop_michael_jackson_pet	Hard	What was the name of Michael Jackson's pet chimpanzee?	Bubbles	Cheeta	Bonzo	Koko
+pop_italian_rock_band	Hard	Which Italian rock band won Eurovision in 2021 and then broke through worldwide?	Maneskin	Il Volo	Negramaro	The Kolors
+pop_won_eurovision_austria	Hard	Who won Eurovision for Austria in 2014, performing as a bearded drag queen?	Conchita Wurst	Verka Serduchka	Dana International	Netta Barzilai
+pop_back_future_power	Hard	In 'Back to the Future', how much power does the time machine need to travel in time?	1.21 gigawatts	88 gigawatts	12.1 megawatts	2.21 terawatts
+pop_pulp_fiction_vincent	Hard	In 'Pulp Fiction', what does Vincent say a Quarter Pounder with Cheese is called in France?	A Royale with Cheese	A Croque Burger	A Grand Fromage	A Burger Parisien
+pop_shrimp_company_forrest	Hard	What is the name of the shrimp company in 'Forrest Gump'?	Bubba Gump	Lieutenant Dan's	Jenny's Shrimp	Greenbow Seafood
+pop_casablanca_song_pianist	Hard	In 'Casablanca', which song is the pianist Sam asked to play?	As Time Goes By	Moonlight Serenade	Stardust	Night and Day
+pop_fictional_island_resort	Hard	What is the name of the fictional island resort terrorised in 'Jaws'?	Amity Island	Martha's Vineyard	Nantucket	Block Island
+pop_hitchcock_film_hero	Hard	In which Hitchcock film is the hero chased across a field by a crop-dusting plane?	North by Northwest	Vertigo	Notorious	The 39 Steps
+pop_hitchcock_film_photographer	Hard	In which Hitchcock film does a photographer with a broken leg spy on his neighbours?	Rear Window	Vertigo	Rope	Notorious
+pop_actor_played_james_4	Hard	Which actor played James Bond in just one film, 'On Her Majesty's Secret Service' (1969)?	George Lazenby	Timothy Dalton	Roger Moore	David Niven
+pop_bond_theme_recorded	Hard	Which Bond theme was recorded by Paul McCartney and Wings?	Live and Let Die	For Your Eyes Only	A View to a Kill	Nobody Does It Better
+pop_spaceship_alien_1979	Hard	What is the name of the spaceship in 'Alien' (1979)?	The Nostromo	The Sulaco	The Event Horizon	The Prometheus
+pop_shining_sentence_jack	Hard	In 'The Shining', which sentence does Jack type over and over?	'All work and no play makes Jack a dull boy'	'Nothing is going to stop me from writing'	'The early bird catches the worm, Jack'	'A watched pot never boils, so stop looking'
+pop_home_alone_two	Hard	In 'Home Alone', what do the two burglars call themselves?	The Wet Bandits	The Night Crawlers	The Christmas Crooks	The Snow Burglars
+pop_animated_film_nominated	Hard	Which was the first animated film nominated for the Oscar for Best Picture?	Beauty and the Beast	Toy Story	The Lion King	Snow White
+pop_racing_number_lightning	Hard	What racing number does Lightning McQueen carry in 'Cars'?	95	43	86	51
+pop_incredible_everyday	Hard	What is Mr. Incredible's everyday name?	Bob Parr	Lucius Best	Buddy Pine	Rick Dicker
+pop_spirited_away_happens	Hard	In 'Spirited Away', what happens to Chihiro's parents after they gorge on food?	They turn into pigs	They turn to stone	They fall into a deep sleep	They become ghosts
+pop_seinfeld_jerry_nemesis	Hard	In 'Seinfeld', what is the name of Jerry's nemesis, a postman who lives in his building?	Newman	Puddy	Bania	Kramer
+pop_largest_three_dragons	Hard	Which is the largest of the three dragons hatched in 'Game of Thrones'?	Drogon	Rhaegal	Viserion	Balerion
+pop_ufo_poster_fox	Hard	What does the UFO poster in Fox Mulder's office say?	'I want to believe'	'We are not alone'	'Trust no one'	'Keep watching the skies'
+pop_neo_real_matrix	Hard	What is Neo's real name in 'The Matrix'?	Thomas Anderson	John Anderson	Thomas Smith	Neo Andrews
+pop_british_studio_made	Hard	Which British studio made 'Wallace and Gromit' and 'Chicken Run'?	Aardman	Blue Sky	Illumination	Cosgrove Hall
+pop_singer_wrote_recorded	Hard	Which singer wrote and first recorded 'I Will Always Love You', in 1974?	Dolly Parton	Linda Ronstadt	Tammy Wynette	Loretta Lynn
 lit_wings	Expert	Which film won the very first Academy Award for Best Picture?	Wings	Sunrise	The Jazz Singer	Metropolis
 pop_obywatel_kane	Expert	Which word is whispered at the very start of 'Citizen Kane'?	Rosebud	Mother	Xanadu	Charles
 pop_spirited_away	Expert	Which was the first non-English-language film to win the Oscar for Best Animated Feature?	Spirited Away	Persepolis	Akira	Princess Mononoke
@@ -1088,3 +1163,25 @@ pop_director_made_both_2	Expert	Which director made both 'Mad Max' and the pengu
 pop_became_black_performer	Expert	Who became the first Black performer to win an Oscar, in 1940, for her role as Mammy?	Hattie McDaniel	Dorothy Dandridge	Butterfly McQueen	Ethel Waters
 pop_tardis_stand_doctor	Expert	What does TARDIS stand for in 'Doctor Who'?	Time And Relative Dimension In Space	Time And Radial Distance In Space	Travel Across Realms Dimensions In Space	Time And Reality Displacement In Space
 pop_wilhelm_scream_heard	Expert	The 'Wilhelm scream', heard in 'Star Wars' and hundreds of other films, is what?	A stock sound effect	A horror-film award	A guitar technique	A famous stunt fall
+pop_star_wars_1977	Expert	In 'Star Wars' (1977), the Millennium Falcon is said to have made the Kessel Run in less than how many parsecs?	Twelve	Five	Twenty	Three
+pop_classic_comedy_ends	Expert	Which classic comedy ends with the line 'Well, nobody's perfect'?	Some Like It Hot	The Apartment	Tootsie	Bringing Up Baby
+pop_under_scrabble_sold	Expert	Under which name was Scrabble sold just before it got its famous name?	Criss-Crosswords	Wordsmith	Letter Tiles	Spellbinder
+pop_young_rock_roll	Expert	Which young rock and roll star died in the 1959 plane crash alongside Buddy Holly and the Big Bopper?	Ritchie Valens	Eddie Cochran	Patsy Cline	Jim Reeves
+pop_new_wave_band	Expert	Which new wave band wore red, stepped 'energy dome' hats?	Devo	Talking Heads	The B-52's	Kraftwerk
+pop_artist_created_spider	Expert	Which artist co-created Spider-Man with Stan Lee?	Steve Ditko	John Romita	Bob Kane	John Buscema
+pop_actor_play_doctor	Expert	Which actor was the first to play the Doctor in 'Doctor Who'?	William Hartnell	Patrick Troughton	Jon Pertwee	Tom Baker
+pop_line_jolson_speak	Expert	Which line did Al Jolson speak in 1927, in the first feature film with synchronised dialogue?	'You ain't heard nothin' yet!'	'Look, Ma, I'm talking!'	'Ladies and gentlemen, can you hear me?'	'Hello, everybody, it's me!'
+pop_cary_grant_born	Expert	Cary Grant was born with which name?	Archibald Leach	Marion Morrison	Bernard Schwartz	Issur Danielovitch
+pop_film_credits_alan	Expert	In film credits, who is 'Alan Smithee'?	A fake name for directors who disown a film	A stuntman who appeared in hundreds of films	The studio boss who invented the credit roll	An extra who appears in every Disney film
+pop_hitchcock_call_object	Expert	What did Hitchcock call the object or secret that drives a plot but matters little in itself?	A MacGuffin	A red herring	A Chekhov's gun	A deus ex machina
+pop_composed_shrieking_violin	Expert	Who composed the shrieking violin music for the shower scene in 'Psycho'?	Bernard Herrmann	John Williams	Ennio Morricone	Max Steiner
+pop_bond_villain_third	Expert	Which Bond villain has a third nipple?	Francisco Scaramanga	Ernst Stavro Blofeld	Auric Goldfinger	Hugo Drax
+pop_wrote_recorded_song	Expert	Who wrote and first recorded the song 'Respect', in 1965?	Otis Redding	Sam Cooke	Ray Charles	Wilson Pickett
+pop_jamaican_born_often	Expert	Which Jamaican-born DJ is often called 'the father of hip hop'?	DJ Kool Herc	Grandmaster Flash	Afrika Bambaataa	Kurtis Blow
+pop_muppets_performer_voice	Expert	Which Muppets performer was the voice and hands of Yoda?	Frank Oz	Jim Henson	Kevin Clash	Dave Goelz
+pop_american_studio_made	Expert	Which American studio made the stop-motion films 'Coraline' and 'Kubo and the Two Strings'?	Laika	Aardman	Blue Sky	Illumination
+pop_recorded_tainted_love	Expert	Who first recorded 'Tainted Love', a 1981 hit for Soft Cell?	Gloria Jones	Dusty Springfield	Martha Reeves	Dionne Warwick
+pop_dragon_ball_saiyans	Expert	In 'Dragon Ball', what do Saiyans with tails turn into under a full moon?	Giant apes	Golden dragons	Werewolves	Stone giants
+pop_composer_wrote_oscar	Expert	Which composer wrote the Oscar-winning scores for 'The Lord of the Rings' films?	Howard Shore	Hans Zimmer	James Horner	Danny Elfman
+pop_jazz_singer_nicknamed	Expert	Which jazz singer was nicknamed 'Lady Day'?	Billie Holiday	Ella Fitzgerald	Sarah Vaughan	Nina Simone
+pop_original_super_mario	Expert	In the original 'Super Mario Bros.', what does Mario touch at the end of a castle to drop Bowser into the lava?	An axe	A key	A switch	A sword
