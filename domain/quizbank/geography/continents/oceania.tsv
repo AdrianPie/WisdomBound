@@ -15,6 +15,10 @@ geo_populous_country_oceania	Easy	Which is the most populous country in Oceania?
 geo_australian_state_nicknamed	Easy	Which Australian state is nicknamed 'the Sunshine State'?	Queensland	Western Australia	New South Wales	South Australia
 geo_pacific_nation_made	Easy	Which Pacific nation is made up of about 330 islands, the biggest being Viti Levu and Vanua Levu?	Fiji	Samoa	Tonga	Vanuatu
 geo_samoa_tonga_tahiti	Easy	Samoa, Tonga and Tahiti all lie in which Pacific region?	Polynesia	Melanesia	Micronesia	Australasia
+geo_bora_bora_lagoon	Easy	Bora Bora, famous for its lagoon and overwater bungalows, belongs to which country?	France	The USA	New Zealand	Fiji
+geo_australia_roughly_same	Easy	Australia is roughly the same size as which of these?	The contiguous USA	India	Greenland	Mexico
+geo_queenstown_calls_itself	Easy	Queenstown, which calls itself 'the adventure capital of the world', is in which country?	New Zealand	Australia	Fiji	Canada
+geo_gold_coast_surf	Easy	The Gold Coast, famous for its surf beaches and theme parks, is in which Australian state?	Queensland	New South Wales	Victoria	Western Australia
 lmk_uluru_kraj	Medium	In which country is Uluru?	Australia	New Zealand	South Africa	Namibia
 geo_tahiti	Medium	Tahiti is part of which country's overseas territories?	France	Britain	The United States	New Zealand
 geo_country_aotearoa_land	Medium	Which country is known as Aotearoa, 'the land of the long white cloud'?	New Zealand	Australia	Fiji	Samoa
@@ -59,6 +63,12 @@ geo_new_zealand_city_4	Medium	The New Zealand city of Dunedin takes its name fro
 geo_under_1973_deal	Medium	Under a 1973 deal, citizens of which country may live and work in Australia without a visa?	New Zealand	Britain	Fiji	Papua New Guinea
 geo_roughly_countries_size	Medium	Roughly how many countries the size of New Zealand would fit inside Australia?	About 30	About 3	About 10	About 100
 geo_australian_state_victoria	Medium	The Australian state of Victoria is roughly the same size as which country?	Great Britain	France	Belgium	Portugal
+geo_fiji_vanuatu_solomon	Medium	Fiji, Vanuatu and the Solomon Islands all lie in which Pacific region?	Melanesia	Polynesia	Micronesia	Australasia
+geo_pacific_region_means_2	Medium	Which Pacific region's name means 'small islands'?	Micronesia	Melanesia	Polynesia	Australasia
+geo_tasmania_dutch_explorer	Medium	Tasmania is named after which Dutch explorer, the first European to sight it?	Abel Tasman	Willem Janszoon	Dirk Hartog	Jacob Roggeveen
+geo_barossa_valley_australia	Medium	The Barossa Valley, one of Australia's most famous wine regions, is in which state?	South Australia	Victoria	New South Wales	Western Australia
+geo_1999_referendum_australians	Medium	In a 1999 referendum, Australians voted to keep the British monarch rather than turn their country into what?	A republic	A union with New Zealand	A one-chamber democracy	A federal kingdom
+geo_indian_pacific_train	Medium	The 'Indian Pacific' train crosses Australia from Sydney to which city?	Perth	Darwin	Adelaide	Brisbane
 lmk_moai_kraj	Hard	The Moai statues of Easter Island belong to which country?	Chile	Peru	New Zealand	Argentina
 geo_cook_islands_niue	Hard	The Cook Islands and Niue are self-governing in 'free association' with which country?	New Zealand	Australia	Britain	France
 geo_country_once_new	Hard	Which country, once the New Hebrides, was ruled jointly by Britain and France?	Vanuatu	Fiji	New Caledonia	The Solomon Islands
@@ -94,6 +104,10 @@ geo_marshall_islanders_once	Hard	Marshall Islanders once mapped ocean swells usi
 geo_australian_state_east	Hard	Which Australian state on the east coast refuses to use daylight saving time?	Queensland	New South Wales	Victoria	Tasmania
 geo_densely_populated_australian	Hard	Which is the most densely populated Australian state?	Victoria	New South Wales	Queensland	Tasmania
 geo_torres_strait_islands	Hard	The Torres Strait Islands belong to which Australian state?	Queensland	New South Wales	Western Australia	South Australia
+geo_new_zealand_third	Hard	What is New Zealand's third-largest island, home to only a few hundred people?	Stewart Island	Great Barrier Island	Waiheke Island	Chatham Island
+geo_city_adelaide_queen	Hard	The city of Adelaide is named after the queen of which British king?	William IV	George III	George IV	Edward VII
+geo_palau_marshall_islands	Hard	Palau, the Marshall Islands and Micronesia all use which currency?	The US dollar	The Australian dollar	The New Zealand dollar	The Japanese yen
+geo_pacific_nation_made_2	Hard	Which Pacific nation is made up mainly of two big islands, Upolu and Savai'i?	Samoa	Tonga	Fiji	Vanuatu
 geox_tuvalu_tv	Expert	Which tiny Pacific nation earns money from its '.tv' internet domain?	Tuvalu	Tonga	Tokelau	Taiwan
 geo_people_born_american	Expert	People born in American Samoa are not automatically US citizens. What are they instead?	US nationals	US residents	Protected persons	Commonwealth subjects
 geo_1933_australian_state	Expert	In 1933, which Australian state voted by a two-thirds majority to leave Australia?	Western Australia	Queensland	Tasmania	South Australia
@@ -111,3 +125,5 @@ geo_australian_island_allows	Expert	Which Australian island allows no more than 
 geo_sub_antarctic_macquarie	Expert	Sub-Antarctic Macquarie Island, halfway from Australia to Antarctica, is part of which Australian state?	Tasmania	Victoria	South Australia	Western Australia
 geo_australia_coral_sea	Expert	Australia's Coral Sea Islands Territory has no permanent residents, only a handful of what on Willis Island?	Weather observers	Lighthouse keepers	Navy sailors	Turtle researchers
 geo_marble_bar_once	Expert	Marble Bar, which once had 160 days in a row above 37.8 C, is in which Australian state?	Western Australia	Queensland	South Australia	New South Wales
+geo_nan_madol_ruined	Expert	Nan Madol, a ruined city built on artificial islets of stacked basalt, is in which country?	Micronesia	Palau	The Marshall Islands	Kiribati
+geo_two_languages_official	Expert	Which two languages are official in New Zealand by law, English being official only by custom?	Maori and NZ Sign Language	Maori and Samoan	Maori and Tongan	Samoan and NZ Sign Language

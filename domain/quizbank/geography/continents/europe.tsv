@@ -23,6 +23,7 @@ geo_european_country_divided	Easy	Which European country is divided into 26 cant
 geo_catalonia_held_disputed	Easy	Catalonia, which held a disputed independence vote in 2017, is a region of which country?	Spain	France	Italy	Portugal
 geo_country_own_irish	Easy	Which country's name in its own Irish language is 'Eire'?	Ireland	Scotland	Wales	Iceland
 geo_part_united_kingdom_3	Easy	Which part of the United Kingdom is nicknamed 'the Land of Song'?	Wales	Scotland	Northern Ireland	Cornwall
+geo_part_united_kingdom_4	Easy	Which part of the United Kingdom has its own parliament at Holyrood?	Scotland	Wales	Northern Ireland	Cornwall
 geocmp_nie_nordyckie	Medium	Which of these countries is NOT a Nordic country?	Estonia	Norway	Sweden	Denmark
 trv_islandia_lodowce	Medium	Which country gets most of its electricity from geothermal and hydro power?	Iceland	Ireland	Belgium	Greece
 lmk_dolina_loary	Medium	In which country is the Loire Valley, famous for its chateaux?	France	Belgium	Switzerland	Spain
@@ -69,6 +70,9 @@ geo_long_president_swiss	Medium	How long does a President of the Swiss Confedera
 geo_country_britons_fondly	Medium	Which country do Britons fondly call 'Old Blighty'?	Britain	Ireland	Australia	Canada
 geo_country_traditionally_isle	Medium	Which country is traditionally called 'the Isle of Saints and Scholars'?	Ireland	Iceland	Malta	Cyprus
 geo_tiny_country_led	Medium	Which tiny country is led by two 'Captains Regent' who serve only six months at a time?	San Marino	Andorra	Monaco	Liechtenstein
+geo_thinly_populated_country	Medium	Which is the most thinly populated country in Europe?	Iceland	Norway	Finland	Russia
+geo_nordic_country_people	Medium	Which Nordic country has the most people?	Sweden	Denmark	Norway	Finland
+geo_country_parliament_storting	Medium	Which country's parliament is called the 'Storting'?	Norway	Sweden	Denmark	Iceland
 geocmp_panstwo_ue_pow	Hard	Which is the largest European Union country by area?	France	Spain	Sweden	Germany
 trv_ukraina_europa	Hard	Which is the largest country lying entirely within Europe?	Ukraine	France	Spain	Germany
 geo_andorra_two_heads	Hard	Andorra has two heads of state: the Bishop of Urgell and who?	The President of France	The King of Spain	The Pope	The Prince of Monaco
@@ -100,6 +104,11 @@ geo_2007_country_soldiers	Hard	In 2007, which country's soldiers accidentally ma
 geo_balkans_comes_turkish	Hard	The name 'Balkans' comes from a Turkish word meaning what?	Mountains	Peninsula	Borderland	Valleys
 geo_freetown_christiania_self	Hard	Freetown Christiania, a self-governing commune founded by squatters in 1971, lies in which country's capital?	Denmark	Norway	Sweden	The Netherlands
 geo_roughly_share_monaco	Hard	Roughly what share of Monaco's residents are Monegasque citizens?	About a fifth	About half	About 80%	About 5%
+geo_roughly_saunas_finland	Hard	Roughly how many saunas are there in Finland, a country of about 5.5 million people?	About 3 million	About 300,000	About 30,000	About 30 million
+geo_isle_man_not	Hard	The Isle of Man is not part of the United Kingdom. What is it instead?	A Crown Dependency	A British Overseas Territory	An English county	An independent republic
+geo_country_lying_entirely	Hard	Which country lying entirely in Europe has the most land neighbours, with nine?	Germany	Austria	Hungary	Serbia
+geo_european_country_highest	Hard	Which European country's highest mountain stands on a small island in the Caribbean?	The Netherlands	Denmark	Britain	Belgium
+geo_country_formed_principalities	Hard	Which country was formed when the principalities of Wallachia and Moldavia united in 1859?	Romania	Bulgaria	Moldova	Hungary
 geo_llivia_small_town	Expert	Llivia, a small town completely surrounded by French territory, belongs to which country?	Spain	Andorra	Monaco	Italy
 geo_austrian_valley_kleinwalsertal	Expert	The Austrian valley of Kleinwalsertal can be reached by road only through which country?	Germany	Switzerland	Italy	Liechtenstein
 geo_pheasant_island_tiny	Expert	Pheasant Island, a tiny island in a border river, switches between which two countries every six months?	Spain and France	France and Italy	Spain and Portugal	Germany and Austria
@@ -114,3 +123,7 @@ geo_republic_uzupis_joke	Expert	The Republic of Uzupis, whose joke constitution 
 geo_busingen_german_town	Expert	Busingen, a German town completely surrounded by Switzerland, mostly uses which currency?	The Swiss franc	The euro	The Deutsche Mark	The Austrian schilling
 geo_seborga_village_people	Expert	Seborga, a village whose people claim it is an independent principality, lies in which country?	Italy	France	Spain	Portugal
 geo_2008_channel_island	Expert	In 2008, the Channel Island of Sark became the last place in Europe to abolish what?	Feudalism	Witch trials	Slavery	Duelling
+geo_tiny_exclave_campione	Expert	The tiny exclave of Campione, surrounded by Swiss territory on Lake Lugano, belongs to which country?	Italy	Germany	Austria	France
+geo_southern_swedish_region	Expert	The southern Swedish region of Scania belonged to which country until 1658?	Denmark	Norway	Germany	Poland
+geo_republic_kugelmugel_micronation	Expert	The 'Republic of Kugelmugel', a micronation in a ball-shaped house, stands in a park in which country's capital?	Austria	Germany	Switzerland	Hungary
+geo_town_olivenza_held	Expert	The town of Olivenza, held by Spain since 1801, is still officially claimed by which country?	Portugal	France	Andorra	Morocco

@@ -19,6 +19,9 @@ geo_country_dutch_colony	Easy	Which country was a Dutch colony known as the Dutc
 geo_2023_country_overtook	Easy	In 2023, which country overtook China as the most populous in the world?	India	Indonesia	Pakistan	Nigeria
 geo_country_emperor_sits	Easy	Which country's emperor sits on the 'Chrysanthemum Throne'?	Japan	China	Korea	Vietnam
 geo_sherpa_people_everest	Easy	The Sherpa people, famous as Everest guides, mostly live in which country?	Nepal	Bhutan	Tibet	Mongolia
+geo_country_borders_two	Easy	Which country borders only two other countries, Russia and China?	Mongolia	Kazakhstan	North Korea	Kyrgyzstan
+geo_india_china_asian	Easy	After India and China, which Asian country has the most people?	Indonesia	Pakistan	Japan	Bangladesh
+geo_self_governing_island	Easy	Which self-governing island does China claim as one of its provinces?	Taiwan	Jeju	Okinawa	Sri Lanka
 wh_jedwabny_szlak	Medium	Which two regions did the Silk Road connect?	China and Europe	India and Africa	Persia and Scandinavia	Japan and America
 geo_syjam	Medium	Which country was known as Siam until 1939?	Thailand	Vietnam	Cambodia	Laos
 geo_tygrysy_indie	Medium	Which country is home to the most wild tigers?	India	Russia	Indonesia	Bangladesh
@@ -65,6 +68,10 @@ geo_country_promotes_itself	Medium	Which country promotes itself to tourists as 
 geo_levant_old_lands	Medium	The 'Levant', an old name for the lands of the eastern Mediterranean, comes from a French word meaning what?	Rising	Coastal	Holy	Sandy
 geo_three_present_day	Medium	Which three present-day countries made up French Indochina?	Vietnam, Laos and Cambodia	Vietnam, Laos and Thailand	Vietnam, Cambodia and Myanmar	Laos, Cambodia and Thailand
 geo_mountainous_country_often	Medium	Which mountainous country is often nicknamed 'the Switzerland of Central Asia'?	Kyrgyzstan	Tajikistan	Kazakhstan	Uzbekistan
+geo_smallest_country_asia	Medium	Which is the smallest country in Asia by area?	The Maldives	Singapore	Bahrain	Brunei
+geo_ladakh_high_desert	Medium	Ladakh, a high desert region often called 'Little Tibet', belongs to which country?	India	China	Nepal	Pakistan
+geo_qatar_land_border	Medium	Qatar's only land border is with which country?	Saudi Arabia	The UAE	Oman	Kuwait
+geo_country_land_border	Medium	Which country's land border is almost all with India, apart from a short stretch with Myanmar?	Bangladesh	Nepal	Bhutan	Pakistan
 geo_cejlon	Hard	Which country was called Ceylon until 1972?	Sri Lanka	Bangladesh	Myanmar	Malaysia
 geo_wrota_piekiel	Hard	In which country does the 'Door to Hell' gas crater keep burning?	Turkmenistan	Kazakhstan	Iran	Azerbaijan
 geox_bhutan	Hard	Which Himalayan kingdom measures its progress in 'Gross National Happiness'?	Bhutan	Nepal	Tibet	Sikkim
@@ -98,6 +105,11 @@ geo_small_country_brunei	Hard	The small country of Brunei is split into two sepa
 geo_communist_state_ever	Hard	Which was the only communist state ever in the Arab world?	South Yemen	Syria	Iraq	Libya
 geo_vietnam_roughly_means	Hard	The name 'Vietnam' roughly means what?	The Viet of the south	Land of rice paddies	The golden peninsula	Land of the dragon
 geo_according_popular_explanation	Hard	According to a popular explanation, the name 'Kyrgyz' comes from words meaning what?	Forty tribes	Mountain people	Free riders	Sky dwellers
+geo_2008_asian_country	Hard	In 2008, which Asian country abolished its 240-year-old monarchy and became a republic?	Nepal	Bhutan	Afghanistan	Cambodia
+geo_jaffna_peninsula_heartland	Hard	The Jaffna Peninsula, heartland of the Tamil Tigers' long war, lies in which country?	Sri Lanka	India	Myanmar	Malaysia
+geo_country_officially_recognises	Hard	Which country officially recognises exactly 56 ethnic groups among its people?	China	India	Indonesia	Russia
+geo_pashtuns_largest_ethnic	Hard	The Pashtuns are the largest ethnic group of which country?	Afghanistan	Pakistan	Iran	Tajikistan
+geo_country_calls_itself_6	Hard	Which country calls itself 'Daehan Minguk'?	South Korea	North Korea	Japan	Mongolia
 geo2_linia_wallace	Expert	What does the Wallace Line separate?	Asian fauna from Australian fauna	Pacific time zones	African tectonic plates	Humid climate from dry climate
 geo_russian_republic_largest	Expert	Which Russian republic is the largest country subdivision in the world, bigger than Argentina?	Sakha (Yakutia)	Komi	Buryatia	Tuva
 geo_enclave_riddled_fergana	Expert	The enclave-riddled Fergana Valley is shared by Uzbekistan, Kyrgyzstan and which other country?	Tajikistan	Kazakhstan	Turkmenistan	Afghanistan
@@ -115,3 +127,5 @@ geo_hatay_province_syria	Expert	Hatay, a province Syria long claimed as its own,
 geo_old_kingdom_mustang	Expert	The old Kingdom of Mustang, whose king lost his title in 2008, lies in which country?	Nepal	Bhutan	India	China
 geo_roughly_share_uae	Expert	Roughly what share of the UAE's land area does the emirate of Abu Dhabi cover?	About 85%	About 40%	About 20%	About 60%
 geo_gilgit_baltistan_home	Expert	Gilgit-Baltistan, home to K2 and the Karakoram Highway, is administered by which country?	Pakistan	India	China	Afghanistan
+geo_oecusse_exclave_timor	Expert	Oecusse, an exclave of Timor-Leste, is surrounded on land by which country?	Indonesia	Australia	Papua New Guinea	Malaysia
+geo_aksai_chin_high	Expert	Aksai Chin, a high plateau claimed by India, is controlled by which country?	China	Pakistan	Nepal	Bhutan

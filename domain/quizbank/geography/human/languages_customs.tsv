@@ -27,6 +27,7 @@ geo_language_people_switzerland	Easy	Which language do most people in Switzerlan
 geo_country_gives_london	Easy	Which country gives London the Christmas tree in Trafalgar Square every year?	Norway	Sweden	Denmark	Finland
 geo_date_patrick_day	Easy	On which date is St Patrick's Day celebrated?	17 March	1 March	23 April	30 November
 geo_bonfire_night_fireworks	Easy	Bonfire Night, with fireworks and burning 'guys' every 5 November, is a tradition of which country?	The United Kingdom	Ireland	France	The United States
+geo_according_american_groundhog	Easy	According to the American Groundhog Day custom, what does it mean if the groundhog sees its shadow?	Six more weeks of winter	An early spring	A rainy summer	A good harvest
 geo_angielski_mowiony	Medium	Counting native and second-language speakers, which language is spoken by the most people?	English	Spanish	Hindi	Arabic
 geo_jednorozec	Medium	Which country's national animal is the unicorn?	Scotland	Wales	Ireland	Norway
 geox_szwajcaria_jezyki	Medium	How many national languages does Switzerland have?	Four	Two	Three	Five
@@ -85,6 +86,7 @@ geo_apart_israel_country	Medium	Apart from Israel, which country has the largest
 geo_european_country_national	Medium	Which European country's national anthem has no official words?	Spain	Italy	Portugal	France
 geo_country_bucket_kfc	Medium	In which country is a bucket of KFC chicken a popular Christmas dinner?	Japan	South Korea	The Philippines	Brazil
 geo_portuguese_word_thank	Medium	The Portuguese word for 'thank you', 'obrigado', literally means what?	Obliged	Blessed	Friend	Happy
+geo_country_two_official	Medium	Which country has two official written forms of its language, Bokmal and Nynorsk?	Norway	Denmark	Iceland	Finland
 geocmp_jezyk_ojczysty	Hard	Which language has the most native speakers?	Mandarin Chinese	English	Spanish	Hindi
 geo_ancient_language_unrelated	Hard	Which ancient language, unrelated to any other in Europe, is spoken in parts of Spain and France?	Basque	Catalan	Galician	Occitan
 geo_word_shampoo_comes	Hard	The word 'shampoo' comes from which language?	Hindi	Arabic	Persian	Malay
@@ -112,6 +114,9 @@ geo_naadam_festival_wrestling	Hard	Naadam, a festival of wrestling, archery and 
 geo_spain_collects_children	Hard	In Spain, who collects children's lost milk teeth instead of a fairy?	A little mouse	A friendly owl	The Three Kings	A white rabbit
 geo_words_zero_cipher	Hard	The words 'zero' and 'cipher' both come from an Arabic word meaning what?	Empty	Circle	Secret	Egg
 geo_wai_greeting_palms	Hard	The 'wai', a greeting with palms pressed together and a slight bow, is the everyday greeting of which country?	Thailand	Japan	South Korea	Indonesia
+geo_swiss_national_language	Hard	Which Swiss national language, descended from Latin, is spoken by under 1% of the Swiss?	Romansh	Occitan	Friulian	Walloon
+geo_montenegro_other_balkan	Hard	Montenegro and which other Balkan state use the euro without being members of the EU?	Kosovo	Serbia	Albania	North Macedonia
+geo_european_country_people	Hard	In which European country do people traditionally put the family name before the given name, as in Japan?	Hungary	Finland	Estonia	Romania
 geo_maltese_semitic_official	Expert	Maltese, the only Semitic official language of the EU, grew out of which language?	Arabic	Hebrew	Aramaic	Berber
 geo_names_yen_yuan	Expert	The names of the yen, the yuan and the won all come from a word meaning what?	Round	Silver	Coin	Shell
 geo_word_dollar_comes	Expert	The word 'dollar' comes from 'thaler', silver coins first minted in a valley in which present-day country?	Czechia	Germany	Austria	Switzerland
@@ -124,3 +129,5 @@ geo_english_word_tycoon	Expert	The English word 'tycoon' comes from a Japanese t
 geo_living_language_closest	Expert	Which living language is the closest relative of Icelandic?	Faroese	Norwegian	Danish	Swedish
 geo_names_peso_pound	Expert	The names of the peso, the pound and the lira all originally referred to what?	A measure of weight	A royal portrait	A kind of metal	A city mint
 geo_country_people_carve	Expert	In which country do people carve giant radishes into scenes for a contest every 23 December?	Mexico	Spain	Japan	Peru
+geo_croatia_kuna_replaced	Expert	Croatia's kuna, replaced by the euro in 2023, was named after which animal, whose furs were once used as money?	The marten	The beaver	The fox	The ermine
+geo_botswana_currency_pula	Expert	Botswana's currency, the pula, is named after the Setswana word for what?	Rain	Gold	Cattle	Sun

@@ -22,6 +22,8 @@ geo_state_new_orleans	Easy	In which US state is New Orleans?	Louisiana	Mississip
 geo_state_nicknamed_aloha	Easy	Which US state is nicknamed 'the Aloha State'?	Hawaii	California	Florida	Alaska
 geo_texas_broke_away	Easy	Texas broke away in 1836 from which country, then spent nearly ten years as an independent republic?	Mexico	Spain	France	Britain
 geo_caribbean_islands_west	Easy	Why are the Caribbean islands called the 'West Indies'?	Columbus thought he had reached Asia	Their first settlers sailed from India	They were once governed from Bombay	Their spices rivalled those of India
+geo_state_nicknamed_bay	Easy	Which US state is nicknamed 'the Bay State'?	Massachusetts	Maryland	Delaware	Rhode Island
+geo_state_nicknamed_last	Easy	Which US state is nicknamed 'the Last Frontier'?	Alaska	Montana	Wyoming	Hawaii
 mst_kraj_dwa_oceany	Medium	Panama is unusual in that its Caribbean coast lies where relative to its Pacific coast?	To the north	To the east	To the south	To the west
 geo_rhode_island	Medium	Which is the smallest US state by area?	Rhode Island	Delaware	Connecticut	Vermont
 geo_state_nicknamed_sunshine	Medium	Which US state is nicknamed 'the Sunshine State'?	Florida	California	Arizona	Hawaii
@@ -66,6 +68,10 @@ geo_mexican_state_gave	Medium	Which Mexican state gave its name to the world's s
 geo_mexico_takes_people	Medium	Mexico takes its name from which people, better known today as the Aztecs?	The Mexica	The Maya	The Olmecs	The Toltecs
 geo_populous_country_central	Medium	Which is the most populous country in Central America?	Guatemala	Honduras	Nicaragua	Costa Rica
 geo_quebec_motto_printed	Medium	Quebec's motto, printed on its licence plates, is 'Je me souviens'. What does it mean?	I remember	I will return	I believe	I stand guard
+geo_state_nicknamed_beehive	Medium	Which US state is nicknamed 'the Beehive State'?	Utah	Idaho	Vermont	Oregon
+geo_canadian_province_nicknamed_2	Medium	Which Canadian province is nicknamed 'La Belle Province'?	Quebec	New Brunswick	Ontario	Manitoba
+geo_central_american_country_3	Medium	Which Central American country is named after Jesus Christ, 'the Saviour'?	El Salvador	Costa Rica	Honduras	Nicaragua
+geo_cayman_islands_tax	Medium	The Cayman Islands, a famous tax haven, are a territory of which country?	Britain	The Netherlands	France	The USA
 geox_kostaryka	Hard	Which Central American country abolished its army in 1948?	Costa Rica	Panama	Honduras	Belize
 geo_state_nicknamed_bluegrass	Hard	Which US state is nicknamed 'the Bluegrass State'?	Kentucky	Tennessee	Virginia	Missouri
 geo_largest_country_central	Hard	Which is the largest country in Central America by area?	Nicaragua	Honduras	Guatemala	Panama
@@ -98,6 +104,11 @@ geo_beach_resort_cancun	Hard	The beach resort of Cancun lies in which Mexican st
 geo_canadian_province_nicknamed	Hard	Which Canadian province is nicknamed 'The Rock'?	Newfoundland and Labrador	Nova Scotia	New Brunswick	Prince Edward Island
 geo_not_counting_mexico	Hard	Not counting Mexico City, how many states does Mexico have?	31	50	20	12
 geo_smallest_country_central	Hard	Which is the smallest country in Central America by area?	El Salvador	Belize	Costa Rica	Panama
+geo_state_nicknamed_mountain	Hard	Which US state is nicknamed 'the Mountain State'?	West Virginia	Colorado	Montana	Utah
+geo_state_nicknamed_evergreen	Hard	Which US state is nicknamed 'the Evergreen State'?	Washington	Oregon	Maine	Vermont
+geo_names_two_states	Hard	The names of which two US states come from a Sioux word meaning 'friends' or 'allies'?	North and South Dakota	North and South Carolina	Kansas and Arkansas	Iowa and Nebraska
+geo_state_nicknamed_badger	Hard	Which US state is nicknamed 'the Badger State'?	Wisconsin	Michigan	Minnesota	Iowa
+geo_state_flag_designed	Hard	Which US state's flag, designed by a 13-year-old boy in 1927, shows the Big Dipper and the North Star?	Alaska	Minnesota	Maine	Montana
 geo_darien	Expert	The Darien Gap is a missing link in which famous road?	The Pan-American Highway	Route 66	The Silk Road	The Trans-Canada Highway
 geo_mosquito_coast_stretches	Expert	The Mosquito Coast stretches along the Caribbean shores of Nicaragua and which other country?	Honduras	Costa Rica	Panama	Belize
 geo_canadian_territory_means	Expert	Which Canadian territory's name means 'great river'?	Yukon	Nunavut	Northwest Territories	Labrador
@@ -114,3 +125,6 @@ geo_state_jousting_official	Expert	Which US state has jousting as its official s
 geo_rupert_land_vast	Expert	Rupert's Land, a vast region handed over to Canada in 1870, had been owned by whom?	The Hudson's Bay Company	The East India Company	The French Crown	The Russian-American Company
 geo_maryland_queen	Expert	Maryland is named after which queen?	Henrietta Maria	Mary I	Mary, Queen of Scots	Mary II
 geo_california	Expert	California is named after what?	An island in a Spanish novel	A Spanish word for 'hot oven'	A Native American chief	A Spanish queen
+geo_state_still_divides	Expert	Which US state still divides its counties into 'hundreds', an old English unit?	Delaware	Maryland	Virginia	Pennsylvania
+geo_state_officially_nicknamed	Expert	Which US state is officially nicknamed 'the Natural State'?	Arkansas	Oregon	Idaho	Vermont
+geo_canadian_province_licence	Expert	Which Canadian province's licence plates call it the 'Land of Living Skies'?	Saskatchewan	Manitoba	Alberta	Prince Edward Island

@@ -20,6 +20,9 @@ geo_japanese_city_devastated	Easy	Which Japanese city was devastated by the Grea
 geo_city_choked_great	Easy	Which city choked in the 'Great Smog' of 1952, which killed thousands of people?	London	Manchester	Glasgow	Birmingham
 geo_hurricane_forms_western	Easy	What is a hurricane called when it forms in the western Pacific and hits Japan or China?	A typhoon	A tornado	A monsoon	A blizzard
 geo_continent_tornado_ever	Easy	Which is the only continent where no tornado has ever been recorded?	Antarctica	Australia	Europe	Africa
+geo_city_subway_tunnels	Easy	Which city's subway tunnels were flooded by Hurricane Sandy in 2012?	New York	Boston	Washington	Philadelphia
+geo_beast_east_froze	Easy	What was the 'Beast from the East' that froze Britain in 2018?	A blast of icy air from Russia	A North Sea storm surge	A Saharan dust storm	A cloud of volcanic ash
+geo_texas_city_flooded	Easy	Which Texas city was flooded by the record rains of Hurricane Harvey in 2017?	Houston	Dallas	Austin	San Antonio
 geox_dolina_smierci	Medium	Death Valley, one of the hottest places on Earth, is in which country?	The USA	Mexico	Australia	Egypt
 geoy_japonia_trzesienia	Medium	Which country suffers about a fifth of the world's strongest earthquakes?	Japan	Chile	Italy	Iceland
 geo_roughly_hot_highest	Medium	Roughly how hot is the highest air temperature ever officially recorded on Earth?	About 57 C	About 40 C	About 75 C	About 100 C
@@ -62,6 +65,12 @@ geo_word_monsoon_comes	Medium	The word 'monsoon' comes from an Arabic word meani
 geo_dog_days_hottest	Medium	The 'dog days', the hottest stretch of summer, are named after which star?	Sirius	Polaris	Betelgeuse	Vega
 geo_roughly_people_killed	Medium	Roughly how many people were killed by the 2004 Indian Ocean tsunami?	About 230,000	About 23,000	About 2 million	About 80,000
 geo_year_britain_record	Medium	In which year did Britain first record a temperature above 40 C?	2022	2003	1976	2019
+geo_island_left_without	Medium	Which island was left without power for months after Hurricane Maria in 2017?	Puerto Rico	Jamaica	Cuba	Barbados
+geo_city_counted_down	Medium	Which city counted down to 'Day Zero', when its taps would run dry, during a drought in 2018?	Cape Town	Durban	Perth	Lisbon
+geo_month_atlantic_hurricane	Medium	In which month does the Atlantic hurricane season usually reach its peak?	September	June	November	July
+geo_letters_never_used	Medium	Which of these letters is never used to start an Atlantic hurricane name?	Q	K	V	W
+geo_according_english_folklore	Medium	According to English folklore, if it rains on St Swithin's Day, how long will the rain go on?	40 days	7 days	12 days	100 days
+geo_australia_black_saturday	Medium	Australia's 'Black Saturday' bushfires of 2009, the deadliest in its history, struck which state?	Victoria	New South Wales	Queensland	Tasmania
 geo3_san_andreas	Hard	Which two tectonic plates grind past each other along California's San Andreas Fault?	The Pacific and North American plates	The Nazca and South American plates	The Eurasian and African plates	The Indian and Australian plates
 geox_tornado	Hard	Which part of the USA is nicknamed 'Tornado Alley'?	The Great Plains	New England	The Pacific Northwest	Florida
 geoy_islandia_plyty	Hard	Which country sits on the boundary between the North American and Eurasian plates?	Iceland	Ireland	Norway	Greenland
@@ -94,6 +103,11 @@ geo_2021_thermometer_island	Hard	In 2021, a thermometer on which island recorded
 geo_north_sea_flood	Hard	The North Sea flood of 1953 killed about 1,800 people in which country, which then built its giant Delta Works?	The Netherlands	Belgium	Denmark	Germany
 geo_cyclone_nargis_killed	Hard	Cyclone Nargis killed over 100,000 people in 2008 in which country?	Myanmar	Bangladesh	India	Sri Lanka
 geo_eerie_blue_flames	Hard	The eerie blue flames at Indonesia's Kawah Ijen volcano are really what?	Burning sulphur gas	Glowing blue lava	Light from deep-sea algae	Reflected moonlight on ice
+geo_fierce_cold_wind	Hard	Which fierce, cold wind gusts down onto Croatia's coast and the Italian port of Trieste?	The bora	The sirocco	The levanter	The khamsin
+geo_plymouth_buried_volcanic	Hard	Plymouth, buried by volcanic ash in the 1990s, is still officially the capital of which Caribbean island?	Montserrat	Martinique	St Vincent	Guadeloupe
+geo_nyiragongo_runny_lava	Hard	Nyiragongo, whose runny lava is among the fastest-flowing on Earth, looms over which city?	Goma	Kigali	Kampala	Kinshasa
+geo_tri_state_tornado	Hard	The Tri-State Tornado of 1925, the deadliest in US history, tore across Missouri, Illinois and which state?	Indiana	Kentucky	Ohio	Kansas
+geo_people_hawaii_call	Hard	What do people in Hawaii call the volcanic smog that drifts from Kilauea?	Vog	Smaze	Lavafog	Pele's mist
 geo3_strefa_ryftowa	Expert	What is the Great East African Rift?	A zone where continental plates are tearing apart	A chain of volcanoes that went extinct long ago	A desert where no river reaches the sea	A region where the ground never thaws
 geo3_wyspa_wulkaniczna_powstawanie	Expert	How do volcanic island chains like Hawaii most often form?	A plate moves over a stationary hot spot in the mantle	Through a collision of two continents	Through subduction of one plate under another only	Through coastal erosion
 dpt_geo_pierscien_ognia	Expert	What is the Ring of Fire?	A belt of volcanoes round the Pacific	A chain of deserts along the tropics	A band of storms over the equator	A line of reefs in the Indian Ocean
@@ -114,3 +128,4 @@ geo_1943_temperature_spearfish	Expert	In 1943, the temperature in Spearfish, Sou
 geo_tallest_active_geyser	Expert	Which is the tallest active geyser in the world?	Steamboat Geyser	Old Faithful	Strokkur	Geysir
 geo_fujiwhara_effect	Expert	What is the 'Fujiwhara effect'?	Two nearby cyclones circling each other	A tsunami bouncing between two coasts	Lightning striking twice in one spot	A volcano erupting under a glacier
 geo_derecho_spanish_straight	Expert	What is a 'derecho', from the Spanish for 'straight'?	A long, fast-moving straight-line windstorm	A tornado that never touches the ground	A sudden flood along a dry riverbed	A hot wind blowing down a mountainside
+geo_1973_icelanders_save	Expert	In 1973, how did Icelanders save the fishing harbour of Heimaey from an advancing lava flow?	They sprayed it with seawater	They bombed it from the air	They dug a channel to divert it	They built a wall of sandbags

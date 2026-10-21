@@ -26,6 +26,7 @@ geo_big_sur_famously	Easy	Big Sur, a famously rugged stretch of coastline, is in
 geo_cancun_merida_lie	Easy	Cancun and Merida lie on which peninsula?	The Yucatan	Baja California	Florida	The Osa Peninsula
 geo_largest_canary_islands	Easy	Which is the largest of the Canary Islands?	Tenerife	Gran Canaria	Lanzarote	Fuerteventura
 geo_island_football_boot	Easy	Which island is the 'football' that the 'boot' of Italy seems to be kicking?	Sicily	Sardinia	Corsica	Malta
+geo_costa_del_sol	Easy	The Costa del Sol, packed with holidaymakers around Malaga, is in which country?	Spain	Portugal	Italy	Greece
 geo2_morze_srodziemne_wyspa	Medium	Which Mediterranean island is the largest?	Sicily	Sardinia	Cyprus	Corsica
 geocmp_wyspa_druga	Medium	Which of these islands is the largest?	Borneo	Madagascar	Sumatra	Honshu
 lmk_galapagos_kraj	Medium	The Galapagos Islands belong to which country?	Ecuador	Peru	Colombia	Chile
@@ -68,6 +69,11 @@ geo_largest_channel_islands	Medium	Which is the largest of the Channel Islands?	
 geo_scottish_islands_lie	Medium	Which Scottish islands lie closer to Bergen in Norway than to Edinburgh?	Shetland	Orkney	The Outer Hebrides	The Inner Hebrides
 geo_indonesian_island_shaped	Medium	Which Indonesian island is famous for being shaped like the letter K?	Sulawesi	Sumatra	Java	Timor
 geo_thai_island_full	Medium	On which Thai island is the famous Full Moon Party held?	Ko Pha Ngan	Ko Samui	Phuket	Ko Phi Phi
+geo_lofoten_islands_dried	Medium	The Lofoten Islands, famous for dried cod and red fishermen's huts, belong to which country?	Norway	Iceland	Denmark	Sweden
+geo_1963_1973_florida	Medium	From 1963 to 1973, Florida's rocket-launching Cape Canaveral was officially called what?	Cape Kennedy	Cape Apollo	Cape Armstrong	Cape Freedom
+geo_sapporo_giant_snow	Medium	Sapporo, famous for its giant snow and ice sculpture festival, is on which Japanese island?	Hokkaido	Honshu	Kyushu	Shikoku
+geo_long_baja_california	Medium	The long Baja California peninsula belongs to which country?	Mexico	The United States	Guatemala	Panama
+geo_khao_phing_kan	Medium	Khao Phing Kan, a limestone islet in Thailand's Phang Nga Bay, is better known by which nickname from a 1974 film?	James Bond Island	Indiana Jones Rock	Treasure Island	Skull Island
 geo2_wyspa_borneo	Hard	Between how many countries is the island of Borneo divided?	Three	Two	Four	One
 geo2_najwiekszy_archipelag	Hard	Which country is the largest island nation in the world?	Indonesia	The Philippines	Japan	Madagascar
 geocmp_linia_brzegowa	Hard	Which country has the longest coastline?	Canada	Russia	Indonesia	Australia
@@ -98,6 +104,12 @@ geo_chalk_stacks_needles	Hard	The chalk stacks called the Needles stand off whic
 geo_bornholm_baltic_island	Hard	Bornholm, a Baltic island lying closer to Sweden, belongs to which country?	Denmark	Sweden	Germany	Finland
 geo_australian_island_largest	Hard	Which Australian island is the largest sand island in the world?	K'gari (Fraser Island)	Kangaroo Island	Magnetic Island	Phillip Island
 geo_scottish_island_smoky	Hard	Which Scottish island is famous for smoky whiskies from distilleries such as Laphroaig?	Islay	Skye	Arran	Mull
+geo_skellig_michael_rocky	Hard	Skellig Michael, the rocky island where Luke Skywalker hides in the later 'Star Wars' films, lies off which country?	Ireland	Scotland	Iceland	Norway
+geo_beach_scenes_jaws	Hard	The beach scenes of 'Jaws' were filmed on which island off Massachusetts?	Martha's Vineyard	Nantucket	Long Island	Block Island
+geo_island_off_perth	Hard	Which island off Perth is famous for selfies with smiling quokkas?	Rottnest Island	Kangaroo Island	Phillip Island	Magnetic Island
+geo_michael_mount_tidal	Hard	St Michael's Mount, a tidal island topped by a castle, lies off which English county?	Cornwall	Devon	Dorset	Kent
+geo_greek_island_played	Hard	Which Greek island played the fictional island of Kalokairi in the 2008 film 'Mamma Mia!'?	Skopelos	Mykonos	Corfu	Rhodes
+geo_red_floating_torii	Hard	The famous red 'floating' torii gate that seems to stand in the sea at high tide is on which Japanese island?	Miyajima	Okinawa	Sado	Awaji
 geo2_polwysep_najwiekszy	Expert	Which peninsula is the largest in the world?	The Arabian Peninsula	The Indian Peninsula	Scandinavia	The Balkan Peninsula
 geocmp_najwiecej_wysp	Expert	Which country is made up of the most islands?	Sweden	Indonesia	The Philippines	Japan
 dpt_geo_fiord	Expert	How does a fjord form?	Ice carves a valley, sea floods it	A coral reef closes off a bay	A landslide dams a river mouth	A desert river cuts a canyon
@@ -114,3 +126,5 @@ geo_new_zealand_ninety	Expert	New Zealand's 'Ninety Mile Beach' is really about 
 geo_marajo_river_island	Expert	Marajo, a river island about the size of Switzerland, lies at the mouth of which river?	The Amazon	The Orinoco	The Parana	The Congo
 geo_norway_north_cape	Expert	Why is Norway's famous North Cape not truly the northernmost point of mainland Europe?	It stands on an island	It lies just inside Russia	It is part of a glacier	It was built up artificially
 geo_manitoulin_largest_island	Expert	Manitoulin, the largest island in any lake on Earth, lies in which of the Great Lakes?	Lake Huron	Lake Superior	Lake Michigan	Lake Ontario
+geo_ilha_queimada_grande	Expert	Ilha da Queimada Grande, nicknamed 'Snake Island' and closed to visitors, lies off which country?	Brazil	Mexico	Colombia	Venezuela
+geo_scottish_island_scheduled	Expert	On which Scottish island do scheduled passenger flights land on a beach, timed by the tides?	Barra	Skye	Mull	Arran

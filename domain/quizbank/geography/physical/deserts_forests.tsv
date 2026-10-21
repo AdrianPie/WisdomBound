@@ -19,6 +19,8 @@ geo_forest_southern_england	Easy	Which forest in southern England, a royal hunti
 geo_big_cat_top	Easy	Which big cat is the top predator of the Amazon rainforest?	The jaguar	The leopard	The cheetah	The tiger
 geo_desert_valley_red	Easy	Which desert valley of red buttes on the Arizona-Utah border appears in countless westerns?	Monument Valley	Death Valley	Valley of Fire	Bryce Canyon
 geo_english_national_park	Easy	Which English national park inspired the poet Wordsworth?	The Lake District	The Peak District	Dartmoor	Exmoor
+geo_lion_nicknamed_king	Easy	The lion is nicknamed 'the king of the jungle', but where do most wild lions actually live?	On open savanna grassland	In dense tropical rainforest	In snowy mountain forests	In mangrove swamps
+geo_arches_national_park	Easy	Arches National Park, with over 2,000 natural stone arches, is in which US state?	Utah	Nevada	Oregon	Montana
 geo2_pustynia_azja	Medium	Which desert lies in Mongolia and China?	The Gobi	The Kalahari	The Atacama	The Karakum
 lmk_serengeti_kraj	Medium	In which country is the Serengeti National Park?	Tanzania	Kenya	Uganda	Zambia
 lmk_atacama_kraj	Medium	In which country is the Atacama Desert?	Chile	Peru	Bolivia	Argentina
@@ -62,6 +64,11 @@ geo_canadian_town_calls	Medium	Which Canadian town calls itself 'the Polar Bear 
 geo_country_torres_del	Medium	In which country is Torres del Paine National Park, with its granite towers?	Chile	Argentina	Peru	Bolivia
 geo_etosha_national_park	Medium	Etosha National Park, built around a huge salt pan, is in which country?	Namibia	Botswana	Zimbabwe	Zambia
 geo_national_park_desert	Medium	Which US national park is named after a desert tree that Mormon settlers thought looked like a prophet raising his arms?	Joshua Tree	Saguaro	Sequoia	Redwood
+geo_avenue_baobabs_dirt	Medium	The Avenue of the Baobabs, a dirt road lined with giant 'upside-down' trees, is in which country?	Madagascar	Kenya	Tanzania	Mozambique
+geo_fills_arizona_petrified	Medium	What fills Arizona's Petrified Forest National Park?	Ancient logs turned to stone	Trees frozen in solid ice	Forests buried by volcanic ash	Cacti dried out by the sun
+geo_festival_builds_temporary	Medium	Which festival builds a temporary city each summer in Nevada's Black Rock Desert, then burns a giant wooden figure?	Burning Man	Coachella	Wicker Fest	Desert Fire
+geo_mossy_ancient_cedar	Medium	The mossy ancient cedar forest of Japan's Yakushima island inspired which Studio Ghibli film?	Princess Mononoke	Spirited Away	My Neighbor Totoro	Howl's Moving Castle
+geo_winnie_pooh_hundred	Medium	Winnie-the-Pooh's Hundred Acre Wood was based on a real wood in which English forest?	Ashdown Forest	Sherwood Forest	Epping Forest	The Forest of Dean
 geo2_najsuchsze_miejsce	Hard	Which desert is regarded as the driest place on Earth?	The Atacama	The Sahara	The Gobi	The Namib
 geocmp_las_powierzchnia	Hard	Which country has the largest forest area?	Russia	Brazil	Canada	The United States
 lmk_masai_mara	Hard	In which country is the Maasai Mara reserve?	Kenya	Tanzania	Botswana	Namibia
@@ -99,6 +106,10 @@ geo_roughly_share_world_2	Hard	Roughly what share of the world's forests grow in
 geo_roughly_big_sahara	Hard	Roughly how big is the Sahara?	About 9 million km2	About 1 million km2	About 30 million km2	About 3 million km2
 geo_bwindi_impenetrable_forest	Hard	Bwindi Impenetrable Forest, home to about half of the world's mountain gorillas, is in which country?	Uganda	Rwanda	Kenya	Tanzania
 geo_satellites_measured_hottest	Hard	Satellites have measured the hottest ground on Earth, over 70 C, in the Lut desert of which country?	Iran	Saudi Arabia	Libya	Pakistan
+geo_kaziranga_national_park	Hard	Kaziranga National Park in India protects about two-thirds of the world's population of which animal?	The one-horned rhinoceros	The Bengal tiger	The Asian elephant	The snow leopard
+geo_gir_forest_western	Hard	The Gir Forest in western India is the last wild home of which animal?	The Asiatic lion	The Indian cheetah	The Bengal tiger	The clouded leopard
+geo_marathon_des_sables	Hard	The Marathon des Sables, a six-day footrace across the Sahara, is held in which country?	Morocco	Egypt	Algeria	Tunisia
+geo_hikers_get_visit	Hard	How do hikers get to visit The Wave, a famous swirl of striped sandstone in Arizona?	By winning a permit lottery	By joining a ranger's bus tour	By paying at the park gate	By booking a balloon flight
 dpt_geo_sahel	Expert	What is the Sahel?	The dry belt south of the Sahara	The delta of the river Niger	The highlands of East Africa	The coastal plain of Namibia
 geo_largest_continuous_expanse	Expert	Which is the largest continuous expanse of sand on Earth?	Rub' al Khali	The Grand Erg Oriental	The Taklamakan	The Namib Sand Sea
 geo_chinese_desert_often	Expert	Which Chinese desert's name is often said to mean 'you go in, but you never come out'?	The Taklamakan	The Gobi	The Ordos	The Kumtag
@@ -113,3 +124,7 @@ geo_pando_forest_aspen	Expert	Pando, a forest of aspen trees that is really one 
 geo_desert_welwitschia_grow	Expert	In which desert does the welwitschia grow, a plant that produces only two leaves in its whole long life?	The Namib	The Kalahari	The Karoo	The Sahara
 geo_tsingy_bemaraha_forest	Expert	Tsingy de Bemaraha, a 'forest' of razor-sharp limestone needles, is in which country?	Madagascar	Vietnam	Mexico	Malaysia
 geo_tassili_ajjer_ancient	Expert	Tassili n'Ajjer, where ancient rock art shows hippos and cattle in today's Sahara, is mainly in which country?	Algeria	Libya	Niger	Chad
+geo_india_oldest_national	Expert	India's oldest national park is named after Jim Corbett, who was famous for what?	Hunting man-eating tigers	Filming the first nature films	Founding India's railways	Climbing in the Himalayas
+geo_tree_life_400	Expert	The 'Tree of Life', a 400-year-old mesquite standing alone in the desert with no obvious source of water, is in which country?	Bahrain	Oman	Jordan	Kuwait
+geo_2014_african_wetland	Expert	In 2014, which African wetland became the 1,000th site on UNESCO's World Heritage list?	The Okavango Delta	The Sudd	The Niger Inland Delta	Lake Chad
+geo_mysterious_fairy_circles	Expert	What are the mysterious 'fairy circles' of the Namib Desert?	Bare round patches in the grass	Rings of standing stones	Circular salt crusts on dunes	Rings of fungi after rain

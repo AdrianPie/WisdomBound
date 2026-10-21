@@ -19,6 +19,10 @@ geo_country_own_people_3	Easy	Which country do its own people call 'Misr'?	Egypt
 geo_country_zulu_people	Easy	In which country do most of the Zulu people live?	South Africa	Kenya	Nigeria	Zimbabwe
 geo_island_country_nicknamed_2	Easy	Which island country is nicknamed 'the Great Red Island' for its red soil?	Madagascar	Mauritius	Sri Lanka	Cyprus
 geo_european_country_ruled	Easy	Which European country ruled Kenya, Uganda and Nigeria as colonies?	Britain	France	Portugal	Germany
+geo_southernmost_country_african	Easy	Which is the southernmost country on the African mainland?	South Africa	Namibia	Mozambique	Botswana
+geo_country_lies_between_2	Easy	Which country lies between Egypt and Tunisia on Africa's north coast?	Libya	Algeria	Sudan	Morocco
+geo_african_country_coastlines_2	Easy	Which is the only African country with coastlines on both the Mediterranean and the Red Sea?	Egypt	Sudan	Libya	Eritrea
+geo_besides_south_africa	Easy	Besides South Africa, which country has 'Africa' in its English name?	The Central African Republic	Equatorial Guinea	The Ivory Coast	Western Sahara
 geocmp_panstwo_afryka_pow	Medium	Which is the largest country in Africa by area?	Algeria	Sudan	Libya	The Democratic Republic of the Congo
 trv_etiopia_kolonia	Medium	Which African country was never colonised by a European power?	Ethiopia	Kenya	Ghana	Algeria
 geo_country_lies_tip	Medium	Which country lies at the tip of the 'Horn of Africa'?	Somalia	Kenya	Sudan	Eritrea
@@ -63,6 +67,10 @@ geo_nubian_homeland_along	Medium	The Nubian homeland along the Nile is split bet
 geo_west_african_country_2	Medium	Which West African country began as a British settlement for freed slaves, with a capital named to match?	Sierra Leone	Ghana	The Gambia	Nigeria
 geo_indian_ocean_island	Medium	Which Indian Ocean island country was called 'Ile de France' under French rule?	Mauritius	Madagascar	Seychelles	Comoros
 geo_swahili_coast_old	Medium	The 'Swahili Coast', with its old trading towns like Mombasa, runs along which side of Africa?	The east coast	The west coast	The north coast	The south coast
+geo_african_country_comes_2	Medium	Which African country's name comes from Arabic words meaning 'land of the Black people'?	Sudan	Mali	Chad	Niger
+geo_country_economy_transformed	Medium	Which country's economy was transformed by huge diamond finds soon after its independence in 1966?	Botswana	Namibia	Lesotho	Zambia
+geo_african_country_made	Medium	Which African country is made up of two main islands in the Gulf of Guinea?	Sao Tome and Principe	Cape Verde	Equatorial Guinea	The Comoros
+geo_atlantic_island_nation	Medium	The Atlantic island nation of Cape Verde was a colony of which country until 1975?	Portugal	Spain	France	Britain
 geo2_panstwa_afryka	Hard	How many countries does Africa have according to the UN?	54	47	60	51
 geo_rodezja	Hard	Which country was once known as Southern Rhodesia?	Zimbabwe	Zambia	Malawi	Botswana
 geo_sudan_piramidy	Hard	Which country has the most ancient pyramids?	Sudan	Egypt	Mexico	Peru
@@ -99,6 +107,9 @@ geo_ethiopia_comes_greek	Hard	Ethiopia's name comes from Greek words thought to 
 geo_puntland_self_governing	Hard	Puntland, a self-governing state on the Horn of Africa, is officially part of which country?	Somalia	Ethiopia	Djibouti	Kenya
 geo_country_proudly_calls	Hard	Which country proudly calls itself 'Umm al-Dunya', the Mother of the World?	Egypt	Morocco	Ethiopia	Sudan
 geo_ancient_greeks_used	Hard	Ancient Greeks used which modern country's name for all of Africa they knew west of Egypt?	Libya	Tunisia	Morocco	Ethiopia
+geo_country_basutoland_under	Hard	Which country was called Basutoland under British rule?	Lesotho	Eswatini	Malawi	Zambia
+geo_country_portuguese_guinea	Hard	Which country was called Portuguese Guinea until 1974?	Guinea-Bissau	Equatorial Guinea	Guinea	Cape Verde
+geo_european_country_ruled_2	Hard	Which European country ruled southern Somalia, including Mogadishu, until 1960?	Italy	Britain	France	Portugal
 geo_namibia_long_thin	Expert	Why does Namibia have the long, thin Caprivi Strip in its north-east?	Germany wanted a route to the Zambezi	Britain gave it as a war prize	It follows an old caravan road	It was a royal hunting ground
 geo_near_kazungula_borders	Expert	Near Kazungula, the borders of Zambia, Botswana and Zimbabwe almost meet at one point with which fourth country?	Namibia	Angola	Malawi	Mozambique
 geo_country_highest_lowest	Expert	Which country has the highest 'lowest point' in the world, with all its land above 1,000 m?	Lesotho	Bhutan	Nepal	Andorra
@@ -115,3 +126,6 @@ geo_azawad_declared_independent	Expert	Azawad, declared independent by Tuareg re
 geo_gabon_comes_portuguese	Expert	Gabon's name comes from a Portuguese word for what, after the shape of an estuary?	A hooded cloak	A fishing hook	A ship's sail	A lion's mane
 geo_oil_rich_bakassi	Expert	The oil-rich Bakassi Peninsula, handed over by Nigeria in 2008, belongs to which country?	Cameroon	Benin	Equatorial Guinea	Gabon
 geo_rodrigues_autonomous_island	Expert	Rodrigues, an autonomous island far out in the Indian Ocean, belongs to which country?	Mauritius	Madagascar	Seychelles	Comoros
+geo_african_country_capital	Expert	Which African country has its capital on an island lying just off the coast of Cameroon?	Equatorial Guinea	Gabon	Sao Tome and Principe	Nigeria
+geo_rif_berber_mountain	Expert	The Rif, a Berber mountain region whose fighters beat a Spanish army at Annual in 1921, lies in which country?	Morocco	Algeria	Tunisia	Libya
+geo_country_hosts_sahrawi	Expert	Which country hosts the Sahrawi refugee camps around Tindouf and backs the Polisario Front?	Algeria	Mauritania	Mali	Libya

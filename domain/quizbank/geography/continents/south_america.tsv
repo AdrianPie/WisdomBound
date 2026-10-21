@@ -17,6 +17,9 @@ geo_country_peru_southern	Easy	Which country is Peru's southern neighbour along 
 geo_country_lies_pacific	Easy	Which country lies on the Pacific coast between Colombia and Peru?	Ecuador	Bolivia	Venezuela	Chile
 geo_two_languages_spoken	Easy	Which two languages are spoken by the vast majority of South Americans?	Spanish and Portuguese	Spanish and English	Portuguese and French	Spanish and Quechua
 geo_country_famed_finest	Easy	Which country is famed for the finest emeralds, dug at mines such as Muzo?	Colombia	Brazil	Peru	Venezuela
+geo_two_countries_share_2	Easy	Which two countries share the windswept island of Tierra del Fuego?	Argentina and Chile	Chile and Peru	Argentina and Uruguay	Argentina and Brazil
+geo_world_alpacas_prized	Easy	Most of the world's alpacas, prized for their soft wool, live in which country?	Peru	Chile	Argentina	Ecuador
+geo_country_exports_more	Easy	Which country exports more beef than any other?	Brazil	Argentina	Uruguay	Paraguay
 geo_second_populous_country	Medium	Which is the second most populous country in South America?	Colombia	Argentina	Peru	Venezuela
 geo_country_means_little	Medium	Which country's name means 'Little Venice', after villages built on stilts?	Venezuela	Bolivia	Colombia	Ecuador
 geo_two_south_american	Medium	Which two South American countries do not border Brazil?	Chile and Ecuador	Peru and Bolivia	Uruguay and Paraguay	Colombia and Venezuela
@@ -60,6 +63,12 @@ geo_south_american_country_7	Medium	Which South American country's flag has thre
 geo_altiplano_world_highest	Medium	The Altiplano, one of the world's highest inhabited plateaus, lies mostly in which country?	Bolivia	Peru	Chile	Ecuador
 geo_under_spanish_rule	Medium	Under Spanish rule, which country was known as 'Upper Peru'?	Bolivia	Ecuador	Chile	Colombia
 geo_country_lies_directly_2	Medium	Which country lies directly across the Rio de la Plata from Buenos Aires?	Uruguay	Paraguay	Brazil	Chile
+geo_carretera_austral_200	Medium	The Carretera Austral, a 1,200 km road through wild Patagonian fjords and forests, is in which country?	Chile	Argentina	Peru	Bolivia
+geo_brazil_roughly_times	Medium	Brazil has roughly how many times as many people as Portugal, its old colonial ruler?	About 20 times	About 3 times	About 8 times	About 50 times
+geo_since_2000_south	Medium	Since 2000, which South American country has used the US dollar as its own currency?	Ecuador	Venezuela	Peru	Colombia
+geo_thanks_clear_bone	Medium	Thanks to its clear, bone-dry desert skies, which country hosts many of the world's biggest telescopes?	Chile	Peru	Bolivia	Argentina
+geo_country_more_three	Medium	Which country has more than three head of cattle for every person?	Uruguay	Argentina	Paraguay	Brazil
+geo_country_world_second	Medium	Which country is the world's second-biggest exporter of cut flowers, behind only the Netherlands?	Colombia	Ecuador	Kenya	Brazil
 geox_nazca	Hard	In which country are the giant Nazca Lines drawn in the desert?	Peru	Chile	Mexico	Bolivia
 geoy_boliwia_morze	Hard	Bolivia lost its sea coast to which neighbour in a 19th-century war?	Chile	Peru	Brazil	Argentina
 geo_smallest_country_south	Hard	Which is the smallest country in South America?	Suriname	Uruguay	Guyana	Ecuador
@@ -96,6 +105,10 @@ geo_butch_cassidy_sundance	Hard	Butch Cassidy and the Sundance Kid are believed 
 geo_colonia_del_sacramento	Hard	Colonia del Sacramento, Uruguay's oldest town, was founded in 1680 by which country?	Portugal	Spain	France	Britain
 geo_american_tycoon_built	Hard	Which American tycoon built Fordlandia, a company town in the Brazilian Amazon, to grow rubber?	Henry Ford	Harvey Firestone	Thomas Edison	John D. Rockefeller
 geo_country_world_biggest_3	Hard	Which country is the world's biggest producer of fishmeal, made from its huge anchovy catch?	Peru	Chile	Ecuador	Argentina
+geo_south_american_country_9	Hard	Which South American country's cricketers play Test cricket as part of the West Indies team?	Guyana	Suriname	Venezuela	Colombia
+geo_mendoza_foot_andes	Hard	Mendoza, at the foot of the Andes, makes most of which country's wine, especially Malbec?	Argentina	Chile	Uruguay	Bolivia
+geo_three_south_american	Hard	Which three South American countries does the equator cross?	Ecuador, Colombia and Brazil	Ecuador, Peru and Brazil	Colombia, Venezuela and Brazil	Ecuador, Colombia and Peru
+geo_christ_andes_statue	Hard	The 'Christ of the Andes' statue, high on a mountain pass, celebrates peace between Argentina and which country?	Chile	Bolivia	Peru	Paraguay
 geo2_panstwo_najdluzsze	Expert	Which country is the longest from north to south?	Chile	Norway	Brazil	Russia
 geo_country_shares_longest	Expert	Which country shares the longest border with Brazil?	Bolivia	Peru	Venezuela	Argentina
 geo_brazil_acquired_state	Expert	Brazil acquired the state of Acre in 1903 from which country?	Bolivia	Paraguay	Colombia	Venezuela
@@ -113,3 +126,5 @@ geo_bolivia_paraguay_fought	Expert	Bolivia and Paraguay fought the bloody Chaco 
 geo_nueva_germania_colony	Expert	Nueva Germania, a colony for 'pure' Germans founded by Nietzsche's sister, is in which country?	Paraguay	Brazil	Argentina	Chile
 geo_mapuche_resisted_spanish	Expert	The Mapuche, who resisted Spanish conquest for centuries, live mainly in Chile and which other country?	Argentina	Peru	Bolivia	Paraguay
 geo_colonia_tovar_mountain	Expert	Colonia Tovar, a mountain village founded by Black Forest Germans in 1843, is in which country?	Venezuela	Chile	Brazil	Argentina
+geo_filadelfia_main_town	Expert	Filadelfia, the main town of Paraguay's Chaco, was founded by German-speaking members of which faith?	The Mennonites	The Amish	The Hutterites	The Moravians
+geo_country_capital_grand	Expert	In which country's capital do a grand mosque and a synagogue stand side by side on the same street?	Suriname	Guyana	Venezuela	Argentina

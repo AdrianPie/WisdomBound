@@ -22,6 +22,8 @@ geo_asia_second_largest	Easy	After Asia, which is the second-largest continent?	
 geo_map_mean_contour	Easy	On a map, what does it mean when contour lines are bunched very close together?	The slope is very steep	The land is very flat	The area is marshy	The land is below sea level
 geo_continent_holds_both	Easy	Which continent holds both the highest mountain on Earth and the lowest point on dry land?	Asia	Africa	South America	North America
 geo_flying_east_london	Easy	Flying east from London to Tokyo, what do you need to do with your watch?	Put it forward	Put it back	Leave it alone	Put it back a day
+geo_meridian_line_greenwich	Easy	On the meridian line at Greenwich, visitors love to stand with one foot in each what?	The Eastern and Western Hemispheres	The Northern and Southern Hemispheres	Two different calendar days	Two different time zones
+geo_daylight_saving_time	Easy	When daylight saving time begins in spring, what happens to the clocks?	They go forward an hour	They go back an hour	They go forward two hours	They stop for one minute
 geo2_panstwo_dwa_konty	Medium	Which country spans two continents: Europe and Asia?	Turkey	Greece	Egypt	Cyprus
 geo3_pierwszy_dzien	Medium	Which country is the first in the world to start each new day?	Kiribati	New Zealand	Japan	Australia
 geocmp_rownik_kraj	Medium	Which of these countries does the equator cross?	Ecuador	Peru	Bolivia	Chile
@@ -64,6 +66,11 @@ geo_continent_glaciers_all	Medium	Which continent has no glaciers at all on its 
 geo_given_europe_asia	Medium	What name is given to Europe and Asia together, seen as one huge landmass?	Eurasia	Laurasia	Pangaea	Afrasia
 geo_seen_above_north	Medium	Seen from above the North Pole, which way does the Earth spin?	Anticlockwise	Clockwise	It changes with the seasons	It does not spin
 geo_south_tropic_capricorn	Medium	South of the Tropic of Capricorn, where does the Sun stand in the sky at midday?	In the north	In the south	Straight overhead	In the east
+geo_sailing_through_panama	Medium	Sailing through the Panama Canal from the Atlantic to the Pacific, which way does a ship mostly travel?	South-east	North-west	South-west	Due west
+geo_world_maps_printed	Medium	On world maps printed in China, Japan or Australia, which ocean usually sits in the middle?	The Pacific	The Atlantic	The Indian	The Southern
+geo_continent_lying_entirely	Medium	Which is the only continent lying entirely in both the Southern and the Eastern Hemispheres?	Australia	Antarctica	Africa	South America
+geo_happens_noon_june	Medium	What happens at noon on the June solstice along the Tropic of Cancer?	The Sun stands directly overhead	The Sun never rises at all	The day lasts 24 hours	Shadows point due south
+geo_four_corners_monument	Medium	At the Four Corners Monument you can stand in four US states at once. Which of these is NOT one of them?	Nevada	Utah	Colorado	Arizona
 geo2_rownolezniki_zwrotnik	Hard	What is the tropic in the southern hemisphere called?	Tropic of Capricorn	Tropic of Cancer	Arctic Circle	Prime Meridian
 geo2_greenwich	Hard	Which city does the prime meridian pass through?	London	Paris	Rome	Madrid
 geo3_linia_zmiany_daty	Hard	Where does the International Date Line run?	Through the middle of the Pacific, near the 180th meridian	Straight through Greenwich, on the edge of London	Along the equator, right round the globe	Along the Ural mountains and the Caspian
@@ -97,6 +104,11 @@ geo_pilots_military_often	Hard	Pilots and the military often call Coordinated Un
 geo_new_zealand_antipodes	Hard	New Zealand's Antipodes Islands got their name for lying roughly opposite which city?	London	Paris	Madrid	Lisbon
 geo_along_roughly_line	Hard	Along roughly which line of latitude can a ship sail right round the world without meeting any land?	About 60 degrees south	About 40 degrees south	About 50 degrees north	About 30 degrees south
 geo_continent_reaches_across	Hard	Which is the only continent that reaches across every line of longitude?	Antarctica	Asia	Africa	North America
+geo_wallace_line_invisible	Hard	The Wallace Line, the invisible boundary between Asian and Australian wildlife, runs through the strait between Bali and which island?	Lombok	Java	Sumatra	Timor
+geo_rugby_small_town	Hard	Rugby, a small town that calls itself the geographical centre of North America, is in which US state?	North Dakota	South Dakota	Kansas	Nebraska
+geo_tropic_cancer_crab	Hard	Why is the Tropic of Cancer named after a crab?	The June Sun once stood in the constellation Cancer	Early maps drew the line like a crab's claw	Sailors saw crabs swarm there each summer	Ptolemy named it after a sea monster
+geo_sailing_due_east	Hard	Sailing due east from New York City, which European country's coast would you reach first?	Portugal	France	Ireland	The United Kingdom
+geo_crossing_date_line	Hard	Crossing the date line, many evening flights from Tokyo land in Honolulu when, by the local calendar?	Earlier the same day than take-off	Late in the evening of the next day	Around midnight two days later	Exactly a week later
 geo_world_map_projection	Expert	Which world map projection, championed in the 1970s, shows countries at their true relative areas?	The Gall-Peters	The Mercator	The Robinson	The Winkel tripel
 geo_oldest_surviving_map	Expert	The oldest surviving map of the whole known world was made around 600 BC by which people?	The Babylonians	The Egyptians	The Greeks	The Phoenicians
 geo_agloe_hamlet_appeared	Expert	What was Agloe, a hamlet that appeared on maps of New York State from the 1930s?	A fake town to catch copycats	A town that sank into a lake	A ghost town of the gold rush	A town renamed after a war
@@ -113,3 +125,7 @@ geo_mapping_software_jokingly	Expert	Mapping software jokingly calls the point a
 geo_map_projection_national	Expert	Which map projection did the National Geographic Society adopt for its world maps in 1998?	The Winkel tripel	The Robinson	The Mollweide	The Mercator
 geo_gps_showed_ecuador	Expert	GPS showed that Ecuador's 'Middle of the World' monument actually stands roughly how far from the true equator?	About 240 m	About 2 m	About 5 km	About 40 km
 geo_country_abstained_1884	Expert	Which country abstained in the 1884 vote for Greenwich and kept using its own capital's meridian for decades?	France	Germany	Russia	Spain
+geo_land_hemisphere_half	Expert	The 'land hemisphere', the half of the globe holding the most land, is centred near the coast of which country?	France	Germany	Kazakhstan	Egypt
+geo_tropic_cancer_markers	Expert	Why do the Tropic of Cancer markers on Mexican roads slowly become wrong?	The tropic creeps south about 15 m a year	The tropic creeps north about 1 km a year	The roads sink into the soft ground	The equator shifts with the seasons
+geo_1989_french_geographers	Expert	In 1989, French geographers placed the geographical centre of Europe near the capital of which country?	Lithuania	Poland	Belarus	Ukraine
+geo_uninhabited_islands_utc	Expert	Which uninhabited US islands, in the UTC-12 time zone, are the last places on Earth where each day ends?	Baker and Howland	Midway and Wake	Johnston and Palmyra	Guam and Saipan
