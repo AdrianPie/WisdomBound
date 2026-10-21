@@ -79,6 +79,19 @@ mat_squares_make_grid	Easy	How many squares make up the grid in a game of nought
 mat_number_comes_right	Easy	Which number name comes right after million, billion and trillion?	Quadrillion	Quintillion	Septillion	Googol
 mat_least_years_old	Easy	At least how many years old is a 'centenarian'?	100	50	1,000	80
 mat_dice_games_roll	Easy	In dice games, what does a roll of 'snake eyes' mean?	Two ones	Two sixes	A one and a six	Two threes
+mat_write_out_all	Easy	If you write out all the whole numbers from 1 to 10, how many digits do you write in total?	11	10	12	9
+mat_number_both_sum	Easy	Which number is both the sum and the product of 1, 2 and 3?	6	5	7	9
+mat_dots_total_double	Easy	How many dots are there in total on the 'double six' domino tile?	12	6	10	36
+mat_face_north_turn	Easy	You face north and turn 90 degrees clockwise. Which way are you facing now?	East	West	South	North-west
+mat_hours_clock_hour	Easy	How many hours does a clock's hour hand take to go once around the whole face?	12	24	6	1
+mat_best_five_series	Easy	In a 'best of five' series of matches, how many wins do you need to take the series?	3	2	4	5
+mat_calendar_year_months	Easy	In a calendar year, how many months are 31 days long?	Seven	Six	Five	Eight
+mat_shape_cross_section	Easy	What shape is the cross-section of a Toblerone chocolate bar?	A triangle	A square	A hexagon	A semicircle
+mat_pack_gum_costs	Easy	A pack of gum costs 75 cents and you pay with $2. How much change do you get?	$1.25	$1.35	$1.15	$1.75
+mat_film_starts_lasts	Easy	A film starts at 7:45 p.m. and lasts 2 hours 30 minutes. When does it end?	10:15 p.m.	10:45 p.m.	9:15 p.m.	10:30 p.m.
+mat_small_squares_make	Easy	How many small squares make up a standard Sudoku grid?	81	64	72	100
+mat_ship_rope_ladder	Easy	A ship's rope ladder has rungs 25 cm apart, the lowest just touching the sea. The tide rises 1 m. How many rungs are now underwater?	None	Four	Three	Five
+mat_lasts_longest	Easy	Which of these lasts the longest?	100 minutes	1.5 hours	5,000 seconds	95 minutes
 day2_procent_skladany	Medium	What is compound interest?	Interest earned on interest already added	A one-time fee	A fixed monthly cost	Interest paid only at the end
 day2_inflacja	Medium	What does inflation mean for your savings?	The same money buys less over time	Your balance shrinks	Interest rates always fall	Prices stay fixed
 mat_pi	Medium	What is the approximate value of pi?	3.14	3.41	2.71	3.04
@@ -193,6 +206,27 @@ mat_french_number_quatre	Medium	In French, the number 80 is 'quatre-vingts'. Wha
 mat_britain_seven_sided	Medium	Britain's seven-sided 50p coin has curved edges. What special property does that give it?	The same width in every direction	It weighs less than a round coin	It cannot be easily forged	It stacks without sliding
 mat_die_hard_vengeance	Medium	In 'Die Hard with a Vengeance', the heroes must measure exactly 4 gallons using jugs of which sizes?	3 and 5 gallons	2 and 7 gallons	6 and 9 gallons	2 and 8 gallons
 mat_italy_number_traditionally	Medium	In Italy, which number is traditionally considered unlucky, rather than 13?	17	4	9	11
+mat_tiles_standard_double	Medium	How many tiles are in a standard double-six set of dominoes?	28	36	21	32
+mat_farmyard_holds_chickens	Medium	A farmyard holds chickens and cows: 10 heads and 28 legs in all. How many cows are there?	4	6	3	5
+mat_different_totals_roll	Medium	How many different totals can you roll with two ordinary dice?	11	12	36	10
+mat_flip_fair_coin	Medium	You flip a fair coin twice. What is the chance it lands the same way both times?	1 in 2	1 in 4	1 in 3	3 in 4
+mat_bigger_cubed_squared	Medium	Which is bigger: 2 cubed or 3 squared?	3 squared	2 cubed	They are equal	Neither - both are 6
+mat_third_off_shirt	Medium	After 'a third off', a shirt costs $20. What was its original price?	$30	$26.67	$25	$40
+mat_largest_number_mondays	Medium	What is the largest number of Mondays a single year can have?	53	52	54	55
+mat_prime_numbers_end	Medium	How many prime numbers end in the digit 5?	Just one	None	Two	Infinitely many
+mat_any_group_people	Medium	In any group of 13 people, which of these must at least two of them share?	A birth month	A birthday	A first initial	A birth year
+mat_shape_get_slice	Medium	What shape do you get when you slice a cone straight across, parallel to its base?	A circle	An ellipse	A triangle	A parabola
+mat_shape_get_spinning	Medium	Which 3D shape do you get by spinning a rectangle around one of its sides?	A cylinder	A cone	A sphere	A cube
+mat_two_coins_add	Medium	Two US coins add up to 30 cents, and one of them is not a nickel. What are they?	A quarter and a nickel	Two 15-cent coins	Three dimes	A dime and a quarter
+mat_roughly_old_000th	Medium	Roughly how old are you on the 10,000th day of your life?	About 27	About 18	About 40	About 13
+mat_number_written_binary	Medium	How is the number 5 written in binary?	101	110	111	100
+mat_apart_december_january	Medium	Apart from December and January, which two months in a row both have 31 days?	July and August	March and April	May and June	October and November
+mat_numbers_divided_without	Medium	Which of these numbers can be divided by 3 without a remainder?	3456	1234	2345	4567
+mat_get_multiply_together	Medium	What do you get if you multiply together all the digits on a phone keypad?	0	362,880	3,628,800	45
+mat_lottery_likely_draw	Medium	In a lottery, how likely is the draw 1, 2, 3, 4, 5, 6 compared with any other set of six numbers?	Exactly as likely	Far less likely	Slightly less likely	More likely
+mat_clock_showing_exactly	Medium	A clock showing exactly 3:00 is seen in a mirror. What time does the reflection appear to show?	9:00	3:00	6:00	12:15
+mat_double_length_square	Medium	If you double the length of a square's sides, how many times bigger does its area get?	Four	Two	Three	Eight
+mat_comes_next_120	Medium	What comes next: 1, 2, 6, 24, 120, ...?	720	240	600	144
 mat_silnia_5	Hard	What is 5! (5 factorial)?	120	100	60	150
 mat_fibonacci	Hard	What number comes next in the sequence 1, 1, 2, 3, 5, 8...?	13	11	12	16
 mat2_logarytm_2_8	Hard	What is log base 2 of 8?	3	2	4	8
@@ -263,6 +297,20 @@ mat_single_true_length	Hard	Why is there no single 'true' length for a coastline
 mat_1897_lawmakers_state	Hard	In 1897, lawmakers in which US state nearly passed a bill that would have changed the value of pi?	Indiana	Texas	Kansas	Ohio
 mat_drive_town_return	Hard	You drive to a town at 60 km/h and return the same way at 40 km/h. What is your average speed?	48 km/h	50 km/h	45 km/h	52 km/h
 mat_rule_roughly_long	Hard	By the 'rule of 72', roughly how long does money take to double at 6% interest a year?	12 years	6 years	18 years	36 years
+mat_pieces_cut_flat	Hard	What is the most pieces you can cut a flat pizza into with 3 straight cuts, without moving the pieces?	7	6	8	9
+mat_knockout_tennis_tournament	Hard	A knockout tennis tournament starts with 64 players. How many matches are played in total to find the champion?	63	32	64	126
+mat_2096_leap_year	Hard	2096 is a leap year. Which year is the next leap year after it?	2104	2100	2108	2098
+mat_largest_number_friday	Hard	What is the largest number of Friday the 13ths that a single calendar year can have?	Three	Two	Four	Five
+mat_square_number_like	Hard	A square number, like 25 or 64, can never end in which digit?	7	1	6	9
+mat_angles_five_tips	Hard	What do the angles at the five tips of a five-pointed star add up to?	180 degrees	360 degrees	540 degrees	300 degrees
+mat_counting_february_people	Hard	Counting 29 February, how many people must be in a room to make it certain that two share a birthday?	367	366	365	183
+mat_painted_3x3x3_cube	Hard	A painted 3x3x3 cube is cut into 27 small cubes. How many of the small cubes have no paint on them at all?	1	0	3	8
+mat_take_532_subtract	Hard	Take 532, subtract its reverse 235, then add the result to its own reverse. What do you get?	1089	999	1098	1188
+mat_pair_different_whole	Hard	Which pair of different whole numbers a and b gives the same result for a to the power of b and b to the power of a?	2 and 4	2 and 3	3 and 9	4 and 8
+mat_fraction_matches_six	Hard	Which fraction matches pi to six decimal places?	355/113	22/7	333/106	311/99
+mat_french_mathematician_died	Hard	Which French mathematician died after a duel at just 20, having written out his ideas the night before?	Evariste Galois	Niels Henrik Abel	Blaise Pascal	Joseph Fourier
+mat_walking_around_any	Hard	Walking around any convex polygon, the turns you make at its corners (the exterior angles) always add up to what?	360 degrees	180 degrees	540 degrees	It depends on the sides
+mat_hen_half_lays	Hard	If a hen and a half lays an egg and a half in a day and a half, how many eggs does one hen lay in three days?	2	3	1	4.5
 mat_liczba_e	Expert	What is the approximate value of e?	2.72	3.14	1.62	2.24
 mat_liczby_doskonale	Expert	Which of these numbers is perfect (equal to the sum of its divisors)?	28	24	30	36
 mat_duzy_pierwszy	Expert	Which of these numbers is NOT prime?	91	89	97	83
@@ -313,3 +361,5 @@ maty_zenon	Expert	Which Greek thinker argued that swift Achilles could never ove
 mat_take_four_digit	Expert	Take a four-digit number (not all digits alike), subtract its digits in ascending order from them in descending order, and repeat. Where do you always end up?	6174	1089	9999	0
 mat_220_284_history	Expert	220 and 284 are history's most famous pair of 'amicable numbers'. What links them?	Each one's divisors add up to the other	Both are sums of two cubes	Their product is a perfect square	Both are triangular numbers
 mat_euler_stunned_mathematicians	Expert	Euler stunned mathematicians by showing that 1 + 1/4 + 1/9 + 1/16 + ... equals what?	Pi squared over 6	Exactly 2	The golden ratio	e minus 1
+mat_chicken_mcnuggets_once	Expert	Chicken McNuggets were once sold only in boxes of 6, 9 and 20. What is the largest number of nuggets you could NOT buy exactly?	43	37	47	59
+mat_larger_power_power	Expert	Which is larger: e to the power of pi, or pi to the power of e?	e to the power of pi	pi to the power of e	They are exactly equal	No one has proved either

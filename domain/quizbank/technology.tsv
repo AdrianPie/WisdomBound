@@ -118,6 +118,33 @@ tec_symbol_starts_hashtag	Easy	Which symbol starts a hashtag, as in #throwback?	
 tec_website_faq_stand	Easy	On a website, what does 'FAQ' stand for?	Frequently asked questions	Fast answer queue	Final account query	File access quota
 tec_airplane_mode_switch	Easy	What does 'airplane mode' switch off on a phone?	Its wireless signals	Its touchscreen	Its speakers	Its alarm clock
 tec_operating_system_made	Easy	Which operating system made the 'Blue Screen of Death' infamous?	Windows	macOS	Linux	Android
+tec_google_web_browser	Easy	What is the name of Google's web browser?	Chrome	Edge	Firefox	Opera
+tec_nintendo_handheld_launched	Easy	Which Nintendo handheld, launched in 2004, had two screens, one of them a touchscreen?	The Nintendo DS	The Game Boy Advance	The Virtual Boy	The Game Boy Color
+tec_ride_hailing_app	Easy	Which ride-hailing app was founded in San Francisco in 2009?	Uber	Lyft	Bolt	Grab
+tec_company_runs_starlink	Easy	Which company runs the Starlink satellite internet network?	SpaceX	Amazon	Boeing	NASA
+tec_classic_windows_game	Easy	In which classic Windows game do you clear a grid of squares without setting off a hidden bomb?	Minesweeper	Solitaire	FreeCell	Pinball
+tec_nato_phonetic_alphabet	Easy	In the NATO phonetic alphabet used by pilots, which word stands for the letter X?	X-ray	Xylophone	Xenon	Xerox
+tec_instagram_launched_2010	Easy	When Instagram launched in 2010, every photo had to be which shape?	Square	Round	Tall and narrow	Wide and short
+tec_tech_news_stand	Easy	In tech news, what does 'AI' stand for?	Artificial intelligence	Automated internet	Advanced interface	Analog input
+tec_chat_apps_three	Easy	In many chat apps, what do three animated dots under the conversation mean?	The other person is typing	The message failed to send	The chat is encrypted	The other person is offline
+tec_whatsapp_two_blue	Easy	In WhatsApp, what do two blue ticks next to your message mean?	It has been read	It is still sending	It was deleted	It was forwarded
+tec_item_clothing_steve	Easy	Which item of clothing did Steve Jobs famously wear at almost every product launch?	A black turtleneck	A grey hoodie	A tweed jacket	A bow tie
+tec_new_facebook_parent	Easy	What new name did Facebook's parent company take in 2021?	Meta	Alphabet	Horizon	Oculus
+tec_app_logo_camera	Easy	Which app's logo is a camera outline on a purple, pink and orange background?	Instagram	Snapchat	TikTok	Pinterest
+tec_app_logo_stylised	Easy	Which app's logo is a stylised musical note?	TikTok	Spotify	Shazam	SoundCloud
+tec_streaming_service_logo	Easy	Which streaming service's logo is a big red letter 'N'?	Netflix	Hulu	Disney+	Peacock
+tec_microsoft_program_making	Easy	What is the name of Microsoft's program for making slide presentations?	PowerPoint	Keynote	Prezi	Word
+tec_google_service_shows	Easy	Which Google service shows street-level photos taken by camera cars driving around the world?	Street View	Google Lens	Google Photos	Google Drive
+tec_wipe_drawing_off	Easy	How do you wipe a drawing off an Etch A Sketch?	Turn it over and shake it	Press the reset button	Wipe it with a damp cloth	Blow hard on the screen
+tec_apple_airpods	Easy	What are Apple's AirPods?	Wireless earbuds	Smart glasses	Fitness bands	Phone chargers
+tec_phone_not_disturb	Easy	What does a phone's 'Do Not Disturb' mode do?	Silences calls and alerts	Blocks all websites	Turns off the screen	Locks every app
+tec_online_dating_catfish	Easy	In online dating, what is a 'catfish'?	Someone using a fake identity	Someone who never replies	Someone who only flirts	A profile full of cat photos
+tec_round_button_apple	Easy	Which round button did Apple remove from the front of the iPhone with the iPhone X in 2017?	The home button	The volume button	The power button	The camera button
+tec_bought_twitter_2022	Easy	Who bought Twitter in 2022?	Elon Musk	Mark Zuckerberg	Jeff Bezos	Bill Gates
+tec_amazon_owned_site	Easy	On which Amazon-owned site do millions watch people play video games live?	Twitch	YouTube	Steam	Discord
+tec_apple_built_video	Easy	What is the name of Apple's built-in video-calling app?	FaceTime	Skype	Duo	Zoom
+tec_dating_app_tinder	Easy	On the dating app Tinder, what does swiping right on a profile mean?	You like them	You want to skip them	You want to report them	You want to block them
+tec_mobile_phone_little	Easy	On a mobile phone, what do the little rising bars at the top of the screen show?	Signal strength	Battery level	Volume	Storage space
 tec_cpu	Medium	What does the abbreviation CPU stand for?	Central Processing Unit	Random-access memory	Graphics card	Hard drive
 tec_android_firma	Medium	Which company develops the Android operating system?	Google	Apple	Microsoft	Meta
 tec_telefon_bell	Medium	Who patented the telephone?	Alexander Graham Bell	Thomas Edison	Guglielmo Marconi	Samuel Morse
@@ -291,6 +318,52 @@ tec_really_inside_mechanical	Medium	What was really inside 'the Mechanical Turk'
 tec_hamburger_menu_icon	Medium	What does the 'hamburger' menu icon in apps look like?	Three horizontal lines	Three vertical dots	A small circle	A square grid
 tec_according_makers_firefox	Medium	According to its makers, the 'firefox' in the browser's name is another name for which animal?	The red panda	The red fox	The fennec fox	The red squirrel
 tec_chinese_tech_company	Medium	Which Chinese tech company makes the Mate and P-series smartphones?	Huawei	Xiaomi	Lenovo	Oppo
+tec_nokia_phone_2000	Medium	Which Nokia phone of 2000 became a running joke for being almost indestructible?	The Nokia 3310	The Nokia 7110	The Nokia N95	The Nokia Lumia 920
+tec_google_gadget_2013	Medium	Which Google gadget of 2013 put a tiny display just in front of the wearer's eye?	Google Glass	Google Cardboard	Google Lens	Google Nest
+tec_microsoft_voice_assistant	Medium	Microsoft named its voice assistant Cortana after an AI character from which video game series?	Halo	Mass Effect	Portal	StarCraft
+tec_japanese_company_created	Medium	Which Japanese company created Pac-Man?	Namco	Nintendo	Sega	Taito
+tec_airbnb_comes_founders	Medium	Airbnb's name comes from what its founders first offered guests in their San Francisco flat. What was it?	Air mattresses	Rooftop tents	Airport pickups	Hot-air balloon rides
+tec_willis_carrier_1902	Medium	Willis Carrier's 1902 machine, built to stop paper wrinkling in a humid printing plant, grew into what?	Air conditioning	Central heating	The electric fan	The tumble dryer
+tec_steve_jobs_unveiled	Medium	When Steve Jobs unveiled the first iPhone, he called it three devices in one. Two were an iPod and an online communicator. What was the third?	A phone	A camera	A computer	A GPS
+tec_macintosh_computer	Medium	The Macintosh computer was named after what?	A variety of apple	A Scottish raincoat	An Apple engineer's dog	A street in Cupertino
+tec_2010_programmer_famously	Medium	In 2010, a programmer famously paid 10,000 bitcoins for what?	Two pizzas	A used car	A laptop	A pair of trainers
+tec_image_maker_dall	Medium	The AI image maker DALL-E is named after Salvador Dali and which film robot?	WALL-E	R2-D2	Baymax	The Iron Giant
+tec_company_makes_yellow	Medium	Which company makes the yellow, four-legged robot dog called Spot?	Boston Dynamics	Sony	Tesla	iRobot
+tec_company_makes_gorilla	Medium	Which company makes Gorilla Glass, the tough glass used on many phone screens?	Corning	Samsung	Foxconn	Saint-Gobain
+tec_google_feeling_lucky	Medium	What does Google's 'I'm Feeling Lucky' button do?	Opens the top result directly	Shows a random website	Picks a random Doodle	Opens a lottery game
+tec_typing_barrel_roll	Medium	Typing 'do a barrel roll' into Google famously made the results page do what?	Spin all the way round	Turn upside down	Shake from side to side	Slide off the screen
+tec_gmail_launched_2004	Medium	Gmail was launched in 2004 on which day, leading many people to think it was a hoax?	April Fools' Day	Christmas Day	Halloween	Valentine's Day
+tec_youtube_founded_2005	Medium	YouTube was founded in 2005 by three former employees of which company?	PayPal	Google	Yahoo	Apple
+tec_newspaper_bought_word	Medium	Which newspaper bought the word game Wordle in 2022?	The New York Times	The Guardian	The Washington Post	The Wall Street Journal
+tec_company_runs_steam	Medium	Which company runs Steam, the huge online store for PC games?	Valve	Epic Games	Electronic Arts	Ubisoft
+tec_nintendo	Medium	The Nintendo 64 was named after what?	Its 64-bit processor	Its 64 launch games	The year 1964	Its 64 MB of memory
+tec_machines_took_computer	Medium	Before machines took the name, what was a 'computer'?	A person who did calculations	A book of maths tables	A kind of abacus	A ship's logbook
+tec_chip_maker_intel	Medium	The chip maker Intel takes its name from which two words?	Integrated electronics	Intelligent telephones	International telegraph	Internet technology
+tec_sony_comes_partly	Medium	The name Sony comes partly from 'sonus', the Latin word for what?	Sound	Sun	Speed	Star
+tec_six_stars_subaru	Medium	The six stars on Subaru's badge show which star cluster, whose Japanese name the brand carries?	The Pleiades	Orion's Belt	The Big Dipper	The Southern Cross
+tec_windows_version_number	Medium	Which Windows version number did Microsoft skip entirely?	Windows 9	Windows 7	Windows 2	Windows 11
+tec_band_song_start	Medium	Which band's song 'Start Me Up' was used to launch Windows 95?	The Rolling Stones	The Beatles	Queen	U2
+tec_airliner_windows_rounded	Medium	Why do airliner windows have rounded corners?	Sharp corners can cause cracks	They are cheaper to make	They give passengers a wider view	They seal better against rain
+tec_radio_distress_call	Medium	The radio distress call 'Mayday' comes from French words meaning what?	'Help me'	'Danger ahead'	'We are sinking'	'Clear the way'
+tec_word_alexander_graham	Medium	Which word did Alexander Graham Bell want people to use when answering the telephone?	'Ahoy'	'Hello'	'Greetings'	'Speak'
+tec_website_alien_mascot	Medium	Which website's alien mascot is called Snoo?	Reddit	Tumblr	Discord	Yahoo
+tec_according_popular_story	Medium	According to the popular story, the Popsicle was invented by an 11-year-old who left what outside on a cold night?	A drink with a stick in it	A jar of honey and a spoon	A bowl of ice cream	A bottle of milk
+tec_korean_car_maker	Medium	The Korean name of the car maker Hyundai means what?	Modernity	Three stars	Great power	New dawn
+tec_network_company_cisco	Medium	The network company Cisco takes its name from which city?	San Francisco	San Diego	Sacramento	Santa Clara
+tec_messaging_app_white	Medium	Which messaging app has a white paper plane on a blue circle as its logo?	Telegram	Signal	Messenger	Viber
+tec_company_headquarters_giant	Medium	Which company's headquarters is a giant ring-shaped building nicknamed 'the spaceship'?	Apple	Google	Facebook	Amazon
+tec_microsoft_headquarters_lie	Medium	Microsoft's headquarters lie in Redmond, near which big US city?	Seattle	San Francisco	Boston	Chicago
+tec_company_created_2015	Medium	Which company was created in 2015 to become the parent of Google?	Alphabet	Meta	Oracle	Nexus
+tec_word_oxford_dictionaries	Medium	Which word was Oxford Dictionaries' 'Word of the Year' in 2013?	Selfie	Hashtag	Emoji	Vape
+tec_online_stand	Medium	Online, what does 'TL;DR' stand for?	Too long; didn't read	To learn; don't rush	Total loss; do restart	Talk later; don't reply
+tec_socket_apple_drop	Medium	Which socket did Apple drop from the iPhone 7 in 2016, angering many users?	The headphone jack	The charging port	The SIM card slot	The memory card slot
+tec_1986_steve_jobs	Medium	In 1986, Steve Jobs bought the computer graphics division of George Lucas's company. What did it become?	Pixar	DreamWorks	Industrial Light & Magic	Blue Sky Studios
+tec_social_network_google	Medium	Which social network did Google shut down in 2019 after it failed to rival Facebook?	Google+	Google Wave	Orkut	Google Buzz
+tec_social_network_news	Medium	Which social network did News Corp buy for $580 million in 2005, before Facebook overtook it?	MySpace	Friendster	Bebo	Orkut
+tec_video_app_shut	Medium	Which video app, shut down in 2017, limited every clip to six seconds?	Vine	Periscope	Musical.ly	Snapchat
+tec_made_snapchat_stand	Medium	What made Snapchat stand out when it launched in 2011?	Its photos vanished after viewing	It allowed only black-and-white photos	It let you post one photo a day	It showed friends on a live map
+tec_company_makes_roomba	Medium	Which company makes the Roomba robot vacuum?	iRobot	Dyson	Samsung	Philips
+tec_phone_touchscreens_ignore	Medium	Why do most phone touchscreens ignore you when you wear ordinary gloves?	They need skin to conduct electricity	They need the warmth of a finger	They read your fingerprints	Gloves are too soft to press them
 day2_ram_vs_dysk	Hard	Why does a computer slow down when RAM runs out?	It starts swapping data to much slower storage	The processor overheats and throttles	The screen starts refreshing slower	The network connection is throttled
 tec_turing	Hard	Who is regarded as the father of computer science and cracked the Enigma cipher?	Alan Turing	John von Neumann	Charles Babbage	Claude Shannon
 tec_enigma_polacy	Hard	Which Pole co-created the first break of the Enigma cipher?	Marian Rejewski	Stefan Banach	Jan Czochralski	Kazimierz Funk
@@ -398,6 +471,34 @@ tec_youtube_founders_pictured	Hard	YouTube's founders first pictured their site 
 tec_according_maker_voice	Hard	According to its maker, the voice assistant Alexa was named partly in honour of what?	The Library of Alexandria	Alexander the Great	Alexander Graham Bell	A founder's daughter
 tec_basic_feature_missing	Hard	Which basic feature was missing from the first iPhone of 2007?	Copy and paste	A touchscreen	A web browser	Email
 tec_bill_gates_later	Hard	Bill Gates later called it a mistake that Windows needed which three-key combination to log in?	Ctrl + Alt + Delete	Ctrl + Shift + Esc	Alt + Tab + Enter	Ctrl + Alt + Insert
+tec_lip_syncing_app	Hard	Which lip-syncing app did TikTok absorb in 2018, moving all its users over?	Musical.ly	Vine	Dubsmash	Triller
+tec_became_instagram_app	Hard	Before it became Instagram, the app was a check-in service called what?	Burbn	Snapit	Photon	Instamatic
+tec_facebook_like_button	Hard	Facebook's 'Like' button was very nearly called what?	The 'Awesome' button	The 'Love' button	The 'Cool' button	The 'Yes' button
+tec_free_webmail_service	Hard	Which free webmail service of 1996 wrote some letters of its name in capitals to show off 'HTML'?	Hotmail	Yahoo Mail	AOL Mail	Rocketmail
+tec_roughly_facebook_pay	Hard	Roughly how much did Facebook pay for WhatsApp in 2014?	About $19 billion	About $1 billion	About $6 billion	About $60 billion
+tec_apple_1983_computer	Hard	Apple's 1983 computer 'Lisa' shared its name with whom?	Steve Jobs's daughter	Steve Wozniak's mother	The Mona Lisa	Apple's first customer
+tec_computer_company_steve	Hard	Which computer company did Steve Jobs found after he was pushed out of Apple in 1985?	NeXT	Palm	Be Inc.	General Magic
+tec_started_apple_two	Hard	Before they started Apple, its two founders sold illegal 'blue boxes'. What did they do?	Made free long-distance phone calls	Unscrambled cable TV channels	Copied cassette tapes	Cracked arcade machines
+tec_1888_made_long	Hard	In 1888, who made the first long-distance car journey, taking her husband's new car without telling him?	Bertha Benz	Clara Ford	Mercedes Jellinek	Emma Daimler
+tec_motorola_coined_1930	Hard	The name Motorola was coined in 1930 for which of the company's products?	A car radio	A motorbike horn	A cine projector	A record player
+tec_charles_goodyear_connection	Hard	What was Charles Goodyear's connection to the Goodyear tyre company?	It was named after him long after he died	He founded it with his sons after the Civil War	He sold it his rubber patents just before he died	He ran its first factory in Akron, Ohio
+tec_teflon_discovered_accident	Hard	Teflon was discovered by accident in 1938 by a chemist working on what?	Refrigerator gases	A stronger glue	Rocket fuel	Waterproof paint
+tec_walter_hunt_invented	Hard	Walter Hunt invented which everyday item in 1849, then sold the patent for $400 to pay off a debt?	The safety pin	The paper clip	The zip	The clothes peg
+tec_frisbee	Hard	The Frisbee is named after what?	A pie company whose tins students threw	A famous college football coach	The inventor's pet terrier	A Danish word meaning 'flying plate'
+tec_engineer_lonnie_johnson	Hard	Engineer Lonnie Johnson came up with the Super Soaker water gun while building what?	A heat pump that used water	A rocket fuel pump	A garden sprinkler	A fire extinguisher
+tec_working_escalator_built	Hard	The first working escalator, built in 1896, was a novelty ride where?	Coney Island	Blackpool Pier	Niagara Falls	Harrods in London
+tec_auto_tune_inventor	Hard	Auto-Tune's inventor came up with it using maths he had developed for which industry?	Oil exploration	Aircraft design	Medical scanning	Space flight
+tec_ipod_said_inspired	Hard	The name 'iPod' is said to have been inspired by a line from which film?	'2001: A Space Odyssey'	'Star Wars'	'Alien'	'Blade Runner'
+tec_minecraft_creeper_born	Hard	In Minecraft, the Creeper was born from a coding mistake while its creator was making which animal?	A pig	A cow	A sheep	A chicken
+tec_tetris_blends_greek	Hard	The name 'Tetris' blends the Greek 'tetra' with the name of which sport?	Tennis	Tetherball	Polo	Cricket
+tec_2014_diggers_new	Hard	In 2014, diggers in a New Mexico landfill confirmed a legend by unearthing buried copies of which infamous 1982 flop game?	'E.T. the Extra-Terrestrial'	'Superman 64'	'Duke Nukem Forever'	'Daikatana'
+tec_playstation_grew_out	Hard	The first PlayStation grew out of a CD add-on originally planned for which company's console?	Nintendo	Sega	Atari	NEC
+tec_google_office_garage	Hard	Google's first office was a garage rented from Susan Wojcicki, who later ran which company?	YouTube	Yahoo	Facebook	Twitter
+tec_italian_sign_nicknamed	Hard	In Italian, the @ sign is nicknamed after which animal?	A snail	A monkey	A duck	An elephant
+tec_often_said_thing	Hard	What is often said to be the first thing ever bought securely online, in 1994?	A Sting CD	A bottle of wine	A pair of jeans	A train ticket
+tec_world_web_server	Hard	The world's first web server, at CERN, carried a handwritten label warning staff not to do what?	Switch it off	Move it	Spill coffee on it	Unplug the mouse
+tec_xbox_began_shortening	Hard	The name 'Xbox' began as a shortening of what?	DirectX Box	Extreme Box	X-Ray Box	Xenon Box
+tec_cruise_control_invented	Hard	Cruise control was invented by Ralph Teetor, an engineer who had what unusual trait?	He was blind	He was deaf	He was colour-blind	He had lost both arms
 day2_klucz_publiczny	Expert	In public-key cryptography, what may be shared freely?	The public key	The private key	Both keys	Neither key
 tec_moore	Expert	What does Moore's law concern?	The doubling of transistor count in chips	The doubling of internet speed each year	The steady fall in the price of memory	The rise in server power consumption
 tec_c_jezyk	Expert	Who created the C programming language?	Dennis Ritchie	Bjarne Stroustrup	James Gosling	Guido van Rossum
@@ -447,3 +548,11 @@ tec_nokia_ringtone_comes	Expert	Nokia's famous ringtone comes from a 1902 guitar
 tec_horse_italian_sports	Expert	The horse on an Italian sports car badge was first painted on the plane of which World War I fighter ace?	Francesco Baracca	Manfred von Richthofen	Eddie Rickenbacker	Georges Guynemer
 tec_chip_maker_nvidia	Expert	The chip maker Nvidia takes its name from 'invidia', the Latin word for what?	Envy	Vision	Speed	Light
 tec_hewlett_packard_big	Expert	Hewlett-Packard's first big customer bought eight of its audio oscillators to make which film?	Fantasia	Snow White	Pinocchio	Bambi
+tec_apple_little_third	Expert	Apple's little-known third co-founder, Ronald Wayne, sold his 10% stake in 1976 for how much?	$800	$8,000	$80,000	$800,000
+tec_microsoft_very_product	Expert	Microsoft's very first product was a version of BASIC for which home computer kit?	The Altair 8800	The Apple I	The Commodore PET	The ZX Spectrum
+tec_software_company_adobe	Expert	The software company Adobe takes its name from what?	A creek behind a founder's house	An old Spanish mission	A clay used in early printing	The founders' first office building
+tec_camera_maker_canon	Expert	The camera maker Canon took its name from its first prototype, 'Kwanon', named after what?	A Buddhist goddess of mercy	A samurai warrior	A Japanese warship	A sacred mountain
+tec_luxury_car_brand	Expert	Which luxury car brand grew out of a company that Henry Ford walked away from in 1902?	Cadillac	Lincoln	Buick	Packard
+tec_1896_english_driver	Expert	In 1896, an English driver got one of the first speeding fines. Roughly how fast was he going?	About 8 mph	About 20 mph	About 40 mph	About 70 mph
+tec_bell_labs_engineers	Expert	Bell Labs engineers who put the # key on telephone keypads gave it which name?	Octothorpe	Octagram	Tetragram	Crossbar
+tec_clickable_banner_advert	Expert	The first clickable banner advert on the web, in 1994, was paid for by which company?	AT&T	IBM	Coca-Cola	Microsoft

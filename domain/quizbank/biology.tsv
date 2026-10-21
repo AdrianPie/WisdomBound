@@ -123,6 +123,36 @@ bio_usually_causes_pins	Easy	What usually causes 'pins and needles' when your le
 bio_dried_flowers_daisy	Easy	The dried flowers of which daisy-like plant make a classic calming herbal tea?	Chamomile	Sunflower	Marigold	Dandelion
 bio_purple_flowered_herb	Easy	Which purple-flowered herb, grown in great fields in Provence, is famous for its calming scent?	Lavender	Rosemary	Thyme	Sage
 bio_blink	Easy	Why do we blink?	To keep the eyes moist and clean	To rest the eye muscles	To reset the brain's vision	To let the pupils cool down
+bio_identical_twins_form	Easy	How do identical twins form?	One fertilised egg splits in two	Two eggs are fertilised at once	Two eggs fuse into one	One egg grows a double nucleus
+bio_classic_sign_not	Easy	Which of these is a classic sign that you are not drinking enough water?	Dark yellow urine	Pale, clear urine	Frequent sneezing	Hiccups
+bio_substance_added_tap	Easy	Which substance is added to tap water in many countries to help protect teeth?	Fluoride	Chlorine	Iodine	Calcium
+bio_body_temperature_drops	Easy	What is it called when your body temperature drops dangerously low?	Hypothermia	Hyperthermia	Hypoglycaemia	Hypertension
+bio_pair_lumps_back	Easy	Which pair of lumps at the back of the throat are often taken out after repeated infections?	The tonsils	The uvula	The vocal cords	The salivary glands
+bio_bread_rises_because	Easy	Bread rises because of gas made by yeast. What kind of living thing is yeast?	A single-celled fungus	A bacterium	A tiny plant	A tiny animal
+bio_newborns_get_mild	Easy	Many newborns get mild jaundice in their first week. What colour does it turn their skin?	Yellow	Blue	Red	Grey
+bio_spiky_leaved_plant	Easy	Which spiky-leaved plant with bright red berries is a classic Christmas decoration?	Holly	Ivy	Mistletoe	Laurel
+bio_pair_sex_chromosomes	Easy	Which pair of sex chromosomes does a typical man have?	XY	XX	YY	XO
+bio_kind_specialist_fits	Easy	Which kind of specialist fits braces to straighten teeth?	An orthodontist	A podiatrist	An optometrist	A periodontist
+bio_sets_teeth_human	Easy	How many sets of teeth does a human normally grow in a lifetime?	Two	Three	One	Four
+bio_cheeks_red_blush	Easy	Why do your cheeks go red when you blush?	Blood vessels in the face widen	The skin gets thinner	Sweat glands switch on	The face muscles tense
+bio_freckles_usually_get	Easy	Freckles usually get darker when the skin does what?	Spends time in the sun	Gets very cold	Stays wet for long	Is scrubbed hard
+bio_belly_button_scar	Easy	Your belly button is the scar left by what?	The umbilical cord	A first vaccination	The doctor's forceps	A closed stomach muscle
+bio_milk_famously_rich	Easy	Milk is famously rich in which mineral needed for strong bones?	Calcium	Iron	Sodium	Zinc
+bio_wrinkles_crow_feet	Easy	The wrinkles called 'crow's feet' appear next to which part of the face?	The eyes	The mouth	The nose	The ears
+bio_actually_makes_bruise	Easy	What actually makes a bruise?	Blood leaking under the skin	Dead skin cells piling up	A dent in the bone	Air trapped in the skin
+bio_chopping_onions_make	Easy	Why does chopping onions make your eyes water?	They release an irritating gas	Their juice squirts into the eyes	Their smell is too strong	Their skins give off dust
+bio_caesarean_section	Easy	What is a Caesarean section?	Birth through a cut in the belly	A cut to remove the appendix	A kind of spinal injection	A cut to drain the lungs
+bio_spiky_succulent_plant	Easy	Which spiky succulent plant's gel is a popular home remedy for sunburn?	Aloe vera	Agave	Prickly pear	Yucca
+bio_body_lunula_pale	Easy	Where on your body is the lunula, a pale half-moon shape?	At the base of each fingernail	On the white of the eye	Inside the outer ear	On the back of the knee
+bio_sprained_ankle_really	Easy	What is a sprained ankle, really?	Stretched or torn ligaments	A cracked ankle bone	A pulled nerve	A dislocated kneecap
+bio_guitarists_rowers_get	Easy	Why do guitarists and rowers get calluses?	Skin thickens where it is rubbed	Their blood flow slows down	Their nails grow inwards	Their muscles harden
+bio_roughly_sleep_health	Easy	Roughly how much sleep do health experts recommend for most adults each night?	7 to 9 hours	4 to 5 hours	10 to 12 hours	2 to 3 hours
+bio_slipped_disc_problem	Easy	A 'slipped disc' is a problem in which part of the body?	The spine	The knee	The jaw	The hip
+bio_condition_makes_bones	Easy	Which condition makes bones thin and brittle, especially in older women?	Osteoporosis	Arthritis	Scoliosis	Rickets
+bio_nut_looking_like	Easy	Which nut is famous for looking like a tiny brain?	The walnut	The almond	The cashew	The hazelnut
+bio_crop_regularly_wins	Easy	Which crop regularly wins giant-growing contests with specimens weighing over a tonne?	The pumpkin	The potato	The cabbage	The carrot
+bio_endorphins_released_exercise	Easy	What are endorphins, released during exercise and laughter?	The body's natural painkillers	Proteins that build muscle	Cells that fight germs	Enzymes that digest fat
+bio_raisins_sultanas_currants	Easy	Raisins, sultanas and currants are all dried what?	Grapes	Plums	Cherries	Figs
 bio_chromosomy	Medium	How many chromosomes does a healthy human cell have?	46	23	48	44
 bio_chlorofil	Medium	Which pigment gives plants their green color?	Chlorophyll	Carotene	Melanin	Hemoglobin
 bio_insulina	Medium	Which organ produces insulin?	Pancreas	Liver	Kidneys	Thyroid
@@ -305,6 +335,56 @@ bio_iron_adult_body	Medium	The iron in an adult's body would be enough to make r
 bio_almonds_seeds_fruit	Medium	Almonds are the seeds of a fruit closely related to which?	The peach	The walnut	The fig	The olive
 bio_insect_must_crawl	Medium	Which insect must crawl inside a wild fig to pollinate it, often dying there?	A tiny wasp	A tiny moth	A tiny beetle	A tiny ant
 bio_soft_spots_newborn	Medium	What are the soft spots on a newborn baby's skull called?	Fontanelles	Sutures	Sinuses	Cradles
+bio_check_pulse_side	Medium	When you check the pulse on the side of your neck, which artery are you feeling?	The carotid artery	The femoral artery	The aorta	The radial artery
+bio_vegetables_botanically_root	Medium	Which of these vegetables is botanically a root?	The carrot	The potato	The onion	Ginger
+bio_botanically_pineapple_made	Medium	Botanically, a pineapple is made of what?	Many fruits fused together	A single giant berry	A swollen root	One big seed pod
+bio_peanut_pods_ripen	Medium	Where do peanut pods ripen?	Underground	On tall bushes	On climbing vines	High in trees
+bio_bright_red_petals	Medium	The bright red 'petals' of a poinsettia are actually what?	Coloured leaves	True petals	Seed pods	Dyed stems
+bio_life_threatening_allergic	Medium	Which life-threatening allergic reaction is treated with an auto-injector pen such as an EpiPen?	Anaphylaxis	Eczema	Hay fever	Psoriasis
+bio_ecg_record	Medium	What does an ECG record?	The heart's electrical activity	Waves of brain activity	How much air the lungs hold	Sugar levels in the blood
+bio_makes_popping_sound	Medium	What makes the popping sound when you crack your knuckles?	A gas bubble in the joint fluid	Bones knocking together	Tendons snapping	Cartilage cracking
+bio_someone_sees_colours	Medium	What is it called when someone 'sees' colours when hearing music or reading numbers?	Synaesthesia	Hallucination	Aphasia	Dyslexia
+bio_amputee_still_feels	Medium	What is it called when an amputee still feels pain or itching in a missing arm or leg?	Phantom limb	Referred pain	Restless legs	Sleep paralysis
+bio_sudden_jolt_some	Medium	What is the sudden jolt some people feel just as they are falling asleep called?	A hypnic jerk	A night terror	Sleep paralysis	A febrile fit
+bio_roughly_head_hairs	Medium	Roughly how many head hairs does a person normally lose each day?	About 50-100	About 5	About 2,000	About 20,000
+bio_makes_lub_dub	Medium	What makes the 'lub-dub' sound of a heartbeat?	Heart valves snapping shut	Blood hitting the ribs	Air moving in the lungs	Arteries stretching
+bio_roughly_adult_human	Medium	Roughly how much does an adult human heart weigh?	About 300 g	About 50 g	About 1.5 kg	About 3 kg
+bio_diseases_contagious	Medium	Which of these diseases is the most contagious?	Measles	Ebola	HIV	Leprosy
+bio_mumps_famously_causes	Medium	Mumps famously causes puffy cheeks by swelling which glands?	The salivary glands	The thyroid	The tear glands	The sweat glands
+bio_disease_cancer_comes	Medium	The disease name 'cancer' comes from an ancient word for which animal?	The crab	The scorpion	The snake	The spider
+bio_mouthwash_brand_surgeon	Medium	Which mouthwash brand is named after the surgeon who pioneered antiseptic surgery?	Listerine	Colgate	Corsodyl	Oral-B
+bio_carpal_tunnel_syndrome	Medium	Carpal tunnel syndrome squeezes a nerve in which part of the body?	The wrist	The neck	The ankle	The elbow
+bio_white_coat_syndrome	Medium	What is 'white coat syndrome'?	Blood pressure rising at the doctor's	Fear of the colour white	Pale skin from hospital work	A rash from latex gloves
+bio_people_need_reading	Medium	Why do most people need reading glasses from their mid-forties?	The eye's lens gets stiffer	The eyeball shrinks	The retina wears out	The pupils stop moving
+bio_long_nap_leave	Medium	Why can a long nap leave you groggier than a short one?	You may wake from deep sleep	Your blood sugar drops	Your brain cools down	You get dehydrated
+bio_seasonal_affective_disorder	Medium	Seasonal affective disorder, the 'winter blues', is linked mainly to a lack of what?	Daylight	Vitamin C	Sleep	Iron
+bio_makes_stinging_nettles	Medium	What makes stinging nettles sting?	Tiny hairs that inject irritants	Sharp hidden thorns	An acidic sticky sap	Pollen that burns the skin
+bio_mushroom_causes_deaths	Medium	Which mushroom causes most deaths from mushroom poisoning worldwide?	The death cap	The fly agaric	The chanterelle	The porcini
+bio_despite_allspice_comes	Medium	Despite its name, allspice comes from what?	The dried berry of one tree	A blend of many spices	The root of a lily	The bark of a palm
+bio_fresh_coriander_leaves	Medium	Fresh coriander leaves are known by what name in the USA?	Cilantro	Parsley	Chervil	Arugula
+bio_marshmallow_test_studied	Medium	The famous 'marshmallow test' studied children's ability to do what?	Wait for a bigger reward	Share sweets fairly	Spot a lie	Remember shapes
+bio_rorschach_test_people	Medium	In a Rorschach test, people describe what they see in what?	Inkblots	Clouds	Photos of faces	Abstract paintings
+bio_chromosomes_human_egg	Medium	How many chromosomes does a human egg or sperm cell carry?	23	46	12	92
+bio_person_two_eyes	Medium	What is it called when a person's two eyes are different colours?	Heterochromia	Albinism	Anisocoria	Astigmatism
+bio_healing_bruise_often	Medium	A healing bruise often changes from purple to which colours?	Green, then yellow	Orange, then white	Blue, then silver	Pink, then black
+bio_organs_person_live	Medium	Which of these organs can a person live without?	The spleen	The liver	The heart	The brainstem
+bio_fleshy_little_bit	Medium	What is the fleshy little bit that dangles at the back of your throat called?	The uvula	The epiglottis	The larynx	The tonsil
+bio_kidney_stones_made	Medium	Most kidney stones are made mainly of what?	Calcium compounds	Cholesterol	Iron	Table salt
+bio_red_mushroom_white	Medium	Which red mushroom with white spots appears in countless fairy tales?	The fly agaric	The death cap	The chanterelle	The puffball
+bio_image_eye_lens	Medium	The image that your eye's lens projects onto the retina is what?	Upside down	Black and white	Tinted blue	Split in two halves
+bio_skin_wrinkles_age	Medium	Skin wrinkles with age mainly because it loses which springy protein?	Collagen	Keratin	Haemoglobin	Insulin
+bio_big_flower_sunflower	Medium	The big 'flower' of a sunflower is really what?	Many tiny flowers packed together	One single giant flower	A ring of coloured leaves	A swollen seed pod
+bio_people_allergic_cats	Medium	Most people who are allergic to cats are reacting to what?	A protein from saliva and skin	The cat's hair itself	Fleas that live on cats	Dust from cat litter
+bio_vitamin_must_people	Medium	Which vitamin must people on a strictly plant-based diet usually take as a supplement?	Vitamin B12	Vitamin C	Vitamin K	Vitamin E
+bio_spring_flower_bulbs	Medium	Which spring flower's bulbs are sometimes mistaken for onions, with poisonous results?	The daffodil	The tulip	The crocus	The snowdrop
+bio_roughly_long_brain	Medium	Roughly how long can the brain go without oxygen before lasting damage begins?	A few minutes	About ten seconds	About an hour	Half a day
+bio_base_maslow_pyramid	Medium	At the base of Maslow's famous pyramid of needs are which needs?	Food, water and sleep	Love and belonging	Respect and status	Self-fulfilment
+bio_newborn_babies_reflex	Medium	Newborn babies have a reflex that makes them do what when their face goes underwater?	Hold their breath	Start crying	Breathe faster	Fall asleep
+bio_body_hamstrings	Medium	Where in the body are the hamstrings?	The back of the thigh	The front of the shin	The upper arm	The lower back
+bio_roughly_blood_taken	Medium	Roughly how much blood is taken in a standard blood donation?	About half a litre	About 2 litres	About 50 ml	About 1.5 litres
+bio_charley_horse	Medium	What is a 'charley horse'?	A sudden painful muscle cramp	A sprained wrist	A horse-riding injury	A bad case of hiccups
+bio_tree_often_living	Medium	Which tree is often called a 'living fossil' because it has barely changed since the age of the dinosaurs?	The ginkgo	The oak	The baobab	The birch
+bio_cold_sores_around	Medium	Cold sores around the lips are caused by what?	A herpes virus	Eating too much salt	A lack of vitamin C	Biting the lip
 bio_mejoza	Hard	What is the cell division that produces sex cells called?	Meiosis	Mitosis	Cytokinesis	Apoptosis
 bio_mendel	Hard	Who is considered the father of genetics for his research on peas?	Gregor Mendel	Charles Darwin	James Watson	Francis Crick
 bio_mozdzek	Hard	Which part of the brain is responsible for balance and movement coordination?	Cerebellum	Cerebral cortex	Medulla oblongata	Hypothalamus
@@ -422,6 +502,35 @@ bio_charles_osborne_holds	Hard	Charles Osborne holds the record for hiccuping no
 bio_more_chromosomes_human	Hard	Which of these has more chromosomes than a human?	A potato	A fruit fly	A garden pea	A rice plant
 bio_mainly_gives_poo	Hard	What mainly gives poo its brown colour?	Leftovers of old red blood cells	Dead bacteria from the gut	Chlorophyll from vegetables	Burnt fat from digestion
 bio_dry_wood_tree	Hard	Most of the dry wood of a tree is built from what?	Carbon dioxide from the air	Minerals from the soil	Water drawn up by the roots	Nitrogen from the soil
+bio_quinoa_not_true	Hard	Quinoa is not a true cereal. It is a close relative of which vegetable?	Spinach	The potato	Lettuce	The carrot
+bio_palm_produces_largest	Hard	Which palm produces the largest seed of any plant?	The coco de mer	The coconut palm	The date palm	The oil palm
+bio_nut_famously_slightly	Hard	Which nut is famously slightly radioactive?	The Brazil nut	The cashew	The macadamia	The pecan
+bio_apples_cherries_strawberries	Hard	Apples, cherries and strawberries all belong to which plant family?	The rose family	The citrus family	The laurel family	The daisy family
+bio_feature_human_face	Hard	Which feature of the human face is found in no other living ape, nor in Neanderthals?	A bony chin	A brow ridge	Eyelashes	Cheekbones
+bio_top_vertebra_spine	Hard	The top vertebra of the spine, which holds up your skull, is named after which Titan?	Atlas	Cronus	Prometheus	Hyperion
+bio_whether_person_wet	Hard	Whether a person has wet or dry earwax depends mostly on what?	A single gene	Their diet	The local climate	How often they wash
+bio_nocebo_effect	Hard	What is the 'nocebo effect'?	Feeling worse because you expect harm	A drug that blocks painkillers	Pain that fades on its own	Getting used to a medicine
+bio_takotsubo_cardiomyopathy_sudden	Hard	Takotsubo cardiomyopathy, a sudden weakening of the heart after severe stress, is nicknamed what?	Broken heart syndrome	Athlete's heart	Heart of stone	Soldier's heart
+bio_artery_unusual_because	Hard	Which artery is unusual because it carries oxygen-poor blood?	The pulmonary artery	The aorta	The femoral artery	The coronary artery
+bio_nostril_usually_breathe	Hard	Why does one nostril usually breathe more easily than the other?	The two take turns swelling up	One nostril is only for smelling	The heart presses on one side	One lung works harder
+bio_sleepwalking_usually_happens	Hard	Sleepwalking usually happens during which kind of sleep?	Deep non-REM sleep	REM sleep	Light dozing	Daytime naps
+bio_alcohol_makes_urinate	Hard	Alcohol makes you urinate more because it blocks which hormone?	Vasopressin	Insulin	Melatonin	Cortisol
+bio_naturalist_hit_upon	Hard	Which naturalist hit upon evolution by natural selection on his own, while sick with fever in the Malay islands?	Alfred Russel Wallace	Thomas Henry Huxley	Jean-Baptiste Lamarck	Joseph Dalton Hooker
+bio_almond_shaped_part	Hard	Which almond-shaped part of the brain is central to feeling fear?	The amygdala	The hippocampus	The thalamus	The cerebellum
+bio_people_prosopagnosia_struggle	Hard	People with prosopagnosia struggle to recognise what?	Faces	Colours	Written words	Musical notes
+bio_lichen_partnership_between	Hard	A lichen is a partnership between a fungus and what?	Algae or cyanobacteria	Mosses or liverworts	Ferns or horsetails	Tree roots
+bio_factor_makes_blood	Hard	The 'Rh' factor that makes a blood type 'positive' or 'negative' is named after which animal?	The rhesus monkey	The rhinoceros	The rabbit	The rat
+bio_rhinoviruses_common_cause	Hard	Rhinoviruses, the most common cause of colds, are named after the Greek word for what?	The nose	The throat	Mucus	Fever
+bio_cases_parasitic_disease	Hard	Cases of which parasitic disease fell from millions a year in the 1980s to only a handful, largely thanks to the Carter Center?	Guinea worm disease	Malaria	Hookworm	Sleeping sickness
+bio_must_dried_red	Hard	Why must dried red kidney beans be boiled hard before eating?	Raw ones hold a toxin	Raw ones are radioactive	Raw ones hold too much sugar	To kill worms inside them
+bio_eating_plenty_poppy	Hard	Eating plenty of poppy seed cake can lead to what surprising result?	A positive opiate drug test	Urine that turns purple	A long fit of hiccups	Temporary night blindness
+bio_sweet_potato_close	Hard	The sweet potato is a close relative of which garden flower?	The morning glory	The tulip	The rose	The sunflower
+bio_each_strand_silk	Hard	Each strand of silk on an ear of maize leads to what?	A single kernel	The tassel at the top	A hidden leaf	A pollen sac
+bio_lettuce_belongs_same	Hard	Lettuce belongs to the same plant family as which flower?	The daisy	The rose	The tulip	The lily
+bio_some_pine_cones	Hard	Some pine cones stay sealed with resin until what opens them?	The heat of a forest fire	Heavy spring rain	A hard frost	Birds pecking at them
+bio_eating_miracle_fruit	Hard	After eating a 'miracle fruit' berry, how do lemons taste?	Sweet	Bitter	Salty	Of nothing at all
+bio_1956_paper_said	Hard	A famous 1956 paper said short-term memory holds roughly how many items?	Seven, plus or minus two	Two or three	About twenty	About a hundred
+bio_cocktail_party_effect	Hard	What is the 'cocktail party effect'?	Picking out one voice in a noisy room	Talking louder in a crowd	Forgetting names right away	Feeling tired among strangers
 bio_amylaza	Expert	Which enzyme in saliva breaks down starch?	Amylase	Pepsin	Lipase	Trypsin
 bio_mrna	Expert	Which type of RNA carries genetic information from the nucleus to the ribosome?	mRNA	tRNA	rRNA	siRNA
 bio_ektoderma	Expert	Which germ layer does the nervous system develop from?	Ectoderm	Mesoderm	Endoderm	Notochord
@@ -470,3 +579,14 @@ bio_heat_proof_enzyme	Expert	The heat-proof enzyme behind PCR tests was first fo
 bio_crop_plant_barbara	Expert	In which crop plant did Barbara McClintock discover 'jumping genes'?	Maize	Wheat	Rice	Peas
 bio_vanilla_grown_outside	Expert	Vanilla grown outside Mexico was useless until a 12-year-old enslaved boy showed, in 1841, how to do what?	Pollinate the flowers by hand	Ferment the pods in salt	Grow the vines from cuttings	Cure the pods in the sun
 bio_darwin_saw_madagascar	Expert	Darwin saw a Madagascar orchid with a nectar spur about 30 cm long and predicted what?	A moth with a tongue as long	A bird with a curved beak as long	A bat that licks deep nectar	A bee that bites into the spur
+bio_people_born_without	Expert	Many people are born without which forearm muscle, with no loss of strength?	The palmaris longus	The brachioradialis	The pronator teres	The flexor digitorum
+bio_welwitschia_desert_plant	Expert	Welwitschia, a desert plant of Namibia, grows how many leaves in its whole life?	Just two	Several hundred	None at all	A new pair every year
+bio_carnivorous_plant_fastest	Expert	Which carnivorous plant has one of the fastest traps in nature, sucking in tiny prey underwater?	The bladderwort	The sundew	The pitcher plant	The butterwort
+bio_some_women_thought	Expert	Some women are thought to be 'tetrachromats'. What does that mean?	Their eyes have four kinds of colour cones	They can hear four octaves higher	They have four blood types mixed	They can taste four extra flavours
+bio_2002_lydia_fairchild	Expert	In 2002 Lydia Fairchild was told DNA tests showed she was not her children's mother. Why?	She was a chimera with two sets of DNA	The lab had mixed up her samples	She had a rare form of blood cancer	Her babies were swapped at birth
+bio_cattle_disease_declared	Expert	Which cattle disease, declared wiped out in 2011, was only the second disease ever eradicated?	Rinderpest	Foot-and-mouth disease	Mad cow disease	Anthrax
+bio_kuru_laughing_death	Expert	Kuru, the 'laughing death' of Papua New Guinea, spread through which practice?	Eating the dead at funerals	Drinking river water	Chewing betel nuts	Sharing tattoo needles
+bio_ergot_fungus_blamed	Expert	Ergot, a fungus blamed for medieval outbreaks of 'St Anthony's fire', grows mainly on which grain?	Rye	Rice	Maize	Oats
+bio_jamaica_national_fruit	Expert	Jamaica's national fruit, eaten with saltfish, is poisonous unless fully ripe. What is it?	Ackee	Breadfruit	Soursop	Jackfruit
+bio_pellagra_once_common	Expert	Pellagra, once common where people lived mainly on maize, is caused by a lack of which vitamin?	Niacin (B3)	Vitamin C	Vitamin D	Vitamin A
+bio_tiny_worm_thousand	Expert	Which tiny worm, with only about a thousand body cells, was the first animal to have its whole genome read?	The worm C. elegans	The earthworm	The tapeworm	The leech

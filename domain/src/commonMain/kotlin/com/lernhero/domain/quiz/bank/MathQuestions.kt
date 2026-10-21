@@ -104,7 +104,20 @@ object MathQuestions {
         q("mat_squares_make_grid", "How many squares make up the grid in a game of noughts and crosses (tic-tac-toe)?", "9", listOf("6", "12", "16"), E),
         q("mat_number_comes_right", "Which number name comes right after million, billion and trillion?", "Quadrillion", listOf("Quintillion", "Septillion", "Googol"), E),
         q("mat_least_years_old", "At least how many years old is a 'centenarian'?", "100", listOf("50", "1,000", "80"), E),
-        q("mat_dice_games_roll", "In dice games, what does a roll of 'snake eyes' mean?", "Two ones", listOf("Two sixes", "A one and a six", "Two threes"), E)
+        q("mat_dice_games_roll", "In dice games, what does a roll of 'snake eyes' mean?", "Two ones", listOf("Two sixes", "A one and a six", "Two threes"), E),
+        q("mat_write_out_all", "If you write out all the whole numbers from 1 to 10, how many digits do you write in total?", "11", listOf("10", "12", "9"), E),
+        q("mat_number_both_sum", "Which number is both the sum and the product of 1, 2 and 3?", "6", listOf("5", "7", "9"), E),
+        q("mat_dots_total_double", "How many dots are there in total on the 'double six' domino tile?", "12", listOf("6", "10", "36"), E),
+        q("mat_face_north_turn", "You face north and turn 90 degrees clockwise. Which way are you facing now?", "East", listOf("West", "South", "North-west"), E),
+        q("mat_hours_clock_hour", "How many hours does a clock's hour hand take to go once around the whole face?", "12", listOf("24", "6", "1"), E),
+        q("mat_best_five_series", "In a 'best of five' series of matches, how many wins do you need to take the series?", "3", listOf("2", "4", "5"), E),
+        q("mat_calendar_year_months", "In a calendar year, how many months are 31 days long?", "Seven", listOf("Six", "Five", "Eight"), E),
+        q("mat_shape_cross_section", "What shape is the cross-section of a Toblerone chocolate bar?", "A triangle", listOf("A square", "A hexagon", "A semicircle"), E),
+        q("mat_pack_gum_costs", "A pack of gum costs 75 cents and you pay with \$2. How much change do you get?", "\$1.25", listOf("\$1.35", "\$1.15", "\$1.75"), E),
+        q("mat_film_starts_lasts", "A film starts at 7:45 p.m. and lasts 2 hours 30 minutes. When does it end?", "10:15 p.m.", listOf("10:45 p.m.", "9:15 p.m.", "10:30 p.m."), E),
+        q("mat_small_squares_make", "How many small squares make up a standard Sudoku grid?", "81", listOf("64", "72", "100"), E),
+        q("mat_ship_rope_ladder", "A ship's rope ladder has rungs 25 cm apart, the lowest just touching the sea. The tide rises 1 m. How many rungs are now underwater?", "None", listOf("Four", "Three", "Five"), E),
+        q("mat_lasts_longest", "Which of these lasts the longest?", "100 minutes", listOf("1.5 hours", "5,000 seconds", "95 minutes"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -222,7 +235,28 @@ object MathQuestions {
         q("mat_french_number_quatre", "In French, the number 80 is 'quatre-vingts'. What does that literally mean?", "Four twenties", listOf("Eight tens", "Four tens doubled", "Twice forty"), M),
         q("mat_britain_seven_sided", "Britain's seven-sided 50p coin has curved edges. What special property does that give it?", "The same width in every direction", listOf("It weighs less than a round coin", "It cannot be easily forged", "It stacks without sliding"), M),
         q("mat_die_hard_vengeance", "In 'Die Hard with a Vengeance', the heroes must measure exactly 4 gallons using jugs of which sizes?", "3 and 5 gallons", listOf("2 and 7 gallons", "6 and 9 gallons", "2 and 8 gallons"), M),
-        q("mat_italy_number_traditionally", "In Italy, which number is traditionally considered unlucky, rather than 13?", "17", listOf("4", "9", "11"), M)
+        q("mat_italy_number_traditionally", "In Italy, which number is traditionally considered unlucky, rather than 13?", "17", listOf("4", "9", "11"), M),
+        q("mat_tiles_standard_double", "How many tiles are in a standard double-six set of dominoes?", "28", listOf("36", "21", "32"), M),
+        q("mat_farmyard_holds_chickens", "A farmyard holds chickens and cows: 10 heads and 28 legs in all. How many cows are there?", "4", listOf("6", "3", "5"), M),
+        q("mat_different_totals_roll", "How many different totals can you roll with two ordinary dice?", "11", listOf("12", "36", "10"), M),
+        q("mat_flip_fair_coin", "You flip a fair coin twice. What is the chance it lands the same way both times?", "1 in 2", listOf("1 in 4", "1 in 3", "3 in 4"), M),
+        q("mat_bigger_cubed_squared", "Which is bigger: 2 cubed or 3 squared?", "3 squared", listOf("2 cubed", "They are equal", "Neither - both are 6"), M),
+        q("mat_third_off_shirt", "After 'a third off', a shirt costs \$20. What was its original price?", "\$30", listOf("\$26.67", "\$25", "\$40"), M),
+        q("mat_largest_number_mondays", "What is the largest number of Mondays a single year can have?", "53", listOf("52", "54", "55"), M),
+        q("mat_prime_numbers_end", "How many prime numbers end in the digit 5?", "Just one", listOf("None", "Two", "Infinitely many"), M),
+        q("mat_any_group_people", "In any group of 13 people, which of these must at least two of them share?", "A birth month", listOf("A birthday", "A first initial", "A birth year"), M),
+        q("mat_shape_get_slice", "What shape do you get when you slice a cone straight across, parallel to its base?", "A circle", listOf("An ellipse", "A triangle", "A parabola"), M),
+        q("mat_shape_get_spinning", "Which 3D shape do you get by spinning a rectangle around one of its sides?", "A cylinder", listOf("A cone", "A sphere", "A cube"), M),
+        q("mat_two_coins_add", "Two US coins add up to 30 cents, and one of them is not a nickel. What are they?", "A quarter and a nickel", listOf("Two 15-cent coins", "Three dimes", "A dime and a quarter"), M),
+        q("mat_roughly_old_000th", "Roughly how old are you on the 10,000th day of your life?", "About 27", listOf("About 18", "About 40", "About 13"), M),
+        q("mat_number_written_binary", "How is the number 5 written in binary?", "101", listOf("110", "111", "100"), M),
+        q("mat_apart_december_january", "Apart from December and January, which two months in a row both have 31 days?", "July and August", listOf("March and April", "May and June", "October and November"), M),
+        q("mat_numbers_divided_without", "Which of these numbers can be divided by 3 without a remainder?", "3456", listOf("1234", "2345", "4567"), M),
+        q("mat_get_multiply_together", "What do you get if you multiply together all the digits on a phone keypad?", "0", listOf("362,880", "3,628,800", "45"), M),
+        q("mat_lottery_likely_draw", "In a lottery, how likely is the draw 1, 2, 3, 4, 5, 6 compared with any other set of six numbers?", "Exactly as likely", listOf("Far less likely", "Slightly less likely", "More likely"), M),
+        q("mat_clock_showing_exactly", "A clock showing exactly 3:00 is seen in a mirror. What time does the reflection appear to show?", "9:00", listOf("3:00", "6:00", "12:15"), M),
+        q("mat_double_length_square", "If you double the length of a square's sides, how many times bigger does its area get?", "Four", listOf("Two", "Three", "Eight"), M),
+        q("mat_comes_next_120", "What comes next: 1, 2, 6, 24, 120, ...?", "720", listOf("240", "600", "144"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -296,7 +330,21 @@ object MathQuestions {
         q("mat_single_true_length", "Why is there no single 'true' length for a coastline like Britain's?", "The finer the ruler, the longer it gets", listOf("Tides move it by kilometres each day", "Countries measure in different units", "Erosion changes it every year"), H),
         q("mat_1897_lawmakers_state", "In 1897, lawmakers in which US state nearly passed a bill that would have changed the value of pi?", "Indiana", listOf("Texas", "Kansas", "Ohio"), H),
         q("mat_drive_town_return", "You drive to a town at 60 km/h and return the same way at 40 km/h. What is your average speed?", "48 km/h", listOf("50 km/h", "45 km/h", "52 km/h"), H),
-        q("mat_rule_roughly_long", "By the 'rule of 72', roughly how long does money take to double at 6% interest a year?", "12 years", listOf("6 years", "18 years", "36 years"), H)
+        q("mat_rule_roughly_long", "By the 'rule of 72', roughly how long does money take to double at 6% interest a year?", "12 years", listOf("6 years", "18 years", "36 years"), H),
+        q("mat_pieces_cut_flat", "What is the most pieces you can cut a flat pizza into with 3 straight cuts, without moving the pieces?", "7", listOf("6", "8", "9"), H),
+        q("mat_knockout_tennis_tournament", "A knockout tennis tournament starts with 64 players. How many matches are played in total to find the champion?", "63", listOf("32", "64", "126"), H),
+        q("mat_2096_leap_year", "2096 is a leap year. Which year is the next leap year after it?", "2104", listOf("2100", "2108", "2098"), H),
+        q("mat_largest_number_friday", "What is the largest number of Friday the 13ths that a single calendar year can have?", "Three", listOf("Two", "Four", "Five"), H),
+        q("mat_square_number_like", "A square number, like 25 or 64, can never end in which digit?", "7", listOf("1", "6", "9"), H),
+        q("mat_angles_five_tips", "What do the angles at the five tips of a five-pointed star add up to?", "180 degrees", listOf("360 degrees", "540 degrees", "300 degrees"), H),
+        q("mat_counting_february_people", "Counting 29 February, how many people must be in a room to make it certain that two share a birthday?", "367", listOf("366", "365", "183"), H),
+        q("mat_painted_3x3x3_cube", "A painted 3x3x3 cube is cut into 27 small cubes. How many of the small cubes have no paint on them at all?", "1", listOf("0", "3", "8"), H),
+        q("mat_take_532_subtract", "Take 532, subtract its reverse 235, then add the result to its own reverse. What do you get?", "1089", listOf("999", "1098", "1188"), H),
+        q("mat_pair_different_whole", "Which pair of different whole numbers a and b gives the same result for a to the power of b and b to the power of a?", "2 and 4", listOf("2 and 3", "3 and 9", "4 and 8"), H),
+        q("mat_fraction_matches_six", "Which fraction matches pi to six decimal places?", "355/113", listOf("22/7", "333/106", "311/99"), H),
+        q("mat_french_mathematician_died", "Which French mathematician died after a duel at just 20, having written out his ideas the night before?", "Evariste Galois", listOf("Niels Henrik Abel", "Blaise Pascal", "Joseph Fourier"), H),
+        q("mat_walking_around_any", "Walking around any convex polygon, the turns you make at its corners (the exterior angles) always add up to what?", "360 degrees", listOf("180 degrees", "540 degrees", "It depends on the sides"), H),
+        q("mat_hen_half_lays", "If a hen and a half lays an egg and a half in a day and a half, how many eggs does one hen lay in three days?", "2", listOf("3", "1", "4.5"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -350,6 +398,8 @@ object MathQuestions {
         q("maty_zenon", "Which Greek thinker argued that swift Achilles could never overtake a tortoise?", "Zeno of Elea", listOf("Pythagoras", "Euclid", "Archimedes"), X),
         q("mat_take_four_digit", "Take a four-digit number (not all digits alike), subtract its digits in ascending order from them in descending order, and repeat. Where do you always end up?", "6174", listOf("1089", "9999", "0"), X),
         q("mat_220_284_history", "220 and 284 are history's most famous pair of 'amicable numbers'. What links them?", "Each one's divisors add up to the other", listOf("Both are sums of two cubes", "Their product is a perfect square", "Both are triangular numbers"), X),
-        q("mat_euler_stunned_mathematicians", "Euler stunned mathematicians by showing that 1 + 1/4 + 1/9 + 1/16 + ... equals what?", "Pi squared over 6", listOf("Exactly 2", "The golden ratio", "e minus 1"), X)
+        q("mat_euler_stunned_mathematicians", "Euler stunned mathematicians by showing that 1 + 1/4 + 1/9 + 1/16 + ... equals what?", "Pi squared over 6", listOf("Exactly 2", "The golden ratio", "e minus 1"), X),
+        q("mat_chicken_mcnuggets_once", "Chicken McNuggets were once sold only in boxes of 6, 9 and 20. What is the largest number of nuggets you could NOT buy exactly?", "43", listOf("37", "47", "59"), X),
+        q("mat_larger_power_power", "Which is larger: e to the power of pi, or pi to the power of e?", "e to the power of pi", listOf("pi to the power of e", "They are exactly equal", "No one has proved either"), X)
     )
 }

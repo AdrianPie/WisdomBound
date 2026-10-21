@@ -122,6 +122,37 @@ sci_bicycle_reflector_shine	Easy	Why does a bicycle reflector shine at night, th
 sci_statue_liberty_green	Easy	Why is the Statue of Liberty green?	Its copper skin has corroded	It was painted green in 1906	Algae grows on its surface	It is made of green bronze
 sci_red_apple_look	Easy	Why does a red apple look red?	It reflects red light and absorbs the rest	It gives off a faint red light of its own	It absorbs red light and reflects the rest	It turns white light red inside its skin
 sci_see_beam_torch	Easy	Why can you see the beam of a torch in fog?	The droplets scatter its light	The fog glows when light hits it	The beam heats the fog white	The torch light turns the fog to steam
+sci_planet_smallest_solar	Easy	Which planet is the smallest in the Solar System?	Mercury	Mars	Venus	Uranus
+sci_sun_look_bigger	Easy	Why does the Sun look so much bigger and brighter than all the other stars?	It is far closer to us	It is the largest star in the galaxy	It is the hottest star there is	It is the youngest star nearby
+sci_bright_stars_line	Easy	How many bright stars line up to form Orion's Belt?	Three	Five	Seven	Two
+sci_bus_passengers_lurch	Easy	Why do bus passengers lurch forward when the driver brakes hard?	Their bodies keep moving forward	Air in the bus rushes forward	The floor tips them forward	Gravity briefly gets stronger
+sci_makes_whistling_kettle	Easy	What makes a whistling kettle whistle?	Steam squeezing through a small hole	Water rattling against the lid	The hot metal stretching	Bubbles bursting in the spout
+sci_clear_night_far	Easy	On a clear night far from city lights, what does the Milky Way look like?	A faint, milky band across the sky	A bright spiral right overhead	A single fuzzy star	A red glow near the horizon
+sci_glow_dark_stars	Easy	Glow-in-the-dark stars on a bedroom ceiling keep shining after the light goes off. Why?	They give back light they soaked up	A tiny battery powers them	They react with oxygen in the air	Body heat in the room lights them
+sci_glass_plate_inside	Easy	Why does the glass plate inside a microwave oven turn round?	To heat the food more evenly	To stop the plate from cracking	To keep the motor cool	To keep the door sealed tight
+sci_ice_lolly_straight	Easy	Why can an ice lolly straight from the freezer stick to your tongue?	The moisture on your tongue freezes	Sugar in the lolly acts like glue	Static electricity holds it there	The cold makes your tongue swell
+sci_time_day_shadow	Easy	At what time of day is your shadow shortest on a sunny day?	Around midday	Just after sunrise	Late in the afternoon	Just before sunset
+sci_ambulance_often_written	Easy	Why is 'AMBULANCE' often written back to front on the front of the vehicle?	So drivers can read it in their mirrors	So it is harder for fakes to copy	Because of an old printing mistake	So it looks more like a warning
+sci_planet_king_roman	Easy	Which planet is named after the king of the Roman gods?	Jupiter	Saturn	Mars	Mercury
+sci_planet_roman_god	Easy	Which planet is named after the Roman god of war?	Mars	Jupiter	Saturn	Mercury
+sci_dog_whistle_seem	Easy	Why does a dog whistle seem silent to people?	Its note is too high for us to hear	Its note is too low for us to hear	It only makes a puff of air	It works only when wet
+sci_doctors_use_show	Easy	What do doctors use to show an unborn baby on a screen?	Ultrasound	X-rays	Infrared light	Microwaves
+sci_astronomers_call_planet	Easy	What do astronomers call a planet that orbits a star other than the Sun?	An exoplanet	A dwarf planet	A protostar	A quasar
+sci_pan_water_come	Easy	Why does a pan of water come to the boil sooner with a lid on?	The lid traps the heat and steam	The lid reflects light into the water	The lid's weight squeezes the water	The lid stops oxygen getting in
+sci_colour_runs_along	Easy	Which colour runs along the outer edge of an ordinary rainbow?	Red	Violet	Green	Blue
+sci_sheltering_under_lone	Easy	Why is sheltering under a lone tree a bad idea in a thunderstorm?	Lightning tends to strike tall objects	Rain runs down the trunk and floods	Wet leaves attract static sparks	Trees give off gas that burns
+sci_racing_cyclists_crouch	Easy	Why do racing cyclists crouch low over their handlebars?	To cut air resistance	To see the road better	To grip the pedals harder	To keep their legs warm
+sci_ever_see_moon	Easy	Can you ever see the Moon in the daytime?	Yes, on many days of the month	No, never	Only during a solar eclipse	Only from the North Pole
+sci_metal_saucepans_usually	Easy	Why do metal saucepans usually have plastic or wooden handles?	Those materials let heat through poorly	They make the pans heavier and steadier	Metal handles would rust in the steam	They stop the pans from sparking
+sci_blow_balloon_let	Easy	Blow up a balloon and let it go without tying it. Why does it zoom around the room?	The escaping air pushes it the other way	The air inside is lighter than the room's	Static from your hands drives it	The rubber springs back and flings it
+sci_funfair_mirror_make	Easy	Why does a funfair mirror make you look stretched and wobbly?	Its surface is curved	Its glass is tinted	It is lit from below	It is made of thin metal
+sci_happens_pour_cooking	Easy	What happens when you pour cooking oil into a glass of water?	The oil floats on top	The oil sinks to the bottom	The oil dissolves completely	The water turns into foam
+sci_car_journey_moon	Easy	On a car journey, why does the Moon seem to follow you?	It is so far away that it barely shifts	It really moves at the speed of the car	The car's window bends its light	Its gravity is pulling on the car
+sci_new_jar_jam	Easy	Why does a new jar of jam often make a 'pop' when you first open it?	Air rushes in under the lid	Gas from the jam escapes	The glass cracks a tiny bit	The sugar crystals snap
+sci_scientist_pictured_sticking	Easy	Which famous scientist was pictured sticking out his tongue in a 1951 photo?	Albert Einstein	Niels Bohr	Enrico Fermi	Richard Feynman
+sci_lightning_conductor_tall	Easy	What does a lightning conductor on a tall building do?	Leads a strike safely to the ground	Stops lightning from forming	Stores lightning to use as power	Pushes thunderclouds away
+sci_happens_note_guitar	Easy	What happens to the note of a guitar string when you tighten it?	It gets higher	It gets lower	It only gets louder	It stays the same
+sci_astronauts_iss_tie	Easy	Why do astronauts on the ISS tie their sleeping bags to the wall?	So they don't drift off while asleep	To keep warm against the hull	So the station stays balanced	To stop them from snoring
 sci_jowisz	Medium	Which planet of the Solar System is the largest?	Jupiter	Saturn	Neptune	Uranus
 sci_kopernik	Medium	Who proved that the Earth orbits the Sun, not the other way around?	Nicolaus Copernicus	Isaac Newton	Galileo Galilei	Johannes Kepler
 sci_grawitacja	Medium	Who formulated the law of universal gravitation?	Isaac Newton	Albert Einstein	Nikola Tesla	Michael Faraday
@@ -317,6 +348,54 @@ sci_white_shirts_glow	Medium	Why do white T-shirts glow under 'black light' in c
 sci_moon_saturn_looks	Medium	Which moon of Saturn looks like the Death Star from 'Star Wars', thanks to one giant crater?	Mimas	Titan	Rhea	Iapetus
 sci_roughly_long_sunlight	Medium	Roughly how long does sunlight take to reach distant Pluto?	About 5 hours	About 30 minutes	About 3 days	About 2 weeks
 sci_steady_100_roughly	Medium	At a steady 100 km/h, roughly how long would a drive to the Moon take?	About 5 months	About 5 days	About 5 weeks	About 5 years
+sci_static_shocks_door	Medium	Why are static shocks from door handles more common in winter?	Dry air lets charge build up on you	Cold metal stores up electricity	The Earth's magnetism is stronger	Short days leave the air charged
+sci_roughly_fluffy_white	Medium	Roughly how much does a fluffy white cumulus cloud weigh?	Hundreds of tonnes	Under a kilogram	About 50 kg	About 2 tonnes
+sci_ice_cubes_often	Medium	Why do ice cubes often crack when dropped into a drink?	Their surface warms and expands before the core	The drink's acid eats into them	Gas bubbles from the drink split them	Sugar in the drink freezes inside them
+sci_home_made_ice	Medium	Why are home-made ice cubes often cloudy in the middle?	Trapped air and impurities	Frost grows inside them	Freezer gas seeps into them	Light cannot reach the centre
+sci_singer_voice_shatter	Medium	How can a singer's voice shatter a wine glass?	By matching the glass's natural note	By heating the glass with sound	By chilling it with cold breath	By sucking the air out of it
+sci_soldiers_told_break	Medium	Why are soldiers told to break step when marching over a bridge?	Marching in step could set it swaying	Boots in step wear out the road	The noise could crack the stonework	It spreads their weight more evenly
+sci_sunny_day_beach	Medium	On a sunny day, why does beach sand get much hotter than the sea?	Water needs far more heat to warm up	Sea salt reflects the sunlight away	Sand makes heat of its own	Fish keep the water cool
+sci_should_never_throw	Medium	Why should you never throw water on a burning chip pan?	It turns to steam and hurls burning oil out	It makes the oil burn chemically hotter	Water and oil form an explosive gas	It conducts electricity into the pan
+sci_log_fire_crackle	Medium	Why does a log fire crackle and pop?	Water and sap inside burst out as steam	The wood's salt crystals explode	Insects hidden in the wood pop	Ash particles crash into each other
+sci_chocolate_melt_mouth	Medium	Why does chocolate melt in your mouth but not on the shelf?	Cocoa butter melts just below body heat	Your saliva is acidic enough to burn it	Chewing heats it to about 60 C	Mouth bacteria digest it at once
+sci_warm_fizzy_drink	Medium	Why does a warm fizzy drink go flat faster than a cold one?	Gas dissolves less well in warm liquid	Warm drinks contain less sugar	Heat bursts the bubbles' skins	The warm can soaks up the gas
+sci_ice_cubes_float	Medium	Ice cubes float in a glass filled to the brim with water. What happens as they melt?	The water level stays the same	The glass overflows	The level drops a lot	The level rises by half
+sci_hailstones_grow_big	Medium	How do hailstones grow so big?	Updrafts toss them up and down in the cloud	They freeze together on the ground	They form from frozen sea spray	They grow around volcanic dust
+sci_usual_explanation_rare	Medium	What is the usual explanation for rare reports of fish or frogs falling with rain?	Waterspouts sweep them up from lakes	They hatch from eggs inside clouds	Birds drop them in a panic	Floods wash them onto roofs
+sci_thundersnow	Medium	What is 'thundersnow'?	A thunderstorm that brings snow	Snow that falls with a loud hiss	An avalanche set off by thunder	Hail that sounds like thunder
+sci_causes_pale_ring	Medium	What causes a pale ring of light around the Moon on some nights?	Ice crystals in high, thin cloud	The Moon's own thin atmosphere	Dust from meteor showers	Light bouncing off the oceans
+sci_moonbow	Medium	What is a 'moonbow'?	A rainbow made by moonlight	A crescent Moon lying on its back	The Moon's shadow on clouds	A rainbow seen from the Moon
+sci_clouds_look_white	Medium	Why do clouds look white?	Their droplets scatter all colours alike	They are made of fine white dust	Sunlight bleaches the water in them	They reflect snow lying on the ground
+sci_hear_someone_talking	Medium	Why can you hear someone talking round a corner, but not see them?	Sound waves bend round obstacles far more	Sound travels faster than light	Walls give off sound of their own	Light can only travel in the dark
+sci_light_travel_round	Medium	Light could travel round the Earth roughly how many times in one second?	About 7	About 70	About 1	About 700
+sci_full_moon_rise	Medium	Why does a full moon rise at about the time the Sun sets?	It sits opposite the Sun in the sky	The Moon only orbits at night	Earth's shadow lets it appear	Moonlight builds up through the day
+sci_word_planet_originally	Medium	What does the word 'planet' originally mean in Greek?	Wanderer	Giant	Light-bearer	Child of the Sun
+sci_late_1800s_some	Medium	In the late 1800s, what did some astronomers believe they had seen on Mars?	Canals built by Martians	Rings like Saturn's	A huge carved face	Herds of animals
+sci_shine_red_light	Medium	Shine a red light and a green light onto the same spot of a white wall. What colour do you see?	Yellow	Brown	Purple	Grey
+sci_colour_common_northern	Medium	Which colour is the most common in the northern lights?	Green	Purple	Red	Blue
+sci_two_planets_moons	Medium	Which two planets have no moons at all?	Mercury and Venus	Mars and Venus	Mercury and Mars	Venus and Uranus
+sci_largest_four_rocky	Medium	Which is the largest of the four rocky planets?	Earth	Venus	Mars	Mercury
+sci_jet_engine_burns	Medium	A jet engine burns its fuel with oxygen from the air. What must a rocket do instead?	Carry its own oxidiser with the fuel	Push against the air around it	Collect oxygen from space as it flies	Run on solar power alone
+sci_roughly_long_year	Medium	Roughly how long is a year on Mars?	About two Earth years	About six Earth months	About five Earth years	About the same as Earth's
+sci_meteor_showers_happen	Medium	Most meteor showers happen when the Earth passes through what?	Dust left behind by a comet	The tail of the Moon	The Sun's magnetic field	A cloud of Jupiter's gas
+sci_north_star_but	Medium	The North Star is famous, but roughly where does it rank among the brightest stars in the night sky?	Only around 50th	It is the brightest	It is the second brightest	In the top five
+sci_seismometers_left_moon	Medium	What did seismometers left on the Moon by Apollo astronauts detect?	Moonquakes	Underground rivers	Active volcanoes	Living microbes
+sci_drinking_water_iss	Medium	What is much of the drinking water on the ISS recycled from?	Astronauts' urine and sweat	Melted comet ice	Water mined on the Moon	Seawater shipped up in tanks
+sci_nasa_vomit_comet	Medium	What is NASA's 'Vomit Comet'?	A plane flying arcs to mimic weightlessness	A comet with a sickly green tail	A rocket ride for space tourists	A spinning chair for astronaut tests
+sci_astronomers_call_line	Medium	What do astronomers call the line between day and night on a planet or moon?	The terminator	The meridian	The horizon	The equator
+sci_damp_sand_hold	Medium	Why does damp sand hold together for sandcastles, unlike dry sand?	Thin water bridges stick the grains	Salt in the water glues them	Wet grains become magnetic	The sand partly dissolves
+sci_car_wing_mirrors	Medium	Why do car wing mirrors warn that objects are closer than they appear?	The curved glass makes things look smaller	The glass is tinted to cut the glare	Engine vibration blurs the image	The mirror shows a slightly delayed image
+sci_sitting_campfire_heat	Medium	Sitting by a campfire, how does most of its heat reach your face?	As infrared radiation	Through the ground	Only via the hot smoke	As sound waves
+sci_big_dust_storms	Medium	How big can dust storms on Mars grow?	Big enough to cover the whole planet	About the size of a city	About the size of a football pitch	Only a few metres across
+sci_lava_lamp_blobs	Medium	In a lava lamp, why do the blobs rise and fall?	The bulb's heat makes them less dense	A small pump pushes them around	Magnets in the base move them	Gas bubbles inside lift them up
+sci_egg_turn_solid	Medium	Why does an egg turn solid when you boil it?	Heat changes the shape of its proteins	The water inside it boils away	It soaks up minerals from the water	The shell squeezes it tight
+sci_snow_squeak_under	Medium	Why does snow squeak under your boots on a very cold day?	Ice crystals snap as they are crushed	Trapped air whistles out of it	Its salt crystals rub together	The frozen ground below creaks
+sci_solar_flare	Medium	What is a 'solar flare'?	A sudden burst of energy from the Sun	A ring of light around the Sun	A cooler patch on the Sun's surface	A comet falling into the Sun
+sci_astronomers_call_point	Medium	What do astronomers call the point in the sky directly above you?	The zenith	The nadir	The apex	The meridian
+sci_gives_uranus_neptune	Medium	What gives Uranus and Neptune their blue colour?	Methane in their atmospheres	Oceans of liquid water	Blue copper dust	Reflected light from Saturn
+sci_see_reflection_window	Medium	Why can you see your reflection in a window at night, but hardly at all by day?	By day the light from outside swamps it	Glass reflects only lamplight	Cold night air makes glass shinier	Windows are cleaned in the evening
+sci_mars_seasons_like	Medium	Why does Mars have seasons, much like Earth?	Its axis is tilted about as much as Earth's	Its two moons pull it towards the Sun	Its oceans freeze and thaw	Its dust storms come every few months
+sci_thunder_rumble_instead	Medium	Why does thunder rumble on, instead of making one short bang?	Sound comes from all along the long bolt	Lightning heats the air slowly	Clouds are crashing into each other	Raindrops make the air vibrate
 sci_einstein	Hard	Who formulated the theory of relativity?	Albert Einstein	Isaac Newton	Niels Bohr	Max Planck
 sci_penicylina	Hard	Who discovered penicillin?	Alexander Fleming	Louis Pasteur	Robert Koch	Jonas Salk
 sci_sila	Hard	What is the SI unit of force?	Newton	Joule	Watt	Pascal
@@ -437,6 +516,38 @@ sci_drops_water_skitter	Hard	Why do drops of water skitter around on a very hot 
 sci_car_speeds_way	Hard	When a car speeds up, which way does a helium balloon inside it lean?	Forwards	Backwards	It stays upright	Sideways
 sci_lighter_litre_dry	Hard	Which is lighter: a litre of dry air or a litre of humid air at the same temperature?	Humid air	Dry air	They weigh exactly the same	It depends on the wind
 sci_apollo_astronauts_said	Hard	Apollo astronauts said Moon dust smelled like what?	Spent gunpowder	Seared steak	Wet sand	Burnt sugar
+sci_coriolis_effect_decide	Hard	Does the Coriolis effect decide which way water swirls down a bathroom sink?	No, the sink's shape matters far more	Yes, clockwise in the north	Yes, anticlockwise in the north	Only in sinks near the equator
+sci_elmo_fire_seen	Hard	What is 'St Elmo's fire', seen by sailors on masts during storms?	A glowing electrical discharge	Burning gas rising from the sea	Moonlight reflected on wet ropes	Lightning striking the waves
+sci_planets_usually_shine	Hard	Why do planets usually shine more steadily than stars?	They look like tiny discs, not points	They give off their own steady light	They lie above the Earth's air	They are always lit by the Moon
+sci_space_rockets_launched	Hard	Why are many space rockets launched from sites close to the equator?	The Earth's spin gives them a free boost	The air there is much drier	There is far less lightning there	The ground there is more solid
+sci_mars_rover_built	Hard	Which Mars rover, built for a 90-day mission, kept working for about 14 years?	Opportunity	Spirit	Sojourner	Zhurong
+sci_polar_ice_caps	Hard	What are the polar ice caps of Mars made of?	Water ice and frozen carbon dioxide	Frozen methane and ammonia	Salt crystals and sand	Frozen nitrogen only
+sci_according_2018_study	Hard	According to a 2018 study, what would the clouds of Uranus smell like?	Rotten eggs	Burnt toast	Bitter almonds	Fresh rain
+sci_scientists_think_may	Hard	What do scientists think may fall like rain deep inside Uranus and Neptune?	Diamonds	Molten iron	Liquid gold	Glass beads
+sci_largest_moon_solar	Hard	The largest moon in the Solar System is wider than which planet?	Mercury	Mars	Venus	Earth
+sci_happening_jupiter_great	Hard	What has been happening to Jupiter's Great Red Spot for over a century?	It has been shrinking	It has been growing	It has turned blue	It has split in two
+sci_saturn_main_rings	Hard	Saturn's main rings are hundreds of thousands of km wide. Roughly how thick are they?	Often just tens of metres	About 1,000 kilometres	About 50,000 kilometres	About 10,000 kilometres
+sci_roughly_long_sun_2	Hard	Roughly how long is the Sun's cycle of rising and falling sunspot activity?	About 11 years	About 1 year	About 100 years	About 3 months
+sci_roughly_hot_sun	Hard	Roughly how hot is the Sun's thin outer atmosphere?	Over a million degrees	About 1,000 degrees	About 5,500 degrees	About 100 degrees
+sci_comet_heads_back	Hard	As a comet heads back away from the Sun, which way does its tail point?	Ahead of it, away from the Sun	Behind it, towards the Sun	Straight down, towards Earth	Towards the nearest planet
+sci_constellation_not_classic	Hard	Which constellation, not one of the 12 classic zodiac signs, does the Sun also pass through each year?	Ophiuchus	Orion	Pegasus	Cassiopeia
+sci_distant_thing_people	Hard	What is the most distant thing most people can see with the naked eye?	The Andromeda Galaxy	The Orion Nebula	The Pleiades	Polaris
+sci_roughly_long_light	Hard	Roughly how long does light take to cross the Milky Way?	About 100,000 years	About 100 years	About 10 million years	About 1,000 years
+sci_wow_signal_1977	Hard	What was the 'Wow!' signal of 1977?	A strong, unexplained radio signal from space	The first sound recorded on another planet	A message sent back by Voyager	A huge meteor seen over Ohio
+sci_roughly_hot_moon	Hard	Roughly how hot can the Moon's surface get at midday near its equator?	About 120 C	About 20 C	About 500 C	About -20 C
+sci_sometimes_see_dark	Hard	Why can you sometimes see the 'dark' part of a crescent Moon faintly glowing?	Sunlight reflected off the Earth	Its rocks glow after a hot day	Light from the Milky Way	Lava glowing beneath its crust
+sci_not_solar_eclipse	Hard	Why is there not a solar eclipse every single month?	The Moon's orbit is tilted to Earth's	The Moon is too small most months	Clouds hide most of them	The Sun drifts away each month
+sci_roughly_long_total	Hard	At most, roughly how long can a total solar eclipse last at one spot?	About 7 minutes	About 1 hour	About 30 seconds	About 3 hours
+sci_giant_infrared_space	Hard	The giant infrared space telescope launched in 2021 works roughly how far from Earth?	About 1.5 million km	About 400 km	About 36,000 km	About 150 million km
+sci_wrong_space_telescope	Hard	What was wrong with the famous space telescope launched in 1990 when it first reached orbit?	Its main mirror was the wrong shape	It was put into the wrong orbit	It had no camera on board	Its doors would not open
+sci_country_probes_land	Hard	Which country's probes were the first to land on Venus and send back pictures?	The Soviet Union	The USA	Japan	China
+sci_dwarf_planet_discovery	Hard	Which dwarf planet's discovery in 2005 led to Pluto losing its planet status?	Eris	Ceres	Sedna	Charon
+sci_microwave_oven_door	Hard	Why does a microwave oven door have a metal mesh in its window?	Its holes are too small for microwaves	It stops the glass from cracking	It reflects light onto the food	It keeps the steam inside
+sci_old_style_filament	Hard	Why do old-style filament light bulbs usually blow just as you switch them on?	The cold filament lets a surge of current in	The switch throws a spark into the bulb	The gas inside expands all at once	The cold glass cracks in the heat
+sci_steam_kettle_scald	Hard	Why can steam from a kettle scald worse than boiling water at the same temperature?	It gives out extra heat as it condenses	It moves faster, so it hits harder	It carries acid from the kettle	It is always far above 100 C
+sci_milk_boil_over	Hard	Why does milk boil over in a pan when water does not?	Its proteins form a skin that traps steam	It boils at a much lower temperature	Its fat explodes when heated	It holds dissolved gas, like soda
+sci_very_still_bottled	Hard	Very still bottled water can stay liquid below 0 C in a freezer. What happens when you tap it?	It turns to slush within seconds	It starts to boil gently	It glows a faint blue	Nothing happens at all
+sci_even_perfect_vacuum	Hard	Even with a perfect vacuum, roughly how tall could a straw be and still lift water?	About 10 m	About 1 m	About 100 m	As tall as you like
 sci_kwant	Expert	Who launched quantum theory?	Max Planck	Albert Einstein	Werner Heisenberg	Erwin Schrodinger
 sci_entropia	Expert	Which law of thermodynamics states that entropy increases?	The second	The first	The third	The zeroth
 sci_hubble	Expert	Who discovered that the Universe is expanding?	Edwin Hubble	Albert Einstein	Carl Sagan	Georges Lemaitre
@@ -494,3 +605,12 @@ sci_because_earth_axis	Expert	Because Earth's axis slowly wobbles, which bright 
 sci_made_object_oumuamua	Expert	What made the object 'Oumuamua, spotted in 2017, a first?	It came from another star system	It was a comet made of iron	It orbited between Earth and Moon	It was a moon of Pluto
 sci_roughly_mass_sun	Expert	Roughly how much of its mass does the Sun turn into energy every second?	About 4 million tonnes	About 4 kilograms	About 4 tonnes	About 4 billion tonnes
 sci_because_uranus_tipped	Expert	Because Uranus is tipped on its side, roughly how long does continuous daylight last at each of its poles?	About 42 years	About 42 days	About 4 years	About 420 years
+sci_astronomer_coined_big	Expert	Which astronomer coined the name 'Big Bang', even though he rejected the theory?	Fred Hoyle	Carl Sagan	Edwin Hubble	Arthur Eddington
+sci_astronomers_jokingly_label	Expert	What did astronomers jokingly label the first pulsar signal, picked up in 1967?	LGM-1, for 'little green men'	ET-1, for 'extraterrestrial'	SOS-1, for a distress call	HAL-1, after the film computer
+sci_full_moon_looks	Expert	The full Moon looks dazzling, but its surface reflects only about as much light as what?	Worn asphalt	Fresh snow	A bathroom mirror	White paint
+sci_since_discovery_1930	Expert	Since its discovery in 1930, how much of one orbit around the Sun has Pluto completed?	Less than half	Exactly one full orbit	About two full orbits	About three quarters
+sci_galileo_sketched_planet	Expert	Galileo sketched which planet in 1612 and 1613 without realising it was one?	Neptune	Uranus	Pluto	Ceres
+sci_cut_grape_almost	Expert	Cut a grape almost in half and heat it in a microwave. What famously appears?	A glowing ball of plasma	A tiny rainbow inside it	A green glow like a glow stick	A spinning ring of sugar
+sci_lightning_strike_way	Expert	In a lightning strike, which way does the brightest flash actually travel?	Upwards from the ground	Downwards from the cloud	Sideways along the ground	Outwards from the middle
+sci_rainbow_part_circle	Expert	A rainbow is part of a circle centred on the point opposite the Sun. Roughly how wide is its radius?	About 42 degrees	About 90 degrees	About 10 degrees	About 23 degrees
+sci_misty_mountain_climber	Expert	On a misty mountain, a climber may see a giant shadow of themselves ringed by colours. What is it called?	A Brocken spectre	A fata morgana	A will-o'-the-wisp	A sun pillar
