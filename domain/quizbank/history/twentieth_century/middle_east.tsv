@@ -35,6 +35,8 @@ his_waterway_trapped_cargo	Medium	Which waterway trapped 14 cargo ships, nicknam
 his_desert_peninsula_israel	Medium	Which desert peninsula did Israel hand back to Egypt in 1982?	The Sinai	The Negev	The Gaza Strip	The Golan Heights
 his_novelist_sentenced_death	Medium	Which novelist was sentenced to death in a 1989 fatwa by Iran's Ayatollah Khomeini?	Salman Rushdie	V. S. Naipaul	Vikram Seth	Orhan Pamuk
 his_gulf_war_1991	Medium	During the Gulf War of 1991, which country did Iraq fire Scud missiles at, even though it was not fighting?	Israel	Jordan	Iran	Turkey
+his_1994_country_became	Medium	In 1994, which country became the second Arab state to sign a peace treaty with Israel?	Jordan	Syria	Lebanon	Morocco
+his_country_israel_capture	Medium	From which country did Israel capture the Golan Heights in 1967?	Syria	Jordan	Lebanon	Egypt
 hy_iran_1979	Hard	Which country's 1979 revolution brought Ayatollah Khomeini to power?	Iran	Iraq	Afghanistan	Saudi Arabia
 his_egyptian_president_nationalised	Hard	Which Egyptian president nationalised the Suez Canal in 1956?	Gamal Abdel Nasser	Anwar Sadat	Hosni Mubarak	King Farouk
 his_iranian_prime_minister	Hard	Which Iranian prime minister nationalised his country's oil and was toppled in a 1953 coup?	Mohammad Mosaddegh	Ruhollah Khomeini	Abolhassan Banisadr	Amir Abbas Hoveyda
@@ -51,6 +53,7 @@ his_country_nuclear_reactor	Hard	Which country's nuclear reactor did Israeli jet
 his_king_egypt_overthrown	Hard	Which king of Egypt was overthrown by army officers in 1952 and sailed into exile on the royal yacht?	Farouk	Fuad I	Idris	Faisal II
 his_jerusalem_hotel_housing	Hard	Which Jerusalem hotel, housing British offices, was bombed by the Irgun in 1946?	The King David Hotel	The American Colony Hotel	The Imperial Hotel	The Fast Hotel
 his_two_palestinian_refugee	Hard	Which two Palestinian refugee camps in Beirut saw a massacre by Lebanese militiamen in 1982?	Sabra and Shatila	Jenin and Balata	Yarmouk and Baqaa	Deheisheh and Aida
+his_israeli_defence_minister	Hard	Which Israeli defence minister of the Six-Day War was famous for his black eyepatch?	Moshe Dayan	Yitzhak Rabin	Ariel Sharon	Ezer Weizman
 his_deadly_clashes_between	Expert	What were the deadly clashes between Jordan's army and Palestinian fighters in 1970 called?	Black September	The Days of Rage	The Night of Fire	Red October
 his_hashemite_prince_became	Expert	Which Hashemite prince became the first king of Iraq in 1921?	Faisal I	Abdullah I	Hussein bin Ali	Ghazi
 his_young_king_iraq	Expert	Which young king of Iraq was killed in the revolution of 1958?	Faisal II	Ghazi	Hussein	Abdullah II
@@ -58,3 +61,4 @@ his_king_saudi_arabia	Expert	Which king of Saudi Arabia, who led the 1973 oil em
 his_ship_carrying_500	Expert	Which ship, carrying 4,500 Jewish refugees to Palestine in 1947, was turned back by the British?	The Exodus	The Altalena	The Struma	The Patria
 his_syrian_president_forces	Expert	Which Syrian president's forces crushed an uprising in the city of Hama in 1982?	Hafez al-Assad	Shukri al-Quwatli	Adib Shishakli	Salah Jadid
 his_holy_site_armed	Expert	Which holy site did armed militants seize and hold for two weeks in November 1979?	The Grand Mosque in Mecca	The Dome of the Rock	The Prophet's Mosque	The Imam Reza Shrine
+his_warship_shot_down	Expert	Which US warship shot down an Iranian passenger jet by mistake over the Gulf in 1988?	USS Vincennes	USS Stark	USS Cole	USS Missouri

@@ -7,6 +7,7 @@ his_direction_muslims_around	Easy	In which direction do Muslims around the world
 his_month_muslims_fast	Easy	During which month do Muslims fast from dawn to dusk?	Ramadan	Muharram	Shawwal	Rajab
 his_language_quran_written	Easy	In which language was the Quran first written down?	Arabic	Persian	Turkish	Hebrew
 his_instead_pictures_people	Easy	Instead of pictures of people and animals, what mainly decorates traditional mosques?	Calligraphy and geometric patterns	Paintings of the prophets	Statues of famous caliphs	Mosaics of kings and battles
+his_day_week_muslims	Easy	On which day of the week do Muslims gather for the main weekly prayers at the mosque?	Friday	Saturday	Sunday	Monday
 hy_mekka	Medium	In which city was the Prophet Muhammad born?	Mecca	Medina	Jerusalem	Baghdad
 his_cube_shaped_shrine	Medium	What is the cube-shaped shrine at the centre of the Great Mosque of Mecca called?	The Kaaba	The Dome of the Rock	The Minbar	The Mihrab
 his_golden_domed_shrine	Medium	Which golden-domed shrine, built in 691, stands on Jerusalem's Temple Mount?	The Dome of the Rock	Hagia Sophia	The Blue Mosque	The Kaaba
@@ -25,6 +26,8 @@ his_built_middle_cordoba	Medium	What was built in the middle of Cordoba's Great 
 his_trees_brought_spain	Medium	Which trees, brought to Spain by its Muslim rulers, now line the streets of Seville in their thousands?	Bitter orange trees	Date palms	Fig trees	Lemon trees
 his_word_alcohol_comes	Medium	The word 'alcohol' comes from the Arabic 'al-kuhl', which first meant what?	A fine eye make-up powder	A strong date wine	A doctor's medicine	A perfume of roses
 his_walled_caravanserais_built	Medium	What were the walled 'caravanserais' built along Islamic trade routes?	Roadside inns for traders and camels	Forts for the caliph's soldiers	Markets for buying slaves	Schools for young scholars
+his_arabic_word_islam	Medium	What does the Arabic word 'Islam' mean?	Submission to God	Peace on Earth	The true path	The people of the book
+his_star_names_such	Medium	Many star names, such as Aldebaran, Altair and Betelgeuse, come from which language?	Arabic	Greek	Latin	Hebrew
 his4_kalifat_abbasydzki_stolica	Hard	Which city was the Abbasid Caliphate's capital?	Baghdad	Damascus	Cairo	Cordoba
 hx_ibn_battuta	Hard	Which Moroccan traveller journeyed some 120,000 km across the medieval Islamic world?	Ibn Battuta	Ibn Khaldun	Al-Idrisi	Ibn Sina
 hx_granada_1492	Hard	Besides Columbus's voyage, what else happened in Spain in 1492?	Granada, the last Moorish state, fell	The Armada was destroyed	The Inquisition was abolished	Madrid became the capital
@@ -49,6 +52,7 @@ his_engineer_1206_described	Hard	Which engineer of 1206 described dozens of inge
 his_arab_geographer_made	Hard	Which Arab geographer made a famous map of the world for the Norman king Roger II of Sicily in 1154?	Al-Idrisi	Ibn Battuta	Ibn Khaldun	Al-Masudi
 his_poet_finished_shahnameh	Hard	Which poet finished the 'Shahnameh', the great Persian 'Book of Kings', around 1010?	Ferdowsi	Rumi	Hafez	Omar Khayyam
 his_tunisian_born_scholar	Hard	Which Tunisian-born scholar of the 1300s explained the rise and fall of dynasties and is called a father of sociology?	Ibn Khaldun	Ibn Rushd	Al-Farabi	Al-Biruni
+his_inventor_cordoba_said	Hard	Which inventor of Cordoba is said to have flown briefly with feathered wings around 875, hurting his back on landing?	Abbas ibn Firnas	Ibn al-Haytham	Al-Jazari	Ziryab
 hy_hidzra	Expert	The Islamic calendar counts from Muhammad's move in 622 to which city?	Medina	Mecca	Damascus	Jerusalem
 hw_dom_madrosci	Expert	In which city stood the 'House of Wisdom', a great centre of learning in the 800s?	Baghdad	Cairo	Cordoba	Damascus
 his_empire_ruled_shahs	Expert	Which empire was ruled by shahs from the city of Isfahan in the 1600s?	The Safavid Empire	The Mughal Empire	The Ottoman Empire	The Seljuk Empire

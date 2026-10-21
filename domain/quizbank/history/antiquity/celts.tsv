@@ -10,6 +10,7 @@ his_item_clothing_worn	Easy	Which item of clothing, worn by Gauls and Germans, d
 his_vehicles_british_warriors	Easy	Which vehicles did British warriors still ride into battle when Julius Caesar landed in 55 BC?	War chariots	War camels	Elephants	Ox carts
 his_celtic_language_revived	Easy	Which Celtic language, revived in modern times, belongs to the far south-west tip of England?	Cornish	Breton	Manx	Welsh
 his_besides_english_celtic	Easy	Besides English, which Celtic language is an official language of the Republic of Ireland?	Irish	Welsh	Scots	Breton
+his_roman_towns_boudica	Easy	Which of these Roman towns did Boudica's rebels burn to the ground in AD 60?	London	York	Bath	Chester
 his_blue_dye_ancient	Medium	With what blue dye did ancient Britons paint themselves, according to Julius Caesar?	Woad	Indigo	Saffron	Madder
 his_celtic_torc	Medium	What was a Celtic 'torc'?	A twisted metal neck ring	A war chariot	A sacred oak grove	A bronze helmet
 his_tribe_eastern_britain	Medium	Which tribe of eastern Britain rose against Roman rule in AD 60?	The Iceni	The Brigantes	The Silures	The Catuvellauni
@@ -32,6 +33,8 @@ his_paris_takes_celtic	Medium	Paris takes its name from which Celtic tribe that 
 his_modern_country_latin	Medium	Which modern country is named in Latin after the Helvetii, a Celtic tribe Caesar fought in 58 BC?	Switzerland	Austria	Belgium	Luxembourg
 his_celtic_horse_goddess	Medium	Which Celtic horse goddess was so popular that Roman cavalrymen worshipped her too?	Epona	Brigid	Danu	Sulis
 his_region_north_west	Medium	Which region of north-west Spain, famous for its bagpipes, is named after a Celtic tribe?	Galicia	Asturias	Catalonia	Navarre
+his_celtic_language_last	Medium	Which Celtic language, whose last native speaker died in 1974, has since been revived on its island home?	Manx	Cornish	Breton	Welsh
+his_scoti_gave_scotland	Medium	The 'Scoti', who gave Scotland its name, were known to Roman writers as raiders from where?	Ireland	Norway	Wales	Brittany
 his_gaulish_chieftain_sacked	Hard	Which Gaulish chieftain sacked Rome around 390 BC, saying 'Woe to the conquered'?	Brennus	Vercingetorix	Ambiorix	Dumnorix
 his_celtic_people_central	Hard	Which Celtic people of central Turkey received a famous letter from Saint Paul?	The Galatians	The Corinthians	The Thessalonians	The Ephesians
 his_british_chieftain_fought	Hard	Which British chieftain fought the Roman invaders for years before being handed over to them in AD 51?	Caratacus	Cassivellaunus	Calgacus	Cunobelinus
@@ -49,6 +52,8 @@ his_carnyx_celtic_warriors	Hard	What was the 'carnyx' of Celtic warriors?	A tall
 his_according_diodorus_gaul	Hard	According to Diodorus, what would a Gaul trade for a single jar of Roman wine?	A slave	A horse	A sword	A cow
 his_according_herodotus_scythian	Hard	According to Herodotus, what did Scythian warriors make from the skulls of their worst enemies?	Drinking cups	War helmets	Drums	Oil lamps
 his_antlered_celtic_god	Hard	What was the antlered Celtic god, often shown sitting cross-legged, called?	Cernunnos	Lugh	Taranis	Teutates
+his_452_rode_out	Hard	In 452, who rode out to meet Attila and is said to have persuaded him not to march on Rome?	Pope Leo I	Pope Gregory I	Saint Augustine	Saint Patrick
+his_ancient_statue_shows	Hard	Which famous ancient statue shows a wounded Celtic warrior, naked except for a torc around his neck?	The Dying Gaul	The Discobolus	The Laocoon	The Farnese Hercules
 his_swiss_lakeside_site	Expert	Which Swiss lakeside site gave its name to the swirling style of later Celtic art?	La Tene	Lausanne	Lucerne	Neuchatel
 his_silver_bowl_covered	Expert	Which silver bowl covered in images of gods was found in a Danish bog in 1891?	The Gundestrup cauldron	The Battersea shield	The Vix krater	The Snettisham hoard
 his_huge_iron_age	Expert	Which huge Iron Age hill fort in Dorset is one of the largest in Europe?	Maiden Castle	Danebury	Old Sarum	Cadbury Castle
@@ -57,3 +62,4 @@ his_queen_brigantes_northern	Expert	Which queen of the Brigantes in northern Bri
 his_bishop_invented_alphabet	Expert	Which bishop invented an alphabet in the 300s to translate the Bible into the language of the Goths?	Ulfilas	Jerome	Ambrose	Patrick
 his_bohemia_takes_celtic	Expert	Bohemia takes its name from which Celtic tribe?	The Boii	The Volcae	The Helvetii	The Senones
 his_early_celtic_gold	Expert	Many early Celtic gold coins were copies of the coins of which king?	Philip II of Macedon	Alexander the Great	Darius the Great	Croesus of Lydia
+his_roman_general_visigoth	Expert	Which Roman general, with Visigoth allies, halted Attila at the Battle of the Catalaunian Plains in 451?	Aetius	Stilicho	Belisarius	Ricimer

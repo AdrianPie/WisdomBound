@@ -30,6 +30,9 @@ his_day_week_titanic	Medium	On which day of the week did the Titanic hit the ice
 his_novel_1898_giant	Medium	In a novel of 1898, a giant 'unsinkable' liner hits an iceberg in April and sinks. What was the ship called?	The Titan	The Atlantis	The Colossus	The Olympian
 his_roughly_cold_sea	Medium	Roughly how cold was the sea where the Titanic sank?	About -2 C	About 4 C	About 10 C	About 15 C
 his_roughly_long_titanic	Medium	Roughly how long was the Titanic?	About 270 metres	About 120 metres	About 180 metres	About 450 metres
+his_colour_distress_rockets	Medium	What colour were the distress rockets the Titanic fired, which a nearby ship saw but did not answer?	White	Red	Green	Blue
+his_none_titanic_engineers	Medium	Why did none of the Titanic's engineers survive the sinking?	They stayed below to keep the power on	They gave up their lifeboat seats to children	They were locked in by panicking passengers	They were asleep when the iceberg struck
+his_rusticles_slowly_eating	Medium	What are the 'rusticles' slowly eating away the wreck of the Titanic?	Icicle-like rust made by iron-eating bacteria	Shellfish that drill holes into the steel	Long strands of seaweed growing in rust	Crystals of salt that crack the hull
 hw_titanic_czas	Hard	Roughly how long did the Titanic take to sink after its fatal collision?	About 2 hours 40 minutes	About 20 minutes	About 8 hours	About 2 days
 his_year_wreck_titanic	Hard	In which year was the wreck of the Titanic found?	1985	1962	1999	1971
 his_shipping_company_owned	Hard	Which shipping company owned the Titanic?	The White Star Line	The Cunard Line	The Hamburg America Line	P&O
@@ -48,6 +51,7 @@ his_watertight_compartments_titanic	Hard	How many of its watertight compartments
 his_titanic_bandleader_violin	Hard	What was the name of the Titanic's bandleader, whose violin was found after the sinking?	Wallace Hartley	Jack Phillips	Harold Bride	John Hume
 his_american_banker_shipping	Hard	Which American banker, whose shipping trust ultimately owned the Titanic, cancelled his trip on it at the last minute?	J. P. Morgan	John D. Rockefeller	Andrew Carnegie	Cornelius Vanderbilt
 his_dozen_dogs_sailed	Hard	About a dozen dogs sailed on the Titanic. How many of them survived?	Three	None	One	Seven
+his_roughly_fast_titanic	Hard	Roughly how fast was the Titanic going when it hit the iceberg?	About 22 knots	About 10 knots	About 35 knots	About 5 knots
 hy_jessop	Expert	Violet Jessop survived the Titanic and accidents on which two of its sister ships?	The Olympic and the Britannic	The Lusitania and the Carpathia	The Queen Mary and the Olympic	The Britannic and the Lusitania
 his_canadian_city_150	Expert	In which Canadian city are about 150 of the Titanic's victims buried?	Halifax	Quebec City	Montreal	St John's
 his_irish_port_titanic	Expert	At which Irish port did the Titanic make its last stop before crossing the Atlantic?	Queenstown	Dublin	Belfast	Galway
@@ -57,3 +61,4 @@ his_titanic_baker_survived	Expert	Which Titanic baker survived hours in the icy 
 his_last_living_survivor	Expert	Who was the last living survivor of the Titanic, who died in 2009?	Millvina Dean	Eva Hart	Ruth Becker	Edith Haisman
 his_fashion_designer_husband	Expert	Which fashion designer and her husband were accused of bribing the crew of their nearly empty lifeboat?	Lady Duff-Gordon	The Countess of Rothes	Madeleine Astor	Helen Churchill Candee
 his_titanic_radio_operator	Expert	What did the Titanic's radio operator snap back when a nearby ship tried to report ice?	'Shut up, I am busy'	'Message received, thanks'	'Stop sending, we know'	'Repeat, signal is weak'
+his_make_car_belonging	Expert	Which make of car, belonging to a first-class passenger, went down in the Titanic's hold?	A Renault	A Rolls-Royce	A Ford	A Mercedes

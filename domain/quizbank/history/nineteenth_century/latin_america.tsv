@@ -6,6 +6,8 @@ his_simon_bolivar_nickname	Easy	What was Simon Bolivar's famous nickname?	The Li
 his_modern_country_simon	Easy	In which modern country was Simon Bolivar born?	Venezuela	Bolivia	Colombia	Spain
 his_cowboys_argentine_pampas	Easy	What were the cowboys of the Argentine pampas called?	Gauchos	Vaqueros	Llaneros	Charros
 his_crop_made_brazil	Easy	Which crop had made Brazil the world's biggest producer of it by the mid-1800s?	Coffee	Cocoa	Tobacco	Cotton
+his_bitter_herbal_drink	Easy	Which bitter herbal drink, sipped through a metal straw from a gourd, was the gauchos' favourite?	Mate	Pisco	Tequila	Horchata
+his_venezuela_currency	Easy	Venezuela's currency is named after whom?	Simon Bolivar	Francisco de Miranda	Jose de San Martin	Antonio Jose de Sucre
 his4_simon_bolivar	Medium	Simon Bolivar is known for liberating which continent's colonies?	South America	Africa	Southeast Asia	Central Europe
 his_argentine_general_crossed	Medium	Which Argentine general crossed the Andes to free Chile and Peru from Spain?	Jose de San Martin	Simon Bolivar	Bernardo O'Higgins	Antonio Jose de Sucre
 his_date_mexico_celebrate	Medium	On which date does Mexico celebrate its Independence Day?	16 September	5 May	4 July	12 October
@@ -28,6 +30,8 @@ his_sparked_pastry_war	Medium	What sparked the 'Pastry War' between France and M
 his_italian_patriot_earned	Medium	Which Italian patriot earned the title 'Hero of Two Worlds' by first fighting in Brazil and Uruguay?	Giuseppe Garibaldi	Giuseppe Mazzini	Count Cavour	Nino Bixio
 his_french_ruler_sent	Medium	Which French ruler sent an army to conquer Mexico in the 1860s?	Napoleon III	Louis Philippe	Adolphe Thiers	Charles X
 his_country_dominican_republic	Medium	From which country did the Dominican Republic win its independence in 1844?	Haiti	Spain	France	The USA
+his_young_simon_bolivar	Medium	What did the young Simon Bolivar swear on a hill in Rome in 1805?	To free his homeland from Spain	To become a Catholic priest	To marry his childhood sweetheart	To never return to Venezuela
+his_adelitas_mexican_revolution	Medium	Who were the 'Adelitas' of the Mexican Revolution?	Women who fought and marched with the armies	Nuns who nursed the wounded in the cities	Rich ladies who funded Pancho Villa	Peasant girls who carried messages for spies
 his4_rewolucja_haiti	Hard	Haiti's revolution is notable as the first successful large-scale revolt of which group?	Enslaved people	Colonial merchants	Indigenous nobility	Naval officers
 his_mexican_revolutionary_general	Hard	Which Mexican revolutionary general led a raid into the United States in 1916?	Pancho Villa	Emiliano Zapata	Benito Juarez	Porfirio Diaz
 his_mexican_priest_cry	Hard	Which Mexican priest's 'Cry of Dolores' in 1810 began Mexico's war of independence?	Miguel Hidalgo	Jose Maria Morelos	Benito Juarez	Agustin de Iturbide
@@ -46,6 +50,7 @@ his_ninos_heroes_honoured	Hard	Who were the 'Ninos Heroes' honoured in Mexico?	Y
 his_woman_simon_bolivar	Hard	Which woman, Simon Bolivar's lover, saved him from assassins in 1828 by helping him escape through a window?	Manuela Saenz	Juana Azurduy	Policarpa Salavarrieta	Leona Vicario
 his_chile_war_1879	Hard	Chile's war of 1879-1884 against Peru and Bolivia was fought largely over deposits of what?	Nitrates	Silver	Copper	Tin
 his_german_scientist_travels	Hard	Which German scientist, whose travels through Latin America began in 1799, did Bolivar reportedly call the true discoverer of South America?	Alexander von Humboldt	Johann von Spix	Carl von Martius	Georg Forster
+his_san_patricios_fought	Hard	Who were the San Patricios, who fought for Mexico against the USA in 1846-1848?	Mostly Irish deserters from the US army	Mexican priests who led peasant troops	Spanish veterans hired by Santa Anna	Escaped slaves from Texas plantations
 hx_brazylia_cesarstwo	Expert	Which country in the Americas was ruled by its own emperors until 1889?	Brazil	Mexico	Argentina	Peru
 hx_rio_portugalia	Expert	Which European country moved its royal court to Brazil in 1808, fleeing Napoleon?	Portugal	Spain	France	The Netherlands
 hx_toussaint	Expert	Which former slave became the best-known leader of the Haitian Revolution?	Toussaint Louverture	Francois Mackandal	Simon Bolivar	Jose de San Martin

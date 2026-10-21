@@ -5,6 +5,7 @@ his_disaster_forced_pause	Easy	Which disaster forced a pause in the fighting of 
 his_according_accounts_french	Easy	According to most accounts, how did the French army at Agincourt compare in size with Henry V's?	It was far larger	It was about the same	It was far smaller	It was slightly smaller
 his_soil_country_hundred	Easy	On the soil of which country was the Hundred Years' War mostly fought?	France	England	Scotland	The Low Countries
 his_king_shakespeare_play	Easy	Which king in a Shakespeare play rallies his troops with 'Once more unto the breach, dear friends'?	Henry V	Richard III	Edward III	Henry IV
+his_country_won_hundred	Easy	Which country won the Hundred Years' War in the end?	France	England	Burgundy	Scotland
 his2_wojna_stuletnia	Medium	Between which countries was the Hundred Years' War fought?	England and France	Spain and Portugal	Sweden and Denmark	Austria and Prussia
 wh_joanna_darc	Medium	During which conflict did Joan of Arc fight?	The Hundred Years' War	The Thirty Years' War	The Wars of the Roses	The Reconquista
 hx_joanna_stos	Medium	How did Joan of Arc die in 1431?	She was burned at the stake	She fell in battle	She was poisoned	She died of the plague
@@ -28,6 +29,8 @@ his_happened_joan_arc	Medium	What happened to Joan of Arc's conviction about 25 
 his_english_joan_arc	Medium	What did the English do with Joan of Arc's ashes after her execution?	Threw them into the Seine	Buried them in Rouen	Sent them to London	Kept them as relics
 his_according_story_joan	Medium	According to the story, how did Joan of Arc prove herself when the Dauphin hid among his courtiers at Chinon?	She picked him out at once	She tamed his wild horse	She lifted his heavy sword	She healed a blind courtier
 his_part_britain_longbowmen	Medium	From which part of Britain did many of the famous longbowmen of the Hundred Years' War come?	Wales	Cornwall	Ireland	The Isle of Man
+his_tree_wood_best	Medium	From which tree's wood were the best English longbows made?	Yew	Oak	Ash	Elm
+his_battle_herrings_1429	Medium	The 'Battle of the Herrings' in 1429 got its name from what the English supply convoy was carrying. What was it?	Barrels of salted fish for Lent	Fishing nets for the river	Fish oil for the lamps	Live fish for a royal feast
 hx_joanna_wiek	Hard	How old was Joan of Arc when she was executed?	About 19	About 29	About 39	About 14
 his_city_joan_arc	Hard	In which city was Joan of Arc burned at the stake?	Rouen	Paris	Orleans	Reims
 his_allies_english_captured	Hard	Which allies of the English captured Joan of Arc and sold her to them?	The Burgundians	The Bretons	The Scots	The Flemish
@@ -47,6 +50,7 @@ his_joan_arc_prison	Hard	What did Joan of Arc do in prison that sealed her death
 his_battle_1340_fought	Hard	Which battle of 1340, fought at sea, destroyed most of the French fleet?	Sluys	La Rochelle	Winchelsea	Calais
 his_through_english_king	Hard	Through whom did the English king who started the Hundred Years' War claim the French crown?	His mother, Isabella of France	His wife, Philippa of Hainault	His grandmother, Eleanor of Castile	His father, Edward II
 his_town_joan_arc	Hard	At which town was Joan of Arc captured in 1430?	Compiegne	Rouen	Chinon	Domremy
+his_persuaded_edward_iii	Hard	Who persuaded Edward III to spare the six townsmen of Calais who offered their lives in 1347?	His wife, Philippa of Hainault	His son, the Black Prince	The pope's envoy	The bishop of Calais
 his_french_king_taken	Expert	Which French king was taken prisoner at Poitiers in 1356?	John II	Philip VI	Charles V	Louis IX
 his_battle_1453_ended	Expert	Which battle of 1453 ended the Hundred Years' War with a French victory?	Castillon	Formigny	Patay	Orleans
 his_treaty_1420_made	Expert	Which treaty of 1420 made Henry V heir to the French throne?	The Treaty of Troyes	The Treaty of Bretigny	The Treaty of Arras	The Treaty of Picquigny

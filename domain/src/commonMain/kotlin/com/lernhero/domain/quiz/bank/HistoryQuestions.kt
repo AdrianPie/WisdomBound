@@ -141,6 +141,7 @@ object HistoryQuestions {
         q("his_hand_stencils_prehistoric", "How were most of the 'hand stencils' on prehistoric cave walls made?", "By spraying paint around a hand", listOf("By tracing round a hand with charcoal", "By scratching round a hand with flint", "By pressing a hand into wet clay"), M),
         q("his_dolmen", "What is a 'dolmen'?", "A tomb of upright stones under a slab", listOf("A ring of tall standing stones", "A wooden hall built on stilts", "A deep ditch around a hilltop"), M),
         q("his_animal_tamed_humans", "Which animal was the first to be tamed by humans, thousands of years before farming began?", "The dog", listOf("The goat", "The horse", "The cat"), M),
+        q("his_000_year_old", "What does the 40,000-year-old 'Lion-man', carved from mammoth ivory and found in a German cave, show?", "A human body with a lion's head", listOf("A lion standing over a hunter", "A woman riding on a lion", "A lion with the wings of an eagle"), M),
         q("his_bluestones_stonehenge_dragged", "The bluestones of Stonehenge were dragged there from hills over 200 km away in which country?", "Wales", listOf("Scotland", "Ireland", "France"), H),
         q("his_land_bridge_let", "Which land bridge let Ice Age people walk from Asia into the Americas?", "Beringia", listOf("Doggerland", "Sundaland", "Gondwana"), H),
         q("his_neolithic_village_scotland", "Which Neolithic village in Scotland's Orkney Islands was uncovered by a storm in 1850?", "Skara Brae", listOf("Newgrange", "Catalhoyuk", "Jarlshof"), H),
@@ -161,6 +162,7 @@ object HistoryQuestions {
         q("his_stone_age_patients", "Many Stone Age patients survived 'trepanation'. What was it?", "A hole cut into the skull", listOf("A tooth pulled with flint", "A leg cut off below the knee", "A tattoo cut into the skin"), H),
         q("his_2013_waves_beach", "In 2013, waves on a beach exposed footprints of early humans nearly a million years old. In which country?", "England", listOf("France", "Spain", "Portugal"), H),
         q("his_bones_durrington_walls", "Bones at Durrington Walls, near Stonehenge, show its builders held huge midwinter feasts of which animal?", "Pigs", listOf("Cattle", "Deer", "Sheep"), H),
+        q("his_2024_scientists_found", "In 2024, scientists found that Stonehenge's six-tonne Altar Stone had been hauled some 700 km from where?", "North-east Scotland", listOf("South-west Wales", "Brittany in France", "The south of Ireland"), H),
         q("cur_mamuty_piramidy", "Were woolly mammoths still alive when the Great Pyramid of Giza was built?", "Yes, on a remote Arctic island", listOf("No, they died out 50,000 years earlier", "No, they died out with the dinosaurs", "Only in zoos of the pharaohs"), X),
         q("hx_lascaux", "The Lascaux caves in France are famous for what?", "Prehistoric animal paintings", listOf("Ancient Roman baths", "Viking treasure", "Dinosaur footprints"), X),
         q("hx_gobekli", "Which site in Turkey, over 11,000 years old, is among the oldest known temples?", "Gobekli Tepe", listOf("Catalhoyuk", "Troy", "Ephesus"), X),
@@ -214,6 +216,7 @@ object HistoryQuestions {
         q("his_ancient_people_gave", "Which ancient people gave their name to Palestine?", "The Philistines", listOf("The Phoenicians", "The Canaanites", "The Hittites"), M),
         q("his_royal_game_found", "What is the 'Royal Game of Ur', found in a Sumerian royal tomb?", "A 4,500-year-old board game", listOf("A royal hunting contest", "A Sumerian ball game", "A riddle contest for scribes"), M),
         q("his_delphic_oracle_told", "The Delphic oracle told King Croesus that if he attacked Persia, a great empire would fall. Which one fell?", "His own, Lydia", listOf("Persia", "Media", "Babylon"), M),
+        q("his_epic_gilgamesh_snake", "In the Epic of Gilgamesh, what does a snake steal from the hero while he bathes in a pool?", "The plant that restores youth", listOf("His sword and golden armour", "The tablets of the gods", "The crown of the city of Uruk"), M),
         q("hx_fenicjanie", "Which seafaring people created the alphabet that Greek and Latin letters grew from?", "The Phoenicians", listOf("The Egyptians", "The Sumerians", "The Hittites"), H),
         q("hy_nebukadnezar", "Which Babylonian king is said to have built the Hanging Gardens?", "Nebuchadnezzar II", listOf("Hammurabi", "Sargon", "Ashurbanipal"), H),
         q("his_babylonian_gate_covered", "Which Babylonian gate, covered in blue glazed bricks, was rebuilt inside a Berlin museum?", "The Ishtar Gate", listOf("The Lion Gate", "The Gate of All Nations", "The Golden Gate"), H),
@@ -233,6 +236,7 @@ object HistoryQuestions {
         q("his_according_herodotus_phoenician", "According to Herodotus, what did Phoenician sailors hired by an Egyptian pharaoh do around 600 BC?", "Sailed all the way around Africa", listOf("Reached the coast of Britain", "Found the Canary Islands", "Crossed the Atlantic Ocean"), H),
         q("his_giant_winged_bulls", "What were the giant winged bulls with human heads that guarded Assyrian palace gates called?", "Lamassu", listOf("Sphinxes", "Griffins", "Chimeras"), H),
         q("his_mesopotamian_officials_roll", "What did Mesopotamian officials roll across wet clay to 'sign' documents?", "Carved cylinder seals", listOf("Inked bronze stamps", "Their own thumbs", "Knotted reed cords"), H),
+        q("his_assyrian_king_besieged_2", "The Assyrian king who besieged Jerusalem in 701 BC boasted that he had shut up its king Hezekiah like what?", "A bird in a cage", listOf("A fox in its den", "A fish in a net", "A lion in a pit"), H),
         q("wh_hetyci_zelazo", "Which ancient people were among the first to master ironworking?", "The Hittites", listOf("The Phoenicians", "The Scythians", "The Thracians"), X),
         q("his_nabatejczycy", "Which people carved the rock city of Petra?", "The Nabataeans", listOf("The Romans", "The Phoenicians", "The Persians"), X),
         q("hx_lidia_monety", "Which ancient kingdom is credited with minting the first coins, around 600 BC?", "Lydia", listOf("Egypt", "Babylon", "Phoenicia"), X),
@@ -266,6 +270,7 @@ object HistoryQuestions {
         q("his_great_pyramids_egypt", "What were the great pyramids of Egypt built as?", "Tombs for the pharaohs", listOf("Temples for the sun god", "Stores for the grain harvest", "Palaces for the pharaohs"), E),
         q("his_egyptian_mummies_wrapped", "What were Egyptian mummies wrapped in?", "Strips of linen", listOf("Sheets of papyrus", "Animal skins", "Silk ribbons"), E),
         q("his_ancient_egyptians_shave", "Why did many ancient Egyptians shave their heads and wear wigs?", "To keep cool and free of lice", listOf("To show they were slaves", "To honour the god Horus", "To look like the pharaoh"), E),
+        q("his_roughly_old_great", "Roughly how old is the Great Pyramid of Giza?", "About 4,500 years", listOf("About 2,000 years", "About 10,000 years", "About 1,000 years"), E),
         q("trv_faraon_ostatni", "Who was the last active pharaoh of ancient Egypt?", "Cleopatra VII", listOf("Tutankhamun", "Ramesses II", "Nefertiti"), M),
         q("his_cheops", "For which pharaoh was the Great Pyramid of Giza built?", "Khufu", listOf("Tutankhamun", "Ramesses II", "Akhenaten"), M),
         q("his_mumia_mozg", "During mummification, which organ did Egyptians pull out through the nose?", "The brain", listOf("The heart", "The eyes", "The tongue"), M),
@@ -293,6 +298,7 @@ object HistoryQuestions {
         q("his_unusual_item_egypt", "Which unusual item did Egypt's great female pharaoh wear at ceremonies to look the part?", "A false beard", listOf("A lion's mane", "A silver mask", "Wooden stilts"), M),
         q("his_artists_paint_popular", "Which artists' paint, popular until the 1800s, was made from ground-up Egyptian mummies?", "Mummy brown", listOf("Egyptian blue", "Burnt umber", "Ivory black"), M),
         q("his_according_pliny_cleopatra", "According to Pliny, how did Cleopatra win a bet that she could host the costliest dinner ever?", "She drank a pearl dissolved in vinegar", listOf("She served a gold statue as dessert", "She fed her guests flamingo tongues", "She gave every guest a warship"), M),
+        q("his_embalmers_push_nostrils", "What did embalmers push into the nostrils of Ramesses II's mummy to keep his famous nose in shape?", "Black peppercorns", listOf("Small gold beads", "Lumps of river clay", "Dried chickpeas"), M),
         q("wh_kleopatra_dynastia", "Which dynasty did Cleopatra VII belong to?", "The Ptolemies", listOf("The Seleucids", "The Achaemenids", "The Nubian Ptolemies"), H),
         q("wh_rosetta", "Who deciphered Egyptian hieroglyphs thanks to the Rosetta Stone?", "Jean-Francois Champollion", listOf("Howard Carter", "Heinrich Schliemann", "Thomas Young"), H),
         q("trv_kleopatra_czas", "Which event is closer in time to Cleopatra's reign?", "The Moon landing", listOf("The building of the Great Pyramid", "They are equally far", "The founding of Rome"), H),
@@ -386,6 +392,7 @@ object HistoryQuestions {
         q("his_antikythera_mechanism_found", "What was the 'Antikythera mechanism', found in an ancient shipwreck?", "A gear computer for the sky", listOf("A bronze diving helmet", "A siege catapult trigger", "A ship's steering system"), M),
         q("his_plainest_three_greek", "Which plainest of the three Greek column styles has a simple cushion-shaped top?", "Doric", listOf("Ionic", "Corinthian", "Tuscan"), M),
         q("his_according_legend_happened_2", "According to legend, what happened to the follower of Pythagoras who revealed that some numbers are irrational?", "He was drowned at sea", listOf("He was made a god", "He was crowned king", "He was banished to Egypt"), M),
+        q("his_banned_pain_death", "Who was banned, on pain of death, from even watching the ancient Olympic Games?", "Married women", listOf("Foreign visitors", "Enslaved people", "Children under 12"), M),
         q("his_diogenes", "Which Greek philosopher is said to have lived in a large clay jar in Athens?", "Diogenes", listOf("Socrates", "Plato", "Epicurus"), H),
         q("hx_olimpiada_776", "According to tradition, in which year were the first ancient Olympic Games held?", "776 BC", listOf("1200 BC", "480 BC", "44 BC"), H),
         q("hx_ostracyzm", "In ancient Athens, what did citizens scratch on pieces of pottery to banish a politician?", "His name", listOf("A skull", "The word 'no'", "A black cross"), H),
@@ -422,7 +429,8 @@ object HistoryQuestions {
         q("his_spartan_admiral_finally", "Which Spartan admiral finally beat the Athenian fleet at Aegospotami in 405 BC?", "Lysander", listOf("Leonidas", "Pausanias", "Brasidas"), X),
         q("his_greek_city_founded", "Which Greek city founded the colony of Byzantium?", "Megara", listOf("Athens", "Corinth", "Sparta"), X),
         q("his_greek_city_destroyed", "Which Greek city destroyed the great Athenian expedition sent against it in 415-413 BC?", "Syracuse", listOf("Sparta", "Corinth", "Thebes"), X),
-        q("his_greek_explorer_massalia", "Which Greek explorer from Massalia sailed around Britain in about 325 BC?", "Pytheas", listOf("Hanno", "Nearchus", "Scylax"), X)
+        q("his_greek_explorer_massalia", "Which Greek explorer from Massalia sailed around Britain in about 325 BC?", "Pytheas", listOf("Hanno", "Nearchus", "Scylax"), X),
+        q("his_battle_marathon_runner", "Before the Battle of Marathon, the runner Pheidippides covered about 240 km in two days to ask which city for help?", "Sparta", listOf("Thebes", "Corinth", "Argos"), X)
     )
 
     /* Antiquity / Ancient Persia - history/antiquity/ancient_persia.tsv */
@@ -435,6 +443,7 @@ object HistoryQuestions {
         q("his_zoroastrians_keep_burning", "What do Zoroastrians keep burning in their temples, some for many centuries?", "A sacred fire", listOf("Incense sticks", "Oil lamps for the dead", "Cedar wood torches"), E),
         q("his_height_under_darius", "At its height under Darius the Great, Persian rule stretched from Egypt in the west to which river in the east?", "The Indus", listOf("The Ganges", "The Yangtze", "The Mekong"), E),
         q("his_chess_word_checkmate", "The chess word 'checkmate' comes from Persian words meaning what?", "'The king is helpless'", listOf("'The queen has fallen'", "'The game is over'", "'The castle is taken'"), E),
+        q("his_persian_king_sent", "Which Persian king sent the army that the Athenians beat at Marathon in 490 BC?", "Darius the Great", listOf("Xerxes I", "Cyrus the Great", "Cambyses II"), E),
         q("his_persian_king_led", "Which Persian king led the huge invasion of Greece that was held up at Thermopylae in 480 BC?", "Xerxes I", listOf("Darius I", "Cyrus the Great", "Artaxerxes I"), M),
         q("his_persian_king_built", "Which Persian king built the Royal Road and organised the empire into provinces?", "Darius the Great", listOf("Cyrus the Great", "Xerxes I", "Cambyses II"), M),
         q("his_governors_persian_provinces", "What were the governors of the Persian provinces called?", "Satraps", listOf("Pharaohs", "Tetrarchs", "Consuls"), M),
@@ -456,6 +465,7 @@ object HistoryQuestions {
         q("his_according_herodotus_persian", "According to Herodotus, Persian boys were taught three things: to ride, to shoot a bow and what?", "To tell the truth", listOf("To read and write", "To sing temple hymns", "To swim in rivers"), M),
         q("his_according_herodotus_cyrus", "According to Herodotus, how did Cyrus the Great's army get into Babylon in 539 BC?", "By lowering the river and wading in", listOf("By hiding inside a wooden horse", "By bribing the guards at the gate", "By tunnelling under the walls"), M),
         q("his_thermopylae_persians_finally", "At Thermopylae, how did the Persians finally get behind the Spartans and their allies?", "A local Greek showed them a mountain path", listOf("They landed troops from their fleet", "Their cavalry broke through the pass", "Their archers set the Greek camp alight"), M),
+        q("his_according_herodotus_xerxes", "According to Herodotus, why did Xerxes weep as he watched his vast army cross into Europe?", "In 100 years none of them would be alive", listOf("He feared half of them would drown", "He missed his homeland and his wives", "An oracle had foretold his defeat"), M),
         q("wh_persepolis", "Persepolis was the capital of which empire?", "The Persian Empire", listOf("The Assyrian Empire", "The Babylonian Empire", "The Macedonian Empire"), H),
         q("hx_cyrus", "Which Persian king, founder of the Achaemenid Empire, let the Jews exiled in Babylon go home?", "Cyrus the Great", listOf("Darius I", "Xerxes", "Cambyses"), H),
         q("his_empire_elite_soldiers", "Which empire's elite soldiers were known as 'the Immortals'?", "The Persian Empire", listOf("The Roman Empire", "The Mongol Empire", "The Ottoman Empire"), H),
@@ -479,6 +489,7 @@ object HistoryQuestions {
         q("his_persian_king_inspectors", "What were the Persian king's inspectors, who travelled the empire checking on its officials, called?", "The King's Eyes", listOf("The King's Hands", "The King's Shields", "The King's Voices"), H),
         q("his_according_herodotus_warrior", "According to Herodotus, which warrior queen killed Cyrus the Great and plunged his head into blood?", "Tomyris", listOf("Artemisia", "Zenobia", "Atossa"), H),
         q("his_athenian_hero_salamis", "Which Athenian hero of Salamis later fled to Persia and became a governor for its king?", "Themistocles", listOf("Miltiades", "Pericles", "Alcibiades"), H),
+        q("his_persian_king_completed", "Which Persian king completed a canal linking the Nile to the Red Sea, a distant ancestor of the Suez Canal?", "Darius the Great", listOf("Cyrus the Great", "Xerxes I", "Artaxerxes II"), H),
         q("hx_kserkses_morze", "According to Herodotus, what did Xerxes order his men to do to the sea after a storm wrecked his bridge?", "Whip it", listOf("Fill it with stones", "Pray to it", "Drain it"), X),
         q("his_roman_emperor_captured", "Which Roman emperor was captured by the Persian king Shapur I in 260?", "Valerian", listOf("Trajan", "Hadrian", "Julian"), X),
         q("his_language_persian_empire", "Which language did the Persian Empire's officials use across its lands?", "Aramaic", listOf("Greek", "Latin", "Hebrew"), X),
@@ -486,7 +497,8 @@ object HistoryQuestions {
         q("his_parthian_general_defeated", "Which Parthian general defeated Crassus at Carrhae?", "Surena", listOf("Orodes", "Mithridates", "Phraates"), X),
         q("his_religion_founded_prophet", "Which religion, founded by a prophet who died in a Persian prison around 276, once had followers from Rome to China?", "Manichaeism", listOf("Mithraism", "Zoroastrianism", "Mandaeism"), X),
         q("his_according_herodotus_persian_2", "According to Herodotus, the Persian king drank water from only one river, even on campaign. How was it carried?", "Boiled, in silver jars", listOf("Frozen, in snow pits", "In gold-lined barrels", "In sealed clay jugs"), X),
-        q("his_persian_king_canal", "Which Persian king had a canal dug across the Athos peninsula so his fleet could avoid its stormy cape?", "Xerxes I", listOf("Darius the Great", "Cyrus the Great", "Cambyses II"), X)
+        q("his_persian_king_canal", "Which Persian king had a canal dug across the Athos peninsula so his fleet could avoid its stormy cape?", "Xerxes I", listOf("Darius the Great", "Cyrus the Great", "Cambyses II"), X),
+        q("his_persian_prince_hired", "Which Persian prince hired 10,000 Greek soldiers to seize his brother's throne, only to be killed at Cunaxa in 401 BC?", "Cyrus the Younger", listOf("Artaxerxes II", "Cambyses II", "Darius III"), X)
     )
 
     /* Antiquity / Alexander & the Hellenistic World - history/antiquity/alexander_the_great.tsv */
@@ -501,6 +513,7 @@ object HistoryQuestions {
         q("his_hero_trojan_war", "Which hero of the Trojan War did Alexander the Great idolise, even visiting his tomb at Troy?", "Achilles", listOf("Odysseus", "Hector", "Agamemnon"), E),
         q("his_tomb_alexander_great", "Where is the tomb of Alexander the Great today?", "Nobody knows: it was lost", listOf("In the royal tombs at Vergina", "Under a mosque in Babylon", "On the Acropolis in Athens"), E),
         q("his_animals_alexander_successors", "Which animals did Alexander's successors, the Seleucid and Ptolemaic kings, use in battle like tanks?", "War elephants", listOf("War camels", "Armoured bulls", "Fighting dogs"), E),
+        q("his_major_battles_alexander", "How many of his major battles did Alexander the Great lose?", "None at all", listOf("Only one", "Two", "Three"), E),
         q("wh_aleksander_nauczyciel", "Which philosopher was the teacher of Alexander the Great?", "Aristotle", listOf("Plato", "Socrates", "Epicurus"), M),
         q("his_kolos_rodyjski", "Which ancient wonder was a giant bronze statue at a Greek harbour?", "The Colossus of Rhodes", listOf("The Statue of Zeus", "The Lighthouse of Alexandria", "The Mausoleum"), M),
         q("hx_aleksander_wiek", "At about what age did Alexander the Great die, after conquering an empire from Greece to India?", "32", listOf("45", "58", "25"), M),
@@ -522,6 +535,8 @@ object HistoryQuestions {
         q("his_god_colossus_rhodes", "Which god did the Colossus of Rhodes portray?", "Helios, the sun god", listOf("Poseidon, the sea god", "Zeus, king of the gods", "Ares, the god of war"), M),
         q("his_septuagint_produced_hellenistic", "What is the 'Septuagint', produced in Hellenistic Alexandria?", "A Greek translation of the Hebrew Bible", listOf("A list of the Seven Wonders", "A guide to the city's 70 temples", "A Greek map of the known world"), M),
         q("his_headless_hellenistic_statue", "Which headless Hellenistic statue of the goddess Nike stands at the top of a grand staircase in the Louvre?", "The Victory of Samothrace", listOf("The Venus de Milo", "The Laocoon Group", "The Dying Gaul"), M),
+        q("his_philip_macedon_alexander", "What did Philip II of Macedon, Alexander's father, lose to an arrow during a siege in 354 BC?", "An eye", listOf("A hand", "Three fingers", "An ear"), M),
+        q("his_dying_alexander_asked", "When the dying Alexander was asked who should inherit his empire, what did he reportedly answer?", "'To the strongest'", listOf("'To my unborn son'", "'To my mother'", "'To Macedon alone'"), M),
         q("hx_bucefal", "What was the name of Alexander the Great's famous horse?", "Bucephalus", listOf("Pegasus", "Incitatus", "Marengo"), H),
         q("hx_wezel_gordyjski", "What did Alexander the Great famously do with the Gordian Knot?", "Cut it with his sword", listOf("Untied it in seconds", "Burned it", "Gave it to a priest"), H),
         q("hy_aleksander_babilon", "In which city did Alexander the Great die?", "Babylon", listOf("Alexandria", "Athens", "Persepolis"), H),
@@ -540,6 +555,7 @@ object HistoryQuestions {
         q("his_modern_word_comes", "Which modern word comes from the research institute at the heart of ancient Alexandria?", "Museum", listOf("Academy", "Lyceum", "Gymnasium"), H),
         q("his_greek_inventor_built", "Which Greek inventor built the 'aeolipile', a ball that spun on jets of steam?", "Hero of Alexandria", listOf("Archimedes of Syracuse", "Euclid of Alexandria", "Ctesibius of Alexandria"), H),
         q("his_alexander_razed_rebellious", "When Alexander razed rebellious Thebes in 335 BC, whose house did he order to be spared?", "The poet Pindar's", listOf("The general Epaminondas's", "The philosopher Plato's", "The playwright Sophocles'"), H),
+        q("his_persian_court_custom", "Which Persian court custom did Alexander try to impose on his Macedonians, who mocked and refused it?", "Bowing low before the king", listOf("Leaving the dead for vultures", "Worshipping the sacred fire", "Praying to the rising sun"), H),
         q("his_greek_city_afghanistan", "Which Greek city in Afghanistan, founded in Alexander's wake, had its own theatre and gymnasium?", "Ai-Khanoum", listOf("Kandahar", "Bactra", "Taxila"), X),
         q("his_island_city_alexander", "Which island city did Alexander besiege for seven months, building a causeway to reach it?", "Tyre", listOf("Rhodes", "Sidon", "Halicarnassus"), X),
         q("his_desert_oasis_oracle", "At which desert oasis did an oracle hail Alexander as the son of a god?", "Siwa", listOf("Kharga", "Palmyra", "Petra"), X),
@@ -568,6 +584,7 @@ object HistoryQuestions {
         q("his_cleopatra_said_slipped", "How is Cleopatra said to have first slipped in to meet Julius Caesar?", "Rolled up in a rug", listOf("Dressed as a soldier", "Hidden in a wine barrel", "Disguised as a priestess"), E),
         q("his_according_legend_animal", "According to legend, which animal suckled the twin founders of Rome as babies?", "A she-wolf", listOf("A bear", "A deer", "A goat"), E),
         q("his_bird_stood_top", "Which bird stood on top of every Roman legion's standard?", "An eagle", listOf("A raven", "A falcon", "An owl"), E),
+        q("his_ruins_carthage_rome", "The ruins of Carthage, Rome's great rival, lie in which present-day country?", "Tunisia", listOf("Libya", "Morocco", "Egypt"), E),
         q("wh_kartagina_wodz", "Which Carthaginian general led elephants across the Alps?", "Hannibal", listOf("Hasdrubal", "Scipio", "Vercingetorix"), M),
         q("wh_wojny_punickie", "Between which powers were the Punic Wars fought?", "Rome and Carthage", listOf("Rome and Greece", "Greece and Persia", "Rome and Egypt"), M),
         q("his_rubikon", "Who led his army across the river Rubicon in 49 BC, starting a civil war?", "Julius Caesar", listOf("Mark Antony", "Pompey", "Augustus"), M),
@@ -592,6 +609,7 @@ object HistoryQuestions {
         q("his_according_legend_parthians", "According to legend, what did the Parthians pour into the mouth of Rome's richest man after killing him?", "Molten gold", listOf("Boiling oil", "Sour wine", "Desert sand"), M),
         q("his_according_suetonius_julius", "According to Suetonius, why was Julius Caesar so pleased to be allowed to wear a laurel wreath at all times?", "It hid his bald patch", listOf("It showed he was a god", "It kept the sun off", "It scared his enemies"), M),
         q("his_according_livy_hannibal", "According to Livy, how did Hannibal's men break up rocks blocking their path through the Alps?", "Heated them and poured on vinegar", listOf("Smashed them with war elephants", "Pulled them apart with ropes", "Blew them up with fire pots"), M),
+        q("his_cicero_killed_mark", "After Cicero was killed in 43 BC, what did Mark Antony have nailed up in the Forum?", "His head and hands", listOf("His toga and seal ring", "His books and letters", "His sword and shield"), M),
         q("hy_akcjum", "At which sea battle in 31 BC did Octavian defeat Mark Antony's fleet?", "Actium", listOf("Pharsalus", "Philippi", "Alesia"), H),
         q("hy_rzym_753", "According to tradition, in which year was Rome founded?", "753 BC", listOf("1066 BC", "509 BC", "300 BC"), H),
         q("his_road_ancient_rome", "What was the most famous road of ancient Rome, running south from the city?", "The Appian Way", listOf("The Silk Road", "The Royal Road", "The Amber Road"), H),
@@ -646,6 +664,7 @@ object HistoryQuestions {
         q("his_language_jesus_likely", "Which language did Jesus most likely speak in everyday life?", "Aramaic", listOf("Latin", "Greek", "Hebrew"), E),
         q("his_archaeologists_make_body", "How did archaeologists make the famous body casts of Pompeii's victims?", "Poured plaster into hollows", listOf("Carved them out of lava", "Moulded clay over skeletons", "Cast them from wax figures"), E),
         q("his_ordinary_romans_scrawl", "What did ordinary Romans scrawl all over the walls of Pompeii, much of it rude or funny?", "Graffiti", listOf("Prayers", "Recipes", "Maps"), E),
+        q("his_roman_poet_juvenal", "The Roman poet Juvenal sneered that the people now wanted only two things: bread and what?", "Circuses", listOf("Wine", "Gold", "Peace"), E),
         q("trv_hadrian_mur", "In which present-day country is Hadrian's Wall?", "The United Kingdom", listOf("Germany", "Italy", "France"), M),
         q("trv_pompeje_odkopanie", "Roughly how long was Pompeii buried before it was rediscovered?", "About 1,700 years", listOf("About 200 years", "About 700 years", "About 3,000 years"), M),
         q("org_pensja_sol", "The word 'salary' traces back to Roman payments made in what?", "Salt", listOf("Grain", "Wine", "Bronze"), M),
@@ -677,6 +696,7 @@ object HistoryQuestions {
         q("his_according_ancient_writers", "According to ancient writers, how did Agrippina kill her husband, Emperor Claudius?", "With poisoned mushrooms", listOf("With a dagger at dinner", "By drowning him in his bath", "By pushing him off a balcony"), M),
         q("his_emperor_wear_full", "Which emperor was the first to wear a full beard, making beards fashionable in Rome?", "Hadrian", listOf("Trajan", "Augustus", "Caligula"), M),
         q("his_olympic_games_emperor", "At the Olympic Games of AD 67, which emperor was crowned winner of the chariot race despite falling out of his chariot?", "Nero", listOf("Caligula", "Commodus", "Hadrian"), M),
+        q("his_senate_damnation_memory", "What did the Senate's 'damnation of memory' do to a hated emperor after his death?", "Erased his name and face from monuments", listOf("Buried him outside the city walls", "Banned his family from Rome for ever", "Melted down all coins bearing his name"), M),
         q("his_rzym", "In which year did the Western Roman Empire fall?", "476", listOf("410", "395", "527"), H),
         q("trv_konstantyn_chrzescijanstwo", "Which Roman emperor was the first to convert to Christianity?", "Constantine the Great", listOf("Nero", "Augustus", "Marcus Aurelius"), H),
         q("his_herkulanum", "Which Roman town was buried by Vesuvius along with Pompeii?", "Herculaneum", listOf("Ostia", "Paestum", "Capua"), H),
@@ -740,6 +760,7 @@ object HistoryQuestions {
         q("his_oldest_noodles_000", "Where were the oldest known noodles, about 4,000 years old, found?", "China", listOf("Italy", "Persia", "Japan"), E),
         q("his_treatment_fine_needles", "Which treatment with fine needles is described in Chinese medical texts over 2,000 years old?", "Acupuncture", listOf("Cupping", "Reflexology", "Moxibustion"), E),
         q("his_han_princes_buried", "Han princes were buried in suits made of thousands of small plates of which stone, sewn with gold wire?", "Jade", listOf("Marble", "Obsidian", "Granite"), E),
+        q("his_special_faces_soldiers", "What is special about the faces of the soldiers in the Terracotta Army?", "No two are quite alike", listOf("They all copy the emperor's face", "They are all hidden by masks", "They all have their eyes closed"), E),
         q("trv_wielki_mur_ksiezyc", "Is the Great Wall of China visible to the naked eye from the Moon?", "No, that is a myth", listOf("Yes, clearly", "Only at night", "Only from the far side"), M),
         q("his_dynasty_gave_china", "Which dynasty gave China its name in many languages?", "Qin", listOf("Han", "Tang", "Ming"), M),
         q("his_river_cradle_chinese", "Which river is called the cradle of Chinese civilisation?", "The Yellow River", listOf("The Yangtze", "The Mekong", "The Pearl River"), M),
@@ -764,6 +785,7 @@ object HistoryQuestions {
         q("his_according_ancient_records", "According to ancient records, what was said to flow through the First Emperor's tomb?", "Rivers of mercury", listOf("Rivers of wine", "Streams of honey", "Channels of oil"), M),
         q("his_weapon_chinese_armies", "Which weapon did Chinese armies use in huge numbers centuries before it became common in Europe?", "The crossbow", listOf("The longbow", "The musket", "The halberd"), M),
         q("his_shang_chinese_use", "What did the Shang Chinese use as money, long before coins?", "Cowrie shells", listOf("Jade beads", "Bronze bells", "Rice cakes"), M),
+        q("his_scholars_recognised_1899", "Before scholars recognised them in 1899, Shang oracle bones were being sold in Chinese shops as what?", "'Dragon bones' for medicine", listOf("Dice for gambling games", "Charms against evil spirits", "Ivory for carving combs"), M),
         q("his2_cesarz_chin_pierwszy", "Who unified China as its first emperor?", "Qin Shi Huang", listOf("Kublai Khan", "Confucius", "Sun Tzu"), H),
         q("hy_jedwab_sekret", "For centuries, China kept secret how to make what?", "Silk", listOf("Paper money", "Glass", "Steel"), H),
         q("his_earliest_chinese_dynasty", "Which is the earliest Chinese dynasty known from writings of its own time?", "Shang", listOf("Xia", "Zhou", "Qin"), H),
@@ -781,6 +803,7 @@ object HistoryQuestions {
         q("his_chinese_thinker_dreamed", "Which Chinese thinker dreamed he was a butterfly, then wondered if he was a butterfly dreaming he was a man?", "Zhuangzi", listOf("Confucius", "Mencius", "Mozi"), H),
         q("his_around_104_han", "Around 104 BC, a Han emperor sent an army thousands of kilometres west to get what?", "Prized horses from Ferghana", listOf("Silkworm eggs from Persia", "Glassmakers from Rome", "War elephants from India"), H),
         q("his_according_legend_sun", "According to legend, how did Sun Tzu prove to a king that he could turn anyone into soldiers?", "He drilled the king's concubines", listOf("He trained a herd of oxen", "He armed the palace children", "He drilled a gang of prisoners"), H),
+        q("his_han_official_seized", "Which Han official seized the throne in AD 9 and founded the short-lived Xin dynasty?", "Wang Mang", listOf("Cao Cao", "Liu Bang", "Dong Zhuo"), H),
         q("his_han_emperor_sent", "Which Han emperor sent the envoy Zhang Qian west, opening the way for the Silk Road?", "Emperor Wu", listOf("Emperor Gaozu", "Emperor Wen", "Emperor Guangwu"), X),
         q("his_follower_confucius_argued", "Which follower of Confucius argued that human nature is basically good?", "Mencius", listOf("Laozi", "Mozi", "Han Feizi"), X),
         q("his_han_scholar_built", "Which Han scholar built a bronze jar that could detect distant earthquakes?", "Zhang Heng", listOf("Cai Lun", "Zhang Qian", "Sima Qian"), X),
@@ -788,7 +811,8 @@ object HistoryQuestions {
         q("his_empress_widow_han", "Which empress, widow of the first Han emperor, was the first woman to rule all of China?", "Lu Zhi", listOf("Wu Zetian", "Cixi", "Leizu"), X),
         q("his_han_woman_scholar", "Which Han woman scholar wrote 'Lessons for Women' and finished her brother's history?", "Ban Zhao", listOf("Lu Zhi", "Cai Wenji", "Xi Shi"), X),
         q("his_xin_zhui_han", "What is Xin Zhui, a Han noblewoman who died about 2,100 years ago, famous for?", "Her astonishingly well-kept body", listOf("Leading an army against the Huns", "Writing the first Chinese novel", "Ruling as empress for 40 years"), X),
-        q("his_romans_call_far", "What did the Romans call the far-off land their silk came from?", "Serica", listOf("Cathay", "Taprobane", "Bactria"), X)
+        q("his_romans_call_far", "What did the Romans call the far-off land their silk came from?", "Serica", listOf("Cathay", "Taprobane", "Bactria"), X),
+        q("his_near_modern_city", "Near which modern city lie the ruins of Yin, the last Shang capital, where most oracle bones were dug up?", "Anyang", listOf("Xi'an", "Luoyang", "Nanjing"), X)
     )
 
     /* Antiquity / Ancient India - history/antiquity/ancient_india.tsv */
@@ -804,6 +828,7 @@ object HistoryQuestions {
         q("his_until_finds_brazil", "Until finds in Brazil in the 1720s, which country was for some 2,000 years the world's only known source of diamonds?", "India", listOf("South Africa", "Egypt", "Persia"), E),
         q("his_ancient_indian_good", "Which ancient Indian good-luck symbol, found on Indus Valley seals, was later taken up by the Nazis?", "The swastika", listOf("The lotus", "The trident", "The conch"), E),
         q("his_hindu_scripture_conversation", "Which Hindu scripture is a conversation between Prince Arjuna and the god Krishna before a battle?", "The Bhagavad Gita", listOf("The Ramayana", "The Rigveda", "The Upanishads"), E),
+        q("his_siddhartha_gautama_gave", "What was Siddhartha Gautama before he gave up his home to seek enlightenment?", "A prince", listOf("A merchant", "A priest", "A soldier"), E),
         q("hy_budda_nepal", "In which present-day country was the Buddha born?", "Nepal", listOf("India", "Tibet", "Sri Lanka"), M),
         q("his_buddha_birth", "What was the Buddha's birth name?", "Siddhartha Gautama", listOf("Mahavira", "Ashoka", "Nagarjuna"), M),
         q("his_river_gave_india", "Which river gave India its name?", "The Indus", listOf("The Ganges", "The Brahmaputra", "The Godavari"), M),
@@ -828,6 +853,7 @@ object HistoryQuestions {
         q("his_rome_buy_southern", "What did Rome buy so much of from southern India that a Roman writer complained it drained the empire's gold?", "Black pepper", listOf("Coffee beans", "Tea leaves", "Cocoa beans"), M),
         q("his_dome_shaped_buddhist", "What are the dome-shaped Buddhist monuments built over holy relics, such as the great one at Sanchi, called?", "Stupas", listOf("Ziggurats", "Pagodas", "Mandalas"), M),
         q("his_deer_park_near", "In which deer park near Varanasi did the Buddha give his first sermon?", "Sarnath", listOf("Bodh Gaya", "Lumbini", "Kushinagar"), M),
+        q("his_according_buddhist_tradition", "According to Buddhist tradition, which 'four sights' led the young Siddhartha to leave his palace?", "An old man, a sick man, a corpse and a monk", listOf("A beggar, a widow, an orphan and a thief", "A tiger, a cobra, an elephant and a deer", "A king, a soldier, a farmer and a slave"), M),
         q("his_indian_town_buddha", "In which Indian town did the Buddha reach enlightenment?", "Bodh Gaya", listOf("Varanasi", "Lumbini", "Kushinagar"), H),
         q("his_founded_india_maurya", "Who founded India's Maurya Empire around 321 BC?", "Chandragupta Maurya", listOf("Ashoka", "Bindusara", "Chandragupta II"), H),
         q("his_animals_pillar_emperor", "Which animals, from a pillar of Emperor Ashoka, appear on India's national emblem?", "Four lions", listOf("Two elephants", "A tiger and a bull", "Three peacocks"), H),
@@ -846,13 +872,15 @@ object HistoryQuestions {
         q("his_operation_ancient_indian", "Which operation did the ancient Indian surgeon Sushruta describe, using a flap of skin from the cheek?", "Rebuilding a nose", listOf("Repairing a heart", "Replacing a hand", "Removing the appendix"), H),
         q("his_according_jain_tradition", "According to Jain tradition, how did the founder of the Maurya Empire end his life?", "By fasting to death as a monk", listOf("In battle against the Greeks", "Poisoned by his own son", "Drowned in the Ganges"), H),
         q("his_lothal_indus_valley", "Lothal, an Indus Valley town in Gujarat, is famous for what may be the world's oldest known what?", "Dockyard", listOf("Lighthouse", "Stone bridge", "Sea wall"), H),
+        q("his_collection_ancient_indian", "Which collection of ancient Indian animal fables travelled through Persian and Arabic versions to medieval Europe?", "The Panchatantra", listOf("The Arthashastra", "The Kama Sutra", "The Rigveda"), H),
         q("his_aszoka", "Which Indian emperor turned to Buddhism after his bloody conquest of Kalinga?", "Ashoka", listOf("Chandragupta Maurya", "Akbar", "Harsha"), X),
         q("his_adviser_maurya_emperor", "Which adviser to the first Maurya emperor wrote the 'Arthashastra', a guide to ruling?", "Chanakya", listOf("Kalidasa", "Aryabhata", "Panini"), X),
         q("his_kushan_emperor_helped", "Which Kushan emperor helped spread Buddhism along the Silk Road in the 100s AD?", "Kanishka", listOf("Ashoka", "Harsha", "Menander"), X),
         q("his_greek_king_india", "Which Greek king in India became a Buddhist, as told in 'The Questions of Milinda'?", "Menander", listOf("Demetrius", "Seleucus", "Antiochus"), X),
         q("his_greek_ambassador_court", "Which Greek ambassador at the court of the first Maurya emperor wrote a famous account of India?", "Megasthenes", listOf("Strabo", "Pytheas", "Ptolemy"), X),
         q("his_around_303_founder", "Around 303 BC, what did the founder of the Maurya Empire give the Greek king Seleucus in exchange for vast lands?", "500 war elephants", listOf("10,000 horses", "A ton of gold", "5,000 archers"), X),
-        q("his_british_scholar_deciphered", "Which British scholar deciphered the Brahmi script of Ashoka's inscriptions in 1837?", "James Prinsep", listOf("William Jones", "Max Muller", "Alexander Cunningham"), X)
+        q("his_british_scholar_deciphered", "Which British scholar deciphered the Brahmi script of Ashoka's inscriptions in 1837?", "James Prinsep", listOf("William Jones", "Max Muller", "Alexander Cunningham"), X),
+        q("his_500_year_old", "Which 4,500-year-old bronze figure of a young woman, standing with one hand on her hip, was found at Mohenjo-daro?", "The Dancing Girl", listOf("The Priest-King", "The Harappan Queen", "The Bronze Bride"), X)
     )
 
     /* Antiquity / Celts & Barbarians - history/antiquity/celts.tsv */
@@ -869,6 +897,7 @@ object HistoryQuestions {
         q("his_vehicles_british_warriors", "Which vehicles did British warriors still ride into battle when Julius Caesar landed in 55 BC?", "War chariots", listOf("War camels", "Elephants", "Ox carts"), E),
         q("his_celtic_language_revived", "Which Celtic language, revived in modern times, belongs to the far south-west tip of England?", "Cornish", listOf("Breton", "Manx", "Welsh"), E),
         q("his_besides_english_celtic", "Besides English, which Celtic language is an official language of the Republic of Ireland?", "Irish", listOf("Welsh", "Scots", "Breton"), E),
+        q("his_roman_towns_boudica", "Which of these Roman towns did Boudica's rebels burn to the ground in AD 60?", "London", listOf("York", "Bath", "Chester"), E),
         q("his_blue_dye_ancient", "With what blue dye did ancient Britons paint themselves, according to Julius Caesar?", "Woad", listOf("Indigo", "Saffron", "Madder"), M),
         q("his_celtic_torc", "What was a Celtic 'torc'?", "A twisted metal neck ring", listOf("A war chariot", "A sacred oak grove", "A bronze helmet"), M),
         q("his_tribe_eastern_britain", "Which tribe of eastern Britain rose against Roman rule in AD 60?", "The Iceni", listOf("The Brigantes", "The Silures", "The Catuvellauni"), M),
@@ -891,6 +920,8 @@ object HistoryQuestions {
         q("his_modern_country_latin", "Which modern country is named in Latin after the Helvetii, a Celtic tribe Caesar fought in 58 BC?", "Switzerland", listOf("Austria", "Belgium", "Luxembourg"), M),
         q("his_celtic_horse_goddess", "Which Celtic horse goddess was so popular that Roman cavalrymen worshipped her too?", "Epona", listOf("Brigid", "Danu", "Sulis"), M),
         q("his_region_north_west", "Which region of north-west Spain, famous for its bagpipes, is named after a Celtic tribe?", "Galicia", listOf("Asturias", "Catalonia", "Navarre"), M),
+        q("his_celtic_language_last", "Which Celtic language, whose last native speaker died in 1974, has since been revived on its island home?", "Manx", listOf("Cornish", "Breton", "Welsh"), M),
+        q("his_scoti_gave_scotland", "The 'Scoti', who gave Scotland its name, were known to Roman writers as raiders from where?", "Ireland", listOf("Norway", "Wales", "Brittany"), M),
         q("his_gaulish_chieftain_sacked", "Which Gaulish chieftain sacked Rome around 390 BC, saying 'Woe to the conquered'?", "Brennus", listOf("Vercingetorix", "Ambiorix", "Dumnorix"), H),
         q("his_celtic_people_central", "Which Celtic people of central Turkey received a famous letter from Saint Paul?", "The Galatians", listOf("The Corinthians", "The Thessalonians", "The Ephesians"), H),
         q("his_british_chieftain_fought", "Which British chieftain fought the Roman invaders for years before being handed over to them in AD 51?", "Caratacus", listOf("Cassivellaunus", "Calgacus", "Cunobelinus"), H),
@@ -908,6 +939,8 @@ object HistoryQuestions {
         q("his_according_diodorus_gaul", "According to Diodorus, what would a Gaul trade for a single jar of Roman wine?", "A slave", listOf("A horse", "A sword", "A cow"), H),
         q("his_according_herodotus_scythian", "According to Herodotus, what did Scythian warriors make from the skulls of their worst enemies?", "Drinking cups", listOf("War helmets", "Drums", "Oil lamps"), H),
         q("his_antlered_celtic_god", "What was the antlered Celtic god, often shown sitting cross-legged, called?", "Cernunnos", listOf("Lugh", "Taranis", "Teutates"), H),
+        q("his_452_rode_out", "In 452, who rode out to meet Attila and is said to have persuaded him not to march on Rome?", "Pope Leo I", listOf("Pope Gregory I", "Saint Augustine", "Saint Patrick"), H),
+        q("his_ancient_statue_shows", "Which famous ancient statue shows a wounded Celtic warrior, naked except for a torc around his neck?", "The Dying Gaul", listOf("The Discobolus", "The Laocoon", "The Farnese Hercules"), H),
         q("his_swiss_lakeside_site", "Which Swiss lakeside site gave its name to the swirling style of later Celtic art?", "La Tene", listOf("Lausanne", "Lucerne", "Neuchatel"), X),
         q("his_silver_bowl_covered", "Which silver bowl covered in images of gods was found in a Danish bog in 1891?", "The Gundestrup cauldron", listOf("The Battersea shield", "The Vix krater", "The Snettisham hoard"), X),
         q("his_huge_iron_age", "Which huge Iron Age hill fort in Dorset is one of the largest in Europe?", "Maiden Castle", listOf("Danebury", "Old Sarum", "Cadbury Castle"), X),
@@ -915,7 +948,8 @@ object HistoryQuestions {
         q("his_queen_brigantes_northern", "Which queen of the Brigantes in northern Britain sided with Rome and handed over a famous British rebel in AD 51?", "Cartimandua", listOf("Boudica", "Medb", "Teuta"), X),
         q("his_bishop_invented_alphabet", "Which bishop invented an alphabet in the 300s to translate the Bible into the language of the Goths?", "Ulfilas", listOf("Jerome", "Ambrose", "Patrick"), X),
         q("his_bohemia_takes_celtic", "Bohemia takes its name from which Celtic tribe?", "The Boii", listOf("The Volcae", "The Helvetii", "The Senones"), X),
-        q("his_early_celtic_gold", "Many early Celtic gold coins were copies of the coins of which king?", "Philip II of Macedon", listOf("Alexander the Great", "Darius the Great", "Croesus of Lydia"), X)
+        q("his_early_celtic_gold", "Many early Celtic gold coins were copies of the coins of which king?", "Philip II of Macedon", listOf("Alexander the Great", "Darius the Great", "Croesus of Lydia"), X),
+        q("his_roman_general_visigoth", "Which Roman general, with Visigoth allies, halted Attila at the Battle of the Catalaunian Plains in 451?", "Aetius", listOf("Stilicho", "Belisarius", "Ricimer"), X)
     )
 
     /* Middle Ages / Byzantine Empire - history/middle_ages/byzantium.tsv */
@@ -928,6 +962,8 @@ object HistoryQuestions {
         q("his_modern_country_capital", "In which modern country was the capital of the Byzantine Empire?", "Turkey", listOf("Greece", "Italy", "Bulgaria"), E),
         q("his_byzantine_emblem_russian", "Which Byzantine emblem did the Russian tsars take up, and still appears on Russia's coat of arms?", "The double-headed eagle", listOf("The golden lion", "The red cross", "The rising sun"), E),
         q("his_happened_hagia_sophia", "What happened to Hagia Sophia after the Ottomans took Constantinople in 1453?", "It became a mosque", listOf("It was torn down", "It became a palace", "It was left in ruins"), E),
+        q("his_constantinople_fell_ottomans", "Constantinople fell to the Ottomans in 1453, about 40 years before which famous event?", "Columbus reaching America", listOf("The Battle of Hastings", "The French Revolution", "The coming of the Black Death"), E),
+        q("his_english_calling_set", "In English, what does calling a set of rules 'byzantine' mean?", "Overly complicated", listOf("Very old-fashioned", "Strictly religious", "Harshly enforced"), E),
         q("wh_konstantynopol_zdobywca", "Which state captured Constantinople in 1453?", "The Ottoman Empire", listOf("Venice", "Bulgaria", "Persia"), M),
         q("wh_bizancjum_nazwa", "What was the Byzantine Empire otherwise known as?", "The Eastern Roman Empire", listOf("The Latin Empire", "The Empire of Trebizond", "The Carolingian Empire"), M),
         q("trv_bizancjum_stolica", "Which city was the capital of the Byzantine Empire?", "Constantinople", listOf("Athens", "Rome", "Alexandria"), M),
@@ -951,6 +987,7 @@ object HistoryQuestions {
         q("his_roughly_long_eastern", "Roughly how long did the Eastern Roman Empire outlast the Western one?", "About 1,000 years", listOf("About 100 years", "About 300 years", "About 2,000 years"), M),
         q("his_historians_start_using", "When did historians first start using the name 'Byzantine Empire'?", "About a century after it fell", listOf("When Constantine founded it", "Under Emperor Justinian", "After the split of 1054"), M),
         q("his_great_law_books", "The great law books of Justinian, such as the Digest, were written in which language?", "Latin", listOf("Greek", "Aramaic", "Coptic"), M),
+        q("his_still_unknown_byzantine", "What is still unknown about the Byzantine navy's 'Greek fire'?", "Its exact recipe", listOf("Who first used it", "Which ships carried it", "How it was aimed"), M),
         q("his_last_byzantine_emperor", "Who was the last Byzantine emperor, killed defending the walls of Constantinople?", "Constantine XI", listOf("Justinian II", "Basil II", "Alexios I"), H),
         q("his_huge_land_walls", "Which huge land walls protected Constantinople for about a thousand years?", "The Theodosian Walls", listOf("The Aurelian Walls", "The Long Walls", "The Servian Wall"), H),
         q("his_byzantine_general_won", "Which Byzantine general won back Italy and North Africa for Emperor Justinian?", "Belisarius", listOf("Narses", "Heraclius", "Stilicho"), H),
@@ -970,6 +1007,7 @@ object HistoryQuestions {
         q("his_city_second_city", "Which city was the second city of the Byzantine Empire?", "Thessalonica", listOf("Athens", "Antioch", "Nicaea"), H),
         q("his_amazed_foreign_envoys", "What amazed foreign envoys at the Byzantine emperor's throne in the 900s?", "Mechanical lions that roared", listOf("A floor made of solid gold", "A fountain flowing with wine", "Live tigers on golden chains"), H),
         q("his_byzantine_historian_wrote", "Which Byzantine historian wrote the scandalous 'Secret History', mocking Justinian and Theodora?", "Procopius", listOf("Anna Komnene", "Michael Psellos", "Zonaras"), H),
+        q("his_byzantine_rulers_often", "Why did Byzantine rulers often blind or mutilate defeated rivals instead of killing them?", "A maimed man could not be emperor", listOf("Church law banned all executions", "It was cheaper than keeping prisoners", "The army refused to kill nobles"), H),
         q("his2_bizancjum_justynian", "Which Byzantine emperor had the famous Roman law code compiled?", "Justinian I", listOf("Constantine the Great", "Heraclius", "Basil II"), X),
         q("his_teodora", "Which Byzantine empress famously refused to flee during the Nika riots of 532?", "Theodora", listOf("Irene", "Zoe", "Helena"), X),
         q("hx_ogien_grecki", "What was the Byzantine navy's secret weapon, 'Greek fire'?", "Fire that burned on water", listOf("A signal beacon system", "An early bronze cannon", "A flaming catapult shot"), X),
@@ -995,6 +1033,7 @@ object HistoryQuestions {
         q("his_germanic_people_gave", "Which Germanic people gave their name to Essex, Sussex and Wessex?", "The Saxons", listOf("The Franks", "The Goths", "The Jutes"), E),
         q("his_legendary_king_britons", "Which legendary king of the Britons sat with his knights at a Round Table?", "King Arthur", listOf("King Alfred", "King Lear", "King Harold"), E),
         q("his_according_legend_saint", "According to legend, what did Saint Patrick drive out of the island he converted?", "All the snakes", listOf("All the wolves", "All the rats", "All the toads"), E),
+        q("his_good_king_wenceslas", "The 'Good King Wenceslas' of the Christmas carol was a real duke of which land?", "Bohemia", listOf("Hungary", "Saxony", "Bavaria"), E),
         q("hx_frankowie", "Which Germanic people gave their name to France?", "The Franks", listOf("The Gauls", "The Goths", "The Normans"), M),
         q("his_city_favourite_seat", "Which city was the favourite seat of Charlemagne, where he is buried?", "Aachen", listOf("Paris", "Rome", "Cologne"), M),
         q("his_england_germanic_people", "England is named after which Germanic people who settled there after the Romans left?", "The Angles", listOf("The Saxons", "The Jutes", "The Franks"), M),
@@ -1010,6 +1049,7 @@ object HistoryQuestions {
         q("his_study_charlemagne_skeleton", "What did the study of Charlemagne's skeleton show about him?", "He was very tall for his time", listOf("He was very short for his time", "He had lost an arm in battle", "He had six fingers on each hand"), M),
         q("his_charlemagne_coinage_240", "Charlemagne's coinage of 240 pennies to the pound survived in Britain until which year?", "1971", listOf("1815", "1914", "1066"), M),
         q("his_according_biographer_einhard", "According to his biographer Einhard, which pastime did Charlemagne love, sometimes sharing it with 100 courtiers?", "Swimming in hot springs", listOf("Playing at dice", "Singing in a choir", "Wrestling contests"), M),
+        q("his_found_staffordshire_hoard", "Who found the Staffordshire Hoard, the largest hoard of Anglo-Saxon gold ever discovered, in 2009?", "A man with a metal detector", listOf("Archaeologists digging a church", "Builders laying a new road", "A farmer ploughing his field"), M),
         q("his_karol_wielki", "Who was crowned Emperor of the Romans by the Pope on Christmas Day in 800?", "Charlemagne", listOf("Otto I", "Clovis", "Constantine"), H),
         q("his_frankish_king_baptised", "Which Frankish king was baptised around 496 and united most of the Franks?", "Clovis I", listOf("Pepin the Short", "Charles Martel", "Dagobert I"), H),
         q("his_dynasty_founded_clovis", "Which dynasty, founded by Clovis, ruled the Franks before Charlemagne's family?", "The Merovingians", listOf("The Carolingians", "The Capetians", "The Ottonians"), H),
@@ -1064,6 +1104,7 @@ object HistoryQuestions {
         q("his_viking_longships_raid", "Why could Viking longships raid so far inland?", "They could sail up shallow rivers", listOf("They could smash through river ice", "They had wheels for crossing land", "They were pulled by teams of horses"), E),
         q("his_carved_prows_some", "What were carved on the prows of some Viking ships to frighten enemies and evil spirits?", "Dragon heads", listOf("Eagle heads", "Bull heads", "Wolf heads"), E),
         q("his_almost_empty_north", "Which almost empty North Atlantic island did Norse settlers begin to colonise around 870?", "Iceland", listOf("Greenland", "Ireland", "Newfoundland"), E),
+        q("his_vikings_spend_lives", "How did most Vikings spend most of their lives?", "As farmers at home", listOf("Raiding overseas", "Trading in far-off markets", "Serving in the king's army"), E),
         q("cur_wiking_helmy", "What did real Viking helmets NOT have, despite popular images?", "Horns", listOf("Nose guards", "Iron caps", "Leather lining"), M),
         q("his_country_parliament_althing", "Which country's parliament, the Althing, founded in 930, is often called the world's oldest?", "Iceland", listOf("Norway", "England", "Denmark"), M),
         q("his_word_berserk_comes", "The word 'berserk' comes from Viking warriors who wore what?", "Bear skins", listOf("Wolf masks", "Iron helmets", "Red cloaks"), M),
@@ -1085,6 +1126,8 @@ object HistoryQuestions {
         q("his_everyday_item_among", "Which everyday item is among the most common finds in Viking graves, showing they cared about their looks?", "Combs", listOf("Mirrors", "Wigs", "Perfume bottles"), M),
         q("his_viking_wife_women", "What could a Viking wife do that women in much of Europe could not?", "Divorce her husband", listOf("Own a horse", "Wear jewellery", "Go to market"), M),
         q("his_everyday_english_words", "Which of these everyday English words was borrowed from the Vikings' Old Norse?", "Egg", listOf("Bread", "House", "Milk"), M),
+        q("his_norse_settlers_greenland", "What did the Norse settlers of Greenland and Vinland call the native peoples they met?", "Skraelings", listOf("Thralls", "Jarls", "Karls"), M),
+        q("his_according_legend_happened_4", "According to legend, what happened when Rollo was told to kiss the French king's foot?", "His man lifted it up, toppling the king", listOf("He kissed it, then demanded Paris too", "He bit the king's toe until it bled", "He kissed the queen's foot instead"), M),
         q("wld_his_wikingowie_ameryka", "Which Viking reached North America around the year 1000?", "Leif Erikson", listOf("Erik the Red", "Ragnar Lothbrok", "Harald Hardrada"), H),
         q("hx_eryk_rudy", "Which Viking gave Greenland its inviting name to attract settlers?", "Erik the Red", listOf("Leif Erikson", "Harald Bluetooth", "Ragnar Lodbrok"), H),
         q("hx_lindisfarne", "The Viking Age is often dated from a raid in 793 on which English monastery?", "Lindisfarne", listOf("Canterbury", "Iona", "Whitby"), H),
@@ -1103,6 +1146,7 @@ object HistoryQuestions {
         q("his_viking_halfdan_leave", "What did a Viking called Halfdan leave in Byzantium's greatest church in the 800s?", "His name scratched in runes", listOf("A hoard of silver coins", "A carved dragon head", "His sword on the altar"), H),
         q("his_845_king_franks", "In 845, how did the king of the Franks persuade Viking raiders to leave Paris?", "He paid them in silver", listOf("He burned their ships", "He gave them Normandy", "He baptised their leader"), H),
         q("his_arab_envoy_left", "Which Arab envoy left an eyewitness account of a Viking chieftain's ship funeral on the Volga around 922?", "Ibn Fadlan", listOf("Ibn Battuta", "Al-Idrisi", "Ibn Jubayr"), H),
+        q("his_2017_dna_tests", "In 2017, what did DNA tests reveal about a famous Viking warrior buried at Birka with weapons and two horses?", "It was a woman", listOf("It was a Slav prince", "It was an Arab envoy", "It was a teenage boy"), H),
         q("hy_rollo", "Which Viking leader was given the land that became Normandy, in 911?", "Rollo", listOf("Ragnar", "Harald Hardrada", "Erik the Red"), X),
         q("hy_hardrada", "Which Norwegian king was killed at Stamford Bridge in 1066, weeks before Hastings?", "Harald Hardrada", listOf("Harald Bluetooth", "Olaf Tryggvason", "Cnut the Great"), X),
         q("his_open_air_assembly", "What was the open-air assembly where free Vikings settled disputes called?", "A thing", listOf("A moot", "A ting-hall", "A witan"), X),
@@ -1125,6 +1169,7 @@ object HistoryQuestions {
         q("his_month_muslims_fast", "During which month do Muslims fast from dawn to dusk?", "Ramadan", listOf("Muharram", "Shawwal", "Rajab"), E),
         q("his_language_quran_written", "In which language was the Quran first written down?", "Arabic", listOf("Persian", "Turkish", "Hebrew"), E),
         q("his_instead_pictures_people", "Instead of pictures of people and animals, what mainly decorates traditional mosques?", "Calligraphy and geometric patterns", listOf("Paintings of the prophets", "Statues of famous caliphs", "Mosaics of kings and battles"), E),
+        q("his_day_week_muslims", "On which day of the week do Muslims gather for the main weekly prayers at the mosque?", "Friday", listOf("Saturday", "Sunday", "Monday"), E),
         q("hy_mekka", "In which city was the Prophet Muhammad born?", "Mecca", listOf("Medina", "Jerusalem", "Baghdad"), M),
         q("his_cube_shaped_shrine", "What is the cube-shaped shrine at the centre of the Great Mosque of Mecca called?", "The Kaaba", listOf("The Dome of the Rock", "The Minbar", "The Mihrab"), M),
         q("his_golden_domed_shrine", "Which golden-domed shrine, built in 691, stands on Jerusalem's Temple Mount?", "The Dome of the Rock", listOf("Hagia Sophia", "The Blue Mosque", "The Kaaba"), M),
@@ -1143,6 +1188,8 @@ object HistoryQuestions {
         q("his_trees_brought_spain", "Which trees, brought to Spain by its Muslim rulers, now line the streets of Seville in their thousands?", "Bitter orange trees", listOf("Date palms", "Fig trees", "Lemon trees"), M),
         q("his_word_alcohol_comes", "The word 'alcohol' comes from the Arabic 'al-kuhl', which first meant what?", "A fine eye make-up powder", listOf("A strong date wine", "A doctor's medicine", "A perfume of roses"), M),
         q("his_walled_caravanserais_built", "What were the walled 'caravanserais' built along Islamic trade routes?", "Roadside inns for traders and camels", listOf("Forts for the caliph's soldiers", "Markets for buying slaves", "Schools for young scholars"), M),
+        q("his_arabic_word_islam", "What does the Arabic word 'Islam' mean?", "Submission to God", listOf("Peace on Earth", "The true path", "The people of the book"), M),
+        q("his_star_names_such", "Many star names, such as Aldebaran, Altair and Betelgeuse, come from which language?", "Arabic", listOf("Greek", "Latin", "Hebrew"), M),
         q("his4_kalifat_abbasydzki_stolica", "Which city was the Abbasid Caliphate's capital?", "Baghdad", listOf("Damascus", "Cairo", "Cordoba"), H),
         q("hx_ibn_battuta", "Which Moroccan traveller journeyed some 120,000 km across the medieval Islamic world?", "Ibn Battuta", listOf("Ibn Khaldun", "Al-Idrisi", "Ibn Sina"), H),
         q("hx_granada_1492", "Besides Columbus's voyage, what else happened in Spain in 1492?", "Granada, the last Moorish state, fell", listOf("The Armada was destroyed", "The Inquisition was abolished", "Madrid became the capital"), H),
@@ -1167,6 +1214,7 @@ object HistoryQuestions {
         q("his_arab_geographer_made", "Which Arab geographer made a famous map of the world for the Norman king Roger II of Sicily in 1154?", "Al-Idrisi", listOf("Ibn Battuta", "Ibn Khaldun", "Al-Masudi"), H),
         q("his_poet_finished_shahnameh", "Which poet finished the 'Shahnameh', the great Persian 'Book of Kings', around 1010?", "Ferdowsi", listOf("Rumi", "Hafez", "Omar Khayyam"), H),
         q("his_tunisian_born_scholar", "Which Tunisian-born scholar of the 1300s explained the rise and fall of dynasties and is called a father of sociology?", "Ibn Khaldun", listOf("Ibn Rushd", "Al-Farabi", "Al-Biruni"), H),
+        q("his_inventor_cordoba_said", "Which inventor of Cordoba is said to have flown briefly with feathered wings around 875, hurting his back on landing?", "Abbas ibn Firnas", listOf("Ibn al-Haytham", "Al-Jazari", "Ziryab"), H),
         q("hy_hidzra", "The Islamic calendar counts from Muhammad's move in 622 to which city?", "Medina", listOf("Mecca", "Damascus", "Jerusalem"), X),
         q("hw_dom_madrosci", "In which city stood the 'House of Wisdom', a great centre of learning in the 800s?", "Baghdad", listOf("Cairo", "Cordoba", "Damascus"), X),
         q("his_empire_ruled_shahs", "Which empire was ruled by shahs from the city of Isfahan in the 1600s?", "The Safavid Empire", listOf("The Mughal Empire", "The Ottoman Empire", "The Seljuk Empire"), X),
@@ -1188,6 +1236,7 @@ object HistoryQuestions {
         q("his_legendary_outlaw_said", "Which legendary outlaw is said to have stayed loyal to King Richard while he was away on crusade?", "Robin Hood", listOf("Dick Turpin", "William Tell", "Rob Roy"), E),
         q("his_english_king_spent", "Which English king spent only about six months of his ten-year reign in England?", "Richard the Lionheart", listOf("John Lackland", "Henry II", "Edward I"), E),
         q("his_brother_richard_lionheart", "Which brother of Richard the Lionheart plotted to seize the throne while Richard was away on crusade?", "John", listOf("Geoffrey", "Henry", "Edmund"), E),
+        q("his_jerusalem_church_built", "Which Jerusalem church, built over the traditional site of Jesus's tomb, did the crusaders most long to free?", "The Holy Sepulchre", listOf("The Dome of the Rock", "Hagia Sophia", "The Church of the Nativity"), E),
         q("his_krucjaty", "What were the medieval Crusades mainly fought over?", "Control of the Holy Land", listOf("Spices from India", "Gold mines in Africa", "The throne of France"), M),
         q("hx_ryszard_lwie", "Which English king was nicknamed 'the Lionheart'?", "Richard I", listOf("Henry V", "Edward I", "John"), M),
         q("his_year_crusade_capture", "In which year did the First Crusade capture Jerusalem?", "1099", listOf("1066", "1187", "1204"), M),
@@ -1204,6 +1253,8 @@ object HistoryQuestions {
         q("his_even_leaving_europe", "Before even leaving Europe in 1096, crusading bands attacked which communities in Rhineland towns?", "Jewish communities", listOf("Muslim merchants", "Orthodox monks", "Pagan villages"), M),
         q("his_saladin_tithe_raised", "What was the 'Saladin tithe', raised in England and France in 1188?", "A tax to pay for a crusade", listOf("A ransom to free Jerusalem", "A gift sent to Saladin's court", "A tenth of loot for the pope"), M),
         q("his_saint_crossed_battle", "Which saint crossed the battle lines during the Fifth Crusade in 1219 to try to convert the sultan of Egypt?", "Francis of Assisi", listOf("Bernard of Clairvaux", "Thomas Aquinas", "Dominic"), M),
+        q("his_crowds_shout_pope", "What did the crowds shout when the pope called for the First Crusade at Clermont in 1095?", "'God wills it!'", listOf("'For Christ and Rome!'", "'Jerusalem is ours!'", "'Death to the infidel!'"), M),
+        q("his_seal_knights_templar", "What does the famous seal of the Knights Templar show?", "Two knights riding one horse", listOf("A lion holding a sword", "A cross on a castle tower", "An eagle clutching a key"), M),
         q("his_templariusze", "Which order of knights, who wore red crosses, had its members arrested across France in 1307?", "The Knights Templar", listOf("The Teutonic Knights", "The Knights Hospitaller", "The Order of the Garter"), H),
         q("hx_saladyn", "Which Muslim sultan retook Jerusalem from the Crusaders in 1187?", "Saladin", listOf("Baibars", "Mehmed II", "Harun al-Rashid"), H),
         q("hx_urban_ii", "Which pope launched the First Crusade in 1095?", "Urban II", listOf("Gregory VII", "Innocent III", "Leo IX"), H),
@@ -1231,6 +1282,7 @@ object HistoryQuestions {
         q("his_old_man_mountain", "Who was 'the Old Man of the Mountain', feared by the crusaders?", "The leader of the Assassins", listOf("A hermit who foretold battles", "The emir of Damascus", "The Byzantine spymaster"), H),
         q("his_richard_lionheart_700", "What did Richard the Lionheart do to about 2,700 Muslim prisoners after taking a great port city in 1191?", "Had them executed", listOf("Set them all free", "Sold them in Venice", "Swapped them for the True Cross"), H),
         q("his_according_crusader_chroniclers", "According to crusader chroniclers, what did starving crusaders do after taking the town of Maarat al-Numan in 1098?", "Ate the bodies of the dead", listOf("Burned it and marched home", "Turned back to Constantinople", "Made peace with the sultan"), H),
+        q("his_christian_city_adriatic", "Which Christian city on the Adriatic did the Fourth Crusade attack first, to pay off its debt to Venice?", "Zara", listOf("Ragusa", "Trieste", "Ancona"), H),
         q("hy_czwarta_krucjata", "Which Christian city was sacked by the Fourth Crusade in 1204?", "Constantinople", listOf("Jerusalem", "Antioch", "Rome"), X),
         q("his_given_crusader_states", "What was the name given to the crusader states in the Levant, meaning 'overseas'?", "Outremer", listOf("Levant", "Oltremare", "Terra Santa"), X),
         q("his_pope_dissolved_crusading", "Which pope dissolved a famous crusading order under pressure from Philip IV in 1312?", "Clement V", listOf("Boniface VIII", "Urban II", "Innocent III"), X),
@@ -1284,6 +1336,7 @@ object HistoryQuestions {
         q("his_word_freelance_coined", "The word 'freelance' was coined by Walter Scott for what kind of medieval fighter?", "A mercenary knight", listOf("A runaway squire", "A knight who lost his horse", "A peasant archer"), M),
         q("his_caltrop", "What was a 'caltrop'?", "A spiked ball to lame horses", listOf("A hook for climbing walls", "A pot of boiling oil", "A rope ladder for sieges"), M),
         q("his_phrase_throw_down", "The phrase 'to throw down the gauntlet' comes from a knight doing what?", "Challenging someone to fight", listOf("Surrendering in battle", "Swearing loyalty to a lord", "Giving up his knighthood"), M),
+        q("his_joust_tilt", "At a joust, what was the 'tilt'?", "A barrier dividing the riders", listOf("The lance's blunted tip", "The judges' raised stand", "The prize for the winner"), M),
         q("his_knight_big_strong", "What was a knight's big, strong war horse called?", "A destrier", listOf("A palfrey", "A pony", "A courser"), H),
         q("his_openings_overhanging_parapet", "What were the openings in an overhanging parapet, for dropping stones on attackers, called?", "Machicolations", listOf("Crenellations", "Embrasures", "Buttresses"), H),
         q("his_english_king_built", "Which English king built a ring of great castles in Wales, including Caernarfon and Harlech?", "Edward I", listOf("Henry II", "Richard I", "William the Conqueror"), H),
@@ -1298,12 +1351,15 @@ object HistoryQuestions {
         q("his_castle_sally_port", "What was a castle's 'sally port'?", "A small gate for surprise attacks", listOf("A harbour for the lord's ships", "A room for storing gunpowder", "A gate where tolls were paid"), H),
         q("his_quintain_young_knights", "What was the 'quintain' that young knights practised on?", "A target on a swinging arm", listOf("A wooden horse on wheels", "A straw dummy in armour", "A ring hung from a tree"), H),
         q("his_edward_refuse_surrender", "Why did Edward I at first refuse the surrender of Stirling Castle in 1304?", "He wanted to test his giant trebuchet", listOf("He wanted to starve the garrison", "He wanted his son to lead the attack", "He was waiting for the pope's blessing"), H),
+        q("his_french_king_died_2", "Which French king died in 1559 after a splinter from a lance pierced his eye in a joust?", "Henry II", listOf("Francis I", "Louis XII", "Charles IX"), H),
+        q("his_according_own_memoir", "According to his own memoir, the knight Ulrich von Liechtenstein toured the tournaments of 1227 dressed as whom?", "The goddess Venus", listOf("King Arthur", "The Archangel Michael", "Saint George"), H),
         q("his_scutage_shield_money", "What was 'scutage', or 'shield money'?", "A payment instead of military service", listOf("A tax on armour makers", "A reward for a captured knight", "A fee to enter a tournament"), X),
         q("his_church_council_1139", "Which church council of 1139 tried to ban the use of crossbows against Christians?", "The Second Lateran Council", listOf("The Council of Trent", "The Council of Nicaea", "The Council of Clermont"), X),
         q("his_french_knight_famed", "Which French knight was famed as the knight 'without fear and beyond reproach'?", "Bayard", listOf("Roland", "Lancelot", "Du Guesclin"), X),
         q("his_welsh_castle_never", "Which Welsh castle, never finished, is called the most perfect concentric castle in Britain?", "Beaumaris", listOf("Caernarfon", "Conwy", "Harlech"), X),
         q("his_scottish_castle_captured", "Which Scottish castle was captured in 1314 by men who climbed its rock at night?", "Edinburgh Castle", listOf("Stirling Castle", "Dunnottar Castle", "Urquhart Castle"), X),
-        q("his_misericorde_carried_medieval", "What was a 'misericorde', carried by medieval knights?", "A thin dagger for finishing off foes", listOf("A charm for good luck in battle", "A purse for ransom money", "A horn for calling for help"), X)
+        q("his_misericorde_carried_medieval", "What was a 'misericorde', carried by medieval knights?", "A thin dagger for finishing off foes", listOf("A charm for good luck in battle", "A purse for ransom money", "A horn for calling for help"), X),
+        q("his_combat_thirty_fought", "What was the 'Combat of the Thirty', fought in Brittany in 1351?", "A set fight of 30 knights on each side", listOf("A siege that lasted thirty days", "A tournament for thirty kings", "A trial of thirty rebel lords"), X)
     )
 
     /* Middle Ages / Medieval Britain - history/middle_ages/medieval_britain.tsv */
@@ -1317,6 +1373,8 @@ object HistoryQuestions {
         q("his_according_legend_creature", "According to legend, which creature taught a Scottish king hiding in a cave to 'try, try again'?", "A spider", listOf("A robin", "An eagle", "A mouse"), E),
         q("his_english_say_cow", "Why does English say 'cow' for the animal in the field but 'beef' for the meat on the table?", "Norman French lords ate the meat", listOf("Viking settlers named the meat", "Monks used the Latin word", "Dutch butchers sold the meat"), E),
         q("his_pantomime_hero_said", "Which pantomime hero, said to have come to London with only his cat, was a real Lord Mayor of London around 1400?", "Dick Whittington", listOf("Tom Thumb", "Jack Sprat", "Simple Simon"), E),
+        q("his_since_time_edward", "Since the time of Edward I, which title has usually been given to the English monarch's eldest son?", "Prince of Wales", listOf("Duke of York", "Prince Regent", "Lord Protector"), E),
+        q("his_normans_conquered_england", "The Normans who conquered England in 1066 were descended from which raiders?", "The Vikings", listOf("The Saxons", "The Huns", "The Moors"), E),
         q("wh_hastings_zwyciezca", "Who won the Battle of Hastings in 1066?", "William the Conqueror", listOf("Harold II", "Richard the Lionheart", "Canute the Great"), M),
         q("hx_normanowie", "The Normans who conquered England in 1066 came from which present-day country?", "France", listOf("Norway", "Denmark", "Germany"), M),
         q("hx_wallace", "Which Scottish hero, shown in the film 'Braveheart', led a revolt against England in 1297?", "William Wallace", listOf("Robert the Bruce", "Rob Roy", "Bonnie Prince Charlie"), M),
@@ -1341,6 +1399,7 @@ object HistoryQuestions {
         q("his_english_earl_1400s", "Which English earl of the 1400s, who put two kings on the throne, was nicknamed 'the Kingmaker'?", "The Earl of Warwick", listOf("The Earl of Oxford", "The Earl of Northumberland", "The Earl of Pembroke"), M),
         q("his_abbey_monks_claimed", "Which abbey's monks claimed in 1191 to have found the grave of King Arthur?", "Glastonbury", listOf("Westminster", "Whitby", "Tintern"), M),
         q("his_day_1066_william", "On which day in 1066 was William the Conqueror crowned in Westminster Abbey?", "Christmas Day", listOf("Easter Sunday", "New Year's Day", "Midsummer Day"), M),
+        q("his_william_wallace_executed", "How was William Wallace executed in London in 1305?", "Hanged, drawn and quartered", listOf("Beheaded with an axe", "Burned at the stake", "Drowned in the Thames"), M),
         q("wh_wojna_dwoch_roz", "The houses of York and Lancaster fought each other during...", "The Wars of the Roses", listOf("The Hundred Years' War", "The English Revolution", "The Seven Years' War"), H),
         q("wld_magna_carta", "Which English king sealed the Magna Carta in 1215?", "King John", listOf("Richard the Lionheart", "Henry VIII", "William the Conqueror"), H),
         q("hx_bayeux", "Which famous embroidery tells the story of the Norman conquest of England?", "The Bayeux Tapestry", listOf("The Book of Kells", "The Lewis Chessmen", "The Domesday Book"), H),
@@ -1368,7 +1427,8 @@ object HistoryQuestions {
         q("his_harrying_north_1069", "What was the 'Harrying of the North' in 1069-1070?", "William's wasting of northern England", listOf("A Viking raid on Northumbria", "A Scottish invasion of York", "A plague in Yorkshire"), X),
         q("his_english_friar_1200s", "Which English friar of the 1200s is often called one of the first scientists?", "Roger Bacon", listOf("William of Ockham", "Duns Scotus", "Robert Grosseteste"), X),
         q("his_scottish_castle_countess", "Which Scottish castle did the countess known as 'Black Agnes' hold for five months against the English in 1338?", "Dunbar Castle", listOf("Stirling Castle", "Bothwell Castle", "Caerlaverock Castle"), X),
-        q("his_teenage_prince_proclaimed", "Which teenage prince was proclaimed king of England after Harold fell at Hastings, but was never crowned?", "Edgar the Aetheling", listOf("Edmund Ironside", "Edward the Exile", "Harthacnut"), X)
+        q("his_teenage_prince_proclaimed", "Which teenage prince was proclaimed king of England after Harold fell at Hastings, but was never crowned?", "Edgar the Aetheling", listOf("Edmund Ironside", "Edward the Exile", "Harthacnut"), X),
+        q("his_scottish_king_death", "Which Scottish king's death in 1286, after a fall from his horse on a stormy night, plunged Scotland into a succession crisis?", "Alexander III", listOf("David I", "Malcolm III", "Robert the Bruce"), X)
     )
 
     /* Middle Ages / Hundred Years' War - history/middle_ages/hundred_years_war.tsv */
@@ -1380,6 +1440,7 @@ object HistoryQuestions {
         q("his_according_accounts_french", "According to most accounts, how did the French army at Agincourt compare in size with Henry V's?", "It was far larger", listOf("It was about the same", "It was far smaller", "It was slightly smaller"), E),
         q("his_soil_country_hundred", "On the soil of which country was the Hundred Years' War mostly fought?", "France", listOf("England", "Scotland", "The Low Countries"), E),
         q("his_king_shakespeare_play", "Which king in a Shakespeare play rallies his troops with 'Once more unto the breach, dear friends'?", "Henry V", listOf("Richard III", "Edward III", "Henry IV"), E),
+        q("his_country_won_hundred", "Which country won the Hundred Years' War in the end?", "France", listOf("England", "Burgundy", "Scotland"), E),
         q("his2_wojna_stuletnia", "Between which countries was the Hundred Years' War fought?", "England and France", listOf("Spain and Portugal", "Sweden and Denmark", "Austria and Prussia"), M),
         q("wh_joanna_darc", "During which conflict did Joan of Arc fight?", "The Hundred Years' War", listOf("The Thirty Years' War", "The Wars of the Roses", "The Reconquista"), M),
         q("hx_joanna_stos", "How did Joan of Arc die in 1431?", "She was burned at the stake", listOf("She fell in battle", "She was poisoned", "She died of the plague"), M),
@@ -1403,6 +1464,8 @@ object HistoryQuestions {
         q("his_english_joan_arc", "What did the English do with Joan of Arc's ashes after her execution?", "Threw them into the Seine", listOf("Buried them in Rouen", "Sent them to London", "Kept them as relics"), M),
         q("his_according_story_joan", "According to the story, how did Joan of Arc prove herself when the Dauphin hid among his courtiers at Chinon?", "She picked him out at once", listOf("She tamed his wild horse", "She lifted his heavy sword", "She healed a blind courtier"), M),
         q("his_part_britain_longbowmen", "From which part of Britain did many of the famous longbowmen of the Hundred Years' War come?", "Wales", listOf("Cornwall", "Ireland", "The Isle of Man"), M),
+        q("his_tree_wood_best", "From which tree's wood were the best English longbows made?", "Yew", listOf("Oak", "Ash", "Elm"), M),
+        q("his_battle_herrings_1429", "The 'Battle of the Herrings' in 1429 got its name from what the English supply convoy was carrying. What was it?", "Barrels of salted fish for Lent", listOf("Fishing nets for the river", "Fish oil for the lamps", "Live fish for a royal feast"), M),
         q("hx_joanna_wiek", "How old was Joan of Arc when she was executed?", "About 19", listOf("About 29", "About 39", "About 14"), H),
         q("his_city_joan_arc", "In which city was Joan of Arc burned at the stake?", "Rouen", listOf("Paris", "Orleans", "Reims"), H),
         q("his_allies_english_captured", "Which allies of the English captured Joan of Arc and sold her to them?", "The Burgundians", listOf("The Bretons", "The Scots", "The Flemish"), H),
@@ -1422,6 +1485,7 @@ object HistoryQuestions {
         q("his_battle_1340_fought", "Which battle of 1340, fought at sea, destroyed most of the French fleet?", "Sluys", listOf("La Rochelle", "Winchelsea", "Calais"), H),
         q("his_through_english_king", "Through whom did the English king who started the Hundred Years' War claim the French crown?", "His mother, Isabella of France", listOf("His wife, Philippa of Hainault", "His grandmother, Eleanor of Castile", "His father, Edward II"), H),
         q("his_town_joan_arc", "At which town was Joan of Arc captured in 1430?", "Compiegne", listOf("Rouen", "Chinon", "Domremy"), H),
+        q("his_persuaded_edward_iii", "Who persuaded Edward III to spare the six townsmen of Calais who offered their lives in 1347?", "His wife, Philippa of Hainault", listOf("His son, the Black Prince", "The pope's envoy", "The bishop of Calais"), H),
         q("his_french_king_taken", "Which French king was taken prisoner at Poitiers in 1356?", "John II", listOf("Philip VI", "Charles V", "Louis IX"), X),
         q("his_battle_1453_ended", "Which battle of 1453 ended the Hundred Years' War with a French victory?", "Castillon", listOf("Formigny", "Patay", "Orleans"), X),
         q("his_treaty_1420_made", "Which treaty of 1420 made Henry V heir to the French throne?", "The Treaty of Troyes", listOf("The Treaty of Bretigny", "The Treaty of Arras", "The Treaty of Picquigny"), X),
@@ -1500,12 +1564,14 @@ object HistoryQuestions {
         q("his_medieval_trial_ordeal_2", "What was a medieval 'trial by ordeal' used for?", "Judging guilt or innocence", listOf("Choosing a new king", "Training young knights", "Blessing the harvest"), H),
         q("his_fashion_medieval_laws", "Which fashion did medieval laws limit by rank, so that only nobles could wear the longest?", "Pointed shoes", listOf("Beards", "Dagger handles", "Hat brims"), H),
         q("his_medieval_anchorites", "What were medieval anchorites?", "Hermits walled into cells beside churches", listOf("Sailors who guarded harbour chains", "Monks who copied maps of the world", "Knights who guarded pilgrims"), H),
+        q("his_late_medieval_danse", "What did the late medieval 'Danse Macabre' paintings show?", "Death leading people of every rank in a dance", listOf("Peasants dancing to keep the plague away", "Witches dancing around a fire at night", "Monks dancing in a procession at Easter"), H),
         q("his_plaga_tanca", "What happened in Strasbourg during the 'Dancing Plague' of 1518?", "People danced uncontrollably for days", listOf("A disease spread at dances", "All dancing was banned", "A dance was used to ward off plague"), X),
         q("hx_wojna_o_wiadro", "The 'War of the Bucket' in 1325 was fought between which two Italian cities?", "Modena and Bologna", listOf("Florence and Pisa", "Venice and Genoa", "Rome and Naples"), X),
         q("hx_awinion", "In the 1300s, the popes lived for about 70 years in which French city?", "Avignon", listOf("Lyon", "Paris", "Reims"), X),
         q("his_cordwainer_make_medieval", "What did a 'cordwainer' make in a medieval town?", "Shoes", listOf("Ropes", "Barrels", "Candles"), X),
         q("his_medieval_french_game", "Which medieval French game, first played with the bare hand, grew into tennis?", "Jeu de paume", listOf("Pelota", "Soule", "Paille-maille"), X),
-        q("his_cockaigne_medieval_stories", "What was 'Cockaigne' in medieval stories?", "A land of endless food and idleness", listOf("A dragon guarding a hoard of gold", "A magic cauldron that fed armies", "A city of thieves beneath London"), X)
+        q("his_cockaigne_medieval_stories", "What was 'Cockaigne' in medieval stories?", "A land of endless food and idleness", listOf("A dragon guarding a hoard of gold", "A magic cauldron that fed armies", "A city of thieves beneath London"), X),
+        q("his_doctor_advice_pope", "On his doctor's advice, how did Pope Clement VI keep the Black Death away at Avignon?", "He sat between two great fires", listOf("He wore a mask stuffed with herbs", "He moved to an island in the Rhone", "He ate only bread and water"), X)
     )
 
     /* Middle Ages / Mongol Empire - history/middle_ages/mongols.tsv */
@@ -1518,6 +1584,7 @@ object HistoryQuestions {
         q("his_world_largest_horse", "One of the world's largest horse statues, a 40-metre steel giant near Ulaanbaatar, shows whom?", "Genghis Khan", listOf("Kublai Khan", "Attila the Hun", "Timur"), E),
         q("his_genghis_khan_united", "Before Genghis Khan united them, how did most Mongols make their living?", "Herding animals on the steppe", listOf("Growing rice in river valleys", "Trading silk in walled cities", "Fishing on great lakes"), E),
         q("his_according_popular_legend_2", "According to a popular legend, how did Mongol horsemen soften raw meat on long rides?", "By keeping it under their saddles", listOf("By soaking it in mare's milk", "By burying it in hot sand", "By beating it with their bows"), E),
+        q("his_kind_horses_carried", "What kind of horses carried the Mongol armies across Asia?", "Small, tough steppe ponies", listOf("Huge armoured war horses", "Fast desert Arabian horses", "Heavy horses bred for pulling"), E),
         q("his4_zlota_horda_kto", "The Golden Horde was a state founded by which people?", "The Mongols", listOf("The Ottomans", "The Vikings", "The Magyars"), M),
         q("trv_czyngis_potomkowie", "Which ruler is thought to have millions of living descendants today?", "Genghis Khan", listOf("Julius Caesar", "Charlemagne", "Alexander the Great"), M),
         q("wld_his_marco_polo", "Which Venetian traveller told Europe about China's Kublai Khan?", "Marco Polo", listOf("Vasco da Gama", "Ferdinand Magellan", "Christopher Columbus"), M),
@@ -1540,6 +1607,8 @@ object HistoryQuestions {
         q("his_mongols_generally_treat", "How did the Mongols generally treat the religions of the peoples they conquered?", "They tolerated them", listOf("They banned all of them", "They forced Buddhism on all", "They made all convert to Islam"), M),
         q("his_according_legend_happened_3", "According to legend, what happened to anyone who crossed paths with Genghis Khan's funeral procession?", "They were killed", listOf("They were made rich", "They became his slaves", "They had to join the march"), M),
         q("his_genghis_khan_father", "How did Genghis Khan's father, Yesugei, die when the boy was about nine?", "Poisoned by Tatars", listOf("Killed in a duel", "Thrown from his horse", "Frozen in a blizzard"), M),
+        q("his_according_persian_chronicler", "According to a Persian chronicler, what did Genghis Khan tell the people of Bukhara he was?", "'The punishment of God'", listOf("'The son of Heaven'", "'The lord of all horses'", "'The heir of Alexander'"), M),
+        q("his_mongols_choose_winter", "Why did the Mongols choose winter to invade the Russian lands in 1237?", "Frozen rivers made perfect roads", listOf("Russian bowstrings froze and snapped", "The Russians were away hunting", "Their horses hated summer flies"), M),
         q("hx_kamikaze", "The word 'kamikaze' ('divine wind') first described what?", "Storms that sank Mongol fleets", listOf("A samurai sword technique", "A Buddhist temple chant", "A volcanic eruption"), H),
         q("his_city_became_capital", "Which city became the capital of the Mongol Empire under Genghis Khan's son Ogedei?", "Karakorum", listOf("Samarkand", "Beijing", "Sarai"), H),
         q("his_grandson_genghis_khan", "Which grandson of Genghis Khan sacked Baghdad in 1258?", "Hulagu", listOf("Kublai", "Batu", "Mongke"), H),
@@ -1557,6 +1626,7 @@ object HistoryQuestions {
         q("his_mongol_paiza", "What was a Mongol 'paiza'?", "A tablet that worked as a pass", listOf("A tent for the khan's wives", "A tax paid in horses", "A whistling signal arrow"), H),
         q("his_last_abbasid_caliph", "How was the last Abbasid caliph reportedly executed after the Mongols took Baghdad in 1258?", "Rolled in a carpet and trampled", listOf("Thrown from a tower", "Beheaded with his own sword", "Drowned in the Tigris"), H),
         q("his_according_legend_genghis", "According to legend, how did Genghis Khan execute the governor of Otrar, who had massacred his merchants?", "Molten silver in his eyes and ears", listOf("Torn apart by four horses", "Buried alive in sand", "Shot by a hundred archers"), H),
+        q("his_battle_1260_fought", "At which battle of 1260, fought in Palestine, did a Mongol army suffer its first great defeat?", "Ain Jalut", listOf("Mohi", "Kalka", "Talas"), H),
         q("hx_temudzyn", "What was Genghis Khan's name at birth?", "Temujin", listOf("Kublai", "Ogedei", "Batu"), X),
         q("hy_timur", "Which Central Asian conqueror, also called Tamerlane, built his capital at Samarkand?", "Timur", listOf("Babur", "Genghis Khan", "Attila"), X),
         q("hw_marco_polo_wiezienie", "Marco Polo's travel stories were written down while he was where?", "In prison in Genoa", listOf("At the Mongol court", "On a ship to China", "In a monastery"), X),
@@ -1584,6 +1654,7 @@ object HistoryQuestions {
         q("his_giant_gun_cast", "Which giant gun, cast in 1586, sits in the Moscow Kremlin without ever having been fired in war?", "The Tsar Cannon", listOf("The Great Bombard", "Mons Meg", "The Moscow Mortar"), E),
         q("his_according_legend_ivan", "According to legend, what did Ivan the Terrible do to the architects of the cathedral he built on Red Square?", "Had them blinded", listOf("Made them noblemen", "Buried them under it", "Sent them to Siberia"), E),
         q("his_according_old_russian", "According to the old Russian chronicle, what amazed the apostle Andrew about the Slavs' steam baths?", "They lashed themselves with twigs", listOf("They bathed in mare's milk", "They sang hymns inside", "They shared them with cows"), E),
+        q("his_three_modern_countries", "Which three modern countries all trace their roots to Kievan Rus?", "Russia, Ukraine and Belarus", listOf("Russia, Poland and Lithuania", "Ukraine, Moldova and Romania", "Russia, Finland and Estonia"), E),
         q("his_varangian_chief_said", "Which Varangian chief is said to have founded the Rus state at Novgorod in 862?", "Rurik", listOf("Oleg", "Igor", "Sviatoslav"), M),
         q("his_prince_kiev_people", "Which prince of Kiev had his people baptised as Christians around 988?", "Vladimir the Great", listOf("Yaroslav the Wise", "Oleg the Seer", "Ivan the Great"), M),
         q("his_according_chronicle_prince", "According to the chronicle, why did Prince Vladimir turn down Islam?", "It forbade drinking alcohol", listOf("It banned eating pork", "Its prayers were too long", "It came from the south"), M),
@@ -1604,6 +1675,8 @@ object HistoryQuestions {
         q("his_happened_great_idol", "What happened to the great idol of the thunder god Perun when Kiev turned Christian?", "It was thrown into the Dnieper", listOf("It was moved into a church", "It was melted into bells", "It was buried under a gate"), M),
         q("his_ivan_terrible_black_2", "What did Ivan the Terrible's black-clad enforcers carry on their saddles as emblems?", "A dog's head and a broom", listOf("A wolf's tail and a whip", "A raven's skull and a bell", "A bear's claw and an axe"), M),
         q("his_word_red_moscow", "What did the word 'red' in the name of Moscow's Red Square originally mean?", "Beautiful", listOf("Bloody", "Royal", "Brick-built"), M),
+        q("his_1570_great_city", "In 1570, which great city did Ivan the Terrible's enforcers sack, drowning many of its people in the icy river?", "Novgorod", listOf("Kazan", "Smolensk", "Yaroslavl"), M),
+        q("his_russian_princes_under", "What did Russian princes under Mongol rule need from the khan before they could rule?", "A charter called a yarlyk", listOf("A bride from the khan's family", "A blessing from Mongol shamans", "A gold tablet called a tumen"), M),
         q("his_princess_kiev_took", "Which princess of Kiev took bloody revenge for her murdered husband and was later made a saint?", "Olga", listOf("Anna", "Sophia", "Elena"), H),
         q("his_prince_kiev_wise", "Which prince of Kiev, called 'the Wise', gave the Rus their first written law code?", "Yaroslav", listOf("Vladimir", "Sviatoslav", "Mstislav"), H),
         q("his_year_moscow_mentioned", "In which year is Moscow first mentioned in the Russian chronicles?", "1147", listOf("862", "988", "1380"), H),
@@ -1624,6 +1697,7 @@ object HistoryQuestions {
         q("his_giant_hero_old", "Which giant hero of old Russian legend lay on the stove for 33 years before becoming a warrior?", "Ilya Muromets", listOf("Dobrynya Nikitich", "Alyosha Popovich", "Sadko"), H),
         q("his_merchant_tver_reached", "Which merchant from Tver reached India in the 1460s and wrote 'A Journey Beyond Three Seas'?", "Afanasy Nikitin", listOf("Sadko", "Semyon Dezhnev", "Yermak"), H),
         q("his_english_company_began", "Which English company began trading with Ivan the Terrible after its ship reached the White Sea in 1553?", "The Muscovy Company", listOf("The Levant Company", "The Hudson's Bay Company", "The East India Company"), H),
+        q("his_kiev_cathedral_built", "Which Kiev cathedral, built under Yaroslav the Wise, holds his marble tomb?", "St Sophia's Cathedral", listOf("St Michael's Cathedral", "The Dormition Cathedral", "St Andrew's Church"), H),
         q("his_prince_traditionally_credited", "Which prince is traditionally credited with founding Moscow?", "Yuri Dolgoruky", listOf("Alexander Nevsky", "Daniel of Moscow", "Andrei Bogolyubsky"), X),
         q("his_grand_prince_moscow", "Which grand prince of Moscow led the Russians to victory at Kulikovo?", "Dmitry Donskoy", listOf("Ivan III", "Vasily II", "Alexander Nevsky"), X),
         q("his_niece_last_byzantine", "Which niece of the last Byzantine emperor married Ivan III of Moscow in 1472?", "Sophia Palaiologina", listOf("Anna Komnene", "Zoe Karbonopsina", "Helena Glinskaya"), X),
@@ -1648,6 +1722,8 @@ object HistoryQuestions {
         q("his_meant_fruit_language", "Before it meant a fruit or a language, what was a 'mandarin' in imperial China?", "A high official", listOf("A palace cook", "A temple musician", "A silk merchant"), E),
         q("his_country_use_rockets", "Which country was the first to use rockets in war, against the Mongols in the 1200s?", "China", listOf("India", "Persia", "Korea"), E),
         q("his_mythical_creature_symbol", "Which mythical creature was the symbol of the Chinese emperor?", "The dragon", listOf("The phoenix", "The tiger", "The qilin"), E),
+        q("his_kowtow_visitors_perform", "What was the 'kowtow' that visitors had to perform before the Chinese emperor?", "Kneeling and knocking the head on the floor", listOf("Bowing three times with joined hands", "Walking backwards out of the room", "Offering gifts with both hands raised"), E),
+        q("his_according_legend_rooms", "According to legend, how many rooms does Beijing's Forbidden City have?", "9,999 and a half", listOf("Exactly 1,001", "One for each day", "Exactly 10,000"), E),
         q("his_pieniadz_papierowy", "Which country was the first to use paper money?", "China", listOf("Italy", "Persia", "Egypt"), M),
         q("hx_zakazane_miasto", "What was the imperial palace in Beijing, closed to ordinary people, called?", "The Forbidden City", listOf("The Summer Palace", "The Jade Palace", "The Temple of Heaven"), M),
         q("his_last_imperial_dynasty", "Which was the last imperial dynasty of China?", "Qing", listOf("Ming", "Han", "Tang"), M),
@@ -1669,6 +1745,7 @@ object HistoryQuestions {
         q("his_black_stones_burned", "Which 'black stones' that burned like logs amazed European travellers in Yuan China?", "Coal", listOf("Obsidian", "Basalt", "Flint"), M),
         q("his_drink_tang_writer", "Which drink did the Tang writer Lu Yu devote a whole book to in the 700s?", "Tea", listOf("Rice wine", "Plum juice", "Soy milk"), M),
         q("his_group_palace_servants", "Which group of palace servants, barred from having families, grew so powerful under the Ming that some ran the empire?", "The eunuchs", listOf("The mandarins", "The concubines", "The scholars"), M),
+        q("his_chinese_city_capital", "Which Chinese city has been the capital of porcelain-making for over 1,000 years?", "Jingdezhen", listOf("Hangzhou", "Guangzhou", "Suzhou"), M),
         q("dpt_his_mur_ming", "Which dynasty built most of the Great Wall as it stands today?", "The Ming dynasty", listOf("The Han dynasty", "The Qin dynasty", "The Tang dynasty"), H),
         q("hy_egzaminy_chiny", "How did imperial China choose many of its officials?", "Through tough written exams", listOf("By drawing lots", "By sword fights", "Only by noble birth"), H),
         q("his_under_dynasty_china", "Under which dynasty did China print the world's first official paper money?", "Song", listOf("Han", "Qin", "Qing"), H),
@@ -1687,6 +1764,7 @@ object HistoryQuestions {
         q("his_song_general_mother", "Which Song general, whose mother is said to have tattooed 'Serve the country loyally' on his back, is a Chinese national hero?", "Yue Fei", listOf("Guan Yu", "Zhuge Liang", "Qi Jiguang"), H),
         q("his_song_dynasty_weapon", "Which Song dynasty weapon, a tube that shot out flames and shrapnel, was the ancestor of the gun?", "The fire lance", listOf("The fire arrow", "The thunder bomb", "The rocket cart"), H),
         q("his_led_taiping_rebellion", "Who led the Taiping Rebellion, claiming to be the younger brother of Jesus?", "Hong Xiuquan", listOf("Li Zicheng", "Zeng Guofan", "Sun Yat-sen"), H),
+        q("his_museums_found_china", "What have museums found from China's imperial exams, covered in tens of thousands of tiny characters?", "Cheat shirts worn under robes", listOf("Paper fans for good luck", "Lists of passed candidates", "Prayer scrolls for the gods"), H),
         q("his2_dynastia_ming", "Which dynasty ruled China before the Qing?", "Ming", listOf("Tang", "Han", "Song"), X),
         q("his2_rewolta_taiping", "In which country did the Taiping Rebellion break out?", "China", listOf("Japan", "India", "Korea"), X),
         q("his_zheng_he", "Which Chinese admiral led huge 'treasure fleets' across the Indian Ocean in the 1400s?", "Zheng He", listOf("Kublai Khan", "Sun Tzu", "Koxinga"), X),
@@ -1714,6 +1792,7 @@ object HistoryQuestions {
         q("his_ancient_native_religion", "What is the ancient native religion of Japan, with its shrines and spirits called kami?", "Shinto", listOf("Zen", "Taoism", "Confucianism"), E),
         q("his_flower_petals_fall", "Which flower, whose petals fall at their most beautiful, became a symbol of the short life of a samurai?", "The cherry blossom", listOf("The lotus", "The chrysanthemum", "The plum blossom"), E),
         q("his_word_samurai_originally", "What did the word 'samurai' originally mean?", "One who serves", listOf("One who kills", "Man of the sword", "Lord of the land"), E),
+        q("his_traditional_samurai_hairstyle", "What was the traditional samurai hairstyle, with the top of the head shaved?", "A topknot", listOf("A long braid", "A ponytail", "Short spikes"), E),
         q("hy_szogun", "What was the title of Japan's military rulers for about 700 years?", "Shogun", listOf("Emperor", "Daimyo", "Ronin"), M),
         q("his_code_honour_japan", "What was the code of honour of Japan's samurai called?", "Bushido", listOf("Shogun", "Seppuku", "Ikebana"), M),
         q("his_samurai_without_master", "What was a samurai without a master called in feudal Japan?", "Ronin", listOf("Ninja", "Daimyo", "Shogun"), M),
@@ -1736,6 +1815,7 @@ object HistoryQuestions {
         q("his_surprising_fact_true", "What surprising fact is true of the first geisha in 1700s Japan?", "They were men", listOf("They were nuns", "They were children", "They were foreigners"), M),
         q("his_african_man_became", "Which African man became a retainer of a great Japanese warlord in 1581?", "Yasuke", listOf("Miura Anjin", "Hattori Hanzo", "Ishida Mitsunari"), M),
         q("his_seppuku_job_samurai", "During seppuku, what was the job of the samurai's 'second'?", "To behead him and end the pain", listOf("To read his last poem aloud", "To guard his sword", "To carry his ashes home"), M),
+        q("his_shogun_tokugawa_tsunayoshi", "Why was the shogun Tokugawa Tsunayoshi nicknamed 'the Dog Shogun'?", "His laws protected stray dogs", listOf("He bred dogs for fighting", "He barked orders at his lords", "He hunted with a pack of wolves"), M),
         q("wh_meiji", "What is Japan's period of rapid modernization starting in 1868 called?", "The Meiji Restoration", listOf("The Edo period", "The Tokugawa shogunate", "The Showa era"), H),
         q("his4_sakoku_japonia", "What was Japan's sakoku policy?", "Near-total isolation from the outside world", listOf("Forced conversion to Buddhism", "Land reform for peasants", "An alliance with Portugal"), H),
         q("hx_perry", "Which American commodore sailed 'black ships' into Tokyo Bay in 1853 to force Japan to open up?", "Matthew Perry", listOf("George Dewey", "David Farragut", "Oliver Hazard Perry"), H),
@@ -1756,6 +1836,7 @@ object HistoryQuestions {
         q("his_creatures_off_shimonoseki", "Which creatures off Shimonoseki are said to carry the faces of samurai who drowned in a great sea battle of 1185?", "Crabs", listOf("Octopuses", "Jellyfish", "Eels"), H),
         q("his_great_buddha_kamakura", "Why does the Great Buddha of Kamakura sit in the open air?", "A tsunami swept its hall away", listOf("It was too tall for any roof", "Monks wanted it to face the sky", "The shogun forbade a roof"), H),
         q("his_tokugawa_alternate_attendance", "What did the Tokugawa 'alternate attendance' system force Japan's great lords to do?", "Live in Edo every other year", listOf("Send their swords to the shogun", "Marry into the shogun's family", "Pay their taxes in silver"), H),
+        q("his_general_betrayed_oda", "Which general betrayed Oda Nobunaga, forcing him to take his own life at the Honno-ji temple in 1582?", "Akechi Mitsuhide", listOf("Toyotomi Hideyoshi", "Tokugawa Ieyasu", "Takeda Shingen"), H),
         q("his4_dynastia_tokugawa_miasto", "Which city was the seat of the Tokugawa shogunate?", "Edo", listOf("Kyoto", "Osaka", "Nara"), X),
         q("his_small_artificial_island", "On which small artificial island in Nagasaki harbour did Dutch merchants live and trade?", "Dejima", listOf("Hirado", "Tanegashima", "Okinawa"), X),
         q("his_samurai_led_1877", "Which samurai led the 1877 rebellion that inspired the film 'The Last Samurai'?", "Saigo Takamori", listOf("Sakamoto Ryoma", "Katsu Kaishu", "Okubo Toshimichi"), X),
@@ -1763,7 +1844,8 @@ object HistoryQuestions {
         q("his_armed_buddhist_warrior", "What were the armed Buddhist warrior monks of medieval Japan called?", "Sohei", listOf("Ronin", "Ninja", "Daimyo"), X),
         q("his_japanese_temple_near", "Which Japanese temple near Nara has the oldest surviving wooden buildings in the world?", "Horyu-ji", listOf("Todai-ji", "Kiyomizu-dera", "Enryaku-ji"), X),
         q("his_giant_warrior_monk", "Which giant warrior monk became the loyal follower of the young samurai Yoshitsune after losing a duel on a bridge?", "Benkei", listOf("Musashi", "Hideyoshi", "Kusunoki"), X),
-        q("his_samurai_sailed_mexico", "Which samurai sailed to Mexico and Spain in 1613-1620 and met Pope Paul V in Rome?", "Hasekura Tsunenaga", listOf("Saigo Takamori", "Ito Mancio", "Date Masamune"), X)
+        q("his_samurai_sailed_mexico", "Which samurai sailed to Mexico and Spain in 1613-1620 and met Pope Paul V in Rome?", "Hasekura Tsunenaga", listOf("Saigo Takamori", "Ito Mancio", "Date Masamune"), X),
+        q("his_fumi_used_tokugawa", "What were 'fumi-e' used for in Tokugawa Japan?", "Making suspects tread on Christian images", listOf("Teaching children to write kanji", "Marking the borders of a lord's land", "Calling the dead home at festivals"), X)
     )
 
     /* Middle Ages / Angkor & Southeast Asia - history/middle_ages/southeast_asia.tsv */
@@ -1778,6 +1860,7 @@ object HistoryQuestions {
         q("his_vietnam_000_year", "In Vietnam's 1,000-year-old puppet theatre, what do the puppets perform on?", "A pool of water", listOf("A rope bridge", "A hanging silk screen", "A bed of sand"), E),
         q("his_naga_headed_creature", "What is the 'naga', the many-headed creature carved along the causeways of Angkor?", "A sacred serpent", listOf("A winged lion", "A giant eagle", "A river crocodile"), E),
         q("his_angkor_wat_built", "Angkor Wat was built as a Hindu temple. Which religion's monks use it today?", "Buddhism", listOf("Islam", "Christianity", "Jainism"), E),
+        q("his_thailand_until_1939", "By what name was Thailand known until 1939?", "Siam", listOf("Burma", "Annam", "Malaya"), E),
         q("his_people_built_temples", "Which people built the temples of Angkor?", "The Khmer", listOf("The Thai", "The Burmese", "The Cham"), M),
         q("his_giant_buddhist_monument", "Which giant Buddhist monument on the island of Java is the largest Buddhist temple in the world?", "Borobudur", listOf("Angkor Wat", "Prambanan", "Shwedagon"), M),
         q("his_plain_myanmar_covered", "Which plain in Myanmar is covered with over 2,000 ancient Buddhist temples?", "Bagan", listOf("Mandalay", "Ayutthaya", "Pegu"), M),
@@ -1800,6 +1883,8 @@ object HistoryQuestions {
         q("his_hanoi_old_thang", "Hanoi's old name, Thang Long, means what?", "Rising Dragon", listOf("Golden Turtle", "Red River", "Northern Capital"), M),
         q("his_relics_said_enshrined", "Which relics are said to be enshrined inside Yangon's great golden pagoda?", "Hairs of the Buddha", listOf("The Buddha's begging bowl", "A tooth of the Buddha", "The Buddha's footprint"), M),
         q("his_according_legend_founder", "According to legend, the founder of Malacca chose the spot after seeing which small animal kick one of his hunting dogs?", "A mouse deer", listOf("A monkey", "A tortoise", "A mongoose"), M),
+        q("his_angkor_barays_largest", "What were Angkor's 'barays', the largest of them about 8 km long?", "Giant man-made reservoirs", listOf("Royal elephant stables", "Stone roads through the jungle", "Walled markets for traders"), M),
+        q("his_hindu_myth_fills", "Which Hindu myth fills a famous 49-metre relief at Angkor Wat, with gods and demons pulling on a giant serpent?", "The Churning of the Ocean of Milk", listOf("Rama's war against Lanka", "The birth of the god Ganesha", "Krishna lifting a mountain"), M),
         q("his_hindu_god_angkor", "To which Hindu god was Angkor Wat first dedicated?", "Vishnu", listOf("Shiva", "Brahma", "Ganesh"), H),
         q("his_temple_angkor_dozens", "Which temple at Angkor is famous for its dozens of giant smiling stone faces?", "The Bayon", listOf("Ta Prohm", "Banteay Srei", "Preah Khan"), H),
         q("his_hindu_temple_complex", "Which Hindu temple complex near Yogyakarta was built for Shiva in the 800s?", "Prambanan", listOf("Borobudur", "Besakih", "Ta Prohm"), H),
@@ -1820,6 +1905,7 @@ object HistoryQuestions {
         q("his_kingdom_1300s_forerunner", "Which kingdom of the 1300s, the forerunner of Laos, was called 'the land of a million elephants'?", "Lan Xang", listOf("Lan Na", "Champa", "Funan"), H),
         q("his_chinese_envoy_wrote", "Which Chinese envoy wrote the only eyewitness account of daily life at Angkor, in 1296-1297?", "Zhou Daguan", listOf("Zheng He", "Xuanzang", "Faxian"), H),
         q("his_javanese_dynasty_built", "Which Javanese dynasty built the world's largest Buddhist temple around 800?", "The Sailendra", listOf("The Majapahit", "The Singhasari", "The Khmer"), H),
+        q("his_hanoi_temple_founded", "Which Hanoi temple, founded in 1070 for Confucius, housed Vietnam's first national university?", "The Temple of Literature", listOf("The One Pillar Pagoda", "The Temple of the Jade Mountain", "The Tran Quoc Pagoda"), H),
         q("his_khmer_king_built", "Which Khmer king built Angkor Wat in the first half of the 1100s?", "Suryavarman II", listOf("Jayavarman VII", "Jayavarman II", "Indravarman I"), X),
         q("his_buddhist_king_khmer", "Which Buddhist king of the Khmer built the walled city of Angkor Thom around 1200?", "Jayavarman VII", listOf("Suryavarman II", "Yasovarman I", "Rajendravarman II"), X),
         q("his_vietnamese_general_beat", "Which Vietnamese general beat back the Mongol invasions of the 1280s?", "Tran Hung Dao", listOf("Le Loi", "Ngo Quyen", "Ly Thuong Kiet"), X),
@@ -1839,6 +1925,8 @@ object HistoryQuestions {
         q("his_animal_made_possible", "Which animal made it possible for traders to cross the Sahara?", "The camel", listOf("The horse", "The elephant", "The donkey"), E),
         q("his_along_river_ancient", "Along which river did the ancient kingdom of Kush grow up?", "The Nile", listOf("The Niger", "The Congo", "The Zambezi"), E),
         q("his_modern_country_takes", "Which modern country takes its name from a ruined medieval stone city?", "Zimbabwe", listOf("Ghana", "Mali", "Benin"), E),
+        q("his_modern_west_african", "Which modern West African country took its name from a medieval empire that lay hundreds of km to its north-west?", "Ghana", listOf("Mali", "Guinea", "Togo"), E),
+        q("his_country_soldiers_carried", "Which country's soldiers carried off thousands of the Benin Bronzes in 1897?", "Britain", listOf("France", "Germany", "Portugal"), E),
         q("hy_kaldi", "According to legend, coffee was discovered in Ethiopia by a goatherd named what?", "Kaldi", listOf("Menelik", "Haile", "Abebe"), M),
         q("his_huge_mud_brick", "Which huge mud-brick mosque in Mali is the largest mud building in the world?", "The Great Mosque of Djenne", listOf("The Sankore Mosque", "The Hassan II Mosque", "The Great Mosque of Kairouan"), M),
         q("his_west_african_empire", "Which West African empire, older than Mali, was called 'the land of gold' by Arab writers?", "The Ghana Empire", listOf("The Songhai Empire", "The Kanem Empire", "The Benin Empire"), M),
@@ -1860,6 +1948,7 @@ object HistoryQuestions {
         q("his_title_king_benin", "What was the title of the king of Benin?", "The Oba", listOf("The Mansa", "The Negus", "The Asantehene"), M),
         q("his_legendary_christian_king", "Which legendary Christian king did medieval Europeans hope would help them, finally placing his kingdom in Ethiopia?", "Prester John", listOf("Saint George", "King Lalibela", "Melchior"), M),
         q("his_builders_great_zimbabwe", "What did the builders of Great Zimbabwe's huge granite walls manage without?", "Any mortar", listOf("Any tools", "Any slaves", "Any foundations"), M),
+        q("his_every_year_people", "Every year, the people of Djenne in Mali hold a festival to do what to their great mosque?", "Cover it in a fresh coat of mud", listOf("Paint it white for Ramadan", "Light it with oil lamps", "Rebuild one of its towers"), M),
         q("wh_mansa_musa", "Mansa Musa, regarded as the richest person in history, ruled which African empire?", "Mali", listOf("Songhai", "Ethiopia", "Zimbabwe"), H),
         q("his4_wielki_zimbabwe", "Great Zimbabwe was the centre of a state on which continent?", "Africa", listOf("South America", "Asia", "Australia"), H),
         q("hx_timbuktu", "Which city in Mali was a famous medieval centre of trade and Islamic learning?", "Timbuktu", listOf("Marrakesh", "Zanzibar", "Kano"), H),
@@ -1882,6 +1971,8 @@ object HistoryQuestions {
         q("his_kingdom_benin_surrounded", "The kingdom of Benin surrounded its lands with what, once counted among the largest man-made structures on Earth?", "Earth walls and moats", listOf("Stone pyramids", "Lines of baobab trees", "Wooden stockades"), H),
         q("his_according_arab_writer", "According to an Arab writer of 1068, what wore gold collars at the court of a West African king?", "His dogs", listOf("His camels", "His falcons", "His lions"), H),
         q("his_short_stabbing_spear", "What was the short stabbing spear that Shaka gave his Zulu warriors, said to be named after its sound?", "The iklwa", listOf("The knobkerrie", "The panga", "The kaskara"), H),
+        q("his_mud_built_mosque", "Which mud-built mosque in Timbuktu was raised in the 1320s on the orders of Mansa Musa?", "The Djinguereber Mosque", listOf("The Great Mosque of Kairouan", "The Koutoubia Mosque", "The Al-Azhar Mosque"), H),
+        q("his_diplomat_fez_seized", "Which diplomat from Fez, seized by pirates and presented to the pope, wrote a famous 1526 account of Timbuktu?", "Leo Africanus", listOf("Ibn Battuta", "Ibn Khaldun", "Al-Idrisi"), H),
         q("his4_imperium_songhaj", "The Songhai Empire controlled trade around which river?", "The Niger", listOf("The Congo", "The Zambezi", "The Orange"), X),
         q("hx_szaka", "Which king built the Zulu nation into a military power in the early 1800s?", "Shaka", listOf("Cetshwayo", "Moshoeshoe", "Mzilikazi"), X),
         q("hx_aksum", "Which ancient kingdom in today's Ethiopia was one of the first states to adopt Christianity?", "Aksum", listOf("Kush", "Carthage", "Meroe"), X),
@@ -1910,6 +2001,7 @@ object HistoryQuestions {
         q("his_maya_number_system", "What did the Maya number system have that Roman numerals lacked?", "A symbol for zero", listOf("A sign for infinity", "Negative numbers", "Decimal points"), E),
         q("his_unlike_pyramids_egypt", "Unlike the pyramids of Egypt, what usually stood on top of Maya and Aztec pyramids?", "Temples", listOf("Tombs", "Gold statues", "Watchtowers"), E),
         q("his_spring_autumn_equinoxes", "At the spring and autumn equinoxes, the shadow of which creature seems to slither down the great pyramid of Chichen Itza?", "A serpent", listOf("A jaguar", "An eagle", "A monkey"), E),
+        q("his_besides_southern_mexico", "Besides southern Mexico, the heart of Maya civilisation lay in which present-day country?", "Guatemala", listOf("Peru", "Colombia", "Cuba"), E),
         q("wh_aztekowie_zdobywca", "Which conquistador toppled the Aztec empire?", "Hernan Cortes", listOf("Francisco Pizarro", "Vasco Nunez de Balboa", "Diego de Almagro"), M),
         q("his_chichen_itza", "Which civilisation built the pyramid city of Chichen Itza?", "The Maya", listOf("The Aztecs", "The Inca", "The Olmecs"), M),
         q("hx_majowie_2012", "Which civilisation's calendar was wrongly said to predict the end of the world in 2012?", "The Maya", listOf("The Aztecs", "The Inca", "The Olmecs"), M),
@@ -1962,7 +2054,8 @@ object HistoryQuestions {
         q("his_great_inca_road", "What was the great Inca road network, now a World Heritage Site, called?", "Qhapaq Nan", listOf("Camino Real", "Inca Way", "Ruta del Sol"), X),
         q("his_huge_mud_brick_2", "Which huge mud-brick city on Peru's coast was the capital of the Chimu kingdom?", "Chan Chan", listOf("Caral", "Cusco", "Tiwanaku"), X),
         q("his_aztec_tzompantli", "What was an Aztec 'tzompantli'?", "A rack displaying skulls", listOf("A floating garden", "A ball court", "A temple drum"), X),
-        q("his_inca_mita", "What was the Inca 'mita'?", "Labour owed to the state", listOf("A tax paid in gold", "A knotted record", "A royal mummy"), X)
+        q("his_inca_mita", "What was the Inca 'mita'?", "Labour owed to the state", listOf("A tax paid in gold", "A knotted record", "A royal mummy"), X),
+        q("his_european_city_museum", "In which European city's museum is the feather headdress traditionally called 'Moctezuma's crown' kept?", "Vienna", listOf("Madrid", "Seville", "Rome"), X)
     )
 
     /* Early Modern Era / Renaissance - history/early_modern/renaissance.tsv */
@@ -2003,6 +2096,8 @@ object HistoryQuestions {
         q("his_medici_florence_made", "The Medici of Florence made their great fortune mainly in which business?", "Banking", listOf("Spice trading", "Shipbuilding", "Glassmaking"), M),
         q("his_leonardo_portrait_smiling", "Leonardo's most famous portrait of a smiling woman is painted not on canvas but on what?", "A poplar wood panel", listOf("A sheet of copper", "A slab of slate", "A silk tablecloth"), M),
         q("his_marble_statue_peter", "Which marble statue in St Peter's Basilica, carved by a sculptor of about 24, is the only work he ever signed?", "The Pieta", listOf("The Moses", "The David", "The Bacchus"), M),
+        q("his_leonardo_mona_lisa", "What did Leonardo do with the Mona Lisa instead of handing it over to the client who ordered it?", "Kept reworking it and took it to France", listOf("Sold it to the pope for a fortune", "Gave it to Michelangelo as a gift", "Hid it in a convent in Milan"), M),
+        q("his_unusual_marble_block", "What was unusual about the marble block that Michelangelo carved his David from?", "Other sculptors had given up on it", listOf("It came from an ancient Roman temple", "It was a gift from the pope", "It was black marble from Egypt"), M),
         q("his_druk", "Who popularized movable-type printing in Europe?", "Johannes Gutenberg", listOf("Nicolaus Copernicus", "Leonardo da Vinci", "Galileo"), H),
         q("his_german_artist_engravings", "Which German artist is famous for his engravings and self-portraits around 1500?", "Albrecht Durer", listOf("Hans Holbein", "Lucas Cranach", "Matthias Grunewald"), H),
         q("his_flemish_master_painted", "Which Flemish master painted the 'Arnolfini Portrait' in 1434?", "Jan van Eyck", listOf("Pieter Bruegel", "Hieronymus Bosch", "Rogier van der Weyden"), H),
@@ -2020,13 +2115,15 @@ object HistoryQuestions {
         q("his_michelangelo_get_famously", "How did Michelangelo get his famously flattened nose?", "A rival sculptor punched him", listOf("He fell from scaffolding", "A block of marble hit him", "He was born that way"), H),
         q("his_marchioness_mantua_great", "Which marchioness of Mantua, a great collector of art, was called 'the first lady of the Renaissance'?", "Isabella d'Este", listOf("Lucrezia Borgia", "Beatrice d'Este", "Vittoria Colonna"), H),
         q("his_leonardo_last_supper", "Why did Leonardo's 'Last Supper' begin flaking away within his own lifetime?", "He painted on dry plaster", listOf("A flood soaked the wall", "He mixed it with seawater", "It was struck by lightning"), H),
+        q("his_michelangelo_get_back", "How did Michelangelo get back at the papal official who complained about the nudes in 'The Last Judgment'?", "Painted him in Hell with donkey's ears", listOf("Painted him as a naked saint", "Locked him inside the chapel", "Carved his face on a gargoyle"), H),
         q("his_machiavelli", "Who wrote the treatise 'The Prince'?", "Niccolo Machiavelli", listOf("Dante Alighieri", "Erasmus of Rotterdam", "Thomas More"), X),
         q("hy_savonarola", "Which Florentine friar organised the 'Bonfire of the Vanities' in 1497?", "Girolamo Savonarola", listOf("Niccolo Machiavelli", "Lorenzo de' Medici", "Cesare Borgia"), X),
         q("his_young_florentine_painter", "Which young Florentine painter's frescoes in the Brancacci Chapel pioneered perspective?", "Masaccio", listOf("Giotto", "Fra Angelico", "Uccello"), X),
         q("his_florentine_goldsmith_cast", "Which Florentine goldsmith cast the bronze 'Perseus' and wrote a famously boastful autobiography?", "Benvenuto Cellini", listOf("Lorenzo Ghiberti", "Andrea Verrocchio", "Giambologna"), X),
         q("his_according_biographer_vasari", "According to his biographer Vasari, what did Leonardo da Vinci do with caged birds he bought at the market?", "Set them free", listOf("Painted them", "Cooked them", "Taught them to sing"), X),
         q("his_venetian_printer_introduced", "Which Venetian printer introduced italic type and small, cheap pocket books around 1500?", "Aldus Manutius", listOf("Nicolas Jenson", "William Caxton", "Johann Froben"), X),
-        q("his_countess_nicknamed_tigress", "Which countess, nicknamed 'the Tigress of Forli', defied Cesare Borgia from her castle walls in 1499-1500?", "Caterina Sforza", listOf("Lucrezia Borgia", "Isabella d'Este", "Bianca Maria Visconti"), X)
+        q("his_countess_nicknamed_tigress", "Which countess, nicknamed 'the Tigress of Forli', defied Cesare Borgia from her castle walls in 1499-1500?", "Caterina Sforza", listOf("Lucrezia Borgia", "Isabella d'Este", "Bianca Maria Visconti"), X),
+        q("his_happened_leonardo_giant", "What happened to Leonardo's giant clay model of a horse for the Duke of Milan in 1499?", "French soldiers used it for target practice", listOf("It was cast in bronze, then melted for cannon", "It was smashed by a jealous rival sculptor", "It was shipped to Paris as a war trophy"), X)
     )
 
     /* Early Modern Era / Age of Discovery - history/early_modern/age_of_discovery.tsv */
@@ -2044,6 +2141,7 @@ object HistoryQuestions {
         q("his_country_ferdinand_magellan", "For which country did Ferdinand Magellan sail on his voyage around the world?", "Spain", listOf("Portugal", "England", "Italy"), E),
         q("his_spanish_soldiers_conquered", "What were the Spanish soldiers who conquered much of the Americas called?", "Conquistadors", listOf("Crusaders", "Musketeers", "Matadors"), E),
         q("his_spice_nicknamed_black", "Which spice, nicknamed 'black gold', drew Portuguese ships to India's Malabar coast?", "Black pepper", listOf("Saffron", "Vanilla", "Paprika"), E),
+        q("his_because_columbus_mistake", "Because of Columbus's mistake about where he had landed, what did Europeans long call the native peoples of the Americas?", "Indians", listOf("Moors", "Chinese", "Tartars"), E),
         q("his_kolumb", "In which year did Christopher Columbus reach America?", "1492", listOf("1453", "1500", "1488"), M),
         q("his3_magellan", "Who led the first expedition to circumnavigate the globe?", "Ferdinand Magellan", listOf("Christopher Columbus", "Vasco da Gama", "James Cook"), M),
         q("trv_kolumb_gdzie", "Where did Columbus first land in 1492?", "In the Bahamas", listOf("In Florida", "In Mexico", "In Brazil"), M),
@@ -2097,7 +2195,8 @@ object HistoryQuestions {
         q("hy_cabral", "Which navigator landed on the coast of Brazil in 1500?", "Pedro Alvares Cabral", listOf("Vasco da Gama", "Bartolomeu Dias", "Ferdinand Magellan"), X),
         q("his_german_mapmaker_world", "Which German mapmaker's world map of 1507 was the first to use the name 'America'?", "Martin Waldseemuller", listOf("Gerardus Mercator", "Abraham Ortelius", "Martin Behaim"), X),
         q("his_malay_interpreter_sailed", "Which Malay interpreter who sailed with Magellan may have been the first person to travel all the way around the world?", "Enrique of Malacca", listOf("Duarte Barbosa", "Lapulapu", "Juan de Cartagena"), X),
-        q("his_spanish_friar_navigator", "Which Spanish friar and navigator found the eastward route back across the Pacific in 1565, making regular two-way trade across the Pacific possible?", "Andres de Urdaneta", listOf("Miguel Lopez de Legazpi", "Alvaro de Mendana", "Juan Sebastian Elcano"), X)
+        q("his_spanish_friar_navigator", "Which Spanish friar and navigator found the eastward route back across the Pacific in 1565, making regular two-way trade across the Pacific possible?", "Andres de Urdaneta", listOf("Miguel Lopez de Legazpi", "Alvaro de Mendana", "Juan Sebastian Elcano"), X),
+        q("his_magellan_chronicler_pigafetta", "What did Magellan's chronicler Pigafetta claim the people of Patagonia were, starting a legend that lasted centuries?", "Giants", listOf("Cannibals", "Dwarfs", "Amazons"), X)
     )
 
     /* Early Modern Era / Reformation & Wars of Religion - history/early_modern/reformation.tsv */
@@ -2131,6 +2230,7 @@ object HistoryQuestions {
         q("his_date_1517_luther", "On which date in 1517 is Luther said to have posted his 95 Theses, now marked as Reformation Day?", "31 October", listOf("1 November", "25 December", "6 January"), M),
         q("his_according_luther_made", "According to Luther, what made him vow to become a monk in 1505?", "Being nearly struck by lightning", listOf("His father's dying wish", "A dream of Saint Paul", "Surviving the plague"), M),
         q("his_emperor_presided_over", "Which emperor presided over the assembly of 1521 where Luther refused to take back his writings?", "Charles V", listOf("Maximilian I", "Ferdinand I", "Frederick III"), M),
+        q("his_enemies_call_radical", "Why did their enemies call the radical Protestants of the 1520s 'Anabaptists', or 're-baptisers'?", "They baptised adults, not babies", listOf("They baptised people in rivers", "They baptised people every year", "They baptised animals and fields"), M),
         q("hx_kalendarz_grzegorz", "Which pope gave his name to the calendar most of the world uses today?", "Gregory XIII", listOf("Julius II", "Leo X", "Sixtus V"), H),
         q("hx_wittenberga", "On the door of a church in which German town did Luther post his 95 Theses?", "Wittenberg", listOf("Worms", "Leipzig", "Erfurt"), H),
         q("his_assembly_1521_luther", "At which assembly of 1521 did Luther refuse to take back his writings?", "The Diet of Worms", listOf("The Council of Trent", "The Diet of Augsburg", "The Council of Constance"), H),
@@ -2155,13 +2255,15 @@ object HistoryQuestions {
         q("his_according_legend_martin", "According to legend, what did Martin Luther hurl at the Devil who came to tempt him at his desk?", "An inkpot", listOf("A Bible", "A candlestick", "His shoe"), H),
         q("his_according_story_officials", "According to one story, how did the officials thrown from a Prague castle window in 1618 survive the fall?", "They landed on a dung heap", listOf("They caught hold of a flagpole", "They fell into the moat", "They landed on a hay cart"), H),
         q("his_martin_luther_future", "How did Martin Luther's future wife reportedly escape from her convent in 1523?", "Hidden among herring barrels", listOf("Dressed as a soldier", "Through a tunnel to the river", "Lowered from a window in a basket"), H),
+        q("his_spanish_doctor_theologian", "Which Spanish doctor and theologian was burned at the stake in Calvin's Geneva in 1553?", "Michael Servetus", listOf("Ignatius of Loyola", "Francisco de Vitoria", "Juan de Valdes"), H),
         q("his_westfalski", "In which year did the Peace of Westphalia end the Thirty Years' War?", "1648", listOf("1618", "1659", "1667"), X),
         q("dpt_his_defenestracja", "The Defenestration of Prague set off which war?", "The Thirty Years' War", listOf("The Hussite Wars", "The Seven Years' War", "The War of the Roses"), X),
         q("hy_hus", "Which Czech reformer was burned at the stake in 1415, a century before Luther?", "Jan Hus", listOf("John Wycliffe", "Jan Zizka", "Thomas Muntzer"), X),
         q("his_radical_protestant_sect", "Which radical Protestant sect seized the German city of Munster in 1534?", "The Anabaptists", listOf("The Calvinists", "The Hussites", "The Quakers"), X),
         q("his_protestant_admiral_victim", "Which Protestant admiral was the first famous victim of the St Bartholomew's Day Massacre?", "Gaspard de Coligny", listOf("Henry of Navarre", "Louis de Conde", "Francis Drake"), X),
         q("his_still_hangs_tower", "What still hangs from the tower of St Lambert's Church in Munster, nearly 500 years on?", "Three iron cages for executed rebels", listOf("A bell cast from captured cannon", "The sword of a prince-bishop", "A chain from the old city gate"), X),
-        q("his_spanish_mystic_nun", "Which Spanish mystic nun founded the strict 'Discalced' Carmelites in the 1560s?", "Teresa of Avila", listOf("Catherine of Siena", "Clare of Assisi", "Rose of Lima"), X)
+        q("his_spanish_mystic_nun", "Which Spanish mystic nun founded the strict 'Discalced' Carmelites in the 1560s?", "Teresa of Avila", listOf("Catherine of Siena", "Clare of Assisi", "Rose of Lima"), X),
+        q("his_group_men_zurich", "How did a group of men in Zurich defy the Church in Lent 1522, launching the Swiss Reformation?", "They ate sausages in public", listOf("They burned a papal letter", "They rang the bells at midnight", "They married their housekeepers"), X)
     )
 
     /* Early Modern Era / Tudors & Stuarts - history/early_modern/tudors_stuarts.tsv */
@@ -2175,6 +2277,7 @@ object HistoryQuestions {
         q("his_rhyme_henry_viii", "In the rhyme about Henry VIII's wives, which word follows 'divorced, beheaded, died, divorced, beheaded'?", "Survived", listOf("Remarried", "Widowed", "Forgiven"), E),
         q("his_playwright_part_owner", "Which playwright was a part-owner of the Globe Theatre, built on London's Bankside in 1599?", "William Shakespeare", listOf("Christopher Marlowe", "Ben Jonson", "Thomas Kyd"), E),
         q("his_architect_rebuilt_paul", "Which architect rebuilt St Paul's Cathedral after the Great Fire of London?", "Christopher Wren", listOf("Inigo Jones", "Nicholas Hawksmoor", "John Vanbrugh"), E),
+        q("his_ruff_elizabethan_men", "What was the 'ruff' that Elizabethan men and women wore?", "A stiff frilled collar", listOf("A padded velvet hat", "A short fur cape", "A jewelled belt"), E),
         q("trv_londyn_pozar", "In which year was the Great Fire of London?", "1666", listOf("1566", "1766", "1616"), M),
         q("his_krwawa_maria", "Which English queen was nicknamed 'Bloody Mary'?", "Mary I", listOf("Mary, Queen of Scots", "Mary II", "Mary of Teck"), M),
         q("hx_anna_boleyn", "Which wife of Henry VIII was beheaded in 1536?", "Anne Boleyn", listOf("Catherine of Aragon", "Jane Seymour", "Anne of Cleves"), M),
@@ -2226,6 +2329,7 @@ object HistoryQuestions {
         q("his_off_port_english", "Off which port did English fireships scatter the Spanish Armada in 1588?", "Calais", listOf("Gravelines", "Dunkirk", "Plymouth"), H),
         q("his_favourite_elizabeth_beheaded", "Which favourite of Elizabeth I was beheaded in 1601 after leading a failed rebellion?", "The Earl of Essex", listOf("Walter Raleigh", "Robert Dudley", "Francis Drake"), H),
         q("his_job_henry_viii", "What was the job of Henry VIII's 'Groom of the Stool'?", "Helping the king on the toilet", listOf("Training the royal horses", "Carving meat at banquets", "Guarding the king's bedroom"), H),
+        q("his_former_orange_seller", "Which former orange seller at a London theatre became an actress and a favourite mistress of Charles II?", "Nell Gwyn", listOf("Barbara Villiers", "Louise de Keroualle", "Moll Davis"), H),
         q("his_jane_grey", "Who ruled England for just nine days in 1553?", "Lady Jane Grey", listOf("Edward V", "Mary, Queen of Scots", "Matilda"), X),
         q("hy_pepys_parmezan", "During the Great Fire of London, the diarist Samuel Pepys buried which treasures in his garden?", "His Parmesan cheese and wine", listOf("His gold and silver plate", "His books and papers", "His best clothes"), X),
         q("his_man_invented_popish", "Which man invented the 'Popish Plot' of 1678, sending innocent Catholics to their deaths?", "Titus Oates", listOf("Guy Fawkes", "Robert Catesby", "Thomas Blood"), X),
@@ -2245,6 +2349,7 @@ object HistoryQuestions {
         q("his_peter_great_built", "Peter the Great built his new capital on the shores of which sea?", "The Baltic Sea", listOf("The Black Sea", "The White Sea", "The Caspian Sea"), E),
         q("his_apart_austria_great", "Apart from Austria, which great kingdom did a branch of the Habsburgs rule from 1516 to 1700?", "Spain", listOf("France", "England", "Sweden"), E),
         q("his_old_louis_xiv", "How old was Louis XIV when he became King of France in 1643?", "Four", listOf("Fourteen", "Eighteen", "Twenty-one"), E),
+        q("his_two_romanov_rulers", "Which two Romanov rulers of Russia are known as 'the Great'?", "Peter and Catherine", listOf("Peter and Elizabeth", "Catherine and Alexander", "Peter and Nicholas"), E),
         q("his_krol_slonce", "Which French king was known as 'the Sun King'?", "Louis XIV", listOf("Louis XVI", "Francis I", "Henry IV"), M),
         q("his_katarzyna_wielka", "Which Russian empress was born a German princess?", "Catherine the Great", listOf("Elizabeth of Russia", "Anna Ivanovna", "Maria Theresa"), M),
         q("hx_iwan_grozny", "Which ruler was the first to be crowned 'Tsar of all Russia', in 1547?", "Ivan the Terrible", listOf("Peter the Great", "Catherine the Great", "Boris Godunov"), M),
@@ -2269,6 +2374,7 @@ object HistoryQuestions {
         q("his_instrument_frederick_great", "Which instrument did Frederick the Great play, even composing over 100 sonatas for it?", "The flute", listOf("The violin", "The harpsichord", "The cello"), M),
         q("his_language_frederick_great", "Which language did Frederick the Great prefer to speak and write, scorning his native German?", "French", listOf("Latin", "Italian", "English"), M),
         q("his_peter_great_towered", "Peter the Great towered over his courtiers at roughly what height?", "About 2 metres", listOf("About 1.6 metres", "About 1.7 metres", "About 1.5 metres"), M),
+        q("his_1991_frederick_great", "In 1991, Frederick the Great finally got his wish to be buried at Sanssouci. Next to what?", "His beloved greyhounds", listOf("His favourite flute", "His French library", "His father's tomb"), M),
         q("hx_piotr_stocznia", "Peter the Great toured Europe in disguise, working for a time as what?", "A shipbuilder", listOf("A painter", "A soldier", "A baker"), H),
         q("hy_romanowowie", "Which dynasty ruled Russia from 1613 until 1917?", "The Romanovs", listOf("The Rurikids", "The Habsburgs", "The Godunovs"), H),
         q("hy_maria_teresa", "Which Habsburg empress was the mother of Marie Antoinette?", "Maria Theresa", listOf("Catherine the Great", "Elisabeth of Austria", "Isabella of Castile"), H),
@@ -2287,6 +2393,7 @@ object HistoryQuestions {
         q("his_young_tsar_pushed", "Which young tsar pushed aside his half-sister Sophia, who ruled as regent, in 1689?", "Peter the Great", listOf("Ivan V", "Alexis I", "Feodor III"), H),
         q("his_fashion_louis_xiv", "Which fashion did Louis XIV reserve for nobles in favour at his court?", "Red heels on their shoes", listOf("Purple silk cloaks", "Blue feathers in their hats", "Gold buttons on their coats"), H),
         q("his_son_heir_peter", "Which son and heir of Peter the Great died in 1718 after being tortured on his father's orders?", "Alexei", listOf("Ivan", "Paul", "Michael"), H),
+        q("his_court_composer_louis", "Which court composer of Louis XIV died of gangrene after striking his own foot with his conducting staff?", "Jean-Baptiste Lully", listOf("Jean-Philippe Rameau", "Marc-Antoine Charpentier", "Francois Couperin"), H),
         q("hx_ludwik_72", "For about how long did Louis XIV reign over France?", "72 years", listOf("42 years", "55 years", "31 years"), X),
         q("hx_fryderyk_ziemniaki", "Which Prussian king is said to have got his people to grow potatoes by posting guards on his potato fields?", "Frederick the Great", listOf("Wilhelm I", "Frederick William I", "Otto von Bismarck"), X),
         q("his_cossack_led_huge", "Which Cossack led a huge peasant revolt against Catherine the Great in 1773?", "Yemelyan Pugachev", listOf("Stenka Razin", "Bogdan Khmelnytsky", "Ivan Mazepa"), X),
@@ -2294,7 +2401,8 @@ object HistoryQuestions {
         q("his_rebellion_french_nobles", "Which rebellion of French nobles and Parisians in 1648-1653 terrified the young Louis XIV?", "The Fronde", listOf("The Jacquerie", "The Camisard revolt", "The Vendee"), X),
         q("his_russian_empress_made", "Which Russian empress made a prince marry a servant in a palace built of ice in 1740?", "Anna", listOf("Elizabeth", "Catherine I", "Catherine the Great"), X),
         q("his_german_doctor_ruled", "Which German doctor ruled Denmark as the queen's lover until he was executed in 1772?", "Johann Struensee", listOf("Andreas Bernstorff", "Ove Guldberg", "Peder Griffenfeld"), X),
-        q("his_french_philosopher_sold", "Which French philosopher sold his library to Catherine the Great, who let him keep it and paid him to look after it?", "Denis Diderot", listOf("Voltaire", "Montesquieu", "Jean d'Alembert"), X)
+        q("his_french_philosopher_sold", "Which French philosopher sold his library to Catherine the Great, who let him keep it and paid him to look after it?", "Denis Diderot", listOf("Voltaire", "Montesquieu", "Jean d'Alembert"), X),
+        q("his_hobby_peter_great", "Which hobby did Peter the Great practise on his courtiers, whether they wanted it or not?", "Pulling out their teeth", listOf("Cutting their hair", "Painting their portraits", "Bleeding them with leeches"), X)
     )
 
     /* Early Modern Era / Ottoman Empire - history/early_modern/ottoman_empire.tsv */
@@ -2311,6 +2419,7 @@ object HistoryQuestions {
         q("his_istanbul_mosque_built", "Which Istanbul mosque, built for Sultan Ahmed I, is named after the colour of the tiles inside?", "The Blue Mosque", listOf("The Green Mosque", "The White Mosque", "The Red Mosque"), E),
         q("his_roughly_long_ottoman", "Roughly how long did the Ottoman Empire last?", "About 600 years", listOf("About 300 years", "About 150 years", "About 1,000 years"), E),
         q("his_symbols_still_turkey", "Which symbols, still on Turkey's flag today, flew on the flags of the late Ottoman Empire?", "A crescent and a star", listOf("A sun and a lion", "A double-headed eagle", "Two crossed swords"), E),
+        q("his_piece_furniture_ottoman", "Which piece of furniture is named after the Ottoman Empire?", "A padded footstool", listOf("A rocking chair", "A chest of drawers", "A four-poster bed"), E),
         q("hx_janczarzy", "Who were the Janissaries?", "Elite Ottoman soldiers", listOf("Persian court poets", "Byzantine priests", "Mongol messengers"), M),
         q("his_founded_ottoman_state", "Who founded the Ottoman state around 1299, giving it his name?", "Osman I", listOf("Mehmed II", "Orhan", "Bayezid I"), M),
         q("his_main_palace_ottoman", "What was the main palace of the Ottoman sultans in Istanbul called?", "Topkapi Palace", listOf("Dolmabahce Palace", "The Alhambra", "The Blue Palace"), M),
@@ -2329,6 +2438,7 @@ object HistoryQuestions {
         q("his_according_legend_fleeing", "According to legend, what did the fleeing Ottoman army leave behind at Vienna in 1683 that launched the city's cafe culture?", "Sacks of coffee beans", listOf("Sacks of sugar", "Crates of tea", "Barrels of sherbet"), M),
         q("his_ottoman_sultan_tughra", "What was an Ottoman sultan's 'tughra'?", "His ornate calligraphic signature", listOf("His jewelled ceremonial dagger", "His personal guard of archers", "His summer palace on the Bosphorus"), M),
         q("his_roughly_long_ottomans", "For roughly how long did the Ottomans hold the Hungarian city of Buda?", "About 145 years", listOf("About 15 years", "About 400 years", "About 50 years"), M),
+        q("his_sultan_send_janissaries", "What did the sultan send to the Janissaries each Ramadan in a grand ceremonial procession?", "Trays of baklava", listOf("Bags of gold coins", "New red uniforms", "Barrels of coffee"), M),
         q("hx_osmanowie_koniec", "In which year did the Ottoman sultanate come to an end?", "1922", listOf("1878", "1945", "1908"), H),
         q("his_crumbling_empire_nicknamed", "Which crumbling empire was nicknamed 'the sick man of Europe' in the 1800s?", "The Ottoman Empire", listOf("The Austrian Empire", "The Russian Empire", "The Spanish Empire"), H),
         q("his_great_architect_built", "Which great architect built the Suleymaniye Mosque for Suleiman the Magnificent?", "Mimar Sinan", listOf("Mehmed Agha", "Ali Pasha", "Ibrahim Pasha"), H),
@@ -2349,6 +2459,8 @@ object HistoryQuestions {
         q("his_period_1500s_1600s", "What is the period of the 1500s and 1600s, when the sultans' mothers and wives held great power, called?", "The Sultanate of Women", listOf("The Tulip Era", "The Age of Queens", "The Harem Rule"), H),
         q("his_cymbal_maker_founded", "Which famous cymbal maker was founded in Constantinople in 1623 and is still in business today?", "Zildjian", listOf("Sabian", "Paiste", "Meinl"), H),
         q("his_city_thrace_ottoman", "Which city in Thrace was the Ottoman capital before Constantinople fell?", "Edirne", listOf("Plovdiv", "Sofia", "Varna"), H),
+        q("his_european_style_palace", "Which European-style palace on the Bosphorus replaced Topkapi as the sultans' home in 1856?", "Dolmabahce Palace", listOf("Yildiz Palace", "Ciragan Palace", "Beylerbeyi Palace"), H),
+        q("his_ottoman_traveller_spent", "Which Ottoman traveller spent some 40 years roaming the empire and wrote the ten-volume 'Book of Travels'?", "Evliya Celebi", listOf("Piri Reis", "Katip Celebi", "Mimar Sinan"), H),
         q("his2_bitwa_lepanto", "Who lost the Battle of Lepanto in 1571?", "The Ottoman Empire", listOf("The Republic of Venice", "Spain", "The Papal States"), X),
         q("his4_imperium_ottomanskie_szczyt", "Under which sultan did the Ottoman Empire reach its greatest expansion in Europe?", "Suleiman the Magnificent", listOf("Osman the First", "Mehmed the Conqueror", "Selim the Grim"), X),
         q("mst_faks_lincoln", "Which empire was still standing when the first fax machine was patented?", "The Ottoman Empire", listOf("The Roman Empire", "The Aztec Empire", "The Mongol Empire"), X),
@@ -2373,6 +2485,7 @@ object HistoryQuestions {
         q("his_lahore_great_mughal", "Lahore's great Mughal fort and Badshahi Mosque stand in which present-day country?", "Pakistan", listOf("India", "Afghanistan", "Bangladesh"), E),
         q("his_english_word_powerful", "Which English word for a powerful tycoon, as in 'media ...', comes from the Mughal emperors?", "Mogul", listOf("Magnate", "Baron", "Kingpin"), E),
         q("his_cool_mountain_valley", "Which cool mountain valley did the Mughal emperors love as a summer retreat, calling it a paradise on earth?", "Kashmir", listOf("Nepal", "Sikkim", "Assam"), E),
+        q("his_spiced_rice_dish", "Which spiced rice dish is said to have been perfected in the kitchens of the Mughal court?", "Biryani", listOf("Masala dosa", "Idli", "Pongal"), E),
         q("hx_shah_jahan", "Which Mughal emperor built the Taj Mahal in memory of his wife?", "Shah Jahan", listOf("Akbar", "Babur", "Aurangzeb"), M),
         q("his_religion_founded_guru", "Which religion was founded by Guru Nanak in the Punjab?", "Sikhism", listOf("Jainism", "Buddhism", "Bahai Faith"), M),
         q("his_empire_built_delhi", "Which empire built Delhi's Red Fort?", "The Mughal Empire", listOf("The Maurya Empire", "The British Raj", "The Gupta Empire"), M),
@@ -2395,6 +2508,8 @@ object HistoryQuestions {
         q("his_roughly_long_take", "Roughly how long did it take to build the Taj Mahal and its gardens?", "About 20 years", listOf("About 5 years", "About 60 years", "About 2 years"), M),
         q("his_art_inlaying_coloured", "What is the art of inlaying coloured stones into marble, used for the flowers on the Taj Mahal, called?", "Pietra dura", listOf("Cloisonne", "Marquetry", "Terrazzo"), M),
         q("his_taj_mahal_four", "Why do the Taj Mahal's four minarets lean slightly outwards?", "So they would fall away from the tomb", listOf("Because the soft ground has sunk", "To look straight from the garden", "Because of a builder's mistake"), M),
+        q("his_mughal_empress_nur", "What does the name of the Mughal empress Nur Jahan mean?", "Light of the World", listOf("Rose of the Palace", "Jewel of the East", "Pearl of the Harem"), M),
+        q("his_mughal_city_fatehpur", "Why is the Mughal city of Fatehpur Sikri said to have been emptied only some 14 years after it was built?", "It ran short of water", listOf("It was struck by plague", "It was hit by an earthquake", "It was burned by rebels"), M),
         q("his4_dynastia_mogolow", "The Mughal Empire ruled mainly over which region?", "The Indian subcontinent", listOf("Persia", "Anatolia", "Central China"), H),
         q("hy_akbar", "Which Mughal emperor, known for religious tolerance, was called 'the Great'?", "Akbar", listOf("Aurangzeb", "Babur", "Humayun"), H),
         q("his_strict_mughal_emperor", "Which strict Mughal emperor locked up his father and pushed the empire to its greatest size?", "Aurangzeb", listOf("Akbar", "Jahangir", "Humayun"), H),
@@ -2412,6 +2527,7 @@ object HistoryQuestions {
         q("his_according_legend_akbar", "According to legend, Akbar played which board game in a palace courtyard, using people as the pieces?", "Pachisi", listOf("Chess", "Backgammon", "Snakes and ladders"), H),
         q("his_last_great_mughal", "How is the last great Mughal emperor, a strict and austere man, said to have paid for his own plain grave?", "By selling caps he had sewn", listOf("By selling his war elephants", "By melting down his crown", "By pawning his rubies"), H),
         q("his_brotherhood_baptised_sikhs", "Which brotherhood of baptised Sikhs did Guru Gobind Singh found in 1699?", "The Khalsa", listOf("The Akali", "The Sangat", "The Misl"), H),
+        q("his_tomb_delhi_built", "Whose tomb in Delhi, built in the 1560s, was a model for the Taj Mahal?", "Humayun's", listOf("Babur's", "Akbar's", "Jahangir's"), H),
         q("hy_babur", "Who founded the Mughal Empire in India in 1526?", "Babur", listOf("Akbar", "Shah Jahan", "Timur"), X),
         q("his_persian_conqueror_plundered", "Which Persian conqueror plundered Delhi in 1739 and carried off the Peacock Throne?", "Nader Shah", listOf("Shah Abbas", "Ahmad Shah Durrani", "Ismail I"), X),
         q("his_mughal_emperor_means", "Which Mughal emperor's name means 'conqueror of the world'?", "Jahangir", listOf("Aurangzeb", "Shah Jahan", "Humayun"), X),
@@ -2465,6 +2581,8 @@ object HistoryQuestions {
         q("his_done_captain_kidd", "What was done with Captain Kidd's body after he was hanged in 1701?", "It hung in a cage by the Thames", listOf("It was buried at sea", "It was sent to New York", "It was given to anatomists"), M),
         q("his_pirates_usually_mean", "What did pirates usually mean by flying a plain red flag instead of a black one?", "No mercy would be shown", listOf("They wished to surrender", "Plague was on board", "They wanted to trade"), M),
         q("his_pirate_crews_choose", "How did most pirate crews choose their captain?", "By a vote of the crew", listOf("The ship's owner chose him", "By fighting a duel", "The oldest sailor took command"), M),
+        q("his_spanish_main_pirates", "What was the 'Spanish Main' that pirates prowled?", "Spain's mainland coast around the Caribbean", listOf("The main sea route from Spain to Manila", "The chief Spanish port in the Caribbean", "The flagship of the Spanish treasure fleet"), M),
+        q("his_sailing_warships_powder", "On sailing warships, what were 'powder monkeys'?", "Boys who carried gunpowder to the guns", listOf("Monkeys kept to hunt rats below decks", "Sailors who cleaned the cannon barrels", "Men who loaded the muskets of marines"), M),
         q("hx_drake", "Which English sailor, called a pirate by the Spanish, sailed around the world in 1577-1580?", "Francis Drake", listOf("Walter Raleigh", "Henry Morgan", "John Hawkins"), H),
         q("hx_bounty", "The crew of which British ship mutinied against Captain Bligh in 1789?", "HMS Bounty", listOf("HMS Beagle", "HMS Endeavour", "HMS Resolution"), H),
         q("his_welsh_pirate_black", "Which Welsh pirate, 'Black Bart', captured over 400 ships in the early 1700s?", "Bartholomew Roberts", listOf("Henry Morgan", "Edward Teach", "Stede Bonnet"), H),
@@ -2483,12 +2601,14 @@ object HistoryQuestions {
         q("his_english_pirate_seized", "Which English pirate seized a treasure ship of the Mughal emperor in 1695 and then vanished?", "Henry Every", listOf("William Kidd", "Thomas Tew", "Edward Low"), H),
         q("his_american_port_blackbeard", "Which American port did Blackbeard blockade in 1718, asking only for a chest of medicine as ransom?", "Charleston", listOf("Boston", "New York", "Philadelphia"), H),
         q("his_stede_bonnet_gentleman", "Why was Stede Bonnet called 'the Gentleman Pirate'?", "A rich planter, he bought his ship", listOf("He never harmed a prisoner", "He was a former naval officer", "He was the son of an earl"), H),
+        q("his_french_buccaneer_said", "Which French buccaneer is said to have cut out a prisoner's heart and gnawed on it to scare others into talking?", "Francois l'Olonnais", listOf("Jean Lafitte", "Michel de Grammont", "Pierre le Grand"), H),
         q("his_mutiny_bounty_roughly", "After the mutiny on the Bounty, roughly how far did Captain Bligh sail in an open boat?", "About 6,700 km", listOf("About 670 km", "About 67 km", "About 67,000 km"), X),
         q("his_irish_village_raided", "Which Irish village was raided by Barbary pirates in 1631, its people carried off as slaves?", "Baltimore", listOf("Kinsale", "Galway", "Wexford"), X),
         q("his_naval_officer_burned", "Which US naval officer burned the captured frigate Philadelphia in Tripoli harbour in 1804?", "Stephen Decatur", listOf("John Paul Jones", "Oliver Hazard Perry", "David Porter"), X),
         q("his_london_execution_dock", "At London's Execution Dock, how long were hanged pirates' bodies left?", "Until three tides washed over them", listOf("Until sunset on the same day", "For exactly forty days", "Until the next pirate was hanged"), X),
         q("his_word_buccaneer_comes", "The word 'buccaneer' comes from a French word for what?", "A frame for smoking meat", listOf("A short curved sword", "A barrel of rum", "A small fast boat"), X),
-        q("his_done_blackbeard_head", "What was done with Blackbeard's head after he was killed in 1718?", "Hung from the bowsprit of a sloop", listOf("Buried at sea with his body", "Sent to London in a box of salt", "Burned on the beach at Ocracoke"), X)
+        q("his_done_blackbeard_head", "What was done with Blackbeard's head after he was killed in 1718?", "Hung from the bowsprit of a sloop", listOf("Buried at sea with his body", "Sent to London in a box of salt", "Burned on the beach at Ocracoke"), X),
+        q("his_under_bartholomew_roberts", "Under Bartholomew Roberts' pirate articles, by what time did lights and candles have to be put out?", "Eight o'clock at night", listOf("Six o'clock at night", "Ten o'clock at night", "Midnight"), X)
     )
 
     /* Early Modern Era / Colonial America - history/early_modern/colonial_america.tsv */
@@ -2503,6 +2623,7 @@ object HistoryQuestions {
         q("his_holiday_puritans_massachusetts", "Which holiday did the Puritans of Massachusetts ban, fining anyone caught celebrating it?", "Christmas", listOf("Easter", "Halloween", "May Day"), E),
         q("his_new_amsterdam_renamed", "New Amsterdam was renamed New York in 1664 in honour of whom?", "The Duke of York", listOf("The city of York", "King George I", "The Archbishop of York"), E),
         q("his_european_country_founded", "Which European country founded the city of New Orleans in 1718?", "France", listOf("Spain", "Britain", "The Netherlands"), E),
+        q("his_boulder_massachusetts_traditionally", "Which boulder in Massachusetts is traditionally said to mark where the Pilgrims stepped ashore?", "Plymouth Rock", listOf("Pilgrim Stone", "Mayflower Rock", "Cape Cod Boulder"), E),
         q("hy_nowy_amsterdam", "New York City began as a Dutch settlement called what?", "New Amsterdam", listOf("New Holland", "Fort Orange", "New Rotterdam"), M),
         q("his_powhatan_woman_later", "Which Powhatan woman, later the heroine of a Disney film, married the English settler John Rolfe?", "Pocahontas", listOf("Sacagawea", "Minnehaha", "Malinche"), M),
         q("his_english_colony_vanished", "Which English colony vanished in the 1580s, becoming known as the 'Lost Colony'?", "Roanoke", listOf("Jamestown", "Plymouth", "St. Augustine"), M),
@@ -2528,6 +2649,7 @@ object HistoryQuestions {
         q("his_king_daughters_sent", "Who were the 'King's Daughters' sent to New France in the 1660s?", "Young women sent to marry settlers", listOf("Nuns sent to run hospitals", "Princesses held as hostages", "Orphans sent to work farms"), M),
         q("his_pilgrim_men_sign", "What did the Pilgrim men sign aboard their ship in 1620, agreeing to govern themselves?", "The Mayflower Compact", listOf("The Plymouth Charter", "The Pilgrim Covenant", "The Articles of Faith"), M),
         q("his_wampum_used_money", "What was 'wampum', used as money by Native Americans and early colonists?", "Strings of shell beads", listOf("Bundles of beaver skins", "Rolls of tobacco leaf", "Copper rings"), M),
+        q("his_new_york_street", "Which famous New York street is named after a defensive barrier that the Dutch built in the 1650s?", "Wall Street", listOf("Broadway", "The Bowery", "Canal Street"), M),
         q("hy_jamestown", "What was the first permanent English settlement in North America, founded in 1607?", "Jamestown", listOf("Plymouth", "Boston", "New Amsterdam"), H),
         q("his_french_explorer_founded", "Which French explorer founded Quebec City in 1608?", "Samuel de Champlain", listOf("Jacques Cartier", "Robert de La Salle", "Jacques Marquette"), H),
         q("his_french_explorer_claimed", "Which French explorer claimed the whole Mississippi basin for France in 1682?", "Robert de La Salle", listOf("Jacques Cartier", "Samuel de Champlain", "Jacques Marquette"), H),
@@ -2545,6 +2667,7 @@ object HistoryQuestions {
         q("his_virginia_dare_born", "Who was Virginia Dare, born in 1587?", "First English baby born in the New World", listOf("The first woman to land at Jamestown", "Pocahontas's English goddaughter", "A Pilgrim girl born on the Mayflower"), H),
         q("his_according_pilgrim_account", "According to a Pilgrim account, running short of what helped decide where the Mayflower landed?", "Beer", listOf("Gunpowder", "Fresh water", "Firewood"), H),
         q("his_enslaved_woman_accused", "Which enslaved woman was the first accused 'witch' at Salem to confess, in 1692?", "Tituba", listOf("Sarah Good", "Bridget Bishop", "Rebecca Nurse"), H),
+        q("his_young_woman_running", "Which young woman, running her father's plantations as a teenager, made indigo a major crop of South Carolina in the 1740s?", "Eliza Lucas", listOf("Martha Custis", "Anne Hutchinson", "Abigail Smith"), H),
         q("hy_manhattan", "According to legend, the Dutch bought Manhattan in 1626 for goods worth about how much?", "60 guilders", listOf("6,000 guilders", "600,000 guilders", "A single gold coin"), X),
         q("his_european_country_small", "Which European country had a small colony on the Delaware River from 1638 to 1655?", "Sweden", listOf("Denmark", "Prussia", "Scotland"), X),
         q("his_wampanoag_leader_king", "Which Wampanoag leader, called 'King Philip' by the English, led a war against New England in 1675?", "Metacom", listOf("Massasoit", "Squanto", "Pontiac"), X),
@@ -2552,7 +2675,8 @@ object HistoryQuestions {
         q("his_man_crushed_under", "Which man, crushed under stones during the Salem witch trials, is said to have asked only for 'more weight'?", "Giles Corey", listOf("John Proctor", "Cotton Mather", "Samuel Parris"), X),
         q("his_cotton_mather_say", "From whom did Cotton Mather say he learned about smallpox inoculation, which he promoted in Boston in 1721?", "Onesimus, an enslaved African man", listOf("A Mohawk medicine man", "A ship's doctor from London", "A Dutch professor at Leiden"), X),
         q("his_massachusetts_town_raided", "Which Massachusetts town was raided in 1704 by French and Native warriors, who marched over 100 captives to Canada?", "Deerfield", listOf("Springfield", "Northampton", "Worcester"), X),
-        q("his_thomas_morton_put", "What did Thomas Morton put up at his Merrymount settlement in 1627, outraging his Puritan neighbours?", "A giant maypole", listOf("A Catholic chapel", "A playhouse", "A gambling den"), X)
+        q("his_thomas_morton_put", "What did Thomas Morton put up at his Merrymount settlement in 1627, outraging his Puritan neighbours?", "A giant maypole", listOf("A Catholic chapel", "A playhouse", "A gambling den"), X),
+        q("his_new_york_bowery", "The name of New York's Bowery comes from the Dutch word for what?", "A farm", listOf("A bridge", "A tavern", "A fort"), X)
     )
 
     /* Early Modern Era / Science & Enlightenment - history/early_modern/enlightenment.tsv */
@@ -2567,6 +2691,7 @@ object HistoryQuestions {
         q("his_kind_spectacles_benjamin", "Which kind of spectacles is Benjamin Franklin credited with inventing?", "Bifocals", listOf("Sunglasses", "Monocles", "Pince-nez"), E),
         q("his_according_story_tower", "According to a famous story, from which tower did Galileo drop balls of different weights?", "The Leaning Tower of Pisa", listOf("The bell tower of Florence", "St Mark's tower in Venice", "The Torre del Mangia in Siena"), E),
         q("his_english_scientist_used_2", "Which English scientist used a glass prism to show that white light is a mix of all colours?", "Isaac Newton", listOf("Robert Boyle", "Robert Hooke", "Edmond Halley"), E),
+        q("his_encyclopaedia_published_edinburgh", "Which famous encyclopaedia was first published in Edinburgh in 1768?", "The Encyclopaedia Britannica", listOf("The Oxford English Dictionary", "The Encyclopedie", "The Larousse"), E),
         q("org_kanapka_tytul", "The sandwich is named after a nobleman holding which title?", "Earl", listOf("Duke", "Baron", "Viscount"), M),
         q("hx_galileusz", "Which astronomer spent his last years under house arrest for saying the Earth moves around the Sun?", "Galileo Galilei", listOf("Nicolaus Copernicus", "Johannes Kepler", "Tycho Brahe"), M),
         q("his_movement_1700s_celebrated", "Which movement of the 1700s celebrated reason, science and individual rights?", "The Enlightenment", listOf("The Reformation", "The Renaissance", "Romanticism"), M),
@@ -2587,6 +2712,8 @@ object HistoryQuestions {
         q("his_italian_scientist_made", "Which Italian scientist made dead frogs' legs twitch with electricity in the 1780s?", "Luigi Galvani", listOf("Alessandro Volta", "Lazzaro Spallanzani", "Giovanni Morgagni"), M),
         q("his_instrument_galileo_pupil", "Which instrument did Galileo's pupil Evangelista Torricelli invent in 1643?", "The barometer", listOf("The thermometer", "The hygrometer", "The pendulum clock"), M),
         q("his_english_carpenter_sea", "Which English carpenter's sea clocks solved the problem of finding longitude?", "John Harrison", listOf("Robert Hooke", "Christiaan Huygens", "Thomas Tompion"), M),
+        q("his_fizzy_drink_chemist", "Which fizzy drink did the chemist Joseph Priestley invent in 1767?", "Soda water", listOf("Ginger beer", "Lemonade", "Tonic water"), M),
+        q("his_joking_essay_1784", "In a joking essay of 1784, what did Benjamin Franklin urge Parisians to do to save money on candles?", "Get up earlier", listOf("Work by moonlight", "Burn whale oil", "Sleep in the day"), M),
         q("his_18th_century_britain", "In 18th-century Britain, which exotic fruit was so prized that people rented it to show off at parties?", "The pineapple", listOf("The banana", "The mango", "The orange"), H),
         q("his_french_thinker_argued", "Which French thinker argued that government power should be split into separate branches?", "Montesquieu", listOf("Rousseau", "Voltaire", "Diderot"), H),
         q("his_huge_french_reference", "Which huge French reference work, edited by Diderot, spread Enlightenment ideas?", "The Encyclopedie", listOf("The Spectator", "The Almanac", "The Lexicon"), H),
@@ -2609,13 +2736,15 @@ object HistoryQuestions {
         q("his_year_catholic_church", "In which year did the Catholic Church formally admit it had been wrong to condemn Galileo?", "1992", listOf("1822", "1939", "1965"), H),
         q("his_part_galileo_body", "Which part of Galileo's body is on display in a museum in Florence?", "His middle finger", listOf("His skull", "His heart", "His right eye"), H),
         q("his_descartes_died_1650", "Descartes died in 1650 after giving 5 a.m. lessons to a queen in which chilly capital?", "Stockholm", listOf("Copenhagen", "Moscow", "Edinburgh"), H),
+        q("his_william_herschel_want", "What name did William Herschel first want to give the planet he discovered in 1781?", "George's Star", listOf("Herschel's World", "The New Saturn", "Britannia"), H),
         q("hx_kalendarz_1752", "When Britain switched to the Gregorian calendar in 1752, how many days were skipped?", "11", listOf("3", "7", "14"), X),
         q("hw_newton_mennica", "Which scientist spent his later years running England's Royal Mint and hunting forgers?", "Isaac Newton", listOf("Robert Hooke", "Edmond Halley", "Christopher Wren"), X),
         q("his_usually_regarded_britain", "Who is usually regarded as Britain's first prime minister?", "Robert Walpole", listOf("William Pitt the Younger", "Benjamin Disraeli", "Oliver Cromwell"), X),
         q("his_italian_thinker_1764", "Which Italian thinker's 1764 book argued against torture and the death penalty?", "Cesare Beccaria", listOf("Giambattista Vico", "Galileo Galilei", "Niccolo Machiavelli"), X),
         q("his_odd_temperature_scale", "What was odd about the temperature scale Anders Celsius proposed in 1742?", "Water boiled at 0 and froze at 100", listOf("It started at minus 100", "It had only 50 degrees", "It was based on body heat"), X),
         q("his_voltaire_become_rich", "How did Voltaire become rich as a young man?", "By exploiting a flaw in a state lottery", listOf("By selling his plays to the Comedie", "By marrying a wealthy widow", "By smuggling books into France"), X),
-        q("his_isaac_newton_once", "What did Isaac Newton once push behind his own eyeball to study vision?", "A blunt needle", listOf("A glass bead", "A silver coin", "A feather quill"), X)
+        q("his_isaac_newton_once", "What did Isaac Newton once push behind his own eyeball to study vision?", "A blunt needle", listOf("A glass bead", "A silver coin", "A feather quill"), X),
+        q("his_carl_linnaeus_take", "How did Carl Linnaeus take revenge on the botanist Johann Siegesbeck, who had attacked his work?", "He named a small, useless weed after him", listOf("He refused to name any plant after him", "He named a deadly poison after him", "He left him out of every textbook"), X)
     )
 
     /* Age of Revolutions / American Revolution - history/revolutions/american_revolution.tsv */
@@ -2632,6 +2761,7 @@ object HistoryQuestions {
         q("his_city_declaration_independence", "In which city was the Declaration of Independence signed?", "Philadelphia", listOf("Boston", "New York", "Washington"), E),
         q("his_european_country_sent", "Which European country sent ships and soldiers to help the Americans win their War of Independence?", "France", listOf("Russia", "Portugal", "Prussia"), E),
         q("his_american_rebels_call", "What did American rebels call themselves, in contrast to the 'Loyalists'?", "Patriots", listOf("Federalists", "Puritans", "Jacobites"), E),
+        q("his_protests_1773_drink", "After the protests of 1773, which drink did many patriotic Americans switch to instead of tea?", "Coffee", listOf("Cider", "Hot chocolate", "Rum"), E),
         q("his3_deklaracja_niepodleglosci_usa", "In which year was the US Declaration of Independence signed?", "1776", listOf("1789", "1800", "1765"), M),
         q("hx_jefferson", "Who was the main author of the US Declaration of Independence?", "Thomas Jefferson", listOf("George Washington", "Benjamin Franklin", "John Adams"), M),
         q("hx_delaware", "Which river did George Washington famously cross on Christmas night, 1776?", "The Delaware", listOf("The Potomac", "The Hudson", "The Mississippi"), M),
@@ -2661,6 +2791,7 @@ object HistoryQuestions {
         q("his_two_founding_fathers", "Which two Founding Fathers both died on 4 July 1826, exactly 50 years after the Declaration?", "John Adams and Thomas Jefferson", listOf("George Washington and John Jay", "Benjamin Franklin and John Adams", "Thomas Jefferson and James Madison"), M),
         q("his_new_yorkers_1776", "What did New Yorkers do in 1776 with the gilded statue of the British king on Bowling Green?", "Melted it into musket balls", listOf("Threw it in the Hudson", "Shipped it back to London", "Set it up in Philadelphia"), M),
         q("his_roughly_men_signed", "Roughly how many men signed the Declaration of Independence?", "56", listOf("13", "120", "25"), M),
+        q("his_men_threw_tea", "How did many of the men who threw tea into Boston Harbour disguise themselves in 1773?", "As Mohawk warriors", listOf("As British soldiers", "As fishermen", "As women"), M),
         q("trv_franklin_banknot", "Whose face is on the US \$100 bill, even though he was never president?", "Benjamin Franklin's", listOf("Thomas Jefferson's", "Ulysses Grant's", "Abraham Lincoln's"), H),
         q("his_nowy_jork_stolica", "Which city was the first capital of the United States under its Constitution?", "New York City", listOf("Philadelphia", "Boston", "Washington, D.C."), H),
         q("hx_paul_revere", "Which silversmith made a famous midnight ride in 1775 to warn that British troops were coming?", "Paul Revere", listOf("Benjamin Franklin", "Samuel Adams", "John Hancock"), H),
@@ -2675,10 +2806,13 @@ object HistoryQuestions {
         q("his_british_general_surrendered_2", "Which British general surrendered his army at Saratoga in 1777?", "John Burgoyne", listOf("Lord Cornwallis", "William Howe", "Henry Clinton"), H),
         q("his_legendary_heroine_took", "Which legendary heroine took her husband's place at a cannon at the Battle of Monmouth in 1778?", "Molly Pitcher", listOf("Betsy Ross", "Deborah Sampson", "Abigail Adams"), H),
         q("his_olive_branch_petition", "What was the 'Olive Branch Petition' of 1775?", "A last plea to George III for peace", listOf("A demand for French help", "A Native American peace treaty", "A call to free all slaves"), H),
+        q("his_prussian_officer_drilled", "Which Prussian officer drilled Washington's ragged army into shape in 1778?", "Baron von Steuben", listOf("Johann de Kalb", "Count Rumford", "Baron von Riedesel"), H),
+        q("his_british_officer_hanged", "Which British officer was hanged as a spy in 1780 for plotting with Benedict Arnold?", "John Andre", listOf("Banastre Tarleton", "Thomas Gage", "William Howe"), H),
         q("his_french_admiral_fleet", "Which French admiral's fleet trapped the British at Yorktown in 1781?", "The Comte de Grasse", listOf("The Marquis de Lafayette", "Admiral de Suffren", "The Comte de Rochambeau"), X),
         q("his_date_john_adams", "Which date did John Adams predict Americans would celebrate as their day of independence?", "2 July", listOf("4 July", "17 September", "19 April"), X),
         q("his_signer_declaration_independence", "Which signer of the Declaration of Independence outlived all the others, dying in 1832?", "Charles Carroll", listOf("Samuel Chase", "Elbridge Gerry", "Richard Stockton"), X),
-        q("his_1777_washington_troops", "In 1777 Washington had his troops deliberately given a mild dose of which disease, to protect them?", "Smallpox", listOf("Yellow fever", "Typhus", "Malaria"), X)
+        q("his_1777_washington_troops", "In 1777 Washington had his troops deliberately given a mild dose of which disease, to protect them?", "Smallpox", listOf("Yellow fever", "Typhus", "Malaria"), X),
+        q("his_roughly_chests_tea", "Roughly how many chests of tea were dumped into the harbour at the Boston Tea Party?", "About 340", listOf("About 40", "About 3,400", "About 34,000"), X)
     )
 
     /* Age of Revolutions / French Revolution - history/revolutions/french_revolution.tsv */
@@ -2695,6 +2829,7 @@ object HistoryQuestions {
         q("his_french_queen_wrongly", "Which French queen is wrongly said to have answered news of hungry peasants with 'Let them eat cake'?", "Marie Antoinette", listOf("Catherine de' Medici", "Josephine", "Marie Louise"), E),
         q("his_revolution_group_made", "Before the Revolution, which group made up France's 'First Estate'?", "The clergy", listOf("The nobility", "The peasants", "The merchants"), E),
         q("his_great_paris_museum", "Which great Paris museum first opened to the public in 1793, in a former royal palace?", "The Louvre", listOf("The Musee d'Orsay", "The Pompidou Centre", "The Musee Carnavalet"), E),
+        q("his_eiffel_tower_built", "The Eiffel Tower was built for a world's fair marking 100 years since what?", "The French Revolution", listOf("The birth of Napoleon", "The founding of Paris University", "The end of the Seven Years' War"), E),
         q("his_rewolucja_fr", "In which year did the French Revolution break out?", "1789", listOf("1799", "1776", "1804"), M),
         q("his_french_king_guillotined", "Which French king was guillotined in 1793?", "Louis XVI", listOf("Louis XIV", "Louis XV", "Charles X"), M),
         q("his_royal_family_ruled", "Which royal family ruled France at the time of the French Revolution?", "Bourbon", listOf("Valois", "Habsburg", "Plantagenet"), M),
@@ -2714,6 +2849,9 @@ object HistoryQuestions {
         q("his_wax_modeller_later", "Which wax modeller, who later opened a famous London museum, made death masks of guillotine victims?", "Marie Tussaud", listOf("Madame de Stael", "Elisabeth Vigee Le Brun", "Madame Roland"), M),
         q("his_became_bastille_stormed", "What became of the Bastille after it was stormed in 1789?", "It was torn down stone by stone", listOf("It became a museum of the Revolution", "It was turned into army barracks", "It became a prison for nobles"), M),
         q("his_louis_xvi_guillotined", "Louis XVI was guillotined in the Paris square that is today called what?", "Place de la Concorde", listOf("Place de la Bastille", "Place Vendome", "Place des Vosges"), M),
+        q("his_france_revolutionary_anthem", "Why is France's revolutionary anthem named after Marseille?", "Volunteers from Marseille sang it in Paris", listOf("Its composer was born in Marseille", "It was first printed in Marseille", "Marseille paid for its first performance"), M),
+        q("his_according_tradition_marie", "According to tradition, what were Marie Antoinette's last words, after she trod on her executioner's foot?", "'Pardon me, sir'", listOf("'Long live the king'", "'I forgive you all'", "'Look after my son'"), M),
+        q("his_revolutionaries_royal_tombs", "What did revolutionaries do to the royal tombs in the abbey of Saint-Denis in 1793?", "Dug up the kings and dumped them in pits", listOf("Melted them down to make cannon", "Sold them to British collectors", "Sealed them up behind brick walls"), M),
         q("org_gilotyna_lekarz", "The man behind the guillotine's name actually did what?", "Proposed it as a humane method", listOf("Built the first one", "Was executed by it", "Sharpened its blade"), H),
         q("hx_robespierre", "Which revolutionary led the 'Reign of Terror' before being guillotined himself in 1794?", "Maximilien Robespierre", listOf("Georges Danton", "Jean-Paul Marat", "Napoleon Bonaparte"), H),
         q("his_assembly_met_1789", "Which assembly met in 1789 for the first time since 1614, setting off the Revolution?", "The Estates-General", listOf("The National Convention", "The Directory", "The Paris Commune"), H),
@@ -2732,6 +2870,7 @@ object HistoryQuestions {
         q("his_louis_xvi_tried", "By which name was Louis XVI tried and executed by the revolutionaries?", "Louis Capet", listOf("Louis Bourbon", "Louis Valois", "Louis d'Orleans"), H),
         q("his_month_names_french", "What did the month names of the French Revolutionary calendar describe?", "Weather and farm life", listOf("Heroes of the Revolution", "Roman gods and goddesses", "Great battles of France"), H),
         q("his_royal_cousin_louis", "Which royal cousin of Louis XVI called himself 'Philippe Egalite' and voted for the king's death?", "The Duke of Orleans", listOf("The Count of Artois", "The Prince of Conde", "The Duke of Berry"), H),
+        q("his_family_hereditary_executioners", "Which family of hereditary executioners, from father to son, beheaded Louis XVI?", "The Sansons", listOf("The Guillotins", "The Capets", "The Desmoulins"), H),
         q("hx_marat_wanna", "Revolutionary Jean-Paul Marat was murdered in 1793 while doing what?", "Taking a bath", listOf("Giving a speech", "Eating dinner", "Riding in a carriage"), X),
         q("hx_bastylia_wiezniowie", "How many prisoners were inside the Bastille when it was stormed in 1789?", "Seven", listOf("About 70", "About 700", "None"), X),
         q("hx_gilotyna_1977", "In which year did France carry out its last execution by guillotine?", "1977", listOf("1871", "1918", "1946"), X),
@@ -2756,6 +2895,8 @@ object HistoryQuestions {
         q("his_napoleon_main_army", "By what name is Napoleon's main army, made up of soldiers from across Europe, known?", "The Grande Armee", listOf("The Armee du Nord", "The Imperial Legion", "The Army of the Rhine"), E),
         q("his_napoleon_said_mocked", "Napoleon is said to have mocked Britain as 'a nation of' what?", "Shopkeepers", listOf("Drunkards", "Pirates", "Bankers"), E),
         q("his_cathedral_napoleon_crowned", "In which cathedral was Napoleon crowned Emperor of the French?", "Notre-Dame de Paris", listOf("Reims Cathedral", "Chartres Cathedral", "Saint-Denis Basilica"), E),
+        q("his_mean_meet_waterloo", "What does it mean to 'meet your Waterloo'?", "To suffer a final, crushing defeat", listOf("To fall madly in love", "To win against all the odds", "To be sent into exile"), E),
+        q("his_fleet_destroyed_french", "Whose fleet destroyed the French and Spanish fleets at the Battle of Trafalgar in 1805?", "Britain's", listOf("Russia's", "Portugal's", "The Netherlands'"), E),
         q("his2_napoleon_kraj", "Where did Napoleon Bonaparte come from?", "Corsica", listOf("Sicily", "Provence", "Sardinia"), M),
         q("wh_napoleon_zeslanie", "On which island did Napoleon Bonaparte die?", "Saint Helena", listOf("Elba", "Corsica", "Malta"), M),
         q("hx_elba", "To which island was Napoleon first exiled, in 1814?", "Elba", listOf("Corsica", "Sardinia", "Malta"), M),
@@ -2777,6 +2918,7 @@ object HistoryQuestions {
         q("his_napoleon_empress_born", "Napoleon's first empress was born on which Caribbean island?", "Martinique", listOf("Guadeloupe", "Saint-Domingue", "Jamaica"), M),
         q("his_napoleon_born_1769", "Napoleon was born in 1769, a year after his home island was handed to France by which state?", "Genoa", listOf("Venice", "Spain", "Savoy"), M),
         q("his_thousand_year_old", "Which thousand-year-old empire was dissolved in 1806 after its defeats by Napoleon?", "The Holy Roman Empire", listOf("The Byzantine Empire", "The Ottoman Empire", "The Spanish Empire"), M),
+        q("his_dish_said_thrown", "Which dish is said to have been thrown together by Napoleon's cook after a famous victory over Austria in 1800?", "Chicken Marengo", listOf("Beef Wellington", "Steak Diane", "Duck a l'orange"), M),
         q("his_waterloo", "In which year did Napoleon lose the Battle of Waterloo?", "1815", listOf("1812", "1805", "1821"), H),
         q("his_austerlitz", "Which 1805 battle is often called Napoleon's greatest victory?", "Austerlitz", listOf("Waterloo", "Borodino", "Leipzig"), H),
         q("his_victory_trafalgar", "Which ship was Admiral Nelson's flagship at Trafalgar?", "HMS Victory", listOf("HMS Beagle", "HMS Bounty", "HMS Endeavour"), H),
@@ -2797,6 +2939,7 @@ object HistoryQuestions {
         q("his_river_crossing_retreat", "Which river crossing during the retreat from Moscow in 1812 became a French byword for disaster?", "The Berezina", listOf("The Neman", "The Dnieper", "The Vistula"), H),
         q("his_napoleon_grey_war", "What was the name of Napoleon's famous grey war horse, named after one of his victories?", "Marengo", listOf("Austerlitz", "Bucephalus", "Copenhagen"), H),
         q("his_british_warship_napoleon", "On which British warship did Napoleon surrender in 1815?", "HMS Bellerophon", listOf("HMS Victory", "HMS Temeraire", "HMS Agamemnon"), H),
+        q("his_battle_1812_near", "Which battle of 1812, near Moscow, was the bloodiest single day of the Napoleonic Wars?", "Borodino", listOf("Smolensk", "Berezina", "Maloyaroslavets"), H),
         q("cur_napoleon_wzrost", "Napoleon's 'short' reputation largely came from what?", "Confusion between French and English inches", listOf("His height of 1.40 m", "A painting of him sitting down", "A false death certificate"), X),
         q("hx_napoleon_kroliki", "In 1807, Napoleon was reportedly 'attacked' during a hunt by what?", "Hundreds of rabbits", listOf("A swarm of bees", "A herd of deer", "A flock of geese"), X),
         q("his_title_napoleon_give", "Which title did Napoleon give his baby son at birth in 1811?", "King of Rome", listOf("Prince of Paris", "Duke of Corsica", "Emperor of the West"), X),
@@ -2804,7 +2947,8 @@ object HistoryQuestions {
         q("his_great_battle_near", "Which great battle near Vienna in 1809 was one of Napoleon's last big victories over Austria?", "Wagram", listOf("Aspern", "Marengo", "Ulm"), X),
         q("his_napoleon_wife_she", "By which first name was Napoleon's first wife known before she met him?", "Rose", listOf("Marie", "Louise", "Hortense"), X),
         q("his_fortress_port_napoleon", "Which fortress port did Napoleon fail to capture in 1799, ending his hopes in the Middle East?", "Acre", listOf("Jaffa", "Alexandria", "Gaza"), X),
-        q("his_brother_napoleon_make", "Which brother did Napoleon make King of Holland, then depose for siding with the Dutch?", "Louis", listOf("Jerome", "Lucien", "Joseph"), X)
+        q("his_brother_napoleon_make", "Which brother did Napoleon make King of Holland, then depose for siding with the Dutch?", "Louis", listOf("Jerome", "Lucien", "Joseph"), X),
+        q("his_kind_story_young", "Which kind of story did the young Napoleon try his hand at writing in 1795?", "A romantic novella", listOf("A ghost story", "A comic play", "A pirate adventure"), X)
     )
 
     /* 19th Century / Industrial Revolution - history/nineteenth_century/industrial_revolution.tsv */
@@ -2817,6 +2961,7 @@ object HistoryQuestions {
         q("his_american_inventor_laboratory", "Which American inventor's laboratory at Menlo Park produced a long-lasting light bulb in 1879?", "Thomas Edison", listOf("Nikola Tesla", "Alexander Graham Bell", "George Westinghouse"), E),
         q("his_novelist_worked_shoe", "Which famous novelist worked in a shoe-polish factory at the age of 12?", "Charles Dickens", listOf("Thomas Hardy", "Anthony Trollope", "George Eliot"), E),
         q("his_steam_engines_usually", "Before steam engines, what usually drove the machines in the very first textile mills?", "Water wheels", listOf("Windmills", "Clockwork", "Hand cranks"), E),
+        q("his_raincoat_scottish_chemist", "Which raincoat is named after the Scottish chemist who patented a waterproof fabric in 1823?", "The mackintosh", listOf("The trench coat", "The duffle coat", "The anorak"), E),
         q("org_cola_lek", "Coca-Cola was first sold at pharmacy counters as a remedy for what?", "Headaches", listOf("Sore throats", "Insomnia", "Toothache"), M),
         q("his_scottish_engineer_made", "Which Scottish engineer made the steam engine far more efficient in the 1760s and 1770s?", "James Watt", listOf("George Stephenson", "Thomas Newcomen", "Richard Trevithick"), M),
         q("his_built_rocket_locomotive", "Who built the famous 'Rocket' locomotive that won the Rainhill Trials in 1829?", "George and Robert Stephenson", listOf("James Watt and his son", "Isambard Kingdom Brunel", "Richard Trevithick"), M),
@@ -2842,6 +2987,8 @@ object HistoryQuestions {
         q("his_dangerous_job_small", "What dangerous job did small children called 'scavengers' do in cotton mills?", "Crawled under machines to clear fluff", listOf("Carried coal to the boilers", "Climbed chimneys to sweep them", "Oiled the moving belts"), M),
         q("his_coal_miners_take", "Why did coal miners take canaries down the pits with them?", "To warn them of poisonous gas", listOf("To keep away the rats", "For good luck underground", "To keep them company"), M),
         q("his_unit_steam_engine", "Which unit did a steam-engine maker invent to compare his machines with the animals they replaced?", "Horsepower", listOf("Foot-pound", "Manpower", "Mule-load"), M),
+        q("his_labourers_dug_britain", "Why were the labourers who dug Britain's canals and railways called 'navvies'?", "It was short for 'navigators'", listOf("They came from the navy", "They wore navy-blue coats", "It was Irish for 'diggers'"), M),
+        q("his_kodak_slogan_1888", "How did Kodak's famous slogan of 1888 end: 'You press the button...'?", "'...we do the rest'", listOf("'...the camera smiles'", "'...and the past is yours'", "'...time stands still'"), M),
         q("his2_rewolucja_przemyslowa", "In which country did the Industrial Revolution begin?", "The United Kingdom", listOf("Germany", "France", "The USA"), H),
         q("org_denim_nimes", "Which fabric takes its name from the French city of Nimes?", "Denim", listOf("Chiffon", "Tweed", "Satin"), H),
         q("hx_luddysci", "What were the Luddites of early 1800s England famous for?", "Smashing weaving machines", listOf("Burning down banks", "Stealing steam engines", "Refusing to pay taxes"), H),
@@ -2863,11 +3010,13 @@ object HistoryQuestions {
         q("his_scottish_engineer_built", "Which Scottish engineer built the Menai Suspension Bridge, opened in 1826?", "Thomas Telford", listOf("John Rennie", "Robert Stephenson", "Isambard Kingdom Brunel"), H),
         q("his_german_family_firm", "Which German family firm from Essen became Europe's best-known maker of steel and guns?", "Krupp", listOf("Siemens", "Thyssen", "Bosch"), H),
         q("his_truck_system_19th", "What was the 'truck system' that many 19th-century workers hated?", "Pay in tokens for the boss's shop", listOf("Hauling coal in carts by hand", "Sharing one bed in shifts", "Fines for talking on the job"), H),
+        q("his_chemist_invented_safety", "Which chemist invented a safety lamp in 1815 that saved countless coal miners from gas explosions?", "Humphry Davy", listOf("Michael Faraday", "John Dalton", "Joseph Black"), H),
         q("his_canal_opened_1761", "Which canal, opened in 1761 to carry coal to Manchester, started Britain's 'canal mania'?", "The Bridgewater Canal", listOf("The Grand Union Canal", "The Leeds and Liverpool Canal", "The Caledonian Canal"), X),
         q("his_politician_killed_locomotive", "Which politician was killed by the locomotive Rocket at the opening of a railway in 1830?", "William Huskisson", listOf("Robert Peel", "George Canning", "Spencer Perceval"), X),
         q("his_terrible_disease_workers", "Which terrible disease did workers in match factories get from white phosphorus?", "'Phossy jaw'", listOf("'Black lung'", "'Mad hatter's disease'", "'Brass fever'"), X),
         q("his_samuel_slater_opened", "Why was Samuel Slater, who opened a cotton mill in Rhode Island in 1793, called 'Slater the Traitor' in Britain?", "He carried British mill designs in his head", listOf("He sold steel secrets to France", "He fought for America in the Revolution", "He wrecked the mills he managed"), X),
-        q("his_britain_locomotive_act", "What did Britain's Locomotive Act of 1865 require ahead of every steam road vehicle?", "A man on foot with a red flag", listOf("A horse-drawn warning cart", "A boy ringing a hand bell", "A policeman on horseback"), X)
+        q("his_britain_locomotive_act", "What did Britain's Locomotive Act of 1865 require ahead of every steam road vehicle?", "A man on foot with a red flag", listOf("A horse-drawn warning cart", "A boy ringing a hand bell", "A policeman on horseback"), X),
+        q("his_isambard_kingdom_brunel", "How did Isambard Kingdom Brunel get rid of a coin stuck in his windpipe in 1843?", "He was strapped to a board and turned upside down", listOf("He swallowed a spoonful of mustard and oil", "A surgeon pulled it out with long forceps", "He coughed it up while riding on a train"), X)
     )
 
     /* 19th Century / Victorian Britain & the Empire - history/nineteenth_century/victorian_era.tsv */
@@ -2884,6 +3033,7 @@ object HistoryQuestions {
         q("his_victorian_businessman_began", "Which Victorian businessman began the first package tours with a railway trip in 1841?", "Thomas Cook", listOf("Thomas Lipton", "Henry Wells", "William Morris"), E),
         q("his_victorian_hansom", "What was a Victorian 'hansom'?", "A two-wheeled horse-drawn cab", listOf("A gentleman's silk top hat", "A steam-powered omnibus", "A lady's lace parasol"), E),
         q("his_crinoline_fashionable_1850s", "What was a 'crinoline', fashionable in the 1850s and 1860s?", "A hooped frame worn under a skirt", listOf("A tight whalebone corset", "A frilly lace bonnet", "A fur-lined winter cape"), E),
+        q("his_cake_jam_between", "Which cake, with jam between two layers of sponge, is named after a British queen?", "The Victoria sponge", listOf("The Elizabeth roll", "The Mary cake", "The Anne tart"), E),
         q("org_znaczek_kraj", "Which country issued the world's first adhesive postage stamp?", "The United Kingdom", listOf("France", "The United States", "Austria"), M),
         q("his_imperium_slonce", "Which empire was famously said to be 'the empire on which the sun never sets' in the 1800s?", "The British Empire", listOf("The Ottoman Empire", "The Russian Empire", "The French Empire"), M),
         q("hy_albert", "What was the name of Queen Victoria's beloved husband?", "Prince Albert", listOf("Prince Philip", "Prince Edward", "Prince George"), M),
@@ -2907,6 +3057,7 @@ object HistoryQuestions {
         q("his_festive_item_sold", "Which festive item was first sold in Britain in 1843, an idea of Henry Cole?", "The Christmas card", listOf("The Christmas cracker", "The Advent calendar", "The Christmas stocking"), M),
         q("his_old_victoria_she", "How old was Victoria when she became queen in 1837?", "18", listOf("12", "25", "31"), M),
         q("his_duchess_credited_starting", "Which duchess is credited with starting the fashion for afternoon tea in the 1840s?", "The Duchess of Bedford", listOf("The Duchess of Kent", "The Duchess of Devonshire", "The Duchess of Sutherland"), M),
+        q("his_london_police_headquarters", "Why was London's police headquarters, opened in 1829, called 'Scotland Yard'?", "A street of that name ran behind it", listOf("Its first chief came from Edinburgh", "It was built on land owned by Scots", "It housed Scottish soldiers before"), M),
         q("wh_wielki_glod_irlandia", "A failed harvest of which crop caused the Great Famine in Ireland in the 1840s?", "The potato", listOf("Wheat", "Oats", "Barley"), H),
         q("org_bojkot_nazwisko", "The word 'boycott' comes from what?", "A land agent's surname", listOf("An Irish village", "A trade union slogan", "A Dutch verb"), H),
         q("hx_wiktoria_indie", "Which extra title did Queen Victoria take in 1876?", "Empress of India", listOf("Queen of Canada", "Empress of China", "Queen of Egypt"), H),
@@ -2925,12 +3076,15 @@ object HistoryQuestions {
         q("his_city_queen_victoria", "Which city did Queen Victoria choose as the capital of Canada in 1857?", "Ottawa", listOf("Toronto", "Montreal", "Quebec City"), H),
         q("his_queen_victoria_real", "What was Queen Victoria's real first name?", "Alexandrina", listOf("Charlotte", "Augusta", "Adelaide"), H),
         q("his_poison_made_fashionable", "Which poison made the fashionable green wallpapers of Victorian homes dangerous?", "Arsenic", listOf("Mercury", "Lead", "Cyanide"), H),
+        q("his_british_foreign_secretary_2", "Which British foreign secretary sent the fleet to Greece in 1850 to back a single merchant's claim for damages?", "Lord Palmerston", listOf("Lord Aberdeen", "Lord Salisbury", "Lord John Russell"), H),
         q("hx_babcia_europy", "Why was Queen Victoria nicknamed 'the grandmother of Europe'?", "Her grandchildren wore many crowns", listOf("She ruled most of Europe", "She lived to be 100", "She founded the Red Cross"), X),
         q("his_indian_servant_became", "Which Indian servant became Queen Victoria's beloved teacher, known as 'the Munshi'?", "Abdul Karim", listOf("Duleep Singh", "Ram Singh", "Dadabhai Naoroji"), X),
         q("his_pteridomania_victorian_craze", "What was 'pteridomania', a Victorian craze?", "Collecting ferns", listOf("Breeding canaries", "Collecting seashells", "Keeping goldfish"), X),
         q("his_according_tradition_bronze", "According to tradition, the bronze for Victoria Cross medals comes from what?", "Russian guns captured in the Crimea", listOf("Melted coins of George III", "The bells of a London church", "Old cannon of the Tower of London"), X),
         q("his_nickname_given_south", "What nickname was given to the South Kensington district of museums paid for by the Great Exhibition's profits?", "Albertopolis", listOf("Victoriaville", "Prince's Quarter", "Crystal City"), X),
-        q("his_prince_albert_death", "Prince Albert's death in 1861 was officially blamed on which disease?", "Typhoid fever", listOf("Cholera", "Smallpox", "Tuberculosis"), X)
+        q("his_prince_albert_death", "Prince Albert's death in 1861 was officially blamed on which disease?", "Typhoid fever", listOf("Cholera", "Smallpox", "Tuberculosis"), X),
+        q("his_favourite_hobby_victorian", "What was the favourite hobby of the Victorian statesman William Gladstone?", "Felling trees with an axe", listOf("Collecting Chinese porcelain", "Breeding racing pigeons", "Climbing Alpine peaks"), X),
+        q("his_giant_elephant_london", "Which giant elephant at London Zoo was sold to P. T. Barnum in 1882, to a great public outcry?", "Jumbo", listOf("Chunee", "Hannibal", "Tusko"), X)
     )
 
     /* 19th Century / Europe in the 1800s - history/nineteenth_century/europe.tsv */
@@ -2944,6 +3098,8 @@ object HistoryQuestions {
         q("his_capital_rebuilt_grand", "Which capital was rebuilt with grand boulevards by Baron Haussmann in the 1850s and 1860s?", "Paris", listOf("Vienna", "London", "Berlin"), E),
         q("his_munich_festival_began", "Which Munich festival began in 1810 as a celebration of a royal wedding?", "Oktoberfest", listOf("Fasching", "Christkindlmarkt", "Walpurgis Night"), E),
         q("his_city_became_capital_3", "Which city became the capital of the new German Empire in 1871?", "Berlin", listOf("Munich", "Frankfurt", "Hamburg"), E),
+        q("his_paris_cabaret_red", "Which Paris cabaret with a red windmill on its roof opened in 1889?", "The Moulin Rouge", listOf("The Folies Bergere", "The Lido", "The Chat Noir"), E),
+        q("his_christmas_carol_sung", "Which Christmas carol was first sung in a village church in Austria in 1818?", "'Silent Night'", listOf("'O Holy Night'", "'Jingle Bells'", "'O Tannenbaum'"), E),
         q("his4_wojna_krymska_strony", "In the Crimean War, Russia fought a coalition led by which two powers?", "Britain and France", listOf("Prussia and Austria", "Spain and Portugal", "Sweden and Denmark"), M),
         q("trv_manifest", "Who wrote 'The Communist Manifesto'?", "Karl Marx and Friedrich Engels", listOf("Vladimir Lenin, while in exile", "Leon Trotsky and his circle", "Rosa Luxemburg and her party"), M),
         q("hx_bismarck", "Which 'Iron Chancellor' united Germany in 1871?", "Otto von Bismarck", listOf("Kaiser Wilhelm II", "Frederick the Great", "Klemens von Metternich"), M),
@@ -2970,6 +3126,7 @@ object HistoryQuestions {
         q("his_castor_pollux_killed", "What were Castor and Pollux, killed and eaten during the Prussian siege of Paris in 1870?", "The zoo's two elephants", listOf("Two famous racehorses", "Two giant river carp", "The Emperor's carriage horses"), M),
         q("his_new_country_chose", "Which new country chose Queen Victoria's uncle Leopold as its first king, in 1831?", "Belgium", listOf("Greece", "Bulgaria", "Norway"), M),
         q("his_french_army_officer", "Which French army officer's false conviction for spying in 1894 split France for a decade?", "Alfred Dreyfus", listOf("Georges Boulanger", "Philippe Petain", "Hubert Lyautey"), M),
+        q("his_piano_concerts_1840s", "Whose piano concerts of the 1840s caused fan frenzies that Heinrich Heine called a 'mania'?", "Franz Liszt", listOf("Frederic Chopin", "Felix Mendelssohn", "Robert Schumann"), M),
         q("org_kardigan_wojna", "The cardigan is named after a commander who fought in which war?", "The Crimean War", listOf("The Boer War", "The Napoleonic Wars", "The American Civil War"), H),
         q("his_french_emperor_napoleon", "Which French emperor was Napoleon Bonaparte's nephew?", "Napoleon III", listOf("Napoleon II", "Louis XVIII", "Louis-Philippe"), H),
         q("his_russian_tsar_freed", "Which Russian tsar freed the serfs in 1861?", "Alexander II", listOf("Nicholas II", "Alexander III", "Nicholas I"), H),
@@ -2990,11 +3147,13 @@ object HistoryQuestions {
         q("his_country_modern_king", "Which country's first modern king, in 1832, was a teenage prince from Bavaria?", "Greece", listOf("Belgium", "Bulgaria", "Romania"), H),
         q("his_italian_patriots_1850s", "Why did Italian patriots of the 1850s scrawl 'Viva VERDI!' on walls?", "It spelled a cheer for their future king", listOf("Verdi had been jailed by Austria", "Verdi led a volunteer army", "It marked secret weapon stores"), H),
         q("his_tsar_nicknamed_gendarme", "Which tsar, nicknamed 'the Gendarme of Europe', sent troops to crush Hungary's revolution in 1849?", "Nicholas I", listOf("Alexander I", "Alexander II", "Alexander III"), H),
+        q("his_russian_writer_led", "Which Russian writer was led out to be shot in 1849, only to be spared at the last moment?", "Fyodor Dostoevsky", listOf("Leo Tolstoy", "Ivan Turgenev", "Alexander Pushkin"), H),
         q("his_tambora", "The 1815 eruption of which volcano led to 'the year without a summer'?", "Tambora", listOf("Krakatoa", "Vesuvius", "Pinatubo"), X),
         q("his_habsburg_crown_prince", "Which Habsburg crown prince died with his lover at Mayerling in 1889?", "Rudolf", listOf("Franz Ferdinand", "Maximilian", "Charles"), X),
         q("his_bismarck_struggle_against", "What was Bismarck's struggle against the Catholic Church in the 1870s called?", "The Kulturkampf", listOf("The Realpolitik", "The Sonderweg", "The Zollverein"), X),
         q("his_country_last_war", "Which country's last war was the Sonderbund War of 1847, a civil war that lasted less than a month?", "Switzerland", listOf("Belgium", "Denmark", "Portugal"), X),
-        q("his_bismarck_goaded_france", "Bismarck goaded France into war in 1870 by editing a telegram sent from which spa town?", "Ems", listOf("Baden-Baden", "Wiesbaden", "Karlsbad"), X)
+        q("his_bismarck_goaded_france", "Bismarck goaded France into war in 1870 by editing a telegram sent from which spa town?", "Ems", listOf("Baden-Baden", "Wiesbaden", "Karlsbad"), X),
+        q("his_king_bavaria_lost", "Which king of Bavaria lost his throne in 1848, partly over his affair with the dancer Lola Montez?", "Ludwig I", listOf("Maximilian II", "Otto I", "Ludwig III"), X)
     )
 
     /* 19th Century / American Civil War - history/nineteenth_century/us_civil_war.tsv */
@@ -3010,6 +3169,7 @@ object HistoryQuestions {
         q("his_song_land_cotton", "Which song about 'the land of cotton' became the unofficial anthem of the Confederacy?", "'Dixie'", listOf("'Oh! Susanna'", "'Yankee Doodle'", "'Swanee River'"), E),
         q("his_nickname_given_typical", "What nickname was given to the typical Confederate soldier?", "Johnny Reb", listOf("Billy Yank", "Tommy Atkins", "Uncle Sam"), E),
         q("his_abraham_lincoln_doing", "What was Abraham Lincoln doing when he was shot in April 1865?", "Watching a play at a theatre", listOf("Giving a speech outdoors", "Riding in his carriage", "Praying in a church"), E),
+        q("his_kind_tall_hat", "What kind of tall hat did Abraham Lincoln famously wear?", "A stovepipe hat", listOf("A bowler hat", "A tricorn hat", "A cowboy hat"), E),
         q("hy_emancypacja", "Which 1863 order by Abraham Lincoln declared slaves in the rebel states free?", "The Emancipation Proclamation", listOf("The Gettysburg Address", "The Monroe Doctrine", "The Bill of Rights"), M),
         q("hy_lee", "Who was the top general of the Confederate army in the American Civil War?", "Robert E. Lee", listOf("Ulysses S. Grant", "Stonewall Jackson", "William Sherman"), M),
         q("his_battle_1863_seen", "Which battle of 1863 is seen as the turning point of the American Civil War?", "Gettysburg", listOf("Bull Run", "Antietam", "Shiloh"), M),
@@ -3034,6 +3194,7 @@ object HistoryQuestions {
         q("his_roughly_long_lincoln", "Roughly how long was Lincoln's most famous speech, given at a battlefield cemetery in 1863?", "About two minutes", listOf("About twenty minutes", "About an hour", "About two hours"), M),
         q("his_union_general_initials", "Which Union general's initials were joked to stand for 'Unconditional Surrender'?", "Ulysses S. Grant", listOf("William T. Sherman", "George G. Meade", "Philip H. Sheridan"), M),
         q("his_deadly_new_york", "What were the deadly New York City riots of July 1863 mainly a protest against?", "The military draft", listOf("Rising bread prices", "Lincoln's re-election", "A ban on alcohol"), M),
+        q("his_hardtack_staple_ration", "What was 'hardtack', a staple ration of Civil War soldiers?", "A hard, dry biscuit", listOf("Salted, dried beef", "A plug of chewing tobacco", "Boiled coffee grounds"), M),
         q("org_bokobrody_burnside", "'Sideburns' is a scrambled version of which general's surname?", "Burnside", listOf("Sherman", "Custer", "Hooker"), H),
         q("hx_gettysburg", "Which short speech by Abraham Lincoln begins 'Four score and seven years ago'?", "The Gettysburg Address", listOf("The Emancipation Proclamation", "His second inaugural", "The House Divided speech"), H),
         q("hy_grant", "Which Union general of the Civil War later became US president?", "Ulysses S. Grant", listOf("Robert E. Lee", "George McClellan", "William Sherman"), H),
@@ -3051,13 +3212,16 @@ object HistoryQuestions {
         q("his_black_regiment_attack", "Which Black regiment's attack on Fort Wagner in 1863 was shown in the film 'Glory'?", "The 54th Massachusetts", listOf("The 1st Kansas Colored", "The 10th Cavalry", "The 369th Infantry"), H),
         q("his_latin_motto_virginia", "Which Latin motto of Virginia did John Wilkes Booth reportedly shout after shooting Lincoln?", "'Sic semper tyrannis'", listOf("'E pluribus unum'", "'Deo vindice'", "'Veni, vidi, vici'"), H),
         q("his_two_union_soldiers", "What did two Union soldiers find wrapped around three cigars in a Maryland field in 1862?", "Lee's battle plans", listOf("A spy's secret map", "Lincoln's lost letter", "A coded telegram"), H),
+        q("his_new_york_gallery", "Whose New York gallery shocked the public in 1862 with photographs of the dead at Antietam?", "Mathew Brady's", listOf("George Eastman's", "Louis Daguerre's", "Eadweard Muybridge's"), H),
+        q("his_army_surgeon_civil", "Which army surgeon of the Civil War is still the only woman to have won the Medal of Honor?", "Mary Edwards Walker", listOf("Clara Barton", "Dorothea Dix", "Elizabeth Blackwell"), H),
         q("his_confederate_general_led", "The doomed Confederate charge on the last day of Gettysburg is named after which general?", "George Pickett", listOf("James Longstreet", "J. E. B. Stuart", "Jubal Early"), X),
         q("his_confederate_submarine_sink", "Which Confederate submarine was the first to sink an enemy warship, in 1864?", "H. L. Hunley", listOf("CSS Alabama", "Nautilus", "Turtle"), X),
         q("his_virginia_grocer_farm", "Which Virginia grocer's farm was shelled at the first Battle of Bull Run, and in whose parlour did Lee later surrender?", "Wilmer McLean", listOf("Mathew Brady", "John Mosby", "Jubal Early"), X),
         q("his_actor_saved_abraham", "Which actor saved Abraham Lincoln's son Robert from a train accident, months before his own brother shot the president?", "Edwin Booth", listOf("Edwin Forrest", "Joseph Jefferson", "Laura Keene"), X),
         q("his_british_built_confederate", "Which British-built Confederate raider was sunk off the coast of France by USS Kearsarge in 1864?", "CSS Alabama", listOf("CSS Shenandoah", "CSS Florida", "CSS Virginia"), X),
         q("his_robert_lee_grey", "What was the name of Robert E. Lee's famous grey warhorse?", "Traveller", listOf("Little Sorrel", "Cincinnati", "Comanche"), X),
-        q("his_cherokee_leader_last", "Which Cherokee leader was the last Confederate general to surrender, in June 1865?", "Stand Watie", listOf("Sequoyah", "John Ross", "Red Cloud"), X)
+        q("his_cherokee_leader_last", "Which Cherokee leader was the last Confederate general to surrender, in June 1865?", "Stand Watie", listOf("Sequoyah", "John Ross", "Red Cloud"), X),
+        q("his_gang_counterfeiters_try", "Why did a gang of counterfeiters try to steal Abraham Lincoln's body from his tomb in 1876?", "To ransom it for a jailed forger", listOf("To sell it to a travelling circus", "To bury it in the South", "To prove he was still alive"), X)
     )
 
     /* 19th Century / Wild West & 1800s America - history/nineteenth_century/wild_west.tsv */
@@ -3074,6 +3238,7 @@ object HistoryQuestions {
         q("his_wide_brimmed_hat", "Which wide-brimmed hat became the classic symbol of the American cowboy?", "The Stetson", listOf("The bowler", "The top hat", "The panama"), E),
         q("his_american_pioneers_heading", "What did American pioneers heading west usually travel in, nicknamed 'prairie schooners'?", "Covered wagons", listOf("Stagecoaches", "Canal boats", "Steam trains"), E),
         q("his_city_grew_village", "Which city grew from a village of about 1,000 people into a boomtown of some 25,000 during the gold rush of 1849?", "San Francisco", listOf("Los Angeles", "San Diego", "Monterey"), E),
+        q("his_breed_cattle_enormous", "Which breed of cattle, with enormous horns, did cowboys drive north from Texas?", "The Texas Longhorn", listOf("The Hereford", "The Aberdeen Angus", "The Holstein"), E),
         q("his_alaska", "From which country did the USA buy Alaska in 1867?", "Russia", listOf("Canada", "Britain", "Spain"), M),
         q("hx_goraczka_zlota", "The gold rush of 1849 drew huge crowds of fortune-seekers to which US state?", "California", listOf("Alaska", "Texas", "Colorado"), M),
         q("hx_ellis_island", "Through which island did millions of immigrants enter New York between 1892 and 1954?", "Ellis Island", listOf("Staten Island", "Long Island", "Coney Island"), M),
@@ -3102,6 +3267,7 @@ object HistoryQuestions {
         q("his_sawmill_gold_found", "At whose sawmill was gold found in 1848, setting off the great gold rush?", "John Sutter's", listOf("Levi Strauss's", "John Astor's", "Kit Carson's"), M),
         q("his_workers_country_hardest", "Workers from which country did much of the hardest work building the Central Pacific Railroad?", "China", listOf("Ireland", "Mexico", "Italy"), M),
         q("his_rifle_advertised_gun", "Which rifle was advertised as 'the gun that won the West'?", "The Winchester", listOf("The Springfield", "The Remington", "The Sharps"), M),
+        q("his_wild_west_towns", "In many Wild West towns, what was 'Boot Hill'?", "The graveyard for gunfighters", listOf("The street where saloons stood", "The jail for horse thieves", "The cobbler's workshop"), M),
         q("his_luizjana", "From which country did the USA buy the vast Louisiana territory in 1803?", "France", listOf("Spain", "Britain", "Mexico"), H),
         q("hx_bialy_dom_1814", "Which country's troops burned the White House in 1814?", "Britain", listOf("France", "Mexico", "Spain"), H),
         q("hx_pony_express", "For how long did the famous Pony Express mail service actually run?", "About 18 months", listOf("About 10 years", "About 30 years", "About 5 years"), H),
@@ -3118,11 +3284,13 @@ object HistoryQuestions {
         q("his_race_settlers_claim", "What was the race of settlers to claim free land in Oklahoma in 1889 called?", "The Land Run", listOf("The Gold Rush", "The Long Drive", "The Great Trek"), H),
         q("his_lakota_war_leader", "Which Lakota war leader, who fought at Little Bighorn, is not known ever to have been photographed?", "Crazy Horse", listOf("Sitting Bull", "Red Cloud", "Spotted Tail"), H),
         q("his_wild_west_gunslinger", "Which Wild West gunslinger and gambler had trained as a dentist?", "Doc Holliday", listOf("Bat Masterson", "Johnny Ringo", "John Wesley Hardin"), H),
+        q("his_outlaw_shot_back", "Which outlaw was shot in the back of the head by a member of his own gang while straightening a picture at home?", "Jesse James", listOf("Billy the Kid", "Sam Bass", "John Wesley Hardin"), H),
         q("hx_wojna_o_swinie", "The 1859 'Pig War' was a border standoff between the USA and which country?", "Britain", listOf("Russia", "Mexico", "Spain"), X),
         q("hx_teksas_republika", "Before joining the USA in 1845, Texas was an independent country for about how long?", "Nine years", listOf("Two months", "Forty years", "A single day"), X),
         q("hy_kolej_1869", "In which year was America's first transcontinental railroad completed?", "1869", listOf("1829", "1899", "1912"), X),
         q("his_real_frontierswoman_calamity", "What was the real name of the frontierswoman 'Calamity Jane'?", "Martha Jane Canary", listOf("Phoebe Ann Mosey", "Myra Belle Shirley", "Mary Fields"), X),
-        q("his_animals_army_import", "Which animals did the US Army import in 1856 to carry supplies across the deserts of the South-West?", "Camels", listOf("Llamas", "Elephants", "Yaks"), X)
+        q("his_animals_army_import", "Which animals did the US Army import in 1856 to carry supplies across the deserts of the South-West?", "Camels", listOf("Llamas", "Elephants", "Yaks"), X),
+        q("his_bankrupt_san_francisco", "Which bankrupt San Francisco businessman proclaimed himself 'Emperor of the United States' in 1859?", "Joshua Norton", listOf("Leland Stanford", "Sam Brannan", "William Ralston"), X)
     )
 
     /* 19th Century / Latin America - history/nineteenth_century/latin_america.tsv */
@@ -3135,6 +3303,8 @@ object HistoryQuestions {
         q("his_modern_country_simon", "In which modern country was Simon Bolivar born?", "Venezuela", listOf("Bolivia", "Colombia", "Spain"), E),
         q("his_cowboys_argentine_pampas", "What were the cowboys of the Argentine pampas called?", "Gauchos", listOf("Vaqueros", "Llaneros", "Charros"), E),
         q("his_crop_made_brazil", "Which crop had made Brazil the world's biggest producer of it by the mid-1800s?", "Coffee", listOf("Cocoa", "Tobacco", "Cotton"), E),
+        q("his_bitter_herbal_drink", "Which bitter herbal drink, sipped through a metal straw from a gourd, was the gauchos' favourite?", "Mate", listOf("Pisco", "Tequila", "Horchata"), E),
+        q("his_venezuela_currency", "Venezuela's currency is named after whom?", "Simon Bolivar", listOf("Francisco de Miranda", "Jose de San Martin", "Antonio Jose de Sucre"), E),
         q("his4_simon_bolivar", "Simon Bolivar is known for liberating which continent's colonies?", "South America", listOf("Africa", "Southeast Asia", "Central Europe"), M),
         q("his_argentine_general_crossed", "Which Argentine general crossed the Andes to free Chile and Peru from Spain?", "Jose de San Martin", listOf("Simon Bolivar", "Bernardo O'Higgins", "Antonio Jose de Sucre"), M),
         q("his_date_mexico_celebrate", "On which date does Mexico celebrate its Independence Day?", "16 September", listOf("5 May", "4 July", "12 October"), M),
@@ -3157,6 +3327,8 @@ object HistoryQuestions {
         q("his_italian_patriot_earned", "Which Italian patriot earned the title 'Hero of Two Worlds' by first fighting in Brazil and Uruguay?", "Giuseppe Garibaldi", listOf("Giuseppe Mazzini", "Count Cavour", "Nino Bixio"), M),
         q("his_french_ruler_sent", "Which French ruler sent an army to conquer Mexico in the 1860s?", "Napoleon III", listOf("Louis Philippe", "Adolphe Thiers", "Charles X"), M),
         q("his_country_dominican_republic", "From which country did the Dominican Republic win its independence in 1844?", "Haiti", listOf("Spain", "France", "The USA"), M),
+        q("his_young_simon_bolivar", "What did the young Simon Bolivar swear on a hill in Rome in 1805?", "To free his homeland from Spain", listOf("To become a Catholic priest", "To marry his childhood sweetheart", "To never return to Venezuela"), M),
+        q("his_adelitas_mexican_revolution", "Who were the 'Adelitas' of the Mexican Revolution?", "Women who fought and marched with the armies", listOf("Nuns who nursed the wounded in the cities", "Rich ladies who funded Pancho Villa", "Peasant girls who carried messages for spies"), M),
         q("his4_rewolucja_haiti", "Haiti's revolution is notable as the first successful large-scale revolt of which group?", "Enslaved people", listOf("Colonial merchants", "Indigenous nobility", "Naval officers"), H),
         q("his_mexican_revolutionary_general", "Which Mexican revolutionary general led a raid into the United States in 1916?", "Pancho Villa", listOf("Emiliano Zapata", "Benito Juarez", "Porfirio Diaz"), H),
         q("his_mexican_priest_cry", "Which Mexican priest's 'Cry of Dolores' in 1810 began Mexico's war of independence?", "Miguel Hidalgo", listOf("Jose Maria Morelos", "Benito Juarez", "Agustin de Iturbide"), H),
@@ -3175,6 +3347,7 @@ object HistoryQuestions {
         q("his_woman_simon_bolivar", "Which woman, Simon Bolivar's lover, saved him from assassins in 1828 by helping him escape through a window?", "Manuela Saenz", listOf("Juana Azurduy", "Policarpa Salavarrieta", "Leona Vicario"), H),
         q("his_chile_war_1879", "Chile's war of 1879-1884 against Peru and Bolivia was fought largely over deposits of what?", "Nitrates", listOf("Silver", "Copper", "Tin"), H),
         q("his_german_scientist_travels", "Which German scientist, whose travels through Latin America began in 1799, did Bolivar reportedly call the true discoverer of South America?", "Alexander von Humboldt", listOf("Johann von Spix", "Carl von Martius", "Georg Forster"), H),
+        q("his_san_patricios_fought", "Who were the San Patricios, who fought for Mexico against the USA in 1846-1848?", "Mostly Irish deserters from the US army", listOf("Mexican priests who led peasant troops", "Spanish veterans hired by Santa Anna", "Escaped slaves from Texas plantations"), H),
         q("hx_brazylia_cesarstwo", "Which country in the Americas was ruled by its own emperors until 1889?", "Brazil", listOf("Mexico", "Argentina", "Peru"), X),
         q("hx_rio_portugalia", "Which European country moved its royal court to Brazil in 1808, fleeing Napoleon?", "Portugal", listOf("Spain", "France", "The Netherlands"), X),
         q("hx_toussaint", "Which former slave became the best-known leader of the Haitian Revolution?", "Toussaint Louverture", listOf("Francois Mackandal", "Simon Bolivar", "Jose de San Martin"), X),
@@ -3197,6 +3370,8 @@ object HistoryQuestions {
         q("his_lightweight_cork_helmet", "What was the lightweight cork helmet worn by Europeans in the tropics called?", "A pith helmet", listOf("A bowler hat", "A kepi", "A fez"), E),
         q("his_giant_waterfall_scottish", "Which giant waterfall did a Scottish missionary-explorer name after his queen in 1855?", "Victoria Falls", listOf("Murchison Falls", "Kalambo Falls", "Stanley Falls"), E),
         q("his_discovered_around_kimberley", "What was discovered around Kimberley, South Africa, in about 1870, setting off a great rush?", "Diamonds", listOf("Gold", "Copper", "Oil"), E),
+        q("his_style_beer_brewed", "Which style of beer was brewed extra hoppy so it would survive the long voyage to British India?", "India Pale Ale", listOf("Irish stout", "Pilsner lager", "Brown ale"), E),
+        q("his_word_small_storey", "Which word for a small one-storey house came into English from British India, meaning 'in the Bengal style'?", "Bungalow", listOf("Cottage", "Chalet", "Villa"), E),
         q("his4_kanal_sueski_rok", "In which decade was the Suez Canal opened?", "The 1860s", listOf("The 1830s", "The 1890s", "The 1910s"), M),
         q("hx_kanal_panamski", "Which country built the Panama Canal and ran it for most of the 20th century?", "The United States", listOf("France", "Britain", "Spain"), M),
         q("his_missing_scottish_explorer", "Which missing Scottish explorer did the journalist Henry Morton Stanley track down in Africa in 1871?", "David Livingstone", listOf("Mungo Park", "Richard Burton", "John Speke"), M),
@@ -3220,6 +3395,8 @@ object HistoryQuestions {
         q("his_rumour_sparked_indian", "Which rumour sparked the Indian Rebellion of 1857?", "Cartridges were greased with animal fat", listOf("A sacred temple had been demolished", "The Mughal emperor had been poisoned", "Their wages were to be paid in opium"), M),
         q("his_dream_railway_never", "Which dream railway, never finished, was meant to run the length of Britain's African empire?", "Cape to Cairo", listOf("Berlin to Baghdad", "Dakar to Djibouti", "Lagos to Mombasa"), M),
         q("his_country_british_army", "From which country does the British army recruit its famous Gurkha soldiers, as it has since 1815?", "Nepal", listOf("Bhutan", "Tibet", "Burma"), M),
+        q("his_english_word_thug", "The English word 'thug' comes from Indian gangs, crushed by the British in the 1830s, who did what?", "Strangled and robbed travellers", listOf("Smuggled opium into China", "Sank British trading ships", "Kidnapped children for ransom"), M),
+        q("his_badminton_developed_game", "Badminton, developed from a game British officers played in India, is named after what?", "A duke's country house", listOf("A town in Bengal", "A regiment's colonel", "A Hindi word for 'feather'"), M),
         q("wh_wojna_opiumowa", "Between which countries was the First Opium War fought?", "China and Great Britain", listOf("China and Japan", "India and Great Britain", "China and Russia"), H),
         q("cur_wojna_angielsko_zanzibarska", "The shortest war in recorded history, in 1896, lasted about how long?", "38 minutes", listOf("3 days", "6 hours", "2 weeks"), H),
         q("hx_liberia", "Which African country was founded in the 1800s by freed slaves from the USA?", "Liberia", listOf("Ghana", "Gabon", "Cameroon"), H),
@@ -3239,6 +3416,7 @@ object HistoryQuestions {
         q("his_poem_rudyard_kipling", "Which poem by Rudyard Kipling urged the USA to take up colonies in 1899?", "'The White Man's Burden'", listOf("'Gunga Din'", "'Recessional'", "'The Ballad of East and West'"), H),
         q("his_army_doctor_became", "Which army doctor became famous as 'the sole survivor' of the British retreat from Kabul in 1842?", "William Brydon", listOf("John Snow", "Joseph Lister", "Thomas Longmore"), H),
         q("his_north_sea_island", "Which North Sea island did Britain hand to Germany in 1890 in exchange for Zanzibar?", "Heligoland", listOf("Sylt", "Texel", "Bornholm"), H),
+        q("his_zulu_king_led", "Which Zulu king led his people in the war against Britain in 1879?", "Cetshwayo", listOf("Shaka", "Dingane", "Mpande"), H),
         q("wh_kongres_berlinski_afryka", "Which 1884-1885 conference sanctioned the partition of Africa among the powers?", "The Berlin Conference", listOf("The Congress of Vienna", "The Yalta Conference", "The Congress of Paris"), X),
         q("his4_wojna_boerska", "The Boer Wars were fought between Britain and settlers of what descent?", "Dutch", listOf("Portuguese", "German", "French"), X),
         q("his4_rewolta_bokserow", "Against whom was the Boxer Rebellion directed?", "Foreign influence in China", listOf("The Japanese emperor", "The Mughal court", "Russian serfdom"), X),
@@ -3316,11 +3494,13 @@ object HistoryQuestions {
         q("his_serbian_secret_society", "Which Serbian secret society armed the assassins of Archduke Franz Ferdinand?", "The Black Hand", listOf("The White Eagle", "The Red Fist", "The Iron Cross"), H),
         q("his_carrier_pigeon_saved", "Which carrier pigeon saved nearly 200 trapped American soldiers in 1918 despite being shot?", "Cher Ami", listOf("G.I. Joe", "Winkie", "Paddy"), H),
         q("his_future_national_leader", "Which future national leader made his name commanding Ottoman troops at Gallipoli in 1915?", "Mustafa Kemal", listOf("Enver Pasha", "Talaat Pasha", "Djemal Pasha"), H),
+        q("his_future_author_lord", "Which future author of 'The Lord of the Rings' fought at the Battle of the Somme?", "J. R. R. Tolkien", listOf("C. S. Lewis", "Robert Graves", "A. A. Milne"), H),
         q("wh_sykes_picot", "Which secret agreement divided the Middle East between Great Britain and France?", "Sykes-Picot", listOf("Molotov-Ribbentrop", "The Balfour Declaration", "Locarno"), X),
         q("hx_hiszpanka", "Why was the deadly flu of 1918 named after Spain?", "Spain's press reported it freely", listOf("It started in Madrid", "Spanish troops spread it", "A Spanish doctor found it"), X),
         q("hx_zimmermann", "Which intercepted 1917 message offered Mexico US land if it joined Germany in the war?", "The Zimmermann Telegram", listOf("The Ems Dispatch", "The Balfour Declaration", "The Schlieffen Plan"), X),
         q("his_french_soldiers_world", "What were French soldiers of World War I nicknamed, a word meaning 'hairy ones'?", "Poilus", listOf("Tommies", "Grognards", "Zouaves"), X),
-        q("his_set_off_under", "What was set off under Messines Ridge in June 1917, with a blast reportedly heard in London?", "Mines dug under German lines", listOf("A German ammunition dump", "A giant railway gun shell", "A Zeppelin full of bombs"), X)
+        q("his_set_off_under", "What was set off under Messines Ridge in June 1917, with a blast reportedly heard in London?", "Mines dug under German lines", listOf("A German ammunition dump", "A giant railway gun shell", "A Zeppelin full of bombs"), X),
+        q("his_german_general_east", "Which German general in East Africa was still undefeated when he finally surrendered, two weeks after the armistice?", "Paul von Lettow-Vorbeck", listOf("Erich Ludendorff", "Paul von Hindenburg", "August von Mackensen"), X)
     )
 
     /* 20th Century / Titanic - history/twentieth_century/titanic.tsv */
@@ -3357,6 +3537,9 @@ object HistoryQuestions {
         q("his_novel_1898_giant", "In a novel of 1898, a giant 'unsinkable' liner hits an iceberg in April and sinks. What was the ship called?", "The Titan", listOf("The Atlantis", "The Colossus", "The Olympian"), M),
         q("his_roughly_cold_sea", "Roughly how cold was the sea where the Titanic sank?", "About -2 C", listOf("About 4 C", "About 10 C", "About 15 C"), M),
         q("his_roughly_long_titanic", "Roughly how long was the Titanic?", "About 270 metres", listOf("About 120 metres", "About 180 metres", "About 450 metres"), M),
+        q("his_colour_distress_rockets", "What colour were the distress rockets the Titanic fired, which a nearby ship saw but did not answer?", "White", listOf("Red", "Green", "Blue"), M),
+        q("his_none_titanic_engineers", "Why did none of the Titanic's engineers survive the sinking?", "They stayed below to keep the power on", listOf("They gave up their lifeboat seats to children", "They were locked in by panicking passengers", "They were asleep when the iceberg struck"), M),
+        q("his_rusticles_slowly_eating", "What are the 'rusticles' slowly eating away the wreck of the Titanic?", "Icicle-like rust made by iron-eating bacteria", listOf("Shellfish that drill holes into the steel", "Long strands of seaweed growing in rust", "Crystals of salt that crack the hull"), M),
         q("hw_titanic_czas", "Roughly how long did the Titanic take to sink after its fatal collision?", "About 2 hours 40 minutes", listOf("About 20 minutes", "About 8 hours", "About 2 days"), H),
         q("his_year_wreck_titanic", "In which year was the wreck of the Titanic found?", "1985", listOf("1962", "1999", "1971"), H),
         q("his_shipping_company_owned", "Which shipping company owned the Titanic?", "The White Star Line", listOf("The Cunard Line", "The Hamburg America Line", "P&O"), H),
@@ -3375,6 +3558,7 @@ object HistoryQuestions {
         q("his_titanic_bandleader_violin", "What was the name of the Titanic's bandleader, whose violin was found after the sinking?", "Wallace Hartley", listOf("Jack Phillips", "Harold Bride", "John Hume"), H),
         q("his_american_banker_shipping", "Which American banker, whose shipping trust ultimately owned the Titanic, cancelled his trip on it at the last minute?", "J. P. Morgan", listOf("John D. Rockefeller", "Andrew Carnegie", "Cornelius Vanderbilt"), H),
         q("his_dozen_dogs_sailed", "About a dozen dogs sailed on the Titanic. How many of them survived?", "Three", listOf("None", "One", "Seven"), H),
+        q("his_roughly_fast_titanic", "Roughly how fast was the Titanic going when it hit the iceberg?", "About 22 knots", listOf("About 10 knots", "About 35 knots", "About 5 knots"), H),
         q("hy_jessop", "Violet Jessop survived the Titanic and accidents on which two of its sister ships?", "The Olympic and the Britannic", listOf("The Lusitania and the Carpathia", "The Queen Mary and the Olympic", "The Britannic and the Lusitania"), X),
         q("his_canadian_city_150", "In which Canadian city are about 150 of the Titanic's victims buried?", "Halifax", listOf("Quebec City", "Montreal", "St John's"), X),
         q("his_irish_port_titanic", "At which Irish port did the Titanic make its last stop before crossing the Atlantic?", "Queenstown", listOf("Dublin", "Belfast", "Galway"), X),
@@ -3383,7 +3567,8 @@ object HistoryQuestions {
         q("his_titanic_baker_survived", "Which Titanic baker survived hours in the icy sea, reportedly helped by a lot of whisky?", "Charles Joughin", listOf("Frederick Fleet", "Harold Bride", "Arthur Rostron"), X),
         q("his_last_living_survivor", "Who was the last living survivor of the Titanic, who died in 2009?", "Millvina Dean", listOf("Eva Hart", "Ruth Becker", "Edith Haisman"), X),
         q("his_fashion_designer_husband", "Which fashion designer and her husband were accused of bribing the crew of their nearly empty lifeboat?", "Lady Duff-Gordon", listOf("The Countess of Rothes", "Madeleine Astor", "Helen Churchill Candee"), X),
-        q("his_titanic_radio_operator", "What did the Titanic's radio operator snap back when a nearby ship tried to report ice?", "'Shut up, I am busy'", listOf("'Message received, thanks'", "'Stop sending, we know'", "'Repeat, signal is weak'"), X)
+        q("his_titanic_radio_operator", "What did the Titanic's radio operator snap back when a nearby ship tried to report ice?", "'Shut up, I am busy'", listOf("'Message received, thanks'", "'Stop sending, we know'", "'Repeat, signal is weak'"), X),
+        q("his_make_car_belonging", "Which make of car, belonging to a first-class passenger, went down in the Titanic's hold?", "A Renault", listOf("A Rolls-Royce", "A Ford", "A Mercedes"), X)
     )
 
     /* 20th Century / Russian Revolution & the USSR - history/twentieth_century/russian_revolution.tsv */
@@ -3398,6 +3583,8 @@ object HistoryQuestions {
         q("his_jeweller_made_jewelled", "Which jeweller made jewelled Easter eggs for the last two tsars?", "Peter Carl Faberge", listOf("Louis Cartier", "Charles Tiffany", "Joseph Chaumet"), E),
         q("his_stalin_censors_purged", "What did Stalin's censors do to purged officials in official photographs?", "Erased them from the pictures", listOf("Added Stalin beside them", "Drew prison bars over them", "Printed them in red"), E),
         q("his_won_power_struggle", "Who won the power struggle to lead the Soviet Union after Lenin died in 1924?", "Joseph Stalin", listOf("Leon Trotsky", "Nikita Khrushchev", "Grigory Zinoviev"), E),
+        q("his_disco_group_1978", "Which disco group had a 1978 hit calling the tsar's mystic adviser 'Russia's greatest love machine'?", "Boney M.", listOf("ABBA", "The Bee Gees", "Village People"), E),
+        q("his_german_thinker_ideas", "Which German thinker's ideas did Lenin and the Bolsheviks claim to follow?", "Karl Marx", listOf("Friedrich Nietzsche", "Georg Hegel", "Immanuel Kant"), E),
         q("his2_rewolucja_pazdziernikowa", "In which year did the October Revolution occur in Russia?", "1917", listOf("1905", "1918", "1921"), M),
         q("hx_rasputin", "Which Siberian mystic gained huge influence over Russia's last royal family?", "Grigori Rasputin", listOf("Leon Trotsky", "Ivan Susanin", "Yemelyan Pugachev"), M),
         q("hw_lenin_mauzoleum", "Whose embalmed body has been on display in a Moscow mausoleum since 1924?", "Vladimir Lenin", listOf("Joseph Stalin", "Leon Trotsky", "Nikita Khrushchev"), M),
@@ -3423,6 +3610,7 @@ object HistoryQuestions {
         q("his_lenin_older_brother", "Why was Lenin's older brother Alexander hanged in 1887?", "For plotting to kill the tsar", listOf("For leading a strike", "For deserting the army", "For printing banned books"), M),
         q("his_founded_red_army", "Who founded the Red Army and led it in the Russian Civil War?", "Leon Trotsky", listOf("Joseph Stalin", "Mikhail Frunze", "Felix Dzerzhinsky"), M),
         q("his_rivals_bolsheviks_within", "What were the rivals of the Bolsheviks within Russia's Marxist party called?", "The Mensheviks", listOf("The Decembrists", "The Narodniks", "The Octobrists"), M),
+        q("his_moscow_project_opened", "Which Moscow project, opened in 1935, was famed for palace-like halls with marble and chandeliers?", "The underground Metro", listOf("The Lenin Library", "The Bolshoi Theatre", "The GUM department store"), M),
         q("his_city_last_tsar", "In which city were the last tsar and his family executed in 1918?", "Yekaterinburg", listOf("Tobolsk", "Omsk", "Novosibirsk"), H),
         q("his_led_provisional_government", "Who led the Provisional Government that the Bolsheviks overthrew?", "Alexander Kerensky", listOf("Leon Trotsky", "Grigori Rasputin", "Pyotr Stolypin"), H),
         q("his_soviet_secret_police", "What was the first Soviet secret police, founded in December 1917, called?", "The Cheka", listOf("The KGB", "The Okhrana", "The Stasi"), H),
@@ -3438,6 +3626,8 @@ object HistoryQuestions {
         q("his_aristocrat_led_plot", "Which aristocrat led the plot to murder Rasputin at his palace in 1916?", "Felix Yusupov", listOf("Georgy Lvov", "Sergei Witte", "Pyotr Stolypin"), H),
         q("his_murder_leningrad_1934", "Whose murder in Leningrad in 1934 gave Stalin his excuse for the great purges?", "Sergei Kirov", listOf("Nikolai Bukharin", "Grigory Zinoviev", "Lev Kamenev"), H),
         q("his_secret_testament_lenin", "In his secret 'Testament', whom did Lenin warn was too rude to lead the party?", "Joseph Stalin", listOf("Leon Trotsky", "Nikolai Bukharin", "Lev Kamenev"), H),
+        q("his_lenin_wife_fellow", "Who was Lenin's wife and fellow revolutionary?", "Nadezhda Krupskaya", listOf("Inessa Armand", "Alexandra Kollontai", "Rosa Luxemburg"), H),
+        q("his_joseph_stalin_real", "What was Joseph Stalin's real surname?", "Dzhugashvili", listOf("Bronstein", "Ulyanov", "Rozenfeld"), H),
         q("hx_lenin_pociag", "In 1917, Germany helped Lenin get back to Russia by sending him in what?", "A sealed train", listOf("A zeppelin", "A submarine", "A hot-air balloon"), X),
         q("hx_stalin_stal", "What does the adopted name 'Stalin' roughly mean?", "Man of steel", listOf("Man of iron", "Red leader", "Son of the people"), X),
         q("hw_trocki", "In which country was Leon Trotsky assassinated in 1940?", "Mexico", listOf("France", "Norway", "Turkey"), X),
@@ -3445,7 +3635,8 @@ object HistoryQuestions {
         q("his_canal_dug_gulag", "Which canal, dug by Gulag prisoners in 1931-1933, links the White Sea with the Baltic?", "The White Sea Canal", listOf("The Volga-Don Canal", "The Moscow Canal", "The Neva Canal"), X),
         q("his_woman_claimed_decades", "Which woman claimed for decades to be a daughter of Nicholas II who had escaped the firing squad?", "Anna Anderson", listOf("Olga Romanova", "Maria Rasputin", "Anna Vyrubova"), X),
         q("his_dna_helped_prove", "Whose DNA helped prove in the 1990s that bones found in the Urals belonged to the last tsarina and her children?", "Prince Philip", listOf("Queen Elizabeth II", "King Constantine II", "Prince Charles"), X),
-        q("his_boy_made_soviet", "Which boy was made a Soviet hero in the 1930s for supposedly denouncing his own father?", "Pavlik Morozov", listOf("Valya Kotik", "Lenya Golikov", "Timur Frunze"), X)
+        q("his_boy_made_soviet", "Which boy was made a Soviet hero in the 1930s for supposedly denouncing his own father?", "Pavlik Morozov", listOf("Valya Kotik", "Lenya Golikov", "Timur Frunze"), X),
+        q("his_soviet_scientists_lenin", "What did Soviet scientists do with Lenin's brain after his death in 1924?", "Cut it into thousands of slices to find his genius", listOf("Kept it in a jar beside his tomb on Red Square", "Buried it secretly in his mother's grave", "Sent it to Germany to be studied in Berlin"), X)
     )
 
     /* 20th Century / Between the Wars - history/twentieth_century/interwar.tsv */
@@ -3459,6 +3650,7 @@ object HistoryQuestions {
         q("his_fashionable_young_women", "What were the fashionable young women of the 1920s, with short hair and short skirts, called?", "Flappers", listOf("Suffragettes", "Beatniks", "Debutantes"), E),
         q("his_nickname_chicago_gangster", "What was the nickname of the Chicago gangster Al Capone?", "Scarface", listOf("Baby Face", "Lucky", "Machine Gun"), E),
         q("his_submachine_gun_favourite", "Which submachine gun was the favourite weapon of Prohibition-era gangsters?", "The Tommy gun", listOf("The Sten gun", "The Uzi", "The Kalashnikov"), E),
+        q("his_property_trading_board", "Which property-trading board game, sold by Parker Brothers from 1935, became a hit during the Great Depression?", "Monopoly", listOf("Scrabble", "Cluedo", "Risk"), E),
         q("wh_wielki_kryzys", "The crash of which stock exchange started the Great Depression in 1929?", "New York's", listOf("London's", "Frankfurt's", "Tokyo's"), M),
         q("his_edward_viii", "Which British king gave up the throne in 1936 to marry an American divorcee?", "Edward VIII", listOf("George VI", "George V", "Edward VII"), M),
         q("hx_capone", "For which crime was gangster Al Capone finally sent to prison?", "Tax evasion", listOf("Murder", "Bank robbery", "Smuggling"), M),
@@ -3493,6 +3685,7 @@ object HistoryQuestions {
         q("his_shanty_towns_homeless", "What were the shanty towns of the homeless during the Great Depression nicknamed?", "Hoovervilles", listOf("Rooseveltowns", "Dustvilles", "Crashtowns"), M),
         q("his_october_1929_worst", "By which name is 29 October 1929, the worst day of the Wall Street Crash, known?", "Black Tuesday", listOf("Black Friday", "Black Monday", "Bloody Thursday"), M),
         q("his_swindler_1920_scam", "Which swindler's 1920 scam in Boston gave its name to paying old investors with new investors' money?", "Charles Ponzi", listOf("Frank Abagnale", "Bernie Madoff", "Victor Lustig"), M),
+        q("his_dictator_time_magazine", "Which dictator did Time magazine name its 'Man of the Year' for 1938?", "Adolf Hitler", listOf("Benito Mussolini", "Francisco Franco", "Joseph Stalin"), M),
         q("hx_liga_narodow", "Which international body, founded after World War I, came before the United Nations?", "The League of Nations", listOf("The Council of Europe", "The Hague Tribunal", "The Concert of Europe"), H),
         q("hy_monachium", "Which 1938 agreement let Hitler take part of Czechoslovakia?", "The Munich Agreement", listOf("The Treaty of Versailles", "The Molotov-Ribbentrop Pact", "The Yalta Agreement"), H),
         q("his_country_nazi_germany", "Which country did Nazi Germany annex in 1938, in the 'Anschluss'?", "Austria", listOf("Czechoslovakia", "Poland", "Hungary"), H),
@@ -3506,9 +3699,11 @@ object HistoryQuestions {
         q("his_jarrow_march_1936", "What was the 'Jarrow March' of 1936?", "Jobless shipyard workers marching to London", listOf("Suffragettes marching on Parliament", "Miners striking for higher pay", "Fascists parading through London"), H),
         q("his_germany_italy_japan", "Germany, Italy and Japan all signed the Kellogg-Briand Pact of 1928, which promised to do what?", "Give up war as a policy", listOf("Share out colonies fairly", "Disarm their navies", "Cancel all war debts"), H),
         q("his_irish_revolutionary_leader", "Which Irish revolutionary leader was killed in an ambush in his home county of Cork in 1922?", "Michael Collins", listOf("Eamon de Valera", "Arthur Griffith", "Patrick Pearse"), H),
+        q("his_title_british_king", "Which title did the British king who abdicated in 1936 receive afterwards?", "Duke of Windsor", listOf("Duke of Cornwall", "Duke of York", "Duke of Edinburgh"), H),
         q("his_staged_railway_bombing", "Which staged railway bombing of 1931 gave Japan an excuse to invade Manchuria?", "The Mukden Incident", listOf("The Marco Polo Bridge Incident", "The Shanghai Incident", "The Panay Incident"), X),
         q("his_side_generally_said", "Which side is generally said to have won Australia's 'Great Emu War' of 1932?", "The emus", listOf("The army", "The farmers", "The government"), X),
-        q("his_great_depression_long", "During the Great Depression, how long could the prize-winning 'dance marathons' last?", "Weeks or even months", listOf("One whole night", "Exactly 24 hours", "Up to three days"), X)
+        q("his_great_depression_long", "During the Great Depression, how long could the prize-winning 'dance marathons' last?", "Weeks or even months", listOf("One whole night", "Exactly 24 hours", "Up to three days"), X),
+        q("his_bonus_army_jobless", "What did the 'Bonus Army' of jobless veterans who camped in Washington in 1932 demand?", "Early payment of their war bonuses", listOf("Free farmland in the West", "Jobs building the new highways", "A ban on foreign workers"), X)
     )
 
     /* 20th Century / World War II - history/twentieth_century/world_war_2.tsv */
@@ -3616,13 +3811,15 @@ object HistoryQuestions {
         q("his_battle_may_1942", "Which battle of May 1942 was the first in which the opposing fleets never saw each other?", "The Coral Sea", listOf("Midway", "Leyte Gulf", "Guadalcanal"), H),
         q("his_japanese_diplomat_lithuania", "Which Japanese diplomat in Lithuania issued visas that saved thousands of Jews in 1940?", "Chiune Sugihara", listOf("Hiroshi Oshima", "Mamoru Shigemitsu", "Yosuke Matsuoka"), H),
         q("his_britain_bevin_boys", "Who were Britain's 'Bevin Boys' of World War II?", "Young men sent to work down coal mines", listOf("Boy messengers for the Royal Air Force", "Evacuees shipped off to Canada", "Teenage cadets serving on warships"), H),
+        q("his_mulberries_towed_across", "What were the 'Mulberries' towed across the Channel after D-Day?", "Floating harbours", listOf("Decoy landing craft", "Minesweeping barges", "Hospital ships"), H),
         q("wh_bretton_woods", "The 1944 Bretton Woods conference established, among other things...", "The International Monetary Fund", listOf("NATO", "The European Union", "The Bank of England"), X),
         q("hx_nawaho", "Which Native American people's language served as an unbreakable code for US Marines in World War II?", "The Navajo", listOf("The Cherokee", "The Sioux", "The Apache"), X),
         q("hy_missouri", "On which ship did Japan formally surrender in 1945?", "USS Missouri", listOf("USS Arizona", "USS Enterprise", "HMS Victory"), X),
         q("his_code_1940_evacuation", "What was the code name of the 1940 evacuation of Allied troops from Dunkirk?", "Operation Dynamo", listOf("Operation Overlord", "Operation Sea Lion", "Operation Torch"), X),
         q("his_american_general_replied", "Which American general replied 'Nuts!' when the Germans asked him to surrender Bastogne?", "Anthony McAuliffe", listOf("George Patton", "Omar Bradley", "Mark Clark"), X),
         q("his_german_submarine_1206", "Why did the German submarine U-1206 sink in April 1945?", "A toilet was used wrongly", listOf("It was rammed by a whale", "Its own torpedo circled back", "It hit a sunken wreck"), X),
-        q("his_strips_foil_code", "What were the strips of foil code-named 'Window', dropped by RAF bombers from 1943, meant to do?", "Blind German radar", listOf("Mark targets at night", "Show the way home", "Scare enemy pilots"), X)
+        q("his_strips_foil_code", "What were the strips of foil code-named 'Window', dropped by RAF bombers from 1943, meant to do?", "Blind German radar", listOf("Mark targets at night", "Show the way home", "Scare enemy pilots"), X),
+        q("his_pluto_laid_allies", "What was PLUTO, laid by the Allies in 1944?", "A fuel pipeline under the English Channel", listOf("A radar chain along the French coast", "A telephone cable to Moscow", "A minefield across the Strait of Dover"), X)
     )
 
     /* 20th Century / Cold War - history/twentieth_century/cold_war.tsv */
@@ -3722,6 +3919,7 @@ object HistoryQuestions {
         q("his_treaty_1963_banned", "Which treaty of 1963 banned nuclear tests in the air, in space and under water?", "The Partial Test Ban Treaty", listOf("The SALT Treaty", "The Non-Proliferation Treaty", "The INF Treaty"), H),
         q("his_gave_british_party", "Who first gave a British party leader the nickname 'the Iron Lady', in 1976?", "A Soviet army newspaper", listOf("The Daily Mail", "Ronald Reagan", "The Queen"), H),
         q("his_baltic_way_august", "What was the 'Baltic Way' of August 1989?", "A human chain about 600 km long", listOf("A secret escape route to Sweden", "A huge Soviet naval exercise", "A rail line for Soviet troops"), H),
+        q("his_soviet_officials_jokingly", "What did Soviet officials jokingly call their 1989 policy of letting Eastern European countries go their own way?", "The Sinatra Doctrine", listOf("The Beatles Doctrine", "The Elvis Doctrine", "The Dylan Doctrine"), H),
         q("his_paperclip", "What was Operation Paperclip after World War II?", "Bringing German scientists to the USA", listOf("Smuggling Nazi gold out of Europe", "Spying on Soviet rocket bases", "Breaking Japanese naval codes"), X),
         q("his_pietrow", "Which Soviet officer ignored a false missile alarm in 1983 and averted nuclear war?", "Stanislav Petrov", listOf("Vasili Arkhipov", "Yuri Andropov", "Andrei Sakharov"), X),
         q("hx_zatoka_swin", "The failed 1961 invasion of Cuba by US-backed exiles is known as what?", "The Bay of Pigs", listOf("The Gulf of Tonkin", "The Cuban Thaw", "Operation Mongoose"), X),
@@ -3731,7 +3929,8 @@ object HistoryQuestions {
         q("his_nato_exercise_1983", "Which NATO exercise of 1983 was nearly mistaken by Moscow for a real nuclear attack?", "Able Archer 83", listOf("Operation Mongoose", "Reforger 83", "Northern Wedding"), X),
         q("his_tsar_bomba_tested", "What was the 'Tsar Bomba', tested by the USSR in 1961?", "The most powerful bomb ever exploded", listOf("The first Soviet hydrogen bomb", "A nuclear-powered submarine", "A giant missile silo"), X),
         q("his_east_germany_officially", "What did East Germany officially call the Berlin Wall?", "The Anti-Fascist Protection Rampart", listOf("The Socialist Peace Barrier", "The People's Border of Freedom", "The Great Workers' Shield"), X),
-        q("his_soviet_fans_use", "What did Soviet fans use to make bootleg 'bone records' of banned Western music?", "Old X-ray films", listOf("Cigarette paper", "Melted vinyl toys", "Tin can lids"), X)
+        q("his_soviet_fans_use", "What did Soviet fans use to make bootleg 'bone records' of banned Western music?", "Old X-ray films", listOf("Cigarette paper", "Melted vinyl toys", "Tin can lids"), X),
+        q("his_landed_small_plane", "Who landed a small plane next to Red Square in 1987, having flown undetected from Finland?", "Mathias Rust, a West German teenager", listOf("Viktor Belenko, a Soviet defector", "Francis Gary Powers, a US pilot", "Oleg Gordievsky, a KGB double agent"), X)
     )
 
     /* 20th Century / Space Race - history/twentieth_century/space_race.tsv */
@@ -3748,6 +3947,7 @@ object HistoryQuestions {
         q("his_neil_armstrong_buzz", "What did Neil Armstrong and Buzz Aldrin plant on the Moon in 1969?", "The American flag", listOf("A tree", "A cross", "A time capsule"), E),
         q("his_president_promised_1961", "Which US president promised in 1961 to land a man on the Moon before the decade was out?", "John F. Kennedy", listOf("Dwight D. Eisenhower", "Lyndon B. Johnson", "Richard Nixon"), E),
         q("his_astronauts_last_three", "What did the astronauts of the last three Apollo missions drive across the Moon?", "An electric 'Moon buggy'", listOf("A small hovercraft", "A tracked tractor", "A rocket-powered sled"), E),
+        q("his_space_station_built", "Which space station, built by several nations, has had people living aboard without a break since 2000?", "The International Space Station", listOf("The Mir space station", "The Skylab station", "The Tiangong station"), E),
         q("his_gagarin", "Who was the first human to travel into space?", "Yuri Gagarin", listOf("Neil Armstrong", "Alan Shepard", "Valentina Tereshkova"), M),
         q("his2_czlowiek_kosmos_rok", "In which year did Yuri Gagarin fly into space?", "1961", listOf("1957", "1969", "1965"), M),
         q("his2_sputnik", "What was Earth's first artificial satellite called?", "Sputnik 1", listOf("Vostok 1", "Explorer 1", "Luna 1"), M),
@@ -3770,6 +3970,7 @@ object HistoryQuestions {
         q("his_apollo_astronauts_returning", "What did the Apollo 11 astronauts have to do after returning to Earth?", "Spend three weeks in quarantine", listOf("Retire from NASA at once", "Testify before the UN", "Swear never to fly again"), M),
         q("his_russian_word_sputnik", "What does the Russian word 'sputnik' mean?", "Fellow traveller", listOf("Little star", "Red messenger", "First voice"), M),
         q("his_radio_call_sign", "What was the radio call sign of the first woman in space?", "Seagull", listOf("Swallow", "Cedar", "Skylark"), M),
+        q("his_oxygen_tank_exploded", "After an oxygen tank exploded on Apollo 13, what did the crew use as a 'lifeboat' to get home?", "The lunar module", listOf("A spare escape capsule", "The rocket's third stage", "An inflatable space raft"), M),
         q("hx_ksiezyc_ostatni", "In which year did humans last walk on the Moon?", "1972", listOf("1969", "1979", "1985"), H),
         q("hy_wostok", "What was the name of Yuri Gagarin's spacecraft?", "Vostok 1", listOf("Sputnik 2", "Soyuz 1", "Apollo 1"), H),
         q("hy_mir", "Which Soviet space station orbited Earth from 1986 to 2001?", "Mir", listOf("Salyut 7", "Skylab", "Tiangong"), H),
@@ -3787,6 +3988,7 @@ object HistoryQuestions {
         q("his_america_satellite_launch", "After America's first satellite launch blew up on the pad, which satellite became its first in orbit, in 1958?", "Explorer 1", listOf("Vanguard 1", "Telstar 1", "Pioneer 1"), H),
         q("his_moon_mission_struck", "Which Moon mission was struck by lightning twice in the first minute after launch?", "Apollo 12", listOf("Apollo 13", "Apollo 9", "Apollo 15"), H),
         q("his_professional_geologist_walk", "Who was the only professional geologist to walk on the Moon?", "Harrison Schmitt", listOf("Eugene Cernan", "Edgar Mitchell", "Charles Duke"), H),
+        q("his_apollo_astronaut_dropped", "Which Apollo 15 astronaut dropped a hammer and a falcon feather on the Moon to show they fall at the same speed?", "David Scott", listOf("James Irwin", "Charles Duke", "Edgar Mitchell"), H),
         q("hx_earthrise", "Which mission took the famous 'Earthrise' photo from lunar orbit in 1968?", "Apollo 8", listOf("Apollo 11", "Apollo 13", "Gemini 7"), X),
         q("his_soviet_probe_made", "Which Soviet probe made the first soft landing on the Moon, in 1966?", "Luna 9", listOf("Sputnik 3", "Lunokhod 1", "Vostok 2"), X),
         q("his_became_woman_walk", "Who became the first woman to walk in space, in 1984?", "Svetlana Savitskaya", listOf("Valentina Tereshkova", "Sally Ride", "Kathryn Sullivan"), X),
@@ -3794,7 +3996,8 @@ object HistoryQuestions {
         q("his_soviet_cosmonauts_carry", "Why did Soviet cosmonauts carry a special gun in their survival kit?", "To fend off wild animals after landing", listOf("To defend against American astronauts", "To break open a jammed capsule hatch", "To destroy secret papers if captured"), X),
         q("his_unable_get_life", "Unable to get life insurance, what did the Apollo 11 crew sign by the hundreds for their families?", "Envelopes their families could sell", listOf("Photos for a charity auction", "Letters to the president", "Contracts with a TV network"), X),
         q("his_cosmonaut_mir_soviet", "Which cosmonaut was up on Mir as the Soviet Union collapsed, and came home to a different country in 1992?", "Sergei Krikalev", listOf("Valeri Polyakov", "Alexei Leonov", "Gennady Padalka"), X),
-        q("his_mission_three_cosmonauts", "Which mission's three cosmonauts, lost in 1971, are the only people to have died in space itself?", "Soyuz 11", listOf("Soyuz 1", "Salyut 7", "Voskhod 2"), X)
+        q("his_mission_three_cosmonauts", "Which mission's three cosmonauts, lost in 1971, are the only people to have died in space itself?", "Soyuz 11", listOf("Soyuz 1", "Salyut 7", "Voskhod 2"), X),
+        q("his_astronaut_smuggled_corned", "Which astronaut smuggled a corned beef sandwich onto Gemini 3 in 1965, upsetting members of Congress?", "John Young", listOf("Gus Grissom", "Ed White", "Pete Conrad"), X)
     )
 
     /* 20th Century / End of Empires - history/twentieth_century/decolonization.tsv */
@@ -3832,6 +4035,8 @@ object HistoryQuestions {
         q("his_portuguese_enclave_india", "Which Portuguese enclave did India seize by force in 1961, ending about 450 years of colonial rule?", "Goa", listOf("Pondicherry", "Calicut", "Cochin"), M),
         q("his_island_won_independence", "Which island won independence from Britain in 1960 after a guerrilla campaign by EOKA fighters?", "Cyprus", listOf("Malta", "Crete", "Corfu"), M),
         q("his_roughly_people_uprooted", "Roughly how many people were uprooted by the partition of India in 1947?", "About 15 million", listOf("About 1 million", "About 100 million", "About 4 million"), M),
+        q("his_gandhi_urge_indians", "What did Gandhi urge Indians to burn on huge bonfires in the 1920s as a protest against British rule?", "Foreign-made cloth", listOf("British banknotes", "English schoolbooks", "Their tax papers"), M),
+        q("his_tunku_abdul_rahman", "What did Tunku Abdul Rahman shout seven times as Malaya became independent in 1957?", "'Merdeka!'", listOf("'Uhuru!'", "'Swaraj!'", "'Azadi!'"), M),
         q("hx_gandhi_sol", "What did Gandhi march nearly 400 km to the sea to make, in protest, in 1930?", "Salt", listOf("Cloth", "Paper", "Sugar"), H),
         q("hy_nehru", "Who became India's first prime minister in 1947?", "Jawaharlal Nehru", listOf("Mahatma Gandhi", "Indira Gandhi", "Muhammad Ali Jinnah"), H),
         q("his_dictator_ruled_uganda", "Which dictator ruled Uganda in the 1970s?", "Idi Amin", listOf("Robert Mugabe", "Mobutu Sese Seko", "Muammar Gaddafi"), H),
@@ -3850,6 +4055,7 @@ object HistoryQuestions {
         q("his_indonesian_city_hosted", "Which Indonesian city hosted the 1955 conference of newly independent Asian and African nations?", "Bandung", listOf("Jakarta", "Surabaya", "Yogyakarta"), H),
         q("his_indian_nationalist_raised", "Which Indian nationalist raised an army with Japanese help to fight the British in World War II?", "Subhas Chandra Bose", listOf("Bhagat Singh", "Vallabhbhai Patel", "B. R. Ambedkar"), H),
         q("his_over_region_india", "Over which region did India and Pakistan go to war just months after independence?", "Kashmir", listOf("Punjab", "Bengal", "Sindh"), H),
+        q("his_became_president_independent", "Who became the first president of independent Algeria, in 1963?", "Ahmed Ben Bella", listOf("Houari Boumediene", "Habib Bourguiba", "Abdelaziz Bouteflika"), H),
         q("hx_rok_afryki", "Why is 1960 called the 'Year of Africa'?", "17 African countries became independent", listOf("The African Union was founded", "Apartheid ended in South Africa", "The first African satellite flew"), X),
         q("hy_jinnah", "Who is regarded as the founder of Pakistan?", "Muhammad Ali Jinnah", listOf("Jawaharlal Nehru", "Liaquat Ali Khan", "Zulfikar Ali Bhutto"), X),
         q("his_british_lawyer_drew", "Which British lawyer drew the new borders through Punjab and Bengal in 1947?", "Cyril Radcliffe", listOf("Lord Mountbatten", "Clement Attlee", "Lord Curzon"), X),
@@ -3857,7 +4063,8 @@ object HistoryQuestions {
         q("his_belgian_king_attended", "Which Belgian king attended the Congo's independence ceremony in 1960 and praised Leopold II's 'genius'?", "Baudouin", listOf("Leopold III", "Albert I", "Philippe"), X),
         q("his_country_president_seretse", "Which country's first president, Seretse Khama, scandalised Britain by marrying a white London clerk in 1948?", "Botswana", listOf("Zambia", "Lesotho", "Malawi"), X),
         q("his_according_popular_story_2", "According to a popular story, why did India's independence begin at the stroke of midnight?", "Astrologers said 15 August was unlucky", listOf("Gandhi asked for a time of prayer", "Radio could only broadcast at night", "Mountbatten's watch was set wrong"), X),
-        q("his_indian_prince_once", "Which Indian prince, once called the richest man in the world, used a huge diamond as a paperweight?", "The Nizam of Hyderabad", listOf("The Maharaja of Mysore", "The Nawab of Bhopal", "The Maharaja of Jaipur"), X)
+        q("his_indian_prince_once", "Which Indian prince, once called the richest man in the world, used a huge diamond as a paperweight?", "The Nizam of Hyderabad", listOf("The Maharaja of Mysore", "The Nawab of Bhopal", "The Maharaja of Jaipur"), X),
+        q("his_leader_guinea_bissau", "Which leader of Guinea-Bissau's fight for independence was assassinated in 1973, months before it was declared?", "Amilcar Cabral", listOf("Samora Machel", "Agostinho Neto", "Eduardo Mondlane"), X)
     )
 
     /* 20th Century / Civil Rights & Suffrage - history/twentieth_century/civil_rights.tsv */
@@ -3872,6 +4079,8 @@ object HistoryQuestions {
         q("his_1995_nelson_mandela", "In 1995, Nelson Mandela wore a Springbok shirt to hand which trophy to South Africa's captain?", "The Rugby World Cup", listOf("The Cricket World Cup", "The Africa Cup of Nations", "The FIFA World Cup"), E),
         q("his_aged_civil_rights", "Aged 35, which civil rights leader became the youngest winner of the Nobel Peace Prize up to that time, in 1964?", "Martin Luther King Jr.", listOf("Malcolm X", "Ralph Bunche", "Jesse Jackson"), E),
         q("his_sprinters_tommie_smith", "What did US sprinters Tommie Smith and John Carlos do on the Olympic podium in 1968?", "Raised fists in black gloves", listOf("Knelt during the anthem", "Turned their backs on the flag", "Refused to take their medals"), E),
+        q("his_martin_luther_king", "Martin Luther King Jr. was born Michael King. After whom did his father rename them both in 1934?", "The German reformer Martin Luther", listOf("A Baptist preacher in Atlanta", "An Irish missionary bishop", "A hero of the Civil War"), E),
+        q("his_boxer_stripped_world", "Which boxer was stripped of his world title in 1967 for refusing to be drafted into the US Army?", "Muhammad Ali", listOf("Joe Frazier", "Sonny Liston", "George Foreman"), E),
         q("trv_nowa_zelandia_glos", "Which country was the first to give all women the right to vote, in 1893?", "New Zealand", listOf("The United States", "The United Kingdom", "Finland"), M),
         q("his_rosa_parks", "Whose refusal to give up her bus seat in 1955 sparked a famous boycott?", "Rosa Parks", listOf("Harriet Tubman", "Coretta Scott King", "Ruby Bridges"), M),
         q("hx_sufrazystki", "What did the suffragettes campaign for?", "Women's right to vote", listOf("An end to child labour", "Free schooling for all", "Shorter working days"), M),
@@ -3895,6 +4104,7 @@ object HistoryQuestions {
         q("his_european_country_gave", "Which European country gave women the vote in national elections only in 1971?", "Switzerland", listOf("Sweden", "Norway", "Austria"), M),
         q("his_afrikaans_word_apartheid", "What does the Afrikaans word 'apartheid' literally mean?", "Separateness", listOf("Obedience", "Purity", "Homeland"), M),
         q("his_three_colours_britain", "Which three colours did Britain's suffragettes wear to show their cause?", "Purple, white and green", listOf("Red, white and blue", "Black, red and gold", "Pink, grey and yellow"), M),
+        q("his_aptly_couple_won", "Which aptly named couple won the 1967 Supreme Court case that struck down US bans on interracial marriage?", "The Lovings", listOf("The Browns", "The Kings", "The Parkers"), M),
         q("hx_robben_island", "On which island was Nelson Mandela imprisoned for 18 years?", "Robben Island", listOf("Alcatraz", "Devil's Island", "Goree Island"), H),
         q("hx_pankhurst", "Which British activist led the suffragette movement?", "Emmeline Pankhurst", listOf("Florence Nightingale", "Mary Wollstonecraft", "Queen Victoria"), H),
         q("hx_mandela_1990", "In which year was South Africa's most famous political prisoner set free?", "1990", listOf("1985", "1994", "1979"), H),
@@ -3916,11 +4126,13 @@ object HistoryQuestions {
         q("his_year_old_arrested", "Which 15-year-old was arrested in Montgomery in March 1955 for refusing to give up her bus seat, nine months before a more famous protest?", "Claudette Colvin", listOf("Daisy Bates", "Diane Nash", "Fannie Lou Hamer"), H),
         q("his_singer_barred_washington", "Which singer, barred from a Washington concert hall because she was Black, sang to 75,000 people outdoors on Easter Sunday 1939?", "Marian Anderson", listOf("Billie Holiday", "Bessie Smith", "Ella Fitzgerald"), H),
         q("his_mississippi_sharecropper_turned", "Which Mississippi sharecropper turned activist said she was 'sick and tired of being sick and tired'?", "Fannie Lou Hamer", listOf("Ella Baker", "Daisy Bates", "Septima Clark"), H),
+        q("his_black_consciousness_leader", "Which Black Consciousness leader died in South African police custody in 1977, inspiring a Peter Gabriel song?", "Steve Biko", listOf("Chris Hani", "Oliver Tambo", "Walter Sisulu"), H),
         q("his_nelson_mandela_prison", "What was Nelson Mandela's prison number, later used as the name of his AIDS charity concerts?", "46664", listOf("27190", "19620", "10466"), X),
         q("his_became_black_woman", "Who became the first Black woman elected to the US Congress, in 1968?", "Shirley Chisholm", listOf("Barbara Jordan", "Coretta Scott King", "Patricia Harris"), X),
         q("his_1964_campaign_brought", "What was the 1964 campaign that brought hundreds of student volunteers to Mississippi to register Black voters?", "Freedom Summer", listOf("The Albany Movement", "Operation Breadbasket", "The Poor People's Campaign"), X),
         q("his_indian_princess_goddaughter", "Which Indian princess, a goddaughter of Queen Victoria, sold suffragette newspapers outside Hampton Court Palace?", "Sophia Duleep Singh", listOf("Sarojini Naidu", "Cornelia Sorabji", "Amrit Kaur"), X),
-        q("his_1955_document_declared", "Which 1955 document declared that 'South Africa belongs to all who live in it, black and white'?", "The Freedom Charter", listOf("The Rivonia Manifesto", "The Kliptown Accord", "The Azania Declaration"), X)
+        q("his_1955_document_declared", "Which 1955 document declared that 'South Africa belongs to all who live in it, black and white'?", "The Freedom Charter", listOf("The Rivonia Manifesto", "The Kliptown Accord", "The Azania Declaration"), X),
+        q("his_swiss_canton_forced", "Which Swiss canton was forced by the country's highest court to let women vote in local matters, in 1990?", "Appenzell Innerrhoden", listOf("Appenzell Ausserrhoden", "Glarus", "Uri"), X)
     )
 
     /* 20th Century / Modern China - history/twentieth_century/modern_china.tsv */
@@ -3935,6 +4147,7 @@ object HistoryQuestions {
         q("his_formula_deng_xiaoping", "Which formula did Deng Xiaoping devise for Hong Kong's return to China?", "'One country, two systems'", listOf("'Two peoples, one nation'", "'One China, many voices'", "'Peace and prosperity'"), E),
         q("his_embalmed_body_lies", "Whose embalmed body lies on display in a mausoleum in the middle of Tiananmen Square?", "Mao Zedong", listOf("Sun Yat-sen", "Deng Xiaoping", "Zhou Enlai"), E),
         q("his_face_printed_every", "Whose face has been printed on every one of China's paper banknotes since 1999?", "Mao Zedong", listOf("Sun Yat-sen", "Deng Xiaoping", "Zhou Enlai"), E),
+        q("his_2008_beijing_olympics", "Why did the 2008 Beijing Olympics open at 8:08 pm on 8 August 2008?", "Eight is a lucky number in China", listOf("It was Mao's birthday", "It matched an ancient festival", "It was the coolest hour of the day"), E),
         q("wh_mao_chiny", "Who proclaimed the People's Republic of China in 1949?", "Mao Zedong", listOf("Deng Xiaoping", "Chiang Kai-shek", "Zhou Enlai"), M),
         q("hx_hongkong", "In which year did Britain hand Hong Kong back to China?", "1997", listOf("1984", "1999", "2007"), M),
         q("hy_czerwona_ksiazeczka", "Mao Zedong's sayings were printed in a famous pocket book of which colour?", "Red", listOf("Yellow", "Blue", "Green"), M),
@@ -3959,6 +4172,7 @@ object HistoryQuestions {
         q("his_cultural_revolution_disgraced", "During the Cultural Revolution, where was the disgraced Deng Xiaoping sent to work?", "In a tractor repair factory", listOf("In a rice-growing commune", "In a coal mine in Manchuria", "In a Beijing printing works"), M),
         q("his_china_mao_suit", "In China, the 'Mao suit' is named after which earlier leader, who made it popular?", "Sun Yat-sen", listOf("Chiang Kai-shek", "Yuan Shikai", "Zhou Enlai"), M),
         q("his_cultural_revolution_happened", "During the Cultural Revolution, what happened to millions of 'sent-down youth'?", "They were sent to farm in the countryside", listOf("They were drafted to fight in Vietnam", "They were sent to study in the Soviet Union", "They were put to work in steel mills"), M),
+        q("his_neighbouring_country_china", "With which neighbouring country did China fight a short, bloody border war in 1979?", "Vietnam", listOf("India", "The Soviet Union", "Mongolia"), M),
         q("hx_dlugi_marsz", "What was the Long March of 1934-1935?", "A retreat of China's Communist army", listOf("A protest walk across India", "A Soviet army parade", "A march for US civil rights"), H),
         q("hx_puyi", "Who was the last Emperor of China, who gave up the throne as a small boy in 1912?", "Puyi", listOf("Guangxu", "Cixi", "Kangxi"), H),
         q("his_leader_opened_china", "Which leader opened up China's economy to the market after Mao's death?", "Deng Xiaoping", listOf("Xi Jinping", "Zhou Enlai", "Chiang Kai-shek"), H),
@@ -3977,13 +4191,15 @@ object HistoryQuestions {
         q("his_general_made_himself", "Which general made himself emperor of China in 1915, only to give up the throne months later?", "Yuan Shikai", listOf("Chiang Kai-shek", "Zhang Zuolin", "Feng Yuxiang"), H),
         q("his_death_april_1989", "Whose death in April 1989 sparked the student protests in Tiananmen Square?", "Hu Yaobang", listOf("Zhao Ziyang", "Li Peng", "Zhou Enlai"), H),
         q("his_american_journalist_book", "Which American journalist's book 'Red Star Over China' introduced Mao to the world in 1937?", "Edgar Snow", listOf("John Reed", "Pearl S. Buck", "Theodore White"), H),
+        q("his_inland_city_served", "Which inland city served as China's wartime capital from 1938 to 1945?", "Chongqing", listOf("Kunming", "Xi'an", "Lanzhou"), H),
         q("his_leader_gang_four", "Which leader of the 'Gang of Four' was Mao Zedong's widow?", "Jiang Qing", listOf("Soong Ching-ling", "Wang Guangmei", "Deng Yingchao"), X),
         q("his_year_china_test", "In which year did China test its first atomic bomb?", "1964", listOf("1949", "1976", "1989"), X),
         q("his_designated_successor_mao", "Which designated successor of Mao died in a plane crash over Mongolia in 1971?", "Lin Biao", listOf("Liu Shaoqi", "Zhou Enlai", "Hua Guofeng"), X),
         q("his_happened_chiang_kai", "What happened to Chiang Kai-shek in the Xi'an Incident of 1936?", "He was kidnapped by his own generals", listOf("He survived an assassin's bomb", "He was wounded by Japanese planes", "He lost a battle to Mao"), X),
         q("his_electrician_demanded_democracy", "Which electrician demanded democracy as China's 'Fifth Modernisation' in a poster on Beijing's Democracy Wall in 1978?", "Wei Jingsheng", listOf("Liu Xiaobo", "Fang Lizhi", "Wang Dan"), X),
         q("his_chinese_head_state", "Which Chinese head of state, denounced as 'China's Khrushchev', died in custody in 1969?", "Liu Shaoqi", listOf("Lin Biao", "Peng Dehuai", "Hua Guofeng"), X),
-        q("his_succeeded_mao_zedong", "Who succeeded Mao Zedong as Chairman of the Communist Party in 1976, before being sidelined by Deng Xiaoping?", "Hua Guofeng", listOf("Zhao Ziyang", "Jiang Zemin", "Wang Hongwen"), X)
+        q("his_succeeded_mao_zedong", "Who succeeded Mao Zedong as Chairman of the Communist Party in 1976, before being sidelined by Deng Xiaoping?", "Hua Guofeng", listOf("Zhao Ziyang", "Jiang Zemin", "Wang Hongwen"), X),
+        q("his_chinese_warlord_nicknamed", "Which Chinese warlord, nicknamed 'the Christian General', is said to have baptised his troops with a fire hose?", "Feng Yuxiang", listOf("Zhang Zuolin", "Wu Peifu", "Yan Xishan"), X)
     )
 
     /* 20th Century / Modern Middle East - history/twentieth_century/middle_east.tsv */
@@ -4025,6 +4241,8 @@ object HistoryQuestions {
         q("his_desert_peninsula_israel", "Which desert peninsula did Israel hand back to Egypt in 1982?", "The Sinai", listOf("The Negev", "The Gaza Strip", "The Golan Heights"), M),
         q("his_novelist_sentenced_death", "Which novelist was sentenced to death in a 1989 fatwa by Iran's Ayatollah Khomeini?", "Salman Rushdie", listOf("V. S. Naipaul", "Vikram Seth", "Orhan Pamuk"), M),
         q("his_gulf_war_1991", "During the Gulf War of 1991, which country did Iraq fire Scud missiles at, even though it was not fighting?", "Israel", listOf("Jordan", "Iran", "Turkey"), M),
+        q("his_1994_country_became", "In 1994, which country became the second Arab state to sign a peace treaty with Israel?", "Jordan", listOf("Syria", "Lebanon", "Morocco"), M),
+        q("his_country_israel_capture", "From which country did Israel capture the Golan Heights in 1967?", "Syria", listOf("Jordan", "Lebanon", "Egypt"), M),
         q("hy_iran_1979", "Which country's 1979 revolution brought Ayatollah Khomeini to power?", "Iran", listOf("Iraq", "Afghanistan", "Saudi Arabia"), H),
         q("his_egyptian_president_nationalised", "Which Egyptian president nationalised the Suez Canal in 1956?", "Gamal Abdel Nasser", listOf("Anwar Sadat", "Hosni Mubarak", "King Farouk"), H),
         q("his_iranian_prime_minister", "Which Iranian prime minister nationalised his country's oil and was toppled in a 1953 coup?", "Mohammad Mosaddegh", listOf("Ruhollah Khomeini", "Abolhassan Banisadr", "Amir Abbas Hoveyda"), H),
@@ -4041,13 +4259,15 @@ object HistoryQuestions {
         q("his_king_egypt_overthrown", "Which king of Egypt was overthrown by army officers in 1952 and sailed into exile on the royal yacht?", "Farouk", listOf("Fuad I", "Idris", "Faisal II"), H),
         q("his_jerusalem_hotel_housing", "Which Jerusalem hotel, housing British offices, was bombed by the Irgun in 1946?", "The King David Hotel", listOf("The American Colony Hotel", "The Imperial Hotel", "The Fast Hotel"), H),
         q("his_two_palestinian_refugee", "Which two Palestinian refugee camps in Beirut saw a massacre by Lebanese militiamen in 1982?", "Sabra and Shatila", listOf("Jenin and Balata", "Yarmouk and Baqaa", "Deheisheh and Aida"), H),
+        q("his_israeli_defence_minister", "Which Israeli defence minister of the Six-Day War was famous for his black eyepatch?", "Moshe Dayan", listOf("Yitzhak Rabin", "Ariel Sharon", "Ezer Weizman"), H),
         q("his_deadly_clashes_between", "What were the deadly clashes between Jordan's army and Palestinian fighters in 1970 called?", "Black September", listOf("The Days of Rage", "The Night of Fire", "Red October"), X),
         q("his_hashemite_prince_became", "Which Hashemite prince became the first king of Iraq in 1921?", "Faisal I", listOf("Abdullah I", "Hussein bin Ali", "Ghazi"), X),
         q("his_young_king_iraq", "Which young king of Iraq was killed in the revolution of 1958?", "Faisal II", listOf("Ghazi", "Hussein", "Abdullah II"), X),
         q("his_king_saudi_arabia", "Which king of Saudi Arabia, who led the 1973 oil embargo, was shot dead by his nephew in 1975?", "Faisal", listOf("Saud", "Khalid", "Fahd"), X),
         q("his_ship_carrying_500", "Which ship, carrying 4,500 Jewish refugees to Palestine in 1947, was turned back by the British?", "The Exodus", listOf("The Altalena", "The Struma", "The Patria"), X),
         q("his_syrian_president_forces", "Which Syrian president's forces crushed an uprising in the city of Hama in 1982?", "Hafez al-Assad", listOf("Shukri al-Quwatli", "Adib Shishakli", "Salah Jadid"), X),
-        q("his_holy_site_armed", "Which holy site did armed militants seize and hold for two weeks in November 1979?", "The Grand Mosque in Mecca", listOf("The Dome of the Rock", "The Prophet's Mosque", "The Imam Reza Shrine"), X)
+        q("his_holy_site_armed", "Which holy site did armed militants seize and hold for two weeks in November 1979?", "The Grand Mosque in Mecca", listOf("The Dome of the Rock", "The Prophet's Mosque", "The Imam Reza Shrine"), X),
+        q("his_warship_shot_down", "Which US warship shot down an Iranian passenger jet by mistake over the Gulf in 1988?", "USS Vincennes", listOf("USS Stark", "USS Cole", "USS Missouri"), X)
     )
 
     /* 20th Century / Explorers & Aviators - history/twentieth_century/explorers.tsv */
@@ -4061,6 +4281,8 @@ object HistoryQuestions {
         q("his_2022_wreck_explorer", "In 2022, the wreck of which explorer's ship was found 3,000 metres deep in the Weddell Sea?", "Ernest Shackleton", listOf("Robert Falcon Scott", "Roald Amundsen", "Douglas Mawson"), E),
         q("his_amelia_earhart_nicknamed", "Amelia Earhart was nicknamed 'Lady Lindy' because she looked like which aviator?", "Charles Lindbergh", listOf("Howard Hughes", "Wiley Post", "Chuck Yeager"), E),
         q("his_edmund_hillary_team", "How did Edmund Hillary's team travel to the South Pole in 1958?", "Driving farm tractors", listOf("By dog sledge", "On foot and skis", "In army snow tanks"), E),
+        q("his_country_put_edmund", "Which country put Edmund Hillary on its five-dollar note while he was still alive?", "New Zealand", listOf("Australia", "Britain", "Canada"), E),
+        q("his_amelia_earhart_attempting", "What was Amelia Earhart attempting when she vanished in 1937?", "A flight around the world", listOf("A non-stop flight to Japan", "A new altitude record", "A solo flight to the North Pole"), E),
         q("his_earhart", "Who was the first woman to fly solo across the Atlantic?", "Amelia Earhart", listOf("Bessie Coleman", "Amy Johnson", "Valentina Tereshkova"), M),
         q("his_amundsen", "Who led the first expedition to reach the South Pole, in 1911?", "Roald Amundsen", listOf("Robert Falcon Scott", "Ernest Shackleton", "Richard Byrd"), M),
         q("his_everest_1953", "Who were the first climbers confirmed to reach the top of Everest, in 1953?", "Edmund Hillary and Tenzing Norgay", listOf("George Mallory and Andrew Irvine", "Reinhold Messner and Peter Habeler", "Jim Whittaker and Nawang Gombu"), M),
@@ -4083,6 +4305,7 @@ object HistoryQuestions {
         q("his_person_confirmed_reached", "Who was the first person confirmed to have reached both the North and the South Pole?", "Roald Amundsen", listOf("Robert Peary", "Ernest Shackleton", "Richard Byrd"), M),
         q("his_tenzing_norgay_leave", "What did Tenzing Norgay leave on the summit of Everest as an offering in 1953?", "Sweets and biscuits", listOf("A prayer wheel", "A lock of his hair", "A bottle of rice wine"), M),
         q("his_explorer_said_advertised", "Which explorer is said to have advertised 'Men wanted for hazardous journey... safe return doubtful'?", "Ernest Shackleton", listOf("Robert Falcon Scott", "Roald Amundsen", "Fridtjof Nansen"), M),
+        q("his_polar_explorer_won", "Which polar explorer won the 1922 Nobel Peace Prize, partly for creating passports for stateless refugees?", "Fridtjof Nansen", listOf("Roald Amundsen", "Ernest Shackleton", "Richard Byrd"), M),
         q("his_kitty_hawk", "Near which town did the Wright brothers make their first powered flight?", "Kitty Hawk", listOf("Dayton", "Detroit", "Cape Canaveral"), H),
         q("hx_earhart", "Over which ocean did Amelia Earhart disappear in 1937?", "The Pacific", listOf("The Atlantic", "The Indian Ocean", "The Arctic Ocean"), H),
         q("his_ship_endurance_crushed", "Whose ship 'Endurance' was crushed by Antarctic ice in 1915?", "Ernest Shackleton", listOf("Robert Falcon Scott", "Roald Amundsen", "James Cook"), H),
@@ -4102,6 +4325,7 @@ object HistoryQuestions {
         q("his_last_diary_entry", "Whose last diary entry, found in a frozen tent in Antarctica, read 'For God's sake look after our people'?", "Robert Falcon Scott", listOf("Lawrence Oates", "Ernest Shackleton", "Edward Wilson"), H),
         q("his_australian_survived_alone", "Which Australian survived alone in Antarctica in 1912-1913 after both his companions died?", "Douglas Mawson", listOf("Hubert Wilkins", "Frank Hurley", "Edgeworth David"), H),
         q("his_pilot_raised_kenya", "Which pilot, raised in Kenya, became the first woman to fly solo across the Atlantic from east to west, in 1936?", "Beryl Markham", listOf("Amy Johnson", "Jean Batten", "Jacqueline Cochran"), H),
+        q("his_way_south_pole", "On the way to the South Pole, what did Amundsen's team do with about half of their sledge dogs, exactly as planned?", "Killed them for food", listOf("Sent them back to base", "Set them free on the ice", "Left them at a depot to rest"), H),
         q("his_slocum", "Who was the first person to sail alone around the world, in 1895-1898?", "Joshua Slocum", listOf("Francis Chichester", "Robin Knox-Johnston", "Ellen MacArthur"), X),
         q("hy_zeppelin", "Airships are often called zeppelins after whom?", "A German count", listOf("A Swiss engineer", "A French balloonist", "An American inventor"), X),
         q("his_american_aviator_claimed", "Which American aviator claimed the first flight over the North Pole, in 1926?", "Richard Byrd", listOf("Charles Lindbergh", "Howard Hughes", "Wiley Post"), X),
@@ -4161,6 +4385,7 @@ object HistoryQuestions {
         q("his_2010_trapped_chilean", "In 2010, how many trapped Chilean miners were rescued after 69 days underground?", "33", listOf("12", "57", "101"), M),
         q("his_film_director_made", "Which film director made the first solo dive to the deepest point of the ocean, in 2012?", "James Cameron", listOf("Steven Spielberg", "Peter Jackson", "Ridley Scott"), M),
         q("his_1991_german_parliament", "In 1991, the German parliament voted narrowly to move the capital from Bonn to which city?", "Berlin", listOf("Frankfurt", "Munich", "Hamburg"), M),
+        q("his_countries_joined_european", "How many countries joined the European Union together in 2004, its biggest expansion ever?", "Ten", listOf("Four", "Six", "Fifteen"), M),
         q("hx_czechoslowacja", "In which year did Czechoslovakia peacefully split into two countries?", "1993", listOf("1989", "1991", "1999"), H),
         q("hy_jelcyn", "Who was the first president of the Russian Federation?", "Boris Yeltsin", listOf("Mikhail Gorbachev", "Vladimir Putin", "Dmitry Medvedev"), H),
         q("his_country_arab_spring", "In which country did the 'Arab Spring' protests begin, in late 2010?", "Tunisia", listOf("Egypt", "Libya", "Syria"), H),
@@ -4172,9 +4397,12 @@ object HistoryQuestions {
         q("his_country_won_independence", "Which country won independence from Ethiopia after a referendum in 1993?", "Eritrea", listOf("Somalia", "South Sudan", "Djibouti"), H),
         q("his_country_split_peacefully", "Which country split peacefully from Serbia after a referendum in 2006?", "Montenegro", listOf("Macedonia", "Slovenia", "Kosovo"), H),
         q("his_cult_released_sarin", "Which cult released sarin nerve gas on the Tokyo subway in 1995?", "Aum Shinrikyo", listOf("Tenrikyo", "The Japanese Red Army", "Seicho-no-Ie"), H),
+        q("his_country_2005_tulip", "Which country's 2005 'Tulip Revolution' toppled its president, Askar Akayev?", "Kyrgyzstan", listOf("Kazakhstan", "Tajikistan", "Uzbekistan"), H),
+        q("his_country_debt_crisis", "Which country's debt crisis, starting in 2009, led to three international bailouts and fears it would leave the euro?", "Greece", listOf("Portugal", "Ireland", "Spain"), H),
         q("hy_maastricht", "Which 1992 treaty created the European Union?", "The Maastricht Treaty", listOf("The Treaty of Rome", "The Lisbon Treaty", "The Schengen Agreement"), X),
         q("his_saddam_hussein_found", "Where was Saddam Hussein found when US troops captured him in 2003?", "Hiding in a hole in the ground", listOf("In a mosque in Baghdad", "On a fishing boat", "In a Syrian hotel"), X),
-        q("his_ferry_sank_baltic", "Which ferry sank in a Baltic storm in 1994, killing 852 people?", "MS Estonia", listOf("MS Herald of Free Enterprise", "MV Sewol", "MS Scandinavian Star"), X)
+        q("his_ferry_sank_baltic", "Which ferry sank in a Baltic storm in 1994, killing 852 people?", "MS Estonia", listOf("MS Herald of Free Enterprise", "MV Sewol", "MS Scandinavian Star"), X),
+        q("his_1994_country_voters", "In 1994, which country's voters said no to joining the EU for the second time, after a first 'no' in 1972?", "Norway", listOf("Switzerland", "Iceland", "Denmark"), X)
     )
 
     /* US Presidents - history/us_presidents.tsv */
@@ -4192,6 +4420,7 @@ object HistoryQuestions {
         q("his_president_impeached_1998", "Which US president was impeached in 1998 over the Monica Lewinsky affair?", "Bill Clinton", listOf("George W. Bush", "Richard Nixon", "Ronald Reagan"), E),
         q("his_years_president_serve", "How many years does a US president serve in one term?", "Four", listOf("Two", "Five", "Six"), E),
         q("his_state_abraham_lincoln", "In which state did Abraham Lincoln build his career as a lawyer before becoming president?", "Illinois", listOf("Kentucky", "Ohio", "Virginia"), E),
+        q("his_president_estate_virginia", "Which US president's estate in Virginia, where he is buried, is called Mount Vernon?", "George Washington", listOf("Thomas Jefferson", "James Madison", "John Adams"), E),
         q("his_waszyngton", "Who was the first President of the United States?", "George Washington", listOf("Abraham Lincoln", "Thomas Jefferson", "John Adams"), M),
         q("his_nixon", "Who is the only US president to have resigned from office?", "Richard Nixon", listOf("Bill Clinton", "Andrew Johnson", "Lyndon B. Johnson"), M),
         q("hx_lincoln_teatr", "Where was Abraham Lincoln shot in 1865?", "In a theatre", listOf("At a railway station", "In the White House", "Outside a church"), M),
@@ -4216,6 +4445,7 @@ object HistoryQuestions {
         q("his_theodore_roosevelt_right", "What did Theodore Roosevelt do right after being shot in the chest in 1912?", "Gave his speech for over an hour", listOf("Chased the gunman down", "Drove himself to hospital", "Wrote his will"), M),
         q("his_president_won_every", "Which US president is the only one to have won every single electoral vote?", "George Washington", listOf("Thomas Jefferson", "Abraham Lincoln", "James Monroe"), M),
         q("his_president_kept_jar", "Which US president kept a jar of jelly beans on his desk in the Oval Office?", "Ronald Reagan", listOf("Jimmy Carter", "Gerald Ford", "Richard Nixon"), M),
+        q("his_president_later_became", "Which US president later became Chief Justice of the Supreme Court?", "William Howard Taft", listOf("Woodrow Wilson", "Herbert Hoover", "Theodore Roosevelt"), M),
         q("hw_booth", "Who shot Abraham Lincoln?", "John Wilkes Booth", listOf("Lee Harvey Oswald", "Charles Guiteau", "Leon Czolgosz"), H),
         q("hw_oswald", "Who was accused of assassinating President John F. Kennedy?", "Lee Harvey Oswald", listOf("John Wilkes Booth", "Jack Ruby", "James Earl Ray"), H),
         q("his_president_live_white", "Who was the first US president to live in the White House?", "John Adams", listOf("George Washington", "Thomas Jefferson", "James Madison"), H),
@@ -4232,13 +4462,15 @@ object HistoryQuestions {
         q("his_president_never_elected", "Which US president was never elected as either president or vice president?", "Gerald Ford", listOf("Andrew Johnson", "Chester Arthur", "Lyndon Johnson"), H),
         q("his_president_earned_phd", "Which US president is the only one to have earned a PhD?", "Woodrow Wilson", listOf("Herbert Hoover", "Jimmy Carter", "Barack Obama"), H),
         q("his_president_put_solar", "Which US president put solar panels on the White House roof in 1979?", "Jimmy Carter", listOf("Gerald Ford", "Ronald Reagan", "Richard Nixon"), H),
+        q("his_president_kept_raccoon", "Which US president kept a raccoon named Rebecca at the White House, after it was sent to be eaten at Thanksgiving?", "Calvin Coolidge", listOf("Herbert Hoover", "Warren Harding", "Theodore Roosevelt"), H),
         q("hy_waszyngton_whisky", "After leaving office, George Washington ran one of America's largest what?", "Whiskey distilleries", listOf("Horse racing stables", "Newspaper presses", "Cotton factories"), X),
         q("his_president_died_just", "Which US president died just a month after taking office, in 1841?", "William Henry Harrison", listOf("James Garfield", "Zachary Taylor", "Warren Harding"), X),
         q("his_donald_trump_president", "Before Donald Trump, who was the only US president to serve two non-consecutive terms?", "Grover Cleveland", listOf("Theodore Roosevelt", "Andrew Jackson", "Woodrow Wilson"), X),
         q("his_president_born_citizen", "Who was the first US president born as a citizen of the United States?", "Martin Van Buren", listOf("John Adams", "James Madison", "Andrew Jackson"), X),
         q("his_sitting_president_appear", "Who was the first sitting US president to appear on television, in 1939?", "Franklin D. Roosevelt", listOf("Herbert Hoover", "Harry S. Truman", "Dwight D. Eisenhower"), X),
         q("his_president_personally_hanged", "Which US president had personally hanged two criminals while serving as a county sheriff?", "Grover Cleveland", listOf("Andrew Jackson", "Theodore Roosevelt", "Abraham Lincoln"), X),
-        q("his_president_said_stopped", "Which US president is said to have been stopped and fined for speeding in his horse-drawn carriage?", "Ulysses S. Grant", listOf("Rutherford B. Hayes", "Chester A. Arthur", "Andrew Jackson"), X)
+        q("his_president_said_stopped", "Which US president is said to have been stopped and fined for speeding in his horse-drawn carriage?", "Ulysses S. Grant", listOf("Rutherford B. Hayes", "Chester A. Arthur", "Andrew Jackson"), X),
+        q("his_according_legend_president", "According to legend, which US president kept an alligator, a gift from Lafayette, in a White House bathroom?", "John Quincy Adams", listOf("Thomas Jefferson", "Andrew Jackson", "James Monroe"), X)
     )
 
     /* Women in History - history/famous_women.tsv */
@@ -4253,6 +4485,7 @@ object HistoryQuestions {
         q("his_catholic_nun_won", "Which Catholic nun won the 1979 Nobel Peace Prize for her work in Calcutta?", "Mother Teresa", listOf("Florence Nightingale", "Edith Cavell", "Clara Barton"), E),
         q("his_pakistani_activist_became", "Which Pakistani activist became the youngest Nobel Peace Prize winner, in 2014?", "Malala Yousafzai", listOf("Greta Thunberg", "Benazir Bhutto", "Shirin Ebadi"), E),
         q("his_lady_later_married", "Which US first lady later married the Greek shipping tycoon Aristotle Onassis?", "Jacqueline Kennedy", listOf("Eleanor Roosevelt", "Lady Bird Johnson", "Mamie Eisenhower"), E),
+        q("his_became_britain_female", "Who became Britain's first female prime minister, in 1979?", "Margaret Thatcher", listOf("Theresa May", "Barbara Castle", "Shirley Williams"), E),
         q("his_argentine_lady_nicknamed", "Which Argentine first lady, nicknamed 'Evita', inspired a famous musical?", "Eva Peron", listOf("Isabel Peron", "Cristina Kirchner", "Mercedes Sosa"), M),
         q("his_woman_become_vice", "Who was the first woman to become Vice President of the United States?", "Kamala Harris", listOf("Hillary Clinton", "Nancy Pelosi", "Sarah Palin"), M),
         q("his_lady_chaired_committee", "Which first lady chaired the committee that drafted the Universal Declaration of Human Rights?", "Eleanor Roosevelt", listOf("Jacqueline Kennedy", "Edith Wilson", "Bess Truman"), M),
@@ -4339,6 +4572,7 @@ object HistoryQuestions {
         q("his_1967_referendum_australians", "In a 1967 referendum, Australians voted by over 90% to do what?", "Include Aboriginal people in the census", listOf("Cut the last legal ties with Britain", "Adopt a new flag without the Union Jack", "Move the capital from Melbourne to Canberra"), M),
         q("his_animals_brought_australia", "Which animals, brought to Australia in the 1800s to carry loads across the outback, now roam wild there in huge numbers?", "Camels", listOf("Llamas", "Yaks", "Zebras"), M),
         q("his_ten_pound_poms", "Who were the 'Ten Pound Poms' of the decades after World War II?", "British migrants given cheap passage to Australia", listOf("British convicts freed for a ten-pound fine", "English cricketers paid to tour Australia", "British soldiers posted to the Pacific islands"), M),
+        q("his_australian_prime_minister_2", "Which Australian prime minister made a formal national apology to Aboriginal people in 2008?", "Kevin Rudd", listOf("John Howard", "Julia Gillard", "Paul Keating"), M),
         q("his_wojna_emu", "In 1932, Australian soldiers with machine guns fought, and lost, a 'war' against which animals?", "Emus", listOf("Kangaroos", "Rabbits", "Dingoes"), H),
         q("hx_hawaje", "Before becoming part of the USA, Hawaii was what?", "An independent kingdom", listOf("A French colony", "A Japanese province", "A Spanish colony"), H),
         q("his_eureka_stockade_1854", "What was the Eureka Stockade of 1854 in Australia?", "A gold miners' rebellion", listOf("A convict escape", "A cattle drive", "A shipwreck"), H),
@@ -4364,12 +4598,14 @@ object HistoryQuestions {
         q("his_pacific_island_kingdom", "Which Pacific island kingdom kept its own monarchy throughout the colonial era?", "Tonga", listOf("Hawaii", "Tahiti", "Fiji"), H),
         q("his_blackbirding_19th_century", "What was 'blackbirding' in the 19th-century Pacific?", "Kidnapping islanders to work on plantations", listOf("Hunting rare birds for their feathers", "Smuggling opium between ports", "Trading guns for sandalwood"), H),
         q("his_pacific_nation_moved", "Which Pacific nation moved the International Date Line in 1995 so that all its islands would share the same day?", "Kiribati", listOf("Samoa", "Tonga", "Tuvalu"), H),
+        q("his_australian_prime_minister_3", "Which Australian prime minister was dismissed by the Governor-General in 1975?", "Gough Whitlam", listOf("Malcolm Fraser", "Bob Hawke", "Robert Menzies"), H),
         q("hx_waitangi", "Which 1840 treaty between the British Crown and Maori chiefs is New Zealand's founding document?", "The Treaty of Waitangi", listOf("The Treaty of Auckland", "The Treaty of Rotorua", "The Treaty of Aotearoa"), X),
         q("his_tahitian_navigator_priest", "Which Tahitian navigator and priest guided Captain Cook's Endeavour through the Pacific?", "Tupaia", listOf("Omai", "Kupe", "Hotu Matua"), X),
         q("his_maori_chief_met", "Which Maori chief, who met King George IV in 1820, came home with muskets and launched devastating raids?", "Hongi Hika", listOf("Te Rauparaha", "Hone Heke", "Te Kooti"), X),
         q("his_hawaiian_olympic_swimming", "Which Hawaiian Olympic swimming champion spread the sport of surfing around the world?", "Duke Kahanamoku", listOf("Eddie Aikau", "George Freeth", "Johnny Weissmuller"), X),
         q("his_maori_prophet_led", "Which Maori prophet led peaceful resistance to land seizures at Parihaka until troops invaded in 1881?", "Te Whiti o Rongomai", listOf("Te Kooti", "Titokowaru", "Wiremu Tamihana"), X),
-        q("his_australian_prime_minister", "Which Australian prime minister vanished while swimming in rough surf in 1967?", "Harold Holt", listOf("Robert Menzies", "John Gorton", "John Curtin"), X)
+        q("his_australian_prime_minister", "Which Australian prime minister vanished while swimming in rough surf in 1967?", "Harold Holt", listOf("Robert Menzies", "John Gorton", "John Curtin"), X),
+        q("his_australian_sports_team", "What was the first Australian sports team to tour overseas, playing in England in 1868?", "An Aboriginal cricket team", listOf("A Sydney rugby side", "A Melbourne rowing crew", "A Victorian football team"), X)
     )
 
     /* History of Medicine - history/medicine.tsv */
@@ -4382,6 +4618,8 @@ object HistoryQuestions {
         q("his_machines_kept_polio", "Which machines kept polio victims breathing in the 1940s and 1950s?", "Iron lungs", listOf("Heart-lung pumps", "Oxygen tents", "Steam inhalers"), E),
         q("his_some_medieval_doctors", "What did some medieval doctors taste to help them diagnose an illness?", "The patient's urine", listOf("The patient's sweat", "The patient's blood", "The patient's tears"), E),
         q("his_country_acupuncture_originate", "In which country did acupuncture originate?", "China", listOf("Japan", "India", "Korea"), E),
+        q("his_snake_oil_salesman", "What was a 'snake oil salesman' in the 1800s?", "A seller of fake cure-alls", listOf("A hunter of rattlesnakes", "A travelling dentist", "A dealer in lamp oil"), E),
+        q("his_anaesthetics_patients_often", "Before anaesthetics, what were patients often given to dull the pain of surgery?", "Strong alcohol", listOf("Cold milk", "Strong coffee", "Mint tea"), E),
         q("his_ancient_practice_drilling", "What is the ancient practice of drilling a hole in a living person's skull called?", "Trepanation", listOf("Cauterisation", "Amputation", "Lobotomy"), M),
         q("his_greek_doctor_roman", "Which Greek doctor of the Roman Empire learned his anatomy treating wounded gladiators?", "Galen", listOf("Hippocrates", "Celsus", "Avicenna"), M),
         q("his_hungarian_doctor_showed", "Which Hungarian doctor showed in 1847 that handwashing saved mothers' lives?", "Ignaz Semmelweis", listOf("Robert Koch", "Joseph Lister", "Rudolf Virchow"), M),
@@ -4409,6 +4647,7 @@ object HistoryQuestions {
         q("his_marie_curie_drive", "What did Marie Curie drive to the front lines in World War I?", "Mobile X-ray vans", listOf("Field ambulances", "Radium supply trucks", "Blood transfusion carts"), M),
         q("his_1918_flu_pandemic", "Why was the 1918 flu pandemic nicknamed the 'Spanish flu'?", "Spain's free press reported it openly", listOf("It began in a Madrid army barracks", "Spanish sailors carried it to Europe", "Spain suffered the most deaths"), M),
         q("his_explosive_doctors_begin", "Which explosive did doctors begin giving patients in the late 1870s to ease the chest pain of heart disease?", "Nitroglycerine", listOf("Gunpowder", "TNT", "Cordite"), M),
+        q("his_drug_given_pregnant", "Which drug, given to pregnant women for morning sickness around 1960, caused thousands of birth defects?", "Thalidomide", listOf("Valium", "Aspirin", "Laudanum"), M),
         q("his_anatomist_book_1543", "Which anatomist's book of 1543, 'On the Fabric of the Human Body', corrected Galen's mistakes?", "Andreas Vesalius", listOf("William Harvey", "Leonardo da Vinci", "Paracelsus"), H),
         q("his_gas_used_public", "Which gas was used in the first public demonstration of surgery under anaesthesia, in Boston in 1846?", "Ether", listOf("Chloroform", "Laughing gas", "Carbon dioxide"), H),
         q("his_anaesthetic_queen_victoria", "Which anaesthetic did Queen Victoria take while giving birth in 1853, making it fashionable?", "Chloroform", listOf("Ether", "Laudanum", "Cocaine"), H),
@@ -4433,7 +4672,8 @@ object HistoryQuestions {
         q("his_surgeon_muslim_spain", "Which surgeon of Muslim Spain, around the year 1000, wrote a famous book describing over 200 instruments?", "Al-Zahrawi", listOf("Averroes", "Avicenna", "Rhazes"), X),
         q("his_french_saint_said", "Which French saint, said to have caught and survived the plague, became its patron saint?", "Saint Roch", listOf("Saint Denis", "Saint Louis", "Saint Martin"), X),
         q("his_portuguese_doctor_won", "Which Portuguese doctor won a Nobel Prize in 1949 for developing the lobotomy?", "Egas Moniz", listOf("Walter Freeman", "Julius Wagner-Jauregg", "Santiago Ramon y Cajal"), X),
-        q("his_young_german_doctor", "What did the young German doctor Werner Forssmann do to himself in 1929?", "Pushed a tube up a vein into his heart", listOf("Swallowed a culture of cholera germs", "Removed his own inflamed appendix", "Injected himself with yellow fever"), X)
+        q("his_young_german_doctor", "What did the young German doctor Werner Forssmann do to himself in 1929?", "Pushed a tube up a vein into his heart", listOf("Swallowed a culture of cholera germs", "Removed his own inflamed appendix", "Injected himself with yellow fever"), X),
+        q("his_renaissance_doctor_taught", "Which Renaissance doctor taught that 'the dose makes the poison'?", "Paracelsus", listOf("Andreas Vesalius", "Ambroise Pare", "Nostradamus"), X)
     )
 
     /* Spies & Codebreakers - history/spies.tsv */
@@ -4447,6 +4687,7 @@ object HistoryQuestions {
         q("his_british_mathematician_led", "Which British mathematician led the codebreaking against Enigma, as shown in the film 'The Imitation Game'?", "Alan Turing", listOf("Isaac Newton", "Charles Babbage", "Bertrand Russell"), E),
         q("his_british_agency_handles", "Which British agency handles counter-espionage at home, while MI6 spies abroad?", "MI5", listOf("MI9", "The SOE", "The SAS"), E),
         q("his_spies_call_trick", "What do spies call the trick of using seduction to compromise a target?", "A honey trap", listOf("A sugar pill", "A velvet glove", "A sweetheart sting"), E),
+        q("his_country_listening_agency", "Which country's listening agency, GCHQ, works from a round building nicknamed 'the Doughnut'?", "Britain", listOf("The USA", "Australia", "Canada"), E),
         q("his_statesman_ran_queen", "Which statesman ran Queen Elizabeth I's network of spies?", "Francis Walsingham", listOf("Thomas Cromwell", "Robert Dudley", "Walter Raleigh"), M),
         q("his_trick_operation_mincemeat", "What was the trick of 'Operation Mincemeat' in 1943?", "A corpse carrying fake plans", listOf("A fake army of rubber tanks", "A spy hidden in a meat delivery", "Poisoned food sent to Hitler"), M),
         q("his_member_cambridge_five", "Which member of the Cambridge Five rose high in MI6 before fleeing to Moscow in 1963?", "Kim Philby", listOf("Guy Burgess", "Anthony Blunt", "Donald Maclean"), M),
@@ -4467,6 +4708,7 @@ object HistoryQuestions {
         q("his_chef_worked_american", "Which famous TV chef worked for the American spy agency OSS during World War II?", "Julia Child", listOf("Fanny Cradock", "Betty Crocker", "Martha Stewart"), M),
         q("his_microdots_used_spies", "What were the 'microdots' used by spies in World War II?", "Photos shrunk to the size of a full stop", listOf("Tiny radio transmitters in buttons", "Poison pills hidden in false teeth", "Coded dots in knitting patterns"), M),
         q("his_israeli_spy_rose", "Which Israeli spy rose close to Syria's leaders before being caught and hanged in Damascus in 1965?", "Eli Cohen", listOf("Wolfgang Lotz", "Jonathan Pollard", "Mordechai Vanunu"), M),
+        q("his_sleeper_world_spying", "What is a 'sleeper' in the world of spying?", "An agent who lies low for years", listOf("A drug to knock out guards", "A false bottom in a suitcase", "A spy who works only at night"), M),
         q("his_plot_put_mary", "Which plot to put Mary, Queen of Scots, on the throne was uncovered by Walsingham's spies in 1586?", "The Babington Plot", listOf("The Gunpowder Plot", "The Ridolfi Plot", "The Throckmorton Plot"), H),
         q("his_russian_born_agent", "Which Russian-born agent of British intelligence was nicknamed 'the Ace of Spies'?", "Sidney Reilly", listOf("Kim Philby", "Richard Sorge", "Ian Fleming"), H),
         q("his_spanish_double_agent", "Which Spanish double agent, codenamed 'Garbo', fooled the Germans about the D-Day landings?", "Juan Pujol Garcia", listOf("Dusko Popov", "Eddie Chapman", "Roman Czerniawski"), H),
@@ -4492,11 +4734,13 @@ object HistoryQuestions {
         q("his_britain_world_war", "What was Britain's World War II system for turning captured German spies into double agents called?", "The Double Cross System", listOf("Operation Fortitude", "The Ultra Programme", "Operation Mincemeat"), H),
         q("his_elizabethan_playwright_possibly", "Which Elizabethan playwright, possibly a government spy, was stabbed to death in Deptford in 1593?", "Christopher Marlowe", listOf("Ben Jonson", "Thomas Kyd", "William Shakespeare"), H),
         q("his_fbi_agent_spied", "Which FBI agent spied for Moscow for over 20 years until his arrest in 2001?", "Robert Hanssen", listOf("Aldrich Ames", "Edward Lee Howard", "John Walker"), H),
+        q("his_american_venona_project", "What was the American 'Venona' project?", "Decoding Soviet wartime cables", listOf("A spy satellite programme", "A plot to kidnap Fidel Castro", "A tunnel under Havana"), H),
         q("his_teenage_confederate_spy", "Which teenage Confederate spy passed secrets to Stonewall Jackson in 1862?", "Belle Boyd", listOf("Rose Greenhow", "Harriet Tubman", "Pauline Cushman"), X),
         q("his_east_german_spymaster", "Which East German spymaster was nicknamed 'the man without a face'?", "Markus Wolf", listOf("Erich Mielke", "Erich Honecker", "Gunter Guillaume"), X),
         q("his_author_robinson_crusoe", "Which author of 'Robinson Crusoe' also worked as a secret government agent?", "Daniel Defoe", listOf("Jonathan Swift", "Henry Fielding", "Samuel Richardson"), X),
         q("his_french_diplomat_spy", "Which French diplomat and spy of Louis XV lived the last 33 years of life as a woman?", "The Chevalier d'Eon", listOf("The Comte de Saint-Germain", "Cardinal Mazarin", "Beaumarchais"), X),
-        q("his_codebreaker_deciphered_secret", "Which codebreaker deciphered the secret letters of Mary, Queen of Scots, for Walsingham in 1586?", "Thomas Phelippes", listOf("John Dee", "Robert Poley", "Anthony Standen"), X)
+        q("his_codebreaker_deciphered_secret", "Which codebreaker deciphered the secret letters of Mary, Queen of Scots, for Walsingham in 1586?", "Thomas Phelippes", listOf("John Dee", "Robert Poley", "Anthony Standen"), X),
+        q("his_scottish_born_detective", "Which Scottish-born detective ran spies for the Union and claimed to have foiled a plot to kill Lincoln in 1861?", "Allan Pinkerton", listOf("Lafayette Baker", "Thomas Byrnes", "Eugene Vidocq"), X)
     )
 
     /* Famous Words - history/famous_words.tsv */
@@ -4513,6 +4757,7 @@ object HistoryQuestions {
         q("his_queen_supposed_said", "Which queen is supposed to have said 'We are not amused'?", "Queen Victoria", listOf("Elizabeth I", "Queen Anne", "Mary I"), E),
         q("his_british_leader_told", "Which British leader told Parliament in 1940, 'I have nothing to offer but blood, toil, tears and sweat'?", "Winston Churchill", listOf("Neville Chamberlain", "Clement Attlee", "Anthony Eden"), E),
         q("his_two_writers_ended", "Which two writers ended their 1848 pamphlet with the call 'Workers of the world, unite!'?", "Marx and Engels", listOf("Lenin and Trotsky", "Proudhon and Bakunin", "Owen and Fourier"), E),
+        q("his_inventor_said_genius", "Which inventor said that genius is 'one per cent inspiration and ninety-nine per cent perspiration'?", "Thomas Edison", listOf("Alexander Graham Bell", "Nikola Tesla", "Henry Ford"), E),
         q("his_president_told_americans", "Which president told Americans in 1933 that 'the only thing we have to fear is fear itself'?", "Franklin D. Roosevelt", listOf("Herbert Hoover", "Woodrow Wilson", "Harry S. Truman"), M),
         q("his_prime_minister_told", "Which prime minister told her party in 1980, 'The lady's not for turning'?", "Margaret Thatcher", listOf("Golda Meir", "Indira Gandhi", "Theresa May"), M),
         q("his_signal_nelson_send", "Which signal did Nelson send to his fleet before the Battle of Trafalgar?", "'England expects that every man will do his duty'", listOf("'Engage the enemy more closely and win'", "'God save the King and the fleet'", "'Every ship must fight to the last man'"), M),
@@ -4540,6 +4785,7 @@ object HistoryQuestions {
         q("his_saying_army_marches", "To whom is the saying 'An army marches on its stomach' usually credited?", "Napoleon", listOf("Julius Caesar", "Alexander the Great", "Wellington"), M),
         q("his_two_word_banner", "Which two-word banner hung behind George W. Bush on an aircraft carrier in 2003, soon regretted?", "'Mission Accomplished'", listOf("'Victory Achieved'", "'Job Well Done'", "'Freedom Restored'"), M),
         q("his_soviet_leader_told", "Which Soviet leader told Western diplomats in 1956, 'We will bury you'?", "Nikita Khrushchev", listOf("Joseph Stalin", "Leonid Brezhnev", "Vyacheslav Molotov"), M),
+        q("his_battle_nelson_put", "At which battle did Nelson put his telescope to his blind eye and claim he could not see the signal to stop?", "Copenhagen", listOf("Trafalgar", "The Nile", "Cape St Vincent"), M),
         q("his_french_king_supposed_2", "Which French king is supposed to have said 'After me, the flood'?", "Louis XV", listOf("Louis XIV", "Louis XVI", "Henry IV"), H),
         q("his_presidential_candidate_promised", "Which presidential candidate promised in 1988, 'Read my lips: no new taxes'?", "George H. W. Bush", listOf("Ronald Reagan", "Bill Clinton", "Michael Dukakis"), H),
         q("his_spanish_communist_made", "Which Spanish communist made the cry 'No pasaran!' ('They shall not pass') famous in 1936?", "Dolores Ibarruri", listOf("Francisco Franco", "Federica Montseny", "Buenaventura Durruti"), H),
@@ -4557,10 +4803,12 @@ object HistoryQuestions {
         q("his_coined_phrase_survival", "Who coined the phrase 'survival of the fittest'?", "Herbert Spencer", listOf("Charles Darwin", "Thomas Huxley", "Alfred Wallace"), H),
         q("his_bishop_told_fellow", "Which bishop told a fellow martyr at the stake in 1555, 'We shall this day light such a candle'?", "Hugh Latimer", listOf("Thomas Cranmer", "Nicholas Ridley", "John Hooper"), H),
         q("his_french_general_said", "Which French general said of the Charge of the Light Brigade, 'It is magnificent, but it is not war'?", "Pierre Bosquet", listOf("Patrice de MacMahon", "Francois Canrobert", "Aimable Pelissier"), H),
+        q("his_roman_emperor_joked", "Which Roman emperor joked on his deathbed, 'Dear me, I think I am becoming a god'?", "Vespasian", listOf("Augustus", "Hadrian", "Claudius"), H),
         q("his_dying_naval_captain", "Which dying US naval captain's order 'Don't give up the ship!' became a navy motto in 1813?", "James Lawrence", listOf("Oliver Hazard Perry", "John Paul Jones", "Stephen Decatur"), X),
         q("his_guinean_leader_told", "Which Guinean leader told de Gaulle in 1958, 'We prefer poverty in freedom to riches in slavery'?", "Ahmed Sekou Toure", listOf("Kwame Nkrumah", "Leopold Senghor", "Modibo Keita"), X),
         q("his_king_said_got", "Which king is said to have got the one-word Spartan reply 'If' after threatening what he would do if he invaded?", "Philip II of Macedon", listOf("Xerxes I of Persia", "Darius I of Persia", "Antiochus III"), X),
-        q("his_mexican_ruler_credited", "Which Mexican ruler is credited with saying 'Poor Mexico, so far from God and so close to the United States'?", "Porfirio Diaz", listOf("Benito Juarez", "Santa Anna", "Lazaro Cardenas"), X)
+        q("his_mexican_ruler_credited", "Which Mexican ruler is credited with saying 'Poor Mexico, so far from God and so close to the United States'?", "Porfirio Diaz", listOf("Benito Juarez", "Santa Anna", "Lazaro Cardenas"), X),
+        q("his_union_general_wrote", "Which Union general wrote in 1864, 'I propose to fight it out on this line if it takes all summer'?", "Ulysses S. Grant", listOf("William T. Sherman", "George Meade", "Philip Sheridan"), X)
     )
 
     /* Royal Nicknames - history/royal_nicknames.tsv */
@@ -4597,6 +4845,7 @@ object HistoryQuestions {
         q("his_dracula_nickname_vlad", "What does 'Dracula', the nickname of Vlad III of Wallachia, mean?", "Son of the Dragon", listOf("Drinker of Blood", "Lord of the Wolves", "Prince of the Night"), M),
         q("his_spanish_hero_nickname", "What does the Spanish hero's nickname 'El Cid' mean?", "The Lord", listOf("The Lion", "The Sword", "The Wolf"), M),
         q("his_french_king_crushed", "Which French king, who crushed the Knights Templar, was nicknamed 'the Fair' for his good looks?", "Philip IV", listOf("Louis IX", "Philip II", "Louis X"), M),
+        q("his_english_king_nicknamed_6", "Which English king was nicknamed 'Bluff King Hal'?", "Henry VIII", listOf("Henry V", "Edward IV", "Charles II"), M),
         q("his_unraed_root_ethelred", "What did 'unraed', the root of Ethelred's nickname 'the Unready', really mean?", "Badly advised", listOf("Always late", "Unarmed", "Not yet crowned"), H),
         q("his_queen_castile_mother", "Which queen of Castile, mother of Emperor Charles V, was called 'the Mad'?", "Joanna", listOf("Isabella", "Catherine", "Blanche"), H),
         q("his_french_king_well", "Which French king was called 'the Well-Beloved' early in his reign?", "Louis XV", listOf("Louis XIV", "Louis XIII", "Henry IV"), H),

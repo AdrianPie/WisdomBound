@@ -7,6 +7,8 @@ his_german_state_led	Easy	Which German state led the unification of Germany?	Pru
 his_capital_rebuilt_grand	Easy	Which capital was rebuilt with grand boulevards by Baron Haussmann in the 1850s and 1860s?	Paris	Vienna	London	Berlin
 his_munich_festival_began	Easy	Which Munich festival began in 1810 as a celebration of a royal wedding?	Oktoberfest	Fasching	Christkindlmarkt	Walpurgis Night
 his_city_became_capital_3	Easy	Which city became the capital of the new German Empire in 1871?	Berlin	Munich	Frankfurt	Hamburg
+his_paris_cabaret_red	Easy	Which Paris cabaret with a red windmill on its roof opened in 1889?	The Moulin Rouge	The Folies Bergere	The Lido	The Chat Noir
+his_christmas_carol_sung	Easy	Which Christmas carol was first sung in a village church in Austria in 1818?	'Silent Night'	'O Holy Night'	'Jingle Bells'	'O Tannenbaum'
 his4_wojna_krymska_strony	Medium	In the Crimean War, Russia fought a coalition led by which two powers?	Britain and France	Prussia and Austria	Spain and Portugal	Sweden and Denmark
 trv_manifest	Medium	Who wrote 'The Communist Manifesto'?	Karl Marx and Friedrich Engels	Vladimir Lenin, while in exile	Leon Trotsky and his circle	Rosa Luxemburg and her party
 hx_bismarck	Medium	Which 'Iron Chancellor' united Germany in 1871?	Otto von Bismarck	Kaiser Wilhelm II	Frederick the Great	Klemens von Metternich
@@ -33,6 +35,7 @@ his_movement_italian_unification	Medium	What was the movement for Italian unific
 his_castor_pollux_killed	Medium	What were Castor and Pollux, killed and eaten during the Prussian siege of Paris in 1870?	The zoo's two elephants	Two famous racehorses	Two giant river carp	The Emperor's carriage horses
 his_new_country_chose	Medium	Which new country chose Queen Victoria's uncle Leopold as its first king, in 1831?	Belgium	Greece	Bulgaria	Norway
 his_french_army_officer	Medium	Which French army officer's false conviction for spying in 1894 split France for a decade?	Alfred Dreyfus	Georges Boulanger	Philippe Petain	Hubert Lyautey
+his_piano_concerts_1840s	Medium	Whose piano concerts of the 1840s caused fan frenzies that Heinrich Heine called a 'mania'?	Franz Liszt	Frederic Chopin	Felix Mendelssohn	Robert Schumann
 org_kardigan_wojna	Hard	The cardigan is named after a commander who fought in which war?	The Crimean War	The Boer War	The Napoleonic Wars	The American Civil War
 his_french_emperor_napoleon	Hard	Which French emperor was Napoleon Bonaparte's nephew?	Napoleon III	Napoleon II	Louis XVIII	Louis-Philippe
 his_russian_tsar_freed	Hard	Which Russian tsar freed the serfs in 1861?	Alexander II	Nicholas II	Alexander III	Nicholas I
@@ -53,8 +56,10 @@ his_french_republic_born	Hard	Which French republic was born in the revolution o
 his_country_modern_king	Hard	Which country's first modern king, in 1832, was a teenage prince from Bavaria?	Greece	Belgium	Bulgaria	Romania
 his_italian_patriots_1850s	Hard	Why did Italian patriots of the 1850s scrawl 'Viva VERDI!' on walls?	It spelled a cheer for their future king	Verdi had been jailed by Austria	Verdi led a volunteer army	It marked secret weapon stores
 his_tsar_nicknamed_gendarme	Hard	Which tsar, nicknamed 'the Gendarme of Europe', sent troops to crush Hungary's revolution in 1849?	Nicholas I	Alexander I	Alexander II	Alexander III
+his_russian_writer_led	Hard	Which Russian writer was led out to be shot in 1849, only to be spared at the last moment?	Fyodor Dostoevsky	Leo Tolstoy	Ivan Turgenev	Alexander Pushkin
 his_tambora	Expert	The 1815 eruption of which volcano led to 'the year without a summer'?	Tambora	Krakatoa	Vesuvius	Pinatubo
 his_habsburg_crown_prince	Expert	Which Habsburg crown prince died with his lover at Mayerling in 1889?	Rudolf	Franz Ferdinand	Maximilian	Charles
 his_bismarck_struggle_against	Expert	What was Bismarck's struggle against the Catholic Church in the 1870s called?	The Kulturkampf	The Realpolitik	The Sonderweg	The Zollverein
 his_country_last_war	Expert	Which country's last war was the Sonderbund War of 1847, a civil war that lasted less than a month?	Switzerland	Belgium	Denmark	Portugal
 his_bismarck_goaded_france	Expert	Bismarck goaded France into war in 1870 by editing a telegram sent from which spa town?	Ems	Baden-Baden	Wiesbaden	Karlsbad
+his_king_bavaria_lost	Expert	Which king of Bavaria lost his throne in 1848, partly over his affair with the dancer Lola Montez?	Ludwig I	Maximilian II	Otto I	Ludwig III

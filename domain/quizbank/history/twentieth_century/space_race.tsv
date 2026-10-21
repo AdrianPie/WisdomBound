@@ -10,6 +10,7 @@ his_apollo_astronauts_bring	Easy	What did the Apollo astronauts bring back from 
 his_neil_armstrong_buzz	Easy	What did Neil Armstrong and Buzz Aldrin plant on the Moon in 1969?	The American flag	A tree	A cross	A time capsule
 his_president_promised_1961	Easy	Which US president promised in 1961 to land a man on the Moon before the decade was out?	John F. Kennedy	Dwight D. Eisenhower	Lyndon B. Johnson	Richard Nixon
 his_astronauts_last_three	Easy	What did the astronauts of the last three Apollo missions drive across the Moon?	An electric 'Moon buggy'	A small hovercraft	A tracked tractor	A rocket-powered sled
+his_space_station_built	Easy	Which space station, built by several nations, has had people living aboard without a break since 2000?	The International Space Station	The Mir space station	The Skylab station	The Tiangong station
 his_gagarin	Medium	Who was the first human to travel into space?	Yuri Gagarin	Neil Armstrong	Alan Shepard	Valentina Tereshkova
 his2_czlowiek_kosmos_rok	Medium	In which year did Yuri Gagarin fly into space?	1961	1957	1969	1965
 his2_sputnik	Medium	What was Earth's first artificial satellite called?	Sputnik 1	Vostok 1	Explorer 1	Luna 1
@@ -32,6 +33,7 @@ his_yuri_gagarin_shout	Medium	What did Yuri Gagarin shout as his rocket lifted o
 his_apollo_astronauts_returning	Medium	What did the Apollo 11 astronauts have to do after returning to Earth?	Spend three weeks in quarantine	Retire from NASA at once	Testify before the UN	Swear never to fly again
 his_russian_word_sputnik	Medium	What does the Russian word 'sputnik' mean?	Fellow traveller	Little star	Red messenger	First voice
 his_radio_call_sign	Medium	What was the radio call sign of the first woman in space?	Seagull	Swallow	Cedar	Skylark
+his_oxygen_tank_exploded	Medium	After an oxygen tank exploded on Apollo 13, what did the crew use as a 'lifeboat' to get home?	The lunar module	A spare escape capsule	The rocket's third stage	An inflatable space raft
 hx_ksiezyc_ostatni	Hard	In which year did humans last walk on the Moon?	1972	1969	1979	1985
 hy_wostok	Hard	What was the name of Yuri Gagarin's spacecraft?	Vostok 1	Sputnik 2	Soyuz 1	Apollo 1
 hy_mir	Hard	Which Soviet space station orbited Earth from 1986 to 2001?	Mir	Salyut 7	Skylab	Tiangong
@@ -49,6 +51,7 @@ his_soviet_probe_sent	Hard	Which Soviet probe sent back the first photos of the 
 his_america_satellite_launch	Hard	After America's first satellite launch blew up on the pad, which satellite became its first in orbit, in 1958?	Explorer 1	Vanguard 1	Telstar 1	Pioneer 1
 his_moon_mission_struck	Hard	Which Moon mission was struck by lightning twice in the first minute after launch?	Apollo 12	Apollo 13	Apollo 9	Apollo 15
 his_professional_geologist_walk	Hard	Who was the only professional geologist to walk on the Moon?	Harrison Schmitt	Eugene Cernan	Edgar Mitchell	Charles Duke
+his_apollo_astronaut_dropped	Hard	Which Apollo 15 astronaut dropped a hammer and a falcon feather on the Moon to show they fall at the same speed?	David Scott	James Irwin	Charles Duke	Edgar Mitchell
 hx_earthrise	Expert	Which mission took the famous 'Earthrise' photo from lunar orbit in 1968?	Apollo 8	Apollo 11	Apollo 13	Gemini 7
 his_soviet_probe_made	Expert	Which Soviet probe made the first soft landing on the Moon, in 1966?	Luna 9	Sputnik 3	Lunokhod 1	Vostok 2
 his_became_woman_walk	Expert	Who became the first woman to walk in space, in 1984?	Svetlana Savitskaya	Valentina Tereshkova	Sally Ride	Kathryn Sullivan
@@ -57,3 +60,4 @@ his_soviet_cosmonauts_carry	Expert	Why did Soviet cosmonauts carry a special gun
 his_unable_get_life	Expert	Unable to get life insurance, what did the Apollo 11 crew sign by the hundreds for their families?	Envelopes their families could sell	Photos for a charity auction	Letters to the president	Contracts with a TV network
 his_cosmonaut_mir_soviet	Expert	Which cosmonaut was up on Mir as the Soviet Union collapsed, and came home to a different country in 1992?	Sergei Krikalev	Valeri Polyakov	Alexei Leonov	Gennady Padalka
 his_mission_three_cosmonauts	Expert	Which mission's three cosmonauts, lost in 1971, are the only people to have died in space itself?	Soyuz 11	Soyuz 1	Salyut 7	Voskhod 2
+his_astronaut_smuggled_corned	Expert	Which astronaut smuggled a corned beef sandwich onto Gemini 3 in 1965, upsetting members of Congress?	John Young	Gus Grissom	Ed White	Pete Conrad
