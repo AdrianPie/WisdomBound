@@ -25,3 +25,4 @@ art/
 
 # Sekrety serwera
 .env
+__pycache__/
