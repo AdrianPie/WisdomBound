@@ -20,6 +20,8 @@ Typowa sesja dopisywania pytan (szczegoly: domain/quizbank/README.md):
     python3 tools/quizbank.py check nowe.txt         # sprawdz nowe pytania - niczego nie zapisuje
     python3 tools/quizbank.py add nowe.txt           # check + dopisz do TSV + wygeneruj Kotlin
     python3 tools/quizbank.py move ID... --to DZIAL  # przenies pytania do innego dzialu
+    python3 tools/quizbank.py list biology -w -i     # podglad z blednymi odpowiedziami i id - do przegladu
+    python3 tools/quizbank.py fix poprawki.txt       # popraw albo usun istniejace pytania po id (check jak przy add)
     python3 tools/quizbank.py plan history=500 geography=300   # tura: rozdziel pytania na dzialy, napisz zlecenia
     python3 tools/quizbank.py generate [--check]     # TSV -> Kotlin (--check: tylko porownaj)
 
@@ -1198,6 +1200,8 @@ def cmd_list(args) -> int:
     wide = len({q.place for q in picked}) > 1
     for q in picked:
         line = f"{LETTER[q.level]} | {q.prompt} -> {q.correct}"
+        if args.ids:
+            line = f"{q.id} " + line
         if args.wrong:
             line += "  (" + " / ".join(q.wrong) + ")"
         if wide:
@@ -1307,6 +1311,93 @@ def cmd_move(args) -> int:
     insert_into_tsv(target.tsv, moving)
     result = cmd_generate(argparse.Namespace(check=False))
     print(f"Przeniesiono {len(moving)} pytan do {target.name}.")
+    return result
+
+
+def read_fixes(path: str) -> tuple[list[tuple[str, list[str]]], list[str]]:
+    """Plik poprawek: naglowek `id | difficulty | prompt | correct | wrong1 | wrong2 | wrong3`, potem
+    jedna linia na pytanie - cale nowe brzmienie pytania o tym id albo samo `id | DELETE`."""
+    fixes: list[tuple[str, list[str]]] = []
+    problems: list[str] = []
+    header = None
+    name = os.path.basename(path)
+    with open(path, encoding="utf-8") as f:
+        for lineno, raw in enumerate(f, 1):
+            line = raw.rstrip("\r\n")
+            if not line.strip() or line.lstrip().startswith("#"):
+                continue
+            sep = "\t" if "\t" in line else "|"
+            cells = [c.strip() for c in line.split(sep)]
+            if header is None:
+                header = [NEW_COLUMN_ALIASES.get(c.lower(), c.lower()) for c in cells]
+                if header != COLUMNS:
+                    sys.exit(f"{path}:{lineno}: naglowek {header}, oczekiwany {COLUMNS}")
+                continue
+            if len(cells) >= 2 and cells[1].upper() == "DELETE":
+                fixes.append((cells[0], []))
+            elif len(cells) == len(COLUMNS):
+                fixes.append((cells[0], cells[1:] + [f"{name}:{lineno}"]))
+            else:
+                problems.append(f"{name}:{lineno}: {len(cells)} kolumn zamiast {len(COLUMNS)} (albo `id | DELETE`)")
+    return fixes, problems
+
+
+def replace_in_tsv(path: str, q: Question) -> None:
+    with open(path, encoding="utf-8") as f:
+        lines = f.read().rstrip("\n").split("\n")
+    lines = [q.tsv_line() if not line.startswith("#") and line.split("\t")[0] == q.id else line for line in lines]
+    with open(path, "w", encoding="utf-8") as f:
+        f.write("\n".join(lines) + "\n")
+
+
+def cmd_fix(args) -> int:
+    bank = load_bank()
+    by_id = {q.id: q for q in bank.choice}
+    fixes, problems = [], []
+    for path in args.files:
+        f, p = read_fixes(path)
+        fixes += f
+        problems += p
+    ids = [i for i, _ in fixes]
+    problems += [f"nie ma pytania wyboru o id {i}" for i in ids if i not in by_id]
+    problems += [f"id {i} poprawione wiecej niz raz" for i, n in Counter(ids).items() if n > 1]
+    deleted = {i for i, cells in fixes if not cells and i in by_id}
+    changed: list[Question] = []
+    for qid, cells in fixes:
+        if not cells or qid not in by_id:
+            continue
+        old = by_id[qid]
+        level = LEVEL_BY_ALIAS.get(cells[0].lower())
+        if level is None:
+            problems.append(f"{cells[-1]}: nieznany poziom {cells[0]!r}")
+            continue
+        changed.append(Question(old.topic, level, qid, cells[1], cells[2], cells[3:6], cells[-1], old.section))
+    # Poprawione pytania sprawdzane sa tak jak nowe - wobec banku bez nich samych i bez usuwanych.
+    gone = deleted | {q.id for q in changed}
+    rest = Bank([q for q in bank.choice if q.id not in gone], bank.others, bank.sections)
+    report = check_questions(changed, rest, load_rules())
+    if problems or any(report.errors.values()) or args.dry_run:
+        print_report(changed, report, problems)
+        if problems or any(report.errors.values()):
+            print("\nNic nie zapisano - popraw bledy.")
+            return 1
+        print(f"\n(--dry-run) Poprawek: {len(changed)}, do usuniecia: {len(deleted)}.")
+        return 0
+    for qid in deleted:
+        target, _ = resolve_target(by_id[qid].place, bank.sections)
+        remove_from_tsv(target.tsv, {qid})
+    for q in changed:
+        target, _ = resolve_target(q.place, bank.sections)
+        if q.level == by_id[q.id].level:
+            replace_in_tsv(target.tsv, q)
+        else:
+            remove_from_tsv(target.tsv, {q.id})
+            insert_into_tsv(target.tsv, [q])
+    result = cmd_generate(argparse.Namespace(check=False))
+    print(f"Poprawiono {len(changed)} pytan, usunieto {len(deleted)}.")
+    n_warn = sum(1 for i in range(len(changed)) if report.warnings.get(i))
+    if n_warn:
+        print(f"({n_warn} poprawionych pytan ma uwagi - `fix --dry-run` je pokaze)")
     return result
 
 
@@ -1493,6 +1584,7 @@ def main() -> int:
     p.add_argument("-d", "--difficulty", help="E/M/H/X albo Easy/Medium/Hard/Expert")
     p.add_argument("-g", "--grep", help="tylko linie pasujace do wyrazenia regularnego")
     p.add_argument("-w", "--wrong", action="store_true", help="pokaz tez bledne odpowiedzi")
+    p.add_argument("-i", "--ids", action="store_true", help="pokaz tez id pytan (do `fix`)")
 
     p = sub.add_parser("find", help="szukaj w calym banku (wszystkie typy pytan)")
     p.add_argument("pattern", help="wyrazenie regularne, bez rozrozniania wielkosci liter")
@@ -1511,6 +1603,10 @@ def main() -> int:
     p.add_argument("ids", nargs="+")
     p.add_argument("--to", required=True, help="dzial docelowy (history/antiquity/roman_empire) albo temat")
 
+    p = sub.add_parser("fix", help="popraw albo usun istniejace pytania (po id) - plik poprawek")
+    p.add_argument("files", nargs="+")
+    p.add_argument("-n", "--dry-run", action="store_true", help="tylko sprawdz poprawki i wypisz uwagi")
+
     p = sub.add_parser("plan", help="rozdziel N nowych pytan na dzialy i poziomy, napisz zlecenia dla autorow")
     p.add_argument("targets", nargs="+", help="temat, galaz albo dzial z liczba: history=500 geography/physical=200")
     p.add_argument("-o", "--out", default=os.path.join(tempfile.gettempdir(), "quizbank-plan"),
@@ -1524,7 +1620,7 @@ def main() -> int:
     args = parser.parse_args()
     handlers = {
         "stats": cmd_stats, "list": cmd_list, "find": cmd_find, "check": cmd_check,
-        "add": cmd_add, "move": cmd_move, "plan": cmd_plan, "generate": cmd_generate,
+        "add": cmd_add, "move": cmd_move, "fix": cmd_fix, "plan": cmd_plan, "generate": cmd_generate,
     }
     return handlers[args.command](args)
 

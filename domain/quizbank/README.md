@@ -90,6 +90,24 @@ Zlecenie `brief_NN.md` (domyslnie ~100 pytan, `-b`) ma tabele "dzial x poziom", 
 dzialu z komentarza pliku, sasiednie dzialy i liste pytan, ktore juz w dziale sa - autor nie musi
 niczego szukac, zeby nie dublowac. Zasady dla autorow: **`WRITING_GUIDE.md`**.
 
+## Poprawki istniejacych pytan (`fix`)
+
+Bank pisalo wielu autorow, wiec co jakis czas warto go przejrzec: zly fakt, druga poprawna
+odpowiedz wsrod blednych, przestarzaly rekord, za latwe Expert albo za trudne Easy.
+
+```bash
+python3 tools/quizbank.py list biology -w -i > /tmp/biology.txt   # pytania z id i blednymi odpowiedziami
+#   recenzent pisze /tmp/poprawki.txt wg REVIEW_GUIDE.md
+python3 tools/quizbank.py fix -n /tmp/poprawki.txt                 # sprawdz (jak `check`), nic nie zapisuje
+python3 tools/quizbank.py fix /tmp/poprawki.txt                    # zapisz + wygeneruj Kotlin
+```
+
+Plik poprawek ma naglowek `id | difficulty | prompt | correct | wrong1 | wrong2 | wrong3` i jedna
+linie na pytanie: cale nowe brzmienie pytania o tym id (zostaje w tym samym miejscu pliku, a przy
+zmianie poziomu przechodzi do bloku nowego poziomu) albo samo `id | DELETE`. Poprawione pytania
+przechodza te same sprawdzenia co nowe, wobec banku bez nich samych. Zasady przegladu:
+**`REVIEW_GUIDE.md`**.
+
 ## Dopisywanie pytan - cala sesja
 
 ```bash

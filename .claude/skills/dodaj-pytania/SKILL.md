@@ -63,3 +63,16 @@ Osobne commity na temat albo na grupe partii, wiadomosc po polsku bez polskich z
 "Historia: 500 nowych pytan (sredniowiecze, XIX wiek, ...)". Potem push na galaz robocza.
 W raporcie dla uzytkownika: ile pytan doszlo w ktorym temacie/dziale, co wyrzucono w przegladzie
 i wynik testow.
+
+## Przeglad i poprawki istniejacych pytan
+
+Gdy uzytkownik prosi o poprawki ("poprawiaj"), albo co kilka tur: recenzenci w tle, kazdy z jednym
+tematem lub dzialem (do ~1000 pytan), z poleceniem:
+
+> Read domain/quizbank/REVIEW_GUIDE.md and domain/quizbank/WRITING_GUIDE.md. Review every question of
+> `<temat>` (`python3 tools/quizbank.py list <temat> -w -i`). Write fixes to `<rN>/fix_<temat>.txt`,
+> run `python3 tools/quizbank.py fix -n <file>` until 0 errors. Do not run fix without -n and do not
+> modify repo files. Reply with path, counts and one line per factual fix.
+
+Potem samemu: przeczytaj kazda poprawke (recenzent tez sie myli - odrzuc zmiany bez powodu z
+REVIEW_GUIDE), `fix -n` na wszystkich plikach razem, `fix`, testy, commit "Poprawki: ...".
