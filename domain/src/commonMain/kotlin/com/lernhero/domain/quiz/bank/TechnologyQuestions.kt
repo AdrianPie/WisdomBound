@@ -170,7 +170,11 @@ object TechnologyQuestions {
         q("tec_amazon_owned_site", "On which Amazon-owned site do millions watch people play video games live?", "Twitch", listOf("YouTube", "Steam", "Discord"), E),
         q("tec_apple_built_video", "What is the name of Apple's built-in video-calling app?", "FaceTime", listOf("Skype", "Duo", "Zoom"), E),
         q("tec_dating_app_tinder", "On the dating app Tinder, what does swiping right on a profile mean?", "You like them", listOf("You want to skip them", "You want to report them", "You want to block them"), E),
-        q("tec_mobile_phone_little", "On a mobile phone, what do the little rising bars at the top of the screen show?", "Signal strength", listOf("Battery level", "Volume", "Storage space"), E)
+        q("tec_mobile_phone_little", "On a mobile phone, what do the little rising bars at the top of the screen show?", "Signal strength", listOf("Battery level", "Volume", "Storage space"), E),
+        q("tec_shouldn_put_metal", "Why shouldn't you put a metal fork in a microwave oven?", "It can cause sparks", listOf("It makes the food toxic", "It turns the fork magnetic", "It switches the oven off"), E),
+        q("tec_files_stored_cloud", "When files are stored 'in the cloud', where are they really?", "On remote servers in data centres", listOf("Inside satellites in orbit", "Hidden in your phone's SIM card", "In the air as radio waves"), E),
+        q("tec_firewall_job_computer", "What is a firewall's job on a computer network?", "Blocking unwanted network traffic", listOf("Cooling down an overheating processor", "Backing up your files every night", "Making your downloads run faster"), E),
+        q("tec_two_factor_authentication", "What is two-factor authentication?", "Proving who you are in two separate ways", listOf("Using two different passwords on one site", "Letting two people share one account", "Changing your password twice a year"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -393,7 +397,13 @@ object TechnologyQuestions {
         q("tec_video_app_shut", "Which video app, shut down in 2017, limited every clip to six seconds?", "Vine", listOf("Periscope", "Musical.ly", "Snapchat"), M),
         q("tec_made_snapchat_stand", "What made Snapchat stand out when it launched in 2011?", "Its photos vanished after viewing", listOf("It allowed only black-and-white photos", "It let you post one photo a day", "It showed friends on a live map"), M),
         q("tec_company_makes_roomba", "Which company makes the Roomba robot vacuum?", "iRobot", listOf("Dyson", "Samsung", "Philips"), M),
-        q("tec_phone_touchscreens_ignore", "Why do most phone touchscreens ignore you when you wear ordinary gloves?", "They need skin to conduct electricity", listOf("They need the warmth of a finger", "They read your fingerprints", "Gloves are too soft to press them"), M)
+        q("tec_phone_touchscreens_ignore", "Why do most phone touchscreens ignore you when you wear ordinary gloves?", "They need skin to conduct electricity", listOf("They need the warmth of a finger", "They read your fingerprints", "Gloves are too soft to press them"), M),
+        q("tec_word_modem_short", "The word 'modem' is short for what?", "Modulator-demodulator", listOf("Mobile data emitter", "Modular electronic memory", "Model data machine"), M),
+        q("tec_radar_stand", "What does 'radar' stand for?", "Radio detection and ranging", listOf("Radial distance and range", "Radio alert and alarm", "Remote area detection and reporting"), M),
+        q("tec_scuba_stand", "What does 'scuba' stand for?", "Self-contained underwater breathing apparatus", listOf("Sealed cylinder for underwater breathing air", "Submarine crew underwater breathing aid", "Standard compressed underwater breathing air"), M),
+        q("tec_nft_stand", "What does 'NFT' stand for?", "Non-fungible token", listOf("Network file transfer", "New financial technology", "Numbered format token"), M),
+        q("tec_chatbot_hallucinates", "When an AI chatbot 'hallucinates', what does it do?", "States made-up things as if they were true", listOf("Starts answering in random languages", "Shows pictures nobody asked for", "Freezes and refuses to answer"), M),
+        q("tec_engineer_designed_original", "Which engineer designed the original Volkswagen Beetle?", "Ferdinand Porsche", listOf("Karl Benz", "Gottlieb Daimler", "Ettore Bugatti"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -532,7 +542,15 @@ object TechnologyQuestions {
         q("tec_often_said_thing", "What is often said to be the first thing ever bought securely online, in 1994?", "A Sting CD", listOf("A bottle of wine", "A pair of jeans", "A train ticket"), H),
         q("tec_world_web_server", "The world's first web server, at CERN, carried a handwritten label warning staff not to do what?", "Switch it off", listOf("Move it", "Spill coffee on it", "Unplug the mouse"), H),
         q("tec_xbox_began_shortening", "The name 'Xbox' began as a shortening of what?", "DirectX Box", listOf("Extreme Box", "X-Ray Box", "Xenon Box"), H),
-        q("tec_cruise_control_invented", "Cruise control was invented by Ralph Teetor, an engineer who had what unusual trait?", "He was blind", listOf("He was deaf", "He was colour-blind", "He had lost both arms"), H)
+        q("tec_cruise_control_invented", "Cruise control was invented by Ralph Teetor, an engineer who had what unusual trait?", "He was blind", listOf("He was deaf", "He was colour-blind", "He had lost both arms"), H),
+        q("tec_jacquard_loom_1804", "The Jacquard loom of 1804, which inspired early computers, wove patterns controlled by what?", "Punched cards", listOf("Spinning cams", "Glass marbles", "Wax cylinders"), H),
+        q("tec_oled_screens_stand", "In 'OLED' screens, what does the 'O' stand for?", "Organic", listOf("Optical", "Oxide", "Ordered"), H),
+        q("tec_patented_windscreen_wiper", "Who patented the windscreen wiper in 1903?", "Mary Anderson", listOf("Henry Ford", "Bertha Benz", "Garrett Morgan"), H),
+        q("tec_samsung_began_1938", "Samsung began in 1938 as a small shop trading in what?", "Dried fish and noodles", listOf("Silk and cotton", "Bicycle parts", "Valve radios"), H),
+        q("tec_car_maker_badge", "Which car maker's badge shows a serpent swallowing a man?", "Alfa Romeo", listOf("Maserati", "Lancia", "Ferrari"), H),
+        q("tec_volvo_circle_arrow", "Volvo's circle-and-arrow logo is the ancient symbol for which metal?", "Iron", listOf("Copper", "Gold", "Lead"), H),
+        q("tec_country_opened_nuclear", "Which country opened the first nuclear power station to supply an electricity grid, in 1954?", "The Soviet Union", listOf("The United States", "Britain", "France"), H),
+        q("tec_1975_kit_computer", "Which 1975 kit computer, sold by mail order, kick-started the personal computer craze?", "The Altair 8800", listOf("The Apple I", "The Commodore PET", "The IBM 5150"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -593,6 +611,11 @@ object TechnologyQuestions {
         q("tec_luxury_car_brand", "Which luxury car brand grew out of a company that Henry Ford walked away from in 1902?", "Cadillac", listOf("Lincoln", "Buick", "Packard"), X),
         q("tec_1896_english_driver", "In 1896, an English driver got one of the first speeding fines. Roughly how fast was he going?", "About 8 mph", listOf("About 20 mph", "About 40 mph", "About 70 mph"), X),
         q("tec_bell_labs_engineers", "Bell Labs engineers who put the # key on telephone keypads gave it which name?", "Octothorpe", listOf("Octagram", "Tetragram", "Crossbar"), X),
-        q("tec_clickable_banner_advert", "The first clickable banner advert on the web, in 1994, was paid for by which company?", "AT&T", listOf("IBM", "Coca-Cola", "Microsoft"), X)
+        q("tec_clickable_banner_advert", "The first clickable banner advert on the web, in 1994, was paid for by which company?", "AT&T", listOf("IBM", "Coca-Cola", "Microsoft"), X),
+        q("tec_herman_hollerith_punched", "Herman Hollerith's punched-card tabulating machines were first used to count what?", "The 1890 US census", listOf("Railway tickets in New York", "Votes in a US election", "Bank cheques in London"), X),
+        q("tec_program_released_1979", "Which program, released in 1979, was the first spreadsheet for personal computers?", "VisiCalc", listOf("Lotus 1-2-3", "Excel", "SuperCalc"), X),
+        q("tec_swedish_american_engineer", "Which Swedish-American engineer perfected the modern zip in 1913?", "Gideon Sundback", listOf("Whitcomb Judson", "Elias Howe", "Walter Hunt"), X),
+        q("tec_programming_language_john", "Which programming language did John McCarthy create in 1958 for artificial intelligence research?", "LISP", listOf("Prolog", "Smalltalk", "ALGOL"), X),
+        q("tec_company_sold_quartz", "Which company sold the first quartz wristwatch, the Astron, in 1969?", "Seiko", listOf("Casio", "Citizen", "Omega"), X)
     )
 }

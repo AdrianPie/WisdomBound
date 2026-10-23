@@ -193,7 +193,11 @@ object AnimalQuestions {
         q("ani_must_giraffe_drink", "What must a giraffe do to drink from a pond?", "Spread its front legs wide apart", listOf("Lie down on its side", "Rear up on its hind legs", "Suck water up through its nose"), E),
         q("ani_chewed_food_cows", "What is the chewed food that cows bring back up from their stomach to chew again called?", "Cud", listOf("Silage", "Mash", "Chaff"), E),
         q("ani_small_pet_run", "Which small pet can run several kilometres in one night on its exercise wheel?", "The hamster", listOf("The rabbit", "The guinea pig", "The tortoise"), E),
-        q("ani_farmyard_birds_often", "Which farmyard birds are often kept as noisy 'guards' because they honk and chase off intruders?", "Geese", listOf("Chickens", "Ducks", "Turkeys"), E)
+        q("ani_farmyard_birds_often", "Which farmyard birds are often kept as noisy 'guards' because they honk and chase off intruders?", "Geese", listOf("Chickens", "Ducks", "Turkeys"), E),
+        q("ani_contrary_popular_myth", "Contrary to the popular myth, how long can a goldfish remember things?", "For months", listOf("About three seconds", "About a minute", "About an hour"), E),
+        q("ani_actually_makes_bull", "What actually makes a bull charge at a matador's cape?", "The cape's movement", listOf("Its red colour", "The crowd's noise", "The smell of the cloth"), E),
+        q("ani_venison_meat_animal", "Venison is the meat of which animal?", "Deer", listOf("Wild boar", "Rabbit", "Goose"), E),
+        q("ani_colour_live_lobsters", "What colour are most live lobsters before they are cooked?", "Dark greenish-brown", listOf("Bright red", "Pale pink", "Pure white"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -458,7 +462,14 @@ object AnimalQuestions {
         q("ani_sudan_died_kenya", "Sudan, who died in Kenya in 2018, was the last male of which animal?", "The northern white rhino", listOf("The Sumatran tiger", "The mountain gorilla", "The Grevy's zebra"), M),
         q("ani_clever_hans_german", "Clever Hans, a famous German horse of the early 1900s, seemed to be able to do what?", "Solve arithmetic problems", listOf("Speak a few German words", "Paint simple pictures", "Play tunes on a piano"), M),
         q("ani_greyfriars_bobby_terrier", "Greyfriars Bobby, a terrier said to have guarded his master's grave for 14 years, lived in which city?", "Edinburgh", listOf("Dublin", "London", "Glasgow"), M),
-        q("ani_single_bound_roughly", "In one single bound, roughly how far can a red kangaroo leap at most?", "About 8 metres", listOf("About 3 metres", "About 20 metres", "About 1.5 metres"), M)
+        q("ani_single_bound_roughly", "In one single bound, roughly how far can a red kangaroo leap at most?", "About 8 metres", listOf("About 3 metres", "About 20 metres", "About 1.5 metres"), M),
+        q("ani_farm_animal_learned", "Which farm animal has learned to play simple video games with a joystick?", "The pig", listOf("The cow", "The sheep", "The goat"), M),
+        q("ani_almost_never_see", "Why do you almost never see baby pigeons?", "They leave the nest almost fully grown", listOf("They hatch only in the depths of winter", "They spend their first weeks underground", "Most of them are raised far out at sea"), M),
+        q("ani_blue_whales_use", "What do blue whales use instead of teeth to filter their food?", "Baleen plates", listOf("Gill rakers", "Bony ridges", "Rows of bristly tusks"), M),
+        q("ani_flamingos_hold_heads", "How do flamingos hold their heads while they feed?", "Upside down", listOf("Tilted sideways", "Fully under the mud", "High above the water"), M),
+        q("ani_sea_creature_some", "Which sea creature can, in some species, regrow a whole new body from a single severed arm?", "The starfish", listOf("The octopus", "The crab", "The sea urchin"), M),
+        q("ani_rodents_laugh_high", "Which rodents 'laugh' with high-pitched chirps when scientists tickle them?", "Rats", listOf("Hamsters", "Guinea pigs", "Squirrels"), M),
+        q("ani_guano_once_fortune", "Guano, once a fortune-making fertiliser, is the droppings of which animals?", "Seabirds and bats", listOf("Cattle and sheep", "Pigs and goats", "Horses and donkeys"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -623,7 +634,15 @@ object AnimalQuestions {
         q("ani_old_elephants_starve", "Old elephants can starve to death after wearing out their last set of what?", "Molar teeth", listOf("Tusks", "Trunk muscles", "Foot pads"), H),
         q("ani_geckos_eyelids_keep", "Most geckos have no eyelids. How do they keep their eyes clean?", "By licking them", listOf("By weeping thick tears", "By dipping their heads in water", "By shedding an eye scale daily"), H),
         q("ani_woolly_mammoths_still", "Woolly mammoths still lived on Wrangel Island in the Arctic while which was being built?", "The Great Pyramid of Giza", listOf("The Colosseum in Rome", "The Parthenon in Athens", "The Great Wall of China"), H),
-        q("ani_giant_relative_manatee", "Which giant relative of the manatee was hunted to extinction within about 27 years of being discovered in 1741?", "Steller's sea cow", listOf("The great auk", "The dodo", "The Caribbean monk seal"), H)
+        q("ani_giant_relative_manatee", "Which giant relative of the manatee was hunted to extinction within about 27 years of being discovered in 1741?", "Steller's sea cow", listOf("The great auk", "The dodo", "The Caribbean monk seal"), H),
+        q("ani_hearts_earthworm", "How many hearts does an earthworm have?", "Five", listOf("One", "Two", "Ten"), H),
+        q("ani_some_horned_lizards", "How do some horned lizards defend themselves against predators?", "By squirting blood from their eyes", listOf("By shedding their whole skin", "By spitting venom at the eyes", "By puffing up into a ball"), H),
+        q("ani_songbird_nicknamed_butcher", "Which songbird, nicknamed the 'butcher bird', impales its prey on thorns?", "The shrike", listOf("The magpie", "The jay", "The starling"), H),
+        q("ani_dog_breed_originally", "Which dog breed was originally bred in southern Africa to help hunt lions?", "The Rhodesian Ridgeback", listOf("The Great Dane", "The Bullmastiff", "The Saluki"), H),
+        q("ani_cat_breed_nicknamed", "Which cat breed is nicknamed 'the swimming cat' for its love of water?", "The Turkish Van", listOf("The Siamese", "The Persian", "The Ragdoll"), H),
+        q("ani_bird_nest_soup", "Bird's nest soup is made from nests built mainly from what?", "Swiftlet saliva", listOf("Woven grass and mud", "Seaweed and feathers", "Caterpillar silk"), H),
+        q("ani_group_giant_pandas", "What is a group of giant pandas sometimes called?", "An embarrassment", listOf("A bamboozle", "A cuddle", "A shrug"), H),
+        q("ani_proteins_rex_bone", "Proteins from a T. rex bone most closely matched those of which living animal?", "The chicken", listOf("The crocodile", "The Komodo dragon", "The iguana"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -692,6 +711,12 @@ object AnimalQuestions {
         q("ani_happens_eyes_arctic", "What happens to the eyes of Arctic reindeer in the long dark of winter?", "They change colour from gold to blue", listOf("They grow a third eyelid", "They swell to twice their size", "They turn completely black"), X),
         q("ani_norwegian_dog_breed", "Which Norwegian dog breed, once used to hunt puffins on cliffs, has at least six toes on each foot?", "The Norwegian Lundehund", listOf("The Norwegian Elkhound", "The Finnish Spitz", "The Icelandic Sheepdog"), X),
         q("ani_rueppell_vulture_holds", "A Rueppell's vulture holds the bird altitude record after it hit a plane at roughly what height?", "About 11 km", listOf("About 3 km", "About 6 km", "About 20 km"), X),
-        q("ani_now_extinct_gastric", "The now-extinct gastric-brooding frog of Australia raised its young where?", "In its stomach", listOf("In its mouth", "In pockets on its back", "In a foam nest"), X)
+        q("ani_now_extinct_gastric", "The now-extinct gastric-brooding frog of Australia raised its young where?", "In its stomach", listOf("In its mouth", "In pockets on its back", "In a foam nest"), X),
+        q("ani_tiny_insects_born", "Which tiny insects can be born already pregnant?", "Aphids", listOf("Fleas", "Termites", "Mosquitoes"), X),
+        q("ani_olm_blind_salamander", "The olm, a blind salamander of European caves, can survive without food for about how long?", "Up to ten years", listOf("About a month", "About a year", "About three years"), X),
+        q("ani_mammal_shortest_pregnancies", "Which mammal has one of the shortest pregnancies, only about 12 days?", "The Virginia opossum", listOf("The house mouse", "The rabbit", "The hamster"), X),
+        q("ani_flehmen_response_cat", "What is the 'flehmen response', when a cat or horse curls back its upper lip?", "A way of taking in scents", listOf("A sign of extreme anger", "A way of cooling the mouth", "A warning call to the herd"), X),
+        q("ani_rodent_live_over", "Which rodent can live over 30 years and almost never gets cancer?", "The naked mole-rat", listOf("The capybara", "The chinchilla", "The porcupine"), X),
+        q("ani_some_deep_sea", "In some deep-sea anglerfish, what happens to the tiny male?", "He fuses permanently onto the female", listOf("He becomes the female's glowing lure", "He is eaten right after mating", "He guards the eggs inside his mouth"), X)
     )
 }

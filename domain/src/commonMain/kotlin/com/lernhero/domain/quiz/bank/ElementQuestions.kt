@@ -84,7 +84,8 @@ object ElementQuestions {
         q("ele_mixture_metals_like", "What is a mixture of metals, like steel or brass, called?", "An alloy", listOf("An ore", "An isotope", "A crystal"), E),
         q("ele_antiperspirants_block_sweat", "Most antiperspirants block sweat using compounds of which metal?", "Aluminium", listOf("Iron", "Copper", "Silver"), E),
         q("ele_traditional_church_bells", "Traditional church bells are cast from which alloy?", "Bronze", listOf("Brass", "Pewter", "Steel"), E),
-        q("ele_band_led_zeppelin", "The band Led Zeppelin took its name from a joke about a balloon made of which metal?", "Lead", listOf("Iron", "Tin", "Mercury"), E)
+        q("ele_band_led_zeppelin", "The band Led Zeppelin took its name from a joke about a balloon made of which metal?", "Lead", listOf("Iron", "Tin", "Mercury"), E),
+        q("ele_recreational_scuba_divers", "What do recreational scuba divers usually breathe from their tanks?", "Ordinary compressed air", listOf("Pure oxygen", "A helium-oxygen mix", "Pure nitrogen"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -187,7 +188,12 @@ object ElementQuestions {
         q("ele_physicist_element_100", "Which physicist is element 100 named after?", "Enrico Fermi", listOf("Niels Bohr", "Max Planck", "Ernest Rutherford"), M),
         q("ele_emeralds_green_variety", "Emeralds are a green variety of which mineral?", "Beryl", listOf("Corundum", "Quartz", "Topaz"), M),
         q("ele_white_chalk_gymnasts", "The white 'chalk' that gymnasts and climbers rub on their hands is a carbonate of which metal?", "Magnesium", listOf("Calcium", "Sodium", "Zinc"), M),
-        q("ele_heated_hot_enough", "If heated hot enough in air, what does a diamond do?", "It burns away", listOf("It melts into glass", "Nothing at all", "It hardens even further"), M)
+        q("ele_heated_hot_enough", "If heated hot enough in air, what does a diamond do?", "It burns away", listOf("It melts into glass", "Nothing at all", "It hardens even further"), M),
+        q("ele_human_body_holds", "The human body holds enough of which metal to forge a small nail?", "Iron", listOf("Zinc", "Copper", "Magnesium"), M),
+        q("ele_element_honours_marie", "Which element honours Marie and Pierre Curie?", "Curium", listOf("Polonium", "Radium", "Francium"), M),
+        q("ele_nickel_silver_used", "Nickel silver, used for keys, zips and cutlery, contains how much silver?", "None at all", listOf("About 10%", "About 25%", "About 50%"), M),
+        q("ele_gas_bubbling_out", "Which gas bubbling out of the blood gives divers 'the bends' if they surface too fast?", "Nitrogen", listOf("Oxygen", "Helium", "Carbon dioxide"), M),
+        q("ele_striking_strip_box", "The striking strip on a box of safety matches contains which element?", "Phosphorus", listOf("Sulfur", "Magnesium", "Potassium"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -266,7 +272,11 @@ object ElementQuestions {
         q("ele_nitinol_memory_metal", "Nitinol, the 'memory metal' in bendable glasses frames, mixes nickel with which metal?", "Titanium", listOf("Tin", "Iron", "Copper"), H),
         q("ele_element_117_partly", "Element 117, partly discovered at the Oak Ridge laboratory, is named after which US state?", "Tennessee", listOf("Texas", "Ohio", "Nevada"), H),
         q("ele_nickel_comes_kupfernickel", "Nickel's name comes from 'Kupfernickel', which German miners took to mean what?", "Devil's copper", listOf("Little copper", "False silver", "Grey stone"), H),
-        q("ele_flint_cigarette_lighter", "The 'flint' in a cigarette lighter is mostly an alloy of iron and which element?", "Cerium", listOf("Zinc", "Nickel", "Tungsten"), H)
+        q("ele_flint_cigarette_lighter", "The 'flint' in a cigarette lighter is mostly an alloy of iron and which element?", "Cerium", listOf("Zinc", "Nickel", "Tungsten"), H),
+        q("ele_roughly_temperature_liquid", "At roughly what temperature does liquid nitrogen boil?", "-196 °C", listOf("-78 °C", "-120 °C", "-273 °C"), H),
+        q("ele_tin_objects_crumble", "Why can tin objects crumble into grey powder in a harsh winter?", "Tin changes its crystal form in the cold", listOf("Frost cracks the tin oxide layer", "Ice crystals grow inside the metal", "Cold air makes tin rust faster"), H),
+        q("ele_green_wallpaper_dye", "A green wallpaper dye that may have slowly poisoned Napoleon on St Helena contained which element?", "Arsenic", listOf("Mercury", "Lead", "Thallium"), H),
+        q("ele_since_1992_british", "Since 1992, British 1p and 2p coins have been made of copper-plated what?", "Steel", listOf("Zinc", "Aluminium", "Nickel"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -319,6 +329,12 @@ object ElementQuestions {
         q("ele_element_greek_word_3", "Which element is named after the Greek word for 'rainbow', for its colourful salts?", "Iridium", listOf("Chromium", "Rhodium", "Bismuth"), X),
         q("ele_metal_comes_greek", "Which metal's name comes from the Greek for 'stone', as it was first found in a mineral?", "Lithium", listOf("Calcium", "Barium", "Strontium"), X),
         q("ele_element_118_last", "Element 118, the last in today's periodic table, honours which scientist?", "Yuri Oganessian", listOf("Glenn Seaborg", "Ernest Rutherford", "Niels Bohr"), X),
-        q("ele_caesium_comes_latin", "Caesium's name comes from the Latin for what, after the lines in its spectrum?", "Sky blue", listOf("Blood red", "Pale green", "Pure white"), X)
+        q("ele_caesium_comes_latin", "Caesium's name comes from the Latin for what, after the lines in its spectrum?", "Sky blue", listOf("Blood red", "Pale green", "Pure white"), X),
+        q("ele_nickel_kupfernickel_german", "Nickel is named after 'Kupfernickel', a German miners' word meaning what?", "Copper demon", listOf("Copper coin", "Little copper", "False silver"), X),
+        q("ele_mendeleev_predicted_eka", "Mendeleev predicted 'eka-silicon' in 1871. Under what name was it found 15 years later?", "Germanium", listOf("Gallium", "Scandium", "Selenium"), X),
+        q("ele_hafnium_latin_city", "Hafnium is named after the Latin name of which city?", "Copenhagen", listOf("Stockholm", "Paris", "Berlin"), X),
+        q("ele_element_more_stable", "Which element has more stable isotopes than any other, ten in all?", "Tin", listOf("Lead", "Iron", "Xenon"), X),
+        q("ele_niobium_niobe_daughter", "Niobium is named after Niobe, daughter of which mythical king whose own element it is always found with?", "Tantalus", listOf("Midas", "Sisyphus", "Minos"), X),
+        q("ele_carl_scheele_joseph", "Carl Scheele and Joseph Priestley independently discovered which element in the 1770s?", "Oxygen", listOf("Hydrogen", "Argon", "Phosphorus"), X)
     )
 }

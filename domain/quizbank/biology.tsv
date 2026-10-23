@@ -153,6 +153,7 @@ bio_nut_looking_like	Easy	Which nut is famous for looking like a tiny brain?	The
 bio_crop_regularly_wins	Easy	Which crop regularly wins giant-growing contests with specimens weighing over a tonne?	The pumpkin	The potato	The cabbage	The carrot
 bio_endorphins_released_exercise	Easy	What are endorphins, released during exercise and laughter?	The body's natural painkillers	Proteins that build muscle	Cells that fight germs	Enzymes that digest fat
 bio_raisins_sultanas_currants	Easy	Raisins, sultanas and currants are all dried what?	Grapes	Plums	Cherries	Figs
+bio_organ_cardiologist_treat	Easy	Which organ does a cardiologist treat?	The heart	The skin	The kidneys	The bones
 bio_chromosomy	Medium	How many chromosomes does a healthy human cell have?	46	23	48	44
 bio_chlorofil	Medium	Which pigment gives plants their green color?	Chlorophyll	Carotene	Melanin	Hemoglobin
 bio_insulina	Medium	Which organ produces insulin?	Pancreas	Liver	Kidneys	Thyroid
@@ -385,6 +386,12 @@ bio_roughly_blood_taken	Medium	Roughly how much blood is taken in a standard blo
 bio_charley_horse	Medium	What is a 'charley horse'?	A sudden painful muscle cramp	A sprained wrist	A horse-riding injury	A bad case of hiccups
 bio_tree_often_living	Medium	Which tree is often called a 'living fossil' because it has barely changed since the age of the dinosaurs?	The ginkgo	The oak	The baobab	The birch
 bio_cold_sores_around	Medium	Cold sores around the lips are caused by what?	A herpes virus	Eating too much salt	A lack of vitamin C	Biting the lip
+bio_soft_spot_newborn	Medium	What is the soft spot on a newborn baby's head called?	The fontanelle	The temple	The crown	The occiput
+bio_white_eye	Medium	What is the white of the eye called?	The sclera	The cornea	The iris	The lens
+bio_medical_tailbone	Medium	What is the medical name for the tailbone?	The coccyx	The sacrum	The pelvis	The patella
+bio_agoraphobia_fear	Medium	Agoraphobia is a fear of what?	Open or crowded places	Spiders	Heights	Small enclosed spaces
+bio_opium_morphine_come	Medium	Opium and morphine come from which flower?	The poppy	The lotus	The foxglove	The tulip
+bio_black_peppercorns_dried	Medium	Black peppercorns are the dried what of a climbing vine?	Unripe fruits	Flower buds	Root nodules	Leaf tips
 bio_mejoza	Hard	What is the cell division that produces sex cells called?	Meiosis	Mitosis	Cytokinesis	Apoptosis
 bio_mendel	Hard	Who is considered the father of genetics for his research on peas?	Gregor Mendel	Charles Darwin	James Watson	Francis Crick
 bio_mozdzek	Hard	Which part of the brain is responsible for balance and movement coordination?	Cerebellum	Cerebral cortex	Medulla oblongata	Hypothalamus
@@ -531,6 +538,13 @@ bio_some_pine_cones	Hard	Some pine cones stay sealed with resin until what opens
 bio_eating_miracle_fruit	Hard	After eating a 'miracle fruit' berry, how do lemons taste?	Sweet	Bitter	Salty	Of nothing at all
 bio_1956_paper_said	Hard	A famous 1956 paper said short-term memory holds roughly how many items?	Seven, plus or minus two	Two or three	About twenty	About a hundred
 bio_cocktail_party_effect	Hard	What is the 'cocktail party effect'?	Picking out one voice in a noisy room	Talking louder in a crowd	Forgetting names right away	Feeling tired among strangers
+bio_lack_vitamin_causes_2	Hard	Lack of which vitamin causes beriberi, once common where people lived on polished rice?	Vitamin B1	Vitamin C	Vitamin D	Vitamin A
+bio_roughly_long_single	Hard	Roughly how long does a single taste bud cell live before it is replaced?	About two weeks	About a day	About a year	A whole lifetime
+bio_philtrum	Hard	What is the 'philtrum'?	The groove between your nose and upper lip	The dip at the base of your throat	The crease inside your elbow	The fold at the corner of your eye
+bio_rubber_tree_now	Hard	The rubber tree, now grown mostly in Southeast Asia, is native to which region?	The Amazon	Central Africa	India	Madagascar
+bio_cashew_nuts_never	Hard	Why are cashew nuts never sold in their shells?	The shell holds a skin-burning oil	The shell is too hard to crack	The shell rots within days	The shell is fed to cattle
+bio_abundant_protein_human	Hard	Which is the most abundant protein in the human body?	Collagen	Keratin	Haemoglobin	Insulin
+bio_network_500_million	Hard	What is the network of about 500 million neurons lining the gut nicknamed?	The second brain	The gut clock	The inner spine	The belly web
 bio_amylaza	Expert	Which enzyme in saliva breaks down starch?	Amylase	Pepsin	Lipase	Trypsin
 bio_mrna	Expert	Which type of RNA carries genetic information from the nucleus to the ribosome?	mRNA	tRNA	rRNA	siRNA
 bio_ektoderma	Expert	Which germ layer does the nervous system develop from?	Ectoderm	Mesoderm	Endoderm	Notochord
@@ -590,3 +604,6 @@ bio_ergot_fungus_blamed	Expert	Ergot, a fungus blamed for medieval outbreaks of 
 bio_jamaica_national_fruit	Expert	Jamaica's national fruit, eaten with saltfish, is poisonous unless fully ripe. What is it?	Ackee	Breadfruit	Soursop	Jackfruit
 bio_pellagra_once_common	Expert	Pellagra, once common where people lived mainly on maize, is caused by a lack of which vitamin?	Niacin (B3)	Vitamin C	Vitamin D	Vitamin A
 bio_tiny_worm_thousand	Expert	Which tiny worm, with only about a thousand body cells, was the first animal to have its whole genome read?	The worm C. elegans	The earthworm	The tapeworm	The leech
+bio_enzyme_used_plants	Expert	Which enzyme, used by plants to capture carbon, is thought to be the most abundant protein on Earth?	RuBisCO	Chlorophyll	Amylase	Catalase
+bio_epo_hormone_abused	Expert	EPO, the hormone abused by some doping cyclists, is mainly made by which organ?	The kidneys	The liver	The pancreas	The adrenal glands
+bio_chicle_original_base	Expert	Chicle, the original base of chewing gum, is the sap of which tree?	The sapodilla	The rubber tree	The maple	The acacia

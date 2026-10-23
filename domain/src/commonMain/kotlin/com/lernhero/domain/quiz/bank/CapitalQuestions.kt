@@ -60,7 +60,9 @@ object CapitalQuestions {
         q("capy_berlin_mis", "Which animal appears on the coat of arms of Berlin?", "A bear", listOf("An eagle", "A lion", "A wolf"), E),
         q("cap_capital_iraq", "What is the capital of Iraq?", "Baghdad", listOf("Basra", "Tehran", "Damascus"), E),
         q("cap_1990_newly_reunified", "In 1990, newly reunified Germany chose which city as its capital?", "Berlin", listOf("Bonn", "Frankfurt", "Munich"), E),
-        q("cap_capital_monaco", "What is the capital of Monaco?", "Monaco", listOf("Monte Carlo", "Fontvieille", "Nice"), E)
+        q("cap_capital_monaco", "What is the capital of Monaco?", "Monaco", listOf("Monte Carlo", "Fontvieille", "Nice"), E),
+        q("cap_capital_city_stands", "Which capital city stands on the River Tiber?", "Rome", listOf("Athens", "Madrid", "Lisbon"), E),
+        q("cap_capital_city_national", "In which capital city are the National Mall and the Lincoln Memorial?", "Washington, D.C.", listOf("Philadelphia", "New York", "Boston"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -176,7 +178,10 @@ object CapitalQuestions {
         q("cap_state_capital_third", "Which US state capital is named after the third US president?", "Jefferson City", listOf("Lincoln", "Madison", "Jackson"), M),
         q("cap_capital_often_last", "Which capital is often called the last divided capital in Europe?", "Nicosia", listOf("Berlin", "Belfast", "Mostar"), M),
         q("cap_planned_indian_city", "Which planned Indian city, laid out by Le Corbusier, is the capital of two states at once?", "Chandigarh", listOf("Jaipur", "Bhubaneswar", "Gandhinagar"), M),
-        q("cap_capital_receives_dutch", "Which capital receives Dutch tulip bulbs every year, as thanks for sheltering a Dutch princess in World War II?", "Ottawa", listOf("London", "Washington, D.C.", "Canberra"), M)
+        q("cap_capital_receives_dutch", "Which capital receives Dutch tulip bulbs every year, as thanks for sheltering a Dutch princess in World War II?", "Ottawa", listOf("London", "Washington, D.C.", "Canberra"), M),
+        q("cap_capital_city_river", "Which capital city does the River Vltava flow through?", "Prague", listOf("Vienna", "Bratislava", "Budapest"), M),
+        q("cap_capital_city_see", "In which capital city can you see the Belem Tower and ride the old Tram 28?", "Lisbon", listOf("Porto", "Madrid", "Seville"), M),
+        q("cap_capital_state_tennessee", "What is the capital of the US state of Tennessee?", "Nashville", listOf("Memphis", "Knoxville", "Chattanooga"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -277,7 +282,12 @@ object CapitalQuestions {
         q("cap_architect_designed_brasilia", "Which architect designed Brasilia's cathedral and its other modernist landmarks?", "Oscar Niemeyer", listOf("Le Corbusier", "Frank Lloyd Wright", "Antoni Gaudi"), H),
         q("cap_north_eastern_city", "Which north-eastern city was Brazil's first colonial capital, from 1549 to 1763?", "Salvador", listOf("Recife", "Fortaleza", "Sao Luis"), H),
         q("cap_japanese_city_tame", "Which Japanese city, famous for its tame deer, was the imperial capital for most of the 700s?", "Nara", listOf("Kamakura", "Osaka", "Nagasaki"), H),
-        q("cap_capital_home_oldest", "Which capital is home to the oldest cathedral in the Americas, completed in 1541?", "Santo Domingo", listOf("Havana", "Mexico City", "Lima"), H)
+        q("cap_capital_home_oldest", "Which capital is home to the oldest cathedral in the Americas, completed in 1541?", "Santo Domingo", listOf("Havana", "Mexico City", "Lima"), H),
+        q("cap_capital_city_gyeongbokgung", "In which capital city is the Gyeongbokgung royal palace?", "Seoul", listOf("Tokyo", "Beijing", "Pyongyang"), H),
+        q("cap_capital_city_once", "Which capital city was once nicknamed 'the Paris of the Middle East'?", "Beirut", listOf("Damascus", "Amman", "Baghdad"), H),
+        q("cap_capital_city_casa", "In which capital city is the Casa Rosada, the pink presidential palace?", "Buenos Aires", listOf("Montevideo", "Santiago", "Lima"), H),
+        q("cap_west_african_capital", "Which West African capital was founded in 1792 as a home for freed slaves?", "Freetown", listOf("Accra", "Dakar", "Lome"), H),
+        q("cap_capital_barbados", "What is the capital of Barbados?", "Bridgetown", listOf("Kingston", "Castries", "Nassau"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -344,6 +354,16 @@ object CapitalQuestions {
         q("cap_city_italy_capital", "Which city was Italy's capital before Rome, from 1865 to 1871?", "Florence", listOf("Turin", "Milan", "Naples"), X),
         q("cap_capital_niger", "What is the capital of Niger?", "Niamey", listOf("Abuja", "N'Djamena", "Bamako"), X),
         q("cap_city_lost_role", "Which city lost its role as Canada's capital after a mob burned its parliament building in 1849?", "Montreal", listOf("Quebec City", "Kingston", "Toronto"), X),
-        q("cap_capital_city_famously", "Which capital city famously has no traffic lights, its junctions run by white-gloved police instead?", "Thimphu", listOf("Kathmandu", "Ulaanbaatar", "Vientiane"), X)
+        q("cap_capital_city_famously", "Which capital city famously has no traffic lights, its junctions run by white-gloved police instead?", "Thimphu", listOf("Kathmandu", "Ulaanbaatar", "Vientiane"), X),
+        q("cap_capital_kosovo", "What is the capital of Kosovo?", "Pristina", listOf("Prizren", "Peja", "Mitrovica"), X),
+        q("cap_capital_bermuda", "What is the capital of Bermuda?", "Hamilton", listOf("Kingston", "Nassau", "Bridgetown"), X),
+        q("cap_national_capital_built", "Which national capital was built from scratch in the 1960s at the foot of the Margalla Hills?", "Islamabad", listOf("Abuja", "Brasilia", "Canberra"), X),
+        q("cap_capital_faroe_islands", "What is the capital of the Faroe Islands?", "Torshavn", listOf("Klaksvik", "Nuuk", "Reykjavik"), X),
+        q("cap_montevideo_often_said", "Montevideo's name is often said to come from a sailor's cry meaning what?", "'I see a mountain'", listOf("'Land ahead'", "'Silver river'", "'Good winds'"), X),
+        q("cap_capital_state_kentucky", "What is the capital of the US state of Kentucky?", "Frankfort", listOf("Louisville", "Lexington", "Bowling Green"), X),
+        q("cap_capital_gabon", "What is the capital of Gabon?", "Libreville", listOf("Port-Gentil", "Malabo", "Brazzaville"), X),
+        q("cap_capital_togo", "What is the capital of Togo?", "Lome", listOf("Cotonou", "Kara", "Porto-Novo"), X),
+        q("cap_capital_samoa", "What is the capital of Samoa?", "Apia", listOf("Suva", "Nuku'alofa", "Port Vila"), X),
+        q("cap_capital_cape_verde", "What is the capital of Cape Verde?", "Praia", listOf("Mindelo", "Bissau", "Dakar"), X)
     )
 }

@@ -199,7 +199,9 @@ object SportQuestions {
         q("spo_garden_sport_players", "In which garden sport do players hit balls through hoops with a mallet?", "Croquet", listOf("Polo", "Lawn bowls", "Golf"), E),
         q("spo_colour_cloth_snooker", "What colour is the cloth on a snooker table traditionally?", "Green", listOf("Blue", "Red", "Grey"), E),
         q("spo_letters_stand_english", "What do the letters 'FA' stand for in the English 'FA Cup'?", "Football Association", listOf("Football Alliance", "Football Academy", "Federation of Athletics"), E),
-        q("spo_baseball_raised_patch", "In baseball, what is the raised patch of dirt that the pitcher throws from called?", "The mound", listOf("The plate", "The dugout", "The bullpen"), E)
+        q("spo_baseball_raised_patch", "In baseball, what is the raised patch of dirt that the pitcher throws from called?", "The mound", listOf("The plate", "The dugout", "The bullpen"), E),
+        q("spo_football_attacker_beyond", "In football, what is it called when an attacker is beyond the last defender as the ball is played to them?", "Offside", listOf("A foul", "A handball", "A dive"), E),
+        q("spo_basketball_player_takes", "In basketball, what is it called when a player takes too many steps without dribbling?", "Travelling", listOf("Double dribble", "Goaltending", "Charging"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -476,7 +478,14 @@ object SportQuestions {
         q("spo_club_stadium_nicknamed", "Which club's stadium is nicknamed 'the Theatre of Dreams'?", "Manchester United", listOf("Real Madrid", "FC Barcelona", "Liverpool"), M),
         q("spo_player_won_olympic", "Which player won Olympic tennis gold at Paris 2024, completing his 'Career Golden Slam'?", "Novak Djokovic", listOf("Carlos Alcaraz", "Rafael Nadal", "Andy Murray"), M),
         q("spo_country_became_african", "Which country became the first African team to reach a World Cup semi-final, in 2022?", "Morocco", listOf("Senegal", "Ghana", "Cameroon"), M),
-        q("spo_scored_hat_trick", "Who scored a hat-trick in the 2022 World Cup final but still ended up on the losing side?", "Kylian Mbappe", listOf("Lionel Messi", "Olivier Giroud", "Antoine Griezmann"), M)
+        q("spo_scored_hat_trick", "Who scored a hat-trick in the 2022 World Cup final but still ended up on the losing side?", "Kylian Mbappe", listOf("Lionel Messi", "Olivier Giroud", "Antoine Griezmann"), M),
+        q("spo_points_field_goal", "How many points is a field goal worth in American football?", "Three", listOf("Two", "One", "Six"), M),
+        q("spo_baseball_pitcher_stand", "In baseball, where does the pitcher stand to throw?", "On the mound", listOf("In the dugout", "On home plate", "At first base"), M),
+        q("spo_tennis_let", "In tennis, what is a 'let'?", "A serve that clips the net and is replayed", listOf("A serve the receiver cannot touch", "A shot that lands on the line", "A ball hit before it bounces"), M),
+        q("spo_college_sport_knockout", "Which US college sport's knockout tournament is nicknamed 'March Madness'?", "Basketball", listOf("American football", "Baseball", "Ice hockey"), M),
+        q("spo_sport_positions_goal", "Which sport has positions called 'goal attack', 'wing defence' and 'centre'?", "Netball", listOf("Handball", "Water polo", "Lacrosse"), M),
+        q("spo_cricket_mean_out", "In cricket, what does it mean to be out for a 'duck'?", "Out without scoring a run", listOf("Out by ducking under the ball", "Out caught by the bowler", "Out by hitting your own wicket"), M),
+        q("spo_fans_nfl_team", "Fans of which NFL team wear foam 'cheesehead' hats?", "The Green Bay Packers", listOf("The Chicago Bears", "The Minnesota Vikings", "The Buffalo Bills"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -642,7 +651,14 @@ object SportQuestions {
         q("spo_winning_2025_masters", "By winning the 2025 Masters, which golfer finally completed the career Grand Slam?", "Rory McIlroy", listOf("Phil Mickelson", "Jordan Spieth", "Scottie Scheffler"), H),
         q("spo_american_won_100", "Which American won the 100 m at the Paris 2024 Olympics by just five thousandths of a second?", "Noah Lyles", listOf("Fred Kerley", "Christian Coleman", "Kishane Thompson"), H),
         q("spo_scandal_tokyo_2020", "After a scandal at Tokyo 2020, which discipline is modern pentathlon replacing with an obstacle course?", "Horse riding", listOf("Fencing", "Swimming", "Shooting"), H),
-        q("spo_team_shocked_eventual", "Which team shocked the eventual champions Argentina by beating them 2-1 at the 2022 World Cup?", "Saudi Arabia", listOf("Mexico", "Poland", "Australia"), H)
+        q("spo_team_shocked_eventual", "Which team shocked the eventual champions Argentina by beating them 2-1 at the 2022 World Cup?", "Saudi Arabia", listOf("Mexico", "Poland", "Australia"), H),
+        q("spo_sport_might_catch", "In which sport might you 'catch a crab'?", "Rowing", listOf("Sailing", "Surfing", "Water polo"), H),
+        q("spo_sport_champions_lift", "In which sport do champions lift the Larry O'Brien Trophy?", "Basketball", listOf("Ice hockey", "Baseball", "American football"), H),
+        q("spo_cricket_maiden_over", "In cricket, what is a 'maiden over'?", "An over with no runs scored", listOf("A bowler's very first over", "An over of seven balls", "An over with a wicket every ball"), H),
+        q("spo_tennis_slang_bagel", "In tennis slang, what is a 'bagel'?", "Winning a set 6-0", listOf("Winning a set 7-6", "A double fault on match point", "A serve hit underarm"), H),
+        q("spo_country_won_olympic", "Which country has won the most Olympic gold medals in men's field hockey?", "India", listOf("The Netherlands", "Germany", "Australia"), H),
+        q("spo_country_lost_three", "Which country has lost three World Cup finals without ever winning the trophy?", "The Netherlands", listOf("Hungary", "Croatia", "Sweden"), H),
+        q("spo_far_away_archers", "From how far away do archers shoot in the Olympic recurve event?", "70 metres", listOf("30 metres", "50 metres", "90 metres"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -716,6 +732,14 @@ object SportQuestions {
         q("spo_city_hosted_british", "Which city hosted the first British Empire Games, the forerunner of the Commonwealth Games, in 1930?", "Hamilton, Canada", listOf("London, England", "Sydney, Australia", "Auckland, New Zealand"), X),
         q("spo_set_men_mile", "Who set the men's mile world record of 3:43.13 in 1999?", "Hicham El Guerrouj", listOf("Noureddine Morceli", "Steve Cram", "Sebastian Coe"), X),
         q("spo_became_bowler_take", "Who became the first bowler to take 800 Test wickets in cricket?", "Muttiah Muralitharan", listOf("Shane Warne", "Anil Kumble", "James Anderson"), X),
-        q("spo_american_won_olympic", "Which American won the Olympic discus at four Games in a row, from 1956 to 1968?", "Al Oerter", listOf("Bob Mathias", "Mac Wilkins", "Parry O'Brien"), X)
+        q("spo_american_won_olympic", "Which American won the Olympic discus at four Games in a row, from 1956 to 1968?", "Al Oerter", listOf("Bob Mathias", "Mac Wilkins", "Parry O'Brien"), X),
+        q("spo_golf_condor", "In golf, what is a 'condor'?", "Four under par on one hole", listOf("Three under par on one hole", "Two under par on one hole", "Five under par on one hole"), X),
+        q("spo_heavy_shot_men", "How heavy is the shot in the men's Olympic shot put?", "7.26 kg", listOf("4 kg", "5 kg", "10 kg"), X),
+        q("spo_nba_player_average", "Who was the first NBA player to average a triple-double over a whole season, in 1961-62?", "Oscar Robertson", listOf("Wilt Chamberlain", "Bill Russell", "Jerry West"), X),
+        q("spo_team_won_eight", "Which team won eight NBA titles in a row, from 1959 to 1966?", "The Boston Celtics", listOf("The Minneapolis Lakers", "The Chicago Bulls", "The Philadelphia Warriors"), X),
+        q("spo_long_olympic_open", "How long is the Olympic open-water 'marathon swimming' race?", "10 km", listOf("5 km", "21 km", "42 km"), X),
+        q("spo_olympics_women_boxing", "At which Olympics did women's boxing make its debut?", "London 2012", listOf("Sydney 2000", "Athens 2004", "Beijing 2008"), X),
+        q("spo_pakistan_jahangir_khan", "Pakistan's Jahangir Khan went over 500 matches unbeaten in the 1980s in which sport?", "Squash", listOf("Tennis", "Badminton", "Table tennis"), X),
+        q("spo_cheeky_chipped_panenka", "The cheeky chipped 'Panenka' penalty is named after a player from which country?", "Czechoslovakia", listOf("Yugoslavia", "Hungary", "Poland"), X)
     )
 }

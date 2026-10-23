@@ -178,7 +178,9 @@ object ScienceQuestions {
         q("sci_scientist_pictured_sticking", "Which famous scientist was pictured sticking out his tongue in a 1951 photo?", "Albert Einstein", listOf("Niels Bohr", "Enrico Fermi", "Richard Feynman"), E),
         q("sci_lightning_conductor_tall", "What does a lightning conductor on a tall building do?", "Leads a strike safely to the ground", listOf("Stops lightning from forming", "Stores lightning to use as power", "Pushes thunderclouds away"), E),
         q("sci_happens_note_guitar", "What happens to the note of a guitar string when you tighten it?", "It gets higher", listOf("It gets lower", "It only gets louder", "It stays the same"), E),
-        q("sci_astronauts_iss_tie", "Why do astronauts on the ISS tie their sleeping bags to the wall?", "So they don't drift off while asleep", listOf("To keep warm against the hull", "So the station stays balanced", "To stop them from snoring"), E)
+        q("sci_astronauts_iss_tie", "Why do astronauts on the ISS tie their sleeping bags to the wall?", "So they don't drift off while asleep", listOf("To keep warm against the hull", "So the station stays balanced", "To stop them from snoring"), E),
+        q("sci_call_two_days", "What do we call the two days a year when day and night are roughly equal everywhere?", "The equinoxes", listOf("The solstices", "The eclipses", "The zeniths"), E),
+        q("sci_get_sunburnt_cloudy", "Why can you get sunburnt on a cloudy day?", "Most UV rays pass through clouds", listOf("Clouds focus the sunlight", "Cold air thins the skin", "Wind dries out the skin"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -425,7 +427,13 @@ object ScienceQuestions {
         q("sci_gives_uranus_neptune", "What gives Uranus and Neptune their blue colour?", "Methane in their atmospheres", listOf("Oceans of liquid water", "Blue copper dust", "Reflected light from Saturn"), M),
         q("sci_see_reflection_window", "Why can you see your reflection in a window at night, but hardly at all by day?", "By day the light from outside swamps it", listOf("Glass reflects only lamplight", "Cold night air makes glass shinier", "Windows are cleaned in the evening"), M),
         q("sci_mars_seasons_like", "Why does Mars have seasons, much like Earth?", "Its axis is tilted about as much as Earth's", listOf("Its two moons pull it towards the Sun", "Its oceans freeze and thaw", "Its dust storms come every few months"), M),
-        q("sci_thunder_rumble_instead", "Why does thunder rumble on, instead of making one short bang?", "Sound comes from all along the long bolt", listOf("Lightning heats the air slowly", "Clouds are crashing into each other", "Raindrops make the air vibrate"), M)
+        q("sci_thunder_rumble_instead", "Why does thunder rumble on, instead of making one short bang?", "Sound comes from all along the long bolt", listOf("Lightning heats the air slowly", "Clouds are crashing into each other", "Raindrops make the air vibrate"), M),
+        q("sci_month_earth_closest", "In which month is the Earth closest to the Sun?", "January", listOf("July", "June", "March"), M),
+        q("sci_astronauts_float_iss", "Why do astronauts float on the ISS, where Earth's gravity is still about 90% as strong?", "They are in constant free fall", listOf("The station shields them from gravity", "Gravity cannot reach that high", "The station spins to cancel it"), M),
+        q("sci_dark_side_moon", "What is the 'dark side of the Moon' really?", "Its far side, which gets sunlight too", listOf("A side that never sees sunlight", "The part hidden in Earth's shadow", "A huge plain of dark lava rock"), M),
+        q("sci_roughly_far_away_2", "Roughly how far away is the Moon?", "About 384,000 km", listOf("About 38,000 km", "About 3.8 million km", "About 150,000 km"), M),
+        q("sci_shape_falling_raindrops", "What shape are falling raindrops, really?", "Round, flattened at the bottom", listOf("Teardrops with a pointed top", "Long, thin needles", "Tiny hollow shells"), M),
+        q("sci_causes_mirage_water", "What causes a mirage of 'water' on a hot road?", "Light bending through hot air", listOf("Sunlight reflecting off the tar", "Water vapour rising from the road", "The eye tiring in bright light"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -581,7 +589,15 @@ object ScienceQuestions {
         q("sci_steam_kettle_scald", "Why can steam from a kettle scald worse than boiling water at the same temperature?", "It gives out extra heat as it condenses", listOf("It moves faster, so it hits harder", "It carries acid from the kettle", "It is always far above 100 C"), H),
         q("sci_milk_boil_over", "Why does milk boil over in a pan when water does not?", "Its proteins form a skin that traps steam", listOf("It boils at a much lower temperature", "Its fat explodes when heated", "It holds dissolved gas, like soda"), H),
         q("sci_very_still_bottled", "Very still bottled water can stay liquid below 0 C in a freezer. What happens when you tap it?", "It turns to slush within seconds", listOf("It starts to boil gently", "It glows a faint blue", "Nothing happens at all"), H),
-        q("sci_even_perfect_vacuum", "Even with a perfect vacuum, roughly how tall could a straw be and still lift water?", "About 10 m", listOf("About 1 m", "About 100 m", "As tall as you like"), H)
+        q("sci_even_perfect_vacuum", "Even with a perfect vacuum, roughly how tall could a straw be and still lift water?", "About 10 m", listOf("About 1 m", "About 100 m", "As tall as you like"), H),
+        q("sci_fermi_paradox_ask", "What does the Fermi paradox ask?", "Why we have found no sign of aliens", listOf("Why time slows near the speed of light", "Why the universe expands ever faster", "Why the Moon always shows one face"), H),
+        q("sci_gas_makes_volcano", "Which gas makes up most of what a volcano blows out?", "Water vapour", listOf("Carbon dioxide", "Sulfur dioxide", "Hydrogen sulfide"), H),
+        q("sci_stephen_hawking_born", "Stephen Hawking was born exactly 300 years after the death of which scientist?", "Galileo Galilei", listOf("Isaac Newton", "Johannes Kepler", "Nicolaus Copernicus"), H),
+        q("sci_coined_butterfly_effect", "Who coined the 'butterfly effect' while modelling the weather in the 1960s?", "Edward Lorenz", listOf("Benoit Mandelbrot", "Richard Feynman", "John von Neumann"), H),
+        q("sci_discovered_pulsars_1967", "Who discovered the first pulsars in 1967, as a student, yet was left out of the Nobel Prize for it?", "Jocelyn Bell Burnell", listOf("Vera Rubin", "Henrietta Leavitt", "Cecilia Payne"), H),
+        q("sci_nasa_probe_became", "Which NASA probe became the first to fly through the Sun's outer atmosphere, in 2021?", "Parker Solar Probe", listOf("Solar Orbiter", "SOHO", "Ulysses"), H),
+        q("sci_all_empty_space", "If all the empty space were squeezed out of every human's atoms, roughly how big would the human race be?", "About a sugar cube", listOf("About a football stadium", "About a city block", "About a large house"), H),
+        q("sci_danish_astronomer_kept", "Which Danish astronomer kept a pet elk that reportedly died after drinking too much beer?", "Tycho Brahe", listOf("Ole Romer", "Niels Bohr", "Johannes Kepler"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -651,6 +667,14 @@ object ScienceQuestions {
         q("sci_cut_grape_almost", "Cut a grape almost in half and heat it in a microwave. What famously appears?", "A glowing ball of plasma", listOf("A tiny rainbow inside it", "A green glow like a glow stick", "A spinning ring of sugar"), X),
         q("sci_lightning_strike_way", "In a lightning strike, which way does the brightest flash actually travel?", "Upwards from the ground", listOf("Downwards from the cloud", "Sideways along the ground", "Outwards from the middle"), X),
         q("sci_rainbow_part_circle", "A rainbow is part of a circle centred on the point opposite the Sun. Roughly how wide is its radius?", "About 42 degrees", listOf("About 90 degrees", "About 10 degrees", "About 23 degrees"), X),
-        q("sci_misty_mountain_climber", "On a misty mountain, a climber may see a giant shadow of themselves ringed by colours. What is it called?", "A Brocken spectre", listOf("A fata morgana", "A will-o'-the-wisp", "A sun pillar"), X)
+        q("sci_misty_mountain_climber", "On a misty mountain, a climber may see a giant shadow of themselves ringed by colours. What is it called?", "A Brocken spectre", listOf("A fata morgana", "A will-o'-the-wisp", "A sun pillar"), X),
+        q("sci_french_comet_hunter", "Which French comet hunter catalogued fuzzy sky objects so he wouldn't mistake them for comets?", "Charles Messier", listOf("Edmond Halley", "William Herschel", "Pierre-Simon Laplace"), X),
+        q("sci_wow_signal_1977_2", "What was the 'Wow! signal' of 1977?", "A radio burst from space never heard again", listOf("The first message beamed to aliens", "A supernova seen in broad daylight", "A flash from a nuclear test in space"), X),
+        q("sci_roche_limit_describe", "What does the Roche limit describe?", "The distance at which tides rip a moon apart", listOf("The speed a rocket needs to escape a planet", "The heaviest a star can be before collapsing", "The edge of the Sun's magnetic influence"), X),
+        q("sci_asteroid_nasa_dart", "Which asteroid did NASA's DART spacecraft deliberately smash into in 2022, changing its orbit?", "Dimorphos", listOf("Didymos", "Bennu", "Ryugu"), X),
+        q("sci_virga", "What is 'virga'?", "Rain that evaporates before reaching the ground", listOf("A lens-shaped cloud over mountains", "Lightning that leaps up from the clouds", "Hail falling from a clear blue sky"), X),
+        q("sci_mpemba_effect", "What is the Mpemba effect?", "Hot water sometimes freezing faster than cold", listOf("Salt water freezing more slowly than fresh", "Ice cubes sticking to a wet tongue", "Boiling water cooling faster in a metal cup"), X),
+        q("sci_astronomer_study_fast", "Which astronomer's study of how fast galaxies spin gave key evidence for dark matter?", "Vera Rubin", listOf("Jocelyn Bell Burnell", "Henrietta Leavitt", "Cecilia Payne"), X),
+        q("sci_since_1970s_scale", "Since the 1970s, which scale have seismologists used in place of the Richter scale for big quakes?", "The moment magnitude scale", listOf("The Mercalli scale", "The Fujita scale", "The Kelvin scale"), X)
     )
 }

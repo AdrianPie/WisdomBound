@@ -213,7 +213,9 @@ object LiteratureQuestions {
         q("lit_composed_eine_kleine", "Who composed 'Eine kleine Nachtmusik'?", "Wolfgang Amadeus Mozart", listOf("Ludwig van Beethoven", "Joseph Haydn", "Johann Sebastian Bach"), E),
         q("lit_pattern_tall_hat", "What pattern is on the tall hat of Dr. Seuss's Cat in the Hat?", "Red and white stripes", listOf("Black and white spots", "Blue and yellow checks", "Green and gold stars"), E),
         q("lit_hunger_games_bird", "In 'The Hunger Games', which bird appears on the pin Katniss wears into the arena?", "A mockingjay", listOf("A phoenix", "A raven", "A golden eagle"), E),
-        q("lit_hunger_games_baker", "In 'The Hunger Games', which baker's son goes into the arena with Katniss?", "Peeta Mellark", listOf("Gale Hawthorne", "Finnick Odair", "Haymitch Abernathy"), E)
+        q("lit_hunger_games_baker", "In 'The Hunger Games', which baker's son goes into the arena with Katniss?", "Peeta Mellark", listOf("Gale Hawthorne", "Finnick Odair", "Haymitch Abernathy"), E),
+        q("lit_members_set_out", "How many members set out in the Fellowship of the Ring?", "Nine", listOf("Seven", "Eight", "Twelve"), E),
+        q("lit_lord_rings_ents", "In 'The Lord of the Rings', what are the Ents?", "Giant walking tree-folk", listOf("Giant talking eagles", "Mountain trolls", "Cave-dwelling goblins"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -542,7 +544,13 @@ object LiteratureQuestions {
         q("lit_italian_court_composer", "Which Italian court composer was falsely rumoured to have poisoned Mozart?", "Antonio Salieri", listOf("Antonio Vivaldi", "Luigi Boccherini", "Domenico Scarlatti"), M),
         q("lit_although_usually_made", "Although usually made of brass, which instrument family does the saxophone belong to?", "Woodwind", listOf("Brass", "Percussion", "Strings"), M),
         q("lit_harry_potter_mirror", "In Harry Potter, what does the Mirror of Erised show the person looking into it?", "Their deepest desire", listOf("Their worst fear", "Their own future", "Their true face"), M),
-        q("lit_symphonies_beethoven_complete", "How many symphonies did Beethoven complete?", "Nine", listOf("Five", "Twelve", "Forty-one"), M)
+        q("lit_symphonies_beethoven_complete", "How many symphonies did Beethoven complete?", "Nine", listOf("Five", "Twelve", "Forty-one"), M),
+        q("lit_author_wrote_cat", "Which author wrote 'The Cat in the Hat'?", "Dr. Seuss", listOf("Roald Dahl", "Shel Silverstein", "Maurice Sendak"), M),
+        q("lit_poet_wrote_charge", "Which poet wrote 'The Charge of the Light Brigade'?", "Alfred, Lord Tennyson", listOf("Rudyard Kipling", "William Wordsworth", "Lord Byron"), M),
+        q("lit_writer_poem_ends", "Which writer's poem 'If—' ends 'you'll be a Man, my son'?", "Rudyard Kipling", listOf("Robert Frost", "Alfred Tennyson", "W. B. Yeats"), M),
+        q("lit_young_narrator_treasure", "Who is the young narrator of 'Treasure Island'?", "Jim Hawkins", listOf("Ben Gunn", "Billy Bones", "Squire Trelawney"), M),
+        q("lit_composed_moonlight_sonata", "Who composed the 'Moonlight Sonata'?", "Beethoven", listOf("Chopin", "Mozart", "Liszt"), M),
+        q("lit_instrument_niccolo_paganini", "Which instrument did Niccolo Paganini, rumoured to have sold his soul to the devil, play?", "The violin", listOf("The piano", "The cello", "The flute"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -730,7 +738,14 @@ object LiteratureQuestions {
         q("lit_composer_died_finishing", "Which composer died before finishing his Requiem, leaving a pupil to complete it?", "Wolfgang Amadeus Mozart", listOf("Franz Schubert", "Joseph Haydn", "Felix Mendelssohn"), H),
         q("lit_handel_water_music", "Where was Handel's 'Water Music' first played for King George I?", "On barges on the Thames", listOf("At a fountain garden party", "At the launch of a warship", "At a spa in Bath"), H),
         q("lit_bridal_march_here", "The bridal march 'Here Comes the Bride' comes from an opera by which composer?", "Richard Wagner", listOf("Felix Mendelssohn", "Giuseppe Verdi", "Georges Bizet"), H),
-        q("lit_fat_little_twins", "Which fat little twins recite 'The Walrus and the Carpenter' to Alice?", "Tweedledum and Tweedledee", listOf("Humpty and Dumpty", "Flopsy and Mopsy", "Topsy and Turvy"), H)
+        q("lit_fat_little_twins", "Which fat little twins recite 'The Walrus and the Carpenter' to Alice?", "Tweedledum and Tweedledee", listOf("Humpty and Dumpty", "Flopsy and Mopsy", "Topsy and Turvy"), H),
+        q("lit_wrote_vanity_fair", "Who wrote 'Vanity Fair', with its scheming heroine Becky Sharp?", "William Thackeray", listOf("Anthony Trollope", "Charles Dickens", "Thomas Hardy"), H),
+        q("lit_wrote_middlemarch", "Who wrote 'Middlemarch'?", "George Eliot", listOf("Elizabeth Gaskell", "Jane Austen", "Anne Bronte"), H),
+        q("lit_romantic_poet_mad", "Which Romantic poet was called 'mad, bad and dangerous to know'?", "Lord Byron", listOf("Percy Bysshe Shelley", "John Keats", "William Blake"), H),
+        q("lit_painter_hid_man", "Which painter hid a man's face behind a floating green apple in 'The Son of Man'?", "Rene Magritte", listOf("Salvador Dali", "Joan Miro", "Max Ernst"), H),
+        q("lit_composed_six_brandenburg", "Who composed the six 'Brandenburg Concertos'?", "Johann Sebastian Bach", listOf("George Frideric Handel", "Antonio Vivaldi", "Georg Philipp Telemann"), H),
+        q("lit_composer_wrote_sprach", "Which composer wrote 'Also sprach Zarathustra', made famous by the film '2001'?", "Richard Strauss", listOf("Johann Strauss II", "Richard Wagner", "Gustav Mahler"), H),
+        q("lit_nessun_dorma_aria", "'Nessun dorma' is an aria from which Puccini opera?", "Turandot", listOf("Tosca", "La Boheme", "Madama Butterfly"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -808,6 +823,12 @@ object LiteratureQuestions {
         q("lit_poet_kubla_khan", "Which poet's 'Kubla Khan' was famously cut short by 'a person on business from Porlock'?", "Samuel Taylor Coleridge", listOf("William Wordsworth", "Percy Bysshe Shelley", "John Keats"), X),
         q("lit_stendhal_syndrome_dizziness", "'Stendhal syndrome', dizziness from too much beautiful art, is named after the writer's visit to which city?", "Florence", listOf("Rome", "Venice", "Paris"), X),
         q("lit_northern_lights_golden", "In 'Northern Lights', what is the golden truth-telling instrument that Lyra learns to read?", "The alethiometer", listOf("The subtle knife", "The amber spyglass", "The astrolabe"), X),
-        q("lit_romanian_sculptor_made", "Which Romanian sculptor made the sleek, polished 'Bird in Space'?", "Constantin Brancusi", listOf("Alberto Giacometti", "Henry Moore", "Jean Arp"), X)
+        q("lit_romanian_sculptor_made", "Which Romanian sculptor made the sleek, polished 'Bird in Space'?", "Constantin Brancusi", listOf("Alberto Giacometti", "Henry Moore", "Jean Arp"), X),
+        q("lit_composed_dreamy_piano", "Who composed the dreamy piano pieces 'Gymnopedies'?", "Erik Satie", listOf("Claude Debussy", "Maurice Ravel", "Gabriel Faure"), X),
+        q("lit_german_author_wrote_3", "Which German author wrote 'The Tin Drum'?", "Gunter Grass", listOf("Heinrich Boll", "Thomas Mann", "Hermann Hesse"), X),
+        q("lit_sicilian_prince_wrote", "Which Sicilian prince wrote 'The Leopard', published after his death?", "Tomasi di Lampedusa", listOf("Luigi Pirandello", "Alberto Moravia", "Italo Svevo"), X),
+        q("lit_italian_author_wrote", "Which Italian author wrote 'Invisible Cities' and 'If on a Winter's Night a Traveller'?", "Italo Calvino", listOf("Umberto Eco", "Primo Levi", "Dino Buzzati"), X),
+        q("lit_wrote_comic_czech", "Who wrote the comic Czech novel 'The Good Soldier Svejk'?", "Jaroslav Hasek", listOf("Karel Capek", "Bohumil Hrabal", "Milan Kundera"), X),
+        q("lit_ferdowsi_book_kings", "What is the name of Ferdowsi's 'Book of Kings', Iran's national epic?", "The Shahnameh", listOf("The Masnavi", "The Rubaiyat", "The Avesta"), X)
     )
 }

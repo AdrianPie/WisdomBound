@@ -178,7 +178,8 @@ object BiologyQuestions {
         q("bio_nut_looking_like", "Which nut is famous for looking like a tiny brain?", "The walnut", listOf("The almond", "The cashew", "The hazelnut"), E),
         q("bio_crop_regularly_wins", "Which crop regularly wins giant-growing contests with specimens weighing over a tonne?", "The pumpkin", listOf("The potato", "The cabbage", "The carrot"), E),
         q("bio_endorphins_released_exercise", "What are endorphins, released during exercise and laughter?", "The body's natural painkillers", listOf("Proteins that build muscle", "Cells that fight germs", "Enzymes that digest fat"), E),
-        q("bio_raisins_sultanas_currants", "Raisins, sultanas and currants are all dried what?", "Grapes", listOf("Plums", "Cherries", "Figs"), E)
+        q("bio_raisins_sultanas_currants", "Raisins, sultanas and currants are all dried what?", "Grapes", listOf("Plums", "Cherries", "Figs"), E),
+        q("bio_organ_cardiologist_treat", "Which organ does a cardiologist treat?", "The heart", listOf("The skin", "The kidneys", "The bones"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -414,7 +415,13 @@ object BiologyQuestions {
         q("bio_roughly_blood_taken", "Roughly how much blood is taken in a standard blood donation?", "About half a litre", listOf("About 2 litres", "About 50 ml", "About 1.5 litres"), M),
         q("bio_charley_horse", "What is a 'charley horse'?", "A sudden painful muscle cramp", listOf("A sprained wrist", "A horse-riding injury", "A bad case of hiccups"), M),
         q("bio_tree_often_living", "Which tree is often called a 'living fossil' because it has barely changed since the age of the dinosaurs?", "The ginkgo", listOf("The oak", "The baobab", "The birch"), M),
-        q("bio_cold_sores_around", "Cold sores around the lips are caused by what?", "A herpes virus", listOf("Eating too much salt", "A lack of vitamin C", "Biting the lip"), M)
+        q("bio_cold_sores_around", "Cold sores around the lips are caused by what?", "A herpes virus", listOf("Eating too much salt", "A lack of vitamin C", "Biting the lip"), M),
+        q("bio_soft_spot_newborn", "What is the soft spot on a newborn baby's head called?", "The fontanelle", listOf("The temple", "The crown", "The occiput"), M),
+        q("bio_white_eye", "What is the white of the eye called?", "The sclera", listOf("The cornea", "The iris", "The lens"), M),
+        q("bio_medical_tailbone", "What is the medical name for the tailbone?", "The coccyx", listOf("The sacrum", "The pelvis", "The patella"), M),
+        q("bio_agoraphobia_fear", "Agoraphobia is a fear of what?", "Open or crowded places", listOf("Spiders", "Heights", "Small enclosed spaces"), M),
+        q("bio_opium_morphine_come", "Opium and morphine come from which flower?", "The poppy", listOf("The lotus", "The foxglove", "The tulip"), M),
+        q("bio_black_peppercorns_dried", "Black peppercorns are the dried what of a climbing vine?", "Unripe fruits", listOf("Flower buds", "Root nodules", "Leaf tips"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -564,7 +571,14 @@ object BiologyQuestions {
         q("bio_some_pine_cones", "Some pine cones stay sealed with resin until what opens them?", "The heat of a forest fire", listOf("Heavy spring rain", "A hard frost", "Birds pecking at them"), H),
         q("bio_eating_miracle_fruit", "After eating a 'miracle fruit' berry, how do lemons taste?", "Sweet", listOf("Bitter", "Salty", "Of nothing at all"), H),
         q("bio_1956_paper_said", "A famous 1956 paper said short-term memory holds roughly how many items?", "Seven, plus or minus two", listOf("Two or three", "About twenty", "About a hundred"), H),
-        q("bio_cocktail_party_effect", "What is the 'cocktail party effect'?", "Picking out one voice in a noisy room", listOf("Talking louder in a crowd", "Forgetting names right away", "Feeling tired among strangers"), H)
+        q("bio_cocktail_party_effect", "What is the 'cocktail party effect'?", "Picking out one voice in a noisy room", listOf("Talking louder in a crowd", "Forgetting names right away", "Feeling tired among strangers"), H),
+        q("bio_lack_vitamin_causes_2", "Lack of which vitamin causes beriberi, once common where people lived on polished rice?", "Vitamin B1", listOf("Vitamin C", "Vitamin D", "Vitamin A"), H),
+        q("bio_roughly_long_single", "Roughly how long does a single taste bud cell live before it is replaced?", "About two weeks", listOf("About a day", "About a year", "A whole lifetime"), H),
+        q("bio_philtrum", "What is the 'philtrum'?", "The groove between your nose and upper lip", listOf("The dip at the base of your throat", "The crease inside your elbow", "The fold at the corner of your eye"), H),
+        q("bio_rubber_tree_now", "The rubber tree, now grown mostly in Southeast Asia, is native to which region?", "The Amazon", listOf("Central Africa", "India", "Madagascar"), H),
+        q("bio_cashew_nuts_never", "Why are cashew nuts never sold in their shells?", "The shell holds a skin-burning oil", listOf("The shell is too hard to crack", "The shell rots within days", "The shell is fed to cattle"), H),
+        q("bio_abundant_protein_human", "Which is the most abundant protein in the human body?", "Collagen", listOf("Keratin", "Haemoglobin", "Insulin"), H),
+        q("bio_network_500_million", "What is the network of about 500 million neurons lining the gut nicknamed?", "The second brain", listOf("The gut clock", "The inner spine", "The belly web"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -627,6 +641,9 @@ object BiologyQuestions {
         q("bio_ergot_fungus_blamed", "Ergot, a fungus blamed for medieval outbreaks of 'St Anthony's fire', grows mainly on which grain?", "Rye", listOf("Rice", "Maize", "Oats"), X),
         q("bio_jamaica_national_fruit", "Jamaica's national fruit, eaten with saltfish, is poisonous unless fully ripe. What is it?", "Ackee", listOf("Breadfruit", "Soursop", "Jackfruit"), X),
         q("bio_pellagra_once_common", "Pellagra, once common where people lived mainly on maize, is caused by a lack of which vitamin?", "Niacin (B3)", listOf("Vitamin C", "Vitamin D", "Vitamin A"), X),
-        q("bio_tiny_worm_thousand", "Which tiny worm, with only about a thousand body cells, was the first animal to have its whole genome read?", "The worm C. elegans", listOf("The earthworm", "The tapeworm", "The leech"), X)
+        q("bio_tiny_worm_thousand", "Which tiny worm, with only about a thousand body cells, was the first animal to have its whole genome read?", "The worm C. elegans", listOf("The earthworm", "The tapeworm", "The leech"), X),
+        q("bio_enzyme_used_plants", "Which enzyme, used by plants to capture carbon, is thought to be the most abundant protein on Earth?", "RuBisCO", listOf("Chlorophyll", "Amylase", "Catalase"), X),
+        q("bio_epo_hormone_abused", "EPO, the hormone abused by some doping cyclists, is mainly made by which organ?", "The kidneys", listOf("The liver", "The pancreas", "The adrenal glands"), X),
+        q("bio_chicle_original_base", "Chicle, the original base of chewing gum, is the sap of which tree?", "The sapodilla", listOf("The rubber tree", "The maple", "The acacia"), X)
     )
 }

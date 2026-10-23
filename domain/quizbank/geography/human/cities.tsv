@@ -47,6 +47,7 @@ geo_canada_largest_mainly	Easy	Which is Canada's largest mainly French-speaking 
 geo_city_populous_european	Easy	Which city is the most populous in the European Union?	Berlin	Paris	Madrid	Rome
 geo_italian_city_home	Easy	Which Italian city is home to the most famous leaning tower in the world?	Pisa	Bologna	Venice	Florence
 geo_city_street_lined	Easy	Which city's most famous street, lined with stalls and street performers, is Las Ramblas?	Barcelona	Madrid	Lisbon	Seville
+geo_country_city_salzburg	Easy	In which country is the city of Salzburg?	Austria	Germany	Switzerland	Czechia
 wh_angkor_wat	Medium	In which country is the Angkor Wat temple complex located?	Cambodia	Thailand	Vietnam	India
 geocmp_miasto_azja	Medium	Which of these urban areas is the most populous?	Delhi	Bangkok	Seoul	Istanbul
 geocmp_najdalej_polnoc_nordyckie	Medium	Which of these cities lies furthest north?	Helsinki	Oslo	Stockholm	Copenhagen
@@ -136,6 +137,7 @@ geo_zocalo_largest_public	Medium	The Zocalo, one of the largest public squares i
 geo_jazz_bars_wrought	Medium	Jazz bars and wrought-iron balconies fill the French Quarter of which US city?	New Orleans	Montreal	Quebec City	St. Louis
 geo_pike_place_market	Medium	Pike Place Market, where fishmongers famously throw salmon to each other, is in which city?	Seattle	Boston	San Francisco	Vancouver
 geo_mostar_old_bridge	Medium	Mostar's famous Old Bridge, destroyed in 1993 and later rebuilt, is in which country?	Bosnia and Herzegovina	North Macedonia	Montenegro	Croatia
+geo_japanese_city_golden	Medium	In which Japanese city is the Golden Pavilion, Kinkaku-ji?	Kyoto	Tokyo	Nara	Osaka
 wh_timbuktu	Hard	In which country is the historic city of Timbuktu?	Mali	Niger	Chad	Mauritania
 geocmp_najdalej_poludnie	Hard	Which of these cities lies furthest south?	Auckland	Sydney	Cape Town	Buenos Aires
 geocmp_stolica_najdalej_poludnie	Hard	Which of these capitals lies furthest south?	Wellington	Canberra	Santiago	Pretoria
@@ -192,3 +194,4 @@ geo_state_capital_started	Expert	Which US state capital started life as a settle
 geo_sobrino_botin_listed	Expert	Sobrino de Botin, listed as the world's oldest restaurant still running, has been serving since 1725 in which city?	Madrid	Paris	Vienna	Lisbon
 geo_lakeside_austrian_village	Expert	Which lakeside Austrian village did a Chinese developer copy, full-size, in 2012?	Hallstatt	Zell am See	St. Wolfgang	Kitzbuhel
 geo_1950_circus_elephant	Expert	In 1950, a circus elephant called Tuffi jumped out of which German city's hanging monorail into the river below?	Wuppertal	Dortmund	Dresden	Cologne
+geo_country_great_mosque	Expert	In which country is the Great Mosque of Djenne, the world's largest mud-brick building?	Mali	Niger	Morocco	Senegal

@@ -92,6 +92,9 @@ mat_film_starts_lasts	Easy	A film starts at 7:45 p.m. and lasts 2 hours 30 minut
 mat_small_squares_make	Easy	How many small squares make up a standard Sudoku grid?	81	64	72	100
 mat_ship_rope_ladder	Easy	A ship's rope ladder has rungs 25 cm apart, the lowest just touching the sea. The tide rises 1 m. How many rungs are now underwater?	None	Four	Three	Five
 mat_lasts_longest	Easy	Which of these lasts the longest?	100 minutes	1.5 hours	5,000 seconds	95 minutes
+mat_pemdas_bodmas_help	Easy	What do 'PEMDAS' and 'BODMAS' help pupils remember?	The order of operations	The times tables	How to divide fractions	The names of polygons
+mat_diamond_shape_four	Easy	What is a 'diamond' shape with four equal sides properly called?	A rhombus	A trapezium	A pentagon	An oblong
+mat_call_100th_anniversary	Easy	What do you call a 100th anniversary?	A centenary	A millennium	A jubilee	A decennial
 day2_procent_skladany	Medium	What is compound interest?	Interest earned on interest already added	A one-time fee	A fixed monthly cost	Interest paid only at the end
 day2_inflacja	Medium	What does inflation mean for your savings?	The same money buys less over time	Your balance shrinks	Interest rates always fall	Prices stay fixed
 mat_pi	Medium	What is the approximate value of pi?	3.14	3.41	2.71	3.04
@@ -227,6 +230,10 @@ mat_lottery_likely_draw	Medium	In a lottery, how likely is the draw 1, 2, 3, 4, 
 mat_clock_showing_exactly	Medium	A clock showing exactly 3:00 is seen in a mirror. What time does the reflection appear to show?	9:00	3:00	6:00	12:15
 mat_double_length_square	Medium	If you double the length of a square's sides, how many times bigger does its area get?	Four	Two	Three	Eight
 mat_comes_next_120	Medium	What comes next: 1, 2, 6, 24, 120, ...?	720	240	600	144
+mat_numbers_around_dartboard	Medium	What do the numbers 1 to 20 around a dartboard add up to?	210	200	180	220
+mat_qed_end_proof	Medium	What does 'QED' at the end of a proof mean?	Which was to be shown	Question ends here	Quickly and easily done	Equal on both sides
+mat_shape_toblerone_box	Medium	What 3D shape is a Toblerone box?	A triangular prism	A square pyramid	A tetrahedron	A cuboid
+mat_sheets_paper_ream	Medium	How many sheets of paper are in a ream?	500	100	250	1,000
 mat_silnia_5	Hard	What is 5! (5 factorial)?	120	100	60	150
 mat_fibonacci	Hard	What number comes next in the sequence 1, 1, 2, 3, 5, 8...?	13	11	12	16
 mat2_logarytm_2_8	Hard	What is log base 2 of 8?	3	2	4	8
@@ -311,6 +318,13 @@ mat_fraction_matches_six	Hard	Which fraction matches pi to six decimal places?	3
 mat_french_mathematician_died	Hard	Which French mathematician died after a duel at just 20, having written out his ideas the night before?	Evariste Galois	Niels Henrik Abel	Blaise Pascal	Joseph Fourier
 mat_walking_around_any	Hard	Walking around any convex polygon, the turns you make at its corners (the exterior angles) always add up to what?	360 degrees	180 degrees	540 degrees	It depends on the sides
 mat_hen_half_lays	Hard	If a hen and a half lays an egg and a half in a day and a half, how many eggs does one hen lay in three days?	2	3	1	4.5
+mat_legend_says_follower	Hard	Legend says a follower of which Greek thinker was drowned for revealing that some numbers are irrational?	Pythagoras	Euclid	Plato	Archimedes
+mat_ancient_impossible_task	Hard	What is the ancient, impossible task of drawing a square with exactly a circle's area, using only compass and ruler?	Squaring the circle	Doubling the cube	Trisecting the angle	Cornering the arc
+mat_happens_cut_mobius	Hard	What happens if you cut a Mobius strip all the way along its middle?	You get one longer loop	You get two separate loops	You get two linked loops	It falls apart into strips
+mat_group_367_people	Hard	In a group of 367 people, what is the chance that at least two share a birthday?	100%	About 50%	About 75%	About 99%
+mat_clock_faces_roman	Hard	Clock faces with Roman numerals usually show the number 4 as what?	IIII	IV	IIV	VI
+mat_sided_die_beloved	Hard	The 20-sided die beloved of Dungeons & Dragons players is which shape?	An icosahedron	A dodecahedron	An octahedron	A decahedron
+mat_scottish_laird_invented	Hard	Which Scottish laird invented logarithms in 1614?	John Napier	Henry Briggs	Colin Maclaurin	James Gregory
 mat_liczba_e	Expert	What is the approximate value of e?	2.72	3.14	1.62	2.24
 mat_liczby_doskonale	Expert	Which of these numbers is perfect (equal to the sum of its divisors)?	28	24	30	36
 mat_duzy_pierwszy	Expert	Which of these numbers is NOT prime?	91	89	97	83
@@ -363,3 +377,5 @@ mat_220_284_history	Expert	220 and 284 are history's most famous pair of 'amicab
 mat_euler_stunned_mathematicians	Expert	Euler stunned mathematicians by showing that 1 + 1/4 + 1/9 + 1/16 + ... equals what?	Pi squared over 6	Exactly 2	The golden ratio	e minus 1
 mat_chicken_mcnuggets_once	Expert	Chicken McNuggets were once sold only in boxes of 6, 9 and 20. What is the largest number of nuggets you could NOT buy exactly?	43	37	47	59
 mat_larger_power_power	Expert	Which is larger: e to the power of pi, or pi to the power of e?	e to the power of pi	pi to the power of e	They are exactly equal	No one has proved either
+mat_division_sign	Expert	What is the division sign ÷ called?	An obelus	A vinculum	A solidus	A caret
+mat_unproven_conjecture_says	Expert	Which unproven conjecture says every even number greater than 2 is the sum of two primes?	Goldbach's conjecture	Fermat's Last Theorem	The Collatz conjecture	The Riemann hypothesis

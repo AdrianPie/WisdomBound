@@ -117,7 +117,10 @@ object MathQuestions {
         q("mat_film_starts_lasts", "A film starts at 7:45 p.m. and lasts 2 hours 30 minutes. When does it end?", "10:15 p.m.", listOf("10:45 p.m.", "9:15 p.m.", "10:30 p.m."), E),
         q("mat_small_squares_make", "How many small squares make up a standard Sudoku grid?", "81", listOf("64", "72", "100"), E),
         q("mat_ship_rope_ladder", "A ship's rope ladder has rungs 25 cm apart, the lowest just touching the sea. The tide rises 1 m. How many rungs are now underwater?", "None", listOf("Four", "Three", "Five"), E),
-        q("mat_lasts_longest", "Which of these lasts the longest?", "100 minutes", listOf("1.5 hours", "5,000 seconds", "95 minutes"), E)
+        q("mat_lasts_longest", "Which of these lasts the longest?", "100 minutes", listOf("1.5 hours", "5,000 seconds", "95 minutes"), E),
+        q("mat_pemdas_bodmas_help", "What do 'PEMDAS' and 'BODMAS' help pupils remember?", "The order of operations", listOf("The times tables", "How to divide fractions", "The names of polygons"), E),
+        q("mat_diamond_shape_four", "What is a 'diamond' shape with four equal sides properly called?", "A rhombus", listOf("A trapezium", "A pentagon", "An oblong"), E),
+        q("mat_call_100th_anniversary", "What do you call a 100th anniversary?", "A centenary", listOf("A millennium", "A jubilee", "A decennial"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -256,7 +259,11 @@ object MathQuestions {
         q("mat_lottery_likely_draw", "In a lottery, how likely is the draw 1, 2, 3, 4, 5, 6 compared with any other set of six numbers?", "Exactly as likely", listOf("Far less likely", "Slightly less likely", "More likely"), M),
         q("mat_clock_showing_exactly", "A clock showing exactly 3:00 is seen in a mirror. What time does the reflection appear to show?", "9:00", listOf("3:00", "6:00", "12:15"), M),
         q("mat_double_length_square", "If you double the length of a square's sides, how many times bigger does its area get?", "Four", listOf("Two", "Three", "Eight"), M),
-        q("mat_comes_next_120", "What comes next: 1, 2, 6, 24, 120, ...?", "720", listOf("240", "600", "144"), M)
+        q("mat_comes_next_120", "What comes next: 1, 2, 6, 24, 120, ...?", "720", listOf("240", "600", "144"), M),
+        q("mat_numbers_around_dartboard", "What do the numbers 1 to 20 around a dartboard add up to?", "210", listOf("200", "180", "220"), M),
+        q("mat_qed_end_proof", "What does 'QED' at the end of a proof mean?", "Which was to be shown", listOf("Question ends here", "Quickly and easily done", "Equal on both sides"), M),
+        q("mat_shape_toblerone_box", "What 3D shape is a Toblerone box?", "A triangular prism", listOf("A square pyramid", "A tetrahedron", "A cuboid"), M),
+        q("mat_sheets_paper_ream", "How many sheets of paper are in a ream?", "500", listOf("100", "250", "1,000"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -344,7 +351,14 @@ object MathQuestions {
         q("mat_fraction_matches_six", "Which fraction matches pi to six decimal places?", "355/113", listOf("22/7", "333/106", "311/99"), H),
         q("mat_french_mathematician_died", "Which French mathematician died after a duel at just 20, having written out his ideas the night before?", "Evariste Galois", listOf("Niels Henrik Abel", "Blaise Pascal", "Joseph Fourier"), H),
         q("mat_walking_around_any", "Walking around any convex polygon, the turns you make at its corners (the exterior angles) always add up to what?", "360 degrees", listOf("180 degrees", "540 degrees", "It depends on the sides"), H),
-        q("mat_hen_half_lays", "If a hen and a half lays an egg and a half in a day and a half, how many eggs does one hen lay in three days?", "2", listOf("3", "1", "4.5"), H)
+        q("mat_hen_half_lays", "If a hen and a half lays an egg and a half in a day and a half, how many eggs does one hen lay in three days?", "2", listOf("3", "1", "4.5"), H),
+        q("mat_legend_says_follower", "Legend says a follower of which Greek thinker was drowned for revealing that some numbers are irrational?", "Pythagoras", listOf("Euclid", "Plato", "Archimedes"), H),
+        q("mat_ancient_impossible_task", "What is the ancient, impossible task of drawing a square with exactly a circle's area, using only compass and ruler?", "Squaring the circle", listOf("Doubling the cube", "Trisecting the angle", "Cornering the arc"), H),
+        q("mat_happens_cut_mobius", "What happens if you cut a Mobius strip all the way along its middle?", "You get one longer loop", listOf("You get two separate loops", "You get two linked loops", "It falls apart into strips"), H),
+        q("mat_group_367_people", "In a group of 367 people, what is the chance that at least two share a birthday?", "100%", listOf("About 50%", "About 75%", "About 99%"), H),
+        q("mat_clock_faces_roman", "Clock faces with Roman numerals usually show the number 4 as what?", "IIII", listOf("IV", "IIV", "VI"), H),
+        q("mat_sided_die_beloved", "The 20-sided die beloved of Dungeons & Dragons players is which shape?", "An icosahedron", listOf("A dodecahedron", "An octahedron", "A decahedron"), H),
+        q("mat_scottish_laird_invented", "Which Scottish laird invented logarithms in 1614?", "John Napier", listOf("Henry Briggs", "Colin Maclaurin", "James Gregory"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -400,6 +414,8 @@ object MathQuestions {
         q("mat_220_284_history", "220 and 284 are history's most famous pair of 'amicable numbers'. What links them?", "Each one's divisors add up to the other", listOf("Both are sums of two cubes", "Their product is a perfect square", "Both are triangular numbers"), X),
         q("mat_euler_stunned_mathematicians", "Euler stunned mathematicians by showing that 1 + 1/4 + 1/9 + 1/16 + ... equals what?", "Pi squared over 6", listOf("Exactly 2", "The golden ratio", "e minus 1"), X),
         q("mat_chicken_mcnuggets_once", "Chicken McNuggets were once sold only in boxes of 6, 9 and 20. What is the largest number of nuggets you could NOT buy exactly?", "43", listOf("37", "47", "59"), X),
-        q("mat_larger_power_power", "Which is larger: e to the power of pi, or pi to the power of e?", "e to the power of pi", listOf("pi to the power of e", "They are exactly equal", "No one has proved either"), X)
+        q("mat_larger_power_power", "Which is larger: e to the power of pi, or pi to the power of e?", "e to the power of pi", listOf("pi to the power of e", "They are exactly equal", "No one has proved either"), X),
+        q("mat_division_sign", "What is the division sign ÷ called?", "An obelus", listOf("A vinculum", "A solidus", "A caret"), X),
+        q("mat_unproven_conjecture_says", "Which unproven conjecture says every even number greater than 2 is the sum of two primes?", "Goldbach's conjecture", listOf("Fermat's Last Theorem", "The Collatz conjecture", "The Riemann hypothesis"), X)
     )
 }

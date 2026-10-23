@@ -154,7 +154,9 @@ object MythologyQuestions {
         q("myt_european_folklore_witches", "In European folklore, what do witches fly on?", "A broomstick", listOf("A rake", "A shovel", "A spinning wheel"), E),
         q("myt_north_american_folklore", "In North American folklore, which animal predicts an early spring if it does not see its shadow?", "The groundhog", listOf("The beaver", "The black bear", "The raccoon"), E),
         q("myt_according_old_rhyme", "According to the old rhyme, what follows if you see a penny and pick it up?", "Good luck all day", listOf("A wish comes true", "Riches within a year", "A visit from a friend"), E),
-        q("myt_part_body_people", "Which part of the body do people cross to wish for good luck?", "Their fingers", listOf("Their arms", "Their toes", "Their legs"), E)
+        q("myt_part_body_people", "Which part of the body do people cross to wish for good luck?", "Their fingers", listOf("Their arms", "Their toes", "Their legs"), E),
+        q("myt_goddess_blindfolded_holding", "Which goddess, blindfolded and holding scales, stands outside many courthouses?", "Lady Justice", listOf("Athena", "Fortuna", "Nike"), E),
+        q("myt_greek_female_nature", "What is the Greek name for a female nature spirit of rivers, trees and springs?", "A nymph", listOf("A muse", "A fury", "A siren"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -359,7 +361,10 @@ object MythologyQuestions {
         q("myt_legend_tristan_isolde", "In the legend of Tristan and Isolde, what makes the two fall in love?", "A love potion", listOf("A golden arrow", "A magic ring", "A fairy's kiss"), M),
         q("myt_trident_maserati_logo", "The trident in Maserati's logo is based on a statue of which god in Bologna?", "Neptune", listOf("Jupiter", "Mars", "Mercury"), M),
         q("myt_giant_bird_arabian", "Which giant bird of Arabian tales could carry off elephants in its claws?", "The roc", listOf("The phoenix", "The harpy", "The thunderbird"), M),
-        q("myt_greek_myth_hippocampus", "In Greek myth, what was a hippocampus?", "A horse with a fish's tail", listOf("A winged bull", "A lion with a snake's tail", "A dog with three heads"), M)
+        q("myt_greek_myth_hippocampus", "In Greek myth, what was a hippocampus?", "A horse with a fish's tail", listOf("A winged bull", "A lion with a snake's tail", "A dog with three heads"), M),
+        q("myt_hero_beheaded_medusa", "How did the hero who beheaded Medusa avoid meeting her deadly gaze?", "He watched her reflection in his shield", listOf("He wore a blindfold woven by Athena", "He struck while she was turned away", "He fought her only in pitch darkness"), M),
+        q("myt_word_erotic_comes", "The word 'erotic' comes from which Greek god?", "Eros", listOf("Eris", "Eos", "Ares"), M),
+        q("myt_japanese_folklore_oni", "In Japanese folklore, what is an oni?", "A horned ogre or demon", listOf("A fox spirit", "A water imp", "A raccoon dog"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -492,7 +497,12 @@ object MythologyQuestions {
         q("myt_irish_legend_happened", "In Irish legend, what happened when Oisin touched the ground on his return from Tir na nOg?", "He aged 300 years at once", listOf("He turned into a stag", "He forgot his own name", "He became a stone giant"), H),
         q("myt_polynesian_demigod_maui", "How did the Polynesian demigod Maui make the days longer?", "He snared the sun and slowed it down", listOf("He held back the night with his hook", "He stole fire from the underworld", "He hid the moon in a cave"), H),
         q("myt_aztec_underworld", "What was the Aztec underworld called?", "Mictlan", listOf("Xibalba", "Aztlan", "Tamoanchan"), H),
-        q("myt_yoruba_orisha_thunder", "Which Yoruba orisha of thunder and lightning wields a double-headed axe?", "Shango", listOf("Ogun", "Eshu", "Olokun"), H)
+        q("myt_yoruba_orisha_thunder", "Which Yoruba orisha of thunder and lightning wields a double-headed axe?", "Shango", listOf("Ogun", "Eshu", "Olokun"), H),
+        q("myt_helmet_borrowed_perseus", "Whose helmet, borrowed by Perseus, made its wearer invisible?", "Hades's", listOf("Hermes's", "Ares's", "Athena's"), H),
+        q("myt_greek_god_cold", "Who was the Greek god of the cold north wind?", "Boreas", listOf("Zephyrus", "Notus", "Eurus"), H),
+        q("myt_selkie_scottish_irish", "What is a selkie in Scottish and Irish folklore?", "A seal that can shed its skin to become human", listOf("A goblin that steals milk from farmhouses", "A ghost that haunts lonely stretches of coast", "A mermaid who sings ships onto the rocks"), H),
+        q("myt_folklore_changeling", "In folklore, what is a changeling?", "A fairy child left in place of a stolen baby", listOf("A witch who can turn into a hare", "A ghost that changes its shape at night", "A stone that changes colour at midnight"), H),
+        q("myt_island_baby_zeus", "On which island was the baby Zeus hidden from his father Cronus?", "Crete", listOf("Delos", "Cyprus", "Rhodes"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -558,6 +568,9 @@ object MythologyQuestions {
         q("myt_norse_creation_primeval", "In Norse creation, what did the primeval cow Audhumla lick out of the salty ice?", "The first god, Buri", listOf("The world serpent", "The first frost giant", "The ash tree of the world"), X),
         q("myt_avatar_vishnu_yet", "Which avatar of Vishnu is yet to come, riding a white horse to end the present dark age?", "Kalki", listOf("Rama", "Parashurama", "Vamana"), X),
         q("myt_bow_kama_hindu", "What is the bow of Kama, the Hindu god of love, made of?", "Sugarcane", listOf("Bamboo", "Ivory", "Rosewood"), X),
-        q("myt_egyptian_god_means", "Which Egyptian god's name means 'the hidden one'?", "Amun", listOf("Ptah", "Aten", "Khonsu"), X)
+        q("myt_egyptian_god_means", "Which Egyptian god's name means 'the hidden one'?", "Amun", listOf("Ptah", "Aten", "Khonsu"), X),
+        q("myt_fire_giant_set", "Which fire giant will set the whole world ablaze at Ragnarok?", "Surtr", listOf("Ymir", "Thrym", "Hrungnir"), X),
+        q("myt_sleipnir_mother_loki", "Sleipnir's mother was Loki, who had turned himself into what?", "A mare", listOf("A wolf", "A salmon", "An eagle"), X),
+        q("myt_babylonian_god_slew", "Which Babylonian god slew the sea dragon Tiamat and became king of the gods?", "Marduk", listOf("Enlil", "Gilgamesh", "Ashur"), X)
     )
 }

@@ -35,6 +35,8 @@ capy_berlin_mis	Easy	Which animal appears on the coat of arms of Berlin?	A bear	
 cap_capital_iraq	Easy	What is the capital of Iraq?	Baghdad	Basra	Tehran	Damascus
 cap_1990_newly_reunified	Easy	In 1990, newly reunified Germany chose which city as its capital?	Berlin	Bonn	Frankfurt	Munich
 cap_capital_monaco	Easy	What is the capital of Monaco?	Monaco	Monte Carlo	Fontvieille	Nice
+cap_capital_city_stands	Easy	Which capital city stands on the River Tiber?	Rome	Athens	Madrid	Lisbon
+cap_capital_city_national	Easy	In which capital city are the National Mall and the Lincoln Memorial?	Washington, D.C.	Philadelphia	New York	Boston
 cap_canberra	Medium	What is the capital of Australia?	Canberra	Sydney	Melbourne	Perth
 cap_ottawa	Medium	What is the capital of Canada?	Ottawa	Toronto	Montreal	Vancouver
 cap_brasilia	Medium	What is the capital of Brazil?	Brasilia	Rio de Janeiro	Sao Paulo	Salvador
@@ -147,6 +149,9 @@ cap_state_capital_third	Medium	Which US state capital is named after the third U
 cap_capital_often_last	Medium	Which capital is often called the last divided capital in Europe?	Nicosia	Berlin	Belfast	Mostar
 cap_planned_indian_city	Medium	Which planned Indian city, laid out by Le Corbusier, is the capital of two states at once?	Chandigarh	Jaipur	Bhubaneswar	Gandhinagar
 cap_capital_receives_dutch	Medium	Which capital receives Dutch tulip bulbs every year, as thanks for sheltering a Dutch princess in World War II?	Ottawa	London	Washington, D.C.	Canberra
+cap_capital_city_river	Medium	Which capital city does the River Vltava flow through?	Prague	Vienna	Bratislava	Budapest
+cap_capital_city_see	Medium	In which capital city can you see the Belem Tower and ride the old Tram 28?	Lisbon	Porto	Madrid	Seville
+cap_capital_state_tennessee	Medium	What is the capital of the US state of Tennessee?	Nashville	Memphis	Knoxville	Chattanooga
 cap_wellington	Hard	What is the capital of New Zealand?	Wellington	Auckland	Christchurch	Dunedin
 cap_hanoi	Hard	What is the capital of Vietnam?	Hanoi	Ho Chi Minh City	Da Nang	Hue
 cap_rabat	Hard	What is the capital of Morocco?	Rabat	Casablanca	Marrakesh	Fez
@@ -244,6 +249,11 @@ cap_architect_designed_brasilia	Hard	Which architect designed Brasilia's cathedr
 cap_north_eastern_city	Hard	Which north-eastern city was Brazil's first colonial capital, from 1549 to 1763?	Salvador	Recife	Fortaleza	Sao Luis
 cap_japanese_city_tame	Hard	Which Japanese city, famous for its tame deer, was the imperial capital for most of the 700s?	Nara	Kamakura	Osaka	Nagasaki
 cap_capital_home_oldest	Hard	Which capital is home to the oldest cathedral in the Americas, completed in 1541?	Santo Domingo	Havana	Mexico City	Lima
+cap_capital_city_gyeongbokgung	Hard	In which capital city is the Gyeongbokgung royal palace?	Seoul	Tokyo	Beijing	Pyongyang
+cap_capital_city_once	Hard	Which capital city was once nicknamed 'the Paris of the Middle East'?	Beirut	Damascus	Amman	Baghdad
+cap_capital_city_casa	Hard	In which capital city is the Casa Rosada, the pink presidential palace?	Buenos Aires	Montevideo	Santiago	Lima
+cap_west_african_capital	Hard	Which West African capital was founded in 1792 as a home for freed slaves?	Freetown	Accra	Dakar	Lome
+cap_capital_barbados	Hard	What is the capital of Barbados?	Bridgetown	Kingston	Castries	Nassau
 cap_thimphu	Expert	What is the capital of Bhutan?	Thimphu	Paro	Punakha	Phuentsholing
 cap_ulaanbaatar	Expert	What is the capital of Mongolia?	Ulaanbaatar	Erdenet	Darkhan	Khovd
 cap_bishkek	Expert	What is the capital of Kyrgyzstan?	Bishkek	Osh	Naryn	Karakol
@@ -307,3 +317,13 @@ cap_city_italy_capital	Expert	Which city was Italy's capital before Rome, from 1
 cap_capital_niger	Expert	What is the capital of Niger?	Niamey	Abuja	N'Djamena	Bamako
 cap_city_lost_role	Expert	Which city lost its role as Canada's capital after a mob burned its parliament building in 1849?	Montreal	Quebec City	Kingston	Toronto
 cap_capital_city_famously	Expert	Which capital city famously has no traffic lights, its junctions run by white-gloved police instead?	Thimphu	Kathmandu	Ulaanbaatar	Vientiane
+cap_capital_kosovo	Expert	What is the capital of Kosovo?	Pristina	Prizren	Peja	Mitrovica
+cap_capital_bermuda	Expert	What is the capital of Bermuda?	Hamilton	Kingston	Nassau	Bridgetown
+cap_national_capital_built	Expert	Which national capital was built from scratch in the 1960s at the foot of the Margalla Hills?	Islamabad	Abuja	Brasilia	Canberra
+cap_capital_faroe_islands	Expert	What is the capital of the Faroe Islands?	Torshavn	Klaksvik	Nuuk	Reykjavik
+cap_montevideo_often_said	Expert	Montevideo's name is often said to come from a sailor's cry meaning what?	'I see a mountain'	'Land ahead'	'Silver river'	'Good winds'
+cap_capital_state_kentucky	Expert	What is the capital of the US state of Kentucky?	Frankfort	Louisville	Lexington	Bowling Green
+cap_capital_gabon	Expert	What is the capital of Gabon?	Libreville	Port-Gentil	Malabo	Brazzaville
+cap_capital_togo	Expert	What is the capital of Togo?	Lome	Cotonou	Kara	Porto-Novo
+cap_capital_samoa	Expert	What is the capital of Samoa?	Apia	Suva	Nuku'alofa	Port Vila
+cap_capital_cape_verde	Expert	What is the capital of Cape Verde?	Praia	Mindelo	Bissau	Dakar

@@ -17,8 +17,8 @@ Typowa sesja dopisywania pytan (szczegoly: domain/quizbank/README.md):
     python3 tools/quizbank.py stats                  # ile pytan w ktorym temacie, dziale i na ktorym poziomie
     python3 tools/quizbank.py list history/antiquity -d E   # podglad tematu albo dzialu
     python3 tools/quizbank.py find churchill         # szukaj w CALYM banku, wszystkie typy pytan
-    python3 tools/quizbank.py check nowe.txt         # sprawdz nowe pytania - niczego nie zapisuje
-    python3 tools/quizbank.py add nowe.txt           # check + dopisz do TSV + wygeneruj Kotlin
+    python3 tools/quizbank.py check nowe.txt [-q]    # sprawdz nowe pytania - niczego nie zapisuje (-q: krotko)
+    python3 tools/quizbank.py add nowe.txt [--skip-errors|--only-clean]  # check + dopisz + wygeneruj Kotlin
     python3 tools/quizbank.py move ID... --to DZIAL  # przenies pytania do innego dzialu
     python3 tools/quizbank.py list biology -w -i     # podglad z blednymi odpowiedziami i id - do przegladu
     python3 tools/quizbank.py fix poprawki.txt       # popraw albo usun istniejace pytania po id (check jak przy add)
@@ -1024,12 +1024,22 @@ def check_questions(new: list[Question], bank: Bank, rules: Rules) -> Report:
     return report
 
 
-def print_report(new: list[Question], report: Report, problems: list[str], show_ok: bool = False) -> None:
+def print_report(
+    new: list[Question], report: Report, problems: list[str], show_ok: bool = False, quiet: bool = False
+) -> None:
     for p in problems:
         print("BLAD  " + p)
     for i, q in enumerate(new):
         errs, warns = report.errors.get(i, []), report.warnings.get(i, [])
         if not errs and not warns and not show_ok:
+            continue
+        if quiet:
+            # Jedna linia na pytanie: pelne bledy, z uwag tylko pierwsza i przycieta.
+            first = "; ".join(errs) if errs else warns[0]
+            hidden = len(warns) if errs else len(warns) - 1
+            more = f" (+{hidden} uwag)" if hidden else ""
+            tag = "BLAD " if errs else "uwaga"
+            print(f"{q.where} {tag} {q.correct[:30]}: {first[:140]}{more}")
             continue
         print(f"\n{q.where}  {q.place}/{q.level}  '{q.prompt}' -> {q.correct}")
         for e in errs:
@@ -1243,7 +1253,7 @@ def cmd_check(args) -> int:
     bank = load_bank()
     new, problems = _load_new(args.files, bank.sections)
     report = check_questions(new, bank, load_rules())
-    print_report(new, report, problems, show_ok=args.all)
+    print_report(new, report, problems, show_ok=args.all, quiet=args.quiet)
     if args.summary:
         print(f"\n{'dzial':50s} " + " ".join(f"{level:>6s}" for level in LEVELS) + "   razem")
         for place in sorted({q.place for q in new}):
@@ -1258,12 +1268,25 @@ def cmd_add(args) -> int:
     new, problems = _load_new(args.files, bank.sections)
     report = check_questions(new, bank, load_rules())
     blocked = problems or any(report.errors.values())
+    if args.only_clean and not problems:
+        # Pytania z uwagami to zwykle duble ujete innymi slowami - odrzuc je razem z bledami.
+        for i in range(len(new)):
+            if report.warnings.get(i) and not report.errors.get(i):
+                report.errors[i] = report.warnings[i]
+        skipped = sum(1 for i in range(len(new)) if report.errors.get(i))
+        print(f"pominiete (bledy lub uwagi): {skipped}")
+        blocked = False
+    elif args.skip_errors and not problems:
+        rejected = [i for i in range(len(new)) if report.errors.get(i)]
+        for i in rejected:
+            print(f"pominiete {new[i].where}: {'; '.join(report.errors[i])[:160]}")
+        blocked = False
     if blocked and not args.force:
-        print_report(new, report, problems)
+        print_report(new, report, problems, quiet=args.quiet)
         print("\nNic nie zapisano - popraw bledy (albo --force, jesli to swiadoma decyzja).")
         return 1
     if args.verbose:
-        print_report(new, report, problems)
+        print_report(new, report, problems, quiet=args.quiet)
     taken = bank.all_ids()
     by_file: dict[str, list[Question]] = defaultdict(list)
     for i, q in enumerate(new):
@@ -1283,7 +1306,7 @@ def cmd_add(args) -> int:
     print(f"Dopisano {len(added)} pytan: " + ", ".join(f"{p}: {n}" for p, n in sorted(places.items())))
     print("Poziomy: " + ", ".join(f"{level}: {levels[level]}" for level in LEVELS))
     n_warn = sum(1 for i in range(len(new)) if report.warnings.get(i))
-    if n_warn and not args.verbose:
+    if n_warn and not args.verbose and not args.only_clean:
         print(f"({n_warn} pytan mialo uwagi - `check` pokaze je przed dopisaniem)")
     return result
 
@@ -1574,6 +1597,8 @@ def cmd_plan(args) -> int:
 
 
 def main() -> int:
+    if hasattr(signal, "SIGPIPE"):
+        signal.signal(signal.SIGPIPE, signal.SIG_DFL)  # `... | head` bez tracebacku
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = parser.add_subparsers(dest="command", required=True)
 
@@ -1593,11 +1618,15 @@ def main() -> int:
     p.add_argument("files", nargs="+")
     p.add_argument("--all", action="store_true", help="wypisz tez pytania bez uwag")
     p.add_argument("-s", "--summary", action="store_true", help="na koncu: ile nowych pytan w kazdym dziale i poziomie")
+    p.add_argument("-q", "--quiet", action="store_true", help="jedna krotka linia na pytanie z bledem/uwaga")
 
     p = sub.add_parser("add", help="check + dopisz nowe pytania do TSV + wygeneruj Kotlin")
     p.add_argument("files", nargs="+")
     p.add_argument("--force", action="store_true", help="dopisz mimo bledow")
     p.add_argument("-v", "--verbose", action="store_true", help="wypisz tez uwagi")
+    p.add_argument("-q", "--quiet", action="store_true", help="krotki raport bledow")
+    p.add_argument("--skip-errors", action="store_true", help="dopisz pytania bez bledow, reszte pomin")
+    p.add_argument("--only-clean", action="store_true", help="dopisz tylko pytania bez bledow i bez uwag")
 
     p = sub.add_parser("move", help="przenies pytania (po id) do innego dzialu albo tematu")
     p.add_argument("ids", nargs="+")

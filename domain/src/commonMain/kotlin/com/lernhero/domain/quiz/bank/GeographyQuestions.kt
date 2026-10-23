@@ -75,6 +75,7 @@ object GeographyQuestions {
         q("geo_country_own_irish", "Which country's name in its own Irish language is 'Eire'?", "Ireland", listOf("Scotland", "Wales", "Iceland"), E),
         q("geo_part_united_kingdom_3", "Which part of the United Kingdom is nicknamed 'the Land of Song'?", "Wales", listOf("Scotland", "Northern Ireland", "Cornwall"), E),
         q("geo_part_united_kingdom_4", "Which part of the United Kingdom has its own parliament at Holyrood?", "Scotland", listOf("Wales", "Northern Ireland", "Cornwall"), E),
+        q("geo_country_five_cliffside", "In which country are the five cliffside villages of the Cinque Terre?", "Italy", listOf("France", "Croatia", "Portugal"), E),
         q("geocmp_nie_nordyckie", "Which of these countries is NOT a Nordic country?", "Estonia", listOf("Norway", "Sweden", "Denmark"), M),
         q("trv_islandia_lodowce", "Which country gets most of its electricity from geothermal and hydro power?", "Iceland", listOf("Ireland", "Belgium", "Greece"), M),
         q("lmk_dolina_loary", "In which country is the Loire Valley, famous for its chateaux?", "France", listOf("Belgium", "Switzerland", "Spain"), M),
@@ -429,6 +430,7 @@ object GeographyQuestions {
         q("geo_country_basutoland_under", "Which country was called Basutoland under British rule?", "Lesotho", listOf("Eswatini", "Malawi", "Zambia"), H),
         q("geo_country_portuguese_guinea", "Which country was called Portuguese Guinea until 1974?", "Guinea-Bissau", listOf("Equatorial Guinea", "Guinea", "Cape Verde"), H),
         q("geo_european_country_ruled_2", "Which European country ruled southern Somalia, including Mogadishu, until 1960?", "Italy", listOf("Britain", "France", "Portugal"), H),
+        q("geo_country_rock_hewn", "In which country are the rock-hewn churches of Lalibela?", "Ethiopia", listOf("Egypt", "Sudan", "Eritrea"), H),
         q("geo_namibia_long_thin", "Why does Namibia have the long, thin Caprivi Strip in its north-east?", "Germany wanted a route to the Zambezi", listOf("Britain gave it as a war prize", "It follows an old caravan road", "It was a royal hunting ground"), X),
         q("geo_near_kazungula_borders", "Near Kazungula, the borders of Zambia, Botswana and Zimbabwe almost meet at one point with which fourth country?", "Namibia", listOf("Angola", "Malawi", "Mozambique"), X),
         q("geo_country_highest_lowest", "Which country has the highest 'lowest point' in the world, with all its land above 1,000 m?", "Lesotho", listOf("Bhutan", "Nepal", "Andorra"), X),
@@ -526,6 +528,7 @@ object GeographyQuestions {
         q("geo_canadian_province_nicknamed_2", "Which Canadian province is nicknamed 'La Belle Province'?", "Quebec", listOf("New Brunswick", "Ontario", "Manitoba"), M),
         q("geo_central_american_country_3", "Which Central American country is named after Jesus Christ, 'the Saviour'?", "El Salvador", listOf("Costa Rica", "Honduras", "Nicaragua"), M),
         q("geo_cayman_islands_tax", "The Cayman Islands, a famous tax haven, are a territory of which country?", "Britain", listOf("The Netherlands", "France", "The USA"), M),
+        q("geo_state_longest_coastline", "Which US state has the longest coastline?", "Alaska", listOf("Florida", "California", "Hawaii"), M),
         q("geox_kostaryka", "Which Central American country abolished its army in 1948?", "Costa Rica", listOf("Panama", "Honduras", "Belize"), H),
         q("geo_state_nicknamed_bluegrass", "Which US state is nicknamed 'the Bluegrass State'?", "Kentucky", listOf("Tennessee", "Virginia", "Missouri"), H),
         q("geo_largest_country_central", "Which is the largest country in Central America by area?", "Nicaragua", listOf("Honduras", "Guatemala", "Panama"), H),
@@ -563,6 +566,7 @@ object GeographyQuestions {
         q("geo_names_two_states", "The names of which two US states come from a Sioux word meaning 'friends' or 'allies'?", "North and South Dakota", listOf("North and South Carolina", "Kansas and Arkansas", "Iowa and Nebraska"), H),
         q("geo_state_nicknamed_badger", "Which US state is nicknamed 'the Badger State'?", "Wisconsin", listOf("Michigan", "Minnesota", "Iowa"), H),
         q("geo_state_flag_designed", "Which US state's flag, designed by a 13-year-old boy in 1927, shows the Big Dipper and the North Star?", "Alaska", listOf("Minnesota", "Maine", "Montana"), H),
+        q("geo_country_maya_ruins", "In which country are the Maya ruins of Tikal?", "Guatemala", listOf("Mexico", "Honduras", "Belize"), H),
         q("geo_darien", "The Darien Gap is a missing link in which famous road?", "The Pan-American Highway", listOf("Route 66", "The Silk Road", "The Trans-Canada Highway"), X),
         q("geo_mosquito_coast_stretches", "The Mosquito Coast stretches along the Caribbean shores of Nicaragua and which other country?", "Honduras", listOf("Costa Rica", "Panama", "Belize"), X),
         q("geo_canadian_territory_means", "Which Canadian territory's name means 'great river'?", "Yukon", listOf("Nunavut", "Northwest Territories", "Labrador"), X),
@@ -830,6 +834,7 @@ object GeographyQuestions {
         q("geo_city_adelaide_queen", "The city of Adelaide is named after the queen of which British king?", "William IV", listOf("George III", "George IV", "Edward VII"), H),
         q("geo_palau_marshall_islands", "Palau, the Marshall Islands and Micronesia all use which currency?", "The US dollar", listOf("The Australian dollar", "The New Zealand dollar", "The Japanese yen"), H),
         q("geo_pacific_nation_made_2", "Which Pacific nation is made up mainly of two big islands, Upolu and Savai'i?", "Samoa", listOf("Tonga", "Fiji", "Vanuatu"), H),
+        q("geo_country_often_nicknamed", "Which country is often nicknamed 'the Lucky Country'?", "Australia", listOf("Ireland", "Canada", "Switzerland"), H),
         q("geox_tuvalu_tv", "Which tiny Pacific nation earns money from its '.tv' internet domain?", "Tuvalu", listOf("Tonga", "Tokelau", "Taiwan"), X),
         q("geo_people_born_american", "People born in American Samoa are not automatically US citizens. What are they instead?", "US nationals", listOf("US residents", "Protected persons", "Commonwealth subjects"), X),
         q("geo_1933_australian_state", "In 1933, which Australian state voted by a two-thirds majority to leave Australia?", "Western Australia", listOf("Queensland", "Tasmania", "South Australia"), X),
@@ -1098,6 +1103,7 @@ object GeographyQuestions {
         q("geo_sea_slowly_widening", "Which sea is slowly widening as Africa and Arabia drift apart, and may one day become an ocean?", "The Red Sea", listOf("The Mediterranean", "The Black Sea", "The Caspian Sea"), H),
         q("geo_strait_between_norway", "Which strait between Norway and Denmark links the North Sea with the Kattegat?", "The Skagerrak", listOf("The Oresund", "The Great Belt", "The Little Belt"), H),
         q("geo_sea_okhotsk_enclosed", "The Sea of Okhotsk is enclosed by Siberia, Sakhalin, Hokkaido and which peninsula?", "Kamchatka", listOf("Chukotka", "Korea", "Taymyr"), H),
+        q("geo_strait_crossed_bridge", "Which strait, crossed by a famous bridge-and-tunnel link, separates Denmark from Sweden?", "The Oresund", listOf("The Skagerrak", "The Bosphorus", "The Dardanelles"), H),
         q("geo_row_marianski", "What is the deepest point in the oceans called?", "Challenger Deep", listOf("Tonga Trench", "Java Trench", "Milwaukee Deep"), X),
         q("geo_grzbiet_srodoceaniczny", "Which is the longest mountain range on Earth?", "The mid-ocean ridge", listOf("The Andes", "The Himalayas", "The Rocky Mountains"), X),
         q("geo_atlantyk_slony", "Which ocean is the saltiest?", "The Atlantic", listOf("The Pacific", "The Indian Ocean", "The Arctic Ocean"), X),
@@ -1256,6 +1262,7 @@ object GeographyQuestions {
         q("geo_central_american_lake", "Which Central American lake is famous for bull sharks that swim up from the sea?", "Lake Nicaragua", listOf("Lake Managua", "Lake Atitlan", "Lake Gatun"), H),
         q("geo_city_oxford_river", "In the city of Oxford, the River Thames is known by what name?", "The Isis", listOf("The Cherwell", "The Avon", "The Cam"), H),
         q("geo_giant_itaipu_dam", "The giant Itaipu Dam, shared by Brazil and Paraguay, stands on which river?", "The Parana", listOf("The Paraguay", "The Uruguay", "The Amazon"), H),
+        q("geo_longest_river_canada", "Which is the longest river in Canada?", "The Mackenzie", listOf("The St Lawrence", "The Yukon", "The Fraser"), H),
         q("geo_kraj_bez_rzek", "Which of these countries has not a single permanent river?", "Saudi Arabia", listOf("Mongolia", "Kazakhstan", "Iran"), X),
         q("geo_titicaca", "Lake Titicaca lies on the border of which two countries?", "Peru and Bolivia", listOf("Chile and Argentina", "Ecuador and Colombia", "Brazil and Paraguay"), X),
         q("geo2_kaldera_toba", "Where is Lake Toba, formed by a giant caldera?", "On Sumatra", listOf("On Java", "In Japan", "In New Zealand"), X),
@@ -1277,7 +1284,9 @@ object GeographyQuestions {
         q("geo_kaieteur_falls_powerful", "Kaieteur Falls, one of the most powerful single-drop waterfalls on Earth, is in which country?", "Guyana", listOf("Venezuela", "Suriname", "Brazil"), X),
         q("geo_longest_river_south", "Which is the longest river in South Africa?", "The Orange", listOf("The Limpopo", "The Vaal", "The Tugela"), X),
         q("geo_1980_oil_rig", "In 1980, an oil rig drilled into a salt mine and drained which Louisiana lake into it?", "Lake Peigneur", listOf("Lake Pontchartrain", "Caddo Lake", "Lake Charles"), X),
-        q("geo_spanish_river_runs", "Which Spanish river runs blood-red after thousands of years of mining, and gave its name to a mining giant?", "The Rio Tinto", listOf("The Guadiana", "The Ebro", "The Segura"), X)
+        q("geo_spanish_river_runs", "Which Spanish river runs blood-red after thousands of years of mining, and gave its name to a mining giant?", "The Rio Tinto", listOf("The Guadiana", "The Ebro", "The Segura"), X),
+        q("geo_river_flows_through_19", "Which river flows through Madrid?", "Manzanares", listOf("Tagus", "Ebro", "Guadiana"), X),
+        q("geo_river_joins_danube", "Which river joins the Danube at Belgrade?", "The Sava", listOf("The Drava", "The Tisza", "The Morava"), X)
     )
 
     /* Physical Geography / Mountains & Volcanoes - geography/physical/mountains.tsv */
@@ -1394,6 +1403,7 @@ object GeographyQuestions {
         q("geo_limestone_very_top", "The limestone at the very top of Mount Everest contains fossils of what?", "Sea creatures", listOf("Dinosaurs", "Tropical ferns", "Woolly mammoths"), H),
         q("geo_1950_became_000", "In 1950, which became the first 8,000 m peak ever climbed?", "Annapurna", listOf("Mount Everest", "K2", "Nanga Parbat"), H),
         q("geo_snowy_range_uganda", "Which snowy range on the Uganda-Congo border is often identified with Ptolemy's 'Mountains of the Moon'?", "The Rwenzori", listOf("The Virunga", "The Aberdares", "The Usambara"), H),
+        q("geo_state_mount_helens", "In which US state did Mount St Helens erupt in 1980?", "Washington", listOf("Oregon", "California", "Alaska"), H),
         q("geo2_najwiecej_wulkanow", "Which country has the most active volcanoes?", "Indonesia", listOf("Japan", "Chile", "USA"), X),
         q("dpt_geo_chimborazo", "Whose summit lies farthest from the Earth's centre?", "Chimborazo", listOf("Everest", "Denali", "Kilimanjaro"), X),
         q("geox_colca", "Which canyon in Peru is about twice as deep as the Grand Canyon?", "The Colca Canyon", listOf("The Copper Canyon", "The Fish River Canyon", "Tiger Leaping Gorge"), X),
@@ -1528,6 +1538,8 @@ object GeographyQuestions {
         q("geo_gir_forest_western", "The Gir Forest in western India is the last wild home of which animal?", "The Asiatic lion", listOf("The Indian cheetah", "The Bengal tiger", "The clouded leopard"), H),
         q("geo_marathon_des_sables", "The Marathon des Sables, a six-day footrace across the Sahara, is held in which country?", "Morocco", listOf("Egypt", "Algeria", "Tunisia"), H),
         q("geo_hikers_get_visit", "How do hikers get to visit The Wave, a famous swirl of striped sandstone in Arizona?", "By winning a permit lottery", listOf("By joining a ranger's bus tour", "By paying at the park gate", "By booking a balloon flight"), H),
+        q("geo_continent_without_major", "Which is the only continent without a major desert?", "Europe", listOf("Antarctica", "Australia", "South America"), H),
+        q("geo_largest_lake_australia", "Which is the largest lake in Australia, usually a dry salt flat?", "Lake Eyre", listOf("Lake Torrens", "Lake Argyle", "Lake Gairdner"), H),
         q("dpt_geo_sahel", "What is the Sahel?", "The dry belt south of the Sahara", listOf("The delta of the river Niger", "The highlands of East Africa", "The coastal plain of Namibia"), X),
         q("geo_largest_continuous_expanse", "Which is the largest continuous expanse of sand on Earth?", "Rub' al Khali", listOf("The Grand Erg Oriental", "The Taklamakan", "The Namib Sand Sea"), X),
         q("geo_chinese_desert_often", "Which Chinese desert's name is often said to mean 'you go in, but you never come out'?", "The Taklamakan", listOf("The Gobi", "The Ordos", "The Kumtag"), X),
@@ -1579,6 +1591,7 @@ object GeographyQuestions {
         q("geo_largest_canary_islands", "Which is the largest of the Canary Islands?", "Tenerife", listOf("Gran Canaria", "Lanzarote", "Fuerteventura"), E),
         q("geo_island_football_boot", "Which island is the 'football' that the 'boot' of Italy seems to be kicking?", "Sicily", listOf("Sardinia", "Corsica", "Malta"), E),
         q("geo_costa_del_sol", "The Costa del Sol, packed with holidaymakers around Malaga, is in which country?", "Spain", listOf("Portugal", "Italy", "Greece"), E),
+        q("geo_country_island_rhodes", "To which country does the island of Rhodes belong?", "Greece", listOf("Turkey", "Cyprus", "Italy"), E),
         q("geo2_morze_srodziemne_wyspa", "Which Mediterranean island is the largest?", "Sicily", listOf("Sardinia", "Cyprus", "Corsica"), M),
         q("geocmp_wyspa_druga", "Which of these islands is the largest?", "Borneo", listOf("Madagascar", "Sumatra", "Honshu"), M),
         q("lmk_galapagos_kraj", "The Galapagos Islands belong to which country?", "Ecuador", listOf("Peru", "Colombia", "Chile"), M),
@@ -2139,6 +2152,7 @@ object GeographyQuestions {
         q("geo_city_populous_european", "Which city is the most populous in the European Union?", "Berlin", listOf("Paris", "Madrid", "Rome"), E),
         q("geo_italian_city_home", "Which Italian city is home to the most famous leaning tower in the world?", "Pisa", listOf("Bologna", "Venice", "Florence"), E),
         q("geo_city_street_lined", "Which city's most famous street, lined with stalls and street performers, is Las Ramblas?", "Barcelona", listOf("Madrid", "Lisbon", "Seville"), E),
+        q("geo_country_city_salzburg", "In which country is the city of Salzburg?", "Austria", listOf("Germany", "Switzerland", "Czechia"), E),
         q("wh_angkor_wat", "In which country is the Angkor Wat temple complex located?", "Cambodia", listOf("Thailand", "Vietnam", "India"), M),
         q("geocmp_miasto_azja", "Which of these urban areas is the most populous?", "Delhi", listOf("Bangkok", "Seoul", "Istanbul"), M),
         q("geocmp_najdalej_polnoc_nordyckie", "Which of these cities lies furthest north?", "Helsinki", listOf("Oslo", "Stockholm", "Copenhagen"), M),
@@ -2228,6 +2242,7 @@ object GeographyQuestions {
         q("geo_jazz_bars_wrought", "Jazz bars and wrought-iron balconies fill the French Quarter of which US city?", "New Orleans", listOf("Montreal", "Quebec City", "St. Louis"), M),
         q("geo_pike_place_market", "Pike Place Market, where fishmongers famously throw salmon to each other, is in which city?", "Seattle", listOf("Boston", "San Francisco", "Vancouver"), M),
         q("geo_mostar_old_bridge", "Mostar's famous Old Bridge, destroyed in 1993 and later rebuilt, is in which country?", "Bosnia and Herzegovina", listOf("North Macedonia", "Montenegro", "Croatia"), M),
+        q("geo_japanese_city_golden", "In which Japanese city is the Golden Pavilion, Kinkaku-ji?", "Kyoto", listOf("Tokyo", "Nara", "Osaka"), M),
         q("wh_timbuktu", "In which country is the historic city of Timbuktu?", "Mali", listOf("Niger", "Chad", "Mauritania"), H),
         q("geocmp_najdalej_poludnie", "Which of these cities lies furthest south?", "Auckland", listOf("Sydney", "Cape Town", "Buenos Aires"), H),
         q("geocmp_stolica_najdalej_poludnie", "Which of these capitals lies furthest south?", "Wellington", listOf("Canberra", "Santiago", "Pretoria"), H),
@@ -2283,7 +2298,8 @@ object GeographyQuestions {
         q("geo_state_capital_started", "Which US state capital started life as a settlement called 'Pig's Eye', after a one-eyed tavern keeper?", "Saint Paul", listOf("Sacramento", "Madison", "Des Moines"), X),
         q("geo_sobrino_botin_listed", "Sobrino de Botin, listed as the world's oldest restaurant still running, has been serving since 1725 in which city?", "Madrid", listOf("Paris", "Vienna", "Lisbon"), X),
         q("geo_lakeside_austrian_village", "Which lakeside Austrian village did a Chinese developer copy, full-size, in 2012?", "Hallstatt", listOf("Zell am See", "St. Wolfgang", "Kitzbuhel"), X),
-        q("geo_1950_circus_elephant", "In 1950, a circus elephant called Tuffi jumped out of which German city's hanging monorail into the river below?", "Wuppertal", listOf("Dortmund", "Dresden", "Cologne"), X)
+        q("geo_1950_circus_elephant", "In 1950, a circus elephant called Tuffi jumped out of which German city's hanging monorail into the river below?", "Wuppertal", listOf("Dortmund", "Dresden", "Cologne"), X),
+        q("geo_country_great_mosque", "In which country is the Great Mosque of Djenne, the world's largest mud-brick building?", "Mali", listOf("Niger", "Morocco", "Senegal"), X)
     )
 
     /* People & Places / Languages, Money & Customs - geography/human/languages_customs.tsv */

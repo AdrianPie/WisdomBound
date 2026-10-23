@@ -168,6 +168,10 @@ ani_must_giraffe_drink	Easy	What must a giraffe do to drink from a pond?	Spread 
 ani_chewed_food_cows	Easy	What is the chewed food that cows bring back up from their stomach to chew again called?	Cud	Silage	Mash	Chaff
 ani_small_pet_run	Easy	Which small pet can run several kilometres in one night on its exercise wheel?	The hamster	The rabbit	The guinea pig	The tortoise
 ani_farmyard_birds_often	Easy	Which farmyard birds are often kept as noisy 'guards' because they honk and chase off intruders?	Geese	Chickens	Ducks	Turkeys
+ani_contrary_popular_myth	Easy	Contrary to the popular myth, how long can a goldfish remember things?	For months	About three seconds	About a minute	About an hour
+ani_actually_makes_bull	Easy	What actually makes a bull charge at a matador's cape?	The cape's movement	Its red colour	The crowd's noise	The smell of the cloth
+ani_venison_meat_animal	Easy	Venison is the meat of which animal?	Deer	Wild boar	Rabbit	Goose
+ani_colour_live_lobsters	Easy	What colour are most live lobsters before they are cooked?	Dark greenish-brown	Bright red	Pale pink	Pure white
 ani_osmiornica_serca	Medium	How many hearts does an octopus have?	3	1	2	5
 ani_kameleon	Medium	Which reptile is famous for changing skin color?	Chameleon	Iguana	Gecko	Monitor lizard
 ani_ciaza_slonia	Medium	Which land animal has the longest pregnancy?	Elephant	Rhinoceros	Horse	Giraffe
@@ -429,6 +433,13 @@ ani_sudan_died_kenya	Medium	Sudan, who died in Kenya in 2018, was the last male 
 ani_clever_hans_german	Medium	Clever Hans, a famous German horse of the early 1900s, seemed to be able to do what?	Solve arithmetic problems	Speak a few German words	Paint simple pictures	Play tunes on a piano
 ani_greyfriars_bobby_terrier	Medium	Greyfriars Bobby, a terrier said to have guarded his master's grave for 14 years, lived in which city?	Edinburgh	Dublin	London	Glasgow
 ani_single_bound_roughly	Medium	In one single bound, roughly how far can a red kangaroo leap at most?	About 8 metres	About 3 metres	About 20 metres	About 1.5 metres
+ani_farm_animal_learned	Medium	Which farm animal has learned to play simple video games with a joystick?	The pig	The cow	The sheep	The goat
+ani_almost_never_see	Medium	Why do you almost never see baby pigeons?	They leave the nest almost fully grown	They hatch only in the depths of winter	They spend their first weeks underground	Most of them are raised far out at sea
+ani_blue_whales_use	Medium	What do blue whales use instead of teeth to filter their food?	Baleen plates	Gill rakers	Bony ridges	Rows of bristly tusks
+ani_flamingos_hold_heads	Medium	How do flamingos hold their heads while they feed?	Upside down	Tilted sideways	Fully under the mud	High above the water
+ani_sea_creature_some	Medium	Which sea creature can, in some species, regrow a whole new body from a single severed arm?	The starfish	The octopus	The crab	The sea urchin
+ani_rodents_laugh_high	Medium	Which rodents 'laugh' with high-pitched chirps when scientists tickle them?	Rats	Hamsters	Guinea pigs	Squirrels
+ani_guano_once_fortune	Medium	Guano, once a fortune-making fertiliser, is the droppings of which animals?	Seabirds and bats	Cattle and sheep	Pigs and goats	Horses and donkeys
 ani_dziobak	Hard	Which mammal lays eggs?	Platypus	Armadillo	Sloth	Hedgehog
 ani_krowa_zoladek	Hard	How many chambers does a cow's stomach have?	4	1	2	3
 ani_kalmar_oczy	Hard	Which animal has an eye that can grow to the size of a dinner plate?	Giant squid	Owl	Whale	Elephant seal
@@ -590,6 +601,14 @@ ani_old_elephants_starve	Hard	Old elephants can starve to death after wearing ou
 ani_geckos_eyelids_keep	Hard	Most geckos have no eyelids. How do they keep their eyes clean?	By licking them	By weeping thick tears	By dipping their heads in water	By shedding an eye scale daily
 ani_woolly_mammoths_still	Hard	Woolly mammoths still lived on Wrangel Island in the Arctic while which was being built?	The Great Pyramid of Giza	The Colosseum in Rome	The Parthenon in Athens	The Great Wall of China
 ani_giant_relative_manatee	Hard	Which giant relative of the manatee was hunted to extinction within about 27 years of being discovered in 1741?	Steller's sea cow	The great auk	The dodo	The Caribbean monk seal
+ani_hearts_earthworm	Hard	How many hearts does an earthworm have?	Five	One	Two	Ten
+ani_some_horned_lizards	Hard	How do some horned lizards defend themselves against predators?	By squirting blood from their eyes	By shedding their whole skin	By spitting venom at the eyes	By puffing up into a ball
+ani_songbird_nicknamed_butcher	Hard	Which songbird, nicknamed the 'butcher bird', impales its prey on thorns?	The shrike	The magpie	The jay	The starling
+ani_dog_breed_originally	Hard	Which dog breed was originally bred in southern Africa to help hunt lions?	The Rhodesian Ridgeback	The Great Dane	The Bullmastiff	The Saluki
+ani_cat_breed_nicknamed	Hard	Which cat breed is nicknamed 'the swimming cat' for its love of water?	The Turkish Van	The Siamese	The Persian	The Ragdoll
+ani_bird_nest_soup	Hard	Bird's nest soup is made from nests built mainly from what?	Swiftlet saliva	Woven grass and mud	Seaweed and feathers	Caterpillar silk
+ani_group_giant_pandas	Hard	What is a group of giant pandas sometimes called?	An embarrassment	A bamboozle	A cuddle	A shrug
+ani_proteins_rex_bone	Hard	Proteins from a T. rex bone most closely matched those of which living animal?	The chicken	The crocodile	The Komodo dragon	The iguana
 ani_hemocyjanina	Expert	Which animal has blue blood?	Octopus	Frog	Snake	Carp
 ani_narwal	Expert	Which marine mammal has a long, spiral tusk growing from its head?	Narwhal	Beluga whale	Porpoise	Manatee
 ani_echidna	Expert	Which animal, alongside the platypus, is a monotreme?	Echidna	Opossum	Wombat	Koala
@@ -655,3 +674,9 @@ ani_happens_eyes_arctic	Expert	What happens to the eyes of Arctic reindeer in th
 ani_norwegian_dog_breed	Expert	Which Norwegian dog breed, once used to hunt puffins on cliffs, has at least six toes on each foot?	The Norwegian Lundehund	The Norwegian Elkhound	The Finnish Spitz	The Icelandic Sheepdog
 ani_rueppell_vulture_holds	Expert	A Rueppell's vulture holds the bird altitude record after it hit a plane at roughly what height?	About 11 km	About 3 km	About 6 km	About 20 km
 ani_now_extinct_gastric	Expert	The now-extinct gastric-brooding frog of Australia raised its young where?	In its stomach	In its mouth	In pockets on its back	In a foam nest
+ani_tiny_insects_born	Expert	Which tiny insects can be born already pregnant?	Aphids	Fleas	Termites	Mosquitoes
+ani_olm_blind_salamander	Expert	The olm, a blind salamander of European caves, can survive without food for about how long?	Up to ten years	About a month	About a year	About three years
+ani_mammal_shortest_pregnancies	Expert	Which mammal has one of the shortest pregnancies, only about 12 days?	The Virginia opossum	The house mouse	The rabbit	The hamster
+ani_flehmen_response_cat	Expert	What is the 'flehmen response', when a cat or horse curls back its upper lip?	A way of taking in scents	A sign of extreme anger	A way of cooling the mouth	A warning call to the herd
+ani_rodent_live_over	Expert	Which rodent can live over 30 years and almost never gets cancer?	The naked mole-rat	The capybara	The chinchilla	The porcupine
+ani_some_deep_sea	Expert	In some deep-sea anglerfish, what happens to the tiny male?	He fuses permanently onto the female	He becomes the female's glowing lure	He is eaten right after mating	He guards the eggs inside his mouth

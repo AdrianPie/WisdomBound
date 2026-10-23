@@ -114,8 +114,10 @@ przechodza te same sprawdzenia co nowe, wobec banku bez nich samych. Zasady prze
 python3 tools/quizbank.py stats                  # ile pytan w temacie, w kazdym dziale i na kazdym poziomie
 python3 tools/quizbank.py list history/antiquity -d E   # podglad tematu albo dzialu; -g fraza, -w bledne
 python3 tools/quizbank.py find "titanic"         # czy fakt juz jest - w CALYM banku, wszystkie typy
-python3 tools/quizbank.py check -s nowe.txt      # sprawdz nowe pytania, niczego nie zapisuje (-s: podsumowanie)
+python3 tools/quizbank.py check -s nowe.txt      # sprawdz nowe pytania, niczego nie zapisuje (-s: podsumowanie, -q: krotko)
 python3 tools/quizbank.py add nowe.txt           # check + dopisz do TSV + wygeneruj Kotlin
+python3 tools/quizbank.py add nowe.txt --skip-errors  # dopisz poprawne, pomin te z bledami
+python3 tools/quizbank.py add nowe.txt --only-clean   # dopisz tylko pytania bez bledow i bez uwag
 python3 tools/quizbank.py move ID... --to vikings  # przenies pytania do innego dzialu (albo tematu)
 ./gradlew :domain:desktopTest --tests 'com.lernhero.domain.quiz.*'   # albo tools/quiztest.sh bez Gradle
 ```

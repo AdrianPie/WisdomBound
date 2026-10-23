@@ -145,6 +145,10 @@ tec_amazon_owned_site	Easy	On which Amazon-owned site do millions watch people p
 tec_apple_built_video	Easy	What is the name of Apple's built-in video-calling app?	FaceTime	Skype	Duo	Zoom
 tec_dating_app_tinder	Easy	On the dating app Tinder, what does swiping right on a profile mean?	You like them	You want to skip them	You want to report them	You want to block them
 tec_mobile_phone_little	Easy	On a mobile phone, what do the little rising bars at the top of the screen show?	Signal strength	Battery level	Volume	Storage space
+tec_shouldn_put_metal	Easy	Why shouldn't you put a metal fork in a microwave oven?	It can cause sparks	It makes the food toxic	It turns the fork magnetic	It switches the oven off
+tec_files_stored_cloud	Easy	When files are stored 'in the cloud', where are they really?	On remote servers in data centres	Inside satellites in orbit	Hidden in your phone's SIM card	In the air as radio waves
+tec_firewall_job_computer	Easy	What is a firewall's job on a computer network?	Blocking unwanted network traffic	Cooling down an overheating processor	Backing up your files every night	Making your downloads run faster
+tec_two_factor_authentication	Easy	What is two-factor authentication?	Proving who you are in two separate ways	Using two different passwords on one site	Letting two people share one account	Changing your password twice a year
 tec_cpu	Medium	What does the abbreviation CPU stand for?	Central Processing Unit	Random-access memory	Graphics card	Hard drive
 tec_android_firma	Medium	Which company develops the Android operating system?	Google	Apple	Microsoft	Meta
 tec_telefon_bell	Medium	Who patented the telephone?	Alexander Graham Bell	Thomas Edison	Guglielmo Marconi	Samuel Morse
@@ -364,6 +368,12 @@ tec_video_app_shut	Medium	Which video app, shut down in 2017, limited every clip
 tec_made_snapchat_stand	Medium	What made Snapchat stand out when it launched in 2011?	Its photos vanished after viewing	It allowed only black-and-white photos	It let you post one photo a day	It showed friends on a live map
 tec_company_makes_roomba	Medium	Which company makes the Roomba robot vacuum?	iRobot	Dyson	Samsung	Philips
 tec_phone_touchscreens_ignore	Medium	Why do most phone touchscreens ignore you when you wear ordinary gloves?	They need skin to conduct electricity	They need the warmth of a finger	They read your fingerprints	Gloves are too soft to press them
+tec_word_modem_short	Medium	The word 'modem' is short for what?	Modulator-demodulator	Mobile data emitter	Modular electronic memory	Model data machine
+tec_radar_stand	Medium	What does 'radar' stand for?	Radio detection and ranging	Radial distance and range	Radio alert and alarm	Remote area detection and reporting
+tec_scuba_stand	Medium	What does 'scuba' stand for?	Self-contained underwater breathing apparatus	Sealed cylinder for underwater breathing air	Submarine crew underwater breathing aid	Standard compressed underwater breathing air
+tec_nft_stand	Medium	What does 'NFT' stand for?	Non-fungible token	Network file transfer	New financial technology	Numbered format token
+tec_chatbot_hallucinates	Medium	When an AI chatbot 'hallucinates', what does it do?	States made-up things as if they were true	Starts answering in random languages	Shows pictures nobody asked for	Freezes and refuses to answer
+tec_engineer_designed_original	Medium	Which engineer designed the original Volkswagen Beetle?	Ferdinand Porsche	Karl Benz	Gottlieb Daimler	Ettore Bugatti
 day2_ram_vs_dysk	Hard	Why does a computer slow down when RAM runs out?	It starts swapping data to much slower storage	The processor overheats and throttles	The screen starts refreshing slower	The network connection is throttled
 tec_turing	Hard	Who is regarded as the father of computer science and cracked the Enigma cipher?	Alan Turing	John von Neumann	Charles Babbage	Claude Shannon
 tec_enigma_polacy	Hard	Which Pole co-created the first break of the Enigma cipher?	Marian Rejewski	Stefan Banach	Jan Czochralski	Kazimierz Funk
@@ -499,6 +509,14 @@ tec_often_said_thing	Hard	What is often said to be the first thing ever bought s
 tec_world_web_server	Hard	The world's first web server, at CERN, carried a handwritten label warning staff not to do what?	Switch it off	Move it	Spill coffee on it	Unplug the mouse
 tec_xbox_began_shortening	Hard	The name 'Xbox' began as a shortening of what?	DirectX Box	Extreme Box	X-Ray Box	Xenon Box
 tec_cruise_control_invented	Hard	Cruise control was invented by Ralph Teetor, an engineer who had what unusual trait?	He was blind	He was deaf	He was colour-blind	He had lost both arms
+tec_jacquard_loom_1804	Hard	The Jacquard loom of 1804, which inspired early computers, wove patterns controlled by what?	Punched cards	Spinning cams	Glass marbles	Wax cylinders
+tec_oled_screens_stand	Hard	In 'OLED' screens, what does the 'O' stand for?	Organic	Optical	Oxide	Ordered
+tec_patented_windscreen_wiper	Hard	Who patented the windscreen wiper in 1903?	Mary Anderson	Henry Ford	Bertha Benz	Garrett Morgan
+tec_samsung_began_1938	Hard	Samsung began in 1938 as a small shop trading in what?	Dried fish and noodles	Silk and cotton	Bicycle parts	Valve radios
+tec_car_maker_badge	Hard	Which car maker's badge shows a serpent swallowing a man?	Alfa Romeo	Maserati	Lancia	Ferrari
+tec_volvo_circle_arrow	Hard	Volvo's circle-and-arrow logo is the ancient symbol for which metal?	Iron	Copper	Gold	Lead
+tec_country_opened_nuclear	Hard	Which country opened the first nuclear power station to supply an electricity grid, in 1954?	The Soviet Union	The United States	Britain	France
+tec_1975_kit_computer	Hard	Which 1975 kit computer, sold by mail order, kick-started the personal computer craze?	The Altair 8800	The Apple I	The Commodore PET	The IBM 5150
 day2_klucz_publiczny	Expert	In public-key cryptography, what may be shared freely?	The public key	The private key	Both keys	Neither key
 tec_moore	Expert	What does Moore's law concern?	The doubling of transistor count in chips	The doubling of internet speed each year	The steady fall in the price of memory	The rise in server power consumption
 tec_c_jezyk	Expert	Who created the C programming language?	Dennis Ritchie	Bjarne Stroustrup	James Gosling	Guido van Rossum
@@ -556,3 +574,8 @@ tec_luxury_car_brand	Expert	Which luxury car brand grew out of a company that He
 tec_1896_english_driver	Expert	In 1896, an English driver got one of the first speeding fines. Roughly how fast was he going?	About 8 mph	About 20 mph	About 40 mph	About 70 mph
 tec_bell_labs_engineers	Expert	Bell Labs engineers who put the # key on telephone keypads gave it which name?	Octothorpe	Octagram	Tetragram	Crossbar
 tec_clickable_banner_advert	Expert	The first clickable banner advert on the web, in 1994, was paid for by which company?	AT&T	IBM	Coca-Cola	Microsoft
+tec_herman_hollerith_punched	Expert	Herman Hollerith's punched-card tabulating machines were first used to count what?	The 1890 US census	Railway tickets in New York	Votes in a US election	Bank cheques in London
+tec_program_released_1979	Expert	Which program, released in 1979, was the first spreadsheet for personal computers?	VisiCalc	Lotus 1-2-3	Excel	SuperCalc
+tec_swedish_american_engineer	Expert	Which Swedish-American engineer perfected the modern zip in 1913?	Gideon Sundback	Whitcomb Judson	Elias Howe	Walter Hunt
+tec_programming_language_john	Expert	Which programming language did John McCarthy create in 1958 for artificial intelligence research?	LISP	Prolog	Smalltalk	ALGOL
+tec_company_sold_quartz	Expert	Which company sold the first quartz wristwatch, the Astron, in 1969?	Seiko	Casio	Citizen	Omega

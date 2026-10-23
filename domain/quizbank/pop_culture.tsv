@@ -361,6 +361,10 @@ pop_superhero_nicknamed_caped	Easy	Which superhero is nicknamed 'the Caped Crusa
 pop_little_mermaid_ariel	Easy	In 'The Little Mermaid', what does Ariel give up to the sea witch in exchange for legs?	Her voice	Her hair	Her crown	Her memory
 pop_2002_film_spider	Easy	In the 2002 film 'Spider-Man', who tells Peter Parker 'With great power comes great responsibility'?	Uncle Ben	Aunt May	Norman Osborn	Mary Jane
 pop_singer_2009_hit	Easy	Which singer had a 2009 hit with 'Bad Romance'?	Lady Gaga	Katy Perry	Rihanna	Kesha
+pop_film_studio_logo_3	Easy	Which film studio's logo shows the Earth turning in space?	Universal	Paramount	Columbia	Warner Bros.
+pop_crisps_come_tall	Easy	Which crisps come in a tall tube with a moustached man on the label?	Pringles	Doritos	Lay's	Cheetos
+pop_game_players_try	Easy	In which game do players try to sink each other's hidden fleet on a grid?	Battleship	Risk	Stratego	Othello
+pop_sportswear_brand_logo	Easy	Which sportswear brand's logo is a 'swoosh'?	Nike	Puma	Reebok	Adidas
 day_zlota_palma	Medium	Which is the top prize at the Cannes Film Festival?	The Palme d'Or	The Golden Bear	The Golden Lion	The Silver Shell
 day_minecraft_sprzedaz	Medium	Which is the best-selling video game of all time?	Minecraft	Tetris	Grand Theft Auto V	Wii Sports
 trv2_tetris_kraj	Medium	In which country was Tetris created?	The Soviet Union	Japan	The United States	Finland
@@ -844,6 +848,16 @@ pop_green_food_gobbling	Medium	What is the name of the green, food-gobbling ghos
 pop_2014_animated_film	Medium	Which 2014 animated film features the song 'Everything Is Awesome'?	The Lego Movie	Trolls	Wreck-It Ralph	The Emoji Movie
 pop_manga_anime_notebook	Medium	Which manga and anime is about a notebook that kills anyone whose name is written in it?	Death Note	Bleach	Naruto	Attack on Titan
 pop_phineas_ferb_kind	Medium	In 'Phineas and Ferb', what kind of animal is the secret agent Perry?	A platypus	A beaver	An otter	A raccoon
+pop_film_kicked_off	Medium	Which film kicked off the Marvel Cinematic Universe in 2008?	Iron Man	The Incredible Hulk	Thor	Captain America: The First Avenger
+pop_1999_film_made	Medium	Which 1999 film made the slow-motion 'bullet time' effect famous?	The Matrix	Fight Club	The Mummy	Blade
+pop_cartoon_features_bender	Medium	Which cartoon features Bender, a beer-loving robot?	Futurama	The Jetsons	Rick and Morty	South Park
+pop_singer_released_2016	Medium	Which singer released the 2016 visual album 'Lemonade'?	Beyonce	Rihanna	Taylor Swift	Lady Gaga
+pop_singer_albums_age	Medium	Which singer named her albums after her age at the time, like '19', '21' and '25'?	Adele	Lorde	Duffy	Dido
+pop_marvel_hero_holds	Medium	Which Marvel hero holds the title of 'Sorcerer Supreme'?	Doctor Strange	Scarlet Witch	Loki	Doctor Doom
+pop_super_mario_bros	Medium	In the first 'Super Mario Bros.', who tells Mario 'Our princess is in another castle!'?	Toad	Yoshi	Luigi	Lakitu
+pop_director_made_brief	Medium	Which director made a brief cameo in almost every one of his own films?	Alfred Hitchcock	Stanley Kubrick	Orson Welles	Billy Wilder
+pop_scooby_doo_character	Medium	Which 'Scooby-Doo' character exclaims 'Jinkies!'?	Velma	Daphne	Fred	Shaggy
+pop_disney_cinderella_song	Medium	In Disney's 'Cinderella', which song does the Fairy Godmother sing?	Bibbidi-Bobbidi-Boo	A Dream Is a Wish Your Heart Makes	When You Wish Upon a Star	Someday My Prince Will Come
 day_zloty_lew	Hard	At which film festival is the Golden Lion awarded?	Venice	Cannes	Berlin	San Sebastian
 lit_manga	Hard	The Japanese word 'manga' originally meant what?	Whimsical pictures	Moving pictures	Paper theatre	Ink stories
 pop_gremlins	Hard	In 'Gremlins' (1984), what must you never do to the creatures after midnight?	Feed them	Tickle them	Let them sleep	Take them outside
@@ -1094,6 +1108,17 @@ pop_ufo_poster_fox	Hard	What does the UFO poster in Fox Mulder's office say?	'I 
 pop_neo_real_matrix	Hard	What is Neo's real name in 'The Matrix'?	Thomas Anderson	John Anderson	Thomas Smith	Neo Andrews
 pop_british_studio_made	Hard	Which British studio made 'Wallace and Gromit' and 'Chicken Run'?	Aardman	Blue Sky	Illumination	Cosgrove Hall
 pop_singer_wrote_recorded	Hard	Which singer wrote and first recorded 'I Will Always Love You', in 1974?	Dolly Parton	Linda Ronstadt	Tammy Wynette	Loretta Lynn
+pop_british_sitcom_follows	Hard	Which British sitcom follows the market traders Del Boy and Rodney Trotter?	Only Fools and Horses	Fawlty Towers	Blackadder	Red Dwarf
+pop_american_metal_band	Hard	Which American metal band performs in horror masks and matching boiler suits?	Slipknot	Kiss	Ghost	Rammstein
+pop_beatles_song_working	Hard	Which Beatles song had the working title 'Scrambled Eggs'?	Yesterday	Let It Be	Hey Jude	Michelle
+pop_song_loreen_win	Hard	With which song did Loreen win Eurovision for Sweden in 2012?	Euphoria	Tattoo	Waterloo	Heroes
+pop_studio_develops_main	Hard	Which studio develops the main series of Pokemon games?	Game Freak	HAL Laboratory	Intelligent Systems	Retro Studios
+pop_word_game_sold	Hard	Which word game was first sold as 'Criss-Crosswords'?	Scrabble	Boggle	Upwords	Bananagrams
+pop_japanese_director_made_2	Hard	Which Japanese director made 'Seven Samurai' and 'Rashomon'?	Akira Kurosawa	Yasujiro Ozu	Hayao Miyazaki	Takeshi Kitano
+pop_director_made_pan	Hard	Which director made 'Pan's Labyrinth' and 'The Shape of Water'?	Guillermo del Toro	Alfonso Cuaron	Alejandro Inarritu	Pedro Almodovar
+pop_director_made_grand	Hard	Which director made 'The Grand Budapest Hotel'?	Wes Anderson	Wes Craven	Sofia Coppola	Spike Jonze
+pop_peanuts_character_never	Hard	Which 'Peanuts' character never lets go of his security blanket?	Linus	Schroeder	Pig-Pen	Franklin
+pop_green_goblin_spider	Hard	Who is the Green Goblin, Spider-Man's enemy, in everyday life?	Norman Osborn	Otto Octavius	Eddie Brock	Wilson Fisk
 lit_wings	Expert	Which film won the very first Academy Award for Best Picture?	Wings	Sunrise	The Jazz Singer	Metropolis
 pop_obywatel_kane	Expert	Which word is whispered at the very start of 'Citizen Kane'?	Rosebud	Mother	Xanadu	Charles
 pop_spirited_away	Expert	Which was the first non-English-language film to win the Oscar for Best Animated Feature?	Spirited Away	Persepolis	Akira	Princess Mononoke
@@ -1185,3 +1210,7 @@ pop_dragon_ball_saiyans	Expert	In 'Dragon Ball', what do Saiyans with tails turn
 pop_composer_wrote_oscar	Expert	Which composer wrote the Oscar-winning scores for 'The Lord of the Rings' films?	Howard Shore	Hans Zimmer	James Horner	Danny Elfman
 pop_jazz_singer_nicknamed	Expert	Which jazz singer was nicknamed 'Lady Day'?	Billie Holiday	Ella Fitzgerald	Sarah Vaughan	Nina Simone
 pop_original_super_mario	Expert	In the original 'Super Mario Bros.', what does Mario touch at the end of a castle to drop Bowser into the lava?	An axe	A key	A switch	A sword
+pop_1934_film_win	Expert	Which 1934 film was the first to win all five top Oscars?	It Happened One Night	Gone with the Wind	Casablanca	Wings
+pop_bruno_mars_real	Expert	What is Bruno Mars's real name?	Peter Hernandez	Bruno Fernandez	Marcus Lopez	Miguel Rodriguez
+pop_fantastic_four_member	Expert	Which Fantastic Four member's catchphrase is 'It's clobberin' time!'?	The Thing	The Human Torch	Mister Fantastic	The Invisible Woman
+pop_designer_1947_new	Expert	Which designer's 1947 'New Look' brought back full skirts and tiny waists after the war?	Christian Dior	Coco Chanel	Yves Saint Laurent	Cristobal Balenciaga

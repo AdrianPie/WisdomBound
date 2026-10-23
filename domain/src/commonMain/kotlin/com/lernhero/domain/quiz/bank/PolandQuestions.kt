@@ -173,7 +173,12 @@ object PolandQuestions {
         q("pol_three_bards_polish", "Who are the 'three bards' of Polish Romantic poetry?", "Mickiewicz, Slowacki and Krasinski", listOf("Mickiewicz, Slowacki and Norwid", "Mickiewicz, Fredro and Krasinski", "Kochanowski, Slowacki and Krasinski"), E),
         q("pol_christmas_eve_polish", "On Christmas Eve, what do Polish children watch for in the sky before supper can start?", "The first star", listOf("The full moon", "A shooting star", "The northern lights"), E),
         q("pol_main_ingredient_polish", "What is the main ingredient of Polish 'krupnik' soup?", "Pearl barley", listOf("Beetroot", "Sauerkraut", "Sorrel"), E),
-        q("pol_day_spring_unofficial", "On the first day of spring, which unofficial 'holiday' do Polish pupils mark by skipping school?", "Dzien Wagarowicza", listOf("Prima Aprilis", "Juwenalia", "Andrzejki"), E)
+        q("pol_day_spring_unofficial", "On the first day of spring, which unofficial 'holiday' do Polish pupils mark by skipping school?", "Dzien Wagarowicza", listOf("Prima Aprilis", "Juwenalia", "Andrzejki"), E),
+        q("pol_polish_zupa_ogorkowa", "What is Polish 'zupa ogorkowa' made with?", "Pickled cucumbers", listOf("Fresh tomatoes", "Wild mushrooms", "Sorrel leaves"), E),
+        q("pol_date_polish_children", "On which date do Polish children celebrate Children's Day?", "1 June", listOf("21 January", "6 December", "1 September"), E),
+        q("pol_tongue_twister_buzzes", "In the famous tongue twister, what buzzes in the reeds in Szczebrzeszyn?", "A beetle", listOf("A bee", "A fly", "A mosquito"), E),
+        q("pol_grzaniec_popular_polish", "What is 'grzaniec', popular at Polish Christmas markets?", "Mulled wine or beer", listOf("Hot chocolate with chilli", "Roasted chestnuts", "A gingerbread biscuit"), E),
+        q("pol_poles_call_april", "What do Poles call April Fools' Day?", "Prima aprilis", listOf("Lany poniedzialek", "Tlusty czwartek", "Zaduszki"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -400,7 +405,19 @@ object PolandQuestions {
         q("pol_band_fronted_muniek", "Which band is fronted by Muniek Staszczyk?", "T.Love", listOf("Kult", "Hey", "Perfect"), M),
         q("pol_band_fronted_beata", "Which band, fronted by Beata Kozidrak, sang 'Biala armia'?", "Bajm", listOf("Maanam", "Lady Pank", "Republika"), M),
         q("pol_year_poland_footballers", "In which year did Poland's footballers win Olympic gold?", "1972", listOf("1976", "1980", "1968"), M),
-        q("pol_krakow_christmas_tradition", "Which Krakow Christmas tradition of glittering nativity scenes shaped like local churches is on UNESCO's list?", "Szopka krakowska", listOf("Pisanki", "Wycinanki", "Lajkonik"), M)
+        q("pol_krakow_christmas_tradition", "Which Krakow Christmas tradition of glittering nativity scenes shaped like local churches is on UNESCO's list?", "Szopka krakowska", listOf("Pisanki", "Wycinanki", "Lajkonik"), M),
+        q("pol_directed_films_deluge", "Who directed the films 'The Deluge' (1974) and 'With Fire and Sword' (1999)?", "Jerzy Hoffman", listOf("Andrzej Wajda", "Jerzy Kawalerowicz", "Krzysztof Zanussi"), M),
+        q("pol_football_club_plays", "Which football club plays in Gdansk?", "Lechia", listOf("Arka", "Pogon", "Zaglebie"), M),
+        q("pol_city_see_huge", "In which city can you see the huge 360-degree painting of the Battle of Raclawice?", "Wroclaw", listOf("Krakow", "Warsaw", "Poznan"), M),
+        q("pol_river_flows_through_2", "Which river flows through Poznan?", "The Warta", listOf("The Oder", "The Vistula", "The Notec"), M),
+        q("pol_professional_group_celebrates", "Which professional group celebrates 'Barborka' on 4 December?", "Miners", listOf("Firefighters", "Fishermen", "Railway workers"), M),
+        q("pol_holiday_poland_celebrate", "Which holiday does Poland celebrate on 15 August, the anniversary of the 1920 Battle of Warsaw?", "Polish Armed Forces Day", listOf("Constitution Day", "Independence Day", "National Flag Day"), M),
+        q("pol_main_hero_sienkiewicz", "Who is the main hero of Sienkiewicz's 'With Fire and Sword'?", "Jan Skrzetuski", listOf("Andrzej Kmicic", "Michal Wolodyjowski", "Yurko Bohun"), M),
+        q("pol_sport_tomasz_gollob", "In which sport did Tomasz Gollob become world champion in 2010?", "Speedway", listOf("Motocross", "Rally driving", "Ski jumping"), M),
+        q("pol_composed_polonaise_andrzej", "Who composed the famous polonaise in Andrzej Wajda's film 'Pan Tadeusz' (1999)?", "Wojciech Kilar", listOf("Krzysztof Penderecki", "Zbigniew Preisner", "Jan A. P. Kaczmarek"), M),
+        q("pol_band_recorded_wehikul", "Which band recorded 'Wehikul czasu'?", "Dzem", listOf("Perfect", "Budka Suflera", "Lady Pank"), M),
+        q("pol_regional_language_spoken", "Which regional language, spoken around Gdansk, has official status in Poland?", "Kashubian", listOf("Silesian", "Masurian", "Goral"), M),
+        q("pol_floats_gdansk_liqueur", "What floats in the Gdansk liqueur Goldwasser?", "Flakes of gold", listOf("A blade of grass", "Chips of amber", "Juniper berries"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -537,7 +554,15 @@ object PolandQuestions {
         q("pol_1995_redenomination_zloty", "In the 1995 redenomination of the zloty, how many zeros were knocked off the old money?", "Four", listOf("Three", "Two", "Six"), H),
         q("pol_poet_died_poverty", "Which poet, who died in poverty near Paris in 1883, is often called the 'fourth bard'?", "Cyprian Kamil Norwid", listOf("Juliusz Slowacki", "Zygmunt Krasinski", "Adam Asnyk"), H),
         q("pol_painter_babie_lato", "Which painter is famous for 'Babie lato' and the galloping horses of 'Czworka'?", "Jozef Chelmonski", listOf("Jan Matejko", "Jacek Malczewski", "Wojciech Kossak"), H),
-        q("pol_won_poland_winter", "Who won Poland's first Winter Olympic gold, in ski jumping in 1972?", "Wojciech Fortuna", listOf("Adam Malysz", "Kamil Stoch", "Stanislaw Marusarz"), H)
+        q("pol_won_poland_winter", "Who won Poland's first Winter Olympic gold, in ski jumping in 1972?", "Wojciech Fortuna", listOf("Adam Malysz", "Kamil Stoch", "Stanislaw Marusarz"), H),
+        q("pol_legia_midfielder_captained", "Which Legia midfielder captained Poland at the 1974 World Cup?", "Kazimierz Deyna", listOf("Wlodzimierz Lubanski", "Jerzy Gorgon", "Andrzej Szarmach"), H),
+        q("pol_king_famed_small", "Which king, famed for his small height, reunited Poland and was crowned in Krakow in 1320?", "Wladyslaw the Elbow-high", listOf("Boleslaw the Wrymouth", "Casimir the Restorer", "Mieszko the Old"), H),
+        q("pol_mayor_warsaw_led", "Which mayor of Warsaw led the city's resistance in September 1939 with his radio speeches?", "Stefan Starzynski", listOf("Gabriel Narutowicz", "Juliusz Rommel", "Wladyslaw Sikorski"), H),
+        q("pol_city_young_worker", "In which city was the young worker 'Janek Wisniewski' of the famous ballad shot in December 1970?", "Gdynia", listOf("Gdansk", "Szczecin", "Elblag"), H),
+        q("pol_composer_wrote_music", "Which composer wrote the music for Kieslowski's 'Three Colours' trilogy?", "Zbigniew Preisner", listOf("Wojciech Kilar", "Krzysztof Komeda", "Henryk Gorecki"), H),
+        q("pol_hosted_quiz_show", "Who has hosted the TV quiz show 'Jeden z dziesieciu' for decades?", "Tadeusz Sznuk", listOf("Krzysztof Ibisz", "Zygmunt Chajzer", "Hubert Urbanski"), H),
+        q("pol_king_received_prussian", "Which king received the 'Prussian Homage' of 1525, later painted by Matejko?", "Sigismund I the Old", listOf("Sigismund II Augustus", "Stephen Bathory", "Casimir IV Jagiellon"), H),
+        q("pol_lwow_born_mathematician", "Which Lwow-born mathematician helped design the American hydrogen bomb?", "Stanislaw Ulam", listOf("Stefan Banach", "Hugo Steinhaus", "Waclaw Sierpinski"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -596,6 +621,10 @@ object PolandQuestions {
         q("pol_two_silesian_towns", "Which two Silesian towns have huge timber-framed 'Churches of Peace' on the UNESCO list?", "Jawor and Swidnica", listOf("Legnica and Jelenia Gora", "Walbrzych and Klodzko", "Nysa and Brzeg"), X),
         q("pol_painter_slashed_own", "Which painter slashed his own scandalous canvas 'Frenzy of Exultations' with a knife in 1894?", "Wladyslaw Podkowinski", listOf("Jacek Malczewski", "Jozef Mehoffer", "Leon Wyczolkowski"), X),
         q("pol_wrote_words_christmas", "Who wrote the words of the Christmas carol 'Bog sie rodzi'?", "Franciszek Karpinski", listOf("Jan Kochanowski", "Ignacy Krasicki", "Adam Mickiewicz"), X),
-        q("pol_medieval_book_contains", "Which medieval book contains the oldest known sentence written in Polish?", "The Book of Henrykow", listOf("The Florian Psalter", "The Chronicle of Gallus Anonymus", "The Bull of Gniezno"), X)
+        q("pol_medieval_book_contains", "Which medieval book contains the oldest known sentence written in Polish?", "The Book of Henrykow", listOf("The Florian Psalter", "The Chronicle of Gallus Anonymus", "The Bull of Gniezno"), X),
+        q("pol_home_army_1944", "What was the Home Army's 1944 plan of uprisings against the retreating Germans called?", "Operation Tempest", listOf("Operation Wachlarz", "Operation Bagration", "Operation Market Garden"), X),
+        q("pol_polish_animator_won", "Which Polish animator won an Oscar in 1983 for the short film 'Tango'?", "Zbigniew Rybczynski", listOf("Tomasz Baginski", "Jan Lenica", "Walerian Borowczyk"), X),
+        q("pol_hetman_crushed_russian", "Which hetman crushed a Russian-Swedish army at Klushino in 1610, opening the road to Moscow?", "Stanislaw Zolkiewski", listOf("Jan Karol Chodkiewicz", "Stanislaw Koniecpolski", "Jan Zamoyski"), X),
+        q("pol_stanislaw_lem_book", "In which Stanislaw Lem book do the constructor robots Trurl and Klapaucius appear?", "The Cyberiad", listOf("Solaris", "The Star Diaries", "His Master's Voice"), X)
     )
 }
