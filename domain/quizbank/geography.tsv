@@ -181,6 +181,8 @@ geo_chinese_dam_world	Easy	Which Chinese dam is the world's biggest power statio
 geo_sea_nile_flow	Easy	Into which sea does the Nile flow?	The Mediterranean	The Red Sea	The Arabian Sea	The Indian Ocean
 geo_french_city_gave	Easy	Which French city gave its name to a famous mustard?	Dijon	Nice	Lille	Toulouse
 geo_continent_sahara_desert	Easy	On which continent is the Sahara desert?	Africa	Asia	Australia	South America
+geo_country_shaped_like	Easy	Which country is shaped like a long, thin strip along South America's Pacific coast?	Chile	Peru	Ecuador	Colombia
+geo_country_visit_city	Easy	In which country can you visit the city of Rio de Janeiro?	Brazil	Argentina	Portugal	Mexico
 geo_everest	Medium	In which mountain range is Mount Everest?	Himalayas	Andes	Alps	Caucasus
 geo_wulkan_wl	Medium	What is the name of the famous volcano near Naples?	Vesuvius	Etna	Stromboli	Krakatoa
 geo2_kanal_sueski	Medium	Which seas does the Suez Canal connect?	The Mediterranean with the Red Sea	The Baltic with the North Sea	The Black Sea with the Aegean	The Pacific with the Atlantic
@@ -502,6 +504,8 @@ geo_argentine_city_calls	Medium	Which Argentine city calls itself 'the end of th
 geo_continent_deserts	Medium	Which is the only continent with no deserts?	Europe	Africa	Australia	South America
 geo_strait_divides_istanbul	Medium	Which strait divides Istanbul between Europe and Asia?	Bosphorus	Dardanelles	Strait of Otranto	Kerch Strait
 geo_sea_saltiest_large	Medium	Which sea is the saltiest large body of water you can float in, bordering Israel and Jordan?	Dead Sea	Red Sea	Caspian Sea	Aral Sea
+geo_country_invented_croissant	Medium	Which country invented the croissant's ancestor, the kipferl?	Austria	France	Belgium	Switzerland
+geo_country_origin_feta	Medium	Which country is the origin of feta cheese?	Greece	Turkey	Italy	Bulgaria
 geo_bajkal	Hard	Which lake is the deepest in the world?	Baikal	Tanganyika	Caspian Sea	Superior
 geo_kilimandzaro	Hard	In which country is Mount Kilimanjaro?	Tanzania	Kenya	Ethiopia	Uganda
 geo_aconcagua	Hard	The highest peak in South America is...	Aconcagua	Chimborazo	Huascaran	Ojos del Salado
@@ -628,6 +632,20 @@ geo_lake_split_between	Hard	Which lake, split between Peru and Bolivia, is the h
 geo_country_home_rock	Hard	Which country is home to the rock-carved temples of Abu Simbel?	Egypt	Sudan	Jordan	Ethiopia
 geo_country_home_ancient	Hard	Which country is home to the ancient ruins of Persepolis?	Iran	Iraq	Turkey	Afghanistan
 geo_country_home_mayan	Hard	Which country is home to the Mayan city of Tikal?	Guatemala	Mexico	Honduras	Belize
+geo_country_home_borscht	Hard	Which country is the home of borscht, claimed by several neighbours?	Ukraine	Hungary	Finland	Austria
+geo_country_national_animal	Hard	Which country's national animal is the kiwi?	New Zealand	Australia	Fiji	Papua New Guinea
+geo_country_national_animal_2	Hard	Which country's national animal is the bald eagle?	USA	Canada	Mexico	Albania
+geo_country_flag_shows_4	Hard	Which country's flag shows a red dragon?	Wales	Bhutan	Malta	Albania
+geo_country_flag_shows_5	Hard	Which country's flag shows a double-headed black eagle on red?	Albania	Montenegro	Serbia	Germany
+geo_country_flag_features_2	Hard	Which country's flag features an AK-47 rifle?	Mozambique	Angola	Zimbabwe	Eritrea
+geo_country_flag_shows_6	Hard	Which country's flag shows a map of the island itself?	Cyprus	Malta	Iceland	Jamaica
+geo_mountain_highest_oceania	Hard	Which mountain is the highest in Oceania, on New Guinea?	Puncak Jaya	Mount Kosciuszko	Aoraki	Mount Wilhelm
+geo_european_country_more	Hard	Which European country has more pigs than people?	Denmark	Netherlands	Ireland	Belgium
+geo_country_more_sheep	Hard	Which country has more sheep than people, about five per person?	New Zealand	Australia	Wales	Iceland
+geo_country_world_oldest	Hard	Which country has the world's oldest continuously inhabited cities, including Damascus?	Syria	Iraq	Egypt	Lebanon
+geo_country_home_pamukkale	Hard	Which country is home to Pamukkale's white travertine terraces?	Turkey	Greece	Iran	Jordan
+geo_country_home_active	Hard	Which country is home to the most active volcanoes in Europe, including Etna?	Italy	Iceland	Greece	Spain
+geo_country_birthplace_coffee	Hard	Which country is the birthplace of coffee, according to legend of a goatherd named Kaldi?	Ethiopia	Yemen	Brazil	Turkey
 geo_row_marianski	Expert	What is the deepest point in the oceans called?	Challenger Deep	Tonga Trench	Java Trench	Milwaukee Deep
 geo_kraj_bez_rzek	Expert	Which of these countries has not a single permanent river?	Saudi Arabia	Mongolia	Kazakhstan	Iran
 geo_titicaca	Expert	Lake Titicaca lies on the border of which two countries?	Peru and Bolivia	Chile and Argentina	Ecuador and Colombia	Brazil and Paraguay
@@ -686,3 +704,25 @@ geo_river_flows_through_17	Expert	Which river flows through Seville?	Guadalquivi
 geo_river_flows_through_18	Expert	Which river flows through Porto?	Douro	Tagus	Minho	Mondego
 geo_river_flows_through_19	Expert	Which river flows through Bordeaux?	Garonne	Loire	Dordogne	Seine
 geo_river_flows_through_20	Expert	Which river flows through Lyon along with the Rhone?	Saone	Loire	Garonne	Isere
+geo_country_flag_different	Expert	Which country's flag has a different design on each side?	Paraguay	Uruguay	Bolivia	Nepal
+geo_country_flag_oldest	Expert	Which country's flag is the oldest still in continuous use?	Denmark	Netherlands	Austria	Scotland
+geo_african_country_flag	Expert	Which African country's flag shows a shield and two spears?	Kenya	Uganda	Tanzania	Botswana
+geo_country_flag_shows_7	Expert	Which country's flag shows a dragon holding jewels?	Bhutan	Wales	China	Vietnam
+geo_island_country_flag	Expert	Which island's flag shows three armoured legs joined at the hip, the triskelion?	Isle of Man	Sicily	Malta	Jersey
+geo_mountain_alps_iconic	Expert	Which mountain in the Alps has an iconic pyramid shape on the Swiss-Italian border?	Matterhorn	Eiger	Jungfrau	Monte Rosa
+geo_volcano_antarctica_permanent	Expert	Which volcano in Antarctica has a permanent lava lake?	Mount Erebus	Mount Terror	Vinson Massif	Deception Island
+geo_island_split_between	Expert	Which island is split between two countries, one of them the Netherlands?	Saint Martin	Hispaniola	Timor	Cyprus
+geo_island_shared_between	Expert	Which island is shared between Indonesia and Papua New Guinea?	New Guinea	Borneo	Timor	Sulawesi
+geo_island_shared_between_2	Expert	Which island is shared between Indonesia and East Timor?	Timor	Borneo	Flores	Sumba
+geo_town_split_between	Expert	Which town is split between the Netherlands and Belgium with borders through houses?	Baarle	Maastricht	Eupen	Aachen
+geo_spanish_exclave_entirely	Expert	Which Spanish exclave is entirely surrounded by France?	Llivia	Ceuta	Melilla	Andorra
+geo_country_home_rainbow	Expert	Which country is home to the rainbow mountains of Zhangye Danxia?	China	Peru	Mongolia	Kyrgyzstan
+geo_country_home_pink	Expert	Which country is home to the pink Lake Hillier?	Australia	Senegal	Canada	Bolivia
+geo_country_home_lake	Expert	Which country is home to Lake Retba, a pink lake near Dakar?	Senegal	Mauritania	Gambia	Morocco
+geo_country_home_socotra	Expert	Which country is home to Socotra island, with its alien-looking dragon blood trees?	Yemen	Oman	Somalia	Eritrea
+geo_country_home_marble	Expert	Which country is home to the Marble Caves on General Carrera Lake?	Chile	Argentina	Peru	Bolivia
+geo_country_home_tsingy	Expert	Which country is home to the Tsingy, a forest of razor-sharp limestone?	Madagascar	Mozambique	Tanzania	Kenya
+geo_country_home_avenue	Expert	Which country is home to the Avenue of the Baobabs?	Madagascar	Botswana	Senegal	Zimbabwe
+geo_country_home_waitomo	Expert	Which country is home to the Waitomo caves lit by glowworms?	New Zealand	Australia	Fiji	Chile
+geo_spice_rich_island	Expert	Which spice-rich island in Tanzania was once the world's leading clove producer?	Zanzibar	Pemba	Mafia Island	Mauritius
+geo_group_indonesian_islands	Expert	Which group of Indonesian islands was once the world's only source of nutmeg?	Banda Islands	Moluccas	Riau Islands	Bali

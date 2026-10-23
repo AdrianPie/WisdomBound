@@ -110,6 +110,9 @@ ani_bird_symbol_long	Easy	Which bird is a symbol of long life in Japan, where pe
 ani_silkworm_turn	Easy	What does a silkworm turn into?	A moth	A butterfly	A beetle	A wasp
 ani_male_cat	Easy	What is a male cat called?	A tom	A buck	A billy	A sire
 ani_small_hardy_pony	Easy	Which small, hardy pony comes from the islands north of Scotland?	Shetland pony	Welsh pony	Connemara pony	Exmoor pony
+ani_animal_says_moo	Easy	Which animal says 'moo'?	Cow	Sheep	Goat	Horse
+ani_animal_trunk	Easy	Which animal has a trunk?	Elephant	Rhinoceros	Hippopotamus	Tapir
+ani_bird_cannot_fly	Easy	Which bird cannot fly but is the fastest runner among birds?	Ostrich	Penguin	Kiwi	Dodo
 ani_osmiornica_serca	Medium	How many hearts does an octopus have?	3	1	2	5
 ani_kameleon	Medium	Which reptile is famous for changing skin color?	Chameleon	Iguana	Gecko	Monitor lizard
 ani_ciaza_slonia	Medium	Which land animal has the longest pregnancy?	Elephant	Rhinoceros	Horse	Giraffe
@@ -294,6 +297,25 @@ ani_baby_swan	Medium	What is a baby swan called?	Cygnet	Gosling	Eaglet	Fledgling
 ani_baby_hare	Medium	What is a baby hare called?	Leveret	Kit	Bunny	Pup
 ani_animal_stripes_continue	Medium	Which animal's stripes continue onto its skin, not just its fur?	Tiger	Zebra	Okapi	Raccoon
 ani_bird_mimic_human	Medium	Which bird can mimic human speech best, with a vocabulary of over 100 words recorded?	African grey parrot	Crow	Budgerigar	Cockatoo
+ani_bird_laying_eggs	Medium	Which bird is famous for laying its eggs in other birds' nests?	Cuckoo	Magpie	Starling	Sparrow
+ani_insect_glows_night	Medium	Which insect glows at night to attract mates?	Firefly	Moth	Cricket	Cicada
+ani_animal_largest_land	Medium	Which animal is the largest land carnivore?	Polar bear	Grizzly bear	Siberian tiger	Lion
+ani_animal_national_animal	Medium	Which animal is the national animal of Australia, along with the emu?	Kangaroo	Koala	Wombat	Platypus
+ani_call_animals_eat	Medium	What do you call animals that eat only plants?	Herbivores	Carnivores	Omnivores	Insectivores
+ani_call_animals_active	Medium	What do you call animals that are active at night?	Nocturnal	Diurnal	Crepuscular	Hibernal
+ani_animal_sheds_skin	Medium	Which animal sheds its skin in one piece as it grows?	Snake	Frog	Lizard	Turtle
+ani_animal_changing_tadpole	Medium	Which animal is known for changing from a tadpole as it grows?	Frog	Newt	Salamander	Lizard
+ani_bird_colourful_tail	Medium	Which bird is known for its colourful tail fan used in courtship?	Peacock	Pheasant	Turkey	Parrot
+ani_animal_rolls_armoured	Medium	Which animal rolls into an armoured ball, such as the three-banded species?	Armadillo	Pangolin	Hedgehog	Porcupine
+ani_insect_carry_times	Medium	Which insect can carry 50 times its own body weight?	Ant	Bee	Grasshopper	Ladybird
+ani_insect_makes_chirping	Medium	Which insect makes a chirping sound by rubbing its wings together?	Cricket	Bee	Fly	Ant
+ani_insect_larva_maggot	Medium	Which insect has a larva called a maggot?	Fly	Beetle	Moth	Wasp
+ani_insect_larva_grub	Medium	Which insect larva is called a grub?	Beetle	Fly	Butterfly	Mosquito
+ani_spotted_beetle_gardener	Medium	Which spotted beetle is a gardener's friend because it eats aphids?	Ladybird	Stag beetle	Dung beetle	Weevil
+ani_dog_breed_wrinkly	Medium	Which dog breed is famous for its wrinkly face and was bred for bull-baiting?	Bulldog	Pug	Boxer	Shar Pei
+ani_spotted_dog_breed	Medium	Which spotted dog breed is linked with fire engines?	Dalmatian	Beagle	Pointer	Great Dane
+ani_dog_breed_pulls	Medium	Which dog breed pulls sleds in the Arctic and has blue eyes?	Siberian Husky	Alaskan Malamute	Samoyed	Akita
+ani_animal_sleeps_hanging	Medium	Which animal sleeps hanging upside down?	Bat	Sloth	Owl	Possum
 ani_dziobak	Hard	Which mammal lays eggs?	Platypus	Armadillo	Sloth	Hedgehog
 ani_krowa_zoladek	Hard	How many chambers does a cow's stomach have?	4	1	2	3
 ani_kalmar_oczy	Hard	Which animal has an eye that can grow to the size of a dinner plate?	Giant squid	Owl	Whale	Elephant seal
@@ -415,6 +437,28 @@ ani_bird_largest_wingspan	Hard	Which bird has the largest wingspan of any land b
 ani_venomous_lizard_lives	Hard	Which venomous lizard lives in the deserts of the south-western USA?	Gila monster	Komodo dragon	Thorny devil	Frilled lizard
 ani_australian_lizard_opens	Hard	Which Australian lizard opens a big frill around its neck to scare enemies?	Frilled lizard	Thorny devil	Bearded dragon	Goanna
 ani_lizard_squirts_blood	Hard	Which lizard squirts blood from its eyes to scare predators?	Horned lizard	Gecko	Iguana	Chameleon
+ani_call_animals_active_2	Hard	What do you call animals that are most active at dawn and dusk?	Crepuscular	Nocturnal	Diurnal	Matutinal
+ani_call_group_whales	Hard	What do you call a group of whales?	Pod	School	Herd	Flock
+ani_call_group_kangaroos	Hard	What do you call a group of kangaroos?	Mob	Pride	Troop	Gang
+ani_scaly_mammal_trafficked	Hard	Which scaly mammal is the most trafficked animal in the world?	Pangolin	Armadillo	Rhinoceros	Elephant
+ani_animal_quills_detach	Hard	Which animal's quills detach easily and stick into attackers?	Porcupine	Hedgehog	Echidna	Tenrec
+ani_slow_moving_sea	Hard	Which slow-moving sea mammal is related to elephants and called a 'sea cow'?	Manatee	Walrus	Sea lion	Beluga
+ani_beetle_rolls_balls	Hard	Which beetle rolls balls of animal droppings?	Dung beetle	Stag beetle	Ladybird	Weevil
+ani_beetle_sprays_boiling	Hard	Which beetle sprays a boiling hot chemical at attackers?	Bombardier beetle	Stag beetle	Rhinoceros beetle	Tiger beetle
+ani_ancient_egyptians_sacred	Hard	The scarab, sacred to the ancient Egyptians, is a kind of what?	Dung beetle	Locust	Bee	Cricket
+ani_insects_swarm_billions	Hard	Which insects swarm in billions and destroy crops, mentioned in the Bible?	Locusts	Termites	Wasps	Moths
+ani_insect_builds_mounds	Hard	Which insect builds mounds up to 9 metres tall in Africa?	Termite	Ant	Wasp	Bee
+ani_insect_deadliest_humans	Hard	Which insect is the deadliest to humans, by spreading disease?	Mosquito	Tsetse fly	Housefly	Flea
+ani_insect_spreads_sleeping	Hard	Which insect spreads sleeping sickness in Africa?	Tsetse fly	Mosquito	Sandfly	Horsefly
+ani_insect_spread_black	Hard	Which insect spread the Black Death by biting rats and people?	Flea	Louse	Mosquito	Tick
+ani_dog_breed_long	Hard	Which dog breed has long ears and is famous for its sense of smell in tracking?	Bloodhound	Beagle	Basset Hound	Dachshund
+ani_last_pinta_island	Hard	What was the name of the last Pinta Island tortoise, who died in 2012?	Lonesome George	Jonathan	Harriet	Diego
+ani_tortoise_diego_helped	Hard	Which tortoise named Diego helped save his species by fathering hundreds of babies?	Diego	Jonathan	George	Harriet
+ani_animal_slow_algae	Hard	Which animal is so slow that algae grow on its fur?	Sloth	Koala	Tortoise	Pangolin
+ani_cows_chew_cud	Hard	Why do cows chew the cud?	To digest grass a second time	To clean their teeth	Out of boredom	To cool down
+ani_flamingos_often_stand	Hard	Why do flamingos often stand on one leg?	To save energy and body heat	To scare predators	To hunt fish	Because the other is injured
+ani_bird_symbol_good	Hard	Which bird is a symbol of good luck that delivers babies in European folklore?	Stork	Crane	Swan	Pelican
+ani_seabird_used_fishermen	Hard	Which seabird is used by fishermen in China and Japan to catch fish?	Cormorant	Pelican	Puffin	Gannet
 ani_hemocyjanina	Expert	Which animal has blue blood?	Octopus	Frog	Snake	Carp
 ani_narwal	Expert	Which marine mammal has a long, spiral tusk growing from its head?	Narwhal	Beluga whale	Porpoise	Manatee
 ani_echidna	Expert	Which animal, alongside the platypus, is a monotreme?	Echidna	Opossum	Wombat	Koala
@@ -477,3 +521,41 @@ ani_bird_chicks_claws	Expert	Which bird's chicks have claws on their wings to he
 ani_huge_billed_african	Expert	Which huge-billed African bird stands motionless for hours waiting for lungfish?	Shoebill	Marabou stork	Hammerkop	Secretary bird
 ani_unusual_axolotl_adult	Expert	What is unusual about the axolotl as an adult?	It keeps its larval gills for life	It lives only one day	It has no bones	It changes sex every year
 ani_rabbit_eared_australian	Expert	Which rabbit-eared Australian marsupial is promoted as the 'Easter Bilby'?	Bilby	Bandicoot	Quokka	Bettong
+ani_call_group_ravens	Expert	What do you call a group of ravens?	Unkindness	Murder	Parliament	Conspiracy
+ani_call_group_porcupines	Expert	What do you call a group of porcupines?	Prickle	Spike	Thicket	Bristle
+ani_call_group_hippos	Expert	What do you call a group of hippos?	Bloat	Crash	Wallow	Pod
+ani_waxy_substance_sperm	Expert	Which waxy substance from sperm whales was once used in perfume?	Ambergris	Spermaceti	Musk	Civet
+ani_deep_diving_whale	Expert	Which deep-diving whale can stay underwater for over two hours?	Cuvier's beaked whale	Sperm whale	Blue whale	Bowhead whale
+ani_whale_makes_longest	Expert	Which whale makes one of the longest migrations of any mammal, between Alaska and Mexico?	Grey whale	Blue whale	Orca	Narwhal
+ani_small_dolphin_among	Expert	Which small dolphin, among the rarest marine mammals, lives only in Mexico's Gulf of California?	Vaquita	Hector's dolphin	Irrawaddy dolphin	Baiji
+ani_chinese_river_dolphin	Expert	Which Chinese river dolphin was declared functionally extinct in 2006?	Baiji	Vaquita	Boto	Susu
+ani_pink_river_dolphin	Expert	Which pink river dolphin lives in the Amazon?	Boto	Baiji	Vaquita	Tucuxi
+ani_butterfly_migrates_000	Expert	Which butterfly migrates up to 4,000 km from Canada to Mexico?	Monarch	Painted lady	Swallowtail	Red admiral
+ani_moth_wings_big	Expert	Which moth has wings so big it is sometimes mistaken for a bird?	Atlas moth	Luna moth	Death's-head hawkmoth	Emperor moth
+ani_insect_heaviest_world	Expert	Which insect is the heaviest in the world, found in New Zealand?	Giant weta	Goliath beetle	Atlas moth	Titan beetle
+ani_cicada_spends_years	Expert	Which cicada spends 17 years underground before emerging?	Periodical cicada	Dog-day cicada	Bush cicada	Giant cicada
+ani_special_food_turns	Expert	What is the special food that turns a bee larva into a queen?	Royal jelly	Honeydew	Propolis	Beeswax
+ani_sticky_resin_bees	Expert	What is the sticky resin bees use to seal gaps in the hive?	Propolis	Royal jelly	Beeswax	Nectar
+ani_japanese_dog_waited	Expert	Which Japanese dog waited at Shibuya station for its dead owner for nearly ten years?	Hachiko	Shiba	Taro	Akita-maru
+ani_cat_breed_folded	Expert	Which cat breed with folded ears comes from Scotland?	Scottish Fold	Manx	Highlander	Selkirk Rex
+ani_cat_breed_goes	Expert	Which cat breed goes limp when you pick it up?	Ragdoll	Maine Coon	Persian	Birman
+ani_cloned_mammal_sheep	Expert	What was the name of the first cloned mammal, a sheep born in 1996?	Dolly	Polly	Molly	Daisy
+ani_dog_became_animal	Expert	What was the name of the dog that became the first animal to orbit Earth, in 1957?	Laika	Belka	Strelka	Mushka
+ani_two_dogs_orbit	Expert	Which two dogs were the first to orbit Earth and return alive, in 1960?	Belka and Strelka	Laika and Mushka	Pchyolka and Mushka	Ugolyok and Veterok
+ani_chimpanzee_sent_space	Expert	What was the name of the first chimpanzee sent into space by NASA, in 1961?	Ham	Enos	Albert	Bonzo
+ani_gorilla_learned_over	Expert	What was the name of the famous gorilla that learned over 1,000 signs?	Koko	Harambe	Kanzi	Washoe
+ani_bonobo_learned_communicate	Expert	What was the name of the bonobo who learned to communicate with a symbol keyboard?	Kanzi	Koko	Washoe	Nim Chimpsky
+ani_chimpanzee_taught_american	Expert	What was the name of the first chimpanzee taught American Sign Language?	Washoe	Koko	Kanzi	Lucy
+ani_bird_largest_eyes	Expert	Which bird has the largest eyes relative to its skull size?	Owl	Eagle	Ostrich	Parrot
+ani_animal_see_ultraviolet	Expert	Which animal can see ultraviolet light and uses it to find flowers?	Bee	Dog	Cat	Cow
+ani_snake_see_heat	Expert	Which snake can 'see' heat through pits on its face?	Rattlesnake	Cobra	Mamba	Grass snake
+ani_fish_sense_electric	Expert	Which fish can sense the electric fields of other animals?	Shark	Salmon	Tuna	Trout
+ani_jelly_filled_pores	Expert	What are the jelly-filled pores sharks use to sense electricity called?	Ampullae of Lorenzini	Lateral lines	Gill rakers	Barbels
+ani_sensory_organ_along	Expert	What is the sensory organ along a fish's side that detects movement in water?	Lateral line	Swim bladder	Gill slit	Dorsal fin
+ani_gas_filled_organ	Expert	What is the gas-filled organ that lets fish float at a set depth?	Swim bladder	Lateral line	Gill	Air sac
+ani_seabird_dives_sea	Expert	Which seabird dives into the sea at nearly 100 km/h to catch fish?	Gannet	Puffin	Cormorant	Pelican
+ani_bird_big_hollow	Expert	Which bird has a big hollow casque on top of its bill?	Hornbill	Toucan	Cassowary	Shoebill
+ani_large_flightless_bird_3	Expert	Which large flightless bird of South America is related to the ostrich?	Rhea	Emu	Cassowary	Kiwi
+ani_extinct_flightless_bird	Expert	Which extinct flightless bird of New Zealand stood up to 3.6 metres tall?	Moa	Dodo	Elephant bird	Great auk
+ani_extinct_flightless_bird_2	Expert	Which extinct flightless bird from Madagascar laid the largest eggs ever known?	Elephant bird	Moa	Dodo	Roc
+ani_extinct_flightless_seabird	Expert	Which extinct flightless seabird of the North Atlantic was the original 'penguin'?	Great auk	Dodo	Moa	Razorbill

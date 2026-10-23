@@ -123,7 +123,8 @@ object BiologyQuestions {
         q("bio_prized_fungi_pigs", "Which prized fungi do pigs and dogs sniff out underground?", "Truffles", listOf("Morels", "Chanterelles", "Porcini"), E),
         q("bio_flower_young_heads", "Which flower's young heads turn to follow the Sun across the sky?", "Sunflower", listOf("Daisy", "Tulip", "Marigold"), E),
         q("bio_body_blood_cells", "Where in the body are most blood cells made?", "In the bone marrow", listOf("In the liver", "In the heart", "In the spleen"), E),
-        q("bio_common_weed_spreads", "Which common weed spreads its seeds on tiny white 'parachutes'?", "Dandelion", listOf("Nettle", "Clover", "Ivy"), E)
+        q("bio_common_weed_spreads", "Which common weed spreads its seeds on tiny white 'parachutes'?", "Dandelion", listOf("Nettle", "Clover", "Ivy"), E),
+        q("bio_caterpillars_turn", "What do caterpillars turn into?", "Butterflies or moths", listOf("Beetles", "Bees", "Dragonflies"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -270,7 +271,15 @@ object BiologyQuestions {
         q("bio_organ_cleans_blood", "Which organ cleans the blood and makes urine?", "Kidneys", listOf("Liver", "Bladder", "Spleen"), M),
         q("bio_colour_chlorophyll", "What is the colour of chlorophyll?", "Green", listOf("Yellow", "Red", "Blue"), M),
         q("bio_part_plant_attracts", "What part of the plant attracts bees with colour and scent?", "Flower", listOf("Root", "Stem", "Seed"), M),
-        q("bio_baby_teeth", "What are baby teeth also called?", "Milk teeth", listOf("Wisdom teeth", "Molars", "Canines"), M)
+        q("bio_baby_teeth", "What are baby teeth also called?", "Milk teeth", listOf("Wisdom teeth", "Molars", "Canines"), M),
+        q("bio_hard_outer_layer", "What is the hard outer layer of a tooth called?", "Enamel", listOf("Dentin", "Pulp", "Cementum"), M),
+        q("bio_body_part_use", "Which body part do you use to smell?", "Nose", listOf("Tongue", "Ears", "Eyes"), M),
+        q("bio_human_body_water", "About how much of the human body is water?", "60 percent", listOf("30 percent", "90 percent", "45 percent"), M),
+        q("bio_call_process_seed", "What do you call the process of a seed starting to grow?", "Germination", listOf("Pollination", "Photosynthesis", "Fertilisation"), M),
+        q("bio_doctors_call_broken", "What do doctors call a broken bone?", "Fracture", listOf("Sprain", "Strain", "Dislocation"), M),
+        q("bio_part_body_affected", "Which part of the body is affected by conjunctivitis?", "Eyes", listOf("Ears", "Skin", "Throat"), M),
+        q("bio_part_body_dermatologist", "Which part of the body does a dermatologist treat?", "Skin", listOf("Teeth", "Feet", "Heart"), M),
+        q("bio_group_animals_lives", "Which group of animals lives both in water and on land, like frogs?", "Amphibians", listOf("Reptiles", "Mammals", "Fish"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -372,7 +381,42 @@ object BiologyQuestions {
         q("bio_vitamin_deficiency_causes", "Which vitamin deficiency causes rickets?", "Vitamin D", listOf("Vitamin C", "Vitamin K", "Vitamin E"), H),
         q("bio_part_brain_shaped", "Which part of the brain is shaped like a seahorse and helps form memories?", "Hippocampus", listOf("Amygdala", "Cerebellum", "Thalamus"), H),
         q("bio_almond_shaped_part", "Which almond-shaped part of the brain processes fear?", "Amygdala", listOf("Hippocampus", "Pituitary gland", "Pons"), H),
-        q("bio_gland_often_master", "Which gland is often called the 'master gland' of the body?", "Pituitary gland", listOf("Thyroid gland", "Pineal gland", "Adrenal gland"), H)
+        q("bio_gland_often_master", "Which gland is often called the 'master gland' of the body?", "Pituitary gland", listOf("Thyroid gland", "Pineal gland", "Adrenal gland"), H),
+        q("bio_part_eye_damaged", "Which part of the eye is damaged in colour blindness, usually inherited?", "Cone cells", listOf("Rod cells", "Lens", "Iris"), H),
+        q("bio_cells_eye_let", "Which cells in the eye let you see in dim light?", "Rod cells", listOf("Cone cells", "Ganglion cells", "Lens fibres"), H),
+        q("bio_blind_spot_area", "What is the name of the blind spot area where the optic nerve leaves the eye?", "Optic disc", listOf("Fovea", "Macula", "Pupil"), H),
+        q("bio_tiny_bones_ear", "Which tiny bones in the ear are the hammer, anvil and stirrup?", "Ossicles", listOf("Cochlea", "Vertebrae", "Phalanges"), H),
+        q("bio_snail_shaped_organ", "Which snail-shaped organ in the inner ear turns sound into nerve signals?", "Cochlea", listOf("Eardrum", "Semicircular canal", "Eustachian tube"), H),
+        q("bio_tube_connects_middle", "Which tube connects the middle ear to the throat, popping on aeroplanes?", "Eustachian tube", listOf("Oesophagus", "Trachea", "Cochlea"), H),
+        q("bio_flap_stops_food", "What is the name of the flap that stops food going down the windpipe?", "Epiglottis", listOf("Uvula", "Larynx", "Tonsil"), H),
+        q("bio_dangling_tissue_back", "What is the name of the dangling tissue at the back of the throat?", "Uvula", listOf("Epiglottis", "Tonsil", "Adenoid"), H),
+        q("bio_leaves_change_colour", "Why do leaves change colour in autumn?", "Chlorophyll breaks down", listOf("They get sunburned", "They absorb more water", "Insects eat the green"), H),
+        q("bio_pigment_makes_tomatoes", "Which pigment makes tomatoes red?", "Lycopene", listOf("Beta-carotene", "Anthocyanin", "Melanin"), H),
+        q("bio_tiny_pores_leaves", "What are the tiny pores on leaves that let gases in and out?", "Stomata", listOf("Xylem", "Phloem", "Cuticles"), H),
+        q("bio_tubes_carry_water", "Which tubes carry water up from a plant's roots?", "Xylem", listOf("Phloem", "Stomata", "Root hairs"), H),
+        q("bio_tubes_carry_sugars", "Which tubes carry sugars around a plant?", "Phloem", listOf("Xylem", "Stomata", "Sepals"), H),
+        q("bio_call_plant_lives", "What do you call a plant that lives for only one growing season?", "Annual", listOf("Perennial", "Biennial", "Deciduous"), H),
+        q("bio_part_body_nephrologist", "Which part of the body does a nephrologist treat?", "Kidneys", listOf("Liver", "Nerves", "Lungs"), H),
+        q("bio_part_body_podiatrist", "Which part of the body does a podiatrist treat?", "Feet", listOf("Teeth", "Skin", "Eyes"), H),
+        q("bio_kind_doctor_treats", "What kind of doctor treats children?", "Paediatrician", listOf("Geriatrician", "Obstetrician", "Orthopaedist"), H),
+        q("bio_kind_specialist_treats", "What kind of specialist treats eye diseases and performs eye surgery?", "Ophthalmologist", listOf("Optician", "Optometrist", "Otologist"), H),
+        q("bio_part_body_inflamed", "Which part of the body is inflamed in tonsillitis?", "Tonsils", listOf("Appendix", "Liver", "Sinuses"), H),
+        q("bio_part_body_inflamed_2", "Which part of the body is inflamed in hepatitis?", "Liver", listOf("Kidneys", "Lungs", "Skin"), H),
+        q("bio_part_body_inflamed_3", "Which part of the body is inflamed in gastritis?", "Stomach lining", listOf("Liver", "Lungs", "Joints"), H),
+        q("bio_body_part_affected", "Which body part is affected by arthritis?", "Joints", listOf("Arteries", "Lungs", "Nerves"), H),
+        q("bio_group_spiders_belong", "Which group do spiders belong to, separate from insects?", "Arachnids", listOf("Crustaceans", "Myriapods", "Molluscs"), H),
+        q("bio_legs_spiders", "How many legs do spiders have?", "Eight", listOf("Six", "Ten", "Twelve"), H),
+        q("bio_group_animals_includes", "Which group of animals includes crabs, lobsters and shrimps?", "Crustaceans", listOf("Molluscs", "Arachnids", "Echinoderms"), H),
+        q("bio_group_animals_includes_2", "Which group of animals includes snails, octopuses and clams?", "Molluscs", listOf("Crustaceans", "Cnidarians", "Annelids"), H),
+        q("bio_group_animals_includes_3", "Which group of animals includes starfish and sea urchins?", "Echinoderms", listOf("Molluscs", "Cnidarians", "Crustaceans"), H),
+        q("bio_group_animals_includes_4", "Which group of animals includes jellyfish and corals?", "Cnidarians", listOf("Echinoderms", "Sponges", "Molluscs"), H),
+        q("bio_group_animals_includes_5", "Which group of animals includes earthworms and leeches?", "Annelids", listOf("Nematodes", "Flatworms", "Molluscs"), H),
+        q("bio_times_blink_day", "About how many times do you blink in a day?", "15,000", listOf("1,500", "150,000", "500"), H),
+        q("bio_fingers_wrinkle_water", "Why do fingers wrinkle in water, according to a leading theory?", "To improve grip", listOf("Skin absorbs water and swells", "Blood leaves them", "Salt is washed out"), H),
+        q("bio_scientist_sailed_hms", "Which scientist sailed on HMS Beagle and later wrote 'On the Origin of Species'?", "Charles Darwin", listOf("Alfred Russel Wallace", "Thomas Huxley", "Gregor Mendel"), H),
+        q("bio_naturalist_came_natural", "Which naturalist came up with natural selection independently of Darwin?", "Alfred Russel Wallace", listOf("Thomas Huxley", "Jean-Baptiste Lamarck", "Joseph Hooker"), H),
+        q("bio_scientist_darwin_bulldog", "Which scientist was called 'Darwin's bulldog' for defending evolution?", "Thomas Huxley", listOf("Alfred Russel Wallace", "Richard Owen", "Herbert Spencer"), H),
+        q("bio_finches_helped_darwin", "Which finches helped Darwin's ideas about evolution?", "Galapagos finches", listOf("Canary finches", "Zebra finches", "Gouldian finches"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -430,6 +474,46 @@ object BiologyQuestions {
         q("bio_german_doctor_discovered", "Which German doctor discovered the bacteria that cause tuberculosis?", "Robert Koch", listOf("Paul Ehrlich", "Emil von Behring", "Rudolf Virchow"), X),
         q("bio_hormone_pineal_gland", "Which hormone does the pineal gland release to control sleep?", "Melatonin", listOf("Serotonin", "Cortisol", "Dopamine"), X),
         q("bio_hormone_produced_thyroid", "Which hormone produced by the thyroid controls metabolism?", "Thyroxine", listOf("Insulin", "Cortisol", "Glucagon"), X),
-        q("bio_tiny_finger_like", "Which tiny finger-like structures line the small intestine?", "Villi", listOf("Cilia", "Alveoli", "Nephrons"), X)
+        q("bio_tiny_finger_like", "Which tiny finger-like structures line the small intestine?", "Villi", listOf("Cilia", "Alveoli", "Nephrons"), X),
+        q("bio_part_brain_connects", "Which part of the brain connects its two halves?", "Corpus callosum", listOf("Brainstem", "Cerebellum", "Pons"), X),
+        q("bio_part_brain_controls_2", "Which part of the brain controls hunger, thirst and body temperature?", "Hypothalamus", listOf("Thalamus", "Hippocampus", "Medulla"), X),
+        q("bio_fear_heights", "What is the name of the fear of heights?", "Acrophobia", listOf("Agoraphobia", "Claustrophobia", "Aerophobia"), X),
+        q("bio_fear_enclosed_spaces", "What is the name of the fear of enclosed spaces?", "Claustrophobia", listOf("Agoraphobia", "Acrophobia", "Xenophobia"), X),
+        q("bio_fear_long_words", "What is the name of the fear of long words, ironically a very long word?", "Hippopotomonstrosesquippedaliophobia", listOf("Triskaidekaphobia", "Arachibutyrophobia", "Hexakosioihexekontahexaphobia"), X),
+        q("bio_fear_number", "What is the name of the fear of the number 13?", "Triskaidekaphobia", listOf("Hexakosioihexekontahexaphobia", "Tetraphobia", "Numerophobia"), X),
+        q("bio_plant_reproduces_spores", "Which famous plant reproduces by spores, not seeds, and is among the oldest land plants?", "Fern", listOf("Pine", "Moss rose", "Cactus"), X),
+        q("bio_plant_source_drug", "Which plant is the source of the drug quinine, used against malaria?", "Cinchona tree", listOf("Willow tree", "Foxglove", "Opium poppy"), X),
+        q("bio_tree_bark_gave", "Which tree bark gave us the basis of aspirin?", "Willow", listOf("Oak", "Birch", "Cinchona"), X),
+        q("bio_plant_gave_heart", "Which plant gave us the heart drug digitalis?", "Foxglove", listOf("Belladonna", "Hemlock", "Yew"), X),
+        q("bio_tree_bark_gave_2", "Which tree's bark gave us the cancer drug paclitaxel (Taxol)?", "Pacific yew", listOf("Willow", "Cinchona", "Eucalyptus"), X),
+        q("bio_poisonous_plant_killed", "Which poisonous plant killed the philosopher Socrates?", "Hemlock", listOf("Belladonna", "Foxglove", "Oleander"), X),
+        q("bio_poisonous_plant_means", "Which poisonous plant's name means 'beautiful lady' in Italian?", "Belladonna", listOf("Bellflower", "Mandrake", "Nightshade"), X),
+        q("bio_tiny_parasite_causes", "Which tiny parasite causes malaria?", "Plasmodium", listOf("Giardia", "Trypanosoma", "Toxoplasma"), X),
+        q("bio_bacterium_causes_stomach", "Which bacterium causes most stomach ulcers, a discovery that won a 2005 Nobel Prize?", "Helicobacter pylori", listOf("E. coli", "Salmonella", "Streptococcus"), X),
+        q("bio_australian_doctor_drank", "Which Australian doctor drank bacteria to prove they cause stomach ulcers?", "Barry Marshall", listOf("Robin Warren", "Howard Florey", "Frank Fenner"), X),
+        q("bio_shape_dna_molecule", "What is the name of the shape of the DNA molecule?", "Double helix", listOf("Triple spiral", "Beta sheet", "Alpha coil"), X),
+        q("bio_four_letters_represent", "Which four letters represent the bases in DNA?", "A, C, G and T", listOf("A, B, C and D", "A, G, U and T", "C, G, U and A"), X),
+        q("bio_base_rna_replaces", "Which base in RNA replaces thymine from DNA?", "Uracil", listOf("Adenine", "Cytosine", "Guanine"), X),
+        q("bio_group_centipedes_millipedes", "Which group do centipedes and millipedes belong to?", "Myriapods", listOf("Arachnids", "Insects", "Crustaceans"), X),
+        q("bio_largest_group_animals", "What is the largest group of animals by number of species?", "Insects", listOf("Fish", "Birds", "Molluscs"), X),
+        q("bio_group_insects_described", "Which group of insects has the most described species?", "Beetles", listOf("Ants", "Butterflies", "Flies"), X),
+        q("bio_scientific_study_fungi", "What is the name of the scientific study of fungi?", "Mycology", listOf("Botany", "Virology", "Entomology"), X),
+        q("bio_scientific_study_insects", "What is the name of the scientific study of insects?", "Entomology", listOf("Etymology", "Ornithology", "Herpetology"), X),
+        q("bio_scientific_study_birds", "What is the name of the scientific study of birds?", "Ornithology", listOf("Entomology", "Ichthyology", "Oology"), X),
+        q("bio_scientific_study_fish", "What is the name of the scientific study of fish?", "Ichthyology", listOf("Herpetology", "Malacology", "Limnology"), X),
+        q("bio_scientific_study_reptiles", "What is the name of the scientific study of reptiles and amphibians?", "Herpetology", listOf("Ichthyology", "Batrachology", "Ornithology"), X),
+        q("bio_medical_brain_freeze", "What is the medical name for brain freeze from cold food?", "Sphenopalatine ganglioneuralgia", listOf("Cryoneuralgia", "Glossopharyngeal spasm", "Cephalalgia frigida"), X),
+        q("bio_medical_hiccups", "What is the medical name for hiccups?", "Singultus", listOf("Eructation", "Borborygmus", "Sternutation"), X),
+        q("bio_medical_sneeze", "What is the medical name for a sneeze?", "Sternutation", listOf("Singultus", "Eructation", "Pandiculation"), X),
+        q("bio_medical_stomach_rumbling", "What is the medical name for stomach rumbling?", "Borborygmus", listOf("Singultus", "Flatulence", "Eructation"), X),
+        q("bio_medical_groove_between", "What is the medical name for the groove between the nose and upper lip?", "Philtrum", listOf("Septum", "Columella", "Glabella"), X),
+        q("bio_smooth_area_between", "What is the name for the smooth area between the eyebrows?", "Glabella", listOf("Philtrum", "Lunula", "Canthus"), X),
+        q("bio_pale_half_moon", "What is the name for the pale half-moon at the base of a fingernail?", "Lunula", listOf("Cuticle", "Glabella", "Eponychium"), X),
+        q("bio_english_philosopher_coined", "Which English philosopher coined the phrase 'survival of the fittest'?", "Herbert Spencer", listOf("Charles Darwin", "Thomas Huxley", "John Stuart Mill"), X),
+        q("bio_british_primatologist_studied", "Which British primatologist studied wild chimpanzees in Tanzania from 1960?", "Jane Goodall", listOf("Dian Fossey", "Birute Galdikas", "Cynthia Moss"), X),
+        q("bio_american_zoologist_studied", "Which American zoologist studied mountain gorillas in Rwanda?", "Dian Fossey", listOf("Jane Goodall", "Birute Galdikas", "Rachel Carson"), X),
+        q("bio_scientist_studied_orangutans", "Which scientist studied orangutans in Borneo, completing the 'Trimates'?", "Birute Galdikas", listOf("Dian Fossey", "Jane Goodall", "Cynthia Moss"), X),
+        q("bio_marine_biologist_1962", "Which marine biologist's 1962 book 'Silent Spring' warned about pesticides?", "Rachel Carson", listOf("Sylvia Earle", "Jane Goodall", "Eugenie Clark"), X),
+        q("bio_french_explorer_invented", "Which French explorer co-invented the aqualung for diving?", "Jacques Cousteau", listOf("Auguste Piccard", "Jacques Piccard", "Hans Hass"), X)
     )
 }

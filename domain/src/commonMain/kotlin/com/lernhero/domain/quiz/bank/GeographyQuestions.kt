@@ -206,7 +206,9 @@ object GeographyQuestions {
         q("geo_chinese_dam_world", "Which Chinese dam is the world's biggest power station?", "Three Gorges Dam", listOf("Hoover Dam", "Itaipu Dam", "Aswan High Dam"), E),
         q("geo_sea_nile_flow", "Into which sea does the Nile flow?", "The Mediterranean", listOf("The Red Sea", "The Arabian Sea", "The Indian Ocean"), E),
         q("geo_french_city_gave", "Which French city gave its name to a famous mustard?", "Dijon", listOf("Nice", "Lille", "Toulouse"), E),
-        q("geo_continent_sahara_desert", "On which continent is the Sahara desert?", "Africa", listOf("Asia", "Australia", "South America"), E)
+        q("geo_continent_sahara_desert", "On which continent is the Sahara desert?", "Africa", listOf("Asia", "Australia", "South America"), E),
+        q("geo_country_shaped_like", "Which country is shaped like a long, thin strip along South America's Pacific coast?", "Chile", listOf("Peru", "Ecuador", "Colombia"), E),
+        q("geo_country_visit_city", "In which country can you visit the city of Rio de Janeiro?", "Brazil", listOf("Argentina", "Portugal", "Mexico"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -531,7 +533,9 @@ object GeographyQuestions {
         q("geo_argentine_city_calls", "Which Argentine city calls itself 'the end of the world'?", "Ushuaia", listOf("Punta Arenas", "Rio Gallegos", "Mar del Plata"), M),
         q("geo_continent_deserts", "Which is the only continent with no deserts?", "Europe", listOf("Africa", "Australia", "South America"), M),
         q("geo_strait_divides_istanbul", "Which strait divides Istanbul between Europe and Asia?", "Bosphorus", listOf("Dardanelles", "Strait of Otranto", "Kerch Strait"), M),
-        q("geo_sea_saltiest_large", "Which sea is the saltiest large body of water you can float in, bordering Israel and Jordan?", "Dead Sea", listOf("Red Sea", "Caspian Sea", "Aral Sea"), M)
+        q("geo_sea_saltiest_large", "Which sea is the saltiest large body of water you can float in, bordering Israel and Jordan?", "Dead Sea", listOf("Red Sea", "Caspian Sea", "Aral Sea"), M),
+        q("geo_country_invented_croissant", "Which country invented the croissant's ancestor, the kipferl?", "Austria", listOf("France", "Belgium", "Switzerland"), M),
+        q("geo_country_origin_feta", "Which country is the origin of feta cheese?", "Greece", listOf("Turkey", "Italy", "Bulgaria"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -661,7 +665,21 @@ object GeographyQuestions {
         q("geo_lake_split_between", "Which lake, split between Peru and Bolivia, is the highest navigable lake in the world?", "Lake Titicaca", listOf("Lake Poopo", "Lake Junin", "Lake Atitlan"), H),
         q("geo_country_home_rock", "Which country is home to the rock-carved temples of Abu Simbel?", "Egypt", listOf("Sudan", "Jordan", "Ethiopia"), H),
         q("geo_country_home_ancient", "Which country is home to the ancient ruins of Persepolis?", "Iran", listOf("Iraq", "Turkey", "Afghanistan"), H),
-        q("geo_country_home_mayan", "Which country is home to the Mayan city of Tikal?", "Guatemala", listOf("Mexico", "Honduras", "Belize"), H)
+        q("geo_country_home_mayan", "Which country is home to the Mayan city of Tikal?", "Guatemala", listOf("Mexico", "Honduras", "Belize"), H),
+        q("geo_country_home_borscht", "Which country is the home of borscht, claimed by several neighbours?", "Ukraine", listOf("Hungary", "Finland", "Austria"), H),
+        q("geo_country_national_animal", "Which country's national animal is the kiwi?", "New Zealand", listOf("Australia", "Fiji", "Papua New Guinea"), H),
+        q("geo_country_national_animal_2", "Which country's national animal is the bald eagle?", "USA", listOf("Canada", "Mexico", "Albania"), H),
+        q("geo_country_flag_shows_4", "Which country's flag shows a red dragon?", "Wales", listOf("Bhutan", "Malta", "Albania"), H),
+        q("geo_country_flag_shows_5", "Which country's flag shows a double-headed black eagle on red?", "Albania", listOf("Montenegro", "Serbia", "Germany"), H),
+        q("geo_country_flag_features_2", "Which country's flag features an AK-47 rifle?", "Mozambique", listOf("Angola", "Zimbabwe", "Eritrea"), H),
+        q("geo_country_flag_shows_6", "Which country's flag shows a map of the island itself?", "Cyprus", listOf("Malta", "Iceland", "Jamaica"), H),
+        q("geo_mountain_highest_oceania", "Which mountain is the highest in Oceania, on New Guinea?", "Puncak Jaya", listOf("Mount Kosciuszko", "Aoraki", "Mount Wilhelm"), H),
+        q("geo_european_country_more", "Which European country has more pigs than people?", "Denmark", listOf("Netherlands", "Ireland", "Belgium"), H),
+        q("geo_country_more_sheep", "Which country has more sheep than people, about five per person?", "New Zealand", listOf("Australia", "Wales", "Iceland"), H),
+        q("geo_country_world_oldest", "Which country has the world's oldest continuously inhabited cities, including Damascus?", "Syria", listOf("Iraq", "Egypt", "Lebanon"), H),
+        q("geo_country_home_pamukkale", "Which country is home to Pamukkale's white travertine terraces?", "Turkey", listOf("Greece", "Iran", "Jordan"), H),
+        q("geo_country_home_active", "Which country is home to the most active volcanoes in Europe, including Etna?", "Italy", listOf("Iceland", "Greece", "Spain"), H),
+        q("geo_country_birthplace_coffee", "Which country is the birthplace of coffee, according to legend of a goatherd named Kaldi?", "Ethiopia", listOf("Yemen", "Brazil", "Turkey"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -723,6 +741,28 @@ object GeographyQuestions {
         q("geo_river_flows_through_17", "Which river flows through Seville?", "Guadalquivir", listOf("Tagus", "Guadiana", "Douro"), X),
         q("geo_river_flows_through_18", "Which river flows through Porto?", "Douro", listOf("Tagus", "Minho", "Mondego"), X),
         q("geo_river_flows_through_19", "Which river flows through Bordeaux?", "Garonne", listOf("Loire", "Dordogne", "Seine"), X),
-        q("geo_river_flows_through_20", "Which river flows through Lyon along with the Rhone?", "Saone", listOf("Loire", "Garonne", "Isere"), X)
+        q("geo_river_flows_through_20", "Which river flows through Lyon along with the Rhone?", "Saone", listOf("Loire", "Garonne", "Isere"), X),
+        q("geo_country_flag_different", "Which country's flag has a different design on each side?", "Paraguay", listOf("Uruguay", "Bolivia", "Nepal"), X),
+        q("geo_country_flag_oldest", "Which country's flag is the oldest still in continuous use?", "Denmark", listOf("Netherlands", "Austria", "Scotland"), X),
+        q("geo_african_country_flag", "Which African country's flag shows a shield and two spears?", "Kenya", listOf("Uganda", "Tanzania", "Botswana"), X),
+        q("geo_country_flag_shows_7", "Which country's flag shows a dragon holding jewels?", "Bhutan", listOf("Wales", "China", "Vietnam"), X),
+        q("geo_island_country_flag", "Which island's flag shows three armoured legs joined at the hip, the triskelion?", "Isle of Man", listOf("Sicily", "Malta", "Jersey"), X),
+        q("geo_mountain_alps_iconic", "Which mountain in the Alps has an iconic pyramid shape on the Swiss-Italian border?", "Matterhorn", listOf("Eiger", "Jungfrau", "Monte Rosa"), X),
+        q("geo_volcano_antarctica_permanent", "Which volcano in Antarctica has a permanent lava lake?", "Mount Erebus", listOf("Mount Terror", "Vinson Massif", "Deception Island"), X),
+        q("geo_island_split_between", "Which island is split between two countries, one of them the Netherlands?", "Saint Martin", listOf("Hispaniola", "Timor", "Cyprus"), X),
+        q("geo_island_shared_between", "Which island is shared between Indonesia and Papua New Guinea?", "New Guinea", listOf("Borneo", "Timor", "Sulawesi"), X),
+        q("geo_island_shared_between_2", "Which island is shared between Indonesia and East Timor?", "Timor", listOf("Borneo", "Flores", "Sumba"), X),
+        q("geo_town_split_between", "Which town is split between the Netherlands and Belgium with borders through houses?", "Baarle", listOf("Maastricht", "Eupen", "Aachen"), X),
+        q("geo_spanish_exclave_entirely", "Which Spanish exclave is entirely surrounded by France?", "Llivia", listOf("Ceuta", "Melilla", "Andorra"), X),
+        q("geo_country_home_rainbow", "Which country is home to the rainbow mountains of Zhangye Danxia?", "China", listOf("Peru", "Mongolia", "Kyrgyzstan"), X),
+        q("geo_country_home_pink", "Which country is home to the pink Lake Hillier?", "Australia", listOf("Senegal", "Canada", "Bolivia"), X),
+        q("geo_country_home_lake", "Which country is home to Lake Retba, a pink lake near Dakar?", "Senegal", listOf("Mauritania", "Gambia", "Morocco"), X),
+        q("geo_country_home_socotra", "Which country is home to Socotra island, with its alien-looking dragon blood trees?", "Yemen", listOf("Oman", "Somalia", "Eritrea"), X),
+        q("geo_country_home_marble", "Which country is home to the Marble Caves on General Carrera Lake?", "Chile", listOf("Argentina", "Peru", "Bolivia"), X),
+        q("geo_country_home_tsingy", "Which country is home to the Tsingy, a forest of razor-sharp limestone?", "Madagascar", listOf("Mozambique", "Tanzania", "Kenya"), X),
+        q("geo_country_home_avenue", "Which country is home to the Avenue of the Baobabs?", "Madagascar", listOf("Botswana", "Senegal", "Zimbabwe"), X),
+        q("geo_country_home_waitomo", "Which country is home to the Waitomo caves lit by glowworms?", "New Zealand", listOf("Australia", "Fiji", "Chile"), X),
+        q("geo_spice_rich_island", "Which spice-rich island in Tanzania was once the world's leading clove producer?", "Zanzibar", listOf("Pemba", "Mafia Island", "Mauritius"), X),
+        q("geo_group_indonesian_islands", "Which group of Indonesian islands was once the world's only source of nutmeg?", "Banda Islands", listOf("Moluccas", "Riau Islands", "Bali"), X)
     )
 }

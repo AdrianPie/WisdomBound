@@ -407,6 +407,7 @@ lit_wrote_don_quixote	Medium	Who wrote 'Don Quixote'?	Miguel de Cervantes	Lope d
 lit_boy_never_grows	Medium	What is the name of the boy who never grows up in J. M. Barrie's story?	Peter Pan	Tom Sawyer	Oliver Twist	Christopher Robin
 lit_wizard_character_wants	Medium	In 'The Wizard of Oz', which character wants a brain?	The Scarecrow	The Tin Man	The Cowardly Lion	Toto
 lit_author_created_cat	Medium	Which author created 'The Cat in the Hat'?	Dr. Seuss	Roald Dahl	Maurice Sendak	Beatrix Potter
+lit_fairy_tale_princess	Medium	Which fairy tale princess lets down her long hair from a tower?	Rapunzel	Sleeping Beauty	Cinderella	Snow White
 cultw_boska_komedia	Hard	How many parts does Dante's Divine Comedy have?	Three	Two	Four	Seven
 cultw_ulisses_joyce	Hard	In which city does Joyce's Ulysses take place over one day?	Dublin	London	Trieste	Paris
 lit_solaris	Hard	Who wrote 'Solaris'?	Stanislaw Lem	Isaac Asimov	Arthur C. Clarke	Philip K. Dick
@@ -530,6 +531,11 @@ lit_wrote_war_worlds	Hard	Who wrote 'War of the Worlds'?	H. G. Wells	Jules Verne
 lit_isaac_asimov_rules	Hard	Which Isaac Asimov rules govern how robots must behave?	Three Laws of Robotics	Four Robot Codes	Prime Directive	Robot Charter
 lit_author_wrote_matilda	Hard	Which author wrote 'Matilda' and 'The BFG'?	Roald Dahl	Michael Morpurgo	David Walliams	Philip Pullman
 lit_detective_edgar_allan	Hard	Which detective did Edgar Allan Poe create, often called the first fictional detective?	C. Auguste Dupin	Sherlock Holmes	Father Brown	Inspector Bucket
+lit_must_queen_guess	Hard	What must the queen guess to escape her deal with Rumpelstiltskin?	His name	His age	His home	His birthday
+lit_pied_piper_hamelin	Hard	In 'The Pied Piper of Hamelin', what does the piper lead away when he is not paid?	The children	The rats	The cattle	The soldiers
+lit_four_animals_form	Hard	Which four animals form a band in a Brothers Grimm tale?	Donkey, dog, cat and rooster	Horse, pig, duck and goat	Cow, sheep, dog and cat	Fox, wolf, bear and hare
+lit_character_thousand_nights	Hard	Which character from 'One Thousand and One Nights' finds a cave of treasure?	Ali Baba	Aladdin	Sinbad	Scheherazade
+lit_author_wrote_under	Hard	Which author wrote under the pen name George Eliot?	Mary Ann Evans	Charlotte Bronte	Jane Austen	Elizabeth Gaskell
 cultw_genji	Expert	The Tale of Genji, often called the first novel, came from which country?	Japan	China	Korea	India
 lit_iliada_wers	Expert	What word does Homer's 'Iliad' open with?	Rage (wrath)	War	Muse	Gods
 lit_proust	Expert	Who wrote the cycle 'In Search of Lost Time'?	Marcel Proust	Gustave Flaubert	Honore de Balzac	Emile Zola
@@ -590,3 +596,11 @@ lit_swedish_author_wrote	Expert	Which Swedish author wrote about Nils Holgersson
 lit_german_brothers_collected	Expert	Which German brothers collected fairy tales such as 'Hansel and Gretel'?	The Brothers Grimm	The Brothers Mann	The Schlegel brothers	The Humboldt brothers
 lit_job_antoine_saint	Expert	Which job did Antoine de Saint-Exupery have besides writing?	Pilot	Sailor	Doctor	Teacher
 lit_reclusive_american_poet	Expert	Which reclusive American poet had almost all of her nearly 1800 poems published after death?	Emily Dickinson	Sylvia Plath	Elizabeth Bishop	Anne Sexton
+lit_french_poet_wrote	Expert	Which French poet wrote fables like 'The Tortoise and the Hare' in verse?	Jean de La Fontaine	Charles Perrault	Moliere	Racine
+lit_under_pen_bronte	Expert	Under what pen name did the Bronte sisters first publish?	Currer, Ellis and Acton Bell	George, Edward and Arthur Eliot	Brown, Brook and Bell	The Haworth Sisters
+lit_french_author_real	Expert	Which French author's real name was Francois-Marie Arouet?	Voltaire	Moliere	Stendhal	Rousseau
+lit_french_playwright_real	Expert	Which French playwright's real name was Jean-Baptiste Poquelin?	Moliere	Voltaire	Racine	Corneille
+lit_american_author_wrote	Expert	Which American author wrote short stories with twist endings under the name O. Henry?	William Sydney Porter	Ambrose Bierce	Bret Harte	Washington Irving
+lit_author_published_robert	Expert	Which author published 'Robert Galbraith' crime novels under a pen name?	J. K. Rowling	Stephen King	Agatha Christie	Anne Rice
+lit_horror_writer_once	Expert	Which horror writer once published as Richard Bachman?	Stephen King	Dean Koontz	Clive Barker	Peter Straub
+lit_shakespeare_play_includes	Expert	Which Shakespeare play includes the stage direction 'Exit, pursued by a bear'?	The Winter's Tale	The Tempest	As You Like It	Cymbeline

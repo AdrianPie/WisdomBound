@@ -33,6 +33,8 @@ capx_luksemburg	Easy	Which of these countries has a capital with exactly the sam
 capx_trafalgar	Easy	Nelson's Column stands in which London square?	Trafalgar Square	Piccadilly Circus	Leicester Square	Covent Garden
 capy_berlin_mis	Easy	Which animal appears on the coat of arms of Berlin?	A bear	An eagle	A lion	A wolf
 cap_capital_iraq	Easy	What is the capital of Iraq?	Baghdad	Basra	Tehran	Damascus
+cap_capital_france	Easy	What is the capital of France?	Paris	Lyon	Marseille	Nice
+cap_capital_italy	Easy	What is the capital of Italy?	Rome	Milan	Venice	Naples
 cap_canberra	Medium	What is the capital of Australia?	Canberra	Sydney	Melbourne	Perth
 cap_ottawa	Medium	What is the capital of Canada?	Ottawa	Toronto	Montreal	Vancouver
 cap_brasilia	Medium	What is the capital of Brazil?	Brasilia	Rio de Janeiro	Sao Paulo	Salvador
@@ -227,6 +229,9 @@ cap_city_capital_canadian_2	Hard	Which city is the capital of the Canadian provi
 cap_city_capital_german	Hard	Which city is the capital of the German state of Saxony?	Dresden	Leipzig	Chemnitz	Magdeburg
 cap_port_louis_capital	Hard	Port Louis is the capital of which island country?	Mauritius	Seychelles	Maldives	Madagascar
 cap_capital_northernmost_world	Hard	Which capital is the northernmost in the world?	Reykjavik	Oslo	Helsinki	Nuuk
+cap_capital_slovenia	Hard	What is the capital of Slovenia?	Ljubljana	Maribor	Bled	Zagreb
+cap_capital_lithuania	Hard	What is the capital of Lithuania?	Vilnius	Kaunas	Klaipeda	Riga
+cap_capital_latvia	Hard	What is the capital of Latvia?	Riga	Tallinn	Vilnius	Daugavpils
 cap_thimphu	Expert	What is the capital of Bhutan?	Thimphu	Paro	Punakha	Phuentsholing
 cap_ulaanbaatar	Expert	What is the capital of Mongolia?	Ulaanbaatar	Erdenet	Darkhan	Khovd
 cap_bishkek	Expert	What is the capital of Kyrgyzstan?	Bishkek	Osh	Naryn	Karakol
@@ -294,3 +299,8 @@ cap_capital_liechtenstein	Expert	What is the capital of Liechtenstein?	Vaduz	Sch
 cap_capital_tuvalu	Expert	What is the capital of Tuvalu?	Funafuti	Tarawa	Majuro	Apia
 cap_capital_vanuatu	Expert	What is the capital of Vanuatu?	Port Vila	Honiara	Suva	Luganville
 cap_capital_solomon_islands	Expert	What is the capital of the Solomon Islands?	Honiara	Port Vila	Port Moresby	Gizo
+cap_capital_kosovo	Expert	What is the capital of Kosovo?	Pristina	Prizren	Peja	Mitrovica
+cap_old_royal_capital	Expert	What was the old royal capital of Montenegro?	Cetinje	Podgorica	Kotor	Niksic
+cap_capital_san_marino	Expert	What is the capital of San Marino?	San Marino City	Serravalle	Borgo Maggiore	Rimini
+cap_capital_andorra	Expert	What is the capital of Andorra?	Andorra la Vella	Escaldes	Encamp	La Seu d'Urgell
+cap_capital_cyprus	Expert	What is the capital of Cyprus?	Nicosia	Limassol	Larnaca	Paphos

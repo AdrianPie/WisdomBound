@@ -97,6 +97,7 @@ tec_german_engineer_gave	Easy	Which German engineer gave his name to an engine t
 tec_lets_maglev_trains	Easy	What lets maglev trains float above the track?	Magnets	Air cushions	Hydrogen jets	Steam
 tec_let_devices_without	Easy	What does 'Wi-Fi' let devices do without cables?	Connect to a network	Charge their batteries	Print documents	Play music
 tec_company_makes_iphone	Easy	Which company makes the iPhone?	Apple	Samsung	Google	Nokia
+tec_device_lets_talk	Easy	Which device lets you talk to people far away and now fits in a pocket?	Mobile phone	Radio	Television	Calculator
 tec_cpu	Medium	What does the abbreviation CPU stand for?	Central Processing Unit	Random-access memory	Graphics card	Hard drive
 tec_android_firma	Medium	Which company develops the Android operating system?	Google	Apple	Microsoft	Meta
 tec_telefon_bell	Medium	Who patented the telephone?	Alexander Graham Bell	Thomas Edison	Guglielmo Marconi	Samuel Morse
@@ -235,6 +236,12 @@ tec_ram_stand_computer	Medium	What does 'RAM' stand for in a computer?	Random Ac
 tec_cpu_stand	Medium	What does 'CPU' stand for?	Central Processing Unit	Computer Power Unit	Core Program Utility	Central Peripheral Unit
 tec_stand	Medium	What does 'AI' stand for?	Artificial intelligence	Automated interface	Advanced internet	Algorithmic input
 tec_pixel_make	Medium	What does a 'pixel' make up?	A digital image	A sound file	A computer chip	A network cable
+tec_invented_reading_system	Medium	Who invented a reading system of raised dots for blind people?	Louis Braille	Samuel Morse	Valentin Hauy	Helen Keller
+tec_invented_light_bulb	Medium	Who invented the light bulb that became the first commercial success, in 1879?	Thomas Edison	Joseph Swan	Nikola Tesla	Humphry Davy
+tec_sms_stand_phone	Medium	What does 'SMS' stand for in phone messaging?	Short Message Service	Simple Mail System	Send My Signal	Standard Mobile Service
+tec_word_phrase_searches	Medium	What is the name for a word or phrase that searches the internet?	Keyword	Hashtag	Password	Domain
+tec_symbol_starts_hashtag	Medium	Which symbol starts a hashtag?	#	@	&	$
+tec_traditional_program_beginners	Medium	What is the traditional first program beginners write, printing a greeting?	Hello, World!	Good morning	Hi there	Welcome home
 day2_ram_vs_dysk	Hard	Why does a computer slow down when RAM runs out?	It starts swapping data to much slower storage	The processor overheats and throttles	The screen starts refreshing slower	The network connection is throttled
 tec_turing	Hard	Who is regarded as the father of computer science and cracked the Enigma cipher?	Alan Turing	John von Neumann	Charles Babbage	Claude Shannon
 tec_enigma_polacy	Hard	Which Pole co-created the first break of the Enigma cipher?	Marian Rejewski	Stefan Banach	Jan Czochralski	Kazimierz Funk
@@ -341,6 +348,26 @@ tec_company_makes_quest	Hard	Which company makes the Quest VR headsets?	Meta	Son
 tec_software_pretends_useful	Hard	What is the name for software that pretends to be useful but hides malware?	Trojan horse	Worm	Spyware	Adware
 tec_malware_locks_files	Hard	What is the name of malware that locks your files and demands payment?	Ransomware	Spyware	Adware	Rootkit
 tec_classic_nokia_game	Hard	Which classic Nokia game had players steer a growing line?	Snake	Tetris	Pong	Bounce
+tec_italian_inventor_sent	Hard	Which Italian inventor sent the first radio signal across the Atlantic in 1901?	Guglielmo Marconi	Alessandro Volta	Enrico Fermi	Antonio Meucci
+tec_engineer_built_rocket	Hard	Which engineer built 'The Rocket', an early steam locomotive?	George Stephenson	James Watt	Isambard Kingdom Brunel	Richard Trevithick
+tec_american_invented_cotton	Hard	Which American invented the cotton gin in 1793?	Eli Whitney	Samuel Colt	Cyrus McCormick	Elias Howe
+tec_american_credited_practical	Hard	Which American is credited with the first practical sewing machine with a lockstitch, patented in 1846?	Elias Howe	Isaac Singer	Eli Whitney	Walter Hunt
+tec_company_founders_started	Hard	Which company's founders started it in a garage in Palo Alto in 1939?	Hewlett-Packard	Apple	Google	Intel
+tec_company_founded_larry	Hard	Which company was founded by Larry Page and Sergey Brin?	Google	Yahoo	Amazon	Facebook
+tec_company_began_online	Hard	Which company began as an online bookstore in 1994?	Amazon	eBay	Barnes and Noble	Alibaba
+tec_org_web_ending	Hard	What does the '.org' web ending traditionally stand for?	Organisation	Origin	Original	Organic
+tec_country_uses_web	Hard	Which country uses the web domain '.de'?	Germany	Denmark	Netherlands	Spain
+tec_country_uses_web_2	Hard	Which country uses the web domain '.ch'?	Switzerland	China	Chile	Czech Republic
+tec_country_domain_became	Hard	Which country's '.ai' domain became popular with artificial intelligence firms?	Anguilla	Albania	Antigua	Algeria
+tec_computer_term_spam	Hard	What does the computer term 'spam' come from?	A Monty Python sketch	An acronym for junk mail	A brand of soap	A radio jingle
+tec_meme_originally_coined	Hard	What is a 'meme' originally, as coined by Richard Dawkins in 1976?	A unit of cultural idea	A funny picture	A computer virus	A type of gene
+tec_troll_internet_slang	Hard	What does the 'troll' in internet slang originally come from?	A fishing technique	A Norse giant	A gaming character	A radio prank
+tec_country_launched_person	Hard	Which country launched the first person into space?	Soviet Union	USA	China	Germany
+tec_apollo_command_module	Hard	What was the name of the Apollo 11 command module?	Columbia	Eagle	Challenger	Discovery
+tec_apollo_mission_abort	Hard	Which Apollo mission had to abort its Moon landing after an oxygen tank exploded?	Apollo 13	Apollo 12	Apollo 1	Apollo 15
+tec_company_made_ipod	Hard	Which company made the iPod, launched in 2001?	Apple	Sony	Microsoft	Creative
+tec_songs_apple_claim	Hard	How many songs did Apple claim the first iPod could hold in your pocket?	1,000	100	10,000	500
+tec_disc_format_beat	Hard	Which disc format beat HD DVD in the high-definition format war?	Blu-ray	DVD-Audio	UMD	VCD
 day2_klucz_publiczny	Expert	In public-key cryptography, what may be shared freely?	The public key	The private key	Both keys	Neither key
 tec_moore	Expert	What does Moore's law concern?	The doubling of transistor count in chips	The doubling of internet speed each year	The steady fall in the price of memory	The rise in server power consumption
 tec_c_jezyk	Expert	Who created the C programming language?	Dennis Ritchie	Bjarne Stroustrup	James Gosling	Guido van Rossum
@@ -403,3 +430,26 @@ tec_2017_ransomware_attack	Expert	Which 2017 ransomware attack hit the UK's NHS?
 tec_computer_worm_sabotaged	Expert	Which computer worm sabotaged Iranian nuclear centrifuges around 2010?	Stuxnet	WannaCry	Conficker	Mydoom
 tec_nokia_phone_near	Expert	Which Nokia phone is famous for its near-indestructible build?	Nokia 3310	Nokia 7110	Nokia N95	Nokia 8210
 tec_android_phone_released	Expert	What was the name of the first Android phone, released in 2008?	HTC Dream	Nexus One	Samsung Galaxy	Motorola Droid
+tec_german_invented_diesel	Expert	Which German invented the diesel engine?	Rudolf Diesel	Nikolaus Otto	Gottlieb Daimler	Wilhelm Maybach
+tec_hungarian_born_inventor	Expert	Which Hungarian-born inventor created the ballpoint pen in the 1930s?	Laszlo Biro	Erno Rubik	Laszlo Jozsef	Janos Irinyi
+tec_american_engineer_invented	Expert	Which American engineer invented air conditioning in 1902?	Willis Carrier	Frederick Jones	Clarence Birdseye	Elisha Otis
+tec_american_safety_brake	Expert	Which American's safety brake made passenger lifts trustworthy in the 1850s?	Elisha Otis	Willis Carrier	George Pullman	Henry Bessemer
+tec_englishman_process_made	Expert	Which Englishman's process made cheap steel possible in 1856?	Henry Bessemer	Abraham Darby	Andrew Carnegie	John Wilkinson
+tec_american_inventor_froze	Expert	Which American inventor froze food quickly, creating frozen food in the 1920s?	Clarence Birdseye	Willis Carrier	Frederick Jones	Jacob Perkins
+tec_swedish_company_stands	Expert	Which Swedish company's name stands for its founder's initials and his farm and village?	IKEA	Volvo	Saab	Ericsson
+tec_nokia_original_business	Expert	What was Nokia's original business in 1865?	Paper mill	Rubber boots	Cable factory	Telegraph service
+tec_country_uses_web_3	Expert	Which country uses the web domain '.me', popular for personal sites?	Montenegro	Mexico	Mauritius	Malta
+tec_japanese_phone_company	Expert	Which Japanese phone company engineer created the first popular set of emoji in 1999?	Shigetaka Kurita	Satoru Iwata	Masahiro Sakurai	Ken Kutaragi
+tec_honda_humanoid_robot	Expert	Which Honda humanoid robot famously walked and climbed stairs in 2000?	ASIMO	AIBO	Atlas	Pepper
+tec_word_robots_comes	Expert	Which word for robots comes from the Czech word for 'forced labour'?	Robot	Android	Cyborg	Automaton
+tec_greek_derived_word	Expert	Which Greek-derived word means a robot made to look like a human?	Android	Cyborg	Golem	Automaton
+tec_cyborg	Expert	What is a 'cyborg'?	Part human, part machine	A fully human-like robot	A digital ghost	A self-driving car
+tec_space_shuttle_flew	Expert	Which space shuttle flew the first shuttle mission in 1981?	Columbia	Challenger	Enterprise	Discovery
+tec_shuttle_prototype_never	Expert	Which shuttle prototype never flew to space and was named after a 'Star Trek' ship?	Enterprise	Atlantis	Endeavour	Pathfinder
+tec_spacecraft_became_private	Expert	Which spacecraft became the first private one to dock with the ISS, in 2012?	SpaceX Dragon	Boeing Starliner	Orion	Cygnus
+tec_robotic_arm_built	Expert	Which robotic arm, built by Canada, served on the space shuttles?	Canadarm	Dextre	ERA	Kibo arm
+tec_soviet_probe_land	Expert	Which Soviet probe was the first to land softly on another planet, Venus, in 1970?	Venera 7	Mars 3	Luna 9	Vega 1
+tec_rover_drive_another	Expert	Which was the first rover to drive on another world, on the Moon in 1970?	Lunokhod 1	Sojourner	Spirit	Yutu
+tec_rover_drive_mars	Expert	Which was the first rover to drive on Mars, in 1997?	Sojourner	Spirit	Opportunity	Curiosity
+tec_company_invented_floppy	Expert	Which company invented the floppy disk?	IBM	Apple	Sony	Xerox
+tec_company_made_commercial_2	Expert	Which company made the first commercial USB flash drives in 2000?	Trek Technology and IBM	SanDisk and Apple	Sony and Philips	Kingston and Dell

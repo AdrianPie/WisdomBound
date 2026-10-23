@@ -366,7 +366,8 @@ object PopCultureQuestions {
         q("pop_colour_zero_pocket", "What colour is the zero pocket on a roulette wheel?", "Green", listOf("Red", "Black", "White"), E),
         q("pop_film_studio_logo", "Which film studio's logo shows a mountain ringed by stars?", "Paramount", listOf("Universal", "Columbia", "Warner Bros."), E),
         q("pop_company_bought_marvel", "Which company bought Marvel Entertainment in 2009?", "Disney", listOf("Warner Bros.", "Sony", "Universal"), E),
-        q("pop_network_made_game", "Which TV network made 'Game of Thrones' and 'The Sopranos'?", "HBO", listOf("Netflix", "AMC", "Showtime"), E)
+        q("pop_network_made_game", "Which TV network made 'Game of Thrones' and 'The Sopranos'?", "HBO", listOf("Netflix", "AMC", "Showtime"), E),
+        q("pop_green_ogre_lives", "Which green ogre lives in a swamp in a 2001 DreamWorks film?", "Shrek", listOf("Fiona", "Grinch", "Hulk"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -1092,6 +1093,7 @@ object PopCultureQuestions {
         q("pop_belgian_artist_created", "Which Belgian artist created the Smurfs?", "Peyo", listOf("Herge", "Franquin", "Morris"), X),
         q("pop_british_stop_motion", "Which British stop-motion duo are an inventor and his clever dog?", "Wallace and Gromit", listOf("Shaun and Bitzer", "Morph and Chas", "Pingu and Robby"), X),
         q("pop_studio_makes_wallace", "Which studio makes Wallace and Gromit?", "Aardman Animations", listOf("Pixar", "Laika", "Studio Ghibli"), X),
-        q("pop_forest_spirit_mascot", "Which forest spirit is the mascot of Studio Ghibli?", "Totoro", listOf("No-Face", "Calcifer", "Kodama"), X)
+        q("pop_forest_spirit_mascot", "Which forest spirit is the mascot of Studio Ghibli?", "Totoro", listOf("No-Face", "Calcifer", "Kodama"), X),
+        q("pop_hand_drawn_film", "Which hand-drawn film was the first animated movie nominated for Best Picture?", "Beauty and the Beast", listOf("The Lion King", "Aladdin", "The Little Mermaid"), X)
     )
 }

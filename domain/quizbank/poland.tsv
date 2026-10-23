@@ -308,6 +308,8 @@ pol_polish_city_capital	Medium	Which Polish city was the capital before Warsaw?	
 pol_dragon_lived_under	Medium	Which dragon lived under Wawel Hill in Krakow, according to legend?	Smok Wawelski	Zmij	Bazyliszek	Smok Tatrzanski
 pol_legendary_creature_symbol	Medium	Which legendary creature is the symbol of Warsaw?	The Mermaid	The Dragon	The White Eagle	The Bear
 pol_polish_dumplings_country	Medium	Which Polish dumplings are the country's best-known dish?	Pierogi	Golabki	Placki	Kopytka
+pol_polish_dessert_doughnut	Medium	Which Polish dessert is a doughnut eaten especially on Fat Thursday?	Paczek	Faworki	Sernik	Makowiec
+pol_polish_cheesecake_classic	Medium	Which Polish cheesecake is a classic dessert?	Sernik	Makowiec	Piernik	Mazurek
 pol_his2_bitwa_grunwald_kto	Hard	Who commanded the Polish-Lithuanian forces at Grunwald?	Wladyslaw Jagiello	Casimir the Great	Vytautas alone	Boleslaw the Wrymouth
 pol_his2_konstytucja_3maja_rok	Hard	What was the Constitution of May 3 in Europe?	The first in Europe	The third in Europe	The first in the world	The last of the 18th century
 pol_his2_bitwa_warszawska	Hard	In which year was the Battle of Warsaw, called the Miracle at the Vistula?	1920	1919	1921	1918
@@ -406,6 +408,11 @@ pol_polish_lake_district	Hard	Which Polish lake district is known as the 'Land o
 pol_national_park_protects	Hard	Which national park protects Europe's last primeval lowland forest, home to bison?	Bialowieza	Kampinos	Bieszczady	Wigry
 pol_polish_soup_made	Hard	Which Polish soup is made from fermented rye flour?	Zurek	Barszcz	Rosol	Flaki
 pol_mountain_range_forms	Hard	Which mountain range forms Poland's southern border with Slovakia?	Tatra Mountains	Sudetes	Alps	Ural Mountains
+pol_polish_mountain_range	Hard	Which Polish mountain range has the peak Sniezka?	Karkonosze	Tatra	Bieszczady	Beskid Zywiecki
+pol_polish_region_own	Hard	Which Polish region is famous for its own language and the city of Kartuzy?	Kashubia	Silesia	Podhale	Kurpie
+pol_highland_folk_tatras	Hard	Which highland folk from the Tatras are famous for their costumes and music?	Gorale	Kashubians	Kurpie	Lemkos
+pol_thin_wafer_poles	Hard	What thin wafer do Poles share on Christmas Eve?	Oplatek	Paczek	Obwarzanek	Prosforka
+pol_pole_invented_kerosene	Hard	Which Pole invented the kerosene lamp and started an oil industry in the 1850s?	Ignacy Lukasiewicz	Jan Czochralski	Kazimierz Funk	Stefan Banach
 pol_his3_polski_rzad_na_uchodzstwie	Expert	Where did the Polish government-in-exile operate during World War II?	London (earlier in France)	Moscow, alongside the Red Army	Washington, with the Allies	Rome, after the Italian campaign
 pol_his3_dywizjon_303	Expert	What was 303 Squadron known for in the Battle of Britain?	It was one of the RAF's most effective fighter squadrons	It defended Warsaw through September 1939	It fought its way up the hill at Monte Cassino	It was a naval unit escorting convoys
 pol_lit2_herbert_bohater	Expert	What is the character of Zbigniew Herbert's poem cycle called?	Mr. Cogito	Mr. Tadeusz	Mr. Wolodyjowski	Mr. Kleks
@@ -455,3 +462,13 @@ pol_translated_winnie_pooh	Expert	Who translated 'Winnie the Pooh' into Polish a
 pol_polish_hammer_thrower	Expert	Which Polish hammer thrower won three Olympic golds in a row?	Anita Wlodarczyk	Kamila Skolimowska	Joanna Fiodorow	Malwina Kopron
 pol_tune_played_krakow	Expert	What is the name of the tune played from Krakow's St Mary's Church tower?	Hejnal Mariacki	Mazurek Dabrowskiego	Bogurodzica	Rota
 pol_polish_spit_stretches	Expert	Which Polish spit stretches about 35 km into the Baltic Sea?	Hel Peninsula	Vistula Spit	Curonian Spit	Leba Spit
+pol_castle_poland_seat	Expert	Which castle in Poland was the seat of the Grand Master of the Teutonic Order?	Malbork Castle	Wawel Castle	Ksiaz Castle	Niedzica Castle
+pol_polish_castle_third	Expert	Which Polish castle is the third largest in the country and sits in Lower Silesia?	Ksiaz Castle	Moszna Castle	Czocha Castle	Niedzica Castle
+pol_polish_pomeranian_village	Expert	Which Polish Pomeranian village has an unexplained 'Crooked Forest' of bent pine trees?	Nowe Czarnowo	Leba	Miedzyzdroje	Ustka
+pol_polish_town_chapel	Expert	Which Polish town's chapel walls are decorated with thousands of human skulls?	Czermna	Wieliczka	Kudowa-Zdroj	Swidnica
+pol_polish_smoked_sheep	Expert	Which Polish smoked sheep's cheese from the Tatras has EU protected status?	Oscypek	Bryndza	Twarog	Bundz
+pol_smigus_dyngus_celebrated	Expert	What is 'Smigus-dyngus', celebrated on Easter Monday?	Throwing water at each other	Painting eggs	Burning a straw figure	Rolling eggs downhill
+pol_straw_figure_poles	Expert	Which straw figure do Poles drown in spring to say goodbye to winter?	Marzanna	Baba Jaga	Rusalka	Kikimora
+pol_polish_mathematician_gave	Expert	Which Polish mathematician gave his name to 'Banach spaces'?	Stefan Banach	Hugo Steinhaus	Stanislaw Ulam	Waclaw Sierpinski
+pol_polish_mathematician_triangle	Expert	Which Polish mathematician's triangle is a famous fractal?	Waclaw Sierpinski	Stefan Banach	Kazimierz Kuratowski	Alfred Tarski
+pol_polish_born_scientist	Expert	Which Polish-born scientist co-designed the hydrogen bomb in the USA?	Stanislaw Ulam	Joseph Rotblat	Leopold Infeld	Stefan Banach

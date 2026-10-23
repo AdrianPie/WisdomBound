@@ -183,20 +183,15 @@ object MathQuestions {
         q("mat_birds_make_brace", "How many birds make 'a brace'?", "Two", listOf("Three", "Six", "Twelve"), M),
         q("mat_ancient_greek_counting", "In ancient Greek counting, how many was a 'myriad'?", "10,000", listOf("1,000", "100", "1,000,000"), M),
         q("mat_degrees_angles_triangle", "How many degrees do the angles of a triangle add up to?", "180", listOf("90", "270", "360"), M),
-        q("mat_percent_200", "What is 15 percent of 200?", "30", listOf("15", "25", "35"), M),
         q("mat_square_root_144", "What is the square root of 144?", "12", listOf("14", "11", "16"), M),
         q("mat_number_written_roman", "Which number is written as 'XL' in Roman numerals?", "40", listOf("60", "90", "110"), M),
         q("mat_faces_cube", "How many faces does a cube have?", "Six", listOf("Eight", "Four", "Twelve"), M),
         q("mat_call_polygon_eight", "What do you call a polygon with eight sides?", "Octagon", listOf("Heptagon", "Nonagon", "Hexagon"), M),
-        q("mat_multiplied", "What is 7 multiplied by 8?", "56", listOf("54", "64", "48"), M),
         q("mat_number_000_000", "What is the name of the number 1,000,000,000 in English short scale?", "Billion", listOf("Million", "Trillion", "Milliard"), M),
         q("mat_minutes_full_day", "How many minutes are there in a full day?", "1440", listOf("1240", "1400", "1600"), M),
         q("mat_seconds_hour", "How many seconds are there in an hour?", "3600", listOf("6000", "1800", "2400"), M),
         q("mat_roman_numeral_1000", "What is the Roman numeral for 1000?", "M", listOf("D", "C", "K"), M),
-        q("mat_percent", "What is 25 percent of 80?", "20", listOf("25", "16", "40"), M),
-        q("mat_half_quarter", "What is half of a quarter?", "One eighth", listOf("One sixth", "One third", "One tenth"), M),
-        q("mat_centimetres_metre", "How many centimetres are in a metre?", "100", listOf("10", "1000", "50"), M),
-        q("mat_grams_kilogram", "How many grams are in a kilogram?", "1000", listOf("100", "10000", "500"), M)
+        q("mat_weeks_year_roughly", "How many weeks are there in a year, roughly?", "52", listOf("48", "50", "56"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -266,14 +261,21 @@ object MathQuestions {
         q("mat_whole_number_exactly", "What is the name for a whole number with exactly two divisors?", "Prime number", listOf("Even number", "Square number", "Perfect number"), H),
         q("mat_zeros_million", "How many zeros does one million have?", "Six", listOf("Five", "Seven", "Nine"), H),
         q("mat_triangle_angle_over", "What is the name of a triangle with one angle over 90 degrees?", "Obtuse", listOf("Acute", "Scalene", "Right"), H),
-        q("mat_area_square_sides", "What is the area of a square with sides of 9 cm?", "81 square cm", listOf("36 square cm", "18 square cm", "72 square cm"), H),
         q("mat_degrees_each_interior", "How many degrees are in each interior angle of a regular hexagon?", "120", listOf("108", "135", "90"), H),
-        q("mat_value_squared_plus", "What is the value of 3 squared plus 4 squared?", "25", listOf("49", "14", "24"), H),
         q("mat_greek_letter_used", "Which Greek letter is used for the sum of a series?", "Sigma", listOf("Delta", "Pi", "Omega"), H),
         q("mat_greek_letter_used_2", "Which Greek letter is used for 'change' in maths and science?", "Delta", listOf("Sigma", "Theta", "Lambda"), H),
         q("mat_seconds_day", "How many seconds are there in a day?", "86,400", listOf("36,000", "60,000", "144,000"), H),
         q("mat_days_leap_year", "How many days are there in a leap year?", "366", listOf("365", "364", "367"), H),
-        q("mat_often_leap_year", "How often does a leap year usually occur?", "Every 4 years", listOf("Every 2 years", "Every 5 years", "Every 10 years"), H)
+        q("mat_often_leap_year", "How often does a leap year usually occur?", "Every 4 years", listOf("Every 2 years", "Every 5 years", "Every 10 years"), H),
+        q("mat_minutes_week", "How many minutes are in a week?", "10,080", listOf("1,440", "8,640", "12,000"), H),
+        q("mat_sum_all_angles", "What is the sum of all angles in a quadrilateral?", "360 degrees", listOf("180 degrees", "540 degrees", "270 degrees"), H),
+        q("mat_call_angle_exactly", "What do you call an angle of exactly 90 degrees?", "Right angle", listOf("Straight angle", "Acute angle", "Reflex angle"), H),
+        q("mat_call_angle_greater", "What do you call an angle greater than 180 degrees?", "Reflex angle", listOf("Obtuse angle", "Straight angle", "Right angle"), H),
+        q("mat_buy_items_each", "If you buy 3 items at 1.99 each, what is the total?", "5.97", listOf("5.99", "6.07", "5.79"), H),
+        q("mat_mathematician_said_died", "Which mathematician is said to have died in a duel at 20, after writing down his ideas the night before?", "Evariste Galois", listOf("Niels Abel", "Bernhard Riemann", "Blaise Pascal"), H),
+        q("mat_triangle_numbers_french", "Which triangle of numbers is named after a French mathematician, though known earlier in China?", "Pascal's triangle", listOf("Fermat's triangle", "Descartes' triangle", "Euler's triangle"), H),
+        q("mat_mathematician_invented_early", "Which mathematician invented an early mechanical calculator at age 19 to help his tax-collector father?", "Blaise Pascal", listOf("Gottfried Leibniz", "Charles Babbage", "Rene Descartes"), H),
+        q("mat_two_men_independently", "Which two men independently invented calculus in the 17th century?", "Newton and Leibniz", listOf("Euler and Gauss", "Descartes and Fermat", "Pascal and Huygens"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -335,11 +337,21 @@ object MathQuestions {
         q("mat_greek_mathematician_estimated", "Which Greek mathematician estimated Earth's circumference using shadows in two cities?", "Eratosthenes", listOf("Euclid", "Archimedes", "Ptolemy"), X),
         q("mat_paradox_achilles_never", "What is the name of the paradox in which Achilles can never overtake a tortoise?", "Zeno's paradox", listOf("Russell's paradox", "Banach-Tarski paradox", "Liar paradox"), X),
         q("mat_conjecture_any_number", "What is the name of the conjecture that any number reaches 1 by halving evens and tripling odds plus one?", "Collatz conjecture", listOf("Goldbach conjecture", "Twin prime conjecture", "Riemann hypothesis"), X),
-        q("mat_divided", "What is 1 divided by 0.25?", "4", listOf("0.4", "25", "2.5"), X),
         q("mat_number_system_uses", "Which number system uses only the digits 0 and 1?", "Binary", listOf("Decimal", "Octal", "Hexadecimal"), X),
         q("mat_number_written_binary", "What is the number 10 written in binary?", "1010", listOf("1100", "1001", "1110"), X),
         q("mat_number_system_uses_2", "Which number system uses the letters A to F as digits?", "Hexadecimal", listOf("Binary", "Octal", "Duodecimal"), X),
         q("mat_civilisation_central_america", "Which civilisation in Central America used a base-20 counting system and a symbol for zero?", "Maya", listOf("Aztec", "Inca", "Olmec"), X),
-        q("mat_calendar_reform_skipped", "Which calendar reform skipped ten days in October 1582?", "Gregorian", listOf("Julian", "Revolutionary", "Mayan"), X)
+        q("mat_calendar_reform_skipped", "Which calendar reform skipped ten days in October 1582?", "Gregorian", listOf("Julian", "Revolutionary", "Mayan"), X),
+        q("mat_shape_circle_base", "What is the name for a 3D shape with a circle base that narrows to a point?", "Cone", listOf("Pyramid", "Cylinder", "Prism"), X),
+        q("mat_distance_around_circle", "What is the name for the distance around a circle?", "Circumference", listOf("Diameter", "Radius", "Perimeter"), X),
+        q("mat_line_touches_circle", "What is a line that touches a circle at just one point called?", "Tangent", listOf("Chord", "Secant", "Arc"), X),
+        q("mat_111_times_111", "What is 111 times 111?", "12321", listOf("11211", "12221", "13431"), X),
+        q("mat_italian_mathematician_brought", "Which Italian mathematician brought Hindu-Arabic numerals to Europe in 1202?", "Fibonacci", listOf("Cardano", "Tartaglia", "Galileo"), X),
+        q("mat_persian_scholar_gave", "Which Persian scholar's name gave us the word 'algorithm'?", "Al-Khwarizmi", listOf("Omar Khayyam", "Avicenna", "Al-Biruni"), X),
+        q("mat_persian_poet_solved", "Which Persian poet also solved cubic equations and reformed the calendar?", "Omar Khayyam", listOf("Rumi", "Hafez", "Ferdowsi"), X),
+        q("mat_german_mathematician_proved", "Which Austrian logician proved in 1931 that some true statements in maths can never be proved?", "Kurt Godel", listOf("David Hilbert", "Georg Cantor", "Emmy Noether"), X),
+        q("mat_mathematician_showed_some", "Which mathematician showed some infinities are bigger than others?", "Georg Cantor", listOf("Kurt Godel", "Leonhard Euler", "David Hilbert"), X),
+        q("mat_german_mathematician_theorem", "Which German mathematician's theorem links symmetry and conservation laws in physics?", "Emmy Noether", listOf("Sofia Kovalevskaya", "Hypatia", "Ada Lovelace"), X),
+        q("mat_hotel_thought_experiment", "Which hotel thought experiment shows that an infinite hotel can always fit more guests?", "Hilbert's Grand Hotel", listOf("Cantor's Inn", "Zeno's Lodge", "Godel's Motel"), X)
     )
 }

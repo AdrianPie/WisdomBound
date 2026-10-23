@@ -80,6 +80,8 @@ myt_king_arthur_queen	Easy	Who was King Arthur's queen?	Guinevere	Morgan le Fay	
 myt_robin_hood_sweetheart	Easy	Who is Robin Hood's sweetheart in the English legends?	Maid Marian	Lady Godiva	Guinevere	Rowena
 myt_mythical_creature_half	Easy	Which mythical creature is half man and half goat?	Satyr	Centaur	Minotaur	Griffin
 myt_norse_god_carries	Easy	Which Norse god carries the hammer Mjolnir?	Thor	Odin	Loki	Tyr
+myt_greek_god_rules	Easy	Which Greek god rules the sky and throws thunderbolts?	Zeus	Poseidon	Hades	Apollo
+myt_half_man_half	Easy	Which half-man, half-horse creatures appear in Greek myth?	Centaurs	Satyrs	Minotaurs	Harpies
 cultw_odyn_ptaki	Medium	Which two ravens brought Odin news of the world?	Huginn and Muninn	Geri and Freki	Sleipnir and Fenrir	Vidar and Vali
 mit_hades	Medium	Who ruled the Greek underworld?	Hades	Poseidon	Cronus	Dionysus
 mit_atena	Medium	Which goddess was the patron of wisdom and Athens?	Athena	Hera	Aphrodite	Artemis
@@ -203,6 +205,10 @@ myt_greek_titan_holds	Medium	Which Greek Titan holds up the sky on his shoulders
 myt_greek_myth_musician	Medium	In Greek myth, which musician tried to lead his wife Eurydice out of the underworld?	Orpheus	Apollo	Hermes	Linus
 myt_greek_god_sea	Medium	Which Greek god of the sea carries a trident?	Poseidon	Zeus	Hades	Triton
 myt_greek_god_war	Medium	Which Greek god of war was disliked by most other gods?	Ares	Hades	Hephaestus	Apollo
+myt_creature_half_man	Medium	What creature was half-man, half-bull and lived in the Labyrinth?	Minotaur	Centaur	Chimera	Cyclops
+myt_creature_body_lion	Medium	Which creature has the body of a lion and the head and wings of an eagle?	Griffin	Sphinx	Chimera	Hippogriff
+myt_round_object_king	Medium	Which round object did King Arthur's knights sit around?	The Round Table	The Holy Grail	The Shield Wall	The Grand Hall
+myt_egyptian_god_god	Medium	Which Egyptian god is the god of the sun?	Ra	Osiris	Anubis	Set
 cultw_izanagi	Hard	In Japanese myth, which pair created the islands of Japan?	Izanagi and Izanami	Amaterasu and Susanoo	Raijin and Fujin	Inari and Hachiman
 cultw_anansi	Hard	In West African folklore, what kind of creature is Anansi?	A spider	A lion	A crocodile	A hawk
 mit_yggdrasil	Hard	What is the cosmic tree in Norse mythology called?	Yggdrasil	Valhalla	Bifrost	Midgard
@@ -296,6 +302,20 @@ myt_greek_goddess_harvest	Hard	Which Greek goddess of the harvest lost her daugh
 myt_greek_hero_performed	Hard	Which Greek hero performed twelve labours?	Heracles	Theseus	Perseus	Jason
 myt_odysseus_tie_himself	Hard	What did Odysseus tie himself to so he could hear the Sirens?	The ship's mast	A rock	His crew	An anchor
 myt_norse_realm_land	Hard	Which Norse realm is the land of the giants?	Jotunheim	Muspelheim	Svartalfheim	Helheim
+myt_hero_killed_hydra	Hard	Which hero killed the Hydra with help from his nephew Iolaus?	Heracles	Theseus	Perseus	Jason
+myt_priestess_delphi_gave	Hard	Which priestess at Delphi gave the god Apollo's prophecies?	Pythia	Sibyl	Cassandra	Hecate
+myt_sea_monster_six	Hard	Which sea monster with six heads lived opposite the whirlpool Charybdis?	Scylla	Hydra	Ceto	Echidna
+myt_pure_knight_finally	Hard	Which pure knight finally found the Holy Grail?	Galahad	Lancelot	Gawain	Tristan
+myt_sorceress_king_arthur	Hard	Which sorceress is King Arthur's half-sister and enemy?	Morgan le Fay	Nimue	Guinevere	Vivien
+myt_island_dying_king	Hard	To which island was the dying King Arthur taken?	Avalon	Camelot	Lyonesse	Anglesey
+myt_knight_challenged_arthur	Hard	Which knight challenged Arthur's court in 'Sir Gawain and the Green Knight'?	The Green Knight	The Black Knight	The Red Knight	The Grail King
+myt_egyptian_god_earth	Hard	Which Egyptian god of the earth lies under the sky goddess Nut?	Geb	Shu	Osiris	Ra
+myt_egyptian_god_ram	Hard	Which Egyptian god had a ram's head and made humans on a potter's wheel?	Khnum	Amun	Ptah	Sobek
+myt_egyptian_goddess_represented	Hard	Which Egyptian goddess represented truth and cosmic order?	Maat	Isis	Nut	Bastet
+myt_hindu_god_creator	Hard	Which Hindu god is the creator in the trinity?	Brahma	Vishnu	Shiva	Surya
+myt_hindu_god_fire	Hard	Which Hindu god of fire carries offerings to the other gods?	Agni	Indra	Surya	Vayu
+myt_hindu_goddess_learning	Hard	Which Hindu goddess of learning plays the veena?	Saraswati	Lakshmi	Parvati	Kali
+myt_hindu_goddess_rides	Hard	Which Hindu goddess rides a lion or tiger and slew the buffalo demon?	Durga	Kali	Parvati	Sita
 cultw_mahabharata	Expert	Which Sanskrit epic contains the Bhagavad Gita?	The Mahabharata	The Ramayana	The Rigveda	The Upanishads
 cultw_tyche	Expert	Which Greek goddess personified luck and fortune?	Tyche	Nemesis	Hecate	Eris
 cultw_mabinogion	Expert	The Mabinogion collects the myths of which people?	The Welsh	The Irish	The Scots	The Bretons
@@ -374,3 +394,24 @@ myt_norse_goddess_rules	Expert	Which Norse goddess rules the land of the dead an
 myt_sea_goddess_catches	Expert	Which sea goddess catches drowned sailors in her net in Norse myth?	Ran	Hel	Sif	Gerd
 myt_ship_made_dead	Expert	Which ship made of dead men's nails will carry giants to Ragnarok?	Naglfar	Skidbladnir	Hringhorni	Ellida
 myt_norse_god_owns	Expert	Which Norse god owns the ship Skidbladnir that folds into a pocket?	Freyr	Odin	Njord	Thor
+myt_rhea_give_cronus	Expert	What did Rhea give Cronus to swallow instead of baby Zeus?	A stone wrapped in cloth	A goat	A loaf of bread	A wooden doll
+myt_goat_nursed_infant	Expert	Which goat nursed the infant Zeus in a cave on Crete?	Amalthea	Heidrun	Io	Europa
+myt_greek_goddess_night	Expert	Which Greek goddess of the night was feared even by Zeus?	Nyx	Hecate	Erebus	Selene
+myt_greek_goddess_witchcraft	Expert	Which Greek goddess of witchcraft is linked to crossroads?	Hecate	Circe	Nyx	Medea
+myt_three_goddesses_spun	Expert	Which three goddesses spun, measured and cut the thread of life?	The Fates	The Graces	The Furies	The Muses
+myt_furies_job_greek	Expert	What were the Furies' job in Greek myth?	Punishing wrongdoers	Guarding Olympus	Inspiring artists	Carrying souls
+myt_french_hero_sword	Expert	Which French hero's sword was called Durendal?	Roland	Charlemagne	Oliver	Tristan
+myt_charlemagne_sword	Expert	What was the name of Charlemagne's sword?	Joyeuse	Durendal	Excalibur	Hauteclere
+myt_norse_hero_sigurd	Expert	What is the name of the Norse hero Sigurd's sword, reforged from Odin's broken blade?	Gram	Tyrfing	Hofud	Dainsleif
+myt_egyptian_god_creation	Expert	Which Egyptian god of creation was patron of craftsmen in Memphis?	Ptah	Khnum	Atum	Thoth
+myt_hippo_shaped_egyptian	Expert	Which hippo-shaped Egyptian goddess protected women in childbirth?	Taweret	Bes	Hathor	Sekhmet
+myt_dwarf_like_egyptian	Expert	Which dwarf-like Egyptian god scared off evil spirits from homes?	Bes	Taweret	Ptah	Khonsu
+myt_egyptian_god_moon	Expert	Which Egyptian god was the moon god and son of Amun and Mut?	Khonsu	Thoth	Shu	Atum
+myt_devourer_crocodile_head	Expert	Which devourer with a crocodile head ate the hearts of the unworthy dead?	Ammit	Apep	Sobek	Taweret
+myt_hindu_god_avatar	Expert	Which Hindu god, an avatar of Vishnu, delivers the Bhagavad Gita?	Krishna	Rama	Arjuna	Hanuman
+myt_warrior_krishna_speak	Expert	To which warrior does Krishna speak in the Bhagavad Gita?	Arjuna	Bhima	Karna	Yudhishthira
+myt_rama_wife_kidnapped	Expert	Who is Rama's wife, kidnapped by Ravana?	Sita	Draupadi	Radha	Parvati
+myt_bird_mount_vishnu	Expert	What is the name of the bird-mount of Vishnu, half man and half eagle?	Garuda	Jatayu	Nandi	Airavata
+myt_shiva_bull_mount	Expert	What is the name of Shiva's bull mount?	Nandi	Garuda	Airavata	Kamadhenu
+myt_indra_white_elephant	Expert	What is the name of Indra's white elephant?	Airavata	Nandi	Ganesha	Gajendra
+myt_wish_granting_cow	Expert	Which wish-granting cow appears in Hindu mythology?	Kamadhenu	Nandini	Surabhi Devi	Gomata

@@ -122,6 +122,8 @@ spo_french_manager_led	Easy	Which French manager led Arsenal for 22 years?	Arsen
 spo_coach_barcelona_team	Easy	Which coach's Barcelona team of 2008-2012 made 'tiki-taka' famous?	Pep Guardiola	Luis Enrique	Frank Rijkaard	Johan Cruyff
 spo_german_coach_led	Easy	Which German coach led Liverpool to the 2019 Champions League title?	Jurgen Klopp	Joachim Low	Thomas Tuchel	Hansi Flick
 spo_players_football_team	Easy	How many players does a football team have on the pitch?	Eleven	Ten	Nine	Twelve
+spo_sport_hit_ball	Easy	In which sport do you hit a ball over a net with rackets on a grass court at Wimbledon?	Tennis	Badminton	Squash	Volleyball
+spo_shape_rugby_ball	Easy	What shape is a rugby ball?	Oval	Round	Square	Flat
 spo_mundial_2018	Medium	Who won the soccer World Cup in 2018?	France	Croatia	Brazil	Germany
 spo_lewandowski	Medium	At which club did Robert Lewandowski become the Bundesliga's top scorer?	Bayern Munich	Real Madrid	Manchester United	Juventus
 spo_hokej	Medium	How long is one period in an ice hockey game?	20 minutes	15 minutes	25 minutes	30 minutes
@@ -328,6 +330,11 @@ spo_sport_events_kata	Medium	Which sport has events called kata and kumite?	Kara
 spo_sport_uses_puck	Medium	Which sport uses a puck?	Ice hockey	Lacrosse	Curling	Polo
 spo_sport_players_ride	Medium	In which sport do players ride horses and hit a ball with a mallet?	Polo	Croquet	Hurling	Lacrosse
 spo_sport_ride_board	Medium	What is the name of the sport where you ride a board on ocean waves?	Surfing	Kitesurfing	Wakeboarding	Rowing
+spo_points_field_goal	Medium	How many points is a field goal worth in American football?	Three	Two	One	Six
+spo_bases_baseball_diamond	Medium	How many bases are there on a baseball diamond, including home plate?	Four	Three	Five	Six
+spo_minutes_long_football	Medium	How many minutes long is a football match, not counting extra time?	90	80	100	60
+spo_footballer_nicknamed_rei	Medium	Which famous footballer was nicknamed 'O Rei', the King?	Pele	Ronaldo	Garrincha	Zico
+spo_country_formula_cars	Medium	In which country are the Formula 1 cars of Ferrari made?	Italy	Germany	France	Spain
 spo_bolt	Hard	What is Usain Bolt's world record in the 100 m?	9.58 s	9.69 s	9.72 s	9.49 s
 spo_olimpiada_1896	Hard	Where were the first modern Olympic Games held?	Athens	Paris	Rome	London
 spo_wimbledon	Hard	What surface is Wimbledon played on?	Grass	Sand	Concrete	Clay and hard court, alternating
@@ -434,6 +441,18 @@ spo_sport_uses_terms_2	Hard	Which sport uses terms like 'birdie', 'bogey' and 'c
 spo_country_home_sport	Hard	Which country is the home of the sport of hurling?	Ireland	Scotland	Wales	England
 spo_trophy_awarded_winner	Hard	What is the name of the trophy awarded to the winner of the Rugby World Cup?	Webb Ellis Cup	Calcutta Cup	Bledisloe Cup	Six Nations Trophy
 spo_sport_played_nba	Hard	Which sport is played in the NBA?	Basketball	American football	Baseball	Ice hockey
+spo_periods_ice_hockey	Hard	How many periods are there in an ice hockey game?	Three	Two	Four	Five
+spo_quarters_nba_basketball	Hard	How many quarters are there in an NBA basketball game?	Four	Two	Three	Six
+spo_distance_standard_running	Hard	What is the distance of a standard running track lap?	400 metres	200 metres	500 metres	300 metres
+spo_hurdles_110_hurdles	Hard	How many hurdles are there in a 110 m hurdles race?	Ten	Eight	Twelve	Six
+spo_tennis_term	Hard	In tennis, what is the term for 40-40?	Deuce	Advantage	Love-all	Tie
+spo_country_home_monaco	Hard	Which country is home to the Monaco Grand Prix?	Monaco	France	Italy	Spain
+spo_black_white_chequered	Hard	What does a black-and-white chequered flag mean in motor racing?	The race is over	Danger ahead	Pit stop	Final lap
+spo_yellow_flag_mean	Hard	What does a yellow flag mean in motor racing?	Danger, no overtaking	Race finished	Leader is coming	Rain warning
+spo_sport_see_fosbury	Hard	In which sport would you see a 'Fosbury Flop'?	High jump	Long jump	Pole vault	Gymnastics
+spo_game_uses_moves	Hard	Which game uses the moves castling and en passant?	Chess	Draughts	Go	Backgammon
+spo_winners_given_ancient	Hard	What were winners given at the ancient Olympic Games?	Olive wreaths	Gold medals	Bags of silver	Bronze cups
+spo_australian_swimmer_nicknamed	Hard	Which Australian swimmer was nicknamed 'Thorpedo'?	Ian Thorpe	Grant Hackett	Kieren Perkins	Michael Klim
 spo_dekatlon	Expert	Which event closes the men's Olympic decathlon on the second day?	The 1500 metres	The javelin throw	The pole vault	The 110 m hurdles
 spo_nba_wilt	Expert	Who scored 100 points in a single NBA game?	Wilt Chamberlain	Michael Jordan	Kobe Bryant	LeBron James
 spo2_fosbury	Expert	Who revolutionized the high jump with the backward flop technique?	Dick Fosbury	Jesse Owens	Carl Lewis	Javier Sotomayor
@@ -501,3 +520,18 @@ spo_sport_michael_jordan	Expert	Which sport did Michael Jordan briefly switch to
 spo_boxer_born_cassius	Expert	Which boxer was born Cassius Clay?	Muhammad Ali	Joe Frazier	George Foreman	Sonny Liston
 spo_1974_boxing_match	Expert	Which famous 1974 boxing match took place in Zaire?	The Rumble in the Jungle	The Thrilla in Manila	The Fight of the Century	The Long Count
 spo_1975_boxing_match	Expert	Which 1975 boxing match between Ali and Frazier took place in the Philippines?	The Thrilla in Manila	The Rumble in the Jungle	The Brawl in Manila	The War in Asia
+spo_events_men_decathlon	Expert	How many events are in the men's decathlon?	Ten	Seven	Eight	Twelve
+spo_events_women_heptathlon	Expert	How many events are in the women's heptathlon?	Seven	Five	Ten	Six
+spo_long_cricket_pitch	Expert	How long is a cricket pitch between the wickets?	22 yards	18 yards	25 yards	30 yards
+spo_zero_runs_scored	Expert	What is the name for zero runs scored by a batsman out in cricket?	Duck	Love	Nil	Egg
+spo_archery_colour_centre	Expert	In archery, what colour is the centre of an Olympic target?	Gold	Red	Black	White
+spo_final_jump_triple	Expert	What is the name for the final jump in a triple jump, after the hop and the step?	Jump	Leap	Bound	Spring
+spo_american_athlete_won	Expert	Which American athlete won four golds in the same events as Jesse Owens in 1984?	Carl Lewis	Michael Johnson	Edwin Moses	Florence Griffith-Joyner
+spo_city_1972_fischer	Expert	In which city was the famous 1972 Fischer-Spassky chess match held?	Reykjavik	Moscow	New York	Helsinki
+spo_player_move_but	Expert	What is it called when a player can't move but isn't in check, ending the chess game as a draw?	Stalemate	Checkmate	Zugzwang	Fork
+spo_chess_term_forced	Expert	What is the chess term for being forced to make a move that weakens your position?	Zugzwang	Gambit	Stalemate	En prise
+spo_chess_opening_pawn	Expert	What is a chess opening called in which a pawn is sacrificed for an advantage?	Gambit	Fianchetto	Castling	Zugzwang
+spo_olympic_event_held	Expert	Which Olympic event was held from 1912 to 1948 alongside sports, with medals for paintings?	Art competitions	Poetry slams	Music contests	Dance battles
+spo_sport_included_olympics	Expert	Which sport was included in the Olympics from 1900 to 1920 with teams pulling a rope?	Tug of war	Rope climbing	Rowing relay	Cable jumping
+spo_soviet_gymnast_held	Expert	Which Soviet gymnast held the record for most Olympic medals for 48 years?	Larisa Latynina	Olga Korbut	Nadia Comaneci	Svetlana Khorkina
+spo_finnish_ski_jumper	Expert	Which Finnish ski jumper won three gold medals at the 1988 Olympics?	Matti Nykanen	Janne Ahonen	Toni Nieminen	Jari Puikkonen

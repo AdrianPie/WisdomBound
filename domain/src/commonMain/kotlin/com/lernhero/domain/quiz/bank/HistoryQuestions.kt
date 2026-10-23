@@ -193,7 +193,9 @@ object HistoryQuestions {
         q("his_lively_dance_craze", "Which lively dance was the craze of the 'Roaring Twenties'?", "The Charleston", listOf("The Twist", "The Jive", "The Tango"), E),
         q("his_san_francisco_hippie", "San Francisco's hippie gathering of 1967 is remembered as the 'Summer of...' what?", "Love", listOf("Peace", "Flowers", "Music"), E),
         q("his_colony_jewel_crown", "Which colony was called the 'Jewel in the Crown' of the British Empire?", "India", listOf("Egypt", "Canada", "Australia"), E),
-        q("his_european_country_ruled_2", "Which European country ruled Vietnam as part of 'Indochina' until 1954?", "France", listOf("Britain", "Netherlands", "Portugal"), E)
+        q("his_european_country_ruled_2", "Which European country ruled Vietnam as part of 'Indochina' until 1954?", "France", listOf("Britain", "Netherlands", "Portugal"), E),
+        q("his_ancient_people_built", "Which ancient people built the pyramids of Giza?", "Egyptians", listOf("Romans", "Greeks", "Persians"), E),
+        q("his_ship_sank_voyage", "Which famous ship sank on its first voyage in 1912?", "Titanic", listOf("Lusitania", "Britannic", "Olympic"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -548,7 +550,12 @@ object HistoryQuestions {
         q("his_city_split_wall", "Which city was split by a wall from 1961 to 1989?", "Berlin", listOf("Vienna", "Prague", "Budapest"), M),
         q("his_pharaoh_almost_untouched", "Which pharaoh's almost untouched tomb did Howard Carter open in 1922?", "Tutankhamun", listOf("Ramesses II", "Khufu", "Akhenaten"), M),
         q("his_roman_gladiator_fights", "What were Roman gladiator fights usually held in?", "Amphitheatres", listOf("Forums", "Basilicas", "Aqueducts"), M),
-        q("his_indian_leader_led", "Which Indian leader led a non-violent struggle for independence from Britain?", "Mahatma Gandhi", listOf("Jawaharlal Nehru", "Subhas Chandra Bose", "Indira Gandhi"), M)
+        q("his_indian_leader_led", "Which Indian leader led a non-violent struggle for independence from Britain?", "Mahatma Gandhi", listOf("Jawaharlal Nehru", "Subhas Chandra Bose", "Indira Gandhi"), M),
+        q("his_president_assassinated_theatre", "Which US president was assassinated in a theatre in 1865?", "Abraham Lincoln", listOf("John F. Kennedy", "James Garfield", "Andrew Johnson"), M),
+        q("his_country_germany_invade", "Which country did Germany invade on 1 September 1939?", "Poland", listOf("France", "Czechoslovakia", "Belgium"), M),
+        q("his_powerful_banking_family", "Which powerful banking family ruled Florence in the Renaissance?", "Medici", listOf("Borgia", "Sforza", "Este"), M),
+        q("his_ancient_roman_festival", "Which ancient Roman festival in December involved gift-giving and role reversals?", "Saturnalia", listOf("Lupercalia", "Floralia", "Vestalia"), M),
+        q("his_ancient_romans_use", "What did ancient Romans use as a common sweetener before sugar?", "Honey", listOf("Maple syrup", "Molasses", "Beet juice"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -820,7 +827,22 @@ object HistoryQuestions {
         q("his_ocean_liner_sunk", "What was the name of the ocean liner sunk by a U-boat in 1915?", "Lusitania", listOf("Titanic", "Britannic", "Mauretania"), H),
         q("his_french_scholar_deciphered", "Which French scholar first deciphered hieroglyphs in 1822?", "Jean-Francois Champollion", listOf("Thomas Young", "Auguste Mariette", "Gaston Maspero"), H),
         q("his_language_romans_speak", "Which language did the Romans speak?", "Latin", listOf("Greek", "Etruscan", "Italian"), H),
-        q("his_roman_road_queen", "Which Roman road, the 'queen of roads', ran from Rome to Brindisi?", "Via Appia", listOf("Via Flaminia", "Via Aurelia", "Via Egnatia"), H)
+        q("his_roman_road_queen", "Which Roman road, the 'queen of roads', ran from Rome to Brindisi?", "Via Appia", listOf("Via Flaminia", "Via Aurelia", "Via Egnatia"), H),
+        q("his_french_defensive_line", "Which French defensive line failed to stop Germany in 1940?", "Maginot Line", listOf("Siegfried Line", "Hindenburg Line", "Mannerheim Line"), H),
+        q("his_1942_battle_pacific", "Which 1942 battle in the Pacific turned the tide against Japan?", "Battle of Midway", listOf("Battle of the Coral Sea", "Battle of Leyte Gulf", "Battle of Okinawa"), H),
+        q("his_artist_painted_school", "Which artist painted 'The School of Athens' in the Vatican?", "Raphael", listOf("Michelangelo", "Titian", "Giotto"), H),
+        q("his_architect_built_huge", "Which architect built the huge dome of Florence Cathedral?", "Filippo Brunelleschi", listOf("Michelangelo", "Donato Bramante", "Leon Battista Alberti"), H),
+        q("his_italian_writer_book", "Which Italian writer's book 'The Prince' gave us a word for ruthless politics?", "Niccolo Machiavelli", listOf("Dante Alighieri", "Baldassare Castiglione", "Francesco Guicciardini"), H),
+        q("his_martin_luther_famously", "What did Martin Luther famously nail to a church door?", "Ninety-five Theses", listOf("The Augsburg Creed", "A papal bull", "The Ten Commandments"), H),
+        q("his_french_reformer_led", "Which French reformer led the Protestant church in Geneva?", "John Calvin", listOf("Martin Luther", "John Knox", "Huldrych Zwingli"), H),
+        q("his_roman_soldiers_sometimes", "What did Roman soldiers sometimes receive part of their pay in, giving us the word 'salary'?", "Salt", listOf("Silver", "Wine", "Grain"), H),
+        q("his_hun_leader_scourge", "Which Hun leader was called 'the Scourge of God'?", "Attila", listOf("Genghis Khan", "Tamerlane", "Alaric"), H),
+        q("his_tribe_sack_rome", "Which tribe's sack of Rome in 455 gave us a word for destroying property?", "Vandals", listOf("Goths", "Huns", "Franks"), H),
+        q("his_woman_founded_american", "Which woman founded the American Red Cross?", "Clara Barton", listOf("Florence Nightingale", "Dorothea Dix", "Mary Seacole"), H),
+        q("his_swiss_businessman_founded", "Which Swiss businessman founded the Red Cross after seeing the Battle of Solferino?", "Henry Dunant", listOf("Gustave Moynier", "Jean-Jacques Rousseau", "Guillaume Dufour"), H),
+        q("his_american_woman_refused", "Which American woman refused to give up her bus seat in Montgomery in 1955?", "Rosa Parks", listOf("Harriet Tubman", "Coretta Scott King", "Sojourner Truth"), H),
+        q("his_british_suffragette_leader", "Which British suffragette leader founded the Women's Social and Political Union?", "Emmeline Pankhurst", listOf("Millicent Fawcett", "Emily Davison", "Sylvia Pankhurst"), H),
+        q("his_persian_king_army", "Which Persian king's army lost at the Battle of Marathon?", "Darius I", listOf("Xerxes I", "Cyrus the Great", "Darius III"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -986,6 +1008,24 @@ object HistoryQuestions {
         q("his_roman_city_britain", "Which Roman city in Britain later became London?", "Londinium", listOf("Eboracum", "Camulodunum", "Aquae Sulis"), X),
         q("his_roman_city_britain_2", "Which Roman city in Britain later became York?", "Eboracum", listOf("Londinium", "Deva", "Lindum"), X),
         q("his_english_city_romans", "Which English city did the Romans call Aquae Sulis, for its hot springs?", "Bath", listOf("Chester", "Buxton", "Harrogate"), X),
-        q("his_roman_legion_famously", "Which Roman legion famously vanished in Germany's Teutoburg Forest in 9 AD?", "Varus's legions", listOf("Caesar's Tenth", "The Ninth Hispana", "The Praetorian Guard"), X)
+        q("his_roman_legion_famously", "Which Roman legion famously vanished in Germany's Teutoburg Forest in 9 AD?", "Varus's legions", listOf("Caesar's Tenth", "The Ninth Hispana", "The Praetorian Guard"), X),
+        q("his_code_1944_soviet", "What was the code name of the 1944 Soviet offensive that destroyed Army Group Centre?", "Operation Bagration", listOf("Operation Uranus", "Operation Typhoon", "Operation Citadel"), X),
+        q("his_code_atomic_bomb", "What was the code name for the US atomic bomb project?", "Manhattan Project", listOf("Trinity Project", "Operation Ivy", "Project Alberta"), X),
+        q("his_atomic_bomb_test", "What was the name of the first atomic bomb test in 1945?", "Trinity", listOf("Little Boy", "Fat Man", "Castle Bravo"), X),
+        q("his_japanese_soldier_kept", "Which Japanese soldier kept fighting in the Philippine jungle until 1974?", "Hiroo Onoda", listOf("Shoichi Yokoi", "Teruo Nakamura", "Saburo Sakai"), X),
+        q("his_english_scholar_translated", "Which English scholar first translated the whole Bible into English in the 1380s?", "John Wycliffe", listOf("William Tyndale", "Thomas More", "John Knox"), X),
+        q("his_english_chancellor_wrote", "Which English chancellor wrote 'Utopia' and was executed by Henry VIII?", "Thomas More", listOf("Thomas Cromwell", "Thomas Wolsey", "Thomas Cranmer"), X),
+        q("his_aztec_emperor_met", "Which Aztec emperor met Cortes in 1519?", "Moctezuma II", listOf("Cuauhtemoc", "Itzcoatl", "Ahuitzotl"), X),
+        q("his_last_inca_emperor", "Which last Inca emperor was captured by Pizarro and executed in 1533?", "Atahualpa", listOf("Huascar", "Pachacuti", "Tupac Amaru"), X),
+        q("his_norman_duke_became", "Which Norman duke became King of England in 1066?", "William the Conqueror", listOf("Harold Godwinson", "Robert Curthose", "Henry I"), X),
+        q("his_metre_embroidered_cloth", "What is the 70-metre embroidered cloth showing the Norman conquest called?", "Bayeux Tapestry", listOf("Unicorn Tapestry", "Lady and the Unicorn", "Apocalypse Tapestry"), X),
+        q("his_suffragette_died_stepping", "Which suffragette died after stepping in front of the King's horse at the 1913 Derby?", "Emily Davison", listOf("Emmeline Pankhurst", "Christabel Pankhurst", "Annie Kenney"), X),
+        q("his_european_country_gave", "Which European country first gave women full voting and candidacy rights, in 1906?", "Finland", listOf("Norway", "Denmark", "Sweden"), X),
+        q("his_chinese_philosopher_traditionally", "Which Chinese philosopher is traditionally credited with the 'Tao Te Ching'?", "Laozi", listOf("Confucius", "Zhuangzi", "Mozi"), X),
+        q("his_indian_prince_became", "Which Indian prince became the Buddha?", "Siddhartha Gautama", listOf("Ashoka", "Mahavira", "Chandragupta"), X),
+        q("his_ancient_indian_author", "Which ancient Indian author wrote the 'Arthashastra' on statecraft?", "Chanakya", listOf("Kalidasa", "Valmiki", "Panini"), X),
+        q("his_japanese_prince_credited", "Which Japanese prince is credited with Japan's first constitution in 604?", "Prince Shotoku", listOf("Prince Genji", "Emperor Jimmu", "Oda Nobunaga"), X),
+        q("his_japanese_warlord_unified", "Which Japanese warlord unified Japan and became shogun in 1603?", "Tokugawa Ieyasu", listOf("Oda Nobunaga", "Toyotomi Hideyoshi", "Minamoto no Yoritomo"), X),
+        q("his_japanese_warlord_former", "Which Japanese warlord, a former peasant, unified Japan before Tokugawa?", "Toyotomi Hideyoshi", listOf("Oda Nobunaga", "Takeda Shingen", "Uesugi Kenshin"), X)
     )
 }

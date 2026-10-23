@@ -58,7 +58,9 @@ object CapitalQuestions {
         q("capx_luksemburg", "Which of these countries has a capital with exactly the same name as the country?", "Luxembourg", listOf("Belgium", "Austria", "Denmark"), E),
         q("capx_trafalgar", "Nelson's Column stands in which London square?", "Trafalgar Square", listOf("Piccadilly Circus", "Leicester Square", "Covent Garden"), E),
         q("capy_berlin_mis", "Which animal appears on the coat of arms of Berlin?", "A bear", listOf("An eagle", "A lion", "A wolf"), E),
-        q("cap_capital_iraq", "What is the capital of Iraq?", "Baghdad", listOf("Basra", "Tehran", "Damascus"), E)
+        q("cap_capital_iraq", "What is the capital of Iraq?", "Baghdad", listOf("Basra", "Tehran", "Damascus"), E),
+        q("cap_capital_france", "What is the capital of France?", "Paris", listOf("Lyon", "Marseille", "Nice"), E),
+        q("cap_capital_italy", "What is the capital of Italy?", "Rome", listOf("Milan", "Venice", "Naples"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -260,7 +262,10 @@ object CapitalQuestions {
         q("cap_city_capital_canadian_2", "Which city is the capital of the Canadian province of Alberta?", "Edmonton", listOf("Calgary", "Banff", "Red Deer"), H),
         q("cap_city_capital_german", "Which city is the capital of the German state of Saxony?", "Dresden", listOf("Leipzig", "Chemnitz", "Magdeburg"), H),
         q("cap_port_louis_capital", "Port Louis is the capital of which island country?", "Mauritius", listOf("Seychelles", "Maldives", "Madagascar"), H),
-        q("cap_capital_northernmost_world", "Which capital is the northernmost in the world?", "Reykjavik", listOf("Oslo", "Helsinki", "Nuuk"), H)
+        q("cap_capital_northernmost_world", "Which capital is the northernmost in the world?", "Reykjavik", listOf("Oslo", "Helsinki", "Nuuk"), H),
+        q("cap_capital_slovenia", "What is the capital of Slovenia?", "Ljubljana", listOf("Maribor", "Bled", "Zagreb"), H),
+        q("cap_capital_lithuania", "What is the capital of Lithuania?", "Vilnius", listOf("Kaunas", "Klaipeda", "Riga"), H),
+        q("cap_capital_latvia", "What is the capital of Latvia?", "Riga", listOf("Tallinn", "Vilnius", "Daugavpils"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -331,6 +336,11 @@ object CapitalQuestions {
         q("cap_capital_liechtenstein", "What is the capital of Liechtenstein?", "Vaduz", listOf("Schaan", "Balzers", "Triesen"), X),
         q("cap_capital_tuvalu", "What is the capital of Tuvalu?", "Funafuti", listOf("Tarawa", "Majuro", "Apia"), X),
         q("cap_capital_vanuatu", "What is the capital of Vanuatu?", "Port Vila", listOf("Honiara", "Suva", "Luganville"), X),
-        q("cap_capital_solomon_islands", "What is the capital of the Solomon Islands?", "Honiara", listOf("Port Vila", "Port Moresby", "Gizo"), X)
+        q("cap_capital_solomon_islands", "What is the capital of the Solomon Islands?", "Honiara", listOf("Port Vila", "Port Moresby", "Gizo"), X),
+        q("cap_capital_kosovo", "What is the capital of Kosovo?", "Pristina", listOf("Prizren", "Peja", "Mitrovica"), X),
+        q("cap_old_royal_capital", "What was the old royal capital of Montenegro?", "Cetinje", listOf("Podgorica", "Kotor", "Niksic"), X),
+        q("cap_capital_san_marino", "What is the capital of San Marino?", "San Marino City", listOf("Serravalle", "Borgo Maggiore", "Rimini"), X),
+        q("cap_capital_andorra", "What is the capital of Andorra?", "Andorra la Vella", listOf("Escaldes", "Encamp", "La Seu d'Urgell"), X),
+        q("cap_capital_cyprus", "What is the capital of Cyprus?", "Nicosia", listOf("Limassol", "Larnaca", "Paphos"), X)
     )
 }

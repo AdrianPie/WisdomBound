@@ -122,7 +122,8 @@ object TechnologyQuestions {
         q("tec_german_engineer_gave", "Which German engineer gave his name to an engine that ignites fuel by compression?", "Rudolf Diesel", listOf("Nikolaus Otto", "Gottlieb Daimler", "Karl Benz"), E),
         q("tec_lets_maglev_trains", "What lets maglev trains float above the track?", "Magnets", listOf("Air cushions", "Hydrogen jets", "Steam"), E),
         q("tec_let_devices_without", "What does 'Wi-Fi' let devices do without cables?", "Connect to a network", listOf("Charge their batteries", "Print documents", "Play music"), E),
-        q("tec_company_makes_iphone", "Which company makes the iPhone?", "Apple", listOf("Samsung", "Google", "Nokia"), E)
+        q("tec_company_makes_iphone", "Which company makes the iPhone?", "Apple", listOf("Samsung", "Google", "Nokia"), E),
+        q("tec_device_lets_talk", "Which device lets you talk to people far away and now fits in a pocket?", "Mobile phone", listOf("Radio", "Television", "Calculator"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -264,7 +265,13 @@ object TechnologyQuestions {
         q("tec_ram_stand_computer", "What does 'RAM' stand for in a computer?", "Random Access Memory", listOf("Read Access Memory", "Rapid Action Module", "Run Application Memory"), M),
         q("tec_cpu_stand", "What does 'CPU' stand for?", "Central Processing Unit", listOf("Computer Power Unit", "Core Program Utility", "Central Peripheral Unit"), M),
         q("tec_stand", "What does 'AI' stand for?", "Artificial intelligence", listOf("Automated interface", "Advanced internet", "Algorithmic input"), M),
-        q("tec_pixel_make", "What does a 'pixel' make up?", "A digital image", listOf("A sound file", "A computer chip", "A network cable"), M)
+        q("tec_pixel_make", "What does a 'pixel' make up?", "A digital image", listOf("A sound file", "A computer chip", "A network cable"), M),
+        q("tec_invented_reading_system", "Who invented a reading system of raised dots for blind people?", "Louis Braille", listOf("Samuel Morse", "Valentin Hauy", "Helen Keller"), M),
+        q("tec_invented_light_bulb", "Who invented the light bulb that became the first commercial success, in 1879?", "Thomas Edison", listOf("Joseph Swan", "Nikola Tesla", "Humphry Davy"), M),
+        q("tec_sms_stand_phone", "What does 'SMS' stand for in phone messaging?", "Short Message Service", listOf("Simple Mail System", "Send My Signal", "Standard Mobile Service"), M),
+        q("tec_word_phrase_searches", "What is the name for a word or phrase that searches the internet?", "Keyword", listOf("Hashtag", "Password", "Domain"), M),
+        q("tec_symbol_starts_hashtag", "Which symbol starts a hashtag?", "#", listOf("@", "&", "\$"), M),
+        q("tec_traditional_program_beginners", "What is the traditional first program beginners write, printing a greeting?", "Hello, World!", listOf("Good morning", "Hi there", "Welcome home"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -374,7 +381,27 @@ object TechnologyQuestions {
         q("tec_company_makes_quest", "Which company makes the Quest VR headsets?", "Meta", listOf("Sony", "HTC", "Valve"), H),
         q("tec_software_pretends_useful", "What is the name for software that pretends to be useful but hides malware?", "Trojan horse", listOf("Worm", "Spyware", "Adware"), H),
         q("tec_malware_locks_files", "What is the name of malware that locks your files and demands payment?", "Ransomware", listOf("Spyware", "Adware", "Rootkit"), H),
-        q("tec_classic_nokia_game", "Which classic Nokia game had players steer a growing line?", "Snake", listOf("Tetris", "Pong", "Bounce"), H)
+        q("tec_classic_nokia_game", "Which classic Nokia game had players steer a growing line?", "Snake", listOf("Tetris", "Pong", "Bounce"), H),
+        q("tec_italian_inventor_sent", "Which Italian inventor sent the first radio signal across the Atlantic in 1901?", "Guglielmo Marconi", listOf("Alessandro Volta", "Enrico Fermi", "Antonio Meucci"), H),
+        q("tec_engineer_built_rocket", "Which engineer built 'The Rocket', an early steam locomotive?", "George Stephenson", listOf("James Watt", "Isambard Kingdom Brunel", "Richard Trevithick"), H),
+        q("tec_american_invented_cotton", "Which American invented the cotton gin in 1793?", "Eli Whitney", listOf("Samuel Colt", "Cyrus McCormick", "Elias Howe"), H),
+        q("tec_american_credited_practical", "Which American is credited with the first practical sewing machine with a lockstitch, patented in 1846?", "Elias Howe", listOf("Isaac Singer", "Eli Whitney", "Walter Hunt"), H),
+        q("tec_company_founders_started", "Which company's founders started it in a garage in Palo Alto in 1939?", "Hewlett-Packard", listOf("Apple", "Google", "Intel"), H),
+        q("tec_company_founded_larry", "Which company was founded by Larry Page and Sergey Brin?", "Google", listOf("Yahoo", "Amazon", "Facebook"), H),
+        q("tec_company_began_online", "Which company began as an online bookstore in 1994?", "Amazon", listOf("eBay", "Barnes and Noble", "Alibaba"), H),
+        q("tec_org_web_ending", "What does the '.org' web ending traditionally stand for?", "Organisation", listOf("Origin", "Original", "Organic"), H),
+        q("tec_country_uses_web", "Which country uses the web domain '.de'?", "Germany", listOf("Denmark", "Netherlands", "Spain"), H),
+        q("tec_country_uses_web_2", "Which country uses the web domain '.ch'?", "Switzerland", listOf("China", "Chile", "Czech Republic"), H),
+        q("tec_country_domain_became", "Which country's '.ai' domain became popular with artificial intelligence firms?", "Anguilla", listOf("Albania", "Antigua", "Algeria"), H),
+        q("tec_computer_term_spam", "What does the computer term 'spam' come from?", "A Monty Python sketch", listOf("An acronym for junk mail", "A brand of soap", "A radio jingle"), H),
+        q("tec_meme_originally_coined", "What is a 'meme' originally, as coined by Richard Dawkins in 1976?", "A unit of cultural idea", listOf("A funny picture", "A computer virus", "A type of gene"), H),
+        q("tec_troll_internet_slang", "What does the 'troll' in internet slang originally come from?", "A fishing technique", listOf("A Norse giant", "A gaming character", "A radio prank"), H),
+        q("tec_country_launched_person", "Which country launched the first person into space?", "Soviet Union", listOf("USA", "China", "Germany"), H),
+        q("tec_apollo_command_module", "What was the name of the Apollo 11 command module?", "Columbia", listOf("Eagle", "Challenger", "Discovery"), H),
+        q("tec_apollo_mission_abort", "Which Apollo mission had to abort its Moon landing after an oxygen tank exploded?", "Apollo 13", listOf("Apollo 12", "Apollo 1", "Apollo 15"), H),
+        q("tec_company_made_ipod", "Which company made the iPod, launched in 2001?", "Apple", listOf("Sony", "Microsoft", "Creative"), H),
+        q("tec_songs_apple_claim", "How many songs did Apple claim the first iPod could hold in your pocket?", "1,000", listOf("100", "10,000", "500"), H),
+        q("tec_disc_format_beat", "Which disc format beat HD DVD in the high-definition format war?", "Blu-ray", listOf("DVD-Audio", "UMD", "VCD"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -440,6 +467,29 @@ object TechnologyQuestions {
         q("tec_2017_ransomware_attack", "Which 2017 ransomware attack hit the UK's NHS?", "WannaCry", listOf("NotPetya", "ILOVEYOU", "Stuxnet"), X),
         q("tec_computer_worm_sabotaged", "Which computer worm sabotaged Iranian nuclear centrifuges around 2010?", "Stuxnet", listOf("WannaCry", "Conficker", "Mydoom"), X),
         q("tec_nokia_phone_near", "Which Nokia phone is famous for its near-indestructible build?", "Nokia 3310", listOf("Nokia 7110", "Nokia N95", "Nokia 8210"), X),
-        q("tec_android_phone_released", "What was the name of the first Android phone, released in 2008?", "HTC Dream", listOf("Nexus One", "Samsung Galaxy", "Motorola Droid"), X)
+        q("tec_android_phone_released", "What was the name of the first Android phone, released in 2008?", "HTC Dream", listOf("Nexus One", "Samsung Galaxy", "Motorola Droid"), X),
+        q("tec_german_invented_diesel", "Which German invented the diesel engine?", "Rudolf Diesel", listOf("Nikolaus Otto", "Gottlieb Daimler", "Wilhelm Maybach"), X),
+        q("tec_hungarian_born_inventor", "Which Hungarian-born inventor created the ballpoint pen in the 1930s?", "Laszlo Biro", listOf("Erno Rubik", "Laszlo Jozsef", "Janos Irinyi"), X),
+        q("tec_american_engineer_invented", "Which American engineer invented air conditioning in 1902?", "Willis Carrier", listOf("Frederick Jones", "Clarence Birdseye", "Elisha Otis"), X),
+        q("tec_american_safety_brake", "Which American's safety brake made passenger lifts trustworthy in the 1850s?", "Elisha Otis", listOf("Willis Carrier", "George Pullman", "Henry Bessemer"), X),
+        q("tec_englishman_process_made", "Which Englishman's process made cheap steel possible in 1856?", "Henry Bessemer", listOf("Abraham Darby", "Andrew Carnegie", "John Wilkinson"), X),
+        q("tec_american_inventor_froze", "Which American inventor froze food quickly, creating frozen food in the 1920s?", "Clarence Birdseye", listOf("Willis Carrier", "Frederick Jones", "Jacob Perkins"), X),
+        q("tec_swedish_company_stands", "Which Swedish company's name stands for its founder's initials and his farm and village?", "IKEA", listOf("Volvo", "Saab", "Ericsson"), X),
+        q("tec_nokia_original_business", "What was Nokia's original business in 1865?", "Paper mill", listOf("Rubber boots", "Cable factory", "Telegraph service"), X),
+        q("tec_country_uses_web_3", "Which country uses the web domain '.me', popular for personal sites?", "Montenegro", listOf("Mexico", "Mauritius", "Malta"), X),
+        q("tec_japanese_phone_company", "Which Japanese phone company engineer created the first popular set of emoji in 1999?", "Shigetaka Kurita", listOf("Satoru Iwata", "Masahiro Sakurai", "Ken Kutaragi"), X),
+        q("tec_honda_humanoid_robot", "Which Honda humanoid robot famously walked and climbed stairs in 2000?", "ASIMO", listOf("AIBO", "Atlas", "Pepper"), X),
+        q("tec_word_robots_comes", "Which word for robots comes from the Czech word for 'forced labour'?", "Robot", listOf("Android", "Cyborg", "Automaton"), X),
+        q("tec_greek_derived_word", "Which Greek-derived word means a robot made to look like a human?", "Android", listOf("Cyborg", "Golem", "Automaton"), X),
+        q("tec_cyborg", "What is a 'cyborg'?", "Part human, part machine", listOf("A fully human-like robot", "A digital ghost", "A self-driving car"), X),
+        q("tec_space_shuttle_flew", "Which space shuttle flew the first shuttle mission in 1981?", "Columbia", listOf("Challenger", "Enterprise", "Discovery"), X),
+        q("tec_shuttle_prototype_never", "Which shuttle prototype never flew to space and was named after a 'Star Trek' ship?", "Enterprise", listOf("Atlantis", "Endeavour", "Pathfinder"), X),
+        q("tec_spacecraft_became_private", "Which spacecraft became the first private one to dock with the ISS, in 2012?", "SpaceX Dragon", listOf("Boeing Starliner", "Orion", "Cygnus"), X),
+        q("tec_robotic_arm_built", "Which robotic arm, built by Canada, served on the space shuttles?", "Canadarm", listOf("Dextre", "ERA", "Kibo arm"), X),
+        q("tec_soviet_probe_land", "Which Soviet probe was the first to land softly on another planet, Venus, in 1970?", "Venera 7", listOf("Mars 3", "Luna 9", "Vega 1"), X),
+        q("tec_rover_drive_another", "Which was the first rover to drive on another world, on the Moon in 1970?", "Lunokhod 1", listOf("Sojourner", "Spirit", "Yutu"), X),
+        q("tec_rover_drive_mars", "Which was the first rover to drive on Mars, in 1997?", "Sojourner", listOf("Spirit", "Opportunity", "Curiosity"), X),
+        q("tec_company_invented_floppy", "Which company invented the floppy disk?", "IBM", listOf("Apple", "Sony", "Xerox"), X),
+        q("tec_company_made_commercial_2", "Which company made the first commercial USB flash drives in 2000?", "Trek Technology and IBM", listOf("SanDisk and Apple", "Sony and Philips", "Kingston and Dell"), X)
     )
 }

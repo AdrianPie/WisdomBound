@@ -98,6 +98,7 @@ bio_prized_fungi_pigs	Easy	Which prized fungi do pigs and dogs sniff out undergr
 bio_flower_young_heads	Easy	Which flower's young heads turn to follow the Sun across the sky?	Sunflower	Daisy	Tulip	Marigold
 bio_body_blood_cells	Easy	Where in the body are most blood cells made?	In the bone marrow	In the liver	In the heart	In the spleen
 bio_common_weed_spreads	Easy	Which common weed spreads its seeds on tiny white 'parachutes'?	Dandelion	Nettle	Clover	Ivy
+bio_caterpillars_turn	Easy	What do caterpillars turn into?	Butterflies or moths	Beetles	Bees	Dragonflies
 bio_chromosomy	Medium	How many chromosomes does a healthy human cell have?	46	23	48	44
 bio_chlorofil	Medium	Which pigment gives plants their green color?	Chlorophyll	Carotene	Melanin	Hemoglobin
 bio_insulina	Medium	Which organ produces insulin?	Pancreas	Liver	Kidneys	Thyroid
@@ -241,6 +242,14 @@ bio_organ_cleans_blood	Medium	Which organ cleans the blood and makes urine?	Kidn
 bio_colour_chlorophyll	Medium	What is the colour of chlorophyll?	Green	Yellow	Red	Blue
 bio_part_plant_attracts	Medium	What part of the plant attracts bees with colour and scent?	Flower	Root	Stem	Seed
 bio_baby_teeth	Medium	What are baby teeth also called?	Milk teeth	Wisdom teeth	Molars	Canines
+bio_hard_outer_layer	Medium	What is the hard outer layer of a tooth called?	Enamel	Dentin	Pulp	Cementum
+bio_body_part_use	Medium	Which body part do you use to smell?	Nose	Tongue	Ears	Eyes
+bio_human_body_water	Medium	About how much of the human body is water?	60 percent	30 percent	90 percent	45 percent
+bio_call_process_seed	Medium	What do you call the process of a seed starting to grow?	Germination	Pollination	Photosynthesis	Fertilisation
+bio_doctors_call_broken	Medium	What do doctors call a broken bone?	Fracture	Sprain	Strain	Dislocation
+bio_part_body_affected	Medium	Which part of the body is affected by conjunctivitis?	Eyes	Ears	Skin	Throat
+bio_part_body_dermatologist	Medium	Which part of the body does a dermatologist treat?	Skin	Teeth	Feet	Heart
+bio_group_animals_lives	Medium	Which group of animals lives both in water and on land, like frogs?	Amphibians	Reptiles	Mammals	Fish
 bio_mejoza	Hard	What is the cell division that produces sex cells called?	Meiosis	Mitosis	Cytokinesis	Apoptosis
 bio_mendel	Hard	Who is considered the father of genetics for his research on peas?	Gregor Mendel	Charles Darwin	James Watson	Francis Crick
 bio_mozdzek	Hard	Which part of the brain is responsible for balance and movement coordination?	Cerebellum	Cerebral cortex	Medulla oblongata	Hypothalamus
@@ -339,6 +348,41 @@ bio_vitamin_deficiency_causes	Hard	Which vitamin deficiency causes rickets?	Vita
 bio_part_brain_shaped	Hard	Which part of the brain is shaped like a seahorse and helps form memories?	Hippocampus	Amygdala	Cerebellum	Thalamus
 bio_almond_shaped_part	Hard	Which almond-shaped part of the brain processes fear?	Amygdala	Hippocampus	Pituitary gland	Pons
 bio_gland_often_master	Hard	Which gland is often called the 'master gland' of the body?	Pituitary gland	Thyroid gland	Pineal gland	Adrenal gland
+bio_part_eye_damaged	Hard	Which part of the eye is damaged in colour blindness, usually inherited?	Cone cells	Rod cells	Lens	Iris
+bio_cells_eye_let	Hard	Which cells in the eye let you see in dim light?	Rod cells	Cone cells	Ganglion cells	Lens fibres
+bio_blind_spot_area	Hard	What is the name of the blind spot area where the optic nerve leaves the eye?	Optic disc	Fovea	Macula	Pupil
+bio_tiny_bones_ear	Hard	Which tiny bones in the ear are the hammer, anvil and stirrup?	Ossicles	Cochlea	Vertebrae	Phalanges
+bio_snail_shaped_organ	Hard	Which snail-shaped organ in the inner ear turns sound into nerve signals?	Cochlea	Eardrum	Semicircular canal	Eustachian tube
+bio_tube_connects_middle	Hard	Which tube connects the middle ear to the throat, popping on aeroplanes?	Eustachian tube	Oesophagus	Trachea	Cochlea
+bio_flap_stops_food	Hard	What is the name of the flap that stops food going down the windpipe?	Epiglottis	Uvula	Larynx	Tonsil
+bio_dangling_tissue_back	Hard	What is the name of the dangling tissue at the back of the throat?	Uvula	Epiglottis	Tonsil	Adenoid
+bio_leaves_change_colour	Hard	Why do leaves change colour in autumn?	Chlorophyll breaks down	They get sunburned	They absorb more water	Insects eat the green
+bio_pigment_makes_tomatoes	Hard	Which pigment makes tomatoes red?	Lycopene	Beta-carotene	Anthocyanin	Melanin
+bio_tiny_pores_leaves	Hard	What are the tiny pores on leaves that let gases in and out?	Stomata	Xylem	Phloem	Cuticles
+bio_tubes_carry_water	Hard	Which tubes carry water up from a plant's roots?	Xylem	Phloem	Stomata	Root hairs
+bio_tubes_carry_sugars	Hard	Which tubes carry sugars around a plant?	Phloem	Xylem	Stomata	Sepals
+bio_call_plant_lives	Hard	What do you call a plant that lives for only one growing season?	Annual	Perennial	Biennial	Deciduous
+bio_part_body_nephrologist	Hard	Which part of the body does a nephrologist treat?	Kidneys	Liver	Nerves	Lungs
+bio_part_body_podiatrist	Hard	Which part of the body does a podiatrist treat?	Feet	Teeth	Skin	Eyes
+bio_kind_doctor_treats	Hard	What kind of doctor treats children?	Paediatrician	Geriatrician	Obstetrician	Orthopaedist
+bio_kind_specialist_treats	Hard	What kind of specialist treats eye diseases and performs eye surgery?	Ophthalmologist	Optician	Optometrist	Otologist
+bio_part_body_inflamed	Hard	Which part of the body is inflamed in tonsillitis?	Tonsils	Appendix	Liver	Sinuses
+bio_part_body_inflamed_2	Hard	Which part of the body is inflamed in hepatitis?	Liver	Kidneys	Lungs	Skin
+bio_part_body_inflamed_3	Hard	Which part of the body is inflamed in gastritis?	Stomach lining	Liver	Lungs	Joints
+bio_body_part_affected	Hard	Which body part is affected by arthritis?	Joints	Arteries	Lungs	Nerves
+bio_group_spiders_belong	Hard	Which group do spiders belong to, separate from insects?	Arachnids	Crustaceans	Myriapods	Molluscs
+bio_legs_spiders	Hard	How many legs do spiders have?	Eight	Six	Ten	Twelve
+bio_group_animals_includes	Hard	Which group of animals includes crabs, lobsters and shrimps?	Crustaceans	Molluscs	Arachnids	Echinoderms
+bio_group_animals_includes_2	Hard	Which group of animals includes snails, octopuses and clams?	Molluscs	Crustaceans	Cnidarians	Annelids
+bio_group_animals_includes_3	Hard	Which group of animals includes starfish and sea urchins?	Echinoderms	Molluscs	Cnidarians	Crustaceans
+bio_group_animals_includes_4	Hard	Which group of animals includes jellyfish and corals?	Cnidarians	Echinoderms	Sponges	Molluscs
+bio_group_animals_includes_5	Hard	Which group of animals includes earthworms and leeches?	Annelids	Nematodes	Flatworms	Molluscs
+bio_times_blink_day	Hard	About how many times do you blink in a day?	15,000	1,500	150,000	500
+bio_fingers_wrinkle_water	Hard	Why do fingers wrinkle in water, according to a leading theory?	To improve grip	Skin absorbs water and swells	Blood leaves them	Salt is washed out
+bio_scientist_sailed_hms	Hard	Which scientist sailed on HMS Beagle and later wrote 'On the Origin of Species'?	Charles Darwin	Alfred Russel Wallace	Thomas Huxley	Gregor Mendel
+bio_naturalist_came_natural	Hard	Which naturalist came up with natural selection independently of Darwin?	Alfred Russel Wallace	Thomas Huxley	Jean-Baptiste Lamarck	Joseph Hooker
+bio_scientist_darwin_bulldog	Hard	Which scientist was called 'Darwin's bulldog' for defending evolution?	Thomas Huxley	Alfred Russel Wallace	Richard Owen	Herbert Spencer
+bio_finches_helped_darwin	Hard	Which finches helped Darwin's ideas about evolution?	Galapagos finches	Canary finches	Zebra finches	Gouldian finches
 bio_amylaza	Expert	Which enzyme in saliva breaks down starch?	Amylase	Pepsin	Lipase	Trypsin
 bio_mrna	Expert	Which type of RNA carries genetic information from the nucleus to the ribosome?	mRNA	tRNA	rRNA	siRNA
 bio_ektoderma	Expert	Which germ layer does the nervous system develop from?	Ectoderm	Mesoderm	Endoderm	Notochord
@@ -393,3 +437,43 @@ bio_german_doctor_discovered	Expert	Which German doctor discovered the bacteria 
 bio_hormone_pineal_gland	Expert	Which hormone does the pineal gland release to control sleep?	Melatonin	Serotonin	Cortisol	Dopamine
 bio_hormone_produced_thyroid	Expert	Which hormone produced by the thyroid controls metabolism?	Thyroxine	Insulin	Cortisol	Glucagon
 bio_tiny_finger_like	Expert	Which tiny finger-like structures line the small intestine?	Villi	Cilia	Alveoli	Nephrons
+bio_part_brain_connects	Expert	Which part of the brain connects its two halves?	Corpus callosum	Brainstem	Cerebellum	Pons
+bio_part_brain_controls_2	Expert	Which part of the brain controls hunger, thirst and body temperature?	Hypothalamus	Thalamus	Hippocampus	Medulla
+bio_fear_heights	Expert	What is the name of the fear of heights?	Acrophobia	Agoraphobia	Claustrophobia	Aerophobia
+bio_fear_enclosed_spaces	Expert	What is the name of the fear of enclosed spaces?	Claustrophobia	Agoraphobia	Acrophobia	Xenophobia
+bio_fear_long_words	Expert	What is the name of the fear of long words, ironically a very long word?	Hippopotomonstrosesquippedaliophobia	Triskaidekaphobia	Arachibutyrophobia	Hexakosioihexekontahexaphobia
+bio_fear_number	Expert	What is the name of the fear of the number 13?	Triskaidekaphobia	Hexakosioihexekontahexaphobia	Tetraphobia	Numerophobia
+bio_plant_reproduces_spores	Expert	Which famous plant reproduces by spores, not seeds, and is among the oldest land plants?	Fern	Pine	Moss rose	Cactus
+bio_plant_source_drug	Expert	Which plant is the source of the drug quinine, used against malaria?	Cinchona tree	Willow tree	Foxglove	Opium poppy
+bio_tree_bark_gave	Expert	Which tree bark gave us the basis of aspirin?	Willow	Oak	Birch	Cinchona
+bio_plant_gave_heart	Expert	Which plant gave us the heart drug digitalis?	Foxglove	Belladonna	Hemlock	Yew
+bio_tree_bark_gave_2	Expert	Which tree's bark gave us the cancer drug paclitaxel (Taxol)?	Pacific yew	Willow	Cinchona	Eucalyptus
+bio_poisonous_plant_killed	Expert	Which poisonous plant killed the philosopher Socrates?	Hemlock	Belladonna	Foxglove	Oleander
+bio_poisonous_plant_means	Expert	Which poisonous plant's name means 'beautiful lady' in Italian?	Belladonna	Bellflower	Mandrake	Nightshade
+bio_tiny_parasite_causes	Expert	Which tiny parasite causes malaria?	Plasmodium	Giardia	Trypanosoma	Toxoplasma
+bio_bacterium_causes_stomach	Expert	Which bacterium causes most stomach ulcers, a discovery that won a 2005 Nobel Prize?	Helicobacter pylori	E. coli	Salmonella	Streptococcus
+bio_australian_doctor_drank	Expert	Which Australian doctor drank bacteria to prove they cause stomach ulcers?	Barry Marshall	Robin Warren	Howard Florey	Frank Fenner
+bio_shape_dna_molecule	Expert	What is the name of the shape of the DNA molecule?	Double helix	Triple spiral	Beta sheet	Alpha coil
+bio_four_letters_represent	Expert	Which four letters represent the bases in DNA?	A, C, G and T	A, B, C and D	A, G, U and T	C, G, U and A
+bio_base_rna_replaces	Expert	Which base in RNA replaces thymine from DNA?	Uracil	Adenine	Cytosine	Guanine
+bio_group_centipedes_millipedes	Expert	Which group do centipedes and millipedes belong to?	Myriapods	Arachnids	Insects	Crustaceans
+bio_largest_group_animals	Expert	What is the largest group of animals by number of species?	Insects	Fish	Birds	Molluscs
+bio_group_insects_described	Expert	Which group of insects has the most described species?	Beetles	Ants	Butterflies	Flies
+bio_scientific_study_fungi	Expert	What is the name of the scientific study of fungi?	Mycology	Botany	Virology	Entomology
+bio_scientific_study_insects	Expert	What is the name of the scientific study of insects?	Entomology	Etymology	Ornithology	Herpetology
+bio_scientific_study_birds	Expert	What is the name of the scientific study of birds?	Ornithology	Entomology	Ichthyology	Oology
+bio_scientific_study_fish	Expert	What is the name of the scientific study of fish?	Ichthyology	Herpetology	Malacology	Limnology
+bio_scientific_study_reptiles	Expert	What is the name of the scientific study of reptiles and amphibians?	Herpetology	Ichthyology	Batrachology	Ornithology
+bio_medical_brain_freeze	Expert	What is the medical name for brain freeze from cold food?	Sphenopalatine ganglioneuralgia	Cryoneuralgia	Glossopharyngeal spasm	Cephalalgia frigida
+bio_medical_hiccups	Expert	What is the medical name for hiccups?	Singultus	Eructation	Borborygmus	Sternutation
+bio_medical_sneeze	Expert	What is the medical name for a sneeze?	Sternutation	Singultus	Eructation	Pandiculation
+bio_medical_stomach_rumbling	Expert	What is the medical name for stomach rumbling?	Borborygmus	Singultus	Flatulence	Eructation
+bio_medical_groove_between	Expert	What is the medical name for the groove between the nose and upper lip?	Philtrum	Septum	Columella	Glabella
+bio_smooth_area_between	Expert	What is the name for the smooth area between the eyebrows?	Glabella	Philtrum	Lunula	Canthus
+bio_pale_half_moon	Expert	What is the name for the pale half-moon at the base of a fingernail?	Lunula	Cuticle	Glabella	Eponychium
+bio_english_philosopher_coined	Expert	Which English philosopher coined the phrase 'survival of the fittest'?	Herbert Spencer	Charles Darwin	Thomas Huxley	John Stuart Mill
+bio_british_primatologist_studied	Expert	Which British primatologist studied wild chimpanzees in Tanzania from 1960?	Jane Goodall	Dian Fossey	Birute Galdikas	Cynthia Moss
+bio_american_zoologist_studied	Expert	Which American zoologist studied mountain gorillas in Rwanda?	Dian Fossey	Jane Goodall	Birute Galdikas	Rachel Carson
+bio_scientist_studied_orangutans	Expert	Which scientist studied orangutans in Borneo, completing the 'Trimates'?	Birute Galdikas	Dian Fossey	Jane Goodall	Cynthia Moss
+bio_marine_biologist_1962	Expert	Which marine biologist's 1962 book 'Silent Spring' warned about pesticides?	Rachel Carson	Sylvia Earle	Jane Goodall	Eugenie Clark
+bio_french_explorer_invented	Expert	Which French explorer co-invented the aqualung for diving?	Jacques Cousteau	Auguste Piccard	Jacques Piccard	Hans Hass

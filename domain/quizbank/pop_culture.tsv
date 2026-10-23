@@ -341,6 +341,7 @@ pop_colour_zero_pocket	Easy	What colour is the zero pocket on a roulette wheel?	
 pop_film_studio_logo	Easy	Which film studio's logo shows a mountain ringed by stars?	Paramount	Universal	Columbia	Warner Bros.
 pop_company_bought_marvel	Easy	Which company bought Marvel Entertainment in 2009?	Disney	Warner Bros.	Sony	Universal
 pop_network_made_game	Easy	Which TV network made 'Game of Thrones' and 'The Sopranos'?	HBO	Netflix	AMC	Showtime
+pop_green_ogre_lives	Easy	Which green ogre lives in a swamp in a 2001 DreamWorks film?	Shrek	Fiona	Grinch	Hulk
 day_zlota_palma	Medium	Which is the top prize at the Cannes Film Festival?	The Palme d'Or	The Golden Bear	The Golden Lion	The Silver Shell
 day_minecraft_sprzedaz	Medium	Which is the best-selling video game of all time?	Minecraft	Tetris	Grand Theft Auto V	Wii Sports
 trv2_tetris_kraj	Medium	In which country was Tetris created?	The Soviet Union	Japan	The United States	Finland
@@ -1055,3 +1056,4 @@ pop_belgian_artist_created	Expert	Which Belgian artist created the Smurfs?	Peyo	
 pop_british_stop_motion	Expert	Which British stop-motion duo are an inventor and his clever dog?	Wallace and Gromit	Shaun and Bitzer	Morph and Chas	Pingu and Robby
 pop_studio_makes_wallace	Expert	Which studio makes Wallace and Gromit?	Aardman Animations	Pixar	Laika	Studio Ghibli
 pop_forest_spirit_mascot	Expert	Which forest spirit is the mascot of Studio Ghibli?	Totoro	No-Face	Calcifer	Kodama
+pop_hand_drawn_film	Expert	Which hand-drawn film was the first animated movie nominated for Best Picture?	Beauty and the Beast	The Lion King	Aladdin	The Little Mermaid

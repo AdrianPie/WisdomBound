@@ -69,7 +69,9 @@ object ElementQuestions {
         q("ele_trumpets_trombones_usually", "Trumpets and trombones are usually made of which alloy?", "Brass", listOf("Bronze", "Steel", "Pewter"), E),
         q("ele_dihydrogen_monoxide_chemical", "What is 'dihydrogen monoxide', a chemical sometimes 'banned' in prank petitions?", "Water", listOf("Salt", "Bleach", "Alcohol"), E),
         q("ele_eiffel_tower_built", "The Eiffel Tower is built mainly from which metal?", "Iron", listOf("Steel", "Aluminium", "Copper"), E),
-        q("ele_gas_makes_percent", "Which gas makes up about 78 percent of Earth's air?", "Nitrogen", listOf("Oxygen", "Argon", "Hydrogen"), E)
+        q("ele_gas_makes_percent", "Which gas makes up about 78 percent of Earth's air?", "Nitrogen", listOf("Oxygen", "Argon", "Hydrogen"), E),
+        q("ele_precious_yellow_metal", "Which precious yellow metal is used for wedding rings and Olympic first place?", "Gold", listOf("Silver", "Copper", "Platinum"), E),
+        q("ele_gas_need_breathe", "Which gas do we need to breathe to stay alive?", "Oxygen", listOf("Nitrogen", "Helium", "Carbon dioxide"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -156,7 +158,10 @@ object ElementQuestions {
         q("ele_element_atomic_number", "Which element has the atomic number 1?", "Hydrogen", listOf("Helium", "Lithium", "Carbon"), M),
         q("ele_element_symbol", "Which element's symbol is 'Hg'?", "Mercury", listOf("Hydrogen", "Hafnium", "Holmium"), M),
         q("ele_gas_humans_breathe", "Which gas do humans breathe out that plants use?", "Carbon dioxide", listOf("Oxygen", "Nitrogen", "Hydrogen"), M),
-        q("ele_metal_rusts_exposed", "Which metal rusts when exposed to air and water?", "Iron", listOf("Gold", "Aluminium", "Copper"), M)
+        q("ele_metal_rusts_exposed", "Which metal rusts when exposed to air and water?", "Iron", listOf("Gold", "Aluminium", "Copper"), M),
+        q("ele_metal_used_coat", "Which metal is used to coat steel to stop it rusting, a process called galvanising?", "Zinc", listOf("Tin", "Copper", "Chromium"), M),
+        q("ele_metal_used_soft", "Which metal is used in most soft drink cans?", "Aluminium", listOf("Tin", "Steel", "Copper"), M),
+        q("ele_element_blood_carries", "Which element in your blood carries oxygen as part of haemoglobin?", "Iron", listOf("Copper", "Calcium", "Zinc"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -232,7 +237,17 @@ object ElementQuestions {
         q("ele_gas_used_old", "Which gas is used in old-style advertising tubes that glow red-orange?", "Neon", listOf("Argon", "Krypton", "Xenon"), H),
         q("ele_two_elements_make", "Which two elements make up water?", "Hydrogen and oxygen", listOf("Hydrogen and nitrogen", "Oxygen and carbon", "Helium and oxygen"), H),
         q("ele_element_added_iron", "Which element is added to iron to make steel?", "Carbon", listOf("Chromium", "Nickel", "Silicon"), H),
-        q("ele_element_found_all", "Which element is found in all proteins but not in pure fats or sugars?", "Nitrogen", listOf("Carbon", "Oxygen", "Hydrogen"), H)
+        q("ele_element_found_all", "Which element is found in all proteins but not in pure fats or sugars?", "Nitrogen", listOf("Carbon", "Oxygen", "Hydrogen"), H),
+        q("ele_metal_burns_dazzling", "Which metal burns with a dazzling white flame, used in flares?", "Magnesium", listOf("Aluminium", "Sodium", "Calcium"), H),
+        q("ele_metal_soft_cut", "Which metal is so soft it can be cut with a butter knife, and is stored in oil?", "Sodium", listOf("Lead", "Tin", "Gold"), H),
+        q("ele_element_america", "Which element is named after America?", "Americium", listOf("Columbium", "Californium", "Berkelium"), H),
+        q("ele_element_germany", "Which element is named after Germany?", "Germanium", listOf("Gallium", "Hafnium", "Rhenium"), H),
+        q("ele_element_france", "Which element is named after France?", "Francium", listOf("Gallium", "Europium", "Ruthenium"), H),
+        q("ele_gas_makes_voice", "Which gas makes your voice deep when inhaled, the opposite of helium?", "Sulfur hexafluoride", listOf("Neon", "Nitrogen", "Carbon dioxide"), H),
+        q("ele_carat_mean_gold", "What does '24 carat' mean for gold?", "Pure gold", listOf("Half gold", "24 grams", "24 percent gold"), H),
+        q("ele_pure_carat_gold", "How pure is 18-carat gold?", "75 percent gold", listOf("50 percent gold", "90 percent gold", "18 percent gold"), H),
+        q("ele_element_greek_word_4", "Which element is named after the Greek word for 'green', for its spectral line?", "Thallium", listOf("Chlorine", "Chromium", "Praseodymium"), H),
+        q("ele_element_comes_greek", "Which element's name comes from the Greek word for 'rose', for its pink salts?", "Rhodium", listOf("Iridium", "Radium", "Ruthenium"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -292,6 +307,22 @@ object ElementQuestions {
         q("ele_element_daughter_tantalus", "Which element is named after the daughter of Tantalus in Greek myth?", "Niobium", listOf("Tantalum", "Promethium", "Palladium"), X),
         q("ele_element_romans_use", "Which element did the Romans use for water pipes, later found to be poisonous?", "Lead", listOf("Copper", "Mercury", "Arsenic"), X),
         q("ele_poison_nicknamed_inheritance", "Which poison was nicknamed 'inheritance powder' in history?", "Arsenic", listOf("Cyanide", "Hemlock", "Strychnine"), X),
-        q("ele_metal_ancient_egyptians", "Which metal did ancient Egyptians value more than gold, since it fell from the sky?", "Meteoric iron", listOf("Silver", "Copper", "Platinum"), X)
+        q("ele_metal_ancient_egyptians", "Which metal did ancient Egyptians value more than gold, since it fell from the sky?", "Meteoric iron", listOf("Silver", "Copper", "Platinum"), X),
+        q("ele_element_russia", "Which element is named after Russia?", "Ruthenium", listOf("Rhenium", "Rubidium", "Rutherfordium"), X),
+        q("ele_element_old_latin", "Which element is named after the old Latin name of France, Gaul?", "Gallium", listOf("Francium", "Germanium", "Lutetium"), X),
+        q("ele_element_latin_copenhagen", "Which element is named after the Latin name of Copenhagen?", "Hafnium", listOf("Holmium", "Thulium", "Lutetium"), X),
+        q("ele_element_latin_stockholm", "Which element is named after the Latin name of Stockholm?", "Holmium", listOf("Hafnium", "Thulium", "Erbium"), X),
+        q("ele_element_old_scandinavia", "Which element is named after the old name of Scandinavia's far north, Thule?", "Thulium", listOf("Holmium", "Scandium", "Hafnium"), X),
+        q("ele_element_rhine_river", "Which element is named after the Rhine river?", "Rhenium", listOf("Rhodium", "Ruthenium", "Radon"), X),
+        q("ele_element_japan_2016", "Which element was named after Japan in 2016?", "Nihonium", listOf("Japonium", "Tennessine", "Moscovium"), X),
+        q("ele_element_state_university", "Which element, named in 2016, honours the home state of Oak Ridge National Laboratory?", "Tennessine", listOf("Nihonium", "Americium", "Berkelium"), X),
+        q("ele_element_used_make", "Which element is used to make semiconductors besides silicon, discovered by Clemens Winkler?", "Germanium", listOf("Gallium", "Selenium", "Arsenic"), X),
+        q("ele_element_reactive_metal", "Which element, the most reactive metal, explodes on contact with water?", "Caesium", listOf("Sodium", "Lithium", "Magnesium"), X),
+        q("ele_element_atomic_vibrations", "Which element's atomic vibrations define the second in atomic clocks?", "Caesium", listOf("Rubidium", "Strontium", "Hydrogen"), X),
+        q("ele_element_used_precise", "Which element is used in the most precise optical lattice clocks?", "Strontium", listOf("Caesium", "Rubidium", "Helium"), X),
+        q("ele_element_comes_greek_2", "Which element's name comes from the Greek for 'new'?", "Neon", listOf("Xenon", "Nitrogen", "Neodymium"), X),
+        q("ele_element_means_new", "Which element's name means 'new twin' in Greek?", "Neodymium", listOf("Praseodymium", "Didymium", "Neon"), X),
+        q("ele_element_comes_greek_3", "Which element's name comes from the Greek for 'heavy'?", "Barium", listOf("Lead", "Osmium", "Tungsten"), X),
+        q("ele_element_latin_hydrargyrum", "Which element's Latin name 'hydrargyrum' means 'liquid silver'?", "Mercury", listOf("Silver", "Tin", "Gallium"), X)
     )
 }

@@ -135,7 +135,10 @@ object AnimalQuestions {
         q("ani_bird_symbol_long", "Which bird is a symbol of long life in Japan, where people fold a thousand paper ones?", "Crane", listOf("Swan", "Heron", "Stork"), E),
         q("ani_silkworm_turn", "What does a silkworm turn into?", "A moth", listOf("A butterfly", "A beetle", "A wasp"), E),
         q("ani_male_cat", "What is a male cat called?", "A tom", listOf("A buck", "A billy", "A sire"), E),
-        q("ani_small_hardy_pony", "Which small, hardy pony comes from the islands north of Scotland?", "Shetland pony", listOf("Welsh pony", "Connemara pony", "Exmoor pony"), E)
+        q("ani_small_hardy_pony", "Which small, hardy pony comes from the islands north of Scotland?", "Shetland pony", listOf("Welsh pony", "Connemara pony", "Exmoor pony"), E),
+        q("ani_animal_says_moo", "Which animal says 'moo'?", "Cow", listOf("Sheep", "Goat", "Horse"), E),
+        q("ani_animal_trunk", "Which animal has a trunk?", "Elephant", listOf("Rhinoceros", "Hippopotamus", "Tapir"), E),
+        q("ani_bird_cannot_fly", "Which bird cannot fly but is the fastest runner among birds?", "Ostrich", listOf("Penguin", "Kiwi", "Dodo"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -323,7 +326,26 @@ object AnimalQuestions {
         q("ani_baby_swan", "What is a baby swan called?", "Cygnet", listOf("Gosling", "Eaglet", "Fledgling"), M),
         q("ani_baby_hare", "What is a baby hare called?", "Leveret", listOf("Kit", "Bunny", "Pup"), M),
         q("ani_animal_stripes_continue", "Which animal's stripes continue onto its skin, not just its fur?", "Tiger", listOf("Zebra", "Okapi", "Raccoon"), M),
-        q("ani_bird_mimic_human", "Which bird can mimic human speech best, with a vocabulary of over 100 words recorded?", "African grey parrot", listOf("Crow", "Budgerigar", "Cockatoo"), M)
+        q("ani_bird_mimic_human", "Which bird can mimic human speech best, with a vocabulary of over 100 words recorded?", "African grey parrot", listOf("Crow", "Budgerigar", "Cockatoo"), M),
+        q("ani_bird_laying_eggs", "Which bird is famous for laying its eggs in other birds' nests?", "Cuckoo", listOf("Magpie", "Starling", "Sparrow"), M),
+        q("ani_insect_glows_night", "Which insect glows at night to attract mates?", "Firefly", listOf("Moth", "Cricket", "Cicada"), M),
+        q("ani_animal_largest_land", "Which animal is the largest land carnivore?", "Polar bear", listOf("Grizzly bear", "Siberian tiger", "Lion"), M),
+        q("ani_animal_national_animal", "Which animal is the national animal of Australia, along with the emu?", "Kangaroo", listOf("Koala", "Wombat", "Platypus"), M),
+        q("ani_call_animals_eat", "What do you call animals that eat only plants?", "Herbivores", listOf("Carnivores", "Omnivores", "Insectivores"), M),
+        q("ani_call_animals_active", "What do you call animals that are active at night?", "Nocturnal", listOf("Diurnal", "Crepuscular", "Hibernal"), M),
+        q("ani_animal_sheds_skin", "Which animal sheds its skin in one piece as it grows?", "Snake", listOf("Frog", "Lizard", "Turtle"), M),
+        q("ani_animal_changing_tadpole", "Which animal is known for changing from a tadpole as it grows?", "Frog", listOf("Newt", "Salamander", "Lizard"), M),
+        q("ani_bird_colourful_tail", "Which bird is known for its colourful tail fan used in courtship?", "Peacock", listOf("Pheasant", "Turkey", "Parrot"), M),
+        q("ani_animal_rolls_armoured", "Which animal rolls into an armoured ball, such as the three-banded species?", "Armadillo", listOf("Pangolin", "Hedgehog", "Porcupine"), M),
+        q("ani_insect_carry_times", "Which insect can carry 50 times its own body weight?", "Ant", listOf("Bee", "Grasshopper", "Ladybird"), M),
+        q("ani_insect_makes_chirping", "Which insect makes a chirping sound by rubbing its wings together?", "Cricket", listOf("Bee", "Fly", "Ant"), M),
+        q("ani_insect_larva_maggot", "Which insect has a larva called a maggot?", "Fly", listOf("Beetle", "Moth", "Wasp"), M),
+        q("ani_insect_larva_grub", "Which insect larva is called a grub?", "Beetle", listOf("Fly", "Butterfly", "Mosquito"), M),
+        q("ani_spotted_beetle_gardener", "Which spotted beetle is a gardener's friend because it eats aphids?", "Ladybird", listOf("Stag beetle", "Dung beetle", "Weevil"), M),
+        q("ani_dog_breed_wrinkly", "Which dog breed is famous for its wrinkly face and was bred for bull-baiting?", "Bulldog", listOf("Pug", "Boxer", "Shar Pei"), M),
+        q("ani_spotted_dog_breed", "Which spotted dog breed is linked with fire engines?", "Dalmatian", listOf("Beagle", "Pointer", "Great Dane"), M),
+        q("ani_dog_breed_pulls", "Which dog breed pulls sleds in the Arctic and has blue eyes?", "Siberian Husky", listOf("Alaskan Malamute", "Samoyed", "Akita"), M),
+        q("ani_animal_sleeps_hanging", "Which animal sleeps hanging upside down?", "Bat", listOf("Sloth", "Owl", "Possum"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -448,7 +470,29 @@ object AnimalQuestions {
         q("ani_bird_largest_wingspan", "Which bird has the largest wingspan of any land bird, gliding over the Andes?", "Andean condor", listOf("Golden eagle", "Harpy eagle", "Lammergeier"), H),
         q("ani_venomous_lizard_lives", "Which venomous lizard lives in the deserts of the south-western USA?", "Gila monster", listOf("Komodo dragon", "Thorny devil", "Frilled lizard"), H),
         q("ani_australian_lizard_opens", "Which Australian lizard opens a big frill around its neck to scare enemies?", "Frilled lizard", listOf("Thorny devil", "Bearded dragon", "Goanna"), H),
-        q("ani_lizard_squirts_blood", "Which lizard squirts blood from its eyes to scare predators?", "Horned lizard", listOf("Gecko", "Iguana", "Chameleon"), H)
+        q("ani_lizard_squirts_blood", "Which lizard squirts blood from its eyes to scare predators?", "Horned lizard", listOf("Gecko", "Iguana", "Chameleon"), H),
+        q("ani_call_animals_active_2", "What do you call animals that are most active at dawn and dusk?", "Crepuscular", listOf("Nocturnal", "Diurnal", "Matutinal"), H),
+        q("ani_call_group_whales", "What do you call a group of whales?", "Pod", listOf("School", "Herd", "Flock"), H),
+        q("ani_call_group_kangaroos", "What do you call a group of kangaroos?", "Mob", listOf("Pride", "Troop", "Gang"), H),
+        q("ani_scaly_mammal_trafficked", "Which scaly mammal is the most trafficked animal in the world?", "Pangolin", listOf("Armadillo", "Rhinoceros", "Elephant"), H),
+        q("ani_animal_quills_detach", "Which animal's quills detach easily and stick into attackers?", "Porcupine", listOf("Hedgehog", "Echidna", "Tenrec"), H),
+        q("ani_slow_moving_sea", "Which slow-moving sea mammal is related to elephants and called a 'sea cow'?", "Manatee", listOf("Walrus", "Sea lion", "Beluga"), H),
+        q("ani_beetle_rolls_balls", "Which beetle rolls balls of animal droppings?", "Dung beetle", listOf("Stag beetle", "Ladybird", "Weevil"), H),
+        q("ani_beetle_sprays_boiling", "Which beetle sprays a boiling hot chemical at attackers?", "Bombardier beetle", listOf("Stag beetle", "Rhinoceros beetle", "Tiger beetle"), H),
+        q("ani_ancient_egyptians_sacred", "The scarab, sacred to the ancient Egyptians, is a kind of what?", "Dung beetle", listOf("Locust", "Bee", "Cricket"), H),
+        q("ani_insects_swarm_billions", "Which insects swarm in billions and destroy crops, mentioned in the Bible?", "Locusts", listOf("Termites", "Wasps", "Moths"), H),
+        q("ani_insect_builds_mounds", "Which insect builds mounds up to 9 metres tall in Africa?", "Termite", listOf("Ant", "Wasp", "Bee"), H),
+        q("ani_insect_deadliest_humans", "Which insect is the deadliest to humans, by spreading disease?", "Mosquito", listOf("Tsetse fly", "Housefly", "Flea"), H),
+        q("ani_insect_spreads_sleeping", "Which insect spreads sleeping sickness in Africa?", "Tsetse fly", listOf("Mosquito", "Sandfly", "Horsefly"), H),
+        q("ani_insect_spread_black", "Which insect spread the Black Death by biting rats and people?", "Flea", listOf("Louse", "Mosquito", "Tick"), H),
+        q("ani_dog_breed_long", "Which dog breed has long ears and is famous for its sense of smell in tracking?", "Bloodhound", listOf("Beagle", "Basset Hound", "Dachshund"), H),
+        q("ani_last_pinta_island", "What was the name of the last Pinta Island tortoise, who died in 2012?", "Lonesome George", listOf("Jonathan", "Harriet", "Diego"), H),
+        q("ani_tortoise_diego_helped", "Which tortoise named Diego helped save his species by fathering hundreds of babies?", "Diego", listOf("Jonathan", "George", "Harriet"), H),
+        q("ani_animal_slow_algae", "Which animal is so slow that algae grow on its fur?", "Sloth", listOf("Koala", "Tortoise", "Pangolin"), H),
+        q("ani_cows_chew_cud", "Why do cows chew the cud?", "To digest grass a second time", listOf("To clean their teeth", "Out of boredom", "To cool down"), H),
+        q("ani_flamingos_often_stand", "Why do flamingos often stand on one leg?", "To save energy and body heat", listOf("To scare predators", "To hunt fish", "Because the other is injured"), H),
+        q("ani_bird_symbol_good", "Which bird is a symbol of good luck that delivers babies in European folklore?", "Stork", listOf("Crane", "Swan", "Pelican"), H),
+        q("ani_seabird_used_fishermen", "Which seabird is used by fishermen in China and Japan to catch fish?", "Cormorant", listOf("Pelican", "Puffin", "Gannet"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -514,6 +558,44 @@ object AnimalQuestions {
         q("ani_bird_chicks_claws", "Which bird's chicks have claws on their wings to help them climb trees?", "Hoatzin", listOf("Kiwi", "Cassowary", "Shoebill"), X),
         q("ani_huge_billed_african", "Which huge-billed African bird stands motionless for hours waiting for lungfish?", "Shoebill", listOf("Marabou stork", "Hammerkop", "Secretary bird"), X),
         q("ani_unusual_axolotl_adult", "What is unusual about the axolotl as an adult?", "It keeps its larval gills for life", listOf("It lives only one day", "It has no bones", "It changes sex every year"), X),
-        q("ani_rabbit_eared_australian", "Which rabbit-eared Australian marsupial is promoted as the 'Easter Bilby'?", "Bilby", listOf("Bandicoot", "Quokka", "Bettong"), X)
+        q("ani_rabbit_eared_australian", "Which rabbit-eared Australian marsupial is promoted as the 'Easter Bilby'?", "Bilby", listOf("Bandicoot", "Quokka", "Bettong"), X),
+        q("ani_call_group_ravens", "What do you call a group of ravens?", "Unkindness", listOf("Murder", "Parliament", "Conspiracy"), X),
+        q("ani_call_group_porcupines", "What do you call a group of porcupines?", "Prickle", listOf("Spike", "Thicket", "Bristle"), X),
+        q("ani_call_group_hippos", "What do you call a group of hippos?", "Bloat", listOf("Crash", "Wallow", "Pod"), X),
+        q("ani_waxy_substance_sperm", "Which waxy substance from sperm whales was once used in perfume?", "Ambergris", listOf("Spermaceti", "Musk", "Civet"), X),
+        q("ani_deep_diving_whale", "Which deep-diving whale can stay underwater for over two hours?", "Cuvier's beaked whale", listOf("Sperm whale", "Blue whale", "Bowhead whale"), X),
+        q("ani_whale_makes_longest", "Which whale makes one of the longest migrations of any mammal, between Alaska and Mexico?", "Grey whale", listOf("Blue whale", "Orca", "Narwhal"), X),
+        q("ani_small_dolphin_among", "Which small dolphin, among the rarest marine mammals, lives only in Mexico's Gulf of California?", "Vaquita", listOf("Hector's dolphin", "Irrawaddy dolphin", "Baiji"), X),
+        q("ani_chinese_river_dolphin", "Which Chinese river dolphin was declared functionally extinct in 2006?", "Baiji", listOf("Vaquita", "Boto", "Susu"), X),
+        q("ani_pink_river_dolphin", "Which pink river dolphin lives in the Amazon?", "Boto", listOf("Baiji", "Vaquita", "Tucuxi"), X),
+        q("ani_butterfly_migrates_000", "Which butterfly migrates up to 4,000 km from Canada to Mexico?", "Monarch", listOf("Painted lady", "Swallowtail", "Red admiral"), X),
+        q("ani_moth_wings_big", "Which moth has wings so big it is sometimes mistaken for a bird?", "Atlas moth", listOf("Luna moth", "Death's-head hawkmoth", "Emperor moth"), X),
+        q("ani_insect_heaviest_world", "Which insect is the heaviest in the world, found in New Zealand?", "Giant weta", listOf("Goliath beetle", "Atlas moth", "Titan beetle"), X),
+        q("ani_cicada_spends_years", "Which cicada spends 17 years underground before emerging?", "Periodical cicada", listOf("Dog-day cicada", "Bush cicada", "Giant cicada"), X),
+        q("ani_special_food_turns", "What is the special food that turns a bee larva into a queen?", "Royal jelly", listOf("Honeydew", "Propolis", "Beeswax"), X),
+        q("ani_sticky_resin_bees", "What is the sticky resin bees use to seal gaps in the hive?", "Propolis", listOf("Royal jelly", "Beeswax", "Nectar"), X),
+        q("ani_japanese_dog_waited", "Which Japanese dog waited at Shibuya station for its dead owner for nearly ten years?", "Hachiko", listOf("Shiba", "Taro", "Akita-maru"), X),
+        q("ani_cat_breed_folded", "Which cat breed with folded ears comes from Scotland?", "Scottish Fold", listOf("Manx", "Highlander", "Selkirk Rex"), X),
+        q("ani_cat_breed_goes", "Which cat breed goes limp when you pick it up?", "Ragdoll", listOf("Maine Coon", "Persian", "Birman"), X),
+        q("ani_cloned_mammal_sheep", "What was the name of the first cloned mammal, a sheep born in 1996?", "Dolly", listOf("Polly", "Molly", "Daisy"), X),
+        q("ani_dog_became_animal", "What was the name of the dog that became the first animal to orbit Earth, in 1957?", "Laika", listOf("Belka", "Strelka", "Mushka"), X),
+        q("ani_two_dogs_orbit", "Which two dogs were the first to orbit Earth and return alive, in 1960?", "Belka and Strelka", listOf("Laika and Mushka", "Pchyolka and Mushka", "Ugolyok and Veterok"), X),
+        q("ani_chimpanzee_sent_space", "What was the name of the first chimpanzee sent into space by NASA, in 1961?", "Ham", listOf("Enos", "Albert", "Bonzo"), X),
+        q("ani_gorilla_learned_over", "What was the name of the famous gorilla that learned over 1,000 signs?", "Koko", listOf("Harambe", "Kanzi", "Washoe"), X),
+        q("ani_bonobo_learned_communicate", "What was the name of the bonobo who learned to communicate with a symbol keyboard?", "Kanzi", listOf("Koko", "Washoe", "Nim Chimpsky"), X),
+        q("ani_chimpanzee_taught_american", "What was the name of the first chimpanzee taught American Sign Language?", "Washoe", listOf("Koko", "Kanzi", "Lucy"), X),
+        q("ani_bird_largest_eyes", "Which bird has the largest eyes relative to its skull size?", "Owl", listOf("Eagle", "Ostrich", "Parrot"), X),
+        q("ani_animal_see_ultraviolet", "Which animal can see ultraviolet light and uses it to find flowers?", "Bee", listOf("Dog", "Cat", "Cow"), X),
+        q("ani_snake_see_heat", "Which snake can 'see' heat through pits on its face?", "Rattlesnake", listOf("Cobra", "Mamba", "Grass snake"), X),
+        q("ani_fish_sense_electric", "Which fish can sense the electric fields of other animals?", "Shark", listOf("Salmon", "Tuna", "Trout"), X),
+        q("ani_jelly_filled_pores", "What are the jelly-filled pores sharks use to sense electricity called?", "Ampullae of Lorenzini", listOf("Lateral lines", "Gill rakers", "Barbels"), X),
+        q("ani_sensory_organ_along", "What is the sensory organ along a fish's side that detects movement in water?", "Lateral line", listOf("Swim bladder", "Gill slit", "Dorsal fin"), X),
+        q("ani_gas_filled_organ", "What is the gas-filled organ that lets fish float at a set depth?", "Swim bladder", listOf("Lateral line", "Gill", "Air sac"), X),
+        q("ani_seabird_dives_sea", "Which seabird dives into the sea at nearly 100 km/h to catch fish?", "Gannet", listOf("Puffin", "Cormorant", "Pelican"), X),
+        q("ani_bird_big_hollow", "Which bird has a big hollow casque on top of its bill?", "Hornbill", listOf("Toucan", "Cassowary", "Shoebill"), X),
+        q("ani_large_flightless_bird_3", "Which large flightless bird of South America is related to the ostrich?", "Rhea", listOf("Emu", "Cassowary", "Kiwi"), X),
+        q("ani_extinct_flightless_bird", "Which extinct flightless bird of New Zealand stood up to 3.6 metres tall?", "Moa", listOf("Dodo", "Elephant bird", "Great auk"), X),
+        q("ani_extinct_flightless_bird_2", "Which extinct flightless bird from Madagascar laid the largest eggs ever known?", "Elephant bird", listOf("Moa", "Dodo", "Roc"), X),
+        q("ani_extinct_flightless_seabird", "Which extinct flightless seabird of the North Atlantic was the original 'penguin'?", "Great auk", listOf("Dodo", "Moa", "Razorbill"), X)
     )
 }

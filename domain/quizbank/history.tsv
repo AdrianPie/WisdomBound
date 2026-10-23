@@ -168,6 +168,8 @@ his_lively_dance_craze	Easy	Which lively dance was the craze of the 'Roaring Twe
 his_san_francisco_hippie	Easy	San Francisco's hippie gathering of 1967 is remembered as the 'Summer of...' what?	Love	Peace	Flowers	Music
 his_colony_jewel_crown	Easy	Which colony was called the 'Jewel in the Crown' of the British Empire?	India	Egypt	Canada	Australia
 his_european_country_ruled_2	Easy	Which European country ruled Vietnam as part of 'Indochina' until 1954?	France	Britain	Netherlands	Portugal
+his_ancient_people_built	Easy	Which ancient people built the pyramids of Giza?	Egyptians	Romans	Greeks	Persians
+his_ship_sank_voyage	Easy	Which famous ship sank on its first voyage in 1912?	Titanic	Lusitania	Britannic	Olympic
 his_i_wojna	Medium	In which year did World War I break out?	1914	1912	1918	1939
 his_gagarin	Medium	Who was the first human to travel into space?	Yuri Gagarin	Neil Armstrong	Alan Shepard	Valentina Tereshkova
 his_kolumb	Medium	In which year did Christopher Columbus reach America?	1492	1453	1500	1488
@@ -519,6 +521,11 @@ his_city_split_wall	Medium	Which city was split by a wall from 1961 to 1989?	Ber
 his_pharaoh_almost_untouched	Medium	Which pharaoh's almost untouched tomb did Howard Carter open in 1922?	Tutankhamun	Ramesses II	Khufu	Akhenaten
 his_roman_gladiator_fights	Medium	What were Roman gladiator fights usually held in?	Amphitheatres	Forums	Basilicas	Aqueducts
 his_indian_leader_led	Medium	Which Indian leader led a non-violent struggle for independence from Britain?	Mahatma Gandhi	Jawaharlal Nehru	Subhas Chandra Bose	Indira Gandhi
+his_president_assassinated_theatre	Medium	Which US president was assassinated in a theatre in 1865?	Abraham Lincoln	John F. Kennedy	James Garfield	Andrew Johnson
+his_country_germany_invade	Medium	Which country did Germany invade on 1 September 1939?	Poland	France	Czechoslovakia	Belgium
+his_powerful_banking_family	Medium	Which powerful banking family ruled Florence in the Renaissance?	Medici	Borgia	Sforza	Este
+his_ancient_roman_festival	Medium	Which ancient Roman festival in December involved gift-giving and role reversals?	Saturnalia	Lupercalia	Floralia	Vestalia
+his_ancient_romans_use	Medium	What did ancient Romans use as a common sweetener before sugar?	Honey	Maple syrup	Molasses	Beet juice
 his_rzym	Hard	In which year did the Western Roman Empire fall?	476	410	395	527
 his_waterloo	Hard	In which year did Napoleon lose the Battle of Waterloo?	1815	1812	1805	1821
 his_druk	Hard	Who popularized movable-type printing in Europe?	Johannes Gutenberg	Nicolaus Copernicus	Leonardo da Vinci	Galileo
@@ -787,6 +794,21 @@ his_ocean_liner_sunk	Hard	What was the name of the ocean liner sunk by a U-boat 
 his_french_scholar_deciphered	Hard	Which French scholar first deciphered hieroglyphs in 1822?	Jean-Francois Champollion	Thomas Young	Auguste Mariette	Gaston Maspero
 his_language_romans_speak	Hard	Which language did the Romans speak?	Latin	Greek	Etruscan	Italian
 his_roman_road_queen	Hard	Which Roman road, the 'queen of roads', ran from Rome to Brindisi?	Via Appia	Via Flaminia	Via Aurelia	Via Egnatia
+his_french_defensive_line	Hard	Which French defensive line failed to stop Germany in 1940?	Maginot Line	Siegfried Line	Hindenburg Line	Mannerheim Line
+his_1942_battle_pacific	Hard	Which 1942 battle in the Pacific turned the tide against Japan?	Battle of Midway	Battle of the Coral Sea	Battle of Leyte Gulf	Battle of Okinawa
+his_artist_painted_school	Hard	Which artist painted 'The School of Athens' in the Vatican?	Raphael	Michelangelo	Titian	Giotto
+his_architect_built_huge	Hard	Which architect built the huge dome of Florence Cathedral?	Filippo Brunelleschi	Michelangelo	Donato Bramante	Leon Battista Alberti
+his_italian_writer_book	Hard	Which Italian writer's book 'The Prince' gave us a word for ruthless politics?	Niccolo Machiavelli	Dante Alighieri	Baldassare Castiglione	Francesco Guicciardini
+his_martin_luther_famously	Hard	What did Martin Luther famously nail to a church door?	Ninety-five Theses	The Augsburg Creed	A papal bull	The Ten Commandments
+his_french_reformer_led	Hard	Which French reformer led the Protestant church in Geneva?	John Calvin	Martin Luther	John Knox	Huldrych Zwingli
+his_roman_soldiers_sometimes	Hard	What did Roman soldiers sometimes receive part of their pay in, giving us the word 'salary'?	Salt	Silver	Wine	Grain
+his_hun_leader_scourge	Hard	Which Hun leader was called 'the Scourge of God'?	Attila	Genghis Khan	Tamerlane	Alaric
+his_tribe_sack_rome	Hard	Which tribe's sack of Rome in 455 gave us a word for destroying property?	Vandals	Goths	Huns	Franks
+his_woman_founded_american	Hard	Which woman founded the American Red Cross?	Clara Barton	Florence Nightingale	Dorothea Dix	Mary Seacole
+his_swiss_businessman_founded	Hard	Which Swiss businessman founded the Red Cross after seeing the Battle of Solferino?	Henry Dunant	Gustave Moynier	Jean-Jacques Rousseau	Guillaume Dufour
+his_american_woman_refused	Hard	Which American woman refused to give up her bus seat in Montgomery in 1955?	Rosa Parks	Harriet Tubman	Coretta Scott King	Sojourner Truth
+his_british_suffragette_leader	Hard	Which British suffragette leader founded the Women's Social and Political Union?	Emmeline Pankhurst	Millicent Fawcett	Emily Davison	Sylvia Pankhurst
+his_persian_king_army	Hard	Which Persian king's army lost at the Battle of Marathon?	Darius I	Xerxes I	Cyrus the Great	Darius III
 his_westfalski	Expert	In which year did the Peace of Westphalia end the Thirty Years' War?	1648	1618	1659	1667
 his_oktawian	Expert	Who was the first Roman emperor?	Augustus (Octavian)	Julius Caesar	Nero	Tiberius
 his_machiavelli	Expert	Who wrote the treatise 'The Prince'?	Niccolo Machiavelli	Dante Alighieri	Erasmus of Rotterdam	Thomas More
@@ -949,3 +971,21 @@ his_roman_city_britain	Expert	Which Roman city in Britain later became London?	L
 his_roman_city_britain_2	Expert	Which Roman city in Britain later became York?	Eboracum	Londinium	Deva	Lindum
 his_english_city_romans	Expert	Which English city did the Romans call Aquae Sulis, for its hot springs?	Bath	Chester	Buxton	Harrogate
 his_roman_legion_famously	Expert	Which Roman legion famously vanished in Germany's Teutoburg Forest in 9 AD?	Varus's legions	Caesar's Tenth	The Ninth Hispana	The Praetorian Guard
+his_code_1944_soviet	Expert	What was the code name of the 1944 Soviet offensive that destroyed Army Group Centre?	Operation Bagration	Operation Uranus	Operation Typhoon	Operation Citadel
+his_code_atomic_bomb	Expert	What was the code name for the US atomic bomb project?	Manhattan Project	Trinity Project	Operation Ivy	Project Alberta
+his_atomic_bomb_test	Expert	What was the name of the first atomic bomb test in 1945?	Trinity	Little Boy	Fat Man	Castle Bravo
+his_japanese_soldier_kept	Expert	Which Japanese soldier kept fighting in the Philippine jungle until 1974?	Hiroo Onoda	Shoichi Yokoi	Teruo Nakamura	Saburo Sakai
+his_english_scholar_translated	Expert	Which English scholar first translated the whole Bible into English in the 1380s?	John Wycliffe	William Tyndale	Thomas More	John Knox
+his_english_chancellor_wrote	Expert	Which English chancellor wrote 'Utopia' and was executed by Henry VIII?	Thomas More	Thomas Cromwell	Thomas Wolsey	Thomas Cranmer
+his_aztec_emperor_met	Expert	Which Aztec emperor met Cortes in 1519?	Moctezuma II	Cuauhtemoc	Itzcoatl	Ahuitzotl
+his_last_inca_emperor	Expert	Which last Inca emperor was captured by Pizarro and executed in 1533?	Atahualpa	Huascar	Pachacuti	Tupac Amaru
+his_norman_duke_became	Expert	Which Norman duke became King of England in 1066?	William the Conqueror	Harold Godwinson	Robert Curthose	Henry I
+his_metre_embroidered_cloth	Expert	What is the 70-metre embroidered cloth showing the Norman conquest called?	Bayeux Tapestry	Unicorn Tapestry	Lady and the Unicorn	Apocalypse Tapestry
+his_suffragette_died_stepping	Expert	Which suffragette died after stepping in front of the King's horse at the 1913 Derby?	Emily Davison	Emmeline Pankhurst	Christabel Pankhurst	Annie Kenney
+his_european_country_gave	Expert	Which European country first gave women full voting and candidacy rights, in 1906?	Finland	Norway	Denmark	Sweden
+his_chinese_philosopher_traditionally	Expert	Which Chinese philosopher is traditionally credited with the 'Tao Te Ching'?	Laozi	Confucius	Zhuangzi	Mozi
+his_indian_prince_became	Expert	Which Indian prince became the Buddha?	Siddhartha Gautama	Ashoka	Mahavira	Chandragupta
+his_ancient_indian_author	Expert	Which ancient Indian author wrote the 'Arthashastra' on statecraft?	Chanakya	Kalidasa	Valmiki	Panini
+his_japanese_prince_credited	Expert	Which Japanese prince is credited with Japan's first constitution in 604?	Prince Shotoku	Prince Genji	Emperor Jimmu	Oda Nobunaga
+his_japanese_warlord_unified	Expert	Which Japanese warlord unified Japan and became shogun in 1603?	Tokugawa Ieyasu	Oda Nobunaga	Toyotomi Hideyoshi	Minamoto no Yoritomo
+his_japanese_warlord_former	Expert	Which Japanese warlord, a former peasant, unified Japan before Tokugawa?	Toyotomi Hideyoshi	Oda Nobunaga	Takeda Shingen	Uesugi Kenshin

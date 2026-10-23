@@ -94,6 +94,8 @@ sci_country_chandrayaan_mission	Easy	Which country's Chandrayaan-3 mission lande
 sci_invisible_light_remote	Easy	Which invisible light do TV remote controls use?	Infrared	Ultraviolet	X-rays	Microwaves
 sci_cave_formations_hang	Easy	Which cave formations hang down from the ceiling?	Stalactites	Stalagmites	Geodes	Columns
 sci_force_keeps_moon	Easy	What force keeps the Moon in orbit around the Earth?	Gravity	Magnetism	Friction	Inertia
+sci_frozen_water	Easy	What is frozen water called?	Ice	Steam	Dew	Fog
+sci_call_water_gas	Easy	What do we call water in gas form?	Steam	Ice	Smoke	Mist
 sci_jowisz	Medium	Which planet of the Solar System is the largest?	Jupiter	Saturn	Neptune	Uranus
 sci_kopernik	Medium	Who proved that the Earth orbits the Sun, not the other way around?	Nicolaus Copernicus	Isaac Newton	Galileo Galilei	Johannes Kepler
 sci_grawitacja	Medium	Who formulated the law of universal gravitation?	Isaac Newton	Albert Einstein	Nikola Tesla	Michael Faraday
@@ -253,6 +255,14 @@ sci_speed_sound_air	Medium	What is the speed of sound in air, roughly, in metres
 sci_colour_get_mixing	Medium	What colour do you get by mixing blue and yellow paint?	Green	Purple	Orange	Brown
 sci_streak_light_space	Medium	What is the name for the streak of light when a space rock burns in the sky?	Meteor	Comet	Nova	Aurora
 sci_part_earth_lies	Medium	Which part of the Earth lies under the crust?	Mantle	Core	Atmosphere	Lithosphere
+sci_water_turning_gas	Medium	What is the name for water turning into a gas?	Evaporation	Condensation	Melting	Freezing
+sci_gas_turning_back	Medium	What is the name for gas turning back into a liquid, like on a cold window?	Condensation	Evaporation	Sublimation	Precipitation
+sci_solid_turns_straight	Medium	What is it called when a solid turns straight into a gas, like dry ice?	Sublimation	Evaporation	Melting	Condensation
+sci_dry_ice_made	Medium	What is dry ice made of?	Frozen carbon dioxide	Frozen nitrogen	Frozen oxygen	Salt crystals
+sci_type_energy_battery	Medium	Which type of energy does a battery store?	Chemical energy	Nuclear energy	Kinetic energy	Thermal energy
+sci_scientist_equation_squared	Medium	Which scientist is famous for the equation E = mc squared?	Albert Einstein	Isaac Newton	Niels Bohr	Max Planck
+sci_makes_popcorn_pop	Medium	What makes popcorn pop?	Water inside turning to steam	Air pockets bursting	Oil soaking in	Sugar caramelising
+sci_onions_make_cry	Medium	Why do onions make you cry?	They release an irritating gas	Their juice splashes your eyes	Their smell triggers sadness	Their skin is acidic
 sci_einstein	Hard	Who formulated the theory of relativity?	Albert Einstein	Isaac Newton	Niels Bohr	Max Planck
 sci_penicylina	Hard	Who discovered penicillin?	Alexander Fleming	Louis Pasteur	Robert Koch	Jonas Salk
 sci_sila	Hard	What is the SI unit of force?	Newton	Joule	Watt	Pascal
@@ -363,6 +373,21 @@ sci_scientist_explained_sky	Hard	Which scientist explained why the sky is blue, 
 sci_scientist_united_electricity	Hard	Which scientist united electricity and magnetism in four famous equations?	James Clerk Maxwell	Michael Faraday	Andre-Marie Ampere	Nikola Tesla
 sci_war_currents	Hard	What was the 'war of the currents' about?	AC versus DC electricity	Gold versus silver money	Ocean currents	Rival canal routes
 sci_planet_densest_solar	Hard	Which planet is the densest in the Solar System?	Earth	Jupiter	Mercury	Venus
+sci_type_energy_moving	Hard	Which type of energy does a moving object have?	Kinetic energy	Potential energy	Chemical energy	Elastic energy
+sci_metal_spoon_feel	Hard	Why does a metal spoon feel colder than a wooden one at the same temperature?	Metal conducts heat away faster	Metal is actually colder	Wood makes its own heat	Metal reflects warmth
+sci_scientist_law_says	Hard	Which scientist's law says every action has an equal and opposite reaction?	Isaac Newton	Galileo Galilei	Robert Hooke	Albert Einstein
+sci_scientist_law_describes	Hard	Which scientist's law describes how springs stretch?	Robert Hooke	Isaac Newton	Blaise Pascal	Robert Boyle
+sci_scientist_law_links	Hard	Which scientist's law links the pressure and volume of a gas?	Robert Boyle	Robert Hooke	Jacques Charles	Amedeo Avogadro
+sci_pluto_reclassified_dwarf	Hard	When was Pluto reclassified as a dwarf planet?	2006	1999	2012	1986
+sci_stand_squared	Hard	What does the 'c' stand for in E = mc squared?	The speed of light	A constant of gravity	Charge	Calories
+sci_english_chemist_proposed	Hard	Which English chemist proposed modern atomic theory around 1803?	John Dalton	Humphry Davy	Michael Faraday	Joseph Priestley
+sci_english_scientist_discovered_2	Hard	Which English scientist discovered oxygen in 1774, calling it 'dephlogisticated air'?	Joseph Priestley	Antoine Lavoisier	Henry Cavendish	Robert Boyle
+sci_bread_stale	Hard	Why does bread go stale?	Starch recrystallises	Bacteria eat it	Yeast keeps growing	Air turns it to sugar
+sci_sea_look_blue	Hard	Why does the sea look blue?	Water absorbs red light	It reflects only the sky	Salt is blue	Algae colour it
+sci_scientist_studies_volcanoes	Hard	What is the name for a scientist who studies volcanoes?	Volcanologist	Seismologist	Petrologist	Speleologist
+sci_scientist_explores_caves	Hard	What is the name for a scientist who explores caves?	Speleologist	Volcanologist	Hydrologist	Glaciologist
+sci_molten_rock_while	Hard	What is the name for molten rock while it is still underground?	Magma	Lava	Pumice	Basalt
+sci_dark_volcanic_rock	Hard	Which dark volcanic rock forms the six-sided columns of the Giant's Causeway?	Basalt	Granite	Obsidian	Limestone
 sci_kwant	Expert	Who launched quantum theory?	Max Planck	Albert Einstein	Werner Heisenberg	Erwin Schrodinger
 sci_entropia	Expert	Which law of thermodynamics states that entropy increases?	The second	The first	The third	The zeroth
 sci_hubble	Expert	Who discovered that the Universe is expanding?	Edwin Hubble	Albert Einstein	Carl Sagan	Georges Lemaitre
@@ -429,3 +454,25 @@ sci_scientist_cloud_chamber	Expert	Which scientist's cloud chamber made particle
 sci_austrian_physicist_helped	Expert	Which Austrian physicist helped discover nuclear fission but was left out of the Nobel Prize?	Lise Meitner	Otto Hahn	Fritz Strassmann	Erwin Schrodinger
 sci_long_light_moon	Expert	How long does light from the Moon take to reach Earth?	About 1.3 seconds	About 8 minutes	About 1 minute	About 1 hour
 sci_astronomer_discovered_uranus	Expert	Which astronomer discovered Uranus in 1781?	William Herschel	Caroline Herschel	Edmond Halley	Johann Galle
+sci_italian_scientist_number	Expert	Which Italian scientist's number says how many particles are in a mole?	Amedeo Avogadro	Alessandro Volta	Galileo Galilei	Evangelista Torricelli
+sci_italian_invented_mercury	Expert	Which Italian invented the mercury barometer in 1643?	Evangelista Torricelli	Galileo Galilei	Alessandro Volta	Luigi Galvani
+sci_italian_made_frog	Expert	Which Italian made frog legs twitch with electricity, inspiring 'Frankenstein'?	Luigi Galvani	Alessandro Volta	Giovanni Aldini	Galileo Galilei
+sci_italian_built_electric	Expert	Which Italian built the first electric battery, the voltaic pile, in 1800?	Alessandro Volta	Luigi Galvani	Guglielmo Marconi	Amedeo Avogadro
+sci_danish_astronomer_measured	Expert	Which Danish astronomer first measured the speed of light, using Jupiter's moons, in 1676?	Ole Romer	Tycho Brahe	Niels Bohr	Hans Christian Orsted
+sci_young_american_discovered	Expert	Which young American discovered Pluto in 1930?	Clyde Tombaugh	Percival Lowell	Edwin Hubble	Carl Sagan
+sci_british_girl_suggested	Expert	Which British girl suggested the name 'Pluto' at age 11?	Venetia Burney	Mary Anning	Ada Lovelace	Caroline Herschel
+sci_dwarf_planet_discovery	Expert	Which dwarf planet's discovery in 2005 led to Pluto's demotion?	Eris	Makemake	Haumea	Sedna
+sci_english_scientist_isolated	Expert	Which English scientist first isolated hydrogen, calling it 'inflammable air'?	Henry Cavendish	Joseph Priestley	Humphry Davy	Robert Boyle
+sci_english_chemist_isolated	Expert	Which English chemist isolated sodium and potassium with electricity in 1807?	Humphry Davy	Michael Faraday	John Dalton	William Ramsay
+sci_scottish_chemist_discovered	Expert	Which Scottish chemist discovered the noble gases neon, krypton and xenon?	William Ramsay	Joseph Black	Thomas Graham	James Dewar
+sci_scottish_scientist_invented	Expert	Which Scottish scientist invented the vacuum flask?	James Dewar	William Ramsay	Joseph Black	Lord Kelvin
+sci_smell_rain_dry	Expert	What is the name for the smell of rain on dry earth?	Petrichor	Geosmin	Ozone	Humus
+sci_compound_made_soil	Expert	Which compound made by soil bacteria gives rain its earthy smell?	Geosmin	Petrichor	Ozone	Chlorophyll
+sci_chemical_reaction_browns	Expert	Which chemical reaction browns toast and seared steak?	Maillard reaction	Caramelisation	Oxidation	Fermentation
+sci_sugar_turns_brown	Expert	What is it called when sugar turns brown and nutty on its own when heated?	Caramelisation	Maillard reaction	Hydrolysis	Combustion
+sci_curveball_spinning_football	Expert	Why does a curveball or spinning football swerve in the air?	Magnus effect	Coriolis effect	Bernoulli wind	Doppler effect
+sci_hot_fast_cloud	Expert	What is the name of the hot, fast cloud of gas and ash from an erupting volcano?	Pyroclastic flow	Lahar	Tephra	Caldera
+sci_volcanic_mudflow	Expert	What is the name of a volcanic mudflow?	Lahar	Pyroclastic flow	Tephra	Fumarole
+sci_huge_crater_left	Expert	What is the name of the huge crater left when a volcano collapses?	Caldera	Crater lake	Vent	Maar
+sci_volcano_1883_eruption	Expert	Which volcano's 1883 eruption was heard nearly 5,000 km away?	Krakatoa	Tambora	Mount St. Helens	Pelee
+sci_icelandic_volcano_2010	Expert	Which Icelandic volcano's 2010 eruption grounded European flights?	Eyjafjallajokull	Hekla	Katla	Grimsvotn

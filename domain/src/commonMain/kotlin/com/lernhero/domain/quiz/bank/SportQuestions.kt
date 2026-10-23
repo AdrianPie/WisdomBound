@@ -147,7 +147,9 @@ object SportQuestions {
         q("spo_french_manager_led", "Which French manager led Arsenal for 22 years?", "Arsene Wenger", listOf("Gerard Houllier", "Didier Deschamps", "Claude Puel"), E),
         q("spo_coach_barcelona_team", "Which coach's Barcelona team of 2008-2012 made 'tiki-taka' famous?", "Pep Guardiola", listOf("Luis Enrique", "Frank Rijkaard", "Johan Cruyff"), E),
         q("spo_german_coach_led", "Which German coach led Liverpool to the 2019 Champions League title?", "Jurgen Klopp", listOf("Joachim Low", "Thomas Tuchel", "Hansi Flick"), E),
-        q("spo_players_football_team", "How many players does a football team have on the pitch?", "Eleven", listOf("Ten", "Nine", "Twelve"), E)
+        q("spo_players_football_team", "How many players does a football team have on the pitch?", "Eleven", listOf("Ten", "Nine", "Twelve"), E),
+        q("spo_sport_hit_ball", "In which sport do you hit a ball over a net with rackets on a grass court at Wimbledon?", "Tennis", listOf("Badminton", "Squash", "Volleyball"), E),
+        q("spo_shape_rugby_ball", "What shape is a rugby ball?", "Oval", listOf("Round", "Square", "Flat"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -357,7 +359,12 @@ object SportQuestions {
         q("spo_sport_events_kata", "Which sport has events called kata and kumite?", "Karate", listOf("Judo", "Taekwondo", "Fencing"), M),
         q("spo_sport_uses_puck", "Which sport uses a puck?", "Ice hockey", listOf("Lacrosse", "Curling", "Polo"), M),
         q("spo_sport_players_ride", "In which sport do players ride horses and hit a ball with a mallet?", "Polo", listOf("Croquet", "Hurling", "Lacrosse"), M),
-        q("spo_sport_ride_board", "What is the name of the sport where you ride a board on ocean waves?", "Surfing", listOf("Kitesurfing", "Wakeboarding", "Rowing"), M)
+        q("spo_sport_ride_board", "What is the name of the sport where you ride a board on ocean waves?", "Surfing", listOf("Kitesurfing", "Wakeboarding", "Rowing"), M),
+        q("spo_points_field_goal", "How many points is a field goal worth in American football?", "Three", listOf("Two", "One", "Six"), M),
+        q("spo_bases_baseball_diamond", "How many bases are there on a baseball diamond, including home plate?", "Four", listOf("Three", "Five", "Six"), M),
+        q("spo_minutes_long_football", "How many minutes long is a football match, not counting extra time?", "90", listOf("80", "100", "60"), M),
+        q("spo_footballer_nicknamed_rei", "Which famous footballer was nicknamed 'O Rei', the King?", "Pele", listOf("Ronaldo", "Garrincha", "Zico"), M),
+        q("spo_country_formula_cars", "In which country are the Formula 1 cars of Ferrari made?", "Italy", listOf("Germany", "France", "Spain"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -467,7 +474,19 @@ object SportQuestions {
         q("spo_sport_uses_terms_2", "Which sport uses terms like 'birdie', 'bogey' and 'caddie'?", "Golf", listOf("Tennis", "Cricket", "Polo"), H),
         q("spo_country_home_sport", "Which country is the home of the sport of hurling?", "Ireland", listOf("Scotland", "Wales", "England"), H),
         q("spo_trophy_awarded_winner", "What is the name of the trophy awarded to the winner of the Rugby World Cup?", "Webb Ellis Cup", listOf("Calcutta Cup", "Bledisloe Cup", "Six Nations Trophy"), H),
-        q("spo_sport_played_nba", "Which sport is played in the NBA?", "Basketball", listOf("American football", "Baseball", "Ice hockey"), H)
+        q("spo_sport_played_nba", "Which sport is played in the NBA?", "Basketball", listOf("American football", "Baseball", "Ice hockey"), H),
+        q("spo_periods_ice_hockey", "How many periods are there in an ice hockey game?", "Three", listOf("Two", "Four", "Five"), H),
+        q("spo_quarters_nba_basketball", "How many quarters are there in an NBA basketball game?", "Four", listOf("Two", "Three", "Six"), H),
+        q("spo_distance_standard_running", "What is the distance of a standard running track lap?", "400 metres", listOf("200 metres", "500 metres", "300 metres"), H),
+        q("spo_hurdles_110_hurdles", "How many hurdles are there in a 110 m hurdles race?", "Ten", listOf("Eight", "Twelve", "Six"), H),
+        q("spo_tennis_term", "In tennis, what is the term for 40-40?", "Deuce", listOf("Advantage", "Love-all", "Tie"), H),
+        q("spo_country_home_monaco", "Which country is home to the Monaco Grand Prix?", "Monaco", listOf("France", "Italy", "Spain"), H),
+        q("spo_black_white_chequered", "What does a black-and-white chequered flag mean in motor racing?", "The race is over", listOf("Danger ahead", "Pit stop", "Final lap"), H),
+        q("spo_yellow_flag_mean", "What does a yellow flag mean in motor racing?", "Danger, no overtaking", listOf("Race finished", "Leader is coming", "Rain warning"), H),
+        q("spo_sport_see_fosbury", "In which sport would you see a 'Fosbury Flop'?", "High jump", listOf("Long jump", "Pole vault", "Gymnastics"), H),
+        q("spo_game_uses_moves", "Which game uses the moves castling and en passant?", "Chess", listOf("Draughts", "Go", "Backgammon"), H),
+        q("spo_winners_given_ancient", "What were winners given at the ancient Olympic Games?", "Olive wreaths", listOf("Gold medals", "Bags of silver", "Bronze cups"), H),
+        q("spo_australian_swimmer_nicknamed", "Which Australian swimmer was nicknamed 'Thorpedo'?", "Ian Thorpe", listOf("Grant Hackett", "Kieren Perkins", "Michael Klim"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -538,6 +557,21 @@ object SportQuestions {
         q("spo_sport_michael_jordan", "Which sport did Michael Jordan briefly switch to in 1994?", "Baseball", listOf("Golf", "American football", "Tennis"), X),
         q("spo_boxer_born_cassius", "Which boxer was born Cassius Clay?", "Muhammad Ali", listOf("Joe Frazier", "George Foreman", "Sonny Liston"), X),
         q("spo_1974_boxing_match", "Which famous 1974 boxing match took place in Zaire?", "The Rumble in the Jungle", listOf("The Thrilla in Manila", "The Fight of the Century", "The Long Count"), X),
-        q("spo_1975_boxing_match", "Which 1975 boxing match between Ali and Frazier took place in the Philippines?", "The Thrilla in Manila", listOf("The Rumble in the Jungle", "The Brawl in Manila", "The War in Asia"), X)
+        q("spo_1975_boxing_match", "Which 1975 boxing match between Ali and Frazier took place in the Philippines?", "The Thrilla in Manila", listOf("The Rumble in the Jungle", "The Brawl in Manila", "The War in Asia"), X),
+        q("spo_events_men_decathlon", "How many events are in the men's decathlon?", "Ten", listOf("Seven", "Eight", "Twelve"), X),
+        q("spo_events_women_heptathlon", "How many events are in the women's heptathlon?", "Seven", listOf("Five", "Ten", "Six"), X),
+        q("spo_long_cricket_pitch", "How long is a cricket pitch between the wickets?", "22 yards", listOf("18 yards", "25 yards", "30 yards"), X),
+        q("spo_zero_runs_scored", "What is the name for zero runs scored by a batsman out in cricket?", "Duck", listOf("Love", "Nil", "Egg"), X),
+        q("spo_archery_colour_centre", "In archery, what colour is the centre of an Olympic target?", "Gold", listOf("Red", "Black", "White"), X),
+        q("spo_final_jump_triple", "What is the name for the final jump in a triple jump, after the hop and the step?", "Jump", listOf("Leap", "Bound", "Spring"), X),
+        q("spo_american_athlete_won", "Which American athlete won four golds in the same events as Jesse Owens in 1984?", "Carl Lewis", listOf("Michael Johnson", "Edwin Moses", "Florence Griffith-Joyner"), X),
+        q("spo_city_1972_fischer", "In which city was the famous 1972 Fischer-Spassky chess match held?", "Reykjavik", listOf("Moscow", "New York", "Helsinki"), X),
+        q("spo_player_move_but", "What is it called when a player can't move but isn't in check, ending the chess game as a draw?", "Stalemate", listOf("Checkmate", "Zugzwang", "Fork"), X),
+        q("spo_chess_term_forced", "What is the chess term for being forced to make a move that weakens your position?", "Zugzwang", listOf("Gambit", "Stalemate", "En prise"), X),
+        q("spo_chess_opening_pawn", "What is a chess opening called in which a pawn is sacrificed for an advantage?", "Gambit", listOf("Fianchetto", "Castling", "Zugzwang"), X),
+        q("spo_olympic_event_held", "Which Olympic event was held from 1912 to 1948 alongside sports, with medals for paintings?", "Art competitions", listOf("Poetry slams", "Music contests", "Dance battles"), X),
+        q("spo_sport_included_olympics", "Which sport was included in the Olympics from 1900 to 1920 with teams pulling a rope?", "Tug of war", listOf("Rope climbing", "Rowing relay", "Cable jumping"), X),
+        q("spo_soviet_gymnast_held", "Which Soviet gymnast held the record for most Olympic medals for 48 years?", "Larisa Latynina", listOf("Olga Korbut", "Nadia Comaneci", "Svetlana Khorkina"), X),
+        q("spo_finnish_ski_jumper", "Which Finnish ski jumper won three gold medals at the 1988 Olympics?", "Matti Nykanen", listOf("Janne Ahonen", "Toni Nieminen", "Jari Puikkonen"), X)
     )
 }

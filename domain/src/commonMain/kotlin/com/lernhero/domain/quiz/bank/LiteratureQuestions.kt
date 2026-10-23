@@ -436,7 +436,8 @@ object LiteratureQuestions {
         q("lit_wrote_don_quixote", "Who wrote 'Don Quixote'?", "Miguel de Cervantes", listOf("Lope de Vega", "Gabriel Garcia Marquez", "Federico Garcia Lorca"), M),
         q("lit_boy_never_grows", "What is the name of the boy who never grows up in J. M. Barrie's story?", "Peter Pan", listOf("Tom Sawyer", "Oliver Twist", "Christopher Robin"), M),
         q("lit_wizard_character_wants", "In 'The Wizard of Oz', which character wants a brain?", "The Scarecrow", listOf("The Tin Man", "The Cowardly Lion", "Toto"), M),
-        q("lit_author_created_cat", "Which author created 'The Cat in the Hat'?", "Dr. Seuss", listOf("Roald Dahl", "Maurice Sendak", "Beatrix Potter"), M)
+        q("lit_author_created_cat", "Which author created 'The Cat in the Hat'?", "Dr. Seuss", listOf("Roald Dahl", "Maurice Sendak", "Beatrix Potter"), M),
+        q("lit_fairy_tale_princess", "Which fairy tale princess lets down her long hair from a tower?", "Rapunzel", listOf("Sleeping Beauty", "Cinderella", "Snow White"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -563,7 +564,12 @@ object LiteratureQuestions {
         q("lit_wrote_war_worlds", "Who wrote 'War of the Worlds'?", "H. G. Wells", listOf("Jules Verne", "Arthur C. Clarke", "Isaac Asimov"), H),
         q("lit_isaac_asimov_rules", "Which Isaac Asimov rules govern how robots must behave?", "Three Laws of Robotics", listOf("Four Robot Codes", "Prime Directive", "Robot Charter"), H),
         q("lit_author_wrote_matilda", "Which author wrote 'Matilda' and 'The BFG'?", "Roald Dahl", listOf("Michael Morpurgo", "David Walliams", "Philip Pullman"), H),
-        q("lit_detective_edgar_allan", "Which detective did Edgar Allan Poe create, often called the first fictional detective?", "C. Auguste Dupin", listOf("Sherlock Holmes", "Father Brown", "Inspector Bucket"), H)
+        q("lit_detective_edgar_allan", "Which detective did Edgar Allan Poe create, often called the first fictional detective?", "C. Auguste Dupin", listOf("Sherlock Holmes", "Father Brown", "Inspector Bucket"), H),
+        q("lit_must_queen_guess", "What must the queen guess to escape her deal with Rumpelstiltskin?", "His name", listOf("His age", "His home", "His birthday"), H),
+        q("lit_pied_piper_hamelin", "In 'The Pied Piper of Hamelin', what does the piper lead away when he is not paid?", "The children", listOf("The rats", "The cattle", "The soldiers"), H),
+        q("lit_four_animals_form", "Which four animals form a band in a Brothers Grimm tale?", "Donkey, dog, cat and rooster", listOf("Horse, pig, duck and goat", "Cow, sheep, dog and cat", "Fox, wolf, bear and hare"), H),
+        q("lit_character_thousand_nights", "Which character from 'One Thousand and One Nights' finds a cave of treasure?", "Ali Baba", listOf("Aladdin", "Sinbad", "Scheherazade"), H),
+        q("lit_author_wrote_under", "Which author wrote under the pen name George Eliot?", "Mary Ann Evans", listOf("Charlotte Bronte", "Jane Austen", "Elizabeth Gaskell"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -627,6 +633,14 @@ object LiteratureQuestions {
         q("lit_swedish_author_wrote", "Which Swedish author wrote about Nils Holgersson flying on a goose?", "Selma Lagerlof", listOf("Astrid Lindgren", "August Strindberg", "Tove Jansson"), X),
         q("lit_german_brothers_collected", "Which German brothers collected fairy tales such as 'Hansel and Gretel'?", "The Brothers Grimm", listOf("The Brothers Mann", "The Schlegel brothers", "The Humboldt brothers"), X),
         q("lit_job_antoine_saint", "Which job did Antoine de Saint-Exupery have besides writing?", "Pilot", listOf("Sailor", "Doctor", "Teacher"), X),
-        q("lit_reclusive_american_poet", "Which reclusive American poet had almost all of her nearly 1800 poems published after death?", "Emily Dickinson", listOf("Sylvia Plath", "Elizabeth Bishop", "Anne Sexton"), X)
+        q("lit_reclusive_american_poet", "Which reclusive American poet had almost all of her nearly 1800 poems published after death?", "Emily Dickinson", listOf("Sylvia Plath", "Elizabeth Bishop", "Anne Sexton"), X),
+        q("lit_french_poet_wrote", "Which French poet wrote fables like 'The Tortoise and the Hare' in verse?", "Jean de La Fontaine", listOf("Charles Perrault", "Moliere", "Racine"), X),
+        q("lit_under_pen_bronte", "Under what pen name did the Bronte sisters first publish?", "Currer, Ellis and Acton Bell", listOf("George, Edward and Arthur Eliot", "Brown, Brook and Bell", "The Haworth Sisters"), X),
+        q("lit_french_author_real", "Which French author's real name was Francois-Marie Arouet?", "Voltaire", listOf("Moliere", "Stendhal", "Rousseau"), X),
+        q("lit_french_playwright_real", "Which French playwright's real name was Jean-Baptiste Poquelin?", "Moliere", listOf("Voltaire", "Racine", "Corneille"), X),
+        q("lit_american_author_wrote", "Which American author wrote short stories with twist endings under the name O. Henry?", "William Sydney Porter", listOf("Ambrose Bierce", "Bret Harte", "Washington Irving"), X),
+        q("lit_author_published_robert", "Which author published 'Robert Galbraith' crime novels under a pen name?", "J. K. Rowling", listOf("Stephen King", "Agatha Christie", "Anne Rice"), X),
+        q("lit_horror_writer_once", "Which horror writer once published as Richard Bachman?", "Stephen King", listOf("Dean Koontz", "Clive Barker", "Peter Straub"), X),
+        q("lit_shakespeare_play_includes", "Which Shakespeare play includes the stage direction 'Exit, pursued by a bear'?", "The Winter's Tale", listOf("The Tempest", "As You Like It", "Cymbeline"), X)
     )
 }

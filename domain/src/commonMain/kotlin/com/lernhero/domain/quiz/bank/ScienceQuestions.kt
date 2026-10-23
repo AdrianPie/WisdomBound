@@ -119,7 +119,9 @@ object ScienceQuestions {
         q("sci_country_chandrayaan_mission", "Which country's Chandrayaan-3 mission landed near the Moon's south pole in 2023?", "India", listOf("China", "Japan", "Israel"), E),
         q("sci_invisible_light_remote", "Which invisible light do TV remote controls use?", "Infrared", listOf("Ultraviolet", "X-rays", "Microwaves"), E),
         q("sci_cave_formations_hang", "Which cave formations hang down from the ceiling?", "Stalactites", listOf("Stalagmites", "Geodes", "Columns"), E),
-        q("sci_force_keeps_moon", "What force keeps the Moon in orbit around the Earth?", "Gravity", listOf("Magnetism", "Friction", "Inertia"), E)
+        q("sci_force_keeps_moon", "What force keeps the Moon in orbit around the Earth?", "Gravity", listOf("Magnetism", "Friction", "Inertia"), E),
+        q("sci_frozen_water", "What is frozen water called?", "Ice", listOf("Steam", "Dew", "Fog"), E),
+        q("sci_call_water_gas", "What do we call water in gas form?", "Steam", listOf("Ice", "Smoke", "Mist"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -282,7 +284,15 @@ object ScienceQuestions {
         q("sci_speed_sound_air", "What is the speed of sound in air, roughly, in metres per second?", "343", listOf("150", "1000", "3000"), M),
         q("sci_colour_get_mixing", "What colour do you get by mixing blue and yellow paint?", "Green", listOf("Purple", "Orange", "Brown"), M),
         q("sci_streak_light_space", "What is the name for the streak of light when a space rock burns in the sky?", "Meteor", listOf("Comet", "Nova", "Aurora"), M),
-        q("sci_part_earth_lies", "Which part of the Earth lies under the crust?", "Mantle", listOf("Core", "Atmosphere", "Lithosphere"), M)
+        q("sci_part_earth_lies", "Which part of the Earth lies under the crust?", "Mantle", listOf("Core", "Atmosphere", "Lithosphere"), M),
+        q("sci_water_turning_gas", "What is the name for water turning into a gas?", "Evaporation", listOf("Condensation", "Melting", "Freezing"), M),
+        q("sci_gas_turning_back", "What is the name for gas turning back into a liquid, like on a cold window?", "Condensation", listOf("Evaporation", "Sublimation", "Precipitation"), M),
+        q("sci_solid_turns_straight", "What is it called when a solid turns straight into a gas, like dry ice?", "Sublimation", listOf("Evaporation", "Melting", "Condensation"), M),
+        q("sci_dry_ice_made", "What is dry ice made of?", "Frozen carbon dioxide", listOf("Frozen nitrogen", "Frozen oxygen", "Salt crystals"), M),
+        q("sci_type_energy_battery", "Which type of energy does a battery store?", "Chemical energy", listOf("Nuclear energy", "Kinetic energy", "Thermal energy"), M),
+        q("sci_scientist_equation_squared", "Which scientist is famous for the equation E = mc squared?", "Albert Einstein", listOf("Isaac Newton", "Niels Bohr", "Max Planck"), M),
+        q("sci_makes_popcorn_pop", "What makes popcorn pop?", "Water inside turning to steam", listOf("Air pockets bursting", "Oil soaking in", "Sugar caramelising"), M),
+        q("sci_onions_make_cry", "Why do onions make you cry?", "They release an irritating gas", listOf("Their juice splashes your eyes", "Their smell triggers sadness", "Their skin is acidic"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -396,7 +406,22 @@ object ScienceQuestions {
         q("sci_scientist_explained_sky", "Which scientist explained why the sky is blue, through scattering?", "Lord Rayleigh", listOf("Isaac Newton", "Albert Einstein", "James Clerk Maxwell"), H),
         q("sci_scientist_united_electricity", "Which scientist united electricity and magnetism in four famous equations?", "James Clerk Maxwell", listOf("Michael Faraday", "Andre-Marie Ampere", "Nikola Tesla"), H),
         q("sci_war_currents", "What was the 'war of the currents' about?", "AC versus DC electricity", listOf("Gold versus silver money", "Ocean currents", "Rival canal routes"), H),
-        q("sci_planet_densest_solar", "Which planet is the densest in the Solar System?", "Earth", listOf("Jupiter", "Mercury", "Venus"), H)
+        q("sci_planet_densest_solar", "Which planet is the densest in the Solar System?", "Earth", listOf("Jupiter", "Mercury", "Venus"), H),
+        q("sci_type_energy_moving", "Which type of energy does a moving object have?", "Kinetic energy", listOf("Potential energy", "Chemical energy", "Elastic energy"), H),
+        q("sci_metal_spoon_feel", "Why does a metal spoon feel colder than a wooden one at the same temperature?", "Metal conducts heat away faster", listOf("Metal is actually colder", "Wood makes its own heat", "Metal reflects warmth"), H),
+        q("sci_scientist_law_says", "Which scientist's law says every action has an equal and opposite reaction?", "Isaac Newton", listOf("Galileo Galilei", "Robert Hooke", "Albert Einstein"), H),
+        q("sci_scientist_law_describes", "Which scientist's law describes how springs stretch?", "Robert Hooke", listOf("Isaac Newton", "Blaise Pascal", "Robert Boyle"), H),
+        q("sci_scientist_law_links", "Which scientist's law links the pressure and volume of a gas?", "Robert Boyle", listOf("Robert Hooke", "Jacques Charles", "Amedeo Avogadro"), H),
+        q("sci_pluto_reclassified_dwarf", "When was Pluto reclassified as a dwarf planet?", "2006", listOf("1999", "2012", "1986"), H),
+        q("sci_stand_squared", "What does the 'c' stand for in E = mc squared?", "The speed of light", listOf("A constant of gravity", "Charge", "Calories"), H),
+        q("sci_english_chemist_proposed", "Which English chemist proposed modern atomic theory around 1803?", "John Dalton", listOf("Humphry Davy", "Michael Faraday", "Joseph Priestley"), H),
+        q("sci_english_scientist_discovered_2", "Which English scientist discovered oxygen in 1774, calling it 'dephlogisticated air'?", "Joseph Priestley", listOf("Antoine Lavoisier", "Henry Cavendish", "Robert Boyle"), H),
+        q("sci_bread_stale", "Why does bread go stale?", "Starch recrystallises", listOf("Bacteria eat it", "Yeast keeps growing", "Air turns it to sugar"), H),
+        q("sci_sea_look_blue", "Why does the sea look blue?", "Water absorbs red light", listOf("It reflects only the sky", "Salt is blue", "Algae colour it"), H),
+        q("sci_scientist_studies_volcanoes", "What is the name for a scientist who studies volcanoes?", "Volcanologist", listOf("Seismologist", "Petrologist", "Speleologist"), H),
+        q("sci_scientist_explores_caves", "What is the name for a scientist who explores caves?", "Speleologist", listOf("Volcanologist", "Hydrologist", "Glaciologist"), H),
+        q("sci_molten_rock_while", "What is the name for molten rock while it is still underground?", "Magma", listOf("Lava", "Pumice", "Basalt"), H),
+        q("sci_dark_volcanic_rock", "Which dark volcanic rock forms the six-sided columns of the Giant's Causeway?", "Basalt", listOf("Granite", "Obsidian", "Limestone"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -466,6 +491,28 @@ object ScienceQuestions {
         q("sci_scientist_cloud_chamber", "Which scientist's cloud chamber made particle tracks visible?", "Charles Wilson", listOf("Ernest Rutherford", "Hans Geiger", "Niels Bohr"), X),
         q("sci_austrian_physicist_helped", "Which Austrian physicist helped discover nuclear fission but was left out of the Nobel Prize?", "Lise Meitner", listOf("Otto Hahn", "Fritz Strassmann", "Erwin Schrodinger"), X),
         q("sci_long_light_moon", "How long does light from the Moon take to reach Earth?", "About 1.3 seconds", listOf("About 8 minutes", "About 1 minute", "About 1 hour"), X),
-        q("sci_astronomer_discovered_uranus", "Which astronomer discovered Uranus in 1781?", "William Herschel", listOf("Caroline Herschel", "Edmond Halley", "Johann Galle"), X)
+        q("sci_astronomer_discovered_uranus", "Which astronomer discovered Uranus in 1781?", "William Herschel", listOf("Caroline Herschel", "Edmond Halley", "Johann Galle"), X),
+        q("sci_italian_scientist_number", "Which Italian scientist's number says how many particles are in a mole?", "Amedeo Avogadro", listOf("Alessandro Volta", "Galileo Galilei", "Evangelista Torricelli"), X),
+        q("sci_italian_invented_mercury", "Which Italian invented the mercury barometer in 1643?", "Evangelista Torricelli", listOf("Galileo Galilei", "Alessandro Volta", "Luigi Galvani"), X),
+        q("sci_italian_made_frog", "Which Italian made frog legs twitch with electricity, inspiring 'Frankenstein'?", "Luigi Galvani", listOf("Alessandro Volta", "Giovanni Aldini", "Galileo Galilei"), X),
+        q("sci_italian_built_electric", "Which Italian built the first electric battery, the voltaic pile, in 1800?", "Alessandro Volta", listOf("Luigi Galvani", "Guglielmo Marconi", "Amedeo Avogadro"), X),
+        q("sci_danish_astronomer_measured", "Which Danish astronomer first measured the speed of light, using Jupiter's moons, in 1676?", "Ole Romer", listOf("Tycho Brahe", "Niels Bohr", "Hans Christian Orsted"), X),
+        q("sci_young_american_discovered", "Which young American discovered Pluto in 1930?", "Clyde Tombaugh", listOf("Percival Lowell", "Edwin Hubble", "Carl Sagan"), X),
+        q("sci_british_girl_suggested", "Which British girl suggested the name 'Pluto' at age 11?", "Venetia Burney", listOf("Mary Anning", "Ada Lovelace", "Caroline Herschel"), X),
+        q("sci_dwarf_planet_discovery", "Which dwarf planet's discovery in 2005 led to Pluto's demotion?", "Eris", listOf("Makemake", "Haumea", "Sedna"), X),
+        q("sci_english_scientist_isolated", "Which English scientist first isolated hydrogen, calling it 'inflammable air'?", "Henry Cavendish", listOf("Joseph Priestley", "Humphry Davy", "Robert Boyle"), X),
+        q("sci_english_chemist_isolated", "Which English chemist isolated sodium and potassium with electricity in 1807?", "Humphry Davy", listOf("Michael Faraday", "John Dalton", "William Ramsay"), X),
+        q("sci_scottish_chemist_discovered", "Which Scottish chemist discovered the noble gases neon, krypton and xenon?", "William Ramsay", listOf("Joseph Black", "Thomas Graham", "James Dewar"), X),
+        q("sci_scottish_scientist_invented", "Which Scottish scientist invented the vacuum flask?", "James Dewar", listOf("William Ramsay", "Joseph Black", "Lord Kelvin"), X),
+        q("sci_smell_rain_dry", "What is the name for the smell of rain on dry earth?", "Petrichor", listOf("Geosmin", "Ozone", "Humus"), X),
+        q("sci_compound_made_soil", "Which compound made by soil bacteria gives rain its earthy smell?", "Geosmin", listOf("Petrichor", "Ozone", "Chlorophyll"), X),
+        q("sci_chemical_reaction_browns", "Which chemical reaction browns toast and seared steak?", "Maillard reaction", listOf("Caramelisation", "Oxidation", "Fermentation"), X),
+        q("sci_sugar_turns_brown", "What is it called when sugar turns brown and nutty on its own when heated?", "Caramelisation", listOf("Maillard reaction", "Hydrolysis", "Combustion"), X),
+        q("sci_curveball_spinning_football", "Why does a curveball or spinning football swerve in the air?", "Magnus effect", listOf("Coriolis effect", "Bernoulli wind", "Doppler effect"), X),
+        q("sci_hot_fast_cloud", "What is the name of the hot, fast cloud of gas and ash from an erupting volcano?", "Pyroclastic flow", listOf("Lahar", "Tephra", "Caldera"), X),
+        q("sci_volcanic_mudflow", "What is the name of a volcanic mudflow?", "Lahar", listOf("Pyroclastic flow", "Tephra", "Fumarole"), X),
+        q("sci_huge_crater_left", "What is the name of the huge crater left when a volcano collapses?", "Caldera", listOf("Crater lake", "Vent", "Maar"), X),
+        q("sci_volcano_1883_eruption", "Which volcano's 1883 eruption was heard nearly 5,000 km away?", "Krakatoa", listOf("Tambora", "Mount St. Helens", "Pelee"), X),
+        q("sci_icelandic_volcano_2010", "Which Icelandic volcano's 2010 eruption grounded European flights?", "Eyjafjallajokull", listOf("Hekla", "Katla", "Grimsvotn"), X)
     )
 }

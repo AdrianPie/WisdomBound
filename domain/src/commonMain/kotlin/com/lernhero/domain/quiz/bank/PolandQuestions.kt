@@ -337,7 +337,9 @@ object PolandQuestions {
         q("pol_polish_city_capital", "Which Polish city was the capital before Warsaw?", "Krakow", listOf("Gniezno", "Poznan", "Plock"), M),
         q("pol_dragon_lived_under", "Which dragon lived under Wawel Hill in Krakow, according to legend?", "Smok Wawelski", listOf("Zmij", "Bazyliszek", "Smok Tatrzanski"), M),
         q("pol_legendary_creature_symbol", "Which legendary creature is the symbol of Warsaw?", "The Mermaid", listOf("The Dragon", "The White Eagle", "The Bear"), M),
-        q("pol_polish_dumplings_country", "Which Polish dumplings are the country's best-known dish?", "Pierogi", listOf("Golabki", "Placki", "Kopytka"), M)
+        q("pol_polish_dumplings_country", "Which Polish dumplings are the country's best-known dish?", "Pierogi", listOf("Golabki", "Placki", "Kopytka"), M),
+        q("pol_polish_dessert_doughnut", "Which Polish dessert is a doughnut eaten especially on Fat Thursday?", "Paczek", listOf("Faworki", "Sernik", "Makowiec"), M),
+        q("pol_polish_cheesecake_classic", "Which Polish cheesecake is a classic dessert?", "Sernik", listOf("Makowiec", "Piernik", "Mazurek"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -439,7 +441,12 @@ object PolandQuestions {
         q("pol_polish_lake_district", "Which Polish lake district is known as the 'Land of a Thousand Lakes'?", "Masuria", listOf("Kashubia", "Pomerania", "Podlasie"), H),
         q("pol_national_park_protects", "Which national park protects Europe's last primeval lowland forest, home to bison?", "Bialowieza", listOf("Kampinos", "Bieszczady", "Wigry"), H),
         q("pol_polish_soup_made", "Which Polish soup is made from fermented rye flour?", "Zurek", listOf("Barszcz", "Rosol", "Flaki"), H),
-        q("pol_mountain_range_forms", "Which mountain range forms Poland's southern border with Slovakia?", "Tatra Mountains", listOf("Sudetes", "Alps", "Ural Mountains"), H)
+        q("pol_mountain_range_forms", "Which mountain range forms Poland's southern border with Slovakia?", "Tatra Mountains", listOf("Sudetes", "Alps", "Ural Mountains"), H),
+        q("pol_polish_mountain_range", "Which Polish mountain range has the peak Sniezka?", "Karkonosze", listOf("Tatra", "Bieszczady", "Beskid Zywiecki"), H),
+        q("pol_polish_region_own", "Which Polish region is famous for its own language and the city of Kartuzy?", "Kashubia", listOf("Silesia", "Podhale", "Kurpie"), H),
+        q("pol_highland_folk_tatras", "Which highland folk from the Tatras are famous for their costumes and music?", "Gorale", listOf("Kashubians", "Kurpie", "Lemkos"), H),
+        q("pol_thin_wafer_poles", "What thin wafer do Poles share on Christmas Eve?", "Oplatek", listOf("Paczek", "Obwarzanek", "Prosforka"), H),
+        q("pol_pole_invented_kerosene", "Which Pole invented the kerosene lamp and started an oil industry in the 1850s?", "Ignacy Lukasiewicz", listOf("Jan Czochralski", "Kazimierz Funk", "Stefan Banach"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -492,6 +499,16 @@ object PolandQuestions {
         q("pol_translated_winnie_pooh", "Who translated 'Winnie the Pooh' into Polish as 'Kubus Puchatek'?", "Irena Tuwim", listOf("Julian Tuwim", "Jan Brzechwa", "Maria Konopnicka"), X),
         q("pol_polish_hammer_thrower", "Which Polish hammer thrower won three Olympic golds in a row?", "Anita Wlodarczyk", listOf("Kamila Skolimowska", "Joanna Fiodorow", "Malwina Kopron"), X),
         q("pol_tune_played_krakow", "What is the name of the tune played from Krakow's St Mary's Church tower?", "Hejnal Mariacki", listOf("Mazurek Dabrowskiego", "Bogurodzica", "Rota"), X),
-        q("pol_polish_spit_stretches", "Which Polish spit stretches about 35 km into the Baltic Sea?", "Hel Peninsula", listOf("Vistula Spit", "Curonian Spit", "Leba Spit"), X)
+        q("pol_polish_spit_stretches", "Which Polish spit stretches about 35 km into the Baltic Sea?", "Hel Peninsula", listOf("Vistula Spit", "Curonian Spit", "Leba Spit"), X),
+        q("pol_castle_poland_seat", "Which castle in Poland was the seat of the Grand Master of the Teutonic Order?", "Malbork Castle", listOf("Wawel Castle", "Ksiaz Castle", "Niedzica Castle"), X),
+        q("pol_polish_castle_third", "Which Polish castle is the third largest in the country and sits in Lower Silesia?", "Ksiaz Castle", listOf("Moszna Castle", "Czocha Castle", "Niedzica Castle"), X),
+        q("pol_polish_pomeranian_village", "Which Polish Pomeranian village has an unexplained 'Crooked Forest' of bent pine trees?", "Nowe Czarnowo", listOf("Leba", "Miedzyzdroje", "Ustka"), X),
+        q("pol_polish_town_chapel", "Which Polish town's chapel walls are decorated with thousands of human skulls?", "Czermna", listOf("Wieliczka", "Kudowa-Zdroj", "Swidnica"), X),
+        q("pol_polish_smoked_sheep", "Which Polish smoked sheep's cheese from the Tatras has EU protected status?", "Oscypek", listOf("Bryndza", "Twarog", "Bundz"), X),
+        q("pol_smigus_dyngus_celebrated", "What is 'Smigus-dyngus', celebrated on Easter Monday?", "Throwing water at each other", listOf("Painting eggs", "Burning a straw figure", "Rolling eggs downhill"), X),
+        q("pol_straw_figure_poles", "Which straw figure do Poles drown in spring to say goodbye to winter?", "Marzanna", listOf("Baba Jaga", "Rusalka", "Kikimora"), X),
+        q("pol_polish_mathematician_gave", "Which Polish mathematician gave his name to 'Banach spaces'?", "Stefan Banach", listOf("Hugo Steinhaus", "Stanislaw Ulam", "Waclaw Sierpinski"), X),
+        q("pol_polish_mathematician_triangle", "Which Polish mathematician's triangle is a famous fractal?", "Waclaw Sierpinski", listOf("Stefan Banach", "Kazimierz Kuratowski", "Alfred Tarski"), X),
+        q("pol_polish_born_scientist", "Which Polish-born scientist co-designed the hydrogen bomb in the USA?", "Stanislaw Ulam", listOf("Joseph Rotblat", "Leopold Infeld", "Stefan Banach"), X)
     )
 }
