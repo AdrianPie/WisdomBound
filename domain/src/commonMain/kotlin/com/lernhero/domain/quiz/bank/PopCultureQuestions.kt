@@ -887,7 +887,16 @@ object PopCultureQuestions {
         q("pop_super_mario_bros", "In the first 'Super Mario Bros.', who tells Mario 'Our princess is in another castle!'?", "Toad", listOf("Yoshi", "Luigi", "Lakitu"), M),
         q("pop_director_made_brief", "Which director made a brief cameo in almost every one of his own films?", "Alfred Hitchcock", listOf("Stanley Kubrick", "Orson Welles", "Billy Wilder"), M),
         q("pop_scooby_doo_character", "Which 'Scooby-Doo' character exclaims 'Jinkies!'?", "Velma", listOf("Daphne", "Fred", "Shaggy"), M),
-        q("pop_disney_cinderella_song", "In Disney's 'Cinderella', which song does the Fairy Godmother sing?", "Bibbidi-Bobbidi-Boo", listOf("A Dream Is a Wish Your Heart Makes", "When You Wish Upon a Star", "Someday My Prince Will Come"), M)
+        q("pop_disney_cinderella_song", "In Disney's 'Cinderella', which song does the Fairy Godmother sing?", "Bibbidi-Bobbidi-Boo", listOf("A Dream Is a Wish Your Heart Makes", "When You Wish Upon a Star", "Someday My Prince Will Come"), M),
+        q("pop_swedish_group_won", "Which Swedish group won Eurovision in 1974 with 'Waterloo'?", "ABBA", listOf("Roxette", "Ace of Base", "Europe"), M),
+        q("pop_game_series_features", "Which game series features the hero Link?", "The Legend of Zelda", listOf("Final Fantasy", "Metroid", "Kirby"), M),
+        q("pop_metal_bonded_wolverine", "Which metal is bonded to Wolverine's skeleton?", "Adamantium", listOf("Vibranium", "Titanium", "Uru"), M),
+        q("pop_falling_block_game", "Which falling-block game was created by Alexey Pajitnov in 1984?", "Tetris", listOf("Columns", "Dr. Mario", "Puyo Puyo"), M),
+        q("pop_garfield_dog_companion", "What is the name of Garfield's dog companion?", "Odie", listOf("Snoopy", "Pluto", "Goofy"), M),
+        q("pop_sonic_two_tailed", "What is the name of Sonic's two-tailed fox friend?", "Tails", listOf("Knuckles", "Amy", "Shadow"), M),
+        q("pop_video_game_series_2", "Which video game series follows the assassin Ezio Auditore?", "Assassin's Creed", listOf("Hitman", "Dishonored", "Thief"), M),
+        q("pop_obelix_little_dog", "What is the name of Obelix's little dog?", "Dogmatix", listOf("Snowy", "Rantanplan", "Pluto"), M),
+        q("pop_forest_spirit_mascot", "Which forest spirit is the mascot of Studio Ghibli?", "Totoro", listOf("No-Face", "Calcifer", "Kodama"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -1152,7 +1161,12 @@ object PopCultureQuestions {
         q("pop_director_made_pan", "Which director made 'Pan's Labyrinth' and 'The Shape of Water'?", "Guillermo del Toro", listOf("Alfonso Cuaron", "Alejandro Inarritu", "Pedro Almodovar"), H),
         q("pop_director_made_grand", "Which director made 'The Grand Budapest Hotel'?", "Wes Anderson", listOf("Wes Craven", "Sofia Coppola", "Spike Jonze"), H),
         q("pop_peanuts_character_never", "Which 'Peanuts' character never lets go of his security blanket?", "Linus", listOf("Schroeder", "Pig-Pen", "Franklin"), H),
-        q("pop_green_goblin_spider", "Who is the Green Goblin, Spider-Man's enemy, in everyday life?", "Norman Osborn", listOf("Otto Octavius", "Eddie Brock", "Wilson Fisk"), H)
+        q("pop_green_goblin_spider", "Who is the Green Goblin, Spider-Man's enemy, in everyday life?", "Norman Osborn", listOf("Otto Octavius", "Eddie Brock", "Wilson Fisk"), H),
+        q("pop_band_mascot_skeletal", "Which band's mascot is the skeletal figure called Eddie?", "Iron Maiden", listOf("Megadeth", "Metallica", "Motorhead"), H),
+        q("pop_bar_met_mother", "What is the name of the bar in 'How I Met Your Mother'?", "MacLaren's", listOf("Central Perk", "Paddy's Pub", "Cheers"), H),
+        q("pop_mickey_mouse_original", "What was Mickey Mouse's original name, according to Disney legend?", "Mortimer", listOf("Marvin", "Morris", "Milton"), H),
+        q("pop_tintin_dog_original", "What is the name of Tintin's dog in the original Belgian comic?", "Milou", listOf("Pif", "Idefix", "Rantanplan"), H),
+        q("pop_belgian_artist_created", "Which Belgian artist created the Smurfs?", "Peyo", listOf("Herge", "Franquin", "Morris"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */

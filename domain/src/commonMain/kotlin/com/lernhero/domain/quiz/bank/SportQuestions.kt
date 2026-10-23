@@ -201,7 +201,9 @@ object SportQuestions {
         q("spo_letters_stand_english", "What do the letters 'FA' stand for in the English 'FA Cup'?", "Football Association", listOf("Football Alliance", "Football Academy", "Federation of Athletics"), E),
         q("spo_baseball_raised_patch", "In baseball, what is the raised patch of dirt that the pitcher throws from called?", "The mound", listOf("The plate", "The dugout", "The bullpen"), E),
         q("spo_football_attacker_beyond", "In football, what is it called when an attacker is beyond the last defender as the ball is played to them?", "Offside", listOf("A foul", "A handball", "A dive"), E),
-        q("spo_basketball_player_takes", "In basketball, what is it called when a player takes too many steps without dribbling?", "Travelling", listOf("Double dribble", "Goaltending", "Charging"), E)
+        q("spo_basketball_player_takes", "In basketball, what is it called when a player takes too many steps without dribbling?", "Travelling", listOf("Double dribble", "Goaltending", "Charging"), E),
+        q("spo_footballer_nicknamed_rei", "Which famous footballer was nicknamed 'O Rei', the King?", "Pele", listOf("Ronaldo", "Garrincha", "Zico"), E),
+        q("spo_japanese_wrestling_sport", "Which Japanese wrestling sport has wrestlers called rikishi?", "Sumo", listOf("Judo", "Kendo", "Aikido"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -485,7 +487,27 @@ object SportQuestions {
         q("spo_college_sport_knockout", "Which US college sport's knockout tournament is nicknamed 'March Madness'?", "Basketball", listOf("American football", "Baseball", "Ice hockey"), M),
         q("spo_sport_positions_goal", "Which sport has positions called 'goal attack', 'wing defence' and 'centre'?", "Netball", listOf("Handball", "Water polo", "Lacrosse"), M),
         q("spo_cricket_mean_out", "In cricket, what does it mean to be out for a 'duck'?", "Out without scoring a run", listOf("Out by ducking under the ball", "Out caught by the bowler", "Out by hitting your own wicket"), M),
-        q("spo_fans_nfl_team", "Fans of which NFL team wear foam 'cheesehead' hats?", "The Green Bay Packers", listOf("The Chicago Bears", "The Minnesota Vikings", "The Buffalo Bills"), M)
+        q("spo_fans_nfl_team", "Fans of which NFL team wear foam 'cheesehead' hats?", "The Green Bay Packers", listOf("The Chicago Bears", "The Minnesota Vikings", "The Buffalo Bills"), M),
+        q("spo_sport_events_kata", "Which sport has events called kata and kumite?", "Karate", listOf("Judo", "Taekwondo", "Fencing"), M),
+        q("spo_sport_james_naismith", "Which sport did James Naismith invent in 1891 using peach baskets?", "Basketball", listOf("Volleyball", "Netball", "Handball"), M),
+        q("spo_fencing_three_weapons", "In fencing, which three weapons are used?", "Foil, epee and sabre", listOf("Foil, rapier and sabre", "Epee, katana and foil", "Sabre, cutlass and epee"), M),
+        q("spo_sport_combines_cross_2", "Which sport combines cross-country skiing and rifle shooting?", "Biathlon", listOf("Nordic combined", "Pentathlon", "Skeleton"), M),
+        q("spo_country_taekwondo_originate", "In which country did taekwondo originate?", "South Korea", listOf("Japan", "China", "Vietnam"), M),
+        q("spo_country_home_sport", "Which country is the home of the sport of hurling?", "Ireland", listOf("Scotland", "Wales", "England"), M),
+        q("spo_periods_ice_hockey", "How many periods are there in an ice hockey game?", "Three", listOf("Two", "Four", "Five"), M),
+        q("spo_tennis_term", "In tennis, what is the term for 40-40?", "Deuce", listOf("Advantage", "Love-all", "Tie"), M),
+        q("spo_yellow_flag_mean", "What does a yellow flag mean in motor racing?", "Danger, no overtaking", listOf("Race finished", "Leader is coming", "Rain warning"), M),
+        q("spo_sport_see_fosbury", "In which sport would you see a 'Fosbury Flop'?", "High jump", listOf("Long jump", "Pole vault", "Gymnastics"), M),
+        q("spo_winners_given_ancient", "What were winners given at the ancient Olympic Games?", "Olive wreaths", listOf("Gold medals", "Bags of silver", "Bronze cups"), M),
+        q("spo_tennis_tournament_grand", "Which tennis tournament is the only Grand Slam still played on clay?", "French Open", listOf("US Open", "Australian Open", "Wimbledon"), M),
+        q("spo_sport_triple_crown", "Which sport's 'Triple Crown' consists of the Kentucky Derby, Preakness and Belmont Stakes?", "Horse racing", listOf("Golf", "Sailing", "Rowing"), M),
+        q("spo_sport_michael_jordan", "Which sport did Michael Jordan briefly switch to in 1994?", "Baseball", listOf("Golf", "American football", "Tennis"), M),
+        q("spo_boxer_born_cassius", "Which boxer was born Cassius Clay?", "Muhammad Ali", listOf("Joe Frazier", "George Foreman", "Sonny Liston"), M),
+        q("spo_1974_boxing_match", "Which famous 1974 boxing match took place in Zaire?", "The Rumble in the Jungle", listOf("The Thrilla in Manila", "The Fight of the Century", "The Long Count"), M),
+        q("spo_archery_colour_centre", "In archery, what colour is the centre of an Olympic target?", "Gold", listOf("Red", "Black", "White"), M),
+        q("spo_player_move_but", "What is it called when a player can't move but isn't in check, ending the chess game as a draw?", "Stalemate", listOf("Checkmate", "Zugzwang", "Fork"), M),
+        q("spo_chess_opening_pawn", "What is a chess opening called in which a pawn is sacrificed for an advantage?", "Gambit", listOf("Fianchetto", "Castling", "Zugzwang"), M),
+        q("spo_sport_included_olympics", "Which sport was included in the Olympics from 1900 to 1920 with teams pulling a rope?", "Tug of war", listOf("Rope climbing", "Rowing relay", "Cable jumping"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -658,7 +680,17 @@ object SportQuestions {
         q("spo_tennis_slang_bagel", "In tennis slang, what is a 'bagel'?", "Winning a set 6-0", listOf("Winning a set 7-6", "A double fault on match point", "A serve hit underarm"), H),
         q("spo_country_won_olympic", "Which country has won the most Olympic gold medals in men's field hockey?", "India", listOf("The Netherlands", "Germany", "Australia"), H),
         q("spo_country_lost_three", "Which country has lost three World Cup finals without ever winning the trophy?", "The Netherlands", listOf("Hungary", "Croatia", "Sweden"), H),
-        q("spo_far_away_archers", "From how far away do archers shoot in the Olympic recurve event?", "70 metres", listOf("30 metres", "50 metres", "90 metres"), H)
+        q("spo_far_away_archers", "From how far away do archers shoot in the Olympic recurve event?", "70 metres", listOf("30 metres", "50 metres", "90 metres"), H),
+        q("spo_sport_invented_mintonette", "Which sport was invented as 'mintonette' in 1895?", "Volleyball", listOf("Badminton", "Basketball", "Netball"), H),
+        q("spo_players_rugby_league", "How many players are on a rugby league team on the field?", "13", listOf("15", "11", "12"), H),
+        q("spo_country_invented_sport", "Which country invented the sport of curling?", "Scotland", listOf("Canada", "Norway", "Switzerland"), H),
+        q("spo_trophy_awarded_winner", "What is the name of the trophy awarded to the winner of the Rugby World Cup?", "Webb Ellis Cup", listOf("Calcutta Cup", "Bledisloe Cup", "Six Nations Trophy"), H),
+        q("spo_hurdles_110_hurdles", "How many hurdles are there in a 110 m hurdles race?", "Ten", listOf("Eight", "Twelve", "Six"), H),
+        q("spo_sport_rules_written", "Which sport's rules were written by the Marquess of Queensberry in 1867?", "Boxing", listOf("Wrestling", "Fencing", "Rugby"), H),
+        q("spo_long_cricket_pitch", "How long is a cricket pitch between the wickets?", "22 yards", listOf("18 yards", "25 yards", "30 yards"), H),
+        q("spo_zero_runs_scored", "What is the name for zero runs scored by a batsman out in cricket?", "Duck", listOf("Love", "Nil", "Egg"), H),
+        q("spo_city_1972_fischer", "In which city was the famous 1972 Fischer-Spassky chess match held?", "Reykjavik", listOf("Moscow", "New York", "Helsinki"), H),
+        q("spo_olympic_event_held", "Which Olympic event was held from 1912 to 1948 alongside sports, with medals for paintings?", "Art competitions", listOf("Poetry slams", "Music contests", "Dance battles"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -740,6 +772,7 @@ object SportQuestions {
         q("spo_long_olympic_open", "How long is the Olympic open-water 'marathon swimming' race?", "10 km", listOf("5 km", "21 km", "42 km"), X),
         q("spo_olympics_women_boxing", "At which Olympics did women's boxing make its debut?", "London 2012", listOf("Sydney 2000", "Athens 2004", "Beijing 2008"), X),
         q("spo_pakistan_jahangir_khan", "Pakistan's Jahangir Khan went over 500 matches unbeaten in the 1980s in which sport?", "Squash", listOf("Tennis", "Badminton", "Table tennis"), X),
-        q("spo_cheeky_chipped_panenka", "The cheeky chipped 'Panenka' penalty is named after a player from which country?", "Czechoslovakia", listOf("Yugoslavia", "Hungary", "Poland"), X)
+        q("spo_cheeky_chipped_panenka", "The cheeky chipped 'Panenka' penalty is named after a player from which country?", "Czechoslovakia", listOf("Yugoslavia", "Hungary", "Poland"), X),
+        q("spo_finnish_ski_jumper", "Which Finnish ski jumper won three gold medals at the 1988 Olympics?", "Matti Nykanen", listOf("Janne Ahonen", "Toni Nieminen", "Jari Puikkonen"), X)
     )
 }

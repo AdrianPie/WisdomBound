@@ -164,6 +164,8 @@ ele_element_honours_marie	Medium	Which element honours Marie and Pierre Curie?	C
 ele_nickel_silver_used	Medium	Nickel silver, used for keys, zips and cutlery, contains how much silver?	None at all	About 10%	About 25%	About 50%
 ele_gas_bubbling_out	Medium	Which gas bubbling out of the blood gives divers 'the bends' if they surface too fast?	Nitrogen	Oxygen	Helium	Carbon dioxide
 ele_striking_strip_box	Medium	The striking strip on a box of safety matches contains which element?	Phosphorus	Sulfur	Magnesium	Potassium
+ele_element_added_iron	Medium	Which element is added to iron to make steel?	Carbon	Chromium	Nickel	Silicon
+ele_carat_mean_gold	Medium	What does '24 carat' mean for gold?	Pure gold	Half gold	24 grams	24 percent gold
 ele_symbol_sn	Hard	Which element hides behind the symbol Sn?	Tin	Scandium	Selenium	Strontium
 ele_najczestszy	Hard	Which element is the most abundant in the Universe?	Hydrogen	Helium	Oxygen	Carbon
 ele_ilosc	Hard	How many elements does today's periodic table have?	118	108	92	120
@@ -243,6 +245,16 @@ ele_roughly_temperature_liquid	Hard	At roughly what temperature does liquid nitr
 ele_tin_objects_crumble	Hard	Why can tin objects crumble into grey powder in a harsh winter?	Tin changes its crystal form in the cold	Frost cracks the tin oxide layer	Ice crystals grow inside the metal	Cold air makes tin rust faster
 ele_green_wallpaper_dye	Hard	A green wallpaper dye that may have slowly poisoned Napoleon on St Helena contained which element?	Arsenic	Mercury	Lead	Thallium
 ele_since_1992_british	Hard	Since 1992, British 1p and 2p coins have been made of copper-plated what?	Steel	Zinc	Aluminium	Nickel
+ele_element_found_all	Hard	Which element is found in all proteins but not in pure fats or sugars?	Nitrogen	Carbon	Oxygen	Hydrogen
+ele_gas_makes_voice	Hard	Which gas makes your voice deep when inhaled, the opposite of helium?	Sulfur hexafluoride	Neon	Nitrogen	Carbon dioxide
+ele_pure_carat_gold	Hard	How pure is 18-carat gold?	75 percent gold	50 percent gold	90 percent gold	18 percent gold
+ele_element_russia	Hard	Which element is named after Russia?	Ruthenium	Rhenium	Rubidium	Rutherfordium
+ele_element_old_latin	Hard	Which element is named after the old Latin name of France, Gaul?	Gallium	Francium	Germanium	Lutetium
+ele_element_rhine_river	Hard	Which element is named after the Rhine river?	Rhenium	Rhodium	Ruthenium	Radon
+ele_element_japan_2016	Hard	Which element was named after Japan in 2016?	Nihonium	Japonium	Tennessine	Moscovium
+ele_element_2016_honours	Hard	Which element, named in 2016, honours the home state of Oak Ridge National Laboratory?	Tennessine	Nihonium	Americium	Berkelium
+ele_element_comes_greek_2	Hard	Which element's name comes from the Greek for 'new'?	Neon	Xenon	Nitrogen	Neodymium
+ele_element_latin_hydrargyrum	Hard	Which element's Latin name 'hydrargyrum' means 'liquid silver'?	Mercury	Silver	Tin	Gallium
 ele_symbol_sb	Expert	Which element hides behind the symbol Sb?	Antimony	Strontium	Silver	Selenium
 ele_symbol_mn	Expert	Which element hides behind the symbol Mn?	Manganese	Magnesium	Molybdenum	Copper
 ele_curie	Expert	Which element did Marie Sklodowska-Curie name after her homeland?	Polonium	Radium	Uranium	Radon
@@ -298,3 +310,13 @@ ele_hafnium_latin_city	Expert	Hafnium is named after the Latin name of which cit
 ele_element_more_stable	Expert	Which element has more stable isotopes than any other, ten in all?	Tin	Lead	Iron	Xenon
 ele_niobium_niobe_daughter	Expert	Niobium is named after Niobe, daughter of which mythical king whose own element it is always found with?	Tantalus	Midas	Sisyphus	Minos
 ele_carl_scheele_joseph	Expert	Carl Scheele and Joseph Priestley independently discovered which element in the 1770s?	Oxygen	Hydrogen	Argon	Phosphorus
+ele_element_greek_word_4	Expert	Which element is named after the Greek word for 'green', for its spectral line?	Thallium	Chlorine	Chromium	Praseodymium
+ele_element_comes_greek	Expert	Which element's name comes from the Greek word for 'rose', for its pink salts?	Rhodium	Iridium	Radium	Ruthenium
+ele_element_heaviest_living	Expert	Which element is the heaviest one named after a living scientist at the time of naming?	Oganesson	Seaborgium	Einsteinium	Nobelium
+ele_element_scandinavian_goddess	Expert	Which element is named after a Scandinavian goddess?	Vanadium	Thorium	Freyium	Niobium
+ele_metal_ancient_egyptians	Expert	Which metal did ancient Egyptians value more than gold, since it fell from the sky?	Meteoric iron	Silver	Copper	Platinum
+ele_element_latin_stockholm	Expert	Which element is named after the Latin name of Stockholm?	Holmium	Hafnium	Thulium	Erbium
+ele_element_old_scandinavia	Expert	Which element is named after the old name of Scandinavia's far north, Thule?	Thulium	Holmium	Scandium	Hafnium
+ele_element_used_precise	Expert	Which element is used in the most precise optical lattice clocks?	Strontium	Caesium	Rubidium	Helium
+ele_element_means_new	Expert	Which element's name means 'new twin' in Greek?	Neodymium	Praseodymium	Didymium	Neon
+ele_element_comes_greek_3	Expert	Which element's name comes from the Greek for 'heavy'?	Barium	Lead	Osmium	Tungsten

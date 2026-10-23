@@ -19,6 +19,7 @@ geo_bora_bora_lagoon	Easy	Bora Bora, famous for its lagoon and overwater bungalo
 geo_australia_roughly_same	Easy	Australia is roughly the same size as which of these?	The contiguous USA	India	Greenland	Mexico
 geo_queenstown_calls_itself	Easy	Queenstown, which calls itself 'the adventure capital of the world', is in which country?	New Zealand	Australia	Fiji	Canada
 geo_gold_coast_surf	Easy	The Gold Coast, famous for its surf beaches and theme parks, is in which Australian state?	Queensland	New South Wales	Victoria	Western Australia
+geo_australian_rock_ayers	Easy	Which Australian rock is also known by the name Ayers Rock?	Uluru	Kata Tjuta	Wave Rock	Mount Augustus
 lmk_uluru_kraj	Medium	In which country is Uluru?	Australia	New Zealand	South Africa	Namibia
 geo_tahiti	Medium	Tahiti is part of which country's overseas territories?	France	Britain	The United States	New Zealand
 geo_country_aotearoa_land	Medium	Which country is known as Aotearoa, 'the land of the long white cloud'?	New Zealand	Australia	Fiji	Samoa
@@ -69,6 +70,7 @@ geo_tasmania_dutch_explorer	Medium	Tasmania is named after which Dutch explorer,
 geo_barossa_valley_australia	Medium	The Barossa Valley, one of Australia's most famous wine regions, is in which state?	South Australia	Victoria	New South Wales	Western Australia
 geo_1999_referendum_australians	Medium	In a 1999 referendum, Australians voted to keep the British monarch rather than turn their country into what?	A republic	A union with New Zealand	A one-chamber democracy	A federal kingdom
 geo_indian_pacific_train	Medium	The 'Indian Pacific' train crosses Australia from Sydney to which city?	Perth	Darwin	Adelaide	Brisbane
+geo_country_home_waitomo	Medium	Which country is home to the Waitomo caves lit by glowworms?	New Zealand	Australia	Fiji	Chile
 lmk_moai_kraj	Hard	The Moai statues of Easter Island belong to which country?	Chile	Peru	New Zealand	Argentina
 geo_cook_islands_niue	Hard	The Cook Islands and Niue are self-governing in 'free association' with which country?	New Zealand	Australia	Britain	France
 geo_country_once_new	Hard	Which country, once the New Hebrides, was ruled jointly by Britain and France?	Vanuatu	Fiji	New Caledonia	The Solomon Islands

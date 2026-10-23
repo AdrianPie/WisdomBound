@@ -440,6 +440,11 @@ ani_flamingos_hold_heads	Medium	How do flamingos hold their heads while they fee
 ani_sea_creature_some	Medium	Which sea creature can, in some species, regrow a whole new body from a single severed arm?	The starfish	The octopus	The crab	The sea urchin
 ani_rodents_laugh_high	Medium	Which rodents 'laugh' with high-pitched chirps when scientists tickle them?	Rats	Hamsters	Guinea pigs	Squirrels
 ani_guano_once_fortune	Medium	Guano, once a fortune-making fertiliser, is the droppings of which animals?	Seabirds and bats	Cattle and sheep	Pigs and goats	Horses and donkeys
+ani_antelope_leap_ten	Medium	Which antelope can leap up to ten metres in a single bound?	Impala	Springbok	Gazelle	Kudu
+ani_special_food_turns	Medium	What is the special food that turns a bee larva into a queen?	Royal jelly	Honeydew	Propolis	Beeswax
+ani_gorilla_learned_over	Medium	What was the name of the famous gorilla that learned over 1,000 signs?	Koko	Harambe	Kanzi	Washoe
+ani_animal_see_ultraviolet	Medium	Which animal can see ultraviolet light and uses it to find flowers?	Bee	Dog	Cat	Cow
+ani_bird_big_hollow	Medium	Which bird has a big hollow casque on top of its bill?	Hornbill	Toucan	Cassowary	Shoebill
 ani_dziobak	Hard	Which mammal lays eggs?	Platypus	Armadillo	Sloth	Hedgehog
 ani_krowa_zoladek	Hard	How many chambers does a cow's stomach have?	4	1	2	3
 ani_kalmar_oczy	Hard	Which animal has an eye that can grow to the size of a dinner plate?	Giant squid	Owl	Whale	Elephant seal
@@ -609,6 +614,17 @@ ani_cat_breed_nicknamed	Hard	Which cat breed is nicknamed 'the swimming cat' for
 ani_bird_nest_soup	Hard	Bird's nest soup is made from nests built mainly from what?	Swiftlet saliva	Woven grass and mud	Seaweed and feathers	Caterpillar silk
 ani_group_giant_pandas	Hard	What is a group of giant pandas sometimes called?	An embarrassment	A bamboozle	A cuddle	A shrug
 ani_proteins_rex_bone	Hard	Proteins from a T. rex bone most closely matched those of which living animal?	The chicken	The crocodile	The Komodo dragon	The iguana
+ani_male_swan	Hard	What is a male swan called?	Cob	Pen	Drake	Gander
+ani_australian_lizard_opens	Hard	Which Australian lizard opens a big frill around its neck to scare enemies?	Frilled lizard	Thorny devil	Bearded dragon	Goanna
+ani_beetle_sprays_boiling	Hard	Which beetle sprays a boiling hot chemical at attackers?	Bombardier beetle	Stag beetle	Rhinoceros beetle	Tiger beetle
+ani_seabird_used_fishermen	Hard	Which seabird is used by fishermen in China and Japan to catch fish?	Cormorant	Pelican	Puffin	Gannet
+ani_huge_billed_african	Hard	Which huge-billed African bird stands motionless for hours waiting for lungfish?	Shoebill	Marabou stork	Hammerkop	Secretary bird
+ani_call_group_ravens	Hard	What do you call a group of ravens?	Unkindness	Murder	Parliament	Conspiracy
+ani_moth_wings_big	Hard	Which moth has wings so big it is sometimes mistaken for a bird?	Atlas moth	Luna moth	Death's-head hawkmoth	Emperor moth
+ani_sticky_resin_bees	Hard	What is the sticky resin bees use to seal gaps in the hive?	Propolis	Royal jelly	Beeswax	Nectar
+ani_seabird_dives_sea	Hard	Which seabird dives into the sea at nearly 100 km/h to catch fish?	Gannet	Puffin	Cormorant	Pelican
+ani_large_flightless_bird_3	Hard	Which large flightless bird of South America is related to the ostrich?	Rhea	Emu	Cassowary	Kiwi
+ani_extinct_flightless_bird	Hard	Which extinct flightless bird from Madagascar laid the largest eggs ever known?	Elephant bird	Moa	Dodo	Roc
 ani_hemocyjanina	Expert	Which animal has blue blood?	Octopus	Frog	Snake	Carp
 ani_narwal	Expert	Which marine mammal has a long, spiral tusk growing from its head?	Narwhal	Beluga whale	Porpoise	Manatee
 ani_echidna	Expert	Which animal, alongside the platypus, is a monotreme?	Echidna	Opossum	Wombat	Koala
@@ -680,3 +696,14 @@ ani_mammal_shortest_pregnancies	Expert	Which mammal has one of the shortest preg
 ani_flehmen_response_cat	Expert	What is the 'flehmen response', when a cat or horse curls back its upper lip?	A way of taking in scents	A sign of extreme anger	A way of cooling the mouth	A warning call to the herd
 ani_rodent_live_over	Expert	Which rodent can live over 30 years and almost never gets cancer?	The naked mole-rat	The capybara	The chinchilla	The porcupine
 ani_some_deep_sea	Expert	In some deep-sea anglerfish, what happens to the tiny male?	He fuses permanently onto the female	He becomes the female's glowing lure	He is eaten right after mating	He guards the eggs inside his mouth
+ani_tortoise_diego_helped	Expert	Which tortoise named Diego helped save his species by fathering hundreds of babies?	Diego	Jonathan	George	Harriet
+ani_rabbit_eared_australian	Expert	Which rabbit-eared Australian marsupial is promoted as the 'Easter Bilby'?	Bilby	Bandicoot	Quokka	Bettong
+ani_call_group_porcupines	Expert	What do you call a group of porcupines?	Prickle	Spike	Thicket	Bristle
+ani_call_group_hippos	Expert	What do you call a group of hippos?	Bloat	Crash	Wallow	Pod
+ani_whale_makes_longest	Expert	Which whale makes one of the longest migrations of any mammal, between Alaska and Mexico?	Grey whale	Blue whale	Orca	Narwhal
+ani_small_dolphin_among	Expert	Which small dolphin, among the rarest marine mammals, lives only in Mexico's Gulf of California?	Vaquita	Hector's dolphin	Irrawaddy dolphin	Baiji
+ani_chinese_river_dolphin	Expert	Which Chinese river dolphin was declared functionally extinct in 2006?	Baiji	Vaquita	Boto	Susu
+ani_insect_heaviest_world	Expert	Which insect is the heaviest in the world, found in New Zealand?	Giant weta	Goliath beetle	Atlas moth	Titan beetle
+ani_bonobo_learned_communicate	Expert	What was the name of the bonobo who learned to communicate with a symbol keyboard?	Kanzi	Koko	Washoe	Nim Chimpsky
+ani_chimpanzee_taught_american	Expert	What was the name of the first chimpanzee taught American Sign Language?	Washoe	Koko	Kanzi	Lucy
+ani_extinct_flightless_seabird	Expert	Which extinct flightless seabird of the North Atlantic was the original 'penguin'?	Great auk	Dodo	Moa	Razorbill

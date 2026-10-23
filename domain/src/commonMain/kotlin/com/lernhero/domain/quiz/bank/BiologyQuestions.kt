@@ -421,7 +421,13 @@ object BiologyQuestions {
         q("bio_medical_tailbone", "What is the medical name for the tailbone?", "The coccyx", listOf("The sacrum", "The pelvis", "The patella"), M),
         q("bio_agoraphobia_fear", "Agoraphobia is a fear of what?", "Open or crowded places", listOf("Spiders", "Heights", "Small enclosed spaces"), M),
         q("bio_opium_morphine_come", "Opium and morphine come from which flower?", "The poppy", listOf("The lotus", "The foxglove", "The tulip"), M),
-        q("bio_black_peppercorns_dried", "Black peppercorns are the dried what of a climbing vine?", "Unripe fruits", listOf("Flower buds", "Root nodules", "Leaf tips"), M)
+        q("bio_black_peppercorns_dried", "Black peppercorns are the dried what of a climbing vine?", "Unripe fruits", listOf("Flower buds", "Root nodules", "Leaf tips"), M),
+        q("bio_finches_helped_darwin", "Which finches helped Darwin's ideas about evolution?", "Galapagos finches", listOf("Canary finches", "Zebra finches", "Gouldian finches"), M),
+        q("bio_doctor_traced_london", "Which doctor traced a London cholera outbreak to a water pump in 1854?", "John Snow", listOf("Edward Jenner", "Joseph Lister", "Florence Nightingale"), M),
+        q("bio_group_insects_described", "Which group of insects has the most described species?", "Beetles", listOf("Ants", "Butterflies", "Flies"), M),
+        q("bio_british_primatologist_studied", "Which British primatologist studied wild chimpanzees in Tanzania from 1960?", "Jane Goodall", listOf("Dian Fossey", "Birute Galdikas", "Cynthia Moss"), M),
+        q("bio_american_zoologist_studied", "Which American zoologist studied mountain gorillas in Rwanda?", "Dian Fossey", listOf("Jane Goodall", "Birute Galdikas", "Rachel Carson"), M),
+        q("bio_marine_biologist_1962", "Which marine biologist's 1962 book 'Silent Spring' warned about pesticides?", "Rachel Carson", listOf("Sylvia Earle", "Jane Goodall", "Eugenie Clark"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -578,7 +584,12 @@ object BiologyQuestions {
         q("bio_rubber_tree_now", "The rubber tree, now grown mostly in Southeast Asia, is native to which region?", "The Amazon", listOf("Central Africa", "India", "Madagascar"), H),
         q("bio_cashew_nuts_never", "Why are cashew nuts never sold in their shells?", "The shell holds a skin-burning oil", listOf("The shell is too hard to crack", "The shell rots within days", "The shell is fed to cattle"), H),
         q("bio_abundant_protein_human", "Which is the most abundant protein in the human body?", "Collagen", listOf("Keratin", "Haemoglobin", "Insulin"), H),
-        q("bio_network_500_million", "What is the network of about 500 million neurons lining the gut nicknamed?", "The second brain", listOf("The gut clock", "The inner spine", "The belly web"), H)
+        q("bio_network_500_million", "What is the network of about 500 million neurons lining the gut nicknamed?", "The second brain", listOf("The gut clock", "The inner spine", "The belly web"), H),
+        q("bio_pigment_makes_tomatoes", "Which pigment makes tomatoes red?", "Lycopene", listOf("Beta-carotene", "Anthocyanin", "Melanin"), H),
+        q("bio_scientist_darwin_bulldog", "Which scientist was called 'Darwin's bulldog' for defending evolution?", "Thomas Huxley", listOf("Alfred Russel Wallace", "Richard Owen", "Herbert Spencer"), H),
+        q("bio_part_brain_connects", "Which part of the brain connects its two halves?", "Corpus callosum", listOf("Brainstem", "Cerebellum", "Pons"), H),
+        q("bio_fear_long_words", "What is the name of the fear of long words, ironically a very long word?", "Hippopotomonstrosesquippedaliophobia", listOf("Triskaidekaphobia", "Arachibutyrophobia", "Hexakosioihexekontahexaphobia"), H),
+        q("bio_poisonous_plant_means", "Which poisonous plant's name means 'beautiful lady' in Italian?", "Belladonna", listOf("Bellflower", "Mandrake", "Nightshade"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -644,6 +655,12 @@ object BiologyQuestions {
         q("bio_tiny_worm_thousand", "Which tiny worm, with only about a thousand body cells, was the first animal to have its whole genome read?", "The worm C. elegans", listOf("The earthworm", "The tapeworm", "The leech"), X),
         q("bio_enzyme_used_plants", "Which enzyme, used by plants to capture carbon, is thought to be the most abundant protein on Earth?", "RuBisCO", listOf("Chlorophyll", "Amylase", "Catalase"), X),
         q("bio_epo_hormone_abused", "EPO, the hormone abused by some doping cyclists, is mainly made by which organ?", "The kidneys", listOf("The liver", "The pancreas", "The adrenal glands"), X),
-        q("bio_chicle_original_base", "Chicle, the original base of chewing gum, is the sap of which tree?", "The sapodilla", listOf("The rubber tree", "The maple", "The acacia"), X)
+        q("bio_chicle_original_base", "Chicle, the original base of chewing gum, is the sap of which tree?", "The sapodilla", listOf("The rubber tree", "The maple", "The acacia"), X),
+        q("bio_patient_initials_taught", "Which famous patient, known by his initials, taught science how memories are formed after losing his hippocampus?", "H.M.", listOf("Phineas Gage", "Little Albert", "Anna O."), X),
+        q("bio_pando_utah_largest", "What is 'Pando' in Utah, one of the largest living organisms?", "A clone of aspen trees", listOf("A giant fungus", "A coral reef", "A seagrass meadow"), X),
+        q("bio_medical_brain_freeze", "What is the medical name for brain freeze from cold food?", "Sphenopalatine ganglioneuralgia", listOf("Cryoneuralgia", "Glossopharyngeal spasm", "Cephalalgia frigida"), X),
+        q("bio_medical_hiccups", "What is the medical name for hiccups?", "Singultus", listOf("Eructation", "Borborygmus", "Sternutation"), X),
+        q("bio_smooth_area_between", "What is the name for the smooth area between the eyebrows?", "Glabella", listOf("Philtrum", "Lunula", "Canthus"), X),
+        q("bio_scientist_studied_orangutans", "Which scientist studied orangutans in Borneo, completing the 'Trimates'?", "Birute Galdikas", listOf("Dian Fossey", "Jane Goodall", "Cynthia Moss"), X)
     )
 }

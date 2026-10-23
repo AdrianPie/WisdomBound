@@ -263,7 +263,17 @@ object MathQuestions {
         q("mat_numbers_around_dartboard", "What do the numbers 1 to 20 around a dartboard add up to?", "210", listOf("200", "180", "220"), M),
         q("mat_qed_end_proof", "What does 'QED' at the end of a proof mean?", "Which was to be shown", listOf("Question ends here", "Quickly and easily done", "Equal on both sides"), M),
         q("mat_shape_toblerone_box", "What 3D shape is a Toblerone box?", "A triangular prism", listOf("A square pyramid", "A tetrahedron", "A cuboid"), M),
-        q("mat_sheets_paper_ream", "How many sheets of paper are in a ream?", "500", listOf("100", "250", "1,000"), M)
+        q("mat_sheets_paper_ream", "How many sheets of paper are in a ream?", "500", listOf("100", "250", "1,000"), M),
+        q("mat_sum_interior_angles", "What is the sum of the interior angles of a pentagon?", "540 degrees", listOf("360 degrees", "450 degrees", "720 degrees"), M),
+        q("mat_degrees_each_interior", "How many degrees are in each interior angle of a regular hexagon?", "120", listOf("108", "135", "90"), M),
+        q("mat_minutes_week", "How many minutes are in a week?", "10,080", listOf("1,440", "8,640", "12,000"), M),
+        q("mat_two_men_independently", "Which two men independently invented calculus in the 17th century?", "Newton and Leibniz", listOf("Euler and Gauss", "Descartes and Fermat", "Pascal and Huygens"), M),
+        q("mat_problem_andrew_wiles", "Which famous problem did Andrew Wiles prove in 1994, 350 years after it was posed?", "Fermat's Last Theorem", listOf("Poincare conjecture", "Goldbach conjecture", "Riemann hypothesis"), M),
+        q("mat_colours_enough_colour", "How many colours are enough to colour any map so no neighbours share a colour?", "Four", listOf("Three", "Five", "Six"), M),
+        q("mat_golden_ratio_618", "What is the name of the golden ratio, about 1.618, often written with a Greek letter?", "Phi", listOf("Pi", "Tau", "Sigma"), M),
+        q("mat_paradox_achilles_never", "What is the name of the paradox in which Achilles can never overtake a tortoise?", "Zeno's paradox", listOf("Russell's paradox", "Banach-Tarski paradox", "Liar paradox"), M),
+        q("mat_calendar_reform_skipped", "Which calendar reform skipped ten days in October 1582?", "Gregorian", listOf("Julian", "Revolutionary", "Mayan"), M),
+        q("mat_111_times_111", "What is 111 times 111?", "12321", listOf("11211", "12221", "13431"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -358,7 +368,14 @@ object MathQuestions {
         q("mat_group_367_people", "In a group of 367 people, what is the chance that at least two share a birthday?", "100%", listOf("About 50%", "About 75%", "About 99%"), H),
         q("mat_clock_faces_roman", "Clock faces with Roman numerals usually show the number 4 as what?", "IIII", listOf("IV", "IIV", "VI"), H),
         q("mat_sided_die_beloved", "The 20-sided die beloved of Dungeons & Dragons players is which shape?", "An icosahedron", listOf("A dodecahedron", "An octahedron", "A decahedron"), H),
-        q("mat_scottish_laird_invented", "Which Scottish laird invented logarithms in 1614?", "John Napier", listOf("Henry Briggs", "Colin Maclaurin", "James Gregory"), H)
+        q("mat_scottish_laird_invented", "Which Scottish laird invented logarithms in 1614?", "John Napier", listOf("Henry Briggs", "Colin Maclaurin", "James Gregory"), H),
+        q("mat_shape_smallest_surface", "Which shape has the smallest surface area for a given volume?", "Sphere", listOf("Cube", "Cylinder", "Tetrahedron"), H),
+        q("mat_mathematician_identity_plus", "Which mathematician's identity, e to the i pi plus 1 equals 0, is called the most beautiful equation?", "Leonhard Euler", listOf("Carl Friedrich Gauss", "Bernhard Riemann", "Pierre de Fermat"), H),
+        q("mat_italian_mathematician_brought", "Which Italian mathematician brought Hindu-Arabic numerals to Europe in 1202?", "Fibonacci", listOf("Cardano", "Tartaglia", "Galileo"), H),
+        q("mat_persian_scholar_gave", "Which Persian scholar's name gave us the word 'algorithm'?", "Al-Khwarizmi", listOf("Omar Khayyam", "Avicenna", "Al-Biruni"), H),
+        q("mat_austrian_logician_proved", "Which Austrian logician proved in 1931 that some true statements in maths can never be proved?", "Kurt Godel", listOf("David Hilbert", "Georg Cantor", "Emmy Noether"), H),
+        q("mat_mathematician_showed_some", "Which mathematician showed some infinities are bigger than others?", "Georg Cantor", listOf("Kurt Godel", "Leonhard Euler", "David Hilbert"), H),
+        q("mat_hotel_thought_experiment", "Which hotel thought experiment shows that an infinite hotel can always fit more guests?", "Hilbert's Grand Hotel", listOf("Cantor's Inn", "Zeno's Lodge", "Godel's Motel"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -416,6 +433,8 @@ object MathQuestions {
         q("mat_chicken_mcnuggets_once", "Chicken McNuggets were once sold only in boxes of 6, 9 and 20. What is the largest number of nuggets you could NOT buy exactly?", "43", listOf("37", "47", "59"), X),
         q("mat_larger_power_power", "Which is larger: e to the power of pi, or pi to the power of e?", "e to the power of pi", listOf("pi to the power of e", "They are exactly equal", "No one has proved either"), X),
         q("mat_division_sign", "What is the division sign ÷ called?", "An obelus", listOf("A vinculum", "A solidus", "A caret"), X),
-        q("mat_unproven_conjecture_says", "Which unproven conjecture says every even number greater than 2 is the sum of two primes?", "Goldbach's conjecture", listOf("Fermat's Last Theorem", "The Collatz conjecture", "The Riemann hypothesis"), X)
+        q("mat_unproven_conjecture_says", "Which unproven conjecture says every even number greater than 2 is the sum of two primes?", "Goldbach's conjecture", listOf("Fermat's Last Theorem", "The Collatz conjecture", "The Riemann hypothesis"), X),
+        q("mat_conjecture_any_number", "What is the name of the conjecture that any number reaches 1 by halving evens and tripling odds plus one?", "Collatz conjecture", listOf("Goldbach conjecture", "Twin prime conjecture", "Riemann hypothesis"), X),
+        q("mat_german_mathematician_theorem", "Which German mathematician's theorem links symmetry and conservation laws in physics?", "Emmy Noether", listOf("Sofia Kovalevskaya", "Hypatia", "Ada Lovelace"), X)
     )
 }

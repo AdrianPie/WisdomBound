@@ -190,6 +190,13 @@ lit_hunger_games_bird	Easy	In 'The Hunger Games', which bird appears on the pin 
 lit_hunger_games_baker	Easy	In 'The Hunger Games', which baker's son goes into the arena with Katniss?	Peeta Mellark	Gale Hawthorne	Finnick Odair	Haymitch Abernathy
 lit_members_set_out	Easy	How many members set out in the Fellowship of the Ring?	Nine	Seven	Eight	Twelve
 lit_lord_rings_ents	Easy	In 'The Lord of the Rings', what are the Ents?	Giant walking tree-folk	Giant talking eagles	Mountain trolls	Cave-dwelling goblins
+lit_wrote_hobbit	Easy	Who wrote 'The Hobbit'?	J. R. R. Tolkien	C. S. Lewis	Roald Dahl	Terry Pratchett
+lit_wrote_don_quixote	Easy	Who wrote 'Don Quixote'?	Miguel de Cervantes	Lope de Vega	Gabriel Garcia Marquez	Federico Garcia Lorca
+lit_boy_never_grows	Easy	What is the name of the boy who never grows up in J. M. Barrie's story?	Peter Pan	Tom Sawyer	Oliver Twist	Christopher Robin
+lit_wizard_character_wants	Easy	In 'The Wizard of Oz', which character wants a brain?	The Scarecrow	The Tin Man	The Cowardly Lion	Toto
+lit_wrote_war_worlds	Easy	Who wrote 'War of the Worlds'?	H. G. Wells	Jules Verne	Arthur C. Clarke	Isaac Asimov
+lit_character_thousand_nights	Easy	Which character from 'One Thousand and One Nights' finds a cave of treasure?	Ali Baba	Aladdin	Sinbad	Scheherazade
+lit_very_short_novel	Easy	What is the name of the very short novel by Kafka in which Gregor Samsa becomes an insect?	The Metamorphosis	The Trial	The Castle	The Judgment
 cultw_wojna_pokoj	Medium	Who wrote War and Peace?	Leo Tolstoy	Fyodor Dostoevsky	Anton Chekhov	Ivan Turgenev
 cultw_don_kichot	Medium	Which novel is often called the first modern European novel?	Don Quixote	Robinson Crusoe	Gulliver's Travels	The Decameron
 cultw_kafka	Medium	Which writer is known for The Trial and The Metamorphosis?	Franz Kafka	Thomas Mann	Hermann Hesse	Robert Musil
@@ -521,6 +528,19 @@ lit_writer_poem_ends	Medium	Which writer's poem 'If—' ends 'you'll be a Man, m
 lit_young_narrator_treasure	Medium	Who is the young narrator of 'Treasure Island'?	Jim Hawkins	Ben Gunn	Billy Bones	Squire Trelawney
 lit_composed_moonlight_sonata	Medium	Who composed the 'Moonlight Sonata'?	Beethoven	Chopin	Mozart	Liszt
 lit_instrument_niccolo_paganini	Medium	Which instrument did Niccolo Paganini, rumoured to have sold his soul to the devil, play?	The violin	The piano	The cello	The flute
+lit_captain_hook_ship	Medium	What is the name of Captain Hook's ship in 'Peter Pan'?	Jolly Roger	Black Pearl	Hispaniola	Nautilus
+lit_isaac_asimov_rules	Medium	Which Isaac Asimov rules govern how robots must behave?	Three Laws of Robotics	Four Robot Codes	Prime Directive	Robot Charter
+lit_must_queen_guess	Medium	What must the queen guess to escape her deal with Rumpelstiltskin?	His name	His age	His home	His birthday
+lit_pied_piper_hamelin	Medium	In 'The Pied Piper of Hamelin', what does the piper lead away when he is not paid?	The children	The rats	The cattle	The soldiers
+lit_four_animals_form	Medium	Which four animals form a band in a Brothers Grimm tale?	Donkey, dog, cat and rooster	Horse, pig, duck and goat	Cow, sheep, dog and cat	Fox, wolf, bear and hare
+lit_old_english_poem	Medium	Which Old English poem's hero kills the monster Grendel?	Beowulf	Sir Gawain	The Wanderer	The Seafarer
+lit_author_wrote_slaughterhouse	Medium	Which author wrote 'Slaughterhouse-Five'?	Kurt Vonnegut	Joseph Heller	Ray Bradbury	Philip K. Dick
+lit_wrote_androids_dream	Medium	Who wrote 'Do Androids Dream of Electric Sheep?', the basis for 'Blade Runner'?	Philip K. Dick	William Gibson	Isaac Asimov	Ray Bradbury
+lit_czech_writer_coined	Medium	Which Czech writer coined the word 'robot' in a 1920 play?	Karel Capek	Franz Kafka	Jaroslav Hasek	Milan Kundera
+lit_job_antoine_saint	Medium	Which job did Antoine de Saint-Exupery have besides writing?	Pilot	Sailor	Doctor	Teacher
+lit_french_poet_wrote	Medium	Which French poet wrote fables like 'The Tortoise and the Hare' in verse?	Jean de La Fontaine	Charles Perrault	Moliere	Racine
+lit_author_published_robert	Medium	Which author published 'Robert Galbraith' crime novels under a pen name?	J. K. Rowling	Stephen King	Agatha Christie	Anne Rice
+lit_horror_writer_once	Medium	Which horror writer once published as Richard Bachman?	Stephen King	Dean Koontz	Clive Barker	Peter Straub
 cultw_boska_komedia	Hard	How many parts does Dante's Divine Comedy have?	Three	Two	Four	Seven
 cultw_ulisses_joyce	Hard	In which city does Joyce's Ulysses take place over one day?	Dublin	London	Trieste	Paris
 lit_solaris	Hard	Who wrote 'Solaris'?	Stanislaw Lem	Isaac Asimov	Arthur C. Clarke	Philip K. Dick
@@ -712,6 +732,14 @@ lit_painter_hid_man	Hard	Which painter hid a man's face behind a floating green 
 lit_composed_six_brandenburg	Hard	Who composed the six 'Brandenburg Concertos'?	Johann Sebastian Bach	George Frideric Handel	Antonio Vivaldi	Georg Philipp Telemann
 lit_composer_wrote_sprach	Hard	Which composer wrote 'Also sprach Zarathustra', made famous by the film '2001'?	Richard Strauss	Johann Strauss II	Richard Wagner	Gustav Mahler
 lit_nessun_dorma_aria	Hard	'Nessun dorma' is an aria from which Puccini opera?	Turandot	Tosca	La Boheme	Madama Butterfly
+lit_author_invented_county	Hard	Which author invented the county of Yoknapatawpha?	William Faulkner	John Steinbeck	Mark Twain	Harper Lee
+lit_detective_edgar_allan	Hard	Which detective did Edgar Allan Poe create, often called the first fictional detective?	C. Auguste Dupin	Sherlock Holmes	Father Brown	Inspector Bucket
+lit_swedish_author_wrote	Hard	Which Swedish author wrote about Nils Holgersson flying on a goose?	Selma Lagerlof	Astrid Lindgren	August Strindberg	Tove Jansson
+lit_reclusive_american_poet	Hard	Which reclusive American poet had almost all of her nearly 1800 poems published after death?	Emily Dickinson	Sylvia Plath	Elizabeth Bishop	Anne Sexton
+lit_under_pen_bronte	Hard	Under what pen name did the Bronte sisters first publish?	Currer, Ellis and Acton Bell	George, Edward and Arthur Eliot	Brown, Brook and Bell	The Haworth Sisters
+lit_french_author_real	Hard	Which French author's real name was Francois-Marie Arouet?	Voltaire	Moliere	Stendhal	Rousseau
+lit_french_playwright_real	Hard	Which French playwright's real name was Jean-Baptiste Poquelin?	Moliere	Voltaire	Racine	Corneille
+lit_american_author_wrote	Hard	Which American author wrote short stories with twist endings under the name O. Henry?	William Sydney Porter	Ambrose Bierce	Bret Harte	Washington Irving
 cultw_genji	Expert	The Tale of Genji, often called the first novel, came from which country?	Japan	China	Korea	India
 lit_iliada_wers	Expert	What word does Homer's 'Iliad' open with?	Rage (wrath)	War	Muse	Gods
 lit_proust	Expert	Who wrote the cycle 'In Search of Lost Time'?	Marcel Proust	Gustave Flaubert	Honore de Balzac	Emile Zola

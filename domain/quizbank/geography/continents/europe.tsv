@@ -74,6 +74,7 @@ geo_tiny_country_led	Medium	Which tiny country is led by two 'Captains Regent' w
 geo_thinly_populated_country	Medium	Which is the most thinly populated country in Europe?	Iceland	Norway	Finland	Russia
 geo_nordic_country_people	Medium	Which Nordic country has the most people?	Sweden	Denmark	Norway	Finland
 geo_country_parliament_storting	Medium	Which country's parliament is called the 'Storting'?	Norway	Sweden	Denmark	Iceland
+geo_village_wales_longest	Medium	Which village in Wales has one of the longest place names in the world?	Llanfairpwllgwyngyll	Betws-y-Coed	Aberystwyth	Pontypridd
 geocmp_panstwo_ue_pow	Hard	Which is the largest European Union country by area?	France	Spain	Sweden	Germany
 trv_ukraina_europa	Hard	Which is the largest country lying entirely within Europe?	Ukraine	France	Spain	Germany
 geo_andorra_two_heads	Hard	Andorra has two heads of state: the Bishop of Urgell and who?	The President of France	The King of Spain	The Pope	The Prince of Monaco
@@ -110,6 +111,8 @@ geo_isle_man_not	Hard	The Isle of Man is not part of the United Kingdom. What is
 geo_country_lying_entirely	Hard	Which country lying entirely in Europe has the most land neighbours, with nine?	Germany	Austria	Hungary	Serbia
 geo_european_country_highest	Hard	Which European country's highest mountain stands on a small island in the Caribbean?	The Netherlands	Denmark	Britain	Belgium
 geo_country_formed_principalities	Hard	Which country was formed when the principalities of Wallachia and Moldavia united in 1859?	Romania	Bulgaria	Moldova	Hungary
+geo_european_country_more_2	Hard	Which European country has more pigs than people?	Denmark	Netherlands	Ireland	Belgium
+geo_town_split_between	Hard	Which town is split between the Netherlands and Belgium with borders through houses?	Baarle	Maastricht	Eupen	Aachen
 geo_llivia_small_town	Expert	Llivia, a small town completely surrounded by French territory, belongs to which country?	Spain	Andorra	Monaco	Italy
 geo_austrian_valley_kleinwalsertal	Expert	The Austrian valley of Kleinwalsertal can be reached by road only through which country?	Germany	Switzerland	Italy	Liechtenstein
 geo_pheasant_island_tiny	Expert	Pheasant Island, a tiny island in a border river, switches between which two countries every six months?	Spain and France	France and Italy	Spain and Portugal	Germany and Austria
@@ -128,3 +131,4 @@ geo_tiny_exclave_campione	Expert	The tiny exclave of Campione, surrounded by Swi
 geo_southern_swedish_region	Expert	The southern Swedish region of Scania belonged to which country until 1658?	Denmark	Norway	Germany	Poland
 geo_republic_kugelmugel_micronation	Expert	The 'Republic of Kugelmugel', a micronation in a ball-shaped house, stands in a park in which country's capital?	Austria	Germany	Switzerland	Hungary
 geo_town_olivenza_held	Expert	The town of Olivenza, held by Spain since 1801, is still officially claimed by which country?	Portugal	France	Andorra	Morocco
+geo_spanish_exclave_entirely	Expert	Which Spanish exclave is entirely surrounded by France?	Llivia	Ceuta	Melilla	Andorra

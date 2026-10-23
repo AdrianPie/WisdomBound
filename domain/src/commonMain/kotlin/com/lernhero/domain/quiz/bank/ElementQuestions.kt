@@ -193,7 +193,9 @@ object ElementQuestions {
         q("ele_element_honours_marie", "Which element honours Marie and Pierre Curie?", "Curium", listOf("Polonium", "Radium", "Francium"), M),
         q("ele_nickel_silver_used", "Nickel silver, used for keys, zips and cutlery, contains how much silver?", "None at all", listOf("About 10%", "About 25%", "About 50%"), M),
         q("ele_gas_bubbling_out", "Which gas bubbling out of the blood gives divers 'the bends' if they surface too fast?", "Nitrogen", listOf("Oxygen", "Helium", "Carbon dioxide"), M),
-        q("ele_striking_strip_box", "The striking strip on a box of safety matches contains which element?", "Phosphorus", listOf("Sulfur", "Magnesium", "Potassium"), M)
+        q("ele_striking_strip_box", "The striking strip on a box of safety matches contains which element?", "Phosphorus", listOf("Sulfur", "Magnesium", "Potassium"), M),
+        q("ele_element_added_iron", "Which element is added to iron to make steel?", "Carbon", listOf("Chromium", "Nickel", "Silicon"), M),
+        q("ele_carat_mean_gold", "What does '24 carat' mean for gold?", "Pure gold", listOf("Half gold", "24 grams", "24 percent gold"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -276,7 +278,17 @@ object ElementQuestions {
         q("ele_roughly_temperature_liquid", "At roughly what temperature does liquid nitrogen boil?", "-196 °C", listOf("-78 °C", "-120 °C", "-273 °C"), H),
         q("ele_tin_objects_crumble", "Why can tin objects crumble into grey powder in a harsh winter?", "Tin changes its crystal form in the cold", listOf("Frost cracks the tin oxide layer", "Ice crystals grow inside the metal", "Cold air makes tin rust faster"), H),
         q("ele_green_wallpaper_dye", "A green wallpaper dye that may have slowly poisoned Napoleon on St Helena contained which element?", "Arsenic", listOf("Mercury", "Lead", "Thallium"), H),
-        q("ele_since_1992_british", "Since 1992, British 1p and 2p coins have been made of copper-plated what?", "Steel", listOf("Zinc", "Aluminium", "Nickel"), H)
+        q("ele_since_1992_british", "Since 1992, British 1p and 2p coins have been made of copper-plated what?", "Steel", listOf("Zinc", "Aluminium", "Nickel"), H),
+        q("ele_element_found_all", "Which element is found in all proteins but not in pure fats or sugars?", "Nitrogen", listOf("Carbon", "Oxygen", "Hydrogen"), H),
+        q("ele_gas_makes_voice", "Which gas makes your voice deep when inhaled, the opposite of helium?", "Sulfur hexafluoride", listOf("Neon", "Nitrogen", "Carbon dioxide"), H),
+        q("ele_pure_carat_gold", "How pure is 18-carat gold?", "75 percent gold", listOf("50 percent gold", "90 percent gold", "18 percent gold"), H),
+        q("ele_element_russia", "Which element is named after Russia?", "Ruthenium", listOf("Rhenium", "Rubidium", "Rutherfordium"), H),
+        q("ele_element_old_latin", "Which element is named after the old Latin name of France, Gaul?", "Gallium", listOf("Francium", "Germanium", "Lutetium"), H),
+        q("ele_element_rhine_river", "Which element is named after the Rhine river?", "Rhenium", listOf("Rhodium", "Ruthenium", "Radon"), H),
+        q("ele_element_japan_2016", "Which element was named after Japan in 2016?", "Nihonium", listOf("Japonium", "Tennessine", "Moscovium"), H),
+        q("ele_element_2016_honours", "Which element, named in 2016, honours the home state of Oak Ridge National Laboratory?", "Tennessine", listOf("Nihonium", "Americium", "Berkelium"), H),
+        q("ele_element_comes_greek_2", "Which element's name comes from the Greek for 'new'?", "Neon", listOf("Xenon", "Nitrogen", "Neodymium"), H),
+        q("ele_element_latin_hydrargyrum", "Which element's Latin name 'hydrargyrum' means 'liquid silver'?", "Mercury", listOf("Silver", "Tin", "Gallium"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -335,6 +347,16 @@ object ElementQuestions {
         q("ele_hafnium_latin_city", "Hafnium is named after the Latin name of which city?", "Copenhagen", listOf("Stockholm", "Paris", "Berlin"), X),
         q("ele_element_more_stable", "Which element has more stable isotopes than any other, ten in all?", "Tin", listOf("Lead", "Iron", "Xenon"), X),
         q("ele_niobium_niobe_daughter", "Niobium is named after Niobe, daughter of which mythical king whose own element it is always found with?", "Tantalus", listOf("Midas", "Sisyphus", "Minos"), X),
-        q("ele_carl_scheele_joseph", "Carl Scheele and Joseph Priestley independently discovered which element in the 1770s?", "Oxygen", listOf("Hydrogen", "Argon", "Phosphorus"), X)
+        q("ele_carl_scheele_joseph", "Carl Scheele and Joseph Priestley independently discovered which element in the 1770s?", "Oxygen", listOf("Hydrogen", "Argon", "Phosphorus"), X),
+        q("ele_element_greek_word_4", "Which element is named after the Greek word for 'green', for its spectral line?", "Thallium", listOf("Chlorine", "Chromium", "Praseodymium"), X),
+        q("ele_element_comes_greek", "Which element's name comes from the Greek word for 'rose', for its pink salts?", "Rhodium", listOf("Iridium", "Radium", "Ruthenium"), X),
+        q("ele_element_heaviest_living", "Which element is the heaviest one named after a living scientist at the time of naming?", "Oganesson", listOf("Seaborgium", "Einsteinium", "Nobelium"), X),
+        q("ele_element_scandinavian_goddess", "Which element is named after a Scandinavian goddess?", "Vanadium", listOf("Thorium", "Freyium", "Niobium"), X),
+        q("ele_metal_ancient_egyptians", "Which metal did ancient Egyptians value more than gold, since it fell from the sky?", "Meteoric iron", listOf("Silver", "Copper", "Platinum"), X),
+        q("ele_element_latin_stockholm", "Which element is named after the Latin name of Stockholm?", "Holmium", listOf("Hafnium", "Thulium", "Erbium"), X),
+        q("ele_element_old_scandinavia", "Which element is named after the old name of Scandinavia's far north, Thule?", "Thulium", listOf("Holmium", "Scandium", "Hafnium"), X),
+        q("ele_element_used_precise", "Which element is used in the most precise optical lattice clocks?", "Strontium", listOf("Caesium", "Rubidium", "Helium"), X),
+        q("ele_element_means_new", "Which element's name means 'new twin' in Greek?", "Neodymium", listOf("Praseodymium", "Didymium", "Neon"), X),
+        q("ele_element_comes_greek_3", "Which element's name comes from the Greek for 'heavy'?", "Barium", listOf("Lead", "Osmium", "Tungsten"), X)
     )
 }

@@ -215,7 +215,14 @@ object LiteratureQuestions {
         q("lit_hunger_games_bird", "In 'The Hunger Games', which bird appears on the pin Katniss wears into the arena?", "A mockingjay", listOf("A phoenix", "A raven", "A golden eagle"), E),
         q("lit_hunger_games_baker", "In 'The Hunger Games', which baker's son goes into the arena with Katniss?", "Peeta Mellark", listOf("Gale Hawthorne", "Finnick Odair", "Haymitch Abernathy"), E),
         q("lit_members_set_out", "How many members set out in the Fellowship of the Ring?", "Nine", listOf("Seven", "Eight", "Twelve"), E),
-        q("lit_lord_rings_ents", "In 'The Lord of the Rings', what are the Ents?", "Giant walking tree-folk", listOf("Giant talking eagles", "Mountain trolls", "Cave-dwelling goblins"), E)
+        q("lit_lord_rings_ents", "In 'The Lord of the Rings', what are the Ents?", "Giant walking tree-folk", listOf("Giant talking eagles", "Mountain trolls", "Cave-dwelling goblins"), E),
+        q("lit_wrote_hobbit", "Who wrote 'The Hobbit'?", "J. R. R. Tolkien", listOf("C. S. Lewis", "Roald Dahl", "Terry Pratchett"), E),
+        q("lit_wrote_don_quixote", "Who wrote 'Don Quixote'?", "Miguel de Cervantes", listOf("Lope de Vega", "Gabriel Garcia Marquez", "Federico Garcia Lorca"), E),
+        q("lit_boy_never_grows", "What is the name of the boy who never grows up in J. M. Barrie's story?", "Peter Pan", listOf("Tom Sawyer", "Oliver Twist", "Christopher Robin"), E),
+        q("lit_wizard_character_wants", "In 'The Wizard of Oz', which character wants a brain?", "The Scarecrow", listOf("The Tin Man", "The Cowardly Lion", "Toto"), E),
+        q("lit_wrote_war_worlds", "Who wrote 'War of the Worlds'?", "H. G. Wells", listOf("Jules Verne", "Arthur C. Clarke", "Isaac Asimov"), E),
+        q("lit_character_thousand_nights", "Which character from 'One Thousand and One Nights' finds a cave of treasure?", "Ali Baba", listOf("Aladdin", "Sinbad", "Scheherazade"), E),
+        q("lit_very_short_novel", "What is the name of the very short novel by Kafka in which Gregor Samsa becomes an insect?", "The Metamorphosis", listOf("The Trial", "The Castle", "The Judgment"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -550,7 +557,20 @@ object LiteratureQuestions {
         q("lit_writer_poem_ends", "Which writer's poem 'If—' ends 'you'll be a Man, my son'?", "Rudyard Kipling", listOf("Robert Frost", "Alfred Tennyson", "W. B. Yeats"), M),
         q("lit_young_narrator_treasure", "Who is the young narrator of 'Treasure Island'?", "Jim Hawkins", listOf("Ben Gunn", "Billy Bones", "Squire Trelawney"), M),
         q("lit_composed_moonlight_sonata", "Who composed the 'Moonlight Sonata'?", "Beethoven", listOf("Chopin", "Mozart", "Liszt"), M),
-        q("lit_instrument_niccolo_paganini", "Which instrument did Niccolo Paganini, rumoured to have sold his soul to the devil, play?", "The violin", listOf("The piano", "The cello", "The flute"), M)
+        q("lit_instrument_niccolo_paganini", "Which instrument did Niccolo Paganini, rumoured to have sold his soul to the devil, play?", "The violin", listOf("The piano", "The cello", "The flute"), M),
+        q("lit_captain_hook_ship", "What is the name of Captain Hook's ship in 'Peter Pan'?", "Jolly Roger", listOf("Black Pearl", "Hispaniola", "Nautilus"), M),
+        q("lit_isaac_asimov_rules", "Which Isaac Asimov rules govern how robots must behave?", "Three Laws of Robotics", listOf("Four Robot Codes", "Prime Directive", "Robot Charter"), M),
+        q("lit_must_queen_guess", "What must the queen guess to escape her deal with Rumpelstiltskin?", "His name", listOf("His age", "His home", "His birthday"), M),
+        q("lit_pied_piper_hamelin", "In 'The Pied Piper of Hamelin', what does the piper lead away when he is not paid?", "The children", listOf("The rats", "The cattle", "The soldiers"), M),
+        q("lit_four_animals_form", "Which four animals form a band in a Brothers Grimm tale?", "Donkey, dog, cat and rooster", listOf("Horse, pig, duck and goat", "Cow, sheep, dog and cat", "Fox, wolf, bear and hare"), M),
+        q("lit_old_english_poem", "Which Old English poem's hero kills the monster Grendel?", "Beowulf", listOf("Sir Gawain", "The Wanderer", "The Seafarer"), M),
+        q("lit_author_wrote_slaughterhouse", "Which author wrote 'Slaughterhouse-Five'?", "Kurt Vonnegut", listOf("Joseph Heller", "Ray Bradbury", "Philip K. Dick"), M),
+        q("lit_wrote_androids_dream", "Who wrote 'Do Androids Dream of Electric Sheep?', the basis for 'Blade Runner'?", "Philip K. Dick", listOf("William Gibson", "Isaac Asimov", "Ray Bradbury"), M),
+        q("lit_czech_writer_coined", "Which Czech writer coined the word 'robot' in a 1920 play?", "Karel Capek", listOf("Franz Kafka", "Jaroslav Hasek", "Milan Kundera"), M),
+        q("lit_job_antoine_saint", "Which job did Antoine de Saint-Exupery have besides writing?", "Pilot", listOf("Sailor", "Doctor", "Teacher"), M),
+        q("lit_french_poet_wrote", "Which French poet wrote fables like 'The Tortoise and the Hare' in verse?", "Jean de La Fontaine", listOf("Charles Perrault", "Moliere", "Racine"), M),
+        q("lit_author_published_robert", "Which author published 'Robert Galbraith' crime novels under a pen name?", "J. K. Rowling", listOf("Stephen King", "Agatha Christie", "Anne Rice"), M),
+        q("lit_horror_writer_once", "Which horror writer once published as Richard Bachman?", "Stephen King", listOf("Dean Koontz", "Clive Barker", "Peter Straub"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -745,7 +765,15 @@ object LiteratureQuestions {
         q("lit_painter_hid_man", "Which painter hid a man's face behind a floating green apple in 'The Son of Man'?", "Rene Magritte", listOf("Salvador Dali", "Joan Miro", "Max Ernst"), H),
         q("lit_composed_six_brandenburg", "Who composed the six 'Brandenburg Concertos'?", "Johann Sebastian Bach", listOf("George Frideric Handel", "Antonio Vivaldi", "Georg Philipp Telemann"), H),
         q("lit_composer_wrote_sprach", "Which composer wrote 'Also sprach Zarathustra', made famous by the film '2001'?", "Richard Strauss", listOf("Johann Strauss II", "Richard Wagner", "Gustav Mahler"), H),
-        q("lit_nessun_dorma_aria", "'Nessun dorma' is an aria from which Puccini opera?", "Turandot", listOf("Tosca", "La Boheme", "Madama Butterfly"), H)
+        q("lit_nessun_dorma_aria", "'Nessun dorma' is an aria from which Puccini opera?", "Turandot", listOf("Tosca", "La Boheme", "Madama Butterfly"), H),
+        q("lit_author_invented_county", "Which author invented the county of Yoknapatawpha?", "William Faulkner", listOf("John Steinbeck", "Mark Twain", "Harper Lee"), H),
+        q("lit_detective_edgar_allan", "Which detective did Edgar Allan Poe create, often called the first fictional detective?", "C. Auguste Dupin", listOf("Sherlock Holmes", "Father Brown", "Inspector Bucket"), H),
+        q("lit_swedish_author_wrote", "Which Swedish author wrote about Nils Holgersson flying on a goose?", "Selma Lagerlof", listOf("Astrid Lindgren", "August Strindberg", "Tove Jansson"), H),
+        q("lit_reclusive_american_poet", "Which reclusive American poet had almost all of her nearly 1800 poems published after death?", "Emily Dickinson", listOf("Sylvia Plath", "Elizabeth Bishop", "Anne Sexton"), H),
+        q("lit_under_pen_bronte", "Under what pen name did the Bronte sisters first publish?", "Currer, Ellis and Acton Bell", listOf("George, Edward and Arthur Eliot", "Brown, Brook and Bell", "The Haworth Sisters"), H),
+        q("lit_french_author_real", "Which French author's real name was Francois-Marie Arouet?", "Voltaire", listOf("Moliere", "Stendhal", "Rousseau"), H),
+        q("lit_french_playwright_real", "Which French playwright's real name was Jean-Baptiste Poquelin?", "Moliere", listOf("Voltaire", "Racine", "Corneille"), H),
+        q("lit_american_author_wrote", "Which American author wrote short stories with twist endings under the name O. Henry?", "William Sydney Porter", listOf("Ambrose Bierce", "Bret Harte", "Washington Irving"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */

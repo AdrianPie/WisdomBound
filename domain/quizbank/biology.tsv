@@ -392,6 +392,12 @@ bio_medical_tailbone	Medium	What is the medical name for the tailbone?	The coccy
 bio_agoraphobia_fear	Medium	Agoraphobia is a fear of what?	Open or crowded places	Spiders	Heights	Small enclosed spaces
 bio_opium_morphine_come	Medium	Opium and morphine come from which flower?	The poppy	The lotus	The foxglove	The tulip
 bio_black_peppercorns_dried	Medium	Black peppercorns are the dried what of a climbing vine?	Unripe fruits	Flower buds	Root nodules	Leaf tips
+bio_finches_helped_darwin	Medium	Which finches helped Darwin's ideas about evolution?	Galapagos finches	Canary finches	Zebra finches	Gouldian finches
+bio_doctor_traced_london	Medium	Which doctor traced a London cholera outbreak to a water pump in 1854?	John Snow	Edward Jenner	Joseph Lister	Florence Nightingale
+bio_group_insects_described	Medium	Which group of insects has the most described species?	Beetles	Ants	Butterflies	Flies
+bio_british_primatologist_studied	Medium	Which British primatologist studied wild chimpanzees in Tanzania from 1960?	Jane Goodall	Dian Fossey	Birute Galdikas	Cynthia Moss
+bio_american_zoologist_studied	Medium	Which American zoologist studied mountain gorillas in Rwanda?	Dian Fossey	Jane Goodall	Birute Galdikas	Rachel Carson
+bio_marine_biologist_1962	Medium	Which marine biologist's 1962 book 'Silent Spring' warned about pesticides?	Rachel Carson	Sylvia Earle	Jane Goodall	Eugenie Clark
 bio_mejoza	Hard	What is the cell division that produces sex cells called?	Meiosis	Mitosis	Cytokinesis	Apoptosis
 bio_mendel	Hard	Who is considered the father of genetics for his research on peas?	Gregor Mendel	Charles Darwin	James Watson	Francis Crick
 bio_mozdzek	Hard	Which part of the brain is responsible for balance and movement coordination?	Cerebellum	Cerebral cortex	Medulla oblongata	Hypothalamus
@@ -545,6 +551,11 @@ bio_rubber_tree_now	Hard	The rubber tree, now grown mostly in Southeast Asia, is
 bio_cashew_nuts_never	Hard	Why are cashew nuts never sold in their shells?	The shell holds a skin-burning oil	The shell is too hard to crack	The shell rots within days	The shell is fed to cattle
 bio_abundant_protein_human	Hard	Which is the most abundant protein in the human body?	Collagen	Keratin	Haemoglobin	Insulin
 bio_network_500_million	Hard	What is the network of about 500 million neurons lining the gut nicknamed?	The second brain	The gut clock	The inner spine	The belly web
+bio_pigment_makes_tomatoes	Hard	Which pigment makes tomatoes red?	Lycopene	Beta-carotene	Anthocyanin	Melanin
+bio_scientist_darwin_bulldog	Hard	Which scientist was called 'Darwin's bulldog' for defending evolution?	Thomas Huxley	Alfred Russel Wallace	Richard Owen	Herbert Spencer
+bio_part_brain_connects	Hard	Which part of the brain connects its two halves?	Corpus callosum	Brainstem	Cerebellum	Pons
+bio_fear_long_words	Hard	What is the name of the fear of long words, ironically a very long word?	Hippopotomonstrosesquippedaliophobia	Triskaidekaphobia	Arachibutyrophobia	Hexakosioihexekontahexaphobia
+bio_poisonous_plant_means	Hard	Which poisonous plant's name means 'beautiful lady' in Italian?	Belladonna	Bellflower	Mandrake	Nightshade
 bio_amylaza	Expert	Which enzyme in saliva breaks down starch?	Amylase	Pepsin	Lipase	Trypsin
 bio_mrna	Expert	Which type of RNA carries genetic information from the nucleus to the ribosome?	mRNA	tRNA	rRNA	siRNA
 bio_ektoderma	Expert	Which germ layer does the nervous system develop from?	Ectoderm	Mesoderm	Endoderm	Notochord
@@ -607,3 +618,9 @@ bio_tiny_worm_thousand	Expert	Which tiny worm, with only about a thousand body c
 bio_enzyme_used_plants	Expert	Which enzyme, used by plants to capture carbon, is thought to be the most abundant protein on Earth?	RuBisCO	Chlorophyll	Amylase	Catalase
 bio_epo_hormone_abused	Expert	EPO, the hormone abused by some doping cyclists, is mainly made by which organ?	The kidneys	The liver	The pancreas	The adrenal glands
 bio_chicle_original_base	Expert	Chicle, the original base of chewing gum, is the sap of which tree?	The sapodilla	The rubber tree	The maple	The acacia
+bio_patient_initials_taught	Expert	Which famous patient, known by his initials, taught science how memories are formed after losing his hippocampus?	H.M.	Phineas Gage	Little Albert	Anna O.
+bio_pando_utah_largest	Expert	What is 'Pando' in Utah, one of the largest living organisms?	A clone of aspen trees	A giant fungus	A coral reef	A seagrass meadow
+bio_medical_brain_freeze	Expert	What is the medical name for brain freeze from cold food?	Sphenopalatine ganglioneuralgia	Cryoneuralgia	Glossopharyngeal spasm	Cephalalgia frigida
+bio_medical_hiccups	Expert	What is the medical name for hiccups?	Singultus	Eructation	Borborygmus	Sternutation
+bio_smooth_area_between	Expert	What is the name for the smooth area between the eyebrows?	Glabella	Philtrum	Lunula	Canthus
+bio_scientist_studied_orangutans	Expert	Which scientist studied orangutans in Borneo, completing the 'Trimates'?	Birute Galdikas	Dian Fossey	Jane Goodall	Cynthia Moss

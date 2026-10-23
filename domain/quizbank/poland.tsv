@@ -153,6 +153,9 @@ pol_date_polish_children	Easy	On which date do Polish children celebrate Childre
 pol_tongue_twister_buzzes	Easy	In the famous tongue twister, what buzzes in the reeds in Szczebrzeszyn?	A beetle	A bee	A fly	A mosquito
 pol_grzaniec_popular_polish	Easy	What is 'grzaniec', popular at Polish Christmas markets?	Mulled wine or beer	Hot chocolate with chilli	Roasted chestnuts	A gingerbread biscuit
 pol_poles_call_april	Easy	What do Poles call April Fools' Day?	Prima aprilis	Lany poniedzialek	Tlusty czwartek	Zaduszki
+pol_polish_city_capital	Easy	Which Polish city was the capital before Warsaw?	Krakow	Gniezno	Poznan	Plock
+pol_polish_dessert_doughnut	Easy	Which Polish dessert is a doughnut eaten especially on Fat Thursday?	Paczek	Faworki	Sernik	Makowiec
+pol_mountain_range_forms	Easy	Which mountain range forms Poland's southern border with Slovakia?	Tatra Mountains	Sudetes	Alps	Ural Mountains
 pol_geo2_wisla_zrodlo	Medium	Where does the Vistula river originate?	In the Silesian Beskids	In the Tatras	In the Sudetes	In the Masurian Lake District
 pol_geo2_polska_jezioro	Medium	Which lake is the largest in Poland?	Sniardwy	Mamry	Hancza	Lebsko
 pol_geo2_polska_najglebsze	Medium	Which lake is the deepest in Poland?	Hancza	Sniardwy	Wigry	Mamry
@@ -388,6 +391,18 @@ pol_composed_polonaise_andrzej	Medium	Who composed the famous polonaise in Andrz
 pol_band_recorded_wehikul	Medium	Which band recorded 'Wehikul czasu'?	Dzem	Perfect	Budka Suflera	Lady Pank
 pol_regional_language_spoken	Medium	Which regional language, spoken around Gdansk, has official status in Poland?	Kashubian	Silesian	Masurian	Goral
 pol_floats_gdansk_liqueur	Medium	What floats in the Gdansk liqueur Goldwasser?	Flakes of gold	A blade of grass	Chips of amber	Juniper berries
+pol_king_poland_led	Medium	Which king of Poland led the relief of Vienna in 1683?	Jan III Sobieski	Stefan Batory	Wladyslaw IV	August II
+pol_polish_lake_district	Medium	Which Polish lake district is known as the 'Land of a Thousand Lakes'?	Masuria	Kashubia	Pomerania	Podlasie
+pol_national_park_protects	Medium	Which national park protects Europe's last primeval lowland forest, home to bison?	Bialowieza	Kampinos	Bieszczady	Wigry
+pol_polish_soup_made	Medium	Which Polish soup is made from fermented rye flour?	Zurek	Barszcz	Rosol	Flaki
+pol_thin_wafer_poles	Medium	What thin wafer do Poles share on Christmas Eve?	Oplatek	Paczek	Obwarzanek	Prosforka
+pol_polish_hammer_thrower	Medium	Which Polish hammer thrower won three Olympic golds in a row?	Anita Wlodarczyk	Kamila Skolimowska	Joanna Fiodorow	Malwina Kopron
+pol_tune_played_krakow	Medium	What is the name of the tune played from Krakow's St Mary's Church tower?	Hejnal Mariacki	Mazurek Dabrowskiego	Bogurodzica	Rota
+pol_castle_poland_seat	Medium	Which castle in Poland was the seat of the Grand Master of the Teutonic Order?	Malbork Castle	Wawel Castle	Ksiaz Castle	Niedzica Castle
+pol_polish_smoked_sheep	Medium	Which Polish smoked sheep's cheese from the Tatras has EU protected status?	Oscypek	Bryndza	Twarog	Bundz
+pol_smigus_dyngus_celebrated	Medium	What is 'Smigus-dyngus', celebrated on Easter Monday?	Throwing water at each other	Painting eggs	Burning a straw figure	Rolling eggs downhill
+pol_straw_figure_poles	Medium	Which straw figure do Poles drown in spring to say goodbye to winter?	Marzanna	Baba Jaga	Rusalka	Kikimora
+pol_polish_mathematician_triangle	Medium	Which Polish mathematician's triangle is a famous fractal?	Waclaw Sierpinski	Stefan Banach	Kazimierz Kuratowski	Alfred Tarski
 pol_his2_bitwa_grunwald_kto	Hard	Who commanded the Polish-Lithuanian forces at Grunwald?	Wladyslaw Jagiello	Casimir the Great	Vytautas alone	Boleslaw the Wrymouth
 pol_his2_konstytucja_3maja_rok	Hard	What was the Constitution of May 3 in Europe?	The first in Europe	The third in Europe	The first in the world	The last of the 18th century
 pol_his2_bitwa_warszawska	Hard	In which year was the Battle of Warsaw, called the Miracle at the Vistula?	1920	1919	1921	1918
@@ -529,6 +544,12 @@ pol_composer_wrote_music	Hard	Which composer wrote the music for Kieslowski's 'T
 pol_hosted_quiz_show	Hard	Who has hosted the TV quiz show 'Jeden z dziesieciu' for decades?	Tadeusz Sznuk	Krzysztof Ibisz	Zygmunt Chajzer	Hubert Urbanski
 pol_king_received_prussian	Hard	Which king received the 'Prussian Homage' of 1525, later painted by Matejko?	Sigismund I the Old	Sigismund II Augustus	Stephen Bathory	Casimir IV Jagiellon
 pol_lwow_born_mathematician	Hard	Which Lwow-born mathematician helped design the American hydrogen bomb?	Stanislaw Ulam	Stefan Banach	Hugo Steinhaus	Waclaw Sierpinski
+pol_polish_violinist_international	Hard	Which Polish violinist has an international violin competition named after him in Poznan?	Henryk Wieniawski	Karol Lipinski	Ignacy Paderewski	Wanda Wilkomirska
+pol_polish_mountain_range	Hard	Which Polish mountain range has the peak Sniezka?	Karkonosze	Tatra	Bieszczady	Beskid Zywiecki
+pol_polish_region_own	Hard	Which Polish region is famous for its own language and the city of Kartuzy?	Kashubia	Silesia	Podhale	Kurpie
+pol_pole_invented_kerosene	Hard	Which Pole invented the kerosene lamp and started an oil industry in the 1850s?	Ignacy Lukasiewicz	Jan Czochralski	Kazimierz Funk	Stefan Banach
+pol_polish_spit_stretches	Hard	Which Polish spit stretches about 35 km into the Baltic Sea?	Hel Peninsula	Vistula Spit	Curonian Spit	Leba Spit
+pol_polish_castle_third	Hard	Which Polish castle is the third largest in the country and sits in Lower Silesia?	Ksiaz Castle	Moszna Castle	Czocha Castle	Niedzica Castle
 pol_his3_polski_rzad_na_uchodzstwie	Expert	Where did the Polish government-in-exile operate during World War II?	London (earlier in France)	Moscow, alongside the Red Army	Washington, with the Allies	Rome, after the Italian campaign
 pol_his3_dywizjon_303	Expert	What was 303 Squadron known for in the Battle of Britain?	It was one of the RAF's most effective fighter squadrons	It defended Warsaw through September 1939	It fought its way up the hill at Monte Cassino	It was a naval unit escorting convoys
 pol_lit2_herbert_bohater	Expert	What is the character of Zbigniew Herbert's poem cycle called?	Mr. Cogito	Mr. Tadeusz	Mr. Wolodyjowski	Mr. Kleks
@@ -588,3 +609,5 @@ pol_home_army_1944	Expert	What was the Home Army's 1944 plan of uprisings agains
 pol_polish_animator_won	Expert	Which Polish animator won an Oscar in 1983 for the short film 'Tango'?	Zbigniew Rybczynski	Tomasz Baginski	Jan Lenica	Walerian Borowczyk
 pol_hetman_crushed_russian	Expert	Which hetman crushed a Russian-Swedish army at Klushino in 1610, opening the road to Moscow?	Stanislaw Zolkiewski	Jan Karol Chodkiewicz	Stanislaw Koniecpolski	Jan Zamoyski
 pol_stanislaw_lem_book	Expert	In which Stanislaw Lem book do the constructor robots Trurl and Klapaucius appear?	The Cyberiad	Solaris	The Star Diaries	His Master's Voice
+pol_polish_pomeranian_village	Expert	Which Polish Pomeranian village has an unexplained 'Crooked Forest' of bent pine trees?	Nowe Czarnowo	Leba	Miedzyzdroje	Ustka
+pol_polish_town_chapel	Expert	Which Polish town's chapel walls are decorated with thousands of human skulls?	Czermna	Wieliczka	Kudowa-Zdroj	Swidnica

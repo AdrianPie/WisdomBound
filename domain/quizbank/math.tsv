@@ -234,6 +234,16 @@ mat_numbers_around_dartboard	Medium	What do the numbers 1 to 20 around a dartboa
 mat_qed_end_proof	Medium	What does 'QED' at the end of a proof mean?	Which was to be shown	Question ends here	Quickly and easily done	Equal on both sides
 mat_shape_toblerone_box	Medium	What 3D shape is a Toblerone box?	A triangular prism	A square pyramid	A tetrahedron	A cuboid
 mat_sheets_paper_ream	Medium	How many sheets of paper are in a ream?	500	100	250	1,000
+mat_sum_interior_angles	Medium	What is the sum of the interior angles of a pentagon?	540 degrees	360 degrees	450 degrees	720 degrees
+mat_degrees_each_interior	Medium	How many degrees are in each interior angle of a regular hexagon?	120	108	135	90
+mat_minutes_week	Medium	How many minutes are in a week?	10,080	1,440	8,640	12,000
+mat_two_men_independently	Medium	Which two men independently invented calculus in the 17th century?	Newton and Leibniz	Euler and Gauss	Descartes and Fermat	Pascal and Huygens
+mat_problem_andrew_wiles	Medium	Which famous problem did Andrew Wiles prove in 1994, 350 years after it was posed?	Fermat's Last Theorem	Poincare conjecture	Goldbach conjecture	Riemann hypothesis
+mat_colours_enough_colour	Medium	How many colours are enough to colour any map so no neighbours share a colour?	Four	Three	Five	Six
+mat_golden_ratio_618	Medium	What is the name of the golden ratio, about 1.618, often written with a Greek letter?	Phi	Pi	Tau	Sigma
+mat_paradox_achilles_never	Medium	What is the name of the paradox in which Achilles can never overtake a tortoise?	Zeno's paradox	Russell's paradox	Banach-Tarski paradox	Liar paradox
+mat_calendar_reform_skipped	Medium	Which calendar reform skipped ten days in October 1582?	Gregorian	Julian	Revolutionary	Mayan
+mat_111_times_111	Medium	What is 111 times 111?	12321	11211	12221	13431
 mat_silnia_5	Hard	What is 5! (5 factorial)?	120	100	60	150
 mat_fibonacci	Hard	What number comes next in the sequence 1, 1, 2, 3, 5, 8...?	13	11	12	16
 mat2_logarytm_2_8	Hard	What is log base 2 of 8?	3	2	4	8
@@ -325,6 +335,13 @@ mat_group_367_people	Hard	In a group of 367 people, what is the chance that at l
 mat_clock_faces_roman	Hard	Clock faces with Roman numerals usually show the number 4 as what?	IIII	IV	IIV	VI
 mat_sided_die_beloved	Hard	The 20-sided die beloved of Dungeons & Dragons players is which shape?	An icosahedron	A dodecahedron	An octahedron	A decahedron
 mat_scottish_laird_invented	Hard	Which Scottish laird invented logarithms in 1614?	John Napier	Henry Briggs	Colin Maclaurin	James Gregory
+mat_shape_smallest_surface	Hard	Which shape has the smallest surface area for a given volume?	Sphere	Cube	Cylinder	Tetrahedron
+mat_mathematician_identity_plus	Hard	Which mathematician's identity, e to the i pi plus 1 equals 0, is called the most beautiful equation?	Leonhard Euler	Carl Friedrich Gauss	Bernhard Riemann	Pierre de Fermat
+mat_italian_mathematician_brought	Hard	Which Italian mathematician brought Hindu-Arabic numerals to Europe in 1202?	Fibonacci	Cardano	Tartaglia	Galileo
+mat_persian_scholar_gave	Hard	Which Persian scholar's name gave us the word 'algorithm'?	Al-Khwarizmi	Omar Khayyam	Avicenna	Al-Biruni
+mat_austrian_logician_proved	Hard	Which Austrian logician proved in 1931 that some true statements in maths can never be proved?	Kurt Godel	David Hilbert	Georg Cantor	Emmy Noether
+mat_mathematician_showed_some	Hard	Which mathematician showed some infinities are bigger than others?	Georg Cantor	Kurt Godel	Leonhard Euler	David Hilbert
+mat_hotel_thought_experiment	Hard	Which hotel thought experiment shows that an infinite hotel can always fit more guests?	Hilbert's Grand Hotel	Cantor's Inn	Zeno's Lodge	Godel's Motel
 mat_liczba_e	Expert	What is the approximate value of e?	2.72	3.14	1.62	2.24
 mat_liczby_doskonale	Expert	Which of these numbers is perfect (equal to the sum of its divisors)?	28	24	30	36
 mat_duzy_pierwszy	Expert	Which of these numbers is NOT prime?	91	89	97	83
@@ -379,3 +396,5 @@ mat_chicken_mcnuggets_once	Expert	Chicken McNuggets were once sold only in boxes
 mat_larger_power_power	Expert	Which is larger: e to the power of pi, or pi to the power of e?	e to the power of pi	pi to the power of e	They are exactly equal	No one has proved either
 mat_division_sign	Expert	What is the division sign ÷ called?	An obelus	A vinculum	A solidus	A caret
 mat_unproven_conjecture_says	Expert	Which unproven conjecture says every even number greater than 2 is the sum of two primes?	Goldbach's conjecture	Fermat's Last Theorem	The Collatz conjecture	The Riemann hypothesis
+mat_conjecture_any_number	Expert	What is the name of the conjecture that any number reaches 1 by halving evens and tripling odds plus one?	Collatz conjecture	Goldbach conjecture	Twin prime conjecture	Riemann hypothesis
+mat_german_mathematician_theorem	Expert	Which German mathematician's theorem links symmetry and conservation laws in physics?	Emmy Noether	Sofia Kovalevskaya	Hypatia	Ada Lovelace

@@ -327,3 +327,9 @@ cap_capital_gabon	Expert	What is the capital of Gabon?	Libreville	Port-Gentil	Ma
 cap_capital_togo	Expert	What is the capital of Togo?	Lome	Cotonou	Kara	Porto-Novo
 cap_capital_samoa	Expert	What is the capital of Samoa?	Apia	Suva	Nuku'alofa	Port Vila
 cap_capital_cape_verde	Expert	What is the capital of Cape Verde?	Praia	Mindelo	Bissau	Dakar
+cap_capital_federated_states	Expert	What is the capital of the Federated States of Micronesia?	Palikir	Majuro	Tarawa	Ngerulmud
+cap_capital_tuvalu	Expert	What is the capital of Tuvalu?	Funafuti	Tarawa	Majuro	Apia
+cap_capital_vanuatu	Expert	What is the capital of Vanuatu?	Port Vila	Honiara	Suva	Luganville
+cap_capital_solomon_islands	Expert	What is the capital of the Solomon Islands?	Honiara	Port Vila	Port Moresby	Gizo
+cap_old_royal_capital	Expert	What was the old royal capital of Montenegro?	Cetinje	Podgorica	Kotor	Niksic
+cap_capital_san_marino	Expert	What is the capital of San Marino?	San Marino City	Serravalle	Borgo Maggiore	Rimini

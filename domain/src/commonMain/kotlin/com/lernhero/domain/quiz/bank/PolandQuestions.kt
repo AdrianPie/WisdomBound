@@ -178,7 +178,10 @@ object PolandQuestions {
         q("pol_date_polish_children", "On which date do Polish children celebrate Children's Day?", "1 June", listOf("21 January", "6 December", "1 September"), E),
         q("pol_tongue_twister_buzzes", "In the famous tongue twister, what buzzes in the reeds in Szczebrzeszyn?", "A beetle", listOf("A bee", "A fly", "A mosquito"), E),
         q("pol_grzaniec_popular_polish", "What is 'grzaniec', popular at Polish Christmas markets?", "Mulled wine or beer", listOf("Hot chocolate with chilli", "Roasted chestnuts", "A gingerbread biscuit"), E),
-        q("pol_poles_call_april", "What do Poles call April Fools' Day?", "Prima aprilis", listOf("Lany poniedzialek", "Tlusty czwartek", "Zaduszki"), E)
+        q("pol_poles_call_april", "What do Poles call April Fools' Day?", "Prima aprilis", listOf("Lany poniedzialek", "Tlusty czwartek", "Zaduszki"), E),
+        q("pol_polish_city_capital", "Which Polish city was the capital before Warsaw?", "Krakow", listOf("Gniezno", "Poznan", "Plock"), E),
+        q("pol_polish_dessert_doughnut", "Which Polish dessert is a doughnut eaten especially on Fat Thursday?", "Paczek", listOf("Faworki", "Sernik", "Makowiec"), E),
+        q("pol_mountain_range_forms", "Which mountain range forms Poland's southern border with Slovakia?", "Tatra Mountains", listOf("Sudetes", "Alps", "Ural Mountains"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -417,7 +420,19 @@ object PolandQuestions {
         q("pol_composed_polonaise_andrzej", "Who composed the famous polonaise in Andrzej Wajda's film 'Pan Tadeusz' (1999)?", "Wojciech Kilar", listOf("Krzysztof Penderecki", "Zbigniew Preisner", "Jan A. P. Kaczmarek"), M),
         q("pol_band_recorded_wehikul", "Which band recorded 'Wehikul czasu'?", "Dzem", listOf("Perfect", "Budka Suflera", "Lady Pank"), M),
         q("pol_regional_language_spoken", "Which regional language, spoken around Gdansk, has official status in Poland?", "Kashubian", listOf("Silesian", "Masurian", "Goral"), M),
-        q("pol_floats_gdansk_liqueur", "What floats in the Gdansk liqueur Goldwasser?", "Flakes of gold", listOf("A blade of grass", "Chips of amber", "Juniper berries"), M)
+        q("pol_floats_gdansk_liqueur", "What floats in the Gdansk liqueur Goldwasser?", "Flakes of gold", listOf("A blade of grass", "Chips of amber", "Juniper berries"), M),
+        q("pol_king_poland_led", "Which king of Poland led the relief of Vienna in 1683?", "Jan III Sobieski", listOf("Stefan Batory", "Wladyslaw IV", "August II"), M),
+        q("pol_polish_lake_district", "Which Polish lake district is known as the 'Land of a Thousand Lakes'?", "Masuria", listOf("Kashubia", "Pomerania", "Podlasie"), M),
+        q("pol_national_park_protects", "Which national park protects Europe's last primeval lowland forest, home to bison?", "Bialowieza", listOf("Kampinos", "Bieszczady", "Wigry"), M),
+        q("pol_polish_soup_made", "Which Polish soup is made from fermented rye flour?", "Zurek", listOf("Barszcz", "Rosol", "Flaki"), M),
+        q("pol_thin_wafer_poles", "What thin wafer do Poles share on Christmas Eve?", "Oplatek", listOf("Paczek", "Obwarzanek", "Prosforka"), M),
+        q("pol_polish_hammer_thrower", "Which Polish hammer thrower won three Olympic golds in a row?", "Anita Wlodarczyk", listOf("Kamila Skolimowska", "Joanna Fiodorow", "Malwina Kopron"), M),
+        q("pol_tune_played_krakow", "What is the name of the tune played from Krakow's St Mary's Church tower?", "Hejnal Mariacki", listOf("Mazurek Dabrowskiego", "Bogurodzica", "Rota"), M),
+        q("pol_castle_poland_seat", "Which castle in Poland was the seat of the Grand Master of the Teutonic Order?", "Malbork Castle", listOf("Wawel Castle", "Ksiaz Castle", "Niedzica Castle"), M),
+        q("pol_polish_smoked_sheep", "Which Polish smoked sheep's cheese from the Tatras has EU protected status?", "Oscypek", listOf("Bryndza", "Twarog", "Bundz"), M),
+        q("pol_smigus_dyngus_celebrated", "What is 'Smigus-dyngus', celebrated on Easter Monday?", "Throwing water at each other", listOf("Painting eggs", "Burning a straw figure", "Rolling eggs downhill"), M),
+        q("pol_straw_figure_poles", "Which straw figure do Poles drown in spring to say goodbye to winter?", "Marzanna", listOf("Baba Jaga", "Rusalka", "Kikimora"), M),
+        q("pol_polish_mathematician_triangle", "Which Polish mathematician's triangle is a famous fractal?", "Waclaw Sierpinski", listOf("Stefan Banach", "Kazimierz Kuratowski", "Alfred Tarski"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -562,7 +577,13 @@ object PolandQuestions {
         q("pol_composer_wrote_music", "Which composer wrote the music for Kieslowski's 'Three Colours' trilogy?", "Zbigniew Preisner", listOf("Wojciech Kilar", "Krzysztof Komeda", "Henryk Gorecki"), H),
         q("pol_hosted_quiz_show", "Who has hosted the TV quiz show 'Jeden z dziesieciu' for decades?", "Tadeusz Sznuk", listOf("Krzysztof Ibisz", "Zygmunt Chajzer", "Hubert Urbanski"), H),
         q("pol_king_received_prussian", "Which king received the 'Prussian Homage' of 1525, later painted by Matejko?", "Sigismund I the Old", listOf("Sigismund II Augustus", "Stephen Bathory", "Casimir IV Jagiellon"), H),
-        q("pol_lwow_born_mathematician", "Which Lwow-born mathematician helped design the American hydrogen bomb?", "Stanislaw Ulam", listOf("Stefan Banach", "Hugo Steinhaus", "Waclaw Sierpinski"), H)
+        q("pol_lwow_born_mathematician", "Which Lwow-born mathematician helped design the American hydrogen bomb?", "Stanislaw Ulam", listOf("Stefan Banach", "Hugo Steinhaus", "Waclaw Sierpinski"), H),
+        q("pol_polish_violinist_international", "Which Polish violinist has an international violin competition named after him in Poznan?", "Henryk Wieniawski", listOf("Karol Lipinski", "Ignacy Paderewski", "Wanda Wilkomirska"), H),
+        q("pol_polish_mountain_range", "Which Polish mountain range has the peak Sniezka?", "Karkonosze", listOf("Tatra", "Bieszczady", "Beskid Zywiecki"), H),
+        q("pol_polish_region_own", "Which Polish region is famous for its own language and the city of Kartuzy?", "Kashubia", listOf("Silesia", "Podhale", "Kurpie"), H),
+        q("pol_pole_invented_kerosene", "Which Pole invented the kerosene lamp and started an oil industry in the 1850s?", "Ignacy Lukasiewicz", listOf("Jan Czochralski", "Kazimierz Funk", "Stefan Banach"), H),
+        q("pol_polish_spit_stretches", "Which Polish spit stretches about 35 km into the Baltic Sea?", "Hel Peninsula", listOf("Vistula Spit", "Curonian Spit", "Leba Spit"), H),
+        q("pol_polish_castle_third", "Which Polish castle is the third largest in the country and sits in Lower Silesia?", "Ksiaz Castle", listOf("Moszna Castle", "Czocha Castle", "Niedzica Castle"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -625,6 +646,8 @@ object PolandQuestions {
         q("pol_home_army_1944", "What was the Home Army's 1944 plan of uprisings against the retreating Germans called?", "Operation Tempest", listOf("Operation Wachlarz", "Operation Bagration", "Operation Market Garden"), X),
         q("pol_polish_animator_won", "Which Polish animator won an Oscar in 1983 for the short film 'Tango'?", "Zbigniew Rybczynski", listOf("Tomasz Baginski", "Jan Lenica", "Walerian Borowczyk"), X),
         q("pol_hetman_crushed_russian", "Which hetman crushed a Russian-Swedish army at Klushino in 1610, opening the road to Moscow?", "Stanislaw Zolkiewski", listOf("Jan Karol Chodkiewicz", "Stanislaw Koniecpolski", "Jan Zamoyski"), X),
-        q("pol_stanislaw_lem_book", "In which Stanislaw Lem book do the constructor robots Trurl and Klapaucius appear?", "The Cyberiad", listOf("Solaris", "The Star Diaries", "His Master's Voice"), X)
+        q("pol_stanislaw_lem_book", "In which Stanislaw Lem book do the constructor robots Trurl and Klapaucius appear?", "The Cyberiad", listOf("Solaris", "The Star Diaries", "His Master's Voice"), X),
+        q("pol_polish_pomeranian_village", "Which Polish Pomeranian village has an unexplained 'Crooked Forest' of bent pine trees?", "Nowe Czarnowo", listOf("Leba", "Miedzyzdroje", "Ustka"), X),
+        q("pol_polish_town_chapel", "Which Polish town's chapel walls are decorated with thousands of human skulls?", "Czermna", listOf("Wieliczka", "Kudowa-Zdroj", "Swidnica"), X)
     )
 }

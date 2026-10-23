@@ -403,7 +403,24 @@ object TechnologyQuestions {
         q("tec_scuba_stand", "What does 'scuba' stand for?", "Self-contained underwater breathing apparatus", listOf("Sealed cylinder for underwater breathing air", "Submarine crew underwater breathing aid", "Standard compressed underwater breathing air"), M),
         q("tec_nft_stand", "What does 'NFT' stand for?", "Non-fungible token", listOf("Network file transfer", "New financial technology", "Numbered format token"), M),
         q("tec_chatbot_hallucinates", "When an AI chatbot 'hallucinates', what does it do?", "States made-up things as if they were true", listOf("Starts answering in random languages", "Shows pictures nobody asked for", "Freezes and refuses to answer"), M),
-        q("tec_engineer_designed_original", "Which engineer designed the original Volkswagen Beetle?", "Ferdinand Porsche", listOf("Karl Benz", "Gottlieb Daimler", "Ettore Bugatti"), M)
+        q("tec_engineer_designed_original", "Which engineer designed the original Volkswagen Beetle?", "Ferdinand Porsche", listOf("Karl Benz", "Gottlieb Daimler", "Ettore Bugatti"), M),
+        q("tec_bluetooth_king_country", "Bluetooth is named after a king of which country?", "Denmark", listOf("Sweden", "Norway", "Finland"), M),
+        q("tec_video_game_console", "Which video game console became the best-selling of all time, with over 150 million units?", "PlayStation 2", listOf("Nintendo DS", "Game Boy", "Wii"), M),
+        q("tec_captcha_test_try", "What does the 'CAPTCHA' test try to tell apart?", "Humans and computers", listOf("Adults and children", "Spam and email", "Viruses and files"), M),
+        q("tec_law_says_chip", "What is the name of the law that says chip transistor counts double about every two years?", "Moore's law", listOf("Murphy's law", "Metcalfe's law", "Amdahl's law"), M),
+        q("tec_software_pretends_useful", "What is the name for software that pretends to be useful but hides malware?", "Trojan horse", listOf("Worm", "Spyware", "Adware"), M),
+        q("tec_company_began_online", "Which company began as an online bookstore in 1994?", "Amazon", listOf("eBay", "Barnes and Noble", "Alibaba"), M),
+        q("tec_country_uses_web", "Which country uses the web domain '.ch'?", "Switzerland", listOf("China", "Chile", "Czech Republic"), M),
+        q("tec_disc_format_beat", "Which disc format beat HD DVD in the high-definition format war?", "Blu-ray", listOf("DVD-Audio", "UMD", "VCD"), M),
+        q("tec_network_became_forerunner", "What was the name of the US network that became the forerunner of the internet?", "ARPANET", listOf("NSFNET", "USENET", "ETHERNET"), M),
+        q("tec_y2k_bug_come", "What did the 'Y2K bug' come from?", "Years stored as two digits", listOf("A virus released in 1999", "A clock chip defect", "Leap year miscalculation"), M),
+        q("tec_british_mathematician_proposed", "Which British mathematician proposed a test of whether a machine can think, in 1950?", "Alan Turing", listOf("Charles Babbage", "John von Neumann", "Claude Shannon"), M),
+        q("tec_ibm_chess_computer", "What was the name of IBM's chess computer that beat Garry Kasparov in 1997?", "Deep Blue", listOf("Watson", "Deep Thought", "AlphaZero"), M),
+        q("tec_website_host_organisation", "What was the name of the first website's host organisation?", "CERN", listOf("MIT", "Stanford", "DARPA"), M),
+        q("tec_hungarian_born_inventor", "Which Hungarian-born inventor created the ballpoint pen in the 1930s?", "Laszlo Biro", listOf("Erno Rubik", "Laszlo Jozsef", "Janos Irinyi"), M),
+        q("tec_swedish_company_stands", "Which Swedish company's name stands for its founder's initials and his farm and village?", "IKEA", listOf("Volvo", "Saab", "Ericsson"), M),
+        q("tec_shuttle_prototype_never", "Which shuttle prototype never flew to space and was named after a 'Star Trek' ship?", "Enterprise", listOf("Atlantis", "Endeavour", "Pathfinder"), M),
+        q("tec_spacecraft_became_private", "Which spacecraft became the first private one to dock with the ISS, in 2012?", "SpaceX Dragon", listOf("Boeing Starliner", "Orion", "Cygnus"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -550,7 +567,30 @@ object TechnologyQuestions {
         q("tec_car_maker_badge", "Which car maker's badge shows a serpent swallowing a man?", "Alfa Romeo", listOf("Maserati", "Lancia", "Ferrari"), H),
         q("tec_volvo_circle_arrow", "Volvo's circle-and-arrow logo is the ancient symbol for which metal?", "Iron", listOf("Copper", "Gold", "Lead"), H),
         q("tec_country_opened_nuclear", "Which country opened the first nuclear power station to supply an electricity grid, in 1954?", "The Soviet Union", listOf("The United States", "Britain", "France"), H),
-        q("tec_1975_kit_computer", "Which 1975 kit computer, sold by mail order, kick-started the personal computer craze?", "The Altair 8800", listOf("The Apple I", "The Commodore PET", "The IBM 5150"), H)
+        q("tec_1975_kit_computer", "Which 1975 kit computer, sold by mail order, kick-started the personal computer craze?", "The Altair 8800", listOf("The Apple I", "The Commodore PET", "The IBM 5150"), H),
+        q("tec_computer_scientist_popularised", "Which computer scientist popularised the term 'bug' after a real moth was found in a computer?", "Grace Hopper", listOf("Ada Lovelace", "Alan Turing", "John von Neumann"), H),
+        q("tec_codename_british_code", "What was the codename of the British code-breaking machine built at Bletchley Park in 1943?", "Colossus", listOf("Enigma", "Bombe", "Lorenz"), H),
+        q("tec_company_invented_compact", "Which company invented the compact cassette tape in 1963?", "Philips", listOf("Sony", "Grundig", "Telefunken"), H),
+        q("tec_apple_computer_mouse", "What was the name of Apple's first computer with a mouse and graphical interface, launched in 1983?", "Lisa", listOf("Macintosh", "Newton", "Apple III"), H),
+        q("tec_emoticon_made_colon", "Which emoticon, made of a colon, dash and bracket, was first proposed in 1982?", ":-)", listOf(";-)", ":-(", ":-P"), H),
+        q("tec_company_founders_started", "Which company's founders started it in a garage in Palo Alto in 1939?", "Hewlett-Packard", listOf("Apple", "Google", "Intel"), H),
+        q("tec_country_domain_became", "Which country's '.ai' domain became popular with artificial intelligence firms?", "Anguilla", listOf("Albania", "Antigua", "Algeria"), H),
+        q("tec_computer_term_spam", "What does the computer term 'spam' come from?", "A Monty Python sketch", listOf("An acronym for junk mail", "A brand of soap", "A radio jingle"), H),
+        q("tec_meme_originally_coined", "What is a 'meme' originally, as coined by Richard Dawkins in 1976?", "A unit of cultural idea", listOf("A funny picture", "A computer virus", "A type of gene"), H),
+        q("tec_apollo_command_module", "What was the name of the Apollo 11 command module?", "Columbia", listOf("Eagle", "Challenger", "Discovery"), H),
+        q("tec_songs_apple_claim", "How many songs did Apple claim the first iPod could hold in your pocket?", "1,000", listOf("100", "10,000", "500"), H),
+        q("tec_father_information_theory", "Who is known as the 'father of information theory'?", "Claude Shannon", listOf("Alan Turing", "Norbert Wiener", "John von Neumann"), H),
+        q("tec_company_made_commercial", "Which company made the first commercial hard disk drive in 1956?", "IBM", listOf("Seagate", "Western Digital", "Hewlett-Packard"), H),
+        q("tec_fathers_internet_designing", "Who are known as the 'fathers of the internet' for designing TCP/IP?", "Vint Cerf and Bob Kahn", listOf("Bill Gates and Paul Allen", "Larry Page and Sergey Brin", "Steve Jobs and Steve Wozniak"), H),
+        q("tec_2017_ransomware_attack", "Which 2017 ransomware attack hit the UK's NHS?", "WannaCry", listOf("NotPetya", "ILOVEYOU", "Stuxnet"), H),
+        q("tec_computer_worm_sabotaged", "Which computer worm sabotaged Iranian nuclear centrifuges around 2010?", "Stuxnet", listOf("WannaCry", "Conficker", "Mydoom"), H),
+        q("tec_american_engineer_invented", "Which American engineer invented air conditioning in 1902?", "Willis Carrier", listOf("Frederick Jones", "Clarence Birdseye", "Elisha Otis"), H),
+        q("tec_american_safety_brake", "Which American's safety brake made passenger lifts trustworthy in the 1850s?", "Elisha Otis", listOf("Willis Carrier", "George Pullman", "Henry Bessemer"), H),
+        q("tec_englishman_process_made", "Which Englishman's process made cheap steel possible in 1856?", "Henry Bessemer", listOf("Abraham Darby", "Andrew Carnegie", "John Wilkinson"), H),
+        q("tec_american_inventor_froze", "Which American inventor froze food quickly, creating frozen food in the 1920s?", "Clarence Birdseye", listOf("Willis Carrier", "Frederick Jones", "Jacob Perkins"), H),
+        q("tec_nokia_original_business", "What was Nokia's original business in 1865?", "Paper mill", listOf("Rubber boots", "Cable factory", "Telegraph service"), H),
+        q("tec_country_uses_web_2", "Which country uses the web domain '.me', popular for personal sites?", "Montenegro", listOf("Mexico", "Mauritius", "Malta"), H),
+        q("tec_rover_drive_mars", "Which was the first rover to drive on Mars, in 1997?", "Sojourner", listOf("Spirit", "Opportunity", "Curiosity"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -616,6 +656,16 @@ object TechnologyQuestions {
         q("tec_program_released_1979", "Which program, released in 1979, was the first spreadsheet for personal computers?", "VisiCalc", listOf("Lotus 1-2-3", "Excel", "SuperCalc"), X),
         q("tec_swedish_american_engineer", "Which Swedish-American engineer perfected the modern zip in 1913?", "Gideon Sundback", listOf("Whitcomb Judson", "Elias Howe", "Walter Hunt"), X),
         q("tec_programming_language_john", "Which programming language did John McCarthy create in 1958 for artificial intelligence research?", "LISP", listOf("Prolog", "Smalltalk", "ALGOL"), X),
-        q("tec_company_sold_quartz", "Which company sold the first quartz wristwatch, the Astron, in 1969?", "Seiko", listOf("Casio", "Citizen", "Omega"), X)
+        q("tec_company_sold_quartz", "Which company sold the first quartz wristwatch, the Astron, in 1969?", "Seiko", listOf("Casio", "Citizen", "Omega"), X),
+        q("tec_tim_berners_lee", "Tim Berners-Lee ran the first web server at CERN on a computer made by which company?", "NeXT", listOf("Cray", "Sun", "Apple II"), X),
+        q("tec_online_service_created", "Which online service created the GIF image format in 1987?", "CompuServe", listOf("Adobe", "Microsoft", "AOL"), X),
+        q("tec_american_credited_practical", "Which American is credited with the first practical sewing machine with a lockstitch, patented in 1846?", "Elias Howe", listOf("Isaac Singer", "Eli Whitney", "Walter Hunt"), X),
+        q("tec_troll_internet_slang", "What does the 'troll' in internet slang originally come from?", "A fishing technique", listOf("A Norse giant", "A gaming character", "A radio prank"), X),
+        q("tec_2038_problem_cause", "What is the name of the 2038 problem's cause in many computers?", "32-bit Unix time overflow", listOf("Leap second error", "GPS week rollover", "IPv4 exhaustion"), X),
+        q("tec_computer_virus_spread", "What was the first computer virus to spread in the wild on personal computers, in 1982?", "Elk Cloner", listOf("Creeper", "Brain", "ILOVEYOU"), X),
+        q("tec_nintendo_engineer_designed", "Which Nintendo engineer designed the Game Boy?", "Gunpei Yokoi", listOf("Shigeru Miyamoto", "Satoru Iwata", "Masayuki Uemura"), X),
+        q("tec_android_phone_released", "What was the name of the first Android phone, released in 2008?", "HTC Dream", listOf("Nexus One", "Samsung Galaxy", "Motorola Droid"), X),
+        q("tec_japanese_phone_company", "Which Japanese phone company engineer created the first popular set of emoji in 1999?", "Shigetaka Kurita", listOf("Satoru Iwata", "Masahiro Sakurai", "Ken Kutaragi"), X),
+        q("tec_soviet_probe_land", "Which Soviet probe was the first to land softly on another planet, Venus, in 1970?", "Venera 7", listOf("Mars 3", "Luna 9", "Vega 1"), X)
     )
 }

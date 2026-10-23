@@ -180,7 +180,8 @@ object ScienceQuestions {
         q("sci_happens_note_guitar", "What happens to the note of a guitar string when you tighten it?", "It gets higher", listOf("It gets lower", "It only gets louder", "It stays the same"), E),
         q("sci_astronauts_iss_tie", "Why do astronauts on the ISS tie their sleeping bags to the wall?", "So they don't drift off while asleep", listOf("To keep warm against the hull", "So the station stays balanced", "To stop them from snoring"), E),
         q("sci_call_two_days", "What do we call the two days a year when day and night are roughly equal everywhere?", "The equinoxes", listOf("The solstices", "The eclipses", "The zeniths"), E),
-        q("sci_get_sunburnt_cloudy", "Why can you get sunburnt on a cloudy day?", "Most UV rays pass through clouds", listOf("Clouds focus the sunlight", "Cold air thins the skin", "Wind dries out the skin"), E)
+        q("sci_get_sunburnt_cloudy", "Why can you get sunburnt on a cloudy day?", "Most UV rays pass through clouds", listOf("Clouds focus the sunlight", "Cold air thins the skin", "Wind dries out the skin"), E),
+        q("sci_thought_experiment_involves", "Which thought experiment involves a cat that is both alive and dead?", "Schrodinger's cat", listOf("Maxwell's demon", "Newton's cradle", "Buridan's ass"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -433,7 +434,25 @@ object ScienceQuestions {
         q("sci_dark_side_moon", "What is the 'dark side of the Moon' really?", "Its far side, which gets sunlight too", listOf("A side that never sees sunlight", "The part hidden in Earth's shadow", "A huge plain of dark lava rock"), M),
         q("sci_roughly_far_away_2", "Roughly how far away is the Moon?", "About 384,000 km", listOf("About 38,000 km", "About 3.8 million km", "About 150,000 km"), M),
         q("sci_shape_falling_raindrops", "What shape are falling raindrops, really?", "Round, flattened at the bottom", listOf("Teardrops with a pointed top", "Long, thin needles", "Tiny hollow shells"), M),
-        q("sci_causes_mirage_water", "What causes a mirage of 'water' on a hot road?", "Light bending through hot air", listOf("Sunlight reflecting off the tar", "Water vapour rising from the road", "The eye tiring in bright light"), M)
+        q("sci_causes_mirage_water", "What causes a mirage of 'water' on a hot road?", "Light bending through hot air", listOf("Sunlight reflecting off the tar", "Water vapour rising from the road", "The eye tiring in bright light"), M),
+        q("sci_scale_used_measure", "What is the name of the scale used to measure the hardness of minerals?", "Mohs scale", listOf("Richter scale", "Beaufort scale", "Kelvin scale"), M),
+        q("sci_boiling_point_water", "What is the boiling point of water in Fahrenheit, at sea level?", "212", listOf("100", "180", "232"), M),
+        q("sci_makes_popcorn_pop", "What makes popcorn pop?", "Water inside turning to steam", listOf("Air pockets bursting", "Oil soaking in", "Sugar caramelising"), M),
+        q("sci_spacecraft_distant_human", "Which spacecraft is the most distant human-made object from Earth?", "Voyager 1", listOf("Voyager 2", "Pioneer 10", "New Horizons"), M),
+        q("sci_gives_mars_red", "What gives Mars its red colour?", "Iron oxide", listOf("Copper sulfate", "Red algae", "Sulfur dust"), M),
+        q("sci_causes_northern_lights", "What causes the northern lights?", "Solar particles hitting the atmosphere", listOf("Moonlight on ice", "Volcanic gas", "Lightning in the stratosphere"), M),
+        q("sci_anemometer_measure", "What does an anemometer measure?", "Wind speed", listOf("Rainfall", "Air pressure", "Humidity"), M),
+        q("sci_scientist_united_electricity", "Which scientist united electricity and magnetism in four famous equations?", "James Clerk Maxwell", listOf("Michael Faraday", "Andre-Marie Ampere", "Nikola Tesla"), M),
+        q("sci_war_currents", "What was the 'war of the currents' about?", "AC versus DC electricity", listOf("Gold versus silver money", "Ocean currents", "Rival canal routes"), M),
+        q("sci_metal_spoon_feel", "Why does a metal spoon feel colder than a wooden one at the same temperature?", "Metal conducts heat away faster", listOf("Metal is actually colder", "Wood makes its own heat", "Metal reflects warmth"), M),
+        q("sci_scientist_law_describes", "Which scientist's law describes how springs stretch?", "Robert Hooke", listOf("Isaac Newton", "Blaise Pascal", "Robert Boyle"), M),
+        q("sci_pluto_reclassified_dwarf", "When was Pluto reclassified as a dwarf planet?", "2006", listOf("1999", "2012", "1986"), M),
+        q("sci_dark_volcanic_rock", "Which dark volcanic rock forms the six-sided columns of the Giant's Causeway?", "Basalt", listOf("Granite", "Obsidian", "Limestone"), M),
+        q("sci_effect_causes_hurricanes", "Which effect causes hurricanes to spin in opposite directions in each hemisphere?", "Coriolis effect", listOf("Doppler effect", "Venturi effect", "Magnus effect"), M),
+        q("sci_physicist_predicted_black", "Which physicist predicted that black holes slowly leak radiation?", "Stephen Hawking", listOf("Roger Penrose", "Kip Thorne", "John Wheeler"), M),
+        q("sci_physicist_uncertainty_principle", "Which physicist's 'uncertainty principle' says you cannot know a particle's position and momentum exactly?", "Werner Heisenberg", listOf("Erwin Schrodinger", "Paul Dirac", "Max Born"), M),
+        q("sci_astronomer_discovered_uranus", "Which astronomer discovered Uranus in 1781?", "William Herschel", listOf("Caroline Herschel", "Edmond Halley", "Johann Galle"), M),
+        q("sci_icelandic_volcano_2010", "Which Icelandic volcano's 2010 eruption grounded European flights?", "Eyjafjallajokull", listOf("Hekla", "Katla", "Grimsvotn"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -597,7 +616,28 @@ object ScienceQuestions {
         q("sci_discovered_pulsars_1967", "Who discovered the first pulsars in 1967, as a student, yet was left out of the Nobel Prize for it?", "Jocelyn Bell Burnell", listOf("Vera Rubin", "Henrietta Leavitt", "Cecilia Payne"), H),
         q("sci_nasa_probe_became", "Which NASA probe became the first to fly through the Sun's outer atmosphere, in 2021?", "Parker Solar Probe", listOf("Solar Orbiter", "SOHO", "Ulysses"), H),
         q("sci_all_empty_space", "If all the empty space were squeezed out of every human's atoms, roughly how big would the human race be?", "About a sugar cube", listOf("About a football stadium", "About a city block", "About a large house"), H),
-        q("sci_danish_astronomer_kept", "Which Danish astronomer kept a pet elk that reportedly died after drinking too much beer?", "Tycho Brahe", listOf("Ole Romer", "Niels Bohr", "Johannes Kepler"), H)
+        q("sci_danish_astronomer_kept", "Which Danish astronomer kept a pet elk that reportedly died after drinking too much beer?", "Tycho Brahe", listOf("Ole Romer", "Niels Bohr", "Johannes Kepler"), H),
+        q("sci_temperature_celsius_fahrenheit", "At what temperature are Celsius and Fahrenheit equal?", "Minus 40", listOf("Zero", "Minus 32", "100"), H),
+        q("sci_speed_sound_air", "What is the speed of sound in air, roughly, in metres per second?", "343", listOf("150", "1000", "3000"), H),
+        q("sci_edwin_hubble_discover", "What did Edwin Hubble discover about other galaxies in 1929?", "They are moving away from us", listOf("They contain black holes", "They are made of gas", "They spin backwards"), H),
+        q("sci_scientist_discovered_neutron", "Which scientist discovered the neutron in 1932?", "James Chadwick", listOf("J. J. Thomson", "Enrico Fermi", "Ernest Rutherford"), H),
+        q("sci_lander_touched_down", "What was the name of the lander that touched down on comet 67P?", "Philae", listOf("Rosetta", "Huygens", "Beagle 2"), H),
+        q("sci_scientist_explained_sky", "Which scientist explained why the sky is blue, through scattering?", "Lord Rayleigh", listOf("Isaac Newton", "Albert Einstein", "James Clerk Maxwell"), H),
+        q("sci_scientist_law_links", "Which scientist's law links the pressure and volume of a gas?", "Robert Boyle", listOf("Robert Hooke", "Jacques Charles", "Amedeo Avogadro"), H),
+        q("sci_english_chemist_proposed", "Which English chemist proposed modern atomic theory around 1803?", "John Dalton", listOf("Humphry Davy", "Michael Faraday", "Joseph Priestley"), H),
+        q("sci_english_scientist_discovered_2", "Which English scientist discovered oxygen in 1774, calling it 'dephlogisticated air'?", "Joseph Priestley", listOf("Antoine Lavoisier", "Henry Cavendish", "Robert Boyle"), H),
+        q("sci_bread_stale", "Why does bread go stale?", "Starch recrystallises", listOf("Bacteria eat it", "Yeast keeps growing", "Air turns it to sugar"), H),
+        q("sci_spacecraft_deliberately_crashed", "Which spacecraft deliberately crashed into an asteroid in 2022 to change its orbit?", "DART", listOf("Hayabusa2", "OSIRIS-REx", "Lucy"), H),
+        q("sci_cloud_icy_bodies", "What is the name of the cloud of icy bodies thought to surround the Solar System at its very edge?", "Oort cloud", listOf("Kuiper belt", "Asteroid belt", "Heliopause"), H),
+        q("sci_observatory_detected_gravitational", "Which observatory first detected gravitational waves in 2015?", "LIGO", listOf("Hubble", "Arecibo", "ALMA"), H),
+        q("sci_closest_point_earth", "What is the name of the closest point of Earth's orbit to the Sun?", "Perihelion", listOf("Aphelion", "Perigee", "Apogee"), H),
+        q("sci_long_light_moon", "How long does light from the Moon take to reach Earth?", "About 1.3 seconds", listOf("About 8 minutes", "About 1 minute", "About 1 hour"), H),
+        q("sci_italian_invented_mercury", "Which Italian invented the mercury barometer in 1643?", "Evangelista Torricelli", listOf("Galileo Galilei", "Alessandro Volta", "Luigi Galvani"), H),
+        q("sci_english_chemist_isolated", "Which English chemist isolated sodium and potassium with electricity in 1807?", "Humphry Davy", listOf("Michael Faraday", "John Dalton", "William Ramsay"), H),
+        q("sci_scottish_scientist_invented", "Which Scottish scientist invented the vacuum flask?", "James Dewar", listOf("William Ramsay", "Joseph Black", "Lord Kelvin"), H),
+        q("sci_smell_rain_dry", "What is the name for the smell of rain on dry earth?", "Petrichor", listOf("Geosmin", "Ozone", "Humus"), H),
+        q("sci_hot_fast_cloud", "What is the name of the hot, fast cloud of gas and ash from an erupting volcano?", "Pyroclastic flow", listOf("Lahar", "Tephra", "Caldera"), H),
+        q("sci_huge_crater_left", "What is the name of the huge crater left when a volcano collapses?", "Caldera", listOf("Crater lake", "Vent", "Maar"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -675,6 +715,14 @@ object ScienceQuestions {
         q("sci_virga", "What is 'virga'?", "Rain that evaporates before reaching the ground", listOf("A lens-shaped cloud over mountains", "Lightning that leaps up from the clouds", "Hail falling from a clear blue sky"), X),
         q("sci_mpemba_effect", "What is the Mpemba effect?", "Hot water sometimes freezing faster than cold", listOf("Salt water freezing more slowly than fresh", "Ice cubes sticking to a wet tongue", "Boiling water cooling faster in a metal cup"), X),
         q("sci_astronomer_study_fast", "Which astronomer's study of how fast galaxies spin gave key evidence for dark matter?", "Vera Rubin", listOf("Jocelyn Bell Burnell", "Henrietta Leavitt", "Cecilia Payne"), X),
-        q("sci_since_1970s_scale", "Since the 1970s, which scale have seismologists used in place of the Richter scale for big quakes?", "The moment magnitude scale", listOf("The Mercalli scale", "The Fujita scale", "The Kelvin scale"), X)
+        q("sci_since_1970s_scale", "Since the 1970s, which scale have seismologists used in place of the Richter scale for big quakes?", "The moment magnitude scale", listOf("The Mercalli scale", "The Fujita scale", "The Kelvin scale"), X),
+        q("sci_michelson_morley_experiment", "What did the Michelson-Morley experiment of 1887 fail to detect?", "The luminiferous ether", listOf("Gravitational waves", "Dark matter", "The neutrino"), X),
+        q("sci_probe_orbited_dwarf", "Which probe orbited the dwarf planet Ceres in the asteroid belt?", "Dawn", listOf("Rosetta", "Lucy", "Psyche"), X),
+        q("sci_scientist_cloud_chamber", "Which scientist's cloud chamber made particle tracks visible?", "Charles Wilson", listOf("Ernest Rutherford", "Hans Geiger", "Niels Bohr"), X),
+        q("sci_british_girl_suggested", "Which British girl suggested the name 'Pluto' at age 11?", "Venetia Burney", listOf("Mary Anning", "Ada Lovelace", "Caroline Herschel"), X),
+        q("sci_english_scientist_isolated", "Which English scientist first isolated hydrogen, calling it 'inflammable air'?", "Henry Cavendish", listOf("Joseph Priestley", "Humphry Davy", "Robert Boyle"), X),
+        q("sci_scottish_chemist_discovered", "Which Scottish chemist discovered the noble gases neon, krypton and xenon?", "William Ramsay", listOf("Joseph Black", "Thomas Graham", "James Dewar"), X),
+        q("sci_compound_made_soil", "Which compound made by soil bacteria gives rain its earthy smell?", "Geosmin", listOf("Petrichor", "Ozone", "Chlorophyll"), X),
+        q("sci_volcanic_mudflow", "What is the name of a volcanic mudflow?", "Lahar", listOf("Pyroclastic flow", "Tephra", "Fumarole"), X)
     )
 }

@@ -73,6 +73,7 @@ geo_african_country_flag_2	Medium	Which African country's flag has vertical stri
 geo_roughly_long_land	Medium	Roughly how long is the land border between the USA and Mexico?	About 3,100 km	About 1,000 km	About 6,000 km	About 9,000 km
 geo_country_joined_nato	Medium	Which country joined NATO in March 2024, ending two centuries of military non-alignment?	Sweden	Finland	Austria	Switzerland
 geo_ukraine_blue_yellow	Medium	Ukraine's blue-and-yellow flag is usually said to show what?	A blue sky over golden wheat	A river flowing past the sun	The sea beside golden sand	Cornflowers among sunflowers
+geo_country_flag_oldest	Medium	Which country's flag is the oldest still in continuous use?	Denmark	Netherlands	Austria	Scotland
 geo2_najdluzsza_granica	Hard	Which two countries share the longest land border in the world?	Canada and the USA	Russia and China	Argentina and Chile	India and China
 geocmp_nie_ameryka_pd	Hard	Which of these countries is NOT in South America?	Belize	Guyana	Suriname	Paraguay
 geocmp_turystyka_kraj	Hard	Which country receives the most international tourist arrivals?	France	Spain	The United States	Italy
@@ -111,6 +112,7 @@ geo_state_flag_still	Hard	Which US state's flag still carries the British Union 
 geo_african_country_flag_3	Hard	Which African country's flag is almost identical to Romania's?	Chad	Mali	Guinea	Cameroon
 geo_among_countries_over	Hard	Among countries with over 10 million people, which is the most densely populated?	Bangladesh	India	The Netherlands	South Korea
 geo_country_adopted_flag	Hard	Which country adopted its famous flag only in 1965, replacing one with the Union Jack in the corner?	Canada	Australia	New Zealand	South Africa
+geo_island_flag_shows	Hard	Which island's flag shows three armoured legs joined at the hip, the triskelion?	Isle of Man	Cornwall	Malta	Jersey
 geo2_panstwo_bez_dostepu	Expert	Which country is Europe's only doubly landlocked state?	Liechtenstein	Switzerland	Austria	Andorra
 geocmp_najwiecej_sasiadow	Expert	Which of these countries borders the most other countries?	Brazil	Mexico	Argentina	Colombia
 geo_kazachstan_srodladowy	Expert	Which is the largest landlocked country in the world?	Kazakhstan	Mongolia	Chad	Bolivia

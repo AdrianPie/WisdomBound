@@ -364,6 +364,12 @@ object CapitalQuestions {
         q("cap_capital_gabon", "What is the capital of Gabon?", "Libreville", listOf("Port-Gentil", "Malabo", "Brazzaville"), X),
         q("cap_capital_togo", "What is the capital of Togo?", "Lome", listOf("Cotonou", "Kara", "Porto-Novo"), X),
         q("cap_capital_samoa", "What is the capital of Samoa?", "Apia", listOf("Suva", "Nuku'alofa", "Port Vila"), X),
-        q("cap_capital_cape_verde", "What is the capital of Cape Verde?", "Praia", listOf("Mindelo", "Bissau", "Dakar"), X)
+        q("cap_capital_cape_verde", "What is the capital of Cape Verde?", "Praia", listOf("Mindelo", "Bissau", "Dakar"), X),
+        q("cap_capital_federated_states", "What is the capital of the Federated States of Micronesia?", "Palikir", listOf("Majuro", "Tarawa", "Ngerulmud"), X),
+        q("cap_capital_tuvalu", "What is the capital of Tuvalu?", "Funafuti", listOf("Tarawa", "Majuro", "Apia"), X),
+        q("cap_capital_vanuatu", "What is the capital of Vanuatu?", "Port Vila", listOf("Honiara", "Suva", "Luganville"), X),
+        q("cap_capital_solomon_islands", "What is the capital of the Solomon Islands?", "Honiara", listOf("Port Vila", "Port Moresby", "Gizo"), X),
+        q("cap_old_royal_capital", "What was the old royal capital of Montenegro?", "Cetinje", listOf("Podgorica", "Kotor", "Niksic"), X),
+        q("cap_capital_san_marino", "What is the capital of San Marino?", "San Marino City", listOf("Serravalle", "Borgo Maggiore", "Rimini"), X)
     )
 }

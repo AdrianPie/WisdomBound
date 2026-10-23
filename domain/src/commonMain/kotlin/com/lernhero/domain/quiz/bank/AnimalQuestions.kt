@@ -469,7 +469,12 @@ object AnimalQuestions {
         q("ani_flamingos_hold_heads", "How do flamingos hold their heads while they feed?", "Upside down", listOf("Tilted sideways", "Fully under the mud", "High above the water"), M),
         q("ani_sea_creature_some", "Which sea creature can, in some species, regrow a whole new body from a single severed arm?", "The starfish", listOf("The octopus", "The crab", "The sea urchin"), M),
         q("ani_rodents_laugh_high", "Which rodents 'laugh' with high-pitched chirps when scientists tickle them?", "Rats", listOf("Hamsters", "Guinea pigs", "Squirrels"), M),
-        q("ani_guano_once_fortune", "Guano, once a fortune-making fertiliser, is the droppings of which animals?", "Seabirds and bats", listOf("Cattle and sheep", "Pigs and goats", "Horses and donkeys"), M)
+        q("ani_guano_once_fortune", "Guano, once a fortune-making fertiliser, is the droppings of which animals?", "Seabirds and bats", listOf("Cattle and sheep", "Pigs and goats", "Horses and donkeys"), M),
+        q("ani_antelope_leap_ten", "Which antelope can leap up to ten metres in a single bound?", "Impala", listOf("Springbok", "Gazelle", "Kudu"), M),
+        q("ani_special_food_turns", "What is the special food that turns a bee larva into a queen?", "Royal jelly", listOf("Honeydew", "Propolis", "Beeswax"), M),
+        q("ani_gorilla_learned_over", "What was the name of the famous gorilla that learned over 1,000 signs?", "Koko", listOf("Harambe", "Kanzi", "Washoe"), M),
+        q("ani_animal_see_ultraviolet", "Which animal can see ultraviolet light and uses it to find flowers?", "Bee", listOf("Dog", "Cat", "Cow"), M),
+        q("ani_bird_big_hollow", "Which bird has a big hollow casque on top of its bill?", "Hornbill", listOf("Toucan", "Cassowary", "Shoebill"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -642,7 +647,18 @@ object AnimalQuestions {
         q("ani_cat_breed_nicknamed", "Which cat breed is nicknamed 'the swimming cat' for its love of water?", "The Turkish Van", listOf("The Siamese", "The Persian", "The Ragdoll"), H),
         q("ani_bird_nest_soup", "Bird's nest soup is made from nests built mainly from what?", "Swiftlet saliva", listOf("Woven grass and mud", "Seaweed and feathers", "Caterpillar silk"), H),
         q("ani_group_giant_pandas", "What is a group of giant pandas sometimes called?", "An embarrassment", listOf("A bamboozle", "A cuddle", "A shrug"), H),
-        q("ani_proteins_rex_bone", "Proteins from a T. rex bone most closely matched those of which living animal?", "The chicken", listOf("The crocodile", "The Komodo dragon", "The iguana"), H)
+        q("ani_proteins_rex_bone", "Proteins from a T. rex bone most closely matched those of which living animal?", "The chicken", listOf("The crocodile", "The Komodo dragon", "The iguana"), H),
+        q("ani_male_swan", "What is a male swan called?", "Cob", listOf("Pen", "Drake", "Gander"), H),
+        q("ani_australian_lizard_opens", "Which Australian lizard opens a big frill around its neck to scare enemies?", "Frilled lizard", listOf("Thorny devil", "Bearded dragon", "Goanna"), H),
+        q("ani_beetle_sprays_boiling", "Which beetle sprays a boiling hot chemical at attackers?", "Bombardier beetle", listOf("Stag beetle", "Rhinoceros beetle", "Tiger beetle"), H),
+        q("ani_seabird_used_fishermen", "Which seabird is used by fishermen in China and Japan to catch fish?", "Cormorant", listOf("Pelican", "Puffin", "Gannet"), H),
+        q("ani_huge_billed_african", "Which huge-billed African bird stands motionless for hours waiting for lungfish?", "Shoebill", listOf("Marabou stork", "Hammerkop", "Secretary bird"), H),
+        q("ani_call_group_ravens", "What do you call a group of ravens?", "Unkindness", listOf("Murder", "Parliament", "Conspiracy"), H),
+        q("ani_moth_wings_big", "Which moth has wings so big it is sometimes mistaken for a bird?", "Atlas moth", listOf("Luna moth", "Death's-head hawkmoth", "Emperor moth"), H),
+        q("ani_sticky_resin_bees", "What is the sticky resin bees use to seal gaps in the hive?", "Propolis", listOf("Royal jelly", "Beeswax", "Nectar"), H),
+        q("ani_seabird_dives_sea", "Which seabird dives into the sea at nearly 100 km/h to catch fish?", "Gannet", listOf("Puffin", "Cormorant", "Pelican"), H),
+        q("ani_large_flightless_bird_3", "Which large flightless bird of South America is related to the ostrich?", "Rhea", listOf("Emu", "Cassowary", "Kiwi"), H),
+        q("ani_extinct_flightless_bird", "Which extinct flightless bird from Madagascar laid the largest eggs ever known?", "Elephant bird", listOf("Moa", "Dodo", "Roc"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -717,6 +733,17 @@ object AnimalQuestions {
         q("ani_mammal_shortest_pregnancies", "Which mammal has one of the shortest pregnancies, only about 12 days?", "The Virginia opossum", listOf("The house mouse", "The rabbit", "The hamster"), X),
         q("ani_flehmen_response_cat", "What is the 'flehmen response', when a cat or horse curls back its upper lip?", "A way of taking in scents", listOf("A sign of extreme anger", "A way of cooling the mouth", "A warning call to the herd"), X),
         q("ani_rodent_live_over", "Which rodent can live over 30 years and almost never gets cancer?", "The naked mole-rat", listOf("The capybara", "The chinchilla", "The porcupine"), X),
-        q("ani_some_deep_sea", "In some deep-sea anglerfish, what happens to the tiny male?", "He fuses permanently onto the female", listOf("He becomes the female's glowing lure", "He is eaten right after mating", "He guards the eggs inside his mouth"), X)
+        q("ani_some_deep_sea", "In some deep-sea anglerfish, what happens to the tiny male?", "He fuses permanently onto the female", listOf("He becomes the female's glowing lure", "He is eaten right after mating", "He guards the eggs inside his mouth"), X),
+        q("ani_tortoise_diego_helped", "Which tortoise named Diego helped save his species by fathering hundreds of babies?", "Diego", listOf("Jonathan", "George", "Harriet"), X),
+        q("ani_rabbit_eared_australian", "Which rabbit-eared Australian marsupial is promoted as the 'Easter Bilby'?", "Bilby", listOf("Bandicoot", "Quokka", "Bettong"), X),
+        q("ani_call_group_porcupines", "What do you call a group of porcupines?", "Prickle", listOf("Spike", "Thicket", "Bristle"), X),
+        q("ani_call_group_hippos", "What do you call a group of hippos?", "Bloat", listOf("Crash", "Wallow", "Pod"), X),
+        q("ani_whale_makes_longest", "Which whale makes one of the longest migrations of any mammal, between Alaska and Mexico?", "Grey whale", listOf("Blue whale", "Orca", "Narwhal"), X),
+        q("ani_small_dolphin_among", "Which small dolphin, among the rarest marine mammals, lives only in Mexico's Gulf of California?", "Vaquita", listOf("Hector's dolphin", "Irrawaddy dolphin", "Baiji"), X),
+        q("ani_chinese_river_dolphin", "Which Chinese river dolphin was declared functionally extinct in 2006?", "Baiji", listOf("Vaquita", "Boto", "Susu"), X),
+        q("ani_insect_heaviest_world", "Which insect is the heaviest in the world, found in New Zealand?", "Giant weta", listOf("Goliath beetle", "Atlas moth", "Titan beetle"), X),
+        q("ani_bonobo_learned_communicate", "What was the name of the bonobo who learned to communicate with a symbol keyboard?", "Kanzi", listOf("Koko", "Washoe", "Nim Chimpsky"), X),
+        q("ani_chimpanzee_taught_american", "What was the name of the first chimpanzee taught American Sign Language?", "Washoe", listOf("Koko", "Kanzi", "Lucy"), X),
+        q("ani_extinct_flightless_seabird", "Which extinct flightless seabird of the North Atlantic was the original 'penguin'?", "Great auk", listOf("Dodo", "Moa", "Razorbill"), X)
     )
 }

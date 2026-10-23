@@ -21,6 +21,8 @@ his_city_bombed_night	Easy	Which city was bombed night after night during 'the B
 his_poster_heroine_rolled	Easy	Which poster heroine, with rolled-up sleeves, stood for American women working in factories?	Rosie the Riveter	Molly Pitcher	Lady Liberty	Betty Crocker
 his_country_nazi_germany_2	Easy	Which country did Nazi Germany invade in June 1941, breaking the pact between them?	The Soviet Union	Britain	Sweden	Turkey
 his_evacuees_wartime_britain	Easy	Who were the 'evacuees' in wartime Britain?	City children sent to the countryside	Soldiers rescued from Dunkirk	Refugees from Germany	Prisoners of war
+his_german_air_force	Easy	What was the name of the German air force in World War II?	Luftwaffe	Wehrmacht	Kriegsmarine	Panzerwaffe
+his_code_atomic_bomb	Easy	What was the code name for the US atomic bomb project?	Manhattan Project	Trinity Project	Operation Ivy	Project Alberta
 his2_hiroszima	Medium	In which year was the atomic bomb dropped on Hiroshima?	1945	1944	1946	1949
 wh_d_day	Medium	In which region of France did the Allied D-Day landings begin?	Normandy	Brittany	Provence	Alsace
 wh_onz_rok	Medium	In which year was the United Nations founded?	1945	1919	1948	1950
@@ -69,6 +71,7 @@ his_american_ghost_army	Medium	What did the American 'Ghost Army' use to fool th
 his_denmark_jews_saved	Medium	How were most of Denmark's Jews saved in October 1943?	They were ferried to Sweden in fishing boats	The king hid them in his palaces	They were flown to Britain by the RAF	They escaped by train to Switzerland
 his_japan_launch_across	Medium	What did Japan launch across the Pacific to attack the USA in 1944-1945?	Bomb-carrying balloons	Long-range rockets	Jet bombers	Giant airships
 his_soviet_night_witches	Medium	Who were the Soviet 'Night Witches' of World War II?	Women pilots who bombed at night	Partisans who raided at night	Snipers in white camouflage	Nurses on the front line
+his_atomic_bomb_test	Medium	What was the name of the first atomic bomb test in 1945?	Trinity	Little Boy	Fat Man	Castle Bravo
 dpt_his_leningrad	Hard	Which city endured a siege of 872 days in the Second World War?	Leningrad	Stalingrad	Sevastopol	Budapest
 his_overlord	Hard	What was the code name for the Allied invasion of Normandy in 1944?	Operation Overlord	Operation Barbarossa	Operation Market Garden	Operation Torch
 his_little_boy	Hard	What was 'Little Boy' in World War II?	The bomb dropped on Hiroshima	A British light tank	A German submarine	A Japanese fighter plane
@@ -103,6 +106,7 @@ his_japanese_diplomat_lithuania	Hard	Which Japanese diplomat in Lithuania issued
 his_britain_bevin_boys	Hard	Who were Britain's 'Bevin Boys' of World War II?	Young men sent to work down coal mines	Boy messengers for the Royal Air Force	Evacuees shipped off to Canada	Teenage cadets serving on warships
 his_mulberries_towed_across	Hard	What were the 'Mulberries' towed across the Channel after D-Day?	Floating harbours	Decoy landing craft	Minesweeping barges	Hospital ships
 his_1942_conference_near	Hard	At which 1942 conference near Berlin did Nazi officials plan the 'Final Solution'?	Wannsee	Potsdam	Munich	Nuremberg
+his_code_1944_soviet	Hard	What was the code name of the 1944 Soviet offensive that destroyed Army Group Centre?	Operation Bagration	Operation Uranus	Operation Typhoon	Operation Citadel
 wh_bretton_woods	Expert	The 1944 Bretton Woods conference established, among other things...	The International Monetary Fund	NATO	The European Union	The Bank of England
 hx_nawaho	Expert	Which Native American people's language served as an unbreakable code for US Marines in World War II?	The Navajo	The Cherokee	The Sioux	The Apache
 hy_missouri	Expert	On which ship did Japan formally surrender in 1945?	USS Missouri	USS Arizona	USS Enterprise	HMS Victory

@@ -72,6 +72,8 @@ geo_smallest_country_asia	Medium	Which is the smallest country in Asia by area?	
 geo_ladakh_high_desert	Medium	Ladakh, a high desert region often called 'Little Tibet', belongs to which country?	India	China	Nepal	Pakistan
 geo_qatar_land_border	Medium	Qatar's only land border is with which country?	Saudi Arabia	The UAE	Oman	Kuwait
 geo_country_land_border	Medium	Which country's land border is almost all with India, apart from a short stretch with Myanmar?	Bangladesh	Nepal	Bhutan	Pakistan
+geo_country_home_ancient	Medium	Which country is home to the ancient ruins of Persepolis?	Iran	Iraq	Turkey	Afghanistan
+geo_island_shared_between	Medium	Which island is shared between Indonesia and East Timor?	Timor	Borneo	Flores	Sumba
 geo_cejlon	Hard	Which country was called Ceylon until 1972?	Sri Lanka	Bangladesh	Myanmar	Malaysia
 geo_wrota_piekiel	Hard	In which country does the 'Door to Hell' gas crater keep burning?	Turkmenistan	Kazakhstan	Iran	Azerbaijan
 geox_bhutan	Hard	Which Himalayan kingdom measures its progress in 'Gross National Happiness'?	Bhutan	Nepal	Tibet	Sikkim
