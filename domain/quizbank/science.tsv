@@ -93,6 +93,11 @@ sci_rock_forms_layers	Easy	Which rock forms from layers of sand pressed together
 sci_country_chandrayaan_mission	Easy	Which country's Chandrayaan-3 mission landed near the Moon's south pole in 2023?	India	China	Japan	Israel
 sci_invisible_light_remote	Easy	Which invisible light do TV remote controls use?	Infrared	Ultraviolet	X-rays	Microwaves
 sci_cave_formations_hang	Easy	Which cave formations hang down from the ceiling?	Stalactites	Stalagmites	Geodes	Columns
+sci_call_two_days	Easy	What do we call the two days a year when day and night are roughly equal everywhere?	The equinoxes	The solstices	The eclipses	The zeniths
+sci_get_sunburnt_cloudy	Easy	Why can you get sunburnt on a cloudy day?	Most UV rays pass through clouds	Clouds focus the sunlight	Cold air thins the skin	Wind dries out the skin
+sci_must_sun_see	Easy	Where must the Sun be for you to see a rainbow?	Behind you	In front of you	Directly overhead	Below the horizon
+sci_colour_daytime_sky	Easy	What colour is the daytime sky on the Moon?	Black	Blue	Orange	White
+sci_scientist_studies_dinosaur	Easy	What is a scientist who studies dinosaur fossils called?	A palaeontologist	An archaeologist	A geologist	An anthropologist
 sci_jowisz	Medium	Which planet of the Solar System is the largest?	Jupiter	Saturn	Neptune	Uranus
 sci_kopernik	Medium	Who proved that the Earth orbits the Sun, not the other way around?	Nicolaus Copernicus	Isaac Newton	Galileo Galilei	Johannes Kepler
 sci_grawitacja	Medium	Who formulated the law of universal gravitation?	Isaac Newton	Albert Einstein	Nikola Tesla	Michael Faraday
@@ -241,6 +246,17 @@ sci_force_makes_soap	Medium	Which force makes soap bubbles round?	Surface tensio
 sci_swedish_astronomer_gave	Medium	Which Swedish astronomer gave his name to the temperature scale used in most of the world?	Anders Celsius	Carl Linnaeus	Anders Angstrom	Tycho Brahe
 sci_temperature_scale_still	Medium	Whose temperature scale is still used for everyday weather in the USA?	Daniel Fahrenheit	Anders Celsius	Lord Kelvin	Rene Reaumur
 sci_state_meteor_crater	Medium	In which US state is the famous Meteor Crater, over a kilometre wide?	Arizona	Nevada	Utah	New Mexico
+sci_soviet_dog_became	Medium	What was the name of the Soviet dog that became the first animal to orbit the Earth, in 1957?	Laika	Belka	Strelka	Zvezdochka
+sci_month_earth_closest	Medium	In which month is the Earth closest to the Sun?	January	July	June	March
+sci_two_planets_moons	Medium	Which two planets have no moons at all?	Mercury and Venus	Mars and Venus	Mercury and Mars	Venus and Neptune
+sci_astronauts_float_iss	Medium	Why do astronauts float on the ISS, where Earth's gravity is still about 90% as strong?	They are in constant free fall	The station shields them from gravity	Gravity cannot reach that high	The station spins to cancel it
+sci_dark_side_moon	Medium	What is the 'dark side of the Moon' really?	Its far side, which gets sunlight too	A side that never sees sunlight	The part hidden in Earth's shadow	A huge plain of dark lava rock
+sci_roughly_far_away	Medium	Roughly how far away is the Moon?	About 384,000 km	About 38,000 km	About 3.8 million km	About 150,000 km
+sci_hurricanes_get_energy	Medium	Hurricanes get most of their energy from what?	Warm ocean water	The jet stream	The Earth's rotation	Lightning inside them
+sci_shape_falling_raindrops	Medium	What shape are falling raindrops, really?	Round, flattened at the bottom	Teardrops with a pointed top	Long, thin needles	Tiny hollow shells
+sci_really_hear_hold	Medium	What do you really hear when you hold a seashell to your ear?	Room noise echoing inside it	Trapped echoes of the sea	Air escaping from the shell	Your own blood flowing
+sci_causes_mirage_water	Medium	What causes a mirage of 'water' on a hot road?	Light bending through hot air	Sunlight reflecting off the tar	Water vapour rising from the road	The eye tiring in bright light
+sci_drops_water_skitter	Medium	Why do drops of water skitter around on a very hot pan instead of boiling away at once?	A layer of steam lifts them off the metal	The pan repels water electrically	Oil on the pan pushes them away	The hot metal makes them vibrate
 sci_einstein	Hard	Who formulated the theory of relativity?	Albert Einstein	Isaac Newton	Niels Bohr	Max Planck
 sci_penicylina	Hard	Who discovered penicillin?	Alexander Fleming	Louis Pasteur	Robert Koch	Jonas Salk
 sci_sila	Hard	What is the SI unit of force?	Newton	Joule	Watt	Pascal
@@ -333,6 +349,23 @@ sci_planet_nasa_juno	Hard	Which planet did NASA's Juno probe go to study?	Jupite
 sci_apparent_force_seems	Hard	Which apparent force seems to push you outwards when a car turns sharply?	Centrifugal force	Friction	Magnetism	Inertial gravity
 sci_discovered_electron_1897	Hard	Who discovered the electron, in 1897?	J. J. Thomson	Ernest Rutherford	Niels Bohr	Max Planck
 sci_planet_moons_characters	Hard	Which planet has moons named after characters from Shakespeare?	Uranus	Neptune	Saturn	Jupiter
+sci_fermi_paradox_ask	Hard	What does the Fermi paradox ask?	Why we have found no sign of aliens	Why time slows near the speed of light	Why the universe expands ever faster	Why the Moon always shows one face
+sci_elmo_fire_seen	Hard	What is St Elmo's fire, seen by sailors on masts during storms?	A glow of electricity in the air	Burning oil on the waves	Glowing plankton in the spray	Lightning striking the sea
+sci_effect_makes_spinning	Hard	Which effect makes a spinning ball, like a curling free kick, swerve in the air?	The Magnus effect	The Coriolis effect	The Venturi effect	The Doppler effect
+sci_moon_saturn_sprays	Hard	Which moon of Saturn sprays geysers of water ice out into space?	Enceladus	Titan	Mimas	Io
+sci_times_more_energy	Hard	How many times more energy does a magnitude 7 earthquake release than a magnitude 6?	About 32 times	About 2 times	About 10 times	About 100 times
+sci_gas_makes_volcano	Hard	Which gas makes up most of what a volcano blows out?	Water vapour	Carbon dioxide	Sulfur dioxide	Hydrogen sulfide
+sci_light_made_sun	Hard	Light made in the Sun's core takes roughly how long to work its way out to the surface?	Tens of thousands of years	About eight minutes	About one whole day	About a hundred years
+sci_relative_distant_stars	Hard	Relative to the distant stars, how long does the Earth take to spin once?	About 23 hours 56 minutes	Exactly 24 hours	About 24 hours 4 minutes	About 23 hours 30 minutes
+sci_moons_bigger_planet	Hard	Which of these moons is bigger than the planet Mercury?	Titan	Callisto	Io	Europa
+sci_stephen_hawking_born	Hard	Stephen Hawking was born exactly 300 years after the death of which scientist?	Galileo Galilei	Isaac Newton	Johannes Kepler	Nicolaus Copernicus
+sci_coined_butterfly_effect	Hard	Who coined the 'butterfly effect' while modelling the weather in the 1960s?	Edward Lorenz	Benoit Mandelbrot	Richard Feynman	John von Neumann
+sci_discovered_pulsars_1967	Hard	Who discovered the first pulsars in 1967, as a student, yet was left out of the Nobel Prize for it?	Jocelyn Bell Burnell	Vera Rubin	Henrietta Leavitt	Cecilia Payne
+sci_nasa_probe_became	Hard	Which NASA probe became the first to fly through the Sun's outer atmosphere, in 2021?	Parker Solar Probe	Solar Orbiter	SOHO	Ulysses
+sci_country_probes_land	Hard	Which country's probes were the first to land on Venus and send back photos of its surface?	The Soviet Union	The United States	Japan	China
+sci_all_empty_space	Hard	If all the empty space were squeezed out of every human's atoms, roughly how big would the human race be?	About a sugar cube	About a football stadium	About a city block	About a large house
+sci_discovered_planet_uranus	Hard	Who discovered the planet Uranus in 1781?	William Herschel	Edmond Halley	Isaac Newton	Johannes Kepler
+sci_danish_astronomer_kept	Hard	Which Danish astronomer kept a pet elk that reportedly died after drinking too much beer?	Tycho Brahe	Ole Romer	Niels Bohr	Johannes Kepler
 sci_kwant	Expert	Who launched quantum theory?	Max Planck	Albert Einstein	Werner Heisenberg	Erwin Schrodinger
 sci_entropia	Expert	Which law of thermodynamics states that entropy increases?	The second	The first	The third	The zeroth
 sci_hubble	Expert	Who discovered that the Universe is expanding?	Edwin Hubble	Albert Einstein	Carl Sagan	Georges Lemaitre
@@ -384,3 +417,11 @@ sciy_kosmos_temperatura	Expert	What is the background temperature of deep space?
 sci_belgian_priest_proposed	Expert	Which Belgian priest first proposed what became the Big Bang theory?	Georges Lemaitre	Edwin Hubble	Fred Hoyle	Georges Cuvier
 sci_spacecraft_took_pale	Expert	Which spacecraft took the famous 'Pale Blue Dot' photo of Earth in 1990?	Voyager 1	Hubble	Apollo 17	Pioneer 10
 sci_french_mathematician_predicted	Expert	Which French mathematician predicted where Neptune would be found, in 1846?	Urbain Le Verrier	Pierre-Simon Laplace	Joseph-Louis Lagrange	Henri Poincare
+sci_french_comet_hunter	Expert	Which French comet hunter catalogued fuzzy sky objects so he wouldn't mistake them for comets?	Charles Messier	Edmond Halley	William Herschel	Pierre-Simon Laplace
+sci_wow_signal_1977	Expert	What was the 'Wow! signal' of 1977?	A radio burst from space never heard again	The first message beamed to aliens	A supernova seen in broad daylight	A flash from a nuclear test in space
+sci_roche_limit_describe	Expert	What does the Roche limit describe?	The distance at which tides rip a moon apart	The speed a rocket needs to escape a planet	The heaviest a star can be before collapsing	The edge of the Sun's magnetic influence
+sci_asteroid_nasa_dart	Expert	Which asteroid did NASA's DART spacecraft deliberately smash into in 2022, changing its orbit?	Dimorphos	Didymos	Bennu	Ryugu
+sci_virga	Expert	What is 'virga'?	Rain that evaporates before reaching the ground	A lens-shaped cloud over mountains	Lightning that leaps up from the clouds	Hail falling from a clear blue sky
+sci_mpemba_effect	Expert	What is the Mpemba effect?	Hot water sometimes freezing faster than cold	Salt water freezing more slowly than fresh	Ice cubes sticking to a wet tongue	Boiling water cooling faster in a metal cup
+sci_astronomer_study_fast	Expert	Which astronomer's study of how fast galaxies spin gave key evidence for dark matter?	Vera Rubin	Jocelyn Bell Burnell	Henrietta Leavitt	Cecilia Payne
+sci_since_1970s_scale	Expert	Since the 1970s, which scale have seismologists used in place of the Richter scale for big quakes?	The moment magnitude scale	The Mercalli scale	The Fujita scale	The Kelvin scale

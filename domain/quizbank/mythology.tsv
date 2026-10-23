@@ -79,6 +79,10 @@ myt_romans_call_poseidon	Easy	What did the Romans call Poseidon, the god of the 
 myt_king_arthur_queen	Easy	Who was King Arthur's queen?	Guinevere	Morgan le Fay	Isolde	Elaine
 myt_robin_hood_sweetheart	Easy	Who is Robin Hood's sweetheart in the English legends?	Maid Marian	Lady Godiva	Guinevere	Rowena
 myt_mythical_creature_half	Easy	Which mythical creature is half man and half goat?	Satyr	Centaur	Minotaur	Griffin
+myt_goddess_blindfolded_holding	Easy	Which goddess, blindfolded and holding scales, stands outside many courthouses?	Lady Justice	Athena	Fortuna	Nike
+myt_twin_brother_artemis	Easy	Who was the twin brother of Artemis, goddess of the hunt?	Apollo	Hermes	Ares	Dionysus
+myt_word_long_eventful	Easy	Which word for a long, eventful journey comes from a Greek hero's ten-year voyage home?	An odyssey	An epic	A saga	A quest
+myt_greek_female_nature	Easy	What is the Greek name for a female nature spirit of rivers, trees and springs?	A nymph	A muse	A fury	A siren
 cultw_odyn_ptaki	Medium	Which two ravens brought Odin news of the world?	Huginn and Muninn	Geri and Freki	Sleipnir and Fenrir	Vidar and Vali
 mit_hades	Medium	Who ruled the Greek underworld?	Hades	Poseidon	Cronus	Dionysus
 mit_atena	Medium	Which goddess was the patron of wisdom and Athens?	Athena	Hera	Aphrodite	Artemis
@@ -192,6 +196,17 @@ myt_roman_goddess_luck	Medium	Who was the Roman goddess of luck?	Fortuna	Victori
 myt_giant_serpent_apollo	Medium	Which giant serpent did Apollo kill at Delphi?	Python	Ladon	Typhon	Echidna
 myt_oracle_ancient_greece	Medium	Where was the most famous oracle of ancient Greece?	Delphi	Olympia	Dodona	Sparta
 myt_mythical_beast_lion	Medium	Which mythical beast has a lion's body, a human face and a scorpion's tail?	Manticore	Sphinx	Griffin	Chimera
+myt_hero_beheaded_medusa	Medium	How did the hero who beheaded Medusa avoid meeting her deadly gaze?	He watched her reflection in his shield	He wore a blindfold woven by Athena	He struck while she was turned away	He fought her only in pitch darkness
+myt_word_erotic_comes	Medium	The word 'erotic' comes from which Greek god?	Eros	Eris	Eos	Ares
+myt_odysseus_sail_between	Medium	Odysseus had to sail between the monster Scylla and which deadly whirlpool?	Charybdis	Cetus	Typhon	Ladon
+myt_paris_champs_elysees	Medium	Paris's Champs-Elysees is named after which paradise of Greek myth?	The Elysian Fields	Arcadia	Mount Olympus	The Garden of the Hesperides
+myt_form_bird_zeus	Medium	In the form of which bird did Zeus visit Leda, mother of Helen of Troy?	A swan	An eagle	A dove	A peacock
+myt_judgement_paris_goddess	Medium	In the 'Judgement of Paris', which goddess won the golden apple?	Aphrodite	Hera	Athena	Eris
+myt_hindu_festival_lights	Medium	Which Hindu festival of lights celebrates Rama's return home from exile?	Diwali	Holi	Navratri	Pongal
+myt_japanese_folklore_oni	Medium	In Japanese folklore, what is an oni?	A horned ogre or demon	A fox spirit	A water imp	A raccoon dog
+myt_irish_giant_said	Medium	Which Irish giant is said to have built the Giant's Causeway?	Finn McCool	Cu Chulainn	Balor	Brian Boru
+myt_dying_king_arthur	Medium	Where was the dying King Arthur carried to be healed?	Avalon	Camelot	Lyonesse	Tintagel
+myt_according_legend_holy	Medium	According to legend, what is the Holy Grail?	The cup Jesus drank from at the Last Supper	The crown worn by the first king of Britain	The spear that pierced Jesus on the cross	A cauldron of plenty made by Merlin
 cultw_izanagi	Hard	In Japanese myth, which pair created the islands of Japan?	Izanagi and Izanami	Amaterasu and Susanoo	Raijin and Fujin	Inari and Hachiman
 cultw_anansi	Hard	In West African folklore, what kind of creature is Anansi?	A spider	A lion	A crocodile	A hawk
 mit_yggdrasil	Hard	What is the cosmic tree in Norse mythology called?	Yggdrasil	Valhalla	Bifrost	Midgard
@@ -272,6 +287,17 @@ myt_roman_greek_goddess	Hard	What is the Roman name for the Greek goddess Persep
 myt_hero_rode_pegasus	Hard	Which hero rode Pegasus to kill the monster Chimera?	Bellerophon	Perseus	Theseus	Jason
 myt_greek_goddess_hearth	Hard	Who was the Greek goddess of the hearth and home?	Hestia	Hera	Demeter	Athena
 myt_greek_keeper_winds	Hard	Who was the Greek keeper of the winds, who gave Odysseus a bag of them?	Aeolus	Boreas	Zephyrus	Triton
+myt_norns_norse_myth	Hard	Who are the Norns of Norse myth?	Three women who weave everyone's fate	Wolves that chase the Sun and Moon	Giants who guard the edge of the world	Elves who forge the gods' weapons
+myt_helmet_borrowed_perseus	Hard	Whose helmet, borrowed by Perseus, made its wearer invisible?	Hades's	Hermes's	Ares's	Athena's
+myt_greek_god_cold	Hard	Who was the Greek god of the cold north wind?	Boreas	Zephyrus	Notus	Eurus
+myt_demon_king_kidnaps	Hard	Which demon king kidnaps Sita in the Ramayana?	Ravana	Hanuman	Kansa	Indra
+myt_chinese_legend_goddess	Hard	In Chinese legend, which goddess lives on the Moon with a jade rabbit?	Chang'e	Guanyin	Nuwa	Xiwangmu
+myt_japanese_folk_hero	Hard	Which Japanese folk hero was born from a giant peach?	Momotaro	Urashima Taro	Kintaro	Issun-boshi
+myt_knight_round_table	Hard	Which knight of the Round Table finally achieves the Holy Grail?	Sir Galahad	Sir Lancelot	Sir Gawain	Sir Kay
+myt_trojan_priest_warned	Hard	Which Trojan priest warned against the wooden horse and was then crushed by sea serpents?	Laocoon	Calchas	Tiresias	Antenor
+myt_selkie_scottish_irish	Hard	What is a selkie in Scottish and Irish folklore?	A seal that can shed its skin to become human	A goblin that steals milk from farmhouses	A ghost that haunts lonely stretches of coast	A mermaid who sings ships onto the rocks
+myt_folklore_changeling	Hard	In folklore, what is a changeling?	A fairy child left in place of a stolen baby	A witch who can turn into a hare	A ghost that changes its shape at night	A stone that changes colour at midnight
+myt_island_baby_zeus	Hard	On which island was the baby Zeus hidden from his father Cronus?	Crete	Delos	Cyprus	Rhodes
 cultw_mahabharata	Expert	Which Sanskrit epic contains the Bhagavad Gita?	The Mahabharata	The Ramayana	The Rigveda	The Upanishads
 cultw_tyche	Expert	Which Greek goddess personified luck and fortune?	Tyche	Nemesis	Hecate	Eris
 cultw_mabinogion	Expert	The Mabinogion collects the myths of which people?	The Welsh	The Irish	The Scots	The Bretons
@@ -324,3 +350,9 @@ myty_walhalla_dach	Expert	According to Norse myth, what is the roof of Valhalla 
 myty_bes	Expert	Which dwarf god of ancient Egypt protected households and children?	Bes	Ptah	Khnum	Apis
 myty_koszczej	Expert	Which Slavic villain is 'deathless' because his death is hidden in a needle inside an egg?	Koschei	Baba Yaga	Zmey Gorynych	Leshy
 myty_leszy	Expert	What is a leshy in Slavic folklore?	A forest spirit	A water horse	A house elf	A storm giant
+myt_fire_giant_set	Expert	Which fire giant will set the whole world ablaze at Ragnarok?	Surtr	Ymir	Thrym	Hrungnir
+myt_sleipnir_mother_loki	Expert	Sleipnir's mother was Loki, who had turned himself into what?	A mare	A wolf	A salmon	An eagle
+myt_special_goats_pull	Expert	What was special about the goats that pull Thor's chariot?	Thor could eat them and bring them back to life	They could gallop across the open sea	Their horns could summon thunderstorms	They could speak every language of men
+myt_iche_maya_book	Expert	Which K'iche' Maya book tells how the gods made the first humans from maize?	The Popol Vuh	The Codex Mendoza	The Book of the Dead	The Rigveda
+myt_babylonian_god_slew	Expert	Which Babylonian god slew the sea dragon Tiamat and became king of the gods?	Marduk	Enlil	Gilgamesh	Ashur
+myt_egyptian_god_patron	Expert	Which Egyptian god, patron of craftsmen, was worshipped above all at Memphis?	Ptah	Khnum	Thoth	Apis

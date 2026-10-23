@@ -68,7 +68,9 @@ object ElementQuestions {
         q("ele_gas_powers_fuel", "Which gas powers fuel-cell cars, leaving only water behind?", "Hydrogen", listOf("Methane", "Propane", "Helium"), E),
         q("ele_trumpets_trombones_usually", "Trumpets and trombones are usually made of which alloy?", "Brass", listOf("Bronze", "Steel", "Pewter"), E),
         q("ele_dihydrogen_monoxide_chemical", "What is 'dihydrogen monoxide', a chemical sometimes 'banned' in prank petitions?", "Water", listOf("Salt", "Bleach", "Alcohol"), E),
-        q("ele_eiffel_tower_built", "The Eiffel Tower is built mainly from which metal?", "Iron", listOf("Steel", "Aluminium", "Copper"), E)
+        q("ele_eiffel_tower_built", "The Eiffel Tower is built mainly from which metal?", "Iron", listOf("Steel", "Aluminium", "Copper"), E),
+        q("ele_recreational_scuba_divers", "What do recreational scuba divers usually breathe from their tanks?", "Ordinary compressed air", listOf("Pure oxygen", "A helium-oxygen mix", "Pure nitrogen"), E),
+        q("ele_gas_foams_mix", "Which gas foams up when you mix baking soda with vinegar?", "Carbon dioxide", listOf("Oxygen", "Hydrogen", "Chlorine"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -149,7 +151,18 @@ object ElementQuestions {
         q("ele_acid_builds_milk", "Which acid builds up in milk as it turns sour?", "Lactic acid", listOf("Citric acid", "Acetic acid", "Formic acid"), M),
         q("ele_food_tin_cans", "Food 'tin cans' are really steel coated with a thin layer of which metal?", "Tin", listOf("Zinc", "Aluminium", "Nickel"), M),
         q("ele_purple_gemstone_variety", "Which purple gemstone is a variety of quartz?", "Amethyst", listOf("Sapphire", "Garnet", "Tanzanite"), M),
-        q("ele_metal_mixed_gold", "Which metal is mixed with gold to make 'rose gold'?", "Copper", listOf("Silver", "Zinc", "Nickel"), M)
+        q("ele_metal_mixed_gold", "Which metal is mixed with gold to make 'rose gold'?", "Copper", listOf("Silver", "Zinc", "Nickel"), M),
+        q("ele_human_body_holds", "The human body holds enough of which metal to forge a small nail?", "Iron", listOf("Zinc", "Copper", "Magnesium"), M),
+        q("ele_white_chalk_climbers", "The white 'chalk' climbers and gymnasts rub on their hands is mostly what?", "Magnesium carbonate", listOf("Calcium carbonate", "Talc", "Baking soda"), M),
+        q("ele_metal_roman_water", "Which metal were Roman water pipes made of, giving us the word 'plumbing'?", "Lead", listOf("Copper", "Bronze", "Iron"), M),
+        q("ele_white_scale_inside", "The white scale inside kettles in hard-water areas is mostly which compound?", "Calcium carbonate", listOf("Sodium chloride", "Silicon dioxide", "Iron oxide"), M),
+        q("ele_element_honours_marie", "Which element honours Marie and Pierre Curie?", "Curium", listOf("Polonium", "Radium", "Francium"), M),
+        q("ele_nickel_silver_used", "Nickel silver, used for keys, zips and cutlery, contains how much silver?", "None at all", listOf("About 10%", "About 25%", "About 50%"), M),
+        q("ele_typical_chlorine_smell", "The typical 'chlorine smell' of a swimming pool is mostly a sign of what?", "Chlorine reacting with sweat and urine", listOf("Too much clean chlorine in the water", "Rust in the pool pipes", "Algae growing on the tiles"), M),
+        q("ele_gas_bubbling_out", "Which gas bubbling out of the blood gives divers 'the bends' if they surface too fast?", "Nitrogen", listOf("Oxygen", "Helium", "Carbon dioxide"), M),
+        q("ele_element_gives_northern", "Which element gives the northern lights their most common green glow?", "Oxygen", listOf("Nitrogen", "Neon", "Helium"), M),
+        q("ele_striking_strip_box", "The striking strip on a box of safety matches contains which element?", "Phosphorus", listOf("Sulfur", "Magnesium", "Potassium"), M),
+        q("ele_element_old_alchemy", "Which element did old alchemy books call 'quicksilver'?", "Mercury", listOf("Silver", "Tin", "Antimony"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -220,7 +233,14 @@ object ElementQuestions {
         q("ele_element_greek_word_2", "Which element is named after the Greek word for 'violet', the colour of its vapour?", "Iodine", listOf("Indium", "Iridium", "Vanadium"), H),
         q("ele_sodium_hydroxide_better", "Sodium hydroxide is better known by which name?", "Caustic soda", listOf("Baking soda", "Washing soda", "Rock salt"), H),
         q("ele_acid_strong_used", "Which acid is so strong it is used to etch glass?", "Hydrofluoric acid", listOf("Citric acid", "Acetic acid", "Carbonic acid"), H),
-        q("ele_lightweight_mag_wheels", "Lightweight 'mag' wheels for cars were originally made from which metal?", "Magnesium", listOf("Manganese", "Mercury", "Molybdenum"), H)
+        q("ele_lightweight_mag_wheels", "Lightweight 'mag' wheels for cars were originally made from which metal?", "Magnesium", listOf("Manganese", "Mercury", "Molybdenum"), H),
+        q("ele_roughly_temperature_liquid", "At roughly what temperature does liquid nitrogen boil?", "-196 °C", listOf("-78 °C", "-120 °C", "-273 °C"), H),
+        q("ele_element_figure_greek", "Which element is named after the figure of Greek myth who stole fire from the gods?", "Promethium", listOf("Tantalum", "Thorium", "Selenium"), H),
+        q("ele_tin_objects_crumble", "Why can tin objects crumble into grey powder in a harsh winter?", "Tin changes its crystal form in the cold", listOf("Frost cracks the tin oxide layer", "Ice crystals grow inside the metal", "Cold air makes tin rust faster"), H),
+        q("ele_green_wallpaper_dye", "A green wallpaper dye that may have slowly poisoned Napoleon on St Helena contained which element?", "Arsenic", listOf("Mercury", "Lead", "Thallium"), H),
+        q("ele_sodium_symbol", "Why is sodium's symbol Na?", "From its Latin name 'natrium'", listOf("From the Greek 'naphtha'", "From the word 'natural'", "From its discoverer's initials"), H),
+        q("ele_classic_photographic_film", "Classic photographic film captured light using compounds of which metal?", "Silver", listOf("Gold", "Platinum", "Copper"), H),
+        q("ele_since_1992_british", "Since 1992, British 1p and 2p coins have been made of copper-plated what?", "Steel", listOf("Zinc", "Aluminium", "Nickel"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -271,6 +291,12 @@ object ElementQuestions {
         q("eley_chrom", "Chromium's name comes from the Greek word for what?", "Colour", listOf("Mirror", "Metal", "Shine"), X),
         q("eley_brom", "Bromine's name comes from the Greek word for what?", "Stench", listOf("Brown", "Bright", "Water"), X),
         q("ele_element_greek_word_3", "Which element is named after the Greek word for 'rainbow', for its colourful salts?", "Iridium", listOf("Chromium", "Rhodium", "Bismuth"), X),
-        q("ele_metal_comes_greek", "Which metal's name comes from the Greek for 'stone', as it was first found in a mineral?", "Lithium", listOf("Calcium", "Barium", "Strontium"), X)
+        q("ele_metal_comes_greek", "Which metal's name comes from the Greek for 'stone', as it was first found in a mineral?", "Lithium", listOf("Calcium", "Barium", "Strontium"), X),
+        q("ele_nickel_kupfernickel_german", "Nickel is named after 'Kupfernickel', a German miners' word meaning what?", "Copper demon", listOf("Copper coin", "Little copper", "False silver"), X),
+        q("ele_mendeleev_predicted_eka", "Mendeleev predicted 'eka-silicon' in 1871. Under what name was it found 15 years later?", "Germanium", listOf("Gallium", "Scandium", "Selenium"), X),
+        q("ele_hafnium_latin_city", "Hafnium is named after the Latin name of which city?", "Copenhagen", listOf("Stockholm", "Paris", "Berlin"), X),
+        q("ele_element_more_stable", "Which element has more stable isotopes than any other, ten in all?", "Tin", listOf("Lead", "Iron", "Xenon"), X),
+        q("ele_niobium_niobe_daughter", "Niobium is named after Niobe, daughter of which mythical king whose own element it is always found with?", "Tantalus", listOf("Midas", "Sisyphus", "Minos"), X),
+        q("ele_carl_scheele_joseph", "Carl Scheele and Joseph Priestley independently discovered which element in the 1770s?", "Oxygen", listOf("Hydrogen", "Argon", "Phosphorus"), X)
     )
 }

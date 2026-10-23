@@ -43,6 +43,8 @@ ele_gas_powers_fuel	Easy	Which gas powers fuel-cell cars, leaving only water beh
 ele_trumpets_trombones_usually	Easy	Trumpets and trombones are usually made of which alloy?	Brass	Bronze	Steel	Pewter
 ele_dihydrogen_monoxide_chemical	Easy	What is 'dihydrogen monoxide', a chemical sometimes 'banned' in prank petitions?	Water	Salt	Bleach	Alcohol
 ele_eiffel_tower_built	Easy	The Eiffel Tower is built mainly from which metal?	Iron	Steel	Aluminium	Copper
+ele_recreational_scuba_divers	Easy	What do recreational scuba divers usually breathe from their tanks?	Ordinary compressed air	Pure oxygen	A helium-oxygen mix	Pure nitrogen
+ele_gas_foams_mix	Easy	Which gas foams up when you mix baking soda with vinegar?	Carbon dioxide	Oxygen	Hydrogen	Chlorine
 ele_symbol_ag	Medium	Which element hides behind the symbol Ag?	Silver	Gold	Argon	Aluminum
 ele_symbol_na	Medium	Which element hides behind the symbol Na?	Sodium	Nitrogen	Nickel	Neon
 ele_symbol_k	Medium	Which element hides behind the symbol K?	Potassium	Krypton	Calcium	Cobalt
@@ -120,6 +122,17 @@ ele_acid_builds_milk	Medium	Which acid builds up in milk as it turns sour?	Lacti
 ele_food_tin_cans	Medium	Food 'tin cans' are really steel coated with a thin layer of which metal?	Tin	Zinc	Aluminium	Nickel
 ele_purple_gemstone_variety	Medium	Which purple gemstone is a variety of quartz?	Amethyst	Sapphire	Garnet	Tanzanite
 ele_metal_mixed_gold	Medium	Which metal is mixed with gold to make 'rose gold'?	Copper	Silver	Zinc	Nickel
+ele_human_body_holds	Medium	The human body holds enough of which metal to forge a small nail?	Iron	Zinc	Copper	Magnesium
+ele_white_chalk_climbers	Medium	The white 'chalk' climbers and gymnasts rub on their hands is mostly what?	Magnesium carbonate	Calcium carbonate	Talc	Baking soda
+ele_metal_roman_water	Medium	Which metal were Roman water pipes made of, giving us the word 'plumbing'?	Lead	Copper	Bronze	Iron
+ele_white_scale_inside	Medium	The white scale inside kettles in hard-water areas is mostly which compound?	Calcium carbonate	Sodium chloride	Silicon dioxide	Iron oxide
+ele_element_honours_marie	Medium	Which element honours Marie and Pierre Curie?	Curium	Polonium	Radium	Francium
+ele_nickel_silver_used	Medium	Nickel silver, used for keys, zips and cutlery, contains how much silver?	None at all	About 10%	About 25%	About 50%
+ele_typical_chlorine_smell	Medium	The typical 'chlorine smell' of a swimming pool is mostly a sign of what?	Chlorine reacting with sweat and urine	Too much clean chlorine in the water	Rust in the pool pipes	Algae growing on the tiles
+ele_gas_bubbling_out	Medium	Which gas bubbling out of the blood gives divers 'the bends' if they surface too fast?	Nitrogen	Oxygen	Helium	Carbon dioxide
+ele_element_gives_northern	Medium	Which element gives the northern lights their most common green glow?	Oxygen	Nitrogen	Neon	Helium
+ele_striking_strip_box	Medium	The striking strip on a box of safety matches contains which element?	Phosphorus	Sulfur	Magnesium	Potassium
+ele_element_old_alchemy	Medium	Which element did old alchemy books call 'quicksilver'?	Mercury	Silver	Tin	Antimony
 ele_symbol_sn	Hard	Which element hides behind the symbol Sn?	Tin	Scandium	Selenium	Strontium
 ele_najczestszy	Hard	Which element is the most abundant in the Universe?	Hydrogen	Helium	Oxygen	Carbon
 ele_ilosc	Hard	How many elements does today's periodic table have?	118	108	92	120
@@ -187,6 +200,13 @@ ele_element_greek_word_2	Hard	Which element is named after the Greek word for 'v
 ele_sodium_hydroxide_better	Hard	Sodium hydroxide is better known by which name?	Caustic soda	Baking soda	Washing soda	Rock salt
 ele_acid_strong_used	Hard	Which acid is so strong it is used to etch glass?	Hydrofluoric acid	Citric acid	Acetic acid	Carbonic acid
 ele_lightweight_mag_wheels	Hard	Lightweight 'mag' wheels for cars were originally made from which metal?	Magnesium	Manganese	Mercury	Molybdenum
+ele_roughly_temperature_liquid	Hard	At roughly what temperature does liquid nitrogen boil?	-196 °C	-78 °C	-120 °C	-273 °C
+ele_element_figure_greek	Hard	Which element is named after the figure of Greek myth who stole fire from the gods?	Promethium	Tantalum	Thorium	Selenium
+ele_tin_objects_crumble	Hard	Why can tin objects crumble into grey powder in a harsh winter?	Tin changes its crystal form in the cold	Frost cracks the tin oxide layer	Ice crystals grow inside the metal	Cold air makes tin rust faster
+ele_green_wallpaper_dye	Hard	A green wallpaper dye that may have slowly poisoned Napoleon on St Helena contained which element?	Arsenic	Mercury	Lead	Thallium
+ele_sodium_symbol	Hard	Why is sodium's symbol Na?	From its Latin name 'natrium'	From the Greek 'naphtha'	From the word 'natural'	From its discoverer's initials
+ele_classic_photographic_film	Hard	Classic photographic film captured light using compounds of which metal?	Silver	Gold	Platinum	Copper
+ele_since_1992_british	Hard	Since 1992, British 1p and 2p coins have been made of copper-plated what?	Steel	Zinc	Aluminium	Nickel
 ele_symbol_sb	Expert	Which element hides behind the symbol Sb?	Antimony	Strontium	Silver	Selenium
 ele_symbol_mn	Expert	Which element hides behind the symbol Mn?	Manganese	Magnesium	Molybdenum	Copper
 ele_curie	Expert	Which element did Marie Sklodowska-Curie name after her homeland?	Polonium	Radium	Uranium	Radon
@@ -234,3 +254,9 @@ eley_chrom	Expert	Chromium's name comes from the Greek word for what?	Colour	Mir
 eley_brom	Expert	Bromine's name comes from the Greek word for what?	Stench	Brown	Bright	Water
 ele_element_greek_word_3	Expert	Which element is named after the Greek word for 'rainbow', for its colourful salts?	Iridium	Chromium	Rhodium	Bismuth
 ele_metal_comes_greek	Expert	Which metal's name comes from the Greek for 'stone', as it was first found in a mineral?	Lithium	Calcium	Barium	Strontium
+ele_nickel_kupfernickel_german	Expert	Nickel is named after 'Kupfernickel', a German miners' word meaning what?	Copper demon	Copper coin	Little copper	False silver
+ele_mendeleev_predicted_eka	Expert	Mendeleev predicted 'eka-silicon' in 1871. Under what name was it found 15 years later?	Germanium	Gallium	Scandium	Selenium
+ele_hafnium_latin_city	Expert	Hafnium is named after the Latin name of which city?	Copenhagen	Stockholm	Paris	Berlin
+ele_element_more_stable	Expert	Which element has more stable isotopes than any other, ten in all?	Tin	Lead	Iron	Xenon
+ele_niobium_niobe_daughter	Expert	Niobium is named after Niobe, daughter of which mythical king whose own element it is always found with?	Tantalus	Midas	Sisyphus	Minos
+ele_carl_scheele_joseph	Expert	Carl Scheele and Joseph Priestley independently discovered which element in the 1770s?	Oxygen	Hydrogen	Argon	Phosphorus

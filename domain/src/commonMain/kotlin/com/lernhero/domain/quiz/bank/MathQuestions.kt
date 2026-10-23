@@ -89,7 +89,10 @@ object MathQuestions {
         q("mat_race_overtake_runner", "In a race, you overtake the runner in second place. What place are you in now?", "Second", listOf("First", "Third", "Last"), E),
         q("mat_q", "What is 2 + 2 x 2?", "6", listOf("8", "4", "10"), E),
         q("mat_letter_comes_next", "Which letter comes next: J, F, M, A, M, J, ...?", "J", listOf("A", "S", "N"), E),
-        q("mat_chance_rolling_six", "What is the chance of rolling a six with one fair die?", "1 in 6", listOf("1 in 3", "1 in 12", "1 in 36"), E)
+        q("mat_chance_rolling_six", "What is the chance of rolling a six with one fair die?", "1 in 6", listOf("1 in 3", "1 in 12", "1 in 36"), E),
+        q("mat_pemdas_bodmas_help", "What do 'PEMDAS' and 'BODMAS' help pupils remember?", "The order of operations", listOf("The times tables", "How to divide fractions", "The names of polygons"), E),
+        q("mat_diamond_shape_four", "What is a 'diamond' shape with four equal sides properly called?", "A rhombus", listOf("A trapezium", "A pentagon", "An oblong"), E),
+        q("mat_call_100th_anniversary", "What do you call a 100th anniversary?", "A centenary", listOf("A millennium", "A jubilee", "A decennial"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -181,7 +184,13 @@ object MathQuestions {
         q("mat_different_orders_arrange", "In how many different orders can you arrange the letters C, A and T?", "6", listOf("3", "9", "27"), M),
         q("mat_angle_clock_hands", "What angle do a clock's hands make at exactly 6 o'clock?", "180 degrees", listOf("90 degrees", "120 degrees", "360 degrees"), M),
         q("mat_birds_make_brace", "How many birds make 'a brace'?", "Two", listOf("Three", "Six", "Twelve"), M),
-        q("mat_ancient_greek_counting", "In ancient Greek counting, how many was a 'myriad'?", "10,000", listOf("1,000", "100", "1,000,000"), M)
+        q("mat_ancient_greek_counting", "In ancient Greek counting, how many was a 'myriad'?", "10,000", listOf("1,000", "100", "1,000,000"), M),
+        q("mat_numbers_around_dartboard", "What do the numbers 1 to 20 around a dartboard add up to?", "210", listOf("200", "180", "220"), M),
+        q("mat_brick_weighs_plus", "A brick weighs 1 kg plus half a brick. What does a whole brick weigh?", "2 kg", listOf("1.5 kg", "1 kg", "3 kg"), M),
+        q("mat_regular_shape_not", "Which regular shape can NOT tile a floor on its own without leaving gaps?", "The pentagon", listOf("The triangle", "The square", "The hexagon"), M),
+        q("mat_qed_end_proof", "What does 'QED' at the end of a proof mean?", "Which was to be shown", listOf("Question ends here", "Quickly and easily done", "Equal on both sides"), M),
+        q("mat_shape_toblerone_box", "What 3D shape is a Toblerone box?", "A triangular prism", listOf("A square pyramid", "A tetrahedron", "A cuboid"), M),
+        q("mat_sheets_paper_ream", "How many sheets of paper are in a ream?", "500", listOf("100", "250", "1,000"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -239,7 +248,16 @@ object MathQuestions {
         q("mat_ancient_people_counted", "Which ancient people counted in base 60, giving us 60 minutes in an hour?", "The Babylonians", listOf("The Egyptians", "The Greeks", "The Romans"), H),
         q("mat_prefix_nano_mean", "What does the prefix 'nano' mean?", "A billionth", listOf("A millionth", "A thousandth", "A trillionth"), H),
         q("mat_roughly_grams_pound", "Roughly how many grams are in a pound?", "454", listOf("254", "354", "554"), H),
-        q("mat_roughly_litres_gallon", "Roughly how many litres are in a US gallon?", "3.8", listOf("2.5", "4.5", "5.2"), H)
+        q("mat_roughly_litres_gallon", "Roughly how many litres are in a US gallon?", "3.8", listOf("2.5", "4.5", "5.2"), H),
+        q("mat_knockout_tournament_players", "In a knockout tournament with 64 players, how many matches are played in all?", "63", listOf("32", "64", "127"), H),
+        q("mat_legend_says_follower", "Legend says a follower of which Greek thinker was drowned for revealing that some numbers are irrational?", "Pythagoras", listOf("Euclid", "Plato", "Archimedes"), H),
+        q("mat_ancient_impossible_task", "What is the ancient, impossible task of drawing a square with exactly a circle's area, using only compass and ruler?", "Squaring the circle", listOf("Doubling the cube", "Trisecting the angle", "Cornering the arc"), H),
+        q("mat_happens_cut_mobius", "What happens if you cut a Mobius strip all the way along its middle?", "You get one longer loop", listOf("You get two separate loops", "You get two linked loops", "It falls apart into strips"), H),
+        q("mat_group_367_people", "In a group of 367 people, what is the chance that at least two share a birthday?", "100%", listOf("About 50%", "About 75%", "About 99%"), H),
+        q("mat_clock_faces_roman", "Clock faces with Roman numerals usually show the number 4 as what?", "IIII", listOf("IV", "IIV", "VI"), H),
+        q("mat_sided_die_beloved", "The 20-sided die beloved of Dungeons & Dragons players is which shape?", "An icosahedron", listOf("A dodecahedron", "An octahedron", "A decahedron"), H),
+        q("mat_scottish_laird_invented", "Which Scottish laird invented logarithms in 1614?", "John Napier", listOf("Henry Briggs", "Colin Maclaurin", "James Gregory"), H),
+        q("mat_italy_number_traditionally", "In Italy, which number is traditionally unlucky, so some planes have no row with it?", "17", listOf("13", "4", "9"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -290,6 +308,13 @@ object MathQuestions {
         q("matx_ziemniaki", "A 100 kg sack of potatoes is 99% water. After drying it is 98% water. What does it weigh now?", "50 kg", listOf("98 kg", "99 kg", "90 kg"), X),
         q("matx_ujemne_chiny", "Negative numbers were long rejected in Europe, but used centuries earlier by mathematicians in which country?", "China", listOf("Greece", "Egypt", "England"), X),
         q("maty_hotel_hilberta", "In 'Hilbert's Hotel', a full hotel with infinitely many rooms can still do what?", "Take in more guests", listOf("Only close its doors", "Charge infinite money", "Fit just one more guest"), X),
-        q("maty_zenon", "Which Greek thinker argued that swift Achilles could never overtake a tortoise?", "Zeno of Elea", listOf("Pythagoras", "Euclid", "Archimedes"), X)
+        q("maty_zenon", "Which Greek thinker argued that swift Achilles could never overtake a tortoise?", "Zeno of Elea", listOf("Pythagoras", "Euclid", "Archimedes"), X),
+        q("mat_division_sign", "What is the division sign ÷ called?", "An obelus", listOf("A vinculum", "A solidus", "A caret"), X),
+        q("mat_welsh_mathematician_invented", "Which Welsh mathematician invented the equals sign in 1557, tired of writing 'is equal to'?", "Robert Recorde", listOf("John Napier", "William Oughtred", "John Wallis"), X),
+        q("mat_unproven_conjecture_says", "Which unproven conjecture says every even number greater than 2 is the sum of two primes?", "Goldbach's conjecture", listOf("Fermat's Last Theorem", "The Collatz conjecture", "The Riemann hypothesis"), X),
+        q("mat_problem_halve_even", "In the '3n + 1' problem, you halve even numbers and triple odd ones and add one. Every number tried so far ends up at what?", "1", listOf("0", "3", "7"), X),
+        q("mat_finally_proved_fermat", "Who finally proved Fermat's Last Theorem, in 1994?", "Andrew Wiles", listOf("Grigori Perelman", "Terence Tao", "John Nash"), X),
+        q("mat_according_benford_law", "According to Benford's law, which first digit is the most common in real-world data like bills and populations?", "1", listOf("5", "9", "All are equally common"), X),
+        q("mat_french_mathematician_died", "Which French mathematician died in a duel at 20, after scribbling down his theory the night before?", "Evariste Galois", listOf("Niels Abel", "Blaise Pascal", "Bernhard Riemann"), X)
     )
 }

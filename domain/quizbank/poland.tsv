@@ -116,6 +116,14 @@ pol_juwenalia_poland	Easy	What are 'Juwenalia' in Poland?	Student festivals	Harv
 pol_band_fronted_singer	Easy	Which band was fronted by the singer Kora?	Maanam	Perfect	Republika	Lady Pank
 pol_polish_city_leonardo	Easy	In which Polish city does Leonardo's 'Lady with an Ermine' hang?	Krakow	Warsaw	Wroclaw	Gdansk
 pol_poland_national_stadium	Easy	What is the name of Poland's national stadium in Warsaw?	Stadion Narodowy	Stadion Slaski	Stadion Dziesieciolecia	Stadion Wojska Polskiego
+pol_polish_zupa_ogorkowa	Easy	What is Polish 'zupa ogorkowa' made with?	Pickled cucumbers	Fresh tomatoes	Wild mushrooms	Sorrel leaves
+pol_poles_call_long	Easy	What do Poles call the long holiday weekend around 1-3 May?	Majowka	Sylwester	Andrzejki	Dozynki
+pol_parents_traditionally_greet	Easy	What do parents traditionally greet newlyweds with at a Polish wedding reception?	Bread and salt	Honey and milk	Wine and cheese	Eggs and flour
+pol_date_polish_children	Easy	On which date do Polish children celebrate Children's Day?	1 June	21 January	6 December	1 September
+pol_tongue_twister_buzzes	Easy	In the famous tongue twister, what buzzes in the reeds in Szczebrzeszyn?	A beetle	A bee	A fly	A mosquito
+pol_highlanders_tatras	Easy	What are the highlanders of the Tatras called?	Gorale	Kaszubi	Kurpie	Lemkowie
+pol_grzaniec_popular_polish	Easy	What is 'grzaniec', popular at Polish Christmas markets?	Mulled wine or beer	Hot chocolate with chilli	Roasted chestnuts	A gingerbread biscuit
+pol_poles_call_april	Easy	What do Poles call April Fools' Day?	Prima aprilis	Lany poniedzialek	Tlusty czwartek	Zaduszki
 pol_geo2_wisla_zrodlo	Medium	Where does the Vistula river originate?	In the Silesian Beskids	In the Tatras	In the Sudetes	In the Masurian Lake District
 pol_geo2_polska_jezioro	Medium	Which lake is the largest in Poland?	Sniardwy	Mamry	Hancza	Lebsko
 pol_geo2_polska_najglebsze	Medium	Which lake is the deepest in Poland?	Hancza	Sniardwy	Wigry	Mamry
@@ -302,6 +310,21 @@ pol_polish_prime_minister	Medium	Which Polish prime minister-in-exile died in a 
 pol_politician_led_national	Medium	Which politician led the National Democrats and signed the Treaty of Versailles for Poland?	Roman Dmowski	Jozef Pilsudski	Wincenty Witos	Ignacy Daszynski
 pol_communist_leader_came	Medium	Which communist leader came to power during the 'thaw' of October 1956?	Wladyslaw Gomulka	Boleslaw Bierut	Edward Gierek	Wojciech Jaruzelski
 pol_frederic_chopin_heart	Medium	Where is Frederic Chopin's heart kept?	In a church in Warsaw	In Paris, with his body	In Zelazowa Wola	In Wawel Cathedral
+pol_directed_films_deluge	Medium	Who directed the films 'The Deluge' (1974) and 'With Fire and Sword' (1999)?	Jerzy Hoffman	Andrzej Wajda	Jerzy Kawalerowicz	Krzysztof Zanussi
+pol_football_club_plays	Medium	Which football club plays in Gdansk?	Lechia	Arka	Pogon	Zaglebie
+pol_city_see_huge	Medium	In which city can you see the huge 360-degree painting of the Battle of Raclawice?	Wroclaw	Krakow	Warsaw	Poznan
+pol_river_flows_through_2	Medium	Which river flows through Poznan?	The Warta	The Oder	The Vistula	The Notec
+pol_professional_group_celebrates	Medium	Which professional group celebrates 'Barborka' on 4 December?	Miners	Firefighters	Fishermen	Railway workers
+pol_holiday_poland_celebrate	Medium	Which holiday does Poland celebrate on 15 August, the anniversary of the 1920 Battle of Warsaw?	Polish Armed Forces Day	Constitution Day	Independence Day	National Flag Day
+pol_main_hero_sienkiewicz	Medium	Who is the main hero of Sienkiewicz's 'With Fire and Sword'?	Jan Skrzetuski	Andrzej Kmicic	Michal Wolodyjowski	Yurko Bohun
+pol_boastful_hard_drinking	Medium	Which boastful, hard-drinking nobleman of Sienkiewicz's Trilogy is often compared to Falstaff?	Onufry Zagloba	Longinus Podbipieta	Michal Wolodyjowski	Jan Skrzetuski
+pol_sport_mariusz_pudzianowski	Medium	In which sport did Mariusz Pudzianowski win five world titles?	Strongman	Weightlifting	Boxing	Wrestling
+pol_sport_tomasz_gollob	Medium	In which sport did Tomasz Gollob become world champion in 2010?	Speedway	Motocross	Rally driving	Ski jumping
+pol_composed_polonaise_andrzej	Medium	Who composed the famous polonaise in Andrzej Wajda's film 'Pan Tadeusz' (1999)?	Wojciech Kilar	Krzysztof Penderecki	Zbigniew Preisner	Jan A. P. Kaczmarek
+pol_band_recorded_wehikul	Medium	Which band recorded 'Wehikul czasu'?	Dzem	Perfect	Budka Suflera	Lady Pank
+pol_traditional_evening_cartoon	Medium	What is the traditional evening cartoon slot for children on Polish TV called?	Dobranocka	Teleranek	Domowe przedszkole	Ciuchcia
+pol_regional_language_spoken	Medium	Which regional language, spoken around Gdansk, has official status in Poland?	Kashubian	Silesian	Masurian	Goral
+pol_floats_gdansk_liqueur	Medium	What floats in the Gdansk liqueur Goldwasser?	Flakes of gold	A blade of grass	Chips of amber	Juniper berries
 pol_his2_bitwa_grunwald_kto	Hard	Who commanded the Polish-Lithuanian forces at Grunwald?	Wladyslaw Jagiello	Casimir the Great	Vytautas alone	Boleslaw the Wrymouth
 pol_his2_konstytucja_3maja_rok	Hard	What was the Constitution of May 3 in Europe?	The first in Europe	The third in Europe	The first in the world	The last of the 18th century
 pol_his2_bitwa_warszawska	Hard	In which year was the Battle of Warsaw, called the Miracle at the Vistula?	1920	1919	1921	1918
@@ -393,6 +416,16 @@ pol_polish_courier_brought	Hard	Which Polish courier brought the Allies some of 
 pol_became_poland_female	Hard	Who became Poland's first female prime minister, in 1992?	Hanna Suchocka	Ewa Kopacz	Beata Szydlo	Henryka Bochniak
 pol_actor_played_lead	Hard	Which actor played the lead spy in 'Stawka wieksza niz zycie'?	Stanislaw Mikulski	Daniel Olbrychski	Janusz Gajos	Wojciech Pszoniak
 pol_wrote_medaliony_short	Hard	Who wrote 'Medaliony', short stories about the German occupation?	Zofia Nalkowska	Eliza Orzeszkowa	Maria Dabrowska	Zofia Kossak
+pol_scored_poland_goal	Hard	Who scored Poland's goal in the famous 1-1 draw at Wembley in 1973?	Jan Domarski	Grzegorz Lato	Kazimierz Deyna	Robert Gadocha
+pol_legia_midfielder_captained	Hard	Which Legia midfielder captained Poland at the 1974 World Cup?	Kazimierz Deyna	Wlodzimierz Lubanski	Jerzy Gorgon	Andrzej Szarmach
+pol_king_famed_small	Hard	Which king, famed for his small height, reunited Poland and was crowned in Krakow in 1320?	Wladyslaw the Elbow-high	Boleslaw the Wrymouth	Casimir the Restorer	Mieszko the Old
+pol_mayor_warsaw_led	Hard	Which mayor of Warsaw led the city's resistance in September 1939 with his radio speeches?	Stefan Starzynski	Gabriel Narutowicz	Juliusz Rommel	Wladyslaw Sikorski
+pol_city_young_worker	Hard	In which city was the young worker 'Janek Wisniewski' of the famous ballad shot in December 1970?	Gdynia	Gdansk	Szczecin	Elblag
+pol_composer_wrote_music	Hard	Which composer wrote the music for Kieslowski's 'Three Colours' trilogy?	Zbigniew Preisner	Wojciech Kilar	Krzysztof Komeda	Henryk Gorecki
+pol_directed_cult_1970	Hard	Who directed the cult 1970 comedy 'Rejs'?	Marek Piwowski	Stanislaw Bareja	Juliusz Machulski	Sylwester Checinski
+pol_hosted_quiz_show	Hard	Who has hosted the TV quiz show 'Jeden z dziesieciu' for decades?	Tadeusz Sznuk	Krzysztof Ibisz	Zygmunt Chajzer	Hubert Urbanski
+pol_king_received_prussian	Hard	Which king received the 'Prussian Homage' of 1525, later painted by Matejko?	Sigismund I the Old	Sigismund II Augustus	Stephen Bathory	Casimir IV Jagiellon
+pol_lwow_born_mathematician	Hard	Which Lwow-born mathematician helped design the American hydrogen bomb?	Stanislaw Ulam	Stefan Banach	Hugo Steinhaus	Waclaw Sierpinski
 pol_his3_polski_rzad_na_uchodzstwie	Expert	Where did the Polish government-in-exile operate during World War II?	London (earlier in France)	Moscow, alongside the Red Army	Washington, with the Allies	Rome, after the Italian campaign
 pol_his3_dywizjon_303	Expert	What was 303 Squadron known for in the Battle of Britain?	It was one of the RAF's most effective fighter squadrons	It defended Warsaw through September 1939	It fought its way up the hill at Monte Cassino	It was a naval unit escorting convoys
 pol_lit2_herbert_bohater	Expert	What is the character of Zbigniew Herbert's poem cycle called?	Mr. Cogito	Mr. Tadeusz	Mr. Wolodyjowski	Mr. Kleks
@@ -439,3 +472,9 @@ poly_dar_pomorza	Expert	Which famous sailing ship, 'the white frigate', is now a
 pol_1939_battle_often	Expert	Which 1939 battle is often called 'the Polish Thermopylae'?	Wizna	Mokra	Bzura	Kock
 pol_wrote_inny_swiat	Expert	Who wrote 'Inny swiat' (A World Apart), about a Soviet labour camp?	Gustaw Herling-Grudzinski	Aleksander Wat	Stanislaw Ignacy Witkiewicz	Jozef Czapski
 pol_translated_winnie_pooh	Expert	Who translated 'Winnie the Pooh' into Polish as 'Kubus Puchatek'?	Irena Tuwim	Julian Tuwim	Jan Brzechwa	Maria Konopnicka
+pol_home_army_1944	Expert	What was the Home Army's 1944 plan of uprisings against the retreating Germans called?	Operation Tempest	Operation Wachlarz	Operation Bagration	Operation Market Garden
+pol_polish_animator_won	Expert	Which Polish animator won an Oscar in 1983 for the short film 'Tango'?	Zbigniew Rybczynski	Tomasz Baginski	Jan Lenica	Walerian Borowczyk
+pol_hetman_routed_swedish	Expert	Which hetman routed a Swedish army three times bigger at Kircholm in 1605?	Jan Karol Chodkiewicz	Stanislaw Zolkiewski	Stefan Czarniecki	Jan Zamoyski
+pol_hetman_crushed_russian	Expert	Which hetman crushed a Russian-Swedish army at Klushino in 1610, opening the road to Moscow?	Stanislaw Zolkiewski	Jan Karol Chodkiewicz	Stanislaw Koniecpolski	Jan Zamoyski
+pol_polish_officer_invented	Expert	Which Polish officer invented the mine detector the British used at El Alamein?	Jozef Kosacki	Jan Szczepanik	Marian Rejewski	Jacek Karpinski
+pol_stanislaw_lem_book	Expert	In which Stanislaw Lem book do the constructor robots Trurl and Klapaucius appear?	The Cyberiad	Solaris	The Star Diaries	His Master's Voice

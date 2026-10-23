@@ -205,7 +205,12 @@ object GeographyQuestions {
         q("geo_spanish_island_world", "Which Spanish island is world-famous for its nightclubs?", "Ibiza", listOf("Mallorca", "Tenerife", "Menorca"), E),
         q("geo_chinese_dam_world", "Which Chinese dam is the world's biggest power station?", "Three Gorges Dam", listOf("Hoover Dam", "Itaipu Dam", "Aswan High Dam"), E),
         q("geo_sea_nile_flow", "Into which sea does the Nile flow?", "The Mediterranean", listOf("The Red Sea", "The Arabian Sea", "The Indian Ocean"), E),
-        q("geo_french_city_gave", "Which French city gave its name to a famous mustard?", "Dijon", listOf("Nice", "Lille", "Toulouse"), E)
+        q("geo_french_city_gave", "Which French city gave its name to a famous mustard?", "Dijon", listOf("Nice", "Lille", "Toulouse"), E),
+        q("geo_ocean_lies_between_2", "Which ocean lies between Europe and North America?", "The Atlantic", listOf("The Pacific", "The Indian Ocean", "The Arctic Ocean"), E),
+        q("geo_country_five_cliffside", "In which country are the five cliffside villages of the Cinque Terre?", "Italy", listOf("France", "Croatia", "Portugal"), E),
+        q("geo_largest_country_south", "Which is the largest country in South America by area?", "Brazil", listOf("Argentina", "Peru", "Colombia"), E),
+        q("geo_country_city_salzburg", "In which country is the city of Salzburg?", "Austria", listOf("Germany", "Switzerland", "Czechia"), E),
+        q("geo_country_island_rhodes", "To which country does the island of Rhodes belong?", "Greece", listOf("Turkey", "Cyprus", "Italy"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -527,7 +532,22 @@ object GeographyQuestions {
         q("geo_egyptian_city_lies", "Which Egyptian city lies beside the Valley of the Kings?", "Luxor", listOf("Cairo", "Alexandria", "Aswan"), M),
         q("geo_indian_city_india", "Which Indian city is known as India's Silicon Valley?", "Bengaluru", listOf("Hyderabad", "Pune", "Chennai"), M),
         q("geo_near_chinese_city", "Near which Chinese city was the Terracotta Army discovered?", "Xi'an", listOf("Beijing", "Nanjing", "Luoyang"), M),
-        q("geo_argentine_city_calls", "Which Argentine city calls itself 'the end of the world'?", "Ushuaia", listOf("Punta Arenas", "Rio Gallegos", "Mar del Plata"), M)
+        q("geo_argentine_city_calls", "Which Argentine city calls itself 'the end of the world'?", "Ushuaia", listOf("Punta Arenas", "Rio Gallegos", "Mar del Plata"), M),
+        q("geo_river_flows_past", "Which river flows past Montreal and Quebec City towards the Atlantic?", "The St Lawrence", listOf("The Hudson", "The Niagara", "The Yukon"), M),
+        q("geo_highest_mountain_greece", "Which is the highest mountain in Greece?", "Mount Olympus", listOf("Mount Athos", "Mount Parnassus", "Mount Ida"), M),
+        q("geo_country_hallstatt_lakeside", "In which country is Hallstatt, the lakeside village so admired that China built a copy of it?", "Austria", listOf("Switzerland", "Germany", "Slovenia"), M),
+        q("geo_country_meteora_monasteries", "In which country are the Meteora monasteries, perched on towering rock pillars?", "Greece", listOf("Bulgaria", "Turkey", "Armenia"), M),
+        q("geo_country_white_travertine", "In which country are the white travertine terraces of Pamukkale?", "Turkey", listOf("Greece", "Iran", "Morocco"), M),
+        q("geo_japanese_city_golden", "In which Japanese city is the Golden Pavilion, Kinkaku-ji?", "Kyoto", listOf("Tokyo", "Nara", "Osaka"), M),
+        q("geo_along_country_coast", "Along which country's coast stand the Twelve Apostles limestone stacks?", "Australia", listOf("New Zealand", "Ireland", "Portugal"), M),
+        q("geo_country_fjord_milford", "In which country is the fjord Milford Sound?", "New Zealand", listOf("Norway", "Canada", "Chile"), M),
+        q("geo_country_banff_national", "In which country is Banff National Park, with its turquoise Lake Louise?", "Canada", listOf("The USA", "Switzerland", "New Zealand"), M),
+        q("geo_state_everglades_wetlands", "In which US state are the Everglades wetlands?", "Florida", listOf("Louisiana", "Georgia", "Texas"), M),
+        q("geo_state_longest_coastline", "Which US state has the longest coastline?", "Alaska", listOf("Florida", "California", "Hawaii"), M),
+        q("geo_largest_state_australia", "Which is the largest state of Australia?", "Western Australia", listOf("Queensland", "New South Wales", "South Australia"), M),
+        q("geo_country_arctic_archipelago", "To which country does the Arctic archipelago of Svalbard belong?", "Norway", listOf("Denmark", "Russia", "Iceland"), M),
+        q("geo_afrikaans_spoken_south", "Afrikaans, spoken in South Africa, grew out of which European language?", "Dutch", listOf("German", "English", "Portuguese"), M),
+        q("geo_currency_used_south", "Which currency is used in South Korea?", "The won", listOf("The yen", "The yuan", "The ringgit"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -652,7 +672,23 @@ object GeographyQuestions {
         q("geo_word_shampoo_comes", "The word 'shampoo' comes from which language?", "Hindi", listOf("Arabic", "Persian", "Malay"), H),
         q("geo_moroccan_town_streets", "Which Moroccan town is famous for its streets painted in shades of blue?", "Chefchaouen", listOf("Marrakesh", "Fez", "Tangier"), H),
         q("geo_cities_lies_furthest", "Which of these US cities lies furthest west?", "Reno", listOf("Los Angeles", "San Diego", "Las Vegas"), H),
-        q("geo_country_caesar_salad", "In which country was the Caesar salad invented?", "Mexico", listOf("Italy", "United States", "Spain"), H)
+        q("geo_country_caesar_salad", "In which country was the Caesar salad invented?", "Mexico", listOf("Italy", "United States", "Spain"), H),
+        q("geo_strait_crossed_bridge", "Which strait, crossed by a famous bridge-and-tunnel link, separates Denmark from Sweden?", "The Oresund", listOf("The Skagerrak", "The Bosphorus", "The Dardanelles"), H),
+        q("geo_river_flows_through_15", "Which river flows through Bangkok?", "The Chao Phraya", listOf("The Mekong", "The Irrawaddy", "The Red River"), H),
+        q("geo_river_flows_through_16", "Which river flows through Washington, D.C.?", "The Potomac", listOf("The Hudson", "The Delaware", "The Susquehanna"), H),
+        q("geo_highest_mountain_canada", "Which is the highest mountain in Canada?", "Mount Logan", listOf("Mount Robson", "Mount Whitney", "Denali"), H),
+        q("geo_country_often_nicknamed", "Which country is often nicknamed 'the Lucky Country'?", "Australia", listOf("Ireland", "Canada", "Switzerland"), H),
+        q("geo_croissant_ancestor_kipferl", "The croissant's ancestor, the 'kipferl', reached France from which country?", "Austria", listOf("Belgium", "Switzerland", "Italy"), H),
+        q("geo_official_language_suriname", "What is the official language of Suriname?", "Dutch", listOf("Portuguese", "Spanish", "English"), H),
+        q("geo_country_rock_hewn", "In which country are the rock-hewn churches of Lalibela?", "Ethiopia", listOf("Egypt", "Sudan", "Eritrea"), H),
+        q("geo_country_sigiriya_ancient", "In which country is Sigiriya, an ancient fortress on top of a giant rock?", "Sri Lanka", listOf("India", "Thailand", "Myanmar"), H),
+        q("geo_state_mount_helens", "In which US state did Mount St Helens erupt in 1980?", "Washington", listOf("Oregon", "California", "Alaska"), H),
+        q("geo_country_maya_ruins", "In which country are the Maya ruins of Tikal?", "Guatemala", listOf("Mexico", "Honduras", "Belize"), H),
+        q("geo_continent_without_major", "Which is the only continent without a major desert?", "Europe", listOf("Antarctica", "Australia", "South America"), H),
+        q("geo_largest_lake_australia", "Which is the largest lake in Australia, usually a dry salt flat?", "Lake Eyre", listOf("Lake Torrens", "Lake Argyle", "Lake Gairdner"), H),
+        q("geo_longest_river_canada", "Which is the longest river in Canada?", "The Mackenzie", listOf("The St Lawrence", "The Yukon", "The Fraser"), H),
+        q("geo_state_borders_just", "Which is the only US state that borders just one other state?", "Maine", listOf("Florida", "Washington", "Rhode Island"), H),
+        q("geo_country_swedish_speaking", "To which country do the Swedish-speaking Aland Islands belong?", "Finland", listOf("Sweden", "Denmark", "Norway"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -699,6 +735,15 @@ object GeographyQuestions {
         q("geox_nauru", "Which Pacific island nation is the smallest republic in the world?", "Nauru", listOf("Tuvalu", "Palau", "Kiribati"), X),
         q("geox_tuvalu_tv", "Which tiny Pacific nation earns money from its '.tv' internet domain?", "Tuvalu", listOf("Tonga", "Tokelau", "Taiwan"), X),
         q("geox_colca", "Which canyon in Peru is about twice as deep as the Grand Canyon?", "The Colca Canyon", listOf("The Copper Canyon", "The Fish River Canyon", "Tiger Leaping Gorge"), X),
-        q("geoy_rosja_sasiedzi", "Russia shares land borders with how many countries?", "14", listOf("8", "20", "5"), X)
+        q("geoy_rosja_sasiedzi", "Russia shares land borders with how many countries?", "14", listOf("8", "20", "5"), X),
+        q("geo_river_joins_danube", "Which river joins the Danube at Belgrade?", "The Sava", listOf("The Drava", "The Tisza", "The Morava"), X),
+        q("geo_river_flows_through_17", "Which river flows through Madrid?", "The Manzanares", listOf("The Tagus", "The Ebro", "The Guadalquivir"), X),
+        q("geo_volcano_highest_mountain", "Which volcano is the highest mountain in Mexico?", "Pico de Orizaba", listOf("Popocatepetl", "Iztaccihuatl", "Nevado de Toluca"), X),
+        q("geo_peak_new_guinea", "Which peak on New Guinea is the highest mountain in Oceania?", "Puncak Jaya", listOf("Mount Wilhelm", "Mount Cook", "Mount Kosciuszko"), X),
+        q("geo_country_catalan_official", "In which country is Catalan the only official language?", "Andorra", listOf("Spain", "Monaco", "San Marino"), X),
+        q("geo_country_great_mosque", "In which country is the Great Mosque of Djenne, the world's largest mud-brick building?", "Mali", listOf("Niger", "Morocco", "Senegal"), X),
+        q("geo_island_mount_kinabalu", "On which island is Mount Kinabalu?", "Borneo", listOf("Sumatra", "Java", "Sulawesi"), X),
+        q("geo_gulf_separates_sweden", "Which gulf separates Sweden from Finland?", "The Gulf of Bothnia", listOf("The Gulf of Finland", "The Gulf of Riga", "The Skagerrak"), X),
+        q("geo_largest_canadian_province", "Which is the largest Canadian province by area?", "Quebec", listOf("Ontario", "British Columbia", "Alberta"), X)
     )
 }

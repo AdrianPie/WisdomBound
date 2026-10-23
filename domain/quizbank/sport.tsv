@@ -121,6 +121,11 @@ spo_scottish_manager_led	Easy	Which Scottish manager led Manchester United for 2
 spo_french_manager_led	Easy	Which French manager led Arsenal for 22 years?	Arsene Wenger	Gerard Houllier	Didier Deschamps	Claude Puel
 spo_coach_barcelona_team	Easy	Which coach's Barcelona team of 2008-2012 made 'tiki-taka' famous?	Pep Guardiola	Luis Enrique	Frank Rijkaard	Johan Cruyff
 spo_german_coach_led	Easy	Which German coach led Liverpool to the 2019 Champions League title?	Jurgen Klopp	Joachim Low	Thomas Tuchel	Hansi Flick
+spo_football_attacker_beyond	Easy	In football, what is it called when an attacker is beyond the last defender as the ball is played to them?	Offside	A foul	A handball	A dive
+spo_basketball_player_takes	Easy	In basketball, what is it called when a player takes too many steps without dribbling?	Travelling	Double dribble	Goaltending	Charging
+spo_sport_competitors_swing	Easy	In which sport do competitors swing their legs over a 'pommel horse'?	Gymnastics	Show jumping	Rodeo	Polo
+spo_colour_bullseye_centre	Easy	What colour is the bullseye at the centre of an archery target?	Yellow (gold)	Red	Black	Blue
+spo_baseball_strikes_take	Easy	In baseball, how many strikes does it take for a batter to be out?	Three	Two	Four	Five
 spo_mundial_2018	Medium	Who won the soccer World Cup in 2018?	France	Croatia	Brazil	Germany
 spo_lewandowski	Medium	At which club did Robert Lewandowski become the Bundesliga's top scorer?	Bayern Munich	Real Madrid	Manchester United	Juventus
 spo_hokej	Medium	How long is one period in an ice hockey game?	20 minutes	15 minutes	25 minutes	30 minutes
@@ -322,6 +327,16 @@ spo_american_won_three	Medium	Which American won three Olympic golds in the snow
 spo_kabaddi_contact_sport	Medium	Kabaddi, a contact sport of tagging while holding your breath, is most popular in which country?	India	Brazil	Japan	Egypt
 spo_sport_invented_native	Medium	Which sport was invented by Native Americans and named by French settlers?	Lacrosse	Baseball	Ice hockey	Basketball
 spo_coach_led_france	Medium	Which coach led France to victory at the 2018 World Cup?	Didier Deschamps	Zinedine Zidane	Laurent Blanc	Arsene Wenger
+spo_points_field_goal	Medium	How many points is a field goal worth in American football?	Three	Two	One	Six
+spo_line_darts_players	Medium	What is the line darts players must stand behind called?	The oche	The baseline	The crease	The mark
+spo_baseball_pitcher_stand	Medium	In baseball, where does the pitcher stand to throw?	On the mound	In the dugout	On home plate	At first base
+spo_tennis_let	Medium	In tennis, what is a 'let'?	A serve that clips the net and is replayed	A serve the receiver cannot touch	A shot that lands on the line	A ball hit before it bounces
+spo_college_sport_knockout	Medium	Which US college sport's knockout tournament is nicknamed 'March Madness'?	Basketball	American football	Baseball	Ice hockey
+spo_sport_positions_goal	Medium	Which sport has positions called 'goal attack', 'wing defence' and 'centre'?	Netball	Handball	Water polo	Lacrosse
+spo_cricket_mean_out	Medium	In cricket, what does it mean to be out for a 'duck'?	Out without scoring a run	Out by ducking under the ball	Out caught by the bowler	Out by hitting your own wicket
+spo_country_national_football	Medium	Which country's national football team is nicknamed 'the Azzurri'?	Italy	France	Argentina	Greece
+spo_fans_nfl_team	Medium	Fans of which NFL team wear foam 'cheesehead' hats?	The Green Bay Packers	The Chicago Bears	The Minnesota Vikings	The Buffalo Bills
+spo_winners_ancient_olympic	Medium	What did winners at the ancient Olympic Games receive?	An olive wreath	A gold medal	A bronze shield	A silver cup
 spo_bolt	Hard	What is Usain Bolt's world record in the 100 m?	9.58 s	9.69 s	9.72 s	9.49 s
 spo_olimpiada_1896	Hard	Where were the first modern Olympic Games held?	Athens	Paris	Rome	London
 spo_wimbledon	Hard	What surface is Wimbledon played on?	Grass	Sand	Concrete	Clay and hard court, alternating
@@ -414,6 +429,18 @@ spo_boxer_retired_unbeaten	Hard	Which boxer retired unbeaten with a record of 50
 spo_athletics_distance_nicknamed	Hard	Which athletics distance is nicknamed 'the metric mile'?	1500 metres	1000 metres	1609 metres	2000 metres
 spo_golfer_nicknamed_golden	Hard	Which golfer was nicknamed 'the Golden Bear'?	Jack Nicklaus	Arnold Palmer	Greg Norman	Gary Player
 spo_sport_combines_cross	Hard	Which sport combines cross-country skiing with ski jumping?	Nordic combined	Biathlon	Telemark	Freestyle skiing
+spo_sport_might_catch	Hard	In which sport might you 'catch a crab'?	Rowing	Sailing	Surfing	Water polo
+spo_golf_tournament_winner	Hard	Which golf tournament's winner lifts the Claret Jug?	The Open Championship	The Masters	The US Open	The PGA Championship
+spo_sport_champions_lift	Hard	In which sport do champions lift the Larry O'Brien Trophy?	Basketball	Ice hockey	Baseball	American football
+spo_cricket_maiden_over	Hard	In cricket, what is a 'maiden over'?	An over with no runs scored	A bowler's very first over	An over of seven balls	An over with a wicket every ball
+spo_american_football_hail	Hard	In American football, what is a 'Hail Mary'?	A long, desperate pass	A kick that hits the post	A tackle of the quarterback	A trick play with a fake punt
+spo_tennis_slang_bagel	Hard	In tennis slang, what is a 'bagel'?	Winning a set 6-0	Winning a set 7-6	A double fault on match point	A serve hit underarm
+spo_country_won_olympic	Hard	Which country has won the most Olympic gold medals in men's field hockey?	India	The Netherlands	Germany	Australia
+spo_sport_william_morgan	Hard	Which sport did William G. Morgan invent in 1895 as a gentler game than basketball?	Volleyball	Handball	Netball	Badminton
+spo_tour_france_lanterne	Hard	In the Tour de France, who is the 'lanterne rouge'?	The last rider overall	The best young rider	The most aggressive rider	The leader of the sprint points
+spo_country_lost_three	Hard	Which country has lost three World Cup finals without ever winning the trophy?	The Netherlands	Hungary	Croatia	Sweden
+spo_england_scotland_play	Hard	England and Scotland play for the Calcutta Cup in which sport?	Rugby union	Cricket	Football	Golf
+spo_far_away_archers	Hard	From how far away do archers shoot in the Olympic recurve event?	70 metres	30 metres	50 metres	90 metres
 spo_dekatlon	Expert	Which event closes the men's Olympic decathlon on the second day?	The 1500 metres	The javelin throw	The pole vault	The 110 m hurdles
 spo_nba_wilt	Expert	Who scored 100 points in a single NBA game?	Wilt Chamberlain	Michael Jordan	Kobe Bryant	LeBron James
 spo2_fosbury	Expert	Who revolutionized the high jump with the backward flop technique?	Dick Fosbury	Jesse Owens	Carl Lewis	Javier Sotomayor
@@ -469,3 +496,12 @@ spoy_tahiti	Expert	Where were the surfing events of the 2024 Summer Olympics hel
 spo_country_won_rugby	Expert	Which country won the first Rugby World Cup, in 1987?	New Zealand	Australia	South Africa	England
 spo_boxer_nicknamed_brown	Expert	Which boxer was nicknamed 'the Brown Bomber'?	Joe Louis	Joe Frazier	Sugar Ray Robinson	Rocky Marciano
 spo_won_very_ballon	Expert	Who won the very first Ballon d'Or, in 1956?	Stanley Matthews	Alfredo Di Stefano	Ferenc Puskas	Raymond Kopa
+spo_golf_condor	Expert	In golf, what is a 'condor'?	Four under par on one hole	Three under par on one hole	Two under par on one hole	Five under par on one hole
+spo_heavy_shot_men	Expert	How heavy is the shot in the men's Olympic shot put?	7.26 kg	4 kg	5 kg	10 kg
+spo_australian_player_win	Expert	Which Australian is the only player to win all four Grand Slam titles in one year twice?	Rod Laver	Roy Emerson	Ken Rosewall	Lew Hoad
+spo_nba_player_average	Expert	Who was the first NBA player to average a triple-double over a whole season, in 1961-62?	Oscar Robertson	Wilt Chamberlain	Bill Russell	Jerry West
+spo_team_won_eight	Expert	Which team won eight NBA titles in a row, from 1959 to 1966?	The Boston Celtics	The Minneapolis Lakers	The Chicago Bulls	The Philadelphia Warriors
+spo_long_olympic_open	Expert	How long is the Olympic open-water 'marathon swimming' race?	10 km	5 km	21 km	42 km
+spo_olympics_women_boxing	Expert	At which Olympics did women's boxing make its debut?	London 2012	Sydney 2000	Athens 2004	Beijing 2008
+spo_pakistan_jahangir_khan	Expert	Pakistan's Jahangir Khan went over 500 matches unbeaten in the 1980s in which sport?	Squash	Tennis	Badminton	Table tennis
+spo_cheeky_chipped_panenka	Expert	The cheeky chipped 'Panenka' penalty is named after a player from which country?	Czechoslovakia	Yugoslavia	Hungary	Poland

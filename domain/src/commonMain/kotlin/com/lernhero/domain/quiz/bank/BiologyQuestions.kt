@@ -123,7 +123,12 @@ object BiologyQuestions {
         q("bio_prized_fungi_pigs", "Which prized fungi do pigs and dogs sniff out underground?", "Truffles", listOf("Morels", "Chanterelles", "Porcini"), E),
         q("bio_flower_young_heads", "Which flower's young heads turn to follow the Sun across the sky?", "Sunflower", listOf("Daisy", "Tulip", "Marigold"), E),
         q("bio_body_blood_cells", "Where in the body are most blood cells made?", "In the bone marrow", listOf("In the liver", "In the heart", "In the spleen"), E),
-        q("bio_common_weed_spreads", "Which common weed spreads its seeds on tiny white 'parachutes'?", "Dandelion", listOf("Nettle", "Clover", "Ivy"), E)
+        q("bio_common_weed_spreads", "Which common weed spreads its seeds on tiny white 'parachutes'?", "Dandelion", listOf("Nettle", "Clover", "Ivy"), E),
+        q("bio_plant_gel_popular", "Which plant's gel is a popular home remedy for sunburn?", "Aloe vera", listOf("Lavender", "Eucalyptus", "Chamomile"), E),
+        q("bio_doctor_specialises_children", "What is a doctor who specialises in children called?", "A paediatrician", listOf("A podiatrist", "An orthopaedist", "A gynaecologist"), E),
+        q("bio_eating_plenty_vegetable", "Eating plenty of which vegetable can harmlessly turn your urine pink?", "Beetroot", listOf("Carrots", "Spinach", "Radishes"), E),
+        q("bio_organ_cardiologist_treat", "Which organ does a cardiologist treat?", "The heart", listOf("The skin", "The kidneys", "The bones"), E),
+        q("bio_americans_call_fresh", "What do Americans call the fresh leaves of the coriander plant?", "Cilantro", listOf("Parsley", "Chervil", "Dill"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -262,7 +267,19 @@ object BiologyQuestions {
         q("bio_doctor_discovered_insulin", "Which doctor discovered insulin with Charles Best in 1921?", "Frederick Banting", listOf("Alexander Fleming", "Joseph Lister", "William Osler"), M),
         q("bio_yellowish_liquid_makes", "What is the yellowish liquid that makes up about half of our blood called?", "Plasma", listOf("Lymph", "Serum", "Bile"), M),
         q("bio_roughly_vertebrae_make", "Roughly how many vertebrae make up the human spine?", "33", listOf("12", "52", "206"), M),
-        q("bio_ribs_typical_human", "How many ribs does a typical human have?", "24", listOf("12", "20", "32"), M)
+        q("bio_ribs_typical_human", "How many ribs does a typical human have?", "24", listOf("12", "20", "32"), M),
+        q("bio_soft_spot_newborn", "What is the soft spot on a newborn baby's head called?", "The fontanelle", listOf("The temple", "The crown", "The occiput"), M),
+        q("bio_left_lung_little", "Why is the left lung a little smaller than the right?", "To make room for the heart", listOf("It has fewer airways from birth", "The liver presses on it", "It does less of the work"), M),
+        q("bio_flap_tissue_stops", "Which flap of tissue stops food going down your windpipe when you swallow?", "The epiglottis", listOf("The uvula", "The tonsil", "The larynx"), M),
+        q("bio_white_eye", "What is the white of the eye called?", "The sclera", listOf("The cornea", "The iris", "The lens"), M),
+        q("bio_medical_tailbone", "What is the medical name for the tailbone?", "The coccyx", listOf("The sacrum", "The pelvis", "The patella"), M),
+        q("bio_agoraphobia_fear", "Agoraphobia is a fear of what?", "Open or crowded places", listOf("Spiders", "Heights", "Small enclosed spaces"), M),
+        q("bio_adam_apple_man", "What is the 'Adam's apple' in a man's throat?", "Cartilage around the voice box", listOf("A swollen gland", "A bone at the top of the windpipe", "A muscle used for swallowing"), M),
+        q("bio_small_fleshy_lobe", "What is the small fleshy lobe hanging at the back of your throat called?", "The uvula", listOf("The epiglottis", "The tonsil", "The adenoid"), M),
+        q("bio_opium_morphine_come", "Opium and morphine come from which flower?", "The poppy", listOf("The lotus", "The foxglove", "The tulip"), M),
+        q("bio_listerine_mouthwash_pioneer", "Listerine mouthwash is named after which pioneer of antiseptic surgery?", "Joseph Lister", listOf("Louis Pasteur", "Robert Koch", "Edward Jenner"), M),
+        q("bio_seeds_everyday_fruit", "The seeds of which everyday fruit contain a compound that can release cyanide?", "Apples", listOf("Bananas", "Grapes", "Oranges"), M),
+        q("bio_black_peppercorns_dried", "Black peppercorns are the dried what of a climbing vine?", "Unripe fruits", listOf("Flower buds", "Root nodules", "Leaf tips"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -354,7 +371,20 @@ object BiologyQuestions {
         q("bio_daisy_comes_old", "The name of the daisy comes from an old phrase meaning what?", "Day's eye", listOf("Sun's child", "Field star", "Little pearl"), H),
         q("bio_fruit_once_love", "Which fruit was once called the 'love apple'?", "The tomato", listOf("The apple", "The peach", "The fig"), H),
         q("bio_body_not_repair", "Which of these can the body NOT repair or regrow on its own?", "Tooth enamel", listOf("Skin", "Bone", "The liver"), H),
-        q("bio_common_pertussis", "What is the common name for pertussis?", "Whooping cough", listOf("Chickenpox", "Measles", "Mumps"), H)
+        q("bio_common_pertussis", "What is the common name for pertussis?", "Whooping cough", listOf("Chickenpox", "Measles", "Mumps"), H),
+        q("bio_lack_vitamin_causes", "Lack of which vitamin causes beriberi, once common where people lived on polished rice?", "Vitamin B1", listOf("Vitamin C", "Vitamin D", "Vitamin A"), H),
+        q("bio_quinine_comes_bark", "Quinine comes from the bark of which South American tree?", "The cinchona", listOf("The rubber tree", "The mahogany", "The balsa"), H),
+        q("bio_garden_flower_gives", "Which garden flower gives us digitalis, a heart medicine?", "The foxglove", listOf("The poppy", "The bluebell", "The daffodil"), H),
+        q("bio_roughly_long_single", "Roughly how long does a single taste bud cell live before it is replaced?", "About two weeks", listOf("About a day", "About a year", "A whole lifetime"), H),
+        q("bio_philtrum", "What is the 'philtrum'?", "The groove between your nose and upper lip", listOf("The dip at the base of your throat", "The crease inside your elbow", "The fold at the corner of your eye"), H),
+        q("bio_pale_half_moon", "The pale half-moon at the base of a fingernail is called what?", "The lunula", listOf("The cuticle", "The nail bed", "The matrix"), H),
+        q("bio_rubber_tree_now", "The rubber tree, now grown mostly in Southeast Asia, is native to which region?", "The Amazon", listOf("Central Africa", "India", "Madagascar"), H),
+        q("bio_spice_comes_wrapped", "Which spice comes wrapped in a lacy red covering that gives us another spice, mace?", "Nutmeg", listOf("Cardamom", "Allspice", "Star anise"), H),
+        q("bio_cashew_nuts_never", "Why are cashew nuts never sold in their shells?", "The shell holds a skin-burning oil", listOf("The shell is too hard to crack", "The shell rots within days", "The shell is fed to cattle"), H),
+        q("bio_abundant_protein_human", "Which is the most abundant protein in the human body?", "Collagen", listOf("Keratin", "Haemoglobin", "Insulin"), H),
+        q("bio_hungarian_doctor_mocked", "Which Hungarian doctor was mocked in the 1840s for urging doctors to wash their hands?", "Ignaz Semmelweis", listOf("Joseph Lister", "Robert Koch", "Rudolf Virchow"), H),
+        q("bio_gas_given_off", "Which gas given off by ripening bananas makes other fruit nearby ripen faster?", "Ethylene", listOf("Carbon dioxide", "Methane", "Ammonia"), H),
+        q("bio_network_500_million", "What is the network of about 500 million neurons lining the gut nicknamed?", "The second brain", listOf("The gut clock", "The inner spine", "The belly web"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -397,6 +427,11 @@ object BiologyQuestions {
         q("biox_drzewa_siec", "Trees in a forest can share nutrients through underground networks of what?", "Fungi", listOf("Earthworms", "Ant tunnels", "Rainwater channels"), X),
         q("bioy_zielone_pomarancze", "Why are many ripe oranges in the tropics still green?", "Warm nights keep their chlorophyll", listOf("They are a different species", "They are picked too early", "The soil lacks iron"), X),
         q("bioy_zapach_trawy", "What is the smell of freshly cut grass, really?", "A chemical distress signal", listOf("Chlorophyll evaporating", "Soil bacteria waking up", "Pollen bursting open"), X),
-        q("bioy_insulina", "In which country was insulin first used to treat diabetes, in 1922?", "Canada", listOf("Germany", "Britain", "The USA"), X)
+        q("bioy_insulina", "In which country was insulin first used to treat diabetes, in 1922?", "Canada", listOf("Germany", "Britain", "The USA"), X),
+        q("bio_enzyme_used_plants", "Which enzyme, used by plants to capture carbon, is thought to be the most abundant protein on Earth?", "RuBisCO", listOf("Chlorophyll", "Amylase", "Catalase"), X),
+        q("bio_american_geneticist_discovered", "Which American geneticist discovered 'jumping genes' in maize?", "Barbara McClintock", listOf("Rosalind Franklin", "Lynn Margulis", "Nettie Stevens"), X),
+        q("bio_epo_hormone_abused", "EPO, the hormone abused by some doping cyclists, is mainly made by which organ?", "The kidneys", listOf("The liver", "The pancreas", "The adrenal glands"), X),
+        q("bio_chicle_original_base", "Chicle, the original base of chewing gum, is the sap of which tree?", "The sapodilla", listOf("The rubber tree", "The maple", "The acacia"), X),
+        q("bio_scottish_doctor_pioneered", "Which Scottish doctor pioneered chloroform as an anaesthetic in 1847?", "James Young Simpson", listOf("John Snow", "Joseph Lister", "Alexander Fleming"), X)
     )
 }

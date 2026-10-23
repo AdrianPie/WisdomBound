@@ -146,7 +146,12 @@ object SportQuestions {
         q("spo_scottish_manager_led", "Which Scottish manager led Manchester United for 26 years?", "Alex Ferguson", listOf("Matt Busby", "Kenny Dalglish", "David Moyes"), E),
         q("spo_french_manager_led", "Which French manager led Arsenal for 22 years?", "Arsene Wenger", listOf("Gerard Houllier", "Didier Deschamps", "Claude Puel"), E),
         q("spo_coach_barcelona_team", "Which coach's Barcelona team of 2008-2012 made 'tiki-taka' famous?", "Pep Guardiola", listOf("Luis Enrique", "Frank Rijkaard", "Johan Cruyff"), E),
-        q("spo_german_coach_led", "Which German coach led Liverpool to the 2019 Champions League title?", "Jurgen Klopp", listOf("Joachim Low", "Thomas Tuchel", "Hansi Flick"), E)
+        q("spo_german_coach_led", "Which German coach led Liverpool to the 2019 Champions League title?", "Jurgen Klopp", listOf("Joachim Low", "Thomas Tuchel", "Hansi Flick"), E),
+        q("spo_football_attacker_beyond", "In football, what is it called when an attacker is beyond the last defender as the ball is played to them?", "Offside", listOf("A foul", "A handball", "A dive"), E),
+        q("spo_basketball_player_takes", "In basketball, what is it called when a player takes too many steps without dribbling?", "Travelling", listOf("Double dribble", "Goaltending", "Charging"), E),
+        q("spo_sport_competitors_swing", "In which sport do competitors swing their legs over a 'pommel horse'?", "Gymnastics", listOf("Show jumping", "Rodeo", "Polo"), E),
+        q("spo_colour_bullseye_centre", "What colour is the bullseye at the centre of an archery target?", "Yellow (gold)", listOf("Red", "Black", "Blue"), E),
+        q("spo_baseball_strikes_take", "In baseball, how many strikes does it take for a batter to be out?", "Three", listOf("Two", "Four", "Five"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -351,7 +356,17 @@ object SportQuestions {
         q("spo_american_won_three", "Which American won three Olympic golds in the snowboard halfpipe?", "Shaun White", listOf("Tony Hawk", "Chloe Kim", "Mark McMorris"), M),
         q("spo_kabaddi_contact_sport", "Kabaddi, a contact sport of tagging while holding your breath, is most popular in which country?", "India", listOf("Brazil", "Japan", "Egypt"), M),
         q("spo_sport_invented_native", "Which sport was invented by Native Americans and named by French settlers?", "Lacrosse", listOf("Baseball", "Ice hockey", "Basketball"), M),
-        q("spo_coach_led_france", "Which coach led France to victory at the 2018 World Cup?", "Didier Deschamps", listOf("Zinedine Zidane", "Laurent Blanc", "Arsene Wenger"), M)
+        q("spo_coach_led_france", "Which coach led France to victory at the 2018 World Cup?", "Didier Deschamps", listOf("Zinedine Zidane", "Laurent Blanc", "Arsene Wenger"), M),
+        q("spo_points_field_goal", "How many points is a field goal worth in American football?", "Three", listOf("Two", "One", "Six"), M),
+        q("spo_line_darts_players", "What is the line darts players must stand behind called?", "The oche", listOf("The baseline", "The crease", "The mark"), M),
+        q("spo_baseball_pitcher_stand", "In baseball, where does the pitcher stand to throw?", "On the mound", listOf("In the dugout", "On home plate", "At first base"), M),
+        q("spo_tennis_let", "In tennis, what is a 'let'?", "A serve that clips the net and is replayed", listOf("A serve the receiver cannot touch", "A shot that lands on the line", "A ball hit before it bounces"), M),
+        q("spo_college_sport_knockout", "Which US college sport's knockout tournament is nicknamed 'March Madness'?", "Basketball", listOf("American football", "Baseball", "Ice hockey"), M),
+        q("spo_sport_positions_goal", "Which sport has positions called 'goal attack', 'wing defence' and 'centre'?", "Netball", listOf("Handball", "Water polo", "Lacrosse"), M),
+        q("spo_cricket_mean_out", "In cricket, what does it mean to be out for a 'duck'?", "Out without scoring a run", listOf("Out by ducking under the ball", "Out caught by the bowler", "Out by hitting your own wicket"), M),
+        q("spo_country_national_football", "Which country's national football team is nicknamed 'the Azzurri'?", "Italy", listOf("France", "Argentina", "Greece"), M),
+        q("spo_fans_nfl_team", "Fans of which NFL team wear foam 'cheesehead' hats?", "The Green Bay Packers", listOf("The Chicago Bears", "The Minnesota Vikings", "The Buffalo Bills"), M),
+        q("spo_winners_ancient_olympic", "What did winners at the ancient Olympic Games receive?", "An olive wreath", listOf("A gold medal", "A bronze shield", "A silver cup"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -447,7 +462,19 @@ object SportQuestions {
         q("spo_boxer_retired_unbeaten", "Which boxer retired unbeaten with a record of 50 wins?", "Floyd Mayweather", listOf("Muhammad Ali", "Mike Tyson", "Manny Pacquiao"), H),
         q("spo_athletics_distance_nicknamed", "Which athletics distance is nicknamed 'the metric mile'?", "1500 metres", listOf("1000 metres", "1609 metres", "2000 metres"), H),
         q("spo_golfer_nicknamed_golden", "Which golfer was nicknamed 'the Golden Bear'?", "Jack Nicklaus", listOf("Arnold Palmer", "Greg Norman", "Gary Player"), H),
-        q("spo_sport_combines_cross", "Which sport combines cross-country skiing with ski jumping?", "Nordic combined", listOf("Biathlon", "Telemark", "Freestyle skiing"), H)
+        q("spo_sport_combines_cross", "Which sport combines cross-country skiing with ski jumping?", "Nordic combined", listOf("Biathlon", "Telemark", "Freestyle skiing"), H),
+        q("spo_sport_might_catch", "In which sport might you 'catch a crab'?", "Rowing", listOf("Sailing", "Surfing", "Water polo"), H),
+        q("spo_golf_tournament_winner", "Which golf tournament's winner lifts the Claret Jug?", "The Open Championship", listOf("The Masters", "The US Open", "The PGA Championship"), H),
+        q("spo_sport_champions_lift", "In which sport do champions lift the Larry O'Brien Trophy?", "Basketball", listOf("Ice hockey", "Baseball", "American football"), H),
+        q("spo_cricket_maiden_over", "In cricket, what is a 'maiden over'?", "An over with no runs scored", listOf("A bowler's very first over", "An over of seven balls", "An over with a wicket every ball"), H),
+        q("spo_american_football_hail", "In American football, what is a 'Hail Mary'?", "A long, desperate pass", listOf("A kick that hits the post", "A tackle of the quarterback", "A trick play with a fake punt"), H),
+        q("spo_tennis_slang_bagel", "In tennis slang, what is a 'bagel'?", "Winning a set 6-0", listOf("Winning a set 7-6", "A double fault on match point", "A serve hit underarm"), H),
+        q("spo_country_won_olympic", "Which country has won the most Olympic gold medals in men's field hockey?", "India", listOf("The Netherlands", "Germany", "Australia"), H),
+        q("spo_sport_william_morgan", "Which sport did William G. Morgan invent in 1895 as a gentler game than basketball?", "Volleyball", listOf("Handball", "Netball", "Badminton"), H),
+        q("spo_tour_france_lanterne", "In the Tour de France, who is the 'lanterne rouge'?", "The last rider overall", listOf("The best young rider", "The most aggressive rider", "The leader of the sprint points"), H),
+        q("spo_country_lost_three", "Which country has lost three World Cup finals without ever winning the trophy?", "The Netherlands", listOf("Hungary", "Croatia", "Sweden"), H),
+        q("spo_england_scotland_play", "England and Scotland play for the Calcutta Cup in which sport?", "Rugby union", listOf("Cricket", "Football", "Golf"), H),
+        q("spo_far_away_archers", "From how far away do archers shoot in the Olympic recurve event?", "70 metres", listOf("30 metres", "50 metres", "90 metres"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -506,6 +533,15 @@ object SportQuestions {
         q("spoy_tahiti", "Where were the surfing events of the 2024 Summer Olympics held, far from the host city?", "Tahiti", listOf("Biarritz", "Hawaii", "Portugal"), X),
         q("spo_country_won_rugby", "Which country won the first Rugby World Cup, in 1987?", "New Zealand", listOf("Australia", "South Africa", "England"), X),
         q("spo_boxer_nicknamed_brown", "Which boxer was nicknamed 'the Brown Bomber'?", "Joe Louis", listOf("Joe Frazier", "Sugar Ray Robinson", "Rocky Marciano"), X),
-        q("spo_won_very_ballon", "Who won the very first Ballon d'Or, in 1956?", "Stanley Matthews", listOf("Alfredo Di Stefano", "Ferenc Puskas", "Raymond Kopa"), X)
+        q("spo_won_very_ballon", "Who won the very first Ballon d'Or, in 1956?", "Stanley Matthews", listOf("Alfredo Di Stefano", "Ferenc Puskas", "Raymond Kopa"), X),
+        q("spo_golf_condor", "In golf, what is a 'condor'?", "Four under par on one hole", listOf("Three under par on one hole", "Two under par on one hole", "Five under par on one hole"), X),
+        q("spo_heavy_shot_men", "How heavy is the shot in the men's Olympic shot put?", "7.26 kg", listOf("4 kg", "5 kg", "10 kg"), X),
+        q("spo_australian_player_win", "Which Australian is the only player to win all four Grand Slam titles in one year twice?", "Rod Laver", listOf("Roy Emerson", "Ken Rosewall", "Lew Hoad"), X),
+        q("spo_nba_player_average", "Who was the first NBA player to average a triple-double over a whole season, in 1961-62?", "Oscar Robertson", listOf("Wilt Chamberlain", "Bill Russell", "Jerry West"), X),
+        q("spo_team_won_eight", "Which team won eight NBA titles in a row, from 1959 to 1966?", "The Boston Celtics", listOf("The Minneapolis Lakers", "The Chicago Bulls", "The Philadelphia Warriors"), X),
+        q("spo_long_olympic_open", "How long is the Olympic open-water 'marathon swimming' race?", "10 km", listOf("5 km", "21 km", "42 km"), X),
+        q("spo_olympics_women_boxing", "At which Olympics did women's boxing make its debut?", "London 2012", listOf("Sydney 2000", "Athens 2004", "Beijing 2008"), X),
+        q("spo_pakistan_jahangir_khan", "Pakistan's Jahangir Khan went over 500 matches unbeaten in the 1980s in which sport?", "Squash", listOf("Tennis", "Badminton", "Table tennis"), X),
+        q("spo_cheeky_chipped_panenka", "The cheeky chipped 'Panenka' penalty is named after a player from which country?", "Czechoslovakia", listOf("Yugoslavia", "Hungary", "Poland"), X)
     )
 }

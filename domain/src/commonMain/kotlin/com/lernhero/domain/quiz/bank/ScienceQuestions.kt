@@ -118,7 +118,12 @@ object ScienceQuestions {
         q("sci_rock_forms_layers", "Which rock forms from layers of sand pressed together?", "Sandstone", listOf("Granite", "Marble", "Basalt"), E),
         q("sci_country_chandrayaan_mission", "Which country's Chandrayaan-3 mission landed near the Moon's south pole in 2023?", "India", listOf("China", "Japan", "Israel"), E),
         q("sci_invisible_light_remote", "Which invisible light do TV remote controls use?", "Infrared", listOf("Ultraviolet", "X-rays", "Microwaves"), E),
-        q("sci_cave_formations_hang", "Which cave formations hang down from the ceiling?", "Stalactites", listOf("Stalagmites", "Geodes", "Columns"), E)
+        q("sci_cave_formations_hang", "Which cave formations hang down from the ceiling?", "Stalactites", listOf("Stalagmites", "Geodes", "Columns"), E),
+        q("sci_call_two_days", "What do we call the two days a year when day and night are roughly equal everywhere?", "The equinoxes", listOf("The solstices", "The eclipses", "The zeniths"), E),
+        q("sci_get_sunburnt_cloudy", "Why can you get sunburnt on a cloudy day?", "Most UV rays pass through clouds", listOf("Clouds focus the sunlight", "Cold air thins the skin", "Wind dries out the skin"), E),
+        q("sci_must_sun_see", "Where must the Sun be for you to see a rainbow?", "Behind you", listOf("In front of you", "Directly overhead", "Below the horizon"), E),
+        q("sci_colour_daytime_sky", "What colour is the daytime sky on the Moon?", "Black", listOf("Blue", "Orange", "White"), E),
+        q("sci_scientist_studies_dinosaur", "What is a scientist who studies dinosaur fossils called?", "A palaeontologist", listOf("An archaeologist", "A geologist", "An anthropologist"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -270,7 +275,18 @@ object ScienceQuestions {
         q("sci_force_makes_soap", "Which force makes soap bubbles round?", "Surface tension", listOf("Gravity", "Air pressure", "Static electricity"), M),
         q("sci_swedish_astronomer_gave", "Which Swedish astronomer gave his name to the temperature scale used in most of the world?", "Anders Celsius", listOf("Carl Linnaeus", "Anders Angstrom", "Tycho Brahe"), M),
         q("sci_temperature_scale_still", "Whose temperature scale is still used for everyday weather in the USA?", "Daniel Fahrenheit", listOf("Anders Celsius", "Lord Kelvin", "Rene Reaumur"), M),
-        q("sci_state_meteor_crater", "In which US state is the famous Meteor Crater, over a kilometre wide?", "Arizona", listOf("Nevada", "Utah", "New Mexico"), M)
+        q("sci_state_meteor_crater", "In which US state is the famous Meteor Crater, over a kilometre wide?", "Arizona", listOf("Nevada", "Utah", "New Mexico"), M),
+        q("sci_soviet_dog_became", "What was the name of the Soviet dog that became the first animal to orbit the Earth, in 1957?", "Laika", listOf("Belka", "Strelka", "Zvezdochka"), M),
+        q("sci_month_earth_closest", "In which month is the Earth closest to the Sun?", "January", listOf("July", "June", "March"), M),
+        q("sci_two_planets_moons", "Which two planets have no moons at all?", "Mercury and Venus", listOf("Mars and Venus", "Mercury and Mars", "Venus and Neptune"), M),
+        q("sci_astronauts_float_iss", "Why do astronauts float on the ISS, where Earth's gravity is still about 90% as strong?", "They are in constant free fall", listOf("The station shields them from gravity", "Gravity cannot reach that high", "The station spins to cancel it"), M),
+        q("sci_dark_side_moon", "What is the 'dark side of the Moon' really?", "Its far side, which gets sunlight too", listOf("A side that never sees sunlight", "The part hidden in Earth's shadow", "A huge plain of dark lava rock"), M),
+        q("sci_roughly_far_away", "Roughly how far away is the Moon?", "About 384,000 km", listOf("About 38,000 km", "About 3.8 million km", "About 150,000 km"), M),
+        q("sci_hurricanes_get_energy", "Hurricanes get most of their energy from what?", "Warm ocean water", listOf("The jet stream", "The Earth's rotation", "Lightning inside them"), M),
+        q("sci_shape_falling_raindrops", "What shape are falling raindrops, really?", "Round, flattened at the bottom", listOf("Teardrops with a pointed top", "Long, thin needles", "Tiny hollow shells"), M),
+        q("sci_really_hear_hold", "What do you really hear when you hold a seashell to your ear?", "Room noise echoing inside it", listOf("Trapped echoes of the sea", "Air escaping from the shell", "Your own blood flowing"), M),
+        q("sci_causes_mirage_water", "What causes a mirage of 'water' on a hot road?", "Light bending through hot air", listOf("Sunlight reflecting off the tar", "Water vapour rising from the road", "The eye tiring in bright light"), M),
+        q("sci_drops_water_skitter", "Why do drops of water skitter around on a very hot pan instead of boiling away at once?", "A layer of steam lifts them off the metal", listOf("The pan repels water electrically", "Oil on the pan pushes them away", "The hot metal makes them vibrate"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -366,7 +382,24 @@ object ScienceQuestions {
         q("sci_planet_nasa_juno", "Which planet did NASA's Juno probe go to study?", "Jupiter", listOf("Saturn", "Venus", "Mars"), H),
         q("sci_apparent_force_seems", "Which apparent force seems to push you outwards when a car turns sharply?", "Centrifugal force", listOf("Friction", "Magnetism", "Inertial gravity"), H),
         q("sci_discovered_electron_1897", "Who discovered the electron, in 1897?", "J. J. Thomson", listOf("Ernest Rutherford", "Niels Bohr", "Max Planck"), H),
-        q("sci_planet_moons_characters", "Which planet has moons named after characters from Shakespeare?", "Uranus", listOf("Neptune", "Saturn", "Jupiter"), H)
+        q("sci_planet_moons_characters", "Which planet has moons named after characters from Shakespeare?", "Uranus", listOf("Neptune", "Saturn", "Jupiter"), H),
+        q("sci_fermi_paradox_ask", "What does the Fermi paradox ask?", "Why we have found no sign of aliens", listOf("Why time slows near the speed of light", "Why the universe expands ever faster", "Why the Moon always shows one face"), H),
+        q("sci_elmo_fire_seen", "What is St Elmo's fire, seen by sailors on masts during storms?", "A glow of electricity in the air", listOf("Burning oil on the waves", "Glowing plankton in the spray", "Lightning striking the sea"), H),
+        q("sci_effect_makes_spinning", "Which effect makes a spinning ball, like a curling free kick, swerve in the air?", "The Magnus effect", listOf("The Coriolis effect", "The Venturi effect", "The Doppler effect"), H),
+        q("sci_moon_saturn_sprays", "Which moon of Saturn sprays geysers of water ice out into space?", "Enceladus", listOf("Titan", "Mimas", "Io"), H),
+        q("sci_times_more_energy", "How many times more energy does a magnitude 7 earthquake release than a magnitude 6?", "About 32 times", listOf("About 2 times", "About 10 times", "About 100 times"), H),
+        q("sci_gas_makes_volcano", "Which gas makes up most of what a volcano blows out?", "Water vapour", listOf("Carbon dioxide", "Sulfur dioxide", "Hydrogen sulfide"), H),
+        q("sci_light_made_sun", "Light made in the Sun's core takes roughly how long to work its way out to the surface?", "Tens of thousands of years", listOf("About eight minutes", "About one whole day", "About a hundred years"), H),
+        q("sci_relative_distant_stars", "Relative to the distant stars, how long does the Earth take to spin once?", "About 23 hours 56 minutes", listOf("Exactly 24 hours", "About 24 hours 4 minutes", "About 23 hours 30 minutes"), H),
+        q("sci_moons_bigger_planet", "Which of these moons is bigger than the planet Mercury?", "Titan", listOf("Callisto", "Io", "Europa"), H),
+        q("sci_stephen_hawking_born", "Stephen Hawking was born exactly 300 years after the death of which scientist?", "Galileo Galilei", listOf("Isaac Newton", "Johannes Kepler", "Nicolaus Copernicus"), H),
+        q("sci_coined_butterfly_effect", "Who coined the 'butterfly effect' while modelling the weather in the 1960s?", "Edward Lorenz", listOf("Benoit Mandelbrot", "Richard Feynman", "John von Neumann"), H),
+        q("sci_discovered_pulsars_1967", "Who discovered the first pulsars in 1967, as a student, yet was left out of the Nobel Prize for it?", "Jocelyn Bell Burnell", listOf("Vera Rubin", "Henrietta Leavitt", "Cecilia Payne"), H),
+        q("sci_nasa_probe_became", "Which NASA probe became the first to fly through the Sun's outer atmosphere, in 2021?", "Parker Solar Probe", listOf("Solar Orbiter", "SOHO", "Ulysses"), H),
+        q("sci_country_probes_land", "Which country's probes were the first to land on Venus and send back photos of its surface?", "The Soviet Union", listOf("The United States", "Japan", "China"), H),
+        q("sci_all_empty_space", "If all the empty space were squeezed out of every human's atoms, roughly how big would the human race be?", "About a sugar cube", listOf("About a football stadium", "About a city block", "About a large house"), H),
+        q("sci_discovered_planet_uranus", "Who discovered the planet Uranus in 1781?", "William Herschel", listOf("Edmond Halley", "Isaac Newton", "Johannes Kepler"), H),
+        q("sci_danish_astronomer_kept", "Which Danish astronomer kept a pet elk that reportedly died after drinking too much beer?", "Tycho Brahe", listOf("Ole Romer", "Niels Bohr", "Johannes Kepler"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -421,6 +454,14 @@ object ScienceQuestions {
         q("sciy_kosmos_temperatura", "What is the background temperature of deep space?", "About -270 °C", listOf("About -50 °C", "About 0 °C", "About -1,000 °C"), X),
         q("sci_belgian_priest_proposed", "Which Belgian priest first proposed what became the Big Bang theory?", "Georges Lemaitre", listOf("Edwin Hubble", "Fred Hoyle", "Georges Cuvier"), X),
         q("sci_spacecraft_took_pale", "Which spacecraft took the famous 'Pale Blue Dot' photo of Earth in 1990?", "Voyager 1", listOf("Hubble", "Apollo 17", "Pioneer 10"), X),
-        q("sci_french_mathematician_predicted", "Which French mathematician predicted where Neptune would be found, in 1846?", "Urbain Le Verrier", listOf("Pierre-Simon Laplace", "Joseph-Louis Lagrange", "Henri Poincare"), X)
+        q("sci_french_mathematician_predicted", "Which French mathematician predicted where Neptune would be found, in 1846?", "Urbain Le Verrier", listOf("Pierre-Simon Laplace", "Joseph-Louis Lagrange", "Henri Poincare"), X),
+        q("sci_french_comet_hunter", "Which French comet hunter catalogued fuzzy sky objects so he wouldn't mistake them for comets?", "Charles Messier", listOf("Edmond Halley", "William Herschel", "Pierre-Simon Laplace"), X),
+        q("sci_wow_signal_1977", "What was the 'Wow! signal' of 1977?", "A radio burst from space never heard again", listOf("The first message beamed to aliens", "A supernova seen in broad daylight", "A flash from a nuclear test in space"), X),
+        q("sci_roche_limit_describe", "What does the Roche limit describe?", "The distance at which tides rip a moon apart", listOf("The speed a rocket needs to escape a planet", "The heaviest a star can be before collapsing", "The edge of the Sun's magnetic influence"), X),
+        q("sci_asteroid_nasa_dart", "Which asteroid did NASA's DART spacecraft deliberately smash into in 2022, changing its orbit?", "Dimorphos", listOf("Didymos", "Bennu", "Ryugu"), X),
+        q("sci_virga", "What is 'virga'?", "Rain that evaporates before reaching the ground", listOf("A lens-shaped cloud over mountains", "Lightning that leaps up from the clouds", "Hail falling from a clear blue sky"), X),
+        q("sci_mpemba_effect", "What is the Mpemba effect?", "Hot water sometimes freezing faster than cold", listOf("Salt water freezing more slowly than fresh", "Ice cubes sticking to a wet tongue", "Boiling water cooling faster in a metal cup"), X),
+        q("sci_astronomer_study_fast", "Which astronomer's study of how fast galaxies spin gave key evidence for dark matter?", "Vera Rubin", listOf("Jocelyn Bell Burnell", "Henrietta Leavitt", "Cecilia Payne"), X),
+        q("sci_since_1970s_scale", "Since the 1970s, which scale have seismologists used in place of the Richter scale for big quakes?", "The moment magnitude scale", listOf("The Mercalli scale", "The Fujita scale", "The Kelvin scale"), X)
     )
 }

@@ -110,6 +110,13 @@ ani_bird_symbol_long	Easy	Which bird is a symbol of long life in Japan, where pe
 ani_silkworm_turn	Easy	What does a silkworm turn into?	A moth	A butterfly	A beetle	A wasp
 ani_male_cat	Easy	What is a male cat called?	A tom	A buck	A billy	A sire
 ani_small_hardy_pony	Easy	Which small, hardy pony comes from the islands north of Scotland?	Shetland pony	Welsh pony	Connemara pony	Exmoor pony
+ani_guinea_pigs_originally	Easy	Where do guinea pigs originally come from?	South America	West Africa	New Guinea	Southeast Asia
+ani_contrary_popular_myth	Easy	Contrary to the popular myth, how long can a goldfish remember things?	For months	About three seconds	About a minute	About an hour
+ani_actually_makes_bull	Easy	What actually makes a bull charge at a matador's cape?	The cape's movement	Its red colour	The crowd's noise	The smell of the cloth
+ani_venison_meat_animal	Easy	Venison is the meat of which animal?	Deer	Wild boar	Rabbit	Goose
+ani_colour_live_lobsters	Easy	What colour are most live lobsters before they are cooked?	Dark greenish-brown	Bright red	Pale pink	Pure white
+ani_blue_whales_mainly	Easy	What do blue whales mainly eat?	Krill	Seals	Squid	Seaweed
+ani_big_cat_black	Easy	Which big cat has black 'tear marks' running from its eyes to its mouth?	The cheetah	The leopard	The jaguar	The lynx
 ani_osmiornica_serca	Medium	How many hearts does an octopus have?	3	1	2	5
 ani_kameleon	Medium	Which reptile is famous for changing skin color?	Chameleon	Iguana	Gecko	Monitor lizard
 ani_ciaza_slonia	Medium	Which land animal has the longest pregnancy?	Elephant	Rhinoceros	Horse	Giraffe
@@ -282,6 +289,16 @@ ani_elephant_tusks	Medium	What are an elephant's tusks?	Enlarged incisor teeth	H
 ani_heaviest_invertebrate_earth	Medium	Which is the heaviest invertebrate on Earth?	Colossal squid	Giant squid	Giant Pacific octopus	Lion's mane jellyfish
 ani_sea_creature_usually	Medium	Which sea creature is usually ranked the most venomous animal in the ocean?	Box jellyfish	Stonefish	Blue-ringed octopus	Sea snake
 ani_truly_wild_horse	Medium	Which is the only truly wild horse species still living, saved from extinction in Mongolia?	Przewalski's horse	Camargue horse	Akhal-Teke horse	Mongolian mustang
+ani_farm_animal_learned	Medium	Which farm animal has learned to play simple video games with a joystick?	The pig	The cow	The sheep	The goat
+ani_almost_never_see	Medium	Why do you almost never see baby pigeons?	They leave the nest almost fully grown	They hatch only in the depths of winter	They spend their first weeks underground	Most of them are raised far out at sea
+ani_blue_whales_use	Medium	What do blue whales use instead of teeth to filter their food?	Baleen plates	Gill rakers	Bony ridges	Rows of bristly tusks
+ani_kopi_luwak_priciest	Medium	'Kopi luwak', one of the priciest coffees, is made from beans that have passed through which animal?	The civet	The bat	The monkey	The goat
+ani_flamingos_hold_heads	Medium	How do flamingos hold their heads while they feed?	Upside down	Tilted sideways	Fully under the mud	High above the water
+ani_sea_creature_some	Medium	Which sea creature can, in some species, regrow a whole new body from a single severed arm?	The starfish	The octopus	The crab	The sea urchin
+ani_roughly_hours_day	Medium	Roughly how many hours a day does a giant panda spend eating?	About 12	About 2	About 6	About 20
+ani_african_dog_breed	Medium	Which African dog breed is famous for not barking, making yodel-like sounds instead?	The Basenji	The Saluki	The Rhodesian Ridgeback	The Dalmatian
+ani_rodents_laugh_high	Medium	Which rodents 'laugh' with high-pitched chirps when scientists tickle them?	Rats	Hamsters	Guinea pigs	Squirrels
+ani_guano_once_fortune	Medium	Guano, once a fortune-making fertiliser, is the droppings of which animals?	Seabirds and bats	Cattle and sheep	Pigs and goats	Horses and donkeys
 ani_dziobak	Hard	Which mammal lays eggs?	Platypus	Armadillo	Sloth	Hedgehog
 ani_krowa_zoladek	Hard	How many chambers does a cow's stomach have?	4	1	2	3
 ani_kalmar_oczy	Hard	Which animal has an eye that can grow to the size of a dinner plate?	Giant squid	Owl	Whale	Elephant seal
@@ -380,6 +397,21 @@ ani_living_fossil_fish	Hard	Which 'living fossil' fish, thought extinct for mill
 ani_japanese_dog_breed	Hard	Which Japanese dog breed was the famously loyal Hachiko?	The Akita	The Shiba Inu	The Tosa	The Japanese Spitz
 ani_cat_breed_having	Hard	Which cat breed is famous for having no tail?	The Manx	The Sphynx	The Ragdoll	The Burmese
 ani_heaviest_spider_world	Hard	Which is the heaviest spider in the world?	The Goliath birdeater	The black widow	The huntsman	The wolf spider
+ani_myth_lemmings_leap	Hard	The myth that lemmings leap off cliffs in mass suicide was spread mainly by what?	A 1958 Disney nature film	A Norwegian folk tale	A Victorian zoology book	A famous 1990s video game
+ani_unusual_portuguese_man	Hard	What is unusual about the Portuguese man o' war, often taken for a jellyfish?	It is a colony of many tiny animals	It has a brain in each tentacle	It can live out of water for weeks	It is actually a type of sea snail
+ani_ambergris_once_worth	Hard	Ambergris, once worth more than gold to perfumers, comes from which animal's gut?	The sperm whale	The humpback whale	The walrus	The giant squid
+ani_hearts_earthworm	Hard	How many hearts does an earthworm have?	Five	One	Two	Ten
+ani_animals_active_dawn	Hard	What are animals that are most active at dawn and dusk called?	Crepuscular	Nocturnal	Diurnal	Matutinal
+ani_some_horned_lizards	Hard	How do some horned lizards defend themselves against predators?	By squirting blood from their eyes	By shedding their whole skin	By spitting venom at the eyes	By puffing up into a ball
+ani_songbird_nicknamed_butcher	Hard	Which songbird, nicknamed the 'butcher bird', impales its prey on thorns?	The shrike	The magpie	The jay	The starling
+ani_dog_breed_originally	Hard	Which dog breed was originally bred in southern Africa to help hunt lions?	The Rhodesian Ridgeback	The Great Dane	The Bullmastiff	The Saluki
+ani_cat_breed_nicknamed	Hard	Which cat breed is nicknamed 'the swimming cat' for its love of water?	The Turkish Van	The Siamese	The Persian	The Ragdoll
+ani_eel_like_fish	Hard	Which eel-like fish defends itself by flooding the water with huge amounts of slime?	The hagfish	The lamprey	The moray eel	The lungfish
+ani_insect_000_lenses	Hard	Which insect, with up to 30,000 lenses per eye, catches most of the prey it chases?	The dragonfly	The horsefly	The praying mantis	The wasp
+ani_bird_nest_soup	Hard	Bird's nest soup is made from nests built mainly from what?	Swiftlet saliva	Woven grass and mud	Seaweed and feathers	Caterpillar silk
+ani_desert_rodent_whole	Hard	Which desert rodent can go its whole life without drinking water?	The kangaroo rat	The jerboa	The gerbil	The desert hamster
+ani_group_giant_pandas	Hard	What is a group of giant pandas sometimes called?	An embarrassment	A bamboozle	A cuddle	A shrug
+ani_proteins_rex_bone	Hard	Proteins from a T. rex bone most closely matched those of which living animal?	The chicken	The crocodile	The Komodo dragon	The iguana
 ani_hemocyjanina	Expert	Which animal has blue blood?	Octopus	Frog	Snake	Carp
 ani_narwal	Expert	Which marine mammal has a long, spiral tusk growing from its head?	Narwhal	Beluga whale	Porpoise	Manatee
 ani_echidna	Expert	Which animal, alongside the platypus, is a monotreme?	Echidna	Opossum	Wombat	Koala
@@ -425,3 +457,11 @@ aniy_strus_oko	Expert	An ostrich's eye is bigger than which of its organs?	Its b
 aniy_zolwie_morskie	Expert	How do newly hatched sea turtles find the sea at night?	They head for the brighter horizon	They follow their mother	They smell the salt	They listen for waves
 ani_small_furry_animal	Expert	Which small furry animal is one of the elephant's closest living relatives?	The rock hyrax	The capybara	The pangolin	The wombat
 ani_baby_echidna	Expert	What is a baby echidna called?	A puggle	A joey	A kit	A cub
+ani_bird_bill_longer	Expert	Which is the only bird with a bill longer than the rest of its body?	The sword-billed hummingbird	The Australian pelican	The long-billed curlew	The toucan
+ani_tiny_insects_born	Expert	Which tiny insects can be born already pregnant?	Aphids	Fleas	Termites	Mosquitoes
+ani_olm_blind_salamander	Expert	The olm, a blind salamander of European caves, can survive without food for about how long?	Up to ten years	About a month	About a year	About three years
+ani_shorebird_flies_nonstop	Expert	Which shorebird flies nonstop from Alaska to New Zealand, over 11,000 km without rest?	The bar-tailed godwit	The Arctic tern	The wandering albatross	The sooty shearwater
+ani_mammal_shortest_pregnancies	Expert	Which mammal has one of the shortest pregnancies, only about 12 days?	The Virginia opossum	The house mouse	The rabbit	The hamster
+ani_flehmen_response_cat	Expert	What is the 'flehmen response', when a cat or horse curls back its upper lip?	A way of taking in scents	A sign of extreme anger	A way of cooling the mouth	A warning call to the herd
+ani_rodent_live_over	Expert	Which rodent can live over 30 years and almost never gets cancer?	The naked mole-rat	The capybara	The chinchilla	The porcupine
+ani_some_deep_sea	Expert	In some deep-sea anglerfish, what happens to the tiny male?	He fuses permanently onto the female	He becomes the female's glowing lure	He is eaten right after mating	He guards the eggs inside his mouth

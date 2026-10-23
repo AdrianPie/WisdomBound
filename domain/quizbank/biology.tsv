@@ -98,6 +98,11 @@ bio_prized_fungi_pigs	Easy	Which prized fungi do pigs and dogs sniff out undergr
 bio_flower_young_heads	Easy	Which flower's young heads turn to follow the Sun across the sky?	Sunflower	Daisy	Tulip	Marigold
 bio_body_blood_cells	Easy	Where in the body are most blood cells made?	In the bone marrow	In the liver	In the heart	In the spleen
 bio_common_weed_spreads	Easy	Which common weed spreads its seeds on tiny white 'parachutes'?	Dandelion	Nettle	Clover	Ivy
+bio_plant_gel_popular	Easy	Which plant's gel is a popular home remedy for sunburn?	Aloe vera	Lavender	Eucalyptus	Chamomile
+bio_doctor_specialises_children	Easy	What is a doctor who specialises in children called?	A paediatrician	A podiatrist	An orthopaedist	A gynaecologist
+bio_eating_plenty_vegetable	Easy	Eating plenty of which vegetable can harmlessly turn your urine pink?	Beetroot	Carrots	Spinach	Radishes
+bio_organ_cardiologist_treat	Easy	Which organ does a cardiologist treat?	The heart	The skin	The kidneys	The bones
+bio_americans_call_fresh	Easy	What do Americans call the fresh leaves of the coriander plant?	Cilantro	Parsley	Chervil	Dill
 bio_chromosomy	Medium	How many chromosomes does a healthy human cell have?	46	23	48	44
 bio_chlorofil	Medium	Which pigment gives plants their green color?	Chlorophyll	Carotene	Melanin	Hemoglobin
 bio_insulina	Medium	Which organ produces insulin?	Pancreas	Liver	Kidneys	Thyroid
@@ -233,6 +238,18 @@ bio_doctor_discovered_insulin	Medium	Which doctor discovered insulin with Charle
 bio_yellowish_liquid_makes	Medium	What is the yellowish liquid that makes up about half of our blood called?	Plasma	Lymph	Serum	Bile
 bio_roughly_vertebrae_make	Medium	Roughly how many vertebrae make up the human spine?	33	12	52	206
 bio_ribs_typical_human	Medium	How many ribs does a typical human have?	24	12	20	32
+bio_soft_spot_newborn	Medium	What is the soft spot on a newborn baby's head called?	The fontanelle	The temple	The crown	The occiput
+bio_left_lung_little	Medium	Why is the left lung a little smaller than the right?	To make room for the heart	It has fewer airways from birth	The liver presses on it	It does less of the work
+bio_flap_tissue_stops	Medium	Which flap of tissue stops food going down your windpipe when you swallow?	The epiglottis	The uvula	The tonsil	The larynx
+bio_white_eye	Medium	What is the white of the eye called?	The sclera	The cornea	The iris	The lens
+bio_medical_tailbone	Medium	What is the medical name for the tailbone?	The coccyx	The sacrum	The pelvis	The patella
+bio_agoraphobia_fear	Medium	Agoraphobia is a fear of what?	Open or crowded places	Spiders	Heights	Small enclosed spaces
+bio_adam_apple_man	Medium	What is the 'Adam's apple' in a man's throat?	Cartilage around the voice box	A swollen gland	A bone at the top of the windpipe	A muscle used for swallowing
+bio_small_fleshy_lobe	Medium	What is the small fleshy lobe hanging at the back of your throat called?	The uvula	The epiglottis	The tonsil	The adenoid
+bio_opium_morphine_come	Medium	Opium and morphine come from which flower?	The poppy	The lotus	The foxglove	The tulip
+bio_listerine_mouthwash_pioneer	Medium	Listerine mouthwash is named after which pioneer of antiseptic surgery?	Joseph Lister	Louis Pasteur	Robert Koch	Edward Jenner
+bio_seeds_everyday_fruit	Medium	The seeds of which everyday fruit contain a compound that can release cyanide?	Apples	Bananas	Grapes	Oranges
+bio_black_peppercorns_dried	Medium	Black peppercorns are the dried what of a climbing vine?	Unripe fruits	Flower buds	Root nodules	Leaf tips
 bio_mejoza	Hard	What is the cell division that produces sex cells called?	Meiosis	Mitosis	Cytokinesis	Apoptosis
 bio_mendel	Hard	Who is considered the father of genetics for his research on peas?	Gregor Mendel	Charles Darwin	James Watson	Francis Crick
 bio_mozdzek	Hard	Which part of the brain is responsible for balance and movement coordination?	Cerebellum	Cerebral cortex	Medulla oblongata	Hypothalamus
@@ -321,6 +338,19 @@ bio_daisy_comes_old	Hard	The name of the daisy comes from an old phrase meaning 
 bio_fruit_once_love	Hard	Which fruit was once called the 'love apple'?	The tomato	The apple	The peach	The fig
 bio_body_not_repair	Hard	Which of these can the body NOT repair or regrow on its own?	Tooth enamel	Skin	Bone	The liver
 bio_common_pertussis	Hard	What is the common name for pertussis?	Whooping cough	Chickenpox	Measles	Mumps
+bio_lack_vitamin_causes	Hard	Lack of which vitamin causes beriberi, once common where people lived on polished rice?	Vitamin B1	Vitamin C	Vitamin D	Vitamin A
+bio_quinine_comes_bark	Hard	Quinine comes from the bark of which South American tree?	The cinchona	The rubber tree	The mahogany	The balsa
+bio_garden_flower_gives	Hard	Which garden flower gives us digitalis, a heart medicine?	The foxglove	The poppy	The bluebell	The daffodil
+bio_roughly_long_single	Hard	Roughly how long does a single taste bud cell live before it is replaced?	About two weeks	About a day	About a year	A whole lifetime
+bio_philtrum	Hard	What is the 'philtrum'?	The groove between your nose and upper lip	The dip at the base of your throat	The crease inside your elbow	The fold at the corner of your eye
+bio_pale_half_moon	Hard	The pale half-moon at the base of a fingernail is called what?	The lunula	The cuticle	The nail bed	The matrix
+bio_rubber_tree_now	Hard	The rubber tree, now grown mostly in Southeast Asia, is native to which region?	The Amazon	Central Africa	India	Madagascar
+bio_spice_comes_wrapped	Hard	Which spice comes wrapped in a lacy red covering that gives us another spice, mace?	Nutmeg	Cardamom	Allspice	Star anise
+bio_cashew_nuts_never	Hard	Why are cashew nuts never sold in their shells?	The shell holds a skin-burning oil	The shell is too hard to crack	The shell rots within days	The shell is fed to cattle
+bio_abundant_protein_human	Hard	Which is the most abundant protein in the human body?	Collagen	Keratin	Haemoglobin	Insulin
+bio_hungarian_doctor_mocked	Hard	Which Hungarian doctor was mocked in the 1840s for urging doctors to wash their hands?	Ignaz Semmelweis	Joseph Lister	Robert Koch	Rudolf Virchow
+bio_gas_given_off	Hard	Which gas given off by ripening bananas makes other fruit nearby ripen faster?	Ethylene	Carbon dioxide	Methane	Ammonia
+bio_network_500_million	Hard	What is the network of about 500 million neurons lining the gut nicknamed?	The second brain	The gut clock	The inner spine	The belly web
 bio_amylaza	Expert	Which enzyme in saliva breaks down starch?	Amylase	Pepsin	Lipase	Trypsin
 bio_mrna	Expert	Which type of RNA carries genetic information from the nucleus to the ribosome?	mRNA	tRNA	rRNA	siRNA
 bio_ektoderma	Expert	Which germ layer does the nervous system develop from?	Ectoderm	Mesoderm	Endoderm	Notochord
@@ -360,3 +390,8 @@ biox_drzewa_siec	Expert	Trees in a forest can share nutrients through undergroun
 bioy_zielone_pomarancze	Expert	Why are many ripe oranges in the tropics still green?	Warm nights keep their chlorophyll	They are a different species	They are picked too early	The soil lacks iron
 bioy_zapach_trawy	Expert	What is the smell of freshly cut grass, really?	A chemical distress signal	Chlorophyll evaporating	Soil bacteria waking up	Pollen bursting open
 bioy_insulina	Expert	In which country was insulin first used to treat diabetes, in 1922?	Canada	Germany	Britain	The USA
+bio_enzyme_used_plants	Expert	Which enzyme, used by plants to capture carbon, is thought to be the most abundant protein on Earth?	RuBisCO	Chlorophyll	Amylase	Catalase
+bio_american_geneticist_discovered	Expert	Which American geneticist discovered 'jumping genes' in maize?	Barbara McClintock	Rosalind Franklin	Lynn Margulis	Nettie Stevens
+bio_epo_hormone_abused	Expert	EPO, the hormone abused by some doping cyclists, is mainly made by which organ?	The kidneys	The liver	The pancreas	The adrenal glands
+bio_chicle_original_base	Expert	Chicle, the original base of chewing gum, is the sap of which tree?	The sapodilla	The rubber tree	The maple	The acacia
+bio_scottish_doctor_pioneered	Expert	Which Scottish doctor pioneered chloroform as an anaesthetic in 1847?	James Young Simpson	John Snow	Joseph Lister	Alexander Fleming

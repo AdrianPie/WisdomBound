@@ -120,7 +120,12 @@ object TechnologyQuestions {
         q("tec_car_maker_builds_5", "Which car maker builds the Golf hatchback?", "Volkswagen", listOf("Opel", "Peugeot", "Ford"), E),
         q("tec_car_maker_builds_6", "Which car maker builds the tiny '500' city car?", "Fiat", listOf("Renault", "Seat", "Skoda"), E),
         q("tec_german_engineer_gave", "Which German engineer gave his name to an engine that ignites fuel by compression?", "Rudolf Diesel", listOf("Nikolaus Otto", "Gottlieb Daimler", "Karl Benz"), E),
-        q("tec_lets_maglev_trains", "What lets maglev trains float above the track?", "Magnets", listOf("Air cushions", "Hydrogen jets", "Steam"), E)
+        q("tec_lets_maglev_trains", "What lets maglev trains float above the track?", "Magnets", listOf("Air cushions", "Hydrogen jets", "Steam"), E),
+        q("tec_shouldn_put_metal", "Why shouldn't you put a metal fork in a microwave oven?", "It can cause sparks", listOf("It makes the food toxic", "It turns the fork magnetic", "It switches the oven off"), E),
+        q("tec_faq_stand_website", "What does 'FAQ' stand for on a website?", "Frequently asked questions", listOf("Final answer queue", "Fully automated query", "Fast answer quiz"), E),
+        q("tec_files_stored_cloud", "When files are stored 'in the cloud', where are they really?", "On remote servers in data centres", listOf("Inside satellites in orbit", "Hidden in your phone's SIM card", "In the air as radio waves"), E),
+        q("tec_firewall_job_computer", "What is a firewall's job on a computer network?", "Blocking unwanted network traffic", listOf("Cooling down an overheating processor", "Backing up your files every night", "Making your downloads run faster"), E),
+        q("tec_two_factor_authentication", "What is two-factor authentication?", "Proving who you are in two separate ways", listOf("Using two different passwords on one site", "Letting two people share one account", "Changing your password twice a year"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -254,7 +259,20 @@ object TechnologyQuestions {
         q("tec_official_colour_golden", "What is the official colour of the Golden Gate Bridge?", "International orange", listOf("Golden yellow", "Rust red", "Copper brown"), M),
         q("tec_programming_language_apple", "Which programming language did Apple introduce in 2014 for its apps?", "Swift", listOf("Kotlin", "Rust", "Go"), M),
         q("tec_programming_language_google", "Which programming language has Google preferred for Android apps since 2019?", "Kotlin", listOf("Swift", "Ruby", "Perl"), M),
-        q("tec_created_python_programming", "Who created the Python programming language?", "Guido van Rossum", listOf("Bjarne Stroustrup", "James Gosling", "Linus Torvalds"), M)
+        q("tec_created_python_programming", "Who created the Python programming language?", "Guido van Rossum", listOf("Bjarne Stroustrup", "James Gosling", "Linus Torvalds"), M),
+        q("tec_sending_email_bcc", "When sending an email, what does the 'Bcc' field stand for?", "Blind carbon copy", listOf("Basic contact copy", "Backup cloud copy", "Bulk courtesy copy"), M),
+        q("tec_long_electronic_machines", "Long before electronic machines, what was a 'computer'?", "A person who did calculations", listOf("A brass calculating wheel", "A ship's navigation chart", "A clerk's ledger book"), M),
+        q("tec_word_modem_short", "The word 'modem' is short for what?", "Modulator-demodulator", listOf("Mobile data emitter", "Modular electronic memory", "Model data machine"), M),
+        q("tec_word_pixel_short", "The word 'pixel' is short for what?", "Picture element", listOf("Picture cell", "Point of light", "Print element"), M),
+        q("tec_radar_stand", "What does 'radar' stand for?", "Radio detection and ranging", listOf("Radial distance and range", "Radio alert and alarm", "Remote area detection and reporting"), M),
+        q("tec_scuba_stand", "What does 'scuba' stand for?", "Self-contained underwater breathing apparatus", listOf("Sealed cylinder for underwater breathing air", "Submarine crew underwater breathing aid", "Standard compressed underwater breathing air"), M),
+        q("tec_nft_stand", "What does 'NFT' stand for?", "Non-fungible token", listOf("Network file transfer", "New financial technology", "Numbered format token"), M),
+        q("tec_chatbot_hallucinates", "When an AI chatbot 'hallucinates', what does it do?", "States made-up things as if they were true", listOf("Starts answering in random languages", "Shows pictures nobody asked for", "Freezes and refuses to answer"), M),
+        q("tec_ransomware_malicious_software", "Ransomware is malicious software that does what?", "Locks your files until you pay", listOf("Shows you endless pop-up adverts", "Secretly mines cryptocurrency", "Sends spam from your email"), M),
+        q("tec_car_maker_logo_4", "Which car maker's logo is a trident, taken from Neptune's fountain in Bologna?", "Maserati", listOf("Alfa Romeo", "Lamborghini", "Ferrari"), M),
+        q("tec_car_model_best", "Which car model is the best-selling of all time, with over 50 million sold?", "The Toyota Corolla", listOf("The Volkswagen Beetle", "The Ford Model T", "The Honda Civic"), M),
+        q("tec_willis_carrier_1902", "Willis Carrier's 1902 invention was first built to help a printing plant. What was it?", "Air conditioning", listOf("The photocopier", "The conveyor belt", "The electric fan"), M),
+        q("tec_engineer_designed_original", "Which engineer designed the original Volkswagen Beetle?", "Ferdinand Porsche", listOf("Karl Benz", "Gottlieb Daimler", "Ettore Bugatti"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -336,7 +354,18 @@ object TechnologyQuestions {
         q("tec_nfc_used_contactless", "What does 'NFC', used for contactless payments, stand for?", "Near-field communication", listOf("New fast connection", "Network file control", "Non-financial card"), H),
         q("tec_css_language_styling", "What does 'CSS', the language for styling web pages, stand for?", "Cascading Style Sheets", listOf("Computer Styling System", "Coded Site Scripts", "Creative Screen Styles"), H),
         q("tec_jpeg_stand", "What does 'JPEG' stand for?", "Joint Photographic Experts Group", listOf("Java Picture Encoding Group", "Joint Pixel Exchange Graphics", "Just Plain Edited Graphics"), H),
-        q("tec_gif_stand", "What does 'GIF' stand for?", "Graphics Interchange Format", listOf("General Image File", "Graphic Internet Frame", "Grid Image Format"), H)
+        q("tec_gif_stand", "What does 'GIF' stand for?", "Graphics Interchange Format", listOf("General Image File", "Graphic Internet Frame", "Grid Image Format"), H),
+        q("tec_hollywood_star_invented", "Which Hollywood star co-invented frequency hopping, an idea behind Wi-Fi and Bluetooth?", "Hedy Lamarr", listOf("Grace Kelly", "Marilyn Monroe", "Greta Garbo"), H),
+        q("tec_jacquard_loom_1804", "The Jacquard loom of 1804, which inspired early computers, wove patterns controlled by what?", "Punched cards", listOf("Spinning cams", "Glass marbles", "Wax cylinders"), H),
+        q("tec_oled_screens_stand", "In 'OLED' screens, what does the 'O' stand for?", "Organic", listOf("Optical", "Oxide", "Ordered"), H),
+        q("tec_patented_windscreen_wiper", "Who patented the windscreen wiper in 1903?", "Mary Anderson", listOf("Henry Ford", "Bertha Benz", "Garrett Morgan"), H),
+        q("tec_englishman_percy_shaw", "What did Englishman Percy Shaw invent in 1934 to mark road edges at night?", "Cat's eyes", listOf("Traffic cones", "Zebra crossings", "Speed bumps"), H),
+        q("tec_samsung_began_1938", "Samsung began in 1938 as a small shop trading in what?", "Dried fish and noodles", listOf("Silk and cotton", "Bicycle parts", "Valve radios"), H),
+        q("tec_car_maker_badge", "Which car maker's badge shows a serpent swallowing a man?", "Alfa Romeo", listOf("Maserati", "Lancia", "Ferrari"), H),
+        q("tec_subaru_logo_shows", "Subaru's logo shows which star cluster?", "The Pleiades", listOf("The Big Dipper", "Orion's Belt", "The Southern Cross"), H),
+        q("tec_volvo_circle_arrow", "Volvo's circle-and-arrow logo is the ancient symbol for which metal?", "Iron", listOf("Copper", "Gold", "Lead"), H),
+        q("tec_country_opened_nuclear", "Which country opened the first nuclear power station to supply an electricity grid, in 1954?", "The Soviet Union", listOf("The United States", "Britain", "France"), H),
+        q("tec_1975_kit_computer", "Which 1975 kit computer, sold by mail order, kick-started the personal computer craze?", "The Altair 8800", listOf("The Apple I", "The Commodore PET", "The IBM 5150"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -384,6 +413,12 @@ object TechnologyQuestions {
         q("tecy_brunel", "Which Victorian engineer built the giant steamship 'Great Eastern'?", "Isambard Kingdom Brunel", listOf("George Stephenson", "James Watt", "Thomas Telford"), X),
         q("tecy_elektryk_xix", "In which century was the first electric car built?", "The 19th", listOf("The 20th", "The 21st", "The 18th"), X),
         q("tec_very_home_video", "What was the very first home video game console?", "The Magnavox Odyssey", listOf("The Atari 2600", "The Fairchild Channel F", "The Intellivision"), X),
-        q("tec_german_inventor_built", "Which German inventor built the 'running machine', a two-wheeled ancestor of the bicycle, in 1817?", "Karl Drais", listOf("Karl Benz", "Gottlieb Daimler", "Rudolf Diesel"), X)
+        q("tec_german_inventor_built", "Which German inventor built the 'running machine', a two-wheeled ancestor of the bicycle, in 1817?", "Karl Drais", listOf("Karl Benz", "Gottlieb Daimler", "Rudolf Diesel"), X),
+        q("tec_herman_hollerith_punched", "Herman Hollerith's punched-card tabulating machines were first used to count what?", "The 1890 US census", listOf("Railway tickets in New York", "Votes in a US election", "Bank cheques in London"), X),
+        q("tec_program_released_1979", "Which program, released in 1979, was the first spreadsheet for personal computers?", "VisiCalc", listOf("Lotus 1-2-3", "Excel", "SuperCalc"), X),
+        q("tec_chemist_invented_kevlar", "Which chemist invented Kevlar, the fibre in bulletproof vests, at DuPont?", "Stephanie Kwolek", listOf("Wallace Carothers", "Roy Plunkett", "Percy Julian"), X),
+        q("tec_swedish_american_engineer", "Which Swedish-American engineer perfected the modern zip in 1913?", "Gideon Sundback", listOf("Whitcomb Judson", "Elias Howe", "Walter Hunt"), X),
+        q("tec_programming_language_john", "Which programming language did John McCarthy create in 1958 for artificial intelligence research?", "LISP", listOf("Prolog", "Smalltalk", "ALGOL"), X),
+        q("tec_company_sold_quartz", "Which company sold the first quartz wristwatch, the Astron, in 1969?", "Seiko", listOf("Casio", "Citizen", "Omega"), X)
     )
 }

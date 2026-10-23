@@ -148,7 +148,13 @@ object LiteratureQuestions {
         q("lit_german_composer_scored", "Which German composer scored 'The Lion King', 'Gladiator' and 'Inception'?", "Hans Zimmer", listOf("John Williams", "Howard Shore", "James Horner"), E),
         q("lit_philosopher_wrote_think", "Which philosopher wrote 'I think, therefore I am'?", "Rene Descartes", listOf("Immanuel Kant", "Blaise Pascal", "Voltaire"), E),
         q("lit_fairy_tale_girl_2", "Which fairy-tale girl eats the porridge of three bears?", "Goldilocks", listOf("Little Red Riding Hood", "Gretel", "Rapunzel"), E),
-        q("lit_wrote_fifty_shades", "Who wrote 'Fifty Shades of Grey'?", "E. L. James", listOf("Stephenie Meyer", "Sylvia Day", "Jojo Moyes"), E)
+        q("lit_wrote_fifty_shades", "Who wrote 'Fifty Shades of Grey'?", "E. L. James", listOf("Stephenie Meyer", "Sylvia Day", "Jojo Moyes"), E),
+        q("lit_artist_carved_marble", "Which artist carved the famous marble statue of David in Florence?", "Michelangelo", listOf("Donatello", "Bernini", "Leonardo da Vinci"), E),
+        q("lit_members_set_out", "How many members set out in the Fellowship of the Ring?", "Nine", listOf("Seven", "Eight", "Twelve"), E),
+        q("lit_lord_rings_ents", "In 'The Lord of the Rings', what are the Ents?", "Giant walking tree-folk", listOf("Giant talking eagles", "Mountain trolls", "Cave-dwelling goblins"), E),
+        q("lit_alice_wonderland_happens", "In 'Alice in Wonderland', what happens when Alice drinks from the bottle labelled 'Drink me'?", "She shrinks", listOf("She grows huge", "She falls asleep", "She turns invisible"), E),
+        q("lit_grimm_fairy_tale", "In the Grimm fairy tale, who lets down her long hair from a tower so a witch can climb up?", "Rapunzel", listOf("Snow White", "Gretel", "Sleeping Beauty"), E),
+        q("lit_green_farming_land", "What is the name of the green farming land where Tolkien's hobbits live?", "The Shire", listOf("Rivendell", "Gondor", "Rohan"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -431,7 +437,16 @@ object LiteratureQuestions {
         q("lit_author_wrote_dead", "Which author wrote 'Dead Souls' and 'The Overcoat'?", "Nikolai Gogol", listOf("Ivan Turgenev", "Fyodor Dostoevsky", "Maxim Gorky"), M),
         q("lit_irish_poet_won", "Which Irish poet won the Nobel Prize in Literature in 1923?", "W. B. Yeats", listOf("James Joyce", "Oscar Wilde", "Seamus Heaney"), M),
         q("lit_american_poet_wrote_2", "Which American poet wrote 'Because I could not stop for Death'?", "Emily Dickinson", listOf("Sylvia Plath", "Maya Angelou", "Edna St. Vincent Millay"), M),
-        q("lit_lebanese_american_poet", "Which Lebanese-American poet wrote 'The Prophet'?", "Kahlil Gibran", listOf("Amin Maalouf", "Rumi", "Omar Khayyam"), M)
+        q("lit_lebanese_american_poet", "Which Lebanese-American poet wrote 'The Prophet'?", "Kahlil Gibran", listOf("Amin Maalouf", "Rumi", "Omar Khayyam"), M),
+        q("lit_author_wrote_cat", "Which author wrote 'The Cat in the Hat'?", "Dr. Seuss", listOf("Roald Dahl", "Shel Silverstein", "Maurice Sendak"), M),
+        q("lit_poet_wrote_charge", "Which poet wrote 'The Charge of the Light Brigade'?", "Alfred, Lord Tennyson", listOf("Rudyard Kipling", "William Wordsworth", "Lord Byron"), M),
+        q("lit_writer_poem_ends", "Which writer's poem 'If—' ends 'you'll be a Man, my son'?", "Rudyard Kipling", listOf("Robert Frost", "Alfred Tennyson", "W. B. Yeats"), M),
+        q("lit_young_narrator_treasure", "Who is the young narrator of 'Treasure Island'?", "Jim Hawkins", listOf("Ben Gunn", "Billy Bones", "Squire Trelawney"), M),
+        q("lit_composed_eine_kleine", "Who composed 'Eine kleine Nachtmusik'?", "Mozart", listOf("Beethoven", "Haydn", "Schubert"), M),
+        q("lit_composed_moonlight_sonata", "Who composed the 'Moonlight Sonata'?", "Beethoven", listOf("Chopin", "Mozart", "Liszt"), M),
+        q("lit_instrument_niccolo_paganini", "Which instrument did Niccolo Paganini, rumoured to have sold his soul to the devil, play?", "The violin", listOf("The piano", "The cello", "The flute"), M),
+        q("lit_symphonies_beethoven_complete", "How many symphonies did Beethoven complete?", "Nine", listOf("Five", "Twelve", "Forty-one"), M),
+        q("lit_roald_dahl_hero", "Which Roald Dahl hero escapes his cruel aunts by travelling inside a giant peach?", "James", listOf("Charlie", "Danny", "George"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -548,7 +563,19 @@ object LiteratureQuestions {
         q("lit_spanish_painter_created", "Which Spanish painter created 'The Third of May 1808'?", "Francisco Goya", listOf("Diego Velazquez", "El Greco", "Joan Miro"), H),
         q("lit_composed_rhapsody_blue", "Who composed 'Rhapsody in Blue'?", "George Gershwin", listOf("Leonard Bernstein", "Aaron Copland", "Irving Berlin"), H),
         q("lit_composed_opera_carmen", "Who composed the opera 'Carmen'?", "Georges Bizet", listOf("Giuseppe Verdi", "Giacomo Puccini", "Jules Massenet"), H),
-        q("lit_composed_opera_aida", "Who composed the opera 'Aida'?", "Giuseppe Verdi", listOf("Giacomo Puccini", "Richard Wagner", "Gioachino Rossini"), H)
+        q("lit_composed_opera_aida", "Who composed the opera 'Aida'?", "Giuseppe Verdi", listOf("Giacomo Puccini", "Richard Wagner", "Gioachino Rossini"), H),
+        q("lit_shakespeare_play_stage", "Which Shakespeare play has the famous stage direction 'Exit, pursued by a bear'?", "The Winter's Tale", listOf("The Tempest", "As You Like It", "Cymbeline"), H),
+        q("lit_darcy_grand_estate", "What is the name of Mr Darcy's grand estate in 'Pride and Prejudice'?", "Pemberley", listOf("Netherfield", "Thornfield", "Mansfield Park"), H),
+        q("lit_wrote_vanity_fair", "Who wrote 'Vanity Fair', with its scheming heroine Becky Sharp?", "William Thackeray", listOf("Anthony Trollope", "Charles Dickens", "Thomas Hardy"), H),
+        q("lit_wrote_middlemarch", "Who wrote 'Middlemarch'?", "George Eliot", listOf("Elizabeth Gaskell", "Jane Austen", "Anne Bronte"), H),
+        q("lit_wrote_rime_ancient", "Who wrote 'The Rime of the Ancient Mariner', about a sailor cursed for shooting an albatross?", "Samuel Taylor Coleridge", listOf("William Wordsworth", "John Keats", "William Blake"), H),
+        q("lit_romantic_poet_mad", "Which Romantic poet was called 'mad, bad and dangerous to know'?", "Lord Byron", listOf("Percy Bysshe Shelley", "John Keats", "William Blake"), H),
+        q("lit_painted_school_athens", "Who painted 'The School of Athens' in the Vatican?", "Raphael", listOf("Michelangelo", "Botticelli", "Titian"), H),
+        q("lit_painter_hid_man", "Which painter hid a man's face behind a floating green apple in 'The Son of Man'?", "Rene Magritte", listOf("Salvador Dali", "Joan Miro", "Max Ernst"), H),
+        q("lit_composed_six_brandenburg", "Who composed the six 'Brandenburg Concertos'?", "Johann Sebastian Bach", listOf("George Frideric Handel", "Antonio Vivaldi", "Georg Philipp Telemann"), H),
+        q("lit_composer_wrote_sprach", "Which composer wrote 'Also sprach Zarathustra', made famous by the film '2001'?", "Richard Strauss", listOf("Johann Strauss II", "Richard Wagner", "Gustav Mahler"), H),
+        q("lit_nessun_dorma_aria", "'Nessun dorma' is an aria from which Puccini opera?", "Turandot", listOf("Tosca", "La Boheme", "Madama Butterfly"), H),
+        q("lit_astronomer_poet_wrote", "Which astronomer-poet wrote the 'Rubaiyat', with its verses on wine and fate?", "Omar Khayyam", listOf("Rumi", "Hafez", "Ferdowsi"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -599,6 +626,14 @@ object LiteratureQuestions {
         q("lity_magritte", "Which painter wrote 'This is not a pipe' beneath a picture of a pipe?", "Rene Magritte", listOf("Salvador Dali", "Marcel Duchamp", "Joan Miro"), X),
         q("lity_fontanna", "Which artist shocked the art world by exhibiting a urinal titled 'Fountain'?", "Marcel Duchamp", listOf("Andy Warhol", "Rene Magritte", "Pablo Picasso"), X),
         q("lit_painted_garden_earthly", "Who painted 'The Garden of Earthly Delights'?", "Hieronymus Bosch", listOf("Pieter Bruegel", "Jan van Eyck", "Albrecht Durer"), X),
-        q("lit_composed_hall_mountain", "Who composed 'In the Hall of the Mountain King'?", "Edvard Grieg", listOf("Jean Sibelius", "Carl Nielsen", "Antonin Dvorak"), X)
+        q("lit_composed_hall_mountain", "Who composed 'In the Hall of the Mountain King'?", "Edvard Grieg", listOf("Jean Sibelius", "Carl Nielsen", "Antonin Dvorak"), X),
+        q("lit_painted_arnolfini_portrait", "Who painted 'The Arnolfini Portrait', with a convex mirror on the back wall?", "Jan van Eyck", listOf("Hans Holbein", "Pieter Bruegel", "Albrecht Durer"), X),
+        q("lit_composed_dreamy_piano", "Who composed the dreamy piano pieces 'Gymnopedies'?", "Erik Satie", listOf("Claude Debussy", "Maurice Ravel", "Gabriel Faure"), X),
+        q("lit_german_author_wrote_3", "Which German author wrote 'The Tin Drum'?", "Gunter Grass", listOf("Heinrich Boll", "Thomas Mann", "Hermann Hesse"), X),
+        q("lit_sicilian_prince_wrote", "Which Sicilian prince wrote 'The Leopard', published after his death?", "Tomasi di Lampedusa", listOf("Luigi Pirandello", "Alberto Moravia", "Italo Svevo"), X),
+        q("lit_italian_author_wrote", "Which Italian author wrote 'Invisible Cities' and 'If on a Winter's Night a Traveller'?", "Italo Calvino", listOf("Umberto Eco", "Primo Levi", "Dino Buzzati"), X),
+        q("lit_wrote_comic_czech", "Who wrote the comic Czech novel 'The Good Soldier Svejk'?", "Jaroslav Hasek", listOf("Karel Capek", "Bohumil Hrabal", "Milan Kundera"), X),
+        q("lit_ferdowsi_book_kings", "What is the name of Ferdowsi's 'Book of Kings', Iran's national epic?", "The Shahnameh", listOf("The Masnavi", "The Rubaiyat", "The Avesta"), X),
+        q("lit_detective_created_edgar", "Which detective, created by Edgar Allan Poe in 1841, is often called the first of modern fiction?", "C. Auguste Dupin", listOf("Sherlock Holmes", "Inspector Lestrade", "Sergeant Cuff"), X)
     )
 }

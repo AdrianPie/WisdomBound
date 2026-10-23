@@ -180,6 +180,11 @@ geo_spanish_island_world	Easy	Which Spanish island is world-famous for its night
 geo_chinese_dam_world	Easy	Which Chinese dam is the world's biggest power station?	Three Gorges Dam	Hoover Dam	Itaipu Dam	Aswan High Dam
 geo_sea_nile_flow	Easy	Into which sea does the Nile flow?	The Mediterranean	The Red Sea	The Arabian Sea	The Indian Ocean
 geo_french_city_gave	Easy	Which French city gave its name to a famous mustard?	Dijon	Nice	Lille	Toulouse
+geo_ocean_lies_between_2	Easy	Which ocean lies between Europe and North America?	The Atlantic	The Pacific	The Indian Ocean	The Arctic Ocean
+geo_country_five_cliffside	Easy	In which country are the five cliffside villages of the Cinque Terre?	Italy	France	Croatia	Portugal
+geo_largest_country_south	Easy	Which is the largest country in South America by area?	Brazil	Argentina	Peru	Colombia
+geo_country_city_salzburg	Easy	In which country is the city of Salzburg?	Austria	Germany	Switzerland	Czechia
+geo_country_island_rhodes	Easy	To which country does the island of Rhodes belong?	Greece	Turkey	Cyprus	Italy
 geo_everest	Medium	In which mountain range is Mount Everest?	Himalayas	Andes	Alps	Caucasus
 geo_wulkan_wl	Medium	What is the name of the famous volcano near Naples?	Vesuvius	Etna	Stromboli	Krakatoa
 geo2_kanal_sueski	Medium	Which seas does the Suez Canal connect?	The Mediterranean with the Red Sea	The Baltic with the North Sea	The Black Sea with the Aegean	The Pacific with the Atlantic
@@ -498,6 +503,21 @@ geo_egyptian_city_lies	Medium	Which Egyptian city lies beside the Valley of the 
 geo_indian_city_india	Medium	Which Indian city is known as India's Silicon Valley?	Bengaluru	Hyderabad	Pune	Chennai
 geo_near_chinese_city	Medium	Near which Chinese city was the Terracotta Army discovered?	Xi'an	Beijing	Nanjing	Luoyang
 geo_argentine_city_calls	Medium	Which Argentine city calls itself 'the end of the world'?	Ushuaia	Punta Arenas	Rio Gallegos	Mar del Plata
+geo_river_flows_past	Medium	Which river flows past Montreal and Quebec City towards the Atlantic?	The St Lawrence	The Hudson	The Niagara	The Yukon
+geo_highest_mountain_greece	Medium	Which is the highest mountain in Greece?	Mount Olympus	Mount Athos	Mount Parnassus	Mount Ida
+geo_country_hallstatt_lakeside	Medium	In which country is Hallstatt, the lakeside village so admired that China built a copy of it?	Austria	Switzerland	Germany	Slovenia
+geo_country_meteora_monasteries	Medium	In which country are the Meteora monasteries, perched on towering rock pillars?	Greece	Bulgaria	Turkey	Armenia
+geo_country_white_travertine	Medium	In which country are the white travertine terraces of Pamukkale?	Turkey	Greece	Iran	Morocco
+geo_japanese_city_golden	Medium	In which Japanese city is the Golden Pavilion, Kinkaku-ji?	Kyoto	Tokyo	Nara	Osaka
+geo_along_country_coast	Medium	Along which country's coast stand the Twelve Apostles limestone stacks?	Australia	New Zealand	Ireland	Portugal
+geo_country_fjord_milford	Medium	In which country is the fjord Milford Sound?	New Zealand	Norway	Canada	Chile
+geo_country_banff_national	Medium	In which country is Banff National Park, with its turquoise Lake Louise?	Canada	The USA	Switzerland	New Zealand
+geo_state_everglades_wetlands	Medium	In which US state are the Everglades wetlands?	Florida	Louisiana	Georgia	Texas
+geo_state_longest_coastline	Medium	Which US state has the longest coastline?	Alaska	Florida	California	Hawaii
+geo_largest_state_australia	Medium	Which is the largest state of Australia?	Western Australia	Queensland	New South Wales	South Australia
+geo_country_arctic_archipelago	Medium	To which country does the Arctic archipelago of Svalbard belong?	Norway	Denmark	Russia	Iceland
+geo_afrikaans_spoken_south	Medium	Afrikaans, spoken in South Africa, grew out of which European language?	Dutch	German	English	Portuguese
+geo_currency_used_south	Medium	Which currency is used in South Korea?	The won	The yen	The yuan	The ringgit
 geo_bajkal	Hard	Which lake is the deepest in the world?	Baikal	Tanganyika	Caspian Sea	Superior
 geo_kilimandzaro	Hard	In which country is Mount Kilimanjaro?	Tanzania	Kenya	Ethiopia	Uganda
 geo_aconcagua	Hard	The highest peak in South America is...	Aconcagua	Chimborazo	Huascaran	Ojos del Salado
@@ -619,6 +639,22 @@ geo_word_shampoo_comes	Hard	The word 'shampoo' comes from which language?	Hindi	
 geo_moroccan_town_streets	Hard	Which Moroccan town is famous for its streets painted in shades of blue?	Chefchaouen	Marrakesh	Fez	Tangier
 geo_cities_lies_furthest	Hard	Which of these US cities lies furthest west?	Reno	Los Angeles	San Diego	Las Vegas
 geo_country_caesar_salad	Hard	In which country was the Caesar salad invented?	Mexico	Italy	United States	Spain
+geo_strait_crossed_bridge	Hard	Which strait, crossed by a famous bridge-and-tunnel link, separates Denmark from Sweden?	The Oresund	The Skagerrak	The Bosphorus	The Dardanelles
+geo_river_flows_through_15	Hard	Which river flows through Bangkok?	The Chao Phraya	The Mekong	The Irrawaddy	The Red River
+geo_river_flows_through_16	Hard	Which river flows through Washington, D.C.?	The Potomac	The Hudson	The Delaware	The Susquehanna
+geo_highest_mountain_canada	Hard	Which is the highest mountain in Canada?	Mount Logan	Mount Robson	Mount Whitney	Denali
+geo_country_often_nicknamed	Hard	Which country is often nicknamed 'the Lucky Country'?	Australia	Ireland	Canada	Switzerland
+geo_croissant_ancestor_kipferl	Hard	The croissant's ancestor, the 'kipferl', reached France from which country?	Austria	Belgium	Switzerland	Italy
+geo_official_language_suriname	Hard	What is the official language of Suriname?	Dutch	Portuguese	Spanish	English
+geo_country_rock_hewn	Hard	In which country are the rock-hewn churches of Lalibela?	Ethiopia	Egypt	Sudan	Eritrea
+geo_country_sigiriya_ancient	Hard	In which country is Sigiriya, an ancient fortress on top of a giant rock?	Sri Lanka	India	Thailand	Myanmar
+geo_state_mount_helens	Hard	In which US state did Mount St Helens erupt in 1980?	Washington	Oregon	California	Alaska
+geo_country_maya_ruins	Hard	In which country are the Maya ruins of Tikal?	Guatemala	Mexico	Honduras	Belize
+geo_continent_without_major	Hard	Which is the only continent without a major desert?	Europe	Antarctica	Australia	South America
+geo_largest_lake_australia	Hard	Which is the largest lake in Australia, usually a dry salt flat?	Lake Eyre	Lake Torrens	Lake Argyle	Lake Gairdner
+geo_longest_river_canada	Hard	Which is the longest river in Canada?	The Mackenzie	The St Lawrence	The Yukon	The Fraser
+geo_state_borders_just	Hard	Which is the only US state that borders just one other state?	Maine	Florida	Washington	Rhode Island
+geo_country_swedish_speaking	Hard	To which country do the Swedish-speaking Aland Islands belong?	Finland	Sweden	Denmark	Norway
 geo_row_marianski	Expert	What is the deepest point in the oceans called?	Challenger Deep	Tonga Trench	Java Trench	Milwaukee Deep
 geo_kraj_bez_rzek	Expert	Which of these countries has not a single permanent river?	Saudi Arabia	Mongolia	Kazakhstan	Iran
 geo_titicaca	Expert	Lake Titicaca lies on the border of which two countries?	Peru and Bolivia	Chile and Argentina	Ecuador and Colombia	Brazil and Paraguay
@@ -662,3 +698,12 @@ geox_nauru	Expert	Which Pacific island nation is the smallest republic in the wo
 geox_tuvalu_tv	Expert	Which tiny Pacific nation earns money from its '.tv' internet domain?	Tuvalu	Tonga	Tokelau	Taiwan
 geox_colca	Expert	Which canyon in Peru is about twice as deep as the Grand Canyon?	The Colca Canyon	The Copper Canyon	The Fish River Canyon	Tiger Leaping Gorge
 geoy_rosja_sasiedzi	Expert	Russia shares land borders with how many countries?	14	8	20	5
+geo_river_joins_danube	Expert	Which river joins the Danube at Belgrade?	The Sava	The Drava	The Tisza	The Morava
+geo_river_flows_through_17	Expert	Which river flows through Madrid?	The Manzanares	The Tagus	The Ebro	The Guadalquivir
+geo_volcano_highest_mountain	Expert	Which volcano is the highest mountain in Mexico?	Pico de Orizaba	Popocatepetl	Iztaccihuatl	Nevado de Toluca
+geo_peak_new_guinea	Expert	Which peak on New Guinea is the highest mountain in Oceania?	Puncak Jaya	Mount Wilhelm	Mount Cook	Mount Kosciuszko
+geo_country_catalan_official	Expert	In which country is Catalan the only official language?	Andorra	Spain	Monaco	San Marino
+geo_country_great_mosque	Expert	In which country is the Great Mosque of Djenne, the world's largest mud-brick building?	Mali	Niger	Morocco	Senegal
+geo_island_mount_kinabalu	Expert	On which island is Mount Kinabalu?	Borneo	Sumatra	Java	Sulawesi
+geo_gulf_separates_sweden	Expert	Which gulf separates Sweden from Finland?	The Gulf of Bothnia	The Gulf of Finland	The Gulf of Riga	The Skagerrak
+geo_largest_canadian_province	Expert	Which is the largest Canadian province by area?	Quebec	Ontario	British Columbia	Alberta

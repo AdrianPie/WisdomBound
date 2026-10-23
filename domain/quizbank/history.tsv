@@ -168,6 +168,12 @@ his_lively_dance_craze	Easy	Which lively dance was the craze of the 'Roaring Twe
 his_san_francisco_hippie	Easy	San Francisco's hippie gathering of 1967 is remembered as the 'Summer of...' what?	Love	Peace	Flowers	Music
 his_colony_jewel_crown	Easy	Which colony was called the 'Jewel in the Crown' of the British Empire?	India	Egypt	Canada	Australia
 his_european_country_ruled_2	Easy	Which European country ruled Vietnam as part of 'Indochina' until 1954?	France	Britain	Netherlands	Portugal
+his_sharpshooter_star_buffalo	Easy	Which sharpshooter was the star of Buffalo Bill's Wild West show?	Annie Oakley	Calamity Jane	Belle Starr	Pearl Hart
+his_italian_city_state	Easy	From which Italian city-state did Christopher Columbus come?	Genoa	Venice	Florence	Naples
+his_cold_war_contest	Easy	What was the Cold War contest between the USA and the Soviet Union to reach the Moon first called?	The Space Race	The Arms Race	The Moon Rush	The Star Duel
+his_according_bible_sea	Easy	According to the Bible, which sea did Moses part to lead the Israelites out of Egypt?	The Red Sea	The Dead Sea	The Mediterranean	The Sea of Galilee
+his_medieval_court_jester	Easy	What was a medieval court jester's job?	Making the court laugh	Tasting the king's food	Training the knights' horses	Collecting the peasants' taxes
+his_town_crier_old	Easy	What did a town crier do in old towns?	Shouted out the news in the streets	Rang the church bells	Wept at funerals for a fee	Guarded the town gates
 his_i_wojna	Medium	In which year did World War I break out?	1914	1912	1918	1939
 his_gagarin	Medium	Who was the first human to travel into space?	Yuri Gagarin	Neil Armstrong	Alan Shepard	Valentina Tereshkova
 his_kolumb	Medium	In which year did Christopher Columbus reach America?	1492	1453	1500	1488
@@ -515,6 +521,17 @@ his_european_country_ruled_3	Medium	Which European country ruled Libya as a colo
 his_european_country_ruled_4	Medium	Which European country ruled Namibia as a colony before World War I?	Germany	Britain	Portugal	Belgium
 his_father_alexander_great	Medium	Who was the father of Alexander the Great?	Philip II	Darius III	Leonidas I	Pericles
 his_roman_orator_attacked	Medium	Which Roman orator attacked Catiline and Mark Antony in famous speeches?	Cicero	Cato	Seneca	Pliny
+his_pax_romana	Medium	What was the 'Pax Romana'?	A long era of peace in the Roman Empire	A peace treaty between Rome and Carthage	The Roman army's oath of loyalty	A law giving citizenship to all Romans
+his_roman_denarius	Medium	What was a Roman 'denarius'?	A silver coin	A tax on bread	A unit of ten soldiers	A public bath
+his_disaster_killed_quarter	Medium	Which disaster killed about a quarter of Londoners in 1665?	The Great Plague	The Great Fire	A cholera outbreak	A smallpox epidemic
+his_nazi_pogrom_november	Medium	Why was the Nazi pogrom of November 1938 called 'Kristallnacht'?	For the broken glass of Jewish shops and homes	For the frost that covered Berlin that night	For the crystal chandeliers looted from palaces	For a Nazi rally held in a glass hall
+his_german_industrialist_saved	Medium	Which German industrialist saved about 1,200 Jews by employing them in his factories?	Oskar Schindler	Raoul Wallenberg	Albert Speer	Claus von Stauffenberg
+his_cold_war_domino	Medium	What did the Cold War 'domino theory' claim?	Neighbours of a communist state would fall too	Nuclear war would destroy every city in a row	Sanctions would topple dictators one by one	Every war leads to an even bigger one
+his_country_genocide_kill	Medium	In which country did a genocide kill around 800,000 people in 1994?	Rwanda	Burundi	Uganda	Sudan
+his_ancient_city_among	Medium	Which ancient city, among the oldest in the world, is famous in the Bible for walls that came tumbling down?	Jericho	Babylon	Nineveh	Ur
+his_dead_sea_scrolls	Medium	What are the Dead Sea Scrolls, found in caves from 1947 onwards?	Ancient Jewish religious texts	Egyptian royal tax records	Roman military maps	Babylonian star charts
+his_lawrence_arabia_helped	Medium	'Lawrence of Arabia' helped lead an Arab revolt against which empire?	The Ottoman Empire	The British Empire	The Persian Empire	The Russian Empire
+his_massachusetts_town_people	Medium	In which Massachusetts town were 19 people hanged after witch trials in 1692?	Salem	Boston	Plymouth	Concord
 his_rzym	Hard	In which year did the Western Roman Empire fall?	476	410	395	527
 his_waterloo	Hard	In which year did Napoleon lose the Battle of Waterloo?	1815	1812	1805	1821
 his_druk	Hard	Who popularized movable-type printing in Europe?	Johannes Gutenberg	Nicolaus Copernicus	Leonardo da Vinci	Galileo
@@ -763,6 +780,25 @@ his_led_ghana_independence	Hard	Who led Ghana to independence in 1957 and became
 his_city_last_tsar	Hard	In which city were the last tsar and his family executed in 1918?	Yekaterinburg	Tobolsk	Omsk	Novosibirsk
 his_russian_tsar_freed	Hard	Which Russian tsar freed the serfs in 1861?	Alexander II	Nicholas II	Alexander III	Nicholas I
 his_french_explorer_founded	Hard	Which French explorer founded Quebec City in 1608?	Samuel de Champlain	Jacques Cartier	Robert de La Salle	Jacques Marquette
+his_medieval_castle_toilet	Hard	What was a medieval castle toilet, often just a hole above the moat, called?	A garderobe	A buttery	A solar	A barbican
+his_queen_married_king	Hard	Which queen was married first to the King of France and then to the King of England?	Eleanor of Aquitaine	Isabella of France	Catherine of Valois	Margaret of Anjou
+his_real_castilian_knight	Hard	What was the real name of the Castilian knight known as El Cid?	Rodrigo Diaz de Vivar	Fernando de Aragon	Alfonso de Castilla	Gonzalo de Cordoba
+his_couple_took_english	Hard	Which couple took the English throne in the 'Glorious Revolution' of 1688?	William III and Mary II	Charles II and Catherine	James II and Mary of Modena	George I and Sophia
+his_1572_massacre_french	Hard	Which 1572 massacre of French Protestants began in Paris on a saint's feast day?	The St Bartholomew's Day massacre	The Massacre of Glencoe	The Siege of La Rochelle	The Day of the Barricades
+his_1934_night_long	Hard	In the 1934 'Night of the Long Knives', Hitler purged the leaders of which Nazi group?	The SA (Brownshirts)	The Gestapo	The Hitler Youth	The Luftwaffe
+his_war_1756_1763	Hard	Which war of 1756-1763, fought on several continents, is sometimes called the first world war?	The Seven Years' War	The Thirty Years' War	The War of the Spanish Succession	The Napoleonic Wars
+his_wave_european_revolutions	Hard	What was the wave of European revolutions of 1848 nicknamed?	The Springtime of Nations	The Arab Spring	The Velvet Revolutions	The Glorious Revolution
+his_jamaican_born_nurse	Hard	Which Jamaican-born nurse ran a 'British Hotel' for soldiers in the Crimean War?	Mary Seacole	Florence Nightingale	Clara Barton	Edith Cavell
+his_indian_rebellion_1857	Hard	The Indian Rebellion of 1857 began as a mutiny among which soldiers?	Indian sepoys	Gurkha mercenaries	Sikh princes' guards	British sailors
+his_became_king_united_2	Hard	Who became the first king of a united Italy, in 1861?	Victor Emmanuel II	Umberto I	Charles Albert	Victor Emmanuel III
+his_writer_accused_french	Hard	Which writer accused the French army over the Dreyfus affair in the open letter 'J'accuse...!'?	Emile Zola	Victor Hugo	Anatole France	Gustave Flaubert
+his_revolutionary_father_nation	Hard	Which revolutionary is called 'the father of the nation' in Taiwan and 'the forerunner of the revolution' in mainland China?	Sun Yat-sen	Mao Zedong	Chiang Kai-shek	Yuan Shikai
+his_1942_conference_near	Hard	At which 1942 conference near Berlin did Nazi officials plan the 'Final Solution'?	Wannsee	Potsdam	Munich	Nuremberg
+his_officer_planted_briefcase	Hard	Which officer planted the briefcase bomb in the failed July 1944 plot to kill Hitler?	Claus von Stauffenberg	Erwin Rommel	Wilhelm Canaris	Albert Speer
+his_failed_1944_allied	Hard	Which failed 1944 Allied airborne operation tried to seize the Rhine bridges up to Arnhem?	Operation Market Garden	Operation Overlord	Operation Torch	Operation Dragoon
+his_president_signed_1830	Hard	Which US president signed the 1830 Indian Removal Act that led to the 'Trail of Tears'?	Andrew Jackson	Thomas Jefferson	James Monroe	Abraham Lincoln
+his_chinese_dynasty_gunpowder	Hard	During which Chinese dynasty was gunpowder invented, by alchemists seeking an elixir of life?	The Tang dynasty	The Ming dynasty	The Qin dynasty	The Han dynasty
+his_led_english_peasants	Hard	Who led the English Peasants' Revolt of 1381?	Wat Tyler	Jack Cade	Robert Kett	Owain Glyndwr
 his_westfalski	Expert	In which year did the Peace of Westphalia end the Thirty Years' War?	1648	1618	1659	1667
 his_oktawian	Expert	Who was the first Roman emperor?	Augustus (Octavian)	Julius Caesar	Nero	Tiberius
 his_machiavelli	Expert	Who wrote the treatise 'The Prince'?	Niccolo Machiavelli	Dante Alighieri	Erasmus of Rotterdam	Thomas More
@@ -903,3 +939,13 @@ his_ancient_greek_historian	Expert	Which ancient Greek historian wrote the histo
 his_empire_ruled_shahs	Expert	Which empire was ruled by shahs from the city of Isfahan in the 1600s?	The Safavid Empire	The Mughal Empire	The Ottoman Empire	The Seljuk Empire
 his_italian_city_capital	Expert	Which Italian city was the capital of the Western Roman Empire in its last decades?	Ravenna	Milan	Naples	Florence
 his_became_world_democratically	Expert	Who became the world's first democratically elected female president, in Iceland in 1980?	Vigdis Finnbogadottir	Golda Meir	Indira Gandhi	Gro Harlem Brundtland
+his_last_emperor_rule	Expert	Who was the last emperor to rule both halves of the Roman Empire, until 395?	Theodosius I	Constantine the Great	Diocletian	Justinian I
+his_swedish_lion_north	Expert	Which Swedish 'Lion of the North' was killed leading his army at Lutzen in 1632?	Gustavus Adolphus	Charles XII	Gustav Vasa	Charles X Gustav
+his_french_king_said	Expert	Which French king, who said Paris was 'well worth a Mass', was assassinated in 1610?	Henry IV	Henry III	Louis XIII	Francis I
+his_1282_uprising_palermo	Expert	Which 1282 uprising in Palermo against French rule began at evening prayers?	The Sicilian Vespers	The Ciompi Revolt	The Jacquerie	The Revolt of the Comuneros
+his_american_spy_plane	Expert	Which American U-2 spy-plane pilot was shot down over the Soviet Union in 1960?	Francis Gary Powers	Chuck Yeager	John Glenn	Rudolf Anderson
+his_city_became_japan	Expert	Which city became Japan's first permanent capital in the 700s, before Kyoto?	Nara	Edo	Osaka	Kamakura
+his_warlord_born_peasant	Expert	Which warlord, born a peasant, completed the unification of Japan in 1590?	Toyotomi Hideyoshi	Oda Nobunaga	Tokugawa Ieyasu	Minamoto no Yoritomo
+his_17th_century_queen	Expert	Which 17th-century queen of Ndongo and Matamba resisted the Portuguese in today's Angola?	Nzinga	Amanirenas	Yaa Asantewaa	Ranavalona I
+his_west_african_kingdom	Expert	Which West African kingdom treats a Golden Stool as the sacred soul of its nation?	The Ashanti	Benin	Dahomey	Oyo
+his_spanish_explorer_led	Expert	Which Spanish explorer led the first European expedition to reach the Mississippi River, in 1541?	Hernando de Soto	Francisco Coronado	Juan Ponce de Leon	Alvar Nunez Cabeza de Vaca

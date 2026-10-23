@@ -95,6 +95,11 @@ tec_car_maker_builds_5	Easy	Which car maker builds the Golf hatchback?	Volkswage
 tec_car_maker_builds_6	Easy	Which car maker builds the tiny '500' city car?	Fiat	Renault	Seat	Skoda
 tec_german_engineer_gave	Easy	Which German engineer gave his name to an engine that ignites fuel by compression?	Rudolf Diesel	Nikolaus Otto	Gottlieb Daimler	Karl Benz
 tec_lets_maglev_trains	Easy	What lets maglev trains float above the track?	Magnets	Air cushions	Hydrogen jets	Steam
+tec_shouldn_put_metal	Easy	Why shouldn't you put a metal fork in a microwave oven?	It can cause sparks	It makes the food toxic	It turns the fork magnetic	It switches the oven off
+tec_faq_stand_website	Easy	What does 'FAQ' stand for on a website?	Frequently asked questions	Final answer queue	Fully automated query	Fast answer quiz
+tec_files_stored_cloud	Easy	When files are stored 'in the cloud', where are they really?	On remote servers in data centres	Inside satellites in orbit	Hidden in your phone's SIM card	In the air as radio waves
+tec_firewall_job_computer	Easy	What is a firewall's job on a computer network?	Blocking unwanted network traffic	Cooling down an overheating processor	Backing up your files every night	Making your downloads run faster
+tec_two_factor_authentication	Easy	What is two-factor authentication?	Proving who you are in two separate ways	Using two different passwords on one site	Letting two people share one account	Changing your password twice a year
 tec_cpu	Medium	What does the abbreviation CPU stand for?	Central Processing Unit	Random-access memory	Graphics card	Hard drive
 tec_android_firma	Medium	Which company develops the Android operating system?	Google	Apple	Microsoft	Meta
 tec_telefon_bell	Medium	Who patented the telephone?	Alexander Graham Bell	Thomas Edison	Guglielmo Marconi	Samuel Morse
@@ -225,6 +230,19 @@ tec_official_colour_golden	Medium	What is the official colour of the Golden Gate
 tec_programming_language_apple	Medium	Which programming language did Apple introduce in 2014 for its apps?	Swift	Kotlin	Rust	Go
 tec_programming_language_google	Medium	Which programming language has Google preferred for Android apps since 2019?	Kotlin	Swift	Ruby	Perl
 tec_created_python_programming	Medium	Who created the Python programming language?	Guido van Rossum	Bjarne Stroustrup	James Gosling	Linus Torvalds
+tec_sending_email_bcc	Medium	When sending an email, what does the 'Bcc' field stand for?	Blind carbon copy	Basic contact copy	Backup cloud copy	Bulk courtesy copy
+tec_long_electronic_machines	Medium	Long before electronic machines, what was a 'computer'?	A person who did calculations	A brass calculating wheel	A ship's navigation chart	A clerk's ledger book
+tec_word_modem_short	Medium	The word 'modem' is short for what?	Modulator-demodulator	Mobile data emitter	Modular electronic memory	Model data machine
+tec_word_pixel_short	Medium	The word 'pixel' is short for what?	Picture element	Picture cell	Point of light	Print element
+tec_radar_stand	Medium	What does 'radar' stand for?	Radio detection and ranging	Radial distance and range	Radio alert and alarm	Remote area detection and reporting
+tec_scuba_stand	Medium	What does 'scuba' stand for?	Self-contained underwater breathing apparatus	Sealed cylinder for underwater breathing air	Submarine crew underwater breathing aid	Standard compressed underwater breathing air
+tec_nft_stand	Medium	What does 'NFT' stand for?	Non-fungible token	Network file transfer	New financial technology	Numbered format token
+tec_chatbot_hallucinates	Medium	When an AI chatbot 'hallucinates', what does it do?	States made-up things as if they were true	Starts answering in random languages	Shows pictures nobody asked for	Freezes and refuses to answer
+tec_ransomware_malicious_software	Medium	Ransomware is malicious software that does what?	Locks your files until you pay	Shows you endless pop-up adverts	Secretly mines cryptocurrency	Sends spam from your email
+tec_car_maker_logo_4	Medium	Which car maker's logo is a trident, taken from Neptune's fountain in Bologna?	Maserati	Alfa Romeo	Lamborghini	Ferrari
+tec_car_model_best	Medium	Which car model is the best-selling of all time, with over 50 million sold?	The Toyota Corolla	The Volkswagen Beetle	The Ford Model T	The Honda Civic
+tec_willis_carrier_1902	Medium	Willis Carrier's 1902 invention was first built to help a printing plant. What was it?	Air conditioning	The photocopier	The conveyor belt	The electric fan
+tec_engineer_designed_original	Medium	Which engineer designed the original Volkswagen Beetle?	Ferdinand Porsche	Karl Benz	Gottlieb Daimler	Ettore Bugatti
 day2_ram_vs_dysk	Hard	Why does a computer slow down when RAM runs out?	It starts swapping data to much slower storage	The processor overheats and throttles	The screen starts refreshing slower	The network connection is throttled
 tec_turing	Hard	Who is regarded as the father of computer science and cracked the Enigma cipher?	Alan Turing	John von Neumann	Charles Babbage	Claude Shannon
 tec_enigma_polacy	Hard	Which Pole co-created the first break of the Enigma cipher?	Marian Rejewski	Stefan Banach	Jan Czochralski	Kazimierz Funk
@@ -303,6 +321,17 @@ tec_nfc_used_contactless	Hard	What does 'NFC', used for contactless payments, st
 tec_css_language_styling	Hard	What does 'CSS', the language for styling web pages, stand for?	Cascading Style Sheets	Computer Styling System	Coded Site Scripts	Creative Screen Styles
 tec_jpeg_stand	Hard	What does 'JPEG' stand for?	Joint Photographic Experts Group	Java Picture Encoding Group	Joint Pixel Exchange Graphics	Just Plain Edited Graphics
 tec_gif_stand	Hard	What does 'GIF' stand for?	Graphics Interchange Format	General Image File	Graphic Internet Frame	Grid Image Format
+tec_hollywood_star_invented	Hard	Which Hollywood star co-invented frequency hopping, an idea behind Wi-Fi and Bluetooth?	Hedy Lamarr	Grace Kelly	Marilyn Monroe	Greta Garbo
+tec_jacquard_loom_1804	Hard	The Jacquard loom of 1804, which inspired early computers, wove patterns controlled by what?	Punched cards	Spinning cams	Glass marbles	Wax cylinders
+tec_oled_screens_stand	Hard	In 'OLED' screens, what does the 'O' stand for?	Organic	Optical	Oxide	Ordered
+tec_patented_windscreen_wiper	Hard	Who patented the windscreen wiper in 1903?	Mary Anderson	Henry Ford	Bertha Benz	Garrett Morgan
+tec_englishman_percy_shaw	Hard	What did Englishman Percy Shaw invent in 1934 to mark road edges at night?	Cat's eyes	Traffic cones	Zebra crossings	Speed bumps
+tec_samsung_began_1938	Hard	Samsung began in 1938 as a small shop trading in what?	Dried fish and noodles	Silk and cotton	Bicycle parts	Valve radios
+tec_car_maker_badge	Hard	Which car maker's badge shows a serpent swallowing a man?	Alfa Romeo	Maserati	Lancia	Ferrari
+tec_subaru_logo_shows	Hard	Subaru's logo shows which star cluster?	The Pleiades	The Big Dipper	Orion's Belt	The Southern Cross
+tec_volvo_circle_arrow	Hard	Volvo's circle-and-arrow logo is the ancient symbol for which metal?	Iron	Copper	Gold	Lead
+tec_country_opened_nuclear	Hard	Which country opened the first nuclear power station to supply an electricity grid, in 1954?	The Soviet Union	The United States	Britain	France
+tec_1975_kit_computer	Hard	Which 1975 kit computer, sold by mail order, kick-started the personal computer craze?	The Altair 8800	The Apple I	The Commodore PET	The IBM 5150
 day2_klucz_publiczny	Expert	In public-key cryptography, what may be shared freely?	The public key	The private key	Both keys	Neither key
 tec_moore	Expert	What does Moore's law concern?	The doubling of transistor count in chips	The doubling of internet speed each year	The steady fall in the price of memory	The rise in server power consumption
 tec_c_jezyk	Expert	Who created the C programming language?	Dennis Ritchie	Bjarne Stroustrup	James Gosling	Guido van Rossum
@@ -347,3 +376,9 @@ tecy_brunel	Expert	Which Victorian engineer built the giant steamship 'Great Eas
 tecy_elektryk_xix	Expert	In which century was the first electric car built?	The 19th	The 20th	The 21st	The 18th
 tec_very_home_video	Expert	What was the very first home video game console?	The Magnavox Odyssey	The Atari 2600	The Fairchild Channel F	The Intellivision
 tec_german_inventor_built	Expert	Which German inventor built the 'running machine', a two-wheeled ancestor of the bicycle, in 1817?	Karl Drais	Karl Benz	Gottlieb Daimler	Rudolf Diesel
+tec_herman_hollerith_punched	Expert	Herman Hollerith's punched-card tabulating machines were first used to count what?	The 1890 US census	Railway tickets in New York	Votes in a US election	Bank cheques in London
+tec_program_released_1979	Expert	Which program, released in 1979, was the first spreadsheet for personal computers?	VisiCalc	Lotus 1-2-3	Excel	SuperCalc
+tec_chemist_invented_kevlar	Expert	Which chemist invented Kevlar, the fibre in bulletproof vests, at DuPont?	Stephanie Kwolek	Wallace Carothers	Roy Plunkett	Percy Julian
+tec_swedish_american_engineer	Expert	Which Swedish-American engineer perfected the modern zip in 1913?	Gideon Sundback	Whitcomb Judson	Elias Howe	Walter Hunt
+tec_programming_language_john	Expert	Which programming language did John McCarthy create in 1958 for artificial intelligence research?	LISP	Prolog	Smalltalk	ALGOL
+tec_company_sold_quartz	Expert	Which company sold the first quartz wristwatch, the Astron, in 1969?	Seiko	Casio	Citizen	Omega

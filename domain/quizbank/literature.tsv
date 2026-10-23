@@ -123,6 +123,12 @@ lit_german_composer_scored	Easy	Which German composer scored 'The Lion King', 'G
 lit_philosopher_wrote_think	Easy	Which philosopher wrote 'I think, therefore I am'?	Rene Descartes	Immanuel Kant	Blaise Pascal	Voltaire
 lit_fairy_tale_girl_2	Easy	Which fairy-tale girl eats the porridge of three bears?	Goldilocks	Little Red Riding Hood	Gretel	Rapunzel
 lit_wrote_fifty_shades	Easy	Who wrote 'Fifty Shades of Grey'?	E. L. James	Stephenie Meyer	Sylvia Day	Jojo Moyes
+lit_artist_carved_marble	Easy	Which artist carved the famous marble statue of David in Florence?	Michelangelo	Donatello	Bernini	Leonardo da Vinci
+lit_members_set_out	Easy	How many members set out in the Fellowship of the Ring?	Nine	Seven	Eight	Twelve
+lit_lord_rings_ents	Easy	In 'The Lord of the Rings', what are the Ents?	Giant walking tree-folk	Giant talking eagles	Mountain trolls	Cave-dwelling goblins
+lit_alice_wonderland_happens	Easy	In 'Alice in Wonderland', what happens when Alice drinks from the bottle labelled 'Drink me'?	She shrinks	She grows huge	She falls asleep	She turns invisible
+lit_grimm_fairy_tale	Easy	In the Grimm fairy tale, who lets down her long hair from a tower so a witch can climb up?	Rapunzel	Snow White	Gretel	Sleeping Beauty
+lit_green_farming_land	Easy	What is the name of the green farming land where Tolkien's hobbits live?	The Shire	Rivendell	Gondor	Rohan
 cultw_wojna_pokoj	Medium	Who wrote War and Peace?	Leo Tolstoy	Fyodor Dostoevsky	Anton Chekhov	Ivan Turgenev
 cultw_don_kichot	Medium	Which novel is often called the first modern European novel?	Don Quixote	Robinson Crusoe	Gulliver's Travels	The Decameron
 cultw_kafka	Medium	Which writer is known for The Trial and The Metamorphosis?	Franz Kafka	Thomas Mann	Hermann Hesse	Robert Musil
@@ -402,6 +408,15 @@ lit_author_wrote_dead	Medium	Which author wrote 'Dead Souls' and 'The Overcoat'?
 lit_irish_poet_won	Medium	Which Irish poet won the Nobel Prize in Literature in 1923?	W. B. Yeats	James Joyce	Oscar Wilde	Seamus Heaney
 lit_american_poet_wrote_2	Medium	Which American poet wrote 'Because I could not stop for Death'?	Emily Dickinson	Sylvia Plath	Maya Angelou	Edna St. Vincent Millay
 lit_lebanese_american_poet	Medium	Which Lebanese-American poet wrote 'The Prophet'?	Kahlil Gibran	Amin Maalouf	Rumi	Omar Khayyam
+lit_author_wrote_cat	Medium	Which author wrote 'The Cat in the Hat'?	Dr. Seuss	Roald Dahl	Shel Silverstein	Maurice Sendak
+lit_poet_wrote_charge	Medium	Which poet wrote 'The Charge of the Light Brigade'?	Alfred, Lord Tennyson	Rudyard Kipling	William Wordsworth	Lord Byron
+lit_writer_poem_ends	Medium	Which writer's poem 'If—' ends 'you'll be a Man, my son'?	Rudyard Kipling	Robert Frost	Alfred Tennyson	W. B. Yeats
+lit_young_narrator_treasure	Medium	Who is the young narrator of 'Treasure Island'?	Jim Hawkins	Ben Gunn	Billy Bones	Squire Trelawney
+lit_composed_eine_kleine	Medium	Who composed 'Eine kleine Nachtmusik'?	Mozart	Beethoven	Haydn	Schubert
+lit_composed_moonlight_sonata	Medium	Who composed the 'Moonlight Sonata'?	Beethoven	Chopin	Mozart	Liszt
+lit_instrument_niccolo_paganini	Medium	Which instrument did Niccolo Paganini, rumoured to have sold his soul to the devil, play?	The violin	The piano	The cello	The flute
+lit_symphonies_beethoven_complete	Medium	How many symphonies did Beethoven complete?	Nine	Five	Twelve	Forty-one
+lit_roald_dahl_hero	Medium	Which Roald Dahl hero escapes his cruel aunts by travelling inside a giant peach?	James	Charlie	Danny	George
 cultw_boska_komedia	Hard	How many parts does Dante's Divine Comedy have?	Three	Two	Four	Seven
 cultw_ulisses_joyce	Hard	In which city does Joyce's Ulysses take place over one day?	Dublin	London	Trieste	Paris
 lit_solaris	Hard	Who wrote 'Solaris'?	Stanislaw Lem	Isaac Asimov	Arthur C. Clarke	Philip K. Dick
@@ -515,6 +530,18 @@ lit_spanish_painter_created	Hard	Which Spanish painter created 'The Third of May
 lit_composed_rhapsody_blue	Hard	Who composed 'Rhapsody in Blue'?	George Gershwin	Leonard Bernstein	Aaron Copland	Irving Berlin
 lit_composed_opera_carmen	Hard	Who composed the opera 'Carmen'?	Georges Bizet	Giuseppe Verdi	Giacomo Puccini	Jules Massenet
 lit_composed_opera_aida	Hard	Who composed the opera 'Aida'?	Giuseppe Verdi	Giacomo Puccini	Richard Wagner	Gioachino Rossini
+lit_shakespeare_play_stage	Hard	Which Shakespeare play has the famous stage direction 'Exit, pursued by a bear'?	The Winter's Tale	The Tempest	As You Like It	Cymbeline
+lit_darcy_grand_estate	Hard	What is the name of Mr Darcy's grand estate in 'Pride and Prejudice'?	Pemberley	Netherfield	Thornfield	Mansfield Park
+lit_wrote_vanity_fair	Hard	Who wrote 'Vanity Fair', with its scheming heroine Becky Sharp?	William Thackeray	Anthony Trollope	Charles Dickens	Thomas Hardy
+lit_wrote_middlemarch	Hard	Who wrote 'Middlemarch'?	George Eliot	Elizabeth Gaskell	Jane Austen	Anne Bronte
+lit_wrote_rime_ancient	Hard	Who wrote 'The Rime of the Ancient Mariner', about a sailor cursed for shooting an albatross?	Samuel Taylor Coleridge	William Wordsworth	John Keats	William Blake
+lit_romantic_poet_mad	Hard	Which Romantic poet was called 'mad, bad and dangerous to know'?	Lord Byron	Percy Bysshe Shelley	John Keats	William Blake
+lit_painted_school_athens	Hard	Who painted 'The School of Athens' in the Vatican?	Raphael	Michelangelo	Botticelli	Titian
+lit_painter_hid_man	Hard	Which painter hid a man's face behind a floating green apple in 'The Son of Man'?	Rene Magritte	Salvador Dali	Joan Miro	Max Ernst
+lit_composed_six_brandenburg	Hard	Who composed the six 'Brandenburg Concertos'?	Johann Sebastian Bach	George Frideric Handel	Antonio Vivaldi	Georg Philipp Telemann
+lit_composer_wrote_sprach	Hard	Which composer wrote 'Also sprach Zarathustra', made famous by the film '2001'?	Richard Strauss	Johann Strauss II	Richard Wagner	Gustav Mahler
+lit_nessun_dorma_aria	Hard	'Nessun dorma' is an aria from which Puccini opera?	Turandot	Tosca	La Boheme	Madama Butterfly
+lit_astronomer_poet_wrote	Hard	Which astronomer-poet wrote the 'Rubaiyat', with its verses on wine and fate?	Omar Khayyam	Rumi	Hafez	Ferdowsi
 cultw_genji	Expert	The Tale of Genji, often called the first novel, came from which country?	Japan	China	Korea	India
 lit_iliada_wers	Expert	What word does Homer's 'Iliad' open with?	Rage (wrath)	War	Muse	Gods
 lit_proust	Expert	Who wrote the cycle 'In Search of Lost Time'?	Marcel Proust	Gustave Flaubert	Honore de Balzac	Emile Zola
@@ -562,3 +589,11 @@ lity_magritte	Expert	Which painter wrote 'This is not a pipe' beneath a picture 
 lity_fontanna	Expert	Which artist shocked the art world by exhibiting a urinal titled 'Fountain'?	Marcel Duchamp	Andy Warhol	Rene Magritte	Pablo Picasso
 lit_painted_garden_earthly	Expert	Who painted 'The Garden of Earthly Delights'?	Hieronymus Bosch	Pieter Bruegel	Jan van Eyck	Albrecht Durer
 lit_composed_hall_mountain	Expert	Who composed 'In the Hall of the Mountain King'?	Edvard Grieg	Jean Sibelius	Carl Nielsen	Antonin Dvorak
+lit_painted_arnolfini_portrait	Expert	Who painted 'The Arnolfini Portrait', with a convex mirror on the back wall?	Jan van Eyck	Hans Holbein	Pieter Bruegel	Albrecht Durer
+lit_composed_dreamy_piano	Expert	Who composed the dreamy piano pieces 'Gymnopedies'?	Erik Satie	Claude Debussy	Maurice Ravel	Gabriel Faure
+lit_german_author_wrote_3	Expert	Which German author wrote 'The Tin Drum'?	Gunter Grass	Heinrich Boll	Thomas Mann	Hermann Hesse
+lit_sicilian_prince_wrote	Expert	Which Sicilian prince wrote 'The Leopard', published after his death?	Tomasi di Lampedusa	Luigi Pirandello	Alberto Moravia	Italo Svevo
+lit_italian_author_wrote	Expert	Which Italian author wrote 'Invisible Cities' and 'If on a Winter's Night a Traveller'?	Italo Calvino	Umberto Eco	Primo Levi	Dino Buzzati
+lit_wrote_comic_czech	Expert	Who wrote the comic Czech novel 'The Good Soldier Svejk'?	Jaroslav Hasek	Karel Capek	Bohumil Hrabal	Milan Kundera
+lit_ferdowsi_book_kings	Expert	What is the name of Ferdowsi's 'Book of Kings', Iran's national epic?	The Shahnameh	The Masnavi	The Rubaiyat	The Avesta
+lit_detective_created_edgar	Expert	Which detective, created by Edgar Allan Poe in 1841, is often called the first of modern fiction?	C. Auguste Dupin	Sherlock Holmes	Inspector Lestrade	Sergeant Cuff

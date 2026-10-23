@@ -135,7 +135,14 @@ object AnimalQuestions {
         q("ani_bird_symbol_long", "Which bird is a symbol of long life in Japan, where people fold a thousand paper ones?", "Crane", listOf("Swan", "Heron", "Stork"), E),
         q("ani_silkworm_turn", "What does a silkworm turn into?", "A moth", listOf("A butterfly", "A beetle", "A wasp"), E),
         q("ani_male_cat", "What is a male cat called?", "A tom", listOf("A buck", "A billy", "A sire"), E),
-        q("ani_small_hardy_pony", "Which small, hardy pony comes from the islands north of Scotland?", "Shetland pony", listOf("Welsh pony", "Connemara pony", "Exmoor pony"), E)
+        q("ani_small_hardy_pony", "Which small, hardy pony comes from the islands north of Scotland?", "Shetland pony", listOf("Welsh pony", "Connemara pony", "Exmoor pony"), E),
+        q("ani_guinea_pigs_originally", "Where do guinea pigs originally come from?", "South America", listOf("West Africa", "New Guinea", "Southeast Asia"), E),
+        q("ani_contrary_popular_myth", "Contrary to the popular myth, how long can a goldfish remember things?", "For months", listOf("About three seconds", "About a minute", "About an hour"), E),
+        q("ani_actually_makes_bull", "What actually makes a bull charge at a matador's cape?", "The cape's movement", listOf("Its red colour", "The crowd's noise", "The smell of the cloth"), E),
+        q("ani_venison_meat_animal", "Venison is the meat of which animal?", "Deer", listOf("Wild boar", "Rabbit", "Goose"), E),
+        q("ani_colour_live_lobsters", "What colour are most live lobsters before they are cooked?", "Dark greenish-brown", listOf("Bright red", "Pale pink", "Pure white"), E),
+        q("ani_blue_whales_mainly", "What do blue whales mainly eat?", "Krill", listOf("Seals", "Squid", "Seaweed"), E),
+        q("ani_big_cat_black", "Which big cat has black 'tear marks' running from its eyes to its mouth?", "The cheetah", listOf("The leopard", "The jaguar", "The lynx"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -311,7 +318,17 @@ object AnimalQuestions {
         q("ani_elephant_tusks", "What are an elephant's tusks?", "Enlarged incisor teeth", listOf("Horns", "Enlarged canine teeth", "Bony growths"), M),
         q("ani_heaviest_invertebrate_earth", "Which is the heaviest invertebrate on Earth?", "Colossal squid", listOf("Giant squid", "Giant Pacific octopus", "Lion's mane jellyfish"), M),
         q("ani_sea_creature_usually", "Which sea creature is usually ranked the most venomous animal in the ocean?", "Box jellyfish", listOf("Stonefish", "Blue-ringed octopus", "Sea snake"), M),
-        q("ani_truly_wild_horse", "Which is the only truly wild horse species still living, saved from extinction in Mongolia?", "Przewalski's horse", listOf("Camargue horse", "Akhal-Teke horse", "Mongolian mustang"), M)
+        q("ani_truly_wild_horse", "Which is the only truly wild horse species still living, saved from extinction in Mongolia?", "Przewalski's horse", listOf("Camargue horse", "Akhal-Teke horse", "Mongolian mustang"), M),
+        q("ani_farm_animal_learned", "Which farm animal has learned to play simple video games with a joystick?", "The pig", listOf("The cow", "The sheep", "The goat"), M),
+        q("ani_almost_never_see", "Why do you almost never see baby pigeons?", "They leave the nest almost fully grown", listOf("They hatch only in the depths of winter", "They spend their first weeks underground", "Most of them are raised far out at sea"), M),
+        q("ani_blue_whales_use", "What do blue whales use instead of teeth to filter their food?", "Baleen plates", listOf("Gill rakers", "Bony ridges", "Rows of bristly tusks"), M),
+        q("ani_kopi_luwak_priciest", "'Kopi luwak', one of the priciest coffees, is made from beans that have passed through which animal?", "The civet", listOf("The bat", "The monkey", "The goat"), M),
+        q("ani_flamingos_hold_heads", "How do flamingos hold their heads while they feed?", "Upside down", listOf("Tilted sideways", "Fully under the mud", "High above the water"), M),
+        q("ani_sea_creature_some", "Which sea creature can, in some species, regrow a whole new body from a single severed arm?", "The starfish", listOf("The octopus", "The crab", "The sea urchin"), M),
+        q("ani_roughly_hours_day", "Roughly how many hours a day does a giant panda spend eating?", "About 12", listOf("About 2", "About 6", "About 20"), M),
+        q("ani_african_dog_breed", "Which African dog breed is famous for not barking, making yodel-like sounds instead?", "The Basenji", listOf("The Saluki", "The Rhodesian Ridgeback", "The Dalmatian"), M),
+        q("ani_rodents_laugh_high", "Which rodents 'laugh' with high-pitched chirps when scientists tickle them?", "Rats", listOf("Hamsters", "Guinea pigs", "Squirrels"), M),
+        q("ani_guano_once_fortune", "Guano, once a fortune-making fertiliser, is the droppings of which animals?", "Seabirds and bats", listOf("Cattle and sheep", "Pigs and goats", "Horses and donkeys"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -413,7 +430,22 @@ object AnimalQuestions {
         q("ani_living_fossil_fish", "Which 'living fossil' fish, thought extinct for millions of years, was found alive in 1938?", "The coelacanth", listOf("The lungfish", "The sturgeon", "The hagfish"), H),
         q("ani_japanese_dog_breed", "Which Japanese dog breed was the famously loyal Hachiko?", "The Akita", listOf("The Shiba Inu", "The Tosa", "The Japanese Spitz"), H),
         q("ani_cat_breed_having", "Which cat breed is famous for having no tail?", "The Manx", listOf("The Sphynx", "The Ragdoll", "The Burmese"), H),
-        q("ani_heaviest_spider_world", "Which is the heaviest spider in the world?", "The Goliath birdeater", listOf("The black widow", "The huntsman", "The wolf spider"), H)
+        q("ani_heaviest_spider_world", "Which is the heaviest spider in the world?", "The Goliath birdeater", listOf("The black widow", "The huntsman", "The wolf spider"), H),
+        q("ani_myth_lemmings_leap", "The myth that lemmings leap off cliffs in mass suicide was spread mainly by what?", "A 1958 Disney nature film", listOf("A Norwegian folk tale", "A Victorian zoology book", "A famous 1990s video game"), H),
+        q("ani_unusual_portuguese_man", "What is unusual about the Portuguese man o' war, often taken for a jellyfish?", "It is a colony of many tiny animals", listOf("It has a brain in each tentacle", "It can live out of water for weeks", "It is actually a type of sea snail"), H),
+        q("ani_ambergris_once_worth", "Ambergris, once worth more than gold to perfumers, comes from which animal's gut?", "The sperm whale", listOf("The humpback whale", "The walrus", "The giant squid"), H),
+        q("ani_hearts_earthworm", "How many hearts does an earthworm have?", "Five", listOf("One", "Two", "Ten"), H),
+        q("ani_animals_active_dawn", "What are animals that are most active at dawn and dusk called?", "Crepuscular", listOf("Nocturnal", "Diurnal", "Matutinal"), H),
+        q("ani_some_horned_lizards", "How do some horned lizards defend themselves against predators?", "By squirting blood from their eyes", listOf("By shedding their whole skin", "By spitting venom at the eyes", "By puffing up into a ball"), H),
+        q("ani_songbird_nicknamed_butcher", "Which songbird, nicknamed the 'butcher bird', impales its prey on thorns?", "The shrike", listOf("The magpie", "The jay", "The starling"), H),
+        q("ani_dog_breed_originally", "Which dog breed was originally bred in southern Africa to help hunt lions?", "The Rhodesian Ridgeback", listOf("The Great Dane", "The Bullmastiff", "The Saluki"), H),
+        q("ani_cat_breed_nicknamed", "Which cat breed is nicknamed 'the swimming cat' for its love of water?", "The Turkish Van", listOf("The Siamese", "The Persian", "The Ragdoll"), H),
+        q("ani_eel_like_fish", "Which eel-like fish defends itself by flooding the water with huge amounts of slime?", "The hagfish", listOf("The lamprey", "The moray eel", "The lungfish"), H),
+        q("ani_insect_000_lenses", "Which insect, with up to 30,000 lenses per eye, catches most of the prey it chases?", "The dragonfly", listOf("The horsefly", "The praying mantis", "The wasp"), H),
+        q("ani_bird_nest_soup", "Bird's nest soup is made from nests built mainly from what?", "Swiftlet saliva", listOf("Woven grass and mud", "Seaweed and feathers", "Caterpillar silk"), H),
+        q("ani_desert_rodent_whole", "Which desert rodent can go its whole life without drinking water?", "The kangaroo rat", listOf("The jerboa", "The gerbil", "The desert hamster"), H),
+        q("ani_group_giant_pandas", "What is a group of giant pandas sometimes called?", "An embarrassment", listOf("A bamboozle", "A cuddle", "A shrug"), H),
+        q("ani_proteins_rex_bone", "Proteins from a T. rex bone most closely matched those of which living animal?", "The chicken", listOf("The crocodile", "The Komodo dragon", "The iguana"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -462,6 +494,14 @@ object AnimalQuestions {
         q("aniy_strus_oko", "An ostrich's eye is bigger than which of its organs?", "Its brain", listOf("Its heart", "Its stomach", "Its liver"), X),
         q("aniy_zolwie_morskie", "How do newly hatched sea turtles find the sea at night?", "They head for the brighter horizon", listOf("They follow their mother", "They smell the salt", "They listen for waves"), X),
         q("ani_small_furry_animal", "Which small furry animal is one of the elephant's closest living relatives?", "The rock hyrax", listOf("The capybara", "The pangolin", "The wombat"), X),
-        q("ani_baby_echidna", "What is a baby echidna called?", "A puggle", listOf("A joey", "A kit", "A cub"), X)
+        q("ani_baby_echidna", "What is a baby echidna called?", "A puggle", listOf("A joey", "A kit", "A cub"), X),
+        q("ani_bird_bill_longer", "Which is the only bird with a bill longer than the rest of its body?", "The sword-billed hummingbird", listOf("The Australian pelican", "The long-billed curlew", "The toucan"), X),
+        q("ani_tiny_insects_born", "Which tiny insects can be born already pregnant?", "Aphids", listOf("Fleas", "Termites", "Mosquitoes"), X),
+        q("ani_olm_blind_salamander", "The olm, a blind salamander of European caves, can survive without food for about how long?", "Up to ten years", listOf("About a month", "About a year", "About three years"), X),
+        q("ani_shorebird_flies_nonstop", "Which shorebird flies nonstop from Alaska to New Zealand, over 11,000 km without rest?", "The bar-tailed godwit", listOf("The Arctic tern", "The wandering albatross", "The sooty shearwater"), X),
+        q("ani_mammal_shortest_pregnancies", "Which mammal has one of the shortest pregnancies, only about 12 days?", "The Virginia opossum", listOf("The house mouse", "The rabbit", "The hamster"), X),
+        q("ani_flehmen_response_cat", "What is the 'flehmen response', when a cat or horse curls back its upper lip?", "A way of taking in scents", listOf("A sign of extreme anger", "A way of cooling the mouth", "A warning call to the herd"), X),
+        q("ani_rodent_live_over", "Which rodent can live over 30 years and almost never gets cancer?", "The naked mole-rat", listOf("The capybara", "The chinchilla", "The porcupine"), X),
+        q("ani_some_deep_sea", "In some deep-sea anglerfish, what happens to the tiny male?", "He fuses permanently onto the female", listOf("He becomes the female's glowing lure", "He is eaten right after mating", "He guards the eggs inside his mouth"), X)
     )
 }

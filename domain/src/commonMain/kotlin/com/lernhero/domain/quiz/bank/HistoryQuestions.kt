@@ -193,7 +193,13 @@ object HistoryQuestions {
         q("his_lively_dance_craze", "Which lively dance was the craze of the 'Roaring Twenties'?", "The Charleston", listOf("The Twist", "The Jive", "The Tango"), E),
         q("his_san_francisco_hippie", "San Francisco's hippie gathering of 1967 is remembered as the 'Summer of...' what?", "Love", listOf("Peace", "Flowers", "Music"), E),
         q("his_colony_jewel_crown", "Which colony was called the 'Jewel in the Crown' of the British Empire?", "India", listOf("Egypt", "Canada", "Australia"), E),
-        q("his_european_country_ruled_2", "Which European country ruled Vietnam as part of 'Indochina' until 1954?", "France", listOf("Britain", "Netherlands", "Portugal"), E)
+        q("his_european_country_ruled_2", "Which European country ruled Vietnam as part of 'Indochina' until 1954?", "France", listOf("Britain", "Netherlands", "Portugal"), E),
+        q("his_sharpshooter_star_buffalo", "Which sharpshooter was the star of Buffalo Bill's Wild West show?", "Annie Oakley", listOf("Calamity Jane", "Belle Starr", "Pearl Hart"), E),
+        q("his_italian_city_state", "From which Italian city-state did Christopher Columbus come?", "Genoa", listOf("Venice", "Florence", "Naples"), E),
+        q("his_cold_war_contest", "What was the Cold War contest between the USA and the Soviet Union to reach the Moon first called?", "The Space Race", listOf("The Arms Race", "The Moon Rush", "The Star Duel"), E),
+        q("his_according_bible_sea", "According to the Bible, which sea did Moses part to lead the Israelites out of Egypt?", "The Red Sea", listOf("The Dead Sea", "The Mediterranean", "The Sea of Galilee"), E),
+        q("his_medieval_court_jester", "What was a medieval court jester's job?", "Making the court laugh", listOf("Tasting the king's food", "Training the knights' horses", "Collecting the peasants' taxes"), E),
+        q("his_town_crier_old", "What did a town crier do in old towns?", "Shouted out the news in the streets", listOf("Rang the church bells", "Wept at funerals for a fee", "Guarded the town gates"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -544,7 +550,18 @@ object HistoryQuestions {
         q("his_european_country_ruled_3", "Which European country ruled Libya as a colony from 1911?", "Italy", listOf("France", "Britain", "Spain"), M),
         q("his_european_country_ruled_4", "Which European country ruled Namibia as a colony before World War I?", "Germany", listOf("Britain", "Portugal", "Belgium"), M),
         q("his_father_alexander_great", "Who was the father of Alexander the Great?", "Philip II", listOf("Darius III", "Leonidas I", "Pericles"), M),
-        q("his_roman_orator_attacked", "Which Roman orator attacked Catiline and Mark Antony in famous speeches?", "Cicero", listOf("Cato", "Seneca", "Pliny"), M)
+        q("his_roman_orator_attacked", "Which Roman orator attacked Catiline and Mark Antony in famous speeches?", "Cicero", listOf("Cato", "Seneca", "Pliny"), M),
+        q("his_pax_romana", "What was the 'Pax Romana'?", "A long era of peace in the Roman Empire", listOf("A peace treaty between Rome and Carthage", "The Roman army's oath of loyalty", "A law giving citizenship to all Romans"), M),
+        q("his_roman_denarius", "What was a Roman 'denarius'?", "A silver coin", listOf("A tax on bread", "A unit of ten soldiers", "A public bath"), M),
+        q("his_disaster_killed_quarter", "Which disaster killed about a quarter of Londoners in 1665?", "The Great Plague", listOf("The Great Fire", "A cholera outbreak", "A smallpox epidemic"), M),
+        q("his_nazi_pogrom_november", "Why was the Nazi pogrom of November 1938 called 'Kristallnacht'?", "For the broken glass of Jewish shops and homes", listOf("For the frost that covered Berlin that night", "For the crystal chandeliers looted from palaces", "For a Nazi rally held in a glass hall"), M),
+        q("his_german_industrialist_saved", "Which German industrialist saved about 1,200 Jews by employing them in his factories?", "Oskar Schindler", listOf("Raoul Wallenberg", "Albert Speer", "Claus von Stauffenberg"), M),
+        q("his_cold_war_domino", "What did the Cold War 'domino theory' claim?", "Neighbours of a communist state would fall too", listOf("Nuclear war would destroy every city in a row", "Sanctions would topple dictators one by one", "Every war leads to an even bigger one"), M),
+        q("his_country_genocide_kill", "In which country did a genocide kill around 800,000 people in 1994?", "Rwanda", listOf("Burundi", "Uganda", "Sudan"), M),
+        q("his_ancient_city_among", "Which ancient city, among the oldest in the world, is famous in the Bible for walls that came tumbling down?", "Jericho", listOf("Babylon", "Nineveh", "Ur"), M),
+        q("his_dead_sea_scrolls", "What are the Dead Sea Scrolls, found in caves from 1947 onwards?", "Ancient Jewish religious texts", listOf("Egyptian royal tax records", "Roman military maps", "Babylonian star charts"), M),
+        q("his_lawrence_arabia_helped", "'Lawrence of Arabia' helped lead an Arab revolt against which empire?", "The Ottoman Empire", listOf("The British Empire", "The Persian Empire", "The Russian Empire"), M),
+        q("his_massachusetts_town_people", "In which Massachusetts town were 19 people hanged after witch trials in 1692?", "Salem", listOf("Boston", "Plymouth", "Concord"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -796,7 +813,26 @@ object HistoryQuestions {
         q("his_led_ghana_independence", "Who led Ghana to independence in 1957 and became its first president?", "Kwame Nkrumah", listOf("Jomo Kenyatta", "Julius Nyerere", "Kenneth Kaunda"), H),
         q("his_city_last_tsar", "In which city were the last tsar and his family executed in 1918?", "Yekaterinburg", listOf("Tobolsk", "Omsk", "Novosibirsk"), H),
         q("his_russian_tsar_freed", "Which Russian tsar freed the serfs in 1861?", "Alexander II", listOf("Nicholas II", "Alexander III", "Nicholas I"), H),
-        q("his_french_explorer_founded", "Which French explorer founded Quebec City in 1608?", "Samuel de Champlain", listOf("Jacques Cartier", "Robert de La Salle", "Jacques Marquette"), H)
+        q("his_french_explorer_founded", "Which French explorer founded Quebec City in 1608?", "Samuel de Champlain", listOf("Jacques Cartier", "Robert de La Salle", "Jacques Marquette"), H),
+        q("his_medieval_castle_toilet", "What was a medieval castle toilet, often just a hole above the moat, called?", "A garderobe", listOf("A buttery", "A solar", "A barbican"), H),
+        q("his_queen_married_king", "Which queen was married first to the King of France and then to the King of England?", "Eleanor of Aquitaine", listOf("Isabella of France", "Catherine of Valois", "Margaret of Anjou"), H),
+        q("his_real_castilian_knight", "What was the real name of the Castilian knight known as El Cid?", "Rodrigo Diaz de Vivar", listOf("Fernando de Aragon", "Alfonso de Castilla", "Gonzalo de Cordoba"), H),
+        q("his_couple_took_english", "Which couple took the English throne in the 'Glorious Revolution' of 1688?", "William III and Mary II", listOf("Charles II and Catherine", "James II and Mary of Modena", "George I and Sophia"), H),
+        q("his_1572_massacre_french", "Which 1572 massacre of French Protestants began in Paris on a saint's feast day?", "The St Bartholomew's Day massacre", listOf("The Massacre of Glencoe", "The Siege of La Rochelle", "The Day of the Barricades"), H),
+        q("his_1934_night_long", "In the 1934 'Night of the Long Knives', Hitler purged the leaders of which Nazi group?", "The SA (Brownshirts)", listOf("The Gestapo", "The Hitler Youth", "The Luftwaffe"), H),
+        q("his_war_1756_1763", "Which war of 1756-1763, fought on several continents, is sometimes called the first world war?", "The Seven Years' War", listOf("The Thirty Years' War", "The War of the Spanish Succession", "The Napoleonic Wars"), H),
+        q("his_wave_european_revolutions", "What was the wave of European revolutions of 1848 nicknamed?", "The Springtime of Nations", listOf("The Arab Spring", "The Velvet Revolutions", "The Glorious Revolution"), H),
+        q("his_jamaican_born_nurse", "Which Jamaican-born nurse ran a 'British Hotel' for soldiers in the Crimean War?", "Mary Seacole", listOf("Florence Nightingale", "Clara Barton", "Edith Cavell"), H),
+        q("his_indian_rebellion_1857", "The Indian Rebellion of 1857 began as a mutiny among which soldiers?", "Indian sepoys", listOf("Gurkha mercenaries", "Sikh princes' guards", "British sailors"), H),
+        q("his_became_king_united_2", "Who became the first king of a united Italy, in 1861?", "Victor Emmanuel II", listOf("Umberto I", "Charles Albert", "Victor Emmanuel III"), H),
+        q("his_writer_accused_french", "Which writer accused the French army over the Dreyfus affair in the open letter 'J'accuse...!'?", "Emile Zola", listOf("Victor Hugo", "Anatole France", "Gustave Flaubert"), H),
+        q("his_revolutionary_father_nation", "Which revolutionary is called 'the father of the nation' in Taiwan and 'the forerunner of the revolution' in mainland China?", "Sun Yat-sen", listOf("Mao Zedong", "Chiang Kai-shek", "Yuan Shikai"), H),
+        q("his_1942_conference_near", "At which 1942 conference near Berlin did Nazi officials plan the 'Final Solution'?", "Wannsee", listOf("Potsdam", "Munich", "Nuremberg"), H),
+        q("his_officer_planted_briefcase", "Which officer planted the briefcase bomb in the failed July 1944 plot to kill Hitler?", "Claus von Stauffenberg", listOf("Erwin Rommel", "Wilhelm Canaris", "Albert Speer"), H),
+        q("his_failed_1944_allied", "Which failed 1944 Allied airborne operation tried to seize the Rhine bridges up to Arnhem?", "Operation Market Garden", listOf("Operation Overlord", "Operation Torch", "Operation Dragoon"), H),
+        q("his_president_signed_1830", "Which US president signed the 1830 Indian Removal Act that led to the 'Trail of Tears'?", "Andrew Jackson", listOf("Thomas Jefferson", "James Monroe", "Abraham Lincoln"), H),
+        q("his_chinese_dynasty_gunpowder", "During which Chinese dynasty was gunpowder invented, by alchemists seeking an elixir of life?", "The Tang dynasty", listOf("The Ming dynasty", "The Qin dynasty", "The Han dynasty"), H),
+        q("his_led_english_peasants", "Who led the English Peasants' Revolt of 1381?", "Wat Tyler", listOf("Jack Cade", "Robert Kett", "Owain Glyndwr"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -940,6 +976,16 @@ object HistoryQuestions {
         q("his_ancient_greek_historian", "Which ancient Greek historian wrote the history of the Peloponnesian War?", "Thucydides", listOf("Herodotus", "Xenophon", "Plutarch"), X),
         q("his_empire_ruled_shahs", "Which empire was ruled by shahs from the city of Isfahan in the 1600s?", "The Safavid Empire", listOf("The Mughal Empire", "The Ottoman Empire", "The Seljuk Empire"), X),
         q("his_italian_city_capital", "Which Italian city was the capital of the Western Roman Empire in its last decades?", "Ravenna", listOf("Milan", "Naples", "Florence"), X),
-        q("his_became_world_democratically", "Who became the world's first democratically elected female president, in Iceland in 1980?", "Vigdis Finnbogadottir", listOf("Golda Meir", "Indira Gandhi", "Gro Harlem Brundtland"), X)
+        q("his_became_world_democratically", "Who became the world's first democratically elected female president, in Iceland in 1980?", "Vigdis Finnbogadottir", listOf("Golda Meir", "Indira Gandhi", "Gro Harlem Brundtland"), X),
+        q("his_last_emperor_rule", "Who was the last emperor to rule both halves of the Roman Empire, until 395?", "Theodosius I", listOf("Constantine the Great", "Diocletian", "Justinian I"), X),
+        q("his_swedish_lion_north", "Which Swedish 'Lion of the North' was killed leading his army at Lutzen in 1632?", "Gustavus Adolphus", listOf("Charles XII", "Gustav Vasa", "Charles X Gustav"), X),
+        q("his_french_king_said", "Which French king, who said Paris was 'well worth a Mass', was assassinated in 1610?", "Henry IV", listOf("Henry III", "Louis XIII", "Francis I"), X),
+        q("his_1282_uprising_palermo", "Which 1282 uprising in Palermo against French rule began at evening prayers?", "The Sicilian Vespers", listOf("The Ciompi Revolt", "The Jacquerie", "The Revolt of the Comuneros"), X),
+        q("his_american_spy_plane", "Which American U-2 spy-plane pilot was shot down over the Soviet Union in 1960?", "Francis Gary Powers", listOf("Chuck Yeager", "John Glenn", "Rudolf Anderson"), X),
+        q("his_city_became_japan", "Which city became Japan's first permanent capital in the 700s, before Kyoto?", "Nara", listOf("Edo", "Osaka", "Kamakura"), X),
+        q("his_warlord_born_peasant", "Which warlord, born a peasant, completed the unification of Japan in 1590?", "Toyotomi Hideyoshi", listOf("Oda Nobunaga", "Tokugawa Ieyasu", "Minamoto no Yoritomo"), X),
+        q("his_17th_century_queen", "Which 17th-century queen of Ndongo and Matamba resisted the Portuguese in today's Angola?", "Nzinga", listOf("Amanirenas", "Yaa Asantewaa", "Ranavalona I"), X),
+        q("his_west_african_kingdom", "Which West African kingdom treats a Golden Stool as the sacred soul of its nation?", "The Ashanti", listOf("Benin", "Dahomey", "Oyo"), X),
+        q("his_spanish_explorer_led", "Which Spanish explorer led the first European expedition to reach the Mississippi River, in 1541?", "Hernando de Soto", listOf("Francisco Coronado", "Juan Ponce de Leon", "Alvar Nunez Cabeza de Vaca"), X)
     )
 }

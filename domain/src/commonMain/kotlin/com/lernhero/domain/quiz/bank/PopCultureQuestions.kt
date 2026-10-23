@@ -366,7 +366,13 @@ object PopCultureQuestions {
         q("pop_colour_zero_pocket", "What colour is the zero pocket on a roulette wheel?", "Green", listOf("Red", "Black", "White"), E),
         q("pop_film_studio_logo", "Which film studio's logo shows a mountain ringed by stars?", "Paramount", listOf("Universal", "Columbia", "Warner Bros."), E),
         q("pop_company_bought_marvel", "Which company bought Marvel Entertainment in 2009?", "Disney", listOf("Warner Bros.", "Sony", "Universal"), E),
-        q("pop_network_made_game", "Which TV network made 'Game of Thrones' and 'The Sopranos'?", "HBO", listOf("Netflix", "AMC", "Showtime"), E)
+        q("pop_network_made_game", "Which TV network made 'Game of Thrones' and 'The Sopranos'?", "HBO", listOf("Netflix", "AMC", "Showtime"), E),
+        q("pop_film_studio_logo_3", "Which film studio's logo shows the Earth turning in space?", "Universal", listOf("Paramount", "Columbia", "Warner Bros."), E),
+        q("pop_superhero_nicknamed_man", "Which superhero is nicknamed 'the Man of Steel'?", "Superman", listOf("Iron Man", "Captain America", "Batman"), E),
+        q("pop_crisps_come_tall", "Which crisps come in a tall tube with a moustached man on the label?", "Pringles", listOf("Doritos", "Lay's", "Cheetos"), E),
+        q("pop_superhero_nicknamed_caped", "Which superhero is nicknamed 'the Caped Crusader'?", "Batman", listOf("Superman", "Spider-Man", "The Flash"), E),
+        q("pop_game_players_try", "In which game do players try to sink each other's hidden fleet on a grid?", "Battleship", listOf("Risk", "Stratego", "Othello"), E),
+        q("pop_sportswear_brand_logo", "Which sportswear brand's logo is a 'swoosh'?", "Nike", listOf("Puma", "Reebok", "Adidas"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -814,7 +820,22 @@ object PopCultureQuestions {
         q("pop_spaces_around_standard", "How many spaces are there around a standard Monopoly board?", "40", listOf("36", "44", "52"), M),
         q("pop_animal_appears_every", "Which animal appears on every bottle of Bacardi rum?", "A bat", listOf("A parrot", "A lion", "A rooster"), M),
         q("pop_film_studio_logo_2", "Which film studio's logo shows a woman holding up a torch?", "Columbia", listOf("Paramount", "Universal", "MGM"), M),
-        q("pop_video_game_series", "Which video game series features the thumbs-up mascot 'Vault Boy'?", "Fallout", listOf("BioShock", "Borderlands", "Mass Effect"), M)
+        q("pop_video_game_series", "Which video game series features the thumbs-up mascot 'Vault Boy'?", "Fallout", listOf("BioShock", "Borderlands", "Mass Effect"), M),
+        q("pop_film_kicked_off", "Which film kicked off the Marvel Cinematic Universe in 2008?", "Iron Man", listOf("The Incredible Hulk", "Thor", "Captain America: The First Avenger"), M),
+        q("pop_1999_film_made", "Which 1999 film made the slow-motion 'bullet time' effect famous?", "The Matrix", listOf("Fight Club", "The Mummy", "Blade"), M),
+        q("pop_cartoon_features_stewie", "Which cartoon features Stewie Griffin, a baby with plans for world domination?", "Family Guy", listOf("The Simpsons", "American Dad", "Rugrats"), M),
+        q("pop_cartoon_features_bender", "Which cartoon features Bender, a beer-loving robot?", "Futurama", listOf("The Jetsons", "Rick and Morty", "South Park"), M),
+        q("pop_singer_released_2016", "Which singer released the 2016 visual album 'Lemonade'?", "Beyonce", listOf("Rihanna", "Taylor Swift", "Lady Gaga"), M),
+        q("pop_singer_albums_age", "Which singer named her albums after her age at the time, like '19', '21' and '25'?", "Adele", listOf("Lorde", "Duffy", "Dido"), M),
+        q("pop_marvel_hero_holds", "Which Marvel hero holds the title of 'Sorcerer Supreme'?", "Doctor Strange", listOf("Scarlet Witch", "Loki", "Doctor Doom"), M),
+        q("pop_super_mario_bros", "In the first 'Super Mario Bros.', who tells Mario 'Our princess is in another castle!'?", "Toad", listOf("Yoshi", "Luigi", "Lakitu"), M),
+        q("pop_men_hero_control", "Which X-Men hero can control the weather?", "Storm", listOf("Rogue", "Jean Grey", "Mystique"), M),
+        q("pop_director_made_brief", "Which director made a brief cameo in almost every one of his own films?", "Alfred Hitchcock", listOf("Stanley Kubrick", "Orson Welles", "Billy Wilder"), M),
+        q("pop_actress_played_ellen", "Which actress played Ellen Ripley in the 'Alien' films?", "Sigourney Weaver", listOf("Jodie Foster", "Linda Hamilton", "Jamie Lee Curtis"), M),
+        q("pop_bart_simpson_best", "What is the name of Bart Simpson's best friend?", "Milhouse", listOf("Nelson", "Ralph", "Martin"), M),
+        q("pop_scooby_doo_character", "Which 'Scooby-Doo' character exclaims 'Jinkies!'?", "Velma", listOf("Daphne", "Fred", "Shaggy"), M),
+        q("pop_disney_cinderella_song", "In Disney's 'Cinderella', which song does the Fairy Godmother sing?", "Bibbidi-Bobbidi-Boo", listOf("A Dream Is a Wish Your Heart Makes", "When You Wish Upon a Star", "Someday My Prince Will Come"), M),
+        q("pop_animated_film_features_3", "Which animated film features the song 'Everything Is Awesome'?", "The Lego Movie", listOf("Trolls", "Sing", "Despicable Me"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -999,7 +1020,21 @@ object PopCultureQuestions {
         q("pop_directed_lost_translation", "Who directed 'Lost in Translation' (2003)?", "Sofia Coppola", listOf("Greta Gerwig", "Kathryn Bigelow", "Jane Campion"), H),
         q("pop_south_korean_director", "Which South Korean director made 'Parasite'?", "Bong Joon-ho", listOf("Park Chan-wook", "Kim Ki-duk", "Lee Chang-dong"), H),
         q("pop_singer_songwriter_wrote", "Which singer-songwriter wrote the much-covered song 'Hallelujah'?", "Leonard Cohen", listOf("Bob Dylan", "Jeff Buckley", "Paul Simon"), H),
-        q("pop_french_singer_nicknamed", "Which French singer, nicknamed 'the Little Sparrow', sang 'Non, je ne regrette rien'?", "Edith Piaf", listOf("Juliette Greco", "Francoise Hardy", "Dalida"), H)
+        q("pop_french_singer_nicknamed", "Which French singer, nicknamed 'the Little Sparrow', sang 'Non, je ne regrette rien'?", "Edith Piaf", listOf("Juliette Greco", "Francoise Hardy", "Dalida"), H),
+        q("pop_film_features_line_11", "Which film features the line 'I'll have what she's having'?", "When Harry Met Sally", listOf("Pretty Woman", "Annie Hall", "Sleepless in Seattle"), H),
+        q("pop_british_sitcom_follows", "Which British sitcom follows the market traders Del Boy and Rodney Trotter?", "Only Fools and Horses", listOf("Fawlty Towers", "Blackadder", "Red Dwarf"), H),
+        q("pop_american_metal_band", "Which American metal band performs in horror masks and matching boiler suits?", "Slipknot", listOf("Kiss", "Ghost", "Rammstein"), H),
+        q("pop_beatles_song_working", "Which Beatles song had the working title 'Scrambled Eggs'?", "Yesterday", listOf("Let It Be", "Hey Jude", "Michelle"), H),
+        q("pop_song_loreen_win", "With which song did Loreen win Eurovision for Sweden in 2012?", "Euphoria", listOf("Tattoo", "Waterloo", "Heroes"), H),
+        q("pop_studio_develops_main", "Which studio develops the main series of Pokemon games?", "Game Freak", listOf("HAL Laboratory", "Intelligent Systems", "Retro Studios"), H),
+        q("pop_word_game_sold", "Which word game was first sold as 'Criss-Crosswords'?", "Scrabble", listOf("Boggle", "Upwords", "Bananagrams"), H),
+        q("pop_japanese_director_made_2", "Which Japanese director made 'Seven Samurai' and 'Rashomon'?", "Akira Kurosawa", listOf("Yasujiro Ozu", "Hayao Miyazaki", "Takeshi Kitano"), H),
+        q("pop_director_made_pan", "Which director made 'Pan's Labyrinth' and 'The Shape of Water'?", "Guillermo del Toro", listOf("Alfonso Cuaron", "Alejandro Inarritu", "Pedro Almodovar"), H),
+        q("pop_director_made_grand", "Which director made 'The Grand Budapest Hotel'?", "Wes Anderson", listOf("Wes Craven", "Sofia Coppola", "Spike Jonze"), H),
+        q("pop_peanuts_character_never", "Which 'Peanuts' character never lets go of his security blanket?", "Linus", listOf("Schroeder", "Pig-Pen", "Franklin"), H),
+        q("pop_stand_comics", "What does 'DC' stand for in DC Comics?", "Detective Comics", listOf("Dynamic Comics", "Daily Cartoons", "Direct Comics"), H),
+        q("pop_green_goblin_spider", "Who is the Green Goblin, Spider-Man's enemy, in everyday life?", "Norman Osborn", listOf("Otto Octavius", "Eddie Brock", "Wilson Fisk"), H),
+        q("pop_anime_follows_student", "Which anime follows a student who finds a notebook that kills anyone whose name is written in it?", "Death Note", listOf("Attack on Titan", "Naruto", "Bleach"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -1055,6 +1090,14 @@ object PopCultureQuestions {
         q("pop_actor_won_best", "Which actor has won the most Best Actor Oscars, with three?", "Daniel Day-Lewis", listOf("Jack Nicholson", "Tom Hanks", "Marlon Brando"), X),
         q("pop_elton_john_birth", "What was Elton John's name at birth?", "Reginald Dwight", listOf("Elton Hercules", "Gordon Sumner", "Farrokh Bulsara"), X),
         q("pop_best_selling_single", "Which is the best-selling single of all time?", "'White Christmas'", listOf("'Candle in the Wind 1997'", "'Imagine'", "'Billie Jean'"), X),
-        q("pop_number_pikachu_national", "What number is Pikachu in the National Pokedex?", "25", listOf("1", "7", "151"), X)
+        q("pop_number_pikachu_national", "What number is Pikachu in the National Pokedex?", "25", listOf("1", "7", "151"), X),
+        q("pop_comedy_ends_line", "Which comedy ends with the line 'Well, nobody's perfect'?", "Some Like It Hot", listOf("The Apartment", "Tootsie", "Bringing Up Baby"), X),
+        q("pop_1934_film_win", "Which 1934 film was the first to win all five top Oscars?", "It Happened One Night", listOf("Gone with the Wind", "Casablanca", "Wings"), X),
+        q("pop_two_teenagers_cleveland", "Which two teenagers from Cleveland created Superman?", "Jerry Siegel and Joe Shuster", listOf("Stan Lee and Jack Kirby", "Bob Kane and Bill Finger", "Steve Ditko and Stan Lee"), X),
+        q("pop_video_game_players", "In which video game do players explore Rapture, a ruined city under the sea?", "BioShock", listOf("Subnautica", "Fallout 3", "Dead Space"), X),
+        q("pop_bruno_mars_real", "What is Bruno Mars's real name?", "Peter Hernandez", listOf("Bruno Fernandez", "Marcus Lopez", "Miguel Rodriguez"), X),
+        q("pop_fantastic_four_member", "Which Fantastic Four member's catchphrase is 'It's clobberin' time!'?", "The Thing", listOf("The Human Torch", "Mister Fantastic", "The Invisible Woman"), X),
+        q("pop_designer_1947_new", "Which designer's 1947 'New Look' brought back full skirts and tiny waists after the war?", "Christian Dior", listOf("Coco Chanel", "Yves Saint Laurent", "Cristobal Balenciaga"), X),
+        q("pop_david_bowie_real", "What was David Bowie's real name?", "David Jones", listOf("David Bowman", "David Stewart", "David Clark"), X)
     )
 }
