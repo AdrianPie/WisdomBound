@@ -118,7 +118,8 @@ object ScienceQuestions {
         q("sci_rock_forms_layers", "Which rock forms from layers of sand pressed together?", "Sandstone", listOf("Granite", "Marble", "Basalt"), E),
         q("sci_country_chandrayaan_mission", "Which country's Chandrayaan-3 mission landed near the Moon's south pole in 2023?", "India", listOf("China", "Japan", "Israel"), E),
         q("sci_invisible_light_remote", "Which invisible light do TV remote controls use?", "Infrared", listOf("Ultraviolet", "X-rays", "Microwaves"), E),
-        q("sci_cave_formations_hang", "Which cave formations hang down from the ceiling?", "Stalactites", listOf("Stalagmites", "Geodes", "Columns"), E)
+        q("sci_cave_formations_hang", "Which cave formations hang down from the ceiling?", "Stalactites", listOf("Stalagmites", "Geodes", "Columns"), E),
+        q("sci_force_keeps_moon", "What force keeps the Moon in orbit around the Earth?", "Gravity", listOf("Magnetism", "Friction", "Inertia"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -270,7 +271,18 @@ object ScienceQuestions {
         q("sci_force_makes_soap", "Which force makes soap bubbles round?", "Surface tension", listOf("Gravity", "Air pressure", "Static electricity"), M),
         q("sci_swedish_astronomer_gave", "Which Swedish astronomer gave his name to the temperature scale used in most of the world?", "Anders Celsius", listOf("Carl Linnaeus", "Anders Angstrom", "Tycho Brahe"), M),
         q("sci_temperature_scale_still", "Whose temperature scale is still used for everyday weather in the USA?", "Daniel Fahrenheit", listOf("Anders Celsius", "Lord Kelvin", "Rene Reaumur"), M),
-        q("sci_state_meteor_crater", "In which US state is the famous Meteor Crater, over a kilometre wide?", "Arizona", listOf("Nevada", "Utah", "New Mexico"), M)
+        q("sci_state_meteor_crater", "In which US state is the famous Meteor Crater, over a kilometre wide?", "Arizona", listOf("Nevada", "Utah", "New Mexico"), M),
+        q("sci_scientist_three_laws", "Which scientist's three laws describe the motion of the planets around the Sun?", "Johannes Kepler", listOf("Galileo Galilei", "Tycho Brahe", "Nicolaus Copernicus"), M),
+        q("sci_call_scientist_studies_3", "What do you call a scientist who studies earthquakes?", "Seismologist", listOf("Volcanologist", "Meteorologist", "Geologist"), M),
+        q("sci_scale_used_measure", "What is the name of the scale used to measure the hardness of minerals?", "Mohs scale", listOf("Richter scale", "Beaufort scale", "Kelvin scale"), M),
+        q("sci_boiling_point_water", "What is the boiling point of water in Fahrenheit, at sea level?", "212", listOf("100", "180", "232"), M),
+        q("sci_temperature_celsius_fahrenheit", "At what temperature are Celsius and Fahrenheit equal?", "Minus 40", listOf("Zero", "Minus 32", "100"), M),
+        q("sci_scientist_studies_weather", "What is the name for a scientist who studies weather?", "Meteorologist", listOf("Climatologist", "Seismologist", "Astronomer"), M),
+        q("sci_unit_frequency_equal", "What is the unit of frequency, equal to one cycle per second?", "Hertz", listOf("Joule", "Newton", "Pascal"), M),
+        q("sci_speed_sound_air", "What is the speed of sound in air, roughly, in metres per second?", "343", listOf("150", "1000", "3000"), M),
+        q("sci_colour_get_mixing", "What colour do you get by mixing blue and yellow paint?", "Green", listOf("Purple", "Orange", "Brown"), M),
+        q("sci_streak_light_space", "What is the name for the streak of light when a space rock burns in the sky?", "Meteor", listOf("Comet", "Nova", "Aurora"), M),
+        q("sci_part_earth_lies", "Which part of the Earth lies under the crust?", "Mantle", listOf("Core", "Atmosphere", "Lithosphere"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -366,7 +378,25 @@ object ScienceQuestions {
         q("sci_planet_nasa_juno", "Which planet did NASA's Juno probe go to study?", "Jupiter", listOf("Saturn", "Venus", "Mars"), H),
         q("sci_apparent_force_seems", "Which apparent force seems to push you outwards when a car turns sharply?", "Centrifugal force", listOf("Friction", "Magnetism", "Inertial gravity"), H),
         q("sci_discovered_electron_1897", "Who discovered the electron, in 1897?", "J. J. Thomson", listOf("Ernest Rutherford", "Niels Bohr", "Max Planck"), H),
-        q("sci_planet_moons_characters", "Which planet has moons named after characters from Shakespeare?", "Uranus", listOf("Neptune", "Saturn", "Jupiter"), H)
+        q("sci_planet_moons_characters", "Which planet has moons named after characters from Shakespeare?", "Uranus", listOf("Neptune", "Saturn", "Jupiter"), H),
+        q("sci_spacecraft_distant_human", "Which spacecraft is the most distant human-made object from Earth?", "Voyager 1", listOf("Voyager 2", "Pioneer 10", "New Horizons"), H),
+        q("sci_gives_mars_red", "What gives Mars its red colour?", "Iron oxide", listOf("Copper sulfate", "Red algae", "Sulfur dust"), H),
+        q("sci_edwin_hubble_discover", "What did Edwin Hubble discover about other galaxies in 1929?", "They are moving away from us", listOf("They contain black holes", "They are made of gas", "They spin backwards"), H),
+        q("sci_scientist_showed_lightning", "Which scientist showed that lightning is electricity using a kite?", "Benjamin Franklin", listOf("Michael Faraday", "Alessandro Volta", "Thomas Edison"), H),
+        q("sci_effect_makes_ambulance", "What is the name of the effect that makes an ambulance siren change pitch as it passes?", "Doppler effect", listOf("Coriolis effect", "Tyndall effect", "Peltier effect"), H),
+        q("sci_moon_saturn_shoots", "Which moon of Saturn shoots geysers of water ice from its south pole?", "Enceladus", listOf("Titan", "Iapetus", "Dione"), H),
+        q("sci_call_substance_speeds", "What do you call a substance that speeds up a reaction without being used up?", "Catalyst", listOf("Reagent", "Solvent", "Inhibitor"), H),
+        q("sci_scientist_discovered_neutron", "Which scientist discovered the neutron in 1932?", "James Chadwick", listOf("J. J. Thomson", "Enrico Fermi", "Ernest Rutherford"), H),
+        q("sci_thought_experiment_involves", "Which thought experiment involves a cat that is both alive and dead?", "Schrodinger's cat", listOf("Maxwell's demon", "Newton's cradle", "Buridan's ass"), H),
+        q("sci_causes_northern_lights", "What causes the northern lights?", "Solar particles hitting the atmosphere", listOf("Moonlight on ice", "Volcanic gas", "Lightning in the stratosphere"), H),
+        q("sci_scientist_studies_fossils", "What is the name for a scientist who studies fossils?", "Palaeontologist", listOf("Archaeologist", "Anthropologist", "Geologist"), H),
+        q("sci_anemometer_measure", "What does an anemometer measure?", "Wind speed", listOf("Rainfall", "Air pressure", "Humidity"), H),
+        q("sci_spacecraft_landed_rover", "Which spacecraft landed the first rover on a comet, in 2014?", "Rosetta", listOf("Philae", "Giotto", "Deep Impact"), H),
+        q("sci_lander_touched_down", "What was the name of the lander that touched down on comet 67P?", "Philae", listOf("Rosetta", "Huygens", "Beagle 2"), H),
+        q("sci_scientist_explained_sky", "Which scientist explained why the sky is blue, through scattering?", "Lord Rayleigh", listOf("Isaac Newton", "Albert Einstein", "James Clerk Maxwell"), H),
+        q("sci_scientist_united_electricity", "Which scientist united electricity and magnetism in four famous equations?", "James Clerk Maxwell", listOf("Michael Faraday", "Andre-Marie Ampere", "Nikola Tesla"), H),
+        q("sci_war_currents", "What was the 'war of the currents' about?", "AC versus DC electricity", listOf("Gold versus silver money", "Ocean currents", "Rival canal routes"), H),
+        q("sci_planet_densest_solar", "Which planet is the densest in the Solar System?", "Earth", listOf("Jupiter", "Mercury", "Venus"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -421,6 +451,21 @@ object ScienceQuestions {
         q("sciy_kosmos_temperatura", "What is the background temperature of deep space?", "About -270 °C", listOf("About -50 °C", "About 0 °C", "About -1,000 °C"), X),
         q("sci_belgian_priest_proposed", "Which Belgian priest first proposed what became the Big Bang theory?", "Georges Lemaitre", listOf("Edwin Hubble", "Fred Hoyle", "Georges Cuvier"), X),
         q("sci_spacecraft_took_pale", "Which spacecraft took the famous 'Pale Blue Dot' photo of Earth in 1990?", "Voyager 1", listOf("Hubble", "Apollo 17", "Pioneer 10"), X),
-        q("sci_french_mathematician_predicted", "Which French mathematician predicted where Neptune would be found, in 1846?", "Urbain Le Verrier", listOf("Pierre-Simon Laplace", "Joseph-Louis Lagrange", "Henri Poincare"), X)
+        q("sci_french_mathematician_predicted", "Which French mathematician predicted where Neptune would be found, in 1846?", "Urbain Le Verrier", listOf("Pierre-Simon Laplace", "Joseph-Louis Lagrange", "Henri Poincare"), X),
+        q("sci_spacecraft_deliberately_crashed", "Which spacecraft deliberately crashed into an asteroid in 2022 to change its orbit?", "DART", listOf("Hayabusa2", "OSIRIS-REx", "Lucy"), X),
+        q("sci_star_closest_sun", "Which star is the closest to the Sun?", "Proxima Centauri", listOf("Sirius", "Barnard's Star", "Alpha Centauri A"), X),
+        q("sci_cloud_icy_bodies", "What is the name of the cloud of icy bodies thought to surround the Solar System at its very edge?", "Oort cloud", listOf("Kuiper belt", "Asteroid belt", "Heliopause"), X),
+        q("sci_effect_causes_hurricanes", "Which effect causes hurricanes to spin in opposite directions in each hemisphere?", "Coriolis effect", listOf("Doppler effect", "Venturi effect", "Magnus effect"), X),
+        q("sci_physicist_predicted_black", "Which physicist predicted that black holes slowly leak radiation?", "Stephen Hawking", listOf("Roger Penrose", "Kip Thorne", "John Wheeler"), X),
+        q("sci_michelson_morley_experiment", "What did the Michelson-Morley experiment of 1887 fail to detect?", "The luminiferous ether", listOf("Gravitational waves", "Dark matter", "The neutrino"), X),
+        q("sci_physicist_uncertainty_principle", "Which physicist's 'uncertainty principle' says you cannot know a particle's position and momentum exactly?", "Werner Heisenberg", listOf("Erwin Schrodinger", "Paul Dirac", "Max Born"), X),
+        q("sci_observatory_detected_gravitational", "Which observatory first detected gravitational waves in 2015?", "LIGO", listOf("Hubble", "Arecibo", "ALMA"), X),
+        q("sci_probe_orbited_dwarf", "Which probe orbited the dwarf planet Ceres in the asteroid belt?", "Dawn", listOf("Rosetta", "Lucy", "Psyche"), X),
+        q("sci_closest_point_moon", "What is the name of the closest point in a moon's orbit to its planet?", "Periapsis", listOf("Apoapsis", "Zenith", "Nadir"), X),
+        q("sci_closest_point_earth", "What is the name of the closest point of Earth's orbit to the Sun?", "Perihelion", listOf("Aphelion", "Perigee", "Apogee"), X),
+        q("sci_scientist_cloud_chamber", "Which scientist's cloud chamber made particle tracks visible?", "Charles Wilson", listOf("Ernest Rutherford", "Hans Geiger", "Niels Bohr"), X),
+        q("sci_austrian_physicist_helped", "Which Austrian physicist helped discover nuclear fission but was left out of the Nobel Prize?", "Lise Meitner", listOf("Otto Hahn", "Fritz Strassmann", "Erwin Schrodinger"), X),
+        q("sci_long_light_moon", "How long does light from the Moon take to reach Earth?", "About 1.3 seconds", listOf("About 8 minutes", "About 1 minute", "About 1 hour"), X),
+        q("sci_astronomer_discovered_uranus", "Which astronomer discovered Uranus in 1781?", "William Herschel", listOf("Caroline Herschel", "Edmond Halley", "Johann Galle"), X)
     )
 }

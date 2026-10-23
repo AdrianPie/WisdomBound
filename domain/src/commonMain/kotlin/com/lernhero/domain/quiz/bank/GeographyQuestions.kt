@@ -205,7 +205,8 @@ object GeographyQuestions {
         q("geo_spanish_island_world", "Which Spanish island is world-famous for its nightclubs?", "Ibiza", listOf("Mallorca", "Tenerife", "Menorca"), E),
         q("geo_chinese_dam_world", "Which Chinese dam is the world's biggest power station?", "Three Gorges Dam", listOf("Hoover Dam", "Itaipu Dam", "Aswan High Dam"), E),
         q("geo_sea_nile_flow", "Into which sea does the Nile flow?", "The Mediterranean", listOf("The Red Sea", "The Arabian Sea", "The Indian Ocean"), E),
-        q("geo_french_city_gave", "Which French city gave its name to a famous mustard?", "Dijon", listOf("Nice", "Lille", "Toulouse"), E)
+        q("geo_french_city_gave", "Which French city gave its name to a famous mustard?", "Dijon", listOf("Nice", "Lille", "Toulouse"), E),
+        q("geo_continent_sahara_desert", "On which continent is the Sahara desert?", "Africa", listOf("Asia", "Australia", "South America"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -527,7 +528,10 @@ object GeographyQuestions {
         q("geo_egyptian_city_lies", "Which Egyptian city lies beside the Valley of the Kings?", "Luxor", listOf("Cairo", "Alexandria", "Aswan"), M),
         q("geo_indian_city_india", "Which Indian city is known as India's Silicon Valley?", "Bengaluru", listOf("Hyderabad", "Pune", "Chennai"), M),
         q("geo_near_chinese_city", "Near which Chinese city was the Terracotta Army discovered?", "Xi'an", listOf("Beijing", "Nanjing", "Luoyang"), M),
-        q("geo_argentine_city_calls", "Which Argentine city calls itself 'the end of the world'?", "Ushuaia", listOf("Punta Arenas", "Rio Gallegos", "Mar del Plata"), M)
+        q("geo_argentine_city_calls", "Which Argentine city calls itself 'the end of the world'?", "Ushuaia", listOf("Punta Arenas", "Rio Gallegos", "Mar del Plata"), M),
+        q("geo_continent_deserts", "Which is the only continent with no deserts?", "Europe", listOf("Africa", "Australia", "South America"), M),
+        q("geo_strait_divides_istanbul", "Which strait divides Istanbul between Europe and Asia?", "Bosphorus", listOf("Dardanelles", "Strait of Otranto", "Kerch Strait"), M),
+        q("geo_sea_saltiest_large", "Which sea is the saltiest large body of water you can float in, bordering Israel and Jordan?", "Dead Sea", listOf("Red Sea", "Caspian Sea", "Aral Sea"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -652,7 +656,12 @@ object GeographyQuestions {
         q("geo_word_shampoo_comes", "The word 'shampoo' comes from which language?", "Hindi", listOf("Arabic", "Persian", "Malay"), H),
         q("geo_moroccan_town_streets", "Which Moroccan town is famous for its streets painted in shades of blue?", "Chefchaouen", listOf("Marrakesh", "Fez", "Tangier"), H),
         q("geo_cities_lies_furthest", "Which of these US cities lies furthest west?", "Reno", listOf("Los Angeles", "San Diego", "Las Vegas"), H),
-        q("geo_country_caesar_salad", "In which country was the Caesar salad invented?", "Mexico", listOf("Italy", "United States", "Spain"), H)
+        q("geo_country_caesar_salad", "In which country was the Caesar salad invented?", "Mexico", listOf("Italy", "United States", "Spain"), H),
+        q("geo_landlocked_country_europe", "Which landlocked country in Europe has the highest average elevation?", "Andorra", listOf("Switzerland", "Austria", "Liechtenstein"), H),
+        q("geo_lake_split_between", "Which lake, split between Peru and Bolivia, is the highest navigable lake in the world?", "Lake Titicaca", listOf("Lake Poopo", "Lake Junin", "Lake Atitlan"), H),
+        q("geo_country_home_rock", "Which country is home to the rock-carved temples of Abu Simbel?", "Egypt", listOf("Sudan", "Jordan", "Ethiopia"), H),
+        q("geo_country_home_ancient", "Which country is home to the ancient ruins of Persepolis?", "Iran", listOf("Iraq", "Turkey", "Afghanistan"), H),
+        q("geo_country_home_mayan", "Which country is home to the Mayan city of Tikal?", "Guatemala", listOf("Mexico", "Honduras", "Belize"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -699,6 +708,21 @@ object GeographyQuestions {
         q("geox_nauru", "Which Pacific island nation is the smallest republic in the world?", "Nauru", listOf("Tuvalu", "Palau", "Kiribati"), X),
         q("geox_tuvalu_tv", "Which tiny Pacific nation earns money from its '.tv' internet domain?", "Tuvalu", listOf("Tonga", "Tokelau", "Taiwan"), X),
         q("geox_colca", "Which canyon in Peru is about twice as deep as the Grand Canyon?", "The Colca Canyon", listOf("The Copper Canyon", "The Fish River Canyon", "Tiger Leaping Gorge"), X),
-        q("geoy_rosja_sasiedzi", "Russia shares land borders with how many countries?", "14", listOf("8", "20", "5"), X)
+        q("geoy_rosja_sasiedzi", "Russia shares land borders with how many countries?", "14", listOf("8", "20", "5"), X),
+        q("geo_country_borders_both", "What is the only country that borders both the Atlantic and Indian Oceans?", "South Africa", listOf("Australia", "Mozambique", "Namibia"), X),
+        q("geo_village_wales_longest", "Which village in Wales has one of the longest place names in the world?", "Llanfairpwllgwyngyll", listOf("Betws-y-Coed", "Aberystwyth", "Pontypridd"), X),
+        q("geo_mountain_range_separates", "Which mountain range separates Europe from Asia in Russia?", "Ural Mountains", listOf("Caucasus", "Altai Mountains", "Carpathians"), X),
+        q("geo_tiny_greek_canal", "Which tiny Greek canal, cut in 1893, separates the Peloponnese from the mainland?", "Corinth Canal", listOf("Kiel Canal", "Suez Canal", "Gota Canal"), X),
+        q("geo_narrow_strip_namibia", "What is the name of the narrow strip of Namibia that reaches to the Zambezi?", "Caprivi Strip", listOf("Wakhan Corridor", "Siliguri Corridor", "Gaza Strip"), X),
+        q("geo_narrow_corridor_connects", "Which narrow corridor connects Afghanistan to China?", "Wakhan Corridor", listOf("Caprivi Strip", "Khyber Pass", "Siliguri Corridor"), X),
+        q("geo_ethiopian_town_churches", "Which Ethiopian town is famous for churches carved down into solid rock?", "Lalibela", listOf("Gondar", "Aksum", "Harar"), X),
+        q("geo_australian_rock_ayers", "Which Australian rock is also known by the name Ayers Rock?", "Uluru", listOf("Kata Tjuta", "Wave Rock", "Mount Augustus"), X),
+        q("geo_city_world_largest", "Which city has the world's largest metro area population?", "Tokyo", listOf("Delhi", "Shanghai", "Sao Paulo"), X),
+        q("geo_river_flows_through_15", "Which river flows through Bern?", "Aare", listOf("Rhine", "Rhone", "Limmat"), X),
+        q("geo_river_flows_through_16", "Which river flows through Madrid?", "Manzanares", listOf("Tagus", "Ebro", "Guadiana"), X),
+        q("geo_river_flows_through_17", "Which river flows through Seville?", "Guadalquivir", listOf("Tagus", "Guadiana", "Douro"), X),
+        q("geo_river_flows_through_18", "Which river flows through Porto?", "Douro", listOf("Tagus", "Minho", "Mondego"), X),
+        q("geo_river_flows_through_19", "Which river flows through Bordeaux?", "Garonne", listOf("Loire", "Dordogne", "Seine"), X),
+        q("geo_river_flows_through_20", "Which river flows through Lyon along with the Rhone?", "Saone", listOf("Loire", "Garonne", "Isere"), X)
     )
 }

@@ -259,7 +259,8 @@ object CapitalQuestions {
         q("cap_capital_state_ohio", "What is the capital of the US state of Ohio?", "Columbus", listOf("Cleveland", "Cincinnati", "Dayton"), H),
         q("cap_city_capital_canadian_2", "Which city is the capital of the Canadian province of Alberta?", "Edmonton", listOf("Calgary", "Banff", "Red Deer"), H),
         q("cap_city_capital_german", "Which city is the capital of the German state of Saxony?", "Dresden", listOf("Leipzig", "Chemnitz", "Magdeburg"), H),
-        q("cap_port_louis_capital", "Port Louis is the capital of which island country?", "Mauritius", listOf("Seychelles", "Maldives", "Madagascar"), H)
+        q("cap_port_louis_capital", "Port Louis is the capital of which island country?", "Mauritius", listOf("Seychelles", "Maldives", "Madagascar"), H),
+        q("cap_capital_northernmost_world", "Which capital is the northernmost in the world?", "Reykjavik", listOf("Oslo", "Helsinki", "Nuuk"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -324,6 +325,12 @@ object CapitalQuestions {
         q("cap_capital_guyana", "What is the capital of Guyana?", "Georgetown", listOf("Paramaribo", "Cayenne", "Bridgetown"), X),
         q("cap_capital_state_pennsylvania", "What is the capital of the US state of Pennsylvania?", "Harrisburg", listOf("Philadelphia", "Pittsburgh", "Scranton"), X),
         q("cap_city_italy_capital", "Which city was Italy's capital before Rome, from 1865 to 1871?", "Florence", listOf("Turin", "Milan", "Naples"), X),
-        q("cap_capital_niger", "What is the capital of Niger?", "Niamey", listOf("Abuja", "N'Djamena", "Bamako"), X)
+        q("cap_capital_niger", "What is the capital of Niger?", "Niamey", listOf("Abuja", "N'Djamena", "Bamako"), X),
+        q("cap_capital_burkina_faso", "What is the capital of Burkina Faso?", "Ouagadougou", listOf("Bobo-Dioulasso", "Niamey", "Bamako"), X),
+        q("cap_capital_federated_states", "What is the capital of the Federated States of Micronesia?", "Palikir", listOf("Majuro", "Tarawa", "Ngerulmud"), X),
+        q("cap_capital_liechtenstein", "What is the capital of Liechtenstein?", "Vaduz", listOf("Schaan", "Balzers", "Triesen"), X),
+        q("cap_capital_tuvalu", "What is the capital of Tuvalu?", "Funafuti", listOf("Tarawa", "Majuro", "Apia"), X),
+        q("cap_capital_vanuatu", "What is the capital of Vanuatu?", "Port Vila", listOf("Honiara", "Suva", "Luganville"), X),
+        q("cap_capital_solomon_islands", "What is the capital of the Solomon Islands?", "Honiara", listOf("Port Vila", "Port Moresby", "Gizo"), X)
     )
 }

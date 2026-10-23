@@ -120,7 +120,9 @@ object TechnologyQuestions {
         q("tec_car_maker_builds_5", "Which car maker builds the Golf hatchback?", "Volkswagen", listOf("Opel", "Peugeot", "Ford"), E),
         q("tec_car_maker_builds_6", "Which car maker builds the tiny '500' city car?", "Fiat", listOf("Renault", "Seat", "Skoda"), E),
         q("tec_german_engineer_gave", "Which German engineer gave his name to an engine that ignites fuel by compression?", "Rudolf Diesel", listOf("Nikolaus Otto", "Gottlieb Daimler", "Karl Benz"), E),
-        q("tec_lets_maglev_trains", "What lets maglev trains float above the track?", "Magnets", listOf("Air cushions", "Hydrogen jets", "Steam"), E)
+        q("tec_lets_maglev_trains", "What lets maglev trains float above the track?", "Magnets", listOf("Air cushions", "Hydrogen jets", "Steam"), E),
+        q("tec_let_devices_without", "What does 'Wi-Fi' let devices do without cables?", "Connect to a network", listOf("Charge their batteries", "Print documents", "Play music"), E),
+        q("tec_company_makes_iphone", "Which company makes the iPhone?", "Apple", listOf("Samsung", "Google", "Nokia"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -254,7 +256,15 @@ object TechnologyQuestions {
         q("tec_official_colour_golden", "What is the official colour of the Golden Gate Bridge?", "International orange", listOf("Golden yellow", "Rust red", "Copper brown"), M),
         q("tec_programming_language_apple", "Which programming language did Apple introduce in 2014 for its apps?", "Swift", listOf("Kotlin", "Rust", "Go"), M),
         q("tec_programming_language_google", "Which programming language has Google preferred for Android apps since 2019?", "Kotlin", listOf("Swift", "Ruby", "Perl"), M),
-        q("tec_created_python_programming", "Who created the Python programming language?", "Guido van Rossum", listOf("Bjarne Stroustrup", "James Gosling", "Linus Torvalds"), M)
+        q("tec_created_python_programming", "Who created the Python programming language?", "Guido van Rossum", listOf("Bjarne Stroustrup", "James Gosling", "Linus Torvalds"), M),
+        q("tec_www_start_web", "What does the 'www' at the start of web addresses stand for?", "World Wide Web", listOf("Wide Web Window", "World Web Works", "Web Wide World"), M),
+        q("tec_usb_stand", "What does 'USB' stand for?", "Universal Serial Bus", listOf("United System Board", "Universal Signal Box", "Unified Serial Board"), M),
+        q("tec_widely_used_graphical", "What is the name of the first widely used graphical web browser, released in 1993?", "Mosaic", listOf("Netscape", "Opera", "Lynx"), M),
+        q("tec_company_made_commercially", "Which company made the first commercially successful video game, 'Pong'?", "Atari", listOf("Nintendo", "Sega", "Magnavox"), M),
+        q("tec_ram_stand_computer", "What does 'RAM' stand for in a computer?", "Random Access Memory", listOf("Read Access Memory", "Rapid Action Module", "Run Application Memory"), M),
+        q("tec_cpu_stand", "What does 'CPU' stand for?", "Central Processing Unit", listOf("Computer Power Unit", "Core Program Utility", "Central Peripheral Unit"), M),
+        q("tec_stand", "What does 'AI' stand for?", "Artificial intelligence", listOf("Automated interface", "Advanced internet", "Algorithmic input"), M),
+        q("tec_pixel_make", "What does a 'pixel' make up?", "A digital image", listOf("A sound file", "A computer chip", "A network cable"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -336,7 +346,35 @@ object TechnologyQuestions {
         q("tec_nfc_used_contactless", "What does 'NFC', used for contactless payments, stand for?", "Near-field communication", listOf("New fast connection", "Network file control", "Non-financial card"), H),
         q("tec_css_language_styling", "What does 'CSS', the language for styling web pages, stand for?", "Cascading Style Sheets", listOf("Computer Styling System", "Coded Site Scripts", "Creative Screen Styles"), H),
         q("tec_jpeg_stand", "What does 'JPEG' stand for?", "Joint Photographic Experts Group", listOf("Java Picture Encoding Group", "Joint Pixel Exchange Graphics", "Just Plain Edited Graphics"), H),
-        q("tec_gif_stand", "What does 'GIF' stand for?", "Graphics Interchange Format", listOf("General Image File", "Graphic Internet Frame", "Grid Image Format"), H)
+        q("tec_gif_stand", "What does 'GIF' stand for?", "Graphics Interchange Format", listOf("General Image File", "Graphic Internet Frame", "Grid Image Format"), H),
+        q("tec_electronic_general_purpose", "What was the name of the first electronic general-purpose computer, completed in 1945?", "ENIAC", listOf("UNIVAC", "Colossus", "EDSAC"), H),
+        q("tec_wrote_considered_computer", "Who wrote what is considered the first computer program, for Babbage's Analytical Engine?", "Ada Lovelace", listOf("Grace Hopper", "Mary Somerville", "Hedy Lamarr"), H),
+        q("tec_hollywood_actress_invented", "Which Hollywood actress co-invented a frequency-hopping system that paved the way for Wi-Fi and Bluetooth?", "Hedy Lamarr", listOf("Marlene Dietrich", "Greta Garbo", "Rita Hayworth"), H),
+        q("tec_bluetooth_king_country", "Bluetooth is named after a king of which country?", "Denmark", listOf("Sweden", "Norway", "Finland"), H),
+        q("tec_computer_scientist_popularised", "Which computer scientist popularised the term 'bug' after a real moth was found in a computer?", "Grace Hopper", listOf("Ada Lovelace", "Alan Turing", "John von Neumann"), H),
+        q("tec_codename_british_code", "What was the codename of the British code-breaking machine built at Bletchley Park in 1943?", "Colossus", listOf("Enigma", "Bombe", "Lorenz"), H),
+        q("tec_company_invented_compact", "Which company invented the compact cassette tape in 1963?", "Philips", listOf("Sony", "Grundig", "Telefunken"), H),
+        q("tec_web_page_address", "Tim Berners-Lee ran the first web server at CERN on a computer made by which company?", "NeXT", listOf("Cray", "Sun", "Apple II"), H),
+        q("tec_http_web_addresses", "What does the 'HTTP' in web addresses stand for?", "Hypertext Transfer Protocol", listOf("High Transfer Text Process", "Hyperlink Text Program", "Host Transfer Telecom Protocol"), H),
+        q("tec_video_game_console", "Which video game console became the best-selling of all time, with over 150 million units?", "PlayStation 2", listOf("Nintendo DS", "Game Boy", "Wii"), H),
+        q("tec_captcha_test_try", "What does the 'CAPTCHA' test try to tell apart?", "Humans and computers", listOf("Adults and children", "Spam and email", "Viruses and files"), H),
+        q("tec_apple_computer_mouse", "What was the name of Apple's first computer with a mouse and graphical interface, launched in 1983?", "Lisa", listOf("Macintosh", "Newton", "Apple III"), H),
+        q("tec_https_stand", "What does the 'S' in 'HTTPS' stand for?", "Secure", listOf("Server", "Simple", "Standard"), H),
+        q("tec_company_created_jpeg", "Which online service created the GIF image format in 1987?", "CompuServe", listOf("Adobe", "Microsoft", "AOL"), H),
+        q("tec_law_says_chip", "What is the name of the law that says chip transistor counts double about every two years?", "Moore's law", listOf("Murphy's law", "Metcalfe's law", "Amdahl's law"), H),
+        q("tec_firewall_protect_computer", "What does a 'firewall' protect a computer network from?", "Unauthorised access", listOf("Overheating", "Power cuts", "Dust"), H),
+        q("tec_emoticon_made_colon", "Which emoticon, made of a colon, dash and bracket, was first proposed in 1982?", ":-)", listOf(";-)", ":-(", ":-P"), H),
+        q("tec_cookie_store_web", "What does a 'cookie' store in your web browser?", "Small bits of website data", listOf("Downloaded videos", "Saved passwords only", "Antivirus updates"), H),
+        q("tec_smartphone_app_store", "What was the name of the first smartphone app store, launched by Apple in 2008?", "App Store", listOf("iTunes Store", "Play Store", "Marketplace"), H),
+        q("tec_open_source_mean", "What does 'open source' mean for a program?", "Its code is free to see and change", listOf("It costs nothing to download", "It runs on any computer", "It has no copyright"), H),
+        q("tec_data_storage_unit", "Which data storage unit is equal to 1024 megabytes?", "Gigabyte", listOf("Terabyte", "Kilobyte", "Petabyte"), H),
+        q("tec_ctrl_alt_delete", "What does 'Ctrl + Alt + Delete' traditionally bring up on Windows?", "Security options", listOf("The Start menu", "A new window", "The clipboard"), H),
+        q("tec_keyboard_layout_six", "Which keyboard layout is named after its first six letters?", "QWERTY", listOf("AZERTY", "DVORAK", "QWERTZ"), H),
+        q("tec_stand_2", "What does 'VR' stand for?", "Virtual reality", listOf("Visual rendering", "Video recording", "Variable resolution"), H),
+        q("tec_company_makes_quest", "Which company makes the Quest VR headsets?", "Meta", listOf("Sony", "HTC", "Valve"), H),
+        q("tec_software_pretends_useful", "What is the name for software that pretends to be useful but hides malware?", "Trojan horse", listOf("Worm", "Spyware", "Adware"), H),
+        q("tec_malware_locks_files", "What is the name of malware that locks your files and demands payment?", "Ransomware", listOf("Spyware", "Adware", "Rootkit"), H),
+        q("tec_classic_nokia_game", "Which classic Nokia game had players steer a growing line?", "Snake", listOf("Tetris", "Pong", "Bounce"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -384,6 +422,24 @@ object TechnologyQuestions {
         q("tecy_brunel", "Which Victorian engineer built the giant steamship 'Great Eastern'?", "Isambard Kingdom Brunel", listOf("George Stephenson", "James Watt", "Thomas Telford"), X),
         q("tecy_elektryk_xix", "In which century was the first electric car built?", "The 19th", listOf("The 20th", "The 21st", "The 18th"), X),
         q("tec_very_home_video", "What was the very first home video game console?", "The Magnavox Odyssey", listOf("The Atari 2600", "The Fairchild Channel F", "The Intellivision"), X),
-        q("tec_german_inventor_built", "Which German inventor built the 'running machine', a two-wheeled ancestor of the bicycle, in 1817?", "Karl Drais", listOf("Karl Benz", "Gottlieb Daimler", "Rudolf Diesel"), X)
+        q("tec_german_inventor_built", "Which German inventor built the 'running machine', a two-wheeled ancestor of the bicycle, in 1817?", "Karl Drais", listOf("Karl Benz", "Gottlieb Daimler", "Rudolf Diesel"), X),
+        q("tec_network_became_forerunner", "What was the name of the US network that became the forerunner of the internet?", "ARPANET", listOf("NSFNET", "USENET", "ETHERNET"), X),
+        q("tec_y2k_bug_come", "What did the 'Y2K bug' come from?", "Years stored as two digits", listOf("A virus released in 1999", "A clock chip defect", "Leap year miscalculation"), X),
+        q("tec_2038_problem_cause", "What is the name of the 2038 problem's cause in many computers?", "32-bit Unix time overflow", listOf("Leap second error", "GPS week rollover", "IPv4 exhaustion"), X),
+        q("tec_computer_virus_spread", "What was the first computer virus to spread in the wild on personal computers, in 1982?", "Elk Cloner", listOf("Creeper", "Brain", "ILOVEYOU"), X),
+        q("tec_british_mathematician_proposed", "Which British mathematician proposed a test of whether a machine can think, in 1950?", "Alan Turing", listOf("Charles Babbage", "John von Neumann", "Claude Shannon"), X),
+        q("tec_father_information_theory", "Who is known as the 'father of information theory'?", "Claude Shannon", listOf("Alan Turing", "Norbert Wiener", "John von Neumann"), X),
+        q("tec_ibm_chess_computer", "What was the name of IBM's chess computer that beat Garry Kasparov in 1997?", "Deep Blue", listOf("Watson", "Deep Thought", "AlphaZero"), X),
+        q("tec_website_host_organisation", "What was the name of the first website's host organisation?", "CERN", listOf("MIT", "Stanford", "DARPA"), X),
+        q("tec_company_made_commercial", "Which company made the first commercial hard disk drive in 1956?", "IBM", listOf("Seagate", "Western Digital", "Hewlett-Packard"), X),
+        q("tec_british_computer_given", "Which British computer was given to schools by the BBC in the 1980s?", "BBC Micro", listOf("ZX Spectrum", "Amstrad CPC", "Acorn Archimedes"), X),
+        q("tec_fathers_internet_designing", "Who are known as the 'fathers of the internet' for designing TCP/IP?", "Vint Cerf and Bob Kahn", listOf("Bill Gates and Paul Allen", "Larry Page and Sergey Brin", "Steve Jobs and Steve Wozniak"), X),
+        q("tec_nintendo_engineer_designed", "Which Nintendo engineer designed the Game Boy?", "Gunpei Yokoi", listOf("Shigeru Miyamoto", "Satoru Iwata", "Masayuki Uemura"), X),
+        q("tec_digital_currency_launched", "Which digital currency was launched in 2009 by the pseudonymous Satoshi Nakamoto?", "Bitcoin", listOf("Ethereum", "Litecoin", "Dogecoin"), X),
+        q("tec_famously_bought_000", "What was famously bought with 10,000 bitcoins in 2010?", "Two pizzas", listOf("A car", "A house", "A laptop"), X),
+        q("tec_2017_ransomware_attack", "Which 2017 ransomware attack hit the UK's NHS?", "WannaCry", listOf("NotPetya", "ILOVEYOU", "Stuxnet"), X),
+        q("tec_computer_worm_sabotaged", "Which computer worm sabotaged Iranian nuclear centrifuges around 2010?", "Stuxnet", listOf("WannaCry", "Conficker", "Mydoom"), X),
+        q("tec_nokia_phone_near", "Which Nokia phone is famous for its near-indestructible build?", "Nokia 3310", listOf("Nokia 7110", "Nokia N95", "Nokia 8210"), X),
+        q("tec_android_phone_released", "What was the name of the first Android phone, released in 2008?", "HTC Dream", listOf("Nexus One", "Samsung Galaxy", "Motorola Droid"), X)
     )
 }

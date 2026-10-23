@@ -431,7 +431,12 @@ object LiteratureQuestions {
         q("lit_author_wrote_dead", "Which author wrote 'Dead Souls' and 'The Overcoat'?", "Nikolai Gogol", listOf("Ivan Turgenev", "Fyodor Dostoevsky", "Maxim Gorky"), M),
         q("lit_irish_poet_won", "Which Irish poet won the Nobel Prize in Literature in 1923?", "W. B. Yeats", listOf("James Joyce", "Oscar Wilde", "Seamus Heaney"), M),
         q("lit_american_poet_wrote_2", "Which American poet wrote 'Because I could not stop for Death'?", "Emily Dickinson", listOf("Sylvia Plath", "Maya Angelou", "Edna St. Vincent Millay"), M),
-        q("lit_lebanese_american_poet", "Which Lebanese-American poet wrote 'The Prophet'?", "Kahlil Gibran", listOf("Amin Maalouf", "Rumi", "Omar Khayyam"), M)
+        q("lit_lebanese_american_poet", "Which Lebanese-American poet wrote 'The Prophet'?", "Kahlil Gibran", listOf("Amin Maalouf", "Rumi", "Omar Khayyam"), M),
+        q("lit_wrote_hobbit", "Who wrote 'The Hobbit'?", "J. R. R. Tolkien", listOf("C. S. Lewis", "Roald Dahl", "Terry Pratchett"), M),
+        q("lit_wrote_don_quixote", "Who wrote 'Don Quixote'?", "Miguel de Cervantes", listOf("Lope de Vega", "Gabriel Garcia Marquez", "Federico Garcia Lorca"), M),
+        q("lit_boy_never_grows", "What is the name of the boy who never grows up in J. M. Barrie's story?", "Peter Pan", listOf("Tom Sawyer", "Oliver Twist", "Christopher Robin"), M),
+        q("lit_wizard_character_wants", "In 'The Wizard of Oz', which character wants a brain?", "The Scarecrow", listOf("The Tin Man", "The Cowardly Lion", "Toto"), M),
+        q("lit_author_created_cat", "Which author created 'The Cat in the Hat'?", "Dr. Seuss", listOf("Roald Dahl", "Maurice Sendak", "Beatrix Potter"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -548,7 +553,17 @@ object LiteratureQuestions {
         q("lit_spanish_painter_created", "Which Spanish painter created 'The Third of May 1808'?", "Francisco Goya", listOf("Diego Velazquez", "El Greco", "Joan Miro"), H),
         q("lit_composed_rhapsody_blue", "Who composed 'Rhapsody in Blue'?", "George Gershwin", listOf("Leonard Bernstein", "Aaron Copland", "Irving Berlin"), H),
         q("lit_composed_opera_carmen", "Who composed the opera 'Carmen'?", "Georges Bizet", listOf("Giuseppe Verdi", "Giacomo Puccini", "Jules Massenet"), H),
-        q("lit_composed_opera_aida", "Who composed the opera 'Aida'?", "Giuseppe Verdi", listOf("Giacomo Puccini", "Richard Wagner", "Gioachino Rossini"), H)
+        q("lit_composed_opera_aida", "Who composed the opera 'Aida'?", "Giuseppe Verdi", listOf("Giacomo Puccini", "Richard Wagner", "Gioachino Rossini"), H),
+        q("lit_giant_whale_herman", "What is the name of the giant whale in Herman Melville's novel?", "Moby Dick", listOf("Leviathan", "Monstro", "Old Tom"), H),
+        q("lit_horse_works_himself", "What is the name of the horse that works himself to death in 'Animal Farm'?", "Boxer", listOf("Clover", "Benjamin", "Mollie"), H),
+        q("lit_fictional_town_gabriel", "In which fictional town are many of Gabriel Garcia Marquez's stories set?", "Macondo", listOf("Comala", "Yoknapatawpha", "Santa Teresa"), H),
+        q("lit_author_invented_county", "Which author invented the county of Yoknapatawpha?", "William Faulkner", listOf("John Steinbeck", "Mark Twain", "Harper Lee"), H),
+        q("lit_epic_poem_tells", "Which epic poem tells of Odysseus's ten-year journey home?", "The Odyssey", listOf("The Iliad", "The Aeneid", "Beowulf"), H),
+        q("lit_captain_hook_ship", "What is the name of Captain Hook's ship in 'Peter Pan'?", "Jolly Roger", listOf("Black Pearl", "Hispaniola", "Nautilus"), H),
+        q("lit_wrote_war_worlds", "Who wrote 'War of the Worlds'?", "H. G. Wells", listOf("Jules Verne", "Arthur C. Clarke", "Isaac Asimov"), H),
+        q("lit_isaac_asimov_rules", "Which Isaac Asimov rules govern how robots must behave?", "Three Laws of Robotics", listOf("Four Robot Codes", "Prime Directive", "Robot Charter"), H),
+        q("lit_author_wrote_matilda", "Which author wrote 'Matilda' and 'The BFG'?", "Roald Dahl", listOf("Michael Morpurgo", "David Walliams", "Philip Pullman"), H),
+        q("lit_detective_edgar_allan", "Which detective did Edgar Allan Poe create, often called the first fictional detective?", "C. Auguste Dupin", listOf("Sherlock Holmes", "Father Brown", "Inspector Bucket"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -599,6 +614,19 @@ object LiteratureQuestions {
         q("lity_magritte", "Which painter wrote 'This is not a pipe' beneath a picture of a pipe?", "Rene Magritte", listOf("Salvador Dali", "Marcel Duchamp", "Joan Miro"), X),
         q("lity_fontanna", "Which artist shocked the art world by exhibiting a urinal titled 'Fountain'?", "Marcel Duchamp", listOf("Andy Warhol", "Rene Magritte", "Pablo Picasso"), X),
         q("lit_painted_garden_earthly", "Who painted 'The Garden of Earthly Delights'?", "Hieronymus Bosch", listOf("Pieter Bruegel", "Jan van Eyck", "Albrecht Durer"), X),
-        q("lit_composed_hall_mountain", "Who composed 'In the Hall of the Mountain King'?", "Edvard Grieg", listOf("Jean Sibelius", "Carl Nielsen", "Antonin Dvorak"), X)
+        q("lit_composed_hall_mountain", "Who composed 'In the Hall of the Mountain King'?", "Edvard Grieg", listOf("Jean Sibelius", "Carl Nielsen", "Antonin Dvorak"), X),
+        q("lit_old_english_poem", "Which Old English poem's hero kills the monster Grendel?", "Beowulf", listOf("Sir Gawain", "The Wanderer", "The Seafarer"), X),
+        q("lit_very_short_novel", "What is the name of the very short novel by Kafka in which Gregor Samsa becomes an insect?", "The Metamorphosis", listOf("The Trial", "The Castle", "The Judgment"), X),
+        q("lit_french_author_wrote", "Which French author wrote a 300-page novel without using the letter 'e'?", "Georges Perec", listOf("Raymond Queneau", "Marcel Proust", "Albert Camus"), X),
+        q("lit_author_wrote_slaughterhouse", "Which author wrote 'Slaughterhouse-Five'?", "Kurt Vonnegut", listOf("Joseph Heller", "Ray Bradbury", "Philip K. Dick"), X),
+        q("lit_author_wrote_catch", "Which author wrote 'Catch-22'?", "Joseph Heller", listOf("Kurt Vonnegut", "Norman Mailer", "J. D. Salinger"), X),
+        q("lit_wrote_androids_dream", "Who wrote 'Do Androids Dream of Electric Sheep?', the basis for 'Blade Runner'?", "Philip K. Dick", listOf("William Gibson", "Isaac Asimov", "Ray Bradbury"), X),
+        q("lit_novel_ray_bradbury", "Which novel by Ray Bradbury is named after the temperature at which paper burns?", "Fahrenheit 451", listOf("The Martian Chronicles", "Something Wicked", "Dandelion Wine"), X),
+        q("lit_czech_writer_coined", "Which Czech writer coined the word 'robot' in a 1920 play?", "Karel Capek", listOf("Franz Kafka", "Jaroslav Hasek", "Milan Kundera"), X),
+        q("lit_good_soldier_jaroslav", "What is the name of the good soldier in Jaroslav Hasek's comic novel?", "Svejk", listOf("Gregor", "Josef K.", "Woland"), X),
+        q("lit_swedish_author_wrote", "Which Swedish author wrote about Nils Holgersson flying on a goose?", "Selma Lagerlof", listOf("Astrid Lindgren", "August Strindberg", "Tove Jansson"), X),
+        q("lit_german_brothers_collected", "Which German brothers collected fairy tales such as 'Hansel and Gretel'?", "The Brothers Grimm", listOf("The Brothers Mann", "The Schlegel brothers", "The Humboldt brothers"), X),
+        q("lit_job_antoine_saint", "Which job did Antoine de Saint-Exupery have besides writing?", "Pilot", listOf("Sailor", "Doctor", "Teacher"), X),
+        q("lit_reclusive_american_poet", "Which reclusive American poet had almost all of her nearly 1800 poems published after death?", "Emily Dickinson", listOf("Sylvia Plath", "Elizabeth Bishop", "Anne Sexton"), X)
     )
 }

@@ -180,6 +180,7 @@ geo_spanish_island_world	Easy	Which Spanish island is world-famous for its night
 geo_chinese_dam_world	Easy	Which Chinese dam is the world's biggest power station?	Three Gorges Dam	Hoover Dam	Itaipu Dam	Aswan High Dam
 geo_sea_nile_flow	Easy	Into which sea does the Nile flow?	The Mediterranean	The Red Sea	The Arabian Sea	The Indian Ocean
 geo_french_city_gave	Easy	Which French city gave its name to a famous mustard?	Dijon	Nice	Lille	Toulouse
+geo_continent_sahara_desert	Easy	On which continent is the Sahara desert?	Africa	Asia	Australia	South America
 geo_everest	Medium	In which mountain range is Mount Everest?	Himalayas	Andes	Alps	Caucasus
 geo_wulkan_wl	Medium	What is the name of the famous volcano near Naples?	Vesuvius	Etna	Stromboli	Krakatoa
 geo2_kanal_sueski	Medium	Which seas does the Suez Canal connect?	The Mediterranean with the Red Sea	The Baltic with the North Sea	The Black Sea with the Aegean	The Pacific with the Atlantic
@@ -498,6 +499,9 @@ geo_egyptian_city_lies	Medium	Which Egyptian city lies beside the Valley of the 
 geo_indian_city_india	Medium	Which Indian city is known as India's Silicon Valley?	Bengaluru	Hyderabad	Pune	Chennai
 geo_near_chinese_city	Medium	Near which Chinese city was the Terracotta Army discovered?	Xi'an	Beijing	Nanjing	Luoyang
 geo_argentine_city_calls	Medium	Which Argentine city calls itself 'the end of the world'?	Ushuaia	Punta Arenas	Rio Gallegos	Mar del Plata
+geo_continent_deserts	Medium	Which is the only continent with no deserts?	Europe	Africa	Australia	South America
+geo_strait_divides_istanbul	Medium	Which strait divides Istanbul between Europe and Asia?	Bosphorus	Dardanelles	Strait of Otranto	Kerch Strait
+geo_sea_saltiest_large	Medium	Which sea is the saltiest large body of water you can float in, bordering Israel and Jordan?	Dead Sea	Red Sea	Caspian Sea	Aral Sea
 geo_bajkal	Hard	Which lake is the deepest in the world?	Baikal	Tanganyika	Caspian Sea	Superior
 geo_kilimandzaro	Hard	In which country is Mount Kilimanjaro?	Tanzania	Kenya	Ethiopia	Uganda
 geo_aconcagua	Hard	The highest peak in South America is...	Aconcagua	Chimborazo	Huascaran	Ojos del Salado
@@ -619,6 +623,11 @@ geo_word_shampoo_comes	Hard	The word 'shampoo' comes from which language?	Hindi	
 geo_moroccan_town_streets	Hard	Which Moroccan town is famous for its streets painted in shades of blue?	Chefchaouen	Marrakesh	Fez	Tangier
 geo_cities_lies_furthest	Hard	Which of these US cities lies furthest west?	Reno	Los Angeles	San Diego	Las Vegas
 geo_country_caesar_salad	Hard	In which country was the Caesar salad invented?	Mexico	Italy	United States	Spain
+geo_landlocked_country_europe	Hard	Which landlocked country in Europe has the highest average elevation?	Andorra	Switzerland	Austria	Liechtenstein
+geo_lake_split_between	Hard	Which lake, split between Peru and Bolivia, is the highest navigable lake in the world?	Lake Titicaca	Lake Poopo	Lake Junin	Lake Atitlan
+geo_country_home_rock	Hard	Which country is home to the rock-carved temples of Abu Simbel?	Egypt	Sudan	Jordan	Ethiopia
+geo_country_home_ancient	Hard	Which country is home to the ancient ruins of Persepolis?	Iran	Iraq	Turkey	Afghanistan
+geo_country_home_mayan	Hard	Which country is home to the Mayan city of Tikal?	Guatemala	Mexico	Honduras	Belize
 geo_row_marianski	Expert	What is the deepest point in the oceans called?	Challenger Deep	Tonga Trench	Java Trench	Milwaukee Deep
 geo_kraj_bez_rzek	Expert	Which of these countries has not a single permanent river?	Saudi Arabia	Mongolia	Kazakhstan	Iran
 geo_titicaca	Expert	Lake Titicaca lies on the border of which two countries?	Peru and Bolivia	Chile and Argentina	Ecuador and Colombia	Brazil and Paraguay
@@ -662,3 +671,18 @@ geox_nauru	Expert	Which Pacific island nation is the smallest republic in the wo
 geox_tuvalu_tv	Expert	Which tiny Pacific nation earns money from its '.tv' internet domain?	Tuvalu	Tonga	Tokelau	Taiwan
 geox_colca	Expert	Which canyon in Peru is about twice as deep as the Grand Canyon?	The Colca Canyon	The Copper Canyon	The Fish River Canyon	Tiger Leaping Gorge
 geoy_rosja_sasiedzi	Expert	Russia shares land borders with how many countries?	14	8	20	5
+geo_country_borders_both	Expert	What is the only country that borders both the Atlantic and Indian Oceans?	South Africa	Australia	Mozambique	Namibia
+geo_village_wales_longest	Expert	Which village in Wales has one of the longest place names in the world?	Llanfairpwllgwyngyll	Betws-y-Coed	Aberystwyth	Pontypridd
+geo_mountain_range_separates	Expert	Which mountain range separates Europe from Asia in Russia?	Ural Mountains	Caucasus	Altai Mountains	Carpathians
+geo_tiny_greek_canal	Expert	Which tiny Greek canal, cut in 1893, separates the Peloponnese from the mainland?	Corinth Canal	Kiel Canal	Suez Canal	Gota Canal
+geo_narrow_strip_namibia	Expert	What is the name of the narrow strip of Namibia that reaches to the Zambezi?	Caprivi Strip	Wakhan Corridor	Siliguri Corridor	Gaza Strip
+geo_narrow_corridor_connects	Expert	Which narrow corridor connects Afghanistan to China?	Wakhan Corridor	Caprivi Strip	Khyber Pass	Siliguri Corridor
+geo_ethiopian_town_churches	Expert	Which Ethiopian town is famous for churches carved down into solid rock?	Lalibela	Gondar	Aksum	Harar
+geo_australian_rock_ayers	Expert	Which Australian rock is also known by the name Ayers Rock?	Uluru	Kata Tjuta	Wave Rock	Mount Augustus
+geo_city_world_largest	Expert	Which city has the world's largest metro area population?	Tokyo	Delhi	Shanghai	Sao Paulo
+geo_river_flows_through_15	Expert	Which river flows through Bern?	Aare	Rhine	Rhone	Limmat
+geo_river_flows_through_16	Expert	Which river flows through Madrid?	Manzanares	Tagus	Ebro	Guadiana
+geo_river_flows_through_17	Expert	Which river flows through Seville?	Guadalquivir	Tagus	Guadiana	Douro
+geo_river_flows_through_18	Expert	Which river flows through Porto?	Douro	Tagus	Minho	Mondego
+geo_river_flows_through_19	Expert	Which river flows through Bordeaux?	Garonne	Loire	Dordogne	Seine
+geo_river_flows_through_20	Expert	Which river flows through Lyon along with the Rhone?	Saone	Loire	Garonne	Isere

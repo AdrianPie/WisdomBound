@@ -814,7 +814,16 @@ object PopCultureQuestions {
         q("pop_spaces_around_standard", "How many spaces are there around a standard Monopoly board?", "40", listOf("36", "44", "52"), M),
         q("pop_animal_appears_every", "Which animal appears on every bottle of Bacardi rum?", "A bat", listOf("A parrot", "A lion", "A rooster"), M),
         q("pop_film_studio_logo_2", "Which film studio's logo shows a woman holding up a torch?", "Columbia", listOf("Paramount", "Universal", "MGM"), M),
-        q("pop_video_game_series", "Which video game series features the thumbs-up mascot 'Vault Boy'?", "Fallout", listOf("BioShock", "Borderlands", "Mass Effect"), M)
+        q("pop_video_game_series", "Which video game series features the thumbs-up mascot 'Vault Boy'?", "Fallout", listOf("BioShock", "Borderlands", "Mass Effect"), M),
+        q("pop_star_wars_luke", "In 'Star Wars', who is Luke Skywalker's father?", "Darth Vader", listOf("Obi-Wan Kenobi", "Emperor Palpatine", "Yoda"), M),
+        q("pop_video_game_plumber", "Which video game plumber wears a red cap?", "Mario", listOf("Luigi", "Wario", "Toad"), M),
+        q("pop_cartoon_cat_always", "Which cartoon cat is always chasing Jerry the mouse?", "Tom", listOf("Sylvester", "Garfield", "Felix"), M),
+        q("pop_yellow_sponge_lives", "Which yellow sponge lives in a pineapple under the sea?", "SpongeBob SquarePants", listOf("Patrick Star", "Squidward", "Plankton"), M),
+        q("pop_snowman_disney_frozen", "What is the name of the snowman in Disney's 'Frozen'?", "Olaf", listOf("Sven", "Kristoff", "Hans"), M),
+        q("pop_superhero_secret_identity", "Which superhero's secret identity is Peter Parker?", "Spider-Man", listOf("Batman", "Daredevil", "Ant-Man"), M),
+        q("pop_band_sang_bohemian", "Which band sang 'Bohemian Rhapsody'?", "Queen", listOf("The Beatles", "Led Zeppelin", "ABBA"), M),
+        q("pop_swedish_group_won", "Which Swedish group won Eurovision in 1974 with 'Waterloo'?", "ABBA", listOf("Roxette", "Ace of Base", "Europe"), M),
+        q("pop_cartoon_family_lives", "Which cartoon family lives in Bedrock in the Stone Age?", "The Flintstones", listOf("The Jetsons", "The Simpsons", "The Addams Family"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -999,7 +1008,21 @@ object PopCultureQuestions {
         q("pop_directed_lost_translation", "Who directed 'Lost in Translation' (2003)?", "Sofia Coppola", listOf("Greta Gerwig", "Kathryn Bigelow", "Jane Campion"), H),
         q("pop_south_korean_director", "Which South Korean director made 'Parasite'?", "Bong Joon-ho", listOf("Park Chan-wook", "Kim Ki-duk", "Lee Chang-dong"), H),
         q("pop_singer_songwriter_wrote", "Which singer-songwriter wrote the much-covered song 'Hallelujah'?", "Leonard Cohen", listOf("Bob Dylan", "Jeff Buckley", "Paul Simon"), H),
-        q("pop_french_singer_nicknamed", "Which French singer, nicknamed 'the Little Sparrow', sang 'Non, je ne regrette rien'?", "Edith Piaf", listOf("Juliette Greco", "Francoise Hardy", "Dalida"), H)
+        q("pop_french_singer_nicknamed", "Which French singer, nicknamed 'the Little Sparrow', sang 'Non, je ne regrette rien'?", "Edith Piaf", listOf("Juliette Greco", "Francoise Hardy", "Dalida"), H),
+        q("pop_ship_alien_1979", "What is the name of the ship in 'Alien' (1979)?", "Nostromo", listOf("Sulaco", "Serenity", "Discovery"), H),
+        q("pop_band_mascot_skeletal", "Which band's mascot is the skeletal figure called Eddie?", "Iron Maiden", listOf("Megadeth", "Metallica", "Motorhead"), H),
+        q("pop_bar_met_mother", "What is the name of the bar in 'How I Met Your Mother'?", "MacLaren's", listOf("Central Perk", "Paddy's Pub", "Cheers"), H),
+        q("pop_1982_film_features", "Which 1982 film features a replicant hunter in a rainy Los Angeles of 2019?", "Blade Runner", listOf("Tron", "The Thing", "Escape from New York"), H),
+        q("pop_1993_film_brought", "Which 1993 film brought dinosaurs back from amber-trapped mosquito blood?", "Jurassic Park", listOf("The Lost World", "King Kong", "Land of the Lost"), H),
+        q("pop_game_series_features", "Which game series features the hero Link?", "The Legend of Zelda", listOf("Final Fantasy", "Metroid", "Kirby"), H),
+        q("pop_superhero_planet_krypton", "Which superhero is from the planet Krypton?", "Superman", listOf("Thor", "Green Lantern", "Martian Manhunter"), H),
+        q("pop_metal_bonded_wolverine", "Which metal is bonded to Wolverine's skeleton?", "Adamantium", listOf("Vibranium", "Titanium", "Uru"), H),
+        q("pop_video_game_features", "Which video game features the blocky world of Steve and Creepers?", "Minecraft", listOf("Roblox", "Terraria", "Fortnite"), H),
+        q("pop_falling_block_game", "Which falling-block game was created by Alexey Pajitnov in 1984?", "Tetris", listOf("Columns", "Dr. Mario", "Puyo Puyo"), H),
+        q("pop_star_wars_han", "In 'Star Wars', what is the name of Han Solo's ship?", "Millennium Falcon", listOf("Slave I", "X-wing", "Star Destroyer"), H),
+        q("pop_garfield_dog_companion", "What is the name of Garfield's dog companion?", "Odie", listOf("Snoopy", "Pluto", "Goofy"), H),
+        q("pop_1984_film_features", "Which 1984 film features ghost-busting scientists in New York?", "Ghostbusters", listOf("Gremlins", "Beetlejuice", "The Frighteners"), H),
+        q("pop_yellow_creatures_serve", "Which yellow creatures serve Gru in 'Despicable Me'?", "Minions", listOf("Gremlins", "Smurfs", "Oompa-Loompas"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -1055,6 +1078,20 @@ object PopCultureQuestions {
         q("pop_actor_won_best", "Which actor has won the most Best Actor Oscars, with three?", "Daniel Day-Lewis", listOf("Jack Nicholson", "Tom Hanks", "Marlon Brando"), X),
         q("pop_elton_john_birth", "What was Elton John's name at birth?", "Reginald Dwight", listOf("Elton Hercules", "Gordon Sumner", "Farrokh Bulsara"), X),
         q("pop_best_selling_single", "Which is the best-selling single of all time?", "'White Christmas'", listOf("'Candle in the Wind 1997'", "'Imagine'", "'Billie Jean'"), X),
-        q("pop_number_pikachu_national", "What number is Pikachu in the National Pokedex?", "25", listOf("1", "7", "151"), X)
+        q("pop_number_pikachu_national", "What number is Pikachu in the National Pokedex?", "25", listOf("1", "7", "151"), X),
+        q("pop_1977_film_sound", "Which 1977 film's sound designer created a lightsaber hum from an old projector and a TV?", "Star Wars", listOf("Close Encounters of the Third Kind", "Alien", "Superman"), X),
+        q("pop_pac_man_originally", "Under what name was Pac-Man first released in Japan?", "Puck Man", listOf("Paku Man", "Munch Man", "Pie Man"), X),
+        q("pop_mickey_mouse_original", "What was Mickey Mouse's original name, according to Disney legend?", "Mortimer", listOf("Marvin", "Morris", "Milton"), X),
+        q("pop_hedgehog_sega_answer", "Which hedgehog was Sega's answer to Mario in 1991?", "Sonic", listOf("Knuckles", "Shadow", "Tails"), X),
+        q("pop_sonic_two_tailed", "What is the name of Sonic's two-tailed fox friend?", "Tails", listOf("Knuckles", "Amy", "Shadow"), X),
+        q("pop_band_members_wore", "Which band's members wore make-up personas called the Demon, the Starchild, the Spaceman and the Catman?", "KISS", listOf("Slipknot", "Twisted Sister", "Alice Cooper"), X),
+        q("pop_computer_portal_video", "What is the name of the computer AI in the 'Portal' video games?", "GLaDOS", listOf("SHODAN", "Cortana", "HAL"), X),
+        q("pop_video_game_series_2", "Which video game series follows the assassin Ezio Auditore?", "Assassin's Creed", listOf("Hitman", "Dishonored", "Thief"), X),
+        q("pop_tintin_dog_original", "What is the name of Tintin's dog in the original Belgian comic?", "Milou", listOf("Pif", "Idefix", "Rantanplan"), X),
+        q("pop_obelix_little_dog", "What is the name of Obelix's little dog?", "Dogmatix", listOf("Snowy", "Rantanplan", "Pluto"), X),
+        q("pop_belgian_artist_created", "Which Belgian artist created the Smurfs?", "Peyo", listOf("Herge", "Franquin", "Morris"), X),
+        q("pop_british_stop_motion", "Which British stop-motion duo are an inventor and his clever dog?", "Wallace and Gromit", listOf("Shaun and Bitzer", "Morph and Chas", "Pingu and Robby"), X),
+        q("pop_studio_makes_wallace", "Which studio makes Wallace and Gromit?", "Aardman Animations", listOf("Pixar", "Laika", "Studio Ghibli"), X),
+        q("pop_forest_spirit_mascot", "Which forest spirit is the mascot of Studio Ghibli?", "Totoro", listOf("No-Face", "Calcifer", "Kodama"), X)
     )
 }

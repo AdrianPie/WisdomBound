@@ -121,6 +121,7 @@ spo_scottish_manager_led	Easy	Which Scottish manager led Manchester United for 2
 spo_french_manager_led	Easy	Which French manager led Arsenal for 22 years?	Arsene Wenger	Gerard Houllier	Didier Deschamps	Claude Puel
 spo_coach_barcelona_team	Easy	Which coach's Barcelona team of 2008-2012 made 'tiki-taka' famous?	Pep Guardiola	Luis Enrique	Frank Rijkaard	Johan Cruyff
 spo_german_coach_led	Easy	Which German coach led Liverpool to the 2019 Champions League title?	Jurgen Klopp	Joachim Low	Thomas Tuchel	Hansi Flick
+spo_players_football_team	Easy	How many players does a football team have on the pitch?	Eleven	Ten	Nine	Twelve
 spo_mundial_2018	Medium	Who won the soccer World Cup in 2018?	France	Croatia	Brazil	Germany
 spo_lewandowski	Medium	At which club did Robert Lewandowski become the Bundesliga's top scorer?	Bayern Munich	Real Madrid	Manchester United	Juventus
 spo_hokej	Medium	How long is one period in an ice hockey game?	20 minutes	15 minutes	25 minutes	30 minutes
@@ -322,6 +323,11 @@ spo_american_won_three	Medium	Which American won three Olympic golds in the snow
 spo_kabaddi_contact_sport	Medium	Kabaddi, a contact sport of tagging while holding your breath, is most popular in which country?	India	Brazil	Japan	Egypt
 spo_sport_invented_native	Medium	Which sport was invented by Native Americans and named by French settlers?	Lacrosse	Baseball	Ice hockey	Basketball
 spo_coach_led_france	Medium	Which coach led France to victory at the 2018 World Cup?	Didier Deschamps	Zinedine Zidane	Laurent Blanc	Arsene Wenger
+spo_bowling_knock_down	Medium	In bowling, what is it called when you knock down all ten pins with your first ball?	Strike	Spare	Split	Turkey
+spo_sport_events_kata	Medium	Which sport has events called kata and kumite?	Karate	Judo	Taekwondo	Fencing
+spo_sport_uses_puck	Medium	Which sport uses a puck?	Ice hockey	Lacrosse	Curling	Polo
+spo_sport_players_ride	Medium	In which sport do players ride horses and hit a ball with a mallet?	Polo	Croquet	Hurling	Lacrosse
+spo_sport_ride_board	Medium	What is the name of the sport where you ride a board on ocean waves?	Surfing	Kitesurfing	Wakeboarding	Rowing
 spo_bolt	Hard	What is Usain Bolt's world record in the 100 m?	9.58 s	9.69 s	9.72 s	9.49 s
 spo_olimpiada_1896	Hard	Where were the first modern Olympic Games held?	Athens	Paris	Rome	London
 spo_wimbledon	Hard	What surface is Wimbledon played on?	Grass	Sand	Concrete	Clay and hard court, alternating
@@ -414,6 +420,20 @@ spo_boxer_retired_unbeaten	Hard	Which boxer retired unbeaten with a record of 50
 spo_athletics_distance_nicknamed	Hard	Which athletics distance is nicknamed 'the metric mile'?	1500 metres	1000 metres	1609 metres	2000 metres
 spo_golfer_nicknamed_golden	Hard	Which golfer was nicknamed 'the Golden Bear'?	Jack Nicklaus	Arnold Palmer	Greg Norman	Gary Player
 spo_sport_combines_cross	Hard	Which sport combines cross-country skiing with ski jumping?	Nordic combined	Biathlon	Telemark	Freestyle skiing
+spo_darts_bullseye_centre	Hard	In darts, what is the bullseye's centre worth?	50	25	60	100
+spo_sport_uses_terms	Hard	Which sport uses the terms 'stone', 'house' and 'sweeping'?	Curling	Bowls	Petanque	Shuffleboard
+spo_sport_james_naismith	Hard	Which sport did James Naismith invent in 1891 using peach baskets?	Basketball	Volleyball	Netball	Handball
+spo_sport_invented_mintonette	Hard	Which sport was invented as 'mintonette' in 1895?	Volleyball	Badminton	Basketball	Netball
+spo_players_rugby_league	Hard	How many players are on a rugby league team on the field?	13	15	11	12
+spo_fencing_three_weapons	Hard	In fencing, which three weapons are used?	Foil, epee and sabre	Foil, rapier and sabre	Epee, katana and foil	Sabre, cutlass and epee
+spo_sport_combines_cross_2	Hard	Which sport combines cross-country skiing and rifle shooting?	Biathlon	Nordic combined	Pentathlon	Skeleton
+spo_sport_term_hat	Hard	In which sport is the term 'hat-trick' believed to have originated?	Cricket	Football	Ice hockey	Horse racing
+spo_country_taekwondo_originate	Hard	In which country did taekwondo originate?	South Korea	Japan	China	Vietnam
+spo_country_invented_sport	Hard	Which country invented the sport of curling?	Scotland	Canada	Norway	Switzerland
+spo_sport_uses_terms_2	Hard	Which sport uses terms like 'birdie', 'bogey' and 'caddie'?	Golf	Tennis	Cricket	Polo
+spo_country_home_sport	Hard	Which country is the home of the sport of hurling?	Ireland	Scotland	Wales	England
+spo_trophy_awarded_winner	Hard	What is the name of the trophy awarded to the winner of the Rugby World Cup?	Webb Ellis Cup	Calcutta Cup	Bledisloe Cup	Six Nations Trophy
+spo_sport_played_nba	Hard	Which sport is played in the NBA?	Basketball	American football	Baseball	Ice hockey
 spo_dekatlon	Expert	Which event closes the men's Olympic decathlon on the second day?	The 1500 metres	The javelin throw	The pole vault	The 110 m hurdles
 spo_nba_wilt	Expert	Who scored 100 points in a single NBA game?	Wilt Chamberlain	Michael Jordan	Kobe Bryant	LeBron James
 spo2_fosbury	Expert	Who revolutionized the high jump with the backward flop technique?	Dick Fosbury	Jesse Owens	Carl Lewis	Javier Sotomayor
@@ -469,3 +489,15 @@ spoy_tahiti	Expert	Where were the surfing events of the 2024 Summer Olympics hel
 spo_country_won_rugby	Expert	Which country won the first Rugby World Cup, in 1987?	New Zealand	Australia	South Africa	England
 spo_boxer_nicknamed_brown	Expert	Which boxer was nicknamed 'the Brown Bomber'?	Joe Louis	Joe Frazier	Sugar Ray Robinson	Rocky Marciano
 spo_won_very_ballon	Expert	Who won the very first Ballon d'Or, in 1956?	Stanley Matthews	Alfredo Di Stefano	Ferenc Puskas	Raymond Kopa
+spo_sport_playing_field_2	Expert	Which sport's playing field is called a 'pitch' and has a 'crease' and 'stumps'?	Cricket	Baseball	Rounders	Hockey
+spo_tennis_tournament_grand	Expert	Which tennis tournament is the only Grand Slam still played on clay?	French Open	US Open	Australian Open	Wimbledon
+spo_finnish_runner_won	Expert	Which Finnish runner won nine Olympic gold medals in the 1920s?	Paavo Nurmi	Lasse Viren	Hannes Kolehmainen	Ville Ritola
+spo_sport_rules_written	Expert	Which sport's rules were written by the Marquess of Queensberry in 1867?	Boxing	Wrestling	Fencing	Rugby
+spo_sport_triple_crown	Expert	Which sport's 'Triple Crown' consists of the Kentucky Derby, Preakness and Belmont Stakes?	Horse racing	Golf	Sailing	Rowing
+spo_city_hosts_indy	Expert	Which US city hosts the famous Indy 500 car race?	Indianapolis	Detroit	Daytona Beach	Charlotte
+spo_game_played_board	Expert	Which game is played on a board of 19 by 19 lines with black and white stones?	Go	Chess	Shogi	Reversi
+spo_japanese_wrestling_sport	Expert	Which Japanese wrestling sport has wrestlers called rikishi?	Sumo	Judo	Kendo	Aikido
+spo_sport_michael_jordan	Expert	Which sport did Michael Jordan briefly switch to in 1994?	Baseball	Golf	American football	Tennis
+spo_boxer_born_cassius	Expert	Which boxer was born Cassius Clay?	Muhammad Ali	Joe Frazier	George Foreman	Sonny Liston
+spo_1974_boxing_match	Expert	Which famous 1974 boxing match took place in Zaire?	The Rumble in the Jungle	The Thrilla in Manila	The Fight of the Century	The Long Count
+spo_1975_boxing_match	Expert	Which 1975 boxing match between Ali and Frazier took place in the Philippines?	The Thrilla in Manila	The Rumble in the Jungle	The Brawl in Manila	The War in Asia

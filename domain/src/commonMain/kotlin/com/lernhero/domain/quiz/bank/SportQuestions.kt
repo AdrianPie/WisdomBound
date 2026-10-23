@@ -146,7 +146,8 @@ object SportQuestions {
         q("spo_scottish_manager_led", "Which Scottish manager led Manchester United for 26 years?", "Alex Ferguson", listOf("Matt Busby", "Kenny Dalglish", "David Moyes"), E),
         q("spo_french_manager_led", "Which French manager led Arsenal for 22 years?", "Arsene Wenger", listOf("Gerard Houllier", "Didier Deschamps", "Claude Puel"), E),
         q("spo_coach_barcelona_team", "Which coach's Barcelona team of 2008-2012 made 'tiki-taka' famous?", "Pep Guardiola", listOf("Luis Enrique", "Frank Rijkaard", "Johan Cruyff"), E),
-        q("spo_german_coach_led", "Which German coach led Liverpool to the 2019 Champions League title?", "Jurgen Klopp", listOf("Joachim Low", "Thomas Tuchel", "Hansi Flick"), E)
+        q("spo_german_coach_led", "Which German coach led Liverpool to the 2019 Champions League title?", "Jurgen Klopp", listOf("Joachim Low", "Thomas Tuchel", "Hansi Flick"), E),
+        q("spo_players_football_team", "How many players does a football team have on the pitch?", "Eleven", listOf("Ten", "Nine", "Twelve"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -351,7 +352,12 @@ object SportQuestions {
         q("spo_american_won_three", "Which American won three Olympic golds in the snowboard halfpipe?", "Shaun White", listOf("Tony Hawk", "Chloe Kim", "Mark McMorris"), M),
         q("spo_kabaddi_contact_sport", "Kabaddi, a contact sport of tagging while holding your breath, is most popular in which country?", "India", listOf("Brazil", "Japan", "Egypt"), M),
         q("spo_sport_invented_native", "Which sport was invented by Native Americans and named by French settlers?", "Lacrosse", listOf("Baseball", "Ice hockey", "Basketball"), M),
-        q("spo_coach_led_france", "Which coach led France to victory at the 2018 World Cup?", "Didier Deschamps", listOf("Zinedine Zidane", "Laurent Blanc", "Arsene Wenger"), M)
+        q("spo_coach_led_france", "Which coach led France to victory at the 2018 World Cup?", "Didier Deschamps", listOf("Zinedine Zidane", "Laurent Blanc", "Arsene Wenger"), M),
+        q("spo_bowling_knock_down", "In bowling, what is it called when you knock down all ten pins with your first ball?", "Strike", listOf("Spare", "Split", "Turkey"), M),
+        q("spo_sport_events_kata", "Which sport has events called kata and kumite?", "Karate", listOf("Judo", "Taekwondo", "Fencing"), M),
+        q("spo_sport_uses_puck", "Which sport uses a puck?", "Ice hockey", listOf("Lacrosse", "Curling", "Polo"), M),
+        q("spo_sport_players_ride", "In which sport do players ride horses and hit a ball with a mallet?", "Polo", listOf("Croquet", "Hurling", "Lacrosse"), M),
+        q("spo_sport_ride_board", "What is the name of the sport where you ride a board on ocean waves?", "Surfing", listOf("Kitesurfing", "Wakeboarding", "Rowing"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -447,7 +453,21 @@ object SportQuestions {
         q("spo_boxer_retired_unbeaten", "Which boxer retired unbeaten with a record of 50 wins?", "Floyd Mayweather", listOf("Muhammad Ali", "Mike Tyson", "Manny Pacquiao"), H),
         q("spo_athletics_distance_nicknamed", "Which athletics distance is nicknamed 'the metric mile'?", "1500 metres", listOf("1000 metres", "1609 metres", "2000 metres"), H),
         q("spo_golfer_nicknamed_golden", "Which golfer was nicknamed 'the Golden Bear'?", "Jack Nicklaus", listOf("Arnold Palmer", "Greg Norman", "Gary Player"), H),
-        q("spo_sport_combines_cross", "Which sport combines cross-country skiing with ski jumping?", "Nordic combined", listOf("Biathlon", "Telemark", "Freestyle skiing"), H)
+        q("spo_sport_combines_cross", "Which sport combines cross-country skiing with ski jumping?", "Nordic combined", listOf("Biathlon", "Telemark", "Freestyle skiing"), H),
+        q("spo_darts_bullseye_centre", "In darts, what is the bullseye's centre worth?", "50", listOf("25", "60", "100"), H),
+        q("spo_sport_uses_terms", "Which sport uses the terms 'stone', 'house' and 'sweeping'?", "Curling", listOf("Bowls", "Petanque", "Shuffleboard"), H),
+        q("spo_sport_james_naismith", "Which sport did James Naismith invent in 1891 using peach baskets?", "Basketball", listOf("Volleyball", "Netball", "Handball"), H),
+        q("spo_sport_invented_mintonette", "Which sport was invented as 'mintonette' in 1895?", "Volleyball", listOf("Badminton", "Basketball", "Netball"), H),
+        q("spo_players_rugby_league", "How many players are on a rugby league team on the field?", "13", listOf("15", "11", "12"), H),
+        q("spo_fencing_three_weapons", "In fencing, which three weapons are used?", "Foil, epee and sabre", listOf("Foil, rapier and sabre", "Epee, katana and foil", "Sabre, cutlass and epee"), H),
+        q("spo_sport_combines_cross_2", "Which sport combines cross-country skiing and rifle shooting?", "Biathlon", listOf("Nordic combined", "Pentathlon", "Skeleton"), H),
+        q("spo_sport_term_hat", "In which sport is the term 'hat-trick' believed to have originated?", "Cricket", listOf("Football", "Ice hockey", "Horse racing"), H),
+        q("spo_country_taekwondo_originate", "In which country did taekwondo originate?", "South Korea", listOf("Japan", "China", "Vietnam"), H),
+        q("spo_country_invented_sport", "Which country invented the sport of curling?", "Scotland", listOf("Canada", "Norway", "Switzerland"), H),
+        q("spo_sport_uses_terms_2", "Which sport uses terms like 'birdie', 'bogey' and 'caddie'?", "Golf", listOf("Tennis", "Cricket", "Polo"), H),
+        q("spo_country_home_sport", "Which country is the home of the sport of hurling?", "Ireland", listOf("Scotland", "Wales", "England"), H),
+        q("spo_trophy_awarded_winner", "What is the name of the trophy awarded to the winner of the Rugby World Cup?", "Webb Ellis Cup", listOf("Calcutta Cup", "Bledisloe Cup", "Six Nations Trophy"), H),
+        q("spo_sport_played_nba", "Which sport is played in the NBA?", "Basketball", listOf("American football", "Baseball", "Ice hockey"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -506,6 +526,18 @@ object SportQuestions {
         q("spoy_tahiti", "Where were the surfing events of the 2024 Summer Olympics held, far from the host city?", "Tahiti", listOf("Biarritz", "Hawaii", "Portugal"), X),
         q("spo_country_won_rugby", "Which country won the first Rugby World Cup, in 1987?", "New Zealand", listOf("Australia", "South Africa", "England"), X),
         q("spo_boxer_nicknamed_brown", "Which boxer was nicknamed 'the Brown Bomber'?", "Joe Louis", listOf("Joe Frazier", "Sugar Ray Robinson", "Rocky Marciano"), X),
-        q("spo_won_very_ballon", "Who won the very first Ballon d'Or, in 1956?", "Stanley Matthews", listOf("Alfredo Di Stefano", "Ferenc Puskas", "Raymond Kopa"), X)
+        q("spo_won_very_ballon", "Who won the very first Ballon d'Or, in 1956?", "Stanley Matthews", listOf("Alfredo Di Stefano", "Ferenc Puskas", "Raymond Kopa"), X),
+        q("spo_sport_playing_field_2", "Which sport's playing field is called a 'pitch' and has a 'crease' and 'stumps'?", "Cricket", listOf("Baseball", "Rounders", "Hockey"), X),
+        q("spo_tennis_tournament_grand", "Which tennis tournament is the only Grand Slam still played on clay?", "French Open", listOf("US Open", "Australian Open", "Wimbledon"), X),
+        q("spo_finnish_runner_won", "Which Finnish runner won nine Olympic gold medals in the 1920s?", "Paavo Nurmi", listOf("Lasse Viren", "Hannes Kolehmainen", "Ville Ritola"), X),
+        q("spo_sport_rules_written", "Which sport's rules were written by the Marquess of Queensberry in 1867?", "Boxing", listOf("Wrestling", "Fencing", "Rugby"), X),
+        q("spo_sport_triple_crown", "Which sport's 'Triple Crown' consists of the Kentucky Derby, Preakness and Belmont Stakes?", "Horse racing", listOf("Golf", "Sailing", "Rowing"), X),
+        q("spo_city_hosts_indy", "Which US city hosts the famous Indy 500 car race?", "Indianapolis", listOf("Detroit", "Daytona Beach", "Charlotte"), X),
+        q("spo_game_played_board", "Which game is played on a board of 19 by 19 lines with black and white stones?", "Go", listOf("Chess", "Shogi", "Reversi"), X),
+        q("spo_japanese_wrestling_sport", "Which Japanese wrestling sport has wrestlers called rikishi?", "Sumo", listOf("Judo", "Kendo", "Aikido"), X),
+        q("spo_sport_michael_jordan", "Which sport did Michael Jordan briefly switch to in 1994?", "Baseball", listOf("Golf", "American football", "Tennis"), X),
+        q("spo_boxer_born_cassius", "Which boxer was born Cassius Clay?", "Muhammad Ali", listOf("Joe Frazier", "George Foreman", "Sonny Liston"), X),
+        q("spo_1974_boxing_match", "Which famous 1974 boxing match took place in Zaire?", "The Rumble in the Jungle", listOf("The Thrilla in Manila", "The Fight of the Century", "The Long Count"), X),
+        q("spo_1975_boxing_match", "Which 1975 boxing match between Ali and Frazier took place in the Philippines?", "The Thrilla in Manila", listOf("The Rumble in the Jungle", "The Brawl in Manila", "The War in Asia"), X)
     )
 }

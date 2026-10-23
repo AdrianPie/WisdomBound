@@ -24,8 +24,10 @@ zaznacz-wszystkie, ukladanki i szacowanie. Skrypt czyta je przy sprawdzaniu dubl
 python3 tools/quizbank.py stats                 # ile pytan w ktorym temacie i na ktorym poziomie
 python3 tools/quizbank.py list history -d E     # podglad tematu; -g fraza, -w pokazuje bledne odpowiedzi
 python3 tools/quizbank.py find "titanic"        # czy fakt juz jest - w CALYM banku, wszystkie typy
-python3 tools/quizbank.py check nowe.txt        # sprawdz nowe pytania, niczego nie zapisuje
+python3 tools/quizbank.py check nowe.txt [-q]   # sprawdz nowe pytania, niczego nie zapisuje (-q: krotko)
 python3 tools/quizbank.py add nowe.txt          # check + dopisz do TSV + wygeneruj Kotlin
+python3 tools/quizbank.py add nowe.txt --skip-errors  # dopisz poprawne, pomin te z bledami
+python3 tools/quizbank.py add nowe.txt --only-clean   # dopisz tylko pytania bez bledow i bez uwag
 ./gradlew :domain:desktopTest --tests 'com.lernhero.domain.quiz.*'
 ```
 

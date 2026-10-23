@@ -104,7 +104,8 @@ object MythologyQuestions {
         q("myt_romans_call_poseidon", "What did the Romans call Poseidon, the god of the sea?", "Neptune", listOf("Mercury", "Vulcan", "Saturn"), E),
         q("myt_king_arthur_queen", "Who was King Arthur's queen?", "Guinevere", listOf("Morgan le Fay", "Isolde", "Elaine"), E),
         q("myt_robin_hood_sweetheart", "Who is Robin Hood's sweetheart in the English legends?", "Maid Marian", listOf("Lady Godiva", "Guinevere", "Rowena"), E),
-        q("myt_mythical_creature_half", "Which mythical creature is half man and half goat?", "Satyr", listOf("Centaur", "Minotaur", "Griffin"), E)
+        q("myt_mythical_creature_half", "Which mythical creature is half man and half goat?", "Satyr", listOf("Centaur", "Minotaur", "Griffin"), E),
+        q("myt_norse_god_carries", "Which Norse god carries the hammer Mjolnir?", "Thor", listOf("Odin", "Loki", "Tyr"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -221,7 +222,17 @@ object MythologyQuestions {
         q("myt_roman_goddess_luck", "Who was the Roman goddess of luck?", "Fortuna", listOf("Victoria", "Fides", "Felicitas"), M),
         q("myt_giant_serpent_apollo", "Which giant serpent did Apollo kill at Delphi?", "Python", listOf("Ladon", "Typhon", "Echidna"), M),
         q("myt_oracle_ancient_greece", "Where was the most famous oracle of ancient Greece?", "Delphi", listOf("Olympia", "Dodona", "Sparta"), M),
-        q("myt_mythical_beast_lion", "Which mythical beast has a lion's body, a human face and a scorpion's tail?", "Manticore", listOf("Sphinx", "Griffin", "Chimera"), M)
+        q("myt_mythical_beast_lion", "Which mythical beast has a lion's body, a human face and a scorpion's tail?", "Manticore", listOf("Sphinx", "Griffin", "Chimera"), M),
+        q("myt_egyptian_god_head", "Which Egyptian god had the head of a crocodile?", "Sobek", listOf("Set", "Anubis", "Khnum"), M),
+        q("myt_egyptian_belief_dead", "In Egyptian belief, what was a dead person's heart weighed against?", "A feather", listOf("A golden coin", "A scarab", "A lotus flower"), M),
+        q("myt_monkey_god_leaps", "Which monkey god leaps to Lanka in the Hindu epic Ramayana?", "Hanuman", listOf("Ganesha", "Garuda", "Ravana"), M),
+        q("myt_feathered_serpent_god", "Which feathered serpent god was worshipped by the Aztecs?", "Quetzalcoatl", listOf("Huitzilopochtli", "Tlaloc", "Tezcatlipoca"), M),
+        q("myt_aztec_god_rain", "Which Aztec god of rain was offered child sacrifices?", "Tlaloc", listOf("Quetzalcoatl", "Xipe Totec", "Mictlantecuhtli"), M),
+        q("myt_winged_horse_sprang", "Which winged horse sprang from Medusa's neck when she was beheaded?", "Pegasus", listOf("Arion", "Sleipnir", "Chrysaor"), M),
+        q("myt_greek_titan_holds", "Which Greek Titan holds up the sky on his shoulders?", "Atlas", listOf("Prometheus", "Cronus", "Hyperion"), M),
+        q("myt_greek_myth_musician", "In Greek myth, which musician tried to lead his wife Eurydice out of the underworld?", "Orpheus", listOf("Apollo", "Hermes", "Linus"), M),
+        q("myt_greek_god_sea", "Which Greek god of the sea carries a trident?", "Poseidon", listOf("Zeus", "Hades", "Triton"), M),
+        q("myt_greek_god_war", "Which Greek god of war was disliked by most other gods?", "Ares", listOf("Hades", "Hephaestus", "Apollo"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -305,7 +316,20 @@ object MythologyQuestions {
         q("myt_roman_greek_goddess", "What is the Roman name for the Greek goddess Persephone?", "Proserpina", listOf("Ceres", "Juno", "Vesta"), H),
         q("myt_hero_rode_pegasus", "Which hero rode Pegasus to kill the monster Chimera?", "Bellerophon", listOf("Perseus", "Theseus", "Jason"), H),
         q("myt_greek_goddess_hearth", "Who was the Greek goddess of the hearth and home?", "Hestia", listOf("Hera", "Demeter", "Athena"), H),
-        q("myt_greek_keeper_winds", "Who was the Greek keeper of the winds, who gave Odysseus a bag of them?", "Aeolus", listOf("Boreas", "Zephyrus", "Triton"), H)
+        q("myt_greek_keeper_winds", "Who was the Greek keeper of the winds, who gave Odysseus a bag of them?", "Aeolus", listOf("Boreas", "Zephyrus", "Triton"), H),
+        q("myt_squirrel_runs_down", "Which squirrel runs up and down the Norse world tree carrying insults?", "Ratatoskr", listOf("Nidhogg", "Hraesvelgr", "Heidrun"), H),
+        q("myt_greek_nymph_cursed", "Which Greek nymph was cursed to only repeat the last words of others?", "Echo", listOf("Daphne", "Calypso", "Arethusa"), H),
+        q("myt_greek_craftsman_built", "Which Greek craftsman built wings of feathers and wax for himself and his son?", "Daedalus", listOf("Hephaestus", "Talos", "Epeius"), H),
+        q("myt_egyptian_goddess_lion", "Which Egyptian goddess with a lion's head nearly wiped out humanity until she was tricked with red beer?", "Sekhmet", listOf("Bastet", "Hathor", "Mut"), H),
+        q("myt_giant_serpent_attacked", "What was the name of the giant serpent that attacked the Egyptian sun god every night?", "Apep", listOf("Sobek", "Wadjet", "Mehen"), H),
+        q("myt_hindu_god_rides", "Which Hindu god rides the eagle Garuda?", "Vishnu", listOf("Shiva", "Brahma", "Indra"), H),
+        q("myt_ten_headed_demon", "What is the name of the ten-headed demon king in the Ramayana?", "Ravana", listOf("Kumbhakarna", "Mahishasura", "Hiranyakashipu"), H),
+        q("myt_irish_myth_hero", "In Irish myth, which hero earned his name by killing a guard dog?", "Cu Chulainn", listOf("Fionn mac Cumhaill", "Oisin", "Diarmuid"), H),
+        q("myt_irish_legend_hero", "In Irish legend, which hero gained wisdom by burning his thumb on the Salmon of Knowledge?", "Fionn mac Cumhaill", listOf("Cu Chulainn", "Lugh", "Bran"), H),
+        q("myt_greek_goddess_harvest", "Which Greek goddess of the harvest lost her daughter to Hades?", "Demeter", listOf("Hestia", "Hera", "Rhea"), H),
+        q("myt_greek_hero_performed", "Which Greek hero performed twelve labours?", "Heracles", listOf("Theseus", "Perseus", "Jason"), H),
+        q("myt_odysseus_tie_himself", "What did Odysseus tie himself to so he could hear the Sirens?", "The ship's mast", listOf("A rock", "His crew", "An anchor"), H),
+        q("myt_norse_realm_land", "Which Norse realm is the land of the giants?", "Jotunheim", listOf("Muspelheim", "Svartalfheim", "Helheim"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -361,6 +385,32 @@ object MythologyQuestions {
         q("myty_walhalla_dach", "According to Norse myth, what is the roof of Valhalla made of?", "Shields", listOf("Gold", "Antlers", "Ice"), X),
         q("myty_bes", "Which dwarf god of ancient Egypt protected households and children?", "Bes", listOf("Ptah", "Khnum", "Apis"), X),
         q("myty_koszczej", "Which Slavic villain is 'deathless' because his death is hidden in a needle inside an egg?", "Koschei", listOf("Baba Yaga", "Zmey Gorynych", "Leshy"), X),
-        q("myty_leszy", "What is a leshy in Slavic folklore?", "A forest spirit", listOf("A water horse", "A house elf", "A storm giant"), X)
+        q("myty_leszy", "What is a leshy in Slavic folklore?", "A forest spirit", listOf("A water horse", "A house elf", "A storm giant"), X),
+        q("myt_mesopotamian_myth_friend", "In Mesopotamian myth, who was the friend of Gilgamesh created from clay?", "Enkidu", listOf("Utnapishtim", "Humbaba", "Shamhat"), X),
+        q("myt_monster_guarding_cedar", "Which monster guarding the Cedar Forest did Gilgamesh and Enkidu kill?", "Humbaba", listOf("Tiamat", "Pazuzu", "Lamashtu"), X),
+        q("myt_babylonian_god_slew", "Which Babylonian god slew the sea goddess Tiamat and made the world from her body?", "Marduk", listOf("Enlil", "Ea", "Ashur"), X),
+        q("myt_greek_myth_king", "In Greek myth, which king had to roll a boulder uphill forever?", "Sisyphus", listOf("Tantalus", "Ixion", "Tityos"), X),
+        q("myt_greek_king_punished", "Which Greek king was punished with food and water forever just out of reach?", "Tantalus", listOf("Sisyphus", "Ixion", "Phineus"), X),
+        q("myt_greek_king_bound", "Which Greek king was bound to a burning wheel for eternity?", "Ixion", listOf("Tantalus", "Sisyphus", "Salmoneus"), X),
+        q("myt_finnish_myth_magic", "In Finnish myth, what is the magic mill that produces endless grain, salt and gold?", "Sampo", listOf("Kantele", "Pohjola", "Tuonela"), X),
+        q("myt_old_singer_hero", "Who is the old singer-hero of the Finnish epic Kalevala?", "Vainamoinen", listOf("Ilmarinen", "Lemminkainen", "Kullervo"), X),
+        q("myt_aztec_god_means", "Which Aztec god's name means 'Smoking Mirror'?", "Tezcatlipoca", listOf("Quetzalcoatl", "Xolotl", "Tonatiuh"), X),
+        q("myt_welsh_tales_magician", "In Welsh legend, which woman was conjured from flowers as a wife for Lleu?", "Blodeuwedd", listOf("Rhiannon", "Branwen", "Ceridwen"), X),
+        q("myt_inca_god_creator", "Which Inca god was the creator who rose from Lake Titicaca?", "Viracocha", listOf("Inti", "Pachamama", "Supay"), X),
+        q("myt_eyes_hera_place", "Whose eyes did Hera place on the tail of the peacock?", "Argus", listOf("Medusa", "Cyclops", "Polyphemus"), X),
+        q("myt_paris_give_golden", "What did Paris give the golden apple to, starting the Trojan War?", "Aphrodite", listOf("Hera", "Athena", "Helen"), X),
+        q("myt_trojan_princess_cursed", "Which Trojan princess was cursed to tell true prophecies no one believed?", "Cassandra", listOf("Andromache", "Hecuba", "Polyxena"), X),
+        q("myt_trojan_hero_escaped", "Which Trojan hero escaped burning Troy carrying his father and later founded Rome's line?", "Aeneas", listOf("Hector", "Paris", "Priam"), X),
+        q("myt_roman_priestesses_guarded", "Which Roman priestesses guarded the sacred fire of Vesta?", "Vestal Virgins", listOf("Sibyls", "Augurs", "Maenads"), X),
+        q("myt_female_followers_dionysus", "Which female followers of Dionysus were known for wild frenzies?", "Maenads", listOf("Muses", "Graces", "Furies"), X),
+        q("myt_muse_presided_over", "Which Muse presided over history?", "Clio", listOf("Calliope", "Thalia", "Urania"), X),
+        q("myt_muse_presided_over_2", "Which Muse presided over astronomy?", "Urania", listOf("Clio", "Euterpe", "Terpsichore"), X),
+        q("myt_muse_presided_over_3", "Which Muse presided over dance?", "Terpsichore", listOf("Thalia", "Erato", "Melpomene"), X),
+        q("myt_names_odin_two", "What are the names of Odin's two wolves?", "Geri and Freki", listOf("Huginn and Muninn", "Skoll and Hati", "Garm and Fenrir"), X),
+        q("myt_golden_bristled_boar", "Which golden-bristled boar belongs to the Norse god Freyr?", "Gullinbursti", listOf("Saehrimnir", "Hildisvini", "Heidrun"), X),
+        q("myt_norse_goddess_rules", "Which Norse goddess rules the land of the dead and is half living, half corpse?", "Hel", listOf("Ran", "Skadi", "Frigg"), X),
+        q("myt_sea_goddess_catches", "Which sea goddess catches drowned sailors in her net in Norse myth?", "Ran", listOf("Hel", "Sif", "Gerd"), X),
+        q("myt_ship_made_dead", "Which ship made of dead men's nails will carry giants to Ragnarok?", "Naglfar", listOf("Skidbladnir", "Hringhorni", "Ellida"), X),
+        q("myt_norse_god_owns", "Which Norse god owns the ship Skidbladnir that folds into a pocket?", "Freyr", listOf("Odin", "Njord", "Thor"), X)
     )
 }

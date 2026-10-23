@@ -282,6 +282,18 @@ ani_elephant_tusks	Medium	What are an elephant's tusks?	Enlarged incisor teeth	H
 ani_heaviest_invertebrate_earth	Medium	Which is the heaviest invertebrate on Earth?	Colossal squid	Giant squid	Giant Pacific octopus	Lion's mane jellyfish
 ani_sea_creature_usually	Medium	Which sea creature is usually ranked the most venomous animal in the ocean?	Box jellyfish	Stonefish	Blue-ringed octopus	Sea snake
 ani_truly_wild_horse	Medium	Which is the only truly wild horse species still living, saved from extinction in Mongolia?	Przewalski's horse	Camargue horse	Akhal-Teke horse	Mongolian mustang
+ani_animal_sleeps_standing	Medium	Which animal sleeps standing up and can only doze lying down for short spells?	Horse	Cow	Pig	Sheep
+ani_animal_milk_naturally	Medium	Which animal's milk is wrongly rumoured online to be pink?	Hippopotamus	Flamingo	Pig	Camel
+ani_flamingos_turn_pink	Medium	Why do flamingos turn pink?	Pigments in their food	Sunburn	Their blood shows through	Mud baths
+ani_call_male_bee	Medium	What do you call a male bee whose only job is to mate with the queen?	Drone	Worker	Soldier	Scout
+ani_insect_performs_waggle	Medium	Which insect performs a 'waggle dance' to show others where food is?	Honeybee	Ant	Wasp	Termite
+ani_reptile_change_colour	Medium	Which reptile can change colour and move its eyes independently?	Chameleon	Gecko	Iguana	Komodo dragon
+ani_marine_mammal_holds	Medium	Which marine mammal holds stones on its belly to crack open shellfish?	Sea otter	Walrus	Seal	Manatee
+ani_animal_black_white	Medium	Which animal has black-and-white stripes that are unique to each individual, like fingerprints?	Zebra	Tiger	Okapi	Skunk
+ani_baby_swan	Medium	What is a baby swan called?	Cygnet	Gosling	Eaglet	Fledgling
+ani_baby_hare	Medium	What is a baby hare called?	Leveret	Kit	Bunny	Pup
+ani_animal_stripes_continue	Medium	Which animal's stripes continue onto its skin, not just its fur?	Tiger	Zebra	Okapi	Raccoon
+ani_bird_mimic_human	Medium	Which bird can mimic human speech best, with a vocabulary of over 100 words recorded?	African grey parrot	Crow	Budgerigar	Cockatoo
 ani_dziobak	Hard	Which mammal lays eggs?	Platypus	Armadillo	Sloth	Hedgehog
 ani_krowa_zoladek	Hard	How many chambers does a cow's stomach have?	4	1	2	3
 ani_kalmar_oczy	Hard	Which animal has an eye that can grow to the size of a dinner plate?	Giant squid	Owl	Whale	Elephant seal
@@ -380,6 +392,29 @@ ani_living_fossil_fish	Hard	Which 'living fossil' fish, thought extinct for mill
 ani_japanese_dog_breed	Hard	Which Japanese dog breed was the famously loyal Hachiko?	The Akita	The Shiba Inu	The Tosa	The Japanese Spitz
 ani_cat_breed_having	Hard	Which cat breed is famous for having no tail?	The Manx	The Sphynx	The Ragdoll	The Burmese
 ani_heaviest_spider_world	Hard	Which is the heaviest spider in the world?	The Goliath birdeater	The black widow	The huntsman	The wolf spider
+ani_big_cat_cannot	Hard	Which big cat cannot fully retract its claws?	Cheetah	Leopard	Jaguar	Lion
+ani_kind_animal_portuguese	Hard	What kind of animal is a Portuguese man o' war?	Siphonophore colony	Jellyfish	Sea anemone	Sea slug
+ani_seabird_longest_wingspan	Hard	Which seabird has the longest wingspan of any living bird?	Wandering albatross	Great frigatebird	Brown pelican	Northern gannet
+ani_unusual_male_seahorse	Hard	What is unusual about how a male seahorse helps raise young?	He gets pregnant and gives birth	He carries eggs in his mouth	He builds a bubble nest	He feeds them milk
+ani_ant_species_grows	Hard	Which ant species grows its own fungus gardens to eat?	Leafcutter ant	Army ant	Bullet ant	Fire ant
+ani_insect_painful_sting	Hard	Which insect has the most painful sting, according to the Schmidt pain index?	Bullet ant	Tarantula hawk	Honeybee	Fire ant
+ani_animal_tongue_longer	Hard	Which animal can shoot out a tongue up to twice its body length to catch insects?	Chameleon	Anteater	Giraffe	Woodpecker
+ani_bird_builds_elaborate	Hard	Which bird builds elaborate decorated bowers to attract a mate?	Bowerbird	Weaverbird	Lyrebird	Peacock
+ani_deep_sea_creature	Hard	Which deep-sea creature lights its own lure on its head?	Anglerfish	Viperfish	Gulper eel	Lanternfish
+ani_animal_regrow_lost	Hard	Which animal can regrow its lost limbs, heart and parts of its brain?	Axolotl	Starfish	Gecko	Newt
+ani_spider_female_often	Hard	Which spider is famous for the female often eating the male after mating?	Black widow	Wolf spider	Tarantula	Jumping spider
+ani_baby_goose	Hard	What is a baby goose called?	Gosling	Cygnet	Duckling	Poult
+ani_male_swan	Hard	What is a male swan called?	Cob	Pen	Drake	Gander
+ani_sea_creature_brain	Hard	Which sea creature has no brain, heart or blood, yet has existed for 500 million years?	Jellyfish	Sponge	Sea cucumber	Starfish
+ani_animal_sleep_three	Hard	Which animal can sleep for up to three years when conditions are dry?	Snail	Tortoise	Frog	Bear
+ani_animal_largest_eyes	Hard	Which animal has the largest eyes in the animal kingdom?	Colossal squid	Blue whale	Ostrich	Giant octopus
+ani_primate_great_ape	Hard	Which primate is the only great ape native to Asia?	Orangutan	Gibbon	Bonobo	Macaque
+ani_wild_cat_tufted	Hard	Which wild cat has tufted ears and lives in the forests of Europe?	Lynx	Ocelot	Caracal	Serval
+ani_pandas_spend_hours	Hard	What do pandas spend about 12 hours a day eating?	Bamboo	Eucalyptus	Fruit	Grass
+ani_bird_largest_wingspan	Hard	Which bird has the largest wingspan of any land bird, gliding over the Andes?	Andean condor	Golden eagle	Harpy eagle	Lammergeier
+ani_venomous_lizard_lives	Hard	Which venomous lizard lives in the deserts of the south-western USA?	Gila monster	Komodo dragon	Thorny devil	Frilled lizard
+ani_australian_lizard_opens	Hard	Which Australian lizard opens a big frill around its neck to scare enemies?	Frilled lizard	Thorny devil	Bearded dragon	Goanna
+ani_lizard_squirts_blood	Hard	Which lizard squirts blood from its eyes to scare predators?	Horned lizard	Gecko	Iguana	Chameleon
 ani_hemocyjanina	Expert	Which animal has blue blood?	Octopus	Frog	Snake	Carp
 ani_narwal	Expert	Which marine mammal has a long, spiral tusk growing from its head?	Narwhal	Beluga whale	Porpoise	Manatee
 ani_echidna	Expert	Which animal, alongside the platypus, is a monotreme?	Echidna	Opossum	Wombat	Koala
@@ -425,3 +460,20 @@ aniy_strus_oko	Expert	An ostrich's eye is bigger than which of its organs?	Its b
 aniy_zolwie_morskie	Expert	How do newly hatched sea turtles find the sea at night?	They head for the brighter horizon	They follow their mother	They smell the salt	They listen for waves
 ani_small_furry_animal	Expert	Which small furry animal is one of the elephant's closest living relatives?	The rock hyrax	The capybara	The pangolin	The wombat
 ani_baby_echidna	Expert	What is a baby echidna called?	A puggle	A joey	A kit	A cub
+ani_jellyfish_revert_juvenile	Expert	Which jellyfish can revert to its juvenile stage and is called 'biologically immortal'?	Turritopsis dohrnii	Aurelia aurita	Chironex fleckeri	Cyanea capillata
+ani_male_fish_fuses	Expert	The male of which fish fuses permanently to the much larger female's body?	Anglerfish	Seahorse	Clownfish	Wrasse
+ani_mammal_powerful_bite	Expert	Which mammal has the most powerful bite force ever measured among living animals?	Hippopotamus	Grizzly bear	Lion	Spotted hyena
+ani_mantis_shrimp_feature	Expert	What does a mantis shrimp use to smash shells as fast as a bullet?	Club-like front limbs	Venomous fangs	Sonic clicks	Electric organs
+ani_mammal_highest_body	Expert	Which desert animal can live its whole life without ever drinking water?	Kangaroo rat	Fennec fox	Camel	Meerkat
+ani_bird_sleep_while	Expert	Which bird can sleep while flying and stays in the air for up to ten months?	Common swift	Albatross	Frigatebird	Arctic tern
+ani_frog_toxic_kill	Expert	Which frog is so toxic that one could kill ten adult men?	Golden poison frog	Cane toad	Tomato frog	Glass frog
+ani_bird_migrates_farthest	Expert	Which bird migrates the farthest each year, flying pole to pole?	Arctic tern	Bar-tailed godwit	Wandering albatross	Sooty shearwater
+ani_naked_nearly_cancer	Expert	Which naked, nearly cancer-proof rodent lives in colonies with a queen like bees?	Naked mole-rat	Capybara	Chinchilla	Agouti
+ani_monkey_large_droopy	Expert	Which monkey has a large, droopy nose that grows with age in males?	Proboscis monkey	Mandrill	Howler monkey	Snub-nosed monkey
+ani_monkey_brightly_coloured	Expert	Which monkey has a brightly coloured red and blue face?	Mandrill	Baboon	Proboscis monkey	Tamarin
+ani_owl_species_nesting	Expert	Which owl species is famous for nesting in burrows underground?	Burrowing owl	Barn owl	Snowy owl	Tawny owl
+ani_antelope_leap_ten	Expert	Which antelope can leap up to ten metres in a single bound?	Impala	Springbok	Gazelle	Kudu
+ani_bird_chicks_claws	Expert	Which bird's chicks have claws on their wings to help them climb trees?	Hoatzin	Kiwi	Cassowary	Shoebill
+ani_huge_billed_african	Expert	Which huge-billed African bird stands motionless for hours waiting for lungfish?	Shoebill	Marabou stork	Hammerkop	Secretary bird
+ani_unusual_axolotl_adult	Expert	What is unusual about the axolotl as an adult?	It keeps its larval gills for life	It lives only one day	It has no bones	It changes sex every year
+ani_rabbit_eared_australian	Expert	Which rabbit-eared Australian marsupial is promoted as the 'Easter Bilby'?	Bilby	Bandicoot	Quokka	Bettong

@@ -68,7 +68,8 @@ object ElementQuestions {
         q("ele_gas_powers_fuel", "Which gas powers fuel-cell cars, leaving only water behind?", "Hydrogen", listOf("Methane", "Propane", "Helium"), E),
         q("ele_trumpets_trombones_usually", "Trumpets and trombones are usually made of which alloy?", "Brass", listOf("Bronze", "Steel", "Pewter"), E),
         q("ele_dihydrogen_monoxide_chemical", "What is 'dihydrogen monoxide', a chemical sometimes 'banned' in prank petitions?", "Water", listOf("Salt", "Bleach", "Alcohol"), E),
-        q("ele_eiffel_tower_built", "The Eiffel Tower is built mainly from which metal?", "Iron", listOf("Steel", "Aluminium", "Copper"), E)
+        q("ele_eiffel_tower_built", "The Eiffel Tower is built mainly from which metal?", "Iron", listOf("Steel", "Aluminium", "Copper"), E),
+        q("ele_gas_makes_percent", "Which gas makes up about 78 percent of Earth's air?", "Nitrogen", listOf("Oxygen", "Argon", "Hydrogen"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -149,7 +150,13 @@ object ElementQuestions {
         q("ele_acid_builds_milk", "Which acid builds up in milk as it turns sour?", "Lactic acid", listOf("Citric acid", "Acetic acid", "Formic acid"), M),
         q("ele_food_tin_cans", "Food 'tin cans' are really steel coated with a thin layer of which metal?", "Tin", listOf("Zinc", "Aluminium", "Nickel"), M),
         q("ele_purple_gemstone_variety", "Which purple gemstone is a variety of quartz?", "Amethyst", listOf("Sapphire", "Garnet", "Tanzanite"), M),
-        q("ele_metal_mixed_gold", "Which metal is mixed with gold to make 'rose gold'?", "Copper", listOf("Silver", "Zinc", "Nickel"), M)
+        q("ele_metal_mixed_gold", "Which metal is mixed with gold to make 'rose gold'?", "Copper", listOf("Silver", "Zinc", "Nickel"), M),
+        q("ele_chemical_symbol_gold", "What is the chemical symbol for gold?", "Au", listOf("Ag", "Gd", "Go"), M),
+        q("ele_chemical_symbol_lead", "What is the chemical symbol for lead?", "Pb", listOf("Ld", "Le", "Pl"), M),
+        q("ele_element_atomic_number", "Which element has the atomic number 1?", "Hydrogen", listOf("Helium", "Lithium", "Carbon"), M),
+        q("ele_element_symbol", "Which element's symbol is 'Hg'?", "Mercury", listOf("Hydrogen", "Hafnium", "Holmium"), M),
+        q("ele_gas_humans_breathe", "Which gas do humans breathe out that plants use?", "Carbon dioxide", listOf("Oxygen", "Nitrogen", "Hydrogen"), M),
+        q("ele_metal_rusts_exposed", "Which metal rusts when exposed to air and water?", "Iron", listOf("Gold", "Aluminium", "Copper"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -220,7 +227,12 @@ object ElementQuestions {
         q("ele_element_greek_word_2", "Which element is named after the Greek word for 'violet', the colour of its vapour?", "Iodine", listOf("Indium", "Iridium", "Vanadium"), H),
         q("ele_sodium_hydroxide_better", "Sodium hydroxide is better known by which name?", "Caustic soda", listOf("Baking soda", "Washing soda", "Rock salt"), H),
         q("ele_acid_strong_used", "Which acid is so strong it is used to etch glass?", "Hydrofluoric acid", listOf("Citric acid", "Acetic acid", "Carbonic acid"), H),
-        q("ele_lightweight_mag_wheels", "Lightweight 'mag' wheels for cars were originally made from which metal?", "Magnesium", listOf("Manganese", "Mercury", "Molybdenum"), H)
+        q("ele_lightweight_mag_wheels", "Lightweight 'mag' wheels for cars were originally made from which metal?", "Magnesium", listOf("Manganese", "Mercury", "Molybdenum"), H),
+        q("ele_element_symbol_come", "What does the element symbol 'Pb' come from?", "Latin 'plumbum'", listOf("Greek 'plumbos'", "Arabic 'pabb'", "German 'Plumbe'"), H),
+        q("ele_gas_used_old", "Which gas is used in old-style advertising tubes that glow red-orange?", "Neon", listOf("Argon", "Krypton", "Xenon"), H),
+        q("ele_two_elements_make", "Which two elements make up water?", "Hydrogen and oxygen", listOf("Hydrogen and nitrogen", "Oxygen and carbon", "Helium and oxygen"), H),
+        q("ele_element_added_iron", "Which element is added to iron to make steel?", "Carbon", listOf("Chromium", "Nickel", "Silicon"), H),
+        q("ele_element_found_all", "Which element is found in all proteins but not in pure fats or sugars?", "Nitrogen", listOf("Carbon", "Oxygen", "Hydrogen"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -271,6 +283,15 @@ object ElementQuestions {
         q("eley_chrom", "Chromium's name comes from the Greek word for what?", "Colour", listOf("Mirror", "Metal", "Shine"), X),
         q("eley_brom", "Bromine's name comes from the Greek word for what?", "Stench", listOf("Brown", "Bright", "Water"), X),
         q("ele_element_greek_word_3", "Which element is named after the Greek word for 'rainbow', for its colourful salts?", "Iridium", listOf("Chromium", "Rhodium", "Bismuth"), X),
-        q("ele_metal_comes_greek", "Which metal's name comes from the Greek for 'stone', as it was first found in a mineral?", "Lithium", listOf("Calcium", "Barium", "Strontium"), X)
+        q("ele_metal_comes_greek", "Which metal's name comes from the Greek for 'stone', as it was first found in a mineral?", "Lithium", listOf("Calcium", "Barium", "Strontium"), X),
+        q("ele_element_heaviest_living", "Which element is the heaviest one named after a living scientist at the time of naming?", "Oganesson", listOf("Seaborgium", "Einsteinium", "Nobelium"), X),
+        q("ele_element_mineral_found", "Which element was named after the mineral found in a German mine haunted by goblins?", "Cobalt", listOf("Nickel", "Zinc", "Bismuth"), X),
+        q("ele_element_mendeleev_predict", "Which element did Mendeleev predict and call 'eka-silicon' before it was found?", "Germanium", listOf("Gallium", "Scandium", "Tin"), X),
+        q("ele_element_titan_stole", "Which element is named after the Titan who stole fire from the gods?", "Promethium", listOf("Titanium", "Cerium", "Thorium"), X),
+        q("ele_element_scandinavian_goddess", "Which element is named after a Scandinavian goddess?", "Vanadium", listOf("Thorium", "Freyium", "Niobium"), X),
+        q("ele_element_daughter_tantalus", "Which element is named after the daughter of Tantalus in Greek myth?", "Niobium", listOf("Tantalum", "Promethium", "Palladium"), X),
+        q("ele_element_romans_use", "Which element did the Romans use for water pipes, later found to be poisonous?", "Lead", listOf("Copper", "Mercury", "Arsenic"), X),
+        q("ele_poison_nicknamed_inheritance", "Which poison was nicknamed 'inheritance powder' in history?", "Arsenic", listOf("Cyanide", "Hemlock", "Strychnine"), X),
+        q("ele_metal_ancient_egyptians", "Which metal did ancient Egyptians value more than gold, since it fell from the sky?", "Meteoric iron", listOf("Silver", "Copper", "Platinum"), X)
     )
 }

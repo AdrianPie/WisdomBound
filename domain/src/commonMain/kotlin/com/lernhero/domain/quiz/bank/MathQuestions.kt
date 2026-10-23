@@ -181,7 +181,22 @@ object MathQuestions {
         q("mat_different_orders_arrange", "In how many different orders can you arrange the letters C, A and T?", "6", listOf("3", "9", "27"), M),
         q("mat_angle_clock_hands", "What angle do a clock's hands make at exactly 6 o'clock?", "180 degrees", listOf("90 degrees", "120 degrees", "360 degrees"), M),
         q("mat_birds_make_brace", "How many birds make 'a brace'?", "Two", listOf("Three", "Six", "Twelve"), M),
-        q("mat_ancient_greek_counting", "In ancient Greek counting, how many was a 'myriad'?", "10,000", listOf("1,000", "100", "1,000,000"), M)
+        q("mat_ancient_greek_counting", "In ancient Greek counting, how many was a 'myriad'?", "10,000", listOf("1,000", "100", "1,000,000"), M),
+        q("mat_degrees_angles_triangle", "How many degrees do the angles of a triangle add up to?", "180", listOf("90", "270", "360"), M),
+        q("mat_percent_200", "What is 15 percent of 200?", "30", listOf("15", "25", "35"), M),
+        q("mat_square_root_144", "What is the square root of 144?", "12", listOf("14", "11", "16"), M),
+        q("mat_number_written_roman", "Which number is written as 'XL' in Roman numerals?", "40", listOf("60", "90", "110"), M),
+        q("mat_faces_cube", "How many faces does a cube have?", "Six", listOf("Eight", "Four", "Twelve"), M),
+        q("mat_call_polygon_eight", "What do you call a polygon with eight sides?", "Octagon", listOf("Heptagon", "Nonagon", "Hexagon"), M),
+        q("mat_multiplied", "What is 7 multiplied by 8?", "56", listOf("54", "64", "48"), M),
+        q("mat_number_000_000", "What is the name of the number 1,000,000,000 in English short scale?", "Billion", listOf("Million", "Trillion", "Milliard"), M),
+        q("mat_minutes_full_day", "How many minutes are there in a full day?", "1440", listOf("1240", "1400", "1600"), M),
+        q("mat_seconds_hour", "How many seconds are there in an hour?", "3600", listOf("6000", "1800", "2400"), M),
+        q("mat_roman_numeral_1000", "What is the Roman numeral for 1000?", "M", listOf("D", "C", "K"), M),
+        q("mat_percent", "What is 25 percent of 80?", "20", listOf("25", "16", "40"), M),
+        q("mat_half_quarter", "What is half of a quarter?", "One eighth", listOf("One sixth", "One third", "One tenth"), M),
+        q("mat_centimetres_metre", "How many centimetres are in a metre?", "100", listOf("10", "1000", "50"), M),
+        q("mat_grams_kilogram", "How many grams are in a kilogram?", "1000", listOf("100", "10000", "500"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -239,7 +254,26 @@ object MathQuestions {
         q("mat_ancient_people_counted", "Which ancient people counted in base 60, giving us 60 minutes in an hour?", "The Babylonians", listOf("The Egyptians", "The Greeks", "The Romans"), H),
         q("mat_prefix_nano_mean", "What does the prefix 'nano' mean?", "A billionth", listOf("A millionth", "A thousandth", "A trillionth"), H),
         q("mat_roughly_grams_pound", "Roughly how many grams are in a pound?", "454", listOf("254", "354", "554"), H),
-        q("mat_roughly_litres_gallon", "Roughly how many litres are in a US gallon?", "3.8", listOf("2.5", "4.5", "5.2"), H)
+        q("mat_roughly_litres_gallon", "Roughly how many litres are in a US gallon?", "3.8", listOf("2.5", "4.5", "5.2"), H),
+        q("mat_get_add_all", "What do you get if you add up all the numbers from 1 to 100?", "5050", listOf("5000", "10100", "4950"), H),
+        q("mat_number_followed_100", "What is the name of the number 1 followed by 100 zeros?", "Googol", listOf("Googolplex", "Centillion", "Zillion"), H),
+        q("mat_factorial_equal", "What is 0 factorial equal to?", "1", listOf("0", "Undefined", "Infinity"), H),
+        q("mat_shape_smallest_surface", "Which shape has the smallest surface area for a given volume?", "Sphere", listOf("Cube", "Cylinder", "Tetrahedron"), H),
+        q("mat_sum_interior_angles", "What is the sum of the interior angles of a pentagon?", "540 degrees", listOf("360 degrees", "450 degrees", "720 degrees"), H),
+        q("mat_number_cube", "Which number is the cube of 4?", "64", listOf("16", "48", "81"), H),
+        q("mat_ten_sided_polygon", "What is the name of a ten-sided polygon?", "Decagon", listOf("Dodecagon", "Nonagon", "Hendecagon"), H),
+        q("mat_platonic_solid_triangular", "Which Platonic solid has 20 triangular faces?", "Icosahedron", listOf("Dodecahedron", "Octahedron", "Tetrahedron"), H),
+        q("mat_whole_number_exactly", "What is the name for a whole number with exactly two divisors?", "Prime number", listOf("Even number", "Square number", "Perfect number"), H),
+        q("mat_zeros_million", "How many zeros does one million have?", "Six", listOf("Five", "Seven", "Nine"), H),
+        q("mat_triangle_angle_over", "What is the name of a triangle with one angle over 90 degrees?", "Obtuse", listOf("Acute", "Scalene", "Right"), H),
+        q("mat_area_square_sides", "What is the area of a square with sides of 9 cm?", "81 square cm", listOf("36 square cm", "18 square cm", "72 square cm"), H),
+        q("mat_degrees_each_interior", "How many degrees are in each interior angle of a regular hexagon?", "120", listOf("108", "135", "90"), H),
+        q("mat_value_squared_plus", "What is the value of 3 squared plus 4 squared?", "25", listOf("49", "14", "24"), H),
+        q("mat_greek_letter_used", "Which Greek letter is used for the sum of a series?", "Sigma", listOf("Delta", "Pi", "Omega"), H),
+        q("mat_greek_letter_used_2", "Which Greek letter is used for 'change' in maths and science?", "Delta", listOf("Sigma", "Theta", "Lambda"), H),
+        q("mat_seconds_day", "How many seconds are there in a day?", "86,400", listOf("36,000", "60,000", "144,000"), H),
+        q("mat_days_leap_year", "How many days are there in a leap year?", "366", listOf("365", "364", "367"), H),
+        q("mat_often_leap_year", "How often does a leap year usually occur?", "Every 4 years", listOf("Every 2 years", "Every 5 years", "Every 10 years"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -290,6 +324,22 @@ object MathQuestions {
         q("matx_ziemniaki", "A 100 kg sack of potatoes is 99% water. After drying it is 98% water. What does it weigh now?", "50 kg", listOf("98 kg", "99 kg", "90 kg"), X),
         q("matx_ujemne_chiny", "Negative numbers were long rejected in Europe, but used centuries earlier by mathematicians in which country?", "China", listOf("Greece", "Egypt", "England"), X),
         q("maty_hotel_hilberta", "In 'Hilbert's Hotel', a full hotel with infinitely many rooms can still do what?", "Take in more guests", listOf("Only close its doors", "Charge infinite money", "Fit just one more guest"), X),
-        q("maty_zenon", "Which Greek thinker argued that swift Achilles could never overtake a tortoise?", "Zeno of Elea", listOf("Pythagoras", "Euclid", "Archimedes"), X)
+        q("maty_zenon", "Which Greek thinker argued that swift Achilles could never overtake a tortoise?", "Zeno of Elea", listOf("Pythagoras", "Euclid", "Archimedes"), X),
+        q("mat_problem_andrew_wiles", "Which famous problem did Andrew Wiles prove in 1994, 350 years after it was posed?", "Fermat's Last Theorem", listOf("Poincare conjecture", "Goldbach conjecture", "Riemann hypothesis"), X),
+        q("mat_indian_mathematician_wrote", "Which Indian mathematician wrote down thousands of results with almost no formal training and worked with G. H. Hardy?", "Srinivasa Ramanujan", listOf("Aryabhata", "Brahmagupta", "Bhaskara"), X),
+        q("mat_colours_enough_colour", "How many colours are enough to colour any map so no neighbours share a colour?", "Four", listOf("Three", "Five", "Six"), X),
+        q("mat_mathematician_elements_used", "Which mathematician's 'Elements' was used as a geometry textbook for over 2000 years?", "Euclid", listOf("Pythagoras", "Archimedes", "Apollonius"), X),
+        q("mat_constant_718_base", "Which constant, about 2.718, is the base of natural logarithms?", "e", listOf("Pi", "Phi", "Gamma"), X),
+        q("mat_golden_ratio_618", "What is the name of the golden ratio, about 1.618, often written with a Greek letter?", "Phi", listOf("Pi", "Tau", "Sigma"), X),
+        q("mat_mathematician_identity_plus", "Which mathematician's identity, e to the i pi plus 1 equals 0, is called the most beautiful equation?", "Leonhard Euler", listOf("Carl Friedrich Gauss", "Bernhard Riemann", "Pierre de Fermat"), X),
+        q("mat_greek_mathematician_estimated", "Which Greek mathematician estimated Earth's circumference using shadows in two cities?", "Eratosthenes", listOf("Euclid", "Archimedes", "Ptolemy"), X),
+        q("mat_paradox_achilles_never", "What is the name of the paradox in which Achilles can never overtake a tortoise?", "Zeno's paradox", listOf("Russell's paradox", "Banach-Tarski paradox", "Liar paradox"), X),
+        q("mat_conjecture_any_number", "What is the name of the conjecture that any number reaches 1 by halving evens and tripling odds plus one?", "Collatz conjecture", listOf("Goldbach conjecture", "Twin prime conjecture", "Riemann hypothesis"), X),
+        q("mat_divided", "What is 1 divided by 0.25?", "4", listOf("0.4", "25", "2.5"), X),
+        q("mat_number_system_uses", "Which number system uses only the digits 0 and 1?", "Binary", listOf("Decimal", "Octal", "Hexadecimal"), X),
+        q("mat_number_written_binary", "What is the number 10 written in binary?", "1010", listOf("1100", "1001", "1110"), X),
+        q("mat_number_system_uses_2", "Which number system uses the letters A to F as digits?", "Hexadecimal", listOf("Binary", "Octal", "Duodecimal"), X),
+        q("mat_civilisation_central_america", "Which civilisation in Central America used a base-20 counting system and a symbol for zero?", "Maya", listOf("Aztec", "Inca", "Olmec"), X),
+        q("mat_calendar_reform_skipped", "Which calendar reform skipped ten days in October 1582?", "Gregorian", listOf("Julian", "Revolutionary", "Mayan"), X)
     )
 }

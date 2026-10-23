@@ -152,6 +152,21 @@ mat_different_orders_arrange	Medium	In how many different orders can you arrange
 mat_angle_clock_hands	Medium	What angle do a clock's hands make at exactly 6 o'clock?	180 degrees	90 degrees	120 degrees	360 degrees
 mat_birds_make_brace	Medium	How many birds make 'a brace'?	Two	Three	Six	Twelve
 mat_ancient_greek_counting	Medium	In ancient Greek counting, how many was a 'myriad'?	10,000	1,000	100	1,000,000
+mat_degrees_angles_triangle	Medium	How many degrees do the angles of a triangle add up to?	180	90	270	360
+mat_percent_200	Medium	What is 15 percent of 200?	30	15	25	35
+mat_square_root_144	Medium	What is the square root of 144?	12	14	11	16
+mat_number_written_roman	Medium	Which number is written as 'XL' in Roman numerals?	40	60	90	110
+mat_faces_cube	Medium	How many faces does a cube have?	Six	Eight	Four	Twelve
+mat_call_polygon_eight	Medium	What do you call a polygon with eight sides?	Octagon	Heptagon	Nonagon	Hexagon
+mat_multiplied	Medium	What is 7 multiplied by 8?	56	54	64	48
+mat_number_000_000	Medium	What is the name of the number 1,000,000,000 in English short scale?	Billion	Million	Trillion	Milliard
+mat_minutes_full_day	Medium	How many minutes are there in a full day?	1440	1240	1400	1600
+mat_seconds_hour	Medium	How many seconds are there in an hour?	3600	6000	1800	2400
+mat_roman_numeral_1000	Medium	What is the Roman numeral for 1000?	M	D	C	K
+mat_percent	Medium	What is 25 percent of 80?	20	25	16	40
+mat_half_quarter	Medium	What is half of a quarter?	One eighth	One sixth	One third	One tenth
+mat_centimetres_metre	Medium	How many centimetres are in a metre?	100	10	1000	50
+mat_grams_kilogram	Medium	How many grams are in a kilogram?	1000	100	10000	500
 mat_silnia_5	Hard	What is 5! (5 factorial)?	120	100	60	150
 mat_fibonacci	Hard	What number comes next in the sequence 1, 1, 2, 3, 5, 8...?	13	11	12	16
 mat2_logarytm_2_8	Hard	What is log base 2 of 8?	3	2	4	8
@@ -206,6 +221,25 @@ mat_ancient_people_counted	Hard	Which ancient people counted in base 60, giving 
 mat_prefix_nano_mean	Hard	What does the prefix 'nano' mean?	A billionth	A millionth	A thousandth	A trillionth
 mat_roughly_grams_pound	Hard	Roughly how many grams are in a pound?	454	254	354	554
 mat_roughly_litres_gallon	Hard	Roughly how many litres are in a US gallon?	3.8	2.5	4.5	5.2
+mat_get_add_all	Hard	What do you get if you add up all the numbers from 1 to 100?	5050	5000	10100	4950
+mat_number_followed_100	Hard	What is the name of the number 1 followed by 100 zeros?	Googol	Googolplex	Centillion	Zillion
+mat_factorial_equal	Hard	What is 0 factorial equal to?	1	0	Undefined	Infinity
+mat_shape_smallest_surface	Hard	Which shape has the smallest surface area for a given volume?	Sphere	Cube	Cylinder	Tetrahedron
+mat_sum_interior_angles	Hard	What is the sum of the interior angles of a pentagon?	540 degrees	360 degrees	450 degrees	720 degrees
+mat_number_cube	Hard	Which number is the cube of 4?	64	16	48	81
+mat_ten_sided_polygon	Hard	What is the name of a ten-sided polygon?	Decagon	Dodecagon	Nonagon	Hendecagon
+mat_platonic_solid_triangular	Hard	Which Platonic solid has 20 triangular faces?	Icosahedron	Dodecahedron	Octahedron	Tetrahedron
+mat_whole_number_exactly	Hard	What is the name for a whole number with exactly two divisors?	Prime number	Even number	Square number	Perfect number
+mat_zeros_million	Hard	How many zeros does one million have?	Six	Five	Seven	Nine
+mat_triangle_angle_over	Hard	What is the name of a triangle with one angle over 90 degrees?	Obtuse	Acute	Scalene	Right
+mat_area_square_sides	Hard	What is the area of a square with sides of 9 cm?	81 square cm	36 square cm	18 square cm	72 square cm
+mat_degrees_each_interior	Hard	How many degrees are in each interior angle of a regular hexagon?	120	108	135	90
+mat_value_squared_plus	Hard	What is the value of 3 squared plus 4 squared?	25	49	14	24
+mat_greek_letter_used	Hard	Which Greek letter is used for the sum of a series?	Sigma	Delta	Pi	Omega
+mat_greek_letter_used_2	Hard	Which Greek letter is used for 'change' in maths and science?	Delta	Sigma	Theta	Lambda
+mat_seconds_day	Hard	How many seconds are there in a day?	86,400	36,000	60,000	144,000
+mat_days_leap_year	Hard	How many days are there in a leap year?	366	365	364	367
+mat_often_leap_year	Hard	How often does a leap year usually occur?	Every 4 years	Every 2 years	Every 5 years	Every 10 years
 mat_liczba_e	Expert	What is the approximate value of e?	2.72	3.14	1.62	2.24
 mat_liczby_doskonale	Expert	Which of these numbers is perfect (equal to the sum of its divisors)?	28	24	30	36
 mat_duzy_pierwszy	Expert	Which of these numbers is NOT prime?	91	89	97	83
@@ -253,3 +287,19 @@ matx_ziemniaki	Expert	A 100 kg sack of potatoes is 99% water. After drying it is
 matx_ujemne_chiny	Expert	Negative numbers were long rejected in Europe, but used centuries earlier by mathematicians in which country?	China	Greece	Egypt	England
 maty_hotel_hilberta	Expert	In 'Hilbert's Hotel', a full hotel with infinitely many rooms can still do what?	Take in more guests	Only close its doors	Charge infinite money	Fit just one more guest
 maty_zenon	Expert	Which Greek thinker argued that swift Achilles could never overtake a tortoise?	Zeno of Elea	Pythagoras	Euclid	Archimedes
+mat_problem_andrew_wiles	Expert	Which famous problem did Andrew Wiles prove in 1994, 350 years after it was posed?	Fermat's Last Theorem	Poincare conjecture	Goldbach conjecture	Riemann hypothesis
+mat_indian_mathematician_wrote	Expert	Which Indian mathematician wrote down thousands of results with almost no formal training and worked with G. H. Hardy?	Srinivasa Ramanujan	Aryabhata	Brahmagupta	Bhaskara
+mat_colours_enough_colour	Expert	How many colours are enough to colour any map so no neighbours share a colour?	Four	Three	Five	Six
+mat_mathematician_elements_used	Expert	Which mathematician's 'Elements' was used as a geometry textbook for over 2000 years?	Euclid	Pythagoras	Archimedes	Apollonius
+mat_constant_718_base	Expert	Which constant, about 2.718, is the base of natural logarithms?	e	Pi	Phi	Gamma
+mat_golden_ratio_618	Expert	What is the name of the golden ratio, about 1.618, often written with a Greek letter?	Phi	Pi	Tau	Sigma
+mat_mathematician_identity_plus	Expert	Which mathematician's identity, e to the i pi plus 1 equals 0, is called the most beautiful equation?	Leonhard Euler	Carl Friedrich Gauss	Bernhard Riemann	Pierre de Fermat
+mat_greek_mathematician_estimated	Expert	Which Greek mathematician estimated Earth's circumference using shadows in two cities?	Eratosthenes	Euclid	Archimedes	Ptolemy
+mat_paradox_achilles_never	Expert	What is the name of the paradox in which Achilles can never overtake a tortoise?	Zeno's paradox	Russell's paradox	Banach-Tarski paradox	Liar paradox
+mat_conjecture_any_number	Expert	What is the name of the conjecture that any number reaches 1 by halving evens and tripling odds plus one?	Collatz conjecture	Goldbach conjecture	Twin prime conjecture	Riemann hypothesis
+mat_divided	Expert	What is 1 divided by 0.25?	4	0.4	25	2.5
+mat_number_system_uses	Expert	Which number system uses only the digits 0 and 1?	Binary	Decimal	Octal	Hexadecimal
+mat_number_written_binary	Expert	What is the number 10 written in binary?	1010	1100	1001	1110
+mat_number_system_uses_2	Expert	Which number system uses the letters A to F as digits?	Hexadecimal	Binary	Octal	Duodecimal
+mat_civilisation_central_america	Expert	Which civilisation in Central America used a base-20 counting system and a symbol for zero?	Maya	Aztec	Inca	Olmec
+mat_calendar_reform_skipped	Expert	Which calendar reform skipped ten days in October 1582?	Gregorian	Julian	Revolutionary	Mayan

@@ -226,6 +226,7 @@ cap_capital_state_ohio	Hard	What is the capital of the US state of Ohio?	Columbu
 cap_city_capital_canadian_2	Hard	Which city is the capital of the Canadian province of Alberta?	Edmonton	Calgary	Banff	Red Deer
 cap_city_capital_german	Hard	Which city is the capital of the German state of Saxony?	Dresden	Leipzig	Chemnitz	Magdeburg
 cap_port_louis_capital	Hard	Port Louis is the capital of which island country?	Mauritius	Seychelles	Maldives	Madagascar
+cap_capital_northernmost_world	Hard	Which capital is the northernmost in the world?	Reykjavik	Oslo	Helsinki	Nuuk
 cap_thimphu	Expert	What is the capital of Bhutan?	Thimphu	Paro	Punakha	Phuentsholing
 cap_ulaanbaatar	Expert	What is the capital of Mongolia?	Ulaanbaatar	Erdenet	Darkhan	Khovd
 cap_bishkek	Expert	What is the capital of Kyrgyzstan?	Bishkek	Osh	Naryn	Karakol
@@ -287,3 +288,9 @@ cap_capital_guyana	Expert	What is the capital of Guyana?	Georgetown	Paramaribo	C
 cap_capital_state_pennsylvania	Expert	What is the capital of the US state of Pennsylvania?	Harrisburg	Philadelphia	Pittsburgh	Scranton
 cap_city_italy_capital	Expert	Which city was Italy's capital before Rome, from 1865 to 1871?	Florence	Turin	Milan	Naples
 cap_capital_niger	Expert	What is the capital of Niger?	Niamey	Abuja	N'Djamena	Bamako
+cap_capital_burkina_faso	Expert	What is the capital of Burkina Faso?	Ouagadougou	Bobo-Dioulasso	Niamey	Bamako
+cap_capital_federated_states	Expert	What is the capital of the Federated States of Micronesia?	Palikir	Majuro	Tarawa	Ngerulmud
+cap_capital_liechtenstein	Expert	What is the capital of Liechtenstein?	Vaduz	Schaan	Balzers	Triesen
+cap_capital_tuvalu	Expert	What is the capital of Tuvalu?	Funafuti	Tarawa	Majuro	Apia
+cap_capital_vanuatu	Expert	What is the capital of Vanuatu?	Port Vila	Honiara	Suva	Luganville
+cap_capital_solomon_islands	Expert	What is the capital of the Solomon Islands?	Honiara	Port Vila	Port Moresby	Gizo

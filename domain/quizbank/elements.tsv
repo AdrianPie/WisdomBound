@@ -43,6 +43,7 @@ ele_gas_powers_fuel	Easy	Which gas powers fuel-cell cars, leaving only water beh
 ele_trumpets_trombones_usually	Easy	Trumpets and trombones are usually made of which alloy?	Brass	Bronze	Steel	Pewter
 ele_dihydrogen_monoxide_chemical	Easy	What is 'dihydrogen monoxide', a chemical sometimes 'banned' in prank petitions?	Water	Salt	Bleach	Alcohol
 ele_eiffel_tower_built	Easy	The Eiffel Tower is built mainly from which metal?	Iron	Steel	Aluminium	Copper
+ele_gas_makes_percent	Easy	Which gas makes up about 78 percent of Earth's air?	Nitrogen	Oxygen	Argon	Hydrogen
 ele_symbol_ag	Medium	Which element hides behind the symbol Ag?	Silver	Gold	Argon	Aluminum
 ele_symbol_na	Medium	Which element hides behind the symbol Na?	Sodium	Nitrogen	Nickel	Neon
 ele_symbol_k	Medium	Which element hides behind the symbol K?	Potassium	Krypton	Calcium	Cobalt
@@ -120,6 +121,12 @@ ele_acid_builds_milk	Medium	Which acid builds up in milk as it turns sour?	Lacti
 ele_food_tin_cans	Medium	Food 'tin cans' are really steel coated with a thin layer of which metal?	Tin	Zinc	Aluminium	Nickel
 ele_purple_gemstone_variety	Medium	Which purple gemstone is a variety of quartz?	Amethyst	Sapphire	Garnet	Tanzanite
 ele_metal_mixed_gold	Medium	Which metal is mixed with gold to make 'rose gold'?	Copper	Silver	Zinc	Nickel
+ele_chemical_symbol_gold	Medium	What is the chemical symbol for gold?	Au	Ag	Gd	Go
+ele_chemical_symbol_lead	Medium	What is the chemical symbol for lead?	Pb	Ld	Le	Pl
+ele_element_atomic_number	Medium	Which element has the atomic number 1?	Hydrogen	Helium	Lithium	Carbon
+ele_element_symbol	Medium	Which element's symbol is 'Hg'?	Mercury	Hydrogen	Hafnium	Holmium
+ele_gas_humans_breathe	Medium	Which gas do humans breathe out that plants use?	Carbon dioxide	Oxygen	Nitrogen	Hydrogen
+ele_metal_rusts_exposed	Medium	Which metal rusts when exposed to air and water?	Iron	Gold	Aluminium	Copper
 ele_symbol_sn	Hard	Which element hides behind the symbol Sn?	Tin	Scandium	Selenium	Strontium
 ele_najczestszy	Hard	Which element is the most abundant in the Universe?	Hydrogen	Helium	Oxygen	Carbon
 ele_ilosc	Hard	How many elements does today's periodic table have?	118	108	92	120
@@ -187,6 +194,11 @@ ele_element_greek_word_2	Hard	Which element is named after the Greek word for 'v
 ele_sodium_hydroxide_better	Hard	Sodium hydroxide is better known by which name?	Caustic soda	Baking soda	Washing soda	Rock salt
 ele_acid_strong_used	Hard	Which acid is so strong it is used to etch glass?	Hydrofluoric acid	Citric acid	Acetic acid	Carbonic acid
 ele_lightweight_mag_wheels	Hard	Lightweight 'mag' wheels for cars were originally made from which metal?	Magnesium	Manganese	Mercury	Molybdenum
+ele_element_symbol_come	Hard	What does the element symbol 'Pb' come from?	Latin 'plumbum'	Greek 'plumbos'	Arabic 'pabb'	German 'Plumbe'
+ele_gas_used_old	Hard	Which gas is used in old-style advertising tubes that glow red-orange?	Neon	Argon	Krypton	Xenon
+ele_two_elements_make	Hard	Which two elements make up water?	Hydrogen and oxygen	Hydrogen and nitrogen	Oxygen and carbon	Helium and oxygen
+ele_element_added_iron	Hard	Which element is added to iron to make steel?	Carbon	Chromium	Nickel	Silicon
+ele_element_found_all	Hard	Which element is found in all proteins but not in pure fats or sugars?	Nitrogen	Carbon	Oxygen	Hydrogen
 ele_symbol_sb	Expert	Which element hides behind the symbol Sb?	Antimony	Strontium	Silver	Selenium
 ele_symbol_mn	Expert	Which element hides behind the symbol Mn?	Manganese	Magnesium	Molybdenum	Copper
 ele_curie	Expert	Which element did Marie Sklodowska-Curie name after her homeland?	Polonium	Radium	Uranium	Radon
@@ -234,3 +246,12 @@ eley_chrom	Expert	Chromium's name comes from the Greek word for what?	Colour	Mir
 eley_brom	Expert	Bromine's name comes from the Greek word for what?	Stench	Brown	Bright	Water
 ele_element_greek_word_3	Expert	Which element is named after the Greek word for 'rainbow', for its colourful salts?	Iridium	Chromium	Rhodium	Bismuth
 ele_metal_comes_greek	Expert	Which metal's name comes from the Greek for 'stone', as it was first found in a mineral?	Lithium	Calcium	Barium	Strontium
+ele_element_heaviest_living	Expert	Which element is the heaviest one named after a living scientist at the time of naming?	Oganesson	Seaborgium	Einsteinium	Nobelium
+ele_element_mineral_found	Expert	Which element was named after the mineral found in a German mine haunted by goblins?	Cobalt	Nickel	Zinc	Bismuth
+ele_element_mendeleev_predict	Expert	Which element did Mendeleev predict and call 'eka-silicon' before it was found?	Germanium	Gallium	Scandium	Tin
+ele_element_titan_stole	Expert	Which element is named after the Titan who stole fire from the gods?	Promethium	Titanium	Cerium	Thorium
+ele_element_scandinavian_goddess	Expert	Which element is named after a Scandinavian goddess?	Vanadium	Thorium	Freyium	Niobium
+ele_element_daughter_tantalus	Expert	Which element is named after the daughter of Tantalus in Greek myth?	Niobium	Tantalum	Promethium	Palladium
+ele_element_romans_use	Expert	Which element did the Romans use for water pipes, later found to be poisonous?	Lead	Copper	Mercury	Arsenic
+ele_poison_nicknamed_inheritance	Expert	Which poison was nicknamed 'inheritance powder' in history?	Arsenic	Cyanide	Hemlock	Strychnine
+ele_metal_ancient_egyptians	Expert	Which metal did ancient Egyptians value more than gold, since it fell from the sky?	Meteoric iron	Silver	Copper	Platinum

@@ -95,6 +95,8 @@ tec_car_maker_builds_5	Easy	Which car maker builds the Golf hatchback?	Volkswage
 tec_car_maker_builds_6	Easy	Which car maker builds the tiny '500' city car?	Fiat	Renault	Seat	Skoda
 tec_german_engineer_gave	Easy	Which German engineer gave his name to an engine that ignites fuel by compression?	Rudolf Diesel	Nikolaus Otto	Gottlieb Daimler	Karl Benz
 tec_lets_maglev_trains	Easy	What lets maglev trains float above the track?	Magnets	Air cushions	Hydrogen jets	Steam
+tec_let_devices_without	Easy	What does 'Wi-Fi' let devices do without cables?	Connect to a network	Charge their batteries	Print documents	Play music
+tec_company_makes_iphone	Easy	Which company makes the iPhone?	Apple	Samsung	Google	Nokia
 tec_cpu	Medium	What does the abbreviation CPU stand for?	Central Processing Unit	Random-access memory	Graphics card	Hard drive
 tec_android_firma	Medium	Which company develops the Android operating system?	Google	Apple	Microsoft	Meta
 tec_telefon_bell	Medium	Who patented the telephone?	Alexander Graham Bell	Thomas Edison	Guglielmo Marconi	Samuel Morse
@@ -225,6 +227,14 @@ tec_official_colour_golden	Medium	What is the official colour of the Golden Gate
 tec_programming_language_apple	Medium	Which programming language did Apple introduce in 2014 for its apps?	Swift	Kotlin	Rust	Go
 tec_programming_language_google	Medium	Which programming language has Google preferred for Android apps since 2019?	Kotlin	Swift	Ruby	Perl
 tec_created_python_programming	Medium	Who created the Python programming language?	Guido van Rossum	Bjarne Stroustrup	James Gosling	Linus Torvalds
+tec_www_start_web	Medium	What does the 'www' at the start of web addresses stand for?	World Wide Web	Wide Web Window	World Web Works	Web Wide World
+tec_usb_stand	Medium	What does 'USB' stand for?	Universal Serial Bus	United System Board	Universal Signal Box	Unified Serial Board
+tec_widely_used_graphical	Medium	What is the name of the first widely used graphical web browser, released in 1993?	Mosaic	Netscape	Opera	Lynx
+tec_company_made_commercially	Medium	Which company made the first commercially successful video game, 'Pong'?	Atari	Nintendo	Sega	Magnavox
+tec_ram_stand_computer	Medium	What does 'RAM' stand for in a computer?	Random Access Memory	Read Access Memory	Rapid Action Module	Run Application Memory
+tec_cpu_stand	Medium	What does 'CPU' stand for?	Central Processing Unit	Computer Power Unit	Core Program Utility	Central Peripheral Unit
+tec_stand	Medium	What does 'AI' stand for?	Artificial intelligence	Automated interface	Advanced internet	Algorithmic input
+tec_pixel_make	Medium	What does a 'pixel' make up?	A digital image	A sound file	A computer chip	A network cable
 day2_ram_vs_dysk	Hard	Why does a computer slow down when RAM runs out?	It starts swapping data to much slower storage	The processor overheats and throttles	The screen starts refreshing slower	The network connection is throttled
 tec_turing	Hard	Who is regarded as the father of computer science and cracked the Enigma cipher?	Alan Turing	John von Neumann	Charles Babbage	Claude Shannon
 tec_enigma_polacy	Hard	Which Pole co-created the first break of the Enigma cipher?	Marian Rejewski	Stefan Banach	Jan Czochralski	Kazimierz Funk
@@ -303,6 +313,34 @@ tec_nfc_used_contactless	Hard	What does 'NFC', used for contactless payments, st
 tec_css_language_styling	Hard	What does 'CSS', the language for styling web pages, stand for?	Cascading Style Sheets	Computer Styling System	Coded Site Scripts	Creative Screen Styles
 tec_jpeg_stand	Hard	What does 'JPEG' stand for?	Joint Photographic Experts Group	Java Picture Encoding Group	Joint Pixel Exchange Graphics	Just Plain Edited Graphics
 tec_gif_stand	Hard	What does 'GIF' stand for?	Graphics Interchange Format	General Image File	Graphic Internet Frame	Grid Image Format
+tec_electronic_general_purpose	Hard	What was the name of the first electronic general-purpose computer, completed in 1945?	ENIAC	UNIVAC	Colossus	EDSAC
+tec_wrote_considered_computer	Hard	Who wrote what is considered the first computer program, for Babbage's Analytical Engine?	Ada Lovelace	Grace Hopper	Mary Somerville	Hedy Lamarr
+tec_hollywood_actress_invented	Hard	Which Hollywood actress co-invented a frequency-hopping system that paved the way for Wi-Fi and Bluetooth?	Hedy Lamarr	Marlene Dietrich	Greta Garbo	Rita Hayworth
+tec_bluetooth_king_country	Hard	Bluetooth is named after a king of which country?	Denmark	Sweden	Norway	Finland
+tec_computer_scientist_popularised	Hard	Which computer scientist popularised the term 'bug' after a real moth was found in a computer?	Grace Hopper	Ada Lovelace	Alan Turing	John von Neumann
+tec_codename_british_code	Hard	What was the codename of the British code-breaking machine built at Bletchley Park in 1943?	Colossus	Enigma	Bombe	Lorenz
+tec_company_invented_compact	Hard	Which company invented the compact cassette tape in 1963?	Philips	Sony	Grundig	Telefunken
+tec_web_page_address	Hard	Tim Berners-Lee ran the first web server at CERN on a computer made by which company?	NeXT	Cray	Sun	Apple II
+tec_http_web_addresses	Hard	What does the 'HTTP' in web addresses stand for?	Hypertext Transfer Protocol	High Transfer Text Process	Hyperlink Text Program	Host Transfer Telecom Protocol
+tec_video_game_console	Hard	Which video game console became the best-selling of all time, with over 150 million units?	PlayStation 2	Nintendo DS	Game Boy	Wii
+tec_captcha_test_try	Hard	What does the 'CAPTCHA' test try to tell apart?	Humans and computers	Adults and children	Spam and email	Viruses and files
+tec_apple_computer_mouse	Hard	What was the name of Apple's first computer with a mouse and graphical interface, launched in 1983?	Lisa	Macintosh	Newton	Apple III
+tec_https_stand	Hard	What does the 'S' in 'HTTPS' stand for?	Secure	Server	Simple	Standard
+tec_company_created_jpeg	Hard	Which online service created the GIF image format in 1987?	CompuServe	Adobe	Microsoft	AOL
+tec_law_says_chip	Hard	What is the name of the law that says chip transistor counts double about every two years?	Moore's law	Murphy's law	Metcalfe's law	Amdahl's law
+tec_firewall_protect_computer	Hard	What does a 'firewall' protect a computer network from?	Unauthorised access	Overheating	Power cuts	Dust
+tec_emoticon_made_colon	Hard	Which emoticon, made of a colon, dash and bracket, was first proposed in 1982?	:-)	;-)	:-(	:-P
+tec_cookie_store_web	Hard	What does a 'cookie' store in your web browser?	Small bits of website data	Downloaded videos	Saved passwords only	Antivirus updates
+tec_smartphone_app_store	Hard	What was the name of the first smartphone app store, launched by Apple in 2008?	App Store	iTunes Store	Play Store	Marketplace
+tec_open_source_mean	Hard	What does 'open source' mean for a program?	Its code is free to see and change	It costs nothing to download	It runs on any computer	It has no copyright
+tec_data_storage_unit	Hard	Which data storage unit is equal to 1024 megabytes?	Gigabyte	Terabyte	Kilobyte	Petabyte
+tec_ctrl_alt_delete	Hard	What does 'Ctrl + Alt + Delete' traditionally bring up on Windows?	Security options	The Start menu	A new window	The clipboard
+tec_keyboard_layout_six	Hard	Which keyboard layout is named after its first six letters?	QWERTY	AZERTY	DVORAK	QWERTZ
+tec_stand_2	Hard	What does 'VR' stand for?	Virtual reality	Visual rendering	Video recording	Variable resolution
+tec_company_makes_quest	Hard	Which company makes the Quest VR headsets?	Meta	Sony	HTC	Valve
+tec_software_pretends_useful	Hard	What is the name for software that pretends to be useful but hides malware?	Trojan horse	Worm	Spyware	Adware
+tec_malware_locks_files	Hard	What is the name of malware that locks your files and demands payment?	Ransomware	Spyware	Adware	Rootkit
+tec_classic_nokia_game	Hard	Which classic Nokia game had players steer a growing line?	Snake	Tetris	Pong	Bounce
 day2_klucz_publiczny	Expert	In public-key cryptography, what may be shared freely?	The public key	The private key	Both keys	Neither key
 tec_moore	Expert	What does Moore's law concern?	The doubling of transistor count in chips	The doubling of internet speed each year	The steady fall in the price of memory	The rise in server power consumption
 tec_c_jezyk	Expert	Who created the C programming language?	Dennis Ritchie	Bjarne Stroustrup	James Gosling	Guido van Rossum
@@ -347,3 +385,21 @@ tecy_brunel	Expert	Which Victorian engineer built the giant steamship 'Great Eas
 tecy_elektryk_xix	Expert	In which century was the first electric car built?	The 19th	The 20th	The 21st	The 18th
 tec_very_home_video	Expert	What was the very first home video game console?	The Magnavox Odyssey	The Atari 2600	The Fairchild Channel F	The Intellivision
 tec_german_inventor_built	Expert	Which German inventor built the 'running machine', a two-wheeled ancestor of the bicycle, in 1817?	Karl Drais	Karl Benz	Gottlieb Daimler	Rudolf Diesel
+tec_network_became_forerunner	Expert	What was the name of the US network that became the forerunner of the internet?	ARPANET	NSFNET	USENET	ETHERNET
+tec_y2k_bug_come	Expert	What did the 'Y2K bug' come from?	Years stored as two digits	A virus released in 1999	A clock chip defect	Leap year miscalculation
+tec_2038_problem_cause	Expert	What is the name of the 2038 problem's cause in many computers?	32-bit Unix time overflow	Leap second error	GPS week rollover	IPv4 exhaustion
+tec_computer_virus_spread	Expert	What was the first computer virus to spread in the wild on personal computers, in 1982?	Elk Cloner	Creeper	Brain	ILOVEYOU
+tec_british_mathematician_proposed	Expert	Which British mathematician proposed a test of whether a machine can think, in 1950?	Alan Turing	Charles Babbage	John von Neumann	Claude Shannon
+tec_father_information_theory	Expert	Who is known as the 'father of information theory'?	Claude Shannon	Alan Turing	Norbert Wiener	John von Neumann
+tec_ibm_chess_computer	Expert	What was the name of IBM's chess computer that beat Garry Kasparov in 1997?	Deep Blue	Watson	Deep Thought	AlphaZero
+tec_website_host_organisation	Expert	What was the name of the first website's host organisation?	CERN	MIT	Stanford	DARPA
+tec_company_made_commercial	Expert	Which company made the first commercial hard disk drive in 1956?	IBM	Seagate	Western Digital	Hewlett-Packard
+tec_british_computer_given	Expert	Which British computer was given to schools by the BBC in the 1980s?	BBC Micro	ZX Spectrum	Amstrad CPC	Acorn Archimedes
+tec_fathers_internet_designing	Expert	Who are known as the 'fathers of the internet' for designing TCP/IP?	Vint Cerf and Bob Kahn	Bill Gates and Paul Allen	Larry Page and Sergey Brin	Steve Jobs and Steve Wozniak
+tec_nintendo_engineer_designed	Expert	Which Nintendo engineer designed the Game Boy?	Gunpei Yokoi	Shigeru Miyamoto	Satoru Iwata	Masayuki Uemura
+tec_digital_currency_launched	Expert	Which digital currency was launched in 2009 by the pseudonymous Satoshi Nakamoto?	Bitcoin	Ethereum	Litecoin	Dogecoin
+tec_famously_bought_000	Expert	What was famously bought with 10,000 bitcoins in 2010?	Two pizzas	A car	A house	A laptop
+tec_2017_ransomware_attack	Expert	Which 2017 ransomware attack hit the UK's NHS?	WannaCry	NotPetya	ILOVEYOU	Stuxnet
+tec_computer_worm_sabotaged	Expert	Which computer worm sabotaged Iranian nuclear centrifuges around 2010?	Stuxnet	WannaCry	Conficker	Mydoom
+tec_nokia_phone_near	Expert	Which Nokia phone is famous for its near-indestructible build?	Nokia 3310	Nokia 7110	Nokia N95	Nokia 8210
+tec_android_phone_released	Expert	What was the name of the first Android phone, released in 2008?	HTC Dream	Nexus One	Samsung Galaxy	Motorola Droid

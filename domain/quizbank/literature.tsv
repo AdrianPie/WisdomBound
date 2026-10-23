@@ -402,6 +402,11 @@ lit_author_wrote_dead	Medium	Which author wrote 'Dead Souls' and 'The Overcoat'?
 lit_irish_poet_won	Medium	Which Irish poet won the Nobel Prize in Literature in 1923?	W. B. Yeats	James Joyce	Oscar Wilde	Seamus Heaney
 lit_american_poet_wrote_2	Medium	Which American poet wrote 'Because I could not stop for Death'?	Emily Dickinson	Sylvia Plath	Maya Angelou	Edna St. Vincent Millay
 lit_lebanese_american_poet	Medium	Which Lebanese-American poet wrote 'The Prophet'?	Kahlil Gibran	Amin Maalouf	Rumi	Omar Khayyam
+lit_wrote_hobbit	Medium	Who wrote 'The Hobbit'?	J. R. R. Tolkien	C. S. Lewis	Roald Dahl	Terry Pratchett
+lit_wrote_don_quixote	Medium	Who wrote 'Don Quixote'?	Miguel de Cervantes	Lope de Vega	Gabriel Garcia Marquez	Federico Garcia Lorca
+lit_boy_never_grows	Medium	What is the name of the boy who never grows up in J. M. Barrie's story?	Peter Pan	Tom Sawyer	Oliver Twist	Christopher Robin
+lit_wizard_character_wants	Medium	In 'The Wizard of Oz', which character wants a brain?	The Scarecrow	The Tin Man	The Cowardly Lion	Toto
+lit_author_created_cat	Medium	Which author created 'The Cat in the Hat'?	Dr. Seuss	Roald Dahl	Maurice Sendak	Beatrix Potter
 cultw_boska_komedia	Hard	How many parts does Dante's Divine Comedy have?	Three	Two	Four	Seven
 cultw_ulisses_joyce	Hard	In which city does Joyce's Ulysses take place over one day?	Dublin	London	Trieste	Paris
 lit_solaris	Hard	Who wrote 'Solaris'?	Stanislaw Lem	Isaac Asimov	Arthur C. Clarke	Philip K. Dick
@@ -515,6 +520,16 @@ lit_spanish_painter_created	Hard	Which Spanish painter created 'The Third of May
 lit_composed_rhapsody_blue	Hard	Who composed 'Rhapsody in Blue'?	George Gershwin	Leonard Bernstein	Aaron Copland	Irving Berlin
 lit_composed_opera_carmen	Hard	Who composed the opera 'Carmen'?	Georges Bizet	Giuseppe Verdi	Giacomo Puccini	Jules Massenet
 lit_composed_opera_aida	Hard	Who composed the opera 'Aida'?	Giuseppe Verdi	Giacomo Puccini	Richard Wagner	Gioachino Rossini
+lit_giant_whale_herman	Hard	What is the name of the giant whale in Herman Melville's novel?	Moby Dick	Leviathan	Monstro	Old Tom
+lit_horse_works_himself	Hard	What is the name of the horse that works himself to death in 'Animal Farm'?	Boxer	Clover	Benjamin	Mollie
+lit_fictional_town_gabriel	Hard	In which fictional town are many of Gabriel Garcia Marquez's stories set?	Macondo	Comala	Yoknapatawpha	Santa Teresa
+lit_author_invented_county	Hard	Which author invented the county of Yoknapatawpha?	William Faulkner	John Steinbeck	Mark Twain	Harper Lee
+lit_epic_poem_tells	Hard	Which epic poem tells of Odysseus's ten-year journey home?	The Odyssey	The Iliad	The Aeneid	Beowulf
+lit_captain_hook_ship	Hard	What is the name of Captain Hook's ship in 'Peter Pan'?	Jolly Roger	Black Pearl	Hispaniola	Nautilus
+lit_wrote_war_worlds	Hard	Who wrote 'War of the Worlds'?	H. G. Wells	Jules Verne	Arthur C. Clarke	Isaac Asimov
+lit_isaac_asimov_rules	Hard	Which Isaac Asimov rules govern how robots must behave?	Three Laws of Robotics	Four Robot Codes	Prime Directive	Robot Charter
+lit_author_wrote_matilda	Hard	Which author wrote 'Matilda' and 'The BFG'?	Roald Dahl	Michael Morpurgo	David Walliams	Philip Pullman
+lit_detective_edgar_allan	Hard	Which detective did Edgar Allan Poe create, often called the first fictional detective?	C. Auguste Dupin	Sherlock Holmes	Father Brown	Inspector Bucket
 cultw_genji	Expert	The Tale of Genji, often called the first novel, came from which country?	Japan	China	Korea	India
 lit_iliada_wers	Expert	What word does Homer's 'Iliad' open with?	Rage (wrath)	War	Muse	Gods
 lit_proust	Expert	Who wrote the cycle 'In Search of Lost Time'?	Marcel Proust	Gustave Flaubert	Honore de Balzac	Emile Zola
@@ -562,3 +577,16 @@ lity_magritte	Expert	Which painter wrote 'This is not a pipe' beneath a picture 
 lity_fontanna	Expert	Which artist shocked the art world by exhibiting a urinal titled 'Fountain'?	Marcel Duchamp	Andy Warhol	Rene Magritte	Pablo Picasso
 lit_painted_garden_earthly	Expert	Who painted 'The Garden of Earthly Delights'?	Hieronymus Bosch	Pieter Bruegel	Jan van Eyck	Albrecht Durer
 lit_composed_hall_mountain	Expert	Who composed 'In the Hall of the Mountain King'?	Edvard Grieg	Jean Sibelius	Carl Nielsen	Antonin Dvorak
+lit_old_english_poem	Expert	Which Old English poem's hero kills the monster Grendel?	Beowulf	Sir Gawain	The Wanderer	The Seafarer
+lit_very_short_novel	Expert	What is the name of the very short novel by Kafka in which Gregor Samsa becomes an insect?	The Metamorphosis	The Trial	The Castle	The Judgment
+lit_french_author_wrote	Expert	Which French author wrote a 300-page novel without using the letter 'e'?	Georges Perec	Raymond Queneau	Marcel Proust	Albert Camus
+lit_author_wrote_slaughterhouse	Expert	Which author wrote 'Slaughterhouse-Five'?	Kurt Vonnegut	Joseph Heller	Ray Bradbury	Philip K. Dick
+lit_author_wrote_catch	Expert	Which author wrote 'Catch-22'?	Joseph Heller	Kurt Vonnegut	Norman Mailer	J. D. Salinger
+lit_wrote_androids_dream	Expert	Who wrote 'Do Androids Dream of Electric Sheep?', the basis for 'Blade Runner'?	Philip K. Dick	William Gibson	Isaac Asimov	Ray Bradbury
+lit_novel_ray_bradbury	Expert	Which novel by Ray Bradbury is named after the temperature at which paper burns?	Fahrenheit 451	The Martian Chronicles	Something Wicked	Dandelion Wine
+lit_czech_writer_coined	Expert	Which Czech writer coined the word 'robot' in a 1920 play?	Karel Capek	Franz Kafka	Jaroslav Hasek	Milan Kundera
+lit_good_soldier_jaroslav	Expert	What is the name of the good soldier in Jaroslav Hasek's comic novel?	Svejk	Gregor	Josef K.	Woland
+lit_swedish_author_wrote	Expert	Which Swedish author wrote about Nils Holgersson flying on a goose?	Selma Lagerlof	Astrid Lindgren	August Strindberg	Tove Jansson
+lit_german_brothers_collected	Expert	Which German brothers collected fairy tales such as 'Hansel and Gretel'?	The Brothers Grimm	The Brothers Mann	The Schlegel brothers	The Humboldt brothers
+lit_job_antoine_saint	Expert	Which job did Antoine de Saint-Exupery have besides writing?	Pilot	Sailor	Doctor	Teacher
+lit_reclusive_american_poet	Expert	Which reclusive American poet had almost all of her nearly 1800 poems published after death?	Emily Dickinson	Sylvia Plath	Elizabeth Bishop	Anne Sexton

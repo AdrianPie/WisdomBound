@@ -785,6 +785,15 @@ pop_spaces_around_standard	Medium	How many spaces are there around a standard Mo
 pop_animal_appears_every	Medium	Which animal appears on every bottle of Bacardi rum?	A bat	A parrot	A lion	A rooster
 pop_film_studio_logo_2	Medium	Which film studio's logo shows a woman holding up a torch?	Columbia	Paramount	Universal	MGM
 pop_video_game_series	Medium	Which video game series features the thumbs-up mascot 'Vault Boy'?	Fallout	BioShock	Borderlands	Mass Effect
+pop_star_wars_luke	Medium	In 'Star Wars', who is Luke Skywalker's father?	Darth Vader	Obi-Wan Kenobi	Emperor Palpatine	Yoda
+pop_video_game_plumber	Medium	Which video game plumber wears a red cap?	Mario	Luigi	Wario	Toad
+pop_cartoon_cat_always	Medium	Which cartoon cat is always chasing Jerry the mouse?	Tom	Sylvester	Garfield	Felix
+pop_yellow_sponge_lives	Medium	Which yellow sponge lives in a pineapple under the sea?	SpongeBob SquarePants	Patrick Star	Squidward	Plankton
+pop_snowman_disney_frozen	Medium	What is the name of the snowman in Disney's 'Frozen'?	Olaf	Sven	Kristoff	Hans
+pop_superhero_secret_identity	Medium	Which superhero's secret identity is Peter Parker?	Spider-Man	Batman	Daredevil	Ant-Man
+pop_band_sang_bohemian	Medium	Which band sang 'Bohemian Rhapsody'?	Queen	The Beatles	Led Zeppelin	ABBA
+pop_swedish_group_won	Medium	Which Swedish group won Eurovision in 1974 with 'Waterloo'?	ABBA	Roxette	Ace of Base	Europe
+pop_cartoon_family_lives	Medium	Which cartoon family lives in Bedrock in the Stone Age?	The Flintstones	The Jetsons	The Simpsons	The Addams Family
 day_zloty_lew	Hard	At which film festival is the Golden Lion awarded?	Venice	Cannes	Berlin	San Sebastian
 lit_manga	Hard	The Japanese word 'manga' originally meant what?	Whimsical pictures	Moving pictures	Paper theatre	Ink stories
 pop_gremlins	Hard	In 'Gremlins' (1984), what must you never do to the creatures after midnight?	Feed them	Tickle them	Let them sleep	Take them outside
@@ -966,6 +975,20 @@ pop_directed_lost_translation	Hard	Who directed 'Lost in Translation' (2003)?	So
 pop_south_korean_director	Hard	Which South Korean director made 'Parasite'?	Bong Joon-ho	Park Chan-wook	Kim Ki-duk	Lee Chang-dong
 pop_singer_songwriter_wrote	Hard	Which singer-songwriter wrote the much-covered song 'Hallelujah'?	Leonard Cohen	Bob Dylan	Jeff Buckley	Paul Simon
 pop_french_singer_nicknamed	Hard	Which French singer, nicknamed 'the Little Sparrow', sang 'Non, je ne regrette rien'?	Edith Piaf	Juliette Greco	Francoise Hardy	Dalida
+pop_ship_alien_1979	Hard	What is the name of the ship in 'Alien' (1979)?	Nostromo	Sulaco	Serenity	Discovery
+pop_band_mascot_skeletal	Hard	Which band's mascot is the skeletal figure called Eddie?	Iron Maiden	Megadeth	Metallica	Motorhead
+pop_bar_met_mother	Hard	What is the name of the bar in 'How I Met Your Mother'?	MacLaren's	Central Perk	Paddy's Pub	Cheers
+pop_1982_film_features	Hard	Which 1982 film features a replicant hunter in a rainy Los Angeles of 2019?	Blade Runner	Tron	The Thing	Escape from New York
+pop_1993_film_brought	Hard	Which 1993 film brought dinosaurs back from amber-trapped mosquito blood?	Jurassic Park	The Lost World	King Kong	Land of the Lost
+pop_game_series_features	Hard	Which game series features the hero Link?	The Legend of Zelda	Final Fantasy	Metroid	Kirby
+pop_superhero_planet_krypton	Hard	Which superhero is from the planet Krypton?	Superman	Thor	Green Lantern	Martian Manhunter
+pop_metal_bonded_wolverine	Hard	Which metal is bonded to Wolverine's skeleton?	Adamantium	Vibranium	Titanium	Uru
+pop_video_game_features	Hard	Which video game features the blocky world of Steve and Creepers?	Minecraft	Roblox	Terraria	Fortnite
+pop_falling_block_game	Hard	Which falling-block game was created by Alexey Pajitnov in 1984?	Tetris	Columns	Dr. Mario	Puyo Puyo
+pop_star_wars_han	Hard	In 'Star Wars', what is the name of Han Solo's ship?	Millennium Falcon	Slave I	X-wing	Star Destroyer
+pop_garfield_dog_companion	Hard	What is the name of Garfield's dog companion?	Odie	Snoopy	Pluto	Goofy
+pop_1984_film_features	Hard	Which 1984 film features ghost-busting scientists in New York?	Ghostbusters	Gremlins	Beetlejuice	The Frighteners
+pop_yellow_creatures_serve	Hard	Which yellow creatures serve Gru in 'Despicable Me'?	Minions	Gremlins	Smurfs	Oompa-Loompas
 lit_wings	Expert	Which film won the very first Academy Award for Best Picture?	Wings	Sunrise	The Jazz Singer	Metropolis
 pop_obywatel_kane	Expert	Which word is whispered at the very start of 'Citizen Kane'?	Rosebud	Mother	Xanadu	Charles
 pop_spirited_away	Expert	Which was the first non-English-language film to win the Oscar for Best Animated Feature?	Spirited Away	Persepolis	Akira	Princess Mononoke
@@ -1018,3 +1041,17 @@ pop_actor_won_best	Expert	Which actor has won the most Best Actor Oscars, with t
 pop_elton_john_birth	Expert	What was Elton John's name at birth?	Reginald Dwight	Elton Hercules	Gordon Sumner	Farrokh Bulsara
 pop_best_selling_single	Expert	Which is the best-selling single of all time?	'White Christmas'	'Candle in the Wind 1997'	'Imagine'	'Billie Jean'
 pop_number_pikachu_national	Expert	What number is Pikachu in the National Pokedex?	25	1	7	151
+pop_1977_film_sound	Expert	Which 1977 film's sound designer created a lightsaber hum from an old projector and a TV?	Star Wars	Close Encounters of the Third Kind	Alien	Superman
+pop_pac_man_originally	Expert	Under what name was Pac-Man first released in Japan?	Puck Man	Paku Man	Munch Man	Pie Man
+pop_mickey_mouse_original	Expert	What was Mickey Mouse's original name, according to Disney legend?	Mortimer	Marvin	Morris	Milton
+pop_hedgehog_sega_answer	Expert	Which hedgehog was Sega's answer to Mario in 1991?	Sonic	Knuckles	Shadow	Tails
+pop_sonic_two_tailed	Expert	What is the name of Sonic's two-tailed fox friend?	Tails	Knuckles	Amy	Shadow
+pop_band_members_wore	Expert	Which band's members wore make-up personas called the Demon, the Starchild, the Spaceman and the Catman?	KISS	Slipknot	Twisted Sister	Alice Cooper
+pop_computer_portal_video	Expert	What is the name of the computer AI in the 'Portal' video games?	GLaDOS	SHODAN	Cortana	HAL
+pop_video_game_series_2	Expert	Which video game series follows the assassin Ezio Auditore?	Assassin's Creed	Hitman	Dishonored	Thief
+pop_tintin_dog_original	Expert	What is the name of Tintin's dog in the original Belgian comic?	Milou	Pif	Idefix	Rantanplan
+pop_obelix_little_dog	Expert	What is the name of Obelix's little dog?	Dogmatix	Snowy	Rantanplan	Pluto
+pop_belgian_artist_created	Expert	Which Belgian artist created the Smurfs?	Peyo	Herge	Franquin	Morris
+pop_british_stop_motion	Expert	Which British stop-motion duo are an inventor and his clever dog?	Wallace and Gromit	Shaun and Bitzer	Morph and Chas	Pingu and Robby
+pop_studio_makes_wallace	Expert	Which studio makes Wallace and Gromit?	Aardman Animations	Pixar	Laika	Studio Ghibli
+pop_forest_spirit_mascot	Expert	Which forest spirit is the mascot of Studio Ghibli?	Totoro	No-Face	Calcifer	Kodama

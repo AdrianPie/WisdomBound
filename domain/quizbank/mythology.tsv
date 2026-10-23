@@ -79,6 +79,7 @@ myt_romans_call_poseidon	Easy	What did the Romans call Poseidon, the god of the 
 myt_king_arthur_queen	Easy	Who was King Arthur's queen?	Guinevere	Morgan le Fay	Isolde	Elaine
 myt_robin_hood_sweetheart	Easy	Who is Robin Hood's sweetheart in the English legends?	Maid Marian	Lady Godiva	Guinevere	Rowena
 myt_mythical_creature_half	Easy	Which mythical creature is half man and half goat?	Satyr	Centaur	Minotaur	Griffin
+myt_norse_god_carries	Easy	Which Norse god carries the hammer Mjolnir?	Thor	Odin	Loki	Tyr
 cultw_odyn_ptaki	Medium	Which two ravens brought Odin news of the world?	Huginn and Muninn	Geri and Freki	Sleipnir and Fenrir	Vidar and Vali
 mit_hades	Medium	Who ruled the Greek underworld?	Hades	Poseidon	Cronus	Dionysus
 mit_atena	Medium	Which goddess was the patron of wisdom and Athens?	Athena	Hera	Aphrodite	Artemis
@@ -192,6 +193,16 @@ myt_roman_goddess_luck	Medium	Who was the Roman goddess of luck?	Fortuna	Victori
 myt_giant_serpent_apollo	Medium	Which giant serpent did Apollo kill at Delphi?	Python	Ladon	Typhon	Echidna
 myt_oracle_ancient_greece	Medium	Where was the most famous oracle of ancient Greece?	Delphi	Olympia	Dodona	Sparta
 myt_mythical_beast_lion	Medium	Which mythical beast has a lion's body, a human face and a scorpion's tail?	Manticore	Sphinx	Griffin	Chimera
+myt_egyptian_god_head	Medium	Which Egyptian god had the head of a crocodile?	Sobek	Set	Anubis	Khnum
+myt_egyptian_belief_dead	Medium	In Egyptian belief, what was a dead person's heart weighed against?	A feather	A golden coin	A scarab	A lotus flower
+myt_monkey_god_leaps	Medium	Which monkey god leaps to Lanka in the Hindu epic Ramayana?	Hanuman	Ganesha	Garuda	Ravana
+myt_feathered_serpent_god	Medium	Which feathered serpent god was worshipped by the Aztecs?	Quetzalcoatl	Huitzilopochtli	Tlaloc	Tezcatlipoca
+myt_aztec_god_rain	Medium	Which Aztec god of rain was offered child sacrifices?	Tlaloc	Quetzalcoatl	Xipe Totec	Mictlantecuhtli
+myt_winged_horse_sprang	Medium	Which winged horse sprang from Medusa's neck when she was beheaded?	Pegasus	Arion	Sleipnir	Chrysaor
+myt_greek_titan_holds	Medium	Which Greek Titan holds up the sky on his shoulders?	Atlas	Prometheus	Cronus	Hyperion
+myt_greek_myth_musician	Medium	In Greek myth, which musician tried to lead his wife Eurydice out of the underworld?	Orpheus	Apollo	Hermes	Linus
+myt_greek_god_sea	Medium	Which Greek god of the sea carries a trident?	Poseidon	Zeus	Hades	Triton
+myt_greek_god_war	Medium	Which Greek god of war was disliked by most other gods?	Ares	Hades	Hephaestus	Apollo
 cultw_izanagi	Hard	In Japanese myth, which pair created the islands of Japan?	Izanagi and Izanami	Amaterasu and Susanoo	Raijin and Fujin	Inari and Hachiman
 cultw_anansi	Hard	In West African folklore, what kind of creature is Anansi?	A spider	A lion	A crocodile	A hawk
 mit_yggdrasil	Hard	What is the cosmic tree in Norse mythology called?	Yggdrasil	Valhalla	Bifrost	Midgard
@@ -272,6 +283,19 @@ myt_roman_greek_goddess	Hard	What is the Roman name for the Greek goddess Persep
 myt_hero_rode_pegasus	Hard	Which hero rode Pegasus to kill the monster Chimera?	Bellerophon	Perseus	Theseus	Jason
 myt_greek_goddess_hearth	Hard	Who was the Greek goddess of the hearth and home?	Hestia	Hera	Demeter	Athena
 myt_greek_keeper_winds	Hard	Who was the Greek keeper of the winds, who gave Odysseus a bag of them?	Aeolus	Boreas	Zephyrus	Triton
+myt_squirrel_runs_down	Hard	Which squirrel runs up and down the Norse world tree carrying insults?	Ratatoskr	Nidhogg	Hraesvelgr	Heidrun
+myt_greek_nymph_cursed	Hard	Which Greek nymph was cursed to only repeat the last words of others?	Echo	Daphne	Calypso	Arethusa
+myt_greek_craftsman_built	Hard	Which Greek craftsman built wings of feathers and wax for himself and his son?	Daedalus	Hephaestus	Talos	Epeius
+myt_egyptian_goddess_lion	Hard	Which Egyptian goddess with a lion's head nearly wiped out humanity until she was tricked with red beer?	Sekhmet	Bastet	Hathor	Mut
+myt_giant_serpent_attacked	Hard	What was the name of the giant serpent that attacked the Egyptian sun god every night?	Apep	Sobek	Wadjet	Mehen
+myt_hindu_god_rides	Hard	Which Hindu god rides the eagle Garuda?	Vishnu	Shiva	Brahma	Indra
+myt_ten_headed_demon	Hard	What is the name of the ten-headed demon king in the Ramayana?	Ravana	Kumbhakarna	Mahishasura	Hiranyakashipu
+myt_irish_myth_hero	Hard	In Irish myth, which hero earned his name by killing a guard dog?	Cu Chulainn	Fionn mac Cumhaill	Oisin	Diarmuid
+myt_irish_legend_hero	Hard	In Irish legend, which hero gained wisdom by burning his thumb on the Salmon of Knowledge?	Fionn mac Cumhaill	Cu Chulainn	Lugh	Bran
+myt_greek_goddess_harvest	Hard	Which Greek goddess of the harvest lost her daughter to Hades?	Demeter	Hestia	Hera	Rhea
+myt_greek_hero_performed	Hard	Which Greek hero performed twelve labours?	Heracles	Theseus	Perseus	Jason
+myt_odysseus_tie_himself	Hard	What did Odysseus tie himself to so he could hear the Sirens?	The ship's mast	A rock	His crew	An anchor
+myt_norse_realm_land	Hard	Which Norse realm is the land of the giants?	Jotunheim	Muspelheim	Svartalfheim	Helheim
 cultw_mahabharata	Expert	Which Sanskrit epic contains the Bhagavad Gita?	The Mahabharata	The Ramayana	The Rigveda	The Upanishads
 cultw_tyche	Expert	Which Greek goddess personified luck and fortune?	Tyche	Nemesis	Hecate	Eris
 cultw_mabinogion	Expert	The Mabinogion collects the myths of which people?	The Welsh	The Irish	The Scots	The Bretons
@@ -324,3 +348,29 @@ myty_walhalla_dach	Expert	According to Norse myth, what is the roof of Valhalla 
 myty_bes	Expert	Which dwarf god of ancient Egypt protected households and children?	Bes	Ptah	Khnum	Apis
 myty_koszczej	Expert	Which Slavic villain is 'deathless' because his death is hidden in a needle inside an egg?	Koschei	Baba Yaga	Zmey Gorynych	Leshy
 myty_leszy	Expert	What is a leshy in Slavic folklore?	A forest spirit	A water horse	A house elf	A storm giant
+myt_mesopotamian_myth_friend	Expert	In Mesopotamian myth, who was the friend of Gilgamesh created from clay?	Enkidu	Utnapishtim	Humbaba	Shamhat
+myt_monster_guarding_cedar	Expert	Which monster guarding the Cedar Forest did Gilgamesh and Enkidu kill?	Humbaba	Tiamat	Pazuzu	Lamashtu
+myt_babylonian_god_slew	Expert	Which Babylonian god slew the sea goddess Tiamat and made the world from her body?	Marduk	Enlil	Ea	Ashur
+myt_greek_myth_king	Expert	In Greek myth, which king had to roll a boulder uphill forever?	Sisyphus	Tantalus	Ixion	Tityos
+myt_greek_king_punished	Expert	Which Greek king was punished with food and water forever just out of reach?	Tantalus	Sisyphus	Ixion	Phineus
+myt_greek_king_bound	Expert	Which Greek king was bound to a burning wheel for eternity?	Ixion	Tantalus	Sisyphus	Salmoneus
+myt_finnish_myth_magic	Expert	In Finnish myth, what is the magic mill that produces endless grain, salt and gold?	Sampo	Kantele	Pohjola	Tuonela
+myt_old_singer_hero	Expert	Who is the old singer-hero of the Finnish epic Kalevala?	Vainamoinen	Ilmarinen	Lemminkainen	Kullervo
+myt_aztec_god_means	Expert	Which Aztec god's name means 'Smoking Mirror'?	Tezcatlipoca	Quetzalcoatl	Xolotl	Tonatiuh
+myt_welsh_tales_magician	Expert	In Welsh legend, which woman was conjured from flowers as a wife for Lleu?	Blodeuwedd	Rhiannon	Branwen	Ceridwen
+myt_inca_god_creator	Expert	Which Inca god was the creator who rose from Lake Titicaca?	Viracocha	Inti	Pachamama	Supay
+myt_eyes_hera_place	Expert	Whose eyes did Hera place on the tail of the peacock?	Argus	Medusa	Cyclops	Polyphemus
+myt_paris_give_golden	Expert	What did Paris give the golden apple to, starting the Trojan War?	Aphrodite	Hera	Athena	Helen
+myt_trojan_princess_cursed	Expert	Which Trojan princess was cursed to tell true prophecies no one believed?	Cassandra	Andromache	Hecuba	Polyxena
+myt_trojan_hero_escaped	Expert	Which Trojan hero escaped burning Troy carrying his father and later founded Rome's line?	Aeneas	Hector	Paris	Priam
+myt_roman_priestesses_guarded	Expert	Which Roman priestesses guarded the sacred fire of Vesta?	Vestal Virgins	Sibyls	Augurs	Maenads
+myt_female_followers_dionysus	Expert	Which female followers of Dionysus were known for wild frenzies?	Maenads	Muses	Graces	Furies
+myt_muse_presided_over	Expert	Which Muse presided over history?	Clio	Calliope	Thalia	Urania
+myt_muse_presided_over_2	Expert	Which Muse presided over astronomy?	Urania	Clio	Euterpe	Terpsichore
+myt_muse_presided_over_3	Expert	Which Muse presided over dance?	Terpsichore	Thalia	Erato	Melpomene
+myt_names_odin_two	Expert	What are the names of Odin's two wolves?	Geri and Freki	Huginn and Muninn	Skoll and Hati	Garm and Fenrir
+myt_golden_bristled_boar	Expert	Which golden-bristled boar belongs to the Norse god Freyr?	Gullinbursti	Saehrimnir	Hildisvini	Heidrun
+myt_norse_goddess_rules	Expert	Which Norse goddess rules the land of the dead and is half living, half corpse?	Hel	Ran	Skadi	Frigg
+myt_sea_goddess_catches	Expert	Which sea goddess catches drowned sailors in her net in Norse myth?	Ran	Hel	Sif	Gerd
+myt_ship_made_dead	Expert	Which ship made of dead men's nails will carry giants to Ragnarok?	Naglfar	Skidbladnir	Hringhorni	Ellida
+myt_norse_god_owns	Expert	Which Norse god owns the ship Skidbladnir that folds into a pocket?	Freyr	Odin	Njord	Thor

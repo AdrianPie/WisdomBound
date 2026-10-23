@@ -515,6 +515,10 @@ his_european_country_ruled_3	Medium	Which European country ruled Libya as a colo
 his_european_country_ruled_4	Medium	Which European country ruled Namibia as a colony before World War I?	Germany	Britain	Portugal	Belgium
 his_father_alexander_great	Medium	Who was the father of Alexander the Great?	Philip II	Darius III	Leonidas I	Pericles
 his_roman_orator_attacked	Medium	Which Roman orator attacked Catiline and Mark Antony in famous speeches?	Cicero	Cato	Seneca	Pliny
+his_city_split_wall	Medium	Which city was split by a wall from 1961 to 1989?	Berlin	Vienna	Prague	Budapest
+his_pharaoh_almost_untouched	Medium	Which pharaoh's almost untouched tomb did Howard Carter open in 1922?	Tutankhamun	Ramesses II	Khufu	Akhenaten
+his_roman_gladiator_fights	Medium	What were Roman gladiator fights usually held in?	Amphitheatres	Forums	Basilicas	Aqueducts
+his_indian_leader_led	Medium	Which Indian leader led a non-violent struggle for independence from Britain?	Mahatma Gandhi	Jawaharlal Nehru	Subhas Chandra Bose	Indira Gandhi
 his_rzym	Hard	In which year did the Western Roman Empire fall?	476	410	395	527
 his_waterloo	Hard	In which year did Napoleon lose the Battle of Waterloo?	1815	1812	1805	1821
 his_druk	Hard	Who popularized movable-type printing in Europe?	Johannes Gutenberg	Nicolaus Copernicus	Leonardo da Vinci	Galileo
@@ -763,6 +767,26 @@ his_led_ghana_independence	Hard	Who led Ghana to independence in 1957 and became
 his_city_last_tsar	Hard	In which city were the last tsar and his family executed in 1918?	Yekaterinburg	Tobolsk	Omsk	Novosibirsk
 his_russian_tsar_freed	Hard	Which Russian tsar freed the serfs in 1861?	Alexander II	Nicholas II	Alexander III	Nicholas I
 his_french_explorer_founded	Hard	Which French explorer founded Quebec City in 1608?	Samuel de Champlain	Jacques Cartier	Robert de La Salle	Jacques Marquette
+his_romans_use_urine	Hard	What did the Romans use urine for, even taxing its collection?	Washing clothes	Making bread	Fuel for lamps	Medicine for horses
+his_war_between_britain	Hard	Which war between Britain and Zanzibar in 1896 lasted under 45 minutes?	Anglo-Zanzibar War	Boer War	Opium War	Zulu War
+his_emperor_france_exiled	Hard	Which emperor of France was exiled to the island of Elba in 1814?	Napoleon Bonaparte	Louis XVIII	Napoleon III	Charles X
+his_ancient_wonder_stood	Hard	Which ancient wonder stood on the island of Pharos?	Lighthouse of Alexandria	Colossus of Rhodes	Temple of Artemis	Statue of Zeus
+his_ruler_nicknamed_sun	Hard	Which ruler was nicknamed 'the Sun King'?	Louis XIV	Louis XVI	Charles V	Peter the Great
+his_plot_tried_blow	Hard	Which plot tried to blow up the English Parliament on 5 November 1605?	Gunpowder Plot	Babington Plot	Rye House Plot	Popish Plot
+his_1215_charter_limited	Hard	Which 1215 charter limited the power of King John of England?	Magna Carta	Bill of Rights	Domesday Book	Act of Union
+his_medieval_book_recorded	Hard	Which medieval book recorded who owned what across England in 1086?	Domesday Book	Magna Carta	Book of Kells	Anglo-Saxon Chronicle
+his_german_air_force	Hard	What was the name of the German air force in World War II?	Luftwaffe	Wehrmacht	Kriegsmarine	Panzerwaffe
+his_medieval_europeans_call	Hard	What did medieval Europeans call parchment made from calfskin?	Vellum	Papyrus	Linen	Velour
+his_emperor_rome_ruler	Hard	Which emperor was Rome's ruler when the Colosseum was opened in 80 AD?	Titus	Nero	Vespasian	Domitian
+his_spartans_boys_age	Hard	What did the Spartans do with boys at the age of seven?	Sent them to military training	Sent them to sea	Made them farmers	Taught them philosophy
+his_tea_dumping_protest	Hard	Which tea-dumping protest happened in 1773 in America?	Boston Tea Party	Stamp Act riot	Whiskey Rebellion	Shays' Rebellion
+his_empire_ruled_sultans	Hard	Which empire was ruled by sultans from Istanbul's Topkapi Palace?	Ottoman Empire	Mughal Empire	Safavid Empire	Mamluk Sultanate
+his_1934_retreat_across	Hard	Which 1934-35 retreat across China made Mao Zedong leader of the Communists?	The Long March	The Great Leap	The Cultural Revolution	The Northern Expedition
+his_crisis_1962_brought	Hard	Which crisis in 1962 brought the USA and USSR closest to nuclear war?	Cuban Missile Crisis	Berlin Blockade	Suez Crisis	Korean War
+his_ocean_liner_sunk	Hard	What was the name of the ocean liner sunk by a U-boat in 1915?	Lusitania	Titanic	Britannic	Mauretania
+his_french_scholar_deciphered	Hard	Which French scholar first deciphered hieroglyphs in 1822?	Jean-Francois Champollion	Thomas Young	Auguste Mariette	Gaston Maspero
+his_language_romans_speak	Hard	Which language did the Romans speak?	Latin	Greek	Etruscan	Italian
+his_roman_road_queen	Hard	Which Roman road, the 'queen of roads', ran from Rome to Brindisi?	Via Appia	Via Flaminia	Via Aurelia	Via Egnatia
 his_westfalski	Expert	In which year did the Peace of Westphalia end the Thirty Years' War?	1648	1618	1659	1667
 his_oktawian	Expert	Who was the first Roman emperor?	Augustus (Octavian)	Julius Caesar	Nero	Tiberius
 his_machiavelli	Expert	Who wrote the treatise 'The Prince'?	Niccolo Machiavelli	Dante Alighieri	Erasmus of Rotterdam	Thomas More
@@ -903,3 +927,25 @@ his_ancient_greek_historian	Expert	Which ancient Greek historian wrote the histo
 his_empire_ruled_shahs	Expert	Which empire was ruled by shahs from the city of Isfahan in the 1600s?	The Safavid Empire	The Mughal Empire	The Ottoman Empire	The Seljuk Empire
 his_italian_city_capital	Expert	Which Italian city was the capital of the Western Roman Empire in its last decades?	Ravenna	Milan	Naples	Florence
 his_became_world_democratically	Expert	Who became the world's first democratically elected female president, in Iceland in 1980?	Vigdis Finnbogadottir	Golda Meir	Indira Gandhi	Gro Harlem Brundtland
+his_treaty_1494_split	Expert	Which treaty in 1494 split the newly found lands between Spain and Portugal?	Treaty of Tordesillas	Treaty of Utrecht	Treaty of Westphalia	Treaty of Paris
+his_byzantine_emperor_built	Expert	Which Byzantine emperor built the Hagia Sophia in its current form?	Justinian I	Constantine XI	Theodosius II	Basil II
+his_haitian_leader_led	Expert	Which Haitian leader led the only successful slave revolt to found a nation?	Toussaint Louverture	Jean-Jacques Dessalines	Henri Christophe	Simon Bolivar
+his_south_american_liberator	Expert	Which South American liberator gave his name to a country?	Simon Bolivar	Jose de San Martin	Bernardo O'Higgins	Antonio Jose de Sucre
+his_roman_fasces_later	Expert	What were the Roman 'fasces', later borrowed as a symbol by fascism?	Bundled rods with an axe	A laurel wreath	An eagle standard	A bronze shield
+his_ancient_king_law	Expert	Which ancient king's law code was carved on a basalt stele around 1754 BC?	Hammurabi	Nebuchadnezzar	Sargon	Ashurbanipal
+his_queen_palmyra_rebelled	Expert	Which queen of Palmyra rebelled against Rome in the 270s?	Zenobia	Boudica	Dido	Semiramis
+his_medieval_mali_ruler	Expert	Which medieval Mali ruler was so rich his gold crashed prices in Cairo during his pilgrimage?	Mansa Musa	Sundiata Keita	Sonni Ali	Askia Muhammad
+his_african_kingdom_left	Expert	Which African kingdom left the stone ruins of Great Zimbabwe?	Kingdom of Zimbabwe	Kingdom of Kongo	Aksum	Kingdom of Kush
+his_ancient_african_kingdom	Expert	Which ancient African kingdom built more pyramids than Egypt?	Kush	Aksum	Carthage	Punt
+his_english_king_killed	Expert	Which English king was killed by an arrow, by legend in the eye, at Hastings in 1066?	Harold II	William I	Edward the Confessor	Harald Hardrada
+his_russian_monk_influential	Expert	Which Russian monk was influential at the court of the last tsar?	Grigori Rasputin	Leon Trotsky	Sergei Witte	Pyotr Stolypin
+his_1905_sea_battle	Expert	Which 1905 sea battle saw Japan destroy the Russian fleet?	Battle of Tsushima	Battle of Midway	Battle of Port Arthur	Battle of Jutland
+his_battle_1916_largest	Expert	Which battle in 1916 was the largest naval battle of World War I?	Battle of Jutland	Battle of Gallipoli	Battle of Coronel	Battle of Dogger Bank
+his_battle_1916_saw	Expert	Which battle of 1916 saw nearly 60,000 British casualties on its first day?	Battle of the Somme	Battle of Verdun	Battle of Ypres	Battle of Passchendaele
+his_ancient_greek_general	Expert	Which ancient Greek general's victory at Marathon in 490 BC led to the legend of the marathon run?	Miltiades	Leonidas	Themistocles	Pericles
+his_athenian_leader_gave	Expert	Which Athenian leader gave his name to the 'golden age' of Athens?	Pericles	Solon	Cleisthenes	Themistocles
+his_city_alexander_great	Expert	Which city did Alexander the Great found in Egypt in 331 BC?	Alexandria	Cairo	Memphis	Thebes
+his_roman_city_britain	Expert	Which Roman city in Britain later became London?	Londinium	Eboracum	Camulodunum	Aquae Sulis
+his_roman_city_britain_2	Expert	Which Roman city in Britain later became York?	Eboracum	Londinium	Deva	Lindum
+his_english_city_romans	Expert	Which English city did the Romans call Aquae Sulis, for its hot springs?	Bath	Chester	Buxton	Harrogate
+his_roman_legion_famously	Expert	Which Roman legion famously vanished in Germany's Teutoburg Forest in 9 AD?	Varus's legions	Caesar's Tenth	The Ninth Hispana	The Praetorian Guard

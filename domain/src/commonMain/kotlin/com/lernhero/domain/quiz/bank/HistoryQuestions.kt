@@ -544,7 +544,11 @@ object HistoryQuestions {
         q("his_european_country_ruled_3", "Which European country ruled Libya as a colony from 1911?", "Italy", listOf("France", "Britain", "Spain"), M),
         q("his_european_country_ruled_4", "Which European country ruled Namibia as a colony before World War I?", "Germany", listOf("Britain", "Portugal", "Belgium"), M),
         q("his_father_alexander_great", "Who was the father of Alexander the Great?", "Philip II", listOf("Darius III", "Leonidas I", "Pericles"), M),
-        q("his_roman_orator_attacked", "Which Roman orator attacked Catiline and Mark Antony in famous speeches?", "Cicero", listOf("Cato", "Seneca", "Pliny"), M)
+        q("his_roman_orator_attacked", "Which Roman orator attacked Catiline and Mark Antony in famous speeches?", "Cicero", listOf("Cato", "Seneca", "Pliny"), M),
+        q("his_city_split_wall", "Which city was split by a wall from 1961 to 1989?", "Berlin", listOf("Vienna", "Prague", "Budapest"), M),
+        q("his_pharaoh_almost_untouched", "Which pharaoh's almost untouched tomb did Howard Carter open in 1922?", "Tutankhamun", listOf("Ramesses II", "Khufu", "Akhenaten"), M),
+        q("his_roman_gladiator_fights", "What were Roman gladiator fights usually held in?", "Amphitheatres", listOf("Forums", "Basilicas", "Aqueducts"), M),
+        q("his_indian_leader_led", "Which Indian leader led a non-violent struggle for independence from Britain?", "Mahatma Gandhi", listOf("Jawaharlal Nehru", "Subhas Chandra Bose", "Indira Gandhi"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -796,7 +800,27 @@ object HistoryQuestions {
         q("his_led_ghana_independence", "Who led Ghana to independence in 1957 and became its first president?", "Kwame Nkrumah", listOf("Jomo Kenyatta", "Julius Nyerere", "Kenneth Kaunda"), H),
         q("his_city_last_tsar", "In which city were the last tsar and his family executed in 1918?", "Yekaterinburg", listOf("Tobolsk", "Omsk", "Novosibirsk"), H),
         q("his_russian_tsar_freed", "Which Russian tsar freed the serfs in 1861?", "Alexander II", listOf("Nicholas II", "Alexander III", "Nicholas I"), H),
-        q("his_french_explorer_founded", "Which French explorer founded Quebec City in 1608?", "Samuel de Champlain", listOf("Jacques Cartier", "Robert de La Salle", "Jacques Marquette"), H)
+        q("his_french_explorer_founded", "Which French explorer founded Quebec City in 1608?", "Samuel de Champlain", listOf("Jacques Cartier", "Robert de La Salle", "Jacques Marquette"), H),
+        q("his_romans_use_urine", "What did the Romans use urine for, even taxing its collection?", "Washing clothes", listOf("Making bread", "Fuel for lamps", "Medicine for horses"), H),
+        q("his_war_between_britain", "Which war between Britain and Zanzibar in 1896 lasted under 45 minutes?", "Anglo-Zanzibar War", listOf("Boer War", "Opium War", "Zulu War"), H),
+        q("his_emperor_france_exiled", "Which emperor of France was exiled to the island of Elba in 1814?", "Napoleon Bonaparte", listOf("Louis XVIII", "Napoleon III", "Charles X"), H),
+        q("his_ancient_wonder_stood", "Which ancient wonder stood on the island of Pharos?", "Lighthouse of Alexandria", listOf("Colossus of Rhodes", "Temple of Artemis", "Statue of Zeus"), H),
+        q("his_ruler_nicknamed_sun", "Which ruler was nicknamed 'the Sun King'?", "Louis XIV", listOf("Louis XVI", "Charles V", "Peter the Great"), H),
+        q("his_plot_tried_blow", "Which plot tried to blow up the English Parliament on 5 November 1605?", "Gunpowder Plot", listOf("Babington Plot", "Rye House Plot", "Popish Plot"), H),
+        q("his_1215_charter_limited", "Which 1215 charter limited the power of King John of England?", "Magna Carta", listOf("Bill of Rights", "Domesday Book", "Act of Union"), H),
+        q("his_medieval_book_recorded", "Which medieval book recorded who owned what across England in 1086?", "Domesday Book", listOf("Magna Carta", "Book of Kells", "Anglo-Saxon Chronicle"), H),
+        q("his_german_air_force", "What was the name of the German air force in World War II?", "Luftwaffe", listOf("Wehrmacht", "Kriegsmarine", "Panzerwaffe"), H),
+        q("his_medieval_europeans_call", "What did medieval Europeans call parchment made from calfskin?", "Vellum", listOf("Papyrus", "Linen", "Velour"), H),
+        q("his_emperor_rome_ruler", "Which emperor was Rome's ruler when the Colosseum was opened in 80 AD?", "Titus", listOf("Nero", "Vespasian", "Domitian"), H),
+        q("his_spartans_boys_age", "What did the Spartans do with boys at the age of seven?", "Sent them to military training", listOf("Sent them to sea", "Made them farmers", "Taught them philosophy"), H),
+        q("his_tea_dumping_protest", "Which tea-dumping protest happened in 1773 in America?", "Boston Tea Party", listOf("Stamp Act riot", "Whiskey Rebellion", "Shays' Rebellion"), H),
+        q("his_empire_ruled_sultans", "Which empire was ruled by sultans from Istanbul's Topkapi Palace?", "Ottoman Empire", listOf("Mughal Empire", "Safavid Empire", "Mamluk Sultanate"), H),
+        q("his_1934_retreat_across", "Which 1934-35 retreat across China made Mao Zedong leader of the Communists?", "The Long March", listOf("The Great Leap", "The Cultural Revolution", "The Northern Expedition"), H),
+        q("his_crisis_1962_brought", "Which crisis in 1962 brought the USA and USSR closest to nuclear war?", "Cuban Missile Crisis", listOf("Berlin Blockade", "Suez Crisis", "Korean War"), H),
+        q("his_ocean_liner_sunk", "What was the name of the ocean liner sunk by a U-boat in 1915?", "Lusitania", listOf("Titanic", "Britannic", "Mauretania"), H),
+        q("his_french_scholar_deciphered", "Which French scholar first deciphered hieroglyphs in 1822?", "Jean-Francois Champollion", listOf("Thomas Young", "Auguste Mariette", "Gaston Maspero"), H),
+        q("his_language_romans_speak", "Which language did the Romans speak?", "Latin", listOf("Greek", "Etruscan", "Italian"), H),
+        q("his_roman_road_queen", "Which Roman road, the 'queen of roads', ran from Rome to Brindisi?", "Via Appia", listOf("Via Flaminia", "Via Aurelia", "Via Egnatia"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -940,6 +964,28 @@ object HistoryQuestions {
         q("his_ancient_greek_historian", "Which ancient Greek historian wrote the history of the Peloponnesian War?", "Thucydides", listOf("Herodotus", "Xenophon", "Plutarch"), X),
         q("his_empire_ruled_shahs", "Which empire was ruled by shahs from the city of Isfahan in the 1600s?", "The Safavid Empire", listOf("The Mughal Empire", "The Ottoman Empire", "The Seljuk Empire"), X),
         q("his_italian_city_capital", "Which Italian city was the capital of the Western Roman Empire in its last decades?", "Ravenna", listOf("Milan", "Naples", "Florence"), X),
-        q("his_became_world_democratically", "Who became the world's first democratically elected female president, in Iceland in 1980?", "Vigdis Finnbogadottir", listOf("Golda Meir", "Indira Gandhi", "Gro Harlem Brundtland"), X)
+        q("his_became_world_democratically", "Who became the world's first democratically elected female president, in Iceland in 1980?", "Vigdis Finnbogadottir", listOf("Golda Meir", "Indira Gandhi", "Gro Harlem Brundtland"), X),
+        q("his_treaty_1494_split", "Which treaty in 1494 split the newly found lands between Spain and Portugal?", "Treaty of Tordesillas", listOf("Treaty of Utrecht", "Treaty of Westphalia", "Treaty of Paris"), X),
+        q("his_byzantine_emperor_built", "Which Byzantine emperor built the Hagia Sophia in its current form?", "Justinian I", listOf("Constantine XI", "Theodosius II", "Basil II"), X),
+        q("his_haitian_leader_led", "Which Haitian leader led the only successful slave revolt to found a nation?", "Toussaint Louverture", listOf("Jean-Jacques Dessalines", "Henri Christophe", "Simon Bolivar"), X),
+        q("his_south_american_liberator", "Which South American liberator gave his name to a country?", "Simon Bolivar", listOf("Jose de San Martin", "Bernardo O'Higgins", "Antonio Jose de Sucre"), X),
+        q("his_roman_fasces_later", "What were the Roman 'fasces', later borrowed as a symbol by fascism?", "Bundled rods with an axe", listOf("A laurel wreath", "An eagle standard", "A bronze shield"), X),
+        q("his_ancient_king_law", "Which ancient king's law code was carved on a basalt stele around 1754 BC?", "Hammurabi", listOf("Nebuchadnezzar", "Sargon", "Ashurbanipal"), X),
+        q("his_queen_palmyra_rebelled", "Which queen of Palmyra rebelled against Rome in the 270s?", "Zenobia", listOf("Boudica", "Dido", "Semiramis"), X),
+        q("his_medieval_mali_ruler", "Which medieval Mali ruler was so rich his gold crashed prices in Cairo during his pilgrimage?", "Mansa Musa", listOf("Sundiata Keita", "Sonni Ali", "Askia Muhammad"), X),
+        q("his_african_kingdom_left", "Which African kingdom left the stone ruins of Great Zimbabwe?", "Kingdom of Zimbabwe", listOf("Kingdom of Kongo", "Aksum", "Kingdom of Kush"), X),
+        q("his_ancient_african_kingdom", "Which ancient African kingdom built more pyramids than Egypt?", "Kush", listOf("Aksum", "Carthage", "Punt"), X),
+        q("his_english_king_killed", "Which English king was killed by an arrow, by legend in the eye, at Hastings in 1066?", "Harold II", listOf("William I", "Edward the Confessor", "Harald Hardrada"), X),
+        q("his_russian_monk_influential", "Which Russian monk was influential at the court of the last tsar?", "Grigori Rasputin", listOf("Leon Trotsky", "Sergei Witte", "Pyotr Stolypin"), X),
+        q("his_1905_sea_battle", "Which 1905 sea battle saw Japan destroy the Russian fleet?", "Battle of Tsushima", listOf("Battle of Midway", "Battle of Port Arthur", "Battle of Jutland"), X),
+        q("his_battle_1916_largest", "Which battle in 1916 was the largest naval battle of World War I?", "Battle of Jutland", listOf("Battle of Gallipoli", "Battle of Coronel", "Battle of Dogger Bank"), X),
+        q("his_battle_1916_saw", "Which battle of 1916 saw nearly 60,000 British casualties on its first day?", "Battle of the Somme", listOf("Battle of Verdun", "Battle of Ypres", "Battle of Passchendaele"), X),
+        q("his_ancient_greek_general", "Which ancient Greek general's victory at Marathon in 490 BC led to the legend of the marathon run?", "Miltiades", listOf("Leonidas", "Themistocles", "Pericles"), X),
+        q("his_athenian_leader_gave", "Which Athenian leader gave his name to the 'golden age' of Athens?", "Pericles", listOf("Solon", "Cleisthenes", "Themistocles"), X),
+        q("his_city_alexander_great", "Which city did Alexander the Great found in Egypt in 331 BC?", "Alexandria", listOf("Cairo", "Memphis", "Thebes"), X),
+        q("his_roman_city_britain", "Which Roman city in Britain later became London?", "Londinium", listOf("Eboracum", "Camulodunum", "Aquae Sulis"), X),
+        q("his_roman_city_britain_2", "Which Roman city in Britain later became York?", "Eboracum", listOf("Londinium", "Deva", "Lindum"), X),
+        q("his_english_city_romans", "Which English city did the Romans call Aquae Sulis, for its hot springs?", "Bath", listOf("Chester", "Buxton", "Harrogate"), X),
+        q("his_roman_legion_famously", "Which Roman legion famously vanished in Germany's Teutoburg Forest in 9 AD?", "Varus's legions", listOf("Caesar's Tenth", "The Ninth Hispana", "The Praetorian Guard"), X)
     )
 }

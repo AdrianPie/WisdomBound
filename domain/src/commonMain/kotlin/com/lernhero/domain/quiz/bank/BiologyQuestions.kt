@@ -262,7 +262,15 @@ object BiologyQuestions {
         q("bio_doctor_discovered_insulin", "Which doctor discovered insulin with Charles Best in 1921?", "Frederick Banting", listOf("Alexander Fleming", "Joseph Lister", "William Osler"), M),
         q("bio_yellowish_liquid_makes", "What is the yellowish liquid that makes up about half of our blood called?", "Plasma", listOf("Lymph", "Serum", "Bile"), M),
         q("bio_roughly_vertebrae_make", "Roughly how many vertebrae make up the human spine?", "33", listOf("12", "52", "206"), M),
-        q("bio_ribs_typical_human", "How many ribs does a typical human have?", "24", listOf("12", "20", "32"), M)
+        q("bio_ribs_typical_human", "How many ribs does a typical human have?", "24", listOf("12", "20", "32"), M),
+        q("bio_part_eye_controls", "Which part of the eye controls how much light enters it?", "Iris", listOf("Retina", "Cornea", "Lens"), M),
+        q("bio_gives_human_blood", "What gives human blood its red colour?", "Iron in haemoglobin", listOf("Copper in plasma", "Red bone marrow", "Carbon dioxide"), M),
+        q("bio_call_plant_loses", "What do you call a plant that loses all its leaves every autumn?", "Deciduous", listOf("Evergreen", "Perennial", "Annual"), M),
+        q("bio_part_plant_takes", "Which part of a plant takes in water from the soil?", "Roots", listOf("Leaves", "Stem", "Flowers"), M),
+        q("bio_organ_cleans_blood", "Which organ cleans the blood and makes urine?", "Kidneys", listOf("Liver", "Bladder", "Spleen"), M),
+        q("bio_colour_chlorophyll", "What is the colour of chlorophyll?", "Green", listOf("Yellow", "Red", "Blue"), M),
+        q("bio_part_plant_attracts", "What part of the plant attracts bees with colour and scent?", "Flower", listOf("Root", "Stem", "Seed"), M),
+        q("bio_baby_teeth", "What are baby teeth also called?", "Milk teeth", listOf("Wisdom teeth", "Molars", "Canines"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -354,7 +362,17 @@ object BiologyQuestions {
         q("bio_daisy_comes_old", "The name of the daisy comes from an old phrase meaning what?", "Day's eye", listOf("Sun's child", "Field star", "Little pearl"), H),
         q("bio_fruit_once_love", "Which fruit was once called the 'love apple'?", "The tomato", listOf("The apple", "The peach", "The fig"), H),
         q("bio_body_not_repair", "Which of these can the body NOT repair or regrow on its own?", "Tooth enamel", listOf("Skin", "Bone", "The liver"), H),
-        q("bio_common_pertussis", "What is the common name for pertussis?", "Whooping cough", listOf("Chickenpox", "Measles", "Mumps"), H)
+        q("bio_common_pertussis", "What is the common name for pertussis?", "Whooping cough", listOf("Chickenpox", "Measles", "Mumps"), H),
+        q("bio_tiny_structures_inside", "Which tiny structures inside cells were once free-living bacteria, according to endosymbiotic theory?", "Mitochondria", listOf("Ribosomes", "Lysosomes", "Vacuoles"), H),
+        q("bio_flower_corpse_flower", "Which flower, also called the corpse flower, smells of rotting meat?", "Titan arum", listOf("Venus flytrap", "Lotus", "Orchid"), H),
+        q("bio_medical_collarbone", "What is the medical name for the collarbone?", "Clavicle", listOf("Scapula", "Sternum", "Patella"), H),
+        q("bio_medical_kneecap", "What is the medical name for the kneecap?", "Patella", listOf("Tibia", "Clavicle", "Fibula"), H),
+        q("bio_coloured_ring_around", "What is the name for the coloured ring around the pupil?", "Iris", listOf("Sclera", "Cornea", "Retina"), H),
+        q("bio_white_eye", "What is the name for the white of the eye?", "Sclera", listOf("Iris", "Cornea", "Pupil"), H),
+        q("bio_vitamin_deficiency_causes", "Which vitamin deficiency causes rickets?", "Vitamin D", listOf("Vitamin C", "Vitamin K", "Vitamin E"), H),
+        q("bio_part_brain_shaped", "Which part of the brain is shaped like a seahorse and helps form memories?", "Hippocampus", listOf("Amygdala", "Cerebellum", "Thalamus"), H),
+        q("bio_almond_shaped_part", "Which almond-shaped part of the brain processes fear?", "Amygdala", listOf("Hippocampus", "Pituitary gland", "Pons"), H),
+        q("bio_gland_often_master", "Which gland is often called the 'master gland' of the body?", "Pituitary gland", listOf("Thyroid gland", "Pineal gland", "Adrenal gland"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -397,6 +415,21 @@ object BiologyQuestions {
         q("biox_drzewa_siec", "Trees in a forest can share nutrients through underground networks of what?", "Fungi", listOf("Earthworms", "Ant tunnels", "Rainwater channels"), X),
         q("bioy_zielone_pomarancze", "Why are many ripe oranges in the tropics still green?", "Warm nights keep their chlorophyll", listOf("They are a different species", "They are picked too early", "The soil lacks iron"), X),
         q("bioy_zapach_trawy", "What is the smell of freshly cut grass, really?", "A chemical distress signal", listOf("Chlorophyll evaporating", "Soil bacteria waking up", "Pollen bursting open"), X),
-        q("bioy_insulina", "In which country was insulin first used to treat diabetes, in 1922?", "Canada", listOf("Germany", "Britain", "The USA"), X)
+        q("bioy_insulina", "In which country was insulin first used to treat diabetes, in 1922?", "Canada", listOf("Germany", "Britain", "The USA"), X),
+        q("bio_pacemaker_tissue_starts", "What is the name of the pacemaker tissue that starts each heartbeat?", "Sinoatrial node", listOf("Bundle of His", "Purkinje fibres", "Atrioventricular valve"), X),
+        q("bio_immortal_cell_line", "Which immortal cell line, used in labs since 1951, came from a patient who never consented?", "HeLa", listOf("CHO", "HEK 293", "Vero"), X),
+        q("bio_enzyme_unzips_dna", "Which enzyme unzips the DNA double helix before it is copied?", "Helicase", listOf("Ligase", "Primase", "Polymerase"), X),
+        q("bio_patient_initials_taught", "Which famous patient, known by his initials, taught science how memories are formed after losing his hippocampus?", "H.M.", listOf("Phineas Gage", "Little Albert", "Anna O."), X),
+        q("bio_pando_utah_largest", "What is 'Pando' in Utah, one of the largest living organisms?", "A clone of aspen trees", listOf("A giant fungus", "A coral reef", "A seagrass meadow"), X),
+        q("bio_fungus_oregon_covers", "Which fungus in Oregon covers about 9 square kilometres underground?", "Honey fungus", listOf("Fly agaric", "Truffle", "Penicillium"), X),
+        q("bio_small_gap_between", "What is the name for the small gap between two nerve cells?", "Synapse", listOf("Axon", "Dendrite", "Myelin"), X),
+        q("bio_austrian_monk_founded", "Which Austrian monk founded genetics by crossing pea plants?", "Gregor Mendel", listOf("Carl Linnaeus", "Jean-Baptiste Lamarck", "Hugo de Vries"), X),
+        q("bio_swedish_scientist_created", "Which Swedish scientist created the two-part naming system for species?", "Carl Linnaeus", listOf("Gregor Mendel", "Anders Celsius", "Alfred Nobel"), X),
+        q("bio_doctor_traced_london", "Which doctor traced a London cholera outbreak to a water pump in 1854?", "John Snow", listOf("Edward Jenner", "Joseph Lister", "Florence Nightingale"), X),
+        q("bio_hungarian_doctor_urged", "Which Hungarian doctor urged handwashing to stop childbed fever, and was mocked for it?", "Ignaz Semmelweis", listOf("Robert Koch", "Joseph Lister", "Rudolf Virchow"), X),
+        q("bio_german_doctor_discovered", "Which German doctor discovered the bacteria that cause tuberculosis?", "Robert Koch", listOf("Paul Ehrlich", "Emil von Behring", "Rudolf Virchow"), X),
+        q("bio_hormone_pineal_gland", "Which hormone does the pineal gland release to control sleep?", "Melatonin", listOf("Serotonin", "Cortisol", "Dopamine"), X),
+        q("bio_hormone_produced_thyroid", "Which hormone produced by the thyroid controls metabolism?", "Thyroxine", listOf("Insulin", "Cortisol", "Glucagon"), X),
+        q("bio_tiny_finger_like", "Which tiny finger-like structures line the small intestine?", "Villi", listOf("Cilia", "Alveoli", "Nephrons"), X)
     )
 }

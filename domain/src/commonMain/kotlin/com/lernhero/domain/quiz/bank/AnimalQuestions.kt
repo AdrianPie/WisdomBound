@@ -311,7 +311,19 @@ object AnimalQuestions {
         q("ani_elephant_tusks", "What are an elephant's tusks?", "Enlarged incisor teeth", listOf("Horns", "Enlarged canine teeth", "Bony growths"), M),
         q("ani_heaviest_invertebrate_earth", "Which is the heaviest invertebrate on Earth?", "Colossal squid", listOf("Giant squid", "Giant Pacific octopus", "Lion's mane jellyfish"), M),
         q("ani_sea_creature_usually", "Which sea creature is usually ranked the most venomous animal in the ocean?", "Box jellyfish", listOf("Stonefish", "Blue-ringed octopus", "Sea snake"), M),
-        q("ani_truly_wild_horse", "Which is the only truly wild horse species still living, saved from extinction in Mongolia?", "Przewalski's horse", listOf("Camargue horse", "Akhal-Teke horse", "Mongolian mustang"), M)
+        q("ani_truly_wild_horse", "Which is the only truly wild horse species still living, saved from extinction in Mongolia?", "Przewalski's horse", listOf("Camargue horse", "Akhal-Teke horse", "Mongolian mustang"), M),
+        q("ani_animal_sleeps_standing", "Which animal sleeps standing up and can only doze lying down for short spells?", "Horse", listOf("Cow", "Pig", "Sheep"), M),
+        q("ani_animal_milk_naturally", "Which animal's milk is wrongly rumoured online to be pink?", "Hippopotamus", listOf("Flamingo", "Pig", "Camel"), M),
+        q("ani_flamingos_turn_pink", "Why do flamingos turn pink?", "Pigments in their food", listOf("Sunburn", "Their blood shows through", "Mud baths"), M),
+        q("ani_call_male_bee", "What do you call a male bee whose only job is to mate with the queen?", "Drone", listOf("Worker", "Soldier", "Scout"), M),
+        q("ani_insect_performs_waggle", "Which insect performs a 'waggle dance' to show others where food is?", "Honeybee", listOf("Ant", "Wasp", "Termite"), M),
+        q("ani_reptile_change_colour", "Which reptile can change colour and move its eyes independently?", "Chameleon", listOf("Gecko", "Iguana", "Komodo dragon"), M),
+        q("ani_marine_mammal_holds", "Which marine mammal holds stones on its belly to crack open shellfish?", "Sea otter", listOf("Walrus", "Seal", "Manatee"), M),
+        q("ani_animal_black_white", "Which animal has black-and-white stripes that are unique to each individual, like fingerprints?", "Zebra", listOf("Tiger", "Okapi", "Skunk"), M),
+        q("ani_baby_swan", "What is a baby swan called?", "Cygnet", listOf("Gosling", "Eaglet", "Fledgling"), M),
+        q("ani_baby_hare", "What is a baby hare called?", "Leveret", listOf("Kit", "Bunny", "Pup"), M),
+        q("ani_animal_stripes_continue", "Which animal's stripes continue onto its skin, not just its fur?", "Tiger", listOf("Zebra", "Okapi", "Raccoon"), M),
+        q("ani_bird_mimic_human", "Which bird can mimic human speech best, with a vocabulary of over 100 words recorded?", "African grey parrot", listOf("Crow", "Budgerigar", "Cockatoo"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -413,7 +425,30 @@ object AnimalQuestions {
         q("ani_living_fossil_fish", "Which 'living fossil' fish, thought extinct for millions of years, was found alive in 1938?", "The coelacanth", listOf("The lungfish", "The sturgeon", "The hagfish"), H),
         q("ani_japanese_dog_breed", "Which Japanese dog breed was the famously loyal Hachiko?", "The Akita", listOf("The Shiba Inu", "The Tosa", "The Japanese Spitz"), H),
         q("ani_cat_breed_having", "Which cat breed is famous for having no tail?", "The Manx", listOf("The Sphynx", "The Ragdoll", "The Burmese"), H),
-        q("ani_heaviest_spider_world", "Which is the heaviest spider in the world?", "The Goliath birdeater", listOf("The black widow", "The huntsman", "The wolf spider"), H)
+        q("ani_heaviest_spider_world", "Which is the heaviest spider in the world?", "The Goliath birdeater", listOf("The black widow", "The huntsman", "The wolf spider"), H),
+        q("ani_big_cat_cannot", "Which big cat cannot fully retract its claws?", "Cheetah", listOf("Leopard", "Jaguar", "Lion"), H),
+        q("ani_kind_animal_portuguese", "What kind of animal is a Portuguese man o' war?", "Siphonophore colony", listOf("Jellyfish", "Sea anemone", "Sea slug"), H),
+        q("ani_seabird_longest_wingspan", "Which seabird has the longest wingspan of any living bird?", "Wandering albatross", listOf("Great frigatebird", "Brown pelican", "Northern gannet"), H),
+        q("ani_unusual_male_seahorse", "What is unusual about how a male seahorse helps raise young?", "He gets pregnant and gives birth", listOf("He carries eggs in his mouth", "He builds a bubble nest", "He feeds them milk"), H),
+        q("ani_ant_species_grows", "Which ant species grows its own fungus gardens to eat?", "Leafcutter ant", listOf("Army ant", "Bullet ant", "Fire ant"), H),
+        q("ani_insect_painful_sting", "Which insect has the most painful sting, according to the Schmidt pain index?", "Bullet ant", listOf("Tarantula hawk", "Honeybee", "Fire ant"), H),
+        q("ani_animal_tongue_longer", "Which animal can shoot out a tongue up to twice its body length to catch insects?", "Chameleon", listOf("Anteater", "Giraffe", "Woodpecker"), H),
+        q("ani_bird_builds_elaborate", "Which bird builds elaborate decorated bowers to attract a mate?", "Bowerbird", listOf("Weaverbird", "Lyrebird", "Peacock"), H),
+        q("ani_deep_sea_creature", "Which deep-sea creature lights its own lure on its head?", "Anglerfish", listOf("Viperfish", "Gulper eel", "Lanternfish"), H),
+        q("ani_animal_regrow_lost", "Which animal can regrow its lost limbs, heart and parts of its brain?", "Axolotl", listOf("Starfish", "Gecko", "Newt"), H),
+        q("ani_spider_female_often", "Which spider is famous for the female often eating the male after mating?", "Black widow", listOf("Wolf spider", "Tarantula", "Jumping spider"), H),
+        q("ani_baby_goose", "What is a baby goose called?", "Gosling", listOf("Cygnet", "Duckling", "Poult"), H),
+        q("ani_male_swan", "What is a male swan called?", "Cob", listOf("Pen", "Drake", "Gander"), H),
+        q("ani_sea_creature_brain", "Which sea creature has no brain, heart or blood, yet has existed for 500 million years?", "Jellyfish", listOf("Sponge", "Sea cucumber", "Starfish"), H),
+        q("ani_animal_sleep_three", "Which animal can sleep for up to three years when conditions are dry?", "Snail", listOf("Tortoise", "Frog", "Bear"), H),
+        q("ani_animal_largest_eyes", "Which animal has the largest eyes in the animal kingdom?", "Colossal squid", listOf("Blue whale", "Ostrich", "Giant octopus"), H),
+        q("ani_primate_great_ape", "Which primate is the only great ape native to Asia?", "Orangutan", listOf("Gibbon", "Bonobo", "Macaque"), H),
+        q("ani_wild_cat_tufted", "Which wild cat has tufted ears and lives in the forests of Europe?", "Lynx", listOf("Ocelot", "Caracal", "Serval"), H),
+        q("ani_pandas_spend_hours", "What do pandas spend about 12 hours a day eating?", "Bamboo", listOf("Eucalyptus", "Fruit", "Grass"), H),
+        q("ani_bird_largest_wingspan", "Which bird has the largest wingspan of any land bird, gliding over the Andes?", "Andean condor", listOf("Golden eagle", "Harpy eagle", "Lammergeier"), H),
+        q("ani_venomous_lizard_lives", "Which venomous lizard lives in the deserts of the south-western USA?", "Gila monster", listOf("Komodo dragon", "Thorny devil", "Frilled lizard"), H),
+        q("ani_australian_lizard_opens", "Which Australian lizard opens a big frill around its neck to scare enemies?", "Frilled lizard", listOf("Thorny devil", "Bearded dragon", "Goanna"), H),
+        q("ani_lizard_squirts_blood", "Which lizard squirts blood from its eyes to scare predators?", "Horned lizard", listOf("Gecko", "Iguana", "Chameleon"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -462,6 +497,23 @@ object AnimalQuestions {
         q("aniy_strus_oko", "An ostrich's eye is bigger than which of its organs?", "Its brain", listOf("Its heart", "Its stomach", "Its liver"), X),
         q("aniy_zolwie_morskie", "How do newly hatched sea turtles find the sea at night?", "They head for the brighter horizon", listOf("They follow their mother", "They smell the salt", "They listen for waves"), X),
         q("ani_small_furry_animal", "Which small furry animal is one of the elephant's closest living relatives?", "The rock hyrax", listOf("The capybara", "The pangolin", "The wombat"), X),
-        q("ani_baby_echidna", "What is a baby echidna called?", "A puggle", listOf("A joey", "A kit", "A cub"), X)
+        q("ani_baby_echidna", "What is a baby echidna called?", "A puggle", listOf("A joey", "A kit", "A cub"), X),
+        q("ani_jellyfish_revert_juvenile", "Which jellyfish can revert to its juvenile stage and is called 'biologically immortal'?", "Turritopsis dohrnii", listOf("Aurelia aurita", "Chironex fleckeri", "Cyanea capillata"), X),
+        q("ani_male_fish_fuses", "The male of which fish fuses permanently to the much larger female's body?", "Anglerfish", listOf("Seahorse", "Clownfish", "Wrasse"), X),
+        q("ani_mammal_powerful_bite", "Which mammal has the most powerful bite force ever measured among living animals?", "Hippopotamus", listOf("Grizzly bear", "Lion", "Spotted hyena"), X),
+        q("ani_mantis_shrimp_feature", "What does a mantis shrimp use to smash shells as fast as a bullet?", "Club-like front limbs", listOf("Venomous fangs", "Sonic clicks", "Electric organs"), X),
+        q("ani_mammal_highest_body", "Which desert animal can live its whole life without ever drinking water?", "Kangaroo rat", listOf("Fennec fox", "Camel", "Meerkat"), X),
+        q("ani_bird_sleep_while", "Which bird can sleep while flying and stays in the air for up to ten months?", "Common swift", listOf("Albatross", "Frigatebird", "Arctic tern"), X),
+        q("ani_frog_toxic_kill", "Which frog is so toxic that one could kill ten adult men?", "Golden poison frog", listOf("Cane toad", "Tomato frog", "Glass frog"), X),
+        q("ani_bird_migrates_farthest", "Which bird migrates the farthest each year, flying pole to pole?", "Arctic tern", listOf("Bar-tailed godwit", "Wandering albatross", "Sooty shearwater"), X),
+        q("ani_naked_nearly_cancer", "Which naked, nearly cancer-proof rodent lives in colonies with a queen like bees?", "Naked mole-rat", listOf("Capybara", "Chinchilla", "Agouti"), X),
+        q("ani_monkey_large_droopy", "Which monkey has a large, droopy nose that grows with age in males?", "Proboscis monkey", listOf("Mandrill", "Howler monkey", "Snub-nosed monkey"), X),
+        q("ani_monkey_brightly_coloured", "Which monkey has a brightly coloured red and blue face?", "Mandrill", listOf("Baboon", "Proboscis monkey", "Tamarin"), X),
+        q("ani_owl_species_nesting", "Which owl species is famous for nesting in burrows underground?", "Burrowing owl", listOf("Barn owl", "Snowy owl", "Tawny owl"), X),
+        q("ani_antelope_leap_ten", "Which antelope can leap up to ten metres in a single bound?", "Impala", listOf("Springbok", "Gazelle", "Kudu"), X),
+        q("ani_bird_chicks_claws", "Which bird's chicks have claws on their wings to help them climb trees?", "Hoatzin", listOf("Kiwi", "Cassowary", "Shoebill"), X),
+        q("ani_huge_billed_african", "Which huge-billed African bird stands motionless for hours waiting for lungfish?", "Shoebill", listOf("Marabou stork", "Hammerkop", "Secretary bird"), X),
+        q("ani_unusual_axolotl_adult", "What is unusual about the axolotl as an adult?", "It keeps its larval gills for life", listOf("It lives only one day", "It has no bones", "It changes sex every year"), X),
+        q("ani_rabbit_eared_australian", "Which rabbit-eared Australian marsupial is promoted as the 'Easter Bilby'?", "Bilby", listOf("Bandicoot", "Quokka", "Bettong"), X)
     )
 }

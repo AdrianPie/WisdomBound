@@ -233,6 +233,14 @@ bio_doctor_discovered_insulin	Medium	Which doctor discovered insulin with Charle
 bio_yellowish_liquid_makes	Medium	What is the yellowish liquid that makes up about half of our blood called?	Plasma	Lymph	Serum	Bile
 bio_roughly_vertebrae_make	Medium	Roughly how many vertebrae make up the human spine?	33	12	52	206
 bio_ribs_typical_human	Medium	How many ribs does a typical human have?	24	12	20	32
+bio_part_eye_controls	Medium	Which part of the eye controls how much light enters it?	Iris	Retina	Cornea	Lens
+bio_gives_human_blood	Medium	What gives human blood its red colour?	Iron in haemoglobin	Copper in plasma	Red bone marrow	Carbon dioxide
+bio_call_plant_loses	Medium	What do you call a plant that loses all its leaves every autumn?	Deciduous	Evergreen	Perennial	Annual
+bio_part_plant_takes	Medium	Which part of a plant takes in water from the soil?	Roots	Leaves	Stem	Flowers
+bio_organ_cleans_blood	Medium	Which organ cleans the blood and makes urine?	Kidneys	Liver	Bladder	Spleen
+bio_colour_chlorophyll	Medium	What is the colour of chlorophyll?	Green	Yellow	Red	Blue
+bio_part_plant_attracts	Medium	What part of the plant attracts bees with colour and scent?	Flower	Root	Stem	Seed
+bio_baby_teeth	Medium	What are baby teeth also called?	Milk teeth	Wisdom teeth	Molars	Canines
 bio_mejoza	Hard	What is the cell division that produces sex cells called?	Meiosis	Mitosis	Cytokinesis	Apoptosis
 bio_mendel	Hard	Who is considered the father of genetics for his research on peas?	Gregor Mendel	Charles Darwin	James Watson	Francis Crick
 bio_mozdzek	Hard	Which part of the brain is responsible for balance and movement coordination?	Cerebellum	Cerebral cortex	Medulla oblongata	Hypothalamus
@@ -321,6 +329,16 @@ bio_daisy_comes_old	Hard	The name of the daisy comes from an old phrase meaning 
 bio_fruit_once_love	Hard	Which fruit was once called the 'love apple'?	The tomato	The apple	The peach	The fig
 bio_body_not_repair	Hard	Which of these can the body NOT repair or regrow on its own?	Tooth enamel	Skin	Bone	The liver
 bio_common_pertussis	Hard	What is the common name for pertussis?	Whooping cough	Chickenpox	Measles	Mumps
+bio_tiny_structures_inside	Hard	Which tiny structures inside cells were once free-living bacteria, according to endosymbiotic theory?	Mitochondria	Ribosomes	Lysosomes	Vacuoles
+bio_flower_corpse_flower	Hard	Which flower, also called the corpse flower, smells of rotting meat?	Titan arum	Venus flytrap	Lotus	Orchid
+bio_medical_collarbone	Hard	What is the medical name for the collarbone?	Clavicle	Scapula	Sternum	Patella
+bio_medical_kneecap	Hard	What is the medical name for the kneecap?	Patella	Tibia	Clavicle	Fibula
+bio_coloured_ring_around	Hard	What is the name for the coloured ring around the pupil?	Iris	Sclera	Cornea	Retina
+bio_white_eye	Hard	What is the name for the white of the eye?	Sclera	Iris	Cornea	Pupil
+bio_vitamin_deficiency_causes	Hard	Which vitamin deficiency causes rickets?	Vitamin D	Vitamin C	Vitamin K	Vitamin E
+bio_part_brain_shaped	Hard	Which part of the brain is shaped like a seahorse and helps form memories?	Hippocampus	Amygdala	Cerebellum	Thalamus
+bio_almond_shaped_part	Hard	Which almond-shaped part of the brain processes fear?	Amygdala	Hippocampus	Pituitary gland	Pons
+bio_gland_often_master	Hard	Which gland is often called the 'master gland' of the body?	Pituitary gland	Thyroid gland	Pineal gland	Adrenal gland
 bio_amylaza	Expert	Which enzyme in saliva breaks down starch?	Amylase	Pepsin	Lipase	Trypsin
 bio_mrna	Expert	Which type of RNA carries genetic information from the nucleus to the ribosome?	mRNA	tRNA	rRNA	siRNA
 bio_ektoderma	Expert	Which germ layer does the nervous system develop from?	Ectoderm	Mesoderm	Endoderm	Notochord
@@ -360,3 +378,18 @@ biox_drzewa_siec	Expert	Trees in a forest can share nutrients through undergroun
 bioy_zielone_pomarancze	Expert	Why are many ripe oranges in the tropics still green?	Warm nights keep their chlorophyll	They are a different species	They are picked too early	The soil lacks iron
 bioy_zapach_trawy	Expert	What is the smell of freshly cut grass, really?	A chemical distress signal	Chlorophyll evaporating	Soil bacteria waking up	Pollen bursting open
 bioy_insulina	Expert	In which country was insulin first used to treat diabetes, in 1922?	Canada	Germany	Britain	The USA
+bio_pacemaker_tissue_starts	Expert	What is the name of the pacemaker tissue that starts each heartbeat?	Sinoatrial node	Bundle of His	Purkinje fibres	Atrioventricular valve
+bio_immortal_cell_line	Expert	Which immortal cell line, used in labs since 1951, came from a patient who never consented?	HeLa	CHO	HEK 293	Vero
+bio_enzyme_unzips_dna	Expert	Which enzyme unzips the DNA double helix before it is copied?	Helicase	Ligase	Primase	Polymerase
+bio_patient_initials_taught	Expert	Which famous patient, known by his initials, taught science how memories are formed after losing his hippocampus?	H.M.	Phineas Gage	Little Albert	Anna O.
+bio_pando_utah_largest	Expert	What is 'Pando' in Utah, one of the largest living organisms?	A clone of aspen trees	A giant fungus	A coral reef	A seagrass meadow
+bio_fungus_oregon_covers	Expert	Which fungus in Oregon covers about 9 square kilometres underground?	Honey fungus	Fly agaric	Truffle	Penicillium
+bio_small_gap_between	Expert	What is the name for the small gap between two nerve cells?	Synapse	Axon	Dendrite	Myelin
+bio_austrian_monk_founded	Expert	Which Austrian monk founded genetics by crossing pea plants?	Gregor Mendel	Carl Linnaeus	Jean-Baptiste Lamarck	Hugo de Vries
+bio_swedish_scientist_created	Expert	Which Swedish scientist created the two-part naming system for species?	Carl Linnaeus	Gregor Mendel	Anders Celsius	Alfred Nobel
+bio_doctor_traced_london	Expert	Which doctor traced a London cholera outbreak to a water pump in 1854?	John Snow	Edward Jenner	Joseph Lister	Florence Nightingale
+bio_hungarian_doctor_urged	Expert	Which Hungarian doctor urged handwashing to stop childbed fever, and was mocked for it?	Ignaz Semmelweis	Robert Koch	Joseph Lister	Rudolf Virchow
+bio_german_doctor_discovered	Expert	Which German doctor discovered the bacteria that cause tuberculosis?	Robert Koch	Paul Ehrlich	Emil von Behring	Rudolf Virchow
+bio_hormone_pineal_gland	Expert	Which hormone does the pineal gland release to control sleep?	Melatonin	Serotonin	Cortisol	Dopamine
+bio_hormone_produced_thyroid	Expert	Which hormone produced by the thyroid controls metabolism?	Thyroxine	Insulin	Cortisol	Glucagon
+bio_tiny_finger_like	Expert	Which tiny finger-like structures line the small intestine?	Villi	Cilia	Alveoli	Nephrons

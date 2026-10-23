@@ -12,8 +12,8 @@ Typowa sesja dopisywania pytan (szczegoly: domain/quizbank/README.md):
     python3 tools/quizbank.py stats                  # ile pytan w ktorym temacie i na ktorym poziomie
     python3 tools/quizbank.py list history -d E      # podglad tematu (opcjonalnie poziomu / frazy)
     python3 tools/quizbank.py find churchill         # szukaj w CALYM banku, wszystkie typy pytan
-    python3 tools/quizbank.py check nowe.txt         # sprawdz nowe pytania - niczego nie zapisuje
-    python3 tools/quizbank.py add nowe.txt           # check + dopisz do TSV + wygeneruj Kotlin
+    python3 tools/quizbank.py check nowe.txt [-q]    # sprawdz nowe pytania - niczego nie zapisuje
+    python3 tools/quizbank.py add nowe.txt [--skip-errors|--only-clean]  # check + dopisz + wygeneruj Kotlin
     python3 tools/quizbank.py generate [--check]     # TSV -> Kotlin (--check: tylko porownaj)
 
 Plik z nowymi pytaniami: naglowek + jedna linia na pytanie, kolumny rozdzielone tabulatorem albo
@@ -34,6 +34,7 @@ import argparse
 import glob
 import os
 import re
+import signal
 import sys
 import unicodedata
 from collections import Counter, defaultdict
@@ -652,12 +653,22 @@ def check_questions(new: list[Question], bank: Bank, rules: Rules) -> Report:
     return report
 
 
-def print_report(new: list[Question], report: Report, problems: list[str], show_ok: bool = False) -> None:
+def print_report(
+    new: list[Question], report: Report, problems: list[str], show_ok: bool = False, quiet: bool = False
+) -> None:
     for p in problems:
         print("BLAD  " + p)
     for i, q in enumerate(new):
         errs, warns = report.errors.get(i, []), report.warnings.get(i, [])
         if not errs and not warns and not show_ok:
+            continue
+        if quiet:
+            # Jedna linia na pytanie: pelne bledy, z uwag tylko pierwsza i przycieta.
+            first = "; ".join(errs) if errs else warns[0]
+            hidden = len(warns) if errs else len(warns) - 1
+            more = f" (+{hidden} uwag)" if hidden else ""
+            tag = "BLAD " if errs else "uwaga"
+            print(f"{q.where} {tag} {q.correct[:30]}: {first[:140]}{more}")
             continue
         print(f"\n{q.where}  {q.topic.key}/{q.level}  '{q.prompt}' -> {q.correct}")
         for e in errs:
@@ -830,7 +841,7 @@ def _load_new(paths: list[str]) -> tuple[list[Question], list[str]]:
 def cmd_check(args) -> int:
     new, problems = _load_new(args.files)
     report = check_questions(new, load_bank(), load_rules())
-    print_report(new, report, problems, show_ok=args.all)
+    print_report(new, report, problems, show_ok=args.all, quiet=args.quiet)
     return 1 if problems or any(report.errors.values()) else 0
 
 
@@ -839,12 +850,25 @@ def cmd_add(args) -> int:
     bank = load_bank()
     report = check_questions(new, bank, load_rules())
     blocked = problems or any(report.errors.values())
+    if args.only_clean and not problems:
+        # Pytania z uwagami to zwykle duble ujete innymi slowami - odrzuc je razem z bledami.
+        for i in range(len(new)):
+            if report.warnings.get(i) and not report.errors.get(i):
+                report.errors[i] = report.warnings[i]
+        skipped = sum(1 for i in range(len(new)) if report.errors.get(i))
+        print(f"pominiete (bledy lub uwagi): {skipped}")
+        blocked = False
+    elif args.skip_errors and not problems:
+        rejected = [i for i in range(len(new)) if report.errors.get(i)]
+        for i in rejected:
+            print(f"pominiete {new[i].where}: {'; '.join(report.errors[i])[:160]}")
+        blocked = False
     if blocked and not args.force:
-        print_report(new, report, problems)
+        print_report(new, report, problems, quiet=args.quiet)
         print("\nNic nie zapisano - popraw bledy (albo --force, jesli to swiadoma decyzja).")
         return 1
     if args.verbose:
-        print_report(new, report, problems)
+        print_report(new, report, problems, quiet=args.quiet)
     taken = bank.all_ids()
     by_topic: dict[str, list[Question]] = defaultdict(list)
     for i, q in enumerate(new):
@@ -861,12 +885,14 @@ def cmd_add(args) -> int:
     print(f"Dopisano {added} pytan: " + ", ".join(f"{t}: {len(v)}" for t, v in sorted(by_topic.items())))
     print("Poziomy: " + ", ".join(f"{level}: {levels[level]}" for level in LEVELS))
     n_warn = sum(1 for i in range(len(new)) if report.warnings.get(i))
-    if n_warn and not args.verbose:
+    if n_warn and not args.verbose and not args.only_clean:
         print(f"({n_warn} pytan mialo uwagi - `check` pokaze je przed dopisaniem)")
     return cmd_generate(argparse.Namespace(check=False))
 
 
 def main() -> int:
+    if hasattr(signal, "SIGPIPE"):
+        signal.signal(signal.SIGPIPE, signal.SIG_DFL)  # `... | head` bez tracebacku
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = parser.add_subparsers(dest="command", required=True)
 
@@ -884,11 +910,15 @@ def main() -> int:
     p = sub.add_parser("check", help="sprawdz plik(i) z nowymi pytaniami - niczego nie zapisuje")
     p.add_argument("files", nargs="+")
     p.add_argument("--all", action="store_true", help="wypisz tez pytania bez uwag")
+    p.add_argument("-q", "--quiet", action="store_true", help="jedna krotka linia na pytanie z bledem/uwaga")
 
     p = sub.add_parser("add", help="check + dopisz nowe pytania do TSV + wygeneruj Kotlin")
     p.add_argument("files", nargs="+")
     p.add_argument("--force", action="store_true", help="dopisz mimo bledow")
     p.add_argument("-v", "--verbose", action="store_true", help="wypisz tez uwagi")
+    p.add_argument("-q", "--quiet", action="store_true", help="krotki raport bledow")
+    p.add_argument("--skip-errors", action="store_true", help="dopisz pytania bez bledow, reszte pomin")
+    p.add_argument("--only-clean", action="store_true", help="dopisz tylko pytania bez bledow i bez uwag")
 
     p = sub.add_parser("generate", help="TSV -> pliki Kotlin")
     p.add_argument("--check", action="store_true", help="tylko sprawdz, czy Kotlin jest aktualny")

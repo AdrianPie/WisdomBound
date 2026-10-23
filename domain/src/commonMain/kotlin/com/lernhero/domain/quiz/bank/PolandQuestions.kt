@@ -331,7 +331,13 @@ object PolandQuestions {
         q("pol_polish_prime_minister", "Which Polish prime minister-in-exile died in a plane crash at Gibraltar in 1943?", "Wladyslaw Sikorski", listOf("Stanislaw Mikolajczyk", "Ignacy Moscicki", "Jozef Beck"), M),
         q("pol_politician_led_national", "Which politician led the National Democrats and signed the Treaty of Versailles for Poland?", "Roman Dmowski", listOf("Jozef Pilsudski", "Wincenty Witos", "Ignacy Daszynski"), M),
         q("pol_communist_leader_came", "Which communist leader came to power during the 'thaw' of October 1956?", "Wladyslaw Gomulka", listOf("Boleslaw Bierut", "Edward Gierek", "Wojciech Jaruzelski"), M),
-        q("pol_frederic_chopin_heart", "Where is Frederic Chopin's heart kept?", "In a church in Warsaw", listOf("In Paris, with his body", "In Zelazowa Wola", "In Wawel Cathedral"), M)
+        q("pol_frederic_chopin_heart", "Where is Frederic Chopin's heart kept?", "In a church in Warsaw", listOf("In Paris, with his body", "In Zelazowa Wola", "In Wawel Cathedral"), M),
+        q("pol_polish_astronaut_flew", "Which Polish astronaut flew to space in 1978?", "Miroslaw Hermaszewski", listOf("Slawosz Uznanski", "Jan Twardowski", "Zenon Jankowski"), M),
+        q("pol_polish_city_malbork", "In which Polish city is the Malbork Castle, the largest brick castle in the world?", "Malbork", listOf("Gdansk", "Torun", "Olsztyn"), M),
+        q("pol_polish_city_capital", "Which Polish city was the capital before Warsaw?", "Krakow", listOf("Gniezno", "Poznan", "Plock"), M),
+        q("pol_dragon_lived_under", "Which dragon lived under Wawel Hill in Krakow, according to legend?", "Smok Wawelski", listOf("Zmij", "Bazyliszek", "Smok Tatrzanski"), M),
+        q("pol_legendary_creature_symbol", "Which legendary creature is the symbol of Warsaw?", "The Mermaid", listOf("The Dragon", "The White Eagle", "The Bear"), M),
+        q("pol_polish_dumplings_country", "Which Polish dumplings are the country's best-known dish?", "Pierogi", listOf("Golabki", "Placki", "Kopytka"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -426,7 +432,14 @@ object PolandQuestions {
         q("pol_polish_courier_brought", "Which Polish courier brought the Allies some of the first eyewitness reports of the Holocaust?", "Jan Karski", listOf("Witold Pilecki", "Jan Nowak-Jezioranski", "Irena Sendler"), H),
         q("pol_became_poland_female", "Who became Poland's first female prime minister, in 1992?", "Hanna Suchocka", listOf("Ewa Kopacz", "Beata Szydlo", "Henryka Bochniak"), H),
         q("pol_actor_played_lead", "Which actor played the lead spy in 'Stawka wieksza niz zycie'?", "Stanislaw Mikulski", listOf("Daniel Olbrychski", "Janusz Gajos", "Wojciech Pszoniak"), H),
-        q("pol_wrote_medaliony_short", "Who wrote 'Medaliony', short stories about the German occupation?", "Zofia Nalkowska", listOf("Eliza Orzeszkowa", "Maria Dabrowska", "Zofia Kossak"), H)
+        q("pol_wrote_medaliony_short", "Who wrote 'Medaliony', short stories about the German occupation?", "Zofia Nalkowska", listOf("Eliza Orzeszkowa", "Maria Dabrowska", "Zofia Kossak"), H),
+        q("pol_king_poland_led", "Which king of Poland led the relief of Vienna in 1683?", "Jan III Sobieski", listOf("Stefan Batory", "Wladyslaw IV", "August II"), H),
+        q("pol_polish_duke_baptism", "Which Polish duke's baptism in 966 is seen as the birth of the Polish state?", "Mieszko I", listOf("Boleslaw the Brave", "Piast the Wheelwright", "Popiel"), H),
+        q("pol_polish_violinist_international", "Which Polish violinist has an international violin competition named after him in Poznan?", "Henryk Wieniawski", listOf("Karol Lipinski", "Ignacy Paderewski", "Wanda Wilkomirska"), H),
+        q("pol_polish_lake_district", "Which Polish lake district is known as the 'Land of a Thousand Lakes'?", "Masuria", listOf("Kashubia", "Pomerania", "Podlasie"), H),
+        q("pol_national_park_protects", "Which national park protects Europe's last primeval lowland forest, home to bison?", "Bialowieza", listOf("Kampinos", "Bieszczady", "Wigry"), H),
+        q("pol_polish_soup_made", "Which Polish soup is made from fermented rye flour?", "Zurek", listOf("Barszcz", "Rosol", "Flaki"), H),
+        q("pol_mountain_range_forms", "Which mountain range forms Poland's southern border with Slovakia?", "Tatra Mountains", listOf("Sudetes", "Alps", "Ural Mountains"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -476,6 +489,9 @@ object PolandQuestions {
         q("poly_dar_pomorza", "Which famous sailing ship, 'the white frigate', is now a museum in Gdynia?", "Dar Pomorza", listOf("Dar Mlodziezy", "Fryderyk Chopin", "Zawisza Czarny"), X),
         q("pol_1939_battle_often", "Which 1939 battle is often called 'the Polish Thermopylae'?", "Wizna", listOf("Mokra", "Bzura", "Kock"), X),
         q("pol_wrote_inny_swiat", "Who wrote 'Inny swiat' (A World Apart), about a Soviet labour camp?", "Gustaw Herling-Grudzinski", listOf("Aleksander Wat", "Stanislaw Ignacy Witkiewicz", "Jozef Czapski"), X),
-        q("pol_translated_winnie_pooh", "Who translated 'Winnie the Pooh' into Polish as 'Kubus Puchatek'?", "Irena Tuwim", listOf("Julian Tuwim", "Jan Brzechwa", "Maria Konopnicka"), X)
+        q("pol_translated_winnie_pooh", "Who translated 'Winnie the Pooh' into Polish as 'Kubus Puchatek'?", "Irena Tuwim", listOf("Julian Tuwim", "Jan Brzechwa", "Maria Konopnicka"), X),
+        q("pol_polish_hammer_thrower", "Which Polish hammer thrower won three Olympic golds in a row?", "Anita Wlodarczyk", listOf("Kamila Skolimowska", "Joanna Fiodorow", "Malwina Kopron"), X),
+        q("pol_tune_played_krakow", "What is the name of the tune played from Krakow's St Mary's Church tower?", "Hejnal Mariacki", listOf("Mazurek Dabrowskiego", "Bogurodzica", "Rota"), X),
+        q("pol_polish_spit_stretches", "Which Polish spit stretches about 35 km into the Baltic Sea?", "Hel Peninsula", listOf("Vistula Spit", "Curonian Spit", "Leba Spit"), X)
     )
 }
