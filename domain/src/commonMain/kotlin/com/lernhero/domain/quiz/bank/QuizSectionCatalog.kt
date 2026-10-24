@@ -105,6 +105,12 @@ object QuizSectionCatalog {
         QuizSection("geography/human/countries", "Countries & Borders", "🗺️", QuizCategory.Geography),
         QuizSection("geography/human/cities", "Cities & Landmarks", "🏛️", QuizCategory.Geography),
         QuizSection("geography/human/languages_customs", "Languages, Money & Customs", "🗣️", QuizCategory.Geography),
-        QuizSection("geography/human/food_drink", "Food & Drink", "🍜", QuizCategory.Geography)
+        QuizSection("geography/human/food_drink", "Food & Drink", "🍜", QuizCategory.Geography),
+        QuizSection("geography/comparisons", "Higher or Lower", "⚖️", QuizCategory.Geography),
+        QuizSection("geography/comparisons/population", "Who Has More People?", "👥", QuizCategory.Geography),
+        QuizSection("geography/comparisons/area", "Which Is Bigger?", "📐", QuizCategory.Geography),
+        QuizSection("geography/comparisons/skylines", "Skylines & Structures", "🏙️", QuizCategory.Geography),
+        QuizSection("geography/comparisons/nature", "Nature Head-to-Head", "🏔️", QuizCategory.Geography),
+        QuizSection("geography/comparisons/by_numbers", "Countries by the Numbers", "📊", QuizCategory.Geography)
     )
 }

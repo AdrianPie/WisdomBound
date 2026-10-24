@@ -1,0 +1,4 @@
+# Porownania ludnosci: ktore panstwo, miasto, region albo wyspa ma wiecej ludzi, takze zaskakujace
+# zestawienia (miasto kontra panstwo, stan kontra kraj) i proporcje ('ile razy wiecej'). Im mniejsza
+# roznica, tym trudniejsze pytanie. Proste losowe porownania panstw robi CountryQuestions.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3

@@ -32,6 +32,8 @@ geography/
     oceans_seas.tsv, rivers_lakes.tsv, mountains.tsv, climate.tsv, ...
   human/                             People & Places
     countries.tsv, cities.tsv, languages_customs.tsv, food_drink.tsv
+  comparisons/                       Higher or Lower
+    population.tsv, area.tsv, skylines.tsv, nature.tsv, by_numbers.tsv
 data/
   countries.tsv                      dane o panstwach (nie pytania) - patrz nizej
 ```
@@ -175,9 +177,13 @@ tresci znane tylko w Polsce ida do `poland`, nic, co sie zdezaktualizuje za rok.
 
 ### Geografia
 
-- Trzy galezie: `continents` (panstwa i regiony danego kontynentu, polarne), `physical` (oceany,
-  rzeki i jeziora, gory, pustynie i lasy, wyspy i wybrzeza, klimat i sily natury, Ziemia i mapy)
-  i `human` (panstwa i granice, miasta i zabytki, jezyki/waluty/zwyczaje, kuchnia).
+- Cztery galezie: `continents` (panstwa i regiony danego kontynentu, polarne), `physical` (oceany,
+  rzeki i jeziora, gory, pustynie i lasy, wyspy i wybrzeza, klimat i sily natury, Ziemia i mapy),
+  `human` (panstwa i granice, miasta i zabytki, jezyki/waluty/zwyczaje, kuchnia) i `comparisons`
+  ("higher or lower": kto ma wiecej ludzi, co jest wieksze, ktore miasto ma wiecej wiezowcow,
+  ktory kraj pije wiecej kawy). W `comparisons` sedno pytania to samo porownanie albo proporcja
+  ("A vs B", "ile razy wiecej"); poziom rosnie, gdy roznica maleje (Easy ~3x, Expert ~1.1-1.3x),
+  a dla liczb, ktore dryfuja (ludnosc, rankingi), roznica zostaje co najmniej 15%.
 - Obiekt przyrody idzie do dzialu fizycznego, nawet gdy pytanie wymienia kontynent ("najdluzsza rzeka
   Afryki" to `rivers_lakes`); dzial kontynentu dostaje to, co dotyczy samego kraju albo regionu
   (dawne nazwy, przydomki, regiony, rekordy panstw). Pytanie "jaka rzeka plynie przez miasto" to
