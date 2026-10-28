@@ -149,6 +149,15 @@ tec_shouldn_put_metal	Easy	Why shouldn't you put a metal fork in a microwave ove
 tec_files_stored_cloud	Easy	When files are stored 'in the cloud', where are they really?	On remote servers in data centres	Inside satellites in orbit	Hidden in your phone's SIM card	In the air as radio waves
 tec_firewall_job_computer	Easy	What is a firewall's job on a computer network?	Blocking unwanted network traffic	Cooling down an overheating processor	Backing up your files every night	Making your downloads run faster
 tec_two_factor_authentication	Easy	What is two-factor authentication?	Proving who you are in two separate ways	Using two different passwords on one site	Letting two people share one account	Changing your password twice a year
+tec_app_shazam	Easy	What does the app Shazam do?	Identifies music playing nearby	Translates speech aloud	Measures how loud a room is	Removes noise from photos
+tec_video_game_series	Easy	Which video game series stars the treasure-hunting archaeologist Lara Croft?	Tomb Raider	Uncharted	Prince of Persia	Assassin's Creed
+tec_tetris_happens_fill	Easy	In 'Tetris', what happens when you fill a complete horizontal row with blocks?	It disappears	It moves to the top	It splits in two	It flips upside down
+tec_super_mario_games	Easy	In the Super Mario games, what usually happens when Mario grabs a red-and-white mushroom?	He grows bigger	He shrinks	He can fly	He turns invisible
+tec_because_size_weight	Easy	Because of their size and weight, the first mobile phones of the 1980s were nicknamed after which object?	A brick	A shoe	A banana	A loaf
+tec_segway	Easy	What is a Segway?	A self-balancing scooter	A folding electric bicycle	A robot lawnmower	A hoverboard with a seat
+tec_gaming_slang_noob	Easy	In gaming slang, what is a 'noob'?	A beginner	A cheater	A sore loser	A team leader
+tec_stand_headset	Easy	What does 'VR' stand for, as in a VR headset?	Virtual reality	Visual recording	Video replay	Variable resolution
+tec_car_cruise_control	Easy	What does a car's cruise control do?	Keeps the car at a steady speed	Steers the car around bends	Parks the car by itself	Warns of speed cameras
 tec_cpu	Medium	What does the abbreviation CPU stand for?	Central Processing Unit	Random-access memory	Graphics card	Hard drive
 tec_android_firma	Medium	Which company develops the Android operating system?	Google	Apple	Microsoft	Meta
 tec_telefon_bell	Medium	Who patented the telephone?	Alexander Graham Bell	Thomas Edison	Guglielmo Marconi	Samuel Morse
@@ -391,6 +400,36 @@ tec_hungarian_born_inventor	Medium	Which Hungarian-born inventor created the bal
 tec_swedish_company_stands	Medium	Which Swedish company's name stands for its founder's initials and his farm and village?	IKEA	Volvo	Saab	Ericsson
 tec_shuttle_prototype_never	Medium	Which shuttle prototype never flew to space and was named after a 'Star Trek' ship?	Enterprise	Atlantis	Endeavour	Pathfinder
 tec_spacecraft_became_private	Medium	Which spacecraft became the first private one to dock with the ISS, in 2012?	SpaceX Dragon	Boeing Starliner	Orion	Cygnus
+tec_computer_keyboards_keys	Medium	On most computer keyboards, why do the F and J keys have small raised bumps?	So you can find them by touch	To mark the most used letters	To stop the keys from sticking	To show they are shortcut keys
+tec_sonic_hedgehog_created	Medium	Sonic the Hedgehog was created to compete with which other company's star character?	Nintendo's Mario	Capcom's Mega Man	Namco's Pac-Man	Konami's Frogger
+tec_pokemon_shortening_japanese	Medium	The name 'Pokemon' is a shortening of which Japanese brand name?	Pocket Monsters	Power Monsters	Pocket Mutants	Portable Monsters
+tec_games_console_became	Medium	Which games console became infamous for the 'Red Ring of Death' hardware failure?	Xbox 360	PlayStation 3	Nintendo Wii	Sega Dreamcast
+tec_microsoft_music_player	Medium	Which Microsoft music player was launched in 2006 to rival the iPod?	Zune	Zen	Rio	Sansa
+tec_phrase_steve_jobs	Medium	Which phrase did Steve Jobs use to unveil a surprise near the end of his keynote talks?	'One more thing'	'Here's the twist'	'And now, the big one'	'Wait, there's more'
+tec_web_browser_ruled	Medium	Which web browser ruled the mid-1990s before losing the 'browser war' to Internet Explorer?	Netscape	Mosaic	Opera	Lynx
+tec_internet_company_greeting	Medium	Which internet company's greeting 'You've got mail!' became the title of a 1998 film?	AOL	CompuServe	Yahoo	Prodigy
+tec_typeface_takes_latin	Medium	Which famous typeface takes its name from the Latin name for Switzerland?	Helvetica	Garamond	Futura	Verdana
+tec_typeface_made_1931	Medium	Which typeface was made in 1931 for a London newspaper and was later the default font in Microsoft Word?	Times New Roman	Arial	Georgia	Calibri
+tec_car_maker_badge_2	Medium	Which car maker's badge is a 'double chevron'?	Citroen	Peugeot	Renault	Chevrolet
+tec_japanese_company_logo	Medium	Which Japanese company's logo is made of three red diamonds?	Mitsubishi	Subaru	Mazda	Suzuki
+tec_lexus_luxury_brand	Medium	Lexus is the luxury brand of which car maker?	Toyota	Honda	Nissan	Mazda
+tec_cabin_lights_dimmed	Medium	Why are cabin lights dimmed on airliners during take-off and landing at night?	So eyes adjust in case of an evacuation	To save fuel by using less power	To help passengers fall asleep	To keep the radio free of interference
+tec_british_company_made	Medium	Which British company made the ZX Spectrum home computer?	Sinclair Research	Acorn Computers	Amstrad	Commodore
+tec_1977_1998_apple	Medium	From 1977 to 1998, Apple's logo was decorated with what?	Rainbow stripes	Gold leaf	A chequered pattern	A small worm
+tec_microsoft_boss_famously	Medium	Which Microsoft boss famously bounced around a stage chanting 'Developers, developers, developers'?	Steve Ballmer	Bill Gates	Satya Nadella	Paul Allen
+tec_1999_talking_toy	Medium	In 1999, which talking toy was banned from offices of the US National Security Agency, over fears it could record secrets?	Furby	Tamagotchi	Teddy Ruxpin	Tickle Me Elmo
+tec_game_players_stomp	Medium	In which game do players stomp on arrows on a floor mat in time to music?	Dance Dance Revolution	Dance Central	Space Channel 5	Just Dance
+tec_shift_each_letter	Medium	Shift each letter of the film computer HAL one step forward in the alphabet. Which company's name do you get?	IBM	DEC	NEC	AMD
+tec_1982_time_magazine	Medium	In 1982, Time magazine broke tradition by naming what as its 'Machine of the Year'?	The computer	The space shuttle	The video game console	The robot
+tec_company_publishes_sims	Medium	Which company publishes 'The Sims' games?	Electronic Arts	Ubisoft	Activision	Nintendo
+tec_bakelite_invented_1907	Medium	What was Bakelite, invented in 1907?	The first fully synthetic plastic	The first stainless steel	An early type of glass	The first artificial rubber
+tec_car_maker_latin	Medium	Which car maker's name is Latin for 'Listen!', a pun on its founder August Horch's surname?	Audi	Opel	Wanderer	Borgward
+tec_unlike_old_hard	Medium	Unlike an old hard disk drive, what does a solid-state drive (SSD) have none of?	Moving parts	Memory chips	Electric current	Stored files
+tec_four_symbols_face	Medium	Which four symbols are on the face buttons of a PlayStation controller?	Triangle, circle, cross, square	Star, heart, circle, square	A, B, X and Y	Up, down, left, right
+tec_console_launched_1998	Medium	Which console, launched in 1998, was the last ever made by Sega?	Dreamcast	Saturn	Game Gear	Master System
+tec_handheld_console_launched	Medium	Which handheld console, launched in 2004, played games from small optical discs called UMDs?	The PlayStation Portable	The Nintendo DS	The PlayStation Vita	The Nokia N-Gage
+tec_free_1990s_service	Medium	Which free 1990s service let anyone build a homepage in themed 'neighbourhoods' such as Hollywood and SiliconValley?	GeoCities	MySpace	Angelfire	Tripod
+tec_online_auction_site	Medium	Which online auction site was first called AuctionWeb?	eBay	Etsy	Craigslist	Overstock
 day2_ram_vs_dysk	Hard	Why does a computer slow down when RAM runs out?	It starts swapping data to much slower storage	The processor overheats and throttles	The screen starts refreshing slower	The network connection is throttled
 tec_turing	Hard	Who is regarded as the father of computer science and cracked the Enigma cipher?	Alan Turing	John von Neumann	Charles Babbage	Claude Shannon
 tec_enigma_polacy	Hard	Which Pole co-created the first break of the Enigma cipher?	Marian Rejewski	Stefan Banach	Jan Czochralski	Kazimierz Funk
@@ -557,6 +596,43 @@ tec_american_inventor_froze	Hard	Which American inventor froze food quickly, cre
 tec_nokia_original_business	Hard	What was Nokia's original business in 1865?	Paper mill	Rubber boots	Cable factory	Telegraph service
 tec_country_uses_web_2	Hard	Which country uses the web domain '.me', popular for personal sites?	Montenegro	Mexico	Mauritius	Malta
 tec_rover_drive_mars	Hard	Which was the first rover to drive on Mars, in 1997?	Sojourner	Spirit	Opportunity	Curiosity
+tec_sega_come	Hard	What does the name 'Sega' come from?	Service Games	Selected Games	Sound Electronic Games	Seattle Games
+tec_nintendo_often_translated	Hard	The name Nintendo is often translated as what?	'Leave luck to heaven'	'Play every day'	'The joy of children'	'Cards of fortune'
+tec_mario_said	Hard	Mario is said to have been named after whom?	Nintendo of America's landlord	A Nintendo office cleaner	The company founder's brother	A pizza chef in Kyoto
+tec_nintendo_console_1995	Hard	Which Nintendo console of 1995 showed its games in red-and-black 3D and was dropped within a year?	Virtual Boy	Nintendo 64DD	Famicom Disk System	Game Boy Light
+tec_instant_messenger_alert	Hard	Which instant messenger was famous for its 'Uh-oh!' alert sound?	ICQ	MSN Messenger	AIM	Yahoo Messenger
+tec_company_2000_super	Hard	Which company's 2000 Super Bowl advert starred a sock puppet, months before the firm went bust?	Pets.com	Webvan	eToys	Boo.com
+tec_search_engine_launched	Hard	Which search engine, launched in 1995 by Digital Equipment Corporation, was a giant of the web before Google?	AltaVista	Lycos	Excite	Infoseek
+tec_yahoo_founders_jokingly	Hard	Yahoo's founders jokingly said its name stood for 'Yet Another Hierarchical Officious' what?	Oracle	Organizer	Operator	Overview
+tec_website_started_out	Hard	Which website started out in 2003 as 'FaceMash', a site for rating students' looks?	Facebook	MySpace	Friendster	Hot or Not
+tec_comic_sans_designed	Hard	Comic Sans was designed in 1994 for the speech bubbles of a cartoon dog in which Microsoft product?	Microsoft Bob	Windows 95	Encarta	Office 97
+tec_placeholder_text_lorem	Hard	The placeholder text 'Lorem ipsum' is a scrambled passage by which Roman writer?	Cicero	Virgil	Seneca	Ovid
+tec_film_director_made	Hard	Which film director made Apple's famous '1984' Super Bowl advert for the Macintosh?	Ridley Scott	Steven Spielberg	George Lucas	James Cameron
+tec_apple_computer_fought	Hard	Apple Computer fought a long legal battle over its name with the record company of which band?	The Beatles	The Rolling Stones	Queen	Pink Floyd
+tec_computer_predicted_eisenhower	Hard	Which computer predicted Eisenhower's landslide live on US television on election night in 1952?	UNIVAC I	ENIAC	Colossus	IBM 701
+tec_godfather_shared_2024	Hard	Which 'godfather of AI' shared the 2024 Nobel Prize in Physics for work on neural networks?	Geoffrey Hinton	Yann LeCun	Yoshua Bengio	Demis Hassabis
+tec_system_google_deepmind	Hard	Which AI system from Google DeepMind, which predicts how proteins fold, earned its makers a 2024 Nobel Prize?	AlphaFold	AlphaZero	AlphaStar	Gemini
+tec_microsoft_shut_down	Hard	Why did Microsoft shut down its Twitter chatbot Tay within a day of its launch in 2016?	Users taught it offensive messages	It leaked users' passwords	It crashed Twitter's servers	It only posted in Latin
+tec_nickname_blackberry_phones	Hard	What nickname did BlackBerry phones earn because users seemed hooked on them?	CrackBerry	JailBerry	ThumbBerry	BusyBerry
+tec_apple_handwriting_reading	Hard	What was the name of Apple's handwriting-reading handheld of 1993, mocked for misreading words?	The Newton	The Pippin	The Lisa	The Apple III
+tec_bluetooth_logo_made	Hard	The Bluetooth logo is made by merging two what?	Viking runes	Morse code letters	Greek letters	Chinese characters
+tec_1913_harry_brearley	Hard	In 1913, Harry Brearley created stainless steel while looking for a better metal for what?	Gun barrels	Cutlery	Surgical tools	Ship hulls
+tec_jet_powered_car	Hard	Which jet-powered car became the first land vehicle to break the sound barrier, in 1997?	ThrustSSC	Bluebird	Thrust2	Spirit of America
+tec_east_germany_trabant	Hard	East Germany's Trabant car had a body made of what?	Cotton-reinforced plastic	Pressed cardboard	Aluminium sheets	Fibreglass
+tec_mercedes_car_brand	Hard	The Mercedes car brand was named after whom?	A car dealer's young daughter	Karl Benz's wife	Gottlieb Daimler's mother	A Spanish racing driver
+tec_italian_word_scuderia	Hard	What does the Italian word 'scuderia', as in Scuderia Ferrari, mean?	Stable	Shield	Workshop	Fortress
+tec_bmw_blue_white	Hard	BMW's blue-and-white logo is often said to be a spinning propeller. Where do its colours really come from?	The flag of Bavaria	The sky over Munich	The colours of Prussia	The founder's racing team
+tec_airline_founded_1919	Hard	Which airline, founded in 1919, is the oldest still flying under its original name?	KLM	Qantas	Lufthansa	Air France
+tec_plane_set_speed	Hard	Which plane set the speed record for a crewed jet-powered aircraft in 1976, still unbeaten?	SR-71 Blackbird	MiG-25 Foxbat	Concorde	F-15 Eagle
+tec_programming_language_used	Hard	Which programming language, used by the US military, is named after Lord Byron's daughter?	Ada	Grace	Byron	Augusta
+tec_programming_language_used_2	Hard	Which programming language, much used to teach coding in the 1970s and 80s, is named after a French mathematician?	Pascal	BASIC	Fortran	Logo
+tec_sinclair_1985_flop	Hard	What was the Sinclair C5 of 1985, a famous flop?	An electric one-seat trike	A home computer	A pocket television	A digital watch
+tec_film_electronic_toy	Hard	In the film 'E.T.', which electronic toy does the alien use to build a device to 'phone home'?	Speak & Spell	Simon	Lite-Brite	Etch A Sketch
+tec_time_magazine_person	Hard	Who did Time magazine name its 'Person of the Year' in 2006, to honour people making content online?	You	The Blogger	The Internet	The Netizen
+tec_atari_founder_later	Hard	Which Atari co-founder later started the Chuck E. Cheese restaurant chain?	Nolan Bushnell	Ted Dabney	Steve Jobs	Ralph Baer
+tec_trinitron_picture_tube	Hard	Trinitron, a TV picture tube famous for its sharp image from 1968, was made by which company?	Sony	Panasonic	Philips	Toshiba
+tec_google_project_loon	Hard	Google's Project Loon tried to bring internet access to remote areas using what?	High-altitude balloons	Low-flying drones	Undersea cables	Solar-powered airships
+tec_company_created_1978	Hard	Which company created the 1978 arcade hit 'Space Invaders'?	Taito	Namco	Atari	Konami
 day2_klucz_publiczny	Expert	In public-key cryptography, what may be shared freely?	The public key	The private key	Both keys	Neither key
 tec_moore	Expert	What does Moore's law concern?	The doubling of transistor count in chips	The doubling of internet speed each year	The steady fall in the price of memory	The rise in server power consumption
 tec_c_jezyk	Expert	Who created the C programming language?	Dennis Ritchie	Bjarne Stroustrup	James Gosling	Guido van Rossum
@@ -629,3 +705,27 @@ tec_nintendo_engineer_designed	Expert	Which Nintendo engineer designed the Game 
 tec_android_phone_released	Expert	What was the name of the first Android phone, released in 2008?	HTC Dream	Nexus One	Samsung Galaxy	Motorola Droid
 tec_japanese_phone_company	Expert	Which Japanese phone company engineer created the first popular set of emoji in 1999?	Shigetaka Kurita	Satoru Iwata	Masahiro Sakurai	Ken Kutaragi
 tec_soviet_probe_land	Expert	Which Soviet probe was the first to land softly on another planet, Venus, in 1970?	Venera 7	Mars 3	Luna 9	Vega 1
+tec_opera_web_browser	Expert	The Opera web browser was created in which country?	Norway	Sweden	Finland	Iceland
+tec_rust_programming_language	Expert	The Rust programming language is said to be named after what?	A group of fungi	Corroded iron	Its creator's old car	A brown crayon
+tec_home_games_console	Expert	Which was the first home games console to ship 100 million units?	The original PlayStation	The Nintendo Entertainment System	The Super Nintendo	The Sega Mega Drive
+tec_sharp_sh04_2000	Expert	The Sharp J-SH04 of 2000, often called the first camera phone sold to the public, came out in which country?	Japan	South Korea	Finland	The United States
+tec_word_zipper_began	Expert	The word 'zipper' began as a trademark of which company, for its rubber boots?	B.F. Goodrich	Firestone	Dunlop	Goodyear
+tec_word_escalator_began	Expert	The word 'escalator' began as the trademark of which company?	Otis	Schindler	Westinghouse	Siemens
+tec_inventor_lava_lamp	Expert	The inventor of the lava lamp got the idea in 1963 from what?	A homemade egg timer in a pub	A jellyfish in an aquarium	Oil floating on a puddle	Wax dripping from a candle
+tec_regency_1954_transistor	Expert	The Regency TR-1 of 1954, the first transistor radio on sale, used transistors from which company, later famous for calculators?	Texas Instruments	Casio	Hewlett-Packard	Sharp
+tec_reason_toyoda_family	Expert	One reason the Toyoda family renamed their car company 'Toyota' was that the new name took how many strokes to write, a lucky number?	Eight	Seven	Three	Nine
+tec_wiki_created_ward	Expert	What was the name of the first wiki, created by Ward Cunningham in 1995?	WikiWikiWeb	Wikipedia	Nupedia	MeatballWiki
+tec_wikipedia_grew_out	Expert	Wikipedia grew out of which slower online encyclopedia, written only by experts?	Nupedia	Encarta	Everything2	Citizendium
+tec_archie_made_1990	Expert	Archie, made in 1990 and often called the first internet search engine, got its name from what?	The word 'archive'	A comic-book teenager	A pet dog	The founder's son
+tec_tennis_two_early	Expert	'Tennis for Two', an early video game from 1958, was shown on what?	An oscilloscope	A television set	A radar screen	A punched-card printer
+tec_1971_game_made	Expert	Which 1971 game, made by Atari's future founders, was the first arcade video game sold commercially?	Computer Space	Pong	Spacewar!	Gun Fight
+tec_aliens_space_invaders	Expert	Why did the aliens in 'Space Invaders' speed up as the player shot them down?	The hardware drew fewer aliens faster	The designer added a timer	The player's score raised the speed	A random number chose the pace
+tec_programming_language_php	Expert	What did the programming language PHP originally stand for?	Personal Home Page	Public Hypertext Processor	Program Hosting Platform	Private Home Protocol
+tec_coined_word_hypertext	Expert	Who coined the word 'hypertext' in the 1960s?	Ted Nelson	Vannevar Bush	Douglas Engelbart	Tim Berners-Lee
+tec_vannevar_bush_call	Expert	What did Vannevar Bush call the imaginary desk that would link documents together, described in 1945?	The Memex	The Mundaneum	The Xanadu	The Hyperdesk
+tec_country_ran_minitel	Expert	Which country ran Minitel, a nationwide online service through phone-line terminals, from 1982 to 2012?	France	Germany	Japan	Sweden
+tec_tony_fadell_often	Expert	Tony Fadell, often called a father of the iPod, later co-founded which smart thermostat company?	Nest	Ring	Hive	Ecobee
+tec_netscape_mascot_mozilla	Expert	Netscape's mascot name 'Mozilla' blended 'Godzilla' with the name of which rival browser?	Mosaic	Lynx	Opera	Viola
+tec_leo_world_business	Expert	LEO, the world's first business computer in 1951, was built by a British company best known for what?	Tea shops and cakes	Railway engines	Department stores	Newspapers
+tec_roughly_commercial_hard	Expert	Roughly how much did the first commercial hard disk drive, of 1956, weigh while holding about 5 MB?	About a tonne	About 10 kg	About 100 kg	About 10 tonnes
+tec_java_programming_language	Expert	What was the Java programming language called when it was first developed?	Oak	Pine	Maple	Cedar

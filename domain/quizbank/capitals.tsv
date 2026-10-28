@@ -37,6 +37,24 @@ cap_1990_newly_reunified	Easy	In 1990, newly reunified Germany chose which city 
 cap_capital_monaco	Easy	What is the capital of Monaco?	Monaco	Monte Carlo	Fontvieille	Nice
 cap_capital_city_stands	Easy	Which capital city stands on the River Tiber?	Rome	Athens	Madrid	Lisbon
 cap_capital_city_national	Easy	In which capital city are the National Mall and the Lincoln Memorial?	Washington, D.C.	Philadelphia	New York	Boston
+cap_indy_500_car	Easy	The famous 'Indy 500' car race is named after which US state capital?	Indianapolis	Columbus	Nashville	Atlanta
+cap_city_lost_status	Easy	Which city lost its status as a capital when the new Turkish Republic chose another city in 1923?	Istanbul	Izmir	Bursa	Edirne
+cap_country_entirely_surrounded	Easy	Which country is entirely surrounded by the city of Rome?	Vatican City	San Marino	Monaco	Malta
+cap_capital_city_smithsonian	Easy	In which capital city are the Smithsonian museums?	Washington, D.C.	New York City	Boston	Chicago
+cap_according_greek_myth	Easy	According to Greek myth, which capital city is named after the goddess who gave it an olive tree?	Athens	Rome	Nicosia	Valletta
+cap_gangnam_district_made	Easy	Gangnam, the district made world-famous by a 2012 hit song, is part of which capital?	Seoul	Tokyo	Beijing	Bangkok
+cap_shibuya_scramble_crossing	Easy	The famous Shibuya scramble crossing is in which capital city?	Tokyo	Seoul	Beijing	Bangkok
+cap_state_capital_home	Easy	Which US state capital is home to the headquarters of Coca-Cola?	Atlanta	Nashville	Austin	Denver
+cap_australian_open_tennis	Easy	The Australian Open tennis tournament is played in which state capital?	Melbourne	Sydney	Brisbane	Adelaide
+cap_florence_capital_italian	Easy	Florence is the capital of which Italian region?	Tuscany	Lombardy	Umbria	Veneto
+cap_bob_marley_former	Easy	Bob Marley's former home, now a museum, is in which capital city?	Kingston	Havana	Nassau	Port of Spain
+cap_heathrow_gatwick_airports	Easy	Heathrow and Gatwick airports serve which capital city?	London	Dublin	Edinburgh	Amsterdam
+cap_city_capital_communist	Easy	Which city was the capital of communist East Germany?	East Berlin	Leipzig	Dresden	Bonn
+cap_merlion_statue_lion	Easy	The Merlion, a statue with a lion's head and a fish's body, is the symbol of which capital?	Singapore	Bangkok	Manila	Jakarta
+cap_bird_nest_stadium	Easy	The 'Bird's Nest' stadium was built for the 2008 Olympics in which capital?	Beijing	Tokyo	Seoul	Bangkok
+cap_pop_group_abba	Easy	The pop group ABBA was formed in which capital city?	Stockholm	Oslo	Copenhagen	Helsinki
+cap_charles_gaulle_airport	Easy	Charles de Gaulle Airport serves which capital city?	Paris	Brussels	Madrid	Rome
+cap_benfica_sporting_fierce	Easy	Benfica and Sporting, fierce football rivals, are both clubs from which capital?	Lisbon	Madrid	Athens	Buenos Aires
 cap_canberra	Medium	What is the capital of Australia?	Canberra	Sydney	Melbourne	Perth
 cap_ottawa	Medium	What is the capital of Canada?	Ottawa	Toronto	Montreal	Vancouver
 cap_brasilia	Medium	What is the capital of Brazil?	Brasilia	Rio de Janeiro	Sao Paulo	Salvador
@@ -152,6 +170,27 @@ cap_capital_receives_dutch	Medium	Which capital receives Dutch tulip bulbs every
 cap_capital_city_river	Medium	Which capital city does the River Vltava flow through?	Prague	Vienna	Bratislava	Budapest
 cap_capital_city_see	Medium	In which capital city can you see the Belem Tower and ride the old Tram 28?	Lisbon	Porto	Madrid	Seville
 cap_capital_state_tennessee	Medium	What is the capital of the US state of Tennessee?	Nashville	Memphis	Knoxville	Chattanooga
+cap_city_george_washington	Medium	In which city was George Washington sworn in as the first US president in 1789?	New York City	Washington, D.C.	Boston	Baltimore
+cap_mumbai_home_bollywood	Medium	Mumbai, home of Bollywood, is the capital of which Indian state?	Maharashtra	Gujarat	Karnataka	Kerala
+cap_city_myanmar_largest	Medium	Which city, Myanmar's largest, was its capital until the mid-2000s?	Yangon	Mandalay	Bagan	Moulmein
+cap_city_founded_alexander	Medium	Which city, founded by Alexander the Great, was Egypt's capital for nearly a thousand years?	Alexandria	Luxor	Memphis	Giza
+cap_creature_symbol_ljubljana	Medium	Which creature is the symbol of Ljubljana and guards one of its famous bridges?	A dragon	A lion	A bear	An eagle
+cap_amsterdam_takes_dam	Medium	Amsterdam takes its name from a dam on which river?	The Amstel	The Rhine	The Maas	The Scheldt
+cap_city_built_island	Medium	Which city, built on an island in a lake, was the Aztec capital?	Tenochtitlan	Teotihuacan	Chichen Itza	Tikal
+cap_ajaccio_napoleon_birthplace	Medium	Ajaccio, Napoleon's birthplace, is the capital of which island?	Corsica	Sardinia	Sicily	Elba
+cap_world_highest_seat	Medium	Which is the world's highest seat of national government, at about 3,600 m?	La Paz	Quito	Bogota	Thimphu
+cap_southernmost_national_capital	Medium	Which is the southernmost national capital in the world?	Wellington	Canberra	Buenos Aires	Montevideo
+cap_capital_city_keeps	Medium	Which capital city keeps live bears in a park by its river, as its heraldic animal?	Bern	Vienna	Helsinki	Madrid
+cap_angora_cats_goats	Medium	Angora cats, goats and rabbits are named after the old name of which capital?	Ankara	Tehran	Baghdad	Damascus
+cap_lincoln_capital_state	Medium	Lincoln is the capital of which US state?	Nebraska	Illinois	Kansas	Kentucky
+cap_city_capital_united	Medium	Which city was the first capital of united Italy, from 1861 to 1865?	Turin	Milan	Naples	Venice
+cap_chinese_city_once	Medium	Which Chinese city, once the capital of the Republic of China, has a name meaning 'southern capital'?	Nanjing	Shanghai	Guangzhou	Chongqing
+cap_new_zealand_capital	Medium	New Zealand's capital is named after a duke who won which famous battle?	Waterloo	Trafalgar	Blenheim	Agincourt
+cap_regina_capital_saskatchewan	Medium	Regina, the capital of Saskatchewan, has a Latin name meaning what?	Queen	Crown	Kingdom	Prairie
+cap_serbia_capital_belgrade	Medium	The name of Serbia's capital, Belgrade, means what?	White city	Iron gate	River fort	Old town
+cap_giant_steel_outline	Medium	A giant steel outline of Che Guevara's face looks over Revolution Square in which capital?	Havana	La Paz	Caracas	Managua
+cap_halifax_harbour_saw	Medium	Halifax, whose harbour saw a huge wartime explosion in 1917, is the capital of which Canadian province?	Nova Scotia	New Brunswick	Newfoundland	Prince Edward Island
+cap_capital_state_virginia	Medium	What is the capital of the US state of Virginia?	Richmond	Norfolk	Virginia Beach	Alexandria
 cap_wellington	Hard	What is the capital of New Zealand?	Wellington	Auckland	Christchurch	Dunedin
 cap_hanoi	Hard	What is the capital of Vietnam?	Hanoi	Ho Chi Minh City	Da Nang	Hue
 cap_rabat	Hard	What is the capital of Morocco?	Rabat	Casablanca	Marrakesh	Fez
@@ -254,6 +293,22 @@ cap_capital_city_once	Hard	Which capital city was once nicknamed 'the Paris of t
 cap_capital_city_casa	Hard	In which capital city is the Casa Rosada, the pink presidential palace?	Buenos Aires	Montevideo	Santiago	Lima
 cap_west_african_capital	Hard	Which West African capital was founded in 1792 as a home for freed slaves?	Freetown	Accra	Dakar	Lome
 cap_capital_barbados	Hard	What is the capital of Barbados?	Bridgetown	Kingston	Castries	Nassau
+cap_purpose_built_city	Hard	Which purpose-built city outside Kuala Lumpur houses most of Malaysia's government?	Putrajaya	Cyberjaya	Johor Bahru	Shah Alam
+cap_chile_national_congress	Hard	Chile's National Congress meets not in Santiago but in which port city?	Valparaiso	Antofagasta	Concepcion	Arica
+cap_malabo_capital_equatorial	Hard	Malabo, the capital of Equatorial Guinea, stands on what?	An island	A high plateau	A lake shore	A river delta
+cap_city_ivory_coast	Hard	Which city is Ivory Coast's largest city and main port, though not its official capital?	Abidjan	Bouake	San-Pedro	Dakar
+cap_king_philip_moved	Hard	King Philip II moved the Spanish royal court to Madrid in 1561 from which city?	Toledo	Seville	Granada	Barcelona
+cap_1808_1821_portuguese	Hard	From 1808 to 1821 the Portuguese royal family ruled its empire from which city?	Rio de Janeiro	Salvador	Luanda	Goa
+cap_city_finland_capital	Hard	Which city was Finland's capital until 1812, when Helsinki took over?	Turku	Tampere	Oulu	Vyborg
+cap_city_lithuania_temporary	Hard	Which city was Lithuania's 'temporary capital' between the two World Wars?	Kaunas	Klaipeda	Siauliai	Riga
+cap_iranian_city_once	Hard	Which Iranian city, once the Safavid capital, was praised as 'half the world'?	Isfahan	Shiraz	Tabriz	Mashhad
+cap_mongolia_capital_ulaanbaatar	Hard	The name of Mongolia's capital, Ulaanbaatar, means what?	Red hero	White horse	Blue sky	Great river
+cap_copenhagen_danish_kobenhavn	Hard	Copenhagen's Danish name, Kobenhavn, means what?	Merchants' harbour	Green island	King's town	Cold bay
+cap_german_bratislava_long	Hard	By which German name was Bratislava long known, when Hungarian kings were crowned there?	Pressburg	Konigsberg	Lemberg	Brunn
+cap_older_city_sits	Hard	Which older city sits right next to Islamabad as its 'twin city'?	Rawalpindi	Lahore	Peshawar	Karachi
+cap_colonial_city_guatemala	Hard	Which colonial city was Guatemala's capital until earthquakes in 1773 forced a move?	Antigua	Quetzaltenango	Flores	Granada
+cap_city_not_cologne	Hard	Which city, not Cologne, is the capital of North Rhine-Westphalia, Germany's most populous state?	Dusseldorf	Bonn	Dortmund	Essen
+cap_denmark_danish_pastries	Hard	In Denmark, Danish pastries are called 'wienerbrod', meaning bread from which capital?	Vienna	Paris	Berlin	Budapest
 cap_thimphu	Expert	What is the capital of Bhutan?	Thimphu	Paro	Punakha	Phuentsholing
 cap_ulaanbaatar	Expert	What is the capital of Mongolia?	Ulaanbaatar	Erdenet	Darkhan	Khovd
 cap_bishkek	Expert	What is the capital of Kyrgyzstan?	Bishkek	Osh	Naryn	Karakol
@@ -333,3 +388,8 @@ cap_capital_vanuatu	Expert	What is the capital of Vanuatu?	Port Vila	Honiara	Suv
 cap_capital_solomon_islands	Expert	What is the capital of the Solomon Islands?	Honiara	Port Vila	Port Moresby	Gizo
 cap_old_royal_capital	Expert	What was the old royal capital of Montenegro?	Cetinje	Podgorica	Kotor	Niksic
 cap_capital_san_marino	Expert	What is the capital of San Marino?	San Marino City	Serravalle	Borgo Maggiore	Rimini
+cap_2019_burundi_moved	Expert	In 2019 Burundi moved its political capital from Bujumbura to which city?	Gitega	Ngozi	Muyinga	Kigali
+cap_south_korean_ministries	Expert	Many South Korean ministries moved from Seoul in the 2010s to which new planned city?	Sejong	Daejeon	Incheon	Ulsan
+cap_port_town_capital	Expert	Which port town was the capital of modern Greece just before Athens took over in 1834?	Nafplio	Patras	Corfu	Piraeus
+cap_capital_city_dictator	Expert	Which capital city did dictator Rafael Trujillo rename after himself in 1936?	Santo Domingo	Port-au-Prince	Managua	Tegucigalpa
+cap_capital_city_lourenco	Expert	Which capital city was called Lourenco Marques until 1976?	Maputo	Luanda	Harare	Lusaka
