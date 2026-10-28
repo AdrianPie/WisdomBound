@@ -47,7 +47,11 @@ roman_empire | M | Which emperor made his horse Incitatus a priest, according to
 9. **Tresc nie zawiera odpowiedzi** i nie zdradza odpowiedzi innego pytania w banku.
 10. **Pytania o liczby** ("roughly how deep is...") sa mile widziane, z opcjami wyraznie od siebie
     odleglymi: "About 11 km | About 4 km | About 25 km | About 7 km".
-11. **Trzymaj sie swoich dzialow.** Rownolegle pisza inni autorzy; temat sasiedniego dzialu
+11. **Do przeczytania w kilka sekund.** Pytanie pada w walce na czas (18 s, na dalekich falach mniej):
+    tresc do ~120 znakow, krotkie odpowiedzi. Porownania, proporcje i rachunki ("do przemyslenia")
+    dostaja w grze +4 s, ale tylko w dzialach z `QuizPace.THINKING_SECTIONS` i w `math` - gdzie indziej
+    pytanie ma byc typu "wiesz albo nie".
+12. **Trzymaj sie swoich dzialow.** Rownolegle pisza inni autorzy; temat sasiedniego dzialu
     (zlecenie je wymienia) zostaw jego autorowi, zeby ten sam fakt nie powstal dwa razy.
 
 Reguly konkretnych tematow (historia: daty, dzialy przekrojowe; geografia: przyroda vs kontynent,

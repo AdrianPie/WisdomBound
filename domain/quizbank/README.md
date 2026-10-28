@@ -162,7 +162,9 @@ wyraznie najdluzsza, polskie znaki i cudzyslowy (bank pisze `Krakow`, `Pele` i '
 Przewodnik dla autorow: `WRITING_GUIDE.md`, pelna lista w KDoc `QuizBank`. W skrocie: pytanie ma zaskakiwac albo bawic (zadnych definicji
 z podrecznika i fiszek), Easy to fakt znany wiekszosci doroslych, ale do przypomnienia (nie zerowka),
 dystraktory z tej samej polki i podobnej dlugosci, jeden fakt = jedno pytanie (takze miedzy typami),
-tresci znane tylko w Polsce ida do `poland`, nic, co sie zdezaktualizuje za rok.
+tresci znane tylko w Polsce ida do `poland`, nic, co sie zdezaktualizuje za rok. Czas na odpowiedz
+liczy `QuizPace` (domain/quiz): dodatek za tekst dluzszy niz ~120 znakow i +4 s dla pytan "do
+przemyslenia" - tych z dzialow `QuizPace.THINKING_SECTIONS` (dzis `geography/comparisons`) i z `math`.
 
 ### Historia
 

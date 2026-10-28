@@ -9,6 +9,28 @@ Uzyj, gdy uzytkownik prosi o kolejne pytania ("dodaj 500 pytan z historii i 300 
 Narzedzie: `tools/quizbank.py` (opis w `domain/quizbank/README.md`), zasady pisania:
 `domain/quizbank/WRITING_GUIDE.md`.
 
+## 0. Tryb samodzielny (prosba bez liczb i tematow)
+
+"Rozbuduj bank", "dodaj ciekawe pytania", "zrob najlepsza baze" - sam ukladasz ture. Cel: bank
+szeroki i ciekawy dla gracza w walce na czas (patrz "Pytania pod te gre" w `CLAUDE.md`).
+
+1. **Rozeznanie** (`stats`): dzialy ponizej ~80 pytan, poziomy daleko od E18/M37/H30/X15, tematy
+   bez dzialow, ktore urosly ponad ~600, i proporcje typow (prawda/falsz, ukladanki,
+   zaznacz-wszystkie, szacowanie - wszystkie w Kotlinie, duzo mniej niz pytan wyboru).
+2. **Czego brakuje** - pomysl jak tworca quizu, nie jak podrecznik. Sprawdzone formy, ktore gracze
+   lubia: "higher or lower" (porownania), rekordy i "naj-", "co bylo pierwsze", "prawda czy mit",
+   "skad pochodzi" (jedzenie, slowa, wynalazki), liczby szacowane, "kto to powiedzial". Tematy:
+   to, o czym ludzie rozmawiaja (jedzenie, zwierzeta, kosmos, cialo, film, muzyka, sport, podroze),
+   a nie to, co bylo na sprawdzianie. Nowy obszar = nowy dzial (README: "Nowy temat albo nowy dzial").
+3. **Plan tury** - 5-10 linijek w odpowiedzi do uzytkownika, potem od razu dzialasz:
+   ~60% uzupelnianie dziur, ~40% jeden-dwa nowe dzialy, w sumie 500-1000 pytan. Kazdy dzial z
+   jednym zdaniem "dlaczego to bedzie ciekawe". Pytaj tylko, gdy plan zmienia gre (nowy temat
+   w `QuizCategory`, nowy typ pytania, czas albo balans).
+4. Pytania "do przemyslenia" (porownania, proporcje, rachunki) tylko w dzialach z
+   `QuizPace.THINKING_SECTIONS` albo nowym dziale, ktory tam dopiszesz (+4 s w grze).
+5. Dalej zwykla tura (punkty 1-5 nizej). W raporcie: co dodales, dlaczego, i 2-3 propozycje
+   na nastepna ture.
+
 ## 1. Plan
 
 ```bash
@@ -27,7 +49,10 @@ Jesli liscie urosly ponad ~150 pytan albo prosba dotyczy nowego obszaru, najpier
 
 ## 2. Autorzy
 
-Dla kazdego zlecenia jeden agent w tle (rownolegle), z poleceniem:
+Dla kazdego zlecenia jeden agent w tle, najwyzej 5 naraz (wiecej wyczerpuje limit sesji i partie
+przepadaja w polowie; kolejne zlecenia uruchamiaj, gdy wczesniejsze sie koncza). Gdy liscie jest
+jeden, a pytan 200, podziel go na dwa podzakresy (kazdy autor swoj), zamiast dawac jednemu 200.
+Polecenie:
 
 > Read domain/quizbank/WRITING_GUIDE.md and the "Zasady pisania pytan" section of
 > domain/quizbank/README.md, then your brief `<rN>/brief_NN.md`. Write the batch file named there,
@@ -47,6 +72,9 @@ python3 tools/quizbank.py check -s <rN>/batch_*.txt     # razem - lapie duble MI
   odlegle od siebie? Easy naprawde znane? Watpliwe - popraw albo wyrzuc (skrypt prawdy nie sprawdzi).
 
 ## 4. Dopisanie i testy
+
+Przejrzana partia idzie do banku od razu (`add`, `generate --check`, commit, push) - nie czekaj na
+wszystkie; nastepne partie i tak sprawdzaja sie wobec banku z poprzednimi.
 
 ```bash
 python3 tools/quizbank.py add <rN>/batch_*.txt
