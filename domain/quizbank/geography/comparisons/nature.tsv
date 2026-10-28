@@ -1,3 +1,202 @@
 # Porownania przyrody: dlugosc rzek, wysokosc gor i wodospadow, glebokosc jezior i morz, temperatury
 # i opady miast, ktory kraj ma wiecej wysp, jezior, wulkanow, lasu albo wybrzeza.
 id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+geo_roughly_times_longer	Easy	Roughly how many times longer is the Nile than the Thames?	About 20 times	About 5 times	About 60 times	About 2 times
+geo_mount_everest_mont	Easy	Mount Everest vs Mont Blanc: roughly how much higher is Everest?	About 4 km higher	About 1 km higher	About 8 km higher	About 400 m higher
+geo_roughly_times_higher	Easy	Roughly how many times higher is Mont Blanc than Scotland's Ben Nevis?	About 3.5 times	About 1.5 times	About 8 times	About 15 times
+geo_roughly_times_longer_2	Easy	Roughly how many times longer is the Volga than the Rhine?	About 3 times	About 1.2 times	About 8 times	About 20 times
+geo_mediterranean_black_sea	Easy	Mediterranean vs Black Sea: which is true about their areas?	The Mediterranean is about 6 times bigger	The Black Sea is about twice as big	They are about the same size	The Mediterranean is about 30 times bigger
+geo_roughly_times_taller	Easy	Roughly how many times taller is Angel Falls than Niagara's Horseshoe Falls?	About 20 times	About 3 times	About 7 times	About 100 times
+geo_mariana_trench_roughly	Easy	The Mariana Trench is roughly how many times deeper than the Grand Canyon?	About 6 times	About 2 times	About 20 times	About 60 times
+geo_roughly_times_longer_3	Easy	Roughly how many times longer are the Andes than the Alps?	About 6 times	About 2 times	About 20 times	About 1.2 times
+geo_caspian_sea_lake	Easy	Caspian Sea vs Lake Superior: which is true about their areas?	The Caspian is about 4.5 times bigger	Superior is about twice as big	They are about the same size	The Caspian is about 20 times bigger
+geo_roughly_times_higher_2	Easy	Roughly how many times higher is Mount Everest than Mount Vesuvius?	About 7 times	About 2 times	About 20 times	About 70 times
+geo_antarctica_greenland_roughly	Easy	Antarctica vs Greenland: roughly how many times more ice does Antarctica hold?	About 9 times	About 2 times	About 40 times	About 1.2 times
+geo_roughly_times_saltier	Easy	Roughly how many times saltier is the Dead Sea than ordinary sea water?	About 10 times	About 2 times	About 50 times	About 100 times
+geo_roughly_times_longer_4	Easy	Roughly how many times longer is the Yangtze than the Seine?	About 8 times	About 2 times	About 25 times	About 80 times
+geo_arctic_ocean_mediterranean	Easy	Arctic Ocean vs Mediterranean Sea: which is true about their areas?	The Arctic is about 6 times bigger	The Mediterranean is a bit bigger	They are about the same size	The Arctic is about 40 times bigger
+geo_roughly_times_bigger_6	Easy	Roughly how many times bigger by area is Lake Victoria than Lake Titicaca?	About 8 times	About 2 times	About 25 times	About 80 times
+geo_roughly_times_bigger_7	Easy	Roughly how many times bigger is the Caribbean Sea than the Red Sea?	About 6 times	About 1.5 times	About 20 times	About 60 times
+geo_roughly_times_higher_3	Easy	Roughly how many times higher is Kilimanjaro than Cape Town's Table Mountain?	About 5 times	About 2 times	About 15 times	About 50 times
+geo_christmas_day_city	Easy	On Christmas Day, which city is usually warmer, Sydney or Rome?	Sydney, by more than 10 C	Rome, by more than 10 C	They are about the same	Rome, by about 5 C
+geo_july_city_usually	Easy	In July, which city is usually warmer, Madrid or Buenos Aires?	Madrid, by about 15 C	Buenos Aires, by about 15 C	They are about the same	Buenos Aires, by about 5 C
+geo_roughly_times_rain	Easy	Roughly how many times as much rain falls in a year in Singapore as in London?	About 4 times	About the same	About 1.5 times	About 20 times
+geo_seattle_phoenix_true	Easy	Seattle vs Phoenix: which is true about their yearly rainfall?	Seattle gets about 5 times as much	Phoenix gets about 5 times as much	They get about the same amount	Seattle gets about 50 times as much
+geo_south_american_capitals	Easy	Which of these South American capitals gets almost no rain at all?	Lima	Bogota	Quito	Caracas
+geo_countries_smallest_share	Easy	Which of these countries has the smallest share of its land covered by forest?	Iceland	Ireland	The Netherlands	The United Kingdom
+geo_lowest_dry_land	Easy	Whose lowest dry land lies deeper below sea level, Jordan's or Egypt's?	Jordan's, about 3 times as deep	Egypt's, about 3 times as deep	About the same depth	Egypt's, about 10 times as deep
+geo_roughly_times_rain_2	Easy	Roughly how many times as much rain falls in a year in London as in Cairo?	About 30 times	About 3 times	About 8 times	About 300 times
+geo_croatia_islands_but	Easy	Croatia is famous for its islands, but which country has more of them, Croatia or Greece?	Greece, about 5 times as many	Croatia, about 5 times as many	They have about the same number	Croatia, about twice as many
+geo_milder_average_january	Easy	Which has the milder average January, Vancouver or Winnipeg?	Vancouver, by about 20 C	Winnipeg, by about 20 C	They are about the same	Winnipeg, by about 5 C
+geo_sahara_kalahari_true	Easy	The Sahara vs the Kalahari: which is true about their sizes?	The Sahara is about 10 times bigger	The Kalahari is about 10 times bigger	They are about the same size	The Sahara is about twice as big
+geo_european_countries_active	Easy	Which of these European countries has no active volcano at all?	Britain	Italy	Iceland	Greece
+geo_june_solstice_city	Easy	On the June solstice, which city has the longer day, Oslo or Rome?	Oslo, by over 3 hours	Rome, by over 3 hours	They are exactly the same	Rome, by about 1 hour
+geo_midwinter_usually_colder	Easy	In midwinter, which is usually colder, the South Pole or the North Pole?	The South Pole, by about 20 C	The North Pole, by about 20 C	They are about the same	The North Pole, by about 5 C
+geo_gets_more_rain_9	Easy	Which gets more rain in a year, Hong Kong or Beijing?	Hong Kong, about 4 times as much	Beijing, about 4 times as much	They get about the same	Beijing, about twice as much
+geo_gets_more_rain_10	Easy	Which gets more rain in a year, Mumbai or Madrid?	Mumbai, about 5 times as much	Madrid, about 5 times as much	They get about the same	Madrid, about twice as much
+geo_december_solstice_city	Easy	On the December solstice, which city gets the longer day, Sydney or London?	Sydney, by over 6 hours	London, by over 6 hours	They get exactly the same	London, by about 1 hour
+geo_milder_average_january_3	Easy	Which has the milder average January, Miami or New York?	Miami, by nearly 20 C	New York, by nearly 20 C	They are about the same	New York, by about 5 C
+geo_kilimanjaro_greece_mount	Medium	Kilimanjaro vs Greece's Mount Olympus: which is true?	Kilimanjaro is about twice as high	Olympus is about twice as high	They are about the same height	Kilimanjaro is about 6 times as high
+geo_thames_seine_true	Medium	Thames vs Seine: which is true about their lengths?	The Seine is about twice as long	The Thames is about twice as long	They are about the same length	The Seine is about 5 times as long
+geo_italy_rhine_true	Medium	Italy's Po vs the Rhine: which is true about their lengths?	The Rhine is nearly twice as long	The Po is nearly twice as long	They are about the same length	The Rhine is about 6 times as long
+geo_mekong_ganges_true	Medium	Mekong vs Ganges: which is true about their lengths?	The Mekong is nearly twice as long	The Ganges is nearly twice as long	They are about the same length	The Mekong is about 6 times as long
+geo_red_sea_deepest	Medium	The Red Sea at its deepest is roughly how many times deeper than the Persian Gulf at its deepest?	About 30 times	About 3 times	About 300 times	About 8 times
+geo_australia_murray_rhine	Medium	Australia's Murray vs the Rhine: which is true about their lengths?	The Murray is about twice as long	The Rhine is about twice as long	They are about the same length	The Murray is about 6 times as long
+geo_congo_danube_true	Medium	Congo vs Danube: which is true about their lengths?	The Congo is about 1.6 times as long	The Danube is about 1.6 times as long	They are about the same length	The Congo is about 5 times as long
+geo_amazon_pours_roughly	Medium	The Amazon pours roughly how many times more water into the sea than the Mississippi?	About 12 times	About 3 times	About 40 times	About 1.5 times
+geo_big_amazon_river	Medium	How big is the Amazon River's drainage basin compared with the whole of India?	About twice India's area	About the same as India	About 5 times India's area	About half of India's area
+geo_pacific_ocean_covers	Medium	The Pacific Ocean covers roughly how many times the whole surface of the Moon?	About 4 times	About 1.5 times	About 12 times	About 40 times
+geo_mediterranean_sea_hudson	Medium	Mediterranean Sea vs Hudson Bay: which is true about their areas?	The Mediterranean is about twice as big	Hudson Bay is about twice as big	They are about the same size	The Mediterranean is about 8 times bigger
+geo_black_sea_deepest	Medium	The Black Sea at its deepest is roughly how many times deeper than the Baltic Sea at its deepest?	About 5 times	About 1.5 times	About 15 times	About 50 times
+geo_lake_malawi_lake	Medium	Lake Malawi vs Lake Tanganyika: which is true about their greatest depths?	Tanganyika is about twice as deep	Malawi is about twice as deep	They are about equally deep	Tanganyika is about 6 times as deep
+geo_lake_superior_lake	Medium	Lake Superior vs Lake Baikal: which is true about their surface areas?	Superior is about 2.5 times bigger	Baikal is about 2.5 times bigger	They are about the same size	Superior is about 10 times bigger
+geo_caspian_sea_lake_2	Medium	Caspian Sea vs Lake Baikal: which is true about the water they hold?	The Caspian holds about 3 times as much	Baikal holds about 3 times as much	They hold about the same amount	The Caspian holds about 30 times as much
+geo_lake_victoria_lake	Medium	Lake Victoria vs Lake Malawi: which is true?	Victoria is bigger, Malawi holds more water	Victoria is bigger and holds more water	Malawi is bigger and holds more water	Malawi is bigger, Victoria holds more water
+geo_lake_geneva_lake	Medium	Lake Geneva and Lake Constance cover similar areas. Which is true about the water they hold?	Geneva holds about twice as much	Constance holds about twice as much	They hold about the same amount	Geneva holds about 10 times as much
+geo_south_america_lake	Medium	South America's Lake Titicaca vs Russia's Lake Ladoga: which is true about their areas?	Ladoga is about twice as big	Titicaca is about twice as big	They are about the same size	Ladoga is about 10 times as big
+geo_five_great_lakes	Medium	The five Great Lakes together cover roughly the area of which country?	The United Kingdom	Belgium	France	Mexico
+geo_yosemite_falls_california	Medium	Yosemite Falls in California is roughly how many times taller than Victoria Falls?	About 7 times	About 2 times	About 20 times	About 70 times
+geo_lake_huron_roughly	Medium	Lake Huron is roughly how many times bigger by area than Lake Ontario?	About 3 times	About 1.3 times	About 10 times	About 30 times
+geo_australia_mount_kosciuszko	Medium	Australia's Mount Kosciuszko vs Scotland's Ben Nevis: which is true?	Kosciuszko is about 900 m higher	Ben Nevis is about 900 m higher	They differ by under 50 m	Kosciuszko is about 3,000 m higher
+geo_urals_alps_true	Medium	Urals vs Alps: which is true about the length of the two ranges?	The Urals are about twice as long	The Alps are about twice as long	They are about the same length	The Urals are about 8 times as long
+geo_roughly_times_longer_5	Medium	Roughly how many times longer are the Andes than the Himalayas?	About 3 times	About 1.3 times	About 8 times	About 20 times
+geo_congo_mississippi_true	Medium	Congo vs Mississippi: which is true about the water they carry?	The Congo carries about 2.5 times as much	The Mississippi carries about 2.5 times as much	They carry about the same	The Congo carries about 10 times as much
+geo_shore_dead_sea	Medium	The shore of the Dead Sea lies roughly how many times farther below sea level than the lowest point of Death Valley?	About 5 times	About 2 times	About 15 times	About 50 times
+geo_lake_balaton_covers	Medium	Lake Balaton covers about the same area as Lake Geneva. Roughly how many times deeper is Lake Geneva on average?	About 50 times	About 3 times	About 10 times	About 500 times
+geo_niagara_horseshoe_falls	Medium	Niagara's Horseshoe Falls vs Switzerland's Rhine Falls: which is true about their heights?	Horseshoe Falls is about twice as tall	Rhine Falls is about twice as tall	They are about the same height	Horseshoe Falls is about 8 times as tall
+geo_iguazu_falls_niagara	Medium	Iguazu Falls vs Niagara Falls: which is true about their widths?	Iguazu is roughly 3 times as wide	Niagara is roughly 3 times as wide	They are about the same width	Iguazu is roughly 20 times as wide
+geo_kilimanjaro_mount_fuji	Medium	Kilimanjaro vs Mount Fuji: which is true?	Kilimanjaro is about 2 km higher	Fuji is about 2 km higher	They differ by under 100 m	Kilimanjaro is about 5 km higher
+geo_caribbean_sea_gulf	Medium	Caribbean Sea vs Gulf of Mexico: which is true about their greatest depths?	The Caribbean is about 1.7 times as deep	The Gulf is about 1.7 times as deep	They are about equally deep	The Caribbean is about 5 times as deep
+geo_oceans_hold_roughly	Medium	The oceans hold roughly how many times more water than all of Earth's ice caps and glaciers?	About 50 times	About 5 times	About 500 times	About 2 times
+geo_roughly_times_higher_4	Medium	Roughly how many times higher is K2 than the Matterhorn?	About twice as high	About 1.2 times as high	About 4 times as high	About 6 times as high
+geo_greece_mount_olympus	Medium	Greece's Mount Olympus vs Mount Vesuvius: which is true?	Olympus is more than twice as high	Vesuvius is about twice as high	They are about the same height	Olympus is about 6 times as high
+geo_roughly_times_longer_6	Medium	Roughly how many times longer is Germany's Elbe than the Thames?	About 3 times	About 1.2 times	About 10 times	About 30 times
+geo_sweden_lake_vanern	Medium	Sweden's Lake Vanern is roughly how many times bigger by area than Lake Constance?	About 10 times	About 3 times	About 40 times	About 1.5 times
+geo_freshwater_lakes_hold	Medium	Freshwater lakes hold roughly how many times more water than all the world's rivers at any moment?	About 40 times	About 3 times	About 400 times	About 10 times
+geo_sydney_london_true	Medium	Sydney vs London: which is true about their yearly rainfall?	Sydney gets about twice as much	London gets about twice as much	They get about the same amount	Sydney gets about 6 times as much
+geo_melbourne_rainy_reputation	Medium	Melbourne has a rainy reputation, but which gets more rain in a year, Melbourne or Sydney?	Sydney, about twice as much	Melbourne, about twice as much	They get about the same	Melbourne, about 5 times as much
+geo_roughly_times_rain_3	Medium	Roughly how many times as much rain falls in a year in Bergen as in Oslo?	About 3 times	About the same	About 1.3 times	About 10 times
+geo_tokyo_london_true	Medium	Tokyo vs London: which is true about their yearly rainfall?	Tokyo gets about 2.5 times as much	London gets about 2.5 times as much	They get about the same amount	Tokyo gets about 10 times as much
+geo_gets_more_rain	Medium	Which gets more rain in a year, Zurich or Berlin?	Zurich, about twice as much	Berlin, about twice as much	They get about the same	Berlin, about 4 times as much
+geo_gets_more_rain_3	Medium	Which gets more rain in a year, Phoenix or Las Vegas?	Phoenix, about 1.7 times as much	Las Vegas, about 1.7 times as much	They get about the same	Las Vegas, about 5 times as much
+geo_gets_more_rain_4	Medium	Which gets more rain in a typical year, Dubai or Cairo?	Dubai, several times as much	Cairo, several times as much	They get about the same	Cairo, about 50 times as much
+geo_gets_more_rain_5	Medium	Which gets more rain in a year, London or Los Angeles?	London, about 1.7 times as much	Los Angeles, about 1.7 times as much	They get about the same	Los Angeles, about 4 times as much
+geo_gets_more_rain_6	Medium	Which gets more rain in a year, Hilo in Hawaii or Seattle?	Hilo, about 3 times as much	Seattle, about 3 times as much	They get about the same	Seattle, about 10 times as much
+geo_colder_average_january	Medium	Which has the colder average January, Montreal or Oslo?	Montreal, by several degrees	Oslo, by several degrees	They are about the same	Oslo, by about 20 degrees
+geo_rome_new_york	Medium	Rome and New York lie at about the same latitude. Which has the milder January?	Rome, by about 7 C	New York, by about 7 C	They are about the same	New York, by about 2 C
+geo_colder_average_january_2	Medium	Which has the colder average January, Seoul or Tokyo?	Seoul, by about 7 C	Tokyo, by about 7 C	They are about the same	Tokyo, by about 2 C
+geo_hotter_average_july	Medium	Which has the hotter average July, Las Vegas or Miami?	Las Vegas, by about 5 C	Miami, by about 5 C	They are about the same	Miami, by about 10 C
+geo_roughly_times_hours	Medium	Roughly how many times as many hours of sunshine does Phoenix get in a year as London?	About 2.5 times	About 1.2 times	About 6 times	About 15 times
+geo_gets_fewer_hours	Medium	Which gets fewer hours of sunshine in a year, Torshavn in the Faroe Islands or London?	Torshavn, roughly half as many	London, roughly half as many	They get about the same	Torshavn, about a tenth as many
+geo_capitals_gets_hours	Medium	Which of these capitals gets the most hours of sunshine in a year?	Madrid	Paris	Berlin	London
+geo_shortest_day_year	Medium	On the shortest day of the year, which city gets more daylight, London or Moscow?	London, by almost an hour	Moscow, by almost an hour	They get exactly the same	Moscow, by about 3 hours
+geo_shortest_day_year_2	Medium	On the shortest day of the year, roughly how many times longer is the day in Rome than in Reykjavik?	About 2 times	About 1.2 times	About 5 times	About 10 times
+geo_gets_more_snow	Medium	Which gets more snow in a typical winter, Sapporo or Montreal?	Sapporo, over twice as much	Montreal, over twice as much	They get about the same	Montreal, about 5 times as much
+geo_indonesia_philippines_true	Medium	Indonesia vs the Philippines: which is true about their islands?	Indonesia has over twice as many	The Philippines has over twice as many	They have about the same number	Indonesia has about 20 times as many
+geo_country_more_active	Medium	Which country has more active volcanoes, Japan or Iceland?	Japan, several times as many	Iceland, several times as many	They have about the same number	Iceland, about 10 times as many
+geo_countries_active_volcanoes	Medium	Which of these countries has the most active volcanoes?	The USA	Italy	Mexico	New Zealand
+geo_countries_longest_coastline	Medium	Which of these countries has the longest coastline?	Greece	Italy	Spain	Turkey
+geo_more_heavily_forested	Medium	Which is more heavily forested, by share of its land, Ireland or Spain?	Spain, about 3 times as much	Ireland, about 3 times as much	They are about the same	Ireland, about 10 times as much
+geo_compared_share_land	Medium	Compared with the UK, what share of its land does France have under forest?	About 2.5 times as much	About the same	About half as much	About 10 times as much
+geo_country_more_forest	Medium	Which country has more forest in total, China or Indonesia?	China, over twice as much	Indonesia, over twice as much	They have about the same	Indonesia, about 5 times as much
+geo_bigger_share_land	Medium	Which has the bigger share of its land under forest, South Korea or the USA?	South Korea, nearly twice as much	The USA, nearly twice as much	They are about the same	The USA, about 5 times as much
+geo_country_more_forest_2	Medium	Which country has more forest in total, Australia or India?	Australia, nearly twice as much	India, nearly twice as much	They have about the same	India, about 5 times as much
+geo_country_more_mangrove	Medium	Which country has more mangrove forest, Indonesia or Brazil?	Indonesia, over twice as much	Brazil, over twice as much	They have about the same	Brazil, about 5 times as much
+geo_switzerland_glaciers_but	Medium	Switzerland is famous for its glaciers, but which has more land under glacier ice, Switzerland or Iceland?	Iceland, about 10 times as much	Switzerland, about 10 times as much	They have about the same	Switzerland, about twice as much
+geo_higher_average_elevation	Medium	Which has the higher average elevation, Spain or France?	Spain, nearly twice as high	France, nearly twice as high	They are about the same	France, about 4 times as high
+geo_china_usa_true	Medium	China vs the USA: which is true about their average elevations?	China's is over twice as high	The USA's is over twice as high	They are about the same	China's is about 10 times as high
+geo_countries_highest_average	Medium	Which of these countries has the highest average elevation?	Bhutan	Switzerland	Andorra	Austria
+geo_highest_peak_higher	Medium	Whose highest peak is higher, New Zealand's or mainland Australia's?	New Zealand's, by about 1,500 m	Australia's, by about 1,500 m	They are about the same	Australia's, by about 300 m
+geo_lowest_dry_land_2	Medium	Whose lowest dry land lies deeper below sea level, China's or the USA's?	China's, nearly twice as deep	The USA's, nearly twice as deep	About the same depth	The USA's, about 5 times as deep
+geo_bigger_gobi_taklamakan	Medium	Which is bigger, the Gobi or the Taklamakan?	The Gobi, about 4 times as big	The Taklamakan, about 4 times as big	They are about the same size	The Taklamakan, about 10 times as big
+geo_countries_struck_typhoons	Medium	Which of these countries is struck by the most typhoons in a typical year?	The Philippines	Japan	South Korea	Taiwan
+geo_lake_malawi_lake_2	Hard	Lake Malawi vs Lake Superior: which is true about their greatest depths?	Malawi is about 1.7 times as deep	Superior is about 1.7 times as deep	They are about equally deep	Superior is about 4 times as deep
+geo_roughly_kilimanjaro_higher	Hard	By roughly how much is Kilimanjaro higher than Mont Blanc?	About 1,100 m	About 100 m	About 3,000 m	About 400 m
+geo_continental_high_points	Hard	Which of these continental high points is LOWER than Mont Blanc?	Mount Kosciuszko	Vinson Massif	Puncak Jaya	Mount Elbrus
+geo_fresh_water_underground	Hard	Fresh water underground vs all fresh lakes and rivers: roughly how many times more water is underground?	About 100 times	About 3 times	About 10 times	About 1,000 times
+geo_rhine_rhone_both	Hard	The Rhine and the Rhone both rise in the Swiss Alps, not far apart. Which is true about their lengths?	The Rhine is about 1.5 times as long	The Rhone is about 1.5 times as long	They are about the same length	The Rhine is about 4 times as long
+geo_euphrates_tigris_true	Hard	Euphrates vs Tigris: which is true about their lengths?	The Euphrates is about 1.5 times as long	The Tigris is about 1.5 times as long	They are about the same length	The Euphrates is about 4 times as long
+geo_indus_ganges_true	Hard	Indus vs Ganges: which is true about their lengths?	The Indus is several hundred km longer	The Ganges is several hundred km longer	They differ by under 20 km	The Ganges is over 2,000 km longer
+geo_colorado_rio_grande	Hard	Colorado vs Rio Grande: which is true about their lengths?	The Rio Grande is about 700 km longer	The Colorado is about 700 km longer	They differ by under 20 km	The Colorado is about 3,000 km longer
+geo_danube_dnieper_true	Hard	Danube vs Dnieper: which is true about their lengths?	The Danube is about 650 km longer	The Dnieper is about 650 km longer	They differ by under 20 km	The Danube is about 2,500 km longer
+geo_lake_victoria_switzerland	Hard	Lake Victoria vs Switzerland: which is true about their areas?	Lake Victoria is about 1.5 times bigger	Switzerland is about 1.5 times bigger	They are about the same size	Lake Victoria is about 6 times bigger
+geo_lake_geneva_whole	Hard	Lake Geneva vs the whole of Singapore: which is true about their areas?	Singapore is about a quarter bigger	Lake Geneva is about a quarter bigger	Singapore is about 5 times bigger	Lake Geneva is about 5 times bigger
+geo_ocean_floor_lies	Hard	The ocean floor lies on average about 3.7 km down. Which of these peaks, set on it, would stay fully under water?	The Zugspitze	The Matterhorn	Mount Kilimanjaro	Mount Ararat
+geo_lake_tahoe_lake	Hard	Lake Tahoe vs Lake Superior: which is true about their greatest depths?	Tahoe is about 100 m deeper	Superior is about 100 m deeper	Superior is about 1 km deeper	They differ by under 5 m
+geo_loch_ness_lake	Hard	Loch Ness vs Lake Erie: which is true about their greatest depths?	Loch Ness is over 3 times as deep	Lake Erie is over 3 times as deep	They are about equally deep	Lake Erie is about 10 times as deep
+geo_lake_geneva_persian	Hard	Lake Geneva vs the Persian Gulf: which is true about their greatest depths?	Lake Geneva is over 3 times as deep	The Persian Gulf is over 3 times as deep	They are about equally deep	The Persian Gulf is about 10 times as deep
+geo_lake_erie_lake	Hard	Lake Erie vs Lake Ontario: which is true?	Erie is bigger, Ontario holds more water	Erie is bigger and holds more water	Ontario is bigger and holds more water	Ontario is bigger, Erie holds more water
+geo_lake_superior_baltic	Hard	Lake Superior vs the Baltic Sea: which is true about their average depths?	Superior is over twice as deep	The Baltic is over twice as deep	They are about equally deep	The Baltic is about 10 times as deep
+geo_guyana_kaieteur_falls	Hard	Guyana's Kaieteur Falls drops roughly how many times farther than Niagara's Horseshoe Falls?	About 4 times	About 1.5 times	About 12 times	About 40 times
+geo_victoria_falls_iguazu	Hard	Victoria Falls vs Iguazu Falls: which is true?	Victoria is taller, Iguazu is wider	Iguazu is taller and wider	Victoria is taller and wider	Iguazu is taller, Victoria is wider
+geo_north_sea_baltic	Hard	North Sea vs Baltic Sea: which is true about their areas?	The North Sea is about 1.5 times bigger	The Baltic is about 1.5 times bigger	They are about the same size	The North Sea is about 5 times bigger
+geo_southern_ocean_arctic	Hard	Southern Ocean vs Arctic Ocean: which is true about their areas?	The Southern is about 1.5 times bigger	The Arctic is about 1.5 times bigger	They are about the same size	The Southern is about 5 times bigger
+geo_danube_nile_carries	Hard	Danube vs Nile: which carries more water to the sea?	The Danube, over twice as much	The Nile, over twice as much	They carry about the same	The Nile, about 10 times as much
+geo_siachen_glacier_karakoram	Hard	The Siachen Glacier in the Karakoram is roughly how many times longer than the Alps' Aletsch Glacier?	About 3 times	About 1.2 times	About 10 times	About 30 times
+geo_smaller_iceland_vatnajokull	Hard	Which of these is SMALLER than Iceland's Vatnajokull ice cap?	Luxembourg	Cyprus	Lebanon	Jamaica
+geo_black_sea_lake	Hard	Black Sea vs Lake Tanganyika: which is true about their greatest depths?	The Black Sea is about 700 m deeper	Tanganyika is about 700 m deeper	They differ by under 20 m	The Black Sea is about 3 km deeper
+geo_siberia_lena_volga	Hard	Siberia's Lena vs the Volga: which is true about their lengths?	The Lena is about 800 km longer	The Volga is about 800 km longer	They differ by under 20 km	The Lena is about 3,000 km longer
+geo_denali_matterhorn_true	Hard	Denali vs the Matterhorn: which is true?	Denali is about 1.7 km higher	The Matterhorn is about 1.7 km higher	They differ by under 50 m	Denali is about 5 km higher
+geo_gulf_mexico_hudson	Hard	Gulf of Mexico vs Hudson Bay: which is true about their areas?	The Gulf is about a quarter bigger	Hudson Bay is about a quarter bigger	The Gulf is about 4 times bigger	Hudson Bay is about 4 times bigger
+geo_angel_falls_yosemite	Hard	Angel Falls vs Yosemite Falls: which is true about their total heights?	Angel Falls is about 250 m taller	Yosemite Falls is about 250 m taller	They differ by under 10 m	Angel Falls is about 2 km taller
+geo_gets_more_rain_2	Hard	Which gets more rain in a year, Glasgow or Edinburgh?	Glasgow, about 60% more	Edinburgh, about 60% more	They get about the same	Edinburgh, about 3 times as much
+geo_more_days_rain	Hard	Which has more days with rain in a typical year, London or Rome?	London, about 1.5 times as many	Rome, about 1.5 times as many	They have about the same	Rome, about 3 times as many
+geo_gets_more_rain_7	Hard	Which gets more rain in a year, London or Rome?	Rome, by about a quarter	London, by about a quarter	London, about twice as much	London, about 4 times as much
+geo_cities_gets_least	Hard	Which of these US cities gets the least rain in a year?	Seattle	New York	Miami	Houston
+geo_denver_los_angeles	Hard	Denver vs Los Angeles: which is true about their yearly precipitation?	It is about the same	Denver gets about 3 times as much	Los Angeles gets about 3 times as much	Denver gets about 10 times as much
+geo_cities_gets_less	Hard	Which of these cities gets less rain in a year than London?	Madrid	Brussels	Istanbul	Milan
+geo_gets_more_rain_8	Hard	Which gets more rain in a year, Amsterdam or London?	Amsterdam, by about a third	London, by about a third	They get about the same	London, about twice as much
+geo_gets_less_rain	Hard	Which gets less rain in a year, Athens or Berlin?	Athens, by about a third	Berlin, by about a third	They get about the same	Berlin, about half as much
+geo_australian_cities_gets	Hard	Which of these Australian cities gets the most rain in a year?	Darwin	Sydney	Brisbane	Perth
+geo_milder_average_january_2	Hard	Which has the milder average January, Reykjavik or Chicago?	Reykjavik, by about 4 C	Chicago, by about 4 C	They are about the same	Chicago, by about 10 C
+geo_colder_average_january_3	Hard	Which has the colder average January, Oslo or Moscow?	Moscow, by a few degrees	Oslo, by a few degrees	They are about the same	Oslo, by about 15 degrees
+geo_london_moscow_true	Hard	London vs Moscow: which is true about their average July temperatures?	They are about the same	Moscow is about 8 C cooler	Moscow is about 8 C warmer	Moscow is about 15 C cooler
+geo_cities_coldest_average	Hard	Which of these cities has the coldest average January?	Beijing	Copenhagen	Bergen	Dublin
+geo_vladivostok_lies_far	Hard	Vladivostok lies about as far south as Nice. Which has the colder January, Vladivostok or Oslo?	Vladivostok, by about 10 C	Oslo, by about 10 C	They are about the same	Oslo, by about 3 C
+geo_gets_more_hours	Hard	Which gets more hours of sunshine in a year, Seattle or London?	Seattle, by roughly 40%	London, by roughly 40%	They get about the same	London, about twice as many
+geo_cities_longest_day	Hard	Which of these cities has the longest day at the June solstice?	Stockholm	Moscow	Edinburgh	Berlin
+geo_canada_indonesia_true	Hard	Canada vs Indonesia: which is true about their islands?	Canada has about 3 times as many	Indonesia has about 3 times as many	They have about the same number	Indonesia has about 20 times as many
+geo_state_more_lakes	Hard	Which US state has more lakes, Minnesota or Alaska?	Alaska, many times more	Minnesota, many times more	They have about the same number	Minnesota, about twice as many
+geo_shorter_coastline_slovenia	Hard	Which has the shorter coastline, Slovenia or Bosnia and Herzegovina?	Bosnia, about half as long	Slovenia, about half as long	They are about the same	Bosnia, which has no coast at all
+geo_longer_coastline_italy	Hard	Which has the longer coastline, the UK or Italy?	The UK, over 1.5 times as long	Italy, over 1.5 times as long	They are about the same	Italy, about 3 times as long
+geo_more_heavily_forested_2	Hard	Which is more heavily forested by share of its land, Slovenia or Austria?	Slovenia, by roughly 30%	Austria, by roughly 30%	They are about the same	Austria, about twice as much
+geo_country_more_forest_3	Hard	Which country has more forest in total, DR Congo or Indonesia?	DR Congo, by over a third	Indonesia, by over a third	They have about the same	Indonesia, about twice as much
+geo_higher_average_elevation_2	Hard	Which has the higher average elevation, Lesotho or Switzerland?	Lesotho, by about 800 m	Switzerland, by about 800 m	They are about the same	Switzerland, by about 2,000 m
+geo_higher_average_elevation_3	Hard	Which has the higher average elevation, Chile or Switzerland?	Chile, by about 500 m	Switzerland, by about 500 m	They are about the same	Switzerland, by about 1,500 m
+geo_leaving_out_overseas	Hard	Leaving out overseas and self-governing territories, whose highest point is higher, the Netherlands' or Denmark's?	The Netherlands', about twice as high	Denmark's, about twice as high	They are about the same	Denmark's, about 5 times as high
+geo_bigger_sahara_australia	Hard	Which is bigger, the Sahara or Australia?	The Sahara is a bit bigger	Australia is a bit bigger	Australia is about twice as big	The Sahara is about 3 times as big
+geo_gets_more_rain_11	Hard	Which gets more rain in a year, New York or London?	New York, about twice as much	London, about twice as much	They get about the same	London, about 4 times as much
+geo_colder_average_january_4	Hard	Which has the colder average January, Toronto or Stockholm?	Toronto, by a few degrees	Stockholm, by a few degrees	They are about the same	Stockholm, by about 10 degrees
+geo_country_more_islands	Hard	Which country has more islands, Finland or Japan?	Finland, many times more	Japan, many times more	They have about the same number	Japan, about twice as many
+geo_hotter_average_july_2	Hard	Which has the hotter average July, Phoenix or Cairo?	Phoenix, by about 7 C	Cairo, by about 7 C	They are about the same	Cairo, by about 15 C
+geo_lake_tanganyika_lake	Expert	Lake Tanganyika vs Lake Baikal: which is true about their surface areas?	Tanganyika is a few percent bigger	Baikal is a few percent bigger	Tanganyika is about 3 times bigger	Baikal is about 3 times bigger
+geo_mount_elbrus_denali	Expert	Mount Elbrus vs Denali: which is true?	Denali is about 550 m higher	Elbrus is about 550 m higher	They differ by under 20 m	Denali is about 2 km higher
+geo_aconcagua_denali_true	Expert	Aconcagua vs Denali: which is true?	Aconcagua is about 800 m higher	Denali is about 800 m higher	They differ by under 20 m	Aconcagua is about 3 km higher
+geo_mont_blanc_mount	Expert	Mont Blanc vs Mount Elbert, the highest peak of the Rocky Mountains: which is true?	Mont Blanc is about 400 m higher	Mount Elbert is about 400 m higher	They differ by under 10 m	Mount Elbert is about 2 km higher
+geo_mount_fuji_mount	Expert	Mount Fuji vs Mount Rainier: which is true?	Rainier is about 600 m higher	Fuji is about 600 m higher	They differ by under 10 m	Rainier is about 2 km higher
+geo_everest_height_depth	Expert	Everest's height vs the depth of the deepest point in the Atlantic Ocean: which is true?	Everest is a few hundred m greater	The Atlantic is a few hundred m greater	The Atlantic is over 2 km greater	Everest is over 3 km greater
+geo_mont_blanc_hidden	Expert	Could Mont Blanc be hidden completely under water at the deepest point of the Mediterranean?	Yes, with a few hundred m to spare	No, its top would stick out by about 1 km	No, its top would stick out by about 3 km	Yes, with about 3 km to spare
+geo_arctic_ocean_russia	Expert	Arctic Ocean vs Russia: which is true about their areas?	Russia is a little bigger	The Arctic Ocean is a little bigger	Russia is about 3 times bigger	The Arctic Ocean is about 3 times bigger
+geo_black_sea_caspian	Expert	Black Sea vs Caspian Sea: which is true about their areas?	The Black Sea is a little bigger	The Caspian is a little bigger	The Black Sea is about 4 times bigger	The Caspian is about 4 times bigger
+geo_lake_baikal_whole	Expert	Lake Baikal vs the whole Baltic Sea: which is true about the water they hold?	Baikal holds slightly more	The Baltic holds slightly more	The Baltic holds about 10 times more	The Baltic holds about 100 times more
+geo_water_lake_superior	Expert	How does the water in Lake Superior compare with the other four Great Lakes?	More than the other four combined	About a tenth of all five	Less than Lake Michigan alone	About a quarter of all five
+geo_zambezi_orange_true	Expert	Zambezi vs Orange: which is true about the lengths of these two southern African rivers?	The Zambezi is a few hundred km longer	The Orange is a few hundred km longer	They differ by under 10 km	The Orange is about 2,000 km longer
+geo_average_waterfall_carries	Expert	On average, which waterfall carries more water: Niagara or Victoria Falls?	Niagara, clearly more	Victoria, clearly more	About the same	Victoria, about 10 times more
+geo_any_moment_holds	Expert	At any moment, which holds more water: all the world's rivers or the atmosphere?	The air, several times as much	The rivers, several times as much	About the same amount	The rivers, about 50 times as much
+geo_greenland_ice_sheet	Expert	Greenland's ice sheet vs Mexico: which is true about their areas?	Mexico is a little bigger	The ice sheet is a little bigger	The ice sheet is about 3 times bigger	Mexico is about 3 times bigger
+geo_russia_lake_ladoga	Expert	Russia's Lake Ladoga vs Wales: which is true about their areas?	Wales is a little bigger	Lake Ladoga is a little bigger	Lake Ladoga is about 4 times bigger	Wales is about 4 times bigger
+geo_jerusalem_london_true	Expert	Jerusalem vs London: which is true about their yearly rainfall?	It is about the same	London gets about 5 times as much	Jerusalem gets about 3 times as much	London gets about 20 times as much
+geo_capital_colder_average	Expert	Which capital has the colder average January, Ottawa or Moscow?	Ottawa, by a few degrees	Moscow, by a few degrees	They are about the same	Moscow, by about 10 degrees
+geo_warmer_average_july	Expert	Which has the warmer average July, San Francisco or London?	London, by a few degrees	San Francisco, by a few degrees	San Francisco, by about 8 C	London, by about 10 C
+geo_bigger_share_land_2	Expert	Which has the bigger share of its land under forest, Japan or Brazil?	Japan, by a small margin	Brazil, by a small margin	Brazil, about twice as much	Brazil, about 4 times as much
+geo_bigger_share_land_3	Expert	Which has the bigger share of its land under forest, Spain or Germany?	Spain, by a small margin	Germany, by a small margin	Germany, about twice as much	Germany, about 4 times as much
+geo_country_more_forest_4	Expert	Which country has more forest in total, Canada or the USA?	Canada, by about 10%	The USA, by about 10%	The USA, about twice as much	Canada, about 3 times as much
+geo_highest_point_higher	Expert	Whose highest point is higher, Taiwan's or Japan's?	Taiwan's, by about 180 m	Japan's, by about 180 m	Japan's, by about 1,000 m	Taiwan's, by about 1,000 m
+geo_countries_highest_point	Expert	Which of these countries has the highest point?	Morocco	Spain	Greece	Norway
+geo_highest_point_higher_2	Expert	Whose highest point is higher, Canada's or Mexico's?	Canada's, by about 300 m	Mexico's, by about 300 m	Mexico's, by about 1,500 m	They are within 10 m
+geo_higher_average_elevation_4	Expert	Which has the higher average elevation, Mongolia or Switzerland?	Mongolia, by a small margin	Switzerland, by a small margin	Switzerland, about twice as high	Switzerland, about 4 times as high
+geo_lowest_dry_land_3	Expert	Whose lowest dry land lies deeper below sea level, Argentina's or the USA's?	Argentina's, slightly deeper	The USA's, slightly deeper	The USA's, far deeper	Argentina has none below sea level
+geo_over_whole_year	Expert	Over a whole year, which gets more hours of daylight, Oslo or Singapore?	About the same	Singapore, about twice as many	Oslo, about twice as many	Singapore, about a third more
+geo_shorter_coastline_jordan	Expert	Which has the shorter coastline, Jordan or Iraq?	Jordan, under half as long	Iraq, under half as long	They are about the same	Jordan, which has no coast at all
+geo_highest_point_higher_3	Expert	Whose highest point is higher, Bahrain's or Qatar's?	Bahrain's, by about 30 m	Qatar's, by about 30 m	Qatar's, by about 300 m	Bahrain's, by about 500 m
+geo_longer_coastline_croatia	Expert	Which has the longer coastline, Croatia or Italy?	Italy, by at least a quarter	Croatia, by at least a quarter	They are about the same	Croatia, about twice as long

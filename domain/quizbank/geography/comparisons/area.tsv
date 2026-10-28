@@ -2,3 +2,203 @@
 # zestawienia (stan kontra panstwo, 'ile razy zmiesci sie X w Y') i odleglosci. Im mniejsza
 # roznica, tym trudniejsze pytanie.
 id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+geo_mexico_once_new	Easy	Mexico was once called 'New Spain'. How does it compare in area with Spain itself?	Mexico is about 4 times bigger	They are about the same size	Spain is slightly bigger	Mexico is about 15 times bigger
+geo_canada_mexico_area	Easy	Canada vs Mexico by area: how big is the gap?	Canada is about 5 times bigger	Canada is about twice as big	They are about the same size	Canada is about 20 times bigger
+geo_chile_runs_along	Easy	Chile runs along Argentina's whole western flank. How do the two compare in area?	Argentina is almost 4 times bigger	Chile is slightly bigger	They are about the same size	Argentina is about 12 times bigger
+geo_roughly_times_bigger_2	Easy	Roughly how many times bigger than India is Russia?	About 5 times	About 2 times	About 15 times	About 50 times
+geo_covers_multiple_republic	Easy	The UK covers what multiple of the Republic of Ireland's area?	About 3.5 times	About 1.5 times	About 10 times	About 25 times
+geo_brazil_argentina_area	Easy	Brazil vs Argentina by area: how big is the gap?	Brazil is about 3 times bigger	They are about the same size	Argentina is slightly bigger	Brazil is about 10 times bigger
+geo_roughly_countries_size_2	Easy	Roughly how many countries the size of Japan would fit into China?	About 25	About 5	About 80	About 250
+geo_roughly_united_kingdoms	Easy	Roughly how many United Kingdoms would fit into Russia?	About 70	About 7	About 20	About 300
+geo_turkey_neighbour_greece	Easy	Turkey vs its neighbour Greece by area: how big is the gap?	Turkey is about 6 times bigger	Turkey is about twice as big	They are about the same size	Turkey is about 25 times bigger
+geo_australia_times_big	Easy	Australia is how many times as big as the UK?	About 30	About 3	About 10	About 100
+geo_spain_portugal_area	Easy	Spain vs Portugal by area: how big is the gap?	Spain is about 5 times bigger	Spain is about twice as big	They are about the same size	Spain is about 20 times bigger
+geo_germany_hold_switzerlands	Easy	Germany could hold how many Switzerlands?	About 9	About 3	About 30	About 100
+geo_roughly_times_bigger_3	Easy	Roughly how many times bigger is Saudi Arabia than the UK?	About 9 times	About 3 times	About 30 times	About the same
+geo_roughly_countries_size_3	Easy	Roughly how many countries the size of Ukraine would fit into Russia?	About 28	About 3	About 9	About 90
+geo_india_sri_lanka	Easy	India vs Sri Lanka: India could swallow its neighbour about how many times over?	About 50 times	About 5 times	About 15 times	About 500 times
+geo_argentina_small_neighbour	Easy	Argentina vs its small neighbour Uruguay: roughly how many times bigger is Argentina?	About 16 times	About 4 times	About 50 times	About 2 times
+geo_egypt_italy_area	Easy	Egypt vs Italy by area: how big is the gap?	Egypt is more than 3 times bigger	Italy is slightly bigger	They are about the same size	Egypt is about 12 times bigger
+geo_roughly_times_bigger_4	Easy	Roughly how many times bigger is Libya than Italy, which once ruled it as a colony?	About 6 times	About 2 times	About 20 times	About the same
+geo_western_australia_just	Easy	Western Australia is just one Australian state. Roughly how many countries the size of the UK would fit into it?	About 10	About 3	About 30	About 100
+geo_everything_bigger_texas	Easy	Everything is bigger in Texas: roughly how many Englands would fit into the Lone Star State?	About 5	About 2	About 15	About 40
+geo_world_maps_greenland	Easy	On many world maps Greenland looks at least as big as Australia. How do their real areas compare?	Australia is over 3 times bigger	Greenland is bigger	They are about the same	Australia is 10 times bigger
+geo_egypt_mostly_desert	Easy	Egypt is mostly desert. How does the whole Sahara compare in area with Egypt?	About 9 times bigger	About twice as big	About 30 times bigger	About the same size
+geo_borneo_island_shared	Easy	Borneo, the island shared by three countries, vs the island of Great Britain: which is true about their areas?	Borneo is about 3.5 times bigger	Great Britain is a bit bigger	They are about equal	Borneo is about 10 times bigger
+geo_canada_french_speaking	Easy	Canada's French-speaking province of Quebec could hold roughly how many countries the size of Spain?	About 3	About 10	About 30	Less than 1
+geo_vladivostok_russian_city	Easy	Vladivostok is a Russian city, yet roughly how many times farther is it from Moscow than from Tokyo, in a straight line?	About 6 times	About twice	About the same	About 20 times
+geo_bigger_vatican_city	Easy	Which is bigger: Vatican City, a whole country, or New York's Central Park?	Central Park, about 8 times	Vatican City, about twice	They are about the same	Central Park, only slightly
+geo_alaska_biggest_state	Easy	Alaska is the biggest US state and California the third. Roughly how many times bigger is Alaska?	About 4 times	About 1.5 times	About 10 times	About 25 times
+geo_greater_london_city	Easy	Greater London vs the city of Paris inside its official limits: roughly how many times bigger is London?	About 15 times	About 2 times	About 5 times	About 50 times
+geo_asian_part_russia	Easy	The Asian part of Russia, east of the Urals, is roughly how many times the size of India?	About 4 times	About the same	About 12 times	About 1.5 times
+geo_roughly_countries_size_9	Easy	Roughly how many countries the size of Germany would fit into Canada's province of Ontario?	About 3	Less than 1	About 10	About 30
+geo_sicily_lies_just	Easy	Sicily lies just north of the island nation of Malta. Roughly how many Maltas would fit into Sicily?	About 80	About 8	About 800	About 3
+geo_madagascar_sri_lanka	Easy	Madagascar vs Sri Lanka, two big islands of the Indian Ocean: roughly how many times bigger is Madagascar?	About 9 times	About twice	About 30 times	About the same
+geo_yellowstone_world_national	Easy	Yellowstone, the world's first national park, vs the country of Luxembourg: which is true?	Yellowstone is over 3 times bigger	Luxembourg is a bit bigger	They are about equal	Yellowstone is 30 times bigger
+geo_florida_netherlands_two	Easy	Florida vs the Netherlands, two flat, low-lying places fighting the sea: which is true about their areas?	Florida is about 4 times bigger	The Netherlands is bigger	They are about equal	Florida is 20 times bigger
+geo_cuba_puerto_rico	Easy	Cuba vs Puerto Rico, two big Caribbean islands: roughly how many times bigger is the main island of Cuba?	About 10 times	About twice	About 40 times	About the same
+geo_flight_london_new	Easy	A flight from London to New York covers roughly how many times the straight-line distance from London to Paris?	About 16 times	About 4 times	About 50 times	About 2 times
+geo_russia_canada_world	Medium	Russia vs Canada, the world's two biggest countries: how do they compare?	Russia is about 1.7 times bigger	They are almost exactly equal	Russia is about 4 times bigger	Canada is slightly bigger
+geo_whole_continent_africa	Medium	How does the whole continent of Africa compare in area with Russia?	Africa is nearly twice as big	Russia is slightly bigger	They are about the same size	Africa is about 5 times bigger
+geo_canada_compare_area	Medium	How does Canada compare in area with the whole continent of Europe, European Russia included?	They are about the same size	Canada is about half as big	Canada is about twice as big	Canada is about a quarter as big
+geo_australia_india_land	Medium	Australia vs India in land size: how big is the gap?	Australia is over twice as big	India is slightly bigger	They are about the same size	Australia is about 8 times bigger
+geo_austria_switzerland_area	Medium	Austria vs Switzerland by area: how big is the gap?	Austria is about twice as big	Switzerland is slightly bigger	They are about the same size	Austria is about 5 times bigger
+geo_iceland_union_denmark	Medium	Iceland was in a union with Denmark until 1944. How does it compare in area with Denmark (without Greenland)?	Iceland is over twice as big	Denmark is about twice as big	They are about the same size	Iceland is about 8 times bigger
+geo_luxembourg_singapore_area	Medium	Luxembourg vs Singapore by area: how big is the gap?	Luxembourg is about 3.5 times bigger	Singapore is about 3.5 times bigger	They are about the same size	Luxembourg is about 20 times bigger
+geo_japan_whole_korean	Medium	Japan vs the whole Korean peninsula (North and South Korea together): which is true?	Japan is about 1.7 times bigger	The two Koreas are bigger together	They are about the same size	Japan is about 5 times bigger
+geo_iran_turkey_area	Medium	Iran vs Turkey by area: how big is the gap?	Iran is about twice as big	They are about the same size	Turkey is slightly bigger	Iran is about 6 times bigger
+geo_kazakhstan_area_equals	Medium	Kazakhstan's area equals roughly how many Ukraines?	About 4.5	About 1.5	About 15	About 2
+geo_peru_chile_area	Medium	Peru vs Chile by area: how big is the gap?	Peru is about 1.7 times bigger	Chile is slightly bigger	They are about the same size	Peru is about 5 times bigger
+geo_iran_iran_roughly	Medium	Iran vs the UK: Iran is roughly how many times bigger?	About 7 times	About 2 times	About 20 times	About 3 times
+geo_belgiums_fit_france	Medium	How many Belgiums would fit into France?	About 20	About 5	About 60	About 2
+geo_roughly_countries_size_4	Medium	Roughly how many countries the size of the Netherlands would fit into Russia?	About 400	About 40	About 4,000	About 150
+geo_san_marinos_italy	Medium	How many San Marinos could Italy hold?	About 5,000	About 500	About 50,000	About 1,500
+geo_roughly_times_bigger_5	Medium	Roughly how many times bigger is Angola than Portugal, its former colonial ruler?	About 13 times	About 4 times	About 40 times	About 2 times
+geo_roughly_portugals_fit	Medium	Roughly how many Portugals would fit into Brazil?	About 90	About 10	About 30	About 300
+geo_roughly_countries_size_5	Medium	Roughly how many countries the size of Bangladesh would fit into India?	About 22	About 5	About 70	About 2
+geo_russia_china_area	Medium	Russia vs China by area: how big is the gap?	Russia is about 1.8 times bigger	They are about the same size	China is slightly bigger	Russia is about 5 times bigger
+geo_ukraine_neighbour_poland	Medium	Ukraine vs its neighbour Poland by area: how big is the gap?	Ukraine is about twice as big	They are about the same size	Poland is slightly bigger	Ukraine is about 5 times bigger
+geo_indonesia_islands_spread	Medium	Indonesia's islands spread wider than Australia on the map. How do their areas compare?	Australia is about 4 times bigger	Indonesia is slightly bigger	They are about the same size	Australia is about 15 times bigger
+geo_india_area_times	Medium	India's area is about how many times Pakistan's?	About 4 times	About 1.5 times	About 12 times	About 30 times
+geo_algeria_once_ruled	Medium	Algeria, once ruled by France, is how many times France's size?	About 4 times	About 1.5 times	About 12 times	About the same
+geo_russia_australia_land	Medium	Russia vs Australia in land size: how big is the gap?	Russia is a bit over twice as big	They are about the same size	Russia is about 6 times bigger	Australia is slightly bigger
+geo_roughly_share_all_4	Medium	Roughly what share of all the land on Earth does Russia cover?	About an eighth	About a quarter	About a third	About a thirtieth
+geo_countries_almost_exactly	Medium	Which of these countries is almost exactly the same size as Ukraine?	Afghanistan	Poland	Kazakhstan	Romania
+geo_ukraine_germany_area	Medium	Ukraine vs Germany by area: how big is the gap?	Ukraine is about 1.7 times bigger	Germany is slightly bigger	They are about the same size	Ukraine is about 5 times bigger
+geo_italy_greece_area	Medium	Italy vs Greece by area: how big is the gap?	Italy is over twice as big	They are about the same size	Greece is slightly bigger	Italy is about 6 times bigger
+geo_france_germany_area	Medium	France vs Germany by area: how big is the gap?	France is bigger by more than half	Germany is slightly bigger	They are about the same size	France is about 4 times bigger
+geo_nigeria_germany_area	Medium	Nigeria vs Germany by area: how big is the gap?	Nigeria is about 2.5 times bigger	They are about the same size	Germany is slightly bigger	Nigeria is about 8 times bigger
+geo_south_africa_dwarfs	Medium	South Africa dwarfs Germany by roughly what factor?	About 3.5 times	About 1.2 times	About 10 times	About 30 times
+geo_indonesia_japan_two	Medium	Indonesia vs Japan, two big island nations: Indonesia has about how many times Japan's area?	About 5 times	About 1.5 times	About 15 times	About 2.5 times
+geo_kazakhstan_heart_central	Medium	Kazakhstan, in the heart of Central Asia, is roughly how many times the size of the UK?	About 11 times	About 3 times	About 35 times	About 5 times
+geo_spain_area_big	Medium	The UK vs Spain by area: how big is the gap?	Spain is about twice as big	They are about the same size	The UK is slightly bigger	Spain is about 6 times bigger
+geo_countries_not_more_2	Medium	Which of these countries is NOT more than twice the size of India?	Argentina	Brazil	Canada	The United States
+geo_china_area_mongolias	Medium	China's area is about how many Mongolias?	About 6	About 2	About 20	About 60
+geo_roughly_countries_size_6	Medium	Roughly how many countries the size of Germany would fit into Brazil?	About 24	About 6	About 75	About 250
+geo_caspian_sea_but	Medium	The Caspian is called a sea but is really a lake. How does its area compare with Germany's?	They are about the same	Germany is about twice as big	The Caspian is twice as big	The Caspian is 5 times bigger
+geo_alaska_texas_two	Medium	Alaska vs Texas, the two biggest US states: which is true about their areas?	Alaska is over twice as big	Alaska is about a fifth bigger	They are about the same	Alaska is about 6 times bigger
+geo_roughly_countries_size_10	Medium	Roughly how many countries the size of Monaco would fit into the island of Manhattan?	About 30	About 3	About 300	About 3,000
+geo_delaware_second_smallest	Medium	Delaware is the second-smallest US state. Roughly how many Delawares would fit into Alaska?	About 300	About 30	About 3,000	About 10
+geo_texas_roughly_times	Medium	Texas is roughly how many times the size of Germany?	About twice	About 1.2 times	About 5 times	About 10 times
+geo_california_whole_united	Medium	California vs the whole United Kingdom: which is true about their areas?	California is about 1.7 times bigger	The UK is a bit bigger	They are about equal	California is 5 times bigger
+geo_georgia_bigger_state	Medium	Which Georgia is bigger: the US state or the country in the Caucasus?	The US state, over twice	The country, over twice	They are about equal	The US state, about 8 times
+geo_roughly_singapores_fit	Medium	Roughly how many Singapores would fit into Greater London?	About 2	About 5	About 10	Less than 1
+geo_berlin_paris_each	Medium	Berlin vs Paris, each inside its official city limits: roughly how many times bigger is Berlin?	About 8 times	About 2 times	They are about equal	About 30 times
+geo_south_africa_kruger	Medium	South Africa's Kruger National Park covers roughly the same area as which country?	Slovenia	Denmark	Portugal	Luxembourg
+geo_new_york_central	Medium	New York's Central Park looks huge on the map. Roughly what share of Manhattan's land does it take up?	About 6%	About 1%	About 15%	About 35%
+geo_hawaii_big_island	Medium	Hawaii's Big Island vs all the other Hawaiian islands put together: which is true about their areas?	The Big Island alone is bigger	The rest are twice as big	The rest are 5 times as big	The rest are slightly bigger
+geo_nunavut_canada_arctic	Medium	Nunavut, Canada's Arctic territory, covers roughly how many times the area of France?	About 3 times	About half	About 10 times	About 1.5 times
+geo_paris_closer_straight	Medium	From Paris, which is closer in a straight line: Algiers in Africa or Moscow in Europe?	Algiers, by over 1,000 km	Moscow, by over 1,000 km	They are about equally far	Algiers, by about 100 km
+geo_cape_town_closer	Medium	From Cape Town, which is closer in a straight line: Rio de Janeiro or London?	Rio, by about 3,600 km	London, by about 3,600 km	They are about equally far	Rio, by about 300 km
+geo_athens_capital_european	Medium	Athens is the capital of a European country. How far is it from Cairo, compared with its distance to London?	Less than half as far	About the same	Twice as far	About a tenth as far
+geo_roughly_countries_size_11	Medium	Roughly how many countries the size of Belgium would fit into Lake Superior?	About 3	About 1	About 10	About 30
+geo_northeast_greenland_national	Medium	Northeast Greenland National Park vs Spain: which is true about their areas?	The park is nearly twice as big	Spain is about twice as big	They are about equal	The park is 10 times bigger
+geo_madagascar_big_island	Medium	Madagascar, the big island off Africa, is roughly how many times the size of Italy?	About twice	About 1.2 times	About 5 times	Less than half
+geo_island_new_guinea	Medium	The island of New Guinea, split between two countries, covers almost exactly the area of which country?	Turkey	Spain	Germany	Mexico
+geo_china_far_western	Medium	China's far-western Xinjiang region is almost exactly the size of which country?	Iran	India	Egypt	Spain
+geo_countries_closest_size	Medium	Which of these countries is closest in size to China's Tibet Autonomous Region?	South Africa	France	Spain	India
+geo_moscow_inside_city	Medium	Moscow inside its city limits, enlarged in 2012, vs Greater London: which is true about their areas?	Moscow is about 1.6 times bigger	London is about 1.6 times bigger	They are about equal	Moscow is 5 times bigger
+geo_macau_monaco_two	Medium	Macau vs Monaco, two tiny gambling hotspots: roughly how many times bigger is Macau?	About 16 times	About 2 times	About 100 times	They are about equal
+geo_walt_disney_world	Medium	Walt Disney World in Florida vs the island of Manhattan: which is true about their areas?	Disney World is clearly bigger	Manhattan is clearly bigger	They are almost exactly equal	Manhattan is 10 times bigger
+geo_germany_biggest_state	Medium	Germany's biggest state, Bavaria, or Switzerland: which covers more ground?	Bavaria, by about 70%	Switzerland, by about 70%	They are about equal	Bavaria, about 4 times
+geo_roughly_yosemite_national	Medium	Roughly how many Yosemite National Parks would fit into Yellowstone?	About 3	About 1.5	About 10	About 30
+geo_roughly_texases_fit	Medium	Roughly how many Texases would fit into the 48 contiguous US states?	About 12	About 4	About 30	About 100
+geo_australia_new_south	Medium	Australia's New South Wales is roughly how many times the size of Italy?	About 2.5 times	About 1.2 times	About 8 times	About half
+geo_great_britain_iceland	Medium	Great Britain or Iceland: which island is bigger, and by how much?	Great Britain, about twice	Iceland, by a little	They are about equal	Great Britain, about 6 times
+geo_roughly_south_koreas	Medium	Roughly how many South Koreas would fit into Japan's main island, Honshu?	About 2	About 5	About 10	Less than 1
+geo_british_columbia_california	Medium	British Columbia or California, neighbours on the Pacific coast: which is bigger?	BC, over twice as big	California, a little	They are about equal	BC, about 6 times
+geo_england_scotland_bigger	Medium	England or Scotland: which is bigger, and by how much?	England, by about 60%	Scotland, by a little	They are about equal	England, about 4 times
+geo_sardinia_corsica_strait	Medium	Sardinia and Corsica are only a strait apart. Roughly how many Corsicas would fit into Sardinia?	About 3	About 1.5	About 10	Less than 1
+geo_canada_northwest_territories	Medium	Canada's Northwest Territories are roughly how many times the size of France?	About 2 times	About 1.2 times	About 6 times	About half
+geo_sahara_roughly_times	Medium	The Sahara is roughly how many times the size of India?	About 3 times	About 1.2 times	About 10 times	About half
+geo_moscow_far_beijing	Medium	From Moscow, how far is Beijing in a straight line, compared with London?	A bit over twice as far	About the same	About 5 times as far	Only half as far
+geo_germany_area_big	Hard	Germany vs the UK by area: how big is the gap?	Germany is about 1.5 times bigger	They are almost exactly equal	The UK is slightly bigger	Germany is about 3 times bigger
+geo_japan_two_island	Hard	Japan vs the UK, two island nations, by area: how big is the gap?	Japan is about 1.5 times bigger	They are about the same size	The UK is slightly bigger	Japan is about 4 times bigger
+geo_iceland_republic_ireland	Hard	Iceland vs the Republic of Ireland by area: how big is the gap?	Iceland is about 1.5 times bigger	Ireland is slightly bigger	They are about the same size	Iceland is about 4 times bigger
+geo_belgium_netherlands_area	Hard	Belgium vs the Netherlands by area: how big is the gap?	The Netherlands is about a third bigger	Belgium is about a third bigger	They are almost exactly equal	The Netherlands is about 3 times bigger
+geo_spain_germany_area	Hard	Spain vs Germany by area: how big is the gap?	Spain is about 40% bigger	Germany is about 40% bigger	They are almost exactly equal	Spain is about 3 times bigger
+geo_sweden_finland_area	Hard	Sweden vs Finland by area: how big is the gap?	Sweden is about a third bigger	Finland is about a third bigger	They are almost exactly equal	Sweden is about 3 times bigger
+geo_north_korea_south	Hard	North Korea vs South Korea by area: how big is the gap?	North Korea is about a fifth bigger	South Korea is about a fifth bigger	North Korea is about twice as big	South Korea is about twice as big
+geo_turkey_ukraine_area	Hard	Turkey vs Ukraine by area: how big is the gap?	Turkey is about 30% bigger	Ukraine is about 30% bigger	They are almost exactly equal	Turkey is about 3 times bigger
+geo_bigger_congo_france	Hard	Which is bigger: DR Congo, or France, Spain, Germany and Italy put together?	DR Congo, by about a third	The four, by about a third	They are almost exactly equal	The four, by about double
+geo_asia_africa_area	Hard	Asia vs Africa by area: how big is the gap?	Asia is about 1.5 times bigger	Asia is about 3 times bigger	They are almost exactly equal	Asia is about 5 times bigger
+geo_north_america_south	Hard	North America vs South America by area: how big is the gap?	North America is about 40% bigger	South America is about 40% bigger	They are almost exactly equal	North America is about 3 times bigger
+geo_antarctica_europe_area	Hard	Antarctica vs Europe by area: how big is the gap?	Antarctica is about 40% bigger	Europe is about 40% bigger	They are almost exactly equal	Antarctica is about 4 times bigger
+geo_australia_all_europe	Hard	Australia vs all of Europe by area: how big is the gap?	Europe is about a third bigger	Australia is about a third bigger	They are almost exactly equal	Europe is about 3 times bigger
+geo_continents_smaller_russia	Hard	Which of these continents is smaller than Russia alone?	Antarctica	South America	North America	Africa
+geo_roughly_share_continent	Hard	Roughly what share of the continent of Europe lies inside Russia?	About two fifths	About a tenth	About a fifth	About seven tenths
+geo_andorra_malta_two	Hard	Andorra vs Malta, two European microstates, by area: how big is the gap?	Andorra is about 1.5 times bigger	Malta is about 1.5 times bigger	They are almost exactly equal	Andorra is about 5 times bigger
+geo_liechtenstein_san_marino	Hard	Liechtenstein vs San Marino by area: how big is the gap?	Liechtenstein is about 2.5 times bigger	San Marino is about 2.5 times bigger	They are almost exactly equal	Liechtenstein is about 10 times bigger
+geo_roughly_vatican_cities	Hard	Roughly how many Vatican Cities would fit into Monaco?	About 4 or 5	About 20	About 60	About 1.5
+geo_roughly_countries_size_7	Hard	Roughly how many countries the size of Luxembourg would fit into Germany?	About 140	About 40	About 500	About 15
+geo_singapore_left_malaysia	Hard	Singapore left Malaysia in 1965. Roughly how many Singapores would fit into Malaysia?	About 450	About 45	About 4,500	About 150
+geo_lesotho_enclave_roughly	Hard	Lesotho is an enclave. Roughly how many Lesothos would fit into the country around it?	About 40	About 4	About 400	About 15
+geo_gambia_sliver_land	Hard	The Gambia is a sliver of land inside another country. About how many times bigger is that neighbour?	About 17 times	About 4 times	About 50 times	About 150 times
+geo_belgium_once_ruled	Hard	Belgium once ruled the Congo. Roughly how many Belgiums would fit into today's DR Congo?	About 80	About 8	About 25	About 250
+geo_roughly_countries_size_8	Hard	Roughly how many countries the size of the Netherlands would fit into Indonesia, its former colony?	About 45	About 5	About 15	About 150
+geo_countries_almost_exactly_2	Hard	Which of these countries is almost exactly the same size as Spain?	Thailand	Italy	Turkey	Pakistan
+geo_chile_looks_like	Hard	Chile looks like a ribbon on the map. Which is bigger by area: Chile or France?	Chile	France	They are exactly equal	France, by about double
+geo_european_union_india	Hard	The European Union vs India by area: how big is the gap?	The EU is about a quarter bigger	India is about a quarter bigger	The EU is about twice as big	India is about twice as big
+geo_countries_bigger_mexico	Hard	Which of these countries is bigger than Mexico?	Kazakhstan	Iran	Libya	Peru
+geo_pair_countries_almost	Hard	Which pair of countries is almost exactly the same size?	Switzerland and the Netherlands	Denmark and the Czech Republic	Ireland and Hungary	Belgium and Austria
+geo_countries_bigger_spain	Hard	Which of these countries is bigger than Spain?	Kenya	Iraq	Japan	Zimbabwe
+geo_world_maps_greenland_2	Hard	On most world maps Greenland looks far bigger than India. Which is really bigger, and by how much?	India, about 1.5 times bigger	Greenland, about 1.5 times bigger	Greenland, about 3 times bigger	They are almost equal
+geo_russia_east_urals	Hard	Russia east of the Urals (Siberia and the Far East) vs all of Canada: which is bigger?	Asian Russia, by about a third	Canada, by about a third	Canada, about twice as big	Asian Russia, about 3 times
+geo_hong_kong_singapore	Hard	Hong Kong vs Singapore, two crowded Asian hubs: which covers more ground?	Hong Kong, about 1.5 times as much	Singapore, about 1.5 times as much	Hong Kong, about 5 times as much	Singapore, about 5 times as much
+geo_rome_berlin_each	Hard	Rome vs Berlin, each inside its official city limits: which is bigger?	Rome, by almost half	Berlin, by almost half	Berlin, about 3 times	They are almost equal
+geo_principality_monaco_new	Hard	The principality of Monaco vs New York's Central Park: which is bigger?	Central Park, by over half	Monaco, by over half	They are almost exactly equal	Monaco, about 5 times
+geo_sitka_alaska_officially	Hard	Sitka, Alaska, is officially a single city. How does it compare in area with the whole state of Rhode Island?	Sitka is far bigger	Rhode Island is far bigger	They are about the same	Rhode Island is 10 times bigger
+geo_tanzania_serengeti_south	Hard	Tanzania's Serengeti vs South Africa's Kruger: which national park is bigger?	Kruger, by about a third	Serengeti, by about a third	Serengeti, about twice	Kruger, about 4 times
+geo_death_valley_yellowstone	Hard	Death Valley vs Yellowstone: which national park is bigger?	Death Valley, by about half	Yellowstone, by about half	Yellowstone, about 3 times	They are almost equal
+geo_wrangell_elias_alaska	Hard	Wrangell-St. Elias in Alaska, the biggest US national park, vs Switzerland: which is bigger?	The park, by about 30%	Switzerland, by about 30%	Switzerland, about 3 times	The park, about 5 times
+geo_lake_baikal_deepest	Hard	Lake Baikal, the deepest lake on Earth, vs Belgium: which is true about their areas?	They are about the same size	Belgium is about twice as big	Baikal is about twice as big	Baikal is 5 times bigger
+geo_chongqing_china_officially	Hard	Chongqing in China is officially one city. Its territory is closest in size to which country?	Austria	Denmark	Switzerland	Belgium
+geo_china_inner_mongolia	Hard	China's Inner Mongolia vs the country of Mongolia next door: which is bigger?	Mongolia, by about a third	Inner Mongolia, by about a third	Inner Mongolia, about twice	Mongolia, about 4 times
+geo_florida_england_bigger	Hard	Florida vs England: which is bigger, and by how much?	Florida, by about 30%	England, by about 30%	England, about twice as big	Florida, about 3 times
+geo_island_ireland_sri	Hard	The island of Ireland vs Sri Lanka: which is bigger, and by how much?	Ireland, by about 30%	Sri Lanka, by about 30%	Sri Lanka, about twice as big	Ireland, about 3 times
+geo_madrid_closer_straight	Hard	From Madrid, which is closer in a straight line: Casablanca or Paris?	Casablanca, by about 200 km	Paris, by about 200 km	Casablanca, by about 1,000 km	Paris, by about 1,000 km
+geo_norway_arctic_islands	Hard	Norway's Arctic islands of Svalbard vs Denmark (without Greenland): which is bigger?	Svalbard, by about 40%	Denmark, by about 40%	Denmark, about 3 times	Svalbard, about 5 times
+geo_java_home_more	Hard	Java, home to more than half of Indonesia's people, vs Greece: which is true about their areas?	They are about the same size	Greece is about twice as big	Java is about twice as big	Greece is 4 times bigger
+geo_canada_baffin_island	Hard	Canada's Baffin Island is almost exactly the size of which country?	Spain	Germany	Italy	Japan
+geo_russia_straight_line	Hard	Russia's straight-line span from Kaliningrad to Vladivostok vs London to New York: which is longer?	Russia's span, by about a third	London-New York, by about a third	London-New York, about twice	They are almost equal
+geo_sydney_farther_straight	Hard	From Sydney, which is farther in a straight line: Perth in Australia or Auckland in New Zealand?	Perth, by over 1,000 km	Auckland, by over 1,000 km	They are about equally far	Perth, by about 100 km
+geo_honolulu_far_tokyo	Hard	From Honolulu, how far is Tokyo in a straight line, compared with Los Angeles?	About 1.5 times as far	About the same	About 3 times as far	Tokyo is actually closer
+geo_london_closer_straight	Hard	From London, which is closer in a straight line: Rome or Reykjavik?	Rome, by about 450 km	Reykjavik, by about 450 km	They are equally far	Reykjavik, by about 1,500 km
+geo_australia_widest_east	Hard	Australia's widest east-west span vs the straight line from New York to Los Angeles: which is true?	They are about the same	Australia is twice as wide	NY-LA is twice as long	Australia is 3 times as wide
+geo_chile_runs_300	Hard	Chile runs about 4,300 km from north to south. That is roughly the straight-line distance between which two cities?	Lisbon and Moscow	London and Paris	London and Rome	London and Tokyo
+geo_queensland_alaska_two	Hard	Queensland vs Alaska, two famously huge states: which is true about their areas?	They are about the same size	Alaska is about twice as big	Queensland is twice as big	Alaska is 5 times bigger
+geo_montana_japan_true	Hard	Montana vs Japan: which is true about their areas?	They are almost exactly equal	Japan is about twice as big	Montana is about twice as big	Japan is about 4 times bigger
+geo_indonesian_island_bali	Hard	The Indonesian island of Bali vs the whole sultanate of Brunei: which is true about their areas?	They are about the same size	Brunei is 3 times bigger	Bali is 3 times bigger	Brunei is 10 times bigger
+geo_reykjavik_sits_between	Hard	Reykjavik sits between Europe and America. Which is closer to it in a straight line: Moscow or New York?	Moscow, by about 900 km	New York, by about 900 km	They are equally far	New York, by about 3,000 km
+geo_lake_michigan_estonia	Hard	Lake Michigan vs Estonia: which is true about their areas?	The lake is about a quarter bigger	Estonia is about a quarter bigger	Estonia is about twice as big	The lake is 5 times bigger
+geo_sumatra_indonesia_westernmost	Hard	Sumatra, Indonesia's westernmost big island, vs Germany: which is bigger?	Sumatra, by about a third	Germany, by about a third	Germany, about twice as big	Sumatra, about 4 times
+geo_japan_germany_bigger	Expert	Japan or Germany: which is bigger, and by how much?	Japan, by about 6%	Germany, by about 6%	Germany, by about a third	Japan, by about a third
+geo_poland_italy_bigger	Expert	Poland or Italy: which is bigger, and by how much?	Poland, by a few percent	Italy, by a few percent	Italy, by about a third	Poland, by about a third
+geo_ukraine_bigger_mainland	Expert	Ukraine is bigger than mainland France. What if you also count France's regions outside Europe?	France becomes slightly bigger	Ukraine stays bigger by a third	France becomes twice as big	Ukraine stays bigger by a half
+geo_australia_contiguous_usa	Expert	Australia vs the contiguous USA (the 48 states without Alaska and Hawaii): which is bigger?	The 48 states, by about 5%	Australia, by about 5%	Australia, by about a third	The 48 states, by a third
+geo_brazil_lower_states	Expert	Brazil or the lower 48 US states (no Alaska or Hawaii): which covers more ground?	Brazil, by about 5%	The 48 states, by about 5%	The 48 states, by a third	Brazil, by about a third
+geo_usa_china_true	Expert	The USA vs China: which is true about their total areas?	They differ by only a few percent	The USA is about 1.5 times bigger	China is about 1.5 times bigger	China is about twice as big
+geo_canada_beats_usa	Expert	Canada beats the USA in total area. Counting land only, without lakes and rivers, which is bigger?	The USA, by a little	Canada, by a little	Canada, by about a third	They are exactly equal
+geo_india_argentina_bigger	Expert	India or Argentina: which is bigger, and by how much?	India, by about a fifth	Argentina, by about a fifth	India, by about double	Argentina, by about double
+geo_new_zealand_bigger	Expert	New Zealand or the UK: which is bigger, and by how much?	New Zealand, by about 10%	The UK, by about 10%	The UK, by about half	New Zealand, by about half
+geo_spain_sweden_bigger	Expert	Spain or Sweden: which is bigger, and by how much?	Spain, by about 12%	Sweden, by about 12%	Sweden, by about half	Spain, by about half
+geo_countries_slightly_smaller	Expert	Which of these countries is slightly SMALLER than Germany?	Finland	Sweden	Iraq	Paraguay
+geo_countries_slightly_smaller_2	Expert	Which of these countries is slightly SMALLER than the United Kingdom?	Belarus	Ecuador	Gabon	Burkina Faso
+geo_nepal_greece_bigger	Expert	Nepal or Greece: which is bigger, and by how much?	Nepal, by about 10%	Greece, by about 10%	Greece, by about half	Nepal, by about half
+geo_africa_north_america	Expert	Africa vs North America (Greenland and Central America included): which is bigger?	Africa, by about a fifth	North America, by about a fifth	Africa, by about double	North America, by about double
+geo_not_more_ten	Expert	Which of these is NOT more than ten times the size of Germany?	India	Brazil	Australia	China
+geo_california_japan_bigger	Expert	California or Japan: which is bigger, and by how much?	California, by about a tenth	Japan, by about a tenth	California, by about half	Japan, by about half
+geo_state_closest_area	Expert	Which US state is closest in area to Poland?	New Mexico	Arizona	Nevada	Colorado
+geo_texas_ukraine_biggest	Expert	Texas vs Ukraine, the biggest country lying wholly in Europe: which is bigger, and by how much?	Texas, by about 15%	Ukraine, by about 15%	Texas, by about half	Ukraine, by about half
+geo_russia_sakha_republic_2	Expert	Russia's Sakha Republic (Yakutia) vs India: which is bigger, and by how much?	India, by a few percent	Sakha, by a few percent	India, by about half	Sakha, by about half
+geo_hulunbuir_inner_mongolia	Expert	Hulunbuir in Inner Mongolia is officially a single 'city'. How does its area compare with the whole UK?	Hulunbuir is a little bigger	The UK is a little bigger	The UK is about 10 times bigger	The UK is 100 times bigger
+geo_perth_closer_straight	Expert	From Perth, which is closer in a straight line: Jakarta in Indonesia or Sydney in Australia?	Jakarta, by about 300 km	Sydney, by about 300 km	Jakarta, by about 1,500 km	Sydney, by about 1,500 km
+geo_canada_wood_buffalo	Expert	Canada's Wood Buffalo National Park vs Switzerland: which is bigger?	The park, by under a tenth	Switzerland, by under a tenth	Switzerland, about twice	The park, about twice
+geo_yosemite_national_park	Expert	Yosemite National Park vs the country of Luxembourg: which is bigger, and by how much?	Yosemite, by about a sixth	Luxembourg, by about a sixth	Luxembourg, about 3 times	Yosemite, about 3 times
+geo_australia_great_barrier	Expert	Australia's Great Barrier Reef Marine Park vs Italy: which covers more area?	The Marine Park, by about 15%	Italy, by about 15%	Italy, about 3 times as much	The park, about 3 times as much
+geo_japan_main_island_2	Expert	Japan's main island, Honshu, vs the island of Great Britain: which is bigger, and by how much?	Honshu, by under a tenth	Great Britain, by under a tenth	Honshu, by about half	Great Britain, by about half
+geo_crete_cyprus_two	Expert	Crete vs Cyprus, the two biggest islands of the eastern Mediterranean: which is bigger?	Cyprus, by about a tenth	Crete, by about a tenth	Crete, about twice as big	Cyprus, about twice as big
+geo_whole_surface_moon	Expert	The whole surface of the Moon vs the continent of Asia: which is bigger?	Asia, by under a fifth	The Moon, by under a fifth	The Moon, about twice	Asia, about 3 times
+geo_whole_surface_dwarf	Expert	The whole surface of the dwarf planet Pluto vs the area of Russia: which is bigger?	Pluto, by a few percent	Russia, by a few percent	Russia, about twice	Pluto, about 5 times
+geo_london_farther_straight	Expert	From London, which is farther in a straight line: Moscow or Istanbul?	They are almost exactly equal	Moscow, by about 1,000 km	Istanbul, by about 1,000 km	Moscow, by about 2,000 km
+geo_nuuk_greenland_capital	Expert	Nuuk, Greenland's capital, belongs to the Danish realm. Is it closer to Copenhagen or to New York?	New York, by about 550 km	Copenhagen, by about 550 km	They are equally far	Copenhagen, by about 2,000 km
