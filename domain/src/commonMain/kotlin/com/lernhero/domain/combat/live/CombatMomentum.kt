@@ -58,12 +58,16 @@ object AnswerTimer {
      * nie zabiera graczowi mocy, tylko zadaje, zeby wiedzial odpowiedz OD RAZU, zamiast dochodzic
      * do niej przez eliminacje. Na dwudziestej fali zostaje okolo 13 sekund zamiast osiemnastu.
      *
+     * **Tempo pytania** ([paceMs]): dodatek za dlugi tekst i za pytanie do przemyslenia (porownanie,
+     * proporcja, rachunek) - liczy go [com.lernhero.domain.quiz.QuizPace.extraMs]. Dochodzi przed
+     * skroceniem za fale, wiec gleboka fala tnie tez dodatek.
+     *
      * Pasek na ekranie i mnoznik salwy licza sie z UŁAMKA tego okna, wiec obie te rzeczy dostraja
      * sie same - nie ma drugiego miejsca, ktore trzeba by zmienic razem z ta funkcja.
      */
-    fun windowFor(optionCount: Int, wave: Int): Long {
+    fun windowFor(optionCount: Int, wave: Int, paceMs: Long = 0L): Long {
         val extras = (optionCount - BASE_OPTIONS).coerceAtLeast(0)
-        val sized = WINDOW_MS + extras * MS_PER_EXTRA_OPTION
+        val sized = WINDOW_MS + extras * MS_PER_EXTRA_OPTION + paceMs.coerceAtLeast(0L)
         val factor = (1f - (wave.coerceAtLeast(1) - 1) * WAVE_PRESSURE_PER_WAVE)
             .coerceAtLeast(MIN_WAVE_FACTOR)
         return (sized * factor).toLong().coerceAtLeast(MIN_WINDOW_MS)
