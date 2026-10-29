@@ -139,6 +139,7 @@ geo_pike_place_market	Medium	Pike Place Market, where fishmongers famously throw
 geo_mostar_old_bridge	Medium	Mostar's famous Old Bridge, destroyed in 1993 and later rebuilt, is in which country?	Bosnia and Herzegovina	North Macedonia	Montenegro	Croatia
 geo_japanese_city_golden	Medium	In which Japanese city is the Golden Pavilion, Kinkaku-ji?	Kyoto	Tokyo	Nara	Osaka
 geo_country_world_oldest	Medium	Which country has the world's oldest continuously inhabited cities, including Damascus?	Syria	Iraq	Egypt	Lebanon
+geo_city_painted_ladies	Medium	In which US city do the 'Painted Ladies', a famous row of colourful Victorian houses, stand?	San Francisco	Boston	Chicago	Philadelphia
 wh_timbuktu	Hard	In which country is the historic city of Timbuktu?	Mali	Niger	Chad	Mauritania
 geocmp_najdalej_poludnie	Hard	Which of these cities lies furthest south?	Auckland	Sydney	Cape Town	Buenos Aires
 geocmp_stolica_najdalej_poludnie	Hard	Which of these capitals lies furthest south?	Wellington	Canberra	Santiago	Pretoria
@@ -177,6 +178,8 @@ geo_santiago_calatrava_futuristic	Hard	Santiago Calatrava's futuristic City of A
 geo_hanging_houses_balconies	Hard	The 'Hanging Houses', with balconies jutting out over a gorge, are the symbol of which Spanish city?	Cuenca	Ronda	Toledo	Segovia
 geo_derinkuyu_ancient_underground	Hard	Derinkuyu, an ancient underground city deep enough to shelter about 20,000 people, is in which country?	Turkey	Iran	Jordan	Greece
 geo_2013_city_walkie	Hard	In 2013, which city's 'Walkie-Talkie' skyscraper reflected sunlight so strongly that it melted parts of a parked car?	London	Dubai	New York	Singapore
+geo_fuggerei_oldest_social	Hard	The Fuggerei, the oldest social housing still in use, where rent is still under 1 euro a year, is in which German city?	Augsburg	Nuremberg	Cologne	Hamburg
+geo_southern_italian_town	Hard	Which southern Italian town's ancient cave dwellings, the Sassi, were once called 'the shame of Italy'?	Matera	Alberobello	Lecce	Tropea
 geocmp_najwyzej_polozona_stolica	Expert	Which of these is the highest-lying capital city?	La Paz	Quito	Bogota	Mexico City
 geo_baku	Expert	Which national capital lies below sea level?	Baku	Cairo	Tehran	Tashkent
 geo_israeli_city_white	Expert	Which Israeli city is called 'the White City' for its thousands of Bauhaus buildings?	Tel Aviv	Haifa	Eilat	Jerusalem
@@ -196,3 +199,4 @@ geo_sobrino_botin_listed	Expert	Sobrino de Botin, listed as the world's oldest r
 geo_lakeside_austrian_village	Expert	Which lakeside Austrian village did a Chinese developer copy, full-size, in 2012?	Hallstatt	Zell am See	St. Wolfgang	Kitzbuhel
 geo_1950_circus_elephant	Expert	In 1950, a circus elephant called Tuffi jumped out of which German city's hanging monorail into the river below?	Wuppertal	Dortmund	Dresden	Cologne
 geo_country_great_mosque	Expert	In which country is the Great Mosque of Djenne, the world's largest mud-brick building?	Mali	Niger	Morocco	Senegal
+geo_nearly_all_residents	Expert	Nearly all the residents of Whittier, Alaska, live in what?	A single 14-storey building	Houseboats in the harbour	Underground bunkers	Old railway carriages

@@ -24,6 +24,7 @@ geo_continent_holds_both	Easy	Which continent holds both the highest mountain on
 geo_flying_east_london	Easy	Flying east from London to Tokyo, what do you need to do with your watch?	Put it forward	Put it back	Leave it alone	Put it back a day
 geo_meridian_line_greenwich	Easy	On the meridian line at Greenwich, visitors love to stand with one foot in each what?	The Eastern and Western Hemispheres	The Northern and Southern Hemispheres	Two different calendar days	Two different time zones
 geo_daylight_saving_time	Easy	When daylight saving time begins in spring, what happens to the clocks?	They go forward an hour	They go back an hour	They go forward two hours	They stop for one minute
+geo_49th_parallel_forms	Easy	The 49th parallel forms a long, dead-straight stretch of the border between which two countries?	The USA and Canada	The USA and Mexico	Russia and China	Argentina and Chile
 geo2_panstwo_dwa_konty	Medium	Which country spans two continents: Europe and Asia?	Turkey	Greece	Egypt	Cyprus
 geo3_pierwszy_dzien	Medium	Which country is the first in the world to start each new day?	Kiribati	New Zealand	Japan	Australia
 geocmp_rownik_kraj	Medium	Which of these countries does the equator cross?	Ecuador	Peru	Bolivia	Chile
@@ -71,6 +72,9 @@ geo_world_maps_printed	Medium	On world maps printed in China, Japan or Australia
 geo_continent_lying_entirely	Medium	Which is the only continent lying entirely in both the Southern and the Eastern Hemispheres?	Australia	Antarctica	Africa	South America
 geo_happens_noon_june	Medium	What happens at noon on the June solstice along the Tropic of Cancer?	The Sun stands directly overhead	The Sun never rises at all	The day lasts 24 hours	Shadows point due south
 geo_four_corners_monument	Medium	At the Four Corners Monument you can stand in four US states at once. Which of these is NOT one of them?	Nevada	Utah	Colorado	Arizona
+geo_roughly_share_earth_2	Medium	Roughly what share of the Earth's land is covered by glaciers and ice sheets?	About 10%	About 1%	About 30%	About 50%
+geo_around_world_eighty	Medium	In 'Around the World in Eighty Days', Phileas Fogg wins his bet because, travelling east, he has gained what?	A whole day	A whole week	An hour	A month
+geo_sydney_sees_new	Medium	When Sydney sees in the New Year with fireworks, roughly how long is it until midnight in London?	About 11 hours	About 1 hour	About 5 hours	About 20 hours
 geo2_rownolezniki_zwrotnik	Hard	What is the tropic in the southern hemisphere called?	Tropic of Capricorn	Tropic of Cancer	Arctic Circle	Prime Meridian
 geo2_greenwich	Hard	Which city does the prime meridian pass through?	London	Paris	Rome	Madrid
 geo3_linia_zmiany_daty	Hard	Where does the International Date Line run?	Through the middle of the Pacific, near the 180th meridian	Straight through Greenwich, on the edge of London	Along the equator, right round the globe	Along the Ural mountains and the Caspian
@@ -109,6 +113,11 @@ geo_rugby_small_town	Hard	Rugby, a small town that calls itself the geographical
 geo_tropic_cancer_crab	Hard	Why is the Tropic of Cancer named after a crab?	The June Sun once stood in the constellation Cancer	Early maps drew the line like a crab's claw	Sailors saw crabs swarm there each summer	Ptolemy named it after a sea monster
 geo_sailing_due_east	Hard	Sailing due east from New York City, which European country's coast would you reach first?	Portugal	France	Ireland	The United Kingdom
 geo_crossing_date_line	Hard	Crossing the date line, many evening flights from Tokyo land in Honolulu when, by the local calendar?	Earlier the same day than take-off	Late in the evening of the next day	Around midnight two days later	Exactly a week later
+geo_canadian_city_lies_2	Hard	Which Canadian city lies at roughly the same latitude as London?	Calgary	Toronto	Montreal	Halifax
+geo_state_lies_within	Hard	Which is the only US state that lies within the tropics?	Hawaii	Florida	Texas	Louisiana
+geo_survivors_magellan_voyage	Hard	When the survivors of Magellan's voyage round the world reached the Cape Verde Islands in 1522, what puzzled them?	Their log was a day behind	Their compass pointed south	Their maps were upside down	The stars had all moved
+geo_cities_lies_farthest	Hard	Which of these cities lies farthest north, if only just?	Edinburgh	Moscow	Copenhagen	Hamburg
+geo_roughly_southern_hemisphere	Hard	Roughly how much of the Southern Hemisphere is covered by ocean?	About 80%	About 55%	About 35%	About 20%
 geo_world_map_projection	Expert	Which world map projection, championed in the 1970s, shows countries at their true relative areas?	The Gall-Peters	The Mercator	The Robinson	The Winkel tripel
 geo_oldest_surviving_map	Expert	The oldest surviving map of the whole known world was made around 600 BC by which people?	The Babylonians	The Egyptians	The Greeks	The Phoenicians
 geo_agloe_hamlet_appeared	Expert	What was Agloe, a hamlet that appeared on maps of New York State from the 1930s?	A fake town to catch copycats	A town that sank into a lake	A ghost town of the gold rush	A town renamed after a war
@@ -129,3 +138,4 @@ geo_land_hemisphere_half	Expert	The 'land hemisphere', the half of the globe hol
 geo_tropic_cancer_markers	Expert	Why do the Tropic of Cancer markers on Mexican roads slowly become wrong?	The tropic creeps south about 15 m a year	The tropic creeps north about 1 km a year	The roads sink into the soft ground	The equator shifts with the seasons
 geo_1989_french_geographers	Expert	In 1989, French geographers placed the geographical centre of Europe near the capital of which country?	Lithuania	Poland	Belarus	Ukraine
 geo_uninhabited_islands_utc	Expert	Which uninhabited US islands, in the UTC-12 time zone, are the last places on Earth where each day ends?	Baker and Howland	Midway and Wake	Johnston and Palmyra	Guam and Saipan
+geo_boundary_between_earth	Expert	The boundary between the Earth's crust and mantle, the 'Moho', is named after a seismologist from which country?	Croatia	Russia	Japan	Italy

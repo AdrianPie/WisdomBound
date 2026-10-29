@@ -20,6 +20,9 @@ geo_australia_roughly_same	Easy	Australia is roughly the same size as which of t
 geo_queenstown_calls_itself	Easy	Queenstown, which calls itself 'the adventure capital of the world', is in which country?	New Zealand	Australia	Fiji	Canada
 geo_gold_coast_surf	Easy	The Gold Coast, famous for its surf beaches and theme parks, is in which Australian state?	Queensland	New South Wales	Victoria	Western Australia
 geo_australian_rock_ayers	Easy	Which Australian rock is also known by the name Ayers Rock?	Uluru	Kata Tjuta	Wave Rock	Mount Augustus
+geo_australia_new_zealand	Easy	Why are Australia and New Zealand nicknamed 'Down Under'?	They lie in the Southern Hemisphere	They lie below sea level	They were settled by convicts	They lie under the ozone hole
+geo_australian_city_nicknamed_2	Easy	Which Australian city is nicknamed 'the Harbour City'?	Sydney	Brisbane	Perth	Adelaide
+geo_country_covers_whole	Easy	Which is the only country that covers a whole continent by itself?	Australia	Antarctica	Greenland	New Zealand
 lmk_uluru_kraj	Medium	In which country is Uluru?	Australia	New Zealand	South Africa	Namibia
 geo_tahiti	Medium	Tahiti is part of which country's overseas territories?	France	Britain	The United States	New Zealand
 geo_country_aotearoa_land	Medium	Which country is known as Aotearoa, 'the land of the long white cloud'?	New Zealand	Australia	Fiji	Samoa
@@ -71,6 +74,9 @@ geo_barossa_valley_australia	Medium	The Barossa Valley, one of Australia's most 
 geo_1999_referendum_australians	Medium	In a 1999 referendum, Australians voted to keep the British monarch rather than turn their country into what?	A republic	A union with New Zealand	A one-chamber democracy	A federal kingdom
 geo_indian_pacific_train	Medium	The 'Indian Pacific' train crosses Australia from Sydney to which city?	Perth	Darwin	Adelaide	Brisbane
 geo_country_home_waitomo	Medium	Which country is home to the Waitomo caves lit by glowworms?	New Zealand	Australia	Fiji	Chile
+geo_great_ocean_road	Medium	The Great Ocean Road, a famous coastal drive, runs along the shore of which Australian state?	Victoria	New South Wales	Queensland	Western Australia
+geo_pacific_country_more	Medium	Which Pacific country has more languages per person than any other, over 100 for about 300,000 people?	Vanuatu	Fiji	Samoa	Tonga
+geo_country_produces_nearly	Medium	Which country produces nearly all of the world's precious opals?	Australia	New Zealand	Brazil	South Africa
 lmk_moai_kraj	Hard	The Moai statues of Easter Island belong to which country?	Chile	Peru	New Zealand	Argentina
 geo_cook_islands_niue	Hard	The Cook Islands and Niue are self-governing in 'free association' with which country?	New Zealand	Australia	Britain	France
 geo_country_once_new	Hard	Which country, once the New Hebrides, was ruled jointly by Britain and France?	Vanuatu	Fiji	New Caledonia	The Solomon Islands
@@ -111,6 +117,8 @@ geo_city_adelaide_queen	Hard	The city of Adelaide is named after the queen of wh
 geo_palau_marshall_islands	Hard	Palau, the Marshall Islands and Micronesia all use which currency?	The US dollar	The Australian dollar	The New Zealand dollar	The Japanese yen
 geo_pacific_nation_made_2	Hard	Which Pacific nation is made up mainly of two big islands, Upolu and Savai'i?	Samoa	Tonga	Fiji	Vanuatu
 geo_country_often_nicknamed	Hard	Which country is often nicknamed 'the Lucky Country'?	Australia	Ireland	Canada	Switzerland
+geo_tiny_island_nation	Hard	Which tiny island nation was known to 19th-century sailors as 'Pleasant Island'?	Nauru	Tuvalu	Niue	Palau
+geo_french_explorers_samoa	Hard	French explorers called Samoa by which name, after the skill of its canoe-handling people?	The Navigators' Islands	The Friendly Islands	The Society Islands	The Sandwich Islands
 geox_tuvalu_tv	Expert	Which tiny Pacific nation earns money from its '.tv' internet domain?	Tuvalu	Tonga	Tokelau	Taiwan
 geo_people_born_american	Expert	People born in American Samoa are not automatically US citizens. What are they instead?	US nationals	US residents	Protected persons	Commonwealth subjects
 geo_1933_australian_state	Expert	In 1933, which Australian state voted by a two-thirds majority to leave Australia?	Western Australia	Queensland	Tasmania	South Australia
@@ -130,3 +138,5 @@ geo_australia_coral_sea	Expert	Australia's Coral Sea Islands Territory has no pe
 geo_marble_bar_once	Expert	Marble Bar, which once had 160 days in a row above 37.8 C, is in which Australian state?	Western Australia	Queensland	South Australia	New South Wales
 geo_nan_madol_ruined	Expert	Nan Madol, a ruined city built on artificial islets of stacked basalt, is in which country?	Micronesia	Palau	The Marshall Islands	Kiribati
 geo_two_languages_official	Expert	Which two languages are official in New Zealand by law, English being official only by custom?	Maori and NZ Sign Language	Maori and Samoan	Maori and Tongan	Samoan and NZ Sign Language
+geo_kermadec_islands_halfway	Expert	The Kermadec Islands, about halfway from Auckland to Tonga, belong to which country?	New Zealand	Tonga	Fiji	Australia
+geo_rotuma_polynesian_island	Expert	Rotuma, a Polynesian island far to the north, is a dependency of which Melanesian country?	Fiji	Vanuatu	The Solomon Islands	Papua New Guinea

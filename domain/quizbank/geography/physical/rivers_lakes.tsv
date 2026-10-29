@@ -25,6 +25,8 @@ geo_river_flows_past_2	Easy	Which river flows past both Montreal and Quebec City
 geo_country_turquoise_lake	Easy	In which country is the turquoise Lake Louise, a famous Rockies beauty spot?	Canada	The USA	Switzerland	New Zealand
 geo_lakes_make_north	Easy	How many lakes make up North America's Great Lakes?	Five	Four	Six	Seven
 geo_great_river_flows	Easy	Which great river flows past Memphis, home of Elvis Presley's Graceland?	The Mississippi	The Missouri	The Ohio	The Tennessee
+geo_every_patrick_day	Easy	Every St Patrick's Day, which US city dyes the river through its downtown bright green?	Chicago	Boston	New York	Philadelphia
+geo_sea_galilee_jesus	Easy	The Sea of Galilee, where Jesus is said to have walked on water, is actually what?	A freshwater lake	A salty lagoon	A bay of the Mediterranean	A flooded volcanic crater
 geo2_wodospad_wiktorii	Medium	Victoria Falls lies on the border of which two countries?	Zambia and Zimbabwe	Kenya and Tanzania	South Africa and Botswana	Uganda and Rwanda
 wh_mezopotamia_rzeki	Medium	Between which rivers did Mesopotamia lie?	The Euphrates and the Tigris	The Nile and the Jordan	The Indus and the Ganges	The Danube and the Rhine
 geocmp_najbardziej_slone	Medium	Which of these bodies of water is the saltiest?	The Dead Sea	The Red Sea	The Mediterranean Sea	The Baltic Sea
@@ -88,6 +90,7 @@ geo_roughly_world_fresh_2	Medium	Roughly how much of the world's fresh water is 
 geo_river_meets_saone	Medium	Which river meets the Saone in the French city of Lyon?	The Rhone	The Loire	The Garonne	The Seine
 geo_crater_lake_deepest	Medium	Crater Lake, the deepest lake in the USA, fills a collapsed volcano in which state?	Oregon	Washington	Idaho	California
 geo_lorelei_rock_legendary	Medium	The Lorelei, a rock where a legendary siren lured boatmen to their doom, towers over which river?	The Rhine	The Danube	The Elbe	The Moselle
+geo_amazon_river_amazons	Medium	The Amazon River was named after the Amazons, warrior women from which mythology?	Greek	Norse	Inca	Aztec
 geo_bajkal	Hard	Which lake is the deepest in the world?	Baikal	Tanganyika	Caspian Sea	Superior
 geo2_jezioro_powierzchnia	Hard	Which lake has the largest surface area in the world?	The Caspian Sea	Lake Superior	Lake Baikal	Lake Victoria
 geo2_najwyzszy_wodospad	Hard	Which waterfall is the highest in the world?	Angel Falls	Niagara Falls	Iguazu Falls	Victoria Falls
@@ -140,6 +143,7 @@ geo_longest_river_canada	Hard	Which is the longest river in Canada?	The Mackenzi
 geo_river_flows_through_20	Hard	Which river flows through Bern?	Aare	Rhine	Rhone	Limmat
 geo_river_flows_through_21	Hard	Which river flows through Bordeaux?	Garonne	Loire	Dordogne	Seine
 geo_country_home_lake	Hard	Which country is home to Lake Retba, a pink lake near Dakar?	Senegal	Mauritania	Gambia	Morocco
+geo_largest_lake_united	Hard	Which is the largest lake in the United Kingdom by area?	Lough Neagh	Loch Lomond	Loch Ness	Windermere
 geo_kraj_bez_rzek	Expert	Which of these countries has not a single permanent river?	Saudi Arabia	Mongolia	Kazakhstan	Iran
 geo_titicaca	Expert	Lake Titicaca lies on the border of which two countries?	Peru and Bolivia	Chile and Argentina	Ecuador and Colombia	Brazil and Paraguay
 geo2_kaldera_toba	Expert	Where is Lake Toba, formed by a giant caldera?	On Sumatra	On Java	In Japan	In New Zealand
@@ -164,3 +168,4 @@ geo_1980_oil_rig	Expert	In 1980, an oil rig drilled into a salt mine and drained
 geo_spanish_river_runs	Expert	Which Spanish river runs blood-red after thousands of years of mining, and gave its name to a mining giant?	The Rio Tinto	The Guadiana	The Ebro	The Segura
 geo_river_flows_through_19	Expert	Which river flows through Madrid?	Manzanares	Tagus	Ebro	Guadiana
 geo_river_joins_danube	Expert	Which river joins the Danube at Belgrade?	The Sava	The Drava	The Tisza	The Morava
+geo_ogopogo_legendary_serpent	Expert	Ogopogo, a legendary serpent-like lake monster, is said to lurk in which Canadian lake?	Okanagan Lake	Lake Champlain	Lake Winnipeg	Great Bear Lake

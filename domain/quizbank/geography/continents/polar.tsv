@@ -22,6 +22,8 @@ geo_continent_native_reptiles	Easy	Which is the only continent with no native re
 geo_besides_coldest_antarctica	Easy	Besides being the coldest, Antarctica is also which of these?	The windiest continent	The rainiest continent	The flattest continent	The lowest continent
 geo_southern_lights_seen	Easy	What are the 'southern lights', seen from Antarctica and the far south, properly called?	The aurora australis	The aurora borealis	St Elmo's fire	The zodiacal light
 geo_summer_wrong_season	Easy	Why is summer the wrong season for seeing the northern lights in Lapland?	The sky never gets dark	The aurora stops in summer	Clouds always hide it	The Sun goes quiet
+geo_buildings_arctic_towns	Easy	Why are many buildings in Arctic towns raised on stilts or piles?	So their heat does not thaw the frozen ground	To keep polar bears from getting inside	To lift them above the spring floods	To protect them from earthquakes
+geo_ice_iceberg_salty	Easy	Is the ice of an iceberg salty or fresh?	Fresh, because it formed from snow	Salty, just like the sea around it	Salty at the bottom, fresh on top	Fresh only during the summer melt
 trv_pustynia_zimna	Medium	Counting cold deserts, which is the largest desert on Earth?	Antarctica	The Sahara	The Gobi	The Arabian Desert
 wld_najwieksza_wyspa	Medium	What is the largest island in the world (not counting Australia)?	Greenland	New Guinea	Borneo	Madagascar
 geox_ocean_najmniejszy	Medium	Which is the smallest of the world's oceans?	The Arctic Ocean	The Indian Ocean	The Southern Ocean	The Atlantic Ocean
@@ -70,6 +72,11 @@ geo_roughly_share_greenland	Medium	Roughly what share of Greenland's people are 
 geo_traditional_inuit_snow	Medium	Traditional Inuit snow goggles, carved from bone or wood, guard against snow blindness with what?	Narrow slits	Tinted ice lenses	Fur visors	Polished stone
 geo_polar_sailors_growler	Medium	To polar sailors, what is a 'growler'?	A small iceberg	A walrus bull	A sudden gale	A pressure ridge
 geo_greenland_national_day	Medium	Greenland's national day falls on which day of the year?	The summer solstice	The first sunrise after winter	The day the sea ice breaks up	Denmark's Constitution Day
+geo_antarctic_bases_call	Medium	What do Antarctic bases call the small crews who stay through the long, dark winter?	Winterovers	Darklings	Icemen	Long-nighters
+geo_pemmican_high_energy	Medium	What was pemmican, the high-energy food of many polar expeditions?	Dried meat pounded with fat	Frozen fish eggs in oil	Biscuits soaked in whale oil	Seal blubber set in jelly
+geo_north_magnetic_pole	Medium	At the north magnetic pole, which way does a freely hanging magnetic needle try to point?	Straight down	Straight up	Towards the Sun	Due south
+geo_antarctica_fierce_katabatic	Medium	What are Antarctica's fierce 'katabatic' winds?	Cold, heavy air pouring downhill off the ice	Warm winds blowing in from the ocean	Storms that circle the continent	Gusts caused by the polar night
+geo_gives_watermelon_snow	Medium	What gives 'watermelon snow', found on polar and mountain snowfields, its pink colour?	Algae living in the snow	Iron-rich desert dust	Ash from distant volcanoes	Krill washed ashore by storms
 geox_antarktyda_mroz	Hard	Where was the lowest natural temperature on Earth recorded?	Antarctica	Siberia	Greenland	Alaska
 geo_countries_official_territorial	Hard	How many countries have official territorial claims in Antarctica?	Seven	Three	Twelve	Twenty
 geo_three_countries_overlapping	Hard	Which three countries have overlapping claims to the Antarctic Peninsula?	Britain, Argentina and Chile	Norway, Chile and Argentina	Britain, Norway and France	Australia, Chile and Britain
@@ -108,6 +115,10 @@ geo_1977_soviet_arktika	Hard	In 1977, the Soviet 'Arktika' became the first surf
 geo_arctic_archipelago_soviet	Hard	Which Arctic archipelago was the Soviet Union's main site for its biggest nuclear bomb tests?	Novaya Zemlya	Franz Josef Land	Severnaya Zemlya	The New Siberian Islands
 geo_antarctica_world_best	Hard	Why is Antarctica the world's best hunting ground for meteorites?	Dark rocks stand out on the ice	More meteorites fall near the poles	The cold makes them magnetic	Its thin air cannot burn them up
 geo_scientists_find_new	Hard	How do scientists find new emperor penguin colonies from space?	By spotting brown droppings on the ice	By tracking the heat of the huddles	By picking up their calls by radio	By counting tracks in the snow
+geo_nunatak_antarctica_greenland	Hard	What is a 'nunatak' in Antarctica or Greenland?	A rocky peak poking up through the ice	A hidden crack deep in a glacier	A frozen lake of meltwater	A sled pulled by a team of dogs
+geo_sastrugi_polar_travellers	Hard	What are 'sastrugi', which polar travellers must struggle across?	Sharp ridges carved in snow by the wind	Wide cracks opening in the sea ice	Tiny ice crystals glittering in the air	Holes made in the ice by seals
+geo_antarctic_convergence_often	Hard	What is the 'Antarctic Convergence', often treated as the edge of the Antarctic region?	Where cold southern water meets warmer seas	The line where winter sea ice ends	The circle of latitude at 60 degrees south	The point where all time zones meet
+geo_princess_elisabeth_station	Hard	Princess Elisabeth Station, the first zero-emission research base in Antarctica, is run by which country?	Belgium	Norway	Germany	Japan
 geo2_najwiekszy_ladolod	Expert	Where is the world's largest ice sheet?	Antarctica	Greenland	Alaska	The Himalayas
 ext_wyspa_grenlandia	Expert	Greenland's ice sheet is thick enough to have done what to the land beneath?	Pushed its centre below sea level	Raised it into a plateau	Split it into two islands	Left it perfectly flat
 geo_vinson	Expert	What is the highest mountain in Antarctica?	Vinson Massif	Mount Erebus	Mount Kirkpatrick	Mount Terror
@@ -127,3 +138,5 @@ geo_inuktitut_word_iglu	Expert	In Inuktitut, what does the word 'iglu' actually 
 geo_kaffeklubben_island_often	Expert	Kaffeklubben Island, often called the northernmost land on Earth, was named after what?	A coffee club	A sled dog	A whaling ship	A Danish king
 geo_marks_ceremonial_south	Expert	What marks the 'Ceremonial South Pole', where visitors pose for photos?	A mirrored ball on a striped pole	A bronze bust of Amundsen	A ring of ice sculptures	A tall wooden cross
 geo_1898_crew_belgica	Expert	In 1898, the crew of the Belgica became the first people ever to do what?	Spend a winter in the Antarctic	Reach the South Magnetic Pole	Sight the Antarctic mainland	Climb an Antarctic peak
+geo_concordia_station_high	Expert	Concordia Station, high on the Antarctic plateau, is run jointly by France and which country?	Italy	Germany	Spain	Belgium
+geo_antarctica_don_juan	Expert	Why does Antarctica's Don Juan Pond almost never freeze, even at -40 C?	It is extremely salty	It sits on a hot volcano	It is fed by hot springs	Strong winds keep it moving

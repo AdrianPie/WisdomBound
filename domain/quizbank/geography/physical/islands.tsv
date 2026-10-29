@@ -28,6 +28,7 @@ geo_largest_canary_islands	Easy	Which is the largest of the Canary Islands?	Tene
 geo_island_football_boot	Easy	Which island is the 'football' that the 'boot' of Italy seems to be kicking?	Sicily	Sardinia	Corsica	Malta
 geo_costa_del_sol	Easy	The Costa del Sol, packed with holidaymakers around Malaga, is in which country?	Spain	Portugal	Italy	Greece
 geo_country_island_rhodes	Easy	To which country does the island of Rhodes belong?	Greece	Turkey	Cyprus	Italy
+geo_island_nicknamed_island	Easy	Which island is nicknamed 'the Island of the Gods'?	Bali	Java	Lombok	Sumatra
 geo2_morze_srodziemne_wyspa	Medium	Which Mediterranean island is the largest?	Sicily	Sardinia	Cyprus	Corsica
 geocmp_wyspa_druga	Medium	Which of these islands is the largest?	Borneo	Madagascar	Sumatra	Honshu
 lmk_galapagos_kraj	Medium	The Galapagos Islands belong to which country?	Ecuador	Peru	Colombia	Chile
@@ -75,6 +76,8 @@ geo_1963_1973_florida	Medium	From 1963 to 1973, Florida's rocket-launching Cape 
 geo_sapporo_giant_snow	Medium	Sapporo, famous for its giant snow and ice sculpture festival, is on which Japanese island?	Hokkaido	Honshu	Kyushu	Shikoku
 geo_long_baja_california	Medium	The long Baja California peninsula belongs to which country?	Mexico	The United States	Guatemala	Panama
 geo_khao_phing_kan	Medium	Khao Phing Kan, a limestone islet in Thailand's Phang Nga Bay, is better known by which nickname from a 1974 film?	James Bond Island	Indiana Jones Rock	Treasure Island	Skull Island
+geo_banned_michigan_mackinac	Medium	What has been banned on Michigan's Mackinac Island since 1898, leaving its streets to horses and bicycles?	Cars	Alcohol	Street lights	Dogs
+geo_tiny_scottish_island	Medium	Which tiny Scottish island gave its name to a famous style of knitting with colourful bands of pattern?	Fair Isle	Skye	Iona	Harris
 geo2_wyspa_borneo	Hard	Between how many countries is the island of Borneo divided?	Three	Two	Four	One
 geo2_najwiekszy_archipelag	Hard	Which country is the largest island nation in the world?	Indonesia	The Philippines	Japan	Madagascar
 geocmp_linia_brzegowa	Hard	Which country has the longest coastline?	Canada	Russia	Indonesia	Australia
@@ -112,6 +115,9 @@ geo_michael_mount_tidal	Hard	St Michael's Mount, a tidal island topped by a cast
 geo_greek_island_played	Hard	Which Greek island played the fictional island of Kalokairi in the 2008 film 'Mamma Mia!'?	Skopelos	Mykonos	Corfu	Rhodes
 geo_red_floating_torii	Hard	The famous red 'floating' torii gate that seems to stand in the sea at high tide is on which Japanese island?	Miyajima	Okinawa	Sado	Awaji
 geo_group_indonesian_islands	Hard	Which group of Indonesian islands was once the world's only source of nutmeg?	Banda Islands	Moluccas	Riau Islands	Bali
+geo_japan_okunoshima_now	Hard	Japan's Okunoshima, now overrun by tame rabbits, was secretly used for what before 1945?	Making poison gas	Testing atomic bombs	Training kamikaze pilots	Holding prisoners of war
+geo_hashima_abandoned_battleship	Hard	Hashima, the abandoned 'Battleship Island' that inspired the villain's lair in 'Skyfall', lies off which Japanese city?	Nagasaki	Hiroshima	Osaka	Sendai
+geo_tynwald_often_oldest	Hard	Tynwald, often called the oldest continuous parliament in the world, governs which island?	The Isle of Man	Iceland	The Faroe Islands	Jersey
 geo2_polwysep_najwiekszy	Expert	Which peninsula is the largest in the world?	The Arabian Peninsula	The Indian Peninsula	Scandinavia	The Balkan Peninsula
 geocmp_najwiecej_wysp	Expert	Which country is made up of the most islands?	Sweden	Indonesia	The Philippines	Japan
 dpt_geo_fiord	Expert	How does a fjord form?	Ice carves a valley, sea floods it	A coral reef closes off a bay	A landslide dams a river mouth	A desert river cuts a canyon
@@ -130,3 +136,5 @@ geo_norway_north_cape	Expert	Why is Norway's famous North Cape not truly the nor
 geo_manitoulin_largest_island	Expert	Manitoulin, the largest island in any lake on Earth, lies in which of the Great Lakes?	Lake Huron	Lake Superior	Lake Michigan	Lake Ontario
 geo_ilha_queimada_grande	Expert	Ilha da Queimada Grande, nicknamed 'Snake Island' and closed to visitors, lies off which country?	Brazil	Mexico	Colombia	Venezuela
 geo_scottish_island_scheduled	Expert	On which Scottish island do scheduled passenger flights land on a beach, timed by the tides?	Barra	Skye	Mull	Arran
+geo_grenen_sandy_tip	Expert	At Grenen, the sandy tip of Denmark near Skagen, visitors can stand where which two seas meet?	The Skagerrak and the Kattegat	The Kattegat and the Oresund	The Skagerrak and the Norwegian Sea	The Kattegat and the Bay of Kiel
+geo_small_island_sebatik	Expert	The small island of Sebatik, off the coast of Borneo, is split between Indonesia and which country?	Malaysia	Brunei	The Philippines	Singapore

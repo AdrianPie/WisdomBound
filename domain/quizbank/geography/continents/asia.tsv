@@ -22,6 +22,9 @@ geo_sherpa_people_everest	Easy	The Sherpa people, famous as Everest guides, most
 geo_country_borders_two	Easy	Which country borders only two other countries, Russia and China?	Mongolia	Kazakhstan	North Korea	Kyrgyzstan
 geo_india_china_asian	Easy	After India and China, which Asian country has the most people?	Indonesia	Pakistan	Japan	Bangladesh
 geo_self_governing_island	Easy	Which self-governing island does China claim as one of its provinces?	Taiwan	Jeju	Okinawa	Sri Lanka
+geo_luzon_visayas_mindanao	Easy	Luzon, the Visayas and Mindanao are the three main island groups of which country?	The Philippines	Indonesia	Malaysia	Japan
+geo_historic_region_bengal	Easy	The historic region of Bengal is split between India and which country?	Bangladesh	Pakistan	Myanmar	Nepal
+geo_country_often_world	Easy	Which country is often called 'the world's largest democracy'?	India	Indonesia	The USA	Brazil
 wh_jedwabny_szlak	Medium	Which two regions did the Silk Road connect?	China and Europe	India and Africa	Persia and Scandinavia	Japan and America
 geo_syjam	Medium	Which country was known as Siam until 1939?	Thailand	Vietnam	Cambodia	Laos
 geo_tygrysy_indie	Medium	Which country is home to the most wild tigers?	India	Russia	Indonesia	Bangladesh
@@ -74,6 +77,8 @@ geo_qatar_land_border	Medium	Qatar's only land border is with which country?	Sau
 geo_country_land_border	Medium	Which country's land border is almost all with India, apart from a short stretch with Myanmar?	Bangladesh	Nepal	Bhutan	Pakistan
 geo_country_home_ancient	Medium	Which country is home to the ancient ruins of Persepolis?	Iran	Iraq	Turkey	Afghanistan
 geo_island_shared_between	Medium	Which island is shared between Indonesia and East Timor?	Timor	Borneo	Flores	Sumba
+geo_kurdish_people_live	Medium	The Kurdish people live mainly across Turkey, Iraq, Iran and which other country?	Syria	Jordan	Lebanon	Saudi Arabia
+geo_kalimantan_largest_part	Medium	Kalimantan, the largest part of the island of Borneo, belongs to which country?	Indonesia	Malaysia	Brunei	The Philippines
 geo_cejlon	Hard	Which country was called Ceylon until 1972?	Sri Lanka	Bangladesh	Myanmar	Malaysia
 geo_wrota_piekiel	Hard	In which country does the 'Door to Hell' gas crater keep burning?	Turkmenistan	Kazakhstan	Iran	Azerbaijan
 geox_bhutan	Hard	Which Himalayan kingdom measures its progress in 'Gross National Happiness'?	Bhutan	Nepal	Tibet	Sikkim
@@ -112,6 +117,9 @@ geo_jaffna_peninsula_heartland	Hard	The Jaffna Peninsula, heartland of the Tamil
 geo_country_officially_recognises	Hard	Which country officially recognises exactly 56 ethnic groups among its people?	China	India	Indonesia	Russia
 geo_pashtuns_largest_ethnic	Hard	The Pashtuns are the largest ethnic group of which country?	Afghanistan	Pakistan	Iran	Tajikistan
 geo_country_calls_itself_6	Hard	Which country calls itself 'Daehan Minguk'?	South Korea	North Korea	Japan	Mongolia
+geo_hadhramaut_region_mud	Hard	Hadhramaut, a region famous for its mud-brick 'skyscraper' towns, lies in which country?	Yemen	Oman	Saudi Arabia	The UAE
+geo_anatolia_turkey_asian	Hard	Anatolia, Turkey's Asian heartland, gets its name from a Greek word meaning what?	Sunrise	High plain	Land of horses	Golden fields
+geo_island_country_linked	Hard	Which island country is linked to Saudi Arabia by a 25 km causeway?	Bahrain	Qatar	Kuwait	Oman
 geo2_linia_wallace	Expert	What does the Wallace Line separate?	Asian fauna from Australian fauna	Pacific time zones	African tectonic plates	Humid climate from dry climate
 geo_russian_republic_largest	Expert	Which Russian republic is the largest country subdivision in the world, bigger than Argentina?	Sakha (Yakutia)	Komi	Buryatia	Tuva
 geo_enclave_riddled_fergana	Expert	The enclave-riddled Fergana Valley is shared by Uzbekistan, Kyrgyzstan and which other country?	Tajikistan	Kazakhstan	Turkmenistan	Afghanistan
@@ -131,3 +139,5 @@ geo_roughly_share_uae	Expert	Roughly what share of the UAE's land area does the 
 geo_gilgit_baltistan_home	Expert	Gilgit-Baltistan, home to K2 and the Karakoram Highway, is administered by which country?	Pakistan	India	China	Afghanistan
 geo_oecusse_exclave_timor	Expert	Oecusse, an exclave of Timor-Leste, is surrounded on land by which country?	Indonesia	Australia	Papua New Guinea	Malaysia
 geo_aksai_chin_high	Expert	Aksai Chin, a high plateau claimed by India, is controlled by which country?	China	Pakistan	Nepal	Bhutan
+geo_outer_manchuria_lands	Expert	'Outer Manchuria', the lands China gave up by treaties in 1858-1860, now belongs to which country?	Russia	Mongolia	North Korea	Kazakhstan
+geo_indian_state_almost	Expert	Which Indian state is almost enclosed by Bangladesh, which surrounds it on three sides?	Tripura	Mizoram	Meghalaya	Manipur
