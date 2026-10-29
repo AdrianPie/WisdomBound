@@ -390,7 +390,12 @@ object PopCultureQuestions {
         q("pop_film_studio_logo_3", "Which film studio's logo shows the Earth turning in space?", "Universal", listOf("Paramount", "Columbia", "Warner Bros."), E),
         q("pop_crisps_come_tall", "Which crisps come in a tall tube with a moustached man on the label?", "Pringles", listOf("Doritos", "Lay's", "Cheetos"), E),
         q("pop_game_players_try", "In which game do players try to sink each other's hidden fleet on a grid?", "Battleship", listOf("Risk", "Stratego", "Othello"), E),
-        q("pop_sportswear_brand_logo", "Which sportswear brand's logo is a 'swoosh'?", "Nike", listOf("Puma", "Reebok", "Adidas"), E)
+        q("pop_sportswear_brand_logo", "Which sportswear brand's logo is a 'swoosh'?", "Nike", listOf("Puma", "Reebok", "Adidas"), E),
+        q("pop_frozen_olaf_snowman", "In 'Frozen', what does Olaf the snowman say he likes?", "Warm hugs", listOf("Snowball fights", "Ice cream", "Hot chocolate"), E),
+        q("pop_marvel_villain_wipes", "Which Marvel villain wipes out half of all life with a snap of his fingers?", "Thanos", listOf("Ultron", "Loki", "Red Skull"), E),
+        q("pop_sesame_street_character", "Which 'Sesame Street' character sings about his beloved 'Rubber Duckie'?", "Ernie", listOf("Bert", "Elmo", "Grover"), E),
+        q("pop_judge_became_blunt", "Which TV judge became famous for blunt put-downs on 'American Idol' and 'The X Factor'?", "Simon Cowell", listOf("Piers Morgan", "Gordon Ramsay", "Graham Norton"), E),
+        q("pop_zootopia_kind_animal", "In 'Zootopia', what kind of animal is the con artist Nick Wilde?", "A fox", listOf("A wolf", "A weasel", "A coyote"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -896,7 +901,17 @@ object PopCultureQuestions {
         q("pop_sonic_two_tailed", "What is the name of Sonic's two-tailed fox friend?", "Tails", listOf("Knuckles", "Amy", "Shadow"), M),
         q("pop_video_game_series_2", "Which video game series follows the assassin Ezio Auditore?", "Assassin's Creed", listOf("Hitman", "Dishonored", "Thief"), M),
         q("pop_obelix_little_dog", "What is the name of Obelix's little dog?", "Dogmatix", listOf("Snowy", "Rantanplan", "Pluto"), M),
-        q("pop_forest_spirit_mascot", "Which forest spirit is the mascot of Studio Ghibli?", "Totoro", listOf("No-Face", "Calcifer", "Kodama"), M)
+        q("pop_forest_spirit_mascot", "Which forest spirit is the mascot of Studio Ghibli?", "Totoro", listOf("No-Face", "Calcifer", "Kodama"), M),
+        q("pop_goombas_mario_common", "What are Goombas, Mario's most common enemies?", "Walking mushrooms", listOf("Angry turtles", "Living rocks", "Fire spirits"), M),
+        q("pop_simba_lion_king", "What does 'Simba', the name of the Lion King's hero, mean in Swahili?", "Lion", listOf("King", "Brave", "Sun"), M),
+        q("pop_money_heist_robbers", "In 'Money Heist', what are the robbers' code names?", "Names of cities", listOf("Names of planets", "Names of painters", "Names of colours"), M),
+        q("pop_2017_meme_photo", "Which 2017 meme photo shows a man turning to ogle a passing woman while his girlfriend glares at him?", "Distracted Boyfriend", listOf("Hide the Pain Harold", "Success Kid", "Bad Luck Brian"), M),
+        q("pop_spongebob_squarepants_instrument", "In 'SpongeBob SquarePants', which instrument does Squidward play?", "The clarinet", listOf("The trumpet", "The violin", "The tuba"), M),
+        q("pop_pink_pokemon_transform", "Which pink Pokemon can transform into a copy of any other Pokemon?", "Ditto", listOf("Jigglypuff", "Clefairy", "Slowpoke"), M),
+        q("pop_minecraft_tall_black", "In Minecraft, which tall black mob turns hostile if you look it in the eyes?", "The Enderman", listOf("The Wither", "The Creeper", "The Ghast"), M),
+        q("pop_band_made_cartoon", "Which band is made up of the cartoon members 2-D, Murdoc, Noodle and Russel?", "Gorillaz", listOf("Daft Punk", "The Archies", "The Monkees"), M),
+        q("pop_empire_strikes_back", "In 'The Empire Strikes Back', what does Luke lose in his lightsaber duel with Darth Vader?", "His right hand", listOf("His left leg", "His sight", "His left ear"), M),
+        q("pop_despicable_gru_plan", "In 'Despicable Me', what does Gru plan to steal?", "The Moon", listOf("The Crown Jewels", "The Mona Lisa", "The Sun"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -1166,7 +1181,30 @@ object PopCultureQuestions {
         q("pop_bar_met_mother", "What is the name of the bar in 'How I Met Your Mother'?", "MacLaren's", listOf("Central Perk", "Paddy's Pub", "Cheers"), H),
         q("pop_mickey_mouse_original", "What was Mickey Mouse's original name, according to Disney legend?", "Mortimer", listOf("Marvin", "Morris", "Milton"), H),
         q("pop_tintin_dog_original", "What is the name of Tintin's dog in the original Belgian comic?", "Milou", listOf("Pif", "Idefix", "Rantanplan"), H),
-        q("pop_belgian_artist_created", "Which Belgian artist created the Smurfs?", "Peyo", listOf("Herge", "Franquin", "Morris"), H)
+        q("pop_belgian_artist_created", "Which Belgian artist created the Smurfs?", "Peyo", listOf("Herge", "Franquin", "Morris"), H),
+        q("pop_psycho_1960_used", "In 'Psycho' (1960), what was used as the blood in the black-and-white shower scene?", "Chocolate syrup", listOf("Tomato ketchup", "Red wine", "Beetroot juice"), H),
+        q("pop_vehicle_toy_story", "Which vehicle from 'Toy Story' turns up as a hidden joke in nearly every Pixar film?", "The Pizza Planet truck", listOf("Andy's mum's minivan", "The Al's Toy Barn van", "Sid's skateboard"), H),
+        q("pop_actor_originally_cast", "Which actor was originally cast as Marty McFly and filmed for weeks before being replaced by Michael J. Fox?", "Eric Stoltz", listOf("Matthew Broderick", "John Cusack", "Charlie Sheen"), H),
+        q("pop_actor_choice_indiana", "Which actor was the first choice for Indiana Jones but was tied up by the TV series 'Magnum, P.I.'?", "Tom Selleck", listOf("Burt Reynolds", "Nick Nolte", "Jeff Bridges"), H),
+        q("pop_trivial_pursuit_invented", "Trivial Pursuit was invented by two journalists from which country?", "Canada", listOf("The United States", "Australia", "Ireland"), H),
+        q("pop_block_stacking_game", "The name of the block-stacking game Jenga comes from a word meaning 'build' in which language?", "Swahili", listOf("Japanese", "Hindi", "Maori"), H),
+        q("pop_under_rubik_cube", "Under which name was the Rubik's Cube first sold in its home country?", "The Magic Cube", listOf("The Puzzle Box", "The Colour Cube", "The Mind Cube"), H),
+        q("pop_barbie_surname", "What is Barbie's surname?", "Roberts", listOf("Carson", "Miller", "Stevens"), H),
+        q("pop_band_took_joke", "Which band took its name from the joke that it would go down like a 'lead balloon'?", "Led Zeppelin", listOf("Deep Purple", "Black Sabbath", "Iron Butterfly"), H),
+        q("pop_rolling_stones_took", "The Rolling Stones took their name from a song by which blues musician?", "Muddy Waters", listOf("B. B. King", "Robert Johnson", "Howlin' Wolf"), H),
+        q("pop_band_drummer_lost", "Which band's drummer lost an arm in a 1984 car crash and went on playing with a custom kit?", "Def Leppard", listOf("Whitesnake", "Bon Jovi", "Motley Crue"), H),
+        q("pop_star_changed_unpronounceable", "Which star changed his name to an unpronounceable symbol in 1993 during a fight with his record label?", "Prince", listOf("George Michael", "Beck", "Sting"), H),
+        q("pop_singer_performed_live", "Which singer performed at Live Aid in both London and Philadelphia on the same day, flying between them on Concorde?", "Phil Collins", listOf("Elton John", "Sting", "David Bowie"), H),
+        q("pop_little_mermaid_ariel_2", "In 'The Little Mermaid', what does Ariel's friend Scuttle call a fork?", "A dinglehopper", listOf("A snarfblatt", "A thingamabob", "A whozit"), H),
+        q("pop_seven_dwarfs_disney", "Which of the Seven Dwarfs in Disney's 'Snow White' never speaks?", "Dopey", listOf("Bashful", "Sleepy", "Happy"), H),
+        q("pop_finding_nemo_address", "In 'Finding Nemo', which address does Dory keep repeating?", "42 Wallaby Way, Sydney", listOf("12 Coral Street, Cairns", "7 Reef Road, Brisbane", "99 Harbour Lane, Perth"), H),
+        q("pop_friends_ross_say", "In 'Friends', whose name does Ross say at the altar instead of his bride Emily's?", "Rachel's", listOf("Monica's", "Julie's", "Carol's"), H),
+        q("pop_friends_joey_tribbiani", "In 'Friends', what does Joey Tribbiani famously refuse to share?", "His food", listOf("His apartment", "His girlfriends", "His TV remote"), H),
+        q("pop_game_thrones_saying", "In 'Game of Thrones', what does the saying 'Valar morghulis' mean?", "All men must die", listOf("Winter is coming", "Fire and blood", "We do not sow"), H),
+        q("pop_fawlty_towers_city", "In 'Fawlty Towers', which city does the hapless waiter Manuel come from?", "Barcelona", listOf("Madrid", "Seville", "Valencia"), H),
+        q("pop_empire_strikes_back_2", "In 'The Empire Strikes Back', what does Han Solo reply when Leia tells him 'I love you'?", "'I know.'", listOf("'Me too.'", "'I'll be back.'", "'Not now.'"), H),
+        q("pop_goldfinger_bond_ally", "In 'Goldfinger', how is Bond's ally Jill Masterson killed?", "Covered in gold paint", listOf("Thrown from a plane", "Bitten by a snake", "Crushed in a car"), H),
+        q("pop_legend_zelda_old", "In the first 'Legend of Zelda', what does the old man in the cave hand Link, saying 'It's dangerous to go alone'?", "A sword", listOf("A shield", "A map", "A lantern"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -1265,6 +1303,22 @@ object PopCultureQuestions {
         q("pop_1934_film_win", "Which 1934 film was the first to win all five top Oscars?", "It Happened One Night", listOf("Gone with the Wind", "Casablanca", "Wings"), X),
         q("pop_bruno_mars_real", "What is Bruno Mars's real name?", "Peter Hernandez", listOf("Bruno Fernandez", "Marcus Lopez", "Miguel Rodriguez"), X),
         q("pop_fantastic_four_member", "Which Fantastic Four member's catchphrase is 'It's clobberin' time!'?", "The Thing", listOf("The Human Torch", "Mister Fantastic", "The Invisible Woman"), X),
-        q("pop_designer_1947_new", "Which designer's 1947 'New Look' brought back full skirts and tiny waists after the war?", "Christian Dior", listOf("Coco Chanel", "Yves Saint Laurent", "Cristobal Balenciaga"), X)
+        q("pop_designer_1947_new", "Which designer's 1947 'New Look' brought back full skirts and tiny waists after the war?", "Christian Dior", listOf("Coco Chanel", "Yves Saint Laurent", "Cristobal Balenciaga"), X),
+        q("pop_ben_burtt_created", "Ben Burtt created the lightsaber hum by mixing a TV set's buzz with the hum of what?", "An idling film projector", listOf("A refrigerator compressor", "A vacuum cleaner", "An electric razor"), X),
+        q("pop_buddy_ebsen_tin", "Why did Buddy Ebsen, the first Tin Man of 'The Wizard of Oz' (1939), have to leave the film?", "His aluminium make-up poisoned his lungs", listOf("He broke a leg falling off the set", "He was drafted into the army", "He refused to wear the heavy suit"), X),
+        q("pop_code_a113_hidden", "The code 'A113', hidden in every Pixar film, refers to what?", "A classroom at the CalArts college", listOf("The studio's first office number", "John Lasseter's car number plate", "A room in Disney's old studio"), X),
+        q("pop_pac_man_came", "What was Pac-Man called when it first came out in Japan?", "Puck-Man", listOf("Paku-Man", "Pizza-Man", "Chomp-Man"), X),
+        q("pop_band_recorded_love", "Which band first recorded 'I Love Rock 'n' Roll', years before Joan Jett's hit?", "The Arrows", listOf("The Runaways", "The Sweet", "The Rubettes"), X),
+        q("pop_princess_zelda_wife", "Princess Zelda was named after the wife of which writer?", "F. Scott Fitzgerald", listOf("Ernest Hemingway", "J. R. R. Tolkien", "Edgar Allan Poe"), X),
+        q("pop_nirvana_smells_like", "Nirvana's 'Smells Like Teen Spirit' took its title from what?", "A brand of deodorant", listOf("A school cheerleading chant", "A slogan on a beer can", "A line in a horror film"), X),
+        q("pop_beatles_said_pun", "The Beatles' name is said to be a pun inspired by which band's insect name?", "Buddy Holly's Crickets", listOf("The Spiders", "The Hornets", "The Bumblebees"), X),
+        q("pop_duran_duran_took", "Duran Duran took its name from a villain in which 1968 science-fiction film?", "Barbarella", listOf("Planet of the Apes", "2001: A Space Odyssey", "Fantastic Voyage"), X),
+        q("pop_recorded_hound_dog", "Who first recorded 'Hound Dog', years before Elvis Presley's hit?", "Big Mama Thornton", listOf("Etta James", "Bessie Smith", "Ruth Brown"), X),
+        q("pop_wrote_recorded_girls", "Who wrote and first recorded 'Girls Just Want to Have Fun', later Cyndi Lauper's hit?", "Robert Hazard", listOf("Bruce Springsteen", "Billy Joel", "Tom Petty"), X),
+        q("pop_mace_windu_wield", "Why does Mace Windu wield a purple lightsaber in the 'Star Wars' prequels?", "Samuel L. Jackson asked for one", listOf("It marked him as a Sith spy", "It was a gift from Yoda", "Blue looked bad on camera"), X),
+        q("pop_actor_played_three", "Which actor played three roles, including the US President, in 'Dr. Strangelove' (1964)?", "Peter Sellers", listOf("Alec Guinness", "George C. Scott", "Peter Ustinov"), X),
+        q("pop_silent_film_comedian", "Which silent-film comedian dangled from the hands of a clock high above the street in 'Safety Last!' (1923)?", "Harold Lloyd", listOf("Buster Keaton", "Charlie Chaplin", "Stan Laurel"), X),
+        q("pop_1926_german_silhouette", "Which 1926 German silhouette film is the oldest surviving animated feature?", "The Adventures of Prince Achmed", listOf("Gertie the Dinosaur", "The Cabinet of Dr. Caligari", "The Thief of Bagdad"), X),
+        q("pop_gravestone_reads_all", "Whose gravestone reads 'That's All Folks'?", "Mel Blanc", listOf("Walt Disney", "Chuck Jones", "Tex Avery"), X)
     )
 }

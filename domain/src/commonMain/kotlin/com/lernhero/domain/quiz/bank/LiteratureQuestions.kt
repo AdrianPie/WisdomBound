@@ -222,7 +222,13 @@ object LiteratureQuestions {
         q("lit_wizard_character_wants", "In 'The Wizard of Oz', which character wants a brain?", "The Scarecrow", listOf("The Tin Man", "The Cowardly Lion", "Toto"), E),
         q("lit_wrote_war_worlds", "Who wrote 'War of the Worlds'?", "H. G. Wells", listOf("Jules Verne", "Arthur C. Clarke", "Isaac Asimov"), E),
         q("lit_character_thousand_nights", "Which character from 'One Thousand and One Nights' finds a cave of treasure?", "Ali Baba", listOf("Aladdin", "Sinbad", "Scheherazade"), E),
-        q("lit_very_short_novel", "What is the name of the very short novel by Kafka in which Gregor Samsa becomes an insect?", "The Metamorphosis", listOf("The Trial", "The Castle", "The Judgment"), E)
+        q("lit_very_short_novel", "What is the name of the very short novel by Kafka in which Gregor Samsa becomes an insect?", "The Metamorphosis", listOf("The Trial", "The Castle", "The Judgment"), E),
+        q("lit_edward_lear_poem", "In Edward Lear's poem, in what do the Owl and the Pussy-cat go to sea?", "A pea-green boat", listOf("A leaky sieve", "A wooden shoe", "A silver teapot"), E),
+        q("lit_years_alone_island", "After years alone on his island, which sight throws Robinson Crusoe into terror?", "A man's footprint on the shore", listOf("A message in a bottle", "A volcano starting to smoke", "A tiger's paw prints"), E),
+        q("lit_tchaikovsky_piece_calls", "Which Tchaikovsky piece calls for real cannon fire?", "The 1812 Overture", listOf("Swan Lake", "The Nutcracker", "Romeo and Juliet"), E),
+        q("lit_unusual_andersen_steadfast", "What is unusual about Andersen's steadfast tin soldier?", "He has only one leg", listOf("He has no face painted on", "He is made of gold", "He can talk to people"), E),
+        q("lit_andersen_fairy_tale", "In Andersen's fairy tale, where is the tiny girl Thumbelina born?", "Inside a flower", listOf("Under a toadstool", "In a bird's nest", "In a snail shell"), E),
+        q("lit_scarlet_letter_letter", "In 'The Scarlet Letter', which letter is Hester Prynne made to wear on her dress?", "A", listOf("S", "H", "X"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -570,7 +576,20 @@ object LiteratureQuestions {
         q("lit_job_antoine_saint", "Which job did Antoine de Saint-Exupery have besides writing?", "Pilot", listOf("Sailor", "Doctor", "Teacher"), M),
         q("lit_french_poet_wrote", "Which French poet wrote fables like 'The Tortoise and the Hare' in verse?", "Jean de La Fontaine", listOf("Charles Perrault", "Moliere", "Racine"), M),
         q("lit_author_published_robert", "Which author published 'Robert Galbraith' crime novels under a pen name?", "J. K. Rowling", listOf("Stephen King", "Agatha Christie", "Anne Rice"), M),
-        q("lit_horror_writer_once", "Which horror writer once published as Richard Bachman?", "Stephen King", listOf("Dean Koontz", "Clive Barker", "Peter Straub"), M)
+        q("lit_horror_writer_once", "Which horror writer once published as Richard Bachman?", "Stephen King", listOf("Dean Koontz", "Clive Barker", "Peter Straub"), M),
+        q("lit_treasure_island_pirates", "In 'Treasure Island', what do pirates hand a man as a deadly warning?", "The black spot", listOf("A white feather", "A torn playing card", "A bent silver coin"), M),
+        q("lit_kipling_just_stories", "In Kipling's 'Just So Stories', how does the Elephant's Child get its long trunk?", "A crocodile pulls its nose", listOf("It sniffs too much pepper", "A python ties a knot in it", "It reaches for high fruit"), M),
+        q("lit_canadian_island_anne", "On which Canadian island is 'Anne of Green Gables' set?", "Prince Edward Island", listOf("Vancouver Island", "Newfoundland", "Cape Breton Island"), M),
+        q("lit_tolstoy_heroine_anna", "How does Tolstoy's heroine Anna Karenina end her life?", "She throws herself under a train", listOf("She drinks a vial of poison", "She drowns herself in a river", "She shoots herself with a pistol"), M),
+        q("lit_wedding_march_played", "The 'Wedding March' played as many couples leave church comes from Mendelssohn's music for which Shakespeare play?", "A Midsummer Night's Dream", listOf("The Taming of the Shrew", "Much Ado About Nothing", "As You Like It"), M),
+        q("lit_tune_twinkle_twinkle", "The tune of 'Twinkle, Twinkle, Little Star', on which Mozart wrote variations, comes from a folk song of which country?", "France", listOf("Germany", "England", "Austria"), M),
+        q("lit_alexander_pushkin_die", "How did Alexander Pushkin die in 1837?", "He was shot in a duel", listOf("He drowned in the Neva", "He died of cholera", "He was executed for treason"), M),
+        q("lit_antonio_vivaldi_priest", "Antonio Vivaldi was a priest nicknamed 'the Red Priest'. Why?", "He had red hair", listOf("He wore a red cassock", "He drank red wine at Mass", "He was a revolutionary"), M),
+        q("lit_comic_fantasy_novels", "In the comic fantasy novels, what carries the flat Discworld through space?", "Four elephants on a giant turtle", listOf("A dragon coiled around its edge", "Seven whales swimming in a ring", "The back of a sleeping giant"), M),
+        q("lit_bengal_tiger_sharing", "What is the name of the Bengal tiger sharing the lifeboat in 'Life of Pi'?", "Richard Parker", listOf("Shere Khan", "Mister Bengal", "Captain Stripes"), M),
+        q("lit_story_sherlock_holmes", "In which story does Sherlock Holmes make his very first appearance?", "A Study in Scarlet", listOf("The Sign of the Four", "The Hound of the Baskervilles", "A Scandal in Bohemia"), M),
+        q("lit_riddle_mad_hatter", "Which riddle does the Mad Hatter ask Alice, leaving it unanswered in the book?", "'Why is a raven like a writing-desk?'", listOf("'What has keys but opens no locks?'", "'What runs but never walks?'", "'Why does a mouse wear no hat?'"), M),
+        q("lit_world_war_writing", "During World War II, before writing for children, Roald Dahl served as what?", "An RAF fighter pilot", listOf("A naval codebreaker", "An army cook", "A war correspondent"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -773,7 +792,37 @@ object LiteratureQuestions {
         q("lit_under_pen_bronte", "Under what pen name did the Bronte sisters first publish?", "Currer, Ellis and Acton Bell", listOf("George, Edward and Arthur Eliot", "Brown, Brook and Bell", "The Haworth Sisters"), H),
         q("lit_french_author_real", "Which French author's real name was Francois-Marie Arouet?", "Voltaire", listOf("Moliere", "Stendhal", "Rousseau"), H),
         q("lit_french_playwright_real", "Which French playwright's real name was Jean-Baptiste Poquelin?", "Moliere", listOf("Voltaire", "Racine", "Corneille"), H),
-        q("lit_american_author_wrote", "Which American author wrote short stories with twist endings under the name O. Henry?", "William Sydney Porter", listOf("Ambrose Bierce", "Bret Harte", "Washington Irving"), H)
+        q("lit_american_author_wrote", "Which American author wrote short stories with twist endings under the name O. Henry?", "William Sydney Porter", listOf("Ambrose Bierce", "Bret Harte", "Washington Irving"), H),
+        q("lit_surviving_two_plane", "After surviving two plane crashes in Africa on consecutive days in 1954, which author got to read his own obituaries?", "Ernest Hemingway", listOf("F. Scott Fitzgerald", "John Steinbeck", "William Faulkner"), H),
+        q("lit_agatha_christie_pick", "Where did Agatha Christie pick up her expert knowledge of poisons?", "Working in a hospital dispensary", listOf("Studying chemistry at university", "Assisting a police pathologist", "Helping in her father's pharmacy"), H),
+        q("lit_author_publicly_backed", "Which famous author publicly backed the Cottingley Fairies photographs, faked by two girls, as genuine?", "Arthur Conan Doyle", listOf("H. G. Wells", "J. M. Barrie", "Rudyard Kipling"), H),
+        q("lit_tolkien_lewis_friends", "What did Tolkien, C. S. Lewis and their friends call their Oxford circle that read work aloud?", "The Inklings", listOf("The Bloomsbury Group", "The Apostles", "The Lost Generation"), H),
+        q("lit_1824_premiere_ninth", "At the 1824 premiere of his Ninth Symphony, why did a singer turn Beethoven round to face the audience?", "He could not hear their applause", listOf("The emperor had entered his box", "He had dozed off in the finale", "The audience had started booing"), H),
+        q("lit_mozart_said_written", "At 14, Mozart is said to have written down which closely guarded piece from memory after hearing it in the Sistine Chapel?", "Allegri's 'Miserere'", listOf("Palestrina's 'Stabat Mater'", "Handel's 'Messiah'", "Bach's 'Mass in B minor'"), H),
+        q("lit_haydn_hint_prince", "How did Haydn hint to Prince Esterhazy that his musicians wanted to go home to their families?", "In a symphony, players left one by one", listOf("He set the prince's letters to music", "The orchestra played until he slept", "He wrote a symphony with no ending"), H),
+        q("lit_shakespeare_globe_theatre", "How did Shakespeare's Globe Theatre burn down in 1613?", "A stage cannon set the thatch alight", listOf("Rioters set fire to it at night", "Lightning struck it in a storm", "A candle fell in the costume store"), H),
+        q("lit_position_albert_camus", "Which position did Albert Camus play for the University of Algiers football team?", "Goalkeeper", listOf("Centre forward", "Right winger", "Centre half"), H),
+        q("lit_original_title_novel", "What was the original title of the novel 'Pride and Prejudice'?", "'First Impressions'", listOf("'Elinor and Marianne'", "'Susan'", "'The Watsons'"), H),
+        q("lit_leo_tolstoy_die", "Where did Leo Tolstoy die in 1910, days after secretly leaving home at the age of 82?", "At a small railway station", listOf("In a monastery cell", "On a Volga riverboat", "In a Moscow hotel"), H),
+        q("lit_1774_novel_young", "After which 1774 novel did young men across Europe copy its hero's blue coat and yellow waistcoat?", "'The Sorrows of Young Werther'", listOf("'Julie, or the New Heloise'", "'The Vicar of Wakefield'", "'Candide'"), H),
+        q("lit_prisoner_war_kurt", "Where did the prisoner of war Kurt Vonnegut shelter during the firebombing of Dresden?", "In an underground meat locker", listOf("In the crypt of a church", "In a tunnel under the city", "In the cellar of a brewery"), H),
+        q("lit_happened_george_orwell", "What happened to George Orwell while fighting in the Spanish Civil War?", "A sniper shot him through the throat", listOf("He lost an eye to a grenade", "He was sentenced to death as a spy", "He lost two fingers to frostbite"), H),
+        q("lit_margaret_mitchell_drafts", "In Margaret Mitchell's drafts, what was Scarlett O'Hara's first name?", "Pansy", listOf("Daisy", "Rose", "Violet"), H),
+        q("lit_two_authors_died", "Which two famous authors died on the same day that President Kennedy was shot?", "C. S. Lewis and Aldous Huxley", listOf("Robert Frost and Sylvia Plath", "Ernest Hemingway and William Faulkner", "T. S. Eliot and Evelyn Waugh"), H),
+        q("lit_times_bram_stoker", "How many times did Bram Stoker visit Transylvania before writing 'Dracula'?", "Not once", listOf("Once, briefly", "Three times", "Every summer"), H),
+        q("lit_rodin_thinker_meant", "Rodin's 'The Thinker' was first meant to show which poet, gazing down from 'The Gates of Hell'?", "Dante", listOf("Virgil", "Homer", "Baudelaire"), H),
+        q("lit_means_transport_films", "Which means of transport, famous from the films, is never used in the original 1872 novel about a race around the world in 80 days?", "A hot-air balloon", listOf("An elephant", "A sail-powered sledge", "A steamship"), H),
+        q("lit_persuaded_publisher_bloomsbury", "Who persuaded the publisher Bloomsbury to take on the first Harry Potter book?", "The chairman's eight-year-old daughter", listOf("The chairman's elderly mother", "A famous children's author", "A Scottish bookseller"), H),
+        q("lit_language_aslan_narnia", "In which language does 'Aslan', the name of Narnia's great lion, simply mean 'lion'?", "Turkish", listOf("Arabic", "Persian", "Hebrew"), H),
+        q("lit_playwright_became_person", "Which playwright became the first person to win both a Nobel Prize and an Oscar?", "George Bernard Shaw", listOf("Eugene O'Neill", "Harold Pinter", "Tennessee Williams"), H),
+        q("lit_made_agatha_christie", "What made Agatha Christie's 'The Murder of Roger Ackroyd' so controversial in 1926?", "The narrator turns out to be the killer", listOf("The detective turns out to be the killer", "Every suspect took part in the murder", "The murderer is never revealed"), H),
+        q("lit_turns_out_killer", "Who turns out to be the killer in Edgar Allan Poe's 'The Murders in the Rue Morgue'?", "An escaped orangutan", listOf("The victims' landlord", "A sleepwalking sailor", "The detective's own cousin"), H),
+        q("lit_great_expectations_turns", "In 'Great Expectations', who turns out to be Pip's secret benefactor?", "The convict Magwitch", listOf("Miss Havisham", "Mr Jaggers", "Joe Gargery"), H),
+        q("lit_uncanny_grenouille_murderer", "What is uncanny about Grenouille, the murderer in Patrick Suskind's 'Perfume'?", "He has no smell of his own", listOf("He cannot smell anything", "He is completely blind", "He never needs to sleep"), H),
+        q("lit_published_version_three", "In the first published version of 'The Three Bears' (1837), who breaks into the bears' house?", "A nasty old woman", listOf("A golden-haired girl", "A hungry fox", "A runaway boy"), H),
+        q("lit_aladdin_live_version", "Where does Aladdin live in the version of his tale in 'One Thousand and One Nights'?", "In China", listOf("In Baghdad", "In Cairo", "In Damascus"), H),
+        q("lit_bach_wrote_comic", "Bach wrote a comic cantata about a young woman hooked on which drink?", "Coffee", listOf("Hot chocolate", "Beer", "Tea"), H),
+        q("lit_phrase_stepford_wife", "The phrase 'Stepford wife' comes from a 1972 novel in which a town's wives are secretly replaced by what?", "Robots", listOf("Clones", "Aliens", "Their twin sisters"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -857,6 +906,27 @@ object LiteratureQuestions {
         q("lit_sicilian_prince_wrote", "Which Sicilian prince wrote 'The Leopard', published after his death?", "Tomasi di Lampedusa", listOf("Luigi Pirandello", "Alberto Moravia", "Italo Svevo"), X),
         q("lit_italian_author_wrote", "Which Italian author wrote 'Invisible Cities' and 'If on a Winter's Night a Traveller'?", "Italo Calvino", listOf("Umberto Eco", "Primo Levi", "Dino Buzzati"), X),
         q("lit_wrote_comic_czech", "Who wrote the comic Czech novel 'The Good Soldier Svejk'?", "Jaroslav Hasek", listOf("Karel Capek", "Bohumil Hrabal", "Milan Kundera"), X),
-        q("lit_ferdowsi_book_kings", "What is the name of Ferdowsi's 'Book of Kings', Iran's national epic?", "The Shahnameh", listOf("The Masnavi", "The Rubaiyat", "The Avesta"), X)
+        q("lit_ferdowsi_book_kings", "What is the name of Ferdowsi's 'Book of Kings', Iran's national epic?", "The Shahnameh", listOf("The Masnavi", "The Rubaiyat", "The Avesta"), X),
+        q("lit_1865_novelist_survived", "In 1865, which novelist survived a train crash and climbed back into the dangling carriage to rescue his manuscript?", "Charles Dickens", listOf("Anthony Trollope", "Wilkie Collins", "Thomas Hardy"), X),
+        q("lit_animal_picture_books", "Before her famous animal picture books, Beatrix Potter wrote a scientific paper, read for her because women could not attend, about what?", "How fungus spores germinate", listOf("How rabbits dig their burrows", "Insects trapped in amber", "How snails build their shells"), X),
+        q("lit_stolen_joseph_haydn", "What was stolen from Joseph Haydn's grave and only reunited with his body 145 years later?", "His skull", listOf("His heart", "His violin", "His wedding ring"), X),
+        q("lit_tchaikovsky_rich_patron", "Tchaikovsky's rich patron Nadezhda von Meck paid him an allowance for 13 years on what odd condition?", "That they never meet", listOf("That he never marry", "That he live in her house", "That he teach her daughters"), X),
+        q("lit_erik_satie_short", "Erik Satie's short piano piece 'Vexations' carries a note suggesting it be repeated how many times?", "840", listOf("100", "365", "2,000"), X),
+        q("lit_1705_young_bach", "In 1705 the young Bach walked some 400 km to Lubeck to hear which organist play?", "Dieterich Buxtehude", listOf("Johann Pachelbel", "Georg Philipp Telemann", "George Frideric Handel"), X),
+        q("lit_decades_mysterious_visitor", "For decades, a mysterious visitor left three roses and a half-bottle of cognac on which writer's grave every birthday?", "Edgar Allan Poe", listOf("Oscar Wilde", "Dylan Thomas", "Jack London"), X),
+        q("lit_girl_jonathan_swift", "Which girl's name did Jonathan Swift invent for a poem, from the name of his friend Esther Vanhomrigh?", "Vanessa", listOf("Stella", "Pamela", "Miranda"), X),
+        q("lit_years_bram_stoker", "For 27 years, Bram Stoker worked as business manager for whom?", "The actor Henry Irving", listOf("The writer Oscar Wilde", "The showman P. T. Barnum", "The magician Harry Houdini"), X),
+        q("lit_great_whaling_novel", "After his great whaling novel flopped, Herman Melville spent nearly 20 years working as what?", "A customs inspector in New York", listOf("A whaling captain in the Pacific", "A schoolteacher in Boston", "A lighthouse keeper in Maine"), X),
+        q("lit_elizabethan_playwright_said", "Which Elizabethan playwright is said to be buried standing upright in Westminster Abbey?", "Ben Jonson", listOf("Christopher Marlowe", "Thomas Kyd", "John Webster"), X),
+        q("lit_according_barrie_english", "According to J. M. Barrie, which famous English school did Captain Hook attend?", "Eton", listOf("Harrow", "Rugby", "Winchester"), X),
+        q("lit_kafka_forbid_publisher", "What did Kafka forbid the publisher of 'The Metamorphosis' to put on its cover?", "A picture of the insect", listOf("His own photograph", "The word 'novella'", "Any colour but black"), X),
+        q("lit_orwell_room_101", "Orwell named Room 101 in '1984' after a room where he sat through dull meetings at which organisation?", "The BBC", listOf("The Ministry of Information", "The Foreign Office", "The London Library"), X),
+        q("lit_harper_lee_find", "How did Harper Lee find the time to write her famous first novel?", "Friends gave her a year's wages as a gift", listOf("She won a prize in a newspaper contest", "Her lawyer father paid for a year off", "A publisher paid her in advance"), X),
+        q("lit_word_svengali_comes", "The word 'Svengali' comes from an 1894 novel that also gave its name to which item of clothing?", "The trilby hat", listOf("The cardigan", "The bowler hat", "The Norfolk jacket"), X),
+        q("lit_phrase_goody_two", "The phrase 'goody two-shoes' comes from a 1765 children's book about a poor orphan girl who owned only one what?", "Shoe", listOf("Dress", "Glove", "Doll"), X),
+        q("lit_whistler_sued_critic", "When Whistler sued the critic John Ruskin for libel in 1878, how much did he win in damages?", "One farthing", listOf("One thousand pounds", "One guinea", "Nothing at all"), X),
+        q("lit_thieves_stole_scream", "When thieves stole 'The Scream' from Oslo's National Gallery in 1994, what did they leave behind?", "A note thanking it for poor security", listOf("A cheap copy of the painting", "A ransom demand in verse", "The empty frame on the wall"), X),
+        q("lit_dickens_bleak_house", "In Dickens's 'Bleak House', how does the rag-and-bone dealer Krook die?", "By spontaneous human combustion", listOf("Buried under his own junk", "Poisoned by his lodger", "Drowned in the Thames"), X),
+        q("lit_mozart_kept_pet", "Mozart kept a pet that could whistle a theme from one of his piano concertos. What was it?", "A starling", listOf("A parrot", "A canary", "A blackbird"), X)
     )
 }

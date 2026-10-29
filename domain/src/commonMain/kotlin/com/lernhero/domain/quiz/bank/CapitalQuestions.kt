@@ -62,7 +62,14 @@ object CapitalQuestions {
         q("cap_1990_newly_reunified", "In 1990, newly reunified Germany chose which city as its capital?", "Berlin", listOf("Bonn", "Frankfurt", "Munich"), E),
         q("cap_capital_monaco", "What is the capital of Monaco?", "Monaco", listOf("Monte Carlo", "Fontvieille", "Nice"), E),
         q("cap_capital_city_stands", "Which capital city stands on the River Tiber?", "Rome", listOf("Athens", "Madrid", "Lisbon"), E),
-        q("cap_capital_city_national", "In which capital city are the National Mall and the Lincoln Memorial?", "Washington, D.C.", listOf("Philadelphia", "New York", "Boston"), E)
+        q("cap_capital_city_national", "In which capital city are the National Mall and the Lincoln Memorial?", "Washington, D.C.", listOf("Philadelphia", "New York", "Boston"), E),
+        q("cap_according_greek_myth", "According to Greek myth, which capital is named after the goddess who won it from Poseidon with the gift of an olive tree?", "Athens", listOf("Rome", "Nicosia", "Valletta"), E),
+        q("cap_capital_city_shibuya", "In which capital city is Shibuya Crossing, where thousands of people cross the street at once?", "Tokyo", listOf("Seoul", "Bangkok", "Beijing"), E),
+        q("cap_capital_city_completely", "Which capital city completely surrounds another independent country?", "Rome", listOf("Madrid", "Vienna", "Paris"), E),
+        q("cap_capital_city_must", "In which capital city must black-cab drivers pass a famously tough street-memory test called 'the Knowledge'?", "London", listOf("Dublin", "Edinburgh", "Paris"), E),
+        q("cap_capital_city_gave", "Which capital city gave its name to the 'syndrome' in which hostages come to bond with their captors?", "Stockholm", listOf("Oslo", "Helsinki", "Copenhagen"), E),
+        q("cap_word_wiener_sausage", "The word 'wiener', for a sausage, means 'from' which capital city?", "Vienna", listOf("Berlin", "Bern", "Prague"), E),
+        q("cap_capital_city_gave_2", "Which capital city gave its name to a pale, flat bean?", "Lima", listOf("Quito", "Havana", "Bogota"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -181,7 +188,14 @@ object CapitalQuestions {
         q("cap_capital_receives_dutch", "Which capital receives Dutch tulip bulbs every year, as thanks for sheltering a Dutch princess in World War II?", "Ottawa", listOf("London", "Washington, D.C.", "Canberra"), M),
         q("cap_capital_city_river", "Which capital city does the River Vltava flow through?", "Prague", listOf("Vienna", "Bratislava", "Budapest"), M),
         q("cap_capital_city_see", "In which capital city can you see the Belem Tower and ride the old Tram 28?", "Lisbon", listOf("Porto", "Madrid", "Seville"), M),
-        q("cap_capital_state_tennessee", "What is the capital of the US state of Tennessee?", "Nashville", listOf("Memphis", "Knoxville", "Chattanooga"), M)
+        q("cap_capital_state_tennessee", "What is the capital of the US state of Tennessee?", "Nashville", listOf("Memphis", "Knoxville", "Chattanooga"), M),
+        q("cap_monarch_chose_ottawa", "Which monarch chose Ottawa in 1857 as the seat of government for Canada?", "Queen Victoria", listOf("King George IV", "King William IV", "Queen Anne"), M),
+        q("cap_mythical_creature_symbol", "Which mythical creature is the symbol of Ljubljana, guarding a famous bridge there?", "A dragon", listOf("A griffin", "A unicorn", "A phoenix"), M),
+        q("cap_according_legend_bern", "According to legend, Bern is named after the first animal its founder killed while out hunting. Which animal?", "A bear", listOf("A wolf", "A boar", "A stag"), M),
+        q("cap_southernmost_national_capital", "Which is the southernmost national capital in the world?", "Wellington", listOf("Canberra", "Buenos Aires", "Montevideo"), M),
+        q("cap_finnish_port_country", "Which Finnish port, the country's oldest city, served as its capital until 1812?", "Turku", listOf("Tampere", "Oulu", "Vaasa"), M),
+        q("cap_city_stopped_kazakhstan", "Which city stopped being Kazakhstan's capital in 1997, when the government moved north?", "Almaty", listOf("Shymkent", "Karaganda", "Aktobe"), M),
+        q("cap_andean_capital_uses", "Which Andean capital uses the world's largest urban cable-car network as everyday public transport?", "La Paz", listOf("Quito", "Bogota", "Lima"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -287,7 +301,11 @@ object CapitalQuestions {
         q("cap_capital_city_once", "Which capital city was once nicknamed 'the Paris of the Middle East'?", "Beirut", listOf("Damascus", "Amman", "Baghdad"), H),
         q("cap_capital_city_casa", "In which capital city is the Casa Rosada, the pink presidential palace?", "Buenos Aires", listOf("Montevideo", "Santiago", "Lima"), H),
         q("cap_west_african_capital", "Which West African capital was founded in 1792 as a home for freed slaves?", "Freetown", listOf("Accra", "Dakar", "Lome"), H),
-        q("cap_capital_barbados", "What is the capital of Barbados?", "Bridgetown", listOf("Kingston", "Castries", "Nassau"), H)
+        q("cap_capital_barbados", "What is the capital of Barbados?", "Bridgetown", listOf("Kingston", "Castries", "Nassau"), H),
+        q("cap_capital_city_simply", "Which capital city's name is simply the native Korean word for 'capital'?", "Seoul", listOf("Pyongyang", "Hanoi", "Taipei"), H),
+        q("cap_copenhagen_danish_kobenhavn", "Copenhagen's Danish name, Kobenhavn, means what?", "Merchants' harbour", listOf("Royal castle", "Green island", "Fishermen's bay"), H),
+        q("cap_former_chinese_capital", "Which former Chinese capital's name means 'southern capital'?", "Nanjing", listOf("Xi'an", "Guangzhou", "Hangzhou"), H),
+        q("cap_capital_said_world", "Which capital is said to have the world's highest concentration of Art Nouveau buildings?", "Riga", listOf("Vienna", "Prague", "Brussels"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -370,6 +388,8 @@ object CapitalQuestions {
         q("cap_capital_vanuatu", "What is the capital of Vanuatu?", "Port Vila", listOf("Honiara", "Suva", "Luganville"), X),
         q("cap_capital_solomon_islands", "What is the capital of the Solomon Islands?", "Honiara", listOf("Port Vila", "Port Moresby", "Gizo"), X),
         q("cap_old_royal_capital", "What was the old royal capital of Montenegro?", "Cetinje", listOf("Podgorica", "Kotor", "Niksic"), X),
-        q("cap_capital_san_marino", "What is the capital of San Marino?", "San Marino City", listOf("Serravalle", "Borgo Maggiore", "Rimini"), X)
+        q("cap_capital_san_marino", "What is the capital of San Marino?", "San Marino City", listOf("Serravalle", "Borgo Maggiore", "Rimini"), X),
+        q("cap_capital_patuxai_war", "Which capital's Patuxai war monument, built with American cement meant for an airport, is nicknamed 'the vertical runway'?", "Vientiane", listOf("Phnom Penh", "Hanoi", "Yangon"), X),
+        q("cap_capital_city_holds", "Which capital city holds the record for the most buildings clad in white marble?", "Ashgabat", listOf("Astana", "Baku", "Tashkent"), X)
     )
 }

@@ -203,7 +203,13 @@ object SportQuestions {
         q("spo_football_attacker_beyond", "In football, what is it called when an attacker is beyond the last defender as the ball is played to them?", "Offside", listOf("A foul", "A handball", "A dive"), E),
         q("spo_basketball_player_takes", "In basketball, what is it called when a player takes too many steps without dribbling?", "Travelling", listOf("Double dribble", "Goaltending", "Charging"), E),
         q("spo_footballer_nicknamed_rei", "Which famous footballer was nicknamed 'O Rei', the King?", "Pele", listOf("Ronaldo", "Garrincha", "Zico"), E),
-        q("spo_japanese_wrestling_sport", "Which Japanese wrestling sport has wrestlers called rikishi?", "Sumo", listOf("Judo", "Kendo", "Aikido"), E)
+        q("spo_japanese_wrestling_sport", "Which Japanese wrestling sport has wrestlers called rikishi?", "Sumo", listOf("Judo", "Kendo", "Aikido"), E),
+        q("spo_ice_hockey_must", "In ice hockey, where must a player sit out two minutes after a minor foul?", "The penalty box", listOf("The team bench", "The locker room", "The goal crease"), E),
+        q("spo_tennis_cricket_main", "In tennis and cricket, what is the main official on the court or field called?", "The umpire", listOf("The referee", "The marshal", "The steward"), E),
+        q("spo_sprinters_push_feet", "What do sprinters push their feet against at the start of a race?", "Starting blocks", listOf("Starting gates", "A wooden kickboard", "Rubber springs"), E),
+        q("spo_american_football_official", "In American football, what does an official throw onto the field to signal a foul?", "A yellow flag", listOf("A red card", "A white towel", "A green cone"), E),
+        q("spo_tennis_win_game", "In tennis, what is it called when you win a game on your opponent's serve?", "A break", listOf("An ace", "A let", "A volley"), E),
+        q("spo_hawk_eye_used", "What is Hawk-Eye, used in tennis and cricket?", "A ball-tracking camera system", listOf("A referee's whistle signal", "A rule about catches", "A pair of special goggles"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -507,7 +513,19 @@ object SportQuestions {
         q("spo_archery_colour_centre", "In archery, what colour is the centre of an Olympic target?", "Gold", listOf("Red", "Black", "White"), M),
         q("spo_player_move_but", "What is it called when a player can't move but isn't in check, ending the chess game as a draw?", "Stalemate", listOf("Checkmate", "Zugzwang", "Fork"), M),
         q("spo_chess_opening_pawn", "What is a chess opening called in which a pawn is sacrificed for an advantage?", "Gambit", listOf("Fianchetto", "Castling", "Zugzwang"), M),
-        q("spo_sport_included_olympics", "Which sport was included in the Olympics from 1900 to 1920 with teams pulling a rope?", "Tug of war", listOf("Rope climbing", "Rowing relay", "Cable jumping"), M)
+        q("spo_sport_included_olympics", "Which sport was included in the Olympics from 1900 to 1920 with teams pulling a rope?", "Tug of war", listOf("Rope climbing", "Rowing relay", "Cable jumping"), M),
+        q("spo_mexican_wave_stadiums", "The 'Mexican wave' in stadiums got its name after crowds spread it around the world at which event?", "The 1986 World Cup", listOf("The 1992 Barcelona Olympics", "The 1994 World Cup", "The 1998 World Cup"), M),
+        q("spo_shirt_number_nhl", "Which shirt number has the NHL retired for every team, in honour of 'the Great One'?", "99", listOf("9", "66", "10"), M),
+        q("spo_football_brace", "In football, what is a 'brace'?", "Two goals by one player in a match", listOf("A wall of two defenders", "Two yellow cards in a match", "A save made with both hands"), M),
+        q("spo_curling_house", "In curling, what is 'the house'?", "The circular target", listOf("The players' changing room", "The handle of the stone", "The ice-making machine"), M),
+        q("spo_golfer_right_handed", "Which golfer, right-handed off the course, plays left-handed and is nicknamed 'Lefty'?", "Phil Mickelson", listOf("Rory McIlroy", "Jordan Spieth", "Greg Norman"), M),
+        q("spo_vast_narendra_modi", "The vast Narendra Modi Stadium in Ahmedabad, with room for about 130,000 fans, was built for which sport?", "Cricket", listOf("Football", "Field hockey", "Kabaddi"), M),
+        q("spo_rugby_six_nations", "In rugby's Six Nations, what is it called when a team beats all five opponents?", "A Grand Slam", listOf("A Triple Crown", "A Golden Boot", "A Calcutta Cup"), M),
+        q("spo_golfers_call_sudden", "What do golfers call the sudden nervous twitch that can wreck short putts?", "The yips", listOf("The wobbles", "The chokes", "The flinches"), M),
+        q("spo_milan_club_players", "Which Milan club's players are nicknamed 'the Nerazzurri', the black and blues?", "Inter Milan", listOf("AC Milan", "Juventus", "Lazio"), M),
+        q("spo_club_won_german", "Which club has won the most German Bundesliga titles?", "Bayern Munich", listOf("Borussia Dortmund", "Hamburger SV", "Schalke 04"), M),
+        q("spo_former_heavyweight_champion", "Which former heavyweight champion later made a fortune selling a fat-draining electric grill?", "George Foreman", listOf("Joe Frazier", "Larry Holmes", "Evander Holyfield"), M),
+        q("spo_nba_giant_poor", "Which NBA giant was so poor at free throws that rivals fouled him on purpose, a tactic named after him?", "Shaquille O'Neal", listOf("Kareem Abdul-Jabbar", "Yao Ming", "Hakeem Olajuwon"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -690,7 +708,36 @@ object SportQuestions {
         q("spo_long_cricket_pitch", "How long is a cricket pitch between the wickets?", "22 yards", listOf("18 yards", "25 yards", "30 yards"), H),
         q("spo_zero_runs_scored", "What is the name for zero runs scored by a batsman out in cricket?", "Duck", listOf("Love", "Nil", "Egg"), H),
         q("spo_city_1972_fischer", "In which city was the famous 1972 Fischer-Spassky chess match held?", "Reykjavik", listOf("Moscow", "New York", "Helsinki"), H),
-        q("spo_olympic_event_held", "Which Olympic event was held from 1912 to 1948 alongside sports, with medals for paintings?", "Art competitions", listOf("Poetry slams", "Music contests", "Dance battles"), H)
+        q("spo_olympic_event_held", "Which Olympic event was held from 1912 to 1948 alongside sports, with medals for paintings?", "Art competitions", listOf("Poetry slams", "Music contests", "Dance battles"), H),
+        q("spo_shirt_number_every", "Which shirt number has every Major League Baseball team retired, in honour of the man who broke its colour barrier?", "42", listOf("7", "23", "3"), H),
+        q("spo_jim_thorpe_stripped", "Why was Jim Thorpe stripped of his 1912 Olympic pentathlon and decathlon golds?", "He had been paid to play baseball", listOf("He failed a drug test", "He refused to bow to the king", "He was not a US citizen"), H),
+        q("spo_portuguese_star_nicknamed", "Which Portuguese star, nicknamed 'the Black Panther', was top scorer at the 1966 World Cup?", "Eusebio", listOf("Luis Figo", "Mario Coluna", "Paulo Futre"), H),
+        q("spo_england_goalkeeper_made", "Which England goalkeeper made the famous 'save of the century' from Pele's header at the 1970 World Cup?", "Gordon Banks", listOf("Peter Shilton", "Ray Clemence", "Gordon West"), H),
+        q("spo_cameroonian_striker_danced", "Which Cameroonian striker danced with the corner flag after his goals at the 1990 World Cup, aged 38?", "Roger Milla", listOf("Samuel Eto'o", "Thomas N'Kono", "Patrick Mboma"), H),
+        q("spo_goal_deep_stoppage", "Whose goal, deep in stoppage time on the last day, won Manchester City the 2012 Premier League title?", "Sergio Aguero", listOf("Edin Dzeko", "David Silva", "Carlos Tevez"), H),
+        q("spo_barefoot_runner_collided", "Which barefoot runner collided with Mary Decker in the famous 1984 Olympic 3000 m final?", "Zola Budd", listOf("Ingrid Kristiansen", "Grete Waitz", "Liz McColgan"), H),
+        q("spo_derek_redmond_tore", "When Derek Redmond tore a hamstring in the 1992 Olympic 400 m semi-final, who helped him limp to the finish?", "His father", listOf("His coach", "His brother", "A team-mate"), H),
+        q("spo_won_wimbledon_2001", "Who won Wimbledon in 2001 as a wildcard ranked outside the world's top 100?", "Goran Ivanisevic", listOf("Pat Rafter", "Tim Henman", "Marat Safin"), H),
+        q("spo_nba_utah_jazz", "Why does the NBA's Utah Jazz have a name that suits Utah so poorly?", "The team began in New Orleans", listOf("Its first owner was a jazz singer", "Fans chose it in a joke vote", "It was named after a horse"), H),
+        q("spo_1983_nation_ended", "In 1983, which nation ended the USA's 132-year grip on the America's Cup?", "Australia", listOf("New Zealand", "Great Britain", "Italy"), H),
+        q("spo_italy_euro_1968", "How was Italy's Euro 1968 semi-final against the USSR settled after a 0-0 draw?", "By tossing a coin", listOf("By a penalty shoot-out", "By a replay two days later", "By corners won"), H),
+        q("spo_footballer_african_win", "Which footballer, the first African to win the Ballon d'Or, later became president of his country?", "George Weah", listOf("Didier Drogba", "Samuel Eto'o", "Abedi Pele"), H),
+        q("spo_against_batsman_england", "Against which batsman was England's 'Bodyline' bowling of 1932-33 mainly aimed?", "Don Bradman", listOf("Jack Hobbs", "Wally Hammond", "Victor Trumper"), H),
+        q("spo_argentina_rugby_team", "Argentina's rugby team is called 'Los Pumas', but which animal is actually on its badge?", "A jaguar", listOf("A condor", "A llama", "A wolf"), H),
+        q("spo_team_stunned_south", "Which team stunned South Africa at the 2015 Rugby World Cup in the 'Miracle of Brighton'?", "Japan", listOf("Fiji", "Georgia", "Samoa"), H),
+        q("spo_rugby_league_fierce", "Rugby league's fierce 'State of Origin' series is played between which two sides?", "Queensland and New South Wales", listOf("Victoria and New South Wales", "Queensland and Victoria", "Tasmania and Victoria"), H),
+        q("spo_makes_nfl_green", "What makes the NFL's Green Bay Packers unique among big American pro teams?", "They are owned by their fans", listOf("They play on a frozen lake", "They have never moved stadium", "They have no head coach"), H),
+        q("spo_baseball_park_towering", "In which baseball park does a towering left-field wall called 'the Green Monster' stand?", "Fenway Park", listOf("Wrigley Field", "Yankee Stadium", "Dodger Stadium"), H),
+        q("spo_team_won_record", "Which team won a record 73 regular-season games in 2015-16 but then lost the NBA Finals?", "Golden State Warriors", listOf("Chicago Bulls", "San Antonio Spurs", "Cleveland Cavaliers"), H),
+        q("spo_2025_washington_capitals", "In 2025, which Washington Capitals star broke the all-time NHL record for career goals?", "Alex Ovechkin", listOf("Sidney Crosby", "Evgeni Malkin", "Connor McDavid"), H),
+        q("spo_american_won_200", "Which American won the 200 m and 400 m double at the 1996 Olympics, wearing golden shoes?", "Michael Johnson", listOf("Carl Lewis", "Maurice Greene", "Butch Reynolds"), H),
+        q("spo_pole_vaulter_broke", "Which pole vaulter broke the world record 35 times between 1984 and 1994?", "Sergey Bubka", listOf("Renaud Lavillenie", "Thierry Vigneron", "Bob Seagren"), H),
+        q("spo_american_gymnast_landed", "Which American gymnast landed a vault on an injured ankle to seal team gold at the 1996 Olympics?", "Kerri Strug", listOf("Shannon Miller", "Dominique Moceanu", "Mary Lou Retton"), H),
+        q("spo_2018_winter_olympics", "At the 2018 Winter Olympics, which Czech athlete won gold in both alpine skiing and snowboarding?", "Ester Ledecka", listOf("Martina Sablikova", "Mikaela Shiffrin", "Lindsey Vonn"), H),
+        q("spo_driver_retired_formula", "Which driver retired from Formula 1 just five days after winning the 2016 world title?", "Nico Rosberg", listOf("Jenson Button", "Kimi Raikkonen", "Fernando Alonso"), H),
+        q("spo_won_1989_tour", "Who won the 1989 Tour de France by just eight seconds, after a final-day time trial?", "Greg LeMond", listOf("Laurent Fignon", "Pedro Delgado", "Stephen Roche"), H),
+        q("spo_derby_winning_racehorse", "Which Derby-winning racehorse was kidnapped in Ireland in 1983 and never found?", "Shergar", listOf("Arkle", "Nijinsky", "Mill Reef"), H),
+        q("spo_nfl_team_poem", "Which NFL team is named after a poem by Edgar Allan Poe, who is buried in its city?", "Baltimore Ravens", listOf("Philadelphia Eagles", "Seattle Seahawks", "Atlanta Falcons"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -773,6 +820,24 @@ object SportQuestions {
         q("spo_olympics_women_boxing", "At which Olympics did women's boxing make its debut?", "London 2012", listOf("Sydney 2000", "Athens 2004", "Beijing 2008"), X),
         q("spo_pakistan_jahangir_khan", "Pakistan's Jahangir Khan went over 500 matches unbeaten in the 1980s in which sport?", "Squash", listOf("Tennis", "Badminton", "Table tennis"), X),
         q("spo_cheeky_chipped_panenka", "The cheeky chipped 'Panenka' penalty is named after a player from which country?", "Czechoslovakia", listOf("Yugoslavia", "Hungary", "Poland"), X),
-        q("spo_finnish_ski_jumper", "Which Finnish ski jumper won three gold medals at the 1988 Olympics?", "Matti Nykanen", listOf("Janne Ahonen", "Toni Nieminen", "Jari Puikkonen"), X)
+        q("spo_finnish_ski_jumper", "Which Finnish ski jumper won three gold medals at the 1988 Olympics?", "Matti Nykanen", listOf("Janne Ahonen", "Toni Nieminen", "Jari Puikkonen"), X),
+        q("spo_australian_sprinter_wore", "Which Australian sprinter wore a human-rights badge in support of Tommie Smith and John Carlos on the 1968 Olympic podium?", "Peter Norman", listOf("Ralph Doubell", "Ron Clarke", "Herb Elliott"), X),
+        q("spo_pitcher_holds_major", "Which pitcher holds Major League Baseball's career strikeout record, with 5,714?", "Nolan Ryan", listOf("Randy Johnson", "Roger Clemens", "Sandy Koufax"), X),
+        q("spo_baseball_iron_man", "Which baseball 'Iron Man' played a record 2,632 consecutive games between 1982 and 1998?", "Cal Ripken Jr.", listOf("Pete Rose", "Derek Jeter", "Ted Williams"), X),
+        q("spo_ice_hockey_gordie", "In ice hockey, what is a 'Gordie Howe hat trick'?", "A goal, an assist and a fight", listOf("Three goals in one period", "Three penalties in a game", "A goal on each of three shots"), X),
+        q("spo_masters_tricky_stretch", "At the Masters, what is the tricky stretch of holes 11 to 13 nicknamed?", "Amen Corner", listOf("Hallelujah Alley", "The Devil's Elbow", "Bear Trap"), X),
+        q("spo_six_cars_start", "Why did only six cars start the 2005 United States Grand Prix?", "Teams on Michelin tyres pulled out", listOf("A pile-up wiped out the rest", "Most cars failed safety checks", "A storm flooded the pit lane"), X),
+        q("spo_american_driver_started", "Which American driver started the podium champagne-spraying habit after winning Le Mans in 1967?", "Dan Gurney", listOf("Mario Andretti", "Phil Hill", "Carroll Shelby"), X),
+        q("spo_british_cyclist_collapsed", "Which British cyclist collapsed and died on Mont Ventoux during the 1967 Tour de France?", "Tom Simpson", listOf("Barry Hoban", "Brian Robinson", "Reg Harris"), X),
+        q("spo_jockey_frankie_dettori", "What did jockey Frankie Dettori do at Ascot in 1996, a feat known as the 'Magnificent Seven'?", "Won all seven races of the day", listOf("Rode seven horses in one race", "Won seven races in a row there", "Fell seven times and kept riding"), X),
+        q("spo_phar_lap_australia", "Phar Lap, Australia's most beloved racehorse, was actually born in which country?", "New Zealand", listOf("Ireland", "England", "Argentina"), X),
+        q("spo_old_egyptian_goalkeeper", "How old was Egyptian goalkeeper Essam El-Hadary when he played at the 2018 World Cup, an all-time record?", "45", listOf("37", "41", "50"), X),
+        q("spo_english_club_founded", "Which English club, founded in 1857, is the oldest football club in the world still playing?", "Sheffield FC", listOf("Notts County", "Stoke City", "Hallam FC"), X),
+        q("spo_ping_pong_won", "Before 'ping-pong' won out, which other jokey name did Victorians give table tennis?", "Whiff-whaff", listOf("Click-clack", "Tick-tock", "Bish-bosh"), X),
+        q("spo_player_beat_steve", "Which player beat Steve Davis on the very last black ball of the 1985 World Snooker final?", "Dennis Taylor", listOf("Alex Higgins", "Jimmy White", "Cliff Thorburn"), X),
+        q("spo_city_hosted_winter", "Which city hosted the first Winter Olympics held in Asia, in 1972?", "Sapporo", listOf("Nagano", "Pyeongchang", "Harbin"), X),
+        q("spo_because_australia_strict", "Because of Australia's strict animal quarantine, where were the equestrian events of the 1956 Melbourne Olympics held?", "Stockholm", listOf("London", "Auckland", "Helsinki"), X),
+        q("spo_paralympic_movement_grew", "The Paralympic movement grew out of games for injured war veterans held in 1948 at which English hospital?", "Stoke Mandeville", listOf("Great Ormond Street", "St Thomas'", "Addenbrooke's"), X),
+        q("spo_won_1851_immortal", "Who won the 1851 'Immortal Game', sacrificing both rooks and then his queen to deliver mate?", "Adolf Anderssen", listOf("Paul Morphy", "Howard Staunton", "Lionel Kieseritzky"), X)
     )
 }
