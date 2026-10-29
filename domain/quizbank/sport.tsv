@@ -178,6 +178,12 @@ spo_football_attacker_beyond	Easy	In football, what is it called when an attacke
 spo_basketball_player_takes	Easy	In basketball, what is it called when a player takes too many steps without dribbling?	Travelling	Double dribble	Goaltending	Charging
 spo_footballer_nicknamed_rei	Easy	Which famous footballer was nicknamed 'O Rei', the King?	Pele	Ronaldo	Garrincha	Zico
 spo_japanese_wrestling_sport	Easy	Which Japanese wrestling sport has wrestlers called rikishi?	Sumo	Judo	Kendo	Aikido
+spo_ice_hockey_must	Easy	In ice hockey, where must a player sit out two minutes after a minor foul?	The penalty box	The team bench	The locker room	The goal crease
+spo_tennis_cricket_main	Easy	In tennis and cricket, what is the main official on the court or field called?	The umpire	The referee	The marshal	The steward
+spo_sprinters_push_feet	Easy	What do sprinters push their feet against at the start of a race?	Starting blocks	Starting gates	A wooden kickboard	Rubber springs
+spo_american_football_official	Easy	In American football, what does an official throw onto the field to signal a foul?	A yellow flag	A red card	A white towel	A green cone
+spo_tennis_win_game	Easy	In tennis, what is it called when you win a game on your opponent's serve?	A break	An ace	A let	A volley
+spo_hawk_eye_used	Easy	What is Hawk-Eye, used in tennis and cricket?	A ball-tracking camera system	A referee's whistle signal	A rule about catches	A pair of special goggles
 spo_mundial_2018	Medium	Who won the soccer World Cup in 2018?	France	Croatia	Brazil	Germany
 spo_lewandowski	Medium	At which club did Robert Lewandowski become the Bundesliga's top scorer?	Bayern Munich	Real Madrid	Manchester United	Juventus
 spo_hokej	Medium	How long is one period in an ice hockey game?	20 minutes	15 minutes	25 minutes	30 minutes
@@ -478,6 +484,18 @@ spo_archery_colour_centre	Medium	In archery, what colour is the centre of an Oly
 spo_player_move_but	Medium	What is it called when a player can't move but isn't in check, ending the chess game as a draw?	Stalemate	Checkmate	Zugzwang	Fork
 spo_chess_opening_pawn	Medium	What is a chess opening called in which a pawn is sacrificed for an advantage?	Gambit	Fianchetto	Castling	Zugzwang
 spo_sport_included_olympics	Medium	Which sport was included in the Olympics from 1900 to 1920 with teams pulling a rope?	Tug of war	Rope climbing	Rowing relay	Cable jumping
+spo_mexican_wave_stadiums	Medium	The 'Mexican wave' in stadiums got its name after crowds spread it around the world at which event?	The 1986 World Cup	The 1992 Barcelona Olympics	The 1994 World Cup	The 1998 World Cup
+spo_shirt_number_nhl	Medium	Which shirt number has the NHL retired for every team, in honour of 'the Great One'?	99	9	66	10
+spo_football_brace	Medium	In football, what is a 'brace'?	Two goals by one player in a match	A wall of two defenders	Two yellow cards in a match	A save made with both hands
+spo_curling_house	Medium	In curling, what is 'the house'?	The circular target	The players' changing room	The handle of the stone	The ice-making machine
+spo_golfer_right_handed	Medium	Which golfer, right-handed off the course, plays left-handed and is nicknamed 'Lefty'?	Phil Mickelson	Rory McIlroy	Jordan Spieth	Greg Norman
+spo_vast_narendra_modi	Medium	The vast Narendra Modi Stadium in Ahmedabad, with room for about 130,000 fans, was built for which sport?	Cricket	Football	Field hockey	Kabaddi
+spo_rugby_six_nations	Medium	In rugby's Six Nations, what is it called when a team beats all five opponents?	A Grand Slam	A Triple Crown	A Golden Boot	A Calcutta Cup
+spo_golfers_call_sudden	Medium	What do golfers call the sudden nervous twitch that can wreck short putts?	The yips	The wobbles	The chokes	The flinches
+spo_milan_club_players	Medium	Which Milan club's players are nicknamed 'the Nerazzurri', the black and blues?	Inter Milan	AC Milan	Juventus	Lazio
+spo_club_won_german	Medium	Which club has won the most German Bundesliga titles?	Bayern Munich	Borussia Dortmund	Hamburger SV	Schalke 04
+spo_former_heavyweight_champion	Medium	Which former heavyweight champion later made a fortune selling a fat-draining electric grill?	George Foreman	Joe Frazier	Larry Holmes	Evander Holyfield
+spo_nba_giant_poor	Medium	Which NBA giant was so poor at free throws that rivals fouled him on purpose, a tactic named after him?	Shaquille O'Neal	Kareem Abdul-Jabbar	Yao Ming	Hakeem Olajuwon
 spo_bolt	Hard	What is Usain Bolt's world record in the 100 m?	9.58 s	9.69 s	9.72 s	9.49 s
 spo_olimpiada_1896	Hard	Where were the first modern Olympic Games held?	Athens	Paris	Rome	London
 spo_wimbledon	Hard	What surface is Wimbledon played on?	Grass	Sand	Concrete	Clay and hard court, alternating
@@ -657,6 +675,35 @@ spo_long_cricket_pitch	Hard	How long is a cricket pitch between the wickets?	22 
 spo_zero_runs_scored	Hard	What is the name for zero runs scored by a batsman out in cricket?	Duck	Love	Nil	Egg
 spo_city_1972_fischer	Hard	In which city was the famous 1972 Fischer-Spassky chess match held?	Reykjavik	Moscow	New York	Helsinki
 spo_olympic_event_held	Hard	Which Olympic event was held from 1912 to 1948 alongside sports, with medals for paintings?	Art competitions	Poetry slams	Music contests	Dance battles
+spo_shirt_number_every	Hard	Which shirt number has every Major League Baseball team retired, in honour of the man who broke its colour barrier?	42	7	23	3
+spo_jim_thorpe_stripped	Hard	Why was Jim Thorpe stripped of his 1912 Olympic pentathlon and decathlon golds?	He had been paid to play baseball	He failed a drug test	He refused to bow to the king	He was not a US citizen
+spo_portuguese_star_nicknamed	Hard	Which Portuguese star, nicknamed 'the Black Panther', was top scorer at the 1966 World Cup?	Eusebio	Luis Figo	Mario Coluna	Paulo Futre
+spo_england_goalkeeper_made	Hard	Which England goalkeeper made the famous 'save of the century' from Pele's header at the 1970 World Cup?	Gordon Banks	Peter Shilton	Ray Clemence	Gordon West
+spo_cameroonian_striker_danced	Hard	Which Cameroonian striker danced with the corner flag after his goals at the 1990 World Cup, aged 38?	Roger Milla	Samuel Eto'o	Thomas N'Kono	Patrick Mboma
+spo_goal_deep_stoppage	Hard	Whose goal, deep in stoppage time on the last day, won Manchester City the 2012 Premier League title?	Sergio Aguero	Edin Dzeko	David Silva	Carlos Tevez
+spo_barefoot_runner_collided	Hard	Which barefoot runner collided with Mary Decker in the famous 1984 Olympic 3000 m final?	Zola Budd	Ingrid Kristiansen	Grete Waitz	Liz McColgan
+spo_derek_redmond_tore	Hard	When Derek Redmond tore a hamstring in the 1992 Olympic 400 m semi-final, who helped him limp to the finish?	His father	His coach	His brother	A team-mate
+spo_won_wimbledon_2001	Hard	Who won Wimbledon in 2001 as a wildcard ranked outside the world's top 100?	Goran Ivanisevic	Pat Rafter	Tim Henman	Marat Safin
+spo_nba_utah_jazz	Hard	Why does the NBA's Utah Jazz have a name that suits Utah so poorly?	The team began in New Orleans	Its first owner was a jazz singer	Fans chose it in a joke vote	It was named after a horse
+spo_1983_nation_ended	Hard	In 1983, which nation ended the USA's 132-year grip on the America's Cup?	Australia	New Zealand	Great Britain	Italy
+spo_italy_euro_1968	Hard	How was Italy's Euro 1968 semi-final against the USSR settled after a 0-0 draw?	By tossing a coin	By a penalty shoot-out	By a replay two days later	By corners won
+spo_footballer_african_win	Hard	Which footballer, the first African to win the Ballon d'Or, later became president of his country?	George Weah	Didier Drogba	Samuel Eto'o	Abedi Pele
+spo_against_batsman_england	Hard	Against which batsman was England's 'Bodyline' bowling of 1932-33 mainly aimed?	Don Bradman	Jack Hobbs	Wally Hammond	Victor Trumper
+spo_argentina_rugby_team	Hard	Argentina's rugby team is called 'Los Pumas', but which animal is actually on its badge?	A jaguar	A condor	A llama	A wolf
+spo_team_stunned_south	Hard	Which team stunned South Africa at the 2015 Rugby World Cup in the 'Miracle of Brighton'?	Japan	Fiji	Georgia	Samoa
+spo_rugby_league_fierce	Hard	Rugby league's fierce 'State of Origin' series is played between which two sides?	Queensland and New South Wales	Victoria and New South Wales	Queensland and Victoria	Tasmania and Victoria
+spo_makes_nfl_green	Hard	What makes the NFL's Green Bay Packers unique among big American pro teams?	They are owned by their fans	They play on a frozen lake	They have never moved stadium	They have no head coach
+spo_baseball_park_towering	Hard	In which baseball park does a towering left-field wall called 'the Green Monster' stand?	Fenway Park	Wrigley Field	Yankee Stadium	Dodger Stadium
+spo_team_won_record	Hard	Which team won a record 73 regular-season games in 2015-16 but then lost the NBA Finals?	Golden State Warriors	Chicago Bulls	San Antonio Spurs	Cleveland Cavaliers
+spo_2025_washington_capitals	Hard	In 2025, which Washington Capitals star broke the all-time NHL record for career goals?	Alex Ovechkin	Sidney Crosby	Evgeni Malkin	Connor McDavid
+spo_american_won_200	Hard	Which American won the 200 m and 400 m double at the 1996 Olympics, wearing golden shoes?	Michael Johnson	Carl Lewis	Maurice Greene	Butch Reynolds
+spo_pole_vaulter_broke	Hard	Which pole vaulter broke the world record 35 times between 1984 and 1994?	Sergey Bubka	Renaud Lavillenie	Thierry Vigneron	Bob Seagren
+spo_american_gymnast_landed	Hard	Which American gymnast landed a vault on an injured ankle to seal team gold at the 1996 Olympics?	Kerri Strug	Shannon Miller	Dominique Moceanu	Mary Lou Retton
+spo_2018_winter_olympics	Hard	At the 2018 Winter Olympics, which Czech athlete won gold in both alpine skiing and snowboarding?	Ester Ledecka	Martina Sablikova	Mikaela Shiffrin	Lindsey Vonn
+spo_driver_retired_formula	Hard	Which driver retired from Formula 1 just five days after winning the 2016 world title?	Nico Rosberg	Jenson Button	Kimi Raikkonen	Fernando Alonso
+spo_won_1989_tour	Hard	Who won the 1989 Tour de France by just eight seconds, after a final-day time trial?	Greg LeMond	Laurent Fignon	Pedro Delgado	Stephen Roche
+spo_derby_winning_racehorse	Hard	Which Derby-winning racehorse was kidnapped in Ireland in 1983 and never found?	Shergar	Arkle	Nijinsky	Mill Reef
+spo_nfl_team_poem	Hard	Which NFL team is named after a poem by Edgar Allan Poe, who is buried in its city?	Baltimore Ravens	Philadelphia Eagles	Seattle Seahawks	Atlanta Falcons
 spo_dekatlon	Expert	Which event closes the men's Olympic decathlon on the second day?	The 1500 metres	The javelin throw	The pole vault	The 110 m hurdles
 spo_nba_wilt	Expert	Who scored 100 points in a single NBA game?	Wilt Chamberlain	Michael Jordan	Kobe Bryant	LeBron James
 spo2_fosbury	Expert	Who revolutionized the high jump with the backward flop technique?	Dick Fosbury	Jesse Owens	Carl Lewis	Javier Sotomayor
@@ -736,3 +783,21 @@ spo_olympics_women_boxing	Expert	At which Olympics did women's boxing make its d
 spo_pakistan_jahangir_khan	Expert	Pakistan's Jahangir Khan went over 500 matches unbeaten in the 1980s in which sport?	Squash	Tennis	Badminton	Table tennis
 spo_cheeky_chipped_panenka	Expert	The cheeky chipped 'Panenka' penalty is named after a player from which country?	Czechoslovakia	Yugoslavia	Hungary	Poland
 spo_finnish_ski_jumper	Expert	Which Finnish ski jumper won three gold medals at the 1988 Olympics?	Matti Nykanen	Janne Ahonen	Toni Nieminen	Jari Puikkonen
+spo_australian_sprinter_wore	Expert	Which Australian sprinter wore a human-rights badge in support of Tommie Smith and John Carlos on the 1968 Olympic podium?	Peter Norman	Ralph Doubell	Ron Clarke	Herb Elliott
+spo_pitcher_holds_major	Expert	Which pitcher holds Major League Baseball's career strikeout record, with 5,714?	Nolan Ryan	Randy Johnson	Roger Clemens	Sandy Koufax
+spo_baseball_iron_man	Expert	Which baseball 'Iron Man' played a record 2,632 consecutive games between 1982 and 1998?	Cal Ripken Jr.	Pete Rose	Derek Jeter	Ted Williams
+spo_ice_hockey_gordie	Expert	In ice hockey, what is a 'Gordie Howe hat trick'?	A goal, an assist and a fight	Three goals in one period	Three penalties in a game	A goal on each of three shots
+spo_masters_tricky_stretch	Expert	At the Masters, what is the tricky stretch of holes 11 to 13 nicknamed?	Amen Corner	Hallelujah Alley	The Devil's Elbow	Bear Trap
+spo_six_cars_start	Expert	Why did only six cars start the 2005 United States Grand Prix?	Teams on Michelin tyres pulled out	A pile-up wiped out the rest	Most cars failed safety checks	A storm flooded the pit lane
+spo_american_driver_started	Expert	Which American driver started the podium champagne-spraying habit after winning Le Mans in 1967?	Dan Gurney	Mario Andretti	Phil Hill	Carroll Shelby
+spo_british_cyclist_collapsed	Expert	Which British cyclist collapsed and died on Mont Ventoux during the 1967 Tour de France?	Tom Simpson	Barry Hoban	Brian Robinson	Reg Harris
+spo_jockey_frankie_dettori	Expert	What did jockey Frankie Dettori do at Ascot in 1996, a feat known as the 'Magnificent Seven'?	Won all seven races of the day	Rode seven horses in one race	Won seven races in a row there	Fell seven times and kept riding
+spo_phar_lap_australia	Expert	Phar Lap, Australia's most beloved racehorse, was actually born in which country?	New Zealand	Ireland	England	Argentina
+spo_old_egyptian_goalkeeper	Expert	How old was Egyptian goalkeeper Essam El-Hadary when he played at the 2018 World Cup, an all-time record?	45	37	41	50
+spo_english_club_founded	Expert	Which English club, founded in 1857, is the oldest football club in the world still playing?	Sheffield FC	Notts County	Stoke City	Hallam FC
+spo_ping_pong_won	Expert	Before 'ping-pong' won out, which other jokey name did Victorians give table tennis?	Whiff-whaff	Click-clack	Tick-tock	Bish-bosh
+spo_player_beat_steve	Expert	Which player beat Steve Davis on the very last black ball of the 1985 World Snooker final?	Dennis Taylor	Alex Higgins	Jimmy White	Cliff Thorburn
+spo_city_hosted_winter	Expert	Which city hosted the first Winter Olympics held in Asia, in 1972?	Sapporo	Nagano	Pyeongchang	Harbin
+spo_because_australia_strict	Expert	Because of Australia's strict animal quarantine, where were the equestrian events of the 1956 Melbourne Olympics held?	Stockholm	London	Auckland	Helsinki
+spo_paralympic_movement_grew	Expert	The Paralympic movement grew out of games for injured war veterans held in 1948 at which English hospital?	Stoke Mandeville	Great Ormond Street	St Thomas'	Addenbrooke's
+spo_won_1851_immortal	Expert	Who won the 1851 'Immortal Game', sacrificing both rooks and then his queen to deliver mate?	Adolf Anderssen	Paul Morphy	Howard Staunton	Lionel Kieseritzky

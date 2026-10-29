@@ -365,6 +365,11 @@ pop_film_studio_logo_3	Easy	Which film studio's logo shows the Earth turning in 
 pop_crisps_come_tall	Easy	Which crisps come in a tall tube with a moustached man on the label?	Pringles	Doritos	Lay's	Cheetos
 pop_game_players_try	Easy	In which game do players try to sink each other's hidden fleet on a grid?	Battleship	Risk	Stratego	Othello
 pop_sportswear_brand_logo	Easy	Which sportswear brand's logo is a 'swoosh'?	Nike	Puma	Reebok	Adidas
+pop_frozen_olaf_snowman	Easy	In 'Frozen', what does Olaf the snowman say he likes?	Warm hugs	Snowball fights	Ice cream	Hot chocolate
+pop_marvel_villain_wipes	Easy	Which Marvel villain wipes out half of all life with a snap of his fingers?	Thanos	Ultron	Loki	Red Skull
+pop_sesame_street_character	Easy	Which 'Sesame Street' character sings about his beloved 'Rubber Duckie'?	Ernie	Bert	Elmo	Grover
+pop_judge_became_blunt	Easy	Which TV judge became famous for blunt put-downs on 'American Idol' and 'The X Factor'?	Simon Cowell	Piers Morgan	Gordon Ramsay	Graham Norton
+pop_zootopia_kind_animal	Easy	In 'Zootopia', what kind of animal is the con artist Nick Wilde?	A fox	A wolf	A weasel	A coyote
 day_zlota_palma	Medium	Which is the top prize at the Cannes Film Festival?	The Palme d'Or	The Golden Bear	The Golden Lion	The Silver Shell
 day_minecraft_sprzedaz	Medium	Which is the best-selling video game of all time?	Minecraft	Tetris	Grand Theft Auto V	Wii Sports
 trv2_tetris_kraj	Medium	In which country was Tetris created?	The Soviet Union	Japan	The United States	Finland
@@ -867,6 +872,16 @@ pop_sonic_two_tailed	Medium	What is the name of Sonic's two-tailed fox friend?	T
 pop_video_game_series_2	Medium	Which video game series follows the assassin Ezio Auditore?	Assassin's Creed	Hitman	Dishonored	Thief
 pop_obelix_little_dog	Medium	What is the name of Obelix's little dog?	Dogmatix	Snowy	Rantanplan	Pluto
 pop_forest_spirit_mascot	Medium	Which forest spirit is the mascot of Studio Ghibli?	Totoro	No-Face	Calcifer	Kodama
+pop_goombas_mario_common	Medium	What are Goombas, Mario's most common enemies?	Walking mushrooms	Angry turtles	Living rocks	Fire spirits
+pop_simba_lion_king	Medium	What does 'Simba', the name of the Lion King's hero, mean in Swahili?	Lion	King	Brave	Sun
+pop_money_heist_robbers	Medium	In 'Money Heist', what are the robbers' code names?	Names of cities	Names of planets	Names of painters	Names of colours
+pop_2017_meme_photo	Medium	Which 2017 meme photo shows a man turning to ogle a passing woman while his girlfriend glares at him?	Distracted Boyfriend	Hide the Pain Harold	Success Kid	Bad Luck Brian
+pop_spongebob_squarepants_instrument	Medium	In 'SpongeBob SquarePants', which instrument does Squidward play?	The clarinet	The trumpet	The violin	The tuba
+pop_pink_pokemon_transform	Medium	Which pink Pokemon can transform into a copy of any other Pokemon?	Ditto	Jigglypuff	Clefairy	Slowpoke
+pop_minecraft_tall_black	Medium	In Minecraft, which tall black mob turns hostile if you look it in the eyes?	The Enderman	The Wither	The Creeper	The Ghast
+pop_band_made_cartoon	Medium	Which band is made up of the cartoon members 2-D, Murdoc, Noodle and Russel?	Gorillaz	Daft Punk	The Archies	The Monkees
+pop_empire_strikes_back	Medium	In 'The Empire Strikes Back', what does Luke lose in his lightsaber duel with Darth Vader?	His right hand	His left leg	His sight	His left ear
+pop_despicable_gru_plan	Medium	In 'Despicable Me', what does Gru plan to steal?	The Moon	The Crown Jewels	The Mona Lisa	The Sun
 day_zloty_lew	Hard	At which film festival is the Golden Lion awarded?	Venice	Cannes	Berlin	San Sebastian
 lit_manga	Hard	The Japanese word 'manga' originally meant what?	Whimsical pictures	Moving pictures	Paper theatre	Ink stories
 pop_gremlins	Hard	In 'Gremlins' (1984), what must you never do to the creatures after midnight?	Feed them	Tickle them	Let them sleep	Take them outside
@@ -1133,6 +1148,29 @@ pop_bar_met_mother	Hard	What is the name of the bar in 'How I Met Your Mother'?	
 pop_mickey_mouse_original	Hard	What was Mickey Mouse's original name, according to Disney legend?	Mortimer	Marvin	Morris	Milton
 pop_tintin_dog_original	Hard	What is the name of Tintin's dog in the original Belgian comic?	Milou	Pif	Idefix	Rantanplan
 pop_belgian_artist_created	Hard	Which Belgian artist created the Smurfs?	Peyo	Herge	Franquin	Morris
+pop_psycho_1960_used	Hard	In 'Psycho' (1960), what was used as the blood in the black-and-white shower scene?	Chocolate syrup	Tomato ketchup	Red wine	Beetroot juice
+pop_vehicle_toy_story	Hard	Which vehicle from 'Toy Story' turns up as a hidden joke in nearly every Pixar film?	The Pizza Planet truck	Andy's mum's minivan	The Al's Toy Barn van	Sid's skateboard
+pop_actor_originally_cast	Hard	Which actor was originally cast as Marty McFly and filmed for weeks before being replaced by Michael J. Fox?	Eric Stoltz	Matthew Broderick	John Cusack	Charlie Sheen
+pop_actor_choice_indiana	Hard	Which actor was the first choice for Indiana Jones but was tied up by the TV series 'Magnum, P.I.'?	Tom Selleck	Burt Reynolds	Nick Nolte	Jeff Bridges
+pop_trivial_pursuit_invented	Hard	Trivial Pursuit was invented by two journalists from which country?	Canada	The United States	Australia	Ireland
+pop_block_stacking_game	Hard	The name of the block-stacking game Jenga comes from a word meaning 'build' in which language?	Swahili	Japanese	Hindi	Maori
+pop_under_rubik_cube	Hard	Under which name was the Rubik's Cube first sold in its home country?	The Magic Cube	The Puzzle Box	The Colour Cube	The Mind Cube
+pop_barbie_surname	Hard	What is Barbie's surname?	Roberts	Carson	Miller	Stevens
+pop_band_took_joke	Hard	Which band took its name from the joke that it would go down like a 'lead balloon'?	Led Zeppelin	Deep Purple	Black Sabbath	Iron Butterfly
+pop_rolling_stones_took	Hard	The Rolling Stones took their name from a song by which blues musician?	Muddy Waters	B. B. King	Robert Johnson	Howlin' Wolf
+pop_band_drummer_lost	Hard	Which band's drummer lost an arm in a 1984 car crash and went on playing with a custom kit?	Def Leppard	Whitesnake	Bon Jovi	Motley Crue
+pop_star_changed_unpronounceable	Hard	Which star changed his name to an unpronounceable symbol in 1993 during a fight with his record label?	Prince	George Michael	Beck	Sting
+pop_singer_performed_live	Hard	Which singer performed at Live Aid in both London and Philadelphia on the same day, flying between them on Concorde?	Phil Collins	Elton John	Sting	David Bowie
+pop_little_mermaid_ariel_2	Hard	In 'The Little Mermaid', what does Ariel's friend Scuttle call a fork?	A dinglehopper	A snarfblatt	A thingamabob	A whozit
+pop_seven_dwarfs_disney	Hard	Which of the Seven Dwarfs in Disney's 'Snow White' never speaks?	Dopey	Bashful	Sleepy	Happy
+pop_finding_nemo_address	Hard	In 'Finding Nemo', which address does Dory keep repeating?	42 Wallaby Way, Sydney	12 Coral Street, Cairns	7 Reef Road, Brisbane	99 Harbour Lane, Perth
+pop_friends_ross_say	Hard	In 'Friends', whose name does Ross say at the altar instead of his bride Emily's?	Rachel's	Monica's	Julie's	Carol's
+pop_friends_joey_tribbiani	Hard	In 'Friends', what does Joey Tribbiani famously refuse to share?	His food	His apartment	His girlfriends	His TV remote
+pop_game_thrones_saying	Hard	In 'Game of Thrones', what does the saying 'Valar morghulis' mean?	All men must die	Winter is coming	Fire and blood	We do not sow
+pop_fawlty_towers_city	Hard	In 'Fawlty Towers', which city does the hapless waiter Manuel come from?	Barcelona	Madrid	Seville	Valencia
+pop_empire_strikes_back_2	Hard	In 'The Empire Strikes Back', what does Han Solo reply when Leia tells him 'I love you'?	'I know.'	'Me too.'	'I'll be back.'	'Not now.'
+pop_goldfinger_bond_ally	Hard	In 'Goldfinger', how is Bond's ally Jill Masterson killed?	Covered in gold paint	Thrown from a plane	Bitten by a snake	Crushed in a car
+pop_legend_zelda_old	Hard	In the first 'Legend of Zelda', what does the old man in the cave hand Link, saying 'It's dangerous to go alone'?	A sword	A shield	A map	A lantern
 lit_wings	Expert	Which film won the very first Academy Award for Best Picture?	Wings	Sunrise	The Jazz Singer	Metropolis
 pop_obywatel_kane	Expert	Which word is whispered at the very start of 'Citizen Kane'?	Rosebud	Mother	Xanadu	Charles
 pop_spirited_away	Expert	Which was the first non-English-language film to win the Oscar for Best Animated Feature?	Spirited Away	Persepolis	Akira	Princess Mononoke
@@ -1228,3 +1266,19 @@ pop_1934_film_win	Expert	Which 1934 film was the first to win all five top Oscar
 pop_bruno_mars_real	Expert	What is Bruno Mars's real name?	Peter Hernandez	Bruno Fernandez	Marcus Lopez	Miguel Rodriguez
 pop_fantastic_four_member	Expert	Which Fantastic Four member's catchphrase is 'It's clobberin' time!'?	The Thing	The Human Torch	Mister Fantastic	The Invisible Woman
 pop_designer_1947_new	Expert	Which designer's 1947 'New Look' brought back full skirts and tiny waists after the war?	Christian Dior	Coco Chanel	Yves Saint Laurent	Cristobal Balenciaga
+pop_ben_burtt_created	Expert	Ben Burtt created the lightsaber hum by mixing a TV set's buzz with the hum of what?	An idling film projector	A refrigerator compressor	A vacuum cleaner	An electric razor
+pop_buddy_ebsen_tin	Expert	Why did Buddy Ebsen, the first Tin Man of 'The Wizard of Oz' (1939), have to leave the film?	His aluminium make-up poisoned his lungs	He broke a leg falling off the set	He was drafted into the army	He refused to wear the heavy suit
+pop_code_a113_hidden	Expert	The code 'A113', hidden in every Pixar film, refers to what?	A classroom at the CalArts college	The studio's first office number	John Lasseter's car number plate	A room in Disney's old studio
+pop_pac_man_came	Expert	What was Pac-Man called when it first came out in Japan?	Puck-Man	Paku-Man	Pizza-Man	Chomp-Man
+pop_band_recorded_love	Expert	Which band first recorded 'I Love Rock 'n' Roll', years before Joan Jett's hit?	The Arrows	The Runaways	The Sweet	The Rubettes
+pop_princess_zelda_wife	Expert	Princess Zelda was named after the wife of which writer?	F. Scott Fitzgerald	Ernest Hemingway	J. R. R. Tolkien	Edgar Allan Poe
+pop_nirvana_smells_like	Expert	Nirvana's 'Smells Like Teen Spirit' took its title from what?	A brand of deodorant	A school cheerleading chant	A slogan on a beer can	A line in a horror film
+pop_beatles_said_pun	Expert	The Beatles' name is said to be a pun inspired by which band's insect name?	Buddy Holly's Crickets	The Spiders	The Hornets	The Bumblebees
+pop_duran_duran_took	Expert	Duran Duran took its name from a villain in which 1968 science-fiction film?	Barbarella	Planet of the Apes	2001: A Space Odyssey	Fantastic Voyage
+pop_recorded_hound_dog	Expert	Who first recorded 'Hound Dog', years before Elvis Presley's hit?	Big Mama Thornton	Etta James	Bessie Smith	Ruth Brown
+pop_wrote_recorded_girls	Expert	Who wrote and first recorded 'Girls Just Want to Have Fun', later Cyndi Lauper's hit?	Robert Hazard	Bruce Springsteen	Billy Joel	Tom Petty
+pop_mace_windu_wield	Expert	Why does Mace Windu wield a purple lightsaber in the 'Star Wars' prequels?	Samuel L. Jackson asked for one	It marked him as a Sith spy	It was a gift from Yoda	Blue looked bad on camera
+pop_actor_played_three	Expert	Which actor played three roles, including the US President, in 'Dr. Strangelove' (1964)?	Peter Sellers	Alec Guinness	George C. Scott	Peter Ustinov
+pop_silent_film_comedian	Expert	Which silent-film comedian dangled from the hands of a clock high above the street in 'Safety Last!' (1923)?	Harold Lloyd	Buster Keaton	Charlie Chaplin	Stan Laurel
+pop_1926_german_silhouette	Expert	Which 1926 German silhouette film is the oldest surviving animated feature?	The Adventures of Prince Achmed	Gertie the Dinosaur	The Cabinet of Dr. Caligari	The Thief of Bagdad
+pop_gravestone_reads_all	Expert	Whose gravestone reads 'That's All Folks'?	Mel Blanc	Walt Disney	Chuck Jones	Tex Avery

@@ -181,7 +181,12 @@ object PolandQuestions {
         q("pol_poles_call_april", "What do Poles call April Fools' Day?", "Prima aprilis", listOf("Lany poniedzialek", "Tlusty czwartek", "Zaduszki"), E),
         q("pol_polish_city_capital", "Which Polish city was the capital before Warsaw?", "Krakow", listOf("Gniezno", "Poznan", "Plock"), E),
         q("pol_polish_dessert_doughnut", "Which Polish dessert is a doughnut eaten especially on Fat Thursday?", "Paczek", listOf("Faworki", "Sernik", "Makowiec"), E),
-        q("pol_mountain_range_forms", "Which mountain range forms Poland's southern border with Slovakia?", "Tatra Mountains", listOf("Sudetes", "Alps", "Ural Mountains"), E)
+        q("pol_mountain_range_forms", "Which mountain range forms Poland's southern border with Slovakia?", "Tatra Mountains", listOf("Sudetes", "Alps", "Ural Mountains"), E),
+        q("pol_common_surname_poland", "What is the most common surname in Poland?", "Nowak", listOf("Kowalski", "Wisniewski", "Wojcik"), E),
+        q("pol_time_day_sirens", "At what time of day do sirens sound across Warsaw every 1 August to mark the start of the 1944 Uprising?", "5 p.m.", listOf("8 a.m.", "Noon", "9 p.m."), E),
+        q("pol_children_poem_absent", "In the children's poem, where does the absent-minded Pan Hilary finally find his lost glasses?", "On his own nose", listOf("In the fridge", "Under his pillow", "In his coat pocket"), E),
+        q("pol_trzepak_meeting_point", "What was a 'trzepak', the meeting point of children in Polish housing estate courtyards?", "A metal frame for beating carpets", listOf("A wooden sandpit with a roof", "A concrete ping-pong table", "A public water pump"), E),
+        q("pol_communist_poland_flower", "In communist Poland, which flower did women traditionally receive on Women's Day, 8 March?", "A carnation", listOf("A tulip", "A rose", "A daffodil"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -432,7 +437,17 @@ object PolandQuestions {
         q("pol_polish_smoked_sheep", "Which Polish smoked sheep's cheese from the Tatras has EU protected status?", "Oscypek", listOf("Bryndza", "Twarog", "Bundz"), M),
         q("pol_smigus_dyngus_celebrated", "What is 'Smigus-dyngus', celebrated on Easter Monday?", "Throwing water at each other", listOf("Painting eggs", "Burning a straw figure", "Rolling eggs downhill"), M),
         q("pol_straw_figure_poles", "Which straw figure do Poles drown in spring to say goodbye to winter?", "Marzanna", listOf("Baba Jaga", "Rusalka", "Kikimora"), M),
-        q("pol_polish_mathematician_triangle", "Which Polish mathematician's triangle is a famous fractal?", "Waclaw Sierpinski", listOf("Stefan Banach", "Kazimierz Kuratowski", "Alfred Tarski"), M)
+        q("pol_polish_mathematician_triangle", "Which Polish mathematician's triangle is a famous fractal?", "Waclaw Sierpinski", listOf("Stefan Banach", "Kazimierz Kuratowski", "Alfred Tarski"), M),
+        q("pol_farm_tools_straightened", "Which farm tools, straightened into pikes, did the peasant soldiers of the 1794 uprising carry into battle?", "Scythes", listOf("Pitchforks", "Flails", "Sickles"), M),
+        q("pol_country_dabrowski_polish", "In which country were Dabrowski's Polish Legions formed, where the national anthem was written in 1797?", "Italy", listOf("France", "Switzerland", "Austria"), M),
+        q("pol_september_1939_gdansk", "On 1 September 1939, which Gdansk building did its own clerks defend against German attack for most of the day?", "The Polish Post Office", listOf("The Town Hall", "The Shipyard Gate", "The Railway Station"), M),
+        q("pol_flowers_polish_song", "Which flowers does the famous Polish song about the Battle of Monte Cassino sing of?", "Red poppies", listOf("White roses", "Cornflowers", "Lilies of the valley"), M),
+        q("pol_jokes_empty_shops", "In jokes about empty shops in communist Poland, which product was often the only thing on the shelves?", "Vinegar", listOf("Mustard", "Salt", "Matches"), M),
+        q("pol_under_tree_renaissance", "Under which tree did the Renaissance poet of Czarnolas famously like to write, praising it in a short verse?", "A linden", listOf("An oak", "A willow", "A chestnut"), M),
+        q("pol_city_film_school", "Which city's famous film school, nicknamed 'Filmowka', trained many of Poland's greatest directors?", "Lodz", listOf("Warsaw", "Krakow", "Katowice"), M),
+        q("pol_chandeliers_kinga_chapel", "What are the chandeliers of St Kinga's Chapel, deep in a salt mine near Krakow, made of?", "Salt crystals", listOf("Bohemian glass", "Baltic amber", "Silver"), M),
+        q("pol_according_polish_legend", "According to Polish legend, where does the sister of Warsaw's mermaid sit?", "In Copenhagen harbour", listOf("On a rock in the Rhine", "In Gdansk harbour", "On a bridge in Prague"), M),
+        q("pol_kupala_night_magical", "On Kupala Night, which magical flower do Polish legends say brings luck to whoever finds it?", "A fern flower", listOf("A golden rose", "A white lily", "A blue poppy"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -583,7 +598,31 @@ object PolandQuestions {
         q("pol_polish_region_own", "Which Polish region is famous for its own language and the city of Kartuzy?", "Kashubia", listOf("Silesia", "Podhale", "Kurpie"), H),
         q("pol_pole_invented_kerosene", "Which Pole invented the kerosene lamp and started an oil industry in the 1850s?", "Ignacy Lukasiewicz", listOf("Jan Czochralski", "Kazimierz Funk", "Stefan Banach"), H),
         q("pol_polish_spit_stretches", "Which Polish spit stretches about 35 km into the Baltic Sea?", "Hel Peninsula", listOf("Vistula Spit", "Curonian Spit", "Leba Spit"), H),
-        q("pol_polish_castle_third", "Which Polish castle is the third largest in the country and sits in Lower Silesia?", "Ksiaz Castle", listOf("Moszna Castle", "Czocha Castle", "Niedzica Castle"), H)
+        q("pol_polish_castle_third", "Which Polish castle is the third largest in the country and sits in Lower Silesia?", "Ksiaz Castle", listOf("Moszna Castle", "Czocha Castle", "Niedzica Castle"), H),
+        q("pol_polish_duke_invited", "Which Polish duke invited the Teutonic Knights to fight the pagan Prussians in 1226?", "Konrad of Masovia", listOf("Henry the Bearded", "Leszek the White", "Boleslaw the Curly"), H),
+        q("pol_krakow_restaurant_merchant", "Which Krakow restaurant is named after a merchant said to have hosted a feast for several kings in 1364?", "Wierzynek", listOf("Hawelka", "Pod Aniolami", "Jama Michalika"), H),
+        q("pol_king_stanislaw_august", "What did King Stanislaw August famously host for writers and scholars every week at the Royal Castle?", "Thursday dinners", listOf("Sunday concerts", "Friday balls", "Monday hunts"), H),
+        q("pol_1792_confederation_magnates", "Which 1792 confederation of magnates, whose name became a byword for treason, invited Russian troops into Poland?", "Targowica", listOf("Bar", "Radom", "Tyszowce"), H),
+        q("pol_russian_grand_duke", "Which Russian grand duke escaped the cadets who stormed the Belweder Palace in November 1830?", "Grand Duke Constantine", listOf("Grand Duke Michael", "Grand Duke Nicholas", "Grand Duke Alexander"), H),
+        q("pol_lithuanian_countess_fought", "Which Lithuanian countess fought in the November Uprising and inspired the poem 'The Death of the Colonel'?", "Emilia Plater", listOf("Klaudyna Potocka", "Anna Pustowojtowna", "Izabela Czartoryska"), H),
+        q("pol_town_polish_schoolchildren", "In which town did Polish schoolchildren go on strike in 1901 rather than say their prayers in German?", "Wrzesnia", listOf("Gniezno", "Kalisz", "Leszno"), H),
+        q("pol_polish_peasant_lived", "Which Polish peasant lived in a circus wagon to get around a Prussian ban on building a house?", "Michal Drzymala", listOf("Jakub Szela", "Jan Kilinski", "Hipolit Cegielski"), H),
+        q("pol_1794_uprising_peasant", "During the 1794 uprising, which peasant soldier captured a Russian cannon by smothering its fuse with his cap?", "Bartosz Glowacki", listOf("Jan Kilinski", "Jakub Jasinski", "Jakub Szela"), H),
+        q("pol_code_polish_underground", "What was the code name of the Polish underground Council to Aid Jews?", "Zegota", listOf("Kedyw", "Wachlarz", "Burza"), H),
+        q("pol_wartime_courier_courier", "Which wartime courier, known as 'the Courier from Warsaw', later ran Radio Free Europe's Polish service?", "Jan Nowak-Jezioranski", listOf("Jan Karski", "Jozef Retinger", "Witold Pilecki"), H),
+        q("pol_cichociemni_world_war", "Who were the 'Cichociemni' of World War II?", "Paratroopers sent into occupied Poland", listOf("Printers of underground newspapers", "Codebreakers working at Bletchley Park", "Couriers smuggling mail over the Tatras"), H),
+        q("pol_polish_general_led_2", "Which Polish general led the paratroopers who fought at Arnhem in 1944?", "Stanislaw Sosabowski", listOf("Stanislaw Maczek", "Wladyslaw Anders", "Tadeusz Kutrzeba"), H),
+        q("pol_polish_town_bombed", "Which Polish town was bombed at dawn on 1 September 1939, in what is often called the first air raid of the war?", "Wielun", listOf("Kutno", "Sieradz", "Plock"), H),
+        q("pol_krojanty_1939_polish", "At Krojanty in 1939, Polish lancers charged German infantry. What did propaganda later claim they had charged?", "Tanks", listOf("Armoured trains", "Artillery batteries", "Bomber airfields"), H),
+        q("pol_polish_film_star", "Which Polish film star died in 1967 trying to jump onto a moving train at Wroclaw station?", "Zbigniew Cybulski", listOf("Bogumil Kobiela", "Tadeusz Lomnicki", "Leon Niemczyk"), H),
+        q("pol_duo_created_cabaret", "Which duo created the TV 'Cabaret of Elderly Gentlemen'?", "Przybora and Wasowski", listOf("Laskowik and Smolen", "Mann and Materna", "Kobiela and Cybulski"), H),
+        q("pol_maria_kownacka_book", "In Maria Kownacka's book, where does Plastus, the little plasticine man, live?", "In a pencil case", listOf("In a matchbox", "In a flowerpot", "In a sugar bowl"), H),
+        q("pol_hosted_radio_trojka", "Which DJ hosted Radio Trojka's famous chart show, the 'Lista Przebojow', for decades?", "Marek Niedzwiecki", listOf("Piotr Kaczkowski", "Wojciech Mann", "Jerzy Owsiak"), H),
+        q("pol_polish_runner_1932", "Which Polish runner, the 1932 Olympic 10,000 m champion, was murdered by the Germans at Palmiry?", "Janusz Kusocinski", listOf("Bronislaw Malinowski", "Zdzislaw Krzyszkowiak", "Jozef Szmidt"), H),
+        q("pol_polish_cyclist_won", "Which Polish cyclist won the communist-era Peace Race four times?", "Ryszard Szurkowski", listOf("Czeslaw Lang", "Lech Piasecki", "Zenon Jaskula"), H),
+        q("pol_polish_skier_made", "Which Polish skier made the first full ski descent of K2, in 2018?", "Andrzej Bargiel", listOf("Adam Bielecki", "Krzysztof Wielicki", "Jerzy Kukuczka"), H),
+        q("pol_deputy_famously_lay", "Which deputy famously lay across the Sejm doorway in 1773 to protest against the First Partition?", "Tadeusz Rejtan", listOf("Hugo Kollataj", "Stanislaw Staszic", "Jan Kilinski"), H),
+        q("pol_shaggy_horned_creature", "Which shaggy horned creature with a snapping wooden jaw goes carolling with Polish 'kolednicy'?", "Turon", listOf("Lajkonik", "Boruta", "Marzanna"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -648,6 +687,22 @@ object PolandQuestions {
         q("pol_hetman_crushed_russian", "Which hetman crushed a Russian-Swedish army at Klushino in 1610, opening the road to Moscow?", "Stanislaw Zolkiewski", listOf("Jan Karol Chodkiewicz", "Stanislaw Koniecpolski", "Jan Zamoyski"), X),
         q("pol_stanislaw_lem_book", "In which Stanislaw Lem book do the constructor robots Trurl and Klapaucius appear?", "The Cyberiad", listOf("Solaris", "The Star Diaries", "His Master's Voice"), X),
         q("pol_polish_pomeranian_village", "Which Polish Pomeranian village has an unexplained 'Crooked Forest' of bent pine trees?", "Nowe Czarnowo", listOf("Leba", "Miedzyzdroje", "Ustka"), X),
-        q("pol_polish_town_chapel", "Which Polish town's chapel walls are decorated with thousands of human skulls?", "Czermna", listOf("Wieliczka", "Kudowa-Zdroj", "Swidnica"), X)
+        q("pol_polish_town_chapel", "Which Polish town's chapel walls are decorated with thousands of human skulls?", "Czermna", listOf("Wieliczka", "Kudowa-Zdroj", "Swidnica"), X),
+        q("pol_polish_cryptologist_broke", "Which Polish cryptologist broke Red Army ciphers during the war with Soviet Russia in 1919-1920?", "Jan Kowalewski", listOf("Marian Rejewski", "Jerzy Rozycki", "Henryk Zygalski"), X),
+        q("pol_polish_king_later", "Which Polish king later became Duke of Lorraine and died after his robe caught fire by the hearth?", "Stanislaw Leszczynski", listOf("Augustus III", "Michal Korybut Wisniowiecki", "John II Casimir"), X),
+        q("pol_abdicating_1668_polish", "After abdicating in 1668, which Polish king became an abbot in France?", "John II Casimir", listOf("Henry of Valois", "Stanislaw Leszczynski", "Michal Korybut Wisniowiecki"), X),
+        q("pol_polish_major_nicknamed", "Which Polish major, nicknamed 'Hubal', kept fighting the Germans in uniform after the 1939 defeat?", "Henryk Dobrzanski", listOf("Witold Pilecki", "Jan Piwnik", "Stefan Rowecki"), X),
+        q("pol_near_town_general", "Near which town did General Kleeberg fight the last battle of the September 1939 campaign?", "Kock", listOf("Kutno", "Tomaszow Lubelski", "Mlawa"), X),
+        q("pol_police_chief_warsaw", "Which SS and police chief of Warsaw was shot dead by Home Army fighters in Aleje Ujazdowskie in February 1944?", "Franz Kutschera", listOf("Hans Frank", "Jurgen Stroop", "Erich von dem Bach"), X),
+        q("pol_home_army_officer", "Which Home Army officer shared a communist prison cell with SS general Jurgen Stroop and wrote 'Conversations with an Executioner'?", "Kazimierz Moczarski", listOf("Jan Nowak-Jezioranski", "Stefan Rowecki", "Witold Pilecki"), X),
+        q("pol_actress_announced_news", "Which actress announced on the TV news in October 1989 that 'communism in Poland ended on 4 June'?", "Joanna Szczepkowska", listOf("Krystyna Janda", "Maja Komorowska", "Anna Seniuk"), X),
+        q("pol_111_metre_gliwice", "What is the 111-metre Gliwice Radio Tower, scene of a staged German attack in 1939, made of?", "Larch wood", listOf("Riveted steel", "Reinforced concrete", "Red brick"), X),
+        q("pol_communist_era_van", "Which communist-era van, built in Lublin, shares its name with the Polish word for a beetle?", "Zuk", listOf("Nysa", "Tarpan", "Star"), X),
+        q("pol_polish_ocean_liner", "Which Polish ocean liner was nicknamed the 'Lucky Ship' for surviving World War II?", "MS Batory", listOf("MS Pilsudski", "MS Chrobry", "MS Polonia"), X),
+        q("pol_according_legend_szczerbiec", "According to legend, how did Szczerbiec, the Polish coronation sword, get its notch?", "Struck on Kiev's Golden Gate", listOf("Struck on a Teutonic helmet", "Struck on the Wawel dragon", "Struck on Gniezno's doors"), X),
+        q("pol_battle_legnica_1241", "After the Battle of Legnica in 1241, how was the headless body of Duke Henry the Pious recognised, according to chronicles?", "By six toes on one foot", listOf("By his signet ring", "By a scar on his chest", "By his embroidered shirt"), X),
+        q("pol_young_composer_died", "Which young composer died in a Tatra avalanche in 1909 while out on skis?", "Mieczyslaw Karlowicz", listOf("Karol Szymanowski", "Wladyslaw Zelenski", "Ludomir Rozycki"), X),
+        q("pol_pre_war_polish", "Which pre-war Polish film star and singer died in a Soviet labour camp in 1943?", "Eugeniusz Bodo", listOf("Jan Kiepura", "Adolf Dymsza", "Aleksander Zabczynski"), X),
+        q("pol_polish_engineer_invented", "Which Polish engineer invented the rotating tank periscope later used in many Allied tanks?", "Rudolf Gundlach", listOf("Jozef Kosacki", "Tadeusz Sendzimir", "Jan Czochralski"), X)
     )
 }

@@ -197,6 +197,12 @@ lit_wizard_character_wants	Easy	In 'The Wizard of Oz', which character wants a b
 lit_wrote_war_worlds	Easy	Who wrote 'War of the Worlds'?	H. G. Wells	Jules Verne	Arthur C. Clarke	Isaac Asimov
 lit_character_thousand_nights	Easy	Which character from 'One Thousand and One Nights' finds a cave of treasure?	Ali Baba	Aladdin	Sinbad	Scheherazade
 lit_very_short_novel	Easy	What is the name of the very short novel by Kafka in which Gregor Samsa becomes an insect?	The Metamorphosis	The Trial	The Castle	The Judgment
+lit_edward_lear_poem	Easy	In Edward Lear's poem, in what do the Owl and the Pussy-cat go to sea?	A pea-green boat	A leaky sieve	A wooden shoe	A silver teapot
+lit_years_alone_island	Easy	After years alone on his island, which sight throws Robinson Crusoe into terror?	A man's footprint on the shore	A message in a bottle	A volcano starting to smoke	A tiger's paw prints
+lit_tchaikovsky_piece_calls	Easy	Which Tchaikovsky piece calls for real cannon fire?	The 1812 Overture	Swan Lake	The Nutcracker	Romeo and Juliet
+lit_unusual_andersen_steadfast	Easy	What is unusual about Andersen's steadfast tin soldier?	He has only one leg	He has no face painted on	He is made of gold	He can talk to people
+lit_andersen_fairy_tale	Easy	In Andersen's fairy tale, where is the tiny girl Thumbelina born?	Inside a flower	Under a toadstool	In a bird's nest	In a snail shell
+lit_scarlet_letter_letter	Easy	In 'The Scarlet Letter', which letter is Hester Prynne made to wear on her dress?	A	S	H	X
 cultw_wojna_pokoj	Medium	Who wrote War and Peace?	Leo Tolstoy	Fyodor Dostoevsky	Anton Chekhov	Ivan Turgenev
 cultw_don_kichot	Medium	Which novel is often called the first modern European novel?	Don Quixote	Robinson Crusoe	Gulliver's Travels	The Decameron
 cultw_kafka	Medium	Which writer is known for The Trial and The Metamorphosis?	Franz Kafka	Thomas Mann	Hermann Hesse	Robert Musil
@@ -541,6 +547,19 @@ lit_job_antoine_saint	Medium	Which job did Antoine de Saint-Exupery have besides
 lit_french_poet_wrote	Medium	Which French poet wrote fables like 'The Tortoise and the Hare' in verse?	Jean de La Fontaine	Charles Perrault	Moliere	Racine
 lit_author_published_robert	Medium	Which author published 'Robert Galbraith' crime novels under a pen name?	J. K. Rowling	Stephen King	Agatha Christie	Anne Rice
 lit_horror_writer_once	Medium	Which horror writer once published as Richard Bachman?	Stephen King	Dean Koontz	Clive Barker	Peter Straub
+lit_treasure_island_pirates	Medium	In 'Treasure Island', what do pirates hand a man as a deadly warning?	The black spot	A white feather	A torn playing card	A bent silver coin
+lit_kipling_just_stories	Medium	In Kipling's 'Just So Stories', how does the Elephant's Child get its long trunk?	A crocodile pulls its nose	It sniffs too much pepper	A python ties a knot in it	It reaches for high fruit
+lit_canadian_island_anne	Medium	On which Canadian island is 'Anne of Green Gables' set?	Prince Edward Island	Vancouver Island	Newfoundland	Cape Breton Island
+lit_tolstoy_heroine_anna	Medium	How does Tolstoy's heroine Anna Karenina end her life?	She throws herself under a train	She drinks a vial of poison	She drowns herself in a river	She shoots herself with a pistol
+lit_wedding_march_played	Medium	The 'Wedding March' played as many couples leave church comes from Mendelssohn's music for which Shakespeare play?	A Midsummer Night's Dream	The Taming of the Shrew	Much Ado About Nothing	As You Like It
+lit_tune_twinkle_twinkle	Medium	The tune of 'Twinkle, Twinkle, Little Star', on which Mozart wrote variations, comes from a folk song of which country?	France	Germany	England	Austria
+lit_alexander_pushkin_die	Medium	How did Alexander Pushkin die in 1837?	He was shot in a duel	He drowned in the Neva	He died of cholera	He was executed for treason
+lit_antonio_vivaldi_priest	Medium	Antonio Vivaldi was a priest nicknamed 'the Red Priest'. Why?	He had red hair	He wore a red cassock	He drank red wine at Mass	He was a revolutionary
+lit_comic_fantasy_novels	Medium	In the comic fantasy novels, what carries the flat Discworld through space?	Four elephants on a giant turtle	A dragon coiled around its edge	Seven whales swimming in a ring	The back of a sleeping giant
+lit_bengal_tiger_sharing	Medium	What is the name of the Bengal tiger sharing the lifeboat in 'Life of Pi'?	Richard Parker	Shere Khan	Mister Bengal	Captain Stripes
+lit_story_sherlock_holmes	Medium	In which story does Sherlock Holmes make his very first appearance?	A Study in Scarlet	The Sign of the Four	The Hound of the Baskervilles	A Scandal in Bohemia
+lit_riddle_mad_hatter	Medium	Which riddle does the Mad Hatter ask Alice, leaving it unanswered in the book?	'Why is a raven like a writing-desk?'	'What has keys but opens no locks?'	'What runs but never walks?'	'Why does a mouse wear no hat?'
+lit_world_war_writing	Medium	During World War II, before writing for children, Roald Dahl served as what?	An RAF fighter pilot	A naval codebreaker	An army cook	A war correspondent
 cultw_boska_komedia	Hard	How many parts does Dante's Divine Comedy have?	Three	Two	Four	Seven
 cultw_ulisses_joyce	Hard	In which city does Joyce's Ulysses take place over one day?	Dublin	London	Trieste	Paris
 lit_solaris	Hard	Who wrote 'Solaris'?	Stanislaw Lem	Isaac Asimov	Arthur C. Clarke	Philip K. Dick
@@ -740,6 +759,36 @@ lit_under_pen_bronte	Hard	Under what pen name did the Bronte sisters first publi
 lit_french_author_real	Hard	Which French author's real name was Francois-Marie Arouet?	Voltaire	Moliere	Stendhal	Rousseau
 lit_french_playwright_real	Hard	Which French playwright's real name was Jean-Baptiste Poquelin?	Moliere	Voltaire	Racine	Corneille
 lit_american_author_wrote	Hard	Which American author wrote short stories with twist endings under the name O. Henry?	William Sydney Porter	Ambrose Bierce	Bret Harte	Washington Irving
+lit_surviving_two_plane	Hard	After surviving two plane crashes in Africa on consecutive days in 1954, which author got to read his own obituaries?	Ernest Hemingway	F. Scott Fitzgerald	John Steinbeck	William Faulkner
+lit_agatha_christie_pick	Hard	Where did Agatha Christie pick up her expert knowledge of poisons?	Working in a hospital dispensary	Studying chemistry at university	Assisting a police pathologist	Helping in her father's pharmacy
+lit_author_publicly_backed	Hard	Which famous author publicly backed the Cottingley Fairies photographs, faked by two girls, as genuine?	Arthur Conan Doyle	H. G. Wells	J. M. Barrie	Rudyard Kipling
+lit_tolkien_lewis_friends	Hard	What did Tolkien, C. S. Lewis and their friends call their Oxford circle that read work aloud?	The Inklings	The Bloomsbury Group	The Apostles	The Lost Generation
+lit_1824_premiere_ninth	Hard	At the 1824 premiere of his Ninth Symphony, why did a singer turn Beethoven round to face the audience?	He could not hear their applause	The emperor had entered his box	He had dozed off in the finale	The audience had started booing
+lit_mozart_said_written	Hard	At 14, Mozart is said to have written down which closely guarded piece from memory after hearing it in the Sistine Chapel?	Allegri's 'Miserere'	Palestrina's 'Stabat Mater'	Handel's 'Messiah'	Bach's 'Mass in B minor'
+lit_haydn_hint_prince	Hard	How did Haydn hint to Prince Esterhazy that his musicians wanted to go home to their families?	In a symphony, players left one by one	He set the prince's letters to music	The orchestra played until he slept	He wrote a symphony with no ending
+lit_shakespeare_globe_theatre	Hard	How did Shakespeare's Globe Theatre burn down in 1613?	A stage cannon set the thatch alight	Rioters set fire to it at night	Lightning struck it in a storm	A candle fell in the costume store
+lit_position_albert_camus	Hard	Which position did Albert Camus play for the University of Algiers football team?	Goalkeeper	Centre forward	Right winger	Centre half
+lit_original_title_novel	Hard	What was the original title of the novel 'Pride and Prejudice'?	'First Impressions'	'Elinor and Marianne'	'Susan'	'The Watsons'
+lit_leo_tolstoy_die	Hard	Where did Leo Tolstoy die in 1910, days after secretly leaving home at the age of 82?	At a small railway station	In a monastery cell	On a Volga riverboat	In a Moscow hotel
+lit_1774_novel_young	Hard	After which 1774 novel did young men across Europe copy its hero's blue coat and yellow waistcoat?	'The Sorrows of Young Werther'	'Julie, or the New Heloise'	'The Vicar of Wakefield'	'Candide'
+lit_prisoner_war_kurt	Hard	Where did the prisoner of war Kurt Vonnegut shelter during the firebombing of Dresden?	In an underground meat locker	In the crypt of a church	In a tunnel under the city	In the cellar of a brewery
+lit_happened_george_orwell	Hard	What happened to George Orwell while fighting in the Spanish Civil War?	A sniper shot him through the throat	He lost an eye to a grenade	He was sentenced to death as a spy	He lost two fingers to frostbite
+lit_margaret_mitchell_drafts	Hard	In Margaret Mitchell's drafts, what was Scarlett O'Hara's first name?	Pansy	Daisy	Rose	Violet
+lit_two_authors_died	Hard	Which two famous authors died on the same day that President Kennedy was shot?	C. S. Lewis and Aldous Huxley	Robert Frost and Sylvia Plath	Ernest Hemingway and William Faulkner	T. S. Eliot and Evelyn Waugh
+lit_times_bram_stoker	Hard	How many times did Bram Stoker visit Transylvania before writing 'Dracula'?	Not once	Once, briefly	Three times	Every summer
+lit_rodin_thinker_meant	Hard	Rodin's 'The Thinker' was first meant to show which poet, gazing down from 'The Gates of Hell'?	Dante	Virgil	Homer	Baudelaire
+lit_means_transport_films	Hard	Which means of transport, famous from the films, is never used in the original 1872 novel about a race around the world in 80 days?	A hot-air balloon	An elephant	A sail-powered sledge	A steamship
+lit_persuaded_publisher_bloomsbury	Hard	Who persuaded the publisher Bloomsbury to take on the first Harry Potter book?	The chairman's eight-year-old daughter	The chairman's elderly mother	A famous children's author	A Scottish bookseller
+lit_language_aslan_narnia	Hard	In which language does 'Aslan', the name of Narnia's great lion, simply mean 'lion'?	Turkish	Arabic	Persian	Hebrew
+lit_playwright_became_person	Hard	Which playwright became the first person to win both a Nobel Prize and an Oscar?	George Bernard Shaw	Eugene O'Neill	Harold Pinter	Tennessee Williams
+lit_made_agatha_christie	Hard	What made Agatha Christie's 'The Murder of Roger Ackroyd' so controversial in 1926?	The narrator turns out to be the killer	The detective turns out to be the killer	Every suspect took part in the murder	The murderer is never revealed
+lit_turns_out_killer	Hard	Who turns out to be the killer in Edgar Allan Poe's 'The Murders in the Rue Morgue'?	An escaped orangutan	The victims' landlord	A sleepwalking sailor	The detective's own cousin
+lit_great_expectations_turns	Hard	In 'Great Expectations', who turns out to be Pip's secret benefactor?	The convict Magwitch	Miss Havisham	Mr Jaggers	Joe Gargery
+lit_uncanny_grenouille_murderer	Hard	What is uncanny about Grenouille, the murderer in Patrick Suskind's 'Perfume'?	He has no smell of his own	He cannot smell anything	He is completely blind	He never needs to sleep
+lit_published_version_three	Hard	In the first published version of 'The Three Bears' (1837), who breaks into the bears' house?	A nasty old woman	A golden-haired girl	A hungry fox	A runaway boy
+lit_aladdin_live_version	Hard	Where does Aladdin live in the version of his tale in 'One Thousand and One Nights'?	In China	In Baghdad	In Cairo	In Damascus
+lit_bach_wrote_comic	Hard	Bach wrote a comic cantata about a young woman hooked on which drink?	Coffee	Hot chocolate	Beer	Tea
+lit_phrase_stepford_wife	Hard	The phrase 'Stepford wife' comes from a 1972 novel in which a town's wives are secretly replaced by what?	Robots	Clones	Aliens	Their twin sisters
 cultw_genji	Expert	The Tale of Genji, often called the first novel, came from which country?	Japan	China	Korea	India
 lit_iliada_wers	Expert	What word does Homer's 'Iliad' open with?	Rage (wrath)	War	Muse	Gods
 lit_proust	Expert	Who wrote the cycle 'In Search of Lost Time'?	Marcel Proust	Gustave Flaubert	Honore de Balzac	Emile Zola
@@ -820,3 +869,24 @@ lit_sicilian_prince_wrote	Expert	Which Sicilian prince wrote 'The Leopard', publ
 lit_italian_author_wrote	Expert	Which Italian author wrote 'Invisible Cities' and 'If on a Winter's Night a Traveller'?	Italo Calvino	Umberto Eco	Primo Levi	Dino Buzzati
 lit_wrote_comic_czech	Expert	Who wrote the comic Czech novel 'The Good Soldier Svejk'?	Jaroslav Hasek	Karel Capek	Bohumil Hrabal	Milan Kundera
 lit_ferdowsi_book_kings	Expert	What is the name of Ferdowsi's 'Book of Kings', Iran's national epic?	The Shahnameh	The Masnavi	The Rubaiyat	The Avesta
+lit_1865_novelist_survived	Expert	In 1865, which novelist survived a train crash and climbed back into the dangling carriage to rescue his manuscript?	Charles Dickens	Anthony Trollope	Wilkie Collins	Thomas Hardy
+lit_animal_picture_books	Expert	Before her famous animal picture books, Beatrix Potter wrote a scientific paper, read for her because women could not attend, about what?	How fungus spores germinate	How rabbits dig their burrows	Insects trapped in amber	How snails build their shells
+lit_stolen_joseph_haydn	Expert	What was stolen from Joseph Haydn's grave and only reunited with his body 145 years later?	His skull	His heart	His violin	His wedding ring
+lit_tchaikovsky_rich_patron	Expert	Tchaikovsky's rich patron Nadezhda von Meck paid him an allowance for 13 years on what odd condition?	That they never meet	That he never marry	That he live in her house	That he teach her daughters
+lit_erik_satie_short	Expert	Erik Satie's short piano piece 'Vexations' carries a note suggesting it be repeated how many times?	840	100	365	2,000
+lit_1705_young_bach	Expert	In 1705 the young Bach walked some 400 km to Lubeck to hear which organist play?	Dieterich Buxtehude	Johann Pachelbel	Georg Philipp Telemann	George Frideric Handel
+lit_decades_mysterious_visitor	Expert	For decades, a mysterious visitor left three roses and a half-bottle of cognac on which writer's grave every birthday?	Edgar Allan Poe	Oscar Wilde	Dylan Thomas	Jack London
+lit_girl_jonathan_swift	Expert	Which girl's name did Jonathan Swift invent for a poem, from the name of his friend Esther Vanhomrigh?	Vanessa	Stella	Pamela	Miranda
+lit_years_bram_stoker	Expert	For 27 years, Bram Stoker worked as business manager for whom?	The actor Henry Irving	The writer Oscar Wilde	The showman P. T. Barnum	The magician Harry Houdini
+lit_great_whaling_novel	Expert	After his great whaling novel flopped, Herman Melville spent nearly 20 years working as what?	A customs inspector in New York	A whaling captain in the Pacific	A schoolteacher in Boston	A lighthouse keeper in Maine
+lit_elizabethan_playwright_said	Expert	Which Elizabethan playwright is said to be buried standing upright in Westminster Abbey?	Ben Jonson	Christopher Marlowe	Thomas Kyd	John Webster
+lit_according_barrie_english	Expert	According to J. M. Barrie, which famous English school did Captain Hook attend?	Eton	Harrow	Rugby	Winchester
+lit_kafka_forbid_publisher	Expert	What did Kafka forbid the publisher of 'The Metamorphosis' to put on its cover?	A picture of the insect	His own photograph	The word 'novella'	Any colour but black
+lit_orwell_room_101	Expert	Orwell named Room 101 in '1984' after a room where he sat through dull meetings at which organisation?	The BBC	The Ministry of Information	The Foreign Office	The London Library
+lit_harper_lee_find	Expert	How did Harper Lee find the time to write her famous first novel?	Friends gave her a year's wages as a gift	She won a prize in a newspaper contest	Her lawyer father paid for a year off	A publisher paid her in advance
+lit_word_svengali_comes	Expert	The word 'Svengali' comes from an 1894 novel that also gave its name to which item of clothing?	The trilby hat	The cardigan	The bowler hat	The Norfolk jacket
+lit_phrase_goody_two	Expert	The phrase 'goody two-shoes' comes from a 1765 children's book about a poor orphan girl who owned only one what?	Shoe	Dress	Glove	Doll
+lit_whistler_sued_critic	Expert	When Whistler sued the critic John Ruskin for libel in 1878, how much did he win in damages?	One farthing	One thousand pounds	One guinea	Nothing at all
+lit_thieves_stole_scream	Expert	When thieves stole 'The Scream' from Oslo's National Gallery in 1994, what did they leave behind?	A note thanking it for poor security	A cheap copy of the painting	A ransom demand in verse	The empty frame on the wall
+lit_dickens_bleak_house	Expert	In Dickens's 'Bleak House', how does the rag-and-bone dealer Krook die?	By spontaneous human combustion	Buried under his own junk	Poisoned by his lodger	Drowned in the Thames
+lit_mozart_kept_pet	Expert	Mozart kept a pet that could whistle a theme from one of his piano concertos. What was it?	A starling	A parrot	A canary	A blackbird
