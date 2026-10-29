@@ -8,6 +8,8 @@ his_titanic_famously_said	Easy	What was the Titanic famously said to be before i
 his_hymn_titanic_band	Easy	Which hymn is the Titanic's band said to have played as the ship went down?	'Nearer, My God, to Thee'	'Eternal Father, Strong to Save'	'Amazing Grace'	'Rock of Ages'
 his_rule_titanic_officers	Easy	Which rule did the Titanic's officers follow when filling the lifeboats?	Women and children first	First-class passengers first	Crew members first	Strongest swimmers first
 his_colour_titanic_hull	Easy	What colour was the Titanic's hull?	Black	White	Dark blue	Red
+his_cheapest_crowded_passenger	Easy	What were the cheapest, most crowded passenger quarters on liners like the Titanic called?	Steerage	The hold	The galley	The bilge
+his_wreck_titanic_lies	Easy	The wreck of the Titanic lies on the seabed some 600 km off which island?	Newfoundland	Greenland	Iceland	Ireland
 his_titanic	Medium	In which year did the Titanic sink?	1912	1905	1918	1923
 wh_titanic_rejs	Medium	During which voyage did the Titanic sink?	Its maiden voyage	Its second voyage	Its tenth voyage	Its return trip from New York
 his_titanic_cel	Medium	Which city was the Titanic sailing to when it sank?	New York	Boston	Halifax	Southampton
@@ -33,6 +35,7 @@ his_roughly_long_titanic	Medium	Roughly how long was the Titanic?	About 270 metr
 his_colour_distress_rockets	Medium	What colour were the distress rockets the Titanic fired, which a nearby ship saw but did not answer?	White	Red	Green	Blue
 his_none_titanic_engineers	Medium	Why did none of the Titanic's engineers survive the sinking?	They stayed below to keep the power on	They gave up their lifeboat seats to children	They were locked in by panicking passengers	They were asleep when the iceberg struck
 his_rusticles_slowly_eating	Medium	What are the 'rusticles' slowly eating away the wreck of the Titanic?	Icicle-like rust made by iron-eating bacteria	Shellfish that drill holes into the steel	Long strands of seaweed growing in rust	Crystals of salt that crack the hull
+his_millionaire_changed_evening	Medium	Which millionaire changed into evening dress on the sinking Titanic, saying he was ready to go down like a gentleman?	Benjamin Guggenheim	John Jacob Astor IV	Isidor Straus	J. P. Morgan
 hw_titanic_czas	Hard	Roughly how long did the Titanic take to sink after its fatal collision?	About 2 hours 40 minutes	About 20 minutes	About 8 hours	About 2 days
 his_year_wreck_titanic	Hard	In which year was the wreck of the Titanic found?	1985	1962	1999	1971
 his_shipping_company_owned	Hard	Which shipping company owned the Titanic?	The White Star Line	The Cunard Line	The Hamburg America Line	P&O
@@ -52,6 +55,7 @@ his_titanic_bandleader_violin	Hard	What was the name of the Titanic's bandleader
 his_american_banker_shipping	Hard	Which American banker, whose shipping trust ultimately owned the Titanic, cancelled his trip on it at the last minute?	J. P. Morgan	John D. Rockefeller	Andrew Carnegie	Cornelius Vanderbilt
 his_dozen_dogs_sailed	Hard	About a dozen dogs sailed on the Titanic. How many of them survived?	Three	None	One	Seven
 his_roughly_fast_titanic	Hard	Roughly how fast was the Titanic going when it hit the iceberg?	About 22 knots	About 10 knots	About 35 knots	About 5 knots
+his_officer_charge_titanic	Hard	Which officer was in charge on the Titanic's bridge when it struck the iceberg?	William Murdoch	Charles Lightoller	Harold Lowe	Herbert Pitman
 hy_jessop	Expert	Violet Jessop survived the Titanic and accidents on which two of its sister ships?	The Olympic and the Britannic	The Lusitania and the Carpathia	The Queen Mary and the Olympic	The Britannic and the Lusitania
 his_canadian_city_150	Expert	In which Canadian city are about 150 of the Titanic's victims buried?	Halifax	Quebec City	Montreal	St John's
 his_irish_port_titanic	Expert	At which Irish port did the Titanic make its last stop before crossing the Atlantic?	Queenstown	Dublin	Belfast	Galway
