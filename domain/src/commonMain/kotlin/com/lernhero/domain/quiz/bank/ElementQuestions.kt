@@ -85,7 +85,12 @@ object ElementQuestions {
         q("ele_antiperspirants_block_sweat", "Most antiperspirants block sweat using compounds of which metal?", "Aluminium", listOf("Iron", "Copper", "Silver"), E),
         q("ele_traditional_church_bells", "Traditional church bells are cast from which alloy?", "Bronze", listOf("Brass", "Pewter", "Steel"), E),
         q("ele_band_led_zeppelin", "The band Led Zeppelin took its name from a joke about a balloon made of which metal?", "Lead", listOf("Iron", "Tin", "Mercury"), E),
-        q("ele_recreational_scuba_divers", "What do recreational scuba divers usually breathe from their tanks?", "Ordinary compressed air", listOf("Pure oxygen", "A helium-oxygen mix", "Pure nitrogen"), E)
+        q("ele_recreational_scuba_divers", "What do recreational scuba divers usually breathe from their tanks?", "Ordinary compressed air", listOf("Pure oxygen", "A helium-oxygen mix", "Pure nitrogen"), E),
+        q("ele_big_bubbles_pan", "What are the big bubbles in a pan of water at a rolling boil actually made of?", "Water vapour", listOf("Air from the water", "Hydrogen gas", "Carbon dioxide"), E),
+        q("ele_shiny_silver_lining", "The shiny silver lining inside a crisp packet is a very thin layer of which metal?", "Aluminium", listOf("Silver", "Tin", "Zinc"), E),
+        q("ele_whitish_bloom_appears", "What is the whitish 'bloom' that appears on old chocolate?", "Crystals of fat or sugar", listOf("Mould growing on it", "Dust from the wrapper", "Dried milk powder"), E),
+        q("ele_disposable_hand_warmer", "Why does a disposable hand warmer heat up once you open its packet?", "Iron powder inside starts to rust", listOf("A tiny battery switches on", "Water inside begins to boil", "It releases stored sunlight"), E),
+        q("ele_hand_sanitiser_gels", "Most hand sanitiser gels kill germs with which main ingredient?", "Alcohol", listOf("Bleach", "Vinegar", "Ammonia"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -195,7 +200,20 @@ object ElementQuestions {
         q("ele_gas_bubbling_out", "Which gas bubbling out of the blood gives divers 'the bends' if they surface too fast?", "Nitrogen", listOf("Oxygen", "Helium", "Carbon dioxide"), M),
         q("ele_striking_strip_box", "The striking strip on a box of safety matches contains which element?", "Phosphorus", listOf("Sulfur", "Magnesium", "Potassium"), M),
         q("ele_element_added_iron", "Which element is added to iron to make steel?", "Carbon", listOf("Chromium", "Nickel", "Silicon"), M),
-        q("ele_carat_mean_gold", "What does '24 carat' mean for gold?", "Pure gold", listOf("Half gold", "24 grams", "24 percent gold"), M)
+        q("ele_carat_mean_gold", "What does '24 carat' mean for gold?", "Pure gold", listOf("Half gold", "24 grams", "24 percent gold"), M),
+        q("ele_draught_guinness_gets", "Draught Guinness gets its creamy head from a gas mix that is mostly which gas?", "Nitrogen", listOf("Carbon dioxide", "Oxygen", "Helium"), M),
+        q("ele_aerosol_cans_squirty", "Aerosol cans of squirty whipped cream are usually pressurised with which gas?", "Nitrous oxide", listOf("Carbon dioxide", "Helium", "Propane"), M),
+        q("ele_metal_oxide_brilliant", "Which metal's oxide is the brilliant white pigment in most modern white paint?", "Titanium", listOf("Lead", "Tin", "Magnesium"), M),
+        q("ele_bendy_silicone_bakeware", "Bendy silicone bakeware is built on a backbone of oxygen and which element?", "Silicon", listOf("Carbon", "Sulfur", "Boron"), M),
+        q("ele_christmas_tinsel_made", "The first Christmas tinsel, made in Germany around 1610, was cut from which metal?", "Silver", listOf("Tin", "Gold", "Copper"), M),
+        q("ele_old_fashioned_smelling", "Old-fashioned smelling salts, used to revive people who fainted, give off which sharp gas?", "Ammonia", listOf("Chlorine", "Ozone", "Sulfur dioxide"), M),
+        q("ele_stretchy_homemade_slime", "Stretchy homemade slime is made by mixing PVA glue with borax, a compound of which element?", "Boron", listOf("Bromine", "Barium", "Bismuth"), M),
+        q("ele_golden_branching_sparks", "The golden, branching sparks from a sparkler come from burning specks of which metal?", "Iron", listOf("Gold", "Copper", "Sodium"), M),
+        q("ele_vulcanised_rubber_used", "Vulcanised rubber, used for tyres, is made tough and weatherproof by heating raw rubber with which element?", "Sulfur", listOf("Carbon", "Chlorine", "Lead"), M),
+        q("ele_cloud_seeding_used", "Cloud seeding, used to coax rain or snow from clouds, usually sprays crystals of which compound?", "Silver iodide", listOf("Copper sulfate", "Potassium nitrate", "Lead oxide"), M),
+        q("ele_buckyballs_football_shaped", "Buckyballs, football-shaped molecules named after the architect Buckminster Fuller, are made of which element?", "Carbon", listOf("Silicon", "Boron", "Sulfur"), M),
+        q("ele_nail_polish_removers", "Most nail polish removers dissolve the varnish with which solvent?", "Acetone", listOf("Turpentine", "Bleach", "Ammonia"), M),
+        q("ele_world_coins_ancient", "The world's first coins, from ancient Lydia, were made of electrum, a natural blend of gold and which metal?", "Silver", listOf("Copper", "Tin", "Platinum"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -288,7 +306,17 @@ object ElementQuestions {
         q("ele_element_japan_2016", "Which element was named after Japan in 2016?", "Nihonium", listOf("Japonium", "Tennessine", "Moscovium"), H),
         q("ele_element_2016_honours", "Which element, named in 2016, honours the home state of Oak Ridge National Laboratory?", "Tennessine", listOf("Nihonium", "Americium", "Berkelium"), H),
         q("ele_element_comes_greek_2", "Which element's name comes from the Greek for 'new'?", "Neon", listOf("Xenon", "Nitrogen", "Neodymium"), H),
-        q("ele_element_latin_hydrargyrum", "Which element's Latin name 'hydrargyrum' means 'liquid silver'?", "Mercury", listOf("Silver", "Tin", "Gallium"), H)
+        q("ele_element_latin_hydrargyrum", "Which element's Latin name 'hydrargyrum' means 'liquid silver'?", "Mercury", listOf("Silver", "Tin", "Gallium"), H),
+        q("ele_washington_monument_finished", "When the Washington Monument was finished in 1884, its tip was capped with a small pyramid of which metal, then as costly as silver?", "Aluminium", listOf("Platinum", "Copper", "Gold"), H),
+        q("ele_soft_alkali_metal", "Which soft alkali metal is pale gold in colour rather than silvery?", "Caesium", listOf("Lithium", "Sodium", "Potassium"), H),
+        q("ele_golfer_eben_byers", "The US golfer Eben Byers died in 1932 after years of drinking a fashionable health tonic laced with which element?", "Radium", listOf("Arsenic", "Mercury", "Thallium"), H),
+        q("ele_electric_light_stage", "Before electric light, stage stars stood 'in the limelight', a glow made by heating what in a hot flame?", "A block of quicklime", listOf("Oil pressed from limes", "A coil of magnesium", "A bar of tin"), H),
+        q("ele_prussian_blue_often", "Prussian blue, often called the first modern synthetic pigment, is a compound of which metal?", "Iron", listOf("Cobalt", "Copper", "Manganese"), H),
+        q("ele_diamonds_not_quite", "Diamonds are not quite forever: at normal pressure, what would they turn into, unimaginably slowly?", "Graphite", listOf("Coal", "Glass", "Quartz"), H),
+        q("ele_neon_signs_glow", "'Neon' signs that glow blue usually hold no neon at all. Which gas, with a trace of mercury, do they use?", "Argon", listOf("Helium", "Hydrogen", "Chlorine"), H),
+        q("ele_hold_sheet_gold", "Hold a sheet of gold leaf up to a lamp. What colour is the light that shines through it?", "Green", listOf("Red", "Golden yellow", "Violet"), H),
+        q("ele_ships_carry_blocks", "Why do many ships carry blocks of zinc bolted to their steel hulls?", "The zinc corrodes instead of the hull", listOf("They balance the ship's weight", "They keep barnacles away", "They steady the compass"), H),
+        q("ele_ruby_red_cranberry", "Ruby-red 'cranberry glass' gets its colour from a tiny pinch of which precious metal?", "Gold", listOf("Silver", "Platinum", "Palladium"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -357,6 +385,8 @@ object ElementQuestions {
         q("ele_element_old_scandinavia", "Which element is named after the old name of Scandinavia's far north, Thule?", "Thulium", listOf("Holmium", "Scandium", "Hafnium"), X),
         q("ele_element_used_precise", "Which element is used in the most precise optical lattice clocks?", "Strontium", listOf("Caesium", "Rubidium", "Helium"), X),
         q("ele_element_means_new", "Which element's name means 'new twin' in Greek?", "Neodymium", listOf("Praseodymium", "Didymium", "Neon"), X),
-        q("ele_element_comes_greek_3", "Which element's name comes from the Greek for 'heavy'?", "Barium", listOf("Lead", "Osmium", "Tungsten"), X)
+        q("ele_element_comes_greek_3", "Which element's name comes from the Greek for 'heavy'?", "Barium", listOf("Lead", "Osmium", "Tungsten"), X),
+        q("ele_fluorine_injured_killed", "Fluorine injured or killed several chemists who tried to isolate it. Who finally succeeded, in 1886?", "Henri Moissan", listOf("Humphry Davy", "Robert Bunsen", "William Ramsay"), X),
+        q("ele_precious_pigment_ultramarine", "The precious pigment ultramarine, ground from lapis lazuli, owes its blue colour to which element?", "Sulfur", listOf("Cobalt", "Copper", "Iron"), X)
     )
 }

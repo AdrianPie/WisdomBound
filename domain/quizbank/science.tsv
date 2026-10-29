@@ -156,6 +156,11 @@ sci_astronauts_iss_tie	Easy	Why do astronauts on the ISS tie their sleeping bags
 sci_call_two_days	Easy	What do we call the two days a year when day and night are roughly equal everywhere?	The equinoxes	The solstices	The eclipses	The zeniths
 sci_get_sunburnt_cloudy	Easy	Why can you get sunburnt on a cloudy day?	Most UV rays pass through clouds	Clouds focus the sunlight	Cold air thins the skin	Wind dries out the skin
 sci_thought_experiment_involves	Easy	Which thought experiment involves a cat that is both alive and dead?	Schrodinger's cat	Maxwell's demon	Newton's cradle	Buridan's ass
+sci_tell_raw_egg	Easy	How can you tell a raw egg from a hard-boiled one without cracking it?	Spin it: the raw one wobbles	Shake it: the boiled one rattles	Weigh it: the raw one is heavier	Sniff it: the raw one smells
+sci_moon_waxing_happening	Easy	When the Moon is 'waxing', what is happening to it?	Its lit part grows each night	Its lit part shrinks each night	It is moving closer to Earth	It is passing through Earth's shadow
+sci_magnets_stick_fridge	Easy	Why do magnets stick to most fridge doors?	The door is made of steel	The door is charged with static	The door's paint is sticky	The cold makes metal magnetic
+sci_lightning_ever_strike	Easy	Does lightning ever strike the same place twice?	Yes, tall towers get hit many times a year	No, the ground there loses its charge	Only about once in a hundred years	Only in hot, tropical countries
+sci_sitting_behind_closed	Easy	Sitting behind a closed car window on a sunny day, why do you rarely get sunburnt?	Glass blocks most burning UV rays	Glass turns UV rays into heat	The tint reflects all the sunlight	Moving air cools the skin
 sci_jowisz	Medium	Which planet of the Solar System is the largest?	Jupiter	Saturn	Neptune	Uranus
 sci_kopernik	Medium	Who proved that the Earth orbits the Sun, not the other way around?	Nicolaus Copernicus	Isaac Newton	Galileo Galilei	Johannes Kepler
 sci_grawitacja	Medium	Who formulated the law of universal gravitation?	Isaac Newton	Albert Einstein	Nikola Tesla	Michael Faraday
@@ -423,6 +428,24 @@ sci_physicist_predicted_black	Medium	Which physicist predicted that black holes 
 sci_physicist_uncertainty_principle	Medium	Which physicist's 'uncertainty principle' says you cannot know a particle's position and momentum exactly?	Werner Heisenberg	Erwin Schrodinger	Paul Dirac	Max Born
 sci_astronomer_discovered_uranus	Medium	Which astronomer discovered Uranus in 1781?	William Herschel	Caroline Herschel	Edmond Halley	Johann Galle
 sci_icelandic_volcano_2010	Medium	Which Icelandic volcano's 2010 eruption grounded European flights?	Eyjafjallajokull	Hekla	Katla	Grimsvotn
+sci_magician_whip_tablecloth	Medium	Why can a magician whip a tablecloth out from under the plates?	The plates' inertia keeps them in place	Air pressure holds the plates down	The plates are lighter than the cloth	The cloth's dye makes it slippery
+sci_electric_fan_doesn	Medium	An electric fan doesn't cool the air. Why does it still cool you down?	It speeds up the evaporation of sweat	It blows heat out of the room	It lowers the air pressure	It pulls cold air down from the ceiling
+sci_fish_survive_bottom	Medium	Why can fish survive at the bottom of a lake that has frozen over?	Water there stays at about 4 C	Ice traps sunlight like a greenhouse	Fish keep it warm by swimming	Salt sinks and stops it freezing
+sci_raw_egg_floats	Medium	A raw egg floats in a bowl of water. What does that usually mean?	It is probably old	It is very fresh	It has two yolks	It is a hen's first egg
+sci_popping_candy_crackle	Medium	Why does popping candy crackle in your mouth?	Tiny pockets of squeezed gas burst	Sugar crystals snap as they melt	It reacts with acid in your saliva	Water in it boils on your tongue
+sci_moon_1971_astronaut	Medium	On the Moon in 1971, astronaut David Scott dropped a hammer and a feather together. What happened?	Both hit the ground at once	The hammer landed first	The feather floated away	The feather landed first
+sci_earth_bathroom_scale	Medium	Where on Earth would a bathroom scale show you slightly lighter than elsewhere?	At the equator	At the North Pole	At the South Pole	Nowhere, it reads the same
+sci_planet_greek_god	Medium	Which planet is the only one named after a Greek god rather than a Roman one?	Uranus	Neptune	Mercury	Mars
+sci_constellations_officially_recognised	Medium	How many constellations are officially recognised by astronomers today?	88	12	48	150
+sci_venus_hotter_mercury	Medium	Why is Venus hotter than Mercury, though it is farther from the Sun?	Its thick air traps the heat	It spins much faster	It reflects less sunlight	Its surface is darker rock
+sci_spacecraft_crossing_asteroid	Medium	Do spacecraft crossing the asteroid belt usually have to dodge rocks?	No, the asteroids are far apart	Yes, they swerve every few minutes	Yes, they need rock shields	Only on the side nearest Mars
+sci_roughly_wide_asteroid	Medium	Roughly how wide was the asteroid that wiped out the dinosaurs?	About 10 km	About 100 m	About 1 km	About 300 km
+sci_happens_astronaut_tears	Medium	What happens to an astronaut's tears in space?	They cling to the eye in a watery ball	They run down the cheeks as usual	They freeze into tiny crystals	They evaporate instantly
+sci_point_remote_phone	Medium	Point a TV remote at many phone cameras and press a button. What shows on the screen?	A flashing light	Nothing at all	A rainbow of colours	A burst of static
+sci_see_annular_solar	Medium	What do you see during an annular solar eclipse?	A ring of Sun around the dark Moon	The Sun hidden for several hours	The Moon glowing deep red	Two shadows behind every object
+sci_shooting_stars_made	Medium	Most shooting stars are made by bits of space dust about the size of what?	A grain of sand	A football	A car	A house
+sci_besides_earth_planets	Medium	Besides Earth, how many planets are easy to spot with the naked eye?	Five	Two	Seven	None
+sci_roughly_faster_sound	Medium	Roughly how much faster does sound travel in water than in air?	About four times	About half as fast	About 40 times	About the same
 sci_einstein	Hard	Who formulated the theory of relativity?	Albert Einstein	Isaac Newton	Niels Bohr	Max Planck
 sci_penicylina	Hard	Who discovered penicillin?	Alexander Fleming	Louis Pasteur	Robert Koch	Jonas Salk
 sci_sila	Hard	What is the SI unit of force?	Newton	Joule	Watt	Pascal
@@ -604,6 +627,33 @@ sci_scottish_scientist_invented	Hard	Which Scottish scientist invented the vacuu
 sci_smell_rain_dry	Hard	What is the name for the smell of rain on dry earth?	Petrichor	Geosmin	Ozone	Humus
 sci_hot_fast_cloud	Hard	What is the name of the hot, fast cloud of gas and ash from an erupting volcano?	Pyroclastic flow	Lahar	Tephra	Caldera
 sci_huge_crater_left	Hard	What is the name of the huge crater left when a volcano collapses?	Caldera	Crater lake	Vent	Maar
+sci_polarised_sunglasses_cut	Hard	How do polarised sunglasses cut the glare from water and wet roads?	They block light waves vibrating one way	They darken only the brightest colours	They reflect ultraviolet back out	They make your pupils shrink
+sci_adding_salt_pan	Hard	Adding salt to a pan of pasta water makes it boil at what temperature?	A tiny bit above 100 C	A tiny bit below 100 C	Exactly 100 C, no change	About 120 C
+sci_stir_cup_loose	Hard	Stir a cup of loose-leaf tea. Where do the leaves gather as it slows down?	In the middle of the bottom	Around the edges of the bottom	Floating on the surface	Spread evenly all around
+sci_shake_bag_mixed	Hard	Shake a bag of mixed nuts. Where do the big Brazil nuts end up?	On top	At the bottom	In the middle	Evenly mixed
+sci_2004_sheets_graphene	Hard	In 2004, the first sheets of graphene were peeled off graphite using what?	Sticky tape	A laser	A diamond knife	Liquid nitrogen
+sci_huge_solar_storm	Hard	During the huge solar storm of 1859, what happened to some telegraph lines?	They ran with batteries unplugged	They melted on their poles	They went silent for a year	They glowed bright green
+sci_1989_solar_storm	Hard	In 1989, a solar storm knocked out power for nine hours across which Canadian province?	Quebec	Ontario	Alberta	Manitoba
+sci_1954_ann_hodges	Hard	In 1954, Ann Hodges of Alabama became the first person known to be hit by what?	A meteorite	Ball lightning	A hailstone	A piece of a satellite
+sci_2013_meteor_exploded	Hard	In 2013, a meteor exploded over which Russian city, injuring about 1,500 people with flying glass?	Chelyabinsk	Novosibirsk	Yekaterinburg	Omsk
+sci_skylab_fell_western	Hard	When Skylab fell onto Western Australia in 1979, what did the town of Esperance do?	Fined NASA for littering	Declared a public holiday	Sued NASA for damages	Renamed its main street
+sci_expected_happen_mars	Hard	What is expected to happen to Mars's larger moon over the next few tens of millions of years?	It will spiral in and break up	It will drift off into space	It will merge with the smaller moon	It will settle into a stable orbit
+sci_because_moon_slowly	Hard	Because the Moon is slowly drifting away, what will eventually stop happening?	Total solar eclipses	Lunar eclipses	Ocean tides	Phases of the Moon
+sci_spring_tide	Hard	What is a 'spring tide'?	An extra-high tide when Sun and Moon line up	A tide that comes only in springtime	A tide raised by melting mountain snow	A tide pushed in by spring storms
+sci_fulgurite	Hard	What is a fulgurite?	Glass formed when lightning hits sand	A crystal found inside meteorites	A cloud shaped like a clenched fist	A spark that jumps between clouds
+sci_sun_dogs	Hard	What are 'sun dogs'?	Bright spots on either side of the Sun	Dark spots on the Sun's surface	Shadows cast during an eclipse	Clouds that glow after sunset
+sci_1885_vermont_farmer	Hard	In 1885, Vermont farmer Wilson Bentley became the first person to do what?	Photograph a single snowflake	Measure the speed of hail	Make snow in a laboratory	Film a tornado
+sci_according_physicist_robert	Hard	According to physicist Robert Matthews, why does toast usually land butter-side down?	Tables are too low for a full flip	The butter makes that side heavier	Air pushes up on the dry side	The plate gives it a backspin
+sci_microwave_oven_defrost	Hard	Why does a microwave oven defrost food so unevenly?	Ice absorbs microwaves far less than water	Frozen food reflects most of the waves	Microwaves cannot pass through ice	The turntable spins far too slowly
+sci_radiocarbon_dating_stops	Hard	Radiocarbon dating stops working on remains older than roughly how much?	About 50,000 years	About 500 years	About 5 million years	About 500 million years
+sci_1820_hans_christian	Hard	In 1820, Hans Christian Orsted noticed during a lecture that an electric current did what?	Moved a nearby compass needle	Made a wire glow blue	Heated water to boiling	Made a frog's leg twitch
+sci_radioactivity_discovered_1896	Hard	Radioactivity was discovered in 1896 when uranium salts left in a drawer did what?	Fogged a wrapped photographic plate	Glowed green in the dark	Burned a hole in the drawer	Melted the wax seal on a jar
+sci_some_rocks_mars	Hard	How did some rocks from Mars end up lying on the ice of Antarctica?	Asteroid impacts blasted them off Mars	Apollo astronauts brought them back	A Mars probe dropped them	A passing comet carried them
+sci_among_eight_planets	Hard	Among the eight planets, which has the biggest moon compared with its own size?	Earth	Jupiter	Saturn	Neptune
+sci_sparklers_burn_over	Hard	Sparklers burn at over 1,000 C. Why do their flying sparks rarely burn your skin?	Each spark is too tiny to hold much heat	The sparks are made of cold light	Skin oils make them bounce off	They are only hot on the inside
+sci_ancient_greek_argued	Hard	Which ancient Greek first argued that the Earth goes around the Sun?	Aristarchus of Samos	Ptolemy of Alexandria	Aristotle of Stagira	Hipparchus of Nicaea
+sci_olbers_paradox_asks	Hard	'Olbers' paradox' asks a simple-sounding question. Which one?	Why is the night sky dark?	Why is the sky blue?	Why do stars twinkle?	Why does the Moon look bigger low down?
+sci_largest_meteorite_tonnes	Hard	The largest known meteorite, about 60 tonnes, still lies where it fell in which country?	Namibia	Australia	Mexico	Canada
 sci_kwant	Expert	Who launched quantum theory?	Max Planck	Albert Einstein	Werner Heisenberg	Erwin Schrodinger
 sci_entropia	Expert	Which law of thermodynamics states that entropy increases?	The second	The first	The third	The zeroth
 sci_hubble	Expert	Who discovered that the Universe is expanding?	Edwin Hubble	Albert Einstein	Carl Sagan	Georges Lemaitre
@@ -686,3 +736,21 @@ sci_english_scientist_isolated	Expert	Which English scientist first isolated hyd
 sci_scottish_chemist_discovered	Expert	Which Scottish chemist discovered the noble gases neon, krypton and xenon?	William Ramsay	Joseph Black	Thomas Graham	James Dewar
 sci_compound_made_soil	Expert	Which compound made by soil bacteria gives rain its earthy smell?	Geosmin	Petrichor	Ozone	Chlorophyll
 sci_volcanic_mudflow	Expert	What is the name of a volcanic mudflow?	Lahar	Pyroclastic flow	Tephra	Fumarole
+sci_clocks_gps_satellites	Expert	Clocks on GPS satellites drift from clocks on the ground by about 38 microseconds a day. Why?	Relativity: weaker gravity and their speed	The cold of space speeds them up	Solar wind pushes on their crystals	Radio signals arrive late
+sci_1999_physicist_lene	Expert	In 1999, physicist Lene Hau slowed light in a cloud of ultracold atoms to roughly what speed?	About 60 km/h	About 6 km/h	About 6,000 km/h	About 600,000 km/h
+sci_coldest_natural_place	Expert	Which is the coldest known natural place in the universe, about 1 degree above absolute zero?	The Boomerang Nebula	The surface of Pluto	Neptune's moon Triton	The Moon's polar craters
+sci_moon_make_own	Expert	Which is the only moon known to make its own magnetic field?	Ganymede	Titan	Io	Europa
+sci_moon_saturn_half	Expert	Which moon of Saturn has one half dark as coal and the other bright as snow?	Iapetus	Mimas	Rhea	Dione
+sci_verona_rupes_perhaps	Expert	Verona Rupes, perhaps the tallest cliff in the Solar System, is on a moon of which planet?	Uranus	Jupiter	Saturn	Neptune
+sci_mercury_surface_criss	Expert	Why is Mercury's surface criss-crossed by long cliffs, like wrinkles on a raisin?	The planet shrank as its core cooled	Huge quakes split its crust	Ancient rivers carved them	The Sun's tides stretched it
+sci_sun_not_solid	Expert	The Sun is not solid. How does this show in the way it spins?	Its equator spins faster than its poles	It spins backwards every 11 years	Its poles spin faster than its equator	Only its core spins at all
+sci_area_near_geographic	Expert	The area near the geographic North Pole that a compass points towards is what kind of magnetic pole?	A south magnetic pole	A north magnetic pole	No magnetic pole at all	A pole that flips every day
+sci_highest_clouds_earth	Expert	Which are the highest clouds in Earth's atmosphere, seen glowing blue after sunset?	Noctilucent clouds	Cirrus clouds	Nacreous clouds	Lenticular clouds
+sci_freshly_poured_glass	Expert	In a freshly poured glass of Guinness, why do the bubbles seem to sink?	The flow drags them down near the glass	They are heavier than the beer	Cold beer at the top pushes them down	The foam on top squashes them back
+sci_colours_never_appears	Expert	Which of these colours never appears in a rainbow, because no single wavelength makes it?	Magenta	Cyan	Violet	Yellow
+sci_prince_rupert_drop	Expert	A 'Prince Rupert's drop' of glass survives a hammer blow to its head. What makes it burst into powder?	Snapping its thin tail	Dropping it into water	Warming it in your hand	Shining a torch on it
+sci_andre_geim_won	Expert	Andre Geim won a joke Ig Nobel Prize for making which animal float with a magnet, and later a real Nobel Prize too?	A frog	A rabbit	A tortoise	A sparrow
+sci_kessler_syndrome_warn	Expert	What does the 'Kessler syndrome' warn about?	A chain reaction of space-junk crashes	Astronauts losing bone in space	Radio noise from the Sun	Rockets damaging the ozone layer
+sci_penzias_wilson_blamed	Expert	Penzias and Wilson first blamed the faint hiss of the Big Bang, picked up in 1964, on what?	Pigeon droppings in their antenna	Signals from a nearby radio station	Soviet spy satellites overhead	Lightning in distant storms
+sci_planet_found_around	Expert	The first planet found around a Sun-like star, in 1995, surprised astronomers because it was what?	A giant orbiting closer than Mercury does	A rocky world just like our Earth	A ringed giant planet like Saturn	A moon drifting with no planet
+sci_far_side_moon	Expert	Why does the far side of the Moon look so different from the near side?	It has almost no dark 'seas'	It is covered in ice	It is made of darker rock	It has no craters at all

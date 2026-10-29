@@ -174,7 +174,13 @@ object TechnologyQuestions {
         q("tec_shouldn_put_metal", "Why shouldn't you put a metal fork in a microwave oven?", "It can cause sparks", listOf("It makes the food toxic", "It turns the fork magnetic", "It switches the oven off"), E),
         q("tec_files_stored_cloud", "When files are stored 'in the cloud', where are they really?", "On remote servers in data centres", listOf("Inside satellites in orbit", "Hidden in your phone's SIM card", "In the air as radio waves"), E),
         q("tec_firewall_job_computer", "What is a firewall's job on a computer network?", "Blocking unwanted network traffic", listOf("Cooling down an overheating processor", "Backing up your files every night", "Making your downloads run faster"), E),
-        q("tec_two_factor_authentication", "What is two-factor authentication?", "Proving who you are in two separate ways", listOf("Using two different passwords on one site", "Letting two people share one account", "Changing your password twice a year"), E)
+        q("tec_two_factor_authentication", "What is two-factor authentication?", "Proving who you are in two separate ways", listOf("Using two different passwords on one site", "Letting two people share one account", "Changing your password twice a year"), E),
+        q("tec_phone_operating_system", "Which phone operating system has a little green robot as its mascot?", "Android", listOf("Windows Phone", "iOS", "Symbian"), E),
+        q("tec_social_media_gif", "On social media, what is a GIF usually?", "A short looping animation", listOf("A voice message", "A disappearing photo", "A live video stream"), E),
+        q("tec_optical_sensors_took", "Before optical sensors took over, what rolled around underneath a computer mouse?", "A rubber ball", listOf("A small magnet", "A felt pad", "A glass bead"), E),
+        q("tec_1980s_boombox", "In the 1980s, what was a 'boombox'?", "A big portable stereo", listOf("A home drum machine", "A loud car alarm", "A jukebox in a bar"), E),
+        q("tec_keys_keyboards_small", "Why do the F and J keys on most keyboards have small raised bumps?", "So you can find them without looking", listOf("To mark the most-used letters", "To stop the keys sticking", "To help the keys spring back"), E),
+        q("tec_vcr_let_home", "What did a VCR let you do at home?", "Record TV shows on tape", listOf("Play music from vinyl", "Make video calls", "Print photos from film"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -420,7 +426,26 @@ object TechnologyQuestions {
         q("tec_hungarian_born_inventor", "Which Hungarian-born inventor created the ballpoint pen in the 1930s?", "Laszlo Biro", listOf("Erno Rubik", "Laszlo Jozsef", "Janos Irinyi"), M),
         q("tec_swedish_company_stands", "Which Swedish company's name stands for its founder's initials and his farm and village?", "IKEA", listOf("Volvo", "Saab", "Ericsson"), M),
         q("tec_shuttle_prototype_never", "Which shuttle prototype never flew to space and was named after a 'Star Trek' ship?", "Enterprise", listOf("Atlantis", "Endeavour", "Pathfinder"), M),
-        q("tec_spacecraft_became_private", "Which spacecraft became the first private one to dock with the ISS, in 2012?", "SpaceX Dragon", listOf("Boeing Starliner", "Orion", "Cygnus"), M)
+        q("tec_spacecraft_became_private", "Which spacecraft became the first private one to dock with the ISS, in 2012?", "SpaceX Dragon", listOf("Boeing Starliner", "Orion", "Cygnus"), M),
+        q("tec_mario_given_moustache", "Why was Mario given a moustache and a cap in 1981?", "They were easy to draw with few pixels", listOf("He was based on Nintendo's president", "Italian plumbers wore them then", "Test players voted for the look"), M),
+        q("tec_spray_lubricant_refer", "What does the '40' in the name of the spray lubricant WD-40 refer to?", "The 40th attempt at its formula", listOf("The year 1940, when it launched", "Its 40 secret ingredients", "The 40 uses printed on the can"), M),
+        q("tec_shell_very_computer", "What was the shell of the very first computer mouse, built in 1964, made of?", "Wood", listOf("Steel", "Bakelite", "Glass"), M),
+        q("tec_old_mobile_phones", "On old mobile phones with number keys, what did 'T9' do?", "Guessed the word you were typing", listOf("Locked the keypad in your pocket", "Sent one text to nine people", "Switched the phone to silent"), M),
+        q("tec_phone_numbers_american", "Why do phone numbers in American films so often begin with 555?", "Real customers almost never have them", listOf("It was Hollywood's own area code", "It made the calls free of charge", "It was easy for actors to say"), M),
+        q("tec_computing_pioneer_appears", "Which computing pioneer appears on the Bank of England's 50-pound note?", "Alan Turing", listOf("Ada Lovelace", "Charles Babbage", "Tim Berners-Lee"), M),
+        q("tec_phrase_steve_jobs", "Which phrase did Steve Jobs famously use to unveil a final surprise at the end of his keynotes?", "'One more thing'", listOf("'But wait, there's more'", "'And now, the best part'", "'Here's the big news'"), M),
+        q("tec_floats_inside_magic", "What floats inside a Magic 8 Ball toy, showing its answers through the window?", "A 20-sided die", listOf("A rolling marble", "A tiny printed scroll", "A spinning paper wheel"), M),
+        q("tec_electric_cotton_candy", "The electric cotton candy (candy floss) machine was co-invented in 1897 by a man of which profession?", "A dentist", listOf("A clockmaker", "A blacksmith", "A firefighter"), M),
+        q("tec_nasa_mars_climate", "Why was NASA's Mars Climate Orbiter lost in 1999?", "Teams mixed up metric and imperial units", listOf("A meteor smashed into its antenna", "Its solar panels failed to unfold", "Its engine ran out of fuel too early"), M),
+        q("tec_japanese_mitsubishi_refers", "The Japanese name Mitsubishi refers to the company's logo of three what?", "Diamonds", listOf("Stars", "Rings", "Swords"), M),
+        q("tec_duct_tape_developed", "Duct tape was first developed during World War II for which job?", "Sealing ammunition boxes", listOf("Sealing air ducts", "Mending parachutes", "Patching tank tyres"), M),
+        q("tec_delorean_dmc_sports", "The DeLorean DMC-12 sports car of 1981 had unpainted body panels made of what?", "Stainless steel", listOf("Aluminium", "Carbon fibre", "Polished copper"), M),
+        q("tec_noise_cancelling_headphones", "How do noise-cancelling headphones quieten the drone of a plane engine?", "They play a mirror-image sound wave", listOf("They block sound with thick foam", "They lower the air pressure in your ears", "They mask it with white noise"), M),
+        q("tec_airliners_dim_cabin", "Why do airliners dim their cabin lights for take-off and landing at night?", "So eyes adjust in case of an evacuation", listOf("To save power for the engines", "To make the plane harder to spot", "To help passengers fall asleep"), M),
+        q("tec_qantas_australia_national", "The 'Q' in Qantas, Australia's national airline, stands for which place?", "Queensland", listOf("Queenstown", "Quebec", "Qatar"), M),
+        q("tec_car_brand_audi", "The car brand Audi takes its name from a Latin word meaning what?", "'Listen!'", listOf("'Gold'", "'I drive'", "'Four'"), M),
+        q("tec_apple_1984_advert", "Apple's famous '1984' TV advert for the Macintosh was directed by which film-maker?", "Ridley Scott", listOf("Steven Spielberg", "George Lucas", "James Cameron"), M),
+        q("tec_london_millennium_bridge", "Why was London's Millennium Bridge shut just two days after it opened in 2000?", "It swayed as crowds walked across", listOf("A ship hit one of its piers", "Its main cable began to crack", "Its lights dazzled boat crews"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -590,7 +615,34 @@ object TechnologyQuestions {
         q("tec_american_inventor_froze", "Which American inventor froze food quickly, creating frozen food in the 1920s?", "Clarence Birdseye", listOf("Willis Carrier", "Frederick Jones", "Jacob Perkins"), H),
         q("tec_nokia_original_business", "What was Nokia's original business in 1865?", "Paper mill", listOf("Rubber boots", "Cable factory", "Telegraph service"), H),
         q("tec_country_uses_web_2", "Which country uses the web domain '.me', popular for personal sites?", "Montenegro", listOf("Mexico", "Mauritius", "Malta"), H),
-        q("tec_rover_drive_mars", "Which was the first rover to drive on Mars, in 1997?", "Sojourner", listOf("Spirit", "Opportunity", "Curiosity"), H)
+        q("tec_rover_drive_mars", "Which was the first rover to drive on Mars, in 1997?", "Sojourner", listOf("Spirit", "Opportunity", "Curiosity"), H),
+        q("tec_nintendo_often_translated", "The name Nintendo is often translated as what?", "'Leave luck to heaven'", listOf("'Play with all your heart'", "'Games for every family'", "'The house of small joys'"), H),
+        q("tec_aliens_1978_arcade", "Why did the aliens in the 1978 arcade hit 'Space Invaders' speed up as you shot them down?", "Fewer aliens let the chip draw faster", listOf("Its designer copied a film scene", "Arcade owners demanded it", "Players asked for it in tests"), H),
+        q("tec_1960s_turned_video", "In the 1960s, before it turned to video games, Nintendo briefly ran which business?", "A taxi company", listOf("A shipping line", "A car factory", "An airline"), H),
+        q("tec_sega_began_service", "Sega began as 'Service Games', bringing jukeboxes and slot machines to which customers?", "US military bases", listOf("Las Vegas casinos", "Cruise ships", "Tokyo railway stations"), H),
+        q("tec_scorched_game_boy", "A scorched Game Boy displayed in Nintendo's New York store is famous for what?", "Still working after a Gulf War bombing", listOf("Being the millionth one ever sold", "Belonging to a US president", "Being found on Mount Everest"), H),
+        q("tec_public_call_handheld", "The first public call from a handheld mobile phone, in 1973, went to whom?", "A rival engineer at Bell Labs", listOf("The caller's own wife", "The US president's office", "A local radio DJ"), H),
+        q("tec_shopping_trolley_appeared", "When the shopping trolley appeared in 1937, shoppers avoided it. What did its inventor do?", "Hired people to push trolleys around", listOf("Made the trolleys compulsory", "Painted every trolley gold", "Gave away a toy with each one"), H),
+        q("tec_chemist_designed_tall", "When the chemist who designed the famous tall tube for stacked crisps died in 2008, where were some of his ashes buried?", "In one of those crisp tubes", listOf("In an urn shaped like a crisp", "Under the factory floor", "In a potato field"), H),
+        q("tec_brought_down_tacoma", "What brought down the Tacoma Narrows Bridge, nicknamed 'Galloping Gertie', in 1940?", "Wind made it twist apart", listOf("An earthquake", "A ship collision", "Overloaded trucks"), H),
+        q("tec_navy_rear_admiral", "A US Navy rear admiral and computer pioneer handed out pieces of wire about 30 cm long. What did each one show?", "How far light travels in a nanosecond", listOf("The length of the first computer bug", "How much cable one computer needed", "How far electricity travels in a second"), H),
+        q("tec_margaret_hamilton_famously", "Margaret Hamilton was famously photographed beside a stack of printouts as tall as herself. What was printed on them?", "The Apollo flight software", listOf("The first video game", "The code of Windows 1.0", "The first web browser"), H),
+        q("tec_blackbird_spy_plane", "Why did the SR-71 Blackbird spy plane leak fuel while parked on the ground?", "Its panels only sealed once hot in flight", listOf("Its tanks were too costly to repair", "Its fuel boiled in the sun", "Crews overfilled it on purpose"), H),
+        q("tec_harry_brearley_credited", "Harry Brearley is credited with discovering stainless steel in 1913 in which city famous for its cutlery?", "Sheffield", listOf("Solingen", "Birmingham", "Manchester"), H),
+        q("tec_jacuzzi_whirlpool_bath", "The Jacuzzi whirlpool bath grew out of a pump that the Jacuzzi brothers adapted for whom?", "A family toddler with arthritis", listOf("Racehorses with sore legs", "Injured war veterans", "A famous baseball star"), H),
+        q("tec_chainsaws_made_scotland", "The first chainsaws, made in Scotland in the late 1700s, were meant for which job?", "Cutting bone in surgery", listOf("Felling trees", "Cutting blocks of ice", "Carving whale blubber"), H),
+        q("tec_android_designed_early", "Android was first designed in the early 2000s to run which devices?", "Digital cameras", listOf("Car dashboards", "Games consoles", "Smart fridges"), H),
+        q("tec_twitter_began_side", "Twitter began as a side project at Odeo, a struggling company that made what?", "A podcasting platform", listOf("Online street maps", "Music players", "Mobile games"), H),
+        q("tec_netflix_founder_said", "Netflix's co-founder has said a \$40 late fee for which rented film gave him the idea for the company?", "'Apollo 13'", listOf("'Titanic'", "'Jurassic Park'", "'Forrest Gump'"), H),
+        q("tec_steve_jobs_lured", "Steve Jobs lured John Sculley to Apple in 1983 by asking whether he wanted to spend the rest of his life selling what?", "Sugared water", listOf("Cigarettes", "Life insurance", "Breakfast cereal"), H),
+        q("tec_ebay_launched_1995", "eBay was launched in 1995 under which name?", "AuctionWeb", listOf("BidHouse", "MarketNet", "TradeSpace"), H),
+        q("tec_yahoo_started_out", "Yahoo! started out in 1994 under which long-winded name?", "Jerry and David's Guide to the World Wide Web", listOf("Jerry and David's Big List of Cool Links", "The Stanford Directory of Useful Websites", "Two Students' Map of the Whole Internet"), H),
+        q("tec_east_germany_trabant", "East Germany's Trabant car had a body made of what?", "Cotton-reinforced plastic", listOf("Pressed cardboard", "Recycled tin cans", "Thin aluminium sheets"), H),
+        q("tec_tesla_car_2008", "Tesla's first car, the 2008 Roadster, was based on which British sports car?", "The Lotus Elise", listOf("The Jaguar E-Type", "The MG Midget", "The Triumph Spitfire"), H),
+        q("tec_ford_car_late", "Which Ford car of the late 1950s flopped so badly that its name became a byword for failure?", "The Edsel", listOf("The Pinto", "The Thunderbird", "The Fairlane"), H),
+        q("tec_apple_handheld_1993", "Which Apple handheld of 1993 was mocked for its poor handwriting recognition?", "The Newton", listOf("The Lisa", "The Pippin", "The Cube"), H),
+        q("tec_bluetooth_logo_made", "The Bluetooth logo is made by joining two runes. What do they stand for?", "The initials H and B", listOf("The letters B and T", "The rune for 'link'", "Two crossed lightning bolts"), H),
+        q("tec_stylus_etch_sketch", "What does the stylus of an Etch A Sketch scrape off the back of the screen to draw a line?", "Aluminium powder", listOf("Iron filings", "Chalk dust", "Graphite"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -666,6 +718,24 @@ object TechnologyQuestions {
         q("tec_nintendo_engineer_designed", "Which Nintendo engineer designed the Game Boy?", "Gunpei Yokoi", listOf("Shigeru Miyamoto", "Satoru Iwata", "Masayuki Uemura"), X),
         q("tec_android_phone_released", "What was the name of the first Android phone, released in 2008?", "HTC Dream", listOf("Nexus One", "Samsung Galaxy", "Motorola Droid"), X),
         q("tec_japanese_phone_company", "Which Japanese phone company engineer created the first popular set of emoji in 1999?", "Shigetaka Kurita", listOf("Satoru Iwata", "Masahiro Sakurai", "Ken Kutaragi"), X),
-        q("tec_soviet_probe_land", "Which Soviet probe was the first to land softly on another planet, Venus, in 1970?", "Venera 7", listOf("Mars 3", "Luna 9", "Vega 1"), X)
+        q("tec_soviet_probe_land", "Which Soviet probe was the first to land softly on another planet, Venus, in 1970?", "Venera 7", listOf("Mars 3", "Luna 9", "Vega 1"), X),
+        q("tec_toyoda_family_car", "Why did the Toyoda family's car company take the name 'Toyota' in the 1930s?", "In katakana it takes a lucky 8 strokes", listOf("A badge maker misspelled the name", "'Toyoda' was taken by a rival firm", "It means 'swift wheel' in Japanese"), X),
+        q("tec_nintendo_cross_shaped", "Nintendo's cross-shaped direction pad first appeared in 1982 on which product?", "A Game & Watch handheld", listOf("The Game Boy", "The Famicom controller", "The Virtual Boy"), X),
+        q("tec_microsoft_two_founders", "Before Microsoft, its two founders ran a small company that analysed data from what?", "Road traffic counters", listOf("Stock market tickers", "Weather balloons", "School exam papers"), X),
+        q("tec_creeper_1971_program", "'Creeper', a 1971 program often called the first computer worm, was hunted down by which program?", "Reaper", listOf("Hunter", "Sweeper", "Catcher"), X),
+        q("tec_1968_presentation_showed", "Which 1968 presentation first showed the public a computer mouse, hypertext and video calls?", "'The Mother of All Demos'", listOf("'The Dartmouth Workshop'", "'The Xerox Spring Show'", "'The Silicon Valley Premiere'"), X),
+        q("tec_programming_languages_come", "In most programming languages, what does 0.1 + 0.2 come out as?", "0.30000000000000004", listOf("0.3", "0.29999999999999998", "0.31"), X),
+        q("tec_ariane_rocket_destroy", "Why did the first Ariane 5 rocket destroy itself about 40 seconds after launch in 1996?", "A number too big for its software", listOf("A bird hit one of its engines", "Lightning struck the rocket", "A fuel valve froze shut"), X),
+        q("tec_edouard_benedictus_invented", "Edouard Benedictus invented safety glass after a dropped flask cracked but did not shatter. Why did it hold together?", "A dried plastic film coated its inside", listOf("It had been cooled very slowly", "It was made of quartz, not glass", "Wire mesh was set into the glass"), X),
+        q("tec_1935_world_parking", "In 1935, the world's first parking meters went up in which city?", "Oklahoma City", listOf("New York", "London", "Chicago"), X),
+        q("tec_mass_unsolicited_email", "The first mass unsolicited email, sent in 1978 to about 400 ARPANET users, advertised what?", "New computers", listOf("Diet pills", "A rock concert", "Free holidays"), X),
+        q("tec_wilson_greatbatch_stumbled", "Wilson Greatbatch stumbled on the implantable pacemaker in 1956 after what mistake?", "Fitting the wrong resistor to a circuit", listOf("Dropping a battery into a frog tank", "Mixing up two patients' heart scans", "Leaving a radio on near a patient"), X),
+        q("tec_skype_grew_out", "The name Skype grew out of an earlier name that was a shortening of what?", "'Sky peer-to-peer'", listOf("'Skip the phone'", "'Sky pipeline'", "'Speak and type'"), X),
+        q("tec_sinclair_1985_british", "What was the Sinclair C5 of 1985, a famous British flop?", "An electric tricycle", listOf("A pocket calculator", "A home computer", "A car phone"), X),
+        q("tec_vending_machine_described", "The first known vending machine, described by Hero of Alexandria, dispensed what?", "Holy water", listOf("Wine", "Olive oil", "Perfume"), X),
+        q("tec_1961_ibm_7094", "In 1961, an IBM 7094 at Bell Labs became famous for singing which song?", "'Daisy Bell'", listOf("'Happy Birthday to You'", "'Yankee Doodle'", "'Twinkle, Twinkle, Little Star'"), X),
+        q("tec_true_television_picture", "The first true television picture, made in a London workshop in 1925, showed the face of what?", "A ventriloquist's dummy", listOf("A pet parrot", "King George V", "A marble statue"), X),
+        q("tec_1898_exhibition_new", "At an 1898 exhibition in New York, Nikola Tesla amazed crowds with which invention?", "A radio-controlled boat", listOf("A death ray", "A flying car", "A wireless telephone"), X),
+        q("tec_shift_key_shift", "Why is the Shift key called 'Shift'?", "Typewriters physically shifted for capitals", listOf("It shifts text one space to the right", "It moved the paper to a new line", "It switched the ink ribbon's colour"), X)
     )
 }

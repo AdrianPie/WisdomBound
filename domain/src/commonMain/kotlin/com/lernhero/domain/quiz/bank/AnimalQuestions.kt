@@ -197,7 +197,13 @@ object AnimalQuestions {
         q("ani_contrary_popular_myth", "Contrary to the popular myth, how long can a goldfish remember things?", "For months", listOf("About three seconds", "About a minute", "About an hour"), E),
         q("ani_actually_makes_bull", "What actually makes a bull charge at a matador's cape?", "The cape's movement", listOf("Its red colour", "The crowd's noise", "The smell of the cloth"), E),
         q("ani_venison_meat_animal", "Venison is the meat of which animal?", "Deer", listOf("Wild boar", "Rabbit", "Goose"), E),
-        q("ani_colour_live_lobsters", "What colour are most live lobsters before they are cooked?", "Dark greenish-brown", listOf("Bright red", "Pale pink", "Pure white"), E)
+        q("ani_colour_live_lobsters", "What colour are most live lobsters before they are cooked?", "Dark greenish-brown", listOf("Bright red", "Pale pink", "Pure white"), E),
+        q("ani_woodlice_often_found", "Woodlice, often found under garden stones, are related to which animals?", "Crabs and shrimps", listOf("Beetles and ants", "Spiders and ticks", "Worms and slugs"), E),
+        q("ani_woodpeckers_sometimes_hammer", "Why do woodpeckers sometimes hammer away on metal drainpipes?", "To make a loud drumming call", listOf("To find insects hiding inside", "To sharpen the tips of their beaks", "To chip off rust to eat"), E),
+        q("ani_porcupine_shoot_quills", "Can a porcupine shoot its quills at an attacker?", "No, they come loose when touched", listOf("Yes, up to a few metres", "Yes, but only once a year", "Only when it rolls into a ball"), E),
+        q("ani_cut_earthworm_two", "Cut an earthworm in two. What usually happens?", "At most the head end survives", listOf("Both halves become new worms", "Both halves grow a new head", "The two halves join up again"), E),
+        q("ani_pigs_love_wallowing", "Why do pigs love wallowing in mud on hot days?", "They hardly sweat, so it cools them", listOf("It helps them digest their food", "It hides their scent from wolves", "It makes their skin grow thicker"), E),
+        q("ani_rabbit_spot_fox", "How can a rabbit spot a fox creeping up from almost any direction?", "Its eyes sit high on the sides of its head", listOf("Its eyes can swivel all the way round", "It sees through its closed eyelids", "It feels the fox's body heat"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -474,7 +480,23 @@ object AnimalQuestions {
         q("ani_special_food_turns", "What is the special food that turns a bee larva into a queen?", "Royal jelly", listOf("Honeydew", "Propolis", "Beeswax"), M),
         q("ani_gorilla_learned_over", "What was the name of the famous gorilla that learned over 1,000 signs?", "Koko", listOf("Harambe", "Kanzi", "Washoe"), M),
         q("ani_animal_see_ultraviolet", "Which animal can see ultraviolet light and uses it to find flowers?", "Bee", listOf("Dog", "Cat", "Cow"), M),
-        q("ani_bird_big_hollow", "Which bird has a big hollow casque on top of its bill?", "Hornbill", listOf("Toucan", "Cassowary", "Shoebill"), M)
+        q("ani_bird_big_hollow", "Which bird has a big hollow casque on top of its bill?", "Hornbill", listOf("Toucan", "Cassowary", "Shoebill"), M),
+        q("ani_spotted_skunk_often", "What does a spotted skunk often do as a last warning before it sprays?", "A handstand on its front paws", listOf("Rolls over onto its back", "Hisses like an angry snake", "Drums its tail on the ground"), M),
+        q("ani_wild_orangutan_build", "What does a wild orangutan build high in the trees almost every evening?", "A fresh nest to sleep in", listOf("A store for spare fruit", "A platform to call from", "A lookout for leopards"), M),
+        q("ani_hippos_spend_days", "Hippos spend their days in rivers. How do they get around in deep water?", "They walk or bounce along the bottom", listOf("They swim like seals, with their legs", "They float on the surface like logs", "They paddle with their flat tails"), M),
+        q("ani_sea_otter_stash", "Where does a sea otter stash the shellfish it gathers on a dive?", "In a loose pocket of skin under its arm", listOf("In pouches inside its cheeks", "In a fold of skin on its belly", "Tucked under its curled tail"), M),
+        q("ani_member_cat_family", "Which is the only member of the cat family with a tuft of hair at the tip of its tail?", "The lion", listOf("The lynx", "The tiger", "The caracal"), M),
+        q("ani_thumb_like_digits", "How many thumb-like digits does a koala have on each front paw?", "Two", listOf("One", "None", "Three"), M),
+        q("ani_paper_wasps_make", "How do paper wasps make the paper for their nests?", "Chewing wood and mixing it with spit", listOf("Spinning silk and drying it out", "Gluing dead leaves with wax", "Mixing mud with their droppings"), M),
+        q("ani_smallest_species_penguin", "Which is the smallest species of penguin?", "The little penguin", listOf("The Galapagos penguin", "The Adelie penguin", "The rockhopper penguin"), M),
+        q("ani_hummingbirds_tiny_weak", "Hummingbirds have tiny, weak feet. What can't they do with them?", "Walk or hop", listOf("Perch on twigs", "Scratch their heads", "Grip a feeder"), M),
+        q("ani_flying_fish_get", "How does a flying fish get through the air?", "It glides on stiff, wing-like fins", listOf("It flaps its fins like a bird", "It rides on gusts of sea spray", "It spins like a thrown stone"), M),
+        q("ani_polar_bear_scientific", "The polar bear's scientific name, Ursus maritimus, means what?", "Sea bear", listOf("Ice bear", "White bear", "Snow bear"), M),
+        q("ani_unlike_honeybee_bumblebee", "Unlike a honeybee, a bumblebee can sting more than once. Why?", "Its sting has no barbs", listOf("Its sting regrows in a day", "It has a spare sting", "It stings with its jaws"), M),
+        q("ani_wolves_really_howl", "Do wolves really howl at the Moon?", "No, they howl to keep in touch", listOf("Yes, mainly at the full moon", "Yes, to welcome the night", "Only during the winter months"), M),
+        q("ani_vampire_bats_roost", "What do vampire bats do for a roost-mate that failed to find a meal?", "Bring up some blood to feed it", listOf("Lead it to a sleeping cow", "Groom it until it falls asleep", "Chase it out of the roost"), M),
+        q("ani_hares_box_each", "When hares 'box' each other in spring, who is usually fighting whom?", "A female fending off a male", listOf("Two males fighting over a female", "A mother teaching her young", "Two females fighting over a nest"), M),
+        q("ani_wolves_attack_musk", "When wolves attack, how do musk oxen protect their calves?", "Form a ring, horns out, calves inside", listOf("Hide the calves in deep snowdrifts", "Stampede with the calves in front", "Send the bulls to chase the wolves"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -658,7 +680,34 @@ object AnimalQuestions {
         q("ani_sticky_resin_bees", "What is the sticky resin bees use to seal gaps in the hive?", "Propolis", listOf("Royal jelly", "Beeswax", "Nectar"), H),
         q("ani_seabird_dives_sea", "Which seabird dives into the sea at nearly 100 km/h to catch fish?", "Gannet", listOf("Puffin", "Cormorant", "Pelican"), H),
         q("ani_large_flightless_bird_3", "Which large flightless bird of South America is related to the ostrich?", "Rhea", listOf("Emu", "Cassowary", "Kiwi"), H),
-        q("ani_extinct_flightless_bird", "Which extinct flightless bird from Madagascar laid the largest eggs ever known?", "Elephant bird", listOf("Moa", "Dodo", "Roc"), H)
+        q("ani_extinct_flightless_bird", "Which extinct flightless bird from Madagascar laid the largest eggs ever known?", "Elephant bird", listOf("Moa", "Dodo", "Roc"), H),
+        q("ani_octopus_impersonate_lionfish", "Which octopus can impersonate lionfish, sea snakes and flatfish?", "The mimic octopus", listOf("The blue-ringed octopus", "The dumbo octopus", "The giant Pacific octopus"), H),
+        q("ani_missing_platypus_digestive", "What is missing from a platypus's digestive system?", "A stomach", listOf("A gullet", "A liver", "Intestines"), H),
+        q("ani_2017_cambridge_study", "In a 2017 Cambridge study, sheep learned to recognise what?", "Photos of celebrities' faces", listOf("Their own reflection", "Simple spoken words", "Numbers up to five"), H),
+        q("ani_largest_bats_flying", "The largest bats, flying foxes, can reach a wingspan of roughly how much?", "About 1.5 metres", listOf("About 30 cm", "About 60 cm", "About 4 metres"), H),
+        q("ani_platypus_skin_reached", "When the first platypus skin reached Britain in 1799, what did scientists suspect?", "A fake stitched together", listOf("A new kind of giant mole", "A fish that had grown fur", "A bird that lost its feathers"), H),
+        q("ani_ladybird_defend_itself", "How does a ladybird defend itself when grabbed?", "It oozes bitter fluid from its leg joints", listOf("It sprays a boiling chemical jet", "It bites with venomous jaws", "It sheds its wing cases and flees"), H),
+        q("ani_some_young_spiders", "How do some young spiders travel hundreds of kilometres?", "Floating on strands of silk", listOf("Riding on the backs of birds", "Clinging to drifting leaves", "Hitching rides on bees"), H),
+        q("ani_eyes_box_jellyfish", "How many eyes does a box jellyfish have?", "24", listOf("None", "2", "8"), H),
+        q("ani_unborn_sand_tiger", "What do unborn sand tiger shark pups do inside their mother?", "The biggest eat their siblings", listOf("They feed through a cord like ours", "They share one egg yolk", "They hatch and swim out early"), H),
+        q("ani_divers_indonesia_filmed", "Divers in Indonesia filmed veined octopuses carrying what to use as a portable shelter?", "Halves of coconut shells", listOf("Pieces of driftwood", "Large fish skulls", "Sunken car tyres"), H),
+        q("ani_crab_longest_legs", "Which crab has the longest legs of any arthropod, spanning up to about 3.7 metres?", "The Japanese spider crab", listOf("The coconut crab", "The red king crab", "The Tasmanian giant crab"), H),
+        q("ani_lobster_grind_food", "Where does a lobster grind up its food with tooth-like parts?", "In its stomach", listOf("On its tail fan", "Inside its antennae", "On its tongue"), H),
+        q("ani_great_smoky_mountains", "In the Great Smoky Mountains each June, thousands of fireflies of one species do what?", "Flash in unison", listOf("Migrate south together", "Come out only in daylight", "Lay eggs in the snow"), H),
+        q("ani_mike_chicken_colorado", "Mike, a chicken from Colorado, became famous in the 1940s for living about 18 months without what?", "His head", listOf("Any water", "His feathers", "His legs"), H),
+        q("ani_giant_panda_eats", "A giant panda eats bamboo all day, yet its gut is built like that of what?", "A meat-eater", listOf("A cow", "A termite", "A horse"), H),
+        q("ani_cat_like_predator", "Which cat-like predator, Madagascar's largest, is actually a relative of mongooses?", "The fossa", listOf("The serval", "The caracal", "The ocelot"), H),
+        q("ani_1970s_chimpanzees_gombe", "In the 1970s, the chimpanzees of Gombe in Tanzania shocked scientists by doing what?", "Fighting a years-long war", listOf("Cooking food on fires", "Building huts of branches", "Taming wild dogs"), H),
+        q("ani_some_bottlenose_dolphins", "Why do some bottlenose dolphins in Shark Bay, Australia, wear sea sponges on their snouts?", "To shield them while foraging", listOf("To show off to mates", "To carry food to calves", "To filter sand from water"), H),
+        q("ani_frog_use_eyes", "How does a frog use its eyes to help it swallow?", "It pulls them down to push food along", listOf("It closes them to tighten its throat", "It blinks to squeeze out digestive juice", "It rolls them to work its jaw muscles"), H),
+        q("ani_electric_eel_really", "What is an electric eel, really?", "A knifefish, related to catfish", listOf("A true eel, like the moray", "A kind of ray, like a skate", "A sea snake that lives in rivers"), H),
+        q("ani_plant_eating_dinosaur", "Which plant-eating dinosaur had claws up to about a metre long?", "Therizinosaurus", listOf("Velociraptor", "Spinosaurus", "Allosaurus"), H),
+        q("ani_quetzalcoatlus_flying_reptile", "Quetzalcoatlus, a flying reptile of the dinosaur age, stood about as tall as what?", "A giraffe", listOf("A chicken", "A pony", "A man"), H),
+        q("ani_snake_build_nest", "Which is the only snake known to build a nest for its eggs?", "The king cobra", listOf("The black mamba", "The green anaconda", "The reticulated python"), H),
+        q("ani_each_year_corals", "Each year, corals on the Great Barrier Reef release their eggs on the same few nights. What helps time it?", "The full moon", listOf("The first storm of the year", "The longest day", "The arrival of whales"), H),
+        q("ani_starfish_eyes", "Where are a starfish's eyes?", "At the tip of each arm", listOf("In the centre of its back", "Under its mouth", "It has none"), H),
+        q("ani_big_new_shell", "When a big new shell turns up, hermit crabs sometimes do what?", "Queue by size and swap shells in turn", listOf("Fight until only one crab is left", "Share it, two crabs to a shell", "Bury it until they grow bigger"), H),
+        q("ani_blue_jays_look", "Blue jays look bright blue. What colour is the pigment in their feathers?", "Brown", listOf("Blue", "Green", "Yellow"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -744,6 +793,22 @@ object AnimalQuestions {
         q("ani_insect_heaviest_world", "Which insect is the heaviest in the world, found in New Zealand?", "Giant weta", listOf("Goliath beetle", "Atlas moth", "Titan beetle"), X),
         q("ani_bonobo_learned_communicate", "What was the name of the bonobo who learned to communicate with a symbol keyboard?", "Kanzi", listOf("Koko", "Washoe", "Nim Chimpsky"), X),
         q("ani_chimpanzee_taught_american", "What was the name of the first chimpanzee taught American Sign Language?", "Washoe", listOf("Koko", "Kanzi", "Lucy"), X),
-        q("ani_extinct_flightless_seabird", "Which extinct flightless seabird of the North Atlantic was the original 'penguin'?", "Great auk", listOf("Dodo", "Moa", "Razorbill"), X)
+        q("ani_extinct_flightless_seabird", "Which extinct flightless seabird of the North Atlantic was the original 'penguin'?", "Great auk", listOf("Dodo", "Moa", "Razorbill"), X),
+        q("ani_scientists_discover_opah", "What did scientists discover about the opah, a big round fish of the open ocean, in 2015?", "It keeps its whole body warm", listOf("It can breathe air at the surface", "It can live for over 200 years", "It sleeps buried in the sand"), X),
+        q("ani_2021_study_cuttlefish", "In a 2021 study, cuttlefish passed a version of which famous self-control test?", "The marshmallow test", listOf("The Turing test", "The Stroop test", "The Rorschach test"), X),
+        q("ani_2017_experiment_bumblebees", "In a 2017 experiment, bumblebees learned to do what for a sugar reward?", "Roll a tiny ball into a goal", listOf("Stack blocks into a tower", "Sort coins by colour", "Turn a tiny steering wheel"), X),
+        q("ani_gas_engineers_once", "Gas engineers once found leaking pipelines by watching where which birds circled?", "Turkey vultures", listOf("Canaries", "Seagulls", "Ravens"), X),
+        q("ani_studies_prairie_dog", "Studies of prairie dog alarm calls suggest they can describe what about an approaching person?", "Size, shape and clothing colour", listOf("Whether they carry food", "What language they speak", "How old they are"), X),
+        q("ani_hedgehog_meets_strong", "When a hedgehog meets a strong new smell, what may it do?", "Lick foamy spit onto its spines", listOf("Roll in it to hide its own scent", "Sneeze to clear its nose", "Dig a hole and bury it"), X),
+        q("ani_bolas_spider_swings", "The bolas spider swings a sticky ball on a thread to catch moths. How does it lure them?", "It gives off a female moth's scent", listOf("It glows faintly in the dark", "It hums at a moth's wingbeat pitch", "It smells like sweet nectar"), X),
+        q("ani_slender_pearlfish_often", "Where does the slender pearlfish often make its home?", "Inside a sea cucumber", listOf("Inside a whale's mouth", "Under a shark's gill cover", "In a turtle's nostril"), X),
+        q("ani_whale_calling_hertz", "Why was a whale calling at 52 hertz nicknamed 'the loneliest whale in the world'?", "No known whale species calls like it", listOf("It was the last of its kind", "It was stranded in a lake", "It sang only once a year"), X),
+        q("ani_australia_fitzroy_river", "Australia's Fitzroy River turtle can take in oxygen underwater through which body part?", "Its rear end", listOf("Its shell", "Its eyelids", "Its claws"), X),
+        q("ani_small_dinosaur_feathered", "Which small dinosaur had feathered wings on both its arms and its legs?", "Microraptor", listOf("Compsognathus", "Oviraptor", "Velociraptor"), X),
+        q("ani_months_winter_sleep", "During months of winter sleep, what happens to an American black bear's urine?", "Its body recycles it into protein", listOf("It is stored in a swollen bladder", "It is sweated out through the skin", "It freezes inside its body"), X),
+        q("ani_five_toothed_mouth", "What is the five-toothed mouth of a sea urchin called?", "Aristotle's lantern", listOf("Neptune's comb", "Darwin's jaw", "Pliny's crown"), X),
+        q("ani_male_white_spotted", "Why does a male white-spotted pufferfish carve a big patterned circle in the sand?", "To attract a female to lay eggs", listOf("To trap small prey in the grooves", "To hide from passing sharks", "To mark where it sleeps"), X),
+        q("ani_some_capuchin_monkeys", "Some capuchin monkeys rub crushed millipedes into their fur. Why?", "To keep off biting insects", listOf("To attract mates", "To mark their territory", "To warm up on cold nights"), X),
+        q("ani_1987_killer_whales", "In 1987, killer whales near Seattle started a short-lived fad of doing what?", "Wearing dead salmon on their heads", listOf("Leaping over passing ferries", "Pushing kayaks back to shore", "Singing along to ship horns"), X)
     )
 }

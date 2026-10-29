@@ -95,6 +95,11 @@ mat_lasts_longest	Easy	Which of these lasts the longest?	100 minutes	1.5 hours	5
 mat_pemdas_bodmas_help	Easy	What do 'PEMDAS' and 'BODMAS' help pupils remember?	The order of operations	The times tables	How to divide fractions	The names of polygons
 mat_diamond_shape_four	Easy	What is a 'diamond' shape with four equal sides properly called?	A rhombus	A trapezium	A pentagon	An oblong
 mat_call_100th_anniversary	Easy	What do you call a 100th anniversary?	A centenary	A millennium	A jubilee	A decennial
+mat_two_company_three	Easy	If two's company and three's a crowd, what are four and five?	Nine	Twenty	Eleven	Forty-five
+mat_metre_fence_post	Easy	A 10-metre fence has a post every metre, including one at each end. How many posts are there?	11	10	9	12
+mat_10th_queue_people	Easy	You are 10th in a queue, and 10 people are standing behind you. How many people are in the queue?	20	19	21	11
+mat_two_people_play	Easy	Two people play rock, paper, scissors, each choosing at random. How likely is a draw?	1 in 3	1 in 2	1 in 9	1 in 6
+mat_different_outfits_put	Easy	How many different outfits can you put together from 3 shirts and 4 pairs of trousers?	12	7	9	16
 day2_procent_skladany	Medium	What is compound interest?	Interest earned on interest already added	A one-time fee	A fixed monthly cost	Interest paid only at the end
 day2_inflacja	Medium	What does inflation mean for your savings?	The same money buys less over time	Your balance shrinks	Interest rates always fall	Prices stay fixed
 mat_pi	Medium	What is the approximate value of pi?	3.14	3.41	2.71	3.04
@@ -244,6 +249,23 @@ mat_golden_ratio_618	Medium	What is the name of the golden ratio, about 1.618, o
 mat_paradox_achilles_never	Medium	What is the name of the paradox in which Achilles can never overtake a tortoise?	Zeno's paradox	Russell's paradox	Banach-Tarski paradox	Liar paradox
 mat_calendar_reform_skipped	Medium	Which calendar reform skipped ten days in October 1582?	Gregorian	Julian	Revolutionary	Mayan
 mat_111_times_111	Medium	What is 111 times 111?	12321	11211	12221	13431
+mat_different_moves_white	Medium	How many different first moves does White have in a game of chess?	20	16	10	24
+mat_more_likely_two	Medium	Which is more likely: two heads from two flips of a fair coin, or a six from one roll of a fair die?	The two heads	The six	They are equally likely	It is impossible to say
+mat_tap_fills_bath	Medium	One tap fills a bath in 3 minutes and another in 6 minutes. How long do they take together?	2 minutes	4.5 minutes	9 minutes	3 minutes
+mat_year_not_leap	Medium	A year that is not a leap year starts on a Monday. On which day does the next year start?	Tuesday	Monday	Wednesday	Sunday
+mat_square_numbers_100	Medium	How many square numbers are there from 1 to 100, counting both ends?	10	9	25	50
+mat_positive_whole_number	Medium	Which positive whole number gives the same answer when added to itself as when multiplied by itself?	2	1	3	4
+mat_pierre_fermat_scribbled	Medium	Pierre de Fermat scribbled that he had a marvellous proof of his famous theorem, but what was too small to hold it?	The margin of his book	His tiny notebook	His study's blackboard	A postcard to a friend
+mat_old_pocket_calculator	Medium	On an old pocket calculator, which number reads 'hello' when you turn it upside down?	0.7734	0.4377	7.7340	0.3704
+mat_googolplex	Medium	What is a googolplex?	1 followed by a googol of zeros	A googol times a googol	A googol plus one	1 followed by 1,000 zeros
+mat_average_rolls_fair	Medium	On average, how many rolls of a fair die does it take to get the first six?	6	3.5	3	12
+mat_poker_hands_rarest	Medium	Which of these poker hands is the rarest?	Four of a kind	A full house	A flush	A straight
+mat_league_teams_each	Medium	In a league of 20 teams where each plays every other team home and away, how many matches are there in a season?	380	190	400	760
+mat_volume_pizza_radius	Medium	What is the volume of a pizza with radius z and thickness a?	pi z z a	2 pi z a	pi z a a	z z a / pi
+mat_some_mathematicians_want	Medium	Some mathematicians want to replace pi with 'tau'. What does tau equal?	Twice pi	Half of pi	Pi squared	The square root of pi
+mat_bottle_inside_outside	Medium	Which 'bottle' has no inside and no outside, and cannot be built in 3D without passing through itself?	A Klein bottle	A Leyden jar	A Mobius bottle	A Florence flask
+mat_snack_famously_made	Medium	Which snack is famously made in the saddle shape that mathematicians call a hyperbolic paraboloid?	Pringles	Doritos	Bugles	Cheetos
+mat_roughly_odds_matching	Medium	Roughly what are the odds of matching all six numbers in a lottery that draws 6 balls from 49?	About 1 in 14 million	About 1 in 14,000	About 1 in 1.4 billion	About 1 in 140,000
 mat_silnia_5	Hard	What is 5! (5 factorial)?	120	100	60	150
 mat_fibonacci	Hard	What number comes next in the sequence 1, 1, 2, 3, 5, 8...?	13	11	12	16
 mat2_logarytm_2_8	Hard	What is log base 2 of 8?	3	2	4	8
@@ -342,6 +364,30 @@ mat_persian_scholar_gave	Hard	Which Persian scholar's name gave us the word 'alg
 mat_austrian_logician_proved	Hard	Which Austrian logician proved in 1931 that some true statements in maths can never be proved?	Kurt Godel	David Hilbert	Georg Cantor	Emmy Noether
 mat_mathematician_showed_some	Hard	Which mathematician showed some infinities are bigger than others?	Georg Cantor	Kurt Godel	Leonhard Euler	David Hilbert
 mat_hotel_thought_experiment	Hard	Which hotel thought experiment shows that an infinite hotel can always fit more guests?	Hilbert's Grand Hotel	Cantor's Inn	Zeno's Lodge	Godel's Motel
+mat_rope_tied_snugly	Hard	A rope is tied snugly around Earth's equator. If you add just 1 m to its length, how high could it then float evenly all the way round?	About 16 cm	Less than a millimetre	About 1 cm	About 2 m
+mat_curve_chain_hanging	Hard	What is the curve of a chain hanging freely between two hooks called?	A catenary	A parabola	A hyperbola	A cycloid
+mat_1611_claimed_way	Hard	In 1611, who claimed that the way greengrocers stack oranges is the densest possible way to pack balls?	Johannes Kepler	Isaac Newton	Galileo Galilei	Rene Descartes
+mat_french_mathematician_sophie	Hard	How did French mathematician Sophie Germain sign her letters to Lagrange and Gauss, so as to be taken seriously?	With a man's name	With her husband's name	With only a number	With a royal title
+mat_great_mathematician_kept	Hard	Which great mathematician kept up his astonishing output even after going almost completely blind?	Leonhard Euler	Carl Friedrich Gauss	Isaac Newton	Pierre de Fermat
+mat_mathematicians_proudly_quote	Hard	Mathematicians proudly quote their 'Erdos number'. What does it count?	Steps of co-authorship to Paul Erdos	Papers published before age 30	Famous problems they have cracked	Major prizes they have won
+mat_sentence_want_drink	Hard	In the sentence 'How I want a drink, alcoholic of course...', what do the lengths of the words spell out?	The first digits of pi	The first prime numbers	The Fibonacci numbers	The digits of e
+mat_russell_barber_paradox	Hard	In Russell's 'barber paradox', a male barber shaves exactly those men who do not shave themselves. Who shaves the barber?	No answer avoids a contradiction	He shaves himself	Another barber does	Nobody - he grows a beard
+mat_roughly_likely_dealt	Hard	Roughly how likely are you to be dealt a royal flush in five-card poker?	About 1 in 650,000	About 1 in 6,500	About 1 in 65 million	About 1 in 650
+mat_chance_rolling_five	Hard	What is the chance of rolling five of a kind (a 'Yahtzee') with five dice in a single throw?	1 in 1,296	1 in 7,776	1 in 216	1 in 46,656
+mat_family_four_children	Hard	A family has four children, and boys and girls are equally likely. Which split is most likely?	Three of one sex, one of the other	Two boys and two girls	All four of the same sex	All splits are equally likely
+mat_farmer_must_ferry	Hard	A farmer must ferry a wolf, a goat and a cabbage across a river one at a time, never leaving the wolf with the goat or the goat with the cabbage. What is the fewest number of crossings?	7	3	5	9
+mat_four_people_must	Hard	Four people must cross a bridge at night with one torch, at most two at a time. They take 1, 2, 5 and 10 minutes, and a pair walks at the slower pace. What is the fastest total time?	17 minutes	19 minutes	18 minutes	21 minutes
+mat_two_trains_100	Hard	Two trains 100 km apart head towards each other at 50 km/h each. A fly zips back and forth between them at 75 km/h until they meet. How far does it fly?	75 km	50 km	100 km	150 km
+mat_boy_brothers_sisters	Hard	A boy has as many brothers as sisters, but each of his sisters has twice as many brothers as sisters. How many children are in the family?	7	5	6	9
+mat_two_days_ago	Hard	Two days ago Anna was 25. Next year she will turn 28. On which date is her birthday?	31 December	1 January	30 December	29 February
+mat_get_multiply_345	Hard	What do you get if you multiply 12,345,679 (note: no 8) by 9?	111,111,111	123,456,789	999,999,999	100,000,000
+mat_write_any_three	Hard	Write any three-digit number twice in a row, like 123123. Which number will always divide it exactly?	1001	999	1111	101
+mat_year_1000_2100	Hard	Which year from 1000 to 2100 has the longest Roman numeral?	1888	1999	1777	2088
+mat_although_japanese_modern	Hard	Although it has a Japanese name, the modern Sudoku puzzle was first published in 1979 in which country?	The United States	Japan	The United Kingdom	Switzerland
+mat_sam_loyd_said	Hard	Sam Loyd is said to have offered $1,000 for solving his sliding '15 puzzle' with the 14 and 15 swapped. Why did no one win?	It is impossible	The tiles always jammed	He kept moving the deadline	Only he knew the trick
+mat_car_odometer_shows	Hard	A car's odometer shows the palindrome 15951. Two hours later it shows the next palindrome. What was the average speed?	55 miles per hour	50 miles per hour	60 miles per hour	110 miles per hour
+mat_flip_fair_coin_2	Hard	If you flip a fair coin 10 times, roughly how likely are you to get exactly 5 heads?	About 25%	About 50%	About 10%	About 75%
+mat_year_not_leap_2	Hard	In a year that is not a leap year, which month always starts on the same day of the week as January?	October	July	April	March
 mat_liczba_e	Expert	What is the approximate value of e?	2.72	3.14	1.62	2.24
 mat_liczby_doskonale	Expert	Which of these numbers is perfect (equal to the sum of its divisors)?	28	24	30	36
 mat_duzy_pierwszy	Expert	Which of these numbers is NOT prime?	91	89	97	83
@@ -398,3 +444,12 @@ mat_division_sign	Expert	What is the division sign ÷ called?	An obelus	A vincul
 mat_unproven_conjecture_says	Expert	Which unproven conjecture says every even number greater than 2 is the sum of two primes?	Goldbach's conjecture	Fermat's Last Theorem	The Collatz conjecture	The Riemann hypothesis
 mat_conjecture_any_number	Expert	What is the name of the conjecture that any number reaches 1 by halving evens and tripling odds plus one?	Collatz conjecture	Goldbach conjecture	Twin prime conjecture	Riemann hypothesis
 mat_german_mathematician_theorem	Expert	Which German mathematician's theorem links symmetry and conservation laws in physics?	Emmy Noether	Sofia Kovalevskaya	Hypatia	Ada Lovelace
+mat_number_though_not	Expert	Which number, though not prime, is jokingly called the 'Grothendieck prime'?	57	51	87	91
+mat_because_hairy_ball	Expert	Because of the 'hairy ball theorem', at any moment there must be at least one spot on Earth where what is true?	No wind blows sideways	It is exactly noon	It is raining	The temperature is 0 degrees
+mat_gabriel_horn_endless	Expert	'Gabriel's horn', an endless trumpet shape, has a finite volume but what?	An infinite surface area	Zero thickness	No inside at all	An area of exactly zero
+mat_starting_762nd_decimal	Expert	Starting at the 762nd decimal place, pi contains a famous run of what?	Six 9s in a row	Ten 0s in a row	The digits 0 to 9 in order	Seven 7s in a row
+mat_graham_number_once	Expert	Graham's number, once called the largest number used in a serious proof, is so big that what is true of it?	Its digits could not fit in the observable universe	A computer would need a whole year to print it	Its digits would fill every library on Earth	It has exactly a googol digits
+mat_petersburg_paradox_game	Expert	In the 'St Petersburg paradox', a game's prize doubles every time a coin lands heads, stopping at the first tails. What is its expected payout?	Infinite	Exactly $2	About $25	Nothing at all
+mat_legend_says_priests	Expert	Legend says priests are moving a 64-disc Tower of Hanoi. At one move per second, roughly how long will they need?	About 585 billion years	About 64 days	About 6,400 years	About 2 million years
+mat_put_points_circle	Expert	Put points on a circle and join every pair with straight lines. 2, 3, 4 and 5 points can cut it into 2, 4, 8 and 16 regions. What is the most that 6 points can give?	31	32	30	36
+mat_curve_gives_fastest	Expert	Which curve gives the fastest slide for a ball rolling between two points, faster even than a straight ramp?	A cycloid	A catenary	A parabola	A circular arc

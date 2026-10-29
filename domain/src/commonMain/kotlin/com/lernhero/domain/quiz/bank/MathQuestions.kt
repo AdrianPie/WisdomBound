@@ -120,7 +120,12 @@ object MathQuestions {
         q("mat_lasts_longest", "Which of these lasts the longest?", "100 minutes", listOf("1.5 hours", "5,000 seconds", "95 minutes"), E),
         q("mat_pemdas_bodmas_help", "What do 'PEMDAS' and 'BODMAS' help pupils remember?", "The order of operations", listOf("The times tables", "How to divide fractions", "The names of polygons"), E),
         q("mat_diamond_shape_four", "What is a 'diamond' shape with four equal sides properly called?", "A rhombus", listOf("A trapezium", "A pentagon", "An oblong"), E),
-        q("mat_call_100th_anniversary", "What do you call a 100th anniversary?", "A centenary", listOf("A millennium", "A jubilee", "A decennial"), E)
+        q("mat_call_100th_anniversary", "What do you call a 100th anniversary?", "A centenary", listOf("A millennium", "A jubilee", "A decennial"), E),
+        q("mat_two_company_three", "If two's company and three's a crowd, what are four and five?", "Nine", listOf("Twenty", "Eleven", "Forty-five"), E),
+        q("mat_metre_fence_post", "A 10-metre fence has a post every metre, including one at each end. How many posts are there?", "11", listOf("10", "9", "12"), E),
+        q("mat_10th_queue_people", "You are 10th in a queue, and 10 people are standing behind you. How many people are in the queue?", "20", listOf("19", "21", "11"), E),
+        q("mat_two_people_play", "Two people play rock, paper, scissors, each choosing at random. How likely is a draw?", "1 in 3", listOf("1 in 2", "1 in 9", "1 in 6"), E),
+        q("mat_different_outfits_put", "How many different outfits can you put together from 3 shirts and 4 pairs of trousers?", "12", listOf("7", "9", "16"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -273,7 +278,24 @@ object MathQuestions {
         q("mat_golden_ratio_618", "What is the name of the golden ratio, about 1.618, often written with a Greek letter?", "Phi", listOf("Pi", "Tau", "Sigma"), M),
         q("mat_paradox_achilles_never", "What is the name of the paradox in which Achilles can never overtake a tortoise?", "Zeno's paradox", listOf("Russell's paradox", "Banach-Tarski paradox", "Liar paradox"), M),
         q("mat_calendar_reform_skipped", "Which calendar reform skipped ten days in October 1582?", "Gregorian", listOf("Julian", "Revolutionary", "Mayan"), M),
-        q("mat_111_times_111", "What is 111 times 111?", "12321", listOf("11211", "12221", "13431"), M)
+        q("mat_111_times_111", "What is 111 times 111?", "12321", listOf("11211", "12221", "13431"), M),
+        q("mat_different_moves_white", "How many different first moves does White have in a game of chess?", "20", listOf("16", "10", "24"), M),
+        q("mat_more_likely_two", "Which is more likely: two heads from two flips of a fair coin, or a six from one roll of a fair die?", "The two heads", listOf("The six", "They are equally likely", "It is impossible to say"), M),
+        q("mat_tap_fills_bath", "One tap fills a bath in 3 minutes and another in 6 minutes. How long do they take together?", "2 minutes", listOf("4.5 minutes", "9 minutes", "3 minutes"), M),
+        q("mat_year_not_leap", "A year that is not a leap year starts on a Monday. On which day does the next year start?", "Tuesday", listOf("Monday", "Wednesday", "Sunday"), M),
+        q("mat_square_numbers_100", "How many square numbers are there from 1 to 100, counting both ends?", "10", listOf("9", "25", "50"), M),
+        q("mat_positive_whole_number", "Which positive whole number gives the same answer when added to itself as when multiplied by itself?", "2", listOf("1", "3", "4"), M),
+        q("mat_pierre_fermat_scribbled", "Pierre de Fermat scribbled that he had a marvellous proof of his famous theorem, but what was too small to hold it?", "The margin of his book", listOf("His tiny notebook", "His study's blackboard", "A postcard to a friend"), M),
+        q("mat_old_pocket_calculator", "On an old pocket calculator, which number reads 'hello' when you turn it upside down?", "0.7734", listOf("0.4377", "7.7340", "0.3704"), M),
+        q("mat_googolplex", "What is a googolplex?", "1 followed by a googol of zeros", listOf("A googol times a googol", "A googol plus one", "1 followed by 1,000 zeros"), M),
+        q("mat_average_rolls_fair", "On average, how many rolls of a fair die does it take to get the first six?", "6", listOf("3.5", "3", "12"), M),
+        q("mat_poker_hands_rarest", "Which of these poker hands is the rarest?", "Four of a kind", listOf("A full house", "A flush", "A straight"), M),
+        q("mat_league_teams_each", "In a league of 20 teams where each plays every other team home and away, how many matches are there in a season?", "380", listOf("190", "400", "760"), M),
+        q("mat_volume_pizza_radius", "What is the volume of a pizza with radius z and thickness a?", "pi z z a", listOf("2 pi z a", "pi z a a", "z z a / pi"), M),
+        q("mat_some_mathematicians_want", "Some mathematicians want to replace pi with 'tau'. What does tau equal?", "Twice pi", listOf("Half of pi", "Pi squared", "The square root of pi"), M),
+        q("mat_bottle_inside_outside", "Which 'bottle' has no inside and no outside, and cannot be built in 3D without passing through itself?", "A Klein bottle", listOf("A Leyden jar", "A Mobius bottle", "A Florence flask"), M),
+        q("mat_snack_famously_made", "Which snack is famously made in the saddle shape that mathematicians call a hyperbolic paraboloid?", "Pringles", listOf("Doritos", "Bugles", "Cheetos"), M),
+        q("mat_roughly_odds_matching", "Roughly what are the odds of matching all six numbers in a lottery that draws 6 balls from 49?", "About 1 in 14 million", listOf("About 1 in 14,000", "About 1 in 1.4 billion", "About 1 in 140,000"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -375,7 +397,31 @@ object MathQuestions {
         q("mat_persian_scholar_gave", "Which Persian scholar's name gave us the word 'algorithm'?", "Al-Khwarizmi", listOf("Omar Khayyam", "Avicenna", "Al-Biruni"), H),
         q("mat_austrian_logician_proved", "Which Austrian logician proved in 1931 that some true statements in maths can never be proved?", "Kurt Godel", listOf("David Hilbert", "Georg Cantor", "Emmy Noether"), H),
         q("mat_mathematician_showed_some", "Which mathematician showed some infinities are bigger than others?", "Georg Cantor", listOf("Kurt Godel", "Leonhard Euler", "David Hilbert"), H),
-        q("mat_hotel_thought_experiment", "Which hotel thought experiment shows that an infinite hotel can always fit more guests?", "Hilbert's Grand Hotel", listOf("Cantor's Inn", "Zeno's Lodge", "Godel's Motel"), H)
+        q("mat_hotel_thought_experiment", "Which hotel thought experiment shows that an infinite hotel can always fit more guests?", "Hilbert's Grand Hotel", listOf("Cantor's Inn", "Zeno's Lodge", "Godel's Motel"), H),
+        q("mat_rope_tied_snugly", "A rope is tied snugly around Earth's equator. If you add just 1 m to its length, how high could it then float evenly all the way round?", "About 16 cm", listOf("Less than a millimetre", "About 1 cm", "About 2 m"), H),
+        q("mat_curve_chain_hanging", "What is the curve of a chain hanging freely between two hooks called?", "A catenary", listOf("A parabola", "A hyperbola", "A cycloid"), H),
+        q("mat_1611_claimed_way", "In 1611, who claimed that the way greengrocers stack oranges is the densest possible way to pack balls?", "Johannes Kepler", listOf("Isaac Newton", "Galileo Galilei", "Rene Descartes"), H),
+        q("mat_french_mathematician_sophie", "How did French mathematician Sophie Germain sign her letters to Lagrange and Gauss, so as to be taken seriously?", "With a man's name", listOf("With her husband's name", "With only a number", "With a royal title"), H),
+        q("mat_great_mathematician_kept", "Which great mathematician kept up his astonishing output even after going almost completely blind?", "Leonhard Euler", listOf("Carl Friedrich Gauss", "Isaac Newton", "Pierre de Fermat"), H),
+        q("mat_mathematicians_proudly_quote", "Mathematicians proudly quote their 'Erdos number'. What does it count?", "Steps of co-authorship to Paul Erdos", listOf("Papers published before age 30", "Famous problems they have cracked", "Major prizes they have won"), H),
+        q("mat_sentence_want_drink", "In the sentence 'How I want a drink, alcoholic of course...', what do the lengths of the words spell out?", "The first digits of pi", listOf("The first prime numbers", "The Fibonacci numbers", "The digits of e"), H),
+        q("mat_russell_barber_paradox", "In Russell's 'barber paradox', a male barber shaves exactly those men who do not shave themselves. Who shaves the barber?", "No answer avoids a contradiction", listOf("He shaves himself", "Another barber does", "Nobody - he grows a beard"), H),
+        q("mat_roughly_likely_dealt", "Roughly how likely are you to be dealt a royal flush in five-card poker?", "About 1 in 650,000", listOf("About 1 in 6,500", "About 1 in 65 million", "About 1 in 650"), H),
+        q("mat_chance_rolling_five", "What is the chance of rolling five of a kind (a 'Yahtzee') with five dice in a single throw?", "1 in 1,296", listOf("1 in 7,776", "1 in 216", "1 in 46,656"), H),
+        q("mat_family_four_children", "A family has four children, and boys and girls are equally likely. Which split is most likely?", "Three of one sex, one of the other", listOf("Two boys and two girls", "All four of the same sex", "All splits are equally likely"), H),
+        q("mat_farmer_must_ferry", "A farmer must ferry a wolf, a goat and a cabbage across a river one at a time, never leaving the wolf with the goat or the goat with the cabbage. What is the fewest number of crossings?", "7", listOf("3", "5", "9"), H),
+        q("mat_four_people_must", "Four people must cross a bridge at night with one torch, at most two at a time. They take 1, 2, 5 and 10 minutes, and a pair walks at the slower pace. What is the fastest total time?", "17 minutes", listOf("19 minutes", "18 minutes", "21 minutes"), H),
+        q("mat_two_trains_100", "Two trains 100 km apart head towards each other at 50 km/h each. A fly zips back and forth between them at 75 km/h until they meet. How far does it fly?", "75 km", listOf("50 km", "100 km", "150 km"), H),
+        q("mat_boy_brothers_sisters", "A boy has as many brothers as sisters, but each of his sisters has twice as many brothers as sisters. How many children are in the family?", "7", listOf("5", "6", "9"), H),
+        q("mat_two_days_ago", "Two days ago Anna was 25. Next year she will turn 28. On which date is her birthday?", "31 December", listOf("1 January", "30 December", "29 February"), H),
+        q("mat_get_multiply_345", "What do you get if you multiply 12,345,679 (note: no 8) by 9?", "111,111,111", listOf("123,456,789", "999,999,999", "100,000,000"), H),
+        q("mat_write_any_three", "Write any three-digit number twice in a row, like 123123. Which number will always divide it exactly?", "1001", listOf("999", "1111", "101"), H),
+        q("mat_year_1000_2100", "Which year from 1000 to 2100 has the longest Roman numeral?", "1888", listOf("1999", "1777", "2088"), H),
+        q("mat_although_japanese_modern", "Although it has a Japanese name, the modern Sudoku puzzle was first published in 1979 in which country?", "The United States", listOf("Japan", "The United Kingdom", "Switzerland"), H),
+        q("mat_sam_loyd_said", "Sam Loyd is said to have offered \$1,000 for solving his sliding '15 puzzle' with the 14 and 15 swapped. Why did no one win?", "It is impossible", listOf("The tiles always jammed", "He kept moving the deadline", "Only he knew the trick"), H),
+        q("mat_car_odometer_shows", "A car's odometer shows the palindrome 15951. Two hours later it shows the next palindrome. What was the average speed?", "55 miles per hour", listOf("50 miles per hour", "60 miles per hour", "110 miles per hour"), H),
+        q("mat_flip_fair_coin_2", "If you flip a fair coin 10 times, roughly how likely are you to get exactly 5 heads?", "About 25%", listOf("About 50%", "About 10%", "About 75%"), H),
+        q("mat_year_not_leap_2", "In a year that is not a leap year, which month always starts on the same day of the week as January?", "October", listOf("July", "April", "March"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -435,6 +481,15 @@ object MathQuestions {
         q("mat_division_sign", "What is the division sign ÷ called?", "An obelus", listOf("A vinculum", "A solidus", "A caret"), X),
         q("mat_unproven_conjecture_says", "Which unproven conjecture says every even number greater than 2 is the sum of two primes?", "Goldbach's conjecture", listOf("Fermat's Last Theorem", "The Collatz conjecture", "The Riemann hypothesis"), X),
         q("mat_conjecture_any_number", "What is the name of the conjecture that any number reaches 1 by halving evens and tripling odds plus one?", "Collatz conjecture", listOf("Goldbach conjecture", "Twin prime conjecture", "Riemann hypothesis"), X),
-        q("mat_german_mathematician_theorem", "Which German mathematician's theorem links symmetry and conservation laws in physics?", "Emmy Noether", listOf("Sofia Kovalevskaya", "Hypatia", "Ada Lovelace"), X)
+        q("mat_german_mathematician_theorem", "Which German mathematician's theorem links symmetry and conservation laws in physics?", "Emmy Noether", listOf("Sofia Kovalevskaya", "Hypatia", "Ada Lovelace"), X),
+        q("mat_number_though_not", "Which number, though not prime, is jokingly called the 'Grothendieck prime'?", "57", listOf("51", "87", "91"), X),
+        q("mat_because_hairy_ball", "Because of the 'hairy ball theorem', at any moment there must be at least one spot on Earth where what is true?", "No wind blows sideways", listOf("It is exactly noon", "It is raining", "The temperature is 0 degrees"), X),
+        q("mat_gabriel_horn_endless", "'Gabriel's horn', an endless trumpet shape, has a finite volume but what?", "An infinite surface area", listOf("Zero thickness", "No inside at all", "An area of exactly zero"), X),
+        q("mat_starting_762nd_decimal", "Starting at the 762nd decimal place, pi contains a famous run of what?", "Six 9s in a row", listOf("Ten 0s in a row", "The digits 0 to 9 in order", "Seven 7s in a row"), X),
+        q("mat_graham_number_once", "Graham's number, once called the largest number used in a serious proof, is so big that what is true of it?", "Its digits could not fit in the observable universe", listOf("A computer would need a whole year to print it", "Its digits would fill every library on Earth", "It has exactly a googol digits"), X),
+        q("mat_petersburg_paradox_game", "In the 'St Petersburg paradox', a game's prize doubles every time a coin lands heads, stopping at the first tails. What is its expected payout?", "Infinite", listOf("Exactly \$2", "About \$25", "Nothing at all"), X),
+        q("mat_legend_says_priests", "Legend says priests are moving a 64-disc Tower of Hanoi. At one move per second, roughly how long will they need?", "About 585 billion years", listOf("About 64 days", "About 6,400 years", "About 2 million years"), X),
+        q("mat_put_points_circle", "Put points on a circle and join every pair with straight lines. 2, 3, 4 and 5 points can cut it into 2, 4, 8 and 16 regions. What is the most that 6 points can give?", "31", listOf("32", "30", "36"), X),
+        q("mat_curve_gives_fastest", "Which curve gives the fastest slide for a ball rolling between two points, faster even than a straight ramp?", "A cycloid", listOf("A catenary", "A parabola", "A circular arc"), X)
     )
 }

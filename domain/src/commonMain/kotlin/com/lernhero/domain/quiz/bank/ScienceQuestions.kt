@@ -181,7 +181,12 @@ object ScienceQuestions {
         q("sci_astronauts_iss_tie", "Why do astronauts on the ISS tie their sleeping bags to the wall?", "So they don't drift off while asleep", listOf("To keep warm against the hull", "So the station stays balanced", "To stop them from snoring"), E),
         q("sci_call_two_days", "What do we call the two days a year when day and night are roughly equal everywhere?", "The equinoxes", listOf("The solstices", "The eclipses", "The zeniths"), E),
         q("sci_get_sunburnt_cloudy", "Why can you get sunburnt on a cloudy day?", "Most UV rays pass through clouds", listOf("Clouds focus the sunlight", "Cold air thins the skin", "Wind dries out the skin"), E),
-        q("sci_thought_experiment_involves", "Which thought experiment involves a cat that is both alive and dead?", "Schrodinger's cat", listOf("Maxwell's demon", "Newton's cradle", "Buridan's ass"), E)
+        q("sci_thought_experiment_involves", "Which thought experiment involves a cat that is both alive and dead?", "Schrodinger's cat", listOf("Maxwell's demon", "Newton's cradle", "Buridan's ass"), E),
+        q("sci_tell_raw_egg", "How can you tell a raw egg from a hard-boiled one without cracking it?", "Spin it: the raw one wobbles", listOf("Shake it: the boiled one rattles", "Weigh it: the raw one is heavier", "Sniff it: the raw one smells"), E),
+        q("sci_moon_waxing_happening", "When the Moon is 'waxing', what is happening to it?", "Its lit part grows each night", listOf("Its lit part shrinks each night", "It is moving closer to Earth", "It is passing through Earth's shadow"), E),
+        q("sci_magnets_stick_fridge", "Why do magnets stick to most fridge doors?", "The door is made of steel", listOf("The door is charged with static", "The door's paint is sticky", "The cold makes metal magnetic"), E),
+        q("sci_lightning_ever_strike", "Does lightning ever strike the same place twice?", "Yes, tall towers get hit many times a year", listOf("No, the ground there loses its charge", "Only about once in a hundred years", "Only in hot, tropical countries"), E),
+        q("sci_sitting_behind_closed", "Sitting behind a closed car window on a sunny day, why do you rarely get sunburnt?", "Glass blocks most burning UV rays", listOf("Glass turns UV rays into heat", "The tint reflects all the sunlight", "Moving air cools the skin"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -452,7 +457,25 @@ object ScienceQuestions {
         q("sci_physicist_predicted_black", "Which physicist predicted that black holes slowly leak radiation?", "Stephen Hawking", listOf("Roger Penrose", "Kip Thorne", "John Wheeler"), M),
         q("sci_physicist_uncertainty_principle", "Which physicist's 'uncertainty principle' says you cannot know a particle's position and momentum exactly?", "Werner Heisenberg", listOf("Erwin Schrodinger", "Paul Dirac", "Max Born"), M),
         q("sci_astronomer_discovered_uranus", "Which astronomer discovered Uranus in 1781?", "William Herschel", listOf("Caroline Herschel", "Edmond Halley", "Johann Galle"), M),
-        q("sci_icelandic_volcano_2010", "Which Icelandic volcano's 2010 eruption grounded European flights?", "Eyjafjallajokull", listOf("Hekla", "Katla", "Grimsvotn"), M)
+        q("sci_icelandic_volcano_2010", "Which Icelandic volcano's 2010 eruption grounded European flights?", "Eyjafjallajokull", listOf("Hekla", "Katla", "Grimsvotn"), M),
+        q("sci_magician_whip_tablecloth", "Why can a magician whip a tablecloth out from under the plates?", "The plates' inertia keeps them in place", listOf("Air pressure holds the plates down", "The plates are lighter than the cloth", "The cloth's dye makes it slippery"), M),
+        q("sci_electric_fan_doesn", "An electric fan doesn't cool the air. Why does it still cool you down?", "It speeds up the evaporation of sweat", listOf("It blows heat out of the room", "It lowers the air pressure", "It pulls cold air down from the ceiling"), M),
+        q("sci_fish_survive_bottom", "Why can fish survive at the bottom of a lake that has frozen over?", "Water there stays at about 4 C", listOf("Ice traps sunlight like a greenhouse", "Fish keep it warm by swimming", "Salt sinks and stops it freezing"), M),
+        q("sci_raw_egg_floats", "A raw egg floats in a bowl of water. What does that usually mean?", "It is probably old", listOf("It is very fresh", "It has two yolks", "It is a hen's first egg"), M),
+        q("sci_popping_candy_crackle", "Why does popping candy crackle in your mouth?", "Tiny pockets of squeezed gas burst", listOf("Sugar crystals snap as they melt", "It reacts with acid in your saliva", "Water in it boils on your tongue"), M),
+        q("sci_moon_1971_astronaut", "On the Moon in 1971, astronaut David Scott dropped a hammer and a feather together. What happened?", "Both hit the ground at once", listOf("The hammer landed first", "The feather floated away", "The feather landed first"), M),
+        q("sci_earth_bathroom_scale", "Where on Earth would a bathroom scale show you slightly lighter than elsewhere?", "At the equator", listOf("At the North Pole", "At the South Pole", "Nowhere, it reads the same"), M),
+        q("sci_planet_greek_god", "Which planet is the only one named after a Greek god rather than a Roman one?", "Uranus", listOf("Neptune", "Mercury", "Mars"), M),
+        q("sci_constellations_officially_recognised", "How many constellations are officially recognised by astronomers today?", "88", listOf("12", "48", "150"), M),
+        q("sci_venus_hotter_mercury", "Why is Venus hotter than Mercury, though it is farther from the Sun?", "Its thick air traps the heat", listOf("It spins much faster", "It reflects less sunlight", "Its surface is darker rock"), M),
+        q("sci_spacecraft_crossing_asteroid", "Do spacecraft crossing the asteroid belt usually have to dodge rocks?", "No, the asteroids are far apart", listOf("Yes, they swerve every few minutes", "Yes, they need rock shields", "Only on the side nearest Mars"), M),
+        q("sci_roughly_wide_asteroid", "Roughly how wide was the asteroid that wiped out the dinosaurs?", "About 10 km", listOf("About 100 m", "About 1 km", "About 300 km"), M),
+        q("sci_happens_astronaut_tears", "What happens to an astronaut's tears in space?", "They cling to the eye in a watery ball", listOf("They run down the cheeks as usual", "They freeze into tiny crystals", "They evaporate instantly"), M),
+        q("sci_point_remote_phone", "Point a TV remote at many phone cameras and press a button. What shows on the screen?", "A flashing light", listOf("Nothing at all", "A rainbow of colours", "A burst of static"), M),
+        q("sci_see_annular_solar", "What do you see during an annular solar eclipse?", "A ring of Sun around the dark Moon", listOf("The Sun hidden for several hours", "The Moon glowing deep red", "Two shadows behind every object"), M),
+        q("sci_shooting_stars_made", "Most shooting stars are made by bits of space dust about the size of what?", "A grain of sand", listOf("A football", "A car", "A house"), M),
+        q("sci_besides_earth_planets", "Besides Earth, how many planets are easy to spot with the naked eye?", "Five", listOf("Two", "Seven", "None"), M),
+        q("sci_roughly_faster_sound", "Roughly how much faster does sound travel in water than in air?", "About four times", listOf("About half as fast", "About 40 times", "About the same"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -637,7 +660,34 @@ object ScienceQuestions {
         q("sci_scottish_scientist_invented", "Which Scottish scientist invented the vacuum flask?", "James Dewar", listOf("William Ramsay", "Joseph Black", "Lord Kelvin"), H),
         q("sci_smell_rain_dry", "What is the name for the smell of rain on dry earth?", "Petrichor", listOf("Geosmin", "Ozone", "Humus"), H),
         q("sci_hot_fast_cloud", "What is the name of the hot, fast cloud of gas and ash from an erupting volcano?", "Pyroclastic flow", listOf("Lahar", "Tephra", "Caldera"), H),
-        q("sci_huge_crater_left", "What is the name of the huge crater left when a volcano collapses?", "Caldera", listOf("Crater lake", "Vent", "Maar"), H)
+        q("sci_huge_crater_left", "What is the name of the huge crater left when a volcano collapses?", "Caldera", listOf("Crater lake", "Vent", "Maar"), H),
+        q("sci_polarised_sunglasses_cut", "How do polarised sunglasses cut the glare from water and wet roads?", "They block light waves vibrating one way", listOf("They darken only the brightest colours", "They reflect ultraviolet back out", "They make your pupils shrink"), H),
+        q("sci_adding_salt_pan", "Adding salt to a pan of pasta water makes it boil at what temperature?", "A tiny bit above 100 C", listOf("A tiny bit below 100 C", "Exactly 100 C, no change", "About 120 C"), H),
+        q("sci_stir_cup_loose", "Stir a cup of loose-leaf tea. Where do the leaves gather as it slows down?", "In the middle of the bottom", listOf("Around the edges of the bottom", "Floating on the surface", "Spread evenly all around"), H),
+        q("sci_shake_bag_mixed", "Shake a bag of mixed nuts. Where do the big Brazil nuts end up?", "On top", listOf("At the bottom", "In the middle", "Evenly mixed"), H),
+        q("sci_2004_sheets_graphene", "In 2004, the first sheets of graphene were peeled off graphite using what?", "Sticky tape", listOf("A laser", "A diamond knife", "Liquid nitrogen"), H),
+        q("sci_huge_solar_storm", "During the huge solar storm of 1859, what happened to some telegraph lines?", "They ran with batteries unplugged", listOf("They melted on their poles", "They went silent for a year", "They glowed bright green"), H),
+        q("sci_1989_solar_storm", "In 1989, a solar storm knocked out power for nine hours across which Canadian province?", "Quebec", listOf("Ontario", "Alberta", "Manitoba"), H),
+        q("sci_1954_ann_hodges", "In 1954, Ann Hodges of Alabama became the first person known to be hit by what?", "A meteorite", listOf("Ball lightning", "A hailstone", "A piece of a satellite"), H),
+        q("sci_2013_meteor_exploded", "In 2013, a meteor exploded over which Russian city, injuring about 1,500 people with flying glass?", "Chelyabinsk", listOf("Novosibirsk", "Yekaterinburg", "Omsk"), H),
+        q("sci_skylab_fell_western", "When Skylab fell onto Western Australia in 1979, what did the town of Esperance do?", "Fined NASA for littering", listOf("Declared a public holiday", "Sued NASA for damages", "Renamed its main street"), H),
+        q("sci_expected_happen_mars", "What is expected to happen to Mars's larger moon over the next few tens of millions of years?", "It will spiral in and break up", listOf("It will drift off into space", "It will merge with the smaller moon", "It will settle into a stable orbit"), H),
+        q("sci_because_moon_slowly", "Because the Moon is slowly drifting away, what will eventually stop happening?", "Total solar eclipses", listOf("Lunar eclipses", "Ocean tides", "Phases of the Moon"), H),
+        q("sci_spring_tide", "What is a 'spring tide'?", "An extra-high tide when Sun and Moon line up", listOf("A tide that comes only in springtime", "A tide raised by melting mountain snow", "A tide pushed in by spring storms"), H),
+        q("sci_fulgurite", "What is a fulgurite?", "Glass formed when lightning hits sand", listOf("A crystal found inside meteorites", "A cloud shaped like a clenched fist", "A spark that jumps between clouds"), H),
+        q("sci_sun_dogs", "What are 'sun dogs'?", "Bright spots on either side of the Sun", listOf("Dark spots on the Sun's surface", "Shadows cast during an eclipse", "Clouds that glow after sunset"), H),
+        q("sci_1885_vermont_farmer", "In 1885, Vermont farmer Wilson Bentley became the first person to do what?", "Photograph a single snowflake", listOf("Measure the speed of hail", "Make snow in a laboratory", "Film a tornado"), H),
+        q("sci_according_physicist_robert", "According to physicist Robert Matthews, why does toast usually land butter-side down?", "Tables are too low for a full flip", listOf("The butter makes that side heavier", "Air pushes up on the dry side", "The plate gives it a backspin"), H),
+        q("sci_microwave_oven_defrost", "Why does a microwave oven defrost food so unevenly?", "Ice absorbs microwaves far less than water", listOf("Frozen food reflects most of the waves", "Microwaves cannot pass through ice", "The turntable spins far too slowly"), H),
+        q("sci_radiocarbon_dating_stops", "Radiocarbon dating stops working on remains older than roughly how much?", "About 50,000 years", listOf("About 500 years", "About 5 million years", "About 500 million years"), H),
+        q("sci_1820_hans_christian", "In 1820, Hans Christian Orsted noticed during a lecture that an electric current did what?", "Moved a nearby compass needle", listOf("Made a wire glow blue", "Heated water to boiling", "Made a frog's leg twitch"), H),
+        q("sci_radioactivity_discovered_1896", "Radioactivity was discovered in 1896 when uranium salts left in a drawer did what?", "Fogged a wrapped photographic plate", listOf("Glowed green in the dark", "Burned a hole in the drawer", "Melted the wax seal on a jar"), H),
+        q("sci_some_rocks_mars", "How did some rocks from Mars end up lying on the ice of Antarctica?", "Asteroid impacts blasted them off Mars", listOf("Apollo astronauts brought them back", "A Mars probe dropped them", "A passing comet carried them"), H),
+        q("sci_among_eight_planets", "Among the eight planets, which has the biggest moon compared with its own size?", "Earth", listOf("Jupiter", "Saturn", "Neptune"), H),
+        q("sci_sparklers_burn_over", "Sparklers burn at over 1,000 C. Why do their flying sparks rarely burn your skin?", "Each spark is too tiny to hold much heat", listOf("The sparks are made of cold light", "Skin oils make them bounce off", "They are only hot on the inside"), H),
+        q("sci_ancient_greek_argued", "Which ancient Greek first argued that the Earth goes around the Sun?", "Aristarchus of Samos", listOf("Ptolemy of Alexandria", "Aristotle of Stagira", "Hipparchus of Nicaea"), H),
+        q("sci_olbers_paradox_asks", "'Olbers' paradox' asks a simple-sounding question. Which one?", "Why is the night sky dark?", listOf("Why is the sky blue?", "Why do stars twinkle?", "Why does the Moon look bigger low down?"), H),
+        q("sci_largest_meteorite_tonnes", "The largest known meteorite, about 60 tonnes, still lies where it fell in which country?", "Namibia", listOf("Australia", "Mexico", "Canada"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -723,6 +773,24 @@ object ScienceQuestions {
         q("sci_english_scientist_isolated", "Which English scientist first isolated hydrogen, calling it 'inflammable air'?", "Henry Cavendish", listOf("Joseph Priestley", "Humphry Davy", "Robert Boyle"), X),
         q("sci_scottish_chemist_discovered", "Which Scottish chemist discovered the noble gases neon, krypton and xenon?", "William Ramsay", listOf("Joseph Black", "Thomas Graham", "James Dewar"), X),
         q("sci_compound_made_soil", "Which compound made by soil bacteria gives rain its earthy smell?", "Geosmin", listOf("Petrichor", "Ozone", "Chlorophyll"), X),
-        q("sci_volcanic_mudflow", "What is the name of a volcanic mudflow?", "Lahar", listOf("Pyroclastic flow", "Tephra", "Fumarole"), X)
+        q("sci_volcanic_mudflow", "What is the name of a volcanic mudflow?", "Lahar", listOf("Pyroclastic flow", "Tephra", "Fumarole"), X),
+        q("sci_clocks_gps_satellites", "Clocks on GPS satellites drift from clocks on the ground by about 38 microseconds a day. Why?", "Relativity: weaker gravity and their speed", listOf("The cold of space speeds them up", "Solar wind pushes on their crystals", "Radio signals arrive late"), X),
+        q("sci_1999_physicist_lene", "In 1999, physicist Lene Hau slowed light in a cloud of ultracold atoms to roughly what speed?", "About 60 km/h", listOf("About 6 km/h", "About 6,000 km/h", "About 600,000 km/h"), X),
+        q("sci_coldest_natural_place", "Which is the coldest known natural place in the universe, about 1 degree above absolute zero?", "The Boomerang Nebula", listOf("The surface of Pluto", "Neptune's moon Triton", "The Moon's polar craters"), X),
+        q("sci_moon_make_own", "Which is the only moon known to make its own magnetic field?", "Ganymede", listOf("Titan", "Io", "Europa"), X),
+        q("sci_moon_saturn_half", "Which moon of Saturn has one half dark as coal and the other bright as snow?", "Iapetus", listOf("Mimas", "Rhea", "Dione"), X),
+        q("sci_verona_rupes_perhaps", "Verona Rupes, perhaps the tallest cliff in the Solar System, is on a moon of which planet?", "Uranus", listOf("Jupiter", "Saturn", "Neptune"), X),
+        q("sci_mercury_surface_criss", "Why is Mercury's surface criss-crossed by long cliffs, like wrinkles on a raisin?", "The planet shrank as its core cooled", listOf("Huge quakes split its crust", "Ancient rivers carved them", "The Sun's tides stretched it"), X),
+        q("sci_sun_not_solid", "The Sun is not solid. How does this show in the way it spins?", "Its equator spins faster than its poles", listOf("It spins backwards every 11 years", "Its poles spin faster than its equator", "Only its core spins at all"), X),
+        q("sci_area_near_geographic", "The area near the geographic North Pole that a compass points towards is what kind of magnetic pole?", "A south magnetic pole", listOf("A north magnetic pole", "No magnetic pole at all", "A pole that flips every day"), X),
+        q("sci_highest_clouds_earth", "Which are the highest clouds in Earth's atmosphere, seen glowing blue after sunset?", "Noctilucent clouds", listOf("Cirrus clouds", "Nacreous clouds", "Lenticular clouds"), X),
+        q("sci_freshly_poured_glass", "In a freshly poured glass of Guinness, why do the bubbles seem to sink?", "The flow drags them down near the glass", listOf("They are heavier than the beer", "Cold beer at the top pushes them down", "The foam on top squashes them back"), X),
+        q("sci_colours_never_appears", "Which of these colours never appears in a rainbow, because no single wavelength makes it?", "Magenta", listOf("Cyan", "Violet", "Yellow"), X),
+        q("sci_prince_rupert_drop", "A 'Prince Rupert's drop' of glass survives a hammer blow to its head. What makes it burst into powder?", "Snapping its thin tail", listOf("Dropping it into water", "Warming it in your hand", "Shining a torch on it"), X),
+        q("sci_andre_geim_won", "Andre Geim won a joke Ig Nobel Prize for making which animal float with a magnet, and later a real Nobel Prize too?", "A frog", listOf("A rabbit", "A tortoise", "A sparrow"), X),
+        q("sci_kessler_syndrome_warn", "What does the 'Kessler syndrome' warn about?", "A chain reaction of space-junk crashes", listOf("Astronauts losing bone in space", "Radio noise from the Sun", "Rockets damaging the ozone layer"), X),
+        q("sci_penzias_wilson_blamed", "Penzias and Wilson first blamed the faint hiss of the Big Bang, picked up in 1964, on what?", "Pigeon droppings in their antenna", listOf("Signals from a nearby radio station", "Soviet spy satellites overhead", "Lightning in distant storms"), X),
+        q("sci_planet_found_around", "The first planet found around a Sun-like star, in 1995, surprised astronomers because it was what?", "A giant orbiting closer than Mercury does", listOf("A rocky world just like our Earth", "A ringed giant planet like Saturn", "A moon drifting with no planet"), X),
+        q("sci_far_side_moon", "Why does the far side of the Moon look so different from the near side?", "It has almost no dark 'seas'", listOf("It is covered in ice", "It is made of darker rock", "It has no craters at all"), X)
     )
 }
