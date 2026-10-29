@@ -23,6 +23,8 @@ geo_continent_tornado_ever	Easy	Which is the only continent where no tornado has
 geo_city_subway_tunnels	Easy	Which city's subway tunnels were flooded by Hurricane Sandy in 2012?	New York	Boston	Washington	Philadelphia
 geo_beast_east_froze	Easy	What was the 'Beast from the East' that froze Britain in 2018?	A blast of icy air from Russia	A North Sea storm surge	A Saharan dust storm	A cloud of volcanic ash
 geo_texas_city_flooded	Easy	Which Texas city was flooded by the record rains of Hurricane Harvey in 2017?	Houston	Dallas	Austin	San Antonio
+geo_given_swirl_bitter	Easy	What name is given to the swirl of bitter Arctic air that sometimes spills south and freezes North America?	The polar vortex	The jet stream	The Gulf Stream	The trade winds
+geo_britain_north_america	Easy	In Britain and North America, what is an 'Indian summer'?	A warm spell in autumn	A rainy spell in summer	A heatwave in spring	A mild spell in winter
 geox_dolina_smierci	Medium	Death Valley, one of the hottest places on Earth, is in which country?	The USA	Mexico	Australia	Egypt
 geoy_japonia_trzesienia	Medium	Which country suffers about a fifth of the world's strongest earthquakes?	Japan	Chile	Italy	Iceland
 geo_roughly_hot_highest	Medium	Roughly how hot is the highest air temperature ever officially recorded on Earth?	About 57 C	About 40 C	About 75 C	About 100 C
@@ -71,6 +73,9 @@ geo_month_atlantic_hurricane	Medium	In which month does the Atlantic hurricane s
 geo_letters_never_used	Medium	Which of these letters is never used to start an Atlantic hurricane name?	Q	K	V	W
 geo_according_english_folklore	Medium	According to English folklore, if it rains on St Swithin's Day, how long will the rain go on?	40 days	7 days	12 days	100 days
 geo_australia_black_saturday	Medium	Australia's 'Black Saturday' bushfires of 2009, the deadliest in its history, struck which state?	Victoria	New South Wales	Queensland	Tasmania
+geo_1987_bbc_weatherman	Medium	In 1987, BBC weatherman Michael Fish famously told viewers not to worry, only hours before what?	A storm that felled millions of trees	A record-breaking heatwave	A blizzard that buried London	A flood that swamped Norfolk
+geo_roughly_often_yellowstone	Medium	Roughly how often does Yellowstone's Old Faithful geyser erupt?	About every 90 minutes	About every 5 minutes	About every 12 hours	About once a week
+geo_2021_eruption_lasting	Medium	In 2021, an eruption lasting nearly three months buried over 1,000 homes on which Canary Island?	La Palma	Tenerife	Lanzarote	Gran Canaria
 geo3_san_andreas	Hard	Which two tectonic plates grind past each other along California's San Andreas Fault?	The Pacific and North American plates	The Nazca and South American plates	The Eurasian and African plates	The Indian and Australian plates
 geox_tornado	Hard	Which part of the USA is nicknamed 'Tornado Alley'?	The Great Plains	New England	The Pacific Northwest	Florida
 geoy_islandia_plyty	Hard	Which country sits on the boundary between the North American and Eurasian plates?	Iceland	Ireland	Norway	Greenland
@@ -108,6 +113,11 @@ geo_plymouth_buried_volcanic	Hard	Plymouth, buried by volcanic ash in the 1990s,
 geo_nyiragongo_runny_lava	Hard	Nyiragongo, whose runny lava is among the fastest-flowing on Earth, looms over which city?	Goma	Kigali	Kampala	Kinshasa
 geo_tri_state_tornado	Hard	The Tri-State Tornado of 1925, the deadliest in US history, tore across Missouri, Illinois and which state?	Indiana	Kentucky	Ohio	Kansas
 geo_people_hawaii_call	Hard	What do people in Hawaii call the volcanic smog that drifts from Kilauea?	Vog	Smaze	Lavafog	Pele's mist
+geo_san_francisco_summer	Hard	San Francisco's famous summer fog has an affectionate nickname and its own social media accounts. What is it called?	Karl	Fred	Gus	Mabel
+geo_sakurajima_volcano_dusts	Hard	Sakurajima, a volcano that dusts its city with ash almost every day, looms over which Japanese city?	Kagoshima	Nagasaki	Sendai	Kobe
+geo_chinese_city_flattened	Hard	Which Chinese city was flattened by an earthquake in 1976 that killed roughly 240,000 people?	Tangshan	Chengdu	Harbin	Lanzhou
+geo_earthquakes_around_new	Hard	Earthquakes around New Madrid, Missouri, in 1811-1812 were said to make which river flow backwards for a while?	The Mississippi	The Missouri	The Ohio	The Arkansas
+geo_glider_pilots_flock	Hard	Glider pilots flock to Burketown in Queensland each spring to ride what?	A giant rolling cloud	A desert dust devil	A coastal sea breeze	A volcanic ash plume
 geo3_strefa_ryftowa	Expert	What is the Great East African Rift?	A zone where continental plates are tearing apart	A chain of volcanoes that went extinct long ago	A desert where no river reaches the sea	A region where the ground never thaws
 geo3_wyspa_wulkaniczna_powstawanie	Expert	How do volcanic island chains like Hawaii most often form?	A plate moves over a stationary hot spot in the mantle	Through a collision of two continents	Through subduction of one plate under another only	Through coastal erosion
 dpt_geo_pierscien_ognia	Expert	What is the Ring of Fire?	A belt of volcanoes round the Pacific	A chain of deserts along the tropics	A band of storms over the equator	A line of reefs in the Indian Ocean
@@ -129,3 +139,4 @@ geo_tallest_active_geyser	Expert	Which is the tallest active geyser in the world
 geo_fujiwhara_effect	Expert	What is the 'Fujiwhara effect'?	Two nearby cyclones circling each other	A tsunami bouncing between two coasts	Lightning striking twice in one spot	A volcano erupting under a glacier
 geo_derecho_spanish_straight	Expert	What is a 'derecho', from the Spanish for 'straight'?	A long, fast-moving straight-line windstorm	A tornado that never touches the ground	A sudden flood along a dry riverbed	A hot wind blowing down a mountainside
 geo_1973_icelanders_save	Expert	In 1973, how did Icelanders save the fishing harbour of Heimaey from an advancing lava flow?	They sprayed it with seawater	They bombed it from the air	They dug a channel to divert it	They built a wall of sandbags
+geo_1996_cyclone_set	Expert	In 1996, a cyclone set the record for the fastest wind gust ever measured outside a tornado, about 408 km/h. Where?	On Barrow Island, Australia	On Mount Washington, USA	At Commonwealth Bay, Antarctica	On Okinawa, Japan

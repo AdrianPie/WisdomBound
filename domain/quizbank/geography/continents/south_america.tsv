@@ -20,6 +20,9 @@ geo_country_famed_finest	Easy	Which country is famed for the finest emeralds, du
 geo_two_countries_share_2	Easy	Which two countries share the windswept island of Tierra del Fuego?	Argentina and Chile	Chile and Peru	Argentina and Uruguay	Argentina and Brazil
 geo_world_alpacas_prized	Easy	Most of the world's alpacas, prized for their soft wool, live in which country?	Peru	Chile	Argentina	Ecuador
 geo_country_exports_more	Easy	Which country exports more beef than any other?	Brazil	Argentina	Uruguay	Paraguay
+geo_south_american_country_11	Easy	Which South American country is often called 'the Land of the Incas'?	Peru	Bolivia	Ecuador	Chile
+geo_largest_portuguese_speaking	Easy	Which is the largest Portuguese-speaking country in the world?	Brazil	Portugal	Angola	Mozambique
+geo_punta_del_este	Easy	Punta del Este, a glitzy beach resort loved by rich Argentines and Brazilians, is in which country?	Uruguay	Chile	Paraguay	Peru
 geo_second_populous_country	Medium	Which is the second most populous country in South America?	Colombia	Argentina	Peru	Venezuela
 geo_country_means_little	Medium	Which country's name means 'Little Venice', after villages built on stilts?	Venezuela	Bolivia	Colombia	Ecuador
 geo_two_south_american	Medium	Which two South American countries do not border Brazil?	Chile and Ecuador	Peru and Bolivia	Uruguay and Paraguay	Colombia and Venezuela
@@ -69,6 +72,10 @@ geo_since_2000_south	Medium	Since 2000, which South American country has used th
 geo_thanks_clear_bone	Medium	Thanks to its clear, bone-dry desert skies, which country hosts many of the world's biggest telescopes?	Chile	Peru	Bolivia	Argentina
 geo_country_more_three	Medium	Which country has more than three head of cattle for every person?	Uruguay	Argentina	Paraguay	Brazil
 geo_country_world_second	Medium	Which country is the world's second-biggest exporter of cut flowers, behind only the Netherlands?	Colombia	Ecuador	Kenya	Brazil
+geo_south_american_country_10	Medium	In which South American country are the traditional cowboys called 'huasos'?	Chile	Argentina	Uruguay	Brazil
+geo_country_more_bird	Medium	Which country has more bird species than any other, close to 2,000 of them?	Colombia	Brazil	Peru	Indonesia
+geo_country_united_provinces	Medium	Which country was first called the 'United Provinces of the Rio de la Plata'?	Argentina	Uruguay	Paraguay	Bolivia
+geo_roughly_share_uruguay	Medium	Roughly what share of Uruguay's people live in and around its capital, Montevideo?	About half	About a tenth	Nearly all	About a fifth
 geox_nazca	Hard	In which country are the giant Nazca Lines drawn in the desert?	Peru	Chile	Mexico	Bolivia
 geoy_boliwia_morze	Hard	Bolivia lost its sea coast to which neighbour in a 19th-century war?	Chile	Peru	Brazil	Argentina
 geo_smallest_country_south	Hard	Which is the smallest country in South America?	Suriname	Uruguay	Guyana	Ecuador
@@ -110,6 +117,7 @@ geo_mendoza_foot_andes	Hard	Mendoza, at the foot of the Andes, makes most of whi
 geo_three_south_american	Hard	Which three South American countries does the equator cross?	Ecuador, Colombia and Brazil	Ecuador, Peru and Brazil	Colombia, Venezuela and Brazil	Ecuador, Colombia and Peru
 geo_christ_andes_statue	Hard	The 'Christ of the Andes' statue, high on a mountain pass, celebrates peace between Argentina and which country?	Chile	Bolivia	Peru	Paraguay
 geo_country_home_marble	Hard	Which country is home to the Marble Caves on General Carrera Lake?	Chile	Argentina	Peru	Bolivia
+geo_country_calls_amazon	Hard	Which country calls its Amazon lowlands, east of the Andes, 'El Oriente'?	Ecuador	Chile	Argentina	Uruguay
 geo2_panstwo_najdluzsze	Expert	Which country is the longest from north to south?	Chile	Norway	Brazil	Russia
 geo_country_shares_longest	Expert	Which country shares the longest border with Brazil?	Bolivia	Peru	Venezuela	Argentina
 geo_brazil_acquired_state	Expert	Brazil acquired the state of Acre in 1903 from which country?	Bolivia	Paraguay	Colombia	Venezuela
@@ -129,3 +137,5 @@ geo_mapuche_resisted_spanish	Expert	The Mapuche, who resisted Spanish conquest f
 geo_colonia_tovar_mountain	Expert	Colonia Tovar, a mountain village founded by Black Forest Germans in 1843, is in which country?	Venezuela	Chile	Brazil	Argentina
 geo_filadelfia_main_town	Expert	Filadelfia, the main town of Paraguay's Chaco, was founded by German-speaking members of which faith?	The Mennonites	The Amish	The Hutterites	The Moravians
 geo_country_capital_grand	Expert	In which country's capital do a grand mosque and a synagogue stand side by side on the same street?	Suriname	Guyana	Venezuela	Argentina
+geo_amazon_river_port	Expert	The Amazon river port of Leticia gives which country its foothold on the great river?	Colombia	Venezuela	Ecuador	Bolivia
+geo_1893_group_australian	Expert	In 1893 a group of Australian socialists founded a utopian colony called 'New Australia' in which country?	Paraguay	Argentina	Chile	Uruguay

@@ -23,6 +23,8 @@ geo_deepest_world_oceans	Easy	Which is the deepest of the world's oceans on aver
 geo_glamorous_resorts_cannes	Easy	The glamorous resorts of Cannes, Nice and Monaco all face which sea?	The Mediterranean	The Adriatic	The Atlantic	The Aegean
 geo_2010_deepwater_horizon	Easy	In 2010, the Deepwater Horizon oil rig blew up, causing a huge spill in which body of water?	The Gulf of Mexico	The North Sea	The Caribbean Sea	The Persian Gulf
 geo_ocean_maldives_lie	Easy	In which ocean do the Maldives lie?	The Indian Ocean	The Pacific Ocean	The Atlantic Ocean	The Southern Ocean
+geo_ocean_canary_islands	Easy	In which ocean are the Canary Islands?	The Atlantic	The Indian Ocean	The Pacific	The Arctic Ocean
+geo_gulf_mexico_bordered	Easy	The Gulf of Mexico is bordered by the USA, Mexico and which island country?	Cuba	Jamaica	The Bahamas	Haiti
 geo2_kanal_sueski	Medium	Which seas does the Suez Canal connect?	The Mediterranean with the Red Sea	The Baltic with the North Sea	The Black Sea with the Aegean	The Pacific with the Atlantic
 geo2_kanal_panamski	Medium	Which oceans does the Panama Canal connect?	The Atlantic with the Pacific	The Pacific with the Indian Ocean	The Atlantic with the Arctic	The Indian with the Southern Ocean
 geo2_ciesnina_bering	Medium	What does the Bering Strait separate?	Asia from North America	Europe from Africa	Australia from Asia	Greenland from Canada
@@ -75,6 +77,8 @@ geo_strait_scene_gallipoli	Medium	Which strait, scene of the Gallipoli campaign,
 geo_greek_islands_corfu	Medium	The Greek islands of Corfu, Kefalonia and Zakynthos lie in which sea?	The Ionian Sea	The Aegean Sea	The Adriatic Sea	The Tyrrhenian Sea
 geo_gulf_separates_egypt	Medium	Which gulf separates Egypt's Sinai Peninsula from Saudi Arabia?	The Gulf of Aqaba	The Gulf of Suez	The Gulf of Aden	The Persian Gulf
 geo_country_borders_both	Medium	What is the only country that borders both the Atlantic and Indian Oceans?	South Africa	Australia	Mozambique	Namibia
+geo_sea_dangerous_king	Medium	Which sea, famous for its dangerous king crab fishing, lies between Alaska and Russia's Far East?	The Bering Sea	The Sea of Okhotsk	The Barents Sea	The Beaufort Sea
+geo_ancient_pillars_hercules	Medium	The ancient 'Pillars of Hercules' stood on either side of which strait?	The Strait of Gibraltar	The Bosphorus	The Strait of Messina	The Dardanelles
 geo3_prad_golfsztrom	Hard	What is the warm ocean current warming Western Europe called?	The Gulf Stream	The Humboldt Current	The Labrador Current	The California Current
 trv_sargassowe	Hard	Which sea has no coastline at all, being bounded only by ocean currents?	The Sargasso Sea	The Caspian Sea	The Coral Sea	The Tasman Sea
 lmk_bosfor_laczy	Hard	Which strait connects the Black Sea with the Sea of Marmara?	The Bosphorus	The Dardanelles	The Strait of Kerch	The Strait of Otranto
@@ -112,6 +116,10 @@ geo_sea_slowly_widening	Hard	Which sea is slowly widening as Africa and Arabia d
 geo_strait_between_norway	Hard	Which strait between Norway and Denmark links the North Sea with the Kattegat?	The Skagerrak	The Oresund	The Great Belt	The Little Belt
 geo_sea_okhotsk_enclosed	Hard	The Sea of Okhotsk is enclosed by Siberia, Sakhalin, Hokkaido and which peninsula?	Kamchatka	Chukotka	Korea	Taymyr
 geo_strait_crossed_bridge	Hard	Which strait, crossed by a famous bridge-and-tunnel link, separates Denmark from Sweden?	The Oresund	The Skagerrak	The Bosphorus	The Dardanelles
+geo_sea_off_antarctica	Hard	Which sea off Antarctica has been measured as having the clearest seawater on Earth?	The Weddell Sea	The Ross Sea	The Sargasso Sea	The Red Sea
+geo_roughly_fast_atlantic	Hard	Roughly how fast is the Atlantic Ocean getting wider?	About 2.5 cm a year	About 2.5 mm a year	About 25 cm a year	About 2.5 m a year
+geo_narrow_strait_separates	Hard	Which narrow strait separates the island of Anglesey from mainland Wales?	The Menai Strait	The Solent	The Minch	The Pentland Firth
+geo_deepest_zone_ocean	Hard	The deepest zone of the ocean, found in the trenches, is named after which Greek god?	Hades	Poseidon	Oceanus	Nereus
 geo_row_marianski	Expert	What is the deepest point in the oceans called?	Challenger Deep	Tonga Trench	Java Trench	Milwaukee Deep
 geo_grzbiet_srodoceaniczny	Expert	Which is the longest mountain range on Earth?	The mid-ocean ridge	The Andes	The Himalayas	The Rocky Mountains
 geo_atlantyk_slony	Expert	Which ocean is the saltiest?	The Atlantic	The Pacific	The Indian Ocean	The Arctic Ocean
@@ -128,3 +136,7 @@ geo_deep_sea_hot	Expert	Deep-sea hot springs teeming with life were first discov
 geo_roughly_long_global	Expert	Roughly how long does the 'global conveyor belt' of deep ocean currents take to carry water around the world?	About 1,000 years	About 10 years	About 100 years	About 50,000 years
 geo_atlantic_water_pour	Expert	Why does Atlantic water pour constantly into the Mediterranean at Gibraltar?	Evaporation drains the sea faster than rivers fill it	The Atlantic's tides are far higher than its own	Strong winds blow from the west all year round	Its sea floor is slowly sinking into the crust
 geo_waters_off_state	Expert	The waters off which US state's Outer Banks are nicknamed 'the Graveyard of the Atlantic'?	North Carolina	Florida	Maine	Massachusetts
+geo_gulf_corryvreckan_home	Expert	The Gulf of Corryvreckan, home to one of the world's largest whirlpools, lies off which country?	Scotland	Norway	Ireland	Iceland
+geo_laccadive_sea_washes	Expert	The Laccadive Sea washes the shores of the Maldives, Sri Lanka and which other country?	India	Oman	Indonesia	Myanmar
+geo_body_water_sea	Expert	Which body of water is also known as the Sea of Cortez?	The Gulf of California	The Gulf of Mexico	The Gulf of Panama	The Gulf of Honduras
+geo_strait_belle_isle	Expert	The Strait of Belle Isle separates the island of Newfoundland from which mainland region?	Labrador	Nova Scotia	Gaspe	Nunavut

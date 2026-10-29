@@ -19,6 +19,7 @@ geo_swiss_mountain_pass	Easy	Which Swiss mountain pass has Europe's highest rail
 geo_colorado_ski_resorts	Easy	The Colorado ski resorts of Aspen and Vail lie in which mountain range?	The Rocky Mountains	The Appalachians	The Sierra Nevada	The Cascades
 geo_climbing_seven_summits	Easy	Climbing the 'Seven Summits' means reaching the highest peak of each what?	Continent	Ocean basin	Alpine country	Himalayan nation
 geo_highest_mountain_england	Easy	Which is the highest mountain in England?	Scafell Pike	Helvellyn	Skiddaw	Snowdon
+geo_capetonians_call_white	Easy	What do Capetonians call the white cloud that often spills over the flat top of Table Mountain?	The tablecloth	The blanket	The duvet	The napkin
 geo_everest	Medium	In which mountain range is Mount Everest?	Himalayas	Andes	Alps	Caucasus
 geo_wulkan_wl	Medium	What is the name of the famous volcano near Naples?	Vesuvius	Etna	Stromboli	Krakatoa
 geo2_gory_ameryka_pd	Medium	What is the longest mountain range in South America called?	The Andes	The Cordilleras	The Appalachians	The Sierra Nevada
@@ -73,6 +74,9 @@ geo_great_smoky_mountains	Medium	The Great Smoky Mountains get their name from w
 geo_peak_notorious_high	Medium	Which peak, notorious for its high death rate, is nicknamed 'the Savage Mountain'?	K2	Annapurna	Kangchenjunga	Mount Everest
 geo_capitan_half_dome	Medium	El Capitan and Half Dome, the giant granite cliffs, belong to which mountain range?	The Sierra Nevada	The Rocky Mountains	The Cascades	The Appalachians
 geo_country_home_rainbow	Medium	Which country is home to the rainbow mountains of Zhangye Danxia?	China	Peru	Mongolia	Kyrgyzstan
+geo_philippine_volcano_almost	Medium	Which Philippine volcano is famous for its almost perfectly symmetrical cone?	Mayon	Taal	Pinatubo	Apo
+geo_gives_blue_mountains	Medium	What gives the Blue Mountains near Sydney their famous blue haze?	Oil from eucalyptus trees	Smoke from bushfires	Blue-grey slate rocks	Mist from waterfalls
+geo_himalaya_comes_sanskrit	Medium	The name 'Himalaya' comes from Sanskrit for what?	Abode of snow	Roof of the world	Home of the gods	Land of clouds
 geo_kilimandzaro	Hard	In which country is Mount Kilimanjaro?	Tanzania	Kenya	Ethiopia	Uganda
 geo_aconcagua	Hard	The highest peak in South America is...	Aconcagua	Chimborazo	Huascaran	Ojos del Salado
 geocmp_nie_alpy	Hard	Which of these countries does NOT have Alpine territory?	Czechia	Austria	Switzerland	Slovenia
@@ -112,6 +116,9 @@ geo_limestone_very_top	Hard	The limestone at the very top of Mount Everest conta
 geo_1950_became_000	Hard	In 1950, which became the first 8,000 m peak ever climbed?	Annapurna	Mount Everest	K2	Nanga Parbat
 geo_snowy_range_uganda	Hard	Which snowy range on the Uganda-Congo border is often identified with Ptolemy's 'Mountains of the Moon'?	The Rwenzori	The Virunga	The Aberdares	The Usambara
 geo_state_mount_helens	Hard	In which US state did Mount St Helens erupt in 1980?	Washington	Oregon	California	Alaska
+geo_peak_hollywood_sign	Hard	On which peak does the famous Hollywood sign stand?	Mount Lee	Mount Hollywood	Mount Wilson	Mount Baldy
+geo_irish_holy_mountain	Hard	Which Irish holy mountain do thousands of pilgrims climb, some barefoot, on 'Reek Sunday' each July?	Croagh Patrick	Carrauntoohil	Slieve Donard	Ben Bulben
+geo_ascent_peak_1786	Hard	The first ascent of which peak, in 1786, is often called the birth of modern mountaineering?	Mont Blanc	The Matterhorn	The Eiger	The Jungfrau
 geo2_najwiecej_wulkanow	Expert	Which country has the most active volcanoes?	Indonesia	Japan	Chile	USA
 dpt_geo_chimborazo	Expert	Whose summit lies farthest from the Earth's centre?	Chimborazo	Everest	Denali	Kilimanjaro
 geox_colca	Expert	Which canyon in Peru is about twice as deep as the Grand Canyon?	The Colca Canyon	The Copper Canyon	The Fish River Canyon	Tiger Leaping Gorge
@@ -130,3 +137,5 @@ geo_highest_peak_pyrenees	Expert	Which is the highest peak of the Pyrenees?	Anet
 geo_ships_sail_right	Expert	Ships can sail right into the flooded crater of which active volcano near Antarctica?	Deception Island	Mount Erebus	Bouvet Island	Heard Island
 geo_gorge_snake_river	Expert	Which gorge on the Snake River, deeper than the Grand Canyon, is the deepest in North America?	Hells Canyon	Black Canyon	Glen Canyon	Royal Gorge
 geo_strange_lava_tanzania	Expert	What is strange about the lava of Tanzania's Ol Doinyo Lengai?	It erupts black and turns white	It burns with blue flames	It is almost pure sulphur	It sets into glass at once
+geo_jagged_skyline_logo	Expert	The jagged skyline in the logo of the outdoor clothing brand Patagonia shows which mountain?	Monte Fitz Roy	Aconcagua	Torres del Paine	Ojos del Salado
+geo_according_legend_restless	Expert	According to legend, the restless ghost of the Roman governor who condemned Jesus haunts which Swiss mountain?	Pilatus	The Rigi	The Titlis	The Eiger

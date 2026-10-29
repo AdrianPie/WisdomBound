@@ -26,6 +26,7 @@ geo_two_countries_usa	Easy	Which two countries does the USA share land borders w
 geo_country_flag_blue	Easy	Which country's flag is blue with a yellow Nordic cross?	Sweden	Norway	Denmark	Iceland
 geo_2020_country_became_2	Easy	In 2020, which country became the first ever to leave the European Union?	The United Kingdom	The Netherlands	The Czech Republic	Denmark
 geo_roughly_independent_countries	Easy	Roughly how many independent countries are there in the world?	About 195	About 90	About 400	About 50
+geo_yellow_stars_appear	Easy	How many yellow stars appear on the flag of China?	Five	One	Four	Seven
 geo2_najmniejsze_panstwo	Medium	Which country is the smallest in the world?	Vatican City	Monaco	San Marino	Liechtenstein
 geocmp_ludnosc_azja_srednia	Medium	Which of these four countries is home to the most people?	Indonesia	Brazil	Nigeria	Bangladesh
 geocmp_ludnosc_egipt_niemcy	Medium	Which of these countries counts the most inhabitants?	Egypt	Germany	Turkiye	Thailand
@@ -74,6 +75,7 @@ geo_roughly_long_land	Medium	Roughly how long is the land border between the USA
 geo_country_joined_nato	Medium	Which country joined NATO in March 2024, ending two centuries of military non-alignment?	Sweden	Finland	Austria	Switzerland
 geo_ukraine_blue_yellow	Medium	Ukraine's blue-and-yellow flag is usually said to show what?	A blue sky over golden wheat	A river flowing past the sun	The sea beside golden sand	Cornflowers among sunflowers
 geo_country_flag_oldest	Medium	Which country's flag is the oldest still in continuous use?	Denmark	Netherlands	Austria	Scotland
+geo_country_flag_differs	Medium	Which country's flag differs from the Netherlands' mainly by its lighter shade of blue?	Luxembourg	France	Russia	Paraguay
 geo2_najdluzsza_granica	Hard	Which two countries share the longest land border in the world?	Canada and the USA	Russia and China	Argentina and Chile	India and China
 geocmp_nie_ameryka_pd	Hard	Which of these countries is NOT in South America?	Belize	Guyana	Suriname	Paraguay
 geocmp_turystyka_kraj	Hard	Which country receives the most international tourist arrivals?	France	Spain	The United States	Italy
@@ -113,6 +115,9 @@ geo_african_country_flag_3	Hard	Which African country's flag is almost identical
 geo_among_countries_over	Hard	Among countries with over 10 million people, which is the most densely populated?	Bangladesh	India	The Netherlands	South Korea
 geo_country_adopted_flag	Hard	Which country adopted its famous flag only in 1965, replacing one with the Union Jack in the corner?	Canada	Australia	New Zealand	South Africa
 geo_island_flag_shows	Hard	Which island's flag shows three armoured legs joined at the hip, the triskelion?	Isle of Man	Cornwall	Malta	Jersey
+geo_african_country_flag_4	Hard	Which African country's flag, with red and white stripes and a white star on blue, is modelled on the US flag?	Liberia	Togo	Ghana	Sierra Leone
+geo_besides_papal_crown	Hard	Besides the papal crown, what appears on the flag of Vatican City?	Two crossed keys	A golden dove	A white cross	Saint Peter's dome
+geo_country_flag_light	Hard	Which country's flag is light blue with a single white five-pointed star in the middle?	Somalia	Eritrea	Djibouti	Micronesia
 geo2_panstwo_bez_dostepu	Expert	Which country is Europe's only doubly landlocked state?	Liechtenstein	Switzerland	Austria	Andorra
 geocmp_najwiecej_sasiadow	Expert	Which of these countries borders the most other countries?	Brazil	Mexico	Argentina	Colombia
 geo_kazachstan_srodladowy	Expert	Which is the largest landlocked country in the world?	Kazakhstan	Mongolia	Chad	Bolivia
@@ -132,3 +137,5 @@ geo_world_shortest_land	Expert	The world's shortest land border, only about 85 m
 geo_country_often_said_2	Expert	Which country is often said to be the only one named after a woman?	Saint Lucia	Saint Kitts and Nevis	Saint Vincent	Sao Tome and Principe
 geo_country_flag_show	Expert	Which country's flag is the only one to show human figures as a main design, two woodcutters?	Belize	Honduras	Guyana	Jamaica
 geo_country_flag_show_2	Expert	Which country's flag is the only one to show an open Bible?	Dominican Republic	Papua New Guinea	Vatican City	El Salvador
+geo_red_white_stripes	Expert	What do the 14 red and white stripes on Malaysia's flag stand for?	Its 13 states and the federal government	The 14 royal families who rule its states	The 14 days of its fight for independence	The 14 ethnic groups living in the country
+geo_besides_palestine_state	Expert	Besides Palestine, which is the only state with 'permanent observer' status at the UN rather than full membership?	The Holy See	Kosovo	Taiwan	Switzerland
