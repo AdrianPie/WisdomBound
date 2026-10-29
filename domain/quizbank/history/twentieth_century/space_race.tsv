@@ -35,6 +35,7 @@ his_apollo_astronauts_returning	Medium	What did the Apollo 11 astronauts have to
 his_russian_word_sputnik	Medium	What does the Russian word 'sputnik' mean?	Fellow traveller	Little star	Red messenger	First voice
 his_radio_call_sign	Medium	What was the radio call sign of the first woman in space?	Seagull	Swallow	Cedar	Skylark
 his_oxygen_tank_exploded	Medium	After an oxygen tank exploded on Apollo 13, what did the crew use as a 'lifeboat' to get home?	The lunar module	A spare escape capsule	The rocket's third stage	An inflatable space raft
+his_orange_drink_powder	Medium	Which orange drink powder became famous after NASA astronauts took it into space in the 1960s?	Tang	Kool-Aid	Gatorade	Ovaltine
 hx_ksiezyc_ostatni	Hard	In which year did humans last walk on the Moon?	1972	1969	1979	1985
 hy_wostok	Hard	What was the name of Yuri Gagarin's spacecraft?	Vostok 1	Sputnik 2	Soyuz 1	Apollo 1
 hy_mir	Hard	Which Soviet space station orbited Earth from 1986 to 2001?	Mir	Salyut 7	Skylab	Tiangong
@@ -53,6 +54,8 @@ his_america_satellite_launch	Hard	After America's first satellite launch blew up
 his_moon_mission_struck	Hard	Which Moon mission was struck by lightning twice in the first minute after launch?	Apollo 12	Apollo 13	Apollo 9	Apollo 15
 his_professional_geologist_walk	Hard	Who was the only professional geologist to walk on the Moon?	Harrison Schmitt	Eugene Cernan	Edgar Mitchell	Charles Duke
 his_apollo_astronaut_dropped	Hard	Which Apollo 15 astronaut dropped a hammer and a falcon feather on the Moon to show they fall at the same speed?	David Scott	James Irwin	Charles Duke	Edgar Mitchell
+his_alexei_leonov_struggle	Hard	Why did Alexei Leonov struggle to get back into his spacecraft after the first spacewalk, in 1965?	His suit had puffed up in the vacuum	His tether had snagged on an aerial	The hatch had frozen shut	He had drifted away from the hatch
+his_buzz_aldrin_use	Hard	What did Buzz Aldrin use to push in a broken switch so that Apollo 11's lander could take off from the Moon?	A felt-tip pen	A spoon	A screwdriver	A toothbrush
 hx_earthrise	Expert	Which mission took the famous 'Earthrise' photo from lunar orbit in 1968?	Apollo 8	Apollo 11	Apollo 13	Gemini 7
 his_soviet_probe_made	Expert	Which Soviet probe made the first soft landing on the Moon, in 1966?	Luna 9	Sputnik 3	Lunokhod 1	Vostok 2
 his_became_woman_walk	Expert	Who became the first woman to walk in space, in 1984?	Svetlana Savitskaya	Valentina Tereshkova	Sally Ride	Kathryn Sullivan
@@ -62,3 +65,4 @@ his_unable_get_life	Expert	Unable to get life insurance, what did the Apollo 11 
 his_cosmonaut_mir_soviet	Expert	Which cosmonaut was up on Mir as the Soviet Union collapsed, and came home to a different country in 1992?	Sergei Krikalev	Valeri Polyakov	Alexei Leonov	Gennady Padalka
 his_mission_three_cosmonauts	Expert	Which mission's three cosmonauts, lost in 1971, are the only people to have died in space itself?	Soyuz 11	Soyuz 1	Salyut 7	Voskhod 2
 his_astronaut_smuggled_corned	Expert	Which astronaut smuggled a corned beef sandwich onto Gemini 3 in 1965, upsetting members of Congress?	John Young	Gus Grissom	Ed White	Pete Conrad
+his_apollo_astronaut_charlie	Expert	What did Apollo 16 astronaut Charlie Duke leave on the Moon in 1972?	A photo of his family	His wedding ring	A signed baseball	A gold olive branch
