@@ -195,7 +195,10 @@ object CapitalQuestions {
         q("cap_southernmost_national_capital", "Which is the southernmost national capital in the world?", "Wellington", listOf("Canberra", "Buenos Aires", "Montevideo"), M),
         q("cap_finnish_port_country", "Which Finnish port, the country's oldest city, served as its capital until 1812?", "Turku", listOf("Tampere", "Oulu", "Vaasa"), M),
         q("cap_city_stopped_kazakhstan", "Which city stopped being Kazakhstan's capital in 1997, when the government moved north?", "Almaty", listOf("Shymkent", "Karaganda", "Aktobe"), M),
-        q("cap_andean_capital_uses", "Which Andean capital uses the world's largest urban cable-car network as everyday public transport?", "La Paz", listOf("Quito", "Bogota", "Lima"), M)
+        q("cap_andean_capital_uses", "Which Andean capital uses the world's largest urban cable-car network as everyday public transport?", "La Paz", listOf("Quito", "Bogota", "Lima"), M),
+        q("cap_northernmost_capital_european", "Which is the northernmost capital of a European Union country?", "Helsinki", listOf("Stockholm", "Tallinn", "Copenhagen"), M),
+        q("cap_new_zealand_capital", "New Zealand's capital is named after the general who won which battle?", "Waterloo", listOf("Trafalgar", "Blenheim", "Agincourt"), M),
+        q("cap_1923_new_turkish", "In 1923 the new Turkish Republic moved its capital away from which city?", "Istanbul", listOf("Izmir", "Bursa", "Edirne"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -305,7 +308,9 @@ object CapitalQuestions {
         q("cap_capital_city_simply", "Which capital city's name is simply the native Korean word for 'capital'?", "Seoul", listOf("Pyongyang", "Hanoi", "Taipei"), H),
         q("cap_copenhagen_danish_kobenhavn", "Copenhagen's Danish name, Kobenhavn, means what?", "Merchants' harbour", listOf("Royal castle", "Green island", "Fishermen's bay"), H),
         q("cap_former_chinese_capital", "Which former Chinese capital's name means 'southern capital'?", "Nanjing", listOf("Xi'an", "Guangzhou", "Hangzhou"), H),
-        q("cap_capital_said_world", "Which capital is said to have the world's highest concentration of Art Nouveau buildings?", "Riga", listOf("Vienna", "Prague", "Brussels"), H)
+        q("cap_capital_said_world", "Which capital is said to have the world's highest concentration of Art Nouveau buildings?", "Riga", listOf("Vienna", "Prague", "Brussels"), H),
+        q("cap_city_served_new", "Which city served as New Zealand's capital from 1841 to 1865?", "Auckland", listOf("Christchurch", "Dunedin", "Nelson"), H),
+        q("cap_capital_city_arabic", "Which capital city's Arabic name, al-Qahira, means 'the Victorious'?", "Cairo", listOf("Damascus", "Baghdad", "Amman"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -390,6 +395,7 @@ object CapitalQuestions {
         q("cap_old_royal_capital", "What was the old royal capital of Montenegro?", "Cetinje", listOf("Podgorica", "Kotor", "Niksic"), X),
         q("cap_capital_san_marino", "What is the capital of San Marino?", "San Marino City", listOf("Serravalle", "Borgo Maggiore", "Rimini"), X),
         q("cap_capital_patuxai_war", "Which capital's Patuxai war monument, built with American cement meant for an airport, is nicknamed 'the vertical runway'?", "Vientiane", listOf("Phnom Penh", "Hanoi", "Yangon"), X),
-        q("cap_capital_city_holds", "Which capital city holds the record for the most buildings clad in white marble?", "Ashgabat", listOf("Astana", "Baku", "Tashkent"), X)
+        q("cap_capital_city_holds", "Which capital city holds the record for the most buildings clad in white marble?", "Ashgabat", listOf("Astana", "Baku", "Tashkent"), X),
+        q("cap_capital_city_means_3", "Which capital city's name means 'Red Hero'?", "Ulaanbaatar", listOf("Bishkek", "Ashgabat", "Astana"), X)
     )
 }

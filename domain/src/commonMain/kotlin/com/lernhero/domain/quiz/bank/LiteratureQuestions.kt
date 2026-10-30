@@ -228,7 +228,10 @@ object LiteratureQuestions {
         q("lit_tchaikovsky_piece_calls", "Which Tchaikovsky piece calls for real cannon fire?", "The 1812 Overture", listOf("Swan Lake", "The Nutcracker", "Romeo and Juliet"), E),
         q("lit_unusual_andersen_steadfast", "What is unusual about Andersen's steadfast tin soldier?", "He has only one leg", listOf("He has no face painted on", "He is made of gold", "He can talk to people"), E),
         q("lit_andersen_fairy_tale", "In Andersen's fairy tale, where is the tiny girl Thumbelina born?", "Inside a flower", listOf("Under a toadstool", "In a bird's nest", "In a snail shell"), E),
-        q("lit_scarlet_letter_letter", "In 'The Scarlet Letter', which letter is Hester Prynne made to wear on her dress?", "A", listOf("S", "H", "X"), E)
+        q("lit_scarlet_letter_letter", "In 'The Scarlet Letter', which letter is Hester Prynne made to wear on her dress?", "A", listOf("S", "H", "X"), E),
+        q("lit_composer_already_touring", "Which composer was already touring Europe's royal courts as a child performer at the age of six?", "Wolfgang Amadeus Mozart", listOf("Ludwig van Beethoven", "Johann Sebastian Bach", "Joseph Haydn"), E),
+        q("lit_painter_wrote_hundreds", "Which painter wrote hundreds of letters to his art-dealer brother, Theo?", "Vincent van Gogh", listOf("Claude Monet", "Paul Cezanne", "Edgar Degas"), E),
+        q("lit_hans_christian_andersen", "Hans Christian Andersen, author of 'The Ugly Duckling', came from which country?", "Denmark", listOf("Sweden", "Norway", "Germany"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -589,7 +592,12 @@ object LiteratureQuestions {
         q("lit_bengal_tiger_sharing", "What is the name of the Bengal tiger sharing the lifeboat in 'Life of Pi'?", "Richard Parker", listOf("Shere Khan", "Mister Bengal", "Captain Stripes"), M),
         q("lit_story_sherlock_holmes", "In which story does Sherlock Holmes make his very first appearance?", "A Study in Scarlet", listOf("The Sign of the Four", "The Hound of the Baskervilles", "A Scandal in Bohemia"), M),
         q("lit_riddle_mad_hatter", "Which riddle does the Mad Hatter ask Alice, leaving it unanswered in the book?", "'Why is a raven like a writing-desk?'", listOf("'What has keys but opens no locks?'", "'What runs but never walks?'", "'Why does a mouse wear no hat?'"), M),
-        q("lit_world_war_writing", "During World War II, before writing for children, Roald Dahl served as what?", "An RAF fighter pilot", listOf("A naval codebreaker", "An army cook", "A war correspondent"), M)
+        q("lit_world_war_writing", "During World War II, before writing for children, Roald Dahl served as what?", "An RAF fighter pilot", listOf("A naval codebreaker", "An army cook", "A war correspondent"), M),
+        q("lit_snow_capped_mountain", "Which snow-capped mountain sits small in the background of the woodblock print 'The Great Wave off Kanagawa'?", "Mount Fuji", listOf("Mount Aso", "Mount Takao", "Mount Ontake"), M),
+        q("lit_chopin_minute_waltz", "Chopin's 'Minute Waltz' usually takes longer than a minute to play. What does 'minute' really mean in its title?", "Small", listOf("Quick", "Precise", "Dainty"), M),
+        q("lit_left_diego_rivera", "What left Diego Rivera's future wife bed-bound for months as a teenager, when she began painting self-portraits?", "A bus accident", listOf("A bout of polio", "A riding fall", "A gunshot wound"), M),
+        q("lit_rowling_said_idea", "J. K. Rowling has said the idea for Harry Potter came to her while she was where?", "On a delayed train", listOf("In an Edinburgh cafe", "In a hospital bed", "On a beach in Portugal"), M),
+        q("lit_according_tradition_audiences", "Why, according to tradition, do audiences stand for the 'Hallelujah' chorus of Handel's 'Messiah'?", "King George II stood up", listOf("Handel demanded it", "The choir once fainted", "It was a church rule"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -822,7 +830,19 @@ object LiteratureQuestions {
         q("lit_published_version_three", "In the first published version of 'The Three Bears' (1837), who breaks into the bears' house?", "A nasty old woman", listOf("A golden-haired girl", "A hungry fox", "A runaway boy"), H),
         q("lit_aladdin_live_version", "Where does Aladdin live in the version of his tale in 'One Thousand and One Nights'?", "In China", listOf("In Baghdad", "In Cairo", "In Damascus"), H),
         q("lit_bach_wrote_comic", "Bach wrote a comic cantata about a young woman hooked on which drink?", "Coffee", listOf("Hot chocolate", "Beer", "Tea"), H),
-        q("lit_phrase_stepford_wife", "The phrase 'Stepford wife' comes from a 1972 novel in which a town's wives are secretly replaced by what?", "Robots", listOf("Clones", "Aliens", "Their twin sisters"), H)
+        q("lit_phrase_stepford_wife", "The phrase 'Stepford wife' comes from a 1972 novel in which a town's wives are secretly replaced by what?", "Robots", listOf("Clones", "Aliens", "Their twin sisters"), H),
+        q("lit_van_gogh_painted", "Van Gogh painted 'The Starry Night' from the window of his room in what kind of place?", "An asylum", listOf("A lighthouse", "A prison", "A ship's cabin"), H),
+        q("lit_victor_hugo_said", "Victor Hugo is said to have asked his publisher how 'Les Miserables' was selling with a one-character note. Which character?", "?", listOf("!", "*", "+"), H),
+        q("lit_happened_half_john", "What happened to half of John Steinbeck's first draft of 'Of Mice and Men'?", "His dog chewed it up", listOf("It blew out of a car", "A flood soaked it", "His wife burned it"), H),
+        q("lit_miguel_cervantes_lost", "Miguel de Cervantes lost the use of his left hand in which battle?", "Lepanto", listOf("Pavia", "Rocroi", "Tunis"), H),
+        q("lit_moby_dick_partly", "'Moby-Dick' was partly inspired by the whaleship Essex. What happened to it in 1820?", "A sperm whale rammed and sank it", listOf("It vanished in a storm", "Its crew mutinied", "It was trapped in Arctic ice"), H),
+        q("lit_novel_treasure_island", "The novel 'Treasure Island' grew out of what?", "A map its author drew with his stepson", listOf("A diary found in a sea chest", "A story told by an old sailor", "A dream during a fever"), H),
+        q("lit_tale_peter_rabbit_2", "'The Tale of Peter Rabbit' began as what?", "A picture letter to a sick boy", listOf("A bedtime story for a niece", "A school play", "A magazine competition entry"), H),
+        q("lit_joseph_heller_catch", "Joseph Heller's 'Catch-22' was going to be called what, until another novel's number got in the way?", "Catch-18", listOf("Catch-9", "Catch-33", "Catch-40"), H),
+        q("lit_holst_planets_movement", "Holst's 'The Planets' has no movement for Pluto, found later in 1930. Which other planet is missing?", "Earth", listOf("Mercury", "Neptune", "Saturn"), H),
+        q("lit_painter_giuseppe_arcimboldo", "The painter Giuseppe Arcimboldo is famous for portraits built from what?", "Fruit, vegetables and flowers", listOf("Seashells and pebbles", "Scraps of newspaper", "Butterfly wings"), H),
+        q("lit_night_watch_got", "'The Night Watch' got its name when darkened varnish made it look like night. When is the scene really set?", "In daylight", listOf("At midnight", "By candlelight", "During an eclipse"), H),
+        q("lit_becoming_full_time", "Before becoming a full-time painter, Paul Gauguin made a good living as what?", "A stockbroker", listOf("A ship's doctor", "A lawyer", "A schoolteacher"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -927,6 +947,16 @@ object LiteratureQuestions {
         q("lit_whistler_sued_critic", "When Whistler sued the critic John Ruskin for libel in 1878, how much did he win in damages?", "One farthing", listOf("One thousand pounds", "One guinea", "Nothing at all"), X),
         q("lit_thieves_stole_scream", "When thieves stole 'The Scream' from Oslo's National Gallery in 1994, what did they leave behind?", "A note thanking it for poor security", listOf("A cheap copy of the painting", "A ransom demand in verse", "The empty frame on the wall"), X),
         q("lit_dickens_bleak_house", "In Dickens's 'Bleak House', how does the rag-and-bone dealer Krook die?", "By spontaneous human combustion", listOf("Buried under his own junk", "Poisoned by his lodger", "Drowned in the Thames"), X),
-        q("lit_mozart_kept_pet", "Mozart kept a pet that could whistle a theme from one of his piano concertos. What was it?", "A starling", listOf("A parrot", "A canary", "A blackbird"), X)
+        q("lit_mozart_kept_pet", "Mozart kept a pet that could whistle a theme from one of his piano concertos. What was it?", "A starling", listOf("A parrot", "A canary", "A blackbird"), X),
+        q("lit_1922_suitcase_holding", "In 1922, a suitcase holding almost all of Hemingway's early manuscripts was lost where?", "At a Paris railway station", listOf("On a ferry to England", "In a Madrid hotel", "In a New York taxi"), X),
+        q("lit_beat_ruinous_deadline", "To beat a ruinous deadline, Dostoevsky dictated 'The Gambler' in 26 days to whom?", "A stenographer he later married", listOf("His older brother Mikhail", "A prison chaplain", "His publisher's son"), X),
+        q("lit_roughly_long_handel", "Roughly how long did Handel take to compose 'Messiah'?", "About three weeks", listOf("About three months", "About a year", "About five years"), X),
+        q("lit_vivaldi_wrote_concertos", "Vivaldi wrote many of his concertos for musicians at which kind of Venetian institution?", "An orphanage for girls", listOf("A monastery for boys", "A sailors' guild", "The doge's guard"), X),
+        q("lit_new_keyboard_instrument", "Which then-new keyboard instrument gives Tchaikovsky's 'Dance of the Sugar Plum Fairy' its tinkling sound?", "The celesta", listOf("The harpsichord", "The glass harmonica", "The music box"), X),
+        q("lit_composer_stopped_writing", "Which composer, who stopped writing operas at 37, has a steak dish topped with foie gras named after him?", "Gioachino Rossini", listOf("Giuseppe Verdi", "Gaetano Donizetti", "Vincenzo Bellini"), X),
+        q("lit_1926_premiere_puccini", "At the 1926 premiere of Puccini's unfinished 'Turandot', what did Toscanini do where Puccini had stopped writing?", "Laid down his baton and ended the show", listOf("Played the last aria twice", "Asked for a minute's silence first", "Finished it on the piano himself"), X),
+        q("lit_saint_saens_banned", "Saint-Saens banned 'The Carnival of the Animals' from being published in his lifetime, except for which piece?", "The Swan", listOf("The Elephant", "Aquarium", "Fossils"), X),
+        q("lit_bosch_garden_earthly", "In Bosch's 'The Garden of Earthly Delights', what is painted on a sinner's backside in hell?", "A line of sheet music", listOf("A map of the world", "The painter's signature", "A coat of arms"), X),
+        q("lit_damaged_bottom_mural", "What damaged the bottom of a famous mural in a Milan refectory in 1652, cutting away Jesus's feet?", "A doorway cut through the wall", listOf("A flood in the refectory", "A cannonball in a siege", "A fire in the kitchens"), X)
     )
 }

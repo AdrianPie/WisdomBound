@@ -184,6 +184,9 @@ spo_sprinters_push_feet	Easy	What do sprinters push their feet against at the st
 spo_american_football_official	Easy	In American football, what does an official throw onto the field to signal a foul?	A yellow flag	A red card	A white towel	A green cone
 spo_tennis_win_game	Easy	In tennis, what is it called when you win a game on your opponent's serve?	A break	An ace	A let	A volley
 spo_hawk_eye_used	Easy	What is Hawk-Eye, used in tennis and cricket?	A ball-tracking camera system	A referee's whistle signal	A rule about catches	A pair of special goggles
+spo_paris_avenue_tour	Easy	On which famous Paris avenue does the Tour de France traditionally finish?	The Champs-Elysees	The Rue de Rivoli	Boulevard Haussmann	The Avenue Foch
+spo_sprint_photo_finish	Easy	In a sprint 'photo finish', which part of a runner's body must cross the line first to win?	The torso	The head	The leading foot	An outstretched hand
+spo_basketball_other_american	Easy	In basketball and other American sports, what does 'MVP' stand for?	Most Valuable Player	Most Victorious Player	Major Veteran Prize	Main Varsity Pick
 spo_mundial_2018	Medium	Who won the soccer World Cup in 2018?	France	Croatia	Brazil	Germany
 spo_lewandowski	Medium	At which club did Robert Lewandowski become the Bundesliga's top scorer?	Bayern Munich	Real Madrid	Manchester United	Juventus
 spo_hokej	Medium	How long is one period in an ice hockey game?	20 minutes	15 minutes	25 minutes	30 minutes
@@ -496,6 +499,12 @@ spo_milan_club_players	Medium	Which Milan club's players are nicknamed 'the Nera
 spo_club_won_german	Medium	Which club has won the most German Bundesliga titles?	Bayern Munich	Borussia Dortmund	Hamburger SV	Schalke 04
 spo_former_heavyweight_champion	Medium	Which former heavyweight champion later made a fortune selling a fat-draining electric grill?	George Foreman	Joe Frazier	Larry Holmes	Evander Holyfield
 spo_nba_giant_poor	Medium	Which NBA giant was so poor at free throws that rivals fouled him on purpose, a tactic named after him?	Shaquille O'Neal	Kareem Abdul-Jabbar	Yao Ming	Hakeem Olajuwon
+spo_wimbledon_use_keep	Medium	What does Wimbledon use to keep pigeons off its courts?	A trained hawk	Recorded owl calls	Ultrasonic speakers	A pair of sheepdogs
+spo_arsenal_football_club	Medium	Arsenal Football Club was founded in 1886 by whom?	Workers at a weapons factory	Cadets at a military academy	Soldiers in a London barracks	Dockers on the Thames
+spo_national_football_team_5	Medium	Which national football team is nicknamed 'the Indomitable Lions'?	Cameroon	Senegal	Morocco	Ghana
+spo_olympic_champions_often	Medium	Why do Olympic champions so often bite their medals on the podium?	Photographers ask them to	To check the gold is real	It is an ancient Greek custom	It is said to bring luck
+spo_1958_world_cup	Medium	At the 1958 World Cup, which 17-year-old scored twice in the final?	Pele	Garrincha	Didi	Zagallo
+spo_los_angeles_lakers	Medium	The Los Angeles Lakers kept their name from their first home, in which US state of '10,000 lakes'?	Minnesota	Michigan	Wisconsin	Florida
 spo_bolt	Hard	What is Usain Bolt's world record in the 100 m?	9.58 s	9.69 s	9.72 s	9.49 s
 spo_olimpiada_1896	Hard	Where were the first modern Olympic Games held?	Athens	Paris	Rome	London
 spo_wimbledon	Hard	What surface is Wimbledon played on?	Grass	Sand	Concrete	Clay and hard court, alternating
@@ -704,6 +713,22 @@ spo_driver_retired_formula	Hard	Which driver retired from Formula 1 just five da
 spo_won_1989_tour	Hard	Who won the 1989 Tour de France by just eight seconds, after a final-day time trial?	Greg LeMond	Laurent Fignon	Pedro Delgado	Stephen Roche
 spo_derby_winning_racehorse	Hard	Which Derby-winning racehorse was kidnapped in Ireland in 1983 and never found?	Shergar	Arkle	Nijinsky	Mill Reef
 spo_nfl_team_poem	Hard	Which NFL team is named after a poem by Edgar Allan Poe, who is buried in its city?	Baltimore Ravens	Philadelphia Eagles	Seattle Seahawks	Atlanta Falcons
+spo_early_golf_balls	Hard	Early golf balls called 'featheries' were leather pouches stuffed with what?	Boiled feathers	Horsehair	Wool	Cork shavings
+spo_snooker_invented_1875	Hard	Snooker was invented in 1875 by British army officers stationed in which country?	India	Egypt	South Africa	Malta
+spo_american_sprinter_wore	Hard	Which American sprinter, who wore a leg brace after childhood polio, won three golds at the 1960 Olympics?	Wilma Rudolph	Wyomia Tyus	Babe Didrikson	Betty Cuthbert
+spo_franco_harris_immaculate	Hard	Franco Harris's 'Immaculate Reception', a deflected pass caught just above the turf in 1972, won a playoff game for which NFL team?	Pittsburgh Steelers	Oakland Raiders	Dallas Cowboys	Miami Dolphins
+spo_official_international_football	Hard	How did the first official international football match, Scotland v England in 1872, end?	A 0-0 draw	A 4-0 win for England	A 2-1 win for Scotland	Abandoned in a snowstorm
+spo_diver_struck_head	Hard	Which diver struck his head on the springboard at the 1988 Olympics, yet went on to win gold?	Greg Louganis	Klaus Dibiasi	Tom Daley	Dmitri Sautin
+spo_figure_skating_jump	Hard	The figure-skating jump called the Axel is named after whom?	A Norwegian skater	A Swedish king	A Russian coach	A Dutch judge
+spo_indianapolis_motor_speedway	Hard	Why is the Indianapolis Motor Speedway nicknamed 'the Brickyard'?	Its track was once paved with bricks	It was built on an old brick factory	Its stands are made of red brick	Its first winner was a bricklayer
+spo_northern_hemisphere_date	Hard	In the Northern Hemisphere, on what date do all racehorses officially turn a year older?	1 January	1 May	1 March	1 September
+spo_1994_boxer_became	Hard	In 1994, which boxer became world heavyweight champion again at the age of 45?	George Foreman	Larry Holmes	Evander Holyfield	Muhammad Ali
+spo_spiridon_louis_greek	Hard	What was Spiridon Louis, the Greek winner of the first Olympic marathon in 1896, said to be by trade?	A water carrier	A shepherd	A baker	A fisherman
+spo_dorando_pietri_disqualified	Hard	Why was Dorando Pietri disqualified after finishing first in the 1908 Olympic marathon?	Officials helped him over the line	He took a shortcut through a park	He ran in the wrong lane	He was found to be a professional
+spo_french_open_home	Hard	The French Open's home, Roland Garros, is named after what kind of hero?	A pioneering aviator	A tennis champion	A wartime general	A cycling legend
+spo_sport_played_indigenous	Hard	Which sport, first played by Indigenous peoples of North America, is Canada's official national summer sport?	Lacrosse	Baseball	Canadian football	Soccer
+spo_men_javelin_redesigned	Hard	Why was the men's javelin redesigned in 1986?	Throws were flying too far for stadiums	Too many javelins snapped on landing	Old javelins were too costly	Judges could not see the landings
+spo_fans_nhl_team	Hard	Fans of which NHL team throw plastic rats onto the ice to celebrate?	Florida Panthers	Boston Bruins	Chicago Blackhawks	Toronto Maple Leafs
 spo_dekatlon	Expert	Which event closes the men's Olympic decathlon on the second day?	The 1500 metres	The javelin throw	The pole vault	The 110 m hurdles
 spo_nba_wilt	Expert	Who scored 100 points in a single NBA game?	Wilt Chamberlain	Michael Jordan	Kobe Bryant	LeBron James
 spo2_fosbury	Expert	Who revolutionized the high jump with the backward flop technique?	Dick Fosbury	Jesse Owens	Carl Lewis	Javier Sotomayor
@@ -801,3 +826,13 @@ spo_city_hosted_winter	Expert	Which city hosted the first Winter Olympics held i
 spo_because_australia_strict	Expert	Because of Australia's strict animal quarantine, where were the equestrian events of the 1956 Melbourne Olympics held?	Stockholm	London	Auckland	Helsinki
 spo_paralympic_movement_grew	Expert	The Paralympic movement grew out of games for injured war veterans held in 1948 at which English hospital?	Stoke Mandeville	Great Ormond Street	St Thomas'	Addenbrooke's
 spo_won_1851_immortal	Expert	Who won the 1851 'Immortal Game', sacrificing both rooks and then his queen to deliver mate?	Adolf Anderssen	Paul Morphy	Howard Staunton	Lionel Kieseritzky
+spo_adopting_black_white	Expert	Before adopting black-and-white stripes copied from Notts County, Juventus played in which colour?	Pink	Sky blue	Orange	Green
+spo_1904_olympic_marathon_2	Expert	The 1904 Olympic marathon winner, Thomas Hicks, was kept going by his trainers with egg whites, brandy and what?	Strychnine	Cocaine	Opium	Caffeine
+spo_swedish_ski_jumper	Expert	Swedish ski jumper Jan Boklov pioneered which technique, at first punished by judges with low style marks?	Spreading the skis in a V	Jumping with no poles	Flying with arms forward	Landing with no telemark
+spo_penalty_kick_proposed	Expert	The penalty kick was proposed in 1890 by William McCrum. What was he?	An Irish goalkeeper	A Scottish referee	An English schoolmaster	A Welsh club chairman
+spo_2002_world_cup	Expert	In the 2002 World Cup third-place match, how quickly did Hakan Sukur score against South Korea?	In about 11 seconds	In about 30 seconds	In about 1 minute	In about 2 minutes
+spo_world_cup_willie	Expert	World Cup Willie, the first World Cup mascot, in 1966, was what kind of animal?	A lion	A bulldog	A bear	An eagle
+spo_swedish_shooter_oscar	Expert	Swedish shooter Oscar Swahn won an Olympic medal in 1920 at roughly what age?	In his seventies	In his fifties	In his sixties	In his eighties
+spo_just_fontaine_scored	Expert	Just Fontaine scored 13 goals at the 1958 World Cup alone. For which country did he play?	France	Brazil	Sweden	West Germany
+spo_scottish_stick_ball	Expert	Which Scottish stick-and-ball sport is played with a curved stick called a caman?	Shinty	Bandy	Lacrosse	Rounders
+spo_country_basketball_team	Expert	Which country did the US basketball team beat in the final of the first Olympic tournament, in 1936, played outdoors in the rain?	Canada	Mexico	Italy	Philippines

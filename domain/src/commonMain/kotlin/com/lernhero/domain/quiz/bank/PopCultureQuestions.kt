@@ -395,7 +395,9 @@ object PopCultureQuestions {
         q("pop_marvel_villain_wipes", "Which Marvel villain wipes out half of all life with a snap of his fingers?", "Thanos", listOf("Ultron", "Loki", "Red Skull"), E),
         q("pop_sesame_street_character", "Which 'Sesame Street' character sings about his beloved 'Rubber Duckie'?", "Ernie", listOf("Bert", "Elmo", "Grover"), E),
         q("pop_judge_became_blunt", "Which TV judge became famous for blunt put-downs on 'American Idol' and 'The X Factor'?", "Simon Cowell", listOf("Piers Morgan", "Gordon Ramsay", "Graham Norton"), E),
-        q("pop_zootopia_kind_animal", "In 'Zootopia', what kind of animal is the con artist Nick Wilde?", "A fox", listOf("A wolf", "A weasel", "A coyote"), E)
+        q("pop_zootopia_kind_animal", "In 'Zootopia', what kind of animal is the con artist Nick Wilde?", "A fox", listOf("A wolf", "A weasel", "A coyote"), E),
+        q("pop_apollo_astronaut_gave", "Which Apollo 11 astronaut gave his first name to the 'Toy Story' space ranger?", "Buzz Aldrin", listOf("Neil Armstrong", "Michael Collins", "John Glenn"), E),
+        q("pop_lady_gaga_stage", "Lady Gaga's stage name was inspired by a song by which band?", "Queen", listOf("ABBA", "The Beatles", "Duran Duran"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -911,7 +913,12 @@ object PopCultureQuestions {
         q("pop_minecraft_tall_black", "In Minecraft, which tall black mob turns hostile if you look it in the eyes?", "The Enderman", listOf("The Wither", "The Creeper", "The Ghast"), M),
         q("pop_band_made_cartoon", "Which band is made up of the cartoon members 2-D, Murdoc, Noodle and Russel?", "Gorillaz", listOf("Daft Punk", "The Archies", "The Monkees"), M),
         q("pop_empire_strikes_back", "In 'The Empire Strikes Back', what does Luke lose in his lightsaber duel with Darth Vader?", "His right hand", listOf("His left leg", "His sight", "His left ear"), M),
-        q("pop_despicable_gru_plan", "In 'Despicable Me', what does Gru plan to steal?", "The Moon", listOf("The Crown Jewels", "The Mona Lisa", "The Sun"), M)
+        q("pop_despicable_gru_plan", "In 'Despicable Me', what does Gru plan to steal?", "The Moon", listOf("The Crown Jewels", "The Mona Lisa", "The Sun"), M),
+        q("pop_line_never_actually", "Which famous line is never actually spoken in the 1942 Bogart classic set in wartime Morocco?", "'Play it again, Sam'", listOf("'Here's looking at you, kid'", "'Round up the usual suspects'", "'We'll always have Paris'"), M),
+        q("pop_online_game_player", "In which online game did a player charge in yelling 'Leeroy Jenkins!' and wipe out his whole team?", "World of Warcraft", listOf("EverQuest", "Counter-Strike", "RuneScape"), M),
+        q("pop_guardians_galaxy_words", "In 'Guardians of the Galaxy', which words make up nearly everything the tree-like hero Groot says?", "'I am Groot'", listOf("'We are Groot'", "'Groot is here'", "'Groot says hi'"), M),
+        q("pop_george_lucas_alaskan", "George Lucas's Alaskan Malamute, Indiana, inspired Indiana Jones's name and which other character?", "Chewbacca", listOf("Yoda", "Han Solo", "Jabba the Hutt"), M),
+        q("pop_woman_yelling_cat", "In the 'woman yelling at a cat' meme, what is the name of the white cat sitting behind a plate of salad?", "Smudge", listOf("Snowball", "Mittens", "Whiskers"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -1204,7 +1211,18 @@ object PopCultureQuestions {
         q("pop_fawlty_towers_city", "In 'Fawlty Towers', which city does the hapless waiter Manuel come from?", "Barcelona", listOf("Madrid", "Seville", "Valencia"), H),
         q("pop_empire_strikes_back_2", "In 'The Empire Strikes Back', what does Han Solo reply when Leia tells him 'I love you'?", "'I know.'", listOf("'Me too.'", "'I'll be back.'", "'Not now.'"), H),
         q("pop_goldfinger_bond_ally", "In 'Goldfinger', how is Bond's ally Jill Masterson killed?", "Covered in gold paint", listOf("Thrown from a plane", "Bitten by a snake", "Crushed in a car"), H),
-        q("pop_legend_zelda_old", "In the first 'Legend of Zelda', what does the old man in the cave hand Link, saying 'It's dangerous to go alone'?", "A sword", listOf("A shield", "A map", "A lantern"), H)
+        q("pop_legend_zelda_old", "In the first 'Legend of Zelda', what does the old man in the cave hand Link, saying 'It's dangerous to go alone'?", "A sword", listOf("A shield", "A map", "A lantern"), H),
+        q("pop_british_weightlifter_played", "Which British weightlifter played Luke Skywalker's masked father in the original 'Star Wars' films?", "David Prowse", listOf("Peter Mayhew", "Kenny Baker", "Anthony Daniels"), H),
+        q("pop_ned_flanders_reverend", "Ned Flanders and Reverend Lovejoy are named after streets in which city, Matt Groening's hometown?", "Portland", listOf("Seattle", "Chicago", "Denver"), H),
+        q("pop_wonder_woman_creator", "Wonder Woman's creator, psychologist William Moulton Marston, also helped develop which device?", "An early lie detector", listOf("The hearing aid", "The metal detector", "The jukebox"), H),
+        q("pop_super_mario_bros_2", "In 'Super Mario Bros.' (1985), the bushes are the same graphic as what, simply recoloured green?", "The clouds", listOf("The pipes", "The coins", "The castles"), H),
+        q("pop_thousands_unsold_copies", "Where were thousands of unsold copies of Atari's 'E.T.' game dug up in 2014?", "In a New Mexico landfill", listOf("Under a Las Vegas car park", "In an old Alaskan gold mine", "Beneath Atari's own offices"), H),
+        q("pop_holiday_rest_bare", "Which holiday 'for the rest of us', with a bare aluminium pole instead of a tree, comes from 'Seinfeld'?", "Festivus", listOf("Chrismukkah", "Winterval", "Kwanzaa"), H),
+        q("pop_designer_simon_whiteley", "Designer Simon Whiteley said the falling green code in 'The Matrix' was scanned from what?", "Japanese cookbooks", listOf("Old phone directories", "Chinese newspapers", "Soviet tax forms"), H),
+        q("pop_linguist_developed_klingon", "Which linguist developed the Klingon language for 'Star Trek'?", "Marc Okrand", listOf("David J. Peterson", "Paul Frommer", "Noam Chomsky"), H),
+        q("pop_meme_press_pay", "The meme 'Press F to pay respects' comes from a funeral scene in which game series?", "Call of Duty", listOf("Battlefield", "Halo", "Medal of Honor"), H),
+        q("pop_wrote_nothing_compares", "Who wrote 'Nothing Compares 2 U', a worldwide hit for Sinead O'Connor in 1990?", "Prince", listOf("George Michael", "Bono", "Morrissey"), H),
+        q("pop_type_tune_game", "The famous 'Type A' tune of Game Boy 'Tetris' is a Russian folk song called what?", "Korobeiniki", listOf("Katyusha", "Ochi Chyornye", "Polyushko Pole"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -1319,6 +1337,13 @@ object PopCultureQuestions {
         q("pop_actor_played_three", "Which actor played three roles, including the US President, in 'Dr. Strangelove' (1964)?", "Peter Sellers", listOf("Alec Guinness", "George C. Scott", "Peter Ustinov"), X),
         q("pop_silent_film_comedian", "Which silent-film comedian dangled from the hands of a clock high above the street in 'Safety Last!' (1923)?", "Harold Lloyd", listOf("Buster Keaton", "Charlie Chaplin", "Stan Laurel"), X),
         q("pop_1926_german_silhouette", "Which 1926 German silhouette film is the oldest surviving animated feature?", "The Adventures of Prince Achmed", listOf("Gertie the Dinosaur", "The Cabinet of Dr. Caligari", "The Thief of Bagdad"), X),
-        q("pop_gravestone_reads_all", "Whose gravestone reads 'That's All Folks'?", "Mel Blanc", listOf("Walt Disney", "Chuck Jones", "Tex Avery"), X)
+        q("pop_gravestone_reads_all", "Whose gravestone reads 'That's All Folks'?", "Mel Blanc", listOf("Walt Disney", "Chuck Jones", "Tex Avery"), X),
+        q("pop_real_scowling_arizona", "What was the real name of the scowling Arizona cat who became an internet star in 2012?", "Tardar Sauce", listOf("Maru", "Lil Bub", "Colonel Meow"), X),
+        q("pop_meme_all_base", "The meme 'All your base are belong to us' comes from the clumsy English of which video game?", "Zero Wing", listOf("Contra", "R-Type", "Gradius"), X),
+        q("pop_grin_batman_archenemy", "The grin of Batman's archenemy was inspired by Conrad Veidt's face in which silent film?", "The Man Who Laughs", listOf("The Cabinet of Dr. Caligari", "Metropolis", "The Phantom of the Opera"), X),
+        q("pop_barbie_modelled_lilli", "Barbie was modelled on Lilli, a doll based on a cartoon from a newspaper in which country?", "West Germany", listOf("Switzerland", "France", "Sweden"), X),
+        q("pop_finish_level_256", "Why can no one finish level 256 of the original 'Pac-Man' arcade game?", "A bug scrambles half the maze", listOf("The ghosts become invincible", "The maze has no exit gate", "The game wipes the high score"), X),
+        q("pop_feature_street_fighter", "Which feature of 'Street Fighter II' began as an unintended glitch that the designers decided to keep?", "Combos", listOf("Special moves", "Throws", "Character select"), X),
+        q("pop_theme_mission_impossible", "The theme of 'Mission: Impossible' is famous for which unusual time signature?", "5/4", listOf("3/4", "6/8", "4/4"), X)
     )
 }

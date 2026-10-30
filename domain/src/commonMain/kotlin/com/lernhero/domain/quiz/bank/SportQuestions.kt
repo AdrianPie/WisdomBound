@@ -209,7 +209,10 @@ object SportQuestions {
         q("spo_sprinters_push_feet", "What do sprinters push their feet against at the start of a race?", "Starting blocks", listOf("Starting gates", "A wooden kickboard", "Rubber springs"), E),
         q("spo_american_football_official", "In American football, what does an official throw onto the field to signal a foul?", "A yellow flag", listOf("A red card", "A white towel", "A green cone"), E),
         q("spo_tennis_win_game", "In tennis, what is it called when you win a game on your opponent's serve?", "A break", listOf("An ace", "A let", "A volley"), E),
-        q("spo_hawk_eye_used", "What is Hawk-Eye, used in tennis and cricket?", "A ball-tracking camera system", listOf("A referee's whistle signal", "A rule about catches", "A pair of special goggles"), E)
+        q("spo_hawk_eye_used", "What is Hawk-Eye, used in tennis and cricket?", "A ball-tracking camera system", listOf("A referee's whistle signal", "A rule about catches", "A pair of special goggles"), E),
+        q("spo_paris_avenue_tour", "On which famous Paris avenue does the Tour de France traditionally finish?", "The Champs-Elysees", listOf("The Rue de Rivoli", "Boulevard Haussmann", "The Avenue Foch"), E),
+        q("spo_sprint_photo_finish", "In a sprint 'photo finish', which part of a runner's body must cross the line first to win?", "The torso", listOf("The head", "The leading foot", "An outstretched hand"), E),
+        q("spo_basketball_other_american", "In basketball and other American sports, what does 'MVP' stand for?", "Most Valuable Player", listOf("Most Victorious Player", "Major Veteran Prize", "Main Varsity Pick"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -525,7 +528,13 @@ object SportQuestions {
         q("spo_milan_club_players", "Which Milan club's players are nicknamed 'the Nerazzurri', the black and blues?", "Inter Milan", listOf("AC Milan", "Juventus", "Lazio"), M),
         q("spo_club_won_german", "Which club has won the most German Bundesliga titles?", "Bayern Munich", listOf("Borussia Dortmund", "Hamburger SV", "Schalke 04"), M),
         q("spo_former_heavyweight_champion", "Which former heavyweight champion later made a fortune selling a fat-draining electric grill?", "George Foreman", listOf("Joe Frazier", "Larry Holmes", "Evander Holyfield"), M),
-        q("spo_nba_giant_poor", "Which NBA giant was so poor at free throws that rivals fouled him on purpose, a tactic named after him?", "Shaquille O'Neal", listOf("Kareem Abdul-Jabbar", "Yao Ming", "Hakeem Olajuwon"), M)
+        q("spo_nba_giant_poor", "Which NBA giant was so poor at free throws that rivals fouled him on purpose, a tactic named after him?", "Shaquille O'Neal", listOf("Kareem Abdul-Jabbar", "Yao Ming", "Hakeem Olajuwon"), M),
+        q("spo_wimbledon_use_keep", "What does Wimbledon use to keep pigeons off its courts?", "A trained hawk", listOf("Recorded owl calls", "Ultrasonic speakers", "A pair of sheepdogs"), M),
+        q("spo_arsenal_football_club", "Arsenal Football Club was founded in 1886 by whom?", "Workers at a weapons factory", listOf("Cadets at a military academy", "Soldiers in a London barracks", "Dockers on the Thames"), M),
+        q("spo_national_football_team_5", "Which national football team is nicknamed 'the Indomitable Lions'?", "Cameroon", listOf("Senegal", "Morocco", "Ghana"), M),
+        q("spo_olympic_champions_often", "Why do Olympic champions so often bite their medals on the podium?", "Photographers ask them to", listOf("To check the gold is real", "It is an ancient Greek custom", "It is said to bring luck"), M),
+        q("spo_1958_world_cup", "At the 1958 World Cup, which 17-year-old scored twice in the final?", "Pele", listOf("Garrincha", "Didi", "Zagallo"), M),
+        q("spo_los_angeles_lakers", "The Los Angeles Lakers kept their name from their first home, in which US state of '10,000 lakes'?", "Minnesota", listOf("Michigan", "Wisconsin", "Florida"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -737,7 +746,23 @@ object SportQuestions {
         q("spo_driver_retired_formula", "Which driver retired from Formula 1 just five days after winning the 2016 world title?", "Nico Rosberg", listOf("Jenson Button", "Kimi Raikkonen", "Fernando Alonso"), H),
         q("spo_won_1989_tour", "Who won the 1989 Tour de France by just eight seconds, after a final-day time trial?", "Greg LeMond", listOf("Laurent Fignon", "Pedro Delgado", "Stephen Roche"), H),
         q("spo_derby_winning_racehorse", "Which Derby-winning racehorse was kidnapped in Ireland in 1983 and never found?", "Shergar", listOf("Arkle", "Nijinsky", "Mill Reef"), H),
-        q("spo_nfl_team_poem", "Which NFL team is named after a poem by Edgar Allan Poe, who is buried in its city?", "Baltimore Ravens", listOf("Philadelphia Eagles", "Seattle Seahawks", "Atlanta Falcons"), H)
+        q("spo_nfl_team_poem", "Which NFL team is named after a poem by Edgar Allan Poe, who is buried in its city?", "Baltimore Ravens", listOf("Philadelphia Eagles", "Seattle Seahawks", "Atlanta Falcons"), H),
+        q("spo_early_golf_balls", "Early golf balls called 'featheries' were leather pouches stuffed with what?", "Boiled feathers", listOf("Horsehair", "Wool", "Cork shavings"), H),
+        q("spo_snooker_invented_1875", "Snooker was invented in 1875 by British army officers stationed in which country?", "India", listOf("Egypt", "South Africa", "Malta"), H),
+        q("spo_american_sprinter_wore", "Which American sprinter, who wore a leg brace after childhood polio, won three golds at the 1960 Olympics?", "Wilma Rudolph", listOf("Wyomia Tyus", "Babe Didrikson", "Betty Cuthbert"), H),
+        q("spo_franco_harris_immaculate", "Franco Harris's 'Immaculate Reception', a deflected pass caught just above the turf in 1972, won a playoff game for which NFL team?", "Pittsburgh Steelers", listOf("Oakland Raiders", "Dallas Cowboys", "Miami Dolphins"), H),
+        q("spo_official_international_football", "How did the first official international football match, Scotland v England in 1872, end?", "A 0-0 draw", listOf("A 4-0 win for England", "A 2-1 win for Scotland", "Abandoned in a snowstorm"), H),
+        q("spo_diver_struck_head", "Which diver struck his head on the springboard at the 1988 Olympics, yet went on to win gold?", "Greg Louganis", listOf("Klaus Dibiasi", "Tom Daley", "Dmitri Sautin"), H),
+        q("spo_figure_skating_jump", "The figure-skating jump called the Axel is named after whom?", "A Norwegian skater", listOf("A Swedish king", "A Russian coach", "A Dutch judge"), H),
+        q("spo_indianapolis_motor_speedway", "Why is the Indianapolis Motor Speedway nicknamed 'the Brickyard'?", "Its track was once paved with bricks", listOf("It was built on an old brick factory", "Its stands are made of red brick", "Its first winner was a bricklayer"), H),
+        q("spo_northern_hemisphere_date", "In the Northern Hemisphere, on what date do all racehorses officially turn a year older?", "1 January", listOf("1 May", "1 March", "1 September"), H),
+        q("spo_1994_boxer_became", "In 1994, which boxer became world heavyweight champion again at the age of 45?", "George Foreman", listOf("Larry Holmes", "Evander Holyfield", "Muhammad Ali"), H),
+        q("spo_spiridon_louis_greek", "What was Spiridon Louis, the Greek winner of the first Olympic marathon in 1896, said to be by trade?", "A water carrier", listOf("A shepherd", "A baker", "A fisherman"), H),
+        q("spo_dorando_pietri_disqualified", "Why was Dorando Pietri disqualified after finishing first in the 1908 Olympic marathon?", "Officials helped him over the line", listOf("He took a shortcut through a park", "He ran in the wrong lane", "He was found to be a professional"), H),
+        q("spo_french_open_home", "The French Open's home, Roland Garros, is named after what kind of hero?", "A pioneering aviator", listOf("A tennis champion", "A wartime general", "A cycling legend"), H),
+        q("spo_sport_played_indigenous", "Which sport, first played by Indigenous peoples of North America, is Canada's official national summer sport?", "Lacrosse", listOf("Baseball", "Canadian football", "Soccer"), H),
+        q("spo_men_javelin_redesigned", "Why was the men's javelin redesigned in 1986?", "Throws were flying too far for stadiums", listOf("Too many javelins snapped on landing", "Old javelins were too costly", "Judges could not see the landings"), H),
+        q("spo_fans_nhl_team", "Fans of which NHL team throw plastic rats onto the ice to celebrate?", "Florida Panthers", listOf("Boston Bruins", "Chicago Blackhawks", "Toronto Maple Leafs"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -838,6 +863,16 @@ object SportQuestions {
         q("spo_city_hosted_winter", "Which city hosted the first Winter Olympics held in Asia, in 1972?", "Sapporo", listOf("Nagano", "Pyeongchang", "Harbin"), X),
         q("spo_because_australia_strict", "Because of Australia's strict animal quarantine, where were the equestrian events of the 1956 Melbourne Olympics held?", "Stockholm", listOf("London", "Auckland", "Helsinki"), X),
         q("spo_paralympic_movement_grew", "The Paralympic movement grew out of games for injured war veterans held in 1948 at which English hospital?", "Stoke Mandeville", listOf("Great Ormond Street", "St Thomas'", "Addenbrooke's"), X),
-        q("spo_won_1851_immortal", "Who won the 1851 'Immortal Game', sacrificing both rooks and then his queen to deliver mate?", "Adolf Anderssen", listOf("Paul Morphy", "Howard Staunton", "Lionel Kieseritzky"), X)
+        q("spo_won_1851_immortal", "Who won the 1851 'Immortal Game', sacrificing both rooks and then his queen to deliver mate?", "Adolf Anderssen", listOf("Paul Morphy", "Howard Staunton", "Lionel Kieseritzky"), X),
+        q("spo_adopting_black_white", "Before adopting black-and-white stripes copied from Notts County, Juventus played in which colour?", "Pink", listOf("Sky blue", "Orange", "Green"), X),
+        q("spo_1904_olympic_marathon_2", "The 1904 Olympic marathon winner, Thomas Hicks, was kept going by his trainers with egg whites, brandy and what?", "Strychnine", listOf("Cocaine", "Opium", "Caffeine"), X),
+        q("spo_swedish_ski_jumper", "Swedish ski jumper Jan Boklov pioneered which technique, at first punished by judges with low style marks?", "Spreading the skis in a V", listOf("Jumping with no poles", "Flying with arms forward", "Landing with no telemark"), X),
+        q("spo_penalty_kick_proposed", "The penalty kick was proposed in 1890 by William McCrum. What was he?", "An Irish goalkeeper", listOf("A Scottish referee", "An English schoolmaster", "A Welsh club chairman"), X),
+        q("spo_2002_world_cup", "In the 2002 World Cup third-place match, how quickly did Hakan Sukur score against South Korea?", "In about 11 seconds", listOf("In about 30 seconds", "In about 1 minute", "In about 2 minutes"), X),
+        q("spo_world_cup_willie", "World Cup Willie, the first World Cup mascot, in 1966, was what kind of animal?", "A lion", listOf("A bulldog", "A bear", "An eagle"), X),
+        q("spo_swedish_shooter_oscar", "Swedish shooter Oscar Swahn won an Olympic medal in 1920 at roughly what age?", "In his seventies", listOf("In his fifties", "In his sixties", "In his eighties"), X),
+        q("spo_just_fontaine_scored", "Just Fontaine scored 13 goals at the 1958 World Cup alone. For which country did he play?", "France", listOf("Brazil", "Sweden", "West Germany"), X),
+        q("spo_scottish_stick_ball", "Which Scottish stick-and-ball sport is played with a curved stick called a caman?", "Shinty", listOf("Bandy", "Lacrosse", "Rounders"), X),
+        q("spo_country_basketball_team", "Which country did the US basketball team beat in the final of the first Olympic tournament, in 1936, played outdoors in the rain?", "Canada", listOf("Mexico", "Italy", "Philippines"), X)
     )
 }

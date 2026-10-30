@@ -165,7 +165,9 @@ object MythologyQuestions {
         q("myt_animal_comes_last", "Which animal comes last in the twelve-year cycle of the Chinese zodiac?", "The pig", listOf("The dog", "The rooster", "The monkey"), E),
         q("myt_japanese_camera_optics", "Which Japanese camera and optics maker is named after the mountain home of the Greek gods?", "Olympus", listOf("Pentax", "Minolta", "Nikon"), E),
         q("myt_winged_horse_greek", "Which winged horse of Greek myth appears in red on the logo of the oil company Mobil?", "Pegasus", listOf("Sleipnir", "Arion", "Bucephalus"), E),
-        q("myt_titan_father_zeus", "Which Titan was the father of Zeus, Poseidon and Hades?", "Cronus", listOf("Atlas", "Prometheus", "Hyperion"), E)
+        q("myt_titan_father_zeus", "Which Titan was the father of Zeus, Poseidon and Hades?", "Cronus", listOf("Atlas", "Prometheus", "Hyperion"), E),
+        q("myt_according_hesiod_goddess", "According to Hesiod, which goddess rose from the foam of the sea?", "Aphrodite", listOf("Athena", "Artemis", "Hera"), E),
+        q("myt_unlike_america_britain", "Unlike in America, in much of Britain a black cat crossing your path is traditionally a sign of what?", "Good luck", listOf("Bad luck", "A coming storm", "A death in the family"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -405,7 +407,19 @@ object MythologyQuestions {
         q("myt_wise_centaur_tutored", "Which wise centaur tutored heroes such as Achilles, Jason and Asclepius?", "Chiron", listOf("Nessus", "Pholus", "Eurytion"), M),
         q("myt_according_best_version", "According to the best-known version, why did Heracles have to carry out his labours?", "To atone for killing his own family", listOf("To win the hand of a princess", "To earn a seat on Mount Olympus", "To free his mother from a prison"), M),
         q("myt_weapon_cronus_use", "What weapon did Cronus use to overthrow his father Uranus?", "A sickle", listOf("A trident", "A thunderbolt", "A spear"), M),
-        q("myt_buddhist_goddess_mercy", "Which Buddhist goddess of mercy is one of the best-loved figures in Chinese folk belief?", "Guanyin", listOf("Mazu", "Nuwa", "Chang'e"), M)
+        q("myt_buddhist_goddess_mercy", "Which Buddhist goddess of mercy is one of the best-loved figures in Chinese folk belief?", "Guanyin", listOf("Mazu", "Nuwa", "Chang'e"), M),
+        q("myt_according_herodotus_carried", "According to Herodotus, what carried the singer Arion to shore after sailors threw him overboard?", "A dolphin", listOf("A sea turtle", "A whale", "A giant seal"), M),
+        q("myt_flower_said_sprung", "Which flower is said to have sprung from the blood of Apollo's friend, killed by a stray discus?", "The hyacinth", listOf("The anemone", "The narcissus", "The violet"), M),
+        q("myt_word_money_traces", "The word 'money' traces back to a temple of which goddess, where ancient Rome minted its coins?", "Juno", listOf("Minerva", "Venus", "Fortuna"), M),
+        q("myt_native_american_creation", "In many Native American creation stories, the land rests on the back of which animal?", "A turtle", listOf("A whale", "A bison", "An elk"), M),
+        q("myt_nymph_kept_odysseus", "Which nymph kept Odysseus on her island for seven years?", "Calypso", listOf("Circe", "Nausicaa", "Scylla"), M),
+        q("myt_newborn_hermes_hide", "How did the newborn Hermes hide the tracks of the cattle he stole from Apollo?", "He made them walk backwards", listOf("He carried them over the sea", "He turned them into birds", "He hid them under a cloud"), M),
+        q("myt_sacred_heron_like", "Which sacred heron-like bird of Egypt is often linked to the legend of the phoenix?", "The Bennu", listOf("The Simurgh", "The Roc", "The Garuda"), M),
+        q("myt_norse_myth_gods", "In Norse myth, the gods built the world from the body of the giant Ymir. What became the sky?", "His skull", listOf("His brain", "His blood", "His eyebrows"), M),
+        q("myt_prometheus_trick_zeus", "How did Prometheus trick Zeus into taking the worse share of every sacrifice?", "He hid the bones under shiny fat", listOf("He swapped the plates while Zeus slept", "He mixed poison into the meat", "He disguised the meat as stones"), M),
+        q("myt_old_couple_welcomed", "Which old couple welcomed Zeus and Hermes in disguise and were later turned into two intertwined trees?", "Baucis and Philemon", listOf("Pyramus and Thisbe", "Deucalion and Pyrrha", "Orpheus and Eurydice"), M),
+        q("myt_king_served_zeus", "Which king served Zeus a meal of human flesh and was turned into a wolf as punishment?", "Lycaon", listOf("Tantalus", "Minos", "Atreus"), M),
+        q("myt_statue_liberty_new", "The Statue of Liberty in New York portrays which Roman goddess?", "Libertas", listOf("Minerva", "Juno", "Victoria"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -587,7 +601,21 @@ object MythologyQuestions {
         q("myt_according_folklore_trick", "According to folklore, what trick lets you escape the Japanese water imp, the kappa?", "Bow, so it bows back and spills its water", listOf("Splash it with salt water from the sea", "Shout its true name three times", "Offer it a bowl of rice and sake"), H),
         q("myt_according_inuit_myth", "According to Inuit myth, what did the sea goddess Sedna's severed fingers become?", "Seals, walruses and whales", listOf("Icebergs and ice floes", "The northern lights", "The stars of the night sky"), H),
         q("myt_psyche_forbidden_marriage", "What was Psyche forbidden to do in her marriage to Cupid?", "Look at her husband's face", listOf("Leave the palace grounds", "Speak her husband's name", "Eat the food of the gods"), H),
-        q("myt_according_plutarch_set", "According to Plutarch, how did Set first trap his brother Osiris?", "He tricked him into a made-to-measure chest", listOf("He poisoned his wine at a royal feast", "He pushed him into the flooded Nile", "He sealed him inside a new pyramid"), H)
+        q("myt_according_plutarch_set", "According to Plutarch, how did Set first trap his brother Osiris?", "He tricked him into a made-to-measure chest", listOf("He poisoned his wine at a royal feast", "He pushed him into the flooded Nile", "He sealed him inside a new pyramid"), H),
+        q("myt_thunder_god_thor", "Why does the thunder god Thor's hammer have such a short handle?", "Loki, as a fly, disrupted the forging", listOf("Thor snapped it fighting a giant", "The dwarves ran out of iron", "Odin wanted it easy to hide"), H),
+        q("myt_form_odin_take", "Which form did Odin take to fly off with the stolen mead of poetry?", "An eagle", listOf("A raven", "A falcon", "A swan"), H),
+        q("myt_underworld_danaids_doomed", "In the underworld, what were the Danaids doomed to do for murdering their husbands?", "Fill a leaking jar with water", listOf("Roll a boulder up a hill", "Weave a cloth that unravels", "Count the grains of sand"), H),
+        q("myt_immortal_centaur_chiron", "Why did the immortal centaur Chiron choose to give up his immortality?", "A poisoned wound gave him endless pain", listOf("He fell in love with a mortal woman", "Zeus punished him for teaching humans", "He lost a riddle contest to Apollo"), H),
+        q("myt_lydian_queen_kept", "Which Lydian queen kept Heracles as a slave, making him spin wool while she wore his lion skin?", "Omphale", listOf("Hippolyta", "Penthesilea", "Dido"), H),
+        q("myt_zeus_strike_down", "Why did Zeus strike down Asclepius, the god of medicine, with a thunderbolt?", "He brought the dead back to life", listOf("He refused to heal Zeus's son", "He stole fire from Olympus", "He married a goddess in secret"), H),
+        q("myt_slavic_god_four", "Which Slavic god's four-headed idol stood in the temple at Cape Arkona on Rugen?", "Svantevit", listOf("Perun", "Triglav", "Veles"), H),
+        q("myt_according_inca_legend", "According to Inca legend, how did Manco Capac know where to found Cusco?", "A golden staff sank into the ground", listOf("A condor landed on a rock there", "An eagle perched on a cactus there", "The sun stopped in the sky above it"), H),
+        q("myt_isis_force_sun", "How did Isis force the sun god Ra to reveal his secret name?", "She made a snake that bit him", listOf("She stole his eye while he slept", "She trapped him inside a chest", "She hid the sun behind the Moon"), H),
+        q("myt_satyr_flayed_alive", "Which satyr was flayed alive after losing a music contest to Apollo?", "Marsyas", listOf("Silenus", "Pan", "Faunus"), H),
+        q("myt_crafty_king_corinth", "Which crafty king of Corinth chained up Death itself, so that for a while nobody could die?", "Sisyphus", listOf("Tantalus", "Midas", "Ixion"), H),
+        q("myt_two_eagles_zeus", "Where did the two eagles that Zeus released from opposite ends of the world meet, marking its navel?", "Delphi", listOf("Olympia", "Athens", "Mount Olympus"), H),
+        q("myt_raging_goddess_sekhmet", "How was the raging goddess Sekhmet stopped from wiping out humankind?", "She drank beer dyed to look like blood", listOf("Ra trapped her inside the Moon", "Horus defeated her in battle", "Osiris chained her in the underworld"), H),
+        q("myt_according_myth_happened", "According to myth, what happened to Tiresias when he struck two mating snakes with his stick?", "He was turned into a woman", listOf("He became a snake himself", "He lost his voice", "He was turned to stone"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -686,6 +714,11 @@ object MythologyQuestions {
         q("myt_nymph_fleeing_pan", "Which nymph, fleeing Pan, was turned into the reeds from which he made his pipes?", "Syrinx", listOf("Daphne", "Echo", "Callisto"), X),
         q("myt_wife_zeus_swallow", "Which wife did Zeus swallow whole, leading to the birth of Athena from his head?", "Metis", listOf("Themis", "Leto", "Dione"), X),
         q("myt_chinese_legend_gang", "In Chinese legend, what is Wu Gang doomed to do forever on the Moon?", "Chop down a tree that heals itself", listOf("Carry water in a leaking bucket", "Count the stars that pass by", "Pound rice that turns to dust"), X),
-        q("myt_hel_agreed_release", "Hel agreed to release the dead god Baldr on what condition?", "Every being in the world must weep for him", listOf("Odin must give up his other eye", "Thor must defeat her in a duel", "The gods must give her Thor's hammer"), X)
+        q("myt_hel_agreed_release", "Hel agreed to release the dead god Baldr on what condition?", "Every being in the world must weep for him", listOf("Odin must give up his other eye", "Thor must defeat her in a duel", "The gods must give her Thor's hammer"), X),
+        q("myt_utgarda_loki_hall", "In Utgarda-Loki's hall, Thor was wrestled to one knee by an old nurse called Elli. Who was she really?", "Old age", listOf("Wildfire", "Thought", "Hunger"), X),
+        q("myt_palamedes_prove_odysseus", "How did Palamedes prove that Odysseus was only faking madness to avoid the Trojan War?", "He laid baby Telemachus before the plough", listOf("He hid a sword among gifts for him", "He sounded a sudden call to arms", "He set fire to Odysseus's barns"), X),
+        q("myt_phrase_halcyon_days", "The phrase 'halcyon days' recalls calm winter seas granted while which birds nested?", "Kingfishers", listOf("Seagulls", "Swallows", "Albatrosses"), X),
+        q("myt_golem_legend_erasing", "In golem legend, erasing one letter of 'emet' (truth) on its forehead leaves a word meaning what?", "Death", listOf("Sleep", "Clay", "Silence"), X),
+        q("myt_assyrian_gate_guardians", "Why do many Assyrian gate guardians, winged bulls with human heads, have five legs?", "To look complete from front and side", listOf("To honour the five gods of the city", "A sculptor's error that became custom", "A fifth leg marked a royal beast"), X)
     )
 }

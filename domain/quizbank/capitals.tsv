@@ -166,6 +166,9 @@ cap_southernmost_national_capital	Medium	Which is the southernmost national capi
 cap_finnish_port_country	Medium	Which Finnish port, the country's oldest city, served as its capital until 1812?	Turku	Tampere	Oulu	Vaasa
 cap_city_stopped_kazakhstan	Medium	Which city stopped being Kazakhstan's capital in 1997, when the government moved north?	Almaty	Shymkent	Karaganda	Aktobe
 cap_andean_capital_uses	Medium	Which Andean capital uses the world's largest urban cable-car network as everyday public transport?	La Paz	Quito	Bogota	Lima
+cap_northernmost_capital_european	Medium	Which is the northernmost capital of a European Union country?	Helsinki	Stockholm	Tallinn	Copenhagen
+cap_new_zealand_capital	Medium	New Zealand's capital is named after the general who won which battle?	Waterloo	Trafalgar	Blenheim	Agincourt
+cap_1923_new_turkish	Medium	In 1923 the new Turkish Republic moved its capital away from which city?	Istanbul	Izmir	Bursa	Edirne
 cap_wellington	Hard	What is the capital of New Zealand?	Wellington	Auckland	Christchurch	Dunedin
 cap_hanoi	Hard	What is the capital of Vietnam?	Hanoi	Ho Chi Minh City	Da Nang	Hue
 cap_rabat	Hard	What is the capital of Morocco?	Rabat	Casablanca	Marrakesh	Fez
@@ -272,6 +275,8 @@ cap_capital_city_simply	Hard	Which capital city's name is simply the native Kore
 cap_copenhagen_danish_kobenhavn	Hard	Copenhagen's Danish name, Kobenhavn, means what?	Merchants' harbour	Royal castle	Green island	Fishermen's bay
 cap_former_chinese_capital	Hard	Which former Chinese capital's name means 'southern capital'?	Nanjing	Xi'an	Guangzhou	Hangzhou
 cap_capital_said_world	Hard	Which capital is said to have the world's highest concentration of Art Nouveau buildings?	Riga	Vienna	Prague	Brussels
+cap_city_served_new	Hard	Which city served as New Zealand's capital from 1841 to 1865?	Auckland	Christchurch	Dunedin	Nelson
+cap_capital_city_arabic	Hard	Which capital city's Arabic name, al-Qahira, means 'the Victorious'?	Cairo	Damascus	Baghdad	Amman
 cap_thimphu	Expert	What is the capital of Bhutan?	Thimphu	Paro	Punakha	Phuentsholing
 cap_ulaanbaatar	Expert	What is the capital of Mongolia?	Ulaanbaatar	Erdenet	Darkhan	Khovd
 cap_bishkek	Expert	What is the capital of Kyrgyzstan?	Bishkek	Osh	Naryn	Karakol
@@ -353,3 +358,4 @@ cap_old_royal_capital	Expert	What was the old royal capital of Montenegro?	Cetin
 cap_capital_san_marino	Expert	What is the capital of San Marino?	San Marino City	Serravalle	Borgo Maggiore	Rimini
 cap_capital_patuxai_war	Expert	Which capital's Patuxai war monument, built with American cement meant for an airport, is nicknamed 'the vertical runway'?	Vientiane	Phnom Penh	Hanoi	Yangon
 cap_capital_city_holds	Expert	Which capital city holds the record for the most buildings clad in white marble?	Ashgabat	Astana	Baku	Tashkent
+cap_capital_city_means_3	Expert	Which capital city's name means 'Red Hero'?	Ulaanbaatar	Bishkek	Ashgabat	Astana

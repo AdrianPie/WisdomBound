@@ -186,7 +186,10 @@ object PolandQuestions {
         q("pol_time_day_sirens", "At what time of day do sirens sound across Warsaw every 1 August to mark the start of the 1944 Uprising?", "5 p.m.", listOf("8 a.m.", "Noon", "9 p.m."), E),
         q("pol_children_poem_absent", "In the children's poem, where does the absent-minded Pan Hilary finally find his lost glasses?", "On his own nose", listOf("In the fridge", "Under his pillow", "In his coat pocket"), E),
         q("pol_trzepak_meeting_point", "What was a 'trzepak', the meeting point of children in Polish housing estate courtyards?", "A metal frame for beating carpets", listOf("A wooden sandpit with a roof", "A concrete ping-pong table", "A public water pump"), E),
-        q("pol_communist_poland_flower", "In communist Poland, which flower did women traditionally receive on Women's Day, 8 March?", "A carnation", listOf("A tulip", "A rose", "A daffodil"), E)
+        q("pol_communist_poland_flower", "In communist Poland, which flower did women traditionally receive on Women's Day, 8 March?", "A carnation", listOf("A tulip", "A rose", "A daffodil"), E),
+        q("pol_metal_dragon_statue", "What does the metal dragon statue at the foot of Wawel Hill do every few minutes?", "Breathes real fire", listOf("Roars through a loudspeaker", "Sprays water at passers-by", "Flaps its metal wings"), E),
+        q("pol_board_game_ludo", "What is the board game Ludo called in Poland?", "Chinczyk", listOf("Warcaby", "Mlynek", "Eurobiznes"), E),
+        q("pol_according_polish_folk", "According to Polish folk belief, what can animals do at midnight on Christmas Eve?", "Speak with a human voice", listOf("See the souls of the dead", "Find buried treasure", "Predict the next harvest"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -447,7 +450,12 @@ object PolandQuestions {
         q("pol_city_film_school", "Which city's famous film school, nicknamed 'Filmowka', trained many of Poland's greatest directors?", "Lodz", listOf("Warsaw", "Krakow", "Katowice"), M),
         q("pol_chandeliers_kinga_chapel", "What are the chandeliers of St Kinga's Chapel, deep in a salt mine near Krakow, made of?", "Salt crystals", listOf("Bohemian glass", "Baltic amber", "Silver"), M),
         q("pol_according_polish_legend", "According to Polish legend, where does the sister of Warsaw's mermaid sit?", "In Copenhagen harbour", listOf("On a rock in the Rhine", "In Gdansk harbour", "On a bridge in Prague"), M),
-        q("pol_kupala_night_magical", "On Kupala Night, which magical flower do Polish legends say brings luck to whoever finds it?", "A fern flower", listOf("A golden rose", "A white lily", "A blue poppy"), M)
+        q("pol_kupala_night_magical", "On Kupala Night, which magical flower do Polish legends say brings luck to whoever finds it?", "A fern flower", listOf("A golden rose", "A white lily", "A blue poppy"), M),
+        q("pol_fried_yeast_roll", "Which fried yeast roll with a meat filling, served with clear borscht, is a famous snack of Szczecin?", "Pasztecik", listOf("Zapiekanka", "Proziak", "Obwarzanek"), M),
+        q("pol_ciupaga_carried_tatra", "What is a 'ciupaga', carried by Tatra highlanders?", "A walking stick with an axe head", listOf("A shepherd's long wooden horn", "A felt hat decorated with shells", "A thick woollen cloak"), M),
+        q("pol_krakow_ring_shaped", "What does Krakow's ring-shaped Planty park stand in place of?", "The old medieval city walls", listOf("A former royal hunting ground", "A dried-up arm of the Vistula", "A tram line closed in 1950"), M),
+        q("pol_frania_found_countless", "What was 'Frania', found in countless Polish homes in communist times?", "A simple washing machine", listOf("A brand of instant coffee", "A pedal-powered sewing machine", "A popular radio set"), M),
+        q("pol_tongue_twisting_franek", "Which tongue-twisting name does Franek Dolas give a baffled German officer?", "Grzegorz Brzeczyszczykiewicz", listOf("Grzegorz Chrzaszczewski", "Grzegorz Szczebrzeszynski", "Grzegorz Pszczolkowski"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -622,7 +630,20 @@ object PolandQuestions {
         q("pol_polish_cyclist_won", "Which Polish cyclist won the communist-era Peace Race four times?", "Ryszard Szurkowski", listOf("Czeslaw Lang", "Lech Piasecki", "Zenon Jaskula"), H),
         q("pol_polish_skier_made", "Which Polish skier made the first full ski descent of K2, in 2018?", "Andrzej Bargiel", listOf("Adam Bielecki", "Krzysztof Wielicki", "Jerzy Kukuczka"), H),
         q("pol_deputy_famously_lay", "Which deputy famously lay across the Sejm doorway in 1773 to protest against the First Partition?", "Tadeusz Rejtan", listOf("Hugo Kollataj", "Stanislaw Staszic", "Jan Kilinski"), H),
-        q("pol_shaggy_horned_creature", "Which shaggy horned creature with a snapping wooden jaw goes carolling with Polish 'kolednicy'?", "Turon", listOf("Lajkonik", "Boruta", "Marzanna"), H)
+        q("pol_shaggy_horned_creature", "Which shaggy horned creature with a snapping wooden jaw goes carolling with Polish 'kolednicy'?", "Turon", listOf("Lajkonik", "Boruta", "Marzanna"), H),
+        q("pol_torun_legend_commemorated", "In a Torun legend, commemorated by a fountain, what did a raftsman's violin playing lure out of the town?", "Frogs", listOf("Rats", "Snakes", "Mice"), H),
+        q("pol_poland_bronze_dwarf", "Poland's famous bronze dwarf statues honour which 1980s anti-communist movement that painted dwarves on city walls?", "Orange Alternative", listOf("Fighting Solidarity", "Freedom and Peace", "Polish Green Party"), H),
+        q("pol_painter_critic_created", "Which painter and critic created the 'Zakopane style', based on highlander wooden buildings?", "Stanislaw Witkiewicz", listOf("Stanislaw Wyspianski", "Jan Matejko", "Jozef Mehoffer"), H),
+        q("pol_singer_violinist_recorded", "Which singer and violinist recorded the Polish theme song of the cartoon 'Maya the Bee'?", "Zbigniew Wodecki", listOf("Krzysztof Krawczyk", "Wojciech Mlynarski", "Andrzej Rosiewicz"), H),
+        q("pol_polish_made_shooter", "In which Polish-made shooter does time move only when you move?", "Superhot", listOf("Painkiller", "Bulletstorm", "Sniper Elite"), H),
+        q("pol_polish_board_game", "Which Polish board game, a Monopoly look-alike with cities from all over Europe, was a family favourite in the 1990s?", "Eurobiznes", listOf("Kolejka", "Magnat", "Grosik"), H),
+        q("pol_polish_street_game", "In the Polish street game 'kapsle', children flicked bottle caps along a chalk track, pretending to be what?", "Peace Race cyclists", listOf("Racehorses", "Rally drivers", "Ships in a regatta"), H),
+        q("pol_polish_city_medieval", "In which Polish city does the medieval 'Leaning Tower' stand, said to be built by a knight punished for falling in love?", "Torun", listOf("Gdansk", "Malbork", "Lublin"), H),
+        q("pol_swimmer_otylia_jedrzejczak", "What did swimmer Otylia Jedrzejczak do with a silver medal she won at the 2004 Olympics?", "Auctioned it for children with leukaemia", listOf("Gave it to her coach as a gift", "Buried it in her family's garden", "Lost it in a taxi in Athens"), H),
+        q("pol_famicom_clone_console", "Which Famicom clone console was hugely popular in Poland in the 1990s?", "Pegasus", listOf("Atari Lynx", "Amiga", "Commodore 64"), H),
+        q("pol_people_polish_city", "People from which Polish city are jokingly called 'scyzoryki' (penknives)?", "Kielce", listOf("Radom", "Lublin", "Rzeszow"), H),
+        q("pol_gdansk_street_lined", "Which Gdansk street, lined with stone terraces and amber shops, leads to St Mary's Church?", "Mariacka Street", listOf("Piwna Street", "Ogarna Street", "Szeroka Street"), H),
+        q("pol_visitors_wawel_press", "Why do visitors to Wawel press their backs against one wall of a castle courtyard?", "It is said to hide a chakra stone", listOf("A king's heart is walled up there", "Touching it is said to cure gout", "It marks where Krakus slew the dragon"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -703,6 +724,15 @@ object PolandQuestions {
         q("pol_battle_legnica_1241", "After the Battle of Legnica in 1241, how was the headless body of Duke Henry the Pious recognised, according to chronicles?", "By six toes on one foot", listOf("By his signet ring", "By a scar on his chest", "By his embroidered shirt"), X),
         q("pol_young_composer_died", "Which young composer died in a Tatra avalanche in 1909 while out on skis?", "Mieczyslaw Karlowicz", listOf("Karol Szymanowski", "Wladyslaw Zelenski", "Ludomir Rozycki"), X),
         q("pol_pre_war_polish", "Which pre-war Polish film star and singer died in a Soviet labour camp in 1943?", "Eugeniusz Bodo", listOf("Jan Kiepura", "Adolf Dymsza", "Aleksander Zabczynski"), X),
-        q("pol_polish_engineer_invented", "Which Polish engineer invented the rotating tank periscope later used in many Allied tanks?", "Rudolf Gundlach", listOf("Jozef Kosacki", "Tadeusz Sendzimir", "Jan Czochralski"), X)
+        q("pol_polish_engineer_invented", "Which Polish engineer invented the rotating tank periscope later used in many Allied tanks?", "Rudolf Gundlach", listOf("Jozef Kosacki", "Tadeusz Sendzimir", "Jan Czochralski"), X),
+        q("pol_2015_two_treasure", "In 2015, two treasure hunters near Walbrzych caused a media frenzy by claiming to have found what?", "A Nazi 'gold train' in a tunnel", listOf("A Viking longship in a lake", "A Roman legion's war chest", "A mammoth frozen in a cave"), X),
+        q("pol_soot_smeared_figure", "Which soot-smeared figure roams villages near Krakow on Easter Monday, blackening people's faces?", "Siuda Baba", listOf("Turon", "Dziad", "Marzanna"), X),
+        q("pol_emaus_held_every", "What is 'Emaus', held every Easter Monday in Krakow's Zwierzyniec district?", "A church fair with stalls", listOf("A horseback pilgrimage", "A rowing race on the Vistula", "A blessing of fishing boats"), X),
+        q("pol_lodz_animation_studio", "Which Lodz animation studio co-produced the Oscar-winning puppet film 'Peter and the Wolf' (2006)?", "Se-ma-for", listOf("Platige Image", "Studio Miniatur Filmowych", "Studio Filmow Rysunkowych"), X),
+        q("pol_polish_animator_nominated", "Which Polish animator was nominated for an Oscar for the short film 'The Cathedral' (2002)?", "Tomasz Baginski", listOf("Zbigniew Rybczynski", "Jan Lenica", "Walerian Borowczyk"), X),
+        q("pol_zoska_game_played", "What was 'zoska', a game played in Polish schoolyards?", "Kicking a weighted tuft to keep it aloft", listOf("Throwing knives into a circle in the dirt", "Flicking coins against a wall", "Hopping between squares drawn in chalk"), X),
+        q("pol_1902_international_court", "In 1902, an international court in Graz settled a quarrel between Galicia and Hungary over which Tatra lake?", "Morskie Oko", listOf("Czarny Staw", "Wielki Staw", "Strbske Pleso"), X),
+        q("pol_12th_century_bronze", "What do the 12th-century bronze doors of Gniezno Cathedral show?", "The life of St Adalbert", listOf("The baptism of Mieszko I", "The coronation of Chrobry", "The legend of Lech's eagle"), X),
+        q("pol_habit_proud_kashubian", "Which habit is a proud Kashubian tradition, with its own championships?", "Taking snuff", listOf("Pipe smoking", "Ice swimming", "Herring eating"), X)
     )
 }

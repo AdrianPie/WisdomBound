@@ -370,6 +370,8 @@ pop_marvel_villain_wipes	Easy	Which Marvel villain wipes out half of all life wi
 pop_sesame_street_character	Easy	Which 'Sesame Street' character sings about his beloved 'Rubber Duckie'?	Ernie	Bert	Elmo	Grover
 pop_judge_became_blunt	Easy	Which TV judge became famous for blunt put-downs on 'American Idol' and 'The X Factor'?	Simon Cowell	Piers Morgan	Gordon Ramsay	Graham Norton
 pop_zootopia_kind_animal	Easy	In 'Zootopia', what kind of animal is the con artist Nick Wilde?	A fox	A wolf	A weasel	A coyote
+pop_apollo_astronaut_gave	Easy	Which Apollo 11 astronaut gave his first name to the 'Toy Story' space ranger?	Buzz Aldrin	Neil Armstrong	Michael Collins	John Glenn
+pop_lady_gaga_stage	Easy	Lady Gaga's stage name was inspired by a song by which band?	Queen	ABBA	The Beatles	Duran Duran
 day_zlota_palma	Medium	Which is the top prize at the Cannes Film Festival?	The Palme d'Or	The Golden Bear	The Golden Lion	The Silver Shell
 day_minecraft_sprzedaz	Medium	Which is the best-selling video game of all time?	Minecraft	Tetris	Grand Theft Auto V	Wii Sports
 trv2_tetris_kraj	Medium	In which country was Tetris created?	The Soviet Union	Japan	The United States	Finland
@@ -882,6 +884,11 @@ pop_minecraft_tall_black	Medium	In Minecraft, which tall black mob turns hostile
 pop_band_made_cartoon	Medium	Which band is made up of the cartoon members 2-D, Murdoc, Noodle and Russel?	Gorillaz	Daft Punk	The Archies	The Monkees
 pop_empire_strikes_back	Medium	In 'The Empire Strikes Back', what does Luke lose in his lightsaber duel with Darth Vader?	His right hand	His left leg	His sight	His left ear
 pop_despicable_gru_plan	Medium	In 'Despicable Me', what does Gru plan to steal?	The Moon	The Crown Jewels	The Mona Lisa	The Sun
+pop_line_never_actually	Medium	Which famous line is never actually spoken in the 1942 Bogart classic set in wartime Morocco?	'Play it again, Sam'	'Here's looking at you, kid'	'Round up the usual suspects'	'We'll always have Paris'
+pop_online_game_player	Medium	In which online game did a player charge in yelling 'Leeroy Jenkins!' and wipe out his whole team?	World of Warcraft	EverQuest	Counter-Strike	RuneScape
+pop_guardians_galaxy_words	Medium	In 'Guardians of the Galaxy', which words make up nearly everything the tree-like hero Groot says?	'I am Groot'	'We are Groot'	'Groot is here'	'Groot says hi'
+pop_george_lucas_alaskan	Medium	George Lucas's Alaskan Malamute, Indiana, inspired Indiana Jones's name and which other character?	Chewbacca	Yoda	Han Solo	Jabba the Hutt
+pop_woman_yelling_cat	Medium	In the 'woman yelling at a cat' meme, what is the name of the white cat sitting behind a plate of salad?	Smudge	Snowball	Mittens	Whiskers
 day_zloty_lew	Hard	At which film festival is the Golden Lion awarded?	Venice	Cannes	Berlin	San Sebastian
 lit_manga	Hard	The Japanese word 'manga' originally meant what?	Whimsical pictures	Moving pictures	Paper theatre	Ink stories
 pop_gremlins	Hard	In 'Gremlins' (1984), what must you never do to the creatures after midnight?	Feed them	Tickle them	Let them sleep	Take them outside
@@ -1171,6 +1178,17 @@ pop_fawlty_towers_city	Hard	In 'Fawlty Towers', which city does the hapless wait
 pop_empire_strikes_back_2	Hard	In 'The Empire Strikes Back', what does Han Solo reply when Leia tells him 'I love you'?	'I know.'	'Me too.'	'I'll be back.'	'Not now.'
 pop_goldfinger_bond_ally	Hard	In 'Goldfinger', how is Bond's ally Jill Masterson killed?	Covered in gold paint	Thrown from a plane	Bitten by a snake	Crushed in a car
 pop_legend_zelda_old	Hard	In the first 'Legend of Zelda', what does the old man in the cave hand Link, saying 'It's dangerous to go alone'?	A sword	A shield	A map	A lantern
+pop_british_weightlifter_played	Hard	Which British weightlifter played Luke Skywalker's masked father in the original 'Star Wars' films?	David Prowse	Peter Mayhew	Kenny Baker	Anthony Daniels
+pop_ned_flanders_reverend	Hard	Ned Flanders and Reverend Lovejoy are named after streets in which city, Matt Groening's hometown?	Portland	Seattle	Chicago	Denver
+pop_wonder_woman_creator	Hard	Wonder Woman's creator, psychologist William Moulton Marston, also helped develop which device?	An early lie detector	The hearing aid	The metal detector	The jukebox
+pop_super_mario_bros_2	Hard	In 'Super Mario Bros.' (1985), the bushes are the same graphic as what, simply recoloured green?	The clouds	The pipes	The coins	The castles
+pop_thousands_unsold_copies	Hard	Where were thousands of unsold copies of Atari's 'E.T.' game dug up in 2014?	In a New Mexico landfill	Under a Las Vegas car park	In an old Alaskan gold mine	Beneath Atari's own offices
+pop_holiday_rest_bare	Hard	Which holiday 'for the rest of us', with a bare aluminium pole instead of a tree, comes from 'Seinfeld'?	Festivus	Chrismukkah	Winterval	Kwanzaa
+pop_designer_simon_whiteley	Hard	Designer Simon Whiteley said the falling green code in 'The Matrix' was scanned from what?	Japanese cookbooks	Old phone directories	Chinese newspapers	Soviet tax forms
+pop_linguist_developed_klingon	Hard	Which linguist developed the Klingon language for 'Star Trek'?	Marc Okrand	David J. Peterson	Paul Frommer	Noam Chomsky
+pop_meme_press_pay	Hard	The meme 'Press F to pay respects' comes from a funeral scene in which game series?	Call of Duty	Battlefield	Halo	Medal of Honor
+pop_wrote_nothing_compares	Hard	Who wrote 'Nothing Compares 2 U', a worldwide hit for Sinead O'Connor in 1990?	Prince	George Michael	Bono	Morrissey
+pop_type_tune_game	Hard	The famous 'Type A' tune of Game Boy 'Tetris' is a Russian folk song called what?	Korobeiniki	Katyusha	Ochi Chyornye	Polyushko Pole
 lit_wings	Expert	Which film won the very first Academy Award for Best Picture?	Wings	Sunrise	The Jazz Singer	Metropolis
 pop_obywatel_kane	Expert	Which word is whispered at the very start of 'Citizen Kane'?	Rosebud	Mother	Xanadu	Charles
 pop_spirited_away	Expert	Which was the first non-English-language film to win the Oscar for Best Animated Feature?	Spirited Away	Persepolis	Akira	Princess Mononoke
@@ -1282,3 +1300,10 @@ pop_actor_played_three	Expert	Which actor played three roles, including the US P
 pop_silent_film_comedian	Expert	Which silent-film comedian dangled from the hands of a clock high above the street in 'Safety Last!' (1923)?	Harold Lloyd	Buster Keaton	Charlie Chaplin	Stan Laurel
 pop_1926_german_silhouette	Expert	Which 1926 German silhouette film is the oldest surviving animated feature?	The Adventures of Prince Achmed	Gertie the Dinosaur	The Cabinet of Dr. Caligari	The Thief of Bagdad
 pop_gravestone_reads_all	Expert	Whose gravestone reads 'That's All Folks'?	Mel Blanc	Walt Disney	Chuck Jones	Tex Avery
+pop_real_scowling_arizona	Expert	What was the real name of the scowling Arizona cat who became an internet star in 2012?	Tardar Sauce	Maru	Lil Bub	Colonel Meow
+pop_meme_all_base	Expert	The meme 'All your base are belong to us' comes from the clumsy English of which video game?	Zero Wing	Contra	R-Type	Gradius
+pop_grin_batman_archenemy	Expert	The grin of Batman's archenemy was inspired by Conrad Veidt's face in which silent film?	The Man Who Laughs	The Cabinet of Dr. Caligari	Metropolis	The Phantom of the Opera
+pop_barbie_modelled_lilli	Expert	Barbie was modelled on Lilli, a doll based on a cartoon from a newspaper in which country?	West Germany	Switzerland	France	Sweden
+pop_finish_level_256	Expert	Why can no one finish level 256 of the original 'Pac-Man' arcade game?	A bug scrambles half the maze	The ghosts become invincible	The maze has no exit gate	The game wipes the high score
+pop_feature_street_fighter	Expert	Which feature of 'Street Fighter II' began as an unintended glitch that the designers decided to keep?	Combos	Special moves	Throws	Character select
+pop_theme_mission_impossible	Expert	The theme of 'Mission: Impossible' is famous for which unusual time signature?	5/4	3/4	6/8	4/4
