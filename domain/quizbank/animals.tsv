@@ -178,6 +178,9 @@ ani_porcupine_shoot_quills	Easy	Can a porcupine shoot its quills at an attacker?
 ani_cut_earthworm_two	Easy	Cut an earthworm in two. What usually happens?	At most the head end survives	Both halves become new worms	Both halves grow a new head	The two halves join up again
 ani_pigs_love_wallowing	Easy	Why do pigs love wallowing in mud on hot days?	They hardly sweat, so it cools them	It helps them digest their food	It hides their scent from wolves	It makes their skin grow thicker
 ani_rabbit_spot_fox	Easy	How can a rabbit spot a fox creeping up from almost any direction?	Its eyes sit high on the sides of its head	Its eyes can swivel all the way round	It sees through its closed eyelids	It feels the fox's body heat
+ani_cats_knead_soft	Easy	Cats 'knead' soft blankets with their front paws. What is this habit thought to come from?	Kneading their mother for milk	Sharpening their claws	Checking for hidden snakes	Warming up cold paws
+ani_despite_nickname_king	Easy	Despite the nickname 'king of the jungle', where do most wild lions live?	Savannas and grasslands	Rainforests	Mountain forests	Swamps and marshes
+ani_touch_baby_bird	Easy	If you touch a baby bird, will its parents reject it?	No, they usually keep caring for it	Yes, because of the human smell	Yes, but only the mother does	Only if it is touched twice
 ani_osmiornica_serca	Medium	How many hearts does an octopus have?	3	1	2	5
 ani_kameleon	Medium	Which reptile is famous for changing skin color?	Chameleon	Iguana	Gecko	Monitor lizard
 ani_ciaza_slonia	Medium	Which land animal has the longest pregnancy?	Elephant	Rhinoceros	Horse	Giraffe
@@ -467,6 +470,13 @@ ani_wolves_really_howl	Medium	Do wolves really howl at the Moon?	No, they howl t
 ani_vampire_bats_roost	Medium	What do vampire bats do for a roost-mate that failed to find a meal?	Bring up some blood to feed it	Lead it to a sleeping cow	Groom it until it falls asleep	Chase it out of the roost
 ani_hares_box_each	Medium	When hares 'box' each other in spring, who is usually fighting whom?	A female fending off a male	Two males fighting over a female	A mother teaching her young	Two females fighting over a nest
 ani_wolves_attack_musk	Medium	When wolves attack, how do musk oxen protect their calves?	Form a ring, horns out, calves inside	Hide the calves in deep snowdrifts	Stampede with the calves in front	Send the bulls to chase the wolves
+ani_cat_looks_slowly	Medium	When a cat looks at you and slowly blinks, what is it thought to mean?	It feels relaxed and friendly	It is about to pounce	It is going blind	It wants to be left alone
+ani_pet_chinchillas_roll	Medium	Why do pet chinchillas roll in fine dust instead of bathing in water?	Their thick fur would stay damp and rot	Water burns their sensitive skin	Dust makes their fur grow faster	They cannot hold their breath
+ani_wild_cat_leap	Medium	Which wild cat can leap about 3 metres into the air to swat birds in flight?	The caracal	The ocelot	The bobcat	The sand cat
+ani_rival_male_giraffes	Medium	How do rival male giraffes usually fight?	Swinging their heads like clubs	Biting each other's legs	Wrestling with their tongues	Charging like rhinos
+ani_tiny_bloodsucker_jump	Medium	Which tiny bloodsucker can jump more than 100 times its own body length?	The flea	The tick	The bedbug	The louse
+ani_alex_parrot_studied	Medium	Alex, a parrot studied for 30 years by Irene Pepperberg, became famous for what?	Naming colours, shapes and numbers	Flying home from 500 km away	Singing whole opera arias	Living to be over 100
+ani_springboks_doing_pronk	Medium	What are springboks doing when they 'pronk'?	Leaping stiff-legged into the air	Rubbing their horns on trees	Digging for water	Grazing at night
 ani_dziobak	Hard	Which mammal lays eggs?	Platypus	Armadillo	Sloth	Hedgehog
 ani_krowa_zoladek	Hard	How many chambers does a cow's stomach have?	4	1	2	3
 ani_kalmar_oczy	Hard	Which animal has an eye that can grow to the size of a dinner plate?	Giant squid	Owl	Whale	Elephant seal
@@ -674,6 +684,18 @@ ani_each_year_corals	Hard	Each year, corals on the Great Barrier Reef release th
 ani_starfish_eyes	Hard	Where are a starfish's eyes?	At the tip of each arm	In the centre of its back	Under its mouth	It has none
 ani_big_new_shell	Hard	When a big new shell turns up, hermit crabs sometimes do what?	Queue by size and swap shells in turn	Fight until only one crab is left	Share it, two crabs to a shell	Bury it until they grow bigger
 ani_blue_jays_look	Hard	Blue jays look bright blue. What colour is the pigment in their feathers?	Brown	Blue	Green	Yellow
+ani_asian_animal_bearcat	Hard	Which Asian animal, the 'bearcat', smells like buttered popcorn?	The binturong	The red panda	The wolverine	The sun bear
+ani_flowers_such_tomatoes	Hard	Many flowers, such as tomatoes, release pollen best when a bumblebee does what to them?	Vibrates its flight muscles	Bites off the petals	Licks the stem	Sits on them overnight
+ani_owl_nesting_underground	Hard	Which owl, nesting underground, can hiss like a rattlesnake to scare off intruders?	The burrowing owl	The barn owl	The snowy owl	The tawny owl
+ani_2024_study_suggested	Hard	A 2024 study suggested that wild African elephants do what, as dolphins do?	Call each other by name	Navigate by the stars	Count up to a hundred	Paint pictures unprompted
+ani_agaves_plants_used	Hard	Agaves, the plants used to make tequila, are pollinated in the wild mainly by which animals?	Bats	Bees	Hummingbirds	Moths
+ani_small_mammals_venomous	Hard	Which of these small mammals has a venomous bite?	The short-tailed shrew	The field vole	The garden mole	The dormouse
+ani_baby_surinam_toads	Hard	Baby Surinam toads grow up where, before popping out as tiny toads?	In pockets in their mother's back	In their father's mouth	In a foam nest on a branch	Inside a hollow log
+ani_happens_sharks_flipped	Hard	What happens to many sharks when they are flipped upside down?	They fall into a trance-like stillness	They thrash wildly and bite	They sink straight to the bottom	They change colour
+ani_japanese_honeybees_kill	Hard	How do Japanese honeybees kill a giant hornet that invades their hive?	Cook it inside a ball of bees	Sting it hundreds of times	Drown it in honey	Seal it inside wax
+ani_death_head_hawkmoth	Hard	The death's-head hawkmoth, with a skull-like pattern on its back, raids beehives to steal what?	Honey	Larvae	Royal jelly	Wax
+ani_cold_snaps_alligators	Hard	During cold snaps, alligators survive in iced-over ponds by doing what?	Poking their snouts through the ice	Burying themselves in dry leaves	Huddling in large groups	Moving into rivers' deepest pools
+ani_poison_dart_frogs	Hard	Why are poison dart frogs raised in captivity usually harmless?	They get their toxins from wild insects	Their skin dries out indoors	They lose their bright colours	Zoo keepers remove their glands
 ani_hemocyjanina	Expert	Which animal has blue blood?	Octopus	Frog	Snake	Carp
 ani_narwal	Expert	Which marine mammal has a long, spiral tusk growing from its head?	Narwhal	Beluga whale	Porpoise	Manatee
 ani_echidna	Expert	Which animal, alongside the platypus, is a monotreme?	Echidna	Opossum	Wombat	Koala
@@ -772,3 +794,11 @@ ani_five_toothed_mouth	Expert	What is the five-toothed mouth of a sea urchin cal
 ani_male_white_spotted	Expert	Why does a male white-spotted pufferfish carve a big patterned circle in the sand?	To attract a female to lay eggs	To trap small prey in the grooves	To hide from passing sharks	To mark where it sleeps
 ani_some_capuchin_monkeys	Expert	Some capuchin monkeys rub crushed millipedes into their fur. Why?	To keep off biting insects	To attract mates	To mark their territory	To warm up on cold nights
 ani_1987_killer_whales	Expert	In 1987, killer whales near Seattle started a short-lived fad of doing what?	Wearing dead salmon on their heads	Leaping over passing ferries	Pushing kayaks back to shore	Singing along to ship horns
+ani_young_researcher_sigmund	Expert	As a young researcher, Sigmund Freud dissected hundreds of eels in search of what?	Their testes	Their brains	Their hearts	Their eggs
+ani_orcas_off_south	Expert	Orcas off South Africa have been killing great white sharks mainly to eat which organ?	The liver	The heart	The stomach	The eyes
+ani_red_sea_octopuses	Expert	In the Red Sea, octopuses hunting alongside fish were filmed doing what to some of them?	Punching them	Feeding them	Riding on them	Mating with them
+ani_some_southeast_asian	Expert	Some Southeast Asian ants defend their colony in an extreme way. What do they do?	Burst their bodies to spray toxic goo	Bite off their own heads	Glue attackers to the ground	Throw stones at them
+ani_2016_scientists_studying	Expert	In 2016, scientists studying how praying mantises judge distance fitted them with what?	Tiny 3D glasses	Tiny hearing aids	Tiny backpacks with cameras	Tiny radio tags
+ani_females_some_photuris	Expert	Females of some Photuris fireflies copy the flashes of other species. Why?	To lure in males and eat them	To scare away bats	To find their sisters	To attract mates of their own kind
+ani_threatened_african_hairy	Expert	When threatened, the African hairy frog does what to make claws?	Breaks toe bones to pierce its skin	Grows horny scales overnight	Sharpens its toes on stones	Inflates spines along its legs
+ani_south_american_cave	Expert	Which South American cave bird finds its way in the dark by echolocation, like a bat?	The oilbird	The potoo	The nightjar	The frogmouth

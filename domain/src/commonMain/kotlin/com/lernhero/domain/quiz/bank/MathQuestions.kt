@@ -125,7 +125,9 @@ object MathQuestions {
         q("mat_metre_fence_post", "A 10-metre fence has a post every metre, including one at each end. How many posts are there?", "11", listOf("10", "9", "12"), E),
         q("mat_10th_queue_people", "You are 10th in a queue, and 10 people are standing behind you. How many people are in the queue?", "20", listOf("19", "21", "11"), E),
         q("mat_two_people_play", "Two people play rock, paper, scissors, each choosing at random. How likely is a draw?", "1 in 3", listOf("1 in 2", "1 in 9", "1 in 6"), E),
-        q("mat_different_outfits_put", "How many different outfits can you put together from 3 shirts and 4 pairs of trousers?", "12", listOf("7", "9", "16"), E)
+        q("mat_different_outfits_put", "How many different outfits can you put together from 3 shirts and 4 pairs of trousers?", "12", listOf("7", "9", "16"), E),
+        q("mat_infinite_monkey_theorem", "The 'infinite monkey theorem' says a monkey hitting keys at random forever would almost surely type the complete works of whom?", "William Shakespeare", listOf("Charles Dickens", "Homer", "Leo Tolstoy"), E),
+        q("mat_asked_pick_random", "Asked to pick a 'random' whole number from 1 to 10, which do people choose most often?", "7", listOf("1", "5", "10"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -295,7 +297,16 @@ object MathQuestions {
         q("mat_some_mathematicians_want", "Some mathematicians want to replace pi with 'tau'. What does tau equal?", "Twice pi", listOf("Half of pi", "Pi squared", "The square root of pi"), M),
         q("mat_bottle_inside_outside", "Which 'bottle' has no inside and no outside, and cannot be built in 3D without passing through itself?", "A Klein bottle", listOf("A Leyden jar", "A Mobius bottle", "A Florence flask"), M),
         q("mat_snack_famously_made", "Which snack is famously made in the saddle shape that mathematicians call a hyperbolic paraboloid?", "Pringles", listOf("Doritos", "Bugles", "Cheetos"), M),
-        q("mat_roughly_odds_matching", "Roughly what are the odds of matching all six numbers in a lottery that draws 6 balls from 49?", "About 1 in 14 million", listOf("About 1 in 14,000", "About 1 in 1.4 billion", "About 1 in 140,000"), M)
+        q("mat_roughly_odds_matching", "Roughly what are the odds of matching all six numbers in a lottery that draws 6 balls from 49?", "About 1 in 14 million", listOf("About 1 in 14,000", "About 1 in 1.4 billion", "About 1 in 140,000"), M),
+        q("mat_huge_2023_study", "A huge 2023 study of over 350,000 coin tosses found that a coin lands slightly more often how?", "On the same side it started", listOf("Heads up", "Tails up", "On the side with the bigger picture"), M),
+        q("mat_whole_numbers_100", "How many whole numbers from 1 to 100 contain the digit 7?", "19", listOf("10", "20", "11"), M),
+        q("mat_numbers_ending_squaring", "Numbers ending in 5 have a squaring shortcut. What is 65 squared?", "4225", listOf("3625", "4025", "4325"), M),
+        q("mat_triangle_drawn_surface", "Can a triangle drawn on the surface of a globe have three right angles?", "Yes, for example from the pole to the equator", listOf("No, its angles always add up to 180 degrees", "Only on a globe smaller than a football", "Only if one of its sides curves inwards"), M),
+        q("mat_month_friday_13th", "A month has a Friday the 13th exactly when the 1st of that month falls on which day?", "Sunday", listOf("Friday", "Monday", "Saturday"), M),
+        q("mat_ancient_paradox_asks", "Which ancient paradox asks how many grains of sand you can take away before a heap stops being a heap?", "The sorites paradox", listOf("Zeno's paradox", "The liar paradox", "Russell's paradox"), M),
+        q("mat_columnist_explained_monty", "Which columnist explained the Monty Hall problem correctly in 1990, then received thousands of letters insisting she was wrong?", "Marilyn vos Savant", listOf("Ann Landers", "Erma Bombeck", "Dear Abby"), M),
+        q("mat_spotify_make_shuffle", "Why did Spotify make its 'shuffle' less random?", "Truly random play felt streaky to listeners", listOf("Random play used too much battery", "Record labels demanded equal plays", "A random shuffle broke the app"), M),
+        q("mat_martingale_betting_system", "The 'martingale' betting system doubles your stake after every loss. What stops it working in a real casino?", "Table limits and running out of money", listOf("The wheel remembers your bets", "Casinos ban doubling a bet", "Odds change after each loss"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -421,7 +432,20 @@ object MathQuestions {
         q("mat_sam_loyd_said", "Sam Loyd is said to have offered \$1,000 for solving his sliding '15 puzzle' with the 14 and 15 swapped. Why did no one win?", "It is impossible", listOf("The tiles always jammed", "He kept moving the deadline", "Only he knew the trick"), H),
         q("mat_car_odometer_shows", "A car's odometer shows the palindrome 15951. Two hours later it shows the next palindrome. What was the average speed?", "55 miles per hour", listOf("50 miles per hour", "60 miles per hour", "110 miles per hour"), H),
         q("mat_flip_fair_coin_2", "If you flip a fair coin 10 times, roughly how likely are you to get exactly 5 heads?", "About 25%", listOf("About 50%", "About 10%", "About 75%"), H),
-        q("mat_year_not_leap_2", "In a year that is not a leap year, which month always starts on the same day of the week as January?", "October", listOf("July", "April", "March"), H)
+        q("mat_year_not_leap_2", "In a year that is not a leap year, which month always starts on the same day of the week as January?", "October", listOf("July", "April", "March"), H),
+        q("mat_while_doodling_numbers", "While doodling numbers in a spiral during a dull talk in 1963, what did Stanislaw Ulam notice?", "Primes cluster along diagonal lines", listOf("Square numbers form a perfect circle", "Every row adds up to the same total", "Odd numbers vanish from the middle"), H),
+        q("mat_word_algebra_comes_2", "The word 'algebra' comes from 'al-jabr'. In Spain, an 'algebrista' was once also which kind of craftsman?", "A bone-setter", listOf("A clockmaker", "A goldsmith", "A glassblower"), H),
+        q("mat_world_war_abraham", "In World War II, Abraham Wald told the US military to armour bombers where returning planes had what?", "No bullet holes", listOf("The most bullet holes", "Engine trouble", "Fuel leaks"), H),
+        q("mat_1906_francis_galton", "In 1906, Francis Galton studied 787 guesses of an ox's weight at a fair. What surprised him?", "The middle guess was within 1% of the truth", listOf("Nobody came within 100 kg of the truth", "The butchers guessed worst of all", "Most guesses were exactly right"), H),
+        q("mat_1913_gamblers_monte", "In 1913, gamblers at Monte Carlo lost millions betting on red. How many times in a row did the ball land on black?", "26", listOf("13", "7", "52"), H),
+        q("mat_chevalier_mere_won", "The Chevalier de Mere won by betting on a six in four rolls. Why did his bet on a double six in 24 rolls of two dice disappoint him?", "It lost slightly more often than it won", listOf("It won exactly half the time", "Casinos refused to take the bet", "Two dice cannot land a double six"), H),
+        q("mat_according_benford_law", "According to Benford's law, in many real-world data sets, about how often is the first digit a 1?", "About 30%", listOf("About 11%", "About 50%", "About 5%"), H),
+        q("mat_boxes_hold_two", "Boxes hold two gold coins, two silver coins and one of each. You pick a box at random and draw a gold coin. What is the chance the other coin is gold?", "2 in 3", listOf("1 in 2", "1 in 3", "3 in 4"), H),
+        q("mat_economist_stefan_mandel", "How did economist Stefan Mandel win national lotteries again and again?", "He bought every possible combination", listOf("He found a flaw in the ball machine", "He bribed the officials who drew the balls", "He always picked birthdays of winners"), H),
+        q("mat_must_least_two", "Why must at least two Londoners have exactly the same number of hairs on their heads?", "There are more Londoners than possible hair counts", listOf("Hair counts are passed down within families", "Hairs always grow back in fixed numbers", "Every adult head has exactly 100,000 hairs"), H),
+        q("mat_bible_describes_round", "The Bible describes a round basin 10 cubits across and 30 cubits around. What value of pi does that imply?", "3", listOf("3.14", "3.2", "3.5"), H),
+        q("mat_1843_william_rowan", "In 1843, William Rowan Hamilton carved a formula into a Dublin bridge in a flash of inspiration. What had he discovered?", "Quaternions", listOf("Logarithms", "Prime numbers", "Imaginary numbers"), H),
+        q("mat_dropping_needles_random", "Dropping needles at random onto a floor of parallel lines can be used to estimate which number?", "Pi", listOf("e", "The golden ratio", "The square root of 2"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -490,6 +514,11 @@ object MathQuestions {
         q("mat_petersburg_paradox_game", "In the 'St Petersburg paradox', a game's prize doubles every time a coin lands heads, stopping at the first tails. What is its expected payout?", "Infinite", listOf("Exactly \$2", "About \$25", "Nothing at all"), X),
         q("mat_legend_says_priests", "Legend says priests are moving a 64-disc Tower of Hanoi. At one move per second, roughly how long will they need?", "About 585 billion years", listOf("About 64 days", "About 6,400 years", "About 2 million years"), X),
         q("mat_put_points_circle", "Put points on a circle and join every pair with straight lines. 2, 3, 4 and 5 points can cut it into 2, 4, 8 and 16 regions. What is the most that 6 points can give?", "31", listOf("32", "30", "36"), X),
-        q("mat_curve_gives_fastest", "Which curve gives the fastest slide for a ball rolling between two points, faster even than a straight ramp?", "A cycloid", listOf("A catenary", "A parabola", "A circular arc"), X)
+        q("mat_curve_gives_fastest", "Which curve gives the fastest slide for a ball rolling between two points, faster even than a straight ramp?", "A cycloid", listOf("A catenary", "A parabola", "A circular arc"), X),
+        q("mat_1973_berkeley_seemed", "In 1973, UC Berkeley seemed to favour men overall, yet most departments slightly favoured women. What is this effect called?", "Simpson's paradox", listOf("Benford's law", "The gambler's fallacy", "Zeno's paradox"), X),
+        q("mat_any_moment_two", "At any moment, two exactly opposite points on Earth have the same temperature and air pressure. Which theorem guarantees it?", "The Borsuk-Ulam theorem", listOf("Pythagoras' theorem", "Fermat's Last Theorem", "The four colour theorem"), X),
+        q("mat_ludolph_van_ceulen", "Ludolph van Ceulen spent years working out pi to 35 decimal places. Where were the digits carved?", "On his tombstone", listOf("Over his front door", "On a church bell", "Into a city wall"), X),
+        q("mat_drill_hole_straight", "Drill a hole straight through the centre of a ball so the ring left over is 6 cm tall. What does the ring's volume depend on?", "Only its 6 cm height", listOf("Only the ball's size", "Only the hole's width", "Both height and ball size"), X),
+        q("mat_ant_crawls_along", "An ant crawls at 1 cm/s along a 1 km rubber rope that stretches evenly by 1 km every second. Does it ever reach the end?", "Yes, after an enormously long time", listOf("No, it falls further behind for ever", "No, it gets stuck halfway", "Yes, in under an hour"), X)
     )
 }

@@ -65,6 +65,9 @@ ele_shiny_silver_lining	Easy	The shiny silver lining inside a crisp packet is a 
 ele_whitish_bloom_appears	Easy	What is the whitish 'bloom' that appears on old chocolate?	Crystals of fat or sugar	Mould growing on it	Dust from the wrapper	Dried milk powder
 ele_disposable_hand_warmer	Easy	Why does a disposable hand warmer heat up once you open its packet?	Iron powder inside starts to rust	A tiny battery switches on	Water inside begins to boil	It releases stored sunlight
 ele_hand_sanitiser_gels	Easy	Most hand sanitiser gels kill germs with which main ingredient?	Alcohol	Bleach	Vinegar	Ammonia
+ele_mars_looks_red	Easy	Mars looks red because its dust is rich in a compound of which element?	Iron	Copper	Sulfur	Silicon
+ele_gas_fire_extinguishers	Easy	Which gas do many fire extinguishers spray to smother flames without leaving a wet mess?	Carbon dioxide	Helium	Hydrogen	Neon
+ele_actually_makes_mood	Easy	What actually makes a mood ring change colour?	Changes in skin temperature	Changes in your mood hormones	Sweat reacting with the metal	Light from your pulse
 ele_symbol_ag	Medium	Which element hides behind the symbol Ag?	Silver	Gold	Argon	Aluminum
 ele_symbol_na	Medium	Which element hides behind the symbol Na?	Sodium	Nitrogen	Nickel	Neon
 ele_symbol_k	Medium	Which element hides behind the symbol K?	Potassium	Krypton	Calcium	Cobalt
@@ -184,6 +187,12 @@ ele_cloud_seeding_used	Medium	Cloud seeding, used to coax rain or snow from clou
 ele_buckyballs_football_shaped	Medium	Buckyballs, football-shaped molecules named after the architect Buckminster Fuller, are made of which element?	Carbon	Silicon	Boron	Sulfur
 ele_nail_polish_removers	Medium	Most nail polish removers dissolve the varnish with which solvent?	Acetone	Turpentine	Bleach	Ammonia
 ele_world_coins_ancient	Medium	The world's first coins, from ancient Lydia, were made of electrum, a natural blend of gold and which metal?	Silver	Copper	Tin	Platinum
+ele_must_bleach_never	Medium	Why must bleach never be mixed with ammonia-based cleaners?	They give off toxic gases	They cancel each other out	They burst into flames	They freeze into a gel
+ele_energy_saving_fluorescent	Medium	Energy-saving fluorescent lamps should not go in the bin because they contain a little of which toxic metal?	Mercury	Lead	Cadmium	Arsenic
+ele_smell_seaside_comes	Medium	The 'smell of the seaside' comes largely from a gas given off by plankton. Which element gives it its whiff?	Sulfur	Iodine	Chlorine	Sodium
+ele_blonde_hair_turn	Medium	Blonde hair can turn green after a lot of swimming. Which element is really to blame?	Copper	Chlorine	Iron	Zinc
+ele_pink_stomach_remedy	Medium	The pink stomach remedy Pepto-Bismol takes its name from which metal it contains?	Bismuth	Barium	Beryllium	Magnesium
+ele_perfectly_pure_water	Medium	Perfectly pure water barely conducts electricity. What lets ordinary tap water conduct?	Dissolved salts and minerals	Its oxygen atoms	Its hydrogen atoms	Tiny bubbles of air
 ele_symbol_sn	Hard	Which element hides behind the symbol Sn?	Tin	Scandium	Selenium	Strontium
 ele_najczestszy	Hard	Which element is the most abundant in the Universe?	Hydrogen	Helium	Oxygen	Carbon
 ele_ilosc	Hard	How many elements does today's periodic table have?	118	108	92	120
@@ -283,6 +292,11 @@ ele_neon_signs_glow	Hard	'Neon' signs that glow blue usually hold no neon at all
 ele_hold_sheet_gold	Hard	Hold a sheet of gold leaf up to a lamp. What colour is the light that shines through it?	Green	Red	Golden yellow	Violet
 ele_ships_carry_blocks	Hard	Why do many ships carry blocks of zinc bolted to their steel hulls?	The zinc corrodes instead of the hull	They balance the ship's weight	They keep barnacles away	They steady the compass
 ele_ruby_red_cranberry	Hard	Ruby-red 'cranberry glass' gets its colour from a tiny pinch of which precious metal?	Gold	Silver	Platinum	Palladium
+ele_hope_diamond_owes	Hard	The famous Hope Diamond owes its deep blue colour to traces of which element?	Boron	Copper	Cobalt	Titanium
+ele_vitamin_b12_vitamin	Hard	Vitamin B12 is the only vitamin built around a metal atom. Which metal?	Cobalt	Iron	Zinc	Magnesium
+ele_rub_little_metal	Hard	Rub a little of which metal onto an aluminium can and the can soon turns brittle enough to poke a finger through?	Gallium	Tin	Lead	Zinc
+ele_until_1950_soft	Hard	Until about 1950, the soft drink 7 Up contained a mood-calming compound of which element?	Lithium	Potassium	Bromine	Sodium
+ele_voyager_space_probes	Hard	The Voyager space probes still run on heat from the decay of which element?	Plutonium	Uranium	Radium	Polonium
 ele_symbol_sb	Expert	Which element hides behind the symbol Sb?	Antimony	Strontium	Silver	Selenium
 ele_symbol_mn	Expert	Which element hides behind the symbol Mn?	Manganese	Magnesium	Molybdenum	Copper
 ele_curie	Expert	Which element did Marie Sklodowska-Curie name after her homeland?	Polonium	Radium	Uranium	Radon
@@ -350,3 +364,4 @@ ele_element_means_new	Expert	Which element's name means 'new twin' in Greek?	Neo
 ele_element_comes_greek_3	Expert	Which element's name comes from the Greek for 'heavy'?	Barium	Lead	Osmium	Tungsten
 ele_fluorine_injured_killed	Expert	Fluorine injured or killed several chemists who tried to isolate it. Who finally succeeded, in 1886?	Henri Moissan	Humphry Davy	Robert Bunsen	William Ramsay
 ele_precious_pigment_ultramarine	Expert	The precious pigment ultramarine, ground from lapis lazuli, owes its blue colour to which element?	Sulfur	Cobalt	Copper	Iron
+ele_rare_earth_element	Expert	Which rare-earth element is named after the Finnish chemist who discovered the first rare earth, yttria, in 1794?	Gadolinium	Samarium	Europium	Lutetium

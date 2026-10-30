@@ -203,7 +203,10 @@ object AnimalQuestions {
         q("ani_porcupine_shoot_quills", "Can a porcupine shoot its quills at an attacker?", "No, they come loose when touched", listOf("Yes, up to a few metres", "Yes, but only once a year", "Only when it rolls into a ball"), E),
         q("ani_cut_earthworm_two", "Cut an earthworm in two. What usually happens?", "At most the head end survives", listOf("Both halves become new worms", "Both halves grow a new head", "The two halves join up again"), E),
         q("ani_pigs_love_wallowing", "Why do pigs love wallowing in mud on hot days?", "They hardly sweat, so it cools them", listOf("It helps them digest their food", "It hides their scent from wolves", "It makes their skin grow thicker"), E),
-        q("ani_rabbit_spot_fox", "How can a rabbit spot a fox creeping up from almost any direction?", "Its eyes sit high on the sides of its head", listOf("Its eyes can swivel all the way round", "It sees through its closed eyelids", "It feels the fox's body heat"), E)
+        q("ani_rabbit_spot_fox", "How can a rabbit spot a fox creeping up from almost any direction?", "Its eyes sit high on the sides of its head", listOf("Its eyes can swivel all the way round", "It sees through its closed eyelids", "It feels the fox's body heat"), E),
+        q("ani_cats_knead_soft", "Cats 'knead' soft blankets with their front paws. What is this habit thought to come from?", "Kneading their mother for milk", listOf("Sharpening their claws", "Checking for hidden snakes", "Warming up cold paws"), E),
+        q("ani_despite_nickname_king", "Despite the nickname 'king of the jungle', where do most wild lions live?", "Savannas and grasslands", listOf("Rainforests", "Mountain forests", "Swamps and marshes"), E),
+        q("ani_touch_baby_bird", "If you touch a baby bird, will its parents reject it?", "No, they usually keep caring for it", listOf("Yes, because of the human smell", "Yes, but only the mother does", "Only if it is touched twice"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -496,7 +499,14 @@ object AnimalQuestions {
         q("ani_wolves_really_howl", "Do wolves really howl at the Moon?", "No, they howl to keep in touch", listOf("Yes, mainly at the full moon", "Yes, to welcome the night", "Only during the winter months"), M),
         q("ani_vampire_bats_roost", "What do vampire bats do for a roost-mate that failed to find a meal?", "Bring up some blood to feed it", listOf("Lead it to a sleeping cow", "Groom it until it falls asleep", "Chase it out of the roost"), M),
         q("ani_hares_box_each", "When hares 'box' each other in spring, who is usually fighting whom?", "A female fending off a male", listOf("Two males fighting over a female", "A mother teaching her young", "Two females fighting over a nest"), M),
-        q("ani_wolves_attack_musk", "When wolves attack, how do musk oxen protect their calves?", "Form a ring, horns out, calves inside", listOf("Hide the calves in deep snowdrifts", "Stampede with the calves in front", "Send the bulls to chase the wolves"), M)
+        q("ani_wolves_attack_musk", "When wolves attack, how do musk oxen protect their calves?", "Form a ring, horns out, calves inside", listOf("Hide the calves in deep snowdrifts", "Stampede with the calves in front", "Send the bulls to chase the wolves"), M),
+        q("ani_cat_looks_slowly", "When a cat looks at you and slowly blinks, what is it thought to mean?", "It feels relaxed and friendly", listOf("It is about to pounce", "It is going blind", "It wants to be left alone"), M),
+        q("ani_pet_chinchillas_roll", "Why do pet chinchillas roll in fine dust instead of bathing in water?", "Their thick fur would stay damp and rot", listOf("Water burns their sensitive skin", "Dust makes their fur grow faster", "They cannot hold their breath"), M),
+        q("ani_wild_cat_leap", "Which wild cat can leap about 3 metres into the air to swat birds in flight?", "The caracal", listOf("The ocelot", "The bobcat", "The sand cat"), M),
+        q("ani_rival_male_giraffes", "How do rival male giraffes usually fight?", "Swinging their heads like clubs", listOf("Biting each other's legs", "Wrestling with their tongues", "Charging like rhinos"), M),
+        q("ani_tiny_bloodsucker_jump", "Which tiny bloodsucker can jump more than 100 times its own body length?", "The flea", listOf("The tick", "The bedbug", "The louse"), M),
+        q("ani_alex_parrot_studied", "Alex, a parrot studied for 30 years by Irene Pepperberg, became famous for what?", "Naming colours, shapes and numbers", listOf("Flying home from 500 km away", "Singing whole opera arias", "Living to be over 100"), M),
+        q("ani_springboks_doing_pronk", "What are springboks doing when they 'pronk'?", "Leaping stiff-legged into the air", listOf("Rubbing their horns on trees", "Digging for water", "Grazing at night"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -707,7 +717,19 @@ object AnimalQuestions {
         q("ani_each_year_corals", "Each year, corals on the Great Barrier Reef release their eggs on the same few nights. What helps time it?", "The full moon", listOf("The first storm of the year", "The longest day", "The arrival of whales"), H),
         q("ani_starfish_eyes", "Where are a starfish's eyes?", "At the tip of each arm", listOf("In the centre of its back", "Under its mouth", "It has none"), H),
         q("ani_big_new_shell", "When a big new shell turns up, hermit crabs sometimes do what?", "Queue by size and swap shells in turn", listOf("Fight until only one crab is left", "Share it, two crabs to a shell", "Bury it until they grow bigger"), H),
-        q("ani_blue_jays_look", "Blue jays look bright blue. What colour is the pigment in their feathers?", "Brown", listOf("Blue", "Green", "Yellow"), H)
+        q("ani_blue_jays_look", "Blue jays look bright blue. What colour is the pigment in their feathers?", "Brown", listOf("Blue", "Green", "Yellow"), H),
+        q("ani_asian_animal_bearcat", "Which Asian animal, the 'bearcat', smells like buttered popcorn?", "The binturong", listOf("The red panda", "The wolverine", "The sun bear"), H),
+        q("ani_flowers_such_tomatoes", "Many flowers, such as tomatoes, release pollen best when a bumblebee does what to them?", "Vibrates its flight muscles", listOf("Bites off the petals", "Licks the stem", "Sits on them overnight"), H),
+        q("ani_owl_nesting_underground", "Which owl, nesting underground, can hiss like a rattlesnake to scare off intruders?", "The burrowing owl", listOf("The barn owl", "The snowy owl", "The tawny owl"), H),
+        q("ani_2024_study_suggested", "A 2024 study suggested that wild African elephants do what, as dolphins do?", "Call each other by name", listOf("Navigate by the stars", "Count up to a hundred", "Paint pictures unprompted"), H),
+        q("ani_agaves_plants_used", "Agaves, the plants used to make tequila, are pollinated in the wild mainly by which animals?", "Bats", listOf("Bees", "Hummingbirds", "Moths"), H),
+        q("ani_small_mammals_venomous", "Which of these small mammals has a venomous bite?", "The short-tailed shrew", listOf("The field vole", "The garden mole", "The dormouse"), H),
+        q("ani_baby_surinam_toads", "Baby Surinam toads grow up where, before popping out as tiny toads?", "In pockets in their mother's back", listOf("In their father's mouth", "In a foam nest on a branch", "Inside a hollow log"), H),
+        q("ani_happens_sharks_flipped", "What happens to many sharks when they are flipped upside down?", "They fall into a trance-like stillness", listOf("They thrash wildly and bite", "They sink straight to the bottom", "They change colour"), H),
+        q("ani_japanese_honeybees_kill", "How do Japanese honeybees kill a giant hornet that invades their hive?", "Cook it inside a ball of bees", listOf("Sting it hundreds of times", "Drown it in honey", "Seal it inside wax"), H),
+        q("ani_death_head_hawkmoth", "The death's-head hawkmoth, with a skull-like pattern on its back, raids beehives to steal what?", "Honey", listOf("Larvae", "Royal jelly", "Wax"), H),
+        q("ani_cold_snaps_alligators", "During cold snaps, alligators survive in iced-over ponds by doing what?", "Poking their snouts through the ice", listOf("Burying themselves in dry leaves", "Huddling in large groups", "Moving into rivers' deepest pools"), H),
+        q("ani_poison_dart_frogs", "Why are poison dart frogs raised in captivity usually harmless?", "They get their toxins from wild insects", listOf("Their skin dries out indoors", "They lose their bright colours", "Zoo keepers remove their glands"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -809,6 +831,14 @@ object AnimalQuestions {
         q("ani_five_toothed_mouth", "What is the five-toothed mouth of a sea urchin called?", "Aristotle's lantern", listOf("Neptune's comb", "Darwin's jaw", "Pliny's crown"), X),
         q("ani_male_white_spotted", "Why does a male white-spotted pufferfish carve a big patterned circle in the sand?", "To attract a female to lay eggs", listOf("To trap small prey in the grooves", "To hide from passing sharks", "To mark where it sleeps"), X),
         q("ani_some_capuchin_monkeys", "Some capuchin monkeys rub crushed millipedes into their fur. Why?", "To keep off biting insects", listOf("To attract mates", "To mark their territory", "To warm up on cold nights"), X),
-        q("ani_1987_killer_whales", "In 1987, killer whales near Seattle started a short-lived fad of doing what?", "Wearing dead salmon on their heads", listOf("Leaping over passing ferries", "Pushing kayaks back to shore", "Singing along to ship horns"), X)
+        q("ani_1987_killer_whales", "In 1987, killer whales near Seattle started a short-lived fad of doing what?", "Wearing dead salmon on their heads", listOf("Leaping over passing ferries", "Pushing kayaks back to shore", "Singing along to ship horns"), X),
+        q("ani_young_researcher_sigmund", "As a young researcher, Sigmund Freud dissected hundreds of eels in search of what?", "Their testes", listOf("Their brains", "Their hearts", "Their eggs"), X),
+        q("ani_orcas_off_south", "Orcas off South Africa have been killing great white sharks mainly to eat which organ?", "The liver", listOf("The heart", "The stomach", "The eyes"), X),
+        q("ani_red_sea_octopuses", "In the Red Sea, octopuses hunting alongside fish were filmed doing what to some of them?", "Punching them", listOf("Feeding them", "Riding on them", "Mating with them"), X),
+        q("ani_some_southeast_asian", "Some Southeast Asian ants defend their colony in an extreme way. What do they do?", "Burst their bodies to spray toxic goo", listOf("Bite off their own heads", "Glue attackers to the ground", "Throw stones at them"), X),
+        q("ani_2016_scientists_studying", "In 2016, scientists studying how praying mantises judge distance fitted them with what?", "Tiny 3D glasses", listOf("Tiny hearing aids", "Tiny backpacks with cameras", "Tiny radio tags"), X),
+        q("ani_females_some_photuris", "Females of some Photuris fireflies copy the flashes of other species. Why?", "To lure in males and eat them", listOf("To scare away bats", "To find their sisters", "To attract mates of their own kind"), X),
+        q("ani_threatened_african_hairy", "When threatened, the African hairy frog does what to make claws?", "Breaks toe bones to pierce its skin", listOf("Grows horny scales overnight", "Sharpens its toes on stones", "Inflates spines along its legs"), X),
+        q("ani_south_american_cave", "Which South American cave bird finds its way in the dark by echolocation, like a bat?", "The oilbird", listOf("The potoo", "The nightjar", "The frogmouth"), X)
     )
 }

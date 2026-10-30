@@ -184,7 +184,10 @@ object BiologyQuestions {
         q("bio_boys_voices_break", "Why do boys' voices 'break' and get deeper during puberty?", "Their vocal cords grow longer and thicker", listOf("Their lungs grow much bigger", "Their tongues grow longer", "Their noses get blocked more often"), E),
         q("bio_person_fingerprints_form", "When do a person's fingerprints form?", "Before birth, in the womb", listOf("In the first year of life", "When they start to walk", "At around the age of five"), E),
         q("bio_best_aid_small", "What is the best first aid for a small burn on your hand?", "Cool it under running water", listOf("Rub butter on it", "Hold ice right against it", "Pop the blisters at once"), E),
-        q("bio_right_way_stop", "What is the right way to stop a nosebleed?", "Lean forward and pinch the nose", listOf("Tilt the head far back and wait", "Lie down flat on your back", "Blow the nose hard to clear it"), E)
+        q("bio_right_way_stop", "What is the right way to stop a nosebleed?", "Lean forward and pinch the nose", listOf("Tilt the head far back and wait", "Lie down flat on your back", "Blow the nose hard to clear it"), E),
+        q("bio_stop_noticing_smell", "Why do you stop noticing the smell of your own home after a while?", "Your brain tunes out constant smells", listOf("Dust slowly blocks your nose", "Home smells fade within an hour", "Your smell nerves get worn out"), E),
+        q("bio_actually_makes_mosquito", "What actually makes a mosquito bite itch?", "Your body reacting to its saliva", listOf("Venom left in the skin", "An egg laid under the skin", "Scratches from its legs"), E),
+        q("bio_fruit_float_across", "Which fruit can float across an ocean and still sprout on a faraway beach?", "The coconut", listOf("The mango", "The banana", "The pineapple"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -449,7 +452,15 @@ object BiologyQuestions {
         q("bio_brussels_sprouts_actually", "Brussels sprouts are actually what part of the plant?", "Buds growing along a tall stem", listOf("Swollen roots under the soil", "Unripe seed pods", "Flowers that never opened"), M),
         q("bio_makes_mexican_jumping", "What makes a Mexican 'jumping bean' jump?", "A moth caterpillar wriggling inside", listOf("Water inside it boiling in the sun", "A spring-like fibre in its shell", "Gas escaping from its rotting seed"), M),
         q("bio_common_male_baldness", "Common male baldness is driven mainly by genes and what?", "A hormone made from testosterone", listOf("Wearing hats too often", "Washing the hair every day", "Too much sun on the scalp"), M),
-        q("bio_green_patches_potato", "Green patches on potato skins are a warning sign of what?", "A natural poison building up", listOf("A harmless mould starting to grow", "Too much iron in the soil", "The potato starting to ferment"), M)
+        q("bio_green_patches_potato", "Green patches on potato skins are a warning sign of what?", "A natural poison building up", listOf("A harmless mould starting to grow", "Too much iron in the soil", "The potato starting to ferment"), M),
+        q("bio_hormone_made_mainly", "Which hormone, made mainly in the stomach, is nicknamed the 'hunger hormone'?", "Ghrelin", listOf("Leptin", "Cortisol", "Insulin"), M),
+        q("bio_quarter_people_supertasters", "About a quarter of people are 'supertasters', who find foods like kale extra bitter. What is different about them?", "They have more taste buds", listOf("Their saliva is more acidic", "Their tongues are longer", "Their teeth are more sensitive"), M),
+        q("bio_few_weeks_newborn", "For their first few weeks, newborn babies usually cry without what?", "Tears", listOf("Any sound", "Opening their mouth", "Moving their arms"), M),
+        q("bio_red_stinging_eyes", "Red, stinging eyes after a swim in a pool come mainly from chlorine reacting with what?", "Swimmers' sweat and urine", listOf("Rust from the pipes", "Algae in the water", "The pool's painted tiles"), M),
+        q("bio_stevia_sweetener_almost", "Stevia, a sweetener with almost no calories, is made from which part of a plant?", "The leaves", listOf("The roots", "The seeds", "The bark"), M),
+        q("bio_chilli_peppers_now", "Chilli peppers, now at the heart of Indian and Thai cooking, first came from where?", "The Americas", listOf("India", "China", "East Africa"), M),
+        q("bio_tree_peeling_bark", "Which tree's peeling bark reveals bright stripes of green, orange, blue and purple?", "The rainbow eucalyptus", listOf("The paper birch", "The dragon tree", "The cork oak"), M),
+        q("bio_astronauts_come_back", "Astronauts come back from months in space a few centimetres taller. Why?", "The discs in the spine expand", listOf("Their leg bones grow faster", "Their muscles stretch out", "Their skulls float upwards"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -640,7 +651,21 @@ object BiologyQuestions {
         q("bio_large_shipments_pistachios", "Why are large shipments of pistachios treated as a fire hazard?", "They can heat up and catch fire by themselves", listOf("Their shells give off a flammable gas", "They are always roasted inside the ship", "Their dust explodes when it gets wet"), H),
         q("bio_australian_blood_donor", "Australian blood donor James Harrison, 'the man with the golden arm', is credited with helping to save roughly how many babies?", "About 2.4 million", listOf("About 2,400", "About 24,000", "About 240 million"), H),
         q("bio_microscopic_demodex_mites", "Microscopic Demodex mites live where on almost every adult?", "In the hair follicles of the face", listOf("Under the nails of the toes", "Deep inside the lungs", "Inside the bone marrow"), H),
-        q("bio_second_half_pregnancy", "In the second half of pregnancy, most of the fluid around an unborn baby comes from where?", "The baby's own urine", listOf("The mother's stomach", "The baby's tears", "The mother's lymph nodes"), H)
+        q("bio_second_half_pregnancy", "In the second half of pregnancy, most of the fluid around an unborn baby comes from where?", "The baby's own urine", listOf("The mother's stomach", "The baby's tears", "The mother's lymph nodes"), H),
+        q("bio_hops_give_beer", "Hops, which give beer its bitterness, belong to the same small plant family as what?", "Cannabis", listOf("Mint", "Coffee", "Ivy"), H),
+        q("bio_invasive_plant_feared", "Which invasive plant is so feared in Britain that finding it in a garden can block a mortgage?", "Japanese knotweed", listOf("Giant hogweed", "Himalayan balsam", "Rhododendron"), H),
+        q("bio_tumbleweed_icon_wild", "The tumbleweed, icon of Wild West films, originally came to America from where?", "The steppes of Eurasia", listOf("The deserts of Mexico", "The Australian outback", "The Sahara"), H),
+        q("bio_kudzu_vine_ate", "Kudzu, 'the vine that ate the South' of the USA, was brought there from which country?", "Japan", listOf("Brazil", "India", "Australia"), H),
+        q("bio_raindrops_roll_off", "Why do raindrops roll off lotus leaves, carrying dirt away with them?", "Tiny waxy bumps repel the water", listOf("The leaves keep vibrating", "The leaves are coated in oil", "The leaves stay warm"), H),
+        q("bio_banana_variety_filled", "Which banana variety filled the world's shops until a soil fungus wiped out its plantations in the mid-1900s?", "Gros Michel", listOf("Cavendish", "Plantain", "Red Dacca"), H),
+        q("bio_1893_supreme_court", "In 1893 the US Supreme Court ruled that, for import taxes, the tomato counts as what?", "A vegetable", listOf("A fruit", "A spice", "A herb"), H),
+        q("bio_cashew_nut_grows", "The cashew nut grows hanging from the bottom of what?", "A juicy 'cashew apple'", listOf("A hard woody pod", "A spiky green husk", "A cluster of flowers"), H),
+        q("bio_studies_suggest_people", "Studies suggest that people with natural red hair often need more of what during surgery?", "Anaesthetic", listOf("Vitamin C", "Oxygen", "Stitches"), H),
+        q("bio_small_pink_fold", "The small pink fold in the inner corner of your eye is thought to be a leftover of what?", "A third eyelid", listOf("A tear gland", "A gill slit", "An extra eye"), H),
+        q("bio_stroke_few_people", "After a stroke, a few people find that their speech suddenly sounds like what?", "A foreign accent", listOf("A child's voice", "A whisper", "A song"), H),
+        q("bio_bone_rebuilt_all", "Bone is rebuilt all the time. Roughly how often is the whole adult skeleton replaced?", "About every 10 years", listOf("Every year", "About every 50 years", "Never"), H),
+        q("bio_some_hospitals_put", "Why do some hospitals put live fly maggots into patients' wounds?", "To eat away the dead tissue", listOf("To keep mosquitoes away", "To warm the wound", "To pull the skin together"), H),
+        q("bio_rice_wheat_maize", "Rice, wheat, maize and sugar cane all belong to which plant family?", "Grasses", listOf("Legumes", "Lilies", "Palms"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -730,6 +755,16 @@ object BiologyQuestions {
         q("bio_mcgurk_effect_changes", "In the McGurk effect, what changes the speech sound you think you hear?", "Watching the speaker's lips", listOf("The pitch of background music", "How hungry you are", "Holding your breath"), X),
         q("bio_tibetans_thrive_high", "Tibetans thrive at high altitude partly thanks to a gene variant inherited from which extinct humans?", "Denisovans", listOf("Neanderthals", "Homo erectus", "Homo floresiensis"), X),
         q("bio_people_capgras_delusion", "People with Capgras delusion are convinced of what?", "Someone close was replaced by an impostor", listOf("They are made of glass", "They can read other people's minds", "They are being watched by aliens"), X),
-        q("bio_bank_robber_mcarthur", "Bank robber McArthur Wheeler, whose case inspired a famous study of overconfidence, smeared his face with what to hide from cameras?", "Lemon juice", listOf("Vaseline", "Toothpaste", "Baby oil"), X)
+        q("bio_bank_robber_mcarthur", "Bank robber McArthur Wheeler, whose case inspired a famous study of overconfidence, smeared his face with what to hide from cameras?", "Lemon juice", listOf("Vaseline", "Toothpaste", "Baby oil"), X),
+        q("bio_world_smallest_flowering", "Which is the world's smallest flowering plant, a floating green speck smaller than a grain of rice?", "Watermeal", listOf("Chickweed", "Pondweed", "Starwort"), X),
+        q("bio_humans_avocado_seeds", "Before humans, avocado seeds are thought to have been spread by which animals?", "Giant ground sloths", listOf("Fruit bats", "Toucans", "Spider monkeys"), X),
+        q("bio_darwin_tubercle_small", "Darwin's tubercle is a small bump that some people have on which part of the body?", "The ear", listOf("The elbow", "The skull", "The shinbone"), X),
+        q("bio_people_exploding_head", "What do people with 'exploding head syndrome' experience?", "A loud bang as they fall asleep", listOf("Sudden crushing headaches", "Bursts of anger on waking", "A feeling of heat in the skull"), X),
+        q("bio_uncombable_hair_syndrome", "In 'uncombable hair syndrome', why does the hair stick out and refuse to lie flat?", "Its strands are triangular, not round", listOf("It is full of static electricity", "It grows twice as fast", "It contains no keratin"), X),
+        q("bio_people_hyperthymesia_such", "People with hyperthymesia, such as actress Marilu Henner, can do what?", "Recall almost every day of their life", listOf("Read a whole page at a glance", "Go for days without sleep", "Feel no pain at all"), X),
+        q("bio_2010_experiment_slime", "In a 2010 experiment, a slime mould growing between oat flakes recreated the rail network of which city?", "Tokyo", listOf("London", "Paris", "New York"), X),
+        q("bio_2023_study_recorded", "A 2023 study recorded tomato and tobacco plants doing what when they were short of water or cut?", "Making ultrasonic popping sounds", listOf("Sweating out drops of sugar", "Turning their leaves blue", "Heating up by ten degrees"), X),
+        q("bio_youyou_won_2015", "Tu Youyou won a 2015 Nobel Prize for a malaria drug taken from which plant of old Chinese medicine?", "Sweet wormwood", listOf("Ginseng", "Ginkgo", "Liquorice"), X),
+        q("bio_children_conceived_dutch", "Children conceived during the Dutch 'Hunger Winter' of 1944-45 later had higher rates of what?", "Obesity and heart disease", listOf("Left-handedness", "Red hair", "Colour blindness"), X)
     )
 }

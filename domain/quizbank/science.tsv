@@ -161,6 +161,9 @@ sci_moon_waxing_happening	Easy	When the Moon is 'waxing', what is happening to i
 sci_magnets_stick_fridge	Easy	Why do magnets stick to most fridge doors?	The door is made of steel	The door is charged with static	The door's paint is sticky	The cold makes metal magnetic
 sci_lightning_ever_strike	Easy	Does lightning ever strike the same place twice?	Yes, tall towers get hit many times a year	No, the ground there loses its charge	Only about once in a hundred years	Only in hot, tropical countries
 sci_sitting_behind_closed	Easy	Sitting behind a closed car window on a sunny day, why do you rarely get sunburnt?	Glass blocks most burning UV rays	Glass turns UV rays into heat	The tint reflects all the sunlight	Moving air cools the skin
+sci_sealed_bag_crisps	Easy	A sealed bag of crisps puffs up like a pillow on a mountain road. Why?	The air pressure outside drops	The crisps give off gas when shaken	The cold makes the plastic shrink	The sun heats the bag from outside
+sci_glasses_fog_walk	Easy	Why do your glasses fog up when you walk into a warm room on a cold day?	Warm, damp air condenses on the cold lenses	Cold glass gives off its own water	Heat makes the lens plastic sweat	Static pulls dust onto the lenses
+sci_drink_through_straw	Easy	When you drink through a straw, what actually pushes the drink up into your mouth?	Air pressing down on the drink	Your tongue pulling the liquid	The straw's plastic attracting it	The cold drink being lighter than air
 sci_jowisz	Medium	Which planet of the Solar System is the largest?	Jupiter	Saturn	Neptune	Uranus
 sci_kopernik	Medium	Who proved that the Earth orbits the Sun, not the other way around?	Nicolaus Copernicus	Isaac Newton	Galileo Galilei	Johannes Kepler
 sci_grawitacja	Medium	Who formulated the law of universal gravitation?	Isaac Newton	Albert Einstein	Nikola Tesla	Michael Faraday
@@ -446,6 +449,14 @@ sci_see_annular_solar	Medium	What do you see during an annular solar eclipse?	A 
 sci_shooting_stars_made	Medium	Most shooting stars are made by bits of space dust about the size of what?	A grain of sand	A football	A car	A house
 sci_besides_earth_planets	Medium	Besides Earth, how many planets are easy to spot with the naked eye?	Five	Two	Seven	None
 sci_roughly_faster_sound	Medium	Roughly how much faster does sound travel in water than in air?	About four times	About half as fast	About 40 times	About the same
+sci_stretch_thick_rubber	Medium	Stretch a thick rubber band quickly and touch it to your lip. What do you notice?	It feels warmer	It feels colder	It feels wet	It gives a tiny shock
+sci_glow_stick_kept	Medium	Why does a glow stick kept in the freezer keep glowing for longer?	Cold slows down the chemical reaction	Frost reflects the light back inside	Cold stops the light leaking out	The plastic seals itself in the cold
+sci_freezer_door_often	Medium	Why is a freezer door often hard to open again just after you close it?	The air let in cools and its pressure drops	The rubber seal freezes solid in seconds	The motor locks the door while it cools	Ice crystals glue the hinges shut
+sci_2012_felix_baumgartner	Medium	In 2012, Felix Baumgartner became the first person to break the sound barrier without a vehicle. How?	Skydiving from the stratosphere	Riding a rocket-powered sled	Diving off a cliff in a wingsuit	Strapped to the wing of a jet
+sci_2005_huygens_probe	Medium	In 2005, the Huygens probe made the most distant landing ever, on which moon?	Titan	Europa	Ganymede	Enceladus
+sci_photos_taken_apollo	Medium	Why do the photos taken by Apollo astronauts on the Moon show almost no stars?	The cameras were set for the bright ground	The Moon's dust blocks out starlight	Stars cannot be seen from the Moon at all	NASA removed them to sharpen the photos
+sci_wet_shirt_look	Medium	Why does a wet T-shirt look darker than a dry one?	Less light bounces straight back off it	Water dissolves some of the dye	Water is darker in colour than air	The wet cloth shrinks and gets thicker
+sci_all_big_planets	Medium	Why are all big planets and moons round, while small asteroids can be lumpy?	Strong gravity pulls them into a ball	Fast spinning grinds their corners off	The solar wind polishes them smooth	They formed from drops of molten lava
 sci_einstein	Hard	Who formulated the theory of relativity?	Albert Einstein	Isaac Newton	Niels Bohr	Max Planck
 sci_penicylina	Hard	Who discovered penicillin?	Alexander Fleming	Louis Pasteur	Robert Koch	Jonas Salk
 sci_sila	Hard	What is the SI unit of force?	Newton	Joule	Watt	Pascal
@@ -654,6 +665,21 @@ sci_sparklers_burn_over	Hard	Sparklers burn at over 1,000 C. Why do their flying
 sci_ancient_greek_argued	Hard	Which ancient Greek first argued that the Earth goes around the Sun?	Aristarchus of Samos	Ptolemy of Alexandria	Aristotle of Stagira	Hipparchus of Nicaea
 sci_olbers_paradox_asks	Hard	'Olbers' paradox' asks a simple-sounding question. Which one?	Why is the night sky dark?	Why is the sky blue?	Why do stars twinkle?	Why does the Moon look bigger low down?
 sci_largest_meteorite_tonnes	Hard	The largest known meteorite, about 60 tonnes, still lies where it fell in which country?	Namibia	Australia	Mexico	Canada
+sci_concorde_body_grew	Hard	Concorde's body grew noticeably longer on every supersonic flight. Why?	Air friction heated its skin	Cabin pressure stretched the hull	The engines' pull stretched the frame	Its fuel tanks swelled as they emptied
+sci_kettle_often_noisiest	Hard	A kettle is often noisiest a little before the water boils, then goes quieter. Why?	Early steam bubbles collapse in cooler water	The metal stops expanding at 100 C	The heating element switches itself off	Air leaves the water all at once
+sci_every_years_saturn	Hard	Every 13 to 16 years, Saturn's rings almost vanish from view in telescopes. Why?	We see them exactly edge-on	They freeze and turn dark	Saturn's shadow covers them	The solar wind blows them thin
+sci_frozen_lakes_sometimes	Hard	Why do frozen lakes sometimes make eerie 'pew-pew' sounds like sci-fi lasers?	High notes travel faster through the ice	Fish knock against the ice from below	Wind whistles through holes in the ice	Air bubbles pop as they freeze solid
+sci_water_around_some	Hard	The water around some nuclear reactor cores glows an eerie blue. Why?	Particles outrun light in the water	A blue dye is added to spot leaks	The water is close to boiling	The fuel rods burn with blue flames
+sci_1908_tunguska_blast	Hard	The 1908 Tunguska blast flattened about 80 million trees, yet left no crater. Why?	The space rock exploded in the air	The crater filled up with a lake	The impact hit soft frozen mud	It was a lightning strike, not a rock
+sci_all_planets_orbit	Hard	Why do all the planets orbit the Sun in roughly the same flat plane?	They formed from one spinning disc	The Sun's magnetism holds them level	The Milky Way's pull flattened them	They drifted there over billions of years
+sci_drake_equation_try	Hard	What does the Drake equation try to estimate?	How many alien civilisations could talk to us	How many more years the Sun will keep shining	How fast the whole Universe is expanding	How many planets orbit a typical star
+sci_hubble_deep_field	Hard	For the Hubble Deep Field, astronomers aimed at a tiny patch of sky that looked empty. What did they find?	Thousands of galaxies	A handful of faint stars	A lone giant black hole	Nothing but darkness
+sci_anniversary_landing_2013	Hard	On the first anniversary of its landing, in 2013, what did NASA's Curiosity rover do on Mars?	Hummed 'Happy Birthday' to itself	Drew a smiley face in the dust	Wrote its own name in the sand	Fired its laser like a firework
+sci_small_part_snow	Hard	A small part of the 'snow' on an untuned analogue TV came from where?	The afterglow of the Big Bang	Earth's magnetic field	Moonlight on the aerial	Heat from the Sun's core
+sci_1650s_teams_horses	Hard	In the 1650s, teams of horses failed to pull apart two metal hemispheres in Magdeburg. What held them together?	Air pressure around a vacuum	Powerful natural magnets	Hot wax that had set hard	Static electricity
+sci_distant_train_often	Hard	Why can a distant train often be heard more clearly on a calm night?	Cool air near the ground bends sound back down	Sound moves faster through dark night air	Dew on the ground makes every sound louder	Night air is far thinner than it is by day
+sci_astronauts_often_see	Hard	Astronauts often see brief flashes of light even with their eyes shut. What causes them?	Cosmic rays passing through their eyes	Starlight shining through their eyelids	Sparks from the static in their suits	Their eyes adjusting to weightlessness
+sci_planet_kepler_16b	Hard	The planet Kepler-16b was nicknamed 'Tatooine' after the 'Star Wars' world. Why?	It orbits two suns	It is a desert planet	It has two moons	It is covered in sand dunes
 sci_kwant	Expert	Who launched quantum theory?	Max Planck	Albert Einstein	Werner Heisenberg	Erwin Schrodinger
 sci_entropia	Expert	Which law of thermodynamics states that entropy increases?	The second	The first	The third	The zeroth
 sci_hubble	Expert	Who discovered that the Universe is expanding?	Edwin Hubble	Albert Einstein	Carl Sagan	Georges Lemaitre
@@ -754,3 +780,12 @@ sci_kessler_syndrome_warn	Expert	What does the 'Kessler syndrome' warn about?	A 
 sci_penzias_wilson_blamed	Expert	Penzias and Wilson first blamed the faint hiss of the Big Bang, picked up in 1964, on what?	Pigeon droppings in their antenna	Signals from a nearby radio station	Soviet spy satellites overhead	Lightning in distant storms
 sci_planet_found_around	Expert	The first planet found around a Sun-like star, in 1995, surprised astronomers because it was what?	A giant orbiting closer than Mercury does	A rocky world just like our Earth	A ringed giant planet like Saturn	A moon drifting with no planet
 sci_far_side_moon	Expert	Why does the far side of the Moon look so different from the near side?	It has almost no dark 'seas'	It is covered in ice	It is made of darker rock	It has no craters at all
+sci_soviet_venera_lander	Expert	The Soviet Venera 13 lander touched down on Venus in 1982. Roughly how long did it survive?	About 2 hours	About 2 days	About 2 weeks	About 2 minutes
+sci_1974_arecibo_radio	Expert	In 1974, the Arecibo radio telescope beamed a picture message towards what?	A cluster of stars	The nearest star	The Andromeda Galaxy	The centre of the Milky Way
+sci_1800s_astronomers_hunted	Expert	In the 1800s, astronomers hunted for 'Vulcan', a planet supposedly hidden where?	Inside the orbit of Mercury	Beyond the orbit of Neptune	Between Mars and Jupiter	Behind the Sun, opposite Earth
+sci_1999_ashes_became	Expert	In 1999, whose ashes became the first human remains to reach the Moon?	Eugene Shoemaker's	Neil Armstrong's	Carl Sagan's	Wernher von Braun's
+sci_pressure_waves_around	Expert	Pressure waves around the black hole in the Perseus galaxy cluster match a note about how far below middle C?	57 octaves	7 octaves	17 octaves	570 octaves
+sci_protons_sun_core	Expert	Protons in the Sun's core are too slow to fuse by classical physics. What lets them fuse anyway?	Quantum tunnelling	The Sun's magnetic field	Collisions with neutrinos	Dark matter in the core
+sci_sprites_seen_high	Expert	What are 'sprites', seen high above some big thunderstorms?	Red flashes of electricity	Green glows at sunset	Sparks on ships' masts	Glowing balls of ice
+sci_moon_saturn_porous	Expert	Which moon of Saturn is so porous that it looks like a giant sponge?	Hyperion	Mimas	Iapetus	Dione
+sci_chinese_astronomers_recorded	Expert	Chinese astronomers recorded the star explosion that made the Crab Nebula in 1054. What was remarkable about it?	It was visible in daylight for weeks	It turned the night sky red	It could be heard as a loud bang	It lit up only the southern sky

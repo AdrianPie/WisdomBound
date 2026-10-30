@@ -180,7 +180,10 @@ object TechnologyQuestions {
         q("tec_optical_sensors_took", "Before optical sensors took over, what rolled around underneath a computer mouse?", "A rubber ball", listOf("A small magnet", "A felt pad", "A glass bead"), E),
         q("tec_1980s_boombox", "In the 1980s, what was a 'boombox'?", "A big portable stereo", listOf("A home drum machine", "A loud car alarm", "A jukebox in a bar"), E),
         q("tec_keys_keyboards_small", "Why do the F and J keys on most keyboards have small raised bumps?", "So you can find them without looking", listOf("To mark the most-used letters", "To stop the keys sticking", "To help the keys spring back"), E),
-        q("tec_vcr_let_home", "What did a VCR let you do at home?", "Record TV shows on tape", listOf("Play music from vinyl", "Make video calls", "Print photos from film"), E)
+        q("tec_vcr_let_home", "What did a VCR let you do at home?", "Record TV shows on tape", listOf("Play music from vinyl", "Make video calls", "Print photos from film"), E),
+        q("tec_computer_mouse_get", "Why did the computer mouse get its name?", "Its cable looked like a tail", listOf("It was first tested on lab mice", "It squeaked when it moved", "Its inventor kept pet mice"), E),
+        q("tec_phone_keypad_sits", "On a phone keypad, 1 sits in the top-left corner. Which number is there on a calculator?", "7", listOf("9", "0", "3"), E),
+        q("tec_people_think_email", "Many people think 'Re:' in an email subject means 'reply'. What does it really mean?", "In the matter of", listOf("Read again", "Respond at once", "Received"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -445,7 +448,16 @@ object TechnologyQuestions {
         q("tec_qantas_australia_national", "The 'Q' in Qantas, Australia's national airline, stands for which place?", "Queensland", listOf("Queenstown", "Quebec", "Qatar"), M),
         q("tec_car_brand_audi", "The car brand Audi takes its name from a Latin word meaning what?", "'Listen!'", listOf("'Gold'", "'I drive'", "'Four'"), M),
         q("tec_apple_1984_advert", "Apple's famous '1984' TV advert for the Macintosh was directed by which film-maker?", "Ridley Scott", listOf("Steven Spielberg", "George Lucas", "James Cameron"), M),
-        q("tec_london_millennium_bridge", "Why was London's Millennium Bridge shut just two days after it opened in 2000?", "It swayed as crowds walked across", listOf("A ship hit one of its piers", "Its main cable began to crack", "Its lights dazzled boat crews"), M)
+        q("tec_london_millennium_bridge", "Why was London's Millennium Bridge shut just two days after it opened in 2000?", "It swayed as crowds walked across", listOf("A ship hit one of its piers", "Its main cable began to crack", "Its lights dazzled boat crews"), M),
+        q("tec_power_symbol_buttons", "The power symbol on many buttons, a line through a broken circle, comes from which two digits?", "1 and 0", listOf("0 and 0", "1 and 1", "6 and 9"), M),
+        q("tec_words_typed_using", "Which of these words can be typed using only the top row of letters on a QWERTY keyboard?", "TYPEWRITER", listOf("KEYBOARDS", "COMPUTERS", "PROPERTIES"), M),
+        q("tec_airliner_windows_tiny", "Most airliner windows have a tiny hole in one of their panes. What is it for?", "Balancing pressure between the panes", listOf("Letting fresh air into the cabin", "Draining away rainwater", "Stopping ice forming outside"), M),
+        q("tec_two_pilots_airliners", "Why do the two pilots on many airliners eat different meals?", "So food poisoning cannot strike both", listOf("So the captain gets the better food", "So they don't share a single tray", "So one of them stays hungry and alert"), M),
+        q("tec_words_ever_recorded", "What were the first words ever recorded on the phonograph, in 1877?", "'Mary had a little lamb'", listOf("'Mr Watson, come here'", "'Hello, can you hear me?'", "'God save the Queen'"), M),
+        q("tec_tin_cans_arrived", "Tin cans arrived decades before the can opener. How were early cans opened?", "With a hammer and chisel", listOf("By heating them until they burst", "By twisting off a screw lid", "With a pull-ring on the lid"), M),
+        q("tec_ferris_wheel_1893", "The first Ferris wheel, at the 1893 Chicago world's fair, was built to outdo which landmark?", "The Eiffel Tower", listOf("Big Ben", "The Statue of Liberty", "The Crystal Palace"), M),
+        q("tec_spire_top_empire", "The spire on top of the Empire State Building was first designed as what?", "A mooring mast for airships", listOf("A giant flagpole", "A church-style bell tower", "A searchlight tower"), M),
+        q("tec_apple_marketing_images", "Apple's marketing images of iPhones almost always show which time on the screen?", "9:41", listOf("10:10", "12:00", "7:30"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -642,7 +654,21 @@ object TechnologyQuestions {
         q("tec_ford_car_late", "Which Ford car of the late 1950s flopped so badly that its name became a byword for failure?", "The Edsel", listOf("The Pinto", "The Thunderbird", "The Fairlane"), H),
         q("tec_apple_handheld_1993", "Which Apple handheld of 1993 was mocked for its poor handwriting recognition?", "The Newton", listOf("The Lisa", "The Pippin", "The Cube"), H),
         q("tec_bluetooth_logo_made", "The Bluetooth logo is made by joining two runes. What do they stand for?", "The initials H and B", listOf("The letters B and T", "The rune for 'link'", "Two crossed lightning bolts"), H),
-        q("tec_stylus_etch_sketch", "What does the stylus of an Etch A Sketch scrape off the back of the screen to draw a line?", "Aluminium powder", listOf("Iron filings", "Chalk dust", "Graphite"), H)
+        q("tec_stylus_etch_sketch", "What does the stylus of an Etch A Sketch scrape off the back of the screen to draw a line?", "Aluminium powder", listOf("Iron filings", "Chalk dust", "Graphite"), H),
+        q("tec_ethernet_inspired", "The name 'Ethernet' was inspired by what?", "The 'ether' once thought to carry light", listOf("A chemical used in early cables", "The inventor's daughter, Ethel", "An old word for a fishing net"), H),
+        q("tec_faroe_islands_persuade", "How did the Faroe Islands persuade Google to map their roads in 2016?", "By strapping cameras to sheep", listOf("By sending a camera on a fishing boat", "By mapping it with kites", "By using drones along the cliffs"), H),
+        q("tec_2004_report_found", "A 2004 report found what about most pedestrian 'walk' buttons in New York City?", "They no longer did anything", listOf("They gave walkers longer to cross", "They had been fitted with cameras", "They only worked at night"), H),
+        q("tec_harry_beck_drew", "Harry Beck drew the famous 1931 London Underground map, ignoring real distances. What was his job?", "An engineering draughtsman", listOf("A professional mapmaker", "A bus route planner", "An architect"), H),
+        q("tec_nasa_ingenuity_helicopter", "NASA's Ingenuity helicopter carried a tiny piece of which famous aircraft to Mars?", "The Wright brothers' Flyer", listOf("Lindbergh's Spirit of St Louis", "Amelia Earhart's Electra", "The first Boeing 747"), H),
+        q("tec_smoking_banned_airliners", "Smoking has been banned on airliners for decades, yet rules still require what by lavatory doors?", "An ashtray", listOf("A cigar cutter", "A matchbox holder", "A pipe rack"), H),
+        q("tec_air_canada_boeing", "Why did an Air Canada Boeing 767, the 'Gimli Glider', run out of fuel in mid-air in 1983?", "Its fuel was worked out in pounds, not kilograms", listOf("A fuel tank sprang a leak over the sea", "The crew forgot to refuel at a stopover", "Ground crew filled it with the wrong fuel"), H),
+        q("tec_contrary_popular_myth", "Contrary to the popular myth, how did NASA get its famous 'space pen'?", "A private company paid to develop it", listOf("NASA spent millions designing it", "It was copied from a Soviet design", "A schoolboy invented it in a contest"), H),
+        q("tec_early_amazon_staff", "Early Amazon staff worked at desks made from what, to save money?", "Wooden doors", listOf("Shipping pallets", "Old school benches", "Packing crates"), H),
+        q("tec_altavista_1997_translation", "AltaVista's 1997 translation service 'Babel Fish' was named after a creature from which book?", "'The Hitchhiker's Guide to the Galaxy'", listOf("'Alice's Adventures in Wonderland'", "'Twenty Thousand Leagues Under the Sea'", "'Gulliver's Travels'"), H),
+        q("tec_settling_firefox_browser", "Before settling on the name 'Firefox', the browser was released under which names?", "Phoenix, then Firebird", listOf("Netscape, then Navigator", "Mosaic, then Camino", "Comet, then Meteor"), H),
+        q("tec_electronics_giant_originally", "The 'LG' in the electronics giant's name originally stood for what?", "Lucky-Goldstar", listOf("Life's Good", "Light and Glass", "Lee Group"), H),
+        q("tec_transatlantic_telegraph_cable", "The first transatlantic telegraph cable, laid in 1858, worked for how long before failing?", "About three weeks", listOf("About three hours", "About three years", "About thirty years"), H),
+        q("tec_1884_barnum_led", "In 1884, P. T. Barnum led 21 elephants across New York's new Brooklyn Bridge. Why?", "To show the public it was safe", listOf("To celebrate the circus's anniversary", "To test it before it opened", "To win a bet with the engineer"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -736,6 +762,15 @@ object TechnologyQuestions {
         q("tec_1961_ibm_7094", "In 1961, an IBM 7094 at Bell Labs became famous for singing which song?", "'Daisy Bell'", listOf("'Happy Birthday to You'", "'Yankee Doodle'", "'Twinkle, Twinkle, Little Star'"), X),
         q("tec_true_television_picture", "The first true television picture, made in a London workshop in 1925, showed the face of what?", "A ventriloquist's dummy", listOf("A pet parrot", "King George V", "A marble statue"), X),
         q("tec_1898_exhibition_new", "At an 1898 exhibition in New York, Nikola Tesla amazed crowds with which invention?", "A radio-controlled boat", listOf("A death ray", "A flying car", "A wireless telephone"), X),
-        q("tec_shift_key_shift", "Why is the Shift key called 'Shift'?", "Typewriters physically shifted for capitals", listOf("It shifts text one space to the right", "It moved the paper to a new line", "It switched the ink ribbon's colour"), X)
+        q("tec_shift_key_shift", "Why is the Shift key called 'Shift'?", "Typewriters physically shifted for capitals", listOf("It shifts text one space to the right", "It moved the paper to a new line", "It switched the ink ribbon's colour"), X),
+        q("tec_song_engineer_karlheinz", "Which song did engineer Karlheinz Brandenburg use over and over to fine-tune the MP3 format?", "'Tom's Diner'", listOf("'Bohemian Rhapsody'", "'Imagine'", "'Billie Jean'"), X),
+        q("tec_odd_scott_martinville", "What was odd about Scott de Martinville's 1860 'phonautograph' sound recordings?", "They were never meant to be played back", listOf("They were carved into wax candles", "They could only record whistling", "They were made on sheets of glass"), X),
+        q("tec_jamais_contente_car", "'La Jamais Contente', the first car to break 100 km/h, in 1899, was powered by what?", "Electricity", listOf("Steam", "Petrol", "Diesel"), X),
+        q("tec_google_ever_tweet", "Google's first-ever tweet, in 2009, was written in binary. What did it say?", "I'm feeling lucky", listOf("Hello, world", "Don't be evil", "Search is here"), X),
+        q("tec_apple_command_key", "Apple's 'Command' key symbol was borrowed from signs in which country, marking places of interest?", "Sweden", listOf("Japan", "Germany", "Switzerland"), X),
+        q("tec_two_letters_missing", "Which two letters were missing from the letters printed on old American phone dials?", "Q and Z", listOf("X and Y", "J and K", "V and W"), X),
+        q("tec_early_mac_alert", "Why was an early Mac alert sound named 'Sosumi'?", "A joke on 'so sue me' during a trademark fight", listOf("It was a Japanese word for 'beep'", "It was the name of an engineer's cat", "It spelled a secret message backwards"), X),
+        q("tec_chinese_phone_maker", "The name of the Chinese phone maker Xiaomi literally means what?", "Millet", listOf("Little rice cake", "Small dragon", "Bright star"), X),
+        q("tec_1978_welders_secretly", "In 1978, why were welders secretly sent at night to New York's new Citicorp tower?", "Strong winds could have toppled it", listOf("Its windows kept falling out", "Its foundations were sinking", "Its spire was struck by lightning"), X)
     )
 }

@@ -100,6 +100,8 @@ mat_metre_fence_post	Easy	A 10-metre fence has a post every metre, including one
 mat_10th_queue_people	Easy	You are 10th in a queue, and 10 people are standing behind you. How many people are in the queue?	20	19	21	11
 mat_two_people_play	Easy	Two people play rock, paper, scissors, each choosing at random. How likely is a draw?	1 in 3	1 in 2	1 in 9	1 in 6
 mat_different_outfits_put	Easy	How many different outfits can you put together from 3 shirts and 4 pairs of trousers?	12	7	9	16
+mat_infinite_monkey_theorem	Easy	The 'infinite monkey theorem' says a monkey hitting keys at random forever would almost surely type the complete works of whom?	William Shakespeare	Charles Dickens	Homer	Leo Tolstoy
+mat_asked_pick_random	Easy	Asked to pick a 'random' whole number from 1 to 10, which do people choose most often?	7	1	5	10
 day2_procent_skladany	Medium	What is compound interest?	Interest earned on interest already added	A one-time fee	A fixed monthly cost	Interest paid only at the end
 day2_inflacja	Medium	What does inflation mean for your savings?	The same money buys less over time	Your balance shrinks	Interest rates always fall	Prices stay fixed
 mat_pi	Medium	What is the approximate value of pi?	3.14	3.41	2.71	3.04
@@ -266,6 +268,15 @@ mat_some_mathematicians_want	Medium	Some mathematicians want to replace pi with 
 mat_bottle_inside_outside	Medium	Which 'bottle' has no inside and no outside, and cannot be built in 3D without passing through itself?	A Klein bottle	A Leyden jar	A Mobius bottle	A Florence flask
 mat_snack_famously_made	Medium	Which snack is famously made in the saddle shape that mathematicians call a hyperbolic paraboloid?	Pringles	Doritos	Bugles	Cheetos
 mat_roughly_odds_matching	Medium	Roughly what are the odds of matching all six numbers in a lottery that draws 6 balls from 49?	About 1 in 14 million	About 1 in 14,000	About 1 in 1.4 billion	About 1 in 140,000
+mat_huge_2023_study	Medium	A huge 2023 study of over 350,000 coin tosses found that a coin lands slightly more often how?	On the same side it started	Heads up	Tails up	On the side with the bigger picture
+mat_whole_numbers_100	Medium	How many whole numbers from 1 to 100 contain the digit 7?	19	10	20	11
+mat_numbers_ending_squaring	Medium	Numbers ending in 5 have a squaring shortcut. What is 65 squared?	4225	3625	4025	4325
+mat_triangle_drawn_surface	Medium	Can a triangle drawn on the surface of a globe have three right angles?	Yes, for example from the pole to the equator	No, its angles always add up to 180 degrees	Only on a globe smaller than a football	Only if one of its sides curves inwards
+mat_month_friday_13th	Medium	A month has a Friday the 13th exactly when the 1st of that month falls on which day?	Sunday	Friday	Monday	Saturday
+mat_ancient_paradox_asks	Medium	Which ancient paradox asks how many grains of sand you can take away before a heap stops being a heap?	The sorites paradox	Zeno's paradox	The liar paradox	Russell's paradox
+mat_columnist_explained_monty	Medium	Which columnist explained the Monty Hall problem correctly in 1990, then received thousands of letters insisting she was wrong?	Marilyn vos Savant	Ann Landers	Erma Bombeck	Dear Abby
+mat_spotify_make_shuffle	Medium	Why did Spotify make its 'shuffle' less random?	Truly random play felt streaky to listeners	Random play used too much battery	Record labels demanded equal plays	A random shuffle broke the app
+mat_martingale_betting_system	Medium	The 'martingale' betting system doubles your stake after every loss. What stops it working in a real casino?	Table limits and running out of money	The wheel remembers your bets	Casinos ban doubling a bet	Odds change after each loss
 mat_silnia_5	Hard	What is 5! (5 factorial)?	120	100	60	150
 mat_fibonacci	Hard	What number comes next in the sequence 1, 1, 2, 3, 5, 8...?	13	11	12	16
 mat2_logarytm_2_8	Hard	What is log base 2 of 8?	3	2	4	8
@@ -388,6 +399,19 @@ mat_sam_loyd_said	Hard	Sam Loyd is said to have offered $1,000 for solving his s
 mat_car_odometer_shows	Hard	A car's odometer shows the palindrome 15951. Two hours later it shows the next palindrome. What was the average speed?	55 miles per hour	50 miles per hour	60 miles per hour	110 miles per hour
 mat_flip_fair_coin_2	Hard	If you flip a fair coin 10 times, roughly how likely are you to get exactly 5 heads?	About 25%	About 50%	About 10%	About 75%
 mat_year_not_leap_2	Hard	In a year that is not a leap year, which month always starts on the same day of the week as January?	October	July	April	March
+mat_while_doodling_numbers	Hard	While doodling numbers in a spiral during a dull talk in 1963, what did Stanislaw Ulam notice?	Primes cluster along diagonal lines	Square numbers form a perfect circle	Every row adds up to the same total	Odd numbers vanish from the middle
+mat_word_algebra_comes_2	Hard	The word 'algebra' comes from 'al-jabr'. In Spain, an 'algebrista' was once also which kind of craftsman?	A bone-setter	A clockmaker	A goldsmith	A glassblower
+mat_world_war_abraham	Hard	In World War II, Abraham Wald told the US military to armour bombers where returning planes had what?	No bullet holes	The most bullet holes	Engine trouble	Fuel leaks
+mat_1906_francis_galton	Hard	In 1906, Francis Galton studied 787 guesses of an ox's weight at a fair. What surprised him?	The middle guess was within 1% of the truth	Nobody came within 100 kg of the truth	The butchers guessed worst of all	Most guesses were exactly right
+mat_1913_gamblers_monte	Hard	In 1913, gamblers at Monte Carlo lost millions betting on red. How many times in a row did the ball land on black?	26	13	7	52
+mat_chevalier_mere_won	Hard	The Chevalier de Mere won by betting on a six in four rolls. Why did his bet on a double six in 24 rolls of two dice disappoint him?	It lost slightly more often than it won	It won exactly half the time	Casinos refused to take the bet	Two dice cannot land a double six
+mat_according_benford_law	Hard	According to Benford's law, in many real-world data sets, about how often is the first digit a 1?	About 30%	About 11%	About 50%	About 5%
+mat_boxes_hold_two	Hard	Boxes hold two gold coins, two silver coins and one of each. You pick a box at random and draw a gold coin. What is the chance the other coin is gold?	2 in 3	1 in 2	1 in 3	3 in 4
+mat_economist_stefan_mandel	Hard	How did economist Stefan Mandel win national lotteries again and again?	He bought every possible combination	He found a flaw in the ball machine	He bribed the officials who drew the balls	He always picked birthdays of winners
+mat_must_least_two	Hard	Why must at least two Londoners have exactly the same number of hairs on their heads?	There are more Londoners than possible hair counts	Hair counts are passed down within families	Hairs always grow back in fixed numbers	Every adult head has exactly 100,000 hairs
+mat_bible_describes_round	Hard	The Bible describes a round basin 10 cubits across and 30 cubits around. What value of pi does that imply?	3	3.14	3.2	3.5
+mat_1843_william_rowan	Hard	In 1843, William Rowan Hamilton carved a formula into a Dublin bridge in a flash of inspiration. What had he discovered?	Quaternions	Logarithms	Prime numbers	Imaginary numbers
+mat_dropping_needles_random	Hard	Dropping needles at random onto a floor of parallel lines can be used to estimate which number?	Pi	e	The golden ratio	The square root of 2
 mat_liczba_e	Expert	What is the approximate value of e?	2.72	3.14	1.62	2.24
 mat_liczby_doskonale	Expert	Which of these numbers is perfect (equal to the sum of its divisors)?	28	24	30	36
 mat_duzy_pierwszy	Expert	Which of these numbers is NOT prime?	91	89	97	83
@@ -453,3 +477,8 @@ mat_petersburg_paradox_game	Expert	In the 'St Petersburg paradox', a game's priz
 mat_legend_says_priests	Expert	Legend says priests are moving a 64-disc Tower of Hanoi. At one move per second, roughly how long will they need?	About 585 billion years	About 64 days	About 6,400 years	About 2 million years
 mat_put_points_circle	Expert	Put points on a circle and join every pair with straight lines. 2, 3, 4 and 5 points can cut it into 2, 4, 8 and 16 regions. What is the most that 6 points can give?	31	32	30	36
 mat_curve_gives_fastest	Expert	Which curve gives the fastest slide for a ball rolling between two points, faster even than a straight ramp?	A cycloid	A catenary	A parabola	A circular arc
+mat_1973_berkeley_seemed	Expert	In 1973, UC Berkeley seemed to favour men overall, yet most departments slightly favoured women. What is this effect called?	Simpson's paradox	Benford's law	The gambler's fallacy	Zeno's paradox
+mat_any_moment_two	Expert	At any moment, two exactly opposite points on Earth have the same temperature and air pressure. Which theorem guarantees it?	The Borsuk-Ulam theorem	Pythagoras' theorem	Fermat's Last Theorem	The four colour theorem
+mat_ludolph_van_ceulen	Expert	Ludolph van Ceulen spent years working out pi to 35 decimal places. Where were the digits carved?	On his tombstone	Over his front door	On a church bell	Into a city wall
+mat_drill_hole_straight	Expert	Drill a hole straight through the centre of a ball so the ring left over is 6 cm tall. What does the ring's volume depend on?	Only its 6 cm height	Only the ball's size	Only the hole's width	Both height and ball size
+mat_ant_crawls_along	Expert	An ant crawls at 1 cm/s along a 1 km rubber rope that stretches evenly by 1 km every second. Does it ever reach the end?	Yes, after an enormously long time	No, it falls further behind for ever	No, it gets stuck halfway	Yes, in under an hour

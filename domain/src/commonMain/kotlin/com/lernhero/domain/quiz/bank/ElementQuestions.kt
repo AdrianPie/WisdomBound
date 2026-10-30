@@ -90,7 +90,10 @@ object ElementQuestions {
         q("ele_shiny_silver_lining", "The shiny silver lining inside a crisp packet is a very thin layer of which metal?", "Aluminium", listOf("Silver", "Tin", "Zinc"), E),
         q("ele_whitish_bloom_appears", "What is the whitish 'bloom' that appears on old chocolate?", "Crystals of fat or sugar", listOf("Mould growing on it", "Dust from the wrapper", "Dried milk powder"), E),
         q("ele_disposable_hand_warmer", "Why does a disposable hand warmer heat up once you open its packet?", "Iron powder inside starts to rust", listOf("A tiny battery switches on", "Water inside begins to boil", "It releases stored sunlight"), E),
-        q("ele_hand_sanitiser_gels", "Most hand sanitiser gels kill germs with which main ingredient?", "Alcohol", listOf("Bleach", "Vinegar", "Ammonia"), E)
+        q("ele_hand_sanitiser_gels", "Most hand sanitiser gels kill germs with which main ingredient?", "Alcohol", listOf("Bleach", "Vinegar", "Ammonia"), E),
+        q("ele_mars_looks_red", "Mars looks red because its dust is rich in a compound of which element?", "Iron", listOf("Copper", "Sulfur", "Silicon"), E),
+        q("ele_gas_fire_extinguishers", "Which gas do many fire extinguishers spray to smother flames without leaving a wet mess?", "Carbon dioxide", listOf("Helium", "Hydrogen", "Neon"), E),
+        q("ele_actually_makes_mood", "What actually makes a mood ring change colour?", "Changes in skin temperature", listOf("Changes in your mood hormones", "Sweat reacting with the metal", "Light from your pulse"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -213,7 +216,13 @@ object ElementQuestions {
         q("ele_cloud_seeding_used", "Cloud seeding, used to coax rain or snow from clouds, usually sprays crystals of which compound?", "Silver iodide", listOf("Copper sulfate", "Potassium nitrate", "Lead oxide"), M),
         q("ele_buckyballs_football_shaped", "Buckyballs, football-shaped molecules named after the architect Buckminster Fuller, are made of which element?", "Carbon", listOf("Silicon", "Boron", "Sulfur"), M),
         q("ele_nail_polish_removers", "Most nail polish removers dissolve the varnish with which solvent?", "Acetone", listOf("Turpentine", "Bleach", "Ammonia"), M),
-        q("ele_world_coins_ancient", "The world's first coins, from ancient Lydia, were made of electrum, a natural blend of gold and which metal?", "Silver", listOf("Copper", "Tin", "Platinum"), M)
+        q("ele_world_coins_ancient", "The world's first coins, from ancient Lydia, were made of electrum, a natural blend of gold and which metal?", "Silver", listOf("Copper", "Tin", "Platinum"), M),
+        q("ele_must_bleach_never", "Why must bleach never be mixed with ammonia-based cleaners?", "They give off toxic gases", listOf("They cancel each other out", "They burst into flames", "They freeze into a gel"), M),
+        q("ele_energy_saving_fluorescent", "Energy-saving fluorescent lamps should not go in the bin because they contain a little of which toxic metal?", "Mercury", listOf("Lead", "Cadmium", "Arsenic"), M),
+        q("ele_smell_seaside_comes", "The 'smell of the seaside' comes largely from a gas given off by plankton. Which element gives it its whiff?", "Sulfur", listOf("Iodine", "Chlorine", "Sodium"), M),
+        q("ele_blonde_hair_turn", "Blonde hair can turn green after a lot of swimming. Which element is really to blame?", "Copper", listOf("Chlorine", "Iron", "Zinc"), M),
+        q("ele_pink_stomach_remedy", "The pink stomach remedy Pepto-Bismol takes its name from which metal it contains?", "Bismuth", listOf("Barium", "Beryllium", "Magnesium"), M),
+        q("ele_perfectly_pure_water", "Perfectly pure water barely conducts electricity. What lets ordinary tap water conduct?", "Dissolved salts and minerals", listOf("Its oxygen atoms", "Its hydrogen atoms", "Tiny bubbles of air"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -316,7 +325,12 @@ object ElementQuestions {
         q("ele_neon_signs_glow", "'Neon' signs that glow blue usually hold no neon at all. Which gas, with a trace of mercury, do they use?", "Argon", listOf("Helium", "Hydrogen", "Chlorine"), H),
         q("ele_hold_sheet_gold", "Hold a sheet of gold leaf up to a lamp. What colour is the light that shines through it?", "Green", listOf("Red", "Golden yellow", "Violet"), H),
         q("ele_ships_carry_blocks", "Why do many ships carry blocks of zinc bolted to their steel hulls?", "The zinc corrodes instead of the hull", listOf("They balance the ship's weight", "They keep barnacles away", "They steady the compass"), H),
-        q("ele_ruby_red_cranberry", "Ruby-red 'cranberry glass' gets its colour from a tiny pinch of which precious metal?", "Gold", listOf("Silver", "Platinum", "Palladium"), H)
+        q("ele_ruby_red_cranberry", "Ruby-red 'cranberry glass' gets its colour from a tiny pinch of which precious metal?", "Gold", listOf("Silver", "Platinum", "Palladium"), H),
+        q("ele_hope_diamond_owes", "The famous Hope Diamond owes its deep blue colour to traces of which element?", "Boron", listOf("Copper", "Cobalt", "Titanium"), H),
+        q("ele_vitamin_b12_vitamin", "Vitamin B12 is the only vitamin built around a metal atom. Which metal?", "Cobalt", listOf("Iron", "Zinc", "Magnesium"), H),
+        q("ele_rub_little_metal", "Rub a little of which metal onto an aluminium can and the can soon turns brittle enough to poke a finger through?", "Gallium", listOf("Tin", "Lead", "Zinc"), H),
+        q("ele_until_1950_soft", "Until about 1950, the soft drink 7 Up contained a mood-calming compound of which element?", "Lithium", listOf("Potassium", "Bromine", "Sodium"), H),
+        q("ele_voyager_space_probes", "The Voyager space probes still run on heat from the decay of which element?", "Plutonium", listOf("Uranium", "Radium", "Polonium"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -387,6 +401,7 @@ object ElementQuestions {
         q("ele_element_means_new", "Which element's name means 'new twin' in Greek?", "Neodymium", listOf("Praseodymium", "Didymium", "Neon"), X),
         q("ele_element_comes_greek_3", "Which element's name comes from the Greek for 'heavy'?", "Barium", listOf("Lead", "Osmium", "Tungsten"), X),
         q("ele_fluorine_injured_killed", "Fluorine injured or killed several chemists who tried to isolate it. Who finally succeeded, in 1886?", "Henri Moissan", listOf("Humphry Davy", "Robert Bunsen", "William Ramsay"), X),
-        q("ele_precious_pigment_ultramarine", "The precious pigment ultramarine, ground from lapis lazuli, owes its blue colour to which element?", "Sulfur", listOf("Cobalt", "Copper", "Iron"), X)
+        q("ele_precious_pigment_ultramarine", "The precious pigment ultramarine, ground from lapis lazuli, owes its blue colour to which element?", "Sulfur", listOf("Cobalt", "Copper", "Iron"), X),
+        q("ele_rare_earth_element", "Which rare-earth element is named after the Finnish chemist who discovered the first rare earth, yttria, in 1794?", "Gadolinium", listOf("Samarium", "Europium", "Lutetium"), X)
     )
 }

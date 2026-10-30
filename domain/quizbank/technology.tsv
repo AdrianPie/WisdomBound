@@ -155,6 +155,9 @@ tec_optical_sensors_took	Easy	Before optical sensors took over, what rolled arou
 tec_1980s_boombox	Easy	In the 1980s, what was a 'boombox'?	A big portable stereo	A home drum machine	A loud car alarm	A jukebox in a bar
 tec_keys_keyboards_small	Easy	Why do the F and J keys on most keyboards have small raised bumps?	So you can find them without looking	To mark the most-used letters	To stop the keys sticking	To help the keys spring back
 tec_vcr_let_home	Easy	What did a VCR let you do at home?	Record TV shows on tape	Play music from vinyl	Make video calls	Print photos from film
+tec_computer_mouse_get	Easy	Why did the computer mouse get its name?	Its cable looked like a tail	It was first tested on lab mice	It squeaked when it moved	Its inventor kept pet mice
+tec_phone_keypad_sits	Easy	On a phone keypad, 1 sits in the top-left corner. Which number is there on a calculator?	7	9	0	3
+tec_people_think_email	Easy	Many people think 'Re:' in an email subject means 'reply'. What does it really mean?	In the matter of	Read again	Respond at once	Received
 tec_cpu	Medium	What does the abbreviation CPU stand for?	Central Processing Unit	Random-access memory	Graphics card	Hard drive
 tec_android_firma	Medium	Which company develops the Android operating system?	Google	Apple	Microsoft	Meta
 tec_telefon_bell	Medium	Who patented the telephone?	Alexander Graham Bell	Thomas Edison	Guglielmo Marconi	Samuel Morse
@@ -416,6 +419,15 @@ tec_qantas_australia_national	Medium	The 'Q' in Qantas, Australia's national air
 tec_car_brand_audi	Medium	The car brand Audi takes its name from a Latin word meaning what?	'Listen!'	'Gold'	'I drive'	'Four'
 tec_apple_1984_advert	Medium	Apple's famous '1984' TV advert for the Macintosh was directed by which film-maker?	Ridley Scott	Steven Spielberg	George Lucas	James Cameron
 tec_london_millennium_bridge	Medium	Why was London's Millennium Bridge shut just two days after it opened in 2000?	It swayed as crowds walked across	A ship hit one of its piers	Its main cable began to crack	Its lights dazzled boat crews
+tec_power_symbol_buttons	Medium	The power symbol on many buttons, a line through a broken circle, comes from which two digits?	1 and 0	0 and 0	1 and 1	6 and 9
+tec_words_typed_using	Medium	Which of these words can be typed using only the top row of letters on a QWERTY keyboard?	TYPEWRITER	KEYBOARDS	COMPUTERS	PROPERTIES
+tec_airliner_windows_tiny	Medium	Most airliner windows have a tiny hole in one of their panes. What is it for?	Balancing pressure between the panes	Letting fresh air into the cabin	Draining away rainwater	Stopping ice forming outside
+tec_two_pilots_airliners	Medium	Why do the two pilots on many airliners eat different meals?	So food poisoning cannot strike both	So the captain gets the better food	So they don't share a single tray	So one of them stays hungry and alert
+tec_words_ever_recorded	Medium	What were the first words ever recorded on the phonograph, in 1877?	'Mary had a little lamb'	'Mr Watson, come here'	'Hello, can you hear me?'	'God save the Queen'
+tec_tin_cans_arrived	Medium	Tin cans arrived decades before the can opener. How were early cans opened?	With a hammer and chisel	By heating them until they burst	By twisting off a screw lid	With a pull-ring on the lid
+tec_ferris_wheel_1893	Medium	The first Ferris wheel, at the 1893 Chicago world's fair, was built to outdo which landmark?	The Eiffel Tower	Big Ben	The Statue of Liberty	The Crystal Palace
+tec_spire_top_empire	Medium	The spire on top of the Empire State Building was first designed as what?	A mooring mast for airships	A giant flagpole	A church-style bell tower	A searchlight tower
+tec_apple_marketing_images	Medium	Apple's marketing images of iPhones almost always show which time on the screen?	9:41	10:10	12:00	7:30
 day2_ram_vs_dysk	Hard	Why does a computer slow down when RAM runs out?	It starts swapping data to much slower storage	The processor overheats and throttles	The screen starts refreshing slower	The network connection is throttled
 tec_turing	Hard	Who is regarded as the father of computer science and cracked the Enigma cipher?	Alan Turing	John von Neumann	Charles Babbage	Claude Shannon
 tec_enigma_polacy	Hard	Which Pole co-created the first break of the Enigma cipher?	Marian Rejewski	Stefan Banach	Jan Czochralski	Kazimierz Funk
@@ -609,6 +621,20 @@ tec_ford_car_late	Hard	Which Ford car of the late 1950s flopped so badly that it
 tec_apple_handheld_1993	Hard	Which Apple handheld of 1993 was mocked for its poor handwriting recognition?	The Newton	The Lisa	The Pippin	The Cube
 tec_bluetooth_logo_made	Hard	The Bluetooth logo is made by joining two runes. What do they stand for?	The initials H and B	The letters B and T	The rune for 'link'	Two crossed lightning bolts
 tec_stylus_etch_sketch	Hard	What does the stylus of an Etch A Sketch scrape off the back of the screen to draw a line?	Aluminium powder	Iron filings	Chalk dust	Graphite
+tec_ethernet_inspired	Hard	The name 'Ethernet' was inspired by what?	The 'ether' once thought to carry light	A chemical used in early cables	The inventor's daughter, Ethel	An old word for a fishing net
+tec_faroe_islands_persuade	Hard	How did the Faroe Islands persuade Google to map their roads in 2016?	By strapping cameras to sheep	By sending a camera on a fishing boat	By mapping it with kites	By using drones along the cliffs
+tec_2004_report_found	Hard	A 2004 report found what about most pedestrian 'walk' buttons in New York City?	They no longer did anything	They gave walkers longer to cross	They had been fitted with cameras	They only worked at night
+tec_harry_beck_drew	Hard	Harry Beck drew the famous 1931 London Underground map, ignoring real distances. What was his job?	An engineering draughtsman	A professional mapmaker	A bus route planner	An architect
+tec_nasa_ingenuity_helicopter	Hard	NASA's Ingenuity helicopter carried a tiny piece of which famous aircraft to Mars?	The Wright brothers' Flyer	Lindbergh's Spirit of St Louis	Amelia Earhart's Electra	The first Boeing 747
+tec_smoking_banned_airliners	Hard	Smoking has been banned on airliners for decades, yet rules still require what by lavatory doors?	An ashtray	A cigar cutter	A matchbox holder	A pipe rack
+tec_air_canada_boeing	Hard	Why did an Air Canada Boeing 767, the 'Gimli Glider', run out of fuel in mid-air in 1983?	Its fuel was worked out in pounds, not kilograms	A fuel tank sprang a leak over the sea	The crew forgot to refuel at a stopover	Ground crew filled it with the wrong fuel
+tec_contrary_popular_myth	Hard	Contrary to the popular myth, how did NASA get its famous 'space pen'?	A private company paid to develop it	NASA spent millions designing it	It was copied from a Soviet design	A schoolboy invented it in a contest
+tec_early_amazon_staff	Hard	Early Amazon staff worked at desks made from what, to save money?	Wooden doors	Shipping pallets	Old school benches	Packing crates
+tec_altavista_1997_translation	Hard	AltaVista's 1997 translation service 'Babel Fish' was named after a creature from which book?	'The Hitchhiker's Guide to the Galaxy'	'Alice's Adventures in Wonderland'	'Twenty Thousand Leagues Under the Sea'	'Gulliver's Travels'
+tec_settling_firefox_browser	Hard	Before settling on the name 'Firefox', the browser was released under which names?	Phoenix, then Firebird	Netscape, then Navigator	Mosaic, then Camino	Comet, then Meteor
+tec_electronics_giant_originally	Hard	The 'LG' in the electronics giant's name originally stood for what?	Lucky-Goldstar	Life's Good	Light and Glass	Lee Group
+tec_transatlantic_telegraph_cable	Hard	The first transatlantic telegraph cable, laid in 1858, worked for how long before failing?	About three weeks	About three hours	About three years	About thirty years
+tec_1884_barnum_led	Hard	In 1884, P. T. Barnum led 21 elephants across New York's new Brooklyn Bridge. Why?	To show the public it was safe	To celebrate the circus's anniversary	To test it before it opened	To win a bet with the engineer
 day2_klucz_publiczny	Expert	In public-key cryptography, what may be shared freely?	The public key	The private key	Both keys	Neither key
 tec_moore	Expert	What does Moore's law concern?	The doubling of transistor count in chips	The doubling of internet speed each year	The steady fall in the price of memory	The rise in server power consumption
 tec_c_jezyk	Expert	Who created the C programming language?	Dennis Ritchie	Bjarne Stroustrup	James Gosling	Guido van Rossum
@@ -699,3 +725,12 @@ tec_1961_ibm_7094	Expert	In 1961, an IBM 7094 at Bell Labs became famous for sin
 tec_true_television_picture	Expert	The first true television picture, made in a London workshop in 1925, showed the face of what?	A ventriloquist's dummy	A pet parrot	King George V	A marble statue
 tec_1898_exhibition_new	Expert	At an 1898 exhibition in New York, Nikola Tesla amazed crowds with which invention?	A radio-controlled boat	A death ray	A flying car	A wireless telephone
 tec_shift_key_shift	Expert	Why is the Shift key called 'Shift'?	Typewriters physically shifted for capitals	It shifts text one space to the right	It moved the paper to a new line	It switched the ink ribbon's colour
+tec_song_engineer_karlheinz	Expert	Which song did engineer Karlheinz Brandenburg use over and over to fine-tune the MP3 format?	'Tom's Diner'	'Bohemian Rhapsody'	'Imagine'	'Billie Jean'
+tec_odd_scott_martinville	Expert	What was odd about Scott de Martinville's 1860 'phonautograph' sound recordings?	They were never meant to be played back	They were carved into wax candles	They could only record whistling	They were made on sheets of glass
+tec_jamais_contente_car	Expert	'La Jamais Contente', the first car to break 100 km/h, in 1899, was powered by what?	Electricity	Steam	Petrol	Diesel
+tec_google_ever_tweet	Expert	Google's first-ever tweet, in 2009, was written in binary. What did it say?	I'm feeling lucky	Hello, world	Don't be evil	Search is here
+tec_apple_command_key	Expert	Apple's 'Command' key symbol was borrowed from signs in which country, marking places of interest?	Sweden	Japan	Germany	Switzerland
+tec_two_letters_missing	Expert	Which two letters were missing from the letters printed on old American phone dials?	Q and Z	X and Y	J and K	V and W
+tec_early_mac_alert	Expert	Why was an early Mac alert sound named 'Sosumi'?	A joke on 'so sue me' during a trademark fight	It was a Japanese word for 'beep'	It was the name of an engineer's cat	It spelled a secret message backwards
+tec_chinese_phone_maker	Expert	The name of the Chinese phone maker Xiaomi literally means what?	Millet	Little rice cake	Small dragon	Bright star
+tec_1978_welders_secretly	Expert	In 1978, why were welders secretly sent at night to New York's new Citicorp tower?	Strong winds could have toppled it	Its windows kept falling out	Its foundations were sinking	Its spire was struck by lightning
