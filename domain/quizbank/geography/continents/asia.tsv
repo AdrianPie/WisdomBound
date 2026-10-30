@@ -25,6 +25,7 @@ geo_self_governing_island	Easy	Which self-governing island does China claim as o
 geo_luzon_visayas_mindanao	Easy	Luzon, the Visayas and Mindanao are the three main island groups of which country?	The Philippines	Indonesia	Malaysia	Japan
 geo_historic_region_bengal	Easy	The historic region of Bengal is split between India and which country?	Bangladesh	Pakistan	Myanmar	Nepal
 geo_country_often_world	Easy	Which country is often called 'the world's largest democracy'?	India	Indonesia	The USA	Brazil
+geo_country_east_pakistan	Easy	Which country was called East Pakistan until 1971?	Bangladesh	Afghanistan	Myanmar	Nepal
 wh_jedwabny_szlak	Medium	Which two regions did the Silk Road connect?	China and Europe	India and Africa	Persia and Scandinavia	Japan and America
 geo_syjam	Medium	Which country was known as Siam until 1939?	Thailand	Vietnam	Cambodia	Laos
 geo_tygrysy_indie	Medium	Which country is home to the most wild tigers?	India	Russia	Indonesia	Bangladesh
@@ -79,6 +80,7 @@ geo_country_home_ancient	Medium	Which country is home to the ancient ruins of Pe
 geo_island_shared_between	Medium	Which island is shared between Indonesia and East Timor?	Timor	Borneo	Flores	Sumba
 geo_kurdish_people_live	Medium	The Kurdish people live mainly across Turkey, Iraq, Iran and which other country?	Syria	Jordan	Lebanon	Saudi Arabia
 geo_kalimantan_largest_part	Medium	Kalimantan, the largest part of the island of Borneo, belongs to which country?	Indonesia	Malaysia	Brunei	The Philippines
+geo_country_old_kingdom	Medium	Which country's old kingdom was called Lan Xang, 'the Land of a Million Elephants'?	Laos	Thailand	Cambodia	Myanmar
 geo_cejlon	Hard	Which country was called Ceylon until 1972?	Sri Lanka	Bangladesh	Myanmar	Malaysia
 geo_wrota_piekiel	Hard	In which country does the 'Door to Hell' gas crater keep burning?	Turkmenistan	Kazakhstan	Iran	Azerbaijan
 geox_bhutan	Hard	Which Himalayan kingdom measures its progress in 'Gross National Happiness'?	Bhutan	Nepal	Tibet	Sikkim
@@ -120,6 +122,7 @@ geo_country_calls_itself_6	Hard	Which country calls itself 'Daehan Minguk'?	Sout
 geo_hadhramaut_region_mud	Hard	Hadhramaut, a region famous for its mud-brick 'skyscraper' towns, lies in which country?	Yemen	Oman	Saudi Arabia	The UAE
 geo_anatolia_turkey_asian	Hard	Anatolia, Turkey's Asian heartland, gets its name from a Greek word meaning what?	Sunrise	High plain	Land of horses	Golden fields
 geo_island_country_linked	Hard	Which island country is linked to Saudi Arabia by a 25 km causeway?	Bahrain	Qatar	Kuwait	Oman
+geo_country_president_renamed	Hard	Which country's president renamed the months of the year in 2002, naming April after his mother?	Turkmenistan	Uzbekistan	Kazakhstan	Tajikistan
 geo2_linia_wallace	Expert	What does the Wallace Line separate?	Asian fauna from Australian fauna	Pacific time zones	African tectonic plates	Humid climate from dry climate
 geo_russian_republic_largest	Expert	Which Russian republic is the largest country subdivision in the world, bigger than Argentina?	Sakha (Yakutia)	Komi	Buryatia	Tuva
 geo_enclave_riddled_fergana	Expert	The enclave-riddled Fergana Valley is shared by Uzbekistan, Kyrgyzstan and which other country?	Tajikistan	Kazakhstan	Turkmenistan	Afghanistan
@@ -141,3 +144,4 @@ geo_oecusse_exclave_timor	Expert	Oecusse, an exclave of Timor-Leste, is surround
 geo_aksai_chin_high	Expert	Aksai Chin, a high plateau claimed by India, is controlled by which country?	China	Pakistan	Nepal	Bhutan
 geo_outer_manchuria_lands	Expert	'Outer Manchuria', the lands China gave up by treaties in 1858-1860, now belongs to which country?	Russia	Mongolia	North Korea	Kazakhstan
 geo_indian_state_almost	Expert	Which Indian state is almost enclosed by Bangladesh, which surrounds it on three sides?	Tripura	Mizoram	Meghalaya	Manipur
+geo_bangsamoro_muslim_self	Expert	Bangsamoro, a Muslim self-governing region created in 2019, is part of which country?	The Philippines	Indonesia	Thailand	Malaysia

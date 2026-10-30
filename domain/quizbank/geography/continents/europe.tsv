@@ -26,6 +26,7 @@ geo_part_united_kingdom_3	Easy	Which part of the United Kingdom is nicknamed 'th
 geo_part_united_kingdom_4	Easy	Which part of the United Kingdom has its own parliament at Holyrood?	Scotland	Wales	Northern Ireland	Cornwall
 geo_country_five_cliffside	Easy	In which country are the five cliffside villages of the Cinque Terre?	Italy	France	Croatia	Portugal
 geo_cuckoo_clocks_popularly	Easy	Cuckoo clocks are popularly linked with Switzerland, but which country's forest region actually made them famous?	Germany	Austria	Italy	France
+geo_country_poorer_south	Easy	Which country's poorer south is known as the 'Mezzogiorno'?	Italy	Spain	Portugal	Greece
 geocmp_nie_nordyckie	Medium	Which of these countries is NOT a Nordic country?	Estonia	Norway	Sweden	Denmark
 trv_islandia_lodowce	Medium	Which country gets most of its electricity from geothermal and hydro power?	Iceland	Ireland	Belgium	Greece
 lmk_dolina_loary	Medium	In which country is the Loire Valley, famous for its chateaux?	France	Belgium	Switzerland	Spain
@@ -79,6 +80,7 @@ geo_village_wales_longest	Medium	Which village in Wales has one of the longest p
 geo_place_country_lies	Medium	No place in which country lies more than about 50 km from the sea?	Denmark	Belgium	Portugal	Ireland
 geo_island_ancient_albion	Medium	Which island's ancient name, 'Albion', is often linked to the white chalk cliffs of its south coast?	Great Britain	Ireland	Iceland	Sicily
 geo_balkan_country_rose	Medium	Which Balkan country's 'Rose Valley' is a leading source of the rose oil used in perfumes?	Bulgaria	Romania	Greece	Serbia
+geo_randstad_ring_big	Medium	The Randstad, a ring of big cities around a 'Green Heart' of farmland, is home to nearly half the people of which country?	The Netherlands	Belgium	Denmark	Germany
 geocmp_panstwo_ue_pow	Hard	Which is the largest European Union country by area?	France	Spain	Sweden	Germany
 trv_ukraina_europa	Hard	Which is the largest country lying entirely within Europe?	Ukraine	France	Spain	Germany
 geo_andorra_two_heads	Hard	Andorra has two heads of state: the Bishop of Urgell and who?	The President of France	The King of Spain	The Pope	The Prince of Monaco
@@ -120,6 +122,8 @@ geo_town_split_between	Hard	Which town is split between the Netherlands and Belg
 geo_norway_comes_old	Hard	The name 'Norway' comes from an Old Norse phrase meaning what?	The northern way	The land of fjords	The cold coast	The midnight land
 geo_sweden_allemansratten_everyone	Hard	What does Sweden's 'allemansratten', or 'everyone's right', let almost anyone do?	Roam and camp on others' land	Hunt game without a licence	Cut down trees for firewood	Pick fruit from private gardens
 geo_2007_country_became	Hard	In 2007, which country became the first to let all voters cast ballots online in a national parliamentary election?	Estonia	Finland	Switzerland	Denmark
+geo_sorbs_slavic_minority	Hard	The Sorbs, a Slavic minority famous for their painted Easter eggs, live mainly in which country?	Germany	Czechia	Slovakia	Austria
+geo_burgenland_youngest_province	Hard	Burgenland, the youngest province of its country, was handed over by Hungary in 1921 to which country?	Austria	Slovakia	Slovenia	Romania
 geo_llivia_small_town	Expert	Llivia, a small town completely surrounded by French territory, belongs to which country?	Spain	Andorra	Monaco	Italy
 geo_austrian_valley_kleinwalsertal	Expert	The Austrian valley of Kleinwalsertal can be reached by road only through which country?	Germany	Switzerland	Italy	Liechtenstein
 geo_pheasant_island_tiny	Expert	Pheasant Island, a tiny island in a border river, switches between which two countries every six months?	Spain and France	France and Italy	Spain and Portugal	Germany and Austria

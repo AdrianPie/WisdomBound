@@ -25,6 +25,7 @@ geo_caribbean_islands_west	Easy	Why are the Caribbean islands called the 'West I
 geo_state_nicknamed_bay	Easy	Which US state is nicknamed 'the Bay State'?	Massachusetts	Maryland	Delaware	Rhode Island
 geo_state_nicknamed_last	Easy	Which US state is nicknamed 'the Last Frontier'?	Alaska	Montana	Wyoming	Hawaii
 geo_state_great_plains	Easy	Which US state, on the Great Plains, is nicknamed 'the Sunflower State'?	Kansas	Ohio	Florida	Oregon
+geo_state_licence_plates_2	Easy	Which US state's licence plates carry the motto 'Live Free or Die'?	New Hampshire	Texas	Vermont	Montana
 mst_kraj_dwa_oceany	Medium	Panama is unusual in that its Caribbean coast lies where relative to its Pacific coast?	To the north	To the east	To the south	To the west
 geo_rhode_island	Medium	Which is the smallest US state by area?	Rhode Island	Delaware	Connecticut	Vermont
 geo_state_nicknamed_sunshine	Medium	Which US state is nicknamed 'the Sunshine State'?	Florida	California	Arizona	Hawaii
@@ -77,6 +78,7 @@ geo_state_longest_coastline	Medium	Which US state has the longest coastline?	Ala
 geo_state_nicknamed_volunteer	Medium	Which US state is nicknamed 'the Volunteer State'?	Tennessee	Kentucky	Virginia	Texas
 geo_state_comes_spanish_2	Medium	Which US state's name comes from the Spanish for 'snow-covered'?	Nevada	Montana	Florida	Arizona
 geo_canadian_province_calls	Medium	Which Canadian province calls itself 'Wild Rose Country'?	Alberta	Manitoba	Ontario	Saskatchewan
+geo_state_begins_two	Medium	Which is the only US state whose name begins with two vowels?	Iowa	Ohio	Utah	Idaho
 geox_kostaryka	Hard	Which Central American country abolished its army in 1948?	Costa Rica	Panama	Honduras	Belize
 geo_state_nicknamed_bluegrass	Hard	Which US state is nicknamed 'the Bluegrass State'?	Kentucky	Tennessee	Virginia	Missouri
 geo_largest_country_central	Hard	Which is the largest country in Central America by area?	Nicaragua	Honduras	Guatemala	Panama
@@ -119,6 +121,7 @@ geo_state_nicknamed_land_2	Hard	Which US state is nicknamed 'the Land of Enchant
 geo_state_just_syllable	Hard	Which is the only US state whose name has just one syllable?	Maine	Utah	Iowa	Ohio
 geo_pennsylvania_dutch_mostly	Hard	The 'Pennsylvania Dutch' are mostly descended from settlers from which country?	Germany	The Netherlands	Belgium	Denmark
 geo_state_nicknamed_old	Hard	Which US state is nicknamed 'the Old Dominion'?	Virginia	Massachusetts	Maryland	Delaware
+geo_state_nicknamed_constitution	Hard	Which US state is nicknamed 'the Constitution State', after the colonial laws it adopted in 1639?	Connecticut	Pennsylvania	Massachusetts	Virginia
 geo_darien	Expert	The Darien Gap is a missing link in which famous road?	The Pan-American Highway	Route 66	The Silk Road	The Trans-Canada Highway
 geo_mosquito_coast_stretches	Expert	The Mosquito Coast stretches along the Caribbean shores of Nicaragua and which other country?	Honduras	Costa Rica	Panama	Belize
 geo_canadian_territory_means	Expert	Which Canadian territory's name means 'great river'?	Yukon	Nunavut	Northwest Territories	Labrador
@@ -140,3 +143,4 @@ geo_state_officially_nicknamed	Expert	Which US state is officially nicknamed 'th
 geo_canadian_province_licence	Expert	Which Canadian province's licence plates call it the 'Land of Living Skies'?	Saskatchewan	Manitoba	Alberta	Prince Edward Island
 geo_losing_1830s_toledo	Expert	After losing the 1830s 'Toledo War' strip to Ohio, what did Michigan get in return?	Most of the Upper Peninsula	The islands of Lake Erie	A strip of northern Indiana	The city of Chicago
 geo_tiny_navassa_island	Expert	Tiny Navassa Island, held by the USA, is also claimed by which Caribbean country?	Haiti	Cuba	Jamaica	The Dominican Republic
+geo_2017_caribbean_island	Expert	In 2017, which Caribbean island had to be evacuated after Hurricane Irma damaged about 95% of its buildings?	Barbuda	Anguilla	Nevis	Montserrat

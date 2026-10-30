@@ -77,6 +77,9 @@ geo_country_home_waitomo	Medium	Which country is home to the Waitomo caves lit b
 geo_great_ocean_road	Medium	The Great Ocean Road, a famous coastal drive, runs along the shore of which Australian state?	Victoria	New South Wales	Queensland	Western Australia
 geo_pacific_country_more	Medium	Which Pacific country has more languages per person than any other, over 100 for about 300,000 people?	Vanuatu	Fiji	Samoa	Tonga
 geo_country_produces_nearly	Medium	Which country produces nearly all of the world's precious opals?	Australia	New Zealand	Brazil	South Africa
+geo_2009_pacific_country	Medium	In 2009, which Pacific country switched from driving on the right to driving on the left?	Samoa	Fiji	Tonga	Vanuatu
+geo_kimberley_remote_region	Medium	The Kimberley, a remote region of gorges and boab trees, is in which Australian state or territory?	Western Australia	Queensland	South Australia	Northern Territory
+geo_espiritu_santo_largest	Medium	Espiritu Santo, the largest island of its country, belongs to which Pacific nation?	Vanuatu	Fiji	The Solomon Islands	Samoa
 lmk_moai_kraj	Hard	The Moai statues of Easter Island belong to which country?	Chile	Peru	New Zealand	Argentina
 geo_cook_islands_niue	Hard	The Cook Islands and Niue are self-governing in 'free association' with which country?	New Zealand	Australia	Britain	France
 geo_country_once_new	Hard	Which country, once the New Hebrides, was ruled jointly by Britain and France?	Vanuatu	Fiji	New Caledonia	The Solomon Islands
@@ -119,6 +122,7 @@ geo_pacific_nation_made_2	Hard	Which Pacific nation is made up mainly of two big
 geo_country_often_nicknamed	Hard	Which country is often nicknamed 'the Lucky Country'?	Australia	Ireland	Canada	Switzerland
 geo_tiny_island_nation	Hard	Which tiny island nation was known to 19th-century sailors as 'Pleasant Island'?	Nauru	Tuvalu	Niue	Palau
 geo_french_explorers_samoa	Hard	French explorers called Samoa by which name, after the skill of its canoe-handling people?	The Navigators' Islands	The Friendly Islands	The Society Islands	The Sandwich Islands
+geo_2014_low_lying	Hard	In 2014, which low-lying Pacific nation bought land in Fiji as a refuge against rising seas?	Kiribati	Tuvalu	Nauru	The Marshall Islands
 geox_tuvalu_tv	Expert	Which tiny Pacific nation earns money from its '.tv' internet domain?	Tuvalu	Tonga	Tokelau	Taiwan
 geo_people_born_american	Expert	People born in American Samoa are not automatically US citizens. What are they instead?	US nationals	US residents	Protected persons	Commonwealth subjects
 geo_1933_australian_state	Expert	In 1933, which Australian state voted by a two-thirds majority to leave Australia?	Western Australia	Queensland	Tasmania	South Australia

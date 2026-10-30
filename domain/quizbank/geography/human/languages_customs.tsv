@@ -89,6 +89,7 @@ geo_country_bucket_kfc	Medium	In which country is a bucket of KFC chicken a popu
 geo_portuguese_word_thank	Medium	The Portuguese word for 'thank you', 'obrigado', literally means what?	Obliged	Blessed	Friend	Happy
 geo_country_two_official	Medium	Which country has two official written forms of its language, Bokmal and Nynorsk?	Norway	Denmark	Iceland	Finland
 geo_country_fika_cherished	Medium	Which country's 'fika' is a cherished daily break for coffee and something sweet?	Sweden	Denmark	Norway	Finland
+geo_alpine_countries_horned	Medium	In Alpine countries, which horned, chain-rattling figure tags along with St Nicholas in early December to scare naughty children?	Krampus	Rubezahl	The Erlking	Tatzelwurm
 geocmp_jezyk_ojczysty	Hard	Which language has the most native speakers?	Mandarin Chinese	English	Spanish	Hindi
 geo_ancient_language_unrelated	Hard	Which ancient language, unrelated to any other in Europe, is spoken in parts of Spain and France?	Basque	Catalan	Galician	Occitan
 geo_word_shampoo_comes	Hard	The word 'shampoo' comes from which language?	Hindi	Arabic	Persian	Malay
@@ -123,6 +124,8 @@ geo_word_jungle_comes	Hard	The word 'jungle' comes from a Sanskrit word that ori
 geo_since_1966_giant	Hard	Since 1966, a giant straw goat built each Christmas in the town of Gavle has often been burned by vandals. In which country?	Sweden	Norway	Finland	Denmark
 geo_tok_pisin_national	Hard	Tok Pisin, a national language of Papua New Guinea, grew mainly out of which language?	English	Dutch	German	Portuguese
 geo_word_hammock_came	Hard	The word 'hammock' came into English through Spanish from the language of which people?	The Taino	The Aztecs	The Incas	The Maya
+geo_italy_kindly_old	Hard	In Italy, which kindly old witch flies around on the night of 5 January, leaving sweets for good children and coal for bad ones?	La Befana	Baba Yaga	Strega Nona	Fata Morgana
+geo_country_christmas_book	Hard	Which country's 'Christmas book flood' tradition means giving books on Christmas Eve and spending the night reading them?	Iceland	Norway	Finland	Denmark
 geo_maltese_semitic_official	Expert	Maltese, the only Semitic official language of the EU, grew out of which language?	Arabic	Hebrew	Aramaic	Berber
 geo_names_yen_yuan	Expert	The names of the yen, the yuan and the won all come from a word meaning what?	Round	Silver	Coin	Shell
 geo_word_dollar_comes	Expert	The word 'dollar' comes from 'thaler', silver coins first minted in a valley in which present-day country?	Czechia	Germany	Austria	Switzerland
@@ -139,3 +142,4 @@ geo_croatia_kuna_replaced	Expert	Croatia's kuna, replaced by the euro in 2023, w
 geo_botswana_currency_pula	Expert	Botswana's currency, the pula, is named after the Setswana word for what?	Rain	Gold	Cattle	Sun
 geo_colacho_festival_spanish	Expert	In El Colacho, a festival in a Spanish village, men dressed as devils do what?	Leap over babies lying on mattresses	Chase children through the streets	Throw flour at newly married couples	Burn a straw devil on the church steps
 geo_caga_tio_log	Expert	Caga Tio, a log that children beat with sticks so it will 'poop' out sweets, is a Christmas tradition of which region?	Catalonia	Bavaria	Brittany	Sicily
+geo_citizen_monaco	Expert	What is a citizen of Monaco called?	A Monegasque	A Monacoan	A Monacian	A Grimaldian

@@ -74,6 +74,9 @@ geo_winnie_pooh_hundred	Medium	Winnie-the-Pooh's Hundred Acre Wood was based on 
 geo_visited_national_park	Medium	Which is the most visited national park in the USA, with over 10 million visitors a year?	Great Smoky Mountains	Grand Canyon	Yellowstone	Yosemite
 geo_south_american_desert	Medium	Which South American desert has NASA used to test Mars rovers and life-detecting instruments?	The Atacama	The Sechura	The Patagonian	The Monte
 geo_country_supplies_half	Medium	Which country supplies about half of the world's cork, stripped from its cork oak forests?	Portugal	Spain	Italy	Morocco
+geo_wrangell_elias_largest	Medium	Wrangell-St. Elias, the largest national park in the USA, is in which state?	Alaska	Montana	California	Wyoming
+geo_valdivian_rainforest_few	Medium	The Valdivian rainforest, one of the few temperate rainforests on Earth, lies mainly in which country?	Chile	Argentina	Peru	Ecuador
+geo_karakum_desert_black	Medium	The Karakum, a desert of black sands, covers about 70% of which country?	Turkmenistan	Kazakhstan	Uzbekistan	Iran
 geo2_najsuchsze_miejsce	Hard	Which desert is regarded as the driest place on Earth?	The Atacama	The Sahara	The Gobi	The Namib
 geocmp_las_powierzchnia	Hard	Which country has the largest forest area?	Russia	Brazil	Canada	The United States
 lmk_masai_mara	Hard	In which country is the Maasai Mara reserve?	Kenya	Tanzania	Botswana	Namibia
@@ -119,6 +122,7 @@ geo_continent_without_major	Hard	Which is the only continent without a major des
 geo_largest_lake_australia	Hard	Which is the largest lake in Australia, usually a dry salt flat?	Lake Eyre	Lake Torrens	Lake Argyle	Lake Gairdner
 geo_great_bear_rainforest	Hard	The Great Bear Rainforest, home of the rare white 'spirit bear', lies in which country?	Canada	The USA	Russia	Norway
 geo_mammoth_cave_longest	Hard	Mammoth Cave, the longest known cave system on Earth, lies in which US state?	Kentucky	Tennessee	Missouri	New Mexico
+geo_white_desert_chalk	Hard	The White Desert, famous for chalk rocks shaped like giant mushrooms, is in which country?	Egypt	Morocco	Tunisia	Libya
 dpt_geo_sahel	Expert	What is the Sahel?	The dry belt south of the Sahara	The delta of the river Niger	The highlands of East Africa	The coastal plain of Namibia
 geo_largest_continuous_expanse	Expert	Which is the largest continuous expanse of sand on Earth?	Rub' al Khali	The Grand Erg Oriental	The Taklamakan	The Namib Sand Sea
 geo_chinese_desert_often	Expert	Which Chinese desert's name is often said to mean 'you go in, but you never come out'?	The Taklamakan	The Gobi	The Ordos	The Kumtag
@@ -139,3 +143,4 @@ geo_2014_african_wetland	Expert	In 2014, which African wetland became the 1,000t
 geo_mysterious_fairy_circles	Expert	What are the mysterious 'fairy circles' of the Namib Desert?	Bare round patches in the grass	Rings of standing stones	Circular salt crusts on dunes	Rings of fungi after rain
 geo_country_constitution_requires	Expert	Which country's constitution requires that at least 60% of its land stays under forest for all time?	Bhutan	Nepal	Costa Rica	Laos
 geo_wadi_hitan_valley	Expert	Wadi Al-Hitan, the 'Valley of the Whales', where fossil whales with legs lie in the desert sand, is in which country?	Egypt	Morocco	Jordan	Oman
+geo_largest_desert_americas	Expert	Which is the largest desert in the Americas?	The Patagonian Desert	The Atacama	The Chihuahuan	The Sonoran

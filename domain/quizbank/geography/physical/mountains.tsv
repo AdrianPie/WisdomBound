@@ -77,6 +77,8 @@ geo_country_home_rainbow	Medium	Which country is home to the rainbow mountains o
 geo_philippine_volcano_almost	Medium	Which Philippine volcano is famous for its almost perfectly symmetrical cone?	Mayon	Taal	Pinatubo	Apo
 geo_gives_blue_mountains	Medium	What gives the Blue Mountains near Sydney their famous blue haze?	Oil from eucalyptus trees	Smoke from bushfires	Blue-grey slate rocks	Mist from waterfalls
 geo_himalaya_comes_sanskrit	Medium	The name 'Himalaya' comes from Sanskrit for what?	Abode of snow	Roof of the world	Home of the gods	Land of clouds
+geo_peak_highest_slovenia	Medium	Which peak, the highest in Slovenia, appears on the country's coat of arms and flag?	Triglav	Grossglockner	Marmolada	Zugspitze
+geo_toubkal_highest_peak	Medium	Toubkal, the highest peak in North Africa, rises in which mountain range?	The Atlas Mountains	The Rif	The Ahaggar	The Tibesti
 geo_kilimandzaro	Hard	In which country is Mount Kilimanjaro?	Tanzania	Kenya	Ethiopia	Uganda
 geo_aconcagua	Hard	The highest peak in South America is...	Aconcagua	Chimborazo	Huascaran	Ojos del Salado
 geocmp_nie_alpy	Hard	Which of these countries does NOT have Alpine territory?	Czechia	Austria	Switzerland	Slovenia
@@ -119,6 +121,8 @@ geo_state_mount_helens	Hard	In which US state did Mount St Helens erupt in 1980?
 geo_peak_hollywood_sign	Hard	On which peak does the famous Hollywood sign stand?	Mount Lee	Mount Hollywood	Mount Wilson	Mount Baldy
 geo_irish_holy_mountain	Hard	Which Irish holy mountain do thousands of pilgrims climb, some barefoot, on 'Reek Sunday' each July?	Croagh Patrick	Carrauntoohil	Slieve Donard	Ben Bulben
 geo_ascent_peak_1786	Hard	The first ascent of which peak, in 1786, is often called the birth of modern mountaineering?	Mont Blanc	The Matterhorn	The Eiger	The Jungfrau
+geo_volcano_mudflows_buried	Hard	Which volcano's mudflows buried the Colombian town of Armero in 1985?	Nevado del Ruiz	Cotopaxi	Popocatepetl	Galeras
+geo_galdhopiggen_highest_mountain	Hard	Galdhopiggen, the highest mountain in Scandinavia, is in which country?	Norway	Sweden	Finland	Denmark
 geo2_najwiecej_wulkanow	Expert	Which country has the most active volcanoes?	Indonesia	Japan	Chile	USA
 dpt_geo_chimborazo	Expert	Whose summit lies farthest from the Earth's centre?	Chimborazo	Everest	Denali	Kilimanjaro
 geox_colca	Expert	Which canyon in Peru is about twice as deep as the Grand Canyon?	The Colca Canyon	The Copper Canyon	The Fish River Canyon	Tiger Leaping Gorge
@@ -139,3 +143,4 @@ geo_gorge_snake_river	Expert	Which gorge on the Snake River, deeper than the Gra
 geo_strange_lava_tanzania	Expert	What is strange about the lava of Tanzania's Ol Doinyo Lengai?	It erupts black and turns white	It burns with blue flames	It is almost pure sulphur	It sets into glass at once
 geo_jagged_skyline_logo	Expert	The jagged skyline in the logo of the outdoor clothing brand Patagonia shows which mountain?	Monte Fitz Roy	Aconcagua	Torres del Paine	Ojos del Salado
 geo_according_legend_restless	Expert	According to legend, the restless ghost of the Roman governor who condemned Jesus haunts which Swiss mountain?	Pilatus	The Rigi	The Titlis	The Eiger
+geo_yushan_jade_mountain	Expert	Yushan, or Jade Mountain, almost 4,000 m high, is the highest peak of which island?	Taiwan	Honshu	Hainan	Luzon

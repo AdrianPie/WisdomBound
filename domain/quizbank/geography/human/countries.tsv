@@ -76,6 +76,9 @@ geo_country_joined_nato	Medium	Which country joined NATO in March 2024, ending t
 geo_ukraine_blue_yellow	Medium	Ukraine's blue-and-yellow flag is usually said to show what?	A blue sky over golden wheat	A river flowing past the sun	The sea beside golden sand	Cornflowers among sunflowers
 geo_country_flag_oldest	Medium	Which country's flag is the oldest still in continuous use?	Denmark	Netherlands	Austria	Scotland
 geo_country_flag_differs	Medium	Which country's flag differs from the Netherlands' mainly by its lighter shade of blue?	Luxembourg	France	Russia	Paraguay
+geo_country_border_spain	Medium	Which country's border with Spain, largely fixed by a treaty of 1297, is often called the oldest in Europe?	Portugal	France	Andorra	Morocco
+geo_country_land_border_2	Medium	Which country has a land border with both North Korea and Norway?	Russia	China	Finland	Sweden
+geo_three_countries_meet	Medium	Which three countries meet at the Vaalserberg, a hill with a three-sided border stone?	Netherlands, Belgium, Germany	Netherlands, Germany, Denmark	Belgium, France, Luxembourg	France, Germany, Switzerland
 geo2_najdluzsza_granica	Hard	Which two countries share the longest land border in the world?	Canada and the USA	Russia and China	Argentina and Chile	India and China
 geocmp_nie_ameryka_pd	Hard	Which of these countries is NOT in South America?	Belize	Guyana	Suriname	Paraguay
 geocmp_turystyka_kraj	Hard	Which country receives the most international tourist arrivals?	France	Spain	The United States	Italy
@@ -118,6 +121,8 @@ geo_island_flag_shows	Hard	Which island's flag shows three armoured legs joined 
 geo_african_country_flag_4	Hard	Which African country's flag, with red and white stripes and a white star on blue, is modelled on the US flag?	Liberia	Togo	Ghana	Sierra Leone
 geo_besides_papal_crown	Hard	Besides the papal crown, what appears on the flag of Vatican City?	Two crossed keys	A golden dove	A white cross	Saint Peter's dome
 geo_country_flag_light	Hard	Which country's flag is light blue with a single white five-pointed star in the middle?	Somalia	Eritrea	Djibouti	Micronesia
+geo_country_coasts_both	Hard	Which is the only country with coasts on both the Caspian Sea and the Persian Gulf?	Iran	Iraq	Kazakhstan	Turkmenistan
+geo_vennbahn_old_railway	Hard	The Vennbahn, an old railway line owned by Belgium, leaves several small pieces of which country cut off as exclaves?	Germany	The Netherlands	Luxembourg	France
 geo2_panstwo_bez_dostepu	Expert	Which country is Europe's only doubly landlocked state?	Liechtenstein	Switzerland	Austria	Andorra
 geocmp_najwiecej_sasiadow	Expert	Which of these countries borders the most other countries?	Brazil	Mexico	Argentina	Colombia
 geo_kazachstan_srodladowy	Expert	Which is the largest landlocked country in the world?	Kazakhstan	Mongolia	Chad	Bolivia
@@ -139,3 +144,4 @@ geo_country_flag_show	Expert	Which country's flag is the only one to show human 
 geo_country_flag_show_2	Expert	Which country's flag is the only one to show an open Bible?	Dominican Republic	Papua New Guinea	Vatican City	El Salvador
 geo_red_white_stripes	Expert	What do the 14 red and white stripes on Malaysia's flag stand for?	Its 13 states and the federal government	The 14 royal families who rule its states	The 14 days of its fight for independence	The 14 ethnic groups living in the country
 geo_besides_palestine_state	Expert	Besides Palestine, which is the only state with 'permanent observer' status at the UN rather than full membership?	The Holy See	Kosovo	Taiwan	Switzerland
+geo_market_tiny_baltic	Expert	Market, a tiny Baltic island with a zigzag border, is shared by Finland and which country?	Sweden	Estonia	Russia	Denmark

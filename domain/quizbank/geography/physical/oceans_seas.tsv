@@ -79,6 +79,8 @@ geo_gulf_separates_egypt	Medium	Which gulf separates Egypt's Sinai Peninsula fro
 geo_country_borders_both	Medium	What is the only country that borders both the Atlantic and Indian Oceans?	South Africa	Australia	Mozambique	Namibia
 geo_sea_dangerous_king	Medium	Which sea, famous for its dangerous king crab fishing, lies between Alaska and Russia's Far East?	The Bering Sea	The Sea of Okhotsk	The Barents Sea	The Beaufort Sea
 geo_ancient_pillars_hercules	Medium	The ancient 'Pillars of Hercules' stood on either side of which strait?	The Strait of Gibraltar	The Bosphorus	The Strait of Messina	The Dardanelles
+geo_strait_separates_corsica	Medium	Which strait separates Corsica from Sardinia?	The Strait of Bonifacio	The Strait of Messina	The Strait of Otranto	The Strait of Sicily
+geo_doggerland_stone_age	Medium	Doggerland, where Stone Age people once hunted, now lies drowned beneath which sea?	The North Sea	The Baltic Sea	The Irish Sea	The Black Sea
 geo3_prad_golfsztrom	Hard	What is the warm ocean current warming Western Europe called?	The Gulf Stream	The Humboldt Current	The Labrador Current	The California Current
 trv_sargassowe	Hard	Which sea has no coastline at all, being bounded only by ocean currents?	The Sargasso Sea	The Caspian Sea	The Coral Sea	The Tasman Sea
 lmk_bosfor_laczy	Hard	Which strait connects the Black Sea with the Sea of Marmara?	The Bosphorus	The Dardanelles	The Strait of Kerch	The Strait of Otranto
@@ -120,6 +122,7 @@ geo_sea_off_antarctica	Hard	Which sea off Antarctica has been measured as having
 geo_roughly_fast_atlantic	Hard	Roughly how fast is the Atlantic Ocean getting wider?	About 2.5 cm a year	About 2.5 mm a year	About 25 cm a year	About 2.5 m a year
 geo_narrow_strait_separates	Hard	Which narrow strait separates the island of Anglesey from mainland Wales?	The Menai Strait	The Solent	The Minch	The Pentland Firth
 geo_deepest_zone_ocean	Hard	The deepest zone of the ocean, found in the trenches, is named after which Greek god?	Hades	Poseidon	Oceanus	Nereus
+geo_shallow_sea_lies	Hard	Which shallow sea lies between northern Australia and New Guinea?	The Arafura Sea	The Timor Sea	The Banda Sea	The Celebes Sea
 geo_row_marianski	Expert	What is the deepest point in the oceans called?	Challenger Deep	Tonga Trench	Java Trench	Milwaukee Deep
 geo_grzbiet_srodoceaniczny	Expert	Which is the longest mountain range on Earth?	The mid-ocean ridge	The Andes	The Himalayas	The Rocky Mountains
 geo_atlantyk_slony	Expert	Which ocean is the saltiest?	The Atlantic	The Pacific	The Indian Ocean	The Arctic Ocean
@@ -140,3 +143,4 @@ geo_gulf_corryvreckan_home	Expert	The Gulf of Corryvreckan, home to one of the w
 geo_laccadive_sea_washes	Expert	The Laccadive Sea washes the shores of the Maldives, Sri Lanka and which other country?	India	Oman	Indonesia	Myanmar
 geo_body_water_sea	Expert	Which body of water is also known as the Sea of Cortez?	The Gulf of California	The Gulf of Mexico	The Gulf of Panama	The Gulf of Honduras
 geo_strait_belle_isle	Expert	The Strait of Belle Isle separates the island of Newfoundland from which mainland region?	Labrador	Nova Scotia	Gaspe	Nunavut
+geo_seikan_tunnel_world	Expert	The Seikan Tunnel, one of the world's longest undersea rail tunnels, runs beneath which strait?	The Tsugaru Strait	The Korea Strait	The Tatar Strait	The La Perouse Strait

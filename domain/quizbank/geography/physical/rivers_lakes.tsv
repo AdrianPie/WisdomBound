@@ -91,6 +91,7 @@ geo_river_meets_saone	Medium	Which river meets the Saone in the French city of L
 geo_crater_lake_deepest	Medium	Crater Lake, the deepest lake in the USA, fills a collapsed volcano in which state?	Oregon	Washington	Idaho	California
 geo_lorelei_rock_legendary	Medium	The Lorelei, a rock where a legendary siren lured boatmen to their doom, towers over which river?	The Rhine	The Danube	The Elbe	The Moselle
 geo_amazon_river_amazons	Medium	The Amazon River was named after the Amazons, warrior women from which mythology?	Greek	Norse	Inca	Aztec
+geo_great_bear_lake	Medium	Great Bear Lake, crossed by the Arctic Circle, is the largest lake lying entirely within which country?	Canada	The USA	Russia	Finland
 geo_bajkal	Hard	Which lake is the deepest in the world?	Baikal	Tanganyika	Caspian Sea	Superior
 geo2_jezioro_powierzchnia	Hard	Which lake has the largest surface area in the world?	The Caspian Sea	Lake Superior	Lake Baikal	Lake Victoria
 geo2_najwyzszy_wodospad	Hard	Which waterfall is the highest in the world?	Angel Falls	Niagara Falls	Iguazu Falls	Victoria Falls
@@ -144,6 +145,7 @@ geo_river_flows_through_20	Hard	Which river flows through Bern?	Aare	Rhine	Rhone
 geo_river_flows_through_21	Hard	Which river flows through Bordeaux?	Garonne	Loire	Dordogne	Seine
 geo_country_home_lake	Hard	Which country is home to Lake Retba, a pink lake near Dakar?	Senegal	Mauritania	Gambia	Morocco
 geo_largest_lake_united	Hard	Which is the largest lake in the United Kingdom by area?	Lough Neagh	Loch Lomond	Loch Ness	Windermere
+geo_river_flows_through_22	Hard	Which river flows through Shanghai, dividing the old Bund from the skyscrapers of Pudong?	The Huangpu	The Pearl	The Han	The Min
 geo_kraj_bez_rzek	Expert	Which of these countries has not a single permanent river?	Saudi Arabia	Mongolia	Kazakhstan	Iran
 geo_titicaca	Expert	Lake Titicaca lies on the border of which two countries?	Peru and Bolivia	Chile and Argentina	Ecuador and Colombia	Brazil and Paraguay
 geo2_kaldera_toba	Expert	Where is Lake Toba, formed by a giant caldera?	On Sumatra	On Java	In Japan	In New Zealand

@@ -75,6 +75,9 @@ geo_four_corners_monument	Medium	At the Four Corners Monument you can stand in f
 geo_roughly_share_earth_2	Medium	Roughly what share of the Earth's land is covered by glaciers and ice sheets?	About 10%	About 1%	About 30%	About 50%
 geo_around_world_eighty	Medium	In 'Around the World in Eighty Days', Phileas Fogg wins his bet because, travelling east, he has gained what?	A whole day	A whole week	An hour	A month
 geo_sydney_sees_new	Medium	When Sydney sees in the New Year with fireworks, roughly how long is it until midnight in London?	About 11 hours	About 1 hour	About 5 hours	About 20 hours
+geo_china_single_time	Medium	China's single time zone is set how far ahead of GMT?	Eight hours	Five hours	Six hours	Ten hours
+geo_australian_city_marks	Medium	Which Australian city marks the Tropic of Capricorn with a tall spire?	Rockhampton	Townsville	Cairns	Darwin
+geo_earth_bulges_equator	Medium	Earth bulges at the equator and is flattened at the poles. What is this shape called?	An oblate spheroid	A prolate spheroid	A truncated sphere	A paraboloid
 geo2_rownolezniki_zwrotnik	Hard	What is the tropic in the southern hemisphere called?	Tropic of Capricorn	Tropic of Cancer	Arctic Circle	Prime Meridian
 geo2_greenwich	Hard	Which city does the prime meridian pass through?	London	Paris	Rome	Madrid
 geo3_linia_zmiany_daty	Hard	Where does the International Date Line run?	Through the middle of the Pacific, near the 180th meridian	Straight through Greenwich, on the edge of London	Along the equator, right round the globe	Along the Ural mountains and the Caspian
@@ -118,6 +121,8 @@ geo_state_lies_within	Hard	Which is the only US state that lies within the tropi
 geo_survivors_magellan_voyage	Hard	When the survivors of Magellan's voyage round the world reached the Cape Verde Islands in 1522, what puzzled them?	Their log was a day behind	Their compass pointed south	Their maps were upside down	The stars had all moved
 geo_cities_lies_farthest	Hard	Which of these cities lies farthest north, if only just?	Edinburgh	Moscow	Copenhagen	Hamburg
 geo_roughly_southern_hemisphere	Hard	Roughly how much of the Southern Hemisphere is covered by ocean?	About 80%	About 55%	About 35%	About 20%
+geo_because_earth_moves	Hard	Because Earth moves slowest when farthest from the Sun, which hemisphere gets the slightly longer summer?	The Northern Hemisphere	The Southern Hemisphere	Neither - they are equal	It changes every year
+geo_1979_australian_stuart	Hard	In 1979, Australian Stuart McArthur published a famous 'corrective' world map. What is unusual about it?	South is at the top	It shows no borders	Its oceans are green	All continents are the same size
 geo_world_map_projection	Expert	Which world map projection, championed in the 1970s, shows countries at their true relative areas?	The Gall-Peters	The Mercator	The Robinson	The Winkel tripel
 geo_oldest_surviving_map	Expert	The oldest surviving map of the whole known world was made around 600 BC by which people?	The Babylonians	The Egyptians	The Greeks	The Phoenicians
 geo_agloe_hamlet_appeared	Expert	What was Agloe, a hamlet that appeared on maps of New York State from the 1930s?	A fake town to catch copycats	A town that sank into a lake	A ghost town of the gold rush	A town renamed after a war
@@ -139,3 +144,4 @@ geo_tropic_cancer_markers	Expert	Why do the Tropic of Cancer markers on Mexican 
 geo_1989_french_geographers	Expert	In 1989, French geographers placed the geographical centre of Europe near the capital of which country?	Lithuania	Poland	Belarus	Ukraine
 geo_uninhabited_islands_utc	Expert	Which uninhabited US islands, in the UTC-12 time zone, are the last places on Earth where each day ends?	Baker and Howland	Midway and Wake	Johnston and Palmyra	Guam and Saipan
 geo_boundary_between_earth	Expert	The boundary between the Earth's crust and mantle, the 'Moho', is named after a seismologist from which country?	Croatia	Russia	Japan	Italy
+geo_buckminster_fuller_dymaxion	Expert	Buckminster Fuller's Dymaxion map shows the world unfolded from which shape?	An icosahedron	A cube	A cylinder	A cone

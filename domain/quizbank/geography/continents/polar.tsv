@@ -77,6 +77,7 @@ geo_pemmican_high_energy	Medium	What was pemmican, the high-energy food of many 
 geo_north_magnetic_pole	Medium	At the north magnetic pole, which way does a freely hanging magnetic needle try to point?	Straight down	Straight up	Towards the Sun	Due south
 geo_antarctica_fierce_katabatic	Medium	What are Antarctica's fierce 'katabatic' winds?	Cold, heavy air pouring downhill off the ice	Warm winds blowing in from the ocean	Storms that circle the continent	Gusts caused by the polar night
 geo_gives_watermelon_snow	Medium	What gives 'watermelon snow', found on polar and mountain snowfields, its pink colour?	Algae living in the snow	Iron-rich desert dust	Ash from distant volcanoes	Krill washed ashore by storms
+geo_polar_diamond_dust	Medium	What is the polar 'diamond dust' that glitters in the air on very cold, clear days?	Tiny ice crystals falling from a clear sky	Frozen sea spray blown off the waves	Grains of quartz blown off the rocks	Frost forming on floating dust
 geox_antarktyda_mroz	Hard	Where was the lowest natural temperature on Earth recorded?	Antarctica	Siberia	Greenland	Alaska
 geo_countries_official_territorial	Hard	How many countries have official territorial claims in Antarctica?	Seven	Three	Twelve	Twenty
 geo_three_countries_overlapping	Hard	Which three countries have overlapping claims to the Antarctic Peninsula?	Britain, Argentina and Chile	Norway, Chile and Argentina	Britain, Norway and France	Australia, Chile and Britain
@@ -119,6 +120,8 @@ geo_nunatak_antarctica_greenland	Hard	What is a 'nunatak' in Antarctica or Green
 geo_sastrugi_polar_travellers	Hard	What are 'sastrugi', which polar travellers must struggle across?	Sharp ridges carved in snow by the wind	Wide cracks opening in the sea ice	Tiny ice crystals glittering in the air	Holes made in the ice by seals
 geo_antarctic_convergence_often	Hard	What is the 'Antarctic Convergence', often treated as the edge of the Antarctic region?	Where cold southern water meets warmer seas	The line where winter sea ice ends	The circle of latitude at 60 degrees south	The point where all time zones meet
 geo_princess_elisabeth_station	Hard	Princess Elisabeth Station, the first zero-emission research base in Antarctica, is run by which country?	Belgium	Norway	Germany	Japan
+geo_antarctica_longest_river	Hard	Antarctica's longest river, the Onyx, flows for only a few weeks each summer. Where does it end?	In an inland lake	In the Ross Sea	Under a glacier	In the Southern Ocean
+geo_polynya_polar_seas	Hard	What is a 'polynya' in polar seas?	An area of open water surrounded by sea ice	A tall ridge of ice pushed up by currents	A tunnel melted under a glacier	A frozen waterfall on a sea cliff
 geo2_najwiekszy_ladolod	Expert	Where is the world's largest ice sheet?	Antarctica	Greenland	Alaska	The Himalayas
 ext_wyspa_grenlandia	Expert	Greenland's ice sheet is thick enough to have done what to the land beneath?	Pushed its centre below sea level	Raised it into a plateau	Split it into two islands	Left it perfectly flat
 geo_vinson	Expert	What is the highest mountain in Antarctica?	Vinson Massif	Mount Erebus	Mount Kirkpatrick	Mount Terror
@@ -140,3 +143,4 @@ geo_marks_ceremonial_south	Expert	What marks the 'Ceremonial South Pole', where 
 geo_1898_crew_belgica	Expert	In 1898, the crew of the Belgica became the first people ever to do what?	Spend a winter in the Antarctic	Reach the South Magnetic Pole	Sight the Antarctic mainland	Climb an Antarctic peak
 geo_concordia_station_high	Expert	Concordia Station, high on the Antarctic plateau, is run jointly by France and which country?	Italy	Germany	Spain	Belgium
 geo_antarctica_don_juan	Expert	Why does Antarctica's Don Juan Pond almost never freeze, even at -40 C?	It is extremely salty	It sits on a hot volcano	It is fed by hot springs	Strong winds keep it moving
+geo_pyramiden_abandoned_soviet	Expert	Pyramiden, an abandoned Soviet mining town left frozen in time since 1998, lies on which Arctic archipelago?	Svalbard	Novaya Zemlya	Franz Josef Land	Severnaya Zemlya
