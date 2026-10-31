@@ -169,6 +169,7 @@ geo_gets_more_rain_11	Hard	Which gets more rain in a year, New York or London?	N
 geo_colder_average_january_4	Hard	Which has the colder average January, Toronto or Stockholm?	Toronto, by a few degrees	Stockholm, by a few degrees	They are about the same	Stockholm, by about 10 degrees
 geo_country_more_islands	Hard	Which country has more islands, Finland or Japan?	Finland, many times more	Japan, many times more	They have about the same number	Japan, about twice as many
 geo_hotter_average_july_2	Hard	Which has the hotter average July, Phoenix or Cairo?	Phoenix, by about 7 C	Cairo, by about 7 C	They are about the same	Cairo, by about 15 C
+geo_lake_deeper_lake	Hard	Which lake is deeper: Lake Tanganyika or the Caspian Sea?	Tanganyika, by about 450 m	Caspian, by about 450 m	Tanganyika, by about 50 m	Caspian, about twice as deep
 geo_lake_tanganyika_lake	Expert	Lake Tanganyika vs Lake Baikal: which is true about their surface areas?	Tanganyika is a few percent bigger	Baikal is a few percent bigger	Tanganyika is about 3 times bigger	Baikal is about 3 times bigger
 geo_mount_elbrus_denali	Expert	Mount Elbrus vs Denali: which is true?	Denali is about 550 m higher	Elbrus is about 550 m higher	They differ by under 20 m	Denali is about 2 km higher
 geo_aconcagua_denali_true	Expert	Aconcagua vs Denali: which is true?	Aconcagua is about 800 m higher	Denali is about 800 m higher	They differ by under 20 m	Aconcagua is about 3 km higher

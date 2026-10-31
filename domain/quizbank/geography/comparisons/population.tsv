@@ -172,6 +172,7 @@ geo_taiwan_slightly_smaller	Hard	Taiwan is slightly smaller than the Netherlands
 geo_russia_sakha_republic	Hard	Russia's Sakha Republic (Yakutia) covers over 3 million square km. Who has more people: Sakha or Estonia?	Estonia, by over a third	Sakha, by over a third	About the same number	Sakha, about 5 times as many
 geo_more_people_city_2	Hard	Who has more people: the city of Moscow or Greater London?	Moscow, by almost half	London, by almost half	About the same number	London, about twice as many
 geo_counting_city_proper_10	Hard	Counting only the city proper, who has more people, Marseille or Lyon?	Marseille, by about two-thirds	Lyon, by about two-thirds	About the same number	Lyon, about twice as many
+geo_more_people_whole_4	Hard	Who has more people: the whole island of Ireland or Denmark?	Ireland, by about a fifth	Denmark, by about a fifth	Denmark, about twice as many	Ireland, about twice as many
 geo_brazil_germany_france	Expert	Brazil vs Germany, France and the UK combined: which is true about their populations?	Both sides near 215 million	The three, about 2x	Brazil, about 2x	The three, about 4x
 geo_tunisia_belgium_true	Expert	Tunisia vs Belgium: which is true about their populations?	About 12 million apiece	Belgium, about 2x	Tunisia, about 3x	Belgium, about 5x
 geo_japan_mexico_more	Expert	Japan vs Mexico: who has more people?	Mexico, slightly more	Japan, about 1.5x	Mexico, about 2x	Japan, about 3x

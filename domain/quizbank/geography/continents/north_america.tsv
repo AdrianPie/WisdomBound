@@ -79,6 +79,7 @@ geo_state_nicknamed_volunteer	Medium	Which US state is nicknamed 'the Volunteer 
 geo_state_comes_spanish_2	Medium	Which US state's name comes from the Spanish for 'snow-covered'?	Nevada	Montana	Florida	Arizona
 geo_canadian_province_calls	Medium	Which Canadian province calls itself 'Wild Rose Country'?	Alberta	Manitoba	Ontario	Saskatchewan
 geo_state_begins_two	Medium	Which is the only US state whose name begins with two vowels?	Iowa	Ohio	Utah	Idaho
+geo_central_american_country_4	Medium	Which is the only Central American country with English as its official language?	Belize	Honduras	Guatemala	Costa Rica
 geox_kostaryka	Hard	Which Central American country abolished its army in 1948?	Costa Rica	Panama	Honduras	Belize
 geo_state_nicknamed_bluegrass	Hard	Which US state is nicknamed 'the Bluegrass State'?	Kentucky	Tennessee	Virginia	Missouri
 geo_largest_country_central	Hard	Which is the largest country in Central America by area?	Nicaragua	Honduras	Guatemala	Panama
@@ -122,6 +123,7 @@ geo_state_just_syllable	Hard	Which is the only US state whose name has just one 
 geo_pennsylvania_dutch_mostly	Hard	The 'Pennsylvania Dutch' are mostly descended from settlers from which country?	Germany	The Netherlands	Belgium	Denmark
 geo_state_nicknamed_old	Hard	Which US state is nicknamed 'the Old Dominion'?	Virginia	Massachusetts	Maryland	Delaware
 geo_state_nicknamed_constitution	Hard	Which US state is nicknamed 'the Constitution State', after the colonial laws it adopted in 1639?	Connecticut	Pennsylvania	Massachusetts	Virginia
+geo_state_official_state	Hard	Which US state has an official state question: 'Red or green?', about chile sauce?	New Mexico	Arizona	Texas	Colorado
 geo_darien	Expert	The Darien Gap is a missing link in which famous road?	The Pan-American Highway	Route 66	The Silk Road	The Trans-Canada Highway
 geo_mosquito_coast_stretches	Expert	The Mosquito Coast stretches along the Caribbean shores of Nicaragua and which other country?	Honduras	Costa Rica	Panama	Belize
 geo_canadian_territory_means	Expert	Which Canadian territory's name means 'great river'?	Yukon	Nunavut	Northwest Territories	Labrador

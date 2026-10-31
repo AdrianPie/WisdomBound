@@ -79,6 +79,9 @@ geo_country_flag_differs	Medium	Which country's flag differs from the Netherland
 geo_country_border_spain	Medium	Which country's border with Spain, largely fixed by a treaty of 1297, is often called the oldest in Europe?	Portugal	France	Andorra	Morocco
 geo_country_land_border_2	Medium	Which country has a land border with both North Korea and Norway?	Russia	China	Finland	Sweden
 geo_three_countries_meet	Medium	Which three countries meet at the Vaalserberg, a hill with a three-sided border stone?	Netherlands, Belgium, Germany	Netherlands, Germany, Denmark	Belgium, France, Luxembourg	France, Germany, Switzerland
+geo_country_red_white	Medium	Which country's red, white and blue flag is often called the oldest tricolour still in use?	The Netherlands	France	Russia	Luxembourg
+geo_green_yellow_red	Medium	The green, yellow and red of many African flags were copied from which country's flag?	Ethiopia	Ghana	Egypt	Liberia
+geo_last_absolute_monarchy	Medium	Which is the last absolute monarchy in Europe, where one ruler holds all power?	Vatican City	Monaco	Liechtenstein	Andorra
 geo2_najdluzsza_granica	Hard	Which two countries share the longest land border in the world?	Canada and the USA	Russia and China	Argentina and Chile	India and China
 geocmp_nie_ameryka_pd	Hard	Which of these countries is NOT in South America?	Belize	Guyana	Suriname	Paraguay
 geocmp_turystyka_kraj	Hard	Which country receives the most international tourist arrivals?	France	Spain	The United States	Italy

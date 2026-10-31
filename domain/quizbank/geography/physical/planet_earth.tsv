@@ -25,6 +25,7 @@ geo_flying_east_london	Easy	Flying east from London to Tokyo, what do you need t
 geo_meridian_line_greenwich	Easy	On the meridian line at Greenwich, visitors love to stand with one foot in each what?	The Eastern and Western Hemispheres	The Northern and Southern Hemispheres	Two different calendar days	Two different time zones
 geo_daylight_saving_time	Easy	When daylight saving time begins in spring, what happens to the clocks?	They go forward an hour	They go back an hour	They go forward two hours	They stop for one minute
 geo_49th_parallel_forms	Easy	The 49th parallel forms a long, dead-straight stretch of the border between which two countries?	The USA and Canada	The USA and Mexico	Russia and China	Argentina and Chile
+geo_all_lines_longitude	Easy	Where do all the lines of longitude meet?	At the poles	At the Equator	At Greenwich	Nowhere
 geo2_panstwo_dwa_konty	Medium	Which country spans two continents: Europe and Asia?	Turkey	Greece	Egypt	Cyprus
 geo3_pierwszy_dzien	Medium	Which country is the first in the world to start each new day?	Kiribati	New Zealand	Japan	Australia
 geocmp_rownik_kraj	Medium	Which of these countries does the equator cross?	Ecuador	Peru	Bolivia	Chile
@@ -78,6 +79,7 @@ geo_sydney_sees_new	Medium	When Sydney sees in the New Year with fireworks, roug
 geo_china_single_time	Medium	China's single time zone is set how far ahead of GMT?	Eight hours	Five hours	Six hours	Ten hours
 geo_australian_city_marks	Medium	Which Australian city marks the Tropic of Capricorn with a tall spire?	Rockhampton	Townsville	Cairns	Darwin
 geo_earth_bulges_equator	Medium	Earth bulges at the equator and is flattened at the poles. What is this shape called?	An oblate spheroid	A prolate spheroid	A truncated sphere	A paraboloid
+geo_apart_antarctica_continent	Medium	Apart from Antarctica, which continent lies entirely south of the Equator?	Australia	South America	Africa	Asia
 geo2_rownolezniki_zwrotnik	Hard	What is the tropic in the southern hemisphere called?	Tropic of Capricorn	Tropic of Cancer	Arctic Circle	Prime Meridian
 geo2_greenwich	Hard	Which city does the prime meridian pass through?	London	Paris	Rome	Madrid
 geo3_linia_zmiany_daty	Hard	Where does the International Date Line run?	Through the middle of the Pacific, near the 180th meridian	Straight through Greenwich, on the edge of London	Along the equator, right round the globe	Along the Ural mountains and the Caspian

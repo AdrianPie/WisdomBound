@@ -25,6 +25,7 @@ geo_2010_deepwater_horizon	Easy	In 2010, the Deepwater Horizon oil rig blew up, 
 geo_ocean_maldives_lie	Easy	In which ocean do the Maldives lie?	The Indian Ocean	The Pacific Ocean	The Atlantic Ocean	The Southern Ocean
 geo_ocean_canary_islands	Easy	In which ocean are the Canary Islands?	The Atlantic	The Indian Ocean	The Pacific	The Arctic Ocean
 geo_gulf_mexico_bordered	Easy	The Gulf of Mexico is bordered by the USA, Mexico and which island country?	Cuba	Jamaica	The Bahamas	Haiti
+geo_fishing_grounds_dogger	Easy	The fishing grounds of Dogger Bank lie in which sea?	The North Sea	The Baltic Sea	The Irish Sea	The Norwegian Sea
 geo2_kanal_sueski	Medium	Which seas does the Suez Canal connect?	The Mediterranean with the Red Sea	The Baltic with the North Sea	The Black Sea with the Aegean	The Pacific with the Atlantic
 geo2_kanal_panamski	Medium	Which oceans does the Panama Canal connect?	The Atlantic with the Pacific	The Pacific with the Indian Ocean	The Atlantic with the Arctic	The Indian with the Southern Ocean
 geo2_ciesnina_bering	Medium	What does the Bering Strait separate?	Asia from North America	Europe from Africa	Australia from Asia	Greenland from Canada
@@ -123,6 +124,7 @@ geo_roughly_fast_atlantic	Hard	Roughly how fast is the Atlantic Ocean getting wi
 geo_narrow_strait_separates	Hard	Which narrow strait separates the island of Anglesey from mainland Wales?	The Menai Strait	The Solent	The Minch	The Pentland Firth
 geo_deepest_zone_ocean	Hard	The deepest zone of the ocean, found in the trenches, is named after which Greek god?	Hades	Poseidon	Oceanus	Nereus
 geo_shallow_sea_lies	Hard	Which shallow sea lies between northern Australia and New Guinea?	The Arafura Sea	The Timor Sea	The Banda Sea	The Celebes Sea
+geo_persian_gulf_opens	Hard	The Persian Gulf opens through a narrow strait into which gulf?	The Gulf of Oman	The Gulf of Aden	The Red Sea	The Gulf of Suez
 geo_row_marianski	Expert	What is the deepest point in the oceans called?	Challenger Deep	Tonga Trench	Java Trench	Milwaukee Deep
 geo_grzbiet_srodoceaniczny	Expert	Which is the longest mountain range on Earth?	The mid-ocean ridge	The Andes	The Himalayas	The Rocky Mountains
 geo_atlantyk_slony	Expert	Which ocean is the saltiest?	The Atlantic	The Pacific	The Indian Ocean	The Arctic Ocean

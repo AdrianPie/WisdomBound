@@ -81,6 +81,7 @@ geo_banned_michigan_mackinac	Medium	What has been banned on Michigan's Mackinac 
 geo_tiny_scottish_island	Medium	Which tiny Scottish island gave its name to a famous style of knitting with colourful bands of pattern?	Fair Isle	Skye	Iona	Harris
 geo_rhodes_kos_belong	Medium	Rhodes and Kos belong to which Greek island group?	The Dodecanese	The Cyclades	The Ionian Islands	The Sporades
 geo_gargano_peninsula_forms	Medium	The Gargano peninsula forms which part of the Italian 'boot'?	The spur	The heel	The toe	The ankle
+geo_two_countries_take	Medium	Which two countries take up most of the Scandinavian Peninsula?	Norway and Sweden	Denmark and Sweden	Norway and Finland	Denmark and Norway
 geo2_wyspa_borneo	Hard	Between how many countries is the island of Borneo divided?	Three	Two	Four	One
 geo2_najwiekszy_archipelag	Hard	Which country is the largest island nation in the world?	Indonesia	The Philippines	Japan	Madagascar
 geocmp_linia_brzegowa	Hard	Which country has the longest coastline?	Canada	Russia	Indonesia	Australia
@@ -123,6 +124,7 @@ geo_hashima_abandoned_battleship	Hard	Hashima, the abandoned 'Battleship Island'
 geo_tynwald_often_oldest	Hard	Tynwald, often called the oldest continuous parliament in the world, governs which island?	The Isle of Man	Iceland	The Faroe Islands	Jersey
 geo_santa_cruz_del	Hard	Santa Cruz del Islote, one of the most crowded islands on Earth, belongs to which country?	Colombia	Haiti	Cuba	Honduras
 geo_kola_peninsula_far	Hard	The Kola Peninsula, far beyond the Arctic Circle, belongs to which country?	Russia	Finland	Norway	Sweden
+geo_largest_greek_islands	Hard	Which is the largest of the Greek islands?	Crete	Rhodes	Corfu	Lesbos
 geo2_polwysep_najwiekszy	Expert	Which peninsula is the largest in the world?	The Arabian Peninsula	The Indian Peninsula	Scandinavia	The Balkan Peninsula
 geocmp_najwiecej_wysp	Expert	Which country is made up of the most islands?	Sweden	Indonesia	The Philippines	Japan
 dpt_geo_fiord	Expert	How does a fjord form?	Ice carves a valley, sea floods it	A coral reef closes off a bay	A landslide dams a river mouth	A desert river cuts a canyon

@@ -24,6 +24,7 @@ geo_southern_lights_seen	Easy	What are the 'southern lights', seen from Antarcti
 geo_summer_wrong_season	Easy	Why is summer the wrong season for seeing the northern lights in Lapland?	The sky never gets dark	The aurora stops in summer	Clouds always hide it	The Sun goes quiet
 geo_buildings_arctic_towns	Easy	Why are many buildings in Arctic towns raised on stilts or piles?	So their heat does not thaw the frozen ground	To keep polar bears from getting inside	To lift them above the spring floods	To protect them from earthquakes
 geo_ice_iceberg_salty	Easy	Is the ice of an iceberg salty or fresh?	Fresh, because it formed from snow	Salty, just like the sea around it	Salty at the bottom, fresh on top	Fresh only during the summer melt
+geo_northwest_passage_through	Easy	The Northwest Passage through the Arctic links which two oceans?	The Atlantic and the Pacific	The Atlantic and the Indian	The Pacific and the Indian	The Arctic and the Southern
 trv_pustynia_zimna	Medium	Counting cold deserts, which is the largest desert on Earth?	Antarctica	The Sahara	The Gobi	The Arabian Desert
 wld_najwieksza_wyspa	Medium	What is the largest island in the world (not counting Australia)?	Greenland	New Guinea	Borneo	Madagascar
 geox_ocean_najmniejszy	Medium	Which is the smallest of the world's oceans?	The Arctic Ocean	The Indian Ocean	The Southern Ocean	The Atlantic Ocean
@@ -78,6 +79,7 @@ geo_north_magnetic_pole	Medium	At the north magnetic pole, which way does a free
 geo_antarctica_fierce_katabatic	Medium	What are Antarctica's fierce 'katabatic' winds?	Cold, heavy air pouring downhill off the ice	Warm winds blowing in from the ocean	Storms that circle the continent	Gusts caused by the polar night
 geo_gives_watermelon_snow	Medium	What gives 'watermelon snow', found on polar and mountain snowfields, its pink colour?	Algae living in the snow	Iron-rich desert dust	Ash from distant volcanoes	Krill washed ashore by storms
 geo_polar_diamond_dust	Medium	What is the polar 'diamond dust' that glitters in the air on very cold, clear days?	Tiny ice crystals falling from a clear sky	Frozen sea spray blown off the waves	Grains of quartz blown off the rocks	Frost forming on floating dust
+geo_polar_whiteout	Medium	What is a polar 'whiteout'?	When snow and cloud hide the horizon	A storm of hailstones	A sudden freeze of the sea	Snow blindness from sunlight
 geox_antarktyda_mroz	Hard	Where was the lowest natural temperature on Earth recorded?	Antarctica	Siberia	Greenland	Alaska
 geo_countries_official_territorial	Hard	How many countries have official territorial claims in Antarctica?	Seven	Three	Twelve	Twenty
 geo_three_countries_overlapping	Hard	Which three countries have overlapping claims to the Antarctic Peninsula?	Britain, Argentina and Chile	Norway, Chile and Argentina	Britain, Norway and France	Australia, Chile and Britain

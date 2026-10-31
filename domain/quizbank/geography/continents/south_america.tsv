@@ -24,6 +24,7 @@ geo_south_american_country_11	Easy	Which South American country is often called 
 geo_largest_portuguese_speaking	Easy	Which is the largest Portuguese-speaking country in the world?	Brazil	Portugal	Angola	Mozambique
 geo_punta_del_este	Easy	Punta del Este, a glitzy beach resort loved by rich Argentines and Brazilians, is in which country?	Uruguay	Chile	Paraguay	Peru
 geo_sacred_valley_incas	Easy	The 'Sacred Valley of the Incas' lies in which country?	Peru	Bolivia	Ecuador	Colombia
+geo_country_crowds_gather	Easy	In which country do crowds gather at Cusco each June for Inti Raymi, the Inca festival of the sun?	Peru	Bolivia	Ecuador	Chile
 geo_second_populous_country	Medium	Which is the second most populous country in South America?	Colombia	Argentina	Peru	Venezuela
 geo_country_means_little	Medium	Which country's name means 'Little Venice', after villages built on stilts?	Venezuela	Bolivia	Colombia	Ecuador
 geo_two_south_american	Medium	Which two South American countries do not border Brazil?	Chile and Ecuador	Peru and Bolivia	Uruguay and Paraguay	Colombia and Venezuela
@@ -122,6 +123,7 @@ geo_christ_andes_statue	Hard	The 'Christ of the Andes' statue, high on a mountai
 geo_country_home_marble	Hard	Which country is home to the Marble Caves on General Carrera Lake?	Chile	Argentina	Peru	Bolivia
 geo_country_calls_amazon	Hard	Which country calls its Amazon lowlands, east of the Andes, 'El Oriente'?	Ecuador	Chile	Argentina	Uruguay
 geo_country_region_mesopotamia	Hard	Which country has a region called 'Mesopotamia', lying between the Parana and Uruguay rivers?	Argentina	Paraguay	Uruguay	Brazil
+geo_present_day_country	Hard	Which present-day country formed the heart of the Spanish colony of New Granada?	Colombia	Venezuela	Ecuador	Peru
 geo2_panstwo_najdluzsze	Expert	Which country is the longest from north to south?	Chile	Norway	Brazil	Russia
 geo_country_shares_longest	Expert	Which country shares the longest border with Brazil?	Bolivia	Peru	Venezuela	Argentina
 geo_brazil_acquired_state	Expert	Brazil acquired the state of Acre in 1903 from which country?	Bolivia	Paraguay	Colombia	Venezuela

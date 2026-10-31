@@ -171,6 +171,7 @@ geo_railway_stations_platforms	Hard	Which of these railway stations has the most
 geo_european_country_longest	Hard	Which European country has the longest high-speed rail network?	Spain	France	Germany	Italy
 geo_countries_longest_railway	Hard	Which of these countries has the longest railway network?	The USA	China	Russia	Canada
 geo_roughly_long_world	Hard	Roughly how long is the world's longest dead-straight stretch of railway, across Australia's Nullarbor Plain?	About 480 km	About 50 km	About 150 km	About 1,500 km
+geo_taller_cologne_cathedral_2	Hard	Which is taller: Cologne Cathedral or the Washington Monument?	The Washington Monument, by about 12 m	Cologne Cathedral, by about 12 m	Cologne Cathedral, by about 50 m	They are exactly the same height
 geo_taller_eiffel_tower	Expert	Which is taller: the Eiffel Tower or Tokyo Tower, which was modelled on it?	Tokyo Tower, by a few metres	The Eiffel Tower, by a few metres	The Eiffel Tower, by about 100 m	Tokyo Tower, by about 100 m
 geo_taller_berlin_tower	Expert	Which is taller: Berlin's TV Tower or the Eiffel Tower?	Berlin's TV Tower, by about 40 m	The Eiffel Tower, by about 40 m	They are exactly the same height	The Eiffel Tower, by about 150 m
 geo_taller_shard_eiffel	Expert	Which is taller: the Shard or the Eiffel Tower?	The Eiffel Tower, by about 20 m	The Shard, by about 20 m	They are exactly the same height	The Shard, by about 100 m

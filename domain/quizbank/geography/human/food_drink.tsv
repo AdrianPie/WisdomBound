@@ -91,6 +91,7 @@ geo_country_grows_world_2	Medium	Which country grows most of the world's garlic?
 geo_rocky_mountain_oysters	Medium	What are 'Rocky Mountain oysters', served in the American West?	Deep-fried bull testicles	Pickled trout eggs	Breaded wild mushrooms	Smoked freshwater clams
 geo_bologna_meat_ragu	Medium	In Bologna, the meat ragu known abroad as 'bolognese' is traditionally served with which pasta, not spaghetti?	Tagliatelle	Penne	Linguine	Fusilli
 geo_mate_bitter_herbal	Medium	Mate, a bitter herbal tea sipped through a metal straw from a hollow gourd, is the national drink of which country?	Argentina	Mexico	Peru	Colombia
+geo_city_gave_roast	Medium	Which city gave its name to a famous roast duck dish?	Beijing	Shanghai	Bangkok	Hanoi
 geo_kawa_finlandia	Hard	Which country drinks the most coffee per person?	Finland	Italy	Brazil	The United States
 geo_czekolada_szwajcaria	Hard	Which country's people eat the most chocolate per person?	Switzerland	Belgium	The United States	France
 geo_kakao_wybrzeze	Hard	Which country produces the most cocoa beans?	Ivory Coast	Ghana	Brazil	Switzerland
@@ -126,6 +127,7 @@ geo_country_produces_cheese	Hard	Which country produces the most cheese?	The USA
 geo_world_brazil_nuts	Hard	Most of the world's Brazil nuts are harvested in which country?	Bolivia	Brazil	Peru	Colombia
 geo_bubble_tea_chewy	Hard	Bubble tea, with chewy tapioca balls sucked up through a fat straw, was invented in the 1980s in which place?	Taiwan	Japan	South Korea	Thailand
 geo_margarine_invented_1860s	Hard	Margarine was invented in the 1860s after which country's emperor offered a prize for a cheap substitute for butter?	France	Russia	Austria	Germany
+geo_asian_country_world	Hard	Which Asian country is the world's second-biggest coffee producer?	Vietnam	Indonesia	India	Thailand
 geo_czekoladowe_wzgorza	Expert	In which country are the 'Chocolate Hills'?	The Philippines	Indonesia	Malaysia	Vietnam
 geo_surstromming_fermented_herring	Expert	Surstromming, fermented herring so smelly it is often opened outdoors, comes from which country?	Sweden	Norway	Finland	Denmark
 geo_casu_marzu_cheese	Expert	Casu marzu, a cheese containing live maggots, comes from which Italian island?	Sardinia	Sicily	Elba	Capri
@@ -143,3 +145,4 @@ geo_kvass_fizzy_drink	Expert	Kvass, a fizzy drink popular in Russia and Ukraine,
 geo_mayonnaise_often_said	Expert	Mayonnaise is often said to be named after Mahon, the main port of which island?	Menorca	Mallorca	Corsica	Malta
 geo_italian_pasta_means	Expert	Which Italian pasta's name means 'priest stranglers'?	Strozzapreti	Orecchiette	Vermicelli	Cavatappi
 geo_retsina_white_wine	Expert	Retsina, a white wine flavoured with pine resin, is a speciality of which country?	Greece	Portugal	Croatia	Georgia
+geo_argentina_uruguay_bombilla	Expert	In Argentina and Uruguay, what is a 'bombilla' used for?	Sipping mate tea	Grilling meat	Making dulce de leche	Pouring wine

@@ -81,6 +81,7 @@ geo_place_country_lies	Medium	No place in which country lies more than about 50 
 geo_island_ancient_albion	Medium	Which island's ancient name, 'Albion', is often linked to the white chalk cliffs of its south coast?	Great Britain	Ireland	Iceland	Sicily
 geo_balkan_country_rose	Medium	Which Balkan country's 'Rose Valley' is a leading source of the rose oil used in perfumes?	Bulgaria	Romania	Greece	Serbia
 geo_randstad_ring_big	Medium	The Randstad, a ring of big cities around a 'Green Heart' of farmland, is home to nearly half the people of which country?	The Netherlands	Belgium	Denmark	Germany
+geo_greeks_call_own	Medium	What do Greeks call their own country?	Hellas	Grecia	Achaea	Elysia
 geocmp_panstwo_ue_pow	Hard	Which is the largest European Union country by area?	France	Spain	Sweden	Germany
 trv_ukraina_europa	Hard	Which is the largest country lying entirely within Europe?	Ukraine	France	Spain	Germany
 geo_andorra_two_heads	Hard	Andorra has two heads of state: the Bishop of Urgell and who?	The President of France	The King of Spain	The Pope	The Prince of Monaco
@@ -124,6 +125,7 @@ geo_sweden_allemansratten_everyone	Hard	What does Sweden's 'allemansratten', or 
 geo_2007_country_became	Hard	In 2007, which country became the first to let all voters cast ballots online in a national parliamentary election?	Estonia	Finland	Switzerland	Denmark
 geo_sorbs_slavic_minority	Hard	The Sorbs, a Slavic minority famous for their painted Easter eggs, live mainly in which country?	Germany	Czechia	Slovakia	Austria
 geo_burgenland_youngest_province	Hard	Burgenland, the youngest province of its country, was handed over by Hungary in 1921 to which country?	Austria	Slovakia	Slovenia	Romania
+geo_country_calls_itself_7	Hard	Which country calls itself 'Eesti'?	Estonia	Latvia	Lithuania	Finland
 geo_llivia_small_town	Expert	Llivia, a small town completely surrounded by French territory, belongs to which country?	Spain	Andorra	Monaco	Italy
 geo_austrian_valley_kleinwalsertal	Expert	The Austrian valley of Kleinwalsertal can be reached by road only through which country?	Germany	Switzerland	Italy	Liechtenstein
 geo_pheasant_island_tiny	Expert	Pheasant Island, a tiny island in a border river, switches between which two countries every six months?	Spain and France	France and Italy	Spain and Portugal	Germany and Austria
@@ -145,3 +147,4 @@ geo_town_olivenza_held	Expert	The town of Olivenza, held by Spain since 1801, is
 geo_spanish_exclave_entirely	Expert	Which Spanish exclave is entirely surrounded by France?	Llivia	Ceuta	Melilla	Andorra
 geo_rostigraben_hash_brown	Expert	The 'Rostigraben', or 'hash brown ditch', is a cultural divide between language groups in which country?	Switzerland	Belgium	Austria	Luxembourg
 geo_szekely_land_home	Expert	The Szekely Land, home to a large Hungarian-speaking community, lies in which country?	Romania	Slovakia	Serbia	Ukraine
+geo_village_hell_railway	Expert	The village of Hell, whose railway sign is a popular photo stop, is in which country?	Norway	Iceland	Scotland	Denmark

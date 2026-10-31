@@ -169,6 +169,7 @@ geo_countries_just_city	Hard	Which of these countries has just one city of over 
 geo_roughly_chinese_cities	Hard	Roughly how many Chinese cities have over a million people?	Over 100	About 10	About 30	About 1,000
 geo_countries_highest_share	Hard	Which of these countries has the highest share of women in its parliament?	Rwanda	Sweden	Iceland	Finland
 geo_federations_divided_states	Hard	Which of these federations is divided into the most states?	The USA	Nigeria	Brazil	Mexico
+geo_switzerland_belgium_more	Hard	Switzerland vs Belgium: which has more official national languages?	Switzerland, by one	Belgium, by one	They tie	Switzerland, by three
 geo_italy_france_true	Expert	Italy vs France: which is true about how much wine they make?	They are close and swap first place	Italy makes about 3 times as much	France makes about 3 times as much	Both trail far behind Spain
 geo_drinks_more_wine_2	Expert	Who drinks more wine per person, Portugal or France?	Portugal, somewhat more	France, somewhat more	France, about twice as much	Portugal, about 3 times as much
 geo_drinks_more_wine_3	Expert	Who drinks more wine in total, the USA or France?	The USA, somewhat more	France, somewhat more	France, about twice as much	The USA, about 4 times as much

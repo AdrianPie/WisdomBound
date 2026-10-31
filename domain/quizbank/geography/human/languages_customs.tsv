@@ -90,6 +90,7 @@ geo_portuguese_word_thank	Medium	The Portuguese word for 'thank you', 'obrigado'
 geo_country_two_official	Medium	Which country has two official written forms of its language, Bokmal and Nynorsk?	Norway	Denmark	Iceland	Finland
 geo_country_fika_cherished	Medium	Which country's 'fika' is a cherished daily break for coffee and something sweet?	Sweden	Denmark	Norway	Finland
 geo_alpine_countries_horned	Medium	In Alpine countries, which horned, chain-rattling figure tags along with St Nicholas in early December to scare naughty children?	Krampus	Rubezahl	The Erlking	Tatzelwurm
+geo_country_native_language	Medium	In which country is the native language Guarani official alongside Spanish?	Paraguay	Peru	Uruguay	Ecuador
 geocmp_jezyk_ojczysty	Hard	Which language has the most native speakers?	Mandarin Chinese	English	Spanish	Hindi
 geo_ancient_language_unrelated	Hard	Which ancient language, unrelated to any other in Europe, is spoken in parts of Spain and France?	Basque	Catalan	Galician	Occitan
 geo_word_shampoo_comes	Hard	The word 'shampoo' comes from which language?	Hindi	Arabic	Persian	Malay
@@ -126,6 +127,7 @@ geo_tok_pisin_national	Hard	Tok Pisin, a national language of Papua New Guinea, 
 geo_word_hammock_came	Hard	The word 'hammock' came into English through Spanish from the language of which people?	The Taino	The Aztecs	The Incas	The Maya
 geo_italy_kindly_old	Hard	In Italy, which kindly old witch flies around on the night of 5 January, leaving sweets for good children and coal for bad ones?	La Befana	Baba Yaga	Strega Nona	Fata Morgana
 geo_country_christmas_book	Hard	Which country's 'Christmas book flood' tradition means giving books on Christmas Eve and spending the night reading them?	Iceland	Norway	Finland	Denmark
+geo_lempira_currency_native	Hard	The lempira, a currency named after a native chief, is used in which country?	Honduras	Guatemala	Nicaragua	Panama
 geo_maltese_semitic_official	Expert	Maltese, the only Semitic official language of the EU, grew out of which language?	Arabic	Hebrew	Aramaic	Berber
 geo_names_yen_yuan	Expert	The names of the yen, the yuan and the won all come from a word meaning what?	Round	Silver	Coin	Shell
 geo_word_dollar_comes	Expert	The word 'dollar' comes from 'thaler', silver coins first minted in a valley in which present-day country?	Czechia	Germany	Austria	Switzerland
@@ -143,3 +145,4 @@ geo_botswana_currency_pula	Expert	Botswana's currency, the pula, is named after 
 geo_colacho_festival_spanish	Expert	In El Colacho, a festival in a Spanish village, men dressed as devils do what?	Leap over babies lying on mattresses	Chase children through the streets	Throw flour at newly married couples	Burn a straw devil on the church steps
 geo_caga_tio_log	Expert	Caga Tio, a log that children beat with sticks so it will 'poop' out sweets, is a Christmas tradition of which region?	Catalonia	Bavaria	Brittany	Sicily
 geo_citizen_monaco	Expert	What is a citizen of Monaco called?	A Monegasque	A Monacoan	A Monacian	A Grimaldian
+geo_country_currency_dram	Expert	Which country's currency is called the dram?	Armenia	Georgia	Azerbaijan	Moldova
