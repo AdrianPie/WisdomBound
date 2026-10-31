@@ -174,6 +174,7 @@ pol_polish_dzialka_city	Easy	What is a Polish 'dzialka', where many city familie
 pol_soup_polish_families	Easy	Which soup do many Polish families make on Monday from Sunday's leftover chicken broth?	Tomato soup	Sorrel soup	Mushroom soup	Pea soup
 pol_city_poland_second	Easy	Which city is Poland's second largest by population?	Krakow	Lodz	Wroclaw	Poznan
 pol_digits_polish_blik	Easy	How many digits does a Polish BLIK payment code have?	Six	Four	Eight	Five
+pol_holy_saturday_blessing	Easy	What is the Holy Saturday blessing of Easter food baskets called?	Swieconka	Smigus-dyngus	Wigilia	Andrzejki
 pol_geo2_wisla_zrodlo	Medium	Where does the Vistula river originate?	In the Silesian Beskids	In the Tatras	In the Sudetes	In the Masurian Lake District
 pol_geo2_polska_jezioro	Medium	Which lake is the largest in Poland?	Sniardwy	Mamry	Hancza	Lebsko
 pol_geo2_polska_najglebsze	Medium	Which lake is the deepest in Poland?	Hancza	Sniardwy	Wigry	Mamry
@@ -458,6 +459,12 @@ pol_oranzada_favourite_drink	Medium	What was 'oranzada', a favourite drink of Po
 pol_actor_played_cop	Medium	Which actor played the cop Franz Maurer in the 1992 thriller 'Psy'?	Boguslaw Linda	Daniel Olbrychski	Cezary Pazura	Marek Kondrat
 pol_plastus_hero_classic	Medium	What is Plastus, hero of a classic Polish children's book?	A little plasticine man	A wooden puppet	A paper doll	A tin soldier
 pol_1979_polish_pope	Medium	Where in 1979 did the Polish pope say 'Let your Spirit descend and renew the face of the earth. Of this land'?	Victory Square in Warsaw	Main Market Square in Krakow	Jasna Gora in Czestochowa	Castle Square in Warsaw
+pol_polish_city_home	Medium	Which Polish city is home to the 'Panorama Raclawicka' painting?	Wroclaw	Krakow	Lwow	Poznan
+pol_city_hosts_centuries	Medium	Which city hosts the centuries-old summer fair 'Jarmark Dominikanski'?	Gdansk	Krakow	Wroclaw	Torun
+pol_city_hosts_malta	Medium	Which city hosts the Malta international theatre festival every summer?	Poznan	Krakow	Wroclaw	Lublin
+pol_krakow_mound_raised	Medium	Which Krakow mound was raised by hand in the 1820s to honour a national hero?	Kopiec Kosciuszki	Kopiec Krakusa	Kopiec Wandy	Kopiec Pilsudskiego
+pol_band_sang_kocham	Medium	Which band sang 'Kocham Cie jak Irlandie'?	Kobranocka	Elektryczne Gitary	Lady Pank	T.Love
+pol_city_manufaktura_complex	Medium	Which city's Manufaktura complex fills a vast 19th-century textile mill?	Lodz	Poznan	Katowice	Bialystok
 pol_his2_bitwa_grunwald_kto	Hard	Who commanded the Polish-Lithuanian forces at Grunwald?	Wladyslaw Jagiello	Casimir the Great	Vytautas alone	Boleslaw the Wrymouth
 pol_his2_konstytucja_3maja_rok	Hard	What was the Constitution of May 3 in Europe?	The first in Europe	The third in Europe	The first in the world	The last of the 18th century
 pol_his2_bitwa_warszawska	Hard	In which year was the Battle of Warsaw, called the Miracle at the Vistula?	1920	1919	1921	1918
@@ -685,6 +692,11 @@ pol_soviet_car_built	Hard	Which Soviet car was built under licence in Warsaw as 
 pol_polish_studio_created	Hard	Which Polish studio created the shooters 'Painkiller' and 'Bulletstorm'?	People Can Fly	Techland	CI Games	11 bit studios
 pol_moody_giant_spirit	Hard	What is the name of the moody giant spirit of the Karkonosze in Polish legend?	Liczyrzepa	Skarbnik	Boruta	Utopiec
 pol_baltic_legend_sea	Hard	In Baltic legend, the sea queen Jurata lived in a palace made of what?	Amber	Coral	Pearls	Ice
+pol_town_oder_pol	Hard	In which town on the Oder was the Pol'and'Rock festival held for many years?	Kostrzyn nad Odra	Slubice	Gorzow Wielkopolski	Krosno Odrzanskie
+pol_actor_played_kargul	Hard	Which actor played Kargul in 'Sami swoi'?	Wladyslaw Hancza	Waclaw Kowalski	Jerzy Janeczek	Franciszek Pieczka
+pol_city_stands_centennial	Hard	In which city stands the Centennial Hall (Hala Stulecia)?	Wroclaw	Katowice	Poznan	Lodz
+pol_river_forms_poland	Hard	Which river forms Poland's border with Germany alongside the Oder?	Neisse	Bobr	Warta	Kwisa
+pol_polish_football_club	Hard	Which Polish football club is nicknamed 'Biala Gwiazda' (White Star)?	Wisla Krakow	Legia Warszawa	Lech Poznan	Gornik Zabrze
 pol_his3_polski_rzad_na_uchodzstwie	Expert	Where did the Polish government-in-exile operate during World War II?	London (earlier in France)	Moscow, alongside the Red Army	Washington, with the Allies	Rome, after the Italian campaign
 pol_his3_dywizjon_303	Expert	What was 303 Squadron known for in the Battle of Britain?	It was one of the RAF's most effective fighter squadrons	It defended Warsaw through September 1939	It fought its way up the hill at Monte Cassino	It was a naval unit escorting convoys
 pol_lit2_herbert_bohater	Expert	What is the character of Zbigniew Herbert's poem cycle called?	Mr. Cogito	Mr. Tadeusz	Mr. Wolodyjowski	Mr. Kleks
@@ -799,3 +811,6 @@ pol_city_old_tribunal	Expert	In which city's old tribunal is a table said to bea
 pol_lively_heroine_nicknamed	Expert	Which lively heroine, nicknamed 'Hajduczek', marries the little knight in Sienkiewicz's Trilogy?	Basia	Olenka	Helena	Krysia
 pol_painter_girl_chrysanthemums	Expert	Which painter is famous for 'Girl with Chrysanthemums' and portraits painted in Paris?	Olga Boznanska	Jozef Mehoffer	Anna Bilinska	Zofia Stryjenska
 pol_polish_singer_born	Expert	Which Polish singer, born in Soviet Uzbekistan, became a star in the USSR as well as Poland?	Anna German	Irena Jarocka	Halina Kunicka	Anna Jantar
+pol_warsaw_cemetery_avenue	Expert	In which Warsaw cemetery is the Avenue of the Meritorious (Aleja Zasluzonych)?	Powazki	Brodno	Wolski	Bemowo
+pol_italian_architect_designed	Expert	Which Italian architect designed the Renaissance town of Zamosc?	Bernardo Morando	Bartolomeo Berrecci	Santi Gucci	Giovanni Battista Quadro
+pol_writer_created_eberhard	Expert	Which writer created Eberhard Mock, a detective in pre-war Breslau?	Marek Krajewski	Zygmunt Miloszewski	Joanna Chmielewska	Marek Hlasko

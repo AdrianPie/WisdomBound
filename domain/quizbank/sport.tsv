@@ -187,6 +187,8 @@ spo_hawk_eye_used	Easy	What is Hawk-Eye, used in tennis and cricket?	A ball-trac
 spo_paris_avenue_tour	Easy	On which famous Paris avenue does the Tour de France traditionally finish?	The Champs-Elysees	The Rue de Rivoli	Boulevard Haussmann	The Avenue Foch
 spo_sprint_photo_finish	Easy	In a sprint 'photo finish', which part of a runner's body must cross the line first to win?	The torso	The head	The leading foot	An outstretched hand
 spo_basketball_other_american	Easy	In basketball and other American sports, what does 'MVP' stand for?	Most Valuable Player	Most Victorious Player	Major Veteran Prize	Main Varsity Pick
+spo_grand_slam_tournament	Easy	Which Grand Slam tournament is famous for strawberries and cream?	Wimbledon	US Open	French Open	Australian Open
+spo_sport_may_players	Easy	In which sport may players hit the ball only with the flat side of their stick?	Field hockey	Lacrosse	Hurling	Polo
 spo_mundial_2018	Medium	Who won the soccer World Cup in 2018?	France	Croatia	Brazil	Germany
 spo_lewandowski	Medium	At which club did Robert Lewandowski become the Bundesliga's top scorer?	Bayern Munich	Real Madrid	Manchester United	Juventus
 spo_hokej	Medium	How long is one period in an ice hockey game?	20 minutes	15 minutes	25 minutes	30 minutes
@@ -505,6 +507,10 @@ spo_national_football_team_5	Medium	Which national football team is nicknamed 't
 spo_olympic_champions_often	Medium	Why do Olympic champions so often bite their medals on the podium?	Photographers ask them to	To check the gold is real	It is an ancient Greek custom	It is said to bring luck
 spo_1958_world_cup	Medium	At the 1958 World Cup, which 17-year-old scored twice in the final?	Pele	Garrincha	Didi	Zagallo
 spo_los_angeles_lakers	Medium	The Los Angeles Lakers kept their name from their first home, in which US state of '10,000 lakes'?	Minnesota	Michigan	Wisconsin	Florida
+spo_marathon_runners_hit	Medium	Marathon runners 'hit the wall' around 30 km mainly because they run out of what?	Stored sugar	Salt	Water	Oxygen
+spo_water_polo_players	Medium	Water polo players stay afloat mostly with which kick?	Eggbeater kick	Butterfly kick	Flutter kick	Dolphin kick
+spo_long_may_attacker	Medium	How long may an attacker stand in the painted lane under the basket in basketball?	3 seconds	5 seconds	10 seconds	8 seconds
+spo_ski_jumpers_spread	Medium	Ski jumpers spread their skis in a V shape because it does what?	Gives more lift	Is required by rules	Slows them down	Keeps them warmer
 spo_bolt	Hard	What is Usain Bolt's world record in the 100 m?	9.58 s	9.69 s	9.72 s	9.49 s
 spo_olimpiada_1896	Hard	Where were the first modern Olympic Games held?	Athens	Paris	Rome	London
 spo_wimbledon	Hard	What surface is Wimbledon played on?	Grass	Sand	Concrete	Clay and hard court, alternating
@@ -729,6 +735,15 @@ spo_french_open_home	Hard	The French Open's home, Roland Garros, is named after 
 spo_sport_played_indigenous	Hard	Which sport, first played by Indigenous peoples of North America, is Canada's official national summer sport?	Lacrosse	Baseball	Canadian football	Soccer
 spo_men_javelin_redesigned	Hard	Why was the men's javelin redesigned in 1986?	Throws were flying too far for stadiums	Too many javelins snapped on landing	Old javelins were too costly	Judges could not see the landings
 spo_fans_nhl_team	Hard	Fans of which NHL team throw plastic rats onto the ice to celebrate?	Florida Panthers	Boston Bruins	Chicago Blackhawks	Toronto Maple Leafs
+spo_darts_highest_score	Hard	In darts, what is the highest score you can finish a leg with in three darts?	170	180	160	150
+spo_baseball_far_pitcher	Hard	In baseball, how far is the pitcher's rubber from home plate?	60 feet 6 inches	90 feet	45 feet	75 feet
+spo_coloured_dots_squash	Hard	What do the coloured dots on a squash ball show?	How bouncy it is	Its brand	Its weight	Indoor or outdoor use
+spo_sprinting_false_start	Hard	In sprinting, a false start is called if a runner reacts faster than what?	0.1 seconds	0.01 seconds	0.3 seconds	0.5 seconds
+spo_major_league_baseball	Hard	In Major League Baseball, what is NOT the same in every ballpark?	Outfield wall distances	Distance between bases	Pitching distance	Ball size
+spo_stableford_scoring_system	Hard	Stableford is a scoring system in which sport?	Golf	Cricket	Darts	Bowls
+spo_must_kabaddi_raider	Hard	Why must a kabaddi raider keep chanting 'kabaddi'?	To prove one held breath	To scare defenders	To count the seconds	To call teammates
+spo_james_scotland_banned	Hard	James II of Scotland banned which sport in 1457 for distracting men from archery?	Golf	Tennis	Curling	Shinty
+spo_rowing_steers_boat	Hard	In rowing, who steers the boat and faces forward?	The coxswain	The stroke	The bowman	The skipper
 spo_dekatlon	Expert	Which event closes the men's Olympic decathlon on the second day?	The 1500 metres	The javelin throw	The pole vault	The 110 m hurdles
 spo_nba_wilt	Expert	Who scored 100 points in a single NBA game?	Wilt Chamberlain	Michael Jordan	Kobe Bryant	LeBron James
 spo2_fosbury	Expert	Who revolutionized the high jump with the backward flop technique?	Dick Fosbury	Jesse Owens	Carl Lewis	Javier Sotomayor
@@ -836,3 +851,8 @@ spo_swedish_shooter_oscar	Expert	Swedish shooter Oscar Swahn won an Olympic meda
 spo_just_fontaine_scored	Expert	Just Fontaine scored 13 goals at the 1958 World Cup alone. For which country did he play?	France	Brazil	Sweden	West Germany
 spo_scottish_stick_ball	Expert	Which Scottish stick-and-ball sport is played with a curved stick called a caman?	Shinty	Bandy	Lacrosse	Rounders
 spo_country_basketball_team	Expert	Which country did the US basketball team beat in the final of the first Olympic tournament, in 1936, played outdoors in the rain?	Canada	Mexico	Italy	Philippines
+spo_ring_olympic_archery	Expert	The 10-ring on an Olympic archery target, shot from 70 m, is about how wide?	About 12 cm	About 3 cm	About 30 cm	About 50 cm
+spo_cricket_golden_duck	Expert	In cricket, what is a 'golden duck'?	Out on the first ball	Out without scoring	A century in one hour	Six sixes in an over
+spo_gaelic_football_points	Expert	In Gaelic football, how many points is a goal under the crossbar worth?	3	1	2	6
+spo_polo_hand_must	Expert	In polo, in which hand must every player hold the mallet?	The right hand	The left hand	Either hand	Both hands
+spo_wimbledon_1877_held	Expert	The first Wimbledon in 1877 was held partly to pay for what?	A broken pony roller	A new clubhouse	A croquet lawn	A royal visit

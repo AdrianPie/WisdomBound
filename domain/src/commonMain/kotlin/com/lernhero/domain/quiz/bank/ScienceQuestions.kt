@@ -198,7 +198,9 @@ object ScienceQuestions {
         q("sci_airless_moon_astronaut", "On the airless Moon, an astronaut dropped a hammer and a feather at the same moment. What happened?", "They hit the ground together", listOf("The hammer landed far sooner", "The feather floated away", "The feather landed first"), E),
         q("sci_swimming_pool_feel", "Why does a swimming pool at 20 C feel much colder than air at 20 C?", "Water draws heat from your body far faster", listOf("Water is always colder than it looks", "Pool water contains cooling chemicals", "Your skin cannot sense warm water"), E),
         q("sci_find_sea_tranquillity", "Where would you find the Sea of Tranquillity?", "On the Moon", listOf("In the Arctic Ocean", "Off the coast of Japan", "On the planet Mars"), E),
-        q("sci_wax_burning_candle", "Where does the wax of a burning candle mostly go?", "It burns away as fuel into gases", listOf("It all drips down into the holder", "It soaks deep into the wick for good", "It turns into the smoke's black soot"), E)
+        q("sci_wax_burning_candle", "Where does the wax of a burning candle mostly go?", "It burns away as fuel into gases", listOf("It all drips down into the holder", "It soaks deep into the wick for good", "It turns into the smoke's black soot"), E),
+        q("sci_counting_lightning_flash", "Counting from a lightning flash, about how many seconds of delay mean the storm is 1 km away?", "About 3", listOf("About 10", "About 1", "About 30"), E),
+        q("sci_won_soda_cans", "Why won't most soda cans stick to a fridge magnet?", "They are aluminium", listOf("Their paint blocks it", "They are too light", "The liquid stops it"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -518,7 +520,15 @@ object ScienceQuestions {
         q("sci_slice_toast_knocked", "Why does a slice of toast knocked off a table so often land butter side down?", "It only has time for about half a turn", listOf("Air resistance always flips it over", "The butter makes one side much heavier", "Toasters curve the bread towards one side"), M),
         q("sci_mars_mission_scientists", "What do Mars mission scientists call one day on Mars?", "A sol", listOf("A mar", "A rev", "A dia"), M),
         q("sci_roughly_fast_international", "Roughly how fast does the International Space Station travel?", "About 28,000 km/h", listOf("About 2,800 km/h", "About 900 km/h", "About 280,000 km/h"), M),
-        q("sci_north_star_barely", "Why does the North Star barely move while other stars wheel across the night sky?", "It lies almost straight above Earth's axis", listOf("It is much closer than the other stars", "It moves at the same speed as the Earth", "It is the brightest star in the sky"), M)
+        q("sci_north_star_barely", "Why does the North Star barely move while other stars wheel across the night sky?", "It lies almost straight above Earth's axis", listOf("It is much closer than the other stars", "It moves at the same speed as the Earth", "It is the brightest star in the sky"), M),
+        q("sci_white_fog_pouring", "The white fog pouring off dry ice is mostly what?", "Water droplets", listOf("Carbon dioxide gas", "Smoke", "Liquid nitrogen"), M),
+        q("sci_metal_soft_cut", "Which metal is so soft it can be cut with a butter knife?", "Sodium", listOf("Aluminium", "Copper", "Tin"), M),
+        q("sci_earth_magnetic_pole", "Earth's magnetic pole in the Arctic is physically what kind of magnetic pole?", "A south pole", listOf("A north pole", "Neither", "It flips daily"), M),
+        q("sci_balloon_left_freezer", "Why does a balloon left in a freezer shrink?", "Cold gas takes up less room", listOf("The rubber freezes", "Air leaks out", "Water inside freezes"), M),
+        q("sci_colour_blue_jeans", "What colour does a blue jeans patch look under pure red light?", "Nearly black", listOf("Purple", "Bright blue", "White"), M),
+        q("sci_shower_curtain_billow", "Why does the shower curtain billow inward when the shower is on?", "Moving air lowers the pressure", listOf("Hot water attracts it", "Static electricity", "Steam pushes it"), M),
+        q("sci_colour_flames_copper", "What colour flames does copper give in fireworks?", "Blue-green", listOf("Red", "Yellow", "Purple"), M),
+        q("sci_really_hearing_hold", "What are you really hearing when you hold a seashell to your ear?", "Echoed room noise", listOf("The sea's memory", "Your heartbeat", "Air inside the shell"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -781,7 +791,12 @@ object ScienceQuestions {
         q("sci_happens_annular_solar", "What happens in an annular solar eclipse?", "The Moon leaves a bright ring of Sun round it", listOf("The Earth's shadow turns the Moon red", "The Sun is hidden for about a whole hour", "Two moons pass in front of the Sun at once"), H),
         q("sci_air_pressure_sea", "Air pressure at sea level is like the weight of roughly what resting on each square centimetre of you?", "About 1 kg", listOf("About 1 g", "About 100 kg", "About 10 tonnes"), H),
         q("sci_colour_daytime_sky_2", "What colour is the daytime sky on Mars?", "A dusty butterscotch-pink", listOf("A deep blue like Earth's", "A bright lime green", "Pitch black like the Moon's"), H),
-        q("sci_leave_fridge_door", "You leave the fridge door open in a closed kitchen on a hot day. What happens to the kitchen?", "It slowly gets warmer", listOf("It slowly gets cooler", "It stays exactly the same", "It cools, then quickly warms"), H)
+        q("sci_leave_fridge_door", "You leave the fridge door open in a closed kitchen on a hot day. What happens to the kitchen?", "It slowly gets warmer", listOf("It slowly gets cooler", "It stays exactly the same", "It cools, then quickly warms"), H),
+        q("sci_pluto_heart_shaped", "Pluto's famous heart-shaped plain is named after whom?", "Clyde Tombaugh", listOf("Percival Lowell", "Carl Sagan", "Edwin Hubble"), H),
+        q("sci_scorching_mercury_still", "Where does scorching Mercury still hold water ice?", "Shadowed polar craters", listOf("Under the equator", "In its thin clouds", "Nowhere at all"), H),
+        q("sci_needle_float_still", "Why can a needle float on still water?", "Surface tension", listOf("Air trapped inside", "Magnetism", "Its tiny weight"), H),
+        q("sci_water_expand_freezes", "By about how much does water expand when it freezes?", "About 9%", listOf("About 1%", "About 30%", "About 50%"), H),
+        q("sci_tennis_ball_dropped", "Why does a tennis ball dropped onto a basketball fly so high?", "Momentum passes to the light ball", listOf("The basketball is magnetic", "Air pressure pushes it", "The tennis ball spins"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -914,6 +929,9 @@ object ScienceQuestions {
         q("sci_giant_supercluster_galaxies", "What is the name of the giant supercluster of galaxies, mapped in 2014, that includes our Milky Way?", "Laniakea", listOf("Andromeda", "Magellan", "Shapley"), X),
         q("sci_drop_ice_cube", "Drop an ice cube into fresh water and another into very salty water at the same temperature. Which melts faster?", "The one in fresh water", listOf("The one in salty water", "They melt at exactly the same speed", "Neither melts until stirred"), X),
         q("sci_sun_suddenly_vanished", "If the Sun suddenly vanished, when would the Earth stop feeling its pull?", "After about 8 minutes", listOf("Instantly", "After about 8 seconds", "After about 8 days"), X),
-        q("sci_thanks_moon_slight", "Thanks to the Moon's slight wobble, roughly how much of its surface can we see from Earth over time?", "About 59%", listOf("Exactly 50%", "About 90%", "About 25%"), X)
+        q("sci_thanks_moon_slight", "Thanks to the Moon's slight wobble, roughly how much of its surface can we see from Earth over time?", "About 59%", listOf("Exactly 50%", "About 90%", "About 25%"), X),
+        q("sci_vacuum_falls_faster", "In a vacuum, what falls faster: a hammer or a feather?", "Neither", listOf("The hammer", "The feather", "It depends on shape"), X),
+        q("sci_some_old_church", "Why are some old church window panes thicker at the bottom?", "They were fitted that way", listOf("Glass flows slowly", "Rain wore the top", "Heat melted them"), X),
+        q("sci_mercury_full_day", "On Mercury, a full day from one sunrise to the next lasts about how long?", "About 176 Earth days", listOf("About 59 Earth days", "About 88 Earth days", "About 24 hours"), X)
     )
 }

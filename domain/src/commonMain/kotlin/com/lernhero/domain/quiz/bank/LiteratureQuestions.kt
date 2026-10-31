@@ -231,7 +231,8 @@ object LiteratureQuestions {
         q("lit_scarlet_letter_letter", "In 'The Scarlet Letter', which letter is Hester Prynne made to wear on her dress?", "A", listOf("S", "H", "X"), E),
         q("lit_composer_already_touring", "Which composer was already touring Europe's royal courts as a child performer at the age of six?", "Wolfgang Amadeus Mozart", listOf("Ludwig van Beethoven", "Johann Sebastian Bach", "Joseph Haydn"), E),
         q("lit_painter_wrote_hundreds", "Which painter wrote hundreds of letters to his art-dealer brother, Theo?", "Vincent van Gogh", listOf("Claude Monet", "Paul Cezanne", "Edgar Degas"), E),
-        q("lit_hans_christian_andersen", "Hans Christian Andersen, author of 'The Ugly Duckling', came from which country?", "Denmark", listOf("Sweden", "Norway", "Germany"), E)
+        q("lit_hans_christian_andersen", "Hans Christian Andersen, author of 'The Ugly Duckling', came from which country?", "Denmark", listOf("Sweden", "Norway", "Germany"), E),
+        q("lit_everyday_object_mary", "Which everyday object does Mary Poppins famously fly with, carried by the wind?", "An umbrella", listOf("A kite", "A broomstick", "A balloon"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -597,7 +598,9 @@ object LiteratureQuestions {
         q("lit_chopin_minute_waltz", "Chopin's 'Minute Waltz' usually takes longer than a minute to play. What does 'minute' really mean in its title?", "Small", listOf("Quick", "Precise", "Dainty"), M),
         q("lit_left_diego_rivera", "What left Diego Rivera's future wife bed-bound for months as a teenager, when she began painting self-portraits?", "A bus accident", listOf("A bout of polio", "A riding fall", "A gunshot wound"), M),
         q("lit_rowling_said_idea", "J. K. Rowling has said the idea for Harry Potter came to her while she was where?", "On a delayed train", listOf("In an Edinburgh cafe", "In a hospital bed", "On a beach in Portugal"), M),
-        q("lit_according_tradition_audiences", "Why, according to tradition, do audiences stand for the 'Hallelujah' chorus of Handel's 'Messiah'?", "King George II stood up", listOf("Handel demanded it", "The choir once fainted", "It was a church rule"), M)
+        q("lit_according_tradition_audiences", "Why, according to tradition, do audiences stand for the 'Hallelujah' chorus of Handel's 'Messiah'?", "King George II stood up", listOf("Handel demanded it", "The choir once fainted", "It was a church rule"), M),
+        q("lit_scientist_frankenstein_mary", "What is the first name of the scientist Frankenstein in Mary Shelley's novel?", "Victor", listOf("Henry", "Robert", "William"), M),
+        q("lit_pirate_parrot_treasure", "What is the name of the pirate's parrot in 'Treasure Island'?", "Captain Flint", listOf("Polly", "Ben Gunn", "Black Dog"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -842,7 +845,15 @@ object LiteratureQuestions {
         q("lit_holst_planets_movement", "Holst's 'The Planets' has no movement for Pluto, found later in 1930. Which other planet is missing?", "Earth", listOf("Mercury", "Neptune", "Saturn"), H),
         q("lit_painter_giuseppe_arcimboldo", "The painter Giuseppe Arcimboldo is famous for portraits built from what?", "Fruit, vegetables and flowers", listOf("Seashells and pebbles", "Scraps of newspaper", "Butterfly wings"), H),
         q("lit_night_watch_got", "'The Night Watch' got its name when darkened varnish made it look like night. When is the scene really set?", "In daylight", listOf("At midnight", "By candlelight", "During an eclipse"), H),
-        q("lit_becoming_full_time", "Before becoming a full-time painter, Paul Gauguin made a good living as what?", "A stockbroker", listOf("A ship's doctor", "A lawyer", "A schoolteacher"), H)
+        q("lit_becoming_full_time", "Before becoming a full-time painter, Paul Gauguin made a good living as what?", "A stockbroker", listOf("A ship's doctor", "A lawyer", "A schoolteacher"), H),
+        q("lit_gulliver_travels_wise", "In 'Gulliver's Travels', what are the wise, rational horses called?", "Houyhnhnms", listOf("Yahoos", "Laputans", "Struldbrugs"), H),
+        q("lit_bombardier_hero_joseph", "Who is the bombardier hero of Joseph Heller's 'Catch-22'?", "Yossarian", listOf("Milo Minderbinder", "Major Major", "Orr"), H),
+        q("lit_cornish_estate_daphne", "What is the name of the Cornish estate in Daphne du Maurier's 'Rebecca'?", "Manderley", listOf("Thornfield", "Pemberley", "Wildfell"), H),
+        q("lit_paints_portrait_picture", "Who paints the portrait in 'The Picture of Dorian Gray'?", "Basil Hallward", listOf("Lord Henry Wotton", "Alan Campbell", "Sibyl Vane"), H),
+        q("lit_composer_alex_adore", "Which composer does Alex adore in 'A Clockwork Orange'?", "Beethoven", listOf("Mozart", "Wagner", "Bach"), H),
+        q("lit_wuthering_heights_housekeeper", "In 'Wuthering Heights', which housekeeper tells most of the story to Mr Lockwood?", "Nelly Dean", listOf("Zillah", "Joseph", "Isabella Linton"), H),
+        q("lit_lord_rings_gandalf", "In 'The Lord of the Rings', what is the name of Gandalf's horse?", "Shadowfax", listOf("Hasufel", "Arod", "Snowmane"), H),
+        q("lit_jane_eyre_french", "In 'Jane Eyre', what is the name of the French girl Jane is hired to teach?", "Adele", listOf("Celine", "Blanche", "Diana"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -957,6 +968,9 @@ object LiteratureQuestions {
         q("lit_1926_premiere_puccini", "At the 1926 premiere of Puccini's unfinished 'Turandot', what did Toscanini do where Puccini had stopped writing?", "Laid down his baton and ended the show", listOf("Played the last aria twice", "Asked for a minute's silence first", "Finished it on the piano himself"), X),
         q("lit_saint_saens_banned", "Saint-Saens banned 'The Carnival of the Animals' from being published in his lifetime, except for which piece?", "The Swan", listOf("The Elephant", "Aquarium", "Fossils"), X),
         q("lit_bosch_garden_earthly", "In Bosch's 'The Garden of Earthly Delights', what is painted on a sinner's backside in hell?", "A line of sheet music", listOf("A map of the world", "The painter's signature", "A coat of arms"), X),
-        q("lit_damaged_bottom_mural", "What damaged the bottom of a famous mural in a Milan refectory in 1652, cutting away Jesus's feet?", "A doorway cut through the wall", listOf("A flood in the refectory", "A cannonball in a siege", "A fire in the kitchens"), X)
+        q("lit_damaged_bottom_mural", "What damaged the bottom of a famous mural in a Milan refectory in 1652, cutting away Jesus's feet?", "A doorway cut through the wall", listOf("A flood in the refectory", "A cannonball in a siege", "A fire in the kitchens"), X),
+        q("lit_captain_nemo_latin", "What is Captain Nemo's Latin motto, engraved on his submarine's gear?", "Mobilis in mobili", listOf("Nemo me impune lacessit", "Sic semper tyrannis", "Fiat lux"), X),
+        q("lit_moby_dick_ship", "In 'Moby-Dick', which ship searching for a lost boy finally rescues Ishmael?", "The Rachel", listOf("The Pequod", "The Essex", "The Jeroboam"), X),
+        q("lit_master_margarita_kind", "In 'The Master and Margarita', what kind of creature is Woland's sidekick Behemoth?", "A giant black cat", listOf("A talking raven", "A huge black dog", "A grinning toad"), X)
     )
 }

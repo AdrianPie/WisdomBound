@@ -206,6 +206,7 @@ lit_scarlet_letter_letter	Easy	In 'The Scarlet Letter', which letter is Hester P
 lit_composer_already_touring	Easy	Which composer was already touring Europe's royal courts as a child performer at the age of six?	Wolfgang Amadeus Mozart	Ludwig van Beethoven	Johann Sebastian Bach	Joseph Haydn
 lit_painter_wrote_hundreds	Easy	Which painter wrote hundreds of letters to his art-dealer brother, Theo?	Vincent van Gogh	Claude Monet	Paul Cezanne	Edgar Degas
 lit_hans_christian_andersen	Easy	Hans Christian Andersen, author of 'The Ugly Duckling', came from which country?	Denmark	Sweden	Norway	Germany
+lit_everyday_object_mary	Easy	Which everyday object does Mary Poppins famously fly with, carried by the wind?	An umbrella	A kite	A broomstick	A balloon
 cultw_wojna_pokoj	Medium	Who wrote War and Peace?	Leo Tolstoy	Fyodor Dostoevsky	Anton Chekhov	Ivan Turgenev
 cultw_don_kichot	Medium	Which novel is often called the first modern European novel?	Don Quixote	Robinson Crusoe	Gulliver's Travels	The Decameron
 cultw_kafka	Medium	Which writer is known for The Trial and The Metamorphosis?	Franz Kafka	Thomas Mann	Hermann Hesse	Robert Musil
@@ -568,6 +569,8 @@ lit_chopin_minute_waltz	Medium	Chopin's 'Minute Waltz' usually takes longer than
 lit_left_diego_rivera	Medium	What left Diego Rivera's future wife bed-bound for months as a teenager, when she began painting self-portraits?	A bus accident	A bout of polio	A riding fall	A gunshot wound
 lit_rowling_said_idea	Medium	J. K. Rowling has said the idea for Harry Potter came to her while she was where?	On a delayed train	In an Edinburgh cafe	In a hospital bed	On a beach in Portugal
 lit_according_tradition_audiences	Medium	Why, according to tradition, do audiences stand for the 'Hallelujah' chorus of Handel's 'Messiah'?	King George II stood up	Handel demanded it	The choir once fainted	It was a church rule
+lit_scientist_frankenstein_mary	Medium	What is the first name of the scientist Frankenstein in Mary Shelley's novel?	Victor	Henry	Robert	William
+lit_pirate_parrot_treasure	Medium	What is the name of the pirate's parrot in 'Treasure Island'?	Captain Flint	Polly	Ben Gunn	Black Dog
 cultw_boska_komedia	Hard	How many parts does Dante's Divine Comedy have?	Three	Two	Four	Seven
 cultw_ulisses_joyce	Hard	In which city does Joyce's Ulysses take place over one day?	Dublin	London	Trieste	Paris
 lit_solaris	Hard	Who wrote 'Solaris'?	Stanislaw Lem	Isaac Asimov	Arthur C. Clarke	Philip K. Dick
@@ -809,6 +812,14 @@ lit_holst_planets_movement	Hard	Holst's 'The Planets' has no movement for Pluto,
 lit_painter_giuseppe_arcimboldo	Hard	The painter Giuseppe Arcimboldo is famous for portraits built from what?	Fruit, vegetables and flowers	Seashells and pebbles	Scraps of newspaper	Butterfly wings
 lit_night_watch_got	Hard	'The Night Watch' got its name when darkened varnish made it look like night. When is the scene really set?	In daylight	At midnight	By candlelight	During an eclipse
 lit_becoming_full_time	Hard	Before becoming a full-time painter, Paul Gauguin made a good living as what?	A stockbroker	A ship's doctor	A lawyer	A schoolteacher
+lit_gulliver_travels_wise	Hard	In 'Gulliver's Travels', what are the wise, rational horses called?	Houyhnhnms	Yahoos	Laputans	Struldbrugs
+lit_bombardier_hero_joseph	Hard	Who is the bombardier hero of Joseph Heller's 'Catch-22'?	Yossarian	Milo Minderbinder	Major Major	Orr
+lit_cornish_estate_daphne	Hard	What is the name of the Cornish estate in Daphne du Maurier's 'Rebecca'?	Manderley	Thornfield	Pemberley	Wildfell
+lit_paints_portrait_picture	Hard	Who paints the portrait in 'The Picture of Dorian Gray'?	Basil Hallward	Lord Henry Wotton	Alan Campbell	Sibyl Vane
+lit_composer_alex_adore	Hard	Which composer does Alex adore in 'A Clockwork Orange'?	Beethoven	Mozart	Wagner	Bach
+lit_wuthering_heights_housekeeper	Hard	In 'Wuthering Heights', which housekeeper tells most of the story to Mr Lockwood?	Nelly Dean	Zillah	Joseph	Isabella Linton
+lit_lord_rings_gandalf	Hard	In 'The Lord of the Rings', what is the name of Gandalf's horse?	Shadowfax	Hasufel	Arod	Snowmane
+lit_jane_eyre_french	Hard	In 'Jane Eyre', what is the name of the French girl Jane is hired to teach?	Adele	Celine	Blanche	Diana
 cultw_genji	Expert	The Tale of Genji, often called the first novel, came from which country?	Japan	China	Korea	India
 lit_iliada_wers	Expert	What word does Homer's 'Iliad' open with?	Rage (wrath)	War	Muse	Gods
 lit_proust	Expert	Who wrote the cycle 'In Search of Lost Time'?	Marcel Proust	Gustave Flaubert	Honore de Balzac	Emile Zola
@@ -920,3 +931,6 @@ lit_1926_premiere_puccini	Expert	At the 1926 premiere of Puccini's unfinished 'T
 lit_saint_saens_banned	Expert	Saint-Saens banned 'The Carnival of the Animals' from being published in his lifetime, except for which piece?	The Swan	The Elephant	Aquarium	Fossils
 lit_bosch_garden_earthly	Expert	In Bosch's 'The Garden of Earthly Delights', what is painted on a sinner's backside in hell?	A line of sheet music	A map of the world	The painter's signature	A coat of arms
 lit_damaged_bottom_mural	Expert	What damaged the bottom of a famous mural in a Milan refectory in 1652, cutting away Jesus's feet?	A doorway cut through the wall	A flood in the refectory	A cannonball in a siege	A fire in the kitchens
+lit_captain_nemo_latin	Expert	What is Captain Nemo's Latin motto, engraved on his submarine's gear?	Mobilis in mobili	Nemo me impune lacessit	Sic semper tyrannis	Fiat lux
+lit_moby_dick_ship	Expert	In 'Moby-Dick', which ship searching for a lost boy finally rescues Ishmael?	The Rachel	The Pequod	The Essex	The Jeroboam
+lit_master_margarita_kind	Expert	In 'The Master and Margarita', what kind of creature is Woland's sidekick Behemoth?	A giant black cat	A talking raven	A huge black dog	A grinning toad

@@ -206,7 +206,9 @@ object AnimalQuestions {
         q("ani_rabbit_spot_fox", "How can a rabbit spot a fox creeping up from almost any direction?", "Its eyes sit high on the sides of its head", listOf("Its eyes can swivel all the way round", "It sees through its closed eyelids", "It feels the fox's body heat"), E),
         q("ani_cats_knead_soft", "Cats 'knead' soft blankets with their front paws. What is this habit thought to come from?", "Kneading their mother for milk", listOf("Sharpening their claws", "Checking for hidden snakes", "Warming up cold paws"), E),
         q("ani_despite_nickname_king", "Despite the nickname 'king of the jungle', where do most wild lions live?", "Savannas and grasslands", listOf("Rainforests", "Mountain forests", "Swamps and marshes"), E),
-        q("ani_touch_baby_bird", "If you touch a baby bird, will its parents reject it?", "No, they usually keep caring for it", listOf("Yes, because of the human smell", "Yes, but only the mother does", "Only if it is touched twice"), E)
+        q("ani_touch_baby_bird", "If you touch a baby bird, will its parents reject it?", "No, they usually keep caring for it", listOf("Yes, because of the human smell", "Yes, but only the mother does", "Only if it is touched twice"), E),
+        q("ani_animal_mammal_covered", "Which animal is the only mammal covered in hard scales?", "Pangolin", listOf("Porcupine", "Hedgehog", "Echidna"), E),
+        q("ani_bulls_bullfight_charge", "Bulls in a bullfight charge the cape mainly because of what?", "Its movement", listOf("Its red colour", "Its smell", "Its rustling sound"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -506,7 +508,12 @@ object AnimalQuestions {
         q("ani_rival_male_giraffes", "How do rival male giraffes usually fight?", "Swinging their heads like clubs", listOf("Biting each other's legs", "Wrestling with their tongues", "Charging like rhinos"), M),
         q("ani_tiny_bloodsucker_jump", "Which tiny bloodsucker can jump more than 100 times its own body length?", "The flea", listOf("The tick", "The bedbug", "The louse"), M),
         q("ani_alex_parrot_studied", "Alex, a parrot studied for 30 years by Irene Pepperberg, became famous for what?", "Naming colours, shapes and numbers", listOf("Flying home from 500 km away", "Singing whole opera arias", "Living to be over 100"), M),
-        q("ani_springboks_doing_pronk", "What are springboks doing when they 'pronk'?", "Leaping stiff-legged into the air", listOf("Rubbing their horns on trees", "Digging for water", "Grazing at night"), M)
+        q("ani_springboks_doing_pronk", "What are springboks doing when they 'pronk'?", "Leaping stiff-legged into the air", listOf("Rubbing their horns on trees", "Digging for water", "Grazing at night"), M),
+        q("ani_bird_largest_wingspan", "Which bird has the largest wingspan of any living bird?", "Wandering albatross", listOf("Andean condor", "Marabou stork", "Great white pelican"), M),
+        q("ani_fish_skip_across", "Which fish can skip across mudflats and climb mangrove roots?", "Mudskipper", listOf("Lungfish", "Flying fish", "Anglerfish"), M),
+        q("ani_shave_tiger_see", "Shave a tiger and what would you see?", "Striped skin", listOf("Pink skin", "Spotted skin", "Plain black skin"), M),
+        q("ani_colour_emu_eggs", "What colour are emu eggs?", "Dark green", listOf("Pure white", "Speckled brown", "Pale pink"), M),
+        q("ani_animal_sleeps_hanging", "Which animal sleeps hanging upside down and digests leaves so slowly a meal takes weeks?", "Sloth", listOf("Koala", "Fruit bat", "Lemur"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -729,7 +736,15 @@ object AnimalQuestions {
         q("ani_japanese_honeybees_kill", "How do Japanese honeybees kill a giant hornet that invades their hive?", "Cook it inside a ball of bees", listOf("Sting it hundreds of times", "Drown it in honey", "Seal it inside wax"), H),
         q("ani_death_head_hawkmoth", "The death's-head hawkmoth, with a skull-like pattern on its back, raids beehives to steal what?", "Honey", listOf("Larvae", "Royal jelly", "Wax"), H),
         q("ani_cold_snaps_alligators", "During cold snaps, alligators survive in iced-over ponds by doing what?", "Poking their snouts through the ice", listOf("Burying themselves in dry leaves", "Huddling in large groups", "Moving into rivers' deepest pools"), H),
-        q("ani_poison_dart_frogs", "Why are poison dart frogs raised in captivity usually harmless?", "They get their toxins from wild insects", listOf("Their skin dries out indoors", "They lose their bright colours", "Zoo keepers remove their glands"), H)
+        q("ani_poison_dart_frogs", "Why are poison dart frogs raised in captivity usually harmless?", "They get their toxins from wild insects", listOf("Their skin dries out indoors", "They lose their bright colours", "Zoo keepers remove their glands"), H),
+        q("ani_bird_builds_heaviest", "Which bird builds the heaviest tree nests, one recorded at over 2 tonnes?", "Bald eagle", listOf("Golden eagle", "White stork", "Osprey"), H),
+        q("ani_mammal_drop_body", "Which mammal can drop its body temperature below 0 C while hibernating?", "Arctic ground squirrel", listOf("American black bear", "European hedgehog", "Hazel dormouse"), H),
+        q("ani_frog_freezes_almost", "Which frog freezes almost solid in winter and thaws back to life in spring?", "Wood frog", listOf("Bullfrog", "Glass frog", "Cane toad"), H),
+        q("ani_beetle_uses_milky", "Which beetle uses the Milky Way to keep rolling in a straight line?", "Dung beetle", listOf("Stag beetle", "Ladybird", "Firefly"), H),
+        q("ani_mammal_milk_fattest", "Which mammal's milk is the fattest, at about 60% fat?", "Hooded seal", listOf("Blue whale", "Reindeer", "Water buffalo"), H),
+        q("ani_male_pufferfish_wins", "A male pufferfish wins a mate by building what on the sea floor?", "A patterned sand circle", listOf("A pebble tower", "A coral cave", "A shell necklace"), H),
+        q("ani_australian_bird_incubates", "Which Australian bird incubates its eggs in a mound of rotting leaves?", "Malleefowl", listOf("Emu", "Kookaburra", "Cassowary"), H),
+        q("ani_sea_creature_defends", "Which sea creature defends itself by throwing out its own guts?", "Sea cucumber", listOf("Sea urchin", "Starfish", "Sea anemone"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -839,6 +854,11 @@ object AnimalQuestions {
         q("ani_2016_scientists_studying", "In 2016, scientists studying how praying mantises judge distance fitted them with what?", "Tiny 3D glasses", listOf("Tiny hearing aids", "Tiny backpacks with cameras", "Tiny radio tags"), X),
         q("ani_females_some_photuris", "Females of some Photuris fireflies copy the flashes of other species. Why?", "To lure in males and eat them", listOf("To scare away bats", "To find their sisters", "To attract mates of their own kind"), X),
         q("ani_threatened_african_hairy", "When threatened, the African hairy frog does what to make claws?", "Breaks toe bones to pierce its skin", listOf("Grows horny scales overnight", "Sharpens its toes on stones", "Inflates spines along its legs"), X),
-        q("ani_south_american_cave", "Which South American cave bird finds its way in the dark by echolocation, like a bat?", "The oilbird", listOf("The potoo", "The nightjar", "The frogmouth"), X)
+        q("ani_south_american_cave", "Which South American cave bird finds its way in the dark by echolocation, like a bat?", "The oilbird", listOf("The potoo", "The nightjar", "The frogmouth"), X),
+        q("ani_kestrels_spot_vole", "Kestrels can spot vole trails from the air because the urine reflects what?", "Ultraviolet light", listOf("Infrared light", "Moonlight", "Polarised light"), X),
+        q("ani_cleaner_wrasse_group", "In a cleaner wrasse group, what happens when the only male dies?", "The top female becomes male", listOf("A male from outside takes over", "The group splits up", "The females stop breeding"), X),
+        q("ani_alpine_ibex_reach", "How do Alpine ibex reach the salt they crave on Italian dams?", "They climb near-vertical walls", listOf("They lick rain puddles", "They dig under the dam", "They wait for floods"), X),
+        q("ani_japanese_macaques_jigokudani", "Japanese macaques of Jigokudani are famous for doing what in winter?", "Bathing in hot springs", listOf("Building snow shelters", "Sleeping in caves", "Fishing through ice"), X),
+        q("ani_naked_mole_rats", "Naked mole-rats can survive about how long with no oxygen at all?", "About 18 minutes", listOf("About 2 minutes", "About 2 hours", "About 10 seconds"), X)
     )
 }

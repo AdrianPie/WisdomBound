@@ -192,7 +192,9 @@ object TechnologyQuestions {
         q("tec_segway", "What is a Segway?", "A self-balancing scooter", listOf("A folding electric bicycle", "A robot lawnmower", "A hoverboard with a seat"), E),
         q("tec_gaming_slang_noob", "In gaming slang, what is a 'noob'?", "A beginner", listOf("A cheater", "A sore loser", "A team leader"), E),
         q("tec_stand_headset", "What does 'VR' stand for, as in a VR headset?", "Virtual reality", listOf("Visual recording", "Video replay", "Variable resolution"), E),
-        q("tec_car_cruise_control", "What does a car's cruise control do?", "Keeps the car at a steady speed", listOf("Steers the car around bends", "Parks the car by itself", "Warns of speed cameras"), E)
+        q("tec_car_cruise_control", "What does a car's cruise control do?", "Keeps the car at a steady speed", listOf("Steers the car around bends", "Parks the car by itself", "Warns of speed cameras"), E),
+        q("tec_captcha_test_try_2", "What does a CAPTCHA test try to prove?", "You are human", listOf("You are an adult", "You are logged in", "You are not on a VPN"), E),
+        q("tec_app_became_photos", "Which app became famous for photos that vanish after viewing?", "Snapchat", listOf("Instagram", "WhatsApp", "Pinterest"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -491,7 +493,15 @@ object TechnologyQuestions {
         q("tec_console_launched_1998", "Which console, launched in 1998, was the last ever made by Sega?", "Dreamcast", listOf("Saturn", "Game Gear", "Master System"), M),
         q("tec_handheld_console_launched", "Which handheld console, launched in 2004, played games from small optical discs called UMDs?", "The PlayStation Portable", listOf("The Nintendo DS", "The PlayStation Vita", "The Nokia N-Gage"), M),
         q("tec_free_1990s_service", "Which free 1990s service let anyone build a homepage in themed 'neighbourhoods' such as Hollywood and SiliconValley?", "GeoCities", listOf("MySpace", "Angelfire", "Tripod"), M),
-        q("tec_online_auction_site", "Which online auction site was first called AuctionWeb?", "eBay", listOf("Etsy", "Craigslist", "Overstock"), M)
+        q("tec_online_auction_site", "Which online auction site was first called AuctionWeb?", "eBay", listOf("Etsy", "Craigslist", "Overstock"), M),
+        q("tec_roomba_irobot_made", "Before the Roomba, iRobot made robots for what?", "Bomb disposal", listOf("Car factories", "Space probes", "Toy shops"), M),
+        q("tec_nes_zapper_light", "How did the NES Zapper light gun know if you hit the duck?", "It saw a white flash", listOf("It used radar", "It used sound", "It used infrared beams"), M),
+        q("tec_luis_von_ahn", "Luis von Ahn's reCAPTCHA used players' answers to do what?", "Digitise old books", listOf("Train self-driving cars", "Count spam", "Translate websites"), M),
+        q("tec_video_game_played", "Which was the first video game played in space, on a Game Boy in 1993?", "Tetris", listOf("Super Mario Land", "Pong", "Pac-Man"), M),
+        q("tec_typewriter_shift_key", "On a typewriter, what did the Shift key physically shift?", "The type position", listOf("The ribbon colour", "The line spacing", "The margin"), M),
+        q("tec_nintendo_wii_development", "What was the Nintendo Wii called during development?", "Revolution", listOf("Dolphin", "Project Reality", "Wave"), M),
+        q("tec_language_logo_steaming", "Which language's logo is a steaming cup of coffee?", "Java", listOf("Python", "Ruby", "C++"), M),
+        q("tec_sega_console_built", "Which Sega console was the first with a built-in modem for online play?", "Dreamcast", listOf("Mega Drive", "Saturn", "Game Gear"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -734,7 +744,14 @@ object TechnologyQuestions {
         q("tec_atari_founder_later", "Which Atari co-founder later started the Chuck E. Cheese restaurant chain?", "Nolan Bushnell", listOf("Ted Dabney", "Steve Jobs", "Ralph Baer"), H),
         q("tec_trinitron_picture_tube", "Trinitron, a TV picture tube famous for its sharp image from 1968, was made by which company?", "Sony", listOf("Panasonic", "Philips", "Toshiba"), H),
         q("tec_google_project_loon", "Google's Project Loon tried to bring internet access to remote areas using what?", "High-altitude balloons", listOf("Low-flying drones", "Undersea cables", "Solar-powered airships"), H),
-        q("tec_company_created_1978", "Which company created the 1978 arcade hit 'Space Invaders'?", "Taito", listOf("Namco", "Atari", "Konami"), H)
+        q("tec_company_created_1978", "Which company created the 1978 arcade hit 'Space Invaders'?", "Taito", listOf("Namco", "Atari", "Konami"), H),
+        q("tec_company_built_star", "Which company built the Star, an early 1981 computer with windows and a mouse?", "Xerox", listOf("IBM", "Apple", "Atari"), H),
+        q("tec_apple_secret_codename", "What was Apple's secret codename for the first iPhone project?", "Purple", listOf("Orange", "Phoenix", "Marble"), H),
+        q("tec_pentium_chip_got", "The Pentium chip got its name because it was Intel's what?", "Fifth generation", listOf("Fastest model", "Pen-friendly model", "Pentagon contract"), H),
+        q("tec_country_developers_created", "Which country's developers created Skype?", "Estonia", listOf("Finland", "Norway", "Iceland"), H),
+        q("tec_sony_playstation_began", "The Sony PlayStation began as a CD add-on for whose console?", "Nintendo", listOf("Sega", "Atari", "NEC"), H),
+        q("tec_company_invented_floppy", "Which company invented the floppy disk?", "IBM", listOf("Sony", "Apple", "Xerox"), H),
+        q("tec_google_server_racks", "Google's first server racks were famously housed in cases made of what?", "Lego bricks", listOf("Cardboard", "Wooden crates", "Shoe boxes"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -859,6 +876,9 @@ object TechnologyQuestions {
         q("tec_netscape_mascot_mozilla", "Netscape's mascot name 'Mozilla' blended 'Godzilla' with the name of which rival browser?", "Mosaic", listOf("Lynx", "Opera", "Viola"), X),
         q("tec_leo_world_business", "LEO, the world's first business computer in 1951, was built by a British company best known for what?", "Tea shops and cakes", listOf("Railway engines", "Department stores", "Newspapers"), X),
         q("tec_roughly_commercial_hard", "Roughly how much did the first commercial hard disk drive, of 1956, weigh while holding about 5 MB?", "About a tonne", listOf("About 10 kg", "About 100 kg", "About 10 tonnes"), X),
-        q("tec_java_programming_language", "What was the Java programming language called when it was first developed?", "Oak", listOf("Pine", "Maple", "Cedar"), X)
+        q("tec_java_programming_language", "What was the Java programming language called when it was first developed?", "Oak", listOf("Pine", "Maple", "Cedar"), X),
+        q("tec_game_boy_partly", "A Game Boy partly melted in which war still works on display in New York?", "The Gulf War", listOf("The Vietnam War", "The Falklands War", "The Kosovo War"), X),
+        q("tec_game_credited_video", "Which game is credited with the first video game cutscenes, in 1980?", "Pac-Man", listOf("Donkey Kong", "Space Invaders", "Asteroids"), X),
+        q("tec_gnu_software_project", "What does the name of the GNU software project stand for?", "GNU's Not Unix", listOf("General New Unix", "Great Network Utility", "Global Network User"), X)
     )
 }

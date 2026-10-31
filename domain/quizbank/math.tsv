@@ -118,6 +118,8 @@ mat_times_clock_minute	Easy	How many times does a clock's minute hand pass the 1
 mat_latest_time_hour	Easy	What is the latest time a 24-hour digital clock can show?	23:59	24:00	12:59	24:59
 mat_value_digit_number	Easy	What is the value of the digit 7 in the number 3,742?	700	7	70	7,000
 mat_rounded_nearest_cents	Easy	Rounded to the nearest 10 cents, what does $4.96 become?	$5.00	$4.90	$4.95	$4.10
+mat_minutes_whole_day	Easy	How many minutes are there in a whole day?	1440	1240	1600	960
+mat_400	Easy	What is 25% of 25% of 400?	25	100	50	12.5
 day2_procent_skladany	Medium	What is compound interest?	Interest earned on interest already added	A one-time fee	A fixed monthly cost	Interest paid only at the end
 day2_inflacja	Medium	What does inflation mean for your savings?	The same money buys less over time	Your balance shrinks	Interest rates always fall	Prices stay fixed
 mat_pi	Medium	What is the approximate value of pi?	3.14	3.41	2.71	3.04
@@ -341,6 +343,12 @@ mat_times_day_stopped	Medium	How many times a day does a stopped analogue clock 
 mat_cube_cut_cubes	Medium	A 10 cm cube is cut into 1 cm cubes. How many small cubes do you get?	1,000	100	600	300
 mat_345_679	Medium	What is 12,345,679 x 9?	111,111,111	123,456,789	999,999,999	101,010,101
 mat_million_written_percentage	Medium	What is 'one in a million' written as a percentage?	0.0001%	0.01%	0.001%	0.1%
+mat_angle_between_hands	Medium	What is the angle between the hands of a clock at 3:30?	75 degrees	90 degrees	60 degrees	105 degrees
+mat_prime_numbers_between	Medium	How many prime numbers are there between 1 and 20?	8	6	7	9
+mat_sum_digits	Medium	What is the sum of the digits 1 to 9?	45	36	55	50
+mat_digits_repeat_decimal	Medium	How many digits repeat in the decimal for 1/7 (0.142857...)?	6	3	7	9
+mat_three_digit_whole	Medium	How many three-digit whole numbers are there?	900	999	899	1000
+mat_positive_number_square	Medium	Which positive number has a square root that is exactly half of itself?	4	2	8	16
 mat_silnia_5	Hard	What is 5! (5 factorial)?	120	100	60	150
 mat_fibonacci	Hard	What number comes next in the sequence 1, 1, 2, 3, 5, 8...?	13	11	12	16
 mat2_logarytm_2_8	Hard	What is log base 2 of 8?	3	2	4	8
@@ -522,6 +530,11 @@ mat_millennium_prize_problems	Hard	How many 'Millennium Prize Problems', each wo
 mat_famously_hard_problem	Hard	Which famously hard problem asks for the shortest route that visits every city on a list exactly once?	The travelling salesman problem	The Konigsberg bridges problem	The knapsack problem	The four colour problem
 mat_prisoner_dilemma_both	Hard	In the 'prisoner's dilemma', why do both prisoners usually end up worse off?	Each is tempted to betray the other	Each forgets what the other said	Both refuse to speak at all	The guards always lie to them
 mat_draw_two_cards	Hard	You draw two cards from a full deck. What is the chance that both are aces?	1 in 221	1 in 169	1 in 26	1 in 104
+mat_sum_interior_angles_2	Hard	What is the sum of the interior angles of a decagon?	1440 degrees	1800 degrees	1260 degrees	1080 degrees
+mat_different_ways_letters	Hard	In how many different ways can the letters of the word 'LEVEL' be arranged?	30	60	120	20
+mat_flip_two_coins	Hard	You flip two coins and at least one is heads. What is the chance both are heads?	1 in 3	1 in 2	1 in 4	2 in 3
+mat_triangles_drawn_using	Hard	How many triangles can be drawn using the six corners of a hexagon?	20	15	18	24
+mat_smallest_number_exactly	Hard	What is the smallest number that has exactly six divisors?	12	18	24	30
 mat_liczba_e	Expert	What is the approximate value of e?	2.72	3.14	1.62	2.24
 mat_liczby_doskonale	Expert	Which of these numbers is perfect (equal to the sum of its divisors)?	28	24	30	36
 mat_duzy_pierwszy	Expert	Which of these numbers is NOT prime?	91	89	97	83
@@ -613,3 +626,5 @@ mat_fewest_given_clues	Expert	What is the fewest given clues a standard Sudoku c
 mat_1980s_vancouver_stock	Expert	In the 1980s the Vancouver Stock Exchange's new index sank to about half its true value within two years. What went wrong?	Its value was truncated, not rounded	Prices were typed in the wrong currency	A clerk dropped a zero from the base	Its computer counted in base 12
 mat_archimedes_reportedly_want	Expert	What did Archimedes reportedly want carved on his tomb?	A sphere inside a cylinder	A circle inside a square	A spiral and a lever	A cone inside a cube
 mat_any_given_year	Expert	In any given year, 4 April, 6 June, 8 August, 10 October and 12 December all have what in common?	The same day of the week	Always a weekend day	Always a different weekday	The same phase of the Moon
+mat_zeros_end_100	Expert	How many zeros are at the end of 100 factorial?	24	20	25	11
+mat_different_ways_2x10	Expert	How many different ways can a 2x10 strip be tiled with 2x1 dominoes?	89	55	100	144

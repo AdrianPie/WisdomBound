@@ -199,7 +199,8 @@ object PolandQuestions {
         q("pol_polish_dzialka_city", "What is a Polish 'dzialka', where many city families spend summer weekends?", "A small allotment garden", listOf("A seaside campsite", "A village wedding hall", "A forest hunting lodge"), E),
         q("pol_soup_polish_families", "Which soup do many Polish families make on Monday from Sunday's leftover chicken broth?", "Tomato soup", listOf("Sorrel soup", "Mushroom soup", "Pea soup"), E),
         q("pol_city_poland_second", "Which city is Poland's second largest by population?", "Krakow", listOf("Lodz", "Wroclaw", "Poznan"), E),
-        q("pol_digits_polish_blik", "How many digits does a Polish BLIK payment code have?", "Six", listOf("Four", "Eight", "Five"), E)
+        q("pol_digits_polish_blik", "How many digits does a Polish BLIK payment code have?", "Six", listOf("Four", "Eight", "Five"), E),
+        q("pol_holy_saturday_blessing", "What is the Holy Saturday blessing of Easter food baskets called?", "Swieconka", listOf("Smigus-dyngus", "Wigilia", "Andrzejki"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -487,7 +488,13 @@ object PolandQuestions {
         q("pol_oranzada_favourite_drink", "What was 'oranzada', a favourite drink of Polish childhood?", "A sweet fizzy fruit soda", listOf("A fermented bread drink", "A hot spiced fruit punch", "A sour milk drink"), M),
         q("pol_actor_played_cop", "Which actor played the cop Franz Maurer in the 1992 thriller 'Psy'?", "Boguslaw Linda", listOf("Daniel Olbrychski", "Cezary Pazura", "Marek Kondrat"), M),
         q("pol_plastus_hero_classic", "What is Plastus, hero of a classic Polish children's book?", "A little plasticine man", listOf("A wooden puppet", "A paper doll", "A tin soldier"), M),
-        q("pol_1979_polish_pope", "Where in 1979 did the Polish pope say 'Let your Spirit descend and renew the face of the earth. Of this land'?", "Victory Square in Warsaw", listOf("Main Market Square in Krakow", "Jasna Gora in Czestochowa", "Castle Square in Warsaw"), M)
+        q("pol_1979_polish_pope", "Where in 1979 did the Polish pope say 'Let your Spirit descend and renew the face of the earth. Of this land'?", "Victory Square in Warsaw", listOf("Main Market Square in Krakow", "Jasna Gora in Czestochowa", "Castle Square in Warsaw"), M),
+        q("pol_polish_city_home", "Which Polish city is home to the 'Panorama Raclawicka' painting?", "Wroclaw", listOf("Krakow", "Lwow", "Poznan"), M),
+        q("pol_city_hosts_centuries", "Which city hosts the centuries-old summer fair 'Jarmark Dominikanski'?", "Gdansk", listOf("Krakow", "Wroclaw", "Torun"), M),
+        q("pol_city_hosts_malta", "Which city hosts the Malta international theatre festival every summer?", "Poznan", listOf("Krakow", "Wroclaw", "Lublin"), M),
+        q("pol_krakow_mound_raised", "Which Krakow mound was raised by hand in the 1820s to honour a national hero?", "Kopiec Kosciuszki", listOf("Kopiec Krakusa", "Kopiec Wandy", "Kopiec Pilsudskiego"), M),
+        q("pol_band_sang_kocham", "Which band sang 'Kocham Cie jak Irlandie'?", "Kobranocka", listOf("Elektryczne Gitary", "Lady Pank", "T.Love"), M),
+        q("pol_city_manufaktura_complex", "Which city's Manufaktura complex fills a vast 19th-century textile mill?", "Lodz", listOf("Poznan", "Katowice", "Bialystok"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -718,7 +725,12 @@ object PolandQuestions {
         q("pol_soviet_car_built", "Which Soviet car was built under licence in Warsaw as the FSO Warszawa?", "The GAZ-M20 Pobeda", listOf("The Moskvitch 400", "The Volga GAZ-21", "The ZIS-110"), H),
         q("pol_polish_studio_created", "Which Polish studio created the shooters 'Painkiller' and 'Bulletstorm'?", "People Can Fly", listOf("Techland", "CI Games", "11 bit studios"), H),
         q("pol_moody_giant_spirit", "What is the name of the moody giant spirit of the Karkonosze in Polish legend?", "Liczyrzepa", listOf("Skarbnik", "Boruta", "Utopiec"), H),
-        q("pol_baltic_legend_sea", "In Baltic legend, the sea queen Jurata lived in a palace made of what?", "Amber", listOf("Coral", "Pearls", "Ice"), H)
+        q("pol_baltic_legend_sea", "In Baltic legend, the sea queen Jurata lived in a palace made of what?", "Amber", listOf("Coral", "Pearls", "Ice"), H),
+        q("pol_town_oder_pol", "In which town on the Oder was the Pol'and'Rock festival held for many years?", "Kostrzyn nad Odra", listOf("Slubice", "Gorzow Wielkopolski", "Krosno Odrzanskie"), H),
+        q("pol_actor_played_kargul", "Which actor played Kargul in 'Sami swoi'?", "Wladyslaw Hancza", listOf("Waclaw Kowalski", "Jerzy Janeczek", "Franciszek Pieczka"), H),
+        q("pol_city_stands_centennial", "In which city stands the Centennial Hall (Hala Stulecia)?", "Wroclaw", listOf("Katowice", "Poznan", "Lodz"), H),
+        q("pol_river_forms_poland", "Which river forms Poland's border with Germany alongside the Oder?", "Neisse", listOf("Bobr", "Warta", "Kwisa"), H),
+        q("pol_polish_football_club", "Which Polish football club is nicknamed 'Biala Gwiazda' (White Star)?", "Wisla Krakow", listOf("Legia Warszawa", "Lech Poznan", "Gornik Zabrze"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -836,6 +848,9 @@ object PolandQuestions {
         q("pol_city_old_tribunal", "In which city's old tribunal is a table said to bear the scorched print of a devil's paw?", "Lublin", listOf("Krakow", "Poznan", "Plock"), X),
         q("pol_lively_heroine_nicknamed", "Which lively heroine, nicknamed 'Hajduczek', marries the little knight in Sienkiewicz's Trilogy?", "Basia", listOf("Olenka", "Helena", "Krysia"), X),
         q("pol_painter_girl_chrysanthemums", "Which painter is famous for 'Girl with Chrysanthemums' and portraits painted in Paris?", "Olga Boznanska", listOf("Jozef Mehoffer", "Anna Bilinska", "Zofia Stryjenska"), X),
-        q("pol_polish_singer_born", "Which Polish singer, born in Soviet Uzbekistan, became a star in the USSR as well as Poland?", "Anna German", listOf("Irena Jarocka", "Halina Kunicka", "Anna Jantar"), X)
+        q("pol_polish_singer_born", "Which Polish singer, born in Soviet Uzbekistan, became a star in the USSR as well as Poland?", "Anna German", listOf("Irena Jarocka", "Halina Kunicka", "Anna Jantar"), X),
+        q("pol_warsaw_cemetery_avenue", "In which Warsaw cemetery is the Avenue of the Meritorious (Aleja Zasluzonych)?", "Powazki", listOf("Brodno", "Wolski", "Bemowo"), X),
+        q("pol_italian_architect_designed", "Which Italian architect designed the Renaissance town of Zamosc?", "Bernardo Morando", listOf("Bartolomeo Berrecci", "Santi Gucci", "Giovanni Battista Quadro"), X),
+        q("pol_writer_created_eberhard", "Which writer created Eberhard Mock, a detective in pre-war Breslau?", "Marek Krajewski", listOf("Zygmunt Miloszewski", "Joanna Chmielewska", "Marek Hlasko"), X)
     )
 }

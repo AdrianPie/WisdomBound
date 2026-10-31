@@ -103,7 +103,9 @@ object ElementQuestions {
         q("ele_cheap_rings_leave", "Cheap rings can leave a green mark on your finger. Which metal causes it?", "Copper", listOf("Silver", "Tin", "Aluminium"), E),
         q("ele_heavy_cast_frying", "Heavy 'cast' frying pans that must be seasoned with oil are made of which metal?", "Iron", listOf("Copper", "Aluminium", "Titanium"), E),
         q("ele_water_filter_jugs", "Water-filter jugs trap impurities with an 'activated' form of which element?", "Carbon", listOf("Sulfur", "Silicon", "Calcium"), E),
-        q("ele_grey_powder_binds", "What is the grey powder that binds sand and gravel together into concrete?", "Cement", listOf("Plaster", "Clay", "Chalk"), E)
+        q("ele_grey_powder_binds", "What is the grey powder that binds sand and gravel together into concrete?", "Cement", listOf("Plaster", "Clay", "Chalk"), E),
+        q("ele_metal_kitchen_foil", "Which metal is most kitchen foil made of?", "Aluminium", listOf("Tin", "Zinc", "Steel"), E),
+        q("ele_element_combines_oxygen", "Which element combines with oxygen to make up most of ordinary sand?", "Silicon", listOf("Carbon", "Calcium", "Aluminium"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -253,7 +255,11 @@ object ElementQuestions {
         q("ele_traditional_solder_electronics", "Traditional solder for electronics is an alloy of lead and which other metal?", "Tin", listOf("Zinc", "Nickel", "Aluminium"), M),
         q("ele_fibrous_mineral_once", "Which fibrous mineral, once prized as fireproof insulation, was banned for causing lung disease?", "Asbestos", listOf("Talc", "Mica", "Gypsum"), M),
         q("ele_superglue_hardens_almost", "Superglue hardens almost instantly when it reacts with what?", "Traces of water", listOf("Oxygen in the air", "Daylight", "Heat"), M),
-        q("ele_bone_china_gets", "Bone china gets its whiteness and strength from which added ingredient?", "Bone ash", listOf("Crushed shells", "Chalk dust", "Ground glass"), M)
+        q("ele_bone_china_gets", "Bone china gets its whiteness and strength from which added ingredient?", "Bone ash", listOf("Crushed shells", "Chalk dust", "Ground glass"), M),
+        q("ele_element_curies_latin", "Which element did the Curies name after the Latin word for 'ray'?", "Radium", listOf("Polonium", "Radon", "Actinium"), M),
+        q("ele_modern_copper_pennies", "Modern US 'copper' pennies are mostly made of which metal?", "Zinc", listOf("Copper", "Nickel", "Aluminium"), M),
+        q("ele_precious_metal_tarnishes", "Which precious metal tarnishes black when it meets sulfur in the air?", "Silver", listOf("Gold", "Platinum", "Palladium"), M),
+        q("ele_element_greek_word_5", "Which element is named after the Greek word for 'stone'?", "Lithium", listOf("Silicon", "Calcium", "Strontium"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -379,7 +385,10 @@ object ElementQuestions {
         q("ele_backbone_every_dna", "The backbone of every DNA molecule contains sugar and groups built around which element?", "Phosphorus", listOf("Sulfur", "Iron", "Chlorine"), H),
         q("ele_ordinary_alkaline_batteries", "Ordinary alkaline AA batteries contain zinc and an oxide of which metal?", "Manganese", listOf("Lithium", "Nickel", "Cadmium"), H),
         q("ele_white_clay_hill", "Which white clay, named after a hill in China, is the key ingredient of porcelain?", "Kaolin", listOf("Bentonite", "Terracotta", "Fuller's earth"), H),
-        q("ele_cfcs_thinned_ozone", "The CFCs that thinned the ozone layer destroy ozone by releasing atoms of which element?", "Chlorine", listOf("Carbon", "Fluorine", "Hydrogen"), H)
+        q("ele_cfcs_thinned_ozone", "The CFCs that thinned the ozone layer destroy ozone by releasing atoms of which element?", "Chlorine", listOf("Carbon", "Fluorine", "Hydrogen"), H),
+        q("ele_metal_abundant_human", "Which metal is the most abundant in the human body?", "Calcium", listOf("Iron", "Potassium", "Sodium"), H),
+        q("ele_element_isolated_seaweed", "Which element was first isolated from seaweed ash?", "Iodine", listOf("Bromine", "Sodium", "Potassium"), H),
+        q("ele_compounds_element_make", "Compounds of which element make euro banknotes glow red under UV light?", "Europium", listOf("Yttrium", "Strontium", "Neodymium"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -456,6 +465,7 @@ object ElementQuestions {
         q("ele_gadolinium_honours_johan", "Gadolinium honours Johan Gadolin, a chemist from Turku in which present-day country?", "Finland", listOf("Sweden", "Norway", "Estonia"), X),
         q("ele_james_webb_space", "The James Webb Space Telescope's gold-coated mirror segments are made of which light metal?", "Beryllium", listOf("Aluminium", "Titanium", "Magnesium"), X),
         q("ele_last_stable_non", "Which was the last stable, non-radioactive element to be discovered, in 1925?", "Rhenium", listOf("Hafnium", "Technetium", "Francium"), X),
-        q("ele_liquid_alloy_gallium", "Which liquid alloy of gallium, indium and tin replaces mercury in some thermometers?", "Galinstan", listOf("Amalgam", "Solder", "Nitinol"), X)
+        q("ele_liquid_alloy_gallium", "Which liquid alloy of gallium, indium and tin replaces mercury in some thermometers?", "Galinstan", listOf("Amalgam", "Solder", "Nitinol"), X),
+        q("ele_element_comes_greek_4", "Which element's name comes from the Greek for 'hidden'?", "Krypton", listOf("Lanthanum", "Xenon", "Neon"), X)
     )
 }

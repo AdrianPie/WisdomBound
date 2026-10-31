@@ -143,7 +143,9 @@ object MathQuestions {
         q("mat_times_clock_minute", "How many times does a clock's minute hand pass the 12 in a full day?", "24", listOf("12", "48", "60"), E),
         q("mat_latest_time_hour", "What is the latest time a 24-hour digital clock can show?", "23:59", listOf("24:00", "12:59", "24:59"), E),
         q("mat_value_digit_number", "What is the value of the digit 7 in the number 3,742?", "700", listOf("7", "70", "7,000"), E),
-        q("mat_rounded_nearest_cents", "Rounded to the nearest 10 cents, what does \$4.96 become?", "\$5.00", listOf("\$4.90", "\$4.95", "\$4.10"), E)
+        q("mat_rounded_nearest_cents", "Rounded to the nearest 10 cents, what does \$4.96 become?", "\$5.00", listOf("\$4.90", "\$4.95", "\$4.10"), E),
+        q("mat_minutes_whole_day", "How many minutes are there in a whole day?", "1440", listOf("1240", "1600", "960"), E),
+        q("mat_400", "What is 25% of 25% of 400?", "25", listOf("100", "50", "12.5"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -370,7 +372,13 @@ object MathQuestions {
         q("mat_times_day_stopped", "How many times a day does a stopped analogue clock show the correct time?", "Twice", listOf("Never", "Once", "24 times"), M),
         q("mat_cube_cut_cubes", "A 10 cm cube is cut into 1 cm cubes. How many small cubes do you get?", "1,000", listOf("100", "600", "300"), M),
         q("mat_345_679", "What is 12,345,679 x 9?", "111,111,111", listOf("123,456,789", "999,999,999", "101,010,101"), M),
-        q("mat_million_written_percentage", "What is 'one in a million' written as a percentage?", "0.0001%", listOf("0.01%", "0.001%", "0.1%"), M)
+        q("mat_million_written_percentage", "What is 'one in a million' written as a percentage?", "0.0001%", listOf("0.01%", "0.001%", "0.1%"), M),
+        q("mat_angle_between_hands", "What is the angle between the hands of a clock at 3:30?", "75 degrees", listOf("90 degrees", "60 degrees", "105 degrees"), M),
+        q("mat_prime_numbers_between", "How many prime numbers are there between 1 and 20?", "8", listOf("6", "7", "9"), M),
+        q("mat_sum_digits", "What is the sum of the digits 1 to 9?", "45", listOf("36", "55", "50"), M),
+        q("mat_digits_repeat_decimal", "How many digits repeat in the decimal for 1/7 (0.142857...)?", "6", listOf("3", "7", "9"), M),
+        q("mat_three_digit_whole", "How many three-digit whole numbers are there?", "900", listOf("999", "899", "1000"), M),
+        q("mat_positive_number_square", "Which positive number has a square root that is exactly half of itself?", "4", listOf("2", "8", "16"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -555,7 +563,12 @@ object MathQuestions {
         q("mat_millennium_prize_problems", "How many 'Millennium Prize Problems', each worth \$1 million, were announced in 2000?", "Seven", listOf("Ten", "Twenty-three", "Three"), H),
         q("mat_famously_hard_problem", "Which famously hard problem asks for the shortest route that visits every city on a list exactly once?", "The travelling salesman problem", listOf("The Konigsberg bridges problem", "The knapsack problem", "The four colour problem"), H),
         q("mat_prisoner_dilemma_both", "In the 'prisoner's dilemma', why do both prisoners usually end up worse off?", "Each is tempted to betray the other", listOf("Each forgets what the other said", "Both refuse to speak at all", "The guards always lie to them"), H),
-        q("mat_draw_two_cards", "You draw two cards from a full deck. What is the chance that both are aces?", "1 in 221", listOf("1 in 169", "1 in 26", "1 in 104"), H)
+        q("mat_draw_two_cards", "You draw two cards from a full deck. What is the chance that both are aces?", "1 in 221", listOf("1 in 169", "1 in 26", "1 in 104"), H),
+        q("mat_sum_interior_angles_2", "What is the sum of the interior angles of a decagon?", "1440 degrees", listOf("1800 degrees", "1260 degrees", "1080 degrees"), H),
+        q("mat_different_ways_letters", "In how many different ways can the letters of the word 'LEVEL' be arranged?", "30", listOf("60", "120", "20"), H),
+        q("mat_flip_two_coins", "You flip two coins and at least one is heads. What is the chance both are heads?", "1 in 3", listOf("1 in 2", "1 in 4", "2 in 3"), H),
+        q("mat_triangles_drawn_using", "How many triangles can be drawn using the six corners of a hexagon?", "20", listOf("15", "18", "24"), H),
+        q("mat_smallest_number_exactly", "What is the smallest number that has exactly six divisors?", "12", listOf("18", "24", "30"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -650,6 +663,8 @@ object MathQuestions {
         q("mat_fewest_given_clues", "What is the fewest given clues a standard Sudoku can have and still have only one solution?", "17", listOf("9", "22", "30"), X),
         q("mat_1980s_vancouver_stock", "In the 1980s the Vancouver Stock Exchange's new index sank to about half its true value within two years. What went wrong?", "Its value was truncated, not rounded", listOf("Prices were typed in the wrong currency", "A clerk dropped a zero from the base", "Its computer counted in base 12"), X),
         q("mat_archimedes_reportedly_want", "What did Archimedes reportedly want carved on his tomb?", "A sphere inside a cylinder", listOf("A circle inside a square", "A spiral and a lever", "A cone inside a cube"), X),
-        q("mat_any_given_year", "In any given year, 4 April, 6 June, 8 August, 10 October and 12 December all have what in common?", "The same day of the week", listOf("Always a weekend day", "Always a different weekday", "The same phase of the Moon"), X)
+        q("mat_any_given_year", "In any given year, 4 April, 6 June, 8 August, 10 October and 12 December all have what in common?", "The same day of the week", listOf("Always a weekend day", "Always a different weekday", "The same phase of the Moon"), X),
+        q("mat_zeros_end_100", "How many zeros are at the end of 100 factorial?", "24", listOf("20", "25", "11"), X),
+        q("mat_different_ways_2x10", "How many different ways can a 2x10 strip be tiled with 2x1 dominoes?", "89", listOf("55", "100", "144"), X)
     )
 }

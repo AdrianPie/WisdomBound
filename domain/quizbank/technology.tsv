@@ -167,6 +167,8 @@ tec_segway	Easy	What is a Segway?	A self-balancing scooter	A folding electric bi
 tec_gaming_slang_noob	Easy	In gaming slang, what is a 'noob'?	A beginner	A cheater	A sore loser	A team leader
 tec_stand_headset	Easy	What does 'VR' stand for, as in a VR headset?	Virtual reality	Visual recording	Video replay	Variable resolution
 tec_car_cruise_control	Easy	What does a car's cruise control do?	Keeps the car at a steady speed	Steers the car around bends	Parks the car by itself	Warns of speed cameras
+tec_captcha_test_try_2	Easy	What does a CAPTCHA test try to prove?	You are human	You are an adult	You are logged in	You are not on a VPN
+tec_app_became_photos	Easy	Which app became famous for photos that vanish after viewing?	Snapchat	Instagram	WhatsApp	Pinterest
 tec_cpu	Medium	What does the abbreviation CPU stand for?	Central Processing Unit	Random-access memory	Graphics card	Hard drive
 tec_android_firma	Medium	Which company develops the Android operating system?	Google	Apple	Microsoft	Meta
 tec_telefon_bell	Medium	Who patented the telephone?	Alexander Graham Bell	Thomas Edison	Guglielmo Marconi	Samuel Morse
@@ -462,6 +464,14 @@ tec_console_launched_1998	Medium	Which console, launched in 1998, was the last e
 tec_handheld_console_launched	Medium	Which handheld console, launched in 2004, played games from small optical discs called UMDs?	The PlayStation Portable	The Nintendo DS	The PlayStation Vita	The Nokia N-Gage
 tec_free_1990s_service	Medium	Which free 1990s service let anyone build a homepage in themed 'neighbourhoods' such as Hollywood and SiliconValley?	GeoCities	MySpace	Angelfire	Tripod
 tec_online_auction_site	Medium	Which online auction site was first called AuctionWeb?	eBay	Etsy	Craigslist	Overstock
+tec_roomba_irobot_made	Medium	Before the Roomba, iRobot made robots for what?	Bomb disposal	Car factories	Space probes	Toy shops
+tec_nes_zapper_light	Medium	How did the NES Zapper light gun know if you hit the duck?	It saw a white flash	It used radar	It used sound	It used infrared beams
+tec_luis_von_ahn	Medium	Luis von Ahn's reCAPTCHA used players' answers to do what?	Digitise old books	Train self-driving cars	Count spam	Translate websites
+tec_video_game_played	Medium	Which was the first video game played in space, on a Game Boy in 1993?	Tetris	Super Mario Land	Pong	Pac-Man
+tec_typewriter_shift_key	Medium	On a typewriter, what did the Shift key physically shift?	The type position	The ribbon colour	The line spacing	The margin
+tec_nintendo_wii_development	Medium	What was the Nintendo Wii called during development?	Revolution	Dolphin	Project Reality	Wave
+tec_language_logo_steaming	Medium	Which language's logo is a steaming cup of coffee?	Java	Python	Ruby	C++
+tec_sega_console_built	Medium	Which Sega console was the first with a built-in modem for online play?	Dreamcast	Mega Drive	Saturn	Game Gear
 day2_ram_vs_dysk	Hard	Why does a computer slow down when RAM runs out?	It starts swapping data to much slower storage	The processor overheats and throttles	The screen starts refreshing slower	The network connection is throttled
 tec_turing	Hard	Who is regarded as the father of computer science and cracked the Enigma cipher?	Alan Turing	John von Neumann	Charles Babbage	Claude Shannon
 tec_enigma_polacy	Hard	Which Pole co-created the first break of the Enigma cipher?	Marian Rejewski	Stefan Banach	Jan Czochralski	Kazimierz Funk
@@ -701,6 +711,13 @@ tec_atari_founder_later	Hard	Which Atari co-founder later started the Chuck E. C
 tec_trinitron_picture_tube	Hard	Trinitron, a TV picture tube famous for its sharp image from 1968, was made by which company?	Sony	Panasonic	Philips	Toshiba
 tec_google_project_loon	Hard	Google's Project Loon tried to bring internet access to remote areas using what?	High-altitude balloons	Low-flying drones	Undersea cables	Solar-powered airships
 tec_company_created_1978	Hard	Which company created the 1978 arcade hit 'Space Invaders'?	Taito	Namco	Atari	Konami
+tec_company_built_star	Hard	Which company built the Star, an early 1981 computer with windows and a mouse?	Xerox	IBM	Apple	Atari
+tec_apple_secret_codename	Hard	What was Apple's secret codename for the first iPhone project?	Purple	Orange	Phoenix	Marble
+tec_pentium_chip_got	Hard	The Pentium chip got its name because it was Intel's what?	Fifth generation	Fastest model	Pen-friendly model	Pentagon contract
+tec_country_developers_created	Hard	Which country's developers created Skype?	Estonia	Finland	Norway	Iceland
+tec_sony_playstation_began	Hard	The Sony PlayStation began as a CD add-on for whose console?	Nintendo	Sega	Atari	NEC
+tec_company_invented_floppy	Hard	Which company invented the floppy disk?	IBM	Sony	Apple	Xerox
+tec_google_server_racks	Hard	Google's first server racks were famously housed in cases made of what?	Lego bricks	Cardboard	Wooden crates	Shoe boxes
 day2_klucz_publiczny	Expert	In public-key cryptography, what may be shared freely?	The public key	The private key	Both keys	Neither key
 tec_moore	Expert	What does Moore's law concern?	The doubling of transistor count in chips	The doubling of internet speed each year	The steady fall in the price of memory	The rise in server power consumption
 tec_c_jezyk	Expert	Who created the C programming language?	Dennis Ritchie	Bjarne Stroustrup	James Gosling	Guido van Rossum
@@ -822,3 +839,6 @@ tec_netscape_mascot_mozilla	Expert	Netscape's mascot name 'Mozilla' blended 'God
 tec_leo_world_business	Expert	LEO, the world's first business computer in 1951, was built by a British company best known for what?	Tea shops and cakes	Railway engines	Department stores	Newspapers
 tec_roughly_commercial_hard	Expert	Roughly how much did the first commercial hard disk drive, of 1956, weigh while holding about 5 MB?	About a tonne	About 10 kg	About 100 kg	About 10 tonnes
 tec_java_programming_language	Expert	What was the Java programming language called when it was first developed?	Oak	Pine	Maple	Cedar
+tec_game_boy_partly	Expert	A Game Boy partly melted in which war still works on display in New York?	The Gulf War	The Vietnam War	The Falklands War	The Kosovo War
+tec_game_credited_video	Expert	Which game is credited with the first video game cutscenes, in 1980?	Pac-Man	Donkey Kong	Space Invaders	Asteroids
+tec_gnu_software_project	Expert	What does the name of the GNU software project stand for?	GNU's Not Unix	General New Unix	Great Network Utility	Global Network User

@@ -173,6 +173,8 @@ sci_airless_moon_astronaut	Easy	On the airless Moon, an astronaut dropped a hamm
 sci_swimming_pool_feel	Easy	Why does a swimming pool at 20 C feel much colder than air at 20 C?	Water draws heat from your body far faster	Water is always colder than it looks	Pool water contains cooling chemicals	Your skin cannot sense warm water
 sci_find_sea_tranquillity	Easy	Where would you find the Sea of Tranquillity?	On the Moon	In the Arctic Ocean	Off the coast of Japan	On the planet Mars
 sci_wax_burning_candle	Easy	Where does the wax of a burning candle mostly go?	It burns away as fuel into gases	It all drips down into the holder	It soaks deep into the wick for good	It turns into the smoke's black soot
+sci_counting_lightning_flash	Easy	Counting from a lightning flash, about how many seconds of delay mean the storm is 1 km away?	About 3	About 10	About 1	About 30
+sci_won_soda_cans	Easy	Why won't most soda cans stick to a fridge magnet?	They are aluminium	Their paint blocks it	They are too light	The liquid stops it
 sci_jowisz	Medium	Which planet of the Solar System is the largest?	Jupiter	Saturn	Neptune	Uranus
 sci_kopernik	Medium	Who proved that the Earth orbits the Sun, not the other way around?	Nicolaus Copernicus	Isaac Newton	Galileo Galilei	Johannes Kepler
 sci_grawitacja	Medium	Who formulated the law of universal gravitation?	Isaac Newton	Albert Einstein	Nikola Tesla	Michael Faraday
@@ -489,6 +491,14 @@ sci_slice_toast_knocked	Medium	Why does a slice of toast knocked off a table so 
 sci_mars_mission_scientists	Medium	What do Mars mission scientists call one day on Mars?	A sol	A mar	A rev	A dia
 sci_roughly_fast_international	Medium	Roughly how fast does the International Space Station travel?	About 28,000 km/h	About 2,800 km/h	About 900 km/h	About 280,000 km/h
 sci_north_star_barely	Medium	Why does the North Star barely move while other stars wheel across the night sky?	It lies almost straight above Earth's axis	It is much closer than the other stars	It moves at the same speed as the Earth	It is the brightest star in the sky
+sci_white_fog_pouring	Medium	The white fog pouring off dry ice is mostly what?	Water droplets	Carbon dioxide gas	Smoke	Liquid nitrogen
+sci_metal_soft_cut	Medium	Which metal is so soft it can be cut with a butter knife?	Sodium	Aluminium	Copper	Tin
+sci_earth_magnetic_pole	Medium	Earth's magnetic pole in the Arctic is physically what kind of magnetic pole?	A south pole	A north pole	Neither	It flips daily
+sci_balloon_left_freezer	Medium	Why does a balloon left in a freezer shrink?	Cold gas takes up less room	The rubber freezes	Air leaks out	Water inside freezes
+sci_colour_blue_jeans	Medium	What colour does a blue jeans patch look under pure red light?	Nearly black	Purple	Bright blue	White
+sci_shower_curtain_billow	Medium	Why does the shower curtain billow inward when the shower is on?	Moving air lowers the pressure	Hot water attracts it	Static electricity	Steam pushes it
+sci_colour_flames_copper	Medium	What colour flames does copper give in fireworks?	Blue-green	Red	Yellow	Purple
+sci_really_hearing_hold	Medium	What are you really hearing when you hold a seashell to your ear?	Echoed room noise	The sea's memory	Your heartbeat	Air inside the shell
 sci_einstein	Hard	Who formulated the theory of relativity?	Albert Einstein	Isaac Newton	Niels Bohr	Max Planck
 sci_penicylina	Hard	Who discovered penicillin?	Alexander Fleming	Louis Pasteur	Robert Koch	Jonas Salk
 sci_sila	Hard	What is the SI unit of force?	Newton	Joule	Watt	Pascal
@@ -748,6 +758,11 @@ sci_happens_annular_solar	Hard	What happens in an annular solar eclipse?	The Moo
 sci_air_pressure_sea	Hard	Air pressure at sea level is like the weight of roughly what resting on each square centimetre of you?	About 1 kg	About 1 g	About 100 kg	About 10 tonnes
 sci_colour_daytime_sky_2	Hard	What colour is the daytime sky on Mars?	A dusty butterscotch-pink	A deep blue like Earth's	A bright lime green	Pitch black like the Moon's
 sci_leave_fridge_door	Hard	You leave the fridge door open in a closed kitchen on a hot day. What happens to the kitchen?	It slowly gets warmer	It slowly gets cooler	It stays exactly the same	It cools, then quickly warms
+sci_pluto_heart_shaped	Hard	Pluto's famous heart-shaped plain is named after whom?	Clyde Tombaugh	Percival Lowell	Carl Sagan	Edwin Hubble
+sci_scorching_mercury_still	Hard	Where does scorching Mercury still hold water ice?	Shadowed polar craters	Under the equator	In its thin clouds	Nowhere at all
+sci_needle_float_still	Hard	Why can a needle float on still water?	Surface tension	Air trapped inside	Magnetism	Its tiny weight
+sci_water_expand_freezes	Hard	By about how much does water expand when it freezes?	About 9%	About 1%	About 30%	About 50%
+sci_tennis_ball_dropped	Hard	Why does a tennis ball dropped onto a basketball fly so high?	Momentum passes to the light ball	The basketball is magnetic	Air pressure pushes it	The tennis ball spins
 sci_kwant	Expert	Who launched quantum theory?	Max Planck	Albert Einstein	Werner Heisenberg	Erwin Schrodinger
 sci_entropia	Expert	Which law of thermodynamics states that entropy increases?	The second	The first	The third	The zeroth
 sci_hubble	Expert	Who discovered that the Universe is expanding?	Edwin Hubble	Albert Einstein	Carl Sagan	Georges Lemaitre
@@ -877,3 +892,6 @@ sci_giant_supercluster_galaxies	Expert	What is the name of the giant supercluste
 sci_drop_ice_cube	Expert	Drop an ice cube into fresh water and another into very salty water at the same temperature. Which melts faster?	The one in fresh water	The one in salty water	They melt at exactly the same speed	Neither melts until stirred
 sci_sun_suddenly_vanished	Expert	If the Sun suddenly vanished, when would the Earth stop feeling its pull?	After about 8 minutes	Instantly	After about 8 seconds	After about 8 days
 sci_thanks_moon_slight	Expert	Thanks to the Moon's slight wobble, roughly how much of its surface can we see from Earth over time?	About 59%	Exactly 50%	About 90%	About 25%
+sci_vacuum_falls_faster	Expert	In a vacuum, what falls faster: a hammer or a feather?	Neither	The hammer	The feather	It depends on shape
+sci_some_old_church	Expert	Why are some old church window panes thicker at the bottom?	They were fitted that way	Glass flows slowly	Rain wore the top	Heat melted them
+sci_mercury_full_day	Expert	On Mercury, a full day from one sunrise to the next lasts about how long?	About 176 Earth days	About 59 Earth days	About 88 Earth days	About 24 hours

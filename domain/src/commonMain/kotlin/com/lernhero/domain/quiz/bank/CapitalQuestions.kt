@@ -77,7 +77,11 @@ object CapitalQuestions {
         q("cap_heathrow_gatwick_airports", "Heathrow and Gatwick airports serve which capital city?", "London", listOf("Dublin", "Edinburgh", "Amsterdam"), E),
         q("cap_merlion_statue_lion", "The Merlion, a statue with a lion's head and a fish's body, is the symbol of which capital?", "Singapore", listOf("Bangkok", "Manila", "Jakarta"), E),
         q("cap_bird_nest_stadium", "The 'Bird's Nest' stadium was built for the 2008 Olympics in which capital?", "Beijing", listOf("Tokyo", "Seoul", "Bangkok"), E),
-        q("cap_benfica_sporting_fierce", "Benfica and Sporting, fierce football rivals, are both clubs from which capital?", "Lisbon", listOf("Madrid", "Athens", "Buenos Aires"), E)
+        q("cap_benfica_sporting_fierce", "Benfica and Sporting, fierce football rivals, are both clubs from which capital?", "Lisbon", listOf("Madrid", "Athens", "Buenos Aires"), E),
+        q("cap_capital_main_airport", "Which capital's main airport is called Schiphol?", "Amsterdam", listOf("Copenhagen", "Brussels", "Oslo"), E),
+        q("cap_capital_stands_rio", "Which capital stands on the Rio de la Plata opposite Buenos Aires?", "Montevideo", listOf("Asuncion", "Santiago", "La Paz"), E),
+        q("cap_capital_hofburg_old", "In which capital is the Hofburg, the old Habsburg palace?", "Vienna", listOf("Budapest", "Prague", "Munich"), E),
+        q("cap_capital_temple_heaven", "In which capital is the Temple of Heaven?", "Beijing", listOf("Seoul", "Tokyo", "Hanoi"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -220,7 +224,10 @@ object CapitalQuestions {
         q("cap_regina_capital_saskatchewan", "Regina, the capital of Saskatchewan, has a Latin name meaning what?", "Queen", listOf("Crown", "Kingdom", "Prairie"), M),
         q("cap_giant_steel_outline", "A giant steel outline of Che Guevara's face looks over Revolution Square in which capital?", "Havana", listOf("La Paz", "Caracas", "Managua"), M),
         q("cap_halifax_harbour_saw", "Halifax, whose harbour saw a huge wartime explosion in 1917, is the capital of which Canadian province?", "Nova Scotia", listOf("New Brunswick", "Newfoundland", "Prince Edward Island"), M),
-        q("cap_capital_state_virginia", "What is the capital of the US state of Virginia?", "Richmond", listOf("Norfolk", "Virginia Beach", "Alexandria"), M)
+        q("cap_capital_state_virginia", "What is the capital of the US state of Virginia?", "Richmond", listOf("Norfolk", "Virginia Beach", "Alexandria"), M),
+        q("cap_capital_city_encircled", "Which capital city is encircled by the grand boulevard called the Ringstrasse?", "Vienna", listOf("Budapest", "Prague", "Berlin"), M),
+        q("cap_capital_nicknamed_little", "Which capital was nicknamed 'Little Paris' for its belle epoque boulevards?", "Bucharest", listOf("Sofia", "Belgrade", "Budapest"), M),
+        q("cap_capital_city_designed", "Which capital city was designed by the American architects Walter and Marion Griffin?", "Canberra", listOf("Ottawa", "Wellington", "Washington"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -345,7 +352,9 @@ object CapitalQuestions {
         q("cap_older_city_sits", "Which older city sits right next to Islamabad as its 'twin city'?", "Rawalpindi", listOf("Lahore", "Peshawar", "Karachi"), H),
         q("cap_colonial_city_guatemala", "Which colonial city was Guatemala's capital until earthquakes in 1773 forced a move?", "Antigua", listOf("Quetzaltenango", "Flores", "Granada"), H),
         q("cap_city_not_cologne", "Which city, not Cologne, is the capital of North Rhine-Westphalia, Germany's most populous state?", "Dusseldorf", listOf("Bonn", "Dortmund", "Essen"), H),
-        q("cap_denmark_danish_pastries", "In Denmark, Danish pastries are called 'wienerbrod', meaning bread from which capital?", "Vienna", listOf("Paris", "Berlin", "Budapest"), H)
+        q("cap_denmark_danish_pastries", "In Denmark, Danish pastries are called 'wienerbrod', meaning bread from which capital?", "Vienna", listOf("Paris", "Berlin", "Budapest"), H),
+        q("cap_capital_stands_golden", "In which capital stands the golden Pha That Luang stupa, a national symbol?", "Vientiane", listOf("Phnom Penh", "Bangkok", "Yangon"), H),
+        q("cap_capital_old_town", "Which capital's old town grew around a hilltop fortress called the Kalemegdan?", "Belgrade", listOf("Sarajevo", "Skopje", "Sofia"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -436,6 +445,7 @@ object CapitalQuestions {
         q("cap_south_korean_ministries", "Many South Korean ministries moved from Seoul in the 2010s to which new planned city?", "Sejong", listOf("Daejeon", "Incheon", "Ulsan"), X),
         q("cap_port_town_capital", "Which port town was the capital of modern Greece just before Athens took over in 1834?", "Nafplio", listOf("Patras", "Corfu", "Piraeus"), X),
         q("cap_capital_city_dictator", "Which capital city did dictator Rafael Trujillo rename after himself in 1936?", "Santo Domingo", listOf("Port-au-Prince", "Managua", "Tegucigalpa"), X),
-        q("cap_capital_city_lourenco", "Which capital city was called Lourenco Marques until 1976?", "Maputo", listOf("Luanda", "Harare", "Lusaka"), X)
+        q("cap_capital_city_lourenco", "Which capital city was called Lourenco Marques until 1976?", "Maputo", listOf("Luanda", "Harare", "Lusaka"), X),
+        q("cap_former_capital_means", "Which former capital's name means 'abode of peace' in Arabic?", "Dar es Salaam", listOf("Zanzibar", "Mombasa", "Khartoum"), X)
     )
 }

@@ -171,6 +171,8 @@ bio_roughly_long_simple	Easy	Roughly how long does a simple broken arm take to h
 bio_vaccine_teach_immune	Easy	What does a vaccine teach your immune system to do?	Recognise a germ before it strikes	Kill every bacterium in the body	Make extra red blood cells	Stop you ever getting a fever
 bio_glaucoma_disease_steal	Easy	Glaucoma is a disease that can steal which sense?	Sight	Hearing	Smell	Taste
 bio_hair_turn_grey	Easy	Why does hair turn grey or white with age?	The roots stop making pigment	The hair dries out and fades	The scalp gets less blood	Sunlight bleaches it over time
+bio_potatoes_close_relatives	Easy	Potatoes are close relatives of which plant?	Tomato	Sweet potato	Yam	Turnip
+bio_yawning_contagious_between	Easy	Yawning can be contagious between humans and which pet?	Dogs	Goldfish	Hamsters	Parrots
 bio_chromosomy	Medium	How many chromosomes does a healthy human cell have?	46	23	48	44
 bio_chlorofil	Medium	Which pigment gives plants their green color?	Chlorophyll	Carotene	Melanin	Hemoglobin
 bio_insulina	Medium	Which organ produces insulin?	Pancreas	Liver	Kidneys	Thyroid
@@ -464,6 +466,13 @@ bio_old_worn_out	Medium	Old, worn-out red blood cells are broken down mainly in 
 bio_tree_cross_section	Medium	In a tree's cross-section, what does an unusually wide ring usually mean?	A good growing year	A very cold winter	A forest fire	An insect attack
 bio_seedless_grapes_seeds	Medium	Seedless grapes have no seeds, so how are new vines usually grown?	From cuttings of other vines	From seeds of wild grapes	From the skins of ripe grapes	From pollen spread by bees
 bio_mushroom_pick_fruiting	Medium	The mushroom you pick is only the fruiting body. Where is most of the fungus?	In threads spread through the soil	Packed inside the stalk	In spores drifting in the air	Folded inside the cap's gills
+bio_cashew_nut_grow	Medium	Where does a cashew nut grow?	Below a fleshy fruit	Underground on roots	Inside a long pod	Inside a hard cone
+bio_pando_heaviest_living	Medium	Pando, one of the heaviest living things, is a single clone of which tree?	Quaking aspen	Coast redwood	Banyan	Silver birch
+bio_kidney_transplants_happens	Medium	In most kidney transplants, what happens to the patient's old kidneys?	They stay in place	They are removed	They are frozen	They are donated
+bio_seeing_far_more	Medium	Seeing far more colours than normal (tetrachromacy) happens mostly in whom?	Women	Men	Children	The elderly
+bio_fruit_enzyme_digests	Medium	Which fruit's enzyme digests your mouth a little while you eat it?	Pineapple	Banana	Mango	Grape
+bio_roughly_long_human	Medium	Roughly how long can a human brain cell live?	A whole lifetime	About 7 years	About a year	About a month
+bio_cacao_pods_source	Medium	Where do cacao pods, the source of chocolate, grow on the tree?	Straight from the trunk	At the branch tips	Underground	Hanging from vines
 bio_mejoza	Hard	What is the cell division that produces sex cells called?	Meiosis	Mitosis	Cytokinesis	Apoptosis
 bio_mendel	Hard	Who is considered the father of genetics for his research on peas?	Gregor Mendel	Charles Darwin	James Watson	Francis Crick
 bio_mozdzek	Hard	Which part of the brain is responsible for balance and movement coordination?	Cerebellum	Cerebral cortex	Medulla oblongata	Hypothalamus
@@ -700,6 +709,13 @@ bio_old_idea_louis	Hard	Which old idea did Louis Pasteur's swan-neck flask exper
 bio_leprosy_caused_close	Hard	Leprosy is caused by a close relative of the bacterium behind which disease?	Tuberculosis	Cholera	Syphilis	Plague
 bio_arrow_poison_curare	Hard	The arrow poison curare, used by South American hunters, kills by doing what?	Paralysing the muscles	Stopping blood clotting	Destroying red blood cells	Shutting down the liver
 bio_parts_body_sweat	Hard	Which of these parts of the body has no sweat glands at all?	The lips	The palms	The forehead	The armpits
+bio_plant_grown_000	Hard	Which plant was grown from a 2,000-year-old seed found at Masada?	Date palm	Olive	Lotus	Fig
+bio_people_sneeze_stepping	Hard	Why do people sneeze when stepping into bright sunlight?	An inherited reflex	Pollen in the light	Dry air outside	Cold air in the nose
+bio_part_human_body	Hard	Which part of the human body contains about a quarter of all its bones?	The feet	The skull	The spine	The rib cage
+bio_red_resin_dragon	Hard	The red resin called 'dragon's blood' comes from a tree found mainly on which island?	Socotra	Madagascar	Borneo	Tasmania
+bio_some_pine_cones_2	Hard	Some pine cones and Banksia pods only release their seeds after what?	A fire	A flood	A frost	Being eaten
+bio_wwii_soviet_union	Hard	During WWII, the Soviet Union farmed which common weed for rubber?	Dandelion	Nettle	Clover	Thistle
+bio_onions_make_cry	Hard	Why do onions make you cry when you cut them?	They release a sulfur gas	Their juice is acidic	Their smell is too strong	They contain pepper oil
 bio_amylaza	Expert	Which enzyme in saliva breaks down starch?	Amylase	Pepsin	Lipase	Trypsin
 bio_mrna	Expert	Which type of RNA carries genetic information from the nucleus to the ribosome?	mRNA	tRNA	rRNA	siRNA
 bio_ektoderma	Expert	Which germ layer does the nervous system develop from?	Ectoderm	Mesoderm	Endoderm	Notochord
@@ -816,3 +832,7 @@ bio_white_ghost_plant	Expert	How does the white 'ghost plant', with no chlorophy
 bio_parasitic_dodder_vine	Expert	How does the parasitic dodder vine find a host plant to attack?	By sniffing out its scent	By sensing its body heat	By following its sounds	By detecting magnetism
 bio_visitors_warned_not	Expert	Why are visitors warned not to shelter under the Caribbean manchineel tree in the rain?	Its dripping sap blisters skin	It is often struck by lightning	Its heavy fruit falls in storms	Wasps nest in its branches
 bio_damage_wernicke_area	Expert	Damage to Wernicke's area of the brain typically leaves people speaking fluently but how?	Without making sense	Only in a whisper	Only in rhymes	In a foreign accent
+bio_human_eye_blind	Expert	The human eye has a blind spot because of what?	The optic nerve exit	A gap in the iris	The lens edge	Missing eyelashes
+bio_unusual_axolotl_adult	Expert	What is unusual about the axolotl as an adult?	It keeps larval gills	It loses its tail	It turns blue	It lives on land
+bio_world_oldest_individual	Expert	The world's oldest known individual trees, over 4,800 years old, are which kind?	Bristlecone pines	Giant sequoias	Yew trees	Olive trees
+bio_giant_andean_plant	Expert	The giant Andean plant Puya raimondii flowers just once, after about how long?	About 80 years	About 8 years	About 2 years	About 800 years

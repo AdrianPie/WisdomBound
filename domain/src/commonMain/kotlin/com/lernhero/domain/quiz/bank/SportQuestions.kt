@@ -212,7 +212,9 @@ object SportQuestions {
         q("spo_hawk_eye_used", "What is Hawk-Eye, used in tennis and cricket?", "A ball-tracking camera system", listOf("A referee's whistle signal", "A rule about catches", "A pair of special goggles"), E),
         q("spo_paris_avenue_tour", "On which famous Paris avenue does the Tour de France traditionally finish?", "The Champs-Elysees", listOf("The Rue de Rivoli", "Boulevard Haussmann", "The Avenue Foch"), E),
         q("spo_sprint_photo_finish", "In a sprint 'photo finish', which part of a runner's body must cross the line first to win?", "The torso", listOf("The head", "The leading foot", "An outstretched hand"), E),
-        q("spo_basketball_other_american", "In basketball and other American sports, what does 'MVP' stand for?", "Most Valuable Player", listOf("Most Victorious Player", "Major Veteran Prize", "Main Varsity Pick"), E)
+        q("spo_basketball_other_american", "In basketball and other American sports, what does 'MVP' stand for?", "Most Valuable Player", listOf("Most Victorious Player", "Major Veteran Prize", "Main Varsity Pick"), E),
+        q("spo_grand_slam_tournament", "Which Grand Slam tournament is famous for strawberries and cream?", "Wimbledon", listOf("US Open", "French Open", "Australian Open"), E),
+        q("spo_sport_may_players", "In which sport may players hit the ball only with the flat side of their stick?", "Field hockey", listOf("Lacrosse", "Hurling", "Polo"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -534,7 +536,11 @@ object SportQuestions {
         q("spo_national_football_team_5", "Which national football team is nicknamed 'the Indomitable Lions'?", "Cameroon", listOf("Senegal", "Morocco", "Ghana"), M),
         q("spo_olympic_champions_often", "Why do Olympic champions so often bite their medals on the podium?", "Photographers ask them to", listOf("To check the gold is real", "It is an ancient Greek custom", "It is said to bring luck"), M),
         q("spo_1958_world_cup", "At the 1958 World Cup, which 17-year-old scored twice in the final?", "Pele", listOf("Garrincha", "Didi", "Zagallo"), M),
-        q("spo_los_angeles_lakers", "The Los Angeles Lakers kept their name from their first home, in which US state of '10,000 lakes'?", "Minnesota", listOf("Michigan", "Wisconsin", "Florida"), M)
+        q("spo_los_angeles_lakers", "The Los Angeles Lakers kept their name from their first home, in which US state of '10,000 lakes'?", "Minnesota", listOf("Michigan", "Wisconsin", "Florida"), M),
+        q("spo_marathon_runners_hit", "Marathon runners 'hit the wall' around 30 km mainly because they run out of what?", "Stored sugar", listOf("Salt", "Water", "Oxygen"), M),
+        q("spo_water_polo_players", "Water polo players stay afloat mostly with which kick?", "Eggbeater kick", listOf("Butterfly kick", "Flutter kick", "Dolphin kick"), M),
+        q("spo_long_may_attacker", "How long may an attacker stand in the painted lane under the basket in basketball?", "3 seconds", listOf("5 seconds", "10 seconds", "8 seconds"), M),
+        q("spo_ski_jumpers_spread", "Ski jumpers spread their skis in a V shape because it does what?", "Gives more lift", listOf("Is required by rules", "Slows them down", "Keeps them warmer"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -762,7 +768,16 @@ object SportQuestions {
         q("spo_french_open_home", "The French Open's home, Roland Garros, is named after what kind of hero?", "A pioneering aviator", listOf("A tennis champion", "A wartime general", "A cycling legend"), H),
         q("spo_sport_played_indigenous", "Which sport, first played by Indigenous peoples of North America, is Canada's official national summer sport?", "Lacrosse", listOf("Baseball", "Canadian football", "Soccer"), H),
         q("spo_men_javelin_redesigned", "Why was the men's javelin redesigned in 1986?", "Throws were flying too far for stadiums", listOf("Too many javelins snapped on landing", "Old javelins were too costly", "Judges could not see the landings"), H),
-        q("spo_fans_nhl_team", "Fans of which NHL team throw plastic rats onto the ice to celebrate?", "Florida Panthers", listOf("Boston Bruins", "Chicago Blackhawks", "Toronto Maple Leafs"), H)
+        q("spo_fans_nhl_team", "Fans of which NHL team throw plastic rats onto the ice to celebrate?", "Florida Panthers", listOf("Boston Bruins", "Chicago Blackhawks", "Toronto Maple Leafs"), H),
+        q("spo_darts_highest_score", "In darts, what is the highest score you can finish a leg with in three darts?", "170", listOf("180", "160", "150"), H),
+        q("spo_baseball_far_pitcher", "In baseball, how far is the pitcher's rubber from home plate?", "60 feet 6 inches", listOf("90 feet", "45 feet", "75 feet"), H),
+        q("spo_coloured_dots_squash", "What do the coloured dots on a squash ball show?", "How bouncy it is", listOf("Its brand", "Its weight", "Indoor or outdoor use"), H),
+        q("spo_sprinting_false_start", "In sprinting, a false start is called if a runner reacts faster than what?", "0.1 seconds", listOf("0.01 seconds", "0.3 seconds", "0.5 seconds"), H),
+        q("spo_major_league_baseball", "In Major League Baseball, what is NOT the same in every ballpark?", "Outfield wall distances", listOf("Distance between bases", "Pitching distance", "Ball size"), H),
+        q("spo_stableford_scoring_system", "Stableford is a scoring system in which sport?", "Golf", listOf("Cricket", "Darts", "Bowls"), H),
+        q("spo_must_kabaddi_raider", "Why must a kabaddi raider keep chanting 'kabaddi'?", "To prove one held breath", listOf("To scare defenders", "To count the seconds", "To call teammates"), H),
+        q("spo_james_scotland_banned", "James II of Scotland banned which sport in 1457 for distracting men from archery?", "Golf", listOf("Tennis", "Curling", "Shinty"), H),
+        q("spo_rowing_steers_boat", "In rowing, who steers the boat and faces forward?", "The coxswain", listOf("The stroke", "The bowman", "The skipper"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -873,6 +888,11 @@ object SportQuestions {
         q("spo_swedish_shooter_oscar", "Swedish shooter Oscar Swahn won an Olympic medal in 1920 at roughly what age?", "In his seventies", listOf("In his fifties", "In his sixties", "In his eighties"), X),
         q("spo_just_fontaine_scored", "Just Fontaine scored 13 goals at the 1958 World Cup alone. For which country did he play?", "France", listOf("Brazil", "Sweden", "West Germany"), X),
         q("spo_scottish_stick_ball", "Which Scottish stick-and-ball sport is played with a curved stick called a caman?", "Shinty", listOf("Bandy", "Lacrosse", "Rounders"), X),
-        q("spo_country_basketball_team", "Which country did the US basketball team beat in the final of the first Olympic tournament, in 1936, played outdoors in the rain?", "Canada", listOf("Mexico", "Italy", "Philippines"), X)
+        q("spo_country_basketball_team", "Which country did the US basketball team beat in the final of the first Olympic tournament, in 1936, played outdoors in the rain?", "Canada", listOf("Mexico", "Italy", "Philippines"), X),
+        q("spo_ring_olympic_archery", "The 10-ring on an Olympic archery target, shot from 70 m, is about how wide?", "About 12 cm", listOf("About 3 cm", "About 30 cm", "About 50 cm"), X),
+        q("spo_cricket_golden_duck", "In cricket, what is a 'golden duck'?", "Out on the first ball", listOf("Out without scoring", "A century in one hour", "Six sixes in an over"), X),
+        q("spo_gaelic_football_points", "In Gaelic football, how many points is a goal under the crossbar worth?", "3", listOf("1", "2", "6"), X),
+        q("spo_polo_hand_must", "In polo, in which hand must every player hold the mallet?", "The right hand", listOf("The left hand", "Either hand", "Both hands"), X),
+        q("spo_wimbledon_1877_held", "The first Wimbledon in 1877 was held partly to pay for what?", "A broken pony roller", listOf("A new clubhouse", "A croquet lawn", "A royal visit"), X)
     )
 }

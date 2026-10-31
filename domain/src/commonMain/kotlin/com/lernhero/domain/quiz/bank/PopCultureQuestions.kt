@@ -397,7 +397,8 @@ object PopCultureQuestions {
         q("pop_judge_became_blunt", "Which TV judge became famous for blunt put-downs on 'American Idol' and 'The X Factor'?", "Simon Cowell", listOf("Piers Morgan", "Gordon Ramsay", "Graham Norton"), E),
         q("pop_zootopia_kind_animal", "In 'Zootopia', what kind of animal is the con artist Nick Wilde?", "A fox", listOf("A wolf", "A weasel", "A coyote"), E),
         q("pop_apollo_astronaut_gave", "Which Apollo 11 astronaut gave his first name to the 'Toy Story' space ranger?", "Buzz Aldrin", listOf("Neil Armstrong", "Michael Collins", "John Glenn"), E),
-        q("pop_lady_gaga_stage", "Lady Gaga's stage name was inspired by a song by which band?", "Queen", listOf("ABBA", "The Beatles", "Duran Duran"), E)
+        q("pop_lady_gaga_stage", "Lady Gaga's stage name was inspired by a song by which band?", "Queen", listOf("ABBA", "The Beatles", "Duran Duran"), E),
+        q("pop_toy_dinosaur_toy", "What is the name of the toy dinosaur in 'Toy Story'?", "Rex", listOf("Dino", "Spike", "Rocky"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -918,7 +919,9 @@ object PopCultureQuestions {
         q("pop_online_game_player", "In which online game did a player charge in yelling 'Leeroy Jenkins!' and wipe out his whole team?", "World of Warcraft", listOf("EverQuest", "Counter-Strike", "RuneScape"), M),
         q("pop_guardians_galaxy_words", "In 'Guardians of the Galaxy', which words make up nearly everything the tree-like hero Groot says?", "'I am Groot'", listOf("'We are Groot'", "'Groot is here'", "'Groot says hi'"), M),
         q("pop_george_lucas_alaskan", "George Lucas's Alaskan Malamute, Indiana, inspired Indiana Jones's name and which other character?", "Chewbacca", listOf("Yoda", "Han Solo", "Jabba the Hutt"), M),
-        q("pop_woman_yelling_cat", "In the 'woman yelling at a cat' meme, what is the name of the white cat sitting behind a plate of salad?", "Smudge", listOf("Snowball", "Mittens", "Whiskers"), M)
+        q("pop_woman_yelling_cat", "In the 'woman yelling at a cat' meme, what is the name of the white cat sitting behind a plate of salad?", "Smudge", listOf("Snowball", "Mittens", "Whiskers"), M),
+        q("pop_iron_maiden_zombie", "What is the name of Iron Maiden's zombie-like mascot?", "Eddie", listOf("Vic", "Snaggletooth", "Ed Hunter"), M),
+        q("pop_island_jurassic_park", "What is the name of the island in 'Jurassic Park'?", "Isla Nublar", listOf("Isla Sorna", "Skull Island", "Amity Island"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -1222,7 +1225,11 @@ object PopCultureQuestions {
         q("pop_linguist_developed_klingon", "Which linguist developed the Klingon language for 'Star Trek'?", "Marc Okrand", listOf("David J. Peterson", "Paul Frommer", "Noam Chomsky"), H),
         q("pop_meme_press_pay", "The meme 'Press F to pay respects' comes from a funeral scene in which game series?", "Call of Duty", listOf("Battlefield", "Halo", "Medal of Honor"), H),
         q("pop_wrote_nothing_compares", "Who wrote 'Nothing Compares 2 U', a worldwide hit for Sinead O'Connor in 1990?", "Prince", listOf("George Michael", "Bono", "Morrissey"), H),
-        q("pop_type_tune_game", "The famous 'Type A' tune of Game Boy 'Tetris' is a Russian folk song called what?", "Korobeiniki", listOf("Katyusha", "Ochi Chyornye", "Polyushko Pole"), H)
+        q("pop_type_tune_game", "The famous 'Type A' tune of Game Boy 'Tetris' is a Russian folk song called what?", "Korobeiniki", listOf("Katyusha", "Ochi Chyornye", "Polyushko Pole"), H),
+        q("pop_cocktail_dude_drink", "What cocktail does the Dude drink throughout 'The Big Lebowski'?", "White Russian", listOf("Martini", "Old Fashioned", "Mojito"), H),
+        q("pop_pac_man_ghosts", "Which of Pac-Man's ghosts is red?", "Blinky", listOf("Pinky", "Inky", "Clyde"), H),
+        q("pop_blade_runner_test", "In 'Blade Runner', which test is used to spot replicants?", "Voight-Kampff", listOf("Turing", "Rorschach", "Kobayashi Maru"), H),
+        q("pop_fictional_los_angeles", "In which fictional Los Angeles skyscraper does John McClane fight terrorists?", "Nakatomi Plaza", listOf("Gennero Tower", "Oscorp Tower", "Wayne Tower"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -1344,6 +1351,9 @@ object PopCultureQuestions {
         q("pop_barbie_modelled_lilli", "Barbie was modelled on Lilli, a doll based on a cartoon from a newspaper in which country?", "West Germany", listOf("Switzerland", "France", "Sweden"), X),
         q("pop_finish_level_256", "Why can no one finish level 256 of the original 'Pac-Man' arcade game?", "A bug scrambles half the maze", listOf("The ghosts become invincible", "The maze has no exit gate", "The game wipes the high score"), X),
         q("pop_feature_street_fighter", "Which feature of 'Street Fighter II' began as an unintended glitch that the designers decided to keep?", "Combos", listOf("Special moves", "Throws", "Character select"), X),
-        q("pop_theme_mission_impossible", "The theme of 'Mission: Impossible' is famous for which unusual time signature?", "5/4", listOf("3/4", "6/8", "4/4"), X)
+        q("pop_theme_mission_impossible", "The theme of 'Mission: Impossible' is famous for which unusual time signature?", "5/4", listOf("3/4", "6/8", "4/4"), X),
+        q("pop_kubrick_shining_room", "In Kubrick's 'The Shining', which room number is forbidden?", "237", listOf("217", "101", "1408"), X),
+        q("pop_pulp_fiction_restaurant", "In 'Pulp Fiction', what is the name of the restaurant decorated like the 1950s?", "Jack Rabbit Slim's", listOf("Big Kahuna Burger", "Monk's Diner", "Al's Diner"), X),
+        q("pop_fbi_agent_investigates", "Which FBI agent investigates the murder of Laura Palmer?", "Dale Cooper", listOf("Fox Mulder", "Clarice Starling", "Will Graham"), X)
     )
 }

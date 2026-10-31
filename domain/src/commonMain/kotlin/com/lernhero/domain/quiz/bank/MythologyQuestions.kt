@@ -457,7 +457,14 @@ object MythologyQuestions {
         q("myt_tartarus_greek_myth", "What was Tartarus in Greek myth?", "The underworld's deepest pit", listOf("The gods' palace on Olympus", "A many-headed sea monster", "A river of burning fire"), M),
         q("myt_agamemnon_sacrifice_get", "What did Agamemnon sacrifice to get the winds he needed to sail for Troy?", "His daughter Iphigenia", listOf("His son Orestes", "His best warhorse", "His royal sceptre"), M),
         q("myt_fruit_sailors_fishermen", "Which fruit do many sailors and fishermen think it bad luck to carry on board?", "Bananas", listOf("Apples", "Oranges", "Coconuts"), M),
-        q("myt_medieval_lore_animal", "In medieval lore, which animal was believed to live unharmed in fire?", "The salamander", listOf("The newt", "The lizard", "The toad"), M)
+        q("myt_medieval_lore_animal", "In medieval lore, which animal was believed to live unharmed in fire?", "The salamander", listOf("The newt", "The lizard", "The toad"), M),
+        q("myt_car_maker_zoroastrian", "Which car maker is named after the Zoroastrian god of wisdom?", "Mazda", listOf("Subaru", "Lexus", "Infiniti"), M),
+        q("myt_titaness_mother_apollo", "Which Titaness was the mother of Apollo and Artemis?", "Leto", listOf("Rhea", "Themis", "Metis"), M),
+        q("myt_chinese_goddess_lives", "Which Chinese goddess lives on the Moon with a jade rabbit?", "Chang'e", listOf("Nuwa", "Guanyin", "Xiwangmu"), M),
+        q("myt_japanese_kami_rice", "Which Japanese kami of rice uses foxes as messengers?", "Inari", listOf("Hachiman", "Ebisu", "Raijin"), M),
+        q("myt_dwarf_like_egyptian", "Which dwarf-like Egyptian god scared evil spirits away from homes and newborns?", "Bes", listOf("Ptah", "Khnum", "Shu"), M),
+        q("myt_norse_goddess_owned", "Which Norse goddess owned the shining necklace Brisingamen?", "Freyja", listOf("Frigg", "Sif", "Idun"), M),
+        q("myt_slavic_forest_spirit", "Which Slavic forest spirit leads travellers astray and can change his height at will?", "Leshy", listOf("Domovoi", "Vodyanoy", "Bannik"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -684,7 +691,15 @@ object MythologyQuestions {
         q("myt_grumpy_old_water", "Which grumpy old water spirit of Slavic folklore drags swimmers down to his realm?", "The vodyanoy", listOf("The leshy", "The domovoi", "The polevik"), H),
         q("myt_according_myth_creature", "According to one myth, which creature killed the giant hunter Orion?", "A scorpion", listOf("A wild boar", "A sea serpent", "A lion"), H),
         q("myt_korean_folklore_gumiho", "In Korean folklore, what is a gumiho?", "A nine-tailed fox", listOf("A river dragon", "A one-horned goblin", "A tiger spirit"), H),
-        q("myt_chinese_tradition_creature", "In Chinese tradition, which creature guards the west?", "The White Tiger", listOf("The Azure Dragon", "The Black Tortoise", "The Vermilion Bird"), H)
+        q("myt_chinese_tradition_creature", "In Chinese tradition, which creature guards the west?", "The White Tiger", listOf("The Azure Dragon", "The Black Tortoise", "The Vermilion Bird"), H),
+        q("myt_norse_giantess_goddess", "Which Norse giantess, goddess of skiing, chose her husband by looking only at his feet?", "Skadi", listOf("Gerd", "Hel", "Angrboda"), H),
+        q("myt_golden_ring_odin", "Which golden ring of Odin drips eight new rings every ninth night?", "Draupnir", listOf("Andvaranaut", "Brisingamen", "Gleipnir"), H),
+        q("myt_demigod_maui_use", "What did the demigod Maui use to beat the sun into moving more slowly?", "His grandmother's jawbone", listOf("A whalebone club", "A greenstone axe", "A shark's tooth"), H),
+        q("myt_word_airtight_comes", "Which word for 'airtight' comes from Hermes, via the mythical sage Hermes Trismegistus?", "Hermetic", listOf("Mercurial", "Herculean", "Hermitic"), H),
+        q("myt_celtic_god_thought", "Which Celtic god is thought to have given his name to the French city of Lyon?", "Lugus", listOf("Belenus", "Cernunnos", "Taranis"), H),
+        q("myt_irish_sea_god", "Which Irish sea god is said to have given his name to the Isle of Man?", "Manannan", listOf("Dagda", "Nuada", "Lugh"), H),
+        q("myt_sumerian_goddess_passed", "Which Sumerian goddess passed through seven gates into the underworld, losing a garment at each?", "Inanna", listOf("Ereshkigal", "Ninhursag", "Tiamat"), H),
+        q("myt_roman_god_boundary", "Which Roman god of boundary stones is said to have refused to move even for Jupiter's temple?", "Terminus", listOf("Janus", "Silvanus", "Faunus"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -802,6 +817,9 @@ object MythologyQuestions {
         q("myt_mexican_hairless_dog", "The Mexican hairless dog breed takes its name from which Aztec god?", "Xolotl", listOf("Tlaloc", "Xipe Totec", "Mixcoatl"), X),
         q("myt_mesopotamian_wind_demon", "Which Mesopotamian wind demon has a starring role in the film 'The Exorcist'?", "Pazuzu", listOf("Lamashtu", "Humbaba", "Tiamat"), X),
         q("myt_said_happen_tara", "What was said to happen at Tara when the true High King of Ireland stood on the Lia Fail?", "The stone roared", listOf("The stone glowed", "The stone split", "The stone rang like a bell"), X),
-        q("myt_odysseus_pretend_mad", "How did Odysseus pretend to be mad to avoid the Trojan War?", "He sowed his fields with salt", listOf("He talked only to his dogs", "He dressed as a woman", "He howled at the moon"), X)
+        q("myt_odysseus_pretend_mad", "How did Odysseus pretend to be mad to avoid the Trojan War?", "He sowed his fields with salt", listOf("He talked only to his dogs", "He dressed as a woman", "He howled at the moon"), X),
+        q("myt_finnish_kalevala_smith", "In the Finnish 'Kalevala', which smith forged the magical Sampo?", "Ilmarinen", listOf("Vainamoinen", "Lemminkainen", "Kullervo"), X),
+        q("myt_aztec_myth_humble", "In Aztec myth, how did the humble god Nanahuatzin become the Sun?", "He leapt into a fire", listOf("He drank the sea", "He swallowed a star", "He climbed a tree"), X),
+        q("myt_witch_mistress_pohjola", "Which witch, the Mistress of Pohjola, demanded the Sampo in the 'Kalevala'?", "Louhi", listOf("Aino", "Marjatta", "Kyllikki"), X)
     )
 }

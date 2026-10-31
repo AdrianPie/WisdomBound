@@ -78,6 +78,8 @@ ele_cheap_rings_leave	Easy	Cheap rings can leave a green mark on your finger. Wh
 ele_heavy_cast_frying	Easy	Heavy 'cast' frying pans that must be seasoned with oil are made of which metal?	Iron	Copper	Aluminium	Titanium
 ele_water_filter_jugs	Easy	Water-filter jugs trap impurities with an 'activated' form of which element?	Carbon	Sulfur	Silicon	Calcium
 ele_grey_powder_binds	Easy	What is the grey powder that binds sand and gravel together into concrete?	Cement	Plaster	Clay	Chalk
+ele_metal_kitchen_foil	Easy	Which metal is most kitchen foil made of?	Aluminium	Tin	Zinc	Steel
+ele_element_combines_oxygen	Easy	Which element combines with oxygen to make up most of ordinary sand?	Silicon	Carbon	Calcium	Aluminium
 ele_symbol_ag	Medium	Which element hides behind the symbol Ag?	Silver	Gold	Argon	Aluminum
 ele_symbol_na	Medium	Which element hides behind the symbol Na?	Sodium	Nitrogen	Nickel	Neon
 ele_symbol_k	Medium	Which element hides behind the symbol K?	Potassium	Krypton	Calcium	Cobalt
@@ -224,6 +226,10 @@ ele_traditional_solder_electronics	Medium	Traditional solder for electronics is 
 ele_fibrous_mineral_once	Medium	Which fibrous mineral, once prized as fireproof insulation, was banned for causing lung disease?	Asbestos	Talc	Mica	Gypsum
 ele_superglue_hardens_almost	Medium	Superglue hardens almost instantly when it reacts with what?	Traces of water	Oxygen in the air	Daylight	Heat
 ele_bone_china_gets	Medium	Bone china gets its whiteness and strength from which added ingredient?	Bone ash	Crushed shells	Chalk dust	Ground glass
+ele_element_curies_latin	Medium	Which element did the Curies name after the Latin word for 'ray'?	Radium	Polonium	Radon	Actinium
+ele_modern_copper_pennies	Medium	Modern US 'copper' pennies are mostly made of which metal?	Zinc	Copper	Nickel	Aluminium
+ele_precious_metal_tarnishes	Medium	Which precious metal tarnishes black when it meets sulfur in the air?	Silver	Gold	Platinum	Palladium
+ele_element_greek_word_5	Medium	Which element is named after the Greek word for 'stone'?	Lithium	Silicon	Calcium	Strontium
 ele_symbol_sn	Hard	Which element hides behind the symbol Sn?	Tin	Scandium	Selenium	Strontium
 ele_najczestszy	Hard	Which element is the most abundant in the Universe?	Hydrogen	Helium	Oxygen	Carbon
 ele_ilosc	Hard	How many elements does today's periodic table have?	118	108	92	120
@@ -346,6 +352,9 @@ ele_backbone_every_dna	Hard	The backbone of every DNA molecule contains sugar an
 ele_ordinary_alkaline_batteries	Hard	Ordinary alkaline AA batteries contain zinc and an oxide of which metal?	Manganese	Lithium	Nickel	Cadmium
 ele_white_clay_hill	Hard	Which white clay, named after a hill in China, is the key ingredient of porcelain?	Kaolin	Bentonite	Terracotta	Fuller's earth
 ele_cfcs_thinned_ozone	Hard	The CFCs that thinned the ozone layer destroy ozone by releasing atoms of which element?	Chlorine	Carbon	Fluorine	Hydrogen
+ele_metal_abundant_human	Hard	Which metal is the most abundant in the human body?	Calcium	Iron	Potassium	Sodium
+ele_element_isolated_seaweed	Hard	Which element was first isolated from seaweed ash?	Iodine	Bromine	Sodium	Potassium
+ele_compounds_element_make	Hard	Compounds of which element make euro banknotes glow red under UV light?	Europium	Yttrium	Strontium	Neodymium
 ele_symbol_sb	Expert	Which element hides behind the symbol Sb?	Antimony	Strontium	Silver	Selenium
 ele_symbol_mn	Expert	Which element hides behind the symbol Mn?	Manganese	Magnesium	Molybdenum	Copper
 ele_curie	Expert	Which element did Marie Sklodowska-Curie name after her homeland?	Polonium	Radium	Uranium	Radon
@@ -419,3 +428,4 @@ ele_gadolinium_honours_johan	Expert	Gadolinium honours Johan Gadolin, a chemist 
 ele_james_webb_space	Expert	The James Webb Space Telescope's gold-coated mirror segments are made of which light metal?	Beryllium	Aluminium	Titanium	Magnesium
 ele_last_stable_non	Expert	Which was the last stable, non-radioactive element to be discovered, in 1925?	Rhenium	Hafnium	Technetium	Francium
 ele_liquid_alloy_gallium	Expert	Which liquid alloy of gallium, indium and tin replaces mercury in some thermometers?	Galinstan	Amalgam	Solder	Nitinol
+ele_element_comes_greek_4	Expert	Which element's name comes from the Greek for 'hidden'?	Krypton	Lanthanum	Xenon	Neon

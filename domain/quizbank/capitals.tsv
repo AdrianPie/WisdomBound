@@ -52,6 +52,10 @@ cap_heathrow_gatwick_airports	Easy	Heathrow and Gatwick airports serve which cap
 cap_merlion_statue_lion	Easy	The Merlion, a statue with a lion's head and a fish's body, is the symbol of which capital?	Singapore	Bangkok	Manila	Jakarta
 cap_bird_nest_stadium	Easy	The 'Bird's Nest' stadium was built for the 2008 Olympics in which capital?	Beijing	Tokyo	Seoul	Bangkok
 cap_benfica_sporting_fierce	Easy	Benfica and Sporting, fierce football rivals, are both clubs from which capital?	Lisbon	Madrid	Athens	Buenos Aires
+cap_capital_main_airport	Easy	Which capital's main airport is called Schiphol?	Amsterdam	Copenhagen	Brussels	Oslo
+cap_capital_stands_rio	Easy	Which capital stands on the Rio de la Plata opposite Buenos Aires?	Montevideo	Asuncion	Santiago	La Paz
+cap_capital_hofburg_old	Easy	In which capital is the Hofburg, the old Habsburg palace?	Vienna	Budapest	Prague	Munich
+cap_capital_temple_heaven	Easy	In which capital is the Temple of Heaven?	Beijing	Seoul	Tokyo	Hanoi
 cap_canberra	Medium	What is the capital of Australia?	Canberra	Sydney	Melbourne	Perth
 cap_ottawa	Medium	What is the capital of Canada?	Ottawa	Toronto	Montreal	Vancouver
 cap_brasilia	Medium	What is the capital of Brazil?	Brasilia	Rio de Janeiro	Sao Paulo	Salvador
@@ -191,6 +195,9 @@ cap_regina_capital_saskatchewan	Medium	Regina, the capital of Saskatchewan, has 
 cap_giant_steel_outline	Medium	A giant steel outline of Che Guevara's face looks over Revolution Square in which capital?	Havana	La Paz	Caracas	Managua
 cap_halifax_harbour_saw	Medium	Halifax, whose harbour saw a huge wartime explosion in 1917, is the capital of which Canadian province?	Nova Scotia	New Brunswick	Newfoundland	Prince Edward Island
 cap_capital_state_virginia	Medium	What is the capital of the US state of Virginia?	Richmond	Norfolk	Virginia Beach	Alexandria
+cap_capital_city_encircled	Medium	Which capital city is encircled by the grand boulevard called the Ringstrasse?	Vienna	Budapest	Prague	Berlin
+cap_capital_nicknamed_little	Medium	Which capital was nicknamed 'Little Paris' for its belle epoque boulevards?	Bucharest	Sofia	Belgrade	Budapest
+cap_capital_city_designed	Medium	Which capital city was designed by the American architects Walter and Marion Griffin?	Canberra	Ottawa	Wellington	Washington
 cap_wellington	Hard	What is the capital of New Zealand?	Wellington	Auckland	Christchurch	Dunedin
 cap_hanoi	Hard	What is the capital of Vietnam?	Hanoi	Ho Chi Minh City	Da Nang	Hue
 cap_rabat	Hard	What is the capital of Morocco?	Rabat	Casablanca	Marrakesh	Fez
@@ -312,6 +319,8 @@ cap_older_city_sits	Hard	Which older city sits right next to Islamabad as its 't
 cap_colonial_city_guatemala	Hard	Which colonial city was Guatemala's capital until earthquakes in 1773 forced a move?	Antigua	Quetzaltenango	Flores	Granada
 cap_city_not_cologne	Hard	Which city, not Cologne, is the capital of North Rhine-Westphalia, Germany's most populous state?	Dusseldorf	Bonn	Dortmund	Essen
 cap_denmark_danish_pastries	Hard	In Denmark, Danish pastries are called 'wienerbrod', meaning bread from which capital?	Vienna	Paris	Berlin	Budapest
+cap_capital_stands_golden	Hard	In which capital stands the golden Pha That Luang stupa, a national symbol?	Vientiane	Phnom Penh	Bangkok	Yangon
+cap_capital_old_town	Hard	Which capital's old town grew around a hilltop fortress called the Kalemegdan?	Belgrade	Sarajevo	Skopje	Sofia
 cap_thimphu	Expert	What is the capital of Bhutan?	Thimphu	Paro	Punakha	Phuentsholing
 cap_ulaanbaatar	Expert	What is the capital of Mongolia?	Ulaanbaatar	Erdenet	Darkhan	Khovd
 cap_bishkek	Expert	What is the capital of Kyrgyzstan?	Bishkek	Osh	Naryn	Karakol
@@ -399,3 +408,4 @@ cap_south_korean_ministries	Expert	Many South Korean ministries moved from Seoul
 cap_port_town_capital	Expert	Which port town was the capital of modern Greece just before Athens took over in 1834?	Nafplio	Patras	Corfu	Piraeus
 cap_capital_city_dictator	Expert	Which capital city did dictator Rafael Trujillo rename after himself in 1936?	Santo Domingo	Port-au-Prince	Managua	Tegucigalpa
 cap_capital_city_lourenco	Expert	Which capital city was called Lourenco Marques until 1976?	Maputo	Luanda	Harare	Lusaka
+cap_former_capital_means	Expert	Which former capital's name means 'abode of peace' in Arabic?	Dar es Salaam	Zanzibar	Mombasa	Khartoum

@@ -196,7 +196,9 @@ object BiologyQuestions {
         q("bio_roughly_long_simple", "Roughly how long does a simple broken arm take to heal in an adult?", "About six weeks", listOf("About six days", "About six months", "About two years"), E),
         q("bio_vaccine_teach_immune", "What does a vaccine teach your immune system to do?", "Recognise a germ before it strikes", listOf("Kill every bacterium in the body", "Make extra red blood cells", "Stop you ever getting a fever"), E),
         q("bio_glaucoma_disease_steal", "Glaucoma is a disease that can steal which sense?", "Sight", listOf("Hearing", "Smell", "Taste"), E),
-        q("bio_hair_turn_grey", "Why does hair turn grey or white with age?", "The roots stop making pigment", listOf("The hair dries out and fades", "The scalp gets less blood", "Sunlight bleaches it over time"), E)
+        q("bio_hair_turn_grey", "Why does hair turn grey or white with age?", "The roots stop making pigment", listOf("The hair dries out and fades", "The scalp gets less blood", "Sunlight bleaches it over time"), E),
+        q("bio_potatoes_close_relatives", "Potatoes are close relatives of which plant?", "Tomato", listOf("Sweet potato", "Yam", "Turnip"), E),
+        q("bio_yawning_contagious_between", "Yawning can be contagious between humans and which pet?", "Dogs", listOf("Goldfish", "Hamsters", "Parrots"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -493,7 +495,14 @@ object BiologyQuestions {
         q("bio_old_worn_out", "Old, worn-out red blood cells are broken down mainly in which organ?", "The spleen", listOf("The pancreas", "The kidneys", "The bladder"), M),
         q("bio_tree_cross_section", "In a tree's cross-section, what does an unusually wide ring usually mean?", "A good growing year", listOf("A very cold winter", "A forest fire", "An insect attack"), M),
         q("bio_seedless_grapes_seeds", "Seedless grapes have no seeds, so how are new vines usually grown?", "From cuttings of other vines", listOf("From seeds of wild grapes", "From the skins of ripe grapes", "From pollen spread by bees"), M),
-        q("bio_mushroom_pick_fruiting", "The mushroom you pick is only the fruiting body. Where is most of the fungus?", "In threads spread through the soil", listOf("Packed inside the stalk", "In spores drifting in the air", "Folded inside the cap's gills"), M)
+        q("bio_mushroom_pick_fruiting", "The mushroom you pick is only the fruiting body. Where is most of the fungus?", "In threads spread through the soil", listOf("Packed inside the stalk", "In spores drifting in the air", "Folded inside the cap's gills"), M),
+        q("bio_cashew_nut_grow", "Where does a cashew nut grow?", "Below a fleshy fruit", listOf("Underground on roots", "Inside a long pod", "Inside a hard cone"), M),
+        q("bio_pando_heaviest_living", "Pando, one of the heaviest living things, is a single clone of which tree?", "Quaking aspen", listOf("Coast redwood", "Banyan", "Silver birch"), M),
+        q("bio_kidney_transplants_happens", "In most kidney transplants, what happens to the patient's old kidneys?", "They stay in place", listOf("They are removed", "They are frozen", "They are donated"), M),
+        q("bio_seeing_far_more", "Seeing far more colours than normal (tetrachromacy) happens mostly in whom?", "Women", listOf("Men", "Children", "The elderly"), M),
+        q("bio_fruit_enzyme_digests", "Which fruit's enzyme digests your mouth a little while you eat it?", "Pineapple", listOf("Banana", "Mango", "Grape"), M),
+        q("bio_roughly_long_human", "Roughly how long can a human brain cell live?", "A whole lifetime", listOf("About 7 years", "About a year", "About a month"), M),
+        q("bio_cacao_pods_source", "Where do cacao pods, the source of chocolate, grow on the tree?", "Straight from the trunk", listOf("At the branch tips", "Underground", "Hanging from vines"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -733,7 +742,14 @@ object BiologyQuestions {
         q("bio_old_idea_louis", "Which old idea did Louis Pasteur's swan-neck flask experiment help to disprove?", "Spontaneous generation", listOf("Germ theory", "Blood circulation", "Natural selection"), H),
         q("bio_leprosy_caused_close", "Leprosy is caused by a close relative of the bacterium behind which disease?", "Tuberculosis", listOf("Cholera", "Syphilis", "Plague"), H),
         q("bio_arrow_poison_curare", "The arrow poison curare, used by South American hunters, kills by doing what?", "Paralysing the muscles", listOf("Stopping blood clotting", "Destroying red blood cells", "Shutting down the liver"), H),
-        q("bio_parts_body_sweat", "Which of these parts of the body has no sweat glands at all?", "The lips", listOf("The palms", "The forehead", "The armpits"), H)
+        q("bio_parts_body_sweat", "Which of these parts of the body has no sweat glands at all?", "The lips", listOf("The palms", "The forehead", "The armpits"), H),
+        q("bio_plant_grown_000", "Which plant was grown from a 2,000-year-old seed found at Masada?", "Date palm", listOf("Olive", "Lotus", "Fig"), H),
+        q("bio_people_sneeze_stepping", "Why do people sneeze when stepping into bright sunlight?", "An inherited reflex", listOf("Pollen in the light", "Dry air outside", "Cold air in the nose"), H),
+        q("bio_part_human_body", "Which part of the human body contains about a quarter of all its bones?", "The feet", listOf("The skull", "The spine", "The rib cage"), H),
+        q("bio_red_resin_dragon", "The red resin called 'dragon's blood' comes from a tree found mainly on which island?", "Socotra", listOf("Madagascar", "Borneo", "Tasmania"), H),
+        q("bio_some_pine_cones_2", "Some pine cones and Banksia pods only release their seeds after what?", "A fire", listOf("A flood", "A frost", "Being eaten"), H),
+        q("bio_wwii_soviet_union", "During WWII, the Soviet Union farmed which common weed for rubber?", "Dandelion", listOf("Nettle", "Clover", "Thistle"), H),
+        q("bio_onions_make_cry", "Why do onions make you cry when you cut them?", "They release a sulfur gas", listOf("Their juice is acidic", "Their smell is too strong", "They contain pepper oil"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -853,6 +869,10 @@ object BiologyQuestions {
         q("bio_white_ghost_plant", "How does the white 'ghost plant', with no chlorophyll at all, get its food?", "It taps fungi linked to tree roots", listOf("It eats tiny insects", "It photosynthesises with red pigment", "It absorbs minerals from rocks"), X),
         q("bio_parasitic_dodder_vine", "How does the parasitic dodder vine find a host plant to attack?", "By sniffing out its scent", listOf("By sensing its body heat", "By following its sounds", "By detecting magnetism"), X),
         q("bio_visitors_warned_not", "Why are visitors warned not to shelter under the Caribbean manchineel tree in the rain?", "Its dripping sap blisters skin", listOf("It is often struck by lightning", "Its heavy fruit falls in storms", "Wasps nest in its branches"), X),
-        q("bio_damage_wernicke_area", "Damage to Wernicke's area of the brain typically leaves people speaking fluently but how?", "Without making sense", listOf("Only in a whisper", "Only in rhymes", "In a foreign accent"), X)
+        q("bio_damage_wernicke_area", "Damage to Wernicke's area of the brain typically leaves people speaking fluently but how?", "Without making sense", listOf("Only in a whisper", "Only in rhymes", "In a foreign accent"), X),
+        q("bio_human_eye_blind", "The human eye has a blind spot because of what?", "The optic nerve exit", listOf("A gap in the iris", "The lens edge", "Missing eyelashes"), X),
+        q("bio_unusual_axolotl_adult", "What is unusual about the axolotl as an adult?", "It keeps larval gills", listOf("It loses its tail", "It turns blue", "It lives on land"), X),
+        q("bio_world_oldest_individual", "The world's oldest known individual trees, over 4,800 years old, are which kind?", "Bristlecone pines", listOf("Giant sequoias", "Yew trees", "Olive trees"), X),
+        q("bio_giant_andean_plant", "The giant Andean plant Puya raimondii flowers just once, after about how long?", "About 80 years", listOf("About 8 years", "About 2 years", "About 800 years"), X)
     )
 }

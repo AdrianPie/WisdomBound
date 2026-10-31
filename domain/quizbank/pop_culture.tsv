@@ -372,6 +372,7 @@ pop_judge_became_blunt	Easy	Which TV judge became famous for blunt put-downs on 
 pop_zootopia_kind_animal	Easy	In 'Zootopia', what kind of animal is the con artist Nick Wilde?	A fox	A wolf	A weasel	A coyote
 pop_apollo_astronaut_gave	Easy	Which Apollo 11 astronaut gave his first name to the 'Toy Story' space ranger?	Buzz Aldrin	Neil Armstrong	Michael Collins	John Glenn
 pop_lady_gaga_stage	Easy	Lady Gaga's stage name was inspired by a song by which band?	Queen	ABBA	The Beatles	Duran Duran
+pop_toy_dinosaur_toy	Easy	What is the name of the toy dinosaur in 'Toy Story'?	Rex	Dino	Spike	Rocky
 day_zlota_palma	Medium	Which is the top prize at the Cannes Film Festival?	The Palme d'Or	The Golden Bear	The Golden Lion	The Silver Shell
 day_minecraft_sprzedaz	Medium	Which is the best-selling video game of all time?	Minecraft	Tetris	Grand Theft Auto V	Wii Sports
 trv2_tetris_kraj	Medium	In which country was Tetris created?	The Soviet Union	Japan	The United States	Finland
@@ -889,6 +890,8 @@ pop_online_game_player	Medium	In which online game did a player charge in yellin
 pop_guardians_galaxy_words	Medium	In 'Guardians of the Galaxy', which words make up nearly everything the tree-like hero Groot says?	'I am Groot'	'We are Groot'	'Groot is here'	'Groot says hi'
 pop_george_lucas_alaskan	Medium	George Lucas's Alaskan Malamute, Indiana, inspired Indiana Jones's name and which other character?	Chewbacca	Yoda	Han Solo	Jabba the Hutt
 pop_woman_yelling_cat	Medium	In the 'woman yelling at a cat' meme, what is the name of the white cat sitting behind a plate of salad?	Smudge	Snowball	Mittens	Whiskers
+pop_iron_maiden_zombie	Medium	What is the name of Iron Maiden's zombie-like mascot?	Eddie	Vic	Snaggletooth	Ed Hunter
+pop_island_jurassic_park	Medium	What is the name of the island in 'Jurassic Park'?	Isla Nublar	Isla Sorna	Skull Island	Amity Island
 day_zloty_lew	Hard	At which film festival is the Golden Lion awarded?	Venice	Cannes	Berlin	San Sebastian
 lit_manga	Hard	The Japanese word 'manga' originally meant what?	Whimsical pictures	Moving pictures	Paper theatre	Ink stories
 pop_gremlins	Hard	In 'Gremlins' (1984), what must you never do to the creatures after midnight?	Feed them	Tickle them	Let them sleep	Take them outside
@@ -1189,6 +1192,10 @@ pop_linguist_developed_klingon	Hard	Which linguist developed the Klingon languag
 pop_meme_press_pay	Hard	The meme 'Press F to pay respects' comes from a funeral scene in which game series?	Call of Duty	Battlefield	Halo	Medal of Honor
 pop_wrote_nothing_compares	Hard	Who wrote 'Nothing Compares 2 U', a worldwide hit for Sinead O'Connor in 1990?	Prince	George Michael	Bono	Morrissey
 pop_type_tune_game	Hard	The famous 'Type A' tune of Game Boy 'Tetris' is a Russian folk song called what?	Korobeiniki	Katyusha	Ochi Chyornye	Polyushko Pole
+pop_cocktail_dude_drink	Hard	What cocktail does the Dude drink throughout 'The Big Lebowski'?	White Russian	Martini	Old Fashioned	Mojito
+pop_pac_man_ghosts	Hard	Which of Pac-Man's ghosts is red?	Blinky	Pinky	Inky	Clyde
+pop_blade_runner_test	Hard	In 'Blade Runner', which test is used to spot replicants?	Voight-Kampff	Turing	Rorschach	Kobayashi Maru
+pop_fictional_los_angeles	Hard	In which fictional Los Angeles skyscraper does John McClane fight terrorists?	Nakatomi Plaza	Gennero Tower	Oscorp Tower	Wayne Tower
 lit_wings	Expert	Which film won the very first Academy Award for Best Picture?	Wings	Sunrise	The Jazz Singer	Metropolis
 pop_obywatel_kane	Expert	Which word is whispered at the very start of 'Citizen Kane'?	Rosebud	Mother	Xanadu	Charles
 pop_spirited_away	Expert	Which was the first non-English-language film to win the Oscar for Best Animated Feature?	Spirited Away	Persepolis	Akira	Princess Mononoke
@@ -1307,3 +1314,6 @@ pop_barbie_modelled_lilli	Expert	Barbie was modelled on Lilli, a doll based on a
 pop_finish_level_256	Expert	Why can no one finish level 256 of the original 'Pac-Man' arcade game?	A bug scrambles half the maze	The ghosts become invincible	The maze has no exit gate	The game wipes the high score
 pop_feature_street_fighter	Expert	Which feature of 'Street Fighter II' began as an unintended glitch that the designers decided to keep?	Combos	Special moves	Throws	Character select
 pop_theme_mission_impossible	Expert	The theme of 'Mission: Impossible' is famous for which unusual time signature?	5/4	3/4	6/8	4/4
+pop_kubrick_shining_room	Expert	In Kubrick's 'The Shining', which room number is forbidden?	237	217	101	1408
+pop_pulp_fiction_restaurant	Expert	In 'Pulp Fiction', what is the name of the restaurant decorated like the 1950s?	Jack Rabbit Slim's	Big Kahuna Burger	Monk's Diner	Al's Diner
+pop_fbi_agent_investigates	Expert	Which FBI agent investigates the murder of Laura Palmer?	Dale Cooper	Fox Mulder	Clarice Starling	Will Graham
