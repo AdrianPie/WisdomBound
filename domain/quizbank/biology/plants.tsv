@@ -1,0 +1,152 @@
+# Plants & Fungi: plants, trees, flowers, fungi, crops
+#
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+bio3_roslina_oddycha	Easy	What does a plant use to exchange gases?	Stomata in its leaves	Lungs	Gills	Roots only
+wld_fotosynteza_gaz	Easy	Which gas do plants take in to carry out photosynthesis?	Carbon dioxide	Oxygen	Nitrogen	Hydrogen
+bio_zoledz	Easy	Which tree grows acorns?	The oak	The beech	The chestnut	The maple
+bioy_sloje	Easy	How can you tell the age of a tree that has been cut down?	By counting its rings	By measuring its height	By its bark colour	By counting its branches
+bio_bees_carry_flower	Easy	What do bees carry from flower to flower, helping plants make seeds?	Pollen	Nectar	Honey	Wax
+bio_tree_pink_spring	Easy	Which tree's pink spring blossom is celebrated all over Japan with 'hanami' picnics?	The cherry	The magnolia	The almond	The apple
+bio_plant_national_symbol	Easy	Which plant is a national symbol of Ireland?	The shamrock	The thistle	The rose	The daffodil
+bio_flower_classic_symbol	Easy	Which flower is the classic symbol of romantic love?	The red rose	The white lily	The yellow tulip	The daisy
+bio_tree_winged_seeds	Easy	Which tree's winged seeds spin down like little helicopters?	Maple	Oak	Pine	Birch
+bio_wine_corks_made	Easy	Wine corks are made from the bark of which tree?	Cork oak	Birch	Pine	Beech
+bio_carnivorous_plant_snaps	Easy	Which carnivorous plant snaps its leaves shut on insects?	Venus flytrap	Pitcher plant	Sundew	Bladderwort
+bio_prized_fungi_pigs	Easy	Which prized fungi do pigs and dogs sniff out underground?	Truffles	Morels	Chanterelles	Porcini
+bio_flower_young_heads	Easy	Which flower's young heads turn to follow the Sun across the sky?	Sunflower	Daisy	Tulip	Marigold
+bio_common_weed_spreads	Easy	Which common weed spreads its seeds on tiny white 'parachutes'?	Dandelion	Nettle	Clover	Ivy
+bio_fluffy_fibres_plant	Easy	The fluffy fibres of which plant grow around its seeds and end up in your T-shirt?	Cotton	Flax	Hemp	Jute
+bio_bonsai	Easy	What is a bonsai?	A tree kept tiny by pruning	A naturally dwarf tree species	A Japanese flowering shrub	A tree that grows on rocks
+bio_houseplant_windowsill_slowly	Easy	A houseplant on a windowsill slowly leans in which direction?	Towards the window	Away from the window	Towards the floor	Towards the radiator
+bio_dried_flowers_daisy	Easy	The dried flowers of which daisy-like plant make a classic calming herbal tea?	Chamomile	Sunflower	Marigold	Dandelion
+bio_purple_flowered_herb	Easy	Which purple-flowered herb, grown in great fields in Provence, is famous for its calming scent?	Lavender	Rosemary	Thyme	Sage
+bio_spiky_leaved_plant	Easy	Which spiky-leaved plant with bright red berries is a classic Christmas decoration?	Holly	Ivy	Mistletoe	Laurel
+bio_spiky_succulent_plant	Easy	Which spiky succulent plant's gel is a popular home remedy for sunburn?	Aloe vera	Agave	Prickly pear	Yucca
+bio_crop_regularly_wins	Easy	Which crop regularly wins giant-growing contests with specimens weighing over a tonne?	The pumpkin	The potato	The cabbage	The carrot
+bio_fruit_float_across	Easy	Which fruit can float across an ocean and still sprout on a faraway beach?	The coconut	The mango	The banana	The pineapple
+bio_chlorofil	Easy	Which pigment gives plants their green color?	Chlorophyll	Carotene	Melanin	Hemoglobin
+bio_trees_lose_leaves	Easy	What are trees that lose their leaves in autumn called?	Deciduous	Evergreen	Coniferous	Perennial
+bio_opium_morphine_come	Easy	Opium and morphine come from which flower?	The poppy	The lotus	The foxglove	The tulip
+bio_len	Medium	Linen is woven from the fibres of which plant?	Flax	Cotton	Hemp	Jute
+biox_bambus_trawa	Medium	Bamboo is actually a giant kind of what?	Grass	Tree	Fern	Palm
+biox_baobab	Medium	Which African tree can store thousands of litres of water in its huge trunk?	The baobab	The acacia	The mahogany	The ebony
+bio_prickly_plant_national	Medium	Which prickly plant is the national emblem of Scotland?	The thistle	The shamrock	The heather	The gorse
+bio_tree_produces_shiny	Medium	Which tree produces the shiny 'conkers' children play with?	Horse chestnut	Sweet chestnut	Oak	Beech
+bio_yellow_flower_national	Medium	Which yellow flower is a national emblem of Wales?	Daffodil	Tulip	Primrose	Buttercup
+bio_natural_rubber_starts	Medium	Natural rubber starts as which milky sap tapped from trees?	Latex	Resin	Amber	Gum arabic
+bio_plants_look_green	Medium	Plants look green because their main leaf pigment does what with green light?	Reflects most of it	Absorbs most of it	Turns it into heat	Stores it for the night
+bio_nickname_giant_titan	Medium	Which nickname did the giant titan arum earn for its smell of rotting meat?	The corpse flower	The ghost orchid	The vampire lily	The skull bloom
+bio_vegetables_botanically_root	Medium	Which of these vegetables is botanically a root?	The carrot	The potato	The onion	Ginger
+bio_peanut_pods_ripen	Medium	Where do peanut pods ripen?	Underground	On tall bushes	On climbing vines	High in trees
+bio_makes_stinging_nettles	Medium	What makes stinging nettles sting?	Tiny hairs that inject irritants	Sharp hidden thorns	An acidic sticky sap	Pollen that burns the skin
+bio_mushroom_causes_deaths	Medium	Which mushroom causes most deaths from mushroom poisoning worldwide?	The death cap	The fly agaric	The chanterelle	The porcini
+bio_red_mushroom_white	Medium	Which red mushroom with white spots appears in countless fairy tales?	The fly agaric	The death cap	The chanterelle	The puffball
+bio_tree_often_living	Medium	Which tree is often called a 'living fossil' because it has barely changed since the age of the dinosaurs?	The ginkgo	The oak	The baobab	The birch
+bio_eyes_potato_actually	Medium	The 'eyes' on a potato are actually what?	Buds that can grow new shoots	Old roots that have dried up	Seeds waiting to sprout	Bruises from harvesting
+bio_tree_cross_section	Medium	In a tree's cross-section, what does an unusually wide ring usually mean?	A good growing year	A very cold winter	A forest fire	An insect attack
+bio_bambus	Medium	Which plant can grow almost a metre in a single day?	Bamboo	Ivy	Sunflower	Oak
+bio_ferns_spread_using	Medium	Ferns spread using what instead of seeds?	Spores	Bulbs	Pollen cones	Berries
+bio_rhyme_leaves_three	Medium	The rhyme 'leaves of three, let it be' warns hikers about which plant?	Poison ivy	Stinging nettle	Clover	Holly
+bio_fruit_develops_part	Medium	A fruit develops from which part of a plant?	The flower	The root	The stem	The leaf
+bio_potatoes_close_relatives	Medium	Potatoes are close relatives of which plant?	Tomato	Sweet potato	Yam	Turnip
+dpt_bio_karotenoidy	Medium	Which pigments turn leaves yellow once chlorophyll fades?	Carotenoids	Anthocyanins	Phycocyanins	Melanins
+biox_mimoza	Medium	Which plant folds up its leaves the moment you touch it?	The sensitive plant	The fern	The aloe vera	The spider plant
+biox_dzbanecznik	Medium	How does a pitcher plant catch insects?	Insects slip into digestive juice	It snaps shut like a jaw	It shoots sticky threads	It stings them with hairs
+bio_rice_wheat_maize	Medium	Rice, wheat, maize and sugar cane all belong to which plant family?	Grasses	Legumes	Lilies	Palms
+bio_squirting_cucumber_spread	Medium	How does the squirting cucumber spread its seeds?	It shoots them out in a jet of juice	Birds eat its fruit and drop them	They float away down rivers	The wind carries them on hairs
+bio_sap_giant_hogweed	Medium	Why is the sap of giant hogweed so dangerous?	It makes skin blister in sunlight	It is a deadly poison to swallow	It is strongly radioactive	It causes instant paralysis
+biox_drzewa_siec	Medium	Trees in a forest can share nutrients through underground networks of what?	Fungi	Earthworms	Ant tunnels	Rainwater channels
+bio_rafflesia	Hard	Which plant produces the largest single flower in the world?	Rafflesia	The titan arum	The giant water lily	The sunflower
+bio_truskawka_nasiona	Hard	Botanically, what are the little 'seeds' on the outside of a strawberry?	Tiny fruits	Pollen grains	Hairs	Buds
+bio_trzcina	Hard	Which crop is grown in the greatest quantity worldwide?	Sugar cane	Wheat	Rice	Maize
+biox_ananas	Hard	Roughly how long does a pineapple plant take to grow a single fruit?	About two years	About two weeks	About two months	About ten years
+biox_banan_ziolo	Hard	The banana plant is botanically what, rather than a tree?	A giant herb	A grass	A vine	A cactus
+biox_sekwoja	Hard	Which is the largest tree on Earth by volume?	The giant sequoia	The baobab	The kauri	The Douglas fir
+bio_daisy_comes_old	Hard	The name of the daisy comes from an old phrase meaning what?	Day's eye	Sun's child	Field star	Little pearl
+bio_deadly_nightshade_other	Hard	Deadly nightshade's other name, 'belladonna', comes from women using it to do what?	Widen their pupils	Redden their lips	Whiten their skin	Darken their hair
+bio_deadly_poison_made	Hard	Which deadly poison is made from the seeds of the castor oil plant?	Ricin	Curare	Strychnine	Arsenic
+bio_dry_wood_tree	Hard	Most of the dry wood of a tree is built from what?	Carbon dioxide from the air	Minerals from the soil	Water drawn up by the roots	Nitrogen from the soil
+bio_apples_cherries_strawberries	Hard	Apples, cherries and strawberries all belong to which plant family?	The rose family	The citrus family	The laurel family	The daisy family
+bio_lichen_partnership_between	Hard	A lichen is a partnership between a fungus and what?	Algae or cyanobacteria	Mosses or liverworts	Ferns or horsetails	Tree roots
+bio_lettuce_belongs_same	Hard	Lettuce belongs to the same plant family as which flower?	The daisy	The rose	The tulip	The lily
+bio_some_pine_cones	Hard	Some pine cones stay sealed with resin until what opens them?	The heat of a forest fire	Heavy spring rain	A hard frost	Birds pecking at them
+bio_rubber_tree_now	Hard	The rubber tree, now grown mostly in Southeast Asia, is native to which region?	The Amazon	Central Africa	India	Madagascar
+bio_doesn_venus_flytrap	Hard	Why doesn't a Venus flytrap snap shut when a single raindrop hits a trigger hair?	It needs two touches within about 20 seconds	Raindrops are too light to bend the hairs	It can taste that water is not food	Its traps only work at night
+bio_bamboo_species_flower	Hard	Many bamboo species flower only once every few decades. What happens then?	The plants all flower together, then die	They turn woody and become true trees	They lose all their leaves for a year	They double in height within a month
+bio_australia_gympie_gympie	Hard	Australia's gympie-gympie tree is feared for what?	A sting that can hurt for months	Fruit that explodes when touched	Sap that blinds on contact	Pollen that causes a deadly fever
+bio_prized_flame_streaked	Hard	The prized flame-streaked tulips of the Dutch 'tulip mania' got their stripes from what?	A virus	Grafting two bulbs together	Painting the bulbs	Very cold winters
+bio_ophrys_orchids_such	Hard	Many Ophrys orchids, such as the bee orchid, get pollinated by tricking which visitors?	Male bees trying to mate with the flower	Hungry bees looking for nectar	Flies hunting for rotting meat	Moths searching for a place to rest
+bio_invasive_plant_feared	Hard	Which invasive plant is so feared in Britain that finding it in a garden can block a mortgage?	Japanese knotweed	Giant hogweed	Himalayan balsam	Rhododendron
+bio_raindrops_roll_off	Hard	Why do raindrops roll off lotus leaves, carrying dirt away with them?	Tiny waxy bumps repel the water	The leaves keep vibrating	The leaves are coated in oil	The leaves stay warm
+bio_cashew_nut_grows	Hard	The cashew nut grows hanging from the bottom of what?	A juicy 'cashew apple'	A hard woody pod	A spiky green husk	A cluster of flowers
+bio_water_lily_floating	Hard	Which water lily's floating leaves, up to about 3 m wide, can carry the weight of a small child?	The Victoria water lily	The sacred lotus	The white water lily	The water hyacinth
+bio_tree_bears_largest	Hard	Which tree bears the largest fruit of any tree, sometimes weighing over 40 kg?	The jackfruit	The durian	The breadfruit	The coconut palm
+bio_agave_nicknamed_century	Hard	Why is the agave nicknamed the 'century plant'?	It flowers once after decades, then dies	It lives for at least a hundred years	It was named in the 19th century	It needs a hundred years to sprout
+bio_sekwoja	Hard	Which is the tallest species of tree on Earth?	The coast redwood	The giant sequoia	The mountain ash	The Douglas fir
+biox_awokado	Hard	Botanically, an avocado is a kind of what?	Berry	Nut	Vegetable	Legume
+bioy_kokos	Hard	Botanically, what is a coconut?	A drupe (stone fruit)	A true nut	A berry	A seed pod
+bioy_kaktus_kolce	Hard	What are a cactus's spines, botanically?	Modified leaves	Hardened hairs	Tiny branches	Dried flowers
+bioy_ziemniak_trujacy	Hard	Which part of a potato plant is poisonous?	The leaves and green berries	The white flesh of the tuber	Only the roots	No part at all
+bio_flower_national_flower	Hard	Which flower is the national flower of India?	The lotus	The rose	The jasmine	The marigold
+bio_wood_tree_used	Hard	The wood of which tree is used for cricket bats?	Willow	Ash	Oak	Maple
+bio_cauliflower_kale_kohlrabi	Hard	Cauliflower, kale, kohlrabi and Brussels sprouts were all bred from which wild plant?	Wild cabbage	Wild mustard	Wild radish	Wild lettuce
+bio_mistletoe_live_trees	Hard	How does mistletoe live on the trees it grows on?	As a parasite tapping their water	As a climber using them for support	As a fungus living in the bark	As a partner feeding them sugar
+bio_botanically_potato	Hard	Botanically, what is a potato?	A swollen underground stem	A swollen storage root	A seed pod	A bulb of leaves
+bio_layers_onion_actually	Hard	The layers of an onion are actually what?	Swollen leaf bases	Rings of root	Rings of stem	Seed coats
+bio_roughly_rare_four	Hard	Roughly how rare is a four-leaf clover?	About 1 in 10,000	About 1 in 20	About 1 in 300	About 1 in a million
+bio_sundew_catch_insects	Hard	How does a sundew catch insects?	Sticky droplets on its hairs	A leaf that snaps shut	A cup full of rainwater	Thorns that spear them
+bio_insect_must_crawl	Hard	Which insect must crawl inside a wild fig to pollinate it, often dying there?	A tiny wasp	A tiny moth	A tiny beetle	A tiny ant
+bio_botanically_pineapple_made	Hard	Botanically, a pineapple is made of what?	Many fruits fused together	A single giant berry	A swollen root	One big seed pod
+bio_bright_red_petals	Hard	The bright red 'petals' of a poinsettia are actually what?	Coloured leaves	True petals	Seed pods	Dyed stems
+bio_big_flower_sunflower	Hard	The big 'flower' of a sunflower is really what?	Many tiny flowers packed together	One single giant flower	A ring of coloured leaves	A swollen seed pod
+bio_spring_flower_bulbs	Hard	Which spring flower's bulbs are sometimes mistaken for onions, with poisonous results?	The daffodil	The tulip	The crocus	The snowdrop
+bio_farmers_plant_clover	Hard	Why do farmers plant clover, beans or peas to enrich tired soil?	Bacteria in their roots add nitrogen	Their leaves rot into pure carbon	Their roots break up rocks into sand	They scare away soil-eating worms
+bio_brussels_sprouts_actually	Hard	Brussels sprouts are actually what part of the plant?	Buds growing along a tall stem	Swollen roots under the soil	Unripe seed pods	Flowers that never opened
+bio_makes_mexican_jumping	Hard	What makes a Mexican 'jumping bean' jump?	A moth caterpillar wriggling inside	Water inside it boiling in the sun	A spring-like fibre in its shell	Gas escaping from its rotting seed
+bio_tree_peeling_bark	Hard	Which tree's peeling bark reveals bright stripes of green, orange, blue and purple?	The rainbow eucalyptus	The paper birch	The dragon tree	The cork oak
+bio_hydrangeas_often_flower	Hard	Hydrangeas often flower blue rather than pink in which kind of soil?	Acidic soil	Chalky soil	Alkaline soil	Salty soil
+bio_seedless_grapes_seeds	Hard	Seedless grapes have no seeds, so how are new vines usually grown?	From cuttings of other vines	From seeds of wild grapes	From the skins of ripe grapes	From pollen spread by bees
+bio_mushroom_pick_fruiting	Hard	The mushroom you pick is only the fruiting body. Where is most of the fungus?	In threads spread through the soil	Packed inside the stalk	In spores drifting in the air	Folded inside the cap's gills
+bio_cacao_pods_source	Hard	Where do cacao pods, the source of chocolate, grow on the tree?	Straight from the trunk	At the branch tips	Underground	Hanging from vines
+bio_matuzalem	Hard	Which kind of tree includes some of the oldest known individual trees, nearly 5,000 years old?	The bristlecone pine	The giant sequoia	The English yew	The baobab
+bio_kofeina_pestycyd	Hard	Why do coffee plants produce caffeine in the first place?	To poison insects that eat them	To store energy for winter	To survive night frosts	To attract birds to the seeds
+bioy_zapach_trawy	Hard	What is the smell of freshly cut grass, really?	A chemical distress signal	Chlorophyll evaporating	Soil bacteria waking up	Pollen bursting open
+bio_darwin_saw_madagascar	Hard	Darwin saw a Madagascar orchid with a nectar spur about 30 cm long and predicted what?	A moth with a tongue as long	A bird with a curved beak as long	A bat that licks deep nectar	A bee that bites into the spur
+bio_2023_study_recorded	Hard	A 2023 study recorded tomato and tobacco plants doing what when they were short of water or cut?	Making ultrasonic popping sounds	Sweating out drops of sugar	Turning their leaves blue	Heating up by ten degrees
+biox_grzyb_oregon	Expert	The largest known living organism by area is a fungus growing in which US state?	Oregon	Alaska	Texas	Florida
+bioy_zielone_pomarancze	Expert	Why are many ripe oranges in the tropics still green?	Warm nights keep their chlorophyll	They are a different species	They are picked too early	The soil lacks iron
+bio_cancer_drug_taxol	Expert	The cancer drug Taxol was first found in the bark of which tree?	The Pacific yew	The white willow	The cinchona tree	The silver birch
+bio_vanilla_grown_outside	Expert	Vanilla grown outside Mexico was useless until a 12-year-old enslaved boy showed, in 1841, how to do what?	Pollinate the flowers by hand	Ferment the pods in salt	Grow the vines from cuttings	Cure the pods in the sun
+bio_welwitschia_desert_plant	Expert	Welwitschia, a desert plant of Namibia, grows how many leaves in its whole life?	Just two	Several hundred	None at all	A new pair every year
+bio_carnivorous_plant_fastest	Expert	Which carnivorous plant has one of the fastest traps in nature, sucking in tiny prey underwater?	The bladderwort	The sundew	The pitcher plant	The butterwort
+bio_chicle_original_base	Expert	Chicle, the original base of chewing gum, is the sap of which tree?	The sapodilla	The rubber tree	The maple	The acacia
+bio_should_never_shelter	Expert	Why should you never shelter under a manchineel tree in the rain?	Its sap burns skin and washes down onto you	Its heavy fruit falls when it gets wet	It attracts lightning more than other trees	Stinging ants pour out of its bark
+bio_bread_wheat_carries	Expert	Bread wheat carries how many full sets of chromosomes, inherited from three wild grasses?	Six	Two	Four	Eight
+bio_tree_once_quarter	Expert	Which tree, once about a quarter of all trees in Appalachian forests, was nearly wiped out by a blight in the early 1900s?	The American chestnut	The sugar maple	The white oak	The black walnut
+bio_1870s_1880s_leaf	Expert	In the 1870s and 1880s a leaf fungus wiped out the coffee farms of which island, which turned to growing tea instead?	Ceylon	Java	Jamaica	Cuba
+bio_cacao_flowers_start	Expert	Cacao flowers, the start of all chocolate, are pollinated mainly by what?	Tiny midges	Honeybees	Hummingbirds	Fruit bats
+bio_humans_avocado_seeds	Expert	Before humans, avocado seeds are thought to have been spread by which animals?	Giant ground sloths	Fruit bats	Toucans	Spider monkeys
+bio_paris_japonica_modest	Expert	Paris japonica, a modest Japanese flower, holds which record?	One of the largest known genomes	The smallest seeds of any plant	The fastest-growing stem known	The longest-lived single flower
+bio_bunchberry_dogwood_feat	Expert	The bunchberry dogwood is famous for which feat?	Firing out its pollen in under a millisecond	Opening its flowers only at midnight	Growing a metre in a single week	Changing flower colour every hour
+bio_some_giant_pitcher	Expert	Some giant pitcher plants in Borneo get much of their food from what unusual source?	Tree shrew droppings	Fallen bird eggs	Washed-up fish	Volcanic ash
+bio_white_ghost_plant	Expert	How does the white 'ghost plant', with no chlorophyll at all, get its food?	It taps fungi linked to tree roots	It eats tiny insects	It photosynthesises with red pigment	It absorbs minerals from rocks
+bio_parasitic_dodder_vine	Expert	How does the parasitic dodder vine find a host plant to attack?	By sniffing out its scent	By sensing its body heat	By following its sounds	By detecting magnetism
+bio_giant_andean_plant	Expert	The giant Andean plant Puya raimondii flowers just once, after about how long?	About 80 years	About 8 years	About 2 years	About 800 years
+bio_pando_heaviest_living	Expert	Pando, one of the heaviest living things, is a single clone of which tree?	Quaking aspen	Coast redwood	Banyan	Silver birch
+bio_mucholowka	Expert	Where does the Venus flytrap grow in the wild?	The Carolinas in the USA	The Amazon rainforest	Borneo	Madagascar
+bio_scientists_grew_date	Expert	Scientists grew a date palm, nicknamed Methuselah, from a seed roughly how old?	About 2,000 years	About 200 years	About 20,000 years	About 500 years
+bio_plant_warms_itself	Expert	Which plant warms itself enough to melt its way up through snow?	Skunk cabbage	Snowdrop	Edelweiss	Arctic poppy
+bio_palm_produces_largest	Expert	Which palm produces the largest seed of any plant?	The coco de mer	The coconut palm	The date palm	The oil palm
+bio_sweet_potato_close	Expert	The sweet potato is a close relative of which garden flower?	The morning glory	The tulip	The rose	The sunflower
+bio_each_strand_silk	Expert	Each strand of silk on an ear of maize leads to what?	A single kernel	The tassel at the top	A hidden leaf	A pollen sac
+bio_orchid_seeds_fine	Expert	Orchid seeds are as fine as dust and carry almost no food. What do they need to sprout in the wild?	Help from a partner fungus	The heat of a forest fire	A trip through a bird's gut	Months of hard frost
+bio_hops_give_beer	Expert	Hops, the bitter flowers used in brewing, belong to the same small plant family as what?	Cannabis	Mint	Coffee	Ivy
+bio_tumbleweed_icon_wild	Expert	The tumbleweed, icon of Wild West films, originally came to America from where?	The steppes of Eurasia	The deserts of Mexico	The Australian outback	The Sahara
+bio_kudzu_vine_ate	Expert	Kudzu, 'the vine that ate the South' of the USA, was brought there from which country?	Japan	Brazil	India	Australia
+bio_date_palms_plantations	Expert	How are date palms on plantations usually pollinated?	By hand	By bats	By bees	By birds
+bio_south_african_succulents	Expert	Which South African succulents are nicknamed 'living stones' for their pebble-like disguise?	Lithops	Aloes	Agaves	Sedums
+bio_cashew_pistachio_close	Expert	The cashew and the pistachio are close relatives of which fruit?	The mango	The peach	The fig	The olive
+bio_world_smallest_flowering_2	Expert	The world's smallest flowering plant, Wolffia, is a kind of what?	Duckweed	Moss	Clover	Orchid
+bio_plant_hormone_piling	Expert	Which plant hormone, piling up on a stem's shady side, makes it bend towards light?	Auxin	Ethylene	Abscisic acid	Gibberellin
+bio_red_resin_dragon	Expert	The red resin called 'dragon's blood' comes from a tree found mainly on which island?	Socotra	Madagascar	Borneo	Tasmania
+bio_wwii_soviet_union	Expert	During WWII, the Soviet Union farmed which common weed for rubber?	Dandelion	Nettle	Clover	Thistle

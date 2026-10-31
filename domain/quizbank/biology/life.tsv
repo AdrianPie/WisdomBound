@@ -1,0 +1,85 @@
+# Cells, Genes & Evolution: cells, DNA, genetics, evolution, microbes, famous biologists
+#
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+bio3_owad_nogi	Easy	How many legs does an insect have?	Six	Four	Eight	Ten
+wld_mitochondria	Easy	Which part of a cell is often called its 'powerhouse'?	The mitochondrion	The nucleus	The ribosome	The cell wall
+bio_homo_sapiens	Easy	What is the scientific name for modern humans?	Homo sapiens	Homo erectus	Homo habilis	Homo neanderthalensis
+bio_owca_dolly	Easy	What kind of animal was Dolly, the first mammal cloned from an adult cell?	A sheep	A cow	A goat	A mouse
+bio_identical_twins_form	Easy	How do identical twins form?	One fertilised egg splits in two	Two eggs are fertilised at once	Two eggs fuse into one	One egg grows a double nucleus
+bio_pair_sex_chromosomes	Easy	Which pair of sex chromosomes does a typical man have?	XY	XX	YY	XO
+bio_darwin	Easy	Who formulated the theory of evolution by natural selection?	Charles Darwin	Gregor Mendel	Louis Pasteur	Carl Linnaeus
+bio3_las_gatunki	Easy	Which land habitat holds the greatest number of species?	Tropical rainforest	Boreal forest (taiga)	Temperate grassland	Tundra
+bio_chromosomy	Medium	How many chromosomes does a healthy human cell have?	46	23	48	44
+bio2_dna_zasady	Medium	How many different nitrogenous bases occur in DNA?	Four	Two	Five	Twenty
+bio2_wirus_zycie	Medium	Why are viruses not considered fully-fledged living organisms?	They can't reproduce without a host cell	They have no genetic material	They can't mutate	They don't respond to temperature
+bio_dna_ludzie	Medium	Roughly what share of their DNA do any two people have in common?	About 99.9%	About 50%	About 75%	About 90%
+bio_neandertal	Medium	Which extinct human species left traces in the DNA of many people alive today?	Neanderthals	Homo erectus	Australopithecus	Homo habilis
+bio_roughly_share_dna	Medium	Roughly what share of our DNA do we share with chimpanzees?	About 98%	About 75%	About 50%	About 90%
+bio_henry_viii_blamed	Medium	Henry VIII blamed his wives for having no sons. What actually decides a baby's sex?	The father's sperm	The mother's egg	The mother's diet	The womb's temperature
+bio_chromosomes_human_egg	Medium	How many chromosomes does a human egg or sperm cell carry?	23	46	12	92
+bio_finches_helped_darwin	Medium	Which finches helped Darwin's ideas about evolution?	Galapagos finches	Canary finches	Zebra finches	Gouldian finches
+bio_group_insects_described	Medium	Which group of insects has the most described species?	Beetles	Ants	Butterflies	Flies
+bio_british_primatologist_studied	Medium	Which British primatologist studied wild chimpanzees in Tanzania from 1960?	Jane Goodall	Dian Fossey	Birute Galdikas	Cynthia Moss
+bio_bread_rises_because	Medium	Bread rises because of gas made by yeast. What kind of living thing is yeast?	A single-celled fungus	A bacterium	A tiny plant	A tiny animal
+bio_mejoza	Medium	What is the cell division that produces sex cells called?	Meiosis	Mitosis	Cytokinesis	Apoptosis
+bio_mendel	Medium	Who is considered the father of genetics for his research on peas?	Gregor Mendel	Charles Darwin	James Watson	Francis Crick
+wh_dna_struktura	Medium	Which scientists described the DNA double helix in 1953?	Watson and Crick	Mendel and Morgan	Pasteur and Koch	Fleming and Florey
+bio_scientist_gave_plants	Medium	Which scientist gave plants and animals their two-part Latin names?	Carl Linnaeus	Charles Darwin	Gregor Mendel	Louis Pasteur
+bio2_kodon	Hard	How many nucleotides make up one codon?	Three	Two	Four	Six
+trv_dna_dlugosc	Hard	If you stretched out the DNA from a single human cell, roughly how long would it be?	About 2 metres	About 2 millimetres	About 2 centimetres	About 200 metres
+mst_bakterie_liczba	Hard	Roughly how do bacterial cells in your body compare with your own cells?	Comparable in number	A thousand times fewer	A million times more	Only a few thousand total
+cur_banan_geny	Hard	Humans share roughly what share of their genes with a banana?	About 60%	About 5%	About 25%	About 95%
+bio_komorki_liczba	Hard	Roughly how many cells make up a human body?	About 30 trillion	About 30 million	About 30 billion	About 30 quadrillion
+bio_franklin	Hard	Whose X-ray image 'Photo 51' was key to working out the structure of DNA?	Rosalind Franklin's	Marie Curie's	Barbara McClintock's	Dorothy Hodgkin's
+bio_plankton_tlen	Hard	Roughly half of the oxygen we breathe is made where?	By ocean plankton	In rainforests	On grasslands	By farm crops
+bio_roughly_share_human	Hard	Roughly what share of human DNA actually codes for proteins?	About 1-2%	About 25%	About 50%	About 90%
+bio_carrying_copy_sickle	Hard	Carrying one copy of the sickle-cell gene helps protect against which disease?	Malaria	Cholera	Tuberculosis	Yellow fever
+bio_more_chromosomes_human	Hard	Which of these has more chromosomes than a human?	A potato	A fruit fly	A garden pea	A rice plant
+bio_naturalist_hit_upon	Hard	Which naturalist hit upon evolution by natural selection on his own, while sick with fever in the Malay islands?	Alfred Russel Wallace	Thomas Henry Huxley	Jean-Baptiste Lamarck	Joseph Dalton Hooker
+bio_roughly_share_all	Hard	Roughly what share of all life on Earth, measured by mass, is plants?	About 80%	About 10%	About 40%	About 25%
+bio_embryo_webbing_between	Hard	In an embryo, the webbing between the growing fingers disappears because its cells do what?	Die off on purpose	Turn into bone	Move into the palm	Become fingernails
+bio_two_scientists_shared	Hard	Which two scientists shared the 2020 Nobel Prize in Chemistry for the CRISPR gene-editing tool?	Doudna and Charpentier	Watson and Crick	Banting and Best	Curie and Joliot
+bio_french_naturalist_argued	Hard	Which French naturalist argued that giraffes got long necks by stretching and passing that on?	Jean-Baptiste Lamarck	Georges Cuvier	Comte de Buffon	Louis Pasteur
+bio_besides_nucleus_mitochondria	Hard	Besides the nucleus and mitochondria, which part of a plant cell has its own DNA?	The chloroplast	The cell wall	The vacuole	The ribosome
+bio_old_idea_louis	Hard	Which old idea did Louis Pasteur's swan-neck flask experiment help to disprove?	Spontaneous generation	Germ theory	Blood circulation	Natural selection
+biox_grzyby_zwierzeta	Hard	Mushrooms are more closely related to which group of living things?	Animals	Plants	Bacteria	Algae
+bio_american_zoologist_studied	Hard	Which American zoologist studied mountain gorillas in Rwanda?	Dian Fossey	Jane Goodall	Birute Galdikas	Rachel Carson
+bio_marine_biologist_1962	Hard	Which marine biologist's 1962 book 'Silent Spring' warned about pesticides?	Rachel Carson	Sylvia Earle	Jane Goodall	Eugenie Clark
+bio_mrna	Hard	Which type of RNA carries genetic information from the nucleus to the ribosome?	mRNA	tRNA	rRNA	siRNA
+bio_atp	Hard	What is the compound that's the cell's main energy carrier called?	ATP	DNA	NADH	Glucose
+bio2_telomer	Hard	What protects chromosome ends from shortening?	Telomeres	Centromeres	Histones	Introns
+bio2_krzyzowka_mendel	Hard	What phenotype ratio does a cross of two heterozygotes give in single-gene inheritance?	3:1	1:1	9:3:3:1	2:2
+bio2_stromatolit	Hard	Which organisms are credited with putting oxygen into Earth's atmosphere?	Cyanobacteria	Fungi	Methanogenic archaea	Diatoms
+bio3_crispr_pochodzenie	Hard	Where does the CRISPR-Cas system used for gene editing today originally come from?	Bacteria's natural defense mechanism against viruses	A protein designed from scratch in a laboratory	The chloroplasts found inside plant cells	A protein borrowed from the HIV virus
+wld_dna_zasady	Hard	Which base is found in RNA but not in DNA?	Uracil	Thymine	Adenine	Guanine
+bio_mitochondria_matka	Hard	Which part of your DNA is inherited only from your mother?	Mitochondrial DNA	Nuclear DNA	The Y chromosome	Ribosomal RNA
+bio_hela	Hard	Which famous line of human cells, taken in 1951, still grows in labs today?	HeLa cells	CHO cells	Vero cells	Jurkat cells
+bio_leeuwenhoek	Hard	Who was the first person to see bacteria, through his own home-made microscopes?	Antonie van Leeuwenhoek	Robert Hooke	Louis Pasteur	Robert Koch
+bio_gene_shapes_growing	Hard	Which gene that shapes the growing embryo is named after a video game character?	Sonic hedgehog	Pac-Man	Super Mario	Donkey Kong
+bio_ektoderma	Expert	Which germ layer does the nervous system develop from?	Ectoderm	Mesoderm	Endoderm	Notochord
+bio3_bioluminescencja_mechanizm	Expert	What accounts for bioluminescence in most organisms?	A luciferase reaction with luciferin	Reflection of moonlight	Fluorescence of photosynthetic proteins	Electric discharges
+dpt_bio_hayflick	Expert	What does the Hayflick limit describe?	How often a normal cell can divide	How long an enzyme stays active	How fast a nerve signal travels	How much oxygen blood carries
+dpt_bio_endosymbioza	Expert	What does endosymbiotic theory explain?	Where mitochondria came from	How viruses infect bacteria	How one species splits in two	How enzymes settled on shape
+dpt_bio_hox	Expert	What do Hox genes set up in an embryo?	The body plan along its main axis	The number of chromosomes in it	The rate of cell respiration in it	The colour of its first tissues
+bio_geny_liczba	Expert	Roughly how many protein-coding genes does a human have?	About 20,000	About 2,000	About 200,000	About 2 million
+bio_landsteiner	Expert	Who discovered the ABO blood groups in 1901?	Karl Landsteiner	Louis Pasteur	Robert Koch	William Harvey
+bio_heat_proof_enzyme	Expert	The heat-proof enzyme behind PCR tests was first found in a microbe from where?	Hot springs in Yellowstone	Deep-sea volcanic vents	Antarctic sea ice	The Dead Sea
+bio_crop_plant_barbara	Expert	In which crop plant did Barbara McClintock discover 'jumping genes'?	Maize	Wheat	Rice	Peas
+bio_2002_lydia_fairchild	Expert	In 2002 Lydia Fairchild was told DNA tests showed she was not her children's mother. Why?	She was a chimera with two sets of DNA	The lab had mixed up her samples	She had a rare form of blood cancer	Her babies were swapped at birth
+bio_tiny_worm_thousand	Expert	Which tiny worm, with only about a thousand body cells, was the first animal to have its whole genome read?	The worm C. elegans	The earthworm	The tapeworm	The leech
+bio_enzyme_used_plants	Expert	Which enzyme, used by plants to capture carbon, is thought to be the most abundant protein on Earth?	RuBisCO	Chlorophyll	Amylase	Catalase
+bio_scientist_studied_orangutans	Expert	Which scientist studied orangutans in Borneo, completing the 'Trimates'?	Birute Galdikas	Dian Fossey	Jane Goodall	Cynthia Moss
+bio_fruit_flies_lacking	Expert	Fruit flies lacking a gene named 'tinman', after the Wizard of Oz character, fail to grow what?	A heart	A brain	Eyes	Wings
+bio_solomon_islanders_naturally	Expert	Many Solomon Islanders have naturally blond hair. Where does it come from?	A local gene variant not found in Europeans	Genes from European sailors of the 1800s	Bleaching by sun and salt water	A diet very rich in fish
+bio_pacific_atoll_pingelap	Expert	On the Pacific atoll of Pingelap, roughly one in ten people are born with what?	Complete colour blindness	Six fingers on each hand	Naturally red hair	Two different eye colours
+bio_scientists_work_out	Expert	Scientists can work out when human cells were born using a trace that all living things picked up from what?	Nuclear bomb tests of the 1950s and 60s	The Chernobyl disaster of 1986	The flu pandemic of 1918	Leaded petrol of the 1970s
+bio_gene_essential_building	Expert	A gene essential for building the human placenta was originally borrowed from what?	An ancient virus	A gut bacterium	A Neanderthal ancestor	A parasitic worm
+bio_tibetans_thrive_high	Expert	Tibetans thrive at high altitude partly thanks to a gene variant inherited from which extinct humans?	Denisovans	Neanderthals	Homo erectus	Homo floresiensis
+bio_2010_experiment_slime	Expert	In a 2010 experiment, a slime mould growing between oat flakes recreated the rail network of which city?	Tokyo	London	Paris	New York
+bio_gene_traced_through	Expert	Which gene, traced through a London family with inherited speech problems, was hyped as 'the language gene'?	FOXP2	APOE	HOXA1	SRY
+bio_dutch_born_scientist	Expert	Which Dutch-born scientist showed in 1779 that plants 'restore' bad air only in sunlight?	Jan Ingenhousz	Antonie van Leeuwenhoek	Joseph Priestley	Jan Swammerdam
+bio_feature_human_face	Expert	Which feature of the human face is found in no other living ape, nor in Neanderthals?	A bony chin	A brow ridge	Eyelashes	Cheekbones
+bio_whether_person_wet	Expert	Whether a person has wet or dry earwax depends mostly on what?	A single gene	Their diet	The local climate	How often they wash
+bio_scientist_darwin_bulldog	Expert	Which scientist was called 'Darwin's bulldog' for defending evolution?	Thomas Huxley	Alfred Russel Wallace	Richard Owen	Herbert Spencer
+bio_measured_dna_letters	Expert	Measured in DNA letters, how does an onion's genome compare with a human's?	About five times longer	About a tenth as long	About half as long	Almost exactly the same
+bio_roughly_share_human_2	Expert	Roughly what share of the human genome is made of the remains of ancient viruses?	About 8%	About 0.08%	About 0.8%	About 80%

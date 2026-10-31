@@ -1,0 +1,127 @@
+# Brain & Senses: brain, senses, sleep, mind and psychology
+#
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+bio2_wzrok_narzad	Easy	Which part of the eye grows wider in the dark to let in more light?	The pupil	The cornea	The lens	The retina
+bio3_ucho_funkcja	Easy	Besides hearing, what is the ear responsible for?	Balance	Smell	Taste	Sight
+biox_sen_tercja	Easy	Roughly what share of their life does a person spend asleep?	About a third	About a tenth	About half	About two-thirds
+bio_coloured_part_eye	Easy	What is the coloured part of the eye called?	The iris	The pupil	The retina	The cornea
+bio_insomnia	Easy	What is insomnia?	Trouble sleeping	Fear of heights	Loss of memory	A skin rash
+bio_austrian_doctor_founded	Easy	Which Austrian doctor founded psychoanalysis?	Sigmund Freud	Carl Jung	Alfred Adler	Viktor Frankl
+bio_russian_scientist_trained	Easy	Which Russian scientist trained dogs to drool at a signal that meant food was coming?	Ivan Pavlov	Dmitri Mendeleev	Ivan Sechenov	Lev Vygotsky
+bio_blink	Easy	Why do we blink?	To keep the eyes moist and clean	To rest the eye muscles	To reset the brain's vision	To let the pupils cool down
+bio_roughly_sleep_health	Easy	Roughly how much sleep do health experts recommend for most adults each night?	7 to 9 hours	4 to 5 hours	10 to 12 hours	2 to 3 hours
+bio_endorphins_released_exercise	Easy	What are endorphins, released during exercise and laughter?	The body's natural painkillers	Proteins that build muscle	Cells that fight germs	Enzymes that digest fat
+bio_stop_noticing_smell	Easy	Why do you stop noticing the smell of your own home after a while?	Your brain tunes out constant smells	Dust slowly blocks your nose	Home smells fade within an hour	Your smell nerves get worn out
+bio_vertigo	Easy	What is vertigo?	A spinning kind of dizziness	A fear of tight spaces	Ringing in the ears	Night blindness
+bio_seasonal_affective_disorder	Easy	Seasonal affective disorder, the 'winter blues', is linked mainly to a lack of what?	Daylight	Vitamin C	Sleep	Iron
+bio_rorschach_test_people	Easy	In a Rorschach test, people describe what they see in what?	Inkblots	Clouds	Photos of faces	Abstract paintings
+bio_light_colour_given	Easy	Light of which colour, given off by phone screens, most strongly delays the release of the sleep hormone?	Blue	Red	Yellow	Orange
+wld_bio_smak_nos	Medium	Why does food taste bland when you have a blocked nose?	Most flavour comes from smell	The tongue swells up	Mucus coats the taste buds completely	Fever switches off taste
+bio_umami	Medium	Which fifth basic taste was named by a Japanese chemist in 1908?	Umami	Kokumi	Piquant	Astringent
+bio_wech_pamiec	Medium	Which sense is most strongly tied to memory and emotion?	Smell	Sight	Hearing	Touch
+bio_mozg_lod	Medium	An 'ice-cream headache' is triggered by cold on which part of the mouth?	The roof of the mouth	The tip of the tongue	The front teeth	The back of the throat
+bio_glos_nagranie	Medium	Why does your own voice sound strange on a recording?	You normally hear it through your skull too	Microphones raise its pitch	Your ears adapt to it over time	Recordings lose the echo of a room
+bio_siatkowka_slonce	Medium	Which part of the eye gets damaged by staring at the Sun?	The retina	The cornea	The iris	The lens
+bio_noworodek_wzrok	Medium	Which sense is the least developed in a newborn baby?	Sight	Hearing	Smell	Touch
+bio_oksytocyna	Medium	Which hormone is nicknamed the 'cuddle hormone'?	Oxytocin	Adrenaline	Cortisol	Melatonin
+bio_mozg_waga	Medium	Roughly how much does an adult human brain weigh?	About 1.4 kg	About 400 g	About 3 kg	About 5 kg
+biox_rem	Medium	In which stage of sleep do most vivid dreams happen?	REM sleep	Deep sleep	Light sleep	Just before waking
+biox_leworeczni	Medium	Roughly what share of people are left-handed?	About 10%	About 1%	About 30%	About 50%
+bioy_ziewanie_psy	Medium	Which of these animals has been shown to catch yawns from humans?	Dogs	Snakes	Goldfish	Tortoises
+bio_largest_part_human	Medium	What is the largest part of the human brain?	The cerebrum	The cerebellum	The brainstem	The thalamus
+bio_part_body_cochlea	Medium	In which part of the body is the cochlea?	The ear	The eye	The nose	The knee
+bio_tickle_yourself	Medium	Why can't you tickle yourself?	Your brain predicts your own touch	Your skin is used to your own fingers	Your own hands are too warm	Tickling needs an unknown smell
+bio_some_people_think	Medium	Some people think fresh coriander leaves taste like soap. Why?	A gene variant for a smell receptor	An allergy to the plant's pollen	Too much salt in their saliva	A lack of zinc in their diet
+bio_eyes_sometimes_glow	Medium	Why do eyes sometimes glow red in flash photos?	Light reflects off the blood-rich retina	The flash makes the iris flush red	The lens briefly turns red in bright light	Tears reflect the red part of the flash
+bio_ears_pop_plane	Medium	Why do your ears 'pop' when a plane climbs or descends?	Air pressure behind the eardrum evens out	Earwax cracks in the dry cabin air	The tiny ear bones click into place	Engine noise rattles the eardrum
+bio_human_brain_wrinkled	Medium	Why is the human brain so wrinkled?	Folds pack more surface into the skull	It shrinks a little every year	Thinking carves grooves into it	The skull squeezes it at birth
+bio_teenagers_hear_high	Medium	Why can teenagers hear the high 'mosquito' ringtone that most adults can't?	Hearing of high pitches fades with age	Teenagers have thinner eardrums	Adult brains filter it out as noise	The tone only travels through young bones
+bio_jet_lag_usually	Medium	Jet lag is usually worse after flying in which direction?	East	West	North	South
+bio_people_get_seasick	Medium	Why do many people get seasick on a rolling boat?	Eyes and inner ear disagree	Stomach acid sloshes about	Salty air irritates the lungs	Sea air is low in oxygen
+bio_amputee_still_feels	Medium	What is it called when an amputee still feels pain or itching in a missing arm or leg?	Phantom limb	Referred pain	Restless legs	Sleep paralysis
+bio_people_need_reading	Medium	Why do most people need reading glasses from their mid-forties?	The eye's lens gets stiffer	The eyeball shrinks	The retina wears out	The pupils stop moving
+bio_long_nap_leave	Medium	Why can a long nap leave you groggier than a short one?	You may wake from deep sleep	Your blood sugar drops	Your brain cools down	You get dehydrated
+bio_marshmallow_test_studied	Medium	The famous 'marshmallow test' studied children's ability to do what?	Wait for a bigger reward	Share sweets fairly	Spot a lie	Remember shapes
+bio_image_eye_lens	Medium	The image that your eye's lens projects onto the retina is what?	Upside down	Black and white	Tinted blue	Split in two halves
+bio_roughly_long_brain	Medium	Roughly how long can the brain go without oxygen before lasting damage begins?	A few minutes	About ten seconds	About an hour	Half a day
+bio_base_maslow_pyramid	Medium	At the base of Maslow's famous pyramid of needs are which needs?	Food, water and sleep	Love and belonging	Respect and status	Self-fulfilment
+bio_white_eye	Medium	What is the white of the eye called?	The sclera	The cornea	The iris	The lens
+bio_agoraphobia_fear	Medium	Agoraphobia is a fear of what?	Open or crowded places	Spiders	Heights	Small enclosed spaces
+bio_orange_juice_taste	Medium	Why does orange juice taste awful right after you brush your teeth?	A foaming agent in toothpaste dulls sweet taste	Mint reacts with the juice to make bitter salts	Fluoride gives the juice a metal taste	Brushing scrapes off some taste buds
+bio_teenagers_find_hard	Medium	Why do many teenagers find it hard to fall asleep early and get up early?	Their body clock naturally shifts later	They need less sleep than adults	Growth hormone keeps them alert at night	Their melatonin stops working until adulthood
+bio_dunning_kruger_effect	Medium	What does the Dunning-Kruger effect describe?	People with little skill overrating their ability	Remembering bad days better than good ones	Trusting people who look like ourselves	Forgetting what we have just read
+bio_wake_unable_move	Medium	What is it called when you wake up unable to move, sometimes sensing a presence in the room?	Sleep paralysis	Narcolepsy	Sleepwalking	Night blindness
+bio_quarter_people_supertasters	Medium	About a quarter of people are 'supertasters', who find foods like kale extra bitter. What is different about them?	They have more taste buds	Their saliva is more acidic	Their tongues are longer	Their teeth are more sensitive
+bio_contact_lenses_rest	Medium	Contact lenses rest on which clear, dome-shaped front layer of the eye?	The cornea	The retina	The lens	The sclera
+bio_hormone_often_stress	Medium	Which hormone, often called the 'stress hormone', naturally peaks shortly after you wake up?	Cortisol	Melatonin	Oxytocin	Insulin
+bio_mozg_strony	Medium	The right half of the brain mainly controls which side of the body?	The left side	The right side	Both sides equally	Only the face
+bio_smaki_piec	Medium	How many basic tastes do scientists commonly recognise?	Five	Three	Four	Seven
+bio_melatonina	Medium	Which hormone makes you feel sleepy when it gets dark?	Melatonin	Adrenaline	Insulin	Oxytocin
+bio_daltonizm	Medium	Red-green colour blindness is far more common in whom?	Men	Women	Children	Older people
+bio_tinnitus	Medium	What is tinnitus?	A ringing in the ears	A twitching eyelid	A tingling in the feet	A numb tongue
+bio_feel_dizzy_moment	Medium	Why do you feel dizzy for a moment after spinning round and round?	Fluid in the inner ears keeps swirling	Blood drains away from the brain	The stomach keeps turning inside you	The neck muscles get too tired
+bio_mozdzek	Medium	Which part of the brain is responsible for balance and movement coordination?	Cerebellum	Cerebral cortex	Medulla oblongata	Hypothalamus
+bio_neuron	Medium	What is the place where one neuron passes a signal to another called?	Synapse	Axon	Dendrite	Myelin
+biox_mieta	Medium	Why does mint make your mouth feel cold?	Menthol triggers cold-sensing nerves	It lowers the mouth's temperature	It numbs the tongue with oil	It releases tiny ice crystals
+biox_mozg_bol	Medium	Why can surgeons operate on an awake patient's brain without it hurting?	The brain has no pain receptors	The skull blocks the pain	The brain heals instantly	Brain cells are already numb
+bio_part_brain_controls	Medium	Which part of the brain controls breathing and heartbeat?	The brainstem	The cerebellum	The frontal lobe	The hippocampus
+bio_cocktail_party_effect	Medium	What is the 'cocktail party effect'?	Picking out one voice in a noisy room	Talking louder in a crowd	Forgetting names right away	Feeling tired among strangers
+bio_fear_long_words	Medium	What is the name of the fear of long words, ironically a very long word?	Hippopotomonstrosesquippedaliophobia	Triskaidekaphobia	Arachibutyrophobia	Hexakosioihexekontahexaphobia
+bio_stroke_few_people	Medium	After a stroke, a few people find that their speech suddenly sounds like what?	A foreign accent	A child's voice	A whisper	A song
+trv_mrugniecie	Hard	Roughly how many times does a person blink per minute while awake?	About 15-20	About 2-3	About 50	About 100
+trv_kofeina_dziala	Hard	How does caffeine keep you awake?	It blocks the brain's 'sleepy' signal, adenosine	It raises the level of sugar in the blood	It cools the brain by a fraction	It thickens the blood a little
+trv_odruch_kolanowy	Hard	Where does the signal for the knee-jerk reflex get processed?	In the spinal cord	In the brain's frontal lobe	In the knee itself	In the cerebellum
+ext_oko_rozdzielczosc	Hard	On a clear night the unaided human eye can see a candle flame from about how far?	A few kilometres	A few hundred metres	About 50 kilometres	Over 100 kilometres
+wld_mozg_energia	Hard	The brain is about 2% of body weight. Roughly what share of the body's energy does it use?	About 20%	About 2%	About 50%	About 5%
+wld_bio_ziewanie	Hard	Which of these is thought to be one purpose of yawning?	Cooling the brain	Refilling the stomach with air	Cleaning the ears	Resetting the heartbeat
+bio_plamka_slepa	Hard	Why does each eye have a blind spot?	The optic nerve leaves the retina there	Eyelashes block the light there	The iris covers that part	Tears drain away there
+bio_preciki	Hard	In very dim light we see mostly in shades of grey. Which cells take over then?	Rods	Cones	Ganglion cells	Iris muscles
+bio_nerwy_predkosc	Hard	The fastest nerve signals travel at roughly what speed?	About 400 km/h	About 5 km/h	About 40 km/h	The speed of light
+bio_mozg_tluszcz	Hard	Roughly what share of the human brain is fat?	About 60%	About 10%	About 30%	About 90%
+bioy_neurony	Hard	Roughly how many neurons are there in the human brain?	About 86 billion	About 86 million	About 8,600	About 86 trillion
+bio_1848_phineas_gage	Hard	In 1848 Phineas Gage survived an iron rod blasted through his head. What famously changed?	His personality	His eye colour	His handedness	His sense of smell
+bio_damage_broca_area	Hard	Damage to Broca's area of the brain mainly affects what?	Producing speech	Seeing colours	Feeling pain	Keeping balance
+bio_1964_student_randy	Hard	In 1964 student Randy Gardner set a famous record by staying awake for about how long?	About 11 days	About 4 days	About 40 days	About 100 days
+bio_sleepwalking_usually_happens	Hard	Sleepwalking usually happens during which kind of sleep?	Deep non-REM sleep	REM sleep	Light dozing	Daytime naps
+bio_almond_shaped_part	Hard	Which almond-shaped part of the brain is central to feeling fear?	The amygdala	The hippocampus	The thalamus	The cerebellum
+bio_people_prosopagnosia_struggle	Hard	People with prosopagnosia struggle to recognise what?	Faces	Colours	Written words	Musical notes
+bio_1956_paper_said	Hard	A famous 1956 paper said short-term memory holds roughly how many items?	Seven, plus or minus two	Two or three	About twenty	About a hundred
+bio_part_brain_connects	Hard	Which part of the brain connects its two halves?	Corpus callosum	Brainstem	Cerebellum	Pons
+bio_historian_roger_ekirch	Hard	Historian Roger Ekirch found that before electric light many Europeans slept how?	In two shifts, with a break at night	Only during the daytime	Sitting upright in their chairs	For barely four hours a night
+bio_studies_mice_found	Hard	Studies in mice found that the brain's waste-clearing 'glymphatic' system works hardest when?	During sleep	During exercise	Right after meals	While concentrating
+bio_brain_scans_london	Hard	Brain scans of London taxi drivers, who memorise thousands of streets, showed what?	A larger area used for spatial memory	A thicker skull above the temples	A larger area used for hearing	No difference from other people
+bio_roughly_different_colours	Hard	Roughly how many different colours can the human eye tell apart?	About a million	About a hundred	About a thousand	About a trillion
+bio_fluid_filled_loops	Hard	Which fluid-filled loops in the inner ear sense your head turning?	The semicircular canals	The Eustachian tubes	The cochlear ducts	The auditory canals
+bio_kichanie_slonce	Hard	About one in four people sneeze when they look into bright light. What is this called?	The photic sneeze reflex	A sunlight allergy	Solar hay fever	Light sensitivity syndrome
+bio_swiss_psychiatrist_introduced	Hard	Which Swiss psychiatrist introduced the ideas of 'introverts' and 'extroverts'?	Carl Jung	Sigmund Freud	Jean Piaget	Hermann Rorschach
+bio_parkinson_disease_involves	Hard	Parkinson's disease involves the loss of brain cells that make which chemical?	Dopamine	Insulin	Melatonin	Adrenaline
+bio_floaters_drift_across	Hard	What are the 'floaters' that drift across your vision when you look at a bright sky?	Clumps in the gel inside the eye	Dust stuck on the cornea	Scratches on the lens	Dried tears on the eyelid
+bio_normally_stops_physically	Hard	What normally stops you from physically acting out your dreams?	Most muscles are switched off in dream sleep	The body is too cold at night to move	The spinal cord falls asleep first	Dreams run too fast for muscles to follow
+bio_see_stars_rub	Hard	Why do you 'see stars' when you rub your closed eyes?	Pressure makes the retina fire	Light leaks through the eyelids	Tears bend light like prisms	The brain replays old images
+bio_someone_sees_colours	Hard	What is it called when someone 'sees' colours when hearing music or reading numbers?	Synaesthesia	Hallucination	Aphasia	Dyslexia
+bio_sudden_jolt_some	Hard	What is the sudden jolt some people feel just as they are falling asleep called?	A hypnic jerk	A night terror	Sleep paralysis	A febrile fit
+bio_stanley_milgram_1960s	Hard	In Stanley Milgram's famous 1960s experiments, what did volunteers believe they were doing to a stranger?	Giving him electric shocks	Hypnotising him	Reading his secret thoughts	Lying to him about money
+bio_see_face_cloud	Hard	What is it called when you see a face in a cloud, a plug socket or a slice of toast?	Pareidolia	Deja vu	Synaesthesia	Hallucination
+bio_some_people_faint	Hard	Why do some people faint at the sight of blood?	Their heart rate and blood pressure drop	Their brain switches off to save energy	Their blood sugar suddenly shoots up	Their lungs stop for a few seconds
+bio_small_part_brain	Hard	Which small part of the brain acts as the body's thermostat?	The hypothalamus	The cerebellum	The hippocampus	The amygdala
+bio_roughly_long_human	Hard	Roughly how long can a human brain cell live?	A whole lifetime	About 7 years	About a year	About a month
+bio3_hipokamp_pamiec	Hard	Which brain structure turned out to be essential for forming new long-term memories?	The hippocampus	The cerebellum	The amygdala	The thalamus
+bio_propriocepcja	Hard	What is the sense that tells you where your limbs are without looking?	Proprioception	Interoception	Nociception	Equilibrioception
+bio_neuron_dlugi	Hard	Which human cells can be the longest, stretching up to about a metre?	Nerve cells	Muscle fibres	Egg cells	Skin cells
+bio_some_women_thought	Hard	Some women are thought to be 'tetrachromats'. What does that mean?	Their eyes have four kinds of colour cones	They can hear four octaves higher	They have four blood types mixed	They can taste four extra flavours
+bio_people_exploding_head	Hard	What do people with 'exploding head syndrome' experience?	A loud bang as they fall asleep	Sudden crushing headaches	Bursts of anger on waking	A feeling of heat in the skull
+bio_people_hyperthymesia_such	Hard	People with hyperthymesia, such as actress Marilu Henner, can do what?	Recall almost every day of their life	Read a whole page at a glance	Go for days without sleep	Feel no pain at all
+bio_alice_wonderland_syndrome	Hard	'Alice in Wonderland syndrome' distorts a person's sense of what?	The size of objects and body parts	Which direction is north	The taste of sweet foods	The sound of their own name
+bio3_optogenetyka	Expert	What is optogenetics used for?	Controlling neuron activity with light	Imaging bone through the soft tissue	Producing insulin in modified yeast	Cloning a whole animal from one cell
+bio_patient_initials_taught	Expert	Which famous patient, known by his initials, taught science how memories are formed after losing his hippocampus?	H.M.	Phineas Gage	Little Albert	Anna O.
+bio_medical_brain_freeze	Expert	What is the medical name for brain freeze from cold food?	Sphenopalatine ganglioneuralgia	Cryoneuralgia	Glossopharyngeal spasm	Cephalalgia frigida
+bio_mcgurk_effect_changes	Expert	In the McGurk effect, what changes the speech sound you think you hear?	Watching the speaker's lips	The pitch of background music	How hungry you are	Holding your breath
+bio_people_capgras_delusion	Expert	People with Capgras delusion are convinced of what?	Someone close was replaced by an impostor	They are made of glass	They can read other people's minds	They are being watched by aliens
+bio_bank_robber_mcarthur	Expert	Bank robber McArthur Wheeler, who inspired the Dunning-Kruger study, smeared his face with what to hide from cameras?	Lemon juice	Vaseline	Toothpaste	Baby oil
+bio_damage_wernicke_area	Expert	Damage to Wernicke's area of the brain typically leaves people speaking fluently but how?	Without making sense	Only in a whisper	Only in rhymes	In a foreign accent
+bio_tiny_gland_deep	Expert	Which tiny gland deep in the brain did Descartes call 'the principal seat of the soul'?	The pineal gland	The pituitary gland	The thyroid gland	The adrenal gland
+bio_roughly_long_single	Expert	Roughly how long does a single taste bud cell live before it is replaced?	About two weeks	About a day	About a year	A whole lifetime
+bio_look_mirror_switch	Expert	Look in a mirror and switch your gaze from one eye to the other: you never see your eyes move. Why?	The brain blanks vision during quick eye moves	Your eyelids blink shut each time	The mirror image lags behind the eyes	Both eyes move in opposite directions
+bio_french_caver_michel	Expert	When French caver Michel Siffre came out after two months alone underground in 1962, what had he lost track of?	He thought only about a month had passed	He thought half a year had passed	He thought only a week had passed	He thought four months had passed
+bio_1920_little_albert	Expert	In the 1920 'Little Albert' experiment, a baby was taught to be afraid of what?	A white rat	A black cat	A toy drum	A barking dog
+bio_tiny_bright_dots	Expert	Tiny bright dots that zip along wiggly paths when you gaze at a clear blue sky are what?	White blood cells in the eye's capillaries	Specks of dust on the surface of the eye	Droplets of water floating in the air	Nerve cells in the eye firing at random

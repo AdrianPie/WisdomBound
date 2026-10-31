@@ -1,0 +1,104 @@
+# Food Science: food and drink science, nutrition, where foods come from
+#
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+trv_mleko_laktoza	Easy	What is lactose?	The sugar in milk	The fat in milk	The protein in milk	A milk vitamin
+trv_gluten_co	Easy	What is gluten?	A protein found in wheat	A sugar found in wheat	A fat found in bread	A preservative added to flour
+bio_czekolada	Easy	Chocolate is made from the seeds of which tree?	The cacao tree	The carob tree	The coffee tree	The coconut palm
+bio_weganin	Easy	What do you call someone who eats no animal products at all?	A vegan	A vegetarian	A pescatarian	A flexitarian
+bio_tofu	Easy	What is tofu made from?	Soybeans	Rice	Chickpeas	Wheat
+bio_hummus	Easy	What is hummus mainly made from?	Chickpeas	Lentils	Soybeans	Peas
+biox_ryz	Easy	Which grain is the main food for more than half of the world's people?	Rice	Wheat	Maize	Oats
+bio_fruit_mashed_make	Easy	Which fruit is mashed to make guacamole?	Avocado	Lime	Mango	Kiwi
+bio_prunes_dried_versions	Easy	Prunes are dried versions of which fruit?	Plums	Grapes	Figs	Apricots
+bio_fruit_classically_used	Easy	Which fruit is classically used to make marmalade?	Oranges	Strawberries	Apples	Plums
+bio_herb_main_flavour	Easy	Which herb is the main flavour in Italian pesto?	Basil	Parsley	Oregano	Mint
+bio_hops_used_flavour	Easy	Hops are used to flavour which drink?	Beer	Wine	Cider	Gin
+bio_vegetable_fermented_make	Easy	Which vegetable is fermented to make sauerkraut?	Cabbage	Cucumber	Carrot	Beetroot
+bio_nuts_main_ingredient	Easy	Which nuts are the main ingredient of Nutella?	Hazelnuts	Almonds	Peanuts	Walnuts
+bio_herb_muddled_mojito	Easy	Which herb is muddled into a mojito cocktail?	Mint	Basil	Parsley	Coriander
+bio_foods_source_omega	Easy	Which of these foods is a famous source of omega-3 fats?	Salmon	White bread	Potatoes	Rice
+bio_popcorn_special_variety	Easy	Popcorn is a special variety of which grain?	Maize	Rice	Wheat	Sorghum
+bio_maple_syrup_boiled	Easy	Maple syrup is boiled down from which part of the maple tree?	The sap	The leaves	The seeds	The bark
+bio_blue_veins_cheeses	Easy	The blue veins in cheeses like Roquefort and Stilton are what?	Edible mould	Dyed vegetable ash	Blueberry juice	Copper salts
+bio_milk_famously_rich	Easy	Milk is famously rich in which mineral needed for strong bones?	Calcium	Iron	Sodium	Zinc
+bio_chopping_onions_make	Easy	Why does chopping onions make your eyes water?	They release an irritating gas	Their juice squirts into the eyes	Their smell is too strong	Their skins give off dust
+bio_nut_looking_like	Easy	Which nut is famous for looking like a tiny brain?	The walnut	The almond	The cashew	The hazelnut
+bio_raisins_sultanas_currants	Easy	Raisins, sultanas and currants are all dried what?	Grapes	Plums	Cherries	Figs
+bio_japanese_sake_brewed	Easy	Japanese sake is brewed from which grain?	Rice	Barley	Wheat	Millet
+bio_garlic_close_relative	Easy	Garlic is a close relative of which vegetable?	The onion	The potato	The radish	The turnip
+day2_pasteryzacja	Easy	What does pasteurization do?	Kills most harmful microbes with heat	Removes all bacteria permanently	Adds preservatives	Freezes the product
+bio_miod_egipt	Medium	Which food has been found still edible in ancient Egyptian tombs?	Honey	Bread	Olive oil	Dates
+bio_witamina_a	Medium	Which vitamin helps the eyes see in dim light?	Vitamin A	Vitamin B12	Vitamin C	Vitamin E
+bio_orzeszki	Medium	Botanically, what are peanuts?	Legumes	Tree nuts	Berries	Grains
+bio_brokul	Medium	Which of these vegetables is really a bunch of flower buds?	Broccoli	Carrot	Potato	Onion
+bio_kawa_nasiona	Medium	Coffee 'beans' are actually the seeds of what?	A cherry-like fruit	A bean pod	A palm nut	A flower bulb
+bio_rabarbar	Medium	Which part of the rhubarb plant is safe to eat?	The stalks	The leaves	The roots	The flowers
+bio_tequila	Medium	Tequila is made from which plant?	The blue agave	A cactus	Sugar cane	Aloe vera
+bio_gram_gram_gives	Medium	Gram for gram, which of these gives the body the most energy?	Fat	Protein	Sugar	Fibre
+bio_natural_sugar_found	Medium	What is the natural sugar found in fruit called?	Fructose	Lactose	Sucrose	Maltose
+bio_nuts_traditionally_used	Medium	Which nuts are traditionally used in pesto?	Pine nuts	Walnuts	Almonds	Cashews
+bio_tahini_paste_made	Medium	Tahini is a paste made from which seeds?	Sesame	Sunflower	Pumpkin	Poppy
+bio_alcoholic_drink_made	Medium	Which alcoholic drink is made by fermenting honey?	Mead	Cider	Sake	Kvass
+bio_scotch_whisky_made	Medium	Scotch whisky is made mainly from which grain?	Barley	Rice	Maize	Oats
+bio_juniper_berries_give	Medium	Juniper berries give its flavour to which spirit?	Gin	Vodka	Rum	Brandy
+bio_fruit_king_fruits	Medium	Which fruit, called 'the king of fruits', is famous for its terrible smell?	The durian	The jackfruit	The mangosteen	The lychee
+bio_substance_gives_carrots	Medium	Which substance gives carrots their orange colour?	Beta-carotene	Chlorophyll	Melanin	Anthocyanin
+bio_fruit_fermented_make	Medium	Which fruit is fermented to make perry?	Pears	Apples	Plums	Cherries
+bio_american_bourbon_whiskey	Medium	American bourbon whiskey is made mainly from which grain?	Corn	Barley	Rye	Wheat
+bio_friendly_bacteria_turn	Medium	Which friendly bacteria turn milk into yogurt?	Lactobacillus	Salmonella	Listeria	Clostridium
+bio_europe_sugar_made	Medium	Most of Europe's sugar is made from which crop?	Sugar beet	Sugar cane	Corn	Sorghum
+bio_eating_plenty_beetroot	Medium	Eating plenty of beetroot can turn some people's urine what colour?	Pink or red	Green	Blue	Bright orange
+bio_happen_someone_eats	Medium	What can happen to someone who eats huge amounts of carrots for weeks?	Their skin turns orange	Their hair turns ginger	They grow extra freckles	Their nails turn yellow
+bio_apple_seeds_contain	Medium	Apple seeds contain a compound that the body can turn into which poison?	Cyanide	Arsenic	Strychnine	Ricin
+bio_ripe_banana_bag	Medium	Why does a ripe banana in a bag make other fruit ripen faster?	It gives off ethylene gas	It gives off heat as it rots	It attracts fruit flies	It soaks up their water
+bio_fresh_coriander_leaves	Medium	Fresh coriander leaves are known by what name in the USA?	Cilantro	Parsley	Chervil	Arugula
+bio_vitamin_must_people	Medium	Which vitamin must people on a strictly plant-based diet usually take as a supplement?	Vitamin B12	Vitamin C	Vitamin K	Vitamin E
+bio_scientists_find_put	Medium	What did scientists find when they put the 'five-second rule' for dropped food to the test?	Germs can jump onto food in under a second	Food stays germ-free for exactly five seconds	Dry food never picks up any germs	Only carpets pass germs on to food
+bio_stevia_sweetener_almost	Medium	Stevia, a sweetener with almost no calories, is made from which part of a plant?	The leaves	The roots	The seeds	The bark
+bio_chilli_peppers_now	Medium	Chilli peppers, now at the heart of Indian and Thai cooking, first came from where?	The Americas	India	China	East Africa
+bio_kind_fat_common	Medium	Which kind of fat, common in old margarines, has been banned or limited in many countries as the most harmful?	Trans fat	Omega-3 fat	Olive oil fat	Fish oil fat
+bio_fruit_enzyme_digests	Medium	Which fruit's enzyme digests your mouth a little while you eat it?	Pineapple	Banana	Mango	Grape
+bio_cynamon	Medium	Cinnamon comes from which part of a tree?	The bark	The seeds	The roots	The leaves
+bio_herbata	Medium	After water, what is the most widely drunk drink in the world?	Tea	Coffee	Beer	Milk
+bio_marcepan	Medium	Which nut is marzipan made from?	Almonds	Hazelnuts	Walnuts	Cashews
+bio_kurkuma	Medium	Which yellow spice, made from a root, gives curry its colour?	Turmeric	Saffron	Cumin	Paprika
+bio_szparagi	Medium	Eating which vegetable famously makes many people's urine smell?	Asparagus	Broccoli	Spinach	Celery
+bio_scale_measures_heat	Medium	Which scale measures the heat of chili peppers?	Scoville	Mohs	Richter	Beaufort
+day_witamina_gotowanie	Medium	Which vitamin is most easily destroyed by cooking?	Vitamin C	Vitamin D	Vitamin K	Vitamin E
+bioy_papryka_c	Medium	Weight for weight, which of these has more vitamin C than an orange?	A red pepper	A banana	A potato	An apple
+bio_saffron_comes_part	Medium	Saffron comes from which part of a flower?	The stigmas of a crocus	The petals of a rose	The seeds of a poppy	The roots of a lily
+day_wanilia_roslina	Hard	Vanilla flavouring comes from the pods of which plant family?	An orchid	A palm	A cactus	A fern
+trv_witamina_krzepniecie	Hard	Which vitamin is essential for blood clotting?	Vitamin K	Vitamin C	Vitamin A	Vitamin B12
+bio_kiwi_nazwa	Hard	Kiwifruit used to be sold under which name?	Chinese gooseberry	Jungle plum	Hairy lemon	Fuzzy fig
+bioy_cavendish	Hard	Almost all bananas sold in shops belong to which single variety?	Cavendish	Gros Michel	Plantain	Lady Finger
+bio_spice_made_dried	Hard	Which spice is made from the dried flower buds of a tree?	Cloves	Cinnamon	Nutmeg	Pepper
+bio_tea_leaves_come	Hard	Tea leaves come from a species of which flowering shrub?	Camellia	Jasmine	Magnolia	Gardenia
+bio_fruit_once_love	Hard	Which fruit was once called the 'love apple'?	The tomato	The apple	The peach	The fig
+bio_milk_soothe_chilli	Hard	Why does milk soothe a chilli-burnt mouth better than water?	A milk protein pulls the hot chemical away	Its sugar cancels out the chilli acid	Its calcium blocks the heat nerves	Its coldness numbs the taste buds
+bio_cashews_never_sold	Hard	Why are cashews never sold in their shells?	The shells hold a blistering oil	The shells are too hard to crack	The shells rot within days	The shells are mostly air
+bio_nut_famously_slightly	Hard	Which nut is famously slightly radioactive?	The Brazil nut	The cashew	The macadamia	The pecan
+bio_must_dried_red	Hard	Why must dried red kidney beans be boiled hard before eating?	Raw ones hold a toxin	Raw ones are radioactive	Raw ones hold too much sugar	To kill worms inside them
+bio_eating_plenty_poppy	Hard	Eating plenty of poppy seed cake can lead to what surprising result?	A positive opiate drug test	Urine that turns purple	A long fit of hiccups	Temporary night blindness
+bio_eating_miracle_fruit	Hard	After eating a 'miracle fruit' berry, how do lemons taste?	Sweet	Bitter	Salty	Of nothing at all
+bio_pigment_makes_tomatoes	Hard	Which pigment makes tomatoes red?	Lycopene	Beta-carotene	Anthocyanin	Melanin
+bio_arctic_explorers_learned	Hard	Arctic explorers learned that eating polar bear liver can kill. What makes it dangerous?	Far too much vitamin A	Far too much vitamin C	Far too much vitamin K	Far too much vitamin B12
+bio_swallowing_couple_spoonfuls	Hard	Swallowing a couple of spoonfuls of which kitchen spice can cause hallucinations and a day of sickness?	Nutmeg	Cinnamon	Paprika	Cumin
+bio_1893_supreme_court	Hard	In 1893 the US Supreme Court ruled that, for import taxes, the tomato counts as what?	A vegetable	A fruit	A spice	A herb
+bio_golden_rice_engineered	Hard	'Golden rice' was engineered to fight a lack of which vitamin?	Vitamin A	Vitamin C	Vitamin D	Vitamin B12
+bio_green_patches_potatoes	Hard	Green patches on potatoes left in the light warn of a build-up of which toxin?	Solanine	Atropine	Aflatoxin	Histamine
+day2_kofeina	Hard	Roughly how long does it take for half the caffeine to leave an adult's body?	About 5 hours	About 30 minutes	About 24 hours	About 3 days
+bio_marchew_fiolet	Hard	What colour were most of the first cultivated carrots?	Purple	Orange	Red	Blue
+bio_sweet_orange_natural	Hard	The sweet orange is a natural hybrid of the pomelo and which other fruit?	Mandarin	Lemon	Lime	Grapefruit
+bio_black_white_green	Hard	Black, white and green peppercorns come from how many plant species?	Just one	Two	Three	Four
+bio_apples_float_water	Hard	Why do apples float in water?	About a quarter of their volume is air	Their waxy skin repels the water	Their sugar is lighter than water	Their seeds hold pockets of gas
+bio_almonds_seeds_fruit	Hard	Almonds are the seeds of a fruit closely related to which?	The peach	The walnut	The fig	The olive
+bio_despite_allspice_comes	Hard	Despite its name, allspice comes from what?	The dried berry of one tree	A blend of many spices	The root of a lily	The bark of a palm
+bio_black_peppercorns_dried	Hard	Black peppercorns are the dried what of a climbing vine?	Unripe fruits	Flower buds	Root nodules	Leaf tips
+bio_birds_happily_eat	Hard	Birds happily eat the hottest chilli peppers. Why?	They cannot feel the burning chemical	They have no taste buds at all	Their beaks block the heat	Their stomach acid cools it
+bio_jamaica_national_fruit	Hard	Jamaica's national fruit, eaten with saltfish, is poisonous unless fully ripe. What is it?	Ackee	Breadfruit	Soursop	Jackfruit
+bio_genetically_engineered_whole	Hard	The first genetically engineered whole food sold in shops, in 1994, was a slow-softening what?	Tomato	Potato	Banana	Strawberry
+bio_spice_comes_lacy	Expert	Which spice comes from the lacy red coating around the nutmeg seed?	Mace	Allspice	Cardamom	Star anise
+bio_quinoa_not_true	Expert	Quinoa is not a true cereal. It is a close relative of which vegetable?	Spinach	The potato	Lettuce	The carrot
+bio_eating_large_amounts	Expert	Eating large amounts of black liquorice can be dangerous because it lowers which mineral in the blood?	Potassium	Iron	Calcium	Sodium
+bio_large_shipments_pistachios	Expert	Why are large shipments of pistachios treated as a fire hazard?	They can heat up and catch fire by themselves	Their shells give off a flammable gas	They are always roasted inside the ship	Their dust explodes when it gets wet
+bio_banana_variety_filled	Expert	Which banana variety filled the world's shops until a soil fungus wiped out its plantations in the mid-1900s?	Gros Michel	Cavendish	Plantain	Red Dacca

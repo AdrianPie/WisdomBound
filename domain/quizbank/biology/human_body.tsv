@@ -1,0 +1,204 @@
+# Human Body: anatomy, organs, bones, blood, the body's records
+#
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+bio_skora	Easy	Which human organ is the largest?	Skin	Liver	Lungs	Small intestine
+bio_kosci	Easy	How many bones does an adult human skeleton have?	206	152	300	180
+bio2_zeby	Easy	How many teeth does an adult human have, wisdom teeth included?	32	28	36	24
+bio2_kosc_najdluzsza	Easy	Which human bone is the longest?	The femur	The humerus	The tibia	The clavicle
+trv_melanina	Easy	Which pigment gives skin, hair and eyes their colour?	Melanin	Keratin	Hemoglobin	Carotene
+trv_aorta	Easy	What is the largest artery in the human body?	The aorta	The carotid	The femoral artery	The pulmonary artery
+bio_wyrostek	Easy	Which organ attached to the large intestine often has to be removed when it gets inflamed?	The appendix	The spleen	The pancreas	The kidney
+bio_zeby_madrosci	Easy	Wisdom teeth are the last of which kind of teeth to come through?	Molars	Incisors	Canines	Premolars
+bio_adrenalina_walka	Easy	Which hormone floods your body in a 'fight or flight' moment?	Adrenaline	Melatonin	Insulin	Serotonin
+biox_serce_piesc	Easy	A human heart is roughly the size of what?	A fist	A grape	A football	A melon
+biox_oczy_brazowe	Easy	Which is the most common eye colour in the world?	Brown	Blue	Green	Grey
+bioy_serce_strona	Easy	On which side of the chest does most of the human heart sit?	The left	The right	Exactly in the middle	It moves around
+bio_normal_human_body	Easy	What is the normal human body temperature?	About 37 °C	About 35 °C	About 39 °C	About 33 °C
+bio_blood_cells_fight	Easy	Which blood cells fight infections?	White blood cells	Red blood cells	Platelets	Nerve cells
+bio_blood_vessels_carry	Easy	Which blood vessels carry blood away from the heart?	Arteries	Veins	Capillaries	Lymph vessels
+bio_shiver_cold	Easy	Why do we shiver when we are cold?	Twitching muscles make heat	It pumps blood faster	It shakes off cold air	It burns stored fat
+bio_bony_cage_protects	Easy	Which bony cage protects the heart and lungs?	The rib cage	The pelvis	The skull	The spine
+bio_body_achilles_tendon	Easy	Where in the body is the Achilles tendon?	At the back of the heel	Behind the knee	In the shoulder	In the wrist
+bio_red_blood_cells	Easy	What do red blood cells carry around the body?	Oxygen	Hormones	Germs	Fat
+bio_tailbone_bottom_spine	Easy	The tailbone at the bottom of your spine is a leftover of what?	A tail	An extra pelvis	A spare rib	A third leg
+bio_roughly_long_typical	Easy	Roughly how long does a typical human pregnancy last?	About 40 weeks	About 30 weeks	About 52 weeks	About 20 weeks
+bio_pair_lumps_back	Easy	Which pair of lumps at the back of the throat are often taken out after repeated infections?	The tonsils	The uvula	The vocal cords	The salivary glands
+bio_sets_teeth_human	Easy	How many sets of teeth does a human normally grow in a lifetime?	Two	Three	One	Four
+bio_cheeks_red_blush	Easy	Why do your cheeks go red when you blush?	Blood vessels in the face widen	The skin gets thinner	Sweat glands switch on	The face muscles tense
+bio_freckles_usually_get	Easy	Freckles usually get darker when the skin does what?	Spends time in the sun	Gets very cold	Stays wet for long	Is scrubbed hard
+bio_belly_button_scar	Easy	Your belly button is the scar left by what?	The umbilical cord	A first vaccination	The doctor's forceps	A closed stomach muscle
+bio_wrinkles_crow_feet	Easy	The wrinkles called 'crow's feet' appear next to which part of the face?	The eyes	The mouth	The nose	The ears
+bio_actually_makes_bruise	Easy	What actually makes a bruise?	Blood leaking under the skin	Dead skin cells piling up	A dent in the bone	Air trapped in the skin
+bio_guitarists_rowers_get	Easy	Why do guitarists and rowers get calluses?	Skin thickens where it is rubbed	Their blood flow slows down	Their nails grow inwards	Their muscles harden
+bio_boys_voices_break	Easy	Why do boys' voices 'break' and get deeper during puberty?	Their vocal cords grow longer and thicker	Their lungs grow much bigger	Their tongues grow longer	Their noses get blocked more often
+bio_main_job_sneeze	Easy	What is the main job of a sneeze?	Blasting irritants out of the nose	Restarting the heartbeat	Pushing extra air into the lungs	Cooling down the brain
+bio_hair_turn_grey	Easy	Why does hair turn grey or white with age?	The roots stop making pigment	The hair dries out and fades	The scalp gets less blood	Sunlight bleaches it over time
+bio_jamy_serca	Easy	How many chambers does the human heart have?	4	2	3	6
+bio_pointed_teeth_beside	Easy	What are the pointed teeth beside the front teeth called?	Canines	Molars	Incisors	Premolars
+bio_insulina	Medium	Which organ produces insulin?	Pancreas	Liver	Kidneys	Thyroid
+bio_zoladek	Medium	Which acid helps digest food in the stomach?	Hydrochloric acid	Sulfuric acid	Acetic acid	Nitric acid
+bio2_plyny_ustrojowe	Medium	What percentage of human body mass is water?	About 60%	About 20%	About 90%	About 40%
+trv_kosc_najmniejsza	Medium	What is the smallest bone in the human body?	The stapes	The fibula	The hyoid	A toe bone
+trv_krtan	Medium	What is the medical name for the voice box?	The larynx	The pharynx	The trachea	The epiglottis
+trv_zebra_pary	Medium	How many pairs of ribs does a typical adult have?	12	10	14	8
+trv_watroba_regeneracja	Medium	Which organ can regrow most of itself after part of it is removed?	The liver	The heart	The lung	The kidney
+trv_paznokcie_wzrost	Medium	Which grow faster, fingernails or toenails?	Fingernails	Toenails	They grow at the same rate	It depends on the season only
+trv_pecherzyki	Medium	What are the tiny air sacs in the lungs called?	Alveoli	Bronchi	Villi	Capillaries
+trv_zoladek_kwas	Medium	Why doesn't stomach acid digest the stomach itself?	A layer of mucus protects the stomach wall	The acid is too weak	The stomach wall is made of bone	The acid only works on meat
+trv_bakterie_jelita	Medium	Which organ hosts most of the body's helpful bacteria?	The large intestine	The stomach	The liver	The lungs
+mst_czkawka_przepona	Medium	A hiccup is a sudden spasm of which muscle?	The diaphragm	The stomach wall	The throat	The heart
+cur_kosci_niemowle	Medium	Do babies have more or fewer bones than adults?	More - around 300 that fuse over time	Fewer - bones split as we grow	Exactly the same, 206	Fewer - around 150
+wld_krew_grupa_dawca	Medium	Which blood type is known as the universal donor for red cells?	O negative	AB positive	A negative	B positive
+wld_szkliwo	Medium	What is the hardest substance in the human body?	Tooth enamel	Thigh bone	Fingernail keratin	Skull bone
+wld_bio_krew_kolor	Medium	Why is blood red?	Iron-containing haemoglobin	Copper in the plasma	Red white blood cells	Oxygen gas bubbles
+bio_jelito_dlugosc	Medium	Roughly how long is an adult's small intestine?	About 6 metres	About 1 metre	About 20 metres	About 50 metres
+bio_watroba_ciezka	Medium	Which is the heaviest internal organ in the human body?	The liver	The brain	The lungs	The heart
+bio_nerki_filtr	Medium	Which organs filter roughly 180 litres of blood plasma every day?	The kidneys	The lungs	The liver	The spleen
+bio_biorca_uniwersalny	Medium	People with which blood type can receive red cells of any type?	AB positive	O negative	A positive	B negative
+bio_trawa_celuloza	Medium	Why can't humans digest grass?	We lack enzymes that break down cellulose	Our teeth are too weak to chew it	Our stomach is too small for it	Grass is poisonous to people
+bio_miesien_najwiekszy	Medium	Which is the largest muscle in the human body?	The gluteus maximus	The biceps	The latissimus dorsi	The heart
+bio_burczenie	Medium	What makes your stomach 'growl'?	Gas and fluid moving through the gut	The stomach shrinking	Acid bubbling up	Muscles cramping from hunger
+biox_krew_litry	Medium	Roughly how much blood is in an adult's body?	About 5 litres	About 1 litre	About 12 litres	About 20 litres
+biox_oczy_niemowlat	Medium	Many babies of European descent are born with eyes of which colour, which may change later?	Blue or grey	Green	Dark brown	Hazel
+bioy_pot_zapach	Medium	Fresh sweat has almost no smell. What causes body odour?	Bacteria breaking down sweat	Salt in the sweat	Hormones in the skin	Sweat drying in the air
+bioy_rano_wyzszy	Medium	At what time of day are most people slightly taller?	In the morning	In the evening	At noon	At midnight
+bio_common_clavicle	Medium	What is the common name for the clavicle?	The collarbone	The shinbone	The breastbone	The kneecap
+bio_tibia_better_bone	Medium	The tibia is better known as which bone?	The shinbone	The thighbone	The collarbone	The breastbone
+bio_connects_muscles_bones	Medium	What connects muscles to bones?	Tendons	Ligaments	Cartilage	Nerves
+bio_tiny_blood_vessels	Medium	What are the tiny blood vessels linking arteries and veins called?	Capillaries	Valves	Ventricles	Alveoli
+bio_organ_stores_bile	Medium	Which organ stores the bile made by the liver?	The gallbladder	The pancreas	The spleen	The bladder
+bio_platelets_blood	Medium	What do platelets in the blood do?	Help blood to clot	Carry oxygen	Fight germs	Carry hormones
+bio_sternum_better	Medium	What is the sternum better known as?	The breastbone	The collarbone	The shinbone	The tailbone
+bio_body_humerus	Medium	Where in the body is the humerus?	In the upper arm	In the thigh	In the lower leg	In the spine
+bio_yellowish_liquid_makes	Medium	What is the yellowish liquid that makes up about half of our blood called?	Plasma	Lymph	Serum	Bile
+bio_left_lung_little	Medium	Why is the left lung a little smaller than the right one?	To make room for the heart	To make room for the liver	It does less work at rest	It is damaged at birth
+bio_men_nipples	Medium	Why do men have nipples?	All embryos start with the same body plan	They once fed babies in the Stone Age	They help the body sense the cold	They protect the muscles of the chest
+bio_organ_nicknamed_second	Medium	Which organ is nicknamed 'the second brain' for its hundreds of millions of nerve cells?	The gut	The heart	The liver	The skin
+bio_longest_nerve_human	Medium	Which is the longest nerve in the human body, running from the lower back down each leg?	The sciatic nerve	The vagus nerve	The optic nerve	The ulnar nerve
+bio_adam_apple_bump	Medium	The Adam's apple is a bump of cartilage protecting what?	The voice box	The jugular vein	The top of the spine	The tonsils
+bio_mainly_causes_morning	Medium	What mainly causes 'morning breath'?	Saliva dries up and bacteria thrive	The stomach releases gas at night	Teeth soften slightly while you sleep	Breathing slows and air goes stale
+bio_gland_front_neck	Medium	Which gland in the front of your neck is shaped like a butterfly?	The thyroid	The pituitary	The adrenal gland	The pineal gland
+bio_check_pulse_side	Medium	When you check the pulse on the side of your neck, which artery are you feeling?	The carotid artery	The femoral artery	The aorta	The radial artery
+bio_makes_popping_sound	Medium	What makes the popping sound when you crack your knuckles?	A gas bubble in the joint fluid	Bones knocking together	Tendons snapping	Cartilage cracking
+bio_roughly_head_hairs	Medium	Roughly how many head hairs does a person normally lose each day?	About 50-100	About 5	About 2,000	About 20,000
+bio_healing_bruise_often	Medium	A healing bruise often changes from purple to which colours?	Green, then yellow	Orange, then white	Blue, then silver	Pink, then black
+bio_organs_person_live	Medium	Which of these organs can a person live without?	The spleen	The liver	The heart	The brainstem
+bio_fleshy_little_bit	Medium	What is the fleshy little bit that dangles at the back of your throat called?	The uvula	The epiglottis	The larynx	The tonsil
+bio_skin_wrinkles_age	Medium	Skin wrinkles with age mainly because it loses which springy protein?	Collagen	Keratin	Haemoglobin	Insulin
+bio_body_hamstrings	Medium	Where in the body are the hamstrings?	The back of the thigh	The front of the shin	The upper arm	The lower back
+bio_nose_often_run	Medium	Why does your nose often run on a cold day?	It adds moisture to warm and wet the air	You are always catching a cold	The cold makes your brain sweat	Frozen mucus melts in warm breath
+bio_astronauts_come_back	Medium	Astronauts come back from months in space a few centimetres taller. Why?	The discs in the spine expand	Their leg bones grow faster	Their muscles stretch out	Their skulls float upwards
+bio_stops_food_going	Medium	What stops food from going down your windpipe when you swallow?	A flap called the epiglottis	The uvula closing it off	The tongue blocking it	The tonsils squeezing shut
+bio_roughly_urine_healthy	Medium	Roughly how much urine can a healthy adult bladder comfortably hold?	About half a litre	About 50 millilitres	About three litres	About five litres
+bio2_wlosy_rosna	Medium	What are hair and nails made of?	Keratin	Collagen	Chitin	Cellulose
+bio_kosc_lokciowa	Medium	What is the 'funny bone' that tingles when you knock your elbow?	A nerve	A small bone	A tendon	A muscle
+biox_mleczaki	Medium	How many baby teeth does a child usually have?	20	32	16	24
+bio_body_blood_cells	Medium	Where in the body are most blood cells made?	In the bone marrow	In the liver	In the heart	In the spleen
+bio_thought_main_job	Medium	What is thought to be the main job of your eyebrows?	Keeping sweat and rain out of the eyes	Shading the eyes from the Sun	Keeping the forehead warm	Showing other people your age
+bio_usually_causes_pins	Medium	What usually causes 'pins and needles' when your leg 'falls asleep'?	Pressure on a nerve	Gas bubbles in a vein	Muscles running out of sugar	Cold spreading through the skin
+bio_body_lunula_pale	Medium	Where on your body is the lunula, a pale half-moon shape?	At the base of each fingernail	On the white of the eye	Inside the outer ear	On the back of the knee
+bio_person_fingerprints_form	Medium	When do a person's fingerprints form?	Before birth, in the womb	In the first year of life	When they start to walk	At around the age of five
+bio_organ_goodness_food	Medium	In which organ is most of the goodness from food absorbed into the blood?	The small intestine	The stomach	The large intestine	The liver
+day_grupa_krwi_czesta	Medium	Which is the most common blood type worldwide?	O positive	A negative	AB positive	B negative
+trv_kichniecie	Medium	What really happens if you try to sneeze with your eyes open?	Nothing bad - the eyes just close by reflex	The eyes could be forced out of their sockets	The sneeze comes out much weaker	You cannot sneeze at all that way
+wld_bio_gesia_skorka	Medium	Goosebumps are a leftover reflex that once did what for our ancestors?	Fluffed up body hair	Released a warning smell	Toughened the skin	Stopped bleeding
+wld_bio_wlosy_rosna	Medium	Roughly how fast does hair on your head grow?	About 1 cm a month	About 1 mm a month	About 5 cm a month	About 1 cm a year
+bio_powieki	Medium	Where is the skin on your body the thinnest?	On the eyelids	On the lips	On the fingertips	On the earlobes
+biox_rude_wlosy	Medium	Which is the rarest natural hair colour?	Red	Blond	Black	Brown
+bio_body_not_repair	Medium	Which of these can the body NOT repair or regrow on its own?	Tooth enamel	Skin	Bone	The liver
+bio_nefron	Hard	What is the kidney's basic filtration unit called?	Nephron	Alveolus	Vesicle	Bile duct
+bio2_hormon_wzrostu	Hard	Which gland secretes growth hormone?	The pituitary gland	The thyroid	The thymus	The adrenal gland
+trv_miesien_najsilniejszy	Hard	Which muscle exerts the most force for its size?	The masseter (jaw muscle)	The biceps	The calf muscle	The heart
+trv_erytrocyt_zycie	Hard	How long does a red blood cell live, on average?	About 120 days	About 12 days	About a year	About 5 years
+trv_skora_odnowa	Hard	Roughly how often does the outer layer of your skin fully replace itself?	About once a month	Once a day	Once a year	Once every 7 years
+wld_czerwone_krwinki_jadro	Hard	What do mature human red blood cells lack?	A nucleus	A membrane	Haemoglobin	Water
+bio_ab_minus	Hard	Which of the eight common blood types is the rarest?	AB negative	O negative	B positive	A negative
+bio_komorka_jajowa	Hard	Which is the largest cell in the human body?	The egg cell	The red blood cell	The white blood cell	The skin cell
+bio_naczynia_dlugosc	Hard	Laid end to end, roughly how long would all the blood vessels of an adult be?	About 100,000 km	About 100 km	About 1,000 km	About 10,000 km
+bio_pluca_plywaja	Hard	Which organ would float if you put it in water?	The lungs	The heart	The liver	The brain
+bio_azot_wydech	Hard	Which gas makes up most of the air you breathe out?	Nitrogen	Carbon dioxide	Oxygen	Water vapour
+bio_dlonie_stopy	Hard	Together, the hands and feet hold roughly what share of the body's bones?	More than half	About a tenth	About a quarter	About a third
+bio_pomarszczone_palce	Hard	What makes your fingertips wrinkle after a long bath?	Nerves narrowing blood vessels	Skin soaking up water	Salt washing out of the skin	Skin cells dying off
+bio_gardlo_kosc	Hard	Which bone is the only one not connected to any other bone?	The hyoid	The kneecap	The tailbone	The stapes
+bio_pot_gruczoly	Hard	Where does the skin have the most sweat glands per square centimetre?	The soles of the feet	The armpits	The forehead	The back
+biox_obieg_krwi	Hard	Roughly how long does it take blood to travel once around the whole body?	About a minute	About an hour	About ten seconds	About a day
+biox_slina	Hard	Roughly how much saliva does a person produce each day?	About a litre	About a teaspoon	About five litres	About ten litres
+biox_miesnie_liczba	Hard	Roughly how many muscles are there in the human body?	About 600	About 60	About 2,000	About 206
+bioy_serce_litry	Hard	Roughly how much blood does the heart pump in one day?	About 7,000 litres	About 70 litres	About 700 litres	About 70,000 litres
+bio_largest_joint_human	Hard	Which is the largest joint in the human body?	The knee	The hip	The shoulder	The elbow
+bio_roughly_bones_human	Hard	Roughly how many bones are there in one human hand?	27	12	19	35
+bio_newborn_babies_keep	Hard	Newborn babies keep warm partly by burning which special tissue?	Brown fat	White belly fat	Liver starch	Bone marrow
+bio_organ_pregnancy_grown	Hard	Which organ of pregnancy is grown by the baby, not by the mother?	The placenta	The womb	The ovaries	The breasts
+bio_body_serotonin_feel	Hard	Most of the body's serotonin, a famous 'feel-good' brain chemical, is made where?	In the gut	In the brain	In the liver	In the skin
+bio_nerve_means_wandering	Hard	Which nerve, whose name means 'wandering', links the brain to the heart, lungs and gut?	The vagus nerve	The sciatic nerve	The phrenic nerve	The trigeminal nerve
+bio_david_bowie_eyes	Hard	Why did David Bowie's eyes seem to be two different colours?	One pupil stayed wide after a punch	He wore one tinted contact lens	He was born with two eye colours	An infection bleached one iris
+bio_charles_osborne_holds	Hard	Charles Osborne holds the record for hiccuping non-stop for roughly how long?	About 68 years	About 8 years	About 6 months	About 3 weeks
+bio_mainly_gives_poo	Hard	What mainly gives poo its brown colour?	Leftovers of old red blood cells	Dead bacteria from the gut	Chlorophyll from vegetables	Burnt fat from digestion
+bio_top_vertebra_spine	Hard	The top vertebra of the spine, which holds up your skull, is named after which Titan?	Atlas	Cronus	Prometheus	Hyperion
+bio_artery_unusual_because	Hard	Which artery is unusual because it carries oxygen-poor blood?	The pulmonary artery	The aorta	The femoral artery	The coronary artery
+bio_nostril_usually_breathe	Hard	Why does one nostril usually breathe more easily than the other?	The two take turns swelling up	One nostril is only for smelling	The heart presses on one side	One lung works harder
+bio_factor_makes_blood	Hard	The 'Rh' factor that makes a blood type 'positive' or 'negative' is named after which animal?	The rhesus monkey	The rhinoceros	The rabbit	The rat
+bio_philtrum	Hard	What is the 'philtrum'?	The groove between your nose and upper lip	The dip at the base of your throat	The crease inside your elbow	The fold at the corner of your eye
+bio_abundant_protein_human	Hard	Which is the most abundant protein in the human body?	Collagen	Keratin	Haemoglobin	Insulin
+bio_muscles_bend_fingers	Hard	Where are most of the muscles that bend your fingers?	In the forearm	Inside the fingers themselves	In the upper arm	In the wrist bones
+bio_skin_cells_replaced	Hard	Skin cells are replaced all the time, so why do tattoos stay?	The ink sits deeper, held by immune cells	The ink binds to the bone underneath	New skin cells copy the ink pattern	Tattoo ink stops the skin from renewing
+bio_blue_eyes_contain	Hard	Blue eyes contain no blue pigment. Why do they look blue?	The iris scatters light, like the sky does	Blood vessels behind the iris show through	A thin film of tears tints them	They hold a special copper pigment
+bio_microscopic_demodex_mites	Hard	Microscopic Demodex mites live where on almost every adult?	In the hair follicles of the face	Under the nails of the toes	Deep inside the lungs	Inside the bone marrow
+bio_small_pink_fold	Hard	The small pink fold in the inner corner of your eye is thought to be a leftover of what?	A third eyelid	A tear gland	A gill slit	An extra eye
+bio_bone_rebuilt_all	Hard	Bone is rebuilt all the time. Roughly how often is the whole adult skeleton replaced?	About every 10 years	Every year	About every 50 years	Never
+bio_some_scientists_think	Hard	Some scientists think the appendix may be useful as a 'safe house' for what?	Helpful gut bacteria	Spare red blood cells	Stored vitamin B12	Swallowed stomach acid
+bio_wounds_part_body	Hard	Wounds in which part of the body usually heal fastest and with the least scarring?	Inside the mouth	On the back	On the knees	On the scalp
+bio_roughly_oxygen_still	Hard	Roughly how much oxygen is still left in the air you breathe out?	About 16%	About 1%	None at all	About 50%
+bio_hold_breath_mainly	Hard	When you hold your breath, what mainly creates the urge to breathe again?	Rising carbon dioxide	Falling blood sugar	Rising body temperature	A tired diaphragm
+trv_serce_dziennie	Hard	Roughly how many times does the human heart beat in a day?	About 100,000	About 10,000	About 1,000,000	About 25,000
+bio_wlosy_liczba	Hard	About how many hairs grow on an average human head?	About 100,000	About 10,000	About 1 million	About 20,000
+bio_nie_narzad	Hard	Which of these is NOT an organ of the human body?	The gizzard	The spleen	The thymus	The gallbladder
+bio_noworodek_rzepka	Hard	Newborn babies don't yet have a bony version of which bone?	The kneecap	The skull	The jawbone	The collarbone
+bio_oddechy	Hard	Roughly how many breaths does an adult take in a day?	About 20,000	About 2,000	About 200,000	About 500
+bio_roughly_vertebrae_make	Hard	Roughly how many vertebrae make up the human spine?	33	12	52	206
+bio_sore_muscles_day	Hard	Sore muscles a day or two after a hard workout mainly come from what?	Tiny tears in muscle fibres	Lactic acid left in muscles	Calcium leaking from bones	Water lost from the muscles
+bio_major_joint_often	Hard	Which major joint is the one most often dislocated?	The shoulder	The knee	The hip	The elbow
+bio_time_day_body	Hard	At what time of day is your body temperature usually at its lowest?	A few hours before waking	Just after a big lunch	In the late afternoon	Late in the evening
+bio_iron_adult_body	Hard	The iron in an adult's body would be enough to make roughly what?	One small nail	A dinner knife	A horseshoe	A frying pan
+bio_makes_lub_dub	Hard	What makes the 'lub-dub' sound of a heartbeat?	Heart valves snapping shut	Blood hitting the ribs	Air moving in the lungs	Arteries stretching
+bio_roughly_adult_human	Hard	Roughly how much does an adult human heart weigh?	About 300 g	About 50 g	About 1.5 kg	About 3 kg
+bio_person_two_eyes	Hard	What is it called when a person's two eyes are different colours?	Heterochromia	Albinism	Anisocoria	Astigmatism
+bio_newborn_babies_reflex	Hard	Newborn babies have a reflex that makes them do what when their face goes underwater?	Hold their breath	Start crying	Breathe faster	Fall asleep
+bio_charley_horse	Hard	What is a 'charley horse'?	A sudden painful muscle cramp	A sprained wrist	A horse-riding injury	A bad case of hiccups
+bio_soft_spot_newborn	Hard	What is the soft spot on a newborn baby's head called?	The fontanelle	The temple	The crown	The occiput
+bio_medical_tailbone	Hard	What is the medical name for the tailbone?	The coccyx	The sacrum	The pelvis	The patella
+bio_frenchwoman_jeanne_calment	Hard	Frenchwoman Jeanne Calment holds the record for the longest officially confirmed human life. How old did she live to be?	122	108	115	131
+bio_common_male_baldness	Hard	Common male baldness is driven mainly by genes and what?	A hormone made from testosterone	Wearing hats too often	Washing the hair every day	Too much sun on the scalp
+bio_hormone_made_mainly	Hard	Which hormone, made mainly in the stomach, is nicknamed the 'hunger hormone'?	Ghrelin	Leptin	Cortisol	Insulin
+bio_few_weeks_newborn	Hard	For their first few weeks, newborn babies usually cry without what?	Tears	Any sound	Opening their mouth	Moving their arms
+bio_roughly_body_calcium	Hard	Roughly how much of the body's calcium is stored in the bones and teeth?	About 99%	About 50%	About 25%	About 10%
+bio_roughly_long_meal	Hard	Roughly how long does a meal take to pass through the whole digestive system?	About one to three days	About two hours	About two weeks	About fifteen minutes
+bio_old_worn_out	Hard	Old, worn-out red blood cells are broken down mainly in which organ?	The spleen	The pancreas	The kidneys	The bladder
+bio_amylaza	Hard	Which enzyme in saliva breaks down starch?	Amylase	Pepsin	Lipase	Trypsin
+wld_bio_zoladek_nowy	Hard	How often does the lining of your stomach renew itself?	Every few days	Every few years	Once in a lifetime	Every hour
+biox_miesien_ucho	Hard	Where is the smallest muscle in the human body?	In the ear	In the eyelid	In the little finger	In the nose
+biox_zielone_oczy	Hard	Which is thought to be the rarest of the common natural eye colours?	Green	Brown	Blue	Hazel
+cur_rogowka_tlen	Expert	Which part of the body gets its oxygen straight from the air rather than from blood?	The cornea	The eardrum	The fingernails	The tongue
+bio_zlota_krew	Expert	Rh-null blood, found in only a few dozen known people, is nicknamed what?	Golden blood	Royal blood	Blue blood	Silver blood
+bio_krwinki_sekunda	Expert	Roughly how many new red blood cells does your body make every second?	About 2 million	About 200	About 20,000	About 2 billion
+biox_lzy_rodzaje	Expert	How many kinds of tears do human eyes make?	Three	One	Two	Five
+bio_part_digestive_system	Expert	Which part of the digestive system was reclassified as a single continuous organ in 2016?	The mesentery	The appendix	The peritoneum	The gallbladder
+bio_organ_immune_cells	Expert	Which organ, where immune T cells mature, slowly turns mostly into fat in adults?	The thymus	The spleen	The pancreas	The tonsils
+bio_birth_organ_makes	Expert	Before birth, which organ makes most of a fetus's blood cells for several months?	The liver	The heart	The kidneys	The lungs
+bio_people_born_without	Expert	Many people are born without which forearm muscle, with no loss of strength?	The palmaris longus	The brachioradialis	The pronator teres	The flexor digitorum
+bio_epo_hormone_abused	Expert	EPO, the hormone abused by some doping cyclists, is mainly made by which organ?	The kidneys	The liver	The pancreas	The adrenal glands
+bio_medical_hiccups	Expert	What is the medical name for hiccups?	Singultus	Eructation	Borborygmus	Sternutation
+bio_smooth_area_between	Expert	What is the name for the smooth area between the eyebrows?	Glabella	Philtrum	Lunula	Canthus
+bio_proteins_body_among	Expert	Which proteins in your body are among the oldest, made before birth and never replaced?	Those in the eye's lens	Those in the heart muscle	Those in the skull bones	Those in the liver
+bio_darwin_tubercle_small	Expert	Darwin's tubercle is a small bump that some people have on which part of the body?	The ear	The elbow	The skull	The shinbone
+bio_uncombable_hair_syndrome	Expert	In 'uncombable hair syndrome', why does the hair stick out and refuse to lie flat?	Its strands are triangular, not round	It is full of static electricity	It grows twice as fast	It contains no keratin
+bio_bones_tooth_enamel	Expert	Bones and tooth enamel get their hardness mainly from crystals of which mineral?	Hydroxyapatite	Calcite	Quartz	Gypsum
+bio_cells_body_each	Expert	Which cells in your body each carry hundreds of nuclei?	Skeletal muscle fibres	Red blood cells	Nerve cells	Skin cells
+bio_hormone_made_fat	Expert	Which hormone, made by fat cells, tells the brain how much energy the body has stored?	Leptin	Glucagon	Gastrin	Thyroxine
+bio2_krew_ph	Expert	What is the normal pH of human blood?	About 7.4	About 5.5	About 8.5	Exactly 7.0
+ext_jelito_powierzchnia	Expert	Counting all its folds, roughly what area does the lining of the human small intestine cover?	About 30 m2	About 3 m2	About 300 m2	About 3,000 m2
+bio_unusual_people_born	Expert	What is unusual about people born with 'situs inversus'?	Their organs are mirror-imaged	Their blood has no type	Their heart has only two chambers	They feel no pain at all
+bio_alcohol_makes_urinate	Expert	Alcohol makes you urinate more because it blocks which hormone?	Vasopressin	Insulin	Melatonin	Cortisol
+bio_second_half_pregnancy	Expert	In the second half of pregnancy, most of the fluid around an unborn baby comes from where?	The baby's own urine	The mother's stomach	The baby's tears	The mother's lymph nodes
+bio_kind_joint_base	Expert	Which kind of joint at the base of your thumb lets it swing across the palm?	A saddle joint	A hinge joint	A pivot joint	A ball-and-socket joint
+bio_parts_body_sweat	Expert	Which of these parts of the body has no sweat glands at all?	The lips	The palms	The forehead	The armpits

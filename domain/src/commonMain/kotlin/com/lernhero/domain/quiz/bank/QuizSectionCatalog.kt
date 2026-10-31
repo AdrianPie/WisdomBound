@@ -133,6 +133,12 @@ object QuizSectionCatalog {
         QuizSection("pop_culture/music", "Pop & Rock Music", "🎸", QuizCategory.PopCulture),
         QuizSection("pop_culture/animation", "Cartoons & Comics", "🐭", QuizCategory.PopCulture),
         QuizSection("pop_culture/games", "Video Games", "🎮", QuizCategory.PopCulture),
-        QuizSection("pop_culture/brands", "Brands, Toys & Internet", "🧸", QuizCategory.PopCulture)
+        QuizSection("pop_culture/brands", "Brands, Toys & Internet", "🧸", QuizCategory.PopCulture),
+        QuizSection("biology/human_body", "Human Body", "🫀", QuizCategory.Biology),
+        QuizSection("biology/brain_senses", "Brain & Senses", "🧠", QuizCategory.Biology),
+        QuizSection("biology/health", "Health & Medicine", "💊", QuizCategory.Biology),
+        QuizSection("biology/plants", "Plants & Fungi", "🌿", QuizCategory.Biology),
+        QuizSection("biology/food", "Food Science", "🍎", QuizCategory.Biology),
+        QuizSection("biology/life", "Cells, Genes & Evolution", "🧬", QuizCategory.Biology)
     )
 }

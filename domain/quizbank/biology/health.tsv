@@ -1,0 +1,137 @@
+# Health & Medicine: medicine, diseases, vaccines, doctors, health myths
+#
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+bio_szkorbut	Easy	Sailors once got scurvy from a lack of which vitamin?	Vitamin C	Vitamin A	Vitamin D	Vitamin B12
+bio_placebo	Easy	What is it called when a fake pill makes someone feel better?	The placebo effect	The nocebo effect	The Hawthorne effect	The domino effect
+bio_dermatolog	Easy	What is a doctor who specialises in skin called?	A dermatologist	A cardiologist	A neurologist	An ophthalmologist
+bio_woda_przezycie	Easy	Roughly how long can a person survive without drinking water?	About three days	About three hours	About three weeks	About three months
+bio_body_system_fights	Easy	Which body system fights off germs and disease?	The immune system	The nervous system	The digestive system	The endocrine system
+bio_disease_affects_body	Easy	Which disease affects how the body uses insulin to control blood sugar?	Diabetes	Asthma	Anaemia	Arthritis
+bio_heimlich_manoeuvre_used	Easy	What is the Heimlich manoeuvre used for?	Helping someone who is choking	Waking someone who has fainted	Setting a broken arm	Stopping a nosebleed
+bio_hay_fever_allergy	Easy	What is hay fever an allergy to?	Pollen	Dust	Hay	Cat hair
+bio_disease_mosquitoes_spread	Easy	Which disease do mosquitoes spread in tropical countries, causing fever and chills?	Malaria	Cholera	Tuberculosis	Measles
+bio_instrument_doctor_use	Easy	Which instrument does a doctor use to listen to your heart and lungs?	A stethoscope	A thermometer	An otoscope	A sphygmomanometer
+bio_organ_damaged_stroke	Easy	Which organ is damaged by a stroke?	The brain	The heart	The lungs	The liver
+bio_fracture	Easy	What is a fracture?	A broken bone	A torn muscle	A deep cut	A bad bruise
+bio_organ_asthma_affect	Easy	Which organ does asthma affect?	The lungs	The heart	The stomach	The liver
+bio_losing_sense_became	Easy	Losing which sense became a telltale early sign of COVID-19?	Smell	Hearing	Sight	Touch
+bio_lyme_disease_spread	Easy	Lyme disease is spread by the bite of which creature?	Ticks	Mosquitoes	Fleas	Bedbugs
+bio_raw_eggs_undercooked	Easy	Raw eggs and undercooked chicken are classic sources of which food-poisoning bacteria?	Salmonella	Lactobacillus	Bifidobacterium	Rhizobium
+bio_health_agencies_say	Easy	Health agencies say you should scrub your hands with soap for at least how long?	About 20 seconds	About 3 seconds	About 2 minutes	About 5 minutes
+bio_nurse_wraps_cuff	Easy	A nurse wraps a cuff around your upper arm and pumps it up. What is being measured?	Blood pressure	Blood sugar	Body fat	Lung power
+bio_virus_causes_aids	Easy	Which virus causes AIDS?	HIV	HPV	Ebola	Rabies
+bio_actually_makes_holes	Easy	What actually makes holes in your teeth?	Acid made by bacteria eating sugar	Sugar dissolving the enamel itself	Hot drinks cracking the enamel	Chewing hard food too often
+bio_heart_pacemaker	Easy	What does a heart pacemaker do?	Keeps the heartbeat steady	Pumps air into the lungs	Cleans toxins from the blood	Measures blood sugar
+bio_classic_sign_not	Easy	Which of these is a classic sign that you are not drinking enough water?	Dark yellow urine	Pale, clear urine	Frequent sneezing	Hiccups
+bio_substance_added_tap	Easy	Which substance is added to tap water in many countries to help protect teeth?	Fluoride	Chlorine	Iodine	Calcium
+bio_body_temperature_drops	Easy	What is it called when your body temperature drops dangerously low?	Hypothermia	Hyperthermia	Hypoglycaemia	Hypertension
+bio_newborns_get_mild	Easy	Many newborns get mild jaundice in their first week. What colour does it turn their skin?	Yellow	Blue	Red	Grey
+bio_kind_specialist_fits	Easy	Which kind of specialist fits braces to straighten teeth?	An orthodontist	A podiatrist	An optometrist	A periodontist
+bio_caesarean_section	Easy	What is a Caesarean section?	Birth through a cut in the belly	A cut to remove the appendix	A kind of spinal injection	A cut to drain the lungs
+bio_slipped_disc_problem	Easy	A 'slipped disc' is a problem in which part of the body?	The spine	The knee	The jaw	The hip
+bio_condition_makes_bones	Easy	Which condition makes bones thin and brittle, especially in older women?	Osteoporosis	Arthritis	Scoliosis	Rickets
+bio_organ_cardiologist_treat	Easy	Which organ does a cardiologist treat?	The heart	The skin	The kidneys	The bones
+bio_best_aid_small	Easy	What is the best first aid for a small burn on your hand?	Cool it under running water	Rub butter on it	Hold ice right against it	Pop the blisters at once
+bio_kind_doctor_specialises	Easy	Which kind of doctor specialises in treating babies and children?	A paediatrician	A podiatrist	A geriatrician	An obstetrician
+bio_people_coeliac_disease	Easy	People with coeliac disease fall ill when they eat which substance?	Gluten	Lactose	Caffeine	Fructose
+bio_roughly_long_simple	Easy	Roughly how long does a simple broken arm take to heal in an adult?	About six weeks	About six days	About six months	About two years
+bio_vaccine_teach_immune	Easy	What does a vaccine teach your immune system to do?	Recognise a germ before it strikes	Kill every bacterium in the body	Make extra red blood cells	Stop you ever getting a fever
+bio_witamina_d	Easy	Which vitamin does the body produce from sunlight?	Vitamin D	Vitamin C	Vitamin A	Vitamin B12
+bio3_uv_dna	Easy	Which part of sunlight damages DNA in skin cells and causes sunburn?	Ultraviolet radiation	Infrared radiation	Visible light	Radio waves
+bio_szczepionka_mrna	Easy	The first mRNA vaccines approved for wide use protected against which disease?	COVID-19	Measles	Influenza	Polio
+bio_defibrillator	Easy	What does a defibrillator do?	Shocks the heart back into rhythm	Helps a patient to breathe	Measures blood sugar	Filters the blood
+bio_aid_unconscious_person	Easy	In first aid, why is an unconscious person put in the recovery position?	To keep their airway clear	To send more blood to the brain	To slow down their heartbeat	To help them wake up sooner
+bio_body_mass_index	Easy	Body mass index, or BMI, compares a person's weight with what?	Their height	Their waist size	Their age	Their body fat
+trv_goraczka_cel	Medium	What is the purpose of a fever?	Making the body a worse place for germs	Cooling the brain during an illness	Burning off the body's spare fat	Speeding up digestion while ill
+bio_jenner	Medium	Who created the first vaccine, against smallpox, in 1796?	Edward Jenner	Louis Pasteur	Robert Koch	Joseph Lister
+bio_ospa	Medium	Which is the only human disease that has been wiped out worldwide?	Smallpox	Polio	Measles	Malaria
+bio_cpr_stand	Medium	What does CPR stand for?	Cardiopulmonary resuscitation	Cardiac pressure release	Central pulse recovery	Critical patient revival
+bio_organ_hepatitis_attack	Medium	Which organ does hepatitis attack?	The liver	The kidneys	The lungs	The heart
+bio_medical_short_sightedness	Medium	What is the medical name for short-sightedness?	Myopia	Hyperopia	Astigmatism	Glaucoma
+bio_medical_high_blood	Medium	What is the medical name for high blood pressure?	Hypertension	Hypotension	Hyperglycaemia	Tachycardia
+bio_common_painkiller_made	Medium	Which common painkiller was first made from a chemical in willow bark?	Aspirin	Paracetamol	Ibuprofen	Morphine
+bio_besides_measles_mumps	Medium	Besides measles and mumps, which disease does the MMR vaccine protect against?	Rubella	Malaria	Rabies	Tetanus
+bio_created_vaccine_against	Medium	Who created the first vaccine against rabies, in 1885?	Louis Pasteur	Edward Jenner	Robert Koch	Joseph Lister
+bio_part_mouth_gingivitis	Medium	Which part of the mouth does gingivitis affect?	The gums	The tongue	The teeth	The lips
+bio_disease_lockjaw	Medium	Which disease is also known as 'lockjaw'?	Tetanus	Rabies	Diphtheria	Polio
+bio_cataracts_cloud_part	Medium	Cataracts cloud which part of the eye?	The lens	The retina	The cornea	The iris
+bio_lack_vitamin_causes	Medium	Lack of which vitamin causes rickets, leaving children with soft, bowed bones?	Vitamin D	Vitamin C	Vitamin B12	Vitamin K
+bio_rabies_once_hydrophobia	Medium	Rabies was once called 'hydrophobia'. What does that word mean?	Fear of water	Fear of dogs	Fear of light	Fear of the dark
+bio_life_threatening_allergic	Medium	Which life-threatening allergic reaction is treated with an auto-injector pen such as an EpiPen?	Anaphylaxis	Eczema	Hay fever	Psoriasis
+bio_ecg_record	Medium	What does an ECG record?	The heart's electrical activity	Waves of brain activity	How much air the lungs hold	Sugar levels in the blood
+bio_diseases_contagious	Medium	Which of these diseases is the most contagious?	Measles	Ebola	HIV	Leprosy
+bio_mumps_famously_causes	Medium	Mumps famously causes puffy cheeks by swelling which glands?	The salivary glands	The thyroid	The tear glands	The sweat glands
+bio_carpal_tunnel_syndrome	Medium	Carpal tunnel syndrome squeezes a nerve in which part of the body?	The wrist	The neck	The ankle	The elbow
+bio_white_coat_syndrome	Medium	What is 'white coat syndrome'?	Blood pressure rising at the doctor's	Fear of the colour white	Pale skin from hospital work	A rash from latex gloves
+bio_roughly_blood_taken	Medium	Roughly how much blood is taken in a standard blood donation?	About half a litre	About 2 litres	About 50 ml	About 1.5 litres
+bio_cold_sores_around	Medium	Cold sores around the lips are caused by what?	A herpes virus	Eating too much salt	A lack of vitamin C	Biting the lip
+bio_still_vaccine_against	Medium	Why is there still no vaccine against the common cold?	Over a hundred different viruses cause it	Colds are caused by bacteria, not viruses	The cold virus is too small to see	Colds are caused by cold air itself
+bio_red_stinging_eyes	Medium	Red, stinging eyes after a swim in a pool come mainly from chlorine reacting with what?	Swimmers' sweat and urine	Rust from the pipes	Algae in the water	The pool's painted tiles
+bio_hiv_weakens_body	Medium	HIV weakens the body by destroying which cells?	Immune cells called T cells	Red blood cells	Nerve cells in the spine	Cells lining the lungs
+bio_vitamin_women_advised	Medium	Which vitamin are women advised to take before and early in pregnancy to protect the baby's spine?	Folic acid	Vitamin C	Vitamin K	Vitamin E
+bio_should_babies_under	Medium	Why should babies under one year old never be given honey?	It can carry botulism spores	Its sugar damages baby teeth	It blocks the absorption of milk	It often contains bee venom
+bio_parasite_grow_several	Medium	Which parasite can grow several metres long inside a human gut?	The tapeworm	The pinworm	The hookworm	The roundworm
+bio_conjunctivitis_infection_part	Medium	Conjunctivitis is an infection of which part of the body?	The eye	The ear	The throat	The skin
+bio_despite_actually_causes	Medium	Despite its name, what actually causes the skin infection ringworm?	A fungus	A tiny worm	A virus	A mite
+bio_sprained_ankle_really	Medium	What is a sprained ankle, really?	Stretched or torn ligaments	A cracked ankle bone	A pulled nerve	A dislocated kneecap
+bio_right_way_stop	Medium	What is the right way to stop a nosebleed?	Lean forward and pinch the nose	Tilt the head far back and wait	Lie down flat on your back	Blow the nose hard to clear it
+bio_actually_makes_mosquito	Medium	What actually makes a mosquito bite itch?	Your body reacting to its saliva	Venom left in the skin	An egg laid under the skin	Scratches from its legs
+bio_glaucoma_disease_steal	Medium	Glaucoma is a disease that can steal which sense?	Sight	Hearing	Smell	Taste
+bio_hemofilia_krolewska	Medium	Which illness was called 'the royal disease' because it ran through Queen Victoria's descendants?	Haemophilia	Gout	Porphyria	Smallpox
+bio_mri_scanner_use	Medium	What does an MRI scanner use to see inside the body?	Strong magnets and radio waves	A low dose of X-rays	High-frequency sound waves	Radioactive tracers in the blood
+bio_common_pertussis	Medium	What is the common name for pertussis?	Whooping cough	Chickenpox	Measles	Mumps
+bio_fruit_juice_dangerously	Medium	Which fruit's juice can dangerously boost the strength of many medicines?	Grapefruit	Banana	Apple	Pineapple
+bio_takotsubo_cardiomyopathy_sudden	Medium	Takotsubo cardiomyopathy, a sudden weakening of the heart after severe stress, is nicknamed what?	Broken heart syndrome	Athlete's heart	Heart of stone	Soldier's heart
+bio_rhinoviruses_common_cause	Medium	Rhinoviruses, the most common cause of colds, are named after the Greek word for what?	The nose	The throat	Mucus	Fever
+bio_some_hospitals_put	Medium	Why do some hospitals put live fly maggots into patients' wounds?	To eat away the dead tissue	To keep mosquitoes away	To warm the wound	To pull the skin together
+bio3_leki_mozg	Hard	Why do many drugs that work elsewhere in the body fail to treat brain disease?	They cannot cross the blood-brain barrier	The brain has no blood supply	The brain destroys every drug at once	Brain cells have no receptors
+bio_przeszczep_nerka	Hard	Which organ was the first to be transplanted successfully, in 1954?	A kidney	A heart	A liver	A lung
+bio_medical_heart_attack	Hard	What is the medical name for a heart attack?	Myocardial infarction	Cardiac arrhythmia	Pulmonary embolism	Cerebral aneurysm
+bio_roughly_share_world	Hard	Roughly what share of the world's adults have trouble digesting milk sugar?	About two-thirds	About 5%	About a quarter	Almost all
+bio_down_syndrome_caused	Hard	Down syndrome is caused by an extra copy of which chromosome?	Chromosome 21	Chromosome 1	The X chromosome	The Y chromosome
+bio_garden_flower_gave	Hard	Which garden flower gave doctors digitalis, a drug for the heart?	The foxglove	The tulip	The bluebell	The daffodil
+bio_nicotine_jean_nicot	Hard	Nicotine is named after Jean Nicot. What did he do?	Brought tobacco to the French court	Proved that tobacco causes cancer	Invented the tobacco pipe	Rolled the first cigarette
+bio_barry_marshall_prove	Hard	How did Barry Marshall prove that bacteria cause stomach ulcers?	He drank a culture of them	He cured his own ulcer with yogurt	He infected lab rats with them	He found them in ancient mummies
+bio_nocebo_effect	Hard	What is the 'nocebo effect'?	Feeling worse because you expect harm	A drug that blocks painkillers	Pain that fades on its own	Getting used to a medicine
+bio_lack_vitamin_causes_2	Hard	Lack of which vitamin causes beriberi, once common where people lived on polished rice?	Vitamin B1	Vitamin C	Vitamin D	Vitamin A
+bio_bite_lone_star	Hard	A bite from the lone star tick can leave people allergic to what?	Red meat	Peanuts	Shellfish	Sunlight
+bio_landmark_2015_study	Hard	A landmark 2015 study found that babies at high risk of peanut allergy were best protected by what?	Eating peanut foods early and often	Avoiding peanuts until age three	Taking a daily antihistamine	Drinking only goat's milk
+bio_scottish_nurse_joy	Hard	Scottish nurse Joy Milne amazed scientists because she could detect which disease by smell?	Parkinson's disease	Multiple sclerosis	Asthma	Malaria
+bio_studies_suggest_people	Hard	Studies suggest that people with natural red hair often need more of what during surgery?	Anaesthetic	Vitamin C	Oxygen	Stitches
+bio_newborn_babies_routinely	Hard	Why are newborn babies routinely given a vitamin K injection?	They have too little to clot blood	It helps their eyes to open	It protects them from jaundice	It speeds up their bone growth
+bio_kwashiorkor_gives_starving	Hard	Kwashiorkor, which gives starving children swollen bellies, is caused mainly by a lack of what?	Protein	Vitamin C	Iodine	Water
+bio_disease_spread_body	Hard	Which disease, spread by body lice, killed huge numbers in war camps and prisons?	Typhus	Typhoid	Cholera	Malaria
+bio_arrow_poison_curare	Hard	The arrow poison curare, used by South American hunters, kills by doing what?	Paralysing the muscles	Stopping blood clotting	Destroying red blood cells	Shutting down the liver
+bio_hdl	Hard	Which type of cholesterol is often called 'good' cholesterol?	HDL	LDL	VLDL	IDL
+bio_everyday_varicella_itchy	Hard	What is the everyday name for varicella, an itchy childhood illness?	Chickenpox	Measles	Mumps	Rubella
+bio_disease_spread_bite	Hard	Which disease is spread by the bite of the tsetse fly?	Sleeping sickness	Malaria	Yellow fever	Dengue
+bio_gout_disease_kings	Hard	Gout, the 'disease of kings', most often strikes which part of the body?	The big toe	The knee	The elbow	The spine
+bio_doctor_discovered_insulin	Hard	Which doctor discovered insulin with Charles Best in 1921?	Frederick Banting	Alexander Fleming	Joseph Lister	William Osler
+bio_botox_injections_use	Hard	Botox injections use a toxin from the bacteria behind which illness?	Botulism	Tetanus	Cholera	Anthrax
+bio_shingles_caused_virus	Hard	Shingles is caused by which virus waking up again, often decades later?	The chickenpox virus	The flu virus	The measles virus	The mumps virus
+bio_disease_cancer_comes	Hard	The disease name 'cancer' comes from an ancient word for which animal?	The crab	The scorpion	The snake	The spider
+bio_mouthwash_brand_surgeon	Hard	Which mouthwash brand is named after the surgeon who pioneered antiseptic surgery?	Listerine	Colgate	Corsodyl	Oral-B
+bio_kidney_stones_made	Hard	Most kidney stones are made mainly of what?	Calcium compounds	Cholesterol	Iron	Table salt
+bio_people_allergic_cats	Hard	Most people who are allergic to cats are reacting to what?	A protein from saliva and skin	The cat's hair itself	Fleas that live on cats	Dust from cat litter
+bio_doctor_traced_london	Hard	Which doctor traced a London cholera outbreak to a water pump in 1854?	John Snow	Edward Jenner	Joseph Lister	Florence Nightingale
+bio_kidney_transplants_happens	Hard	In most kidney transplants, what happens to the patient's old kidneys?	They stay in place	They are removed	They are frozen	They are donated
+bio2_prion	Hard	What is a prion?	An infectious, misfolded protein	An RNA virus	An anaerobic bacterium	A DNA fragment
+bio_harvey	Hard	Who first described how the heart pumps blood around the body, in 1628?	William Harvey	Galen	Andreas Vesalius	Leonardo da Vinci
+bio_barnard	Hard	Who performed the first human-to-human heart transplant, in 1967?	Christiaan Barnard	Michael DeBakey	Denton Cooley	Joseph Murray
+bioy_insulina	Hard	In which country was insulin first used to treat diabetes, in 1922?	Canada	Germany	Britain	The USA
+bio_unusual_transplant_cures	Hard	Which unusual 'transplant' cures most patients with stubborn C. difficile gut infections?	Faeces from a healthy donor	Blood from a recovered patient	A section of a pig's intestine	Bone marrow from a sibling
+bio_2013_angelina_jolie	Hard	In 2013 Angelina Jolie had preventive surgery after testing positive for a faulty version of which gene?	BRCA1	TP53	CFTR	APOE
+bio_2022_surgeons_kept	Hard	In 2022 surgeons kept a man alive for two months with a heart taken from which animal?	A gene-edited pig	A baboon	A chimpanzee	A cow
+bio_cattle_disease_declared	Expert	Which cattle disease, declared wiped out in 2011, was only the second disease ever eradicated?	Rinderpest	Foot-and-mouth disease	Mad cow disease	Anthrax
+bio_kuru_laughing_death	Expert	Kuru, the 'laughing death' of Papua New Guinea, spread through which practice?	Eating the dead at funerals	Drinking river water	Chewing betel nuts	Sharing tattoo needles
+bio_ergot_fungus_blamed	Expert	Ergot, a fungus blamed for medieval outbreaks of 'St Anthony's fire', grows mainly on which grain?	Rye	Rice	Maize	Oats
+bio_pellagra_once_common	Expert	Pellagra, once common where people lived mainly on maize, is caused by a lack of which vitamin?	Niacin (B3)	Vitamin C	Vitamin D	Vitamin A
+bio_2016_american_professor	Expert	In 2016 American professor Tom Patterson was saved from a deadly superbug infection by what unusual treatment?	Viruses that kill bacteria	Venom from a sea snail	Honey from New Zealand	Maggots fed into his gut
+bio_measles_cause_immune	Expert	Measles can cause 'immune amnesia'. What does that mean?	It wipes the body's memory of past infections	Patients forget their own childhood	It stops vaccines from ever working again	Patients forget they were ever ill
+bio_youyou_won_2015	Expert	Tu Youyou won a 2015 Nobel Prize for a malaria drug taken from which plant of old Chinese medicine?	Sweet wormwood	Ginseng	Ginkgo	Liquorice
+bio_children_conceived_dutch	Expert	Children conceived during the Dutch 'Hunger Winter' of 1944-45 later had higher rates of what?	Obesity and heart disease	Left-handedness	Red hair	Colour blindness
+bio_two_major_childhood	Expert	Two major childhood leukaemia drugs, vincristine and vinblastine, come from which plant?	The Madagascar periwinkle	The foxglove	The opium poppy	The autumn crocus
+bio_fatal_familial_insomnia	Expert	Fatal familial insomnia, in which sufferers gradually lose the ability to sleep, is caused by what?	A misfolded prion protein	A slow-acting virus	A parasite in the brain	A lack of melatonin
+bio_cases_parasitic_disease	Expert	Thanks largely to the Carter Center, cases of which parasitic disease fell from millions to a handful?	Guinea worm disease	Malaria	Hookworm	Sleeping sickness
+bio_australian_blood_donor	Expert	Australian blood donor James Harrison, 'the man with the golden arm', is credited with helping to save roughly how many babies?	About 2.4 million	About 2,400	About 24,000	About 240 million
+bio_leprosy_caused_close	Expert	Leprosy is caused by a close relative of the bacterium behind which disease?	Tuberculosis	Cholera	Syphilis	Plague
