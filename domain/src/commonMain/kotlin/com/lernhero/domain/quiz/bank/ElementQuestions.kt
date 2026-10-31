@@ -93,7 +93,17 @@ object ElementQuestions {
         q("ele_hand_sanitiser_gels", "Most hand sanitiser gels kill germs with which main ingredient?", "Alcohol", listOf("Bleach", "Vinegar", "Ammonia"), E),
         q("ele_mars_looks_red", "Mars looks red because its dust is rich in a compound of which element?", "Iron", listOf("Copper", "Sulfur", "Silicon"), E),
         q("ele_gas_fire_extinguishers", "Which gas do many fire extinguishers spray to smother flames without leaving a wet mess?", "Carbon dioxide", listOf("Helium", "Hydrogen", "Neon"), E),
-        q("ele_actually_makes_mood", "What actually makes a mood ring change colour?", "Changes in skin temperature", listOf("Changes in your mood hormones", "Sweat reacting with the metal", "Light from your pulse"), E)
+        q("ele_actually_makes_mood", "What actually makes a mood ring change colour?", "Changes in skin temperature", listOf("Changes in your mood hormones", "Sweat reacting with the metal", "Light from your pulse"), E),
+        q("ele_holes_swiss_cheeses", "The holes in Swiss cheeses such as Emmental are bubbles of which gas, made by bacteria?", "Carbon dioxide", listOf("Oxygen", "Methane", "Hydrogen"), E),
+        q("ele_kitchen_ingredient_makes", "Which kitchen ingredient makes a classic home-made 'volcano' fizz when vinegar is poured on it?", "Baking soda", listOf("Table salt", "Sugar", "Flour"), E),
+        q("ele_ordinary_window_glass", "Ordinary window glass is made mainly by melting what?", "Sand", listOf("Clay", "Salt", "Ash"), E),
+        q("ele_scale_pure_water", "On the pH scale, pure water has which value?", "7", listOf("0", "1", "14"), E),
+        q("ele_gas_hob_burning", "A gas hob burning properly gives a flame of which colour?", "Blue", listOf("Yellow", "Orange", "Red"), E),
+        q("ele_compound_rather_chemical", "Which of these is a compound rather than a chemical element?", "Water", listOf("Oxygen", "Gold", "Neon"), E),
+        q("ele_cheap_rings_leave", "Cheap rings can leave a green mark on your finger. Which metal causes it?", "Copper", listOf("Silver", "Tin", "Aluminium"), E),
+        q("ele_heavy_cast_frying", "Heavy 'cast' frying pans that must be seasoned with oil are made of which metal?", "Iron", listOf("Copper", "Aluminium", "Titanium"), E),
+        q("ele_water_filter_jugs", "Water-filter jugs trap impurities with an 'activated' form of which element?", "Carbon", listOf("Sulfur", "Silicon", "Calcium"), E),
+        q("ele_grey_powder_binds", "What is the grey powder that binds sand and gravel together into concrete?", "Cement", listOf("Plaster", "Clay", "Chalk"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -222,7 +232,28 @@ object ElementQuestions {
         q("ele_smell_seaside_comes", "The 'smell of the seaside' comes largely from a gas given off by plankton. Which element gives it its whiff?", "Sulfur", listOf("Iodine", "Chlorine", "Sodium"), M),
         q("ele_blonde_hair_turn", "Blonde hair can turn green after a lot of swimming. Which element is really to blame?", "Copper", listOf("Chlorine", "Iron", "Zinc"), M),
         q("ele_pink_stomach_remedy", "The pink stomach remedy Pepto-Bismol takes its name from which metal it contains?", "Bismuth", listOf("Barium", "Beryllium", "Magnesium"), M),
-        q("ele_perfectly_pure_water", "Perfectly pure water barely conducts electricity. What lets ordinary tap water conduct?", "Dissolved salts and minerals", listOf("Its oxygen atoms", "Its hydrogen atoms", "Tiny bubbles of air"), M)
+        q("ele_perfectly_pure_water", "Perfectly pure water barely conducts electricity. What lets ordinary tap water conduct?", "Dissolved salts and minerals", listOf("Its oxygen atoms", "Its hydrogen atoms", "Tiny bubbles of air"), M),
+        q("ele_cubic_zirconia_cheap", "Cubic zirconia, the cheap diamond lookalike, is a crystal of which metal's oxide?", "Zirconium", listOf("Titanium", "Silicon", "Aluminium"), M),
+        q("ele_car_catalytic_converter", "A car's catalytic converter turns poisonous carbon monoxide into what?", "Carbon dioxide", listOf("Methane", "Pure carbon", "Ozone"), M),
+        q("ele_octopus_blood_blue", "Octopus blood is blue because it carries oxygen using which metal instead of iron?", "Copper", listOf("Cobalt", "Zinc", "Manganese"), M),
+        q("ele_element_honours_russian", "Which element honours the Russian chemist who devised the periodic table?", "Mendelevium", listOf("Rutherfordium", "Einsteinium", "Bohrium"), M),
+        q("ele_element_102_nobelium", "Element 102, nobelium, honours which inventor of dynamite?", "Alfred Nobel", listOf("Thomas Edison", "Nikola Tesla", "Ernest Solvay"), M),
+        q("ele_chopping_onions_makes", "Chopping onions makes your eyes sting because they release a gas containing which element?", "Sulfur", listOf("Chlorine", "Nitrogen", "Phosphorus"), M),
+        q("ele_roughly_share_air", "Roughly what share of the air is carbon dioxide?", "About 0.04%", listOf("About 0.4%", "About 4%", "About 10%"), M),
+        q("ele_ray_gut_patients", "Before an X-ray of the gut, patients may drink a chalky 'meal' made from which element's compound?", "Barium", listOf("Calcium", "Lead", "Iodine"), M),
+        q("ele_crystals_copper_sulfate", "Crystals of copper sulfate, a favourite of school labs, are which colour?", "Bright blue", listOf("Bright red", "Yellow", "Purple"), M),
+        q("ele_acid_gives_green", "Which acid gives green apples their sharp taste?", "Malic acid", listOf("Citric acid", "Acetic acid", "Lactic acid"), M),
+        q("ele_ascorbic_acid_chemical", "Ascorbic acid is the chemical name of which vitamin?", "Vitamin C", listOf("Vitamin A", "Vitamin D", "Vitamin B12"), M),
+        q("ele_low_sodium_lite", "Low-sodium 'lite' table salts replace much of the sodium chloride with what?", "Potassium chloride", listOf("Calcium carbonate", "Magnesium sulfate", "Sodium bicarbonate"), M),
+        q("ele_haematite_means_blood", "Haematite, whose name means 'blood-like', is an ore of which metal?", "Iron", listOf("Copper", "Mercury", "Lead"), M),
+        q("ele_salt_spread_icy", "Why is salt spread on icy roads in winter?", "It lowers the freezing point of water", listOf("It heats up when it gets wet", "It soaks up sunlight", "It makes tyres grip the ice"), M),
+        q("ele_little_silica_gel", "What are the little 'silica gel' sachets in new shoe boxes for?", "Soaking up moisture", listOf("Killing bacteria", "Keeping insects away", "Hiding smells"), M),
+        q("ele_traditional_protective_aprons", "Traditional protective aprons worn during X-rays are lined with which metal?", "Lead", listOf("Copper", "Aluminium", "Zinc"), M),
+        q("ele_glasses_lenses_darken", "Glasses lenses that darken in sunlight traditionally contain tiny crystals of which metal's compounds?", "Silver", listOf("Gold", "Copper", "Platinum"), M),
+        q("ele_traditional_solder_electronics", "Traditional solder for electronics is an alloy of lead and which other metal?", "Tin", listOf("Zinc", "Nickel", "Aluminium"), M),
+        q("ele_fibrous_mineral_once", "Which fibrous mineral, once prized as fireproof insulation, was banned for causing lung disease?", "Asbestos", listOf("Talc", "Mica", "Gypsum"), M),
+        q("ele_superglue_hardens_almost", "Superglue hardens almost instantly when it reacts with what?", "Traces of water", listOf("Oxygen in the air", "Daylight", "Heat"), M),
+        q("ele_bone_china_gets", "Bone china gets its whiteness and strength from which added ingredient?", "Bone ash", listOf("Crushed shells", "Chalk dust", "Ground glass"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -330,7 +361,25 @@ object ElementQuestions {
         q("ele_vitamin_b12_vitamin", "Vitamin B12 is the only vitamin built around a metal atom. Which metal?", "Cobalt", listOf("Iron", "Zinc", "Magnesium"), H),
         q("ele_rub_little_metal", "Rub a little of which metal onto an aluminium can and the can soon turns brittle enough to poke a finger through?", "Gallium", listOf("Tin", "Lead", "Zinc"), H),
         q("ele_until_1950_soft", "Until about 1950, the soft drink 7 Up contained a mood-calming compound of which element?", "Lithium", listOf("Potassium", "Bromine", "Sodium"), H),
-        q("ele_voyager_space_probes", "The Voyager space probes still run on heat from the decay of which element?", "Plutonium", listOf("Uranium", "Radium", "Polonium"), H)
+        q("ele_voyager_space_probes", "The Voyager space probes still run on heat from the decay of which element?", "Plutonium", listOf("Uranium", "Radium", "Polonium"), H),
+        q("ele_element_city_home", "Element 97 is named after which US city, home of a famous university laboratory?", "Berkeley", listOf("Livermore", "Pasadena", "Chicago"), H),
+        q("ele_element_marguerite_perey", "Which element did Marguerite Perey discover in 1939 and name after her country?", "Francium", listOf("Polonium", "Germanium", "Americium"), H),
+        q("ele_element_104_honours", "Element 104 honours which New Zealand-born physicist?", "Ernest Rutherford", listOf("Niels Bohr", "Ernest Lawrence", "Glenn Seaborg"), H),
+        q("ele_great_smog_london", "The Great Smog of London in 1952 was made deadly mainly by soot and which gas from burning coal?", "Sulfur dioxide", listOf("Ozone", "Chlorine", "Methane"), H),
+        q("ele_potassium_takes_potash", "Potassium takes its name from 'potash', which was made by soaking what in pots?", "Wood ashes", listOf("Sea water", "Animal bones", "Seaweed"), H),
+        q("ele_calcium_comes_latin", "Calcium's name comes from the Latin 'calx', meaning what?", "Lime", listOf("Bone", "Milk", "Shell"), H),
+        q("ele_military_ration_heaters", "US military ration heaters warm a meal when water is poured onto powder of which metal?", "Magnesium", listOf("Sodium", "Aluminium", "Zinc"), H),
+        q("ele_element_compounds_give", "Which element's compounds give fireworks an orange colour?", "Calcium", listOf("Potassium", "Lithium", "Magnesium"), H),
+        q("ele_just_two_brazil", "Just one or two Brazil nuts cover a whole day's need of which element?", "Selenium", listOf("Iodine", "Zinc", "Iron"), H),
+        q("ele_galena_shiny_grey", "Galena, the shiny grey crystal used in early 'crystal' radio sets, is the main ore of which metal?", "Lead", listOf("Tin", "Silver", "Zinc"), H),
+        q("ele_cinnabar_ground_bright", "Cinnabar, ground up for the bright red pigment vermilion, is an ore of which metal?", "Mercury", listOf("Copper", "Iron", "Lead"), H),
+        q("ele_colour_liquid_bromine", "What colour is liquid bromine?", "Dark red-brown", listOf("Pale yellow", "Silvery grey", "Bright green"), H),
+        q("ele_acid_makes_rhubarb", "Which acid makes rhubarb leaves poisonous?", "Oxalic acid", listOf("Formic acid", "Citric acid", "Malic acid"), H),
+        q("ele_wine_diamonds_harmless", "'Wine diamonds', the harmless crystals found on corks, are a salt of which acid?", "Tartaric acid", listOf("Citric acid", "Acetic acid", "Lactic acid"), H),
+        q("ele_backbone_every_dna", "The backbone of every DNA molecule contains sugar and groups built around which element?", "Phosphorus", listOf("Sulfur", "Iron", "Chlorine"), H),
+        q("ele_ordinary_alkaline_batteries", "Ordinary alkaline AA batteries contain zinc and an oxide of which metal?", "Manganese", listOf("Lithium", "Nickel", "Cadmium"), H),
+        q("ele_white_clay_hill", "Which white clay, named after a hill in China, is the key ingredient of porcelain?", "Kaolin", listOf("Bentonite", "Terracotta", "Fuller's earth"), H),
+        q("ele_cfcs_thinned_ozone", "The CFCs that thinned the ozone layer destroy ozone by releasing atoms of which element?", "Chlorine", listOf("Carbon", "Fluorine", "Hydrogen"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -402,6 +451,11 @@ object ElementQuestions {
         q("ele_element_comes_greek_3", "Which element's name comes from the Greek for 'heavy'?", "Barium", listOf("Lead", "Osmium", "Tungsten"), X),
         q("ele_fluorine_injured_killed", "Fluorine injured or killed several chemists who tried to isolate it. Who finally succeeded, in 1886?", "Henri Moissan", listOf("Humphry Davy", "Robert Bunsen", "William Ramsay"), X),
         q("ele_precious_pigment_ultramarine", "The precious pigment ultramarine, ground from lapis lazuli, owes its blue colour to which element?", "Sulfur", listOf("Cobalt", "Copper", "Iron"), X),
-        q("ele_rare_earth_element", "Which rare-earth element is named after the Finnish chemist who discovered the first rare earth, yttria, in 1794?", "Gadolinium", listOf("Samarium", "Europium", "Lutetium"), X)
+        q("ele_rare_earth_element", "Which rare-earth element is named after the Finnish chemist who discovered the first rare earth, yttria, in 1794?", "Gadolinium", listOf("Samarium", "Europium", "Lutetium"), X),
+        q("ele_smartphone_gorilla_glass", "Smartphone 'Gorilla Glass' is toughened by swapping its sodium for bigger ions of which element?", "Potassium", listOf("Lithium", "Calcium", "Magnesium"), X),
+        q("ele_gadolinium_honours_johan", "Gadolinium honours Johan Gadolin, a chemist from Turku in which present-day country?", "Finland", listOf("Sweden", "Norway", "Estonia"), X),
+        q("ele_james_webb_space", "The James Webb Space Telescope's gold-coated mirror segments are made of which light metal?", "Beryllium", listOf("Aluminium", "Titanium", "Magnesium"), X),
+        q("ele_last_stable_non", "Which was the last stable, non-radioactive element to be discovered, in 1925?", "Rhenium", listOf("Hafnium", "Technetium", "Francium"), X),
+        q("ele_liquid_alloy_gallium", "Which liquid alloy of gallium, indium and tin replaces mercury in some thermometers?", "Galinstan", listOf("Amalgam", "Solder", "Nitinol"), X)
     )
 }

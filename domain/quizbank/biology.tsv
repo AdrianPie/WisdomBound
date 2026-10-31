@@ -162,6 +162,15 @@ bio_right_way_stop	Easy	What is the right way to stop a nosebleed?	Lean forward 
 bio_stop_noticing_smell	Easy	Why do you stop noticing the smell of your own home after a while?	Your brain tunes out constant smells	Dust slowly blocks your nose	Home smells fade within an hour	Your smell nerves get worn out
 bio_actually_makes_mosquito	Easy	What actually makes a mosquito bite itch?	Your body reacting to its saliva	Venom left in the skin	An egg laid under the skin	Scratches from its legs
 bio_fruit_float_across	Easy	Which fruit can float across an ocean and still sprout on a faraway beach?	The coconut	The mango	The banana	The pineapple
+bio_kind_doctor_specialises	Easy	Which kind of doctor specialises in treating babies and children?	A paediatrician	A podiatrist	A geriatrician	An obstetrician
+bio_organ_goodness_food	Easy	In which organ is most of the goodness from food absorbed into the blood?	The small intestine	The stomach	The large intestine	The liver
+bio_people_coeliac_disease	Easy	People with coeliac disease fall ill when they eat which substance?	Gluten	Lactose	Caffeine	Fructose
+bio_main_job_sneeze	Easy	What is the main job of a sneeze?	Blasting irritants out of the nose	Restarting the heartbeat	Pushing extra air into the lungs	Cooling down the brain
+bio_veins_look_blue	Easy	Veins look blue through the skin, but what colour is the blood inside them?	Dark red	Blue	Purple	Green
+bio_roughly_long_simple	Easy	Roughly how long does a simple broken arm take to heal in an adult?	About six weeks	About six days	About six months	About two years
+bio_vaccine_teach_immune	Easy	What does a vaccine teach your immune system to do?	Recognise a germ before it strikes	Kill every bacterium in the body	Make extra red blood cells	Stop you ever getting a fever
+bio_glaucoma_disease_steal	Easy	Glaucoma is a disease that can steal which sense?	Sight	Hearing	Smell	Taste
+bio_hair_turn_grey	Easy	Why does hair turn grey or white with age?	The roots stop making pigment	The hair dries out and fades	The scalp gets less blood	Sunlight bleaches it over time
 bio_chromosomy	Medium	How many chromosomes does a healthy human cell have?	46	23	48	44
 bio_chlorofil	Medium	Which pigment gives plants their green color?	Chlorophyll	Carotene	Melanin	Hemoglobin
 bio_insulina	Medium	Which organ produces insulin?	Pancreas	Liver	Kidneys	Thyroid
@@ -431,6 +440,30 @@ bio_stevia_sweetener_almost	Medium	Stevia, a sweetener with almost no calories, 
 bio_chilli_peppers_now	Medium	Chilli peppers, now at the heart of Indian and Thai cooking, first came from where?	The Americas	India	China	East Africa
 bio_tree_peeling_bark	Medium	Which tree's peeling bark reveals bright stripes of green, orange, blue and purple?	The rainbow eucalyptus	The paper birch	The dragon tree	The cork oak
 bio_astronauts_come_back	Medium	Astronauts come back from months in space a few centimetres taller. Why?	The discs in the spine expand	Their leg bones grow faster	Their muscles stretch out	Their skulls float upwards
+bio_contact_lenses_rest	Medium	Contact lenses rest on which clear, dome-shaped front layer of the eye?	The cornea	The retina	The lens	The sclera
+bio_stops_food_going	Medium	What stops food from going down your windpipe when you swallow?	A flap called the epiglottis	The uvula closing it off	The tongue blocking it	The tonsils squeezing shut
+bio_small_part_brain	Medium	Which small part of the brain acts as the body's thermostat?	The hypothalamus	The cerebellum	The hippocampus	The amygdala
+bio_hiv_weakens_body	Medium	HIV weakens the body by destroying which cells?	Immune cells called T cells	Red blood cells	Nerve cells in the spine	Cells lining the lungs
+bio_roughly_body_calcium	Medium	Roughly how much of the body's calcium is stored in the bones and teeth?	About 99%	About 50%	About 25%	About 10%
+bio_roughly_urine_healthy	Medium	Roughly how much urine can a healthy adult bladder comfortably hold?	About half a litre	About 50 millilitres	About three litres	About five litres
+bio_aid_unconscious_person	Medium	In first aid, why is an unconscious person put in the recovery position?	To keep their airway clear	To send more blood to the brain	To slow down their heartbeat	To help them wake up sooner
+bio_birds_happily_eat	Medium	Birds happily eat the hottest chilli peppers. Why?	They cannot feel the burning chemical	They have no taste buds at all	Their beaks block the heat	Their stomach acid cools it
+bio_kind_fat_common	Medium	Which kind of fat, common in old margarines, has been banned or limited in many countries as the most harmful?	Trans fat	Omega-3 fat	Olive oil fat	Fish oil fat
+bio_vitamin_women_advised	Medium	Which vitamin are women advised to take before and early in pregnancy to protect the baby's spine?	Folic acid	Vitamin C	Vitamin K	Vitamin E
+bio_should_babies_under	Medium	Why should babies under one year old never be given honey?	It can carry botulism spores	Its sugar damages baby teeth	It blocks the absorption of milk	It often contains bee venom
+bio_body_mass_index	Medium	Body mass index, or BMI, compares a person's weight with what?	Their height	Their waist size	Their age	Their body fat
+bio_light_colour_given	Medium	Light of which colour, given off by phone screens, most strongly delays the release of the sleep hormone?	Blue	Red	Yellow	Orange
+bio_science_disproved_old	Medium	Science has disproved the old 'tongue map'. Where on the tongue can you taste sweetness?	All over the tongue	Only at the tip	Only at the back	Only along the sides
+bio_truth_behind_claim	Medium	What is the truth behind the claim that we use only 10% of our brain?	It is a myth - we use all of it	It is true for most adults	It is true while we sleep	It is true of the left half
+bio_roughly_long_meal	Medium	Roughly how long does a meal take to pass through the whole digestive system?	About one to three days	About two hours	About two weeks	About fifteen minutes
+bio_hormone_often_stress	Medium	Which hormone, often called the 'stress hormone', naturally peaks shortly after you wake up?	Cortisol	Melatonin	Oxytocin	Insulin
+bio_parasite_grow_several	Medium	Which parasite can grow several metres long inside a human gut?	The tapeworm	The pinworm	The hookworm	The roundworm
+bio_eyes_potato_actually	Medium	The 'eyes' on a potato are actually what?	Buds that can grow new shoots	Old roots that have dried up	Seeds waiting to sprout	Bruises from harvesting
+bio_hydrangeas_often_flower	Medium	Hydrangeas often flower blue rather than pink in which kind of soil?	Acidic soil	Chalky soil	Alkaline soil	Salty soil
+bio_old_worn_out	Medium	Old, worn-out red blood cells are broken down mainly in which organ?	The spleen	The pancreas	The kidneys	The bladder
+bio_tree_cross_section	Medium	In a tree's cross-section, what does an unusually wide ring usually mean?	A good growing year	A very cold winter	A forest fire	An insect attack
+bio_seedless_grapes_seeds	Medium	Seedless grapes have no seeds, so how are new vines usually grown?	From cuttings of other vines	From seeds of wild grapes	From the skins of ripe grapes	From pollen spread by bees
+bio_mushroom_pick_fruiting	Medium	The mushroom you pick is only the fruiting body. Where is most of the fungus?	In threads spread through the soil	Packed inside the stalk	In spores drifting in the air	Folded inside the cap's gills
 bio_mejoza	Hard	What is the cell division that produces sex cells called?	Meiosis	Mitosis	Cytokinesis	Apoptosis
 bio_mendel	Hard	Who is considered the father of genetics for his research on peas?	Gregor Mendel	Charles Darwin	James Watson	Francis Crick
 bio_mozdzek	Hard	Which part of the brain is responsible for balance and movement coordination?	Cerebellum	Cerebral cortex	Medulla oblongata	Hypothalamus
@@ -632,6 +665,41 @@ bio_stroke_few_people	Hard	After a stroke, a few people find that their speech s
 bio_bone_rebuilt_all	Hard	Bone is rebuilt all the time. Roughly how often is the whole adult skeleton replaced?	About every 10 years	Every year	About every 50 years	Never
 bio_some_hospitals_put	Hard	Why do some hospitals put live fly maggots into patients' wounds?	To eat away the dead tissue	To keep mosquitoes away	To warm the wound	To pull the skin together
 bio_rice_wheat_maize	Hard	Rice, wheat, maize and sugar cane all belong to which plant family?	Grasses	Legumes	Lilies	Palms
+bio_kind_joint_base	Hard	Which kind of joint at the base of your thumb lets it swing across the palm?	A saddle joint	A hinge joint	A pivot joint	A ball-and-socket joint
+bio_hormone_released_empty	Hard	Which hormone, released by an empty stomach, makes you feel hungry?	Ghrelin	Leptin	Insulin	Gastrin
+bio_some_scientists_think	Hard	Some scientists think the appendix may be useful as a 'safe house' for what?	Helpful gut bacteria	Spare red blood cells	Stored vitamin B12	Swallowed stomach acid
+bio_wounds_part_body	Hard	Wounds in which part of the body usually heal fastest and with the least scarring?	Inside the mouth	On the back	On the knees	On the scalp
+bio_embryo_webbing_between	Hard	In an embryo, the webbing between the growing fingers disappears because its cells do what?	Die off on purpose	Turn into bone	Move into the palm	Become fingernails
+bio_newborn_babies_routinely	Hard	Why are newborn babies routinely given a vitamin K injection?	They have too little to clot blood	It helps their eyes to open	It protects them from jaundice	It speeds up their bone growth
+bio_some_people_find	Hard	Why do some people find Brussels sprouts far more bitter than others do?	A gene for a bitter taste receptor	They have a mild sprout allergy	Their saliva is more acidic	They lack vitamin K
+bio_date_palms_plantations	Hard	How are date palms on plantations usually pollinated?	By hand	By bats	By bees	By birds
+bio_roughly_different_colours	Hard	Roughly how many different colours can the human eye tell apart?	About a million	About a hundred	About a thousand	About a trillion
+bio_south_african_succulents	Hard	Which South African succulents are nicknamed 'living stones' for their pebble-like disguise?	Lithops	Aloes	Agaves	Sedums
+bio_water_lily_floating	Hard	Which water lily's floating leaves, up to about 3 m wide, can carry the weight of a small child?	The Victoria water lily	The sacred lotus	The white water lily	The water hyacinth
+bio_squirting_cucumber_spread	Hard	How does the squirting cucumber spread its seeds?	It shoots them out in a jet of juice	Birds eat its fruit and drop them	They float away down rivers	The wind carries them on hairs
+bio_cashew_pistachio_close	Hard	The cashew and the pistachio are close relatives of which fruit?	The mango	The peach	The fig	The olive
+bio_tree_bears_largest	Hard	Which tree bears the largest fruit of any tree, sometimes weighing over 40 kg?	The jackfruit	The durian	The breadfruit	The coconut palm
+bio_roughly_oxygen_still	Hard	Roughly how much oxygen is still left in the air you breathe out?	About 16%	About 1%	None at all	About 50%
+bio_fluid_filled_loops	Hard	Which fluid-filled loops in the inner ear sense your head turning?	The semicircular canals	The Eustachian tubes	The cochlear ducts	The auditory canals
+bio_golden_rice_engineered	Hard	'Golden rice' was engineered to fight a lack of which vitamin?	Vitamin A	Vitamin C	Vitamin D	Vitamin B12
+bio_two_scientists_shared	Hard	Which two scientists shared the 2020 Nobel Prize in Chemistry for the CRISPR gene-editing tool?	Doudna and Charpentier	Watson and Crick	Banting and Best	Curie and Joliot
+bio_french_naturalist_argued	Hard	Which French naturalist argued that giraffes got long necks by stretching and passing that on?	Jean-Baptiste Lamarck	Georges Cuvier	Comte de Buffon	Louis Pasteur
+bio_besides_nucleus_mitochondria	Hard	Besides the nucleus and mitochondria, which part of a plant cell has its own DNA?	The chloroplast	The cell wall	The vacuole	The ribosome
+bio_hair_nails_seem	Hard	Why do hair and nails seem to keep growing after death?	The skin dries and shrinks back	Their cells divide for days	Leftover hormones keep acting	Bacteria add keratin to them
+bio_green_patches_potatoes	Hard	Green patches on potatoes left in the light warn of a build-up of which toxin?	Solanine	Atropine	Aflatoxin	Histamine
+bio_agave_nicknamed_century	Hard	Why is the agave nicknamed the 'century plant'?	It flowers once after decades, then dies	It lives for at least a hundred years	It was named in the 19th century	It needs a hundred years to sprout
+bio_world_smallest_flowering_2	Hard	The world's smallest flowering plant, Wolffia, is a kind of what?	Duckweed	Moss	Clover	Orchid
+bio_eating_polar_bear	Hard	Why can eating polar bear liver be deadly to humans?	It holds a toxic dose of vitamin A	It is full of mercury from seals	It carries the rabies virus	It contains a nerve poison
+bio_kwashiorkor_gives_starving	Hard	Kwashiorkor, which gives starving children swollen bellies, is caused mainly by a lack of what?	Protein	Vitamin C	Iodine	Water
+bio_disease_spread_body	Hard	Which disease, spread by body lice, killed huge numbers in war camps and prisons?	Typhus	Typhoid	Cholera	Malaria
+bio_plant_hormone_piling	Hard	Which plant hormone, piling up on a stem's shady side, makes it bend towards light?	Auxin	Ethylene	Abscisic acid	Gibberellin
+bio_bee_orchids_attract	Hard	Bee orchids attract pollinators by doing what?	Looking and smelling like female bees	Offering huge amounts of nectar	Heating their flowers up	Trapping bees overnight
+bio_sap_giant_hogweed	Hard	Why is the sap of giant hogweed so dangerous?	It makes skin blister in sunlight	It is a deadly poison to swallow	It is strongly radioactive	It causes instant paralysis
+bio_hold_breath_mainly	Hard	When you hold your breath, what mainly creates the urge to breathe again?	Rising carbon dioxide	Falling blood sugar	Rising body temperature	A tired diaphragm
+bio_old_idea_louis	Hard	Which old idea did Louis Pasteur's swan-neck flask experiment help to disprove?	Spontaneous generation	Germ theory	Blood circulation	Natural selection
+bio_leprosy_caused_close	Hard	Leprosy is caused by a close relative of the bacterium behind which disease?	Tuberculosis	Cholera	Syphilis	Plague
+bio_arrow_poison_curare	Hard	The arrow poison curare, used by South American hunters, kills by doing what?	Paralysing the muscles	Stopping blood clotting	Destroying red blood cells	Shutting down the liver
+bio_parts_body_sweat	Hard	Which of these parts of the body has no sweat glands at all?	The lips	The palms	The forehead	The armpits
 bio_amylaza	Expert	Which enzyme in saliva breaks down starch?	Amylase	Pepsin	Lipase	Trypsin
 bio_mrna	Expert	Which type of RNA carries genetic information from the nucleus to the ribosome?	mRNA	tRNA	rRNA	siRNA
 bio_ektoderma	Expert	Which germ layer does the nervous system develop from?	Ectoderm	Mesoderm	Endoderm	Notochord
@@ -728,3 +796,23 @@ bio_2010_experiment_slime	Expert	In a 2010 experiment, a slime mould growing bet
 bio_2023_study_recorded	Expert	A 2023 study recorded tomato and tobacco plants doing what when they were short of water or cut?	Making ultrasonic popping sounds	Sweating out drops of sugar	Turning their leaves blue	Heating up by ten degrees
 bio_youyou_won_2015	Expert	Tu Youyou won a 2015 Nobel Prize for a malaria drug taken from which plant of old Chinese medicine?	Sweet wormwood	Ginseng	Ginkgo	Liquorice
 bio_children_conceived_dutch	Expert	Children conceived during the Dutch 'Hunger Winter' of 1944-45 later had higher rates of what?	Obesity and heart disease	Left-handedness	Red hair	Colour blindness
+bio_two_major_childhood	Expert	Two major childhood leukaemia drugs, vincristine and vinblastine, come from which plant?	The Madagascar periwinkle	The foxglove	The opium poppy	The autumn crocus
+bio_bones_tooth_enamel	Expert	Bones and tooth enamel get their hardness mainly from crystals of which mineral?	Hydroxyapatite	Calcite	Quartz	Gypsum
+bio_genetically_engineered_whole	Expert	The first genetically engineered whole food sold in shops, in 1994, was a slow-softening what?	Tomato	Potato	Banana	Strawberry
+bio_paris_japonica_modest	Expert	Paris japonica, a modest Japanese flower, holds which record?	One of the largest known genomes	The smallest seeds of any plant	The fastest-growing stem known	The longest-lived single flower
+bio_bunchberry_dogwood_feat	Expert	The bunchberry dogwood is famous for which feat?	Firing out its pollen in under a millisecond	Opening its flowers only at midnight	Growing a metre in a single week	Changing flower colour every hour
+bio_some_bamboo_species	Expert	Some bamboo species do what all at once, worldwide, only every few decades or even about 120 years?	Flower and then die	Shed all their leaves	Double in height	Change colour
+bio_gene_traced_through	Expert	Which gene, traced through a London family with inherited speech problems, was hyped as 'the language gene'?	FOXP2	APOE	HOXA1	SRY
+bio_2013_angelina_jolie	Expert	In 2013 Angelina Jolie had preventive surgery after testing positive for a faulty version of which gene?	BRCA1	TP53	CFTR	APOE
+bio_cells_body_each	Expert	Which cells in your body each carry hundreds of nuclei?	Skeletal muscle fibres	Red blood cells	Nerve cells	Skin cells
+bio_hormone_made_fat	Expert	Which hormone, made by fat cells, tells the brain how much energy the body has stored?	Leptin	Glucagon	Gastrin	Thyroxine
+bio_fatal_familial_insomnia	Expert	Fatal familial insomnia, in which sufferers gradually lose the ability to sleep, is caused by what?	A misfolded prion protein	A slow-acting virus	A parasite in the brain	A lack of melatonin
+bio_dutch_born_scientist	Expert	Which Dutch-born scientist showed in 1779 that plants 'restore' bad air only in sunlight?	Jan Ingenhousz	Antonie van Leeuwenhoek	Joseph Priestley	Jan Swammerdam
+bio_2022_surgeons_kept	Expert	In 2022 surgeons kept a man alive for two months with a heart taken from which animal?	A gene-edited pig	A baboon	A chimpanzee	A cow
+bio_alice_wonderland_syndrome	Expert	'Alice in Wonderland syndrome' distorts a person's sense of what?	The size of objects and body parts	Which direction is north	The taste of sweet foods	The sound of their own name
+bio_stroke_happens_person	Expert	After a stroke, what happens to a person with 'foreign accent syndrome'?	Their speech sounds like a foreign accent	They become fluent in a foreign language	They forget their native language	They can no longer hear accents
+bio_some_giant_pitcher	Expert	Some giant pitcher plants in Borneo get much of their food from what unusual source?	Tree shrew droppings	Fallen bird eggs	Washed-up fish	Volcanic ash
+bio_white_ghost_plant	Expert	How does the white 'ghost plant', with no chlorophyll at all, get its food?	It taps fungi linked to tree roots	It eats tiny insects	It photosynthesises with red pigment	It absorbs minerals from rocks
+bio_parasitic_dodder_vine	Expert	How does the parasitic dodder vine find a host plant to attack?	By sniffing out its scent	By sensing its body heat	By following its sounds	By detecting magnetism
+bio_visitors_warned_not	Expert	Why are visitors warned not to shelter under the Caribbean manchineel tree in the rain?	Its dripping sap blisters skin	It is often struck by lightning	Its heavy fruit falls in storms	Wasps nest in its branches
+bio_damage_wernicke_area	Expert	Damage to Wernicke's area of the brain typically leaves people speaking fluently but how?	Without making sense	Only in a whisper	Only in rhymes	In a foreign accent

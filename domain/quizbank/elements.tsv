@@ -68,6 +68,16 @@ ele_hand_sanitiser_gels	Easy	Most hand sanitiser gels kill germs with which main
 ele_mars_looks_red	Easy	Mars looks red because its dust is rich in a compound of which element?	Iron	Copper	Sulfur	Silicon
 ele_gas_fire_extinguishers	Easy	Which gas do many fire extinguishers spray to smother flames without leaving a wet mess?	Carbon dioxide	Helium	Hydrogen	Neon
 ele_actually_makes_mood	Easy	What actually makes a mood ring change colour?	Changes in skin temperature	Changes in your mood hormones	Sweat reacting with the metal	Light from your pulse
+ele_holes_swiss_cheeses	Easy	The holes in Swiss cheeses such as Emmental are bubbles of which gas, made by bacteria?	Carbon dioxide	Oxygen	Methane	Hydrogen
+ele_kitchen_ingredient_makes	Easy	Which kitchen ingredient makes a classic home-made 'volcano' fizz when vinegar is poured on it?	Baking soda	Table salt	Sugar	Flour
+ele_ordinary_window_glass	Easy	Ordinary window glass is made mainly by melting what?	Sand	Clay	Salt	Ash
+ele_scale_pure_water	Easy	On the pH scale, pure water has which value?	7	0	1	14
+ele_gas_hob_burning	Easy	A gas hob burning properly gives a flame of which colour?	Blue	Yellow	Orange	Red
+ele_compound_rather_chemical	Easy	Which of these is a compound rather than a chemical element?	Water	Oxygen	Gold	Neon
+ele_cheap_rings_leave	Easy	Cheap rings can leave a green mark on your finger. Which metal causes it?	Copper	Silver	Tin	Aluminium
+ele_heavy_cast_frying	Easy	Heavy 'cast' frying pans that must be seasoned with oil are made of which metal?	Iron	Copper	Aluminium	Titanium
+ele_water_filter_jugs	Easy	Water-filter jugs trap impurities with an 'activated' form of which element?	Carbon	Sulfur	Silicon	Calcium
+ele_grey_powder_binds	Easy	What is the grey powder that binds sand and gravel together into concrete?	Cement	Plaster	Clay	Chalk
 ele_symbol_ag	Medium	Which element hides behind the symbol Ag?	Silver	Gold	Argon	Aluminum
 ele_symbol_na	Medium	Which element hides behind the symbol Na?	Sodium	Nitrogen	Nickel	Neon
 ele_symbol_k	Medium	Which element hides behind the symbol K?	Potassium	Krypton	Calcium	Cobalt
@@ -193,6 +203,27 @@ ele_smell_seaside_comes	Medium	The 'smell of the seaside' comes largely from a g
 ele_blonde_hair_turn	Medium	Blonde hair can turn green after a lot of swimming. Which element is really to blame?	Copper	Chlorine	Iron	Zinc
 ele_pink_stomach_remedy	Medium	The pink stomach remedy Pepto-Bismol takes its name from which metal it contains?	Bismuth	Barium	Beryllium	Magnesium
 ele_perfectly_pure_water	Medium	Perfectly pure water barely conducts electricity. What lets ordinary tap water conduct?	Dissolved salts and minerals	Its oxygen atoms	Its hydrogen atoms	Tiny bubbles of air
+ele_cubic_zirconia_cheap	Medium	Cubic zirconia, the cheap diamond lookalike, is a crystal of which metal's oxide?	Zirconium	Titanium	Silicon	Aluminium
+ele_car_catalytic_converter	Medium	A car's catalytic converter turns poisonous carbon monoxide into what?	Carbon dioxide	Methane	Pure carbon	Ozone
+ele_octopus_blood_blue	Medium	Octopus blood is blue because it carries oxygen using which metal instead of iron?	Copper	Cobalt	Zinc	Manganese
+ele_element_honours_russian	Medium	Which element honours the Russian chemist who devised the periodic table?	Mendelevium	Rutherfordium	Einsteinium	Bohrium
+ele_element_102_nobelium	Medium	Element 102, nobelium, honours which inventor of dynamite?	Alfred Nobel	Thomas Edison	Nikola Tesla	Ernest Solvay
+ele_chopping_onions_makes	Medium	Chopping onions makes your eyes sting because they release a gas containing which element?	Sulfur	Chlorine	Nitrogen	Phosphorus
+ele_roughly_share_air	Medium	Roughly what share of the air is carbon dioxide?	About 0.04%	About 0.4%	About 4%	About 10%
+ele_ray_gut_patients	Medium	Before an X-ray of the gut, patients may drink a chalky 'meal' made from which element's compound?	Barium	Calcium	Lead	Iodine
+ele_crystals_copper_sulfate	Medium	Crystals of copper sulfate, a favourite of school labs, are which colour?	Bright blue	Bright red	Yellow	Purple
+ele_acid_gives_green	Medium	Which acid gives green apples their sharp taste?	Malic acid	Citric acid	Acetic acid	Lactic acid
+ele_ascorbic_acid_chemical	Medium	Ascorbic acid is the chemical name of which vitamin?	Vitamin C	Vitamin A	Vitamin D	Vitamin B12
+ele_low_sodium_lite	Medium	Low-sodium 'lite' table salts replace much of the sodium chloride with what?	Potassium chloride	Calcium carbonate	Magnesium sulfate	Sodium bicarbonate
+ele_haematite_means_blood	Medium	Haematite, whose name means 'blood-like', is an ore of which metal?	Iron	Copper	Mercury	Lead
+ele_salt_spread_icy	Medium	Why is salt spread on icy roads in winter?	It lowers the freezing point of water	It heats up when it gets wet	It soaks up sunlight	It makes tyres grip the ice
+ele_little_silica_gel	Medium	What are the little 'silica gel' sachets in new shoe boxes for?	Soaking up moisture	Killing bacteria	Keeping insects away	Hiding smells
+ele_traditional_protective_aprons	Medium	Traditional protective aprons worn during X-rays are lined with which metal?	Lead	Copper	Aluminium	Zinc
+ele_glasses_lenses_darken	Medium	Glasses lenses that darken in sunlight traditionally contain tiny crystals of which metal's compounds?	Silver	Gold	Copper	Platinum
+ele_traditional_solder_electronics	Medium	Traditional solder for electronics is an alloy of lead and which other metal?	Tin	Zinc	Nickel	Aluminium
+ele_fibrous_mineral_once	Medium	Which fibrous mineral, once prized as fireproof insulation, was banned for causing lung disease?	Asbestos	Talc	Mica	Gypsum
+ele_superglue_hardens_almost	Medium	Superglue hardens almost instantly when it reacts with what?	Traces of water	Oxygen in the air	Daylight	Heat
+ele_bone_china_gets	Medium	Bone china gets its whiteness and strength from which added ingredient?	Bone ash	Crushed shells	Chalk dust	Ground glass
 ele_symbol_sn	Hard	Which element hides behind the symbol Sn?	Tin	Scandium	Selenium	Strontium
 ele_najczestszy	Hard	Which element is the most abundant in the Universe?	Hydrogen	Helium	Oxygen	Carbon
 ele_ilosc	Hard	How many elements does today's periodic table have?	118	108	92	120
@@ -297,6 +328,24 @@ ele_vitamin_b12_vitamin	Hard	Vitamin B12 is the only vitamin built around a meta
 ele_rub_little_metal	Hard	Rub a little of which metal onto an aluminium can and the can soon turns brittle enough to poke a finger through?	Gallium	Tin	Lead	Zinc
 ele_until_1950_soft	Hard	Until about 1950, the soft drink 7 Up contained a mood-calming compound of which element?	Lithium	Potassium	Bromine	Sodium
 ele_voyager_space_probes	Hard	The Voyager space probes still run on heat from the decay of which element?	Plutonium	Uranium	Radium	Polonium
+ele_element_city_home	Hard	Element 97 is named after which US city, home of a famous university laboratory?	Berkeley	Livermore	Pasadena	Chicago
+ele_element_marguerite_perey	Hard	Which element did Marguerite Perey discover in 1939 and name after her country?	Francium	Polonium	Germanium	Americium
+ele_element_104_honours	Hard	Element 104 honours which New Zealand-born physicist?	Ernest Rutherford	Niels Bohr	Ernest Lawrence	Glenn Seaborg
+ele_great_smog_london	Hard	The Great Smog of London in 1952 was made deadly mainly by soot and which gas from burning coal?	Sulfur dioxide	Ozone	Chlorine	Methane
+ele_potassium_takes_potash	Hard	Potassium takes its name from 'potash', which was made by soaking what in pots?	Wood ashes	Sea water	Animal bones	Seaweed
+ele_calcium_comes_latin	Hard	Calcium's name comes from the Latin 'calx', meaning what?	Lime	Bone	Milk	Shell
+ele_military_ration_heaters	Hard	US military ration heaters warm a meal when water is poured onto powder of which metal?	Magnesium	Sodium	Aluminium	Zinc
+ele_element_compounds_give	Hard	Which element's compounds give fireworks an orange colour?	Calcium	Potassium	Lithium	Magnesium
+ele_just_two_brazil	Hard	Just one or two Brazil nuts cover a whole day's need of which element?	Selenium	Iodine	Zinc	Iron
+ele_galena_shiny_grey	Hard	Galena, the shiny grey crystal used in early 'crystal' radio sets, is the main ore of which metal?	Lead	Tin	Silver	Zinc
+ele_cinnabar_ground_bright	Hard	Cinnabar, ground up for the bright red pigment vermilion, is an ore of which metal?	Mercury	Copper	Iron	Lead
+ele_colour_liquid_bromine	Hard	What colour is liquid bromine?	Dark red-brown	Pale yellow	Silvery grey	Bright green
+ele_acid_makes_rhubarb	Hard	Which acid makes rhubarb leaves poisonous?	Oxalic acid	Formic acid	Citric acid	Malic acid
+ele_wine_diamonds_harmless	Hard	'Wine diamonds', the harmless crystals found on corks, are a salt of which acid?	Tartaric acid	Citric acid	Acetic acid	Lactic acid
+ele_backbone_every_dna	Hard	The backbone of every DNA molecule contains sugar and groups built around which element?	Phosphorus	Sulfur	Iron	Chlorine
+ele_ordinary_alkaline_batteries	Hard	Ordinary alkaline AA batteries contain zinc and an oxide of which metal?	Manganese	Lithium	Nickel	Cadmium
+ele_white_clay_hill	Hard	Which white clay, named after a hill in China, is the key ingredient of porcelain?	Kaolin	Bentonite	Terracotta	Fuller's earth
+ele_cfcs_thinned_ozone	Hard	The CFCs that thinned the ozone layer destroy ozone by releasing atoms of which element?	Chlorine	Carbon	Fluorine	Hydrogen
 ele_symbol_sb	Expert	Which element hides behind the symbol Sb?	Antimony	Strontium	Silver	Selenium
 ele_symbol_mn	Expert	Which element hides behind the symbol Mn?	Manganese	Magnesium	Molybdenum	Copper
 ele_curie	Expert	Which element did Marie Sklodowska-Curie name after her homeland?	Polonium	Radium	Uranium	Radon
@@ -365,3 +414,8 @@ ele_element_comes_greek_3	Expert	Which element's name comes from the Greek for '
 ele_fluorine_injured_killed	Expert	Fluorine injured or killed several chemists who tried to isolate it. Who finally succeeded, in 1886?	Henri Moissan	Humphry Davy	Robert Bunsen	William Ramsay
 ele_precious_pigment_ultramarine	Expert	The precious pigment ultramarine, ground from lapis lazuli, owes its blue colour to which element?	Sulfur	Cobalt	Copper	Iron
 ele_rare_earth_element	Expert	Which rare-earth element is named after the Finnish chemist who discovered the first rare earth, yttria, in 1794?	Gadolinium	Samarium	Europium	Lutetium
+ele_smartphone_gorilla_glass	Expert	Smartphone 'Gorilla Glass' is toughened by swapping its sodium for bigger ions of which element?	Potassium	Lithium	Calcium	Magnesium
+ele_gadolinium_honours_johan	Expert	Gadolinium honours Johan Gadolin, a chemist from Turku in which present-day country?	Finland	Sweden	Norway	Estonia
+ele_james_webb_space	Expert	The James Webb Space Telescope's gold-coated mirror segments are made of which light metal?	Beryllium	Aluminium	Titanium	Magnesium
+ele_last_stable_non	Expert	Which was the last stable, non-radioactive element to be discovered, in 1925?	Rhenium	Hafnium	Technetium	Francium
+ele_liquid_alloy_gallium	Expert	Which liquid alloy of gallium, indium and tin replaces mercury in some thermometers?	Galinstan	Amalgam	Solder	Nitinol

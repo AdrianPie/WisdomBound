@@ -167,7 +167,17 @@ object MythologyQuestions {
         q("myt_winged_horse_greek", "Which winged horse of Greek myth appears in red on the logo of the oil company Mobil?", "Pegasus", listOf("Sleipnir", "Arion", "Bucephalus"), E),
         q("myt_titan_father_zeus", "Which Titan was the father of Zeus, Poseidon and Hades?", "Cronus", listOf("Atlas", "Prometheus", "Hyperion"), E),
         q("myt_according_hesiod_goddess", "According to Hesiod, which goddess rose from the foam of the sea?", "Aphrodite", listOf("Athena", "Artemis", "Hera"), E),
-        q("myt_unlike_america_britain", "Unlike in America, in much of Britain a black cat crossing your path is traditionally a sign of what?", "Good luck", listOf("Bad luck", "A coming storm", "A death in the family"), E)
+        q("myt_unlike_america_britain", "Unlike in America, in much of Britain a black cat crossing your path is traditionally a sign of what?", "Good luck", listOf("Bad luck", "A coming storm", "A death in the family"), E),
+        q("myt_old_wedding_rhyme", "In the old wedding rhyme, what follows 'something old, something new, something borrowed'?", "Something blue", listOf("Something gold", "Something true", "Something grey"), E),
+        q("myt_according_old_saying", "According to an old saying, what does it mean when your ears are burning?", "Someone is talking about you", listOf("Money is on its way to you", "Someone is telling you lies", "You will soon hear bad news"), E),
+        q("myt_traditionally_supposed_see", "What are you traditionally supposed to do when you see a shooting star?", "Make a wish", listOf("Hold your breath", "Close your eyes", "Count to seven"), E),
+        q("myt_christmas_folklore_santa", "In Christmas folklore, what does Santa leave in the stockings of naughty children?", "A lump of coal", listOf("A rotten apple", "A wooden spoon", "An empty box"), E),
+        q("myt_western_hotels_tall", "Many Western hotels and tall buildings skip which floor number because it is thought unlucky?", "13", listOf("7", "9", "21"), E),
+        q("myt_european_legends_dragon", "In European legends, what does a dragon usually guard in its cave?", "A hoard of treasure", listOf("A sleeping giant", "A magic fountain", "A field of wheat"), E),
+        q("myt_best_legend_england", "In the best-known legend, whom did England's patron saint rescue from a dragon?", "A princess", listOf("A shepherd boy", "A bishop", "A young knight"), E),
+        q("myt_according_folklore_way", "According to folklore, which way up should a horseshoe hang so that its luck does not run out?", "Ends pointing up", listOf("Ends pointing down", "Ends pointing left", "It does not matter"), E),
+        q("myt_actors_traditionally_say", "What do actors traditionally say to each other instead of 'good luck' before a show?", "Break a leg", listOf("Knock them dead", "Fingers crossed", "Bite the dust"), E),
+        q("myt_under_plant_people", "Under which plant do people traditionally kiss at Christmas?", "Mistletoe", listOf("Holly", "Ivy", "Poinsettia"), E)
     )
 
     /* ----------------------------- Medium ----------------------------- */
@@ -419,7 +429,35 @@ object MythologyQuestions {
         q("myt_prometheus_trick_zeus", "How did Prometheus trick Zeus into taking the worse share of every sacrifice?", "He hid the bones under shiny fat", listOf("He swapped the plates while Zeus slept", "He mixed poison into the meat", "He disguised the meat as stones"), M),
         q("myt_old_couple_welcomed", "Which old couple welcomed Zeus and Hermes in disguise and were later turned into two intertwined trees?", "Baucis and Philemon", listOf("Pyramus and Thisbe", "Deucalion and Pyrrha", "Orpheus and Eurydice"), M),
         q("myt_king_served_zeus", "Which king served Zeus a meal of human flesh and was turned into a wolf as punishment?", "Lycaon", listOf("Tantalus", "Minos", "Atreus"), M),
-        q("myt_statue_liberty_new", "The Statue of Liberty in New York portrays which Roman goddess?", "Libertas", listOf("Minerva", "Juno", "Victoria"), M)
+        q("myt_statue_liberty_new", "The Statue of Liberty in New York portrays which Roman goddess?", "Libertas", listOf("Minerva", "Juno", "Victoria"), M),
+        q("myt_odysseus_son_went", "What was the name of Odysseus's son, who went searching for news of his missing father?", "Telemachus", listOf("Laertes", "Astyanax", "Neoptolemus"), M),
+        q("myt_arrow_guided_apollo", "Whose arrow, guided by Apollo, finally struck Achilles in his weak spot?", "Paris's", listOf("Hector's", "Aeneas's", "Troilus's"), M),
+        q("myt_egyptian_sun_god", "How did the Egyptian sun god Ra travel across the sky each day?", "In a boat", listOf("In a fiery chariot", "On a falcon's back", "Riding a lion"), M),
+        q("myt_russian_new_year", "In Russian New Year tradition, who is the granddaughter and helper of Ded Moroz?", "The Snow Maiden", listOf("The Firebird", "The Ice Queen", "The Frost Fairy"), M),
+        q("myt_dutch_tradition_country", "In Dutch tradition, from which country does Sinterklaas arrive by steamboat?", "Spain", listOf("Turkey", "Italy", "Norway"), M),
+        q("myt_people_japan_traditionally", "What do people in Japan traditionally do to a Daruma doll when they set themselves a goal?", "Paint in one of its eyes", listOf("Tie a red thread round it", "Write the goal on its base", "Turn it to face the wall"), M),
+        q("myt_according_old_counting", "According to the old counting rhyme, what does seeing a single magpie bring?", "Sorrow", listOf("Joy", "Silver", "A wedding"), M),
+        q("myt_blue_eye_shaped", "What is the blue eye-shaped 'nazar' charm, common in Turkey, meant to protect against?", "The evil eye", listOf("Thunderstorms", "Snake bites", "Bad dreams"), M),
+        q("myt_according_ojibwe_tradition", "According to Ojibwe tradition, what is a dreamcatcher hung over a bed meant to do?", "Catch bad dreams", listOf("Call back lost souls", "Keep the bed warm", "Keep bears away"), M),
+        q("myt_ramayana_island_kingdom", "In the 'Ramayana', which island kingdom did the demon king Ravana rule?", "Lanka", listOf("Bali", "Ayodhya", "Kashi"), M),
+        q("myt_northern_india_diwali", "In northern India, Diwali celebrates which hero's return home after defeating Ravana?", "Rama", listOf("Krishna", "Arjuna", "Hanuman"), M),
+        q("myt_legend_chinese_zodiac", "In the legend of the Chinese zodiac, how did the rat win the Great Race?", "It rode on the ox's back", listOf("It tripped the horse", "It flew on the rooster", "It swam under the dragon"), M),
+        q("myt_word_flora_plants", "The word 'flora', for the plants of a region, comes from the Roman goddess of what?", "Flowers", listOf("Rivers", "The harvest", "The hunt"), M),
+        q("myt_pandava_brothers_heroes", "How many Pandava brothers are the heroes of the 'Mahabharata'?", "Five", listOf("Three", "Seven", "A hundred"), M),
+        q("myt_haudenosaunee_iroquois_myth", "In Haudenosaunee (Iroquois) myth, the Earth was built on the back of which animal?", "A turtle", listOf("A whale", "A buffalo", "An eagle"), M),
+        q("myt_chinese_legend_immortals", "In Chinese legend, how many Immortals cross the sea together, each using a magic power?", "Eight", listOf("Seven", "Five", "Twelve"), M),
+        q("myt_japanese_wind_god", "What does the Japanese wind god Fujin carry over his shoulders?", "A bag of winds", listOf("A ring of drums", "A giant fan", "A paper kite"), M),
+        q("myt_old_king_priam", "How did old King Priam get back the body of his son Hector?", "He begged Achilles and paid a ransom", listOf("Hermes stole it back at night", "He beat Achilles in a duel", "The Greeks swapped it for Helen"), M),
+        q("myt_according_children_rhyme", "According to the children's rhyme, stepping on a crack in the pavement will do what?", "Break your mother's back", listOf("Bring seven years of rain", "Make you lose a tooth", "Wake a sleeping troll"), M),
+        q("myt_according_common_superstition", "According to a common superstition, what does an itchy palm mean?", "Money is coming", listOf("A storm is coming", "Someone misses you", "You will soon travel"), M),
+        q("myt_heracles_drive_man", "How did Heracles drive the man-eating birds out of the Stymphalian marsh?", "With a bronze rattle", listOf("With a burning torch", "With a flock of hawks", "With poisoned arrows only"), M),
+        q("myt_claws_dragons_chinese", "How many claws did the dragons on a Chinese emperor's robes traditionally have?", "Five", listOf("Three", "Four", "Seven"), M),
+        q("myt_greek_god_gentle", "Who was the Greek god of the gentle west wind that brings spring?", "Zephyrus", listOf("Notus", "Eurus", "Aeolus"), M),
+        q("myt_sophocles_play_antigone", "In Sophocles' play, why is Antigone condemned to death?", "She buried her brother", listOf("She married a slave", "She insulted Apollo", "She plotted against her uncle"), M),
+        q("myt_tartarus_greek_myth", "What was Tartarus in Greek myth?", "The underworld's deepest pit", listOf("The gods' palace on Olympus", "A many-headed sea monster", "A river of burning fire"), M),
+        q("myt_agamemnon_sacrifice_get", "What did Agamemnon sacrifice to get the winds he needed to sail for Troy?", "His daughter Iphigenia", listOf("His son Orestes", "His best warhorse", "His royal sceptre"), M),
+        q("myt_fruit_sailors_fishermen", "Which fruit do many sailors and fishermen think it bad luck to carry on board?", "Bananas", listOf("Apples", "Oranges", "Coconuts"), M),
+        q("myt_medieval_lore_animal", "In medieval lore, which animal was believed to live unharmed in fire?", "The salamander", listOf("The newt", "The lizard", "The toad"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -615,7 +653,38 @@ object MythologyQuestions {
         q("myt_crafty_king_corinth", "Which crafty king of Corinth chained up Death itself, so that for a while nobody could die?", "Sisyphus", listOf("Tantalus", "Midas", "Ixion"), H),
         q("myt_two_eagles_zeus", "Where did the two eagles that Zeus released from opposite ends of the world meet, marking its navel?", "Delphi", listOf("Olympia", "Athens", "Mount Olympus"), H),
         q("myt_raging_goddess_sekhmet", "How was the raging goddess Sekhmet stopped from wiping out humankind?", "She drank beer dyed to look like blood", listOf("Ra trapped her inside the Moon", "Horus defeated her in battle", "Osiris chained her in the underworld"), H),
-        q("myt_according_myth_happened", "According to myth, what happened to Tiresias when he struck two mating snakes with his stick?", "He was turned into a woman", listOf("He became a snake himself", "He lost his voice", "He was turned to stone"), H)
+        q("myt_according_myth_happened", "According to myth, what happened to Tiresias when he struck two mating snakes with his stick?", "He was turned into a woman", listOf("He became a snake himself", "He lost his voice", "He was turned to stone"), H),
+        q("myt_greek_god_death", "Who was the Greek god of death, twin brother of Hypnos?", "Thanatos", listOf("Erebus", "Morpheus", "Charon"), H),
+        q("myt_giant_catfish_japanese", "Which giant catfish of Japanese legend causes earthquakes when it thrashes about?", "Namazu", listOf("Kappa", "Orochi", "Baku"), H),
+        q("myt_japan_imperial_regalia", "Japan's imperial regalia are a sword, a jewel and what?", "A mirror", listOf("A crown", "A bell", "A bow"), H),
+        q("myt_spirit_japanese_folklore", "Which spirit of Japanese folklore appears in blizzards and freezes travellers with her breath?", "Yuki-onna", listOf("Kitsune", "Rokurokubi", "Kuchisake-onna"), H),
+        q("myt_journey_west_pilgrim", "In 'Journey to the West', which pilgrim is half man, half pig?", "Zhu Bajie", listOf("Sha Wujing", "Tang Sanzang", "Bai Longma"), H),
+        q("myt_legged_prankster_red", "Which one-legged prankster in a red cap is a favourite of Brazilian folklore?", "Saci", listOf("Curupira", "Boitata", "Iara"), H),
+        q("myt_lamassu_guarded_assyrian", "What were the lamassu that guarded Assyrian palace gates?", "Winged bulls with human heads", listOf("Lions with snakes for tails", "Eagles with the heads of lions", "Giant men with scorpion tails"), H),
+        q("myt_medieval_poem_game", "In the medieval poem, what game does the Green Knight propose at Camelot?", "Trading blows a year apart", listOf("A joust on horseback", "Answering three riddles", "A drinking contest"), H),
+        q("myt_welsh_legend_prince", "In the Welsh legend, why did Prince Llywelyn kill his faithful hound Gelert?", "He thought it had killed his son", listOf("It had bitten his wife", "It lost him a royal hunt", "It had gone mad with rabies"), H),
+        q("myt_river_goddess_fell", "Which river goddess fell from heaven and was caught in Shiva's matted hair?", "Ganga", listOf("Yamuna", "Kaveri", "Narmada"), H),
+        q("myt_hindu_god_death", "Which Hindu god of death rides a water buffalo?", "Yama", listOf("Agni", "Indra", "Varuna"), H),
+        q("myt_child_hanuman_mistake", "As a child, what did Hanuman mistake the sun for and leap up to eat?", "A ripe fruit", listOf("A golden egg", "A ball of butter", "A lotus flower"), H),
+        q("myt_egyptian_god_osiris", "Why was the Egyptian god Osiris often painted with green skin?", "It stood for rebirth and growth", listOf("He was a god of the sea", "He had been poisoned by Set", "Green was the pharaohs' colour"), H),
+        q("myt_according_legend_nile", "According to legend, the Nile's yearly flood came from the tears of which goddess?", "Isis", listOf("Hathor", "Bastet", "Sekhmet"), H),
+        q("myt_blind_god_tricked", "Which blind god was tricked by Loki into killing his brother Baldr?", "Hodr", listOf("Vidar", "Bragi", "Forseti"), H),
+        q("myt_norse_god_blow", "Which Norse god will blow the Gjallarhorn to warn of Ragnarok?", "Heimdall", listOf("Odin", "Bragi", "Tyr"), H),
+        q("myt_artemis_turn_hunter", "Why did Artemis turn the hunter Actaeon into a stag?", "He saw her bathing", listOf("He killed her sacred deer", "He boasted he was faster", "He stole her silver bow"), H),
+        q("myt_niobe_boast_bringing", "What did Niobe boast about, bringing down the anger of Apollo and Artemis?", "Having more children than Leto", listOf("Being lovelier than Hera", "Weaving better than Athena", "Singing better than the Muses"), H),
+        q("myt_pirates_kidnapped_young", "What did the pirates who kidnapped the young Dionysus turn into when they leapt overboard?", "Dolphins", listOf("Seals", "Seagulls", "Tuna"), H),
+        q("myt_muses_mother_mnemosyne", "The Muses' mother Mnemosyne was the goddess of what?", "Memory", listOf("Music", "Wisdom", "Dreams"), H),
+        q("myt_deucalion_pyrrha_throw", "What did Deucalion and Pyrrha throw over their shoulders to repopulate the world after the flood?", "Stones", listOf("Seeds", "Shells", "Feathers"), H),
+        q("myt_fruit_turned_white", "Which fruit turned from white to dark red because of the tragic lovers Pyramus and Thisbe?", "The mulberry", listOf("The cherry", "The pomegranate", "The strawberry"), H),
+        q("myt_greek_hero_accidentally", "Which Greek hero accidentally killed his grandfather with a discus, fulfilling a prophecy?", "Perseus", listOf("Theseus", "Jason", "Bellerophon"), H),
+        q("myt_blind_seer_thebes", "Which blind seer of Thebes was said to have lived seven years as a woman?", "Tiresias", listOf("Calchas", "Laocoon", "Phineus"), H),
+        q("myt_back_home_disguise", "Back home in disguise, what feat with his old bow did Odysseus perform?", "An arrow through twelve axe heads", listOf("Hitting a dove tied to a mast", "Splitting an arrow in the target", "Shooting an apple off a head"), H),
+        q("myt_zeus_destroy_last", "Why did Zeus destroy the last of Odysseus's ships and crew?", "They ate the sun god's cattle", listOf("They opened the bag of winds", "They looted Athena's temple", "They insulted Poseidon's son"), H),
+        q("myt_headed_dragon_fights", "Which many-headed dragon fights the heroes of Russian folk tales?", "Zmey Gorynych", listOf("Koschei", "Kikimora", "Vodyanoy"), H),
+        q("myt_grumpy_old_water", "Which grumpy old water spirit of Slavic folklore drags swimmers down to his realm?", "The vodyanoy", listOf("The leshy", "The domovoi", "The polevik"), H),
+        q("myt_according_myth_creature", "According to one myth, which creature killed the giant hunter Orion?", "A scorpion", listOf("A wild boar", "A sea serpent", "A lion"), H),
+        q("myt_korean_folklore_gumiho", "In Korean folklore, what is a gumiho?", "A nine-tailed fox", listOf("A river dragon", "A one-horned goblin", "A tiger spirit"), H),
+        q("myt_chinese_tradition_creature", "In Chinese tradition, which creature guards the west?", "The White Tiger", listOf("The Azure Dragon", "The Black Tortoise", "The Vermilion Bird"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */
@@ -719,6 +788,20 @@ object MythologyQuestions {
         q("myt_palamedes_prove_odysseus", "How did Palamedes prove that Odysseus was only faking madness to avoid the Trojan War?", "He laid baby Telemachus before the plough", listOf("He hid a sword among gifts for him", "He sounded a sudden call to arms", "He set fire to Odysseus's barns"), X),
         q("myt_phrase_halcyon_days", "The phrase 'halcyon days' recalls calm winter seas granted while which birds nested?", "Kingfishers", listOf("Seagulls", "Swallows", "Albatrosses"), X),
         q("myt_golem_legend_erasing", "In golem legend, erasing one letter of 'emet' (truth) on its forehead leaves a word meaning what?", "Death", listOf("Sleep", "Clay", "Silence"), X),
-        q("myt_assyrian_gate_guardians", "Why do many Assyrian gate guardians, winged bulls with human heads, have five legs?", "To look complete from front and side", listOf("To honour the five gods of the city", "A sculptor's error that became custom", "A fifth leg marked a royal beast"), X)
+        q("myt_assyrian_gate_guardians", "Why do many Assyrian gate guardians, winged bulls with human heads, have five legs?", "To look complete from front and side", listOf("To honour the five gods of the city", "A sculptor's error that became custom", "A fifth leg marked a royal beast"), X),
+        q("myt_trojan_became_english", "Which Trojan's name became an English verb meaning 'to bully'?", "Hector", listOf("Paris", "Priam", "Aeneas"), X),
+        q("myt_special_boar_saehrimnir", "What is special about the boar Saehrimnir, eaten every night in Valhalla?", "It is whole again each evening", listOf("It can speak and sing", "It has eight legs", "It is made of gold"), X),
+        q("myt_having_given_away", "Having given away his sword, what does the god Freyr fight with at Ragnarok?", "An antler", listOf("A ship's oar", "A ploughshare", "His bare hands"), X),
+        q("myt_handle_thor_hammer", "Why is the handle of Thor's hammer so short?", "Loki, as a fly, distracted the smith", listOf("A giant bit off the end", "Thor broke it on a rock", "The dwarves ran out of iron"), X),
+        q("myt_giant_hall_old", "In the giant's hall, who was the old woman Thor could not wrestle to the ground?", "Old age itself", listOf("The sea", "Death in disguise", "Hel, queen of the dead"), X),
+        q("myt_stop_lion_headed", "How did Ra stop the lion-headed goddess he had sent to punish mankind?", "He got her drunk on red beer", listOf("He sang her to sleep", "He chained her in a cave", "He turned her into a cat"), X),
+        q("myt_kind_animal_egyptian", "What kind of animal is the Egyptian god Set's head?", "An unknown creature", listOf("A crocodile", "A hippo", "A falcon"), X),
+        q("myt_japanese_folklore_tsukumogami", "In Japanese folklore, what are tsukumogami?", "Old objects that come to life", listOf("Ghosts of drowned sailors", "Mountain-dwelling ogres", "Spirits of the rice fields"), X),
+        q("myt_chinese_belief_meng", "In Chinese belief, what does Meng Po give souls before they are reborn?", "A soup of forgetfulness", listOf("A coin for the ferryman", "A new name on a scroll", "A peach of long life"), X),
+        q("myt_odd_feet_curupira", "What is odd about the feet of the Curupira, protector of Brazil's forests?", "They point backwards", listOf("They are made of wood", "They never touch the ground", "He has only one"), X),
+        q("myt_mexican_hairless_dog", "The Mexican hairless dog breed takes its name from which Aztec god?", "Xolotl", listOf("Tlaloc", "Xipe Totec", "Mixcoatl"), X),
+        q("myt_mesopotamian_wind_demon", "Which Mesopotamian wind demon has a starring role in the film 'The Exorcist'?", "Pazuzu", listOf("Lamashtu", "Humbaba", "Tiamat"), X),
+        q("myt_said_happen_tara", "What was said to happen at Tara when the true High King of Ireland stood on the Lia Fail?", "The stone roared", listOf("The stone glowed", "The stone split", "The stone rang like a bell"), X),
+        q("myt_odysseus_pretend_mad", "How did Odysseus pretend to be mad to avoid the Trojan War?", "He sowed his fields with salt", listOf("He talked only to his dogs", "He dressed as a woman", "He howled at the moon"), X)
     )
 }

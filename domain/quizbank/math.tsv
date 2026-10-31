@@ -102,6 +102,22 @@ mat_two_people_play	Easy	Two people play rock, paper, scissors, each choosing at
 mat_different_outfits_put	Easy	How many different outfits can you put together from 3 shirts and 4 pairs of trousers?	12	7	9	16
 mat_infinite_monkey_theorem	Easy	The 'infinite monkey theorem' says a monkey hitting keys at random forever would almost surely type the complete works of whom?	William Shakespeare	Charles Dickens	Homer	Leo Tolstoy
 mat_asked_pick_random	Easy	Asked to pick a 'random' whole number from 1 to 10, which do people choose most often?	7	1	5	10
+mat_numbers_biggest	Easy	Which of these numbers is the biggest?	0.5	0.45	0.405	0.054
+mat_square_table_four	Easy	A square table has four corners. If you saw one corner off with a single straight cut, how many corners does it have now?	5	3	4	6
+mat_pencils_cost_pencils	Easy	Pencils cost 3 for $1. How much do 12 pencils cost?	$4	$3	$6	$36
+mat_read_pages_day	Easy	You read 20 pages a day. How many days will a 300-page book take you?	15	12	20	30
+mat_not_same_length	Easy	Which of these is NOT the same length as one metre?	1,000 centimetres	100 centimetres	1,000 millimetres	0.001 kilometres
+mat_half_quarter	Easy	What is half of a quarter?	An eighth	A third	A sixth	A twelfth
+mat_walking_per_hour	Easy	Walking at 5 km per hour, how long does it take to walk 15 km?	3 hours	2 hours	5 hours	75 minutes
+mat_buy_three_items	Easy	You buy three items at $1.99 each. How much do you spend?	$5.97	$5.79	$6.03	$4.97
+mat_fraction_hour_minutes	Easy	What fraction of an hour is 20 minutes?	A third	A quarter	A fifth	A half
+mat_same	Easy	Which of these is the same as 0.25?	1/4	2/5	1/25	2/25
+mat_money_slang_grand	Easy	In money slang, how much is 'a grand'?	A thousand	A hundred	A million	Ten thousand
+mat_rectangle_long_wide	Easy	A rectangle is 6 cm long and 4 cm wide. What is its perimeter?	20 cm	24 cm	10 cm	48 cm
+mat_times_clock_minute	Easy	How many times does a clock's minute hand pass the 12 in a full day?	24	12	48	60
+mat_latest_time_hour	Easy	What is the latest time a 24-hour digital clock can show?	23:59	24:00	12:59	24:59
+mat_value_digit_number	Easy	What is the value of the digit 7 in the number 3,742?	700	7	70	7,000
+mat_rounded_nearest_cents	Easy	Rounded to the nearest 10 cents, what does $4.96 become?	$5.00	$4.90	$4.95	$4.10
 day2_procent_skladany	Medium	What is compound interest?	Interest earned on interest already added	A one-time fee	A fixed monthly cost	Interest paid only at the end
 day2_inflacja	Medium	What does inflation mean for your savings?	The same money buys less over time	Your balance shrinks	Interest rates always fall	Prices stay fixed
 mat_pi	Medium	What is the approximate value of pi?	3.14	3.41	2.71	3.04
@@ -277,6 +293,54 @@ mat_ancient_paradox_asks	Medium	Which ancient paradox asks how many grains of sa
 mat_columnist_explained_monty	Medium	Which columnist explained the Monty Hall problem correctly in 1990, then received thousands of letters insisting she was wrong?	Marilyn vos Savant	Ann Landers	Erma Bombeck	Dear Abby
 mat_spotify_make_shuffle	Medium	Why did Spotify make its 'shuffle' less random?	Truly random play felt streaky to listeners	Random play used too much battery	Record labels demanded equal plays	A random shuffle broke the app
 mat_martingale_betting_system	Medium	The 'martingale' betting system doubles your stake after every loss. What stops it working in a real casino?	Table limits and running out of money	The wheel remembers your bets	Casinos ban doubling a bet	Odds change after each loss
+mat_5th_front_5th	Medium	You are 5th from the front and 5th from the back of a queue. How many people are in it?	9	10	11	8
+mat_q_2	Medium	What is 10% of 10%?	1%	10%	0.1%	20%
+mat_minutes_tenth_hour	Medium	How many minutes are in a tenth of an hour?	6	10	1	16
+mat_deal_gives_cheapest	Medium	Which deal gives the cheapest price per can?	8 cans for $4	4 cans for $3	6 cans for $4	10 cans for $6
+mat_get_take_score	Medium	What do you get if you take 'a score' away from 'a dozen'?	-8	8	32	-12
+mat_year_365_days	Medium	A year has 365 days. How many days are left over after 52 full weeks?	1	0	2	5
+mat_man_four_times	Medium	A man is four times as old as his son. In 20 years he will be twice as old. How old is the son now?	10	5	20	15
+mat_draw_card_full	Medium	You draw one card from a full deck. What is the chance it is a red king?	1 in 26	1 in 13	1 in 52	1 in 4
+mat_roll_two_dice	Medium	You roll two dice. What is the chance that both show an odd number?	1 in 4	1 in 2	1 in 3	1 in 6
+mat_family_two_children	Medium	A family has two children and the older one is a girl. What is the chance that both are girls?	1 in 2	1 in 3	1 in 4	2 in 3
+mat_test_scores_best	Medium	Which of these test scores is the best?	17 out of 20	80%	4 out of 5	41 out of 50
+mat_classic_river_crossing	Medium	In the classic river-crossing puzzle with a wolf, a goat and a cabbage, what must the farmer take across first?	The goat	The wolf	The cabbage	Nothing - he crosses alone
+mat_world_cup_group	Medium	In a World Cup group of four teams, each team plays every other team once. How many group matches are there?	6	4	8	12
+mat_makes_easier_split	Medium	What makes 12 easier than 10 to split into equal shares?	It divides by 2, 3, 4 and 6	It divides by 2, 3, 5 and 7	It divides by 3, 5, 7 and 9	It divides by 4, 5, 8 and 9
+mat_recipe_needs_cup	Medium	A recipe needs 3/4 of a cup of sugar, but you are making only half the recipe. How much sugar do you need?	3/8 of a cup	1/4 of a cup	1/2 of a cup	1/3 of a cup
+mat_capital_letters_looks	Medium	Which of these capital letters looks exactly the same after being turned half a turn (180 degrees)?	N	M	E	A
+mat_someone_born_february	Medium	Someone born on 29 February 2000 turned 20 in 2020. How many real 29 February birthdays had they had by then, counting 2020?	5	20	4	10
+mat_numbered_pockets_european	Medium	How many numbered pockets are on a European roulette wheel?	37	36	38	40
+mat_picture_cards_jacks	Medium	How many picture cards (jacks, queens and kings) are in a standard deck?	12	16	13	9
+mat_think_number_double	Medium	Think of a number, double it, add 10, halve the result, then take away the number you first thought of. What do you always get?	5	10	0	Your starting number
+mat_ladder_leans_against	Medium	A 13 m ladder leans against a wall with its foot 5 m from the wall. How high up the wall does it reach?	12 m	8 m	10 m	18 m
+mat_roughly_days_000	Medium	Roughly how many days is 1,000 hours?	About 42	About 10	About 100	About 24
+mat_score_test_must	Medium	You score 60 on your first test. What must you score on the second to average 75?	90	85	80	95
+mat_car_uses_litres	Medium	A car uses 6 litres of fuel per 100 km. How much does it need for 250 km?	15 litres	12 litres	25 litres	18 litres
+mat_interest_rate_rises	Medium	An interest rate rises from 2% to 3%, one percentage point. By what percentage has the rate itself grown?	50%	1%	33%	150%
+mat_ice_cream_sales	Medium	Ice cream sales and drownings rise and fall together through the year. What is the most likely reason?	Both rise in hot weather	Ice cream gives swimmers cramp	Grief makes people eat ice cream	It is pure coincidence
+mat_sherlock_holmes_greatest	Medium	Sherlock Holmes's greatest enemy was, by profession, a professor of which subject?	Mathematics	Chemistry	Philosophy	Medicine
+mat_different_shapes_falling	Medium	How many different shapes of falling block are there in classic Tetris?	7	5	6	8
+mat_both_players_play	Medium	If both players play perfectly, how does a game of noughts and crosses (tic-tac-toe) end?	In a draw	The first player wins	The second player wins	Whoever takes the centre wins
+mat_rug_rug_covers	Medium	A 2 m by 8 m rug and a 4 m by 4 m rug: which covers more floor?	They cover the same	The 2 m by 8 m rug	The 4 m by 4 m rug	It depends on the room
+mat_sawing_log_pieces	Medium	Sawing a log into 4 pieces takes 12 minutes. At the same rate, how long does it take to saw a log into 8 pieces?	28 minutes	24 minutes	32 minutes	16 minutes
+mat_buy_three_pay	Medium	'Buy three, pay for two' is roughly the same as what discount on each item?	About 33%	50%	About 66%	25%
+mat_ignoring_air_resistance	Medium	Ignoring air resistance, what curve does a thrown ball follow?	A parabola	A circle	A hyperbola	A spiral
+mat_handheld_calculating_tool	Medium	Which handheld calculating tool, based on logarithms, did engineers rely on until pocket calculators arrived?	The slide rule	The abacus	The sextant	The astrolabe
+mat_average_score_get	Medium	On average, what score do you get per roll of a fair six-sided die?	3.5	3	4	2.5
+mat_letter_appears_english	Medium	Which letter appears in the English name of every odd number?	E	N	O	I
+mat_normal_distribution_graph	Medium	The 'normal distribution' graph is nicknamed after the shape of what?	A bell	A wave	A camel's hump	A rainbow
+mat_billionaire_walks_small	Medium	When a billionaire walks into a small bar, which figure for the drinkers' wealth barely changes?	The median	The mean	The total	The highest value
+mat_man_points_portrait	Medium	A man points at a portrait: 'Brothers and sisters I have none, but this man's father is my father's son.' Who is in the portrait?	His son	Himself	His father	His nephew
+mat_car_travels_steady	Medium	A car travels at a steady 100 km/h. How far does it go in 3 minutes?	5 km	3 km	10 km	30 km
+mat_find_rule_number	Medium	Find the rule: 1, 3, 7, 15, 31. Which number follows 31?	63	47	61	62
+mat_lucas_numbers_number	Medium	In the Lucas numbers 2, 1, 3, 4, 7, 11, 18, 29, which number follows 29?	47	40	43	58
+mat_slice_cylinder_like	Medium	Slice a cylinder, like a sausage, at a slant. What shape is the cut face?	An ellipse	A circle	A rectangle	A parabola
+mat_two_friends_each	Medium	Two friends each secretly pick a whole number from 1 to 10. What is the chance they pick the same one?	1 in 10	1 in 100	1 in 20	1 in 5
+mat_times_day_stopped	Medium	How many times a day does a stopped analogue clock show the correct time?	Twice	Never	Once	24 times
+mat_cube_cut_cubes	Medium	A 10 cm cube is cut into 1 cm cubes. How many small cubes do you get?	1,000	100	600	300
+mat_345_679	Medium	What is 12,345,679 x 9?	111,111,111	123,456,789	999,999,999	101,010,101
+mat_million_written_percentage	Medium	What is 'one in a million' written as a percentage?	0.0001%	0.01%	0.001%	0.1%
 mat_silnia_5	Hard	What is 5! (5 factorial)?	120	100	60	150
 mat_fibonacci	Hard	What number comes next in the sequence 1, 1, 2, 3, 5, 8...?	13	11	12	16
 mat2_logarytm_2_8	Hard	What is log base 2 of 8?	3	2	4	8
@@ -412,6 +476,52 @@ mat_must_least_two	Hard	Why must at least two Londoners have exactly the same nu
 mat_bible_describes_round	Hard	The Bible describes a round basin 10 cubits across and 30 cubits around. What value of pi does that imply?	3	3.14	3.2	3.5
 mat_1843_william_rowan	Hard	In 1843, William Rowan Hamilton carved a formula into a Dublin bridge in a flash of inspiration. What had he discovered?	Quaternions	Logarithms	Prime numbers	Imaginary numbers
 mat_dropping_needles_random	Hard	Dropping needles at random onto a floor of parallel lines can be used to estimate which number?	Pi	e	The golden ratio	The square root of 2
+mat_numbers_follow_hidden	Hard	These numbers follow a hidden rule: 61, 52, 63, 94, 46, ... Which comes next?	18	81	64	57
+mat_numbers_strange_but	Hard	These numbers are in a strange but logical order: 8, 5, 4, 9, 1, 7, 6. Which comes next?	10	3	2	0
+mat_find_rule_256	Hard	Find the rule: 1, 4, 27, 256. Which number follows 256?	3,125	625	1,024	4,096
+mat_missing_dollar_riddle	Hard	In the famous 'missing dollar riddle' about three hotel guests, where has the missing dollar gone?	Nowhere - the sum itself is wrong	The bellboy secretly kept it	The clerk overcharged one guest	It was lost in the change
+mat_1884_novella_flatland	Hard	In the 1884 novella 'Flatland', set in a two-dimensional world, what shape is the narrator?	A square	A circle	A triangle	A straight line
+mat_numbers_equals_sum	Hard	Which of these numbers equals the sum of the cubes of its own digits?	153	154	135	351
+mat_last_digit_power	Hard	What is the last digit of 2 to the power of 100?	6	2	4	8
+mat_island_knights_always	Hard	On an island of knights, who always tell the truth, and knaves, who always lie, who could ever say 'I am a knave'?	Nobody	Only a knight	Only a knave	Either of them
+mat_nine_identical_looking	Hard	Nine identical-looking balls include one slightly heavier ball. With a balance scale, what is the fewest weighings that always finds it?	2	3	4	1
+mat_ancient_egyptians_wrote	Hard	Ancient Egyptians wrote almost every fraction as a sum of what?	Fractions with 1 on top	Fractions with 10 at the bottom	Fractions with 60 at the bottom	Fractions with 2 on top
+mat_ann_beats_ben	Hard	Ann beats Ben by 10 m in a 100 m race. In a rematch Ann starts 10 m behind the line. If both run at their old speeds, what happens?	Ann wins	It is a dead heat	Ben wins	Ben wins by 1 m
+mat_pipe_fills_tank	Hard	One pipe fills a tank in 2 hours and another in 3 hours. How long do they take together?	72 minutes	2.5 hours	1 hour	5 hours
+mat_salary_cut_percentage	Hard	Your salary is cut by 20%. By what percentage must it now rise to get back to where it was?	25%	20%	15%	40%
+mat_deal_better_extra	Hard	Which deal is better: '50% extra free' or 'a third off the price'?	They are exactly equal	50% extra free	A third off the price	It depends on the price
+mat_100_closed_lockers	Hard	100 closed lockers stand in a row. Pupil 1 opens them all, pupil 2 toggles every 2nd, pupil 3 every 3rd, and so on up to pupil 100. Which lockers end up open?	The square-numbered ones	The prime-numbered ones	The even-numbered ones	The odd-numbered ones
+mat_classic_open_envelope	Hard	Can the classic 'open envelope' (a square with both diagonals and a triangular roof) be drawn in one stroke without going over any line twice?	Yes, if you start at a bottom corner	Yes, starting from any corner	No, it is impossible	Yes, if you start at the roof tip
+mat_poker_flush_beat	Hard	In poker, why does a flush beat a straight?	It is less likely to be dealt	It uses higher cards	It was invented first	It needs more matching pairs
+mat_classic_lottery_roughly	Hard	In a classic '6 from 49' lottery, roughly how many different tickets are possible?	About 14 million	About 1 million	About 300,000	About 250 million
+mat_average_flips_fair	Hard	On average, how many flips of a fair coin does it take to get the first head?	2	1.5	3	4
+mat_mathematician_invented_game	Hard	Which mathematician invented the 'Game of Life', a grid of cells that live and die by a few simple rules?	John Conway	Alan Turing	John von Neumann	Stephen Wolfram
+mat_remove_two_opposite	Hard	Remove two opposite corners from a chessboard. Can 31 dominoes, each covering two squares, cover the 62 squares left?	No, it is impossible	Yes, in exactly one way	Yes, in hundreds of ways	Only if one domino stands upright
+mat_different_flat_nets	Hard	How many different flat 'nets' of six squares fold up into a cube?	11	6	8	24
+mat_draw_triangle_beach	Hard	Draw a triangle on a beach ball using the shortest paths between three points. How do its angles compare with a flat triangle's?	They add up to more	They add up to the same	They add up to less	They add up to exactly half
+mat_pringles_crisp_shaped	Hard	A Pringles crisp is shaped like which mathematical surface?	A hyperbolic paraboloid	A truncated cone	An oblate spheroid	A half torus
+mat_puzzle_barber_shaves	Hard	The puzzle of a barber who shaves all those, and only those, who don't shave themselves illustrates whose paradox?	Bertrand Russell's	Zeno's	Kurt Godel's	Gottlob Frege's
+mat_person_erdos_number	Hard	What does a person's 'Erdos number' measure?	Their co-author distance from Paul Erdos	Their score in a famous maths contest	How many proofs they have published	Their rank among living mathematicians
+mat_pierre_fermat_scribbled_2	Hard	Pierre de Fermat scribbled that he had a marvellous proof of his famous theorem. Why did he say he didn't write it down?	The margin was too narrow	He was about to fight a duel	The ink had run out	He wanted to keep it secret
+mat_square_root_day	Hard	'Square Root Day' falls on dates like 3 March 2009 (3/3/09). When was the next one after 4 April 2016?	5 May 2025	5 May 2020	4 April 2032	6 June 2030
+mat_fans_tau_equal	Hard	Fans of 'tau', equal to two times pi, celebrate Tau Day on which date?	28 June	6 March	2 June	28 February
+mat_prime_number_less	Hard	Which of these is the only prime number that is one less than a square number?	3	17	37	101
+mat_apart_both_triangular	Hard	Apart from 1, which of these is both a triangular number (1, 3, 6, 10, ...) and a square number?	36	16	25	49
+mat_according_legend_thales	Hard	According to legend, how did Thales measure the height of an Egyptian pyramid?	By comparing its shadow with his own	By climbing it with a knotted rope	By counting its rows of stones	By asking the priests who built it
+mat_ancient_greek_supposedly	Hard	Which ancient Greek supposedly told a king that there is 'no royal road to geometry'?	Euclid	Pythagoras	Archimedes	Plato
+mat_arguments_like_two	Hard	Arguments like 'two Londoners must have exactly the same number of hairs on their heads' rest on which principle?	The pigeonhole principle	The averaging principle	The uncertainty principle	The Peter principle
+mat_monte_carlo_method	Hard	The 'Monte Carlo method', which solves problems using random numbers, is named after what?	A famous casino	A mathematician named Carlo Monte	A Monaco racing rally	A Swiss mountain observatory
+mat_probability_theory_grew	Hard	Probability theory grew out of letters exchanged in 1654 by two French mathematicians. What were they discussing?	Splitting the stakes of an unfinished game	Rigging a royal lottery for the king	Predicting the next harvest's weather	Pricing insurance for ships at sea
+mat_albrecht_durer_engraving	Hard	Albrecht Durer's engraving 'Melencolia I' hides a 4x4 magic square. What do the two middle numbers of its bottom row show?	The year it was made	The artist's birthday	The number of the beast	The date of an eclipse
+mat_according_legend_tower	Hard	According to the legend of the Tower of Hanoi, what happens when monks finish moving all 64 golden discs?	The world will end	They become gods	A new emperor is born	The temple turns to gold
+mat_giant_shaped_exactly	Hard	If a giant were shaped exactly like a man but 10 times taller, about how many times heavier would he be?	1,000	10	100	30
+mat_prize_norwegian_mathematician	Hard	Which prize, named after a Norwegian mathematician, is often called the 'Nobel Prize of mathematics'?	The Abel Prize	The Fields Medal	The Wolf Prize	The Shaw Prize
+mat_rule_thumb_says	Hard	Which rule of thumb says that roughly 80% of the effects come from 20% of the causes?	The Pareto principle	Murphy's law	Parkinson's law	The Peter principle
+mat_connect_four_solved	Hard	Connect Four was solved by computer in 1988. With perfect play, who wins?	The first player	The second player	Nobody - it is a draw	Whoever starts at the edge
+mat_millennium_prize_problems	Hard	How many 'Millennium Prize Problems', each worth $1 million, were announced in 2000?	Seven	Ten	Twenty-three	Three
+mat_famously_hard_problem	Hard	Which famously hard problem asks for the shortest route that visits every city on a list exactly once?	The travelling salesman problem	The Konigsberg bridges problem	The knapsack problem	The four colour problem
+mat_prisoner_dilemma_both	Hard	In the 'prisoner's dilemma', why do both prisoners usually end up worse off?	Each is tempted to betray the other	Each forgets what the other said	Both refuse to speak at all	The guards always lie to them
+mat_draw_two_cards	Hard	You draw two cards from a full deck. What is the chance that both are aces?	1 in 221	1 in 169	1 in 26	1 in 104
 mat_liczba_e	Expert	What is the approximate value of e?	2.72	3.14	1.62	2.24
 mat_liczby_doskonale	Expert	Which of these numbers is perfect (equal to the sum of its divisors)?	28	24	30	36
 mat_duzy_pierwszy	Expert	Which of these numbers is NOT prime?	91	89	97	83
@@ -482,3 +592,24 @@ mat_any_moment_two	Expert	At any moment, two exactly opposite points on Earth ha
 mat_ludolph_van_ceulen	Expert	Ludolph van Ceulen spent years working out pi to 35 decimal places. Where were the digits carved?	On his tombstone	Over his front door	On a church bell	Into a city wall
 mat_drill_hole_straight	Expert	Drill a hole straight through the centre of a ball so the ring left over is 6 cm tall. What does the ring's volume depend on?	Only its 6 cm height	Only the ball's size	Only the hole's width	Both height and ball size
 mat_ant_crawls_along	Expert	An ant crawls at 1 cm/s along a 1 km rubber rope that stretches evenly by 1 km every second. Does it ever reach the end?	Yes, after an enormously long time	No, it falls further behind for ever	No, it gets stuck halfway	Yes, in under an hour
+mat_old_english_norse	Expert	In old English and Norse counting, how many was a 'long hundred'?	120	110	144	150
+mat_graham_number_earned	Expert	Graham's number earned a place in Guinness World Records as what?	The largest number used in a proof	The largest known prime number	The number of possible chess games	The longest number ever memorised
+mat_simpson_paradox_happen	Expert	In 'Simpson's paradox', what can happen to a trend that shows up in every group of data when the groups are combined?	It can reverse	It always doubles	It must stay the same	It becomes a perfect line
+mat_sports_illustrated_cover	Expert	The 'Sports Illustrated cover jinx', where stars slump after a cover appearance, is best explained by what?	Regression to the mean	The gambler's fallacy	Benford's law	Zipf's law
+mat_test_disease_000	Expert	A test for a disease that 1 in 10,000 people have is 99% accurate. You test positive. Roughly how likely are you to have it?	About 1%	About 99%	About 50%	About 90%
+mat_paradox_shape_gabriel	Expert	What paradox does the shape called 'Gabriel's Horn' show?	Finite volume but infinite surface area	Infinite volume but finite surface area	One side but two separate edges	Zero thickness but infinite weight
+mat_ham_sandwich_theorem	Expert	What does the 'ham sandwich theorem' promise?	One flat cut can halve the bread, ham and cheese	Any sandwich can be cut into equal triangles	No sandwich can be split into equal thirds	A dropped sandwich lands butter side down
+mat_identical_balls_touch	Expert	How many identical balls can touch one central ball of the same size at the same time?	12	8	6	20
+mat_centuries_old_conjecture	Expert	Which centuries-old conjecture says greengrocers already stack oranges in the densest possible way?	The Kepler conjecture	The Goldbach conjecture	The Poincare conjecture	The Collatz conjecture
+mat_unexpected_hanging_paradox	Expert	In the 'unexpected hanging paradox', a prisoner 'proves' he cannot be hanged on a surprise day that week. What happens?	He is hanged, and it is a surprise	He is set free at the end of the week	The judge cancels the hanging	He is hanged on Friday, as he predicted
+mat_according_braess_paradox	Expert	According to Braess's paradox, what can adding a new road to a busy network do?	Make every driver's journey slower	Halve every driver's journey time	Make every journey the same length	Double the number of cars overnight
+mat_parrondo_paradox_show	Expert	What does Parrondo's paradox show about two games that are each sure to lose in the long run?	Played alternately, they can win	Played together, they lose twice as fast	They always cancel each other out	Neither can ever be won even once
+mat_smallest_number_people	Expert	What is the smallest number of people at a party that guarantees three mutual friends or three mutual strangers?	6	5	7	9
+mat_2023_retired_print	Expert	In 2023 a retired print technician found the 'hat', the first single tile shape that can do what?	Cover a floor only without ever repeating	Tile a sphere without leaving any gaps	Fold up into all five Platonic solids	Fill 3D space with no gaps at all
+mat_every_possible_string	Expert	Does every possible string of digits, like your phone number, appear somewhere in pi?	Nobody knows yet	Yes, it has been proven	No, it has been disproven	Yes, because pi is irrational
+mat_stanislaw_ulam_discovered	Expert	Stanislaw Ulam discovered his famous spiral pattern of prime numbers while doing what?	Doodling during a boring talk	Tiling his bathroom floor	Playing chess on a train	Counting stars at an observatory
+mat_according_chinese_legend	Expert	According to Chinese legend, where was the Lo Shu, the first magic square, first seen?	On the shell of a turtle	On the wings of a crane	On the face of the Moon	On the back of a carp
+mat_fewest_given_clues	Expert	What is the fewest given clues a standard Sudoku can have and still have only one solution?	17	9	22	30
+mat_1980s_vancouver_stock	Expert	In the 1980s the Vancouver Stock Exchange's new index sank to about half its true value within two years. What went wrong?	Its value was truncated, not rounded	Prices were typed in the wrong currency	A clerk dropped a zero from the base	Its computer counted in base 12
+mat_archimedes_reportedly_want	Expert	What did Archimedes reportedly want carved on his tomb?	A sphere inside a cylinder	A circle inside a square	A spiral and a lever	A cone inside a cube
+mat_any_given_year	Expert	In any given year, 4 April, 6 June, 8 August, 10 October and 12 December all have what in common?	The same day of the week	Always a weekend day	Always a different weekday	The same phase of the Moon

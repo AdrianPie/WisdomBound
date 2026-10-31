@@ -142,6 +142,16 @@ myt_winged_horse_greek	Easy	Which winged horse of Greek myth appears in red on t
 myt_titan_father_zeus	Easy	Which Titan was the father of Zeus, Poseidon and Hades?	Cronus	Atlas	Prometheus	Hyperion
 myt_according_hesiod_goddess	Easy	According to Hesiod, which goddess rose from the foam of the sea?	Aphrodite	Athena	Artemis	Hera
 myt_unlike_america_britain	Easy	Unlike in America, in much of Britain a black cat crossing your path is traditionally a sign of what?	Good luck	Bad luck	A coming storm	A death in the family
+myt_old_wedding_rhyme	Easy	In the old wedding rhyme, what follows 'something old, something new, something borrowed'?	Something blue	Something gold	Something true	Something grey
+myt_according_old_saying	Easy	According to an old saying, what does it mean when your ears are burning?	Someone is talking about you	Money is on its way to you	Someone is telling you lies	You will soon hear bad news
+myt_traditionally_supposed_see	Easy	What are you traditionally supposed to do when you see a shooting star?	Make a wish	Hold your breath	Close your eyes	Count to seven
+myt_christmas_folklore_santa	Easy	In Christmas folklore, what does Santa leave in the stockings of naughty children?	A lump of coal	A rotten apple	A wooden spoon	An empty box
+myt_western_hotels_tall	Easy	Many Western hotels and tall buildings skip which floor number because it is thought unlucky?	13	7	9	21
+myt_european_legends_dragon	Easy	In European legends, what does a dragon usually guard in its cave?	A hoard of treasure	A sleeping giant	A magic fountain	A field of wheat
+myt_best_legend_england	Easy	In the best-known legend, whom did England's patron saint rescue from a dragon?	A princess	A shepherd boy	A bishop	A young knight
+myt_according_folklore_way	Easy	According to folklore, which way up should a horseshoe hang so that its luck does not run out?	Ends pointing up	Ends pointing down	Ends pointing left	It does not matter
+myt_actors_traditionally_say	Easy	What do actors traditionally say to each other instead of 'good luck' before a show?	Break a leg	Knock them dead	Fingers crossed	Bite the dust
+myt_under_plant_people	Easy	Under which plant do people traditionally kiss at Christmas?	Mistletoe	Holly	Ivy	Poinsettia
 cultw_odyn_ptaki	Medium	Which two ravens brought Odin news of the world?	Huginn and Muninn	Geri and Freki	Sleipnir and Fenrir	Vidar and Vali
 mit_hades	Medium	Who ruled the Greek underworld?	Hades	Poseidon	Cronus	Dionysus
 mit_atena	Medium	Which goddess was the patron of wisdom and Athens?	Athena	Hera	Aphrodite	Artemis
@@ -390,6 +400,34 @@ myt_prometheus_trick_zeus	Medium	How did Prometheus trick Zeus into taking the w
 myt_old_couple_welcomed	Medium	Which old couple welcomed Zeus and Hermes in disguise and were later turned into two intertwined trees?	Baucis and Philemon	Pyramus and Thisbe	Deucalion and Pyrrha	Orpheus and Eurydice
 myt_king_served_zeus	Medium	Which king served Zeus a meal of human flesh and was turned into a wolf as punishment?	Lycaon	Tantalus	Minos	Atreus
 myt_statue_liberty_new	Medium	The Statue of Liberty in New York portrays which Roman goddess?	Libertas	Minerva	Juno	Victoria
+myt_odysseus_son_went	Medium	What was the name of Odysseus's son, who went searching for news of his missing father?	Telemachus	Laertes	Astyanax	Neoptolemus
+myt_arrow_guided_apollo	Medium	Whose arrow, guided by Apollo, finally struck Achilles in his weak spot?	Paris's	Hector's	Aeneas's	Troilus's
+myt_egyptian_sun_god	Medium	How did the Egyptian sun god Ra travel across the sky each day?	In a boat	In a fiery chariot	On a falcon's back	Riding a lion
+myt_russian_new_year	Medium	In Russian New Year tradition, who is the granddaughter and helper of Ded Moroz?	The Snow Maiden	The Firebird	The Ice Queen	The Frost Fairy
+myt_dutch_tradition_country	Medium	In Dutch tradition, from which country does Sinterklaas arrive by steamboat?	Spain	Turkey	Italy	Norway
+myt_people_japan_traditionally	Medium	What do people in Japan traditionally do to a Daruma doll when they set themselves a goal?	Paint in one of its eyes	Tie a red thread round it	Write the goal on its base	Turn it to face the wall
+myt_according_old_counting	Medium	According to the old counting rhyme, what does seeing a single magpie bring?	Sorrow	Joy	Silver	A wedding
+myt_blue_eye_shaped	Medium	What is the blue eye-shaped 'nazar' charm, common in Turkey, meant to protect against?	The evil eye	Thunderstorms	Snake bites	Bad dreams
+myt_according_ojibwe_tradition	Medium	According to Ojibwe tradition, what is a dreamcatcher hung over a bed meant to do?	Catch bad dreams	Call back lost souls	Keep the bed warm	Keep bears away
+myt_ramayana_island_kingdom	Medium	In the 'Ramayana', which island kingdom did the demon king Ravana rule?	Lanka	Bali	Ayodhya	Kashi
+myt_northern_india_diwali	Medium	In northern India, Diwali celebrates which hero's return home after defeating Ravana?	Rama	Krishna	Arjuna	Hanuman
+myt_legend_chinese_zodiac	Medium	In the legend of the Chinese zodiac, how did the rat win the Great Race?	It rode on the ox's back	It tripped the horse	It flew on the rooster	It swam under the dragon
+myt_word_flora_plants	Medium	The word 'flora', for the plants of a region, comes from the Roman goddess of what?	Flowers	Rivers	The harvest	The hunt
+myt_pandava_brothers_heroes	Medium	How many Pandava brothers are the heroes of the 'Mahabharata'?	Five	Three	Seven	A hundred
+myt_haudenosaunee_iroquois_myth	Medium	In Haudenosaunee (Iroquois) myth, the Earth was built on the back of which animal?	A turtle	A whale	A buffalo	An eagle
+myt_chinese_legend_immortals	Medium	In Chinese legend, how many Immortals cross the sea together, each using a magic power?	Eight	Seven	Five	Twelve
+myt_japanese_wind_god	Medium	What does the Japanese wind god Fujin carry over his shoulders?	A bag of winds	A ring of drums	A giant fan	A paper kite
+myt_old_king_priam	Medium	How did old King Priam get back the body of his son Hector?	He begged Achilles and paid a ransom	Hermes stole it back at night	He beat Achilles in a duel	The Greeks swapped it for Helen
+myt_according_children_rhyme	Medium	According to the children's rhyme, stepping on a crack in the pavement will do what?	Break your mother's back	Bring seven years of rain	Make you lose a tooth	Wake a sleeping troll
+myt_according_common_superstition	Medium	According to a common superstition, what does an itchy palm mean?	Money is coming	A storm is coming	Someone misses you	You will soon travel
+myt_heracles_drive_man	Medium	How did Heracles drive the man-eating birds out of the Stymphalian marsh?	With a bronze rattle	With a burning torch	With a flock of hawks	With poisoned arrows only
+myt_claws_dragons_chinese	Medium	How many claws did the dragons on a Chinese emperor's robes traditionally have?	Five	Three	Four	Seven
+myt_greek_god_gentle	Medium	Who was the Greek god of the gentle west wind that brings spring?	Zephyrus	Notus	Eurus	Aeolus
+myt_sophocles_play_antigone	Medium	In Sophocles' play, why is Antigone condemned to death?	She buried her brother	She married a slave	She insulted Apollo	She plotted against her uncle
+myt_tartarus_greek_myth	Medium	What was Tartarus in Greek myth?	The underworld's deepest pit	The gods' palace on Olympus	A many-headed sea monster	A river of burning fire
+myt_agamemnon_sacrifice_get	Medium	What did Agamemnon sacrifice to get the winds he needed to sail for Troy?	His daughter Iphigenia	His son Orestes	His best warhorse	His royal sceptre
+myt_fruit_sailors_fishermen	Medium	Which fruit do many sailors and fishermen think it bad luck to carry on board?	Bananas	Apples	Oranges	Coconuts
+myt_medieval_lore_animal	Medium	In medieval lore, which animal was believed to live unharmed in fire?	The salamander	The newt	The lizard	The toad
 cultw_izanagi	Hard	In Japanese myth, which pair created the islands of Japan?	Izanagi and Izanami	Amaterasu and Susanoo	Raijin and Fujin	Inari and Hachiman
 cultw_anansi	Hard	In West African folklore, what kind of creature is Anansi?	A spider	A lion	A crocodile	A hawk
 mit_yggdrasil	Hard	What is the cosmic tree in Norse mythology called?	Yggdrasil	Valhalla	Bifrost	Midgard
@@ -582,6 +620,37 @@ myt_crafty_king_corinth	Hard	Which crafty king of Corinth chained up Death itsel
 myt_two_eagles_zeus	Hard	Where did the two eagles that Zeus released from opposite ends of the world meet, marking its navel?	Delphi	Olympia	Athens	Mount Olympus
 myt_raging_goddess_sekhmet	Hard	How was the raging goddess Sekhmet stopped from wiping out humankind?	She drank beer dyed to look like blood	Ra trapped her inside the Moon	Horus defeated her in battle	Osiris chained her in the underworld
 myt_according_myth_happened	Hard	According to myth, what happened to Tiresias when he struck two mating snakes with his stick?	He was turned into a woman	He became a snake himself	He lost his voice	He was turned to stone
+myt_greek_god_death	Hard	Who was the Greek god of death, twin brother of Hypnos?	Thanatos	Erebus	Morpheus	Charon
+myt_giant_catfish_japanese	Hard	Which giant catfish of Japanese legend causes earthquakes when it thrashes about?	Namazu	Kappa	Orochi	Baku
+myt_japan_imperial_regalia	Hard	Japan's imperial regalia are a sword, a jewel and what?	A mirror	A crown	A bell	A bow
+myt_spirit_japanese_folklore	Hard	Which spirit of Japanese folklore appears in blizzards and freezes travellers with her breath?	Yuki-onna	Kitsune	Rokurokubi	Kuchisake-onna
+myt_journey_west_pilgrim	Hard	In 'Journey to the West', which pilgrim is half man, half pig?	Zhu Bajie	Sha Wujing	Tang Sanzang	Bai Longma
+myt_legged_prankster_red	Hard	Which one-legged prankster in a red cap is a favourite of Brazilian folklore?	Saci	Curupira	Boitata	Iara
+myt_lamassu_guarded_assyrian	Hard	What were the lamassu that guarded Assyrian palace gates?	Winged bulls with human heads	Lions with snakes for tails	Eagles with the heads of lions	Giant men with scorpion tails
+myt_medieval_poem_game	Hard	In the medieval poem, what game does the Green Knight propose at Camelot?	Trading blows a year apart	A joust on horseback	Answering three riddles	A drinking contest
+myt_welsh_legend_prince	Hard	In the Welsh legend, why did Prince Llywelyn kill his faithful hound Gelert?	He thought it had killed his son	It had bitten his wife	It lost him a royal hunt	It had gone mad with rabies
+myt_river_goddess_fell	Hard	Which river goddess fell from heaven and was caught in Shiva's matted hair?	Ganga	Yamuna	Kaveri	Narmada
+myt_hindu_god_death	Hard	Which Hindu god of death rides a water buffalo?	Yama	Agni	Indra	Varuna
+myt_child_hanuman_mistake	Hard	As a child, what did Hanuman mistake the sun for and leap up to eat?	A ripe fruit	A golden egg	A ball of butter	A lotus flower
+myt_egyptian_god_osiris	Hard	Why was the Egyptian god Osiris often painted with green skin?	It stood for rebirth and growth	He was a god of the sea	He had been poisoned by Set	Green was the pharaohs' colour
+myt_according_legend_nile	Hard	According to legend, the Nile's yearly flood came from the tears of which goddess?	Isis	Hathor	Bastet	Sekhmet
+myt_blind_god_tricked	Hard	Which blind god was tricked by Loki into killing his brother Baldr?	Hodr	Vidar	Bragi	Forseti
+myt_norse_god_blow	Hard	Which Norse god will blow the Gjallarhorn to warn of Ragnarok?	Heimdall	Odin	Bragi	Tyr
+myt_artemis_turn_hunter	Hard	Why did Artemis turn the hunter Actaeon into a stag?	He saw her bathing	He killed her sacred deer	He boasted he was faster	He stole her silver bow
+myt_niobe_boast_bringing	Hard	What did Niobe boast about, bringing down the anger of Apollo and Artemis?	Having more children than Leto	Being lovelier than Hera	Weaving better than Athena	Singing better than the Muses
+myt_pirates_kidnapped_young	Hard	What did the pirates who kidnapped the young Dionysus turn into when they leapt overboard?	Dolphins	Seals	Seagulls	Tuna
+myt_muses_mother_mnemosyne	Hard	The Muses' mother Mnemosyne was the goddess of what?	Memory	Music	Wisdom	Dreams
+myt_deucalion_pyrrha_throw	Hard	What did Deucalion and Pyrrha throw over their shoulders to repopulate the world after the flood?	Stones	Seeds	Shells	Feathers
+myt_fruit_turned_white	Hard	Which fruit turned from white to dark red because of the tragic lovers Pyramus and Thisbe?	The mulberry	The cherry	The pomegranate	The strawberry
+myt_greek_hero_accidentally	Hard	Which Greek hero accidentally killed his grandfather with a discus, fulfilling a prophecy?	Perseus	Theseus	Jason	Bellerophon
+myt_blind_seer_thebes	Hard	Which blind seer of Thebes was said to have lived seven years as a woman?	Tiresias	Calchas	Laocoon	Phineus
+myt_back_home_disguise	Hard	Back home in disguise, what feat with his old bow did Odysseus perform?	An arrow through twelve axe heads	Hitting a dove tied to a mast	Splitting an arrow in the target	Shooting an apple off a head
+myt_zeus_destroy_last	Hard	Why did Zeus destroy the last of Odysseus's ships and crew?	They ate the sun god's cattle	They opened the bag of winds	They looted Athena's temple	They insulted Poseidon's son
+myt_headed_dragon_fights	Hard	Which many-headed dragon fights the heroes of Russian folk tales?	Zmey Gorynych	Koschei	Kikimora	Vodyanoy
+myt_grumpy_old_water	Hard	Which grumpy old water spirit of Slavic folklore drags swimmers down to his realm?	The vodyanoy	The leshy	The domovoi	The polevik
+myt_according_myth_creature	Hard	According to one myth, which creature killed the giant hunter Orion?	A scorpion	A wild boar	A sea serpent	A lion
+myt_korean_folklore_gumiho	Hard	In Korean folklore, what is a gumiho?	A nine-tailed fox	A river dragon	A one-horned goblin	A tiger spirit
+myt_chinese_tradition_creature	Hard	In Chinese tradition, which creature guards the west?	The White Tiger	The Azure Dragon	The Black Tortoise	The Vermilion Bird
 cultw_mahabharata	Expert	Which Sanskrit epic contains the Bhagavad Gita?	The Mahabharata	The Ramayana	The Rigveda	The Upanishads
 cultw_tyche	Expert	Which Greek goddess personified luck and fortune?	Tyche	Nemesis	Hecate	Eris
 cultw_mabinogion	Expert	The Mabinogion collects the myths of which people?	The Welsh	The Irish	The Scots	The Bretons
@@ -682,3 +751,17 @@ myt_palamedes_prove_odysseus	Expert	How did Palamedes prove that Odysseus was on
 myt_phrase_halcyon_days	Expert	The phrase 'halcyon days' recalls calm winter seas granted while which birds nested?	Kingfishers	Seagulls	Swallows	Albatrosses
 myt_golem_legend_erasing	Expert	In golem legend, erasing one letter of 'emet' (truth) on its forehead leaves a word meaning what?	Death	Sleep	Clay	Silence
 myt_assyrian_gate_guardians	Expert	Why do many Assyrian gate guardians, winged bulls with human heads, have five legs?	To look complete from front and side	To honour the five gods of the city	A sculptor's error that became custom	A fifth leg marked a royal beast
+myt_trojan_became_english	Expert	Which Trojan's name became an English verb meaning 'to bully'?	Hector	Paris	Priam	Aeneas
+myt_special_boar_saehrimnir	Expert	What is special about the boar Saehrimnir, eaten every night in Valhalla?	It is whole again each evening	It can speak and sing	It has eight legs	It is made of gold
+myt_having_given_away	Expert	Having given away his sword, what does the god Freyr fight with at Ragnarok?	An antler	A ship's oar	A ploughshare	His bare hands
+myt_handle_thor_hammer	Expert	Why is the handle of Thor's hammer so short?	Loki, as a fly, distracted the smith	A giant bit off the end	Thor broke it on a rock	The dwarves ran out of iron
+myt_giant_hall_old	Expert	In the giant's hall, who was the old woman Thor could not wrestle to the ground?	Old age itself	The sea	Death in disguise	Hel, queen of the dead
+myt_stop_lion_headed	Expert	How did Ra stop the lion-headed goddess he had sent to punish mankind?	He got her drunk on red beer	He sang her to sleep	He chained her in a cave	He turned her into a cat
+myt_kind_animal_egyptian	Expert	What kind of animal is the Egyptian god Set's head?	An unknown creature	A crocodile	A hippo	A falcon
+myt_japanese_folklore_tsukumogami	Expert	In Japanese folklore, what are tsukumogami?	Old objects that come to life	Ghosts of drowned sailors	Mountain-dwelling ogres	Spirits of the rice fields
+myt_chinese_belief_meng	Expert	In Chinese belief, what does Meng Po give souls before they are reborn?	A soup of forgetfulness	A coin for the ferryman	A new name on a scroll	A peach of long life
+myt_odd_feet_curupira	Expert	What is odd about the feet of the Curupira, protector of Brazil's forests?	They point backwards	They are made of wood	They never touch the ground	He has only one
+myt_mexican_hairless_dog	Expert	The Mexican hairless dog breed takes its name from which Aztec god?	Xolotl	Tlaloc	Xipe Totec	Mixcoatl
+myt_mesopotamian_wind_demon	Expert	Which Mesopotamian wind demon has a starring role in the film 'The Exorcist'?	Pazuzu	Lamashtu	Humbaba	Tiamat
+myt_said_happen_tara	Expert	What was said to happen at Tara when the true High King of Ireland stood on the Lia Fail?	The stone roared	The stone glowed	The stone split	The stone rang like a bell
+myt_odysseus_pretend_mad	Expert	How did Odysseus pretend to be mad to avoid the Trojan War?	He sowed his fields with salt	He talked only to his dogs	He dressed as a woman	He howled at the moon
