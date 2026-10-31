@@ -1,0 +1,278 @@
+# Children's Books & Fantasy: children's books, fairy tales, fables, fantasy and sci-fi sagas (Tolkien, Harry Potter, Narnia, Alice...)
+#
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+lit_harry	Easy	Who wrote the Harry Potter series?	J.K. Rowling	J.R.R. Tolkien	C.S. Lewis	Roald Dahl
+lit_wladca	Easy	Who wrote 'The Lord of the Rings'?	J.R.R. Tolkien	George R.R. Martin	J.K. Rowling	Terry Pratchett
+lit_pinokio	Easy	What grew on Pinocchio when he lied?	His nose	His ears	His hair	His hands
+lit2_kubus	Easy	Who wrote 'Winnie the Pooh'?	A.A. Milne	Lewis Carroll	Roald Dahl	Astrid Lindgren
+lit2_alicja	Easy	Who wrote 'Alice's Adventures in Wonderland'?	Lewis Carroll	J.M. Barrie	C.S. Lewis	Frank Baum
+lit2_narnia	Easy	Who wrote 'The Chronicles of Narnia'?	C.S. Lewis	J.R.R. Tolkien	Philip Pullman	Ursula Le Guin
+lit3_harry_potter_szkola	Easy	What is Harry Potter's school of magic called?	Hogwarts	Beauxbatons	Durmstrang	Ilvermorny
+lit3_tolkien_pierscien	Easy	What is the main character carrying the ring in 'The Lord of the Rings' called?	Frodo Baggins	Bilbo Baggins	Aragorn	Gandalf
+lit4_kipling_ksiega	Easy	Who wrote 'The Jungle Book'?	Rudyard Kipling	Jack London	Robert Louis Stevenson	H. Rider Haggard
+trv2_mala_syrenka_autor	Easy	Who wrote the original tale of 'The Little Mermaid'?	Hans Christian Andersen	The Brothers Grimm	Charles Perrault	Oscar Wilde
+wld_tolkien_pierscien	Easy	In 'The Lord of the Rings', where must the One Ring be destroyed?	Mount Doom	Rivendell	Helm's Deep	Minas Tirith
+wld_alicja_krolik	Easy	What does Alice follow down the hole in 'Alice's Adventures in Wonderland'?	A white rabbit	A black cat	A talking caterpillar	A playing card
+wld_lit_piotrus_pan	Easy	In which land do Peter Pan and the Lost Boys live?	Neverland	Narnia	Wonderland	Oz
+wld_lit_czarnoksieznik_oz	Easy	In 'The Wizard of Oz', what road does Dorothy follow?	The yellow brick road	The silver road	The emerald path	The rainbow road
+wld_lit_narnia_wejscie	Easy	How do the children first enter Narnia?	Through a wardrobe	Through a mirror	Down a rabbit hole	Through a painting
+lit_gryffindor	Easy	Which Hogwarts house is Harry Potter sorted into?	Gryffindor	Slytherin	Ravenclaw	Hufflepuff
+lit_voldemort	Easy	Which dark wizard is Harry Potter's great enemy?	Lord Voldemort	Sauron	Grindelwald	Saruman
+lit_kopciuszek	Easy	Which fairy-tale heroine leaves a glass slipper behind at a royal ball?	Cinderella	Snow White	Sleeping Beauty	Rapunzel
+lit_strach_na_wroble	Easy	In 'The Wizard of Oz', what does the Scarecrow wish for?	A brain	A heart	Courage	A home
+lit_krolowa_kier	Easy	Which character in 'Alice in Wonderland' keeps shouting 'Off with their heads!'?	The Queen of Hearts	The Red Queen	The Duchess	The White Queen
+lit_hp_bestseller	Easy	Which is the best-selling book series of all time?	Harry Potter	The Lord of the Rings	Goosebumps	The Hunger Games
+lit_dahl	Easy	Who wrote 'Charlie and the Chocolate Factory'?	Roald Dahl	Enid Blyton	Dr. Seuss	Beatrix Potter
+lit_grinch	Easy	Which Dr. Seuss character tried to steal Christmas?	The Grinch	The Cat in the Hat	The Lorax	Sam-I-Am
+lit_katniss	Easy	What is Katniss Everdeen's favourite weapon in 'The Hunger Games'?	A bow and arrows	A spear	A knife	A slingshot
+litx_hp_peron	Easy	From which platform does Harry Potter's school train leave King's Cross?	Nine and three-quarters	Seven and a half	Twelve and a quarter	Ten and two-thirds
+litx_hp_blizna	Easy	What shape is the scar on Harry Potter's forehead?	A lightning bolt	A star	A crescent moon	A cross
+litx_dumbledore	Easy	Who is the headmaster of Harry Potter's school for most of the books?	Albus Dumbledore	Severus Snape	Minerva McGonagall	Rubeus Hagrid
+litx_zloty_bilet	Easy	What does Charlie find to win a tour of Willy Wonka's factory?	A golden ticket	A silver key	A secret map	A magic sweet
+litx_mowgli	Easy	Which boy is raised by wolves in 'The Jungle Book'?	Mowgli	Tarzan	Peter	Oliver
+litx_gandalf	Easy	Which wizard helps Bilbo and Frodo in Tolkien's books?	Gandalf	Merlin	Saruman	Dumbledore
+litx_kapelusznik	Easy	Which character hosts a never-ending tea party in 'Alice in Wonderland'?	The Mad Hatter	The White Rabbit	The Cheshire Cat	The Caterpillar
+litx_dzwoneczek	Easy	What is the name of Peter Pan's fairy friend?	Tinker Bell	Silvermist	Navi	Titania
+litx_grimm	Easy	Which country were the Brothers Grimm from?	Germany	Denmark	Austria	The Netherlands
+litx_czerwony_kapturek	Easy	In the fairy tale, whom does Little Red Riding Hood set out to visit?	Her grandmother	Her aunt	Her teacher	Her cousin
+litx_jas_malgosia	Easy	In 'Hansel and Gretel', what is the witch's house made of?	Gingerbread and sweets	Frozen ice blocks	Straw and mud	Coloured glass
+litx_trzy_swinki	Easy	In 'The Three Little Pigs', what is the strongest house made of?	Bricks	Sticks	Straw	Stone
+lity_brzydkie_kaczatko	Easy	In Andersen's tale, what does the 'ugly duckling' grow up to be?	A swan	A goose	An eagle	A peacock
+lit_names_harry_potter	Easy	What are the names of Harry Potter's two best friends?	Ron and Hermione	Fred and George	Neville and Luna	Draco and Ginny
+lit_kind_creature_dobby	Easy	What kind of creature is Dobby in Harry Potter?	A house-elf	A goblin	A gnome	A dwarf
+lit_harry_potter_wizards	Easy	In Harry Potter, what do wizards call ordinary non-magical people?	Muggles	Mudbloods	Purebloods	Goblins
+lit_house_draco_malfoy	Easy	Which house is Draco Malfoy sorted into?	Slytherin	Gryffindor	Ravenclaw	Hufflepuff
+lit_kind_creature_legolas	Easy	What kind of creature is Legolas in 'The Lord of the Rings'?	An elf	A dwarf	A hobbit	A wizard
+lit_winnie_pooh_gloomy	Easy	What is the name of Winnie the Pooh's gloomy donkey friend?	Eeyore	Piglet	Tigger	Kanga
+lit_fairy_tale_girl	Easy	In which fairy tale is a girl proven to be royal by feeling a tiny pea under twenty mattresses?	The Princess and the Pea	Sleeping Beauty	Snow White	Thumbelina
+lit_country_children_classic	Easy	In which country is the children's classic 'Heidi' set?	Switzerland	Austria	Norway	Germany
+lit_bilbo_find_gollum	Easy	What does Bilbo find in Gollum's dark cave in 'The Hobbit'?	A magic ring	An enchanted sword	A secret map	A golden cup
+lit_hogwarts_teacher_potions	Easy	Which Hogwarts teacher of Potions turns out to be secretly on Harry's side?	Severus Snape	Gilderoy Lockhart	Quirinus Quirrell	Horace Slughorn
+lit_darling_girl_flies	Easy	What is the name of the Darling girl who flies to Neverland with Peter Pan?	Wendy	Alice	Dorothy	Lucy
+lit_works_willy_wonka	Easy	Who works in Willy Wonka's chocolate factory?	The Oompa-Loompas	The Munchkins	The Smurfs	The Borrowers
+lit_wizard_tin_man	Easy	In 'The Wizard of Oz', what does the Tin Man wish for?	A heart	A brain	Courage	A new axe
+lit_jack_beanstalk_jack	Easy	In 'Jack and the Beanstalk', what does Jack swap for the magic beans?	The family cow	His father's sword	A golden harp	His mother's ring
+lit_bear_lives_hundred	Easy	Which bear lives in the Hundred Acre Wood?	Winnie the Pooh	Paddington	Baloo	Rupert
+lit_clever_cat_puss	Easy	What does the clever cat in 'Puss in Boots' first ask his master for?	A pair of boots	A golden crown	A sword	A fine horse
+lit_colour_emerald_city	Easy	What colour is the Emerald City in 'The Wizard of Oz'?	Green	Blue	Gold	Red
+lit_wizard_cowardly_lion	Easy	In 'The Wizard of Oz', what does the Cowardly Lion hope the Wizard will give him?	Courage	A heart	A brain	A home
+lit_jungle_book_tiger	Easy	In 'The Jungle Book', what is the name of the tiger?	Shere Khan	Baloo	Bagheera	Akela
+lit_fairy_tale_girl_2	Easy	Which fairy-tale girl eats the porridge of three bears?	Goldilocks	Little Red Riding Hood	Gretel	Rapunzel
+lit_grimm_tale_snow	Easy	In the Grimm tale 'Snow White', what does the wicked queen ask her magic mirror?	Who is the fairest of them all	Who is the richest in the land	Who will rule after her death	Where her enemies are hiding
+lit_aesop_fable_fox	Easy	In Aesop's fable, why does the fox decide the grapes must be sour?	He cannot reach them	A crow warned him off	They are still green	He has just eaten
+lit_pied_piper_lure	Easy	What does the Pied Piper first lure out of Hamelin with his magic tune?	The rats	The children	The geese	The town's soldiers
+lit_jack_beanstalk_giant	Easy	In 'Jack and the Beanstalk', what does the giant's magic hen lay?	Golden eggs	Silver coins	Diamond eggs	More magic beans
+lit_lord_rings_dark	Easy	In 'The Lord of the Rings', what is the dark land ruled by Sauron called?	Mordor	Gondor	Rohan	Isengard
+lit_magical_object_lets	Easy	Which magical object lets Harry Potter wander around his school unseen?	An invisibility cloak	A time-turner	A golden locket	The Sorting Hat
+lit_food_winnie_pooh	Easy	Which food does Winnie-the-Pooh love more than anything else?	Honey	Jam	Porridge	Acorns
+lit_very_hungry_caterpillar	Easy	What does the Very Hungry Caterpillar turn into at the end of the famous picture book?	A butterfly	A moth	A dragonfly	A ladybird
+lit_hunger_games_katniss	Easy	In 'The Hunger Games', why does Katniss Everdeen end up in the deadly arena?	She volunteers to save her sister	Her name is drawn twice	She is sent there as a punishment	She wins a place in a contest
+lit_alice_wonderland_happens	Easy	In 'Alice in Wonderland', what happens when Alice drinks from the bottle labelled 'DRINK ME'?	She shrinks	She grows huge	She falls asleep	She becomes invisible
+lit_wizard_turns_out	Easy	In 'The Wizard of Oz', who turns out to be behind the great and terrible Wizard?	An ordinary man with tricks	The Wicked Witch in disguise	A fairy from the far south	The Good Witch of the North
+lit_hansel_gretel_hansel	Easy	In 'Hansel and Gretel', what does Hansel drop to mark the way home, only for birds to eat it?	Breadcrumbs	White pebbles	Sunflower seeds	Red berries
+lit_treasure_island_kind	Easy	In 'Treasure Island', what kind of bird rides on the one-legged ship's cook's shoulder?	A parrot	A raven	A seagull	A crow
+lit_nursery_rhyme_character	Easy	Which nursery-rhyme character 'sat on a wall' and 'had a great fall'?	Humpty Dumpty	Little Jack Horner	Georgie Porgie	Wee Willie Winkie
+lit_twelve_days_christmas	Easy	In 'The Twelve Days of Christmas', what does 'my true love' send on the first day?	A partridge in a pear tree	Two turtle doves	Five gold rings	A swan a-swimming
+lit_surname_aunt_uncle	Easy	What is the surname of the aunt and uncle who bring up Harry Potter?	Dursley	Weasley	Lovegood	Malfoy
+lit_willy_wonka_hand	Easy	What does Willy Wonka hand over to Charlie Bucket at the end of 'Charlie and the Chocolate Factory'?	His whole factory	A lifetime of sweets	A bag of gold coins	A pet Oompa-Loompa
+lit_green_peaceful_home	Easy	What is the name of the green, peaceful home country of Tolkien's hobbits?	The Shire	Rivendell	Gondor	Rohan
+lit_fairy_tale_prince	Easy	In the fairy tale, how does the prince climb up to Rapunzel in her tower?	Up her long hair	Up a magic beanstalk	On a ladder of roses	With a hook and rope
+lit_tigger_like_doing	Easy	What does Tigger like doing best in the Winnie-the-Pooh stories?	Bouncing	Climbing trees	Singing songs	Eating honey
+lit_brothers_grimm_tale	Easy	In the Brothers Grimm tale, what work do Snow White's seven dwarfs do?	They dig for ore in the mountains	They chop wood in the forest	They bake bread for the village	They catch fish in the lake
+lit_two_weasley_brothers	Easy	Which two Weasley brothers are mischievous identical twins?	Fred and George	Percy and Bill	Charlie and Ron	Bill and Charlie
+lit_beauty_beast_beauty	Easy	In 'Beauty and the Beast', what does Beauty's father pick in the Beast's garden, enraging him?	A rose	A lily	An apple	A tulip
+lit_collodi_story_finally	Easy	In the original book, who finally turns the wooden puppet Pinocchio into a real boy?	The Blue Fairy	Geppetto	The Talking Cricket	The Fox and the Cat
+lit_nursery_rhyme_hickory	Easy	In the nursery rhyme 'Hickory Dickory Dock', what runs up the clock?	A mouse	A cat	A spider	A rat
+lit_nursery_rhyme_jack	Easy	In the nursery rhyme, what do Jack and Jill go up the hill to fetch?	A pail of water	A basket of eggs	A bundle of sticks	A lost lamb
+lit_nursery_rhyme_mary	Easy	In the nursery rhyme, where does Mary's little lamb follow her one day, against the rules?	To school	To church	To market	To the river
+lit_harry_potter_dobby	Easy	In Harry Potter, what does Dobby need from his masters to be set free?	A piece of clothing	A golden coin	A new name	A broken wand
+lit_hooded_soul_sucking	Easy	Which hooded, soul-sucking guards can be driven off with a Patronus charm in Harry Potter?	Dementors	Inferi	Boggarts	Thestrals
+lit_pattern_tall_hat	Easy	What pattern is on the tall hat of the Cat in the Hat?	Red and white stripes	Black and white spots	Blue and yellow checks	Green and gold stars
+lit_hunger_games_bird	Easy	In 'The Hunger Games', which bird appears on the pin Katniss wears into the arena?	A mockingjay	A phoenix	A raven	A golden eagle
+lit_wrote_hobbit	Easy	Who wrote 'The Hobbit'?	J. R. R. Tolkien	C. S. Lewis	Roald Dahl	Terry Pratchett
+lit3_hobbit_bohater	Easy	Who is the main character of 'The Hobbit'?	Bilbo Baggins	Frodo Baggins	Aragorn	Legolas
+lit_kot_z_cheshire	Easy	What does the Cheshire Cat leave behind when it vanishes?	Its grin	Its tail	Its eyes	Its whiskers
+litx_quidditch	Easy	In Quidditch, what is the tiny golden winged ball called?	The Golden Snitch	The Quaffle	The Bludger	The Firebolt
+litx_bfg	Easy	What does 'BFG' stand for in Roald Dahl's book?	Big Friendly Giant	Big Funny Goblin	Best Friend Guardian	Brave Flying Giant
+litx_gollum	Easy	What does Gollum call the One Ring?	'My precious'	'My treasure'	'My darling'	'My shiny'
+litx_ezop	Easy	Which ancient Greek storyteller is famous for fables like 'The Tortoise and the Hare'?	Aesop	Homer	Plato	Sophocles
+lit_imp_grimm_fairy	Easy	Which imp in a Grimm fairy tale spins straw into gold?	Rumpelstiltskin	Tom Thumb	The Pied Piper	Hans My Hedgehog
+lit_sleeping_beauty_princess	Easy	In 'Sleeping Beauty', what does the princess prick her finger on?	A spindle	A rose thorn	A needle	A spinning top
+lit_emperor_new_clothes	Easy	In 'The Emperor's New Clothes', who finally says the emperor is wearing nothing?	A child	His tailor	His queen	A beggar
+lit_unusual_stuart_little	Easy	What is unusual about Stuart Little, the second son of a New York family?	He is a mouse	He is invisible	He can fly	He is a cat
+lit_author_wrote_cat	Easy	Which author wrote 'The Cat in the Hat'?	Dr. Seuss	Roald Dahl	Shel Silverstein	Maurice Sendak
+lit_must_queen_guess	Easy	What must the queen guess to escape her deal with Rumpelstiltskin?	His name	His age	His home	His birthday
+lit3_gra_o_tron_autor	Medium	Who wrote the 'A Song of Ice and Fire' series (the basis for 'Game of Thrones')?	George R.R. Martin	J.R.R. Tolkien	Brandon Sanderson	Terry Pratchett
+trv2_silver	Medium	Who is the one-legged pirate in 'Treasure Island'?	Long John Silver	Captain Hook	Blackbeard	Captain Flint
+wld_maly_ksiaze_planeta	Medium	In 'The Little Prince', what does the prince love on his tiny planet?	A rose	A fox	A baobab	A lamplighter
+lit_wilbur	Medium	What is the name of the pig in 'Charlotte's Web'?	Wilbur	Babe	Napoleon	Piglet
+lit_zmierzch	Medium	Which vampire saga is set in the rainy town of Forks, Washington?	Twilight	The Vampire Diaries	True Blood	Interview with the Vampire
+lit_westeros	Medium	On which fictional continent does most of 'Game of Thrones' take place?	Westeros	Middle-earth	Narnia	Tamriel
+lit_asimov	Medium	Which author came up with the 'Three Laws of Robotics'?	Isaac Asimov	Arthur C. Clarke	Philip K. Dick	Ray Bradbury
+lit_diuna	Medium	Which novel is set on the desert planet Arrakis?	Dune	Foundation	Solaris	Hyperion
+lit_paddington	Medium	According to the stories, which country does Paddington Bear come from?	Peru	Bolivia	Brazil	Chile
+lit_pratchett	Medium	Which author wrote the comic fantasy 'Discworld' novels?	Terry Pratchett	Neil Gaiman	Douglas Adams	Terry Brooks
+litx_dystrykt_12	Medium	Which district is Katniss Everdeen from in 'The Hunger Games'?	District 12	District 1	District 7	District 13
+litx_smaug	Medium	What is the name of the dragon in 'The Hobbit'?	Smaug	Glaurung	Ancalagon	Norbert
+litx_saint_exupery	Medium	Who wrote 'The Little Prince'?	Antoine de Saint-Exupery	Guy de Maupassant	Alexandre Dumas	Albert Camus
+litx_stevenson	Medium	Who wrote 'Treasure Island'?	Robert Louis Stevenson	Arthur Conan Doyle	Daniel Defoe	Walter Scott
+lity_biala_czarownica	Medium	Which villain keeps Narnia locked in endless winter?	The White Witch	The Snow Queen	Maleficent	Morgan le Fay
+lity_huck_finn	Medium	Which Mark Twain hero sails down the Mississippi on a raft?	Huckleberry Finn	Tom Sawyer	Oliver Twist	David Copperfield
+lit_wrote_tale_peter	Medium	Who wrote 'The Tale of Peter Rabbit'?	Beatrix Potter	Enid Blyton	A. A. Milne	Kenneth Grahame
+lit_roald_dahl_matilda	Medium	In Roald Dahl's 'Matilda', what is the name of the cruel headmistress?	Miss Trunchbull	Miss Honey	Mrs Wormwood	Miss Hardbroom
+lit_wizarding_bank_harry	Medium	What is the name of the wizarding bank in Harry Potter?	Gringotts	Hogsmeade	Diagon Alley	Azkaban
+lit_racing_broom_harry	Medium	Which racing broom does Harry Potter get in his first year at school?	The Nimbus 2000	The Firebolt	The Cleansweep Seven	The Comet 260
+lit_frodo_loyal_friend	Medium	What is the name of Frodo's loyal friend and gardener?	Samwise Gamgee	Meriadoc Brandybuck	Peregrin Took	Bilbo Baggins
+lit_boy_owns_winnie	Medium	What is the name of the boy who owns Winnie the Pooh?	Christopher Robin	Charlie Bucket	Oliver Twist	Tom Sawyer
+lit_kind_animal_bagheera	Medium	What kind of animal is Bagheera in 'The Jungle Book'?	A black panther	A tiger	A wolf	A bear
+lit_wrote_hitchhiker_guide	Medium	Who wrote 'The Hitchhiker's Guide to the Galaxy'?	Douglas Adams	Terry Pratchett	Arthur C. Clarke	Kurt Vonnegut
+lit_charlie_chocolate_factory	Medium	In 'Charlie and the Chocolate Factory', which girl swells up into a giant blueberry?	Violet Beauregarde	Veruca Salt	Augustus Gloop	Mike Teavee
+lit_wizards_prison_harry	Medium	What is the name of the wizards' prison in Harry Potter?	Azkaban	Nurmengard	Gringotts	The Ministry
+lit_position_harry_potter	Medium	What position does Harry Potter play in Quidditch?	Seeker	Keeper	Chaser	Beater
+lit_harry_potter_godfather	Medium	Who is Harry Potter's godfather?	Sirius Black	Remus Lupin	Rubeus Hagrid	Albus Dumbledore
+lit_wizard_turns_traitor	Medium	Which wizard turns traitor in 'The Lord of the Rings'?	Saruman	Gandalf	Radagast	Sauron
+lit_becomes_king_gondor	Medium	Who becomes King of Gondor at the end of 'The Lord of the Rings'?	Aragorn	Boromir	Faramir	Legolas
+lit_narnia_child_betrays	Medium	In Narnia, which child betrays his siblings for Turkish delight?	Edmund	Peter	Lucy	Eustace
+lit_folk_tale_finally	Medium	In the folk tale, who finally eats the Gingerbread Man?	A fox	A wolf	A bear	A cat
+lit_created_children_adventure	Medium	Who created the children's adventure series 'The Famous Five'?	Enid Blyton	Roald Dahl	Beatrix Potter	C. S. Lewis
+lit_little_prince_animal	Medium	In 'The Little Prince', which animal asks the prince to tame it?	A fox	A snake	A sheep	A lamb
+lit_harry_potter_hagrid	Medium	In 'Harry Potter', what is the name of Hagrid's three-headed dog?	Fluffy	Fang	Buckbeak	Norbert
+lit_novel_follows_band	Medium	Which novel follows a band of rabbits fleeing their doomed warren?	Watership Down	The Wind in the Willows	Animal Farm	Charlotte's Web
+lit_harry_potter_arch	Medium	Harry Potter's arch-enemy, the dark wizard, was born with which name?	Tom Marvolo Riddle	Gellert Grindelwald	Peter Pettigrew	Barty Crouch
+lit_bfg_giant_catch	Medium	In 'The BFG', what does the giant catch in jars and blow into children's bedrooms?	Dreams	Stars	Fireflies	Whispers
+lit_alice_wonderland_blue	Medium	In 'Alice in Wonderland', what is the blue Caterpillar smoking when Alice meets him?	A hookah	A cigar	A clay pipe	A cigarette
+lit_anne_shirley_anne	Medium	What does Anne Shirley of 'Anne of Green Gables' hate most about her looks?	Her red hair	Her big ears	Her crooked teeth	Her long nose
+lit_tells_story_1877	Medium	Who tells the story in the 1877 novel 'Black Beauty'?	The horse himself	The stable boy	The horse's owner	A coachman's daughter
+lit_two_words_printed	Medium	Which two words are printed in large friendly letters on the cover of the Hitchhiker's Guide?	'Don't Panic'	'Mostly Harmless'	'So Long'	'Keep Calm'
+lit_matilda_girl_kind	Medium	In 'Matilda', what is the name of the girl's kind and gentle teacher?	Miss Honey	Miss Plum	Miss Bramble	Miss Clover
+lit_tinker_bell_drinks	Medium	When Tinker Bell drinks poison, what does Peter Pan ask the children watching to say they believe in?	Fairies	Mermaids	Angels	Dreams
+lit_harry_potter_mirror	Medium	In Harry Potter, what does the Mirror of Erised show the person looking into it?	Their deepest desire	Their worst fear	Their own future	Their true face
+lit_job_antoine_saint	Medium	Which job did Antoine de Saint-Exupery have besides writing?	Pilot	Sailor	Doctor	Teacher
+lit2_pippi	Medium	Who created the character Pippi Longstocking?	Astrid Lindgren	Tove Jansson	Selma Lagerlof	Hans Christian Andersen
+lit2_muminki	Medium	Who created the Moomins?	Tove Jansson	Astrid Lindgren	Jan Brzechwa	Julian Tuwim
+lit3_piotrus_pan	Medium	Who wrote 'Peter Pan'?	J.M. Barrie	Lewis Carroll	C.S. Lewis	Roald Dahl
+lit3_czarnoksieznik_z_krainy_oz	Medium	Who wrote 'The Wonderful Wizard of Oz'?	L. Frank Baum	Lewis Carroll	J.M. Barrie	Hans Christian Andersen
+lit3_pinokio_autor	Medium	Who wrote 'Pinocchio'?	Carlo Collodi	Hans Christian Andersen	The Brothers Grimm	Antoine de Saint-Exupery
+cur_hobbit_poczatek	Medium	Which novel begins 'In a hole in the ground there lived a...'?	The Hobbit	Watership Down	Alice's Adventures in Wonderland	The Wind in the Willows
+lit_hedwiga	Medium	What is the name of Harry Potter's snowy owl?	Hedwig	Errol	Crookshanks	Scabbers
+lit_42	Medium	In 'The Hitchhiker's Guide to the Galaxy', what is the answer to life, the universe and everything?	42	7	100	0
+lit_dzeppetto	Medium	Who is the woodcarver who makes Pinocchio?	Geppetto	Gepetti	Gustavo	Giuseppe
+litx_matylda	Medium	In Roald Dahl's 'Matilda', what special power does Matilda discover?	Moving things with her mind	Flying	Turning invisible	Talking to animals
+litx_aslan	Medium	What is the name of the great lion in 'The Chronicles of Narnia'?	Aslan	Simba	Mufasa	Leo
+lit_dwarf_fellowship_ring	Medium	What is the name of the dwarf in the Fellowship of the Ring?	Gimli	Thorin	Balin	Gloin
+lit_classic_fairy_tale	Medium	In the classic fairy tale, how long does Sleeping Beauty sleep?	A hundred years	Seven years	Twelve years	A thousand years
+lit_lord_voldemort_giant	Medium	What is the name of Lord Voldemort's giant snake?	Nagini	Basilisk	Aragog	Kaa
+lit_seuss_book_lorax	Medium	In Dr. Seuss's book, whom or what does the Lorax 'speak for'?	The trees	The fish	The children	The mountains
+lit_peter_pan_peter	Medium	In 'Peter Pan', what does Peter lose in the Darlings' nursery, so that it has to be sewn back on?	His shadow	His hat	His dagger	His pan-pipes
+lit_chore_tom_sawyer	Medium	Which chore does Tom Sawyer trick the other boys into doing for him?	Whitewashing a fence	Chopping firewood	Washing the dishes	Weeding the garden
+lit_charlie_chocolate_factory_2	Medium	In 'Charlie and the Chocolate Factory', which greedy child falls into the chocolate river?	Augustus Gloop	Veruca Salt	Mike Teavee	Violet Beauregarde
+lit_wicked_witch_west	Medium	How is the Wicked Witch of the West destroyed in 'The Wizard of Oz'?	Dorothy throws water over her	A house falls on her	She is struck by lightning	Her broomstick snaps in two
+lit_lord_rings_hobbits	Medium	In 'The Lord of the Rings', what do hobbits famously go without?	Shoes	Hats	Cloaks	Belts
+lit_harry_potter_sweets	Medium	In Harry Potter, which sweets come in every flavour, including earwax and vomit?	Bertie Bott's Beans	Chocolate Frogs	Fizzing Whizzbees	Acid Pops
+lit_food_paddington_bear	Medium	Which food does Paddington Bear always keep in his hat for emergencies?	A marmalade sandwich	A honey cake	A jam tart	A cheese toastie
+lit_gruffalo_invents_scary	Medium	In 'The Gruffalo', who invents the scary monster to frighten off hungry predators?	A mouse	A squirrel	A rabbit	A hedgehog
+lit_alice_wonderland_game	Medium	In 'Alice in Wonderland', which game is played with live flamingos as mallets?	Croquet	Golf	Polo	Hockey
+lit_lion_witch_wardrobe	Medium	In 'The Lion, the Witch and the Wardrobe', what kind of creature is Mr Tumnus?	A faun	A dwarf	A centaur	A beaver
+lit_hogwarts_teacher_turns	Medium	Which Hogwarts teacher turns into a werewolf at every full moon?	Remus Lupin	Sirius Black	Gilderoy Lockhart	Quirinus Quirrell
+lit_brothers_grimm_version	Medium	In the Brothers Grimm version of 'Little Red Riding Hood', who rescues the girl from the wolf's belly?	A huntsman	Her father	A shepherd	A miller
+lit_book_opens_couple	Medium	Which book opens with a couple 'proud to say that they were perfectly normal, thank you very much'?	'Harry Potter and the Philosopher's Stone'	'Charlie and the Chocolate Factory'	'The Lion, the Witch and the Wardrobe'	'James and the Giant Peach'
+lit_heidi_orphan_girl	Medium	In 'Heidi', whom is the orphan girl sent to live with high up in the Alps?	Her grandfather	Her older sister	A goatherd's widow	A kindly priest
+lit_nursery_rhyme_boy	Medium	Which nursery-rhyme boy 'sat in the corner, eating a Christmas pie'?	Little Jack Horner	Little Boy Blue	Georgie Porgie	Tom, the piper's son
+lit_nursery_rhyme_old	Medium	In the nursery rhyme, why does Old Mother Hubbard go to the cupboard?	To get her poor dog a bone	To find bread for her children	To hide from the rain	To fetch her best hat
+lit_nursery_rhyme_girl	Medium	Which nursery-rhyme girl 'has lost her sheep and doesn't know where to find them'?	Little Bo Peep	Little Miss Muffet	Mary, Mary, Quite Contrary	Polly Flinders
+lit_jungle_book_kind_2	Medium	In 'The Jungle Book', which kind of snake is the wise old Kaa?	A python	A cobra	A viper	A mamba
+lit_hunger_games_baker	Medium	In 'The Hunger Games', which baker's son goes into the arena with Katniss?	Peeta Mellark	Gale Hawthorne	Finnick Odair	Haymitch Abernathy
+lit_members_set_out	Medium	How many members set out in the Fellowship of the Ring?	Nine	Seven	Eight	Twelve
+lit_lord_rings_ents	Medium	In 'The Lord of the Rings', what are the Ents?	Giant walking tree-folk	Giant talking eagles	Mountain trolls	Cave-dwelling goblins
+lit_edward_lear_poem	Medium	In Edward Lear's poem, in what do the Owl and the Pussy-cat go to sea?	A pea-green boat	A leaky sieve	A wooden shoe	A silver teapot
+lit_unusual_andersen_steadfast	Medium	What is unusual about Andersen's steadfast tin soldier?	He has only one leg	He has no face painted on	He is made of gold	He can talk to people
+lit_andersen_fairy_tale	Medium	In Andersen's fairy tale, where is the tiny girl Thumbelina born?	Inside a flower	Under a toadstool	In a bird's nest	In a snail shell
+lit_hans_christian_andersen	Medium	Hans Christian Andersen, author of 'The Ugly Duckling', came from which country?	Denmark	Sweden	Norway	Germany
+trv2_tolkien_jezyki	Medium	What was J.R.R. Tolkien's profession besides writing?	A professor of language and literature	A physician working in a city hospital	A lawyer with his own practice	An officer in the regular army
+lity_po_drugiej_stronie	Medium	What is the sequel to 'Alice's Adventures in Wonderland'?	Through the Looking-Glass	Alice in Dreamland	The Hunting of the Snark	Sylvie and Bruno
+lit_leads_company_dwarves	Medium	Who leads the company of dwarves in 'The Hobbit'?	Thorin Oakenshield	Bard the Bowman	Dain Ironfoot	Balin son of Fundin
+lit_fat_little_twins	Medium	Which fat little twins recite 'The Walrus and the Carpenter' to Alice?	Tweedledum and Tweedledee	Humpty and Dumpty	Flopsy and Mopsy	Topsy and Turvy
+lit_solaris	Hard	Who wrote 'Solaris'?	Stanislaw Lem	Isaac Asimov	Arthur C. Clarke	Philip K. Dick
+lit_tik_tak	Hard	What is the name of the crocodile that hunts Captain Hook?	Tick-Tock	Snappy	Old Jaws	Grinner
+lit_zadlo	Hard	What is the name of Bilbo's little sword in 'The Hobbit'?	Sting	Glamdring	Anduril	Orcrist
+lit_dziaberlak	Hard	Which nonsense poem begins ''Twas brillig, and the slithy toves'?	Jabberwocky	The Owl and the Pussycat	The Hunting of the Snark	Kubla Khan
+lity_pinokio_rekin	Hard	In the original book, inside what does Pinocchio find his father?	A giant shark	A whale	A cave	A ship
+lit_wrote_dune	Hard	Who wrote 'Dune'?	Frank Herbert	Isaac Asimov	Arthur C. Clarke	Robert Heinlein
+lit_wrote_anne_green	Hard	Who wrote 'Anne of Green Gables'?	L. M. Montgomery	Louisa May Alcott	Frances Hodgson Burnett	Laura Ingalls Wilder
+lit_wrote_mary_poppins	Hard	Who wrote 'Mary Poppins'?	P. L. Travers	Roald Dahl	Enid Blyton	Edith Nesbit
+lit_created_paddington_bear	Hard	Who created Paddington Bear?	Michael Bond	A. A. Milne	Beatrix Potter	Kenneth Grahame
+lit_wrote_diary_wimpy	Hard	Who wrote 'Diary of a Wimpy Kid'?	Jeff Kinney	Rick Riordan	Dav Pilkey	Lemony Snicket
+lit_original_grimm_tale	Hard	In the original Grimm tale 'The Frog Prince', how is the frog changed back into a prince?	The princess throws him at a wall	The princess kisses him	He eats a golden apple	A witch lifts the curse
+lit_wrote_black_beauty	Hard	Who wrote 'Black Beauty'?	Anna Sewell	Enid Blyton	Louisa May Alcott	Frances Hodgson Burnett
+lit_wrote_charlotte_web	Hard	Who wrote 'Charlotte's Web'?	E. B. White	Roald Dahl	Beverly Cleary	A. A. Milne
+lit_james_giant_peach	Hard	In 'James and the Giant Peach', what carries the peach across the Atlantic?	Hundreds of seagulls	A friendly whale	A huge balloon	A school of sharks
+lit_andersen_original_tale	Hard	In the original tale, how does the sea witch take the Little Mermaid's voice?	She cuts out her tongue	She traps it in a shell	She turns it into foam	She swallows her song
+lit_grimms_cinderella_stepsisters	Hard	In the Grimms' 'Cinderella', what do the stepsisters do to make the slipper fit?	Cut off parts of their feet	Bind their feet with silk	Pour oil into the slipper	Hire a witch to shrink them
+lit_1929_barrie_gave	Hard	In 1929, the author of 'Peter Pan' gave its rights to what?	A children's hospital in London	The city of Edinburgh	The boys who inspired it	The Royal Navy
+lit_ron_weasley_pet	Hard	Ron Weasley's pet rat Scabbers turns out to be which man in disguise?	Peter Pettigrew	Remus Lupin	Sirius Black	Barty Crouch
+lit_original_1900_book	Hard	In the original 1900 book of 'The Wonderful Wizard of Oz', what colour are Dorothy's magic shoes?	Silver	Ruby red	Gold	Emerald green
+lit_bilbo_secretly_take	Hard	What does Bilbo secretly take from Smaug's hoard that Thorin wants above all else?	The Arkenstone	The Dragon's Eye	The King's Crown	The Golden Harp
+lit_hitchhiker_guide_galaxy	Hard	In 'The Hitchhiker's Guide to the Galaxy', what does a Babel fish do once placed in your ear?	Translates any language	Lets you breathe in space	Makes you invisible	Reads people's minds
+lit_swedish_author_wrote	Hard	Which Swedish author wrote about Nils Holgersson flying on a goose?	Selma Lagerlof	Astrid Lindgren	August Strindberg	Tove Jansson
+lit_aladdin_live_version	Hard	Where does Aladdin live in the version of his tale in 'One Thousand and One Nights'?	In China	In Baghdad	In Cairo	In Damascus
+lit_lord_rings_gandalf	Hard	In 'The Lord of the Rings', what is the name of Gandalf's horse?	Shadowfax	Hasufel	Arod	Snowmane
+lit_wiedzmin	Hard	Who wrote the saga about the witcher Geralt?	Andrzej Sapkowski	Jacek Dukaj	Stanislaw Lem	Remigiusz Mroz
+lit_maly_ksiaze	Hard	Which asteroid did the Little Prince come from?	B-612	B-215	A-330	C-118
+lit_wrote_hunger_games	Hard	Who wrote 'The Hunger Games'?	Suzanne Collins	Veronica Roth	Stephenie Meyer	Cassandra Clare
+lit_wrote_goosebumps_horror	Hard	Who wrote the 'Goosebumps' horror books for children?	R. L. Stine	Roald Dahl	Lemony Snicket	Neil Gaiman
+lit_wrote_gruffalo	Hard	Who wrote 'The Gruffalo'?	Julia Donaldson	Eric Carle	Roald Dahl	Judith Kerr
+lit_wrote_very_hungry	Hard	Who wrote 'The Very Hungry Caterpillar'?	Eric Carle	Maurice Sendak	Dr. Seuss	Julia Donaldson
+lit_roald_dahl_witches	Hard	In Roald Dahl's 'The Witches', what do the witches plan to turn children into?	Mice	Frogs	Toads	Rats
+lit_ring_corrupted_him	Hard	Before the Ring corrupted him, what kind of creature was Gollum?	A hobbit	An elf	A dwarf	An orc
+lit_weasley_family_home	Hard	What is the name of the Weasley family's home?	The Burrow	Grimmauld Place	The Shrieking Shack	Godric's Hollow
+lit_kind_creature_buckbeak	Hard	What kind of creature is Buckbeak in Harry Potter?	A hippogriff	A griffin	A dragon	A thestral
+lit_wrote_percy_jackson	Hard	Who wrote the 'Percy Jackson' novels about a son of Poseidon?	Rick Riordan	Christopher Paolini	Eoin Colfer	Philip Pullman
+lit_wrote_dark_materials	Hard	Who wrote 'His Dark Materials', starting with 'Northern Lights'?	Philip Pullman	Neil Gaiman	Terry Pratchett	Rick Riordan
+lit_wrote_secret_garden	Hard	Who wrote 'The Secret Garden'?	Frances Hodgson Burnett	Louisa May Alcott	Beatrix Potter	Edith Nesbit
+lit_wrote_heidi_story	Hard	Who wrote 'Heidi', the story of a girl in the Swiss Alps?	Johanna Spyri	Astrid Lindgren	Selma Lagerlof	Tove Jansson
+lit_wrote_wind_willows	Hard	Who wrote 'The Wind in the Willows', starring Mole, Ratty and Toad?	Kenneth Grahame	A.A. Milne	Beatrix Potter	Lewis Carroll
+lit_french_writer_published	Hard	Which French writer published 'Cinderella', 'Puss in Boots' and 'Little Red Riding Hood' in 1697?	Charles Perrault	Jean de La Fontaine	Victor Hugo	Moliere
+lit_german_author_wrote	Hard	Which German author wrote 'The Neverending Story'?	Michael Ende	Cornelia Funke	Erich Kastner	Otfried Preussler
+lit_wrote_illustrated_wild	Hard	Who wrote and illustrated 'Where the Wild Things Are'?	Maurice Sendak	Dr. Seuss	Eric Carle	Shel Silverstein
+lit_created_captain_underpants	Hard	Who created the 'Captain Underpants' books?	Dav Pilkey	Jeff Kinney	R. L. Stine	Roald Dahl
+lit_rapunzel_mother_crave	Hard	What did Rapunzel's mother crave from the witch's garden, giving the girl her name?	A salad plant called rampion	Golden apples from a tree	Wild strawberries	Sweet-smelling roses
+lit_wind_willows_new	Hard	In 'The Wind in the Willows', what new craze does Mr Toad become obsessed with?	Motor cars	Gambling at cards	Hot-air balloons	Horse racing
+lit_question_bilbo_win	Hard	With which question does Bilbo win the riddle contest against Gollum?	'What have I got in my pocket?'	'What has roots nobody sees?'	'What walks on four legs at dawn?'	'What is always coming but never arrives?'
+lit_according_hitchhiker_guide	Hard	According to 'The Hitchhiker's Guide to the Galaxy', what is the most useful thing a traveller can have?	A towel	A pocket knife	A good map	A tin of beans
+lit_nation_hunger_games	Hard	What is the name of the nation in which 'The Hunger Games' is set?	Panem	Gilead	Oceania	Elysium
+lit_tale_peter_rabbit	Hard	In 'The Tale of Peter Rabbit', whose vegetable garden does Peter sneak into?	Mr McGregor's	Farmer Giles's	Mr Tod's	Old Brown's
+lit_animal_lives_pippi	Hard	Which animal lives on Pippi Longstocking's veranda?	A horse	A cow	A goat	A donkey
+lit_young_narrator_treasure	Hard	Who is the young narrator of 'Treasure Island'?	Jim Hawkins	Ben Gunn	Billy Bones	Squire Trelawney
+lit_captain_hook_ship	Hard	What is the name of Captain Hook's ship in 'Peter Pan'?	Jolly Roger	Black Pearl	Hispaniola	Nautilus
+lit_four_animals_form	Hard	Which four animals form a band in a Brothers Grimm tale?	Donkey, dog, cat and rooster	Horse, pig, duck and goat	Cow, sheep, dog and cat	Fox, wolf, bear and hare
+lit_wrote_androids_dream	Hard	Who wrote 'Do Androids Dream of Electric Sheep?', the basis for 'Blade Runner'?	Philip K. Dick	William Gibson	Isaac Asimov	Ray Bradbury
+lit_french_poet_wrote	Hard	Which French poet wrote fables like 'The Tortoise and the Hare' in verse?	Jean de La Fontaine	Charles Perrault	Moliere	Racine
+lit_treasure_island_pirates	Hard	In 'Treasure Island', what do pirates hand a man as a deadly warning?	The black spot	A white feather	A torn playing card	A bent silver coin
+lit_kipling_just_stories	Hard	In Kipling's 'Just So Stories', how does the Elephant's Child get its long trunk?	A crocodile pulls its nose	It sniffs too much pepper	A python ties a knot in it	It reaches for high fruit
+lit_canadian_island_anne	Hard	On which Canadian island is 'Anne of Green Gables' set?	Prince Edward Island	Vancouver Island	Newfoundland	Cape Breton Island
+lit_comic_fantasy_novels	Hard	In the comic fantasy novels, what carries the flat Discworld through space?	Four elephants on a giant turtle	A dragon coiled around its edge	Seven whales swimming in a ring	The back of a sleeping giant
+lit_riddle_mad_hatter	Hard	Which riddle does the Mad Hatter ask Alice, leaving it unanswered in the book?	'Why is a raven like a writing-desk?'	'What has keys but opens no locks?'	'What runs but never walks?'	'Why does a mouse wear no hat?'
+lit_pirate_parrot_treasure	Hard	What is the name of the pirate's parrot in 'Treasure Island'?	Captain Flint	Polly	Ben Gunn	Black Dog
+lit_quenya	Expert	Tolkien based his Elvish language Quenya partly on which real language?	Finnish	Welsh	Icelandic	Hungarian
+lit_hispaniola	Expert	What is the name of the ship in 'Treasure Island'?	The Hispaniola	The Jolly Roger	The Black Pearl	The Pequod
+lit_geisel	Expert	What was the real name of the children's author Dr. Seuss?	Theodor Geisel	Maurice Sendak	Shel Silverstein	Richard Scarry
+lit_verb_grok_understand	Expert	The verb 'grok', to understand deeply, was coined in which Robert Heinlein novel?	Stranger in a Strange Land	Starship Troopers	The Moon Is a Harsh Mistress	Time Enough for Love
+lit_tolkien_hobbits_call	Expert	In Tolkien, what do hobbits call the irresponsible years between 20 and 33?	The tweens	The teens	The wilds	The tumbles
+lit_collodi_original_pinocchio	Expert	In the original 1883 book, what does Pinocchio do to the Talking Cricket?	Kills it with a hammer	Locks it in a box	Sells it at market	Swallows it whole
+lit_northern_lights_golden	Expert	In 'Northern Lights', what is the golden truth-telling instrument that Lyra learns to read?	The alethiometer	The subtle knife	The amber spyglass	The astrolabe
+lit_animal_picture_books	Expert	Before her animal picture books, Beatrix Potter wrote a scientific paper about what?	How fungus spores germinate	How rabbits dig their burrows	Insects trapped in amber	How snails build their shells
+lit_according_barrie_english	Expert	According to J. M. Barrie, which famous English school did Captain Hook attend?	Eton	Harrow	Rugby	Winchester
+lit_phrase_goody_two	Expert	The phrase 'goody two-shoes' comes from a 1765 children's book about a poor orphan girl who owned only one what?	Shoe	Dress	Glove	Doll
+org_nerd_seuss	Expert	The word 'nerd' first appears in print in a book by which author?	Dr. Seuss	Roald Dahl	A. A. Milne	Lewis Carroll
+lit_science_fiction_author	Expert	Which science-fiction author coined the word 'cyberspace'?	William Gibson	Isaac Asimov	Philip K. Dick	Arthur C. Clarke
+lit_tolkien_scribbled_line	Expert	The first line of 'The Hobbit' was scribbled by its author while doing what?	Marking exam papers	Waiting for a train	Serving in the trenches	Sitting in a pub
+lit_words_charlotte_spider	Expert	What are the first words Charlotte the spider spins into her web to save Wilbur?	'Some Pig'	'Terrific'	'Radiant'	'Humble'
+lit_winnie_pooh_pooh	Expert	In 'Winnie-the-Pooh', where does Pooh find the gloomy donkey's lost tail?	Hanging on Owl's door as a bell-pull	Stuck in a pot of honey	Tied to Rabbit's garden gate	Floating down the river
+lit_grinch_not_green	Expert	The Grinch is not green in Dr. Seuss's original 1957 book. What made him green?	A 1966 TV cartoon	A 2000 live-action film	A 1970s comic strip	A Broadway musical
+lit_austrian_writer_novel	Expert	Which Austrian writer's novel 'Bambi, a Life in the Woods' later became a Disney film?	Felix Salten	Stefan Zweig	Arthur Schnitzler	Joseph Roth
+lit_secret_garden_bird	Expert	In 'The Secret Garden', which bird shows Mary Lennox where the garden's key is buried?	A robin	A magpie	A blackbird	A wren
+lit_three_farmers_try	Expert	Which three farmers try to dig out the Fantastic Mr Fox?	Boggis, Bunce and Bean	Twit, Trunch and Wormwood	Gloop, Salt and Teavee	Higgs, Hogg and Hubble
+lit_language_aslan_narnia	Expert	In which language does 'Aslan', the name of Narnia's great lion, simply mean 'lion'?	Turkish	Arabic	Persian	Hebrew
+lit_published_version_three	Expert	In the first published version of 'The Three Bears' (1837), who breaks into the bears' house?	A nasty old woman	A golden-haired girl	A hungry fox	A runaway boy
+lit_novel_treasure_island	Expert	The novel 'Treasure Island' grew out of what?	A map its author drew with his stepson	A diary found in a sea chest	A story told by an old sailor	A dream during a fever
+lit_tale_peter_rabbit_2	Expert	'The Tale of Peter Rabbit' began as what?	A picture letter to a sick boy	A bedtime story for a niece	A school play	A magazine competition entry

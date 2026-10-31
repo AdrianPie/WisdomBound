@@ -1,0 +1,278 @@
+# Novels & Stories: novels and short stories for adults, their authors, characters, plots (classic and modern)
+#
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+cultw_dracula	Easy	Who wrote the novel Dracula?	Bram Stoker	Mary Shelley	Edgar Allan Poe	H. G. Wells
+lit2_robinson	Easy	Who wrote 'Robinson Crusoe'?	Daniel Defoe	Jonathan Swift	Robert Louis Stevenson	Jules Verne
+lit4_verne_80dni	Easy	Who wrote 'Around the World in Eighty Days'?	Jules Verne	H.G. Wells	Alexandre Dumas	Emilio Salgari
+lit4_dickens_oliver	Easy	Who wrote 'Oliver Twist'?	Charles Dickens	Thomas Hardy	William Thackeray	Anthony Trollope
+lit4_twain_tomsawyer	Easy	Who wrote 'The Adventures of Tom Sawyer'?	Mark Twain	Jack London	O. Henry	Washington Irving
+trv2_poirot	Easy	Which author created the detective Hercule Poirot?	Agatha Christie	Arthur Conan Doyle	Dorothy L. Sayers	Georges Simenon
+trv2_baker_street	Easy	Which fictional detective lives at 221B Baker Street?	Sherlock Holmes	Hercule Poirot	Philip Marlowe	Inspector Morse
+trv2_dracula_kraina	Easy	In which region does Count Dracula's castle stand?	Transylvania	Bavaria	Bohemia	Wallonia
+lit_watson	Easy	Who is Sherlock Holmes's loyal friend and the narrator of most of his stories?	Dr John Watson	Inspector Lestrade	Mycroft Holmes	Professor Moriarty
+lit_opowiesc_wigilijna	Easy	In which story is Scrooge visited by three ghosts on Christmas Eve?	A Christmas Carol	Great Expectations	The Nutcracker	It's a Wonderful Life
+lit_wrote_vinci_code	Easy	Who wrote 'The Da Vinci Code'?	Dan Brown	John Grisham	Stephen King	Ken Follett
+lit_author_wrote_shining	Easy	Which author wrote 'The Shining', 'Carrie' and 'Misery'?	Stephen King	Dean Koontz	Edgar Allan Poe	Anne Rice
+lit_wrote_animal_farm	Easy	Who wrote 'Animal Farm'?	George Orwell	Aldous Huxley	H. G. Wells	Ray Bradbury
+lit_bell_ringer_hunchback	Easy	What is the name of the bell-ringer in 'The Hunchback of Notre-Dame'?	Quasimodo	Esmeralda	Frollo	Phoebus
+lit_ebenezer_scrooge_famously	Easy	What does Scrooge famously grumble whenever Christmas is mentioned?	'Bah! Humbug!'	'Pish! Tosh!'	'Bah! Nonsense!'	'Fiddlesticks!'
+lit_motto_three_musketeers	Easy	What is the famous motto of the Three Musketeers?	'All for one, one for all'	'Honour above all else'	'For the king and for France'	'Never retreat, never yield'
+lit_christmas_carol_bob	Easy	In 'A Christmas Carol', what is the name of Bob Cratchit's sickly little son?	Tiny Tim	Little Ned	Small Sam	Wee Willie
+lit_kind_hat_sherlock	Easy	Which kind of hat is Sherlock Holmes usually pictured wearing?	A deerstalker	A bowler hat	A top hat	A beret
+cultw_wojna_pokoj	Easy	Who wrote War and Peace?	Leo Tolstoy	Fyodor Dostoevsky	Anton Chekhov	Ivan Turgenev
+lit2_duma_uprzedzenie	Easy	Who wrote 'Pride and Prejudice'?	Jane Austen	Emily Bronte	Charlotte Bronte	George Eliot
+wld_lit_guliwer	Easy	In 'Gulliver's Travels', what are the Lilliputians like?	Tiny people	Giants	Talking horses	Flying scientists
+lit_panna_marple	Easy	Which Agatha Christie detective is an elderly lady from a quiet English village?	Miss Marple	Jessica Fletcher	Mrs Hudson	Nancy Drew
+lit_anne_frank	Easy	Whose wartime diary, written while hiding in Amsterdam, became world-famous?	Anne Frank's	Etty Hillesum's	Irene Nemirovsky's	Zlata Filipovic's
+litx_jekyll	Easy	In the famous novella, the respectable Dr Jekyll turns into whom?	Mr Hyde	Mr Holmes	Mr Grey	Mr Hood
+litx_moriarty	Easy	Who is Sherlock Holmes's greatest enemy?	Professor Moriarty	Doctor No	Lord Blackwood	Captain Hook
+cultw_don_kichot	Medium	Which novel is often called the first modern European novel?	Don Quixote	Robinson Crusoe	Gulliver's Travels	The Decameron
+cultw_orwell_1984	Medium	Which novel gave us the phrase Big Brother is watching you?	1984	Brave New World	Fahrenheit 451	Animal Farm
+cultw_moby	Medium	Which novel opens with the words Call me Ishmael?	Moby-Dick	Treasure Island	The Old Man and the Sea	Robinson Crusoe
+lit_quo_vadis	Medium	Who wrote 'Quo Vadis'?	Henryk Sienkiewicz	Wladyslaw Reymont	Stefan Zeromski	Eliza Orzeszkowa
+lit2_stary_czlowiek	Medium	Who wrote 'The Old Man and the Sea'?	Ernest Hemingway	John Steinbeck	William Faulkner	F. Scott Fitzgerald
+lit2_wielki_gatsby	Medium	Who wrote 'The Great Gatsby'?	F. Scott Fitzgerald	Ernest Hemingway	John Steinbeck	Truman Capote
+lit2_wichrowe_wzgorza	Medium	Who wrote 'Wuthering Heights'?	Emily Bronte	Jane Austen	Charlotte Bronte	Mary Shelley
+lit2_frankenstein	Medium	Who wrote 'Frankenstein'?	Mary Shelley	Bram Stoker	Edgar Allan Poe	Robert Louis Stevenson
+lit3_quo_vadis_epoka	Medium	In which era is 'Quo Vadis' set?	Ancient Rome under Nero	Medieval Poland	Renaissance Italy	Early modern France
+lit4_camus_obcy	Medium	Who wrote 'The Stranger' (L'Etranger)?	Albert Camus	Jean-Paul Sartre	Andre Malraux	Simone de Beauvoir
+lit4_nowy_wspanialy_swiat	Medium	Who wrote 'Brave New World'?	Aldous Huxley	George Orwell	H.G. Wells	Philip K. Dick
+lit4_salinger_buszujacy	Medium	Who wrote 'The Catcher in the Rye'?	J.D. Salinger	Jack Kerouac	Truman Capote	John Updike
+lit4_lee_zabic	Medium	Who wrote 'To Kill a Mockingbird'?	Harper Lee	Toni Morrison	Flannery O'Connor	Carson McCullers
+lit4_bradbury_451	Medium	Who wrote 'Fahrenheit 451'?	Ray Bradbury	Isaac Asimov	Philip K. Dick	Arthur C. Clarke
+lit4_dumas_hrabia	Medium	Who wrote 'The Count of Monte Cristo'?	Alexandre Dumas	Victor Hugo	Stendhal	Honore de Balzac
+trv2_twain_prawdziwe	Medium	What was Mark Twain's real name?	Samuel Clemens	Nathaniel Hawthorne	Herman Melville	Washington Irving
+trv2_atticus	Medium	In which novel is Atticus Finch a character?	To Kill a Mockingbird	The Grapes of Wrath	Of Mice and Men	The Catcher in the Rye
+trv2_nemo	Medium	In which Jules Verne novel does Captain Nemo appear?	Twenty Thousand Leagues Under the Sea	Around the World in Eighty Days	Journey to the Centre of the Earth	From the Earth to the Moon
+trv2_orwell_folwark	Medium	In 'Animal Farm', what kind of animal is Napoleon?	A pig	A horse	A dog	A donkey
+trv2_dorian_gray	Medium	Who wrote 'The Picture of Dorian Gray'?	Oscar Wilde	Bram Stoker	Robert Louis Stevenson	Charles Dickens
+org_quixotic_bohater	Medium	The adjective 'quixotic' comes from a character created by whom?	Cervantes	Moliere	Dante	Boccaccio
+wld_moby_dick_kapitan	Medium	Which captain hunts the white whale in 'Moby-Dick'?	Captain Ahab	Captain Nemo	Captain Hook	Captain Flint
+lit_najlepsze_czasy	Medium	Which novel opens with 'It was the best of times, it was the worst of times'?	A Tale of Two Cities	Great Expectations	Oliver Twist	Bleak House
+lit_prawda_powszechna	Medium	Which novel opens with 'It is a truth universally acknowledged...'?	Pride and Prejudice	Emma	Jane Eyre	Sense and Sensibility
+lit_nautilus	Medium	What is the name of Captain Nemo's submarine?	The Nautilus	The Kraken	The Leviathan	The Poseidon
+lit_wells	Medium	Who wrote 'The Time Machine'?	H. G. Wells	Jules Verne	Arthur C. Clarke	Isaac Asimov
+lit_fleming	Medium	Which author created James Bond?	Ian Fleming	John le Carre	Tom Clancy	Frederick Forsyth
+lit_strazacy_451	Medium	What do firemen do in Ray Bradbury's 'Fahrenheit 451'?	Burn books	Hunt robots	Guard the president	Put out forest fires
+lit_valjean	Medium	In which novel is Jean Valjean hunted by the policeman Javert?	Les Miserables	The Count of Monte Cristo	The Hunchback of Notre-Dame	The Three Musketeers
+litx_poirot_belgia	Medium	Which country is the fictional detective Hercule Poirot from?	Belgium	France	Switzerland	Luxembourg
+litx_orient_express	Medium	Which famous mystery novel takes place on a train stuck in the snow?	Murder on the Orient Express	Death on the Nile	The ABC Murders	And Then There Were None
+litx_piatek	Medium	What is the name of Robinson Crusoe's companion on the island?	Friday	Monday	Sunday	Saturday
+litx_jane_eyre	Medium	Who wrote 'Jane Eyre'?	Charlotte Bronte	Emily Bronte	Anne Bronte	Jane Austen
+lit_wrote_moby_dick	Medium	Who wrote 'Moby-Dick'?	Herman Melville	Nathaniel Hawthorne	Mark Twain	Jack London
+lit_not_three_musketeers	Medium	Which of these is NOT one of the Three Musketeers?	d'Artagnan	Athos	Porthos	Aramis
+lit_wrote_alchemist_shepherd	Medium	Who wrote 'The Alchemist', about a shepherd boy seeking treasure?	Paulo Coelho	Gabriel Garcia Marquez	Isabel Allende	Jorge Amado
+lit_dickens_novel_follows	Medium	Which Dickens novel follows the orphan Pip?	Great Expectations	Oliver Twist	David Copperfield	Bleak House
+lit_wrote_call_wild	Medium	Who wrote 'The Call of the Wild'?	Jack London	Mark Twain	Herman Melville	John Steinbeck
+lit_harvard_professor_symbology	Medium	Which Harvard professor of symbology is Dan Brown's recurring hero?	Robert Langdon	Indiana Jones	Jack Ryan	Sherlock Holmes
+lit_wrote_madame_bovary	Medium	Who wrote 'Madame Bovary'?	Gustave Flaubert	Emile Zola	Honore de Balzac	Stendhal
+lit_french_writer_mocked	Medium	Which French writer mocked optimism in the satire 'Candide'?	Voltaire	Rousseau	Diderot	Montesquieu
+lit_wrote_mrs_dalloway	Medium	Who wrote 'Mrs Dalloway' and 'To the Lighthouse'?	Virginia Woolf	Jane Austen	George Eliot	Edith Wharton
+lit_jane_eyre_brooding	Medium	In 'Jane Eyre', who is the brooding master of Thornfield Hall?	Mr Rochester	Mr Darcy	Heathcliff	Mr Knightley
+lit_wuthering_heights_catherine	Medium	In 'Wuthering Heights', who is Catherine Earnshaw's great love?	Heathcliff	Edgar Linton	Mr Rochester	Hindley
+lit_victor_hugo_hero	Medium	What did Jean Valjean steal, sending him to prison for 19 years?	A loaf of bread	A silver candlestick	A horse	A purse
+lit_sherlock_holmes_landlady	Medium	Who is Sherlock Holmes' landlady?	Mrs Hudson	Mrs Patmore	Miss Marple	Mrs Lovett
+lit_novel_narrated_death	Medium	Which novel, narrated by Death, follows a girl stealing books in Nazi Germany?	The Book Thief	The Reader	Sophie's Choice	Suite Francaise
+lit_number_title_fahrenheit	Medium	What does the number in the title 'Fahrenheit 451' refer to?	The heat at which paper catches fire	The year the story takes place	The number of books left on Earth	The fire station's address
+lit_pollyanna_heroine_1913	Medium	A 'Pollyanna', named after the heroine of a 1913 novel, is someone who is what?	Endlessly optimistic	Endlessly nosy	Hopelessly romantic	Always telling lies
+lit_little_women_march	Medium	In 'Little Women', which March sister dreams of becoming a writer?	Jo	Meg	Beth	Amy
+lit_lord_flies_boys	Medium	In 'Lord of the Flies', what do the boys use to light their first fire?	Piggy's glasses	Ralph's watch	A flint and knife	A sailor's matches
+lit_wars_form_backdrop	Medium	Which wars form the backdrop of 'War and Peace'?	The Napoleonic Wars	The Crimean War	The Russo-Turkish War	The Seven Years' War
+lit_hunchback_notre_dame	Medium	In 'The Hunchback of Notre-Dame', which young street dancer wins the bell-ringer's heart?	Esmeralda	Fantine	Cosette	Carmen
+lit_1898_novel_martian	Medium	In the 1898 novel about a Martian invasion of England, what finally kills the invaders?	Earth's germs	Nuclear bombs	A great storm	Their own weapons
+lit_author_published_robert	Medium	Which author published 'Robert Galbraith' crime novels under a pen name?	J. K. Rowling	Stephen King	Agatha Christie	Anne Rice
+lit_tolstoy_heroine_anna	Medium	How does Tolstoy's heroine Anna Karenina end her life?	She throws herself under a train	She drinks a vial of poison	She drowns herself in a river	She shoots herself with a pistol
+lit_scientist_frankenstein_mary	Medium	What is the first name of the scientist Frankenstein in Mary Shelley's novel?	Victor	Henry	Robert	William
+lit4_swift_guliwer	Medium	Who wrote 'Gulliver's Travels'?	Jonathan Swift	Daniel Defoe	Laurence Sterne	Henry Fielding
+lit_irish_author_wrote	Medium	Which Irish author wrote 'Ulysses', set on a single day in Dublin?	James Joyce	Samuel Beckett	W. B. Yeats	Bram Stoker
+lit_bennet_sister_falls	Medium	Which Bennet sister falls for Mr Darcy in 'Pride and Prejudice'?	Elizabeth	Jane	Lydia	Mary
+lit_oliver_twist_runs	Medium	In 'Oliver Twist', who runs the gang of young pickpockets?	Fagin	Bill Sikes	Mr Bumble	Artful Dodger
+lit_dickens_miser_scrooge	Medium	What is the first name of Dickens's miser Scrooge?	Ebenezer	Jacob	Bob	Fezziwig
+lit_dracula_dutch_professor	Medium	In 'Dracula', which Dutch professor leads the hunt for the Count?	Van Helsing	Jonathan Harker	Renfield	Dr Seward
+lit_bets_travel_around	Medium	Who bets he can travel 'Around the World in Eighty Days'?	Phileas Fogg	Captain Nemo	Passepartout	Professor Lidenbrock
+lit_wrote_fifty_shades	Medium	Who wrote 'Fifty Shades of Grey'?	E. L. James	Stephenie Meyer	Sylvia Day	Jojo Moyes
+lit_story_character_falls	Medium	Which story character falls asleep in the Catskill Mountains and wakes up 20 years later?	Rip Van Winkle	Ichabod Crane	Tom Thumb	Johnny Appleseed
+lit_wrote_don_quixote	Medium	Who wrote 'Don Quixote'?	Miguel de Cervantes	Lope de Vega	Gabriel Garcia Marquez	Federico Garcia Lorca
+lit_wrote_war_worlds	Medium	Who wrote 'War of the Worlds'?	H. G. Wells	Jules Verne	Arthur C. Clarke	Isaac Asimov
+lit_very_short_novel	Medium	What is the name of the very short novel by Kafka in which Gregor Samsa becomes an insect?	The Metamorphosis	The Trial	The Castle	The Judgment
+lit_years_alone_island	Medium	After years alone on his island, which sight throws Robinson Crusoe into terror?	A man's footprint on the shore	A message in a bottle	A volcano starting to smoke	A tiger's paw prints
+lit_scarlet_letter_letter	Medium	In 'The Scarlet Letter', which letter is Hester Prynne made to wear on her dress?	A	S	H	X
+lit_zbrodnia	Medium	Who wrote 'Crime and Punishment'?	Fyodor Dostoevsky	Leo Tolstoy	Anton Chekhov	Ivan Turgenev
+lit_don_kichot	Medium	What was the name of Don Quixote's squire?	Sancho Panza	Rocinante	Dulcinea	Figaro
+lit2_nedznicy	Medium	Who wrote 'Les Miserables'?	Victor Hugo	Honore de Balzac	Emile Zola	Gustave Flaubert
+lit4_opowiesc_podrecznej	Medium	Who wrote 'The Handmaid's Tale'?	Margaret Atwood	Doris Lessing	Ursula K. Le Guin	Alice Munro
+lit_ministerstwo_prawdy	Medium	In '1984', which ministry is in charge of rewriting history with lies?	The Ministry of Truth	The Ministry of Love	The Ministry of Peace	The Ministry of Plenty
+lit_rowne_rowniejsze	Medium	In 'Animal Farm', 'All animals are equal, but some animals are...' what?	More equal than others	Stronger than others	Smarter than others	Born to rule
+lit_larsson	Medium	Which Swedish author wrote 'The Girl with the Dragon Tattoo'?	Stieg Larsson	Henning Mankell	Jo Nesbo	Camilla Lackberg
+litx_dorian_portret	Medium	In 'The Picture of Dorian Gray', what grows old instead of Dorian?	His portrait	His mirror image	His twin brother	His marble statue
+litx_oliver_wiecej	Medium	In 'Oliver Twist', what does the hungry Oliver famously ask for?	More	Bread	His mother	A blanket
+litx_male_kobietki	Medium	Who wrote 'Little Women'?	Louisa May Alcott	Harriet Beecher Stowe	Emily Dickinson	Edith Wharton
+litx_skrzypce_holmes	Medium	Which musical instrument does Sherlock Holmes play?	The violin	The piano	The flute	The cello
+lity_szare_komorki	Medium	Hercule Poirot credits his success to his 'little grey' what?	Cells	Cats	Notebooks	Friends
+lity_steinbeck	Medium	Who wrote 'The Grapes of Wrath' and 'Of Mice and Men'?	John Steinbeck	William Faulkner	Ernest Hemingway	Mark Twain
+lit_lord_flies_object	Medium	In 'Lord of the Flies', which object gives a boy the right to speak?	A conch shell	A wooden stick	A pair of glasses	A pig's skull
+lit_1984_false_sum	Medium	In '1984', which false sum is Winston finally made to believe?	Two plus two make five	One plus one make three	Three plus three make seven	Ten minus one make eleven
+lit4_nabokov_jezyki	Medium	Vladimir Nabokov wrote major novels in Russian and which other language?	English	French	German	Czech
+lity_wojna_swiatow	Medium	A 1938 radio adaptation of which novel reportedly caused panic in America?	The War of the Worlds	Dracula	Frankenstein	The Time Machine
+lit2_mistrz_malgorzata	Hard	Who wrote 'The Master and Margarita'?	Mikhail Bulgakov	Fyodor Dostoevsky	Leo Tolstoy	Anton Chekhov
+lit2_sto_lat_samotnosci	Hard	Who wrote 'One Hundred Years of Solitude'?	Gabriel Garcia Marquez	Mario Vargas Llosa	Jorge Luis Borges	Julio Cortazar
+lit4_borges_forma	Hard	Jorge Luis Borges is best known for which literary form?	The short story	The epic poem	The stage tragedy	The historical novel
+lit4_nobel_marquez_nurt	Hard	Which literary movement is Gabriel Garcia Marquez associated with?	Magical realism	Naturalism	Futurism	The Beat generation
+lit4_achebe_jezyk	Hard	Chinua Achebe wrote his most famous novels primarily in which language?	English	Igbo	French	Swahili
+trv2_murakami	Hard	Which Japanese author wrote 'Norwegian Wood' and 'Kafka on the Shore'?	Haruki Murakami	Yukio Mishima	Kazuo Ishiguro	Yasunari Kawabata
+trv2_zbrodnia_bohater	Hard	What is the name of the student who commits murder in 'Crime and Punishment'?	Raskolnikov	Karamazov	Oblomov	Onegin
+mst_orwell_rok	Hard	Orwell's title 1984 is widely thought to be a rearrangement of which year?	1948	1894	1849	1940
+dpt_lit_carraway	Hard	Which novel is narrated by Nick Carraway?	The Great Gatsby	Tender Is the Night	The Sun Also Rises	Brideshead Revisited
+lit_anna_karenina	Hard	Which novel begins 'All happy families are alike; each unhappy family is unhappy in its own way'?	Anna Karenina	War and Peace	Doctor Zhivago	Fathers and Sons
+lit_rosynant	Hard	What is the name of Don Quixote's bony old horse?	Rocinante	Bucephalus	Babieca	Shadowfax
+lit_brobdingnag	Hard	In 'Gulliver's Travels', what is the land of the giants called?	Brobdingnag	Lilliput	Laputa	Blefuscu
+lit_pequod	Hard	What was the name of Captain Ahab's whaling ship?	The Pequod	The Nautilus	The Essex	The Hispaniola
+lit_george_eliot	Hard	The novelist George Eliot was really a woman called what?	Mary Ann Evans	Charlotte Bronte	Mary Shelley	Elizabeth Gaskell
+lit_conrad	Hard	Which author, born in 1857 in what is now Ukraine, wrote 'Heart of Darkness' in English?	Joseph Conrad	Rudyard Kipling	Henry James	Jack London
+lity_dulcynea	Hard	Who is the lady of Don Quixote's dreams?	Dulcinea	Rosalind	Beatrice	Isabella
+lit_wrote_gone_wind	Hard	Who wrote 'Gone with the Wind'?	Margaret Mitchell	Harper Lee	Pearl S. Buck	Edith Wharton
+lit_wrote_novel_godfather	Hard	Who wrote the novel 'The Godfather'?	Mario Puzo	Francis Ford Coppola	Elmore Leonard	Dennis Lehane
+lit_wrote_novel_jurassic	Hard	Who wrote the novel 'Jurassic Park'?	Michael Crichton	Steven Spielberg	Tom Clancy	Dean Koontz
+lit_wrote_doctor_zhivago	Hard	Who wrote 'Doctor Zhivago'?	Boris Pasternak	Leo Tolstoy	Alexander Solzhenitsyn	Mikhail Sholokhov
+lit_writer_created_tentacled	Hard	Which writer created the tentacled monster Cthulhu?	H. P. Lovecraft	Edgar Allan Poe	Bram Stoker	Clive Barker
+lit_agatha_christie_novel	Hard	Which Agatha Christie novel about ten strangers on an island is her best-seller?	And Then There Were None	Death on the Nile	The ABC Murders	Evil Under the Sun
+lit_wrote_lord_flies	Hard	Who wrote 'Lord of the Flies'?	William Golding	George Orwell	Aldous Huxley	J. D. Salinger
+lit_wrote_kite_runner	Hard	Who wrote 'The Kite Runner'?	Khaled Hosseini	Salman Rushdie	Arundhati Roy	Orhan Pamuk
+lit_wrote_life	Hard	Who wrote 'Life of Pi'?	Yann Martel	Ian McEwan	Kazuo Ishiguro	Julian Barnes
+lit_gulliver_travels_original	Hard	In 'Gulliver's Travels', who or what were the original 'Yahoos'?	Brutish human-like creatures	Tiny flying scientists	Giant talking birds	Pirates of the South Seas
+lit_riverboat_call_mark	Hard	What did the riverboat call 'mark twain', which one author took as his pen name, mean?	Water two fathoms deep	Two miles to the port	Turn the boat twice	Twin chimneys ahead
+lit_frankenstein_began_entry	Hard	'Frankenstein' began as an entry in a ghost-story contest proposed by which poet?	Lord Byron	Percy Shelley	John Keats	Samuel Coleridge
+lit_jane_eyre_secretly	Hard	In 'Jane Eyre', who is secretly kept locked in the attic?	Bertha, the master's wife	Grace Poole, a servant	Jane's long-lost cousin	The master's mad brother
+lit_edmond_dantes_escape	Hard	How does Edmond Dantes escape from the Chateau d'If in 'The Count of Monte Cristo'?	Sewn into a dead man's sack	Disguised as a priest	Through a tunnel to the sea	Bribing a jailer with gold
+lit_gulliver_travels_lilliput	Hard	In 'Gulliver's Travels', Lilliput and Blefuscu go to war over how to do what?	Crack open a boiled egg	Tie their shoelaces	Wear their hats	Butter their bread
+lit_jean_valjean_caught	Hard	After Jean Valjean is caught with the bishop's stolen silver, what does the bishop do?	Gives him the candlesticks too	Has him sent back to prison	Makes him work off the debt	Asks him to become a priest
+lit_great_gatsby_actually	Hard	In 'The Great Gatsby', who is actually driving the car that kills Myrtle Wilson?	Daisy Buchanan	Jay Gatsby	Tom Buchanan	Nick Carraway
+lit_mice_men_animals	Hard	In 'Of Mice and Men', which animals does Lennie dream of tending on a farm of his own?	Rabbits	Goats	Chickens	Ponies
+lit_drug_sherlock_holmes	Hard	Which drug does Sherlock Holmes inject when bored, to Watson's disapproval?	Cocaine	Strychnine	Quinine	Adrenaline
+lit_dracula_madman_renfield	Hard	In 'Dracula', what does the madman Renfield eat in the hope of absorbing their lives?	Flies and spiders	Rats and bats	Raw meat	Candle wax
+lit_darcy_grand_estate	Hard	What is the name of Mr Darcy's grand estate in Derbyshire?	Pemberley	Netherfield	Rosings	Longbourn
+lit_four_march_sisters	Hard	Which of the four March sisters dies young in 'Little Women'?	Beth	Amy	Meg	Jo
+lit_crime_punishment_weapon	Hard	In 'Crime and Punishment', what weapon does the poor student use to kill the old pawnbroker?	An axe	A knife	A pistol	A hammer
+lit_around_world_eighty	Hard	In 'Around the World in Eighty Days', why does the hero win the bet after thinking he arrived a day late?	Travelling east, he gained a day	His servant reset the clocks	The club's clock was broken	His rival had cheated
+lit_time_machine_two	Hard	In 'The Time Machine', which two races does the traveller find in the far future?	The Eloi and the Morlocks	The Houyhnhnms and the Yahoos	The Selenites and the Martians	The Lilliputians and the Blefuscans
+lit_animal_farm_happens	Hard	In 'Animal Farm', what happens to the loyal, hard-working horse Boxer?	He is sold to a knacker	He becomes the farm's leader	He escapes to another farm	He retires in comfort
+lit_horror_story_man	Hard	In which horror story is a man walled up alive in a wine cellar during carnival time?	'The Cask of Amontillado'	'The Pit and the Pendulum'	'The Masque of the Red Death'	'The Murders in the Rue Morgue'
+lit_original_title_novel	Hard	What was the original title of the novel 'Pride and Prejudice'?	'First Impressions'	'Elinor and Marianne'	'Susan'	'The Watsons'
+lit_means_transport_films	Hard	Which transport, famous from the films, is never used in Verne's 'Around the World in Eighty Days'?	A hot-air balloon	An elephant	A sail-powered sledge	A steamship
+lit_turns_out_killer	Hard	Who turns out to be the killer in Edgar Allan Poe's 'The Murders in the Rue Morgue'?	An escaped orangutan	The victims' landlord	A sleepwalking sailor	The detective's own cousin
+lit_phrase_stepford_wife	Hard	The phrase 'Stepford wife' comes from a 1972 novel in which a town's wives are secretly replaced by what?	Robots	Clones	Aliens	Their twin sisters
+lit_moby_dick_partly	Hard	'Moby-Dick' was partly inspired by the whaleship Essex. What happened to it in 1820?	A sperm whale rammed and sank it	It vanished in a storm	Its crew mutinied	It was trapped in Arctic ice
+lit_composer_alex_adore	Hard	Which composer does Alex adore in 'A Clockwork Orange'?	Beethoven	Mozart	Wagner	Bach
+lit4_things_fall_apart	Hard	Chinua Achebe's 'Things Fall Apart' is set in which country?	Nigeria	Kenya	Ghana	South Africa
+litx_tarzan	Hard	Who created Tarzan?	Edgar Rice Burroughs	Rudyard Kipling	Jack London	H. Rider Haggard
+lit_wrote_fault_stars	Hard	Who wrote 'The Fault in Our Stars'?	John Green	Nicholas Sparks	Jojo Moyes	Rainbow Rowell
+lit_detective_georges_simenon	Hard	Which detective did Georges Simenon create?	Inspector Maigret	Hercule Poirot	Philip Marlowe	Inspector Morse
+lit_private_eye_raymond	Hard	Which private eye did Raymond Chandler create?	Philip Marlowe	Sam Spade	Mike Hammer	Inspector Maigret
+lit_detective_hero_dashiell	Hard	Which detective is the hero of Dashiell Hammett's 'The Maltese Falcon'?	Sam Spade	Philip Marlowe	Nero Wolfe	Ellery Queen
+lit_quiet_spymaster_john	Hard	Which quiet spymaster did John le Carre create?	George Smiley	James Bond	Harry Palmer	Jack Ryan
+lit_cia_analyst_hero	Hard	Which CIA analyst hero did Tom Clancy create?	Jack Ryan	Jason Bourne	Jack Reacher	Ethan Hunt
+lit_former_military_policeman	Hard	Which former military policeman wanders America in Lee Child's thrillers?	Jack Reacher	Jack Ryan	John Rambo	Jason Bourne
+lit_wrote_midnight_children	Hard	Who wrote 'Midnight's Children', about children born as India became independent?	Salman Rushdie	Arundhati Roy	V. S. Naipaul	Vikram Seth
+lit_wrote_all_quiet	Hard	Who wrote 'All Quiet on the Western Front'?	Erich Maria Remarque	Ernst Junger	Thomas Mann	Hermann Hesse
+lit_russian_american_writer	Hard	Which Russian-American writer wrote 'Lolita'?	Vladimir Nabokov	Ayn Rand	Joseph Brodsky	Isaac Asimov
+lit_writer_exposed_soviet	Hard	Which writer exposed Soviet labour camps in 'The Gulag Archipelago'?	Aleksandr Solzhenitsyn	Boris Pasternak	Mikhail Bulgakov	Joseph Brodsky
+lit_wrote_unbearable_lightness	Hard	Who wrote 'The Unbearable Lightness of Being'?	Milan Kundera	Vaclav Havel	Franz Kafka	Bohumil Hrabal
+lit_chilean_author_wrote	Hard	Which Chilean author wrote 'The House of the Spirits'?	Isabel Allende	Pablo Neruda	Gabriela Mistral	Roberto Bolano
+lit_american_author_won	Hard	Which American author won the Nobel Prize after writing 'Beloved'?	Toni Morrison	Maya Angelou	Alice Walker	Zora Neale Hurston
+lit_american_novel_tells	Hard	Which American novel tells of the soldier Billy Pilgrim, who comes 'unstuck in time'?	Slaughterhouse-Five	Catch-22	The Naked and the Dead	The Things They Carried
+lit_beat_generation_writer	Hard	Which Beat Generation writer wrote 'On the Road'?	Jack Kerouac	Allen Ginsberg	William S. Burroughs	Charles Bukowski
+lit_wrote_post_apocalyptic	Hard	Who wrote the post-apocalyptic novel 'The Road'?	Cormac McCarthy	Stephen King	Paul Auster	Philip Roth
+lit_created_diarist_bridget	Hard	Who created the diarist Bridget Jones?	Helen Fielding	Sophie Kinsella	Marian Keyes	Jojo Moyes
+lit_wrote_wolf_hall	Hard	Who wrote 'Wolf Hall', about Thomas Cromwell?	Hilary Mantel	Philippa Gregory	Zadie Smith	Sarah Waters
+lit_nobel_winning_author	Hard	Which Nobel-winning author wrote 'Never Let Me Go' and 'The Remains of the Day'?	Kazuo Ishiguro	Haruki Murakami	Ian McEwan	Julian Barnes
+lit_wrote_gothic_novel	Hard	Who wrote the gothic novel 'Rebecca'?	Daphne du Maurier	Agatha Christie	Virginia Woolf	Emily Bronte
+lit_wrote_tess_urbervilles	Hard	Who wrote 'Tess of the d'Urbervilles'?	Thomas Hardy	Charles Dickens	Henry James	Anthony Trollope
+lit_wrote_scarlet_letter	Hard	Who wrote 'The Scarlet Letter'?	Nathaniel Hawthorne	Herman Melville	Edgar Allan Poe	Henry James
+lit_wrote_walden_two	Hard	Who wrote 'Walden', about two years in a cabin by a pond?	Henry David Thoreau	Ralph Waldo Emerson	Walt Whitman	Mark Twain
+lit_american_poet_wrote	Hard	Which American poet wrote the novel 'The Bell Jar'?	Sylvia Plath	Emily Dickinson	Anne Sexton	Maya Angelou
+lit_teenage_narrator_catcher	Hard	Who is the teenage narrator of 'The Catcher in the Rye'?	Holden Caulfield	Dean Moriarty	Huckleberry Finn	Nick Carraway
+lit_dickens_character_sits	Hard	Which Dickens character sits for decades in her rotting wedding dress?	Miss Havisham	Little Dorrit	Nancy	Estella
+lit_hero_1984	Hard	What is the name of the hero of '1984'?	Winston Smith	John Savage	Guy Montag	Bernard Marx
+lit_brave_new_world	Hard	In 'Brave New World', which drug keeps everyone happy?	Soma	Ambrosia	Melange	Nepenthe
+lit_wrote_thriller_gone	Hard	Who wrote the thriller 'Gone Girl'?	Gillian Flynn	Paula Hawkins	Tana French	Liane Moriarty
+lit_wrote_girl_train	Hard	Who wrote 'The Girl on the Train'?	Paula Hawkins	Gillian Flynn	Jojo Moyes	Sophie Hannah
+lit_wrote_romance_notebook	Hard	Who wrote the romance 'The Notebook'?	Nicholas Sparks	John Grisham	Danielle Steel	Nora Roberts
+lit_wrote_boy_striped	Hard	Who wrote 'The Boy in the Striped Pyjamas'?	John Boyne	Markus Zusak	Michael Morpurgo	Ian McEwan
+lit_wrote_curious_incident	Hard	Who wrote 'The Curious Incident of the Dog in the Night-Time'?	Mark Haddon	Nick Hornby	David Mitchell	John Boyne
+lit_wrote_decameron_100	Hard	Who wrote 'The Decameron', 100 tales told during the Black Death?	Giovanni Boccaccio	Dante Alighieri	Petrarch	Niccolo Machiavelli
+lit_german_author_wrote_2	Hard	Which German author wrote 'The Magic Mountain'?	Thomas Mann	Hermann Hesse	Gunter Grass	Heinrich Boll
+lit_german_swiss_author	Hard	Which German-Swiss author wrote 'Steppenwolf' and 'Siddhartha'?	Hermann Hesse	Thomas Mann	Stefan Zweig	Max Frisch
+lit_russian_author_wrote	Hard	Which Russian author wrote 'Fathers and Sons'?	Ivan Turgenev	Nikolai Gogol	Anton Chekhov	Leo Tolstoy
+lit_author_wrote_dead	Hard	Which author wrote 'Dead Souls' and 'The Overcoat'?	Nikolai Gogol	Ivan Turgenev	Fyodor Dostoevsky	Maxim Gorky
+lit_nickname_jack_dawkins	Hard	What is the nickname of Jack Dawkins, the cheeky young pickpocket in 'Oliver Twist'?	The Artful Dodger	The Cunning Fox	The Sly Sparrow	The Slippery Eel
+lit_kill_mockingbird_reclusive	Hard	In 'To Kill a Mockingbird', which reclusive neighbour saves Scout and Jem from an attack?	Boo Radley	Tom Robinson	Bob Ewell	Dill Harris
+lit_old_man_sea	Hard	In 'The Old Man and the Sea', what happens to the old man's giant marlin?	Sharks eat it on the way home	It breaks the line and escapes	He sells it for a fortune	He sets it free out of respect
+lit_classic_horror_story	Hard	In which classic horror story does a murderer hear his victim's heart beating under the floorboards?	'The Tell-Tale Heart'	'The Black Cat'	'The Pit and the Pendulum'	'The Fall of the House of Usher'
+lit_wrote_legend_sleepy	Hard	Who wrote 'The Legend of Sleepy Hollow', with its Headless Horseman?	Washington Irving	Nathaniel Hawthorne	Edgar Allan Poe	Mark Twain
+lit_author_wrote_slaughterhouse	Hard	Which author wrote 'Slaughterhouse-Five'?	Kurt Vonnegut	Joseph Heller	Ray Bradbury	Philip K. Dick
+lit_horror_writer_once	Hard	Which horror writer once published as Richard Bachman?	Stephen King	Dean Koontz	Clive Barker	Peter Straub
+lit_bengal_tiger_sharing	Hard	What is the name of the Bengal tiger sharing the lifeboat in 'Life of Pi'?	Richard Parker	Shere Khan	Mister Bengal	Captain Stripes
+lit_story_sherlock_holmes	Hard	In which story does Sherlock Holmes make his very first appearance?	A Study in Scarlet	The Sign of the Four	The Hound of the Baskervilles	A Scandal in Bohemia
+lit_proust	Hard	Who wrote the cycle 'In Search of Lost Time'?	Marcel Proust	Gustave Flaubert	Honore de Balzac	Emile Zola
+lit2_proust_madeleine	Hard	What triggers a flood of memories in Proust's novel?	A madeleine cake	An old photograph	The smell of the sea	The sound of a piano
+lit2_dostojewski_bracia	Hard	Which Dostoevsky novel ends with a trial for patricide?	The Brothers Karamazov	The Idiot	Demons	The Gambler
+lit4_eco_imie_rozy_gatunek	Hard	'The Name of the Rose' by Umberto Eco combines a medieval setting with which genre?	A detective story	A space opera	A romance novel	A war memoir
+lit4_saramago_kraj	Hard	Which country does the Nobel laureate Jose Saramago come from?	Portugal	Spain	Brazil	Italy
+cur_sherlock_cytat	Hard	Which famous line does Sherlock Holmes never actually say in Conan Doyle's stories?	'Elementary, my dear Watson'	'The game is afoot'	'You have been in Afghanistan, I perceive'	'Data! Data! Data!'
+litx_gatsby_swiatlo	Hard	In 'The Great Gatsby', what colour is the light at the end of Daisy's dock?	Green	Red	Blue	White
+litx_pokoj_101	Hard	In '1984', what waits for prisoners in Room 101?	The thing they fear most	The Party's secret files	Big Brother himself	A last meal
+litx_prometeusz	Hard	What is the subtitle of the novel 'Frankenstein'?	The Modern Prometheus	The New Adam	The Living Dead	The Monster's Tale
+litx_drakula_listy	Hard	In what form is the novel 'Dracula' written?	Letters and diary entries	A stage play	A long poem	One narrator's memoir
+litx_reichenbach	Hard	At which waterfall did Sherlock Holmes 'die' in a story of 1893?	The Reichenbach Falls	Niagara Falls	Victoria Falls	The Rhine Falls
+lity_mycroft	Hard	What is the name of Sherlock Holmes's cleverer older brother?	Mycroft	Mortimer	Magnus	Montague
+lit_georges_perec_wrote	Hard	Georges Perec wrote a whole novel, 'La Disparition', without which letter?	E	A	S	T
+lit_jean_valjean_prisoner	Hard	What was Jean Valjean's prisoner number in the galleys at Toulon?	24601	31415	10101	17890
+lit_german_author_wrote_3	Hard	Which German author wrote 'The Tin Drum'?	Gunter Grass	Heinrich Boll	Thomas Mann	Hermann Hesse
+lit_wrote_comic_czech	Hard	Who wrote the comic Czech novel 'The Good Soldier Svejk'?	Jaroslav Hasek	Karel Capek	Bohumil Hrabal	Milan Kundera
+lit2_borges_biblioteka	Expert	Which Borges story describes an infinite library?	The Library of Babel	The Aleph	The Garden of Forking Paths	Funes the Memorious
+dpt_lit_genji	Expert	Who wrote 'The Tale of Genji', often called the first novel?	Murasaki Shikibu	Sei Shonagon	Matsuo Basho	Yoshida Kenko
+ref_lit_slepota	Expert	Whose novel 'Blindness' imagines an epidemic of white blindness?	Jose Saramago	Gabriel Garcia Marquez	Italo Calvino	Mario Vargas Llosa
+lit_myszkin	Expert	In which Dostoevsky novel is the gentle Prince Myshkin the hero?	The Idiot	Demons	The Gambler	Notes from Underground
+lit_macondo	Expert	What is the name of the town in 'One Hundred Years of Solitude'?	Macondo	Comala	Santa Maria	Aracataca
+lit_dracula_form_count	Expert	In 'Dracula', in what form does the Count come ashore when his ship runs aground at Whitby?	A large dog	A bat	A grey wolf	A mist
+lit_edinburgh_surgeon_powers	Expert	Which Edinburgh surgeon's powers of deduction inspired Sherlock Holmes?	Joseph Bell	Joseph Lister	James Simpson	Robert Knox
+lit_fictional_detective_given	Expert	Which fictional detective was given a front-page obituary in The New York Times in 1975?	Hercule Poirot	Sherlock Holmes	Jules Maigret	Philip Marlowe
+lit_journey_centre_earth	Expert	In 'Journey to the Centre of the Earth', out of which volcano are the explorers finally thrown back to the surface?	Stromboli	Vesuvius	Etna	Krakatoa
+lit_title_catcher_rye	Expert	The title 'The Catcher in the Rye' comes from the hero mishearing a poem by which poet?	Robert Burns	William Blake	John Keats	Walter Scott
+lit_russian_writer_early	Expert	Which Russian writer's early-1920s novel 'We' imagined a glass city whose citizens have numbers instead of names?	Yevgeny Zamyatin	Mikhail Bulgakov	Isaac Babel	Andrei Platonov
+lit_1897_novel_invisible	Expert	In the 1897 novel 'The Invisible Man', what is the scientist's surname?	Griffin	Moreau	Cavor	Hyde
+lit_date_fans_ulysses	Expert	On which date do fans of 'Ulysses' celebrate Bloomsday?	16 June	17 March	1 May	31 October
+lit_french_renaissance_writer	Expert	Which French Renaissance writer created the giants Gargantua and Pantagruel?	Francois Rabelais	Michel de Montaigne	Pierre de Ronsard	Francois Villon
+lit_sicilian_prince_wrote	Expert	Which Sicilian prince wrote 'The Leopard', published after his death?	Tomasi di Lampedusa	Luigi Pirandello	Alberto Moravia	Italo Svevo
+lit_italian_author_wrote	Expert	Which Italian author wrote 'Invisible Cities' and 'If on a Winter's Night a Traveller'?	Italo Calvino	Umberto Eco	Primo Levi	Dino Buzzati
+lit_word_svengali_comes	Expert	The word 'Svengali' comes from an 1894 novel that also gave its name to which item of clothing?	The trilby hat	The cardigan	The bowler hat	The Norfolk jacket
+lit_dickens_bleak_house	Expert	In Dickens's 'Bleak House', how does the rag-and-bone dealer Krook die?	By spontaneous human combustion	Buried under his own junk	Poisoned by his lodger	Drowned in the Thames
+lit_captain_nemo_latin	Expert	What is Captain Nemo's Latin motto, engraved on his submarine's gear?	Mobilis in mobili	Nemo me impune lacessit	Sic semper tyrannis	Fiat lux
+lit_moby_dick_ship	Expert	In 'Moby-Dick', which ship searching for a lost boy finally rescues Ishmael?	The Rachel	The Pequod	The Essex	The Jeroboam
+lit_master_margarita_kind	Expert	In 'The Master and Margarita', what kind of creature is Woland's sidekick Behemoth?	A giant black cat	A talking raven	A huge black dog	A grinning toad
+lit_victor_frankenstein_tell	Expert	Where does Victor Frankenstein tell his life story to the explorer Robert Walton?	On a ship trapped in Arctic ice	In a prison cell in Geneva	At an inn high in the Alps	In a lecture hall in Ingolstadt
+lit_paradise_shangri_invented	Expert	The paradise 'Shangri-La' was invented in which 1933 novel?	Lost Horizon	Brave New World	The Lost World	King Solomon's Mines
+lit_jack_kerouac_type	Expert	On what did Jack Kerouac type the draft of 'On the Road' in three weeks?	One long roll of paper	The back of old maps	Hotel napkins	A borrowed typewriter ribbon
+lit_moby_dick_keeps	Expert	In 'Moby-Dick', what keeps the narrator alive after the whale sinks the ship?	Floating on a coffin	Clinging to the whale	Hiding in a lifeboat	Riding on a barrel of oil
+lit_moby_dick_tattooed	Expert	In 'Moby-Dick', which tattooed harpooner does Ishmael end up sharing a bed with at an inn?	Queequeg	Tashtego	Daggoo	Fedallah
+lit_catcher_rye_narrator	Expert	In 'The Catcher in the Rye', what does the narrator keep wondering about the ducks in Central Park?	Where they go in winter	Why they never fly away	Who feeds them at night	How old the oldest one is
+lit_old_cuban_fisherman	Expert	What is the name of the old Cuban fisherman in 'The Old Man and the Sea'?	Santiago	Manolin	Pedro	Miguel
+lit_emma_bovary_die	Expert	How does Emma Bovary die at the end of 'Madame Bovary'?	She swallows arsenic	She throws herself under a train	She drowns herself in a river	She dies in childbirth
+lit_wrote_vanity_fair	Expert	Who wrote 'Vanity Fair', with its scheming heroine Becky Sharp?	William Thackeray	Anthony Trollope	Charles Dickens	Thomas Hardy
+lit_wrote_middlemarch	Expert	Who wrote 'Middlemarch'?	George Eliot	Elizabeth Gaskell	Jane Austen	Anne Bronte
+lit_author_invented_county	Expert	Which author invented the county of Yoknapatawpha?	William Faulkner	John Steinbeck	Mark Twain	Harper Lee
+lit_detective_edgar_allan	Expert	Which detective did Edgar Allan Poe create, often called the first fictional detective?	C. Auguste Dupin	Sherlock Holmes	Father Brown	Inspector Bucket
+lit_under_pen_bronte	Expert	Under what pen name did the Bronte sisters first publish?	Currer, Ellis and Acton Bell	George, Edward and Arthur Eliot	Brown, Brook and Bell	The Haworth Sisters
+lit_american_author_wrote	Expert	Which American author wrote short stories with twist endings under the name O. Henry?	William Sydney Porter	Ambrose Bierce	Bret Harte	Washington Irving
+lit_1774_novel_young	Expert	After which 1774 novel did young men across Europe copy its hero's blue coat and yellow waistcoat?	'The Sorrows of Young Werther'	'Julie, or the New Heloise'	'The Vicar of Wakefield'	'Candide'
+lit_margaret_mitchell_drafts	Expert	In early drafts of 'Gone with the Wind', what was Scarlett O'Hara's first name?	Pansy	Daisy	Rose	Violet
+lit_made_agatha_christie	Expert	What made Agatha Christie's 'The Murder of Roger Ackroyd' so controversial in 1926?	The narrator turns out to be the killer	The detective turns out to be the killer	Every suspect took part in the murder	The murderer is never revealed
+lit_great_expectations_turns	Expert	Who turns out to be the orphan Pip's secret benefactor in Dickens's novel?	The convict Magwitch	Miss Havisham	Mr Jaggers	Joe Gargery
+lit_uncanny_grenouille_murderer	Expert	What is uncanny about Grenouille, the murderer in Patrick Suskind's 'Perfume'?	He has no smell of his own	He cannot smell anything	He is completely blind	He never needs to sleep
+lit_joseph_heller_catch	Expert	Joseph Heller's 'Catch-22' was going to be called what, until another novel's number got in the way?	Catch-18	Catch-9	Catch-33	Catch-40
+lit_gulliver_travels_wise	Expert	In 'Gulliver's Travels', what are the wise, rational horses called?	Houyhnhnms	Yahoos	Laputans	Struldbrugs
+lit_bombardier_hero_joseph	Expert	Who is the bombardier hero of Joseph Heller's 'Catch-22'?	Yossarian	Milo Minderbinder	Major Major	Orr
+lit_cornish_estate_daphne	Expert	What is the name of the Cornish estate in Daphne du Maurier's 'Rebecca'?	Manderley	Thornfield	Pemberley	Wildfell
+lit_paints_portrait_picture	Expert	Who paints the portrait in 'The Picture of Dorian Gray'?	Basil Hallward	Lord Henry Wotton	Alan Campbell	Sibyl Vane
+lit_wuthering_heights_housekeeper	Expert	In 'Wuthering Heights', which housekeeper tells most of the story to Mr Lockwood?	Nelly Dean	Zillah	Joseph	Isabella Linton
+lit_jane_eyre_french	Expert	In 'Jane Eyre', what is the name of the French girl Jane is hired to teach?	Adele	Celine	Blanche	Diana

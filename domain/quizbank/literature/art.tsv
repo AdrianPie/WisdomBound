@@ -1,0 +1,84 @@
+# Art & Architecture: painting, sculpture, architecture, famous artworks, museums, art movements
+#
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+cultw_van_gogh	Easy	Which painter cut off part of his own ear?	Vincent van Gogh	Paul Gauguin	Edvard Munch	Henri Matisse
+lit_krzyk	Easy	Which painting by Edvard Munch shows a figure clutching its face in horror?	The Scream	Guernica	The Kiss	The Starry Night
+lit_gwiazdzista_noc	Easy	Who painted 'The Starry Night'?	Vincent van Gogh	Claude Monet	Paul Cezanne	Edvard Munch
+lit_warhol	Easy	Which artist is famous for pop-art paintings of soup cans?	Andy Warhol	Roy Lichtenstein	Jackson Pollock	Keith Haring
+lit_luwr	Easy	In which museum does the Mona Lisa hang?	The Louvre	The Prado	The Uffizi	The British Museum
+lit_japanese_art_involves	Easy	Which Japanese art involves folding paper into shapes?	Origami	Ikebana	Bonsai	Haiku
+lit_tiny_country_sistine	Easy	In which tiny country is the Sistine Chapel?	Vatican City	Italy	San Marino	Monaco
+lit_city_van_gogh	Easy	In which city is the Van Gogh Museum?	Amsterdam	Paris	Brussels	Rotterdam
+lit_famously_missing_ancient	Easy	What is famously missing from the ancient Greek statue known as the Venus de Milo?	Her arms	Her head	Her feet	Her nose
+lit_dali	Easy	Which artist painted 'The Persistence of Memory', with its melting clocks?	Salvador Dali	Rene Magritte	Pablo Picasso	Max Ernst
+litx_banksy	Easy	Which anonymous street artist shredded one of his own paintings just after it sold at auction in 2018?	Banksy	Shepard Fairey	Keith Haring	Jean-Michel Basquiat
+lit_museum_glass_pyramid	Easy	Which famous museum has a glass pyramid at its entrance?	The Louvre	The Prado	The British Museum	The Uffizi
+lit_flemish_painter_full	Easy	Which Flemish painter's full-figured women gave us the word 'Rubenesque'?	Peter Paul Rubens	Anthony van Dyck	Pieter Bruegel	Jan van Eyck
+lit_snow_capped_mountain	Easy	Which snow-capped mountain sits small in the background of the woodblock print 'The Great Wave off Kanagawa'?	Mount Fuji	Mount Aso	Mount Takao	Mount Ontake
+lit_guernica	Medium	Who painted 'Guernica'?	Pablo Picasso	Salvador Dali	Joan Miro	Francisco Goya
+lit_rodin	Medium	Who sculpted 'The Thinker'?	Auguste Rodin	Michelangelo	Donatello	Antonio Canova
+litx_stworzenie_adama	Medium	Which famous fresco shows God's finger almost touching a man's?	The Creation of Adam	The Last Supper	The Birth of Venus	The Night Watch
+litx_monet_lilie	Medium	Which Impressionist painted water lilies again and again in his garden at Giverny?	Claude Monet	Edgar Degas	Paul Cezanne	Pierre-Auguste Renoir
+litx_frida	Medium	Which Mexican painter is famous for her colourful self-portraits?	Frida Kahlo	Georgia O'Keeffe	Tamara de Lempicka	Remedios Varo
+lit_artist_drip_paintings	Medium	Which artist is famous for 'drip' paintings made by splashing paint on canvas?	Jackson Pollock	Mark Rothko	Andy Warhol	Roy Lichtenstein
+lit_art_movement_pablo	Medium	Which art movement did Pablo Picasso and Georges Braque found?	Cubism	Surrealism	Impressionism	Pop art
+lit_architect_designed_sagrada	Medium	Which architect designed the Sagrada Familia church?	Antoni Gaudi	Le Corbusier	Frank Gehry	Santiago Calatrava
+lit_italian_city_uffizi	Medium	In which Italian city is the Uffizi Gallery?	Florence	Rome	Venice	Milan
+lit_painter_born_crete	Medium	Which painter born on Crete worked in Toledo and was simply called 'the Greek'?	El Greco	Titian	Velazquez	Murillo
+lit_french_artist_posters	Medium	Which French artist is famous for his posters of the Moulin Rouge?	Henri de Toulouse-Lautrec	Edgar Degas	Pierre-Auguste Renoir	Georges Seurat
+lit_painting_technique_building	Medium	What is the painting technique of building pictures from tiny dots of colour called?	Pointillism	Cubism	Fauvism	Impasto
+lit_dutch_painter_grids	Medium	Which Dutch painter is famous for grids of black lines and blocks of primary colour?	Piet Mondrian	Vincent van Gogh	M. C. Escher	Rembrandt
+lit_paris_museum_impressionist	Medium	Which Paris museum of Impressionist art is housed in a former railway station?	Musee d'Orsay	Centre Pompidou	Musee Rodin	Musee de l'Orangerie
+lit_london_tate_modern	Medium	London's Tate Modern gallery is housed in a former what?	Power station	Railway station	Prison	Brewery
+lit_frank_gehry_titanium	Medium	Frank Gehry's titanium-clad Guggenheim Museum stands in which Spanish city?	Bilbao	Barcelona	Valencia	Madrid
+lit_german_design_school	Medium	Which famous German design school was founded by Walter Gropius in 1919?	Bauhaus	Werkbund	Jugendstil	De Stijl
+lit_michelangelo_marble_statue	Medium	What is Michelangelo's marble statue of David holding over his shoulder?	A sling	A sword	A spear	A lyre
+lit_delacroix_painting_shows	Medium	Which Delacroix painting shows a woman with a tricolour flag leading people over a barricade?	'Liberty Leading the People'	'The Raft of the Medusa'	'The Death of Marat'	'The Oath of the Horatii'
+lit_art_movement_salvador	Medium	To which art movement did Salvador Dali and Rene Magritte belong?	Surrealism	Cubism	Dadaism	Expressionism
+lit_painter_wrote_hundreds	Medium	Which painter wrote hundreds of letters to his art-dealer brother, Theo?	Vincent van Gogh	Claude Monet	Paul Cezanne	Edgar Degas
+lit_vermeer	Medium	Who painted 'Girl with a Pearl Earring'?	Johannes Vermeer	Rembrandt	Frans Hals	Jan van Eyck
+litx_botticelli	Medium	Which painter created 'The Birth of Venus', with the goddess on a seashell?	Sandro Botticelli	Raphael	Titian	Caravaggio
+litx_straz_nocna	Medium	Which Dutch master painted 'The Night Watch'?	Rembrandt	Vermeer	Van Gogh	Rubens
+lity_klimt	Medium	Which Austrian painter is famous for 'The Kiss', glittering with gold leaf?	Gustav Klimt	Egon Schiele	Oskar Kokoschka	Franz Marc
+lit_french_impressionist_paintings	Medium	Which French Impressionist is famous for paintings of ballet dancers?	Edgar Degas	Claude Monet	Pierre-Auguste Renoir	Camille Pissarro
+lit_french_painter_left	Medium	Which French painter left Paris for Tahiti and painted its people?	Paul Gauguin	Henri Matisse	Paul Cezanne	Georges Seurat
+lity_hokusai	Hard	Who made the famous Japanese print 'The Great Wave off Kanagawa'?	Hokusai	Hiroshige	Utamaro	Sesshu
+lit_painted_american_gothic	Hard	Who painted 'American Gothic', with a farmer holding a pitchfork?	Grant Wood	Edward Hopper	Norman Rockwell	Andrew Wyeth
+lit_british_artist_exhibited	Hard	Which British artist exhibited a shark preserved in formaldehyde?	Damien Hirst	Tracey Emin	Banksy	David Hockney
+lit_british_artist_bright	Hard	Which British artist is famous for bright paintings of Californian swimming pools?	David Hockney	Damien Hirst	Lucian Freud	Francis Bacon
+lit_american_painted_nighthawks	Hard	Which American painted 'Nighthawks', with lonely figures in a late-night diner?	Edward Hopper	Norman Rockwell	Andy Warhol	Jackson Pollock
+lit_spanish_painter_created	Hard	Which Spanish painter created 'The Third of May 1808'?	Francisco Goya	Diego Velazquez	El Greco	Joan Miro
+lit_painter_hid_man	Hard	Which painter hid a man's face behind a floating green apple in 'The Son of Man'?	Rene Magritte	Salvador Dali	Joan Miro	Max Ernst
+lit_rodin_thinker_meant	Hard	'The Thinker' was first meant to show which poet, gazing down from 'The Gates of Hell'?	Dante	Virgil	Homer	Baudelaire
+lit_van_gogh_painted	Hard	'The Starry Night' was painted from the window of the artist's room in what kind of place?	An asylum	A lighthouse	A prison	A ship's cabin
+lit_painter_giuseppe_arcimboldo	Hard	The painter Giuseppe Arcimboldo is famous for portraits built from what?	Fruit, vegetables and flowers	Seashells and pebbles	Scraps of newspaper	Butterfly wings
+lit_night_watch_got	Hard	'The Night Watch' got its name when darkened varnish made it look like night. When is the scene really set?	In daylight	At midnight	By candlelight	During an eclipse
+lit_mona_lisa_italian	Hard	What is the Mona Lisa called in Italian?	La Gioconda	La Bella	La Dama	La Primavera
+lit_spanish_court_painter	Hard	Which Spanish court painter created 'Las Meninas'?	Diego Velazquez	Francisco Goya	El Greco	Bartolome Murillo
+lit_italian_painter_master	Hard	Which Italian painter, master of dramatic light and shadow, fled Rome after killing a man?	Caravaggio	Titian	Raphael	Tintoretto
+lit_english_painter_created	Hard	Which English painter created 'The Hay Wain'?	John Constable	J. M. W. Turner	Thomas Gainsborough	William Blake
+lit_french_painter_still	Hard	Which French painter of still lifes with apples is called the father of modern art?	Paul Cezanne	Henri Matisse	Paul Gauguin	Georges Seurat
+lit_french_artist_made	Hard	Which French artist made huge, colourful paper cut-outs late in his life?	Henri Matisse	Pablo Picasso	Marc Chagall	Joan Miro
+lit_russian_painter_often	Hard	Which Russian painter is often credited with the first purely abstract paintings?	Wassily Kandinsky	Kazimir Malevich	Marc Chagall	Ilya Repin
+lit_pop_artist_painted	Hard	Which pop artist painted giant comic-strip panels in dots?	Roy Lichtenstein	Andy Warhol	Keith Haring	Jasper Johns
+lit_american_artist_huge	Hard	Which American artist is famous for huge, shiny 'Balloon Dog' sculptures?	Jeff Koons	Damien Hirst	Anish Kapoor	Claes Oldenburg
+lit_artist_couple_wrapped	Hard	Which artist couple wrapped Berlin's Reichstag in silver fabric in 1995?	Christo and Jeanne-Claude	Gilbert and George	Bernd and Hilla Becher	Marina Abramovic and Ulay
+lit_chinese_american_architect	Hard	Which Chinese-American architect designed the glass pyramid of a famous Paris museum?	I. M. Pei	Frank Gehry	Norman Foster	Renzo Piano
+lit_american_architect_designed	Hard	Which American architect designed 'Fallingwater', a house built over a waterfall?	Frank Lloyd Wright	Louis Sullivan	Philip Johnson	Mies van der Rohe
+lit_danish_architect_designed	Hard	Which Danish architect designed the Sydney Opera House?	Jorn Utzon	Arne Jacobsen	Bjarke Ingels	Alvar Aalto
+lit_architect_house_machine	Hard	Which architect called a house 'a machine for living in'?	Le Corbusier	Mies van der Rohe	Walter Gropius	Frank Lloyd Wright
+lit_left_diego_rivera	Hard	What left Diego Rivera's future wife bed-bound for months as a teenager, when she began painting self-portraits?	A bus accident	A bout of polio	A riding fall	A gunshot wound
+litx_impression	Hard	The word 'Impressionism' came from the title of a painting by whom?	Claude Monet	Edouard Manet	Edgar Degas	Camille Pissarro
+lity_magritte	Hard	Which painter wrote 'This is not a pipe' beneath a picture of a pipe?	Rene Magritte	Salvador Dali	Marcel Duchamp	Joan Miro
+lity_fontanna	Hard	Which artist shocked the art world by exhibiting a urinal titled 'Fountain'?	Marcel Duchamp	Andy Warhol	Rene Magritte	Pablo Picasso
+lit_painted_garden_earthly	Hard	Who painted 'The Garden of Earthly Delights'?	Hieronymus Bosch	Pieter Bruegel	Jan van Eyck	Albrecht Durer
+lit_official_title_painting	Expert	What is the official title of the painting known as 'Whistler's Mother'?	Arrangement in Grey and Black No. 1	Portrait of the Artist's Mother	Lady in a Black Chair	Study in Grey and Silver
+lit_painted_raft_medusa	Expert	Who painted 'The Raft of the Medusa', based on a real shipwreck of 1816?	Theodore Gericault	Eugene Delacroix	Jacques-Louis David	Gustave Courbet
+lit_romanian_sculptor_made	Expert	Which Romanian sculptor made the sleek, polished 'Bird in Space'?	Constantin Brancusi	Alberto Giacometti	Henry Moore	Jean Arp
+lit_whistler_sued_critic	Expert	When Whistler sued the critic John Ruskin for libel in 1878, how much did he win in damages?	One farthing	One thousand pounds	One guinea	Nothing at all
+lit_thieves_stole_scream	Expert	When thieves stole 'The Scream' from Oslo's National Gallery in 1994, what did they leave behind?	A note thanking it for poor security	A cheap copy of the painting	A ransom demand in verse	The empty frame on the wall
+lit_bosch_garden_earthly	Expert	In 'The Garden of Earthly Delights', what is painted on a sinner's backside in hell?	A line of sheet music	A map of the world	The painter's signature	A coat of arms
+lit_damaged_bottom_mural	Expert	What damaged the bottom of a famous mural in a Milan refectory in 1652, cutting away Jesus's feet?	A doorway cut through the wall	A flood in the refectory	A cannonball in a siege	A fire in the kitchens
+lit_painter_added_two	Expert	Which painter added two bored-looking little angels to his 'Sistine Madonna'?	Raphael	Michelangelo	Titian	Caravaggio
+lit_painter_hid_stretched	Expert	Which painter hid a stretched-out skull across the bottom of 'The Ambassadors'?	Hans Holbein the Younger	Albrecht Durer	Lucas Cranach the Elder	Jan van Eyck
+lit_becoming_full_time	Expert	Before becoming a full-time painter, Paul Gauguin made a good living as what?	A stockbroker	A ship's doctor	A lawyer	A schoolteacher

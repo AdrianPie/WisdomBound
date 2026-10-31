@@ -1,0 +1,91 @@
+# Classical Music: classical music, composers, opera, ballet, music theory terms
+#
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+lit_stick_orchestra_conductor	Easy	What is the stick that an orchestra's conductor waves called?	A baton	A wand	A bow	A cane
+lit_group_four_musicians	Easy	What is a group of four musicians called?	A quartet	A trio	A quintet	A sextet
+lit_instrument_played_bow	Easy	Which instrument is played with a bow while held between the knees?	The cello	The violin	The viola	The harp
+lit_composer_wrote_piano	Easy	Which composer wrote the famous piano piece 'Fur Elise'?	Ludwig van Beethoven	Wolfgang Amadeus Mozart	Frederic Chopin	Johann Sebastian Bach
+lit_composed_eine_kleine	Easy	Who composed 'Eine kleine Nachtmusik'?	Wolfgang Amadeus Mozart	Ludwig van Beethoven	Joseph Haydn	Johann Sebastian Bach
+lit_composer_already_touring	Easy	Which composer was already touring Europe's royal courts as a child performer at the age of six?	Wolfgang Amadeus Mozart	Ludwig van Beethoven	Johann Sebastian Bach	Joseph Haydn
+day_sopran_glos	Easy	Which is the highest female singing voice?	Soprano	Alto	Mezzo-soprano	Contralto
+lit_beethoven	Easy	Which composer kept writing great music after going almost completely deaf?	Ludwig van Beethoven	Wolfgang Amadeus Mozart	Frederic Chopin	Franz Schubert
+litx_piata_symfonia	Easy	Whose Fifth Symphony opens with the famous 'da-da-da-DUM'?	Beethoven	Mozart	Bach	Brahms
+lit_cappella_mean_music	Easy	What does 'a cappella' mean in music?	Singing without instruments	Singing in a church choir	Singing very softly	Singing in Italian
+lit_vivaldi	Medium	Who composed 'The Four Seasons'?	Antonio Vivaldi	Johann Sebastian Bach	Wolfgang Amadeus Mozart	Joseph Haydn
+litx_mozart_salzburg	Medium	In which city was Mozart born?	Salzburg	Vienna	Prague	Munich
+litx_czajkowski	Medium	Which composer wrote the ballets 'Swan Lake' and 'The Nutcracker'?	Pyotr Tchaikovsky	Sergei Prokofiev	Igor Stravinsky	Nikolai Rimsky-Korsakov
+lit_composed_opera_magic	Medium	Who composed the opera 'The Magic Flute'?	Wolfgang Amadeus Mozart	Ludwig van Beethoven	Giuseppe Verdi	Richard Wagner
+lit_lowest_male_singing	Medium	What is the lowest male singing voice called?	Bass	Tenor	Baritone	Alto
+lit_orchestral_instrument_pedals	Medium	Which orchestral instrument has pedals and about 47 strings?	The harp	The piano	The cello	The double bass
+lit_largest_instrument_string	Medium	Which is the largest instrument of the string family in an orchestra?	The double bass	The cello	The viola	The harp
+lit_instruments_made_antonio	Medium	Instruments made by Antonio Stradivari are most famously which kind?	Violins	Pianos	Flutes	Guitars
+lit_schiller_ode_joy	Medium	Beethoven's 'Ode to Joy' melody is the official anthem of which organisation?	The European Union	The United Nations	NATO	The Olympic Movement
+lit_composer_wrote_finlandia	Medium	Which composer wrote 'Finlandia'?	Jean Sibelius	Edvard Grieg	Carl Nielsen	Jean-Philippe Rameau
+lit_hungarian_piano_virtuoso	Medium	Which Hungarian piano virtuoso wrote the 'Hungarian Rhapsodies'?	Franz Liszt	Bela Bartok	Zoltan Kodaly	Franz Lehar
+lit_italian_court_composer	Medium	Which Italian court composer was falsely rumoured to have poisoned Mozart?	Antonio Salieri	Antonio Vivaldi	Luigi Boccherini	Domenico Scarlatti
+lit_although_usually_made	Medium	Although usually made of brass, which instrument family does the saxophone belong to?	Woodwind	Brass	Percussion	Strings
+lit_symphonies_beethoven_complete	Medium	How many symphonies did Beethoven complete?	Nine	Five	Twelve	Forty-one
+lit_composed_moonlight_sonata	Medium	Who composed the 'Moonlight Sonata'?	Beethoven	Chopin	Mozart	Liszt
+lit_instrument_niccolo_paganini	Medium	Which instrument did Niccolo Paganini, rumoured to have sold his soul to the devil, play?	The violin	The piano	The cello	The flute
+day_forte_znaczenie	Medium	In music, what does 'forte' mean?	Loud	Fast	Soft	Slowly
+litx_pieciolinia	Medium	How many lines make up a musical stave?	Five	Four	Six	Seven
+lit_german_composer_scored	Medium	Which German composer scored 'The Lion King', 'Gladiator' and 'Inception'?	Hans Zimmer	John Williams	Howard Shore	James Horner
+lit_italian_musical_term	Medium	Which Italian musical term tells players to get gradually louder?	Crescendo	Diminuendo	Staccato	Legato
+lit_tchaikovsky_piece_calls	Medium	Which Tchaikovsky piece calls for real cannon fire?	The 1812 Overture	Swan Lake	The Nutcracker	Romeo and Juliet
+litx_carmen	Medium	In which Spanish city is the opera 'Carmen' set?	Seville	Madrid	Barcelona	Valencia
+lit_composed_blue_danube	Medium	Who composed 'The Blue Danube' waltz?	Johann Strauss II	Franz Schubert	Johannes Brahms	Franz Liszt
+lit_composed_ride_valkyries	Medium	Who composed 'Ride of the Valkyries'?	Richard Wagner	Richard Strauss	Gustav Mahler	Anton Bruckner
+lit_instrument_indian_musician	Medium	Which instrument is the Indian musician Ravi Shankar famous for?	The sitar	The tabla	The veena	The harmonium
+lit_composed_opera_aida	Medium	Who composed the opera 'Aida'?	Giuseppe Verdi	Giacomo Puccini	Richard Wagner	Gioachino Rossini
+lit_composer_died_finishing	Medium	Which composer died before finishing his Requiem, leaving a pupil to complete it?	Wolfgang Amadeus Mozart	Franz Schubert	Joseph Haydn	Felix Mendelssohn
+lit_handel_water_music	Medium	Where was Handel's 'Water Music' first played for King George I?	On barges on the Thames	At a fountain garden party	At the launch of a warship	At a spa in Bath
+litx_oboj	Hard	Which instrument usually plays the note the whole orchestra tunes to?	The oboe	The violin	The piano	The trumpet
+lit_composed_bolero	Hard	Who composed 'Bolero'?	Maurice Ravel	Claude Debussy	Erik Satie	Camille Saint-Saens
+lit_composed_opera_madama	Hard	Who composed the opera 'Madama Butterfly'?	Giacomo Puccini	Giuseppe Verdi	Gioachino Rossini	Vincenzo Bellini
+lit_composed_clair_lune	Hard	Who composed 'Clair de Lune'?	Claude Debussy	Maurice Ravel	Frederic Chopin	Erik Satie
+lit_composer_fathered_children	Hard	Which composer fathered 20 children?	Johann Sebastian Bach	Wolfgang Amadeus Mozart	Joseph Haydn	George Frideric Handel
+lit_composed_rhapsody_blue	Hard	Who composed 'Rhapsody in Blue'?	George Gershwin	Leonard Bernstein	Aaron Copland	Irving Berlin
+lit_composed_opera_carmen	Hard	Who composed the opera 'Carmen'?	Georges Bizet	Giuseppe Verdi	Giacomo Puccini	Jules Massenet
+lit_musicians_directed_play	Hard	What are musicians directed to play in John Cage's famous piece 4'33''?	Nothing at all	One single note	Any tune they like	Only the piano lid
+lit_composed_six_brandenburg	Hard	Who composed the six 'Brandenburg Concertos'?	Johann Sebastian Bach	George Frideric Handel	Antonio Vivaldi	Georg Philipp Telemann
+lit_nessun_dorma_aria	Hard	'Nessun dorma' is an aria from which Puccini opera?	Turandot	Tosca	La Boheme	Madama Butterfly
+lit_1824_premiere_ninth	Hard	At the 1824 premiere of his Ninth Symphony, why did a singer turn Beethoven round to face the audience?	He could not hear their applause	The emperor had entered his box	He had dozed off in the finale	The audience had started booing
+lit_bach_wrote_comic	Hard	Bach wrote a comic cantata about a young woman hooked on which drink?	Coffee	Hot chocolate	Beer	Tea
+lit_holst_planets_movement	Hard	'The Planets' suite has no movement for Pluto, found later in 1930. Which other planet is missing?	Earth	Mercury	Neptune	Saturn
+lit_composer_wrote_planets	Hard	Which composer wrote 'The Planets' suite, including 'Mars, the Bringer of War'?	Gustav Holst	Edward Elgar	Benjamin Britten	Ralph Vaughan Williams
+lit_english_composer_wrote	Hard	Which English composer wrote the 'Pomp and Circumstance' marches?	Edward Elgar	Gustav Holst	Henry Purcell	Benjamin Britten
+lit_czech_composer_wrote	Hard	Which Czech composer wrote the 'New World' Symphony after a stay in America?	Antonin Dvorak	Bedrich Smetana	Leos Janacek	Bohuslav Martinu
+lit_ballet_rite_spring	Hard	Whose ballet 'The Rite of Spring' caused a riot at its 1913 premiere in Paris?	Igor Stravinsky	Sergei Prokofiev	Maurice Ravel	Claude Debussy
+lit_composer_wrote_peter	Hard	Which composer wrote 'Peter and the Wolf', where each character is an instrument?	Sergei Prokofiev	Igor Stravinsky	Dmitri Shostakovich	Sergei Rachmaninoff
+lit_composer_wrote_carmina	Hard	Which composer wrote 'Carmina Burana', with its thundering 'O Fortuna'?	Carl Orff	Richard Wagner	Gustav Mahler	Richard Strauss
+lit_composer_wrote_carnival	Hard	Which composer wrote 'The Carnival of the Animals'?	Camille Saint-Saens	Maurice Ravel	Erik Satie	Hector Berlioz
+lit_russian_composer_wrote	Hard	Which Russian composer wrote 'Flight of the Bumblebee'?	Nikolai Rimsky-Korsakov	Modest Mussorgsky	Alexander Borodin	Pyotr Tchaikovsky
+lit_composer_wrote_music	Hard	Which composer wrote the music for the famous can-can dance?	Jacques Offenbach	Georges Bizet	Johann Strauss II	Camille Saint-Saens
+lit_italian_composer_wrote	Hard	Which Italian composer wrote the opera 'The Barber of Seville'?	Gioachino Rossini	Giuseppe Verdi	Giacomo Puccini	Gaetano Donizetti
+lit_composer_left_symphony	Hard	Which composer left his Symphony No. 8, the 'Unfinished', with only two movements?	Franz Schubert	Ludwig van Beethoven	Anton Bruckner	Gustav Mahler
+lit_german_composer_wrote	Hard	Which German composer wrote the famous 'Lullaby' ('Guten Abend, gut' Nacht')?	Johannes Brahms	Robert Schumann	Felix Mendelssohn	Richard Wagner
+lit_composer_surprise_symphony	Hard	Which composer's 'Surprise' Symphony has a sudden loud chord to wake up the audience?	Joseph Haydn	Wolfgang Amadeus Mozart	Ludwig van Beethoven	Antonio Vivaldi
+lit_german_composer_wrote_2	Hard	Which German composer wrote the famous 'Canon in D'?	Johann Pachelbel	Johann Sebastian Bach	Georg Philipp Telemann	Dietrich Buxtehude
+lit_wedding_march_played	Hard	The 'Wedding March' played as many couples leave church comes from Mendelssohn's music for which Shakespeare play?	A Midsummer Night's Dream	The Taming of the Shrew	Much Ado About Nothing	As You Like It
+lit_tune_twinkle_twinkle	Hard	The tune of 'Twinkle, Twinkle, Little Star', on which Mozart wrote variations, comes from a folk song of which country?	France	Germany	England	Austria
+lit_antonio_vivaldi_priest	Hard	Antonio Vivaldi was a priest nicknamed 'the Red Priest'. Why?	He had red hair	He wore a red cassock	He drank red wine at Mass	He was a revolutionary
+lit_chopin_minute_waltz	Hard	Chopin's 'Minute Waltz' usually takes longer than a minute to play. What does 'minute' really mean in its title?	Small	Quick	Precise	Dainty
+lit_according_tradition_audiences	Hard	Why, according to tradition, do audiences stand for the 'Hallelujah' chorus of Handel's 'Messiah'?	King George II stood up	Handel demanded it	The choir once fainted	It was a church rule
+lit_composed_hall_mountain	Hard	Who composed 'In the Hall of the Mountain King'?	Edvard Grieg	Jean Sibelius	Carl Nielsen	Antonin Dvorak
+lit_composed_dreamy_piano	Hard	Who composed the dreamy piano pieces 'Gymnopedies'?	Erik Satie	Claude Debussy	Maurice Ravel	Gabriel Faure
+lit_french_composer_wrote	Expert	Which French composer wrote 'The Sorcerer's Apprentice', later made famous by Mickey Mouse?	Paul Dukas	Camille Saint-Saens	Maurice Ravel	Hector Berlioz
+lit_stolen_joseph_haydn	Expert	What was stolen from Joseph Haydn's grave and only reunited with his body 145 years later?	His skull	His heart	His violin	His wedding ring
+lit_tchaikovsky_rich_patron	Expert	Tchaikovsky's rich patron Nadezhda von Meck paid him an allowance for 13 years on what odd condition?	That they never meet	That he never marry	That he live in her house	That he teach her daughters
+lit_erik_satie_short	Expert	Erik Satie's short piano piece 'Vexations' carries a note suggesting it be repeated how many times?	840	100	365	2,000
+lit_1705_young_bach	Expert	In 1705 the young Bach walked some 400 km to Lubeck to hear which organist play?	Dieterich Buxtehude	Johann Pachelbel	Georg Philipp Telemann	George Frideric Handel
+lit_mozart_kept_pet	Expert	Mozart kept a pet that could whistle a theme from one of his piano concertos. What was it?	A starling	A parrot	A canary	A blackbird
+lit_roughly_long_handel	Expert	Roughly how long did Handel take to compose 'Messiah'?	About three weeks	About three months	About a year	About five years
+lit_vivaldi_wrote_concertos	Expert	Vivaldi wrote many of his concertos for musicians at which kind of Venetian institution?	An orphanage for girls	A monastery for boys	A sailors' guild	The doge's guard
+lit_new_keyboard_instrument	Expert	Which then-new keyboard instrument gives Tchaikovsky's 'Dance of the Sugar Plum Fairy' its tinkling sound?	The celesta	The harpsichord	The glass harmonica	The music box
+lit_composer_stopped_writing	Expert	Which composer, who stopped writing operas at 37, has a steak dish topped with foie gras named after him?	Gioachino Rossini	Giuseppe Verdi	Gaetano Donizetti	Vincenzo Bellini
+lit_1926_premiere_puccini	Expert	At the 1926 premiere of Puccini's unfinished 'Turandot', what did Toscanini do where Puccini had stopped writing?	Laid down his baton and ended the show	Played the last aria twice	Asked for a minute's silence first	Finished it on the piano himself
+lit_saint_saens_banned	Expert	Which piece of 'The Carnival of the Animals' was the only one its composer let be published in his lifetime?	The Swan	The Elephant	Aquarium	Fossils
+lit_bridal_march_here	Expert	The bridal march 'Here Comes the Bride' comes from an opera by which composer?	Richard Wagner	Felix Mendelssohn	Giuseppe Verdi	Georges Bizet
+lit_composer_wrote_sprach	Expert	Which composer wrote 'Also sprach Zarathustra', made famous by the film '2001'?	Richard Strauss	Johann Strauss II	Richard Wagner	Gustav Mahler
+lit_mozart_said_written	Expert	At 14, Mozart is said to have written down which closely guarded piece from memory after hearing it in the Sistine Chapel?	Allegri's 'Miserere'	Palestrina's 'Stabat Mater'	Handel's 'Messiah'	Bach's 'Mass in B minor'
+lit_haydn_hint_prince	Expert	How did Haydn hint to Prince Esterhazy that his musicians wanted to go home to their families?	In a symphony, players left one by one	He set the prince's letters to music	The orchestra played until he slept	He wrote a symphony with no ending

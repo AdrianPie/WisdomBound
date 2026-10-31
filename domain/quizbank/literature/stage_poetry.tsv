@@ -1,0 +1,182 @@
+# Theatre, Poetry & Epics: Shakespeare, theatre, plays, poetry, ancient epics (Homer, Dante), the Bible as literature, writers' lives and literary trivia
+#
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+cultw_hamlet_autor	Easy	Who wrote the play Hamlet?	William Shakespeare	Charles Dickens	Homer	Moliere
+cultw_romeo	Easy	In which Italian city is Romeo and Juliet set?	Verona	Venice	Florence	Rome
+wh_iliada_autor	Easy	Who is 'The Iliad' and 'The Odyssey' attributed to?	Homer	Hesiod	Sophocles	Virgil
+trv2_iliada_wojna	Easy	Which epic poem tells the story of the Trojan War?	The Iliad	The Odyssey	The Aeneid	The Epic of Gilgamesh
+wld_lit_szekspir_hamlet	Easy	Which Shakespeare character says 'To be, or not to be'?	Hamlet	Macbeth	King Lear	Othello
+lit_bible_spent_three	Easy	In the Bible, who spent three days inside a great fish?	Jonah	Noah	Job	Daniel
+lit_shakespeare_play_prologue	Easy	Which Shakespeare play's prologue calls its young lovers 'star-cross'd'?	Romeo and Juliet	Antony and Cleopatra	Othello	A Midsummer Night's Dream
+lit_writer_began_love	Easy	Which writer began a love poem with 'Shall I compare thee to a summer's day?'	William Shakespeare	John Keats	Lord Byron	John Milton
+lit_romeo_take_own	Easy	How does Romeo take his own life at the end of Shakespeare's play?	He drinks poison	He stabs himself	He jumps from a wall	He falls on a sword
+trv2_hamlet_kraj	Easy	Hamlet is a prince of which country?	Denmark	Norway	Scotland	Sweden
+lit_et_tu	Easy	Which Shakespeare play contains the famous line 'Et tu, Brute'?	Julius Caesar	Antony and Cleopatra	Coriolanus	Macbeth
+lit_single_book_thought	Easy	Which single book is thought to have sold more copies than any other?	The Bible	Don Quixote	The Quran	The Little Prince
+wh_boska_komedia	Medium	Who wrote 'The Divine Comedy'?	Dante Alighieri	Petrarch	Boccaccio	Virgil
+lit4_dante_jezyk	Medium	In which language did Dante write 'The Divine Comedy'?	Italian	Latin	Provencal	Greek
+day_sonet_wersy	Medium	How many lines does a sonnet have?	Fourteen	Twelve	Sixteen	Ten
+trv2_macbeth_czarownice	Medium	In which Shakespeare play do three witches chant 'Double, double toil and trouble'?	Macbeth	Hamlet	King Lear	The Tempest
+trv2_haiku_sylaby	Medium	How many syllables does a traditional haiku have?	17	14	21	10
+org_utopia_more	Medium	Who invented the word 'utopia' as the title of his 1516 book?	Thomas More	Francis Bacon	Jonathan Swift	Erasmus
+lit_chaucer	Medium	Who wrote 'The Canterbury Tales'?	Geoffrey Chaucer	William Langland	John Milton	Edmund Spenser
+lit_burza	Medium	Which Shakespeare play features a shipwreck, the magician Prospero and a spirit called Ariel?	The Tempest	Twelfth Night	A Midsummer Night's Dream	The Winter's Tale
+lit_otello	Medium	Which Shakespeare character is 'the Moor of Venice'?	Othello	Shylock	Iago	Macbeth
+lit_ofelia	Medium	In 'Hamlet', which young woman goes mad and drowns?	Ophelia	Desdemona	Cordelia	Juliet
+lit_kruk	Medium	Who wrote the poem 'The Raven', with its refrain 'Nevermore'?	Edgar Allan Poe	Walt Whitman	Emily Dickinson	Robert Frost
+lit_dylan_nobel	Medium	Which singer-songwriter won the 2016 Nobel Prize in Literature?	Bob Dylan	Leonard Cohen	Paul Simon	Bruce Springsteen
+litx_stratford	Medium	In which English town was Shakespeare born?	Stratford-upon-Avon	London	Oxford	Canterbury
+litx_odyseusz_10	Medium	How many years does Odysseus spend getting home from Troy?	Ten	Two	Twenty	Seven
+lit_shakespeare_play_shylock	Medium	In which Shakespeare play does Shylock demand 'a pound of flesh'?	The Merchant of Venice	Othello	Macbeth	Romeo and Juliet
+lit_shakespeare_king_divides	Medium	Which Shakespeare king divides his kingdom among his three daughters?	King Lear	Macbeth	Richard III	Henry V
+lit_juliet_line_wherefore	Medium	In Juliet's line 'Wherefore art thou Romeo?', what does 'wherefore' mean?	Why	Where	Who	How
+lit_hamlet_skull_hamlet	Medium	In 'Hamlet', whose skull does Hamlet hold as he says 'Alas, poor...'?	Yorick	Polonius	Laertes	Horatio
+lit_roman_poet_wrote	Medium	Which Roman poet wrote the 'Aeneid'?	Virgil	Ovid	Horace	Homer
+lit_french_playwright_wrote	Medium	Which French playwright wrote the comedies 'Tartuffe' and 'The Miser'?	Moliere	Racine	Voltaire	Corneille
+lit_norwegian_playwright_wrote	Medium	Which Norwegian playwright wrote 'A Doll's House'?	Henrik Ibsen	August Strindberg	Edvard Grieg	Knut Hamsun
+lit_german_poet_wrote	Medium	Which German poet wrote the poem 'Ode to Joy'?	Friedrich Schiller	Heinrich Heine	Friedrich Holderlin	Bertolt Brecht
+lit_poet_wrote_eugene	Medium	Which poet wrote 'Eugene Onegin' and is called the father of Russian literature?	Alexander Pushkin	Mikhail Lermontov	Nikolai Gogol	Ivan Turgenev
+lit_philosopher_declared_god	Medium	Which philosopher declared 'God is dead' and wrote 'Thus Spoke Zarathustra'?	Friedrich Nietzsche	Arthur Schopenhauer	Soren Kierkegaard	Karl Marx
+lit_german_philosopher_wrote	Medium	Which German philosopher wrote 'Critique of Pure Reason'?	Immanuel Kant	Georg Hegel	Martin Heidegger	Gottfried Leibniz
+lit_scottish_economist_wrote	Medium	Which Scottish economist wrote 'The Wealth of Nations' and described the 'invisible hand'?	Adam Smith	David Hume	John Maynard Keynes	David Ricardo
+lit_romeo_juliet_juliet	Medium	In 'Romeo and Juliet', how does Juliet make everyone believe she is dead?	She drinks a sleeping potion	She stages a fall from a balcony	She sends a false letter	She fakes a fatal fever
+lit_scottish_poet_gave	Medium	Which Scottish poet gave the world the words of 'Auld Lang Syne'?	Robert Burns	Walter Scott	Robert Louis Stevenson	James Hogg
+lit_french_play_hero	Medium	Which French play's hero, cursed with an enormous nose, writes love letters for a handsomer rival?	Cyrano de Bergerac	Tartuffe	The Misanthrope	Ruy Blas
+lit_legend_doctor_faustus	Medium	In the legend of Doctor Faustus, which devil buys the scholar's soul?	Mephistopheles	Beelzebub	Asmodeus	Belial
+lit_lady_macbeth_trying	Medium	What is Lady Macbeth trying to wash away when she cries 'Out, damned spot!'?	Blood she imagines on her hands	Ink from a forged letter	Poison from the king's cup	Mud from the witches' heath
+lit_rime_ancient_mariner	Medium	In 'The Rime of the Ancient Mariner', which bird does the mariner shoot, bringing a curse on his ship?	An albatross	A seagull	A raven	A cormorant
+lit_pygmalion_eliza_doolittle	Medium	In 'Pygmalion', what does Eliza Doolittle sell on the streets of London?	Flowers	Matches	Oranges	Newspapers
+lit_writer_poem_ends	Medium	Which writer's poem 'If' ends 'you'll be a Man, my son'?	Rudyard Kipling	Robert Frost	Alfred Tennyson	W. B. Yeats
+lit_kapuleci	Medium	To which family does Juliet belong in 'Romeo and Juliet'?	The Capulets	The Montagues	The Medicis	The Borgias
+lit_wrote_music_musicals	Medium	Who wrote the music for the musicals 'Jesus Christ Superstar' and 'Evita'?	Andrew Lloyd Webber	Stephen Sondheim	Lin-Manuel Miranda	Alan Menken
+lit_philosopher_wrote_think	Medium	Which philosopher wrote 'I think, therefore I am'?	Rene Descartes	Immanuel Kant	Blaise Pascal	Voltaire
+cultw_boska_komedia	Medium	How many parts does Dante's Divine Comedy have?	Three	Two	Four	Seven
+lit2_faust	Medium	Who wrote 'Faust'?	Johann Wolfgang von Goethe	Friedrich Schiller	Heinrich Heine	Gotthold Lessing
+trv2_odyseusz_dom	Medium	What is the name of Odysseus's home island?	Ithaca	Crete	Rhodes	Corfu
+lit_milton	Medium	Who wrote the epic poem 'Paradise Lost'?	John Milton	Geoffrey Chaucer	Edmund Spenser	Christopher Marlowe
+lit_ryszard_iii	Medium	In which Shakespeare play does a king cry 'A horse! A horse! My kingdom for a horse!'?	Richard III	Henry V	King Lear	Macbeth
+lit_frost	Medium	Which American poet wrote 'The Road Not Taken'?	Robert Frost	Walt Whitman	Langston Hughes	Carl Sandburg
+lit_rowling_inicjaly	Medium	Why did J. K. Rowling's publisher want her to use initials?	So boys would not avoid a book by a woman	Her full name was too long	To keep her hidden from the press	For legal reasons
+lit_sofokles	Medium	Which Greek playwright wrote 'Oedipus Rex'?	Sophocles	Euripides	Aeschylus	Aristophanes
+litx_makbet	Medium	Which Shakespeare play do actors traditionally avoid naming inside a theatre?	Macbeth	Hamlet	King Lear	Othello
+litx_homer_slepy	Medium	According to tradition, what was unusual about the poet Homer?	He was blind	He was a king	He was a woman	He was a slave
+litx_churchill_nobel	Medium	Which wartime prime minister won the Nobel Prize in Literature?	Winston Churchill	Charles de Gaulle	Franklin Roosevelt	Clement Attlee
+litx_limeryk	Medium	How many lines does a limerick have?	Five	Three	Four	Fourteen
+lit_happens_godot_finally	Medium	What happens when Godot finally turns up in 'Waiting for Godot'?	He never turns up	He turns out to be dead	He is a small boy	He sends a letter instead
+lit4_soyinka_nobel	Medium	Wole Soyinka was the first Nobel laureate in Literature from which continent?	Africa	South America	Asia	Australia
+org_serendipity_ksiazeta	Medium	'Serendipity' was coined from a tale about three princes of which land?	Serendip	Samarkand	Cathay	Trebizond
+lit4_beowulf_jezyk	Hard	In which language was 'Beowulf' originally written?	Old English	Old Norse	Latin	Middle High German
+org_chortle_carroll	Hard	Which author blended 'chuckle' and 'snort' to coin 'chortle'?	Lewis Carroll	Edward Lear	Charles Dickens	Mark Twain
+cur_frankenstein_wiek	Hard	How old was Mary Shelley when she began writing 'Frankenstein'?	18	25	33	41
+lit_dodgson	Hard	What was the real name of 'Alice in Wonderland' author Lewis Carroll?	Charles Dodgson	Charles Kingsley	Charles Lamb	Edward Lear
+lit_safona	Hard	Which ancient Greek poet wrote love poems on the island of Lesbos?	Sappho	Pindar	Hesiod	Anacreon
+lit_kregi_piekla	Hard	In Dante's 'Inferno', how many circles does Hell have?	Nine	Seven	Three	Twelve
+lit_wergiliusz_przewodnik	Hard	Who guides Dante through Hell and Purgatory in 'The Divine Comedy'?	Virgil	Beatrice	Homer	Ovid
+litx_szekspir_slowa	Hard	Roughly how many words is Shakespeare credited with being the first to use in writing?	About 1,700	About 17	About 17,000	About 170
+litx_nikt	Hard	What name does Odysseus give the Cyclops to trick him?	Nobody	Everyone	Zeus	Somebody
+litx_kipling_nobel	Hard	Who became the youngest winner of the Nobel Prize in Literature, in 1907?	Rudyard Kipling	Albert Camus	Ernest Hemingway	Thomas Mann
+lity_strzelba_czechowa	Hard	Which Russian writer's rule says a gun shown in act one must be fired by the end?	Anton Chekhov	Leo Tolstoy	Nikolai Gogol	Maxim Gorky
+lit_poet_wrote_not	Hard	Which poet wrote 'Do not go gentle into that good night'?	Dylan Thomas	T. S. Eliot	W. B. Yeats	Seamus Heaney
+lit_poet_wrote_wandered	Hard	Which poet wrote 'I wandered lonely as a cloud', about daffodils?	William Wordsworth	John Keats	Lord Byron	Percy Bysshe Shelley
+lit_shakespeare_play_features	Hard	Which Shakespeare play features the line 'All the world's a stage'?	As You Like It	The Tempest	Twelfth Night	King Lear
+lit_othello_villain_tricks	Hard	In 'Othello', which villain tricks Othello into jealousy?	Iago	Cassio	Roderigo	Brabantio
+lit_according_ghost_hamlet	Hard	According to his ghost, how was Hamlet's father murdered?	Poison poured into his ear	A dagger while he slept	Poisoned wine at a feast	Smothered with a pillow
+lit_witches_tell_macbeth	Hard	The witches tell Macbeth he is safe until which wood comes to Dunsinane?	Birnam Wood	Sherwood	The Forest of Arden	Ettrick Forest
+lit_othello_object_planted	Hard	In 'Othello', which object is planted as false proof that Desdemona is unfaithful?	A handkerchief	A love letter	A wedding ring	A locket
+lit_deathbed_oscar_wilde	Hard	On his deathbed, Oscar Wilde is said to have joked that either he or what had to go?	The wallpaper	The curtains	The doctor	The piano
+lit_shakespeare_play_gave	Hard	Which Shakespeare play gave English 'the green-eyed monster' for jealousy?	Othello	Hamlet	King Lear	The Tempest
+lit_poem_describes_shattered	Hard	Which poem describes a shattered statue in the desert inscribed 'Look on my works, ye Mighty, and despair!'?	Ozymandias	Kubla Khan	The Second Coming	Dover Beach
+lit_importance_earnest_baby	Hard	In 'The Importance of Being Earnest', where was the baby Jack found?	In a handbag at a railway station	In a basket on a church step	In a hatbox at a hotel	In a rowing boat on the Thames
+lit_hamlet_call_play	Hard	What does Hamlet call the play he stages to catch the conscience of the king?	'The Mousetrap'	'The Spider's Web'	'The Snare'	'The Hunter's Net'
+lit_magician_prospero_daughter	Hard	What is the name of the magician Prospero's daughter, who has grown up on his island?	Miranda	Viola	Perdita	Rosalind
+lit_play_doll_house	Hard	How does the play 'A Doll's House' famously end?	Nora walks out and slams the door	Nora shoots herself in despair	Nora's husband is sent to prison	Nora's husband dies of a fever
+lit_russian_play_ends	Hard	Which Russian play ends with the sound of axes chopping down the family's beloved trees?	'The Cherry Orchard'	'Three Sisters'	'Uncle Vanya'	'The Seagull'
+lit_romantic_poet_mad	Hard	Which Romantic poet was called 'mad, bad and dangerous to know'?	Lord Byron	Percy Bysshe Shelley	John Keats	William Blake
+lit_reclusive_american_poet	Hard	Which reclusive American poet had almost all of her nearly 1800 poems published after death?	Emily Dickinson	Sylvia Plath	Elizabeth Bishop	Anne Sexton
+lit_surviving_two_plane	Hard	After surviving two plane crashes in Africa on consecutive days in 1954, which author got to read his own obituaries?	Ernest Hemingway	F. Scott Fitzgerald	John Steinbeck	William Faulkner
+lit_author_publicly_backed	Hard	Which famous author publicly backed the Cottingley Fairies photographs, faked by two girls, as genuine?	Arthur Conan Doyle	H. G. Wells	J. M. Barrie	Rudyard Kipling
+lit_tolkien_lewis_friends	Hard	What did Tolkien, C. S. Lewis and their friends call their Oxford circle that read work aloud?	The Inklings	The Bloomsbury Group	The Apostles	The Lost Generation
+lit_position_albert_camus	Hard	Which position did Albert Camus play for the University of Algiers football team?	Goalkeeper	Centre forward	Right winger	Centre half
+lit_times_bram_stoker	Hard	How many times did the author of 'Dracula' visit Transylvania before writing it?	Not once	Once, briefly	Three times	Every summer
+lit_persuaded_publisher_bloomsbury	Hard	Who persuaded the publisher Bloomsbury to take on the first Harry Potter book?	The chairman's eight-year-old daughter	The chairman's elderly mother	A famous children's author	A Scottish bookseller
+lit_playwright_became_person	Hard	Which playwright became the first person to win both a Nobel Prize and an Oscar?	George Bernard Shaw	Eugene O'Neill	Harold Pinter	Tennessee Williams
+lit_victor_hugo_said	Hard	The author of 'Les Miserables' reportedly asked how it was selling with a one-character note. Which one?	?	!	*	+
+litx_bottom	Hard	In 'A Midsummer Night's Dream', whose head is turned into a donkey's?	Bottom's	Puck's	Oberon's	Lysander's
+lit_shakespeare_comedy_features	Hard	Which Shakespeare comedy features the twins Viola and Sebastian and the steward Malvolio?	Twelfth Night	As You Like It	The Comedy of Errors	The Winter's Tale
+lit_shakespeare_comedy_features_2	Hard	Which Shakespeare comedy features the sparring lovers Beatrice and Benedick?	Much Ado About Nothing	The Taming of the Shrew	Twelfth Night	Love's Labour's Lost
+lit_wrote_play_death	Hard	Who wrote the play 'Death of a Salesman'?	Arthur Miller	Tennessee Williams	Eugene O'Neill	Edward Albee
+lit_wrote_play_streetcar	Hard	Who wrote the play 'A Streetcar Named Desire'?	Tennessee Williams	Arthur Miller	Eugene O'Neill	Thornton Wilder
+lit_playwright_wrote_pygmalion	Hard	Which playwright wrote 'Pygmalion', the basis of 'My Fair Lady'?	George Bernard Shaw	Oscar Wilde	Noel Coward	J. M. Barrie
+lit_indian_poet_became	Hard	Which Indian poet became the first non-European Nobel laureate in Literature, in 1913?	Rabindranath Tagore	Salman Rushdie	R. K. Narayan	Vikram Seth
+lit_wrote_poetry_collection	Hard	Who wrote the poetry collection 'Leaves of Grass'?	Walt Whitman	Emily Dickinson	Robert Frost	Edgar Allan Poe
+lit_wrote_poem_waste	Hard	Who wrote the poem 'The Waste Land'?	T. S. Eliot	Ezra Pound	W. H. Auden	Dylan Thomas
+lit_macbeth_finally_kills	Hard	In 'Macbeth', who finally kills Macbeth?	Macduff	Banquo	Malcolm	Duncan
+lit_philosopher_wrote_man	Hard	Which philosopher wrote 'Man is born free, and everywhere he is in chains'?	Jean-Jacques Rousseau	Voltaire	John Locke	Thomas Hobbes
+lit_roman_poet_wrote_2	Hard	Which Roman poet wrote the 'Metamorphoses'?	Ovid	Virgil	Horace	Catullus
+lit_greek_playwright_wrote	Hard	Which Greek playwright wrote the comedies 'The Frogs' and 'The Clouds'?	Aristophanes	Sophocles	Euripides	Aeschylus
+lit_spanish_poet_playwright	Hard	Which Spanish poet and playwright wrote 'Blood Wedding'?	Federico Garcia Lorca	Miguel de Unamuno	Antonio Machado	Pedro Calderon
+lit_chilean_poet_won	Hard	Which Chilean poet won the Nobel Prize in 1971?	Pablo Neruda	Gabriela Mistral	Octavio Paz	Jorge Luis Borges
+lit_italian_poet_wrote	Hard	Which Italian poet wrote hundreds of sonnets to his beloved Laura?	Petrarch	Dante	Boccaccio	Ariosto
+lit_irish_poet_won	Hard	Which Irish poet won the Nobel Prize in Literature in 1923?	W. B. Yeats	James Joyce	Oscar Wilde	Seamus Heaney
+lit_american_poet_wrote_2	Hard	Which American poet wrote 'Because I could not stop for Death'?	Emily Dickinson	Sylvia Plath	Maya Angelou	Edna St. Vincent Millay
+lit_lebanese_american_poet	Hard	Which Lebanese-American poet wrote 'The Prophet'?	Kahlil Gibran	Amin Maalouf	Rumi	Omar Khayyam
+lit_whodunnit_running_london	Hard	Which whodunnit, running in London since 1952, is the world's longest-running play?	The Mousetrap	Witness for the Prosecution	Death on the Nile	The Hound of the Baskervilles
+lit_1953_play_crucible	Hard	The 1953 play 'The Crucible' is set during which events?	The Salem witch trials	The Great Depression	The American Civil War	The Boston Tea Party
+lit_musical_cats_based	Hard	The musical 'Cats' is based on a book of poems by which poet?	T. S. Eliot	W. H. Auden	Edward Lear	Ogden Nash
+lit_romeo_juliet_friend	Hard	In 'Romeo and Juliet', which friend of Romeo dies cursing 'A plague o' both your houses'?	Mercutio	Benvolio	Tybalt	Paris
+lit_poet_wrote_charge	Hard	Which poet wrote 'The Charge of the Light Brigade'?	Alfred, Lord Tennyson	Rudyard Kipling	William Wordsworth	Lord Byron
+lit_czech_writer_coined	Hard	Which Czech writer coined the word 'robot' in a 1920 play?	Karel Capek	Franz Kafka	Jaroslav Hasek	Milan Kundera
+lit_alexander_pushkin_die	Hard	How did Alexander Pushkin die in 1837?	He was shot in a duel	He drowned in the Neva	He died of cholera	He was executed for treason
+lit_world_war_writing	Hard	During World War II, before writing for children, Roald Dahl served as what?	An RAF fighter pilot	A naval codebreaker	An army cook	A war correspondent
+lit_rowling_said_idea	Hard	J. K. Rowling has said the idea for Harry Potter came to her while she was where?	On a delayed train	In an Edinburgh cafe	In a hospital bed	On a beach in Portugal
+lit2_czekajac_na_godota	Hard	Who wrote 'Waiting for Godot'?	Samuel Beckett	Eugene Ionesco	Jean Genet	Harold Pinter
+lit4_kafka_zyczenie	Hard	What did Franz Kafka ask his friend Max Brod to do with his manuscripts?	Burn them	Publish them abroad	Translate them into Czech	Sell them to a museum
+lit4_rumi_jezyk	Hard	The poet Rumi wrote chiefly in which language?	Persian	Arabic	Turkish	Urdu
+ref_lit_godot_jezyk	Hard	In which language did Samuel Beckett first write 'Waiting for Godot'?	French	English	German	Irish
+lit_hamlet_najdluzszy	Hard	Which is the longest of Shakespeare's plays?	Hamlet	King Lear	Richard III	Othello
+litx_sonety	Hard	How many sonnets did Shakespeare publish?	154	14	54	300
+lity_julia_wiek	Hard	How old is Juliet in 'Romeo and Juliet'?	13	16	18	21
+lit_william_shakespeare_famously	Hard	What did William Shakespeare famously leave his wife in his will?	His second-best bed	His first folio	His share of the Globe	A single shilling
+lit_hemingway_took_title	Hard	Hemingway took the title 'For Whom the Bell Tolls' from a meditation by which poet?	John Donne	John Milton	William Blake	Andrew Marvell
+lit_stendhal_syndrome_dizziness	Hard	'Stendhal syndrome', dizziness from too much beautiful art, is named after the writer's visit to which city?	Florence	Rome	Venice	Paris
+lit_iliada_wers	Expert	What word does Homer's 'Iliad' open with?	Rage (wrath)	War	Muse	Gods
+lit4_nobel_pierwsza_kobieta	Expert	Who was the first woman to win the Nobel Prize in Literature?	Selma Lagerlof	Grazia Deledda	Sigrid Undset	Pearl S. Buck
+dpt_lit_kawabata	Expert	Which Japanese writer won the Nobel Prize in 1968?	Yasunari Kawabata	Yukio Mishima	Kenzaburo Oe	Junichiro Tanizaki
+lit_rowling_kathleen	Expert	What does the 'K' in J. K. Rowling stand for?	Kathleen	Katherine	Karen	Kate
+lit_pessoa	Expert	Which Portuguese poet wrote under dozens of invented personalities called 'heteronyms'?	Fernando Pessoa	Luis de Camoes	Jose Saramago	Eca de Queiros
+lit_argos	Expert	What is the name of Odysseus's faithful old dog, who recognises him after 20 years?	Argos	Laelaps	Orthrus	Cerberus
+litx_nobel_1901	Expert	Who won the very first Nobel Prize in Literature, in 1901?	Sully Prudhomme	Leo Tolstoy	Emile Zola	Henrik Ibsen
+lit_word_malapropism_comes	Expert	The word 'malapropism' comes from Mrs Malaprop, a character in which play?	The Rivals	The School for Scandal	She Stoops to Conquer	The Beggar's Opera
+lit_pen_gorky_chosen	Expert	What does the pen name 'Gorky', chosen by the Russian writer Alexei Peshkov, mean?	Bitter	Hungry	Wanderer	Mountain
+lit_since_dogs_banned	Expert	Since dogs were banned, which pet did Lord Byron keep at Cambridge?	A tame bear	A pet fox	A peacock	A monkey
+lit_usually_counted_shakespeare	Expert	Which is usually counted as Shakespeare's shortest play?	'The Comedy of Errors'	'Macbeth'	'Othello'	'Richard III'
+lit_poet_kubla_khan	Expert	Which poet's 'Kubla Khan' was famously cut short by 'a person on business from Porlock'?	Samuel Taylor Coleridge	William Wordsworth	Percy Bysshe Shelley	John Keats
+lit_1865_novelist_survived	Expert	In 1865, which novelist survived a train crash and climbed back into the dangling carriage to rescue his manuscript?	Charles Dickens	Anthony Trollope	Wilkie Collins	Thomas Hardy
+lit_decades_mysterious_visitor	Expert	For decades, a mysterious visitor left three roses and a half-bottle of cognac on which writer's grave every birthday?	Edgar Allan Poe	Oscar Wilde	Dylan Thomas	Jack London
+lit_girl_jonathan_swift	Expert	Which girl's name did Jonathan Swift invent for a poem, from the name of his friend Esther Vanhomrigh?	Vanessa	Stella	Pamela	Miranda
+lit_years_bram_stoker	Expert	For 27 years, Bram Stoker worked as business manager for whom?	The actor Henry Irving	The writer Oscar Wilde	The showman P. T. Barnum	The magician Harry Houdini
+lit_great_whaling_novel	Expert	After 'Moby-Dick' flopped, its author spent nearly 20 years working as what?	A customs inspector in New York	A whaling captain in the Pacific	A schoolteacher in Boston	A lighthouse keeper in Maine
+lit_elizabethan_playwright_said	Expert	Which Elizabethan playwright is said to be buried standing upright in Westminster Abbey?	Ben Jonson	Christopher Marlowe	Thomas Kyd	John Webster
+lit_kafka_forbid_publisher	Expert	What did Kafka forbid the publisher of 'The Metamorphosis' to put on its cover?	A picture of the insect	His own photograph	The word 'novella'	Any colour but black
+lit_orwell_room_101	Expert	Orwell named Room 101 in '1984' after a room where he sat through dull meetings at which organisation?	The BBC	The Ministry of Information	The Foreign Office	The London Library
+lit_harper_lee_find	Expert	How did Harper Lee find the time to write her famous first novel?	Friends gave her a year's wages as a gift	She won a prize in a newspaper contest	Her lawyer father paid for a year off	A publisher paid her in advance
+lit_1922_suitcase_holding	Expert	In 1922, a suitcase holding almost all of Hemingway's early manuscripts was lost where?	At a Paris railway station	On a ferry to England	In a Madrid hotel	In a New York taxi
+lit_beat_ruinous_deadline	Expert	To beat a ruinous deadline, Dostoevsky dictated 'The Gambler' in 26 days to whom?	A stenographer he later married	His older brother Mikhail	A prison chaplain	His publisher's son
+lit_shakespeare_play_contains	Expert	Which Shakespeare play contains the stage direction 'Exit, pursued by a bear'?	The Winter's Tale	The Tempest	As You Like It	Cymbeline
+lit_paradise_lost_pandemonium	Expert	In 'Paradise Lost', what is 'Pandemonium', a word the poem itself coined?	The capital of Hell	The serpent in Eden	The war in Heaven	The river of oblivion
+lit_title_brave_new	Expert	The title 'Brave New World' is a quotation from which Shakespeare play?	The Tempest	Hamlet	Macbeth	Twelfth Night
+lit_original_title_poem	Expert	What was the original title of the poem known as ''Twas the Night Before Christmas'?	A Visit from St. Nicholas	The Night of the Reindeer	Christmas Eve in New York	A Letter to Santa Claus
+lit_merchant_venice_casket	Expert	In 'The Merchant of Venice', which casket must Portia's suitor choose to win her?	The lead one	The gold one	The silver one	The bronze one
+lit_colour_cross_gartered	Expert	Which colour of cross-gartered stockings does the pompous steward Malvolio wear to woo Olivia?	Yellow	Purple	Scarlet	Green
+lit_young_english_poet	Expert	Which young English poet, dying in Rome at 25, asked for the epitaph 'Here lies one whose name was writ in water'?	John Keats	Percy Bysshe Shelley	Lord Byron	Thomas Chatterton
+lit_importance_earnest_sandwiches	Expert	In 'The Importance of Being Earnest', which sandwiches has Algernon eaten every one of before Lady Bracknell arrives?	Cucumber sandwiches	Egg sandwiches	Ham sandwiches	Salmon sandwiches
+lit_french_author_real	Expert	Which French author's real name was Francois-Marie Arouet?	Voltaire	Moliere	Stendhal	Rousseau
+lit_french_playwright_real	Expert	Which French playwright's real name was Jean-Baptiste Poquelin?	Moliere	Voltaire	Racine	Corneille
+lit_agatha_christie_pick	Expert	Where did Agatha Christie pick up her expert knowledge of poisons?	Working in a hospital dispensary	Studying chemistry at university	Assisting a police pathologist	Helping in her father's pharmacy
+lit_shakespeare_globe_theatre	Expert	How did Shakespeare's Globe Theatre burn down in 1613?	A stage cannon set the thatch alight	Rioters set fire to it at night	Lightning struck it in a storm	A candle fell in the costume store
+lit_leo_tolstoy_die	Expert	Where did Leo Tolstoy die in 1910, days after secretly leaving home at the age of 82?	At a small railway station	In a monastery cell	On a Volga riverboat	In a Moscow hotel
+lit_prisoner_war_kurt	Expert	Where did the prisoner of war Kurt Vonnegut shelter during the firebombing of Dresden?	In an underground meat locker	In the crypt of a church	In a tunnel under the city	In the cellar of a brewery
+lit_happened_george_orwell	Expert	What happened to George Orwell while fighting in the Spanish Civil War?	A sniper shot him through the throat	He lost an eye to a grenade	He was sentenced to death as a spy	He lost two fingers to frostbite
+lit_two_authors_died	Expert	Which two famous authors died on the same day that President Kennedy was shot?	C. S. Lewis and Aldous Huxley	Robert Frost and Sylvia Plath	Ernest Hemingway and William Faulkner	T. S. Eliot and Evelyn Waugh
+lit_happened_half_john	Expert	What happened to half of the first draft of 'Of Mice and Men'?	His dog chewed it up	It blew out of a car	A flood soaked it	His wife burned it
+lit_miguel_cervantes_lost	Expert	Miguel de Cervantes lost the use of his left hand in which battle?	Lepanto	Pavia	Rocroi	Tunis

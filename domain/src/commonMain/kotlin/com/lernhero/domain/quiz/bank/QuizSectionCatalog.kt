@@ -122,6 +122,11 @@ object QuizSectionCatalog {
         QuizSection("sport/team_sports", "Team Sports", "🏀", QuizCategory.Sport),
         QuizSection("sport/racket_golf", "Tennis & Golf", "🎾", QuizCategory.Sport),
         QuizSection("sport/motor_cycling", "Motor Racing & Cycling", "🏎️", QuizCategory.Sport),
-        QuizSection("sport/combat_mind", "Combat Sports, Chess & More", "🥊", QuizCategory.Sport)
+        QuizSection("sport/combat_mind", "Combat Sports, Chess & More", "🥊", QuizCategory.Sport),
+        QuizSection("literature/novels", "Novels & Stories", "📖", QuizCategory.Literature),
+        QuizSection("literature/children", "Children's Books & Fantasy", "🧙", QuizCategory.Literature),
+        QuizSection("literature/stage_poetry", "Theatre, Poetry & Epics", "🎭", QuizCategory.Literature),
+        QuizSection("literature/art", "Art & Architecture", "🎨", QuizCategory.Literature),
+        QuizSection("literature/music", "Classical Music", "🎻", QuizCategory.Literature)
     )
 }
