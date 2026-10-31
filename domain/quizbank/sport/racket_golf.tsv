@@ -1,0 +1,105 @@
+# Tennis & Golf: tennis, badminton, table tennis, squash, golf
+#
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+spo2_tenis_zero	Easy	What is a score of zero points in a tennis game called?	Love	Deuce	Ace	Let
+trv2_tenis_as	Easy	In tennis, what is a serve called that the receiver cannot touch?	An ace	A let	A winner	A lob
+spo_sand_wedge	Easy	In which sport would you use a 'sand wedge'?	Golf	Beach volleyball	Cricket	Polo
+spo_deuce	Easy	In which sport is a 40-40 score called 'deuce'?	Tennis	Badminton	Squash	Table tennis
+spo_wimbledon_pilki	Easy	What colour have Wimbledon tennis balls been since 1986?	Yellow	White	Green	Orange
+spox_federer	Easy	Which country is tennis great Roger Federer from?	Switzerland	Sweden	Austria	Germany
+spox_hole_in_one	Easy	In golf, what is it called when the ball drops into the hole with a single shot?	A hole in one	An eagle	A birdie	A bogey
+spo_sport_played_shuttlecock	Easy	Which sport is played with a shuttlecock?	Badminton	Squash	Table tennis	Tennis
+spo_country_tennis_star	Easy	Which country is tennis star Novak Djokovic from?	Serbia	Croatia	Montenegro	Bosnia and Herzegovina
+spo_spectators_traditionally_eat	Easy	What do spectators traditionally eat at Wimbledon?	Strawberries and cream	Fish and chips	Scones with jam	Pimm's and cucumber
+spo_sport_caddies_carry	Easy	In which sport do caddies carry the players' clubs?	Golf	Polo	Hockey	Cricket
+spo_tennis_score_comes	Easy	In tennis, which score comes after 30?	40	45	35	50
+spo_grand_slam_tennis	Easy	Which Grand Slam tennis tournament is played in New York?	The US Open	Wimbledon	Roland Garros	The Australian Open
+spo_country_tennis_legend	Easy	Which country is tennis legend Rafael Nadal from?	Spain	Argentina	Italy	France
+spo_golf_starting_area	Easy	In golf, what is the starting area for each hole called?	The tee	The green	The fairway	The rough
+spo_sport_played_wimbledon	Easy	Which sport is played at Wimbledon, Roland Garros and Flushing Meadows?	Tennis	Golf	Cycling	Horse racing
+spo_golfers_shout_warn	Easy	What do golfers shout to warn people that a ball is flying towards them?	'Fore!'	'Clear!'	'Hazard!'	'Bogey!'
+spo_tennis_double_fault	Easy	In tennis, what is a 'double fault'?	Missing both serves	Hitting the ball twice	Touching the net twice	Serving out of turn
+spo_sport_made_sisters	Easy	Which sport made the sisters Venus and Serena Williams famous?	Tennis	Golf	Athletics	Basketball
+spo_racket_sport_players	Easy	In which racket sport do players hit a small rubber ball against the walls of a closed court?	Squash	Badminton	Tennis	Table tennis
+spo_golf_closely_mown	Easy	In golf, what is the closely mown area around the hole called?	The green	The fairway	The rough	The bunker
+spo_hawk_eye_used	Easy	What is Hawk-Eye, used in tennis and cricket?	A ball-tracking camera system	A referee's whistle signal	A rule about catches	A pair of special goggles
+spo_grand_slam_tournament	Easy	Which Grand Slam tournament is famous for strawberries and cream?	Wimbledon	US Open	French Open	Australian Open
+spo_tenis_stolowy_chiny	Easy	Which country has dominated Olympic table tennis for decades?	China	Japan	South Korea	Sweden
+spo_nadal_rg	Easy	Which player has won the French Open (Roland Garros) the most times?	Rafael Nadal	Novak Djokovic	Bjorn Borg	Roger Federer
+spo_wimbledon	Easy	What surface is Wimbledon played on?	Grass	Sand	Concrete	Clay and hard court, alternating
+spo2_wielki_szlem_tenis	Easy	How many tournaments make up tennis's Grand Slam?	Four	Three	Five	Six
+spo2_golf_dolek	Medium	What does a birdie mean in golf?	A score of one stroke under par	A score of one stroke over par	Sinking it on the first stroke	Hitting off the course
+scicmp_ryder_cup	Medium	In which sport is the Ryder Cup contested?	Golf	Tennis	Sailing	Cycling
+trv2_golf_eagle	Medium	In golf, what is a score of two under par on a hole called?	An eagle	A birdie	An albatross	A bogey
+trv2_golf_szkocja	Medium	Which country is the birthplace of golf?	Scotland	England	The United States	The Netherlands
+ext_pilka_dolki	Medium	Why is a golf ball covered in dimples?	They make it fly farther	They improve grip	They reduce its weight	They help it roll straight
+mst_wimbledon_kolor	Medium	Wimbledon is unique among tennis majors for requiring what?	Almost entirely white clothing	Wooden rackets	No line judges	Matches only in daylight
+wld_tenis_wielki_szlem	Medium	Which of these is NOT a tennis Grand Slam tournament?	The Davis Cup	Wimbledon	The US Open	Roland Garros
+spo_zielona_marynarka	Medium	What does the winner of the Masters golf tournament put on?	A green jacket	A yellow jersey	A red blazer	A white cap
+spo_djokovic	Medium	Which man has won the most Grand Slam singles titles in tennis?	Novak Djokovic	Rafael Nadal	Roger Federer	Pete Sampras
+spo_wimbledon_najstarszy	Medium	Which is the oldest of the four tennis Grand Slam tournaments?	Wimbledon	The US Open	Roland Garros	The Australian Open
+spox_serena	Medium	Which tennis star won 23 Grand Slam singles titles in the Open Era?	Serena Williams	Venus Williams	Steffi Graf	Martina Navratilova
+spox_bogey	Medium	In golf, what is a score of one over par on a hole called?	A bogey	A birdie	A condor	A double
+spoy_st_andrews	Medium	Which Scottish town is known as 'the home of golf'?	St Andrews	Edinburgh	Glasgow	Aberdeen
+spo_grand_slam_tennis_2	Medium	Which Grand Slam tennis tournament is played every January?	The Australian Open	The US Open	Wimbledon	The French Open
+spo_animal_logo_lacoste	Medium	What animal is the logo of the Lacoste brand, founded by a French tennis champion?	A crocodile	A tiger	A swan	An eagle
+spo_sets_man_need	Medium	How many sets does a man need to win a Grand Slam tennis match?	Three	Two	Four	Five
+spo_country_modern_lawn	Medium	In which country was modern lawn tennis invented?	England	France	The USA	Australia
+spo_golfer_wearing_red	Medium	Which golfer is famous for wearing red on the final day of tournaments?	Tiger Woods	Rory McIlroy	Phil Mickelson	Seve Ballesteros
+spo_american_won_seven	Medium	Which American won seven Wimbledon titles between 1993 and 2000?	Pete Sampras	Andre Agassi	Jim Courier	Michael Chang
+spo_player_won_record	Medium	Which player won a record nine Wimbledon women's singles titles?	Martina Navratilova	Serena Williams	Steffi Graf	Chris Evert
+spo_tennis_happens_serve	Medium	In tennis, what happens when a serve clips the net and still lands in the service box?	It is replayed as a 'let'	It counts as a fault	It counts as an ace	The point goes to the server
+spo_casual_golf_mulligan	Medium	In casual golf, what is a 'mulligan'?	A free do-over of a bad shot	A hole played one-handed	A ball lost in the water	A putt given by your opponent
+spo_score_set_tie	Medium	At what score in a set is a tie-break normally played in tennis?	6-6	5-5	7-7	4-4
+spo_won_wimbledon_2013	Medium	Who won Wimbledon in 2013, becoming the first British men's champion for 77 years?	Andy Murray	Tim Henman	Greg Rusedski	Cameron Norrie
+spo_golfer_won_2019	Medium	Which golfer won the 2019 Masters, his 15th major, after years of back surgery?	Tiger Woods	Phil Mickelson	Rory McIlroy	Jordan Spieth
+spo_man_won_wimbledon	Medium	Which man became the first to win eight Wimbledon singles titles, in 2017?	Roger Federer	Novak Djokovic	Pete Sampras	Bjorn Borg
+spo_german_became_youngest	Medium	Which German became the youngest men's Wimbledon champion in 1985, aged just 17?	Boris Becker	Michael Stich	Michael Chang	Stefan Edberg
+spo_tennis_tournament_grand	Medium	Which tennis tournament is the only Grand Slam still played on clay?	French Open	US Open	Australian Open	Wimbledon
+spw_tenis_set_gemy	Medium	How many games do you normally need to win a set in tennis?	Six, with a two-game lead	Five, with any lead	Seven, always	Four, with a two-game lead
+spo_tennis_star_famously	Medium	Which tennis star famously shouted 'You cannot be serious!' at an umpire?	John McEnroe	Jimmy Connors	Andre Agassi	Ilie Nastase
+spo_swede_won_five	Medium	Which Swede won five Wimbledon titles in a row, from 1976 to 1980?	Bjorn Borg	Mats Wilander	Stefan Edberg	Ivan Lendl
+spo_tennis_cricket_main	Medium	In tennis and cricket, what is the main official on the court or field called?	The umpire	The referee	The marshal	The steward
+spo_tennis_win_game	Medium	In tennis, what is it called when you win a game on your opponent's serve?	A break	An ace	A let	A volley
+dpt_spo_davis	Medium	In which sport is the Davis Cup contested?	Tennis	Golf	Rugby	Sailing
+spo_early_golf_balls	Medium	Early golf balls called 'featheries' were leather pouches stuffed with what?	Boiled feathers	Horsehair	Wool	Cork shavings
+trv2_ping_pong_kraj	Hard	In which country did table tennis originate?	England	China	Japan	Germany
+ext_badminton_lotka	Hard	Which sport features the fastest recorded projectile hit by a player?	Badminton	Tennis	Golf	Ice hockey
+spo_albatros	Hard	In golf, what is a score of three under par on one hole called?	An albatross	A condor	An eagle	A birdie
+spo_court	Hard	Which woman has won the most Grand Slam singles titles in tennis, 24?	Margaret Court	Serena Williams	Steffi Graf	Martina Navratilova
+spo_golf_dolki	Hard	Roughly how many dimples does a typical golf ball have?	300 to 400	50 to 100	1,000 to 1,200	About 20
+spoy_augusta	Hard	In which US state is the Masters golf tournament played every year?	Georgia	Florida	California	Texas
+spo_maximum_number_clubs	Hard	What is the maximum number of clubs a golfer may carry in competition?	14	12	10	16
+spo_golfer_nicknamed_golden	Hard	Which golfer was nicknamed 'the Golden Bear'?	Jack Nicklaus	Arnold Palmer	Greg Norman	Gary Player
+spo_man_win_tennis	Hard	Who is the only man to win tennis's calendar Grand Slam twice, in 1962 and 1969?	Rod Laver	Don Budge	Roy Emerson	Ken Rosewall
+spo_golf_major_gives	Hard	Which golf major gives its winner a silver trophy called the Claret Jug?	The Open Championship	The Masters	The US Open	The PGA Championship
+spo_tennis_star_stabbed	Hard	Which tennis star was stabbed by a spectator during a match in Hamburg in 1993?	Monica Seles	Steffi Graf	Gabriela Sabatini	Jennifer Capriati
+spo_main_stadium_open	Hard	The main stadium of the US Open tennis tournament is named after which player?	Arthur Ashe	Billie Jean King	Andre Agassi	Jimmy Connors
+spo_winning_2025_masters	Hard	By winning the 2025 Masters, which golfer finally completed the career Grand Slam?	Rory McIlroy	Phil Mickelson	Jordan Spieth	Scottie Scheffler
+spo_tennis_slang_bagel	Hard	In tennis slang, what is a 'bagel'?	Winning a set 6-0	Winning a set 7-6	A double fault on match point	A serve hit underarm
+spo_won_wimbledon_2001	Hard	Who won Wimbledon in 2001 as a wildcard ranked outside the world's top 100?	Goran Ivanisevic	Pat Rafter	Tim Henman	Marat Safin
+spo_french_open_home	Hard	The French Open's home, Roland Garros, is named after what kind of hero?	A pioneering aviator	A tennis champion	A wartime general	A cycling legend
+spo_stableford_scoring_system	Hard	Stableford is a scoring system in which sport?	Golf	Cricket	Darts	Bowls
+spo_james_scotland_banned	Hard	James II of Scotland banned which sport in 1457 for distracting men from archery?	Golf	Tennis	Curling	Shinty
+spo_golfer_won_record	Hard	Which golfer won a record 18 men's major championships?	Jack Nicklaus	Tiger Woods	Arnold Palmer	Gary Player
+spo_sport_thomas_cup	Hard	In which sport is the Thomas Cup the men's world team championship?	Badminton	Table tennis	Squash	Tennis
+spo_australian_golfer_nicknamed	Hard	Which Australian golfer was nicknamed 'the Great White Shark'?	Greg Norman	Adam Scott	Jason Day	Ian Baker-Finch
+spo_billie_jean_king	Hard	Whom did Billie Jean King beat in the famous 1973 'Battle of the Sexes' tennis match?	Bobby Riggs	Jimmy Connors	Rod Laver	Arthur Ashe
+spo_since_2001_game	Hard	Since 2001, a game of table tennis is won by the first player to reach how many points?	11	15	21	25
+spo_player_won_olympic	Hard	Which player won Olympic tennis gold at Paris 2024, completing his 'Career Golden Slam'?	Novak Djokovic	Carlos Alcaraz	Rafael Nadal	Andy Murray
+spo_golfer_right_handed	Hard	Which golfer, right-handed off the course, plays left-handed and is nicknamed 'Lefty'?	Phil Mickelson	Rory McIlroy	Jordan Spieth	Greg Norman
+spo_golfers_call_sudden	Hard	What do golfers call the sudden nervous twitch that can wreck short putts?	The yips	The wobbles	The chokes	The flinches
+spo_wimbledon_use_keep	Hard	What does Wimbledon use to keep pigeons off its courts?	A trained hawk	Recorded owl calls	Ultrasonic speakers	A pair of sheepdogs
+spo_graf_zloty_szlem	Hard	Who won the 'Golden Slam' in 1988: all four majors plus Olympic gold?	Steffi Graf	Martina Navratilova	Chris Evert	Monica Seles
+spo_isner_mahut	Hard	The longest tennis match ever, at Wimbledon in 2010, lasted about how long in total?	11 hours	5 hours	7 hours	16 hours
+spo_badminton_nazwa	Hard	Badminton is named after a country house in which country?	England	India	Scotland	China
+spo_pakistan_jahangir_khan	Hard	Pakistan's Jahangir Khan went over 500 matches unbeaten in the 1980s in which sport?	Squash	Tennis	Badminton	Table tennis
+spo_masters_tricky_stretch	Hard	At the Masters, what is the tricky stretch of holes 11 to 13 nicknamed?	Amen Corner	Hallelujah Alley	The Devil's Elbow	Bear Trap
+spo_davis_usa	Expert	Which country has won the Davis Cup the most times?	The United States	Australia	France	Spain
+spo_tennis_golden_set	Expert	In tennis, what is a 'golden set'?	A set won without losing a point	A set won 6-0	A set decided by a tiebreak	A set won with only aces
+spo_golf_score_four	Expert	In golf, what is a score of four under par on a single hole called?	A condor	An albatross	A falcon	A phoenix
+spo_trophy_given_women	Expert	What is the trophy given to the women's singles champion at Wimbledon called?	The Venus Rosewater Dish	The Silver Salver of Kent	The Rose of England Plate	The Challenge Bowl
+spo_ping_pong_won	Expert	Before 'ping-pong' won out, which other jokey name did Victorians give table tennis?	Whiff-whaff	Click-clack	Tick-tock	Bish-bosh
+spo_wimbledon_1877_held	Expert	The first Wimbledon in 1877 was held partly to pay for what?	A broken pony roller	A new clubhouse	A croquet lawn	A royal visit
+spo_tiger_imie	Expert	What is golfer Tiger Woods' real first name?	Eldrick	Earl	Edward	Elliott
+spo_coloured_dots_squash	Expert	What do the coloured dots on a squash ball show?	How bouncy it is	Its brand	Its weight	Indoor or outdoor use

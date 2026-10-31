@@ -111,6 +111,17 @@ object QuizSectionCatalog {
         QuizSection("geography/comparisons/area", "Which Is Bigger?", "📐", QuizCategory.Geography),
         QuizSection("geography/comparisons/skylines", "Skylines & Structures", "🏙️", QuizCategory.Geography),
         QuizSection("geography/comparisons/nature", "Nature Head-to-Head", "🏔️", QuizCategory.Geography),
-        QuizSection("geography/comparisons/by_numbers", "Countries by the Numbers", "📊", QuizCategory.Geography)
+        QuizSection("geography/comparisons/by_numbers", "Countries by the Numbers", "📊", QuizCategory.Geography),
+        QuizSection("science/space", "Space & Astronomy", "🔭", QuizCategory.Science),
+        QuizSection("science/physics", "Physics", "⚡", QuizCategory.Science),
+        QuizSection("science/chemistry", "Chemistry", "🧪", QuizCategory.Science),
+        QuizSection("science/earth", "Earth & Weather", "🌋", QuizCategory.Science),
+        QuizSection("science/scientists", "Scientists & Discoveries", "🥼", QuizCategory.Science),
+        QuizSection("sport/football", "Football", "⚽", QuizCategory.Sport),
+        QuizSection("sport/olympics", "Olympics & Athletics", "🏅", QuizCategory.Sport),
+        QuizSection("sport/team_sports", "Team Sports", "🏀", QuizCategory.Sport),
+        QuizSection("sport/racket_golf", "Tennis & Golf", "🎾", QuizCategory.Sport),
+        QuizSection("sport/motor_cycling", "Motor Racing & Cycling", "🏎️", QuizCategory.Sport),
+        QuizSection("sport/combat_mind", "Combat Sports, Chess & More", "🥊", QuizCategory.Sport)
     )
 }

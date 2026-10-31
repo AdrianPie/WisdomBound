@@ -1,0 +1,143 @@
+# Combat Sports, Chess & More: boxing, martial arts, wrestling, chess, darts, snooker, other sports and sport curiosities
+#
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+spo_szachy_figury	Easy	Which chess piece moves only diagonally?	The bishop	The rook	The knight	The queen
+spo2_boks_ring	Easy	What shape is a boxing ring?	Square	Round	Hexagonal	Oval
+spo_kregle_strike	Easy	In which sport do players try to get a 'strike' or a 'spare'?	Bowling	Baseball	Cricket	Golf
+spo_taekwondo	Easy	Which martial art from Korea is famous for its high, spinning kicks?	Taekwondo	Karate	Judo	Kung fu
+spo_ali_najwiekszy	Easy	Which boxer called himself 'The Greatest'?	Muhammad Ali	Mike Tyson	Joe Frazier	Floyd Mayweather
+spo_pionek	Easy	Which chess piece moves straight forward but captures diagonally?	The pawn	The bishop	The rook	The knight
+spo_kij_bilardowy	Easy	In which of these sports do players use a cue?	Snooker	Croquet	Cricket	Hockey
+spox_sumo	Easy	Sumo wrestling is the national sport of which country?	Japan	China	Mongolia	Korea
+spox_mat	Easy	What is it called when a king is under attack and cannot escape?	Checkmate	Stalemate	Castling	En passant
+spox_skoczek	Easy	Which chess piece moves in an L-shape?	The knight	The bishop	The rook	The queen
+spoy_czarny_pas	Easy	In judo and karate, which belt colour usually marks a master?	Black	Red	Gold	White
+spo_very_centre_dartboard	Easy	What is the very centre of a dartboard called?	The bullseye	The bullring	The centre spot	The hotspot
+spo_chess_piece_powerful	Easy	Which chess piece is the most powerful?	The queen	The king	The rook	The bishop
+spo_mma_stand_combat	Easy	What does 'MMA' stand for in combat sports?	Mixed martial arts	Modern military arts	Multiple melee attacks	Major martial arena
+spo_sport_uses_weapons	Easy	Which sport uses weapons called the foil, the epee and the sabre?	Fencing	Kendo	Archery	Biathlon
+spo_chess_colour_always	Easy	In chess, which colour always moves first?	White	Black	Whoever wins a coin toss	The younger player
+spo_sport_tony_hawk	Easy	In which sport is Tony Hawk a legend?	Skateboarding	Surfing	Snowboarding	BMX
+spo_boxing_letters_tko	Easy	In boxing, what do the letters 'TKO' stand for?	Technical knockout	Total knockout	Timed knockout	Team knockout
+spo_colour_belt_complete	Easy	What colour belt does a complete beginner usually wear in judo and karate?	White	Yellow	Black	Red
+spo_hollywood_arnold_schwarzenegger	Easy	Before Hollywood, Arnold Schwarzenegger was a world champion in which sport?	Bodybuilding	Wrestling	Boxing	Judo
+spo_boxing_mean_fighter	Easy	In boxing, what does it mean when a fighter's corner 'throws in the towel'?	They give up the fight	They ask for a timeout	They protest a foul	They want fresh gloves
+spo_ten_pin_bowling	Easy	In ten-pin bowling, what is a ball that rolls off into the side channel called?	A gutter ball	A split	A foul ball	A dead ball
+spo_shape_cage_ufc	Easy	What shape is the cage that UFC fighters compete in?	An octagon	A circle	A square	A triangle
+spo_sport_ollie_kickflip	Easy	In which sport would you do an 'ollie' or a 'kickflip'?	Skateboarding	Surfing	Skiing	BMX racing
+spo_chess_piece_normally	Easy	Which chess piece normally moves just one square, in any direction?	The king	The queen	The pawn	The rook
+spo_chess_piece_usually	Easy	Which chess piece is usually shaped like a castle tower?	The rook	The bishop	The king	The knight
+spo_garden_sport_players	Easy	In which garden sport do players hit balls through hoops with a mallet?	Croquet	Polo	Lawn bowls	Golf
+spo_colour_cloth_snooker	Easy	What colour is the cloth on a snooker table traditionally?	Green	Blue	Red	Grey
+spo_japanese_wrestling_sport	Easy	Which Japanese wrestling sport has wrestlers called rikishi?	Sumo	Judo	Kendo	Aikido
+spox_tyson_ucho	Easy	Which boxer bit off part of Evander Holyfield's ear in 1997?	Mike Tyson	Muhammad Ali	George Foreman	Lennox Lewis
+spoy_muay_thai	Easy	Muay Thai, 'the art of eight limbs', comes from which country?	Thailand	Vietnam	Cambodia	Japan
+spo_competitors_hybrid_sport	Easy	What do competitors do in the hybrid sport of chess boxing?	Alternate rounds of chess and boxing	Box while their coaches play chess	Play chess wearing boxing gloves	Box on a giant chessboard
+day_boks_runda	Medium	How long is one round in professional men's boxing?	Three minutes	Two minutes	Four minutes	Five minutes
+spo_rzutki_180	Medium	What is the highest score possible with three darts?	180	150	170	200
+spo_kregle_300	Medium	What is a perfect score in ten-pin bowling?	300	200	250	500
+spo_clay	Medium	What was Muhammad Ali's name at birth?	Cassius Clay	Joe Louis	Sonny Liston	George Foreman
+spo_puchar_ameryki	Medium	In which sport is the America's Cup contested?	Sailing	Rowing	Golf	Polo
+spo_promocja	Medium	What is it called when a pawn reaches the far side of the board and becomes a queen?	Promotion	Castling	En passant	Check
+spo_pat	Medium	What is 'stalemate' in chess?	A draw when a player has no legal move	A win for the player who moves next	A king captured by a pawn	A game lost because of time
+spo_podnoszenie	Medium	In which sport do athletes perform the 'snatch' and the 'clean and jerk'?	Weightlifting	Wrestling	Gymnastics	Judo
+spo_hang_ten	Medium	In which sport would you 'hang ten'?	Surfing	Skateboarding	Skiing	Windsurfing
+spo_snooker_czarna	Medium	In snooker, which ball is worth the most points?	The black	The pink	The blue	The red
+spo_regaty	Medium	Oxford and Cambridge universities race each other every year in which sport?	Rowing	Sailing	Cycling	Swimming
+spo_capoeira	Medium	Which Brazilian martial art blends fighting with dance and music?	Capoeira	Krav Maga	Jiu-jitsu	Savate
+spo_sport_sport_kings	Medium	Which sport is known as 'the sport of kings'?	Horse racing	Polo	Fencing	Falconry
+spo_sport_cox_steer	Medium	In which sport does a 'cox' steer the boat and call the rhythm?	Rowing	Sailing	Canoeing	Rafting
+spo_ronnie_sullivan_legend	Medium	Ronnie O'Sullivan is a legend of which sport?	Snooker	Darts	Golf	Tennis
+spo_irish_fighter_nicknamed	Medium	Which Irish fighter is nicknamed 'The Notorious'?	Conor McGregor	Katie Taylor	Barry McGuigan	Tyson Fury
+spo_snooker_points_red	Medium	In snooker, how many points is a red ball worth?	One	Two	Five	Seven
+spo_sport_phil_power	Medium	In which sport did Phil 'The Power' Taylor win 16 world titles?	Darts	Snooker	Bowling	Golf
+spo_japanese_sport_involves	Medium	Which Japanese sport involves fencing with bamboo swords?	Kendo	Aikido	Kyudo	Sumo
+spo_vendee_globe_non	Medium	The Vendee Globe is a non-stop, single-handed race around the world in which sport?	Sailing	Cycling	Rallying	Rowing
+spo_boxing_southpaw	Medium	In boxing, what is a 'southpaw'?	A left-handed fighter	A low, illegal punch	A fighter with a long reach	A heavyweight from the South
+spo_sport_perform_eskimo	Medium	In which sport would you perform an 'Eskimo roll'?	Kayaking	Gymnastics	Snowboarding	Bobsleigh
+spo_cooper_hill_england	Medium	At Cooper's Hill in England, daredevils hurl themselves down a steep slope chasing what?	A wheel of cheese	A barrel of beer	A greased pig	A rugby ball
+spo_dragon_boat_racing	Medium	Dragon boat racing began in which country, in memory of a poet who drowned himself?	China	Japan	Vietnam	Thailand
+spo_sumo_wrestlers_toss	Medium	What do sumo wrestlers toss into the ring before a bout to purify it?	Salt	Rice	Sand	Flower petals
+spo_under_chess_touch	Medium	Under chess's 'touch-move' rule, a player who deliberately touches one of his pieces must do what?	Move that piece	Move his king	Offer a draw	Lose a minute
+spo_filipino_boxer_world	Medium	Which Filipino boxer, a world champion in eight weight divisions, also served as a senator?	Manny Pacquiao	Nonito Donaire	Oscar De La Hoya	Juan Manuel Marquez
+spo_seabiscuit_hero_americans	Medium	Seabiscuit, a hero to Americans during the Great Depression, was what?	A racehorse	A greyhound	A baseball pitcher	A boxer
+spo_boxing_weight_classes	Medium	Which of these boxing weight classes is the lightest?	Flyweight	Lightweight	Welterweight	Middleweight
+spo_standard_professional_darts	Medium	In a standard professional darts match, from what score does each player count down to zero?	501	500	1000	360
+spo_sport_players_roll	Medium	In which sport do players roll biased balls, called 'woods', towards a small white 'jack'?	Lawn bowls	Croquet	Curling	Ten-pin bowling
+spo_sport_triple_crown	Medium	Which sport's 'Triple Crown' consists of the Kentucky Derby, Preakness and Belmont Stakes?	Horse racing	Golf	Sailing	Rowing
+spo_1974_boxing_match	Medium	Which famous 1974 boxing match took place in Zaire?	The Rumble in the Jungle	The Thrilla in Manila	The Fight of the Century	The Long Count
+spo_chess_opening_pawn	Medium	What is a chess opening called in which a pawn is sacrificed for an advantage?	Gambit	Fianchetto	Castling	Zugzwang
+spo_former_heavyweight_champion	Medium	Which former heavyweight champion later made a fortune selling a fat-draining electric grill?	George Foreman	Joe Frazier	Larry Holmes	Evander Holyfield
+spo_pieces_each_player	Medium	How many pieces does each player start with in chess?	16	12	18	20
+spo_points_bullseye_worth	Medium	How many points is a bullseye worth in darts?	50	25	100	60
+trv2_snooker_147	Medium	What is the maximum break in snooker?	147	100	180	155
+spw_szachy_roszada	Medium	In chess, what does castling move?	The king and one rook, in a single move	The king and the queen, side by side	Two pawns moved on the same turn	A rook and a knight, swapping places
+mst_boks_rundy	Medium	Professional championship boxing bouts were shortened from 15 rounds to 12 mainly for what reason?	Fighter safety	Television schedules	Judging disputes	Crowd attention
+spo_tyson	Medium	Who became the youngest heavyweight boxing champion, at just 20?	Mike Tyson	Muhammad Ali	George Foreman	Floyd Patterson
+spo_crucible	Medium	Which sport's World Championship is played at the Crucible Theatre in Sheffield?	Snooker	Darts	Chess	Table tennis
+spox_carlsen	Medium	Which Norwegian player became World Chess Champion in 2013?	Magnus Carlsen	Viswanathan Anand	Sergey Karjakin	Fabiano Caruana
+spox_fischer	Medium	Which American won the 1972 chess 'Match of the Century' against Boris Spassky?	Bobby Fischer	Paul Morphy	Hikaru Nakamura	Reuben Fine
+spo_sport_mushers_race	Medium	In which sport do mushers race in Alaska's Iditarod?	Sled dog racing	Cross-country skiing	Snowmobile racing	Ice speedway
+spo_boxer_retired_unbeaten	Medium	Which boxer retired unbeaten with a record of 50 wins?	Floyd Mayweather	Muhammad Ali	Mike Tyson	Manny Pacquiao
+spo_sumo_bout_lost	Medium	A sumo bout is lost by stepping out of the ring or by touching the ground with anything except what?	The soles of the feet	The palms of the hands	The knees and shins	The elbows and forearms
+trv2_skoczek_ruchy	Hard	From the centre of an empty chessboard, how many squares can a knight move to?	8	4	6	12
+trv2_kregle_turkey	Hard	In bowling, what are three strikes in a row called?	A turkey	A hat-trick	A triple	An eagle
+spo_kentucky	Hard	Which horse race is known as 'the Run for the Roses'?	The Kentucky Derby	The Grand National	The Melbourne Cup	The Epsom Derby
+spo_grand_national	Hard	Which famous steeplechase is run at Aintree, with fences like 'Becher's Brook'?	The Grand National	The Kentucky Derby	The Prix de l'Arc de Triomphe	The Cheltenham Gold Cup
+spoy_thrilla	Hard	What was the 1975 fight between Muhammad Ali and Joe Frazier called?	The Thrilla in Manila	The Rumble in the Jungle	The Fight of the Century	The Brawl in Manila
+spoy_snooker_czerwone	Hard	How many red balls are on the table at the start of a snooker frame?	15	10	12	21
+spo_title_sumo_grand	Hard	What is the title of a sumo grand champion?	Yokozuna	Ozeki	Sensei	Shogun
+spo_chess_move_lets	Hard	Which chess move lets a pawn capture an enemy pawn that has just moved two squares past it?	En passant	Castling	Promotion	Fianchetto
+spo_australian_horse_race	Hard	Which Australian horse race is called 'the race that stops a nation'?	The Melbourne Cup	The Sydney Cup	The Caulfield Cup	The Golden Slipper
+spo_since_child_jockeys	Hard	Since child jockeys were banned in the 2000s, what rides the camels in Gulf camel races?	Small robot jockeys	Sandbags tied to the hump	Nobody: they run free	Lightweight teenage girls
+spo_darts_line_player	Hard	In darts, what is the line a player must stand behind called?	The oche	The crease	The baulk line	The bullpen
+spo_boxing_rules_1867	Hard	Boxing's rules of 1867, which made gloves compulsory, are named after which nobleman?	The Marquess of Queensberry	The Duke of Wellington	The Earl of Sandwich	The Duke of Marlborough
+spo_country_world_bog	Hard	In which country are the World Bog Snorkelling Championships held?	Wales	Ireland	Scotland	Finland
+spo_judo_full_point	Hard	In judo, what is the full point that ends a contest at once called?	Ippon	Waza-ari	Yuko	Koka
+spo_fencing_weapon_fencer	Hard	In fencing, with which weapon can a fencer score with the edge of the blade as well as the tip?	The sabre	The foil	The epee	None of them
+spo_chess_position_any	Hard	In chess, what is the name for a position where any move a player makes will weaken it?	Zugzwang	Stalemate	Fianchetto	Gambit
+spo_hungarian_widely_seen	Hard	Which Hungarian is widely seen as the strongest female chess player ever?	Judit Polgar	Hou Yifan	Maia Chiburdanidze	Vera Menchik
+spo_sport_might_catch	Hard	In which sport might you 'catch a crab'?	Rowing	Sailing	Surfing	Water polo
+spo_city_1972_fischer	Hard	In which city was the famous 1972 Fischer-Spassky chess match held?	Reykjavik	Moscow	New York	Helsinki
+spo_1994_boxer_became	Hard	In 1994, which boxer became world heavyweight champion again at the age of 45?	George Foreman	Larry Holmes	Evander Holyfield	Muhammad Ali
+spo_darts_highest_score	Hard	In darts, what is the highest score you can finish a leg with in three darts?	170	180	160	150
+spo3_bilard_ile_bil	Hard	How many balls (cue ball included) are used in classic American pool (8-ball)?	16	10	12	20
+trv2_judo_znaczenie	Hard	Which martial art's name means 'the gentle way'?	Judo	Karate	Taekwondo	Kung fu
+spoy_rzutki_20	Hard	On a standard dartboard, which number sits at the top?	20	1	10	6
+spo_martial_art_karate	Hard	What does the name of the martial art 'karate' mean?	Empty hand	Way of the fist	Gentle way	Strong spirit
+spo_american_often_greatest	Hard	Which American is often called the greatest surfer of all time?	Kelly Slater	Tony Hawk	Laird Hamilton	Shaun White
+spo_heavyweight_boxer_retired	Hard	Which heavyweight boxer retired undefeated at 49-0 in 1956?	Rocky Marciano	Joe Louis	Floyd Mayweather	Jack Dempsey
+spo_japanese_island_karate	Hard	On which Japanese island did karate develop?	Okinawa	Hokkaido	Kyushu	Honshu
+spo_sport_nicknamed_sweet	Hard	Which sport is nicknamed 'the sweet science'?	Boxing	Fencing	Chess	Snooker
+spo_racehorse_won_triple	Hard	Which racehorse won the US Triple Crown in 1973, winning the Belmont by 31 lengths?	Secretariat	Seabiscuit	Red Rum	Man o' War
+spo_horse_won_grand	Hard	Which horse won the Grand National a record three times in the 1970s?	Red Rum	Secretariat	Shergar	Desert Orchid
+spo_coloured_shirts_worn	Hard	What are the coloured shirts worn by jockeys called?	Silks	Satins	Banners	Tabards
+spo_standard_game_darts	Hard	In a standard game of darts, how must a player finish?	On a double or the bullseye	On a treble	On any single number	On the outer bull
+spo_according_autobiography_muhammad	Hard	According to his autobiography, what did Muhammad Ali do with his 1960 Olympic gold medal?	Threw it into a river	Sold it to pay for training	Gave it to his mother	Melted it into a ring
+spo_fool_mate_quickest	Hard	'Fool's Mate' is the quickest possible checkmate in chess. On which move does Black deliver it?	The second	The third	The fourth	The sixth
+spo_winners_wife_carrying	Hard	Winners of the Wife Carrying World Championships take home the wife's weight in beer. Where is it held?	Finland	Ireland	Scotland	Germany
+spo_horse_racing_long	Hard	In horse racing, how long is a furlong?	An eighth of a mile	A quarter of a mile	A tenth of a mile	Half a mile
+spo_snooker_colour_ball	Hard	In snooker, which colour ball is worth two points?	Yellow	Green	Brown	Blue
+spo_city_kentucky_derby	Hard	In which US city is the Kentucky Derby run every May?	Louisville	Lexington	Frankfort	Nashville
+spo_sport_events_kata	Hard	Which sport has events called kata and kumite?	Karate	Judo	Taekwondo	Fencing
+spo_archery_colour_centre	Hard	In archery, what colour is the centre of an Olympic target?	Gold	Red	Black	White
+spo_boxer_nicknamed_brown	Hard	Which boxer was nicknamed 'the Brown Bomber'?	Joe Louis	Joe Frazier	Sugar Ray Robinson	Rocky Marciano
+spo_jockey_frankie_dettori	Hard	What did jockey Frankie Dettori do at Ascot in 1996, a feat known as the 'Magnificent Seven'?	Won all seven races of the day	Rode seven horses in one race	Won seven races in a row there	Fell seven times and kept riding
+spo2_szachy_mistrz	Expert	Who was the first official World Chess Champion?	Wilhelm Steinitz	Emanuel Lasker	Jose Raul Capablanca	Paul Morphy
+spo_longest_gloved_boxing	Expert	The longest gloved boxing fight on record, in New Orleans in 1893, lasted 110 rounds. How did it end?	Neither man won	A knockout in round 110	A win on points	A disqualification
+spo_petanque_small_target	Expert	In petanque, the small target ball is called the 'cochonnet'. What does that mean?	Piglet	Little ball	Little goal	Chick
+spo_olympics_women_boxing	Expert	At which Olympics did women's boxing make its debut?	London 2012	Sydney 2000	Athens 2004	Beijing 2008
+spo_phar_lap_australia	Expert	Phar Lap, Australia's most beloved racehorse, was actually born in which country?	New Zealand	Ireland	England	Argentina
+spo_player_beat_steve	Expert	Which player beat Steve Davis on the very last black ball of the 1985 World Snooker final?	Dennis Taylor	Alex Higgins	Jimmy White	Cliff Thorburn
+spo_won_1851_immortal	Expert	Who won the 1851 'Immortal Game', sacrificing both rooks and then his queen to deliver mate?	Adolf Anderssen	Paul Morphy	Howard Staunton	Lionel Kieseritzky
+spo_ring_olympic_archery	Expert	The 10-ring on an Olympic archery target, shot from 70 m, is about how wide?	About 12 cm	About 3 cm	About 30 cm	About 50 cm
+spo_szachy_mistrz	Expert	Which chess player held the world championship title the longest in the 20th century?	Emanuel Lasker	Garry Kasparov	Bobby Fischer	Anatoly Karpov
+trv2_sumo_ring	Expert	What is a sumo wrestling ring called?	A dohyo	A dojo	A tatami	A kumite
+spo_jai_alai_ball	Expert	Jai alai, in which a ball is hurled from a curved wicker basket, is a version of which sport?	Basque pelota	Lacrosse	Squash	Hurling
+spo_outsider_knocked_out	Expert	Which 42-to-1 outsider knocked out Mike Tyson in Tokyo in 1990?	Buster Douglas	Evander Holyfield	Lennox Lewis	Larry Holmes
+spo_dartboard_two_numbers	Expert	On a dartboard, which two numbers sit on either side of the 20?	5 and 1	19 and 3	18 and 12	15 and 2
+spo_national_sport_himalayan	Expert	What is the national sport of the Himalayan kingdom of Bhutan?	Archery	Polo	Wrestling	Kabaddi
+spo_1983_nation_ended	Expert	In 1983, which nation ended the USA's 132-year grip on the America's Cup?	Australia	New Zealand	Great Britain	Italy
+spo_derby_winning_racehorse	Expert	Which Derby-winning racehorse was kidnapped in Ireland in 1983 and never found?	Shergar	Arkle	Nijinsky	Mill Reef
+spo_snooker_invented_1875	Expert	Snooker was invented in 1875 by British army officers stationed in which country?	India	Egypt	South Africa	Malta
+spo_northern_hemisphere_date	Expert	In the Northern Hemisphere, on what date do all racehorses officially turn a year older?	1 January	1 May	1 March	1 September

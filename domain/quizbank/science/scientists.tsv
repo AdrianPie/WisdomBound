@@ -1,0 +1,111 @@
+# Scientists & Discoveries: scientists, discoveries, inventions of science, units, the history of science
+#
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+sci3_silnik_parowy	Easy	Who improved the steam engine, paving the way for the Industrial Revolution?	James Watt	Thomas Edison	Alexander Graham Bell	Isaac Newton
+sci3_newton_jablko	Easy	What supposedly inspired Newton's thinking on gravity?	A falling apple	A comet in the sky	A solar eclipse	An earthquake
+sci_hawking	Easy	Which scientist wrote 'A Brief History of Time'?	Stephen Hawking	Carl Sagan	Richard Feynman	Neil deGrasse Tyson
+sci_kot_schrodingera	Easy	Which physicist is famous for a thought experiment about a cat in a box?	Erwin Schrodinger	Werner Heisenberg	Niels Bohr	Max Planck
+sci_eureka	Easy	Which Greek scientist supposedly shouted 'Eureka!' in his bath?	Archimedes	Pythagoras	Euclid	Aristotle
+sci_measured_decibels	Easy	What is measured in decibels?	Loudness of sound	Brightness of light	Strength of earthquakes	Air pressure
+sci_measured_watts	Easy	What is measured in watts?	Power	Speed	Pressure	Temperature
+sci_sea_speed_traditionally	Easy	At sea, speed is traditionally measured in which unit?	Knots	Fathoms	Leagues	Miles per hour
+sci_scientist_pictured_sticking	Easy	Which famous scientist was pictured sticking out his tongue in a 1951 photo?	Albert Einstein	Niels Bohr	Enrico Fermi	Richard Feynman
+sci_grawitacja	Easy	Who formulated the law of universal gravitation?	Isaac Newton	Albert Einstein	Nikola Tesla	Michael Faraday
+sci_galileusz_proces	Easy	Which Italian scientist was put on trial by the Church for backing a Sun-centred universe?	Galileo Galilei	Giordano Bruno	Leonardo da Vinci	Evangelista Torricelli
+sci_swedish_astronomer_gave	Easy	Which Swedish astronomer gave his name to the temperature scale used in most of the world?	Anders Celsius	Carl Linnaeus	Anders Angstrom	Tycho Brahe
+sci_temperature_scale_still	Easy	Whose temperature scale is still used for everyday weather in the USA?	Daniel Fahrenheit	Anders Celsius	Lord Kelvin	Rene Reaumur
+sci_einstein	Easy	Who formulated the theory of relativity?	Albert Einstein	Isaac Newton	Niels Bohr	Max Planck
+sci_kopernik	Medium	Whose 1543 book put the Sun, not the Earth, at the centre of the universe?	Nicolaus Copernicus	Isaac Newton	Galileo Galilei	Johannes Kepler
+sci3_darwin_statek	Medium	What was the name of the ship Charles Darwin sailed on?	HMS Beagle	Endeavour	Santa Maria	Mayflower
+sci3_rentgen_promienie	Medium	Who discovered X-rays?	Wilhelm Rontgen	Marie Curie	Max Planck	Niels Bohr
+trv_dna_rozwiniecie	Medium	What does DNA stand for?	Deoxyribonucleic acid	Dinucleic acid	Deoxyribose nitrogen acid	Double nucleic arrangement
+org_wolt_volta	Medium	Which unit honours the Italian who built the first battery?	The volt	The ampere	The ohm	The joule
+org_szczepionka_krowa	Medium	The word 'vaccine' comes from the Latin name for which animal?	Cow	Horse	Sheep	Goat
+sci_kelwin	Medium	On which temperature scale is zero equal to absolute zero?	Kelvin	Celsius	Fahrenheit	Reaumur
+scix_nobel_dynamit	Medium	Alfred Nobel, who founded the Nobel Prizes, made his fortune from which invention?	Dynamite	The telephone	The steam turbine	Rubber tyres
+sciy_nobel_dziedziny	Medium	Which of these was NOT one of Alfred Nobel's original prize categories?	Mathematics	Physics	Literature	Peace
+sci_physicist_worked_clerk	Medium	Which famous physicist worked as a clerk in a patent office in Bern?	Albert Einstein	Max Planck	Niels Bohr	Isaac Newton
+sci_person_win_nobel	Medium	Who is the only person to win Nobel Prizes in two different sciences?	Marie Curie	Albert Einstein	Linus Pauling	Ernest Rutherford
+sci_unit_electric_current	Medium	In which unit is electric current measured?	The ampere	The volt	The ohm	The watt
+sci_unit_electrical_resistance	Medium	In which unit is electrical resistance measured?	The ohm	The volt	The ampere	The joule
+sci_measured_hertz	Medium	What is measured in hertz?	Frequency	Force	Energy	Pressure
+sci_temperature_water_freeze	Medium	At what temperature does water freeze on the Fahrenheit scale?	32 °F	0 °F	100 °F	212 °F
+sci_english_scientist_discovered	Medium	Which English scientist discovered electromagnetic induction and built early electric motors?	Michael Faraday	Humphry Davy	Joseph Priestley	Robert Boyle
+sci_temperature_fahrenheit_water	Medium	At what temperature in Fahrenheit does water boil at sea level?	212 °F	100 °F	180 °F	250 °F
+sci_danish_physicist_pictured	Medium	Which Danish physicist pictured electrons orbiting the nucleus in fixed shells?	Niels Bohr	Max Planck	Ernest Rutherford	Werner Heisenberg
+sci_war_currents	Medium	What was the 'war of the currents' about?	AC versus DC electricity	Gold versus silver money	Ocean currents	Rival canal routes
+sci_physicist_predicted_black	Medium	Which physicist predicted that black holes slowly leak radiation?	Stephen Hawking	Roger Penrose	Kip Thorne	John Wheeler
+sci_physicist_uncertainty_principle	Medium	Which physicist's 'uncertainty principle' says you cannot know a particle's position and momentum exactly?	Werner Heisenberg	Erwin Schrodinger	Paul Dirac	Max Born
+sci3_radio_wynalazca	Medium	Who is credited with inventing radio?	Guglielmo Marconi	Thomas Edison	Alexander Graham Bell	Samuel Morse
+sci_galileusz_ksiezyce	Medium	Who first spotted four moons of Jupiter through a telescope, in 1610?	Galileo Galilei	Nicolaus Copernicus	Johannes Kepler	Isaac Newton
+sci_penicylina	Medium	Who discovered penicillin?	Alexander Fleming	Louis Pasteur	Robert Koch	Jonas Salk
+sci_sila	Medium	What is the SI unit of force?	Newton	Joule	Watt	Pascal
+sci3_occam_brzytwa	Medium	What does Occam's razor state?	Among equally valid explanations, pick the simplest	Every theory must be written in mathematics	A complex theory always beats a simple one	Science can never make anything simple
+sci_becquerel	Hard	Who discovered radioactivity in 1896?	Henri Becquerel	Marie Curie	Ernest Rutherford	Wilhelm Rontgen
+sci_rutherford	Hard	Who discovered the atomic nucleus by firing particles at thin gold foil?	Ernest Rutherford	J. J. Thomson	Niels Bohr	James Chadwick
+sci_wegener	Hard	Who proposed in 1912 that the continents slowly drift apart?	Alfred Wegener	Charles Lyell	James Hutton	Arthur Holmes
+sci_astronomer_worked_out	Hard	Which astronomer worked out that planets move in ellipses?	Johannes Kepler	Galileo Galilei	Nicolaus Copernicus	Tycho Brahe
+sci_discovered_electron_1897	Hard	Who discovered the electron, in 1897?	J. J. Thomson	Ernest Rutherford	Niels Bohr	Max Planck
+sci_richard_feynman_showed	Hard	To show what doomed the Challenger shuttle, Richard Feynman dipped a rubber seal into what?	A glass of ice water	A pot of boiling water	A jar of rocket fuel	A beaker of acid
+sci_happened_albert_einstein	Hard	What happened to Albert Einstein's brain after he died in 1955?	A pathologist removed it and kept it	It was buried with him in Princeton	It was frozen for future revival	It was sent to a museum in Berlin
+sci_stephen_hawking_born	Hard	Stephen Hawking was born exactly 300 years after the death of which scientist?	Galileo Galilei	Isaac Newton	Johannes Kepler	Nicolaus Copernicus
+sci_edwin_hubble_discover	Hard	What did Edwin Hubble discover about other galaxies in 1929?	They are moving away from us	They contain black holes	They are made of gas	They spin backwards
+sci_scientist_law_links	Hard	Which scientist's law links the pressure and volume of a gas?	Robert Boyle	Robert Hooke	Jacques Charles	Amedeo Avogadro
+sci_english_chemist_proposed	Hard	Which English chemist proposed modern atomic theory around 1803?	John Dalton	Humphry Davy	Michael Faraday	Joseph Priestley
+sci_observatory_detected_gravitational	Hard	Which observatory first detected gravitational waves in 2015?	LIGO	Hubble	Arecibo	ALMA
+sci_italian_invented_mercury	Hard	Which Italian invented the mercury barometer in 1643?	Evangelista Torricelli	Galileo Galilei	Alessandro Volta	Luigi Galvani
+sci_2004_sheets_graphene	Hard	In 2004, the first sheets of graphene were peeled off graphite using what?	Sticky tape	A laser	A diamond knife	Liquid nitrogen
+sci_radiocarbon_dating_stops	Hard	Radiocarbon dating stops working on remains older than roughly how much?	About 50,000 years	About 500 years	About 5 million years	About 500 million years
+sci_1650s_teams_horses	Hard	In the 1650s, teams of horses failed to pull apart two metal hemispheres in Magdeburg. What held them together?	Air pressure around a vacuum	Powerful natural magnets	Hot wax that had set hard	Static electricity
+sci_nobel_winning_physicist	Hard	Which Nobel-winning physicist loved playing the bongo drums and cracked colleagues' safes at Los Alamos for fun?	Richard Feynman	Enrico Fermi	Robert Oppenheimer	Niels Bohr
+sci_through_early_telescope	Hard	Through his early telescope, Galileo saw which planet as having strange 'ears' on either side?	Saturn	Jupiter	Mars	Venus
+trv_minus_40	Hard	At what temperature do the Celsius and Fahrenheit scales show the same number?	-40 degrees	0 degrees	-20 degrees	100 degrees
+sci_french_chemist_executed	Hard	Which French chemist, executed in 1794, is called the father of modern chemistry?	Antoine Lavoisier	Louis Pasteur	Joseph Priestley	Robert Boyle
+sci_danish_astronomer_wore	Hard	Which Danish astronomer wore a metal nose after losing his own in a duel?	Tycho Brahe	Ole Romer	Niels Bohr	Johannes Kepler
+sci_italian_physicist_built	Hard	Which Italian physicist built the first nuclear reactor, in Chicago in 1942?	Enrico Fermi	Guglielmo Marconi	Alessandro Volta	Ettore Majorana
+sci_lunar_eclipses_clue	Hard	During lunar eclipses, which clue convinced Aristotle that the Earth is round?	Its shadow on the Moon is always curved	The Moon always turns deep red	Stars appear around the Moon	The shadow crosses from east to west
+sci_stephen_hawking_once	Hard	Stephen Hawking once threw a party and only sent out the invitations afterwards. Who was it for?	Time travellers	Aliens	His future self	Ghosts of scientists
+sci_ray_photographs_taken	Hard	One of the first X-ray photographs, taken in 1895, shows what?	Wilhelm Rontgen's wife's hand	A cat's whole skeleton	The skull of a mummy	Rontgen's own broken foot
+sci_scientist_united_electricity	Hard	Which scientist united electricity and magnetism in four famous equations?	James Clerk Maxwell	Michael Faraday	Andre-Marie Ampere	Nikola Tesla
+sci_scientist_law_describes	Hard	Which scientist's law describes how springs stretch?	Robert Hooke	Isaac Newton	Blaise Pascal	Robert Boyle
+sci_astronomer_discovered_uranus	Hard	Which astronomer discovered Uranus in 1781?	William Herschel	Caroline Herschel	Edmond Halley	Johann Galle
+sci_kwant	Hard	Who launched quantum theory?	Max Planck	Albert Einstein	Werner Heisenberg	Erwin Schrodinger
+sci2_efekt_fotoelektryczny	Hard	For explaining which phenomenon did Einstein win the Nobel Prize?	The photoelectric effect	The theory of relativity	Brownian motion	Mass-energy equivalence
+sci_eratostenes	Hard	Who first measured Earth's size, around 240 BC, using shadows at noon?	Eratosthenes	Aristotle	Ptolemy	Archimedes
+sci_foucault	Hard	What did Foucault's famous swinging pendulum demonstrate in 1851?	Earth's rotation	Earth's magnetic field	The speed of light	The strength of gravity
+sci_johannes_kepler_defend	Hard	Johannes Kepler had to defend his own mother in court against which charge?	Witchcraft	Murder	Treason	Forgery
+sci_andre_geim_won	Hard	Andre Geim won a joke Ig Nobel Prize for making which animal float with a magnet, and later a real Nobel Prize too?	A frog	A rabbit	A tortoise	A sparrow
+sci_physicists_word_quark	Hard	The physicists' word 'quark' was taken from which work of literature?	'Finnegans Wake' by James Joyce	'Alice in Wonderland' by Lewis Carroll	'The Odyssey' by Homer	'The Tempest' by Shakespeare
+org_gaz_slowo	Expert	The word 'gas' was made up by a 17th-century chemist based on which Greek word?	Chaos	Kosmos	Pneuma	Aither
+sci_demon_maxwella	Expert	Which physicist imagined a tiny 'demon' sorting fast and slow molecules?	James Clerk Maxwell	Ludwig Boltzmann	Rudolf Clausius	Lord Kelvin
+sci_dirac	Expert	Which physicist predicted the existence of antimatter in 1928?	Paul Dirac	Enrico Fermi	Niels Bohr	Wolfgang Pauli
+sci_belgian_priest_proposed	Expert	Which Belgian priest first proposed what became the Big Bang theory?	Georges Lemaitre	Edwin Hubble	Fred Hoyle	Georges Cuvier
+sci_french_mathematician_predicted	Expert	Which French mathematician predicted where Neptune would be found, in 1846?	Urbain Le Verrier	Pierre-Simon Laplace	Joseph-Louis Lagrange	Henri Poincare
+sci_1676_ole_romer	Expert	In 1676, Ole Romer showed that light has a finite speed by timing what?	The eclipses of Jupiter's moon Io	Lamp flashes between two hilltops	Lightning and its thunder	Sunlight glinting off Venus
+sci_astronomer_coined_big	Expert	Which astronomer coined the name 'Big Bang', even though he rejected the theory?	Fred Hoyle	Carl Sagan	Edwin Hubble	Arthur Eddington
+sci_galileo_sketched_planet	Expert	Galileo sketched which planet in 1612 and 1613 without realising it was one?	Neptune	Uranus	Pluto	Ceres
+sci_french_comet_hunter	Expert	Which French comet hunter catalogued fuzzy sky objects so he wouldn't mistake them for comets?	Charles Messier	Edmond Halley	William Herschel	Pierre-Simon Laplace
+sci_astronomer_study_fast	Expert	Which astronomer's study of how fast galaxies spin gave key evidence for dark matter?	Vera Rubin	Jocelyn Bell Burnell	Henrietta Leavitt	Cecilia Payne
+sci_scientist_cloud_chamber	Expert	Which scientist's cloud chamber made particle tracks visible?	Charles Wilson	Ernest Rutherford	Hans Geiger	Niels Bohr
+sci_english_scientist_isolated	Expert	Which English scientist first isolated hydrogen, calling it 'inflammable air'?	Henry Cavendish	Joseph Priestley	Humphry Davy	Robert Boyle
+sci_scottish_chemist_discovered	Expert	Which Scottish chemist discovered the noble gases neon, krypton and xenon?	William Ramsay	Joseph Black	Thomas Graham	James Dewar
+sci_penzias_wilson_blamed	Expert	Penzias and Wilson first blamed the faint hiss of the Big Bang, picked up in 1964, on what?	Pigeon droppings in their antenna	Signals from a nearby radio station	Soviet spy satellites overhead	Lightning in distant storms
+sci_scientist_weighed_earth	Expert	Which scientist first 'weighed the Earth', using a sensitive twisting balance in 1798?	Henry Cavendish	Isaac Newton	Robert Hooke	Michael Faraday
+sci_1919_eclipse_expedition	Expert	Whose 1919 eclipse expedition confirmed Einstein's prediction that the Sun bends starlight?	Arthur Eddington	Edwin Hubble	Ernest Rutherford	Max Planck
+sci_astronomer_discovered_infrared	Expert	Which astronomer discovered infrared light in 1800 by holding a thermometer just beyond the red end of a spectrum?	William Herschel	Isaac Newton	Joseph Fraunhofer	Edmond Halley
+sci_discovery_pulsing_cepheid	Expert	Whose discovery about pulsing Cepheid stars, in 1912, gave astronomers a way to measure the distance to other galaxies?	Henrietta Swan Leavitt	Annie Jump Cannon	Caroline Herschel	Maria Mitchell
+sci_physicist_jokingly_blamed	Expert	Which physicist was jokingly blamed for lab equipment breaking whenever he walked into the room?	Wolfgang Pauli	Max Born	Paul Dirac	Werner Heisenberg
+sci3_michelson_morley	Expert	What was the Michelson-Morley experiment trying to detect?	The ether as a medium for light	Background radiation	Radioactive decay	Gravitational waves
+org_celsjusz_odwrotnie	Expert	On the original Celsius scale, what did 0 degrees mark?	The boiling point of water	Absolute zero	Human body temperature	The freezing point of water
+sci_credited_inventing_telescope	Expert	Who is credited with inventing the telescope, in 1608?	Hans Lippershey	Galileo Galilei	Isaac Newton	Johannes Kepler
+sci_coined_butterfly_effect	Expert	Who coined the 'butterfly effect' while modelling the weather in the 1960s?	Edward Lorenz	Benoit Mandelbrot	Richard Feynman	John von Neumann
+sci_discovered_pulsars_1967	Expert	Who discovered the first pulsars in 1967, as a student, yet was left out of the Nobel Prize for it?	Jocelyn Bell Burnell	Vera Rubin	Henrietta Leavitt	Cecilia Payne
+sci_danish_astronomer_kept	Expert	Which Danish astronomer kept a pet elk that reportedly died after drinking too much beer?	Tycho Brahe	Ole Romer	Niels Bohr	Johannes Kepler
+sci_scientist_discovered_neutron	Expert	Which scientist discovered the neutron in 1932?	James Chadwick	J. J. Thomson	Enrico Fermi	Ernest Rutherford
+sci_scientist_explained_sky	Expert	Which scientist explained why the sky is blue, through scattering?	Lord Rayleigh	Isaac Newton	Albert Einstein	James Clerk Maxwell
+sci_english_scientist_discovered_2	Expert	Which English scientist discovered oxygen in 1774, calling it 'dephlogisticated air'?	Joseph Priestley	Antoine Lavoisier	Henry Cavendish	Robert Boyle
+sci_english_chemist_isolated	Expert	Which English chemist isolated sodium and potassium with electricity in 1807?	Humphry Davy	Michael Faraday	John Dalton	William Ramsay
+sci_scottish_scientist_invented	Expert	Which Scottish scientist invented the vacuum flask?	James Dewar	William Ramsay	Joseph Black	Lord Kelvin
+sci_1820_hans_christian	Expert	In 1820, Hans Christian Orsted noticed during a lecture that an electric current did what?	Moved a nearby compass needle	Made a wire glow blue	Heated water to boiling	Made a frog's leg twitch
+sci_radioactivity_discovered_1896	Expert	Radioactivity was discovered in 1896 when uranium salts left in a drawer did what?	Fogged a wrapped photographic plate	Glowed green in the dark	Burned a hole in the drawer	Melted the wax seal on a jar
+sci_ancient_greek_argued	Expert	Which ancient Greek first argued that the Earth goes around the Sun?	Aristarchus of Samos	Ptolemy of Alexandria	Aristotle of Stagira	Hipparchus of Nicaea

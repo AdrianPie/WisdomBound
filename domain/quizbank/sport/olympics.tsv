@@ -1,0 +1,159 @@
+# Olympics & Athletics: Olympic Games, athletics, swimming, gymnastics, winter sports, marathons
+#
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+scicmp_nie_zimowy_sport	Easy	Which of these is NOT a Winter Olympic sport?	Field hockey	Curling	Biathlon	Luge
+spw_olimpijskie_haslo	Easy	What does the Olympic motto 'Citius, Altius, Fortius' mean?	Faster, Higher, Stronger	Peace, Unity, Sport	Body, Mind, Spirit	Honour, Courage, Glory
+wld_spo_olimpiada_zima	Easy	In which winter sport do players sweep the ice in front of a sliding stone?	Curling	Biathlon	Skeleton	Bobsleigh
+spo_paryz_2024	Easy	Which city hosted the 2024 Summer Olympics?	Paris	London	Los Angeles	Tokyo
+spox_bolt_kraj	Easy	Which country is sprinter Usain Bolt from?	Jamaica	The USA	Trinidad and Tobago	Kenya
+spo_city_hosted_2012	Easy	Which city hosted the 2012 Summer Olympics?	London	Beijing	Rio de Janeiro	Athens
+spo_2020_summer_olympics	Easy	The 2020 Summer Olympics were delayed a year by COVID-19. Where were they held?	Tokyo	Paris	Beijing	Seoul
+spo_swimming_stroke_uses	Easy	Which swimming stroke uses a frog-like kick?	Breaststroke	Butterfly	Backstroke	Freestyle
+spo_kind_sport_includes	Easy	Which kind of sport includes dressage and show jumping?	Horse riding	Gymnastics	Skiing	Diving
+spo_city_hosted_2016	Easy	Which city hosted the 2016 Summer Olympics?	Rio de Janeiro	Tokyo	London	Beijing
+spo_sport_athletes_compete	Easy	In which sport do athletes compete on the pommel horse and the rings?	Gymnastics	Equestrian	Weightlifting	Diving
+spo_sport_events_slalom	Easy	Which sport has events called slalom, giant slalom and downhill?	Alpine skiing	Ski jumping	Bobsleigh	Cross-country skiing
+spo_often_summer_olympic	Easy	How often are the Summer Olympic Games normally held?	Every four years	Every two years	Every three years	Every five years
+spo_runners_hand_each	Easy	What do runners hand to each other during a relay race?	A baton	A torch	A flag	A ribbon
+spo_long_lap_standard	Easy	How long is one lap of a standard outdoor running track?	400 metres	200 metres	500 metres	800 metres
+spo_sprinters_push_feet	Easy	What do sprinters push their feet against at the start of a race?	Starting blocks	Starting gates	A wooden kickboard	Rubber springs
+spo3_olimpiada_letnia_dyscyplin	Easy	Which of these disciplines is NOT held at the Summer Olympics?	Cross-country skiing	Swimming	Track and field	Judo
+spo_american_swimmer_won	Easy	Which American swimmer won eight gold medals at the 2008 Olympics?	Michael Phelps	Ryan Lochte	Mark Spitz	Ian Thorpe
+spo_country_marathon_great	Easy	Which country is marathon great Eliud Kipchoge from?	Kenya	Ethiopia	Uganda	Tanzania
+spo_big_city_marathon	Easy	Which big-city marathon finishes on The Mall, near Buckingham Palace?	The London Marathon	The Berlin Marathon	The Boston Marathon	The New York Marathon
+spo_olimpiada_1896	Easy	Where were the first modern Olympic Games held?	Athens	Paris	Rome	London
+spo2_dziesiecioboj_kobiety	Medium	What is the women's equivalent of the decathlon called?	The heptathlon	The pentathlon	The octathlon	The enneathlon
+spo3_biathlon_dyscypliny	Medium	What two disciplines make up biathlon?	Cross-country skiing and shooting	Running and swimming	Skiing and jumping	Skating and shooting
+day_kola_olimpijskie_znaczenie	Medium	What do the five Olympic rings represent?	The five inhabited continents	The five founding countries	The five original sports	The five Olympic virtues
+spw_plywanie_delfin	Medium	Which swimming stroke requires both arms to move together over the water?	Butterfly	Front crawl	Backstroke	Breaststroke
+spo_los_angeles_2028	Medium	Which city was chosen to host the 2028 Summer Olympics?	Los Angeles	Brisbane	Paris	Madrid
+spo_ateny_2004	Medium	In which country were the 2004 Summer Olympics held?	Greece	Italy	Spain	Australia
+spo_breaking	Medium	Which dance sport made its Olympic debut at Paris 2024?	Breaking	Ballroom dancing	Cheerleading	Zumba
+spo_biles	Medium	Which gymnast has won the most World Championship medals in history?	Simone Biles	Larisa Latynina	Nadia Comaneci	Vitaly Scherbo
+spox_znicz	Medium	Where is the Olympic flame lit before each Games?	Olympia, Greece	Athens' old stadium	Mount Olympus	The host city
+spox_cool_runnings	Medium	Which tropical country's bobsleigh team inspired the film 'Cool Runnings'?	Jamaica	Kenya	Fiji	Brazil
+spox_triathlon	Medium	In what order are the three parts of a triathlon done?	Swim, bike, run	Run, bike, swim	Bike, swim, run	Swim, run, bike
+spoy_coubertin	Medium	Who founded the modern Olympic Games?	Pierre de Coubertin	Jules Rimet	Avery Brundage	Juan Antonio Samaranch
+spo_country_2026_winter	Medium	In which country were the 2026 Winter Olympics held?	Italy	Switzerland	Austria	France
+spo_city_hosted_2000	Medium	Which city hosted the 2000 Summer Olympics?	Sydney	Athens	Atlanta	Beijing
+spo_city_hosted_1992	Medium	Which city hosted the 1992 Summer Olympics?	Barcelona	Atlanta	Seoul	Madrid
+spo_sport_athletes_perform	Medium	In which sport do athletes perform jumps called the Salchow and the Lutz?	Figure skating	Ski jumping	Gymnastics	Trampolining
+spo_russian_city_2014	Medium	In which Russian city were the 2014 Winter Olympics held?	Sochi	Moscow	Kazan	Saint Petersburg
+spo_canadian_city_hosted	Medium	Which Canadian city hosted the 1976 Summer Olympics?	Montreal	Toronto	Vancouver	Calgary
+spo_city_hosted_olympic	Medium	Which city hosted the first Olympic Games held in Asia, in 1964?	Tokyo	Seoul	Beijing	Sapporo
+spo_city_hosted_1988	Medium	Which city hosted the 1988 Summer Olympics?	Seoul	Tokyo	Barcelona	Los Angeles
+spo_norwegian_town_hosted	Medium	Which Norwegian town hosted the 1994 Winter Olympics?	Lillehammer	Oslo	Trondheim	Bergen
+spo_american_won_three	Medium	Which American won three Olympic golds in the snowboard halfpipe?	Shaun White	Tony Hawk	Chloe Kim	Mark McMorris
+spo_husband_arranged_1994	Medium	Whose ex-husband arranged the 1994 attack on the figure skater Nancy Kerrigan?	Tonya Harding	Oksana Baiul	Kristi Yamaguchi	Surya Bonaly
+spo_country_team_always	Medium	Which country's team always marches first in the Olympic opening ceremony?	Greece	The host nation	France	Switzerland
+spo_athletics_hammer_hammer	Medium	In athletics, what is the 'hammer' in the hammer throw?	A metal ball on a steel wire	A wooden club with a lead head	A short iron bar	A stone on a leather strap
+spo_british_runner_won	Medium	Which British runner won both the 5,000 m and the 10,000 m at the 2012 and 2016 Olympics?	Mo Farah	Paula Radcliffe	Steve Cram	Seb Coe
+spo_sport_see_fosbury	Medium	In which sport would you see a 'Fosbury Flop'?	High jump	Long jump	Pole vault	Gymnastics
+spo_marathon_runners_hit	Medium	Marathon runners 'hit the wall' around 30 km mainly because they run out of what?	Stored sugar	Salt	Water	Oxygen
+spo_ski_jumpers_spread	Medium	Ski jumpers spread their skis in a V shape because it does what?	Gives more lift	Is required by rules	Slows them down	Keeps them warmer
+spo2_plywanie_styl	Medium	Which swimming stroke is the fastest?	Freestyle (front crawl)	Breaststroke	Backstroke	Butterfly
+spo_athletics_event_heavy	Medium	In which athletics event is a heavy metal ball pushed from the shoulder?	Shot put	Discus	Hammer throw	Javelin
+spo_track_race_makes	Medium	Which track race makes runners leap over barriers and a water pit?	The steeplechase	The hurdles	The relay	The pentathlon
+spo_american_lindsey_vonn	Medium	The American Lindsey Vonn won dozens of World Cup races in which sport?	Downhill skiing	Figure skating	Snowboarding	Speed skating
+spo2_igrzyska_zimowe_polska	Medium	Which city hosted the 2022 Winter Olympics?	Beijing	Sochi	Pyeongchang	Vancouver
+spo3_olimpiada_letnia_1936	Medium	In which city were the controversial 1936 Olympics held?	Berlin	Rome	London	Paris
+scicmp_najwiecej_zlota	Medium	Which country has won the most Summer Olympic gold medals overall?	The United States	The Soviet Union	China	Great Britain
+spw_triathlon_ironman	Medium	How long is the run in a full Ironman triathlon?	A full marathon, 42.2 km	A half marathon	10 km	21 km
+spox_eddie_orzel	Medium	Which British ski jumper became a cult hero at the 1988 Winter Olympics despite finishing last?	Eddie 'the Eagle' Edwards	Alberto 'La Bomba' Tomba	Franz Klammer	Matti Nykanen
+spo_australian_city_chosen	Medium	Which Australian city was chosen to host the 2032 Summer Olympics?	Brisbane	Melbourne	Perth	Adelaide
+spo_city_hosted_2018	Medium	Which city hosted the 2018 Winter Olympics?	Pyeongchang	Sochi	Sapporo	Nagano
+spo_sports_made_olympic	Medium	Which of these sports made its Olympic debut at Tokyo 2020?	Sport climbing	Golf	Rugby sevens	Beach volleyball
+spo_country_invented_sport	Medium	Which country invented the sport of curling?	Scotland	Canada	Norway	Switzerland
+spo3_nadia_comaneci	Medium	Who was the first gymnast in Olympic history to receive a perfect 10.0?	Nadia Comaneci	Simone Biles	Larisa Latynina	Olga Korbut
+spw_bannister_mila	Medium	Who was the first man to run a mile in under four minutes?	Roger Bannister	Jim Ryun	Herb Elliott	John Landy
+spo_bolt	Hard	What is Usain Bolt's world record in the 100 m?	9.58 s	9.69 s	9.72 s	9.49 s
+trv2_curling_kamien	Hard	In curling, what is the stone traditionally made of?	Granite	Marble	Steel	Basalt
+ext_maraton_dystans	Hard	The marathon's odd distance of 42.195 km was fixed to suit what?	A royal viewing box	A stadium's track length	A city's ring road	An ancient road's length
+ext_olimpiada_sztuka	Hard	Between 1912 and 1948, Olympic medals were also awarded for what?	Art	Chess	Debating	Ballooning
+spo_spitz	Hard	Which swimmer won seven gold medals at the 1972 Munich Olympics?	Mark Spitz	Michael Phelps	Ian Thorpe	Johnny Weissmuller
+spo_usa_igrzyska	Hard	Counting Summer and Winter Games, which country has hosted the Olympics the most times?	The USA	France	Japan	Britain
+spo_krykiet_2028	Hard	Which sport returns at the 2028 Summer Olympics, 128 years after its only appearance?	Cricket	Rugby	Baseball	Polo
+spo_city_became_host	Hard	Which city became the first to host both the Summer and the Winter Olympics?	Beijing	Los Angeles	Paris	Tokyo
+spo_sliding_sport_athletes	Hard	In which sliding sport do athletes race head-first down an ice track on a small sled?	Skeleton	Luge	Bobsleigh	Curling
+spo_athletics_distance_nicknamed	Hard	Which athletics distance is nicknamed 'the metric mile'?	1500 metres	1000 metres	1609 metres	2000 metres
+spo_sport_combines_cross	Hard	Which sport combines cross-country skiing with ski jumping?	Nordic combined	Biathlon	Telemark	Freestyle skiing
+spo_2002_short_track	Hard	In 2002, which country won its first Winter Olympic gold when all four rivals crashed on the last bend?	Australia	New Zealand	Brazil	South Africa
+spo_1904_olympic_marathon	Hard	At the 1904 Olympic marathon, why was the first man across the line disqualified?	He rode part of the way in a car	He was paid to run as a professional	He took a shortcut through a farm	He was paced by a man on a horse
+spo_perfect_olympic_gymnastics	Hard	When the first perfect 10 in Olympic gymnastics was scored in 1976, what did the scoreboard show?	1.00	10.0	9.99	0.00
+spo_briton_set_triple	Hard	Which Briton set the triple jump world record of 18.29 m in 1995?	Jonathan Edwards	Christian Olsson	Kenny Harrison	Willie Banks
+spo_set_women_100	Hard	Who set the women's 100 m world record of 10.49 seconds in 1988?	Florence Griffith-Joyner	Shelly-Ann Fraser-Pryce	Elaine Thompson-Herah	Merlene Ottey
+spo_roughly_heavy_shot	Hard	Roughly how heavy is the shot used in the men's Olympic shot put?	About 7 kg	About 3 kg	About 12 kg	About 20 kg
+spo_american_won_100	Hard	Which American won the 100 m at the Paris 2024 Olympics by just five thousandths of a second?	Noah Lyles	Fred Kerley	Christian Coleman	Kishane Thompson
+spo_scandal_tokyo_2020	Hard	After a scandal at Tokyo 2020, which discipline is modern pentathlon replacing with an obstacle course?	Horse riding	Fencing	Swimming	Shooting
+spo_hurdles_110_hurdles	Hard	How many hurdles are there in a 110 m hurdles race?	Ten	Eight	Twelve	Six
+spo_derek_redmond_tore	Hard	When Derek Redmond tore a hamstring in the 1992 Olympic 400 m semi-final, who helped him limp to the finish?	His father	His coach	His brother	A team-mate
+spo_american_won_200	Hard	Which American won the 200 m and 400 m double at the 1996 Olympics, wearing golden shoes?	Michael Johnson	Carl Lewis	Maurice Greene	Butch Reynolds
+spo_pole_vaulter_broke	Hard	Which pole vaulter broke the world record 35 times between 1984 and 1994?	Sergey Bubka	Renaud Lavillenie	Thierry Vigneron	Bob Seagren
+spo_diver_struck_head	Hard	Which diver struck his head on the springboard at the 1988 Olympics, yet went on to win gold?	Greg Louganis	Klaus Dibiasi	Tom Daley	Dmitri Sautin
+spo_sprinting_false_start	Hard	In sprinting, a false start is called if a runner reacts faster than what?	0.1 seconds	0.01 seconds	0.3 seconds	0.5 seconds
+spo_sprint_photo_finish	Hard	In a sprint 'photo finish', which part of a runner's body must cross the line first to win?	The torso	The head	The leading foot	An outstretched hand
+spo2_malysz_dyscyplina_klub	Hard	In which countries is the Four Hills Tournament held?	Germany and Austria	Poland and Czechia	Norway and Finland	Switzerland and Italy
+trv2_londyn_igrzyska	Hard	Which city was the first to host the Summer Olympics three times?	London	Paris	Athens	Los Angeles
+spo_american_won_nine	Hard	Which American won nine Olympic golds in sprinting and long jump between 1984 and 1996?	Carl Lewis	Jesse Owens	Michael Johnson	Maurice Greene
+spo_sport_riders_compete	Hard	In which sport do riders compete in dressage, show jumping and cross-country?	Eventing	Polo	Steeplechase	Rodeo
+spo_city_hosted_1956	Hard	Which city hosted the 1956 Summer Olympics, the first in the Southern Hemisphere?	Melbourne	Sydney	Buenos Aires	Johannesburg
+spo_hockey_team_miracle	Hard	Where did the US hockey team's 'Miracle on Ice' take place, at the 1980 Winter Olympics?	Lake Placid	Squaw Valley	Calgary	Sarajevo
+spo_sliding_sport_athletes_2	Hard	In which sliding sport do athletes race feet first, lying on their backs?	Luge	Skeleton	Bobsleigh	Snowboard cross
+spo_since_2010_happens	Hard	Since 2010, what happens to a sprinter who makes a false start at a top athletics meeting?	They are disqualified at once	They get a warning	They restart a metre back	They get a time penalty
+spo_canadian_sprinter_stripped	Hard	Which Canadian sprinter was stripped of his 100 m gold at the 1988 Olympics after failing a drug test?	Ben Johnson	Donovan Bailey	Bruny Surin	Andre De Grasse
+spo_curling_house	Hard	In curling, what is 'the house'?	The circular target	The players' changing room	The handle of the stone	The ice-making machine
+spo_olympic_champions_often	Hard	Why do Olympic champions so often bite their medals on the podium?	Photographers ask them to	To check the gold is real	It is an ancient Greek custom	It is said to bring luck
+spo_dekatlon	Hard	Which event closes the men's Olympic decathlon on the second day?	The 1500 metres	The javelin throw	The pole vault	The 110 m hurdles
+spo2_duplantis	Hard	Which pole vaulter has broken the world record again and again since 2020?	Armand Duplantis	Sergey Bubka	Renaud Lavillenie	Piotr Lisek
+spo2_phelps_medale	Hard	How many Olympic gold medals has Michael Phelps won?	23	18	28	15
+spo3_owens_1936	Hard	How many gold medals did Jesse Owens win at the 1936 Berlin Olympics?	Four	Two	Three	Five
+spo3_kipchoge_maraton	Hard	Who was the first to run a marathon distance in under two hours (an exhibition run)?	Eliud Kipchoge	Mo Farah	Haile Gebrselassie	Kenenisa Bekele
+spw_olimpiada_odwolane	Hard	How many Olympic Games were cancelled because of the world wars?	Five	Two	Three	Seven
+spw_kraj_najwiecej_medali_zimowe	Hard	Which country has won the most Winter Olympic medals overall?	Norway	The United States	Germany	Russia
+spw_maraton_najstarszy	Hard	Which is the oldest annual marathon in the world, first run in 1897?	The Boston Marathon	The London Marathon	The New York City Marathon	The Berlin Marathon
+dpt_spo_zmienny_sztafeta	Hard	Which stroke opens a medley relay?	Backstroke	Butterfly	Breaststroke	Freestyle
+ref_spo_yurchenko	Hard	In which sport would you perform a 'Yurchenko'?	Gymnastics	Figure skating	Diving	Trampolining
+spo_malinin	Hard	Who landed the first quadruple Axel in figure skating competition, in 2022?	Ilia Malinin	Nathan Chen	Yuzuru Hanyu	Evgeni Plushenko
+spo_sekwana_1900	Hard	In which river were the swimming races of the 1900 Paris Olympics held?	The Seine	The Thames	The Rhine	The Loire
+spox_zatopek	Hard	Which Czech runner won the 5,000 m, 10,000 m and marathon at the 1952 Olympics?	Emil Zatopek	Paavo Nurmi	Lasse Viren	Abebe Bikila
+spox_ali_znicz	Hard	Which boxing legend lit the Olympic cauldron at the 1996 Atlanta Games?	Muhammad Ali	Joe Frazier	George Foreman	Evander Holyfield
+spox_freeman	Hard	Which Aboriginal athlete lit the Olympic flame and then won 400 m gold at Sydney 2000?	Cathy Freeman	Nova Peris	Evonne Goolagong	Sally Pearson
+spoy_beamon	Hard	Whose 1968 long jump of 8.90 m stood as the world record for 23 years?	Bob Beamon	Carl Lewis	Mike Powell	Jesse Owens
+spoy_tahiti	Hard	Where were the surfing events of the 2024 Summer Olympics held, far from the host city?	Tahiti	Biarritz	Hawaii	Portugal
+spo_long_olympic_open	Hard	How long is the Olympic open-water 'marathon swimming' race?	10 km	5 km	21 km	42 km
+spo_city_hosted_winter	Hard	Which city hosted the first Winter Olympics held in Asia, in 1972?	Sapporo	Nagano	Pyeongchang	Harbin
+spo2_sotomayor	Expert	Who holds the men's high jump world record?	Javier Sotomayor	Mutaz Barshim	Dick Fosbury	Patrik Sjoberg
+spo3_latynina_medale	Expert	Which gymnast was, for decades, the most decorated Olympian in history?	Larisa Latynina	Nadia Comaneci	Simone Biles	Olga Korbut
+spo3_pierwsza_kobieta_igrzyska	Expert	Starting with which Games could women officially compete in the modern Olympics?	1900 (Paris)	1896	1924	1948
+ref_spo_eagan	Expert	Who is the only person to win Olympic gold in both Summer and Winter Games in different sports?	Eddie Eagan	Clara Hughes	Christa Luding-Rothenburger	Lauryn Williams
+spo_switzer	Expert	Who was the first woman to run the Boston Marathon with an official number, in 1967?	Kathrine Switzer	Bobbi Gibb	Joan Benoit	Grete Waitz
+spox_bikila	Expert	Which Ethiopian runner won the 1960 Olympic marathon barefoot?	Abebe Bikila	Haile Gebrselassie	Kenenisa Bekele	Miruts Yifter
+spox_nurmi	Expert	Which 'Flying Finn' won nine Olympic golds in running in the 1920s?	Paavo Nurmi	Lasse Viren	Hannes Kolehmainen	Emil Zatopek
+spo_japanese_runner_quit	Expert	A Japanese runner who quit the 1912 Olympic marathon to rest at a family's house 'finished' it in 1967. What was his time?	Over 54 years	About 5 hours	Exactly 12 years	Over 80 years
+spo_city_hosted_british	Expert	Which city hosted the first British Empire Games, the forerunner of the Commonwealth Games, in 1930?	Hamilton, Canada	London, England	Sydney, Australia	Auckland, New Zealand
+spo_set_men_mile	Expert	Who set the men's mile world record of 3:43.13 in 1999?	Hicham El Guerrouj	Noureddine Morceli	Steve Cram	Sebastian Coe
+spo_american_won_olympic	Expert	Which American won the Olympic discus at four Games in a row, from 1956 to 1968?	Al Oerter	Bob Mathias	Mac Wilkins	Parry O'Brien
+spo_finnish_ski_jumper	Expert	Which Finnish ski jumper won three gold medals at the 1988 Olympics?	Matti Nykanen	Janne Ahonen	Toni Nieminen	Jari Puikkonen
+spo_australian_sprinter_wore	Expert	Which Australian sprinter wore a human-rights badge beside Tommie Smith and John Carlos on the 1968 podium?	Peter Norman	Ralph Doubell	Ron Clarke	Herb Elliott
+spo_because_australia_strict	Expert	Because of Australia's strict animal quarantine, where were the 1956 Olympic equestrian events held?	Stockholm	London	Auckland	Helsinki
+spo_paralympic_movement_grew	Expert	The Paralympic movement grew out of games for injured war veterans held in 1948 at which English hospital?	Stoke Mandeville	Great Ormond Street	St Thomas'	Addenbrooke's
+spo_1904_olympic_marathon_2	Expert	The 1904 Olympic marathon winner, Thomas Hicks, was kept going by his trainers with egg whites, brandy and what?	Strychnine	Cocaine	Opium	Caffeine
+spo_swedish_shooter_oscar	Expert	Swedish shooter Oscar Swahn won an Olympic medal in 1920 at roughly what age?	In his seventies	In his fifties	In his sixties	In his eighties
+spo2_bolt_200	Expert	What is Usain Bolt's world record in the 200 m?	19.19 s	19.59 s	18.99 s	19.79 s
+spo3_paraolimpiada_start	Expert	In which decade were the first official Paralympic Games held?	The 1960s	The 1930s	The 1980s	The 1990s
+trv2_igrzyska_zimowe_pierwsze	Expert	In which country were the first Winter Olympics held, in 1924?	France	Switzerland	Norway	Austria
+spw_maraton_kobiet_pierwszy	Expert	At which Olympics did women first run the marathon?	Los Angeles 1984	Munich 1972	Montreal 1976	Seoul 1988
+spo_curling_hammer	Expert	In curling, what is 'the hammer'?	The last stone of an end	The team captain	A heavy practice stone	The brush used to sweep
+spo_modern_olympics_1896	Expert	At the first modern Olympics in 1896, what did the event winners receive?	A silver medal	A gold medal	A bronze cup	A laurel crown only
+spo_eric_moussambani_never	Expert	Eric Moussambani, who had never swum in a 50 m pool before, won hearts at Sydney 2000 swimming for which country?	Equatorial Guinea	Guinea-Bissau	Gabon	Cameroon
+spo_dutch_mother_two	Expert	Which Dutch mother of two, nicknamed 'the Flying Housewife', won four golds at the 1948 Olympics?	Fanny Blankers-Koen	Babe Didrikson	Wilma Rudolph	Betty Cuthbert
+spo_far_away_archers	Expert	From how far away do archers shoot in the Olympic recurve event?	70 metres	30 metres	50 metres	90 metres
+spo_jim_thorpe_stripped	Expert	Why was Jim Thorpe stripped of his 1912 Olympic pentathlon and decathlon golds?	He had been paid to play baseball	He failed a drug test	He refused to bow to the king	He was not a US citizen
+spo_barefoot_runner_collided	Expert	Which barefoot runner collided with Mary Decker in the famous 1984 Olympic 3000 m final?	Zola Budd	Ingrid Kristiansen	Grete Waitz	Liz McColgan
+spo_american_gymnast_landed	Expert	Which American gymnast landed a vault on an injured ankle to seal team gold at the 1996 Olympics?	Kerri Strug	Shannon Miller	Dominique Moceanu	Mary Lou Retton
+spo_2018_winter_olympics	Expert	At the 2018 Winter Olympics, which Czech athlete won gold in both alpine skiing and snowboarding?	Ester Ledecka	Martina Sablikova	Mikaela Shiffrin	Lindsey Vonn
+spo_american_sprinter_wore	Expert	Which American sprinter, who wore a leg brace after childhood polio, won three golds at the 1960 Olympics?	Wilma Rudolph	Wyomia Tyus	Babe Didrikson	Betty Cuthbert
+spo_figure_skating_jump	Expert	The figure-skating jump called the Axel is named after whom?	A Norwegian skater	A Swedish king	A Russian coach	A Dutch judge
+spo_spiridon_louis_greek	Expert	What was Spiridon Louis, the Greek winner of the first Olympic marathon in 1896, said to be by trade?	A water carrier	A shepherd	A baker	A fisherman
+spo_dorando_pietri_disqualified	Expert	Why was Dorando Pietri disqualified after finishing first in the 1908 Olympic marathon?	Officials helped him over the line	He took a shortcut through a park	He ran in the wrong lane	He was found to be a professional
+spo_men_javelin_redesigned	Expert	Why was the men's javelin redesigned in 1986?	Throws were flying too far for stadiums	Too many javelins snapped on landing	Old javelins were too costly	Judges could not see the landings

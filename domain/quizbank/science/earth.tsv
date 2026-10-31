@@ -1,0 +1,104 @@
+# Earth & Weather: geology, rocks, volcanoes as science, weather, atmosphere, oceans as science
+#
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+sci_richter	Easy	What does the Richter scale measure?	Earthquake magnitude	Temperature	Pressure	Wind speed
+sci3_barometr_funkcja	Easy	What does a barometer measure?	Atmospheric pressure	Temperature	Humidity	Speed of sound
+day_sejsmograf_mierzy	Easy	What does a seismograph record?	Ground motion during earthquakes	Ocean currents	Solar flares	Volcanic gas output
+wld_przyplywy	Easy	What mainly causes ocean tides?	The Moon's gravity	Wind	Earth's rotation alone	Underwater volcanoes
+sci_oko_cyklonu	Easy	What is it like in the eye of a hurricane?	Calm	The windiest part	The rainiest part	Full of hail
+sci_scientific_northern_lights	Easy	What is the scientific name for the northern lights?	The aurora borealis	The aurora australis	The zodiacal light	The Milky Way
+sci_meteorologist_study	Easy	What does a meteorologist study?	The weather	Meteors	Metals	Rocks
+sci_renewable_energy_uses	Easy	Which renewable energy uses the heat from deep inside the Earth?	Geothermal energy	Tidal energy	Nuclear energy	Biomass energy
+sci_molten_rock_once	Easy	What is molten rock called once it erupts onto the Earth's surface?	Lava	Magma	Basalt	Ash
+sci_earth_thin_outermost	Easy	What is the Earth's thin outermost layer called?	The crust	The mantle	The outer core	The asthenosphere
+sci_mainly_causes_earthquakes	Easy	What mainly causes earthquakes?	Moving tectonic plates	The Moon's gravity	Underground rivers	Changes in the weather
+sci_fog_really	Easy	What is fog, really?	A cloud touching the ground	Smoke from distant fires	Steam rising from the sea	Air full of fine dust
+sci_forms_grass_clear	Easy	What forms on grass on a clear night as warm, moist air cools?	Dew	Frost smoke	Hail	Mist rain
+sci_call_scientist_studies_2	Easy	What do we call a scientist who studies rocks?	A geologist	A biologist	An astronomer	A meteorologist
+sci_preserved_remains_ancient	Easy	What are the preserved remains of ancient plants and animals in rock called?	Fossils	Minerals	Crystals	Meteorites
+sci_thick_mix_smoke	Easy	What is the name for a thick mix of smoke and fog?	Smog	Haze	Mist	Drizzle
+sci_instrument_collects_measures	Easy	Which instrument collects and measures rainfall?	A rain gauge	A barometer	A thermometer	An anemometer
+sci_ships_seem_sink	Easy	Why do ships seem to sink below the horizon as they sail away?	The Earth is curved	Waves hide them	The air bends light	They really ride lower
+sci_rock_forms_layers	Easy	Which rock forms from layers of sand pressed together?	Sandstone	Granite	Marble	Basalt
+sci_lightning_really	Easy	What is lightning, really?	A giant electric spark	Burning gas inside clouds	Reflected sunlight	Exploding drops of water
+sci_sheltering_under_lone	Easy	Why is sheltering under a lone tree a bad idea in a thunderstorm?	Lightning tends to strike tall objects	Rain runs down the trunk and floods	Wet leaves attract static sparks	Trees give off gas that burns
+sci_lightning_ever_strike	Easy	Does lightning ever strike the same place twice?	Yes, tall towers get hit many times a year	No, the ground there loses its charge	Only about once in a hundred years	Only in hot, tropical countries
+sci_ozone_layer_protect	Easy	What does the ozone layer protect us from?	Ultraviolet rays	Meteors	The solar wind	Cosmic dust
+sci_black_ice	Easy	What is 'black ice'?	Thin, almost invisible ice on roads	Ice made from salt water	Ice coated with oil and soot	Ice that forms only on mountains
+sci_thundersnow	Easy	What is 'thundersnow'?	A thunderstorm that brings snow	Snow that falls with a loud hiss	An avalanche set off by thunder	Hail that sounds like thunder
+sci_moonbow	Easy	What is a 'moonbow'?	A rainbow made by moonlight	A crescent Moon lying on its back	The Moon's shadow on clouds	A rainbow seen from the Moon
+day_higrometr_mierzy	Medium	What does a hygrometer measure?	Air humidity	Air pressure	Wind speed	Rainfall
+sci_cumulonimbus	Medium	Which kind of cloud grows into a towering thundercloud?	Cumulonimbus	Cirrus	Stratus	Altostratus
+sci_huragan_tajfun	Medium	What is the difference between a hurricane and a typhoon?	Only where in the world it forms	A typhoon is always stronger	A hurricane has no eye	Typhoons only happen in winter
+sci_chicxulub	Medium	The asteroid that wiped out the dinosaurs left a crater in which country?	Mexico	The United States	Australia	Russia
+scix_platek_sniegu	Medium	How many sides do natural snowflakes almost always have?	Six	Four	Five	Eight
+sci_instrument_measures_wind	Medium	Which instrument measures wind speed?	An anemometer	A barometer	A hygrometer	A seismometer
+sci_causes_sound_thunder	Medium	What causes the sound of thunder?	Air expanding fast in lightning's heat	Clouds bumping into each other	Rain hitting the ground	Wind rushing through clouds
+sci_type_rock_forms	Medium	What type of rock forms when lava or magma cools?	Igneous	Sedimentary	Metamorphic	Limestone
+sci_thickest_layer_earth	Medium	Which is the thickest layer of the Earth?	The mantle	The crust	The inner core	The outer core
+sci_earth_core_mostly	Medium	What is the Earth's core mostly made of?	Iron and nickel	Molten rock and gas	Carbon and silicon	Gold and lead
+sci_sea_taste_salty	Medium	Why does the sea taste salty?	Rivers wash minerals out of rocks into it	Underwater volcanoes boil the water	Salty rain falls on it	Fish release salt
+sci_shields_earth_sun	Medium	What shields the Earth from most of the Sun's charged particles?	Its magnetic field	Its ozone layer	Its clouds	Its oceans
+sci_type_cloud_looks	Medium	Which type of cloud looks like puffy balls of cotton wool?	Cumulus	Cirrus	Stratus	Nimbus
+sci_scientific_study_earthquakes	Medium	What is the scientific study of earthquakes called?	Seismology	Meteorology	Volcanology	Oceanography
+sci_quickly_falling_barometer	Medium	What does a quickly falling barometer usually warn of?	Stormy weather	A heatwave	An earthquake	Clear skies
+sci_warming_pacific_ocean	Medium	What is the warming of the Pacific Ocean that disrupts weather around the world called?	El Nino	The Gulf Stream	La Tormenta	The Monsoon
+sci_monsoon	Medium	What is a monsoon?	A seasonal wind that brings heavy rain	A sudden earthquake under the sea	A hot, dry wind from the desert	A tropical storm with no rain
+sci_volcanic_rock_light	Medium	Which volcanic rock is so light and full of air bubbles that it can float?	Pumice	Granite	Basalt	Marble
+sci_shiny_black_volcanic	Medium	Which shiny black volcanic glass was used to make sharp blades?	Obsidian	Jet	Quartz	Coal
+sci_long_white_trails	Medium	What are the long white trails behind high-flying planes mostly made of?	Ice crystals from engine exhaust	Smoke from burning jet fuel	Dust thrown up by the wings	Chemicals sprayed to change weather
+sci_thunderclouds_look_dark	Medium	Why do thunderclouds look dark grey from below?	They are so thick that little light gets through	They are full of smoke and dust	Their water is dirtier than in white clouds	Lightning scorches them from inside
+sci_hailstones_grow_big	Medium	How do hailstones grow so big?	Updrafts toss them up and down in the cloud	They freeze together on the ground	They form from frozen sea spray	They grow around volcanic dust
+sci_colour_common_northern	Medium	Which colour is the most common in the northern lights?	Green	Purple	Red	Blue
+sci_scale_used_measure	Medium	What is the name of the scale used to measure the hardness of minerals?	Mohs scale	Richter scale	Beaufort scale	Kelvin scale
+sci_causes_northern_lights	Medium	What causes the northern lights?	Solar particles hitting the atmosphere	Moonlight on ice	Volcanic gas	Lightning in the stratosphere
+sci_effect_causes_hurricanes	Medium	Which effect causes hurricanes to spin in opposite directions in each hemisphere?	Coriolis effect	Doppler effect	Venturi effect	Magnus effect
+sci_icelandic_volcano_2010	Medium	Which Icelandic volcano's 2010 eruption grounded European flights?	Eyjafjallajokull	Hekla	Katla	Grimsvotn
+sci_according_old_saying	Medium	According to the old saying, what does a red sky at night promise?	Good weather the next day	A storm before dawn	Snow within a week	A cold, frosty night
+sci_cave_formations_hang	Medium	Which cave formations hang down from the ceiling?	Stalactites	Stalagmites	Geodes	Columns
+sci_scale_measures_wind	Medium	Which scale measures wind force from 0, calm, to 12, hurricane?	The Beaufort scale	The Saffir-Simpson scale	The Mercalli scale	The Fujita scale
+sci_type_rock_marble	Medium	What type of rock is marble?	Metamorphic	Igneous	Sedimentary	Volcanic
+sci_earth_magnetic_field	Medium	What has Earth's magnetic field done many times in the planet's history?	Swapped north and south	Switched off for good	Moved to the Moon	Stopped the Earth spinning
+sci_green_flash_sometimes	Medium	What is the 'green flash' sometimes seen over the sea?	A green glint as the Sun sets	Light from glowing plankton	An aurora near the equator	Lightning beyond the horizon
+sci_huge_crater_left	Medium	What is the name of the huge crater left when a volcano collapses?	Caldera	Crater lake	Vent	Maar
+sci_ball_lightning	Medium	What is 'ball lightning'?	A rare glowing sphere seen in thunderstorms	Lightning that strikes the same spot twice	A lightning bolt that stays in one cloud	Hail that has been struck by lightning
+trv_dzien_dluzszy	Hard	What is slowly happening to the length of a day on Earth?	It is getting longer	It is getting shorter	It stays exactly the same	It changes with the seasons only
+mst_blyskawica_temperatura	Hard	A lightning bolt can be roughly how hot compared with the Sun's surface?	Several times hotter	About the same	Half as hot	A tenth as hot
+sci_fujita	Hard	Which scale rates the strength of tornadoes?	The Enhanced Fujita scale	The Beaufort scale	The Saffir-Simpson scale	The Richter scale
+sci_ozon_stratosfera	Hard	In which layer of the atmosphere is the ozone layer?	The stratosphere	The troposphere	The mesosphere	The exosphere
+scix_jadro_ziemi	Hard	Roughly how hot is the Earth's inner core?	As hot as the Sun's surface	As hot as boiling water	As hot as a candle flame	As cold as ice
+sciy_obrot_ziemi	Hard	At the equator, roughly how fast does the Earth's surface spin?	About 1,670 km/h	About 167 km/h	About 16,700 km/h	About 16 km/h
+sciy_pioruny_sekunda	Hard	Roughly how many times does lightning strike the Earth every second?	About 50	About 5	About 500	About 5,000
+sci_scale_rates_hurricanes	Hard	Which scale rates hurricanes from category 1 to 5?	The Saffir-Simpson scale	The Beaufort scale	The Richter scale	The Fujita scale
+sci_shape_large_raindrops	Hard	What shape are large raindrops really as they fall?	Like a hamburger bun	Like a classic teardrop	Like a long thin needle	Like a tiny pyramid
+sci_coasts_get_two	Hard	Why do most coasts get two high tides a day, not one?	The Moon raises bulges on both sides of Earth	The Sun and the Moon take turns pulling	The Earth wobbles twice on its axis	Winds push the sea back each night
+sci_elmo_fire_seen	Hard	What is 'St Elmo's fire', seen by sailors on masts during storms?	A glowing electrical discharge	Burning gas rising from the sea	Moonlight reflected on wet ropes	Lightning striking the waves
+sci_hot_fast_cloud	Hard	What is the name of the hot, fast cloud of gas and ash from an erupting volcano?	Pyroclastic flow	Lahar	Tephra	Caldera
+sci_spring_tide	Hard	What is a 'spring tide'?	An extra-high tide when Sun and Moon line up	A tide that comes only in springtime	A tide raised by melting mountain snow	A tide pushed in by spring storms
+sci_sun_dogs	Hard	What are 'sun dogs'?	Bright spots on either side of the Sun	Dark spots on the Sun's surface	Shadows cast during an eclipse	Clouds that glow after sunset
+sci_1885_vermont_farmer	Hard	In 1885, Vermont farmer Wilson Bentley became the first person to do what?	Photograph a single snowflake	Measure the speed of hail	Make snow in a laboratory	Film a tornado
+sci_roughly_often_empire	Hard	Roughly how often is the Empire State Building struck by lightning?	About 20 times a year	About once a year	About once every 10 years	About 200 times a year
+sci_sunsets_often_unusually	Hard	Why are sunsets often unusually red for months after a huge volcanic eruption?	Tiny particles high in the air scatter the light	Ash clouds glow from the heat of the eruption	Lava lights up the underside of the clouds	Volcanic gases burn as they reach the sky
+sci_petrichor	Hard	What is 'petrichor'?	The smell of rain on dry ground	The smell after lightning	Sea fog rolling inland	A type of storm cloud
+sci_troposfera	Hard	In which layer of the atmosphere does almost all weather happen?	The troposphere	The stratosphere	The mesosphere	The thermosphere
+sci_largest_active_volcano	Hard	Which is the largest active volcano on Earth?	Mauna Loa	Mount Etna	Mount Fuji	Krakatoa
+sci_direction_hurricanes_spin	Hard	In which direction do hurricanes spin in the Northern Hemisphere?	Anticlockwise	Clockwise	It varies randomly	They do not spin
+sci_state_meteor_crater	Hard	In which US state is the famous Meteor Crater, over a kilometre wide?	Arizona	Nevada	Utah	New Mexico
+sci_roughly_fluffy_white	Hard	Roughly how much does a fluffy white cumulus cloud weigh?	Hundreds of tonnes	Under a kilogram	About 50 kg	About 2 tonnes
+sci_usual_explanation_rare	Hard	What is the usual explanation for rare reports of fish or frogs falling with rain?	Waterspouts sweep them up from lakes	They hatch from eggs inside clouds	Birds drop them in a panic	Floods wash them onto roofs
+sci_causes_pale_ring	Hard	What causes a pale ring of light around the Moon on some nights?	Ice crystals in high, thin cloud	The Moon's own thin atmosphere	Dust from meteor showers	Light bouncing off the oceans
+sci_thunder_rumble_instead	Hard	Why does thunder rumble on, instead of making one short bang?	Sound comes from all along the long bolt	Lightning heats the air slowly	Clouds are crashing into each other	Raindrops make the air vibrate
+sci_dark_volcanic_rock	Hard	Which dark volcanic rock forms the six-sided columns of the Giant's Causeway?	Basalt	Granite	Obsidian	Limestone
+sci_roughly_wide_asteroid	Hard	Roughly how wide was the asteroid that wiped out the dinosaurs?	About 10 km	About 100 m	About 1 km	About 300 km
+sci_earth_magnetic_pole	Hard	Earth's magnetic pole in the Arctic is physically what kind of magnetic pole?	A south pole	A north pole	Neither	It flips daily
+day2_efekt_cieplarniany	Hard	Why do greenhouse gases warm the planet?	They absorb outgoing infrared radiation	They block incoming sunlight	They thicken the ozone layer	They raise air pressure
+sciy_krakatau	Hard	The 1883 eruption of which volcano made one of the loudest sounds in recorded history?	Krakatoa	Vesuvius	Mount St Helens	Etna
+sci_lightning_strike_way	Expert	In a lightning strike, which way does the brightest flash actually travel?	Upwards from the ground	Downwards from the cloud	Sideways along the ground	Outwards from the middle
+sci_misty_mountain_climber	Expert	On a misty mountain, a climber may see a giant shadow of themselves ringed by colours. What is it called?	A Brocken spectre	A fata morgana	A will-o'-the-wisp	A sun pillar
+sci_virga	Expert	What is 'virga'?	Rain that evaporates before reaching the ground	A lens-shaped cloud over mountains	Lightning that leaps up from the clouds	Hail falling from a clear blue sky
+sci_since_1970s_scale	Expert	Since the 1970s, which scale have seismologists used in place of the Richter scale for big quakes?	The moment magnitude scale	The Mercalli scale	The Fujita scale	The Kelvin scale
+sci_volcanic_mudflow	Expert	What is the name of a volcanic mudflow?	Lahar	Pyroclastic flow	Tephra	Fumarole
+sci_highest_clouds_earth	Expert	Which are the highest clouds in Earth's atmosphere, seen glowing blue after sunset?	Noctilucent clouds	Cirrus clouds	Nacreous clouds	Lenticular clouds
+sci_sprites_seen_high	Expert	What are 'sprites', seen high above some big thunderstorms?	Red flashes of electricity	Green glows at sunset	Sparks on ships' masts	Glowing balls of ice
+sci_gas_makes_volcano	Expert	Which gas makes up most of what a volcano blows out?	Water vapour	Carbon dioxide	Sulfur dioxide	Hydrogen sulfide
+sci_fulgurite	Expert	What is a fulgurite?	Glass formed when lightning hits sand	A crystal found inside meteorites	A cloud shaped like a clenched fist	A spark that jumps between clouds

@@ -1,0 +1,64 @@
+# Motor Racing & Cycling: Formula 1, motor racing, motorbikes, cycling, Tour de France
+#
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+spo_hamilton	Easy	In which sport does Lewis Hamilton compete?	Formula 1	MotoGP	Rally	NASCAR
+spox_ferrari_kolor	Easy	What colour are Ferrari's Formula 1 cars traditionally?	Red	Yellow	Silver	Green
+spo_country_racing_driver	Easy	Which country does the racing driver Lewis Hamilton come from?	Britain	Germany	Australia	Canada
+spo_pattern_flag_waved	Easy	What pattern is the flag waved at the end of a motor race?	Black and white checks	Red and yellow stripes	Plain green	Plain blue
+spo_sport_tour_france	Easy	In which sport is the Tour de France's 'maillot jaune' worn?	Cycling	Motor racing	Sailing	Running
+spo_american_motor_racing	Easy	Which American motor-racing series is famous for the Daytona 500?	NASCAR	IndyCar	Formula 1	World Rally
+spo_motor_racing_front	Easy	In motor racing, what is the front spot on the starting grid called?	Pole position	Top slot	Lead box	Front gate
+spo_paris_avenue_tour	Easy	On which famous Paris avenue does the Tour de France traditionally finish?	The Champs-Elysees	The Rue de Rivoli	Boulevard Haussmann	The Avenue Foch
+spo2_tour_de_france	Easy	What jersey does the Tour de France leader wear?	Yellow	Green	Pink	Polka-dot
+spox_le_mans	Easy	Which famous motor race lasts 24 hours?	Le Mans	The Monaco Grand Prix	The Indianapolis 500	The Dakar Rally
+trv2_f1_rekordy	Medium	Which driver has won the most Formula 1 world championships (tied at seven)?	Michael Schumacher and Lewis Hamilton	Ayrton Senna and Alain Prost	Sebastian Vettel and Max Verstappen	Juan Manuel Fangio and Niki Lauda
+spw_kolarstwo_peleton	Medium	What is the main group of riders in a road race called?	The peloton	The breakaway	The domestique	The prologue
+spo_ferrari	Medium	Which team has won the most Formula 1 constructors' championships?	Ferrari	McLaren	Williams	Mercedes
+spo_monako	Medium	Which Formula 1 race is famous for running through a tunnel on narrow city streets?	The Monaco Grand Prix	The British Grand Prix	The Italian Grand Prix	The Belgian Grand Prix
+spo_armstrong	Medium	Which cyclist was stripped of seven Tour de France titles for doping?	Lance Armstrong	Chris Froome	Miguel Indurain	Eddy Merckx
+spo_dutch_driver_won	Medium	Which Dutch driver won four Formula 1 world titles in a row, from 2021 to 2024?	Max Verstappen	Lewis Hamilton	Charles Leclerc	Sebastian Vettel
+spo_sport_raced_steeply	Medium	Which sport is raced on a steeply banked track called a velodrome?	Track cycling	Speed skating	Motor racing	Greyhound racing
+spo_island_motorcycle_race	Medium	On which island is the famous TT motorcycle race held?	Isle of Man	Isle of Wight	Anglesey	Jersey
+spo_driver_back_racing	Medium	Which F1 driver was back racing just six weeks after being badly burned at the Nurburgring in 1976?	Niki Lauda	James Hunt	Jackie Stewart	Emerson Fittipaldi
+spo_yellow_flag_mean	Medium	What does a yellow flag mean in motor racing?	Danger, no overtaking	Race finished	Leader is coming	Rain warning
+spo_italian_motorcycle_racer	Medium	Which Italian motorcycle racer was nicknamed 'The Doctor'?	Valentino Rossi	Max Biaggi	Giacomo Agostini	Marco Simoncelli
+spo_formula_race_held	Medium	What is the name of the Formula 1 race held at Silverstone?	British Grand Prix	English Grand Prix	London Grand Prix	European Grand Prix
+spo_german_driver_won	Medium	Which German driver won four Formula 1 titles in a row with Red Bull, from 2010 to 2013?	Sebastian Vettel	Nico Rosberg	Michael Schumacher	Ralf Schumacher
+spo_formula_red_flag	Medium	In Formula 1, what does a red flag tell the drivers?	The race has been stopped	The last lap has begun	A car is in the pits	Overtaking is allowed
+spo2_kolarstwo_gorska	Medium	What is the mountains classification jersey called in the Tour de France?	The polka-dot jersey	The green jersey	The white jersey	The blue jersey
+spox_silver_arrows	Medium	Which Formula 1 team's cars are nicknamed 'the Silver Arrows'?	Mercedes	McLaren	Williams	Red Bull
+spox_senna	Medium	Which Brazilian F1 legend died after a crash at Imola in 1994?	Ayrton Senna	Nelson Piquet	Rubens Barrichello	Emerson Fittipaldi
+spox_tour_dlugosc	Medium	Roughly how long does the Tour de France last?	About three weeks	About one week	About two months	About ten days
+spo_indianapolis_motor_speedway	Medium	Why is the Indianapolis Motor Speedway nicknamed 'the Brickyard'?	Its track was once paved with bricks	It was built on an old brick factory	Its stands are made of red brick	Its first winner was a bricklayer
+trv2_flaga_biala	Hard	In NASCAR, what does a white flag signal?	The final lap	The race is stopped	Slippery track	A driver must pit
+spoy_monza	Hard	Which Formula 1 circuit is nicknamed 'the Temple of Speed'?	Monza	Silverstone	Spa	Suzuka
+spo_colour_points_sprinters	Hard	What colour is the points (sprinters') jersey in the Tour de France?	Green	Polka-dot	White	Pink
+spo_formula_champion_nicknamed	Hard	Which Formula 1 champion was nicknamed 'the Iceman'?	Kimi Raikkonen	Mika Hakkinen	Niki Lauda	Alain Prost
+spo_tour_france_created	Hard	The Tour de France was created to boost the sales of what?	A sports newspaper	A bicycle maker	A tyre company	A wine region
+spo_cycling_race_nicknamed	Hard	Which cycling race, nicknamed 'the Hell of the North', gives its winner a cobblestone as a trophy?	Paris-Roubaix	Tour of Flanders	Milan-San Remo	Liege-Bastogne-Liege
+spo_drs_overtaking_aid	Hard	What does 'DRS', the overtaking aid used in Formula 1 since 2011, stand for?	Drag Reduction System	Driver Response Switch	Downforce Release System	Dynamic Rear Spoiler
+spo_became_formula_race	Hard	Which became the first Formula 1 race held at night, in 2008?	The Singapore Grand Prix	The Bahrain Grand Prix	The Abu Dhabi Grand Prix	The Las Vegas Grand Prix
+spo_four_time_formula	Hard	Which four-time Formula 1 champion was nicknamed 'the Professor'?	Alain Prost	Niki Lauda	Jackie Stewart	Nelson Piquet
+spo_driver_retired_formula	Hard	Which driver retired from Formula 1 just five days after winning the 2016 world title?	Nico Rosberg	Jenson Button	Kimi Raikkonen	Fernando Alonso
+spo2_giro_koszulka	Hard	What jersey does the Giro d'Italia leader wear?	Pink	Yellow	White	Red
+spo2_f1_punkty	Hard	How many points does a Formula 1 race winner get?	25	20	18	30
+ext_tour_kalorie	Hard	A Tour de France rider can burn roughly how many calories on a hard mountain stage?	Around 8,000	Around 2,000	Around 4,000	Around 20,000
+spo_spanish_cyclist_won	Hard	Which Spanish cyclist won the Tour de France five years in a row, from 1991 to 1995?	Miguel Indurain	Alberto Contador	Pedro Delgado	Carlos Sastre
+spo_became_briton_win	Hard	Who became the first Briton to win the Tour de France, in 2012?	Bradley Wiggins	Chris Froome	Mark Cavendish	Geraint Thomas
+spo_formula_flag_tells	Hard	In Formula 1, which flag tells a driver that a faster car is about to lap him?	Blue	Yellow	Green	White
+spo_british_cyclist_won	Hard	Which British cyclist won the Tour de France four times between 2013 and 2017?	Chris Froome	Geraint Thomas	Mark Cavendish	Bradley Wiggins
+spo_italian_town_ferrari	Hard	In which Italian town is the Ferrari Formula 1 team based?	Maranello	Monza	Imola	Modena
+spo_country_tadej_pogacar	Hard	Which country is Tadej Pogacar, a multiple winner of the Tour de France, from?	Slovenia	Croatia	Slovakia	Austria
+dpt_spo_indy_500	Hard	How many laps make up the Indianapolis 500?	200	100	250	500
+spoy_indy_mleko	Hard	What does the winner of the Indianapolis 500 traditionally drink?	Milk	Champagne	Lemonade	Beer
+spoy_merckx	Hard	Which Belgian cyclist, nicknamed 'the Cannibal', won five Tours de France?	Eddy Merckx	Jacques Anquetil	Bernard Hinault	Miguel Indurain
+spo2_tour_najwiecej	Expert	Who was the first to win the Tour de France five times?	Jacques Anquetil	Eddy Merckx	Bernard Hinault	Miguel Indurain
+dpt_spo_f1_flaga	Expert	What does a black and white diagonal flag mean in Formula 1?	A warning for unsporting driving	The driver must pit immediately	The session has been suspended	A faster car is about to lap you
+spo_formula_posthumous_world	Expert	Who is Formula 1's only posthumous world champion, crowned in 1970?	Jochen Rindt	Jim Clark	Gilles Villeneuve	Ronnie Peterson
+spo_six_cars_start	Expert	Why did only six cars start the 2005 United States Grand Prix?	Teams on Michelin tyres pulled out	A pile-up wiped out the rest	Most cars failed safety checks	A storm flooded the pit lane
+spo_american_driver_started	Expert	Which American driver started the podium champagne-spraying habit after winning Le Mans in 1967?	Dan Gurney	Mario Andretti	Phil Hill	Carroll Shelby
+spo_british_cyclist_collapsed	Expert	Which British cyclist collapsed and died on Mont Ventoux during the 1967 Tour de France?	Tom Simpson	Barry Hoban	Brian Robinson	Reg Harris
+trv2_tour_de_france_start	Expert	In which year was the first Tour de France held?	1903	1923	1889	1948
+spo_tour_france_rider	Expert	In the Tour de France, what is the rider in last place overall nicknamed?	The lanterne rouge	The broom wagon	The grupetto	The domestique
+spo_became_driver_win	Expert	Who became the first driver to win motorsport's 'Triple Crown': Monaco, the Indy 500 and Le Mans?	Graham Hill	Jim Clark	Jackie Stewart	Mario Andretti
+spo_won_1989_tour	Expert	Who won the 1989 Tour de France by just eight seconds, after a final-day time trial?	Greg LeMond	Laurent Fignon	Pedro Delgado	Stephen Roche

@@ -1,0 +1,189 @@
+# Team Sports: basketball, American football, baseball, ice hockey, rugby, cricket, volleyball, handball
+#
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+spo_kosz	Easy	How many points is a shot from behind the line worth in basketball?	3	2	4	1
+trv2_stanley_cup	Easy	In which sport is the Stanley Cup awarded?	Ice hockey	Baseball	Basketball	Lacrosse
+spo_globetrotters	Easy	Which sport do the Harlem Globetrotters play?	Basketball	Baseball	Volleyball	American football
+spo_super_bowl	Easy	The Super Bowl is the final of which sport?	American football	Baseball	Basketball	Ice hockey
+spo_kanada_hokej	Easy	Which is Canada's official national winter sport?	Ice hockey	Curling	Skiing	Figure skating
+spo_baseball_diament	Easy	Which sport is played on a field called a 'diamond'?	Baseball	Cricket	Rugby	Hockey
+spo_polo	Easy	Which team sport is played on horseback?	Polo	Lacrosse	Hurling	Cricket
+spo_haka	Easy	Which country's rugby team performs the haka before matches?	New Zealand	Australia	Fiji	South Africa
+spo_world_series	Easy	The World Series is the championship of which sport?	Baseball	Basketball	American football	Ice hockey
+spo_mlyn_rugby	Easy	In which sport would you see a 'scrum'?	Rugby	Cricket	Handball	Water polo
+spox_koszykowka_piatka	Easy	How many players does a basketball team have on court at one time?	Five	Six	Seven	Four
+spoy_hokej_szostka	Easy	How many players does each ice hockey team have on the ice, goalie included?	Six	Five	Seven	Eleven
+spo_sport_players_perform	Easy	In which sport do players perform a 'slam dunk'?	Basketball	Volleyball	Handball	Netball
+spo_players_volleyball_team	Easy	How many players does a volleyball team have on court?	Six	Five	Seven	Eight
+spo_nba_stand	Easy	What does 'NBA' stand for?	National Basketball Association	North American Basketball Alliance	National Ball Association	Nationwide Basketball Authority
+spo_points_free_throw	Easy	How many points is a free throw worth in basketball?	One	Two	Three	Half a point
+spo_sport_played_bat	Easy	Which sport is played with a bat, wickets and bails?	Cricket	Baseball	Rounders	Croquet
+spo_nba_team_los	Easy	Which NBA team from Los Angeles plays in purple and gold?	The Lakers	The Clippers	The Bulls	The Celtics
+spo_sport_played_sand	Easy	Which sport is played on sand, two against two, with a ball and a net?	Beach volleyball	Badminton	Tennis	Sepak takraw
+spo_sport_made_sachin	Easy	Which sport made Sachin Tendulkar a national hero in India?	Cricket	Field hockey	Tennis	Badminton
+spo_sport_players_score	Easy	In which sport do players score a 'try'?	Rugby	Cricket	American football	Lacrosse
+spo_baseball_strikes_take	Easy	In baseball, how many strikes does it take to strike out a batter?	Three	Two	Four	Five
+spo_american_football_area	Easy	In American football, what is the area at each end of the field where touchdowns are scored?	The end zone	The red zone	The pocket	The backfield
+spo_1992_olympic_dream	Easy	The 1992 US Olympic 'Dream Team' of Jordan, Magic and Bird played which sport?	Basketball	Ice hockey	Baseball	Volleyball
+spo_nickname_new_zealand	Easy	What is the nickname of New Zealand's national rugby union team?	The All Blacks	The Wallabies	The Lions	The Pumas
+spo_sport_players_spike	Easy	In which sport do players 'spike', 'dig' and 'block' the ball?	Volleyball	Basketball	Handball	Netball
+spo_sportswear_company_created	Easy	Which sportswear company created the 'Air Jordan' shoes for Michael Jordan?	Nike	Adidas	Reebok	Puma
+spo_sport_batter_hit	Easy	In which sport can a batter hit a 'home run' by knocking the ball out of the park?	Baseball	Cricket	Lacrosse	Rugby
+spo_basketball_superstar_nicknamed	Easy	Which basketball superstar is nicknamed 'King James'?	LeBron James	Kobe Bryant	Stephen Curry	Kevin Durant
+spo_sport_quarterback_linebacker	Easy	In which sport do the 'quarterback' and the 'linebacker' play?	American football	Baseball	Ice hockey	Basketball
+spo_country_national_rugby	Easy	Which country's national rugby union team is nicknamed 'the Wallabies'?	Australia	New Zealand	South Africa	Fiji
+spo_basketball_player_takes	Easy	In basketball, what is it called when a player takes too many steps without dribbling?	Travelling	Double dribble	Goaltending	Charging
+spo_ice_hockey_must	Easy	In ice hockey, where must a player sit out two minutes after a minor foul?	The penalty box	The team bench	The locker room	The goal crease
+spo_basketball_other_american	Easy	In basketball and other American sports, what does 'MVP' stand for?	Most Valuable Player	Most Victorious Player	Major Veteran Prize	Main Varsity Pick
+spox_jordan_bulls	Easy	For which NBA team did Michael Jordan win six championships?	The Chicago Bulls	The Los Angeles Lakers	The Boston Celtics	The New York Knicks
+spo_basketball_legend_died	Easy	Which basketball legend died in a helicopter crash in 2020?	Kobe Bryant	Shaquille O'Neal	Magic Johnson	Kareem Abdul-Jabbar
+spo3_krykiet_kraj	Easy	In which country is cricket one of the most popular sports?	India	Canada	Germany	Brazil
+spo_hokej	Medium	How long is one period in an ice hockey game?	20 minutes	15 minutes	25 minutes	30 minutes
+spo_siatkowka_sety	Medium	How many sets won does it take to win a volleyball match?	3	2	4	5
+spo2_rugby_zawodnicy	Medium	How many players make up a rugby union team?	Fifteen	Thirteen	Eleven	Seventeen
+spo3_hokej_krazek	Medium	What is a hockey puck made of?	Vulcanized rubber	Metal	Wood	Bone
+scicmp_najwieksza_pilka	Medium	Which of these sports uses the largest ball?	Basketball	Football	Volleyball	Handball
+scicmp_najwiecej_zawodnikow	Medium	Which of these sports fields the most players per team?	Rugby union	Football	Ice hockey	Basketball
+trv2_krykiet_over	Medium	In cricket, how many balls make up an over?	Six	Four	Eight	Ten
+trv2_ashes	Medium	In which sport do England and Australia compete for 'the Ashes'?	Cricket	Rugby	Rowing	Sailing
+trv2_touchdown	Medium	How many points is a touchdown worth in American football?	6	3	7	5
+trv2_baseball_inningi	Medium	How many innings are in a standard baseball game?	9	7	10	12
+spw_koszykowka_sekundy	Medium	How long does an NBA team have to attempt a shot?	24 seconds	30 seconds	20 seconds	35 seconds
+mst_koszykowka_kosz	Medium	The first basketball games used what as the goal?	A peach basket	A barrel	A metal hoop	A painted square
+spo_jordan_23	Medium	Which shirt number did Michael Jordan make famous?	23	33	32	8
+spox_gretzky	Medium	Which ice hockey legend was nicknamed 'The Great One'?	Wayne Gretzky	Mario Lemieux	Bobby Orr	Gordie Howe
+spox_babe_ruth	Medium	Which baseball legend was nicknamed 'the Bambino'?	Babe Ruth	Joe DiMaggio	Lou Gehrig	Jackie Robinson
+spo_sport_teams_compete	Medium	In which sport do teams compete in the Six Nations Championship?	Rugby union	Football	Cricket	Field hockey
+spo_players_baseball_team	Medium	How many players does a baseball team have in the field?	Nine	Eleven	Ten	Eight
+spo_sport_played_teams	Medium	Which sport is played by teams of 18 on a huge oval field, mainly in Australia?	Aussie rules football	Rugby league	Gaelic football	Cricket
+spo_sport_might_bowler	Medium	In which sport might a bowler send down a 'googly'?	Cricket	Bowling	Baseball	Golf
+spo_shohei_ohtani_superstar	Medium	Shohei Ohtani is a superstar of which sport?	Baseball	Basketball	American football	Ice hockey
+spo_sport_penalty_corners	Medium	Which sport has 'penalty corners' and is played with curved sticks on grass?	Field hockey	Lacrosse	Polo	Hurling
+spo_country_ice_hockey	Medium	In which country was ice hockey developed into the modern game?	Canada	The USA	Sweden	Russia
+spo_sport_made_giant	Medium	Which sport made the giant New Zealand winger Jonah Lomu a superstar?	Rugby union	American football	Basketball	Cricket
+spo_country_won_2023	Medium	Which country won the 2023 Rugby World Cup in France?	South Africa	New Zealand	Ireland	France
+spo_baseball_team_nicknamed	Medium	Which baseball team is nicknamed 'the Bronx Bombers'?	New York Yankees	New York Mets	Boston Red Sox	Chicago Cubs
+spo_nickname_south_africa	Medium	What is the nickname of South Africa's national rugby team?	Springboks	Wallabies	All Blacks	Pumas
+spo_sport_playing_field	Medium	In which sport is the playing field nicknamed the 'gridiron'?	American football	Rugby	Lacrosse	Baseball
+spo_kabaddi_contact_sport	Medium	Kabaddi, a contact sport of tagging while holding your breath, is most popular in which country?	India	Brazil	Japan	Egypt
+spo_song_crowds_traditionally	Medium	Which song do crowds traditionally sing during baseball's 'seventh-inning stretch'?	'Take Me Out to the Ball Game'	'The Star-Spangled Banner'	'Yankee Doodle'	'Sweet Caroline'
+spo_sport_might_fielders	Medium	In which sport might the fielders all shout 'Howzat?' at the umpire?	Cricket	Baseball	Lacrosse	Rounders
+spo_ice_resurfacing_machine	Medium	The ice-resurfacing machine at hockey games is usually called by its inventor's surname. What is it?	Zamboni	Zeppelin	Ziegler	Zamora
+spo_sepak_takraw_kind	Medium	In sepak takraw, a kind of volleyball from South-East Asia, players may not touch the ball with what?	Their hands	Their heads	Their knees	Their chests
+spo_american_football_hail	Medium	In American football, what is a 'Hail Mary'?	A long, desperate last-second pass	A trick play at the kick-off	A kick that hits the goalpost	A prayer before the anthem
+spo_cricket_duck	Medium	In cricket, what is a 'duck'?	Being out without scoring	A ball bowled underarm	A one-handed catch	A ball that hits the stumps
+spo_sport_played_lord	Medium	Which sport is played at Lord's in London?	Cricket	Tennis	Rugby union	Polo
+spo_golden_state_warriors	Medium	Which Golden State Warriors star holds the NBA record for career three-pointers?	Stephen Curry	Ray Allen	Klay Thompson	James Harden
+spo_american_football_yards	Medium	In American football, how many yards must the attacking team gain to earn a new set of downs?	10	5	20	25
+spo_cricket_batter_scores	Medium	In cricket, what is it called when a batter scores 100 runs in one innings?	A century	A maiden	A wicket	A boundary
+spo_points_field_goal	Medium	How many points is a field goal worth in American football?	Three	Two	One	Six
+spo_college_sport_knockout	Medium	Which US college sport's knockout tournament is nicknamed 'March Madness'?	Basketball	American football	Baseball	Ice hockey
+spo_country_home_sport	Medium	Which country is the home of the sport of hurling?	Ireland	Scotland	Wales	England
+spo_periods_ice_hockey	Medium	How many periods are there in an ice hockey game?	Three	Two	Four	Five
+spo_vast_narendra_modi	Medium	The vast Narendra Modi Stadium in Ahmedabad, with room for about 130,000 fans, was built for which sport?	Cricket	Football	Field hockey	Kabaddi
+spo_nickname_nba_legend	Medium	By what nickname is the NBA legend Earvin Johnson known?	Magic	Air	Dr. J	Shaq
+spo_quarterback_won_record	Medium	Which quarterback won a record seven Super Bowls?	Tom Brady	Peyton Manning	Joe Montana	Patrick Mahomes
+spo_sport_long_match	Medium	In which sport does a long match stop for official lunch and tea breaks?	Cricket	Golf	Tennis	Rugby union
+spo_sport_ball_nicknamed	Medium	Which sport's ball is nicknamed 'the pigskin'?	American football	Basketball	Baseball	Ice hockey
+spo_cricket_runs_batter	Medium	In cricket, how many runs does a batter get for hitting the ball over the boundary without a bounce?	Six	Four	Five	Ten
+spo_sport_play_start	Medium	In which sport does play start with a 'face-off'?	Ice hockey	Basketball	Water polo	Volleyball
+spo_basketball_jump_ball	Medium	In basketball, what is the jump ball that starts the game called?	The tip-off	The kick-off	The face-off	The bully-off
+spo_baseball_raised_patch	Medium	In baseball, what is the raised patch of dirt that the pitcher throws from called?	The mound	The plate	The dugout	The bullpen
+spo_american_football_official	Medium	In American football, what does an official throw onto the field to signal a foul?	A yellow flag	A red card	A white towel	A green cone
+spo_sport_may_players	Medium	In which sport may players hit the ball only with the flat side of their stick?	Field hockey	Lacrosse	Hurling	Polo
+spw_krykiet_test	Medium	How many days can a cricket Test match last?	Five	Three	One	Seven
+spox_rugby_szkola	Medium	The sport of rugby is named after what?	An English school	A Welsh town	A Scottish king	A Roman game
+spo_team_ice_hockey	Medium	Which team did the US ice hockey team beat in the 1980 'Miracle on Ice'?	The Soviet Union	Canada	Finland	Sweden
+spo2_nba_punkty_kariera	Medium	Who is the NBA's all-time leading scorer?	LeBron James	Kareem Abdul-Jabbar	Michael Jordan	Karl Malone
+spo2_nba_najwiecej_tytulow	Hard	Which two clubs have won by far the most NBA titles?	The Boston Celtics and Los Angeles Lakers	The Chicago Bulls and Miami Heat	Golden State and the Spurs	The Knicks and the Nets
+spo3_rugby_punktacja	Hard	How many points is a try worth in rugby union?	Five	Three	Seven	Ten
+trv2_koszykowka_wynalazek	Hard	Who invented basketball in 1891?	James Naismith	Walter Camp	Abner Doubleday	Pierre de Coubertin
+spo_lombardi	Hard	The NFL's Super Bowl winners receive which trophy?	The Vince Lombardi Trophy	The Stanley Cup	The Larry O'Brien Trophy	The Commissioner's Trophy
+spox_jackie_robinson	Hard	Who broke Major League Baseball's colour barrier in 1947?	Jackie Robinson	Hank Aaron	Willie Mays	Satchel Paige
+spoy_webb_ellis	Hard	The Rugby World Cup trophy is named after whom?	William Webb Ellis	Jules Rimet	Pierre de Coubertin	Tom Richards
+spo_long_quarter_nba	Hard	How long is a quarter in an NBA game?	12 minutes	10 minutes	15 minutes	20 minutes
+spo_players_water_polo	Hard	How many players are in a water polo team in the water?	Seven	Six	Five	Eight
+spo_bandy_big_sweden	Hard	Bandy, big in Sweden and Russia, is like ice hockey but played with what instead of a puck?	A small ball	A rubber ring	A wooden disc	A shuttlecock
+spo_1972_olympics_team	Hard	At the 1972 Olympics, which team beat the USA in the basketball final after the last three seconds were replayed?	The Soviet Union	Yugoslavia	Cuba	Italy
+spo_baseball_team_became	Hard	Which baseball team became the 'Black Sox' after players took bribes to lose the 1919 championship?	The Chicago White Sox	The Boston Red Sox	The Cincinnati Reds	The New York Giants
+spo_team_sport_played	Hard	Which team sport, played with a flying disc, is normally played with no referee at all?	Ultimate	Netball	Lacrosse	Water polo
+spo_unusual_rule_korfball	Hard	What unusual rule does korfball, invented in the Netherlands, set for every team?	Half men and half women	All players under 21	No player taller than 2 m	One left-hander at least
+spo_sea_creature_detroit	Hard	Which sea creature do Detroit Red Wings fans traditionally throw onto the ice?	An octopus	A lobster	A squid	A catfish
+spo_buzkashi_afghanistan_national	Hard	In buzkashi, Afghanistan's national sport, horsemen fight over what?	A goat carcass	A leather ball	A wooden club	A flag on a pole
+spo_sport_match_divided	Hard	In which sport is a match divided into periods called 'chukkas'?	Polo	Cricket	Hurling	Lacrosse
+spo_nba_personal_fouls	Hard	In the NBA, how many personal fouls does it take for a player to foul out of a game?	Six	Five	Four	Seven
+spo_sport_england_scotland	Hard	In which sport do England and Scotland play each other for the Calcutta Cup?	Rugby union	Cricket	Golf	Curling
+spo_octopush_another_sport	Hard	'Octopush' is another name for which sport?	Underwater hockey	Water polo	Synchronised swimming	Underwater rugby
+spo_real_life_sport	Hard	What is the real-life sport adapted from Harry Potter's Quidditch called since 2022?	Quadball	Broomball	Snitchball	Hoopball
+spo_baseball_perfect_game	Hard	In baseball, what is a 'perfect game'?	No opposing batter reaches base	Every batter gets a hit	A game won without errors	A shutout won by ten runs
+spo_als_nerve_disease	Hard	ALS, the nerve disease, is widely known in the USA by the name of which baseball star?	Lou Gehrig	Babe Ruth	Joe DiMaggio	Mickey Mantle
+spo_australian_bowled_ball	Hard	Which Australian bowled 'the Ball of the Century' to England's Mike Gatting in 1993?	Shane Warne	Glenn McGrath	Dennis Lillee	Merv Hughes
+spo_may_outfield_players	Hard	What may outfield players in water polo NOT do with the ball?	Hold it with both hands	Swim while pushing it	Throw it with one hand	Pass it backwards
+spo_sport_champions_lift	Hard	In which sport do champions lift the Larry O'Brien Trophy?	Basketball	Ice hockey	Baseball	American football
+spo_cricket_maiden_over	Hard	In cricket, what is a 'maiden over'?	An over with no runs scored	A bowler's very first over	An over of seven balls	An over with a wicket every ball
+spo_country_won_olympic	Hard	Which country has won the most Olympic gold medals in men's field hockey?	India	The Netherlands	Germany	Australia
+spo_players_rugby_league	Hard	How many players are on a rugby league team on the field?	13	15	11	12
+spo_long_cricket_pitch	Hard	How long is a cricket pitch between the wickets?	22 yards	18 yards	25 yards	30 yards
+spo_shirt_number_every	Hard	Which shirt number has every Major League Baseball team retired, in honour of the man who broke its colour barrier?	42	7	23	3
+spo_nba_utah_jazz	Hard	Why does the NBA's Utah Jazz have a name that suits Utah so poorly?	The team began in New Orleans	Its first owner was a jazz singer	Fans chose it in a joke vote	It was named after a horse
+spo_against_batsman_england	Hard	Against which batsman was England's 'Bodyline' bowling of 1932-33 mainly aimed?	Don Bradman	Jack Hobbs	Wally Hammond	Victor Trumper
+spo_team_stunned_south	Hard	Which team stunned South Africa at the 2015 Rugby World Cup in the 'Miracle of Brighton'?	Japan	Fiji	Georgia	Samoa
+spo_makes_nfl_green	Hard	What makes the NFL's Green Bay Packers unique among big American pro teams?	They are owned by their fans	They play on a frozen lake	They have never moved stadium	They have no head coach
+spo_baseball_park_towering	Hard	In which baseball park does a towering left-field wall called 'the Green Monster' stand?	Fenway Park	Wrigley Field	Yankee Stadium	Dodger Stadium
+spo_team_won_record	Hard	Which team won a record 73 regular-season games in 2015-16 but then lost the NBA Finals?	Golden State Warriors	Chicago Bulls	San Antonio Spurs	Cleveland Cavaliers
+spo_2025_washington_capitals	Hard	In 2025, which Washington Capitals star broke the all-time NHL record for career goals?	Alex Ovechkin	Sidney Crosby	Evgeni Malkin	Connor McDavid
+spo_nfl_team_poem	Hard	Which NFL team is named after a poem by Edgar Allan Poe, who is buried in its city?	Baltimore Ravens	Philadelphia Eagles	Seattle Seahawks	Atlanta Falcons
+spo_sport_played_indigenous	Hard	Which sport, first played by Indigenous peoples of North America, is Canada's official national summer sport?	Lacrosse	Baseball	Canadian football	Soccer
+spo_major_league_baseball	Hard	In Major League Baseball, what is NOT the same in every ballpark?	Outfield wall distances	Distance between bases	Pitching distance	Ball size
+spo_must_kabaddi_raider	Hard	Why must a kabaddi raider keep chanting 'kabaddi'?	To prove one held breath	To scare defenders	To count the seconds	To call teammates
+spo2_siatkowka_libero	Hard	What can a libero not do in volleyball?	Attack with a jump above the net	Receive serves	Play defense	Sub in for another player
+trv2_siatkowka_wynalazek	Hard	In which country was volleyball invented?	The United States	Brazil	Japan	Italy
+spo_rpa_rugby	Hard	Which country has won the most Rugby World Cups?	South Africa	New Zealand	Australia	England
+spo_wielki_szlem_baseball	Hard	What is a 'grand slam' in baseball?	A home run with the bases loaded	Winning four big tournaments	Striking out three batters	A game with no hits allowed
+spo_lbw	Hard	In cricket, what does 'LBW' stand for?	Leg before wicket	Long ball wide	Lost ball waiting	Left behind wicket
+spox_pilka_reczna	Hard	In which sport must players not step inside the semicircle around the goal?	Handball	Water polo	Netball	Lacrosse
+spo_long_rugby_union	Hard	How long does a rugby union match last, not counting stoppages?	80 minutes	90 minutes	70 minutes	60 minutes
+spo_players_handball_team	Hard	How many players does a handball team have on court?	Seven	Six	Five	Eleven
+spo_baseball_team_ended	Hard	Which baseball team ended the 86-year 'Curse of the Bambino' in 2004?	Boston Red Sox	Chicago Cubs	New York Yankees	Cleveland Guardians
+spo_sport_players_bully	Hard	In which sport do players 'bully off' to start a game?	Field hockey	Ice hockey	Lacrosse	Polo
+spo_term_hat_trick	Hard	The term 'hat-trick' first came from which sport?	Cricket	Ice hockey	Football	Horse racing
+spo_baseball_team_curse	Hard	Which baseball team's 'Curse of the Billy Goat' finally ended with its 2016 title?	The Chicago Cubs	The Cleveland Indians	The Boston Red Sox	The Chicago White Sox
+spo_drop_goal_extra	Hard	Whose drop goal in extra time won England the 2003 Rugby World Cup final?	Jonny Wilkinson	Martin Johnson	Jason Robinson	Will Carling
+spo_sport_positions_goal	Hard	Which sport has positions called 'goal attack', 'wing defence' and 'centre'?	Netball	Handball	Water polo	Lacrosse
+spo_fans_nfl_team	Hard	Fans of which NFL team wear foam 'cheesehead' hats?	The Green Bay Packers	The Chicago Bears	The Minnesota Vikings	The Buffalo Bills
+spo_shirt_number_nhl	Hard	Which shirt number has the NHL retired for every team, in honour of 'the Great One'?	99	9	66	10
+spo_rugby_six_nations	Hard	In rugby's Six Nations, what is it called when a team beats all five opponents?	A Grand Slam	A Triple Crown	A Golden Boot	A Calcutta Cup
+spo_nba_giant_poor	Hard	Which NBA giant was so poor at free throws that rivals fouled him on purpose, a tactic named after him?	Shaquille O'Neal	Kareem Abdul-Jabbar	Yao Ming	Hakeem Olajuwon
+spo_los_angeles_lakers	Hard	The Los Angeles Lakers kept their name from their first home, in which US state of '10,000 lakes'?	Minnesota	Michigan	Wisconsin	Florida
+spo_water_polo_players	Hard	Water polo players stay afloat mostly with which kick?	Eggbeater kick	Butterfly kick	Flutter kick	Dolphin kick
+spo_long_may_attacker	Hard	How long may an attacker stand in the painted lane under the basket in basketball?	3 seconds	5 seconds	10 seconds	8 seconds
+spo_nba_wilt	Hard	Who scored 100 points in a single NBA game?	Wilt Chamberlain	Michael Jordan	Kobe Bryant	LeBron James
+spw_krykiet_bradman	Hard	Which cricketer finished with a Test batting average of 99.94?	Don Bradman	Sachin Tendulkar	Jack Hobbs	Vivian Richards
+ext_krykiet_mecz	Hard	The longest official cricket match in history lasted how long before being abandoned?	Twelve days	Three days	Five days	Eight days
+spo_kanada_1920	Hard	Which country won the first Olympic ice hockey tournament, in 1920?	Canada	The United States	Sweden	Czechoslovakia
+spo_country_won_rugby	Hard	Which country won the first Rugby World Cup, in 1987?	New Zealand	Australia	South Africa	England
+spo_pesapallo_fast_version	Hard	Pesapallo, a fast version of baseball, is the national sport of which country?	Finland	Norway	Estonia	Japan
+spo_became_bowler_take	Hard	Who became the first bowler to take 800 Test wickets in cricket?	Muttiah Muralitharan	Shane Warne	Anil Kumble	James Anderson
+spo_team_won_eight	Hard	Which team won eight NBA titles in a row, from 1959 to 1966?	The Boston Celtics	The Minneapolis Lakers	The Chicago Bulls	The Philadelphia Warriors
+spo_cricket_golden_duck	Hard	In cricket, what is a 'golden duck'?	Out on the first ball	Out without scoring	A century in one hour	Six sixes in an over
+spo_super_bowl_pierwszy	Expert	Which team won the first Super Bowl, in 1967?	Green Bay Packers	Kansas City Chiefs	New York Jets	Dallas Cowboys
+spo_pato_game_riders	Expert	Pato, a game in which riders fight for a ball with handles, is the national sport of which country?	Argentina	Mexico	Spain	Mongolia
+spo_sport_declared_national	Expert	Which sport was declared the national sport of Sri Lanka in 1991?	Volleyball	Cricket	Kabaddi	Badminton
+spo_nba_player_average	Expert	Who was the first NBA player to average a triple-double over a whole season, in 1961-62?	Oscar Robertson	Wilt Chamberlain	Bill Russell	Jerry West
+spo_pitcher_holds_major	Expert	Which pitcher holds Major League Baseball's career strikeout record, with 5,714?	Nolan Ryan	Randy Johnson	Roger Clemens	Sandy Koufax
+spo_baseball_iron_man	Expert	Which baseball 'Iron Man' played a record 2,632 consecutive games between 1982 and 1998?	Cal Ripken Jr.	Pete Rose	Derek Jeter	Ted Williams
+spo_ice_hockey_gordie	Expert	In ice hockey, what is a 'Gordie Howe hat trick'?	A goal, an assist and a fight	Three goals in one period	Three penalties in a game	A goal on each of three shots
+spo_scottish_stick_ball	Expert	Which Scottish stick-and-ball sport is played with a curved stick called a caman?	Shinty	Bandy	Lacrosse	Rounders
+spo_country_basketball_team	Expert	The first Olympic basketball final, in 1936, was played outdoors in the rain. Which country lost it to the USA?	Canada	Mexico	Italy	Philippines
+spo_gaelic_football_points	Expert	In Gaelic football, how many points is a goal under the crossbar worth?	3	1	2	6
+spo_polo_hand_must	Expert	In polo, in which hand must every player hold the mallet?	The right hand	The left hand	Either hand	Both hands
+spo_krykiet_1975	Expert	Which team won the first Cricket World Cup, in 1975?	The West Indies	Australia	England	India
+spo_players_polo_team	Expert	How many players are in a polo team?	Four	Six	Five	Seven
+spo_william_morgan_call	Expert	What did William G. Morgan call the game he invented in 1895, now known as volleyball?	Mintonette	Netball	Bounceball	Handtennis
+spo_nfl_team_completed	Expert	Which NFL team completed an unbeaten season, Super Bowl included, in 1972?	The Miami Dolphins	The Dallas Cowboys	The Green Bay Packers	The Pittsburgh Steelers
+spo_tiny_urn_england	Expert	The tiny urn that England and Australia play for in the Ashes is said to hold the ashes of what?	A burnt bail	A burnt scorebook	A burnt umpire's hat	A burnt glove
+spo_argentina_rugby_team	Expert	Argentina's rugby team is called 'Los Pumas', but which animal is actually on its badge?	A jaguar	A condor	A llama	A wolf
+spo_rugby_league_fierce	Expert	Rugby league's fierce 'State of Origin' series is played between which two sides?	Queensland and New South Wales	Victoria and New South Wales	Queensland and Victoria	Tasmania and Victoria
+spo_franco_harris_immaculate	Expert	Franco Harris's 1972 'Immaculate Reception' won a playoff game for which NFL team?	Pittsburgh Steelers	Oakland Raiders	Dallas Cowboys	Miami Dolphins
+spo_fans_nhl_team	Expert	Fans of which NHL team throw plastic rats onto the ice to celebrate?	Florida Panthers	Boston Bruins	Chicago Blackhawks	Toronto Maple Leafs
+spo_baseball_far_pitcher	Expert	In baseball, how far is the pitcher's rubber from home plate?	60 feet 6 inches	90 feet	45 feet	75 feet

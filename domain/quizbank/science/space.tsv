@@ -1,0 +1,342 @@
+# Space & Astronomy: astronomy, planets, stars, space missions, astronauts
+#
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+sci_merkury	Easy	Which planet is closest to the Sun?	Mercury	Venus	Earth	Mars
+sci_planety	Easy	How many planets does the Solar System have?	8	9	7	10
+space_pierscienie	Easy	Which planet is famous for its bright ring system?	Saturn	Uranus	Mars	Venus
+space_galaktyka	Easy	What is the name of our galaxy?	The Milky Way	Andromeda	Orion	Centaurus
+trv_rok_swietlny	Easy	What does a light-year measure?	Distance	Time	Brightness	Speed
+sci_spadajaca_gwiazda	Easy	What is a 'shooting star' really?	A meteor burning up in the air	A small star falling	A comet passing by	A satellite catching the light
+sci_neptun_bog	Easy	Which planet is named after the Roman god of the sea?	Neptune	Uranus	Saturn	Mercury
+sci_kometa_halleya	Easy	Which famous comet returns roughly every 76 years?	Halley's Comet	Hale-Bopp	Shoemaker-Levy 9	Comet Encke
+sci_zacmienie_slonca	Easy	What causes a solar eclipse?	The Moon passing in front of the Sun	Earth's shadow falling on the Sun	A cloud of cosmic dust	The Sun briefly cooling down
+sci_gwiazda_polarna	Easy	Which star is known as the North Star?	Polaris	Sirius	Vega	Betelgeuse
+sci_rok_przestepny	Easy	Why do we have leap years?	A year lasts about 365 and a quarter days	The Moon's orbit changes	To keep daylight saving in step	Earth speeds up every four years
+scix_slady_ksiezyc	Easy	Why will the footprints left on the Moon last for millions of years?	No wind or rain erases them	The dust there is frozen	They were sealed with glue	The Moon has no gravity
+sci_star_closest_earth	Easy	Which star is closest to the Earth?	The Sun	Proxima Centauri	Sirius	Polaris
+sci_brightest_natural_object	Easy	What is the brightest natural object in the night sky?	The Moon	Venus	Sirius	Jupiter
+sci_call_scientist_studies	Easy	What do you call a scientist who studies stars and planets?	An astronomer	An astrologer	A geologist	A meteorologist
+sci_call_recognisable_pattern	Easy	What do we call a recognisable pattern of stars in the sky, like Orion?	A constellation	A galaxy	A nebula	A solar system
+sci_supernova	Easy	What is a supernova?	A huge exploding star	A newly born planet	A very bright comet	A galaxy collision
+sci_call_moon_see	Easy	What do we call the Moon when we can't see any of its lit side?	A new moon	A full moon	A blue moon	A half moon
+sci_made_craters_moon	Easy	What made most of the craters on the Moon?	Impacts of space rocks	Ancient volcanoes	Moonquakes	Old lakes drying up
+sci_causes_day_night	Easy	What causes day and night on Earth?	The Earth spinning on its axis	The Earth circling the Sun	The Moon blocking the Sun	The Sun circling the Earth
+sci_planet_farthest_sun	Easy	Which planet is the farthest from the Sun?	Neptune	Uranus	Saturn	Jupiter
+sci_happens_lunar_eclipse	Easy	What happens during a lunar eclipse?	The Earth's shadow falls on the Moon	The Moon's shadow falls on the Earth	The Moon passes behind the Sun	Clouds cover the full Moon
+sci_largest_human_made	Easy	What is the largest human-made object ever put into orbit?	The International Space Station	The Hubble Space Telescope	The Mir space station	The James Webb telescope
+sci_keeps_planets_travelling	Easy	What keeps the planets travelling around the Sun instead of flying off into space?	The Sun's gravity	The Sun's magnetism	The solar wind	The pressure of sunlight
+sci_sundial_use_tell	Easy	What does a sundial use to tell the time?	The shadow cast by the Sun	The angle of the Moon	The heat of the sunlight	The position of the stars
+sci_look_distant_star	Easy	When you look at a distant star, what are you really seeing?	Light that left it long ago	The star exactly as it is now	Sunlight reflected off it	A glow made by our own air
+sci_see_stars_day	Easy	Why can't we see the stars during the day?	The bright sky drowns them out	They hide behind the Sun	They only shine at night	Sunlight pushes them away
+sci_sun_look_bigger	Easy	Why does the Sun look so much bigger and brighter than all the other stars?	It is far closer to us	It is the largest star in the galaxy	It is the hottest star there is	It is the youngest star nearby
+sci_bright_stars_line	Easy	How many bright stars line up to form Orion's Belt?	Three	Five	Seven	Two
+sci_clear_night_far	Easy	On a clear night far from city lights, what does the Milky Way look like?	A faint, milky band across the sky	A bright spiral right overhead	A single fuzzy star	A red glow near the horizon
+sci_time_day_shadow	Easy	At what time of day is your shadow shortest on a sunny day?	Around midday	Just after sunrise	Late in the afternoon	Just before sunset
+sci_planet_king_roman	Easy	Which planet is named after the king of the Roman gods?	Jupiter	Saturn	Mars	Mercury
+sci_planet_roman_god	Easy	Which planet is named after the Roman god of war?	Mars	Jupiter	Saturn	Mercury
+sci_ever_see_moon	Easy	Can you ever see the Moon in the daytime?	Yes, on many days of the month	No, never	Only during a solar eclipse	Only from the North Pole
+sci_car_journey_moon	Easy	On a car journey, why does the Moon seem to follow you?	It is so far away that it barely shifts	It really moves at the speed of the car	The car's window bends its light	Its gravity is pulling on the car
+sci_astronauts_iss_tie	Easy	Why do astronauts on the ISS tie their sleeping bags to the wall?	So they don't drift off while asleep	To keep warm against the hull	So the station stays balanced	To stop them from snoring
+sci_planets_easily_spot	Easy	Which of these planets can you easily spot with the naked eye on a clear night?	Jupiter	Neptune	Pluto	Eris
+sci_airless_moon_astronaut	Easy	On the airless Moon, an astronaut dropped a hammer and a feather at the same moment. What happened?	They hit the ground together	The hammer landed far sooner	The feather floated away	The feather landed first
+sci_jowisz	Easy	Which planet of the Solar System is the largest?	Jupiter	Saturn	Neptune	Uranus
+wld_czarna_dziura	Easy	Why is a black hole black?	Not even light can escape its gravity	It is made of dark matter	It is very cold	It absorbs only visible colours
+scix_hubble	Easy	Which space telescope, launched in 1990, is famous for its deep-space photos?	Hubble	Kepler	Spitzer	Chandra
+sci_solar_flare	Easy	What is a 'solar flare'?	A sudden burst of energy from the Sun	A ring of light around the Sun	A cooler patch on the Sun's surface	A comet falling into the Sun
+sci_astronauts_iss_exercise	Easy	Why do astronauts on the ISS exercise for about two hours a day?	To stop their muscles and bones wasting away	To keep the station from drifting off course	To make electricity for the station	To stop themselves floating while they sleep
+space_pas_planetoid	Medium	Between which two planets does the main asteroid belt lie?	Mars and Jupiter	Earth and Mars	Jupiter and Saturn	Venus and Earth
+space_plamy_sloneczne	Medium	What are sunspots?	Cooler regions of the Sun's surface	Holes punched through the Sun	Clouds of interstellar dust	Shadows cast by the planets
+space_kometa_ogon	Medium	Why does a comet grow a tail near the Sun?	Its ice turns to gas and is blown outward	It burns up in the solar wind	It spins fast enough to shed rock	It collides with belts of dust
+space_iss_orbita	Medium	Roughly how long does the ISS take to orbit Earth once?	About 90 minutes	About 24 hours	About 12 hours	About 3 hours
+space_faza_ksiezyca	Medium	What causes the phases of the Moon?	The changing angle of sunlight we see	The shadow Earth casts on it	Clouds drifting between the two	Light the Moon produces itself
+space_meteor_meteoryt	Medium	What do we call a space rock that survives and lands on Earth?	A meteorite	A meteor	A meteoroid	A comet
+sci2_ksiezyc_fazy	Medium	How long is a full cycle of Moon phases?	About 29.5 days	About 24 days	Exactly 30 days	About 365 days
+trv_ciezar_planety	Medium	On which of these planets would you weigh the most?	Jupiter	Mars	Venus	Earth
+trv_proxima	Medium	What is the nearest star to Earth after the Sun?	Proxima Centauri	Sirius	Betelgeuse	Polaris
+trv_olympus_mons	Medium	On which planet is Olympus Mons, the tallest known volcano in the Solar System?	Mars	Venus	Earth	Jupiter's moon Io
+wld_sci_mars_kolor	Medium	Why is Mars red?	Its soil is rich in iron oxide - rust	It is extremely hot	It reflects the Sun's red light	Its atmosphere is red gas
+sci_andromeda	Medium	Which is the nearest large galaxy to the Milky Way?	Andromeda	Triangulum	Sombrero	Whirlpool
+sci_astronauta_wyzszy	Medium	What happens to astronauts' height during a long stay in space?	They grow a few centimetres taller	They shrink a few centimetres	It does not change at all	Only their arms get longer
+sci_perseverance	Medium	Which NASA rover landed on Mars in 2021?	Perseverance	Curiosity	Opportunity	Spirit
+sci_webb	Medium	Which space telescope, launched in 2021, observes mainly in infrared?	The James Webb Space Telescope	The Hubble Space Telescope	The Kepler Space Telescope	The Chandra X-ray Observatory
+sci_niebieski_ksiezyc	Medium	What is a 'blue moon' usually taken to mean?	A second full moon in one month	A moon that looks blue	A full moon during an eclipse	The first full moon of spring
+sci_krwawy_ksiezyc	Medium	What colour does the Moon turn during a total lunar eclipse?	Red	Blue	Green	White
+sci_syriusz	Medium	Which is the brightest star in the night sky?	Sirius	Polaris	Betelgeuse	Vega
+sci_strefa_zycia	Medium	What is a star's 'Goldilocks zone'?	Where a planet could have liquid water	Its hottest inner layer	A ring of gold-rich asteroids	The area its light cannot reach
+sciy_ksiezyc_horyzont	Medium	Why does the Moon look bigger when it is near the horizon?	It is an illusion in our brain	It is closer to us then	The air magnifies it	It swells with the tides
+sciy_pierscienie_lod	Medium	What are Saturn's rings mostly made of?	Chunks of ice	Gold dust	Clouds of gas	Molten rock
+sciy_wielki_woz	Medium	The Big Dipper (the Plough) is part of which constellation?	Ursa Major	Orion	Cassiopeia	Ursa Minor
+sci_nasa_stand	Medium	What does NASA stand for?	National Aeronautics and Space Administration	North American Space Agency	National Astronomy and Science Association	National Agency for Space Advancement
+sci_kind_star_sun	Medium	What kind of star is the Sun?	A yellow dwarf	A red giant	A white dwarf	A neutron star
+sci_lies_centre_milky	Medium	What lies at the centre of the Milky Way?	A supermassive black hole	A gigantic blue star	A cloud of dark matter	An enormous white dwarf
+sci_nebula	Medium	What is a nebula?	A cloud of gas and dust in space	A star in its final stage	A small irregular galaxy	A ring of rocks round a planet
+sci_roughly_far_sun	Medium	Roughly how far is the Sun from the Earth?	150 million km	15 million km	1.5 billion km	1.5 million km
+sci_titan_moon_thick	Medium	Titan, a moon with a thick atmosphere, orbits which planet?	Saturn	Jupiter	Neptune	Uranus
+sci_part_sun_hottest	Medium	Which part of the Sun is the hottest?	The core	The surface	The sunspots	The visible edge
+sci_planet_closest_size	Medium	Which planet is closest in size to the Earth?	Venus	Mars	Mercury	Neptune
+sci_full_moon_nearest	Medium	What is the full moon nearest the autumn equinox traditionally called?	The harvest moon	The blood moon	The hunter's moon	The wolf moon
+sci_sun_glowing_outer	Medium	What is the Sun's glowing outer atmosphere, seen during a total eclipse, called?	The corona	The aurora	The halo	The photosphere
+sci_nasa_programme_send	Medium	What is the name of NASA's programme to send astronauts back to the Moon?	Artemis	Apollo	Gemini	Orion
+sci_supermoon	Medium	What is a 'supermoon'?	A full moon at its closest to Earth	A full moon that looks blue	A full moon during an eclipse	The first full moon of autumn
+sci_stars_twinkle	Medium	Why do stars twinkle?	Turbulent air bends their light	They pulse in brightness	Space dust drifts past them	They spin very fast
+sci_apollo_lunar_module	Medium	What was the name of the Apollo 11 lunar module that landed on the Moon?	Eagle	Falcon	Columbia	Odyssey
+sci_sun_moon_look	Medium	The Sun and the Moon look about the same size in our sky. Why?	The Sun is about 400 times wider and farther away	They are really almost exactly the same size	Our atmosphere magnifies the Moon at night	The Sun's glare hides most of its real disc
+sci_dark_patches_moon	Medium	The dark patches on the Moon are called 'maria'. What does this Latin word mean?	Seas	Mountains	Shadows	Scars
+sci_biggest_canyon_solar	Medium	The biggest canyon in the Solar System, Valles Marineris, is on which planet?	Mars	Venus	Mercury	Earth
+sci_moon_almost_atmosphere	Medium	Why does the Moon have almost no atmosphere?	Its gravity is too weak to hold one	The Sun burned its air away	Its rocks soak up every gas	The Earth pulls its air away
+sci_all_other_planets	Medium	Could all the other planets of the Solar System fit inside the biggest one at once?	Yes, with room to spare	No, Saturn alone is too big	No, only the four rocky ones	Only if Saturn lost its rings
+sci_expected_happen_milky	Medium	What is expected to happen to the Milky Way and its nearest big neighbour galaxy in about 4.5 billion years?	They will collide and merge	They will drift far apart	Andromeda will fade and die	They will swap places in the sky
+sci_roughly_far_through	Medium	Roughly how far through its life is the Sun?	About halfway	Near the very start	Near the very end	About one per cent
+sci_thought_greater_number	Medium	Which is thought to be greater: the number of stars in the universe or grains of sand on all Earth's beaches?	The stars	The grains of sand	They are about equal	Nobody can even guess
+sci_late_1800s_some	Medium	In the late 1800s, what did some astronomers believe they had seen on Mars?	Canals built by Martians	Rings like Saturn's	A huge carved face	Herds of animals
+sci_largest_four_rocky	Medium	Which is the largest of the four rocky planets?	Earth	Venus	Mars	Mercury
+sci_roughly_long_year	Medium	Roughly how long is a year on Mars?	About two Earth years	About six Earth months	About five Earth years	About the same as Earth's
+sci_meteor_showers_happen	Medium	Most meteor showers happen when the Earth passes through what?	Dust left behind by a comet	The tail of the Moon	The Sun's magnetic field	A cloud of Jupiter's gas
+sci_seismometers_left_moon	Medium	What did seismometers left on the Moon by Apollo astronauts detect?	Moonquakes	Underground rivers	Active volcanoes	Living microbes
+sci_drinking_water_iss	Medium	What is much of the drinking water on the ISS recycled from?	Astronauts' urine and sweat	Melted comet ice	Water mined on the Moon	Seawater shipped up in tanks
+sci_nasa_vomit_comet	Medium	What is NASA's 'Vomit Comet'?	A plane flying arcs to mimic weightlessness	A comet with a sickly green tail	A rocket ride for space tourists	A spinning chair for astronaut tests
+sci_big_dust_storms	Medium	How big can dust storms on Mars grow?	Big enough to cover the whole planet	About the size of a city	About the size of a football pitch	Only a few metres across
+sci_astronomers_call_point	Medium	What do astronomers call the point in the sky directly above you?	The zenith	The nadir	The apex	The meridian
+sci_astronauts_float_iss	Medium	Why do astronauts float on the ISS, where Earth's gravity is still about 90% as strong?	They are in constant free fall	The station shields them from gravity	Gravity cannot reach that high	The station spins to cancel it
+sci_dark_side_moon	Medium	What is the 'dark side of the Moon' really?	Its far side, which gets sunlight too	A side that never sees sunlight	The part hidden in Earth's shadow	A huge plain of dark lava rock
+sci_spacecraft_distant_human	Medium	Which spacecraft is the most distant human-made object from Earth?	Voyager 1	Voyager 2	Pioneer 10	New Horizons
+sci_pluto_reclassified_dwarf	Medium	When was Pluto reclassified as a dwarf planet?	2006	1999	2012	1986
+sci_venus_hotter_mercury	Medium	Why is Venus hotter than Mercury, though it is farther from the Sun?	Its thick air traps the heat	It spins much faster	It reflects less sunlight	Its surface is darker rock
+sci_see_annular_solar	Medium	What do you see during an annular solar eclipse?	A ring of Sun around the dark Moon	The Sun hidden for several hours	The Moon glowing deep red	Two shadows behind every object
+sci_shooting_stars_made	Medium	Most shooting stars are made by bits of space dust about the size of what?	A grain of sand	A football	A car	A house
+sci_photos_taken_apollo	Medium	Why do the photos taken by Apollo astronauts on the Moon show almost no stars?	The cameras were set for the bright ground	The Moon's dust blocks out starlight	Stars cannot be seen from the Moon at all	NASA removed them to sharpen the photos
+sci_all_big_planets	Medium	Why are all big planets and moons round, while small asteroids can be lumpy?	Strong gravity pulls them into a ball	Fast spinning grinds their corners off	The solar wind polishes them smooth	They formed from drops of molten lava
+sci_today_rockets_roughly	Medium	With today's rockets, roughly how long does a trip from Earth to Mars take?	About 7 months	About 3 weeks	About 3 years	About 3 days
+sci_roughly_long_apollo	Medium	Roughly how long did the Apollo 11 crew take to fly from the Earth to the Moon?	About 3 days	About 3 hours	About 3 weeks	About 3 months
+sci_north_star_barely	Medium	Why does the North Star barely move while other stars wheel across the night sky?	It lies almost straight above Earth's axis	It is much closer than the other stars	It moves at the same speed as the Earth	It is the brightest star in the sky
+sci2_pory_roku	Medium	What causes the seasons?	The tilt of Earth's axis	Changing distance from the Sun	The Moon's phase	Earth's rotation speed
+sci_wenus_jasna	Medium	Which planet shines brightest in the night sky?	Venus	Mars	Jupiter	Saturn
+sci_ziemia_nazwa	Medium	Which planet is the only one not named after a god?	Earth	Mars	Venus	Uranus
+sciy_poranna_gwiazda	Medium	Which planet is often called the 'Morning Star' and the 'Evening Star'?	Venus	Mars	Jupiter	Mercury
+sci_comet_mostly_made	Medium	What is a comet mostly made of?	Ice and dust	Molten rock	Pure iron	Burning gas
+sci_country_chandrayaan_mission	Medium	Which country's Chandrayaan-3 mission landed near the Moon's south pole in 2023?	India	China	Japan	Israel
+sci_international_space_station	Medium	What does the International Space Station look like from the ground at night?	A bright dot gliding across the sky	A blinking red and green light	A faint fuzzy patch like a comet	Nothing - it needs a telescope
+sci_colour_daytime_sky	Medium	What colour is the daytime sky on the Moon?	Black	Blue	Pale orange	White
+sci_planet_smallest_solar	Medium	Which planet is the smallest in the Solar System?	Mercury	Mars	Venus	Uranus
+sci_astronomers_call_planet	Medium	What do astronomers call a planet that orbits a star other than the Sun?	An exoplanet	A dwarf planet	A protostar	A quasar
+sci_call_two_days	Medium	What do we call the two days a year when day and night are roughly equal everywhere?	The equinoxes	The solstices	The eclipses	The zeniths
+sci_moon_waxing_happening	Medium	When the Moon is 'waxing', what is happening to it?	Its lit part grows each night	Its lit part shrinks each night	It is moving closer to Earth	It is passing through Earth's shadow
+sci_find_sea_tranquillity	Medium	Where would you find the Sea of Tranquillity?	On the Moon	In the Arctic Ocean	Off the coast of Japan	On the planet Mars
+space_czerwony_olbrzym	Medium	What will the Sun become near the end of its life?	A red giant, then a white dwarf	A black hole, then nothing	A supernova, then a nebula	A neutron star, then a pulsar
+space_efekt_dopplera	Medium	What does redshift tell astronomers about a distant galaxy?	It is moving away from us	It is moving towards us	It is getting much hotter	It is very young
+space_jowisz_plama	Medium	What is Jupiter's Great Red Spot?	A giant long-lived storm	A huge active volcano	A deep impact crater	A vast cloud of dust
+trv_mars_atmosfera	Medium	Which gas makes up most of the atmosphere of Mars?	Carbon dioxide	Nitrogen	Oxygen	Methane
+trv_saturn_plywa	Medium	Which planet is less dense than water and would float, in theory, in a big enough bathtub?	Saturn	Jupiter	Neptune	Mars
+wld_ksiezyc_strona	Medium	Why do we always see the same side of the Moon?	It spins once for every orbit of Earth	It doesn't spin at all	The other side is always dark	Earth's shadow hides it
+sci_ingenuity	Medium	What made the first powered flight on another planet, in 2021?	A small helicopter on Mars	A drone above Venus	A balloon on Titan	A glider on the Moon
+sci_spaghettifikacja	Medium	What does 'spaghettification' describe?	Objects stretched by a black hole	Noodles cooked in space	Light split into thin beams	Galaxies pulled into long arms
+sci_rosetta	Medium	On what did the Philae probe, carried by Rosetta, land in 2014?	A comet	An asteroid	Mars's moon Phobos	Venus
+sci_tunguska	Medium	The giant 1908 Tunguska blast flattened forest in which country?	Russia	Canada	Mongolia	Finland
+scix_voyager_plyta	Medium	What did NASA send aboard the Voyager probes as a message to any aliens who find them?	A golden record	A silver flag	A copy of the Bible	A DNA sample
+scix_czarna_dziura_foto	Medium	In 2019, scientists showed the world the first image of what?	A black hole	A planet orbiting another star	A cloud of dark matter	A neutron star
+sciy_pluton_serce	Medium	What huge shape did the New Horizons probe spot on Pluto in 2015?	A heart	A smiley face	A star	A cross
+sci_larger_moon_dwarf	Medium	Which is larger: our Moon or the dwarf planet Pluto?	Our Moon	Pluto	They are almost equal	Pluto, by twice the size
+sci_planet_cassini_probe	Medium	Which planet did the Cassini probe orbit for 13 years?	Saturn	Jupiter	Mars	Venus
+sci_country_became_third	Medium	Which country became the third to send humans into space on its own rockets, in 2003?	China	India	Japan	France
+sci_planet_nasa_juno	Medium	Which planet did NASA's Juno probe go to study?	Jupiter	Saturn	Venus	Mars
+sci_roughly_far_away	Medium	Roughly how far away is the nearest star after the Sun?	About 4 light-years	About 40 light-years	About 400 light-years	About 0.4 light-years
+sci_wrong_space_telescope	Medium	What was wrong with the famous space telescope launched in 1990 when it first reached orbit?	Its main mirror was the wrong shape	It was put into the wrong orbit	It had no camera on board	Its doors would not open
+sci_1954_ann_hodges	Medium	In 1954, Ann Hodges of Alabama became the first person known to be hit by what?	A meteorite	Ball lightning	A hailstone	A piece of a satellite
+sci_hubble_deep_field	Medium	For the Hubble Deep Field, astronomers aimed at a tiny patch of sky that looked empty. What did they find?	Thousands of galaxies	A handful of faint stars	A lone giant black hole	Nothing but darkness
+sci_planet_kepler_16b	Medium	The planet Kepler-16b was nicknamed 'Tatooine' after the 'Star Wars' world. Why?	It orbits two suns	It is a desert planet	It has two moons	It is covered in sand dunes
+sci_planet_far_strongest	Medium	Which planet has by far the strongest magnetic field?	Jupiter	Earth	Saturn	Mercury
+sci_dark_energy_thought	Medium	What is 'dark energy' thought to be doing to the universe?	Speeding up its expansion	Slowly shrinking it again	Holding galaxies together	Making stars burn out faster
+sci_brown_dwarf	Medium	What is a brown dwarf?	A body too small to become a true star	A dying star that has run out of fuel	A dwarf planet covered in brown dust	A small rocky moon of a gas giant
+sci_czarna_dziura	Medium	What is the boundary of a black hole called, beyond which nothing can escape?	The event horizon	The singularity	The accretion disk	The Roche limit
+dpt_nau_slonce_fuzja	Medium	What powers the Sun?	Hydrogen fusing into helium	Hydrogen burning in oxygen	Decay of heavy elements	Friction deep in its core
+sci_betelgeza	Medium	Which red supergiant in Orion dimmed dramatically in 2019 and 2020?	Betelgeuse	Rigel	Sirius	Antares
+space_najwiekszy_ksiezyc	Hard	Which is the largest moon in the Solar System?	Ganymede	Titan	Europa	The Moon
+space_europa_ocean	Hard	Which moon of Jupiter is thought to hide an ocean under its ice?	Europa	Io	Callisto	Titan
+space_voyager	Hard	Which spacecraft was the first to leave the heliosphere?	Voyager 1	Voyager 2	Pioneer 10	New Horizons
+space_mleczna_droga_typ	Hard	What type of galaxy is the Milky Way?	A barred spiral	An elliptical	An irregular	A lenticular
+trv_wenus_dzien	Hard	Which planet has a day that lasts longer than its year?	Venus	Mercury	Mars	Jupiter
+trv_neutron_gwiazda	Hard	A teaspoon of material from which object would weigh billions of tonnes?	A neutron star	The Sun	A white dwarf	Jupiter's core
+cur_mars_zachod	Hard	What colour are sunsets on Mars?	Blue	Red	Green	Purple
+sci_ksiezyc_doba	Hard	How long is one day on the Moon, from sunrise to sunrise?	About a month	About 24 hours	About a week	About a year
+sci_karman	Hard	At roughly what height does space 'officially' begin, at the Karman line?	100 km	10 km	1,000 km	36,000 km
+sci_ceres	Hard	Which dwarf planet is the largest body in the asteroid belt?	Ceres	Vesta	Pluto	Eris
+sci_neptun_rok	Hard	On which planet does one year last about 165 Earth years?	Neptune	Uranus	Saturn	Jupiter
+scix_gwiazdy_niebieskie	Hard	What colour are the hottest stars?	Blue	Red	Yellow	Orange
+scix_ksiezyc_powstanie	Hard	According to the leading theory, how did the Moon form?	From debris of a giant impact on Earth	It was captured as it passed by	It split off a fast-spinning Earth	It grew from the Sun's leftovers
+scix_gwiazdy_oko	Hard	Roughly how many stars can you see with the naked eye on a very dark, clear night?	A few thousand	A few hundred	A few million	About a billion
+scix_droga_mleczna	Hard	Roughly how many stars are there in the Milky Way?	100 to 400 billion	About a million	About a billion	About 10 trillion
+scix_leonow	Hard	Who made the first ever spacewalk, in 1965?	Alexei Leonov	Yuri Gagarin	Neil Armstrong	Ed White
+sci_pluto_orbits_region	Hard	Pluto orbits in which region of icy bodies beyond Neptune?	The Kuiper Belt	The asteroid belt	The Oort cloud	The Van Allen belt
+sci_pluto_largest_moon	Hard	What is the name of Pluto's largest moon?	Charon	Titan	Triton	Europa
+sci_china_space_station	Hard	What is the name of China's space station?	Tiangong	Mir	Salyut	Skylab
+sci_planet_moons_characters	Hard	Which planet has moons named after characters from Shakespeare?	Uranus	Neptune	Saturn	Jupiter
+sci_moon_saturn_shoots	Hard	Which moon of Saturn shoots geysers of water into space from an ocean under its ice?	Enceladus	Titan	Mimas	Iapetus
+sci_fills_lakes_seas	Hard	What fills the lakes and seas on the moon Titan?	Liquid methane and ethane	Ordinary liquid water	Molten sulfur and lava	Liquid nitrogen and argon
+sci_suggested_pluto_newly	Hard	Who suggested the name 'Pluto' for the newly found planet in 1930?	An 11-year-old English schoolgirl	The astronomer who discovered it	A cartoonist at Walt Disney	A Jesuit priest in Rome
+sci_found_permanently_shadowed	Hard	What has been found in permanently shadowed craters near the poles of Mercury?	Water ice	Lakes of lava	Liquid mercury	Frozen oxygen
+sci_astronauts_helmet_visors	Hard	Why do astronauts' helmet visors have a very thin layer of gold?	It reflects harsh sunlight and heat	It blocks radio interference	It stops the visor misting up	It shows the astronaut's rank
+sci_apollo_astronauts_said	Hard	Apollo astronauts said Moon dust smelled like what?	Spent gunpowder	Seared steak	Wet sand	Burnt sugar
+sci_space_rockets_launched	Hard	Why are many space rockets launched from sites close to the equator?	The Earth's spin gives them a free boost	The air there is much drier	There is far less lightning there	The ground there is more solid
+sci_mars_rover_built	Hard	Which Mars rover, built for a 90-day mission, kept working for about 14 years?	Opportunity	Spirit	Sojourner	Zhurong
+sci_polar_ice_caps	Hard	What are the polar ice caps of Mars made of?	Water ice and frozen carbon dioxide	Frozen methane and ammonia	Salt crystals and sand	Frozen nitrogen only
+sci_according_2018_study	Hard	According to a 2018 study, what would the clouds of Uranus smell like?	Rotten eggs	Burnt toast	Bitter almonds	Fresh rain
+sci_scientists_think_may	Hard	What do scientists think may fall like rain deep inside Uranus and Neptune?	Diamonds	Molten iron	Liquid gold	Glass beads
+sci_largest_moon_solar	Hard	The largest moon in the Solar System is wider than which planet?	Mercury	Mars	Venus	Earth
+sci_happening_jupiter_great	Hard	What has been happening to Jupiter's Great Red Spot for over a century?	It has been shrinking	It has been growing	It has turned blue	It has split in two
+sci_roughly_long_sun_2	Hard	Roughly how long is the Sun's cycle of rising and falling sunspot activity?	About 11 years	About 1 year	About 100 years	About 3 months
+sci_roughly_hot_sun	Hard	Roughly how hot is the Sun's thin outer atmosphere?	Over a million degrees	About 1,000 degrees	About 5,500 degrees	About 100 degrees
+sci_constellation_not_classic	Hard	Which constellation, not one of the 12 classic zodiac signs, does the Sun also pass through each year?	Ophiuchus	Orion	Pegasus	Cassiopeia
+sci_distant_thing_people	Hard	What is the most distant thing most people can see with the naked eye?	The Andromeda Galaxy	The Orion Nebula	The Pleiades	Polaris
+sci_roughly_long_light	Hard	Roughly how long does light take to cross the Milky Way?	About 100,000 years	About 100 years	About 10 million years	About 1,000 years
+sci_wow_signal_1977	Hard	What was the 'Wow!' signal of 1977?	A strong, unexplained radio signal from space	The first sound recorded on another planet	A message sent back by Voyager	A huge meteor seen over Ohio
+sci_roughly_hot_moon	Hard	Roughly how hot can the Moon's surface get at midday near its equator?	About 120 C	About 20 C	About 500 C	About -20 C
+sci_sometimes_see_dark	Hard	Why can you sometimes see the 'dark' part of a crescent Moon faintly glowing?	Sunlight reflected off the Earth	Its rocks glow after a hot day	Light from the Milky Way	Lava glowing beneath its crust
+sci_not_solar_eclipse	Hard	Why is there not a solar eclipse every single month?	The Moon's orbit is tilted to Earth's	The Moon is too small most months	Clouds hide most of them	The Sun drifts away each month
+sci_country_probes_land	Hard	Which country's probes were the first to land on Venus and send back pictures?	The Soviet Union	The USA	Japan	China
+sci_fermi_paradox_ask	Hard	What does the Fermi paradox ask?	Why we have found no sign of aliens	Why time slows near the speed of light	Why the universe expands ever faster	Why the Moon always shows one face
+sci_nasa_probe_became	Hard	Which NASA probe became the first to fly through the Sun's outer atmosphere, in 2021?	Parker Solar Probe	Solar Orbiter	SOHO	Ulysses
+sci_spacecraft_deliberately_crashed	Hard	Which spacecraft deliberately crashed into an asteroid in 2022 to change its orbit?	DART	Hayabusa2	OSIRIS-REx	Lucy
+sci_cloud_icy_bodies	Hard	What is the name of the cloud of icy bodies thought to surround the Solar System at its very edge?	Oort cloud	Kuiper belt	Asteroid belt	Heliopause
+sci_closest_point_earth	Hard	What is the name of the closest point of Earth's orbit to the Sun?	Perihelion	Aphelion	Perigee	Apogee
+sci_2013_meteor_exploded	Hard	In 2013, a meteor exploded over which Russian city, injuring about 1,500 people with flying glass?	Chelyabinsk	Novosibirsk	Yekaterinburg	Omsk
+sci_skylab_fell_western	Hard	When Skylab fell onto Western Australia in 1979, what did the town of Esperance do?	Fined NASA for littering	Declared a public holiday	Sued NASA for damages	Renamed its main street
+sci_because_moon_slowly	Hard	Because the Moon is slowly drifting away, what will eventually stop happening?	Total solar eclipses	Lunar eclipses	Ocean tides	Phases of the Moon
+sci_some_rocks_mars	Hard	How did some rocks from Mars end up lying on the ice of Antarctica?	Asteroid impacts blasted them off Mars	Apollo astronauts brought them back	A Mars probe dropped them	A passing comet carried them
+sci_among_eight_planets	Hard	Among the eight planets, which has the biggest moon compared with its own size?	Earth	Jupiter	Saturn	Neptune
+sci_1908_tunguska_blast	Hard	The 1908 Tunguska blast flattened about 80 million trees, yet left no crater. Why?	The space rock exploded in the air	The crater filled up with a lake	The impact hit soft frozen mud	It was a lightning strike, not a rock
+sci_all_planets_orbit	Hard	Why do all the planets orbit the Sun in roughly the same flat plane?	They formed from one spinning disc	The Sun's magnetism holds them level	The Milky Way's pull flattened them	They drifted there over billions of years
+sci_drake_equation_try	Hard	What does the Drake equation try to estimate?	How many alien civilisations could talk to us	How many more years the Sun will keep shining	How fast the whole Universe is expanding	How many planets orbit a typical star
+sci_anniversary_landing_2013	Hard	On the first anniversary of its landing, in 2013, what did NASA's Curiosity rover do on Mars?	Hummed 'Happy Birthday' to itself	Drew a smiley face in the dust	Wrote its own name in the sand	Fired its laser like a firework
+sci_small_part_snow	Hard	A small part of the 'snow' on an untuned analogue TV came from where?	The afterglow of the Big Bang	Earth's magnetic field	Moonlight on the aerial	Heat from the Sun's core
+sci_roughly_tall_olympus	Hard	Roughly how tall is Olympus Mons, the tallest volcano in the Solar System?	About 22 km	About 9 km	About 60 km	About 3 km
+sci_roughly_far_light	Hard	Roughly how far is one light-year?	About 9.5 trillion km	About 9.5 billion km	About 300 million km	About 950 trillion km
+sci_spacecraft_ever_fly	Hard	Which is the only spacecraft ever to fly past Uranus and Neptune?	Voyager 2	Voyager 1	Cassini	Pioneer 11
+sci_type_star_far	Hard	Which type of star is by far the most common in the Milky Way?	Red dwarfs	Yellow dwarfs like the Sun	Blue giants	Red supergiants
+sci_must_international_space	Hard	Why must the International Space Station fire its engines every so often?	Thin air slowly drags it lower	It drifts towards the Moon	Sunlight pushes it out of orbit	It slowly speeds up and could fly away
+sci_quasar	Hard	What is a quasar?	A very bright galaxy core powered by a black hole	A star that has just collapsed into a dwarf	A small, rocky planet without a star	A cloud of gas where new stars are born
+sci_colour_daytime_sky_2	Hard	What colour is the daytime sky on Mars?	A dusty butterscotch-pink	A deep blue like Earth's	A bright lime green	Pitch black like the Moon's
+space_wenus_obrot	Hard	Which planet rotates in the opposite direction to most others?	Venus	Mars	Neptune	Mercury
+trv_uran_bok	Hard	Which planet spins on its side, with its axis nearly in the plane of its orbit?	Uranus	Neptune	Saturn	Mars
+org_uran_teleskop	Hard	Which planet was the first ever found with a telescope rather than the naked eye?	Uranus	Neptune	Saturn	Mercury
+ext_slonce_masa	Hard	The Sun accounts for roughly what share of the Solar System's total mass?	Over 99%	About 70%	About 85%	About 95%
+sci_jowisz_doba	Hard	Which planet has the shortest day, lasting under 10 hours?	Jupiter	Mercury	Mars	Earth
+sci_saturn_ksiezyce	Hard	As of 2025, which planet has the most known moons?	Saturn	Jupiter	Uranus	Neptune
+sci_slonce_ziemie	Hard	Roughly how many Earths could fit inside the Sun?	About 1.3 million	About 100	About 1,000	About 1 billion
+sci_slonce_kolor	Hard	Seen from space, what colour is the Sun?	White	Yellow	Orange	Red
+sci_ksiezyc_ludzie	Hard	How many people have walked on the Moon?	Twelve	Six	Two	Twenty-four
+scix_ksiezyc_ziemia	Hard	Roughly how many Moons would fit side by side across the Earth?	About four	About ten	About one and a half	About forty
+scix_ksiezyc_sekunda	Hard	Roughly how long does light take to travel from the Moon to the Earth?	About 1 second	About 8 minutes	About 1 hour	About 1 day
+sci_spacex_giant_reusable	Hard	What is the name of SpaceX's giant reusable rocket, the most powerful ever flown?	Starship	Falcon Heavy	Dragon	New Glenn
+sci_planet_takes_earth	Hard	Which planet takes about 12 Earth years to orbit the Sun?	Jupiter	Saturn	Mars	Uranus
+sci_moon_jupiter_volcanically	Hard	Which moon of Jupiter is the most volcanically active body in the Solar System?	Io	Europa	Callisto	Ganymede
+sci_meteor_shower_lights	Hard	Which meteor shower lights up the sky every August?	Perseids	Leonids	Geminids	Orionids
+sci_animals_sent_space	Hard	What were the first animals sent into space, in 1947?	Fruit flies	Dogs	Monkeys	Mice
+sci_planets_solar_system	Hard	How many planets in our Solar System have rings?	Four	One	Two	Six
+sci_last_apollo_astronaut	Hard	Who was the last Apollo astronaut to walk on the Moon, in 1972?	Eugene Cernan	Buzz Aldrin	Alan Shepard	Jim Lovell
+sci_became_paying_space	Hard	Who became the first paying space tourist, in 2001?	Dennis Tito	Richard Branson	Elon Musk	Mark Shuttleworth
+sci_shape_candle_flame	Hard	What shape is a candle flame on board the International Space Station?	A round ball	A long thin spike	A flat ring	A normal teardrop
+sci_roughly_sunrises_astronauts	Hard	Roughly how many sunrises do astronauts on the ISS see every day?	About 16	Just 1	About 4	About 100
+sci_thick_clouds_venus	Hard	What are the thick clouds of Venus made of?	Sulfuric acid droplets	Water ice crystals	Frozen methane	Volcanic ash
+sci_constellation_looks_like	Hard	Which constellation looks like a large 'W' in the northern sky?	Cassiopeia	Orion	Cygnus	Lyra
+sci_moon_saturn_looks	Hard	Which moon of Saturn looks like the Death Star from 'Star Wars', thanks to one giant crater?	Mimas	Titan	Rhea	Iapetus
+sci_roughly_long_sunlight	Hard	Roughly how long does sunlight take to reach distant Pluto?	About 5 hours	About 30 minutes	About 3 days	About 2 weeks
+sci_steady_100_roughly	Hard	At a steady 100 km/h, roughly how long would a drive to the Moon take?	About 5 months	About 5 days	About 5 weeks	About 5 years
+sci_full_moon_rise	Hard	Why does a full moon rise at about the time the Sun sets?	It sits opposite the Sun in the sky	The Moon only orbits at night	Earth's shadow lets it appear	Moonlight builds up through the day
+sci_word_planet_originally	Hard	What does the word 'planet' originally mean in Greek?	Wanderer	Giant	Light-bearer	Child of the Sun
+sci_two_planets_moons	Hard	Which two planets have no moons at all?	Mercury and Venus	Mars and Venus	Mercury and Mars	Venus and Uranus
+sci_north_star_but	Hard	The North Star is famous, but roughly where does it rank among the brightest stars in the night sky?	Only around 50th	It is the brightest	It is the second brightest	In the top five
+sci_astronomers_call_line	Hard	What do astronomers call the line between day and night on a planet or moon?	The terminator	The meridian	The horizon	The equator
+sci_gives_uranus_neptune	Hard	What gives Uranus and Neptune their blue colour?	Methane in their atmospheres	Oceans of liquid water	Blue copper dust	Reflected light from Saturn
+sci_mars_seasons_like	Hard	Why does Mars have seasons, much like Earth?	Its axis is tilted about as much as Earth's	Its two moons pull it towards the Sun	Its oceans freeze and thaw	Its dust storms come every few months
+sci_month_earth_closest	Hard	In which month is the Earth closest to the Sun?	January	July	June	March
+sci_planet_greek_god	Hard	Which planet is the only one named after a Greek god rather than a Roman one?	Uranus	Neptune	Mercury	Mars
+sci_constellations_officially_recognised	Hard	How many constellations are officially recognised by astronomers today?	88	12	48	150
+sci_spacecraft_crossing_asteroid	Hard	Do spacecraft crossing the asteroid belt usually have to dodge rocks?	No, the asteroids are far apart	Yes, they swerve every few minutes	Yes, they need rock shields	Only on the side nearest Mars
+sci_happens_astronaut_tears	Hard	What happens to an astronaut's tears in space?	They cling to the eye in a watery ball	They run down the cheeks as usual	They freeze into tiny crystals	They evaporate instantly
+sci_besides_earth_planets	Hard	Besides Earth, how many planets are easy to spot with the naked eye?	Five	Two	Seven	None
+sci_2005_huygens_probe	Hard	In 2005, the Huygens probe made the most distant landing ever, on which moon?	Titan	Europa	Ganymede	Enceladus
+sci_man_moon_look	Hard	Why does the 'man in the Moon' look upside down to people in Australia?	They see it from the Southern Hemisphere	The Moon turns over every night	Australia sees the Moon's far side	The ocean air there bends moonlight
+sci_mars_mission_scientists	Hard	What do Mars mission scientists call one day on Mars?	A sol	A mar	A rev	A dia
+sci_roughly_fast_international	Hard	Roughly how fast does the International Space Station travel?	About 28,000 km/h	About 2,800 km/h	About 900 km/h	About 280,000 km/h
+space_pulsar	Hard	What is a pulsar?	A rapidly rotating neutron star emitting beams	A red giant pulsating as it cools	A pair of black holes in orbit	A protostar still gathering mass
+space_soczewkowanie	Hard	What is gravitational lensing?	Mass bending the path of light	A telescope defect	Light slowing in vacuum	Refraction in the atmosphere
+space_parallaksa	Hard	What does stellar parallax allow astronomers to measure?	The distance to nearby stars	A star's temperature	A star's chemical makeup	A star's rotation
+sci2_cmb	Hard	What is the cosmic microwave background radiation?	A remnant of the early Universe	Emission from the Milky Way	Radiation from the Sun	Detector noise
+dpt_nau_ciemna_materia	Hard	How does dark matter reveal itself?	By its pull on whole galaxies	By the faint light it gives off	By the radio waves it absorbs	By the heat it leaves in dust
+cur_kosmos_zapach	Hard	Astronauts say space smells like what, on their suits after a spacewalk?	Seared steak and hot metal	Fresh rain	Nothing at all	Rotten eggs
+sci_materia_zwykla	Hard	Roughly what share of the universe is made of ordinary matter?	About 5%	About 25%	About 50%	About 90%
+sci_salut	Hard	What was the name of the first space station, launched in 1971?	Salyut 1	Mir	Skylab	Tiangong 1
+sci_saturn_szesciokat	Hard	Which planet has a hexagon-shaped storm at its north pole?	Saturn	Jupiter	Neptune	Uranus
+sci_shoemaker	Hard	Which comet smashed into Jupiter in 1994?	Shoemaker-Levy 9	Halley's Comet	Hale-Bopp	Tempel 1
+scix_lustra_ksiezyc	Hard	What did Apollo astronauts leave on the Moon that scientists still bounce lasers off?	Mirror reflectors	Radio beacons	Solar panels	Metal flags
+sciy_fobos_dejmos	Hard	What are the names of Mars's two moons?	Phobos and Deimos	Io and Europa	Titan and Rhea	Castor and Pollux
+sciy_kosmos_temperatura	Hard	What is the background temperature of deep space?	About -270 °C	About -50 °C	About 0 °C	About -1,000 °C
+sci_spacecraft_took_pale	Hard	Which spacecraft took the famous 'Pale Blue Dot' photo of Earth in 1990?	Voyager 1	Hubble	Apollo 17	Pioneer 10
+sci_made_object_oumuamua	Hard	What made the object 'Oumuamua, spotted in 2017, a first?	It came from another star system	It was a comet made of iron	It orbited between Earth and Moon	It was a moon of Pluto
+sci_astronomers_jokingly_label	Hard	What did astronomers jokingly label the first pulsar signal, picked up in 1967?	LGM-1, for 'little green men'	ET-1, for 'extraterrestrial'	SOS-1, for a distress call	HAL-1, after the film computer
+sci_since_discovery_1930	Hard	Since its discovery in 1930, how much of one orbit around the Sun has Pluto completed?	Less than half	Exactly one full orbit	About two full orbits	About three quarters
+sci_1800s_astronomers_hunted	Hard	In the 1800s, astronomers hunted for 'Vulcan', a planet supposedly hidden where?	Inside the orbit of Mercury	Beyond the orbit of Neptune	Between Mars and Jupiter	Behind the Sun, opposite Earth
+space_chandrasekhar	Expert	What does the Chandrasekhar limit describe?	The maximum mass of a stable white dwarf	The largest size a galaxy reaches	The fastest spin a pulsar can hold	The longest life of a red giant
+space_supernowa_ia	Expert	Why are Type Ia supernovae useful in astronomy?	They have a known brightness, so they measure distance	They are the brightest objects ever observed	They repeat on a fixed, predictable schedule	They emit nothing except radio waves
+space_lagrange	Expert	What is special about a Lagrange point?	Gravity lets an object hold position relative to two bodies	Gravity there cancels out to exactly zero	It is the hottest point along the whole orbit	It marks the outer edge of a solar system
+sci_tryton	Expert	Which planet has a large moon, Triton, that orbits it backwards?	Neptune	Uranus	Saturn	Jupiter
+sci_change4	Expert	Which probe made the first soft landing on the far side of the Moon, in 2019?	Chang'e 4	Luna 9	Apollo 16	Chandrayaan-2
+scix_neptun_wiatr	Expert	Which planet has the fastest winds in the Solar System?	Neptune	Jupiter	Saturn	Venus
+scix_geostacjonarna	Expert	At about what height do geostationary satellites orbit, staying above one spot on Earth?	About 36,000 km	About 400 km	About 3,600 km	About 360,000 km
+sci_because_earth_axis	Expert	Because Earth's axis slowly wobbles, which bright star will be the 'North Star' in about 12,000 years?	Vega	Sirius	Arcturus	Betelgeuse
+sci_roughly_mass_sun	Expert	Roughly how much of its mass does the Sun turn into energy every second?	About 4 million tonnes	About 4 kilograms	About 4 tonnes	About 4 billion tonnes
+sci_because_uranus_tipped	Expert	Because Uranus is tipped on its side, roughly how long does continuous daylight last at each of its poles?	About 42 years	About 42 days	About 4 years	About 420 years
+sci_full_moon_looks	Expert	The full Moon looks dazzling, but its surface reflects only about as much light as what?	Worn asphalt	Fresh snow	A bathroom mirror	White paint
+sci_roche_limit_describe	Expert	What does the Roche limit describe?	The distance at which tides rip a moon apart	The speed a rocket needs to escape a planet	The heaviest a star can be before collapsing	The edge of the Sun's magnetic influence
+sci_probe_orbited_dwarf	Expert	Which probe orbited the dwarf planet Ceres in the asteroid belt?	Dawn	Rosetta	Lucy	Psyche
+sci_coldest_natural_place	Expert	Which is the coldest known natural place in the universe, about 1 degree above absolute zero?	The Boomerang Nebula	The surface of Pluto	Neptune's moon Triton	The Moon's polar craters
+sci_moon_make_own	Expert	Which is the only moon known to make its own magnetic field?	Ganymede	Titan	Io	Europa
+sci_moon_saturn_half	Expert	Which moon of Saturn has one half dark as coal and the other bright as snow?	Iapetus	Mimas	Rhea	Dione
+sci_verona_rupes_perhaps	Expert	Verona Rupes, perhaps the tallest cliff in the Solar System, is on a moon of which planet?	Uranus	Jupiter	Saturn	Neptune
+sci_mercury_surface_criss	Expert	Why is Mercury's surface criss-crossed by long cliffs, like wrinkles on a raisin?	The planet shrank as its core cooled	Huge quakes split its crust	Ancient rivers carved them	The Sun's tides stretched it
+sci_sun_not_solid	Expert	The Sun is not solid. How does this show in the way it spins?	Its equator spins faster than its poles	It spins backwards every 11 years	Its poles spin faster than its equator	Only its core spins at all
+sci_kessler_syndrome_warn	Expert	What does the 'Kessler syndrome' warn about?	A chain reaction of space-junk crashes	Astronauts losing bone in space	Radio noise from the Sun	Rockets damaging the ozone layer
+sci_planet_found_around	Expert	The first planet found around a Sun-like star, in 1995, surprised astronomers because it was what?	A giant orbiting closer than Mercury does	A rocky world just like our Earth	A ringed giant planet like Saturn	A moon drifting with no planet
+sci_far_side_moon	Expert	Why does the far side of the Moon look so different from the near side?	It has almost no dark 'seas'	It is covered in ice	It is made of darker rock	It has no craters at all
+sci_soviet_venera_lander	Expert	The Soviet Venera 13 lander touched down on Venus in 1982. Roughly how long did it survive?	About 2 hours	About 2 days	About 2 weeks	About 2 minutes
+sci_1974_arecibo_radio	Expert	In 1974, the Arecibo radio telescope beamed a picture message towards what?	A cluster of stars	The nearest star	The Andromeda Galaxy	The centre of the Milky Way
+sci_1999_ashes_became	Expert	In 1999, whose ashes became the first human remains to reach the Moon?	Eugene Shoemaker's	Neil Armstrong's	Carl Sagan's	Wernher von Braun's
+sci_pressure_waves_around	Expert	Pressure waves around the black hole in the Perseus galaxy cluster match a note about how far below middle C?	57 octaves	7 octaves	17 octaves	570 octaves
+sci_moon_saturn_porous	Expert	Which moon of Saturn is so porous that it looks like a giant sponge?	Hyperion	Mimas	Iapetus	Dione
+sci_chinese_astronomers_recorded	Expert	Chinese astronomers recorded the star explosion that made the Crab Nebula in 1054. What was remarkable about it?	It was visible in daylight for weeks	It turned the night sky red	It could be heard as a loud bang	It lit up only the southern sky
+sci_dwarf_planet_stretched	Expert	Which dwarf planet is stretched into an egg shape because it spins once every four hours?	Haumea	Ceres	Eris	Makemake
+sci_planet_slowly_shifting	Expert	Which planet's slowly shifting orbit puzzled astronomers until Einstein's general relativity explained it in 1915?	Mercury	Venus	Uranus	Neptune
+sci_planet_found_orbiting	Expert	Which was the first planet found orbiting a Sun-like star, in 1995?	51 Pegasi b	Proxima Centauri b	Kepler-22b	TRAPPIST-1e
+sci_planet_rings_discovered	Expert	Which planet's rings were discovered in 1977, when a star flickered on both sides of it?	Uranus	Neptune	Jupiter	Saturn
+sci_roughly_far_away_3	Expert	Roughly how far away is the edge of the observable universe?	About 46 billion light-years	About 13.8 billion light-years	About 4 billion light-years	About 1 million light-years
+sci_giant_supercluster_galaxies	Expert	What is the name of the giant supercluster of galaxies, mapped in 2014, that includes our Milky Way?	Laniakea	Andromeda	Magellan	Shapley
+sci_sun_suddenly_vanished	Expert	If the Sun suddenly vanished, when would the Earth stop feeling its pull?	After about 8 minutes	Instantly	After about 8 seconds	After about 8 days
+sci_thanks_moon_slight	Expert	Thanks to the Moon's slight wobble, roughly how much of its surface can we see from Earth over time?	About 59%	Exactly 50%	About 90%	About 25%
+sci_mercury_full_day	Expert	On Mercury, a full day from one sunrise to the next lasts about how long?	About 176 Earth days	About 59 Earth days	About 88 Earth days	About 24 hours
+sci_uran_zimny	Expert	Which planet has the coldest recorded atmosphere in the Solar System?	Uranus	Neptune	Saturn	Mars
+sci_halley_2061	Expert	In which year is Halley's Comet next expected to be close to the Sun?	2061	2031	2046	2086
+sci_average_planet_closest	Expert	On average, which planet is closest to the Earth?	Mercury	Venus	Mars	Jupiter
+sci_planet_volcanoes	Expert	Which planet has the most volcanoes?	Venus	Mars	Earth	Mercury
+sci_densest_planet_solar	Expert	Which is the densest planet in the Solar System?	Earth	Jupiter	Mercury	Saturn
+sci_roughly_long_sun	Expert	Roughly how long does the Sun take to orbit the centre of the Milky Way once?	About 230 million years	About 230,000 years	About 23,000 years	About 23 billion years
+sci_some_ashes_pluto	Expert	Some of the ashes of Pluto's discoverer flew past Pluto aboard New Horizons. Who was he?	Clyde Tombaugh	Percival Lowell	Edwin Hubble	Carl Sagan
+sci_standing_surface_venus	Expert	Standing on the surface of Venus, the air pressure would feel like being how deep in Earth's oceans?	About 900 m	About 9 m	About 90 m	About 9 km
+sci_energy_made_sun	Expert	Energy made in the Sun's core takes roughly how long to reach its surface?	Many thousands of years	About 8 minutes	About a day	About a year
+sci_roughly_total_mass	Expert	Roughly how does the total mass of the main asteroid belt compare with our Moon?	Only a few per cent of it	About the same	About ten times more	About a hundred times more
+sci_planets_usually_shine	Expert	Why do planets usually shine more steadily than stars?	They look like tiny discs, not points	They give off their own steady light	They lie above the Earth's air	They are always lit by the Moon
+sci_saturn_main_rings	Expert	Saturn's main rings are hundreds of thousands of km wide. Roughly how thick are they?	Often just tens of metres	About 1,000 kilometres	About 50,000 kilometres	About 10,000 kilometres
+sci_comet_heads_back	Expert	As a comet heads back away from the Sun, which way does its tail point?	Ahead of it, away from the Sun	Behind it, towards the Sun	Straight down, towards Earth	Towards the nearest planet
+sci_roughly_long_total	Expert	At most, roughly how long can a total solar eclipse last at one spot?	About 7 minutes	About 1 hour	About 30 seconds	About 3 hours
+sci_giant_infrared_space	Expert	The giant infrared space telescope launched in 2021 works roughly how far from Earth?	About 1.5 million km	About 400 km	About 36,000 km	About 150 million km
+sci_dwarf_planet_discovery	Expert	Which dwarf planet's discovery in 2005 led to Pluto losing its planet status?	Eris	Ceres	Sedna	Charon
+sci_huge_solar_storm	Expert	During the huge solar storm of 1859, what happened to some telegraph lines?	They ran with batteries unplugged	They melted on their poles	They went silent for a year	They glowed bright green
+sci_1989_solar_storm	Expert	In 1989, a solar storm knocked out power for nine hours across which Canadian province?	Quebec	Ontario	Alberta	Manitoba
+sci_expected_happen_mars	Expert	What is expected to happen to Mars's larger moon over the next few tens of millions of years?	It will spiral in and break up	It will drift off into space	It will merge with the smaller moon	It will settle into a stable orbit
+sci_olbers_paradox_asks	Expert	'Olbers' paradox' asks a simple-sounding question. Which one?	Why is the night sky dark?	Why is the sky blue?	Why do stars twinkle?	Why does the Moon look bigger low down?
+sci_largest_meteorite_tonnes	Expert	The largest known meteorite, about 60 tonnes, still lies where it fell in which country?	Namibia	Australia	Mexico	Canada
+sci_every_years_saturn	Expert	Every 13 to 16 years, Saturn's rings almost vanish from view in telescopes. Why?	We see them exactly edge-on	They freeze and turn dark	Saturn's shadow covers them	The solar wind blows them thin
+sci_astronauts_often_see	Expert	Astronauts often see brief flashes of light even with their eyes shut. What causes them?	Cosmic rays passing through their eyes	Starlight shining through their eyelids	Sparks from the static in their suits	Their eyes adjusting to weightlessness
+sci_planet_huge_storm	Expert	Which planet had a huge storm called the 'Great Dark Spot' when Voyager 2 flew past in 1989?	Neptune	Uranus	Saturn	Jupiter
+sci_slowly_happening_saturn	Expert	What is slowly happening to Saturn's rings?	Their ice is raining down onto the planet	They are spreading out to swallow its moons	They are freezing into one solid sheet	They are being blown away by the Sun
+sci_pleiades_star_cluster	Expert	The Pleiades star cluster lies in which constellation?	Taurus	Orion	Gemini	Ursa Major
+sci_stars_make_alpha	Expert	How many stars make up the Alpha Centauri system, our nearest stellar neighbour?	Three	One	Two	Seven

@@ -1,0 +1,162 @@
+# Football: football (soccer): clubs, players, World Cups, Euros, rules
+#
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+spw_hat_trick	Easy	What is a 'hat-trick' in football?	Three goals by one player in a match	Three saves in a row	Three matches without conceding	Three yellow cards
+spo_piekna_gra	Easy	Which sport is often called 'the beautiful game'?	Football	Tennis	Cricket	Rugby
+spo_cr7	Easy	Which footballer is known by the nickname 'CR7'?	Cristiano Ronaldo	Ronaldinho	Ronaldo Nazario	Roberto Carlos
+spo_messi_kraj	Easy	Which national team has Lionel Messi played for?	Argentina	Spain	Brazil	Uruguay
+spo_mundial_2026	Easy	Which three countries hosted the 2026 FIFA World Cup?	USA, Canada and Mexico	Spain, Portugal and Morocco	Brazil, Argentina and Chile	Japan, South Korea and China
+spo_camp_nou	Easy	Which football club plays at the Camp Nou?	FC Barcelona	Real Madrid	Atletico Madrid	Valencia
+spo_reka_boga	Easy	Which footballer scored the famous 'Hand of God' goal in 1986?	Diego Maradona	Pele	Lionel Messi	Zinedine Zidane
+spox_czerwona_kartka	Easy	What does a red card mean in football?	The player is sent off	A penalty kick	A free kick	A first warning
+spo_national_team_kylian	Easy	Which national team does Kylian Mbappe play for?	France	Belgium	Cameroon	Portugal
+spo_club_lionel_messi	Easy	For which club did Lionel Messi play from boyhood until 2021?	FC Barcelona	Real Madrid	Paris Saint-Germain	Inter Miami
+spo_england_captain_curling	Easy	Which England captain was famous for his curling free kicks and No. 7 shirt?	David Beckham	Wayne Rooney	Steven Gerrard	Frank Lampard
+spo_london_stadium_home	Easy	Which London stadium is the home of England's national football team?	Wembley	Twickenham	Old Trafford	Stamford Bridge
+spo_football_marked_area	Easy	In football, in which marked area may the goalkeeper handle the ball?	The penalty area	The centre circle	The corner arc	The halfway line
+spo_country_striker_erling	Easy	Which country does the striker Erling Haaland play for?	Norway	Denmark	Sweden	Iceland
+spo_colour_card_football	Easy	What colour card does a football referee show as a warning?	Yellow	Red	Blue	Green
+spo_country_bundesliga_top	Easy	In which country is the Bundesliga the top football league?	Germany	Austria	Switzerland	The Netherlands
+spo_country_serie_top	Easy	In which country is Serie A the top football league?	Italy	Spain	Portugal	France
+spo_country_cristiano_ronaldo	Easy	Which national team has Cristiano Ronaldo played for?	Portugal	Spain	Brazil	Italy
+spo_country_footballer_neymar	Easy	Which national team has the footballer Neymar played for?	Brazil	Argentina	Portugal	Colombia
+spo_country_footballer_zlatan	Easy	Which country is the footballer Zlatan Ibrahimovic from?	Sweden	Bosnia and Herzegovina	Croatia	Denmark
+spo_london_football_club	Easy	Which London football club is known as 'Spurs'?	Tottenham Hotspur	Arsenal	Chelsea	Crystal Palace
+spo_national_football_team_2	Easy	Which national football team plays in bright orange, the colour of its royal family?	The Netherlands	Belgium	Denmark	Spain
+spo_country_national_football	Easy	Which country's national football team is nicknamed 'Les Bleus'?	France	Belgium	Scotland	Greece
+spo_sport_might_player	Easy	In which sport might a player score with an acrobatic overhead 'bicycle kick'?	Football	Rugby union	Volleyball	Handball
+spo_national_football_team_4	Easy	Which national football team is nicknamed 'the Three Lions'?	England	Wales	Scotland	Belgium
+spo_city_football_rivals	Easy	In which city do the football rivals Lazio and Roma both play?	Rome	Naples	Turin	Florence
+spo_letters_stand_english	Easy	What do the letters 'FA' stand for in the English 'FA Cup'?	Football Association	Football Alliance	Football Academy	Federation of Athletics
+spo_football_attacker_beyond	Easy	In football, what is it called when an attacker is beyond the last defender as the ball is played to them?	Offside	A foul	A handball	A dive
+spo_footballer_nicknamed_rei	Easy	Which famous footballer was nicknamed 'O Rei', the King?	Pele	Ronaldo	Garrincha	Zico
+spox_katar	Easy	Which country hosted the 2022 FIFA World Cup?	Qatar	Saudi Arabia	The UAE	Russia
+spox_var	Easy	What does 'VAR' stand for in football?	Video Assistant Referee	Visual Action Replay	Video Area Review	Verified Action Result
+spox_el_clasico	Easy	Which two clubs meet in 'El Clasico'?	Real Madrid and Barcelona	Barcelona and Atletico	Real Madrid and Sevilla	Valencia and Barcelona
+spo_city_san_siro	Easy	In which city is the San Siro stadium, shared by AC Milan and Inter?	Milan	Turin	Rome	Naples
+spo_footballer_nicknamed_egyptian	Easy	Which footballer is nicknamed 'the Egyptian King'?	Mohamed Salah	Mohamed Elneny	Riyad Mahrez	Sadio Mane
+spo_country_hosted_2002	Easy	Which country co-hosted the 2002 FIFA World Cup with Japan?	South Korea	China	Australia	Thailand
+spo_national_football_team_3	Easy	Which national football team is called 'the Azzurri', after the blue of its old royal family?	Italy	France	Uruguay	Greece
+spo_club_won_german	Easy	Which club has won the most German Bundesliga titles?	Bayern Munich	Borussia Dortmund	Hamburger SV	Schalke 04
+spox_rpa_2010	Easy	Which country hosted the first FIFA World Cup in Africa, in 2010?	South Africa	Egypt	Morocco	Nigeria
+spo_lewandowski	Medium	At which club did Robert Lewandowski become the Bundesliga's top scorer?	Bayern Munich	Real Madrid	Manchester United	Juventus
+spo_messi_zlota_pilka	Medium	Which footballer has won the most Ballon d'Or awards?	Lionel Messi	Cristiano Ronaldo	Michel Platini	Johan Cruyff
+spo_pele	Medium	Which Brazilian legend won three World Cups as a player?	Pele	Ronaldo	Zico	Garrincha
+spo_brazylia_kazdy_mundial	Medium	Which is the only country to have played at every FIFA World Cup?	Brazil	Germany	Argentina	Italy
+spo_anglia_1966	Medium	Which country won the 1966 FIFA World Cup on home soil?	England	Germany	Brazil	Italy
+spo_zidane	Medium	Which French star was sent off for a head-butt in the 2006 World Cup final?	Zinedine Zidane	Thierry Henry	Franck Ribery	Patrick Vieira
+spo_czerwone_diably	Medium	Which English football club is nicknamed 'the Red Devils'?	Manchester United	Liverpool	Arsenal	Manchester City
+spo_real_liga_mistrzow	Medium	Which club has won the most European Cup and Champions League titles?	Real Madrid	AC Milan	Bayern Munich	Liverpool
+spo_niemcy_2014	Medium	Which country won the 2014 FIFA World Cup?	Germany	Argentina	Brazil	The Netherlands
+spox_karny	Medium	From how far away is a football penalty kick taken?	11 metres	9 metres	16 metres	20 metres
+spo_country_hosted_2018	Medium	Which country hosted the 2018 FIFA World Cup?	Russia	Qatar	Brazil	Germany
+spo_country_won_2010	Medium	Which country won the 2010 FIFA World Cup?	Spain	The Netherlands	Germany	Brazil
+spo_country_won_2006	Medium	Which country won the 2006 FIFA World Cup?	Italy	France	Germany	Portugal
+spo_country_won_european	Medium	Which country won the European Championship in 2016?	Portugal	France	Germany	Wales
+spo_english_club_plays	Medium	Which English club plays its home games at Anfield?	Liverpool	Everton	Manchester City	Chelsea
+spo_song_liverpool_fans	Medium	Which song do Liverpool fans famously sing before matches?	You'll Never Walk Alone	Sweet Caroline	Hey Jude	We Are the Champions
+spo_london_club_nicknamed	Medium	Which London club is nicknamed 'the Gunners'?	Arsenal	Chelsea	Tottenham Hotspur	West Ham United
+spo_club_plays_santiago	Medium	Which club plays at the Santiago Bernabeu stadium?	Real Madrid	Atletico Madrid	FC Barcelona	Sevilla
+spo_footballer_scored_goals	Medium	Which footballer has scored the most goals for a men's national team?	Cristiano Ronaldo	Lionel Messi	Ali Daei	Pele
+spo_country_won_european_2	Medium	Which country won the European Championship in 2024?	Spain	England	France	Germany
+spo_footballer_nicknamed_pulga	Medium	Which footballer is nicknamed 'La Pulga', meaning 'the Flea'?	Lionel Messi	Diego Maradona	Neymar	Luka Modric
+spo_football_manager_famously	Medium	Which football manager famously called himself 'the Special One'?	Jose Mourinho	Pep Guardiola	Jurgen Klopp	Carlo Ancelotti
+spo_club_pep_guardiola	Medium	Which club did Pep Guardiola lead to a treble of trophies in 2023?	Manchester City	FC Barcelona	Bayern Munich	Liverpool
+spo_country_footballer_luka	Medium	Which country is footballer Luka Modric from?	Croatia	Serbia	Slovenia	Bosnia and Herzegovina
+spo_country_hosted_1998	Medium	Which country hosted the 1998 FIFA World Cup, and won it?	France	Brazil	Italy	Germany
+spo_football_club_plays	Medium	Which football club plays its home games at the Parc des Princes?	Paris Saint-Germain	Olympique Marseille	Olympique Lyon	AS Monaco
+spo_two_glasgow_clubs	Medium	Which two Glasgow clubs make up football's 'Old Firm'?	Celtic and Rangers	Hearts and Hibernian	Aberdeen and Dundee	Celtic and Hearts
+spo_nickname_australia_national	Medium	What is the nickname of Australia's national football team?	Socceroos	Wallabies	Kangaroos	Matildas
+spo_brazilian_striker_nicknamed	Medium	Which Brazilian striker was nicknamed 'O Fenomeno'?	Ronaldo	Romario	Rivaldo	Ronaldinho
+spo_national_football_team	Medium	Which national football team is nicknamed 'La Albiceleste' after its sky-blue and white shirts?	Argentina	Uruguay	Italy	Greece
+spo_german_club_plays	Medium	Which German club plays at Signal Iduna Park, with its famous 'Yellow Wall'?	Borussia Dortmund	Bayern Munich	Schalke 04	Bayer Leverkusen
+spo_city_fierce_rivals	Medium	In which city do the fierce rivals Boca Juniors and River Plate play?	Buenos Aires	Montevideo	Rosario	Sao Paulo
+spo_coach_led_france	Medium	Which coach led France to victory at the 2018 World Cup?	Didier Deschamps	Zinedine Zidane	Laurent Blanc	Arsene Wenger
+spo_under_football_old	Medium	Under football's old 'golden goal' rule, what happened when a team scored in extra time?	It won the match at once	Extra time was doubled	The goal counted double	The other side got a penalty
+spo_club_won_2005	Medium	Which club won the 2005 Champions League final after trailing 3-0 at half-time in Istanbul?	Liverpool	AC Milan	Manchester United	Chelsea
+spo_host_nation_lost	Medium	Which host nation lost 7-1 to Germany in a 2014 World Cup semi-final?	Brazil	Argentina	Mexico	Colombia
+spo_club_won_english	Medium	Which club won the English Premier League in 2003-04 without losing a game, earning the name 'the Invincibles'?	Arsenal	Manchester United	Chelsea	Liverpool
+spo_country_fans_made	Medium	Which country's fans made the 'Viking thunder clap' famous at Euro 2016?	Iceland	Norway	Denmark	Sweden
+spo_football_referees_spray	Medium	What do football referees spray on the grass to mark where a defensive wall must stand?	Vanishing foam	Chalk paint	Coloured sand	Plain water
+spo_american_club_david	Medium	Which American club did David Beckham join in 2007?	LA Galaxy	New York Red Bulls	Inter Miami	Chicago Fire
+spo_country_beat_england	Medium	Which country beat England on penalties at Wembley in the Euro 2020 final?	Italy	Spain	Germany	Portugal
+spo_country_lost_2018	Medium	Which country lost the 2018 World Cup final 4-2?	Croatia	Belgium	Argentina	Denmark
+spo_uruguayan_striker_bit	Medium	Which Uruguayan striker bit an Italian defender during the 2014 World Cup?	Luis Suarez	Edinson Cavani	Diego Forlan	Darwin Nunez
+spo_club_stadium_nicknamed	Medium	Which club's stadium is nicknamed 'the Theatre of Dreams'?	Manchester United	Real Madrid	FC Barcelona	Liverpool
+spo_country_became_african	Medium	Which country became the first African team to reach a World Cup semi-final, in 2022?	Morocco	Senegal	Ghana	Cameroon
+spo_scored_hat_trick	Medium	Who scored a hat-trick in the 2022 World Cup final but still ended up on the losing side?	Kylian Mbappe	Lionel Messi	Olivier Giroud	Antoine Griezmann
+spo_1958_world_cup	Medium	At the 1958 World Cup, which 17-year-old scored twice in the final?	Pele	Garrincha	Didi	Zagallo
+spo_amsterdam_football_club	Medium	Which Amsterdam football club is famous for its youth academy?	Ajax	PSV Eindhoven	Feyenoord	AZ Alkmaar
+spo_italian_star_missed	Medium	Which Italian star missed the decisive penalty in the 1994 World Cup final?	Roberto Baggio	Gianluca Vialli	Paolo Maldini	Paolo Rossi
+spo_london_club_plays	Medium	Which London club plays at Stamford Bridge?	Chelsea	Arsenal	Tottenham	Fulham
+spo_london_club_moved	Medium	Which London club moved to the Emirates Stadium in 2006?	Arsenal	Chelsea	West Ham	Tottenham
+spo_scottish_manager_led	Medium	Which Scottish manager led Manchester United for 26 years?	Alex Ferguson	Matt Busby	Kenny Dalglish	David Moyes
+spo_french_manager_led	Medium	Which French manager led Arsenal for 22 years?	Arsene Wenger	Gerard Houllier	Didier Deschamps	Claude Puel
+spo_coach_barcelona_team	Medium	Which coach's Barcelona team of 2008-2012 made 'tiki-taka' famous?	Pep Guardiola	Luis Enrique	Frank Rijkaard	Johan Cruyff
+spo_german_coach_led	Medium	Which German coach led Liverpool to the 2019 Champions League title?	Jurgen Klopp	Joachim Low	Thomas Tuchel	Hansi Flick
+spo_football_penalty_shoot	Medium	In a football penalty shoot-out, how many kicks does each team take before it goes to sudden death?	Five	Three	Ten	Six
+spo_football_goalkeeper_keep	Medium	In football, what does a goalkeeper keep by not conceding a single goal in a match?	A clean sheet	A blank slate	A white wall	A clear net
+spo_english_football_club_3	Medium	Which English football club plays its home games at the Etihad Stadium?	Manchester City	Manchester United	Aston Villa	Newcastle United
+spo2_mundial_najwiecej	Medium	Which national team has won the most soccer World Cups?	Brazil	Germany	Italy	Argentina
+spox_mundial_kobiet_usa	Medium	Which country has won the most FIFA Women's World Cups?	The USA	Germany	Norway	Japan
+spo_italian_club_nicknamed	Medium	Which Italian club is nicknamed 'the Old Lady'?	Juventus	AC Milan	Inter Milan	AS Roma
+spo_rio_janeiro_legendary	Medium	What is Rio de Janeiro's legendary football stadium called?	The Maracana	The Azteca	The Monumental	La Bombonera
+spo_uefa_stand	Medium	What does UEFA stand for?	Union of European Football Associations	United European Football Alliance	Union of Elite Football Academies	United Euro Federation of Athletics
+spo_german_defender_nicknamed	Medium	Which German defender, nicknamed 'Der Kaiser', won the World Cup as player and as coach?	Franz Beckenbauer	Gerd Muller	Lothar Matthaus	Jurgen Klinsmann
+spo_dutch_star_gave	Medium	Which Dutch star gave his name to the famous 'turn' he invented?	Johan Cruyff	Marco van Basten	Ruud Gullit	Dennis Bergkamp
+spo_team_shocked_eventual	Medium	Which team beat Lionel Messi's Argentina 2-1 in their opening match of the 2022 World Cup?	Saudi Arabia	Mexico	Poland	Australia
+dpt_spo_nutmeg	Medium	What is a 'nutmeg' in football?	Putting the ball through an opponent's legs	A shot struck from the halfway line	A tackle made from behind the player	A pass hit with the outside of the boot
+ref_spo_mundial_1930	Medium	Which country won the first FIFA World Cup, in 1930?	Uruguay	Argentina	Brazil	Italy
+spox_grecja_2004	Medium	Which huge outsiders won the European Football Championship in 2004?	Greece	Denmark	Portugal	Czechia
+spox_leicester	Medium	Which 5000-to-1 outsiders won the English Premier League in 2016?	Leicester City	Blackburn Rovers	Aston Villa	Nottingham Forest
+mst_pilka_lata	Hard	A standard football match clock runs for 90 minutes, but the ball is typically in play for how long?	Under an hour	About 80 minutes	The full 90	About 75 minutes
+spo_hungary_golden_team	Hard	Which team beat Hungary's 'Golden Team' in the 1954 World Cup final, the 'Miracle of Bern'?	West Germany	Austria	Switzerland	Uruguay
+spo_2002_league_match	Hard	In 2002 a league match in Madagascar ended 149-0. Why?	One side kept scoring own goals in protest	The losers fielded only their goalkeeper	The match lasted three days	The losers were a team of children
+spo_1950_world_cup	Hard	At the 1950 World Cup, which team of part-timers stunned England 1-0?	The USA	Canada	Australia	Chile
+spo_football_panenka_penalty	Hard	In football, what is a 'Panenka' penalty?	A soft chip down the middle	A shot into the top corner	A run-up stopped halfway	A kick with the heel
+spo_country_won_euro_2	Hard	Which country won Euro 1992 after being called in at the last minute to replace Yugoslavia?	Denmark	Sweden	Greece	Norway
+spo_since_1992_may	Hard	Since 1992, what may a football goalkeeper no longer pick up?	A deliberate pass kicked by a teammate	A ball crossed in from a corner	A shot struck from outside the box	A header back from a teammate
+spo_colombian_goalkeeper_cleared	Hard	Which Colombian goalkeeper cleared a shot with a 'scorpion kick' at Wembley in 1995?	Rene Higuita	Oscar Cordoba	David Ospina	Faryd Mondragon
+spo_calcio_storico_brutal	Hard	Calcio storico, a brutal Renaissance form of football, is still played every June in which city?	Florence	Siena	Naples	Venice
+spo_scored_goal_2014	Hard	Who scored the only goal of the 2014 World Cup final in extra time?	Mario Gotze	Thomas Muller	Miroslav Klose	Andre Schurrle
+spo_club_became_british	Hard	Which club became the first British winners of the European Cup, in 1967, with a team nicknamed 'the Lisbon Lions'?	Celtic	Manchester United	Rangers	Liverpool
+spo_country_lost_three	Hard	Which country has lost three World Cup finals without ever winning the trophy?	The Netherlands	Hungary	Croatia	Sweden
+spo_portuguese_star_nicknamed	Hard	Which Portuguese star, nicknamed 'the Black Panther', was top scorer at the 1966 World Cup?	Eusebio	Luis Figo	Mario Coluna	Paulo Futre
+spo_england_goalkeeper_made	Hard	Which England goalkeeper made the famous 'save of the century' from Pele's header at the 1970 World Cup?	Gordon Banks	Peter Shilton	Ray Clemence	Gordon West
+spo_cameroonian_striker_danced	Hard	Which Cameroonian striker danced with the corner flag after his goals at the 1990 World Cup, aged 38?	Roger Milla	Samuel Eto'o	Thomas N'Kono	Patrick Mboma
+spo_goal_deep_stoppage	Hard	Whose goal, deep in stoppage time on the last day, won Manchester City the 2012 Premier League title?	Sergio Aguero	Edin Dzeko	David Silva	Carlos Tevez
+spo_footballer_african_win	Hard	Which footballer, the first African to win the Ballon d'Or, later became president of his country?	George Weah	Didier Drogba	Samuel Eto'o	Abedi Pele
+spoy_jules_rimet	Hard	What was the FIFA World Cup trophy called before 1974?	The Jules Rimet Trophy	The Henri Delaunay Cup	The Stanley Cup	The Webb Ellis Cup
+spo_trophy_nicknamed_big	Hard	Which trophy is nicknamed 'Big Ears' because of its huge handles?	Champions League	FA Cup	Copa America	Stanley Cup
+spo_spanish_striker_nicknamed	Hard	Which Spanish striker was nicknamed 'El Nino'?	Fernando Torres	Raul	David Villa	Fernando Morientes
+spo_england_striker_scored	Hard	Which England striker scored a hat-trick in the 1966 World Cup final?	Geoff Hurst	Bobby Charlton	Jimmy Greaves	Roger Hunt
+spo_brazilian_club_pele	Hard	For which Brazilian club did Pele play for most of his career?	Santos	Flamengo	Corinthians	Sao Paulo
+spo_portuguese_club_cristiano	Hard	At which Portuguese club did Cristiano Ronaldo begin his professional career?	Sporting Lisbon	Benfica	Porto	Braga
+spo_english_football_club	Hard	Which English football club is nicknamed 'the Toffees'?	Everton	Liverpool	Aston Villa	Fulham
+spo_english_football_club_2	Hard	Which English football club is nicknamed 'the Magpies'?	Newcastle United	Tottenham Hotspur	West Ham United	Leeds United
+spo_french_club_won	Hard	Which French club won the first Champions League final under that name, in 1993?	Marseille	Paris Saint-Germain	Monaco	Bordeaux
+spo_portuguese_club_nicknamed	Hard	Which Portuguese club is nicknamed 'the Eagles'?	Benfica	Porto	Sporting Lisbon	Braga
+spo_1966_stolen_world	Hard	In 1966 the stolen World Cup trophy turned up under a London hedge. Who found it?	A dog called Pickles	A boy on his paper round	A park gardener	A police constable
+spo_saudi_arabian_club	Hard	Which Saudi Arabian club signed Cristiano Ronaldo at the end of 2022?	Al-Nassr	Al-Hilal	Al-Ittihad	Al-Ahli
+spo_mexican_wave_stadiums	Hard	The 'Mexican wave' in stadiums got its name after crowds spread it around the world at which event?	The 1986 World Cup	The 1992 Barcelona Olympics	The 1994 World Cup	The 1998 World Cup
+spo_football_brace	Hard	In football, what is a 'brace'?	Two goals by one player in a match	A wall of two defenders	Two yellow cards in a match	A save made with both hands
+spo_milan_club_players	Hard	Which Milan club's players are nicknamed 'the Nerazzurri', the black and blues?	Inter Milan	AC Milan	Juventus	Lazio
+spo_arsenal_football_club	Hard	Arsenal Football Club was founded in 1886 by whom?	Workers at a weapons factory	Cadets at a military academy	Soldiers in a London barracks	Dockers on the Thames
+spo_national_football_team_5	Hard	Which national football team is nicknamed 'the Indomitable Lions'?	Cameroon	Senegal	Morocco	Ghana
+spox_kartki	Hard	Football's yellow and red cards were inspired by what?	Traffic lights	Playing cards	Railway signals	Ship flags
+spo_cheeky_chipped_panenka	Hard	The cheeky chipped 'Panenka' penalty is named after a player from which country?	Czechoslovakia	Yugoslavia	Hungary	Poland
+spo_world_cup_willie	Hard	World Cup Willie, the first World Cup mascot, in 1966, was what kind of animal?	A lion	A bulldog	A bear	An eagle
+spo_just_fontaine_scored	Hard	Just Fontaine scored 13 goals at the 1958 World Cup alone. For which country did he play?	France	Brazil	Sweden	West Germany
+spo_mundial_kobiet	Expert	In which year was the first FIFA Women's World Cup held?	1991	1971	1983	1999
+spo_jaszyn	Expert	Which Soviet player is the only goalkeeper to win the Ballon d'Or?	Lev Yashin	Gianluigi Buffon	Oliver Kahn	Dino Zoff
+spo_won_very_ballon	Expert	Who won the very first Ballon d'Or, in 1956?	Stanley Matthews	Alfredo Di Stefano	Ferenc Puskas	Raymond Kopa
+spo_world_cup_final	Expert	In the first World Cup final, in 1930, how was the row over the match ball settled?	Each side's ball was used for one half	A coin toss picked one of the two	FIFA flew in a neutral ball	The referee brought his own ball
+spo_old_egyptian_goalkeeper	Expert	How old was Egyptian goalkeeper Essam El-Hadary when he played at the 2018 World Cup, an all-time record?	45	37	41	50
+spo_english_club_founded	Expert	Which English club, founded in 1857, is the oldest football club in the world still playing?	Sheffield FC	Notts County	Stoke City	Hallam FC
+spo_adopting_black_white	Expert	Before adopting black-and-white stripes copied from Notts County, Juventus played in which colour?	Pink	Sky blue	Orange	Green
+spo_penalty_kick_proposed	Expert	The penalty kick was proposed in 1890 by William McCrum. What was he?	An Irish goalkeeper	A Scottish referee	An English schoolmaster	A Welsh club chairman
+spo_2002_world_cup	Expert	In the 2002 World Cup third-place match, how quickly did Hakan Sukur score against South Korea?	In about 11 seconds	In about 30 seconds	In about 1 minute	In about 2 minutes
+spo_brazil_shock_1950	Expert	What is Brazil's shock 1950 World Cup defeat by Uruguay, in Rio, remembered as?	The Maracanazo	The Mineirazo	The Centenario	The Bombonazo
+spo_star_scored_all	Expert	Which star scored in all of Real Madrid's first five European Cup finals, from 1956 to 1960?	Alfredo Di Stefano	Ferenc Puskas	Raymond Kopa	Francisco Gento
+spo_italy_euro_1968	Expert	How was Italy's Euro 1968 semi-final against the USSR settled after a 0-0 draw?	By tossing a coin	By a penalty shoot-out	By a replay two days later	By corners won
+spo_official_international_football	Expert	How did the first official international football match, Scotland v England in 1872, end?	A 0-0 draw	A 4-0 win for England	A 2-1 win for Scotland	Abandoned in a snowstorm

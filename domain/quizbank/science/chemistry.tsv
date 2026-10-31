@@ -1,0 +1,50 @@
+# Chemistry: chemical reactions, materials, everyday chemistry (single elements -> elements)
+#
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+day_ph_siedem	Easy	What does a pH of 7 mean?	The solution is neutral	The solution is strongly acidic	The solution is strongly basic	The solution conducts no current
+sci_roads_get_salted	Easy	Why do roads get salted in icy weather?	Salt lowers the freezing point of water	Salt warms up the road surface	Salt makes tyres grip harder	Salt soaks up the falling snow
+sci_gas_breathe_out	Easy	Which gas do we breathe out more of than we breathe in?	Carbon dioxide	Oxygen	Nitrogen	Helium
+sci_shaken_bottle_fizzy	Easy	Why does a shaken bottle of fizzy drink spray when you open it?	The dissolved gas escapes all at once	The shaking heats it to boiling point	Air is forced in through the cap	The sugar reacts with the plastic
+sci_bend_glow_stick	Easy	When you bend a glow stick, what makes it light up?	A chemical reaction inside	A tiny battery in the tube	Static from the bending	Sunlight it stored earlier
+sci_candle_out_cover	Easy	Why does a candle go out when you cover it with a glass jar?	It runs out of oxygen	The jar traps too much heat	The smoke smothers the wick	The wax cools down too fast
+sci_mixing_vinegar_baking	Easy	Why does mixing vinegar with baking soda make it fizz?	It gives off carbon dioxide gas	The vinegar begins to boil	Oxygen trapped in it escapes	The soda breaks into steam
+sci_statue_liberty_green	Easy	Why is the Statue of Liberty green?	Its copper skin has corroded	It was painted green in 1906	Algae grows on its surface	It is made of green bronze
+sci_should_never_mix	Easy	Why should you never mix bleach with ammonia-based cleaners?	They give off a toxic gas	They explode on contact	They cancel each other out	They turn into strong acid
+day2_mydlo	Medium	Why does soap clean grease?	Its molecules bind both water and fat	It dissolves fat into acid	It boils the grease away	It makes water hotter
+day_ciasto_rosnie	Medium	Why does bread dough rise?	Yeast releases carbon dioxide	Water evaporates from it	Gluten expands when heated	Salt draws in moisture
+day_papryka_ostra	Medium	Which compound makes chilli peppers hot?	Capsaicin	Menthol	Tannin	Caffeine
+day_jablko_brazowieje	Medium	Why does a cut apple turn brown?	Its compounds oxidize in air	It starts to ferment	Bacteria colonise it	It loses water
+day_cebula_lzy	Medium	Why does cutting an onion make your eyes water?	It releases a sulfur compound that irritates the eyes	It releases a puff of pure ammonia into the air	Its acid evaporates into the air	Its fine dust scratches the eye
+day_suchy_lod	Medium	What is dry ice?	Frozen carbon dioxide	Very cold water ice	Frozen nitrogen	Compressed helium
+day_szklo_surowiec	Medium	What is the main raw material of glass?	Sand	Limestone	Clay	Granite
+sci_swieca_plomien	Medium	Which part of a candle flame is the hottest?	The blue part near the wick	The bright yellow tip	The orange middle part	The dark inner core
+sci_freony	Medium	Which chemicals, once used in spray cans and fridges, damaged the ozone layer?	CFCs	Carbon monoxide	Methane	Radon
+sci_should_never_throw	Medium	Why should you never throw water on a burning chip pan?	It turns to steam and hurls burning oil out	It makes the oil burn chemically hotter	Water and oil form an explosive gas	It conducts electricity into the pan
+sci_chocolate_melt_mouth	Medium	Why does chocolate melt in your mouth but not on the shelf?	Cocoa butter melts just below body heat	Your saliva is acidic enough to burn it	Chewing heats it to about 60 C	Mouth bacteria digest it at once
+sci_warm_fizzy_drink	Medium	Why does a warm fizzy drink go flat faster than a cold one?	Gas dissolves less well in warm liquid	Warm drinks contain less sugar	Heat bursts the bubbles' skins	The warm can soaks up the gas
+sci_egg_turn_solid	Medium	Why does an egg turn solid when you boil it?	Heat changes the shape of its proteins	The water inside it boils away	It soaks up minerals from the water	The shell squeezes it tight
+sci_glow_stick_kept	Medium	Why does a glow stick kept in the freezer keep glowing for longer?	Cold slows down the chemical reaction	Frost reflects the light back inside	Cold stops the light leaking out	The plastic seals itself in the cold
+sci_red_cabbage_juice	Medium	Red cabbage juice turns pink in lemon juice and green in baking soda water. Why?	It works as an acid-base indicator	It reacts with the vitamin C in both	Its sugars burn in strong liquids	The light bends differently in each
+sci_white_fog_pouring	Medium	The white fog pouring off dry ice is mostly what?	Water droplets	Carbon dioxide gas	Smoke	Liquid nitrogen
+sci_metal_soft_cut	Medium	Which metal is so soft it can be cut with a butter knife?	Sodium	Aluminium	Copper	Tin
+trv_lakmus_kwas	Medium	What colour does blue litmus paper turn in an acid?	Red	Green	Yellow	It stays blue
+sci_wax_burning_candle	Medium	Where does the wax of a burning candle mostly go?	It burns away as fuel into gases	It all drips down into the holder	It soaks deep into the wick for good	It turns into the smoke's black soot
+sci_milk_boil_over	Medium	Why does milk boil over in a pan when water does not?	Its proteins form a skin that traps steam	It boils at a much lower temperature	Its fat explodes when heated	It holds dissolved gas, like soda
+sci2_moly_liczba	Hard	How many particles does one mole of a substance contain?	About 6.02 x 10^23	About 3.14 x 10^12	Exactly one million	About 10^100
+trv_przewodnik_najlepszy	Hard	Which metal conducts electricity best?	Silver	Copper	Gold	Aluminium
+org_ytterby_wioska	Hard	Four chemical elements are named after a quarry in a village in which country?	Sweden	Norway	Germany	Scotland
+sci_tonic_water_glow	Hard	Why does tonic water glow blue under ultraviolet light?	Its quinine is fluorescent	Its bubbles reflect the light	Its sugar crystals sparkle	It contains glowing algae
+sci_box_safety_matches	Hard	On a box of safety matches, where is the red phosphorus that makes them light?	On the striking strip	In the match heads	In the wooden sticks	In the cardboard box
+sci_chemical_reaction_browns	Hard	Which chemical reaction browns toast and gives a seared steak its flavour?	The Maillard reaction	The Haber process	Fermentation	Saponification
+sci_bread_stale	Hard	Why does bread go stale?	Starch recrystallises	Bacteria eat it	Yeast keeps growing	Air turns it to sugar
+sci_adding_salt_pan	Hard	Adding salt to a pan of pasta water makes it boil at what temperature?	A tiny bit above 100 C	A tiny bit below 100 C	Exactly 100 C, no change	About 120 C
+sci_perfectly_pure_water	Hard	Why does perfectly pure water conduct electricity very poorly?	It has almost no dissolved ions to carry charge	Its molecules have no electrons	Its surface tension blocks the current	It is too dense for electricity to flow
+sci_mix_water_pure	Hard	Mix 50 ml of water with 50 ml of pure alcohol. Roughly how much liquid do you get?	A little less than 100 ml	Exactly 100 ml	A little more than 100 ml	About 50 ml
+sci_makes_disposable_hand	Hard	What makes a disposable hand-warmer pouch heat up once you open it?	Iron powder rusting very quickly	Two liquids mixing inside the pouch	A tiny battery heating a wire	Sunlight stored in its dark fabric
+sci_makes_bright_yellow	Hard	What makes the bright yellow glow of a candle flame?	Tiny specks of hot, glowing soot	Burning oxygen from the air	Glowing water vapour	Electric sparks in the wick
+sci_makes_cola_fountain	Hard	What makes a cola fountain shoot up when you drop Mentos sweets into a bottle?	Gas bubbles form on the sweets' rough surface	The sweets react with the acid in the cola	The mint oil makes the cola boil	The sugar in both burns explosively
+sci_white_shirts_glow	Hard	Why do white T-shirts glow under 'black light' in clubs?	Washing powder leaves fluorescent dyes	Cotton fibres store up daylight	The cloth is slightly radioactive	The light makes the fabric warm
+sci_popping_candy_crackle	Hard	Why does popping candy crackle in your mouth?	Tiny pockets of squeezed gas burst	Sugar crystals snap as they melt	It reacts with acid in your saliva	Water in it boils on your tongue
+sci_colour_flames_copper	Hard	What colour flames does copper give in fireworks?	Blue-green	Red	Yellow	Purple
+sci_compound_made_soil	Expert	Which compound made by soil bacteria gives rain its earthy smell?	Geosmin	Petrichor	Ozone	Chlorophyll
+sci_older_eggs_easier	Expert	Why are older eggs easier to peel after boiling than very fresh ones?	Their whites become more alkaline	Their shells grow much thicker	Their yolks shrink and pull away	Their shells lose all their calcium
