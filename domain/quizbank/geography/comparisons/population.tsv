@@ -1,0 +1,203 @@
+# Porownania ludnosci: ktore panstwo, miasto, region albo wyspa ma wiecej ludzi, takze zaskakujace
+# zestawienia (miasto kontra panstwo, stan kontra kraj) i proporcje ('ile razy wiecej'). Im mniejsza
+# roznica, tym trudniejsze pytanie. Proste losowe porownania panstw robi CountryQuestions.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+geo_more_people_mexico	Easy	Who has more people, Mexico or Canada?	Mexico, about 3x	Canada, about 3x	About the same	Canada, about 1.5x
+geo_egypt_saudi_arabia	Easy	Egypt vs Saudi Arabia: who has more people?	Egypt, about 3x	Saudi Arabia, about 3x	About the same	Saudi Arabia, about 2x
+geo_australia_roughly_fraction	Easy	Australia has roughly what fraction of Japan's population?	About a fifth	About half	About a tenth	About the same
+geo_nigeria_south_africa	Easy	Nigeria vs South Africa: who has more people?	Nigeria, about 3.5x	South Africa, about 2x	About the same	Nigeria, about 10x
+geo_india_united_states	Easy	India vs the United States: who has more people?	India, about 4x	India, about 1.5x	The US, slightly more	India, about 15x
+geo_more_people_pakistan	Easy	Who has more people, Pakistan or the United Kingdom?	Pakistan, over 3x	The UK, about 1.5x	About the same	Pakistan, about 10x
+geo_countries_more_people	Easy	Which of these countries has more people than South Korea?	Ethiopia	Canada	Poland	Australia
+geo_sweden_germany_more	Easy	Sweden vs Germany: who has more people?	Germany, about 8x	Germany, about 2x	Sweden, slightly more	Germany, about 30x
+geo_more_people_egypt	Easy	Who has more people, Egypt or Israel?	Egypt, over 10x	Egypt, about 2x	Israel, slightly more	About the same
+geo_bangladesh_canada_more	Easy	Bangladesh vs Canada: who has more people?	Bangladesh, about 4x	Canada, about 2x	About the same	Canada, slightly more
+geo_more_people_kazakhstan	Easy	Who has more people, Kazakhstan or Germany?	Germany, about 4x	Kazakhstan, about 2x	About the same	Germany, about 20x
+geo_more_people_germany	Easy	Who has more people, Germany or the Netherlands?	Germany, about 4.5x	The Netherlands, slightly more	About the same	Germany, about 15x
+geo_countries_more_people_2	Easy	Which of these countries has more people than Australia?	Thailand	Kazakhstan	Chile	Sweden
+geo_more_people_japan	Easy	Who has more people, Japan or Canada?	Japan, about 3x	Canada, about 1.5x	About the same	Japan, about 10x
+geo_france_belgium_more	Easy	France vs Belgium: who has more people?	France, over 5x	France, about 2x	Belgium, slightly more	France, about 20x
+geo_every_person_portugal	Easy	For every person in Portugal, roughly how many people live in Spain?	About 4.5	About 1.5	About 10	About 20
+geo_countries_more_people_3	Easy	Which of these countries has more people than all of Europe, Russia included?	India	The United States	Indonesia	Brazil
+geo_countries_more_people_4	Easy	Which of these countries has more people than Japan?	Pakistan	Germany	France	Spain
+geo_greenland_times_size	Easy	Greenland is about 20 times the size of Iceland. Which of the two has more people?	Iceland, about 7 times as many	Greenland, about twice as many	About the same number	Greenland, about 7 times as many
+geo_roughly_times_more_15	Easy	Roughly how many times more people live in England than in the six New England states of the USA combined?	About 4 times	About 1.5 times	About 10 times	About 25 times
+geo_roughly_times_people	Easy	Roughly how many times as many people as Switzerland live in the Chinese city of Shanghai (the whole municipality)?	About 3 times	About 1.5 times	About 10 times	About half as many
+geo_roughly_times_more_16	Easy	Roughly how many times more people live on Sicily than in Malta?	About 9 times	About 2 times	About 3 times	About 40 times
+geo_more_people_cuba	Easy	Who has more people, Cuba or Puerto Rico?	Cuba, about 3 times as many	Puerto Rico, about twice as many	About the same number	Puerto Rico, slightly more
+geo_borneo_times_size	Easy	Borneo is about 6 times the size of Java. Which of the two islands has more people?	Java, about 6 times as many	Borneo, about twice as many	About the same number	Borneo, about 6 times as many
+geo_roughly_times_people_2	Easy	Roughly how many times as many people live in India's state of Uttar Pradesh as in the whole United Kingdom?	About 3 times	About 1.5 times	About 10 times	About half as many
+geo_roughly_times_more_17	Easy	Roughly how many times more people live in Greater London than in the whole of Wales?	About 3 times	About 1.5 times	About 10 times	About 25 times
+geo_counting_city_proper	Easy	Counting only the city proper, who has more people, Sao Paulo or Buenos Aires?	Sao Paulo, almost 4 times as many	Buenos Aires, about twice as many	About the same number	Buenos Aires, slightly more
+geo_more_people_whole	Easy	Which of these has more people than the whole of Canada?	China's Guangdong province	Australia	Canada's Ontario province	The city of Shanghai
+geo_japan_island_hokkaido	Easy	Japan's island of Hokkaido is a bit smaller than Iceland. Roughly how many times more people live on Hokkaido?	About 13 times	About 2 times	About 4 times	About 50 times
+geo_china_chongqing_municipality	Easy	China's Chongqing municipality is about the size of Austria. Which of the two has more people?	Chongqing, about 3.5 times as many	Austria, about twice as many	About the same number	Austria, slightly more
+geo_sri_lanka_tasmania	Easy	Sri Lanka and Tasmania are islands of almost the same size. Roughly how many times more people live in Sri Lanka?	About 40 times	About 4 times	About 10 times	About 150 times
+geo_new_guinea_almost	Easy	New Guinea is almost 4 times the size of Great Britain. Which of the two islands has more people?	Great Britain, about 4 times as many	New Guinea, about twice as many	About the same number	New Guinea, about 4 times as many
+geo_countries_fewer_people_2	Easy	Which of these countries has FEWER people than the Canadian province of Ontario?	New Zealand	Australia	Poland	Argentina
+geo_more_people_india	Easy	Who has more people: India's state of Maharashtra or the whole of Canada?	Maharashtra, about 3 times as many	Canada, about twice as many	About the same number	Canada, slightly more
+geo_counting_city_proper_2	Easy	Counting only the city proper, roughly how many times more people live in Madrid than in Lisbon?	About 6 times	About 1.5 times	About 2.5 times	About 20 times
+geo_japan_main_island	Easy	Japan's main island, Honshu, is only about 3% of Australia's size. Which of the two has more people?	Honshu, almost 4 times as many	Australia, about twice as many	About the same number	Australia, slightly more
+geo_roughly_times_more	Medium	Roughly how many times more people does Poland have than Chile?	About 2 times	About 4 times	About 8 times	About the same
+geo_roughly_times_more_2	Medium	Roughly how many times more people does the United States have than Canada?	About 8 times	About 4 times	About 20 times	About 2 times
+geo_roughly_times_more_3	Medium	Roughly how many times more people does China have than the United States?	About 4 times	About 2 times	About 8 times	About 15 times
+geo_indonesia_malaysia_roughly	Medium	Indonesia vs Malaysia: roughly how many Indonesians are there per Malaysian?	About 8	About 3	About 20	About 1.5
+geo_roughly_times_more_4	Medium	Roughly how many times more people does Indonesia have than its neighbour Australia?	About 10 times	About 3 times	About 5 times	About 25 times
+geo_roughly_times_more_5	Medium	Roughly how many times more people does Australia have than New Zealand?	About 5 times	About 2 times	About 12 times	About the same
+geo_slovakia_roughly_fraction	Medium	Slovakia has roughly what fraction of Czechia's population?	About half	About a fifth	About the same	About a tenth
+geo_south_korea_north	Medium	South Korea vs North Korea: who has more people?	The South, about 2x	About the same	The North, slightly more	The South, about 6x
+geo_every_norwegian_roughly	Medium	For every Norwegian, roughly how many Swedes are there?	About 2	About 1.2	About 4	About 8
+geo_africa_population_compare	Medium	How does Africa's population compare with that of all of Europe?	Africa, about 2x	About the same	Europe, about 1.5x	Africa, about 5x
+geo_united_states_russia	Medium	The United States vs Russia: who has more people?	The US, about 2.4x	Russia, about 1.5x	About the same	The US, about 6x
+geo_nigeria_russia_more	Medium	Nigeria vs Russia: who has more people?	Nigeria, about 1.6x	Russia, about 1.6x	Russia, about 3x	Nigeria, about 5x
+geo_every_person_greece	Medium	For every person in Greece, roughly how many people live in Turkey?	About 8	About 3	About 25	About 1.5
+geo_roughly_times_more_6	Medium	Roughly how many times more people does India have than the United Kingdom?	About 20 times	About 5 times	About 60 times	About 2 times
+geo_roughly_times_more_7	Medium	Roughly how many times more people does China have than the whole European Union?	About 3 times	About 10 times	About 1.5 times	About 30 times
+geo_countries_southeast_asia	Medium	The 11 countries of Southeast Asia together vs the United States: who has more people?	Southeast Asia, about 2x	About the same	The US, about 1.5x	Southeast Asia, about 6x
+geo_countries_more_people_5	Medium	Which of these countries has more people than France?	The DR Congo	Spain	Canada	Argentina
+geo_iran_iraq_more	Medium	Iran vs Iraq: who has more people?	Iran, about 2x	About the same	Iraq, slightly more	Iran, about 6x
+geo_saudi_arabia_united	Medium	Saudi Arabia vs the United Arab Emirates: who has more people?	Saudi Arabia, about 3x	About the same	The UAE, slightly more	Saudi Arabia, about 10x
+geo_south_american_countries	Medium	Which of these South American countries has more people than Chile?	Peru	Bolivia	Paraguay	Uruguay
+geo_brazil_mexico_more	Medium	Brazil vs Mexico: who has more people?	Brazil, about 1.6x	Mexico, about 1.6x	About the same	Brazil, about 4x
+geo_more_people_pakistan_2	Medium	Who has more people, Pakistan or Russia?	Pakistan, about 1.7x	Russia, about 1.7x	About the same	Russia, about 3x
+geo_every_south_korean	Medium	For every South Korean, roughly how many people live in Japan?	About 2.5	About 1.2	About 5	About 10
+geo_countries_more_people_6	Medium	Which of these countries has more people than Spain?	South Africa	Poland	Peru	Morocco
+geo_every_person_roughly	Medium	For every person in the UK, roughly how many people live in the US?	About 5	About 2	About 12	About 30
+geo_countries_fewer_people	Medium	Which of these countries has FEWER people than Poland?	Australia	Spain	Argentina	Kenya
+geo_roughly_times_more_8	Medium	Roughly how many times more people does Canada have than Australia?	About 1.5 times	About 3 times	About 5 times	About the same
+geo_roughly_share_european	Medium	Roughly what share of the European Union's people live in Germany?	About 20%	About 40%	About 8%	About 60%
+geo_roughly_times_more_9	Medium	Roughly how many times more people does Indonesia have than the Netherlands, its former colonial ruler?	About 15 times	About 3 times	About 6 times	About 50 times
+geo_spain_once_ruled	Medium	Spain once ruled the Philippines. Which is true about their populations today?	The Philippines, over 2x	Spain, about 1.5x	About the same	The Philippines, about 8x
+geo_roughly_times_more_10	Medium	Roughly how many times more people does Germany have than Austria?	About 9 times	About 4 times	About 20 times	About 2 times
+geo_roughly_times_more_11	Medium	Roughly how many times more people does China have than Japan?	About 11 times	About 4 times	About 30 times	About 2 times
+geo_kenya_australia_more	Medium	Kenya vs Australia: who has more people?	Kenya, about 2x	Australia, about 2x	About the same	Australia, about 5x
+geo_countries_not_more	Medium	Which of these countries does NOT have more people than Germany?	The United Kingdom	Egypt	The Philippines	Mexico
+geo_countries_more_people_7	Medium	Which of these countries has more people than the Netherlands?	Sri Lanka	Portugal	Sweden	Greece
+geo_roughly_share_all_2	Medium	Roughly what share of all South Americans live in Brazil?	About half	About a quarter	About three-quarters	About a tenth
+geo_roughly_share_humanity	Medium	Roughly what share of humanity lives in either India or China?	About a third	About a tenth	About two-thirds	About a twentieth
+geo_countries_more_people_8	Medium	Which of these countries has more people than Poland?	Algeria	Nepal	Venezuela	Romania
+geo_more_people_california	Medium	Who has more people: California, or Denmark, Norway and Sweden combined?	California, almost twice as many	The three combined, slightly more	About the same number	The three combined, about twice as many
+geo_countries_fewer_people_3	Medium	Which of these countries has FEWER people than the city of Moscow?	Finland	Kazakhstan	Australia	Sri Lanka
+geo_roughly_times_more_18	Medium	Roughly how many times more people live in Greater London than in the City of Paris itself, inside its city limits?	About 4 times	About 1.5 times	About 12 times	About the same
+geo_counting_city_proper_3	Medium	Counting only the city proper, how do Madrid and Barcelona compare in population?	Madrid has about twice as many	Barcelona has about twice as many	They are about the same	Madrid has about 5 times as many
+geo_counting_city_proper_4	Medium	Counting only the city proper, roughly how many times more people live in Moscow than in Saint Petersburg?	About 2 times	About 1.2 times	About 5 times	About 10 times
+geo_more_people_hong	Medium	Who has more people: Hong Kong or the neighbouring Chinese city of Shenzhen?	Shenzhen, more than twice as many	Hong Kong, about twice as many	About the same number	Hong Kong, slightly more
+geo_counting_city_proper_5	Medium	Counting only the city proper, how does New York City compare with Los Angeles?	New York has about twice as many	Los Angeles has slightly more	They are about the same	New York has about 5 times as many
+geo_roughly_times_more_19	Medium	Roughly how many times more people live in Greater Sydney than in Australia's capital, Canberra?	About 12 times	About 3 times	About 40 times	About 1.5 times
+geo_counting_city_proper_6	Medium	Counting only the city proper, roughly how many times more people live in Amsterdam than in The Hague, the seat of the Dutch government?	About 1.7 times	About 4 times	About 10 times	About the same
+geo_roughly_share_mongolia	Medium	Roughly what share of Mongolia's people live in the capital, Ulaanbaatar?	About half	About a tenth	About a quarter	About 80%
+geo_roughly_share_south_2	Medium	Roughly what share of South Koreans live in the Seoul Capital Area (Seoul, Incheon and Gyeonggi)?	About half	About a fifth	About a tenth	About 80%
+geo_roughly_share_peru_2	Medium	Roughly what share of Peru's people live in the Lima metropolitan area, including Callao?	About a third	About a tenth	About 60%	About 80%
+geo_corsica_more_twice	Medium	Corsica is more than twice the size of Mallorca. Which of the two islands has more people?	Mallorca, about 2.5 times as many	Corsica, about twice as many	About the same number	Corsica, slightly more
+geo_hispaniola_cuba_true	Medium	Hispaniola vs Cuba: which is true about the populations of the two islands?	Hispaniola has about twice as many	Cuba has about twice as many	They are about the same	Hispaniola has about 5 times as many
+geo_sicily_sardinia_nearly	Medium	Sicily and Sardinia are nearly the same size. How do their populations compare?	Sicily has about 3 times as many	Sardinia has slightly more	They are about the same	Sicily has about 10 times as many
+geo_more_people_tiny	Medium	Who has more people: tiny Macau, about 33 square km, or the whole of Iceland?	Macau, about 1.7 times as many	Iceland, about 3 times as many	Iceland, about 10 times as many	About the same number
+geo_more_people_state	Medium	Who has more people: the US state of Georgia or the country of Georgia?	The US state, about 3 times as many	The country, about twice as many	About the same number	The country, slightly more
+geo_roughly_times_more_20	Medium	Roughly how many times more people live in the Australian state of New South Wales than in Wales?	About 2.5 times	About 1.2 times	About 6 times	About 15 times
+geo_more_people_china	Medium	Who has more people: China's island province of Hainan or Sri Lanka?	Sri Lanka, about twice as many	Hainan, about twice as many	About the same number	Hainan, about 5 times as many
+geo_roughly_times_more_21	Medium	Roughly how many times more people live in the Republic of Ireland than in Northern Ireland?	About 3 times	About 1.2 times	About 8 times	About 20 times
+geo_countries_fewer_people_4	Medium	Which of these countries has FEWER people than Wales?	Latvia	Ireland	Denmark	Slovakia
+geo_more_people_italy	Medium	Who has more people: Italy's region of Lombardy or the whole of Norway?	Lombardy, almost twice as many	Norway, slightly more	About the same number	Norway, about twice as many
+geo_more_people_china_2	Medium	Who has more people: China's province of Shandong or the whole of Spain?	Shandong, about twice as many	Spain, slightly more	About the same number	Shandong, about 6 times as many
+geo_more_people_brazil	Medium	Who has more people: Brazil's state of Sao Paulo or the whole of Australia?	Sao Paulo, about 1.7 times as many	Australia, slightly more	About the same number	Australia, about twice as many
+geo_more_people_philippine	Medium	Who has more people: the Philippine island of Luzon or the whole of Australia?	Luzon, about twice as many	Australia, about twice as many	About the same number	Australia, slightly more
+geo_roughly_times_more_22	Medium	Roughly how many times more people live in California than in Wyoming?	About 70 times	About 7 times	About 20 times	About 300 times
+geo_roughly_times_more_23	Medium	Roughly how many times more people live in Mexico than in the US state of New Mexico?	About 60 times	About 3 times	About 15 times	About 200 times
+geo_roughly_times_more_24	Medium	Roughly how many times more people live in England than in Scotland?	About 10 times	About 2 times	About 4 times	About 25 times
+geo_states_fewer_people	Medium	Which of these US states has FEWER people than Estonia?	Alaska	Nevada	Utah	Oregon
+geo_more_people_florida	Medium	Who has more people: Florida or Sweden?	Florida, more than twice as many	Sweden, slightly more	About the same number	Sweden, about twice as many
+geo_more_people_portugal	Medium	Which of these has more people than Portugal?	Minas Gerais, Brazil	Scotland, UK	Wales, UK	Sicily, Italy
+geo_roughly_share_new_2	Medium	Roughly what share of New York State's people live in New York City?	About 40%	About 10%	About 20%	About 75%
+geo_western_australia_over	Medium	Western Australia is over 30 times the size of Scotland. Which of the two has more people?	Scotland, almost twice as many	Western Australia, about twice as many	About the same number	Western Australia, slightly more
+geo_more_people_texas	Medium	Who has more people: Texas, or Sweden and Norway combined?	Texas, about twice as many	The two combined, slightly more	About the same number	The two combined, about twice as many
+geo_roughly_times_more_25	Medium	Roughly how many times more people live in Flanders than in Wallonia, the two big regions of Belgium?	About 2 times	About the same	About 5 times	About 10 times
+geo_crete_almost_big	Medium	Crete is almost as big as the whole island of Cyprus. Which of the two has more people?	Cyprus, about twice as many	Crete, about twice as many	About the same number	Crete, slightly more
+geo_japan_island_kyushu	Medium	Japan's island of Kyushu is almost exactly the size of Taiwan. Which of the two has more people?	Taiwan, almost twice as many	Kyushu, about twice as many	About the same number	Kyushu, slightly more
+geo_roughly_times_more_12	Hard	Roughly how many times more people does India have than Pakistan?	About 6 times	About 3 times	About 12 times	About 25 times
+geo_roughly_times_more_13	Hard	Roughly how many times more people does the United Kingdom have than Ireland?	About 13 times	About 5 times	About 30 times	About 2 times
+geo_roughly_times_more_14	Hard	Roughly how many times more people does Nigeria have than Ghana?	About 7 times	About 3 times	About 15 times	About 30 times
+geo_every_person_russia	Hard	For every person in Russia, roughly how many people live in China?	About 10	About 4	About 25	About 2
+geo_more_people_ethiopia	Hard	Who has more people, Ethiopia or Germany?	Ethiopia, clearly more	Germany, clearly more	Germany, about 3x	Ethiopia, about 5x
+geo_countries_more_people_9	Hard	Which of these countries has more people than Germany?	Vietnam	Thailand	France	Italy
+geo_countries_more_people_10	Hard	Which of these countries has more people than Russia?	Bangladesh	Japan	Egypt	Germany
+geo_nigeria_germany_france	Hard	Nigeria vs Germany and France combined: who has more people?	Nigeria, about 1.5x	The pair, about 1.5x	About the same	The pair, about 3x
+geo_european_union_united	Hard	The European Union vs the United States: who has more people?	The EU, by roughly 100 million	The US, by roughly 100 million	The EU, about 3x	The US, about 2x
+geo_india_north_south	Hard	India vs North and South America combined: who has more people?	India, about 1.4x	The Americas, about 1.4x	The Americas, about 3x	India, about 4x
+geo_all_oceania_combined	Hard	All of Oceania combined has roughly as many people as which country?	Argentina	Germany	Japan	The Netherlands
+geo_single_country_roughly	Hard	Which single country has roughly as many people as the seven countries of Central America combined?	Colombia	Peru	Mexico	Brazil
+geo_more_people_five	Hard	Which of these has more people than the five Nordic countries combined?	Poland	Sri Lanka	Romania	The Netherlands
+geo_switzerland_three_baltic	Hard	Switzerland vs the three Baltic states combined: who has more people?	Switzerland, about 1.5x	The Baltics, about 1.5x	About the same	The Baltics, about 3x
+geo_roughly_share_all_3	Hard	Roughly what share of all Africans live in Nigeria?	About 1 in 7	About 1 in 3	About 1 in 20	About 1 in 2
+geo_roughly_share_oceania	Hard	Roughly what share of Oceania's people live in Australia?	About 60%	About 90%	About 30%	About 15%
+geo_kazakhstan_uzbekistan_more	Hard	Kazakhstan vs Uzbekistan: who has more people?	Uzbekistan, about 1.8x	Kazakhstan, about 1.8x	Kazakhstan, about 5x	About the same
+geo_papua_new_guinea_2	Hard	Papua New Guinea vs New Zealand: who has more people?	Papua New Guinea, at least 2x	New Zealand, about 2x	About the same	New Zealand, about 5x
+geo_netherlands_roughly_fraction	Hard	The Netherlands has roughly what fraction of Australia's population?	About two-thirds	About a quarter	About a tenth	About the same
+geo_countries_more_people_11	Hard	Which of these countries has more people than Italy?	Tanzania	Spain	Argentina	Canada
+geo_countries_more_people_12	Hard	Which of these countries has more people than Sweden?	Rwanda	Switzerland	Austria	Denmark
+geo_poland_canada_true	Hard	Poland vs Canada: which is true about their populations?	Both near 40 million	Canada, about 3x	Poland, about 2x	Canada, about 10x
+geo_haiti_dominican_republic	Hard	Haiti vs the Dominican Republic, which share one island: which is true about their populations?	Roughly 11 million each	The Dominican Republic, about 3x	Haiti, about 3x	The DR, about 10x
+geo_countries_roughly_same	Hard	Which of these countries has roughly the same population as Singapore?	Norway	Sweden	Austria	Estonia
+geo_iraq_saudi_arabia	Hard	Iraq vs Saudi Arabia: who has more people?	Iraq, by about 30%	Saudi Arabia, by about 30%	Saudi Arabia, about 2x	Iraq, about 3x
+geo_countries_more_people_13	Hard	Which of these countries has more people than Canada?	Colombia	Australia	Peru	Saudi Arabia
+geo_countries_more_people_14	Hard	Which of these countries has more people than the United Kingdom?	Iran	Canada	Spain	Argentina
+geo_germany_france_more	Hard	Germany vs France: who has more people?	Germany, by about a quarter	France, by about a quarter	France, about 2x	Germany, about 2x
+geo_indonesia_brazil_more	Hard	Indonesia vs Brazil: who has more people?	Indonesia, by about a third	Brazil, by about a third	About the same	Indonesia, about 3x
+geo_more_people_greater	Hard	Which has more people: the Greater Tokyo area or the whole of Australia?	Greater Tokyo, by about 10 million	Australia, by about 10 million	Australia, about twice as many	Greater Tokyo, about 4 times as many
+geo_california_canada_true	Hard	California vs Canada: which is true about their populations?	They are within about 10% of each other	California has about twice as many	Canada has about twice as many	California has about 4 times as many
+geo_countries_fewer_people_5	Hard	Which of these countries has FEWER people than the German state of Bavaria?	Austria	The Netherlands	Romania	Chile
+geo_roughly_times_people_3	Hard	Roughly how many times as many people live in the Canadian province of Ontario as in Sweden?	About 1.5 times	About 3 times	About 6 times	About the same
+geo_more_people_french	Hard	Who has more people: French-speaking Quebec or Belgium?	Belgium, by about 30%	Quebec, by about 30%	About the same number	Quebec, about twice as many
+geo_regions_more_people	Hard	Which of these regions has more people than the whole of Denmark?	Catalonia	Wales	Brittany	The Basque Country
+geo_more_people_paris	Hard	Who has more people: the Paris region (Ile-de-France) or Switzerland?	The Paris region, by over a third	Switzerland, by over a third	About the same number	Switzerland, about twice as many
+geo_more_people_germany_2	Hard	Which of these has more people than Germany?	Pakistan's Punjab province	England	Brazil's Sao Paulo state	The island of Sumatra
+geo_metro_manila_covers	Hard	Metro Manila covers only about 620 square km. Who has more people: Metro Manila or Switzerland?	Metro Manila, by about half	Switzerland, by about half	About the same number	Switzerland, about 5 times as many
+geo_more_people_india_2	Hard	Who has more people: India's state of West Bengal or the United Kingdom?	West Bengal, by almost half	The UK, by almost half	About the same number	The UK, about twice as many
+geo_roughly_times_people_4	Hard	Roughly how many times as many people live in Tasmania as in Iceland?	About 1.5 times	About 4 times	About 10 times	About half as many
+geo_more_people_canada	Hard	Who has more people: Canada's vast territory of Nunavut or Greenland?	Greenland, by about 40%	Nunavut, by about 40%	About the same number	Nunavut, about 3 times as many
+geo_more_people_whole_2	Hard	Who has more people: the whole island of Ireland or New Zealand?	Ireland, by about a third	New Zealand, by about a third	About the same number	New Zealand, about twice as many
+geo_islands_fewest_people	Hard	Which of these islands has the FEWEST people?	Borneo	Madagascar	Sumatra	Great Britain
+geo_more_people_indonesian	Hard	Who has more people: the Indonesian island of Sumatra or the whole of Canada?	Sumatra, by about half	Canada, by about half	About the same number	Canada, about twice as many
+geo_islands_people	Hard	Which of these islands has the most people?	Honshu	Great Britain	Luzon	Mindanao
+geo_counting_city_proper_7	Hard	Counting only the city proper, who has more people, Birmingham or Manchester?	Birmingham, about twice as many	Manchester, about twice as many	About the same number	Manchester, slightly more
+geo_more_people_city	Hard	Who has more people: the city of Istanbul (the whole province) or Greece?	Istanbul, about 1.5 times as many	Greece, about 1.5 times as many	About the same number	Greece, about 3 times as many
+geo_countries_fewer_people_6	Hard	Which of these countries has FEWER people than New York City (the city proper)?	Norway	Sweden	Portugal	Czechia
+geo_counting_city_proper_8	Hard	Counting only the city proper, how does Los Angeles compare with Chicago?	Los Angeles has about 40% more	Chicago has about 40% more	They are about the same	Los Angeles has 3 times as many
+geo_more_people_massachusetts	Hard	Who has more people: Massachusetts or the Republic of Ireland?	Massachusetts, by about a third	Ireland, by about a third	About the same number	Ireland, about twice as many
+geo_more_people_whole_3	Hard	Which of these has more people than the whole of New Zealand?	Victoria, Australia	Western Australia	South Australia	Northern Ireland
+geo_alaska_over_400	Hard	Alaska is over 400 times the size of Rhode Island. Which of the two states has more people?	Rhode Island, by about half	Alaska, by about half	About the same number	Alaska, about 10 times as many
+geo_roughly_share_iceland	Hard	Roughly what share of Iceland's people live in the Reykjavik capital region?	About two-thirds	About a third	About a tenth	Almost all of them
+geo_roughly_share_japan	Hard	Roughly what share of Japan's people live in the Greater Tokyo area?	About 30%	About 10%	About 55%	About 75%
+geo_counting_city_proper_9	Hard	Counting only the city proper, which of these capitals has the most people?	Vienna	Prague	Stockholm	Copenhagen
+geo_taiwan_slightly_smaller	Hard	Taiwan is slightly smaller than the Netherlands. Which of the two has more people?	Taiwan, by about 30%	The Netherlands, by about 30%	About the same number	The Netherlands, about twice as many
+geo_russia_sakha_republic	Hard	Russia's Sakha Republic (Yakutia) covers over 3 million square km. Who has more people: Sakha or Estonia?	Estonia, by over a third	Sakha, by over a third	About the same number	Sakha, about 5 times as many
+geo_more_people_city_2	Hard	Who has more people: the city of Moscow or Greater London?	Moscow, by almost half	London, by almost half	About the same number	London, about twice as many
+geo_counting_city_proper_10	Hard	Counting only the city proper, who has more people, Marseille or Lyon?	Marseille, by about two-thirds	Lyon, by about two-thirds	About the same number	Lyon, about twice as many
+geo_brazil_germany_france	Expert	Brazil vs Germany, France and the UK combined: which is true about their populations?	Both sides near 215 million	The three, about 2x	Brazil, about 2x	The three, about 4x
+geo_tunisia_belgium_true	Expert	Tunisia vs Belgium: which is true about their populations?	About 12 million apiece	Belgium, about 2x	Tunisia, about 3x	Belgium, about 5x
+geo_japan_mexico_more	Expert	Japan vs Mexico: who has more people?	Mexico, slightly more	Japan, about 1.5x	Mexico, about 2x	Japan, about 3x
+geo_new_zealand_ireland	Expert	New Zealand vs Ireland: which is true about their populations?	Both close to 5 million	Ireland, about 3x	New Zealand, about 2x	Ireland, about 10x
+geo_countries_roughly_same_2	Expert	Which of these countries has roughly the same population as Australia?	North Korea	Malaysia	Cuba	Chile
+geo_spain_portugal_combined	Expert	Spain and Portugal combined vs Italy: which is true about their populations?	Each side about 59 million	Italy, about 1.5x	The Iberian pair, about 2x	Italy, about 3x
+geo_more_people_madagascar	Expert	Who has more people, Madagascar or Australia?	Madagascar, by a few million	Australia, about 2x	Australia, about 5x	Madagascar, about 3x
+geo_russia_japan_more	Expert	Russia vs Japan: who has more people?	Russia, by only about 20%	Russia, about 5x	Japan, about 2x	Russia, about 10x
+geo_nigeria_brazil_more	Expert	Nigeria vs Brazil: who has more people?	Nigeria, slightly more	Brazil, slightly more	Brazil, about 2x	Nigeria, about 2x
+geo_all_south_america	Expert	All of South America vs the United States: who has more people?	South America, by about a quarter	The US, by about a quarter	The US, about 2x	South America, about 3x
+geo_africa_china_more	Expert	Africa vs China: who has more people?	Africa, by a little	China, about 1.5x	China, about 2x	Africa, about 2x
+geo_canada_australia_new	Expert	Canada vs Australia and New Zealand combined: who has more people?	Canada, by about 25%	Australia and NZ, by about 25%	Canada, about 3x	Australia and NZ, about 2x
+geo_spain_poland_more	Expert	Spain vs Poland: who has more people?	Spain, by roughly 10 million	Poland, by roughly 10 million	Spain, about 2x	Poland, about 2x
+geo_more_people_united	Expert	Who has more people, the United Kingdom or Italy?	The UK, by about 10 million	Italy, by about 10 million	Italy, about 2x	The UK, about 2x
+geo_egypt_iran_more	Expert	Egypt vs Iran: who has more people?	Egypt, by some 25 million	Iran, by some 25 million	Iran, about 2x	Egypt, about 2x
+geo_states_more_people	Expert	Which of these US states has more people than the whole of Australia?	Texas	Florida	New York	Pennsylvania
+geo_north_rhine_westphalia	Expert	North Rhine-Westphalia vs the Netherlands next door: which is true about their populations?	They are almost exactly the same	The German state has twice as many	The Netherlands has twice as many	The Netherlands has 50% more
+geo_more_people_greater_2	Expert	Who has more people: Greater London, or Scotland, Wales and Northern Ireland combined?	The three combined, by about a sixth	Greater London, by about a sixth	Greater London, about twice as many	The three combined, about twice as many
+geo_more_people_spain	Expert	Who has more people: Spain's region of Andalusia or Portugal?	Portugal, by about a fifth	Andalusia, by about a fifth	About the same number	Andalusia, about twice as many
+geo_more_people_england	Expert	Who has more people: England or Spain?	England, by about a fifth	Spain, by about a fifth	About the same number	Spain, about 1.5 times as many
+geo_more_people_netherlands	Expert	Which of these has more people than the Netherlands?	The Beijing municipality	The Tokyo Metropolis	Istanbul province	Greater London
+geo_more_people_hong_2	Expert	Who has more people: Hong Kong or Singapore?	Hong Kong, by about a quarter	Singapore, by about a quarter	About the same number	Singapore, about twice as many
+geo_faroe_islands_tiny	Expert	The Faroe Islands are tiny next to Greenland. How do their populations compare?	They are about the same	Greenland has about 10 times as many	Greenland has about 3 times as many	The Faroes have about 3 times as many
+geo_counting_city_proper_11	Expert	Counting only the city proper, who has more people, Hamburg or Munich?	Hamburg, by about a fifth	Munich, by about a fifth	About the same number	Munich, about twice as many
+geo_more_people_german	Expert	Who has more people: the German state of Baden-Wurttemberg or Switzerland?	Baden-Wurttemberg, by about a quarter	Switzerland, by about a quarter	About the same number	Switzerland, about twice as many
+geo_more_people_china_3	Expert	Who has more people: China's province of Sichuan or the United Kingdom?	Sichuan, by about a fifth	The UK, by about a fifth	About the same number	Sichuan, about twice as many
+geo_more_people_arizona	Expert	Who has more people: Arizona or Denmark?	Arizona, by about a quarter	Denmark, by about a quarter	About the same number	Denmark, about twice as many
+geo_states_more_people_2	Expert	Which of these US states has more people than Greece?	Pennsylvania	Washington	Arizona	Massachusetts
+geo_hokkaido_twice_size	Expert	Hokkaido is about twice the size of Denmark. Which of the two has more people?	Denmark, by about a fifth	Hokkaido, by about a fifth	About the same number	Hokkaido, about twice as many

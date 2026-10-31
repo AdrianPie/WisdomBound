@@ -1,0 +1,201 @@
+# Panstwa w liczbach: turysci, spozycie kawy, herbaty, piwa i czekolady, zwierzeta hodowlane kontra
+# ludzie, strefy czasowe, jezyki urzedowe, zamki, rowery, sasiedzi i inne zaskakujace rankingi
+# panstw. Tylko przewagi trwale, nie zmieniajace sie co roku.
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+geo_roughly_farmed_chickens	Easy	Roughly how many farmed chickens are alive on Earth at any moment for every person?	About 3	About 30	About 1	About 100
+geo_kangaroos_people_australia	Easy	Kangaroos vs people in Australia: which is true?	There are more kangaroos than people	There are about 5 people per kangaroo	There are about 50 people per kangaroo	There are about 20 kangaroos per person
+geo_drinks_more_wine	Easy	Who drinks more wine per person, the French or Americans?	The French, about 4 times as much	Americans, about twice as much	About the same amount	The French, about 30 times as much
+geo_grows_more_tomatoes	Easy	Who grows more tomatoes, China or Italy?	China, about 10 times as many	Italy, about twice as many	About the same amount	Italy, slightly more
+geo_thai_rice_world	Easy	Thai rice is world-famous, but who grows more rice, China or Thailand?	China, about 6 times as much	Thailand, about twice as much	About the same amount	Thailand, slightly more
+geo_mexico_top_mango	Easy	Mexico is the top mango exporter, but who grows more mangoes, India or Mexico?	India, about 10 times as many	Mexico, about twice as many	About the same amount	Mexico, slightly more
+geo_eats_more_chocolate	Easy	Who eats more chocolate per person, the British or the Japanese?	The British, several times as much	The Japanese, several times as much	About the same amount	The Japanese, slightly more
+geo_eats_more_cheese	Easy	Who eats more cheese per person, France or Japan?	France, about 10 times as much	France, about 50% more	About the same amount	Japan, slightly more
+geo_kenyan_coffee_but	Easy	Kenyan coffee is famous, but who grows more coffee, Ethiopia or Kenya?	Ethiopia, about 10 times as much	Kenya, about twice as much	About the same amount	Kenya, slightly more
+geo_despite_florida_fame	Easy	Despite Florida's fame, who grows more oranges, Brazil or the USA?	Brazil, several times as many	The USA, several times as many	About the same amount	The USA, slightly more
+geo_indonesia_loves_indomie	Easy	Indonesia loves its Indomie, but who eats more instant noodles in total, China or Indonesia?	China, about 3 times as many	Indonesia, about twice as many	About the same amount	Indonesia, slightly more
+geo_makes_more_wine	Easy	Which makes more wine, Australia or New Zealand?	Australia, several times as much	New Zealand, several times as much	About the same amount	New Zealand, slightly more
+geo_makes_more_cheese	Easy	Who makes more cheese in total, the USA or France?	The USA, about 3 times as much	France, about 3 times as much	About the same amount	France, slightly more
+geo_drinks_more_beer	Easy	Who drinks more beer per person, Germans or the Chinese?	Germans, more than 3 times as much	The Chinese, about twice as much	About the same amount	The Chinese, slightly more
+geo_germany_beer_country	Easy	Germany is a beer country, but who makes more wine, Germany or Italy?	Italy, about 5 times as much	Germany, about twice as much	About the same amount	Germany, slightly more
+geo_makes_more_cheese_2	Easy	Who makes more cheese in total, the Netherlands or Switzerland?	The Netherlands, several times as much	Switzerland, several times as much	About the same amount	Switzerland, slightly more
+geo_keeps_more_sheep	Easy	Who keeps more sheep, China or New Zealand?	China, about 8 times as many	New Zealand, about twice as many	About the same number	New Zealand, slightly more
+geo_france_welcomes_more	Easy	France vs the UK: which welcomes more foreign tourists a year?	France, more than twice as many	The UK, about twice as many	About the same number	The UK, slightly more
+geo_mexico_brazil_welcomes	Easy	Mexico vs Brazil: which welcomes more foreign tourists a year?	Mexico, several times as many	Brazil, several times as many	About the same number	Brazil, about twice as many
+geo_italy_egypt_land	Easy	Italy vs Egypt, land of the pyramids: which welcomes more foreign tourists a year?	Italy, about three times as many	Egypt, about twice as many	About the same number	Italy, about 20 times as many
+geo_italy_india_median	Easy	Italy vs India: whose median age is higher?	Italy's, by about 20 years	India's, by about 10 years	Italy's, by about 3 years	They are about the same
+geo_brazil_chile_more	Easy	Brazil vs Chile: which has more land neighbours?	Brazil, over three times as many	Chile, about twice as many	They have the same number	Brazil, just one more
+geo_countries_more_land	Easy	Which of these countries has more land neighbours than Germany?	China	Poland	Spain	India
+geo_roughly_times_more_26	Easy	Roughly how many times more people per square kilometre does the UK have than Canada?	About 70 times	About 7 times	About 700 times	About 2 times
+geo_india_china_similar	Easy	India and China have similar populations. Which is more densely populated?	India, about three times	China, about three times	About the same	China, about twice
+geo_roughly_times_more_27	Easy	Roughly how many times more people per square kilometre do the Netherlands have than the USA?	About 12 times	About 3 times	About 50 times	About 1.5 times
+geo_japan_nigeria_median	Easy	Japan vs Nigeria: whose median age is higher?	Japan's, by about 30 years	Nigeria's, by about 10 years	Japan's, by about 5 years	They are about the same
+geo_japan_group_bigger	Easy	In Japan, which group is bigger: people aged 65 and over, or children under 15?	Over-65s, over twice as many	Children, about twice as many	About equal numbers	Children, slightly more
+geo_japan_russia_life	Easy	Japan vs Russia: whose life expectancy is longer?	Japan's, by about 10 years	Russia's, by about 10 years	Japan's, by about 30 years	They are about the same
+geo_countries_tallest_men	Easy	Which of these countries has the tallest men on average?	The Netherlands	The USA	Sweden	Germany
+geo_china_japan_high	Easy	China vs Japan: whose high-speed rail network is longer?	China's, over ten times longer	Japan's, about twice as long	About the same length	China's, about twice as long
+geo_usa_india_more	Easy	The USA vs India: which has more cars per person?	The USA, over ten times as many	India, about twice as many	About the same	The USA, about twice as many
+geo_countries_unesco_world	Easy	Which of these countries has the most UNESCO World Heritage sites?	Italy	Greece	Egypt	Turkey
+geo_china_australia_more	Easy	China vs Australia: which has more UNESCO World Heritage sites?	China, about three times as many	Australia, about twice as many	About the same number	China, about 20 times as many
+geo_spain_india_welcomes	Easy	Spain vs India: which welcomes more foreign tourists a year?	Spain, about ten times as many	India, about twice as many	About the same number	Spain, about twice as many
+geo_drinks_more_coffee	Medium	Who drinks more coffee per person, Norway or Italy?	Norway, clearly more	Italy, clearly more	About the same amount	Norway, about 5 times as much
+geo_drinks_more_coffee_2	Medium	Who drinks more coffee per person, the Dutch or the British?	The Dutch, over twice as much	The British, over twice as much	About the same amount	The British, slightly more
+geo_grows_more_tea	Medium	Who grows more tea, India or Kenya?	India, over twice as much	Kenya, over twice as much	About the same amount	Kenya, slightly more
+geo_india_grows_mountain	Medium	India grows a mountain of tea, but who drinks more of it per person, Ireland or India?	Ireland, over twice as much	India, over twice as much	About the same amount	Ireland, about 10 times as much
+geo_more_numerous_australia	Medium	Which are more numerous in Australia, sheep or cattle?	Sheep, over twice as many	Cattle, over twice as many	About the same number	Cattle, slightly more
+geo_drinks_more_beer_2	Medium	Who drinks more beer per person, Germans or Italians?	Germans, over twice as much	Italians, over twice as much	About the same amount	Italians, slightly more
+geo_eats_more_rice	Medium	Who eats more rice per person, Bangladesh or Japan?	Bangladesh, well over twice as much	Japan, about twice as much	About the same amount	Japan, slightly more
+geo_exports_more_rice	Medium	Who exports more rice, India or Thailand?	India, about twice as much	Thailand, about twice as much	About the same amount	Thailand, slightly more
+geo_eats_more_beef	Medium	Who eats more beef per person, Argentines or Americans?	Argentines, much more	Americans, much more	About the same amount	Americans, slightly more
+geo_countries_grows_more	Medium	Which of these countries grows more wheat than the United States?	China	Canada	Australia	Argentina
+geo_produces_more_palm	Medium	Who produces more palm oil, Indonesia or Malaysia?	Indonesia, over twice as much	Malaysia, over twice as much	About the same amount	Malaysia, slightly more
+geo_farms_more_atlantic	Medium	Who farms more Atlantic salmon, Norway or Chile?	Norway, about twice as much	Chile, about twice as much	About the same amount	Chile, slightly more
+geo_produces_more_honey	Medium	Who produces more honey, China or Turkey?	China, several times as much	Turkey, several times as much	About the same amount	Turkey, slightly more
+geo_produces_more_milk	Medium	Which of these produces more milk than the United States?	India	China	Brazil	Germany
+geo_roughly_share_world_5	Medium	Roughly what share of the world's cocoa beans do Ivory Coast and Ghana grow together?	About 60%	About 15%	About 30%	About 90%
+geo_counting_horses_cattle	Medium	Counting horses, cattle, camels, sheep and goats, roughly how many farm animals does Mongolia have per person?	About 20	About 5	About 60	About 1
+geo_roughly_pigs_state	Medium	Roughly how many pigs does the US state of Iowa have for every person living there?	About 7	About 2	About 25	About 1
+geo_counting_spring_lambs	Medium	Counting spring lambs, roughly how many sheep does Wales have per person?	About 3	About 1	About 10	About 30
+geo_countries_more_sheep	Medium	Which of these countries has more sheep than people?	Australia	The United Kingdom	Turkey	Spain
+geo_countries_more_cattle	Medium	Which of these countries has more cattle than people?	Brazil	India	The United States	China
+geo_keeps_more_cattle	Medium	Who keeps more cattle, Brazil or the United States?	Brazil, over twice as many	The USA, over twice as many	About the same number	The USA, slightly more
+geo_cattle_people_new	Medium	Cattle vs people in New Zealand: which is true?	About two cattle per person	About one cow per two people	About ten cattle per person	About one cow per ten people
+geo_roughly_share_all_5	Medium	Roughly what share of all the world's pigs live in China?	About half	About a tenth	About a quarter	About 90%
+geo_country_donkeys	Medium	Which country has the most donkeys?	Ethiopia	Egypt	Mexico	Morocco
+geo_roughly_share_world_6	Medium	Roughly what share of the world's water buffalo live in India?	About half	About a tenth	About 90%	About a fifth
+geo_roughly_share_world_7	Medium	Roughly what share of the world's domestic yaks live in China?	About 90%	About 30%	About 50%	About 10%
+geo_worldwide_roughly_cattle	Medium	Worldwide, roughly how many cattle are there per person?	About 1 for every 5 people	About 1 for every 50 people	About 2 per person	About 1 per person
+geo_eats_more_pasta	Medium	Who eats more pasta per person, Italians or Americans?	Italians, over twice as much	Americans, slightly more	About the same amount	Italians, about 10 times as much
+geo_grows_more_strawberries	Medium	Who grows more strawberries, China or the USA?	China, well over twice as many	The USA, well over twice as many	About the same amount	The USA, slightly more
+geo_drinks_more_coffee_3	Medium	Who drinks more coffee in total, Brazil or Germany?	Brazil, over twice as much	Germany, over twice as much	About the same amount	Germany, slightly more
+geo_roughly_share_world_8	Medium	Roughly what share of the world's apples does China grow?	About half	About a tenth	About 90%	About a fifth
+geo_ecuador_top_banana	Medium	Ecuador is the top banana exporter, but who grows more bananas, China or Ecuador?	China, clearly more	Ecuador, clearly more	About the same amount	Ecuador, about 3 times as many
+geo_larger_number_goats	Medium	Which is larger: the number of goats in India or the number of people in Germany?	India's goats, clearly	Germany's people, clearly	They are about equal	Germany's people, by 3 times
+geo_brews_more_beer	Medium	Which of these brews more beer than Germany?	Brazil	The United Kingdom	Belgium	Japan
+geo_keeps_more_camels	Medium	Who keeps more camels, Somalia or Saudi Arabia?	Somalia, several times as many	Saudi Arabia, several times as many	About the same number	Saudi Arabia, slightly more
+geo_california_wine_big	Medium	California wine is big business, but who makes more wine, the USA or Australia?	The USA, about twice as much	Australia, about twice as much	About the same amount	Australia, slightly more
+geo_drinks_more_tea	Medium	Who drinks more tea per person, the British or Americans?	The British, several times as much	Americans, several times as much	About the same amount	Americans, slightly more
+geo_austria_australia_welcomes	Medium	Austria vs Australia: which welcomes more foreign tourists a year?	Austria, about four times as many	Australia, about four times as many	About the same number	Australia, about twice as many
+geo_thailand_india_welcomes	Medium	Thailand vs India: which welcomes more foreign tourists a year?	Thailand, about three times as many	India, about three times as many	About the same number	India, about ten times as many
+geo_countries_welcomes_foreign	Medium	Which of these countries welcomes the most foreign tourists per resident each year?	Croatia	Spain	France	Italy
+geo_iceland_home_390	Medium	Iceland, home to about 390,000 people, welcomes roughly how many foreign visitors a year?	About 2 million	About 200,000	About 600,000	About 8 million
+geo_japan_south_korea	Medium	Japan vs South Korea: which welcomes more foreign tourists a year?	Japan, more than twice as many	South Korea, about twice as many	About the same number	Japan, about ten times as many
+geo_time_zones_canada	Medium	How many time zones does Canada span from coast to coast?	Six	Four	Nine	Three
+geo_indonesia_stretches_000	Medium	Indonesia stretches about 5,000 km from west to east. How many time zones does it use?	Three	One	Five	Seven
+geo_mainland_australia_officially	Medium	Mainland Australia officially uses how many standard time zones?	Three	One	Five	Six
+geo_south_africa_belgium	Medium	South Africa vs Belgium: how do their numbers of official languages compare?	South Africa, about 4x as many	Belgium, twice as many	Both have exactly three	South Africa, just one more
+geo_asian_countries_four	Medium	Which of these Asian countries has four official languages?	Singapore	Malaysia	Thailand	Japan
+geo_india_more_people	Medium	India vs the UK: which has more people who speak English?	India, by a wide margin	The UK, by a wide margin	They are about equal	The UK, narrowly
+geo_little_austria_big	Medium	Little Austria vs big Spain: which has more land neighbours?	Austria, with eight	Spain, with eight	Both have five	Spain, with six
+geo_asian_countries_exactly	Medium	Which of these Asian countries has exactly one land neighbour?	South Korea	Vietnam	Thailand	Mongolia
+geo_nigeria_china_more	Medium	Nigeria vs China: which is more densely populated?	Nigeria, by over 50%	China, by over 50%	China, about five times	They are almost equal
+geo_rwanda_more_densely	Medium	Rwanda vs the UK: which is more densely populated?	Rwanda, nearly twice as dense	The UK, nearly twice as dense	The UK, about ten times	About the same
+geo_haiti_dominican_republic_2	Medium	Haiti and the Dominican Republic share one island. Which is more densely populated?	Haiti, nearly twice as dense	Dominican Republic, by far	They are almost equal	Dominican Republic, slightly
+geo_european_union_country	Medium	Which European Union country is the most densely populated?	Malta	The Netherlands	Belgium	Germany
+geo_south_korea_north_2	Medium	South Korea vs North Korea: which is more densely populated?	South Korea, over twice as dense	North Korea, about twice as dense	About the same	South Korea, about ten times
+geo_countries_more_densely	Medium	Which of these countries is more densely populated than China?	The Philippines	Turkey	Mexico	Iran
+geo_china_india_median	Medium	China vs India: whose median age is higher?	China's, by about 10 years	India's, by about 10 years	They are almost identical	China's, by about 25 years
+geo_europe_africa_median	Medium	Europe vs Africa: how do their median ages compare?	Europe's is over twice as high	Africa's is about twice as high	They are about the same	Europe's is 5 years higher
+geo_2020s_south_korea	Medium	In the 2020s, South Korea's fertility rate fell to roughly how many children per woman?	Fewer than one	About 1.5	About 2	About 3
+geo_countries_women_outlive	Medium	In which of these countries do women outlive men by the widest margin?	Russia	Japan	The USA	Sweden
+geo_roughly_longer_life	Medium	Roughly how much longer is life expectancy in Spain than in Nigeria?	About 30 years	About 5 years	About 12 years	About 50 years
+geo_countries_airport_own	Medium	Which of these countries has no airport of its own?	Liechtenstein	Luxembourg	Malta	Iceland
+geo_indian_railways_world	Medium	Indian Railways, one of the world's biggest employers, has roughly how many staff?	About 1.2 million	About 150,000	About 400,000	About 10 million
+geo_2024_roughly_share	Medium	In 2024, roughly what share of new cars sold in Norway were fully electric?	About 9 in 10	About half	About a quarter	About 1 in 10
+geo_china_builds_roughly	Medium	China builds roughly how many times as many motor vehicles a year as the USA?	About three times	About the same	About ten times	About half as many
+geo_japan_germany_builds	Medium	Japan vs Germany: which builds more cars a year?	Japan, about twice as many	Germany, about twice as many	About the same number	Japan, about ten times as many
+geo_netherlands_roughly_bicycles	Medium	In the Netherlands, roughly how many bicycles are there for every car?	About two and a half	About one	About six	Fewer than one
+geo_roughly_share_world_10	Medium	Roughly what share of the world's people live in countries that drive on the left?	About a third	About a tenth	About two thirds	About a twentieth
+geo_italy_usa_more	Medium	Italy vs the USA: which has more UNESCO World Heritage sites?	Italy, over twice as many	The USA, about twice as many	About the same number	Italy, about ten times as many
+geo_germany_japan_more	Medium	Germany vs Japan: which has more UNESCO World Heritage sites?	Germany, about twice as many	Japan, about twice as many	About the same number	Germany, about ten times as many
+geo_german_cities_over	Medium	How many German cities have over a million people within their city limits?	Four	Two	Seven	Ten
+geo_roughly_americans_claim	Medium	Roughly how many Americans claim Irish ancestry, compared with the population of Ireland?	About six times as many	About the same number	About twice as many	About 20 times as many
+geo_germany_said_roughly	Medium	Germany is said to have roughly how many castles, palaces and castle ruins?	About 25,000	About 2,500	About 250	About 250,000
+geo_tanzania_kenya_more	Medium	Tanzania vs Kenya: which has more land neighbours?	Tanzania, with eight	Kenya, with eight	Both have five	Kenya, with six
+geo_grows_more_potatoes	Hard	Who grows more potatoes, China or India?	China, clearly more	India, clearly more	About the same amount	India, about 3 times as many
+geo_colombia_coffee_icon	Hard	Colombia is the coffee icon, but who grows more coffee, Vietnam or Colombia?	Vietnam, over twice as much	Colombia, over twice as much	About the same amount	Colombia, slightly more
+geo_ceylon_tea_but	Hard	Ceylon tea is famous, but who grows more tea, Kenya or Sri Lanka?	Kenya, clearly more	Sri Lanka, clearly more	About the same amount	Sri Lanka, about 3 times as much
+geo_japan_green_tea	Hard	Japan is famous for green tea, but who grows more tea, Turkey or Japan?	Turkey, several times as much	Japan, several times as much	About the same amount	Japan, slightly more
+geo_grows_more_soybeans	Hard	Who grows more soybeans, Brazil or the USA?	Brazil, clearly more	The USA, clearly more	About the same amount	The USA, about twice as much
+geo_drinks_more_beer_3	Hard	Who drinks more beer in total, China or the USA?	China, clearly more	The USA, clearly more	About the same amount	The USA, about 3 times as much
+geo_typical_recent_year	Hard	In a typical recent year, who makes more wine, Italy or Spain?	Italy, clearly more	Spain, clearly more	About the same amount	Spain, about 3 times as much
+geo_eats_more_pasta_2	Hard	Who eats more pasta per person, Tunisians or the French?	Tunisians, about twice as much	The French, about twice as much	About the same amount	The French, about 5 times as much
+geo_drinks_more_mate	Hard	Who drinks more mate per person, Uruguay or Argentina?	Uruguay, clearly more	Argentina, clearly more	About the same amount	Argentina, about 3 times as much
+geo_japan_invented_instant	Hard	Japan invented instant noodles, but who eats more of them per person, South Korea or Japan?	South Korea, clearly more	Japan, clearly more	About the same amount	Japan, about 3 times as much
+geo_compared_early_1960s	Hard	Compared with the early 1960s, how much rice does the average Japanese person eat today?	Less than half as much	About the same amount	About twice as much	About 90% as much
+geo_australia_beef_country	Hard	Australia is beef country, but who keeps more cattle, Argentina or Australia?	Argentina, clearly more	Australia, clearly more	About the same number	Australia, about twice as many
+geo_harvests_grapes_table	Hard	Which of these harvests the most grapes, table and wine grapes together?	China	Italy	France	Spain
+geo_roughly_share_world_9	Hard	Roughly what share of the world's garlic does China grow?	About three quarters	About a third	About a tenth	Nearly all of it
+geo_keeps_more_sheep_2	Hard	Who keeps more sheep in total, Australia or New Zealand?	Australia, about 3 times as many	New Zealand, about twice as many	About the same number	New Zealand, slightly more
+geo_larger_number_sheep	Hard	Which is larger: the number of sheep in China or the number of people in Japan?	China's sheep, clearly	Japan's people, clearly	They are about equal	Japan's people, by 3 times
+geo_cattle_people_ireland	Hard	Cattle vs people in Ireland: which is true?	There are more cattle than people	There are about twice as many people	There are about 5 cattle per person	There is about 1 cow per 10 people
+geo_states_more_cattle	Hard	Which of these US states has more cattle than people?	Nebraska	Texas	California	Florida
+geo_keeps_more_pigs	Hard	Who keeps more pigs, Spain or Germany?	Spain, clearly more	Germany, clearly more	About the same number	Germany, about twice as many
+geo_roughly_sheep_every	Hard	Roughly how many sheep are there for every person in the Falkland Islands?	Over 100	About 30	About 10	About 2
+geo_more_sheep_per	Hard	Which has more sheep per square kilometre, Wales or New Zealand?	Wales, several times as many	New Zealand, several times as many	About the same number	New Zealand, slightly more
+geo_worldwide_more_numerous	Hard	Worldwide, which are more numerous, cattle or pigs?	Cattle, clearly more	Pigs, clearly more	About the same number	Pigs, about 3 times as many
+geo_weight_roughly_share	Hard	By weight, roughly what share of all mammals on Earth are wild mammals?	Only a few percent	About a third	About half	About 80%
+geo_weight_roughly_share_2	Hard	By weight, roughly what share of all birds on Earth are farmed poultry?	About 70%	About 10%	About 30%	About 2%
+geo_weight_greater_all	Hard	By weight, which is greater: all farm animals or all humans?	Farm animals, clearly more	Humans, clearly more	About the same	Humans, about 5 times as much
+geo_keeps_more_llamas	Hard	Who keeps more llamas, Bolivia or Peru?	Bolivia, clearly more	Peru, clearly more	About the same number	Peru, about 5 times as many
+geo_more_sheep_per_2	Hard	Who has more sheep per person, New Zealand or Australia?	New Zealand, clearly more	Australia, clearly more	About the same number	Australia, about 3 times as many
+geo_larger_number_cattle	Hard	Which is larger: the number of cattle in Brazil or the number of people in the USA?	People in the USA, clearly	Cattle in Brazil, clearly	They are about equal	Cattle in Brazil, by 3 times
+geo_drinks_more_coffee_4	Hard	Who drinks more coffee per person, Danes or Americans?	Danes, clearly more	Americans, clearly more	About the same amount	Americans, about 3 times as much
+geo_brazil_once_cocoa	Hard	Brazil was once a cocoa giant, but who grows more cocoa today, Ghana or Brazil?	Ghana, clearly more	Brazil, clearly more	About the same amount	Brazil, about 3 times as much
+geo_spain_usa_receives	Hard	Spain vs the USA: which receives more international tourists a year?	Spain, by about a third	The USA, by about a third	The USA, about twice as many	Spain, about three times as many
+geo_countries_uses_more	Hard	Which of these countries uses more than one time zone?	Mexico	Argentina	India	China
+geo_countries_recognises_official	Hard	Which of these countries recognises the most official languages?	Bolivia	South Africa	Switzerland	Belgium
+geo_papua_new_guinea_3	Hard	Papua New Guinea vs all of Europe: where are more native languages spoken?	Papua New Guinea, about 3x as many	Europe, about 2x as many	Roughly the same number	Europe, about 10x as many
+geo_countries_land_neighbours	Hard	Which of these countries has the most land neighbours?	Turkey	Iraq	Greece	Egypt
+geo_switzerland_italy_more	Hard	Switzerland vs Italy: which has more land neighbours?	Italy, with six	Switzerland, with six	Both have five	Switzerland, with seven
+geo_japan_germany_more	Hard	Japan vs Germany: which is more densely populated?	Japan, by about 40%	Germany, by about 40%	Germany, about twice	Japan, about four times
+geo_mauritius_netherlands_more	Hard	Mauritius vs the Netherlands: which is more densely populated?	Mauritius, by about 40%	The Netherlands, by about 40%	The Netherlands, about 3x	Mauritius, about 5 times
+geo_countries_fewest_people	Hard	Which of these countries has the fewest people per square kilometre?	Mongolia	Australia	Iceland	Namibia
+geo_european_union_country_2	Hard	Which European Union country is the most thinly populated?	Finland	Sweden	Estonia	Latvia
+geo_salvador_italy_more	Hard	El Salvador vs Italy: which is more densely populated?	El Salvador, by about half	Italy, by about half	Italy, about three times	They are almost equal
+geo_nepal_china_more	Hard	Nepal vs China: which is more densely populated?	Nepal, by about a third	China, by about a third	China, about three times	They are exactly equal
+geo_niger_youngest_countries	Hard	In Niger, one of the youngest countries on Earth, half the people are younger than roughly what age?	About 15	About 25	About 35	About 45
+geo_nigeria_whole_european	Hard	Nigeria vs the whole European Union: where are more babies born each year?	Nigeria, about twice as many	The EU, about twice as many	About the same number	The EU, about five times as many
+geo_japan_home_roughly	Hard	Japan is home to roughly how many centenarians, aged 100 or over?	About 100,000	About 10,000	About 1,000	About 1 million
+geo_germany_usa_median	Hard	Germany vs the USA: whose median age is higher?	Germany's, by about 7 years	The USA's, by about 7 years	Germany's, by about 20 years	They are almost identical
+geo_south_korea_usa	Hard	South Korea vs the USA: whose life expectancy is longer?	South Korea's, by a few years	The USA's, by a few years	The USA's, by about 15 years	South Korea's, by 15 years
+geo_roughly_taller_average	Hard	Roughly how much taller is the average Dutch man than the average man in Timor-Leste?	About 24 cm	About 10 cm	About 50 cm	About 4 cm
+geo_usa_country_airports	Hard	After the USA, which country has the most airports and airstrips?	Brazil	Russia	China	Canada
+geo_china_usa_more	Hard	China vs the USA: which has more cars on its roads?	China, by tens of millions	The USA, by tens of millions	The USA, about 3 times as many	China, about 10 times as many
+geo_germany_european_country	Hard	After Germany, which European country builds the most cars?	Spain	France	Italy	The UK
+geo_india_russia_more	Hard	India vs Russia: which has more UNESCO World Heritage sites?	India, by about a third	Russia, by about a third	Russia, about twice as many	India, about three times as many
+geo_poland_egypt_more	Hard	Poland vs Egypt: which has more UNESCO World Heritage sites?	Poland, over twice as many	Egypt, over twice as many	About the same number	Egypt, about ten times as many
+geo_country_americas_unesco	Hard	Which country in the Americas has the most UNESCO World Heritage sites?	Mexico	The USA	Brazil	Peru
+geo_countries_just_city	Hard	Which of these countries has just one city of over a million people within its city limits?	France	Spain	Italy	The UK
+geo_roughly_chinese_cities	Hard	Roughly how many Chinese cities have over a million people?	Over 100	About 10	About 30	About 1,000
+geo_countries_highest_share	Hard	Which of these countries has the highest share of women in its parliament?	Rwanda	Sweden	Iceland	Finland
+geo_federations_divided_states	Hard	Which of these federations is divided into the most states?	The USA	Nigeria	Brazil	Mexico
+geo_italy_france_true	Expert	Italy vs France: which is true about how much wine they make?	They are close and swap first place	Italy makes about 3 times as much	France makes about 3 times as much	Both trail far behind Spain
+geo_drinks_more_wine_2	Expert	Who drinks more wine per person, Portugal or France?	Portugal, somewhat more	France, somewhat more	France, about twice as much	Portugal, about 3 times as much
+geo_drinks_more_wine_3	Expert	Who drinks more wine in total, the USA or France?	The USA, somewhat more	France, somewhat more	France, about twice as much	The USA, about 4 times as much
+geo_typical_recent_year_2	Expert	In a typical recent year, who makes more wine, Spain or the USA?	Spain, somewhat more	The USA, somewhat more	The USA, about twice as much	Spain, about 4 times as much
+geo_countries_largest_area	Expert	Which of these countries has the largest area planted with vineyards?	Spain	France	Italy	China
+geo_grows_more_maize	Expert	Who grows more maize, the USA or China?	The USA, somewhat more	China, somewhat more	China, about twice as much	The USA, about 4 times as much
+geo_vietnam_rice_exporting	Expert	Vietnam is a rice-exporting giant, but who grows more rice, Bangladesh or Vietnam?	Bangladesh, somewhat more	Vietnam, somewhat more	Vietnam, about twice as much	Bangladesh, about 4 times as much
+geo_larger_number_pigs	Expert	Which is larger: the number of pigs in China or the number of people in the USA?	China's pigs, somewhat more	US people, somewhat more	US people, about twice as many	China's pigs, about 4 times as many
+geo_worldwide_more_numerous_2	Expert	Worldwide, which are more numerous, cattle or sheep?	Cattle, somewhat more	Sheep, somewhat more	Sheep, about twice as many	Cattle, about 5 times as many
+geo_france_land_cheese	Expert	France is the land of cheese, but who makes more cheese, Germany or France?	Germany, somewhat more	France, somewhat more	France, about twice as much	Germany, about 4 times as much
+geo_dutch_cheese_export	Expert	Dutch cheese is a famous export, but who makes more cheese, Italy or the Netherlands?	Italy, somewhat more	The Netherlands, somewhat more	The Netherlands, about twice as much	Italy, about 4 times as much
+geo_more_sheep_per_3	Expert	Who has more sheep per person, Mongolia or New Zealand?	Mongolia, clearly more	New Zealand, clearly more	About the same number	New Zealand, about 3 times as many
+geo_spain_top_pig	Expert	Spain is the EU's top pig farmer, but which is larger in Spain: pigs or people?	People, by about 40%	Pigs, by about 40%	Pigs, about twice as many	People, about 5 times as many
+geo_larger_number_pigs_2	Expert	Which is larger: the number of pigs in Iowa or the number of people in the Netherlands?	Iowa's pigs, clearly	Dutch people, clearly	Dutch people, by 3 times	Iowa's pigs, by 5 times
+geo_sheep_but_keeps	Expert	The UK is famous for sheep, but who keeps more sheep, Turkey or the UK?	Turkey, clearly more	The UK, clearly more	The UK, about twice as many	Turkey, about 4 times as many
+geo_nigeria_india_more	Expert	Nigeria vs India: which has more living languages?	Nigeria, slightly more	India, slightly more	India, about twice as many	Nigeria, about twice as many
+geo_zimbabwe_south_africa	Expert	Zimbabwe vs South Africa: which recognises more official languages?	Zimbabwe, a few more	South Africa, a few more	Both have exactly eleven	South Africa, twice as many
+geo_poland_ukraine_more	Expert	Poland vs Ukraine: which has more land neighbours?	They tie, with seven each	Poland, by two	Ukraine, by two	Ukraine, by four
+geo_landlocked_african_country	Expert	Which landlocked African country has the most land neighbours?	Zambia	Niger	Mali	Chad
+geo_saudi_arabia_iran	Expert	Saudi Arabia vs Iran: which has more land neighbours?	Neither, both have seven	Iran, by three	Saudi Arabia, by two	Iran, by one
+geo_india_belgium_more	Expert	India vs Belgium: which is more densely populated?	India, by a small margin	Belgium, by a small margin	Belgium, about twice	India, about five times
+geo_australia_canada_more	Expert	Australia vs Canada: which is more thinly populated?	Australia, slightly	Canada, slightly	Canada, about three times	Australia, about three times
+geo_italy_germany_more	Expert	Italy vs Germany: which is more densely populated?	Germany, by about a fifth	Italy, by about a fifth	Italy, about twice	They are exactly equal
+geo_philippines_japan_more	Expert	The Philippines vs Japan: which is more densely populated?	The Philippines, slightly	Japan, slightly	Japan, about twice	The Philippines, about 4x
+geo_average_dutch_woman	Expert	The average Dutch woman is about as tall as the average man of which country?	Japan	Germany	The USA	Sweden
+geo_countries_builds_cars	Expert	Which of these countries builds the most cars per person?	Slovakia	Germany	Japan	South Korea
+geo_bigger_number_cars	Expert	Which is bigger: the number of cars registered in Germany or the population of Poland?	German cars, by about 10 million	Poland's people, by about 10 million	Poland's people, twice as many	German cars, three times as many
+geo_besides_london_british	Expert	Besides London, which British city has over a million people within its city limits?	Birmingham	Leeds	Glasgow	Manchester
+geo_japanese_castles_still	Expert	How many Japanese castles still have their original keep from before 1868?	Twelve	Three	Forty	About 120
+geo_country_languages_per	Expert	Which country has the most languages per person, with over 100 for about 330,000 people?	Vanuatu	Fiji	Samoa	Tonga

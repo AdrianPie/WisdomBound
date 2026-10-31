@@ -89,6 +89,17 @@ class AnswerWindowTest {
     }
 
     @Test
+    fun `tempo pytania dodaje czas, a gleboka fala tnie tez dodatek`() {
+        val plain = AnswerTimer.windowFor(optionCount = 4, wave = 1)
+        val paced = AnswerTimer.windowFor(optionCount = 4, wave = 1, paceMs = 4_000)
+        assertEquals(plain + 4_000, paced)
+
+        val deepPlain = AnswerTimer.windowFor(optionCount = 4, wave = 20)
+        val deepPaced = AnswerTimer.windowFor(optionCount = 4, wave = 20, paceMs = 4_000)
+        assertTrue(deepPaced - deepPlain < 4_000, "dodatek tez ma malec z fala: ${deepPaced - deepPlain}")
+    }
+
+    @Test
     fun `glebsza fala tnie czas, ale nigdy ponizej podlogi`() {
         val early = AnswerTimer.windowFor(optionCount = 4, wave = 1)
         val finish = AnswerTimer.windowFor(optionCount = 4, wave = 20)

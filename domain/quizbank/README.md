@@ -32,6 +32,8 @@ geography/
     oceans_seas.tsv, rivers_lakes.tsv, mountains.tsv, climate.tsv, ...
   human/                             People & Places
     countries.tsv, cities.tsv, languages_customs.tsv, food_drink.tsv
+  comparisons/                       Higher or Lower
+    population.tsv, area.tsv, skylines.tsv, nature.tsv, by_numbers.tsv
 data/
   countries.tsv                      dane o panstwach (nie pytania) - patrz nizej
 ```
@@ -160,7 +162,9 @@ wyraznie najdluzsza, polskie znaki i cudzyslowy (bank pisze `Krakow`, `Pele` i '
 Przewodnik dla autorow: `WRITING_GUIDE.md`, pelna lista w KDoc `QuizBank`. W skrocie: pytanie ma zaskakiwac albo bawic (zadnych definicji
 z podrecznika i fiszek), Easy to fakt znany wiekszosci doroslych, ale do przypomnienia (nie zerowka),
 dystraktory z tej samej polki i podobnej dlugosci, jeden fakt = jedno pytanie (takze miedzy typami),
-tresci znane tylko w Polsce ida do `poland`, nic, co sie zdezaktualizuje za rok.
+tresci znane tylko w Polsce ida do `poland`, nic, co sie zdezaktualizuje za rok. Czas na odpowiedz
+liczy `QuizPace` (domain/quiz): dodatek za tekst dluzszy niz ~120 znakow i +4 s dla pytan "do
+przemyslenia" - tych z dzialow `QuizPace.THINKING_SECTIONS` (dzis `geography/comparisons`) i z `math`.
 
 ### Historia
 
@@ -175,9 +179,13 @@ tresci znane tylko w Polsce ida do `poland`, nic, co sie zdezaktualizuje za rok.
 
 ### Geografia
 
-- Trzy galezie: `continents` (panstwa i regiony danego kontynentu, polarne), `physical` (oceany,
-  rzeki i jeziora, gory, pustynie i lasy, wyspy i wybrzeza, klimat i sily natury, Ziemia i mapy)
-  i `human` (panstwa i granice, miasta i zabytki, jezyki/waluty/zwyczaje, kuchnia).
+- Cztery galezie: `continents` (panstwa i regiony danego kontynentu, polarne), `physical` (oceany,
+  rzeki i jeziora, gory, pustynie i lasy, wyspy i wybrzeza, klimat i sily natury, Ziemia i mapy),
+  `human` (panstwa i granice, miasta i zabytki, jezyki/waluty/zwyczaje, kuchnia) i `comparisons`
+  ("higher or lower": kto ma wiecej ludzi, co jest wieksze, ktore miasto ma wiecej wiezowcow,
+  ktory kraj pije wiecej kawy). W `comparisons` sedno pytania to samo porownanie albo proporcja
+  ("A vs B", "ile razy wiecej"); poziom rosnie, gdy roznica maleje (Easy ~3x, Expert ~1.1-1.3x),
+  a dla liczb, ktore dryfuja (ludnosc, rankingi), roznica zostaje co najmniej 15%.
 - Obiekt przyrody idzie do dzialu fizycznego, nawet gdy pytanie wymienia kontynent ("najdluzsza rzeka
   Afryki" to `rivers_lakes`); dzial kontynentu dostaje to, co dotyczy samego kraju albo regionu
   (dawne nazwy, przydomki, regiony, rekordy panstw). Pytanie "jaka rzeka plynie przez miasto" to

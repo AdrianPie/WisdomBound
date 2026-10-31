@@ -477,7 +477,9 @@ data class MultipleChoiceQuestion(
     val answers: List<QuizAnswer>,
     override val difficulty: String,
     override val category: String,
-    override val reward: Int
+    override val reward: Int,
+    /** Pytanie do przemyslenia (porownanie, rachunek) - dostaje wiecej czasu, patrz [com.lernhero.domain.quiz.QuizPace]. */
+    val thinking: Boolean = false
 ) : QuizQuestion
 
 data class QuizAnswer(

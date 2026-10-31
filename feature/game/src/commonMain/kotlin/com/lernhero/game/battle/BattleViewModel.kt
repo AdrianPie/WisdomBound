@@ -63,6 +63,7 @@ import com.lernhero.shared.monetization.AdOutcome
 import com.lernhero.shared.monetization.RewardedAction
 import com.lernhero.domain.quiz.QuizDifficulty
 import com.lernhero.domain.quiz.QuizEntry
+import com.lernhero.domain.quiz.QuizPace
 import com.lernhero.domain.quiz.WordQuizBank
 import com.lernhero.domain.quiz.custom.CustomDeck
 import com.lernhero.domain.quiz.custom.CustomDeckBank
@@ -2293,12 +2294,21 @@ class BattleViewModel(
      * (ukladanka z szesciu elementow to nie to samo co wybor z czterech) i od glebokosci fali -
      * patrz [AnswerTimer.windowFor]. To jest druga krzywa trudnosci biegu, obok sily wrogow, i ta
      * bardziej uczciwa: nie zabiera graczowi mocy, tylko wymaga, zeby wiedzial odpowiedz, a nie
-     * dochodzil do niej przez eliminacje.
+     * dochodzil do niej przez eliminacje. Dlugie pytania i pytania do przemyslenia (porownania,
+     * rachunki) dostaja dodatek - patrz [QuizPace].
      */
     private fun liveQuiz(question: QuizQuestion, wave: Int): LiveQuizState =
         LiveQuizState(
             question = question,
-            windowMs = AnswerTimer.windowFor(optionCount = question.optionCount(), wave = wave)
+            windowMs = AnswerTimer.windowFor(
+                optionCount = question.optionCount(),
+                wave = wave,
+                paceMs = QuizPace.extraMs(
+                    prompt = question.prompt,
+                    options = question.optionTexts(),
+                    thinking = (question as? MultipleChoiceQuestion)?.thinking == true
+                )
+            )
         )
 
     /** Ile "rzeczy do przeczytania" ma pytanie - z tego liczy sie jego okno czasu. */
@@ -2306,6 +2316,13 @@ class BattleViewModel(
         is MultipleChoiceQuestion -> answers.size
         is OrderingQuestion -> items.size
         is MultiSelectQuestion -> options.size
+    }
+
+    /** Teksty odpowiedzi (albo elementow) - ich dlugosc dolicza czas na czytanie. */
+    private fun QuizQuestion.optionTexts(): List<String> = when (this) {
+        is MultipleChoiceQuestion -> answers.map { it.text }
+        is OrderingQuestion -> items.map { it.text }
+        is MultiSelectQuestion -> options.map { it.text }
     }
 
     /**
@@ -3211,7 +3228,8 @@ class BattleViewModel(
         },
         difficulty = difficulty.label,
         category = category.label,
-        reward = difficulty.reward
+        reward = difficulty.reward,
+        thinking = QuizPace.isThinking(this)
     )
 
     /**
