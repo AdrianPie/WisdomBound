@@ -1,0 +1,117 @@
+# TV & Series: TV series, sitcoms, game shows, presenters, streaming series
+#
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+pop_friends_miasto	Easy	In which city is the sitcom 'Friends' set?	New York	Los Angeles	Chicago	Boston
+pop_mr_bean	Easy	Which British comic character barely speaks and drives a little Mini?	Mr. Bean	Basil Fawlty	Del Boy	Johnny English
+pp_teletubisie	Easy	Which children's TV characters have screens on their tummies?	The Teletubbies	The Smurfs	The Fraggles	The Wombles
+pp_barney	Easy	What kind of creature is Barney, the purple children's TV star?	A dinosaur	A dragon	A hippo	A bear
+pop_comedian_created_played	Easy	Which comedian created and played Mr. Bean?	Rowan Atkinson	John Cleese	Ricky Gervais	Hugh Laurie
+pop_main_characters_sitcom	Easy	How many main characters are there in the sitcom 'Friends'?	Six	Five	Four	Seven
+pop_chef_shouting_cooks	Easy	Which TV chef is famous for shouting at cooks in 'Hell's Kitchen'?	Gordon Ramsay	Jamie Oliver	Anthony Bourdain	Heston Blumenthal
+pop_naturalist_narrates_planet	Easy	Which naturalist narrates the 'Planet Earth' documentaries?	David Attenborough	Steve Irwin	Jane Goodall	Bear Grylls
+pop_actor_started_out	Easy	Which actor started out as 'the Fresh Prince of Bel-Air'?	Will Smith	Eddie Murphy	Denzel Washington	Jamie Foxx
+pop_friends_character_rachel	Easy	In 'Friends', which character does Rachel end up with?	Ross	Joey	Chandler	Gunther
+pop_drama_set_seattle	Easy	Which TV drama is set at the Seattle hospital Grey Sloan Memorial?	Grey's Anatomy	ER	Scrubs	House
+pop_british_comedy_group	Easy	Which British comedy group made 'Flying Circus' and 'Life of Brian'?	Monty Python	The Goodies	The Young Ones	Little Britain
+pop_talk_show_host	Easy	Which talk-show host shouted 'You get a car! You get a car!' to her audience?	Oprah Winfrey	Ellen DeGeneres	Tyra Banks	Martha Stewart
+pop_actress_played_rachel	Easy	Which actress played Rachel Green in 'Friends'?	Jennifer Aniston	Courteney Cox	Lisa Kudrow	Reese Witherspoon
+pop_judge_became_blunt	Easy	Which TV judge became famous for blunt put-downs on 'American Idol' and 'The X Factor'?	Simon Cowell	Piers Morgan	Gordon Ramsay	Graham Norton
+pop_squid_game	Easy	The survival drama 'Squid Game' comes from which country?	South Korea	Japan	China	Thailand
+pop_milionerzy_50_50	Easy	In 'Who Wants to Be a Millionaire?', which lifeline removes two wrong answers?	50:50	Phone a Friend	Ask the Audience	Switch the Question
+pop_wednesday	Easy	Which member of the Addams Family got her own hit Netflix series in 2022?	Wednesday	Morticia	Pugsley	Gomez
+pop_eleven	Easy	What is the name of the girl with psychic powers in 'Stranger Things'?	Eleven	Seven	Twelve	Nine
+pop_cumberbatch	Easy	Which actor played Sherlock Holmes in the BBC series 'Sherlock'?	Benedict Cumberbatch	Martin Freeman	Robert Downey Jr.	Tom Hiddleston
+pp_the_crown	Easy	Which Netflix drama follows the reign of Queen Elizabeth II?	The Crown	Downton Abbey	The Tudors	Victoria
+pp_sheldon	Easy	In 'The Big Bang Theory', which physicist insists on his own 'spot' on the sofa?	Sheldon Cooper	Leonard Hofstadter	Howard Wolowitz	Raj Koothrappali
+pp_joey	Easy	Which 'Friends' character is an actor famous for the line 'How you doin'?'	Joey	Chandler	Ross	Monica
+pq_enterprise	Easy	What is the name of Captain Kirk's starship in 'Star Trek'?	The Enterprise	The Millennium Falcon	The Nostromo	Serenity
+pop_reality_show_contestants	Easy	Which reality show has contestants on a remote island voting each other off?	Survivor	Big Brother	The Amazing Race	Love Island
+pop_star_trek_vulcan	Easy	In 'Star Trek', which Vulcan blessing goes with the split-fingered hand salute?	Live long and prosper	May the Force be with you	Logic guides us all	Go boldly in peace
+pop_breaking_bad	Easy	In 'Breaking Bad', what subject does Walter White teach before turning to crime?	Chemistry	Physics	Biology	Mathematics
+pop_central_perk	Medium	What is the name of the coffee shop in 'Friends'?	Central Perk	Monk's Cafe	Java Joe's	The Grind
+pop_iron_throne	Medium	In 'Game of Thrones', what is the Iron Throne made of?	Swords	Dragon bones	Iron ore	Shields
+pop_upside_down	Medium	In 'Stranger Things', what is the dark mirror world called?	The Upside Down	The Nether	The Shadow Realm	The Other Side
+pop_tardis	Medium	In 'Doctor Who', what does the TARDIS look like from the outside?	A police box	A red phone box	A wardrobe	A lift
+pop_grogu	Medium	In 'The Mandalorian', what is 'Baby Yoda's' real name?	Grogu	Yaddle	Babu	Din
+pop_spock	Medium	Which 'Star Trek' character is half-human, half-Vulcan?	Spock	Kirk	Data	Worf
+pp_matka_smokow	Medium	In 'Game of Thrones', which character is known as the 'Mother of Dragons'?	Daenerys Targaryen	Cersei Lannister	Arya Stark	Sansa Stark
+pp_winter_coming	Medium	Which family's motto in 'Game of Thrones' is 'Winter is coming'?	House Stark	House Lannister	House Targaryen	House Baratheon
+pp_regeneracja	Medium	In 'Doctor Who', what can the Doctor do instead of dying?	Regenerate into a new body	Travel back and undo it	Freeze time forever	Swap bodies with a friend
+pp_dalekowie	Medium	Which cyborg villains in 'Doctor Who' cry 'Exterminate!'?	The Daleks	The Cybermen	The Klingons	The Borg
+pp_maski_dali	Medium	Whose face appears on the masks worn in 'Money Heist'?	Salvador Dali's	Pablo Picasso's	Guy Fawkes's	Frida Kahlo's
+pop_friends_character_sings	Medium	In 'Friends', which character sings 'Smelly Cat'?	Phoebe	Rachel	Monica	Joey
+pop_game_thrones_character	Medium	In 'Game of Thrones', which character is nicknamed 'the Imp'?	Tyrion Lannister	Jon Snow	Theon Greyjoy	Bran Stark
+pop_stranger_things_food	Medium	In 'Stranger Things', which food is Eleven famously obsessed with?	Eggo waffles	Pizza	Pancakes	Ice cream
+pop_sitcom_follows_dunphy	Medium	Which sitcom follows the Dunphy and Pritchett families?	Modern Family	Family Guy	The Middle	Arrested Development
+pop_bbc_motoring_show	Medium	Which BBC motoring show made Clarkson, Hammond and May famous?	Top Gear	The Grand Tour	Fifth Gear	Wheeler Dealers
+pop_actor_played_spock	Medium	Which actor played Spock in the original 'Star Trek' series?	Leonard Nimoy	William Shatner	DeForest Kelley	George Takei
+pop_actor_played_captain_2	Medium	Which actor played Captain Kirk in the original 'Star Trek' series?	William Shatner	Leonard Nimoy	Patrick Stewart	Chris Pine
+pop_surname_walter_white	Medium	What is the surname of Walter White's partner Jesse in 'Breaking Bad'?	Pinkman	Pinkerton	Parker	Peterson
+pop_series_follows_new	Medium	Which TV series follows New Jersey mob boss Tony and his therapist?	The Sopranos	Boardwalk Empire	The Wire	Goodfellas
+pop_series_follows_shelby	Medium	Which TV series follows the Shelby crime family in Birmingham?	Peaky Blinders	The Crown	Downton Abbey	Line of Duty
+pop_series_follows_crawley	Medium	Which TV series follows the Crawley family and their servants on a country estate?	Downton Abbey	Bridgerton	Peaky Blinders	The Crown
+pop_netflix_series_follows	Medium	Which Netflix series follows the orphan chess prodigy Beth Harmon?	The Queen's Gambit	Stranger Things	Wednesday	Bridgerton
+pop_sitcom_set_boston	Medium	Which sitcom is set in a Boston bar 'where everybody knows your name'?	Cheers	Frasier	Taxi	Night Court
+pop_british_sitcom_john	Medium	In which British sitcom does John Cleese play the hotel owner Basil Fawlty?	Fawlty Towers	Blackadder	Only Fools and Horses	Yes Minister
+pop_played_jon_snow	Medium	Who played Jon Snow in 'Game of Thrones'?	Kit Harington	Richard Madden	Sean Bean	Nikolaj Coster-Waldau
+pop_tagline_usually_ends	Medium	Which tagline usually ends the opening credits of 'The X-Files'?	The truth is out there	We are not alone	Watch the skies	Keep looking up
+pop_friends_character_keeps	Medium	Which 'Friends' character keeps insisting 'We were on a break!'?	Ross	Chandler	Joey	Rachel
+pop_actress_played_eleven	Medium	Which actress played Eleven in 'Stranger Things'?	Millie Bobby Brown	Sadie Sink	Natalia Dyer	Maya Hawke
+pop_talent_show_susan	Medium	On which TV talent show did Susan Boyle stun the judges in 2009?	Britain's Got Talent	The X Factor	Pop Idol	The Voice UK
+pop_friends_character_works	Medium	Which 'Friends' character works as a chef?	Monica	Rachel	Phoebe	Joey
+pop_british_actor_played	Medium	Which British actor played the grumpy TV doctor Gregory House?	Hugh Laurie	Hugh Grant	Hugh Jackman	Hugh Bonneville
+pop_met_mother_character	Medium	Which 'How I Met Your Mother' character says 'Legen... wait for it... dary!'?	Barney	Ted	Marshall	Lily
+pop_played_boss_michael	Medium	Who played the boss Michael Scott in the US version of 'The Office'?	Steve Carell	Ricky Gervais	Rainn Wilson	John Krasinski
+pop_actor_played_walter	Medium	Which actor played Walter White in 'Breaking Bad'?	Bryan Cranston	Aaron Paul	Bob Odenkirk	Jon Hamm
+pop_played_carrie_bradshaw	Medium	Who played Carrie Bradshaw in 'Sex and the City'?	Sarah Jessica Parker	Kim Cattrall	Cynthia Nixon	Kristin Davis
+pop_actor_became_doug	Medium	Which actor became famous as Dr. Doug Ross in the TV series 'ER'?	George Clooney	Noah Wyle	Anthony Edwards	Eriq La Salle
+pop_network_made_game	Medium	Which TV network made 'Game of Thrones' and 'The Sopranos'?	HBO	Netflix	AMC	Showtime
+pop_x_files	Medium	Which FBI agents investigate the paranormal in 'The X-Files'?	Mulder and Scully	Starsky and Hutch	Cagney and Lacey	Crockett and Tubbs
+pop_seinfeld	Medium	Which sitcom was famously described as 'a show about nothing'?	Seinfeld	Friends	Frasier	Cheers
+pop_money_heist	Medium	The heist series 'Money Heist' ('La Casa de Papel') comes from which country?	Spain	Mexico	Argentina	Italy
+pop_jeopardy	Medium	On the quiz show 'Jeopardy!', contestants must phrase their responses as what?	A question	A rhyme	A single word	A full sentence
+pop_big_brother	Medium	The reality show 'Big Brother' takes its name from which novel?	Nineteen Eighty-Four	Brave New World	Fahrenheit 451	Animal Farm
+pop_the_office	Medium	Which paper company is the setting of the US sitcom 'The Office'?	Dunder Mifflin	Wernham Hogg	Sterling Cooper	Initech
+pp_mr_bean_mis	Medium	What is the name of Mr. Bean's beloved teddy bear?	Teddy	Bruno	Paddington	Fuzzy
+pp_heisenberg	Medium	What alias does Walter White use in 'Breaking Bad'?	Heisenberg	Schrodinger	Einstein	Oppenheimer
+pp_ross_zawod	Medium	What is Ross Geller's job in 'Friends'?	Palaeontologist	Chef	Actor	Masseur
+pop_friends_chandler_surname	Medium	In 'Friends', what is Chandler's surname?	Bing	Geller	Tribbiani	Buffay
+pop_game_thrones_phrase	Medium	In 'Game of Thrones', what phrase turns out to be the origin of Hodor's name?	'Hold the door'	'Hold the horse'	'Hide the dog'	'Hear the drums'
+pop_game_thrones_massacre	Medium	Which 'Game of Thrones' massacre takes place at a feast at the Twins?	The Red Wedding	The Purple Wedding	The Black Feast	The Bloody Banquet
+pop_british_sitcom_follows	Medium	Which British sitcom follows the market traders Del Boy and Rodney Trotter?	Only Fools and Horses	Fawlty Towers	Blackadder	Red Dwarf
+pop_friends_ross_say	Medium	In 'Friends', whose name does Ross say at the altar instead of his bride Emily's?	Rachel's	Monica's	Julie's	Carol's
+pop_friends_joey_tribbiani	Medium	In 'Friends', what does Joey Tribbiani famously refuse to share?	His food	His apartment	His girlfriends	His TV remote
+pop_dallas	Medium	'Who shot J.R.?' was the huge 1980 cliffhanger of which TV series?	Dallas	Dynasty	Knots Landing	Falcon Crest
+pp_squid_zielone	Medium	In 'Squid Game', which children's game is played first, with a giant doll?	Red Light, Green Light	Tug of war	Marbles	Hopscotch
+pp_laura_palmer	Medium	Which 1990 TV mystery asked 'Who killed Laura Palmer?'	Twin Peaks	Dallas	Murder, She Wrote	The X-Files
+pp_hawkins	Hard	In which fictional Indiana town is 'Stranger Things' set?	Hawkins	Springfield	Riverdale	Twin Peaks
+pop_jon_snow_white	Hard	What is the name of Jon Snow's white direwolf in 'Game of Thrones'?	Ghost	Summer	Nymeria	Grey Wind
+pop_city_breaking_bad	Hard	In which US city is 'Breaking Bad' set?	Albuquerque	Phoenix	Las Vegas	El Paso
+pop_breaking_bad_fried	Hard	In 'Breaking Bad', which fried-chicken chain fronts Gus Fring's drug empire?	Los Pollos Hermanos	El Pollo Dorado	Chicken Royale	Pollo Feliz
+pop_seinfeld_character_barking	Hard	Which 'Seinfeld' character is famous for barking 'No soup for you!'?	The Soup Nazi	Newman	Kramer	Uncle Leo
+pop_office_crop_grown	Hard	In the US 'The Office', which crop is grown on Dwight Schrute's family farm?	Beets	Potatoes	Corn	Cabbage
+pop_doctor_planet_doctor	Hard	In 'Doctor Who', which planet does the Doctor come from?	Gallifrey	Skaro	Telos	Trenzalore
+pop_seinfeld_jerry_nemesis	Hard	In 'Seinfeld', what is the name of Jerry's nemesis, a postman who lives in his building?	Newman	Puddy	Bania	Kramer
+pop_largest_three_dragons	Hard	Which is the largest of the three dragons hatched in 'Game of Thrones'?	Drogon	Rhaegal	Viserion	Balerion
+pop_ufo_poster_fox	Hard	What does the UFO poster in Fox Mulder's office say?	'I want to believe'	'We are not alone'	'Trust no one'	'Keep watching the skies'
+pop_bar_met_mother	Hard	What is the name of the bar in 'How I Met Your Mother'?	MacLaren's	Central Perk	Paddy's Pub	Cheers
+pop_game_thrones_saying	Hard	In 'Game of Thrones', what does the saying 'Valar morghulis' mean?	All men must die	Winter is coming	Fire and blood	We do not sow
+pop_fawlty_towers_city	Hard	In 'Fawlty Towers', which city does the hapless waiter Manuel come from?	Barcelona	Madrid	Seville	Valencia
+pop_holiday_rest_bare	Hard	Which holiday 'for the rest of us', with a bare aluminium pole instead of a tree, comes from 'Seinfeld'?	Festivus	Chrismukkah	Winterval	Kwanzaa
+pop_milionerzy_15	Hard	In the classic 'Who Wants to Be a Millionaire?', how many questions lead to the million?	15	10	12	20
+pop_friends_ross_pet	Hard	In 'Friends', what is the name of Ross's pet monkey?	Marcel	Bubbles	Rafiki	George
+pop_big_bang_theory	Hard	In 'The Big Bang Theory', where does Penny work at the start of the series?	The Cheesecake Factory	Central Perk	A pizza parlour	A comic book store
+pop_played_mob_boss	Hard	Who played mob boss Tony Soprano?	James Gandolfini	Robert De Niro	Joe Pesci	Michael Imperioli
+pop_played_man_don	Hard	Who played the ad man Don Draper in 'Mad Men'?	Jon Hamm	Bryan Cranston	Jeff Daniels	Matthew McConaughey
+pop_stranger_things_boys	Hard	In 'Stranger Things', the boys name the first monster after a villain from which game?	Dungeons & Dragons	Magic: The Gathering	Warhammer	Pac-Man
+pop_version_office_sets	Hard	In the US version of 'The Office', who sets Dwight's stapler in jelly?	Jim Halpert	Andy Bernard	Ryan Howard	Kevin Malone
+pop_actress_played_mother	Hard	Which actress played the 'Mother of Dragons' in 'Game of Thrones'?	Emilia Clarke	Sophie Turner	Maisie Williams	Natalie Dormer
+pop_money_heist_robbers	Hard	In 'Money Heist', what are the robbers' code names?	Names of cities	Names of planets	Names of painters	Names of colours
+pop_doctor_who_1963	Hard	In which year did 'Doctor Who' first air?	1963	1953	1973	1983
+pop_wilhelm_scream_heard	Hard	The 'Wilhelm scream', heard in 'Star Wars' and hundreds of other films, is what?	A stock sound effect	A horror-film award	A guitar technique	A famous stunt fall
+pop_fbi_agent_investigates	Hard	Which FBI agent investigates the murder of Laura Palmer?	Dale Cooper	Fox Mulder	Clarice Starling	Will Graham
+pop_seinfeld_kramer_revealed	Expert	In 'Seinfeld', what is Kramer's first name, revealed only in the sixth season?	Cosmo	Carl	Stanley	Elliot
+pop_lost_number_oceanic	Expert	In 'Lost', what was the number of the Oceanic flight that crashed on the island?	815	316	42	108
+pop_actor_play_doctor	Expert	Which actor was the first to play the Doctor in 'Doctor Who'?	William Hartnell	Patrick Troughton	Jon Pertwee	Tom Baker
+pop_friends_joey_stuffed	Expert	In 'Friends', what is the name of Joey's stuffed penguin?	Hugsy	Pengy	Waddles	Mr. Flippers
+pop_linguist_developed_klingon	Expert	Which linguist developed the Klingon language for 'Star Trek'?	Marc Okrand	David J. Peterson	Paul Frommer	Noam Chomsky

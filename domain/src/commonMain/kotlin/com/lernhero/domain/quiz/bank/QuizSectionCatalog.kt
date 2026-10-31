@@ -127,6 +127,12 @@ object QuizSectionCatalog {
         QuizSection("literature/children", "Children's Books & Fantasy", "🧙", QuizCategory.Literature),
         QuizSection("literature/stage_poetry", "Theatre, Poetry & Epics", "🎭", QuizCategory.Literature),
         QuizSection("literature/art", "Art & Architecture", "🎨", QuizCategory.Literature),
-        QuizSection("literature/music", "Classical Music", "🎻", QuizCategory.Literature)
+        QuizSection("literature/music", "Classical Music", "🎻", QuizCategory.Literature),
+        QuizSection("pop_culture/film", "Film", "🎬", QuizCategory.PopCulture),
+        QuizSection("pop_culture/tv", "TV & Series", "📺", QuizCategory.PopCulture),
+        QuizSection("pop_culture/music", "Pop & Rock Music", "🎸", QuizCategory.PopCulture),
+        QuizSection("pop_culture/animation", "Cartoons & Comics", "🐭", QuizCategory.PopCulture),
+        QuizSection("pop_culture/games", "Video Games", "🎮", QuizCategory.PopCulture),
+        QuizSection("pop_culture/brands", "Brands, Toys & Internet", "🧸", QuizCategory.PopCulture)
     )
 }

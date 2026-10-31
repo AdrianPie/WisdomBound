@@ -1,0 +1,102 @@
+# Brands, Toys & Internet: toys, sweets and food brands, advertising, mascots, theme parks, internet memes, viral trends, celebrities without a better shelf
+#
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+pop_rudolf	Easy	Which of Santa's reindeer has a shiny red nose?	Rudolph	Dasher	Comet	Blitzen
+pop_ken	Easy	What is the name of Barbie's boyfriend doll?	Ken	Kevin	Karl	Kyle
+pp_uno	Easy	How many colours of cards are there in UNO?	Four	Three	Five	Six
+pp_dynia	Easy	In the glass-slipper fairy tale, what does the fairy godmother turn into a coach?	A pumpkin	A melon	A shoe	A walnut
+pp_twister	Easy	Which party game has players put hands and feet on coloured spots on a mat?	Twister	Jenga	Pictionary	Operation
+pop_brand_logo_three	Easy	Which brand's logo is three parallel stripes?	Adidas	Puma	Reebok	Nike
+pop_fast_food_chain	Easy	Which fast-food chain's mascot is a clown named Ronald?	McDonald's	Burger King	KFC	Wendy's
+pop_fast_food_chain_2	Easy	Which fast-food chain was founded by 'the Colonel', Harland Sanders?	KFC	McDonald's	Popeyes	Burger King
+pop_chocolate_bar_slogan	Easy	Which chocolate bar's slogan is 'Have a break, have a...'?	KitKat	Twix	Mars	Snickers
+pop_lol_stand_internet	Easy	What does 'LOL' stand for in internet slang?	Laughing out loud	Lots of love	Look out loser	Lack of logic
+pop_mean_social_media	Easy	What does 'DM' mean on social media?	Direct message	Daily mention	Digital media	Deleted message
+pop_monopoly_collect_passing	Easy	In Monopoly, how much do you collect for passing GO?	200	100	500	50
+pop_spinning_toy_became	Easy	Which spinning toy became a worldwide craze in 2017?	The fidget spinner	The yo-yo	The Tamagotchi	The Beyblade
+pop_board_game_players	Easy	In which board game do players draw 'Chance' and 'Community Chest' cards?	Monopoly	Cluedo	The Game of Life	Risk
+pop_brb_mean_online	Easy	What does 'BRB' mean in online chat?	Be right back	Bring real bread	Big red button	Better relax, buddy
+pop_fomo_stand	Easy	What does 'FOMO' stand for?	Fear of missing out	Fun or money only	Friends of mine online	Fear of moving on
+pop_online_word_game	Easy	Which online word game lets you guess a five-letter word in six tries?	Wordle	Scrabble	Boggle	Hangman
+pop_party_game_players	Easy	In which party game do players guess what someone is drawing?	Pictionary	Charades	Cluedo	Taboo
+pop_nutella_created_country	Easy	Nutella was created in which country?	Italy	France	Switzerland	Belgium
+pop_triangular_chocolate_bar	Easy	The triangular chocolate bar Toblerone comes from which country?	Switzerland	Belgium	Austria	Germany
+pop_country_watchmaker_rolex	Easy	In which country is the watchmaker Rolex based?	Switzerland	Germany	France	Austria
+pop_irl_mean_online	Easy	What does 'IRL' mean in online slang?	In real life	In rapid loop	I really laughed	Internet relay link
+pop_crisps_come_tall	Easy	Which crisps come in a tall tube with a moustached man on the label?	Pringles	Doritos	Lay's	Cheetos
+pop_game_players_try	Easy	In which game do players try to sink each other's hidden fleet on a grid?	Battleship	Risk	Stratego	Othello
+pop_sportswear_brand_logo	Easy	Which sportswear brand's logo is a 'swoosh'?	Nike	Puma	Reebok	Adidas
+pop_tamagotchi	Easy	What was a Tamagotchi?	A digital pet on a keychain	A robot dog	A talking hamster toy	A plush toy that grew
+pp_cluedo	Easy	In the board game Cluedo (Clue), what must players work out?	The murderer, room and weapon	The thief and the treasure	Which spy is lying	Who owns the mansion
+pp_jenga	Easy	In which game do players pull wooden blocks from a tower without knocking it over?	Jenga	Kerplunk	Mikado	Topple
+pp_grumpy	Easy	Which frowning cat became one of the most famous internet memes of the 2010s?	Grumpy Cat	Nyan Cat	Keyboard Cat	Maru
+pop_magician_escaping_handcuffs	Easy	Which magician was famous for escaping from handcuffs, straitjackets and locked water tanks?	Harry Houdini	David Copperfield	Harry Blackstone	Penn Jillette
+pop_poker_best_possible	Easy	In poker, what is the best possible hand?	A royal flush	Four of a kind	A full house	A straight
+pop_lego_ludziki	Medium	What are the little LEGO people officially called?	Minifigures	Brickmen	Legolings	Block buddies
+pop_disneyland	Medium	In which US state did the first Disneyland open, in 1955?	California	Florida	Texas	Nevada
+pp_tamagotchi_kraj	Medium	In which country was the Tamagotchi invented?	Japan	China	South Korea	The USA
+pp_doge	Medium	The 'Doge' internet meme shows which breed of dog?	A Shiba Inu	A Corgi	A Pug	A Husky
+pp_ice_bucket	Medium	The 2014 'Ice Bucket Challenge' raised money to fight which disease?	ALS	Malaria	Diabetes	Asthma
+pop_toy_company_makes	Medium	Which toy company makes Barbie?	Mattel	Hasbro	LEGO	Playmobil
+pop_furry_talking_robot	Medium	Which furry talking robot toy was the Christmas craze of 1998?	Furby	Tamagotchi	Teddy Ruxpin	Tickle Me Elmo
+pop_dice_used_yahtzee	Medium	How many dice are used in Yahtzee?	Five	Six	Four	Three
+pop_board_game_collect	Medium	In which board game do you collect coloured wedges by answering questions?	Trivial Pursuit	Scrabble	Cluedo	Pictionary
+pop_fashion_designer_made	Medium	Which fashion designer made the 'little black dress' a classic?	Coco Chanel	Christian Dior	Yves Saint Laurent	Giorgio Armani
+pop_fashion_house_logo	Medium	Which fashion house's logo is two interlocking Cs?	Chanel	Gucci	Dior	Versace
+pop_cereal_mascot_tony	Medium	Which cereal's mascot is Tony the Tiger?	Frosted Flakes	Cheerios	Rice Krispies	Coco Pops
+pop_rubik_cube_invented	Medium	The Rubik's Cube was invented in which country?	Hungary	Japan	Germany	Czechoslovakia
+pop_energy_drink_red	Medium	The energy drink Red Bull comes from which country?	Austria	United States	Germany	Switzerland
+pop_board_game_players_2	Medium	Which board game has players build settlements on an island, trading wood, brick and sheep?	Catan	Carcassonne	Risk	Ticket to Ride
+pop_property_expensive_british	Medium	Which property is the most expensive on the British Monopoly board?	Mayfair	Park Lane	Oxford Street	Piccadilly
+pop_website_calls_itself	Medium	Which website calls itself 'the front page of the internet'?	Reddit	Digg	Yahoo	Tumblr
+pop_fine_meme_animal	Medium	In the 'This is fine' meme, which animal sits calmly in a burning room?	A dog	A cat	A frog	A bear
+pop_carlsberg_beer_founded	Medium	Carlsberg beer was founded in which country?	Denmark	Sweden	Germany	Norway
+pop_michelin_tyre_company	Medium	The Michelin tyre company, famous for restaurant stars, comes from which country?	France	Belgium	Italy	Germany
+pop_budget_car_brand	Medium	The budget car brand Dacia comes from which country?	Romania	Czech Republic	Bulgaria	Slovakia
+pop_absolut_vodka_comes	Medium	Absolut vodka comes from which country?	Sweden	Russia	Poland	Finland
+pop_clothing_brand_uniqlo	Medium	The clothing brand Uniqlo comes from which country?	Japan	South Korea	China	Taiwan
+pop_2017_meme_photo	Medium	Which 2017 meme photo shows a man turning to ogle a passing woman while his girlfriend glares at him?	Distracted Boyfriend	Hide the Pain Harold	Success Kid	Bad Luck Brian
+pop_sweets_melt_mouth	Medium	Which sweets 'melt in your mouth, not in your hand'?	M&M's	Skittles	Smarties	Jelly Beans
+pop_fashion_chain_zara	Medium	The fashion chain Zara comes from which country?	Spain	Italy	France	Portugal
+pop_clothing_retailer_founded	Medium	The clothing retailer H&M was founded in which country?	Sweden	Germany	Netherlands	Denmark
+pop_heineken_beer_comes	Medium	Heineken beer comes from which country?	Netherlands	Germany	Belgium	Denmark
+pop_gummy_bear_maker	Medium	The gummy bear maker Haribo comes from which country?	Germany	Denmark	Netherlands	Belgium
+pop_japanese_company_makes	Medium	Which Japanese company makes both pianos and motorcycles?	Yamaha	Honda	Suzuki	Kawasaki
+pop_company_sold_blue	Medium	Which company first sold blue jeans with copper rivets, in 1873?	Levi Strauss	Wrangler	Lee	Diesel
+pop_colour_zero_pocket	Medium	What colour is the zero pocket on a roulette wheel?	Green	Red	Black	White
+pop_hello_kitty_usta	Medium	Hello Kitty is famously drawn without what?	A mouth	Ears	Whiskers	A bow
+pop_teddy	Medium	The teddy bear is named after which US president?	Theodore Roosevelt	Franklin Roosevelt	Abraham Lincoln	Woodrow Wilson
+pp_nyan_cat	Medium	Which internet cat with a Pop-Tart body flies through space leaving a rainbow?	Nyan Cat	Grumpy Cat	Keyboard Cat	Garfield
+pop_barbie_imie	Hard	What is Barbie's full first name?	Barbara	Barbra	Bernadette	Beatrice
+pop_boardwalk	Hard	In the US version of Monopoly, which is the most expensive property?	Boardwalk	Park Place	Marvin Gardens	Pennsylvania Avenue
+pp_barbie_1959	Hard	In which year was the first Barbie doll launched?	1959	1939	1969	1979
+pop_company_makes_monopoly	Hard	Which company makes the Monopoly board game today?	Hasbro	Mattel	Ravensburger	Spin Master
+pop_soft_drink_sold	Hard	Which soft drink was first sold in 1893 under the name 'Brad's Drink'?	Pepsi	Coca-Cola	Dr Pepper	7 Up
+pop_toy_ever_advertised	Hard	Which toy was the first ever to be advertised on television, in 1952?	Mr. Potato Head	The Slinky	The Hula Hoop	The Frisbee
+pop_crystal_maker_swarovski	Hard	The crystal maker Swarovski comes from which country?	Austria	Italy	Switzerland	Germany
+org_lego_stolarz	Hard	Before plastic bricks, the Lego workshop made toys out of what?	Wood	Tin	Rubber	Cardboard
+pop_mikolaj_renifery	Hard	In the classic Christmas poem, how many reindeer pull Santa's sleigh?	Eight	Six	Nine	Twelve
+pop_monopoly_pan	Hard	What was the Monopoly mascot with a top hat and moustache originally called?	Rich Uncle Pennybags	Mr. Moneybags	Sir Top Hat	Uncle Sam
+pop_scrabble_q	Hard	In English Scrabble, how many points is the letter Q worth?	10	8	5	12
+tec_lego_nazwa	Hard	The name LEGO comes from Danish words meaning what?	Play well	Build big	Little bricks	Good toy
+pop_adidas_puma_founded	Hard	Adidas and Puma were founded by two feuding brothers with which surname?	Dassler	Porsche	Bosch	Siemens
+pop_skincare_brand_nivea	Hard	The skincare brand Nivea, with its blue tin, comes from which country?	Germany	France	Switzerland	Netherlands
+pop_luxury_fashion_house	Hard	The luxury fashion house Gucci was founded in which Italian city?	Florence	Milan	Rome	Venice
+pop_country_home_toy	Hard	Which country is the home of the toy brand Playmobil?	Germany	Denmark	France	Switzerland
+pop_spaces_around_standard	Hard	How many spaces are there around a standard Monopoly board?	40	36	44	52
+pop_animal_appears_every	Hard	Which animal appears on every bottle of Bacardi rum?	A bat	A parrot	A lion	A rooster
+pop_meme_dawkins	Hard	Which scientist coined the word 'meme' in 1976?	Richard Dawkins	Carl Sagan	Stephen Hawking	Stephen Jay Gould
+pop_designer_1947_new	Hard	Which designer's 1947 'New Look' brought back full skirts and tiny waists after the war?	Christian Dior	Coco Chanel	Yves Saint Laurent	Cristobal Balenciaga
+pop_hello_kitty_londyn	Expert	According to her creators, in which city does Hello Kitty live?	London	Tokyo	Paris	Osaka
+pop_magie	Expert	Monopoly grew out of 'The Landlord's Game', invented by whom?	Elizabeth Magie	Charles Darrow	George Parker	Milton Bradley
+pp_lego_1958	Expert	In which year did LEGO patent its famous stud-and-tube brick?	1958	1932	1949	1972
+pop_under_scrabble_sold	Expert	Under which name was Scrabble sold just before it got its famous name?	Criss-Crosswords	Wordsmith	Letter Tiles	Spellbinder
+pop_real_scowling_arizona	Expert	What was the real name of the scowling Arizona cat who became an internet star in 2012?	Tardar Sauce	Maru	Lil Bub	Colonel Meow
+pop_barbie_modelled_lilli	Expert	Barbie was modelled on Lilli, a doll based on a cartoon from a newspaper in which country?	West Germany	Switzerland	France	Sweden
+pop_woman_yelling_cat	Expert	In the 'woman yelling at a cat' meme, what is the name of the white cat sitting behind a plate of salad?	Smudge	Snowball	Mittens	Whiskers
+pop_tiles_standard_english	Expert	How many tiles are in a standard English Scrabble set?	100	98	120	144
+pop_official_michelin_tyre	Expert	What is the official name of the Michelin tyre mascot?	Bibendum	Michelino	Tyreman	Rollo
+pop_trivial_pursuit_invented	Expert	Trivial Pursuit was invented by two journalists from which country?	Canada	The United States	Australia	Ireland
+pop_block_stacking_game	Expert	The name of the block-stacking game Jenga comes from a word meaning 'build' in which language?	Swahili	Japanese	Hindi	Maori
+pop_under_rubik_cube	Expert	Under which name was the Rubik's Cube first sold in its home country?	The Magic Cube	The Puzzle Box	The Colour Cube	The Mind Cube
+pop_barbie_surname	Expert	What is Barbie's surname?	Roberts	Carson	Miller	Stevens

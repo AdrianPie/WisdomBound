@@ -1,0 +1,126 @@
+# Video Games: video games, game characters, arcade classics (consoles/hardware/companies history -> technology/computers)
+#
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+day_mario_firma	Easy	Which company created the Mario series?	Nintendo	Sega	Sony	Atari
+pop_mario_grzyb	Easy	In Super Mario games, what makes Mario grow bigger?	A mushroom	A star	A flower	A coin
+pop_bowser	Easy	Which spiky turtle king keeps kidnapping Princess Peach?	Bowser	Wario	Ganon	Donkey Kong
+pop_mario_czapka	Easy	What colour is Mario's cap?	Red	Green	Blue	Yellow
+pop_sonic_pierscienie	Easy	What does Sonic the Hedgehog collect as he runs?	Golden rings	Gold coins	Stars	Mushrooms
+pop_pokeball	Easy	What do Pokemon trainers throw to catch Pokemon?	A Poke Ball	A net	A cage	A lasso
+pop_pokemon_go	Easy	Which 2016 phone game sent people out onto real streets to catch Pokemon?	Pokemon Go	Pokemon Snap	Pokemon Sun	Pokemon Crystal
+pop_angry_birds_swinie	Easy	In 'Angry Birds', who steals the birds' eggs?	Green pigs	Cats	Snakes	Crows
+pop_candy_crush	Easy	In which mobile game do you match rows of colourful sweets?	Candy Crush Saga	Angry Birds	Clash of Clans	Temple Run
+tec_mario_zawod	Easy	What is Mario's job in Nintendo's games?	Plumber	Carpenter	Electrician	Chef
+tec_luigi	Easy	What is the name of Mario's taller brother?	Luigi	Wario	Toad	Yoshi
+tec_peach	Easy	Which princess does Mario usually set out to rescue?	Princess Peach	Princess Zelda	Princess Daisy	Princess Rosalina
+tec_sonic_kolor	Easy	What colour is Sonic the Hedgehog?	Blue	Red	Green	Yellow
+tec_pikachu	Easy	Which yellow Pokemon is Ash Ketchum's famous partner?	Pikachu	Raichu	Jigglypuff	Psyduck
+tec_donkey_kong	Easy	In which classic arcade game does a gorilla throw barrels at the hero?	Donkey Kong	Pac-Man	Space Invaders	Frogger
+pop_super_mario_games	Easy	In Super Mario games, what does a star do for Mario?	Makes him invincible for a while	Gives him an extra life	Lets him throw fireballs	Makes him twice as big
+pop_gta	Easy	What does the game title 'GTA' stand for?	Grand Theft Auto	Great Travel Adventure	Global Tank Attack	Grand Tour Academy
+pop_lara_croft	Easy	Which video game heroine is a tomb-raiding archaeologist?	Lara Croft	Samus Aran	Chun-Li	Jill Valentine
+day_minecraft_sprzedaz	Medium	Which is the best-selling video game of all time?	Minecraft	Grand Theft Auto V	Wii Sports	Mario Kart 8
+trv2_tetris_kraj	Medium	In which country was Tetris created?	The Soviet Union	Japan	The United States	Finland
+pop_pacman_pastylka	Medium	In Pac-Man, what does Pac-Man eat so he can chase the ghosts?	A power pellet	A cherry	A mushroom	A star
+pop_zelda_kim	Medium	In 'The Legend of Zelda' games, who is Zelda?	The princess	The hero	The villain	The fairy
+pop_tails	Medium	What kind of animal is Sonic's sidekick Tails?	A fox	A squirrel	A rabbit	A cat
+pop_ender_dragon	Medium	Which Minecraft boss is a giant black dragon waiting in The End?	The Ender Dragon	The Wither	The Warden	The Elder Guardian
+pop_among_us	Medium	In 'Among Us', what are the hidden saboteurs called?	Impostors	Traitors	Spies	Mimics
+pop_kirby	Medium	What colour is Nintendo's Kirby?	Pink	Yellow	Blue	White
+pop_niebieska_skorupa	Medium	In 'Mario Kart', which item homes in on the racer in first place?	The blue shell	The red shell	The banana	The star
+pop_minecraft_steve	Medium	What is the name of Minecraft's classic default character?	Steve	Alex	Herobrine	Notch
+pp_wario	Medium	What is the name of Mario's greedy rival who dresses in yellow and purple?	Wario	Waluigi	Bowser	Toad
+pp_eggman	Medium	Who is Sonic the Hedgehog's evil scientist enemy?	Dr. Eggman	Dr. Wily	Dr. Neo Cortex	Dr. Nefario
+pp_spyro	Medium	Spyro, the video game hero, is what kind of creature?	A purple dragon	A green lizard	A blue fox	A red bird
+pp_league	Medium	In which game do two teams of five battle to destroy the enemy 'Nexus'?	League of Legends	Dota 2	Overwatch	Fortnite
+tec_link	Medium	What is the name of the hero in 'The Legend of Zelda' games?	Link	Zelda	Ganon	Navi
+tec_sega	Medium	Which company created Sonic the Hedgehog?	Sega	Nintendo	Sony	Atari
+tec_tetris_klocki	Medium	How many squares make up each falling piece in Tetris?	Four	Three	Five	Six
+tec_halo	Medium	Which video game series stars the super-soldier Master Chief?	Halo	Doom	Gears of War	Mass Effect
+tec_npc	Medium	In video games, what does 'NPC' stand for?	Non-player character	New player challenge	Normal power class	Network player client
+pop_company_made_long	Medium	Which company made the long-running 'FIFA' football video games?	Electronic Arts	Konami	Ubisoft	Activision
+pop_game_series_follows	Medium	Which game series follows the Spartan warrior Kratos?	God of War	Halo	Assassin's Creed	Devil May Cry
+pop_pink_balloon_like	Medium	Which pink balloon-like Pokemon sings everyone to sleep?	Jigglypuff	Clefairy	Chansey	Snorlax
+pop_super_mario_games_2	Medium	In the Super Mario games, which kingdom does Mario keep saving from Bowser?	The Mushroom Kingdom	Hyrule	Dream Land	Green Hill Zone
+pop_falling_block_game	Medium	Which falling-block game was created by Alexey Pajitnov in 1984?	Tetris	Columns	Dr. Mario	Puyo Puyo
+pop_goombas_mario_common	Medium	What are Goombas, Mario's most common enemies?	Walking mushrooms	Angry turtles	Living rocks	Fire spirits
+pp_yoshi	Medium	What is the name of Mario's friendly green dinosaur?	Yoshi	Rex	Dino	Spike
+tec_creeper	Medium	In Minecraft, which green creature sneaks up on players and explodes?	A Creeper	A Zombie	An Enderman	A Skeleton
+tec_fortnite	Medium	In which game do 100 players jump out of a flying 'Battle Bus'?	Fortnite	PUBG	Apex Legends	Call of Duty: Warzone
+tec_gg	Medium	In online games, what does 'GG' usually mean?	Good game	Great goal	Get going	Game guide
+tec_rpg	Medium	What does 'RPG' stand for in gaming?	Role-playing game	Real player game	Rapid play game	Random power grid
+pop_fps_stand_video	Medium	What does 'FPS' stand for in video games?	First-person shooter	Fast play system	Final power score	Full party squad
+pop_virtual_currency_roblox	Medium	What is the virtual currency in Roblox called?	Robux	V-Bucks	Gems	Coins
+pop_type_pokemon_charmander	Medium	What type of Pokemon is Charmander?	Fire	Water	Grass	Electric
+pop_pokemon_charmander_finally	Medium	What does the Pokemon Charmander finally evolve into?	Charizard	Charmeleon	Dragonite	Arcanine
+pop_round_nintendo_hero	Medium	Which round Nintendo hero swallows enemies to copy their powers?	Kirby	Jigglypuff	Yoshi	Toad
+pop_pong	Medium	Which 1972 arcade game, a simple take on table tennis, made Atari famous?	Pong	Breakout	Asteroids	Space Invaders
+pop_flappy_bird	Medium	Which hit 2013 phone game did its creator pull from app stores because it was 'too addictive'?	Flappy Bird	Angry Birds	Temple Run	Doodle Jump
+pp_triforce	Medium	What is the golden triangle relic at the heart of 'The Legend of Zelda' called?	The Triforce	The Master Sword	The Ocarina	The Trident
+pp_mega_man	Medium	Which blue robot hero fights the evil Dr. Wily?	Mega Man	Astro Boy	Robocop	Bomberman
+pp_fatality	Medium	In 'Mortal Kombat', what is a gruesome finishing move called?	A Fatality	A Knockout	A Deathblow	A Finisher
+pp_ocarina	Medium	In which Zelda game does the hero travel through time with a magical musical instrument?	Ocarina of Time	Breath of the Wild	Twilight Princess	A Link to the Past
+pp_street_fighter	Medium	Which fighting game series stars Ryu, Ken and Chun-Li?	Street Fighter	Tekken	Mortal Kombat	The King of Fighters
+pp_warcraft	Medium	Which huge online role-playing game, launched in 2004, is set in the world of Azeroth?	World of Warcraft	EverQuest	Guild Wars	RuneScape
+pop_game_last_turns	Medium	In the game 'The Last of Us', what turns people into monsters?	A fungus	A virus	Radiation	A parasitic worm
+pop_street_fighter_ryu	Medium	In 'Street Fighter', what does Ryu shout as he hurls his fireball?	'Hadoken!'	'Shoryuken!'	'Kamehameha!'	'Sonic Boom!'
+pop_sonic_hedgehog_red	Medium	What is the name of Sonic the Hedgehog's red echidna rival?	Knuckles	Shadow	Silver	Espio
+pop_space_invaders	Medium	Which 1978 Japanese arcade hit had players shoot rows of descending aliens?	Space Invaders	Galaxian	Asteroids	Defender
+pop_portal_ciasto	Medium	In the game 'Portal', what is the famous promised reward that turns out to be a lie?	Cake	Freedom	A medal	Pizza
+pop_angry_birds_kraj	Hard	'Angry Birds' was created by a studio from which country?	Finland	Sweden	Estonia	Denmark
+pop_simlish	Hard	What is the made-up language spoken in 'The Sims' called?	Simlish	Simspeak	Sollish	Gibberese
+pop_konami	Hard	The cheat 'Up, Up, Down, Down, Left, Right, Left, Right, B, A' is famous as what?	The Konami Code	The Nintendo Key	The Sega Secret	The Atari Trick
+pop_pacman_pizza	Hard	The shape of Pac-Man was reportedly inspired by what?	A pizza missing a slice	A half-eaten cookie	A crescent moon	A slice of orange
+pop_bulbasaur	Hard	Which Pokemon is number 001 in the National Pokedex?	Bulbasaur	Pikachu	Mew	Charmander
+pop_doom	Hard	Which 1993 shooter about a space marine fighting demons is famous for being ported to almost any device?	Doom	Quake	Wolfenstein 3D	Half-Life
+pop_tom_nook	Hard	In 'Animal Crossing', which tanuki sells you a house on a loan?	Tom Nook	K.K. Slider	Isabelle	Blathers
+pop_game_boy_tetris	Hard	Outside Japan, which game came bundled with the original Game Boy?	Tetris	Super Mario Land	Pokemon Red	Dr. Mario
+pop_playstation_1994	Hard	In which year did the first PlayStation go on sale in Japan?	1994	1989	1999	2001
+pp_los_santos	Hard	Which fictional city, based on Los Angeles, is the setting of 'GTA V'?	Los Santos	Liberty City	Vice City	San Fierro
+tec_notch	Hard	Who created Minecraft?	Markus 'Notch' Persson	Hideo Kojima	Gabe Newell	Shigeru Miyamoto
+pop_falling_pieces_tetris	Hard	What are the falling pieces in Tetris officially called?	Tetrominoes	Tetrads	Quadrominoes	Blockoids
+pop_link_trusty_horse	Hard	What is the name of Link's trusty horse in 'The Legend of Zelda' games?	Epona	Agro	Roach	Shadowfax
+pop_sarcastic_runs_test	Hard	What is the name of the sarcastic AI that runs the test chambers in 'Portal'?	GLaDOS	SHODAN	Cortana	HAL 9000
+pop_pokemon_red_blue	Hard	In Pokemon Red and Blue, in which town does the player's journey begin?	Pallet Town	Viridian City	Pewter City	Cerulean City
+pop_video_game_set	Hard	Which video game is set in Rapture, a ruined city at the bottom of the ocean?	BioShock	Fallout 3	Dead Space	Subnautica
+pop_north_america_sega	Hard	In North America, Sega's Mega Drive console was sold under which name?	The Genesis	The Saturn	The Dreamcast	The Master System
+pop_legend_zelda_old	Hard	In the first 'Legend of Zelda', what does the old man in the cave hand Link, saying 'It's dangerous to go alone'?	A sword	A shield	A map	A lantern
+pop_thousands_unsold_copies	Hard	Where were thousands of unsold copies of Atari's 'E.T.' game dug up in 2014?	In a New Mexico landfill	Under a Las Vegas car park	In an old Alaskan gold mine	Beneath Atari's own offices
+pop_meme_press_pay	Hard	The meme 'Press F to pay respects' comes from a funeral scene in which game series?	Call of Duty	Battlefield	Halo	Medal of Honor
+pop_pac_man_ghosts	Hard	Which of Pac-Man's ghosts is red?	Blinky	Pinky	Inky	Clyde
+pop_raichu	Hard	What does Pikachu evolve into?	Raichu	Pichu	Jolteon	Electabuzz
+pp_startery	Hard	Which three Pokemon could you choose from at the start of Pokemon Red and Blue?	Bulbasaur, Charmander, Squirtle	Pikachu, Eevee, Meowth	Chikorita, Cyndaquil, Totodile	Treecko, Torchic, Mudkip
+tec_pokemon_151	Hard	How many Pokemon could be caught in the original Red and Blue games?	151	100	200	251
+tec_miyamoto	Hard	Which game designer created both Mario and The Legend of Zelda?	Shigeru Miyamoto	Hideo Kojima	Satoru Iwata	Yu Suzuki
+pop_minecraft_block_need	Hard	In Minecraft, which block do you need to build a Nether portal?	Obsidian	Bedrock	Diamond	Netherrack
+pop_company_makes_assassin	Hard	Which company makes the 'Assassin's Creed' games?	Ubisoft	Electronic Arts	Square Enix	Capcom
+pop_company_makes_call	Hard	Which company makes the 'Call of Duty' games?	Activision	Ubisoft	Electronic Arts	Valve
+pop_company_makes_game	Hard	Which company makes the game 'Fortnite'?	Epic Games	Riot Games	Valve	Blizzard
+pop_company_makes_grand	Hard	Which company makes the 'Grand Theft Auto' games?	Rockstar Games	Ubisoft	Electronic Arts	Activision
+pop_japanese_company_created	Hard	Which Japanese company created 'Street Fighter' and 'Resident Evil'?	Capcom	Konami	Namco	Square Enix
+pop_video_game_series	Hard	Which video game series features the thumbs-up mascot 'Vault Boy'?	Fallout	BioShock	Borderlands	Mass Effect
+pop_huge_pokemon_blocks	Hard	Which huge Pokemon blocks the road while it sleeps in Pokemon Red and Blue?	Snorlax	Slowpoke	Onix	Lapras
+pop_super_mario_bros	Hard	In the first 'Super Mario Bros.', who tells Mario 'Our princess is in another castle!'?	Toad	Yoshi	Luigi	Lakitu
+pop_video_game_series_2	Hard	Which video game series follows the assassin Ezio Auditore?	Assassin's Creed	Hitman	Dishonored	Thief
+pop_pink_pokemon_transform	Hard	Which pink Pokemon can transform into a copy of any other Pokemon?	Ditto	Jigglypuff	Clefairy	Slowpoke
+pop_minecraft_tall_black	Hard	In Minecraft, which tall black mob turns hostile if you look it in the eyes?	The Enderman	The Wither	The Creeper	The Ghast
+pop_online_game_player	Hard	In which online game did a player charge in yelling 'Leeroy Jenkins!' and wipe out his whole team?	World of Warcraft	EverQuest	Counter-Strike	RuneScape
+pop_jumpman	Hard	What was Mario called in his first game, the 1981 arcade hit with a barrel-throwing gorilla?	Jumpman	Mr. Video	Carpenter Joe	Plumber Pete
+pop_samus	Hard	Which game hero surprised players in 1986 by being revealed as a woman at the end?	Samus Aran	Lara Croft	Princess Zelda	Chun-Li
+pop_et_atari	Hard	Which 1982 Atari game, rushed out in about five weeks, is blamed for the video game crash of 1983?	E.T.	Pitfall!	Frogger	Adventure
+pp_metal_gear	Hard	Which video game series stars the stealthy soldier Solid Snake?	Metal Gear	Splinter Cell	Hitman	Far Cry
+pp_agent_47	Hard	In the 'Hitman' games, the bald assassin is known by which number?	47	007	13	99
+pop_original_1981_donkey	Hard	In the original 1981 'Donkey Kong', who was the woman the hero climbed to rescue?	Pauline	Peach	Daisy	Rosalina
+pop_will_wright	Expert	Which game designer created 'SimCity' and 'The Sims'?	Will Wright	Sid Meier	Peter Molyneux	John Carmack
+pop_mew	Expert	Which rare Pokemon was secretly slipped into Red and Blue by a programmer at the last minute?	Mew	Mewtwo	Ditto	Celebi
+pop_plumbob	Expert	What is the green diamond floating over a Sim's head called?	A plumbob	A simgem	A mood crystal	A lifepoint
+pop_number_pikachu_national	Expert	What number is Pikachu in the National Pokedex?	25	1	7	151
+pop_working_title_minecraft	Expert	What was the working title of Minecraft when Notch first showed it in 2009?	Cave Game	Block World	Dig Deep	Craft Mine
+pop_original_super_mario	Expert	In the original 'Super Mario Bros.', what does Mario touch at the end of a castle to drop Bowser into the lava?	An axe	A key	A switch	A sword
+pop_princess_zelda_wife	Expert	Princess Zelda was named after the wife of which writer?	F. Scott Fitzgerald	Ernest Hemingway	J. R. R. Tolkien	Edgar Allan Poe
+pop_meme_all_base	Expert	The meme 'All your base are belong to us' comes from the clumsy English of which video game?	Zero Wing	Contra	R-Type	Gradius
+pop_finish_level_256	Expert	Why can no one finish level 256 of the original 'Pac-Man' arcade game?	A bug scrambles half the maze	The ghosts become invincible	The maze has no exit gate	The game wipes the high score
+pop_feature_street_fighter	Expert	Which feature of 'Street Fighter II' began as an unintended glitch that the designers decided to keep?	Combos	Special moves	Throws	Character select
+pop_studio_develops_main	Expert	Which studio develops the main series of Pokemon games?	Game Freak	HAL Laboratory	Intelligent Systems	Retro Studios
+pop_super_mario_bros_2	Expert	In 'Super Mario Bros.' (1985), the bushes are the same graphic as what, simply recoloured green?	The clouds	The pipes	The coins	The castles
+pop_type_tune_game	Expert	The famous 'Type A' tune of Game Boy 'Tetris' is a Russian folk song called what?	Korobeiniki	Katyusha	Ochi Chyornye	Polyushko Pole

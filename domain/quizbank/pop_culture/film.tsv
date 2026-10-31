@@ -1,0 +1,343 @@
+# Film: live-action cinema: films, actors, directors, famous lines, Oscars, film trivia
+#
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+lit_moc	Easy	In which film saga do Jedi knights use 'the Force'?	Star Wars	Star Trek	The Matrix	Dune
+lit_spielberg	Easy	Who directed both 'Jaws' and 'E.T.'?	Steven Spielberg	George Lucas	James Cameron	Ridley Scott
+lit_007	Easy	What is James Bond's code number?	007	001	700	070
+myt_loki_marvel	Easy	In the Marvel films, who is Thor's mischievous adopted brother?	Loki	Heimdall	Hela	Balder
+pop_et_dom	Easy	Which film alien famously wants to 'phone home'?	E.T.	Alf	Stitch	Yoda
+pop_king_kong	Easy	Which giant ape climbs the Empire State Building in a classic 1933 film?	King Kong	Godzilla	Mighty Joe Young	Bigfoot
+pop_godzilla_kraj	Easy	Which country gave the world Godzilla?	Japan	The USA	South Korea	China
+pop_harry_aktor	Easy	Which actor played Harry Potter in the films?	Daniel Radcliffe	Rupert Grint	Tom Felton	Elijah Wood
+pop_chewbacca	Easy	Which tall, furry 'Star Wars' character is a Wookiee?	Chewbacca	Yoda	Jabba	R2-D2
+pop_miecz_swietlny	Easy	What weapon does a Jedi carry?	A lightsaber	A blaster	A phaser	A sonic screwdriver
+pop_r2d2	Easy	What kind of character is R2-D2 in 'Star Wars'?	A robot	An alien pilot	A Jedi knight	A bounty hunter
+pop_titanic_jack	Easy	Which actor played Jack in 'Titanic' (1997)?	Leonardo DiCaprio	Brad Pitt	Matt Damon	Johnny Depp
+pop_jurassic	Easy	Which film shows a theme park full of cloned dinosaurs?	Jurassic Park	King Kong	Avatar	Godzilla
+pop_ghostbusters	Easy	Which 1984 comedy follows a team who catch ghosts in New York?	Ghostbusters	Beetlejuice	Gremlins	The Goonies
+pop_jaws_rekin	Easy	What kind of animal terrorises a beach town in 'Jaws'?	A great white shark	A killer whale	A giant squid	A crocodile
+pop_oz_toto	Easy	What is the name of Dorothy's little dog in 'The Wizard of Oz'?	Toto	Rex	Scruffy	Benji
+pop_indiana	Easy	Which film hero carries a bullwhip and hates snakes?	Indiana Jones	Zorro	Han Solo	Lara Croft
+pop_avatar_navi	Easy	What colour is the skin of the Na'vi people in 'Avatar'?	Blue	Green	Purple	Grey
+pop_jack_sparrow	Easy	Which pirate captain did Johnny Depp play in 'Pirates of the Caribbean'?	Jack Sparrow	Hector Barbossa	Davy Jones	Captain Hook
+pop_bond_mi6	Easy	Which British secret service does James Bond work for?	MI6	MI5	The CIA	Scotland Yard
+pop_ethan_hunt	Easy	Which actor plays Ethan Hunt in the 'Mission: Impossible' films?	Tom Cruise	Matt Damon	Keanu Reeves	Daniel Craig
+pop_jackie_chan	Easy	Which Hong Kong star is famous for doing his own daredevil stunts in kung fu comedies?	Jackie Chan	Bruce Lee	Jet Li	Chow Yun-fat
+pp_han_solo	Easy	Which smuggler flies the Millennium Falcon alongside Chewbacca?	Han Solo	Luke Skywalker	Boba Fett	Poe Dameron
+pp_leia	Easy	Which 'Star Wars' princess is famous for her 'cinnamon bun' hairstyle?	Princess Leia	Padme Amidala	Rey	Ahsoka Tano
+pp_chucky	Easy	What is Chucky, the horror-film villain?	A killer doll	An evil clown	A ghost dog	A haunted robot
+pp_hermiona	Easy	Which actress played Hermione Granger in the Harry Potter films?	Emma Watson	Emma Stone	Keira Knightley	Natalie Portman
+pp_indiana_ford	Easy	Which actor played Indiana Jones?	Harrison Ford	Tom Selleck	Kevin Costner	Mel Gibson
+pq_marty	Easy	Which teenager travels back to 1955 in 'Back to the Future'?	Marty McFly	Ferris Bueller	Biff Tannen	Johnny B. Goode
+pop_actor_played_forrest	Easy	Which actor played Forrest Gump?	Tom Hanks	Tom Cruise	Kevin Costner	Robin Williams
+pop_actor_played_iron	Easy	Which actor played Iron Man in the Marvel films?	Robert Downey Jr.	Chris Evans	Chris Hemsworth	Mark Ruffalo
+pop_actor_played_captain	Easy	Which actor played Captain America in the Marvel films?	Chris Evans	Chris Pratt	Chris Hemsworth	Sebastian Stan
+pop_actor_played_thor	Easy	Which actor played Thor in the Marvel films?	Chris Hemsworth	Chris Evans	Tom Hiddleston	Chris Pine
+pop_actor_played_spider	Easy	Which actor played Spider-Man in 'Spider-Man: Homecoming' (2017)?	Tom Holland	Andrew Garfield	Tobey Maguire	Timothee Chalamet
+pop_actress_played_rose	Easy	Which actress played Rose in 'Titanic' (1997)?	Kate Winslet	Gwyneth Paltrow	Nicole Kidman	Claire Danes
+pop_actor_played_boxer	Easy	Which actor played the boxer Rocky Balboa?	Sylvester Stallone	Arnold Schwarzenegger	Bruce Willis	Robert De Niro
+pop_actor_played_james	Easy	Which actor played James Bond from 2006 to 2021?	Daniel Craig	Pierce Brosnan	Roger Moore	Timothy Dalton
+pop_directed_star_wars	Easy	Who directed the first 'Star Wars' film, in 1977?	George Lucas	Steven Spielberg	James Cameron	Ridley Scott
+pop_film_features_line	Easy	Which film features the line 'There's no place like home'?	The Wizard of Oz	E.T.	Home Alone	Up
+pop_film_features_gandalf	Easy	Which film features Gandalf's cry 'You shall not pass!'?	The Lord of the Rings	Harry Potter	Star Wars	The Chronicles of Narnia
+pop_film_features_line_2	Easy	Which film features the line 'I'm the king of the world!'?	Titanic	Rocky	The Lion King	Gladiator
+pop_empire_moon_sized	Easy	What is the Empire's moon-sized battle station in 'Star Wars' called?	The Death Star	The Star Destroyer	The Millennium Falcon	The Executor
+pop_colour_darth_vader	Easy	What colour is Darth Vader's lightsaber?	Red	Blue	Green	Purple
+pop_golden_star_wars	Easy	Which golden 'Star Wars' droid speaks over six million forms of communication?	C-3PO	R2-D2	BB-8	K-2SO
+pop_film_magical_nanny	Easy	In which film does a magical nanny sing 'Supercalifragilisticexpialidocious'?	Mary Poppins	The Sound of Music	Chitty Chitty Bang Bang	Matilda
+pop_actor_plays_wisecracking	Easy	Which actor plays the wisecracking antihero Deadpool?	Ryan Reynolds	Ryan Gosling	Chris Pratt	Hugh Jackman
+pop_actor_played_wolverine	Easy	Which actor played Wolverine in the X-Men films?	Hugh Jackman	Russell Crowe	Ryan Reynolds	Christian Bale
+pop_actress_played_barbie	Easy	Which actress played Barbie in the 2023 film?	Margot Robbie	Emma Stone	Anne Hathaway	Florence Pugh
+pop_real_wrestler_turned	Easy	What is the real name of the wrestler-turned-actor known as 'The Rock'?	Dwayne Johnson	John Cena	Dave Bautista	Vin Diesel
+pop_giant_slug_like	Easy	Which giant slug-like crime lord appears in 'Star Wars'?	Jabba the Hutt	Boba Fett	Darth Maul	Grand Moff Tarkin
+pop_film_series_stars	Easy	Which film series stars Vin Diesel in fast cars and street races?	Fast & Furious	Transformers	Need for Speed	Cars
+pop_film_series_stars_2	Easy	Which film series stars Keanu Reeves as a hitman avenging his dog?	John Wick	The Matrix	Speed	Taken
+pop_1997_film_follows	Easy	Which 1997 film follows secret agents in black suits who police aliens on Earth?	Men in Black	Independence Day	Mars Attacks!	Galaxy Quest
+pop_1993_comedy_features	Easy	Which 1993 comedy features Robin Williams disguised as a Scottish nanny?	Mrs. Doubtfire	Jumanji	Hook	Patch Adams
+pop_1994_comedy_features	Easy	Which 1994 comedy features Jim Carrey with a magical green face?	The Mask	Ace Ventura	Dumb and Dumber	Liar Liar
+pop_actor_dirty_harry	Easy	Which actor, as Dirty Harry, growled 'Go ahead, make my day'?	Clint Eastwood	Charles Bronson	Steve McQueen	Burt Reynolds
+pop_actor_plays_amnesiac	Easy	Which actor plays the amnesiac spy Jason Bourne?	Matt Damon	Ben Affleck	Mark Wahlberg	Jeremy Renner
+pop_actress_played_lara	Easy	Which actress first played Lara Croft on film, in 2001?	Angelina Jolie	Alicia Vikander	Milla Jovovich	Kate Beckinsale
+pop_actor_plays_fake	Easy	Which actor plays a fake substitute teacher who forms a rock band in 'School of Rock'?	Jack Black	Adam Sandler	Will Ferrell	Ben Stiller
+pop_film_made_line	Easy	Which film made the line 'Hasta la vista, baby' famous?	Terminator 2	RoboCop	Total Recall	Predator
+pop_actor_plays_bookshop	Easy	Which actor plays the bookshop owner in 'Notting Hill'?	Hugh Grant	Colin Firth	Jude Law	Ewan McGregor
+pop_1995_film_pig	Easy	Which 1995 film is about a pig who wants to be a sheepdog?	Babe	Charlotte's Web	Wilbur	Racing Stripes
+pop_2014_film_sends	Easy	Which 2014 film sends Matthew McConaughey through a wormhole to save humanity?	Interstellar	Gravity	The Martian	Ad Astra
+pop_1996_film_sees	Easy	Which 1996 film sees Will Smith fight off an alien invasion around 4 July?	Independence Day	Armageddon	Mars Attacks!	Men in Black
+pop_actor_played_professor	Easy	Which actor played Professor Snape in the 'Harry Potter' films?	Alan Rickman	Gary Oldman	Kenneth Branagh	Jason Isaacs
+pop_actor_played_elf	Easy	Which actor played the elf Legolas in 'The Lord of the Rings'?	Orlando Bloom	Elijah Wood	Viggo Mortensen	Dominic Monaghan
+pop_played_spider_man	Easy	Who played Spider-Man in Sam Raimi's 2002 film?	Tobey Maguire	Andrew Garfield	Tom Holland	Jake Gyllenhaal
+pop_comedian_played_austin	Easy	Which comedian played Austin Powers and voiced Shrek?	Mike Myers	Eddie Murphy	Jim Carrey	Adam Sandler
+pop_british_comedian_created	Easy	Which British comedian created and played Borat and Ali G?	Sacha Baron Cohen	Ricky Gervais	Rowan Atkinson	Steve Coogan
+pop_played_bella_swan	Easy	Who played Bella Swan in the 'Twilight' films?	Kristen Stewart	Emma Stone	Anne Hathaway	Dakota Fanning
+pop_actress_played_han	Easy	Which actress played Han Solo's love interest in the original 'Star Wars' films?	Carrie Fisher	Natalie Portman	Sigourney Weaver	Jodie Foster
+pop_actor_played_time	Easy	Which actor played the time-travelling teenager in 'Back to the Future'?	Michael J. Fox	Matthew Broderick	Tom Cruise	Rob Lowe
+pop_original_star_wars	Easy	In the original 'Star Wars' trilogy, who turns out to be Luke Skywalker's father?	Darth Vader	Obi-Wan Kenobi	Emperor Palpatine	Owen Lars
+pop_frodo_aktor	Easy	Which actor played the hobbit who carries the Ring in 'The Lord of the Rings' films?	Elijah Wood	Sean Astin	Orlando Bloom	Daniel Radcliffe
+pop_yoda_mowa	Easy	Which small green master of the Force speaks with his words in a jumbled order?	Yoda	Mace Windu	Qui-Gon Jinn	Obi-Wan Kenobi
+pop_matrix_pigulka	Easy	In 'The Matrix', which colour pill does Neo take to learn the truth?	Red	Blue	Green	White
+pop_forrest_gump	Easy	'Life is like a box of chocolates' is a line from which film?	Forrest Gump	Rain Man	Big	The Green Mile
+pop_terminator	Easy	Which actor said 'I'll be back' as the Terminator?	Arnold Schwarzenegger	Sylvester Stallone	Bruce Willis	Jean-Claude Van Damme
+pop_psycho	Easy	Who directed 'Psycho', with its famous shower scene?	Alfred Hitchcock	Stanley Kubrick	Orson Welles	Billy Wilder
+pop_bond_martini	Easy	How does James Bond like his martini?	Shaken, not stirred	Stirred, not shaken	With extra ice	On the rocks
+pop_delorean	Easy	Which car is turned into a time machine in 'Back to the Future'?	A DeLorean	A Ford Mustang	A Volkswagen Beetle	A Cadillac
+pop_mary_poppins	Easy	How does Mary Poppins arrive and leave?	Flying with an umbrella	Riding a broomstick	On a magic carpet	In a hot-air balloon
+pop_ojciec_chrzestny	Easy	'I'm gonna make him an offer he can't refuse' comes from which film?	The Godfather	Scarface	Goodfellas	Casino
+pop_mgm_lew	Easy	Which animal roars in the opening logo of MGM films?	A lion	A tiger	A bear	An eagle
+pop_top_gun	Easy	In 'Top Gun', what is Tom Cruise's character's call sign?	Maverick	Iceman	Goose	Viper
+pop_et_rower	Easy	In 'E.T.', Elliott and the alien fly across the Moon on what?	A bicycle	A skateboard	A flying carpet	A spaceship
+pop_barbenheimer	Easy	The 2023 craze 'Barbenheimer' paired a pink comedy with which film released the same day?	Oppenheimer	Wonka	Dune	Napoleon
+pop_neo	Easy	Which actor played Neo in 'The Matrix'?	Keanu Reeves	Tom Cruise	Brad Pitt	Will Smith
+pop_cameron	Easy	Who directed both 'Titanic' and 'Avatar'?	James Cameron	Steven Spielberg	Ridley Scott	Peter Jackson
+pop_bruce_lee	Easy	Which martial arts legend starred in 'Enter the Dragon' (1973)?	Bruce Lee	Jackie Chan	Chuck Norris	Jet Li
+pp_marilyn	Easy	Which film star's white dress famously billows up over a subway grate?	Marilyn Monroe	Audrey Hepburn	Grace Kelly	Elizabeth Taylor
+pp_ptaki	Easy	In which Hitchcock film do flocks of birds attack a seaside town?	The Birds	Vertigo	Rear Window	North by Northwest
+pp_bb8	Easy	What shape is the droid BB-8's body?	A ball	A cube	A cylinder	A cone
+pp_rocket	Easy	What kind of animal is Rocket in 'Guardians of the Galaxy'?	A raccoon	A fox	A squirrel	A badger
+pp_szklana_pulapka	Easy	In which film does John McClane fight terrorists in a Los Angeles skyscraper at Christmas?	Die Hard	Lethal Weapon	Speed	Home Alone
+pp_rocketman	Easy	The film 'Rocketman' (2019) tells the story of which singer?	Elton John	David Bowie	Freddie Mercury	Rod Stewart
+pq_doc_brown	Easy	What is the name of the eccentric inventor in 'Back to the Future'?	Doc Brown	Doc Holliday	Dr. Strange	Professor X
+pq_grease	Easy	Which musical film stars John Travolta and Olivia Newton-John at Rydell High?	Grease	Saturday Night Fever	Dirty Dancing	Footloose
+pq_mamma_mia	Easy	Which musical film is built entirely on the songs of ABBA?	Mamma Mia!	Chicago	Rock of Ages	Moulin Rouge!
+pop_actress_played_katniss	Easy	Which actress played Katniss Everdeen in 'The Hunger Games' films?	Jennifer Lawrence	Emma Stone	Shailene Woodley	Kristen Stewart
+pop_actress_played_black	Easy	Which actress played Black Widow in the Marvel films?	Scarlett Johansson	Natalie Portman	Elizabeth Olsen	Brie Larson
+pop_actress_starred_pretty	Easy	Which actress starred in 'Pretty Woman' (1990)?	Julia Roberts	Meg Ryan	Sandra Bullock	Demi Moore
+pop_actor_starred_die	Easy	Which actor starred in 'Die Hard' (1988)?	Bruce Willis	Mel Gibson	Kurt Russell	Harrison Ford
+pop_film_features_line_5	Easy	Which film features the line 'I see dead people'?	The Sixth Sense	The Others	Ghost	The Ring
+pop_film_features_line_6	Easy	Which film features the line 'Wax on, wax off'?	The Karate Kid	Rocky	Kung Fu Panda	Bloodsport
+pop_film_bill_murray	Easy	In which film does Bill Murray live the same day over and over?	Groundhog Day	Ghostbusters	Lost in Translation	Caddyshack
+pop_film_man_discover	Easy	In which film does a man discover his whole life is a TV show?	The Truman Show	The Matrix	Inception	Pleasantville
+pop_film_tom_hanks	Easy	In which film is Tom Hanks stranded on an island with a volleyball named Wilson?	Cast Away	The Terminal	Big	Forrest Gump
+pop_musical_film_features	Easy	Which musical film features the song 'Do-Re-Mi'?	The Sound of Music	Mary Poppins	My Fair Lady	Oliver!
+pop_actor_played_vampire	Easy	Which actor played the vampire Edward Cullen in 'Twilight'?	Robert Pattinson	Taylor Lautner	Zac Efron	Daniel Radcliffe
+pop_actor_played_luke	Easy	Which actor played Luke Skywalker in the original 'Star Wars' films?	Mark Hamill	Harrison Ford	Hayden Christensen	Ewan McGregor
+pop_actor_starred_roman	Easy	Which actor starred as a Roman general turned slave in 'Gladiator' (2000)?	Russell Crowe	Mel Gibson	Brad Pitt	Gerard Butler
+pop_actor_directed_starred	Easy	Which actor directed and starred in 'Braveheart'?	Mel Gibson	Kevin Costner	Liam Neeson	Clint Eastwood
+pop_1988_film_mixes	Easy	Which 1988 film mixes live actors with a cartoon rabbit framed for murder?	Who Framed Roger Rabbit	Bedknobs and Broomsticks	Pete's Dragon	Space Jam
+pop_actor_won_oscar	Easy	Which actor won an Oscar as the cannibal psychiatrist in 'The Silence of the Lambs'?	Anthony Hopkins	Jack Nicholson	Gene Hackman	Robert De Niro
+pop_actor_played_title	Easy	Which actor played the title role in Tim Burton's 'Edward Scissorhands' (1990)?	Johnny Depp	Keanu Reeves	Nicolas Cage	Christian Slater
+pop_1999_film_rule	Easy	Which 1999 film's first rule is that you do not talk about it?	Fight Club	The Matrix	Memento	Se7en
+pop_guardians_galaxy_words	Easy	In 'Guardians of the Galaxy', which words make up nearly everything the tree-like hero Groot says?	'I am Groot'	'We are Groot'	'Groot is here'	'Groot says hi'
+pop_tarantino	Easy	Which director made 'Pulp Fiction' and 'Kill Bill'?	Quentin Tarantino	Martin Scorsese	Guy Ritchie	Robert Rodriguez
+pp_lecter	Easy	Which cannibal psychiatrist is questioned in 'The Silence of the Lambs'?	Hannibal Lecter	Norman Bates	Jack Torrance	Freddy Krueger
+day_zlota_palma	Medium	Which is the top prize at the Cannes Film Festival?	The Palme d'Or	The Golden Bear	The Golden Lion	The Silver Shell
+lit_titanic_oskary	Medium	Which of these films won a record-equalling 11 Oscars?	Titanic	Avatar	Gone with the Wind	Star Wars
+pop_wladca_nowa_zelandia	Medium	In which country were 'The Lord of the Rings' films shot?	New Zealand	Ireland	Iceland	Canada
+pop_star_wars_rok	Medium	In which year did the first 'Star Wars' film come out?	1977	1971	1983	1968
+pop_rocky_schody	Medium	In 'Rocky', the hero famously runs up the steps of a museum in which city?	Philadelphia	New York	Boston	Chicago
+pop_oz_pantofelki	Medium	What colour are Dorothy's magic slippers in the 1939 film 'The Wizard of Oz'?	Ruby red	Silver	Gold	Emerald green
+pop_chaplin_tramp	Medium	What was Charlie Chaplin's most famous character called?	The Tramp	The Kid	The Gentleman	The Clown
+pop_stan_lee	Medium	Which Marvel comics legend made a cameo in almost every Marvel film until his death in 2018?	Stan Lee	Jack Kirby	Steve Ditko	Bob Kane
+pop_kamienie_nieskonczonosci	Medium	How many Infinity Stones does Thanos hunt for in the Marvel films?	Six	Five	Seven	Four
+pp_godfather_brando	Medium	Which actor played Don Vito Corleone in 'The Godfather' (1972)?	Marlon Brando	Al Pacino	Robert De Niro	James Caan
+pp_przeminelo	Medium	Which 1939 epic set in the American Civil War features Scarlett O'Hara?	Gone with the Wind	Casablanca	Ben-Hur	The Wizard of Oz
+pp_freddy	Medium	Which horror villain with a bladed glove haunts teenagers in their dreams?	Freddy Krueger	Jason Voorhees	Michael Myers	Chucky
+pp_tatooine	Medium	On which desert planet does Luke Skywalker grow up?	Tatooine	Hoth	Endor	Naboo
+pop_actor_played_joker	Medium	Which actor played the Joker in the 2019 film 'Joker'?	Joaquin Phoenix	Jared Leto	Heath Ledger	Jack Nicholson
+pop_actress_played_wonder	Medium	Which actress played Wonder Woman in the 2017 film?	Gal Gadot	Scarlett Johansson	Margot Robbie	Brie Larson
+pop_actor_played_batman	Medium	Which actor played Batman in 'The Dark Knight' trilogy?	Christian Bale	Ben Affleck	George Clooney	Michael Keaton
+pop_actor_played_ron	Medium	Which actor played Ron Weasley in the Harry Potter films?	Rupert Grint	Tom Felton	Matthew Lewis	James Phelps
+pop_directed_godfather	Medium	Who directed 'The Godfather'?	Francis Ford Coppola	Martin Scorsese	Steven Spielberg	Brian De Palma
+pop_directed_2023_hit	Medium	Who directed the 2023 hit film 'Barbie'?	Greta Gerwig	Sofia Coppola	Kathryn Bigelow	Patty Jenkins
+pop_film_features_line_4	Medium	Which film features the line 'You're gonna need a bigger boat'?	Jaws	Titanic	Moby Dick	The Perfect Storm
+pop_jurassic_park_scientists	Medium	In 'Jurassic Park', where do the scientists find dinosaur DNA?	In mosquitoes trapped in amber	In frozen dinosaur eggs	In fossilised bones	In bird feathers
+pop_jack_sparrow_ship	Medium	What is the name of Jack Sparrow's ship?	The Black Pearl	The Flying Dutchman	The Jolly Roger	The Queen Anne's Revenge
+pop_james_bond_gadget	Medium	What is the name of James Bond's gadget-maker?	Q	M	Moneypenny	Felix Leiter
+pop_actress_played_mary	Medium	Which actress played Mary Poppins in the 1964 film?	Julie Andrews	Audrey Hepburn	Judy Garland	Emily Blunt
+pop_actress_played_elle	Medium	Which actress played Elle Woods in 'Legally Blonde'?	Reese Witherspoon	Cameron Diaz	Jennifer Aniston	Kate Hudson
+pop_actress_played_cady	Medium	Which actress played Cady Heron in 'Mean Girls' (2004)?	Lindsay Lohan	Rachel McAdams	Amanda Seyfried	Hilary Duff
+pop_actress_played_mia	Medium	Which actress played Mia in 'The Princess Diaries'?	Anne Hathaway	Mandy Moore	Hilary Duff	Natalie Portman
+pop_star_wars_bounty	Medium	Which Star Wars bounty hunter delivers Han Solo frozen in carbonite?	Boba Fett	Jabba the Hutt	Greedo	Lando Calrissian
+pop_1994_prison_drama	Medium	Which 1994 prison drama has long topped IMDb's list of highest-rated films?	The Shawshank Redemption	The Green Mile	Escape from Alcatraz	Forrest Gump
+pop_spell_harry_potter	Medium	Which spell does Harry Potter use to disarm his opponents?	Expelliarmus	Expecto Patronum	Wingardium Leviosa	Avada Kedavra
+pop_film_tagline	Medium	Which film's tagline is 'There can be only one'?	Highlander	Gladiator	Braveheart	Conan the Barbarian
+pop_film_boarding_school	Medium	Which film about a boarding-school teacher made 'Carpe diem!' famous?	Dead Poets Society	Good Will Hunting	School of Rock	The Breakfast Club
+pop_shape_harry_potter	Medium	What shape does Harry Potter's Patronus take?	A stag	A doe	An otter	A phoenix
+pop_oddjob_deadly_weapon	Medium	What is Oddjob's deadly weapon in 'Goldfinger'?	A steel-rimmed bowler hat	A golden gun	A poisoned umbrella	A razor-sharp boomerang
+pop_horror_film_series	Medium	Which horror film series is set at Camp Crystal Lake?	Friday the 13th	Halloween	Scream	The Evil Dead
+pop_actor_played_willy	Medium	Which actor played Willy Wonka in the 1971 film?	Gene Wilder	Johnny Depp	Danny Kaye	Dick Van Dyke
+pop_cult_musical_film	Medium	Which cult musical film features the dance 'The Time Warp'?	The Rocky Horror Picture Show	Little Shop of Horrors	Phantom of the Paradise	Jesus Christ Superstar
+pop_1992_family_comedy	Medium	Which 1992 family comedy is named after its huge St. Bernard dog?	Beethoven	Marley	Hooch	Benji
+pop_played_aragorn_lord	Medium	Who played Aragorn in 'The Lord of the Rings' films?	Viggo Mortensen	Sean Bean	Orlando Bloom	Karl Urban
+pop_played_morpheus_matrix	Medium	Who played Morpheus in 'The Matrix'?	Laurence Fishburne	Samuel L. Jackson	Denzel Washington	Morgan Freeman
+pop_played_batman_tim	Medium	Who played Batman in Tim Burton's 1989 film?	Michael Keaton	Val Kilmer	George Clooney	Adam West
+pop_played_joker_opposite	Medium	Who played the Joker opposite Michael Keaton's Batman in 1989?	Jack Nicholson	Heath Ledger	Jared Leto	Joaquin Phoenix
+pop_played_fbi_trainee	Medium	Who played FBI trainee Clarice Starling in 'The Silence of the Lambs'?	Jodie Foster	Julianne Moore	Sigourney Weaver	Meg Ryan
+pop_won_oscar_playing	Medium	Who won an Oscar for playing Queen Elizabeth II in 'The Queen' (2006)?	Helen Mirren	Judi Dench	Maggie Smith	Emma Thompson
+pop_played_elvis_presley	Medium	Who played Elvis Presley in Baz Luhrmann's 2022 film?	Austin Butler	Timothee Chalamet	Rami Malek	Taron Egerton
+pop_actress_played_dorothy	Medium	Which actress played Dorothy in 'The Wizard of Oz' (1939)?	Judy Garland	Shirley Temple	Vivien Leigh	Ginger Rogers
+pop_actress_starred_lone	Medium	Which actress starred as the lone survivor of the spaceship crew in 'Alien' (1979)?	Sigourney Weaver	Jamie Lee Curtis	Linda Hamilton	Meryl Streep
+pop_film_features_joker	Medium	Which film features the Joker's line 'Why so serious?'	The Dark Knight	Batman Begins	Batman Returns	Suicide Squad
+pop_godfather_film_producer	Medium	In 'The Godfather', what does a film producer find in his bed after refusing a favour?	A horse's head	A dead fish	A severed hand	A pig's head
+pop_horror_killer_white	Medium	Which horror killer is famous for his white hockey mask?	Jason Voorhees	Michael Myers	Leatherface	Freddy Krueger
+pop_green_food_gobbling	Medium	What is the name of the green, food-gobbling ghost in 'Ghostbusters'?	Slimer	Casper	Gozer	Zuul
+pop_film_kicked_off	Medium	Which film kicked off the Marvel Cinematic Universe in 2008?	Iron Man	The Incredible Hulk	Thor	Captain America: The First Avenger
+pop_1999_film_made	Medium	Which 1999 film made the slow-motion 'bullet time' effect famous?	The Matrix	Fight Club	The Mummy	Blade
+pop_director_made_brief	Medium	Which director made a brief cameo in almost every one of his own films?	Alfred Hitchcock	Stanley Kubrick	Orson Welles	Billy Wilder
+pop_empire_strikes_back	Medium	In 'The Empire Strikes Back', what does Luke lose in his lightsaber duel with Darth Vader?	His right hand	His left leg	His sight	His left ear
+pop_home_alone	Medium	In 'Home Alone', where has Kevin's family flown without him?	Paris	London	Rome	Chicago
+pop_bollywood	Medium	Which city is the heart of India's 'Bollywood' film industry?	Mumbai	New Delhi	Kolkata	Chennai
+pp_pennywise	Medium	What is the name of the evil clown in Stephen King's 'It'?	Pennywise	Krusty	Bozo	Jester
+pop_jedi_trains_luke	Medium	Which Jedi first trains Luke Skywalker in the original 'Star Wars'?	Obi-Wan Kenobi	Yoda	Qui-Gon Jinn	Mace Windu
+pop_actor_said_talkin	Medium	Which actor said 'You talkin' to me?' into a mirror in 'Taxi Driver'?	Robert De Niro	Al Pacino	Joe Pesci	Harvey Keitel
+pop_film_leonardo_dicaprio	Medium	For which film did Leonardo DiCaprio win his first Oscar?	The Revenant	The Wolf of Wall Street	Titanic	The Aviator
+pop_giant_creature_stomps	Medium	What giant creature stomps through New York at the end of 'Ghostbusters'?	A marshmallow man	A rubber duck	A teddy bear	A gingerbread man
+pop_actor_played_michael	Medium	Which actor played Michael Corleone in 'The Godfather'?	Al Pacino	Robert De Niro	James Caan	Marlon Brando
+pop_actress_won_oscar	Medium	Which actress won an Oscar for 'La La Land'?	Emma Stone	Natalie Portman	Jennifer Lawrence	Anne Hathaway
+pop_breed_dog_lassie	Medium	What breed of dog is Lassie?	A collie	A German shepherd	A golden retriever	A beagle
+pop_1982_sci_film	Medium	Which 1982 sci-fi film features Harrison Ford hunting 'replicants'?	Blade Runner	Total Recall	Minority Report	Alien
+pop_bumbling_french_detective	Medium	Who is the bumbling French detective of 'The Pink Panther' films?	Inspector Clouseau	Hercule Poirot	Inspector Gadget	Inspector Maigret
+pop_bond_film_introduced	Medium	Which Bond film introduced Daniel Craig as 007?	Casino Royale	Skyfall	Quantum of Solace	Spectre
+pop_played_challa_black	Medium	Who played T'Challa in 'Black Panther' (2018)?	Chadwick Boseman	Michael B. Jordan	Idris Elba	Daniel Kaluuya
+pop_played_rick_blaine	Medium	Who played Rick Blaine in 'Casablanca'?	Humphrey Bogart	Clark Gable	Cary Grant	James Stewart
+pop_played_cleopatra_lavish	Medium	Who played Cleopatra in the lavish 1963 film?	Elizabeth Taylor	Sophia Loren	Audrey Hepburn	Ava Gardner
+pop_played_sword_wielding	Medium	Who played the sword-wielding Bride in 'Kill Bill'?	Uma Thurman	Lucy Liu	Daryl Hannah	Milla Jovovich
+pop_played_hitman_jules	Medium	Who played the hitman Jules Winnfield in 'Pulp Fiction'?	Samuel L. Jackson	John Travolta	Bruce Willis	Ving Rhames
+pop_actor_played_james_3	Medium	Which actor first played James Bond in 'GoldenEye' (1995)?	Pierce Brosnan	Timothy Dalton	Roger Moore	Daniel Craig
+pop_irish_actor_played	Medium	Which Irish actor played both Thomas Shelby and J. Robert Oppenheimer?	Cillian Murphy	Colin Farrell	Jamie Dornan	Michael Fassbender
+pop_film_studio_logo	Medium	Which film studio's logo shows a mountain ringed by stars?	Paramount	Universal	Columbia	Warner Bros.
+pop_company_bought_marvel	Medium	Which company bought Marvel Entertainment in 2009?	Disney	Warner Bros.	Sony	Universal
+pop_1993_blockbuster_island	Medium	In the 1993 blockbuster about an island of cloned dinosaurs, which dinosaurs stalk two children through a kitchen?	Velociraptors	Tyrannosaurs	Spinosaurs	Dilophosaurs
+pop_2002_film_spider	Medium	In the 2002 film 'Spider-Man', who tells Peter Parker 'With great power comes great responsibility'?	Uncle Ben	Aunt May	Norman Osborn	Mary Jane
+pop_film_studio_logo_3	Medium	Which film studio's logo shows the Earth turning in space?	Universal	Paramount	Columbia	Warner Bros.
+pop_frozen_olaf_snowman	Medium	In 'Frozen', what does Olaf the snowman say he likes?	Warm hugs	Snowball fights	Ice cream	Hot chocolate
+pop_gremlins	Medium	In 'Gremlins' (1984), what must you never do to the creatures after midnight?	Feed them	Tickle them	Let them sleep	Take them outside
+pop_kubrick_2001	Medium	Which director made '2001: A Space Odyssey'?	Stanley Kubrick	Ridley Scott	George Lucas	Steven Spielberg
+pop_hal_9000	Medium	What is the name of the calm but deadly computer in '2001: A Space Odyssey'?	HAL 9000	Skynet	Mother	Deep Thought
+pop_casablanca	Medium	'Here's looking at you, kid' is a famous line from which film?	Casablanca	Gone with the Wind	The Maltese Falcon	Roman Holiday
+pop_bond_connery	Medium	Who was the first actor to play James Bond in the official film series?	Sean Connery	Roger Moore	George Lazenby	Pierce Brosnan
+pop_delorean_88	Medium	In 'Back to the Future', what speed must the time machine reach to travel in time?	88 mph	55 mph	100 mph	142 mph
+pop_hollywoodland	Medium	The famous Hollywood sign originally read what?	Hollywoodland	Hollywood Hills	Hollywood Studios	Holly Wood Park
+pop_incepcja_baczek	Medium	In 'Inception', which small object tells Cobb whether he is dreaming?	A spinning top	A coin	A pocket watch	A die
+pop_sound_of_music	Medium	'The Sound of Music' is set mainly in which country?	Austria	Switzerland	Germany	Czechoslovakia
+pop_west_side_story	Medium	'West Side Story' is a modern retelling of which Shakespeare play?	Romeo and Juliet	The Taming of the Shrew	Twelfth Night	Othello
+pop_lumiere	Medium	Which French brothers held one of the first public film screenings, in 1895?	The Lumiere brothers	The Wright brothers	The Grimm brothers	The Montgolfier brothers
+pop_shining	Medium	'Here's Johnny!' is shouted through a broken door in which horror film?	The Shining	Psycho	Halloween	The Exorcist
+pop_parasite	Medium	Which was the first non-English-language film to win the Oscar for Best Picture, in 2020?	Parasite	Roma	Amelie	Life Is Beautiful
+pop_amelie	Medium	Which French film follows a shy Paris waitress who secretly improves strangers' lives?	Amelie	Chocolat	The Intouchables	La Haine
+pop_john_williams	Medium	Which composer wrote the music for 'Star Wars', 'Jaws' and 'Harry Potter'?	John Williams	Hans Zimmer	Ennio Morricone	Howard Shore
+pop_peter_jackson	Medium	Which director made 'The Lord of the Rings' film trilogy?	Peter Jackson	James Cameron	Guillermo del Toro	Sam Raimi
+pop_nolan	Medium	Which director made 'The Dark Knight' and 'Inception'?	Christopher Nolan	Zack Snyder	Ridley Scott	David Fincher
+pp_joker_ledger	Medium	Which actor won an Oscar for playing the Joker in 'The Dark Knight'?	Heath Ledger	Joaquin Phoenix	Jack Nicholson	Jared Leto
+pp_tiffany	Medium	In which film does Audrey Hepburn play Holly Golightly?	Breakfast at Tiffany's	Roman Holiday	My Fair Lady	Sabrina
+pp_grace_kelly	Medium	Which Hollywood star became Princess of Monaco in 1956?	Grace Kelly	Audrey Hepburn	Marilyn Monroe	Rita Hayworth
+pp_ripley	Medium	Which heroine battles the creature in 'Alien' (1979)?	Ellen Ripley	Sarah Connor	Clarice Starling	Leia Organa
+pp_gandalf_aktor	Medium	Which actor played Gandalf in 'The Lord of the Rings' films?	Ian McKellen	Christopher Lee	Patrick Stewart	Michael Gambon
+pp_star_is_born	Medium	Which singer starred opposite Bradley Cooper in 'A Star Is Born' (2018)?	Lady Gaga	Beyonce	Taylor Swift	Rihanna
+pp_amadeus	Medium	Which 1984 Oscar-winning film tells the story of Mozart and his rival Salieri?	Amadeus	Immortal Beloved	Shine	Copying Beethoven
+pp_guy_fawkes_maska	Medium	Whose face inspired the mask in 'V for Vendetta', now a symbol of protest?	Guy Fawkes	Salvador Dali	Oliver Cromwell	Robin Hood
+pp_ewoki	Medium	Which small furry creatures live on the forest moon of Endor?	Ewoks	Jawas	Wookiees	Gungans
+pp_reeve	Medium	Which actor starred as Superman in the 1978 film?	Christopher Reeve	Henry Cavill	Brandon Routh	George Reeves
+pp_serce_oceanu	Medium	What is the blue diamond necklace in 'Titanic' called?	The Heart of the Ocean	The Star of India	The Blue Moon	The Hope Diamond
+pp_forrest_pingpong	Medium	Which sport does Forrest Gump play for his country in China?	Table tennis	Basketball	Baseball	Badminton
+pp_malek	Medium	Which actor won an Oscar for playing Freddie Mercury in 'Bohemian Rhapsody'?	Rami Malek	Eddie Redmayne	Taron Egerton	Austin Butler
+pq_ferris	Medium	Which 1986 film follows a teenager skipping school for a day in Chicago?	Ferris Bueller's Day Off	The Breakfast Club	Sixteen Candles	Weird Science
+pq_dirty_dancing	Medium	'Nobody puts Baby in a corner' is a line from which film?	Dirty Dancing	Grease	Footloose	Flashdance
+pq_showman	Medium	Which musical film stars Hugh Jackman as circus founder P. T. Barnum?	The Greatest Showman	Les Miserables	Moulin Rouge!	Chicago
+pq_la_la_land	Medium	In 'La La Land', which instrument does Ryan Gosling's character play?	The piano	The saxophone	The guitar	The trumpet
+pop_actor_played_hagrid	Medium	Which actor played Hagrid in the Harry Potter films?	Robbie Coltrane	Brendan Gleeson	Timothy Spall	Richard Griffiths
+pop_actor_played_lord	Medium	Which actor played Lord Voldemort in the Harry Potter films?	Ralph Fiennes	Alan Rickman	Gary Oldman	Jason Isaacs
+pop_actor_played_gollum	Medium	Which actor played Gollum using motion capture?	Andy Serkis	Elijah Wood	Sean Astin	Ian Holm
+pop_actor_played_jack	Medium	Which actor played Jack Torrance in 'The Shining'?	Jack Nicholson	Robert De Niro	Al Pacino	Dustin Hoffman
+pop_film_features_line_7	Medium	Which film features the line 'Say hello to my little friend!'?	Scarface	The Godfather	Heat	Goodfellas
+pop_film_features_line_8	Medium	Which film features the line 'Show me the money!'?	Jerry Maguire	The Wolf of Wall Street	Wall Street	Moneyball
+pop_film_features_line_9	Medium	Which film features the line 'Frankly, my dear, I don't give a damn'?	Gone with the Wind	Casablanca	Citizen Kane	Rebecca
+pop_1985_film_follows	Medium	Which 1985 film follows a gang of kids hunting for a pirate's lost treasure?	The Goonies	Stand by Me	Explorers	Hook
+pop_directed_taxi_driver	Medium	Who directed 'Taxi Driver' and 'Goodfellas'?	Martin Scorsese	Francis Ford Coppola	Brian De Palma	Sidney Lumet
+pop_actress_holds_record	Medium	Which actress holds the record for the most Oscar nominations?	Meryl Streep	Katharine Hepburn	Bette Davis	Judi Dench
+pop_film_laid_back	Medium	In which film does a laid-back bowler called 'the Dude' have his rug ruined?	The Big Lebowski	Fargo	Office Space	Dazed and Confused
+pop_director_made_both	Medium	Which director made both 'Alien' and 'Gladiator'?	Ridley Scott	James Cameron	Steven Spielberg	David Fincher
+pop_film_features_line_11	Medium	Which film features the line 'Keep the change, ya filthy animal'?	Home Alone	Goodfellas	Gremlins	Scarface
+pop_1999_horror_film	Medium	Which 1999 horror film was marketed as the real footage of three missing students?	The Blair Witch Project	Paranormal Activity	Cloverfield	The Ring
+pop_film_features_line_12	Medium	Which film features the line 'I'll have what she's having'?	When Harry Met Sally	Sleepless in Seattle	Pretty Woman	Annie Hall
+pop_official_james_bond	Medium	What was the first official James Bond film, released in 1962?	Dr. No	Goldfinger	From Russia with Love	Thunderball
+pop_shrimp_company_forrest	Medium	What is the name of the shrimp company in 'Forrest Gump'?	Bubba Gump	Lieutenant Dan's	Jenny's Shrimp	Greenbow Seafood
+pop_shining_sentence_jack	Medium	In 'The Shining', which sentence does Jack type over and over?	'All work and no play makes Jack a dull boy'	'Nothing is going to stop me from writing'	'The early bird catches the worm, Jack'	'A watched pot never boils, so stop looking'
+pop_director_made_pan	Medium	Which director made 'Pan's Labyrinth' and 'The Shape of Water'?	Guillermo del Toro	Alfonso Cuaron	Alejandro Inarritu	Pedro Almodovar
+pop_director_made_grand	Medium	Which director made 'The Grand Budapest Hotel'?	Wes Anderson	Wes Craven	Sofia Coppola	Spike Jonze
+pop_goldfinger_bond_ally	Medium	In 'Goldfinger', how is Bond's ally Jill Masterson killed?	Covered in gold paint	Thrown from a plane	Bitten by a snake	Crushed in a car
+pop_obywatel_kane	Medium	Which word is whispered at the very start of 'Citizen Kane'?	Rosebud	Mother	Xanadu	Charles
+pop_nosferatu	Medium	The 1922 silent film 'Nosferatu' was an unofficial version of which novel?	Dracula	Frankenstein	Carmilla	The Vampyre
+pop_nollywood	Medium	'Nollywood', one of the world's busiest film industries, is based in which country?	Nigeria	Norway	New Zealand	Nepal
+pp_lyzka	Medium	In 'The Matrix', a boy tells Neo: 'There is no...' what?	Spoon	Fork	Truth	Escape
+day_zloty_lew	Hard	At which film festival is the Golden Lion awarded?	Venice	Cannes	Berlin	San Sebastian
+pop_jazz_singer	Hard	Which 1927 film was the first feature with synchronised talking scenes?	The Jazz Singer	Metropolis	Sunrise	Nosferatu
+pop_dreamworks	Hard	In the DreamWorks logo, a boy sits fishing on what?	A crescent moon	A cloud	A star	A rooftop
+pop_berlin_niedzwiedz	Hard	Which animal is the top prize of the Berlin Film Festival named after?	A bear	A lion	An eagle	A wolf
+pop_shah_rukh	Hard	Which Bollywood star is often called 'King Khan'?	Shah Rukh Khan	Aamir Khan	Salman Khan	Amitabh Bachchan
+pop_film_features_line_10	Hard	Which film features the line 'You can't handle the truth!'?	A Few Good Men	Top Gun	The Firm	JFK
+pop_metal_toothed_giant	Hard	Which metal-toothed giant was a henchman in two James Bond films?	Jaws	Oddjob	Bane	Mr. Big
+pop_actress_starred_title	Hard	Which actress starred in the title role of 'Amelie' (2001)?	Audrey Tautou	Juliette Binoche	Marion Cotillard	Eva Green
+pop_directed_lost_translation	Hard	Who directed 'Lost in Translation' (2003)?	Sofia Coppola	Greta Gerwig	Kathryn Bigelow	Jane Campion
+pop_south_korean_director	Hard	Which South Korean director made 'Parasite'?	Bong Joon-ho	Park Chan-wook	Kim Ki-duk	Lee Chang-dong
+pop_princess_bride_swordsman	Hard	In 'The Princess Bride', which swordsman hunts the six-fingered man who killed his father?	Inigo Montoya	Westley	Fezzik	Prince Humperdinck
+pop_indiana_jones_last	Hard	In 'Indiana Jones and the Last Crusade', where does Indy's nickname turn out to come from?	The family dog	His home state	His grandfather	A school friend
+pop_film_won_best	Hard	Which film won Best Picture in 2017, after 'La La Land' was announced by mistake?	Moonlight	Manchester by the Sea	Hidden Figures	Arrival
+pop_actress_made_film	Hard	Which actress made her film debut as a girl in 'Leon: The Professional' (1994)?	Natalie Portman	Kirsten Dunst	Scarlett Johansson	Dakota Fanning
+pop_return_jedi_officer	Hard	In 'Return of the Jedi', which officer famously cries 'It's a trap!'?	Admiral Ackbar	Admiral Piett	Admiral Thrawn	Admiral Holdo
+pop_ice_planet_empire	Hard	On which ice planet does 'The Empire Strikes Back' open?	Hoth	Endor	Dagobah	Bespin
+pop_back_future_power	Hard	In 'Back to the Future', how much power does the time machine need to travel in time?	1.21 gigawatts	88 gigawatts	12.1 megawatts	2.21 terawatts
+pop_pulp_fiction_vincent	Hard	In 'Pulp Fiction', what does Vincent say a Quarter Pounder with Cheese is called in France?	A Royale with Cheese	A Croque Burger	A Grand Fromage	A Burger Parisien
+pop_casablanca_song_pianist	Hard	In 'Casablanca', which song is the pianist Sam asked to play?	As Time Goes By	Moonlight Serenade	Stardust	Night and Day
+pop_fictional_island_resort	Hard	What is the name of the fictional island resort terrorised in 'Jaws'?	Amity Island	Martha's Vineyard	Nantucket	Block Island
+pop_hitchcock_film_hero	Hard	In which Hitchcock film is the hero chased across a field by a crop-dusting plane?	North by Northwest	Vertigo	Notorious	The 39 Steps
+pop_hitchcock_film_photographer	Hard	In which Hitchcock film does a photographer with a broken leg spy on his neighbours?	Rear Window	Vertigo	Rope	Notorious
+pop_actor_played_james_4	Hard	Which actor played James Bond in just one film, 'On Her Majesty's Secret Service' (1969)?	George Lazenby	Timothy Dalton	Roger Moore	David Niven
+pop_home_alone_two	Hard	In 'Home Alone', what do the two burglars call themselves?	The Wet Bandits	The Night Crawlers	The Christmas Crooks	The Snow Burglars
+pop_neo_real_matrix	Hard	What is Neo's real name in 'The Matrix'?	Thomas Anderson	John Anderson	Thomas Smith	Neo Andrews
+pop_japanese_director_made_2	Hard	Which Japanese director made 'Seven Samurai' and 'Rashomon'?	Akira Kurosawa	Yasujiro Ozu	Hayao Miyazaki	Takeshi Kitano
+pop_psycho_1960_used	Hard	In 'Psycho' (1960), what was used as the blood in the black-and-white shower scene?	Chocolate syrup	Tomato ketchup	Red wine	Beetroot juice
+pop_actor_choice_indiana	Hard	Which actor was the first choice for Indiana Jones but was tied up by the TV series 'Magnum, P.I.'?	Tom Selleck	Burt Reynolds	Nick Nolte	Jeff Bridges
+pop_empire_strikes_back_2	Hard	In 'The Empire Strikes Back', what does Han Solo reply when Leia tells him 'I love you'?	'I know.'	'Me too.'	'I'll be back.'	'Not now.'
+pop_cocktail_dude_drink	Hard	What cocktail does the Dude drink throughout 'The Big Lebowski'?	White Russian	Martini	Old Fashioned	Mojito
+pop_fictional_los_angeles	Hard	In which fictional Los Angeles skyscraper does John McClane fight terrorists?	Nakatomi Plaza	Gennero Tower	Oscorp Tower	Wayne Tower
+pop_haunted_hotel_shining	Hard	What is the name of the haunted hotel in 'The Shining'?	The Overlook	The Stanley	The Bates Motel	The Grand Budapest
+pop_actor_played_james_2	Hard	Which actor played James Bond in the most official films, seven in total?	Roger Moore	Sean Connery	Daniel Craig	Pierce Brosnan
+pop_deep_voice_brought	Hard	Whose deep voice brought Darth Vader to life?	James Earl Jones	Morgan Freeman	Samuel L. Jackson	Christopher Lee
+pop_british_actress_won	Hard	Which British actress won an Oscar as Scarlett O'Hara in 1939?	Vivien Leigh	Olivia de Havilland	Bette Davis	Grace Kelly
+pop_played_chariot_racing	Hard	Who played the chariot-racing hero of 'Ben-Hur' (1959)?	Charlton Heston	Kirk Douglas	Burt Lancaster	Gregory Peck
+pop_actor_played_dumbledore	Hard	Which actor played Dumbledore in most of the 'Harry Potter' films, after Richard Harris?	Michael Gambon	Ian McKellen	Christopher Lee	Derek Jacobi
+pop_film_studio_logo_2	Hard	Which film studio's logo shows a woman holding up a torch?	Columbia	Paramount	Universal	MGM
+pop_ghostbusters_team_warned	Hard	In 'Ghostbusters', what are the team warned never to do with their proton beams?	Cross the streams	Fire them indoors	Aim them at the sky	Use them at night
+pop_james_bond_villain	Hard	Which James Bond villain is famous for stroking a white cat?	Ernst Stavro Blofeld	Auric Goldfinger	Dr. Julius No	Hugo Drax
+pop_george_lucas_alaskan	Hard	George Lucas's Alaskan Malamute, Indiana, inspired Indiana Jones's name and which other character?	Chewbacca	Yoda	Han Solo	Jabba the Hutt
+pop_island_jurassic_park	Hard	What is the name of the island in 'Jurassic Park'?	Isla Nublar	Isla Sorna	Skull Island	Amity Island
+pop_hepburn	Hard	Which actress won a record four Oscars for Best Actress?	Katharine Hepburn	Meryl Streep	Audrey Hepburn	Ingrid Bergman
+pop_metropolis_lang	Hard	Which 1927 silent science-fiction film was directed by Fritz Lang?	Metropolis	Nosferatu	The Golem	Faust
+pop_oscar_1929	Hard	In which year were the first Academy Awards presented?	1929	1919	1939	1945
+pop_morricone	Hard	Which composer wrote the music for Sergio Leone's westerns, like 'The Good, the Bad and the Ugly'?	Ennio Morricone	John Williams	Nino Rota	Elmer Bernstein
+pop_powrot_krola	Hard	Which fantasy film won all 11 Oscars it was nominated for?	The Return of the King	The Fellowship of the Ring	The Two Towers	The Desolation of Smaug
+pp_reeses	Hard	Which sweets does Elliott use to lure E.T. into his house?	Reese's Pieces	M&M's	Skittles	Jelly beans
+pop_film_earn_over	Hard	Which film was the first to earn over 2 billion dollars at the box office?	Avatar	Titanic	Avengers: Endgame	Star Wars: The Force Awakens
+pop_actor_won_best	Hard	Which actor has won the most Best Actor Oscars, with three?	Daniel Day-Lewis	Jack Nicholson	Tom Hanks	Marlon Brando
+pop_became_black_performer	Hard	Who became the first Black performer to win an Oscar, in 1940, for her role as Mammy?	Hattie McDaniel	Dorothy Dandridge	Butterfly McQueen	Ethel Waters
+pop_tardis_stand_doctor	Hard	What does TARDIS stand for in 'Doctor Who'?	Time And Relative Dimension In Space	Time And Radial Distance In Space	Travel Across Realms Dimensions In Space	Time And Reality Displacement In Space
+pop_classic_comedy_ends	Hard	Which classic comedy ends with the line 'Well, nobody's perfect'?	Some Like It Hot	The Apartment	Tootsie	Bringing Up Baby
+pop_hitchcock_call_object	Hard	What did Hitchcock call the object or secret that drives a plot but matters little in itself?	A MacGuffin	A red herring	A Chekhov's gun	A deus ex machina
+pop_muppets_performer_voice	Hard	Which Muppets performer was the voice and hands of Yoda?	Frank Oz	Jim Henson	Kevin Clash	Dave Goelz
+pop_actor_played_three	Hard	Which actor played three roles, including the US President, in 'Dr. Strangelove' (1964)?	Peter Sellers	Alec Guinness	George C. Scott	Peter Ustinov
+pop_silent_film_comedian	Hard	Which silent-film comedian dangled from the hands of a clock high above the street in 'Safety Last!' (1923)?	Harold Lloyd	Buster Keaton	Charlie Chaplin	Stan Laurel
+lit_wings	Expert	Which film won the very first Academy Award for Best Picture?	Wings	Sunrise	The Jazz Singer	Metropolis
+pop_oscar_szpula	Expert	The Oscar statuette shows a knight holding a sword and standing on what?	A reel of film	A globe	A stack of books	A camera
+pop_psycho_toaleta	Expert	Which film is said to be the first Hollywood movie to show a toilet being flushed?	Psycho	Vertigo	Rear Window	The Birds
+pp_bruce_rekin	Expert	What nickname did the film crew give the mechanical shark in 'Jaws'?	Bruce	Moby	Chomper	Big Al
+pop_director_made_both_2	Expert	Which director made both 'Mad Max' and the penguin musical 'Happy Feet'?	George Miller	Peter Jackson	Ridley Scott	Baz Luhrmann
+pop_star_wars_1977	Expert	In 'Star Wars' (1977), the Millennium Falcon is said to have made the Kessel Run in less than how many parsecs?	Twelve	Five	Twenty	Three
+pop_line_jolson_speak	Expert	Which line did Al Jolson speak in 1927, in the first feature film with synchronised dialogue?	'You ain't heard nothin' yet!'	'Look, Ma, I'm talking!'	'Ladies and gentlemen, can you hear me?'	'Hello, everybody, it's me!'
+pop_cary_grant_born	Expert	Cary Grant was born with which name?	Archibald Leach	Marion Morrison	Bernard Schwartz	Issur Danielovitch
+pop_film_credits_alan	Expert	In film credits, who is 'Alan Smithee'?	A fake name for directors who disown a film	A stuntman who appeared in hundreds of films	The studio boss who invented the credit roll	An extra who appears in every Disney film
+pop_composed_shrieking_violin	Expert	Who composed the shrieking violin music for the shower scene in 'Psycho'?	Bernard Herrmann	John Williams	Ennio Morricone	Max Steiner
+pop_bond_villain_third	Expert	Which Bond villain has a third nipple?	Francisco Scaramanga	Ernst Stavro Blofeld	Auric Goldfinger	Hugo Drax
+pop_composer_wrote_oscar	Expert	Which composer wrote the Oscar-winning scores for 'The Lord of the Rings' films?	Howard Shore	Hans Zimmer	James Horner	Danny Elfman
+pop_1934_film_win	Expert	Which 1934 film was the first to win all five top Oscars?	It Happened One Night	Gone with the Wind	Casablanca	Wings
+pop_ben_burtt_created	Expert	Ben Burtt created the lightsaber hum by mixing a TV set's buzz with the hum of what?	An idling film projector	A refrigerator compressor	A vacuum cleaner	An electric razor
+pop_buddy_ebsen_tin	Expert	Why did Buddy Ebsen, the first Tin Man of 'The Wizard of Oz' (1939), have to leave the film?	His aluminium make-up poisoned his lungs	He broke a leg falling off the set	He was drafted into the army	He refused to wear the heavy suit
+pop_mace_windu_wield	Expert	Why does Mace Windu wield a purple lightsaber in the 'Star Wars' prequels?	Samuel L. Jackson asked for one	It marked him as a Sith spy	It was a gift from Yoda	Blue looked bad on camera
+pop_theme_mission_impossible	Expert	The theme of 'Mission: Impossible' is famous for which unusual time signature?	5/4	3/4	6/8	4/4
+pop_kubrick_shining_room	Expert	In Kubrick's 'The Shining', which room number is forbidden?	237	217	101	1408
+pop_pulp_fiction_restaurant	Expert	In 'Pulp Fiction', what is the name of the restaurant decorated like the 1950s?	Jack Rabbit Slim's	Big Kahuna Burger	Monk's Diner	Al's Diner
+pop_spaceship_alien_1979	Expert	What is the name of the spaceship in 'Alien' (1979)?	The Nostromo	The Sulaco	The Event Horizon	The Prometheus
+pop_actor_originally_cast	Expert	Which actor was originally cast as Marty McFly and filmed for weeks before being replaced by Michael J. Fox?	Eric Stoltz	Matthew Broderick	John Cusack	Charlie Sheen
+pop_british_weightlifter_played	Expert	Which British weightlifter played Luke Skywalker's masked father in the original 'Star Wars' films?	David Prowse	Peter Mayhew	Kenny Baker	Anthony Daniels
+pop_designer_simon_whiteley	Expert	Designer Simon Whiteley said the falling green code in 'The Matrix' was scanned from what?	Japanese cookbooks	Old phone directories	Chinese newspapers	Soviet tax forms
+pop_blade_runner_test	Expert	In 'Blade Runner', which test is used to spot replicants?	Voight-Kampff	Turing	Rorschach	Kobayashi Maru

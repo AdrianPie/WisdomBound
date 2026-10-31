@@ -1,0 +1,300 @@
+# Pop & Rock Music: pop, rock, hip-hop, jazz, bands, singers, songs, albums, instruments, music trivia (NOT classical/opera -> literature/music)
+#
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+day_gitara_struny	Easy	How many strings does a standard guitar have?	Six	Four	Five	Seven
+lit_beatles	Easy	Which band was nicknamed 'the Fab Four'?	The Beatles	The Rolling Stones	The Beach Boys	Queen
+lit_krol_popu	Easy	Which singer was known as 'the King of Pop'?	Michael Jackson	Elvis Presley	Prince	Freddie Mercury
+lit_krol_rocka	Easy	Which singer was known as 'the King of Rock and Roll'?	Elvis Presley	Chuck Berry	Little Richard	Johnny Cash
+pop_beatles_liverpool	Easy	Which city did The Beatles come from?	Liverpool	London	Manchester	Birmingham
+pop_queen_freddie	Easy	Who was the lead singer of Queen?	Freddie Mercury	David Bowie	Elton John	Mick Jagger
+pop_moonwalk	Easy	Which dance move did Michael Jackson make world-famous?	The moonwalk	The twist	The robot	The floss
+pop_abba_kraj	Easy	Which country did ABBA come from?	Sweden	Norway	Denmark	Finland
+pop_madonna	Easy	Which singer is known as 'the Queen of Pop'?	Madonna	Cher	Whitney Houston	Kylie Minogue
+pop_marley_reggae	Easy	Which music style is Bob Marley most famous for?	Reggae	Ska	Calypso	Salsa
+pop_jagger	Easy	Who is the lead singer of The Rolling Stones?	Mick Jagger	Keith Richards	Roger Daltrey	Robert Plant
+pop_bts	Easy	Which country does the boy band BTS come from?	South Korea	Japan	China	Thailand
+pop_dudy	Easy	Which instrument is most linked with Scotland?	The bagpipes	The accordion	The harp	The banjo
+pp_we_will_rock	Easy	Which Queen anthem is famous for its 'stomp, stomp, clap' beat?	We Will Rock You	We Are the Champions	Radio Ga Ga	Another One Bites the Dust
+pp_zolta_lodz	Easy	What colour was the Beatles' famous submarine?	Yellow	Red	Blue	Green
+pop_band_sang_yellow	Easy	Which band sang 'Yellow' and 'Viva la Vida'?	Coldplay	Oasis	Radiohead	Keane
+pop_singer_songwriter_worldwide	Easy	Which singer-songwriter had a worldwide hit with 'Shape of You'?	Ed Sheeran	Sam Smith	Harry Styles	Lewis Capaldi
+pop_singer_devoted_fans	Easy	Which singer's devoted fans call themselves 'Swifties'?	Taylor Swift	Katy Perry	Ariana Grande	Billie Eilish
+pop_singer_huge_hits	Easy	Which singer had huge hits with 'Toxic' and '...Baby One More Time'?	Britney Spears	Christina Aguilera	Jessica Simpson	Avril Lavigne
+pop_singer_hits_firework	Easy	Which singer had hits with 'Firework' and 'Roar'?	Katy Perry	Lady Gaga	Rihanna	Kesha
+pop_singer_worldwide_hit	Easy	Which singer had a worldwide hit with 'Hips Don't Lie'?	Shakira	Jennifer Lopez	Beyonce	Gloria Estefan
+pop_singer_hits_single	Easy	Which singer had hits with 'Single Ladies' and 'Halo'?	Beyonce	Rihanna	Alicia Keys	Mariah Carey
+pop_singer_worldwide_hit_2	Easy	Which singer had a worldwide hit with 'Rolling in the Deep'?	Adele	Amy Winehouse	Duffy	Lady Gaga
+pop_girl_group_1996	Easy	Which girl group had a 1996 hit with 'Wannabe'?	The Spice Girls	All Saints	Destiny's Child	Girls Aloud
+pop_heavy_metal_band_2	Easy	The heavy metal band Rammstein comes from which country?	Germany	Norway	Austria	Netherlands
+pop_singer_blind_since	Easy	Which singer, blind since infancy, had a hit with 'Superstition'?	Stevie Wonder	Ray Charles	Marvin Gaye	Bill Withers
+pop_british_singer_2006	Easy	Which British singer had a 2006 hit with 'Rehab'?	Amy Winehouse	Adele	Duffy	Lily Allen
+pop_boy_band_sang	Easy	Which boy band sang 'I Want It That Way'?	Backstreet Boys	NSYNC	Take That	Westlife
+pop_puerto_rican_singer	Easy	Which Puerto Rican singer had a 1999 hit with 'Livin' la Vida Loca'?	Ricky Martin	Marc Anthony	Enrique Iglesias	Luis Fonsi
+pop_sang_wrecking_ball	Easy	Who sang 'Wrecking Ball' in 2013?	Miley Cyrus	Demi Lovato	Selena Gomez	Ariana Grande
+pop_broadway_musical_lion	Easy	Which Broadway musical about a lion cub has run since 1997?	The Lion King	Cats	Wicked	Aladdin
+pop_singer_huge_1950s	Easy	Which singer had huge 1950s hits with 'Hound Dog' and 'Jailhouse Rock'?	Elvis Presley	Chuck Berry	Little Richard	Buddy Holly
+pop_band_hits_hey	Easy	Which band had hits with 'Hey Jude' and 'Let It Be'?	The Beatles	The Rolling Stones	The Beach Boys	The Kinks
+pop_singer_1984_hit	Easy	Which singer had a 1984 hit with 'Like a Virgin'?	Madonna	Cyndi Lauper	Whitney Houston	Kylie Minogue
+pop_group_sang_dancing	Easy	Which group sang 'Dancing Queen' in 1976?	ABBA	Boney M.	The Bee Gees	Fleetwood Mac
+pop_band_1991_hit	Easy	Which band had a 1991 hit with 'Smells Like Teen Spirit'?	Nirvana	Pearl Jam	Soundgarden	Foo Fighters
+pop_singer_2009_hit	Easy	Which singer had a 2009 hit with 'Bad Romance'?	Lady Gaga	Katy Perry	Rihanna	Kesha
+pop_apollo_astronaut_gave	Easy	Which Apollo 11 astronaut gave his first name to the 'Toy Story' space ranger?	Buzz Aldrin	Neil Armstrong	Michael Collins	John Glenn
+pop_bohemian	Easy	Which Queen song asks 'Is this the real life? Is this just fantasy?'	Bohemian Rhapsody	We Will Rock You	Somebody to Love	Don't Stop Me Now
+pop_nirvana	Easy	Which band's frontman was Kurt Cobain?	Nirvana	Pearl Jam	Soundgarden	Foo Fighters
+pop_marley_kraj	Easy	Which country was Bob Marley from?	Jamaica	Trinidad and Tobago	Barbados	Cuba
+pop_abbey_road	Easy	Which Beatles album cover shows the band walking over a zebra crossing?	Abbey Road	Let It Be	Revolver	Help!
+pop_u2	Easy	Which country does the band U2 come from?	Ireland	Scotland	Wales	Canada
+pop_didgeridoo	Easy	Which long wooden wind instrument comes from Aboriginal Australia?	The didgeridoo	The alphorn	The bagpipes	The panpipe
+pop_mariah	Easy	Whose 'All I Want for Christmas Is You' climbs back up the charts every December?	Mariah Carey	Whitney Houston	Celine Dion	Christina Aguilera
+pop_celine_titanic	Easy	Who sang 'My Heart Will Go On', the theme from 'Titanic'?	Celine Dion	Whitney Houston	Mariah Carey	Adele
+pop_jackson_rekawiczka	Easy	Michael Jackson often wore a single sparkly what?	Glove	Sock	Earring	Shoe
+pp_ringo	Easy	Which Beatle was the band's drummer?	Ringo Starr	George Harrison	Paul McCartney	John Lennon
+pp_imagine	Easy	Which Beatle wrote and sang the song 'Imagine'?	John Lennon	Paul McCartney	George Harrison	Ringo Starr
+pp_jackson_5	Easy	In which family group did Michael Jackson start singing as a child?	The Jackson 5	The Osmonds	The Supremes	The Temptations
+pp_bono	Easy	What is the stage name of U2's lead singer?	Bono	The Edge	Sting	Slash
+pp_bieber	Easy	Which country is Justin Bieber from?	Canada	The USA	Australia	Ireland
+pp_thriller_zombie	Easy	In the 'Thriller' video, Michael Jackson dances with a crowd of what?	Zombies	Vampires	Ghosts	Robots
+pp_one_direction	Easy	Which boy band was formed on 'The X Factor' in 2010?	One Direction	Take That	Westlife	Backstreet Boys
+pq_upior	Easy	Which Andrew Lloyd Webber musical features a masked, disfigured composer beneath a Paris theatre?	The Phantom of the Opera	Cats	Evita	Sunset Boulevard
+pop_british_band_recorded	Easy	Which British band recorded 'Wonderwall'?	Oasis	Blur	Coldplay	Radiohead
+pop_band_recorded_get	Easy	Which band recorded '(I Can't Get No) Satisfaction'?	The Rolling Stones	The Beatles	The Who	The Kinks
+pop_sang_uptown_funk	Easy	Who sang 'Uptown Funk' with Mark Ronson?	Bruno Mars	Pharrell Williams	Justin Timberlake	Usher
+pop_group_sang_disco	Easy	Which group sang the disco hit 'Y.M.C.A.'?	Village People	Bee Gees	ABBA	Boney M.
+pop_singer_made_way	Easy	Which singer made 'My Way' his signature song?	Frank Sinatra	Elvis Presley	Dean Martin	Tom Jones
+pop_purple_rain	Easy	Which singer had a hit with 'Purple Rain'?	Prince	Michael Jackson	Stevie Wonder	George Michael
+pop_ukulele	Easy	Which instrument was developed in Hawaii and looks like a tiny guitar?	The ukulele	The banjo	The mandolin	The balalaika
+pp_whitney	Easy	Who sang 'I Will Always Love You' in the film 'The Bodyguard'?	Whitney Houston	Mariah Carey	Celine Dion	Dolly Parton
+pp_bee_gees	Easy	Which band of brothers sang 'Stayin' Alive' for 'Saturday Night Fever'?	The Bee Gees	The Jackson 5	The Beach Boys	The Everly Brothers
+pop_thriller	Medium	Which is the best-selling album of all time?	Thriller	Back in Black	The Dark Side of the Moon	Abbey Road
+pop_waterloo	Medium	With which song did ABBA win Eurovision in 1974?	Waterloo	Dancing Queen	Mamma Mia	Fernando
+pop_graceland	Medium	What was the name of Elvis Presley's mansion in Memphis?	Graceland	Neverland	Xanadu	Paisley Park
+pop_elton_lion_king	Medium	Which singer wrote the songs for Disney's 'The Lion King' with Tim Rice?	Elton John	Phil Collins	Billy Joel	Sting
+pop_gangnam	Medium	Which 2012 song was the first YouTube video to reach one billion views?	Gangnam Style	Despacito	Baby	Harlem Shake
+pop_destinys_child	Medium	Which girl group was Beyonce a member of?	Destiny's Child	The Spice Girls	TLC	The Pussycat Dolls
+pop_spice_girls	Medium	How many Spice Girls were there?	Five	Four	Three	Six
+pop_pink_floyd_pryzmat	Medium	Which band's most famous album cover shows light passing through a prism?	Pink Floyd	Led Zeppelin	The Who	Genesis
+pop_armstrong_trabka	Medium	Which instrument did jazz legend Louis Armstrong play?	The trumpet	The saxophone	The clarinet	The piano
+pop_nowy_orlean	Medium	Which US city is known as the birthplace of jazz?	New Orleans	Chicago	Memphis	Nashville
+pop_fortepian_klawisze	Medium	How many keys does a standard piano have?	88	76	92	64
+pop_skyfall	Medium	Which singer performed the Bond theme 'Skyfall'?	Adele	Amy Winehouse	Duffy	Florence Welch
+pop_taylor_1989	Medium	Which singer started out in country music before going fully pop with the album '1989'?	Taylor Swift	Katy Perry	Miley Cyrus	Carrie Underwood
+pop_rickroll	Medium	Which Rick Astley song is used in the prank known as 'rickrolling'?	Never Gonna Give You Up	Together Forever	Take On Me	Don't You Want Me
+pop_baby_shark	Medium	Which children's song overtook 'Despacito' in 2020 as YouTube's most-viewed video?	Baby Shark Dance	Wheels on the Bus	Johny Johny Yes Papa	Five Little Ducks
+pop_hotel_california	Medium	Which band recorded 'Hotel California'?	Eagles	Fleetwood Mac	The Doors	Toto
+pop_shakira	Medium	Which country is the singer Shakira from?	Colombia	Mexico	Spain	Argentina
+pop_rihanna	Medium	Rihanna comes from which Caribbean island?	Barbados	Jamaica	Trinidad	Cuba
+pp_eye_of_tiger	Medium	Which Survivor song was the theme of 'Rocky III'?	Eye of the Tiger	The Final Countdown	We Are the Champions	Gonna Fly Now
+pq_wicked	Medium	Which musical tells the untold story of the witches of Oz?	Wicked	Cats	Hamilton	Annie
+pq_cats	Medium	Which long-running musical is based on T. S. Eliot's poems about felines?	Cats	Evita	Starlight Express	Chess
+pop_singer_nicknamed_boss	Medium	Which singer is nicknamed 'the Boss'?	Bruce Springsteen	Jon Bon Jovi	Bob Dylan	Billy Joel
+pop_band_recorded_stairway	Medium	Which band recorded 'Stairway to Heaven'?	Led Zeppelin	Deep Purple	The Doors	Pink Floyd
+pop_band_recorded_smoke	Medium	Which band recorded 'Smoke on the Water'?	Deep Purple	Led Zeppelin	Black Sabbath	The Who
+pop_band_recorded_sweet	Medium	Which band recorded 'Sweet Child o' Mine'?	Guns N' Roses	Bon Jovi	Aerosmith	Def Leppard
+pop_heavy_metal_band	Medium	Which heavy metal band recorded 'Enter Sandman'?	Metallica	Iron Maiden	Slayer	Megadeth
+pop_band_recorded_livin	Medium	Which band recorded 'Livin' on a Prayer'?	Bon Jovi	Journey	Europe	Foreigner
+pop_band_recorded_end	Medium	Which band recorded 'In the End'?	Linkin Park	Green Day	Blink-182	Limp Bizkit
+pop_norwegian_band_1985	Medium	Which Norwegian band had a 1985 hit with 'Take On Me'?	a-ha	Europe	Roxette	Duran Duran
+pop_canadian_singer_record	Medium	Which Canadian singer had a record-breaking hit with 'Blinding Lights'?	The Weeknd	Drake	Justin Bieber	Shawn Mendes
+pop_singer_queen_soul	Medium	Which singer was known as 'the Queen of Soul'?	Aretha Franklin	Whitney Houston	Diana Ross	Tina Turner
+pop_band_fronted_ozzy	Medium	Which band fronted by Ozzy Osbourne pioneered heavy metal?	Black Sabbath	Iron Maiden	Judas Priest	Motorhead
+pop_made_2011_hit	Medium	Which DJ made the 2011 hit 'Levels' and later 'Wake Me Up'?	Avicii	David Guetta	Calvin Harris	Kygo
+pop_band_1982_hit	Medium	Which band had a 1982 hit with 'Africa'?	Toto	Journey	Foreigner	Chicago
+pop_sang_disco_anthem	Medium	Who sang the disco anthem 'I Will Survive'?	Gloria Gaynor	Donna Summer	Diana Ross	Cher
+pop_british_band_fronted	Medium	Which British band is fronted by Thom Yorke?	Radiohead	Coldplay	Muse	Blur
+pop_american_band_fronted	Medium	Which American band was fronted by Jim Morrison?	The Doors	The Byrds	The Eagles	The Beach Boys
+pop_sang_wonderful_world	Medium	Who sang 'What a Wonderful World' in 1967?	Louis Armstrong	Ray Charles	Nat King Cole	Frank Sinatra
+pop_duo_sang_wake	Medium	Which duo sang 'Wake Me Up Before You Go-Go'?	Wham!	Hall & Oates	Tears for Fears	Erasure
+pop_band_released_album	Medium	Which band released the album 'Back in Black'?	AC/DC	Kiss	Def Leppard	Motorhead
+pop_band_logo_pair	Medium	Which band's famous logo is a pair of red lips with a tongue sticking out?	The Rolling Stones	Kiss	The Who	Aerosmith
+pop_italian_tenor_made	Medium	Which Italian tenor made 'Nessun dorma' famous at the 1990 World Cup?	Luciano Pavarotti	Andrea Bocelli	Placido Domingo	Enrico Caruso
+pop_lead_singer_aerosmith	Medium	Who is the lead singer of Aerosmith?	Steven Tyler	Joe Perry	Mick Jagger	David Lee Roth
+pop_younger_gallagher_brother	Medium	Who was the younger Gallagher brother and lead singer of Oasis?	Liam Gallagher	Noel Gallagher	Damon Albarn	Richard Ashcroft
+pop_lead_singer_blondie	Medium	Who was the lead singer of Blondie?	Debbie Harry	Pat Benatar	Chrissie Hynde	Stevie Nicks
+pop_lead_singer_maroon	Medium	Who is the lead singer of Maroon 5?	Adam Levine	Ryan Tedder	Brandon Flowers	Chris Martin
+pop_band_recorded_under	Medium	Which band recorded 'Under the Bridge'?	Red Hot Chili Peppers	Pearl Jam	Foo Fighters	Soundgarden
+pop_band_recorded_losing	Medium	Which band recorded 'Losing My Religion'?	R.E.M.	U2	The Smiths	Pixies
+pop_sang_1983_power	Medium	Who sang the 1983 power ballad 'Total Eclipse of the Heart'?	Bonnie Tyler	Celine Dion	Cher	Tina Turner
+pop_sang_love_got	Medium	Who sang 'What's Love Got to Do with It' in 1984?	Tina Turner	Diana Ross	Gloria Gaynor	Cher
+pop_wrote_sang_rock	Medium	Who wrote and sang the rock and roll classic 'Johnny B. Goode'?	Chuck Berry	Little Richard	Buddy Holly	Fats Domino
+pop_american_punk_band	Medium	Which American punk band released the album 'American Idiot'?	Green Day	The Offspring	Blink-182	Sum 41
+pop_band_recorded_sweet_2	Medium	Which band recorded 'Sweet Home Alabama'?	Lynyrd Skynyrd	Creedence Clearwater Revival	ZZ Top	The Allman Brothers Band
+pop_band_released_album_2	Medium	Which band released the album 'Rumours', with hits like 'Go Your Own Way'?	Fleetwood Mac	Eagles	The Doobie Brothers	America
+pop_british_band_shouted	Medium	Which British band shouted 'Woo-hoo!' in its 1997 hit 'Song 2'?	Blur	Oasis	Radiohead	Supergrass
+pop_band_fronted_robert	Medium	Which band, fronted by Robert Smith, recorded 'Boys Don't Cry'?	The Cure	The Smiths	Depeche Mode	New Order
+pop_duo_sang_sweet	Medium	Which duo sang 'Sweet Dreams (Are Made of This)'?	Eurythmics	Pet Shop Boys	Roxette	Yazoo
+pop_band_sang_hungry	Medium	Which band sang 'Hungry Like the Wolf' and 'Rio'?	Duran Duran	Spandau Ballet	A-ha	Tears for Fears
+pop_sang_hello_all	Medium	Who sang 'Hello' and 'All Night Long' in the 1980s?	Lionel Richie	Stevie Wonder	Marvin Gaye	Barry White
+pop_rapper_hip_hop	Medium	Which rapper had the first hip-hop single to top the US charts, 'Ice Ice Baby'?	Vanilla Ice	MC Hammer	Eminem	Will Smith
+pop_italian_group_sang	Medium	Which Italian group sang 'Blue (Da Ba Dee)'?	Eiffel 65	Aqua	Vengaboys	Gigi D'Agostino
+pop_1999_hit_mambo	Medium	Who had a 1999 hit with 'Mambo No. 5'?	Lou Bega	Ricky Martin	Enrique Iglesias	Marc Anthony
+pop_1998_hit_believe	Medium	Whose 1998 hit 'Believe' made the Auto-Tune effect famous?	Cher	Madonna	Kylie Minogue	Celine Dion
+pop_sang_genie_bottle	Medium	Who sang 'Genie in a Bottle' in 1999?	Christina Aguilera	Britney Spears	Jessica Simpson	Mandy Moore
+pop_duo_2003_hit	Medium	Which duo had a 2003 hit with 'Hey Ya!'?	OutKast	The Black Eyed Peas	The Fugees	Run-DMC
+pop_canadian_singer_2002	Medium	Which Canadian singer had a 2002 hit with 'Complicated'?	Avril Lavigne	Alanis Morissette	Shania Twain	Nelly Furtado
+pop_australian_singer_hides	Medium	Which Australian singer hides her face in videos and sang 'Chandelier'?	Sia	Kylie Minogue	Lorde	Tones and I
+pop_teenage_new_zealander	Medium	Which teenage New Zealander had a 2013 hit with 'Royals'?	Lorde	Sia	Kimbra	Gotye
+pop_las_vegas_band	Medium	Which Las Vegas band had a 2012 hit with 'Radioactive'?	Imagine Dragons	The Killers	Panic! at the Disco	OneRepublic
+pop_scottish_singer_2019	Medium	Which Scottish singer had a 2019 hit with 'Someone You Loved'?	Lewis Capaldi	Sam Smith	Calum Scott	James Arthur
+pop_sang_2021_breakup	Medium	Who sang the 2021 breakup ballad 'drivers license'?	Olivia Rodrigo	Billie Eilish	Sabrina Carpenter	Selena Gomez
+pop_sang_theme_2021	Medium	Who sang the theme for the 2021 Bond film 'No Time to Die'?	Billie Eilish	Adele	Sam Smith	Dua Lipa
+pop_band_sang_christmas	Medium	Which band sang the Christmas favourite 'Fairytale of New York'?	The Pogues	U2	The Dubliners	Simple Minds
+pop_band_led_mark	Medium	Which band, led by Mark Knopfler, recorded 'Sultans of Swing'?	Dire Straits	The Police	Genesis	Toto
+pop_sang_sweet_caroline	Medium	Who sang 'Sweet Caroline', a stadium singalong favourite?	Neil Diamond	Neil Young	Barry Manilow	Billy Joel
+pop_duo_sang_mrs	Medium	Which duo sang 'Mrs. Robinson' for the film 'The Graduate'?	Simon & Garfunkel	The Everly Brothers	Hall & Oates	Sonny & Cher
+pop_band_sang_generation	Medium	Which band sang 'My Generation' and smashed guitars on stage?	The Who	The Kinks	The Animals	The Yardbirds
+pop_sang_running_hill	Medium	Who sang 'Running Up That Hill', a hit again after 'Stranger Things'?	Kate Bush	Annie Lennox	Stevie Nicks	Siouxsie Sioux
+pop_sang_kiss_rose	Medium	Who sang 'Kiss from a Rose', featured in 'Batman Forever'?	Seal	Sting	Bryan Adams	Lenny Kravitz
+pop_member_queen_earned	Medium	Which member of Queen also earned a PhD in astrophysics?	Brian May	Roger Taylor	John Deacon	Freddie Mercury
+pop_phil_collins_drummer	Medium	Phil Collins was the drummer and later the singer of which band?	Genesis	Yes	The Police	Supertramp
+pop_singer_led_motown	Medium	Which singer led the Motown group The Supremes?	Diana Ross	Aretha Franklin	Gladys Knight	Martha Reeves
+pop_michael_jackson_ranch	Medium	What was the name of Michael Jackson's ranch in California?	Neverland	Graceland	Xanadu	Paisley Park
+pop_singer_released_2016	Medium	Which singer released the 2016 visual album 'Lemonade'?	Beyonce	Rihanna	Taylor Swift	Lady Gaga
+pop_singer_albums_age	Medium	Which singer named her albums after her age at the time, like '19', '21' and '25'?	Adele	Lorde	Duffy	Dido
+pop_band_made_cartoon	Medium	Which band is made up of the cartoon members 2-D, Murdoc, Noodle and Russel?	Gorillaz	Daft Punk	The Archies	The Monkees
+pop_skrzypce_struny	Medium	How many strings does a violin have?	Four	Five	Six	Three
+pop_rapper_won_oscar	Medium	Which rapper won an Oscar for the song 'Lose Yourself'?	Eminem	Jay-Z	Kanye West	50 Cent
+pop_lead_singer_coldplay	Medium	Who is the lead singer of Coldplay?	Chris Martin	Thom Yorke	Brandon Flowers	Liam Gallagher
+pop_lead_singer_guns	Medium	Who is the lead singer of Guns N' Roses?	Axl Rose	Slash	Jon Bon Jovi	Sebastian Bach
+pop_lead_singer_doubt	Medium	Who was the lead singer of No Doubt?	Gwen Stefani	Shirley Manson	Courtney Love	Avril Lavigne
+pop_german_band_recorded	Medium	Which German band recorded the whistled anthem 'Wind of Change'?	Scorpions	Rammstein	Kraftwerk	Accept
+pop_swedish_band_1986	Medium	Which Swedish band had a 1986 hit with 'The Final Countdown'?	Europe	Roxette	Ace of Base	The Cardigans
+pop_recorded_like_rolling	Medium	Who recorded 'Like a Rolling Stone' in 1965?	Bob Dylan	The Rolling Stones	Neil Young	Simon & Garfunkel
+pop_boy_band_robbie	Medium	Which boy band did Robbie Williams leave in 1995?	Take That	Boyzone	Westlife	East 17
+pop_justin_timberlake_became	Medium	Justin Timberlake first became famous in which boy band?	NSYNC	Backstreet Boys	Boyz II Men	New Kids on the Block
+pop_rapper_producer_founded	Medium	Which rapper and producer co-founded the Beats headphones brand?	Dr. Dre	Kanye West	Jay-Z	Snoop Dogg
+pop_1983_hit_girls	Medium	Who had a 1983 hit with 'Girls Just Want to Have Fun'?	Cyndi Lauper	Madonna	Debbie Harry	Pat Benatar
+pop_pop_boy_band	Medium	Which K-pop boy band's fans call themselves the 'ARMY'?	BTS	EXO	Big Bang	Seventeen
+pop_band_fronted_boy	Medium	Which band, fronted by Boy George, sang 'Karma Chameleon'?	Culture Club	Wham!	Bronski Beat	Soft Cell
+pop_sang_touch_baggy	Medium	Who sang 'U Can't Touch This' in famous baggy trousers?	MC Hammer	Vanilla Ice	LL Cool J	Coolio
+pop_spanish_duo_worldwide	Medium	Which Spanish duo had the worldwide dance craze 'Macarena'?	Los del Rio	Gipsy Kings	Las Ketchup	Enrique Iglesias
+pop_danish_norwegian_band	Medium	Which Danish-Norwegian band sang 'Barbie Girl'?	Aqua	Eiffel 65	Vengaboys	Ace of Base
+pop_sang_2020_disco	Medium	Who sang the 2020 disco-pop hit 'Levitating'?	Dua Lipa	Rita Ora	Ariana Grande	Doja Cat
+pop_band_2011_hit	Medium	Which band had a 2011 hit with 'Moves Like Jagger'?	Maroon 5	OneRepublic	The Script	Train
+pop_charity_supergroup_recorded	Medium	Which charity supergroup recorded 'Do They Know It's Christmas?' in 1984?	Band Aid	USA for Africa	Comic Relief	Red Nose Day
+pop_1985_charity_single	Medium	Which 1985 charity single was recorded by the supergroup 'USA for Africa'?	We Are the World	Heal the World	Imagine	Hand in Hand
+pop_band_recorded_good	Medium	Which band recorded 'Good Vibrations' in 1966?	The Beach Boys	The Beatles	The Monkees	The Byrds
+pop_rapper_1995_hit	Medium	Which rapper had a 1995 hit with 'Gangsta's Paradise'?	Coolio	Tupac Shakur	Snoop Dogg	Ice Cube
+pop_band_sang_don	Medium	Which band sang 'I Don't Want to Miss a Thing' for 'Armageddon'?	Aerosmith	Bon Jovi	Def Leppard	Journey
+pop_canadian_singer_everything	Medium	Which Canadian singer's '(Everything I Do) I Do It for You' topped charts for months in 1991?	Bryan Adams	Celine Dion	Shania Twain	Michael Buble
+pop_grohl	Medium	Which Nirvana drummer went on to found the Foo Fighters?	Dave Grohl	Krist Novoselic	Chad Smith	Taylor Hawkins
+pop_ziggy	Medium	Which singer created the alter ego Ziggy Stardust?	David Bowie	Prince	Elton John	Freddie Mercury
+pop_acdc	Medium	Which country does the rock band AC/DC come from?	Australia	Britain	The USA	Canada
+pop_kiss	Medium	Which rock band is famous for its black-and-white face paint?	Kiss	Queen	Aerosmith	Def Leppard
+pop_hendrix	Medium	Which guitarist set his guitar on fire on stage at Monterey in 1967?	Jimi Hendrix	Eric Clapton	Jimmy Page	Pete Townshend
+pop_johnny_cash	Medium	Which singer was known as 'the Man in Black'?	Johnny Cash	Elvis Presley	Hank Williams	Frank Sinatra
+pop_sinatra	Medium	Which singer was nicknamed 'Ol' Blue Eyes'?	Frank Sinatra	Dean Martin	Bing Crosby	Tony Bennett
+pop_nashville	Medium	Which US city is called 'Music City', the capital of country music?	Nashville	Memphis	Austin	Dallas
+pop_grammy	Medium	The Grammy award is shaped like what?	A gramophone	A microphone	A golden record	A guitar
+pop_live_aid	Medium	The 1985 Live Aid concerts raised money to fight famine in which country?	Ethiopia	Sudan	Somalia	Kenya
+pop_hip_hop	Medium	In which city was hip hop born in the 1970s?	New York	Los Angeles	Chicago	Atlanta
+pop_daft_punk	Medium	Which French electronic duo always performed wearing robot helmets?	Daft Punk	Justice	Air	Cassius
+pop_cavern	Medium	In which club did The Beatles play nearly 300 times early in their career?	The Cavern Club	The Marquee	The Roxy	The Blue Note
+pop_elvis_wojsko	Medium	In 1958, at the height of his fame, Elvis Presley was drafted into what?	The US Army	The US Navy	A monastery	A college football team
+pop_lady_gaga	Medium	Which singer wore a dress made of raw meat to the 2010 MTV awards?	Lady Gaga	Katy Perry	Madonna	Bjork
+pop_bjork	Medium	Which country is the singer Bjork from?	Iceland	Norway	Finland	Denmark
+pop_queen_live_aid	Medium	Which band's 20-minute set at Live Aid in 1985 is often called the greatest live show in rock history?	Queen	U2	The Who	Led Zeppelin
+pop_eurowizja_australia	Medium	Which country, far from Europe, has been taking part in Eurovision since 2015?	Australia	Canada	Japan	Brazil
+pp_jolene	Medium	Which country singer wrote 'Jolene'?	Dolly Parton	Shania Twain	Reba McEntire	Loretta Lynn
+pp_sting	Medium	Which singer was the frontman of The Police?	Sting	Bono	Phil Collins	Mark Knopfler
+pp_drake	Medium	Which country is the rapper Drake from?	Canada	The USA	Britain	Jamaica
+pp_posh	Medium	Which Spice Girl was known as 'Posh Spice'?	Victoria Beckham	Geri Halliwell	Mel B	Emma Bunton
+pq_hamilton	Medium	Which hip-hop musical tells the story of an American Founding Father?	Hamilton	In the Heights	Rent	Jersey Boys
+pop_singer_nicknamed_godfather	Medium	Which singer was nicknamed 'the Godfather of Soul'?	James Brown	Ray Charles	Marvin Gaye	Otis Redding
+pop_singer_piano_man	Medium	Which singer is known as 'the Piano Man'?	Billy Joel	Elton John	Ray Charles	Stevie Wonder
+pop_michael_jackson_song	Medium	Which Michael Jackson song keeps asking 'Annie, are you OK?'	Smooth Criminal	Billie Jean	Beat It	Bad
+pop_pharrell_williams_song	Medium	Which Pharrell Williams song was written for 'Despicable Me 2'?	Happy	Get Lucky	Blurred Lines	Freedom
+pop_french_singer_nicknamed	Medium	Which French singer, nicknamed 'the Little Sparrow', sang 'Non, je ne regrette rien'?	Edith Piaf	Juliette Greco	Francoise Hardy	Dalida
+pop_cover_nirvana_nevermind	Medium	On the cover of Nirvana's 'Nevermind', a baby swims towards what?	A dollar bill	A goldfish	A rubber duck	A beach ball
+pop_beatles_song_begins	Medium	Which Beatles song begins 'Picture yourself in a boat on a river'?	Lucy in the Sky with Diamonds	Yellow Submarine	Strawberry Fields Forever	Penny Lane
+pop_italian_rock_band	Medium	Which Italian rock band won Eurovision in 2021 and then broke through worldwide?	Maneskin	Il Volo	Negramaro	The Kolors
+pop_won_eurovision_austria	Medium	Who won Eurovision for Austria in 2014, performing as a bearded drag queen?	Conchita Wurst	Verka Serduchka	Dana International	Netta Barzilai
+pop_bond_theme_recorded	Medium	Which Bond theme was recorded by Paul McCartney and Wings?	Live and Let Die	For Your Eyes Only	A View to a Kill	Nobody Does It Better
+pop_band_took_joke	Medium	Which band took its name from the joke that it would go down like a 'lead balloon'?	Led Zeppelin	Deep Purple	Black Sabbath	Iron Butterfly
+pop_star_changed_unpronounceable	Medium	Which star changed his name to an unpronounceable symbol in 1993 during a fight with his record label?	Prince	George Michael	Beck	Sting
+pop_motown	Medium	Which city gave its nickname to the Motown record label?	Detroit	Chicago	Memphis	Philadelphia
+pop_despacito	Hard	Luis Fonsi, the singer of 'Despacito', comes from where?	Puerto Rico	Mexico	Colombia	Spain
+pp_angus	Hard	Which AC/DC guitarist performs in a schoolboy uniform?	Angus Young	Malcolm Young	Bon Scott	Brian Johnson
+pp_eminem	Hard	What is rapper Eminem's real name?	Marshall Mathers	Curtis Jackson	Shawn Carter	Calvin Broadus
+pp_finneas	Hard	Who co-writes and produces Billie Eilish's music?	Her brother Finneas	Her father	Pharrell Williams	Max Martin
+pop_sang_theme_song	Hard	Who sang the theme song of the Bond film 'Goldfinger'?	Shirley Bassey	Tina Turner	Nancy Sinatra	Carly Simon
+pop_band_recorded_don	Hard	Which band recorded 'Don't Stop Believin''?	Journey	Boston	Foreigner	REO Speedwagon
+pop_rapper_real_shawn	Hard	Which rapper's real name is Shawn Carter?	Jay-Z	Kanye West	Snoop Dogg	50 Cent
+pop_singer_crowned_queen	Hard	Which singer was crowned 'the Queen of Disco'?	Donna Summer	Gloria Gaynor	Diana Ross	Cher
+pop_guitarist_nicknamed_slowhand	Hard	Which guitarist is nicknamed 'Slowhand'?	Eric Clapton	Jimmy Page	Keith Richards	Mark Knopfler
+pop_beatles_ballad_recorded	Hard	Which Beatles ballad is one of the most recorded songs in history?	Yesterday	Let It Be	Hey Jude	Something
+pop_singer_songwriter_wrote	Hard	Which singer-songwriter wrote the much-covered song 'Hallelujah'?	Leonard Cohen	Bob Dylan	Jeff Buckley	Paul Simon
+pop_drummer_beatles_sack	Hard	Which drummer did The Beatles sack in 1962, just before they became famous?	Pete Best	Stuart Sutcliffe	Charlie Watts	Keith Moon
+pop_singer_became_woman	Hard	Which singer became the first woman to win Eurovision twice, in 2012 and 2023?	Loreen	Lena	Netta	Emmelie de Forest
+pop_pop_star_born	Hard	Which pop star was born Stefani Germanotta?	Lady Gaga	Gwen Stefani	Katy Perry	Christina Aguilera
+pop_david_bowie_surname	Hard	What was David Bowie's surname at birth?	Jones	Smith	Davies	Bowman
+pop_michael_jackson_pet	Hard	What was the name of Michael Jackson's pet chimpanzee?	Bubbles	Cheeta	Bonzo	Koko
+pop_singer_wrote_recorded	Hard	Which singer wrote and first recorded 'I Will Always Love You', in 1974?	Dolly Parton	Linda Ronstadt	Tammy Wynette	Loretta Lynn
+pop_american_metal_band	Hard	Which American metal band performs in horror masks and matching boiler suits?	Slipknot	Kiss	Ghost	Rammstein
+pop_beatles_song_working	Hard	Which Beatles song had the working title 'Scrambled Eggs'?	Yesterday	Let It Be	Hey Jude	Michelle
+pop_song_loreen_win	Hard	With which song did Loreen win Eurovision for Sweden in 2012?	Euphoria	Tattoo	Waterloo	Heroes
+pop_rolling_stones_took	Hard	The Rolling Stones took their name from a song by which blues musician?	Muddy Waters	B. B. King	Robert Johnson	Howlin' Wolf
+pop_band_drummer_lost	Hard	Which band's drummer lost an arm in a 1984 car crash and went on playing with a custom kit?	Def Leppard	Whitesnake	Bon Jovi	Motley Crue
+pop_singer_performed_live	Hard	Which singer performed at Live Aid in both London and Philadelphia on the same day, flying between them on Concorde?	Phil Collins	Elton John	Sting	David Bowie
+pop_wrote_nothing_compares	Hard	Who wrote 'Nothing Compares 2 U', a worldwide hit for Sinead O'Connor in 1990?	Prince	George Michael	Bono	Morrissey
+pop_band_recorded_seven	Hard	Which band recorded 'Seven Nation Army', now chanted in football stadiums?	The White Stripes	The Black Keys	Arctic Monkeys	Kings of Leon
+pop_band_recorded_brightside	Hard	Which band recorded 'Mr. Brightside'?	The Killers	The Strokes	Kasabian	Snow Patrol
+pop_irish_band_recorded	Hard	Which Irish band recorded 'Zombie' in 1994?	The Cranberries	The Corrs	Westlife	Thin Lizzy
+pop_pop_girl_group	Hard	Which K-pop girl group had a hit with 'How You Like That'?	Blackpink	Twice	Red Velvet	NewJeans
+pop_lead_singer_led	Hard	Who was the lead singer of Led Zeppelin?	Robert Plant	Jimmy Page	Ozzy Osbourne	Roger Daltrey
+pop_lead_singer_metallica	Hard	Who is the lead singer of Metallica?	James Hetfield	Lars Ulrich	Ozzy Osbourne	Dave Mustaine
+pop_snarling_lead_singer	Hard	Who was the snarling lead singer of the Sex Pistols?	Johnny Rotten	Sid Vicious	Joe Strummer	Billy Idol
+pop_lead_singer_pearl	Hard	Who is the lead singer of Pearl Jam?	Eddie Vedder	Chris Cornell	Layne Staley	Scott Weiland
+pop_lead_singer_killers	Hard	Who is the lead singer of The Killers?	Brandon Flowers	Julian Casablancas	Alex Turner	Chris Martin
+pop_lead_singer_linkin	Hard	Who was the lead singer of Linkin Park until 2017?	Chester Bennington	Chris Cornell	Mike Shinoda	Jared Leto
+pop_operatic_lead_singer	Hard	Who is the operatic lead singer of Iron Maiden?	Bruce Dickinson	Rob Halford	Ronnie James Dio	Ozzy Osbourne
+pop_lead_singer_smiths	Hard	Who was the lead singer of The Smiths?	Morrissey	Robert Smith	Ian Curtis	Johnny Marr
+pop_lead_singer_arctic	Hard	Who is the lead singer of the Arctic Monkeys?	Alex Turner	Brandon Flowers	Liam Gallagher	Matt Bellamy
+pop_frontman_punk_band	Hard	Who was the frontman of the punk band The Clash?	Joe Strummer	Johnny Rotten	Sid Vicious	Paul Weller
+pop_lead_singer_muse	Hard	Who is the lead singer of Muse?	Matt Bellamy	Thom Yorke	Chris Martin	Alex Turner
+pop_lead_singer	Hard	Who was the lead singer of The Who?	Roger Daltrey	Pete Townshend	Robert Plant	Mick Jagger
+pop_sang_lead_fleetwood	Hard	Who sang lead on Fleetwood Mac's 'Dreams'?	Stevie Nicks	Christine McVie	Debbie Harry	Linda Ronstadt
+pop_beatle_wrote_here	Hard	Which Beatle wrote 'Here Comes the Sun' and 'Something'?	George Harrison	John Lennon	Paul McCartney	Ringo Starr
+pop_rapper_born_calvin	Hard	Which rapper was born Calvin Broadus?	Snoop Dogg	Dr. Dre	Ice Cube	50 Cent
+pop_motown_singer_recorded	Hard	Which Motown singer recorded the album 'What's Going On' in 1971?	Marvin Gaye	Stevie Wonder	Smokey Robinson	Lionel Richie
+pop_band_recorded_bitter	Hard	Which band recorded 'Bitter Sweet Symphony'?	The Verve	Oasis	Blur	Pulp
+pop_sang_whistle_happy	Hard	Who sang the whistle-happy 1988 hit 'Don't Worry, Be Happy'?	Bobby McFerrin	Bob Marley	Harry Belafonte	Billy Ocean
+pop_australian_singer_1997	Hard	Which Australian singer had a 1997 hit with 'Torn'?	Natalie Imbruglia	Kylie Minogue	Delta Goodrem	Sia
+pop_american_idol_winner	Hard	Which first 'American Idol' winner sang 'Since U Been Gone'?	Kelly Clarkson	Carrie Underwood	Fantasia	Katy Perry
+pop_british_singer_songwriter	Hard	Which British singer-songwriter had a 2012 hit with 'Let Her Go'?	Passenger	James Blunt	Ed Sheeran	George Ezra
+pop_band_2013_hit	Hard	Which band had a 2013 hit with 'Counting Stars'?	OneRepublic	Maroon 5	The Script	Imagine Dragons
+pop_band_sang_california	Hard	Which band sang 'California Dreamin'' in 1965?	The Mamas & the Papas	The Beach Boys	The Byrds	The Monkees
+pop_british_band_1964	Hard	Which British band had a 1964 hit with 'The House of the Rising Sun'?	The Animals	The Kinks	The Who	The Hollies
+pop_band_1964_hit	Hard	Which band had a 1964 hit with 'You Really Got Me'?	The Kinks	The Who	The Animals	The Zombies
+pop_band_sang_power	Hard	Which band sang 'The Power of Love' for 'Back to the Future'?	Huey Lewis and the News	Earth, Wind & Fire	REO Speedwagon	Kool & the Gang
+pop_sang_title_song	Hard	Who sang the title song of the 1984 film 'Footloose'?	Kenny Loggins	Bryan Adams	Phil Collins	Lionel Richie
+pop_sang_flashdance_feeling	Hard	Who sang 'Flashdance... What a Feeling'?	Irene Cara	Whitney Houston	Donna Summer	Cyndi Lauper
+pop_sang_theme_song_2	Hard	Who sang the theme song of 'Ghostbusters'?	Ray Parker Jr.	Lionel Richie	Stevie Wonder	Prince
+pop_sang_bond_theme	Hard	Who sang the Bond theme 'Writing's on the Wall' for 'Spectre'?	Sam Smith	Adele	Billie Eilish	Ed Sheeran
+pop_iron_maiden_zombie	Hard	What is the name of Iron Maiden's zombie-like mascot?	Eddie	Vic	Snaggletooth	Ed Hunter
+pop_mtv_pierwszy	Hard	Which song was the first music video ever played on MTV, in 1981?	Video Killed the Radio Star	Thriller	Take On Me	Money for Nothing
+pop_ed_sullivan	Hard	Which TV show introduced The Beatles to a huge American audience in 1964?	The Ed Sullivan Show	The Tonight Show	American Bandstand	Saturday Night Live
+pop_beatles_dach	Hard	Where did The Beatles play their last public concert, in 1969?	On a London rooftop	At Shea Stadium	At the Cavern Club	On a Thames boat
+pop_lordi	Hard	Which Finnish band in monster masks won Eurovision in 2006?	Lordi	Nightwish	HIM	The Rasmus
+pop_celine_eurowizja	Hard	Celine Dion won Eurovision in 1988 representing which country?	Switzerland	Canada	France	Belgium
+pop_theremin	Hard	Which electronic instrument is played without being touched?	The theremin	The synthesizer	The vocoder	The mellotron
+pop_elton_john_birth	Hard	What was Elton John's name at birth?	Reginald Dwight	Elton Hercules	Gordon Sumner	Farrokh Bulsara
+pop_best_selling_single	Hard	Which is the best-selling single of all time?	'White Christmas'	'Candle in the Wind 1997'	'Imagine'	'Billie Jean'
+pop_young_rock_roll	Hard	Which young rock and roll star died in the 1959 plane crash alongside Buddy Holly and the Big Bopper?	Ritchie Valens	Eddie Cochran	Patsy Cline	Jim Reeves
+pop_jazz_singer_nicknamed	Hard	Which jazz singer was nicknamed 'Lady Day'?	Billie Holiday	Ella Fitzgerald	Sarah Vaughan	Nina Simone
+pop_nirvana_smells_like	Hard	Nirvana's 'Smells Like Teen Spirit' took its title from what?	A brand of deodorant	A school cheerleading chant	A slogan on a beer can	A line in a horror film
+pop_beatles_said_pun	Hard	The Beatles' name is said to be a pun inspired by which band's insect name?	Buddy Holly's Crickets	The Spiders	The Hornets	The Bumblebees
+pop_under_radiohead_start	Expert	Under which name did Radiohead start out, after the only day they could rehearse?	On a Friday	Weekenders	Sunday Club	Mondays
+pop_beatles_song_performed	Expert	Which Beatles song was first performed for the worldwide satellite broadcast 'Our World' in 1967?	All You Need Is Love	Hey Jude	Yellow Submarine	Let It Be
+pop_1966_beach_boys	Expert	Which 1966 Beach Boys album is credited with inspiring the Beatles' 'Sgt. Pepper'?	Pet Sounds	Surfin' Safari	Smiley Smile	All Summer Long
+pop_new_wave_band	Expert	Which new wave band wore red, stepped 'energy dome' hats?	Devo	Talking Heads	The B-52's	Kraftwerk
+pop_wrote_recorded_song	Expert	Who wrote and first recorded the song 'Respect', in 1965?	Otis Redding	Sam Cooke	Ray Charles	Wilson Pickett
+pop_jamaican_born_often	Expert	Which Jamaican-born DJ is often called 'the father of hip hop'?	DJ Kool Herc	Grandmaster Flash	Afrika Bambaataa	Kurtis Blow
+pop_recorded_tainted_love	Expert	Who first recorded 'Tainted Love', a 1981 hit for Soft Cell?	Gloria Jones	Dusty Springfield	Martha Reeves	Dionne Warwick
+pop_bruno_mars_real	Expert	What is Bruno Mars's real name?	Peter Hernandez	Bruno Fernandez	Marcus Lopez	Miguel Rodriguez
+pop_band_recorded_love	Expert	Which band first recorded 'I Love Rock 'n' Roll', years before Joan Jett's hit?	The Arrows	The Runaways	The Sweet	The Rubettes
+pop_duran_duran_took	Expert	Duran Duran took its name from a villain in which 1968 science-fiction film?	Barbarella	Planet of the Apes	2001: A Space Odyssey	Fantastic Voyage
+pop_recorded_hound_dog	Expert	Who first recorded 'Hound Dog', years before Elvis Presley's hit?	Big Mama Thornton	Etta James	Bessie Smith	Ruth Brown
+pop_wrote_recorded_girls	Expert	Who wrote and first recorded 'Girls Just Want to Have Fun', later Cyndi Lauper's hit?	Robert Hazard	Bruce Springsteen	Billy Joel	Tom Petty
+pop_singer_rihanna_real	Expert	What is the singer Rihanna's real first name?	Robyn	Rachel	Rhianna	Roberta
+pop_1976_photo_shoot	Expert	During a 1976 photo shoot for Pink Floyd's album 'Animals', what broke loose and drifted over London?	An inflatable pig	An inflatable sheep	A hot-air balloon	A weather balloon
+pop_singer_weeknd_born	Expert	The singer The Weeknd was born with which name?	Abel Tesfaye	Aubrey Graham	Jacques Webster	Kendrick Duckworth
