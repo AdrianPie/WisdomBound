@@ -99,5 +99,5 @@ The server needs one AI key (`GEMINI_API_KEY` or `ANTHROPIC_API_KEY`) and your `
 ## Secrets policy
 No secrets are committed. The AI provider keys, the RevenueCat secret key, Firebase admin credentials and the Android signing keystore all live only on the server or the developer's machine (see `.gitignore` and `server/.env.example`).
 
-## License
-Code is released under the [MIT License](LICENSE). Fonts: Pixelify Sans (SIL OFL) and Roboto (Apache 2.0).
+## Fonts
+Pixelify Sans (SIL OFL) and Roboto (Apache 2.0).
