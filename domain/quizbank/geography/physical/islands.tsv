@@ -11,7 +11,6 @@ geoy_szmaragdowa_wyspa	Easy	Which country is nicknamed 'the Emerald Isle'?	Irela
 geo_island_tasmania_belongs	Easy	The island of Tasmania belongs to which country?	Australia	New Zealand	Indonesia	Papua New Guinea
 geo_crete_largest_island	Easy	Crete is the largest island of which country?	Greece	Italy	Cyprus	Turkey
 geo_white_cliffs_england	Easy	Which famous white cliffs on England's coast look out towards France?	The cliffs of Dover	The cliffs of Moher	Land's End	The Giant's Causeway
-geo_largest_island_caribbean	Easy	Which is the largest island in the Caribbean?	Cuba	Jamaica	Hispaniola	Puerto Rico
 geo_country_sunny_algarve	Easy	In which country is the sunny Algarve coast?	Portugal	Spain	Italy	Greece
 geo_two_countries_share	Easy	Which two countries share the island of Ireland?	Ireland and the UK	Ireland and Scotland	Ireland and Wales	Ireland and Iceland
 geo_greek_island_white	Easy	Which Greek island is famous for white houses with blue domes and sunsets at Oia?	Santorini	Mykonos	Crete	Corfu
@@ -19,85 +18,68 @@ geo_spanish_island_world	Easy	Which Spanish island is world-famous for its night
 geo_country_amalfi_coast	Easy	In which country is the Amalfi Coast?	Italy	Spain	Greece	Croatia
 geo_country_cliffs_moher	Easy	In which country are the Cliffs of Moher?	Ireland	Scotland	Wales	England
 geo_mediterranean_island_split	Easy	Which Mediterranean island has been split since 1974 between a Greek south and a Turkish-held north?	Cyprus	Crete	Rhodes	Malta
-geo_hawaiian_island_waikiki	Easy	On which Hawaiian island is Waikiki Beach?	Oahu	Maui	Kauai	The Big Island
-geo_twelve_apostles_giant	Easy	The Twelve Apostles, giant rock stacks off the Great Ocean Road, stand off which country's coast?	Australia	New Zealand	South Africa	Ireland
-geo_coastline_french_riviera	Easy	Which coastline is also known as the French Riviera?	The Cote d'Azur	The Cote d'Argent	The Costa Brava	The Cote d'Opale
-geo_big_sur_famously	Easy	Big Sur, a famously rugged stretch of coastline, is in which US state?	California	Oregon	Washington	Maine
-geo_cancun_merida_lie	Easy	Cancun and Merida lie on which peninsula?	The Yucatan	Baja California	Florida	The Osa Peninsula
-geo_largest_canary_islands	Easy	Which is the largest of the Canary Islands?	Tenerife	Gran Canaria	Lanzarote	Fuerteventura
 geo_island_football_boot	Easy	Which island is the 'football' that the 'boot' of Italy seems to be kicking?	Sicily	Sardinia	Corsica	Malta
 geo_costa_del_sol	Easy	The Costa del Sol, packed with holidaymakers around Malaga, is in which country?	Spain	Portugal	Italy	Greece
 geo_country_island_rhodes	Easy	To which country does the island of Rhodes belong?	Greece	Turkey	Cyprus	Italy
-geo_island_nicknamed_island	Easy	Which island is nicknamed 'the Island of the Gods'?	Bali	Java	Lombok	Sumatra
 geo_lampedusa_small_island	Easy	Lampedusa, a small island often in the news as a landing point for migrants, belongs to which country?	Italy	Malta	Greece	Tunisia
-geo2_morze_srodziemne_wyspa	Medium	Which Mediterranean island is the largest?	Sicily	Sardinia	Cyprus	Corsica
-geocmp_wyspa_druga	Medium	Which of these islands is the largest?	Borneo	Madagascar	Sumatra	Honshu
+geoy_singapur	Easy	Which Southeast Asian island nation is also a single city?	Singapore	Brunei	Malaysia	Taiwan
+geo_country_cape_good	Easy	In which country is the Cape of Good Hope?	South Africa	Namibia	Chile	Argentina
+geo_island_country_lies	Easy	Which island country lies just off the southern tip of India?	Sri Lanka	The Maldives	Madagascar	Mauritius
+geo_narrow_strip_land	Easy	What is the narrow strip of land that joins North and South America called?	The Isthmus of Panama	The Darien Peninsula	The Strait of Magellan	The Yucatan Bridge
+geo_long_baja_california	Easy	The long Baja California peninsula belongs to which country?	Mexico	The United States	Guatemala	Panama
+geo_two_countries_take	Easy	Which two countries take up most of the Scandinavian Peninsula?	Norway and Sweden	Denmark and Sweden	Norway and Finland	Denmark and Norway
+geo2_morze_srodziemne_wyspa	Easy	Which Mediterranean island is the largest?	Sicily	Sardinia	Cyprus	Corsica
+geoy_korsyka	Easy	The island of Corsica belongs to which country?	France	Italy	Spain	Greece
+geoy_sardynia	Easy	Sardinia is an island belonging to which country?	Italy	France	Spain	Malta
 lmk_galapagos_kraj	Medium	The Galapagos Islands belong to which country?	Ecuador	Peru	Colombia	Chile
 geo_filipiny_wyspy	Medium	Which country is made up of about 7,600 islands?	The Philippines	Japan	Malaysia	New Zealand
 geo_azory	Medium	Which country do the Azores belong to?	Portugal	Spain	France	Britain
 geo_grobla_olbrzyma	Medium	In which part of the UK is the Giant's Causeway?	Northern Ireland	Scotland	Wales	Cornwall
 geox_baleary	Medium	Mallorca and Ibiza belong to which island group?	The Balearic Islands	The Canary Islands	The Azores	The Cyclades
-geox_santorini	Medium	Santorini and Mykonos are islands of which country?	Greece	Italy	Croatia	Cyprus
-geoy_singapur	Medium	Which Southeast Asian island nation is also a single city?	Singapore	Brunei	Malaysia	Taiwan
-geoy_madera	Medium	The island of Madeira belongs to which country?	Portugal	Spain	Italy	Greece
-geoy_korsyka	Medium	The island of Corsica belongs to which country?	France	Italy	Spain	Greece
-geoy_sardynia	Medium	Sardinia is an island belonging to which country?	Italy	France	Spain	Malta
-geo_country_cape_good	Medium	In which country is the Cape of Good Hope?	South Africa	Namibia	Chile	Argentina
-geo_island_country_lies	Medium	Which island country lies just off the southern tip of India?	Sri Lanka	The Maldives	Madagascar	Mauritius
 geo_largest_island_europe	Medium	Which is the largest island in Europe?	Great Britain	Iceland	Ireland	Sicily
 geo_largest_japan_islands	Medium	Which is the largest of Japan's islands?	Honshu	Hokkaido	Kyushu	Okinawa
-geo_narrow_strip_land	Medium	What is the narrow strip of land that joins North and South America called?	The Isthmus of Panama	The Darien Peninsula	The Strait of Magellan	The Yucatan Bridge
-geo_southernmost_point_africa	Medium	What is the southernmost point of Africa?	Cape Agulhas	Cape of Good Hope	Cape Point	Cape Verde
-geo_skeleton_coast_littered	Medium	The 'Skeleton Coast', littered with shipwrecks, lies in which country?	Namibia	Angola	South Africa	Mauritania
 geo_italian_island_blue	Medium	On which Italian island is the famous Blue Grotto?	Capri	Sicily	Sardinia	Elba
 geo_portuguese_island_cristiano	Medium	On which Portuguese island was Cristiano Ronaldo born?	Madeira	Sao Miguel	Porto Santo	Terceira
 geo_thailand_largest_island	Medium	Which is Thailand's largest island and a famous beach destination?	Phuket	Koh Samui	Koh Phangan	Koh Lanta
-geo_peninsula_forms_mainland	Medium	Which peninsula forms mainland Denmark?	Jutland	Scania	Zealand	Holstein
-geo_village_traditionally_said	Medium	Which village is traditionally said to lie at the opposite end of mainland Britain from Land's End?	John o' Groats	Dunnet Head	Cape Wrath	Thurso
 geo_jeju_volcanic_holiday	Medium	Jeju, a volcanic holiday island, belongs to which country?	South Korea	Japan	China	Taiwan
-geo_peninsula_forms_southern	Medium	Which peninsula forms the southern part of mainland Greece?	The Peloponnese	Chalkidiki	Attica	Epirus
 geo_mainland_europe_westernmost	Medium	Mainland Europe's westernmost point is a cape in which country?	Portugal	Spain	France	Ireland
 geo_russian_peninsula_packed	Medium	Which Russian peninsula is packed with active volcanoes and brown bears?	Kamchatka	Kola	Taimyr	Yamal
 geo_england_jurassic_coast	Medium	England's 'Jurassic Coast' is famous for what?	Dinosaur-age fossils	Smugglers' caves	Chalk hill figures	Roman tin mines
-geo_roughly_islands_make	Medium	Roughly how many islands make up the Maldives?	About 1,200	About 12	About 120	About 12,000
 geo_despite_new_zealand	Medium	Despite its name, New Zealand's Milford Sound is actually what?	A fjord	A river delta	A volcanic crater	A coral lagoon
-geo_fjord_like_bay	Medium	The fjord-like Bay of Kotor is in which country?	Montenegro	Croatia	Albania	Slovenia
-geo_giant_surfing_waves	Medium	The giant surfing waves of Nazare break off which country's coast?	Portugal	Spain	France	Morocco
 geo_surtsey_island_born	Medium	Surtsey, an island born from the sea in a 1963 eruption, lies off which country?	Iceland	Japan	Tonga	Portugal
-geo_thousand_islands_gave	Medium	The Thousand Islands, which gave a salad dressing its name, lie in which river?	The St. Lawrence	The Hudson	The Mississippi	The Niagara
-geo_island_china_southernmost	Medium	Which island, China's southernmost province, is nicknamed 'China's Hawaii'?	Hainan	Taiwan	Hong Kong Island	Zhoushan
 geo_island_home_more	Medium	Which island is home to more than half of Japan's people?	Honshu	Hokkaido	Kyushu	Shikoku
-geo_islands_skye_mull	Medium	The islands of Skye and Mull belong to which Scottish group?	The Inner Hebrides	The Outer Hebrides	Orkney	Shetland
 geo_largest_channel_islands	Medium	Which is the largest of the Channel Islands?	Jersey	Guernsey	Alderney	Sark
-geo_scottish_islands_lie	Medium	Which Scottish islands lie closer to Bergen in Norway than to Edinburgh?	Shetland	Orkney	The Outer Hebrides	The Inner Hebrides
-geo_indonesian_island_shaped	Medium	Which Indonesian island is famous for being shaped like the letter K?	Sulawesi	Sumatra	Java	Timor
-geo_thai_island_full	Medium	On which Thai island is the famous Full Moon Party held?	Ko Pha Ngan	Ko Samui	Phuket	Ko Phi Phi
 geo_lofoten_islands_dried	Medium	The Lofoten Islands, famous for dried cod and red fishermen's huts, belong to which country?	Norway	Iceland	Denmark	Sweden
-geo_1963_1973_florida	Medium	From 1963 to 1973, Florida's rocket-launching Cape Canaveral was officially called what?	Cape Kennedy	Cape Apollo	Cape Armstrong	Cape Freedom
 geo_sapporo_giant_snow	Medium	Sapporo, famous for its giant snow and ice sculpture festival, is on which Japanese island?	Hokkaido	Honshu	Kyushu	Shikoku
-geo_long_baja_california	Medium	The long Baja California peninsula belongs to which country?	Mexico	The United States	Guatemala	Panama
 geo_khao_phing_kan	Medium	Khao Phing Kan, a limestone islet in Thailand's Phang Nga Bay, is better known by which nickname from a 1974 film?	James Bond Island	Indiana Jones Rock	Treasure Island	Skull Island
 geo_banned_michigan_mackinac	Medium	What has been banned on Michigan's Mackinac Island since 1898, leaving its streets to horses and bicycles?	Cars	Alcohol	Street lights	Dogs
 geo_tiny_scottish_island	Medium	Which tiny Scottish island gave its name to a famous style of knitting with colourful bands of pattern?	Fair Isle	Skye	Iona	Harris
-geo_rhodes_kos_belong	Medium	Rhodes and Kos belong to which Greek island group?	The Dodecanese	The Cyclades	The Ionian Islands	The Sporades
-geo_gargano_peninsula_forms	Medium	The Gargano peninsula forms which part of the Italian 'boot'?	The spur	The heel	The toe	The ankle
-geo_two_countries_take	Medium	Which two countries take up most of the Scandinavian Peninsula?	Norway and Sweden	Denmark and Sweden	Norway and Finland	Denmark and Norway
-geo2_wyspa_borneo	Hard	Between how many countries is the island of Borneo divided?	Three	Two	Four	One
-geo2_najwiekszy_archipelag	Hard	Which country is the largest island nation in the world?	Indonesia	The Philippines	Japan	Madagascar
-geocmp_linia_brzegowa	Hard	Which country has the longest coastline?	Canada	Russia	Indonesia	Australia
-trv_malediwy_plaskie	Hard	Which is the flattest country in the world?	The Maldives	The Netherlands	Denmark	Bangladesh
-mst_hispaniola_podzial	Hard	Haiti and the Dominican Republic share which island?	Hispaniola	Cuba	Jamaica	Puerto Rico
-geo_wyspy_owcze	Hard	Which country do the Faroe Islands belong to?	Denmark	Norway	Iceland	Britain
-geox_przyladek_horn	Hard	Which famously stormy cape marks the southern tip of South America?	Cape Horn	Cape of Good Hope	Cape Verde	Cape Cod
+geo_largest_island_caribbean	Medium	Which is the largest island in the Caribbean?	Cuba	Jamaica	Hispaniola	Puerto Rico
+geo_twelve_apostles_giant	Medium	The Twelve Apostles, giant rock stacks off the Great Ocean Road, stand off which country's coast?	Australia	New Zealand	South Africa	Ireland
+geo_coastline_french_riviera	Medium	Which coastline is also known as the French Riviera?	The Cote d'Azur	The Cote d'Argent	The Costa Brava	The Cote d'Opale
+geo_big_sur_famously	Medium	Big Sur, a famously rugged stretch of coastline, is in which US state?	California	Oregon	Washington	Maine
+geo_cancun_merida_lie	Medium	Cancun and Merida lie on which peninsula?	The Yucatan	Baja California	Florida	The Osa Peninsula
+geo_island_nicknamed_island	Medium	Which island is nicknamed 'the Island of the Gods'?	Bali	Java	Lombok	Sumatra
+geo2_wyspa_borneo	Medium	Between how many countries is the island of Borneo divided?	Three	Two	Four	One
+geo2_najwiekszy_archipelag	Medium	Which country is the largest island nation in the world?	Indonesia	The Philippines	Japan	Madagascar
+geocmp_linia_brzegowa	Medium	Which country has the longest coastline?	Canada	Russia	Indonesia	Australia
+trv_malediwy_plaskie	Medium	Which is the flattest country in the world?	The Maldives	The Netherlands	Denmark	Bangladesh
+mst_hispaniola_podzial	Medium	Haiti and the Dominican Republic share which island?	Hispaniola	Cuba	Jamaica	Puerto Rico
+geo_wyspy_owcze	Medium	Which country do the Faroe Islands belong to?	Denmark	Norway	Iceland	Britain
+geox_przyladek_horn	Medium	Which famously stormy cape marks the southern tip of South America?	Cape Horn	Cape of Good Hope	Cape Verde	Cape Cod
+geo_island_zanzibar_belongs	Medium	The island of Zanzibar belongs to which country?	Tanzania	Kenya	Mozambique	Madagascar
+geo_island_country_once	Medium	Which island country was once called Formosa?	Taiwan	Sri Lanka	The Philippines	Japan
+geo_skellig_michael_rocky	Medium	Skellig Michael, the rocky island where Luke Skywalker hides in the later 'Star Wars' films, lies off which country?	Ireland	Scotland	Iceland	Norway
+geo_kola_peninsula_far	Medium	The Kola Peninsula, far beyond the Arctic Circle, belongs to which country?	Russia	Finland	Norway	Sweden
+dpt_geo_fiord	Medium	How does a fjord form?	Ice carves a valley, sea floods it	A coral reef closes off a bay	A landslide dams a river mouth	A desert river cuts a canyon
+geo_roughly_big_greenland	Medium	Roughly how big is Greenland compared with Britain?	About ten times bigger	About twice as big	About the same size	About thirty times bigger
+geo_north_sentinel_island	Medium	North Sentinel Island, home of one of the last uncontacted peoples, belongs to which country?	India	Myanmar	Indonesia	Sri Lanka
 geo_second_largest_island	Hard	Which is the second-largest island in the world?	New Guinea	Borneo	Madagascar	Baffin Island
 geo_populous_island_world	Hard	Which is the most populous island in the world, home to over half of Indonesia's people?	Java	Sumatra	Borneo	Bali
-geo_island_zanzibar_belongs	Hard	The island of Zanzibar belongs to which country?	Tanzania	Kenya	Mozambique	Madagascar
-geo_island_country_once	Hard	Which island country was once called Formosa?	Taiwan	Sri Lanka	The Philippines	Japan
 geo_bikini_atoll_scene	Hard	Bikini Atoll, scene of US nuclear tests, belongs to which country today?	The Marshall Islands	The Solomon Islands	The Cook Islands	Palau
 geo_roughly_islands_make_2	Hard	Roughly how many islands make up Indonesia?	About 17,000	About 1,700	About 170	About 170,000
 geo_youngest_main_hawaiian	Hard	Which is the youngest of the main Hawaiian islands, still growing from fresh lava?	The Big Island	Maui	Oahu	Kauai
 geo_socotra_home_umbrella	Hard	Socotra, home of the umbrella-shaped dragon's blood tree, belongs to which country?	Yemen	Oman	Somalia	Eritrea
-geo_north_sentinel_island	Hard	North Sentinel Island, home of one of the last uncontacted peoples, belongs to which country?	India	Myanmar	Indonesia	Sri Lanka
 geo_norway_longest_deepest	Hard	Which is Norway's longest and deepest fjord?	The Sognefjord	The Geirangerfjord	The Hardangerfjord	The Oslofjord
 geo_cox_bazar_often	Hard	Cox's Bazar, often called the longest natural sea beach in the world, is in which country?	Bangladesh	India	Myanmar	Sri Lanka
 geo_islands_largest_area	Hard	Which of these islands has the largest area?	Baffin Island	Sumatra	Honshu	Great Britain
@@ -105,44 +87,59 @@ geo_island_chain_stretches	Hard	Which island chain stretches about 1,900 km west
 geo_largest_island_baltic	Hard	Which is the largest island in the Baltic Sea?	Gotland	Bornholm	Saaremaa	Oland
 geo_largest_island_philippines	Hard	Which is the largest island of the Philippines?	Luzon	Mindanao	Palawan	Cebu
 geo_northernmost_point_mainland_2	Hard	What is the northernmost point of mainland Australia?	Cape York	Cape Byron	Cape Leeuwin	Cape Otway
-geo_roughly_big_greenland	Hard	Roughly how big is Greenland compared with Britain?	About ten times bigger	About twice as big	About the same size	About thirty times bigger
 geo_copenhagen_stands_mainly	Hard	Copenhagen stands mainly on which island?	Zealand	Funen	Bornholm	Lolland
 geo_second_largest_island_2	Hard	Which is the second-largest island in the Mediterranean?	Sardinia	Cyprus	Corsica	Crete
 geo_chalk_stacks_needles	Hard	The chalk stacks called the Needles stand off which English island?	The Isle of Wight	The Isle of Man	Anglesey	Lundy
 geo_bornholm_baltic_island	Hard	Bornholm, a Baltic island lying closer to Sweden, belongs to which country?	Denmark	Sweden	Germany	Finland
 geo_australian_island_largest	Hard	Which Australian island is the largest sand island in the world?	K'gari (Fraser Island)	Kangaroo Island	Magnetic Island	Phillip Island
 geo_scottish_island_smoky	Hard	Which Scottish island is famous for smoky whiskies from distilleries such as Laphroaig?	Islay	Skye	Arran	Mull
-geo_skellig_michael_rocky	Hard	Skellig Michael, the rocky island where Luke Skywalker hides in the later 'Star Wars' films, lies off which country?	Ireland	Scotland	Iceland	Norway
 geo_beach_scenes_jaws	Hard	The beach scenes of 'Jaws' were filmed on which island off Massachusetts?	Martha's Vineyard	Nantucket	Long Island	Block Island
 geo_island_off_perth	Hard	Which island off Perth is famous for selfies with smiling quokkas?	Rottnest Island	Kangaroo Island	Phillip Island	Magnetic Island
 geo_michael_mount_tidal	Hard	St Michael's Mount, a tidal island topped by a castle, lies off which English county?	Cornwall	Devon	Dorset	Kent
-geo_greek_island_played	Hard	Which Greek island played the fictional island of Kalokairi in the 2008 film 'Mamma Mia!'?	Skopelos	Mykonos	Corfu	Rhodes
 geo_red_floating_torii	Hard	The famous red 'floating' torii gate that seems to stand in the sea at high tide is on which Japanese island?	Miyajima	Okinawa	Sado	Awaji
-geo_group_indonesian_islands	Hard	Which group of Indonesian islands was once the world's only source of nutmeg?	Banda Islands	Moluccas	Riau Islands	Bali
-geo_japan_okunoshima_now	Hard	Japan's Okunoshima, now overrun by tame rabbits, was secretly used for what before 1945?	Making poison gas	Testing atomic bombs	Training kamikaze pilots	Holding prisoners of war
 geo_hashima_abandoned_battleship	Hard	Hashima, the abandoned 'Battleship Island' that inspired the villain's lair in 'Skyfall', lies off which Japanese city?	Nagasaki	Hiroshima	Osaka	Sendai
-geo_tynwald_often_oldest	Hard	Tynwald, often called the oldest continuous parliament in the world, governs which island?	The Isle of Man	Iceland	The Faroe Islands	Jersey
-geo_santa_cruz_del	Hard	Santa Cruz del Islote, one of the most crowded islands on Earth, belongs to which country?	Colombia	Haiti	Cuba	Honduras
-geo_kola_peninsula_far	Hard	The Kola Peninsula, far beyond the Arctic Circle, belongs to which country?	Russia	Finland	Norway	Sweden
-geo_largest_greek_islands	Hard	Which is the largest of the Greek islands?	Crete	Rhodes	Corfu	Lesbos
-geo2_polwysep_najwiekszy	Expert	Which peninsula is the largest in the world?	The Arabian Peninsula	The Indian Peninsula	Scandinavia	The Balkan Peninsula
-geocmp_najwiecej_wysp	Expert	Which country is made up of the most islands?	Sweden	Indonesia	The Philippines	Japan
-dpt_geo_fiord	Expert	How does a fjord form?	Ice carves a valley, sea floods it	A coral reef closes off a bay	A landslide dams a river mouth	A desert river cuts a canyon
+geo_hawaiian_island_waikiki	Hard	On which Hawaiian island is Waikiki Beach?	Oahu	Maui	Kauai	The Big Island
+geo_largest_canary_islands	Hard	Which is the largest of the Canary Islands?	Tenerife	Gran Canaria	Lanzarote	Fuerteventura
+geocmp_wyspa_druga	Hard	Which of these islands is the largest?	Borneo	Madagascar	Sumatra	Honshu
+geo_southernmost_point_africa	Hard	What is the southernmost point of Africa?	Cape Agulhas	Cape of Good Hope	Cape Point	Cape Verde
+geo_skeleton_coast_littered	Hard	The 'Skeleton Coast', littered with shipwrecks, lies in which country?	Namibia	Angola	South Africa	Mauritania
+geo_peninsula_forms_mainland	Hard	Which peninsula forms mainland Denmark?	Jutland	Scania	Zealand	Holstein
+geo_village_traditionally_said	Hard	Which village is traditionally said to lie at the opposite end of mainland Britain from Land's End?	John o' Groats	Dunnet Head	Cape Wrath	Thurso
+geo_peninsula_forms_southern	Hard	Which peninsula forms the southern part of mainland Greece?	The Peloponnese	Chalkidiki	Attica	Epirus
+geo_roughly_islands_make	Hard	Roughly how many islands make up the Maldives?	About 1,200	About 12	About 120	About 12,000
+geo_fjord_like_bay	Hard	The fjord-like Bay of Kotor is in which country?	Montenegro	Croatia	Albania	Slovenia
+geo_giant_surfing_waves	Hard	The giant surfing waves of Nazare break off which country's coast?	Portugal	Spain	France	Morocco
+geo_thousand_islands_gave	Hard	The Thousand Islands, which gave a salad dressing its name, lie in which river?	The St. Lawrence	The Hudson	The Mississippi	The Niagara
+geo_island_china_southernmost	Hard	Which island, China's southernmost province, is nicknamed 'China's Hawaii'?	Hainan	Taiwan	Hong Kong Island	Zhoushan
+geo_islands_skye_mull	Hard	The islands of Skye and Mull belong to which Scottish group?	The Inner Hebrides	The Outer Hebrides	Orkney	Shetland
+geo_scottish_islands_lie	Hard	Which Scottish islands lie closer to Bergen in Norway than to Edinburgh?	Shetland	Orkney	The Outer Hebrides	The Inner Hebrides
+geo_indonesian_island_shaped	Hard	Which Indonesian island is famous for being shaped like the letter K?	Sulawesi	Sumatra	Java	Timor
+geo_thai_island_full	Hard	On which Thai island is the famous Full Moon Party held?	Ko Pha Ngan	Ko Samui	Phuket	Ko Phi Phi
+geo_1963_1973_florida	Hard	From 1963 to 1973, Florida's rocket-launching Cape Canaveral was officially called what?	Cape Kennedy	Cape Apollo	Cape Armstrong	Cape Freedom
+geo_rhodes_kos_belong	Hard	Rhodes and Kos belong to which Greek island group?	The Dodecanese	The Cyclades	The Ionian Islands	The Sporades
+geo_gargano_peninsula_forms	Hard	The Gargano peninsula forms which part of the Italian 'boot'?	The spur	The heel	The toe	The ankle
+geo2_polwysep_najwiekszy	Hard	Which peninsula is the largest in the world?	The Arabian Peninsula	The Indian Peninsula	Scandinavia	The Balkan Peninsula
+geocmp_najwiecej_wysp	Hard	Which country is made up of the most islands?	Sweden	Indonesia	The Philippines	Japan
+geox_tristan	Hard	Which British territory in the South Atlantic is the most remote inhabited archipelago?	Tristan da Cunha	The Falkland Islands	Saint Helena	Ascension Island
+geox_nauru	Hard	Which Pacific island nation is the smallest republic in the world?	Nauru	Tuvalu	Palau	Kiribati
+geo_greek_island_group	Hard	Which Greek island group is named after the circle it forms around sacred Delos?	The Cyclades	The Dodecanese	The Sporades	The Ionian Islands
+geo_marajo_river_island	Hard	Marajo, a river island about the size of Switzerland, lies at the mouth of which river?	The Amazon	The Orinoco	The Parana	The Congo
+geo_ilha_queimada_grande	Hard	Ilha da Queimada Grande, nicknamed 'Snake Island' and closed to visitors, lies off which country?	Brazil	Mexico	Colombia	Venezuela
+geo_small_island_sebatik	Hard	The small island of Sebatik, off the coast of Borneo, is split between Indonesia and which country?	Malaysia	Brunei	The Philippines	Singapore
 wld_japonia_wyspy	Expert	Roughly how many islands make up Japan?	Over 14,000	About 4	About 70	About 400
 geox_bouvet	Expert	Bouvet Island, often called the most remote island on Earth, belongs to which country?	Norway	Argentina	Britain	France
-geox_tristan	Expert	Which British territory in the South Atlantic is the most remote inhabited archipelago?	Tristan da Cunha	The Falkland Islands	Saint Helena	Ascension Island
-geox_nauru	Expert	Which Pacific island nation is the smallest republic in the world?	Nauru	Tuvalu	Palau	Kiribati
 geo_coral_atoll_largest	Expert	Which coral atoll has the largest land area in the world?	Kiritimati	Bikini Atoll	Aldabra	Kwajalein
 geo_roughly_islands_islets	Expert	Roughly how many islands and islets does Greece have?	About 6,000	About 60	About 600	About 60,000
 geo_remote_kerguelen_islands	Expert	The remote Kerguelen Islands, nicknamed the 'Desolation Islands', belong to which country?	France	Norway	Britain	Australia
 geo_remote_scottish_archipelago	Expert	Which remote Scottish archipelago was abandoned by its last islanders in 1930?	St Kilda	Fair Isle	Foula	Rockall
-geo_greek_island_group	Expert	Which Greek island group is named after the circle it forms around sacred Delos?	The Cyclades	The Dodecanese	The Sporades	The Ionian Islands
 geo_new_zealand_ninety	Expert	New Zealand's 'Ninety Mile Beach' is really about how long?	About 55 miles	About 90 miles	About 150 miles	About 20 miles
-geo_marajo_river_island	Expert	Marajo, a river island about the size of Switzerland, lies at the mouth of which river?	The Amazon	The Orinoco	The Parana	The Congo
 geo_norway_north_cape	Expert	Why is Norway's famous North Cape not truly the northernmost point of mainland Europe?	It stands on an island	It lies just inside Russia	It is part of a glacier	It was built up artificially
 geo_manitoulin_largest_island	Expert	Manitoulin, the largest island in any lake on Earth, lies in which of the Great Lakes?	Lake Huron	Lake Superior	Lake Michigan	Lake Ontario
-geo_ilha_queimada_grande	Expert	Ilha da Queimada Grande, nicknamed 'Snake Island' and closed to visitors, lies off which country?	Brazil	Mexico	Colombia	Venezuela
 geo_scottish_island_scheduled	Expert	On which Scottish island do scheduled passenger flights land on a beach, timed by the tides?	Barra	Skye	Mull	Arran
 geo_grenen_sandy_tip	Expert	At Grenen, the sandy tip of Denmark near Skagen, visitors can stand where which two seas meet?	The Skagerrak and the Kattegat	The Kattegat and the Oresund	The Skagerrak and the Norwegian Sea	The Kattegat and the Bay of Kiel
-geo_small_island_sebatik	Expert	The small island of Sebatik, off the coast of Borneo, is split between Indonesia and which country?	Malaysia	Brunei	The Philippines	Singapore
 geo_clipperton_remote_pacific	Expert	Clipperton, a remote Pacific atoll once claimed by Mexico, belongs to which country?	France	The USA	Britain	Ecuador
+geo_greek_island_played	Expert	Which Greek island played the fictional island of Kalokairi in the 2008 film 'Mamma Mia!'?	Skopelos	Mykonos	Corfu	Rhodes
+geo_group_indonesian_islands	Expert	Which group of Indonesian islands was once the world's only source of nutmeg?	Banda Islands	Moluccas	Riau Islands	Bali
+geo_santa_cruz_del	Expert	Santa Cruz del Islote, one of the most crowded islands on Earth, belongs to which country?	Colombia	Haiti	Cuba	Honduras
+geo_japan_okunoshima_now	Expert	Japan's Okunoshima, now overrun by tame rabbits, was secretly used for what before 1945?	Making poison gas	Testing atomic bombs	Training kamikaze pilots	Holding prisoners of war
+geo_tynwald_often_oldest	Expert	Tynwald, often called the oldest continuous parliament in the world, governs which island?	The Isle of Man	Iceland	The Faroe Islands	Jersey
