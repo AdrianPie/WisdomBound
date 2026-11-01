@@ -106,7 +106,6 @@ pop_sang_wonderful_world	Medium	Who sang 'What a Wonderful World' in 1967?	Louis
 pop_duo_sang_wake	Medium	Which duo sang 'Wake Me Up Before You Go-Go'?	Wham!	Hall & Oates	Tears for Fears	Erasure
 pop_band_released_album	Medium	Which band released the album 'Back in Black'?	AC/DC	Kiss	Def Leppard	Motorhead
 pop_band_logo_pair	Medium	Which band's famous logo is a pair of red lips with a tongue sticking out?	The Rolling Stones	Kiss	The Who	Aerosmith
-pop_italian_tenor_made	Medium	Which Italian tenor made 'Nessun dorma' famous at the 1990 World Cup?	Luciano Pavarotti	Andrea Bocelli	Placido Domingo	Enrico Caruso
 pop_lead_singer_aerosmith	Medium	Who is the lead singer of Aerosmith?	Steven Tyler	Joe Perry	Mick Jagger	David Lee Roth
 pop_younger_gallagher_brother	Medium	Who was the younger Gallagher brother and lead singer of Oasis?	Liam Gallagher	Noel Gallagher	Damon Albarn	Richard Ashcroft
 pop_lead_singer_blondie	Medium	Who was the lead singer of Blondie?	Debbie Harry	Pat Benatar	Chrissie Hynde	Stevie Nicks
@@ -212,6 +211,8 @@ pop_bond_theme_recorded	Medium	Which Bond theme was recorded by Paul McCartney a
 pop_band_took_joke	Medium	Which band took its name from the joke that it would go down like a 'lead balloon'?	Led Zeppelin	Deep Purple	Black Sabbath	Iron Butterfly
 pop_star_changed_unpronounceable	Medium	Which star changed his name to an unpronounceable symbol in 1993 during a fight with his record label?	Prince	George Michael	Beck	Sting
 pop_motown	Medium	Which city gave its nickname to the Motown record label?	Detroit	Chicago	Memphis	Philadelphia
+tec_guitar_maker_created	Medium	Which guitar maker created the famous 'Stratocaster'?	Fender	Gibson	Ibanez	Yamaha
+tec_guitar_maker_produces	Medium	Which guitar maker produces the 'Les Paul' electric guitar?	Gibson	Fender	Gretsch	Rickenbacker
 pop_despacito	Hard	Luis Fonsi, the singer of 'Despacito', comes from where?	Puerto Rico	Mexico	Colombia	Spain
 pp_angus	Hard	Which AC/DC guitarist performs in a schoolboy uniform?	Angus Young	Malcolm Young	Bon Scott	Brian Johnson
 pp_eminem	Hard	What is rapper Eminem's real name?	Marshall Mathers	Curtis Jackson	Shawn Carter	Calvin Broadus
@@ -283,6 +284,7 @@ pop_young_rock_roll	Hard	Which young rock and roll star died in the 1959 plane c
 pop_jazz_singer_nicknamed	Hard	Which jazz singer was nicknamed 'Lady Day'?	Billie Holiday	Ella Fitzgerald	Sarah Vaughan	Nina Simone
 pop_nirvana_smells_like	Hard	Nirvana's 'Smells Like Teen Spirit' took its title from what?	A brand of deodorant	A school cheerleading chant	A slogan on a beer can	A line in a horror film
 pop_beatles_said_pun	Hard	The Beatles' name is said to be a pun inspired by which band's insect name?	Buddy Holly's Crickets	The Spiders	The Hornets	The Bumblebees
+day_luthier_buduje	Hard	What does a luthier build?	Stringed instruments	Organs	Drums	Brass instruments
 pop_under_radiohead_start	Expert	Under which name did Radiohead start out, after the only day they could rehearse?	On a Friday	Weekenders	Sunday Club	Mondays
 pop_beatles_song_performed	Expert	Which Beatles song was first performed for the worldwide satellite broadcast 'Our World' in 1967?	All You Need Is Love	Hey Jude	Yellow Submarine	Let It Be
 pop_1966_beach_boys	Expert	Which 1966 Beach Boys album is credited with inspiring the Beatles' 'Sgt. Pepper'?	Pet Sounds	Surfin' Safari	Smiley Smile	All Summer Long

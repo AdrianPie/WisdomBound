@@ -1,0 +1,85 @@
+# Americas: North, Central, South America, Caribbean
+#
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+wld_cap_new_york	Easy	Is New York the capital of the United States?	No - it's Washington, D.C.	Yes, since 1776	No - it's Philadelphia	No - it's Boston
+cap_hawaje	Easy	What is the capital of the US state of Hawaii?	Honolulu	Hilo	Kona	Lahaina
+capx_dc	Easy	What does the 'D.C.' in Washington, D.C. stand for?	District of Columbia	Direct Capital	Democratic Centre	Department of Congress
+cap2_buenos_aires	Easy	What is the capital of Argentina?	Buenos Aires	Cordoba	Rosario	Mendoza
+cap2_mexico_city	Easy	What is the capital of Mexico?	Mexico City	Guadalajara	Monterrey	Cancun
+cap3_panama_city	Easy	What is the capital of Panama?	Panama City	San Jose	Managua	Bogota
+cap_buenos_aires_nazwa	Easy	Which capital city's name means 'good airs'?	Buenos Aires	Montevideo	Asuncion	Santiago
+cap_capital_guatemala	Easy	What is the capital of Guatemala?	Guatemala City	Antigua	San Salvador	Managua
+cap2_havana	Easy	What is the capital of Cuba?	Havana	Santiago de Cuba	Camaguey	Holguin
+cap_capital_salvador	Easy	What is the capital of El Salvador?	San Salvador	San Jose	Tegucigalpa	Santa Ana
+cap_ottawa	Medium	What is the capital of Canada?	Ottawa	Toronto	Montreal	Vancouver
+cap_brasilia	Medium	What is the capital of Brazil?	Brasilia	Rio de Janeiro	Sao Paulo	Salvador
+cap3_montevideo	Medium	What is the capital of Uruguay?	Montevideo	Buenos Aires	Santiago	Asuncion
+cap3_la_paz	Medium	What is the capital of Bolivia (seat of government)?	La Paz	Sucre	Santa Cruz	Cochabamba
+cap_kalifornia	Medium	What is the capital of California?	Sacramento	Los Angeles	San Francisco	San Diego
+cap_teksas	Medium	What is the capital of Texas?	Austin	Houston	Dallas	San Antonio
+cap_quebec	Medium	What is the capital of the Canadian province of Quebec?	Quebec City	Montreal	Laval	Gatineau
+cap_portoryko	Medium	What is the capital of Puerto Rico?	San Juan	Ponce	Havana	Santo Domingo
+cap_capital_jamaica	Medium	What is the capital of Jamaica?	Kingston	Montego Bay	Port of Spain	Nassau
+cap_capital_state_massachusetts	Medium	What is the capital of the US state of Massachusetts?	Boston	Springfield	Worcester	Cambridge
+cap_capital_state_georgia	Medium	What is the capital of the US state of Georgia?	Atlanta	Savannah	Augusta	Macon
+cap_capital_bahamas	Medium	What is the capital of the Bahamas?	Nassau	Kingston	Havana	Bridgetown
+cap_capital_state_arizona	Medium	What is the capital of the US state of Arizona?	Phoenix	Tucson	Flagstaff	Santa Fe
+cap_capital_state_colorado	Medium	What is the capital of the US state of Colorado?	Denver	Boulder	Aspen	Colorado Springs
+cap_capital_state_utah	Medium	What is the capital of the US state of Utah?	Salt Lake City	Provo	Ogden	Boise
+cap_capital_state_tennessee	Medium	What is the capital of the US state of Tennessee?	Nashville	Memphis	Knoxville	Chattanooga
+cap_city_built_island	Medium	Which city, built on an island in a lake, was the Aztec capital?	Tenochtitlan	Teotihuacan	Chichen Itza	Tikal
+cap_regina_capital_saskatchewan	Medium	Regina, the capital of Saskatchewan, has a Latin name meaning what?	Queen	Crown	Kingdom	Prairie
+cap3_caracas	Medium	What is the capital of Venezuela?	Caracas	Bogota	Lima	Quito
+cap2_lima	Medium	What is the capital of Peru?	Lima	Cusco	Arequipa	Trujillo
+cap2_santiago	Medium	What is the capital of Chile?	Santiago	Valparaiso	Concepcion	Antofagasta
+cap2_bogota	Medium	What is the capital of Colombia?	Bogota	Medellin	Cali	Cartagena
+mst_stolica_brazylia	Medium	Brasilia was built from nothing in the 1950s to replace which capital?	Rio de Janeiro	Sao Paulo	Salvador	Belo Horizonte
+cap_ontario	Medium	Which city is the capital of the Canadian province of Ontario?	Toronto	Ottawa	Hamilton	Kingston
+capx_filadelfia	Medium	Which city served as the US capital for most of the 1790s?	Philadelphia	Boston	Baltimore	Richmond
+cap_capital_haiti	Medium	What is the capital of Haiti?	Port-au-Prince	Santo Domingo	Cap-Haitien	Kingston
+cap_floryda	Hard	What is the capital of Florida?	Tallahassee	Miami	Orlando	Tampa
+cap_alaska	Hard	What is the capital of Alaska?	Juneau	Anchorage	Fairbanks	Nome
+cap_grenlandia	Hard	What is the capital of Greenland?	Nuuk	Tromso	Longyearbyen	Torshavn
+cap_capital_dominican_republic	Hard	What is the capital of the Dominican Republic?	Santo Domingo	San Juan	Port-au-Prince	Punta Cana
+cap_capital_state_washington	Hard	What is the capital of the US state of Washington?	Olympia	Seattle	Spokane	Tacoma
+cap_capital_state_illinois	Hard	What is the capital of the US state of Illinois?	Springfield	Chicago	Peoria	Rockford
+cap_capital_state_nevada	Hard	What is the capital of the US state of Nevada?	Carson City	Las Vegas	Reno	Henderson
+cap_city_capital_canadian	Hard	Which city is the capital of the Canadian province of British Columbia?	Victoria	Vancouver	Kelowna	Surrey
+cap_state_capital_german	Hard	Which US state capital is named after a German chancellor?	Bismarck	Frankfort	Lincoln	Madison
+cap_capital_state_louisiana	Hard	What is the capital of the US state of Louisiana?	Baton Rouge	New Orleans	Shreveport	Lafayette
+cap_capital_trinidad_tobago	Hard	What is the capital of Trinidad and Tobago?	Port of Spain	Kingston	Bridgetown	Castries
+cap_capital_state_ohio	Hard	What is the capital of the US state of Ohio?	Columbus	Cleveland	Cincinnati	Dayton
+cap_city_capital_canadian_2	Hard	Which city is the capital of the Canadian province of Alberta?	Edmonton	Calgary	Banff	Red Deer
+cap_state_capital_cannot	Hard	Which US state capital cannot be reached by road from the rest of the continent?	Juneau	Helena	Bismarck	Cheyenne
+cap_belize_move_capital	Hard	Why did Belize move its capital inland in the 1960s?	A hurricane wrecked the old one	A volcano buried the old one	An earthquake levelled it	The rising sea flooded it
+cap_architect_designed_brasilia	Hard	Which architect designed Brasilia's cathedral and its other modernist landmarks?	Oscar Niemeyer	Le Corbusier	Frank Lloyd Wright	Antoni Gaudi
+cap_north_eastern_city	Hard	Which north-eastern city was Brazil's first colonial capital, from 1549 to 1763?	Salvador	Recife	Fortaleza	Sao Luis
+cap_chile_national_congress	Hard	Chile's National Congress meets not in Santiago but in which port city?	Valparaiso	Antofagasta	Concepcion	Arica
+cap_1808_1821_portuguese	Hard	From 1808 to 1821 the Portuguese royal family ruled its empire from which city?	Rio de Janeiro	Salvador	Luanda	Goa
+cap_colonial_city_guatemala	Hard	Which colonial city was Guatemala's capital until earthquakes in 1773 forced a move?	Antigua	Quetzaltenango	Flores	Granada
+cap3_quito	Hard	What is the capital of Ecuador?	Quito	Bogota	Lima	Caracas
+cap3_asuncion	Hard	What is the capital of Paraguay?	Asuncion	Montevideo	La Paz	Santa Cruz
+cap3_san_jose	Hard	What is the capital of Costa Rica?	San Jose	Panama City	Managua	Tegucigalpa
+cap_nowy_jork	Hard	What is the capital of New York State?	Albany	New York City	Buffalo	Rochester
+cap_minneapolis_forms_twin	Hard	Minneapolis forms the 'Twin Cities' with which city, Minnesota's capital?	Saint Paul	Duluth	Rochester	Bloomington
+cap_state_capital_third	Hard	Which US state capital is named after the third US president?	Jefferson City	Lincoln	Madison	Jackson
+cap_lincoln_capital_state	Hard	Lincoln is the capital of which US state?	Nebraska	Illinois	Kansas	Kentucky
+cap_halifax_harbour_saw	Hard	Halifax, whose harbour saw a huge wartime explosion in 1917, is the capital of which Canadian province?	Nova Scotia	New Brunswick	Newfoundland	Prince Edward Island
+cap_capital_state_virginia	Hard	What is the capital of the US state of Virginia?	Richmond	Norfolk	Virginia Beach	Alexandria
+cap2_sucre	Hard	What is the capital of Bolivia (constitutional capital)?	Sucre	La Paz	Santa Cruz	Cochabamba
+capx_brasilia_samolot	Hard	Seen from above, the plan of Brasilia is often said to look like what?	An aeroplane	A star	A fish	A tree
+cap_capital_state_pennsylvania	Hard	What is the capital of the US state of Pennsylvania?	Harrisburg	Philadelphia	Pittsburgh	Scranton
+cap_capital_bermuda	Hard	What is the capital of Bermuda?	Hamilton	Kingston	Nassau	Bridgetown
+capx_lenfant	Expert	Which French-born engineer drew up the original street plan of Washington, D.C.?	Pierre L'Enfant	Gustave Eiffel	Georges Haussmann	Le Corbusier
+cap_capital_honduras	Expert	What is the capital of Honduras?	Tegucigalpa	San Pedro Sula	Managua	Belmopan
+cap_capital_nicaragua	Expert	What is the capital of Nicaragua?	Managua	Leon	Granada	Tegucigalpa
+cap_capital_guyana	Expert	What is the capital of Guyana?	Georgetown	Paramaribo	Cayenne	Bridgetown
+cap_city_lost_role	Expert	Which city lost its role as Canada's capital after a mob burned its parliament building in 1849?	Montreal	Quebec City	Kingston	Toronto
+cap_montevideo_often_said	Expert	Montevideo's name is often said to come from a sailor's cry meaning what?	'I see a mountain'	'Land ahead'	'Silver river'	'Good winds'
+cap_capital_state_kentucky	Expert	What is the capital of the US state of Kentucky?	Frankfort	Louisville	Lexington	Bowling Green
+cap_capital_city_dictator	Expert	Which capital city did dictator Rafael Trujillo rename after himself in 1936?	Santo Domingo	Port-au-Prince	Managua	Tegucigalpa
+dpt_sto_surinam	Expert	What is the capital of Suriname?	Paramaribo	Nieuw Nickerie	Albina	Lelydorp
+cap_capital_state_oregon	Expert	What is the capital of the US state of Oregon?	Salem	Portland	Eugene	Bend
+cap_capital_belize	Expert	What is the capital of Belize?	Belmopan	Belize City	San Salvador	Tegucigalpa
+cap_capital_state_michigan	Expert	What is the capital of the US state of Michigan?	Lansing	Detroit	Grand Rapids	Ann Arbor
+cap_capital_barbados	Expert	What is the capital of Barbados?	Bridgetown	Kingston	Castries	Nassau

@@ -1,0 +1,59 @@
+# Africa: 
+#
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+cap2_cairo	Easy	What is the capital of Egypt?	Cairo	Alexandria	Giza	Luxor
+cap3_algiers	Easy	What is the capital of Algeria?	Algiers	Tunis	Tripoli	Rabat
+cap3_tunis	Easy	What is the capital of Tunisia?	Tunis	Algiers	Tripoli	Rabat
+cap3_tripoli	Medium	What is the capital of Libya?	Tripoli	Tunis	Algiers	Cairo
+cap_coastal_megacity_nigeria	Medium	Which coastal megacity was Nigeria's capital until 1991?	Lagos	Kano	Ibadan	Port Harcourt
+cap_south_african_city	Medium	Which South African city is home to the country's parliament?	Cape Town	Johannesburg	Durban	Bloemfontein
+cap_nairobi	Medium	What is the capital of Kenya?	Nairobi	Mombasa	Kisumu	Nakuru
+cap_kraj_pretoria	Medium	Pretoria is the capital of which country?	South Africa	Kenya	Zimbabwe	Namibia
+cap3_dakar	Medium	What is the capital of Senegal?	Dakar	Bamako	Conakry	Nouakchott
+cur_rpa_trzy_stolice	Medium	Which country has three capital cities?	South Africa	Switzerland	Malaysia	Nigeria
+cap_capital_somalia	Medium	What is the capital of Somalia?	Mogadishu	Hargeisa	Djibouti	Asmara
+cap_rabat	Hard	What is the capital of Morocco?	Rabat	Casablanca	Marrakesh	Fez
+cap_abuja	Hard	What is the capital of Nigeria?	Abuja	Lagos	Kano	Ibadan
+cap2_addis_ababa	Hard	What is the capital of Ethiopia?	Addis Ababa	Dire Dawa	Gondar	Mekelle
+cap3_accra	Hard	What is the capital of Ghana?	Accra	Lagos	Abidjan	Lome
+cap3_harare	Hard	What is the capital of Zimbabwe?	Harare	Lusaka	Maputo	Gaborone
+cap3_kinshasa	Hard	What is the capital of Democratic Republic of the Congo?	Kinshasa	Brazzaville	Luanda	Kigali
+cap3_kampala	Hard	What is the capital of Uganda?	Kampala	Nairobi	Kigali	Bujumbura
+cap3_kigali	Hard	What is the capital of Rwanda?	Kigali	Bujumbura	Kampala	Nairobi
+cap_port_louis_capital	Hard	Port Louis is the capital of which island country?	Mauritius	Seychelles	Maldives	Madagascar
+cap_west_african_capital	Hard	Which West African capital was founded in 1792 as a home for freed slaves?	Freetown	Accra	Dakar	Lome
+cap_capital_city_arabic	Hard	Which capital city's Arabic name, al-Qahira, means 'the Victorious'?	Cairo	Damascus	Baghdad	Amman
+cap_malabo_capital_equatorial	Hard	Malabo, the capital of Equatorial Guinea, stands on what?	An island	A high plateau	A lake shore	A river delta
+cap_city_ivory_coast	Hard	Which city is Ivory Coast's largest city and main port, though not its official capital?	Abidjan	Bouake	San-Pedro	Dakar
+cap3_khartoum	Hard	What is the capital of Sudan?	Khartoum	Cairo	Addis Ababa	Juba
+cap3_juba	Hard	What is the capital of South Sudan?	Juba	Khartoum	Kampala	Nairobi
+cap_monrowia	Hard	Which African capital is named after a US president?	Monrovia	Freetown	Accra	Banjul
+cap_former_capital_means	Hard	Which former capital's name means 'abode of peace' in Arabic?	Dar es Salaam	Zanzibar	Mombasa	Khartoum
+cap_asmara	Expert	What is the capital of Eritrea?	Asmara	Massawa	Keren	Assab
+cap_kraj_ouagadougou	Expert	Ouagadougou is the capital of which country?	Burkina Faso	Mali	Niger	Chad
+cap2_yamoussoukro	Expert	What is the capital of Ivory Coast?	Yamoussoukro	Abidjan	Bouake	Korhogo
+cap2_antananarivo	Expert	What is the capital of Madagascar?	Antananarivo	Toamasina	Mahajanga	Toliara
+cap2_windhoek	Expert	What is the capital of Namibia?	Windhoek	Walvis Bay	Swakopmund	Oshakati
+cap3_gaborone	Expert	What is the capital of Botswana?	Gaborone	Windhoek	Lusaka	Maseru
+cap3_maseru	Expert	What is the capital of Lesotho?	Maseru	Mbabane	Gaborone	Bloemfontein
+cap3_mbabane	Expert	What is the capital of Eswatini?	Mbabane	Maseru	Pretoria	Maputo
+cap3_lilongwe	Expert	What is the capital of Malawi?	Lilongwe	Blantyre	Lusaka	Harare
+cap3_nouakchott	Expert	What is the capital of Mauritania?	Nouakchott	Dakar	Bamako	Nouadhibou
+dpt_sto_benin	Expert	What is the official capital of Benin?	Porto-Novo	Cotonou	Parakou	Abomey
+cap_salisbury	Expert	Which capital city was called Salisbury until 1982?	Harare	Lusaka	Gaborone	Windhoek
+cap_leopoldville	Expert	Which capital city was once called Leopoldville?	Kinshasa	Brazzaville	Kigali	Bujumbura
+cap_nairobi_nazwa	Expert	Which capital city's name comes from a Maasai phrase meaning 'cool water'?	Nairobi	Kampala	Dodoma	Kigali
+cap_addis_nazwa	Expert	The name of which capital city means 'new flower'?	Addis Ababa	Asmara	Nairobi	Kampala
+cap_capital_cameroon	Expert	What is the capital of Cameroon?	Yaounde	Douala	Lagos	Libreville
+cap_capital_mozambique	Expert	What is the capital of Mozambique?	Maputo	Beira	Lusaka	Harare
+cap_capital_niger	Expert	What is the capital of Niger?	Niamey	Abuja	N'Djamena	Bamako
+cap_capital_gabon	Expert	What is the capital of Gabon?	Libreville	Port-Gentil	Malabo	Brazzaville
+cap_capital_togo	Expert	What is the capital of Togo?	Lome	Cotonou	Kara	Porto-Novo
+cap_capital_cape_verde	Expert	What is the capital of Cape Verde?	Praia	Mindelo	Bissau	Dakar
+cap_2019_burundi_moved	Expert	In 2019 Burundi moved its political capital from Bujumbura to which city?	Gitega	Ngozi	Muyinga	Kigali
+cap_capital_city_lourenco	Expert	Which capital city was called Lourenco Marques until 1976?	Maputo	Luanda	Harare	Lusaka
+cap2_dodoma	Expert	What is the capital of Tanzania?	Dodoma	Dar es Salaam	Arusha	Mwanza
+cap3_bamako	Expert	What is the capital of Mali?	Bamako	Dakar	Ouagadougou	Niamey
+cap3_lusaka	Expert	What is the capital of Zambia?	Lusaka	Harare	Lilongwe	Gaborone
+cap3_luanda	Expert	What is the capital of Angola?	Luanda	Maputo	Kinshasa	Windhoek
+cap_capital_sierra_leone	Expert	What is the capital of Sierra Leone?	Freetown	Monrovia	Conakry	Banjul

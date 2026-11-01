@@ -40,8 +40,6 @@ tec_company_makes_thinkpad	Medium	Which company makes the ThinkPad laptops today
 tec_company_makes_surface	Medium	Which company makes the Surface tablets and laptops?	Microsoft	Apple	Samsung	Lenovo
 tec_company_makes_xperia	Medium	Which company makes the Xperia phones?	Sony	Samsung	LG	Huawei
 tec_company_invented_post	Medium	Which company invented the Post-it note?	3M	Xerox	Staples	Kodak
-tec_guitar_maker_created	Medium	Which guitar maker created the famous 'Stratocaster'?	Fender	Gibson	Ibanez	Yamaha
-tec_guitar_maker_produces	Medium	Which guitar maker produces the 'Les Paul' electric guitar?	Gibson	Fender	Gretsch	Rickenbacker
 tec_engineer_built_digital	Medium	Whose engineer built the first digital camera, in 1975, though the company stuck with film?	Kodak	Canon	Sony	Nikon
 tec_tech_company_long	Medium	Which tech company was long known for the motto 'Don't be evil'?	Google	Apple	Microsoft	Amazon
 tec_company_ran_1997	Medium	Which company ran the famous 1997 advertising campaign 'Think different'?	Apple	IBM	Microsoft	Sony

@@ -4,7 +4,6 @@ id	difficulty	prompt	correct	wrong1	wrong2	wrong3
 pop_rudolf	Easy	Which of Santa's reindeer has a shiny red nose?	Rudolph	Dasher	Comet	Blitzen
 pop_ken	Easy	What is the name of Barbie's boyfriend doll?	Ken	Kevin	Karl	Kyle
 pp_uno	Easy	How many colours of cards are there in UNO?	Four	Three	Five	Six
-pp_dynia	Easy	In the glass-slipper fairy tale, what does the fairy godmother turn into a coach?	A pumpkin	A melon	A shoe	A walnut
 pp_twister	Easy	Which party game has players put hands and feet on coloured spots on a mat?	Twister	Jenga	Pictionary	Operation
 pop_brand_logo_three	Easy	Which brand's logo is three parallel stripes?	Adidas	Puma	Reebok	Nike
 pop_fast_food_chain	Easy	Which fast-food chain's mascot is a clown named Ronald?	McDonald's	Burger King	KFC	Wendy's
@@ -48,7 +47,6 @@ pop_rubik_cube_invented	Medium	The Rubik's Cube was invented in which country?	H
 pop_energy_drink_red	Medium	The energy drink Red Bull comes from which country?	Austria	United States	Germany	Switzerland
 pop_board_game_players_2	Medium	Which board game has players build settlements on an island, trading wood, brick and sheep?	Catan	Carcassonne	Risk	Ticket to Ride
 pop_property_expensive_british	Medium	Which property is the most expensive on the British Monopoly board?	Mayfair	Park Lane	Oxford Street	Piccadilly
-pop_website_calls_itself	Medium	Which website calls itself 'the front page of the internet'?	Reddit	Digg	Yahoo	Tumblr
 pop_fine_meme_animal	Medium	In the 'This is fine' meme, which animal sits calmly in a burning room?	A dog	A cat	A frog	A bear
 pop_carlsberg_beer_founded	Medium	Carlsberg beer was founded in which country?	Denmark	Sweden	Germany	Norway
 pop_michelin_tyre_company	Medium	The Michelin tyre company, famous for restaurant stars, comes from which country?	France	Belgium	Italy	Germany

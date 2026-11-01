@@ -149,10 +149,8 @@ pop_actress_played_cady	Medium	Which actress played Cady Heron in 'Mean Girls' (
 pop_actress_played_mia	Medium	Which actress played Mia in 'The Princess Diaries'?	Anne Hathaway	Mandy Moore	Hilary Duff	Natalie Portman
 pop_star_wars_bounty	Medium	Which Star Wars bounty hunter delivers Han Solo frozen in carbonite?	Boba Fett	Jabba the Hutt	Greedo	Lando Calrissian
 pop_1994_prison_drama	Medium	Which 1994 prison drama has long topped IMDb's list of highest-rated films?	The Shawshank Redemption	The Green Mile	Escape from Alcatraz	Forrest Gump
-pop_spell_harry_potter	Medium	Which spell does Harry Potter use to disarm his opponents?	Expelliarmus	Expecto Patronum	Wingardium Leviosa	Avada Kedavra
 pop_film_tagline	Medium	Which film's tagline is 'There can be only one'?	Highlander	Gladiator	Braveheart	Conan the Barbarian
 pop_film_boarding_school	Medium	Which film about a boarding-school teacher made 'Carpe diem!' famous?	Dead Poets Society	Good Will Hunting	School of Rock	The Breakfast Club
-pop_shape_harry_potter	Medium	What shape does Harry Potter's Patronus take?	A stag	A doe	An otter	A phoenix
 pop_oddjob_deadly_weapon	Medium	What is Oddjob's deadly weapon in 'Goldfinger'?	A steel-rimmed bowler hat	A golden gun	A poisoned umbrella	A razor-sharp boomerang
 pop_horror_film_series	Medium	Which horror film series is set at Camp Crystal Lake?	Friday the 13th	Halloween	Scream	The Evil Dead
 pop_actor_played_willy	Medium	Which actor played Willy Wonka in the 1971 film?	Gene Wilder	Johnny Depp	Danny Kaye	Dick Van Dyke
@@ -260,6 +258,8 @@ pop_obywatel_kane	Medium	Which word is whispered at the very start of 'Citizen K
 pop_nosferatu	Medium	The 1922 silent film 'Nosferatu' was an unofficial version of which novel?	Dracula	Frankenstein	Carmilla	The Vampyre
 pop_nollywood	Medium	'Nollywood', one of the world's busiest film industries, is based in which country?	Nigeria	Norway	New Zealand	Nepal
 pp_lyzka	Medium	In 'The Matrix', a boy tells Neo: 'There is no...' what?	Spoon	Fork	Truth	Escape
+lit_german_composer_scored	Medium	Which German composer scored 'The Lion King', 'Gladiator' and 'Inception'?	Hans Zimmer	John Williams	Howard Shore	James Horner
+pol_pianista	Medium	Which director won an Oscar for 'The Pianist'?	Roman Polanski	Andrzej Wajda	Krzysztof Kieslowski	Agnieszka Holland
 day_zloty_lew	Hard	At which film festival is the Golden Lion awarded?	Venice	Cannes	Berlin	San Sebastian
 pop_jazz_singer	Hard	Which 1927 film was the first feature with synchronised talking scenes?	The Jazz Singer	Metropolis	Sunrise	Nosferatu
 pop_dreamworks	Hard	In the DreamWorks logo, a boy sits fishing on what?	A crescent moon	A cloud	A star	A rooftop

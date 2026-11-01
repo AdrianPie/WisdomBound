@@ -167,6 +167,10 @@ object QuizSectionCatalog {
         QuizSection("mythology/egypt_near_east", "Egypt & the Near East", "🐍", QuizCategory.Mythology),
         QuizSection("mythology/asia", "Asian Myths", "🐲", QuizCategory.Mythology),
         QuizSection("mythology/world", "World Myths", "🌍", QuizCategory.Mythology),
-        QuizSection("mythology/legends", "Legends & Folklore", "🧚", QuizCategory.Mythology)
+        QuizSection("mythology/legends", "Legends & Folklore", "🧚", QuizCategory.Mythology),
+        QuizSection("capitals/europe", "Europe", "🏰", QuizCategory.Capitals),
+        QuizSection("capitals/asia", "Asia, Oceania & the World", "🌏", QuizCategory.Capitals),
+        QuizSection("capitals/africa", "Africa", "🦁", QuizCategory.Capitals),
+        QuizSection("capitals/americas", "Americas", "🗽", QuizCategory.Capitals)
     )
 }

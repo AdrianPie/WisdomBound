@@ -82,6 +82,7 @@ object ScienceQuestions {
         q("scix_hubble", "Which space telescope, launched in 1990, is famous for its deep-space photos?", "Hubble", listOf("Kepler", "Spitzer", "Chandra"), E),
         q("sci_solar_flare", "What is a 'solar flare'?", "A sudden burst of energy from the Sun", listOf("A ring of light around the Sun", "A cooler patch on the Sun's surface", "A comet falling into the Sun"), E),
         q("sci_astronauts_iss_exercise", "Why do astronauts on the ISS exercise for about two hours a day?", "To stop their muscles and bones wasting away", listOf("To keep the station from drifting off course", "To make electricity for the station", "To stop themselves floating while they sleep"), E),
+        q("trv2_curiosity", "On which planet did the Curiosity rover land in 2012?", "Mars", listOf("Venus", "The Moon", "Mercury"), E),
         q("space_pas_planetoid", "Between which two planets does the main asteroid belt lie?", "Mars and Jupiter", listOf("Earth and Mars", "Jupiter and Saturn", "Venus and Earth"), M),
         q("space_plamy_sloneczne", "What are sunspots?", "Cooler regions of the Sun's surface", listOf("Holes punched through the Sun", "Clouds of interstellar dust", "Shadows cast by the planets"), M),
         q("space_kometa_ogon", "Why does a comet grow a tail near the Sun?", "Its ice turns to gas and is blown outward", listOf("It burns up in the solar wind", "It spins fast enough to shed rock", "It collides with belts of dust"), M),
@@ -377,7 +378,8 @@ object ScienceQuestions {
         q("sci_planet_huge_storm", "Which planet had a huge storm called the 'Great Dark Spot' when Voyager 2 flew past in 1989?", "Neptune", listOf("Uranus", "Saturn", "Jupiter"), X),
         q("sci_slowly_happening_saturn", "What is slowly happening to Saturn's rings?", "Their ice is raining down onto the planet", listOf("They are spreading out to swallow its moons", "They are freezing into one solid sheet", "They are being blown away by the Sun"), X),
         q("sci_pleiades_star_cluster", "The Pleiades star cluster lies in which constellation?", "Taurus", listOf("Orion", "Gemini", "Ursa Major"), X),
-        q("sci_stars_make_alpha", "How many stars make up the Alpha Centauri system, our nearest stellar neighbour?", "Three", listOf("One", "Two", "Seven"), X)
+        q("sci_stars_make_alpha", "How many stars make up the Alpha Centauri system, our nearest stellar neighbour?", "Three", listOf("One", "Two", "Seven"), X),
+        q("tec_soviet_probe_land", "Which Soviet probe was the first to land softly on another planet, Venus, in 1970?", "Venera 7", listOf("Mars 3", "Luna 9", "Vega 1"), X)
     )
 
     /* Physics - science/physics.tsv */
@@ -647,13 +649,10 @@ object ScienceQuestions {
         q("sci_glow_stick_kept", "Why does a glow stick kept in the freezer keep glowing for longer?", "Cold slows down the chemical reaction", listOf("Frost reflects the light back inside", "Cold stops the light leaking out", "The plastic seals itself in the cold"), M),
         q("sci_red_cabbage_juice", "Red cabbage juice turns pink in lemon juice and green in baking soda water. Why?", "It works as an acid-base indicator", listOf("It reacts with the vitamin C in both", "Its sugars burn in strong liquids", "The light bends differently in each"), M),
         q("sci_white_fog_pouring", "The white fog pouring off dry ice is mostly what?", "Water droplets", listOf("Carbon dioxide gas", "Smoke", "Liquid nitrogen"), M),
-        q("sci_metal_soft_cut", "Which metal is so soft it can be cut with a butter knife?", "Sodium", listOf("Aluminium", "Copper", "Tin"), M),
         q("trv_lakmus_kwas", "What colour does blue litmus paper turn in an acid?", "Red", listOf("Green", "Yellow", "It stays blue"), M),
         q("sci_wax_burning_candle", "Where does the wax of a burning candle mostly go?", "It burns away as fuel into gases", listOf("It all drips down into the holder", "It soaks deep into the wick for good", "It turns into the smoke's black soot"), M),
         q("sci_milk_boil_over", "Why does milk boil over in a pan when water does not?", "Its proteins form a skin that traps steam", listOf("It boils at a much lower temperature", "Its fat explodes when heated", "It holds dissolved gas, like soda"), M),
         q("sci2_moly_liczba", "How many particles does one mole of a substance contain?", "About 6.02 x 10^23", listOf("About 3.14 x 10^12", "Exactly one million", "About 10^100"), H),
-        q("trv_przewodnik_najlepszy", "Which metal conducts electricity best?", "Silver", listOf("Copper", "Gold", "Aluminium"), H),
-        q("org_ytterby_wioska", "Four chemical elements are named after a quarry in a village in which country?", "Sweden", listOf("Norway", "Germany", "Scotland"), H),
         q("sci_tonic_water_glow", "Why does tonic water glow blue under ultraviolet light?", "Its quinine is fluorescent", listOf("Its bubbles reflect the light", "Its sugar crystals sparkle", "It contains glowing algae"), H),
         q("sci_box_safety_matches", "On a box of safety matches, where is the red phosphorus that makes them light?", "On the striking strip", listOf("In the match heads", "In the wooden sticks", "In the cardboard box"), H),
         q("sci_chemical_reaction_browns", "Which chemical reaction browns toast and gives a seared steak its flavour?", "The Maillard reaction", listOf("The Haber process", "Fermentation", "Saponification"), H),
@@ -666,7 +665,6 @@ object ScienceQuestions {
         q("sci_makes_cola_fountain", "What makes a cola fountain shoot up when you drop Mentos sweets into a bottle?", "Gas bubbles form on the sweets' rough surface", listOf("The sweets react with the acid in the cola", "The mint oil makes the cola boil", "The sugar in both burns explosively"), H),
         q("sci_white_shirts_glow", "Why do white T-shirts glow under 'black light' in clubs?", "Washing powder leaves fluorescent dyes", listOf("Cotton fibres store up daylight", "The cloth is slightly radioactive", "The light makes the fabric warm"), H),
         q("sci_popping_candy_crackle", "Why does popping candy crackle in your mouth?", "Tiny pockets of squeezed gas burst", listOf("Sugar crystals snap as they melt", "It reacts with acid in your saliva", "Water in it boils on your tongue"), H),
-        q("sci_colour_flames_copper", "What colour flames does copper give in fireworks?", "Blue-green", listOf("Red", "Yellow", "Purple"), H),
         q("sci_compound_made_soil", "Which compound made by soil bacteria gives rain its earthy smell?", "Geosmin", listOf("Petrichor", "Ozone", "Chlorophyll"), X),
         q("sci_older_eggs_easier", "Why are older eggs easier to peel after boiling than very fresh ones?", "Their whites become more alkaline", listOf("Their shells grow much thicker", "Their yolks shrink and pull away", "Their shells lose all their calcium"), X)
     )
@@ -702,6 +700,7 @@ object ScienceQuestions {
         q("sci_black_ice", "What is 'black ice'?", "Thin, almost invisible ice on roads", listOf("Ice made from salt water", "Ice coated with oil and soot", "Ice that forms only on mountains"), E),
         q("sci_thundersnow", "What is 'thundersnow'?", "A thunderstorm that brings snow", listOf("Snow that falls with a loud hiss", "An avalanche set off by thunder", "Hail that sounds like thunder"), E),
         q("sci_moonbow", "What is a 'moonbow'?", "A rainbow made by moonlight", listOf("A crescent Moon lying on its back", "The Moon's shadow on clouds", "A rainbow seen from the Moon"), E),
+        q("ext_diament_twardosc", "On the Mohs scale, which mineral sits at the very top?", "Diamond", listOf("Corundum", "Topaz", "Quartz"), E),
         q("day_higrometr_mierzy", "What does a hygrometer measure?", "Air humidity", listOf("Air pressure", "Wind speed", "Rainfall"), M),
         q("sci_cumulonimbus", "Which kind of cloud grows into a towering thundercloud?", "Cumulonimbus", listOf("Cirrus", "Stratus", "Altostratus"), M),
         q("sci_huragan_tajfun", "What is the difference between a hurricane and a typhoon?", "Only where in the world it forms", listOf("A typhoon is always stronger", "A hurricane has no eye", "Typhoons only happen in winter"), M),
@@ -768,6 +767,7 @@ object ScienceQuestions {
         q("sci_earth_magnetic_pole", "Earth's magnetic pole in the Arctic is physically what kind of magnetic pole?", "A south pole", listOf("A north pole", "Neither", "It flips daily"), H),
         q("day2_efekt_cieplarniany", "Why do greenhouse gases warm the planet?", "They absorb outgoing infrared radiation", listOf("They block incoming sunlight", "They thicken the ozone layer", "They raise air pressure"), H),
         q("sciy_krakatau", "The 1883 eruption of which volcano made one of the loudest sounds in recorded history?", "Krakatoa", listOf("Vesuvius", "Mount St Helens", "Etna"), H),
+        q("eley_talk", "Which is the softest mineral on the Mohs scale?", "Talc", listOf("Gypsum", "Calcite", "Graphite"), H),
         q("sci_lightning_strike_way", "In a lightning strike, which way does the brightest flash actually travel?", "Upwards from the ground", listOf("Downwards from the cloud", "Sideways along the ground", "Outwards from the middle"), X),
         q("sci_misty_mountain_climber", "On a misty mountain, a climber may see a giant shadow of themselves ringed by colours. What is it called?", "A Brocken spectre", listOf("A fata morgana", "A will-o'-the-wisp", "A sun pillar"), X),
         q("sci_virga", "What is 'virga'?", "Rain that evaporates before reaching the ground", listOf("A lens-shaped cloud over mountains", "Lightning that leaps up from the clouds", "Hail falling from a clear blue sky"), X),
@@ -799,11 +799,8 @@ object ScienceQuestions {
         q("sci_temperature_scale_still", "Whose temperature scale is still used for everyday weather in the USA?", "Daniel Fahrenheit", listOf("Anders Celsius", "Lord Kelvin", "Rene Reaumur"), E),
         q("sci_einstein", "Who formulated the theory of relativity?", "Albert Einstein", listOf("Isaac Newton", "Niels Bohr", "Max Planck"), E),
         q("sci_kopernik", "Whose 1543 book put the Sun, not the Earth, at the centre of the universe?", "Nicolaus Copernicus", listOf("Isaac Newton", "Galileo Galilei", "Johannes Kepler"), M),
-        q("sci3_darwin_statek", "What was the name of the ship Charles Darwin sailed on?", "HMS Beagle", listOf("Endeavour", "Santa Maria", "Mayflower"), M),
         q("sci3_rentgen_promienie", "Who discovered X-rays?", "Wilhelm Rontgen", listOf("Marie Curie", "Max Planck", "Niels Bohr"), M),
-        q("trv_dna_rozwiniecie", "What does DNA stand for?", "Deoxyribonucleic acid", listOf("Dinucleic acid", "Deoxyribose nitrogen acid", "Double nucleic arrangement"), M),
         q("org_wolt_volta", "Which unit honours the Italian who built the first battery?", "The volt", listOf("The ampere", "The ohm", "The joule"), M),
-        q("org_szczepionka_krowa", "The word 'vaccine' comes from the Latin name for which animal?", "Cow", listOf("Horse", "Sheep", "Goat"), M),
         q("sci_kelwin", "On which temperature scale is zero equal to absolute zero?", "Kelvin", listOf("Celsius", "Fahrenheit", "Reaumur"), M),
         q("scix_nobel_dynamit", "Alfred Nobel, who founded the Nobel Prizes, made his fortune from which invention?", "Dynamite", listOf("The telephone", "The steam turbine", "Rubber tyres"), M),
         q("sciy_nobel_dziedziny", "Which of these was NOT one of Alfred Nobel's original prize categories?", "Mathematics", listOf("Physics", "Literature", "Peace"), M),
@@ -821,7 +818,6 @@ object ScienceQuestions {
         q("sci_physicist_uncertainty_principle", "Which physicist's 'uncertainty principle' says you cannot know a particle's position and momentum exactly?", "Werner Heisenberg", listOf("Erwin Schrodinger", "Paul Dirac", "Max Born"), M),
         q("sci3_radio_wynalazca", "Who is credited with inventing radio?", "Guglielmo Marconi", listOf("Thomas Edison", "Alexander Graham Bell", "Samuel Morse"), M),
         q("sci_galileusz_ksiezyce", "Who first spotted four moons of Jupiter through a telescope, in 1610?", "Galileo Galilei", listOf("Nicolaus Copernicus", "Johannes Kepler", "Isaac Newton"), M),
-        q("sci_penicylina", "Who discovered penicillin?", "Alexander Fleming", listOf("Louis Pasteur", "Robert Koch", "Jonas Salk"), M),
         q("sci_sila", "What is the SI unit of force?", "Newton", listOf("Joule", "Watt", "Pascal"), M),
         q("sci3_occam_brzytwa", "What does Occam's razor state?", "Among equally valid explanations, pick the simplest", listOf("Every theory must be written in mathematics", "A complex theory always beats a simple one", "Science can never make anything simple"), M),
         q("sci_becquerel", "Who discovered radioactivity in 1896?", "Henri Becquerel", listOf("Marie Curie", "Ernest Rutherford", "Wilhelm Rontgen"), H),

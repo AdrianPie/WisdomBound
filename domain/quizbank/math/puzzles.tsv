@@ -90,7 +90,6 @@ mat_think_number_double	Medium	Think of a number, double it, add 10, halve the r
 mat_roughly_days_000	Medium	Roughly how many days is 1,000 hours?	About 42	About 10	About 100	About 24
 mat_score_test_must	Medium	You score 60 on your first test. What must you score on the second to average 75?	90	85	80	95
 mat_car_uses_litres	Medium	A car uses 6 litres of fuel per 100 km. How much does it need for 250 km?	15 litres	12 litres	25 litres	18 litres
-mat_different_shapes_falling	Medium	How many different shapes of falling block are there in classic Tetris?	7	5	6	8
 mat_both_players_play	Medium	If both players play perfectly, how does a game of noughts and crosses (tic-tac-toe) end?	In a draw	The first player wins	The second player wins	Whoever takes the centre wins
 mat_buy_three_pay	Medium	'Buy three, pay for two' is roughly the same as what discount on each item?	About 33%	50%	About 66%	25%
 mat_car_travels_steady	Medium	A car travels at a steady 100 km/h. How far does it go in 3 minutes?	5 km	3 km	10 km	30 km

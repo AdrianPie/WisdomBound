@@ -1,7 +1,6 @@
 # Cells, Genes & Evolution: cells, DNA, genetics, evolution, microbes, famous biologists
 #
 id	difficulty	prompt	correct	wrong1	wrong2	wrong3
-bio3_owad_nogi	Easy	How many legs does an insect have?	Six	Four	Eight	Ten
 wld_mitochondria	Easy	Which part of a cell is often called its 'powerhouse'?	The mitochondrion	The nucleus	The ribosome	The cell wall
 bio_homo_sapiens	Easy	What is the scientific name for modern humans?	Homo sapiens	Homo erectus	Homo habilis	Homo neanderthalensis
 bio_owca_dolly	Easy	What kind of animal was Dolly, the first mammal cloned from an adult cell?	A sheep	A cow	A goat	A mouse
@@ -18,13 +17,14 @@ bio_roughly_share_dna	Medium	Roughly what share of our DNA do we share with chim
 bio_henry_viii_blamed	Medium	Henry VIII blamed his wives for having no sons. What actually decides a baby's sex?	The father's sperm	The mother's egg	The mother's diet	The womb's temperature
 bio_chromosomes_human_egg	Medium	How many chromosomes does a human egg or sperm cell carry?	23	46	12	92
 bio_finches_helped_darwin	Medium	Which finches helped Darwin's ideas about evolution?	Galapagos finches	Canary finches	Zebra finches	Gouldian finches
-bio_group_insects_described	Medium	Which group of insects has the most described species?	Beetles	Ants	Butterflies	Flies
 bio_british_primatologist_studied	Medium	Which British primatologist studied wild chimpanzees in Tanzania from 1960?	Jane Goodall	Dian Fossey	Birute Galdikas	Cynthia Moss
 bio_bread_rises_because	Medium	Bread rises because of gas made by yeast. What kind of living thing is yeast?	A single-celled fungus	A bacterium	A tiny plant	A tiny animal
 bio_mejoza	Medium	What is the cell division that produces sex cells called?	Meiosis	Mitosis	Cytokinesis	Apoptosis
 bio_mendel	Medium	Who is considered the father of genetics for his research on peas?	Gregor Mendel	Charles Darwin	James Watson	Francis Crick
 wh_dna_struktura	Medium	Which scientists described the DNA double helix in 1953?	Watson and Crick	Mendel and Morgan	Pasteur and Koch	Fleming and Florey
 bio_scientist_gave_plants	Medium	Which scientist gave plants and animals their two-part Latin names?	Carl Linnaeus	Charles Darwin	Gregor Mendel	Louis Pasteur
+sci3_darwin_statek	Medium	What was the name of the ship Charles Darwin sailed on?	HMS Beagle	Endeavour	Santa Maria	Mayflower
+trv_dna_rozwiniecie	Medium	What does DNA stand for?	Deoxyribonucleic acid	Dinucleic acid	Deoxyribose nitrogen acid	Double nucleic arrangement
 bio2_kodon	Hard	How many nucleotides make up one codon?	Three	Two	Four	Six
 trv_dna_dlugosc	Hard	If you stretched out the DNA from a single human cell, roughly how long would it be?	About 2 metres	About 2 millimetres	About 2 centimetres	About 200 metres
 mst_bakterie_liczba	Hard	Roughly how do bacterial cells in your body compare with your own cells?	Comparable in number	A thousand times fewer	A million times more	Only a few thousand total

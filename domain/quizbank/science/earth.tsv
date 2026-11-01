@@ -27,6 +27,7 @@ sci_ozone_layer_protect	Easy	What does the ozone layer protect us from?	Ultravio
 sci_black_ice	Easy	What is 'black ice'?	Thin, almost invisible ice on roads	Ice made from salt water	Ice coated with oil and soot	Ice that forms only on mountains
 sci_thundersnow	Easy	What is 'thundersnow'?	A thunderstorm that brings snow	Snow that falls with a loud hiss	An avalanche set off by thunder	Hail that sounds like thunder
 sci_moonbow	Easy	What is a 'moonbow'?	A rainbow made by moonlight	A crescent Moon lying on its back	The Moon's shadow on clouds	A rainbow seen from the Moon
+ext_diament_twardosc	Easy	On the Mohs scale, which mineral sits at the very top?	Diamond	Corundum	Topaz	Quartz
 day_higrometr_mierzy	Medium	What does a hygrometer measure?	Air humidity	Air pressure	Wind speed	Rainfall
 sci_cumulonimbus	Medium	Which kind of cloud grows into a towering thundercloud?	Cumulonimbus	Cirrus	Stratus	Altostratus
 sci_huragan_tajfun	Medium	What is the difference between a hurricane and a typhoon?	Only where in the world it forms	A typhoon is always stronger	A hurricane has no eye	Typhoons only happen in winter
@@ -93,6 +94,7 @@ sci_roughly_wide_asteroid	Hard	Roughly how wide was the asteroid that wiped out 
 sci_earth_magnetic_pole	Hard	Earth's magnetic pole in the Arctic is physically what kind of magnetic pole?	A south pole	A north pole	Neither	It flips daily
 day2_efekt_cieplarniany	Hard	Why do greenhouse gases warm the planet?	They absorb outgoing infrared radiation	They block incoming sunlight	They thicken the ozone layer	They raise air pressure
 sciy_krakatau	Hard	The 1883 eruption of which volcano made one of the loudest sounds in recorded history?	Krakatoa	Vesuvius	Mount St Helens	Etna
+eley_talk	Hard	Which is the softest mineral on the Mohs scale?	Talc	Gypsum	Calcite	Graphite
 sci_lightning_strike_way	Expert	In a lightning strike, which way does the brightest flash actually travel?	Upwards from the ground	Downwards from the cloud	Sideways along the ground	Outwards from the middle
 sci_misty_mountain_climber	Expert	On a misty mountain, a climber may see a giant shadow of themselves ringed by colours. What is it called?	A Brocken spectre	A fata morgana	A will-o'-the-wisp	A sun pillar
 sci_virga	Expert	What is 'virga'?	Rain that evaporates before reaching the ground	A lens-shaped cloud over mountains	Lightning that leaps up from the clouds	Hail falling from a clear blue sky

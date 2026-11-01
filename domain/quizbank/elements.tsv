@@ -17,7 +17,6 @@ trv2_krzem_chipy	Easy	Which element is the basis of most computer chips?	Silicon
 trv2_uran_reaktor	Easy	Which element is the usual fuel in nuclear power plants?	Uranium	Plutonium only	Radium	Thorium
 trv2_wegiel_diament_grafit	Easy	Diamond and graphite are both made of which element?	Carbon	Silicon	Boron	Sulfur
 trv2_fluor_pasta	Easy	Which element is added to toothpaste to strengthen tooth enamel?	Fluorine (as fluoride)	Calcium	Chlorine	Sodium
-ext_diament_twardosc	Easy	On the Mohs scale, which mineral sits at the very top?	Diamond	Corundum	Topaz	Quartz
 cur_zloto_jadalne	Easy	Which metal can be eaten as leaf decoration on cakes without harm?	Gold	Lead	Mercury	Copper
 ele_wegiel_zycie	Easy	Organic chemistry is the chemistry of compounds built around which element?	Carbon	Oxygen	Nitrogen	Hydrogen
 ele_napoje_gazowane	Easy	Which gas puts the fizz in fizzy drinks?	Carbon dioxide	Oxygen	Nitrogen	Helium
@@ -202,6 +201,7 @@ ele_curie	Medium	Which element did Marie Sklodowska-Curie name after her homelan
 dpt_pie_wegiel_14	Medium	Which isotope is used to date organic remains?	Carbon-14	Uranium-238	Potassium-40	Argon-40
 ref_ele_radon_piwnice	Medium	Which radioactive noble gas can build up in basements?	Radon	Xenon	Krypton	Argon
 elex_moskow	Medium	Which element, number 115, is named after the region around Moscow?	Moscovium	Dubnium	Livermorium	Tennessine
+sci_metal_soft_cut	Medium	Which metal is so soft it can be cut with a butter knife?	Sodium	Aluminium	Copper	Tin
 ele_symbol_sn	Hard	Which element hides behind the symbol Sn?	Tin	Scandium	Selenium	Strontium
 ele_ilosc	Hard	How many elements does today's periodic table have?	118	108	92	120
 pie2_mosiadz_sklad	Hard	What is brass made of?	Copper and zinc	Copper and tin	Iron and chromium	Aluminum and magnesium
@@ -285,7 +285,6 @@ ele_wybielacz	Hard	Sodium hypochlorite is better known as what?	Bleach	Baking so
 ele_argon_zarowki	Hard	Which gas was sealed inside many old light bulbs to protect the filament?	Argon	Oxygen	Hydrogen	Chlorine
 elex_fajerwerki_zielen	Hard	Which element gives fireworks a bright green colour?	Barium	Strontium	Sodium	Calcium
 eley_halit	Hard	What is the mineral name of rock salt?	Halite	Calcite	Gypsum	Quartz
-eley_talk	Hard	Which is the softest mineral on the Mohs scale?	Talc	Gypsum	Calcite	Graphite
 ele_element_gives_fireworks	Hard	Which element gives fireworks a bright yellow colour?	Sodium	Sulfur	Potassium	Calcium
 ele_word_plumber_comes	Hard	The word 'plumber' comes from the Latin name of which metal, once used for water pipes?	Lead	Copper	Iron	Tin
 ele_old_silver_dental	Hard	Old 'silver' dental fillings are actually about half made of which metal?	Mercury	Tin	Nickel	Zinc
@@ -344,6 +343,9 @@ eley_iryd	Hard	A worldwide layer rich in which element supports the idea that an
 eley_chrom	Hard	Chromium's name comes from the Greek word for what?	Colour	Mirror	Metal	Shine
 ele_carl_scheele_joseph	Hard	Carl Scheele and Joseph Priestley independently discovered which element in the 1770s?	Oxygen	Hydrogen	Argon	Phosphorus
 ele_liquid_alloy_gallium	Hard	Which liquid alloy of gallium, indium and tin replaces mercury in some thermometers?	Galinstan	Amalgam	Solder	Nitinol
+sci_colour_flames_copper	Hard	What colour flames does copper give in fireworks?	Blue-green	Red	Yellow	Purple
+trv_przewodnik_najlepszy	Hard	Which metal conducts electricity best?	Silver	Copper	Gold	Aluminium
+org_ytterby_wioska	Hard	Four chemical elements are named after a quarry in a village in which country?	Sweden	Norway	Germany	Scotland
 ele_symbol_sb	Expert	Which element hides behind the symbol Sb?	Antimony	Strontium	Silver	Selenium
 pie2_pierwiastek_sztuczny	Expert	Which element was the first to be artificially produced?	Technetium	Plutonium	Francium	Astatine
 pie3_pierwiastek_najciezszy_stabilny	Expert	Which is the heaviest element with stable isotopes?	Lead	Bismuth	Uranium	Radium

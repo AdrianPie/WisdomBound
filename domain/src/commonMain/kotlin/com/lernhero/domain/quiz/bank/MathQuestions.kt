@@ -128,7 +128,6 @@ object MathQuestions {
         q("mat_roughly_days_000", "Roughly how many days is 1,000 hours?", "About 42", listOf("About 10", "About 100", "About 24"), M),
         q("mat_score_test_must", "You score 60 on your first test. What must you score on the second to average 75?", "90", listOf("85", "80", "95"), M),
         q("mat_car_uses_litres", "A car uses 6 litres of fuel per 100 km. How much does it need for 250 km?", "15 litres", listOf("12 litres", "25 litres", "18 litres"), M),
-        q("mat_different_shapes_falling", "How many different shapes of falling block are there in classic Tetris?", "7", listOf("5", "6", "8"), M),
         q("mat_both_players_play", "If both players play perfectly, how does a game of noughts and crosses (tic-tac-toe) end?", "In a draw", listOf("The first player wins", "The second player wins", "Whoever takes the centre wins"), M),
         q("mat_buy_three_pay", "'Buy three, pay for two' is roughly the same as what discount on each item?", "About 33%", listOf("50%", "About 66%", "25%"), M),
         q("mat_car_travels_steady", "A car travels at a steady 100 km/h. How far does it go in 3 minutes?", "5 km", listOf("3 km", "10 km", "30 km"), M),

@@ -43,7 +43,6 @@ object ElementQuestions {
         q("trv2_uran_reaktor", "Which element is the usual fuel in nuclear power plants?", "Uranium", listOf("Plutonium only", "Radium", "Thorium"), E),
         q("trv2_wegiel_diament_grafit", "Diamond and graphite are both made of which element?", "Carbon", listOf("Silicon", "Boron", "Sulfur"), E),
         q("trv2_fluor_pasta", "Which element is added to toothpaste to strengthen tooth enamel?", "Fluorine (as fluoride)", listOf("Calcium", "Chlorine", "Sodium"), E),
-        q("ext_diament_twardosc", "On the Mohs scale, which mineral sits at the very top?", "Diamond", listOf("Corundum", "Topaz", "Quartz"), E),
         q("cur_zloto_jadalne", "Which metal can be eaten as leaf decoration on cakes without harm?", "Gold", listOf("Lead", "Mercury", "Copper"), E),
         q("ele_wegiel_zycie", "Organic chemistry is the chemistry of compounds built around which element?", "Carbon", listOf("Oxygen", "Nitrogen", "Hydrogen"), E),
         q("ele_napoje_gazowane", "Which gas puts the fizz in fizzy drinks?", "Carbon dioxide", listOf("Oxygen", "Nitrogen", "Helium"), E),
@@ -231,7 +230,8 @@ object ElementQuestions {
         q("ele_curie", "Which element did Marie Sklodowska-Curie name after her homeland?", "Polonium", listOf("Radium", "Uranium", "Radon"), M),
         q("dpt_pie_wegiel_14", "Which isotope is used to date organic remains?", "Carbon-14", listOf("Uranium-238", "Potassium-40", "Argon-40"), M),
         q("ref_ele_radon_piwnice", "Which radioactive noble gas can build up in basements?", "Radon", listOf("Xenon", "Krypton", "Argon"), M),
-        q("elex_moskow", "Which element, number 115, is named after the region around Moscow?", "Moscovium", listOf("Dubnium", "Livermorium", "Tennessine"), M)
+        q("elex_moskow", "Which element, number 115, is named after the region around Moscow?", "Moscovium", listOf("Dubnium", "Livermorium", "Tennessine"), M),
+        q("sci_metal_soft_cut", "Which metal is so soft it can be cut with a butter knife?", "Sodium", listOf("Aluminium", "Copper", "Tin"), M)
     )
 
     /* ------------------------------ Hard ------------------------------ */
@@ -319,7 +319,6 @@ object ElementQuestions {
         q("ele_argon_zarowki", "Which gas was sealed inside many old light bulbs to protect the filament?", "Argon", listOf("Oxygen", "Hydrogen", "Chlorine"), H),
         q("elex_fajerwerki_zielen", "Which element gives fireworks a bright green colour?", "Barium", listOf("Strontium", "Sodium", "Calcium"), H),
         q("eley_halit", "What is the mineral name of rock salt?", "Halite", listOf("Calcite", "Gypsum", "Quartz"), H),
-        q("eley_talk", "Which is the softest mineral on the Mohs scale?", "Talc", listOf("Gypsum", "Calcite", "Graphite"), H),
         q("ele_element_gives_fireworks", "Which element gives fireworks a bright yellow colour?", "Sodium", listOf("Sulfur", "Potassium", "Calcium"), H),
         q("ele_word_plumber_comes", "The word 'plumber' comes from the Latin name of which metal, once used for water pipes?", "Lead", listOf("Copper", "Iron", "Tin"), H),
         q("ele_old_silver_dental", "Old 'silver' dental fillings are actually about half made of which metal?", "Mercury", listOf("Tin", "Nickel", "Zinc"), H),
@@ -377,7 +376,10 @@ object ElementQuestions {
         q("eley_iryd", "A worldwide layer rich in which element supports the idea that an asteroid killed the dinosaurs?", "Iridium", listOf("Uranium", "Titanium", "Cobalt"), H),
         q("eley_chrom", "Chromium's name comes from the Greek word for what?", "Colour", listOf("Mirror", "Metal", "Shine"), H),
         q("ele_carl_scheele_joseph", "Carl Scheele and Joseph Priestley independently discovered which element in the 1770s?", "Oxygen", listOf("Hydrogen", "Argon", "Phosphorus"), H),
-        q("ele_liquid_alloy_gallium", "Which liquid alloy of gallium, indium and tin replaces mercury in some thermometers?", "Galinstan", listOf("Amalgam", "Solder", "Nitinol"), H)
+        q("ele_liquid_alloy_gallium", "Which liquid alloy of gallium, indium and tin replaces mercury in some thermometers?", "Galinstan", listOf("Amalgam", "Solder", "Nitinol"), H),
+        q("sci_colour_flames_copper", "What colour flames does copper give in fireworks?", "Blue-green", listOf("Red", "Yellow", "Purple"), H),
+        q("trv_przewodnik_najlepszy", "Which metal conducts electricity best?", "Silver", listOf("Copper", "Gold", "Aluminium"), H),
+        q("org_ytterby_wioska", "Four chemical elements are named after a quarry in a village in which country?", "Sweden", listOf("Norway", "Germany", "Scotland"), H)
     )
 
     /* ----------------------------- Expert ----------------------------- */

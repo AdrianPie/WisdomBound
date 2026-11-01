@@ -23,6 +23,7 @@ anix_pszczola_zadlo	Easy	What usually happens to a honeybee after it stings a pe
 ani_caterpillar_form_around	Easy	What does a caterpillar form around itself before it becomes a butterfly?	A chrysalis	An egg sac	A burrow	A web
 ani_tiny_bloodsucker_jump	Easy	Which tiny bloodsucker can jump more than 100 times its own body length?	The flea	The tick	The bedbug	The louse
 zwi3_motyl_monarcha	Easy	How far do monarch butterflies migrate?	Thousands of kilometers between Canada and Mexico	A few dozen kilometres around one meadow	Only inside a single flowering meadow	They do not migrate anywhere at all
+bio3_owad_nogi	Easy	How many legs does an insect have?	Six	Four	Eight	Ten
 zwi3_mrowki_feromony	Medium	What do ants mark a trail to food with?	Pheromones	Saliva	Droppings alone	Sound
 trv_pszczola_taniec	Medium	How do honeybees tell each other where flowers are?	With a 'waggle dance'	By buzzing at different pitches	By leaving a trail of wax	By flashing their wings
 anix_komar_samice	Medium	Which mosquitoes bite people to drink blood?	Only the females	Only the males	Both equally	Only the young
@@ -54,6 +55,7 @@ ani_spider_lives_underwater	Medium	Which spider lives underwater, breathing from
 ani_swarming_locusts_really	Medium	Swarming locusts are really which insects, transformed when they get crowded?	Grasshoppers	Crickets	Cicadas	Beetles
 zwi3_mrowki_rolnictwo	Medium	What do leafcutter ants of the genus Atta do?	Farm fungus on the leaves they bring as their main food	They hunt other insects and eat nothing else	Live in symbiosis with fish in flooded nests	Migrate to another continent every year
 anix_swierszcz	Medium	By counting what can you roughly work out the air temperature?	A cricket's chirps	A frog's croaks	An owl's hoots	A bee's buzzes
+bio_group_insects_described	Medium	Which group of insects has the most described species?	Beetles	Ants	Butterflies	Flies
 zwi2_skorpion_uv	Hard	What happens to a scorpion under ultraviolet light?	It glows blue-green	It becomes transparent	It turns red	It faints
 zwi2_cykada_cykl	Hard	Every how many years do periodical cicadas emerge en masse in the USA?	Every 13 or 17 years	Every 2 years	Every 7 years	Every 25 years
 trv_zuk_sila	Hard	Relative to its weight, which animal is the strongest, pulling over 1,000 times its own mass?	The dung beetle	The ant	The gorilla	The elephant

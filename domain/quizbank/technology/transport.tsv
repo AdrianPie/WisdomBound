@@ -2,7 +2,6 @@
 #
 id	difficulty	prompt	correct	wrong1	wrong2	wrong3
 wh_bracia_wright	Easy	Who made the first successful powered airplane flight in 1903?	The Wright brothers	Louis Bleriot	Otto Lilienthal	Alberto Santos-Dumont
-trv2_curiosity	Easy	On which planet did the Curiosity rover land in 2012?	Mars	Venus	The Moon	Mercury
 tec_tesla_model3	Easy	Which company makes the Model S and Model 3 electric cars?	Tesla	Toyota	BMW	Ford
 tec_model_t	Easy	Which company built the Model T, the first mass-produced car?	Ford	General Motors	Chrysler	Cadillac
 tec_gps_stand	Easy	What does 'GPS' stand for?	Global Positioning System	General Positioning Satellite	Global Pathfinding Service	Geo Pointing System
@@ -120,7 +119,6 @@ tec_german_inventor_built	Expert	Which German inventor built the 'running machin
 tec_horse_italian_sports	Expert	The horse on an Italian sports car badge was first painted on the plane of which World War I fighter ace?	Francesco Baracca	Manfred von Richthofen	Eddie Rickenbacker	Georges Guynemer
 tec_luxury_car_brand	Expert	Which luxury car brand grew out of a company that Henry Ford walked away from in 1902?	Cadillac	Lincoln	Buick	Packard
 tec_1896_english_driver	Expert	In 1896, an English driver got one of the first speeding fines. Roughly how fast was he going?	About 8 mph	About 20 mph	About 40 mph	About 70 mph
-tec_soviet_probe_land	Expert	Which Soviet probe was the first to land softly on another planet, Venus, in 1970?	Venera 7	Mars 3	Luna 9	Vega 1
 tec_toyoda_family_car	Expert	Why did the Toyoda family's car company take the name 'Toyota' in the 1930s?	In katakana it takes a lucky 8 strokes	A badge maker misspelled the name	'Toyoda' was taken by a rival firm	It means 'swift wheel' in Japanese
 tec_ariane_rocket_destroy	Expert	Why did the first Ariane 5 rocket destroy itself about 40 seconds after launch in 1996?	A number too big for its software	A bird hit one of its engines	Lightning struck the rocket	A fuel valve froze shut
 tec_1935_world_parking	Expert	In 1935, the world's first parking meters went up in which city?	Oklahoma City	New York	London	Chicago

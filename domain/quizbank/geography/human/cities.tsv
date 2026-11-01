@@ -48,6 +48,25 @@ geo_city_populous_european	Easy	Which city is the most populous in the European 
 geo_italian_city_home	Easy	Which Italian city is home to the most famous leaning tower in the world?	Pisa	Bologna	Venice	Florence
 geo_city_street_lined	Easy	Which city's most famous street, lined with stalls and street performers, is Las Ramblas?	Barcelona	Madrid	Lisbon	Seville
 geo_country_city_salzburg	Easy	In which country is the city of Salzburg?	Austria	Germany	Switzerland	Czechia
+cap_budapest_dunaj	Easy	Which capital city grew out of two towns, Buda and Pest, on the Danube?	Budapest	Bucharest	Belgrade	Bratislava
+cap_kreml	Easy	In which capital city is the Kremlin?	Moscow	Kyiv	Minsk	Saint Petersburg
+cap_zakazane_miasto	Easy	In which capital city is the Forbidden City?	Beijing	Tokyo	Seoul	Shanghai
+cap_miasto_swiatla	Easy	Which capital city is nicknamed 'the City of Light'?	Paris	Rome	Vienna	Madrid
+cap_wieczne_miasto	Easy	Which capital city is nicknamed 'the Eternal City'?	Rome	Athens	Jerusalem	Istanbul
+cap_capital_city_stands	Easy	Which capital city stands on the River Tiber?	Rome	Athens	Madrid	Lisbon
+cap_capital_city_national	Easy	In which capital city are the National Mall and the Lincoln Memorial?	Washington, D.C.	Philadelphia	New York	Boston
+cap_capital_city_shibuya	Easy	In which capital city is Shibuya Crossing, where thousands of people cross the street at once?	Tokyo	Seoul	Bangkok	Beijing
+cap_capital_city_must	Easy	In which capital city must black-cab drivers pass a famously tough street-memory test called 'the Knowledge'?	London	Dublin	Edinburgh	Paris
+cap_capital_city_gave	Easy	Which capital city gave its name to the 'syndrome' in which hostages come to bond with their captors?	Stockholm	Oslo	Helsinki	Copenhagen
+cap_gangnam_district_made	Easy	Gangnam, the district made world-famous by a 2012 hit song, is part of which capital?	Seoul	Tokyo	Beijing	Bangkok
+cap_heathrow_gatwick_airports	Easy	Heathrow and Gatwick airports serve which capital city?	London	Dublin	Edinburgh	Amsterdam
+cap_bird_nest_stadium	Easy	The 'Bird's Nest' stadium was built for the 2008 Olympics in which capital?	Beijing	Tokyo	Seoul	Bangkok
+capx_plac_czerwony	Easy	Which famous square lies at the heart of Moscow?	Red Square	Tiananmen Square	Palace Square	Freedom Square
+capx_tiananmen	Easy	Which huge square lies at the heart of Beijing?	Tiananmen Square	Red Square	Times Square	Wenceslas Square
+capx_dublin_guinness	Easy	Which capital city is home to the Guinness Storehouse brewery?	Dublin	London	Edinburgh	Cardiff
+capx_fontanna_trevi	Easy	Visitors to Rome toss coins over their shoulder into which fountain?	The Trevi Fountain	The Fountain of Neptune	The Four Rivers Fountain	The Fountain of Youth
+capx_kair_piramidy	Easy	On the edge of which capital city do the Pyramids of Giza stand?	Cairo	Khartoum	Tripoli	Amman
+capy_hawana	Easy	Which capital city is famous for streets full of 1950s American cars?	Havana	Mexico City	San Juan	Panama City
 wh_angkor_wat	Medium	In which country is the Angkor Wat temple complex located?	Cambodia	Thailand	Vietnam	India
 geocmp_miasto_azja	Medium	Which of these urban areas is the most populous?	Delhi	Bangkok	Seoul	Istanbul
 geocmp_najdalej_polnoc_nordyckie	Medium	Which of these cities lies furthest north?	Helsinki	Oslo	Stockholm	Copenhagen
@@ -140,6 +159,34 @@ geo_mostar_old_bridge	Medium	Mostar's famous Old Bridge, destroyed in 1993 and l
 geo_japanese_city_golden	Medium	In which Japanese city is the Golden Pavilion, Kinkaku-ji?	Kyoto	Tokyo	Nara	Osaka
 geo_country_world_oldest	Medium	Which country has the world's oldest continuously inhabited cities, including Damascus?	Syria	Iraq	Egypt	Lebanon
 geo_city_painted_ladies	Medium	In which US city do the 'Painted Ladies', a famous row of colourful Victorian houses, stand?	San Francisco	Boston	Chicago	Philadelphia
+capx_trafalgar	Medium	Nelson's Column stands in which London square?	Trafalgar Square	Piccadilly Circus	Leicester Square	Covent Garden
+capy_berlin_mis	Medium	Which animal appears on the coat of arms of Berlin?	A bear	An eagle	A lion	A wolf
+cap_bob_marley_former	Medium	Bob Marley's former home, now a museum, is in which capital city?	Kingston	Havana	Nassau	Port of Spain
+cap_merlion_statue_lion	Medium	The Merlion, a statue with a lion's head and a fish's body, is the symbol of which capital?	Singapore	Bangkok	Manila	Jakarta
+cap_capital_main_airport	Medium	Which capital's main airport is called Schiphol?	Amsterdam	Copenhagen	Brussels	Oslo
+cap_capital_hofburg_old	Medium	In which capital is the Hofburg, the old Habsburg palace?	Vienna	Budapest	Prague	Munich
+cap_capital_temple_heaven	Medium	In which capital is the Temple of Heaven?	Beijing	Seoul	Tokyo	Hanoi
+cap_sztokholm_wyspy	Medium	Which capital city is spread across 14 islands?	Stockholm	Copenhagen	Helsinki	Oslo
+cap_manneken	Medium	In which capital city is the Manneken Pis statue?	Brussels	Amsterdam	Copenhagen	Bern
+cap_petronas	Medium	In which capital city are the Petronas Towers?	Kuala Lumpur	Singapore	Jakarta	Bangkok
+cap_most_karola	Medium	In which capital city is the Charles Bridge?	Prague	Vienna	Budapest	Warsaw
+cap_belfast_titanic	Medium	In which city, now the capital of Northern Ireland, was the Titanic built?	Belfast	Dublin	Glasgow	Liverpool
+cap_bangkok_palac	Medium	In which capital city is the Grand Palace with its Emerald Buddha temple?	Bangkok	Hanoi	Phnom Penh	Yangon
+cap_tivoli	Medium	In which capital city is the Tivoli Gardens amusement park?	Copenhagen	Oslo	Stockholm	Vienna
+capx_praga_zegar	Medium	Which capital city has the oldest astronomical clock still working, dating from 1410?	Prague	Vienna	Bern	Budapest
+capx_atomium	Medium	Which capital city is home to the Atomium, a giant model of an iron crystal?	Brussels	Paris	Berlin	Amsterdam
+capx_siedem_wzgorz	Medium	Rome is famously said to be built on how many hills?	Seven	Three	Twelve	Five
+capy_wieden_kawiarnie	Medium	Which capital's grand coffee houses are listed by UNESCO as a cultural tradition?	Vienna	Rome	Paris	Budapest
+capy_praga_wieze	Medium	Which capital city is nicknamed 'the City of a Hundred Spires'?	Prague	Vienna	Budapest	Riga
+capy_budapeszt_termy	Medium	Which capital is famous for thermal baths such as the Szechenyi Baths?	Budapest	Prague	Vienna	Sofia
+cap_capital_city_home_3	Medium	Which capital city is the home of fado, the mournful Portuguese song style?	Lisbon	Madrid	Rome	Athens
+cap_capital_nobel_prizes	Medium	In which capital are most of the Nobel Prizes handed out each December?	Stockholm	Oslo	Copenhagen	Helsinki
+cap_capital_city_see	Medium	In which capital city can you see the Belem Tower and ride the old Tram 28?	Lisbon	Porto	Madrid	Seville
+cap_giant_steel_outline	Medium	A giant steel outline of Che Guevara's face looks over Revolution Square in which capital?	Havana	La Paz	Caracas	Managua
+cap_capital_city_encircled	Medium	Which capital city is encircled by the grand boulevard called the Ringstrasse?	Vienna	Budapest	Prague	Berlin
+lmk_stolica_sri_lanka_handlowa	Medium	Which city is Sri Lanka's largest city and commercial centre?	Colombo	Kandy	Galle	Jaffna
+capy_nairobi_park	Medium	Which capital city has a national park with lions and giraffes right beside its skyline?	Nairobi	Addis Ababa	Pretoria	Kampala
+cap_capital_city_casa	Medium	In which capital city is the Casa Rosada, the pink presidential palace?	Buenos Aires	Montevideo	Santiago	Lima
 wh_timbuktu	Hard	In which country is the historic city of Timbuktu?	Mali	Niger	Chad	Mauritania
 geocmp_najdalej_poludnie	Hard	Which of these cities lies furthest south?	Auckland	Sydney	Cape Town	Buenos Aires
 geocmp_stolica_najdalej_poludnie	Hard	Which of these capitals lies furthest south?	Wellington	Canberra	Santiago	Pretoria
@@ -182,6 +229,30 @@ geo_fuggerei_oldest_social	Hard	The Fuggerei, the oldest social housing still in
 geo_southern_italian_town	Hard	Which southern Italian town's ancient cave dwellings, the Sassi, were once called 'the shame of Italy'?	Matera	Alberobello	Lecce	Tropea
 geo_elbphilharmonie_concert_hall	Hard	The Elbphilharmonie, a concert hall built on top of an old dockside warehouse, is the landmark of which city?	Hamburg	Bremen	Rotterdam	Antwerp
 geo_italian_city_romans	Hard	Which Italian city was known to the Romans as Mediolanum?	Milan	Turin	Verona	Bologna
+cap_european_capital_hosts	Hard	Which European capital hosts the headquarters of OPEC?	Vienna	Bern	London	Brussels
+cap_capital_city_home	Hard	Which capital city is home to the Spanish Riding School and its white Lipizzaner horses?	Vienna	Madrid	Budapest	Prague
+cap_capital_medieval_old	Hard	In which capital is the medieval old town called Gamla stan?	Stockholm	Oslo	Copenhagen	Tallinn
+cap_capital_home_palace	Hard	Which capital is home to the Palace of the Parliament, one of the heaviest buildings in the world?	Bucharest	Budapest	Belgrade	Sofia
+cap_capital_city_home_2	Hard	Which capital city is home to the vast Sheikh Zayed Grand Mosque?	Abu Dhabi	Doha	Riyadh	Muscat
+cap_capital_home_vigeland	Hard	Which capital is home to the Vigeland sculpture park?	Oslo	Stockholm	Copenhagen	Helsinki
+cap_capital_see_medieval	Hard	In which capital can you see the medieval 'Book of Kells'?	Dublin	Edinburgh	London	Cardiff
+cap_washington_cherry_blossom	Hard	Washington, D.C.'s famous cherry blossom trees were a 1912 gift from which city?	Tokyo	Kyoto	Osaka	Seoul
+cap_capital_receives_dutch	Hard	Which capital receives Dutch tulip bulbs every year, as thanks for sheltering a Dutch princess in World War II?	Ottawa	London	Washington, D.C.	Canberra
+cap_mythical_creature_symbol	Hard	Which mythical creature is the symbol of Ljubljana, guarding a famous bridge there?	A dragon	A griffin	A unicorn	A phoenix
+cap_andean_capital_uses	Hard	Which Andean capital uses the world's largest urban cable-car network as everyday public transport?	La Paz	Quito	Bogota	Lima
+cap_capital_city_keeps	Hard	Which capital city keeps live bears in a park by its river, as its heraldic animal?	Bern	Vienna	Helsinki	Madrid
+cap_capital_nicknamed_little	Hard	Which capital was nicknamed 'Little Paris' for its belle epoque boulevards?	Bucharest	Sofia	Belgrade	Budapest
+capx_meksyk_jezioro	Hard	Mexico City was built on the site of what?	A drained lake	A volcano crater	An old silver mine	A desert oasis
+capx_oslo_nobel	Hard	In which capital city is the Nobel Peace Prize awarded?	Oslo	Stockholm	Copenhagen	Geneva
+capy_holmenkollen	Hard	Which capital city has the famous Holmenkollen ski jump?	Oslo	Stockholm	Helsinki	Vienna
+capy_wellington_wiatr	Hard	Which capital is famous as one of the windiest cities in the world?	Wellington	Reykjavik	Oslo	Dublin
+cap_capital_home_oldest	Hard	Which capital is home to the oldest cathedral in the Americas, completed in 1541?	Santo Domingo	Havana	Mexico City	Lima
+cap_capital_city_gyeongbokgung	Hard	In which capital city is the Gyeongbokgung royal palace?	Seoul	Tokyo	Beijing	Pyongyang
+cap_capital_city_once	Hard	Which capital city was once nicknamed 'the Paris of the Middle East'?	Beirut	Damascus	Amman	Baghdad
+cap_capital_said_world	Hard	Which capital is said to have the world's highest concentration of Art Nouveau buildings?	Riga	Vienna	Prague	Brussels
+cap_capital_old_town	Hard	Which capital's old town grew around a hilltop fortress called the Kalemegdan?	Belgrade	Sarajevo	Skopje	Sofia
+capy_unia_afrykanska	Hard	In which capital city is the headquarters of the African Union?	Addis Ababa	Nairobi	Cairo	Pretoria
+capy_rideau	Hard	Which canal in Ottawa turns into a skating rink almost 8 km long in winter?	The Rideau Canal	The Welland Canal	The Lachine Canal	The Erie Canal
 geocmp_najwyzej_polozona_stolica	Expert	Which of these is the highest-lying capital city?	La Paz	Quito	Bogota	Mexico City
 geo_baku	Expert	Which national capital lies below sea level?	Baku	Cairo	Tehran	Tashkent
 geo_israeli_city_white	Expert	Which Israeli city is called 'the White City' for its thousands of Bauhaus buildings?	Tel Aviv	Haifa	Eilat	Jerusalem
@@ -203,3 +274,7 @@ geo_1950_circus_elephant	Expert	In 1950, a circus elephant called Tuffi jumped o
 geo_country_great_mosque	Expert	In which country is the Great Mosque of Djenne, the world's largest mud-brick building?	Mali	Niger	Morocco	Senegal
 geo_nearly_all_residents	Expert	Nearly all the residents of Whittier, Alaska, live in what?	A single 14-storey building	Houseboats in the harbour	Underground bunkers	Old railway carriages
 geo_spanish_city_roman	Expert	Which Spanish city has a Roman aqueduct of more than 160 arches striding through its centre?	Segovia	Toledo	Salamanca	Tarragona
+cap_capital_stands_golden	Expert	In which capital stands the golden Pha That Luang stupa, a national symbol?	Vientiane	Phnom Penh	Bangkok	Yangon
+cap_capital_city_famously	Expert	Which capital city famously has no traffic lights, its junctions run by white-gloved police instead?	Thimphu	Kathmandu	Ulaanbaatar	Vientiane
+cap_capital_patuxai_war	Expert	Which capital's Patuxai war monument, built with American cement meant for an airport, is nicknamed 'the vertical runway'?	Vientiane	Phnom Penh	Hanoi	Yangon
+cap_capital_city_holds	Expert	Which capital city holds the record for the most buildings clad in white marble?	Ashgabat	Astana	Baku	Tashkent

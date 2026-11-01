@@ -19,6 +19,8 @@ tec_donkey_kong	Easy	In which classic arcade game does a gorilla throw barrels a
 pop_super_mario_games	Easy	In Super Mario games, what does a star do for Mario?	Makes him invincible for a while	Gives him an extra life	Lets him throw fireballs	Makes him twice as big
 pop_gta	Easy	What does the game title 'GTA' stand for?	Grand Theft Auto	Great Travel Adventure	Global Tank Attack	Grand Tour Academy
 pop_lara_croft	Easy	Which video game heroine is a tomb-raiding archaeologist?	Lara Croft	Samus Aran	Chun-Li	Jill Valentine
+tec_classic_windows_game	Easy	In which classic Windows game do you clear a grid of squares without setting off a hidden bomb?	Minesweeper	Solitaire	FreeCell	Pinball
+tec_tetris_happens_fill	Easy	In 'Tetris', what happens when you fill a complete horizontal row with blocks?	It disappears	It moves to the top	It splits in two	It flips upside down
 day_minecraft_sprzedaz	Medium	Which is the best-selling video game of all time?	Minecraft	Grand Theft Auto V	Wii Sports	Mario Kart 8
 trv2_tetris_kraj	Medium	In which country was Tetris created?	The Soviet Union	Japan	The United States	Finland
 pop_pacman_pastylka	Medium	In Pac-Man, what does Pac-Man eat so he can chase the ghosts?	A power pellet	A cherry	A mushroom	A star
@@ -67,6 +69,12 @@ pop_street_fighter_ryu	Medium	In 'Street Fighter', what does Ryu shout as he hur
 pop_sonic_hedgehog_red	Medium	What is the name of Sonic the Hedgehog's red echidna rival?	Knuckles	Shadow	Silver	Espio
 pop_space_invaders	Medium	Which 1978 Japanese arcade hit had players shoot rows of descending aliens?	Space Invaders	Galaxian	Asteroids	Defender
 pop_portal_ciasto	Medium	In the game 'Portal', what is the famous promised reward that turns out to be a lie?	Cake	Freedom	A medal	Pizza
+tec_sonic_hedgehog_created	Medium	Sonic the Hedgehog was created to compete with which other company's star character?	Nintendo's Mario	Capcom's Mega Man	Namco's Pac-Man	Konami's Frogger
+tec_pokemon_shortening_japanese	Medium	The name 'Pokemon' is a shortening of which Japanese brand name?	Pocket Monsters	Power Monsters	Pocket Mutants	Portable Monsters
+tec_game_players_stomp	Medium	In which game do players stomp on arrows on a floor mat in time to music?	Dance Dance Revolution	Dance Central	Space Channel 5	Just Dance
+tec_video_game_played	Medium	Which was the first video game played in space, on a Game Boy in 1993?	Tetris	Super Mario Land	Pong	Pac-Man
+pol_cd_projekt	Medium	Which Polish studio made 'The Witcher 3' and 'Cyberpunk 2077'?	CD Projekt Red	Techland	11 bit studios	People Can Fly
+mat_different_shapes_falling	Medium	How many different shapes of falling block are there in classic Tetris?	7	5	6	8
 pop_angry_birds_kraj	Hard	'Angry Birds' was created by a studio from which country?	Finland	Sweden	Estonia	Denmark
 pop_simlish	Hard	What is the made-up language spoken in 'The Sims' called?	Simlish	Simspeak	Sollish	Gibberese
 pop_konami	Hard	The cheat 'Up, Up, Down, Down, Left, Right, Left, Right, B, A' is famous as what?	The Konami Code	The Nintendo Key	The Sega Secret	The Atari Trick
@@ -75,7 +83,6 @@ pop_bulbasaur	Hard	Which Pokemon is number 001 in the National Pokedex?	Bulbasau
 pop_doom	Hard	Which 1993 shooter about a space marine fighting demons is famous for being ported to almost any device?	Doom	Quake	Wolfenstein 3D	Half-Life
 pop_tom_nook	Hard	In 'Animal Crossing', which tanuki sells you a house on a loan?	Tom Nook	K.K. Slider	Isabelle	Blathers
 pop_game_boy_tetris	Hard	Outside Japan, which game came bundled with the original Game Boy?	Tetris	Super Mario Land	Pokemon Red	Dr. Mario
-pop_playstation_1994	Hard	In which year did the first PlayStation go on sale in Japan?	1994	1989	1999	2001
 pp_los_santos	Hard	Which fictional city, based on Los Angeles, is the setting of 'GTA V'?	Los Santos	Liberty City	Vice City	San Fierro
 tec_notch	Hard	Who created Minecraft?	Markus 'Notch' Persson	Hideo Kojima	Gabe Newell	Shigeru Miyamoto
 pop_falling_pieces_tetris	Hard	What are the falling pieces in Tetris officially called?	Tetrominoes	Tetrads	Quadrominoes	Blockoids
@@ -83,7 +90,6 @@ pop_link_trusty_horse	Hard	What is the name of Link's trusty horse in 'The Legen
 pop_sarcastic_runs_test	Hard	What is the name of the sarcastic AI that runs the test chambers in 'Portal'?	GLaDOS	SHODAN	Cortana	HAL 9000
 pop_pokemon_red_blue	Hard	In Pokemon Red and Blue, in which town does the player's journey begin?	Pallet Town	Viridian City	Pewter City	Cerulean City
 pop_video_game_set	Hard	Which video game is set in Rapture, a ruined city at the bottom of the ocean?	BioShock	Fallout 3	Dead Space	Subnautica
-pop_north_america_sega	Hard	In North America, Sega's Mega Drive console was sold under which name?	The Genesis	The Saturn	The Dreamcast	The Master System
 pop_legend_zelda_old	Hard	In the first 'Legend of Zelda', what does the old man in the cave hand Link, saying 'It's dangerous to go alone'?	A sword	A shield	A map	A lantern
 pop_thousands_unsold_copies	Hard	Where were thousands of unsold copies of Atari's 'E.T.' game dug up in 2014?	In a New Mexico landfill	Under a Las Vegas car park	In an old Alaskan gold mine	Beneath Atari's own offices
 pop_meme_press_pay	Hard	The meme 'Press F to pay respects' comes from a funeral scene in which game series?	Call of Duty	Battlefield	Halo	Medal of Honor
@@ -111,6 +117,14 @@ pop_et_atari	Hard	Which 1982 Atari game, rushed out in about five weeks, is blam
 pp_metal_gear	Hard	Which video game series stars the stealthy soldier Solid Snake?	Metal Gear	Splinter Cell	Hitman	Far Cry
 pp_agent_47	Hard	In the 'Hitman' games, the bald assassin is known by which number?	47	007	13	99
 pop_original_1981_donkey	Hard	In the original 1981 'Donkey Kong', who was the woman the hero climbed to rescue?	Pauline	Peach	Daisy	Rosalina
+tec_japanese_company_created	Hard	Which Japanese company created Pac-Man?	Namco	Nintendo	Sega	Taito
+tec_mario_given_moustache	Hard	Why was Mario given a moustache and a cap in 1981?	They were easy to draw with few pixels	He was based on Nintendo's president	Italian plumbers wore them then	Test players voted for the look
+tec_warren_robinett_secretly	Hard	Why did Warren Robinett hide his name in Atari's 'Adventure' (1980), creating a famous Easter egg?	Atari did not credit its programmers	He had been fired before release	He wanted to prove he wrote it first	It was a bet with a colleague
+tec_minecraft_creeper_born	Hard	In Minecraft, the Creeper was born from a coding mistake while its creator was making which animal?	A pig	A cow	A sheep	A chicken
+tec_tetris_blends_greek	Hard	The name 'Tetris' blends the Greek 'tetra' with the name of which sport?	Tennis	Tetherball	Polo	Cricket
+tec_aliens_1978_arcade	Hard	Why did the aliens in the 1978 arcade hit 'Space Invaders' speed up as you shot them down?	Fewer aliens let the chip draw faster	Its designer copied a film scene	Arcade owners demanded it	Players asked for it in tests
+tec_mario_said	Hard	Mario is said to have been named after whom?	Nintendo of America's landlord	A Nintendo office cleaner	The company founder's brother	A pizza chef in Kyoto
+tec_company_created_1978	Hard	Which company created the 1978 arcade hit 'Space Invaders'?	Taito	Namco	Atari	Konami
 pop_will_wright	Expert	Which game designer created 'SimCity' and 'The Sims'?	Will Wright	Sid Meier	Peter Molyneux	John Carmack
 pop_mew	Expert	Which rare Pokemon was secretly slipped into Red and Blue by a programmer at the last minute?	Mew	Mewtwo	Ditto	Celebi
 pop_plumbob	Expert	What is the green diamond floating over a Sim's head called?	A plumbob	A simgem	A mood crystal	A lifepoint
@@ -124,3 +138,7 @@ pop_feature_street_fighter	Expert	Which feature of 'Street Fighter II' began as 
 pop_studio_develops_main	Expert	Which studio develops the main series of Pokemon games?	Game Freak	HAL Laboratory	Intelligent Systems	Retro Studios
 pop_super_mario_bros_2	Expert	In 'Super Mario Bros.' (1985), the bushes are the same graphic as what, simply recoloured green?	The clouds	The pipes	The coins	The castles
 pop_type_tune_game	Expert	The famous 'Type A' tune of Game Boy 'Tetris' is a Russian folk song called what?	Korobeiniki	Katyusha	Ochi Chyornye	Polyushko Pole
+tec_spacewar	Expert	Which early video game, written in 1962 on a PDP-1 computer, pitted two spaceships against each other?	Spacewar!	Asteroids	Space Invaders	Galaxian
+tec_tennis_two_early	Expert	'Tennis for Two', an early video game from 1958, was shown on what?	An oscilloscope	A television set	A radar screen	A punched-card printer
+tec_1971_game_made	Expert	Which 1971 game, made by Atari's future founders, was the first arcade video game sold commercially?	Computer Space	Pong	Spacewar!	Gun Fight
+tec_game_credited_video	Expert	Which game is credited with the first video game cutscenes, in 1980?	Pac-Man	Donkey Kong	Space Invaders	Asteroids

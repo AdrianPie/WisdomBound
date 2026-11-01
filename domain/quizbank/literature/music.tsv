@@ -11,6 +11,7 @@ day_sopran_glos	Easy	Which is the highest female singing voice?	Soprano	Alto	Mez
 lit_beethoven	Easy	Which composer kept writing great music after going almost completely deaf?	Ludwig van Beethoven	Wolfgang Amadeus Mozart	Frederic Chopin	Franz Schubert
 litx_piata_symfonia	Easy	Whose Fifth Symphony opens with the famous 'da-da-da-DUM'?	Beethoven	Mozart	Bach	Brahms
 lit_cappella_mean_music	Easy	What does 'a cappella' mean in music?	Singing without instruments	Singing in a church choir	Singing very softly	Singing in Italian
+pol2_chopin_instrument	Easy	Which instrument did Frederic Chopin compose for above all?	The piano	The violin	The organ	The cello
 lit_vivaldi	Medium	Who composed 'The Four Seasons'?	Antonio Vivaldi	Johann Sebastian Bach	Wolfgang Amadeus Mozart	Joseph Haydn
 litx_mozart_salzburg	Medium	In which city was Mozart born?	Salzburg	Vienna	Prague	Munich
 litx_czajkowski	Medium	Which composer wrote the ballets 'Swan Lake' and 'The Nutcracker'?	Pyotr Tchaikovsky	Sergei Prokofiev	Igor Stravinsky	Nikolai Rimsky-Korsakov
@@ -29,7 +30,6 @@ lit_composed_moonlight_sonata	Medium	Who composed the 'Moonlight Sonata'?	Beetho
 lit_instrument_niccolo_paganini	Medium	Which instrument did Niccolo Paganini, rumoured to have sold his soul to the devil, play?	The violin	The piano	The cello	The flute
 day_forte_znaczenie	Medium	In music, what does 'forte' mean?	Loud	Fast	Soft	Slowly
 litx_pieciolinia	Medium	How many lines make up a musical stave?	Five	Four	Six	Seven
-lit_german_composer_scored	Medium	Which German composer scored 'The Lion King', 'Gladiator' and 'Inception'?	Hans Zimmer	John Williams	Howard Shore	James Horner
 lit_italian_musical_term	Medium	Which Italian musical term tells players to get gradually louder?	Crescendo	Diminuendo	Staccato	Legato
 lit_tchaikovsky_piece_calls	Medium	Which Tchaikovsky piece calls for real cannon fire?	The 1812 Overture	Swan Lake	The Nutcracker	Romeo and Juliet
 litx_carmen	Medium	In which Spanish city is the opera 'Carmen' set?	Seville	Madrid	Barcelona	Valencia
@@ -39,6 +39,8 @@ lit_instrument_indian_musician	Medium	Which instrument is the Indian musician Ra
 lit_composed_opera_aida	Medium	Who composed the opera 'Aida'?	Giuseppe Verdi	Giacomo Puccini	Richard Wagner	Gioachino Rossini
 lit_composer_died_finishing	Medium	Which composer died before finishing his Requiem, leaving a pupil to complete it?	Wolfgang Amadeus Mozart	Franz Schubert	Joseph Haydn	Felix Mendelssohn
 lit_handel_water_music	Medium	Where was Handel's 'Water Music' first played for King George I?	On barges on the Thames	At a fountain garden party	At the launch of a warship	At a spa in Bath
+pop_italian_tenor_made	Medium	Which Italian tenor made 'Nessun dorma' famous at the 1990 World Cup?	Luciano Pavarotti	Andrea Bocelli	Placido Domingo	Enrico Caruso
+capx_wieden_muzyka	Medium	Which capital was home to Mozart, Beethoven and Schubert for much of their careers?	Vienna	Berlin	Prague	Paris
 litx_oboj	Hard	Which instrument usually plays the note the whole orchestra tunes to?	The oboe	The violin	The piano	The trumpet
 lit_composed_bolero	Hard	Who composed 'Bolero'?	Maurice Ravel	Claude Debussy	Erik Satie	Camille Saint-Saens
 lit_composed_opera_madama	Hard	Who composed the opera 'Madama Butterfly'?	Giacomo Puccini	Giuseppe Verdi	Gioachino Rossini	Vincenzo Bellini

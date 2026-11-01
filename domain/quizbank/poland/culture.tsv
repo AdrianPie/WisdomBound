@@ -3,7 +3,6 @@
 id	difficulty	prompt	correct	wrong1	wrong2	wrong3
 pol_lit2_lokomotywa	Easy	Who wrote the poem 'The Locomotive'?	Julian Tuwim	Jan Brzechwa	Adam Mickiewicz	Maria Konopnicka
 pol_lit2_akademia_pana_kleksa	Easy	Who wrote 'The Academy of Mr. Kleks'?	Jan Brzechwa	Julian Tuwim	Kornel Makuszynski	Janusz Korczak
-pol2_chopin_instrument	Easy	Which instrument did Frederic Chopin compose for above all?	The piano	The violin	The organ	The cello
 pol3_pan_tadeusz	Easy	Who wrote 'Pan Tadeusz'?	Adam Mickiewicz	Juliusz Slowacki	Henryk Sienkiewicz	Boleslaw Prus
 pol_bolek_lolek	Easy	Which Polish cartoon follows two adventurous brothers?	Bolek and Lolek	Reksio	Mis Uszatek	Pampalini
 pol_matolek	Easy	What kind of animal is Koziolek Matolek, who searches for the town of Pacanow?	A goat	A dog	A bear	A hare
@@ -67,7 +66,6 @@ pol_lit3_krzyzacy_bohater	Medium	Who is one of the main characters of Sienkiewic
 ref_pol_kopernik_torun	Medium	In which city was Nicolaus Copernicus born?	Torun	Krakow	Frombork	Gdansk
 pol_techland	Medium	Which Polish studio made the zombie game 'Dying Light'?	Techland	CD Projekt Red	11 bit studios	Bloober Team
 pol_lukasiewicz	Medium	What did Ignacy Lukasiewicz invent in the 1850s?	The modern kerosene lamp	The bulletproof vest	The windscreen wiper	The electric telegraph
-pol_pianista	Medium	Which director won an Oscar for 'The Pianist'?	Roman Polanski	Andrzej Wajda	Krzysztof Kieslowski	Agnieszka Holland
 pol_mazurek_taniec	Medium	Which Polish folk dance in triple time inspired dozens of Chopin's piano pieces?	The mazurka	The polka	The krakowiak	The waltz
 pol_polish_band_1960s	Medium	Which Polish band of the 1960s was nicknamed 'the Polish Beatles'?	Czerwone Gitary	Skaldowie	Trubadurzy	No To Co
 pol_wrote_kamienie_szaniec	Medium	Who wrote 'Kamienie na szaniec' (Stones for the Rampart)?	Aleksander Kaminski	Krzysztof Kamil Baczynski	Tadeusz Borowski	Zofia Kossak
@@ -97,7 +95,6 @@ pol_talking_starling_academy	Medium	What is the name of the talking starling in 
 pol_wrote_tomek_adventure	Medium	Who wrote the 'Tomek' adventure novels, starting with 'Tomek in the Land of Kangaroos'?	Alfred Szklarski	Zbigniew Nienacki	Adam Bahdaj	Kornel Makuszynski
 pol_wrote_rota_patriotic	Medium	Who wrote 'Rota', the patriotic song that begins 'We will not abandon the land of our kin'?	Maria Konopnicka	Eliza Orzeszkowa	Jozef Wybicki	Adam Mickiewicz
 pol_lit3_gucio_zaczarowany	Medium	Who wrote 'About the Dwarves and Orphan Marysia'?	Maria Konopnicka	Julian Tuwim	Jan Brzechwa	Ignacy Krasicki
-pol_cd_projekt	Medium	Which Polish studio made 'The Witcher 3' and 'Cyberpunk 2077'?	CD Projekt Red	Techland	11 bit studios	People Can Fly
 pol_1970s_series_followed	Medium	Which 1970s TV series followed the engineer Stefan Karwowski?	Czterdziestolatek	Alternatywy 4	Zmiennicy	Wojna domowa
 pol_actor_played_ferdynand	Medium	Which actor played Ferdynand Kiepski for over 20 years?	Andrzej Grabowski	Marian Opania	Jerzy Stuhr	Cezary Pazura
 pol_polish_nun_apostle	Medium	Which Polish nun is known as the 'Apostle of Divine Mercy'?	Faustina Kowalska	Urszula Ledochowska	Jadwiga	Teresa of Calcutta
@@ -156,6 +153,8 @@ polx_bogurodzica	Medium	Which medieval hymn, sung by knights before Grunwald, is
 polx_rej	Medium	Which Renaissance writer declared that Poles 'are not geese' and have their own language?	Mikolaj Rej	Jan Kochanowski	Andrzej Frycz Modrzewski	Piotr Skarga
 pol_wrote_inny_swiat	Medium	Who wrote 'Inny swiat' (A World Apart), about a Soviet labour camp?	Gustaw Herling-Grudzinski	Aleksander Wat	Stanislaw Ignacy Witkiewicz	Jozef Czapski
 pol_lively_heroine_nicknamed	Medium	Which lively heroine, nicknamed 'Hajduczek', marries the little knight in Sienkiewicz's Trilogy?	Basia	Olenka	Helena	Krysia
+lit_quo_vadis	Medium	Who wrote 'Quo Vadis'?	Henryk Sienkiewicz	Wladyslaw Reymont	Stefan Zeromski	Eliza Orzeszkowa
+lit3_quo_vadis_epoka	Medium	In which era is 'Quo Vadis' set?	Ancient Rome under Nero	Medieval Poland	Renaissance Italy	Early modern France
 pol3_nobel_tokarczuk	Hard	What did Olga Tokarczuk win the Nobel Prize for?	Her entire body of literary work	A single historical novel	Journalism	Poetry
 pol_funk	Hard	Which Polish biochemist coined the word 'vitamin' in 1912?	Kazimierz Funk	Ludwik Hirszfeld	Rudolf Weigl	Hilary Koprowski
 pol_gorecki	Hard	Which Polish composer wrote the 'Symphony of Sorrowful Songs'?	Henryk Gorecki	Krzysztof Penderecki	Wojciech Kilar	Witold Lutoslawski

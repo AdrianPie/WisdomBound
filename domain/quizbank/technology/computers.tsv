@@ -16,13 +16,11 @@ tec_standard_computer_keyboard	Easy	On a standard computer keyboard, which is th
 tec_pressing_ctrl_programs	Easy	What does pressing Ctrl + F do in most programs and web browsers?	Finds text	Opens a file	Goes full screen	Adds a favourite
 tec_operating_system_made	Easy	Which operating system made the 'Blue Screen of Death' infamous?	Windows	macOS	Linux	Android
 tec_nintendo_handheld_launched	Easy	Which Nintendo handheld, launched in 2004, had two screens, one of them a touchscreen?	The Nintendo DS	The Game Boy Advance	The Virtual Boy	The Game Boy Color
-tec_classic_windows_game	Easy	In which classic Windows game do you clear a grid of squares without setting off a hidden bomb?	Minesweeper	Solitaire	FreeCell	Pinball
 tec_tech_news_stand	Easy	In tech news, what does 'AI' stand for?	Artificial intelligence	Automated internet	Advanced interface	Analog input
 tec_microsoft_program_making	Easy	What is the name of Microsoft's program for making slide presentations?	PowerPoint	Keynote	Prezi	Word
 tec_firewall_job_computer	Easy	What is a firewall's job on a computer network?	Blocking unwanted network traffic	Cooling down an overheating processor	Backing up your files every night	Making your downloads run faster
 tec_optical_sensors_took	Easy	Before optical sensors took over, what rolled around underneath a computer mouse?	A rubber ball	A small magnet	A felt pad	A glass bead
 tec_computer_mouse_get	Easy	Why did the computer mouse get its name?	Its cable looked like a tail	It was first tested on lab mice	It squeaked when it moved	Its inventor kept pet mice
-tec_tetris_happens_fill	Easy	In 'Tetris', what happens when you fill a complete horizontal row with blocks?	It disappears	It moves to the top	It splits in two	It flips upside down
 tec_stand_headset	Easy	What does 'VR' stand for, as in a VR headset?	Virtual reality	Visual recording	Video replay	Variable resolution
 scicmp_najwiecej_danych	Easy	Which of these holds the most data?	A Blu-ray disc	A CD	A DVD	A floppy disk
 tec_wii	Easy	Which Nintendo console of 2006 was famous for its motion-sensing remote?	The Wii	The GameCube	The Switch	The Nintendo 64
@@ -59,18 +57,14 @@ tec_software_pretends_useful	Medium	What is the name for software that pretends 
 tec_ibm_chess_computer	Medium	What was the name of IBM's chess computer that beat Garry Kasparov in 1997?	Deep Blue	Watson	Deep Thought	AlphaZero
 tec_computing_pioneer_appears	Medium	Which computing pioneer appears on the Bank of England's 50-pound note?	Alan Turing	Ada Lovelace	Charles Babbage	Tim Berners-Lee
 tec_words_typed_using	Medium	Which of these words can be typed using only the top row of letters on a QWERTY keyboard?	TYPEWRITER	KEYBOARDS	COMPUTERS	PROPERTIES
-tec_sonic_hedgehog_created	Medium	Sonic the Hedgehog was created to compete with which other company's star character?	Nintendo's Mario	Capcom's Mega Man	Namco's Pac-Man	Konami's Frogger
-tec_pokemon_shortening_japanese	Medium	The name 'Pokemon' is a shortening of which Japanese brand name?	Pocket Monsters	Power Monsters	Pocket Mutants	Portable Monsters
 tec_games_console_became	Medium	Which games console became infamous for the 'Red Ring of Death' hardware failure?	Xbox 360	PlayStation 3	Nintendo Wii	Sega Dreamcast
 tec_typeface_takes_latin	Medium	Which famous typeface takes its name from the Latin name for Switzerland?	Helvetica	Garamond	Futura	Verdana
 tec_typeface_made_1931	Medium	Which typeface was made in 1931 for a London newspaper and was later the default font in Microsoft Word?	Times New Roman	Arial	Georgia	Calibri
-tec_game_players_stomp	Medium	In which game do players stomp on arrows on a floor mat in time to music?	Dance Dance Revolution	Dance Central	Space Channel 5	Just Dance
 tec_shift_each_letter	Medium	Shift each letter of the film computer HAL one step forward in the alphabet. Which company's name do you get?	IBM	DEC	NEC	AMD
 tec_1982_time_magazine	Medium	In 1982, Time magazine broke tradition by naming what as its 'Machine of the Year'?	The computer	The space shuttle	The video game console	The robot
 tec_company_publishes_sims	Medium	Which company publishes 'The Sims' games?	Electronic Arts	Ubisoft	Activision	Nintendo
 tec_unlike_old_hard	Medium	Unlike an old hard disk drive, what does a solid-state drive (SSD) have none of?	Moving parts	Memory chips	Electric current	Stored files
 tec_four_symbols_face	Medium	Which four symbols are on the face buttons of a PlayStation controller?	Triangle, circle, cross, square	Star, heart, circle, square	A, B, X and Y	Up, down, left, right
-tec_video_game_played	Medium	Which was the first video game played in space, on a Game Boy in 1993?	Tetris	Super Mario Land	Pong	Pac-Man
 tec3_usb_skrot	Medium	What does the abbreviation USB stand for?	Universal Serial Bus	United System Board	Universal System Bus	Unified Serial Base
 day_bity_w_bajcie	Medium	How many bits are in one byte?	Eight	Four	Ten	Sixteen
 tec_enigma_machine	Medium	What did the 'Enigma' machine do?	Encrypt messages	Calculate missile paths	Detect aircraft	Break codes
@@ -98,27 +92,21 @@ tec_best_selling_single	Hard	What is the best-selling single home computer model
 tec_gif_stand	Hard	What does 'GIF' stand for?	Graphics Interchange Format	General Image File	Graphic Internet Frame	Grid Image Format
 tec_green_hill_under	Hard	The green hill under a blue sky in 'Bliss', the famous Windows XP wallpaper, was photographed where?	In California	In Ireland	In New Zealand	In Switzerland
 tec_musician_composed_start	Hard	Which musician composed the start-up sound of Windows 95?	Brian Eno	Jean-Michel Jarre	Hans Zimmer	Vangelis
-tec_warren_robinett_secretly	Hard	Why did Warren Robinett hide his name in Atari's 'Adventure' (1980), creating a famous Easter egg?	Atari did not credit its programmers	He had been fired before release	He wanted to prove he wrote it first	It was a bet with a colleague
 tec_1960s_chatbot_eliza	Hard	The 1960s chatbot ELIZA famously imitated which kind of person?	A psychotherapist	A detective	A schoolteacher	A priest
-tec_minecraft_creeper_born	Hard	In Minecraft, the Creeper was born from a coding mistake while its creator was making which animal?	A pig	A cow	A sheep	A chicken
-tec_tetris_blends_greek	Hard	The name 'Tetris' blends the Greek 'tetra' with the name of which sport?	Tennis	Tetherball	Polo	Cricket
 tec_playstation_grew_out	Hard	The first PlayStation grew out of a CD add-on originally planned for which company's console?	Nintendo	Sega	Atari	NEC
 tec_xbox_began_shortening	Hard	The name 'Xbox' began as a shortening of what?	DirectX Box	Extreme Box	X-Ray Box	Xenon Box
 tec_computer_scientist_popularised	Hard	Which computer scientist popularised the term 'bug' after a real moth was found in a computer?	Grace Hopper	Ada Lovelace	Alan Turing	John von Neumann
 tec_codename_british_code	Hard	What was the codename of the British code-breaking machine built at Bletchley Park in 1943?	Colossus	Enigma	Bombe	Lorenz
 tec_computer_worm_sabotaged	Hard	Which computer worm sabotaged Iranian nuclear centrifuges around 2010?	Stuxnet	WannaCry	Conficker	Mydoom
-tec_aliens_1978_arcade	Hard	Why did the aliens in the 1978 arcade hit 'Space Invaders' speed up as you shot them down?	Fewer aliens let the chip draw faster	Its designer copied a film scene	Arcade owners demanded it	Players asked for it in tests
 tec_scorched_game_boy	Hard	A scorched Game Boy displayed in Nintendo's New York store is famous for what?	Still working after a Gulf War bombing	Being the millionth one ever sold	Belonging to a US president	Being found on Mount Everest
 tec_margaret_hamilton_famously	Hard	Margaret Hamilton was famously photographed beside a stack of printouts as tall as herself. What was printed on them?	The Apollo flight software	The first video game	The code of Windows 1.0	The first web browser
 tec_ethernet_inspired	Hard	The name 'Ethernet' was inspired by what?	The 'ether' once thought to carry light	A chemical used in early cables	The inventor's daughter, Ethel	An old word for a fishing net
-tec_mario_said	Hard	Mario is said to have been named after whom?	Nintendo of America's landlord	A Nintendo office cleaner	The company founder's brother	A pizza chef in Kyoto
 tec_nintendo_console_1995	Hard	Which Nintendo console of 1995 showed its games in red-and-black 3D and was dropped within a year?	Virtual Boy	Nintendo 64DD	Famicom Disk System	Game Boy Light
 tec_placeholder_text_lorem	Hard	The placeholder text 'Lorem ipsum' is a scrambled passage by which Roman writer?	Cicero	Virgil	Seneca	Ovid
 tec_godfather_shared_2024	Hard	Which 'godfather of AI' shared the 2024 Nobel Prize in Physics for work on neural networks?	Geoffrey Hinton	Yann LeCun	Yoshua Bengio	Demis Hassabis
 tec_system_google_deepmind	Hard	Which AI system from Google DeepMind, which predicts how proteins fold, earned its makers a 2024 Nobel Prize?	AlphaFold	AlphaZero	AlphaStar	Gemini
 tec_programming_language_used	Hard	Which programming language, used by the US military, is named after Lord Byron's daughter?	Ada	Grace	Byron	Augusta
 tec_programming_language_used_2	Hard	Which programming language, much used to teach coding in the 1970s and 80s, is named after a French mathematician?	Pascal	BASIC	Fortran	Logo
-tec_company_created_1978	Hard	Which company created the 1978 arcade hit 'Space Invaders'?	Taito	Namco	Atari	Konami
 tec_pentium_chip_got	Hard	The Pentium chip got its name because it was Intel's what?	Fifth generation	Fastest model	Pen-friendly model	Pentagon contract
 scicmp_nie_jezyk_programowania	Hard	Which of these is NOT a programming language?	Docker	Python	Java	Ruby
 trv2_python_nazwa	Hard	The programming language Python is named after what?	A comedy troupe	A snake	Its creator's pet	A Greek myth
@@ -133,9 +121,7 @@ tec_run_big_cats	Hard	After a run of big cats ending with Mountain Lion, what we
 tec_country_cheap_credit	Hard	In which country was the cheap, credit-card-sized Raspberry Pi computer created, to teach children coding?	Britain	Finland	Taiwan	Germany
 tec_car_maker_built_2	Hard	Which car maker built ASIMO, a walking humanoid robot that could climb stairs and kick a ball?	Honda	Toyota	Nissan	Hyundai
 tec_microsoft_voice_assistant	Hard	Microsoft named its voice assistant Cortana after an AI character from which video game series?	Halo	Mass Effect	Portal	StarCraft
-tec_japanese_company_created	Hard	Which Japanese company created Pac-Man?	Namco	Nintendo	Sega	Taito
 tec_video_game_console	Hard	Which video game console became the best-selling of all time, with over 150 million units?	PlayStation 2	Nintendo DS	Game Boy	Wii
-tec_mario_given_moustache	Hard	Why was Mario given a moustache and a cap in 1981?	They were easy to draw with few pixels	He was based on Nintendo's president	Italian plumbers wore them then	Test players voted for the look
 tec_british_company_made	Hard	Which British company made the ZX Spectrum home computer?	Sinclair Research	Acorn Computers	Amstrad	Commodore
 tec_console_launched_1998	Hard	Which console, launched in 1998, was the last ever made by Sega?	Dreamcast	Saturn	Game Gear	Master System
 tec_handheld_console_launched	Hard	Which handheld console, launched in 2004, played games from small optical discs called UMDs?	The PlayStation Portable	The Nintendo DS	The PlayStation Vita	The Nokia N-Gage
@@ -147,6 +133,8 @@ tec2_kwantowy_qubit	Hard	How does a qubit differ from a classical bit?	It can be
 dpt_tec_zero_day	Hard	What is a zero-day vulnerability?	A flaw with no fix available yet	A bug that takes a day to fix	An attack lasting under a day	A password that expires at once
 tec_cobol	Hard	Which business programming language did Grace Hopper help create?	COBOL	Fortran	BASIC	Pascal
 tecy_dyskietka	Hard	Roughly how much data could a standard 3.5-inch floppy disk hold?	1.44 MB	144 MB	14.4 GB	144 KB
+pop_playstation_1994	Hard	In which year did the first PlayStation go on sale in Japan?	1994	1989	1999	2001
+pop_north_america_sega	Hard	In North America, Sega's Mega Drive console was sold under which name?	The Genesis	The Saturn	The Dreamcast	The Master System
 tec_c_jezyk	Expert	Who created the C programming language?	Dennis Ritchie	Bjarne Stroustrup	James Gosling	Guido van Rossum
 tec2_enigma_bomba	Expert	What was the Polish machine for breaking Enigma called?	The cryptologic bomb	Colossus	Difference Engine	Mark I
 tec2_mikroprocesor_pierwszy	Expert	What was Intel's first commercial microprocessor called?	The 4004	The 8086	The Z80	The 6502
@@ -156,7 +144,6 @@ dpt_tec_notacja_o	Expert	What does big O notation describe?	How cost grows with 
 tec_wirus_brain	Expert	What was the name of the first virus for IBM PCs, written in Pakistan in 1986?	Brain	ILOVEYOU	Creeper	Morris
 tec_rok_2038	Expert	In which year will many older 32-bit computer clocks overflow, like a second Y2K?	2038	2030	2048	2100
 tec_unix_1970	Expert	Unix time counts the seconds since which date?	1 January 1970	1 January 1900	1 January 1980	1 January 2000
-tec_spacewar	Expert	Which early video game, written in 1962 on a PDP-1 computer, pitted two spaceships against each other?	Spacewar!	Asteroids	Space Invaders	Galaxian
 tec_arm_acorn	Expert	The ARM chips inside most phones were first designed by which British computer maker?	Acorn Computers	Sinclair Research	Amstrad	Psion
 tec_zuse_z3	Expert	What was Konrad Zuse's 1941 machine, often called the first programmable computer?	The Z3	ENIAC	Colossus	The Harvard Mark I
 tec_very_home_video	Expert	What was the very first home video game console?	The Magnavox Odyssey	The Atari 2600	The Fairchild Channel F	The Intellivision
@@ -172,12 +159,9 @@ tec_programming_languages_come	Expert	In most programming languages, what does 0
 tec_1961_ibm_7094	Expert	In 1961, an IBM 7094 at Bell Labs became famous for singing which song?	'Daisy Bell'	'Happy Birthday to You'	'Yankee Doodle'	'Twinkle, Twinkle, Little Star'
 tec_rust_programming_language	Expert	The Rust programming language is said to be named after what?	A group of fungi	Corroded iron	Its creator's old car	A brown crayon
 tec_home_games_console	Expert	Which was the first home games console to ship 100 million units?	The original PlayStation	The Nintendo Entertainment System	The Super Nintendo	The Sega Mega Drive
-tec_tennis_two_early	Expert	'Tennis for Two', an early video game from 1958, was shown on what?	An oscilloscope	A television set	A radar screen	A punched-card printer
-tec_1971_game_made	Expert	Which 1971 game, made by Atari's future founders, was the first arcade video game sold commercially?	Computer Space	Pong	Spacewar!	Gun Fight
 tec_leo_world_business	Expert	LEO, the world's first business computer in 1951, was built by a British company best known for what?	Tea shops and cakes	Railway engines	Department stores	Newspapers
 tec_roughly_commercial_hard	Expert	Roughly how much did the first commercial hard disk drive, of 1956, weigh while holding about 5 MB?	About a tonne	About 10 kg	About 100 kg	About 10 tonnes
 tec_java_programming_language	Expert	What was the Java programming language called when it was first developed?	Oak	Pine	Maple	Cedar
-tec_game_credited_video	Expert	Which game is credited with the first video game cutscenes, in 1980?	Pac-Man	Donkey Kong	Space Invaders	Asteroids
 tec_gnu_software_project	Expert	What does the name of the GNU software project stand for?	GNU's Not Unix	General New Unix	Great Network Utility	Global Network User
 trv2_engelbart	Expert	Who invented the computer mouse?	Douglas Engelbart	Steve Wozniak	Alan Kay	Steve Jobs
 tec_javascript	Expert	Which programming language was famously designed in about ten days in 1995?	JavaScript	Java	Python	PHP

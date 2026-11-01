@@ -16,11 +16,8 @@ sci_swedish_astronomer_gave	Easy	Which Swedish astronomer gave his name to the t
 sci_temperature_scale_still	Easy	Whose temperature scale is still used for everyday weather in the USA?	Daniel Fahrenheit	Anders Celsius	Lord Kelvin	Rene Reaumur
 sci_einstein	Easy	Who formulated the theory of relativity?	Albert Einstein	Isaac Newton	Niels Bohr	Max Planck
 sci_kopernik	Medium	Whose 1543 book put the Sun, not the Earth, at the centre of the universe?	Nicolaus Copernicus	Isaac Newton	Galileo Galilei	Johannes Kepler
-sci3_darwin_statek	Medium	What was the name of the ship Charles Darwin sailed on?	HMS Beagle	Endeavour	Santa Maria	Mayflower
 sci3_rentgen_promienie	Medium	Who discovered X-rays?	Wilhelm Rontgen	Marie Curie	Max Planck	Niels Bohr
-trv_dna_rozwiniecie	Medium	What does DNA stand for?	Deoxyribonucleic acid	Dinucleic acid	Deoxyribose nitrogen acid	Double nucleic arrangement
 org_wolt_volta	Medium	Which unit honours the Italian who built the first battery?	The volt	The ampere	The ohm	The joule
-org_szczepionka_krowa	Medium	The word 'vaccine' comes from the Latin name for which animal?	Cow	Horse	Sheep	Goat
 sci_kelwin	Medium	On which temperature scale is zero equal to absolute zero?	Kelvin	Celsius	Fahrenheit	Reaumur
 scix_nobel_dynamit	Medium	Alfred Nobel, who founded the Nobel Prizes, made his fortune from which invention?	Dynamite	The telephone	The steam turbine	Rubber tyres
 sciy_nobel_dziedziny	Medium	Which of these was NOT one of Alfred Nobel's original prize categories?	Mathematics	Physics	Literature	Peace
@@ -38,7 +35,6 @@ sci_physicist_predicted_black	Medium	Which physicist predicted that black holes 
 sci_physicist_uncertainty_principle	Medium	Which physicist's 'uncertainty principle' says you cannot know a particle's position and momentum exactly?	Werner Heisenberg	Erwin Schrodinger	Paul Dirac	Max Born
 sci3_radio_wynalazca	Medium	Who is credited with inventing radio?	Guglielmo Marconi	Thomas Edison	Alexander Graham Bell	Samuel Morse
 sci_galileusz_ksiezyce	Medium	Who first spotted four moons of Jupiter through a telescope, in 1610?	Galileo Galilei	Nicolaus Copernicus	Johannes Kepler	Isaac Newton
-sci_penicylina	Medium	Who discovered penicillin?	Alexander Fleming	Louis Pasteur	Robert Koch	Jonas Salk
 sci_sila	Medium	What is the SI unit of force?	Newton	Joule	Watt	Pascal
 sci3_occam_brzytwa	Medium	What does Occam's razor state?	Among equally valid explanations, pick the simplest	Every theory must be written in mathematics	A complex theory always beats a simple one	Science can never make anything simple
 sci_becquerel	Hard	Who discovered radioactivity in 1896?	Henri Becquerel	Marie Curie	Ernest Rutherford	Wilhelm Rontgen

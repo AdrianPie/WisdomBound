@@ -255,7 +255,8 @@ object HistoryQuestions {
         q("his_assyrian_king_besieged", "Which Assyrian king besieged Jerusalem in 701 BC?", "Sennacherib", listOf("Ashurbanipal", "Nebuchadnezzar II", "Tiglath-Pileser III"), X),
         q("his_giant_winged_bulls", "What were the giant winged bulls with human heads that guarded Assyrian palace gates called?", "Lamassu", listOf("Sphinxes", "Griffins", "Chimeras"), X),
         q("his_assyrian_king_besieged_2", "The Assyrian king who besieged Jerusalem in 701 BC boasted that he had shut up its king Hezekiah like what?", "A bird in a cage", listOf("A fox in its den", "A fish in a net", "A lion in a pit"), X),
-        q("his_according_own_inscription", "According to his own inscription, roughly how many guests did the Assyrian king Ashurnasirpal II feed at a ten-day feast for his new capital?", "About 70,000", listOf("About 700", "About 7,000", "About 700,000"), X)
+        q("his_according_own_inscription", "According to his own inscription, roughly how many guests did the Assyrian king Ashurnasirpal II feed at a ten-day feast for his new capital?", "About 70,000", listOf("About 700", "About 7,000", "About 700,000"), X),
+        q("myt_assyrian_gate_guardians", "Why do many Assyrian gate guardians, winged bulls with human heads, have five legs?", "To look complete from front and side", listOf("To honour the five gods of the city", "A sculptor's error that became custom", "A fifth leg marked a royal beast"), X)
     )
 
     /* Antiquity / Ancient Egypt - history/antiquity/ancient_egypt.tsv */
@@ -384,7 +385,6 @@ object HistoryQuestions {
         q("his_word_laconic_meaning", "The word 'laconic', meaning short of words, comes from which Greek region, home of Sparta?", "Laconia", listOf("Attica", "Boeotia", "Arcadia"), M),
         q("his_civilisation_built_great", "Which civilisation built the great palace of Knossos?", "The Minoans", listOf("The Mycenaeans", "The Dorians", "The Phoenicians"), M),
         q("his_antikythera_mechanism_found", "What was the 'Antikythera mechanism', found in an ancient shipwreck?", "A gear computer for the sky", listOf("A bronze diving helmet", "A siege catapult trigger", "A ship's steering system"), M),
-        q("his_plainest_three_greek", "Which plainest of the three Greek column styles has a simple cushion-shaped top?", "Doric", listOf("Ionic", "Corinthian", "Tuscan"), M),
         q("his_battle_490_athenians", "At which battle of 490 BC did the Athenians beat a Persian army on the coast near their city?", "Marathon", listOf("Thermopylae", "Salamis", "Plataea"), M),
         q("his_athletes_usually_compete", "How did athletes usually compete at the ancient Olympic Games?", "Completely naked", listOf("In linen tunics", "In bronze armour", "In leather shorts"), M),
         q("his_greek_city_states", "What did Greek city-states declare so that athletes and fans could travel safely to the Olympic Games?", "A sacred truce", listOf("A public holiday", "A tax amnesty", "A trade fair"), M),
@@ -436,7 +436,8 @@ object HistoryQuestions {
         q("his_athenian_general_won", "Which Athenian general won the Battle of Marathon in 490 BC?", "Miltiades", listOf("Themistocles", "Pericles", "Leonidas"), X),
         q("his_thirty_tyrants", "Who were the 'Thirty Tyrants'?", "A pro-Spartan junta in defeated Athens", listOf("Thirty Persian governors", "Kings of the Greek colonies", "Judges of the Olympic Games"), X),
         q("his_legendary_lawgiver_said", "Which legendary lawgiver is said to have created Sparta's harsh way of life?", "Lycurgus", listOf("Solon", "Draco", "Cleisthenes"), X),
-        q("his_athens_slaves_sweep", "In Athens, why did slaves sweep the marketplace with a rope dipped in red paint?", "To herd citizens into the assembly", listOf("To mark stalls that owed taxes", "To keep stray dogs away", "To mark the route of a festival"), X)
+        q("his_athens_slaves_sweep", "In Athens, why did slaves sweep the marketplace with a rope dipped in red paint?", "To herd citizens into the assembly", listOf("To mark stalls that owed taxes", "To keep stray dogs away", "To mark the route of a festival"), X),
+        q("org_olimpiada_gory", "The Olympic Games take their name from a sanctuary in which region of Greece?", "Elis", listOf("Attica", "Laconia", "Thessaly"), X)
     )
 
     /* Antiquity / Ancient Persia - history/antiquity/ancient_persia.tsv */
@@ -531,7 +532,6 @@ object HistoryQuestions {
         q("his_modern_country_alexander", "In which modern country did Alexander the Great's home kingdom mostly lie?", "Greece", listOf("Turkey", "Bulgaria", "Albania"), M),
         q("his_philosopher_told_alexander", "Which philosopher told Alexander the Great to 'stand out of my sunlight'?", "Diogenes", listOf("Aristotle", "Socrates", "Plato"), M),
         q("his_god_colossus_rhodes", "Which god did the Colossus of Rhodes portray?", "Helios, the sun god", listOf("Poseidon, the sea god", "Zeus, king of the gods", "Ares, the god of war"), M),
-        q("his_headless_hellenistic_statue", "Which headless Hellenistic statue of the goddess Nike stands at the top of a grand staircase in the Louvre?", "The Victory of Samothrace", listOf("The Venus de Milo", "The Laocoon Group", "The Dying Gaul"), M),
         q("his_jewish_festival_celebrates", "Which Jewish festival celebrates the rededication of the Temple after a revolt against the Greek Seleucid kings?", "Hanukkah", listOf("Passover", "Purim", "Yom Kippur"), M),
         q("his_alexander_conquests_language", "After Alexander's conquests, which language became the common tongue of trade and rule from Egypt to Afghanistan?", "Greek", listOf("Latin", "Persian", "Phoenician"), M),
         q("his_hero_trojan_war", "Which hero of the Trojan War did Alexander the Great idolise, even visiting his tomb at Troy?", "Achilles", listOf("Odysseus", "Hector", "Agamemnon"), M),
@@ -682,7 +682,6 @@ object HistoryQuestions {
         q("his_ordinary_romans_scrawl", "What did ordinary Romans scrawl all over the walls of Pompeii, much of it rude or funny?", "Graffiti", listOf("Prayers", "Recipes", "Maps"), E),
         q("his_wealthy_romans_usually", "How did wealthy Romans usually eat at a dinner party?", "Lying on couches", listOf("Sitting on benches", "Kneeling at low tables", "Standing at counters"), E),
         q("trv_hadrian_mur", "In which present-day country is Hadrian's Wall?", "The United Kingdom", listOf("Germany", "Italy", "France"), E),
-        q("his_attyla", "Which people did Attila lead against the Roman Empire?", "The Huns", listOf("The Goths", "The Vandals", "The Mongols"), E),
         q("hx_londinium", "What was London called when the Romans founded it?", "Londinium", listOf("Lugdunum", "Londonia", "Aquae Sulis"), E),
         q("his_main_public_square", "What was the main public square at the heart of ancient Rome called?", "The Forum", listOf("The Agora", "The Piazza", "The Acropolis"), E),
         q("his_according_catholic_tradition", "According to Catholic tradition, who was the first pope?", "Saint Peter", listOf("Saint Paul", "Saint John", "Saint Andrew"), E),
@@ -928,6 +927,7 @@ object HistoryQuestions {
         q("his_paris_takes_celtic", "Paris takes its name from which Celtic tribe that lived on an island in the Seine?", "The Parisii", listOf("The Senones", "The Arverni", "The Belgae"), E),
         q("his_group_celtic_tribes", "Which group of Celtic tribes in northern Gaul gave their name to a modern country?", "The Belgae", listOf("The Helvetii", "The Arverni", "The Gauls"), E),
         q("his_french_germany_allemagne", "The French name for Germany, 'Allemagne', comes from which Germanic tribe?", "The Alemanni", listOf("The Allobroges", "The Alans", "The Saxons"), E),
+        q("his_attyla", "Which people did Attila lead against the Roman Empire?", "The Huns", listOf("The Goths", "The Vandals", "The Mongols"), E),
         q("his_blue_dye_ancient", "With what blue dye did ancient Britons paint themselves, according to Julius Caesar?", "Woad", listOf("Indigo", "Saffron", "Madder"), M),
         q("his_people_northern_scotland", "Which people of northern Scotland, perhaps named for their tattoos, fought off the Romans?", "The Picts", listOf("The Scots", "The Gaels", "The Britons"), M),
         q("his_roman_monument_tells", "Which Roman monument tells the story of the Dacian wars in a spiral carving 200 metres long?", "Trajan's Column", listOf("The Arch of Titus", "The Ara Pacis", "Hadrian's Wall"), M),
@@ -946,7 +946,6 @@ object HistoryQuestions {
         q("his_celtic_language_revived", "Which Celtic language, revived in modern times, belongs to the far south-west tip of England?", "Cornish", listOf("Breton", "Manx", "Welsh"), M),
         q("his_roman_towns_boudica", "Which of these Roman towns did Boudica's rebels burn to the ground in AD 60?", "London", listOf("York", "Bath", "Chester"), M),
         q("his_according_julius_caesar_2", "According to Julius Caesar, why do we know so little about what the druids taught?", "They refused to write it down", listOf("The Romans burned their books", "They taught only in a secret code", "Their scrolls rotted in the bogs"), M),
-        q("his_ancient_statue_shows", "Which famous ancient statue shows a wounded Celtic warrior, naked except for a torc around his neck?", "The Dying Gaul", listOf("The Discobolus", "The Laocoon", "The Farnese Hercules"), M),
         q("his_gaulish_chieftain_sacked", "Which Gaulish chieftain sacked Rome around 390 BC, saying 'Woe to the conquered'?", "Brennus", listOf("Vercingetorix", "Ambiorix", "Dumnorix"), H),
         q("his_celtic_people_central", "Which Celtic people of central Turkey received a famous letter from Saint Paul?", "The Galatians", listOf("The Corinthians", "The Thessalonians", "The Ephesians"), H),
         q("his_british_chieftain_fought", "Which British chieftain fought the Roman invaders for years before being handed over to them in AD 51?", "Caratacus", listOf("Cassivellaunus", "Calgacus", "Cunobelinus"), H),
@@ -961,7 +960,6 @@ object HistoryQuestions {
         q("his_carnyx_celtic_warriors", "What was the 'carnyx' of Celtic warriors?", "A tall war trumpet with an animal head", listOf("A curved sword with a bronze hilt", "A wicker shield covered in leather", "A light two-wheeled war chariot"), H),
         q("his_according_diodorus_gaul", "According to Diodorus, what would a Gaul trade for a single jar of Roman wine?", "A slave", listOf("A horse", "A sword", "A cow"), H),
         q("his_according_herodotus_scythian", "According to Herodotus, what did Scythian warriors make from the skulls of their worst enemies?", "Drinking cups", listOf("War helmets", "Drums", "Oil lamps"), H),
-        q("his_antlered_celtic_god", "What was the antlered Celtic god, often shown sitting cross-legged, called?", "Cernunnos", listOf("Lugh", "Taranis", "Teutates"), H),
         q("his_452_rode_out", "In 452, who rode out to meet Attila and is said to have persuaded him not to march on Rome?", "Pope Leo I", listOf("Pope Gregory I", "Saint Augustine", "Saint Patrick"), H),
         q("his_made_siberian_ice", "What made the 'Siberian Ice Maiden', a 2,500-year-old nomad woman found frozen in the Altai Mountains, famous?", "Her well-kept tattoos", listOf("Her golden armour", "Her twin baby sons", "Her iron sword"), H),
         q("his_celtic_torc", "What was a Celtic 'torc'?", "A twisted metal neck ring", listOf("A war chariot", "A sacred oak grove", "A bronze helmet"), H),
@@ -970,7 +968,6 @@ object HistoryQuestions {
         q("his_skulls_found_hun", "Why are many skulls found in Hun graves oddly long and pointed?", "Babies' heads were tightly bound", listOf("They wore heavy iron helmets", "They carried loads on their heads", "It was a disease of the steppes"), H),
         q("his_attila_die_453", "How did Attila die in 453, according to the usual story?", "A nosebleed on his wedding night", listOf("Killed in battle with the Romans", "Poisoned by his own brother", "Thrown from his horse"), H),
         q("his_celtic_festival_may", "Which Celtic festival on 1 May marked the start of summer?", "Beltane", listOf("Samhain", "Imbolc", "Lughnasa"), H),
-        q("his_celtic_horse_goddess", "Which Celtic horse goddess was so popular that Roman cavalrymen worshipped her too?", "Epona", listOf("Brigid", "Danu", "Sulis"), H),
         q("his_celtic_language_last", "Which Celtic language, whose last native speaker died in 1974, has since been revived on its island home?", "Manx", listOf("Cornish", "Breton", "Welsh"), H),
         q("his_scoti_gave_scotland", "The 'Scoti', who gave Scotland its name, were known to Roman writers as raiders from where?", "Ireland", listOf("Norway", "Wales", "Brittany"), H),
         q("his_handy_wine_container", "Which handy wine container did the Romans pick up from the Gauls, in place of clay jars?", "Wooden barrels", listOf("Glass bottles", "Leather flasks", "Bronze kettles"), H),

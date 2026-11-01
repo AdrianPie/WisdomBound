@@ -26,13 +26,10 @@ sci_egg_turn_solid	Medium	Why does an egg turn solid when you boil it?	Heat chan
 sci_glow_stick_kept	Medium	Why does a glow stick kept in the freezer keep glowing for longer?	Cold slows down the chemical reaction	Frost reflects the light back inside	Cold stops the light leaking out	The plastic seals itself in the cold
 sci_red_cabbage_juice	Medium	Red cabbage juice turns pink in lemon juice and green in baking soda water. Why?	It works as an acid-base indicator	It reacts with the vitamin C in both	Its sugars burn in strong liquids	The light bends differently in each
 sci_white_fog_pouring	Medium	The white fog pouring off dry ice is mostly what?	Water droplets	Carbon dioxide gas	Smoke	Liquid nitrogen
-sci_metal_soft_cut	Medium	Which metal is so soft it can be cut with a butter knife?	Sodium	Aluminium	Copper	Tin
 trv_lakmus_kwas	Medium	What colour does blue litmus paper turn in an acid?	Red	Green	Yellow	It stays blue
 sci_wax_burning_candle	Medium	Where does the wax of a burning candle mostly go?	It burns away as fuel into gases	It all drips down into the holder	It soaks deep into the wick for good	It turns into the smoke's black soot
 sci_milk_boil_over	Medium	Why does milk boil over in a pan when water does not?	Its proteins form a skin that traps steam	It boils at a much lower temperature	Its fat explodes when heated	It holds dissolved gas, like soda
 sci2_moly_liczba	Hard	How many particles does one mole of a substance contain?	About 6.02 x 10^23	About 3.14 x 10^12	Exactly one million	About 10^100
-trv_przewodnik_najlepszy	Hard	Which metal conducts electricity best?	Silver	Copper	Gold	Aluminium
-org_ytterby_wioska	Hard	Four chemical elements are named after a quarry in a village in which country?	Sweden	Norway	Germany	Scotland
 sci_tonic_water_glow	Hard	Why does tonic water glow blue under ultraviolet light?	Its quinine is fluorescent	Its bubbles reflect the light	Its sugar crystals sparkle	It contains glowing algae
 sci_box_safety_matches	Hard	On a box of safety matches, where is the red phosphorus that makes them light?	On the striking strip	In the match heads	In the wooden sticks	In the cardboard box
 sci_chemical_reaction_browns	Hard	Which chemical reaction browns toast and gives a seared steak its flavour?	The Maillard reaction	The Haber process	Fermentation	Saponification
@@ -45,6 +42,5 @@ sci_makes_bright_yellow	Hard	What makes the bright yellow glow of a candle flame
 sci_makes_cola_fountain	Hard	What makes a cola fountain shoot up when you drop Mentos sweets into a bottle?	Gas bubbles form on the sweets' rough surface	The sweets react with the acid in the cola	The mint oil makes the cola boil	The sugar in both burns explosively
 sci_white_shirts_glow	Hard	Why do white T-shirts glow under 'black light' in clubs?	Washing powder leaves fluorescent dyes	Cotton fibres store up daylight	The cloth is slightly radioactive	The light makes the fabric warm
 sci_popping_candy_crackle	Hard	Why does popping candy crackle in your mouth?	Tiny pockets of squeezed gas burst	Sugar crystals snap as they melt	It reacts with acid in your saliva	Water in it boils on your tongue
-sci_colour_flames_copper	Hard	What colour flames does copper give in fireworks?	Blue-green	Red	Yellow	Purple
 sci_compound_made_soil	Expert	Which compound made by soil bacteria gives rain its earthy smell?	Geosmin	Petrichor	Ozone	Chlorophyll
 sci_older_eggs_easier	Expert	Why are older eggs easier to peel after boiling than very fresh ones?	Their whites become more alkaline	Their shells grow much thicker	Their yolks shrink and pull away	Their shells lose all their calcium

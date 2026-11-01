@@ -1,0 +1,98 @@
+# Asia, Oceania & the World: Asia, the Middle East, Oceania, and questions comparing capitals from several continents
+#
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+cap3_kuwait_city	Easy	What is the capital of Kuwait?	Kuwait City	Riyadh	Doha	Manama
+cap_capital_iraq	Easy	What is the capital of Iraq?	Baghdad	Basra	Tehran	Damascus
+cap2_new_delhi	Easy	What is the capital of India?	New Delhi	Mumbai	Kolkata	Bangalore
+cap2_seoul	Easy	What is the capital of South Korea?	Seoul	Busan	Incheon	Daegu
+cap3_singapore	Easy	What is the capital of Singapore?	Singapore	Kuala Lumpur	Jakarta	Manila
+cap3_bangkok	Easy	What is the capital of Thailand?	Bangkok	Hanoi	Phnom Penh	Vientiane
+cap_capital_afghanistan	Easy	What is the capital of Afghanistan?	Kabul	Kandahar	Tashkent	Islamabad
+cap_capital_north_korea	Easy	What is the capital of North Korea?	Pyongyang	Seoul	Busan	Kaesong
+cap_capital_taiwan	Easy	What is the capital of Taiwan?	Taipei	Kaohsiung	Taichung	Hong Kong
+cap2_tehran	Easy	What is the capital of Iran?	Tehran	Isfahan	Mashhad	Shiraz
+cap_canberra	Medium	What is the capital of Australia?	Canberra	Sydney	Melbourne	Perth
+cap_ankara	Medium	What is the capital of Turkey?	Ankara	Istanbul	Izmir	Bursa
+cap2_jerusalem	Medium	Which city does Israel proclaim as its capital?	Jerusalem	Tel Aviv	Haifa	Eilat
+cap3_kuala_lumpur	Medium	What is the capital of Malaysia?	Kuala Lumpur	Singapore	Jakarta	Bangkok
+cap_capital_lebanon	Medium	What is the capital of Lebanon?	Beirut	Damascus	Amman	Tripoli
+cap_capital_syria	Medium	What is the capital of Syria?	Damascus	Aleppo	Beirut	Baghdad
+cap_city_capital_australian_3	Medium	Which city is the capital of the Australian state of Western Australia?	Perth	Fremantle	Darwin	Broome
+cap_capital_australia_northern	Medium	The capital of Australia's Northern Territory is named after which scientist?	Charles Darwin	James Cook	Isaac Newton	Joseph Banks
+cap_southernmost_national_capital	Medium	Which is the southernmost national capital in the world?	Wellington	Canberra	Buenos Aires	Montevideo
+cap_city_stopped_kazakhstan	Medium	Which city stopped being Kazakhstan's capital in 1997, when the government moved north?	Almaty	Shymkent	Karaganda	Aktobe
+cap_new_zealand_capital	Medium	New Zealand's capital is named after the general who won which battle?	Waterloo	Trafalgar	Blenheim	Agincourt
+cap_1923_new_turkish	Medium	In 1923 the new Turkish Republic moved its capital away from which city?	Istanbul	Izmir	Bursa	Edirne
+cap3_doha	Medium	What is the capital of Qatar?	Doha	Dubai	Abu Dhabi	Manama
+cap3_abu_dhabi	Medium	What is the capital of United Arab Emirates?	Abu Dhabi	Dubai	Doha	Manama
+cap_wellington	Medium	What is the capital of New Zealand?	Wellington	Auckland	Christchurch	Dunedin
+cap_hanoi	Medium	What is the capital of Vietnam?	Hanoi	Ho Chi Minh City	Da Nang	Hue
+cap_manila	Medium	What is the capital of Philippines?	Manila	Cebu	Davao	Quezon City
+cap2_jakarta	Medium	What is the capital of Indonesia?	Jakarta	Surabaya	Bandung	Medan
+cap2_islamabad	Medium	What is the capital of Pakistan?	Islamabad	Karachi	Lahore	Peshawar
+cap2_riyadh	Medium	What is the capital of Saudi Arabia?	Riyadh	Jeddah	Mecca	Medina
+mst_stolica_australia	Medium	Canberra became Australia's capital mainly to settle a dispute between which cities?	Sydney and Melbourne	Perth and Adelaide	Brisbane and Sydney	Hobart and Melbourne
+cap_tybet	Medium	Which city is the capital of Tibet?	Lhasa	Kathmandu	Thimphu	Shigatse
+cap_capital_jordan	Medium	What is the capital of Jordan?	Amman	Petra	Aqaba	Irbid
+cap_port_city_pakistan	Medium	Which port city was Pakistan's first capital, from 1947?	Karachi	Lahore	Rawalpindi	Peshawar
+cap_city_served_new	Medium	Which city served as New Zealand's capital from 1841 to 1865?	Auckland	Christchurch	Dunedin	Nelson
+cap2_kathmandu	Medium	What is the capital of Nepal?	Kathmandu	Pokhara	Lalitpur	Biratnagar
+cap3_dhaka	Hard	What is the capital of Bangladesh?	Dhaka	Chittagong	Kolkata	Karachi
+cap_batawia	Hard	Which capital city was known as Batavia under Dutch rule?	Jakarta	Manila	Kuala Lumpur	Singapore
+cap_nur_sultan	Hard	Which capital city was called Nur-Sultan from 2019 to 2022?	Astana	Almaty	Tashkent	Bishkek
+cap_ulan_bator_zimno	Hard	Which is the coldest national capital, on average?	Ulaanbaatar	Reykjavik	Moscow	Ottawa
+cap_quito_rownik	Hard	Which of these capital cities lies closest to the equator?	Quito	Nairobi	Singapore	Jakarta
+cap_nusantara	Hard	Indonesia has been building a new capital, Nusantara, on which island?	Borneo	Sumatra	Java	Sulawesi
+cap_polkula_poludniowa	Hard	Which of these capital cities lies in the Southern Hemisphere?	Nairobi	Bogota	Kampala	Singapore
+capx_damaszek	Hard	Which capital is often called the oldest continuously inhabited capital city in the world?	Damascus	Athens	Rome	Cairo
+cap_capital_armenia	Hard	What is the capital of Armenia?	Yerevan	Tbilisi	Baku	Gyumri
+cap_capital_city_means	Hard	Which capital city's name means 'northern capital'?	Beijing	Seoul	Tokyo	Hanoi
+cap_capital_city_means_2	Hard	Which capital city's name means 'eastern capital'?	Tokyo	Beijing	Seoul	Taipei
+cap_capital_maldives	Hard	What is the capital of the Maldives?	Male	Colombo	Port Louis	Victoria
+cap_capital_bahrain	Hard	What is the capital of Bahrain?	Manama	Doha	Muscat	Kuwait City
+cap_japanese_city_tame	Hard	Which Japanese city, famous for its tame deer, was the imperial capital for most of the 700s?	Nara	Kamakura	Osaka	Nagasaki
+cap_capital_city_simply	Hard	Which capital city's name is simply the native Korean word for 'capital'?	Seoul	Pyongyang	Hanoi	Taipei
+cap_former_chinese_capital	Hard	Which former Chinese capital's name means 'southern capital'?	Nanjing	Xi'an	Guangzhou	Hangzhou
+cap_iranian_city_once	Hard	Which Iranian city, once the Safavid capital, was praised as 'half the world'?	Isfahan	Shiraz	Tabriz	Mashhad
+cur_kazachstan_stolica	Hard	What is the capital of Kazakhstan?	Astana	Almaty	Bishkek	Tashkent
+cap_city_capital_australian	Hard	Which city is the capital of the Australian state of Victoria?	Melbourne	Sydney	Adelaide	Geelong
+cap_city_capital_australian_2	Hard	Which city is the capital of the Australian state of Queensland?	Brisbane	Cairns	Gold Coast	Townsville
+cap_city_capital_australian_4	Hard	Which city is the capital of the Australian state of South Australia?	Adelaide	Darwin	Hobart	Alice Springs
+cap_hobart_capital_australian	Hard	Hobart is the capital of which Australian state?	Tasmania	Victoria	Queensland	South Australia
+cap_planned_indian_city	Hard	Which planned Indian city, laid out by Le Corbusier, is the capital of two states at once?	Chandigarh	Jaipur	Bhubaneswar	Gandhinagar
+cap_mumbai_home_bollywood	Hard	Mumbai, home of Bollywood, is the capital of which Indian state?	Maharashtra	Gujarat	Karnataka	Kerala
+cap_angora_cats_goats	Hard	Angora cats, goats and rabbits are named after the old name of which capital?	Ankara	Tehran	Baghdad	Damascus
+cap_ulaanbaatar	Hard	What is the capital of Mongolia?	Ulaanbaatar	Erdenet	Darkhan	Khovd
+cap_kraj_tbilisi	Hard	Tbilisi is the capital of which country?	Georgia	Armenia	Azerbaijan	Uzbekistan
+cap2_baku	Hard	What is the capital of Azerbaijan?	Baku	Ganja	Sumgait	Lankaran
+cap2_phnom_penh	Hard	What is the capital of Cambodia?	Phnom Penh	Siem Reap	Battambang	Sihanoukville
+cap2_port_moresby	Hard	What is the capital of Papua New Guinea?	Port Moresby	Lae	Mount Hagen	Madang
+cap2_kraj_suva	Hard	Suva is the capital of which country?	Fiji	Samoa	Tonga	Vanuatu
+cap3_sanaa	Hard	What is the capital of Yemen?	Sanaa	Aden	Muscat	Riyadh
+cap3_muscat	Hard	What is the capital of Oman?	Muscat	Sanaa	Manama	Abu Dhabi
+cap3_bandar_seri_begawan	Hard	What is the capital of Brunei?	Bandar Seri Begawan	Kuala Lumpur	Manila	Jakarta
+cur_birma_stolica	Hard	In 2005 Myanmar began moving its government to which purpose-built capital?	Naypyidaw	Yangon	Mandalay	Bagan
+capx_bangkok_nazwa	Hard	Which capital city has one of the longest place names in the world, beginning 'Krung Thep'?	Bangkok	Phnom Penh	Vientiane	Kathmandu
+capx_canberra_konkurs	Hard	The winning design for Canberra came from architects of which country?	The USA	Britain	France	Germany
+capy_canberra_nazwa	Hard	The name 'Canberra' is thought to come from an Aboriginal word meaning what?	Meeting place	Big river	Red earth	Sky camp
+cap_capital_uzbekistan	Hard	What is the capital of Uzbekistan?	Tashkent	Samarkand	Bukhara	Almaty
+cap_thimphu	Expert	What is the capital of Bhutan?	Thimphu	Paro	Punakha	Phuentsholing
+cap_bishkek	Expert	What is the capital of Kyrgyzstan?	Bishkek	Osh	Naryn	Karakol
+cap2_sri_jayawardenepura_kotte	Expert	What is Sri Lanka's official capital, where its parliament sits?	Sri Jayawardenepura Kotte	Nuwara Eliya	Trincomalee	Batticaloa
+cap2_dushanbe	Expert	What is the capital of Tajikistan?	Dushanbe	Khujand	Kulob	Qurghonteppa
+cap2_ashgabat	Expert	What is the capital of Turkmenistan?	Ashgabat	Turkmenbashy	Mary	Dashoguz
+cap2_vientiane	Expert	What is the capital of Laos?	Vientiane	Luang Prabang	Pakse	Savannakhet
+dpt_sto_palau	Expert	What is the capital of Palau?	Ngerulmud	Koror	Kolonia	Airai
+cap_kuala_lumpur_nazwa	Expert	Which capital city's name means 'muddy confluence' in Malay?	Kuala Lumpur	Jakarta	Singapore	Bandar Seri Begawan
+cap_kinszasa_brazzaville	Expert	Apart from Rome and Vatican City, which two capitals lie closest to each other?	Kinshasa and Brazzaville	Vienna and Bratislava	Buenos Aires and Montevideo	Copenhagen and Oslo
+capy_tbilisi	Expert	The name of the Caucasus capital Tbilisi comes from its what?	Warm springs	High mountains	Many churches	Old walls
+cap_national_capital_built	Expert	Which national capital was built from scratch in the 1960s at the foot of the Margalla Hills?	Islamabad	Abuja	Brasilia	Canberra
+cap_capital_samoa	Expert	What is the capital of Samoa?	Apia	Suva	Nuku'alofa	Port Vila
+cap_capital_federated_states	Expert	What is the capital of the Federated States of Micronesia?	Palikir	Majuro	Tarawa	Ngerulmud
+cap_capital_tuvalu	Expert	What is the capital of Tuvalu?	Funafuti	Tarawa	Majuro	Apia
+cap_capital_vanuatu	Expert	What is the capital of Vanuatu?	Port Vila	Honiara	Suva	Luganville
+cap_capital_solomon_islands	Expert	What is the capital of the Solomon Islands?	Honiara	Port Vila	Port Moresby	Gizo
+cap_capital_city_means_3	Expert	Which capital city's name means 'Red Hero'?	Ulaanbaatar	Bishkek	Ashgabat	Astana
+cap_south_korean_ministries	Expert	Many South Korean ministries moved from Seoul in the 2010s to which new planned city?	Sejong	Daejeon	Incheon	Ulsan
+cap_purpose_built_city	Expert	Which purpose-built city outside Kuala Lumpur houses most of Malaysia's government?	Putrajaya	Cyberjaya	Johor Bahru	Shah Alam
+cap_older_city_sits	Expert	Which older city sits right next to Islamabad as its 'twin city'?	Rawalpindi	Lahore	Peshawar	Karachi

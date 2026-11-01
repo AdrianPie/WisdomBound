@@ -44,6 +44,7 @@ wld_czarna_dziura	Easy	Why is a black hole black?	Not even light can escape its 
 scix_hubble	Easy	Which space telescope, launched in 1990, is famous for its deep-space photos?	Hubble	Kepler	Spitzer	Chandra
 sci_solar_flare	Easy	What is a 'solar flare'?	A sudden burst of energy from the Sun	A ring of light around the Sun	A cooler patch on the Sun's surface	A comet falling into the Sun
 sci_astronauts_iss_exercise	Easy	Why do astronauts on the ISS exercise for about two hours a day?	To stop their muscles and bones wasting away	To keep the station from drifting off course	To make electricity for the station	To stop themselves floating while they sleep
+trv2_curiosity	Easy	On which planet did the Curiosity rover land in 2012?	Mars	Venus	The Moon	Mercury
 space_pas_planetoid	Medium	Between which two planets does the main asteroid belt lie?	Mars and Jupiter	Earth and Mars	Jupiter and Saturn	Venus and Earth
 space_plamy_sloneczne	Medium	What are sunspots?	Cooler regions of the Sun's surface	Holes punched through the Sun	Clouds of interstellar dust	Shadows cast by the planets
 space_kometa_ogon	Medium	Why does a comet grow a tail near the Sun?	Its ice turns to gas and is blown outward	It burns up in the solar wind	It spins fast enough to shed rock	It collides with belts of dust
@@ -340,3 +341,4 @@ sci_planet_huge_storm	Expert	Which planet had a huge storm called the 'Great Dar
 sci_slowly_happening_saturn	Expert	What is slowly happening to Saturn's rings?	Their ice is raining down onto the planet	They are spreading out to swallow its moons	They are freezing into one solid sheet	They are being blown away by the Sun
 sci_pleiades_star_cluster	Expert	The Pleiades star cluster lies in which constellation?	Taurus	Orion	Gemini	Ursa Major
 sci_stars_make_alpha	Expert	How many stars make up the Alpha Centauri system, our nearest stellar neighbour?	Three	One	Two	Seven
+tec_soviet_probe_land	Expert	Which Soviet probe was the first to land softly on another planet, Venus, in 1970?	Venera 7	Mars 3	Luna 9	Vega 1
