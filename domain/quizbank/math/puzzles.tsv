@@ -1,0 +1,163 @@
+# Brain Teasers: brain teasers, logic, quick mental arithmetic, trick questions
+#
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+mat_28_dni	Easy	How many months of the year have 28 days?	All 12	1	2	6
+mat_suma_1_10	Easy	What is 1 + 2 + 3 + ... + 10?	55	45	50	65
+mat_sekundy_godzina	Easy	How many seconds are in one hour?	3,600	360	6,000	1,440
+mat_zgiecie_kartki	Easy	If you fold a sheet of paper in half three times, how many layers do you get?	8	6	9	3
+mat_minuty_150	Easy	How many minutes are in two and a half hours?	150	130	250	120
+mat_pizza_ulamek	Easy	A pizza is cut into 8 slices and you eat 2. What fraction is left?	3/4	2/3	5/8	1/4
+mat_pajaki_nogi	Easy	How many legs do three spiders have altogether?	24	18	30	32
+mat_godziny_trzy_dni	Easy	How many hours are in three days?	72	60	48	96
+mat_zegar_15	Easy	What is 15:00 on a 12-hour clock?	3 p.m.	5 p.m.	1 p.m.	3 a.m.
+mat_small_coloured_squares	Easy	How many small coloured squares are on one face of a standard Rubik's Cube?	Nine	Six	Twelve	Sixteen
+mat_farmer_sheep_all	Easy	A farmer has 17 sheep and all but 9 run away. How many are left?	9	8	17	0
+mat_race_overtake_runner	Easy	In a race, you overtake the runner in second place. What place are you in now?	Second	First	Third	Last
+mat_weighs_more_kilogram	Easy	Which weighs more: a kilogram of feathers or a kilogram of iron?	They weigh the same	The iron	The feathers	It depends on the air
+mat_restaurant_bill_leave	Easy	Your restaurant bill is $40 and you leave a 15% tip. How much is the tip?	$6	$4	$8	$5.50
+mat_buy_get_free	Easy	'Buy one, get one free' on two equal items is the same as what discount?	50% off	25% off	33% off	100% off
+mat_box_eggs_costs	Easy	A box of 12 eggs costs $3. How much does each egg cost?	25 cents	30 cents	20 cents	36 cents
+mat_recipe_people_needs	Easy	A recipe for 4 people needs 6 eggs. How many eggs do you need for 2 people?	3	2	4	12
+mat_squares_make_grid	Easy	How many squares make up the grid in a game of noughts and crosses (tic-tac-toe)?	9	6	12	16
+mat_write_out_all	Easy	If you write out all the whole numbers from 1 to 10, how many digits do you write in total?	11	10	12	9
+mat_number_both_sum	Easy	Which number is both the sum and the product of 1, 2 and 3?	6	5	7	9
+mat_dots_total_double	Easy	How many dots are there in total on the 'double six' domino tile?	12	6	10	36
+mat_hours_clock_hour	Easy	How many hours does a clock's hour hand take to go once around the whole face?	12	24	6	1
+mat_best_five_series	Easy	In a 'best of five' series of matches, how many wins do you need to take the series?	3	2	4	5
+mat_pack_gum_costs	Easy	A pack of gum costs 75 cents and you pay with $2. How much change do you get?	$1.25	$1.35	$1.15	$1.75
+mat_film_starts_lasts	Easy	A film starts at 7:45 p.m. and lasts 2 hours 30 minutes. When does it end?	10:15 p.m.	10:45 p.m.	9:15 p.m.	10:30 p.m.
+mat_small_squares_make	Easy	How many small squares make up a standard Sudoku grid?	81	64	72	100
+mat_two_company_three	Easy	If two's company and three's a crowd, what are four and five?	Nine	Twenty	Eleven	Forty-five
+mat_pencils_cost_pencils	Easy	Pencils cost 3 for $1. How much do 12 pencils cost?	$4	$3	$6	$36
+mat_read_pages_day	Easy	You read 20 pages a day. How many days will a 300-page book take you?	15	12	20	30
+mat_walking_per_hour	Easy	Walking at 5 km per hour, how long does it take to walk 15 km?	3 hours	2 hours	5 hours	75 minutes
+mat_buy_three_items	Easy	You buy three items at $1.99 each. How much do you spend?	$5.97	$5.79	$6.03	$4.97
+mat_fraction_hour_minutes	Easy	What fraction of an hour is 20 minutes?	A third	A quarter	A fifth	A half
+mat_latest_time_hour	Easy	What is the latest time a 24-hour digital clock can show?	23:59	24:00	12:59	24:59
+mat_rounded_nearest_cents	Easy	Rounded to the nearest 10 cents, what does $4.96 become?	$5.00	$4.90	$4.95	$4.10
+mat3_procent_120_zniz	Easy	An item costs $120 and is discounted by 25%. What does it cost now?	$90	$100	$95	$80
+mat_pociag_predkosc	Easy	A train covers 60 km in 30 minutes. What is its speed in km/h?	120	60	90	30
+matx_sudoku	Easy	In a standard Sudoku, which digits must each row contain?	1 to 9, once each	0 to 9, once each	Any nine digits	1 to 9, repeats allowed
+mat_5th_front_5th	Easy	You are 5th from the front and 5th from the back of a queue. How many people are in it?	9	10	11	8
+mat_minutes_tenth_hour	Easy	How many minutes are in a tenth of an hour?	6	10	1	16
+mat_year_365_days	Easy	A year has 365 days. How many days are left over after 52 full weeks?	1	0	2	5
+mat_times_day_stopped	Easy	How many times a day does a stopped analogue clock show the correct time?	Twice	Never	Once	24 times
+day_kostka_oczka	Medium	How many pips are there in total on a standard six-sided die?	21	18	24	27
+trv2_sekundy_doba	Medium	How many seconds are in a day?	86,400	3,600	1,440	864,000
+trv2_ile_minut_dwa_dni	Medium	How many hours are in a week?	168	144	196	172
+mat_jutro_czwartek	Medium	If the day before yesterday was Monday, what day will it be tomorrow?	Thursday	Wednesday	Friday	Tuesday
+mat_ojcowie_synowie	Medium	Two fathers and two sons catch three fish, and each gets exactly one. How many people are there?	Three	Four	Two	Five
+mat_kij_pilka	Medium	A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much is the ball?	5 cents	10 cents	1 cent	15 cents
+mat_trzy_tabletki	Medium	You must take 3 pills, one every half hour. How long will they last?	One hour	An hour and a half	Two hours	Three hours
+mat_minuty_doba	Medium	How many minutes are in a day?	1,440	1,200	2,400	3,600
+mat_37_razy_12	Medium	37 x 3 = 111. What is 37 x 12?	444	333	412	456
+mat_lilie	Medium	Lily pads on a lake double every day and cover it completely on day 48. On which day was it half covered?	Day 47	Day 24	Day 46	Day 36
+mat_wiek_siostry	Medium	Tom is 10 and his sister is half his age. When Tom is 30, how old will his sister be?	25	15	20	35
+mat_zysk_procent	Medium	You buy something for $80 and sell it for $100. What is your profit as a percentage?	25%	20%	80%	10%
+matx_procenty	Medium	Which is bigger: 30% of 50 or 50% of 30?	They are equal	30% of 50	50% of 30	It depends
+maty_tarcza_zegara	Medium	What do all the numbers on a standard clock face add up to?	78	60	72	66
+mat_divide_half_add	Medium	Divide 30 by a half and add 10. What do you get?	70	25	40	50
+mat_letter_comes_next_2	Medium	Which letter comes next: O, T, T, F, F, S, S, E, ...?	N	E	T	O
+mat_drawer_holds_black	Medium	A drawer holds only black and white socks. In the dark, how many must you take out to be sure of a matching pair?	3	2	4	5
+mat_brick_weighs_plus	Medium	A brick weighs 1 kg plus half a brick. How much does the whole brick weigh?	2 kg	1.5 kg	1 kg	3 kg
+mat_chessboard_puzzle_piece	Medium	The famous chessboard puzzle in which one piece visits every square exactly once is named after which piece?	The knight	The bishop	The rook	The king
+mat_coat_reduced_further	Medium	A coat is reduced by 20%, then by a further 20%. What is the total discount?	36%	40%	30%	44%
+mat_rather_million_now	Medium	Would you rather have $1 million now, or a penny doubled every day for 30 days?	The penny - it passes $5 million	The million - it is far more	They come out roughly equal	The penny, but only just
+mat_farmyard_holds_chickens	Medium	A farmyard holds chickens and cows: 10 heads and 28 legs in all. How many cows are there?	4	6	3	5
+mat_third_off_shirt	Medium	After 'a third off', a shirt costs $20. What was its original price?	$30	$26.67	$25	$40
+mat_largest_number_mondays	Medium	What is the largest number of Mondays a single year can have?	53	52	54	55
+mat_two_coins_add	Medium	Two US coins add up to 30 cents, and one of them is not a nickel. What are they?	A quarter and a nickel	Two 15-cent coins	Three dimes	A dime and a quarter
+mat_roughly_old_000th	Medium	Roughly how old are you on the 10,000th day of your life?	About 27	About 18	About 40	About 13
+mat_apart_december_january	Medium	Apart from December and January, which two months in a row both have 31 days?	July and August	March and April	May and June	October and November
+mat_get_multiply_together	Medium	What do you get if you multiply together all the digits on a phone keypad?	0	362,880	3,628,800	45
+mat_clock_showing_exactly	Medium	A clock showing exactly 3:00 is seen in a mirror. What time does the reflection appear to show?	9:00	3:00	6:00	12:15
+mat_numbers_around_dartboard	Medium	What do the numbers 1 to 20 around a dartboard add up to?	210	200	180	220
+mat_minutes_week	Medium	How many minutes are in a week?	10,080	1,440	8,640	12,000
+mat_111_times_111	Medium	What is 111 times 111?	12321	11211	12221	13431
+mat_tap_fills_bath	Medium	One tap fills a bath in 3 minutes and another in 6 minutes. How long do they take together?	2 minutes	4.5 minutes	9 minutes	3 minutes
+mat_year_not_leap	Medium	A year that is not a leap year starts on a Monday. On which day does the next year start?	Tuesday	Monday	Wednesday	Sunday
+mat_positive_whole_number	Medium	Which positive whole number gives the same answer when added to itself as when multiplied by itself?	2	1	3	4
+mat_old_pocket_calculator	Medium	On an old pocket calculator, which number reads 'hello' when you turn it upside down?	0.7734	0.4377	7.7340	0.3704
+mat_q_2	Medium	What is 10% of 10%?	1%	10%	0.1%	20%
+mat_deal_gives_cheapest	Medium	Which deal gives the cheapest price per can?	8 cans for $4	4 cans for $3	6 cans for $4	10 cans for $6
+mat_get_take_score	Medium	What do you get if you take 'a score' away from 'a dozen'?	-8	8	32	-12
+mat_man_four_times	Medium	A man is four times as old as his son. In 20 years he will be twice as old. How old is the son now?	10	5	20	15
+mat_test_scores_best	Medium	Which of these test scores is the best?	17 out of 20	80%	4 out of 5	41 out of 50
+mat_classic_river_crossing	Medium	In the classic river-crossing puzzle with a wolf, a goat and a cabbage, what must the farmer take across first?	The goat	The wolf	The cabbage	Nothing - he crosses alone
+mat_recipe_needs_cup	Medium	A recipe needs 3/4 of a cup of sugar, but you are making only half the recipe. How much sugar do you need?	3/8 of a cup	1/4 of a cup	1/2 of a cup	1/3 of a cup
+mat_someone_born_february	Medium	Someone born on 29 February 2000 turned 20 in 2020. How many real 29 February birthdays had they had by then, counting 2020?	5	20	4	10
+mat_think_number_double	Medium	Think of a number, double it, add 10, halve the result, then take away the number you first thought of. What do you always get?	5	10	0	Your starting number
+mat_roughly_days_000	Medium	Roughly how many days is 1,000 hours?	About 42	About 10	About 100	About 24
+mat_score_test_must	Medium	You score 60 on your first test. What must you score on the second to average 75?	90	85	80	95
+mat_car_uses_litres	Medium	A car uses 6 litres of fuel per 100 km. How much does it need for 250 km?	15 litres	12 litres	25 litres	18 litres
+mat_different_shapes_falling	Medium	How many different shapes of falling block are there in classic Tetris?	7	5	6	8
+mat_both_players_play	Medium	If both players play perfectly, how does a game of noughts and crosses (tic-tac-toe) end?	In a draw	The first player wins	The second player wins	Whoever takes the centre wins
+mat_buy_three_pay	Medium	'Buy three, pay for two' is roughly the same as what discount on each item?	About 33%	50%	About 66%	25%
+mat_car_travels_steady	Medium	A car travels at a steady 100 km/h. How far does it go in 3 minutes?	5 km	3 km	10 km	30 km
+mat_345_679	Medium	What is 12,345,679 x 9?	111,111,111	123,456,789	999,999,999	101,010,101
+mat_positive_number_square	Medium	Which positive number has a square root that is exactly half of itself?	4	2	8	16
+mat_trzy_jablka	Medium	There are 3 apples on a table and you take 2. How many apples do you have?	2	1	3	0
+mat_q	Medium	What is 2 + 2 x 2?	6	8	4	10
+mat_letter_comes_next	Medium	Which letter comes next: J, F, M, A, M, J, ...?	J	A	S	N
+mat_calendar_year_months	Medium	In a calendar year, how many months are 31 days long?	Seven	Six	Five	Eight
+mat_ship_rope_ladder	Medium	A ship's rope ladder has rungs 25 cm apart, the lowest just touching the sea. The tide rises 1 m. How many rungs are now underwater?	None	Four	Three	Five
+mat_lasts_longest	Medium	Which of these lasts the longest?	100 minutes	1.5 hours	5,000 seconds	95 minutes
+mat_metre_fence_post	Medium	A 10-metre fence has a post every metre, including one at each end. How many posts are there?	11	10	9	12
+mat_10th_queue_people	Medium	You are 10th in a queue, and 10 people are standing behind you. How many people are in the queue?	20	19	21	11
+mat_square_table_four	Medium	A square table has four corners. If you saw one corner off with a single straight cut, how many corners does it have now?	5	3	4	6
+mat_times_clock_minute	Medium	How many times does a clock's minute hand pass the 12 in a full day?	24	12	48	60
+mat_400	Medium	What is 25% of 25% of 400?	25	100	50	12.5
+ref_mat_procent_procentu	Medium	What is 15% of 15% of 1000?	22.5	2.25	225	30
+wld_mat_milion_sekund	Medium	Roughly how long is one million seconds?	About 11.5 days	About 1 year	About 11 hours	About 3 months
+wld_mat_procent_procent	Medium	A price rises by 10% and then falls by 10%. Compared with the start, it is...	1% lower	Exactly the same	1% higher	10% lower
+mat_maszyny	Medium	If 5 machines make 5 widgets in 5 minutes, how long do 100 machines take to make 100 widgets?	5 minutes	100 minutes	20 minutes	1 minute
+mat_100_dni	Medium	If today is Wednesday, what day of the week will it be in 100 days?	Friday	Thursday	Saturday	Wednesday
+mat_biegun_polnocny	Medium	You walk 1 km south, 1 km east and 1 km north, and end up where you started. Where did you start?	The North Pole	The equator	The South Pole	The prime meridian
+matx_rok_2000	Medium	Was the year 2000 a leap year?	Yes - it divides by 400	No - century years never are	No - it was skipped	Yes - like every even year
+mat_rule_roughly_long	Medium	By the 'rule of 72', roughly how long does money take to double at 6% interest a year?	12 years	6 years	18 years	36 years
+mat_knockout_tennis_tournament	Medium	A knockout tennis tournament starts with 64 players. How many matches are played in total to find the champion?	63	32	64	126
+mat_take_532_subtract	Medium	Take 532, subtract its reverse 235, then add the result to its own reverse. What do you get?	1089	999	1098	1188
+mat_salary_cut_percentage	Medium	Your salary is cut by 20%. By what percentage must it now rise to get back to where it was?	25%	20%	15%	40%
+mat_wskazowki_nakladanie	Hard	How many times do a clock's hour and minute hands overlap in 12 hours?	11	12	10	24
+mat_slimak_studnia	Hard	A snail climbs 3 m up a 10 m well each day and slips back 2 m each night. On which day does it reach the top?	Day 8	Day 10	Day 7	Day 9
+mat_zegar_bicie	Hard	A clock takes 5 seconds to strike six o'clock. How long does it take to strike twelve?	11 seconds	10 seconds	12 seconds	9 seconds
+mat_largest_number_queens	Hard	What is the largest number of queens you can place on a chessboard so that none can attack another?	8	6	12	16
+mat_tower_hanoi_puzzle	Hard	In the Tower of Hanoi puzzle, what is the fewest moves needed to shift a tower of 3 discs?	7	3	6	9
+mat_drive_town_return	Hard	You drive to a town at 60 km/h and return the same way at 40 km/h. What is your average speed?	48 km/h	50 km/h	45 km/h	52 km/h
+mat_pieces_cut_flat	Hard	What is the most pieces you can cut a flat pizza into with 3 straight cuts, without moving the pieces?	7	6	8	9
+mat_2096_leap_year	Hard	2096 is a leap year. Which year is the next leap year after it?	2104	2100	2108	2098
+mat_hen_half_lays	Hard	If a hen and a half lays an egg and a half in a day and a half, how many eggs does one hen lay in three days?	2	3	1	4.5
+mat_farmer_must_ferry	Hard	In the wolf, goat and cabbage river puzzle, what is the fewest number of crossings the farmer needs?	7	3	5	9
+mat_two_trains_100	Hard	Two trains 100 km apart head towards each other at 50 km/h each. A fly zips between them at 75 km/h. How far does it fly?	75 km	50 km	100 km	150 km
+mat_boy_brothers_sisters	Hard	A boy has as many brothers as sisters, but each of his sisters has twice as many brothers as sisters. How many children are in the family?	7	5	6	9
+mat_two_days_ago	Hard	Two days ago Anna was 25. Next year she will turn 28. On which date is her birthday?	31 December	1 January	30 December	29 February
+mat_sam_loyd_said	Hard	Sam Loyd is said to have offered $1,000 for solving his sliding '15 puzzle' with the 14 and 15 swapped. Why did no one win?	It is impossible	The tiles always jammed	He kept moving the deadline	Only he knew the trick
+mat_car_odometer_shows	Hard	A car's odometer shows the palindrome 15951. Two hours later it shows the next palindrome. What was the average speed?	55 miles per hour	50 miles per hour	60 miles per hour	110 miles per hour
+mat_numbers_strange_but	Hard	These numbers are in a strange but logical order: 8, 5, 4, 9, 1, 7, 6. Which comes next?	10	3	2	0
+mat_missing_dollar_riddle	Hard	In the famous 'missing dollar riddle' about three hotel guests, where has the missing dollar gone?	Nowhere - the sum itself is wrong	The bellboy secretly kept it	The clerk overcharged one guest	It was lost in the change
+mat_island_knights_always	Hard	On an island of knights, who always tell the truth, and knaves, who always lie, who could ever say 'I am a knave'?	Nobody	Only a knight	Only a knave	Either of them
+mat_nine_identical_looking	Hard	Nine identical-looking balls include one slightly heavier ball. With a balance scale, what is the fewest weighings that always finds it?	2	3	4	1
+mat_ann_beats_ben	Hard	Ann beats Ben by 10 m in a 100 m race. In a rematch Ann starts 10 m behind the line. If both run at their old speeds, what happens?	Ann wins	It is a dead heat	Ben wins	Ben wins by 1 m
+mat_pipe_fills_tank	Hard	One pipe fills a tank in 2 hours and another in 3 hours. How long do they take together?	72 minutes	2.5 hours	1 hour	5 hours
+mat_deal_better_extra	Hard	Which deal is better: '50% extra free' or 'a third off the price'?	They are exactly equal	50% extra free	A third off the price	It depends on the price
+mat_100_closed_lockers	Hard	100 closed lockers: pupil 1 opens all, pupil 2 toggles every 2nd, pupil 3 every 3rd, up to pupil 100. Which end up open?	The square-numbered ones	The prime-numbered ones	The even-numbered ones	The odd-numbered ones
+mat_remove_two_opposite	Hard	Remove two opposite corners from a chessboard. Can 31 dominoes, each covering two squares, cover the 62 squares left?	No, it is impossible	Yes, in exactly one way	Yes, in hundreds of ways	Only if one domino stands upright
+mat_connect_four_solved	Hard	Connect Four was solved by computer in 1988. With perfect play, who wins?	The first player	The second player	Nobody - it is a draw	Whoever starts at the edge
+mat_die_hard_vengeance	Hard	In 'Die Hard with a Vengeance', the heroes must measure exactly 4 gallons using jugs of which sizes?	3 and 5 gallons	2 and 7 gallons	6 and 9 gallons	2 and 8 gallons
+mat_different_moves_white	Hard	How many different first moves does White have in a game of chess?	20	16	10	24
+mat_numbers_ending_squaring	Hard	Numbers ending in 5 have a squaring shortcut. What is 65 squared?	4225	3625	4025	4325
+mat_month_friday_13th	Hard	A month has a Friday the 13th exactly when the 1st of that month falls on which day?	Sunday	Friday	Monday	Saturday
+mat_sawing_log_pieces	Hard	Sawing a log into 4 pieces takes 12 minutes. At the same rate, how long does it take to saw a log into 8 pieces?	28 minutes	24 minutes	32 minutes	16 minutes
+mat_man_points_portrait	Hard	A man points at a portrait: 'Brothers and sisters I have none, but this man's father is my father's son.' Who is in the portrait?	His son	Himself	His father	His nephew
+ext_kartka_skladanie	Hard	Folded in half 42 times, a sheet of paper would be thick enough to reach what?	The Moon	The top of Everest	Low Earth orbit	The Sun
+ref_mat_dwa_razy_cyfry	Hard	Which two-digit number is exactly twice the sum of its digits?	18	12	27	36
+wld_mat_miliard_sekund	Hard	Roughly how long is one billion seconds?	About 31.7 years	About 3 years	About 317 years	About 1 year
+matx_ziemniaki	Hard	A 100 kg sack of potatoes is 99% water. After drying it is 98% water. What does it weigh now?	50 kg	98 kg	99 kg	90 kg
+mat_legend_says_priests	Expert	Legend says priests are moving a 64-disc Tower of Hanoi. At one move per second, roughly how long will they need?	About 585 billion years	About 64 days	About 6,400 years	About 2 million years
+mat_ant_crawls_along	Expert	An ant crawls at 1 cm/s along a 1 km rubber rope that stretches evenly by 1 km every second. Does it ever reach the end?	Yes, after an enormously long time	No, it falls further behind for ever	No, it gets stuck halfway	Yes, in under an hour
+mat_unexpected_hanging_paradox	Expert	In the 'unexpected hanging paradox', a prisoner 'proves' he cannot be hanged on a surprise day that week. What happens?	He is hanged, and it is a surprise	He is set free at the end of the week	The judge cancels the hanging	He is hanged on Friday, as he predicted
+mat_fewest_given_clues	Expert	What is the fewest given clues a standard Sudoku can have and still have only one solution?	17	9	22	30
+mat_any_given_year	Expert	In any given year, 4 April, 6 June, 8 August, 10 October and 12 December all have what in common?	The same day of the week	Always a weekend day	Always a different weekday	The same phase of the Moon
+mat_largest_number_friday	Expert	What is the largest number of Friday the 13ths that a single calendar year can have?	Three	Two	Four	Five
+mat_four_people_must	Expert	Four people, one torch, two at a time at the slower one's pace. They take 1, 2, 5 and 10 minutes. Fastest total crossing?	17 minutes	19 minutes	18 minutes	21 minutes
+mat_year_not_leap_2	Expert	In a year that is not a leap year, which month always starts on the same day of the week as January?	October	July	April	March

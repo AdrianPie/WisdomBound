@@ -36,9 +36,17 @@ object QuizPace {
     /** Tematy, w ktorych pytanie zwykle trzeba policzyc. */
     val THINKING_CATEGORIES: Set<QuizCategory> = setOf(QuizCategory.Math)
 
-    fun isThinking(entry: QuizEntry): Boolean =
-        entry.category in THINKING_CATEGORIES ||
-            THINKING_SECTIONS.any { prefix -> entry.section == prefix || entry.section?.startsWith("$prefix/") == true }
+    /**
+     * Dzialy tematow z [THINKING_CATEGORIES], w ktorych nic sie nie liczy: "Mathematicians" pyta
+     * o ludzi i historie, czyli "wiesz albo nie", jak historia.
+     */
+    val KNOWLEDGE_SECTIONS: Set<String> = setOf("math/history")
+
+    fun isThinking(entry: QuizEntry): Boolean {
+        fun inAny(paths: Set<String>) =
+            paths.any { prefix -> entry.section == prefix || entry.section?.startsWith("$prefix/") == true }
+        return (entry.category in THINKING_CATEGORIES && !inAny(KNOWLEDGE_SECTIONS)) || inAny(THINKING_SECTIONS)
+    }
 
     /** Dodatek do okna dla pytania o tresci [prompt] i odpowiedziach [options]. */
     fun extraMs(prompt: String, options: List<String>, thinking: Boolean): Long {

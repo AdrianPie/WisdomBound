@@ -42,7 +42,7 @@ odpowiedz bije mocniej, okno to 18 s (na dalekich falach do ~11 s). Dlatego:
   tej samej formy. Dluzszy tekst dostaje dodatek czasu (`QuizPace`), ale lepiej go nie potrzebowac.
 - Dwa rodzaje pytan: **"wiesz albo nie"** (fakt, nazwa, kto/gdzie) i **"do przemyslenia"**
   (porownanie, proporcja, rachunek). Te drugie dostaja +4 s, ale tylko w dzialach i tematach z
-  `QuizPace.THINKING_SECTIONS` / `THINKING_CATEGORIES` (dzis: `geography/comparisons`, `math`).
+  `QuizPace.THINKING_SECTIONS` / `THINKING_CATEGORIES` (dzis: `geography/comparisons` i `math` bez dzialu `math/history`).
   Pytanie do przemyslenia piszesz tam, a nowy dzial tego rodzaju dopisujesz do tej listy.
 - Gracz ma sie dobrze bawic i czegos dowiedziec: puenta, zaskoczenie, "musze to komus powiedziec".
 

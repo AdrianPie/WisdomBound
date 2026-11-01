@@ -156,6 +156,11 @@ object QuizSectionCatalog {
         QuizSection("poland/culture", "Culture & Famous Poles", "🎭", QuizCategory.Poland),
         QuizSection("poland/places", "Places & Nature", "🏞️", QuizCategory.Poland),
         QuizSection("poland/traditions", "Traditions & Everyday Life", "🥟", QuizCategory.Poland),
-        QuizSection("poland/sport", "Sport", "🏆", QuizCategory.Poland)
+        QuizSection("poland/sport", "Sport", "🏆", QuizCategory.Poland),
+        QuizSection("math/puzzles", "Brain Teasers", "🧩", QuizCategory.Math),
+        QuizSection("math/numbers", "Numbers", "🔢", QuizCategory.Math),
+        QuizSection("math/geometry", "Geometry", "📐", QuizCategory.Math),
+        QuizSection("math/probability", "Chance & Counting", "🎲", QuizCategory.Math),
+        QuizSection("math/history", "Mathematicians", "🧮", QuizCategory.Math)
     )
 }

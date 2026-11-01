@@ -1,0 +1,98 @@
+# Geometry: shapes, angles, areas, solids, symmetry
+#
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+mat_suma_katow	Easy	What is the sum of angles in a triangle?	180 degrees	360 degrees	90 degrees	270 degrees
+mat3_kat_polny_stopnie	Easy	How many degrees is a straight angle?	180	90	360	45
+scicmp_najwiecej_bokow	Easy	Which of these shapes has the most sides?	An octagon	A triangle	A pentagon	A hexagon
+scicmp_kat_rozwarty	Easy	Which of these angles is obtuse?	120 degrees	45 degrees	90 degrees	30 degrees
+trv2_obwod_srednica	Easy	A circle's circumference divided by its diameter always equals what?	Pi	2	Its radius	The square root of 2
+wld_mat_zegar_kat	Easy	What angle do a clock's hands make at 3 o'clock?	90 degrees	45 degrees	180 degrees	30 degrees
+mat_znak_stop	Easy	What shape is a standard stop sign?	An octagon	A hexagon	A pentagon	A heptagon
+mat_plaster_miodu	Easy	What shape are the cells of a honeycomb?	Hexagons	Pentagons	Squares	Octagons
+mat_szescian_rogi	Easy	How many corners does a cube have?	8	6	12	4
+matx_pentagon	Easy	How many sides does the Pentagon building near Washington have?	Five	Six	Eight	Four
+mat_degrees_full_circle	Easy	How many degrees are there in a full circle?	360	180	100	400
+mat_longest_side_right	Easy	What is the longest side of a right-angled triangle called?	The hypotenuse	The diagonal	The base	The radius
+mat_straight_line_centre	Easy	What is a straight line from the centre of a circle to its edge called?	The radius	The diameter	The chord	The tangent
+mat_straight_line_through	Easy	What is a straight line through the centre of a circle, from edge to edge, called?	The diameter	The radius	The chord	The arc
+mat_shape_traditional_give	Easy	What shape is a traditional 'Give way' road sign?	A triangle	A circle	A square	An octagon
+mat_triangle_all_three	Easy	What is a triangle with all three sides equal called?	Equilateral	Isosceles	Scalene	Right-angled
+mat_protractor_measure	Easy	What does a protractor measure?	Angles	Lengths	Areas	Weights
+mat_shape_base_great	Easy	What shape is the base of the Great Pyramid of Giza?	A square	A triangle	A hexagon	A circle
+mat_face_north_turn	Easy	You face north and turn 90 degrees clockwise. Which way are you facing now?	East	West	South	North-west
+mat_rectangle_long_wide	Easy	A rectangle is 6 cm long and 4 cm wide. What is its perimeter?	20 cm	24 cm	10 cm	48 cm
+trv2_trojkat_rownoboczny_katy	Easy	How big is each angle of an equilateral triangle?	60 degrees	45 degrees	90 degrees	30 degrees
+mat_kula_sciany	Easy	Which 3D shape has no edges and no corners at all?	A sphere	A cone	A cylinder	A cube
+mat_angle_clock_hands	Easy	What angle do a clock's hands make at exactly 6 o'clock?	180 degrees	90 degrees	120 degrees	360 degrees
+mat_rug_rug_covers	Easy	A 2 m by 8 m rug and a 4 m by 4 m rug: which covers more floor?	They cover the same	The 2 m by 8 m rug	The 4 m by 4 m rug	It depends on the room
+mat_pitagoras	Medium	A triangle with legs of 3 and 4 has a hypotenuse of...	5	6	7	4.5
+trv2_dziesieciokat	Medium	What is a polygon with ten sides called?	A decagon	A hexagon	A dodecagon	A nonagon
+trv2_szescian_krawedzie	Medium	How many edges does a cube have?	12	8	6	10
+mat_czworoscian	Medium	How many edges does a triangular pyramid (tetrahedron) have?	6	4	5	8
+mat_roznoboczny	Medium	What is a triangle with three sides of different lengths called?	Scalene	Isosceles	Equilateral	Obtuse
+mat_wlazy	Medium	Why are manhole covers usually round?	A round cover can't fall through its hole	Round covers are cheaper to make	Round holes are easier to dig	Circles are stronger than squares
+mat_wskazowka_minutowa	Medium	How many degrees does a clock's minute hand turn in one minute?	6	1	10	12
+mat_kwadrat_symetria	Medium	How many lines of symmetry does a square have?	4	2	8	1
+maty_piramida_sciany	Medium	Counting the base, how many faces does a square-based pyramid have?	Five	Four	Six	Eight
+mat_sided_polygon	Medium	What is a 12-sided polygon called?	A dodecagon	A decagon	A hexagon	A nonagon
+mat_triangle_two_equal	Medium	What is a triangle with two equal sides called?	Isosceles	Scalene	Equilateral	Obtuse
+mat_sides_heptagon	Medium	How many sides does a heptagon have?	Seven	Six	Eight	Nine
+mat_five_pointed_star	Medium	What is a five-pointed star drawn with one continuous line called?	A pentagram	A pentagon	A hexagram	A heptagon
+mat_sides_nonagon	Medium	How many sides does a nonagon have?	Nine	Seven	Eight	Eleven
+mat_regular_shapes_cannot	Medium	Which of these regular shapes cannot tile a flat floor on its own without leaving gaps?	The pentagon	The triangle	The square	The hexagon
+mat_mandelbrot_set_edges	Medium	The Mandelbrot set, whose edges show ever more detail the more you zoom in, is a famous example of what?	A fractal	A prime spiral	A tessellation	A magic square
+mat_shape_get_slice	Medium	What shape do you get when you slice a cone straight across, parallel to its base?	A circle	An ellipse	A triangle	A parabola
+mat_shape_get_spinning	Medium	Which 3D shape do you get by spinning a rectangle around one of its sides?	A cylinder	A cone	A sphere	A cube
+mat_double_length_square	Medium	If you double the length of a square's sides, how many times bigger does its area get?	Four	Two	Three	Eight
+mat_shape_toblerone_box	Medium	What 3D shape is a Toblerone box?	A triangular prism	A square pyramid	A tetrahedron	A cuboid
+mat_sum_interior_angles	Medium	What is the sum of the interior angles of a pentagon?	540 degrees	360 degrees	450 degrees	720 degrees
+mat_degrees_each_interior	Medium	How many degrees are in each interior angle of a regular hexagon?	120	108	135	90
+mat_volume_pizza_radius	Medium	What is the volume of a pizza with radius z and thickness a?	pi z z a	2 pi z a	pi z a a	z z a / pi
+mat_snack_famously_made	Medium	Which snack is famously made in the saddle shape that mathematicians call a hyperbolic paraboloid?	Pringles	Doritos	Bugles	Cheetos
+mat_capital_letters_looks	Medium	Which of these capital letters looks exactly the same after being turned half a turn (180 degrees)?	N	M	E	A
+mat_ladder_leans_against	Medium	A 13 m ladder leans against a wall with its foot 5 m from the wall. How high up the wall does it reach?	12 m	8 m	10 m	18 m
+mat_ignoring_air_resistance	Medium	Ignoring air resistance, what curve does a thrown ball follow?	A parabola	A circle	A hyperbola	A spiral
+mat_slice_cylinder_like	Medium	Slice a cylinder, like a sausage, at a slant. What shape is the cut face?	An ellipse	A circle	A rectangle	A parabola
+mat_cube_cut_cubes	Medium	A 10 cm cube is cut into 1 cm cubes. How many small cubes do you get?	1,000	100	600	300
+mat_diamond_shape_four	Medium	What is a 'diamond' shape with four equal sides properly called?	A rhombus	A trapezium	A pentagon	An oblong
+trv2_szesciokat_katy	Medium	What do the interior angles of a hexagon add up to?	720 degrees	540 degrees	360 degrees	900 degrees
+mst_wstega_mobiusa	Medium	How many sides does a Mobius strip have?	One	Two	Three	None
+mat_kolo_pole	Medium	For a fixed perimeter, which shape encloses the largest area?	A circle	A square	An equilateral triangle	A regular hexagon
+mat_shape_smallest_surface	Medium	Which shape has the smallest surface area for a given volume?	Sphere	Cube	Cylinder	Tetrahedron
+dpt_mat_dwunastoscian	Medium	How many faces does a regular dodecahedron have?	Twelve	Ten	Twenty	Eight
+ref_mat_szesciokat_przekatne	Hard	How many diagonals does a hexagon have?	9	6	12	8
+mat_pilka_szesciokaty	Hard	A classic football is stitched from 12 pentagons and how many hexagons?	20	12	18	32
+matx_pizza	Hard	Which gives you more pizza: one 18-inch pizza or two 12-inch pizzas?	One 18-inch pizza	Two 12-inch pizzas	Exactly the same	It depends on the crust
+matx_a4	Hard	Why does A4 paper keep the same shape when cut in half?	Its sides are in the ratio 1 : root 2	Its sides follow the golden ratio	It is almost a perfect square	Its sides are in the ratio 2 : 3
+maty_platonskie	Hard	How many 'Platonic solids' (perfectly regular 3D shapes) are there?	Five	Four	Seven	Infinitely many
+mat_simple_solid_like	Hard	For a simple solid like a cube, corners minus edges plus faces always equals what?	2	0	1	6
+mat_single_true_length	Hard	Why is there no single 'true' length for a coastline like Britain's?	The finer the ruler, the longer it gets	Tides move it by kilometres each day	Countries measure in different units	Erosion changes it every year
+mat_painted_3x3x3_cube	Hard	A painted 3x3x3 cube is cut into 27 small cubes. How many of the small cubes have no paint on them at all?	1	0	3	8
+mat_walking_around_any	Hard	Walking around any convex polygon, the turns you make at its corners (the exterior angles) always add up to what?	360 degrees	180 degrees	540 degrees	It depends on the sides
+mat_happens_cut_mobius	Hard	What happens if you cut a Mobius strip all the way along its middle?	You get one longer loop	You get two separate loops	You get two linked loops	It falls apart into strips
+mat_sided_die_beloved	Hard	The 20-sided die beloved of Dungeons & Dragons players is which shape?	An icosahedron	A dodecahedron	An octahedron	A decahedron
+mat_rope_tied_snugly	Hard	A rope is tied snugly around Earth's equator. If you add just 1 m to its length, how high could it then float evenly all the way round?	About 16 cm	Less than a millimetre	About 1 cm	About 2 m
+mat_curve_chain_hanging	Hard	What is the curve of a chain hanging freely between two hooks called?	A catenary	A parabola	A hyperbola	A cycloid
+mat_classic_open_envelope	Hard	Can the classic 'open envelope' (a square with both diagonals and a triangular roof) be drawn in one stroke without going over any line twice?	Yes, if you start at a bottom corner	Yes, starting from any corner	No, it is impossible	Yes, if you start at the roof tip
+mat_giant_shaped_exactly	Hard	If a giant were shaped exactly like a man but 10 times taller, about how many times heavier would he be?	1,000	10	100	30
+mat_sum_interior_angles_2	Hard	What is the sum of the interior angles of a decagon?	1440 degrees	1800 degrees	1260 degrees	1080 degrees
+mat_britain_seven_sided	Hard	Britain's seven-sided 50p coin has curved edges. What special property does that give it?	The same width in every direction	It weighs less than a round coin	It cannot be easily forged	It stacks without sliding
+mat_bottle_inside_outside	Hard	Which 'bottle' has no inside and no outside, and cannot be built in 3D without passing through itself?	A Klein bottle	A Leyden jar	A Mobius bottle	A Florence flask
+mat_triangle_drawn_surface	Hard	Can a triangle drawn on the surface of a globe have three right angles?	Yes, for example from the pole to the equator	No, its angles always add up to 180 degrees	Only on a globe smaller than a football	Only if one of its sides curves inwards
+mat_angle_between_hands	Hard	What is the angle between the hands of a clock at 3:30?	75 degrees	90 degrees	60 degrees	105 degrees
+mat2_topologia_kubek	Hard	Which shape does a topologist consider equivalent to a coffee mug?	A torus (donut)	A sphere	A cube	A Mobius strip
+matx_a0	Hard	How big is a sheet of A0 paper?	Exactly one square metre	Exactly one square foot	Half a square metre	Two square metres
+mat_gabriel_horn_endless	Hard	'Gabriel's horn', an endless trumpet shape, has a finite volume but what?	An infinite surface area	Zero thickness	No inside at all	An area of exactly zero
+mat_ham_sandwich_theorem	Hard	What does the 'ham sandwich theorem' promise?	One flat cut can halve the bread, ham and cheese	Any sandwich can be cut into equal triangles	No sandwich can be split into equal thirds	A dropped sandwich lands butter side down
+ref_mat_dwudziestoscian	Expert	How many edges does a regular icosahedron have?	30	20	12	60
+mat_zegar_315	Expert	What is the angle between a clock's hands at 3:15?	7.5 degrees	0 degrees	15 degrees	30 degrees
+mat_szachownica_kwadraty	Expert	Counting squares of every size, how many squares are on a chessboard?	204	64	128	1,296
+mat_because_hairy_ball	Expert	Because of the 'hairy ball theorem', at any moment there must be at least one spot on Earth where what is true?	No wind blows sideways	It is exactly noon	It is raining	The temperature is 0 degrees
+mat_put_points_circle	Expert	Join every pair of points on a circle: 2, 3, 4, 5 points give at most 2, 4, 8, 16 regions. What is the most for 6 points?	31	32	30	36
+mat_curve_gives_fastest	Expert	Which curve gives the fastest slide for a ball rolling between two points, faster even than a straight ramp?	A cycloid	A catenary	A parabola	A circular arc
+mat_any_moment_two	Expert	At any moment, two exactly opposite points on Earth have the same temperature and air pressure. Which theorem guarantees it?	The Borsuk-Ulam theorem	Pythagoras' theorem	Fermat's Last Theorem	The four colour theorem
+mat_drill_hole_straight	Expert	Drill a hole straight through the centre of a ball so the ring left over is 6 cm tall. What does the ring's volume depend on?	Only its 6 cm height	Only the ball's size	Only the hole's width	Both height and ball size
+mat_identical_balls_touch	Expert	How many identical balls can touch one central ball of the same size at the same time?	12	8	6	20
+mat_2023_retired_print	Expert	In 2023 a retired print technician found the 'hat', the first single tile shape that can do what?	Cover a floor only without ever repeating	Tile a sphere without leaving any gaps	Fold up into all five Platonic solids	Fill 3D space with no gaps at all
+mat_angles_five_tips	Expert	What do the angles at the five tips of a five-pointed star add up to?	180 degrees	360 degrees	540 degrees	300 degrees
+mat_different_flat_nets	Expert	How many different flat 'nets' of six squares fold up into a cube?	11	6	8	24

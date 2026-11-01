@@ -36,7 +36,10 @@ class QuizPaceTest {
         val comparisons = all.filter { it.section?.startsWith("geography/comparisons/") == true }
         assertTrue(comparisons.size >= 500, "dzial porownan ma tylko ${comparisons.size} pytan")
         assertTrue(comparisons.all(QuizPace::isThinking))
-        assertTrue(all.filter { it.category == QuizCategory.Math }.all(QuizPace::isThinking))
+        val (mathematicians, maths) = all.filter { it.category == QuizCategory.Math }
+            .partition { it.section == "math/history" }
+        assertTrue(maths.all(QuizPace::isThinking))
+        assertTrue(mathematicians.isNotEmpty() && mathematicians.none(QuizPace::isThinking), "o matematykach sie wie, nie liczy")
 
         val history = all.filter { it.category == QuizCategory.History }
         assertFalse(history.any(QuizPace::isThinking), "historia to wiedza, nie rachunek")

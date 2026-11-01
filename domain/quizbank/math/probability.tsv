@@ -1,0 +1,90 @@
+# Chance & Counting: probability, chance, statistics, counting/combinatorics
+#
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+day_blackjack_liczba	Easy	In which card game do players aim for a total of 21?	Blackjack	Poker	Bridge	Rummy
+mat_kiery	Easy	How many hearts are in a standard deck of cards?	13	12	10	26
+mat_cards_standard_deck	Easy	How many cards are in a standard deck, not counting jokers?	52	54	48	56
+mat_chance_drawing_heart	Easy	What is the chance of drawing a heart from a full 52-card deck?	1 in 4	1 in 13	1 in 2	1 in 52
+mat_chance_rolling_six	Easy	What is the chance of rolling a six with one fair die?	1 in 6	1 in 3	1 in 12	1 in 36
+mat_different_outfits_put	Easy	How many different outfits can you put together from 3 shirts and 4 pairs of trousers?	12	7	9	16
+trv2_moneta_3_orly	Medium	If you flip a fair coin three times, what is the chance of getting heads every time?	1 in 8	1 in 3	1 in 6	1 in 4
+trv2_kostka_suma	Medium	What is the most likely total when you roll two dice?	7	6	8	12
+mat_dublet	Medium	What is the chance of rolling a double with two dice?	1 in 6	1 in 12	1 in 36	1 in 3
+mat_hazard	Medium	A fair coin has landed heads ten times in a row. What is the chance of heads on the next flip?	50%	Less than 50%	More than 50%	0%
+mat_dominanta	Medium	What is the mode of 2, 3, 3, 5 and 7?	3	4	5	2
+mat_as_talia	Medium	What is the chance of drawing an ace from a shuffled 52-card deck?	1 in 13	1 in 4	1 in 52	1 in 26
+mat_sorted_list_numbers	Medium	In a sorted list of numbers, what is the middle value called?	The median	The mean	The mode	The range
+mat_different_orders_arrange	Medium	In how many different orders can you arrange the letters C, A and T?	6	3	9	27
+mat_using_digits_different	Medium	Using the digits 0 to 9, how many different four-digit PIN codes are possible?	10,000	9,999	6,561	1,000
+mat_different_totals_roll	Medium	How many different totals can you roll with two ordinary dice?	11	12	36	10
+mat_flip_fair_coin	Medium	You flip a fair coin twice. What is the chance it lands the same way both times?	1 in 2	1 in 4	1 in 3	3 in 4
+mat_any_group_people	Medium	In any group of 13 people, which of these must at least two of them share?	A birth month	A birthday	A first initial	A birth year
+mat_lottery_likely_draw	Medium	In a lottery, how likely is the draw 1, 2, 3, 4, 5, 6 compared with any other set of six numbers?	Exactly as likely	Far less likely	Slightly less likely	More likely
+mat_more_likely_two	Medium	Which is more likely: two heads from two flips of a fair coin, or a six from one roll of a fair die?	The two heads	The six	They are equally likely	It is impossible to say
+mat_poker_hands_rarest	Medium	Which of these poker hands is the rarest?	Four of a kind	A full house	A flush	A straight
+mat_roughly_odds_matching	Medium	Roughly what are the odds of matching all six numbers in a lottery that draws 6 balls from 49?	About 1 in 14 million	About 1 in 14,000	About 1 in 1.4 billion	About 1 in 140,000
+mat_spotify_make_shuffle	Medium	Why did Spotify make its 'shuffle' less random?	Truly random play felt streaky to listeners	Random play used too much battery	Record labels demanded equal plays	A random shuffle broke the app
+mat_martingale_betting_system	Medium	The 'martingale' betting system doubles your stake after every loss. What stops it working in a real casino?	Table limits and running out of money	The wheel remembers your bets	Casinos ban doubling a bet	Odds change after each loss
+mat_draw_card_full	Medium	You draw one card from a full deck. What is the chance it is a red king?	1 in 26	1 in 13	1 in 52	1 in 4
+mat_roll_two_dice	Medium	You roll two dice. What is the chance that both show an odd number?	1 in 4	1 in 2	1 in 3	1 in 6
+mat_family_two_children	Medium	A family has two children and the older one is a girl. What is the chance that both are girls?	1 in 2	1 in 3	1 in 4	2 in 3
+mat_world_cup_group	Medium	In a World Cup group of four teams, each team plays every other team once. How many group matches are there?	6	4	8	12
+mat_numbered_pockets_european	Medium	How many numbered pockets are on a European roulette wheel?	37	36	38	40
+mat_picture_cards_jacks	Medium	How many picture cards (jacks, queens and kings) are in a standard deck?	12	16	13	9
+mat_ice_cream_sales	Medium	Ice cream sales and drownings rise and fall together through the year. What is the most likely reason?	Both rise in hot weather	Ice cream gives swimmers cramp	Grief makes people eat ice cream	It is pure coincidence
+mat_average_score_get	Medium	On average, what score do you get per roll of a fair six-sided die?	3.5	3	4	2.5
+mat_normal_distribution_graph	Medium	The 'normal distribution' graph is nicknamed after the shape of what?	A bell	A wave	A camel's hump	A rainbow
+mat_billionaire_walks_small	Medium	When a billionaire walks into a small bar, which figure for the drinkers' wealth barely changes?	The median	The mean	The total	The highest value
+mat_two_friends_each	Medium	Two friends each secretly pick a whole number from 1 to 10. What is the chance they pick the same one?	1 in 10	1 in 100	1 in 20	1 in 5
+mat_kostka_przeciwne	Medium	On a standard die, opposite faces always add up to what?	7	6	8	10
+mat_dice_games_roll	Medium	In dice games, what does a roll of 'snake eyes' mean?	Two ones	Two sixes	A one and a six	Two threes
+mat_two_people_play	Medium	Two people play rock, paper, scissors, each choosing at random. How likely is a draw?	1 in 3	1 in 2	1 in 9	1 in 6
+mat_infinite_monkey_theorem	Medium	The 'infinite monkey theorem' says a monkey hitting keys at random forever would almost surely type the complete works of whom?	William Shakespeare	Charles Dickens	Homer	Leo Tolstoy
+mat_asked_pick_random	Medium	Asked to pick a 'random' whole number from 1 to 10, which do people choose most often?	7	1	5	10
+mat2_kombinacje	Medium	In how many ways can you arrange 4 different books in a row?	24	12	16	36
+mat_uscisk_dloni	Medium	If 10 people each shake hands with everyone else once, how many handshakes is that?	45	100	90	20
+maty_dwie_szostki	Medium	What is the chance of rolling a total of 12 with two dice?	1 in 36	1 in 12	1 in 6	1 in 18
+mat_must_least_two	Medium	Why must at least two Londoners have exactly the same number of hairs on their heads?	There are more Londoners than possible hair counts	Hair counts are passed down within families	Hairs always grow back in fixed numbers	Every adult head has exactly 100,000 hairs
+mat_poker_flush_beat	Medium	In poker, why does a flush beat a straight?	It is less likely to be dealt	It uses higher cards	It was invented first	It needs more matching pairs
+mat_monte_carlo_method	Medium	The 'Monte Carlo method', which solves problems using random numbers, is named after what?	A famous casino	A mathematician named Carlo Monte	A Monaco racing rally	A Swiss mountain observatory
+mat_rule_thumb_says	Medium	Which rule of thumb says that roughly 80% of the effects come from 20% of the causes?	The Pareto principle	Murphy's law	Parkinson's law	The Peter principle
+ext_tasowanie_talii	Hard	A shuffled deck of 52 cards has likely landed in an order that has what property?	Never occurred before in history	Repeats roughly yearly	Repeats every million shuffles	Is one of a few billion
+cur_urodziny_paradoks	Hard	How many people must be in a room for a better-than-even chance that two share a birthday?	23	183	57	366
+mat_monty_hall	Hard	In the Monty Hall puzzle, what is your chance of winning if you switch doors?	2 in 3	1 in 2	1 in 3	1 in 4
+mat_dwie_szostki	Hard	What is the chance of rolling at least one six with two dice?	11 in 36	1 in 3	1 in 6	1 in 36
+mat_real_life_data	Hard	In many real-life data sets, like bills or town populations, which first digit turns up most often?	1	5	9	All equally often
+mat_according_friendship_paradox	Hard	According to the 'friendship paradox', how do your friends compare with you, on average?	They have more friends than you	They have fewer friends than you	They have exactly as many	It is purely random
+mat_counting_february_people	Hard	Counting 29 February, how many people must be in a room to make it certain that two share a birthday?	367	366	365	183
+mat_roughly_likely_dealt	Hard	Roughly how likely are you to be dealt a royal flush in five-card poker?	About 1 in 650,000	About 1 in 6,500	About 1 in 65 million	About 1 in 650
+mat_family_four_children	Hard	A family has four children, and boys and girls are equally likely. Which split is most likely?	Three of one sex, one of the other	Two boys and two girls	All four of the same sex	All splits are equally likely
+mat_flip_fair_coin_2	Hard	If you flip a fair coin 10 times, roughly how likely are you to get exactly 5 heads?	About 25%	About 50%	About 10%	About 75%
+mat_world_war_abraham	Hard	In World War II, Abraham Wald told the US military to armour bombers where returning planes had what?	No bullet holes	The most bullet holes	Engine trouble	Fuel leaks
+mat_1913_gamblers_monte	Hard	In 1913, gamblers at Monte Carlo lost millions betting on red. How many times in a row did the ball land on black?	26	13	7	52
+mat_boxes_hold_two	Hard	Boxes hold two gold coins, two silver coins and one of each. You pick a box at random and draw a gold coin. What is the chance the other coin is gold?	2 in 3	1 in 2	1 in 3	3 in 4
+mat_economist_stefan_mandel	Hard	How did economist Stefan Mandel win national lotteries again and again?	He bought every possible combination	He found a flaw in the ball machine	He bribed the officials who drew the balls	He always picked birthdays of winners
+mat_dropping_needles_random	Hard	Dropping needles at random onto a floor of parallel lines can be used to estimate which number?	Pi	e	The golden ratio	The square root of 2
+mat_average_flips_fair	Hard	On average, how many flips of a fair coin does it take to get the first head?	2	1.5	3	4
+mat_prisoner_dilemma_both	Hard	In the 'prisoner's dilemma', why do both prisoners usually end up worse off?	Each is tempted to betray the other	Each forgets what the other said	Both refuse to speak at all	The guards always lie to them
+mat_draw_two_cards	Hard	You draw two cards from a full deck. What is the chance that both are aces?	1 in 221	1 in 169	1 in 26	1 in 104
+mat_different_ways_letters	Hard	In how many different ways can the letters of the word 'LEVEL' be arranged?	30	60	120	20
+mat_flip_two_coins	Hard	You flip two coins and at least one is heads. What is the chance both are heads?	1 in 3	1 in 2	1 in 4	2 in 3
+mat_triangles_drawn_using	Hard	How many triangles can be drawn using the six corners of a hexagon?	20	15	18	24
+mat_nearly_all_people	Hard	Why do nearly all people have more legs than the average person?	The mean is just under two	Some people have extra legs	Averages always round down	Children count as half
+mat_tiles_standard_double	Hard	How many tiles are in a standard double-six set of dominoes?	28	36	21	32
+mat_average_rolls_fair	Hard	On average, how many rolls of a fair die does it take to get the first six?	6	3.5	3	12
+mat_league_teams_each	Hard	In a league of 20 teams where each plays every other team home and away, how many matches are there in a season?	380	190	400	760
+mat_huge_2023_study	Hard	A huge 2023 study of over 350,000 coin tosses found that a coin lands slightly more often how?	On the same side it started	Heads up	Tails up	On the side with the bigger picture
+mat_interest_rate_rises	Hard	An interest rate rises from 2% to 3%, one percentage point. By what percentage has the rate itself grown?	50%	1%	33%	150%
+mat_ruletka	Hard	What do all the numbers on a roulette wheel add up to?	666	555	777	1,000
+mat_sports_illustrated_cover	Hard	The 'Sports Illustrated cover jinx', where stars slump after a cover appearance, is best explained by what?	Regression to the mean	The gambler's fallacy	Benford's law	Zipf's law
+mat_petersburg_paradox_game	Expert	In the 'St Petersburg paradox', a game's prize doubles every time a coin lands heads, stopping at the first tails. What is its expected payout?	Infinite	Exactly $2	About $25	Nothing at all
+mat_1973_berkeley_seemed	Expert	In 1973, UC Berkeley seemed to favour men overall, yet most departments slightly favoured women. What is this effect called?	Simpson's paradox	Benford's law	The gambler's fallacy	Zeno's paradox
+mat_test_disease_000	Expert	A test for a disease that 1 in 10,000 people have is 99% accurate. You test positive. Roughly how likely are you to have it?	About 1%	About 99%	About 50%	About 90%
+mat_according_braess_paradox	Expert	According to Braess's paradox, what can adding a new road to a busy network do?	Make every driver's journey slower	Halve every driver's journey time	Make every journey the same length	Double the number of cars overnight
+mat_parrondo_paradox_show	Expert	What does Parrondo's paradox show about two games that are each sure to lose in the long run?	Played alternately, they can win	Played together, they lose twice as fast	They always cancel each other out	Neither can ever be won even once
+mat_smallest_number_people	Expert	What is the smallest number of people at a party that guarantees three mutual friends or three mutual strangers?	6	5	7	9
+mat_different_ways_2x10	Expert	How many different ways can a 2x10 strip be tiled with 2x1 dominoes?	89	55	100	144
+mat_mathematicians_showed_riffle	Expert	Mathematicians showed that about how many riffle shuffles are enough to mix a 52-card deck well?	7	3	20	52
+mat_chance_rolling_five	Expert	What is the chance of rolling five of a kind (a 'Yahtzee') with five dice in a single throw?	1 in 1,296	1 in 7,776	1 in 216	1 in 46,656
+mat_1906_francis_galton	Expert	In 1906, Francis Galton studied 787 guesses of an ox's weight at a fair. What surprised him?	The middle guess was within 1% of the truth	Nobody came within 100 kg of the truth	The butchers guessed worst of all	Most guesses were exactly right
+mat_chevalier_mere_won	Expert	The Chevalier de Mere won by betting on a six in four rolls. Why did his bet on a double six in 24 rolls of two dice disappoint him?	It lost slightly more often than it won	It won exactly half the time	Casinos refused to take the bet	Two dice cannot land a double six

@@ -1,0 +1,83 @@
+# Mathematicians: mathematicians, history of maths, famous problems and theorems
+#
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+mat_pitagoras_wzor	Easy	Which famous theorem says a² + b² = c²?	Pythagoras' theorem	Thales' theorem	Fermat's Last Theorem	Euclid's theorem
+mat_ancient_counting_tool	Easy	Which ancient counting tool works by sliding beads along rods?	The abacus	The sextant	The astrolabe	The slide rule
+mat_euklides	Medium	Who is known as the 'father of geometry'?	Euclid	Pythagoras	Archimedes	Thales
+mat_trojkat_pascala	Medium	What is the famous triangle of numbers where each is the sum of the two above it?	Pascal's triangle	Euler's triangle	Newton's triangle	Fermat's triangle
+matx_cyfry_indie	Medium	The digits 0 to 9 we use today, called 'Arabic numerals', first developed where?	India	Arabia	Egypt	Greece
+mat_word_algebra_comes	Medium	The word 'algebra' comes from which language?	Arabic	Greek	Latin	Persian
+mat_french_thinker_gave	Medium	Which French thinker gave his name to 'Cartesian' coordinates?	Rene Descartes	Blaise Pascal	Pierre de Fermat	Joseph Fourier
+mat_film_troubled_mathematician	Medium	Which film is about the troubled mathematician John Nash?	A Beautiful Mind	Good Will Hunting	The Imitation Game	The Theory of Everything
+mat_film_tells_story	Medium	Which film tells the story of Black women mathematicians who helped NASA reach space?	Hidden Figures	Apollo 13	The Right Stuff	First Man
+mat_lewis_carroll_author	Medium	Lewis Carroll, author of 'Alice in Wonderland', worked at Oxford as what?	A mathematics lecturer	A chemistry professor	A college librarian	A history tutor
+mat_film_young_mit	Medium	In which film does a young MIT janitor secretly solve maths problems left on a blackboard?	Good Will Hunting	A Beautiful Mind	The Imitation Game	Proof
+mat_word_geometry_literally	Medium	The word 'geometry' literally means what?	Earth measuring	Shape drawing	Angle study	Line drawing
+mat_word_digit_comes	Medium	The word 'digit' comes from the Latin word for what?	Finger	Notch	Count	Knot
+mat_paradox_achilles_never	Medium	What is the name of the paradox in which Achilles can never overtake a tortoise?	Zeno's paradox	Russell's paradox	Banach-Tarski paradox	Liar paradox
+mat_pierre_fermat_scribbled	Medium	Pierre de Fermat scribbled that he had a marvellous proof of his famous theorem, but what was too small to hold it?	The margin of his book	His tiny notebook	His study's blackboard	A postcard to a friend
+mat_handheld_calculating_tool	Medium	Which handheld calculating tool, based on logarithms, did engineers rely on until pocket calculators arrived?	The slide rule	The abacus	The sextant	The astrolabe
+mat_gauss	Medium	Which mathematician is said to have added up 1 to 100 in seconds as a schoolboy?	Carl Friedrich Gauss	Isaac Newton	Leonhard Euler	Blaise Pascal
+matx_kroliki	Medium	The Fibonacci sequence first appeared in a puzzle about breeding which animals?	Rabbits	Mice	Sheep	Chickens
+mat_ancient_impossible_task	Medium	What is the ancient, impossible task of drawing a square with exactly a circle's area, using only compass and ruler?	Squaring the circle	Doubling the cube	Trisecting the angle	Cornering the arc
+mst_zero_indie	Hard	Zero as a number in its own right was first fully developed where?	India	Greece	Egypt	Rome
+mat_ramanujan	Hard	Which self-taught Indian mathematician inspired the film 'The Man Who Knew Infinity'?	Srinivasa Ramanujan	Aryabhata	Brahmagupta	C. R. Rao
+mat_medal_fieldsa	Hard	Which top mathematics award is given only to mathematicians under 40?	The Fields Medal	The Abel Prize	The Wolf Prize	The Turing Award
+mat_liczba_eulera	Hard	The constant e, about 2.718, is named after which mathematician?	Leonhard Euler	Isaac Newton	Carl Friedrich Gauss	Blaise Pascal
+mat_ancient_people_counted	Hard	Which ancient people counted in base 60, giving us 60 minutes in an hour?	The Babylonians	The Egyptians	The Greeks	The Romans
+mat_reportedly_coined_word	Hard	Who reportedly coined the word 'googol' for 1 followed by 100 zeros?	A nine-year-old boy	A Google co-founder	A Harvard astronomer	A Roman scholar
+mat_according_tradition_entrance	Hard	According to tradition, the entrance to Plato's Academy warned that no one ignorant of what should enter?	Geometry	Music	Astronomy	Rhetoric
+mat_1897_lawmakers_state	Hard	In 1897, lawmakers in which US state nearly passed a bill that would have changed the value of pi?	Indiana	Texas	Kansas	Ohio
+mat_french_mathematician_died	Hard	Which French mathematician died after a duel at just 20, having written out his ideas the night before?	Evariste Galois	Niels Henrik Abel	Blaise Pascal	Joseph Fourier
+mat_scottish_laird_invented	Hard	Which Scottish laird invented logarithms in 1614?	John Napier	Henry Briggs	Colin Maclaurin	James Gregory
+mat_mathematician_identity_plus	Hard	Which mathematician's identity, e to the i pi plus 1 equals 0, is called the most beautiful equation?	Leonhard Euler	Carl Friedrich Gauss	Bernhard Riemann	Pierre de Fermat
+mat_italian_mathematician_brought	Hard	Which Italian mathematician brought Hindu-Arabic numerals to Europe in 1202?	Fibonacci	Cardano	Tartaglia	Galileo
+mat_persian_scholar_gave	Hard	Which Persian scholar's name gave us the word 'algorithm'?	Al-Khwarizmi	Omar Khayyam	Avicenna	Al-Biruni
+mat_austrian_logician_proved	Hard	Which Austrian logician proved in 1931 that some true statements in maths can never be proved?	Kurt Godel	David Hilbert	Georg Cantor	Emmy Noether
+mat_mathematician_showed_some	Hard	Which mathematician showed some infinities are bigger than others?	Georg Cantor	Kurt Godel	Leonhard Euler	David Hilbert
+mat_hotel_thought_experiment	Hard	Which hotel thought experiment shows that an infinite hotel can always fit more guests?	Hilbert's Grand Hotel	Cantor's Inn	Zeno's Lodge	Godel's Motel
+mat_french_mathematician_sophie	Hard	How did French mathematician Sophie Germain sign her letters to Lagrange and Gauss, so as to be taken seriously?	With a man's name	With her husband's name	With only a number	With a royal title
+mat_great_mathematician_kept	Hard	Which great mathematician kept up his astonishing output even after going almost completely blind?	Leonhard Euler	Carl Friedrich Gauss	Isaac Newton	Pierre de Fermat
+mat_mathematicians_proudly_quote	Hard	Mathematicians proudly quote their 'Erdos number'. What does it count?	Steps of co-authorship to Paul Erdos	Papers published before age 30	Famous problems they have cracked	Major prizes they have won
+mat_russell_barber_paradox	Hard	In Russell's 'barber paradox', a male barber shaves exactly those men who do not shave themselves. Who shaves the barber?	No answer avoids a contradiction	He shaves himself	Another barber does	Nobody - he grows a beard
+mat_bible_describes_round	Hard	The Bible describes a round basin 10 cubits across and 30 cubits around. What value of pi does that imply?	3	3.14	3.2	3.5
+mat_ancient_egyptians_wrote	Hard	Ancient Egyptians wrote almost every fraction as a sum of what?	Fractions with 1 on top	Fractions with 10 at the bottom	Fractions with 60 at the bottom	Fractions with 2 on top
+mat_mathematician_invented_game	Hard	Which mathematician invented the 'Game of Life', a grid of cells that live and die by a few simple rules?	John Conway	Alan Turing	John von Neumann	Stephen Wolfram
+mat_according_legend_thales	Hard	According to legend, how did Thales measure the height of an Egyptian pyramid?	By comparing its shadow with his own	By climbing it with a knotted rope	By counting its rows of stones	By asking the priests who built it
+mat_ancient_greek_supposedly	Hard	Which ancient Greek supposedly told a king that there is 'no royal road to geometry'?	Euclid	Pythagoras	Archimedes	Plato
+mat_probability_theory_grew	Hard	Probability theory grew out of letters exchanged in 1654 by two French mathematicians. What were they discussing?	Splitting the stakes of an unfinished game	Rigging a royal lottery for the king	Predicting the next harvest's weather	Pricing insurance for ships at sea
+mat_according_legend_tower	Hard	According to the legend of the Tower of Hanoi, what happens when monks finish moving all 64 golden discs?	The world will end	They become gods	A new emperor is born	The temple turns to gold
+mat_prize_norwegian_mathematician	Hard	Which prize, named after a Norwegian mathematician, is often called the 'Nobel Prize of mathematics'?	The Abel Prize	The Fields Medal	The Wolf Prize	The Shaw Prize
+mat_millennium_prize_problems	Hard	How many 'Millennium Prize Problems', each worth $1 million, were announced in 2000?	Seven	Ten	Twenty-three	Three
+mat_famously_hard_problem	Hard	Which famously hard problem asks for the shortest route that visits every city on a list exactly once?	The travelling salesman problem	The Konigsberg bridges problem	The knapsack problem	The four colour problem
+mat_day_birthday_scientist	Hard	Pi Day is also the birthday of which famous scientist?	Albert Einstein	Isaac Newton	Marie Curie	Galileo Galilei
+mat_word_calculus_comes	Hard	The word 'calculus' comes from the Latin word for what?	A small pebble	A counting board	A clever trick	A measuring rope
+mat_letters_qed_end	Hard	What do the letters 'QED' at the end of a proof stand for?	Which was to be demonstrated	Quite easily done	Question ends definitely	Quantity equals difference
+mat_problem_andrew_wiles	Hard	Which famous problem did Andrew Wiles prove in 1994, 350 years after it was posed?	Fermat's Last Theorem	Poincare conjecture	Goldbach conjecture	Riemann hypothesis
+mat_colours_enough_colour	Hard	How many colours are enough to colour any map so no neighbours share a colour?	Four	Three	Five	Six
+mat_ancient_paradox_asks	Hard	Which ancient paradox asks how many grains of sand you can take away before a heap stops being a heap?	The sorites paradox	Zeno's paradox	The liar paradox	Russell's paradox
+mat_columnist_explained_monty	Hard	Which columnist explained the Monty Hall problem correctly in 1990, then received thousands of letters insisting she was wrong?	Marilyn vos Savant	Ann Landers	Erma Bombeck	Dear Abby
+mat_sherlock_holmes_greatest	Hard	Sherlock Holmes's greatest enemy was, by profession, a professor of which subject?	Mathematics	Chemistry	Philosophy	Medicine
+mat2_p_np	Hard	What does the P vs NP problem concern?	How hard problems are to compute	Non-Euclidean geometry	Measure theory	The Navier-Stokes equations
+mat3_teoria_grafow_euler	Hard	Which problem gave rise to graph theory?	The Seven Bridges of Konigsberg problem	The four color problem	The traveling salesman problem	Zeno's paradox
+mat_perelman	Hard	Which Millennium Prize problem did Grigori Perelman solve before turning down the million dollars?	The Poincare conjecture	The Riemann hypothesis	P versus NP	The Goldbach conjecture
+matx_archimedes_pi	Hard	Which ancient Greek pinned down pi by drawing polygons with 96 sides?	Archimedes	Euclid	Pythagoras	Ptolemy
+matx_hypatia	Hard	Which woman mathematician and astronomer of ancient Egypt was killed by a mob in 415?	Hypatia	Sappho	Aspasia	Cleopatra
+mat_unproven_conjecture_says	Hard	Which unproven conjecture says every even number greater than 2 is the sum of two primes?	Goldbach's conjecture	Fermat's Last Theorem	The Collatz conjecture	The Riemann hypothesis
+mat_ludolph_van_ceulen	Hard	Ludolph van Ceulen spent years working out pi to 35 decimal places. Where were the digits carved?	On his tombstone	Over his front door	On a church bell	Into a city wall
+mat2_hipoteza_riemanna	Expert	What does the Riemann hypothesis concern?	The distribution of the zeta function's zeros	The solutions of differential equations	The colouring of maps with four colours	The shortest path through a large graph
+mat2_banach_tarski	Expert	What does the Banach-Tarski paradox state?	A ball can be split apart and reassembled into two identical balls	A sphere cannot be turned inside out without tearing	Pi can be written as a ratio of two whole numbers	All infinite sets are exactly the same size
+mat_mirzakhani	Expert	Who was the first woman to win the Fields Medal, in 2014?	Maryam Mirzakhani	Emmy Noether	Sophie Germain	Ada Lovelace
+matx_ujemne_chiny	Expert	Negative numbers were long rejected in Europe, but used centuries earlier by mathematicians in which country?	China	Greece	Egypt	England
+mat_euler_stunned_mathematicians	Expert	Euler stunned mathematicians by showing that 1 + 1/4 + 1/9 + 1/16 + ... equals what?	Pi squared over 6	Exactly 2	The golden ratio	e minus 1
+mat_german_mathematician_theorem	Expert	Which German mathematician's theorem links symmetry and conservation laws in physics?	Emmy Noether	Sofia Kovalevskaya	Hypatia	Ada Lovelace
+mat_according_chinese_legend	Expert	According to Chinese legend, where was the Lo Shu, the first magic square, first seen?	On the shell of a turtle	On the wings of a crane	On the face of the Moon	On the back of a carp
+mat_archimedes_reportedly_want	Expert	What did Archimedes reportedly want carved on his tomb?	A sphere inside a cylinder	A circle inside a square	A spiral and a lever	A cone inside a cube
+mat_robert_recorde_invented	Expert	Robert Recorde invented the equals sign in 1557. Why did he choose two parallel lines?	No two things could be more equal	They looked like a balance scale	They were quick to carve in wood	They copied an Arabic letter
+mat_1611_claimed_way	Expert	In 1611, who claimed that the way greengrocers stack oranges is the densest possible way to pack balls?	Johannes Kepler	Isaac Newton	Galileo Galilei	Rene Descartes
+mat_although_japanese_modern	Expert	Although it has a Japanese name, the modern Sudoku puzzle was first published in 1979 in which country?	The United States	Japan	The United Kingdom	Switzerland
+mat_while_doodling_numbers	Expert	While doodling numbers in a spiral during a dull talk in 1963, what did Stanislaw Ulam notice?	Primes cluster along diagonal lines	Square numbers form a perfect circle	Every row adds up to the same total	Odd numbers vanish from the middle
+mat_word_algebra_comes_2	Expert	The word 'algebra' comes from 'al-jabr'. In Spain, an 'algebrista' was once also which kind of craftsman?	A bone-setter	A clockmaker	A goldsmith	A glassblower
+mat_1843_william_rowan	Expert	In 1843, William Rowan Hamilton carved a formula into a Dublin bridge in a flash of inspiration. What had he discovered?	Quaternions	Logarithms	Prime numbers	Imaginary numbers
+mat_1884_novella_flatland	Expert	In the 1884 novella 'Flatland', set in a two-dimensional world, what shape is the narrator?	A square	A circle	A triangle	A straight line
+mat_albrecht_durer_engraving	Expert	Albrecht Durer's engraving 'Melencolia I' hides a 4x4 magic square. What do the two middle numbers of its bottom row show?	The year it was made	The artist's birthday	The number of the beast	The date of an eclipse
