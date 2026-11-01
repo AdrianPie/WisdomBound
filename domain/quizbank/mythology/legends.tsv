@@ -1,0 +1,164 @@
+# Legends & Folklore: Arthurian and medieval legends, folklore, fairy creatures, superstitions, cryptids, myth words in everyday language
+#
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+trv2_feniks	Easy	Which mythical bird is reborn from its own ashes?	The phoenix	The griffin	The roc	The harpy
+org_czwartek_thor	Easy	Thursday is named after which Norse god?	Thor	Odin	Freyr	Tyr
+myt_nike_marka	Easy	Which sportswear brand is named after the Greek goddess of victory?	Nike	Adidas	Puma	Reebok
+myt_amazonki	Easy	Which online retailer shares its name with a legendary tribe of warrior women?	Amazon	eBay	Etsy	Alibaba
+myt_excalibur	Easy	What is the name of King Arthur's legendary sword?	Excalibur	Durendal	Joyeuse	Gram
+myt_merlin	Easy	Who is the wizard who advises King Arthur?	Merlin	Gandalf	Morgana	Lancelot
+myt_nessie	Easy	Which famous monster is said to live in a Scottish lake?	Nessie	Bigfoot	The Yeti	The Kraken
+myt_yeti	Easy	Which creature of Himalayan legend is also called 'the Abominable Snowman'?	The Yeti	Bigfoot	The Wendigo	The Chupacabra
+myt_bigfoot	Easy	Which ape-like creature of North American legend is also called Sasquatch?	Bigfoot	The Yeti	The Mothman	The Jersey Devil
+myt_czosnek	Easy	In folklore, which plant are vampires said to fear?	Garlic	Onion	Mint	Basil
+myt_srebrna_kula	Easy	In folklore, what is needed to kill a werewolf?	A silver bullet	A wooden stake	Holy water	A golden arrow
+myt_smok_walia	Easy	Which mythical creature appears on the flag of Wales?	A red dragon	A griffin	A unicorn	A phoenix
+mytx_wrozka_zebuszka	Easy	In many countries, which folklore figure leaves money for a child's lost tooth?	The Tooth Fairy	Santa Claus	The Sandman	The Easter Bunny
+mytx_robin_hood	Easy	In which forest did Robin Hood and his Merry Men hide?	Sherwood Forest	The Black Forest	Epping Forest	The New Forest
+myt_saint_inspired_santa	Easy	Which saint, who inspired Santa Claus, is celebrated on 6 December?	Saint Nicholas	Saint Valentine	Saint Patrick	Saint Stephen
+myt_robin_hood_legends	Easy	In the Robin Hood legends, who is Robin's great enemy?	The Sheriff of Nottingham	The Earl of Warwick	The Black Knight	The Green Knight
+myt_day_week_roman	Easy	Which day of the week is named after the Roman god Saturn?	Saturday	Sunday	Thursday	Tuesday
+myt_according_legend_see	Easy	According to legend, what can't you see when a vampire stands before a mirror?	Its reflection	Its fangs	Its eyes	Its cloak
+myt_stories_magical_comes	Easy	In stories, which magical being comes out of a lamp to grant three wishes?	A genie	A fairy	A wizard	An elf
+myt_pulled_sword_stone	Easy	Who pulled the sword from the stone to prove he was the true king?	Arthur	Lancelot	Merlin	Galahad
+myt_according_american_tradition	Easy	According to American tradition, where does Santa Claus live?	At the North Pole	In Lapland	In Greenland	In Iceland
+myt_fairy_tale_three	Easy	In the fairy tale 'The Three Billy Goats Gruff', who lives under the bridge?	A troll	A giant	A witch	A dragon
+myt_robin_hood_sweetheart	Easy	Who is Robin Hood's sweetheart in the English legends?	Maid Marian	Lady Godiva	Guinevere	Rowena
+myt_werewolf_tales_makes	Easy	In most werewolf tales, what makes a man turn into a wolf?	A full moon	A solar eclipse	A thunderstorm	The first frost
+myt_classic_folklore_must	Easy	In classic folklore, what must be driven through a vampire's heart to destroy it?	A wooden stake	A silver dagger	An iron nail	A church key
+myt_european_folklore_bird	Easy	In European folklore, which bird is said to deliver new babies to their parents?	The stork	The swan	The owl	The pelican
+myt_word_aphrodisiac_comes	Easy	The word 'aphrodisiac' comes from the name of which goddess?	Aphrodite	Athena	Artemis	Hera
+myt_cheerful_sword_fighting	Easy	Which cheerful, sword-fighting friar is one of Robin Hood's Merry Men?	Friar Tuck	Friar Laurence	Friar Bacon	Friar John
+myt_weapon_robin_hood	Easy	Which weapon is Robin Hood most famous for using?	The longbow	The crossbow	The sling	The spear
+myt_folklore_film_animal	Easy	In folklore and film, which animal can a vampire turn itself into?	A bat	A raven	A rat	A black cat
+myt_according_superstition_should	Easy	According to superstition, what should you do after spilling salt?	Throw a pinch over your left shoulder	Sweep it out of the front door	Sprinkle it on the doorstep	Pour water over it at once
+myt_animal_foot_carried	Easy	Which animal's foot is carried as a good-luck charm in Western folklore?	A rabbit's	A cat's	A fox's	A crow's
+myt_according_superstition_years	Easy	According to superstition, how many years of bad luck follow breaking a mirror?	Seven	Three	Ten	Thirteen
+myt_word_long_eventful	Easy	Which word for a long, eventful journey comes from the name of a Greek hero?	Odyssey	Marathon	Saga	Pilgrimage
+myt_people_knock_avoid	Easy	What do people knock on to avoid tempting fate after a boast?	Wood	Glass	Metal	Stone
+myt_according_superstition_walking	Easy	According to superstition, walking under what brings bad luck?	A ladder	A bridge	A balcony	A tree
+myt_finding_plant_four	Easy	Finding which plant with four leaves is said to bring good luck?	Clover	Ivy	Mint	Basil
+myt_according_superstition_opening	Easy	According to superstition, opening what indoors brings bad luck?	An umbrella	A window	A letter	A cupboard
+myt_western_countries_animal	Easy	In many Western countries, which animal is said to bring children their Easter eggs?	A rabbit	A hen	A lamb	A stork
+myt_two_people_traditionally	Easy	What do two people traditionally do with a chicken's wishbone?	Pull it apart for a wish	Bury it for good luck	Hang it over the door	Throw it over a shoulder
+myt_planet_roman_goddess	Easy	Which planet is named after the Roman goddess of love?	Venus	Mercury	Saturn	Jupiter
+myt_grim_reaper_traditionally	Easy	What does the Grim Reaper traditionally carry?	A scythe	A trident	A lantern	A spear
+myt_according_legend_holy	Easy	According to legend, the Holy Grail was the cup used at which event?	The Last Supper	The Wedding at Cana	The Sermon on the Mount	The Feeding of the 5,000
+myt_european_folklore_witches	Easy	In European folklore, what do witches fly on?	A broomstick	A rake	A shovel	A spinning wheel
+myt_north_american_folklore	Easy	In North American folklore, which animal predicts an early spring if it does not see its shadow?	The groundhog	The beaver	The black bear	The raccoon
+myt_according_old_rhyme	Easy	According to the old rhyme, what follows if you see a penny and pick it up?	Good luck all day	A wish comes true	Riches within a year	A visit from a friend
+myt_part_body_people	Easy	Which part of the body do people cross to wish for good luck?	Their fingers	Their arms	Their toes	Their legs
+myt_goddess_blindfolded_holding	Easy	Which goddess, blindfolded and holding scales, stands outside many courthouses?	Lady Justice	Athena	Fortuna	Nike
+myt_word_task_needing	Easy	Which word for a task needing enormous strength or effort comes from the name of a Greek hero?	Herculean	Achillean	Spartan	Olympian
+myt_winged_horse_greek	Easy	Which winged horse of Greek myth appears in red on the logo of the oil company Mobil?	Pegasus	Sleipnir	Arion	Bucephalus
+myt_old_wedding_rhyme	Easy	In the old wedding rhyme, what follows 'something old, something new, something borrowed'?	Something blue	Something gold	Something true	Something grey
+myt_according_old_saying	Easy	According to an old saying, what does it mean when your ears are burning?	Someone is talking about you	Money is on its way to you	Someone is telling you lies	You will soon hear bad news
+myt_traditionally_supposed_see	Easy	What are you traditionally supposed to do when you see a shooting star?	Make a wish	Hold your breath	Close your eyes	Count to seven
+myt_christmas_folklore_santa	Easy	In Christmas folklore, what does Santa leave in the stockings of naughty children?	A lump of coal	A rotten apple	A wooden spoon	An empty box
+myt_western_hotels_tall	Easy	Many Western hotels and tall buildings skip which floor number because it is thought unlucky?	13	7	9	21
+myt_european_legends_dragon	Easy	In European legends, what does a dragon usually guard in its cave?	A hoard of treasure	A sleeping giant	A magic fountain	A field of wheat
+myt_best_legend_england	Easy	In the best-known legend, whom did England's patron saint rescue from a dragon?	A princess	A shepherd boy	A bishop	A young knight
+myt_actors_traditionally_say	Easy	What do actors traditionally say to each other instead of 'good luck' before a show?	Break a leg	Knock them dead	Fingers crossed	Bite the dust
+myt_under_plant_people	Easy	Under which plant do people traditionally kiss at Christmas?	Mistletoe	Holly	Ivy	Poinsettia
+trv2_marzec_mars	Easy	The month of March is named after which Roman god?	Mars	Mercury	Jupiter	Janus
+myt_hermes_moda	Easy	Which Paris fashion house, famous for silk scarves and Birkin bags, bears the name of a Greek god?	Hermes	Chanel	Dior	Versace
+myt_camelot	Easy	What was the name of King Arthur's castle and court?	Camelot	Avalon	Tintagel	Lyonesse
+myt_tytani_slowo	Easy	The word 'titanic' comes from which race of giant gods?	The Titans	The Cyclopes	The Gorgons	The Olympians
+myt_kon_trojanski_it	Easy	In computing, what is a 'Trojan horse'?	Malware disguised as harmless software	A very fast new processor	A backup copy of a hard disk	A kind of wireless game controller
+myt_starbucks	Easy	Which company's logo shows a twin-tailed siren from mythology?	Starbucks	McDonald's	Costa Coffee	Dunkin'
+mytx_wilhelm_tell	Easy	Which Swiss folk hero shot an apple off his son's head with a crossbow?	William Tell	Robin Hood	Roland	El Cid
+myt_giant_man_robin	Easy	Which giant of a man is Robin Hood's loyal friend, despite his name?	Little John	Friar Tuck	Will Scarlet	Much the Miller's Son
+myt_word_volcano_comes	Easy	The word 'volcano' comes from the name of which Roman god?	Vulcan	Mars	Neptune	Pluto
+myt_painkiller_takes_greek	Easy	Which painkiller takes its name from the Greek god of dreams?	Morphine	Codeine	Aspirin	Paracetamol
+myt_household_cleaner_brand	Easy	Which household cleaner brand is named after a Greek hero of the Trojan War?	Ajax	Achilles	Hector	Nestor
+myt_word_hygiene_shares	Easy	The word 'hygiene' shares its Greek root with the name of which goddess of health?	Hygieia	Hestia	Hebe	Hera
+myt_word_erotic_comes	Easy	The word 'erotic' comes from which Greek god?	Eros	Eris	Eos	Ares
+myt_blue_eye_shaped	Easy	What is the blue eye-shaped 'nazar' charm, common in Turkey, meant to protect against?	The evil eye	Thunderstorms	Snake bites	Bad dreams
+myt_word_flora_plants	Easy	The word 'flora', for the plants of a region, comes from the Roman goddess of what?	Flowers	Rivers	The harvest	The hunt
+myt_according_children_rhyme	Easy	According to the children's rhyme, stepping on a crack in the pavement will do what?	Break your mother's back	Bring seven years of rain	Make you lose a tooth	Wake a sleeping troll
+org_sroda_odyn	Medium	Wednesday takes its name from which Norse god?	Odin	Thor	Loki	Balder
+org_panika_pan	Medium	The word 'panic' comes from which Greek god?	Pan	Ares	Phobos	Hades
+org_platki_ceres	Medium	The word 'cereal' comes from which Roman goddess?	Ceres	Flora	Vesta	Pomona
+org_muzeum_muzy	Medium	The word 'museum' originally meant a place dedicated to whom?	The Muses	Athena	Apollo	The Fates
+myt_piatek_frigg	Medium	Which day of the week is named after the Norse goddess Frigg?	Friday	Thursday	Tuesday	Saturday
+myt_orion	Medium	Which constellation is named after a giant hunter from Greek myth?	Orion	Perseus	Hercules	Cepheus
+myt_kraken	Medium	What is the Kraken?	A giant sea monster from Nordic folklore	A fire-breathing bull from Crete	A river spirit from Ireland	A desert demon from Egypt
+mytx_chupacabra	Medium	Which legendary creature is said to drink the blood of goats in Latin America?	The chupacabra	The wendigo	The kappa	The bunyip
+mytx_troll_slonce	Medium	In Scandinavian folklore, what happens to trolls caught in sunlight?	They turn to stone	They melt	They vanish in smoke	They shrink
+mytx_atlantyda	Medium	Which ancient philosopher first told the story of the lost island of Atlantis?	Plato	Homer	Aristotle	Herodotus
+mytx_pani_jeziora	Medium	According to legend, who gave King Arthur his famous sword?	The Lady of the Lake	Merlin	Morgan le Fay	Guinevere
+myt_month_june_roman	Medium	The month of June is named after which Roman goddess?	Juno	Venus	Diana	Minerva
+myt_basilisk_legend	Medium	What is a basilisk in legend?	A serpent whose gaze kills	A bird reborn from fire	A horse with a single horn	A dog with three heads
+myt_patron_saint_scotland	Medium	Which patron saint of Scotland gave the flag its white X-shaped cross?	Saint Andrew	Saint George	Saint Patrick	Saint Columba
+myt_ghost_ship_legend	Medium	Which ghost ship of legend is doomed never to reach port?	The Flying Dutchman	The Mary Celeste	The Black Pearl	The Nautilus
+myt_german_legend_town	Medium	In the German legend, which town's children did the Pied Piper lead away?	Hamelin	Bremen	Nuremberg	Cologne
+myt_italian_fashion_house	Medium	Which Italian fashion house uses the head of Medusa as its logo?	Versace	Gucci	Prada	Armani
+myt_european_folklore_changeling	Medium	In European folklore, what was a changeling?	A fairy child swapped for a stolen baby	A witch who could turn into a hare	A ghost that stole a living face	A knight cursed to live as a wolf
+myt_folklore_wisp_travellers	Medium	In folklore, what does a will-o'-the-wisp do to travellers at night?	Lures them off with a light	Steals their shadows	Whispers their names	Rides on their backs
+myt_enchantress_king_arthur	Medium	Which enchantress is King Arthur's half-sister?	Morgan le Fay	Nimue	Guinevere	Enid
+myt_according_legend_happens	Medium	According to legend, what happens when a mandrake root is pulled out of the ground?	It screams	It bleeds gold	It turns to ash	It grows back
+myt_paris_avenue_greek	Medium	Which Paris avenue is named after the Greek paradise of heroes?	The Champs-Elysees	The Rue de Rivoli	Boulevard Saint-Michel	Avenue Montaigne
+myt_ireland_scotland_jack	Medium	In Ireland and Scotland, what were jack-o'-lanterns carved from before pumpkins?	Turnips	Apples	Melons	Cabbages
+myt_folklore_fairy_ring	Medium	In folklore, what is a 'fairy ring'?	A circle of mushrooms	A ring that grants wishes	A dance of fireflies	A halo around the moon
+myt_later_versions_legend	Medium	In most later versions of the legend, which pure knight achieved the quest for the Grail?	Sir Galahad	Sir Gawain	Sir Kay	Sir Bedivere
+myt_legend_tristan_isolde	Medium	In the legend of Tristan and Isolde, what makes the two fall in love?	A love potion	A golden arrow	A magic ring	A fairy's kiss
+myt_word_mercurial_meaning	Medium	The word 'mercurial', meaning quick and changeable, comes from which Roman god?	Mercury	Mars	Saturn	Vulcan
+myt_king_arthur_father	Medium	Who was King Arthur's father?	Uther Pendragon	Lot of Orkney	Leodegrance	Pellinore
+myt_statue_liberty_new	Medium	The Statue of Liberty in New York portrays which Roman goddess?	Libertas	Minerva	Juno	Victoria
+myt_according_old_counting	Medium	According to the old counting rhyme, what does seeing a single magpie bring?	Sorrow	Joy	Silver	A wedding
+myt_according_common_superstition	Medium	According to a common superstition, what does an itchy palm mean?	Money is coming	A storm is coming	Someone misses you	You will soon travel
+myt_car_maker_zoroastrian	Medium	Which car maker is named after the Zoroastrian god of wisdom?	Mazda	Subaru	Lexus	Infiniti
+mytx_laponia	Medium	According to Finnish tradition, in which region does Santa Claus live?	Lapland	Greenland	Siberia	Iceland
+myt_saint_said_slain	Medium	Which saint, said to have slain a dragon, is the patron saint of England?	Saint George	Saint Michael	Saint Andrew	Saint David
+myt_king_arthur_queen	Medium	Who was King Arthur's queen?	Guinevere	Morgan le Fay	Isolde	Elaine
+myt_according_folklore_vampire	Medium	According to folklore, what does a vampire need before it can enter your home?	An invitation	A full moon	Your true name	A broken lock
+myt_according_legend_magical	Medium	According to legend, to which magical island was the mortally wounded King Arthur carried?	Avalon	Camelot	Tintagel	Lyonesse
+myt_king_arthur_table	Medium	Why was King Arthur's table said to be round?	So no knight sat above another	To fit inside the castle tower	So Merlin could see every face	To match the shape of the Grail
+myt_sign_zodiac_pictured	Medium	Which sign of the zodiac is pictured as a centaur shooting an arrow?	Sagittarius	Scorpio	Capricorn	Aries
+myt_according_sailors_superstition	Medium	According to sailors' superstition, killing which seabird brings bad luck?	The albatross	The pelican	The puffin	The gannet
+myt_creature_body_lion	Medium	Which creature has the body of a lion and the head and wings of an eagle?	Griffin	Sphinx	Chimera	Hippogriff
+myt_sign_zodiac_pictured_2	Medium	Which sign of the zodiac is pictured as a goat with a fish's tail?	Capricorn	Aries	Pisces	Taurus
+myt_unlike_america_britain	Medium	Unlike in America, in much of Britain a black cat crossing your path is traditionally a sign of what?	Good luck	Bad luck	A coming storm	A death in the family
+myt_according_folklore_way	Medium	According to folklore, which way up should a horseshoe hang so that its luck does not run out?	Ends pointing up	Ends pointing down	Ends pointing left	It does not matter
+org_katastrofa_gwiazda	Medium	The word 'disaster' comes from an old belief and literally means what?	Bad star	Broken road	Lost harvest	Dark day
+myt_wtorek_tyr	Medium	Which day of the week is named after the Norse god Tyr?	Tuesday	Wednesday	Thursday	Monday
+myt_ksiezyce_jowisza	Medium	Which planet's large moons are named after lovers of Zeus?	Jupiter	Saturn	Neptune	Mars
+mytx_krampus	Medium	Which horned creature of Alpine folklore punishes naughty children at Christmas?	Krampus	The Grinch	A troll	The Erlking
+mytx_golem	Medium	In Jewish folklore, what is a golem?	A clay figure brought to life	A demon of the desert	A wise old rabbi	A cursed silver ring
+mytx_ponce_de_leon	Medium	Which Spanish explorer is linked in legend to the search for the Fountain of Youth in Florida?	Juan Ponce de Leon	Hernan Cortes	Francisco Pizarro	Hernando de Soto
+mytx_lancelot	Medium	Which knight of the Round Table fell in love with Queen Guinevere?	Sir Lancelot	Sir Gawain	Sir Galahad	Sir Percival
+myt_traitorous_knight_fought	Medium	Which traitorous knight fought King Arthur at the Battle of Camlann?	Mordred	Lancelot	Gawain	Galahad
+myt_word_jovial_comes	Medium	The word 'jovial' comes from another name for which Roman god?	Jupiter	Janus	Juno	Mercury
+myt_word_airtight_comes	Medium	Which word for 'airtight' comes from Hermes, via the mythical sage Hermes Trismegistus?	Hermetic	Mercurial	Herculean	Hermitic
+mytx_golem_praga	Medium	The most famous golem legend comes from which city?	Prague	Vienna	Krakow	Budapest
+mytx_grendel	Hard	Which monster does the hero Beowulf fight first?	Grendel	Smaug	The Kraken	Fafnir
+myt_real_bishop_behind	Hard	The real bishop behind Santa Claus lived in Myra, in which present-day country?	Turkey	Greece	Italy	The Netherlands
+myt_french_hero_sword	Hard	Which French hero's sword was called Durendal?	Roland	Charlemagne	Oliver	Tristan
+myt_word_protean_meaning	Hard	The word 'protean', meaning able to take many forms, comes from which shape-shifting old sea god?	Proteus	Triton	Nereus	Oceanus
+myt_medieval_poem_game	Hard	In the medieval poem, what game does the Green Knight propose at Camelot?	Trading blows a year apart	A joust on horseback	Answering three riddles	A drinking contest
+myt_medieval_legend_horn	Hard	In medieval legend, what could the horn of a unicorn do?	Cure poison	Grant wishes	Turn lead to gold	Make you invisible
+myt_mythical_beast_lion	Hard	Which mythical beast has a lion's body, a human face and a scorpion's tail?	Manticore	Sphinx	Griffin	Chimera
+myt_spain_italy_lives	Hard	In Spain and Italy, how many lives is a cat traditionally said to have?	Seven	Nine	Three	Twelve
+myt_colour_babe_giant	Hard	What colour was Babe, the giant ox of the lumberjack Paul Bunyan?	Blue	White	Red	Golden
+myt_word_mentor_comes	Hard	The word 'mentor' comes from a character in which ancient epic?	The Odyssey	The Iliad	The Aeneid	The Epic of Gilgamesh
+myt_australian_predator_said	Hard	Which Australian 'predator', said to pounce from gum trees onto tourists' heads, is a running joke?	The drop bear	The bunyip	The yowie	The hoop snake
+myt_legend_lady_godiva	Hard	In the legend of Lady Godiva, what happened to Peeping Tom, the one man who looked?	He was struck blind	He was turned to stone	He was banished	He went mad
+myt_scandinavia_should_left	Hard	In Scandinavia, what should be left out for the household elf (nisse or tomte) on Christmas Eve?	A bowl of porridge	A glass of milk	A slice of ham	A pair of socks
+myt_folklore_metal_said	Hard	In folklore, which metal is said to keep fairies away?	Iron	Gold	Copper	Tin
+myt_versions_legend_story	Hard	In many versions of the legend, how does the story of Merlin end?	An enchantress he loved traps him	Mordred kills him in battle	He sails to Avalon with Arthur	He turns himself into a hawk
+myt_word_money_traces	Hard	The word 'money' traces back to a temple of which goddess, where ancient Rome minted its coins?	Juno	Minerva	Venus	Fortuna
+myt_fruit_sailors_fishermen	Hard	Which fruit do many sailors and fishermen think it bad luck to carry on board?	Bananas	Apples	Oranges	Coconuts
+myt_medieval_lore_animal	Hard	In medieval lore, which animal was believed to live unharmed in fire?	The salamander	The newt	The lizard	The toad
+mytx_befana	Hard	In Italian folklore, which kindly old witch brings children presents on 5 January?	La Befana	Baba Yaga	Perchta	Frau Holle
+mytx_kot_bozonarodzeniowy	Hard	In Icelandic folklore, which creature eats people who get no new clothes for Christmas?	The Yule Cat	The Yule Goat	The Snow Wolf	The Frost Bear
+myt_trojan_became_english	Hard	Which Trojan's name became an English verb meaning 'to bully'?	Hector	Paris	Priam	Aeneas
+myt_eastern_european_folklore	Expert	In Eastern European folklore, why were mustard or poppy seeds scattered around a suspected vampire's grave?	It was thought to be compelled to count them	Their smell was thought to burn its skin	They would sprout and bind its limbs	Birds eating them would warn of its rising
+myt_charlemagne_sword	Expert	What was the name of Charlemagne's sword?	Joyeuse	Durendal	Excalibur	Hauteclere
+myt_word_stentorian_comes	Expert	The word 'stentorian' comes from a herald in the 'Iliad' whose voice was as loud as how many men?	Fifty	Ten	A hundred	A thousand
+myt_phrase_halcyon_days	Expert	The phrase 'halcyon days' recalls calm winter seas granted while which birds nested?	Kingfishers	Seagulls	Swallows	Albatrosses
+myt_golem_legend_erasing	Expert	In golem legend, erasing one letter of 'emet' (truth) on its forehead leaves a word meaning what?	Death	Sleep	Clay	Silence
+myt_according_legend_saint	Expert	According to legend, which saint nailed a horseshoe to the Devil's hoof, making horseshoes lucky?	Saint Dunstan	Saint Patrick	Saint George	Saint Nicholas
+myt_gives_away_beautiful	Expert	What gives away the beautiful huldra of Scandinavian folklore?	A cow's tail	Webbed feet	Goat's eyes	Icy breath
+myt_malory_morte_arthur	Expert	In Malory's 'Le Morte d'Arthur', which knight throws Excalibur back into the lake as the dying Arthur orders?	Sir Bedivere	Sir Kay	Sir Lancelot	Sir Gawain
+myt_according_legend_british	Expert	According to legend, why could the British king Vortigern's tower never be built?	Two dragons fought beneath it	A giant pulled it down each night	Its stones turned to water	Merlin cursed the builders
+myt_welsh_legend_prince	Expert	In the Welsh legend, why did Prince Llywelyn kill his faithful hound Gelert?	He thought it had killed his son	It had bitten his wife	It lost him a royal hunt	It had gone mad with rabies

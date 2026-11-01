@@ -1,0 +1,51 @@
+# Egypt & the Near East: Egyptian, Mesopotamian, Persian myth
+#
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+myty_sezamie	Easy	What are the magic words that open the robbers' cave in 'Ali Baba'?	Open sesame	Abracadabra	Hocus pocus	Alakazam
+mit_anubis	Medium	Which Egyptian god had the head of a jackal?	Anubis	Ra	Horus	Osiris
+trv2_ozyrys	Medium	Which Egyptian god ruled the afterlife and was killed by his brother Set?	Osiris	Ra	Horus	Anubis
+myt_szeherezada	Medium	Who tells the stories night after night in 'One Thousand and One Nights'?	Scheherazade	Aladdin	Sinbad	Ali Baba
+myty_sindbad	Medium	Which sailor of 'One Thousand and One Nights' made seven famous voyages?	Sinbad	Aladdin	Ali Baba	Harun
+myt_egyptian_goddess_mother	Medium	Which Egyptian goddess was the mother of Horus?	Isis	Hathor	Nut	Bastet
+myt_giant_bird_arabian	Medium	Which giant bird of Arabian tales could carry off elephants in its claws?	The roc	The phoenix	The harpy	The thunderbird
+myt_egyptian_sun_god	Medium	How did the Egyptian sun god Ra travel across the sky each day?	In a boat	In a fiery chariot	On a falcon's back	Riding a lion
+mit3_horus	Medium	Which animal/symbol often accompanies the Egyptian god Horus?	A falcon	A cat	A crocodile	A jackal
+mit3_bastet	Medium	Which animal did the Egyptian goddess Bastet represent?	A cat	A crocodile	A falcon	A snake
+myt_ancient_egyptian_ankh	Medium	What does the ancient Egyptian ankh symbol stand for?	Life	Death	Wisdom	Power
+mit2_anubis_rola	Medium	What did Anubis do?	Embalming and guiding the dead	Waging war	Overseeing harvests	Navigating the Nile
+myty_serce_mumii	Medium	Which organ did Egyptians usually leave inside a mummy, as it was needed in the afterlife?	The heart	The brain	The liver	The stomach
+ref_myt_maat	Hard	Against the feather of which Egyptian goddess of truth were the hearts of the dead weighed?	Ma'at	Isis	Hathor	Sekhmet
+myt_sachmet	Hard	Which lion-headed Egyptian goddess almost destroyed mankind in a rage?	Sekhmet	Bastet	Hathor	Nut
+mytx_thot_ibis	Hard	The Egyptian god Thoth usually has the head of which bird?	An ibis	A falcon	A vulture	A heron
+myt_giant_serpent_enemy	Hard	Which giant serpent, enemy of the sun god Ra, gave its name to a near-Earth asteroid?	Apophis	Ammit	Wadjet	Mehen
+myt_wild_man_created	Hard	Which wild man, created by the gods, became the closest friend of Gilgamesh?	Enkidu	Humbaba	Utnapishtim	Shamhat
+myt_egyptian_belief_monster	Hard	In Egyptian belief, which monster devoured the hearts of the unworthy dead?	Ammit	Apep	Serket	Sobek
+myt_egyptian_god_osiris	Hard	Why was the Egyptian god Osiris often painted with green skin?	It stood for rebirth and growth	He was a god of the sea	He had been poisoned by Set	Green was the pharaohs' colour
+myt_according_legend_nile	Hard	According to legend, the Nile's yearly flood came from the tears of which goddess?	Isis	Hathor	Bastet	Sekhmet
+myt_sumerian_goddess_passed	Hard	Which Sumerian goddess passed through seven gates into the underworld, losing a garment at each?	Inanna	Ereshkigal	Ninhursag	Tiamat
+myt_dzinn	Hard	In Arabian folklore, what is a djinn (genie) made of?	Smokeless fire	Sand and wind	Moonlight	Clay and water
+myt_egyptian_goddess_hathor	Hard	The Egyptian goddess Hathor is often shown as which animal, or with its horns?	A cow	A ram	A gazelle	A hippo
+myt_set_eventually_osiris	Hard	What did Set eventually do with Osiris's body, to stop Isis bringing him back?	Cut it up and scattered the pieces	Fed it to the crocodiles of the Nile	Buried it under the Great Pyramid	Burned it on a pyre in the desert
+myt_egyptian_god_head	Hard	Which Egyptian god had the head of a crocodile?	Sobek	Set	Anubis	Khnum
+mit2_thot	Hard	What was the Egyptian god Thoth the patron of?	Writing and knowledge	War and conquest	Harvests and grain	Sailing and the sea
+mit2_izyda	Hard	What was Isis to Osiris?	His sister and wife	His daughter	His mother	His enemy
+ref_myt_set	Hard	Which Egyptian god ruled chaos, storms and the desert?	Set	Apep	Horus	Ptah
+myt_babylonian_god_slew	Hard	Which Babylonian god slew the sea dragon Tiamat and became king of the gods?	Marduk	Enlil	Gilgamesh	Ashur
+myt_chepri	Expert	Which Egyptian god took the form of a scarab beetle rolling the sun across the sky?	Khepri	Sobek	Ptah	Atum
+myt_nut	Expert	Which Egyptian goddess was the sky, arching her body over the Earth?	Nut	Geb	Hathor	Tefnut
+myty_bes	Expert	Which dwarf god of ancient Egypt protected households and children?	Bes	Ptah	Khnum	Apis
+myt_egyptian_creation_myth	Expert	In one Egyptian creation myth, how did the god Atum produce the first gods, Shu and Tefnut?	By sneezing and spitting	By weeping into the sea	By carving them from clay	By splitting a cosmic egg
+myt_egyptian_god_means	Expert	Which Egyptian god's name means 'the hidden one'?	Amun	Ptah	Aten	Khonsu
+myt_egyptian_god_earth	Expert	Which Egyptian god of the earth lies under the sky goddess Nut?	Geb	Shu	Osiris	Ra
+myt_egyptian_god_ram	Expert	Which Egyptian god had a ram's head and made humans on a potter's wheel?	Khnum	Amun	Ptah	Sobek
+myt_monster_guarding_cedar	Expert	Which monster guarding the Cedar Forest did Gilgamesh and his friend kill?	Humbaba	Tiamat	Pazuzu	Lamashtu
+myt_egyptian_god_creation	Expert	Which Egyptian god of creation was patron of craftsmen in Memphis?	Ptah	Khnum	Atum	Thoth
+myt_hippo_shaped_egyptian	Expert	Which hippo-shaped Egyptian goddess protected women in childbirth?	Taweret	Bes	Hathor	Sekhmet
+myt_egyptian_god_moon	Expert	Which Egyptian god was the moon god and son of Amun and Mut?	Khonsu	Thoth	Shu	Atum
+myt_assyrian_gate_guardians	Expert	Why do many Assyrian gate guardians, winged bulls with human heads, have five legs?	To look complete from front and side	To honour the five gods of the city	A sculptor's error that became custom	A fifth leg marked a royal beast
+myt_kind_animal_egyptian	Expert	What kind of animal is the Egyptian god Set's head?	An unknown creature	A crocodile	A hippo	A falcon
+myt_mesopotamian_wind_demon	Expert	Which Mesopotamian wind demon has a starring role in the film 'The Exorcist'?	Pazuzu	Lamashtu	Humbaba	Tiamat
+myt_sacred_heron_like	Expert	Which sacred heron-like bird of Egypt is often linked to the legend of the phoenix?	The Bennu	The Simurgh	The Roc	The Garuda
+myt_according_plutarch_set	Expert	According to Plutarch, how did Set first trap his brother Osiris?	He tricked him into a made-to-measure chest	He poisoned his wine at a royal feast	He pushed him into the flooded Nile	He sealed him inside a new pyramid
+myt_isis_force_sun	Expert	How did Isis force the sun god Ra to reveal his secret name?	She made a snake that bit him	She stole his eye while he slept	She trapped him inside a chest	She hid the sun behind the Moon
+myt_raging_goddess_sekhmet	Expert	How was Ra's raging lion goddess stopped from wiping out humankind?	She drank beer dyed to look like blood	Ra trapped her inside the Moon	Horus defeated her in battle	Osiris chained her in the underworld

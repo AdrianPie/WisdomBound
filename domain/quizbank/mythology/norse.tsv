@@ -1,0 +1,76 @@
+# Norse: Norse and Germanic myth
+#
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+mit_thor	Easy	What weapon did the Norse god Thor use?	A hammer	A sword	A spear	A bow
+scicmp_nie_grecki_bog	Easy	Which of these is NOT a Greek god?	Odin	Zeus	Hades	Poseidon
+wld_myt_loki	Easy	Which Norse god is famous as a shape-shifting trickster?	Loki	Tyr	Baldr	Heimdall
+myt_thor_father_norse	Easy	Who is Thor's father in Norse mythology?	Odin	Loki	Tyr	Heimdall
+myt_force_nature_norse	Easy	Which force of nature did the Norse god Thor rule?	Thunder	Fire	The sea	The wind
+myt_thor_hammer_always	Easy	What does Thor's hammer always do after he throws it?	Flies back to his hand	Splits into lightning	Turns into a serpent	Buries itself in the earth
+mit_odyn	Easy	What was the chief Norse god called?	Odin	Thor	Loki	Baldur
+mit2_walhalla	Medium	Who was admitted to Valhalla?	Warriors fallen in battle	All the dead	Priests	Kings
+trv2_mjolnir	Medium	What is the name of Thor's hammer?	Mjolnir	Gungnir	Gram	Skidbladnir
+myt_heimdall	Medium	Which Norse god guards the rainbow bridge to Asgard?	Heimdall	Tyr	Baldr	Freyr
+myt_midgard	Medium	What is the world of humans called in Norse myth?	Midgard	Asgard	Jotunheim	Vanaheim
+myt_norns_norse_myth	Medium	What are the Norns of Norse myth?	Women who shape fate	Giant wolves	Sea serpents	Dwarf smiths
+myt_norse_myth_worlds	Medium	In Norse myth, how many worlds are held in the branches and roots of the world tree?	Nine	Three	Seven	Twelve
+mit_yggdrasil	Medium	What is the cosmic tree in Norse mythology called?	Yggdrasil	Valhalla	Bifrost	Midgard
+mit2_odyn_ofiara	Medium	What did Odin sacrifice for wisdom?	One eye	A hand	His hair	His spear
+ref_myt_asgard	Medium	What is the realm of the Aesir gods called in Norse myth?	Asgard	Midgard	Niflheim	Jotunheim
+mit_ragnarok	Medium	What is the Norse end of the world called?	Ragnarok	Valhalla	Niflheim	Ginnungagap
+mit2_valkirie	Medium	What did the Valkyries do?	Chose the slain for Valhalla	Guarded the Nibelung treasure	Brewed the mead of poetry	Watched over Bifrost
+mit2_jormungand	Hard	What was Jormungand?	A serpent encircling the world	A dragon guarding gold	Odin's steed	A god of the sea
+trv2_sleipnir	Hard	What is the name of Odin's eight-legged horse?	Sleipnir	Fenrir	Jormungandr	Huginn
+trv2_fenrir	Hard	Which Norse god is fated to be swallowed by the wolf Fenrir at Ragnarok?	Odin	Thor	Loki	Heimdall
+dpt_mit_tyr_fenrir	Hard	Which Norse god loses a hand to the wolf Fenrir?	Tyr	Odin	Baldr	Heimdall
+ref_myt_freja_koty	Hard	Which Norse goddess rides a chariot pulled by two cats?	Freyja	Frigg	Hel	Sif
+myt_frigg	Hard	Who was Odin's wife and the queen of Asgard?	Frigg	Freyja	Sif	Hel
+mytx_thor_panna	Hard	In one old tale, the thunder god dresses up as what to trick the giant who stole his weapon?	A bride	A giant	A beggar	A cow
+myt_odin_gain_hanging	Hard	What did Odin gain by hanging himself from the world tree for nine nights?	The runes	His spear	Eternal life	His ravens
+myt_runs_down_norse	Hard	What runs up and down the Norse world tree, carrying insults between an eagle and a dragon?	A squirrel	A raven	A goat	A snake
+myt_norse_realm_land	Hard	Which Norse realm is the land of the giants?	Jotunheim	Muspelheim	Svartalfheim	Helheim
+myt_norse_goddess_rules	Hard	Which Norse goddess rules the land of the dead and is half living, half corpse?	Hel	Ran	Skadi	Frigg
+myt_brother_norse_goddess	Hard	Who is the brother of the Norse goddess Freyja?	Freyr	Baldr	Heimdall	Bragi
+myt_blind_god_threw	Hard	Which blind god threw the mistletoe dart that killed Baldr?	Hodr	Vidar	Bragi	Ullr
+myt_norse_god_blow	Hard	Which Norse god will blow the Gjallarhorn to warn of Ragnarok?	Heimdall	Odin	Bragi	Tyr
+myt_according_norse_myth_2	Hard	According to Norse myth, who forged Thor's hammer?	Dwarves	Giants	Elves	Odin
+cultw_odyn_ptaki	Hard	Which two ravens brought Odin news of the world?	Huginn and Muninn	Geri and Freki	Sleipnir and Fenrir	Vidar and Vali
+cur_thor_kozy	Hard	What pulls the Norse god Thor's chariot?	Two goats	Two wolves	Eight-legged horse	Two ravens
+myt_ragnarok_thor_die	Hard	At Ragnarok, how does Thor die after killing the World Serpent?	Poisoned by its venom	Swallowed by a wolf	Crushed in its coils	Burned by a fire giant
+myt_norse_gods_split	Hard	The Norse gods were split into two tribes: the Aesir and which other?	The Vanir	The Jotnar	The Einherjar	The Alfar
+mytx_sif	Hard	The trickster god cut off the golden hair of which goddess, Thor's wife?	Sif	Freyja	Frigg	Idun
+mytx_fafnir	Hard	Which dragon did the hero Sigurd (Siegfried) slay?	Fafnir	Smaug	Nidhogg	Jormungand
+mit2_mimir	Expert	Who guarded the well of wisdom in Norse mythology?	Mimir	Heimdall	Bragi	Ullr
+myt_naglfar	Expert	In Norse myth, which ship is built from the fingernails and toenails of the dead?	Naglfar	Skidbladnir	Hringhorni	Ellida
+myt_skoll	Expert	In Norse myth, which wolf chases the Sun across the sky?	Skoll	Fenrir	Hati	Garm
+mytx_idun	Expert	Which Norse goddess guards the golden apples that keep the gods young?	Idun	Freyja	Frigg	Sif
+myty_loki_losos	Expert	When the gods hunted him, what did Loki turn into to hide in a waterfall?	A salmon	A seal	An eel	A frog
+myty_walhalla_dach	Expert	According to Norse myth, what is the roof of Valhalla made of?	Shields	Gold	Antlers	Ice
+myt_hall_giant_utgarda	Expert	In the hall of the giant Utgarda-Loki, Thor's drinking horn was secretly connected to what?	The sea	A giant's well	The river of the dead	The roots of Yggdrasil
+myt_went_gleipnir_magic	Expert	Which of these went into Gleipnir, the magic ribbon that binds the wolf Fenrir?	The sound of a cat's footsteps	The shadow of a flying raven	The breath of a sleeping giant	The light of a dying star
+myt_special_skidbladnir_ship	Expert	What is special about Skidbladnir, the ship of the Norse god Freyr?	It folds up to fit in a pouch	It is made of dead men's nails	It is pulled through the sky by swans	It sinks and rises at will
+myt_norse_creation_primeval	Expert	In Norse creation, what did the primeval cow Audhumla lick out of the salty ice?	The first god, Buri	The world serpent	The first frost giant	The ash tree of the world
+myt_fire_giant_set	Expert	Which fire giant will set the whole world ablaze at Ragnarok?	Surtr	Ymir	Thrym	Hrungnir
+myt_names_odin_two	Expert	What are the names of Odin's two wolves?	Geri and Freki	Huginn and Muninn	Skoll and Hati	Garm and Fenrir
+myt_golden_bristled_boar	Expert	Which golden-bristled boar belongs to the Norse god Freyr?	Gullinbursti	Saehrimnir	Hildisvini	Heidrun
+myt_sea_goddess_catches	Expert	Which sea goddess catches drowned sailors in her net in Norse myth?	Ran	Hel	Sif	Gerd
+myt_norse_hero_sigurd	Expert	What is the name of the Norse hero Sigurd's sword, reforged from Odin's broken blade?	Gram	Tyrfing	Hofud	Dainsleif
+myt_silent_son_odin	Expert	Which silent son of Odin kills the wolf Fenrir at Ragnarok?	Vidar	Vali	Tyr	Baldr
+myt_hel_agreed_release	Expert	Hel agreed to release the dead god Baldr on what condition?	Every being in the world must weep for him	Odin must give up his other eye	Thor must defeat her in a duel	The gods must give her Thor's hammer
+myt_utgarda_loki_hall	Expert	In Utgarda-Loki's hall, Thor was wrestled to one knee by an old nurse called Elli. Who was she really?	Old age	Wildfire	Thought	Hunger
+myt_special_boar_saehrimnir	Expert	What is special about the boar Saehrimnir, eaten every night in Valhalla?	It is whole again each evening	It can speak and sing	It has eight legs	It is made of gold
+myt_having_given_away	Expert	Having given away his sword, what does the god Freyr fight with at Ragnarok?	An antler	A ship's oar	A ploughshare	His bare hands
+myt_norse_myth_gods	Expert	In Norse myth, the gods built the world from the body of the giant Ymir. What became the sky?	His skull	His brain	His blood	His eyebrows
+myt_norse_goddess_owned	Expert	Which Norse goddess owned the shining necklace Brisingamen?	Freyja	Frigg	Sif	Idun
+myt_special_thor_goats	Expert	What is special about Thor's goats, Tanngrisnir and Tanngnjostr?	He can eat them and bring them back to life	They can fly faster than Odin's horse	They can smell giants from a day away	They were born from Thor's own hammer
+myt_according_norse_myth	Expert	According to Norse myth, what causes earthquakes?	Loki writhing as venom drips on his face	Thor's goats stamping across the sky	The World Serpent tightening its coils	Giants hammering in the halls below
+myt_thor_use_bait	Expert	What did Thor use as bait when he went fishing for the World Serpent?	An ox's head	A whole whale	A troll's arm	A golden eel
+myt_norse_myth_loki	Expert	In Norse myth, how is Loki related to Odin?	His sworn blood brother	His eldest son	His twin brother	His father-in-law
+myt_special_hearing_heimdall	Expert	What is special about the hearing of Heimdall, watchman of the Norse gods?	He can hear grass growing	He can hear people's thoughts	He can hear only music	He is deaf in one ear
+myt_norse_myth_odin	Expert	In Norse myth, from what did Odin and his brothers make the first man and woman, Ask and Embla?	Two tree trunks on the shore	Clay from a riverbank	Frost from the great ice	Sparks from the fire world
+myt_ragnarok_heimdall_loki	Expert	At Ragnarok, what are Heimdall and Loki fated to do?	Kill each other	Survive to rebuild the world	Steer the ship of the dead	Guard the bridge together
+myt_dragon_gnaws_roots	Expert	Which dragon gnaws at the roots of the Norse world tree?	Nidhogg	Fafnir	Jormungand	Hraesvelgr
+myt_thunder_god_thor	Expert	Why does the thunder god Thor's hammer have such a short handle?	Loki, as a fly, disrupted the forging	Thor snapped it fighting a giant	The dwarves ran out of iron	Odin wanted it easy to hide
+myt_form_odin_take	Expert	Which form did Odin take to fly off with the stolen mead of poetry?	An eagle	A raven	A falcon	A swan
+myt_norse_giantess_goddess	Expert	Which Norse giantess, goddess of skiing, chose her husband by looking only at his feet?	Skadi	Gerd	Hel	Angrboda
+myt_golden_ring_odin	Expert	Which golden ring of Odin drips eight new rings every ninth night?	Draupnir	Andvaranaut	Brisingamen	Gleipnir

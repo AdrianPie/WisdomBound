@@ -1,0 +1,73 @@
+# World Myths: Celtic, Slavic, Finnish, African, American, Oceanian myth
+#
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+myt_leprechaun	Easy	In Irish folklore, which little creatures hide pots of gold?	Leprechauns	Pixies	Elves	Gnomes
+myt_mami_wata_honoured	Easy	Mami Wata, honoured across West and Central Africa, is a spirit of what?	Water	Fire	Iron	The harvest
+myt_dullahan_headless_horseman	Easy	What does the dullahan, the headless horseman of Irish folklore, carry under his arm?	His own head	A burning lantern	A bloody sword	A bag of souls
+myt_according_ojibwe_tradition	Easy	According to Ojibwe tradition, what is a dreamcatcher hung over a bed meant to do?	Catch bad dreams	Call back lost souls	Keep the bed warm	Keep bears away
+mit3_quetzalcoatl	Medium	Who was Quetzalcoatl in Aztec mythology?	The feathered serpent god	The rain god only	A human king	A mountain spirit
+mit3_inti	Medium	What was Inti the god of in Inca mythology?	The sun	The moon	The sea	The earth
+myt_banshee	Medium	In Irish folklore, what does a banshee do?	Wails to warn of a coming death	Steals babies from their cradles	Grants three wishes	Guards buried treasure
+myt_maui	Medium	Which Polynesian demigod is said to have fished up islands with his magic hook?	Maui	Tangaroa	Pele	Kamapua'a
+myt_ancient_celtic_festival	Medium	Which ancient Celtic festival is the origin of Halloween?	Samhain	Beltane	Yule	Ostara
+myt_scottish_irish_folklore	Medium	In Scottish and Irish folklore, selkies shed their skins to change from what into humans?	Seals	Swans	Otters	Salmon
+myt_algonquian_folklore_wendigo	Medium	In Algonquian folklore, the Wendigo is a spirit of what?	Insatiable hunger and cannibalism	Rain, thunder and fertile crops	Healing herbs and medicine	Lost hunters guiding travellers
+myt_finnish_national_epic	Medium	Which Finnish national epic tells of the old singer Vainamoinen?	The Kalevala	The Edda	The Mabinogion	The Nibelungenlied
+myt_great_creator_australian	Medium	Which great creator being of Australian Aboriginal belief carved out rivers as it moved across the land?	The Rainbow Serpent	The Bunyip	The Yowie	The Great Kangaroo
+myt_native_american_creation	Medium	In many Native American creation stories, the land rests on the back of which animal?	A turtle	A whale	A bison	An elk
+myt_giant_bird_native	Medium	Which giant bird of Native American myth makes storms by beating its wings?	The Thunderbird	The Roc	The Phoenix	The Firebird
+myt_russia_folklore_figure	Medium	In Russia, which folklore figure brings children presents at New Year?	Grandfather Frost	Saint Nicholas	Father Christmas	La Befana
+myt_pele	Medium	Which Hawaiian goddess rules over volcanoes and fire?	Pele	Hina	Laka	Namaka
+myty_zar_ptak	Medium	In Slavic tales, which glowing bird's feathers light up a whole room?	The Firebird	The Phoenix	The Thunderbird	The Roc
+myt_lake_inca_creator	Medium	From which lake did the Inca creator god Viracocha rise to make the world?	Lake Titicaca	Lake Poopo	Lake Junin	Lake Nicaragua
+mit3_coyote_mit	Medium	What role does Coyote often play in Native American mythologies?	A trickster figure	The supreme creator god	A god of war	A god of the underworld
+mytx_bunyip	Medium	The bunyip is a legendary creature said to lurk in the swamps of which country?	Australia	Canada	Brazil	India
+cultw_anansi	Hard	In West African folklore, what kind of creature is Anansi?	A spider	A lion	A crocodile	A hawk
+mit_perun	Hard	Which Slavic god ruled thunder?	Perun	Svarog	Veles	Svetovid
+mit3_rusalka_slowianska	Hard	What was a rusalka in Slavic beliefs?	A water spirit, often the soul of a drowned girl	A goddess of fertile fields and the harvest	A god who ruled the depths of the forest	A friendly spirit that guarded the house
+mit3_domowik	Hard	What was a domovoi in Slavic beliefs?	A guardian spirit of the home and household	An evil demon that haunted the deep forest	A goddess who watched over the harvest	A spirit that rode in with the storms
+mit3_baba_jaga	Hard	Where does Baba Yaga usually live in Slavic folk tales?	In a hut on chicken legs in the forest	In a castle standing by the sea	In a cave high in the mountains	On an island in a wide river
+mit3_huitzilopochtli	Hard	What was the Aztec god Huitzilopochtli the god of?	The sun and war	Rain	The moon	The underworld
+myt_polynesian_demigod_maui	Hard	How did the Polynesian demigod Maui make the days longer?	He snared the sun and slowed it down	He held back the night with his hook	He stole fire from the underworld	He hid the moon in a cave
+myt_aztec_underworld	Hard	What was the Aztec underworld called?	Mictlan	Xibalba	Aztlan	Tamoanchan
+myt_irish_myth_hero	Hard	In Irish myth, which hero earned his name by killing a guard dog?	Cu Chulainn	Fionn mac Cumhaill	Oisin	Diarmuid
+myt_headed_dragon_fights	Hard	Which many-headed dragon fights the heroes of Russian folk tales?	Zmey Gorynych	Koschei	Kikimora	Vodyanoy
+myt_grumpy_old_water	Hard	Which grumpy old water spirit of Slavic folklore drags swimmers down to his realm?	The vodyanoy	The leshy	The domovoi	The polevik
+myt_irish_sea_god	Hard	Which Irish sea god is said to have given his name to the Isle of Man?	Manannan	Dagda	Nuada	Lugh
+myt_irish_folklore_trade	Hard	In Irish folklore, which trade do leprechauns traditionally practise?	Shoemaking	Brewing	Blacksmithing	Weaving
+myt_slavic_tales_witch	Hard	In Slavic tales, what does the witch Baba Yaga fly around in?	A mortar	A cauldron	A sleigh	A barrel
+myt_ghost_latin_american	Hard	Which ghost of Latin American folklore wanders by rivers, weeping for her drowned children?	La Llorona	La Befana	La Catrina	La Malinche
+myt_goggle_eyed_aztec	Hard	Which goggle-eyed Aztec rain god shared the top of the Great Temple in Tenochtitlan?	Tlaloc	Xipe Totec	Mictlantecuhtli	Xolotl
+myt_andes_offerings_still	Hard	In the Andes, offerings are still made to which earth mother goddess?	Pachamama	Mama Quilla	Coatlicue	Ixchel
+myt_according_irish_legend	Hard	According to Irish legend, which giant built the Giant's Causeway?	Finn McCool	Cu Chulainn	Balor	Brian Boru
+myt_irish_legend_children	Hard	In the Irish legend, what were the Children of Lir turned into by their jealous stepmother?	Swans	Hares	Salmon	Deer
+myt_pacific_northwest_legends	Hard	In Pacific Northwest legends, which trickster bird stole the sun to light the world?	Raven	Owl	Heron	Loon
+myt_russian_new_year	Hard	In Russian New Year tradition, who is the granddaughter and helper of Ded Moroz?	The Snow Maiden	The Firebird	The Ice Queen	The Frost Fairy
+myt_slavic_forest_spirit	Hard	Which Slavic forest spirit leads travellers astray and can change his height at will?	Leshy	Domovoi	Vodyanoy	Bannik
+cultw_mabinogion	Hard	The Mabinogion collects the myths of which people?	The Welsh	The Irish	The Scots	The Bretons
+mit2_swietowit	Hard	How many faces did the Slavic god Svetovid have?	Four	Two	Three	Six
+ref_myt_cuchulainn	Hard	Who is the great hero of the Irish Ulster Cycle?	Cu Chulainn	Fionn mac Cumhaill	Lugh	Bran the Blessed
+mytx_kelpie	Hard	What is a kelpie in Scottish folklore?	A water spirit in horse form	A bagpipe-playing fairy	A giant sea eagle	A ghost that guards castles
+myty_koszczej	Hard	Which Slavic villain is 'deathless' because his death is hidden in a needle inside an egg?	Koschei	Baba Yaga	Zmey Gorynych	Leshy
+mit2_weles	Expert	What was the Slavic god Veles the god of?	The underworld, cattle and oaths	War, thunder and storms	The sun, fire and the forge	Wind, sailing and travel
+myt_bohaterscy_blizniacy	Expert	In Maya myth, who beat the lords of the underworld at a sacred ball game?	The Hero Twins	Romulus and Remus	Castor and Pollux	The Pandavas
+myt_aztec_god_means	Expert	Which Aztec god's name means 'Smoking Mirror'?	Tezcatlipoca	Quetzalcoatl	Xolotl	Tonatiuh
+myt_welsh_legend_woman	Expert	In Welsh legend, which woman was conjured from flowers as a wife for Lleu?	Blodeuwedd	Rhiannon	Branwen	Ceridwen
+myt_odd_feet_curupira	Expert	What is odd about the feet of the Curupira, protector of Brazil's forests?	They point backwards	They are made of wood	They never touch the ground	He has only one
+myt_mexican_hairless_dog	Expert	The Mexican hairless dog breed takes its name from which Aztec god?	Xolotl	Tlaloc	Xipe Totec	Mixcoatl
+myt_said_happen_tara	Expert	What was said to happen at Tara when the true High King of Ireland stood on the Lia Fail?	The stone roared	The stone glowed	The stone split	The stone rang like a bell
+myt_finnish_kalevala_smith	Expert	In the Finnish 'Kalevala', which smith forged the magical Sampo?	Ilmarinen	Vainamoinen	Lemminkainen	Kullervo
+myt_aztec_myth_humble	Expert	In Aztec myth, how did the humble god Nanahuatzin become the Sun?	He leapt into a fire	He drank the sea	He swallowed a star	He climbed a tree
+myt_witch_mistress_pohjola	Expert	Which witch, the Mistress of Pohjola, demanded the Sampo in the 'Kalevala'?	Louhi	Aino	Marjatta	Kyllikki
+mit3_mokosz	Expert	What was the Slavic goddess Mokosh the patron of?	Fertility, women and the earth	War, weapons and the fortress	Thunder, lightning and oaks	The sea, rivers and fishing
+myt_according_maya_popol	Expert	According to the Maya Popol Vuh, what were the first successful humans made from?	Maize dough	Mud	Wood	Obsidian
+myt_akan_folklore_trickster	Expert	In Akan folklore, from whom did the trickster Anansi win ownership of all stories?	The sky god Nyame	The earth goddess Asase Yaa	The king of the leopards	The river god Tano
+myt_southern_african_folklore	Expert	In southern African folklore, why do some people raise their beds on bricks?	To keep the tokoloshe from reaching them	To honour the ancestors sleeping below	To stop snakes stealing their dreams	To lift their prayers closer to the sky
+myt_according_irish_legend_2	Expert	According to Irish legend, how did Fionn mac Cumhaill gain all the world's knowledge?	By sucking his thumb, burned on a magic salmon	By drinking from a well under an oak	By sleeping one night on a fairy mound	By catching a raven that spoke to him
+myt_irish_legend_happened	Expert	In Irish legend, what happened when Oisin touched the ground on his return from Tir na nOg?	He aged 300 years at once	He turned into a stag	He forgot his own name	He became a stone giant
+myt_yoruba_orisha_thunder	Expert	Which Yoruba orisha of thunder and lightning wields a double-headed axe?	Shango	Ogun	Eshu	Olokun
+myt_according_aztec_myth	Expert	According to Aztec myth, the present world is lit by which numbered sun?	The fifth	The first	The third	The ninth
+myt_according_inuit_myth	Expert	According to Inuit myth, what did the sea goddess Sedna's severed fingers become?	Seals, walruses and whales	Icebergs and ice floes	The northern lights	The stars of the night sky
+myt_according_inca_legend	Expert	According to Inca legend, how did Manco Capac know where to found Cusco?	A golden staff sank into the ground	A condor landed on a rock there	An eagle perched on a cactus there	The sun stopped in the sky above it
+myt_legged_prankster_red	Expert	Which one-legged prankster in a red cap is a favourite of Brazilian folklore?	Saci	Curupira	Boitata	Iara
+myt_celtic_god_thought	Expert	Which Celtic god is thought to have given his name to the French city of Lyon?	Lugus	Belenus	Cernunnos	Taranis

@@ -161,6 +161,12 @@ object QuizSectionCatalog {
         QuizSection("math/numbers", "Numbers", "🔢", QuizCategory.Math),
         QuizSection("math/geometry", "Geometry", "📐", QuizCategory.Math),
         QuizSection("math/probability", "Chance & Counting", "🎲", QuizCategory.Math),
-        QuizSection("math/history", "Mathematicians", "🧮", QuizCategory.Math)
+        QuizSection("math/history", "Mathematicians", "🧮", QuizCategory.Math),
+        QuizSection("mythology/greek_roman", "Greek & Roman", "⚡", QuizCategory.Mythology),
+        QuizSection("mythology/norse", "Norse", "🪓", QuizCategory.Mythology),
+        QuizSection("mythology/egypt_near_east", "Egypt & the Near East", "🐍", QuizCategory.Mythology),
+        QuizSection("mythology/asia", "Asian Myths", "🐲", QuizCategory.Mythology),
+        QuizSection("mythology/world", "World Myths", "🌍", QuizCategory.Mythology),
+        QuizSection("mythology/legends", "Legends & Folklore", "🧚", QuizCategory.Mythology)
     )
 }

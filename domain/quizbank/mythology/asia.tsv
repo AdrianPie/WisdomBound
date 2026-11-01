@@ -1,0 +1,94 @@
+# Asian Myths: Hindu, Chinese, Japanese, other Asian myth
+#
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+mytx_zodiak	Easy	How many animals are there in the Chinese zodiac?	12	10	8	13
+wh_mit_wisznu	Easy	In which religion do the gods Brahma, Vishnu and Shiva appear?	Hinduism	Buddhism	Sikhism	Jainism
+myt_maneki_neko_often	Easy	What is the maneki-neko, often seen in Japanese shop windows?	A lucky beckoning cat	A grinning fox spirit	A laughing frog charm	A smiling badger god
+trv2_ganesha	Medium	Which Hindu god has the head of an elephant?	Ganesha	Hanuman	Vishnu	Shiva
+myt_kryszna	Medium	Which Hindu god is often shown with blue skin, playing a flute?	Krishna	Shiva	Ganesha	Hanuman
+mytx_chinski_smok	Medium	In Chinese tradition, dragons are mostly seen as what?	Bringers of luck and rain	Evil fire-breathers	Guardians of the dead	Messengers of war
+mytx_zodiak_kot	Medium	According to legend, which animal missed out on the Chinese zodiac because the rat tricked it?	The cat	The dog	The fox	The duck
+myt_animal_chinese_zodiac	Medium	Which animal of the Chinese zodiac ruled the year 2024?	The dragon	The rabbit	The snake	The tiger
+myt_hindu_god_preserver	Medium	Which Hindu god, the preserver, has avatars such as Rama and Krishna?	Vishnu	Brahma	Shiva	Indra
+myt_chinese_legend_colour	Medium	In Chinese legend, what colour is the invisible thread that links people destined to marry?	Red	Gold	White	Silver
+myt_journey_west_land	Medium	In 'Journey to the West', to which land are the Monkey King and his monk travelling to fetch holy scriptures?	India	Tibet	Japan	Persia
+myt_japanese_folklore_oni	Medium	In Japanese folklore, what is an oni?	A horned ogre or demon	A fox spirit	A water imp	A raccoon dog
+myt_animal_comes_last	Medium	Which animal comes last in the cycle of the Chinese zodiac?	The pig	The dog	The rooster	The monkey
+mit3_amaterasu	Medium	What is Amaterasu the goddess of in Japanese mythology?	The sun	The moon	The sea	War
+dpt_mit_siwa	Medium	Which Hindu god is known as the destroyer?	Shiva	Vishnu	Brahma	Indra
+myty_kali	Medium	Which fierce Hindu goddess wears a garland of skulls and sticks out a red tongue?	Kali	Lakshmi	Saraswati	Parvati
+myt_sacred_river_said	Medium	Which sacred river is said to have fallen from heaven through Shiva's hair to soften its landing?	The Ganges	The Indus	The Yamuna	The Brahmaputra
+cultw_izanagi	Hard	In Japanese myth, which pair created the islands of Japan?	Izanagi and Izanami	Amaterasu and Susanoo	Raijin and Fujin	Inari and Hachiman
+ref_myt_hanuman	Hard	Which monkey god is Rama's devoted ally in the Ramayana?	Hanuman	Ganesha	Garuda	Krishna
+myt_garuda	Hard	Which giant bird carries the Hindu god Vishnu?	Garuda	Jatayu	Hamsa	Simurgh
+myt_kappa	Hard	In Japanese folklore, what is a kappa?	A water imp with a dish on its head	A fox spirit that grows extra tails	A long-nosed mountain goblin	A ghostly cat that walks upright
+myty_tanuki	Hard	In Japanese folklore, which shape-shifter looks like a raccoon dog?	The tanuki	The kitsune	The kappa	The tengu
+myt_hindu_god_shiva	Hard	Why is the Hindu god Shiva often shown with a blue throat?	He swallowed a poison to save the world	He was strangled by a serpent demon	He drank the ocean dry in a rage	He was cursed by an angry sage
+myt_unable_find_healing	Hard	Unable to find the healing herb that Rama's brother needed, what did Hanuman do?	Carried back the whole mountain	Brought back every plant in India	Flew off to ask the sage Valmiki	Fetched the Moon to light his search
+myt_japanese_folklore_thunder	Hard	In Japanese folklore, what does the thunder god Raijin like to steal from children?	Their belly buttons	Their shadows	Their teeth	Their voices
+myt_chinese_legend_happens	Hard	In Chinese legend, what happens to a carp that leaps over the Dragon Gate waterfall?	It turns into a dragon	It turns into a phoenix	It becomes a river god	It grows a pearl in its mouth
+myt_chinese_myth_goddess	Hard	In Chinese myth, which goddess shaped the first humans out of yellow clay?	Nuwa	Chang'e	Guanyin	Xiwangmu
+myt_chinese_myth_giant	Hard	In Chinese myth, which giant hatched from a cosmic egg and pushed the sky and the earth apart?	Pangu	Fuxi	Gonggong	Yu the Great
+myt_hindu_god_fire	Hard	Which Hindu god of fire carries offerings to the other gods?	Agni	Indra	Surya	Vayu
+myt_hindu_goddess_rides	Hard	Which Hindu goddess rides a lion or tiger and slew the buffalo demon?	Durga	Kali	Parvati	Sita
+myt_matsya_avatar_vishnu	Hard	Matsya, the first avatar of Vishnu, saved the first man from a great flood in which form?	A fish	A tortoise	A boar	A swan
+myt_greedy_pig_faced	Hard	Which greedy, pig-faced disciple travels with the Monkey King in 'Journey to the West'?	Zhu Bajie	Sha Wujing	Nezha	Erlang Shen
+myt_japanese_tale_bamboo	Hard	In the Japanese 'Tale of the Bamboo Cutter', where does the princess found inside a bamboo stalk truly come from?	The Moon	The sea	Mount Fuji	A distant star
+myt_ramayana_hanuman_ravana	Hard	In the Ramayana, what did Hanuman do after Ravana's men set his tail on fire?	Set the city of Lanka ablaze	Put it out in the sea and fled	Begged Rama to come and save him	Used it to burn Ravana's beard
+myt_giant_catfish_japanese	Hard	Which giant catfish of Japanese legend causes earthquakes when it thrashes about?	Namazu	Kappa	Orochi	Baku
+myt_japan_imperial_regalia	Hard	Japan's imperial regalia are a sword, a jewel and what?	A mirror	A crown	A bell	A bow
+myt_spirit_japanese_folklore	Hard	Which spirit of Japanese folklore appears in blizzards and freezes travellers with her breath?	Yuki-onna	Kitsune	Rokurokubi	Kuchisake-onna
+myt_hindu_god_death	Hard	Which Hindu god of death rides a water buffalo?	Yama	Agni	Indra	Varuna
+myt_korean_folklore_gumiho	Hard	In Korean folklore, what is a gumiho?	A nine-tailed fox	A river dragon	A one-horned goblin	A tiger spirit
+myt_chinese_tradition_creature	Hard	In Chinese tradition, which creature guards the west?	The White Tiger	The Azure Dragon	The Black Tortoise	The Vermilion Bird
+myt_sun_wukong	Hard	Which monkey king of Chinese legend wields a magic staff that can change size?	Sun Wukong	Hanuman	Nezha	Zhu Bajie
+myty_lakszmi	Hard	Which Hindu goddess brings wealth and good fortune?	Lakshmi	Kali	Durga	Saraswati
+myt_japanese_folk_hero	Hard	Which Japanese folk hero was born from a giant peach found floating down a river?	Momotaro	Urashima Taro	Kintaro	Issun-boshi
+myt_chinese_legend_ruler	Hard	In Chinese legend, which ruler of heaven held the Great Race that set the order of the zodiac?	The Jade Emperor	The Yellow Emperor	The Dragon King	The Queen Mother of the West
+myt_chinese_legend_flew	Hard	In Chinese legend, who flew to the Moon after swallowing an elixir of immortality?	Chang'e	Nuwa	Guanyin	Mazu
+myt_according_legend_chinese	Hard	According to legend, Chinese New Year firecrackers and red decorations were meant to scare off which beast?	The Nian	The Qilin	The Pixiu	The Taotie
+myt_japanese_folklore_rabbit	Hard	In Japanese folklore, what is the rabbit in the Moon busy pounding?	Rice cakes	Gold coins	Moon dust	Tea leaves
+myt_best_hindu_story	Hard	In the best-known Hindu story, why does Parvati's son have an elephant's head?	Shiva cut off his head, then gave him an elephant's	He was born with it as a blessing from Brahma	Vishnu swapped it for his own in a game	He won it from Indra's elephant in a duel
+myt_heads_ravana_demon	Hard	How many heads does Ravana, the demon king of the Ramayana, usually have?	Ten	Three	Seven	A hundred
+myt_japan_setsubun_festival	Hard	At Japan's Setsubun festival, what do people throw to drive demons out of the house?	Roasted soybeans	Grains of rice	Salt crystals	Paper charms
+myt_animal_hindu_god	Hard	Which animal does the Hindu god Shiva ride?	A bull	A lion	A peacock	A swan
+myt_small_animal_hindu	Hard	Which small animal does the Hindu god Ganesha ride?	A mouse	A tortoise	A parrot	A monkey
+myt_hindu_goddess_knowledge	Hard	Which Hindu goddess of knowledge and music is shown playing a veena?	Saraswati	Lakshmi	Parvati	Durga
+myt_hindu_king_gods	Hard	Which Hindu king of the gods wields a thunderbolt called the vajra?	Indra	Agni	Varuna	Surya
+myt_main_avatars_vishnu	Hard	How many main avatars of Vishnu are traditionally counted?	Ten	Three	Seven	Twelve
+myt_hindu_creator_god	Hard	Which Hindu creator god is usually shown with four heads?	Brahma	Vishnu	Shiva	Indra
+myt_chinese_legend_cowherd	Hard	In the Chinese legend of the Cowherd and the Weaver Girl, which birds form a bridge so the lovers can meet?	Magpies	Cranes	Swallows	Doves
+myt_red_faced_tengu	Hard	What is the red-faced tengu of Japanese folklore famous for?	A very long nose	A single huge eye	A neck that stretches	A mouth on its back
+myt_japanese_tale_happens	Hard	In the Japanese tale, what happens when Urashima Taro opens the box given to him by the sea princess?	He turns into an old man	He becomes a dragon	He falls asleep forever	He is swept back under the sea
+myt_rama_wife_kidnapped	Hard	Who is Rama's wife, kidnapped by Ravana?	Sita	Draupadi	Radha	Parvati
+myt_according_journey_west	Hard	According to 'Journey to the West', how was the Monkey King born?	From a stone egg on a mountain	From a peach of immortality	From a lotus in a palace pond	From a dragon's pearl
+myt_buddhist_goddess_mercy	Hard	Which Buddhist goddess of mercy is one of the best-loved figures in Chinese folk belief?	Guanyin	Mazu	Nuwa	Chang'e
+myt_people_japan_traditionally	Hard	What do people in Japan traditionally do to a Daruma doll when they set themselves a goal?	Paint in one of its eyes	Tie a red thread round it	Write the goal on its base	Turn it to face the wall
+myt_ramayana_island_kingdom	Hard	In the 'Ramayana', which island kingdom did the demon king Ravana rule?	Lanka	Bali	Ayodhya	Kashi
+myt_northern_india_diwali	Hard	In northern India, Diwali celebrates which hero's return home after defeating Ravana?	Rama	Krishna	Arjuna	Hanuman
+myt_legend_chinese_zodiac	Hard	In the legend of the Chinese zodiac, how did the rat win the Great Race?	It rode on the ox's back	It tripped the horse	It flew on the rooster	It swam under the dragon
+myt_pandava_brothers_heroes	Hard	How many Pandava brothers are the heroes of the 'Mahabharata'?	Five	Three	Seven	A hundred
+myt_chinese_legend_immortals	Hard	In Chinese legend, how many Immortals cross the sea together, each using a magic power?	Eight	Seven	Five	Twelve
+myt_japanese_wind_god	Hard	What does the Japanese wind god Fujin carry over his shoulders?	A bag of winds	A ring of drums	A giant fan	A paper kite
+myt_claws_dragons_chinese	Hard	How many claws did the dragons on a Chinese emperor's robes traditionally have?	Five	Three	Four	Seven
+myt_japanese_kami_rice	Hard	Which Japanese kami of rice uses foxes as messengers?	Inari	Hachiman	Ebisu	Raijin
+cultw_mahabharata	Hard	Which Sanskrit epic contains the Bhagavad Gita?	The Mahabharata	The Ramayana	The Rigveda	The Upanishads
+dpt_mit_kitsune	Hard	What is a kitsune in Japanese folklore?	A fox spirit that gains tails with age	A mountain demon with bright red skin	A drowned soul that haunts the rivers	A dragon set to guard a hidden shrine
+ref_myt_susanoo	Expert	Which Japanese storm god slew the eight-headed serpent Yamata no Orochi?	Susanoo	Raijin	Hachiman	Tsukuyomi
+myt_narasimha	Expert	Which avatar of Vishnu has the head of a lion and the body of a man?	Narasimha	Varaha	Matsya	Kurma
+myt_lunar_new_year	Expert	Before the Lunar New Year, why do Chinese families smear honey or sweets on the Kitchen God's lips?	So he reports only sweet things to heaven	To feed him for his long journey home	To keep him from eating the family's rice	So he will bless the coming year's harvests
+myt_avatar_vishnu_yet	Expert	Which avatar of Vishnu is yet to come, riding a white horse to end the present dark age?	Kalki	Rama	Parashurama	Vamana
+myt_bow_kama_hindu	Expert	What is the bow of Kama, the Hindu god of love, made of?	Sugarcane	Bamboo	Ivory	Rosewood
+myt_indra_white_elephant	Expert	What is the name of Indra's white elephant?	Airavata	Nandi	Ganesha	Gajendra
+myt_wish_granting_cow	Expert	Which wish-granting cow appears in Hindu mythology?	Kamadhenu	Nandini	Ahalya	Damayanti
+myt_chinese_legend_gang	Expert	In Chinese legend, what is Wu Gang doomed to do forever on the Moon?	Chop down a tree that heals itself	Carry water in a leaking bucket	Count the stars that pass by	Pound rice that turns to dust
+myt_japanese_folklore_tsukumogami	Expert	In Japanese folklore, what are tsukumogami?	Old objects that come to life	Ghosts of drowned sailors	Mountain-dwelling ogres	Spirits of the rice fields
+myt_chinese_belief_meng	Expert	In Chinese belief, what does Meng Po give souls before they are reborn?	A soup of forgetfulness	A coin for the ferryman	A new name on a scroll	A peach of long life
+myt_superhumanly_strong_golden	Expert	Which superhumanly strong 'golden boy' of Japanese folklore grew up in the mountains and rode a bear?	Kintaro	Momotaro	Issun-boshi	Urashima Taro
+myt_according_legend_ganesha	Expert	According to legend, what did Ganesha do when his pen broke while writing down the Mahabharata?	He broke off one of his tusks	He dipped his trunk in the ink	He borrowed Shiva's trident	He carved it with a fingernail
+myt_gods_lure_sun	Expert	How did the Japanese gods lure Amaterasu out of the cave where she was hiding?	With a wild dance and roars of laughter	By promising her the throne of heaven	By setting the cave's entrance on fire	By sending her brother to beg forgiveness
+myt_chinese_legend_suns	Expert	In Chinese legend, how many suns did the archer Hou Yi shoot down to save the scorched Earth?	Nine	Ten	Seven	Three
+myt_korea_founding_myth	Expert	In Korea's founding myth, how did a bear become the woman who bore Dangun?	By eating only garlic and mugwort in a cave	By guarding the king's tomb for a year	By marrying the son of the moon goddess	By drinking dew from a sacred pine
+myt_years_rama_exiled	Expert	For how many years was Rama exiled to the forest in the 'Ramayana'?	Fourteen	Seven	Twelve	Forty
+myt_according_folklore_trick	Expert	According to Japanese folklore, what trick lets you escape a kappa?	Bow, so it bows back and spills its water	Splash it with salt water from the sea	Shout its true name three times	Offer it a bowl of rice and sake
+myt_child_hanuman_mistake	Expert	As a child, what did Hanuman mistake the sun for and leap up to eat?	A ripe fruit	A golden egg	A ball of butter	A lotus flower
