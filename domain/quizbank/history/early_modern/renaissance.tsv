@@ -1,71 +1,69 @@
 # Wlochy XIV-XVI wieku i ich echo w Europie: Medyceusze, Leonardo, Michal Aniol, druk, Machiavelli.
 id	difficulty	prompt	correct	wrong1	wrong2	wrong3
 his_mona_lisa	Easy	Who painted the Mona Lisa?	Leonardo da Vinci	Michelangelo	Raphael	Pablo Picasso
-hx_mona_lisa_kradziez	Easy	What happened to the Mona Lisa in 1911?	It was stolen	It was sold to America	It was cut in half	It was painted over
 his_renaissance_genius_painted	Easy	Which Renaissance genius painted 'The Last Supper'?	Leonardo da Vinci	Michelangelo	Raphael	Titian
 his_renaissance_city_canals	Easy	Which Renaissance city is famous for its canals and the glass-makers of Murano?	Venice	Florence	Genoa	Milan
 his_italian_city_seen	Easy	Which Italian city is seen as the birthplace of the Renaissance?	Florence	Rome	Venice	Naples
 his_past_age_renaissance	Easy	Which past age did Renaissance thinkers and artists look back to for inspiration?	Ancient Greece and Rome	The Viking Age	The Stone Age	Ancient Egypt
 his_renaissance_artist_carved	Easy	Which Renaissance artist carved the giant marble statue of David that stands in Florence?	Michelangelo	Donatello	Leonardo da Vinci	Raphael
-his_leonardo_drawing_shows	Easy	Which famous Leonardo drawing shows a man with outstretched limbs inside a circle and a square?	'Vitruvian Man'	'Universal Man'	'Perfect Man'	'Man of Proportion'
-his_1504_florence_set	Easy	In 1504, Florence set Leonardo against which younger rival, each to paint a giant battle scene in the same hall?	Michelangelo	Raphael	Botticelli	Titian
-his_word_ghetto_comes	Easy	The word 'ghetto' comes from the Jewish quarter of which Renaissance city?	Venice	Florence	Rome	Genoa
 his_renaissance_painting_now	Easy	Which Renaissance painting now hangs behind bulletproof glass in the Louvre?	The Mona Lisa	The Last Supper	The Birth of Venus	The School of Athens
-his_admirers_renaissance_artist	Easy	Admirers called which Renaissance artist 'Il Divino', the divine one?	Michelangelo	Raphael	Botticelli	Titian
-his2_renesans_kraj	Medium	In which country did the Renaissance begin?	Italy	France	Germany	England
-wh_kaplica_sykstynska	Medium	Who painted the ceiling of the Sistine Chapel?	Michelangelo	Leonardo da Vinci	Raphael	Caravaggio
+his2_renesans_kraj	Easy	In which country did the Renaissance begin?	Italy	France	Germany	England
+wh_kaplica_sykstynska	Easy	Who painted the ceiling of the Sistine Chapel?	Michelangelo	Leonardo da Vinci	Raphael	Caravaggio
+hx_leonardo_maszyny	Easy	Which Renaissance genius filled his notebooks with designs for flying machines?	Leonardo da Vinci	Michelangelo	Galileo Galilei	Raphael
+hx_biblia_gutenberga	Easy	Which book was the first major book printed with movable type in Europe?	The Bible	The Odyssey	The Koran	Don Quixote
+his_someone_renaissance_man	Easy	Someone called a 'Renaissance man' is what?	Skilled in many different fields	A lover of old buildings	A painter of religious scenes	A patron of the arts
 his_medyceusze	Medium	Which Italian city did the Medici family rule?	Florence	Venice	Milan	Genoa
-hx_leonardo_maszyny	Medium	Which Renaissance genius filled his notebooks with designs for flying machines?	Leonardo da Vinci	Michelangelo	Galileo Galilei	Raphael
-hx_biblia_gutenberga	Medium	Which book was the first major book printed with movable type in Europe?	The Bible	The Odyssey	The Koran	Don Quixote
 hx_doza	Medium	What was the elected ruler of the Republic of Venice called?	The Doge	The Consul	The Prince	The Podesta
 his_word_renaissance_mean	Medium	What does the word 'Renaissance' mean?	Rebirth	Discovery	Golden age	Awakening
 his_painted_school_athens	Medium	Who painted 'The School of Athens' in the Vatican?	Raphael	Michelangelo	Leonardo da Vinci	Giotto
-his_architect_built_giant	Medium	Which architect built the giant dome of Florence Cathedral?	Filippo Brunelleschi	Leon Battista Alberti	Donato Bramante	Andrea Palladio
-his_medici_ruler_florence	Medium	Which Medici ruler of Florence was nicknamed 'the Magnificent'?	Lorenzo	Cosimo	Giovanni	Piero
-his_dutch_scholar_wrote	Medium	Which Dutch scholar wrote the satire 'In Praise of Folly'?	Erasmus	Thomas More	Rembrandt	Spinoza
 his_spanish_born_family	Medium	Which Spanish-born family produced the notorious Renaissance pope Alexander VI?	The Borgias	The Medici	The Sforzas	The Este
 his_technique_renaissance_painters	Medium	Which technique did Renaissance painters master to make flat pictures look deep?	Linear perspective	Pointillism	Cubism	Gold leaf
-his_someone_renaissance_man	Medium	Someone called a 'Renaissance man' is what?	Skilled in many different fields	A lover of old buildings	A painter of religious scenes	A patron of the arts
-his_venetian_painter_rich	Medium	Which Venetian painter, famous for his rich colours, died of plague in 1576?	Titian	Tintoretto	Veronese	Giorgione
-his_family_ruled_milan	Medium	Which family ruled Milan, employing Leonardo da Vinci for years?	The Sforzas	The Medici	The Borgias	The Gonzagas
-his_florentine_sculptor_made	Medium	Which Florentine sculptor made a bronze David, the first free-standing nude since ancient times?	Donatello	Ghiberti	Cellini	Verrocchio
 his_renaissance_master_designed	Medium	Which Renaissance master designed the great dome of St Peter's Basilica in Rome?	Michelangelo	Leonardo da Vinci	Raphael	Botticelli
-his_warrior_pope_laid	Medium	Which 'warrior pope' laid the first stone of the new St Peter's Basilica in 1506?	Julius II	Leo X	Alexander VI	Sixtus IV
 his_painter_showed_spring	Medium	Which painter showed spring with dancing nymphs in 'Primavera'?	Botticelli	Titian	Raphael	Caravaggio
 his_kind_machine_gutenberg	Medium	Which kind of machine did Gutenberg adapt to build his printing press?	A wine press	A water wheel	A spinning wheel	A grain mill
-his_florentine_woman_believed	Medium	Which Florentine woman is believed to be the sitter of the Mona Lisa?	Lisa Gherardini	Lucrezia Borgia	Isabella d'Este	Simonetta Vespucci
-his_florentine_writer_argued	Medium	Which Florentine writer argued that it is safer for a prince to be feared than loved?	Niccolo Machiavelli	Lorenzo de' Medici	Dante Alighieri	Baldassare Castiglione
 his_medici_florence_made	Medium	The Medici of Florence made their great fortune mainly in which business?	Banking	Spice trading	Shipbuilding	Glassmaking
-his_leonardo_portrait_smiling	Medium	Leonardo's most famous portrait of a smiling woman is painted not on canvas but on what?	A poplar wood panel	A sheet of copper	A slab of slate	A silk tablecloth
 his_marble_statue_peter	Medium	Which marble statue in St Peter's Basilica, carved by a sculptor of about 24, is the only work he ever signed?	The Pieta	The Moses	The David	The Bacchus
 his_leonardo_mona_lisa	Medium	What did Leonardo do with the Mona Lisa instead of handing it over to the client who ordered it?	Kept reworking it and took it to France	Sold it to the pope for a fortune	Gave it to Michelangelo as a gift	Hid it in a convent in Milan
 his_unusual_marble_block	Medium	What was unusual about the marble block that Michelangelo carved his David from?	Other sculptors had given up on it	It came from an ancient Roman temple	It was a gift from the pope	It was black marble from Egypt
-his_powerful_banking_family	Medium	Which powerful banking family ruled Florence in the Renaissance?	Medici	Borgia	Sforza	Este
+hx_mona_lisa_kradziez	Medium	What happened to the Mona Lisa in 1911?	It was stolen	It was sold to America	It was cut in half	It was painted over
+his_leonardo_drawing_shows	Medium	Which famous Leonardo drawing shows a man with outstretched limbs inside a circle and a square?	'Vitruvian Man'	'Universal Man'	'Perfect Man'	'Man of Proportion'
+his_word_ghetto_comes	Medium	The word 'ghetto' comes from the Jewish quarter of which Renaissance city?	Venice	Florence	Rome	Genoa
+his_admirers_renaissance_artist	Medium	Admirers called which Renaissance artist 'Il Divino', the divine one?	Michelangelo	Raphael	Botticelli	Titian
+his_city_brutally_sacked	Medium	Which city was brutally sacked by the troops of Emperor Charles V in 1527?	Rome	Florence	Venice	Milan
+his_machiavelli	Medium	Who wrote the treatise 'The Prince'?	Niccolo Machiavelli	Dante Alighieri	Erasmus of Rotterdam	Thomas More
 his_german_artist_engravings	Hard	Which German artist is famous for his engravings and self-portraits around 1500?	Albrecht Durer	Hans Holbein	Lucas Cranach	Matthias Grunewald
 his_flemish_master_painted	Hard	Which Flemish master painted the 'Arnolfini Portrait' in 1434?	Jan van Eyck	Pieter Bruegel	Hieronymus Bosch	Rogier van der Weyden
 his_ruthless_son_pope	Hard	Which ruthless son of a pope is thought to have inspired Machiavelli's 'The Prince'?	Cesare Borgia	Lorenzo de' Medici	Ludovico Sforza	Francesco Gonzaga
-his_city_brutally_sacked	Hard	Which city was brutally sacked by the troops of Emperor Charles V in 1527?	Rome	Florence	Venice	Milan
 his_french_king_invited	Hard	Which French king invited Leonardo to France, where the artist died in 1519?	Francis I	Louis XII	Henry II	Charles VIII
 his_bronze_doors_florence	Hard	Whose bronze doors of the Florence Baptistery did Michelangelo call 'the Gates of Paradise'?	Lorenzo Ghiberti's	Donatello's	Brunelleschi's	Cellini's
 his_italian_poet_often	Hard	Which Italian poet is often called 'the father of humanism'?	Petrarch	Dante	Boccaccio	Ariosto
 his_german_city_gutenberg	Hard	In which German city did Gutenberg print his famous Bible?	Mainz	Cologne	Nuremberg	Hamburg
-his_banker_made_medici	Hard	Which banker made the Medici the real rulers of Florence from 1434?	Cosimo de' Medici	Lorenzo de' Medici	Piero de' Medici	Giovanni de' Medici
 his_pazzi_conspiracy_1478	Hard	What was the Pazzi conspiracy of 1478 in Florence?	A plot to murder the Medici during Mass	A scheme to flood the city	A forgery of famous paintings	A plan to sell Florence to Venice
 his_contrary_popular_image	Hard	Contrary to the popular image, in what position was the Sistine Chapel ceiling actually painted?	Standing, head tilted back	Lying flat on his back	Hanging in a rope harness	Sitting in a raised chair
 his_renaissance_painter_died	Hard	Which Renaissance painter, who died at 37 in 1520, is buried in the Pantheon in Rome?	Raphael	Titian	Botticelli	Michelangelo
 his_marble_david_florence	Hard	The famous marble David in Florence was first meant to stand where?	High up on the cathedral	In the Pope's garden in Rome	Over a city gate	In the Medici family chapel
 his_michelangelo_get_famously	Hard	How did Michelangelo get his famously flattened nose?	A rival sculptor punched him	He fell from scaffolding	A block of marble hit him	He was born that way
-his_marchioness_mantua_great	Hard	Which marchioness of Mantua, a great collector of art, was called 'the first lady of the Renaissance'?	Isabella d'Este	Lucrezia Borgia	Beatrice d'Este	Vittoria Colonna
 his_leonardo_last_supper	Hard	Why did Leonardo's 'Last Supper' begin flaking away within his own lifetime?	He painted on dry plaster	A flood soaked the wall	He mixed it with seawater	It was struck by lightning
 his_michelangelo_get_back	Hard	How did Michelangelo get back at the papal official who complained about the nudes in 'The Last Judgment'?	Painted him in Hell with donkey's ears	Painted him as a naked saint	Locked him inside the chapel	Carved his face on a gargoyle
 his_young_michelangelo_marble	Hard	The young Michelangelo's marble 'Sleeping Cupid' was made to look old and sold as what?	An ancient Roman statue	A relic of a saint	A work by Donatello	A gift from the pope
-his_impress_france_henry	Hard	To impress France's Henry III in 1574, what did the workers of the Venetian Arsenal reportedly do?	Built a war galley while he dined	Launched a hundred ships at once	Bridged the Grand Canal overnight	Cast a giant cannon in his honour
-his_machiavelli	Expert	Who wrote the treatise 'The Prince'?	Niccolo Machiavelli	Dante Alighieri	Erasmus of Rotterdam	Thomas More
-hy_savonarola	Expert	Which Florentine friar organised the 'Bonfire of the Vanities' in 1497?	Girolamo Savonarola	Niccolo Machiavelli	Lorenzo de' Medici	Cesare Borgia
+his_1504_florence_set	Hard	In 1504, Florence set Leonardo against which younger rival, each to paint a giant battle scene in the same hall?	Michelangelo	Raphael	Botticelli	Titian
+his_architect_built_giant	Hard	Which architect built the giant dome of Florence Cathedral?	Filippo Brunelleschi	Leon Battista Alberti	Donato Bramante	Andrea Palladio
+his_medici_ruler_florence	Hard	Which Medici ruler of Florence was nicknamed 'the Magnificent'?	Lorenzo	Cosimo	Giovanni	Piero
+his_dutch_scholar_wrote	Hard	Which Dutch scholar wrote the satire 'In Praise of Folly'?	Erasmus	Thomas More	Rembrandt	Spinoza
+his_venetian_painter_rich	Hard	Which Venetian painter, famous for his rich colours, died of plague in 1576?	Titian	Tintoretto	Veronese	Giorgione
+his_family_ruled_milan	Hard	Which family ruled Milan, employing Leonardo da Vinci for years?	The Sforzas	The Medici	The Borgias	The Gonzagas
+his_florentine_sculptor_made	Hard	Which Florentine sculptor made a bronze David, the first free-standing nude since ancient times?	Donatello	Ghiberti	Cellini	Verrocchio
+his_warrior_pope_laid	Hard	Which 'warrior pope' laid the first stone of the new St Peter's Basilica in 1506?	Julius II	Leo X	Alexander VI	Sixtus IV
+his_florentine_woman_believed	Hard	Which Florentine woman is believed to be the sitter of the Mona Lisa?	Lisa Gherardini	Lucrezia Borgia	Isabella d'Este	Simonetta Vespucci
+his_leonardo_portrait_smiling	Hard	Leonardo's most famous portrait of a smiling woman is painted not on canvas but on what?	A poplar wood panel	A sheet of copper	A slab of slate	A silk tablecloth
+hy_savonarola	Hard	Which Florentine friar organised the 'Bonfire of the Vanities' in 1497?	Girolamo Savonarola	Niccolo Machiavelli	Lorenzo de' Medici	Cesare Borgia
+his_letter_offering_services	Hard	In his famous letter offering his services to the Duke of Milan, what did Leonardo boast about most?	His skills as a military engineer	His talent for portrait painting	His knowledge of human anatomy	His skill at designing gardens
 his_young_florentine_painter	Expert	Which young Florentine painter's frescoes in the Brancacci Chapel pioneered perspective?	Masaccio	Giotto	Fra Angelico	Uccello
 his_florentine_goldsmith_cast	Expert	Which Florentine goldsmith cast the bronze 'Perseus' and wrote a famously boastful autobiography?	Benvenuto Cellini	Lorenzo Ghiberti	Andrea Verrocchio	Giambologna
 his_according_biographer_vasari	Expert	According to his biographer Vasari, what did Leonardo da Vinci do with caged birds he bought at the market?	Set them free	Painted them	Cooked them	Taught them to sing
 his_venetian_printer_introduced	Expert	Which Venetian printer introduced italic type and small, cheap pocket books around 1500?	Aldus Manutius	Nicolas Jenson	William Caxton	Johann Froben
 his_countess_nicknamed_tigress	Expert	Which countess, nicknamed 'the Tigress of Forli', defied Cesare Borgia from her castle walls in 1499-1500?	Caterina Sforza	Lucrezia Borgia	Isabella d'Este	Bianca Maria Visconti
 his_happened_leonardo_giant	Expert	What happened to Leonardo's giant clay model of a horse for the Duke of Milan in 1499?	French soldiers used it for target practice	It was cast in bronze, then melted for cannon	It was smashed by a jealous rival sculptor	It was shipped to Paris as a war trophy
-his_letter_offering_services	Expert	In his famous letter offering his services to the Duke of Milan, what did Leonardo boast about most?	His skills as a military engineer	His talent for portrait painting	His knowledge of human anatomy	His skill at designing gardens
+his_banker_made_medici	Expert	Which banker made the Medici the real rulers of Florence from 1434?	Cosimo de' Medici	Lorenzo de' Medici	Piero de' Medici	Giovanni de' Medici
+his_marchioness_mantua_great	Expert	Which marchioness of Mantua, a great collector of art, was called 'the first lady of the Renaissance'?	Isabella d'Este	Lucrezia Borgia	Beatrice d'Este	Vittoria Colonna
+his_impress_france_henry	Expert	To impress France's Henry III in 1574, what did the workers of the Venetian Arsenal reportedly do?	Built a war galley while he dined	Launched a hundred ships at once	Bridged the Grand Canal overnight	Cast a giant cannon in his honour

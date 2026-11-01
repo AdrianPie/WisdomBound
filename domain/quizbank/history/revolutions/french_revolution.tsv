@@ -8,11 +8,8 @@ his_date_france_national	Easy	On which date is France's national day, marking an
 his_motto_french_revolution	Easy	What was the famous motto of the French Revolution?	'Liberty, equality, fraternity'	'God, king and country'	'Peace, land and bread'	'Unity, faith, discipline'
 his_colours_make_french	Easy	Which colours make up the French tricolour flag born in the Revolution?	Blue, white and red	Green, white and red	Black, red and gold	Blue and yellow
 his_french_queen_wrongly	Easy	Which French queen is wrongly said to have answered news of hungry peasants with 'Let them eat cake'?	Marie Antoinette	Catherine de' Medici	Josephine	Marie Louise
-his_revolution_group_made	Easy	Before the Revolution, which group made up France's 'First Estate'?	The clergy	The nobility	The peasants	The merchants
-his_great_paris_museum	Easy	Which great Paris museum first opened to the public in 1793, in a former royal palace?	The Louvre	The Musee d'Orsay	The Pompidou Centre	The Musee Carnavalet
-his_eiffel_tower_built	Easy	The Eiffel Tower was built for a world's fair marking 100 years since what?	The French Revolution	The birth of Napoleon	The founding of Paris University	The end of the Seven Years' War
-his_country_marie_antoinette	Easy	In which country was Marie Antoinette born and raised?	Austria	France	Spain	Prussia
-his_rewolucja_fr	Medium	In which year did the French Revolution break out?	1789	1799	1776	1804
+his_instead_monsieur_french	Easy	Instead of 'monsieur', what did French revolutionaries call each other?	Citizen	Comrade	Brother	Friend
+his_made_third_estate	Easy	Who made up the 'Third Estate' in France before the Revolution?	The common people	The clergy	The nobles	The king's family
 his_french_king_guillotined	Medium	Which French king was guillotined in 1793?	Louis XVI	Louis XIV	Louis XV	Charles X
 his_royal_family_ruled	Medium	Which royal family ruled France at the time of the French Revolution?	Bourbon	Valois	Habsburg	Plantagenet
 his_document_august_1789	Medium	Which document of August 1789 proclaimed that men are born free and equal in rights?	The Declaration of the Rights of Man	The Napoleonic Code	The Social Contract	The Constitution of 1791
@@ -20,51 +17,53 @@ his_radical_political_club	Medium	Which radical political club did Robespierre l
 his_thousands_paris_women	Medium	Why did thousands of Paris women march on Versailles in October 1789?	To demand bread	To free prisoners	To vote	To see the queen's jewels
 his_system_measurement_revolutionary	Medium	Which system of measurement did revolutionary France give the world?	The metric system	The imperial system	The decimal clock	The Celsius scale
 his_happened_french_monarchy	Medium	What happened to the French monarchy in September 1792?	It was abolished	It was restored	It moved to Lyon	It became elected
-his_instead_monsieur_french	Medium	Instead of 'monsieur', what did French revolutionaries call each other?	Citizen	Comrade	Brother	Friend
-his_made_third_estate	Medium	Who made up the 'Third Estate' in France before the Revolution?	The common people	The clergy	The nobles	The king's family
-his_revolutionary_leader_nicknamed	Medium	Which revolutionary leader was nicknamed 'the Incorruptible'?	Maximilien Robespierre	Georges Danton	Jean-Paul Marat	Napoleon Bonaparte
 his_emigres_french_revolution	Medium	Who were the 'emigres' of the French Revolution?	Nobles who fled abroad	Peasants who moved to Paris	Soldiers sent to Egypt	Priests who joined the revolution
-his_happened_louis_xvi	Medium	What happened to Louis XVI's young son, Louis XVII?	He died in prison as a child	He became emperor	He escaped to America	He was crowned in 1815
 his_tricoteuses_revolution_said	Medium	What were the 'tricoteuses' of the Revolution said to do while watching executions?	Knit	Sing hymns	Sell food	Pray
-his_soft_red_cap	Medium	Which soft red cap became the symbol of liberty in the French Revolution?	The Phrygian cap	The beret	The tricorne	The kepi
-his_french_revolutionaries_tried	Medium	French revolutionaries tried decimal time. How many hours did their day have?	10	12	20	100
 his_wax_modeller_later	Medium	Which wax modeller, who later opened a famous London museum, made death masks of guillotine victims?	Marie Tussaud	Madame de Stael	Elisabeth Vigee Le Brun	Madame Roland
-his_became_bastille_stormed	Medium	What became of the Bastille after it was stormed in 1789?	It was torn down stone by stone	It became a museum of the Revolution	It was turned into army barracks	It became a prison for nobles
 his_louis_xvi_guillotined	Medium	Louis XVI was guillotined in the Paris square that is today called what?	Place de la Concorde	Place de la Bastille	Place Vendome	Place des Vosges
-his_france_revolutionary_anthem	Medium	Why is France's revolutionary anthem named after Marseille?	Volunteers from Marseille sang it in Paris	Its composer was born in Marseille	It was first printed in Marseille	Marseille paid for its first performance
-his_according_tradition_marie	Medium	According to tradition, what were Marie Antoinette's last words, after she trod on her executioner's foot?	'Pardon me, sir'	'Long live the king'	'I forgive you all'	'Look after my son'
-his_revolutionaries_royal_tombs	Medium	What did revolutionaries do to the royal tombs in the abbey of Saint-Denis in 1793?	Dug up the kings and dumped them in pits	Melted them down to make cannon	Sold them to British collectors	Sealed them up behind brick walls
 his_political_labels_come	Medium	Which political labels come from where deputies sat in France's National Assembly in 1789?	Left and right	Liberal and conservative	Radical and moderate	Hawks and doves
-his_swiss_city_carved	Medium	Which Swiss city's carved 'Dying Lion' honours the Swiss Guards killed defending the French king in 1792?	Lucerne	Geneva	Bern	Zurich
-his_event_marked_start	Medium	Which event marked the start of 'Year I' in the French Revolutionary calendar?	The founding of the Republic in 1792	The storming of the Bastille in 1789	The execution of Louis XVI in 1793	The Tennis Court Oath of 1789
-org_gilotyna_lekarz	Hard	The man behind the guillotine's name actually did what?	Proposed it as a humane method	Built the first one	Was executed by it	Sharpened its blade
-hx_robespierre	Hard	Which revolutionary led the 'Reign of Terror' before being guillotined himself in 1794?	Maximilien Robespierre	Georges Danton	Jean-Paul Marat	Napoleon Bonaparte
+his_revolution_group_made	Medium	Before the Revolution, which group made up France's 'First Estate'?	The clergy	The nobility	The peasants	The merchants
+his_great_paris_museum	Medium	Which great Paris museum first opened to the public in 1793, in a former royal palace?	The Louvre	The Musee d'Orsay	The Pompidou Centre	The Musee Carnavalet
+his_eiffel_tower_built	Medium	The Eiffel Tower was built for a world's fair marking 100 years since what?	The French Revolution	The birth of Napoleon	The founding of Paris University	The end of the Seven Years' War
+his_country_marie_antoinette	Medium	In which country was Marie Antoinette born and raised?	Austria	France	Spain	Prussia
+org_gilotyna_lekarz	Medium	The man behind the guillotine's name actually did what?	Proposed it as a humane method	Built the first one	Was executed by it	Sharpened its blade
+hx_robespierre	Medium	Which revolutionary led the 'Reign of Terror' before being guillotined himself in 1794?	Maximilien Robespierre	Georges Danton	Jean-Paul Marat	Napoleon Bonaparte
+his_oath_sworn_third	Medium	What was the oath sworn by the Third Estate's deputies in June 1789 called?	The Tennis Court Oath	The Oath of the Horatii	The Bastille Oath	The Versailles Oath
+his_working_class_paris	Medium	What were the working-class Paris revolutionaries, who wore trousers instead of breeches, called?	Sans-culottes	Girondins	Chouans	Emigres
+hx_marat_wanna	Medium	Revolutionary Jean-Paul Marat was murdered in 1793 while doing what?	Taking a bath	Giving a speech	Eating dinner	Riding in a carriage
 his_assembly_met_1789	Hard	Which assembly met in 1789 for the first time since 1614, setting off the Revolution?	The Estates-General	The National Convention	The Directory	The Paris Commune
-his_oath_sworn_third	Hard	What was the oath sworn by the Third Estate's deputies in June 1789 called?	The Tennis Court Oath	The Oath of the Horatii	The Bastille Oath	The Versailles Oath
-his_working_class_paris	Hard	What were the working-class Paris revolutionaries, who wore trousers instead of breeches, called?	Sans-culottes	Girondins	Chouans	Emigres
 his_revolutionary_leader_guillotined	Hard	Which revolutionary leader was guillotined in 1794 for urging an end to the Terror?	Georges Danton	Maximilien Robespierre	Jean-Paul Marat	Louis de Saint-Just
 his_young_woman_stabbed	Hard	Which young woman stabbed Jean-Paul Marat to death in 1793?	Charlotte Corday	Olympe de Gouges	Madame Roland	Lucile Desmoulins
 his_directory_ruled_france	Hard	What was the 'Directory' that ruled France from 1795 to 1799?	A government of five men	A list of enemies of the state	A royal council	A secret police
 his_painter_showed_murdered	Hard	Which painter showed the murdered Marat in his bath in a famous painting?	Jacques-Louis David	Eugene Delacroix	Francisco Goya	Jean-Auguste Ingres
-his_writer_declaration_rights	Hard	Which writer of the 'Declaration of the Rights of Woman' was guillotined in 1793?	Olympe de Gouges	Charlotte Corday	Madame Roland	Germaine de Stael
 his_revolutionaries_rename_notre	Hard	What did revolutionaries rename Notre-Dame Cathedral in 1793?	The Temple of Reason	The Hall of the People	The House of Liberty	The Palace of Equality
 his_assembly_declared_france	Hard	Which assembly declared France a republic in September 1792?	The National Convention	The Estates-General	The Directory	The Legislative Assembly
 his_great_fear_summer	Hard	What was the 'Great Fear' of summer 1789?	Peasants attacking manor houses	Paris's fear of a foreign army	A plague of rats in Paris	The king's fear of the mob
 his_moderate_revolutionary_faction	Hard	Which moderate revolutionary faction, named after a region of south-west France, fell to the Jacobins in 1793?	The Girondins	The Montagnards	The Cordeliers	The Feuillants
-his_city_marseillaise_actually	Hard	In which city was 'La Marseillaise' actually written, in 1792?	Strasbourg	Marseille	Paris	Lyon
 his_louis_xvi_tried	Hard	By which name was Louis XVI tried and executed by the revolutionaries?	Louis Capet	Louis Bourbon	Louis Valois	Louis d'Orleans
 his_month_names_french	Hard	What did the month names of the French Revolutionary calendar describe?	Weather and farm life	Heroes of the Revolution	Roman gods and goddesses	Great battles of France
-his_royal_cousin_louis	Hard	Which royal cousin of Louis XVI called himself 'Philippe Egalite' and voted for the king's death?	The Duke of Orleans	The Count of Artois	The Prince of Conde	The Duke of Berry
-his_family_hereditary_executioners	Hard	Which family of hereditary executioners, from father to son, beheaded Louis XVI?	The Sansons	The Guillotins	The Capets	The Desmoulins
 his_assignats_revolutionary_france	Hard	What were the 'assignats' that revolutionary France issued from 1789?	Paper money backed by Church land	Ration cards for bread and flour	Arrest warrants for suspects	Travel passes for citizens
 his_grim_nickname_revolutionary	Hard	What grim nickname did revolutionary France give to its new beheading machine?	The National Razor	The Iron Maiden	The People's Axe	The Red Scythe
-hx_marat_wanna	Expert	Revolutionary Jean-Paul Marat was murdered in 1793 while doing what?	Taking a bath	Giving a speech	Eating dinner	Riding in a carriage
-hx_bastylia_wiezniowie	Expert	How many prisoners were inside the Bastille when it was stormed in 1789?	Seven	About 70	About 700	None
-hx_gilotyna_1977	Expert	In which year did France carry out its last execution by guillotine?	1977	1871	1918	1946
-hx_kalendarz_rewolucyjny	Expert	The French Revolutionary calendar split months into 'weeks' of how many days?	10	5	6	8
-hy_varennes	Expert	Where were Louis XVI and Marie Antoinette caught trying to flee France in 1791?	Varennes	Versailles	Calais	Strasbourg
+his_revolutionary_leader_nicknamed	Hard	Which revolutionary leader was nicknamed 'the Incorruptible'?	Maximilien Robespierre	Georges Danton	Jean-Paul Marat	Napoleon Bonaparte
+his_happened_louis_xvi	Hard	What happened to Louis XVI's young son, Louis XVII?	He died in prison as a child	He became emperor	He escaped to America	He was crowned in 1815
+his_soft_red_cap	Hard	Which soft red cap became the symbol of liberty in the French Revolution?	The Phrygian cap	The beret	The tricorne	The kepi
+his_french_revolutionaries_tried	Hard	French revolutionaries tried decimal time. How many hours did their day have?	10	12	20	100
+his_became_bastille_stormed	Hard	What became of the Bastille after it was stormed in 1789?	It was torn down stone by stone	It became a museum of the Revolution	It was turned into army barracks	It became a prison for nobles
+his_france_revolutionary_anthem	Hard	Why is France's revolutionary anthem named after Marseille?	Volunteers from Marseille sang it in Paris	Its composer was born in Marseille	It was first printed in Marseille	Marseille paid for its first performance
+his_according_tradition_marie	Hard	According to tradition, what were Marie Antoinette's last words, after she trod on her executioner's foot?	'Pardon me, sir'	'Long live the king'	'I forgive you all'	'Look after my son'
+his_revolutionaries_royal_tombs	Hard	What did revolutionaries do to the royal tombs in the abbey of Saint-Denis in 1793?	Dug up the kings and dumped them in pits	Melted them down to make cannon	Sold them to British collectors	Sealed them up behind brick walls
+his_event_marked_start	Hard	Which event marked the start of 'Year I' in the French Revolutionary calendar?	The founding of the Republic in 1792	The storming of the Bastille in 1789	The execution of Louis XVI in 1793	The Tennis Court Oath of 1789
+hx_bastylia_wiezniowie	Hard	How many prisoners were inside the Bastille when it was stormed in 1789?	Seven	About 70	About 700	None
+hx_gilotyna_1977	Hard	In which year did France carry out its last execution by guillotine?	1977	1871	1918	1946
+hx_kalendarz_rewolucyjny	Hard	The French Revolutionary calendar split months into 'weeks' of how many days?	10	5	6	8
+hy_varennes	Hard	Where were Louis XVI and Marie Antoinette caught trying to flee France in 1791?	Varennes	Versailles	Calais	Strasbourg
+his_royalist_catholic_uprising	Hard	Which royalist and Catholic uprising in western France was savagely crushed in 1793-1796?	The War in the Vendee	The Fronde	The Camisard revolt	The Jacquerie
 his_coup_july_1794	Expert	What is the coup of July 1794 that brought down Robespierre called?	Thermidor	Brumaire	Fructidor	Vendemiaire
-his_royalist_catholic_uprising	Expert	Which royalist and Catholic uprising in western France was savagely crushed in 1793-1796?	The War in the Vendee	The Fronde	The Camisard revolt	The Jacquerie
 his_new_state_religion	Expert	Which new state religion did Robespierre celebrate with a huge festival in June 1794?	The cult of the Supreme Being	The cult of Reason	The Church of the Nation	The Temple of Liberty
 his_people_officially_executed	Expert	About how many people were officially executed during the Reign of Terror?	About 17,000	About 1,700	About 170,000	About 500
 his_person_put_death	Expert	Who was the first person put to death by the guillotine, in April 1792?	A common highway robber	A royalist nobleman	A Catholic bishop	A Swiss Guard officer
+his_swiss_city_carved	Expert	Which Swiss city's carved 'Dying Lion' honours the Swiss Guards killed defending the French king in 1792?	Lucerne	Geneva	Bern	Zurich
+his_writer_declaration_rights	Expert	Which writer of the 'Declaration of the Rights of Woman' was guillotined in 1793?	Olympe de Gouges	Charlotte Corday	Madame Roland	Germaine de Stael
+his_city_marseillaise_actually	Expert	In which city was 'La Marseillaise' actually written, in 1792?	Strasbourg	Marseille	Paris	Lyon
+his_royal_cousin_louis	Expert	Which royal cousin of Louis XVI called himself 'Philippe Egalite' and voted for the king's death?	The Duke of Orleans	The Count of Artois	The Prince of Conde	The Duke of Berry
+his_family_hereditary_executioners	Expert	Which family of hereditary executioners, from father to son, beheaded Louis XVI?	The Sansons	The Guillotins	The Capets	The Desmoulins

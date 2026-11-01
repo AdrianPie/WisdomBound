@@ -3,40 +3,31 @@ id	difficulty	prompt	correct	wrong1	wrong2	wrong3
 wh_reformacja_luter	Easy	Who started the Reformation by posting 95 theses?	Martin Luther	John Calvin	Ulrich Zwingli	Jan Hus
 his_feared_spanish_church	Easy	Which feared Spanish church court hunted down heretics from 1478?	The Spanish Inquisition	The Star Chamber	The Holy Office of Rome	The Royal Tribunal
 his_recent_invention_helped	Easy	Which recent invention helped Luther's ideas spread across Europe in weeks?	The printing press	The telescope	The postal service	The newspaper
-his_country_spanish_armada	Easy	Which country did the Spanish Armada of 1588 hope to win back for the Catholic faith?	England	France	The Netherlands	Sweden
 his_main_protestant_churches	Easy	The main Protestant churches of Denmark, Norway and Sweden are named after which reformer?	Martin Luther	John Calvin	Ulrich Zwingli	John Knox
-his_reformation_protestants_statues	Easy	During the Reformation, what did many Protestants do to the statues and paintings in their churches?	Smashed or removed them	Painted them gold	Sold them to Rome	Moved them to the altar
-his_martin_luther_famously	Easy	What did Martin Luther famously nail to a church door?	Ninety-five Theses	The Augsburg Creed	A papal bull	The Ten Commandments
-his_according_popular_legend_3	Easy	According to a popular legend, which Christmas custom did Martin Luther begin?	Lighting candles on a fir tree	Hanging up stockings	Sending Christmas cards	Kissing under mistletoe
-his_martin_luther_launched	Easy	What was Martin Luther when he launched the Reformation?	A monk and university teacher	A bishop of Saxony	A printer in Wittenberg	A knight at the emperor's court
 his_present_day_country_7	Easy	In which present-day country did Martin Luther start the Reformation?	Germany	Switzerland	Austria	The Netherlands
+his_given_reformers_protested	Easy	Which name was given to the reformers after they protested at the Diet of Speyer in 1529?	Protestants	Puritans	Lutherans	Calvinists
+his_english_protestants_wanted	Easy	Which English Protestants wanted to 'purify' the Church of all Catholic ways?	The Puritans	The Quakers	The Methodists	The Anglicans
 his_pardons_sins_sold	Medium	What were the pardons for sins, sold by the Church, that angered Martin Luther?	Indulgences	Tithes	Relics	Sacraments
 his_language_martin_luther	Medium	Into which language did Martin Luther translate the Bible?	German	English	French	Dutch
 his_french_theologian_led	Medium	Which French theologian led the Reformation in Geneva?	John Calvin	John Knox	Ulrich Zwingli	Thomas Cranmer
-his_given_reformers_protested	Medium	Which name was given to the reformers after they protested at the Diet of Speyer in 1529?	Protestants	Puritans	Lutherans	Calvinists
 his_catholic_order_ignatius	Medium	Which Catholic order did Ignatius of Loyola found in 1540?	The Jesuits	The Franciscans	The Dominicans	The Benedictines
-his_church_council_meeting	Medium	Which church council, meeting from 1545 to 1563, led the Catholic Counter-Reformation?	The Council of Trent	The Council of Nicaea	The Council of Constance	The First Vatican Council
 his_killing_thousands_french	Medium	What is the killing of thousands of French Protestants in Paris in 1572 called?	The St Bartholomew's Day Massacre	The Sicilian Vespers	The Night of the Long Knives	The Massacre of Glencoe
 his_protestants_france	Medium	What were the Protestants of France called?	Huguenots	Puritans	Anabaptists	Hussites
 his_thirty_years_war	Medium	Where did the Thirty Years' War kill perhaps a third of the population?	In the German lands	In England	In Spain	In Scandinavia
-his_preacher_led_protestant	Medium	Which preacher led the Protestant Reformation in Scotland?	John Knox	John Calvin	Thomas Cranmer	John Wesley
 his_great_revolt_german	Medium	What was the great revolt of German peasants in 1524-1525 called?	The Peasants' War	The Hussite War	The Thirty Years' War	The Schmalkaldic War
-his_english_protestants_wanted	Medium	Which English Protestants wanted to 'purify' the Church of all Catholic ways?	The Puritans	The Quakers	The Methodists	The Anglicans
 his_grand_style_art	Medium	Which grand style of art and architecture did the Catholic Church use to impress worshippers in the 1600s?	Baroque	Gothic	Romanesque	Art Nouveau
-his_queen_mother_france	Medium	Which queen mother of France is usually blamed for the St Bartholomew's Day Massacre?	Catherine de' Medici	Marie de' Medici	Mary, Queen of Scots	Anne of Austria
 his_christian_movement_founded	Medium	Which Christian movement, founded by George Fox, refuses to swear oaths or fight in wars?	The Quakers	The Puritans	The Methodists	The Baptists
-his_language_martin_luther_2	Medium	In which language did Martin Luther write his 95 Theses?	Latin	German	Greek	Hebrew
-his_henry_viii_won	Medium	Henry VIII won the title 'Defender of the Faith' from the Pope for a book attacking whom?	Martin Luther	John Calvin	Jan Hus	Ulrich Zwingli
 his_lord_chancellor_henry	Medium	Which Lord Chancellor of Henry VIII was beheaded in 1535 for refusing to accept the king as head of the Church?	Thomas More	Thomas Wolsey	Thomas Cromwell	Thomas Cranmer
-his_date_1517_luther	Medium	On which date in 1517 is Luther said to have posted his 95 Theses, now marked as Reformation Day?	31 October	1 November	25 December	6 January
-his_according_luther_made	Medium	According to Luther, what made him vow to become a monk in 1505?	Being nearly struck by lightning	His father's dying wish	A dream of Saint Paul	Surviving the plague
-his_emperor_presided_over	Medium	Which emperor presided over the assembly of 1521 where Luther refused to take back his writings?	Charles V	Maximilian I	Ferdinand I	Frederick III
 his_enemies_call_radical	Medium	Why did their enemies call the radical Protestants of the 1520s 'Anabaptists', or 're-baptisers'?	They baptised adults, not babies	They baptised people in rivers	They baptised people every year	They baptised animals and fields
-his_catholic_countries_switched	Medium	When Catholic countries switched to the Gregorian calendar in 1582, how many days were skipped?	Ten	Three	Seven	Thirteen
-his_martin_luther_1520	Medium	What did Martin Luther do in 1520 with the pope's bull threatening to excommunicate him?	Burned it in public	Nailed it to a church door	Sent it back unopened	Had it set to music
-hx_kalendarz_grzegorz	Hard	Which pope gave his name to the calendar most of the world uses today?	Gregory XIII	Julius II	Leo X	Sixtus V
-hx_wittenberga	Hard	On the door of a church in which German town did Luther post his 95 Theses?	Wittenberg	Worms	Leipzig	Erfurt
-his_assembly_1521_luther	Hard	At which assembly of 1521 did Luther refuse to take back his writings?	The Diet of Worms	The Council of Trent	The Diet of Augsburg	The Council of Constance
+his_reformation_protestants_statues	Medium	During the Reformation, what did many Protestants do to the statues and paintings in their churches?	Smashed or removed them	Painted them gold	Sold them to Rome	Moved them to the altar
+his_according_popular_legend_3	Medium	According to a popular legend, which Christmas custom did Martin Luther begin?	Lighting candles on a fir tree	Hanging up stockings	Sending Christmas cards	Kissing under mistletoe
+his_martin_luther_launched	Medium	What was Martin Luther when he launched the Reformation?	A monk and university teacher	A bishop of Saxony	A printer in Wittenberg	A knight at the emperor's court
+hx_kalendarz_grzegorz	Medium	Which pope gave his name to the calendar most of the world uses today?	Gregory XIII	Julius II	Leo X	Sixtus V
+hx_wittenberga	Medium	On the door of a church in which German town did Luther post his 95 Theses?	Wittenberg	Worms	Leipzig	Erfurt
+his_assembly_1521_luther	Medium	At which assembly of 1521 did Luther refuse to take back his writings?	The Diet of Worms	The Council of Trent	The Diet of Augsburg	The Council of Constance
+his_hymn_martin_luther	Medium	Which famous hymn did Martin Luther write?	'A Mighty Fortress Is Our God'	'O Come, All Ye Faithful'	'Silent Night, Holy Night'	'Amazing Grace'
+dpt_his_defenestracja	Medium	The Defenestration of Prague set off which war?	The Thirty Years' War	The Hussite Wars	The Seven Years' War	The War of the Roses
+hy_hus	Medium	Which Czech reformer was burned at the stake in 1415, a century before Luther?	Jan Hus	John Wycliffe	Jan Zizka	Thomas Muntzer
 his_swiss_reformer_led	Hard	Which Swiss reformer led the Reformation in Zurich?	Ulrich Zwingli	John Calvin	Martin Bucer	Philip Melanchthon
 his_french_king_protestant	Hard	Which French king, a Protestant who turned Catholic, is said to have joked 'Paris is well worth a Mass'?	Henry IV	Louis XIII	Francis I	Charles IX
 his_edict_1598_gave	Hard	Which edict of 1598 gave French Protestants the right to worship?	The Edict of Nantes	The Edict of Milan	The Edict of Worms	The Edict of Fontainebleau
@@ -44,28 +35,34 @@ his_swedish_king_lion	Hard	Which Swedish king, 'the Lion of the North', was kill
 his_catholic_general_thirty	Hard	Which Catholic general of the Thirty Years' War was murdered on his emperor's orders in 1634?	Albrecht von Wallenstein	Count Tilly	Prince Eugene	Count Pappenheim
 his_scholar_executed_1536	Hard	Which scholar was executed in 1536 for translating the Bible into English?	William Tyndale	John Wycliffe	Thomas More	Thomas Cranmer
 his_catholic_church_official	Hard	What was the Catholic Church's official list of banned books called?	The Index	The Canon	The Codex	The Register
-his_medici_pope_excommunicated	Hard	Which Medici pope excommunicated Martin Luther in 1521?	Leo X	Julius II	Clement VII	Paul III
 his_peace_1555_let	Hard	Which peace of 1555 let each German prince choose his lands' religion?	The Peace of Augsburg	The Peace of Westphalia	The Peace of Prague	The Peace of Utrecht
 his_long_dutch_revolt	Hard	Which long Dutch revolt against Spain, from 1568, created the Dutch Republic?	The Eighty Years' War	The Thirty Years' War	The Hundred Years' War	The Seven Years' War
 his_led_dutch_revolt	Hard	Who led the Dutch revolt against Spain until he was shot dead in 1584?	William the Silent	Maurice of Nassau	Count Egmont	The Duke of Alba
 his_castle_martin_luther	Hard	In which castle did Martin Luther hide while translating the New Testament?	The Wartburg	Neuschwanstein	Heidelberg Castle	Hohenzollern Castle
 his_martin_luther_wife	Hard	Who was Martin Luther's wife, a former nun?	Katharina von Bora	Anne Boleyn	Idelette de Bure	Catherine Parr
-his_hymn_martin_luther	Hard	Which famous hymn did Martin Luther write?	'A Mighty Fortress Is Our God'	'O Come, All Ye Faithful'	'Silent Night, Holy Night'	'Amazing Grace'
-his_dominican_friar_fundraising	Hard	Which Dominican friar's fundraising sermons of 1517 provoked the 95 Theses?	Johann Tetzel	Johann Eck	Thomas Muntzer	Philip Melanchthon
 his_archbishop_wrote_english	Hard	Which archbishop wrote the English Book of Common Prayer and was burned at the stake in 1556?	Thomas Cranmer	Thomas Becket	Thomas Wolsey	Thomas More
-his_protestant_city_germany	Hard	Which Protestant city in Germany was sacked with terrible slaughter in 1631?	Magdeburg	Dresden	Leipzig	Berlin
 his_spanish_decree_1492	Hard	Which Spanish decree of 1492 forced all Jews to convert or leave Spain?	The Alhambra Decree	The Edict of Toledo	The Pragmatic Sanction	The Granada Charter
 his_according_legend_martin	Hard	According to legend, what did Martin Luther hurl at the Devil who came to tempt him at his desk?	An inkpot	A Bible	A candlestick	His shoe
 his_according_story_officials	Hard	According to one story, how did the officials thrown from a Prague castle window in 1618 survive the fall?	They landed on a dung heap	They caught hold of a flagpole	They fell into the moat	They landed on a hay cart
 his_martin_luther_future	Hard	How did Martin Luther's future wife reportedly escape from her convent in 1523?	Hidden among herring barrels	Dressed as a soldier	Through a tunnel to the river	Lowered from a window in a basket
-his_spanish_doctor_theologian	Hard	Which Spanish doctor and theologian was burned at the stake in Calvin's Geneva in 1553?	Michael Servetus	Ignatius of Loyola	Francisco de Vitoria	Juan de Valdes
 his_side_martin_luther	Hard	Which side did Martin Luther take in the great peasant revolt of 1525?	The princes'	The peasants'	Neither: he kept silent	The emperor's against both
-his_westfalski	Expert	In which year did the Peace of Westphalia end the Thirty Years' War?	1648	1618	1659	1667
-dpt_his_defenestracja	Expert	The Defenestration of Prague set off which war?	The Thirty Years' War	The Hussite Wars	The Seven Years' War	The War of the Roses
-hy_hus	Expert	Which Czech reformer was burned at the stake in 1415, a century before Luther?	Jan Hus	John Wycliffe	Jan Zizka	Thomas Muntzer
+his_church_council_meeting	Hard	Which church council, meeting from 1545 to 1563, led the Catholic Counter-Reformation?	The Council of Trent	The Council of Nicaea	The Council of Constance	The First Vatican Council
+his_preacher_led_protestant	Hard	Which preacher led the Protestant Reformation in Scotland?	John Knox	John Calvin	Thomas Cranmer	John Wesley
+his_queen_mother_france	Hard	Which queen mother of France is usually blamed for the St Bartholomew's Day Massacre?	Catherine de' Medici	Marie de' Medici	Mary, Queen of Scots	Anne of Austria
+his_language_martin_luther_2	Hard	In which language did Martin Luther write his 95 Theses?	Latin	German	Greek	Hebrew
+his_henry_viii_won	Hard	Henry VIII won the title 'Defender of the Faith' from the Pope for a book attacking whom?	Martin Luther	John Calvin	Jan Hus	Ulrich Zwingli
+his_date_1517_luther	Hard	On which date in 1517 is Luther said to have posted his 95 Theses, now marked as Reformation Day?	31 October	1 November	25 December	6 January
+his_according_luther_made	Hard	According to Luther, what made him vow to become a monk in 1505?	Being nearly struck by lightning	His father's dying wish	A dream of Saint Paul	Surviving the plague
+his_emperor_presided_over	Hard	Which emperor presided over the assembly of 1521 where Luther refused to take back his writings?	Charles V	Maximilian I	Ferdinand I	Frederick III
+his_catholic_countries_switched	Hard	When Catholic countries switched to the Gregorian calendar in 1582, how many days were skipped?	Ten	Three	Seven	Thirteen
+his_martin_luther_1520	Hard	What did Martin Luther do in 1520 with the pope's bull threatening to excommunicate him?	Burned it in public	Nailed it to a church door	Sent it back unopened	Had it set to music
+his_spanish_mystic_nun	Hard	Which Spanish mystic nun founded the strict 'Discalced' Carmelites in the 1560s?	Teresa of Avila	Catherine of Siena	Clare of Assisi	Rose of Lima
 his_radical_protestant_sect	Expert	Which radical Protestant sect seized the German city of Munster in 1534?	The Anabaptists	The Calvinists	The Hussites	The Quakers
 his_protestant_admiral_victim	Expert	Which Protestant admiral was the first famous victim of the St Bartholomew's Day Massacre?	Gaspard de Coligny	Henry of Navarre	Louis de Conde	Francis Drake
 his_still_hangs_tower	Expert	What still hangs from the tower of St Lambert's Church in Munster, nearly 500 years on?	Three iron cages for executed rebels	A bell cast from captured cannon	The sword of a prince-bishop	A chain from the old city gate
-his_spanish_mystic_nun	Expert	Which Spanish mystic nun founded the strict 'Discalced' Carmelites in the 1560s?	Teresa of Avila	Catherine of Siena	Clare of Assisi	Rose of Lima
 his_group_men_zurich	Expert	How did a group of men in Zurich defy the Church in Lent 1522, launching the Swiss Reformation?	They ate sausages in public	They burned a papal letter	They rang the bells at midnight	They married their housekeepers
 his_jan_hus_surname	Expert	Jan Hus's surname means 'goose' in Czech. Which bird did Luther's followers later say Hus had foretold would rise after him?	A swan	An eagle	A dove	A phoenix
+his_medici_pope_excommunicated	Expert	Which Medici pope excommunicated Martin Luther in 1521?	Leo X	Julius II	Clement VII	Paul III
+his_dominican_friar_fundraising	Expert	Which Dominican friar's fundraising sermons of 1517 provoked the 95 Theses?	Johann Tetzel	Johann Eck	Thomas Muntzer	Philip Melanchthon
+his_protestant_city_germany	Expert	Which Protestant city in Germany was sacked with terrible slaughter in 1631?	Magdeburg	Dresden	Leipzig	Berlin
+his_spanish_doctor_theologian	Expert	Which Spanish doctor and theologian was burned at the stake in Calvin's Geneva in 1553?	Michael Servetus	Ignatius of Loyola	Francisco de Vitoria	Juan de Valdes

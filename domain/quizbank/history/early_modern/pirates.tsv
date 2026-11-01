@@ -2,7 +2,6 @@
 # statkach.
 id	difficulty	prompt	correct	wrong1	wrong2	wrong3
 hx_jolly_roger	Easy	What is the traditional pirate flag with a skull and crossbones called?	The Jolly Roger	The Black Bess	The Salty Dog	The Grim Rover
-hx_pirat_czarnobrody	Easy	Which pirate captain was known as 'Blackbeard'?	Edward Teach	William Kidd	Henry Morgan	Francis Drake
 his_spanish_silver_coins	Easy	What were the Spanish silver coins that pirates prized often called?	Pieces of eight	Doubloons of four	Silver crowns	Gold ducats
 his_sea_main_hunting	Easy	Which sea was the main hunting ground of pirates in the 'Golden Age of Piracy'?	The Caribbean	The Baltic	The Black Sea	The Red Sea
 his_big_spanish_ships	Easy	What were the big Spanish ships that carried silver home from the Americas called?	Galleons	Longships	Junks	Triremes
@@ -10,38 +9,29 @@ his_crow_nest_sailing	Easy	What is the 'crow's nest' on a sailing ship?	A lookou
 his_stolen_treasure_pirates	Easy	What was the stolen treasure of pirates often called?	Booty	Bounty	Bonus	Bulk
 his_pirate_cutlass	Easy	What was a pirate's 'cutlass'?	A short curved sword	A small pistol	A leather hat	A sailor's knot
 his_captured_pirates_usually	Easy	How were captured pirates usually executed in the early 1700s?	By hanging	By beheading	By firing squad	By drowning
-his_ships_country_favourite	Easy	Ships of which country were the favourite prey of the Caribbean buccaneers?	Spain	England	Sweden	Portugal
-his_pirate_john_rackham	Easy	Why was the pirate John Rackham nicknamed 'Calico Jack'?	For his clothes of bright cotton	For his pet spotted cat	For his patched sails	For his tattooed arms
 his_real_pirates_golden	Easy	Did real pirates of the Golden Age often bury their treasure?	Almost never: they spent it	Yes, nearly every crew did	Yes, always on desert islands	Yes, marked on secret maps
-his_jamaican_port_pirate	Medium	Which Jamaican port, a pirate haven, was called 'the wickedest city on Earth' before an earthquake in 1692?	Port Royal	Kingston	Tortuga	Nassau
+his_marooning_sailor_mean	Easy	What did 'marooning' a sailor mean?	Leaving him on a deserted island	Tying him to the mast	Throwing him overboard	Locking him in the hold
+his_sailors_mean_davy	Easy	What did sailors mean by 'Davy Jones's locker'?	The bottom of the sea	The captain's treasure chest	The ship's prison	A tavern in port
 his_scottish_captain_hanged	Medium	Which Scottish captain, hanged in London in 1701, was rumoured to have buried a great treasure?	William Kidd	Henry Morgan	Edward Low	Charles Vane
 his_welsh_buccaneer_sacked	Medium	Which Welsh buccaneer sacked Panama in 1671 and was later knighted and made deputy governor of Jamaica?	Henry Morgan	William Kidd	Bartholomew Roberts	Howell Davis
 his_two_women_sailed	Medium	Which two women sailed as pirates with 'Calico Jack' Rackham?	Anne Bonny and Mary Read	Grace O'Malley and Mary Read	Anne Bonny and Ching Shih	Jacquotte Delahaye and Anne Bonny
 his_sea_captains_government	Medium	What were sea captains with a government licence to attack enemy ships called?	Privateers	Buccaneers	Corsairs	Freebooters
 his_north_african_pirates	Medium	What were the North African pirates who raided Europe's coasts for slaves called?	Barbary corsairs	Vikings	Moriscos	Buccaneers
 his_blackbeard_make_himself	Medium	How did Blackbeard make himself look terrifying in battle?	He tucked smoking fuses into his beard	He painted his face red	He wore a skull as a helmet	He sharpened his teeth
-his_blackbeard_flagship	Medium	What was the name of Blackbeard's flagship?	Queen Anne's Revenge	The Black Pearl	The Jolly Roger	The Golden Hind
 his_common_walking_plank	Medium	How common was 'walking the plank' among real pirates?	It was very rare	It was the usual punishment	It was only for captains	It happened on every ship
-his_marooning_sailor_mean	Medium	What did 'marooning' a sailor mean?	Leaving him on a deserted island	Tying him to the mast	Throwing him overboard	Locking him in the hold
-his_remote_pacific_island	Medium	On which remote Pacific island did the Bounty mutineers hide?	Pitcairn Island	Easter Island	Tahiti	Norfolk Island
 his_english_french_dutch	Medium	What were the English, French and Dutch pirates of the Caribbean in the 1600s called?	Buccaneers	Vikings	Corsairs	Cossacks
 his_spanish_doubloons	Medium	What were Spanish 'doubloons'?	Gold coins	Silver bars	Cannon balls	Rum barrels
 his_rocky_island_off	Medium	Which rocky island off Haiti was a famous base of the buccaneers?	Tortuga	Jamaica	Barbados	Bermuda
-his_sailors_mean_davy	Medium	What did sailors mean by 'Davy Jones's locker'?	The bottom of the sea	The captain's treasure chest	The ship's prison	A tavern in port
 his_grog_drink_sailors	Medium	What was 'grog', the drink of sailors?	Rum mixed with water	Beer with honey	Wine with pepper	Hot milk with gin
-his_english_privateers_elizabeth	Medium	What were the English privateers of Elizabeth I's reign, such as Drake and Hawkins, nicknamed?	The Sea Dogs	The Sea Wolves	The Queen's Sharks	The Iron Sailors
 his_cruel_punishment_keelhauling	Medium	What was the cruel punishment of 'keelhauling'?	Dragging a sailor under the ship's hull	Hanging him from the mast	Locking him in a barrel	Flogging him with a rope
 his_under_pirate_codes	Medium	Under many pirate codes, what did a pirate receive if he lost an arm or leg in battle?	Extra money in compensation	A ship of his own	A double share of rum	Nothing at all
-his_pirates_anne_bonny	Medium	How did the pirates Anne Bonny and Mary Read escape the gallows in 1720?	They were both pregnant	They bribed the judge	They broke out of jail	The king pardoned them
-his_pirate_said_preferred	Medium	Which famous pirate is said to have preferred tea to rum and banned gambling aboard his ships?	Bartholomew Roberts	Blackbeard	Captain Kidd	Calico Jack
-his_done_captain_kidd	Medium	What was done with Captain Kidd's body after he was hanged in 1701?	It hung in a cage by the Thames	It was buried at sea	It was sent to New York	It was given to anatomists
-his_pirates_usually_mean	Medium	What did pirates usually mean by flying a plain red flag instead of a black one?	No mercy would be shown	They wished to surrender	Plague was on board	They wanted to trade
 his_pirate_crews_choose	Medium	How did most pirate crews choose their captain?	By a vote of the crew	The ship's owner chose him	By fighting a duel	The oldest sailor took command
-his_spanish_main_pirates	Medium	What was the 'Spanish Main' that pirates prowled?	Spain's mainland coast around the Caribbean	The main sea route from Spain to Manila	The chief Spanish port in the Caribbean	The flagship of the Spanish treasure fleet
 his_sailing_warships_powder	Medium	On sailing warships, what were 'powder monkeys'?	Boys who carried gunpowder to the guns	Monkeys kept to hunt rats below decks	Sailors who cleaned the cannon barrels	Men who loaded the muskets of marines
-his_big_island_off	Medium	Which big island off East Africa was a favourite pirate base around 1700, close to the Indian Ocean treasure routes?	Madagascar	Zanzibar	Sri Lanka	Socotra
-hx_drake	Hard	Which English sailor, called a pirate by the Spanish, sailed around the world in 1577-1580?	Francis Drake	Walter Raleigh	Henry Morgan	John Hawkins
-hx_bounty	Hard	The crew of which British ship mutinied against Captain Bligh in 1789?	HMS Bounty	HMS Beagle	HMS Endeavour	HMS Resolution
+hx_pirat_czarnobrody	Medium	Which pirate captain was known as 'Blackbeard'?	Edward Teach	William Kidd	Henry Morgan	Francis Drake
+his_ships_country_favourite	Medium	Ships of which country were the favourite prey of the Caribbean buccaneers?	Spain	England	Sweden	Portugal
+his_pirate_john_rackham	Medium	Why was the pirate John Rackham nicknamed 'Calico Jack'?	For his clothes of bright cotton	For his pet spotted cat	For his patched sails	For his tattooed arms
+hx_drake	Medium	Which English sailor, called a pirate by the Spanish, sailed around the world in 1577-1580?	Francis Drake	Walter Raleigh	Henry Morgan	John Hawkins
+hx_bounty	Medium	The crew of which British ship mutinied against Captain Bligh in 1789?	HMS Bounty	HMS Beagle	HMS Endeavour	HMS Resolution
 his_welsh_pirate_black	Hard	Which Welsh pirate, 'Black Bart', captured over 400 ships in the early 1700s?	Bartholomew Roberts	Henry Morgan	Edward Teach	Stede Bonnet
 his_letter_marque	Hard	What was a 'letter of marque'?	A licence to raid enemy ships	A pirate's treasure map	A ransom note	A death sentence
 his_town_bahamas_became	Hard	Which town in the Bahamas became a 'pirate republic' in the early 1700s?	Nassau	Havana	Port Royal	Kingston
@@ -51,22 +41,31 @@ his_scottish_sailor_marooned	Hard	Which Scottish sailor, marooned on a Pacific i
 his_chinese_pirate_queen	Hard	Which Chinese pirate queen commanded a fleet of tens of thousands in the early 1800s?	Ching Shih	Cheng I	Lai Choi San	Koxinga
 his_written_rules_pirate	Hard	What were the written rules that a pirate crew swore to obey called?	Articles	Commandments	Statutes	Charters
 his_irish_pirate_queen	Hard	Which Irish pirate queen met Elizabeth I in 1593?	Grace O'Malley	Anne Bonny	Mary Read	Maeve
-his_former_privateer_became	Hard	Which former privateer became governor of the Bahamas and drove out the pirates in 1718?	Woodes Rogers	Henry Morgan	Francis Drake	William Dampier
 his_pirate_captain_ship	Hard	Which pirate captain's ship, the Whydah, sank off Cape Cod in 1717?	Black Sam Bellamy	Blackbeard	Captain Kidd	Calico Jack
 his_war_young_united	Hard	Which war did the young United States fight against the North African pirate states in 1801-1805?	The First Barbary War	The Quasi-War	The War of 1812	The Mexican War
 his_english_buccaneer_writer	Hard	Which English buccaneer and writer was the first person to sail around the world three times?	William Dampier	Francis Drake	George Anson	Thomas Cavendish
 his_english_pirate_seized	Hard	Which English pirate seized a treasure ship of the Mughal emperor in 1695 and then vanished?	Henry Every	William Kidd	Thomas Tew	Edward Low
-his_american_port_blackbeard	Hard	Which American port did Blackbeard blockade in 1718, asking only for a chest of medicine as ransom?	Charleston	Boston	New York	Philadelphia
 his_stede_bonnet_gentleman	Hard	Why was Stede Bonnet called 'the Gentleman Pirate'?	A rich planter, he bought his ship	He never harmed a prisoner	He was a former naval officer	He was the son of an earl
-his_french_buccaneer_said	Hard	Which French buccaneer is said to have cut out a prisoner's heart and gnawed on it to scare others into talking?	Francois l'Olonnais	Jean Lafitte	Michel de Grammont	Pierre le Grand
-his_royal_navy_lieutenant	Hard	Which Royal Navy lieutenant killed Blackbeard in a fierce fight in 1718?	Robert Maynard	Edward Vernon	Chaloner Ogle	George Anson
-his_mutiny_bounty_roughly	Expert	After the mutiny on the Bounty, roughly how far did Captain Bligh sail in an open boat?	About 6,700 km	About 670 km	About 67 km	About 67,000 km
+his_jamaican_port_pirate	Hard	Which Jamaican port, a pirate haven, was called 'the wickedest city on Earth' before an earthquake in 1692?	Port Royal	Kingston	Tortuga	Nassau
+his_blackbeard_flagship	Hard	What was the name of Blackbeard's flagship?	Queen Anne's Revenge	The Black Pearl	The Jolly Roger	The Golden Hind
+his_remote_pacific_island	Hard	On which remote Pacific island did the Bounty mutineers hide?	Pitcairn Island	Easter Island	Tahiti	Norfolk Island
+his_english_privateers_elizabeth	Hard	What were the English privateers of Elizabeth I's reign, such as Drake and Hawkins, nicknamed?	The Sea Dogs	The Sea Wolves	The Queen's Sharks	The Iron Sailors
+his_pirates_anne_bonny	Hard	How did the pirates Anne Bonny and Mary Read escape the gallows in 1720?	They were both pregnant	They bribed the judge	They broke out of jail	The king pardoned them
+his_done_captain_kidd	Hard	What was done with Captain Kidd's body after he was hanged in 1701?	It hung in a cage by the Thames	It was buried at sea	It was sent to New York	It was given to anatomists
+his_pirates_usually_mean	Hard	What did pirates usually mean by flying a plain red flag instead of a black one?	No mercy would be shown	They wished to surrender	Plague was on board	They wanted to trade
+his_spanish_main_pirates	Hard	What was the 'Spanish Main' that pirates prowled?	Spain's mainland coast around the Caribbean	The main sea route from Spain to Manila	The chief Spanish port in the Caribbean	The flagship of the Spanish treasure fleet
+his_big_island_off	Hard	Which big island off East Africa was a favourite pirate base around 1700, close to the Indian Ocean treasure routes?	Madagascar	Zanzibar	Sri Lanka	Socotra
+his_mutiny_bounty_roughly	Hard	After the mutiny on the Bounty, roughly how far did Captain Bligh sail in an open boat?	About 6,700 km	About 670 km	About 67 km	About 67,000 km
+his_done_blackbeard_head	Hard	What was done with Blackbeard's head after he was killed in 1718?	Hung from the bowsprit of a sloop	Buried at sea with his body	Sent to London in a box of salt	Burned on the beach at Ocracoke
+his_marooned_pirate_usually	Hard	What was a 'marooned' pirate usually left with on his desert island?	A pistol and a little water	A Bible and a knife	A barrel of rum	A fishing net and hook
 his_irish_village_raided	Expert	Which Irish village was raided by Barbary pirates in 1631, its people carried off as slaves?	Baltimore	Kinsale	Galway	Wexford
 his_naval_officer_burned	Expert	Which US naval officer burned the captured frigate Philadelphia in Tripoli harbour in 1804?	Stephen Decatur	John Paul Jones	Oliver Hazard Perry	David Porter
 his_london_execution_dock	Expert	At London's Execution Dock, how long were hanged pirates' bodies left?	Until three tides washed over them	Until sunset on the same day	For exactly forty days	Until the next pirate was hanged
 his_word_buccaneer_comes	Expert	The word 'buccaneer' comes from a French word for what?	A frame for smoking meat	A short curved sword	A barrel of rum	A small fast boat
-his_done_blackbeard_head	Expert	What was done with Blackbeard's head after he was killed in 1718?	Hung from the bowsprit of a sloop	Buried at sea with his body	Sent to London in a box of salt	Burned on the beach at Ocracoke
 his_under_bartholomew_roberts	Expert	Under Bartholomew Roberts' pirate articles, by what time did lights and candles have to be put out?	Eight o'clock at night	Six o'clock at night	Ten o'clock at night	Midnight
 his_pirate_once_blackbeard	Expert	Which pirate, once Blackbeard's mentor, took a royal pardon in 1718 and became a pirate hunter?	Benjamin Hornigold	Charles Vane	Stede Bonnet	Edward England
-his_became_pirate_henry	Expert	What became of the pirate Henry Every after his record haul of 1695?	He vanished and was never caught	He was hanged at Execution Dock	He became governor of Jamaica	He was killed by his own crew
-his_marooned_pirate_usually	Expert	What was a 'marooned' pirate usually left with on his desert island?	A pistol and a little water	A Bible and a knife	A barrel of rum	A fishing net and hook
+his_pirate_said_preferred	Expert	Which famous pirate is said to have preferred tea to rum and banned gambling aboard his ships?	Bartholomew Roberts	Blackbeard	Captain Kidd	Calico Jack
+his_former_privateer_became	Expert	Which former privateer became governor of the Bahamas and drove out the pirates in 1718?	Woodes Rogers	Henry Morgan	Francis Drake	William Dampier
+his_american_port_blackbeard	Expert	Which American port did Blackbeard blockade in 1718, asking only for a chest of medicine as ransom?	Charleston	Boston	New York	Philadelphia
+his_french_buccaneer_said	Expert	Which French buccaneer is said to have cut out a prisoner's heart and gnawed on it to scare others into talking?	Francois l'Olonnais	Jean Lafitte	Michel de Grammont	Pierre le Grand
+his_royal_navy_lieutenant	Expert	Which Royal Navy lieutenant killed Blackbeard in a fierce fight in 1718?	Robert Maynard	Edward Vernon	Chaloner Ogle	George Anson
