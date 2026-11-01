@@ -3,69 +3,67 @@
 id	difficulty	prompt	correct	wrong1	wrong2	wrong3
 his_italian_city_birthplace	Easy	Which Italian city is the birthplace of pizza?	Naples	Rome	Milan	Venice
 his_humanitarian_movement_uses	Easy	Which humanitarian movement uses a red crescent in many Muslim countries?	The Red Cross	Doctors Without Borders	UNICEF	Oxfam
-his_german_state_led	Easy	Which German state led the unification of Germany?	Prussia	Bavaria	Saxony	Austria
-his_capital_rebuilt_grand	Easy	Which capital was rebuilt with grand boulevards by Baron Haussmann in the 1850s and 1860s?	Paris	Vienna	London	Berlin
 his_munich_festival_began	Easy	Which Munich festival began in 1810 as a celebration of a royal wedding?	Oktoberfest	Fasching	Christkindlmarkt	Walpurgis Night
 his_city_became_capital_3	Easy	Which city became the capital of the new German Empire in 1871?	Berlin	Munich	Frankfurt	Hamburg
 his_paris_cabaret_red	Easy	Which Paris cabaret with a red windmill on its roof opened in 1889?	The Moulin Rouge	The Folies Bergere	The Lido	The Chat Noir
-his_christmas_carol_sung	Easy	Which Christmas carol was first sung in a village church in Austria in 1818?	'Silent Night'	'O Holy Night'	'Jingle Bells'	'O Tannenbaum'
-his_war_florence_nightingale	Easy	In which war did Florence Nightingale make her name nursing wounded soldiers?	The Crimean War	The Franco-Prussian War	The Napoleonic Wars	The Boer War
-his_red_cross_emblem	Easy	Why is the Red Cross emblem a red cross on a white background?	It reverses the Swiss flag	It copies the flag of England	It was the badge of crusaders	It was chosen by the pope
+trv_manifest	Easy	Who wrote 'The Communist Manifesto'?	Karl Marx and Friedrich Engels	Vladimir Lenin, while in exile	Leon Trotsky and his circle	Rosa Luxemburg and her party
+hx_bismarck	Easy	Which 'Iron Chancellor' united Germany in 1871?	Otto von Bismarck	Kaiser Wilhelm II	Frederick the Great	Klemens von Metternich
+his_war_1866_prussia	Easy	Which war of 1866 did Prussia win against Austria in just seven weeks?	The Austro-Prussian War	The Franco-Prussian War	The Crimean War	The Seven Years' War
 his4_wojna_krymska_strony	Medium	In the Crimean War, Russia fought a coalition led by which two powers?	Britain and France	Prussia and Austria	Spain and Portugal	Sweden and Denmark
-trv_manifest	Medium	Who wrote 'The Communist Manifesto'?	Karl Marx and Friedrich Engels	Vladimir Lenin, while in exile	Leon Trotsky and his circle	Rosa Luxemburg and her party
-hx_bismarck	Medium	Which 'Iron Chancellor' united Germany in 1871?	Otto von Bismarck	Kaiser Wilhelm II	Frederick the Great	Klemens von Metternich
 hx_garibaldi	Medium	Which general and his 'Redshirts' fought to unite Italy?	Giuseppe Garibaldi	Benito Mussolini	Camillo Cavour	Victor Emmanuel II
 hy_sisi	Medium	Which Austrian empress was known by the nickname 'Sisi'?	Elisabeth	Maria Theresa	Marie Louise	Zita
 his_classic_pizza_margherita	Medium	The classic pizza Margherita is said to be named after whom?	An Italian queen	A Naples baker's wife	A famous opera singer	A saint from Naples
-his_dynasty_ruled_prussia	Medium	Which dynasty ruled Prussia and, from 1871, the German Empire?	Hohenzollern	Habsburg	Wittelsbach	Wettin
-his_year_revolutions_break	Medium	In which year did revolutions break out across Europe, the 'Springtime of Nations'?	1848	1789	1815	1871
-his_country_proclaimed_united	Medium	Which country was proclaimed a united kingdom under Victor Emmanuel II in 1861?	Italy	Germany	Belgium	Greece
 his_war_1870_1871	Medium	Which war of 1870-1871 led to the founding of the German Empire?	The Franco-Prussian War	The Crimean War	The Austro-Prussian War	The Napoleonic Wars
-his_palace_german_empire	Medium	In which palace was the German Empire proclaimed in January 1871?	Versailles	Sanssouci	Schonbrunn	The Hofburg
 his_revolutionary_government_ran	Medium	What was the revolutionary government that ran Paris for two months in 1871 called?	The Paris Commune	The Directory	The Jacobin Club	The Paris Soviet
-his_english_poet_died	Medium	Which English poet died in 1824 while helping the Greeks fight for independence?	Lord Byron	Percy Shelley	John Keats	William Wordsworth
 his_country_broke_away	Medium	Which country broke away from the Netherlands in 1830?	Belgium	Luxembourg	Denmark	Switzerland
 his_banking_family_branches	Medium	Which banking family had branches in London, Paris, Vienna, Naples and Frankfurt?	The Rothschilds	The Medici	The Fuggers	The Barings
 his_dual_monarchy_created	Medium	Which 'dual monarchy' was created by a compromise in 1867?	Austria-Hungary	Sweden-Norway	Denmark-Iceland	Spain-Portugal
 his_austrian_emperor_reigned	Medium	Which Austrian emperor reigned for 68 years, from 1848 until 1916?	Franz Joseph I	Ferdinand I	Charles I	Joseph II
 his_city_became_capital_2	Medium	Which city became the capital of united Italy in 1871?	Rome	Turin	Florence	Milan
 his_country_norway_peacefully	Medium	From which country did Norway peacefully break away in 1905?	Sweden	Denmark	Russia	Finland
-his_war_1866_prussia	Medium	Which war of 1866 did Prussia win against Austria in just seven weeks?	The Austro-Prussian War	The Franco-Prussian War	The Crimean War	The Seven Years' War
-his_wife_emperor_franz	Medium	How was the wife of Emperor Franz Joseph killed in Geneva in 1898?	She was stabbed by an anarchist	She fell from a horse	She drowned in a lake	She died of plague
 his_woolly_head_covering	Medium	Which woolly head covering is named after a Black Sea town where British troops fought in 1854?	The balaclava	The beanie	The bobble hat	The fez
-his_movement_italian_unification	Medium	What was the movement for Italian unification called, from the Italian for 'resurgence'?	The Risorgimento	The Rinascimento	The Carbonari	The Irredenta
-his_castor_pollux_killed	Medium	What were Castor and Pollux, killed and eaten during the Prussian siege of Paris in 1870?	The zoo's two elephants	Two famous racehorses	Two giant river carp	The Emperor's carriage horses
-his_new_country_chose	Medium	Which new country chose Queen Victoria's uncle Leopold as its first king, in 1831?	Belgium	Greece	Bulgaria	Norway
 his_french_army_officer	Medium	Which French army officer's false conviction for spying in 1894 split France for a decade?	Alfred Dreyfus	Georges Boulanger	Philippe Petain	Hubert Lyautey
-his_piano_concerts_1840s	Medium	Whose piano concerts of the 1840s caused fan frenzies that Heinrich Heine called a 'mania'?	Franz Liszt	Frederic Chopin	Felix Mendelssohn	Robert Schumann
+his_german_state_led	Medium	Which German state led the unification of Germany?	Prussia	Bavaria	Saxony	Austria
+his_capital_rebuilt_grand	Medium	Which capital was rebuilt with grand boulevards by Baron Haussmann in the 1850s and 1860s?	Paris	Vienna	London	Berlin
+his_christmas_carol_sung	Medium	Which Christmas carol was first sung in a village church in Austria in 1818?	'Silent Night'	'O Holy Night'	'Jingle Bells'	'O Tannenbaum'
+his_war_florence_nightingale	Medium	In which war did Florence Nightingale make her name nursing wounded soldiers?	The Crimean War	The Franco-Prussian War	The Napoleonic Wars	The Boer War
+his_red_cross_emblem	Medium	Why is the Red Cross emblem a red cross on a white background?	It reverses the Swiss flag	It copies the flag of England	It was the badge of crusaders	It was chosen by the pope
+his_french_emperor_napoleon	Medium	Which French emperor was Napoleon Bonaparte's nephew?	Napoleon III	Napoleon II	Louis XVIII	Louis-Philippe
+his_officers_rising_against	Medium	What was the officers' rising against the new tsar in St Petersburg in December 1825 called?	The Decembrist revolt	The Winter rising	The Nevsky mutiny	The Narodnik rebellion
+his_became_king_united_2	Medium	Who became the first king of a united Italy, in 1861?	Victor Emmanuel II	Umberto I	Charles Albert	Victor Emmanuel III
+his_writer_accused_french	Medium	Which writer accused the French army over the Dreyfus affair in the open letter 'J'accuse...!'?	Emile Zola	Victor Hugo	Anatole France	Gustave Flaubert
+his_wave_european_revolutions	Medium	What was the wave of European revolutions of 1848 nicknamed?	The Springtime of Nations	The Arab Spring	The Velvet Revolutions	The Glorious Revolution
 org_kardigan_wojna	Hard	The cardigan is named after a commander who fought in which war?	The Crimean War	The Boer War	The Napoleonic Wars	The American Civil War
-his_french_emperor_napoleon	Hard	Which French emperor was Napoleon Bonaparte's nephew?	Napoleon III	Napoleon II	Louis XVIII	Louis-Philippe
 his_russian_tsar_freed	Hard	Which Russian tsar freed the serfs in 1861?	Alexander II	Nicholas II	Alexander III	Nicholas I
 his_prime_minister_piedmont	Hard	Which prime minister of Piedmont was the master planner of Italian unification?	Count Cavour	Giuseppe Mazzini	Giuseppe Garibaldi	Victor Emmanuel II
 his_austrian_statesman_dominated	Hard	Which Austrian statesman dominated European politics in the decades after Napoleon?	Klemens von Metternich	Otto von Bismarck	Franz Joseph	Count Cavour
-his_led_hungary_revolution	Hard	Who led Hungary's revolution against Austrian rule in 1848?	Lajos Kossuth	Ferenc Deak	Sandor Petofi	Istvan Szechenyi
 his_swiss_businessman_founded	Hard	Which Swiss businessman founded the Red Cross after seeing the Battle of Solferino?	Henri Dunant	Alfred Nobel	Jean Calvin	Gustave Moynier
 his_italian_revolutionary_founded	Hard	Which Italian revolutionary founded the movement 'Young Italy' in 1831?	Giuseppe Mazzini	Count Cavour	Giuseppe Garibaldi	Gabriele D'Annunzio
 his_russian_tsar_killed	Hard	Which Russian tsar was killed by a revolutionary's bomb in Saint Petersburg in 1881?	Alexander II	Nicholas I	Alexander III	Nicholas II
 his_year_crimean_war	Hard	In which year did the Crimean War begin?	1853	1815	1848	1870
 his_french_king_1830	Hard	Which French king of 1830-1848 was called 'the Citizen King'?	Louis Philippe	Charles X	Louis XVIII	Napoleon III
 his_revolution_1830_drove	Hard	Which revolution of 1830 drove King Charles X out of France?	The July Revolution	The February Revolution	The Paris Commune	The Revolution of the Barricades
-his_officers_rising_against	Hard	What was the officers' rising against the new tsar in St Petersburg in December 1825 called?	The Decembrist revolt	The Winter rising	The Nevsky mutiny	The Narodnik rebellion
 his_italian_kingdom_ruled	Hard	Which Italian kingdom, ruled from Turin, led the unification of Italy?	Piedmont-Sardinia	The Kingdom of Naples	Tuscany	The Papal States
-his_pope_himself_prisoner	Hard	Which pope called himself 'the prisoner of the Vatican' after losing Rome in 1870?	Pius IX	Leo XIII	Gregory XVI	Pius X
 his_meeting_1878_chaired	Hard	Which meeting of 1878, chaired by Bismarck, redrew the map of the Balkans?	The Congress of Berlin	The Congress of Vienna	The Treaty of Paris	The London Conference
 his_french_republic_born	Hard	Which French republic was born in the revolution of 1848?	The Second Republic	The First Republic	The Third Republic	The Fourth Republic
 his_country_modern_king	Hard	Which country's first modern king, in 1832, was a teenage prince from Bavaria?	Greece	Belgium	Bulgaria	Romania
 his_italian_patriots_1850s	Hard	Why did Italian patriots of the 1850s scrawl 'Viva VERDI!' on walls?	It spelled a cheer for their future king	Verdi had been jailed by Austria	Verdi led a volunteer army	It marked secret weapon stores
-his_tsar_nicknamed_gendarme	Hard	Which tsar, nicknamed 'the Gendarme of Europe', sent troops to crush Hungary's revolution in 1849?	Nicholas I	Alexander I	Alexander II	Alexander III
 his_russian_writer_led	Hard	Which Russian writer was led out to be shot in 1849, only to be spared at the last moment?	Fyodor Dostoevsky	Leo Tolstoy	Ivan Turgenev	Alexander Pushkin
-his_wave_european_revolutions	Hard	What was the wave of European revolutions of 1848 nicknamed?	The Springtime of Nations	The Arab Spring	The Velvet Revolutions	The Glorious Revolution
-his_became_king_united_2	Hard	Who became the first king of a united Italy, in 1861?	Victor Emmanuel II	Umberto I	Charles Albert	Victor Emmanuel III
-his_writer_accused_french	Hard	Which writer accused the French army over the Dreyfus affair in the open letter 'J'accuse...!'?	Emile Zola	Victor Hugo	Anatole France	Gustave Flaubert
-his_tambora	Expert	The 1815 eruption of which volcano led to 'the year without a summer'?	Tambora	Krakatoa	Vesuvius	Pinatubo
+his_dynasty_ruled_prussia	Hard	Which dynasty ruled Prussia and, from 1871, the German Empire?	Hohenzollern	Habsburg	Wittelsbach	Wettin
+his_palace_german_empire	Hard	In which palace was the German Empire proclaimed in January 1871?	Versailles	Sanssouci	Schonbrunn	The Hofburg
+his_english_poet_died	Hard	Which English poet died in 1824 while helping the Greeks fight for independence?	Lord Byron	Percy Shelley	John Keats	William Wordsworth
+his_wife_emperor_franz	Hard	How was the wife of Emperor Franz Joseph killed in Geneva in 1898?	She was stabbed by an anarchist	She fell from a horse	She drowned in a lake	She died of plague
+his_movement_italian_unification	Hard	What was the movement for Italian unification called, from the Italian for 'resurgence'?	The Risorgimento	The Rinascimento	The Carbonari	The Irredenta
+his_castor_pollux_killed	Hard	What were Castor and Pollux, killed and eaten during the Prussian siege of Paris in 1870?	The zoo's two elephants	Two famous racehorses	Two giant river carp	The Emperor's carriage horses
+his_new_country_chose	Hard	Which new country chose Queen Victoria's uncle Leopold as its first king, in 1831?	Belgium	Greece	Bulgaria	Norway
+his_piano_concerts_1840s	Hard	Whose piano concerts of the 1840s caused fan frenzies that Heinrich Heine called a 'mania'?	Franz Liszt	Frederic Chopin	Felix Mendelssohn	Robert Schumann
+his_tambora	Hard	The 1815 eruption of which volcano led to 'the year without a summer'?	Tambora	Krakatoa	Vesuvius	Pinatubo
+his_bismarck_struggle_against	Hard	What was Bismarck's struggle against the Catholic Church in the 1870s called?	The Kulturkampf	The Realpolitik	The Sonderweg	The Zollverein
+his_country_last_war	Hard	Which country's last war was the Sonderbund War of 1847, a civil war that lasted less than a month?	Switzerland	Belgium	Denmark	Portugal
 his_habsburg_crown_prince	Expert	Which Habsburg crown prince died with his lover at Mayerling in 1889?	Rudolf	Franz Ferdinand	Maximilian	Charles
-his_bismarck_struggle_against	Expert	What was Bismarck's struggle against the Catholic Church in the 1870s called?	The Kulturkampf	The Realpolitik	The Sonderweg	The Zollverein
-his_country_last_war	Expert	Which country's last war was the Sonderbund War of 1847, a civil war that lasted less than a month?	Switzerland	Belgium	Denmark	Portugal
 his_bismarck_goaded_france	Expert	Bismarck goaded France into war in 1870 by editing a telegram sent from which spa town?	Ems	Baden-Baden	Wiesbaden	Karlsbad
 his_king_bavaria_lost	Expert	Which king of Bavaria lost his throne in 1848, partly over his affair with the dancer Lola Montez?	Ludwig I	Maximilian II	Otto I	Ludwig III
 his_sparked_belgian_revolution	Expert	What sparked the Belgian Revolution in Brussels in 1830?	A rousing opera performance	A rise in the price of beer	The arrest of a popular priest	A riot at a horse race
+his_led_hungary_revolution	Expert	Who led Hungary's revolution against Austrian rule in 1848?	Lajos Kossuth	Ferenc Deak	Sandor Petofi	Istvan Szechenyi
+his_pope_himself_prisoner	Expert	Which pope called himself 'the prisoner of the Vatican' after losing Rome in 1870?	Pius IX	Leo XIII	Gregory XVI	Pius X
+his_tsar_nicknamed_gendarme	Expert	Which tsar, nicknamed 'the Gendarme of Europe', sent troops to crush Hungary's revolution in 1849?	Nicholas I	Alexander I	Alexander II	Alexander III

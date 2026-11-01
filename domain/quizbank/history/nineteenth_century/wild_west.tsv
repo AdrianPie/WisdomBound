@@ -2,70 +2,69 @@
 # Indianie, imigranci.
 id	difficulty	prompt	correct	wrong1	wrong2	wrong3
 trv_statua_wolnosci	Easy	Which country gave the Statue of Liberty to the United States?	France	The United Kingdom	Italy	Spain
-hx_statua_kolor	Easy	What colour was the Statue of Liberty when it was first put up?	Shiny copper brown	Pure white	Gold	Dark grey
-his_outlaw_robbed_trains	Easy	Which outlaw robbed trains and banks in the Wild West with his brother Frank?	Jesse James	Billy the Kid	Butch Cassidy	Sam Bass
-his_lawman_took_part	Easy	Which lawman took part in the gunfight at the O.K. Corral in 1881?	Wyatt Earp	Wild Bill Hickok	Pat Garrett	Bat Masterson
 his_huge_herds_almost	Easy	Which huge herds were almost wiped out on the Great Plains in the late 1800s?	The bison	The wild horses	The elk	The longhorn cattle
 his_gold_seekers_rushed	Easy	What were the gold seekers who rushed west in 1849 nicknamed?	Forty-niners	Pioneers	Sooners	Mountain men
 his_wide_brimmed_hat	Easy	Which wide-brimmed hat became the classic symbol of the American cowboy?	The Stetson	The bowler	The top hat	The panama
 his_american_pioneers_heading	Easy	What did American pioneers heading west usually travel in, nicknamed 'prairie schooners'?	Covered wagons	Stagecoaches	Canal boats	Steam trains
-his_city_grew_village	Easy	Which city grew from a village of about 1,000 people into a boomtown of some 25,000 during the gold rush of 1849?	San Francisco	Los Angeles	San Diego	Monterey
 his_breed_cattle_enormous	Easy	Which breed of cattle, with enormous horns, did cowboys drive north from Texas?	The Texas Longhorn	The Hereford	The Aberdeen Angus	The Holstein
-his_big_hunting_knife	Easy	Which big hunting knife is named after a frontiersman who died at the Alamo?	The Bowie knife	The Crockett knife	The Travis knife	The Houston knife
+hx_goraczka_zlota	Easy	The gold rush of 1849 drew huge crowds of fortune-seekers to which US state?	California	Alaska	Texas	Colorado
+hx_ellis_island	Easy	Through which island did millions of immigrants enter New York between 1892 and 1954?	Ellis Island	Staten Island	Long Island	Coney Island
+his_alamo_site_siege	Easy	The Alamo, site of a famous siege in 1836, is in which US state?	Texas	New Mexico	Arizona	California
 his_alaska	Medium	From which country did the USA buy Alaska in 1867?	Russia	Canada	Britain	Spain
-hx_goraczka_zlota	Medium	The gold rush of 1849 drew huge crowds of fortune-seekers to which US state?	California	Alaska	Texas	Colorado
-hx_ellis_island	Medium	Through which island did millions of immigrants enter New York between 1892 and 1954?	Ellis Island	Staten Island	Long Island	Coney Island
-his_alamo_site_siege	Medium	The Alamo, site of a famous siege in 1836, is in which US state?	Texas	New Mexico	Arizona	California
 his_apache_leader_became	Medium	Which Apache leader became famous for resisting US and Mexican troops?	Geronimo	Sitting Bull	Crazy Horse	Tecumseh
 his_trail_american_pioneers	Medium	Which famous trail did American pioneers follow west to the Pacific Northwest?	The Oregon Trail	The Silk Road	Route 66	The Santa Fe Trail
-his_president_made_louisiana	Medium	Which US president made the Louisiana Purchase of 1803, doubling the country's size?	Thomas Jefferson	John Adams	James Madison	James Monroe
-his_shoshone_woman_guided	Medium	Which Shoshone woman guided the first US overland expedition to the Pacific in 1805?	Sacagawea	Pocahontas	Wilma Mankiller	Sarah Winnemucca
-his_klondike_gold_rush	Medium	The Klondike Gold Rush of the 1890s took place in which Canadian territory?	Yukon	Alberta	Ontario	Manitoba
-his_french_sculptor_designed	Medium	Which French sculptor designed the Statue of Liberty?	Frederic Bartholdi	Gustave Eiffel	Auguste Rodin	Camille Claudel
-his_sharpshooter_little_sure	Medium	Which sharpshooter, called 'Little Sure Shot', starred in Buffalo Bill's Wild West show?	Annie Oakley	Calamity Jane	Belle Starr	Pearl Hart
 his_lakota_holy_man	Medium	Which Lakota holy man led his people at the Battle of the Little Bighorn?	Sitting Bull	Geronimo	Red Cloud	Cochise
 his_forced_march_cherokee	Medium	What is the forced march of the Cherokee from their homeland in 1838 called?	The Trail of Tears	The Long Walk	The Oregon Trail	The Death March
 his_law_1862_offered	Medium	Which law of 1862 offered settlers free land in the West if they farmed it?	The Homestead Act	The Land Rush Act	The Pioneer Act	The Frontier Act
 his_outlaw_fled_south	Medium	Which outlaw fled to South America with the Sundance Kid?	Butch Cassidy	Jesse James	Billy the Kid	Black Bart
-his_manifest_destiny	Medium	What was 'Manifest Destiny'?	The belief the USA must spread across the continent	A timetable for the first railway west	A peace treaty signed with the Sioux	The first complete map of America
-his_usa_gain_winning	Medium	What did the USA gain by winning the Mexican-American War of 1846-1848?	California and the South-West	Florida and Cuba	Texas and Alaska	Louisiana and Oregon
-his_lawman_shot_back	Medium	Which lawman was shot in the back while holding 'aces and eights', the 'dead man's hand'?	Wild Bill Hickok	Wyatt Earp	Doc Holliday	Pat Garrett
 his_san_francisco_businessman	Medium	Which San Francisco businessman patented riveted denim work trousers with Jacob Davis in 1873?	Levi Strauss	Henry Wells	John Stetson	Samuel Colt
 his_invention_1870s_fenced	Medium	Which invention of the 1870s fenced in the open range of the American West?	Barbed wire	The windmill	The steel plough	The revolver
-his_mormon_leader_led	Medium	Which Mormon leader led his followers west to found Salt Lake City in 1847?	Brigham Young	Joseph Smith	John Taylor	Wilford Woodruff
-his_happened_donner_party	Medium	What happened to the Donner Party of pioneers in 1846-1847?	They were trapped by snow in the Sierra Nevada	They found the first gold in California	They founded the city of Denver	They were lost at sea off Oregon
 his_leather_leg_coverings	Medium	What were the leather leg coverings that cowboys wore over their trousers called?	Chaps	Spurs	Gaiters	Puttees
-his_real_showman_buffalo	Medium	What was the real name of the showman 'Buffalo Bill'?	William Cody	William Bonney	James Hickok	Wyatt Earp
 his_put_pony_express	Medium	What put the Pony Express out of business in 1861?	The telegraph	The railroad	Stagecoach lines	Postal strikes
-his_sawmill_gold_found	Medium	At whose sawmill was gold found in 1848, setting off the great gold rush?	John Sutter's	Levi Strauss's	John Astor's	Kit Carson's
 his_workers_country_hardest	Medium	Workers from which country did much of the hardest work building the Central Pacific Railroad?	China	Ireland	Mexico	Italy
 his_rifle_advertised_gun	Medium	Which rifle was advertised as 'the gun that won the West'?	The Winchester	The Springfield	The Remington	The Sharps
 his_wild_west_towns	Medium	In many Wild West towns, what was 'Boot Hill'?	The graveyard for gunfighters	The street where saloons stood	The jail for horse thieves	The cobbler's workshop
 his_buffalo_soldiers_american	Medium	Who were the 'Buffalo Soldiers' of the American West?	Black regiments of the US Army	Hunters hired to kill bison	Native scouts for the cavalry	Guards on the railway lines
-his_luizjana	Hard	From which country did the USA buy the vast Louisiana territory in 1803?	France	Spain	Britain	Mexico
-hx_bialy_dom_1814	Hard	Which country's troops burned the White House in 1814?	Britain	France	Mexico	Spain
+hx_statua_kolor	Medium	What colour was the Statue of Liberty when it was first put up?	Shiny copper brown	Pure white	Gold	Dark grey
+his_outlaw_robbed_trains	Medium	Which outlaw robbed trains and banks in the Wild West with his brother Frank?	Jesse James	Billy the Kid	Butch Cassidy	Sam Bass
+his_lawman_took_part	Medium	Which lawman took part in the gunfight at the O.K. Corral in 1881?	Wyatt Earp	Wild Bill Hickok	Pat Garrett	Bat Masterson
+his_city_grew_village	Medium	Which city grew from a village of about 1,000 people into a boomtown of some 25,000 during the gold rush of 1849?	San Francisco	Los Angeles	San Diego	Monterey
+his_big_hunting_knife	Medium	Which big hunting knife is named after a frontiersman who died at the Alamo?	The Bowie knife	The Crockett knife	The Travis knife	The Houston knife
+his_luizjana	Medium	From which country did the USA buy the vast Louisiana territory in 1803?	France	Spain	Britain	Mexico
+hx_little_bighorn	Medium	Which battle of 1876 is also known as 'Custer's Last Stand'?	Little Bighorn	Wounded Knee	Gettysburg	The Alamo
+his_wild_west_outlaw	Medium	Which Wild West outlaw was shot dead by Sheriff Pat Garrett in 1881?	Billy the Kid	Jesse James	Butch Cassidy	Wyatt Earp
+his_american_frontiersman_died	Medium	Which American frontiersman died defending the Alamo in 1836?	Davy Crockett	Daniel Boone	Buffalo Bill	Kit Carson
+his_two_explorers_led	Medium	Which two explorers led the first US expedition overland to the Pacific, in 1804-1806?	Lewis and Clark	Stanley and Livingstone	Burke and Wills	Mason and Dixon
+his_race_settlers_claim	Medium	What was the race of settlers to claim free land in Oklahoma in 1889 called?	The Land Run	The Gold Rush	The Long Drive	The Great Trek
+his_wild_west_gunslinger	Medium	Which Wild West gunslinger and gambler had trained as a dentist?	Doc Holliday	Bat Masterson	Johnny Ringo	John Wesley Hardin
 hx_pony_express	Hard	For how long did the famous Pony Express mail service actually run?	About 18 months	About 10 years	About 30 years	About 5 years
-hx_little_bighorn	Hard	Which battle of 1876 is also known as 'Custer's Last Stand'?	Little Bighorn	Wounded Knee	Gettysburg	The Alamo
-his_wild_west_outlaw	Hard	Which Wild West outlaw was shot dead by Sheriff Pat Garrett in 1881?	Billy the Kid	Jesse James	Butch Cassidy	Wyatt Earp
 his_arizona_town_gunfight	Hard	In which Arizona town did the 'Gunfight at the O.K. Corral' take place?	Tombstone	Dodge City	Deadwood	Laredo
-his_american_frontiersman_died	Hard	Which American frontiersman died defending the Alamo in 1836?	Davy Crockett	Daniel Boone	Buffalo Bill	Kit Carson
-his_two_explorers_led	Hard	Which two explorers led the first US expedition overland to the Pacific, in 1804-1806?	Lewis and Clark	Stanley and Livingstone	Burke and Wills	Mason and Dixon
 his_massacre_lakota_people	Hard	Which massacre of Lakota people in 1890 marked the end of the Indian Wars?	Wounded Knee	Sand Creek	Little Bighorn	Fort Pitt
-his_missouri_town_wagon	Hard	From which Missouri town did many wagon trains set off on the Oregon Trail?	Independence	St Louis	Kansas City	Springfield
 his_people_chief_joseph	Hard	Which people's Chief Joseph said 'I will fight no more forever' in 1877?	The Nez Perce	The Cheyenne	The Comanche	The Navajo
 his_great_cattle_trail	Hard	Which great cattle trail ran north from Texas to the railheads of Kansas?	The Chisholm Trail	The Oregon Trail	The Santa Fe Trail	The Mormon Trail
 his_golden_spike_driven	Hard	Where was the 'golden spike' driven to finish the first transcontinental railroad?	Promontory Summit, Utah	Omaha, Nebraska	Sacramento, California	Denver, Colorado
-his_race_settlers_claim	Hard	What was the race of settlers to claim free land in Oklahoma in 1889 called?	The Land Run	The Gold Rush	The Long Drive	The Great Trek
 his_lakota_war_leader	Hard	Which Lakota war leader, who fought at Little Bighorn, is not known ever to have been photographed?	Crazy Horse	Sitting Bull	Red Cloud	Spotted Tail
-his_wild_west_gunslinger	Hard	Which Wild West gunslinger and gambler had trained as a dentist?	Doc Holliday	Bat Masterson	Johnny Ringo	John Wesley Hardin
 his_outlaw_shot_back	Hard	Which outlaw was shot in the back of the head by a member of his own gang while straightening a picture at home?	Jesse James	Billy the Kid	Sam Bass	John Wesley Hardin
-his_stagecoach_robber_black	Hard	What did the stagecoach robber known as 'Black Bart' leave at two of his holdups in 1870s California?	Poems	A single black glove	A silver dollar	A playing card
 his_detective_agency_used	Hard	Which famous detective agency used an open eye and the slogan 'We never sleep'?	Pinkerton	Wells Fargo	Scotland Yard	Texas Rangers
-hx_wojna_o_swinie	Expert	The 1859 'Pig War' was a border standoff between the USA and which country?	Britain	Russia	Mexico	Spain
-hx_teksas_republika	Expert	Before joining the USA in 1845, Texas was an independent country for about how long?	Nine years	Two months	Forty years	A single day
-hy_kolej_1869	Expert	In which year was America's first transcontinental railroad completed?	1869	1829	1899	1912
+his_president_made_louisiana	Hard	Which US president made the Louisiana Purchase of 1803, doubling the country's size?	Thomas Jefferson	John Adams	James Madison	James Monroe
+his_shoshone_woman_guided	Hard	Which Shoshone woman guided the first US overland expedition to the Pacific in 1805?	Sacagawea	Pocahontas	Wilma Mankiller	Sarah Winnemucca
+his_klondike_gold_rush	Hard	The Klondike Gold Rush of the 1890s took place in which Canadian territory?	Yukon	Alberta	Ontario	Manitoba
+his_french_sculptor_designed	Hard	Which French sculptor designed the Statue of Liberty?	Frederic Bartholdi	Gustave Eiffel	Auguste Rodin	Camille Claudel
+his_sharpshooter_little_sure	Hard	Which sharpshooter, called 'Little Sure Shot', starred in Buffalo Bill's Wild West show?	Annie Oakley	Calamity Jane	Belle Starr	Pearl Hart
+his_manifest_destiny	Hard	What was 'Manifest Destiny'?	The belief the USA must spread across the continent	A timetable for the first railway west	A peace treaty signed with the Sioux	The first complete map of America
+his_usa_gain_winning	Hard	What did the USA gain by winning the Mexican-American War of 1846-1848?	California and the South-West	Florida and Cuba	Texas and Alaska	Louisiana and Oregon
+his_lawman_shot_back	Hard	Which lawman was shot in the back while holding 'aces and eights', the 'dead man's hand'?	Wild Bill Hickok	Wyatt Earp	Doc Holliday	Pat Garrett
+his_mormon_leader_led	Hard	Which Mormon leader led his followers west to found Salt Lake City in 1847?	Brigham Young	Joseph Smith	John Taylor	Wilford Woodruff
+his_happened_donner_party	Hard	What happened to the Donner Party of pioneers in 1846-1847?	They were trapped by snow in the Sierra Nevada	They found the first gold in California	They founded the city of Denver	They were lost at sea off Oregon
+his_real_showman_buffalo	Hard	What was the real name of the showman 'Buffalo Bill'?	William Cody	William Bonney	James Hickok	Wyatt Earp
+his_sawmill_gold_found	Hard	At whose sawmill was gold found in 1848, setting off the great gold rush?	John Sutter's	Levi Strauss's	John Astor's	Kit Carson's
+hx_wojna_o_swinie	Hard	The 1859 'Pig War' was a border standoff between the USA and which country?	Britain	Russia	Mexico	Spain
+hx_teksas_republika	Hard	Before joining the USA in 1845, Texas was an independent country for about how long?	Nine years	Two months	Forty years	A single day
+hy_kolej_1869	Hard	In which year was America's first transcontinental railroad completed?	1869	1829	1899	1912
+his_animals_army_import	Hard	Which animals did the US Army import in 1856 to carry supplies across the deserts of the South-West?	Camels	Llamas	Elephants	Yaks
+his_fur_trapper_mauled	Hard	Which fur trapper, mauled by a grizzly and left for dead in 1823, crawled and walked some 300 km to safety?	Hugh Glass	John Colter	Kit Carson	Jim Beckwourth
 his_real_frontierswoman_calamity	Expert	What was the real name of the frontierswoman 'Calamity Jane'?	Martha Jane Canary	Phoebe Ann Mosey	Myra Belle Shirley	Mary Fields
-his_animals_army_import	Expert	Which animals did the US Army import in 1856 to carry supplies across the deserts of the South-West?	Camels	Llamas	Elephants	Yaks
 his_bankrupt_san_francisco	Expert	Which bankrupt San Francisco businessman proclaimed himself 'Emperor of the United States' in 1859?	Joshua Norton	Leland Stanford	Sam Brannan	William Ralston
 his_lawman_refereed_big	Expert	Which famous lawman refereed a big heavyweight boxing match in San Francisco in 1896 and was accused of fixing it?	Wyatt Earp	Wild Bill Hickok	Doc Holliday	Pat Garrett
-his_fur_trapper_mauled	Expert	Which fur trapper, mauled by a grizzly and left for dead in 1823, crawled and walked some 300 km to safety?	Hugh Glass	John Colter	Kit Carson	Jim Beckwourth
+his_missouri_town_wagon	Expert	From which Missouri town did many wagon trains set off on the Oregon Trail?	Independence	St Louis	Kansas City	Springfield
+his_stagecoach_robber_black	Expert	What did the stagecoach robber known as 'Black Bart' leave at two of his holdups in 1870s California?	Poems	A single black glove	A silver dollar	A playing card

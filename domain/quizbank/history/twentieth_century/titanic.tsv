@@ -2,44 +2,31 @@
 id	difficulty	prompt	correct	wrong1	wrong2	wrong3
 hx_titanic_gora	Easy	What did the Titanic hit before it sank?	An iceberg	A reef	Another ship	A sea mine
 his_ocean_titanic_sink	Easy	In which ocean did the Titanic sink?	The Atlantic	The Pacific	The Indian Ocean	The Arctic
-his_month_1912_titanic	Easy	In which month of 1912 did the Titanic sink?	April	January	August	December
 his_ship_band_famously	Easy	What did the ship's band famously do as the Titanic sank?	Kept on playing	Jumped overboard	Took the first lifeboat	Hid in the hold
 his_titanic_famously_said	Easy	What was the Titanic famously said to be before its first voyage?	Unsinkable	Haunted	The fastest ship ever	Made of steel and gold
-his_hymn_titanic_band	Easy	Which hymn is the Titanic's band said to have played as the ship went down?	'Nearer, My God, to Thee'	'Eternal Father, Strong to Save'	'Amazing Grace'	'Rock of Ages'
 his_rule_titanic_officers	Easy	Which rule did the Titanic's officers follow when filling the lifeboats?	Women and children first	First-class passengers first	Crew members first	Strongest swimmers first
-his_colour_titanic_hull	Easy	What colour was the Titanic's hull?	Black	White	Dark blue	Red
-his_cheapest_crowded_passenger	Easy	What were the cheapest, most crowded passenger quarters on liners like the Titanic called?	Steerage	The hold	The galley	The bilge
-his_wreck_titanic_lies	Easy	The wreck of the Titanic lies on the seabed some 600 km off which island?	Newfoundland	Greenland	Iceland	Ireland
 his_full_titanic_lifeboats	Easy	How full were many of the Titanic's lifeboats when they were lowered?	Many left half-empty	All were packed to the limit	Most carried twice their capacity	Every seat was taken
-his_titanic	Medium	In which year did the Titanic sink?	1912	1905	1918	1923
-wh_titanic_rejs	Medium	During which voyage did the Titanic sink?	Its maiden voyage	Its second voyage	Its tenth voyage	Its return trip from New York
-his_titanic_cel	Medium	Which city was the Titanic sailing to when it sank?	New York	Boston	Halifax	Southampton
-his_ship_rescued_survivors	Medium	Which ship rescued the survivors of the Titanic?	Carpathia	Californian	Olympic	Lusitania
+wh_titanic_rejs	Easy	During which voyage did the Titanic sink?	Its maiden voyage	Its second voyage	Its tenth voyage	Its return trip from New York
+his_titanic_cel	Easy	Which city was the Titanic sailing to when it sank?	New York	Boston	Halifax	Southampton
+his_people_die_titanic	Easy	Why did so many people die on the Titanic?	There were too few lifeboats	The ship exploded	It sank in seconds	Sharks attacked the survivors
 his_english_port_titanic	Medium	From which English port did the Titanic set sail on 10 April 1912?	Southampton	Liverpool	Plymouth	Dover
-his_captain_titanic	Medium	Who was the captain of the Titanic?	Edward Smith	Arthur Rostron	William Turner	Stanley Lord
 his_roughly_people_died	Medium	Roughly how many people died when the Titanic sank?	About 1,500	About 150	About 500	About 5,000
-his_people_die_titanic	Medium	Why did so many people die on the Titanic?	There were too few lifeboats	The ship exploded	It sank in seconds	Sharks attacked the survivors
-his_led_team_found	Medium	Who led the team that found the wreck of the Titanic in 1985?	Robert Ballard	Jacques Cousteau	James Cameron	Clive Cussler
 his_funnels_titanic_just	Medium	How many funnels did the Titanic have, one of them just for show?	Four	Two	Three	Five
-his_wealthy_american_survivor	Medium	Which wealthy American survivor was later nicknamed 'the Unsinkable'?	Molly Brown	Rose DeWitt	Madeleine Astor	Edith Rosenbaum
 his_distress_signal_quite	Medium	Which distress signal, then quite new, did the Titanic's radio operators send?	SOS	Mayday	Pan-pan	Code Red
 his_group_titanic_passengers	Medium	Which group of Titanic passengers had the highest survival rate?	First-class women	Third-class men	Second-class men	The ship's crew
 his_roughly_time_night	Medium	At roughly what time of night did the Titanic hit the iceberg?	About 11:40 pm	About 8:00 pm	About 2:20 am	About 5:30 am
 his_letters_rms_rms	Medium	What do the letters 'RMS' in 'RMS Titanic' stand for?	Royal Mail Ship	Royal Maritime Service	Registered Merchant Ship	Royal Marine Steamer
 his_main_pieces_wreck	Medium	In how many main pieces does the wreck of the Titanic lie on the seabed?	Two	One	Three	Five
-his_titanic_lookouts_binoculars	Medium	Why did the Titanic's lookouts have no binoculars?	The key to their locker was missing	They were sold in Southampton	The captain banned them	They broke in a storm
-his_class_passengers_use	Medium	Which of these could first-class passengers use aboard the Titanic?	A swimming pool	A small cinema room	A ten-pin bowling alley	An indoor ice rink
-his_day_week_titanic	Medium	On which day of the week did the Titanic hit the iceberg?	Sunday	Friday	Wednesday	Tuesday
-his_novel_1898_giant	Medium	In a novel of 1898, a giant 'unsinkable' liner hits an iceberg in April and sinks. What was the ship called?	The Titan	The Atlantis	The Colossus	The Olympian
 his_roughly_cold_sea	Medium	Roughly how cold was the sea where the Titanic sank?	About -2 C	About 4 C	About 10 C	About 15 C
-his_roughly_long_titanic	Medium	Roughly how long was the Titanic?	About 270 metres	About 120 metres	About 180 metres	About 450 metres
-his_colour_distress_rockets	Medium	What colour were the distress rockets the Titanic fired, which a nearby ship saw but did not answer?	White	Red	Green	Blue
 his_none_titanic_engineers	Medium	Why did none of the Titanic's engineers survive the sinking?	They stayed below to keep the power on	They gave up their lifeboat seats to children	They were locked in by panicking passengers	They were asleep when the iceberg struck
-his_rusticles_slowly_eating	Medium	What are the 'rusticles' slowly eating away the wreck of the Titanic?	Icicle-like rust made by iron-eating bacteria	Shellfish that drill holes into the steel	Long strands of seaweed growing in rust	Crystals of salt that crack the hull
-his_millionaire_changed_evening	Medium	Which millionaire changed into evening dress on the sinking Titanic, saying he was ready to go down like a gentleman?	Benjamin Guggenheim	John Jacob Astor IV	Isidor Straus	J. P. Morgan
-hw_titanic_czas	Hard	Roughly how long did the Titanic take to sink after its fatal collision?	About 2 hours 40 minutes	About 20 minutes	About 8 hours	About 2 days
+his_month_1912_titanic	Medium	In which month of 1912 did the Titanic sink?	April	January	August	December
+his_hymn_titanic_band	Medium	Which hymn is the Titanic's band said to have played as the ship went down?	'Nearer, My God, to Thee'	'Eternal Father, Strong to Save'	'Amazing Grace'	'Rock of Ages'
+his_colour_titanic_hull	Medium	What colour was the Titanic's hull?	Black	White	Dark blue	Red
+his_cheapest_crowded_passenger	Medium	What were the cheapest, most crowded passenger quarters on liners like the Titanic called?	Steerage	The hold	The galley	The bilge
+his_wreck_titanic_lies	Medium	The wreck of the Titanic lies on the seabed some 600 km off which island?	Newfoundland	Greenland	Iceland	Ireland
+hw_titanic_czas	Medium	Roughly how long did the Titanic take to sink after its fatal collision?	About 2 hours 40 minutes	About 20 minutes	About 8 hours	About 2 days
+his_shipping_company_owned	Medium	Which shipping company owned the Titanic?	The White Star Line	The Cunard Line	The Hamburg America Line	P&O
 his_year_wreck_titanic	Hard	In which year was the wreck of the Titanic found?	1985	1962	1999	1971
-his_shipping_company_owned	Hard	Which shipping company owned the Titanic?	The White Star Line	The Cunard Line	The Hamburg America Line	P&O
 his_shipyard_built_titanic	Hard	Which shipyard built the Titanic?	Harland and Wolff	Cammell Laird	John Brown and Company	Swan Hunter
 his_lifeboats_titanic_carry	Hard	How many lifeboats did the Titanic carry?	20	8	48	64
 his_roughly_deep_wreck	Hard	Roughly how deep does the wreck of the Titanic lie?	About 3,800 metres	About 380 metres	About 800 metres	About 11,000 metres
@@ -48,18 +35,24 @@ his_titanic_chief_designer	Hard	Who was the Titanic's chief designer, who went d
 his_chairman_white_star	Hard	Which chairman of the White Star Line survived the sinking, to public scorn?	J. Bruce Ismay	J. P. Morgan	Thomas Andrews	John Jacob Astor
 his_french_port_titanic	Hard	Which French port was the Titanic's first stop after leaving England?	Cherbourg	Le Havre	Calais	Brest
 his_richest_passenger_aboard	Hard	Who was the richest passenger aboard the Titanic, who died in the sinking?	John Jacob Astor IV	J. P. Morgan	Benjamin Guggenheim	Isidor Straus
-his_senior_titanic_officer	Hard	Who was the most senior Titanic officer to survive the sinking?	Charles Lightoller	William Murdoch	Henry Wilde	Joseph Boxhall
 his_wealthy_couple_owners	Hard	Which wealthy couple, owners of Macy's store, refused to be parted and died together on the Titanic?	Isidor and Ida Straus	John and Madeleine Astor	Benjamin and Florette Guggenheim	Lucile and Cosmo Duff-Gordon
 his_company_employed_titanic	Hard	Which company employed the Titanic's two radio operators?	Marconi	White Star	Cunard	Western Union
-his_watertight_compartments_titanic	Hard	How many of its watertight compartments could the Titanic flood and still stay afloat?	Four	Two	Six	Eight
-his_titanic_bandleader_violin	Hard	What was the name of the Titanic's bandleader, whose violin was found after the sinking?	Wallace Hartley	Jack Phillips	Harold Bride	John Hume
 his_american_banker_shipping	Hard	Which American banker, whose shipping trust ultimately owned the Titanic, cancelled his trip on it at the last minute?	J. P. Morgan	John D. Rockefeller	Andrew Carnegie	Cornelius Vanderbilt
-his_dozen_dogs_sailed	Hard	About a dozen dogs sailed on the Titanic. How many of them survived?	Three	None	One	Seven
 his_roughly_fast_titanic	Hard	Roughly how fast was the Titanic going when it hit the iceberg?	About 22 knots	About 10 knots	About 35 knots	About 5 knots
-his_officer_charge_titanic	Hard	Which officer was in charge on the Titanic's bridge when it struck the iceberg?	William Murdoch	Charles Lightoller	Harold Lowe	Herbert Pitman
-his_department_store_owner	Hard	Which department-store owner refused a lifeboat seat and died on the Titanic alongside his wife Ida?	Isidor Straus	John Jacob Astor	Benjamin Guggenheim	J. Bruce Ismay
+his_ship_rescued_survivors	Hard	Which ship rescued the survivors of the Titanic?	Carpathia	Californian	Olympic	Lusitania
+his_captain_titanic	Hard	Who was the captain of the Titanic?	Edward Smith	Arthur Rostron	William Turner	Stanley Lord
+his_led_team_found	Hard	Who led the team that found the wreck of the Titanic in 1985?	Robert Ballard	Jacques Cousteau	James Cameron	Clive Cussler
+his_wealthy_american_survivor	Hard	Which wealthy American survivor was later nicknamed 'the Unsinkable'?	Molly Brown	Rose DeWitt	Madeleine Astor	Edith Rosenbaum
+his_titanic_lookouts_binoculars	Hard	Why did the Titanic's lookouts have no binoculars?	The key to their locker was missing	They were sold in Southampton	The captain banned them	They broke in a storm
+his_class_passengers_use	Hard	Which of these could first-class passengers use aboard the Titanic?	A swimming pool	A small cinema room	A ten-pin bowling alley	An indoor ice rink
+his_day_week_titanic	Hard	On which day of the week did the Titanic hit the iceberg?	Sunday	Friday	Wednesday	Tuesday
+his_novel_1898_giant	Hard	In a novel of 1898, a giant 'unsinkable' liner hits an iceberg in April and sinks. What was the ship called?	The Titan	The Atlantis	The Colossus	The Olympian
+his_roughly_long_titanic	Hard	Roughly how long was the Titanic?	About 270 metres	About 120 metres	About 180 metres	About 450 metres
+his_colour_distress_rockets	Hard	What colour were the distress rockets the Titanic fired, which a nearby ship saw but did not answer?	White	Red	Green	Blue
+his_rusticles_slowly_eating	Hard	What are the 'rusticles' slowly eating away the wreck of the Titanic?	Icicle-like rust made by iron-eating bacteria	Shellfish that drill holes into the steel	Long strands of seaweed growing in rust	Crystals of salt that crack the hull
+his_millionaire_changed_evening	Hard	Which millionaire changed into evening dress on the sinking Titanic, saying he was ready to go down like a gentleman?	Benjamin Guggenheim	John Jacob Astor IV	Isidor Straus	J. P. Morgan
+his_canadian_city_150	Hard	In which Canadian city are about 150 of the Titanic's victims buried?	Halifax	Quebec City	Montreal	St John's
 hy_jessop	Expert	Violet Jessop survived the Titanic and accidents on which two of its sister ships?	The Olympic and the Britannic	The Lusitania and the Carpathia	The Queen Mary and the Olympic	The Britannic and the Lusitania
-his_canadian_city_150	Expert	In which Canadian city are about 150 of the Titanic's victims buried?	Halifax	Quebec City	Montreal	St John's
 his_irish_port_titanic	Expert	At which Irish port did the Titanic make its last stop before crossing the Atlantic?	Queenstown	Dublin	Belfast	Galway
 his_lookout_spotted_iceberg	Expert	Which lookout spotted the iceberg from the Titanic's crow's nest?	Frederick Fleet	Harold Bride	Charles Lightoller	William Murdoch
 his_nickname_titanic_long	Expert	What was the nickname of the Titanic's long-serving sister ship, the Olympic?	'Old Reliable'	'The Iron Lady'	'The Lucky One'	'Big Sister'
@@ -68,3 +61,8 @@ his_last_living_survivor	Expert	Who was the last living survivor of the Titanic,
 his_fashion_designer_husband	Expert	Which fashion designer and her husband were accused of bribing the crew of their nearly empty lifeboat?	Lady Duff-Gordon	The Countess of Rothes	Madeleine Astor	Helen Churchill Candee
 his_titanic_radio_operator	Expert	What did the Titanic's radio operator snap back when a nearby ship tried to report ice?	'Shut up, I am busy'	'Message received, thanks'	'Stop sending, we know'	'Repeat, signal is weak'
 his_make_car_belonging	Expert	Which make of car, belonging to a first-class passenger, went down in the Titanic's hold?	A Renault	A Rolls-Royce	A Ford	A Mercedes
+his_senior_titanic_officer	Expert	Who was the most senior Titanic officer to survive the sinking?	Charles Lightoller	William Murdoch	Henry Wilde	Joseph Boxhall
+his_watertight_compartments_titanic	Expert	How many of its watertight compartments could the Titanic flood and still stay afloat?	Four	Two	Six	Eight
+his_titanic_bandleader_violin	Expert	What was the name of the Titanic's bandleader, whose violin was found after the sinking?	Wallace Hartley	Jack Phillips	Harold Bride	John Hume
+his_dozen_dogs_sailed	Expert	About a dozen dogs sailed on the Titanic. How many of them survived?	Three	None	One	Seven
+his_officer_charge_titanic	Expert	Which officer was in charge on the Titanic's bridge when it struck the iceberg?	William Murdoch	Charles Lightoller	Harold Lowe	Herbert Pitman

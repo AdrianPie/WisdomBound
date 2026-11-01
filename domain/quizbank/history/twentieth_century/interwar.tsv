@@ -2,52 +2,44 @@
 id	difficulty	prompt	correct	wrong1	wrong2	wrong3
 hx_prohibicja	Easy	What was banned in the USA during Prohibition, from 1920 to 1933?	Alcohol	Tobacco	Gambling	Jazz
 his_italian_dictator_himself	Easy	Which Italian dictator called himself 'Il Duce'?	Benito Mussolini	Francisco Franco	Giuseppe Garibaldi	Victor Emmanuel III
-his_lively_dance_craze	Easy	Which lively dance was the craze of the 'Roaring Twenties'?	The Charleston	The Twist	The Jive	The Tango
 his_party_adolf_hitler	Easy	Which party did Adolf Hitler lead?	The Nazi Party	The Communist Party	The Fascist Party	The Christian Democrats
-his_fashionable_young_women	Easy	What were the fashionable young women of the 1920s, with short hair and short skirts, called?	Flappers	Suffragettes	Beatniks	Debutantes
-his_nickname_chicago_gangster	Easy	What was the nickname of the Chicago gangster Al Capone?	Scarface	Baby Face	Lucky	Machine Gun
-his_submachine_gun_favourite	Easy	Which submachine gun was the favourite weapon of Prohibition-era gangsters?	The Tommy gun	The Sten gun	The Uzi	The Kalashnikov
 his_property_trading_board	Easy	Which property-trading board game, sold by Parker Brothers from 1935, became a hit during the Great Depression?	Monopoly	Scrabble	Cluedo	Risk
-his_french_defensive_line	Easy	Which French defensive line failed to stop Germany in 1940?	Maginot Line	Siegfried Line	Hindenburg Line	Mannerheim Line
-wh_wielki_kryzys	Medium	The crash of which stock exchange started the Great Depression in 1929?	New York's	London's	Frankfurt's	Tokyo's
+wh_wielki_kryzys	Easy	The crash of which stock exchange started the Great Depression in 1929?	New York's	London's	Frankfurt's	Tokyo's
+hx_bonnie_clyde	Easy	Bonnie and Clyde were famous in 1930s America as what?	Bank robbers	Jazz singers	Stunt pilots	Film stars
+hx_alcatraz	Easy	Which island prison stands in San Francisco Bay?	Alcatraz	Robben Island	Rikers Island	Devil's Island
+his_dictator_ruled_spain	Easy	Which dictator ruled Spain from the end of its civil war until 1975?	Francisco Franco	Antonio Salazar	Benito Mussolini	Miguel Primo de Rivera
+his_book_hitler_write	Easy	Which book did Hitler write while in prison in the 1920s?	'Mein Kampf'	'Das Kapital'	'The Prince'	'Der Sturmer'
+his_car_designed_1930s	Easy	Which car was designed in 1930s Germany as a 'people's car'?	The Volkswagen Beetle	The Mercedes-Benz SSK	The BMW Isetta	The Opel Kadett
 his_edward_viii	Medium	Which British king gave up the throne in 1936 to marry an American divorcee?	Edward VIII	George VI	George V	Edward VII
 hx_capone	Medium	For which crime was gangster Al Capone finally sent to prison?	Tax evasion	Murder	Bank robbery	Smuggling
 hx_hitler_kraj	Medium	In which country was Adolf Hitler born?	Austria	Germany	Switzerland	Hungary
 hx_ataturk	Medium	Who founded the modern Republic of Turkey in 1923?	Mustafa Kemal Ataturk	Enver Pasha	Suleiman the Magnificent	Selim III
-hx_bonnie_clyde	Medium	Bonnie and Clyde were famous in 1930s America as what?	Bank robbers	Jazz singers	Stunt pilots	Film stars
-hx_alcatraz	Medium	Which island prison stands in San Francisco Bay?	Alcatraz	Robben Island	Rikers Island	Devil's Island
 hx_hitler_malarz	Medium	What did Adolf Hitler hope to become as a young man, before an art academy in Vienna rejected him?	A painter	An opera singer	A priest	An engineer
 hy_new_deal	Medium	Which US president launched the 'New Deal' to fight the Great Depression?	Franklin D. Roosevelt	Herbert Hoover	Harry Truman	Woodrow Wilson
 hy_hitler_1933	Medium	In which year did Hitler come to power in Germany?	1933	1929	1939	1923
 his_british_prime_minister	Medium	Which British prime minister promised 'peace for our time' after meeting Hitler in 1938?	Neville Chamberlain	Winston Churchill	Stanley Baldwin	Clement Attlee
-his_maginot_line	Medium	What was the Maginot Line?	French forts facing Germany	A German wall on the Atlantic	The border between the Koreas	A Cold War spy network
-his_dictator_ruled_spain	Medium	Which dictator ruled Spain from the end of its civil war until 1975?	Francisco Franco	Antonio Salazar	Benito Mussolini	Miguel Primo de Rivera
 his_dust_storms_ruined	Medium	What were the dust storms that ruined farms on the American Great Plains in the 1930s called?	The Dust Bowl	The Black Blizzards	The Sand Storms	The Great Drought
 his_hidden_bars_prohibition	Medium	What were the hidden bars of the Prohibition era called?	Speakeasies	Saloons	Taverns	Juke joints
 his_hitler_failed_attempt	Medium	What was Hitler's failed attempt to seize power in Munich in 1923 called?	The Beer Hall Putsch	The Kapp Putsch	The Reichstag Fire	The Night of the Long Knives
-his_book_hitler_write	Medium	Which book did Hitler write while in prison in the 1920s?	'Mein Kampf'	'Das Kapital'	'The Prince'	'Der Sturmer'
 his_bombing_basque_town	Medium	The bombing of which Basque town in 1937 inspired a famous painting by Picasso?	Guernica	Bilbao	Madrid	Toledo
 his_march_1922_brought	Medium	Which march of 1922 brought Mussolini to power in Italy?	The March on Rome	The March on Milan	The Long March	The Salt March
-his_kristallnacht_november_1938	Medium	What was 'Kristallnacht', in November 1938?	A night of Nazi violence against Jews	A festival of the Nazi Party	A bombing raid on Berlin	A famous opera premiere
-his_year_german_money	Medium	In which year did German money become almost worthless in a wave of hyperinflation?	1923	1929	1933	1919
-his_african_country_mussolini	Medium	Which African country did Mussolini's Italy invade in 1935?	Ethiopia	Libya	Somalia	Egypt
 his_germany_democratic_government	Medium	What was Germany's democratic government between 1919 and 1933 called?	The Weimar Republic	The Second Reich	The Bonn Republic	The Berlin Commonwealth
 his_german_parliament_building	Medium	Which German parliament building burned in 1933, a fire Hitler blamed on communists?	The Reichstag	The Bundestag	The Brandenburg Gate	The Chancellery
-his_foreign_volunteers_fought	Medium	What were the foreign volunteers who fought for the Spanish Republic in 1936-1939 called?	The International Brigades	The Foreign Legion	The Blue Division	The Freedom Corps
-his_baby_son_kidnapped	Medium	Whose baby son was kidnapped in 1932, in what was called 'the crime of the century'?	Charles Lindbergh's	Al Capone's	Babe Ruth's	Henry Ford's
 his_1925_monkey_trial	Medium	What was the 1925 'Monkey Trial' in Tennessee about?	Teaching evolution in school	A circus animal's escape	A stolen ape skeleton	A zoo's cruelty to animals
 his_city_valentine_day	Medium	In which city did the St Valentine's Day Massacre of 1929 take place?	Chicago	New York	Detroit	Las Vegas
-his_car_designed_1930s	Medium	Which car was designed in 1930s Germany as a 'people's car'?	The Volkswagen Beetle	The Mercedes-Benz SSK	The BMW Isetta	The Opel Kadett
 his_country_japan_all	Medium	Which country did Japan go to all-out war with in 1937?	China	The Soviet Union	Korea	The Philippines
-his_american_ban_making	Medium	What was the American ban on making and selling alcohol, from 1920 to 1933, called?	Prohibition	The Dry Law	The Temperance Act	The Volstead Ban
-his_shanty_towns_homeless	Medium	What were the shanty towns of the homeless during the Great Depression nicknamed?	Hoovervilles	Rooseveltowns	Dustvilles	Crashtowns
-his_october_1929_worst	Medium	By which name is 29 October 1929, the worst day of the Wall Street Crash, known?	Black Tuesday	Black Friday	Black Monday	Bloody Thursday
 his_swindler_1920_scam	Medium	Which swindler's 1920 scam in Boston gave its name to paying old investors with new investors' money?	Charles Ponzi	Frank Abagnale	Bernie Madoff	Victor Lustig
-his_dictator_time_magazine	Medium	Which dictator did Time magazine name its 'Man of the Year' for 1938?	Adolf Hitler	Benito Mussolini	Francisco Franco	Joseph Stalin
 his_nazi_pogrom_november	Medium	Why was the Nazi pogrom of November 1938 called 'Kristallnacht'?	For the broken glass of Jewish shops and homes	For the frost that covered Berlin that night	For the crystal chandeliers looted from palaces	For a Nazi rally held in a glass hall
-hx_liga_narodow	Hard	Which international body, founded after World War I, came before the United Nations?	The League of Nations	The Council of Europe	The Hague Tribunal	The Concert of Europe
-hy_monachium	Hard	Which 1938 agreement let Hitler take part of Czechoslovakia?	The Munich Agreement	The Treaty of Versailles	The Molotov-Ribbentrop Pact	The Yalta Agreement
-his_country_nazi_germany	Hard	Which country did Nazi Germany annex in 1938, in the 'Anschluss'?	Austria	Czechoslovakia	Poland	Hungary
+his_lively_dance_craze	Medium	Which lively dance was the craze of the 'Roaring Twenties'?	The Charleston	The Twist	The Jive	The Tango
+his_fashionable_young_women	Medium	What were the fashionable young women of the 1920s, with short hair and short skirts, called?	Flappers	Suffragettes	Beatniks	Debutantes
+his_nickname_chicago_gangster	Medium	What was the nickname of the Chicago gangster Al Capone?	Scarface	Baby Face	Lucky	Machine Gun
+his_submachine_gun_favourite	Medium	Which submachine gun was the favourite weapon of Prohibition-era gangsters?	The Tommy gun	The Sten gun	The Uzi	The Kalashnikov
+his_french_defensive_line	Medium	Which French defensive line failed to stop Germany in 1940?	Maginot Line	Siegfried Line	Hindenburg Line	Mannerheim Line
+hx_liga_narodow	Medium	Which international body, founded after World War I, came before the United Nations?	The League of Nations	The Council of Europe	The Hague Tribunal	The Concert of Europe
+hy_monachium	Medium	Which 1938 agreement let Hitler take part of Czechoslovakia?	The Munich Agreement	The Treaty of Versailles	The Molotov-Ribbentrop Pact	The Yalta Agreement
+his_country_nazi_germany	Medium	Which country did Nazi Germany annex in 1938, in the 'Anschluss'?	Austria	Czechoslovakia	Poland	Hungary
+his_title_british_king	Medium	Which title did the British king who abdicated in 1936 receive afterwards?	Duke of Windsor	Duke of Cornwall	Duke of York	Duke of Edinburgh
+his_tiny_state_created	Medium	Which tiny state was created in 1929 by a treaty between Mussolini's Italy and the Pope?	Vatican City	San Marino	Monaco	Liechtenstein
 his_night_long_knives	Hard	What was the 'Night of the Long Knives' in 1934?	Hitler's purge of his own Nazi rivals	A Nazi attack on Jewish shops	The burning of the Reichstag	A failed plot to kill Hitler
 his_german_region_next	Hard	Which German region next to France did Hitler send troops into in 1936, breaking the Treaty of Versailles?	The Rhineland	Alsace	The Saarland	Bavaria
 his_treaty_1921_created	Hard	Which treaty of 1921 created the Irish Free State?	The Anglo-Irish Treaty	The Good Friday Agreement	The Treaty of Limerick	The Act of Union
@@ -56,15 +48,19 @@ his_year_britain_hold	Hard	In which year did Britain hold its only general strik
 his_prohibition_agent_led	Hard	Which Prohibition agent led the team nicknamed 'the Untouchables'?	Eliot Ness	J. Edgar Hoover	Melvin Purvis	Frank Wilson
 his_1934_law_require	Hard	What did a 1934 law require every Turkish citizen to take for the first time?	A surname	A passport	An oath to Ataturk	A new religion
 his_jarrow_march_1936	Hard	What was the 'Jarrow March' of 1936?	Jobless shipyard workers marching to London	Suffragettes marching on Parliament	Miners striking for higher pay	Fascists parading through London
-his_germany_italy_japan	Hard	Germany, Italy and Japan all signed the Kellogg-Briand Pact of 1928, which promised to do what?	Give up war as a policy	Share out colonies fairly	Disarm their navies	Cancel all war debts
 his_irish_revolutionary_leader	Hard	Which Irish revolutionary leader was killed in an ambush in his home county of Cork in 1922?	Michael Collins	Eamon de Valera	Arthur Griffith	Patrick Pearse
-his_title_british_king	Hard	Which title did the British king who abdicated in 1936 receive afterwards?	Duke of Windsor	Duke of Cornwall	Duke of York	Duke of Edinburgh
-his_1934_night_long	Hard	In the 1934 'Night of the Long Knives', Hitler purged the leaders of which Nazi group?	The SA (Brownshirts)	The Gestapo	The Hitler Youth	The Luftwaffe
-his_tiny_state_created	Hard	Which tiny state was created in 1929 by a treaty between Mussolini's Italy and the Pope?	Vatican City	San Marino	Monaco	Liechtenstein
 his_country_ruled_king	Hard	Which country was ruled by King Zog from 1928 until Italy invaded it in 1939?	Albania	Greece	Bulgaria	Ethiopia
+his_year_german_money	Hard	In which year did German money become almost worthless in a wave of hyperinflation?	1923	1929	1933	1919
+his_african_country_mussolini	Hard	Which African country did Mussolini's Italy invade in 1935?	Ethiopia	Libya	Somalia	Egypt
+his_foreign_volunteers_fought	Hard	What were the foreign volunteers who fought for the Spanish Republic in 1936-1939 called?	The International Brigades	The Foreign Legion	The Blue Division	The Freedom Corps
+his_baby_son_kidnapped	Hard	Whose baby son was kidnapped in 1932, in what was called 'the crime of the century'?	Charles Lindbergh's	Al Capone's	Babe Ruth's	Henry Ford's
+his_shanty_towns_homeless	Hard	What were the shanty towns of the homeless during the Great Depression nicknamed?	Hoovervilles	Rooseveltowns	Dustvilles	Crashtowns
+his_october_1929_worst	Hard	By which name is 29 October 1929, the worst day of the Wall Street Crash, known?	Black Tuesday	Black Friday	Black Monday	Bloody Thursday
+his_dictator_time_magazine	Hard	Which dictator did Time magazine name its 'Man of the Year' for 1938?	Adolf Hitler	Benito Mussolini	Francisco Franco	Joseph Stalin
+his_side_generally_said	Hard	Which side is generally said to have won Australia's 'Great Emu War' of 1932?	The emus	The army	The farmers	The government
+his_great_depression_long	Hard	During the Great Depression, how long could the prize-winning 'dance marathons' last?	Weeks or even months	One whole night	Exactly 24 hours	Up to three days
+his_flooded_boston_neighbourhood	Hard	What flooded a Boston neighbourhood in January 1919, killing 21 people?	A wave of molasses	A wave of beer	Melted chocolate	Whale oil
 his_staged_railway_bombing	Expert	Which staged railway bombing of 1931 gave Japan an excuse to invade Manchuria?	The Mukden Incident	The Marco Polo Bridge Incident	The Shanghai Incident	The Panay Incident
-his_side_generally_said	Expert	Which side is generally said to have won Australia's 'Great Emu War' of 1932?	The emus	The army	The farmers	The government
-his_great_depression_long	Expert	During the Great Depression, how long could the prize-winning 'dance marathons' last?	Weeks or even months	One whole night	Exactly 24 hours	Up to three days
 his_bonus_army_jobless	Expert	What did the 'Bonus Army' of jobless veterans who camped in Washington in 1932 demand?	Early payment of their war bonuses	Free farmland in the West	Jobs building the new highways	A ban on foreign workers
-his_flooded_boston_neighbourhood	Expert	What flooded a Boston neighbourhood in January 1919, killing 21 people?	A wave of molasses	A wave of beer	Melted chocolate	Whale oil
 his_teapot_dome_scandal	Expert	What was the 'Teapot Dome' scandal of the 1920s in the USA about?	Bribes for oil leases	A rigged election	Bootleg whisky	Stolen tea cargoes
+his_germany_italy_japan	Expert	Germany, Italy and Japan all signed the Kellogg-Briand Pact of 1928, which promised to do what?	Give up war as a policy	Share out colonies fairly	Disarm their navies	Cancel all war debts

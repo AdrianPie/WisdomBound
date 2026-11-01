@@ -1,46 +1,45 @@
 # Wielka Brytania krolowej Wiktorii i imperium brytyjskie XIX wieku: od Australii po Indie.
 id	difficulty	prompt	correct	wrong1	wrong2	wrong3
 hx_wiktorianska	Easy	Which British queen gave her name to a whole era of the 1800s?	Victoria	Anne	Mary	Elizabeth I
-his_colony_jewel_crown	Easy	Which colony was called the 'Jewel in the Crown' of the British Empire?	India	Egypt	Canada	Australia
 his_unknown_killer_terrorised	Easy	Which unknown killer terrorised the Whitechapel area of London in 1888?	Jack the Ripper	Sweeney Todd	Spring-heeled Jack	Dr Crippen
 his_colour_queen_victoria	Easy	Which colour did Queen Victoria wear for the forty years of her widowhood?	Black	White	Purple	Grey
 his_raj	Easy	What was 'the Raj'?	British rule over India	An Indian king	A type of curry	A Himalayan railway
 his_victorian_bicycle_huge	Easy	Which Victorian bicycle had a huge front wheel and a tiny back one?	The penny-farthing	The boneshaker	The safety bicycle	The hobby horse
 his_colour_queen_victoria_2	Easy	Which colour did Queen Victoria make fashionable for wedding dresses in 1840?	White	Silver	Pale blue	Gold
-his_victorian_businessman_began	Easy	Which Victorian businessman began the first package tours with a railway trip in 1841?	Thomas Cook	Thomas Lipton	Henry Wells	William Morris
-his_victorian_hansom	Easy	What was a Victorian 'hansom'?	A two-wheeled horse-drawn cab	A gentleman's silk top hat	A steam-powered omnibus	A lady's lace parasol
-his_crinoline_fashionable_1850s	Easy	What was a 'crinoline', fashionable in the 1850s and 1860s?	A hooped frame worn under a skirt	A tight whalebone corset	A frilly lace bonnet	A fur-lined winter cape
 his_cake_jam_between	Easy	Which cake, with jam between two layers of sponge, is named after a British queen?	The Victoria sponge	The Elizabeth roll	The Mary cake	The Anne tart
-his_london_park_great	Easy	In which London park was the Great Exhibition of 1851 held?	Hyde Park	Regent's Park	Green Park	Battersea Park
+his_imperium_slonce	Easy	Which empire was famously said to be 'the empire on which the sun never sets' in the 1800s?	The British Empire	The Ottoman Empire	The Russian Empire	The French Empire
+hy_albert	Easy	What was the name of Queen Victoria's beloved husband?	Prince Albert	Prince Philip	Prince Edward	Prince George
+his_great_london_museum	Easy	Which great London museum of art and design is named after the queen and her husband?	The Victoria and Albert Museum	The British Museum	The Natural History Museum	The Tate Gallery
+wh_wielki_glod_irlandia	Easy	A failed harvest of which crop caused the Great Famine in Ireland in the 1840s?	The potato	Wheat	Oats	Barley
 org_znaczek_kraj	Medium	Which country issued the world's first adhesive postage stamp?	The United Kingdom	France	The United States	Austria
-his_imperium_slonce	Medium	Which empire was famously said to be 'the empire on which the sun never sets' in the 1800s?	The British Empire	The Ottoman Empire	The Russian Empire	The French Empire
-hy_albert	Medium	What was the name of Queen Victoria's beloved husband?	Prince Albert	Prince Philip	Prince Edward	Prince George
 his_ship_found_drifting	Medium	What was the name of the ship found drifting in 1872 with no one aboard?	Mary Celeste	Flying Dutchman	Bounty	Endurance
-his_prime_minister_canada	Medium	Who was the first prime minister of Canada, in 1867?	John A. Macdonald	Wilfrid Laurier	Pierre Trudeau	Lester Pearson
 his_long_queen_victoria	Medium	For about how long did Queen Victoria reign?	63 years	43 years	53 years	73 years
-his_victorian_prime_minister	Medium	Which Victorian prime minister and novelist was a great favourite of the queen?	Benjamin Disraeli	William Gladstone	Lord Palmerston	Robert Peel
 his_disastrous_cavalry_attack	Medium	Which disastrous cavalry attack of the Crimean War was made famous by a Tennyson poem?	The Charge of the Light Brigade	The Charge of the Heavy Brigade	The Thin Red Line	The Ride of the Six Hundred
 his_victorian_workhouses	Medium	What were Victorian 'workhouses'?	Places where the poor toiled for food and a bed	Factories owned and run by the Crown	Prisons that held only debtors	Schools for working children
 his_london_open_1863	Medium	What did London open in 1863, the first in the world?	An underground railway	A public telephone	A traffic light	An electric tram
 his_policemen_britain_nicknamed	Medium	Policemen in Britain are nicknamed 'bobbies' after which founder of the Metropolitan Police?	Robert Peel	Bobby Moore	Robert Walpole	Robert Baden-Powell
 his_christmas_tradition_germany	Medium	Which Christmas tradition from Germany did Prince Albert make popular in Britain?	The Christmas tree	The Advent calendar	Christmas crackers	Christmas cards
 his_celebrations_marked_queen	Medium	Which celebrations marked Queen Victoria's 50th and 60th years on the throne?	Her Golden and Diamond Jubilees	Her Silver and Ruby Jubilees	Her Royal and Grand Jubilees	Her Pearl and Gold Jubilees
-his_great_london_museum	Medium	Which great London museum of art and design is named after the queen and her husband?	The Victoria and Albert Museum	The British Museum	The Natural History Museum	The Tate Gallery
 his_victorian_penny_dreadfuls	Medium	What were Victorian 'penny dreadfuls'?	Cheap and gory adventure stories	Toys sold at fairs	Children's sweets	Bad coins
 his_tea_clipper_launched	Medium	Which famous tea clipper, launched in 1869, is preserved at Greenwich?	The Cutty Sark	The Mary Rose	HMS Victory	The Golden Hind
 his_scottish_castle_river	Medium	Which Scottish castle on the River Dee became the royal family's Highland home in 1852?	Balmoral	Edinburgh Castle	Stirling Castle	Holyrood
 his_year_queen_victoria	Medium	In which year did Queen Victoria die?	1901	1888	1910	1876
-his_children_queen_victoria	Medium	How many children did Queen Victoria have?	Nine	Four	Six	Thirteen
 his_relation_queen_victoria	Medium	What relation was Queen Victoria to Queen Elizabeth II?	Great-great-grandmother	Grandmother	Great-grandmother	Great-aunt
 his_festive_item_sold	Medium	Which festive item was first sold in Britain in 1843, an idea of Henry Cole?	The Christmas card	The Christmas cracker	The Advent calendar	The Christmas stocking
 his_old_victoria_she	Medium	How old was Victoria when she became queen in 1837?	18	12	25	31
-his_duchess_credited_starting	Medium	Which duchess is credited with starting the fashion for afternoon tea in the 1840s?	The Duchess of Bedford	The Duchess of Kent	The Duchess of Devonshire	The Duchess of Sutherland
-his_london_police_headquarters	Medium	Why was London's police headquarters, opened in 1829, called 'Scotland Yard'?	A street of that name ran behind it	Its first chief came from Edinburgh	It was built on land owned by Scots	It housed Scottish soldiers before
 his_queen_victoria_husband	Medium	How were Queen Victoria and her husband related before they married?	They were first cousins	They were not related at all	He was her uncle by marriage	They were second cousins
-wh_wielki_glod_irlandia	Hard	A failed harvest of which crop caused the Great Famine in Ireland in the 1840s?	The potato	Wheat	Oats	Barley
+his_colony_jewel_crown	Medium	Which colony was called the 'Jewel in the Crown' of the British Empire?	India	Egypt	Canada	Australia
+his_victorian_businessman_began	Medium	Which Victorian businessman began the first package tours with a railway trip in 1841?	Thomas Cook	Thomas Lipton	Henry Wells	William Morris
+his_victorian_hansom	Medium	What was a Victorian 'hansom'?	A two-wheeled horse-drawn cab	A gentleman's silk top hat	A steam-powered omnibus	A lady's lace parasol
+his_crinoline_fashionable_1850s	Medium	What was a 'crinoline', fashionable in the 1850s and 1860s?	A hooped frame worn under a skirt	A tight whalebone corset	A frilly lace bonnet	A fur-lined winter cape
+his_london_park_great	Medium	In which London park was the Great Exhibition of 1851 held?	Hyde Park	Regent's Park	Green Park	Battersea Park
+hx_wiktoria_indie	Medium	Which extra title did Queen Victoria take in 1876?	Empress of India	Queen of Canada	Empress of China	Queen of Egypt
+his_british_officers_india	Medium	Why did British officers in India drink tonic water?	Its quinine fought malaria	It purified dirty water	It cured seasickness	It kept them awake on duty
+his_city_queen_victoria	Medium	Which city did Queen Victoria choose as the capital of Canada in 1857?	Ottawa	Toronto	Montreal	Quebec City
+his_poison_made_fashionable	Medium	Which poison made the fashionable green wallpapers of Victorian homes dangerous?	Arsenic	Mercury	Lead	Cyanide
+his_cleopatra_needle_set	Medium	What is 'Cleopatra's Needle', set up on London's Thames Embankment in 1878?	An ancient Egyptian obelisk	A Roman bronze statue	A Victorian clock tower	A Greek marble column
+hx_babcia_europy	Medium	Why was Queen Victoria nicknamed 'the grandmother of Europe'?	Her grandchildren wore many crowns	She ruled most of Europe	She lived to be 100	She founded the Red Cross
 org_bojkot_nazwisko	Hard	The word 'boycott' comes from what?	A land agent's surname	An Irish village	A trade union slogan	A Dutch verb
-hx_wiktoria_indie	Hard	Which extra title did Queen Victoria take in 1876?	Empress of India	Queen of Canada	Empress of China	Queen of Egypt
-his_british_officers_india	Hard	Why did British officers in India drink tonic water?	Its quinine fought malaria	It purified dirty water	It cured seasickness	It kept them awake on duty
 his_liberal_politician_prime	Hard	Which Liberal politician was prime minister four times under Queen Victoria?	William Gladstone	Benjamin Disraeli	Lord Salisbury	Lord Melbourne
 his_british_law_1832	Hard	Which British law of 1832 gave the vote to more men and abolished 'rotten boroughs'?	The Great Reform Act	The Factory Act	The Poor Law	The Corn Laws
 his_jamaican_born_nurse	Hard	Which Jamaican-born nurse ran a 'British Hotel' for sick soldiers in the Crimean War?	Mary Seacole	Florence Nightingale	Edith Cavell	Elizabeth Fry
@@ -50,21 +49,22 @@ his_engineer_built_london	Hard	Which engineer built London's great sewer network
 his_prime_minister_repealed	Hard	Which prime minister repealed the Corn Laws in 1846, splitting his party?	Robert Peel	Benjamin Disraeli	William Gladstone	Lord Palmerston
 his_house_isle_wight	Hard	Which house on the Isle of Wight was Queen Victoria's favourite home, where she died?	Osborne House	Sandringham House	Balmoral Castle	Windsor Castle
 his_scottish_servant_became	Hard	Which Scottish servant became Queen Victoria's close companion after Albert's death?	John Brown	Abdul Karim	Robert Burns	James Watt
-his_novelist_while_working	Hard	Which famous novelist, while working for the Post Office, helped bring red pillar boxes to Britain?	Anthony Trollope	Charles Dickens	Thomas Hardy	Wilkie Collins
 his_black_gemstone_whitby	Hard	Which black gemstone from Whitby became the fashion for Victorian mourning jewellery?	Jet	Onyx	Obsidian	Black pearl
-his_city_queen_victoria	Hard	Which city did Queen Victoria choose as the capital of Canada in 1857?	Ottawa	Toronto	Montreal	Quebec City
 his_queen_victoria_real	Hard	What was Queen Victoria's real first name?	Alexandrina	Charlotte	Augusta	Adelaide
-his_poison_made_fashionable	Hard	Which poison made the fashionable green wallpapers of Victorian homes dangerous?	Arsenic	Mercury	Lead	Cyanide
-his_british_foreign_secretary_2	Hard	Which British foreign secretary sent the fleet to Greece in 1850 to back a single merchant's claim for damages?	Lord Palmerston	Lord Aberdeen	Lord Salisbury	Lord John Russell
 his_festive_novelty_london	Hard	Which festive novelty did the London sweet-maker Tom Smith invent in the 1840s?	The Christmas cracker	The Advent calendar	The candy cane	The Christmas stocking
-his_cleopatra_needle_set	Hard	What is 'Cleopatra's Needle', set up on London's Thames Embankment in 1878?	An ancient Egyptian obelisk	A Roman bronze statue	A Victorian clock tower	A Greek marble column
-hx_babcia_europy	Expert	Why was Queen Victoria nicknamed 'the grandmother of Europe'?	Her grandchildren wore many crowns	She ruled most of Europe	She lived to be 100	She founded the Red Cross
+his_prime_minister_canada	Hard	Who was the first prime minister of Canada, in 1867?	John A. Macdonald	Wilfrid Laurier	Pierre Trudeau	Lester Pearson
+his_victorian_prime_minister	Hard	Which Victorian prime minister and novelist was a great favourite of the queen?	Benjamin Disraeli	William Gladstone	Lord Palmerston	Robert Peel
+his_children_queen_victoria	Hard	How many children did Queen Victoria have?	Nine	Four	Six	Thirteen
+his_duchess_credited_starting	Hard	Which duchess is credited with starting the fashion for afternoon tea in the 1840s?	The Duchess of Bedford	The Duchess of Kent	The Duchess of Devonshire	The Duchess of Sutherland
+his_london_police_headquarters	Hard	Why was London's police headquarters, opened in 1829, called 'Scotland Yard'?	A street of that name ran behind it	Its first chief came from Edinburgh	It was built on land owned by Scots	It housed Scottish soldiers before
+his_prince_albert_death	Hard	Prince Albert's death in 1861 was officially blamed on which disease?	Typhoid fever	Cholera	Smallpox	Tuberculosis
+his_giant_elephant_london	Hard	Which giant elephant at London Zoo was sold to P. T. Barnum in 1882, to a great public outcry?	Jumbo	Chunee	Hannibal	Tusko
 his_indian_servant_became	Expert	Which Indian servant became Queen Victoria's beloved teacher, known as 'the Munshi'?	Abdul Karim	Duleep Singh	Ram Singh	Dadabhai Naoroji
 his_pteridomania_victorian_craze	Expert	What was 'pteridomania', a Victorian craze?	Collecting ferns	Breeding canaries	Collecting seashells	Keeping goldfish
 his_according_tradition_bronze	Expert	According to tradition, the bronze for Victoria Cross medals comes from what?	Russian guns captured in the Crimea	Melted coins of George III	The bells of a London church	Old cannon of the Tower of London
 his_nickname_given_south	Expert	What nickname was given to the South Kensington district of museums paid for by the Great Exhibition's profits?	Albertopolis	Victoriaville	Prince's Quarter	Crystal City
-his_prince_albert_death	Expert	Prince Albert's death in 1861 was officially blamed on which disease?	Typhoid fever	Cholera	Smallpox	Tuberculosis
 his_favourite_hobby_victorian	Expert	What was the favourite hobby of the Victorian statesman William Gladstone?	Felling trees with an axe	Collecting Chinese porcelain	Breeding racing pigeons	Climbing Alpine peaks
-his_giant_elephant_london	Expert	Which giant elephant at London Zoo was sold to P. T. Barnum in 1882, to a great public outcry?	Jumbo	Chunee	Hannibal	Tusko
 his_1859_until_red	Expert	From 1859 until red became the rule in 1874, what colour were Britain's pillar boxes painted?	Green	Blue	Black	Yellow
 his_roughly_attempts_life	Expert	Roughly how many attempts on her life did Queen Victoria survive?	About eight	Just one	About thirty	Over a hundred
+his_novelist_while_working	Expert	Which famous novelist, while working for the Post Office, helped bring red pillar boxes to Britain?	Anthony Trollope	Charles Dickens	Thomas Hardy	Wilkie Collins
+his_british_foreign_secretary_2	Expert	Which British foreign secretary sent the fleet to Greece in 1850 to back a single merchant's claim for damages?	Lord Palmerston	Lord Aberdeen	Lord Salisbury	Lord John Russell

@@ -2,65 +2,57 @@
 id	difficulty	prompt	correct	wrong1	wrong2	wrong3
 his_south_american_country	Easy	Which South American country is named after Simon Bolivar?	Bolivia	Venezuela	Colombia	Ecuador
 his_european_country_latin	Easy	From which European country did most of Latin America win independence in the 1800s?	Spain	Portugal	France	Britain
-his_simon_bolivar_nickname	Easy	What was Simon Bolivar's famous nickname?	The Liberator	The Conqueror	The Great	The Lion
-his_modern_country_simon	Easy	In which modern country was Simon Bolivar born?	Venezuela	Bolivia	Colombia	Spain
-his_cowboys_argentine_pampas	Easy	What were the cowboys of the Argentine pampas called?	Gauchos	Vaqueros	Llaneros	Charros
 his_crop_made_brazil	Easy	Which crop had made Brazil the world's biggest producer of it by the mid-1800s?	Coffee	Cocoa	Tobacco	Cotton
-his_bitter_herbal_drink	Easy	Which bitter herbal drink, sipped through a metal straw from a gourd, was the gauchos' favourite?	Mate	Pisco	Tequila	Horchata
-his_venezuela_currency	Easy	Venezuela's currency is named after whom?	Simon Bolivar	Francisco de Miranda	Jose de San Martin	Antonio Jose de Sucre
-his_roughly_territory_mexico	Easy	Roughly how much of its territory did Mexico lose to the United States by 1848?	About half	About a tenth	About a quarter	Almost all
-his4_simon_bolivar	Medium	Simon Bolivar is known for liberating which continent's colonies?	South America	Africa	Southeast Asia	Central Europe
-his_argentine_general_crossed	Medium	Which Argentine general crossed the Andes to free Chile and Peru from Spain?	Jose de San Martin	Simon Bolivar	Bernardo O'Higgins	Antonio Jose de Sucre
-his_date_mexico_celebrate	Medium	On which date does Mexico celebrate its Independence Day?	16 September	5 May	4 July	12 October
+his4_simon_bolivar	Easy	Simon Bolivar is known for liberating which continent's colonies?	South America	Africa	Southeast Asia	Central Europe
 his_cinco_mayo_celebrate	Medium	What does 'Cinco de Mayo' celebrate?	A Mexican victory over France in 1862	Mexico's independence from Spain	The end of the Mexican Revolution	The founding of Mexico City
-his_mexican_general_besieged	Medium	Which Mexican general besieged the Alamo and later lost Texas?	Antonio Lopez de Santa Anna	Pancho Villa	Porfirio Diaz	Benito Juarez
-his_mexican_revolutionary_fought	Medium	Which Mexican revolutionary fought under the slogan 'Land and Liberty'?	Emiliano Zapata	Pancho Villa	Porfirio Diaz	Francisco Madero
-his_declared_brazil_independent	Medium	Who declared Brazil independent from Portugal in 1822 and became its first emperor?	Pedro I	Pedro II	Joao VI	Maximilian
 his_policy_1823_warned	Medium	Which US policy of 1823 warned European powers to stay out of the Americas?	The Monroe Doctrine	The Truman Doctrine	The Open Door Policy	Manifest Destiny
-his_country_panama_break	Medium	From which country did Panama break away in 1903, with US backing?	Colombia	Mexico	Costa Rica	Venezuela
-his_mexican_dictator_ruled	Medium	Which Mexican dictator ruled for more than 30 years until the revolution of 1910?	Porfirio Diaz	Santa Anna	Benito Juarez	Pancho Villa
-his_south_american_emperor	Medium	Which South American emperor was deposed in 1889 and died in exile in Paris?	Pedro II	Pedro I	Joao VI	Maximilian
 his_caribbean_country_usa	Medium	Which Caribbean country did the USA occupy after the Spanish-American War, until 1902?	Cuba	Jamaica	Haiti	The Bahamas
 his_bird_droppings_dug	Medium	Which bird droppings, dug from coastal islands, made Peru rich in the 1800s?	Guano	Chalk	Amber	Ash
-his_mexican_general_santa	Medium	What did Mexican general Santa Anna give a full military funeral in 1842?	His own amputated leg	His favourite horse	A captured Texan flag	A fighting cockerel
 his_panama_hat_actually	Medium	The 'Panama hat' actually comes from which country?	Ecuador	Peru	Colombia	Cuba
-his_short_lived_republic	Medium	What was the short-lived republic Bolivar formed from today's Colombia, Venezuela, Ecuador and Panama?	Gran Colombia	New Granada	The Andean Union	Greater Venezuela
 his_country_became_world	Medium	Which country became the world's first Black-led republic, in 1804?	Haiti	Liberia	Jamaica	Ethiopia
-his_france_force_haiti	Medium	What did France force Haiti to pay in 1825 in return for recognising its independence?	A huge 'independence debt'	A yearly tribute of sugar	Half of all its land	Its whole navy
 his_sparked_pastry_war	Medium	What sparked the 'Pastry War' between France and Mexico in 1838?	A French baker's claim for damages	A tax on French bread and cakes	A Mexican insult to the French king	A duel between two rival chefs
 his_italian_patriot_earned	Medium	Which Italian patriot earned the title 'Hero of Two Worlds' by first fighting in Brazil and Uruguay?	Giuseppe Garibaldi	Giuseppe Mazzini	Count Cavour	Nino Bixio
-his_french_ruler_sent	Medium	Which French ruler sent an army to conquer Mexico in the 1860s?	Napoleon III	Louis Philippe	Adolphe Thiers	Charles X
-his_country_dominican_republic	Medium	From which country did the Dominican Republic win its independence in 1844?	Haiti	Spain	France	The USA
-his_young_simon_bolivar	Medium	What did the young Simon Bolivar swear on a hill in Rome in 1805?	To free his homeland from Spain	To become a Catholic priest	To marry his childhood sweetheart	To never return to Venezuela
-his_adelitas_mexican_revolution	Medium	Who were the 'Adelitas' of the Mexican Revolution?	Women who fought and marched with the armies	Nuns who nursed the wounded in the cities	Rich ladies who funded Pancho Villa	Peasant girls who carried messages for spies
 his_halls_montezuma_marines	Medium	The 'Halls of Montezuma' in the US Marines' Hymn recall the storming of which city in 1847?	Mexico City	Monterrey	Puebla	Tampico
-his_south_american_emperor_2	Medium	Which South American emperor tried Alexander Graham Bell's telephone in 1876 and is said to have exclaimed 'My God, it talks!'?	Pedro II of Brazil	Maximilian of Mexico	Pedro I of Brazil	Agustin I of Mexico
-his_present_day_country_6	Medium	In which present-day country did Simon Bolivar die in 1830?	Colombia	Venezuela	Bolivia	Peru
-his4_rewolucja_haiti	Hard	Haiti's revolution is notable as the first successful large-scale revolt of which group?	Enslaved people	Colonial merchants	Indigenous nobility	Naval officers
-his_mexican_revolutionary_general	Hard	Which Mexican revolutionary general led a raid into the United States in 1916?	Pancho Villa	Emiliano Zapata	Benito Juarez	Porfirio Diaz
+his_venezuela_currency	Medium	Venezuela's currency is named after whom?	Simon Bolivar	Francisco de Miranda	Jose de San Martin	Antonio Jose de Sucre
+his_simon_bolivar_nickname	Medium	What was Simon Bolivar's famous nickname?	The Liberator	The Conqueror	The Great	The Lion
+his_modern_country_simon	Medium	In which modern country was Simon Bolivar born?	Venezuela	Bolivia	Colombia	Spain
+his_cowboys_argentine_pampas	Medium	What were the cowboys of the Argentine pampas called?	Gauchos	Vaqueros	Llaneros	Charros
+his_bitter_herbal_drink	Medium	Which bitter herbal drink, sipped through a metal straw from a gourd, was the gauchos' favourite?	Mate	Pisco	Tequila	Horchata
+his4_rewolucja_haiti	Medium	Haiti's revolution is notable as the first successful large-scale revolt of which group?	Enslaved people	Colonial merchants	Indigenous nobility	Naval officers
+his_mexican_revolutionary_general	Medium	Which Mexican revolutionary general led a raid into the United States in 1916?	Pancho Villa	Emiliano Zapata	Benito Juarez	Porfirio Diaz
+hx_rio_portugalia	Medium	Which European country moved its royal court to Brazil in 1808, fleeing Napoleon?	Portugal	Spain	France	The Netherlands
+hx_toussaint	Medium	Which former slave became the best-known leader of the Haitian Revolution?	Toussaint Louverture	Francois Mackandal	Simon Bolivar	Jose de San Martin
 his_mexican_priest_cry	Hard	Which Mexican priest's 'Cry of Dolores' in 1810 began Mexico's war of independence?	Miguel Hidalgo	Jose Maria Morelos	Benito Juarez	Agustin de Iturbide
 his_mexican_president_born	Hard	Which Mexican president, born a Zapotec, led the fight against the French?	Benito Juarez	Porfirio Diaz	Santa Anna	Venustiano Carranza
 his_country_bernardo_higgins	Hard	Which country did Bernardo O'Higgins lead to independence?	Chile	Peru	Argentina	Uruguay
-his_war_1864_1870	Hard	Which war of 1864-1870 killed a huge share of Paraguay's people?	The War of the Triple Alliance	The War of the Pacific	The Chaco War	The Cisplatine War
 his_war_1879_1884	Hard	Which war of 1879-1884 cost Bolivia its coastline?	The War of the Pacific	The Chaco War	The War of the Triple Alliance	The Football War
 his_year_brazil_abolish	Hard	In which year did Brazil abolish slavery, the last country in the Americas to do so?	1888	1822	1850	1865
 his_cuban_poet_national	Hard	Which Cuban poet and national hero died fighting Spain in 1895?	Jose Marti	Fidel Castro	Antonio Maceo	Carlos Manuel de Cespedes
-his_venezuelan_general_won	Hard	Which Venezuelan general won the decisive Battle of Ayacucho in 1824?	Antonio Jose de Sucre	Simon Bolivar	Jose de San Martin	Francisco de Miranda
-his_country_uruguay_win	Hard	From which country did Uruguay win its independence in 1828?	Brazil	Spain	Argentina	Portugal
-his_general_crowned_himself	Hard	Which general crowned himself the first emperor of independent Mexico in 1822?	Agustin de Iturbide	Santa Anna	Benito Juarez	Miguel Hidalgo
-his_princess_signed_brazil	Hard	Which princess signed Brazil's 'Golden Law' that abolished slavery in 1888?	Isabel	Leopoldina	Maria	Teresa Cristina
 his_city_deep_amazon	Hard	Which city deep in the Amazon rainforest built a grand opera house in 1896 with riches from rubber?	Manaus	Iquitos	Leticia	Cuiaba
 his_ninos_heroes_honoured	Hard	Who were the 'Ninos Heroes' honoured in Mexico?	Young cadets who died defending Mexico City	Boy soldiers of Pancho Villa's army	Children who fled the Spanish conquest	Orphans who fought the French at Puebla
-his_woman_simon_bolivar	Hard	Which woman, Simon Bolivar's lover, saved him from assassins in 1828 by helping him escape through a window?	Manuela Saenz	Juana Azurduy	Policarpa Salavarrieta	Leona Vicario
 his_chile_war_1879	Hard	Chile's war of 1879-1884 against Peru and Bolivia was fought largely over deposits of what?	Nitrates	Silver	Copper	Tin
 his_german_scientist_travels	Hard	Which German scientist, whose travels through Latin America began in 1799, did Bolivar reportedly call the true discoverer of South America?	Alexander von Humboldt	Johann von Spix	Carl von Martius	Georg Forster
 his_san_patricios_fought	Hard	Who were the San Patricios, who fought for Mexico against the USA in 1846-1848?	Mostly Irish deserters from the US army	Mexican priests who led peasant troops	Spanish veterans hired by Santa Anna	Escaped slaves from Texas plantations
 his_mexican_revolutionary_signed	Hard	Which Mexican revolutionary signed a contract with an American film company in 1914 to let it film his battles?	Pancho Villa	Emiliano Zapata	Venustiano Carranza	Alvaro Obregon
-his_haitian_king_built	Hard	Which Haitian king built the huge mountaintop fortress called the Citadelle?	Henri Christophe	Toussaint Louverture	Jean-Jacques Dessalines	Alexandre Petion
-hx_brazylia_cesarstwo	Expert	Which country in the Americas was ruled by its own emperors until 1889?	Brazil	Mexico	Argentina	Peru
-hx_rio_portugalia	Expert	Which European country moved its royal court to Brazil in 1808, fleeing Napoleon?	Portugal	Spain	France	The Netherlands
-hx_toussaint	Expert	Which former slave became the best-known leader of the Haitian Revolution?	Toussaint Louverture	Francois Mackandal	Simon Bolivar	Jose de San Martin
-hw_maksymilian	Expert	Which Austrian archduke was made Emperor of Mexico in 1864, and later executed?	Maximilian	Franz Joseph	Rudolf	Leopold
+his_roughly_territory_mexico	Hard	Roughly how much of its territory did Mexico lose to the United States by 1848?	About half	About a tenth	About a quarter	Almost all
+his_argentine_general_crossed	Hard	Which Argentine general crossed the Andes to free Chile and Peru from Spain?	Jose de San Martin	Simon Bolivar	Bernardo O'Higgins	Antonio Jose de Sucre
+his_date_mexico_celebrate	Hard	On which date does Mexico celebrate its Independence Day?	16 September	5 May	4 July	12 October
+his_mexican_general_besieged	Hard	Which Mexican general besieged the Alamo and later lost Texas?	Antonio Lopez de Santa Anna	Pancho Villa	Porfirio Diaz	Benito Juarez
+his_mexican_revolutionary_fought	Hard	Which Mexican revolutionary fought under the slogan 'Land and Liberty'?	Emiliano Zapata	Pancho Villa	Porfirio Diaz	Francisco Madero
+his_declared_brazil_independent	Hard	Who declared Brazil independent from Portugal in 1822 and became its first emperor?	Pedro I	Pedro II	Joao VI	Maximilian
+his_country_panama_break	Hard	From which country did Panama break away in 1903, with US backing?	Colombia	Mexico	Costa Rica	Venezuela
+his_mexican_dictator_ruled	Hard	Which Mexican dictator ruled for more than 30 years until the revolution of 1910?	Porfirio Diaz	Santa Anna	Benito Juarez	Pancho Villa
+his_south_american_emperor	Hard	Which South American emperor was deposed in 1889 and died in exile in Paris?	Pedro II	Pedro I	Joao VI	Maximilian
+his_mexican_general_santa	Hard	What did Mexican general Santa Anna give a full military funeral in 1842?	His own amputated leg	His favourite horse	A captured Texan flag	A fighting cockerel
+his_short_lived_republic	Hard	What was the short-lived republic Bolivar formed from today's Colombia, Venezuela, Ecuador and Panama?	Gran Colombia	New Granada	The Andean Union	Greater Venezuela
+his_france_force_haiti	Hard	What did France force Haiti to pay in 1825 in return for recognising its independence?	A huge 'independence debt'	A yearly tribute of sugar	Half of all its land	Its whole navy
+his_french_ruler_sent	Hard	Which French ruler sent an army to conquer Mexico in the 1860s?	Napoleon III	Louis Philippe	Adolphe Thiers	Charles X
+his_country_dominican_republic	Hard	From which country did the Dominican Republic win its independence in 1844?	Haiti	Spain	France	The USA
+his_young_simon_bolivar	Hard	What did the young Simon Bolivar swear on a hill in Rome in 1805?	To free his homeland from Spain	To become a Catholic priest	To marry his childhood sweetheart	To never return to Venezuela
+his_adelitas_mexican_revolution	Hard	Who were the 'Adelitas' of the Mexican Revolution?	Women who fought and marched with the armies	Nuns who nursed the wounded in the cities	Rich ladies who funded Pancho Villa	Peasant girls who carried messages for spies
+his_south_american_emperor_2	Hard	Which South American emperor tried Alexander Graham Bell's telephone in 1876 and is said to have exclaimed 'My God, it talks!'?	Pedro II of Brazil	Maximilian of Mexico	Pedro I of Brazil	Agustin I of Mexico
+his_present_day_country_6	Hard	In which present-day country did Simon Bolivar die in 1830?	Colombia	Venezuela	Bolivia	Peru
+hw_maksymilian	Hard	Which Austrian archduke was made Emperor of Mexico in 1864, and later executed?	Maximilian	Franz Joseph	Rudolf	Leopold
 his_venezuelan_precursor_fought	Expert	Which Venezuelan, called 'the Precursor', fought for independence before Bolivar?	Francisco de Miranda	Antonio Jose de Sucre	Jose Antonio Paez	Rafael Urdaneta
 his_haitian_leader_crowned	Expert	Which Haitian leader crowned himself emperor in 1804?	Jean-Jacques Dessalines	Toussaint Louverture	Henri Christophe	Alexandre Petion
 his_argentine_strongman_ruled	Expert	Which Argentine strongman ruled Buenos Aires province with an iron hand from 1829 to 1852?	Juan Manuel de Rosas	Juan Peron	Domingo Sarmiento	Bartolome Mitre
@@ -68,3 +60,10 @@ his_chilean_naval_hero	Expert	Which Chilean naval hero died boarding an enemy ir
 his_american_adventurer_made	Expert	Which American adventurer made himself president of Nicaragua in 1856?	William Walker	Sam Houston	John Fremont	Davy Crockett
 his_paraguayan_dictator_led	Expert	Which Paraguayan dictator led his country into the disastrous War of the Triple Alliance?	Francisco Solano Lopez	Alfredo Stroessner	Jose Gaspar de Francia	Carlos Antonio Lopez
 his_scottish_admiral_commanded	Expert	Which Scottish admiral commanded the navies of Chile and then Brazil in their wars of independence?	Thomas Cochrane	William Brown	Edward Codrington	Sidney Smith
+his_war_1864_1870	Expert	Which war of 1864-1870 killed a huge share of Paraguay's people?	The War of the Triple Alliance	The War of the Pacific	The Chaco War	The Cisplatine War
+his_venezuelan_general_won	Expert	Which Venezuelan general won the decisive Battle of Ayacucho in 1824?	Antonio Jose de Sucre	Simon Bolivar	Jose de San Martin	Francisco de Miranda
+his_country_uruguay_win	Expert	From which country did Uruguay win its independence in 1828?	Brazil	Spain	Argentina	Portugal
+his_general_crowned_himself	Expert	Which general crowned himself the first emperor of independent Mexico in 1822?	Agustin de Iturbide	Santa Anna	Benito Juarez	Miguel Hidalgo
+his_woman_simon_bolivar	Expert	Which woman, Simon Bolivar's lover, saved him from assassins in 1828 by helping him escape through a window?	Manuela Saenz	Juana Azurduy	Policarpa Salavarrieta	Leona Vicario
+his_haitian_king_built	Expert	Which Haitian king built the huge mountaintop fortress called the Citadelle?	Henri Christophe	Toussaint Louverture	Jean-Jacques Dessalines	Alexandre Petion
+his_princess_signed_brazil	Expert	Which princess signed Brazil's 'Golden Law', which abolished slavery?	Isabel	Leopoldina	Maria	Teresa Cristina

@@ -3,11 +3,11 @@ id	difficulty	prompt	correct	wrong1	wrong2	wrong3
 his_kind_engine_powered	Easy	Which kind of engine powered the factories and trains of the Industrial Revolution?	The steam engine	The petrol engine	The electric motor	The jet engine
 his_fuel_dug_mines	Easy	Which fuel, dug from mines, powered the Industrial Revolution?	Coal	Oil	Natural gas	Peat
 his_plant_fibre_spun	Easy	Which plant fibre was spun into thread in the great mills of Lancashire?	Cotton	Wool	Silk	Linen
-his_novelist_worked_shoe	Easy	Which famous novelist worked in a shoe-polish factory at the age of 12?	Charles Dickens	Thomas Hardy	Anthony Trollope	George Eliot
 his_steam_engines_usually	Easy	Before steam engines, what usually drove the machines in the very first textile mills?	Water wheels	Windmills	Clockwork	Hand cranks
-his_raincoat_scottish_chemist	Easy	Which raincoat is named after the Scottish chemist who patented a waterproof fabric in 1823?	The mackintosh	The trench coat	The duffle coat	The anorak
-his_william_blake_poem	Easy	In William Blake's poem, now sung as the hymn 'Jerusalem', what are the 'dark Satanic' buildings?	Mills	Prisons	Churches	Mines
 his_age_factories_cloth	Easy	Before the age of factories, where was most cloth in Britain spun and woven?	In people's own homes	In monasteries	In royal workshops	In army barracks
+his_carmaker_brought_moving	Easy	Which carmaker brought the moving assembly line to car factories in 1913?	Henry Ford	Karl Benz	Louis Renault	Ransom Olds
+his_unit_steam_engine	Easy	Which unit did a steam-engine maker invent to compare his machines with the animals they replaced?	Horsepower	Foot-pound	Manpower	Mule-load
+his2_rewolucja_przemyslowa	Easy	In which country did the Industrial Revolution begin?	The United Kingdom	Germany	France	The USA
 org_cola_lek	Medium	Coca-Cola was first sold at pharmacy counters as a remedy for what?	Headaches	Sore throats	Insomnia	Toothache
 his_scottish_engineer_made	Medium	Which Scottish engineer made the steam engine far more efficient in the 1760s and 1770s?	James Watt	George Stephenson	Thomas Newcomen	Richard Trevithick
 his_built_rocket_locomotive	Medium	Who built the famous 'Rocket' locomotive that won the Rainhill Trials in 1829?	George and Robert Stephenson	James Watt and his son	Isambard Kingdom Brunel	Richard Trevithick
@@ -19,51 +19,47 @@ his_glass_iron_building	Medium	In which glass and iron building was the Great Ex
 his_cotton_gin_1793	Medium	Whose cotton gin of 1793 made cotton farming, and slavery, boom in the American South?	Eli Whitney	Samuel Colt	Cyrus McCormick	Robert Fulton
 his_city_largest_world	Medium	Which city was the largest in the world for much of the 1800s?	London	Paris	New York	Beijing
 his_roughly_hours_day	Medium	Roughly how many hours a day did many early factory workers labour?	12 to 14	6 to 8	8 to 10	18 to 20
-his_carmaker_brought_moving	Medium	Which carmaker brought the moving assembly line to car factories in 1913?	Henry Ford	Karl Benz	Louis Renault	Ransom Olds
-his_disease_spread_dirty	Medium	Which disease, spread by dirty water, did John Snow trace to a London water pump in 1854?	Cholera	Typhus	Smallpox	The plague
-his_rainhill_trials_1829	Medium	What were the Rainhill Trials of 1829?	A contest to find the best locomotive	A court case against factory owners	A race between canal boats	Tests of the first steam ship
-his_chocolate_makers_built	Medium	Which chocolate makers built the model village of Bournville for their workers?	The Cadburys	The Frys	The Rowntrees	The Hersheys
 his_american_city_became	Medium	Which American city became known as 'the Steel City'?	Pittsburgh	Detroit	Chicago	Cleveland
 his_scottish_born_steel	Medium	Which Scottish-born steel tycoon gave away most of his fortune, building over 2,500 libraries?	Andrew Carnegie	John D. Rockefeller	Cornelius Vanderbilt	J. P. Morgan
 his_american_founded_standard	Medium	Which American founded the Standard Oil company in 1870?	John D. Rockefeller	Andrew Carnegie	Henry Ford	J. P. Morgan
-his_mudlarks_victorian_london	Medium	Who were the 'mudlarks' of Victorian London?	Children who scavenged in the Thames mud	Workers who built the sewers	Boys who swept chimneys	Girls who sold flowers
 his_american_turned_sewing	Medium	Which American turned the sewing machine into a household item in the 1850s?	Isaac Singer	Elias Howe	Thomas Edison	Samuel Colt
 his_forced_towns_across	Medium	What forced towns across Britain to adopt one standard time in the 1840s?	Railway timetables	Factory shift work	Steamship sailings	Church services
 his_new_kind_lighting	Medium	What new kind of lighting spread through London's streets from the 1810s?	Gas lamps	Electric arc lamps	Paraffin lamps	Limelight
-his_dangerous_job_small	Medium	What dangerous job did small children called 'scavengers' do in cotton mills?	Crawled under machines to clear fluff	Carried coal to the boilers	Climbed chimneys to sweep them	Oiled the moving belts
-his_coal_miners_take	Medium	Why did coal miners take canaries down the pits with them?	To warn them of poisonous gas	To keep away the rats	For good luck underground	To keep them company
-his_unit_steam_engine	Medium	Which unit did a steam-engine maker invent to compare his machines with the animals they replaced?	Horsepower	Foot-pound	Manpower	Mule-load
-his_labourers_dug_britain	Medium	Why were the labourers who dug Britain's canals and railways called 'navvies'?	It was short for 'navigators'	They came from the navy	They wore navy-blue coats	It was Irish for 'diggers'
-his_kodak_slogan_1888	Medium	How did Kodak's famous slogan of 1888 end: 'You press the button...'?	'...we do the rest'	'...the camera smiles'	'...and the past is yours'	'...time stands still'
 his_american_accidental_spill	Medium	Which American's accidental spill onto a hot stove in 1839 is said to have led to tough, weatherproof rubber?	Charles Goodyear	Harvey Firestone	John Dunlop	Charles Macintosh
-his2_rewolucja_przemyslowa	Hard	In which country did the Industrial Revolution begin?	The United Kingdom	Germany	France	The USA
-org_denim_nimes	Hard	Which fabric takes its name from the French city of Nimes?	Denim	Chiffon	Tweed	Satin
-hx_luddysci	Hard	What were the Luddites of early 1800s England famous for?	Smashing weaving machines	Burning down banks	Stealing steam engines	Refusing to pay taxes
-his_alarm_clocks_common	Hard	Before alarm clocks were common, what did a 'knocker-upper' do?	Tapped on windows to wake people	Collected rent from tenants	Lit the street lamps at night	Called out the news in town
+his_novelist_worked_shoe	Medium	Which famous novelist worked in a shoe-polish factory at the age of 12?	Charles Dickens	Thomas Hardy	Anthony Trollope	George Eliot
+his_raincoat_scottish_chemist	Medium	Which raincoat is named after the Scottish chemist who patented a waterproof fabric in 1823?	The mackintosh	The trench coat	The duffle coat	The anorak
+his_william_blake_poem	Medium	In William Blake's poem, now sung as the hymn 'Jerusalem', what are the 'dark Satanic' buildings?	Mills	Prisons	Churches	Mines
+org_denim_nimes	Medium	Which fabric takes its name from the French city of Nimes?	Denim	Chiffon	Tweed	Satin
+hx_luddysci	Medium	What were the Luddites of early 1800s England famous for?	Smashing weaving machines	Burning down banks	Stealing steam engines	Refusing to pay taxes
+his_alarm_clocks_common	Medium	Before alarm clocks were common, what did a 'knocker-upper' do?	Tapped on windows to wake people	Collected rent from tenants	Lit the street lamps at night	Called out the news in town
+his_british_law_1833	Medium	Which British law of 1833 banned children under nine from working in textile mills?	The Factory Act	The Poor Law	The Reform Act	The Corn Laws
+his_invention_edmund_cartwright	Medium	Which invention by Edmund Cartwright brought machines to weaving in the 1780s?	The power loom	The spinning mule	The cotton gin	The steam hammer
+his_london_great_stink	Medium	What was London's 'Great Stink' of 1858?	The Thames reeking of sewage in a hot summer	A fire at a soap factory	A fog of coal smoke	A strike of rubbish collectors
 his_line_opened_1825	Hard	Which line, opened in 1825, was the world's first public railway to use steam locomotives?	The Stockton and Darlington	The Liverpool and Manchester	The Great Western	The London and Birmingham
 his_water_powered_spinning	Hard	Which water-powered spinning machine did Richard Arkwright patent in 1769?	The water frame	The spinning jenny	The flying shuttle	The spinning mule
 his_english_river_spanned	Hard	Which English river is spanned by the world's first iron bridge, built in 1779?	The Severn	The Thames	The Mersey	The Tyne
-his_british_law_1833	Hard	Which British law of 1833 banned children under nine from working in textile mills?	The Factory Act	The Poor Law	The Reform Act	The Corn Laws
-his_bessemer_process_invented	Hard	What did the Bessemer process, invented in 1856, make cheaply for the first time?	Steel	Glass	Rubber	Paper
 his_potter_built_factory	Hard	Which potter built a famous factory and gave his name to blue-and-white jasperware?	Josiah Wedgwood	Josiah Spode	Thomas Minton	William Morris
 his_mill_owner_built	Hard	Which mill owner built a model village with schools for his workers at New Lanark?	Robert Owen	Titus Salt	George Cadbury	Richard Arkwright
 his_happened_peterloo_massacre	Hard	What happened at the 'Peterloo Massacre' in Manchester in 1819?	Cavalry charged a crowd demanding reform	Luddites burned a cotton mill	A boiler exploded in a factory	Police fired on striking miners
-his_invention_edmund_cartwright	Hard	Which invention by Edmund Cartwright brought machines to weaving in the 1780s?	The power loom	The spinning mule	The cotton gin	The steam hammer
-his_london_great_stink	Hard	What was London's 'Great Stink' of 1858?	The Thames reeking of sewage in a hot summer	A fire at a soap factory	A fog of coal smoke	A strike of rubbish collectors
 his_cornish_engineer_built	Hard	Which Cornish engineer built the first steam locomotive to run on rails, in 1804?	Richard Trevithick	George Stephenson	James Watt	Matthew Boulton
 his_line_opened_1830	Hard	Which line, opened in 1830, was the world's first inter-city railway?	The Liverpool and Manchester	The Stockton and Darlington	The London and Greenwich	The Great Western
 his_chartists_1830s_1840s	Hard	What did the Chartists of the 1830s and 1840s demand?	The vote for all men	An end to slavery	Free schools	A shorter working day
 his_strike_1888_young	Hard	Which strike of 1888 by young women at a London factory became famous?	The matchgirls' strike	The dockers' strike	The weavers' strike	The bakers' strike
-his_scottish_engineer_built	Hard	Which Scottish engineer built the Menai Suspension Bridge, opened in 1826?	Thomas Telford	John Rennie	Robert Stephenson	Isambard Kingdom Brunel
 his_german_family_firm	Hard	Which German family firm from Essen became Europe's best-known maker of steel and guns?	Krupp	Siemens	Thyssen	Bosch
 his_truck_system_19th	Hard	What was the 'truck system' that many 19th-century workers hated?	Pay in tokens for the boss's shop	Hauling coal in carts by hand	Sharing one bed in shifts	Fines for talking on the job
 his_chemist_invented_safety	Hard	Which chemist invented a safety lamp in 1815 that saved countless coal miners from gas explosions?	Humphry Davy	Michael Faraday	John Dalton	Joseph Black
-his_quaker_ironmaster_smelted	Hard	Which Quaker ironmaster first smelted iron with coke instead of charcoal, at Coalbrookdale in 1709?	Abraham Darby	Henry Cort	John Wilkinson	Benjamin Huntsman
+his_chocolate_makers_built	Hard	Which chocolate makers built the model village of Bournville for their workers?	The Cadburys	The Frys	The Rowntrees	The Hersheys
+his_mudlarks_victorian_london	Hard	Who were the 'mudlarks' of Victorian London?	Children who scavenged in the Thames mud	Workers who built the sewers	Boys who swept chimneys	Girls who sold flowers
+his_dangerous_job_small	Hard	What dangerous job did small children called 'scavengers' do in cotton mills?	Crawled under machines to clear fluff	Carried coal to the boilers	Climbed chimneys to sweep them	Oiled the moving belts
+his_labourers_dug_britain	Hard	Why were the labourers who dug Britain's canals and railways called 'navvies'?	It was short for 'navigators'	They came from the navy	They wore navy-blue coats	It was Irish for 'diggers'
+his_kodak_slogan_1888	Hard	How did Kodak's famous slogan of 1888 end: 'You press the button...'?	'...we do the rest'	'...the camera smiles'	'...and the past is yours'	'...time stands still'
+his_terrible_disease_workers	Hard	Which terrible disease did workers in match factories get from white phosphorus?	'Phossy jaw'	'Black lung'	'Mad hatter's disease'	'Brass fever'
+his_britain_locomotive_act	Hard	What did Britain's Locomotive Act of 1865 require ahead of every steam road vehicle?	A man on foot with a red flag	A horse-drawn warning cart	A boy ringing a hand bell	A policeman on horseback
 his_canal_opened_1761	Expert	Which canal, opened in 1761 to carry coal to Manchester, started Britain's 'canal mania'?	The Bridgewater Canal	The Grand Union Canal	The Leeds and Liverpool Canal	The Caledonian Canal
 his_politician_killed_locomotive	Expert	Which politician was killed by the locomotive Rocket at the opening of a railway in 1830?	William Huskisson	Robert Peel	George Canning	Spencer Perceval
-his_terrible_disease_workers	Expert	Which terrible disease did workers in match factories get from white phosphorus?	'Phossy jaw'	'Black lung'	'Mad hatter's disease'	'Brass fever'
 his_samuel_slater_opened	Expert	Why was Samuel Slater, who opened a cotton mill in Rhode Island in 1793, called 'Slater the Traitor' in Britain?	He carried British mill designs in his head	He sold steel secrets to France	He fought for America in the Revolution	He wrecked the mills he managed
-his_britain_locomotive_act	Expert	What did Britain's Locomotive Act of 1865 require ahead of every steam road vehicle?	A man on foot with a red flag	A horse-drawn warning cart	A boy ringing a hand bell	A policeman on horseback
 his_isambard_kingdom_brunel	Expert	How did Isambard Kingdom Brunel get rid of a coin stuck in his windpipe in 1843?	He was strapped to a board and turned upside down	He swallowed a spoonful of mustard and oil	A surgeon pulled it out with long forceps	He coughed it up while riding on a train
 his_giant_steamship_flop	Expert	Which giant steamship, a flop as a liner, laid the first lasting telegraph cable across the Atlantic in 1866?	The Great Eastern	The Great Western	The Great Britain	The Agamemnon
 his_happened_puffing_devil	Expert	What happened to the 'Puffing Devil', an early steam road carriage, in 1801, days after its first run?	It burned out while its crew ate at an inn	It exploded on a busy London street	It was smashed by angry coachmen	It sank while crossing a river
+his_scottish_engineer_built	Expert	Which Scottish engineer built the Menai Suspension Bridge, opened in 1826?	Thomas Telford	John Rennie	Robert Stephenson	Isambard Kingdom Brunel
+his_quaker_ironmaster_smelted	Expert	Which Quaker ironmaster first smelted iron with coke instead of charcoal, at Coalbrookdale in 1709?	Abraham Darby	Henry Cort	John Wilkinson	Benjamin Huntsman

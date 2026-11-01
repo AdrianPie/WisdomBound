@@ -1,57 +1,43 @@
 # Wielka Wojna 1914-1918: Sarajewo, okopy, nowe bronie, wielkie bitwy i pokoj wersalski.
 id	difficulty	prompt	correct	wrong1	wrong2	wrong3
-his2_pierwsza_wojna_koniec	Easy	In which year did World War I end?	1918	1919	1917	1920
 his_wojna_konczaca	Easy	Which conflict was called 'the war to end all wars'?	World War I	World War II	The Napoleonic Wars	The Crimean War
 hx_rozejm_1914	Easy	In 1914, soldiers on the Western Front briefly stopped fighting to celebrate what?	Christmas	Easter	New Year	A royal wedding
-hy_rozejm_11	Easy	At what time of day on 11 November 1918 did the World War I armistice take effect?	11 a.m.	Midnight	Noon	6 p.m.
 his_red_flower_britons	Easy	Which red flower do Britons wear to remember soldiers who died in war?	The poppy	The rose	The tulip	The carnation
 his_world_war_deadly	Easy	In World War I, what was the deadly strip of ground between enemy trenches called?	No man's land	The buffer zone	The firing line	The dead zone
 his_german_submarines_both	Easy	What were German submarines called in both World Wars?	U-boats	Panzers	Stukas	Zeppelins
 his_two_countries_western	Easy	In which two countries were most of the Western Front battles fought?	France and Belgium	Germany and Poland	Italy and Austria	Spain and Portugal
-his_neutral_country_germany	Easy	Which neutral country did Germany invade in August 1914 on its way to attack France?	Belgium	Switzerland	The Netherlands	Denmark
-his_british_soldiers_world	Easy	What were British soldiers of World War I commonly nicknamed?	Tommies	Doughboys	Poilus	Diggers
 his_army_marched_war	Easy	Which army marched to war in 1914 wearing spiked leather helmets called Pickelhauben?	The German army	The French army	The Russian army	The Italian army
-his_i_wojna	Medium	In which year did World War I break out?	1914	1912	1918	1939
-wh_ww1_iskra	Medium	The assassination of whom in Sarajevo sparked World War I?	Archduke Franz Ferdinand	Kaiser Wilhelm II	Tsar Nicholas II	King Peter I
-hx_czerwony_baron	Medium	The First World War flying ace Manfred von Richthofen was better known as what?	The Red Baron	The Black Knight	The Flying Dutchman	The Iron Eagle
-hx_mata_hari	Medium	The dancer Mata Hari, executed in 1917, was accused of being what?	A spy	A pirate	A witch	A smuggler
-hx_wersal_traktat	Medium	Which treaty formally ended World War I with Germany in 1919?	The Treaty of Versailles	The Treaty of Paris	The Treaty of Vienna	The Treaty of Rome
+wh_ww1_iskra	Easy	The assassination of whom in Sarajevo sparked World War I?	Archduke Franz Ferdinand	Kaiser Wilhelm II	Tsar Nicholas II	King Peter I
+hx_czerwony_baron	Easy	The First World War flying ace Manfred von Richthofen was better known as what?	The Red Baron	The Black Knight	The Flying Dutchman	The Iron Eagle
+hx_mata_hari	Easy	The dancer Mata Hari, executed in 1917, was accused of being what?	A spy	A pirate	A witch	A smuggler
+hx_wersal_traktat	Easy	Which treaty formally ended World War I with Germany in 1919?	The Treaty of Versailles	The Treaty of Paris	The Treaty of Vienna	The Treaty of Rome
+his_empire_ruled_vienna	Easy	Which empire, ruled from Vienna, broke apart at the end of World War I?	Austria-Hungary	The Holy Roman Empire	Prussia	The Ottoman Empire
+his_shell_shock_world	Easy	What was 'shell shock' in World War I?	Mental trauma caused by battle	A new kind of grenade	An illness from bad water	The noise of a big gun
+his_giant_german_airships	Easy	Which giant German airships bombed British towns during World War I?	Zeppelins	Fokkers	Gothas	Stukas
+his_lies_tomb_unknown	Easy	Who lies in the Tomb of the Unknown Warrior in Westminster Abbey?	An unidentified soldier of World War I	The first soldier to die in the war	A general killed at the Somme	A sailor from the Lusitania
+hx_czolgi	Easy	In which war were tanks first used in battle?	World War I	The Boer War	World War II	The Crimean War
+his_future_author_lord	Easy	Which future author of 'The Lord of the Rings' fought at the Battle of the Somme?	J. R. R. Tolkien	C. S. Lewis	Robert Graves	A. A. Milne
 his_german_emperor_kaiser	Medium	Who was the German emperor (Kaiser) during World War I?	Wilhelm II	Wilhelm I	Frederick III	Franz Joseph I
-his_empire_ruled_vienna	Medium	Which empire, ruled from Vienna, broke apart at the end of World War I?	Austria-Hungary	The Holy Roman Empire	Prussia	The Ottoman Empire
 his_world_war_british	Medium	During World War I, the British royal family swapped its German-sounding name for which one?	Windsor	Tudor	Stuart	Lancaster
-his_british_king_world	Medium	Who was the British king during World War I?	George V	Edward VII	George VI	Edward VIII
 his_young_bosnian_serb	Medium	Which young Bosnian Serb shot Archduke Franz Ferdinand in 1914?	Gavrilo Princip	Lee Harvey Oswald	Leon Czolgosz	Ante Pavelic
 his_terrible_new_weapon	Medium	Which terrible new weapon was first used on a large scale at Ypres in 1915?	Poison gas	Tanks	Flamethrowers	Machine guns
 his_battle_1916_cost	Medium	Which battle of 1916 cost the British army about 57,000 casualties on its first day?	The Somme	Verdun	Ypres	Passchendaele
 his_alliance_germany_austria	Medium	What was the alliance of Germany, Austria-Hungary and the Ottoman Empire called?	The Central Powers	The Axis	The Triple Entente	The Holy Alliance
 his_year_united_states	Medium	In which year did the United States enter World War I?	1917	1914	1915	1918
 his_british_officer_lawrence	Medium	Which British officer, known as 'Lawrence of Arabia', helped lead the Arab Revolt?	T. E. Lawrence	D. H. Lawrence	Thomas Lawrence	Lawrence Oates
-his_germany_plan_knock	Medium	What was Germany's plan to knock out France quickly by marching through Belgium called?	The Schlieffen Plan	Operation Barbarossa	The Marshall Plan	Plan XVII
-his_battle_1914_stopped	Medium	Which battle of 1914 stopped the German advance on Paris, partly thanks to troops rushed in taxis?	The First Battle of the Marne	The Battle of the Somme	The Battle of Verdun	The Battle of Ypres
-his_shell_shock_world	Medium	What was 'shell shock' in World War I?	Mental trauma caused by battle	A new kind of grenade	An illness from bad water	The noise of a big gun
-his_british_war_poet	Medium	Which British war poet wrote 'Dulce et Decorum Est' and was killed a week before the armistice?	Wilfred Owen	Siegfried Sassoon	Rupert Brooke	Robert Graves
-his_pointing_face_appeared	Medium	Whose pointing face appeared on the famous 'Your Country Needs You' recruiting poster?	Lord Kitchener	King George V	David Lloyd George	Douglas Haig
-his_battle_1917_flanders	Medium	Which battle of 1917 in Flanders is remembered above all for its sea of mud?	Passchendaele	The Somme	Verdun	Cambrai
-his_giant_german_airships	Medium	Which giant German airships bombed British towns during World War I?	Zeppelins	Fokkers	Gothas	Stukas
-his_battle_1916_full	Medium	Which battle of 1916 was the only full clash of the British and German battle fleets?	Jutland	Gallipoli	The Falklands	The Dogger Bank
-his_canadian_doctor_wrote	Medium	Which Canadian doctor wrote the poem 'In Flanders Fields'?	John McCrae	Wilfred Owen	Rupert Brooke	Laurence Binyon
 his_british_pals_battalions	Medium	What were the British 'Pals battalions' of 1914-1915?	Units of friends from the same town	Teams of army chaplains	Squads of cycling messengers	Groups of nurses
 his_roughly_soldiers_killed	Medium	Roughly how many soldiers were killed in World War I?	About 10 million	About 1 million	About 50 million	About 300,000
-his_lies_tomb_unknown	Medium	Who lies in the Tomb of the Unknown Warrior in Westminster Abbey?	An unidentified soldier of World War I	The first soldier to die in the war	A general killed at the Somme	A sailor from the Lusitania
-his_tanks_given_1915	Medium	Why were the first tanks given that name in 1915?	They were disguised as water tanks	Their inventor was called Tank	They carried fuel tanks	They looked like fish tanks
 his_big_bertha_world	Medium	What was 'Big Bertha' in World War I?	A giant German siege gun	A British battleship	A French nurse	A Zeppelin
 his_world_war_ships	Medium	Why were many World War I ships painted in wild zigzag patterns?	To confuse enemy submarines	To hide them from aircraft	To show their home port	To scare enemy sailors
-his_country_introduced_daylight	Medium	Which country first introduced daylight saving time, in 1916, to save coal?	Germany	Britain	The USA	France
-his_stray_dog_became	Medium	Which stray dog became the most decorated American war dog of World War I?	Sergeant Stubby	Rin Tin Tin	Smoky	Chips
-his_gunman_get_chance	Medium	How did the gunman get his chance to shoot the heir to Austria's throne in Sarajevo in 1914?	The car took a wrong turn and stopped	He posed as a hotel waiter	He was the archduke's driver	He hid inside the town hall
-his_british_soldiers_nickname	Medium	What did British soldiers nickname the Belgian town of Ypres?	'Wipers'	'Yipes'	'Eeps'	'Wipeout'
 his_lawrence_arabia_helped	Medium	'Lawrence of Arabia' helped lead an Arab revolt against which empire?	The Ottoman Empire	The British Empire	The Persian Empire	The Russian Empire
-hx_lusitania	Hard	The sinking of which liner by a German submarine in 1915 turned many Americans against Germany?	The Lusitania	The Britannic	The Olympic	The Carpathia
-hx_czolgi	Hard	In which war were tanks first used in battle?	World War I	The Boer War	World War II	The Crimean War
-hy_gallipoli	Hard	Which two countries remember the 1915 Gallipoli campaign every year on Anzac Day?	Australia and New Zealand	Canada and Britain	India and Pakistan	France and Belgium
-hy_verdun	Hard	Which 1916 battle became the symbol of France's defence in World War I?	Verdun	The Marne	Ypres	Sedan
-his_president_world_war	Hard	Who was US president during World War I?	Woodrow Wilson	Theodore Roosevelt	Herbert Hoover	Calvin Coolidge
-his_city_1916_easter	Hard	In which city did the 1916 Easter Rising against British rule break out?	Dublin	Belfast	Cork	Edinburgh
+hy_rozejm_11	Medium	At what time of day on 11 November 1918 did the World War I armistice take effect?	11 a.m.	Midnight	Noon	6 p.m.
+his_neutral_country_germany	Medium	Which neutral country did Germany invade in August 1914 on its way to attack France?	Belgium	Switzerland	The Netherlands	Denmark
+his_british_soldiers_world	Medium	What were British soldiers of World War I commonly nicknamed?	Tommies	Doughboys	Poilus	Diggers
+hx_lusitania	Medium	The sinking of which liner by a German submarine in 1915 turned many Americans against Germany?	The Lusitania	The Britannic	The Olympic	The Carpathia
+hy_gallipoli	Medium	Which two countries remember the 1915 Gallipoli campaign every year on Anzac Day?	Australia and New Zealand	Canada and Britain	India and Pakistan	France and Belgium
+hy_verdun	Medium	Which 1916 battle became the symbol of France's defence in World War I?	Verdun	The Marne	Ypres	Sedan
+his_president_world_war	Medium	Who was US president during World War I?	Woodrow Wilson	Theodore Roosevelt	Herbert Hoover	Calvin Coolidge
+his_city_1916_easter	Medium	In which city did the 1916 Easter Rising against British rule break out?	Dublin	Belfast	Cork	Edinburgh
 his_country_broke_german	Hard	Which country broke with its German allies and joined the Allies in 1915?	Italy	Bulgaria	Romania	Greece
 his_treaty_march_1918	Hard	Which treaty of March 1918 took Russia out of World War I?	Brest-Litovsk	Versailles	Trianon	Sevres
 his_british_nurse_shot	Hard	Which British nurse was shot by the Germans in 1915 for helping Allied soldiers escape?	Edith Cavell	Florence Nightingale	Mary Seacole	Vera Brittain
@@ -60,14 +46,25 @@ his_american_general_led	Hard	Which American general led the US army in France i
 his_ridge_northern_france	Hard	Which ridge in northern France, stormed in 1917, became a symbol of Canada's nationhood?	Vimy Ridge	Messines Ridge	Hill 60	Chemin des Dames
 his_battle_1917_italy	Hard	At which battle of 1917 did Italy suffer a crushing defeat by Austria-Hungary and Germany?	Caporetto	Isonzo	Vittorio Veneto	Piave
 his_serbian_secret_society	Hard	Which Serbian secret society armed the assassins of Archduke Franz Ferdinand?	The Black Hand	The White Eagle	The Red Fist	The Iron Cross
-his_carrier_pigeon_saved	Hard	Which carrier pigeon saved nearly 200 trapped American soldiers in 1918 despite being shot?	Cher Ami	G.I. Joe	Winkie	Paddy
 his_future_national_leader	Hard	Which future national leader made his name commanding Ottoman troops at Gallipoli in 1915?	Mustafa Kemal	Enver Pasha	Talaat Pasha	Djemal Pasha
-his_future_author_lord	Hard	Which future author of 'The Lord of the Rings' fought at the Battle of the Somme?	J. R. R. Tolkien	C. S. Lewis	Robert Graves	A. A. Milne
 his_bear_inspired_winnie	Hard	The bear that inspired Winnie-the-Pooh came to London Zoo in 1914 as the mascot of which country's soldiers?	Canada	Australia	New Zealand	South Africa
-his_1915_evacuation_gallipoli	Hard	During the 1915 evacuation of Gallipoli, how did ANZAC troops make rifles keep firing after they had gone?	Dripping water filled tins tied to the triggers	Trained dogs tugged strings on the triggers	Clockwork alarm clocks pulled the triggers	Wind-driven paddles worked the triggers
-wh_sykes_picot	Expert	Which secret agreement divided the Middle East between Great Britain and France?	Sykes-Picot	Molotov-Ribbentrop	The Balfour Declaration	Locarno
-hx_hiszpanka	Expert	Why was the deadly flu of 1918 named after Spain?	Spain's press reported it freely	It started in Madrid	Spanish troops spread it	A Spanish doctor found it
-hx_zimmermann	Expert	Which intercepted 1917 message offered Mexico US land if it joined Germany in the war?	The Zimmermann Telegram	The Ems Dispatch	The Balfour Declaration	The Schlieffen Plan
-his_french_soldiers_world	Expert	What were French soldiers of World War I nicknamed, a word meaning 'hairy ones'?	Poilus	Tommies	Grognards	Zouaves
+his_british_king_world	Hard	Who was the British king during World War I?	George V	Edward VII	George VI	Edward VIII
+his_germany_plan_knock	Hard	What was Germany's plan to knock out France quickly by marching through Belgium called?	The Schlieffen Plan	Operation Barbarossa	The Marshall Plan	Plan XVII
+his_battle_1914_stopped	Hard	Which battle of 1914 stopped the German advance on Paris, partly thanks to troops rushed in taxis?	The First Battle of the Marne	The Battle of the Somme	The Battle of Verdun	The Battle of Ypres
+his_british_war_poet	Hard	Which British war poet wrote 'Dulce et Decorum Est' and was killed a week before the armistice?	Wilfred Owen	Siegfried Sassoon	Rupert Brooke	Robert Graves
+his_pointing_face_appeared	Hard	Whose pointing face appeared on the famous 'Your Country Needs You' recruiting poster?	Lord Kitchener	King George V	David Lloyd George	Douglas Haig
+his_battle_1917_flanders	Hard	Which battle of 1917 in Flanders is remembered above all for its sea of mud?	Passchendaele	The Somme	Verdun	Cambrai
+his_battle_1916_full	Hard	Which battle of 1916 was the only full clash of the British and German battle fleets?	Jutland	Gallipoli	The Falklands	The Dogger Bank
+his_canadian_doctor_wrote	Hard	Which Canadian doctor wrote the poem 'In Flanders Fields'?	John McCrae	Wilfred Owen	Rupert Brooke	Laurence Binyon
+his_tanks_given_1915	Hard	Why were the first tanks given that name in 1915?	They were disguised as water tanks	Their inventor was called Tank	They carried fuel tanks	They looked like fish tanks
+his_country_introduced_daylight	Hard	Which country first introduced daylight saving time, in 1916, to save coal?	Germany	Britain	The USA	France
+his_stray_dog_became	Hard	Which stray dog became the most decorated American war dog of World War I?	Sergeant Stubby	Rin Tin Tin	Smoky	Chips
+his_gunman_get_chance	Hard	How did the gunman get his chance to shoot the heir to Austria's throne in Sarajevo in 1914?	The car took a wrong turn and stopped	He posed as a hotel waiter	He was the archduke's driver	He hid inside the town hall
+his_british_soldiers_nickname	Hard	What did British soldiers nickname the Belgian town of Ypres?	'Wipers'	'Yipes'	'Eeps'	'Wipeout'
+wh_sykes_picot	Hard	Which secret agreement divided the Middle East between Great Britain and France?	Sykes-Picot	Molotov-Ribbentrop	The Balfour Declaration	Locarno
+hx_zimmermann	Hard	Which intercepted 1917 message offered Mexico US land if it joined Germany in the war?	The Zimmermann Telegram	The Ems Dispatch	The Balfour Declaration	The Schlieffen Plan
+his_french_soldiers_world	Hard	What were French soldiers of World War I nicknamed, a word meaning 'hairy ones'?	Poilus	Tommies	Grognards	Zouaves
 his_set_off_under	Expert	What was set off under Messines Ridge in June 1917, with a blast reportedly heard in London?	Mines dug under German lines	A German ammunition dump	A giant railway gun shell	A Zeppelin full of bombs
 his_german_general_east	Expert	Which German general in East Africa was still undefeated when he finally surrendered, two weeks after the armistice?	Paul von Lettow-Vorbeck	Erich Ludendorff	Paul von Hindenburg	August von Mackensen
+his_carrier_pigeon_saved	Expert	Which carrier pigeon saved nearly 200 trapped American soldiers in 1918 despite being shot?	Cher Ami	G.I. Joe	Winkie	Paddy
+his_1915_evacuation_gallipoli	Expert	During the 1915 evacuation of Gallipoli, how did ANZAC troops make rifles keep firing after they had gone?	Dripping water filled tins tied to the triggers	Trained dogs tugged strings on the triggers	Clockwork alarm clocks pulled the triggers	Wind-driven paddles worked the triggers
