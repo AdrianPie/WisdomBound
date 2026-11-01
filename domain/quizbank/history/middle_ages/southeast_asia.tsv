@@ -1,43 +1,24 @@
 # Khmerowie i Angkor, Borobudur, Srivijaya i Majapahit, Bagan, Ayutthaya, Dai Viet, Malakka -
 # az do przybycia Europejczykow.
 id	difficulty	prompt	correct	wrong1	wrong2	wrong3
-his_temple_appears_national	Easy	Which famous temple appears on the national flag of Cambodia?	Angkor Wat	Borobudur	Shwedagon	Wat Arun
 his_duel_1593_siam	Easy	In a famous duel of 1593, Siam's King Naresuan killed the Burmese crown prince while riding what?	A war elephant	A white horse	A royal barge	A water buffalo
-his_according_popular_story	Easy	According to a popular story, why did kings of Siam give white elephants to courtiers they disliked?	Their upkeep ruined the owner	They trampled the owner's fields	They were bad luck to own	They could never be ridden
-his_singapore_mean	Easy	What does the name 'Singapore' mean?	Lion City	Sea Gate	Tiger Island	Pearl Port
-his_vietnam_000_year	Easy	In Vietnam's 1,000-year-old puppet theatre, what do the puppets perform on?	A pool of water	A rope bridge	A hanging silk screen	A bed of sand
-his_naga_headed_creature	Easy	What is the 'naga', the many-headed creature carved along the causeways of Angkor?	A sacred serpent	A winged lion	A giant eagle	A river crocodile
 his_angkor_wat_built	Easy	Angkor Wat was built as a Hindu temple. Which religion's monks use it today?	Buddhism	Islam	Christianity	Jainism
-his_thailand_until_1939	Easy	By what name was Thailand known until 1939?	Siam	Burma	Annam	Malaya
-his_ayutthaya_thailand_sight	Easy	At Ayutthaya in Thailand, what famous sight is wrapped in the roots of a fig tree?	A stone Buddha head	A royal elephant statue	A golden temple bell	A carved naga serpent
 his_hinduism_buddhism_reached	Easy	Hinduism and Buddhism reached Angkor and Java mainly from which country?	India	China	Persia	Japan
 his_animals_khmer_kings	Easy	Which animals did Khmer kings and their armies ride into battle?	Elephants	Camels	Water buffalo	Horses
+his_temple_complex_largest	Easy	Which temple complex is the largest religious monument in the world?	Angkor Wat	Borobudur	Shwedagon	The Vatican
 his_people_built_temples	Medium	Which people built the temples of Angkor?	The Khmer	The Thai	The Burmese	The Cham
 his_giant_buddhist_monument	Medium	Which giant Buddhist monument on the island of Java is the largest Buddhist temple in the world?	Borobudur	Angkor Wat	Prambanan	Shwedagon
-his_plain_myanmar_covered	Medium	Which plain in Myanmar is covered with over 2,000 ancient Buddhist temples?	Bagan	Mandalay	Ayutthaya	Pegu
-his_british_official_founded	Medium	Which British official founded the trading post of modern Singapore in 1819?	Stamford Raffles	Francis Light	Robert Clive	James Brooke
 his_spanish_treasure_ships	Medium	Which Spanish treasure ships sailed between Manila and Mexico for 250 years?	The Manila galleons	The Silver Armada	The Pacific Fleet	The Acapulco caravels
-his_form_buddhism_followed	Medium	Which form of Buddhism is followed by most people in Thailand, Myanmar and Cambodia?	Theravada	Zen	Tibetan	Pure Land
-his_spice_tiny_banda	Medium	Which spice from the tiny Banda Islands was worth more than its weight in gold in the 1600s?	Nutmeg	Pepper	Cinnamon	Saffron
-his_dutch_built_city	Medium	Which Dutch-built city on Java, today's Jakarta, was the headquarters of the Dutch East India Company?	Batavia	Surabaya	Bandung	Semarang
-his_royal_city_luang	Medium	The royal city of Luang Prabang was the old capital of which country?	Laos	Cambodia	Myanmar	Thailand
 his_religion_brought_traders	Medium	Which religion, brought by traders from the 1200s onward, is the largest in Indonesia today?	Islam	Buddhism	Hinduism	Christianity
-his_golden_pagoda_dominates	Medium	Which golden pagoda dominates the skyline of Yangon in Myanmar?	Shwedagon	Borobudur	Angkor Wat	Wat Arun
 his_indonesian_island_hindu	Medium	On which Indonesian island did Hindu culture survive after most of the country became Muslim?	Bali	Java	Sumatra	Borneo
-his_leader_declared_indonesia	Medium	Which leader declared Indonesia's independence from the Dutch in 1945?	Sukarno	Suharto	Tunku Abdul Rahman	B. J. Habibie
-his_volcano_krakatoa_blew	Medium	The volcano Krakatoa, which blew apart in 1883, lies in which modern country?	Indonesia	The Philippines	Malaysia	Papua New Guinea
-his_temple_complex_largest	Medium	Which temple complex is the largest religious monument in the world?	Angkor Wat	Borobudur	Shwedagon	The Vatican
-his_roughly_long_china	Medium	For roughly how long did China rule northern Vietnam before it broke free in 938?	About 1,000 years	About 100 years	About 300 years	About 50 years
 his_airborne_laser_scans	Medium	What did airborne laser scans of the jungle around Angkor reveal from 2012 onwards?	A huge city hidden under the trees	A buried fleet of royal boats	A second temple twice as big	Gold hidden under the temples
 his_indian_epic_retold	Medium	Which Indian epic was retold in Thailand as the 'Ramakien'?	The Ramayana	The Mahabharata	The Rigveda	The Panchatantra
-his_angkor_temple_gripped	Medium	Which Angkor temple, gripped by giant tree roots, appeared in the film 'Lara Croft: Tomb Raider'?	Ta Prohm	Banteay Srei	Preah Khan	Baphuon
-his_hanoi_old_thang	Medium	Hanoi's old name, Thang Long, means what?	Rising Dragon	Golden Turtle	Red River	Northern Capital
-his_relics_said_enshrined	Medium	Which relics are said to be enshrined inside Yangon's great golden pagoda?	Hairs of the Buddha	The Buddha's begging bowl	A tooth of the Buddha	The Buddha's footprint
-his_according_legend_founder	Medium	According to legend, the founder of Malacca chose the spot after seeing which small animal kick one of his hunting dogs?	A mouse deer	A monkey	A tortoise	A mongoose
-his_angkor_barays_largest	Medium	What were Angkor's 'barays', the largest of them about 8 km long?	Giant man-made reservoirs	Royal elephant stables	Stone roads through the jungle	Walled markets for traders
-his_hindu_myth_fills	Medium	Which Hindu myth fills a famous 49-metre relief at Angkor Wat, with gods and demons pulling on a giant serpent?	The Churning of the Ocean of Milk	Rama's war against Lanka	The birth of the god Ganesha	Krishna lifting a mountain
 his_european_king_received	Medium	Which European king received a grand embassy from the king of Siam in 1686?	Louis XIV	James II	Leopold I	Charles XI
-his_wavy_bladed_dagger	Medium	Which wavy-bladed dagger, believed to hold spiritual power, was carried by Javanese and Malay nobles?	The kris	The katana	The kukri	The scimitar
+his_temple_appears_national	Medium	Which famous temple appears on the national flag of Cambodia?	Angkor Wat	Borobudur	Shwedagon	Wat Arun
+his_according_popular_story	Medium	According to a popular story, why did kings of Siam give white elephants to courtiers they disliked?	Their upkeep ruined the owner	They trampled the owner's fields	They were bad luck to own	They could never be ridden
+his_vietnam_000_year	Medium	In Vietnam's 1,000-year-old puppet theatre, what do the puppets perform on?	A pool of water	A rope bridge	A hanging silk screen	A bed of sand
+his_naga_headed_creature	Medium	What is the 'naga', the many-headed creature carved along the causeways of Angkor?	A sacred serpent	A winged lion	A giant eagle	A river crocodile
+his_ayutthaya_thailand_sight	Medium	At Ayutthaya in Thailand, what famous sight is wrapped in the roots of a fig tree?	A stone Buddha head	A royal elephant statue	A golden temple bell	A carved naga serpent
 his_hindu_god_angkor	Hard	To which Hindu god was Angkor Wat first dedicated?	Vishnu	Shiva	Brahma	Ganesh
 his_temple_angkor_dozens	Hard	Which temple at Angkor is famous for its dozens of giant smiling stone faces?	The Bayon	Ta Prohm	Banteay Srei	Preah Khan
 his_hindu_temple_complex	Hard	Which Hindu temple complex near Yogyakarta was built for Shiva in the 800s?	Prambanan	Borobudur	Besakih	Ta Prohm
@@ -48,25 +29,38 @@ his_two_sisters_led	Hard	Which two sisters led a Vietnamese revolt against Chine
 his_rich_port_sultanate	Hard	Which rich port sultanate on the Malay Peninsula was captured by the Portuguese in 1511?	Malacca	Aceh	Brunei	Johor
 his_local_chief_warriors	Hard	Which local chief's warriors killed Ferdinand Magellan on the island of Mactan in 1521?	Lapulapu	Humabon	Sulayman	Rajah Matanda
 his_great_lake_fed	Hard	Which great lake fed the rice fields of the Khmer Empire?	Tonle Sap	Inle Lake	Lake Toba	Lake Taal
-his_hindu_kingdom_coast	Hard	Which Hindu kingdom on the coast of central Vietnam is famous for its red-brick towers?	Champa	Funan	Lan Xang	Dai Viet
-his_according_legend_vietnamese	Hard	According to legend, which Vietnamese hero gave his magic sword back to a golden turtle in a Hanoi lake?	Le Loi	Tran Hung Dao	Ho Chi Minh	Ly Thai To
-his_thai_king_credited	Hard	Which Thai king is credited with creating the Thai alphabet in 1283?	Ramkhamhaeng	Naresuan	Chulalongkorn	Taksin
 his_vietnamese_dynasty_ruled	Hard	Which Vietnamese dynasty ruled from its capital at Hue from 1802 to 1945?	The Nguyen	The Tran	The Le	The Ly
 his_filipino_writer_national	Hard	Which Filipino writer and national hero was executed by the Spanish in 1896?	Jose Rizal	Emilio Aguinaldo	Andres Bonifacio	Apolinario Mabini
 his_unusually_khmer_temple	Hard	Unusually for a Khmer temple, which direction does Angkor Wat face?	West	East	North	South
 his_ngo_quyen_destroy	Hard	How did Ngo Quyen destroy a Chinese fleet at the Bach Dang River in 938?	Stakes hidden under the high tide	Fire ships sent in at night	A dam that burst on them	War elephants on the banks
-his_kingdom_1300s_forerunner	Hard	Which kingdom of the 1300s, the forerunner of Laos, was called 'the land of a million elephants'?	Lan Xang	Lan Na	Champa	Funan
-his_chinese_envoy_wrote	Hard	Which Chinese envoy wrote the only eyewitness account of daily life at Angkor, in 1296-1297?	Zhou Daguan	Zheng He	Xuanzang	Faxian
-his_javanese_dynasty_built	Hard	Which Javanese dynasty built the world's largest Buddhist temple around 800?	The Sailendra	The Majapahit	The Singhasari	The Khmer
 his_hanoi_temple_founded	Hard	Which Hanoi temple, founded in 1070 for Confucius, housed Vietnam's first national university?	The Temple of Literature	The One Pillar Pagoda	The Temple of the Jade Mountain	The Tran Quoc Pagoda
-his_french_naturalist_writings	Hard	Which French naturalist's writings made the temples of Angkor famous in Europe in the 1860s?	Henri Mouhot	Francis Garnier	Auguste Pavie	Louis Delaporte
+his_plain_myanmar_covered	Hard	Which plain in Myanmar is covered with over 2,000 ancient Buddhist temples?	Bagan	Mandalay	Ayutthaya	Pegu
+his_british_official_founded	Hard	Which British official founded the trading post of modern Singapore in 1819?	Stamford Raffles	Francis Light	Robert Clive	James Brooke
+his_form_buddhism_followed	Hard	Which form of Buddhism is followed by most people in Thailand, Myanmar and Cambodia?	Theravada	Zen	Tibetan	Pure Land
+his_royal_city_luang	Hard	The royal city of Luang Prabang was the old capital of which country?	Laos	Cambodia	Myanmar	Thailand
+his_golden_pagoda_dominates	Hard	Which golden pagoda dominates the skyline of Yangon in Myanmar?	Shwedagon	Borobudur	Angkor Wat	Wat Arun
+his_roughly_long_china	Hard	For roughly how long did China rule northern Vietnam before it broke free in 938?	About 1,000 years	About 100 years	About 300 years	About 50 years
+his_angkor_temple_gripped	Hard	Which Angkor temple, gripped by giant tree roots, appeared in the film 'Lara Croft: Tomb Raider'?	Ta Prohm	Banteay Srei	Preah Khan	Baphuon
+his_hanoi_old_thang	Hard	Hanoi's old name, Thang Long, means what?	Rising Dragon	Golden Turtle	Red River	Northern Capital
+his_relics_said_enshrined	Hard	Which relics are said to be enshrined inside Yangon's great golden pagoda?	Hairs of the Buddha	The Buddha's begging bowl	A tooth of the Buddha	The Buddha's footprint
+his_according_legend_founder	Hard	According to legend, the founder of Malacca chose the spot after seeing which small animal kick one of his hunting dogs?	A mouse deer	A monkey	A tortoise	A mongoose
+his_angkor_barays_largest	Hard	What were Angkor's 'barays', the largest of them about 8 km long?	Giant man-made reservoirs	Royal elephant stables	Stone roads through the jungle	Walled markets for traders
+his_hindu_myth_fills	Hard	Which Hindu myth fills a famous 49-metre relief at Angkor Wat, with gods and demons pulling on a giant serpent?	The Churning of the Ocean of Milk	Rama's war against Lanka	The birth of the god Ganesha	Krishna lifting a mountain
+his_wavy_bladed_dagger	Hard	Which wavy-bladed dagger, believed to hold spiritual power, was carried by Javanese and Malay nobles?	The kris	The katana	The kukri	The scimitar
+his_tiny_nutmeg_island	Hard	Which tiny nutmeg island did England give up to the Dutch in a deal that left it Manhattan in 1667?	Run	Ambon	Ternate	Banda Neira
+his_island_mongol_fleet	Hard	Which island did a Mongol fleet from China invade in 1293, only to be tricked by a local prince who then drove it out?	Java	Sumatra	Borneo	Luzon
+his_british_governor_java	Hard	Which British governor of Java had the jungle-covered Borobudur cleared and studied in 1814?	Stamford Raffles	James Brooke	Francis Light	Robert Clive
 his_khmer_king_built	Expert	Which Khmer king built Angkor Wat in the first half of the 1100s?	Suryavarman II	Jayavarman VII	Jayavarman II	Indravarman I
 his_buddhist_king_khmer	Expert	Which Buddhist king of the Khmer built the walled city of Angkor Thom around 1200?	Jayavarman VII	Suryavarman II	Yasovarman I	Rajendravarman II
 his_vietnamese_general_beat	Expert	Which Vietnamese general beat back the Mongol invasions of the 1280s?	Tran Hung Dao	Le Loi	Ngo Quyen	Ly Thuong Kiet
 his_king_founded_pagan	Expert	Which king founded the Pagan Empire in Burma in the 1000s?	Anawrahta	Bayinnaung	Alaungpaya	Kyansittha
-his_tiny_nutmeg_island	Expert	Which tiny nutmeg island did England give up to the Dutch in a deal that left it Manhattan in 1667?	Run	Ambon	Ternate	Banda Neira
 his_javanese_prime_minister	Expert	Which Javanese prime minister of the 1330s swore not to taste spices until he had united the islands of Indonesia?	Gajah Mada	Hayam Wuruk	Raden Wijaya	Ken Arok
-his_island_mongol_fleet	Expert	Which island did a Mongol fleet from China invade in 1293, only to be tricked by a local prince who then drove it out?	Java	Sumatra	Borneo	Luzon
 his_ancient_port_mekong	Expert	Which ancient port in the Mekong Delta has yielded a Roman gold medallion from the 2nd century AD?	Oc Eo	Hoi An	Angkor Borei	Vijaya
 his_oldest_written_document	Expert	What does the oldest known written document from the Philippines, an engraved copper plate from 900, record?	The cancelling of a debt	A royal wedding	A peace treaty with China	The founding of Manila
-his_british_governor_java	Expert	Which British governor of Java had the jungle-covered Borobudur cleared and studied in 1814?	Stamford Raffles	James Brooke	Francis Light	Robert Clive
+his_hindu_kingdom_coast	Expert	Which Hindu kingdom on the coast of central Vietnam is famous for its red-brick towers?	Champa	Funan	Lan Xang	Dai Viet
+his_according_legend_vietnamese	Expert	According to legend, which Vietnamese hero gave his magic sword back to a golden turtle in a Hanoi lake?	Le Loi	Tran Hung Dao	Ho Chi Minh	Ly Thai To
+his_thai_king_credited	Expert	Which Thai king is credited with creating the Thai alphabet in 1283?	Ramkhamhaeng	Naresuan	Chulalongkorn	Taksin
+his_kingdom_1300s_forerunner	Expert	Which kingdom of the 1300s, the forerunner of Laos, was called 'the land of a million elephants'?	Lan Xang	Lan Na	Champa	Funan
+his_chinese_envoy_wrote	Expert	Which Chinese envoy wrote the only eyewitness account of daily life at Angkor, in 1296-1297?	Zhou Daguan	Zheng He	Xuanzang	Faxian
+his_javanese_dynasty_built	Expert	Which Javanese dynasty built the world's largest Buddhist temple around 800?	The Sailendra	The Majapahit	The Singhasari	The Khmer
+his_french_naturalist_writings	Expert	Which French naturalist's writings made the temples of Angkor famous in Europe in the 1860s?	Henri Mouhot	Francis Garnier	Auguste Pavie	Louis Delaporte

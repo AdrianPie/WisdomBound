@@ -2,28 +2,20 @@
 id	difficulty	prompt	correct	wrong1	wrong2	wrong3
 wh_czyngis_imperium	Easy	Which empire did Genghis Khan found?	The Mongol Empire	The Ottoman Empire	The Chinese Empire	The Persian Empire
 his_mongol_armies_feared	Easy	Mongol armies were feared above all for their skill as what?	Mounted archers	Siege engineers	Sailors	Pikemen
-his_mongol_armies_cover	Easy	Why could Mongol armies cover huge distances so quickly?	Each rider brought spare horses	They rode camels, not horses	They never stopped to sleep	They used chariots on the steppe
 his_world_largest_horse	Easy	One of the world's largest horse statues, a 40-metre steel giant near Ulaanbaatar, shows whom?	Genghis Khan	Kublai Khan	Attila the Hun	Timur
 his_genghis_khan_united	Easy	Before Genghis Khan united them, how did most Mongols make their living?	Herding animals on the steppe	Growing rice in river valleys	Trading silk in walled cities	Fishing on great lakes
-his_according_popular_legend_2	Easy	According to a popular legend, how did Mongol horsemen soften raw meat on long rides?	By keeping it under their saddles	By soaking it in mare's milk	By burying it in hot sand	By beating it with their bows
-his_kind_horses_carried	Easy	What kind of horses carried the Mongol armies across Asia?	Small, tough steppe ponies	Huge armoured war horses	Fast desert Arabian horses	Heavy horses bred for pulling
-his_mongol_warriors_said	Easy	Mongol warriors are said to have worn shirts of which material under their armour, because arrows did not tear it and came out more easily?	Silk	Linen	Wool	Felt
-his_english_word_horde	Easy	The English word 'horde' comes from the Mongol and Turkic 'ordu'. What did 'ordu' first mean?	A camp	A herd	A storm	A river
 his_face_appears_mongolia	Easy	Whose face appears on Mongolia's larger banknotes and gives its name to the country's main airport?	Genghis Khan	Kublai Khan	Timur	Ogedei Khan
+wld_his_marco_polo	Easy	Which Venetian traveller told Europe about China's Kublai Khan?	Marco Polo	Vasco da Gama	Ferdinand Magellan	Christopher Columbus
+his_round_felt_tent	Easy	What is the round felt tent of Mongol nomads called?	A yurt	A tepee	A wigwam	An igloo
+his_main_weapon_mongol	Easy	What was the main weapon of a Mongol warrior?	A composite bow	A long sword	A war hammer	A heavy lance
+his_mongols_often_cities	Easy	What did the Mongols often do to cities that refused to surrender?	Massacred their people	Made them capitals	Paid them tribute	Converted them to Buddhism
 his4_zlota_horda_kto	Medium	The Golden Horde was a state founded by which people?	The Mongols	The Ottomans	The Vikings	The Magyars
 trv_czyngis_potomkowie	Medium	Which ruler is thought to have millions of living descendants today?	Genghis Khan	Julius Caesar	Charlemagne	Alexander the Great
-wld_his_marco_polo	Medium	Which Venetian traveller told Europe about China's Kublai Khan?	Marco Polo	Vasco da Gama	Ferdinand Magellan	Christopher Columbus
 his_mongol_ruler_founded	Medium	Which Mongol ruler founded the Yuan dynasty in China?	Kublai Khan	Genghis Khan	Ogedei Khan	Tamerlane
-his_round_felt_tent	Medium	What is the round felt tent of Mongol nomads called?	A yurt	A tepee	A wigwam	An igloo
-his_title_genghis_khan	Medium	What is the title 'Genghis Khan' usually thought to mean?	Universal ruler	Lord of horses	Son of the sky	Iron fist
 his_island_country_kublai	Medium	Which island country did Kublai Khan twice fail to invade by sea?	Japan	Taiwan	Sri Lanka	The Philippines
 his_pax_mongolica	Medium	What was the 'Pax Mongolica'?	Safe trade across Mongol lands	A peace treaty with Europe	The Mongol wedding customs	A Chinese wall against Mongols
-his_main_weapon_mongol	Medium	What was the main weapon of a Mongol warrior?	A composite bow	A long sword	A war hammer	A heavy lance
-his_mongols_often_cities	Medium	What did the Mongols often do to cities that refused to surrender?	Massacred their people	Made them capitals	Paid them tribute	Converted them to Buddhism
 his_age_mongol_children	Medium	From what age did Mongol children usually learn to ride horses?	About three	About ten	About fifteen	About twenty
 his_mysterious_tomb_genghis	Medium	What is mysterious about the tomb of Genghis Khan?	Nobody knows where it is	It is empty	It is underwater	It has never been opened
-his_grandson_genghis_khan_2	Medium	Which grandson of Genghis Khan led the Mongol invasion of Europe in 1241?	Batu	Kublai	Hulagu	Mongke
-his_chinese_dynasty_finally	Medium	Which Chinese dynasty finally fell to Kublai Khan in 1279?	The Song	The Tang	The Ming	The Han
 his_favourite_mongol_battle	Medium	Which favourite Mongol battle trick lured enemies into a trap?	A fake retreat	A night attack in silence	Poisoning the wells	Hiding in the river
 his_mongol_army_besieging	Medium	What did the Mongol army besieging Caffa in 1346 reportedly catapult over its walls?	Plague-infected corpses	Hives of angry bees	Live venomous snakes	Severed horse heads
 his_baghdad_fell_mongols	Medium	After Baghdad fell to the Mongols, the Tigris is said to have run black. Why?	Ink from books thrown into it	Ash from the burning palaces	Soot from the siege fires	Tar from sunken ships
@@ -31,41 +23,49 @@ his_mongol_riders_reportedly	Medium	What did Mongol riders reportedly drink on l
 his_according_legend_happened	Medium	According to legend, what happened just days after Soviet scientists opened Tamerlane's tomb in 1941?	Germany invaded the Soviet Union	An earthquake hit Samarkand	Stalin fell seriously ill	A plague broke out in Moscow
 his_mongols_generally_treat	Medium	How did the Mongols generally treat the religions of the peoples they conquered?	They tolerated them	They banned all of them	They forced Buddhism on all	They made all convert to Islam
 his_according_legend_happened_3	Medium	According to legend, what happened to anyone who crossed paths with Genghis Khan's funeral procession?	They were killed	They were made rich	They became his slaves	They had to join the march
-his_genghis_khan_father	Medium	How did Genghis Khan's father, Yesugei, die when the boy was about nine?	Poisoned by Tatars	Killed in a duel	Thrown from his horse	Frozen in a blizzard
-his_according_persian_chronicler	Medium	According to a Persian chronicler, what did Genghis Khan tell the people of Bukhara he was?	'The punishment of God'	'The son of Heaven'	'The lord of all horses'	'The heir of Alexander'
 his_mongols_choose_winter	Medium	Why did the Mongols choose winter to invade the Russian lands in 1237?	Frozen rivers made perfect roads	Russian bowstrings froze and snapped	The Russians were away hunting	Their horses hated summer flies
-his_according_oldest_mongol	Medium	According to the oldest Mongol chronicle, what was the newborn Genghis Khan clutching in his fist?	A clot of blood	An arrowhead	A wolf's tooth	A lump of gold
 his_mongol_archers_shoot	Medium	What did Mongol archers shoot to signal to each other and frighten their enemies?	Whistling arrows	Burning arrows	Poisoned darts	Coloured flags
-hx_kamikaze	Hard	The word 'kamikaze' ('divine wind') first described what?	Storms that sank Mongol fleets	A samurai sword technique	A Buddhist temple chant	A volcanic eruption
+his_mongol_armies_cover	Medium	Why could Mongol armies cover huge distances so quickly?	Each rider brought spare horses	They rode camels, not horses	They never stopped to sleep	They used chariots on the steppe
+his_according_popular_legend_2	Medium	According to a popular legend, how did Mongol horsemen soften raw meat on long rides?	By keeping it under their saddles	By soaking it in mare's milk	By burying it in hot sand	By beating it with their bows
+his_kind_horses_carried	Medium	What kind of horses carried the Mongol armies across Asia?	Small, tough steppe ponies	Huge armoured war horses	Fast desert Arabian horses	Heavy horses bred for pulling
+hx_kamikaze	Medium	The word 'kamikaze' ('divine wind') first described what?	Storms that sank Mongol fleets	A samurai sword technique	A Buddhist temple chant	A volcanic eruption
+his_secret_history_mongols	Medium	What is 'The Secret History of the Mongols'?	The oldest life of Genghis Khan	A spy manual of Kublai Khan	Marco Polo's lost diary	A Chinese book of Mongol crimes
+hy_timur	Medium	Which Central Asian conqueror, also called Tamerlane, built his capital at Samarkand?	Timur	Babur	Genghis Khan	Attila
 his_city_became_capital	Hard	Which city became the capital of the Mongol Empire under Genghis Khan's son Ogedei?	Karakorum	Samarkand	Beijing	Sarai
 his_grandson_genghis_khan	Hard	Which grandson of Genghis Khan sacked Baghdad in 1258?	Hulagu	Kublai	Batu	Mongke
 his_mongols_drink_made	Hard	What did the Mongols drink, made from fermented mare's milk?	Kumis	Kefir	Ayran	Butter tea
 his_great_city_rus	Hard	Which great city of the Rus was sacked by the Mongols in 1240?	Kiev	Moscow	Novgorod	Vladimir
 his_mongol_armies_suddenly	Hard	Why did the Mongol armies suddenly pull back from central Europe in 1242?	The Great Khan Ogedei had died	They were beaten at Vienna	Plague broke out in their camp	Their horses ran out of grass
-his_mongol_capital_built	Hard	Which Mongol capital, built by Kublai Khan, grew into today's Beijing?	Khanbaliq	Karakorum	Shangdu	Sarai
-his_battle_1241_mongols	Hard	At which battle of 1241 did the Mongols crush the army of Hungary?	Mohi	Kalka	Ain Jalut	Liegnitz
 his_great_assembly_mongol	Hard	What was the great assembly of Mongol chiefs that chose a new khan called?	The kurultai	The yassa	The ordu	The ulus
-his_mongol_army_division	Hard	What was a Mongol army division of 10,000 men called?	A tumen	A yam	A ger	A khan
 his_capital_golden_horde	Hard	What was the capital of the Golden Horde, on the lower Volga?	Sarai	Karakorum	Kazan	Astrakhan
 his_according_accounts_led	Hard	According to most accounts, what led to Genghis Khan's death in 1227?	A fall from his horse	A battle wound	Poisoned wine	A snake bite
-his_secret_history_mongols	Hard	What is 'The Secret History of the Mongols'?	The oldest life of Genghis Khan	A spy manual of Kublai Khan	Marco Polo's lost diary	A Chinese book of Mongol crimes
 his_kidnapped_rival_tribe	Hard	Who was kidnapped by a rival tribe, leading the young Genghis Khan into his first great raid?	His wife Borte	His sister Temulun	His brother Khasar	His son Jochi
 his_mongol_paiza	Hard	What was a Mongol 'paiza'?	A tablet that worked as a pass	A tent for the khan's wives	A tax paid in horses	A whistling signal arrow
 his_last_abbasid_caliph	Hard	How was the last Abbasid caliph reportedly executed after the Mongols took Baghdad in 1258?	Rolled in a carpet and trampled	Thrown from a tower	Beheaded with his own sword	Drowned in the Tigris
 his_according_legend_genghis	Hard	According to legend, how did Genghis Khan execute the governor of Otrar, who had massacred his merchants?	Molten silver in his eyes and ears	Torn apart by four horses	Buried alive in sand	Shot by a hundred archers
 his_battle_1260_fought	Hard	At which battle of 1260, fought in Palestine, did a Mongol army suffer its first great defeat?	Ain Jalut	Mohi	Kalka	Talas
-his_according_own_book	Hard	According to his own book, Marco Polo governed which Chinese city for three years?	Yangzhou	Hangzhou	Nanjing	Xi'an
-his_monk_born_near	Hard	Which monk, born near today's Beijing, travelled west as a Mongol envoy in 1287 and met the kings of France and England?	Rabban Bar Sauma	William of Rubruck	Odoric of Pordenone	Ibn Battuta
-hx_temudzyn	Expert	What was Genghis Khan's name at birth?	Temujin	Kublai	Ogedei	Batu
-hy_timur	Expert	Which Central Asian conqueror, also called Tamerlane, built his capital at Samarkand?	Timur	Babur	Genghis Khan	Attila
-hw_marco_polo_wiezienie	Expert	Marco Polo's travel stories were written down while he was where?	In prison in Genoa	At the Mongol court	On a ship to China	In a monastery
+his_mongol_warriors_said	Hard	Mongol warriors are said to have worn shirts of which material under their armour, because arrows did not tear it and came out more easily?	Silk	Linen	Wool	Felt
+his_english_word_horde	Hard	The English word 'horde' comes from the Mongol and Turkic 'ordu'. What did 'ordu' first mean?	A camp	A herd	A storm	A river
+his_title_genghis_khan	Hard	What is the title 'Genghis Khan' usually thought to mean?	Universal ruler	Lord of horses	Son of the sky	Iron fist
+his_grandson_genghis_khan_2	Hard	Which grandson of Genghis Khan led the Mongol invasion of Europe in 1241?	Batu	Kublai	Hulagu	Mongke
+his_chinese_dynasty_finally	Hard	Which Chinese dynasty finally fell to Kublai Khan in 1279?	The Song	The Tang	The Ming	The Han
+his_genghis_khan_father	Hard	How did Genghis Khan's father, Yesugei, die when the boy was about nine?	Poisoned by Tatars	Killed in a duel	Thrown from his horse	Frozen in a blizzard
+his_according_persian_chronicler	Hard	According to a Persian chronicler, what did Genghis Khan tell the people of Bukhara he was?	'The punishment of God'	'The son of Heaven'	'The lord of all horses'	'The heir of Alexander'
+his_according_oldest_mongol	Hard	According to the oldest Mongol chronicle, what was the newborn Genghis Khan clutching in his fist?	A clot of blood	An arrowhead	A wolf's tooth	A lump of gold
+hx_temudzyn	Hard	What was Genghis Khan's name at birth?	Temujin	Kublai	Ogedei	Batu
+hw_marco_polo_wiezienie	Hard	Marco Polo's travel stories were written down while he was where?	In prison in Genoa	At the Mongol court	On a ship to China	In a monastery
+his_central_asian_empire	Hard	Which Central Asian empire did Genghis Khan destroy after it murdered his envoys?	The Khwarazmian Empire	The Seljuk Empire	The Tangut Empire	The Kara-Khitai
 his_law_code_genghis	Expert	What was the law code of Genghis Khan called?	The Yassa	The Sharia	The Ulus	The Kurultai
 his_mongol_empire_relay	Expert	What was the Mongol Empire's relay system of horse and messenger stations called?	The Yam	The Ordu	The Khanate	The Tumen
 his_mongol_general_jebe	Expert	Which Mongol general, with Jebe, led a famous raid across Persia and Russia in 1221-1223?	Subutai	Batu	Mukhali	Toghrul
 his_mongol_successor_state	Expert	Which Mongol successor state ruled Persia from 1256?	The Ilkhanate	The Golden Horde	The Chagatai Khanate	The Yuan dynasty
 his_kublai_khan_summer	Expert	What was Kublai Khan's summer capital, later made famous in a poem as 'Xanadu'?	Shangdu	Khanbaliq	Karakorum	Hangzhou
-his_central_asian_empire	Expert	Which Central Asian empire did Genghis Khan destroy after it murdered his envoys?	The Khwarazmian Empire	The Seljuk Empire	The Tangut Empire	The Kara-Khitai
 his_great_khan_received	Expert	Which Great Khan received the papal envoy Giovanni da Pian del Carpine in 1246?	Guyuk	Ogedei	Mongke	Kublai
 his_ruler_ilkhanate_made	Expert	Which ruler of the Ilkhanate made Islam its official religion in 1295?	Ghazan	Hulagu	Abaqa	Tamerlane
 his_franciscan_friar_visited	Expert	Which Franciscan friar visited the Mongol capital in 1254 and described a silver tree that poured out drinks?	William of Rubruck	Giovanni da Pian del Carpine	Odoric of Pordenone	Marco Polo
 his_mongol_princess_great	Expert	Which Mongol princess, a great-great-granddaughter of Genghis Khan, would only marry a man who could beat her at wrestling?	Khutulun	Borte	Mandukhai	Sorghaghtani
+his_mongol_capital_built	Expert	Which Mongol capital, built by Kublai Khan, grew into today's Beijing?	Khanbaliq	Karakorum	Shangdu	Sarai
+his_battle_1241_mongols	Expert	At which battle of 1241 did the Mongols crush the army of Hungary?	Mohi	Kalka	Ain Jalut	Liegnitz
+his_mongol_army_division	Expert	What was a Mongol army division of 10,000 men called?	A tumen	A yam	A ger	A khan
+his_according_own_book	Expert	According to his own book, Marco Polo governed which Chinese city for three years?	Yangzhou	Hangzhou	Nanjing	Xi'an
+his_monk_born_near	Expert	Which monk, born near today's Beijing, travelled west as a Mongol envoy in 1287 and met the kings of France and England?	Rabban Bar Sauma	William of Rubruck	Odoric of Pordenone	Ibn Battuta

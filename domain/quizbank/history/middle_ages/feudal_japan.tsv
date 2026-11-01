@@ -4,43 +4,33 @@ id	difficulty	prompt	correct	wrong1	wrong2	wrong3
 hx_samuraje	Easy	In which country did samurai warriors serve their lords?	Japan	China	Korea	Mongolia
 hx_samuraj_miecz	Easy	What was the curved sword of the samurai called?	A katana	A scimitar	A rapier	A claymore
 his_japanese_spies_secret	Easy	What were the Japanese spies and secret agents trained in stealth called?	Ninja	Samurai	Ronin	Shogun
-his_city_japan_imperial	Easy	Which city was Japan's imperial capital for over a thousand years, before Tokyo?	Kyoto	Osaka	Nara	Hiroshima
-his_old_city_edo	Easy	What is the old city of Edo called today?	Tokyo	Kyoto	Osaka	Yokohama
-his_ancient_native_religion	Easy	What is the ancient native religion of Japan, with its shrines and spirits called kami?	Shinto	Zen	Taoism	Confucianism
 his_flower_petals_fall	Easy	Which flower, whose petals fall at their most beautiful, became a symbol of the short life of a samurai?	The cherry blossom	The lotus	The chrysanthemum	The plum blossom
-his_word_samurai_originally	Easy	What did the word 'samurai' originally mean?	One who serves	One who kills	Man of the sword	Lord of the land
-his_traditional_samurai_hairstyle	Easy	What was the traditional samurai hairstyle, with the top of the head shaved?	A topknot	A long braid	A ponytail	Short spikes
-his_above_stone_bases	Easy	Above their stone bases, what were traditional Japanese castles mostly built of?	Wood	Brick	Marble	Iron
 his_ninja_weapons_shuriken	Easy	What were the ninja weapons called 'shuriken'?	Small throwing blades	Grappling hooks	Smoke bombs	Bamboo breathing tubes
-his_black_castle_japanese	Easy	Which black castle in the Japanese Alps is nicknamed 'Crow Castle'?	Matsumoto	Himeji	Osaka	Kumamoto
-hy_szogun	Medium	What was the title of Japan's military rulers for about 700 years?	Shogun	Emperor	Daimyo	Ronin
+hy_szogun	Easy	What was the title of Japan's military rulers for about 700 years?	Shogun	Emperor	Daimyo	Ronin
+his_story_tells_masterless	Easy	Which famous story tells of 47 masterless samurai avenging the death of their lord?	The 47 Ronin	The Seven Samurai	The Tale of Genji	The Heike Story
+his_while_shoguns_ruled	Easy	While the shoguns ruled Japan, how much real power did the emperor have?	Very little	Total control	Control of the army	Control of the treasury
+his_ritual_making_serving	Easy	Which ritual of making and serving green tea was perfected by the master Sen no Rikyu?	The tea ceremony	Ikebana	Origami	Calligraphy
 his_code_honour_japan	Medium	What was the code of honour of Japan's samurai called?	Bushido	Shogun	Seppuku	Ikebana
 his_samurai_without_master	Medium	What was a samurai without a master called in feudal Japan?	Ronin	Ninja	Daimyo	Shogun
 his_ritual_suicide_samurai	Medium	What is the ritual suicide by which a samurai could die with honour called?	Seppuku	Bushido	Kendo	Sakoku
-his_founded_shogunate_ruled	Medium	Who founded the shogunate that ruled Japan from 1603 to 1868?	Tokugawa Ieyasu	Oda Nobunaga	Toyotomi Hideyoshi	Minamoto no Yoritomo
-his_japanese_castle_nicknamed	Medium	Which Japanese castle is nicknamed 'the White Heron' for its brilliant white walls?	Himeji Castle	Osaka Castle	Nagoya Castle	Matsumoto Castle
-his_european_people_ones	Medium	Which European people were the only ones allowed to trade with Japan during its long isolation?	The Dutch	The Portuguese	The Spanish	The British
-his_legendary_swordsman_wrote	Medium	Which legendary swordsman wrote 'The Book of Five Rings'?	Miyamoto Musashi	Sasaki Kojiro	Hattori Hanzo	Yagyu Munenori
-his_story_tells_masterless	Medium	Which famous story tells of 47 masterless samurai avenging the death of their lord?	The 47 Ronin	The Seven Samurai	The Tale of Genji	The Heike Story
-his_while_shoguns_ruled	Medium	While the shoguns ruled Japan, how much real power did the emperor have?	Very little	Total control	Control of the army	Control of the treasury
-his_ritual_making_serving	Medium	Which ritual of making and serving green tea was perfected by the master Sen no Rikyu?	The tea ceremony	Ikebana	Origami	Calligraphy
 his_colourful_form_japanese	Medium	Which colourful form of Japanese theatre began around 1603, acted at first by women?	Kabuki	Noh	Bunraku	Sumo
 his_european_weapons_brought	Medium	Which European weapons, brought by Portuguese traders in 1543, changed Japanese warfare?	Muskets	Crossbows	Cannons	Pikes
 his_school_buddhism_built	Medium	Which school of Buddhism, built around meditation, was popular with the samurai?	Zen	Pure Land	Tibetan	Theravada
 his_great_feudal_lords	Medium	What were the great feudal lords of Japan, below the shogun, called?	Daimyo	Samurai	Ronin	Shogun
-his_fashionable_court_ladies	Medium	What did fashionable court ladies of Heian Japan do to their teeth?	Dyed them black	Filed them to points	Covered them in gold	Painted them red
-his_kyoto_temple_built	Medium	Which Kyoto temple, first built as a shogun's villa in 1397, is covered in gold leaf?	Kinkaku-ji	Ginkaku-ji	Kiyomizu-dera	Todai-ji
-his_edo_japan_official	Medium	In Edo Japan's official order of the four classes, which group ranked lowest, below the farmers?	Merchants	Craftsmen	Fishermen	Soldiers
-his_poet_walked_narrow	Medium	Which poet walked 'The Narrow Road to the Deep North' in 1689 and wrote a famous poem about a frog jumping into an old pond?	Matsuo Basho	Kobayashi Issa	Yosa Buson	Murasaki Shikibu
 his_surprising_fact_true	Medium	What surprising fact is true of the first geisha in 1700s Japan?	They were men	They were nuns	They were children	They were foreigners
-his_african_man_became	Medium	Which African man became a retainer of a great Japanese warlord in 1581?	Yasuke	Miura Anjin	Hattori Hanzo	Ishida Mitsunari
 his_seppuku_job_samurai	Medium	During seppuku, what was the job of the samurai's 'second'?	To behead him and end the pain	To read his last poem aloud	To guard his sword	To carry his ashes home
 his_shogun_tokugawa_tsunayoshi	Medium	Why was the shogun Tokugawa Tsunayoshi nicknamed 'the Dog Shogun'?	His laws protected stray dogs	He bred dogs for fighting	He barked orders at his lords	He hunted with a pack of wolves
 his_image_ninja_all	Medium	The image of ninja in all-black outfits probably comes from which art form?	Kabuki theatre	Sumo wrestling	The tea ceremony	Court poetry
-his_last_battle_1615	Medium	Before his last battle in 1615, why is the samurai Kimura Shigenari said to have perfumed his helmet with incense?	So his severed head would smell sweet	To hide his scent from enemy dogs	To ward off evil spirits in battle	To calm his nervous young horse
-wh_meiji	Hard	What is Japan's period of rapid modernization starting in 1868 called?	The Meiji Restoration	The Edo period	The Tokugawa shogunate	The Showa era
-his4_sakoku_japonia	Hard	What was Japan's sakoku policy?	Near-total isolation from the outside world	Forced conversion to Buddhism	Land reform for peasants	An alliance with Portugal
-hx_perry	Hard	Which American commodore sailed 'black ships' into Tokyo Bay in 1853 to force Japan to open up?	Matthew Perry	George Dewey	David Farragut	Oliver Hazard Perry
+his_above_stone_bases	Medium	Above their stone bases, what were traditional Japanese castles mostly built of?	Wood	Brick	Marble	Iron
+his_traditional_samurai_hairstyle	Medium	What was the traditional samurai hairstyle, with the top of the head shaved?	A topknot	A long braid	A ponytail	Short spikes
+his_city_japan_imperial	Medium	Which city was Japan's imperial capital for over a thousand years, before Tokyo?	Kyoto	Osaka	Nara	Hiroshima
+his_old_city_edo	Medium	What is the old city of Edo called today?	Tokyo	Kyoto	Osaka	Yokohama
+his_ancient_native_religion	Medium	What is the ancient native religion of Japan, with its shrines and spirits called kami?	Shinto	Zen	Taoism	Confucianism
+wh_meiji	Medium	What is Japan's period of rapid modernization starting in 1868 called?	The Meiji Restoration	The Edo period	The Tokugawa shogunate	The Showa era
+his4_sakoku_japonia	Medium	What was Japan's sakoku policy?	Near-total isolation from the outside world	Forced conversion to Buddhism	Land reform for peasants	An alliance with Portugal
+hx_perry	Medium	Which American commodore sailed 'black ships' into Tokyo Bay in 1853 to force Japan to open up?	Matthew Perry	George Dewey	David Farragut	Oliver Hazard Perry
+his_sword_hunt_ordered	Medium	What was the 'Sword Hunt' ordered by Hideyoshi in 1588?	Taking weapons away from peasants	A tournament for the best sword	A search for a stolen blade	A ban on foreign swords
+his_colourful_woodblock_prints	Medium	What is the name of the colourful woodblock prints of Edo Japan, meaning 'pictures of the floating world'?	Ukiyo-e	Haiku	Ikebana	Origami
 his_great_battle_1600	Hard	Which great battle of 1600 made Tokugawa Ieyasu master of Japan?	Sekigahara	Nagashino	Okehazama	Dan-no-ura
 his_ruthless_warlord_began	Hard	Which ruthless warlord began uniting Japan in the 1560s with the help of muskets?	Oda Nobunaga	Tokugawa Ieyasu	Takeda Shingen	Uesugi Kenshin
 his_warlord_born_peasant	Hard	Which warlord, born a peasant, finished uniting Japan and invaded Korea in 1592?	Toyotomi Hideyoshi	Oda Nobunaga	Tokugawa Ieyasu	Date Masamune
@@ -48,25 +38,35 @@ his_pair_long_short	Hard	What was the pair of long and short swords carried by a
 his_jesuit_missionary_brought	Hard	Which Jesuit missionary brought Christianity to Japan in 1549?	Francis Xavier	Matteo Ricci	Ignatius of Loyola	Luis Frois
 his_last_great_samurai	Hard	What was the last great samurai revolt against Japan's new government, in 1877, called?	The Satsuma Rebellion	The Boshin War	The Shimabara Rebellion	The Onin War
 his_age_civil_wars	Hard	What is the age of civil wars in Japan from 1467 to 1615 called?	The Sengoku period	The Heian period	The Meiji era	The Edo period
-his_woman_warrior_1180s	Hard	Which woman warrior of the 1180s is a legendary heroine of samurai tales?	Tomoe Gozen	Murasaki Shikibu	Hojo Masako	Ono no Komachi
 his_slow_masked_dance	Hard	Which slow, masked dance-drama developed in the 1300s for Japan's samurai class?	Noh	Kabuki	Bunraku	Kyogen
 his_siege_1615_destroyed	Hard	Which siege of 1615 destroyed the Toyotomi clan's last stronghold?	The Siege of Osaka	The Siege of Edo	The Siege of Kyoto	The Siege of Nagasaki
-his_sword_hunt_ordered	Hard	What was the 'Sword Hunt' ordered by Hideyoshi in 1588?	Taking weapons away from peasants	A tournament for the best sword	A search for a stolen blade	A ban on foreign swords
-his_colourful_woodblock_prints	Hard	What is the name of the colourful woodblock prints of Edo Japan, meaning 'pictures of the floating world'?	Ukiyo-e	Haiku	Ikebana	Origami
 his_book_lists_witty	Hard	Which book of lists and witty observations did the court lady Sei Shonagon write around 1000?	'The Pillow Book'	'The Tale of Genji'	'The Tale of the Heike'	'Essays in Idleness'
-his_civil_war_1180	Hard	Which civil war of 1180-1185 between two great samurai clans led to Japan's first shogunate?	The Genpei War	The Onin War	The Boshin War	The Kemmu War
 his_creatures_off_shimonoseki	Hard	Which creatures off Shimonoseki are said to carry the faces of samurai who drowned in a great sea battle of 1185?	Crabs	Octopuses	Jellyfish	Eels
 his_great_buddha_kamakura	Hard	Why does the Great Buddha of Kamakura sit in the open air?	A tsunami swept its hall away	It was too tall for any roof	Monks wanted it to face the sky	The shogun forbade a roof
 his_tokugawa_alternate_attendance	Hard	What did the Tokugawa 'alternate attendance' system force Japan's great lords to do?	Live in Edo every other year	Send their swords to the shogun	Marry into the shogun's family	Pay their taxes in silver
-his_general_betrayed_oda	Hard	Which general betrayed Oda Nobunaga, forcing him to take his own life at the Honno-ji temple in 1582?	Akechi Mitsuhide	Toyotomi Hideyoshi	Tokugawa Ieyasu	Takeda Shingen
-his_japanese_prince_credited	Hard	Which Japanese prince is credited with Japan's first constitution in 604?	Prince Shotoku	Prince Genji	Emperor Jimmu	Oda Nobunaga
-his4_dynastia_tokugawa_miasto	Expert	Which city was the seat of the Tokugawa shogunate?	Edo	Kyoto	Osaka	Nara
-his_small_artificial_island	Expert	On which small artificial island in Nagasaki harbour did Dutch merchants live and trade?	Dejima	Hirado	Tanegashima	Okinawa
+his_word_samurai_originally	Hard	What did the word 'samurai' originally mean?	One who serves	One who kills	Man of the sword	Lord of the land
+his_founded_shogunate_ruled	Hard	Who founded the shogunate that ruled Japan from 1603 to 1868?	Tokugawa Ieyasu	Oda Nobunaga	Toyotomi Hideyoshi	Minamoto no Yoritomo
+his_japanese_castle_nicknamed	Hard	Which Japanese castle is nicknamed 'the White Heron' for its brilliant white walls?	Himeji Castle	Osaka Castle	Nagoya Castle	Matsumoto Castle
+his_european_people_ones	Hard	Which European people were the only ones allowed to trade with Japan during its long isolation?	The Dutch	The Portuguese	The Spanish	The British
+his_legendary_swordsman_wrote	Hard	Which legendary swordsman wrote 'The Book of Five Rings'?	Miyamoto Musashi	Sasaki Kojiro	Hattori Hanzo	Yagyu Munenori
+his_fashionable_court_ladies	Hard	What did fashionable court ladies of Heian Japan do to their teeth?	Dyed them black	Filed them to points	Covered them in gold	Painted them red
+his_kyoto_temple_built	Hard	Which Kyoto temple, first built as a shogun's villa in 1397, is covered in gold leaf?	Kinkaku-ji	Ginkaku-ji	Kiyomizu-dera	Todai-ji
+his_edo_japan_official	Hard	In Edo Japan's official order of the four classes, which group ranked lowest, below the farmers?	Merchants	Craftsmen	Fishermen	Soldiers
+his_poet_walked_narrow	Hard	Which poet walked 'The Narrow Road to the Deep North' in 1689 and wrote a famous poem about a frog jumping into an old pond?	Matsuo Basho	Kobayashi Issa	Yosa Buson	Murasaki Shikibu
+his_african_man_became	Hard	Which African man became a retainer of a great Japanese warlord in 1581?	Yasuke	Miura Anjin	Hattori Hanzo	Ishida Mitsunari
+his_last_battle_1615	Hard	Before his last battle in 1615, why is the samurai Kimura Shigenari said to have perfumed his helmet with incense?	So his severed head would smell sweet	To hide his scent from enemy dogs	To ward off evil spirits in battle	To calm his nervous young horse
+his4_dynastia_tokugawa_miasto	Hard	Which city was the seat of the Tokugawa shogunate?	Edo	Kyoto	Osaka	Nara
+his_small_artificial_island	Hard	On which small artificial island in Nagasaki harbour did Dutch merchants live and trade?	Dejima	Hirado	Tanegashima	Okinawa
+his_clan_founded_japan	Hard	Which clan founded Japan's first shogunate, at Kamakura, in 1192?	The Minamoto	The Taira	The Tokugawa	The Fujiwara
+his_japan_kakure_kirishitan	Hard	Who were Japan's 'Kakure Kirishitan'?	Christians who kept their faith secret	Samurai who served no master	Pirates raiding the Korean coast	Monks who fought for the shogun
 his_samurai_led_1877	Expert	Which samurai led the 1877 rebellion that inspired the film 'The Last Samurai'?	Saigo Takamori	Sakamoto Ryoma	Katsu Kaishu	Okubo Toshimichi
-his_clan_founded_japan	Expert	Which clan founded Japan's first shogunate, at Kamakura, in 1192?	The Minamoto	The Taira	The Tokugawa	The Fujiwara
 his_armed_buddhist_warrior	Expert	What were the armed Buddhist warrior monks of medieval Japan called?	Sohei	Ronin	Ninja	Daimyo
 his_japanese_temple_near	Expert	Which Japanese temple near Nara has the oldest surviving wooden buildings in the world?	Horyu-ji	Todai-ji	Kiyomizu-dera	Enryaku-ji
 his_giant_warrior_monk	Expert	Which giant warrior monk became the loyal follower of the young samurai Yoshitsune after losing a duel on a bridge?	Benkei	Musashi	Hideyoshi	Kusunoki
 his_samurai_sailed_mexico	Expert	Which samurai sailed to Mexico and Spain in 1613-1620 and met Pope Paul V in Rome?	Hasekura Tsunenaga	Saigo Takamori	Ito Mancio	Date Masamune
 his_fumi_used_tokugawa	Expert	What were 'fumi-e' used for in Tokugawa Japan?	Making suspects tread on Christian images	Teaching children to write kanji	Marking the borders of a lord's land	Calling the dead home at festivals
-his_japan_kakure_kirishitan	Expert	Who were Japan's 'Kakure Kirishitan'?	Christians who kept their faith secret	Samurai who served no master	Pirates raiding the Korean coast	Monks who fought for the shogun
+his_black_castle_japanese	Expert	Which black castle in the Japanese Alps is nicknamed 'Crow Castle'?	Matsumoto	Himeji	Osaka	Kumamoto
+his_woman_warrior_1180s	Expert	Which woman warrior of the 1180s is a legendary heroine of samurai tales?	Tomoe Gozen	Murasaki Shikibu	Hojo Masako	Ono no Komachi
+his_civil_war_1180	Expert	Which civil war of 1180-1185 between two great samurai clans led to Japan's first shogunate?	The Genpei War	The Onin War	The Boshin War	The Kemmu War
+his_general_betrayed_oda	Expert	Which general betrayed Oda Nobunaga, forcing him to take his own life at the Honno-ji temple in 1582?	Akechi Mitsuhide	Toyotomi Hideyoshi	Tokugawa Ieyasu	Takeda Shingen
+his_japanese_prince_credited	Expert	Which Japanese prince is credited with Japan's first constitution in 604?	Prince Shotoku	Prince Genji	Emperor Jimmu	Oda Nobunaga

@@ -2,37 +2,34 @@
 # misjonarze. Wikingowie i Bizancjum maja osobne dzialy.
 id	difficulty	prompt	correct	wrong1	wrong2	wrong3
 his_gloomy_long_given	Easy	Which gloomy name was long given to the centuries after the fall of Rome?	The Dark Ages	The Iron Age	The Silent Age	The Grey Ages
-his_people_charlemagne_king	Easy	Which people was Charlemagne the king of?	The Franks	The Goths	The Saxons	The Vandals
-his_king_wessex_fought	Easy	Which king of Wessex, who fought off the Vikings, is known as 'the Great'?	Alfred	Athelstan	Edgar	Harold
 his_religion_franks_adopt	Easy	Which religion did the Franks adopt under King Clovis?	Christianity	Islam	Judaism	Paganism
 his_island_saint_patrick	Easy	Which island did Saint Patrick bring Christianity to in the 400s?	Ireland	Britain	Iceland	Sicily
 his_germanic_people_gave	Easy	Which Germanic people gave their name to Essex, Sussex and Wessex?	The Saxons	The Franks	The Goths	The Jutes
 his_legendary_king_britons	Easy	Which legendary king of the Britons sat with his knights at a Round Table?	King Arthur	King Alfred	King Lear	King Harold
 his_according_legend_saint	Easy	According to legend, what did Saint Patrick drive out of the island he converted?	All the snakes	All the wolves	All the rats	All the toads
-his_good_king_wenceslas	Easy	The 'Good King Wenceslas' of the Christmas carol was a real duke of which land?	Bohemia	Hungary	Saxony	Bavaria
 his_style_plain_church	Easy	Which style of plain church singing is named after Pope Gregory the Great?	Gregorian chant	Ambrosian hymn	Benedictine psalm	Carolingian canon
 his_according_legend_plant	Easy	According to legend, which plant did Saint Patrick use to explain the Holy Trinity?	The shamrock	The thistle	The mistletoe	The holly
-hx_frankowie	Medium	Which Germanic people gave their name to France?	The Franks	The Gauls	The Goths	The Normans
-his_city_favourite_seat	Medium	Which city was the favourite seat of Charlemagne, where he is buried?	Aachen	Paris	Rome	Cologne
+his_empire_voltaire_mock	Easy	Which empire did Voltaire mock as 'neither holy, nor Roman, nor an empire'?	The Holy Roman Empire	The Byzantine Empire	The Ottoman Empire	The Russian Empire
+his_language_educated_people	Easy	Which language did educated people across western Europe write in during the Middle Ages?	Latin	Greek	French	Gothic
+hx_frankowie	Easy	Which Germanic people gave their name to France?	The Franks	The Gauls	The Goths	The Normans
 his_england_germanic_people	Medium	England is named after which Germanic people who settled there after the Romans left?	The Angles	The Saxons	The Jutes	The Franks
-his_empire_voltaire_mock	Medium	Which empire did Voltaire mock as 'neither holy, nor Roman, nor an empire'?	The Holy Roman Empire	The Byzantine Empire	The Ottoman Empire	The Russian Empire
 his_illuminated_gospel_book	Medium	Which famous illuminated Gospel book is kept at Trinity College Dublin?	The Book of Kells	The Lindisfarne Gospels	The Domesday Book	The Book of Durrow
-his_language_educated_people	Medium	Which language did educated people across western Europe write in during the Middle Ages?	Latin	Greek	French	Gothic
 his_dynasty_charlemagne	Medium	What is the dynasty of Charlemagne called?	The Carolingians	The Merovingians	The Capetians	The Habsburgs
 his_according_biographer_charlemagne	Medium	According to his biographer, what did Charlemagne try and fail to learn, keeping tablets under his pillow?	Writing	Swimming	Latin prayers	Playing the harp
-his_germanic_people_long	Medium	Which Germanic people, named for their 'long beards', gave their name to a region of northern Italy?	The Lombards	The Burgundians	The Ostrogoths	The Franks
 his_future_saint_patrick	Medium	How did the future Saint Patrick first arrive on the island he later converted?	As a kidnapped slave	As a Roman soldier	As a shipwrecked sailor	As a wandering bard
 his_motto_often_used	Medium	Which motto is often used to sum up the life of Benedictine monks?	'Pray and work'	'Fight and pray'	'Know thyself'	'Silence is golden'
 his_illuminated_gospel_book_2	Medium	Which illuminated Gospel book was made at a monastery on a Northumbrian island around 700?	The Lindisfarne Gospels	The Book of Kells	The Book of Durrow	The Codex Amiatinus
 his_study_charlemagne_skeleton	Medium	What did the study of Charlemagne's skeleton show about him?	He was very tall for his time	He was very short for his time	He had lost an arm in battle	He had six fingers on each hand
-his_charlemagne_coinage_240	Medium	Charlemagne's coinage of 240 pennies to the pound survived in Britain until which year?	1971	1815	1914	1066
-his_according_biographer_einhard	Medium	According to his biographer Einhard, which pastime did Charlemagne love, sometimes sharing it with 100 courtiers?	Swimming in hot springs	Playing at dice	Singing in a choir	Wrestling contests
 his_found_staffordshire_hoard	Medium	Who found the Staffordshire Hoard, the largest hoard of Anglo-Saxon gold ever discovered, in 2009?	A man with a metal detector	Archaeologists digging a church	Builders laying a new road	A farmer ploughing his field
-his_traditional_french_pack	Medium	In the traditional French pack of playing cards, which king is named 'Charles', after Charlemagne?	The king of hearts	The king of spades	The king of clubs	The king of diamonds
 his_exeter_book_thousand	Medium	The Exeter Book, a thousand-year-old Anglo-Saxon manuscript, is famous for nearly 100 of what, some of them rude?	Riddles	Recipes	Love letters	Curses
-his_french_royal_louis	Medium	The French royal name 'Louis' grew out of the name of which Frankish king?	Clovis	Pepin	Dagobert	Childeric
-his_seeing_fair_haired	Medium	Seeing fair-haired English boys for sale in Rome, which future pope reportedly said 'Not Angles, but angels'?	Gregory the Great	Leo the Great	Urban II	Sylvester II
-his_karol_wielki	Hard	Who was crowned Emperor of the Romans by the Pope on Christmas Day in 800?	Charlemagne	Otto I	Clovis	Constantine
+his_people_charlemagne_king	Medium	Which people was Charlemagne the king of?	The Franks	The Goths	The Saxons	The Vandals
+his_king_wessex_fought	Medium	Which king of Wessex, who fought off the Vikings, is known as 'the Great'?	Alfred	Athelstan	Edgar	Harold
+his_karol_wielki	Medium	Who was crowned Emperor of the Romans by the Pope on Christmas Day in 800?	Charlemagne	Otto I	Clovis	Constantine
+his_happened_cadaver_synod	Medium	What happened at the 'Cadaver Synod' of 897?	A dead pope was put on trial	A dead king was crowned	Bishops met in a crypt	Relics were sold off
+his_early_frankish_kings	Medium	Early Frankish kings were known as 'the long-haired kings'. What did it mean if one had his hair cut off?	He had lost the right to rule	He had become a saint	He had to go to war	He had married again
+his_anglo_saxon_ship	Medium	Which Anglo-Saxon ship burial in Suffolk held a famous iron helmet?	Sutton Hoo	Lindisfarne	Jarrow	Whitby
+his_neat_handwriting_developed	Medium	Which neat handwriting, developed at Charlemagne's court, is the ancestor of our lowercase letters?	Carolingian minuscule	Gothic blackletter	Roman capitals	Irish uncial
+his_seven_early_anglo	Medium	What is the name for the seven early Anglo-Saxon kingdoms of England?	The Heptarchy	The Septimate	The Danelaw	The Seven Shires
 his_frankish_king_baptised	Hard	Which Frankish king was baptised around 496 and united most of the Franks?	Clovis I	Pepin the Short	Charles Martel	Dagobert I
 his_dynasty_founded_clovis	Hard	Which dynasty, founded by Clovis, ruled the Franks before Charlemagne's family?	The Merovingians	The Carolingians	The Capetians	The Ottonians
 his_treaty_843_split	Hard	Which treaty of 843 split Charlemagne's empire between his three grandsons?	The Treaty of Verdun	The Treaty of Aachen	The Treaty of Paris	The Treaty of Worms
@@ -41,32 +38,35 @@ his_monk_jarrow_wrote	Hard	Which monk of Jarrow wrote the 'Ecclesiastical Histor
 his_hilltop_monastery_italy	Hard	Which hilltop monastery in Italy did Saint Benedict found around 529?	Monte Cassino	Cluny	Assisi	Montserrat
 his_pope_sent_missionaries	Hard	Which pope sent missionaries led by Augustine to convert the Anglo-Saxons in 597?	Gregory the Great	Leo the Great	Urban II	Innocent III
 his_raiders_hungarian_plain	Hard	Which raiders from the Hungarian plain were finally beaten at Lechfeld in 955?	The Magyars	The Avars	The Huns	The Bulgars
-his_anglo_saxon_ship	Hard	Which Anglo-Saxon ship burial in Suffolk held a famous iron helmet?	Sutton Hoo	Lindisfarne	Jarrow	Whitby
 his_charlemagne_father_carolingian	Hard	Who was Charlemagne's father, the first Carolingian king of the Franks?	Pepin the Short	Charles Martel	Clovis I	Louis the Pious
 his_kingdom_spain_fell	Hard	Whose kingdom in Spain fell to the Arab and Berber invasion of 711?	The Visigoths'	The Ostrogoths'	The Vandals'	The Franks'
 his_king_mercia_built	Hard	Which king of Mercia built a great earth bank along the Welsh border?	Offa	Alfred	Penda	Athelstan
 his_island_off_scotland	Hard	Which island off Scotland, where Saint Columba founded a monastery, was a centre of Celtic Christianity?	Iona	Skye	Lindisfarne	Orkney
 his_title_charles_martel	Hard	Which title did Charles Martel hold before his family took the Frankish crown?	Mayor of the Palace	Count of Paris	Duke of Burgundy	Archbishop of Reims
-his_pope_crowned_frankish	Hard	Which pope crowned a Frankish king as emperor on Christmas Day in 800?	Leo III	Gregory the Great	Urban II	Stephen II
 his_pyrenees_pass_charlemagne	Hard	In which Pyrenees pass was Charlemagne's rearguard wiped out in 778?	Roncevaux	Somport	Andorra	Le Perthus
 his_germanic_people_ruled	Hard	Which Germanic people ruled Italy under King Theodoric the Great?	The Ostrogoths	The Visigoths	The Lombards	The Vandals
-his_english_missionary_apostle	Hard	Which English missionary, 'the Apostle of the Germans', was killed in Frisia in 754?	Saint Boniface	Saint Columba	Saint Aidan	Saint Willibrord
-his_seven_early_anglo	Hard	What is the name for the seven early Anglo-Saxon kingdoms of England?	The Heptarchy	The Septimate	The Danelaw	The Seven Shires
 his_dynasty_took_throne	Hard	Which dynasty took the throne of France in 987 and ruled for over 300 years?	The Capetians	The Carolingians	The Merovingians	The Valois
 his_king_wessex_became	Hard	Which king of Wessex became the first king of all England, in 927?	Athelstan	Edward the Elder	Edgar	Aethelred
 his_old_frankish_law	Hard	Which old Frankish law code was later used to bar women from the French throne?	The Salic law	The Code of Clovis	The Frankish Pact	The Lex Carolina
-his_neat_handwriting_developed	Hard	Which neat handwriting, developed at Charlemagne's court, is the ancestor of our lowercase letters?	Carolingian minuscule	Gothic blackletter	Roman capitals	Irish uncial
-his_happened_cadaver_synod	Hard	What happened at the 'Cadaver Synod' of 897?	A dead pope was put on trial	A dead king was crowned	Bishops met in a crypt	Relics were sold off
 his_according_welsh_biographer	Hard	According to his Welsh biographer Asser, how did a famous king of Wessex keep track of time?	With candles marked in hours	With a water clock	By ringing church bells	With a sand hourglass
-his_early_frankish_kings	Hard	Early Frankish kings were known as 'the long-haired kings'. What did it mean if one had his hair cut off?	He had lost the right to rule	He had become a saint	He had to go to war	He had married again
-his_elderly_frankish_queen	Hard	How was the elderly Frankish queen Brunhilda put to death in 613?	Tied to a wild horse	Burned at the stake	Thrown to the bears	Walled up alive
 his_king_offa_mercia	Hard	King Offa of Mercia minted a gold coin copied from an Arab dinar. What does it still carry?	The Muslim declaration of faith	A portrait of the Abbasid caliph	The pope's blessing in Latin	A picture of a camel
-hx_karol_mlot	Expert	Which Frankish leader stopped the Umayyad advance into Europe at the Battle of Tours in 732?	Charles Martel	Charlemagne	Clovis	Pepin the Short
+his_good_king_wenceslas	Hard	The 'Good King Wenceslas' of the Christmas carol was a real duke of which land?	Bohemia	Hungary	Saxony	Bavaria
+his_city_favourite_seat	Hard	Which city was the favourite seat of Charlemagne, where he is buried?	Aachen	Paris	Rome	Cologne
+his_germanic_people_long	Hard	Which Germanic people, named for their 'long beards', gave their name to a region of northern Italy?	The Lombards	The Burgundians	The Ostrogoths	The Franks
+his_charlemagne_coinage_240	Hard	Charlemagne's coinage of 240 pennies to the pound survived in Britain until which year?	1971	1815	1914	1066
+his_according_biographer_einhard	Hard	According to his biographer Einhard, which pastime did Charlemagne love, sometimes sharing it with 100 courtiers?	Swimming in hot springs	Playing at dice	Singing in a choir	Wrestling contests
+his_traditional_french_pack	Hard	In the traditional French pack of playing cards, which king is named 'Charles', after Charlemagne?	The king of hearts	The king of spades	The king of clubs	The king of diamonds
+his_french_royal_louis	Hard	The French royal name 'Louis' grew out of the name of which Frankish king?	Clovis	Pepin	Dagobert	Childeric
+his_seeing_fair_haired	Hard	Seeing fair-haired English boys for sale in Rome, which future pope reportedly said 'Not Angles, but angels'?	Gregory the Great	Leo the Great	Urban II	Sylvester II
+hx_karol_mlot	Hard	Which Frankish leader stopped the Umayyad advance into Europe at the Battle of Tours in 732?	Charles Martel	Charlemagne	Clovis	Pepin the Short
+his_wergild_early_germanic	Hard	What was 'wergild' in early Germanic law?	A payment for killing someone	A tax on land	A chief's war band	A trial by combat
+his_document_later_proved	Hard	Which document, later proved a forgery, claimed Constantine had handed the West to the pope?	The Donation of Constantine	The Edict of Milan	The Golden Bull	The Pragmatic Sanction
 his_scholar_york_ran	Expert	Which scholar from York ran Charlemagne's palace school?	Alcuin	Bede	Einhard	Boethius
 his_monk_worked_out	Expert	Which monk worked out the 'AD' system of counting years, in 525?	Dionysius Exiguus	Bede	Gregory of Tours	Isidore of Seville
-his_wergild_early_germanic	Expert	What was 'wergild' in early Germanic law?	A payment for killing someone	A tax on land	A chief's war band	A trial by combat
-his_document_later_proved	Expert	Which document, later proved a forgery, claimed Constantine had handed the West to the pope?	The Donation of Constantine	The Edict of Milan	The Golden Bull	The Pragmatic Sanction
 his_elephant_caliph_harun	Expert	What was the elephant that the caliph Harun al-Rashid sent to Charlemagne called?	Abul-Abbas	Hanno	Jumbo	Suleiman
 his_roman_writer_wrote	Expert	Which Roman writer wrote 'The Consolation of Philosophy' while awaiting execution under Theodoric?	Boethius	Cassiodorus	Augustine	Jerome
 his_irish_monk_founded	Expert	Which Irish monk founded monasteries across Europe, including Bobbio in Italy?	Columbanus	Columba	Brendan	Patrick
 his_saxon_leader_fought	Expert	Which Saxon leader fought Charlemagne for some 30 years before being baptised in 785?	Widukind	Arminius	Hengist	Offa
+his_pope_crowned_frankish	Expert	Which pope crowned a Frankish king as emperor on Christmas Day in 800?	Leo III	Gregory the Great	Urban II	Stephen II
+his_english_missionary_apostle	Expert	Which English missionary, 'the Apostle of the Germans', was killed in Frisia in 754?	Saint Boniface	Saint Columba	Saint Aidan	Saint Willibrord
+his_elderly_frankish_queen	Expert	How was the elderly Frankish queen Brunhilda put to death in 613?	Tied to a wild horse	Burned at the stake	Thrown to the bears	Walled up alive

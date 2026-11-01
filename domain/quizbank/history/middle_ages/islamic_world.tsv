@@ -7,65 +7,65 @@ his_direction_muslims_around	Easy	In which direction do Muslims around the world
 his_month_muslims_fast	Easy	During which month do Muslims fast from dawn to dusk?	Ramadan	Muharram	Shawwal	Rajab
 his_language_quran_written	Easy	In which language was the Quran first written down?	Arabic	Persian	Turkish	Hebrew
 his_instead_pictures_people	Easy	Instead of pictures of people and animals, what mainly decorates traditional mosques?	Calligraphy and geometric patterns	Paintings of the prophets	Statues of famous caliphs	Mosaics of kings and battles
-his_day_week_muslims	Easy	On which day of the week do Muslims gather for the main weekly prayers at the mosque?	Friday	Saturday	Sunday	Monday
-his_according_islamic_tradition	Easy	According to Islamic tradition, where did Muhammad receive his first revelation?	In a cave on a mountain near Mecca	In the courtyard of the Kaaba	Under a palm tree in Medina	At an oasis in the Syrian desert
-his_instrument_perfected_islamic	Easy	Which instrument, perfected by Islamic astronomers, helped find the time of prayer and the direction of Mecca?	The astrolabe	The telescope	The sextant	The pendulum clock
-hy_mekka	Medium	In which city was the Prophet Muhammad born?	Mecca	Medina	Jerusalem	Baghdad
+hy_mekka	Easy	In which city was the Prophet Muhammad born?	Mecca	Medina	Jerusalem	Baghdad
+his_two_main_branches	Easy	Into which two main branches did Islam split over who should succeed Muhammad?	Sunni and Shia	Sufi and Salafi	Ismaili and Druze	Hanafi and Maliki
 his_cube_shaped_shrine	Medium	What is the cube-shaped shrine at the centre of the Great Mosque of Mecca called?	The Kaaba	The Dome of the Rock	The Minbar	The Mihrab
 his_golden_domed_shrine	Medium	Which golden-domed shrine, built in 691, stands on Jerusalem's Temple Mount?	The Dome of the Rock	Hagia Sophia	The Blue Mosque	The Kaaba
 his_palace_fortress_granada	Medium	Which palace-fortress in Granada was built by Spain's last Muslim dynasty?	The Alhambra	The Alcazar	The Mezquita	El Escorial
 his_christian_europeans_call	Medium	What did Christian Europeans call the Muslims of medieval Spain and North Africa?	The Moors	The Saracens	The Berbers	The Turks
 his_title_leaders_succeeded	Medium	What was the title of the leaders who succeeded Muhammad at the head of the Muslim community?	Caliph	Sultan	Shah	Emir
-his_two_main_branches	Medium	Into which two main branches did Islam split over who should succeed Muhammad?	Sunni and Shia	Sufi and Salafi	Ismaili and Druze	Hanafi and Maliki
-his_country_coffee_drinking	Medium	From which country did coffee drinking spread across the Islamic world in the 1400s?	Yemen	Egypt	Persia	Morocco
-his_city_capital_umayyad	Medium	Which city was the capital of the Umayyad Caliphate?	Damascus	Baghdad	Cairo	Medina
-his_shape_original_city	Medium	What shape was the original city of Baghdad built in?	A circle	A square	A star	A crescent
 his_islamic_calendar_based	Medium	What is the Islamic calendar based on?	The phases of the Moon	The Sun's path	The flooding of the Nile	The rising of Venus
 his_city_prophet_muhammad	Medium	In which city is the Prophet Muhammad buried?	Medina	Mecca	Jerusalem	Damascus
 his_madrasa	Medium	What is a 'madrasa'?	An Islamic school or college	A covered market	A royal palace	A fortress tower
-his_persian_mathematician_astronomer	Medium	Which Persian mathematician and astronomer also wrote the poems of the 'Rubaiyat'?	Omar Khayyam	Rumi	Hafez	Ferdowsi
 his_built_middle_cordoba	Medium	What was built in the middle of Cordoba's Great Mosque after the Christian conquest?	A cathedral	A royal palace	A bullring	A prison
 his_trees_brought_spain	Medium	Which trees, brought to Spain by its Muslim rulers, now line the streets of Seville in their thousands?	Bitter orange trees	Date palms	Fig trees	Lemon trees
-his_word_alcohol_comes	Medium	The word 'alcohol' comes from the Arabic 'al-kuhl', which first meant what?	A fine eye make-up powder	A strong date wine	A doctor's medicine	A perfume of roses
 his_walled_caravanserais_built	Medium	What were the walled 'caravanserais' built along Islamic trade routes?	Roadside inns for traders and camels	Forts for the caliph's soldiers	Markets for buying slaves	Schools for young scholars
 his_arabic_word_islam	Medium	What does the Arabic word 'Islam' mean?	Submission to God	Peace on Earth	The true path	The people of the book
 his_star_names_such	Medium	Many star names, such as Aldebaran, Altair and Betelgeuse, come from which language?	Arabic	Greek	Latin	Hebrew
 his_word_admiral_comes	Medium	The word 'admiral' comes from the Arabic 'amir', meaning what?	Commander	Sailor	Ship	Harbour
-his_arab_instrument_ancestor	Medium	Which Arab instrument is the ancestor of the European lute?	The oud	The sitar	The zither	The harp
-his_marvel_among_harun	Medium	Which marvel among Harun al-Rashid's gifts to Charlemagne astonished the Franks in 807?	A brass water clock	A clockwork singing bird	A silver map of the world	A lion with a jewelled collar
-his_abbasids_officially_new	Medium	What did the Abbasids officially name their new round capital, Baghdad?	The City of Peace	The City of Gold	The House of Wisdom	The Gate of God
-his4_kalifat_abbasydzki_stolica	Hard	Which city was the Abbasid Caliphate's capital?	Baghdad	Damascus	Cairo	Cordoba
+his_day_week_muslims	Medium	On which day of the week do Muslims gather for the main weekly prayers at the mosque?	Friday	Saturday	Sunday	Monday
+his_according_islamic_tradition	Medium	According to Islamic tradition, where did Muhammad receive his first revelation?	In a cave on a mountain near Mecca	In the courtyard of the Kaaba	Under a palm tree in Medina	At an oasis in the Syrian desert
+his_instrument_perfected_islamic	Medium	Which instrument, perfected by Islamic astronomers, helped find the time of prayer and the direction of Mecca?	The astrolabe	The telescope	The sextant	The pendulum clock
+his4_kalifat_abbasydzki_stolica	Medium	Which city was the Abbasid Caliphate's capital?	Baghdad	Damascus	Cairo	Cordoba
+hx_granada_1492	Medium	Besides Columbus's voyage, what else happened in Spain in 1492?	Granada, the last Moorish state, fell	The Armada was destroyed	The Inquisition was abolished	Madrid became the capital
+hw_kordoba	Medium	Which Spanish city was the glittering capital of Muslim al-Andalus in the 900s?	Cordoba	Granada	Seville	Toledo
+hw_dom_madrosci	Medium	In which city stood the 'House of Wisdom', a great centre of learning in the 800s?	Baghdad	Cairo	Cordoba	Damascus
 hx_ibn_battuta	Hard	Which Moroccan traveller journeyed some 120,000 km across the medieval Islamic world?	Ibn Battuta	Ibn Khaldun	Al-Idrisi	Ibn Sina
-hx_granada_1492	Hard	Besides Columbus's voyage, what else happened in Spain in 1492?	Granada, the last Moorish state, fell	The Armada was destroyed	The Inquisition was abolished	Madrid became the capital
-hw_kordoba	Hard	Which Spanish city was the glittering capital of Muslim al-Andalus in the 900s?	Cordoba	Granada	Seville	Toledo
 his_dynasty_ruling_damascus	Hard	Which dynasty, ruling from Damascus, was the first to pass the caliphate from father to son?	The Umayyads	The Abbasids	The Fatimids	The Ottomans
 his_persian_scholar_canon	Hard	Which Persian scholar's 'Canon of Medicine' was used in European universities for centuries?	Avicenna	Averroes	Al-Khwarizmi	Ibn Battuta
 his_year_muslim_conquest	Hard	In which year did the Muslim conquest of Spain begin?	711	632	846	1031
 his_gibraltar_comes_muslim	Hard	The name 'Gibraltar' comes from which Muslim commander who landed there in 711?	Tariq ibn Ziyad	Musa ibn Nusayr	Abd al-Rahman	Saladin
 his_caliph_death_muhammad	Hard	Who was the first caliph after the death of Muhammad?	Abu Bakr	Ali	Umar	Uthman
 his_caliph_baghdad_appears	Hard	Which caliph of Baghdad appears in many tales of the 'Thousand and One Nights'?	Harun al-Rashid	Al-Mansur	Al-Mamun	Saladin
-his_dynasty_founded_city	Hard	Which dynasty founded the city of Cairo in 969?	The Fatimids	The Abbasids	The Mamluks	The Umayyads
 his_slave_soldiers_seized	Hard	Which slave-soldiers seized power in Egypt in 1250 and later stopped the Mongols?	The Mamluks	The Janissaries	The Ghulams	The Varangians
-his_abbasid_caliph_founded	Hard	Which Abbasid caliph founded Baghdad in 762?	Al-Mansur	Harun al-Rashid	Al-Mamun	Abu Bakr
 his_turkish_dynasty_took	Hard	Which Turkish dynasty took control of Baghdad in 1055?	The Seljuks	The Ottomans	The Mamluks	The Safavids
 his_cairo_university_founded	Hard	Which Cairo university, founded around 970, is one of the oldest in the world?	Al-Azhar	Al-Qarawiyyin	Nizamiyya	Sankore
 his_university_fez_founded	Hard	Which university in Fez, founded by a woman in 859, is often called the oldest in the world?	Al-Qarawiyyin	Al-Azhar	Bologna	Nalanda
-his_caliph_took_jerusalem	Hard	Which caliph took Jerusalem from the Byzantines in 637?	Umar	Abu Bakr	Ali	Muawiya
-his_battle_636_arabs	Hard	At which battle of 636 did the Arabs crush a Byzantine army and win Syria?	Yarmouk	Badr	Hattin	Manzikert
 his_spanish_city_retaken	Hard	Which Spanish city, retaken by Christians in 1085, became a centre for translating Arabic science into Latin?	Toledo	Seville	Granada	Valencia
-his_abbasid_caliph_son	Hard	Which Abbasid caliph, son of Harun al-Rashid, paid scholars to translate Greek science at the House of Wisdom?	Al-Mamun	Al-Mansur	Al-Mutasim	Al-Amin
-his_engineer_1206_described	Hard	Which engineer of 1206 described dozens of ingenious machines, including a famous 'elephant clock'?	Al-Jazari	Al-Khwarizmi	Ibn Sina	Al-Biruni
-his_arab_geographer_made	Hard	Which Arab geographer made a famous map of the world for the Norman king Roger II of Sicily in 1154?	Al-Idrisi	Ibn Battuta	Ibn Khaldun	Al-Masudi
 his_poet_finished_shahnameh	Hard	Which poet finished the 'Shahnameh', the great Persian 'Book of Kings', around 1010?	Ferdowsi	Rumi	Hafez	Omar Khayyam
 his_tunisian_born_scholar	Hard	Which Tunisian-born scholar of the 1300s explained the rise and fall of dynasties and is called a father of sociology?	Ibn Khaldun	Ibn Rushd	Al-Farabi	Al-Biruni
-his_inventor_cordoba_said	Hard	Which inventor of Cordoba is said to have flown briefly with feathered wings around 875, hurting his back on landing?	Abbas ibn Firnas	Ibn al-Haytham	Al-Jazari	Ziryab
-his_family_massacred_750	Hard	After his family was massacred in 750, which Umayyad prince fled across North Africa and founded an emirate at Cordoba?	Abd al-Rahman I	Harun al-Rashid	Tariq ibn Ziyad	Al-Mansur
-hy_hidzra	Expert	The Islamic calendar counts from Muhammad's move in 622 to which city?	Medina	Mecca	Damascus	Jerusalem
-hw_dom_madrosci	Expert	In which city stood the 'House of Wisdom', a great centre of learning in the 800s?	Baghdad	Cairo	Cordoba	Damascus
-his_empire_ruled_shahs	Expert	Which empire was ruled by shahs from the city of Isfahan in the 1600s?	The Safavid Empire	The Mughal Empire	The Ottoman Empire	The Seljuk Empire
+his_country_coffee_drinking	Hard	From which country did coffee drinking spread across the Islamic world in the 1400s?	Yemen	Egypt	Persia	Morocco
+his_city_capital_umayyad	Hard	Which city was the capital of the Umayyad Caliphate?	Damascus	Baghdad	Cairo	Medina
+his_shape_original_city	Hard	What shape was the original city of Baghdad built in?	A circle	A square	A star	A crescent
+his_persian_mathematician_astronomer	Hard	Which Persian mathematician and astronomer also wrote the poems of the 'Rubaiyat'?	Omar Khayyam	Rumi	Hafez	Ferdowsi
+his_word_alcohol_comes	Hard	The word 'alcohol' comes from the Arabic 'al-kuhl', which first meant what?	A fine eye make-up powder	A strong date wine	A doctor's medicine	A perfume of roses
+his_arab_instrument_ancestor	Hard	Which Arab instrument is the ancestor of the European lute?	The oud	The sitar	The zither	The harp
+his_marvel_among_harun	Hard	Which marvel among Harun al-Rashid's gifts to Charlemagne astonished the Franks in 807?	A brass water clock	A clockwork singing bird	A silver map of the world	A lion with a jewelled collar
+his_abbasids_officially_new	Hard	What did the Abbasids officially name their new round capital, Baghdad?	The City of Peace	The City of Gold	The House of Wisdom	The Gate of God
+hy_hidzra	Hard	The Islamic calendar counts from Muhammad's move in 622 to which city?	Medina	Mecca	Damascus	Jerusalem
+his_empire_ruled_shahs	Hard	Which empire was ruled by shahs from the city of Isfahan in the 1600s?	The Safavid Empire	The Mughal Empire	The Ottoman Empire	The Seljuk Empire
+his_philosopher_cordoba_europe	Hard	Which philosopher of Cordoba was famous in Europe for his commentaries on Aristotle?	Averroes	Avicenna	Maimonides	Al-Farabi
 his_arab_scholar_around	Expert	Which Arab scholar of around 1000 is called 'the father of optics'?	Ibn al-Haytham	Al-Biruni	Al-Kindi	Avicenna
 his_battle_751_against	Expert	Which battle of 751 against Tang China is said to have brought papermaking to the Islamic world?	Talas	Badr	Yarmouk	Qadisiyyah
-his_philosopher_cordoba_europe	Expert	Which philosopher of Cordoba was famous in Europe for his commentaries on Aristotle?	Averroes	Avicenna	Maimonides	Al-Farabi
 his_caliph_cordoba_built	Expert	Which caliph of Cordoba built the palace city of Medina Azahara in the 900s?	Abd al-Rahman III	Al-Hakam II	Almanzor	Boabdil
 his_musician_court_cordoba	Expert	Which musician at the court of Cordoba, nicknamed 'the Blackbird', is said to have brought the three-course meal to Spain?	Ziryab	Averroes	Al-Mansur	Maimonides
 his_muezzin_chosen_muhammad	Expert	Who was the first muezzin, chosen by Muhammad for his powerful voice?	Bilal	Ali	Umar	Uthman
+his_dynasty_founded_city	Expert	Which dynasty founded the city of Cairo in 969?	The Fatimids	The Abbasids	The Mamluks	The Umayyads
+his_abbasid_caliph_founded	Expert	Which Abbasid caliph founded Baghdad in 762?	Al-Mansur	Harun al-Rashid	Al-Mamun	Abu Bakr
+his_caliph_took_jerusalem	Expert	Which caliph took Jerusalem from the Byzantines in 637?	Umar	Abu Bakr	Ali	Muawiya
+his_battle_636_arabs	Expert	At which battle of 636 did the Arabs crush a Byzantine army and win Syria?	Yarmouk	Badr	Hattin	Manzikert
+his_abbasid_caliph_son	Expert	Which Abbasid caliph, son of Harun al-Rashid, paid scholars to translate Greek science at the House of Wisdom?	Al-Mamun	Al-Mansur	Al-Mutasim	Al-Amin
+his_engineer_1206_described	Expert	Which engineer of 1206 described dozens of ingenious machines, including a famous 'elephant clock'?	Al-Jazari	Al-Khwarizmi	Ibn Sina	Al-Biruni
+his_arab_geographer_made	Expert	Which Arab geographer made a famous map of the world for the Norman king Roger II of Sicily in 1154?	Al-Idrisi	Ibn Battuta	Ibn Khaldun	Al-Masudi
+his_inventor_cordoba_said	Expert	Which inventor of Cordoba is said to have flown briefly with feathered wings around 875, hurting his back on landing?	Abbas ibn Firnas	Ibn al-Haytham	Al-Jazari	Ziryab
+his_family_massacred_750	Expert	After his family was massacred in 750, which Umayyad prince fled across North Africa and founded an emirate at Cordoba?	Abd al-Rahman I	Harun al-Rashid	Tariq ibn Ziyad	Al-Mansur

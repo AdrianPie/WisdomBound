@@ -3,66 +3,58 @@
 id	difficulty	prompt	correct	wrong1	wrong2	wrong3
 his_animal_made_possible	Easy	Which animal made it possible for traders to cross the Sahara?	The camel	The horse	The elephant	The donkey
 his_along_river_ancient	Easy	Along which river did the ancient kingdom of Kush grow up?	The Nile	The Niger	The Congo	The Zambezi
-his_modern_country_takes	Easy	Which modern country takes its name from a ruined medieval stone city?	Zimbabwe	Ghana	Mali	Benin
-his_modern_west_african	Easy	Which modern West African country took its name from a medieval empire that lay hundreds of km to its north-west?	Ghana	Mali	Guinea	Togo
-his_country_soldiers_carried	Easy	Which country's soldiers carried off thousands of the Benin Bronzes in 1897?	Britain	France	Germany	Portugal
 his_city_mali_became	Easy	Which city in Mali became a byword in English for the remotest place imaginable?	Timbuktu	Djenne	Gao	Bamako
-his_brightly_coloured_woven	Easy	Which brightly coloured woven cloth comes from the Ashanti people of Ghana?	Kente	Batik	Tartan	Kanga
-his_medieval_trade_across	Easy	In the medieval trade across the Sahara, West African gold was largely exchanged for what?	Salt	Silk	Tea	Porcelain
-hy_kaldi	Medium	According to legend, coffee was discovered in Ethiopia by a goatherd named what?	Kaldi	Menelik	Haile	Abebe
-his_huge_mud_brick	Medium	Which huge mud-brick mosque in Mali is the largest mud building in the world?	The Great Mosque of Djenne	The Sankore Mosque	The Hassan II Mosque	The Great Mosque of Kairouan
-his_west_african_empire	Medium	Which West African empire, older than Mali, was called 'the land of gold' by Arab writers?	The Ghana Empire	The Songhai Empire	The Kanem Empire	The Benin Empire
+his4_wielki_zimbabwe	Easy	Great Zimbabwe was the centre of a state on which continent?	Africa	South America	Asia	Australia
+his_ethiopia_emperors_claimed	Easy	Ethiopia's emperors claimed descent from King Solomon and which legendary queen?	The Queen of Sheba	Cleopatra	Nefertiti	Dido
 his_mansa_musa_passed	Medium	When Mansa Musa passed through Cairo on pilgrimage in 1324, what did his gifts do?	Made the price of gold crash	Paid for a new pyramid	Started a war with Egypt	Bought the city's freedom
 his_ethiopian_town_lalibela	Medium	The Ethiopian town of Lalibela is famous for what?	Churches carved out of solid rock	The oldest mosque in Africa	Giant stone heads	A palace of ivory
 his_language_grew_trade	Medium	Which language grew from trade between Bantu peoples and Arab merchants on Africa's east coast?	Swahili	Amharic	Zulu	Yoruba
-his_west_african_people	Medium	Which West African people kept their power in a sacred Golden Stool?	The Ashanti	The Zulu	The Maasai	The Berbers
 his_west_african_kingdom	Medium	Which West African kingdom had a famous army of women warriors?	Dahomey	Mali	Ethiopia	Kongo
-his_ethiopia_emperors_claimed	Medium	Ethiopia's emperors claimed descent from King Solomon and which legendary queen?	The Queen of Sheba	Cleopatra	Nefertiti	Dido
-his_great_caravans_crossing	Medium	What did the great caravans crossing the Sahara mostly trade?	Gold for salt	Silk for spices	Iron for horses	Ivory for wine
-his_empire_based_gao	Medium	Which empire, based at Gao, replaced Mali as the great power of West Africa in the 1400s?	Songhai	Ghana	Kanem-Bornu	Ashanti
-his_empire_rulers_held	Medium	Which empire's rulers held the title 'mansa'?	Mali	Ethiopia	Zimbabwe	Kongo
 his_island_off_east	Medium	Which island off East Africa was a great market for spices, especially cloves, and enslaved people?	Zanzibar	Madagascar	Mauritius	Socotra
 his_holy_relic_ethiopian	Medium	Which holy relic does the Ethiopian Church say is kept in a chapel at Aksum?	The Ark of the Covenant	The Holy Grail	The Crown of Thorns	The Spear of Destiny
-his_west_african_storytellers	Medium	What are the West African storytellers who keep the history of families and kings in song called?	Griots	Shamans	Imams	Marabouts
-his_queen_ndongo_matamba	Medium	Which queen of Ndongo and Matamba fought the Portuguese in today's Angola in the 1600s?	Nzinga	Amina	Nefertari	Yaa Asantewaa
-his_carved_figure_great	Medium	Which carved figure from Great Zimbabwe appears on Zimbabwe's flag?	A soapstone bird	A stone lion	A stone crocodile	A bronze leopard
 his_librarians_mali_smuggle	Medium	What did librarians in Mali smuggle out of a famous desert city in 2012 to save them from militants?	Ancient handwritten manuscripts	Gold from a royal tomb	The bones of local saints	Bronze statues of kings
-his_title_king_benin	Medium	What was the title of the king of Benin?	The Oba	The Mansa	The Negus	The Asantehene
-his_legendary_christian_king	Medium	Which legendary Christian king did medieval Europeans hope would help them, finally placing his kingdom in Ethiopia?	Prester John	Saint George	King Lalibela	Melchior
 his_builders_great_zimbabwe	Medium	What did the builders of Great Zimbabwe's huge granite walls manage without?	Any mortar	Any tools	Any slaves	Any foundations
 his_every_year_people	Medium	Every year, the people of Djenne in Mali hold a festival to do what to their great mosque?	Cover it in a fresh coat of mud	Paint it white for Ramadan	Light it with oil lamps	Rebuild one of its towers
-his_ethiopian_city_stone	Medium	Which Ethiopian city is famous for the stone castles its emperors built from the 1600s?	Gondar	Aksum	Lalibela	Harar
 his_zulu_army_attack	Medium	The Zulu army's famous attack formation, with a 'chest' and two flanking wings, was named after the horns of which animal?	The buffalo	The rhinoceros	The kudu antelope	The wildebeest
 his_false_claim_white	Medium	What false claim did white colonists long spread about Great Zimbabwe?	That foreigners, not Africans, built it	That it was only a few centuries old	That it was a Portuguese fort	That it was built by escaped slaves
-wh_mansa_musa	Hard	Mansa Musa, regarded as the richest person in history, ruled which African empire?	Mali	Songhai	Ethiopia	Zimbabwe
-his4_wielki_zimbabwe	Hard	Great Zimbabwe was the centre of a state on which continent?	Africa	South America	Asia	Australia
-hx_timbuktu	Hard	Which city in Mali was a famous medieval centre of trade and Islamic learning?	Timbuktu	Marrakesh	Zanzibar	Kano
-his_emperor_ruled_ethiopia	Hard	Which emperor ruled Ethiopia from 1930 to 1974 and is revered by Rastafarians?	Haile Selassie	Menelik II	Mobutu Sese Seko	Jomo Kenyatta
+his_modern_country_takes	Medium	Which modern country takes its name from a ruined medieval stone city?	Zimbabwe	Ghana	Mali	Benin
+his_modern_west_african	Medium	Which modern West African country took its name from a medieval empire that lay hundreds of km to its north-west?	Ghana	Mali	Guinea	Togo
+his_country_soldiers_carried	Medium	Which country's soldiers carried off thousands of the Benin Bronzes in 1897?	Britain	France	Germany	Portugal
+his_brightly_coloured_woven	Medium	Which brightly coloured woven cloth comes from the Ashanti people of Ghana?	Kente	Batik	Tartan	Kanga
+his_medieval_trade_across	Medium	In the medieval trade across the Sahara, West African gold was largely exchanged for what?	Salt	Silk	Tea	Porcelain
+wh_mansa_musa	Medium	Mansa Musa, regarded as the richest person in history, ruled which African empire?	Mali	Songhai	Ethiopia	Zimbabwe
+his_emperor_ruled_ethiopia	Medium	Which emperor ruled Ethiopia from 1930 to 1974 and is revered by Rastafarians?	Haile Selassie	Menelik II	Mobutu Sese Seko	Jomo Kenyatta
+his_family_languages_spread	Medium	Which family of languages spread across central and southern Africa with early farmers?	Bantu	Berber	Semitic	Khoisan
+his_mansa_musa_holding	Medium	What is Mansa Musa holding in his famous picture on the Catalan Atlas of 1375?	A gold nugget	A copy of the Quran	A curved sword	A block of salt
+his4_imperium_songhaj	Medium	The Songhai Empire controlled trade around which river?	The Niger	The Congo	The Zambezi	The Orange
+hx_szaka	Medium	Which king built the Zulu nation into a military power in the early 1800s?	Shaka	Cetshwayo	Moshoeshoe	Mzilikazi
 his_hero_founded_mali	Hard	Which hero founded the Mali Empire after defeating the Sosso king around 1235?	Sundiata Keita	Mansa Musa	Askia Muhammad	Sonni Ali
 his_central_african_kingdom	Hard	Which central African kingdom's king became a Christian after the Portuguese arrived in 1491?	Kongo	Benin	Ndongo	Dahomey
 his_kingdom_built_hundreds	Hard	Which kingdom built hundreds of small, steep pyramids at Meroe, in today's Sudan?	Kush	Aksum	Egypt	Ethiopia
 his_ancient_ethiopian_city	Hard	Which ancient Ethiopian city is famous for its giant carved stone obelisks?	Aksum	Lalibela	Gondar	Harar
-his_family_languages_spread	Hard	Which family of languages spread across central and southern Africa with early farmers?	Bantu	Berber	Semitic	Khoisan
 his_kingdom_shores_lake	Hard	Which kingdom on the shores of Lake Victoria grew into a great power in the 1700s and 1800s?	Buganda	Ashanti	Dahomey	Kongo
-his_empire_around_lake	Hard	Which empire around Lake Chad lasted for about a thousand years?	Kanem-Bornu	Songhai	Mali	Aksum
 his_kenyan_port_portuguese	Hard	In which Kenyan port did the Portuguese build Fort Jesus in 1593?	Mombasa	Malindi	Lamu	Kilwa
-his_ethiopian_emperor_took	Hard	Which Ethiopian emperor took his own life at Magdala in 1868 as a British army closed in?	Tewodros II	Menelik II	Haile Selassie	Yohannes IV
 his_ancient_ethiopian_script	Hard	Which ancient Ethiopian script is still used to write Amharic?	Ge'ez	Coptic	Nubian	Tifinagh
 his_ancestors_people_built	Hard	Ancestors of which people built the stone city of Great Zimbabwe?	The Shona	The Zulu	The Maasai	The Xhosa
-his_berber_dynasty_sahara	Hard	Which Berber dynasty from the Sahara founded the city of Marrakesh around 1070?	The Almoravids	The Almohads	The Fatimids	The Saadi
-his_queen_mother_led	Hard	Which queen mother led the Ashanti in a war against the British in 1900?	Yaa Asantewaa	Nzinga	Amina	Nandi
-his_mansa_musa_holding	Hard	What is Mansa Musa holding in his famous picture on the Catalan Atlas of 1375?	A gold nugget	A copy of the Quran	A curved sword	A block of salt
 his_according_mansa_musa	Hard	According to Mansa Musa, what had his predecessor done?	Sailed off across the Atlantic	Walked to Mecca barefoot	Given away all his gold	Converted to Christianity
 his_kingdom_benin_surrounded	Hard	The kingdom of Benin surrounded its lands with what, once counted among the largest man-made structures on Earth?	Earth walls and moats	Stone pyramids	Lines of baobab trees	Wooden stockades
 his_according_arab_writer	Hard	According to an Arab writer of 1068, what wore gold collars at the court of a West African king?	His dogs	His camels	His falcons	His lions
-his_short_stabbing_spear	Hard	What was the short stabbing spear that Shaka gave his Zulu warriors, said to be named after its sound?	The iklwa	The knobkerrie	The panga	The kaskara
 his_mud_built_mosque	Hard	Which mud-built mosque in Timbuktu was raised in the 1320s on the orders of Mansa Musa?	The Djinguereber Mosque	The Great Mosque of Kairouan	The Koutoubia Mosque	The Al-Azhar Mosque
 his_diplomat_fez_seized	Hard	Which diplomat from Fez, seized by pirates and presented to the pope, wrote a famous 1526 account of Timbuktu?	Leo Africanus	Ibn Battuta	Ibn Khaldun	Al-Idrisi
 his_around_250_prophet	Hard	Around AD 250, the prophet Mani named Aksum as one of the world's four great kingdoms, alongside Rome, Persia and which?	China	India	Egypt	Carthage
-his4_imperium_songhaj	Expert	The Songhai Empire controlled trade around which river?	The Niger	The Congo	The Zambezi	The Orange
-hx_szaka	Expert	Which king built the Zulu nation into a military power in the early 1800s?	Shaka	Cetshwayo	Moshoeshoe	Mzilikazi
-hx_aksum	Expert	Which ancient kingdom in today's Ethiopia was one of the first states to adopt Christianity?	Aksum	Kush	Carthage	Meroe
-hx_benin_brazy	Expert	The famous 'Benin Bronzes' come from a kingdom in which present-day country?	Nigeria	Benin	Ghana	Senegal
+hy_kaldi	Hard	According to legend, coffee was discovered in Ethiopia by a goatherd named what?	Kaldi	Menelik	Haile	Abebe
+his_huge_mud_brick	Hard	Which huge mud-brick mosque in Mali is the largest mud building in the world?	The Great Mosque of Djenne	The Sankore Mosque	The Hassan II Mosque	The Great Mosque of Kairouan
+his_west_african_empire	Hard	Which West African empire, older than Mali, was called 'the land of gold' by Arab writers?	The Ghana Empire	The Songhai Empire	The Kanem Empire	The Benin Empire
+his_west_african_people	Hard	Which West African people kept their power in a sacred Golden Stool?	The Ashanti	The Zulu	The Maasai	The Berbers
+his_empire_based_gao	Hard	Which empire, based at Gao, replaced Mali as the great power of West Africa in the 1400s?	Songhai	Ghana	Kanem-Bornu	Ashanti
+his_west_african_storytellers	Hard	What are the West African storytellers who keep the history of families and kings in song called?	Griots	Shamans	Imams	Marabouts
+his_queen_ndongo_matamba	Hard	Which queen of Ndongo and Matamba fought the Portuguese in today's Angola in the 1600s?	Nzinga	Amina	Nefertari	Yaa Asantewaa
+his_carved_figure_great	Hard	Which carved figure from Great Zimbabwe appears on Zimbabwe's flag?	A soapstone bird	A stone lion	A stone crocodile	A bronze leopard
+his_title_king_benin	Hard	What was the title of the king of Benin?	The Oba	The Mansa	The Negus	The Asantehene
+his_legendary_christian_king	Hard	Which legendary Christian king did medieval Europeans hope would help them, finally placing his kingdom in Ethiopia?	Prester John	Saint George	King Lalibela	Melchior
+his_ethiopian_city_stone	Hard	Which Ethiopian city is famous for the stone castles its emperors built from the 1600s?	Gondar	Aksum	Lalibela	Harar
+hx_aksum	Hard	Which ancient kingdom in today's Ethiopia was one of the first states to adopt Christianity?	Aksum	Kush	Carthage	Meroe
+hx_benin_brazy	Hard	The famous 'Benin Bronzes' come from a kingdom in which present-day country?	Nigeria	Benin	Ghana	Senegal
 his_ruler_took_songhai	Expert	Which ruler took the Songhai Empire to its height and made a famous pilgrimage in 1497?	Askia Muhammad	Sonni Ali	Mansa Musa	Sundiata Keita
 his_moroccan_dynasty_army	Expert	Which Moroccan dynasty's army, armed with guns, conquered the Songhai Empire in 1591?	The Saadi	The Almohads	The Almoravids	The Alaouites
 his_swahili_city_state	Expert	Which Swahili city-state, visited by Ibn Battuta, minted its own coins?	Kilwa	Mombasa	Zanzibar	Malindi
@@ -70,3 +62,8 @@ his_people_ruled_kingdom	Expert	Which people ruled a kingdom over most of Madaga
 his_arab_armies_nickname	Expert	What did Arab armies nickname the archers of Christian Nubia, who stopped their advance in 652?	'Pupil-smiters'	'Sons of thunder'	'Desert hawks'	'Rain of death'
 his_yoruba_city_made	Expert	Which Yoruba city made lifelike brass and terracotta heads from about 1100 onwards?	Ife	Oyo	Kano	Abomey
 his_small_golden_animal	Expert	Which small golden animal is the most famous find from Mapungubwe in South Africa?	A rhinoceros	A lion	An elephant	A crocodile
+his_empire_around_lake	Expert	Which empire around Lake Chad lasted for about a thousand years?	Kanem-Bornu	Songhai	Mali	Aksum
+his_ethiopian_emperor_took	Expert	Which Ethiopian emperor took his own life at Magdala in 1868 as a British army closed in?	Tewodros II	Menelik II	Haile Selassie	Yohannes IV
+his_berber_dynasty_sahara	Expert	Which Berber dynasty from the Sahara founded the city of Marrakesh around 1070?	The Almoravids	The Almohads	The Fatimids	The Saadi
+his_queen_mother_led	Expert	Which queen mother led the Ashanti in a war against the British in 1900?	Yaa Asantewaa	Nzinga	Amina	Nandi
+his_short_stabbing_spear	Expert	What was the short stabbing spear that Shaka gave his Zulu warriors, said to be named after its sound?	The iklwa	The knobkerrie	The panga	The kaskara
