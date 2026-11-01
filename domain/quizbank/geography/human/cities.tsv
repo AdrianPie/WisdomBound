@@ -1,10 +1,8 @@
 # Miasta (najwieksze, przydomki, dawne nazwy, polozenie) i slynne budowle, pomniki, muzea i ruiny.
 id	difficulty	prompt	correct	wrong1	wrong2	wrong3
 geocmp_miasto_najwieksze	Easy	Which of these metropolitan areas has the most inhabitants?	Tokyo	New York	London	Paris
-geocmp_nie_stolica	Easy	Which of these cities is NOT a national capital?	Zurich	Vienna	Prague	Warsaw
 trv_mumbai_dawniej	Easy	Which city was formerly known as Bombay?	Mumbai	Kolkata	Chennai	Delhi
 trv_stambul_dawniej	Easy	Which city was once called Constantinople?	Istanbul	Athens	Ankara	Sofia
-trv_australia_stolica_nie	Easy	Which of these is NOT the capital of its country?	Sydney	Canberra	Wellington	Ottawa
 lmk_tadz_mahal_kraj	Easy	In which country is the Taj Mahal?	India	Pakistan	Iran	Bangladesh
 lmk_brama_brandenburska	Easy	In which city is the Brandenburg Gate?	Berlin	Munich	Vienna	Hamburg
 lmk_chrystus_odkupiciel	Easy	In which country does the statue of Christ the Redeemer stand?	Brazil	Portugal	Argentina	Mexico
@@ -34,17 +32,12 @@ geo_country_city_dubai	Easy	In which country is the city of Dubai?	The UAE	Saudi
 geo_largest_city_germany	Easy	Which is the largest city in Germany?	Berlin	Hamburg	Munich	Frankfurt
 geo_city_nicknamed_sin	Easy	Which US city is nicknamed 'Sin City'?	Las Vegas	Atlantic City	Miami	Reno
 geo_near_city_walt	Easy	Near which US city is Walt Disney World?	Orlando	Miami	Tampa	Jacksonville
-geo_country_ancient_temples	Easy	In which country are the ancient temples of Bagan?	Myanmar	Thailand	Cambodia	Laos
 geo_european_capital_canals	Easy	Which European capital is famous for its canals, bicycles and narrow houses?	Amsterdam	Copenhagen	Bruges	Venice
 geo_asian_city_state	Easy	Which Asian city-state is famous for its 'Supertree' gardens by the bay?	Singapore	Hong Kong	Dubai	Macau
 geo_london_bridge_two	Easy	Which London bridge has two towers and a road that lifts up to let ships through?	Tower Bridge	London Bridge	Westminster Bridge	Millennium Bridge
 geo_city_nicknamed_city	Easy	Which US city is nicknamed 'the City of Angels'?	Los Angeles	San Francisco	Las Vegas	San Diego
 geo_city_home_ford	Easy	Which US city, home of Ford and General Motors, is nicknamed 'the Motor City'?	Detroit	Chicago	Cleveland	Pittsburgh
 geo_brazilian_city_means	Easy	Which Brazilian city's name means 'River of January'?	Rio de Janeiro	Sao Paulo	Salvador	Recife
-geo_city_harbour_bridge	Easy	Which city's harbour bridge is nicknamed 'the Coathanger'?	Sydney	Melbourne	Auckland	Hong Kong
-geo_scottish_city_hosts	Easy	Which Scottish city hosts the Fringe, the world's largest arts festival, every August?	Edinburgh	Glasgow	Aberdeen	Inverness
-geo_canada_largest_mainly	Easy	Which is Canada's largest mainly French-speaking city?	Montreal	Quebec City	Ottawa	Toronto
-geo_city_populous_european	Easy	Which city is the most populous in the European Union?	Berlin	Paris	Madrid	Rome
 geo_italian_city_home	Easy	Which Italian city is home to the most famous leaning tower in the world?	Pisa	Bologna	Venice	Florence
 geo_city_street_lined	Easy	Which city's most famous street, lined with stalls and street performers, is Las Ramblas?	Barcelona	Madrid	Lisbon	Seville
 geo_country_city_salzburg	Easy	In which country is the city of Salzburg?	Austria	Germany	Switzerland	Czechia
@@ -53,11 +46,9 @@ cap_kreml	Easy	In which capital city is the Kremlin?	Moscow	Kyiv	Minsk	Saint Pet
 cap_zakazane_miasto	Easy	In which capital city is the Forbidden City?	Beijing	Tokyo	Seoul	Shanghai
 cap_miasto_swiatla	Easy	Which capital city is nicknamed 'the City of Light'?	Paris	Rome	Vienna	Madrid
 cap_wieczne_miasto	Easy	Which capital city is nicknamed 'the Eternal City'?	Rome	Athens	Jerusalem	Istanbul
-cap_capital_city_stands	Easy	Which capital city stands on the River Tiber?	Rome	Athens	Madrid	Lisbon
 cap_capital_city_national	Easy	In which capital city are the National Mall and the Lincoln Memorial?	Washington, D.C.	Philadelphia	New York	Boston
 cap_capital_city_shibuya	Easy	In which capital city is Shibuya Crossing, where thousands of people cross the street at once?	Tokyo	Seoul	Bangkok	Beijing
 cap_capital_city_must	Easy	In which capital city must black-cab drivers pass a famously tough street-memory test called 'the Knowledge'?	London	Dublin	Edinburgh	Paris
-cap_capital_city_gave	Easy	Which capital city gave its name to the 'syndrome' in which hostages come to bond with their captors?	Stockholm	Oslo	Helsinki	Copenhagen
 cap_gangnam_district_made	Easy	Gangnam, the district made world-famous by a 2012 hit song, is part of which capital?	Seoul	Tokyo	Beijing	Bangkok
 cap_heathrow_gatwick_airports	Easy	Heathrow and Gatwick airports serve which capital city?	London	Dublin	Edinburgh	Amsterdam
 cap_bird_nest_stadium	Easy	The 'Bird's Nest' stadium was built for the 2008 Olympics in which capital?	Beijing	Tokyo	Seoul	Bangkok
@@ -68,11 +59,21 @@ capx_fontanna_trevi	Easy	Visitors to Rome toss coins over their shoulder into wh
 capx_kair_piramidy	Easy	On the edge of which capital city do the Pyramids of Giza stand?	Cairo	Khartoum	Tripoli	Amman
 capy_hawana	Easy	Which capital city is famous for streets full of 1950s American cars?	Havana	Mexico City	San Juan	Panama City
 geo_australian_city_nicknamed_2	Easy	Which Australian city is nicknamed 'the Harbour City'?	Sydney	Brisbane	Perth	Adelaide
+lmk_sagrada_familia	Easy	In which city is the Sagrada Familia?	Barcelona	Madrid	Valencia	Seville
+geo_wietrzne_miasto	Easy	Which US city is nicknamed 'the Windy City'?	Chicago	Boston	Seattle	Denver
+geo_wenecja_wyspy	Easy	Which city is built on about 118 small islands?	Venice	Amsterdam	Stockholm	Saint Petersburg
+geo_paris_avenue_runs	Easy	Which famous Paris avenue runs up to the Arc de Triomphe?	The Champs-Elysees	The Rue de Rivoli	Boulevard Saint-Germain	Avenue Montaigne
+geo_london_church_british	Easy	In which London church are British monarchs crowned?	Westminster Abbey	St Paul's Cathedral	Canterbury Cathedral	Westminster Cathedral
+geo_city_onion_domed	Easy	In which city is the onion-domed St Basil's Cathedral?	Moscow	Saint Petersburg	Kyiv	Prague
+geo_city_shard_britain	Easy	In which city is the Shard, Britain's tallest building?	London	Manchester	Birmingham	Leeds
+geo_indian_city_calcutta	Easy	Which Indian city was known as Calcutta until 2001?	Kolkata	Chennai	Mumbai	Delhi
+geo_harvard_university_stands	Easy	Harvard University stands in Cambridge, next to which big US city?	Boston	New York	Philadelphia	Chicago
+geo_paris_landmark_meant	Easy	Which famous Paris landmark was meant to be temporary and nearly came down in 1909?	The Eiffel Tower	The Arc de Triomphe	Sacre-Coeur	The Louvre Pyramid
+geo_jazz_bars_wrought	Easy	Jazz bars and wrought-iron balconies fill the French Quarter of which US city?	New Orleans	Montreal	Quebec City	St. Louis
+capx_siedem_wzgorz	Easy	Rome is famously said to be built on how many hills?	Seven	Three	Twelve	Five
 wh_angkor_wat	Medium	In which country is the Angkor Wat temple complex located?	Cambodia	Thailand	Vietnam	India
 geocmp_miasto_azja	Medium	Which of these urban areas is the most populous?	Delhi	Bangkok	Seoul	Istanbul
-geocmp_najdalej_polnoc_nordyckie	Medium	Which of these cities lies furthest north?	Helsinki	Oslo	Stockholm	Copenhagen
 geocmp_najdalej_wschod_europa	Medium	Which of these cities lies furthest east?	Istanbul	Athens	Rome	Vienna
-lmk_sagrada_familia	Medium	In which city is the Sagrada Familia?	Barcelona	Madrid	Valencia	Seville
 lmk_petra_kraj	Medium	In which country is the rock city of Petra?	Jordan	Egypt	Syria	Israel
 lmk_blekitny_meczet	Medium	In which city is the Blue Mosque?	Istanbul	Cairo	Isfahan	Marrakesh
 lmk_mala_syrenka	Medium	In which city is the Little Mermaid statue?	Copenhagen	Stockholm	Oslo	Helsinki
@@ -80,17 +81,13 @@ lmk_alhambra_kraj	Medium	In which country is the Alhambra?	Spain	Morocco	Portuga
 lmk_neuschwanstein	Medium	In which country is Neuschwanstein Castle?	Germany	Austria	Switzerland	Czechia
 lmk_prado_miasto	Medium	In which city is the Prado Museum?	Madrid	Barcelona	Lisbon	Rome
 lmk_chichen_itza	Medium	In which country is Chichen Itza?	Mexico	Guatemala	Peru	Honduras
-geo_wietrzne_miasto	Medium	Which US city is nicknamed 'the Windy City'?	Chicago	Boston	Seattle	Denver
 geo_big_easy	Medium	Which US city is nicknamed 'the Big Easy'?	New Orleans	Miami	Las Vegas	Nashville
 geo_troja	Medium	In which present-day country are the ruins of ancient Troy?	Turkey	Greece	Italy	Cyprus
-geo_wenecja_wyspy	Medium	Which city is built on about 118 small islands?	Venice	Amsterdam	Stockholm	Saint Petersburg
 geo_largest_city_brazil	Medium	Which is the largest city in Brazil?	Sao Paulo	Rio de Janeiro	Brasilia	Salvador
 geo_largest_city_switzerland	Medium	Which is the largest city in Switzerland?	Zurich	Geneva	Bern	Basel
 geo_largest_city_scotland	Medium	Which is the largest city in Scotland?	Glasgow	Edinburgh	Aberdeen	Dundee
 geo_largest_city_new	Medium	Which is the largest city in New Zealand?	Auckland	Wellington	Christchurch	Dunedin
-geo_paris_avenue_runs	Medium	Which famous Paris avenue runs up to the Arc de Triomphe?	The Champs-Elysees	The Rue de Rivoli	Boulevard Saint-Germain	Avenue Montaigne
 geo_british_crown_jewels	Medium	Where are the British Crown Jewels kept?	In the Tower of London	In Buckingham Palace	In Windsor Castle	In Westminster Abbey
-geo_london_church_british	Medium	In which London church are British monarchs crowned?	Westminster Abbey	St Paul's Cathedral	Canterbury Cathedral	Westminster Cathedral
 geo_city_state_means	Medium	Which city-state's name means 'lion city'?	Singapore	Monaco	Hong Kong	Macau
 geo_country_dubrovnik_walled	Medium	In which country is Dubrovnik, the walled city used to film 'Game of Thrones'?	Croatia	Montenegro	Italy	Greece
 geo_country_ruins_ancient	Medium	In which country are the ruins of ancient Babylon?	Iraq	Iran	Egypt	Syria
@@ -99,45 +96,28 @@ geo_city_city_brotherly	Medium	Which US city is known as 'the City of Brotherly 
 geo_city_space_needle	Medium	In which US city is the Space Needle tower?	Seattle	Portland	San Francisco	Denver
 geo_city_tower	Medium	In which city is the CN Tower?	Toronto	Vancouver	Montreal	Calgary
 geo_indian_city_taj	Medium	In which Indian city is the Taj Mahal?	Agra	Delhi	Jaipur	Mumbai
-geo_city_onion_domed	Medium	In which city is the onion-domed St Basil's Cathedral?	Moscow	Saint Petersburg	Kyiv	Prague
-geo_city_shard_britain	Medium	In which city is the Shard, Britain's tallest building?	London	Manchester	Birmingham	Leeds
 geo_city_street_royal	Medium	In which city is the street known as the Royal Mile?	Edinburgh	London	Dublin	York
 geo_city_rialto_bridge	Medium	In which city is the Rialto Bridge?	Venice	Florence	Rome	Verona
 geo_city_see_leonardo	Medium	In which city can you see Leonardo da Vinci's 'The Last Supper'?	Milan	Florence	Rome	Paris
 geo_country_canal_city	Medium	In which country is the canal city of Bruges?	Belgium	The Netherlands	Denmark	France
 geo_country_ancient_pyramids	Medium	In which country are the ancient pyramids of Teotihuacan?	Mexico	Peru	Guatemala	Egypt
-geo_indian_city_calcutta	Medium	Which Indian city was known as Calcutta until 2001?	Kolkata	Chennai	Mumbai	Delhi
 geo_largest_city_italy	Medium	Which is the largest city in Italy?	Rome	Milan	Naples	Turin
-geo_since_2012_official	Medium	Since 2012, what is the official name of the tower that houses Big Ben?	Elizabeth Tower	Victoria Tower	St Stephen's Tower	Clock Tower
-geo_art_deco_skyscraper	Medium	Which Art Deco skyscraper with a steel spire was briefly the world's tallest building, in 1930?	Chrysler Building	Empire State Building	Woolworth Building	Flatiron Building
 geo_alhambra_palace_overlooks	Medium	The Alhambra palace overlooks which Spanish city?	Granada	Seville	Cordoba	Toledo
-geo_indian_city_ganges	Medium	Which Indian city on the Ganges is Hinduism's holiest, where pilgrims come to die?	Varanasi	Agra	Jaipur	Amritsar
-geo_indian_city_officially	Medium	Which Indian city was officially called Madras until 1996?	Chennai	Mumbai	Kolkata	Bengaluru
 geo_french_city_european	Medium	In which French city does the European Parliament have its official seat?	Strasbourg	Lyon	Lille	Metz
 geo_swiss_city_international	Medium	In which Swiss city is the International Red Cross based?	Geneva	Zurich	Bern	Basel
 geo_city_nicknamed_mile	Medium	Which US city is nicknamed 'the Mile High City'?	Denver	Salt Lake City	Phoenix	Albuquerque
-geo_city_riverside_promenade	Medium	In which city is the riverside promenade known as the Bund?	Shanghai	Hong Kong	Beijing	Singapore
-geo_texan_city_alamo	Medium	In which Texan city is the Alamo?	San Antonio	Houston	Dallas	El Paso
-geo_harvard_university_stands	Medium	Harvard University stands in Cambridge, next to which big US city?	Boston	New York	Philadelphia	Chicago
 geo_morocco_largest_city	Medium	Which is Morocco's largest city?	Casablanca	Rabat	Marrakesh	Fez
-geo_german_city_more	Medium	Which German city has more bridges than Venice and Amsterdam combined?	Hamburg	Berlin	Munich	Cologne
-geo_italian_city_holds	Medium	Which Italian city holds the famous Palio horse race in its main square?	Siena	Florence	Verona	Pisa
 geo_italian_city_fiat	Medium	In which Italian city was Fiat founded?	Turin	Milan	Modena	Bologna
 geo_german_city_huge	Medium	Which German city's huge twin-spired cathedral took over 600 years to finish?	Cologne	Munich	Berlin	Hamburg
-geo_french_city_french	Medium	In which French city were most French kings crowned?	Reims	Paris	Orleans	Saint-Denis
 geo_belgian_city_world	Medium	Which Belgian city is the world capital of the diamond trade?	Antwerp	Brussels	Ghent	Bruges
 geo_swiss_mountain_town	Medium	In which Swiss mountain town does the World Economic Forum meet?	Davos	Zermatt	St. Moritz	Interlaken
-geo_croatian_city_grew	Medium	Which Croatian city grew inside the palace of the Roman emperor Diocletian?	Split	Dubrovnik	Zadar	Pula
 geo_egyptian_city_lies	Medium	Which Egyptian city lies beside the Valley of the Kings?	Luxor	Cairo	Alexandria	Aswan
 geo_indian_city_india	Medium	Which Indian city is known as India's Silicon Valley?	Bengaluru	Hyderabad	Pune	Chennai
 geo_near_chinese_city	Medium	Near which Chinese city was the Terracotta Army discovered?	Xi'an	Beijing	Nanjing	Luoyang
-geo_argentine_city_calls	Medium	Which Argentine city calls itself 'the end of the world'?	Ushuaia	Punta Arenas	Rio Gallegos	Mar del Plata
 geo_florence_bridge_lined	Medium	Which Florence bridge is lined with jewellers' shops?	Ponte Vecchio	Rialto Bridge	Ponte Sisto	Ponte Milvio
 geo_according_legend_sighed	Medium	According to legend, who sighed on Venice's Bridge of Sighs?	Prisoners on their way to the cells	Lovers saying goodbye	Gondoliers at the end of the day	Merchants who had lost their ships
 geo_london_skyscraper_mary	Medium	London's skyscraper at 30 St Mary Axe is better known by which nickname?	The Gherkin	The Shard	The Walkie-Talkie	The Cheesegrater
 geo_chicago_sears_tower	Medium	What is Chicago's Sears Tower called today?	Willis Tower	Trump Tower	Aon Center	John Hancock Center
-geo_paris_landmark_meant	Medium	Which famous Paris landmark was meant to be temporary and nearly came down in 1909?	The Eiffel Tower	The Arc de Triomphe	Sacre-Coeur	The Louvre Pyramid
-geo_world_tallest_statue	Medium	The world's tallest statue, the Statue of Unity, stands in which country?	India	China	Japan	Brazil
 geo_world_longest_bridge	Medium	The world's longest bridge, a railway viaduct over 160 km long, is in which country?	China	Japan	The United States	Saudi Arabia
 geo_oresund_bridge_links	Medium	The Oresund Bridge links Copenhagen with which Swedish city?	Malmo	Gothenburg	Stockholm	Helsingborg
 geo_indian_city_waterfront	Medium	Which Indian city's waterfront is home to the Gateway of India arch?	Mumbai	Delhi	Kolkata	Chennai
@@ -145,20 +125,14 @@ geo_country_meteora_monasteries	Medium	In which country are the Meteora monaster
 geo_city_home_scala	Medium	Which city is home to La Scala, one of the world's most famous opera houses?	Milan	Venice	Naples	Rome
 geo_italian_city_nicknamed	Medium	Which Italian city was nicknamed 'La Serenissima', the most serene?	Venice	Genoa	Florence	Naples
 geo_city_nicknamed_big	Medium	Which city is nicknamed 'the Big Smoke'?	London	Manchester	Birmingham	Glasgow
-geo_indian_city_nicknamed	Medium	Which Indian city is nicknamed 'the City of Joy'?	Kolkata	Mumbai	Chennai	Delhi
 geo_chinese_city_west	Medium	Which Chinese city was known in the West as Canton?	Guangzhou	Shanghai	Nanjing	Hong Kong
-geo_city_spanish_meadows	Medium	Which US city's name is Spanish for 'the meadows'?	Las Vegas	Los Angeles	San Antonio	El Paso
-geo_asian_city_means	Medium	Which Asian city's name means 'fragrant harbour'?	Hong Kong	Singapore	Shanghai	Macau
 geo_largest_city_pakistan	Medium	Which is the largest city in Pakistan?	Karachi	Lahore	Islamabad	Faisalabad
 geo_largest_city_nigeria	Medium	Which is the largest city in Nigeria?	Lagos	Kano	Abuja	Ibadan
 geo_largest_city_south	Medium	Which is the largest city in South Africa?	Johannesburg	Cape Town	Durban	Pretoria
-geo_highest_capital_city	Medium	Which is the highest capital city in Europe?	Andorra la Vella	Madrid	Bern	Vaduz
 geo_zocalo_largest_public	Medium	The Zocalo, one of the largest public squares in the world, is the heart of which city?	Mexico City	Madrid	Buenos Aires	Lima
-geo_jazz_bars_wrought	Medium	Jazz bars and wrought-iron balconies fill the French Quarter of which US city?	New Orleans	Montreal	Quebec City	St. Louis
 geo_pike_place_market	Medium	Pike Place Market, where fishmongers famously throw salmon to each other, is in which city?	Seattle	Boston	San Francisco	Vancouver
 geo_mostar_old_bridge	Medium	Mostar's famous Old Bridge, destroyed in 1993 and later rebuilt, is in which country?	Bosnia and Herzegovina	North Macedonia	Montenegro	Croatia
 geo_japanese_city_golden	Medium	In which Japanese city is the Golden Pavilion, Kinkaku-ji?	Kyoto	Tokyo	Nara	Osaka
-geo_country_world_oldest	Medium	Which country has the world's oldest continuously inhabited cities, including Damascus?	Syria	Iraq	Egypt	Lebanon
 geo_city_painted_ladies	Medium	In which US city do the 'Painted Ladies', a famous row of colourful Victorian houses, stand?	San Francisco	Boston	Chicago	Philadelphia
 capx_trafalgar	Medium	Nelson's Column stands in which London square?	Trafalgar Square	Piccadilly Circus	Leicester Square	Covent Garden
 capy_berlin_mis	Medium	Which animal appears on the coat of arms of Berlin?	A bear	An eagle	A lion	A wolf
@@ -176,7 +150,6 @@ cap_bangkok_palac	Medium	In which capital city is the Grand Palace with its Emer
 cap_tivoli	Medium	In which capital city is the Tivoli Gardens amusement park?	Copenhagen	Oslo	Stockholm	Vienna
 capx_praga_zegar	Medium	Which capital city has the oldest astronomical clock still working, dating from 1410?	Prague	Vienna	Bern	Budapest
 capx_atomium	Medium	Which capital city is home to the Atomium, a giant model of an iron crystal?	Brussels	Paris	Berlin	Amsterdam
-capx_siedem_wzgorz	Medium	Rome is famously said to be built on how many hills?	Seven	Three	Twelve	Five
 capy_wieden_kawiarnie	Medium	Which capital's grand coffee houses are listed by UNESCO as a cultural tradition?	Vienna	Rome	Paris	Budapest
 capy_praga_wieze	Medium	Which capital city is nicknamed 'the City of a Hundred Spires'?	Prague	Vienna	Budapest	Riga
 capy_budapeszt_termy	Medium	Which capital is famous for thermal baths such as the Szechenyi Baths?	Budapest	Prague	Vienna	Sofia
@@ -184,17 +157,25 @@ cap_capital_city_home_3	Medium	Which capital city is the home of fado, the mourn
 cap_capital_nobel_prizes	Medium	In which capital are most of the Nobel Prizes handed out each December?	Stockholm	Oslo	Copenhagen	Helsinki
 cap_capital_city_see	Medium	In which capital city can you see the Belem Tower and ride the old Tram 28?	Lisbon	Porto	Madrid	Seville
 cap_giant_steel_outline	Medium	A giant steel outline of Che Guevara's face looks over Revolution Square in which capital?	Havana	La Paz	Caracas	Managua
-cap_capital_city_encircled	Medium	Which capital city is encircled by the grand boulevard called the Ringstrasse?	Vienna	Budapest	Prague	Berlin
 lmk_stolica_sri_lanka_handlowa	Medium	Which city is Sri Lanka's largest city and commercial centre?	Colombo	Kandy	Galle	Jaffna
 capy_nairobi_park	Medium	Which capital city has a national park with lions and giraffes right beside its skyline?	Nairobi	Addis Ababa	Pretoria	Kampala
 cap_capital_city_casa	Medium	In which capital city is the Casa Rosada, the pink presidential palace?	Buenos Aires	Montevideo	Santiago	Lima
 geo_new_zealand_city_2	Medium	Which New Zealand city is nicknamed 'the City of Sails'?	Auckland	Wellington	Christchurch	Nelson
-geo_new_zealand_city_4	Medium	The New Zealand city of Dunedin takes its name from the Gaelic word for which city?	Edinburgh	Glasgow	Dublin	Aberdeen
-wh_timbuktu	Hard	In which country is the historic city of Timbuktu?	Mali	Niger	Chad	Mauritania
+geo_city_harbour_bridge	Medium	Which city's harbour bridge is nicknamed 'the Coathanger'?	Sydney	Melbourne	Auckland	Hong Kong
+geo_scottish_city_hosts	Medium	Which Scottish city hosts the Fringe, the world's largest arts festival, every August?	Edinburgh	Glasgow	Aberdeen	Inverness
+geo_canada_largest_mainly	Medium	Which is Canada's largest mainly French-speaking city?	Montreal	Quebec City	Ottawa	Toronto
+geo_city_populous_european	Medium	Which city is the most populous in the European Union?	Berlin	Paris	Madrid	Rome
+cap_capital_city_gave	Medium	Which capital city gave its name to the 'syndrome' in which hostages come to bond with their captors?	Stockholm	Oslo	Helsinki	Copenhagen
+lmk_ermitaz_miasto	Medium	In which city is the Hermitage Museum?	Saint Petersburg	Moscow	Kyiv	Warsaw
+lmk_rijksmuseum	Medium	In which city is the Rijksmuseum?	Amsterdam	Brussels	Rotterdam	Antwerp
+geo_konigsberg_home_city	Medium	Konigsberg, the home city of the philosopher Kant, is now which Russian city?	Kaliningrad	Klaipeda	Pskov	Vyborg
+geo_city_huge_mirrored	Medium	Which city's huge mirrored sculpture 'Cloud Gate' is better known as 'the Bean'?	Chicago	Toronto	Houston	Minneapolis
+geo_juliet_balcony_visited	Medium	'Juliet's balcony', visited by thousands of romantic tourists, was actually added to a house in the 1930s in which city?	Verona	Padua	Mantua	Vicenza
+geo_boca_district_brightly	Medium	La Boca, a district of brightly painted tin houses, belongs to which city?	Buenos Aires	Montevideo	Valparaiso	Havana
+cap_capital_city_home	Medium	Which capital city is home to the Spanish Riding School and its white Lipizzaner horses?	Vienna	Madrid	Budapest	Prague
+cap_capital_city_gyeongbokgung	Medium	In which capital city is the Gyeongbokgung royal palace?	Seoul	Tokyo	Beijing	Pyongyang
+geo_kowloon_walled_city	Medium	Kowloon Walled City, once the most crowded place on Earth, was demolished in the 1990s in which city?	Hong Kong	Macau	Singapore	Taipei
 geocmp_najdalej_poludnie	Hard	Which of these cities lies furthest south?	Auckland	Sydney	Cape Town	Buenos Aires
-geocmp_stolica_najdalej_poludnie	Hard	Which of these capitals lies furthest south?	Wellington	Canberra	Santiago	Pretoria
-lmk_ermitaz_miasto	Hard	In which city is the Hermitage Museum?	Saint Petersburg	Moscow	Kyiv	Warsaw
-lmk_rijksmuseum	Hard	In which city is the Rijksmuseum?	Amsterdam	Brussels	Rotterdam	Antwerp
 geo_rozowe_miasto	Hard	Which Indian city is known as 'the Pink City'?	Jaipur	Jodhpur	Udaipur	Agra
 geo_country_ancient_city	Hard	In which country is the ancient city of Carthage?	Tunisia	Libya	Morocco	Lebanon
 geo_indian_city_golden	Hard	In which Indian city is the Golden Temple, the holiest shrine of Sikhism?	Amritsar	Delhi	Jaipur	Varanasi
@@ -203,9 +184,7 @@ geo_moroccan_town_streets	Hard	Which Moroccan town is famous for its streets pai
 geo_cities_lies_furthest	Hard	Which of these US cities lies furthest west?	Reno	Los Angeles	San Diego	Las Vegas
 geo_indian_city_hawa	Hard	In which Indian city is the Hawa Mahal, the 'Palace of the Winds'?	Jaipur	Jodhpur	Udaipur	Agra
 geo_city_potala_palace	Hard	In which city is the Potala Palace, the former home of the Dalai Lama?	Lhasa	Kathmandu	Thimphu	Shigatse
-geo_city_yerba_buena	Hard	Which US city was called Yerba Buena until 1847?	San Francisco	Los Angeles	San Diego	Sacramento
 geo_turkish_city_thousands	Hard	Which Turkish city was known for thousands of years as Smyrna?	Izmir	Antalya	Bursa	Trabzon
-geo_konigsberg_home_city	Hard	Konigsberg, the home city of the philosopher Kant, is now which Russian city?	Kaliningrad	Klaipeda	Pskov	Vyborg
 geo_german_city_nicknamed	Hard	Which German city is nicknamed 'Mainhattan' for its banking skyscrapers?	Frankfurt	Hamburg	Munich	Cologne
 geo_scottish_city_nicknamed	Hard	Which Scottish city is nicknamed 'Auld Reekie'?	Edinburgh	Glasgow	Aberdeen	Dundee
 geo_scottish_city_granite	Hard	Which Scottish city is known as 'the Granite City'?	Aberdeen	Dundee	Inverness	Glasgow
@@ -218,22 +197,15 @@ geo_country_sigiriya_ancient	Hard	In which country is Sigiriya, an ancient palac
 geo_country_giant_roman	Hard	In which country are the giant Roman temples of Baalbek?	Lebanon	Syria	Jordan	Israel
 geo_country_tiger_nest	Hard	In which country is the Tiger's Nest monastery, clinging to a cliff face?	Bhutan	Nepal	India	Myanmar
 geo_largest_city_kazakhstan	Hard	Which is the largest city in Kazakhstan?	Almaty	Astana	Shymkent	Karaganda
-geo_northernmost_capital_sovereign	Hard	Which is the northernmost capital of a sovereign country?	Reykjavik	Oslo	Helsinki	Nuuk
-geo_city_huge_mirrored	Hard	Which city's huge mirrored sculpture 'Cloud Gate' is better known as 'the Bean'?	Chicago	Toronto	Houston	Minneapolis
-geo_juliet_balcony_visited	Hard	'Juliet's balcony', visited by thousands of romantic tourists, was actually added to a house in the 1930s in which city?	Verona	Padua	Mantua	Vicenza
 geo_registan_square_framed	Hard	The Registan, a square framed by three tiled madrasas, is the centrepiece of which city?	Samarkand	Bukhara	Isfahan	Herat
 geo_castle_like_chateau	Hard	The castle-like Chateau Frontenac hotel towers over which Canadian city?	Quebec City	Montreal	Ottawa	Halifax
-geo_boca_district_brightly	Hard	La Boca, a district of brightly painted tin houses, belongs to which city?	Buenos Aires	Montevideo	Valparaiso	Havana
 geo_santiago_calatrava_futuristic	Hard	Santiago Calatrava's futuristic City of Arts and Sciences is a landmark of which Spanish city?	Valencia	Seville	Bilbao	Malaga
-geo_hanging_houses_balconies	Hard	The 'Hanging Houses', with balconies jutting out over a gorge, are the symbol of which Spanish city?	Cuenca	Ronda	Toledo	Segovia
 geo_derinkuyu_ancient_underground	Hard	Derinkuyu, an ancient underground city deep enough to shelter about 20,000 people, is in which country?	Turkey	Iran	Jordan	Greece
 geo_2013_city_walkie	Hard	In 2013, which city's 'Walkie-Talkie' skyscraper reflected sunlight so strongly that it melted parts of a parked car?	London	Dubai	New York	Singapore
-geo_fuggerei_oldest_social	Hard	The Fuggerei, the oldest social housing still in use, where rent is still under 1 euro a year, is in which German city?	Augsburg	Nuremberg	Cologne	Hamburg
 geo_southern_italian_town	Hard	Which southern Italian town's ancient cave dwellings, the Sassi, were once called 'the shame of Italy'?	Matera	Alberobello	Lecce	Tropea
 geo_elbphilharmonie_concert_hall	Hard	The Elbphilharmonie, a concert hall built on top of an old dockside warehouse, is the landmark of which city?	Hamburg	Bremen	Rotterdam	Antwerp
 geo_italian_city_romans	Hard	Which Italian city was known to the Romans as Mediolanum?	Milan	Turin	Verona	Bologna
 cap_european_capital_hosts	Hard	Which European capital hosts the headquarters of OPEC?	Vienna	Bern	London	Brussels
-cap_capital_city_home	Hard	Which capital city is home to the Spanish Riding School and its white Lipizzaner horses?	Vienna	Madrid	Budapest	Prague
 cap_capital_medieval_old	Hard	In which capital is the medieval old town called Gamla stan?	Stockholm	Oslo	Copenhagen	Tallinn
 cap_capital_home_palace	Hard	Which capital is home to the Palace of the Parliament, one of the heaviest buildings in the world?	Bucharest	Budapest	Belgrade	Sofia
 cap_capital_city_home_2	Hard	Which capital city is home to the vast Sheikh Zayed Grand Mosque?	Abu Dhabi	Doha	Riyadh	Muscat
@@ -249,40 +221,57 @@ capx_meksyk_jezioro	Hard	Mexico City was built on the site of what?	A drained la
 capx_oslo_nobel	Hard	In which capital city is the Nobel Peace Prize awarded?	Oslo	Stockholm	Copenhagen	Geneva
 capy_holmenkollen	Hard	Which capital city has the famous Holmenkollen ski jump?	Oslo	Stockholm	Helsinki	Vienna
 capy_wellington_wiatr	Hard	Which capital is famous as one of the windiest cities in the world?	Wellington	Reykjavik	Oslo	Dublin
-cap_capital_home_oldest	Hard	Which capital is home to the oldest cathedral in the Americas, completed in 1541?	Santo Domingo	Havana	Mexico City	Lima
-cap_capital_city_gyeongbokgung	Hard	In which capital city is the Gyeongbokgung royal palace?	Seoul	Tokyo	Beijing	Pyongyang
 cap_capital_city_once	Hard	Which capital city was once nicknamed 'the Paris of the Middle East'?	Beirut	Damascus	Amman	Baghdad
-cap_capital_said_world	Hard	Which capital is said to have the world's highest concentration of Art Nouveau buildings?	Riga	Vienna	Prague	Brussels
-cap_capital_old_town	Hard	Which capital's old town grew around a hilltop fortress called the Kalemegdan?	Belgrade	Sarajevo	Skopje	Sofia
 capy_unia_afrykanska	Hard	In which capital city is the headquarters of the African Union?	Addis Ababa	Nairobi	Cairo	Pretoria
 capy_rideau	Hard	Which canal in Ottawa turns into a skating rink almost 8 km long in winter?	The Rideau Canal	The Welland Canal	The Lachine Canal	The Erie Canal
 geo_australian_city_nicknamed	Hard	Which Australian city is nicknamed 'the City of Churches'?	Adelaide	Hobart	Brisbane	Ballarat
 geo_new_zealand_city_3	Hard	Which New Zealand city is nicknamed 'the Garden City'?	Christchurch	Dunedin	Hamilton	Napier
 geo_australian_state_capital	Hard	Which Australian state capital is named after a British prime minister?	Melbourne	Brisbane	Hobart	Perth
 geo_arctic_city_norway	Hard	Which Arctic city in Norway is nicknamed 'the Paris of the North'?	Tromso	Hammerfest	Bodo	Kirkenes
-geocmp_najwyzej_polozona_stolica	Expert	Which of these is the highest-lying capital city?	La Paz	Quito	Bogota	Mexico City
-geo_baku	Expert	Which national capital lies below sea level?	Baku	Cairo	Tehran	Tashkent
-geo_israeli_city_white	Expert	Which Israeli city is called 'the White City' for its thousands of Bauhaus buildings?	Tel Aviv	Haifa	Eilat	Jerusalem
+geo_country_ancient_temples	Hard	In which country are the ancient temples of Bagan?	Myanmar	Thailand	Cambodia	Laos
+geo_since_2012_official	Hard	Since 2012, what is the official name of the tower that houses Big Ben?	Elizabeth Tower	Victoria Tower	St Stephen's Tower	Clock Tower
+geo_art_deco_skyscraper	Hard	Which Art Deco skyscraper with a steel spire was briefly the world's tallest building, in 1930?	Chrysler Building	Empire State Building	Woolworth Building	Flatiron Building
+geo_indian_city_ganges	Hard	Which Indian city on the Ganges is Hinduism's holiest, where pilgrims come to die?	Varanasi	Agra	Jaipur	Amritsar
+geo_indian_city_officially	Hard	Which Indian city was officially called Madras until 1996?	Chennai	Mumbai	Kolkata	Bengaluru
+geo_city_riverside_promenade	Hard	In which city is the riverside promenade known as the Bund?	Shanghai	Hong Kong	Beijing	Singapore
+geo_texan_city_alamo	Hard	In which Texan city is the Alamo?	San Antonio	Houston	Dallas	El Paso
+geo_german_city_more	Hard	Which German city has more bridges than Venice and Amsterdam combined?	Hamburg	Berlin	Munich	Cologne
+geo_italian_city_holds	Hard	Which Italian city holds the famous Palio horse race in its main square?	Siena	Florence	Verona	Pisa
+geo_french_city_french	Hard	In which French city were most French kings crowned?	Reims	Paris	Orleans	Saint-Denis
+geo_croatian_city_grew	Hard	Which Croatian city grew inside the palace of the Roman emperor Diocletian?	Split	Dubrovnik	Zadar	Pula
+geo_argentine_city_calls	Hard	Which Argentine city calls itself 'the end of the world'?	Ushuaia	Punta Arenas	Rio Gallegos	Mar del Plata
+geo_world_tallest_statue	Hard	The world's tallest statue, the Statue of Unity, stands in which country?	India	China	Japan	Brazil
+geo_indian_city_nicknamed	Hard	Which Indian city is nicknamed 'the City of Joy'?	Kolkata	Mumbai	Chennai	Delhi
+geo_city_spanish_meadows	Hard	Which US city's name is Spanish for 'the meadows'?	Las Vegas	Los Angeles	San Antonio	El Paso
+geo_asian_city_means	Hard	Which Asian city's name means 'fragrant harbour'?	Hong Kong	Singapore	Shanghai	Macau
+cap_capital_city_encircled	Hard	Which capital city is encircled by the grand boulevard called the Ringstrasse?	Vienna	Budapest	Prague	Berlin
+geo_new_zealand_city_4	Hard	The New Zealand city of Dunedin takes its name from the Gaelic word for which city?	Edinburgh	Glasgow	Dublin	Aberdeen
+geo_israeli_city_white	Hard	Which Israeli city is called 'the White City' for its thousands of Bauhaus buildings?	Tel Aviv	Haifa	Eilat	Jerusalem
+geo_east_german_city	Hard	Which East German city was called Karl-Marx-Stadt from 1953 to 1990?	Chemnitz	Leipzig	Dresden	Rostock
+geo_country_ruins_leptis	Hard	In which country are the ruins of Leptis Magna, one of the best-preserved Roman cities?	Libya	Tunisia	Algeria	Morocco
+geo_hallgrimskirkja_church_designed	Hard	Hallgrimskirkja, a church designed to look like columns of basalt lava, towers over which city?	Reykjavik	Oslo	Torshavn	Bergen
+geo_lakeside_austrian_village	Hard	Which lakeside Austrian village did a Chinese developer copy, full-size, in 2012?	Hallstatt	Zell am See	St. Wolfgang	Kitzbuhel
+geo_country_great_mosque	Hard	In which country is the Great Mosque of Djenne, the world's largest mud-brick building?	Mali	Niger	Morocco	Senegal
+geo_spanish_city_roman	Hard	Which Spanish city has a Roman aqueduct of more than 160 arches striding through its centre?	Segovia	Toledo	Salamanca	Tarragona
 geo_italian_city_nicknamed_2	Expert	Which Italian city is nicknamed 'the learned, the fat and the red'?	Bologna	Florence	Siena	Parma
 geo_yekaterinburg_soviet_times	Expert	What was Yekaterinburg called in Soviet times?	Sverdlovsk	Stalingrad	Kuibyshev	Gorky
-geo_east_german_city	Expert	Which East German city was called Karl-Marx-Stadt from 1953 to 1990?	Chemnitz	Leipzig	Dresden	Rostock
 geo_canadian_city_originally	Expert	Which Canadian city was originally called 'Pile o' Bones'?	Regina	Winnipeg	Calgary	Edmonton
 geo_australian_city_once	Expert	Which Australian city was once proposed to be called 'Batmania', after one of its founders?	Melbourne	Sydney	Brisbane	Adelaide
 geo_siberian_city_built	Expert	Which Siberian city, built by Gulag prisoners, is the northernmost city with over 100,000 people?	Norilsk	Murmansk	Yakutsk	Vorkuta
 geo_rinconada_gold_mining	Expert	La Rinconada, a gold-mining town over 5,000 m up and often called the world's highest, is in which country?	Peru	Bolivia	Nepal	Chile
 geo_bridge_set_new	Expert	The bridge that set a new record for the longest suspension span in 2022 crosses which strait?	The Dardanelles	The Bosphorus	The Strait of Messina	The Akashi Strait
-geo_country_ruins_leptis	Expert	In which country are the ruins of Leptis Magna, one of the best-preserved Roman cities?	Libya	Tunisia	Algeria	Morocco
-geo_kowloon_walled_city	Expert	Kowloon Walled City, once the most crowded place on Earth, was demolished in the 1990s in which city?	Hong Kong	Macau	Singapore	Taipei
-geo_hallgrimskirkja_church_designed	Expert	Hallgrimskirkja, a church designed to look like columns of basalt lava, towers over which city?	Reykjavik	Oslo	Torshavn	Bergen
 geo_state_capital_started	Expert	Which US state capital started life as a settlement called 'Pig's Eye', after a one-eyed tavern keeper?	Saint Paul	Sacramento	Madison	Des Moines
 geo_sobrino_botin_listed	Expert	Sobrino de Botin, listed as the world's oldest restaurant still running, has been serving since 1725 in which city?	Madrid	Paris	Vienna	Lisbon
-geo_lakeside_austrian_village	Expert	Which lakeside Austrian village did a Chinese developer copy, full-size, in 2012?	Hallstatt	Zell am See	St. Wolfgang	Kitzbuhel
 geo_1950_circus_elephant	Expert	In 1950, a circus elephant called Tuffi jumped out of which German city's hanging monorail into the river below?	Wuppertal	Dortmund	Dresden	Cologne
-geo_country_great_mosque	Expert	In which country is the Great Mosque of Djenne, the world's largest mud-brick building?	Mali	Niger	Morocco	Senegal
 geo_nearly_all_residents	Expert	Nearly all the residents of Whittier, Alaska, live in what?	A single 14-storey building	Houseboats in the harbour	Underground bunkers	Old railway carriages
-geo_spanish_city_roman	Expert	Which Spanish city has a Roman aqueduct of more than 160 arches striding through its centre?	Segovia	Toledo	Salamanca	Tarragona
 cap_capital_stands_golden	Expert	In which capital stands the golden Pha That Luang stupa, a national symbol?	Vientiane	Phnom Penh	Bangkok	Yangon
 cap_capital_city_famously	Expert	Which capital city famously has no traffic lights, its junctions run by white-gloved police instead?	Thimphu	Kathmandu	Ulaanbaatar	Vientiane
 cap_capital_patuxai_war	Expert	Which capital's Patuxai war monument, built with American cement meant for an airport, is nicknamed 'the vertical runway'?	Vientiane	Phnom Penh	Hanoi	Yangon
 cap_capital_city_holds	Expert	Which capital city holds the record for the most buildings clad in white marble?	Ashgabat	Astana	Baku	Tashkent
 geo_city_adelaide_queen	Expert	The city of Adelaide is named after the queen of which British king?	William IV	George III	George IV	Edward VII
+geo_city_yerba_buena	Expert	Which US city was called Yerba Buena until 1847?	San Francisco	Los Angeles	San Diego	Sacramento
+geo_hanging_houses_balconies	Expert	The 'Hanging Houses', with balconies jutting out over a gorge, are the symbol of which Spanish city?	Cuenca	Ronda	Toledo	Segovia
+geo_fuggerei_oldest_social	Expert	The Fuggerei, the oldest social housing still in use, where rent is still under 1 euro a year, is in which German city?	Augsburg	Nuremberg	Cologne	Hamburg
+cap_capital_home_oldest	Expert	Which capital is home to the oldest cathedral in the Americas, completed in 1541?	Santo Domingo	Havana	Mexico City	Lima
+cap_capital_said_world	Expert	Which capital is said to have the world's highest concentration of Art Nouveau buildings?	Riga	Vienna	Prague	Brussels
+cap_capital_old_town	Expert	Which capital's old town grew around a hilltop fortress called the Kalemegdan?	Belgrade	Sarajevo	Skopje	Sofia

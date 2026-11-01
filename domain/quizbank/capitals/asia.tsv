@@ -11,6 +11,7 @@ cap_capital_afghanistan	Easy	What is the capital of Afghanistan?	Kabul	Kandahar	
 cap_capital_north_korea	Easy	What is the capital of North Korea?	Pyongyang	Seoul	Busan	Kaesong
 cap_capital_taiwan	Easy	What is the capital of Taiwan?	Taipei	Kaohsiung	Taichung	Hong Kong
 cap2_tehran	Easy	What is the capital of Iran?	Tehran	Isfahan	Mashhad	Shiraz
+trv_australia_stolica_nie	Easy	Which of these is NOT the capital of its country?	Sydney	Canberra	Wellington	Ottawa
 cap_canberra	Medium	What is the capital of Australia?	Canberra	Sydney	Melbourne	Perth
 cap_ankara	Medium	What is the capital of Turkey?	Ankara	Istanbul	Izmir	Bursa
 cap2_jerusalem	Medium	Which city does Israel proclaim as its capital?	Jerusalem	Tel Aviv	Haifa	Eilat
@@ -77,6 +78,7 @@ capx_canberra_konkurs	Hard	The winning design for Canberra came from architects 
 capy_canberra_nazwa	Hard	The name 'Canberra' is thought to come from an Aboriginal word meaning what?	Meeting place	Big river	Red earth	Sky camp
 cap_capital_uzbekistan	Hard	What is the capital of Uzbekistan?	Tashkent	Samarkand	Bukhara	Almaty
 geo_island_nation_official	Hard	Which island nation has no official capital city?	Nauru	Tuvalu	Palau	Kiribati
+geo_baku	Hard	Which national capital lies below sea level?	Baku	Cairo	Tehran	Tashkent
 cap_thimphu	Expert	What is the capital of Bhutan?	Thimphu	Paro	Punakha	Phuentsholing
 cap_bishkek	Expert	What is the capital of Kyrgyzstan?	Bishkek	Osh	Naryn	Karakol
 cap2_sri_jayawardenepura_kotte	Expert	What is Sri Lanka's official capital, where its parliament sits?	Sri Jayawardenepura Kotte	Nuwara Eliya	Trincomalee	Batticaloa

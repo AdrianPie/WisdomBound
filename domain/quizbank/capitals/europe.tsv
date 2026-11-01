@@ -21,6 +21,7 @@ cap_bawaria	Easy	Which city is the capital of Bavaria?	Munich	Nuremberg	Augsburg
 cap_amsterdam_takes_dam	Easy	Amsterdam takes its name from a dam on which river?	The Amstel	The Rhine	The Maas	The Scheldt
 cap_ajaccio_napoleon_birthplace	Easy	Ajaccio, Napoleon's birthplace, is the capital of which island?	Corsica	Sardinia	Sicily	Elba
 cap_reykjavik	Easy	What is the capital of Iceland?	Reykjavik	Akureyri	Keflavik	Selfoss
+geocmp_nie_stolica	Easy	Which of these cities is NOT a national capital?	Zurich	Vienna	Prague	Warsaw
 cap_bern	Medium	What is the capital of Switzerland?	Bern	Zurich	Geneva	Basel
 cap2_bucharest	Medium	What is the capital of Romania?	Bucharest	Cluj-Napoca	Timisoara	Iasi
 cap2_sofia	Medium	What is the capital of Bulgaria?	Sofia	Plovdiv	Varna	Burgas
@@ -68,6 +69,7 @@ capy_dublin_nazwa	Hard	Dublin's name comes from Irish words meaning what?	Black 
 cap_city_italy_capital	Hard	Which city was Italy's capital before Rome, from 1865 to 1871?	Florence	Turin	Milan	Naples
 cap_capital_kosovo	Hard	What is the capital of Kosovo?	Pristina	Prizren	Peja	Mitrovica
 cap_capital_faroe_islands	Hard	What is the capital of the Faroe Islands?	Torshavn	Klaksvik	Nuuk	Reykjavik
+geo_highest_capital_city	Hard	Which is the highest capital city in Europe?	Andorra la Vella	Madrid	San Marino	Vaduz
 cap_capital_moldova	Expert	What is the capital of Moldova?	Chisinau	Tiraspol	Balti	Bucharest
 cap_old_royal_capital	Expert	What was the old royal capital of Montenegro?	Cetinje	Podgorica	Kotor	Niksic
 cap_port_town_capital	Expert	Which port town was the capital of modern Greece just before Athens took over in 1834?	Nafplio	Patras	Corfu	Piraeus

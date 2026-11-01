@@ -16,9 +16,6 @@ geo_tzatziki_yoghurt_cucumber	Easy	Tzatziki, a yoghurt and cucumber dip, comes f
 geo_wiener_schnitzel_dish	Easy	Wiener schnitzel is a famous dish of which country?	Austria	Germany	Switzerland	Hungary
 geo_gouda_cheese_comes	Easy	Gouda cheese comes from which country?	The Netherlands	Belgium	France	Denmark
 geo_sangria_fruity_wine	Easy	Sangria, a fruity wine punch, comes from which country?	Spain	Italy	Greece	Portugal
-geo_mojito_cocktail_comes	Easy	The mojito cocktail comes from which country?	Cuba	Mexico	Brazil	Jamaica
-geo_scottish_dish_haggis	Easy	What is the Scottish dish haggis traditionally cooked in?	A sheep's stomach	A pig's bladder	A cow's intestine	A goat's skin
-geo_swiss_cheese_big	Easy	Which Swiss cheese is famous for its big holes?	Emmental	Gruyere	Raclette	Appenzeller
 geo_country_original_home	Easy	Which country is the original home of tacos and enchiladas?	Mexico	Spain	Peru	Argentina
 geo_country_tapas_small	Easy	Which country is famous for 'tapas', small shared dishes?	Spain	Portugal	Italy	Greece
 geo_country_home_pasta	Easy	Which country is the home of pasta carbonara?	Italy	France	Spain	Greece
@@ -32,18 +29,20 @@ geo_darjeeling_assam_teas	Easy	Darjeeling and Assam teas come from which country
 geo_cheddar_cheese_village	Easy	Cheddar cheese is named after a village in which country?	England	Ireland	Scotland	Wales
 geo_matcha_powdered_green	Easy	Matcha, a powdered green tea, is at the heart of which country's tea ceremony?	Japan	China	India	Korea
 geo_vegemite_salty_black	Easy	Vegemite, a salty black yeast spread, is a national favourite of which country?	Australia	New Zealand	The United Kingdom	Canada
-geo_country_claims_invented	Easy	Which country claims to have invented 'French' fries?	Belgium	The Netherlands	Switzerland	Germany
 geo_gazpacho_cold_soup	Easy	Gazpacho, a cold soup of raw tomatoes and peppers, comes from which country?	Spain	Italy	Greece	Mexico
 geo_peking_duck_roasted	Easy	Peking duck, roasted until its skin is crisp, comes from which country?	China	Japan	Vietnam	Thailand
 geo_country_origin_feta	Easy	Which country is the origin of feta cheese?	Greece	Turkey	Italy	Bulgaria
 geo_hamburger_city_country	Easy	The hamburger is named after a city in which country?	Germany	The United States	Austria	Denmark
 his_italian_city_birthplace	Easy	Which Italian city is the birthplace of pizza?	Naples	Rome	Milan	Venice
-geocmp_kawa_producent	Medium	Which country produces the most coffee?	Brazil	Colombia	Vietnam	Ethiopia
-day_najdrozsza_przyprawa	Medium	Which spice is the most expensive by weight?	Saffron	Vanilla	Cardamom	Black pepper
+geocmp_kawa_producent	Easy	Which country produces the most coffee?	Brazil	Colombia	Vietnam	Ethiopia
+day_najdrozsza_przyprawa	Easy	Which spice is the most expensive by weight?	Saffron	Vanilla	Cardamom	Black pepper
+geo_ouzo_aniseed_spirit	Easy	Ouzo, an aniseed spirit, is the national drink of which country?	Greece	Italy	Turkey	Spain
+geo_country_home_jerk	Easy	Which country is the home of 'jerk chicken'?	Jamaica	Cuba	Brazil	Trinidad and Tobago
+geo_paprika_made	Easy	What is paprika made from?	Dried red peppers	Black peppercorns	Dried tomatoes	Saffron threads
+geo_cognac_brandy_town	Easy	Cognac, a famous brandy, is named after a town in which country?	France	Spain	Italy	Portugal
 geo_goulash_national_dish	Medium	Goulash is the national dish of which country?	Hungary	Austria	Czechia	Romania
 geo_pho_noodle_soup	Medium	Pho, a noodle soup, is the national dish of which country?	Vietnam	Thailand	Japan	China
 geo_poutine_chips_cheese	Medium	Poutine - chips with cheese curds and gravy - comes from which country?	Canada	The USA	Belgium	Ireland
-geo_ouzo_aniseed_spirit	Medium	Ouzo, an aniseed spirit, is the national drink of which country?	Greece	Italy	Turkey	Spain
 geo_rioja_wine_comes	Medium	Rioja wine comes from which country?	Spain	Italy	France	Portugal
 geo_island_country_produces	Medium	Which island country produces most of the world's vanilla?	Madagascar	Sri Lanka	Jamaica	Cuba
 geo_country_produces_olive	Medium	Which country produces the most olive oil?	Spain	Italy	Greece	Tunisia
@@ -53,16 +52,11 @@ geo_ceviche_raw_fish	Medium	Ceviche, raw fish 'cooked' in lime juice, is the nat
 geo_feijoada_black_bean	Medium	Feijoada, a black bean stew with pork, is the national dish of which country?	Brazil	Portugal	Cuba	Argentina
 geo_couscous_made_grain	Medium	Couscous is made from which grain?	Durum wheat	Rice	Maize	Barley
 geo_chocolate_sachertorte_cake	Medium	The chocolate Sachertorte is a famous cake from which city?	Vienna	Salzburg	Munich	Zurich
-geo_mexican_dish_means	Medium	Which Mexican dish's name means 'little donkey'?	Burrito	Taco	Enchilada	Quesadilla
 geo_ingredient_must_every	Medium	Which ingredient must every kind of sushi contain?	Vinegared rice	Raw fish	Seaweed	Soy sauce
-geo_french_blue_cheese	Medium	Which French blue cheese is aged in natural caves?	Roquefort	Camembert	Brie	Comte
 geo_tom_yum_soup	Medium	'Tom yum' soup is a classic of which country's cuisine?	Thailand	Vietnam	Indonesia	Malaysia
 geo_middle_eastern_country	Medium	Which Middle Eastern country is famous for 'tabbouleh' and 'mezze'?	Lebanon	Iran	Iraq	Saudi Arabia
-geo_chili_con_carne	Medium	Chili con carne, despite its Spanish name, was born in which country?	United States	Mexico	Spain	Argentina
-geo_country_home_jerk	Medium	Which country is the home of 'jerk chicken'?	Jamaica	Cuba	Brazil	Trinidad and Tobago
 geo_country_cuisine_features	Medium	Which country's cuisine features 'injera', a spongy flatbread?	Ethiopia	Morocco	Nigeria	Kenya
 geo_country_biltong_dried	Medium	Which country does 'biltong', dried cured meat, come from?	South Africa	Australia	Argentina	Kenya
-geo_paprika_made	Medium	What is paprika made from?	Dried red peppers	Black peppercorns	Dried tomatoes	Saffron threads
 geo_pilsner_beer_czech	Medium	Pilsner beer is named after which Czech city?	Plzen	Prague	Brno	Ceske Budejovice
 geo_country_produces_tea	Medium	Which country produces the most tea?	China	India	Kenya	Turkey
 geo_country_produces_avocados	Medium	Which country produces the most avocados?	Mexico	Peru	Spain	Brazil
@@ -75,29 +69,31 @@ geo_pastel_nata_custard	Medium	Pastel de nata, a custard tart, is a famous pastr
 geo_stroopwafels_thin_waffles	Medium	Stroopwafels, thin waffles glued together with caramel syrup, come from which country?	The Netherlands	Belgium	Denmark	Austria
 geo_manchego_cheese_made	Medium	Manchego cheese, made from sheep's milk, comes from which country?	Spain	Italy	Greece	Portugal
 geo_halloumi_squeaky_cheese	Medium	Halloumi, a squeaky cheese that can be grilled, comes from which island?	Cyprus	Crete	Malta	Sicily
-geo_german_city_marzipan	Medium	Which German city is famous for its marzipan?	Lubeck	Nuremberg	Dresden	Bremen
 geo_sweet_pastries_eaten	Medium	Which sweet pastries are eaten at China's Mid-Autumn Festival?	Mooncakes	Fortune cookies	Egg tarts	Sesame balls
-geo_pesto_comes_italian	Medium	Pesto comes from which Italian city?	Genoa	Naples	Bologna	Florence
 geo_irn_bru_bright	Medium	Irn-Bru, a bright orange soft drink said to rival Coca-Cola at home, comes from which country?	Scotland	Ireland	Wales	Australia
 geo_country_produces_sugar	Medium	Which country produces the most sugar cane?	Brazil	India	Cuba	China
-geo_sherry_takes_spanish	Medium	Sherry takes its name from which Spanish town?	Jerez	Seville	Malaga	Valencia
-geo_cognac_brandy_town	Medium	Cognac, a famous brandy, is named after a town in which country?	France	Spain	Italy	Portugal
 geo_kopi_luwak_world	Medium	Kopi luwak, one of the world's priciest coffees, is made from beans eaten and excreted by which animal?	A civet	A fruit bat	A wild boar	A porcupine
 geo_smorrebrod_open_sandwiches	Medium	Smorrebrod, open sandwiches piled on dark rye bread, are a lunchtime classic of which country?	Denmark	Germany	Finland	Russia
 geo_instant_noodles_invented	Medium	Instant noodles were invented in 1958 by Momofuku Ando in which country?	Japan	China	South Korea	Thailand
 geo_fugu_delicacy_chefs	Medium	Fugu, a delicacy that chefs need a special licence to prepare because it can kill, is which fish?	Pufferfish	Stonefish	Moray eel	Lionfish
-geo_nasi_lemak_coconut	Medium	Nasi lemak, coconut rice with sambal and anchovies, is the national dish of which country?	Malaysia	Thailand	Vietnam	The Philippines
 geo_pavlova_meringue_dessert	Medium	The pavlova, a meringue dessert claimed by both Australia and New Zealand, is named after whom?	A Russian ballerina	A French pastry chef	An Australian opera singer	A New Zealand prime minister
 geo_country_grows_world_2	Medium	Which country grows most of the world's garlic?	China	India	Spain	Egypt
-geo_rocky_mountain_oysters	Medium	What are 'Rocky Mountain oysters', served in the American West?	Deep-fried bull testicles	Pickled trout eggs	Breaded wild mushrooms	Smoked freshwater clams
-geo_bologna_meat_ragu	Medium	In Bologna, the meat ragu known abroad as 'bolognese' is traditionally served with which pasta, not spaghetti?	Tagliatelle	Penne	Linguine	Fusilli
 geo_mate_bitter_herbal	Medium	Mate, a bitter herbal tea sipped through a metal straw from a hollow gourd, is the national drink of which country?	Argentina	Mexico	Peru	Colombia
-geo_city_gave_roast	Medium	Which city gave its name to a famous roast duck dish?	Beijing	Shanghai	Bangkok	Hanoi
 cap_capital_city_gave_2	Medium	Which capital city gave its name to a pale, flat bean?	Lima	Quito	Havana	Bogota
 cap_denmark_danish_pastries	Medium	In Denmark, Danish pastries are called 'wienerbrod', meaning bread from which capital?	Vienna	Paris	Berlin	Budapest
+geo_mojito_cocktail_comes	Medium	The mojito cocktail comes from which country?	Cuba	Mexico	Brazil	Jamaica
+geo_scottish_dish_haggis	Medium	What is the Scottish dish haggis traditionally cooked in?	A sheep's stomach	A pig's bladder	A cow's intestine	A goat's skin
+geo_swiss_cheese_big	Medium	Which Swiss cheese is famous for its big holes?	Emmental	Gruyere	Raclette	Appenzeller
+geo_country_claims_invented	Medium	Which country claims to have invented 'French' fries?	Belgium	The Netherlands	Switzerland	Germany
+geo_kakao_wybrzeze	Medium	Which country produces the most cocoa beans?	Ivory Coast	Ghana	Brazil	Switzerland
+geo_pisco_grape_brandy	Medium	Pisco, a grape brandy, is claimed as a national drink by Peru and which other country?	Chile	Bolivia	Argentina	Ecuador
+geo_2022_unesco_listed	Medium	In 2022 UNESCO listed the culture of cooking borscht as the heritage of which country?	Ukraine	Russia	Belarus	Lithuania
+geo_hawaiian_pizza_topped	Medium	Hawaiian pizza, topped with ham and pineapple, was invented in which country?	Canada	The United States	Italy	Australia
+geo_fortune_cookies_served	Medium	Fortune cookies, served in Chinese restaurants, were actually popularised in which country?	The United States	China	Taiwan	Singapore
+geo_fruit_banned_singapore	Medium	Which fruit is banned on Singapore's metro trains, as signs showing a crossed-out spiky fruit remind riders?	The durian	The jackfruit	The pineapple	The rambutan
+geo_bubble_tea_chewy	Medium	Bubble tea, with chewy tapioca balls sucked up through a fat straw, was invented in the 1980s in which place?	Taiwan	Japan	South Korea	Thailand
 geo_kawa_finlandia	Hard	Which country drinks the most coffee per person?	Finland	Italy	Brazil	The United States
 geo_czekolada_szwajcaria	Hard	Which country's people eat the most chocolate per person?	Switzerland	Belgium	The United States	France
-geo_kakao_wybrzeze	Hard	Which country produces the most cocoa beans?	Ivory Coast	Ghana	Brazil	Switzerland
 geo_banany_indie	Hard	Which country grows the most bananas?	India	Ecuador	Brazil	The Philippines
 geo_tokaji_sweet_wine	Hard	Tokaji, a famous sweet wine, comes from which country?	Hungary	Austria	Germany	Croatia
 geo_country_caesar_salad	Hard	In which country was the Caesar salad invented?	Mexico	Italy	United States	Spain
@@ -107,13 +103,9 @@ geo_country_produces_world_2	Hard	Which country produces most of the world's saf
 geo_country_produces_black	Hard	Which country produces the most black pepper?	Vietnam	India	Indonesia	Brazil
 geo_cloves_once_grown	Hard	Cloves, once grown only on a few islands of Indonesia, are which part of the plant?	Dried flower buds	Dried seed pods	Strips of bark	Dried berries
 geo_wasabi_served_outside	Hard	Most 'wasabi' served outside Japan is actually made mainly from what?	Horseradish	Seaweed	Green chilli	Avocado
-geo_pisco_grape_brandy	Hard	Pisco, a grape brandy, is claimed as a national drink by Peru and which other country?	Chile	Bolivia	Argentina	Ecuador
-geo_2022_unesco_listed	Hard	In 2022 UNESCO listed the culture of cooking borscht as the heritage of which country?	Ukraine	Russia	Belarus	Lithuania
 geo_khachapuri_boat_shaped	Hard	Khachapuri, a boat-shaped bread filled with cheese and egg, comes from which country?	Georgia	Armenia	Turkey	Greece
 geo_sriracha_hot_sauce	Hard	Sriracha hot sauce is named after a seaside town in which country?	Thailand	Vietnam	The United States	China
-geo_hawaiian_pizza_topped	Hard	Hawaiian pizza, topped with ham and pineapple, was invented in which country?	Canada	The United States	Italy	Australia
 geo_croissant_said_descend	Hard	The croissant is said to descend from the 'kipferl', a pastry of which country?	Austria	Hungary	Turkey	Germany
-geo_fortune_cookies_served	Hard	Fortune cookies, served in Chinese restaurants, were actually popularised in which country?	The United States	China	Taiwan	Singapore
 geo_gives_earl_grey	Hard	What gives Earl Grey tea its distinctive flavour?	Oil of bergamot	Jasmine flowers	Smoked pine	Lavender oil
 geo_gin_descends_jenever	Hard	Gin descends from 'jenever', a juniper spirit from which country?	The Netherlands	England	Germany	Denmark
 geo_cocktail_created_long	Hard	Which cocktail was created in the Long Bar of a famous colonial hotel around 1915?	The Singapore Sling	The Mai Tai	The Pina Colada	The Cosmopolitan
@@ -122,30 +114,37 @@ geo_small_fish_fermented	Hard	Which small fish is fermented to give Worcestershi
 geo_country_drinks_tea	Hard	Which country drinks the most tea per person, mostly from small tulip-shaped glasses?	Turkey	The United Kingdom	Ireland	China
 geo_tabasco_sauce_made	Hard	Tabasco sauce has been made since the 1860s on Avery Island in which US state?	Louisiana	Texas	Mississippi	Florida
 geo_according_popular_story_2	Hard	According to a popular story, chicken tikka masala was invented in the 1970s in which British city?	Glasgow	Birmingham	Manchester	Leeds
-geo_fruit_banned_singapore	Hard	Which fruit is banned on Singapore's metro trains, as signs showing a crossed-out spiky fruit remind riders?	The durian	The jackfruit	The pineapple	The rambutan
 geo_country_grows_three	Hard	Which country grows about three-quarters of the world's almonds?	The USA	Spain	Iran	Australia
 geo_peach_melba_created	Hard	Peach Melba was created in honour of Nellie Melba, who was what?	An opera singer	A ballet dancer	A tennis champion	A famous cook
 geo_granny_smith_apple	Hard	The Granny Smith apple was first grown in the 1860s in which country?	Australia	England	New Zealand	Canada
 geo_country_produces_cheese	Hard	Which country produces the most cheese?	The USA	France	Germany	Italy
-geo_world_brazil_nuts	Hard	Most of the world's Brazil nuts are harvested in which country?	Bolivia	Brazil	Peru	Colombia
-geo_bubble_tea_chewy	Hard	Bubble tea, with chewy tapioca balls sucked up through a fat straw, was invented in the 1980s in which place?	Taiwan	Japan	South Korea	Thailand
 geo_margarine_invented_1860s	Hard	Margarine was invented in the 1860s after which country's emperor offered a prize for a cheap substitute for butter?	France	Russia	Austria	Germany
 geo_asian_country_world	Hard	Which Asian country is the world's second-biggest coffee producer?	Vietnam	Indonesia	India	Thailand
-geo_czekoladowe_wzgorza	Expert	In which country are the 'Chocolate Hills'?	The Philippines	Indonesia	Malaysia	Vietnam
-geo_surstromming_fermented_herring	Expert	Surstromming, fermented herring so smelly it is often opened outdoors, comes from which country?	Sweden	Norway	Finland	Denmark
-geo_casu_marzu_cheese	Expert	Casu marzu, a cheese containing live maggots, comes from which Italian island?	Sardinia	Sicily	Elba	Capri
+geo_mexican_dish_means	Hard	Which Mexican dish's name means 'little donkey'?	Burrito	Taco	Enchilada	Quesadilla
+geo_french_blue_cheese	Hard	Which French blue cheese is aged in natural caves?	Roquefort	Camembert	Brie	Comte
+geo_chili_con_carne	Hard	Chili con carne, despite its Spanish name, was born in which country?	United States	Mexico	Spain	Argentina
+geo_german_city_marzipan	Hard	Which German city is famous for its marzipan?	Lubeck	Nuremberg	Dresden	Bremen
+geo_pesto_comes_italian	Hard	Pesto comes from which Italian city?	Genoa	Naples	Bologna	Florence
+geo_sherry_takes_spanish	Hard	Sherry takes its name from which Spanish town?	Jerez	Seville	Malaga	Valencia
+geo_nasi_lemak_coconut	Hard	Nasi lemak, coconut rice with sambal and anchovies, is the national dish of which country?	Malaysia	Thailand	Vietnam	The Philippines
+geo_rocky_mountain_oysters	Hard	What are 'Rocky Mountain oysters', served in the American West?	Deep-fried bull testicles	Pickled trout eggs	Breaded wild mushrooms	Smoked freshwater clams
+geo_bologna_meat_ragu	Hard	In Bologna, the meat ragu known abroad as 'bolognese' is traditionally served with which pasta, not spaghetti?	Tagliatelle	Penne	Linguine	Fusilli
+geo_czekoladowe_wzgorza	Hard	In which country are the 'Chocolate Hills'?	The Philippines	Indonesia	Malaysia	Vietnam
+geo_surstromming_fermented_herring	Hard	Surstromming, fermented herring so smelly it is often opened outdoors, comes from which country?	Sweden	Norway	Finland	Denmark
+geo_casu_marzu_cheese	Hard	Casu marzu, a cheese containing live maggots, comes from which Italian island?	Sardinia	Sicily	Elba	Capri
+geo_brunost_sweet_brown	Hard	Brunost, a sweet brown cheese made from whey, is a favourite of which country?	Norway	Switzerland	The Netherlands	Denmark
+geo_baijiu_world_best	Hard	Baijiu, the world's best-selling type of spirit, comes from which country?	China	Japan	South Korea	Russia
+geo_country_bright_yellow	Hard	In which country did a bright yellow local soda, Inca Kola, famously outsell Coca-Cola?	Peru	Bolivia	Ecuador	Colombia
+geo_tempura_japanese_classic	Hard	Tempura, a Japanese classic, is thought to have been brought to Japan by missionaries and traders from which country?	Portugal	Spain	The Netherlands	China
+geo_hakarl_cured_shark	Hard	Hakarl, cured shark meat with a strong smell of ammonia, is a traditional food of which country?	Iceland	Norway	Finland	Scotland
+geo_pina_colada_official	Hard	The pina colada has been the official national drink of which island since 1978?	Puerto Rico	Cuba	Jamaica	Barbados
+geo_kvass_fizzy_drink	Hard	Kvass, a fizzy drink popular in Russia and Ukraine, is traditionally fermented from what?	Rye bread	Birch sap	Mare's milk	Honey
+geo_retsina_white_wine	Hard	Retsina, a white wine flavoured with pine resin, is a speciality of which country?	Greece	Portugal	Croatia	Georgia
+geo_argentina_uruguay_bombilla	Hard	In Argentina and Uruguay, what is a 'bombilla' used for?	Sipping mate tea	Grilling meat	Making dulce de leche	Pouring wine
 geo_jollof_rice_takes	Expert	Jollof rice takes its name from the Wolof people of which country?	Senegal	Nigeria	Ghana	Mali
-geo_brunost_sweet_brown	Expert	Brunost, a sweet brown cheese made from whey, is a favourite of which country?	Norway	Switzerland	The Netherlands	Denmark
 geo_law_may_genuine	Expert	By law, where may genuine Stilton cheese NOT be made?	In the village of Stilton	In Leicestershire	In Nottinghamshire	In Derbyshire
 geo_caesar_cocktail_like	Expert	The Caesar, a cocktail like a Bloody Mary made with clam juice, is the national drink of which country?	Canada	Mexico	The United States	Chile
-geo_baijiu_world_best	Expert	Baijiu, the world's best-selling type of spirit, comes from which country?	China	Japan	South Korea	Russia
-geo_country_bright_yellow	Expert	In which country did a bright yellow local soda, Inca Kola, famously outsell Coca-Cola?	Peru	Bolivia	Ecuador	Colombia
-geo_tempura_japanese_classic	Expert	Tempura, a Japanese classic, is thought to have been brought to Japan by missionaries and traders from which country?	Portugal	Spain	The Netherlands	China
-geo_hakarl_cured_shark	Expert	Hakarl, cured shark meat with a strong smell of ammonia, is a traditional food of which country?	Iceland	Norway	Finland	Scotland
 geo_aquavit_scandinavian_spirit	Expert	Aquavit, the Scandinavian spirit, gets its main flavour from which seed?	Caraway	Aniseed	Juniper	Cardamom
-geo_pina_colada_official	Expert	The pina colada has been the official national drink of which island since 1978?	Puerto Rico	Cuba	Jamaica	Barbados
-geo_kvass_fizzy_drink	Expert	Kvass, a fizzy drink popular in Russia and Ukraine, is traditionally fermented from what?	Rye bread	Birch sap	Mare's milk	Honey
 geo_mayonnaise_often_said	Expert	Mayonnaise is often said to be named after Mahon, the main port of which island?	Menorca	Mallorca	Corsica	Malta
 geo_italian_pasta_means	Expert	Which Italian pasta's name means 'priest stranglers'?	Strozzapreti	Orecchiette	Vermicelli	Cavatappi
-geo_retsina_white_wine	Expert	Retsina, a white wine flavoured with pine resin, is a speciality of which country?	Greece	Portugal	Croatia	Georgia
-geo_argentina_uruguay_bombilla	Expert	In Argentina and Uruguay, what is a 'bombilla' used for?	Sipping mate tea	Grilling meat	Making dulce de leche	Pouring wine
+geo_world_brazil_nuts	Expert	Most of the world's Brazil nuts are harvested in which country?	Bolivia	Brazil	Peru	Colombia
