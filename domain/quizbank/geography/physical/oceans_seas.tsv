@@ -81,6 +81,8 @@ geo_sea_slowly_widening	Medium	Which sea is slowly widening as Africa and Arabia
 geo_unlike_panama_canal	Medium	Unlike the Panama Canal, the Suez Canal has no what?	Locks	Bridges	Tolls	Lighthouses
 geo_russian_arctic_port	Medium	Why does the Russian Arctic port of Murmansk stay free of ice all year?	Warm Atlantic water reaches it	Icebreakers work round the clock	Hot springs warm its harbour	Its water is too salty to freeze
 geo_strait_crossed_bridge	Medium	Which strait, crossed by a famous bridge-and-tunnel link, separates Denmark from Sweden?	The Oresund	The Skagerrak	The Bosphorus	The Dardanelles
+geox_ocean_najmniejszy	Medium	Which is the smallest of the world's oceans?	The Arctic Ocean	The Indian Ocean	The Southern Ocean	The Atlantic Ocean
+geo_stormy_stretch_sea	Medium	Which stormy stretch of sea lies between South America and Antarctica?	Drake Passage	Bass Strait	Ross Sea	Magellan Gulf
 trv_sargassowe	Hard	Which sea has no coastline at all, being bounded only by ocean currents?	The Sargasso Sea	The Caspian Sea	The Coral Sea	The Tasman Sea
 geo_seas_largest	Hard	Which of these seas is the largest?	The Philippine Sea	The Mediterranean	The Caribbean Sea	The North Sea
 geo_cold_current_flows	Hard	Which cold current flows north along the coasts of Chile and Peru?	The Humboldt Current	The Benguela Current	The California Current	The Canary Current

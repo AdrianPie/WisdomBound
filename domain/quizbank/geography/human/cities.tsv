@@ -67,6 +67,7 @@ capx_dublin_guinness	Easy	Which capital city is home to the Guinness Storehouse 
 capx_fontanna_trevi	Easy	Visitors to Rome toss coins over their shoulder into which fountain?	The Trevi Fountain	The Fountain of Neptune	The Four Rivers Fountain	The Fountain of Youth
 capx_kair_piramidy	Easy	On the edge of which capital city do the Pyramids of Giza stand?	Cairo	Khartoum	Tripoli	Amman
 capy_hawana	Easy	Which capital city is famous for streets full of 1950s American cars?	Havana	Mexico City	San Juan	Panama City
+geo_australian_city_nicknamed_2	Easy	Which Australian city is nicknamed 'the Harbour City'?	Sydney	Brisbane	Perth	Adelaide
 wh_angkor_wat	Medium	In which country is the Angkor Wat temple complex located?	Cambodia	Thailand	Vietnam	India
 geocmp_miasto_azja	Medium	Which of these urban areas is the most populous?	Delhi	Bangkok	Seoul	Istanbul
 geocmp_najdalej_polnoc_nordyckie	Medium	Which of these cities lies furthest north?	Helsinki	Oslo	Stockholm	Copenhagen
@@ -187,6 +188,8 @@ cap_capital_city_encircled	Medium	Which capital city is encircled by the grand b
 lmk_stolica_sri_lanka_handlowa	Medium	Which city is Sri Lanka's largest city and commercial centre?	Colombo	Kandy	Galle	Jaffna
 capy_nairobi_park	Medium	Which capital city has a national park with lions and giraffes right beside its skyline?	Nairobi	Addis Ababa	Pretoria	Kampala
 cap_capital_city_casa	Medium	In which capital city is the Casa Rosada, the pink presidential palace?	Buenos Aires	Montevideo	Santiago	Lima
+geo_new_zealand_city_2	Medium	Which New Zealand city is nicknamed 'the City of Sails'?	Auckland	Wellington	Christchurch	Nelson
+geo_new_zealand_city_4	Medium	The New Zealand city of Dunedin takes its name from the Gaelic word for which city?	Edinburgh	Glasgow	Dublin	Aberdeen
 wh_timbuktu	Hard	In which country is the historic city of Timbuktu?	Mali	Niger	Chad	Mauritania
 geocmp_najdalej_poludnie	Hard	Which of these cities lies furthest south?	Auckland	Sydney	Cape Town	Buenos Aires
 geocmp_stolica_najdalej_poludnie	Hard	Which of these capitals lies furthest south?	Wellington	Canberra	Santiago	Pretoria
@@ -253,6 +256,10 @@ cap_capital_said_world	Hard	Which capital is said to have the world's highest co
 cap_capital_old_town	Hard	Which capital's old town grew around a hilltop fortress called the Kalemegdan?	Belgrade	Sarajevo	Skopje	Sofia
 capy_unia_afrykanska	Hard	In which capital city is the headquarters of the African Union?	Addis Ababa	Nairobi	Cairo	Pretoria
 capy_rideau	Hard	Which canal in Ottawa turns into a skating rink almost 8 km long in winter?	The Rideau Canal	The Welland Canal	The Lachine Canal	The Erie Canal
+geo_australian_city_nicknamed	Hard	Which Australian city is nicknamed 'the City of Churches'?	Adelaide	Hobart	Brisbane	Ballarat
+geo_new_zealand_city_3	Hard	Which New Zealand city is nicknamed 'the Garden City'?	Christchurch	Dunedin	Hamilton	Napier
+geo_australian_state_capital	Hard	Which Australian state capital is named after a British prime minister?	Melbourne	Brisbane	Hobart	Perth
+geo_arctic_city_norway	Hard	Which Arctic city in Norway is nicknamed 'the Paris of the North'?	Tromso	Hammerfest	Bodo	Kirkenes
 geocmp_najwyzej_polozona_stolica	Expert	Which of these is the highest-lying capital city?	La Paz	Quito	Bogota	Mexico City
 geo_baku	Expert	Which national capital lies below sea level?	Baku	Cairo	Tehran	Tashkent
 geo_israeli_city_white	Expert	Which Israeli city is called 'the White City' for its thousands of Bauhaus buildings?	Tel Aviv	Haifa	Eilat	Jerusalem
@@ -278,3 +285,4 @@ cap_capital_stands_golden	Expert	In which capital stands the golden Pha That Lua
 cap_capital_city_famously	Expert	Which capital city famously has no traffic lights, its junctions run by white-gloved police instead?	Thimphu	Kathmandu	Ulaanbaatar	Vientiane
 cap_capital_patuxai_war	Expert	Which capital's Patuxai war monument, built with American cement meant for an airport, is nicknamed 'the vertical runway'?	Vientiane	Phnom Penh	Hanoi	Yangon
 cap_capital_city_holds	Expert	Which capital city holds the record for the most buildings clad in white marble?	Ashgabat	Astana	Baku	Tashkent
+geo_city_adelaide_queen	Expert	The city of Adelaide is named after the queen of which British king?	William IV	George III	George IV	Edward VII

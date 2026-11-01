@@ -34,7 +34,6 @@ geo_roughly_far_equator	Medium	Roughly how far is it from the equator to the Nor
 geo_roughly_latitude_arctic	Medium	At roughly what latitude is the Arctic Circle?	About 66 degrees north	About 23 degrees north	About 40 degrees north	About 12 degrees north
 geo_tropic_cancer_runs	Medium	The Tropic of Cancer runs through which of these countries?	India	Thailand	Sri Lanka	Malaysia
 geo_prime_meridian_runs	Medium	The prime meridian runs through which of these countries?	Spain	Portugal	Italy	Morocco
-geo_greenland_africa_look	Medium	Greenland and Africa look similar in size on many world maps. Roughly how many times bigger is Africa?	About 14 times	About 2 times	About 5 times	About 50 times
 geo_standing_beach_roughly	Medium	Standing on a beach, roughly how far away is the horizon?	About 5 km	About 50 km	About 500 m	About 20 km
 geo_sailing_west_across	Medium	Sailing west across the International Date Line, what happens to the calendar date?	It jumps forward a day	It goes back a day	It stays the same	It jumps forward a week
 geo_big_asian_city	Medium	Which big Asian city lies only about 140 km north of the equator?	Singapore	Bangkok	Manila	Jakarta
@@ -72,13 +71,10 @@ geo_roughly_long_degree	Hard	Roughly how long is one degree of latitude on the g
 geo_nautical_mile_originally	Hard	The nautical mile was originally based on what?	One minute of latitude	A thousand paces of a sailor	The length of a ship's rope	One second of longitude
 geo_roughly_total_surface	Hard	Roughly what is the total surface area of the Earth?	About 510 million km2	About 51 million km2	About 5 billion km2	About 150 million km2
 geo_roughly_deep_soviet	Hard	Roughly how deep did the Soviet Kola Superdeep Borehole, still the deepest hole by vertical depth, reach?	About 12 km	About 2 km	About 40 km	About 120 km
-geo_roughly_thick_earth	Hard	Roughly how thick is Earth's crust beneath the oceans?	About 7 km	About 70 km	About 700 m	About 700 km
-geo_earth_inner_core	Hard	Why is Earth's inner core solid while the outer core is liquid?	Enormous pressure squeezes it	It is made of a different metal	It has cooled down completely	It is made of rock, not metal
 geo_lowest_point_north	Hard	What is the lowest point in North America?	Badwater Basin	The Salton Sea	Lake Okeechobee	The Great Salt Lake
 geo_point_land_farthest	Hard	The point on land farthest from any ocean lies in which country?	China	Russia	Kazakhstan	Mongolia
 geo_australia_update_official	Hard	Why did Australia have to update its official map coordinates by about 1.8 m?	The continent drifts several cm a year	An earthquake shifted the whole island	Its old maps used the wrong equator	Rising seas shrank its coastline
 geo_1790s_metre_defined	Hard	In the 1790s, the metre was defined as a tiny fraction of the distance between what?	The North Pole and the equator	The Earth and the Moon	The Earth and the Sun	London and Paris
-geo_according_snowball_earth	Hard	According to the 'Snowball Earth' theory, what happened roughly 700 million years ago?	Ice covered almost the whole planet	A comet brought the oceans	The Moon split from the Earth	All the continents sank
 geo_canadian_island_keeps	Hard	Which Canadian island keeps its clocks half an hour off the rest of Canada's Atlantic coast?	Newfoundland	Prince Edward Island	Cape Breton Island	Vancouver Island
 geo_roughly_far_earth	Hard	Roughly how far is it from Earth's surface to its centre?	About 6,400 km	About 640 km	About 64,000 km	About 1,600 km
 geo_coordinated_universal_time	Hard	Why is Coordinated Universal Time abbreviated UTC rather than CUT?	It is a compromise between English and French	It stands for 'Universal Time Clock'	It was named after a Swiss observatory	CUT was already used by the US Navy
@@ -124,7 +120,6 @@ geo_oldest_surviving_map	Expert	The oldest surviving map of the whole known worl
 geo_agloe_hamlet_appeared	Expert	What was Agloe, a hamlet that appeared on maps of New York State from the 1930s?	A fake town to catch copycats	A town that sank into a lake	A ghost town of the gold rush	A town renamed after a war
 geo_because_earth_bulges	Expert	Because Earth bulges at the equator, its diameter there is bigger than pole to pole by roughly how much?	About 43 km	About 4 km	About 400 km	About 1,200 km
 geo_country_africa_lowest	Expert	In which country is Africa's lowest point on land, about 155 m below sea level?	Djibouti	Egypt	Ethiopia	Eritrea
-geo_roughly_earth_magnetic	Expert	Roughly when did Earth's magnetic poles last swap places?	About 800,000 years ago	About 8,000 years ago	About 80,000 years ago	About 80 million years ago
 geo_phone_gps_not	Expert	Why does a phone's GPS not read exactly 0 degrees at the famous meridian line in Greenwich?	The modern zero line runs about 100 m east	The line was painted in the wrong spot	Satellites cannot see London clearly	Greenwich sits on a sinking hill
 geo_two_neighbours_biggest	Expert	Which two neighbours have the biggest time-zone jump across their border, three and a half hours?	China and Afghanistan	India and China	Russia and Mongolia	Iran and Pakistan
 geo_spot_exactly_equator	Expert	The only spot exactly on the equator with snow all year round lies on which volcano?	Cayambe	Chimborazo	Kilimanjaro	Mount Kenya
@@ -136,7 +131,6 @@ geo_country_abstained_1884	Expert	Which country abstained in the 1884 vote for G
 geo_land_hemisphere_half	Expert	The 'land hemisphere', the half of the globe holding the most land, is centred near the coast of which country?	France	Germany	Kazakhstan	Egypt
 geo_tropic_cancer_markers	Expert	Why do the Tropic of Cancer markers on Mexican roads slowly become wrong?	The tropic creeps south about 15 m a year	The tropic creeps north about 1 km a year	The roads sink into the soft ground	The equator shifts with the seasons
 geo_uninhabited_islands_utc	Expert	Which uninhabited US islands, in the UTC-12 time zone, are the last places on Earth where each day ends?	Baker and Howland	Midway and Wake	Johnston and Palmyra	Guam and Saipan
-geo_boundary_between_earth	Expert	The boundary between the Earth's crust and mantle, the 'Moho', is named after a seismologist from which country?	Croatia	Russia	Japan	Italy
 geo_buckminster_fuller_dymaxion	Expert	Buckminster Fuller's Dymaxion map shows the world unfolded from which shape?	An icosahedron	A cube	A cylinder	A cone
 geo_wallace_line_invisible	Expert	The Wallace Line between Asian and Australian wildlife runs through the strait between Bali and which island?	Lombok	Java	Sumatra	Timor
 geo_australian_city_marks	Expert	Which Australian city marks the Tropic of Capricorn with a tall spire?	Rockhampton	Townsville	Cairns	Darwin

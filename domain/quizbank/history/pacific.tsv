@@ -2,70 +2,70 @@
 # kolonia karna w Australii, Nowa Zelandia. Wyprawy Cooka i Tasmana zostaja w Age of Discovery.
 id	difficulty	prompt	correct	wrong1	wrong2	wrong3
 his_country_maori_people	Easy	In which country do the Maori people live?	New Zealand	Australia	Fiji	Hawaii
-his_giant_stone_figures	Easy	What are the giant stone figures of Easter Island called?	Moai	Tiki	Totems	Menhirs
-his_soldiers_country_remembered	Easy	Soldiers of which country are remembered alongside Australia's on Anzac Day?	New Zealand	Canada	Britain	South Africa
 his_sport_ancient_hawaiians	Easy	Which sport did ancient Hawaiians, chiefs included, practise long before Europeans arrived?	Surfing	Rugby	Polo	Kayak racing
 his_british_surveyor_give	Easy	What name did a British surveyor give to Uluru in 1873?	Ayers Rock	Sturt's Rock	Flinders Peak	Kings Rock
-his_kind_vessels_ancient	Easy	In what kind of vessels did ancient Polynesians settle the remote islands of the Pacific?	Double-hulled canoes	Reed rafts	Dugout rowboats	Bamboo junks
-his_giant_flightless_birds	Easy	Which giant flightless birds of New Zealand were hunted to extinction soon after the Maori arrived?	The moa	The emu	The dodo	The cassowary
-his_traditional_maori_greeting	Easy	In the traditional Maori greeting called the 'hongi', what do two people press together?	Their noses	Their palms	Their cheeks	Their shoulders
-his_moko_maori_tradition	Easy	What is 'ta moko', a Maori tradition revived in recent decades?	Sacred tattooing	A war dance	Canoe carving	A harvest festival
-hx_australia_skazancy	Medium	Britain first used its colony in Australia for what?	Sending convicts	Growing tea	Mining gold	Hunting whales
+hx_australia_skazancy	Easy	Britain first used its colony in Australia for what?	Sending convicts	Growing tea	Mining gold	Hunting whales
+his_european_mapmakers_call	Easy	What did European mapmakers call the imagined great continent of the south?	Terra Australis	Atlantis	El Dorado	Antipodea
 his_australian_outlaw_wore	Medium	Which Australian outlaw wore a suit of homemade iron armour in his last stand?	Ned Kelly	Captain Thunderbolt	Ben Hall	Jack Donahue
 his_roughly_long_aboriginal	Medium	For roughly how long have Aboriginal people lived in Australia?	Over 50,000 years	About 5,000 years	About 500 years	About 1 million years
-his_australia_day_january	Medium	What does Australia Day on 26 January mark?	The First Fleet's landing at Sydney Cove	The end of convict transport	Captain Cook's first landing	The union of the colonies
-his_year_australian_colonies	Medium	In which year did the Australian colonies unite into one nation?	1901	1788	1851	1945
 his_ancestors_maori_sail	Medium	From where did the ancestors of the Maori sail to New Zealand around 1300?	Eastern Polynesia	Australia	Japan	South America
-his_chief_united_hawaiian	Medium	Which chief united the Hawaiian Islands into one kingdom by 1810?	Kamehameha I	Liliuokalani	Kalakaua	Keoua
 his_conflicts_between_maori	Medium	What were the conflicts between Maori and British forces in the 1800s called?	The New Zealand Wars	The Waitangi Wars	The Pacific Wars	The Kiwi Wars
 his_aboriginal_children_taken	Medium	What are the Aboriginal children taken from their families by Australian governments in the 1900s called?	The Stolen Generations	The Lost Tribes	The Forgotten Children	The Taken Ones
-his_european_mapmakers_call	Medium	What did European mapmakers call the imagined great continent of the south?	Terra Australis	Atlantis	El Dorado	Antipodea
 his_animal_released_hunting	Medium	Which animal, released for hunting in 1859, became a plague across Australia?	The rabbit	The fox	The cane toad	The camel
 his_pacific_island_capital	Medium	Which Pacific island, with its capital Papeete, is part of French Polynesia?	Tahiti	Fiji	Samoa	Tonga
-his_pacific_country_won	Medium	Which Pacific country won its independence from Australia in 1975?	Papua New Guinea	Fiji	Vanuatu	Samoa
-his_dutch_navigator_reached	Medium	Which Dutch navigator reached New Zealand in 1642, over a century before Cook?	Abel Tasman	Willem Janszoon	Dirk Hartog	Jacob Roggeveen
 his_easter_island	Medium	Why is Easter Island so called?	A Dutch captain reached it on Easter Sunday	Its giant statues all face the east	Missionaries held the first Easter there	Its people held a spring egg festival
-his_aboriginal_hunting_boomerangs	Medium	Most Aboriginal hunting boomerangs were designed to do what?	Fly straight without returning	Return to the thrower	Whistle to scare birds	Carry fire across a camp
-his_1967_referendum_australians	Medium	In a 1967 referendum, Australians voted by over 90% to do what?	Include Aboriginal people in the census	Cut the last legal ties with Britain	Adopt a new flag without the Union Jack	Move the capital from Melbourne to Canberra
 his_animals_brought_australia	Medium	Which animals, brought to Australia in the 1800s to carry loads across the outback, now roam wild there in huge numbers?	Camels	Llamas	Yaks	Zebras
 his_ten_pound_poms	Medium	Who were the 'Ten Pound Poms' of the decades after World War II?	British migrants given cheap passage to Australia	British convicts freed for a ten-pound fine	English cricketers paid to tour Australia	British soldiers posted to the Pacific islands
-his_australian_prime_minister_2	Medium	Which Australian prime minister made a formal national apology to Aboriginal people in 2008?	Kevin Rudd	John Howard	Julia Gillard	Paul Keating
-his_crop_native_south	Medium	Which crop, native to South America, were Polynesians already growing when Europeans first arrived?	The sweet potato	Maize	The tomato	Cassava
-his_voting_reform_now	Medium	Which voting reform, now used almost everywhere, was pioneered by Australian colonies in 1856?	The secret ballot	Votes for women	Compulsory voting	Electronic voting
-his_easter_island_birdman	Medium	In Easter Island's 'Birdman' contest, what did competitors race to bring back from an offshore islet?	The season's first sooty tern egg	A live frigatebird chick	A basket of red feathers	A carved stone from a cave
-his_kava_drunk_ceremonies	Medium	What is kava, drunk at ceremonies across the Pacific islands?	A drink made from a pepper root	A strong coconut wine	A salty seaweed soup	A fermented fish sauce
-his_wojna_emu	Hard	In 1932, Australian soldiers with machine guns fought, and lost, a 'war' against which animals?	Emus	Kangaroos	Rabbits	Dingoes
-hx_hawaje	Hard	Before becoming part of the USA, Hawaii was what?	An independent kingdom	A French colony	A Japanese province	A Spanish colony
+his_giant_stone_figures	Medium	What are the giant stone figures of Easter Island called?	Moai	Tiki	Totems	Menhirs
+his_soldiers_country_remembered	Medium	Soldiers of which country are remembered alongside Australia's on Anzac Day?	New Zealand	Canada	Britain	South Africa
+his_kind_vessels_ancient	Medium	In what kind of vessels did ancient Polynesians settle the remote islands of the Pacific?	Double-hulled canoes	Reed rafts	Dugout rowboats	Bamboo junks
+his_giant_flightless_birds	Medium	Which giant flightless birds of New Zealand were hunted to extinction soon after the Maori arrived?	The moa	The emu	The dodo	The cassowary
+his_traditional_maori_greeting	Medium	In the traditional Maori greeting called the 'hongi', what do two people press together?	Their noses	Their palms	Their cheeks	Their shoulders
+his_moko_maori_tradition	Medium	What is 'ta moko', a Maori tradition revived in recent decades?	Sacred tattooing	A war dance	Canoe carving	A harvest festival
+his_wojna_emu	Medium	In 1932, Australian soldiers with machine guns fought, and lost, a 'war' against which animals?	Emus	Kangaroos	Rabbits	Dingoes
+hx_hawaje	Medium	Before becoming part of the USA, Hawaii was what?	An independent kingdom	A French colony	A Japanese province	A Spanish colony
+his_ancient_polynesian_navigators	Medium	How did ancient Polynesian navigators cross the Pacific without instruments?	By reading stars, swells and birds	By following floating logs	By using magnetic stones	By hugging the coasts
+his_policy_1901_restricted	Medium	Which policy of 1901 restricted non-European immigration to Australia?	The White Australia policy	The Southern Cross Act	The Ballarat Law	The Colonial Exclusion Act
+his_country_tested_nuclear	Medium	Which country tested nuclear bombs on Mururoa atoll in the Pacific until 1996?	France	The United States	Britain	China
+hx_waitangi	Medium	Which 1840 treaty between the British Crown and Maori chiefs is New Zealand's founding document?	The Treaty of Waitangi	The Treaty of Auckland	The Treaty of Rotorua	The Treaty of Aotearoa
+his_territory_became_50th	Medium	Which territory became the 50th US state in 1959?	Hawaii	Alaska	Puerto Rico	Guam
 his_eureka_stockade_1854	Hard	What was the Eureka Stockade of 1854 in Australia?	A gold miners' rebellion	A convict escape	A cattle drive	A shipwreck
 his_led_fleet_became	Hard	Who led the First Fleet and became the first governor of New South Wales?	Arthur Phillip	James Cook	Lachlan Macquarie	William Bligh
-his_ancient_polynesian_navigators	Hard	How did ancient Polynesian navigators cross the Pacific without instruments?	By reading stars, swells and birds	By following floating logs	By using magnetic stones	By hugging the coasts
 his_last_monarch_hawaii	Hard	Who was the last monarch of Hawaii, overthrown in 1893?	Queen Liliuokalani	King Kamehameha V	Queen Emma	King Kalakaua
 his_island_tasmania_until	Hard	What was the island of Tasmania called until 1856?	Van Diemen's Land	New Holland	New Zealand	Botany Island
 his_two_explorers_died	Hard	Which two explorers died in 1861 after crossing Australia from south to north?	Burke and Wills	Lewis and Clark	Hume and Hovell	Mason and Dixon
 his_navigator_sailed_right	Hard	Which navigator first sailed right round Australia and popularised its name?	Matthew Flinders	James Cook	Abel Tasman	George Bass
-his_policy_1901_restricted	Hard	Which policy of 1901 restricted non-European immigration to Australia?	The White Australia policy	The Southern Cross Act	The Ballarat Law	The Colonial Exclusion Act
 his_island_solomons_japanese	Hard	On which island in the Solomons did US and Japanese forces fight for six months from August 1942?	Guadalcanal	Iwo Jima	Okinawa	Tarawa
 his_australian_city_bombed	Hard	Which Australian city was bombed by Japanese aircraft in February 1942?	Darwin	Perth	Brisbane	Cairns
-his_torres_strait_islander	Hard	Which Torres Strait Islander won a landmark court case for Indigenous land rights in Australia in 1992?	Eddie Mabo	Albert Namatjira	Neville Bonner	Charles Perkins
 his_city_served_australia	Hard	Which city served as Australia's capital before Canberra was ready?	Melbourne	Sydney	Adelaide	Brisbane
-his_campaigner_led_fight	Hard	Which campaigner led the fight that won New Zealand women the vote in 1893?	Kate Sheppard	Emmeline Pankhurst	Vida Goldstein	Susan B. Anthony
-his_pacific_islands_german	Hard	Which Pacific islands were a German colony until New Zealand seized them in 1914?	Western Samoa	Fiji	Tonga	The Cook Islands
-his_island_nation_gilbert	Hard	Which island nation, then called the Gilbert Islands, saw the bloody Battle of Tarawa in 1943?	Kiribati	Tuvalu	Nauru	Vanuatu
-his_country_tested_nuclear	Hard	Which country tested nuclear bombs on Mururoa atoll in the Pacific until 1996?	France	The United States	Britain	China
 his_governor_new_south	Hard	Which governor of New South Wales was overthrown by his own officers in the 'Rum Rebellion' of 1808?	William Bligh	Arthur Phillip	Lachlan Macquarie	John Macarthur
 his_cargo_cults_grew	Hard	What were the 'cargo cults' that grew up in Melanesia around World War II?	Rituals meant to summon Western goods	Gangs who looted wrecked supply ships	Secret societies of dock workers	Churches built from packing crates
 his_rongorongo_found_carved	Hard	What is 'rongorongo', found carved on wooden tablets from Easter Island?	An undeciphered script	A sacred dance	A type of canoe	A bird-man contest
 his_made_tiny_island	Hard	What made the tiny island nation of Nauru one of the richest per person in the 1970s?	Phosphate mining	Oil drilling	Offshore banking	Pearl farming
 his_pacific_island_kingdom	Hard	Which Pacific island kingdom kept its own monarchy throughout the colonial era?	Tonga	Hawaii	Tahiti	Fiji
 his_blackbirding_19th_century	Hard	What was 'blackbirding' in the 19th-century Pacific?	Kidnapping islanders to work on plantations	Hunting rare birds for their feathers	Smuggling opium between ports	Trading guns for sandalwood
-his_pacific_nation_moved	Hard	Which Pacific nation moved the International Date Line in 1995 so that all its islands would share the same day?	Kiribati	Samoa	Tonga	Tuvalu
 his_australian_prime_minister_3	Hard	Which Australian prime minister was dismissed by the Governor-General in 1975?	Gough Whitlam	Malcolm Fraser	Bob Hawke	Robert Menzies
-his_hawaiian_king_electric	Hard	Which Hawaiian king had electric light installed in his Iolani Palace in 1886, years before the White House got it?	Kalakaua	Kamehameha III	Lunalilo	Kamehameha V
-hx_waitangi	Expert	Which 1840 treaty between the British Crown and Maori chiefs is New Zealand's founding document?	The Treaty of Waitangi	The Treaty of Auckland	The Treaty of Rotorua	The Treaty of Aotearoa
+his_australia_day_january	Hard	What does Australia Day on 26 January mark?	The First Fleet's landing at Sydney Cove	The end of convict transport	Captain Cook's first landing	The union of the colonies
+his_year_australian_colonies	Hard	In which year did the Australian colonies unite into one nation?	1901	1788	1851	1945
+his_chief_united_hawaiian	Hard	Which chief united the Hawaiian Islands into one kingdom by 1810?	Kamehameha I	Liliuokalani	Kalakaua	Keoua
+his_pacific_country_won	Hard	Which Pacific country won its independence from Australia in 1975?	Papua New Guinea	Fiji	Vanuatu	Samoa
+his_aboriginal_hunting_boomerangs	Hard	Most Aboriginal hunting boomerangs were designed to do what?	Fly straight without returning	Return to the thrower	Whistle to scare birds	Carry fire across a camp
+his_1967_referendum_australians	Hard	In a 1967 referendum, Australians voted by over 90% to do what?	Include Aboriginal people in the census	Cut the last legal ties with Britain	Adopt a new flag without the Union Jack	Move the capital from Melbourne to Canberra
+his_australian_prime_minister_2	Hard	Which Australian prime minister made a formal national apology to Aboriginal people in 2008?	Kevin Rudd	John Howard	Julia Gillard	Paul Keating
+his_crop_native_south	Hard	Which crop, native to South America, were Polynesians already growing when Europeans first arrived?	The sweet potato	Maize	The tomato	Cassava
+his_voting_reform_now	Hard	Which voting reform, now used almost everywhere, was pioneered by Australian colonies in 1856?	The secret ballot	Votes for women	Compulsory voting	Electronic voting
+his_kava_drunk_ceremonies	Hard	What is kava, drunk at ceremonies across the Pacific islands?	A drink made from a pepper root	A strong coconut wine	A salty seaweed soup	A fermented fish sauce
+his_hawaiian_olympic_swimming	Hard	Which Hawaiian Olympic swimming champion spread the sport of surfing around the world?	Duke Kahanamoku	Eddie Aikau	George Freeth	Johnny Weissmuller
+his_australian_prime_minister	Hard	Which Australian prime minister vanished while swimming in rough surf in 1967?	Harold Holt	Robert Menzies	John Gorton	John Curtin
+his_australian_sports_team	Hard	What was the first Australian sports team to tour overseas, playing in England in 1868?	An Aboriginal cricket team	A Sydney rugby side	A Melbourne rowing crew	A Victorian football team
+his_1918_flu_killed	Hard	When the 1918 flu killed about a fifth of Western Samoa's people, why did nearby American Samoa have no deaths at all?	Its governor imposed a strict quarantine	Its people had caught a milder flu earlier	Its doctors had an early flu vaccine	Storms kept all ships away that winter
 his_tahitian_navigator_priest	Expert	Which Tahitian navigator and priest guided Captain Cook's Endeavour through the Pacific?	Tupaia	Omai	Kupe	Hotu Matua
 his_maori_chief_met	Expert	Which Maori chief, who met King George IV in 1820, came home with muskets and launched devastating raids?	Hongi Hika	Te Rauparaha	Hone Heke	Te Kooti
-his_hawaiian_olympic_swimming	Expert	Which Hawaiian Olympic swimming champion spread the sport of surfing around the world?	Duke Kahanamoku	Eddie Aikau	George Freeth	Johnny Weissmuller
 his_maori_prophet_led	Expert	Which Maori prophet led peaceful resistance to land seizures at Parihaka until troops invaded in 1881?	Te Whiti o Rongomai	Te Kooti	Titokowaru	Wiremu Tamihana
-his_australian_prime_minister	Expert	Which Australian prime minister vanished while swimming in rough surf in 1967?	Harold Holt	Robert Menzies	John Gorton	John Curtin
-his_australian_sports_team	Expert	What was the first Australian sports team to tour overseas, playing in England in 1868?	An Aboriginal cricket team	A Sydney rugby side	A Melbourne rowing crew	A Victorian football team
-his_1918_flu_killed	Expert	When the 1918 flu killed about a fifth of Western Samoa's people, why did nearby American Samoa have no deaths at all?	Its governor imposed a strict quarantine	Its people had caught a milder flu earlier	Its doctors had an early flu vaccine	Storms kept all ships away that winter
+his_easter_island_birdman	Expert	In Easter Island's 'Birdman' contest, what did competitors race to bring back from an offshore islet?	The season's first sooty tern egg	A live frigatebird chick	A basket of red feathers	A carved stone from a cave
+his_torres_strait_islander	Expert	Which Torres Strait Islander won a landmark court case for Indigenous land rights in Australia in 1992?	Eddie Mabo	Albert Namatjira	Neville Bonner	Charles Perkins
+his_campaigner_led_fight	Expert	Which campaigner led the fight that won New Zealand women the vote in 1893?	Kate Sheppard	Emmeline Pankhurst	Vida Goldstein	Susan B. Anthony
+his_pacific_islands_german	Expert	Which Pacific islands were a German colony until New Zealand seized them in 1914?	Western Samoa	Fiji	Tonga	The Cook Islands
+his_island_nation_gilbert	Expert	Which island nation, then called the Gilbert Islands, saw the bloody Battle of Tarawa in 1943?	Kiribati	Tuvalu	Nauru	Vanuatu
+his_pacific_nation_moved	Expert	Which Pacific nation moved the International Date Line in 1995 so that all its islands would share the same day?	Kiribati	Samoa	Tonga	Tuvalu
+his_hawaiian_king_electric	Expert	Which Hawaiian king had electric light installed in his Iolani Palace in 1886, years before the White House got it?	Kalakaua	Kamehameha III	Lunalilo	Kamehameha V

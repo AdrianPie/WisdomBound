@@ -65,6 +65,7 @@ pop_purple_rain	Easy	Which singer had a hit with 'Purple Rain'?	Prince	Michael J
 pop_ukulele	Easy	Which instrument was developed in Hawaii and looks like a tiny guitar?	The ukulele	The banjo	The mandolin	The balalaika
 pp_whitney	Easy	Who sang 'I Will Always Love You' in the film 'The Bodyguard'?	Whitney Houston	Mariah Carey	Celine Dion	Dolly Parton
 pp_bee_gees	Easy	Which band of brothers sang 'Stayin' Alive' for 'Saturday Night Fever'?	The Bee Gees	The Jackson 5	The Beach Boys	The Everly Brothers
+his_woodstock	Easy	Which 1969 music festival drew around 400,000 people to a farm in New York State?	Woodstock	Glastonbury	Live Aid	Coachella
 pop_thriller	Medium	Which is the best-selling album of all time?	Thriller	Back in Black	The Dark Side of the Moon	Abbey Road
 pop_waterloo	Medium	With which song did ABBA win Eurovision in 1974?	Waterloo	Dancing Queen	Mamma Mia	Fernando
 pop_graceland	Medium	What was the name of Elvis Presley's mansion in Memphis?	Graceland	Neverland	Xanadu	Paisley Park
@@ -213,6 +214,7 @@ pop_star_changed_unpronounceable	Medium	Which star changed his name to an unpron
 pop_motown	Medium	Which city gave its nickname to the Motown record label?	Detroit	Chicago	Memphis	Philadelphia
 tec_guitar_maker_created	Medium	Which guitar maker created the famous 'Stratocaster'?	Fender	Gibson	Ibanez	Yamaha
 tec_guitar_maker_produces	Medium	Which guitar maker produces the 'Les Paul' electric guitar?	Gibson	Fender	Gretsch	Rickenbacker
+his_disco_group_1978	Medium	Which disco group had a 1978 hit calling the tsar's mystic adviser 'Russia's greatest love machine'?	Boney M.	ABBA	The Bee Gees	Village People
 pop_despacito	Hard	Luis Fonsi, the singer of 'Despacito', comes from where?	Puerto Rico	Mexico	Colombia	Spain
 pp_angus	Hard	Which AC/DC guitarist performs in a schoolboy uniform?	Angus Young	Malcolm Young	Bon Scott	Brian Johnson
 pp_eminem	Hard	What is rapper Eminem's real name?	Marshall Mathers	Curtis Jackson	Shawn Carter	Calvin Broadus

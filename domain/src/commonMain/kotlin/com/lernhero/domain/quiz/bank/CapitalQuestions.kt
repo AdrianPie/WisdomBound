@@ -192,6 +192,7 @@ object CapitalQuestions {
         q("capx_canberra_konkurs", "The winning design for Canberra came from architects of which country?", "The USA", listOf("Britain", "France", "Germany"), H),
         q("capy_canberra_nazwa", "The name 'Canberra' is thought to come from an Aboriginal word meaning what?", "Meeting place", listOf("Big river", "Red earth", "Sky camp"), H),
         q("cap_capital_uzbekistan", "What is the capital of Uzbekistan?", "Tashkent", listOf("Samarkand", "Bukhara", "Almaty"), H),
+        q("geo_island_nation_official", "Which island nation has no official capital city?", "Nauru", listOf("Tuvalu", "Palau", "Kiribati"), H),
         q("cap_thimphu", "What is the capital of Bhutan?", "Thimphu", listOf("Paro", "Punakha", "Phuentsholing"), X),
         q("cap_bishkek", "What is the capital of Kyrgyzstan?", "Bishkek", listOf("Osh", "Naryn", "Karakol"), X),
         q("cap2_sri_jayawardenepura_kotte", "What is Sri Lanka's official capital, where its parliament sits?", "Sri Jayawardenepura Kotte", listOf("Nuwara Eliya", "Trincomalee", "Batticaloa"), X),

@@ -1,43 +1,32 @@
 # Dzial przekrojowy: szpiedzy, wywiad i lamanie szyfrow od Walsinghama po zimna wojne.
 id	difficulty	prompt	correct	wrong1	wrong2	wrong3
 his_cia_stand	Easy	What does CIA stand for?	Central Intelligence Agency	Central Investigation Authority	Civil Intelligence Association	Counter Intelligence Army
-his_israel_foreign_intelligence	Easy	What is the name of Israel's foreign intelligence agency?	Mossad	Shin Bet	Stasi	Interpol
 his_kitchen_liquid_used	Easy	Which kitchen liquid can be used as an invisible ink that appears when the paper is heated?	Lemon juice	Olive oil	Vinegar	Tea
 his_german_cipher_machine	Easy	What was the name of the German cipher machine whose codes were broken in World War II?	Enigma	Colossus	Purple	Ultra
 his_british_mathematician_led	Easy	Which British mathematician led the codebreaking against Enigma, as shown in the film 'The Imitation Game'?	Alan Turing	Isaac Newton	Charles Babbage	Bertrand Russell
 his_british_agency_handles	Easy	Which British agency handles counter-espionage at home, while MI6 spies abroad?	MI5	MI9	The SOE	The SAS
 his_spies_call_trick	Easy	What do spies call the trick of using seduction to compromise a target?	A honey trap	A sugar pill	A velvet glove	A sweetheart sting
-his_country_listening_agency	Easy	Which country's listening agency, GCHQ, works from a round building nicknamed 'the Doughnut'?	Britain	The USA	Australia	Canada
 his_britain_wartime_slogan	Easy	What was Britain's wartime slogan 'Careless talk costs lives' warning people about?	Enemy spies overhearing gossip	Wasting food during rationing	Lights showing during air raids	Phoning soldiers at the front
-his_world_war_british_2	Easy	During World War II, what did British agents secretly hide in Monopoly sets sent to prisoners of war?	Escape maps and real money	Radio parts and batteries	Poison pills and razors	Coded letters from home
-his_statesman_ran_queen	Medium	Which statesman ran Queen Elizabeth I's network of spies?	Francis Walsingham	Thomas Cromwell	Robert Dudley	Walter Raleigh
-his_trick_operation_mincemeat	Medium	What was the trick of 'Operation Mincemeat' in 1943?	A corpse carrying fake plans	A fake army of rubber tanks	A spy hidden in a meat delivery	Poisoned food sent to Hitler
-his_member_cambridge_five	Medium	Which member of the Cambridge Five rose high in MI6 before fleeing to Moscow in 1963?	Kim Philby	Guy Burgess	Anthony Blunt	Donald Maclean
+his_spies_call_secret	Easy	What do spies call a secret house where agents can hide or meet in safety?	A safe house	A dead drop	A listening post	A honey trap
+his_author_james_bond	Easy	Which author of the James Bond novels worked in British naval intelligence during World War II?	Ian Fleming	John le Carre	Graham Greene	Roald Dahl
+his_sleeper_world_spying	Easy	What is a 'sleeper' in the world of spying?	An agent who lies low for years	A drug to knock out guards	A false bottom in a suitcase	A spy who works only at night
 his_bulgarian_dissident_georgi	Medium	How was the Bulgarian dissident Georgi Markov killed in London in 1978?	With a poisoned umbrella tip	With a car bomb	With a sniper's rifle	With poisoned tea
 his_organiser_holocaust_israeli	Medium	Which organiser of the Holocaust did Israeli agents capture in Argentina in 1960?	Adolf Eichmann	Josef Mengele	Martin Bormann	Klaus Barbie
-his_young_american_spy	Medium	Which young American spy, hanged by the British in 1776, said he regretted having only one life to give?	Nathan Hale	Paul Revere	John Andre	Benedict Arnold
 his_mole_world_spies	Medium	What is a 'mole' in the world of spies?	An agent hidden deep inside the other side	A secret tunnel under an embassy	A tiny hidden camera	A coded radio signal
 his_dead_drop_spying	Medium	What is a 'dead drop' in spying?	A hidden spot for leaving messages	A spy who has been killed	A failed parachute jump	A false name on a passport
 his_according_herodotus_greek	Medium	According to Herodotus, how did one Greek ruler send a secret message on a slave?	Tattooed it on his shaved head	Hid it in his shoe	Sewed it into his cloak	Made him swallow it
-his_american_wartime_spy	Medium	Which American wartime spy agency, founded in 1942, was the forerunner of the CIA?	The OSS	The FBI	The NSA	The DIA
-his_british_secret_agency	Medium	Which British secret agency of World War II was ordered to 'set Europe ablaze'?	The SOE	MI5	GCHQ	The SAS
 his_american_born_singer	Medium	Which famous American-born singer and dancer in Paris secretly worked for the French Resistance?	Josephine Baker	Edith Piaf	Marlene Dietrich	Ella Fitzgerald
-his_spies_call_hidden	Medium	What do spies call a hidden spot where they leave messages for each other?	A dead drop	A safe house	A cut-out	A honey trap
-his_mole_world_spying	Medium	What is a 'mole' in the world of spying?	An agent planted inside the enemy's camp	A tunnel dug under an enemy embassy	A code hidden inside an ordinary letter	A spy who works only from home
-his_spies_call_secret	Medium	What do spies call a secret house where agents can hide or meet in safety?	A safe house	A dead drop	A listening post	A honey trap
-his_author_james_bond	Medium	Which author of the James Bond novels worked in British naval intelligence during World War II?	Ian Fleming	John le Carre	Graham Greene	Roald Dahl
 his_radioactive_poison_used	Medium	Which radioactive poison was used to murder former Russian spy Alexander Litvinenko in London in 2006?	Polonium-210	Ricin	Novichok	Uranium-235
-his_chef_worked_american	Medium	Which famous TV chef worked for the American spy agency OSS during World War II?	Julia Child	Fanny Cradock	Betty Crocker	Martha Stewart
 his_microdots_used_spies	Medium	What were the 'microdots' used by spies in World War II?	Photos shrunk to the size of a full stop	Tiny radio transmitters in buttons	Poison pills hidden in false teeth	Coded dots in knitting patterns
-his_israeli_spy_rose	Medium	Which Israeli spy rose close to Syria's leaders before being caught and hanged in Damascus in 1965?	Eli Cohen	Wolfgang Lotz	Jonathan Pollard	Mordechai Vanunu
-his_sleeper_world_spying	Medium	What is a 'sleeper' in the world of spying?	An agent who lies low for years	A drug to knock out guards	A false bottom in a suitcase	A spy who works only at night
 his_bletchley_park_track	Medium	How did Bletchley Park track down some of its codebreakers in 1942?	Through a newspaper crossword contest	Through a national chess championship	Through a radio quiz show	Through a maths exam in schools
-his_english_playwright_novelist	Medium	Which English playwright and novelist spied for the English crown in Antwerp in 1666 under the code name 'Astrea'?	Aphra Behn	Margaret Cavendish	Mary Wroth	Fanny Burney
-his_novelist_worked_british	Medium	Which famous novelist worked as a British secret agent in Switzerland and Russia during World War I?	W. Somerset Maugham	Graham Greene	Ian Fleming	John le Carre
+his_israel_foreign_intelligence	Medium	What is the name of Israel's foreign intelligence agency?	Mossad	Shin Bet	Stasi	Interpol
+his_country_listening_agency	Medium	Which country's listening agency, GCHQ, works from a round building nicknamed 'the Doughnut'?	Britain	The USA	Australia	Canada
+his_world_war_british_2	Medium	During World War II, what did British agents secretly hide in Monopoly sets sent to prisoners of war?	Escape maps and real money	Radio parts and batteries	Poison pills and razors	Coded letters from home
+his_secret_cia_tunnel	Medium	What was the secret CIA tunnel dug under East Berlin in the 1950s used for?	Tapping Soviet phone lines	Smuggling people west	Storing secret weapons	Hiding Soviet defectors
+his_britain_world_war	Medium	What was Britain's World War II system for turning captured German spies into double agents called?	The Double Cross System	Operation Fortitude	The Ultra Programme	Operation Mincemeat
 his_plot_put_mary	Hard	Which plot to put Mary, Queen of Scots, on the throne was uncovered by Walsingham's spies in 1586?	The Babington Plot	The Gunpowder Plot	The Ridolfi Plot	The Throckmorton Plot
 his_russian_born_agent	Hard	Which Russian-born agent of British intelligence was nicknamed 'the Ace of Spies'?	Sidney Reilly	Kim Philby	Richard Sorge	Ian Fleming
 his_spanish_double_agent	Hard	Which Spanish double agent, codenamed 'Garbo', fooled the Germans about the D-Day landings?	Juan Pujol Garcia	Dusko Popov	Eddie Chapman	Roman Czerniawski
-his_american_spy_wooden	Hard	Which American spy, who called her wooden leg 'Cuthbert', organised Resistance networks in France?	Virginia Hall	Josephine Baker	Nancy Wake	Violette Szabo
 his_british_secret_agent	Hard	Which British secret agent, a descendant of an Indian ruler, was executed at Dachau in 1944?	Noor Inayat Khan	Violette Szabo	Odette Sansom	Krystyna Skarbek
 his_soviet_spy_tokyo	Hard	Which Soviet spy in Tokyo warned Stalin of the coming German invasion in 1941?	Richard Sorge	Kim Philby	Klaus Fuchs	Rudolf Abel
 his_cia_officer_sold	Hard	Which CIA officer sold the names of American agents to Moscow in the 1980s?	Aldrich Ames	Robert Hanssen	Edward Snowden	Jonathan Pollard
@@ -50,21 +39,30 @@ his_soviet_spy_swapped	Hard	Which Soviet spy was swapped for the U-2 pilot Gary 
 his_bridge_between_berlin	Hard	Which bridge between Berlin and Potsdam, used for swapping captured spies, is called 'the Bridge of Spies'?	The Glienicke Bridge	The Oberbaum Bridge	The Charles Bridge	The Bornholmer Bridge
 his_new_zealand_born	Hard	Which New Zealand-born agent, nicknamed 'the White Mouse' by the Gestapo, led French Resistance fighters?	Nancy Wake	Violette Szabo	Virginia Hall	Odette Sansom
 his_polish_mathematician_broke	Hard	Which Polish mathematician first broke the German Enigma code in the 1930s?	Marian Rejewski	Alan Turing	Dilly Knox	Gordon Welchman
-his_soviet_colonel_passed	Hard	Which Soviet colonel passed missile secrets to the West before the Cuban Missile Crisis?	Oleg Penkovsky	Oleg Gordievsky	Vasili Mitrokhin	Yuri Nosenko
 his_british_safecracker_became	Hard	Which British safecracker became the double agent 'Agent Zigzag' in World War II?	Eddie Chapman	Kim Philby	Duncan Hamilton	Harry Houdini
-his_secret_cia_tunnel	Hard	What was the secret CIA tunnel dug under East Berlin in the 1950s used for?	Tapping Soviet phone lines	Smuggling people west	Storing secret weapons	Hiding Soviet defectors
 his_german_born_physicist	Hard	Which German-born physicist passed atomic bomb secrets from Los Alamos to the Soviets?	Klaus Fuchs	Klaus Barbie	Werner Heisenberg	Otto Hahn
 his_member_cambridge_spy	Hard	Which member of the Cambridge spy ring was the art adviser to Queen Elizabeth II?	Anthony Blunt	Kim Philby	Guy Burgess	Donald Maclean
 his_soviet_schoolchildren_give	Hard	What did Soviet schoolchildren give the US ambassador in 1945 that hid a listening device for seven years?	A carved wooden Great Seal	A painted Easter egg	A bust of Lincoln	A chess set
-his_britain_world_war	Hard	What was Britain's World War II system for turning captured German spies into double agents called?	The Double Cross System	Operation Fortitude	The Ultra Programme	Operation Mincemeat
 his_elizabethan_playwright_possibly	Hard	Which Elizabethan playwright, possibly a government spy, was stabbed to death in Deptford in 1593?	Christopher Marlowe	Ben Jonson	Thomas Kyd	William Shakespeare
 his_fbi_agent_spied	Hard	Which FBI agent spied for Moscow for over 20 years until his arrest in 2001?	Robert Hanssen	Aldrich Ames	Edward Lee Howard	John Walker
 his_american_venona_project	Hard	What was the American 'Venona' project?	Decoding Soviet wartime cables	A spy satellite programme	A plot to kidnap Fidel Castro	A tunnel under Havana
 his_1960s_cia_project	Hard	In a 1960s CIA project, which animal was fitted with a microphone and antenna to eavesdrop on Soviet diplomats?	A cat	A dog	A parrot	A monkey
+his_statesman_ran_queen	Hard	Which statesman ran Queen Elizabeth I's network of spies?	Francis Walsingham	Thomas Cromwell	Robert Dudley	Walter Raleigh
+his_trick_operation_mincemeat	Hard	What was the trick of 'Operation Mincemeat' in 1943?	A corpse carrying fake plans	A fake army of rubber tanks	A spy hidden in a meat delivery	Poisoned food sent to Hitler
+his_member_cambridge_five	Hard	Which member of the Cambridge Five rose high in MI6 before fleeing to Moscow in 1963?	Kim Philby	Guy Burgess	Anthony Blunt	Donald Maclean
+his_young_american_spy	Hard	Which young American spy, hanged by the British in 1776, said he regretted having only one life to give?	Nathan Hale	Paul Revere	John Andre	Benedict Arnold
+his_american_wartime_spy	Hard	Which American wartime spy agency, founded in 1942, was the forerunner of the CIA?	The OSS	The FBI	The NSA	The DIA
+his_british_secret_agency	Hard	Which British secret agency of World War II was ordered to 'set Europe ablaze'?	The SOE	MI5	GCHQ	The SAS
+his_chef_worked_american	Hard	Which famous TV chef worked for the American spy agency OSS during World War II?	Julia Child	Fanny Cradock	Betty Crocker	Martha Stewart
+his_israeli_spy_rose	Hard	Which Israeli spy rose close to Syria's leaders before being caught and hanged in Damascus in 1965?	Eli Cohen	Wolfgang Lotz	Jonathan Pollard	Mordechai Vanunu
+his_author_robinson_crusoe	Hard	Which author of 'Robinson Crusoe' also worked as a secret government agent?	Daniel Defoe	Jonathan Swift	Henry Fielding	Samuel Richardson
+his_scottish_born_detective	Hard	Which Scottish-born detective ran spies for the Union and claimed to have foiled a plot to kill Lincoln in 1861?	Allan Pinkerton	Lafayette Baker	Thomas Byrnes	Eugene Vidocq
+his_1953_brooklyn_newspaper	Hard	In 1953 a Brooklyn newspaper boy dropped a nickel that split in two. What did he find inside, exposing a Soviet spy?	A tiny piece of microfilm	A cyanide capsule	A miniature radio	A rolled-up map
 his_teenage_confederate_spy	Expert	Which teenage Confederate spy passed secrets to Stonewall Jackson in 1862?	Belle Boyd	Rose Greenhow	Harriet Tubman	Pauline Cushman
 his_east_german_spymaster	Expert	Which East German spymaster was nicknamed 'the man without a face'?	Markus Wolf	Erich Mielke	Erich Honecker	Gunter Guillaume
-his_author_robinson_crusoe	Expert	Which author of 'Robinson Crusoe' also worked as a secret government agent?	Daniel Defoe	Jonathan Swift	Henry Fielding	Samuel Richardson
 his_french_diplomat_spy	Expert	Which French diplomat and spy of Louis XV lived the last 33 years of life as a woman?	The Chevalier d'Eon	The Comte de Saint-Germain	Cardinal Mazarin	Beaumarchais
 his_codebreaker_deciphered_secret	Expert	Which codebreaker deciphered the secret letters of Mary, Queen of Scots, for Walsingham in 1586?	Thomas Phelippes	John Dee	Robert Poley	Anthony Standen
-his_scottish_born_detective	Expert	Which Scottish-born detective ran spies for the Union and claimed to have foiled a plot to kill Lincoln in 1861?	Allan Pinkerton	Lafayette Baker	Thomas Byrnes	Eugene Vidocq
-his_1953_brooklyn_newspaper	Expert	In 1953 a Brooklyn newspaper boy dropped a nickel that split in two. What did he find inside, exposing a Soviet spy?	A tiny piece of microfilm	A cyanide capsule	A miniature radio	A rolled-up map
+his_english_playwright_novelist	Expert	Which English playwright and novelist spied for the English crown in Antwerp in 1666 under the code name 'Astrea'?	Aphra Behn	Margaret Cavendish	Mary Wroth	Fanny Burney
+his_novelist_worked_british	Expert	Which famous novelist worked as a British secret agent in Switzerland and Russia during World War I?	W. Somerset Maugham	Graham Greene	Ian Fleming	John le Carre
+his_american_spy_wooden	Expert	Which American spy, who called her wooden leg 'Cuthbert', organised Resistance networks in France?	Virginia Hall	Josephine Baker	Nancy Wake	Violette Szabo
+his_soviet_colonel_passed	Expert	Which Soviet colonel passed missile secrets to the West before the Cuban Missile Crisis?	Oleg Penkovsky	Oleg Gordievsky	Vasili Mitrokhin	Yuri Nosenko

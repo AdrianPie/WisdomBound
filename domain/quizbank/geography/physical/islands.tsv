@@ -31,6 +31,7 @@ geo_two_countries_take	Easy	Which two countries take up most of the Scandinavian
 geo2_morze_srodziemne_wyspa	Easy	Which Mediterranean island is the largest?	Sicily	Sardinia	Cyprus	Corsica
 geoy_korsyka	Easy	The island of Corsica belongs to which country?	France	Italy	Spain	Greece
 geoy_sardynia	Easy	Sardinia is an island belonging to which country?	Italy	France	Spain	Malta
+wld_najwieksza_wyspa	Easy	What is the largest island in the world (not counting Australia)?	Greenland	New Guinea	Borneo	Madagascar
 lmk_galapagos_kraj	Medium	The Galapagos Islands belong to which country?	Ecuador	Peru	Colombia	Chile
 geo_filipiny_wyspy	Medium	Which country is made up of about 7,600 islands?	The Philippines	Japan	Malaysia	New Zealand
 geo_azory	Medium	Which country do the Azores belong to?	Portugal	Spain	France	Britain
@@ -72,7 +73,6 @@ geo_island_country_once	Medium	Which island country was once called Formosa?	Tai
 geo_skellig_michael_rocky	Medium	Skellig Michael, the rocky island where Luke Skywalker hides in the later 'Star Wars' films, lies off which country?	Ireland	Scotland	Iceland	Norway
 geo_kola_peninsula_far	Medium	The Kola Peninsula, far beyond the Arctic Circle, belongs to which country?	Russia	Finland	Norway	Sweden
 dpt_geo_fiord	Medium	How does a fjord form?	Ice carves a valley, sea floods it	A coral reef closes off a bay	A landslide dams a river mouth	A desert river cuts a canyon
-geo_roughly_big_greenland	Medium	Roughly how big is Greenland compared with Britain?	About ten times bigger	About twice as big	About the same size	About thirty times bigger
 geo_north_sentinel_island	Medium	North Sentinel Island, home of one of the last uncontacted peoples, belongs to which country?	India	Myanmar	Indonesia	Sri Lanka
 geo_second_largest_island	Hard	Which is the second-largest island in the world?	New Guinea	Borneo	Madagascar	Baffin Island
 geo_populous_island_world	Hard	Which is the most populous island in the world, home to over half of Indonesia's people?	Java	Sumatra	Borneo	Bali

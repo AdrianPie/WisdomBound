@@ -865,6 +865,8 @@ object LiteratureQuestions {
         q("lity_magritte", "Which painter wrote 'This is not a pipe' beneath a picture of a pipe?", "Rene Magritte", listOf("Salvador Dali", "Marcel Duchamp", "Joan Miro"), H),
         q("lity_fontanna", "Which artist shocked the art world by exhibiting a urinal titled 'Fountain'?", "Marcel Duchamp", listOf("Andy Warhol", "Rene Magritte", "Pablo Picasso"), H),
         q("lit_painted_garden_earthly", "Who painted 'The Garden of Earthly Delights'?", "Hieronymus Bosch", listOf("Pieter Bruegel", "Jan van Eyck", "Albrecht Durer"), H),
+        q("his_flemish_master_painted", "Which Flemish master painted the 'Arnolfini Portrait' in 1434?", "Jan van Eyck", listOf("Pieter Bruegel", "Hieronymus Bosch", "Rogier van der Weyden"), H),
+        q("his_german_artist_engravings", "Which German artist is famous for his engravings and self-portraits around 1500?", "Albrecht Durer", listOf("Hans Holbein", "Lucas Cranach", "Matthias Grunewald"), H),
         q("lit_official_title_painting", "What is the official title of the painting known as 'Whistler's Mother'?", "Arrangement in Grey and Black No. 1", listOf("Portrait of the Artist's Mother", "Lady in a Black Chair", "Study in Grey and Silver"), X),
         q("lit_painted_raft_medusa", "Who painted 'The Raft of the Medusa', based on a real shipwreck of 1816?", "Theodore Gericault", listOf("Eugene Delacroix", "Jacques-Louis David", "Gustave Courbet"), X),
         q("lit_romanian_sculptor_made", "Which Romanian sculptor made the sleek, polished 'Bird in Space'?", "Constantin Brancusi", listOf("Alberto Giacometti", "Henry Moore", "Jean Arp"), X),

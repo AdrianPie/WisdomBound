@@ -16,7 +16,6 @@ geo_inuit_hunters_traditionally	Easy	Inuit hunters traditionally waited beside b
 geo_continent_native_reptiles	Easy	Which is the only continent with no native reptiles at all?	Antarctica	Europe	Australia	South America
 geo_summer_wrong_season	Easy	Why is summer the wrong season for seeing the northern lights in Lapland?	The sky never gets dark	The aurora stops in summer	Clouds always hide it	The Sun goes quiet
 geo_northwest_passage_through	Easy	The Northwest Passage through the Arctic links which two oceans?	The Atlantic and the Pacific	The Atlantic and the Indian	The Pacific and the Indian	The Arctic and the Southern
-wld_najwieksza_wyspa	Easy	What is the largest island in the world (not counting Australia)?	Greenland	New Guinea	Borneo	Madagascar
 geox_biegun_polnocny	Easy	What lies beneath the ice at the North Pole?	Ocean	Solid rock	An island	A frozen lake
 geo_country_planted_flag	Easy	Which country planted its flag on the seabed beneath the North Pole in 2007?	Russia	Canada	Norway	Denmark
 geo_greenland_people_usually	Easy	In Greenland, how do people usually get from one town to another?	By plane, helicopter or boat	On the coastal highway	On the Greenland railway	By car across the ice
@@ -33,10 +32,7 @@ geo_traditional_inuit_snow	Easy	Traditional Inuit snow goggles, carved from bone
 geo_antarctic_bases_call	Easy	What do Antarctic bases call the small crews who stay through the long, dark winter?	Winterovers	Darklings	Icemen	Long-nighters
 geo_polar_whiteout	Easy	What is a polar 'whiteout'?	When snow and cloud hide the horizon	A storm of hailstones	A sudden freeze of the sea	Snow blindness from sunlight
 geox_antarktyda_mroz	Easy	Where was the lowest natural temperature on Earth recorded?	Antarctica	Siberia	Greenland	Alaska
-trv_pustynia_zimna	Medium	Counting cold deserts, which is the largest desert on Earth?	Antarctica	The Sahara	The Gobi	The Arabian Desert
-geox_ocean_najmniejszy	Medium	Which is the smallest of the world's oceans?	The Arctic Ocean	The Indian Ocean	The Southern Ocean	The Atlantic Ocean
 geoy_biegun_poludniowy	Medium	What lies beneath the ice at the South Pole?	A continent of rock	Open ocean	A frozen lake	Nothing but ice
-geo_stormy_stretch_sea	Medium	Which stormy stretch of sea lies between South America and Antarctica?	Drake Passage	Bass Strait	Ross Sea	Magellan Gulf
 geo_country_runs_research	Medium	Which country runs the research station at the geographic South Pole?	The United States	The United Kingdom	Russia	Norway
 geo_roughly_people_live	Medium	Roughly how many people live in Antarctica during the summer research season?	About 5,000	About 500	About 50,000	About 250,000
 geo_roughly_world_fresh	Medium	Roughly how much of the world's fresh water is locked in Antarctica's ice?	About 70%	About 10%	About 35%	About 3%
@@ -44,10 +40,8 @@ geo_canadian_territory_carved	Medium	Which Canadian territory was carved out in 
 geo_sami_homeland_stretches	Medium	The Sami homeland stretches across Norway, Sweden, Finland and which other country?	Russia	Iceland	Estonia	Denmark
 geo_antarctica_highest_average	Medium	Antarctica has the highest average what of any continent?	Elevation	Rainfall	Humidity	Temperature
 geo_iceberg_sank_titanic	Medium	The iceberg that sank the Titanic most likely broke off a glacier in which land?	Greenland	Iceland	Svalbard	Labrador
-geo_roughly_big_antarctica	Medium	Roughly how big is Antarctica compared with Australia?	Almost twice as big	About the same size	About half as big	About ten times bigger
 geo_roughly_people_live_3	Medium	Roughly how many people live in Greenland?	About 56,000	About 560,000	About 5,000	About 2 million
 geo_roughly_greenland_covered	Medium	Roughly how much of Greenland is covered by ice?	About 80%	About 40%	About 20%	About 5%
-geo_roughly_times_bigger	Medium	Roughly how many times bigger than Denmark is Greenland?	About 50 times	About 5 times	About 15 times	About 500 times
 geo_roughly_cold_typical	Medium	Roughly how cold is a typical winter month at the South Pole?	About -60 C	About -25 C	About -10 C	About -100 C
 geo_all_antarctica_ice	Medium	If all of Antarctica's ice melted, roughly how much would sea level rise?	About 60 m	About 6 m	About 20 m	About 200 m
 geo_1961_soviet_doctor	Medium	In 1961, a Soviet doctor stranded at an Antarctic base had to cut out what from himself?	His appendix	A frostbitten toe	A rotten tooth	A gallstone
@@ -85,13 +79,10 @@ geo_countries_territory_north	Hard	How many countries have territory north of th
 geo_recent_decades_north	Hard	In recent decades, the north magnetic pole has been drifting quickly toward which region?	Siberia	Alaska	Greenland	Scandinavia
 geo_ross_ice_shelf	Hard	The Ross Ice Shelf, the largest in Antarctica, is roughly the size of which country?	France	Belgium	Brazil	Ireland
 geo_arctic_archipelago_franz	Hard	The Arctic archipelago of Franz Josef Land, named after an Austrian emperor, belongs to which country?	Russia	Norway	Austria	Denmark
-geo_1910_norwegian_explorer	Hard	In 1910, a Norwegian explorer bound for the North Pole secretly turned south instead. Why?	Others claimed to have reached it	His ship could not break the ice	Norway's king ordered it	He lost most of his dogs
 geo_utqiagvik_northernmost_town	Hard	Utqiagvik, the northernmost town in the USA, goes without a sunrise for roughly how long each winter?	About two months	About two weeks	About six months	About four days
 geo_barentsburg_coal_mining	Hard	Barentsburg, a coal-mining settlement on Norway's Svalbard, is run by which country?	Russia	Sweden	Poland	Finland
 geo_pituffik_space_base	Hard	Pituffik Space Base in Greenland, formerly Thule Air Base, is the northernmost base of which country's military?	The USA	Denmark	Canada	Norway
-geo_arctic_city_norway	Hard	Which Arctic city in Norway is nicknamed 'the Paris of the North'?	Tromso	Hammerfest	Bodo	Kirkenes
 geo_country_claims_largest	Hard	Which country claims the largest slice of Antarctica, about 42%?	Australia	Norway	Argentina	Britain
-geo_norge_craft_arrival	Hard	What was the 'Norge', the first craft whose arrival over the North Pole, in 1926, is undisputed?	An airship	A seaplane	A submarine	An icebreaker
 geo_roughly_russia_territory	Hard	Roughly how much of Russia's territory lies on permafrost?	About two-thirds	About a tenth	About a quarter	About 5%
 geo_roughly_thick_ice	Hard	Roughly how thick is the ice at the South Pole?	About 2.7 km	About 300 m	About 30 m	About 10 km
 geo_antarctica_ross_dependency	Hard	Antarctica's Ross Dependency is claimed by which country?	New Zealand	Britain	Australia	The USA
@@ -110,7 +101,6 @@ geo_largest_research_station	Hard	Which is the largest research station in Antar
 geo_arctic_town_burying	Hard	In which Arctic town has burying the dead been banned since 1950, because bodies do not decompose in the frozen ground?	Longyearbyen	Tromso	Nuuk	Murmansk
 geo_doomsday_global_seed	Hard	The 'doomsday' Global Seed Vault, a backup of the world's crop seeds, is dug into a mountain near which town?	Longyearbyen	Reykjavik	Tromso	Nuuk
 geo_largest_city_north	Hard	Which is the largest city north of the Arctic Circle?	Murmansk	Norilsk	Tromso	Arkhangelsk
-geo_roughly_long_scott	Hard	Roughly how long before Scott's team did Amundsen's reach the South Pole?	About five weeks	About five days	About five months	About a year
 geo_swedish_arctic_town	Hard	The Swedish Arctic town of Kiruna is being moved a few kilometres east. Why?	Its iron mine is undermining it	Its permafrost is thawing	A new dam will flood it	Reindeer herds must pass
 geo_since_1979_roughly	Hard	Since 1979, roughly how fast has the Arctic warmed compared with the world as a whole?	About four times as fast	About the same rate	About ten times as fast	Half as fast
 geo_under_1920_svalbard	Hard	Under the 1920 Svalbard Treaty, citizens of any signatory country may do what there?	Live and work without a visa	Hunt polar bears freely	Mine without paying tax	Vote in Norway's elections
@@ -120,7 +110,6 @@ geo_greenland_national_day	Hard	Greenland's national day falls on which day of t
 geo_north_magnetic_pole	Hard	At the north magnetic pole, which way does a freely hanging magnetic needle try to point?	Straight down	Straight up	Towards the Sun	Due south
 geo_gives_watermelon_snow	Hard	What gives 'watermelon snow', found on polar and mountain snowfields, its pink colour?	Algae living in the snow	Iron-rich desert dust	Ash from distant volcanoes	Krill washed ashore by storms
 ext_wyspa_grenlandia	Hard	Greenland's ice sheet is thick enough to have done what to the land beneath?	Pushed its centre below sea level	Raised it into a plateau	Split it into two islands	Left it perfectly flat
-geo_vinson	Hard	What is the highest mountain in Antarctica?	Vinson Massif	Mount Erebus	Mount Kirkpatrick	Mount Terror
 geo_britain_halley_research	Hard	Britain's Halley VI research station in Antarctica is unusual because it can be what?	Towed to a new site on skis	Floated away like a ship	Lowered under the ice	Folded up for the winter
 geo_antarctica_pole_inaccessibility	Hard	At Antarctica's Pole of Inaccessibility, an abandoned Soviet station is still topped by a bust of whom?	Lenin	Stalin	Gagarin	Marx
 geo_antarctica_blood_falls	Hard	Why does Antarctica's Blood Falls run red?	Iron-rich water rusts in the air	Red algae bloom in its water	Volcanic sulphur stains it	Penguin droppings colour it
@@ -137,7 +126,6 @@ geo_because_earth_tilt	Expert	Because Earth's tilt slowly changes, what is the A
 geo_largest_iceberg_ever	Expert	B-15, the largest iceberg ever measured, broke off in 2000. It was roughly the size of which country?	Jamaica	Iceland	Luxembourg	Ireland
 geo_denmark_elite_sirius	Expert	How does Denmark's elite Sirius Patrol guard remote north-east Greenland?	On dog sleds	On snowmobiles	In helicopters	In hovercraft
 geo_marks_ceremonial_south	Expert	What marks the 'Ceremonial South Pole', where visitors pose for photos?	A mirrored ball on a striped pole	A bronze bust of Amundsen	A ring of ice sculptures	A tall wooden cross
-geo_1898_crew_belgica	Expert	In 1898, the crew of the Belgica became the first people ever to do what?	Spend a winter in the Antarctic	Reach the South Magnetic Pole	Sight the Antarctic mainland	Climb an Antarctic peak
 geo_concordia_station_high	Expert	Concordia Station, high on the Antarctic plateau, is run jointly by France and which country?	Italy	Germany	Spain	Belgium
 geo_pyramiden_abandoned_soviet	Expert	Pyramiden, an abandoned Soviet mining town left frozen in time since 1998, lies on which Arctic archipelago?	Svalbard	Novaya Zemlya	Franz Josef Land	Severnaya Zemlya
 geo_greenland_own_itself	Expert	What does Greenland's own name for itself, Kalaallit Nunaat, mean?	Land of the people	Land of the ice	Green land	Land of the whale

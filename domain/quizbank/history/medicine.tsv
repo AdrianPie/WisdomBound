@@ -3,18 +3,13 @@
 id	difficulty	prompt	correct	wrong1	wrong2	wrong3
 his_blood_sucking_worms	Easy	Which blood-sucking worms were used by doctors for centuries, and are still used today?	Leeches	Earthworms	Tapeworms	Silkworms
 his_besides_cutting_hair	Easy	Besides cutting hair, what did medieval barbers often do?	Pulled teeth and let blood	Baked bread and brewed ale	Made shoes and saddles	Wrote letters for people
-his_machines_kept_polio	Easy	Which machines kept polio victims breathing in the 1940s and 1950s?	Iron lungs	Heart-lung pumps	Oxygen tents	Steam inhalers
-his_some_medieval_doctors	Easy	What did some medieval doctors taste to help them diagnose an illness?	The patient's urine	The patient's sweat	The patient's blood	The patient's tears
 his_country_acupuncture_originate	Easy	In which country did acupuncture originate?	China	Japan	India	Korea
 his_snake_oil_salesman	Easy	What was a 'snake oil salesman' in the 1800s?	A seller of fake cure-alls	A hunter of rattlesnakes	A travelling dentist	A dealer in lamp oil
 his_anaesthetics_patients_often	Easy	Before anaesthetics, what were patients often given to dull the pain of surgery?	Strong alcohol	Cold milk	Strong coffee	Mint tea
-his_antibiotics_deadly_lung	Easy	Before antibiotics, which deadly lung disease was commonly known as 'consumption'?	Tuberculosis	Pneumonia	Whooping cough	Diphtheria
-his_19th_century_phrenologists	Easy	What did 19th-century phrenologists study to judge a person's character?	The bumps on the skull	The lines on the palm	The colour of the eyes	The shape of the ears
-his_florence_nightingale_hospital	Easy	Florence Nightingale's famous hospital at Scutari was in which present-day country?	Turkey	Greece	Russia	Ukraine
+his_plague_pits	Easy	What were 'plague pits'?	Mass graves for plague victims	Cellars where people hid from plague	Wells poisoned by plague	Fires for burning infected clothes
+his_ancient_greek_doctor	Easy	Which ancient Greek doctor gave his name to an oath still taken by doctors?	Hippocrates	Galen	Aristotle	Asclepius
+his_french_scientist_showed	Easy	Which French scientist, who showed that germs cause disease, gave his name to the heating that keeps milk safe?	Louis Pasteur	Robert Koch	Joseph Lister	Claude Bernard
 his_ancient_practice_drilling	Medium	What is the ancient practice of drilling a hole in a living person's skull called?	Trepanation	Cauterisation	Amputation	Lobotomy
-his_greek_doctor_roman	Medium	Which Greek doctor of the Roman Empire learned his anatomy treating wounded gladiators?	Galen	Hippocrates	Celsus	Avicenna
-his_hungarian_doctor_showed	Medium	Which Hungarian doctor showed in 1847 that handwashing saved mothers' lives?	Ignaz Semmelweis	Robert Koch	Joseph Lister	Rudolf Virchow
-his_british_surgeon_began	Medium	Which British surgeon began using carbolic acid to stop infections in the 1860s?	Joseph Lister	Edward Jenner	John Snow	Alexander Fleming
 his_german_company_sold	Medium	Which German company first sold aspirin, in 1899?	Bayer	Siemens	Krupp	BASF
 his_british_sailors_nicknamed	Medium	Why were British sailors nicknamed 'limeys'?	They drank lime juice against scurvy	They painted their ships with lime	They came from Limehouse	They ate limes for luck
 his_pair_killers_sold	Medium	Which pair of killers sold the bodies of their victims to Edinburgh anatomists in 1828?	Burke and Hare	Bonnie and Clyde	Jekyll and Hyde	Leopold and Loeb
@@ -23,23 +18,19 @@ his_laughing_gas_humphry	Medium	What was the 'laughing gas' that Humphry Davy ex
 his_anaesthesia_skill_patients	Medium	Before anaesthesia, which skill did patients value most in a surgeon?	Speed	Gentleness	Silence	Strength
 his_cook_mary_mallon	Medium	Why was the cook Mary Mallon called 'Typhoid Mary'?	She spread typhoid without ever feeling ill	She discovered the cure for typhoid	She died in a typhoid epidemic	She poisoned her employers on purpose
 his_mesmerism_craze_late	Medium	What was 'mesmerism', a craze of the late 1700s?	An early form of hypnosis	A diet of raw meat	Bathing in mud	Healing with music
-his_plague_pits	Medium	What were 'plague pits'?	Mass graves for plague victims	Cellars where people hid from plague	Wells poisoned by plague	Fires for burning infected clothes
 his_sweet_food_ancient	Medium	Which sweet food did ancient Egyptian doctors spread on wounds to fight infection?	Honey	Sugar	Dates	Figs
-his_word_bedlam_meaning	Medium	The word 'bedlam', meaning chaos, comes from the name of what?	A London hospital for the insane	A battle in France	A medieval prison	A Bible story
 his_according_old_miasma	Medium	According to the old 'miasma' theory, what caused diseases like cholera?	Bad air rising from filth	Germs carried in water	Curses and evil spirits	The positions of the stars
 his_polio_vaccine_declared	Medium	Whose polio vaccine was declared safe and effective in 1955?	Jonas Salk's	Albert Sabin's	Charles Drew's	Walter Reed's
 his_false_teeth_early	Medium	Why were false teeth of the early 1800s nicknamed 'Waterloo teeth'?	They came from soldiers killed in battle	They were made in a Belgian town	Wellington wore a set of them	They were carved from cannon bone
-his_ancient_greek_doctor	Medium	Which ancient Greek doctor gave his name to an oath still taken by doctors?	Hippocrates	Galen	Aristotle	Asclepius
-his_french_scientist_showed	Medium	Which French scientist, who showed that germs cause disease, gave his name to the heating that keeps milk safe?	Louis Pasteur	Robert Koch	Joseph Lister	Claude Bernard
 his_17th_century_plague	Medium	What did 17th-century plague doctors stuff into the beaks of their masks?	Sweet-smelling herbs	Wet rags	Burning coals	Lumps of ice
 his_red_white_stripes	Medium	What do the red and white stripes of a barber's pole recall?	Blood and bandages	Meat and fat	Wine and bread	Fire and smoke
-his_year_world_health	Medium	In which year did the World Health Organization declare smallpox wiped out?	1980	1950	1965	1999
-his_18th_century_rescuers	Medium	What did 18th-century rescuers blow into drowning victims to try to revive them?	Tobacco smoke	Pure oxygen	Steam	Brandy fumes
-his_marie_curie_drive	Medium	What did Marie Curie drive to the front lines in World War I?	Mobile X-ray vans	Field ambulances	Radium supply trucks	Blood transfusion carts
 his_1918_flu_pandemic	Medium	Why was the 1918 flu pandemic nicknamed the 'Spanish flu'?	Spain's free press reported it openly	It began in a Madrid army barracks	Spanish sailors carried it to Europe	Spain suffered the most deaths
-his_explosive_doctors_begin	Medium	Which explosive did doctors begin giving patients in the late 1870s to ease the chest pain of heart disease?	Nitroglycerine	Gunpowder	TNT	Cordite
 his_drug_given_pregnant	Medium	Which drug, given to pregnant women for morning sickness around 1960, caused thousands of birth defects?	Thalidomide	Valium	Aspirin	Laudanum
-his_mrs_winslow_soothing	Medium	Mrs Winslow's Soothing Syrup, sold to calm teething babies in the 1800s, got its power from which drug?	Morphine	Quinine	Caffeine	Ether
+his_machines_kept_polio	Medium	Which machines kept polio victims breathing in the 1940s and 1950s?	Iron lungs	Heart-lung pumps	Oxygen tents	Steam inhalers
+his_some_medieval_doctors	Medium	What did some medieval doctors taste to help them diagnose an illness?	The patient's urine	The patient's sweat	The patient's blood	The patient's tears
+his_antibiotics_deadly_lung	Medium	Before antibiotics, which deadly lung disease was commonly known as 'consumption'?	Tuberculosis	Pneumonia	Whooping cough	Diphtheria
+his_19th_century_phrenologists	Medium	What did 19th-century phrenologists study to judge a person's character?	The bumps on the skull	The lines on the palm	The colour of the eyes	The shape of the ears
+his_old_doctrine_signatures	Medium	What did the old 'Doctrine of Signatures' claim?	Plants cure the body parts they look like	Every illness is sent by the stars	A doctor's signature heals	Sick people should sign a will first
 his_anatomist_book_1543	Hard	Which anatomist's book of 1543, 'On the Fabric of the Human Body', corrected Galen's mistakes?	Andreas Vesalius	William Harvey	Leonardo da Vinci	Paracelsus
 his_gas_used_public	Hard	Which gas was used in the first public demonstration of surgery under anaesthesia, in Boston in 1846?	Ether	Chloroform	Laughing gas	Carbon dioxide
 his_anaesthetic_queen_victoria	Hard	Which anaesthetic did Queen Victoria take while giving birth in 1853, making it fashionable?	Chloroform	Ether	Laudanum	Cocaine
@@ -49,9 +40,6 @@ his_french_doctor_invented	Hard	Which French doctor invented the stethoscope in 
 his_woman_earn_medical	Hard	Who was the first woman to earn a medical degree in the United States, in 1849?	Elizabeth Blackwell	Clara Barton	Elizabeth Garrett Anderson	Dorothea Dix
 his_year_louise_brown	Hard	In which year was Louise Brown, the world's first 'test-tube baby', born?	1978	1958	1968	1988
 his_south_american_tree	Hard	Which South American tree's bark gave the world quinine, a cure for malaria?	Cinchona	Rubber	Mahogany	Balsa
-his_old_doctrine_signatures	Hard	What did the old 'Doctrine of Signatures' claim?	Plants cure the body parts they look like	Every illness is sent by the stars	A doctor's signature heals	Sick people should sign a will first
-his_scottish_doctor_used	Hard	Which Scottish doctor first used chloroform to put patients to sleep, in 1847?	James Young Simpson	Joseph Lister	Robert Liston	John Snow
-his_german_scientist_created	Hard	Which German scientist created the first 'magic bullet' drug, against syphilis, in 1910?	Paul Ehrlich	Robert Koch	Emil von Behring	Wilhelm Rontgen
 his_disease_kings_believed	Hard	Which disease were kings believed to cure with the 'royal touch'?	Scrofula	Leprosy	Plague	Smallpox
 his_american_army_doctor	Hard	Which American army doctor showed in 1900 that mosquitoes spread yellow fever?	Walter Reed	Jonas Salk	William Gorgas	Charles Drew
 his_theriac_medicine_ancient	Hard	What was 'theriac', a famous medicine from ancient times to the 1800s?	A cure-all of many ingredients	A herbal tea for fevers	Powdered gold in wine	A mercury drink for kings
@@ -59,7 +47,17 @@ his_english_aristocrat_brought	Hard	Which English aristocrat brought the Turkish
 his_drug_bayer_sell	Hard	Which drug did Bayer sell as a cough medicine from 1898?	Heroin	Cocaine	Morphine	Opium
 his_british_doctor_proved	Hard	Which British doctor proved in 1897 that mosquitoes spread malaria?	Ronald Ross	Patrick Manson	Walter Reed	David Bruce
 his_1667_french_doctor	Hard	In 1667 a French doctor made one of the first blood transfusions into a human, using blood from which animal?	A sheep	A pig	A dog	A horse
-his_surgeon_napoleon_armies	Hard	Which surgeon of Napoleon's armies invented 'flying ambulances' to rush the wounded off the battlefield?	Dominique-Jean Larrey	Ambroise Pare	Rene Laennec	Joseph Lister
+his_florence_nightingale_hospital	Hard	Florence Nightingale's famous hospital at Scutari was in which present-day country?	Turkey	Greece	Russia	Ukraine
+his_greek_doctor_roman	Hard	Which Greek doctor of the Roman Empire learned his anatomy treating wounded gladiators?	Galen	Hippocrates	Celsus	Avicenna
+his_hungarian_doctor_showed	Hard	Which Hungarian doctor showed in 1847 that handwashing saved mothers' lives?	Ignaz Semmelweis	Robert Koch	Joseph Lister	Rudolf Virchow
+his_british_surgeon_began	Hard	Which British surgeon began using carbolic acid to stop infections in the 1860s?	Joseph Lister	Edward Jenner	John Snow	Alexander Fleming
+his_word_bedlam_meaning	Hard	The word 'bedlam', meaning chaos, comes from the name of what?	A London hospital for the insane	A battle in France	A medieval prison	A Bible story
+his_year_world_health	Hard	In which year did the World Health Organization declare smallpox wiped out?	1980	1950	1965	1999
+his_18th_century_rescuers	Hard	What did 18th-century rescuers blow into drowning victims to try to revive them?	Tobacco smoke	Pure oxygen	Steam	Brandy fumes
+his_marie_curie_drive	Hard	What did Marie Curie drive to the front lines in World War I?	Mobile X-ray vans	Field ambulances	Radium supply trucks	Blood transfusion carts
+his_explosive_doctors_begin	Hard	Which explosive did doctors begin giving patients in the late 1870s to ease the chest pain of heart disease?	Nitroglycerine	Gunpowder	TNT	Cordite
+his_mrs_winslow_soothing	Hard	Mrs Winslow's Soothing Syrup, sold to calm teething babies in the 1800s, got its power from which drug?	Morphine	Quinine	Caffeine	Ether
+his_renaissance_doctor_taught	Hard	Which Renaissance doctor taught that 'the dose makes the poison'?	Paracelsus	Andreas Vesalius	Ambroise Pare	Nostradamus
 his_french_barber_surgeon	Expert	Which French barber-surgeon stopped treating gunshot wounds with boiling oil?	Ambroise Pare	Rene Laennec	Louis Pasteur	Guy de Chauliac
 his_scottish_surgeon_speed	Expert	Which Scottish surgeon, famous for his speed, could amputate a leg in under three minutes?	Robert Liston	Joseph Lister	James Simpson	John Hunter
 his_persian_doctor_around	Expert	Which Persian doctor of around 900 first told smallpox and measles apart?	Rhazes	Avicenna	Galen	Al-Zahrawi
@@ -67,5 +65,7 @@ his_surgeon_muslim_spain	Expert	Which surgeon of Muslim Spain, around the year 1
 his_french_saint_said	Expert	Which French saint, said to have caught and survived the plague, became its patron saint?	Saint Roch	Saint Denis	Saint Louis	Saint Martin
 his_portuguese_doctor_won	Expert	Which Portuguese doctor won a Nobel Prize in 1949 for developing the lobotomy?	Egas Moniz	Walter Freeman	Julius Wagner-Jauregg	Santiago Ramon y Cajal
 his_young_german_doctor	Expert	What did the young German doctor Werner Forssmann do to himself in 1929?	Pushed a tube up a vein into his heart	Swallowed a culture of cholera germs	Removed his own inflamed appendix	Injected himself with yellow fever
-his_renaissance_doctor_taught	Expert	Which Renaissance doctor taught that 'the dose makes the poison'?	Paracelsus	Andreas Vesalius	Ambroise Pare	Nostradamus
 his_british_army_surgeon	Expert	Which British army surgeon, who rose to run military hospitals, was found after death in 1865 to have been born a woman?	James Barry	John Hunter	William Brydon	Thomas Longmore
+his_scottish_doctor_used	Expert	Which Scottish doctor first used chloroform to put patients to sleep, in 1847?	James Young Simpson	Joseph Lister	Robert Liston	John Snow
+his_german_scientist_created	Expert	Which German scientist created the first 'magic bullet' drug, against syphilis, in 1910?	Paul Ehrlich	Robert Koch	Emil von Behring	Wilhelm Rontgen
+his_surgeon_napoleon_armies	Expert	Which surgeon of Napoleon's armies invented 'flying ambulances' to rush the wounded off the battlefield?	Dominique-Jean Larrey	Ambroise Pare	Rene Laennec	Joseph Lister

@@ -1,7 +1,6 @@
 # Wyscig w kosmos: Sputnik, Gagarin, Apollo, wahadlowce i stacje kosmiczne.
 id	difficulty	prompt	correct	wrong1	wrong2	wrong3
 his_ksiezyc	Easy	Who was the first person to walk on the Moon?	Neil Armstrong	Buzz Aldrin	Yuri Gagarin	Michael Collins
-his_ksiezyc_rok	Easy	In which year did humans first land on the Moon?	1969	1959	1972	1965
 hx_armstrong_krok	Easy	What did the first man on the Moon say as he stepped onto it?	That's one small step for man...	The Eagle has landed...	Houston, we are here...	What a view from up here...
 his_dog_became_animal	Easy	Which dog became the first animal to orbit the Earth, in 1957?	Laika	Belka	Strelka	Lassie
 his_space_agency_created	Easy	What is the name of the US space agency, created in 1958?	NASA	ESA	JPL	NORAD
@@ -12,59 +11,57 @@ his_president_promised_1961	Easy	Which US president promised in 1961 to land a m
 his_astronauts_last_three	Easy	What did the astronauts of the last three Apollo missions drive across the Moon?	An electric 'Moon buggy'	A small hovercraft	A tracked tractor	A rocket-powered sled
 his_space_station_built	Easy	Which space station, built by several nations, has had people living aboard without a break since 2000?	The International Space Station	The Mir space station	The Skylab station	The Tiangong station
 his_cold_war_contest	Easy	What was the Cold War contest between the USA and the Soviet Union to reach the Moon first called?	The Space Race	The Arms Race	The Moon Rush	The Star Duel
-his_gagarin	Medium	Who was the first human to travel into space?	Yuri Gagarin	Neil Armstrong	Alan Shepard	Valentina Tereshkova
-his2_czlowiek_kosmos_rok	Medium	In which year did Yuri Gagarin fly into space?	1961	1957	1969	1965
-his2_sputnik	Medium	What was Earth's first artificial satellite called?	Sputnik 1	Vostok 1	Explorer 1	Luna 1
+his_gagarin	Easy	Who was the first human to travel into space?	Yuri Gagarin	Neil Armstrong	Alan Shepard	Valentina Tereshkova
+hx_apollo_13	Easy	Which Apollo mission radioed 'Houston, we've had a problem'?	Apollo 13	Apollo 11	Apollo 1	Apollo 8
 his_tierieszkowa	Medium	Who was the first woman to travel into space?	Valentina Tereshkova	Sally Ride	Svetlana Savitskaya	Mae Jemison
-hx_apollo_13	Medium	Which Apollo mission radioed 'Houston, we've had a problem'?	Apollo 13	Apollo 11	Apollo 1	Apollo 8
 hx_aldrin	Medium	Who was the second person to walk on the Moon?	Buzz Aldrin	Michael Collins	Pete Conrad	Alan Shepard
-his_president_apollo_landed	Medium	Who was US president when Apollo 11 landed on the Moon?	Richard Nixon	John F. Kennedy	Lyndon B. Johnson	Gerald Ford
-his_astronaut_stayed_lunar	Medium	Which astronaut stayed in lunar orbit while Armstrong and Aldrin walked on the Moon?	Michael Collins	John Glenn	Jim Lovell	Alan Shepard
 his_american_woman_space	Medium	Who was the first American woman in space, in 1983?	Sally Ride	Christa McAuliffe	Mae Jemison	Eileen Collins
-his_became_briton_space	Medium	Who became the first Briton in space, in 1991?	Helen Sharman	Tim Peake	Michael Foale	Richard Branson
 his_mission_crew_died	Medium	Which mission's crew died in a fire on the launch pad in 1967?	Apollo 1	Apollo 13	Gemini 4	Soyuz 11
 his_space_shuttle_broke_2	Medium	Which space shuttle broke apart while coming back to Earth in 2003?	Columbia	Challenger	Discovery	Atlantis
 his_german_born_engineer	Medium	Which German-born engineer led the design of the Saturn V Moon rocket?	Wernher von Braun	Sergei Korolev	Robert Goddard	Hermann Oberth
-his_became_american_space	Medium	Who became the first American in space, in May 1961?	Alan Shepard	John Glenn	Neil Armstrong	Gus Grissom
 his_two_man_nasa	Medium	Which two-man NASA programme came between Mercury and Apollo?	Gemini	Skylab	Vanguard	Explorer
 his_astronaut_alan_shepard	Medium	What did astronaut Alan Shepard famously do on the Moon in 1971?	Hit golf balls	Play a guitar	Plant a tree	Fly a kite
-his_last_apollo_mission	Medium	Which was the last Apollo mission to land on the Moon?	Apollo 17	Apollo 11	Apollo 13	Apollo 20
 his_america_space_station	Medium	What was America's first space station, launched in 1973?	Skylab	Mir	Salyut	Freedom
-his_yuri_gagarin_shout	Medium	What did Yuri Gagarin shout as his rocket lifted off in 1961?	'Let's go!'	'For the Motherland!'	'Goodbye, Earth!'	'Glory to Lenin!'
 his_apollo_astronauts_returning	Medium	What did the Apollo 11 astronauts have to do after returning to Earth?	Spend three weeks in quarantine	Retire from NASA at once	Testify before the UN	Swear never to fly again
-his_russian_word_sputnik	Medium	What does the Russian word 'sputnik' mean?	Fellow traveller	Little star	Red messenger	First voice
-his_radio_call_sign	Medium	What was the radio call sign of the first woman in space?	Seagull	Swallow	Cedar	Skylark
 his_oxygen_tank_exploded	Medium	After an oxygen tank exploded on Apollo 13, what did the crew use as a 'lifeboat' to get home?	The lunar module	A spare escape capsule	The rocket's third stage	An inflatable space raft
 his_orange_drink_powder	Medium	Which orange drink powder became famous after NASA astronauts took it into space in the 1960s?	Tang	Kool-Aid	Gatorade	Ovaltine
-his_country_sent_cat	Medium	Which country sent the first cat into space, in 1963?	France	The Soviet Union	The United States	Britain
+hy_mir	Medium	Which Soviet space station orbited Earth from 1986 to 2001?	Mir	Salyut 7	Skylab	Tiangong
+his_space_shuttle_broke	Medium	Which space shuttle broke apart just after launch in 1986?	Challenger	Columbia	Discovery	Atlantis
+his_american_orbit_earth	Medium	Who was the first American to orbit the Earth, in 1962?	John Glenn	Alan Shepard	Neil Armstrong	Gus Grissom
+his_mission_1975_american	Medium	In which mission of 1975 did American and Soviet spacecraft dock in orbit?	Apollo-Soyuz	Gemini-Vostok	Skylab-Mir	Atlantis-Salyut
 hx_ksiezyc_ostatni	Hard	In which year did humans last walk on the Moon?	1972	1969	1979	1985
 hy_wostok	Hard	What was the name of Yuri Gagarin's spacecraft?	Vostok 1	Sputnik 2	Soyuz 1	Apollo 1
-hy_mir	Hard	Which Soviet space station orbited Earth from 1986 to 2001?	Mir	Salyut 7	Skylab	Tiangong
-his_space_shuttle_broke	Hard	Which space shuttle broke apart just after launch in 1986?	Challenger	Columbia	Discovery	Atlantis
-his_american_orbit_earth	Hard	Who was the first American to orbit the Earth, in 1962?	John Glenn	Alan Shepard	Neil Armstrong	Gus Grissom
 his_programme_put_american	Hard	Which programme put the first American astronauts into space in the early 1960s?	Mercury	Gemini	Apollo	Skylab
-his_mission_1975_american	Hard	In which mission of 1975 did American and Soviet spacecraft dock in orbit?	Apollo-Soyuz	Gemini-Vostok	Skylab-Mir	Atlantis-Salyut
 his_soviet_rocket_designer	Hard	Which Soviet rocket designer, whose name was kept secret until his death, led the early space programme?	Sergei Korolev	Andrei Sakharov	Mikhail Kalashnikov	Igor Kurchatov
 his_chimpanzee_nasa_sent	Hard	What was the name of the chimpanzee NASA sent into space in 1961?	Ham	Bonzo	Cheeta	Laika
 his_remote_controlled_rover	Hard	What was the first remote-controlled rover to roam the Moon, landed in 1970?	Lunokhod 1	Sojourner	Luna 9	Pathfinder
 his_two_dogs_became	Hard	Which two dogs became the first animals to come back alive from orbit, in 1960?	Belka and Strelka	Laika and Albina	Ham and Enos	Tsygan and Dezik
 his_animals_living_things	Hard	Which animals were the first living things to fly around the Moon, in 1968?	Two tortoises	Two dogs	A pair of mice	A chimpanzee
 his_yuri_gagarin_die	Hard	How did Yuri Gagarin die in 1968?	In a training jet crash	In a rocket explosion	Of radiation sickness	In a car accident
-his_soviet_probe_sent	Hard	Which Soviet probe sent back the first photos of the far side of the Moon, in 1959?	Luna 3	Luna 9	Luna 2	Zond 3
 his_america_satellite_launch	Hard	After America's first satellite launch blew up on the pad, which satellite became its first in orbit, in 1958?	Explorer 1	Vanguard 1	Telstar 1	Pioneer 1
-his_moon_mission_struck	Hard	Which Moon mission was struck by lightning twice in the first minute after launch?	Apollo 12	Apollo 13	Apollo 9	Apollo 15
-his_professional_geologist_walk	Hard	Who was the only professional geologist to walk on the Moon?	Harrison Schmitt	Eugene Cernan	Edgar Mitchell	Charles Duke
-his_apollo_astronaut_dropped	Hard	Which Apollo 15 astronaut dropped a hammer and a falcon feather on the Moon to show they fall at the same speed?	David Scott	James Irwin	Charles Duke	Edgar Mitchell
 his_alexei_leonov_struggle	Hard	Why did Alexei Leonov struggle to get back into his spacecraft after the first spacewalk, in 1965?	His suit had puffed up in the vacuum	His tether had snagged on an aerial	The hatch had frozen shut	He had drifted away from the hatch
 his_buzz_aldrin_use	Hard	What did Buzz Aldrin use to push in a broken switch so that Apollo 11's lander could take off from the Moon?	A felt-tip pen	A spoon	A screwdriver	A toothbrush
 his_space_shuttle_fly	Hard	What was the name of the first space shuttle to fly into orbit, in 1981?	Columbia	Challenger	Discovery	Enterprise
-hx_earthrise	Expert	Which mission took the famous 'Earthrise' photo from lunar orbit in 1968?	Apollo 8	Apollo 11	Apollo 13	Gemini 7
+his_president_apollo_landed	Hard	Who was US president when Apollo 11 landed on the Moon?	Richard Nixon	John F. Kennedy	Lyndon B. Johnson	Gerald Ford
+his_astronaut_stayed_lunar	Hard	Which astronaut stayed in lunar orbit while Armstrong and Aldrin walked on the Moon?	Michael Collins	John Glenn	Jim Lovell	Alan Shepard
+his_became_briton_space	Hard	Who became the first Briton in space, in 1991?	Helen Sharman	Tim Peake	Michael Foale	Richard Branson
+his_became_american_space	Hard	Who became the first American in space, in May 1961?	Alan Shepard	John Glenn	Neil Armstrong	Gus Grissom
+his_last_apollo_mission	Hard	Which was the last Apollo mission to land on the Moon?	Apollo 17	Apollo 11	Apollo 13	Apollo 20
+his_yuri_gagarin_shout	Hard	What did Yuri Gagarin shout as his rocket lifted off in 1961?	'Let's go!'	'For the Motherland!'	'Goodbye, Earth!'	'Glory to Lenin!'
+his_russian_word_sputnik	Hard	What does the Russian word 'sputnik' mean?	Fellow traveller	Little star	Red messenger	First voice
+his_country_sent_cat	Hard	Which country sent the first cat into space, in 1963?	France	The Soviet Union	The United States	Britain
+hx_earthrise	Hard	Which mission took the famous 'Earthrise' photo from lunar orbit in 1968?	Apollo 8	Apollo 11	Apollo 13	Gemini 7
+his_soviet_cosmonauts_carry	Hard	Why did Soviet cosmonauts carry a special gun in their survival kit?	To fend off wild animals after landing	To defend against American astronauts	To break open a jammed capsule hatch	To destroy secret papers if captured
 his_soviet_probe_made	Expert	Which Soviet probe made the first soft landing on the Moon, in 1966?	Luna 9	Sputnik 3	Lunokhod 1	Vostok 2
 his_became_woman_walk	Expert	Who became the first woman to walk in space, in 1984?	Svetlana Savitskaya	Valentina Tereshkova	Sally Ride	Kathryn Sullivan
 his_soviet_cosmonaut_died	Expert	Which Soviet cosmonaut died when his capsule's parachute failed in 1967?	Vladimir Komarov	Yuri Gagarin	Alexei Leonov	Gherman Titov
-his_soviet_cosmonauts_carry	Expert	Why did Soviet cosmonauts carry a special gun in their survival kit?	To fend off wild animals after landing	To defend against American astronauts	To break open a jammed capsule hatch	To destroy secret papers if captured
 his_unable_get_life	Expert	Unable to get life insurance, what did the Apollo 11 crew sign by the hundreds for their families?	Envelopes their families could sell	Photos for a charity auction	Letters to the president	Contracts with a TV network
 his_cosmonaut_mir_soviet	Expert	Which cosmonaut was up on Mir as the Soviet Union collapsed, and came home to a different country in 1992?	Sergei Krikalev	Valeri Polyakov	Alexei Leonov	Gennady Padalka
 his_mission_three_cosmonauts	Expert	Which mission's three cosmonauts, lost in 1971, are the only people to have died in space itself?	Soyuz 11	Soyuz 1	Salyut 7	Voskhod 2
 his_astronaut_smuggled_corned	Expert	Which astronaut smuggled a corned beef sandwich onto Gemini 3 in 1965, upsetting members of Congress?	John Young	Gus Grissom	Ed White	Pete Conrad
 his_apollo_astronaut_charlie	Expert	What did Apollo 16 astronaut Charlie Duke leave on the Moon in 1972?	A photo of his family	His wedding ring	A signed baseball	A gold olive branch
+his_radio_call_sign	Expert	What was the radio call sign of the first woman in space?	Seagull	Swallow	Cedar	Skylark
+his_soviet_probe_sent	Expert	Which Soviet probe sent back the first photos of the far side of the Moon, in 1959?	Luna 3	Luna 9	Luna 2	Zond 3
+his_moon_mission_struck	Expert	Which Moon mission was struck by lightning twice in the first minute after launch?	Apollo 12	Apollo 13	Apollo 9	Apollo 15
+his_professional_geologist_walk	Expert	Who was the only professional geologist to walk on the Moon?	Harrison Schmitt	Eugene Cernan	Edgar Mitchell	Charles Duke
+his_apollo_astronaut_dropped	Expert	Which Apollo 15 astronaut dropped a hammer and a falcon feather on the Moon to show they fall at the same speed?	David Scott	James Irwin	Charles Duke	Edgar Mitchell

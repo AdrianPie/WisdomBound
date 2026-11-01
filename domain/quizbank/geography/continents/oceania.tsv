@@ -7,7 +7,6 @@ geo_australia_other_country	Easy	Australia and which other country both fly flag
 geo_populous_country_oceania	Easy	Which is the most populous country in Oceania?	Australia	Papua New Guinea	New Zealand	Fiji
 geo_queenstown_calls_itself	Easy	Queenstown, which calls itself 'the adventure capital of the world', is in which country?	New Zealand	Australia	Fiji	Canada
 geo_australia_new_zealand	Easy	Why are Australia and New Zealand nicknamed 'Down Under'?	They lie in the Southern Hemisphere	They lie below sea level	They were settled by convicts	They lie under the ozone hole
-geo_australian_city_nicknamed_2	Easy	Which Australian city is nicknamed 'the Harbour City'?	Sydney	Brisbane	Perth	Adelaide
 geo_country_covers_whole	Easy	Which is the only country that covers a whole continent by itself?	Australia	Antarctica	Greenland	New Zealand
 lmk_uluru_kraj	Easy	In which country is Uluru?	Australia	New Zealand	South Africa	Namibia
 geo_guam_motto_says	Easy	Guam, whose motto says it is 'where America's day begins', is a territory of which country?	The USA	Japan	Australia	Spain
@@ -39,8 +38,6 @@ geo_roughly_far_easter	Medium	Roughly how far is Easter Island from the coast of
 geo_part_australia_nicknamed	Medium	Which part of Australia is nicknamed 'the Apple Isle'?	Tasmania	Kangaroo Island	Norfolk Island	Phillip Island
 geo_roughly_sheep_each	Medium	Roughly how many sheep are there for each person in New Zealand?	About five	About one	About twenty	About fifty
 geo_last_large_habitable	Medium	Which was the last large, habitable landmass on Earth to be settled by humans?	New Zealand	Iceland	Madagascar	Hawaii
-geo_new_zealand_city_2	Medium	Which New Zealand city is nicknamed 'the City of Sails'?	Auckland	Wellington	Christchurch	Nelson
-geo_new_zealand_city_4	Medium	The New Zealand city of Dunedin takes its name from the Gaelic word for which city?	Edinburgh	Glasgow	Dublin	Aberdeen
 geo_fiji_vanuatu_solomon	Medium	Fiji, Vanuatu and the Solomon Islands all lie in which Pacific region?	Melanesia	Polynesia	Micronesia	Australasia
 geo_pacific_region_means_2	Medium	Which Pacific region's name means 'small islands'?	Micronesia	Melanesia	Polynesia	Australasia
 geo_indian_pacific_train	Medium	The 'Indian Pacific' train crosses Australia from Sydney to which city?	Perth	Darwin	Adelaide	Brisbane
@@ -70,7 +67,6 @@ geo_palau_marshall_islands	Medium	Palau, the Marshall Islands and Micronesia all
 geox_tuvalu_tv	Medium	Which tiny Pacific nation earns money from its '.tv' internet domain?	Tuvalu	Tonga	Tokelau	Taiwan
 geo_cook_islands_niue	Hard	The Cook Islands and Niue are self-governing in 'free association' with which country?	New Zealand	Australia	Britain	France
 geo_country_once_new	Hard	Which country, once the New Hebrides, was ruled jointly by Britain and France?	Vanuatu	Fiji	New Caledonia	The Solomon Islands
-geo_island_nation_official	Hard	Which island nation has no official capital city?	Nauru	Tuvalu	Palau	Kiribati
 geo_2019_island_region	Hard	In 2019, the island region of Bougainville voted almost 98% for independence from which country?	Papua New Guinea	The Solomon Islands	Australia	Indonesia
 geo_australian_state_settled	Hard	Which Australian state was settled only by free colonists, never taking convicts?	South Australia	Victoria	Western Australia	Queensland
 geo_roughly_long_australia	Hard	Roughly how long is Australia's Dingo Fence, one of the longest structures ever built?	About 5,600 km	About 560 km	About 1,500 km	About 15,000 km
@@ -105,11 +101,7 @@ geo_australian_state_calls	Hard	Which Australian state calls itself 'the Garden 
 geo_australian_state_calls_2	Hard	Which Australian state calls itself 'the Festival State'?	South Australia	Victoria	Queensland	New South Wales
 geo_part_new_zealand	Hard	Which part of New Zealand do its own residents jokingly call 'the Mainland'?	The South Island	The North Island	Stewart Island	The Auckland region
 geo_robert_louis_stevenson	Hard	Robert Louis Stevenson, called 'Tusitala' ('teller of tales') by locals, is buried on a mountain in which country?	Samoa	Fiji	Tonga	Vanuatu
-geo_australian_state_capital	Hard	Which Australian state capital is named after a British prime minister?	Melbourne	Brisbane	Hobart	Perth
 geo_pilbara_source_world	Hard	The Pilbara, source of much of the world's iron ore, is in which Australian state?	Western Australia	Queensland	South Australia	New South Wales
-geo_new_zealand_city_3	Hard	Which New Zealand city is nicknamed 'the Garden City'?	Christchurch	Dunedin	Hamilton	Napier
-geo_australian_city_nicknamed	Hard	Which Australian city is nicknamed 'the City of Churches'?	Adelaide	Hobart	Brisbane	Ballarat
-geo_australian_state_victoria	Hard	The Australian state of Victoria is roughly the same size as which country?	Great Britain	France	Belgium	Portugal
 geo_barossa_valley_australia	Hard	The Barossa Valley, one of Australia's most famous wine regions, is in which state?	South Australia	Victoria	New South Wales	Western Australia
 geo_2009_pacific_country	Hard	In 2009, which Pacific country switched from driving on the right to driving on the left?	Samoa	Fiji	Tonga	Vanuatu
 geo_kimberley_remote_region	Hard	The Kimberley, a remote region of gorges and boab trees, is in which Australian state or territory?	Western Australia	Queensland	South Australia	Northern Territory
@@ -137,6 +129,5 @@ geo_rotuma_polynesian_island	Expert	Rotuma, a Polynesian island far to the north
 geo_1863_1911_northern	Expert	From 1863 to 1911, the Northern Territory was run by which Australian colony?	South Australia	Queensland	Western Australia	New South Wales
 geo_pacific_nation_flag	Expert	Which Pacific nation's flag shows a star just below a yellow line, marking its spot just south of the equator?	Nauru	Kiribati	Tuvalu	Palau
 geo_1964_big_banana	Expert	The 1964 'Big Banana', which started Australia's craze for giant roadside 'Big Things', is in which state?	New South Wales	Queensland	Western Australia	Victoria
-geo_city_adelaide_queen	Expert	The city of Adelaide is named after the queen of which British king?	William IV	George III	George IV	Edward VII
 geo_tiny_island_nation	Expert	Which tiny island nation was known to 19th-century sailors as 'Pleasant Island'?	Nauru	Tuvalu	Niue	Palau
 geo_french_explorers_samoa	Expert	French explorers called Samoa by which name, after the skill of its canoe-handling people?	The Navigators' Islands	The Friendly Islands	The Society Islands	The Sandwich Islands

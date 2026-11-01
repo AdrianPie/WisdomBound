@@ -736,6 +736,8 @@ object ScienceQuestions {
         q("sci_green_flash_sometimes", "What is the 'green flash' sometimes seen over the sea?", "A green glint as the Sun sets", listOf("Light from glowing plankton", "An aurora near the equator", "Lightning beyond the horizon"), M),
         q("sci_huge_crater_left", "What is the name of the huge crater left when a volcano collapses?", "Caldera", listOf("Crater lake", "Vent", "Maar"), M),
         q("sci_ball_lightning", "What is 'ball lightning'?", "A rare glowing sphere seen in thunderstorms", listOf("Lightning that strikes the same spot twice", "A lightning bolt that stays in one cloud", "Hail that has been struck by lightning"), M),
+        q("dpt_geo_cien_opadowy", "What causes a rain shadow?", "Mountains wring the moisture out of air", listOf("Cold water chills the coastal strip", "Forests soak up most of the rainfall", "Deserts heat the wind passing over"), M),
+        q("geo_hurricanes_get_energy", "Where do hurricanes get most of their energy?", "From warm ocean water", listOf("From the jet stream", "From sun-baked land", "From lightning bolts"), M),
         q("trv_dzien_dluzszy", "What is slowly happening to the length of a day on Earth?", "It is getting longer", listOf("It is getting shorter", "It stays exactly the same", "It changes with the seasons only"), H),
         q("mst_blyskawica_temperatura", "A lightning bolt can be roughly how hot compared with the Sun's surface?", "Several times hotter", listOf("About the same", "Half as hot", "A tenth as hot"), H),
         q("sci_fujita", "Which scale rates the strength of tornadoes?", "The Enhanced Fujita scale", listOf("The Beaufort scale", "The Saffir-Simpson scale", "The Richter scale"), H),
@@ -768,6 +770,16 @@ object ScienceQuestions {
         q("day2_efekt_cieplarniany", "Why do greenhouse gases warm the planet?", "They absorb outgoing infrared radiation", listOf("They block incoming sunlight", "They thicken the ozone layer", "They raise air pressure"), H),
         q("sciy_krakatau", "The 1883 eruption of which volcano made one of the loudest sounds in recorded history?", "Krakatoa", listOf("Vesuvius", "Mount St Helens", "Etna"), H),
         q("eley_talk", "Which is the softest mineral on the Mohs scale?", "Talc", listOf("Gypsum", "Calcite", "Graphite"), H),
+        q("geo_earthquake_magnitude_releases", "An earthquake of magnitude 7 releases roughly how many times more energy than one of magnitude 6?", "About 32 times", listOf("About 2 times", "About 10 times", "About 1,000 times"), H),
+        q("geo_roughly_air_cool", "Roughly how much does the air cool for every 1,000 m you climb?", "About 6.5 C", listOf("About 1 C", "About 20 C", "About 0.1 C"), H),
+        q("geo_hurricanes_almost_never", "Why do hurricanes almost never form right next to the equator?", "The Coriolis effect is too weak there", listOf("The sea there is too cold", "The trade winds tear them apart", "There is too little moisture there"), H),
+        q("geo3_wyspa_wulkaniczna_powstawanie", "How do volcanic island chains like Hawaii most often form?", "A plate moves over a stationary hot spot in the mantle", listOf("Through a collision of two continents", "Through subduction of one plate under another only", "Through coastal erosion"), H),
+        q("geo_scale_rates_earthquake", "Which scale rates an earthquake by its effects on people and buildings, not by its energy?", "The Mercalli scale", listOf("The Richter scale", "The Beaufort scale", "The Mohs scale"), H),
+        q("geo_derecho_spanish_straight", "What is a 'derecho', from the Spanish for 'straight'?", "A long, fast-moving straight-line windstorm", listOf("A tornado that never touches the ground", "A sudden flood along a dry riverbed", "A hot wind blowing down a mountainside"), H),
+        q("geo_roughly_thunderstorms_raging", "Roughly how many thunderstorms are raging on Earth at any given moment?", "About 2,000", listOf("About 20", "About 200", "About 200,000"), H),
+        q("geo_earth_inner_core", "Why is Earth's inner core solid while the outer core is liquid?", "Enormous pressure squeezes it", listOf("It is made of a different metal", "It has cooled down completely", "It is made of rock, not metal"), H),
+        q("geo_roughly_thick_earth", "Roughly how thick is Earth's crust beneath the oceans?", "About 7 km", listOf("About 70 km", "About 700 m", "About 700 km"), H),
+        q("geo_according_snowball_earth", "According to the 'Snowball Earth' theory, what happened roughly 700 million years ago?", "Ice covered almost the whole planet", listOf("A comet brought the oceans", "The Moon split from the Earth", "All the continents sank"), H),
         q("sci_lightning_strike_way", "In a lightning strike, which way does the brightest flash actually travel?", "Upwards from the ground", listOf("Downwards from the cloud", "Sideways along the ground", "Outwards from the middle"), X),
         q("sci_misty_mountain_climber", "On a misty mountain, a climber may see a giant shadow of themselves ringed by colours. What is it called?", "A Brocken spectre", listOf("A fata morgana", "A will-o'-the-wisp", "A sun pillar"), X),
         q("sci_virga", "What is 'virga'?", "Rain that evaporates before reaching the ground", listOf("A lens-shaped cloud over mountains", "Lightning that leaps up from the clouds", "Hail falling from a clear blue sky"), X),
@@ -776,7 +788,10 @@ object ScienceQuestions {
         q("sci_highest_clouds_earth", "Which are the highest clouds in Earth's atmosphere, seen glowing blue after sunset?", "Noctilucent clouds", listOf("Cirrus clouds", "Nacreous clouds", "Lenticular clouds"), X),
         q("sci_sprites_seen_high", "What are 'sprites', seen high above some big thunderstorms?", "Red flashes of electricity", listOf("Green glows at sunset", "Sparks on ships' masts", "Glowing balls of ice"), X),
         q("sci_gas_makes_volcano", "Which gas makes up most of what a volcano blows out?", "Water vapour", listOf("Carbon dioxide", "Sulfur dioxide", "Hydrogen sulfide"), X),
-        q("sci_fulgurite", "What is a fulgurite?", "Glass formed when lightning hits sand", listOf("A crystal found inside meteorites", "A cloud shaped like a clenched fist", "A spark that jumps between clouds"), X)
+        q("sci_fulgurite", "What is a fulgurite?", "Glass formed when lightning hits sand", listOf("A crystal found inside meteorites", "A cloud shaped like a clenched fist", "A spark that jumps between clouds"), X),
+        q("geo_fujiwhara_effect", "What is the 'Fujiwhara effect'?", "Two nearby cyclones circling each other", listOf("A tsunami bouncing between two coasts", "Lightning striking twice in one spot", "A volcano erupting under a glacier"), X),
+        q("geo_roughly_earth_magnetic", "Roughly when did Earth's magnetic poles last swap places?", "About 800,000 years ago", listOf("About 8,000 years ago", "About 80,000 years ago", "About 80 million years ago"), X),
+        q("geo_boundary_between_earth", "The boundary between the Earth's crust and mantle, the 'Moho', is named after a seismologist from which country?", "Croatia", listOf("Russia", "Japan", "Italy"), X)
     )
 
     /* Scientists & Discoveries - science/scientists.tsv */

@@ -113,6 +113,10 @@ geo_canada_northwest_territories	Medium	Canada's Northwest Territories are rough
 geo_sahara_roughly_times	Medium	The Sahara is roughly how many times the size of India?	About 3 times	About 1.2 times	About 10 times	About half
 geo_moscow_far_beijing	Medium	From Moscow, how far is Beijing in a straight line, compared with London?	A bit over twice as far	About the same	About 5 times as far	Only half as far
 geo_hudson_bay_mexico	Medium	Hudson Bay vs Mexico: which is bigger?	Mexico, about 1.6 times	Hudson Bay, about 1.6 times	They are about equal	Mexico, about 5 times
+geo_roughly_times_bigger	Medium	Roughly how many times bigger than Denmark is Greenland?	About 50 times	About 5 times	About 15 times	About 500 times
+geo_roughly_big_antarctica	Medium	Roughly how big is Antarctica compared with Australia?	Almost twice as big	About the same size	About half as big	About ten times bigger
+geo_roughly_big_greenland	Medium	Roughly how big is Greenland compared with Britain?	About ten times bigger	About twice as big	About the same size	About thirty times bigger
+geo_greenland_africa_look	Medium	Greenland and Africa look similar in size on many world maps. Roughly how many times bigger is Africa?	About 14 times	About 2 times	About 5 times	About 50 times
 geo_germany_area_big	Hard	Germany vs the UK by area: how big is the gap?	Germany is about 1.5 times bigger	They are almost exactly equal	The UK is slightly bigger	Germany is about 3 times bigger
 geo_japan_two_island	Hard	Japan vs the UK, two island nations, by area: how big is the gap?	Japan is about 1.5 times bigger	They are about the same size	The UK is slightly bigger	Japan is about 4 times bigger
 geo_iceland_republic_ireland	Hard	Iceland vs the Republic of Ireland by area: how big is the gap?	Iceland is about 1.5 times bigger	Ireland is slightly bigger	They are about the same size	Iceland is about 4 times bigger
@@ -173,6 +177,7 @@ geo_indonesian_island_bali	Hard	The Indonesian island of Bali vs the whole sulta
 geo_reykjavik_sits_between	Hard	Reykjavik sits between Europe and America. Which is closer to it in a straight line: Moscow or New York?	Moscow, by about 900 km	New York, by about 900 km	They are equally far	New York, by about 3,000 km
 geo_lake_michigan_estonia	Hard	Lake Michigan vs Estonia: which is true about their areas?	The lake is about a quarter bigger	Estonia is about a quarter bigger	Estonia is about twice as big	The lake is 5 times bigger
 geo_sumatra_indonesia_westernmost	Hard	Sumatra, Indonesia's westernmost big island, vs Germany: which is bigger?	Sumatra, by about a third	Germany, by about a third	Germany, about twice as big	Sumatra, about 4 times
+geo_australian_state_victoria	Hard	The Australian state of Victoria is roughly the same size as which country?	Great Britain	France	Belgium	Portugal
 geo_japan_germany_bigger	Expert	Japan or Germany: which is bigger, and by how much?	Japan, by about 6%	Germany, by about 6%	Germany, by about a third	Japan, by about a third
 geo_poland_italy_bigger	Expert	Poland or Italy: which is bigger, and by how much?	Poland, by a few percent	Italy, by a few percent	Italy, by about a third	Poland, by about a third
 geo_ukraine_bigger_mainland	Expert	Ukraine is bigger than mainland France. What if you also count France's regions outside Europe?	France becomes slightly bigger	Ukraine stays bigger by a third	France becomes twice as big	Ukraine stays bigger by a half

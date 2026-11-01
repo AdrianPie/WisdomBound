@@ -1,7 +1,6 @@
 # Europa po Napoleonie: Wiosna Ludow, zjednoczenie Wloch i Niemiec, wojna krymska, Habsburgowie
 # i Romanowowie.
 id	difficulty	prompt	correct	wrong1	wrong2	wrong3
-his_italian_city_birthplace	Easy	Which Italian city is the birthplace of pizza?	Naples	Rome	Milan	Venice
 his_humanitarian_movement_uses	Easy	Which humanitarian movement uses a red crescent in many Muslim countries?	The Red Cross	Doctors Without Borders	UNICEF	Oxfam
 his_munich_festival_began	Easy	Which Munich festival began in 1810 as a celebration of a royal wedding?	Oktoberfest	Fasching	Christkindlmarkt	Walpurgis Night
 his_city_became_capital_3	Easy	Which city became the capital of the new German Empire in 1871?	Berlin	Munich	Frankfurt	Hamburg

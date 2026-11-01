@@ -2,7 +2,6 @@
 # Cyceron, Galia.
 id	difficulty	prompt	correct	wrong1	wrong2	wrong3
 wh_cezar_zabojstwo	Easy	Who was murdered in the Roman senate on the Ides of March, 44 BC?	Julius Caesar	Augustus	Nero	Mark Antony
-his_according_legend_twin	Easy	According to legend, which twin brothers founded Rome?	Romulus and Remus	Castor and Pollux	Cain and Abel	Jacob and Esau
 his_friend_julius_caesar	Easy	Which friend of Julius Caesar was among his assassins?	Brutus	Mark Antony	Octavian	Lepidus
 his_according_legend_animal	Easy	According to legend, which animal suckled the twin founders of Rome as babies?	A she-wolf	A bear	A deer	A goat
 his_bird_stood_top	Easy	Which bird stood on top of every Roman legion's standard?	An eagle	A raven	A falcon	An owl
