@@ -9,7 +9,7 @@ je recznie scalac i odsiewac duble.
 
 ## Dopisywanie pytan quizu (najczestsze zadanie)
 
-Baza: `domain/quizbank/` (TSV to zrodlo prawdy; historia i geografia sa podzielone na dzialy),
+Baza: `domain/quizbank/` (TSV to zrodlo prawdy; kazdy temat poza `elements` jest podzielony na dzialy),
 narzedzie: `tools/quizbank.py`, zasady: `domain/quizbank/README.md` i `WRITING_GUIDE.md`,
 duze tury: skill `.claude/skills/dodaj-pytania`.
 
@@ -20,7 +20,7 @@ Oszczedzaj kontekst - bank jest duzy:
 - Rozeznanie: `python3 tools/quizbank.py stats`, a czy fakt juz jest: `find "<fraza>"`.
   Podglad tematu albo dzialu tylko z filtrem i `| head`, np. `list mythology -d X | head -40`.
 - Nowe pytania pisz do pliku w scratchpadzie (format `topic | difficulty | prompt | correct | wrong1 | wrong2 | wrong3`;
-  w historii i geografii `topic` to dzial, np. `world_war_2`), paczki po ~100 pytan.
+  `topic` to dzial, np. `world_war_2`, `biology/plants`; tylko `elements` nie ma dzialow), paczki po ~100 pytan.
 - Obieg: `check -q paczka.txt` (jedna linia na problem), potem `add paczka.txt --only-clean` (dopisuje
   tylko pytania bez bledow i bez uwag - uwagi to prawie zawsze duble ujete innymi slowami)
   albo `add paczka.txt --skip-errors`.

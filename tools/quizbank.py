@@ -7,8 +7,8 @@ Pytania wyboru (jedna poprawna + trzy bledne odpowiedzi) mieszkaja w domain/quiz
 w domain/src/commonMain/.../quiz/bank sa z niego GENEROWANE - recznych zmian w nich sie nie robi,
 bo nastepne `generate` je nadpisze (a QuizBankTsvSyncTest wylapie rozjazd).
 
-Temat to albo jeden plik (biology.tsv), albo katalog podzielony na DZIALY (history/antiquity/
-roman_empire.tsv). Nazwy i kolejnosc dzialow stoja w domain/quizbank/sections.tsv, a z niego
+Temat to katalog podzielony na DZIALY (history/antiquity/roman_empire.tsv, biology/plants.tsv)
+albo - dzis tylko elements - jeden plik (elements.tsv). Nazwy i kolejnosc dzialow stoja w domain/quizbank/sections.tsv, a z niego
 powstaje QuizSectionCatalog.kt. Tabela danych o panstwach (domain/quizbank/data/countries.tsv) to
 nie pytania, tylko material dla CountryQuestions - z niej powstaje CountryData.kt.
 
@@ -27,7 +27,7 @@ Typowa sesja dopisywania pytan (szczegoly: domain/quizbank/README.md):
 
 Plik z nowymi pytaniami: naglowek + jedna linia na pytanie, kolumny rozdzielone tabulatorem albo
 znakiem '|'. Kolumna id jest opcjonalna - bez niej skrypt nada unikalne id sam. W kolumnie topic
-stoi temat (biology) albo, w temacie z dzialami, dzial: pelna sciezka (history/antiquity/roman_empire)
+stoi dzial: pelna sciezka (history/antiquity/roman_empire, biology/plants), w temacie bez dzialow temat (elements),
 albo sama nazwa liscia, jesli jest jednoznaczna (roman_empire).
 
     topic | difficulty | prompt | correct | wrong1 | wrong2 | wrong3

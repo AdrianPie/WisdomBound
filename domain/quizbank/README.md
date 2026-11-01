@@ -10,7 +10,7 @@ his_churchill	Easy	Who was Britain's prime minister for most of World War II?	Wi
 
 Linie z `#` na poczatku pliku to opis - trafia do komentarza w wygenerowanym Kotlinie.
 
-Temat to **jeden plik** (`biology.tsv`, `science.tsv`, ...) albo, gdy jest duzy, **katalog dzialow**:
+Temat to **katalog dzialow** - dzis wszystkie poza `elements` (jeden plik `elements.tsv`):
 
 ```
 history/
@@ -34,9 +34,26 @@ geography/
     countries.tsv, cities.tsv, languages_customs.tsv, food_drink.tsv
   comparisons/                       Higher or Lower
     population.tsv, area.tsv, skylines.tsv, nature.tsv, by_numbers.tsv
+science/        space, physics, chemistry, earth, scientists
+biology/        human_body, brain_senses, health, plants, food, life
+animals/        mammals, birds, sea_life, reptiles_amphibians, bugs, pets_farm
+technology/     computers, internet, transport, inventions, companies
+sport/          football, olympics, team_sports, racket_golf, motor_cycling, combat_mind
+literature/     novels, children, stage_poetry, art, music (klasyczna)
+pop_culture/    film, tv, music (rozrywkowa), animation, games, brands
+mythology/      greek_roman, norse, egypt_near_east, asia, world, legends
+math/           puzzles, numbers, geometry, probability, history (matematycy)
+capitals/       europe, asia (z Oceania i porownaniami stolic), africa, americas
+poland/         history (do 1918), twentieth_century, culture, places, traditions, sport
+elements.tsv                         jedyny temat bez dzialow
 data/
   countries.tsv                      dane o panstwach (nie pytania) - patrz nizej
 ```
+
+Zakres kazdego dzialu opisuje komentarz na gorze jego pliku. Pytanie idzie tam, gdzie gracz, ktory
+wybral dany temat i dzial, by go szukal: gry wideo do `pop_culture/games` (konsole i firmy do
+`technology`), muzyka klasyczna do `literature/music`, wynalazki do `technology/inventions`, ciekawostki
+o miastach do `geography/human/cities`, a do `capitals` tylko to, ze miasto jest stolica.
 
 Sciezka pliku to sciezka dzialu: `history/antiquity/roman_empire`. Pytania leza tylko w lisciach
 (plikach), katalog to galaz obejmujaca wszystko pod soba. Nazwy dzialow w interfejsie, ikony i ich
@@ -126,10 +143,10 @@ python3 tools/quizbank.py move ID... --to vikings  # przenies pytania do innego 
 
 Plik z nowymi pytaniami (dowolna nazwa, najlepiej poza repo): naglowek i jedna linia na pytanie,
 kolumny rozdzielone `|` albo tabulatorem. Kolumna `id` jest opcjonalna - bez niej skrypt nada unikalne
-id sam. W kolumnie `topic` stoi temat (`biology animals elements capitals science geography sport
-math literature technology mythology pop_culture poland`) albo - w temacie z dzialami - dzial:
-pelna sciezka (`history/antiquity/roman_empire`) albo sama nazwa liscia, gdy jest jednoznaczna
-(`roman_empire`). Gole `history` jest bledem: kazde pytanie historii musi trafic do dzialu.
+id sam. W kolumnie `topic` stoi dzial: pelna sciezka (`history/antiquity/roman_empire`, `biology/plants`)
+albo sama nazwa liscia, gdy jest jednoznaczna (`roman_empire`; `music` juz nie - jest w `literature`
+i w `pop_culture`). Gole `history` czy `biology` jest bledem: kazde pytanie musi trafic do dzialu.
+Wyjatek: `elements`, temat bez dzialow.
 Poziomy: `Easy Medium Hard Expert` (albo `E M H X`).
 
 ```
