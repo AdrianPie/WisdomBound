@@ -1,0 +1,204 @@
+# Internet & Phones: the internet, websites, apps, social media, phones, digital culture
+#
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+tec_www	Easy	What does the abbreviation WWW stand for?	World Wide Web	World Web Wide	Wide World Web	Web World Wide
+scicmp_co_pierwsze_internet	Easy	Which of these appeared first?	The World Wide Web	Google	Facebook	YouTube
+trv2_wifi_fale	Easy	What does Wi-Fi use to carry data through the air?	Radio waves	Infrared light	Sound waves	Microscopic wires
+trv2_phishing	Easy	What is 'phishing'?	Tricking people into revealing passwords or data	Speeding up a computer that has got slow	Copying the contents of a hard drive	Blocking the adverts shown on a page
+cur_captcha	Easy	What is a CAPTCHA designed to tell apart?	Humans from bots	Adults from children	Phones from computers	Real emails from spam
+tec_email_e	Easy	What does the 'e' in 'email' stand for?	Electronic	Easy	Express	External
+tec_siri	Easy	What is the name of Apple's voice assistant?	Siri	Alexa	Cortana	Bixby
+tec_tiktok	Easy	Which short-video app is owned by the Chinese company ByteDance?	TikTok	Instagram	Snapchat	YouTube
+tec_sms_short	Easy	What does the 'S' at the start of 'SMS' stand for?	Short	Simple	Secure	Standard
+tecx_haslo	Easy	Which of these is one of the most common (and worst) passwords?	123456	Tr0ub4dor&3	Xk!9#pL2vQ	mY-c@t_Is-8
+tec_twitter_renamed_2023	Easy	What was Twitter renamed in 2023?	X	Threads	Bluesky	Meta
+tec_app_logo_white	Easy	Which app's logo is a white ghost on a yellow background?	Snapchat	WhatsApp	TikTok	Telegram
+tec_messaging_app_green	Easy	Which messaging app has a green logo with a white phone in a speech bubble?	WhatsApp	Signal	Messenger	Viber
+tec_web_browser_retired	Easy	Which web browser, retired in 2022, had a blue letter 'e' as its logo?	Internet Explorer	Netscape Navigator	Firefox	Safari
+tec_microsoft_search_engine	Easy	What is the name of Microsoft's search engine?	Bing	Yahoo	Ask	DuckDuckGo
+tec_video_calling_app	Easy	Which video-calling app became hugely popular during the 2020 lockdowns?	Zoom	Snapchat	Twitch	Pinterest
+tec_google_email_service	Easy	What is the name of Google's email service?	Gmail	Outlook	Yahoo Mail	Proton Mail
+tec_apple_web_browser	Easy	What is the name of Apple's web browser?	Safari	Chrome	Edge	Opera
+tec_1990s_made_loud	Easy	In the 1990s, what made a loud screeching and beeping noise every time you went online?	A dial-up modem	A cooling fan	A dot-matrix printer	A CD-ROM drive
+tec_google_chrome_cannot	Easy	When Google Chrome cannot reach the internet, what kind of animal can you guide over cacti in a hidden game?	A dinosaur	A cat	A penguin	A rabbit
+tec_parents_signed_off	Easy	Many parents have signed off messages with 'LOL' thinking it meant 'lots of love'. What does it really mean?	Laughing out loud	Lack of luck	Look out, listen	Lots of laughs online
+tec_word_app_phone	Easy	The word 'app', as on a phone, is short for what?	Application	Appliance	Apparatus	Appendix
+tec_website_virtual_pinboards	Easy	Which website is known for virtual pinboards full of recipes, outfits and home ideas?	Pinterest	Tumblr	Reddit	Flickr
+tec_save_photos_cloud	Easy	When you save your photos to 'the cloud', where do they actually end up?	On computers in big data centres	On satellites orbiting Earth	On a spare chip in your phone	In signals bouncing off the sky
+tec_call_malicious_software	Easy	What do you call malicious software that locks your files and demands money to unlock them?	Ransomware	Spyware	Adware	Freeware
+tec_mobile_phones_pager	Easy	Before mobile phones, what did a pager, or 'beeper', do?	Showed short messages and numbers	Recorded short voice notes	Played music from the radio	Showed the way on a map
+tec_symbol_starts_hashtag	Easy	Which symbol starts a hashtag, as in #throwback?	#	@	&	*
+tec_website_faq_stand	Easy	On a website, what does 'FAQ' stand for?	Frequently asked questions	Fast answer queue	Final account query	File access quota
+tec_airplane_mode_switch	Easy	What does 'airplane mode' switch off on a phone?	Its wireless signals	Its touchscreen	Its speakers	Its alarm clock
+tec_google_web_browser	Easy	What is the name of Google's web browser?	Chrome	Edge	Firefox	Opera
+tec_ride_hailing_app	Easy	Which ride-hailing app was founded in San Francisco in 2009?	Uber	Lyft	Bolt	Grab
+tec_chat_apps_three	Easy	In many chat apps, what do three animated dots under the conversation mean?	The other person is typing	The message failed to send	The chat is encrypted	The other person is offline
+tec_whatsapp_two_blue	Easy	In WhatsApp, what do two blue ticks next to your message mean?	It has been read	It is still sending	It was deleted	It was forwarded
+tec_app_logo_camera	Easy	Which app's logo is a camera outline on a purple, pink and orange background?	Instagram	Snapchat	TikTok	Pinterest
+tec_app_logo_stylised	Easy	Which app's logo is a stylised musical note?	TikTok	Spotify	Shazam	SoundCloud
+tec_streaming_service_logo	Easy	Which streaming service's logo is a big red letter 'N'?	Netflix	Hulu	Disney+	Peacock
+tec_google_service_shows	Easy	Which Google service shows street-level photos taken by camera cars driving around the world?	Street View	Google Lens	Google Photos	Google Drive
+tec_phone_not_disturb	Easy	What does a phone's 'Do Not Disturb' mode do?	Silences calls and alerts	Blocks all websites	Turns off the screen	Locks every app
+tec_online_dating_catfish	Easy	In online dating, what is a 'catfish'?	Someone using a fake identity	Someone who never replies	Someone who only flirts	A profile full of cat photos
+tec_round_button_apple	Easy	Which round button did Apple remove from the front of the iPhone with the iPhone X in 2017?	The home button	The volume button	The power button	The camera button
+tec_amazon_owned_site	Easy	On which Amazon-owned site do millions watch people play video games live?	Twitch	YouTube	Steam	Discord
+tec_apple_built_video	Easy	What is the name of Apple's built-in video-calling app?	FaceTime	Skype	Duo	Zoom
+tec_dating_app_tinder	Easy	On the dating app Tinder, what does swiping right on a profile mean?	You like them	You want to skip them	You want to report them	You want to block them
+tec_mobile_phone_little	Easy	On a mobile phone, what do the little rising bars at the top of the screen show?	Signal strength	Battery level	Volume	Storage space
+tec_two_factor_authentication	Easy	What is two-factor authentication?	Proving who you are in two separate ways	Using two different passwords on one site	Letting two people share one account	Changing your password twice a year
+tec_phone_operating_system	Easy	Which phone operating system has a little green robot as its mascot?	Android	Windows Phone	iOS	Symbian
+tec_social_media_gif	Easy	On social media, what is a GIF usually?	A short looping animation	A voice message	A disappearing photo	A live video stream
+tec_app_shazam	Easy	What does the app Shazam do?	Identifies music playing nearby	Translates speech aloud	Measures how loud a room is	Removes noise from photos
+tec_because_size_weight	Easy	Because of their size and weight, the first mobile phones of the 1980s were nicknamed after which object?	A brick	A shoe	A banana	A loaf
+tec_gaming_slang_noob	Easy	In gaming slang, what is a 'noob'?	A beginner	A cheater	A sore loser	A team leader
+tec_app_became_photos	Easy	Which app became famous for photos that vanish after viewing?	Snapchat	Instagram	WhatsApp	Pinterest
+tecx_cookies	Easy	What are 'cookies' on a website?	Small files that remember you	Viruses hidden in ads	Pop-up windows	Deleted web pages
+tec2_https_co	Medium	What does HTTPS add over HTTP?	Encryption of the connection	Faster downloads	Automatic translation	Image compression
+tec3_bitcoin_tworca	Medium	Under what pseudonym was the original Bitcoin paper published?	Satoshi Nakamoto	John Doe	Anonymous	Hal Finney
+tec3_email_pierwszy_rok	Medium	In which decade was the first email sent?	The 1970s	The 1990s	The 1950s	The 21st century
+day_piatka_g	Medium	In '5G', what does the G stand for?	Generation	Gigahertz	Global	Gateway
+trv2_internet_uzytkownicy	Medium	Which country has the most internet users?	China	The United States	India	Russia
+trv2_qr	Medium	What does 'QR' stand for in 'QR code'?	Quick Response	Quality Reader	Quantum Register	Quick Reference
+trv2_arpanet	Medium	What was ARPANET?	The forerunner of the internet	The first home computer	An early video game	A satellite TV network
+wld_tec_emoji_kraj	Medium	In which country were emoji invented?	Japan	The USA	South Korea	Finland
+tec_napster	Medium	Which music file-sharing service was shut down in 2001 after lawsuits?	Napster	Spotify	LimeWire	iTunes
+tecx_404	Medium	What does 'Error 404' on a website mean?	The page was not found	The server is on fire	You have no internet	Your password is wrong
+tec_html_stand	Medium	What does 'HTML' stand for?	HyperText Markup Language	High Tech Modern Language	Hyperlink Text Management Logic	Home Tool Markup Language
+tec_vpn_stand	Medium	What does 'VPN' stand for?	Virtual private network	Verified public node	Visual processing network	Virtual personal number
+tec_year_facebook_launched	Medium	In which year was Facebook launched?	2004	2001	2007	2010
+tec_organisation_makes_firefox	Medium	Which organisation makes the Firefox web browser?	Mozilla	Google	Opera	Apple
+tec_key_web_browsers	Medium	What does the F5 key do in most web browsers?	Refreshes the page	Opens a new tab	Saves the page	Closes the window
+tec_iot_stand	Medium	What does 'IoT' stand for?	Internet of Things	Input or Transfer	Index of Technology	Integration of Tools
+tec_stand_address	Medium	What does 'IP' stand for in 'IP address'?	Internet Protocol	Internal Port	Information Path	Instant Provider
+tec_email_originally_stand	Medium	In an email, what does 'Cc' originally stand for?	Carbon copy	Computer copy	Copy contacts	Common copy
+tec_wikipedia_logo_globe	Medium	Wikipedia's logo is a globe made of what?	Jigsaw puzzle pieces	Open books	Hexagonal tiles	Interlocking gears
+tec_encyclopaedia_stopped_printing	Medium	Which famous encyclopaedia stopped printing paper editions in 2012, after 244 years?	Encyclopaedia Britannica	Larousse	World Book	Collier's Encyclopedia
+tec_automatically_every_new	Medium	Who was automatically every new MySpace user's very first friend?	Tom	Mark	Steve	Jack
+tec_search_engine_originally	Medium	Which search engine originally had a cartoon butler as its mascot?	Ask Jeeves	AltaVista	Lycos	Excite
+tec_word_blog_short	Medium	The word 'blog' is short for what?	Weblog	Binary log	Backlog	Brief log
+tec_word_podcast_blends	Medium	The word 'podcast' blends 'broadcast' with which other word?	iPod	Pocket	Podium	Pod race
+tec_internet_archive_wayback	Medium	What does the Internet Archive's 'Wayback Machine' let you do?	See old versions of websites	Recover deleted emails	Undo changes on your PC	Track a lost phone
+tec_characters_tweet_hold	Medium	How many characters could a tweet hold before Twitter doubled the limit in 2017?	140	160	100	200
+tec_hamburger_menu_icon	Medium	What does the 'hamburger' menu icon in apps look like?	Three horizontal lines	Three vertical dots	A small circle	A square grid
+tec_nokia_phone_2000	Medium	Which Nokia phone of 2000 became a running joke for being almost indestructible?	The Nokia 3310	The Nokia 7110	The Nokia N95	The Nokia Lumia 920
+tec_steve_jobs_unveiled	Medium	Steve Jobs called the first iPhone three devices: an iPod, an internet communicator and what?	A phone	A camera	A computer	A GPS
+tec_2010_programmer_famously	Medium	In 2010, a programmer famously paid 10,000 bitcoins for what?	Two pizzas	A used car	A laptop	A pair of trainers
+tec_google_feeling_lucky	Medium	What does Google's 'I'm Feeling Lucky' button do?	Opens the top result directly	Shows a random website	Picks a random Doodle	Opens a lottery game
+tec_newspaper_bought_word	Medium	Which newspaper bought the word game Wordle in 2022?	The New York Times	The Guardian	The Washington Post	The Wall Street Journal
+tec_messaging_app_white	Medium	Which messaging app has a white paper plane on a blue circle as its logo?	Telegram	Signal	Messenger	Viber
+tec_word_oxford_dictionaries	Medium	Which word was Oxford Dictionaries' 'Word of the Year' in 2013?	Selfie	Hashtag	Emoji	Vape
+tec_online_stand	Medium	Online, what does 'TL;DR' stand for?	Too long; didn't read	To learn; don't rush	Total loss; do restart	Talk later; don't reply
+tec_socket_apple_drop	Medium	Which socket did Apple drop from the iPhone 7 in 2016, angering many users?	The headphone jack	The charging port	The SIM card slot	The memory card slot
+tec_social_network_google	Medium	Which social network did Google shut down in 2019 after it failed to rival Facebook?	Google+	Google Wave	Orkut	Google Buzz
+tec_video_app_shut	Medium	Which video app, shut down in 2017, limited every clip to six seconds?	Vine	Periscope	Musical.ly	Snapchat
+tec_phone_touchscreens_ignore	Medium	Why do most phone touchscreens ignore you when you wear ordinary gloves?	They need skin to conduct electricity	They need the warmth of a finger	They read your fingerprints	Gloves are too soft to press them
+tec_word_modem_short	Medium	The word 'modem' is short for what?	Modulator-demodulator	Mobile data emitter	Modular electronic memory	Model data machine
+tec_nft_stand	Medium	What does 'NFT' stand for?	Non-fungible token	Network file transfer	New financial technology	Numbered format token
+tec_country_uses_web	Medium	Which country uses the web domain '.ch'?	Switzerland	China	Chile	Czech Republic
+tec_old_mobile_phones	Medium	On old mobile phones with number keys, what did 'T9' do?	Guessed the word you were typing	Locked the keypad in your pocket	Sent one text to nine people	Switched the phone to silent
+tec_phone_numbers_american	Medium	Why do phone numbers in American films so often begin with 555?	Real customers almost never have them	It was Hollywood's own area code	It made the calls free of charge	It was easy for actors to say
+tec_web_browser_ruled	Medium	Which web browser ruled the mid-1990s before losing the 'browser war' to Internet Explorer?	Netscape	Mosaic	Opera	Lynx
+tec_internet_company_greeting	Medium	Which internet company's greeting 'You've got mail!' became the title of a 1998 film?	AOL	CompuServe	Yahoo	Prodigy
+tec_online_auction_site	Medium	Which online auction site was first called AuctionWeb?	eBay	Etsy	Craigslist	Overstock
+tec_afk	Medium	What does 'AFK' mean in online chat?	Away from keyboard	Always fighting kings	Ask for keys	All friends known
+tec_founded_wikipedia_2001	Medium	Who co-founded Wikipedia?	Jimmy Wales	Larry Page	Mark Zuckerberg	Jack Dorsey
+tec_actually_travels_down	Medium	What actually travels down a fibre-optic internet cable?	Pulses of light	Electric current	Radio waves	Sound waves
+tec_instagram_launched_2010	Medium	When Instagram launched in 2010, every photo had to be which shape?	Square	Round	Tall and narrow	Wide and short
+tec2_blockchain	Medium	What is a blockchain?	A distributed ledger of linked data blocks	A relational database queried with SQL	A protocol for sending electronic mail	A file system used on modern drives
+day_hashtag_serwis	Medium	On which platform did the hashtag first catch on?	Twitter	Facebook	Instagram	MySpace
+mst_pierwsza_strona	Medium	The world's first website was created to explain what?	The World Wide Web itself	A physics experiment	A university timetable	An email system
+tecy_android_slodycze	Medium	Until 2019, Android versions were named after what?	Desserts and sweets	Famous robots	Planets	Animals
+tec_video_website_original	Medium	Which video website's original slogan was 'Broadcast Yourself'?	YouTube	Vimeo	Twitch	MySpace
+tec_according_godwin_law	Medium	According to 'Godwin's law', what will any long enough online argument eventually include?	A comparison to Hitler or the Nazis	A picture of a cat	A correction of someone's spelling	A link to a Wikipedia page
+tec_twitter_bird_logo	Medium	Twitter's bird logo was nicknamed Larry, after which basketball star?	Larry Bird	Magic Johnson	Michael Jordan	Kareem Abdul-Jabbar
+tec_meme_originally_coined	Medium	What is a 'meme' originally, as coined by Richard Dawkins in 1976?	A unit of cultural idea	A funny picture	A computer virus	A type of gene
+tec_website_started_out	Medium	Which website started out in 2003 as 'FaceMash', a site for rating students' looks?	Facebook	MySpace	Friendster	Hot or Not
+tec_nickname_blackberry_phones	Medium	What nickname did BlackBerry phones earn because users seemed hooked on them?	CrackBerry	JailBerry	ThumbBerry	BusyBerry
+tec_time_magazine_person	Medium	Who did Time magazine name its 'Person of the Year' in 2006, to honour people making content online?	You	The Blogger	The Internet	The Netizen
+tec_google_project_loon	Medium	Google's Project Loon tried to bring internet access to remote areas using what?	High-altitude balloons	Low-flying drones	Undersea cables	Solar-powered airships
+trv2_youtube_zoo	Hard	Where was the very first YouTube video filmed?	At a zoo	In a garage	At a concert	In a lecture hall
+trv2_mosaic	Hard	Which early web browser, released in 1993, made the web popular by showing images inline?	Mosaic	Netscape	Internet Explorer	Opera
+org_twitter_twttr	Hard	Twitter launched under which vowel-free spelling of its name?	twttr	Chirp	Jttr	Status
+org_ebay_wskaznik	Hard	The first item ever sold on eBay was a broken what?	Laser pointer	Wristwatch	Camera lens	Games console
+tec_sms_160	Hard	How many characters could a classic SMS text message hold?	160	140	100	255
+tec_pierwszy_sms	Hard	What did the first text message ever sent, in 1992, say?	Merry Christmas	Hello world	Happy New Year	Can you read this
+tec_kamerka_kawa	Hard	What did the world's first webcam, in 1991, keep an eye on?	A coffee pot	A fish tank	A car park	A cat
+tec_skype	Hard	Which video-calling app was built by Estonian developers in 2003?	Skype	Zoom	FaceTime	WhatsApp
+tec_sim_stand_sim	Hard	What does 'SIM' stand for in SIM card?	Subscriber Identity Module	Secure Information Memory	System Integrated Module	Single Input Mobile
+tec_url_stand	Hard	What does 'URL' stand for?	Uniform Resource Locator	Universal Remote Link	Unified Routing Language	User Request Log
+tec_nfc_used_contactless	Hard	What does 'NFC', used for contactless payments, stand for?	Near-field communication	New fast connection	Network file control	Non-financial card
+tec_css_language_styling	Hard	What does 'CSS', the language for styling web pages, stand for?	Cascading Style Sheets	Computer Styling System	Coded Site Scripts	Creative Screen Styles
+tec_1982_computer_scientist	Hard	In 1982, computer scientist Scott Fahlman proposed typing ':-)' in online messages to mark what?	Jokes	Agreement	Affection	Goodbyes
+tec_while_proving_human	Hard	While proving they were human, users of the early reCAPTCHA puzzles were unknowingly helping to do what?	Digitise old books and newspapers	Translate websites into other languages	Test new fonts for printers	Count visitors to big websites
+tec_youtube_founders_pictured	Hard	YouTube's founders first pictured their site as what?	A video dating site	A music video channel	A cooking show archive	A home for news clips
+tec_basic_feature_missing	Hard	Which basic feature was missing from the very first iPhone?	Copy and paste	A touchscreen	A web browser	Email
+tec_lip_syncing_app	Hard	Which lip-syncing app did TikTok absorb in 2018, moving all its users over?	Musical.ly	Vine	Dubsmash	Triller
+tec_facebook_like_button	Hard	Facebook's 'Like' button was very nearly called what?	The 'Awesome' button	The 'Love' button	The 'Cool' button	The 'Yes' button
+tec_italian_sign_nicknamed	Hard	In Italian, the @ sign is nicknamed after which animal?	A snail	A monkey	A duck	An elephant
+tec_world_web_server	Hard	The world's first web server, at CERN, carried a handwritten label warning staff not to do what?	Switch it off	Move it	Spill coffee on it	Unplug the mouse
+tec_country_domain_became	Hard	Which country's '.ai' domain became popular with artificial intelligence firms?	Anguilla	Albania	Antigua	Algeria
+tec_country_uses_web_2	Hard	Which country uses the web domain '.me', popular for personal sites?	Montenegro	Mexico	Mauritius	Malta
+tec_public_call_handheld	Hard	The first public call from a handheld mobile phone, in 1973, went to whom?	A rival engineer at Bell Labs	The caller's own wife	The US president's office	A local radio DJ
+tec_android_designed_early	Hard	Android was first designed in the early 2000s to run which devices?	Digital cameras	Car dashboards	Games consoles	Smart fridges
+tec_twitter_began_side	Hard	Twitter began as a side project at Odeo, a struggling company that made what?	A podcasting platform	Online street maps	Music players	Mobile games
+tec_yahoo_started_out	Hard	Yahoo! started out in 1994 under which long-winded name?	Jerry and David's Guide to the World Wide Web	Jerry and David's Big List of Cool Links	The Stanford Directory of Useful Websites	Two Students' Map of the Whole Internet
+tec_bluetooth_logo_made	Hard	The Bluetooth logo is made by joining two runes. What do they stand for?	The initials H and B	The letters B and T	The rune for 'link'	Two crossed lightning bolts
+tec_faroe_islands_persuade	Hard	How did the Faroe Islands persuade Google to map their roads in 2016?	By strapping cameras to sheep	By sending a camera on a fishing boat	By mapping it with kites	By using drones along the cliffs
+tec_altavista_1997_translation	Hard	AltaVista's 1997 translation service 'Babel Fish' was named after a creature from which book?	'The Hitchhiker's Guide to the Galaxy'	'Alice's Adventures in Wonderland'	'Twenty Thousand Leagues Under the Sea'	'Gulliver's Travels'
+tec_search_engine_launched	Hard	Which search engine, launched in 1995 by Digital Equipment Corporation, was a giant of the web before Google?	AltaVista	Lycos	Excite	Infoseek
+tec_people_think_email	Hard	Many people think 'Re:' in an email subject means 'reply'. What does it really mean?	In the matter of	Read again	Respond at once	Received
+org_motorola_komorka	Hard	Which company placed the first handheld mobile phone call in 1973?	Motorola	Nokia	Ericsson	Bell Labs
+org_spam_skecz	Hard	Junk email got the name 'spam' from what?	A comedy sketch	An acronym	A brand of software	A programmer's surname
+tec_emoji_nazwa	Hard	The word 'emoji' comes from Japanese words meaning what?	Picture character	Emotion icon	Smiling face	Small drawing
+tec_wiki	Hard	The 'wiki' in Wikipedia comes from a Hawaiian word meaning what?	Quick	Free	Shared	Knowledge
+tec_sent_very_tweet	Hard	Who sent the very first tweet, in 2006?	Jack Dorsey	Elon Musk	Biz Stone	Evan Williams
+tec_operating_system_ran	Hard	Which operating system ran most Nokia smartphones before 2011?	Symbian	Android	Windows Mobile	Palm OS
+tec_emoji_oxford_dictionaries	Hard	Which emoji did Oxford Dictionaries choose as its 'Word of the Year' in 2015?	Face with tears of joy	Red heart	Thumbs up	Smiling face with sunglasses
+tec_trying_hide_something	Hard	Trying to hide something online often makes it spread further. Which singer is this effect named after?	Barbra Streisand	Madonna	Cher	Celine Dion
+tec_according_makers_firefox	Hard	According to its makers, the 'firefox' in the browser's name is another name for which animal?	The red panda	The red fox	The fennec fox	The red squirrel
+tec_typing_barrel_roll	Hard	Typing 'do a barrel roll' into Google famously made the results page do what?	Spin all the way round	Turn upside down	Shake from side to side	Slide off the screen
+tec_gmail_launched_2004	Hard	Gmail was launched in 2004 on which day, leading many people to think it was a hoax?	April Fools' Day	Christmas Day	Halloween	Valentine's Day
+tec_website_alien_mascot	Hard	Which website's alien mascot is called Snoo?	Reddit	Tumblr	Discord	Yahoo
+tec_social_network_news	Hard	Which social network did News Corp buy for $580 million in 2005, before Facebook overtook it?	MySpace	Friendster	Bebo	Orkut
+tec_bluetooth_king_country	Hard	Bluetooth is named after a king of which country?	Denmark	Sweden	Norway	Finland
+tec_website_host_organisation	Hard	What was the name of the first website's host organisation?	CERN	MIT	Stanford	DARPA
+tec_free_1990s_service	Hard	Which free 1990s service let anyone build a homepage in themed 'neighbourhoods' such as Hollywood and SiliconValley?	GeoCities	MySpace	Angelfire	Tripod
+tec_luis_von_ahn	Hard	Luis von Ahn's reCAPTCHA used players' answers to do what?	Digitise old books	Train self-driving cars	Count spam	Translate websites
+tec3_blockchain_konsensus	Hard	What is the consensus mechanism Bitcoin originally used called?	Proof of Work	Proof of Stake	Proof of Authority	Proof of History
+tec_arpanet_lo	Hard	The first message sent over ARPANET in 1969 was meant to be 'LOGIN'. What actually arrived?	LO	LOG	L	Nothing at all
+tec_dynatac	Hard	Roughly how much did the first handheld mobile phone, the Motorola DynaTAC, weigh?	About 1 kg	About 100 g	About 300 g	About 3 kg
+tec_opera_web_browser	Hard	The Opera web browser was created in which country?	Norway	Sweden	Finland	Iceland
+tec_country_ran_minitel	Hard	Which country ran Minitel, a nationwide online service through phone-line terminals, from 1982 to 2012?	France	Germany	Japan	Sweden
+cur_wifi_skrot	Expert	What does the 'Wi' in Wi-Fi actually stand for?	Nothing - it's a brand name	Wireless fidelity, like hi-fi	Wide-area frequency	Wave-integrated fibre
+tec_symbolics	Expert	Which was the first .com domain ever registered, in 1985?	symbolics.com	ibm.com	apple.com	google.com
+tec_pierwsza_przegladarka	Expert	What was the first web browser, written by Tim Berners-Lee, called?	WorldWideWeb	Mosaic	Netscape Navigator	Lynx
+tec_ibm_simon	Expert	Which 1994 device is often called the first smartphone?	The IBM Simon	The Nokia Communicator	The BlackBerry 850	The Palm Pilot
+tec_nokia_ringtone_comes	Expert	Nokia's famous ringtone comes from a 1902 guitar piece by which Spanish composer?	Francisco Tarrega	Isaac Albeniz	Manuel de Falla	Joaquin Rodrigo
+tec_clickable_banner_advert	Expert	The first clickable banner advert on the web, in 1994, was paid for by which company?	AT&T	IBM	Coca-Cola	Microsoft
+tec_tim_berners_lee	Expert	Tim Berners-Lee ran the first web server at CERN on a computer made by which company?	NeXT	Cray	Sun	Apple II
+tec_online_service_created	Expert	Which online service created the GIF image format in 1987?	CompuServe	Adobe	Microsoft	AOL
+tec_troll_internet_slang	Expert	What does the 'troll' in internet slang originally come from?	A fishing technique	A Norse giant	A gaming character	A radio prank
+tec_android_phone_released	Expert	What was the name of the first Android phone, released in 2008?	HTC Dream	Nexus One	Samsung Galaxy	Motorola Droid
+tec_japanese_phone_company	Expert	Which Japanese phone company engineer created the first popular set of emoji in 1999?	Shigetaka Kurita	Satoru Iwata	Masahiro Sakurai	Ken Kutaragi
+tec_mass_unsolicited_email	Expert	The first mass unsolicited email, sent in 1978 to about 400 ARPANET users, advertised what?	New computers	Diet pills	A rock concert	Free holidays
+tec_skype_grew_out	Expert	The name Skype grew out of an earlier name that was a shortening of what?	'Sky peer-to-peer'	'Skip the phone'	'Sky pipeline'	'Speak and type'
+tec_google_ever_tweet	Expert	Google's first-ever tweet, in 2009, was written in binary. What did it say?	I'm feeling lucky	Hello, world	Don't be evil	Search is here
+tec_wiki_created_ward	Expert	What was the name of the first wiki, created by Ward Cunningham in 1995?	WikiWikiWeb	Wikipedia	Nupedia	MeatballWiki
+tec_wikipedia_grew_out	Expert	Wikipedia grew out of which slower online encyclopedia, written only by experts?	Nupedia	Encarta	Everything2	Citizendium
+tec_archie_made_1990	Expert	Archie, made in 1990 and often called the first internet search engine, got its name from what?	The word 'archive'	A comic-book teenager	A pet dog	The founder's son
+tec_programming_language_php	Expert	What did the programming language PHP originally stand for?	Personal Home Page	Public Hypertext Processor	Program Hosting Platform	Private Home Protocol
+tec_coined_word_hypertext	Expert	Who coined the word 'hypertext' in the 1960s?	Ted Nelson	Vannevar Bush	Douglas Engelbart	Tim Berners-Lee
+tec_vannevar_bush_call	Expert	What did Vannevar Bush call the imaginary desk that would link documents together, described in 1945?	The Memex	The Mundaneum	The Xanadu	The Hyperdesk
+tec_netscape_mascot_mozilla	Expert	Netscape's mascot name 'Mozilla' blended 'Godzilla' with the name of which rival browser?	Mosaic	Lynx	Opera	Viola
+tec2_ipv6	Expert	How many bits does an IPv6 address have?	128	32	64	256
+org_malpa_email	Expert	Who picked the @ sign as the separator in email addresses?	Ray Tomlinson	Tim Berners-Lee	Vint Cerf	Linus Torvalds
+tec_google_very_doodle	Expert	Google's very first Doodle, in 1998, told visitors the founders were away at which event?	Burning Man	Woodstock	The Olympics	Comic-Con
+tec_often_photo_ever	Expert	What is often called the first photo ever posted on the web, in 1992?	A comic pop band of CERN staff	Tim Berners-Lee's pet cat	The CERN particle accelerator	A map of Geneva
+tec_workplace_chat_app	Expert	The workplace chat app Slack grew out of a tool its makers built while working on what?	An online game	A dating site	A music app	A news site
+tec_became_instagram_app	Expert	Before it became Instagram, the app was a check-in service called what?	Burbn	Snapit	Photon	Instamatic
+tec_free_webmail_service	Expert	Which free webmail service of 1996 wrote some letters of its name in capitals to show off 'HTML'?	Hotmail	Yahoo Mail	AOL Mail	Rocketmail
+tec_often_said_thing	Expert	What is often said to be the first thing ever bought securely online, in 1994?	A Sting CD	A bottle of wine	A pair of jeans	A train ticket
+tec_fathers_internet_designing	Expert	Who are known as the 'fathers of the internet' for designing TCP/IP?	Vint Cerf and Bob Kahn	Bill Gates and Paul Allen	Larry Page and Sergey Brin	Steve Jobs and Steve Wozniak
+tec_settling_firefox_browser	Expert	Before settling on the name 'Firefox', the browser was released under which names?	Phoenix, then Firebird	Netscape, then Navigator	Mosaic, then Camino	Comet, then Meteor
+tec_instant_messenger_alert	Expert	Which instant messenger was famous for its 'Uh-oh!' alert sound?	ICQ	MSN Messenger	AIM	Yahoo Messenger
+tec_yahoo_founders_jokingly	Expert	Yahoo's founders jokingly said its name stood for 'Yet Another Hierarchical Officious' what?	Oracle	Organizer	Operator	Overview

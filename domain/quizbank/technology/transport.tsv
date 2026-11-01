@@ -1,0 +1,130 @@
+# Transport: cars, planes, trains, ships, bikes, rockets as vehicles, roads
+#
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+wh_bracia_wright	Easy	Who made the first successful powered airplane flight in 1903?	The Wright brothers	Louis Bleriot	Otto Lilienthal	Alberto Santos-Dumont
+trv2_curiosity	Easy	On which planet did the Curiosity rover land in 2012?	Mars	Venus	The Moon	Mercury
+tec_tesla_model3	Easy	Which company makes the Model S and Model 3 electric cars?	Tesla	Toyota	BMW	Ford
+tec_model_t	Easy	Which company built the Model T, the first mass-produced car?	Ford	General Motors	Chrysler	Cadillac
+tec_gps_stand	Easy	What does 'GPS' stand for?	Global Positioning System	General Positioning Satellite	Global Pathfinding Service	Geo Pointing System
+tec_car_maker_logo	Easy	Which car maker's logo is four interlocking rings?	Audi	Volkswagen	Opel	Mercedes-Benz
+tec_car_maker_logo_2	Easy	Which car maker's logo is a three-pointed star in a circle?	Mercedes-Benz	BMW	Audi	Porsche
+tec_car_maker_logo_3	Easy	Which car maker's logo is a black prancing horse on a yellow shield?	Ferrari	Lamborghini	Maserati	Alfa Romeo
+tec_japanese_car_maker	Easy	Which Japanese car maker makes the Prius hybrid?	Toyota	Honda	Nissan	Mazda
+tec_country_car_makers	Easy	Which country do the car makers Hyundai and Kia come from?	South Korea	Japan	China	Taiwan
+tec_country_car_maker	Easy	Which country does the car maker Fiat come from?	Italy	France	Spain	Germany
+tec_car_maker_builds_2	Easy	Which car maker builds the Mustang?	Ford	Chevrolet	Dodge	Toyota
+tec_country_car_maker_3	Easy	Which country does the car maker Renault come from?	France	Italy	Germany	Spain
+tec_suv_stand	Easy	What does 'SUV' stand for?	Sport utility vehicle	Super urban van	Safe universal vehicle	Standard utility van
+tec_stand_modern_cars	Easy	What does 'EV' stand for on modern cars?	Electric vehicle	Energy valve	Engine version	Extra volume
+tec_american_motorcycle_maker	Easy	Which American motorcycle maker from Milwaukee is famous for its big cruisers?	Harley-Davidson	Indian	Ducati	Triumph
+tec_animal_appears_tail	Easy	Which animal appears on the tail fins of Qantas planes?	A kangaroo	A koala	An emu	A kookaburra
+tec_car_maker_builds_5	Easy	Which car maker builds the Golf hatchback?	Volkswagen	Opel	Peugeot	Ford
+tec_car_maker_builds_6	Easy	Which car maker builds the tiny '500' city car?	Fiat	Renault	Seat	Skoda
+tec_lets_maglev_trains	Easy	What lets maglev trains float above the track?	Magnets	Air cushions	Hydrogen jets	Steam
+tec_henry_ford_joked	Easy	Henry Ford joked that customers could have the Model T in any colour, so long as it was which one?	Black	Red	Grey	Dark blue
+tec_segway	Easy	What is a Segway?	A self-balancing scooter	A folding electric bicycle	A robot lawnmower	A hoverboard with a seat
+tec_car_cruise_control	Easy	What does a car's cruise control do?	Keeps the car at a steady speed	Steers the car around bends	Parks the car by itself	Warns of speed cameras
+tec_concorde	Easy	Which supersonic airliner carried passengers from 1976 to 2003?	Concorde	The Tupolev Tu-144	The Boeing 747	The Airbus A380
+wld_gps_satelity	Medium	How does a phone's GPS find your position?	By timing signals from satellites	By asking nearby Wi-Fi only	By measuring the Earth's magnetism	By reading cell towers' names
+tec_benz	Medium	Who built the first practical petrol-powered car, in 1886?	Karl Benz	Henry Ford	Ferdinand Porsche	Rudolf Diesel
+tec_a380	Medium	What is the largest passenger airliner ever built?	The Airbus A380	The Boeing 747	The Boeing 777	The Antonov An-225
+tecx_czarna_skrzynka	Medium	What colour is an aircraft's 'black box' flight recorder actually painted?	Bright orange	Black	Silver	Yellow and black
+tecx_gps_wojsko	Medium	The GPS satellite system was originally built for whom?	The US military	Airlines	Car makers	Weather forecasters
+tecx_shinkansen	Medium	Japan's high-speed 'bullet train' network is known by which name?	Shinkansen	Maglev	TGV	Eurostar
+tecx_montgolfier	Medium	Which French brothers launched the first crewed hot-air balloon flight, in 1783?	The Montgolfier brothers	The Lumiere brothers	The Wright brothers	The Grimm brothers
+tecx_jumbo	Medium	Which airliner was nicknamed the 'Jumbo Jet'?	The Boeing 747	The Airbus A380	The Concorde	The Boeing 737
+tecx_spacex	Medium	Which company developed the reusable Falcon 9 rocket?	SpaceX	Blue Origin	Boeing	NASA
+tec_country_car_maker_2	Medium	Which country is the car maker Skoda from?	Czechia	Slovakia	Poland	Hungary
+tec_bmw_stand	Medium	What does BMW stand for?	Bavarian Motor Works	Berlin Machine Works	British Motor Wagons	Bavarian Mechanical Workshop
+tec_animal_appears_lamborghini	Medium	Which animal appears on the Lamborghini logo?	A bull	A horse	A lion	A snake
+tec_car_maker_builds	Medium	Which car maker builds the 911 sports car?	Porsche	Ferrari	Audi	Lotus
+tec_car_maker_builds_3	Medium	Which car maker builds the Corvette sports car?	Chevrolet	Ford	Dodge	Cadillac
+tec_car_maker_builds_4	Medium	Which car maker builds the Civic?	Honda	Toyota	Nissan	Mazda
+tec_country_car_maker_4	Medium	Which country does the car maker Jaguar come from?	Britain	Germany	Italy	Sweden
+tec_abs_stand_car	Medium	What does 'ABS' stand for in a car?	Anti-lock braking system	Automatic balance steering	Air bag system	Advanced battery saver
+tec_tractor_maker_started	Medium	Which tractor maker started building sports cars after a quarrel with Enzo Ferrari?	Ferruccio Lamborghini	Ferdinand Porsche	Ettore Bugatti	Alfieri Maserati
+tec_small_british_car	Medium	Which small British car starred in the chase of 'The Italian Job' (1969)?	Mini Cooper	Austin Healey	Morris Minor	Triumph Spitfire
+tec_italian_scooter_means	Medium	Which Italian scooter's name means 'wasp'?	Vespa	Lambretta	Piaggio	Aprilia
+tec_french_car_maker	Medium	Which French car maker built the 2CV, nicknamed the 'tin snail'?	Citroen	Renault	Peugeot	Simca
+tec_billionaire_aviator_built	Medium	Which billionaire aviator built the giant wooden flying boat nicknamed the 'Spruce Goose'?	Howard Hughes	William Boeing	Charles Lindbergh	Glenn Curtiss
+tec_concorde_built_jointly	Medium	Concorde was built jointly by France and which other country?	Britain	Germany	United States	Italy
+tec_letters_france_tgv	Medium	What do the letters of France's TGV trains mean in English?	High-speed train	Great green train	Very big train	Grand tour train
+tec_mary_anderson_invent	Medium	What did Mary Anderson invent in 1903 after watching a tram driver struggle to see through the snow?	The windscreen wiper	The car heater	The traffic light	The snow tyre
+tec_reflective_studs_percy	Medium	What are the reflective studs that Percy Shaw invented for road centre lines in 1934 called?	Cat's eyes	Owl lights	Glow-worms	Fox eyes
+tec_christopher_cockerell_proved	Medium	Christopher Cockerell proved his idea in 1955 with two tin cans and a vacuum cleaner blower. What had he invented?	The hovercraft	The jet ski	The hydrofoil	The jet engine
+tec_spacex_send_orbit	Medium	What did SpaceX send into orbit around the Sun as the test cargo on the first Falcon Heavy launch in 2018?	A red sports car	A wheel of cheese	A grand piano	A statue of a dog
+tec_airliner_windows_rounded	Medium	Why do airliner windows have rounded corners?	Sharp corners can cause cracks	They are cheaper to make	They give passengers a wider view	They seal better against rain
+tec_radio_distress_call	Medium	The radio distress call 'Mayday' comes from French words meaning what?	'Help me'	'Danger ahead'	'We are sinking'	'Clear the way'
+tec_engineer_designed_original	Medium	Which engineer designed the original Volkswagen Beetle?	Ferdinand Porsche	Karl Benz	Gottlieb Daimler	Ettore Bugatti
+tec_shuttle_prototype_never	Medium	Which shuttle prototype never flew to space and was named after a 'Star Trek' ship?	Enterprise	Atlantis	Endeavour	Pathfinder
+tec_spacecraft_became_private	Medium	Which spacecraft became the first private one to dock with the ISS, in 2012?	SpaceX Dragon	Boeing Starliner	Orion	Cygnus
+tec_nasa_mars_climate	Medium	Why was NASA's Mars Climate Orbiter lost in 1999?	Teams mixed up metric and imperial units	A meteor smashed into its antenna	Its solar panels failed to unfold	Its engine ran out of fuel too early
+tec_japanese_mitsubishi_refers	Medium	The Japanese name Mitsubishi refers to the company's logo of three what?	Diamonds	Stars	Rings	Swords
+tec_delorean_dmc_sports	Medium	The DeLorean DMC-12 sports car of 1981 had unpainted body panels made of what?	Stainless steel	Aluminium	Carbon fibre	Polished copper
+tec_airliners_dim_cabin	Medium	Why do airliners dim their cabin lights for take-off and landing at night?	So eyes adjust in case of an evacuation	To save power for the engines	To make the plane harder to spot	To help passengers fall asleep
+tec_two_pilots_airliners	Medium	Why do the two pilots on many airliners eat different meals?	So food poisoning cannot strike both	So the captain gets the better food	So they don't share a single tray	So one of them stays hungry and alert
+tec_lexus_luxury_brand	Medium	Lexus is the luxury brand of which car maker?	Toyota	Honda	Nissan	Mazda
+tec_company_builds_787	Medium	Which company builds the 787 'Dreamliner'?	Boeing	Airbus	Embraer	Bombardier
+tec_car_maker_built	Medium	Which car maker built James Bond's DB5 in 'Goldfinger'?	Aston Martin	Jaguar	Bentley	Lotus
+tec_animal_appears_badge	Medium	Which animal appears on the badge of Peugeot cars?	A lion	A horse	A bull	A jaguar
+tec_german_engineer_gave	Medium	Which German engineer gave his name to an engine that ignites fuel by compression?	Rudolf Diesel	Nikolaus Otto	Gottlieb Daimler	Karl Benz
+tec_car_maker_logo_4	Medium	Which car maker's logo is known as the 'blue oval'?	Ford	Volkswagen	Peugeot	Renault
+tec_company_builds_a320	Medium	Which company builds the A320 airliner?	Airbus	Boeing	Embraer	Bombardier
+tec_nato_phonetic_alphabet	Medium	In the NATO phonetic alphabet used by pilots, which word stands for the letter X?	X-ray	Xylophone	Xenon	Xerox
+tecx_volvo_pasy	Medium	Which car maker gave away its patent for the three-point seat belt so everyone could use it?	Volvo	Mercedes-Benz	Ford	Toyota
+tecx_saturn_v	Medium	Which giant rocket launched the Apollo astronauts to the Moon?	Saturn V	Atlas	Titan	Falcon 9
+tec_scottish_inventor_developed	Medium	Which Scottish inventor developed the first practical pneumatic tyre?	John Boyd Dunlop	Charles Goodyear	Andre Michelin	Karl Benz
+tec_bmw_blue_white	Medium	BMW's blue-and-white logo is often said to be a spinning propeller. Where do its colours really come from?	The flag of Bavaria	The sky over Munich	The colours of Prussia	The founder's racing team
+tec_toyota_krosna	Hard	Before making cars, the Toyota group built what?	Weaving looms	Bicycles	Sewing machines	Radios
+tecy_sikorsky	Hard	Which engineer built the first practical single-rotor helicopter, in 1939?	Igor Sikorsky	Juan de la Cierva	Howard Hughes	Frank Whittle
+tecy_gps_cztery	Hard	How many satellites must a phone hear, at minimum, to fix its position in 3D?	Four	One	Two	Twelve
+tec_peugeot_family_made	Hard	The Peugeot family made which kitchen item before cars, and the Peugeot name is still on it today?	Pepper mills	Toasters	Kettles	Cast-iron pans
+tec_world_traffic_light	Hard	The world's first traffic light, put up outside Parliament in London in 1868, was lit by what?	Gas	Electric bulbs	Candles	Limelight
+tec_1888_made_long	Hard	In 1888, who made the first long-distance car journey, taking her husband's new car without telling him?	Bertha Benz	Clara Ford	Mercedes Jellinek	Emma Daimler
+tec_car_maker_badge	Hard	Which car maker's badge shows a serpent swallowing a man?	Alfa Romeo	Maserati	Lancia	Ferrari
+tec_volvo_circle_arrow	Hard	Volvo's circle-and-arrow logo is the ancient symbol for which metal?	Iron	Copper	Gold	Lead
+tec_apollo_command_module	Hard	What was the name of the Apollo 11 command module?	Columbia	Eagle	Challenger	Discovery
+tec_rover_drive_mars	Hard	Which was the first rover to drive on Mars, in 1997?	Sojourner	Spirit	Opportunity	Curiosity
+tec_blackbird_spy_plane	Hard	Why did the SR-71 Blackbird spy plane leak fuel while parked on the ground?	Its panels only sealed once hot in flight	Its tanks were too costly to repair	Its fuel boiled in the sun	Crews overfilled it on purpose
+tec_east_germany_trabant	Hard	East Germany's Trabant car had a body made of what?	Cotton-reinforced plastic	Pressed cardboard	Recycled tin cans	Thin aluminium sheets
+tec_tesla_car_2008	Hard	Tesla's first car, the 2008 Roadster, was based on which British sports car?	The Lotus Elise	The Jaguar E-Type	The MG Midget	The Triumph Spitfire
+tec_ford_car_late	Hard	Which Ford car of the late 1950s flopped so badly that its name became a byword for failure?	The Edsel	The Pinto	The Thunderbird	The Fairlane
+tec_harry_beck_drew	Hard	Harry Beck drew the famous 1931 London Underground map, ignoring real distances. What was his job?	An engineering draughtsman	A professional mapmaker	A bus route planner	An architect
+tec_nasa_ingenuity_helicopter	Hard	NASA's Ingenuity helicopter carried a tiny piece of which famous aircraft to Mars?	The Wright brothers' Flyer	Lindbergh's Spirit of St Louis	Amelia Earhart's Electra	The first Boeing 747
+tec_smoking_banned_airliners	Hard	Smoking has been banned on airliners for decades, yet rules still require what by lavatory doors?	An ashtray	A cigar cutter	A matchbox holder	A pipe rack
+tec_air_canada_boeing	Hard	Why did an Air Canada Boeing 767, the 'Gimli Glider', run out of fuel in mid-air in 1983?	Its fuel was worked out in pounds, not kilograms	A fuel tank sprang a leak over the sea	The crew forgot to refuel at a stopover	Ground crew filled it with the wrong fuel
+tec_jet_powered_car	Hard	Which jet-powered car became the first land vehicle to break the sound barrier, in 1997?	ThrustSSC	Bluebird	Thrust2	Spirit of America
+tec_mercedes_car_brand	Hard	The Mercedes car brand was named after whom?	A car dealer's young daughter	Karl Benz's wife	Gottlieb Daimler's mother	A Spanish racing driver
+tec_italian_word_scuderia	Hard	What does the Italian word 'scuderia', as in Scuderia Ferrari, mean?	Stable	Shield	Workshop	Fortress
+tec_airline_founded_1919	Hard	Which airline, founded in 1919, is the oldest still flying under its original name?	KLM	Qantas	Lufthansa	Air France
+tec_plane_set_speed	Hard	Which plane set the speed record for a crewed jet-powered aircraft in 1976, still unbeaten?	SR-71 Blackbird	MiG-25 Foxbat	Concorde	F-15 Eagle
+tec_german_sports_car	Hard	Which German sports car maker has a black prancing horse at the centre of its crest?	Porsche	BMW	Audi	Mercedes-Benz
+tec_company_trademarked_jet	Hard	Which company trademarked the name 'Jet Ski'?	Kawasaki	Yamaha	Honda	Suzuki
+tec_swiss_rail_tunnel	Hard	Which Swiss rail tunnel, opened in 2016, runs 57 km under the Alps?	Gotthard Base Tunnel	Simplon Tunnel	Channel Tunnel	Mont Blanc Tunnel
+tec_swedish_car_maker	Hard	Which Swedish car maker's name is Latin for 'I roll'?	Volvo	Saab	Scania	Koenigsegg
+tec_built_cars_swedish	Hard	Before it built cars, what was the Swedish company Saab founded to make?	Military aircraft	Trucks	Sewing machines	Typewriters
+tec_car_best_selling	Hard	Which car is the best-selling nameplate of all time, with over 50 million sold?	Toyota Corolla	Volkswagen Golf	Volkswagen Beetle	Ford Model T
+tec_silver_lady_figurine	Hard	What is the name of the silver lady figurine on the bonnet of a Rolls-Royce?	The Spirit of Ecstasy	The Flying Lady of Derby	The Silver Ghost	The Winged Victory
+tec_six_stars_subaru	Hard	The six stars on Subaru's badge show which star cluster, whose Japanese name the brand carries?	The Pleiades	Orion's Belt	The Big Dipper	The Southern Cross
+tec_korean_car_maker	Hard	The Korean name of the car maker Hyundai means what?	Modernity	Three stars	Great power	New dawn
+tec_qantas_australia_national	Hard	The 'Q' in Qantas, Australia's national airline, stands for which place?	Queensland	Queenstown	Quebec	Qatar
+tec_car_brand_audi	Hard	The car brand Audi takes its name from a Latin word meaning what?	'Listen!'	'Gold'	'I drive'	'Four'
+tec_airliner_windows_tiny	Hard	Most airliner windows have a tiny hole in one of their panes. What is it for?	Balancing pressure between the panes	Letting fresh air into the cabin	Draining away rainwater	Stopping ice forming outside
+tec_car_maker_badge_2	Hard	Which car maker's badge is a 'double chevron'?	Citroen	Peugeot	Renault	Chevrolet
+mst_gps_relatywistyka	Hard	GPS satellites must correct their clocks for what?	Relativistic time differences	Magnetic interference	Solar wind drag	Atmospheric pressure
+tec_comet	Hard	Which was the world's first commercial jet airliner?	The de Havilland Comet	The Boeing 707	The Douglas DC-8	The Sud Aviation Caravelle
+tecy_elektryk_xix	Hard	In which century was the first electric car built?	The 19th	The 20th	The 21st	The 18th
+tec_sinclair_1985_british	Hard	What was the Sinclair C5 of 1985, a famous British flop?	An electric tricycle	A pocket calculator	A home computer	A car phone
+tecy_whittle	Expert	Which British engineer patented the turbojet engine in 1930?	Frank Whittle	Igor Sikorsky	Barnes Wallis	Isambard Kingdom Brunel
+tec_german_inventor_built	Expert	Which German inventor built the 'running machine', a two-wheeled ancestor of the bicycle, in 1817?	Karl Drais	Karl Benz	Gottlieb Daimler	Rudolf Diesel
+tec_horse_italian_sports	Expert	The horse on an Italian sports car badge was first painted on the plane of which World War I fighter ace?	Francesco Baracca	Manfred von Richthofen	Eddie Rickenbacker	Georges Guynemer
+tec_luxury_car_brand	Expert	Which luxury car brand grew out of a company that Henry Ford walked away from in 1902?	Cadillac	Lincoln	Buick	Packard
+tec_1896_english_driver	Expert	In 1896, an English driver got one of the first speeding fines. Roughly how fast was he going?	About 8 mph	About 20 mph	About 40 mph	About 70 mph
+tec_soviet_probe_land	Expert	Which Soviet probe was the first to land softly on another planet, Venus, in 1970?	Venera 7	Mars 3	Luna 9	Vega 1
+tec_toyoda_family_car	Expert	Why did the Toyoda family's car company take the name 'Toyota' in the 1930s?	In katakana it takes a lucky 8 strokes	A badge maker misspelled the name	'Toyoda' was taken by a rival firm	It means 'swift wheel' in Japanese
+tec_ariane_rocket_destroy	Expert	Why did the first Ariane 5 rocket destroy itself about 40 seconds after launch in 1996?	A number too big for its software	A bird hit one of its engines	Lightning struck the rocket	A fuel valve froze shut
+tec_1935_world_parking	Expert	In 1935, the world's first parking meters went up in which city?	Oklahoma City	New York	London	Chicago
+tec_jamais_contente_car	Expert	'La Jamais Contente', the first car to break 100 km/h, in 1899, was powered by what?	Electricity	Steam	Petrol	Diesel
+tec_mazda_started_out	Expert	Mazda started out in 1920 as a maker of what?	Cork	Bicycles	Weaving looms	Pianos
+tec_maserati_trident_badge	Expert	Maserati's trident badge was inspired by a fountain of Neptune in which city?	Bologna	Rome	Venice	Naples
+tec_cruise_control_invented	Expert	Cruise control was invented by Ralph Teetor, an engineer who had what unusual trait?	He was blind	He was deaf	He was colour-blind	He had lost both arms

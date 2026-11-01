@@ -139,6 +139,11 @@ object QuizSectionCatalog {
         QuizSection("biology/health", "Health & Medicine", "💊", QuizCategory.Biology),
         QuizSection("biology/plants", "Plants & Fungi", "🌿", QuizCategory.Biology),
         QuizSection("biology/food", "Food Science", "🍎", QuizCategory.Biology),
-        QuizSection("biology/life", "Cells, Genes & Evolution", "🧬", QuizCategory.Biology)
+        QuizSection("biology/life", "Cells, Genes & Evolution", "🧬", QuizCategory.Biology),
+        QuizSection("technology/computers", "Computers & Software", "💻", QuizCategory.Technology),
+        QuizSection("technology/internet", "Internet & Phones", "📱", QuizCategory.Technology),
+        QuizSection("technology/transport", "Transport", "🚗", QuizCategory.Technology),
+        QuizSection("technology/inventions", "Inventions & Gadgets", "💡", QuizCategory.Technology),
+        QuizSection("technology/companies", "Companies & Founders", "🏢", QuizCategory.Technology)
     )
 }

@@ -1,0 +1,139 @@
+# Companies & Founders: companies, brands and their founders, logos, business history of tech
+#
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+tec_alexa	Easy	Which company makes the Alexa voice assistant?	Amazon	Google	Apple	Microsoft
+tecx_bezos	Easy	Who founded Amazon?	Jeff Bezos	Elon Musk	Bill Gates	Mark Zuckerberg
+tecx_zuckerberg	Easy	Who started Facebook in his university dorm room?	Mark Zuckerberg	Jeff Bezos	Jack Dorsey	Larry Page
+tecx_garaz	Easy	According to legend, where were Apple's first computers put together?	In a garage	In a university lab	In a factory	In a hotel room
+tec_founded_spacex_2002	Easy	Who founded SpaceX in 2002?	Elon Musk	Jeff Bezos	Richard Branson	Bill Gates
+tec_company_makes_galaxy	Easy	Which company makes the Galaxy smartphones?	Samsung	Apple	Huawei	Sony
+tec_country_furniture_company	Easy	In which country was the furniture company IKEA founded?	Sweden	Denmark	Norway	Finland
+tec_country_phone_maker	Easy	In which country is the phone maker Nokia based?	Finland	Sweden	Norway	Denmark
+tec_company_makes_pixel	Easy	Which company makes Pixel smartphones?	Google	Samsung	Sony	Nokia
+tec_company_bought_instagram	Easy	Which company bought Instagram in 2012?	Facebook	Google	Twitter	Microsoft
+tec_brand_became_everyday	Easy	Which brand name became the everyday British word for a vacuum cleaner?	Hoover	Dyson	Electrolux	Miele
+tec_company_became_verb	Easy	Which company's name became a verb in dictionaries, meaning 'to search for something online'?	Google	Yahoo	Bing	Amazon
+tec_company_runs_starlink	Easy	Which company runs the Starlink satellite internet network?	SpaceX	Amazon	Boeing	NASA
+tec_item_clothing_steve	Easy	Which item of clothing did Steve Jobs famously wear at almost every product launch?	A black turtleneck	A grey hoodie	A tweed jacket	A bow tie
+tec_new_facebook_parent	Easy	What new name did Facebook's parent company take in 2021?	Meta	Alphabet	Horizon	Oculus
+tec_bought_twitter_2022	Easy	Who bought Twitter in 2022?	Elon Musk	Mark Zuckerberg	Jeff Bezos	Bill Gates
+tec_android_firma	Easy	Which company develops the Android operating system?	Google	Apple	Microsoft	Meta
+tec_company_makes_photoshop	Easy	Which company makes Photoshop?	Adobe	Microsoft	Apple	Corel
+tec_company_makes_kindle	Easy	Which company makes the Kindle e-readers?	Amazon	Apple	Sony	Barnes & Noble
+scicmp_firma_najstarsza	Medium	Which of these companies was founded first?	IBM	Microsoft	Apple	Google
+day_netflix_poczatki	Medium	Which streaming service started out renting DVDs by mail?	Netflix	Hulu	Disney+	Amazon Prime Video
+trv2_googol	Medium	Which company's name comes from a misspelling of 'googol', the number 1 followed by 100 zeros?	Google	Yahoo	Microsoft	Oracle
+tec_walkman	Medium	Which company launched the Walkman portable cassette player in 1979?	Sony	Panasonic	Philips	Toshiba
+tec_paul_allen	Medium	Who co-founded Microsoft with Bill Gates in 1975?	Paul Allen	Steve Wozniak	Steve Ballmer	Larry Ellison
+tec_wozniak	Medium	Who co-founded Apple with Steve Jobs and designed its first computer?	Steve Wozniak	Paul Allen	Tim Cook	Larry Page
+tec_youtube_google	Medium	Which company bought YouTube in 2006?	Google	Microsoft	Yahoo	Facebook
+tecx_chatgpt	Medium	Which company released ChatGPT in 2022?	OpenAI	Google	Microsoft	Meta
+tecx_pdf	Medium	Which company created the PDF file format?	Adobe	Microsoft	Apple	IBM
+tecy_amazon_strzalka	Medium	The arrow in Amazon's logo points from which letter to which?	A to Z	A to N	M to Z	O to N
+tec_company_owns_linkedin	Medium	Which company owns LinkedIn?	Microsoft	Google	Meta	Oracle
+tec_rocket_company_jeff	Medium	Which rocket company did Jeff Bezos found?	Blue Origin	SpaceX	Virgin Galactic	Rocket Lab
+tec_apple_product_went	Medium	Which Apple product first went on sale in 2010?	The iPad	The iPod	The iPhone	The Apple Watch
+tec_apple_gadget_2001	Medium	Which Apple gadget of 2001 promised '1,000 songs in your pocket'?	The iPod	The iPhone	The iPad	The Walkman
+tec_jeff_bezos_amazon	Medium	Jeff Bezos named Amazon after what?	The world's largest river	A warrior tribe from myth	His favourite book	A rainforest he visited
+tec_phone_maker_sold	Medium	Which phone maker sold the hugely popular Razr flip phone?	Motorola	Nokia	Samsung	Sony Ericsson
+tec_company_makes_thinkpad	Medium	Which company makes the ThinkPad laptops today?	Lenovo	IBM	Dell	HP
+tec_company_makes_surface	Medium	Which company makes the Surface tablets and laptops?	Microsoft	Apple	Samsung	Lenovo
+tec_company_makes_xperia	Medium	Which company makes the Xperia phones?	Sony	Samsung	LG	Huawei
+tec_company_invented_post	Medium	Which company invented the Post-it note?	3M	Xerox	Staples	Kodak
+tec_guitar_maker_created	Medium	Which guitar maker created the famous 'Stratocaster'?	Fender	Gibson	Ibanez	Yamaha
+tec_guitar_maker_produces	Medium	Which guitar maker produces the 'Les Paul' electric guitar?	Gibson	Fender	Gretsch	Rickenbacker
+tec_engineer_built_digital	Medium	Whose engineer built the first digital camera, in 1975, though the company stuck with film?	Kodak	Canon	Sony	Nikon
+tec_tech_company_long	Medium	Which tech company was long known for the motto 'Don't be evil'?	Google	Apple	Microsoft	Amazon
+tec_company_ran_1997	Medium	Which company ran the famous 1997 advertising campaign 'Think different'?	Apple	IBM	Microsoft	Sony
+tec_company_early_motto	Medium	Which company's early motto for its programmers was 'Move fast and break things'?	Facebook	Google	Amazon	Twitter
+tec_phone_maker_used	Medium	Which phone maker used the slogan 'Connecting People'?	Nokia	Motorola	Ericsson	Siemens
+tec_computer_company_long	Medium	Which computer company has long been nicknamed 'Big Blue'?	IBM	Intel	Dell	Hewlett-Packard
+tec_2000_netflix_offered	Medium	In 2000, Netflix offered to sell itself for $50 million to which company, which turned it down?	Blockbuster	Walmart	Amazon	Disney
+tec_chinese_tech_company	Medium	Which Chinese tech company makes the Mate and P-series smartphones?	Huawei	Xiaomi	Lenovo	Oppo
+tec_airbnb_comes_founders	Medium	Airbnb's name comes from what its founders first offered guests in their San Francisco flat. What was it?	Air mattresses	Rooftop tents	Airport pickups	Hot-air balloon rides
+tec_sony_comes_partly	Medium	The name Sony comes partly from 'sonus', the Latin word for what?	Sound	Sun	Speed	Star
+tec_company_headquarters_giant	Medium	Which company's headquarters is a giant ring-shaped building nicknamed 'the spaceship'?	Apple	Google	Facebook	Amazon
+tec_microsoft_headquarters_lie	Medium	Microsoft's headquarters lie in Redmond, near which big US city?	Seattle	San Francisco	Boston	Chicago
+tec_company_created_2015	Medium	Which company was created in 2015 to become the parent of Google?	Alphabet	Meta	Oracle	Nexus
+tec_1986_steve_jobs	Medium	In 1986, Steve Jobs bought the computer graphics division of George Lucas's company. What did it become?	Pixar	DreamWorks	Industrial Light & Magic	Blue Sky Studios
+tec_company_makes_roomba	Medium	Which company makes the Roomba robot vacuum?	iRobot	Dyson	Samsung	Philips
+tec_swedish_company_stands	Medium	Which Swedish company's name stands for its founder's initials and his farm and village?	IKEA	Volvo	Saab	Ericsson
+tec_phrase_steve_jobs	Medium	Which phrase did Steve Jobs famously use to unveil a final surprise at the end of his keynotes?	'One more thing'	'But wait, there's more'	'And now, the best part'	'Here's the big news'
+tec_1977_1998_apple	Medium	From 1977 to 1998, Apple's logo was decorated with what?	Rainbow stripes	Gold leaf	A chequered pattern	A small worm
+tec3_google_zalozyciele	Medium	Who founded Google?	Larry Page and Sergey Brin	Bill Gates and Paul Allen	Steve Jobs and Steve Wozniak	Jeff Bezos and Elon Musk
+org_amazon_ksiazki	Medium	Amazon spent its first years selling almost nothing but what?	Books	Music CDs	Computer parts	Toys
+org_facebook_harvard	Medium	Facebook was open only to students of which university at launch?	Harvard	Stanford	MIT	Yale
+tec_spotify	Medium	Which music streaming service was founded in Sweden?	Spotify	SoundCloud	Deezer	Tidal
+tec_camera_company_became	Medium	Which camera company's name became a byword for a perfect photo moment?	Kodak	Canon	Nikon	Polaroid
+tec_former_english_teacher	Medium	Which former English teacher founded the Chinese e-commerce giant Alibaba?	Jack Ma	Pony Ma	Ren Zhengfei	Robin Li
+tec_american_businessman_made	Medium	Which American businessman made the disposable razor blade a success?	King C. Gillette	Henry Ford	Isaac Singer	George Eastman
+tec_imac_i	Medium	According to Steve Jobs, what did the 'i' in iMac first stand for?	Internet	Intelligent	Interface	Innovation
+tec_minecraft_microsoft	Medium	Which company bought the makers of Minecraft in 2014?	Microsoft	Sony	Nintendo	Electronic Arts
+tecx_microsoft_nazwa	Medium	The name Microsoft is a blend of which two words?	Microcomputer and software	Microchip and soft drink	Microwave and software	Micro and softness
+tec_apple_computer_fought	Medium	Apple Computer fought a long legal battle over its name with the record company of which band?	The Beatles	The Rolling Stones	Queen	Pink Floyd
+tec_trinitron_picture_tube	Medium	Trinitron, a TV picture tube famous for its sharp image from 1968, was made by which company?	Sony	Panasonic	Philips	Toshiba
+trv2_nintendo_karty	Hard	What did Nintendo originally make when it was founded in 1889?	Playing cards	Toys	Radios	Bicycles
+org_nokia_papier	Hard	Nokia began in 1865 as a mill producing what?	Paper	Rubber boots	Copper wire	Gunpowder
+org_google_backrub	Hard	Before it was renamed, Google ran under what project name?	BackRub	PageRank	WebCrawl	Stanford Search
+org_samsung_gwiazdy	Hard	The name Samsung means what in Korean?	Three stars	Bright future	Great river	New dawn
+tec_xerox	Hard	Which company's research lab invented the mouse-driven desktop interface that inspired the Mac?	Xerox	IBM	Microsoft	Atari
+tec_cd_philips	Hard	Which company developed the compact disc together with Sony?	Philips	Panasonic	Toshiba	Samsung
+tec_nike	Hard	Which sportswear company started out as 'Blue Ribbon Sports'?	Nike	Adidas	Reebok	Puma
+tec_bill_hewlett_dave	Hard	How did Bill Hewlett and Dave Packard decide whose name would come first in 'Hewlett-Packard'?	A coin toss	Their ages	A game of chess	Who put in more money
+tec_google_big_storage	Hard	Google's first big storage unit, at Stanford, had a case built out of what?	LEGO bricks	A pizza box	A shoebox	An old filing cabinet
+tec_according_maker_voice	Hard	According to its maker, the voice assistant Alexa was named partly in honour of what?	The Library of Alexandria	Alexander the Great	Alexander Graham Bell	A founder's daughter
+tec_roughly_facebook_pay	Hard	Roughly how much did Facebook pay for WhatsApp in 2014?	About $19 billion	About $1 billion	About $6 billion	About $60 billion
+tec_apple_1983_computer	Hard	Apple's 1983 computer 'Lisa' shared its name with whom?	Steve Jobs's daughter	Steve Wozniak's mother	The Mona Lisa	Apple's first customer
+tec_computer_company_steve	Hard	Which computer company did Steve Jobs found after he was pushed out of Apple in 1985?	NeXT	Palm	Be Inc.	General Magic
+tec_started_apple_two	Hard	Before they started Apple, its two founders sold illegal 'blue boxes'. What did they do?	Made free long-distance phone calls	Unscrambled cable TV channels	Copied cassette tapes	Cracked arcade machines
+tec_charles_goodyear_connection	Hard	What was Charles Goodyear's connection to the Goodyear tyre company?	It was named after him long after he died	He founded it with his sons after the Civil War	He sold it his rubber patents just before he died	He ran its first factory in Akron, Ohio
+tec_google_office_garage	Hard	Google's first office was a garage rented from Susan Wojcicki, who later ran which company?	YouTube	Yahoo	Facebook	Twitter
+tec_company_invented_compact	Hard	Which company invented the compact cassette tape in 1963?	Philips	Sony	Grundig	Telefunken
+tec_company_founders_started	Hard	Which company's founders started it in a garage in Palo Alto in 1939?	Hewlett-Packard	Apple	Google	Intel
+tec_company_made_commercial	Hard	Which company made the first commercial hard disk drive in 1956?	IBM	Seagate	Western Digital	Hewlett-Packard
+tec_1960s_turned_video	Hard	In the 1960s, before it turned to video games, Nintendo briefly ran which business?	A taxi company	A shipping line	A car factory	An airline
+tec_sega_began_service	Hard	Sega began as 'Service Games', bringing jukeboxes and slot machines to which customers?	US military bases	Las Vegas casinos	Cruise ships	Tokyo railway stations
+tec_steve_jobs_lured	Hard	Steve Jobs lured John Sculley to Apple in 1983 by asking whether he wanted to spend the rest of his life selling what?	Sugared water	Cigarettes	Life insurance	Breakfast cereal
+tec_apple_handheld_1993	Hard	Which Apple handheld of 1993 was mocked for its poor handwriting recognition?	The Newton	The Lisa	The Pippin	The Cube
+tec_early_amazon_staff	Hard	Early Amazon staff worked at desks made from what, to save money?	Wooden doors	Shipping pallets	Old school benches	Packing crates
+tec_electronics_giant_originally	Hard	The 'LG' in the electronics giant's name originally stood for what?	Lucky-Goldstar	Life's Good	Light and Glass	Lee Group
+tec_atari_founder_later	Hard	Which Atari co-founder later started the Chuck E. Cheese restaurant chain?	Nolan Bushnell	Ted Dabney	Steve Jobs	Ralph Baer
+tec_company_invented_floppy	Hard	Which company invented the floppy disk?	IBM	Sony	Apple	Xerox
+tecy_newton_logo	Hard	Which company's very first logo showed Isaac Newton sitting under a tree?	Apple	Microsoft	IBM	Intel
+tec_founded_netflix_led	Hard	Who co-founded Netflix and led it for over 20 years?	Reed Hastings	Jeff Bezos	Steve Jobs	Brian Chesky
+tec_founded_chip_maker	Hard	Who co-founded the chip maker Nvidia in 1993 and became its long-time CEO?	Jensen Huang	Lisa Su	Andy Grove	Gordon Moore
+tec_jeff_bezos_choose	Hard	Which name did Jeff Bezos first choose for Amazon?	Cadabra	Relentless	Bookworld	Sesame
+tec_british_designer_shaped	Hard	Which British designer shaped the look of Apple's iMac, iPod and iPhone?	Jony Ive	Dieter Rams	James Dyson	Terence Conran
+tec_2008_steve_jobs	Hard	In 2008, Steve Jobs showed how thin the first MacBook Air was by pulling it out of what?	An office envelope	A pizza box	A school folder	A magazine
+tec_company_makes_gorilla	Hard	Which company makes Gorilla Glass, the tough glass used on many phone screens?	Corning	Samsung	Foxconn	Saint-Gobain
+tec_youtube_founded_2005	Hard	YouTube was founded by three former employees of which company?	PayPal	Google	Yahoo	Apple
+tec_chip_maker_intel	Hard	The chip maker Intel takes its name from which two words?	Integrated electronics	Intelligent telephones	International telegraph	Internet technology
+tec_network_company_cisco	Hard	The network company Cisco takes its name from which city?	San Francisco	San Diego	Sacramento	Santa Clara
+tec_apple_1984_advert	Hard	Apple's Orwell-inspired TV advert launching the Macintosh was directed by which film-maker?	Ridley Scott	Steven Spielberg	George Lucas	James Cameron
+tec_apple_marketing_images	Hard	Apple's marketing images of iPhones almost always show which time on the screen?	9:41	10:10	12:00	7:30
+tec_microsoft_music_player	Hard	Which Microsoft music player was launched in 2006 to rival the iPod?	Zune	Zen	Rio	Sansa
+tec_microsoft_boss_famously	Hard	Which Microsoft boss famously bounced around a stage chanting 'Developers, developers, developers'?	Steve Ballmer	Bill Gates	Satya Nadella	Paul Allen
+tec_roomba_irobot_made	Hard	Before the Roomba, iRobot made robots for what?	Bomb disposal	Car factories	Space probes	Toy shops
+tec_chip_maker_nvidia	Hard	The chip maker Nvidia takes its name from 'invidia', the Latin word for what?	Envy	Vision	Speed	Light
+tec_tony_fadell_often	Hard	Tony Fadell, often called a father of the iPod, later co-founded which smart thermostat company?	Nest	Ring	Hive	Ecobee
+tec_sony_ryzowar	Expert	What was the Sony company's first product, which flopped?	A rice cooker	A transistor radio	A tape recorder	A calculator
+tec_blackberry	Expert	Which Canadian company made BlackBerry phones?	Research In Motion	Nortel	Sierra Wireless	Corel
+tec_hewlett_packard_big	Expert	Hewlett-Packard's first big customer bought eight of its audio oscillators to make which film?	Fantasia	Snow White	Pinocchio	Bambi
+tec_apple_little_third	Expert	Apple's little-known third co-founder, Ronald Wayne, sold his 10% stake in 1976 for how much?	$800	$8,000	$80,000	$800,000
+tec_microsoft_very_product	Expert	Microsoft's very first product was a version of BASIC for which home computer kit?	The Altair 8800	The Apple I	The Commodore PET	The ZX Spectrum
+tec_software_company_adobe	Expert	The software company Adobe takes its name from what?	A creek behind a founder's house	An old Spanish mission	A clay used in early printing	The founders' first office building
+tec_camera_maker_canon	Expert	The camera maker Canon took its name from its first prototype, 'Kwanon', named after what?	A Buddhist goddess of mercy	A samurai warrior	A Japanese warship	A sacred mountain
+tec_company_sold_quartz	Expert	Which company sold the first quartz wristwatch, the Astron, in 1969?	Seiko	Casio	Citizen	Omega
+tec_microsoft_two_founders	Expert	Before Microsoft, its two founders ran a small company that analysed data from what?	Road traffic counters	Stock market tickers	Weather balloons	School exam papers
+tec_apple_command_key	Expert	Apple's 'Command' key symbol was borrowed from signs in which country, marking places of interest?	Sweden	Japan	Germany	Switzerland
+tec_early_mac_alert	Expert	Why was an early Mac alert sound named 'Sosumi'?	A joke on 'so sue me' during a trademark fight	It was a Japanese word for 'beep'	It was the name of an engineer's cat	It spelled a secret message backwards
+tec_chinese_phone_maker	Expert	The name of the Chinese phone maker Xiaomi literally means what?	Millet	Little rice cake	Small dragon	Bright star
+tec_price_apple_computer	Expert	What was the price of the Apple I computer when it went on sale in 1976?	$666.66	$99.99	$1,299	$2,495
+tec_video_game_company	Expert	The video game company Atari took its name from a term in which board game?	Go	Chess	Shogi	Mahjong
+tec_motorola_coined_1930	Expert	The name Motorola was coined in 1930 for which of the company's products?	A car radio	A motorbike horn	A cine projector	A record player
+tec_ipod_said_inspired	Expert	The name 'iPod' is said to have been inspired by a line from which film?	'2001: A Space Odyssey'	'Star Wars'	'Alien'	'Blade Runner'
+tec_samsung_began_1938	Expert	Samsung began in 1938 as a small shop trading in what?	Dried fish and noodles	Silk and cotton	Bicycle parts	Valve radios
+tec_nintendo_often_translated	Expert	The name Nintendo is often translated as what?	'Leave luck to heaven'	'Play with all your heart'	'Games for every family'	'The house of small joys'
+tec_netflix_founder_said	Expert	Netflix's co-founder has said a $40 late fee for which rented film gave him the idea for the company?	'Apollo 13'	'Titanic'	'Jurassic Park'	'Forrest Gump'
+tec_company_2000_super	Expert	Which company's 2000 Super Bowl advert starred a sock puppet, months before the firm went bust?	Pets.com	Webvan	eToys	Boo.com
+tec_apple_secret_codename	Expert	What was Apple's secret codename for the first iPhone project?	Purple	Orange	Phoenix	Marble

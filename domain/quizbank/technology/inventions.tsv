@@ -1,0 +1,133 @@
+# Inventions & Gadgets: everyday inventions and gadgets, household tech, engineering marvels, materials, photography, radio, TV sets
+#
+id	difficulty	prompt	correct	wrong1	wrong2	wrong3
+day2_gasnica	Easy	What should you never use to put out a burning pan of oil?	Water	A lid	A fire blanket	Baking soda
+tec_zarowka	Easy	Who is credited with popularizing the light bulb?	Thomas Edison	Nikola Tesla	Alexander Bell	James Watt
+wh_gutenberg_wynalazek	Easy	What did Johannes Gutenberg popularize in Europe?	Movable-type printing	Paper	The hydraulic press	Printer's ink
+scicmp_co_pierwsze_wynalazek	Easy	Which of these came first?	The printing press	The steam engine	The telephone	Radio
+tec_qwerty_nazwa	Easy	Where does the QWERTY keyboard get its name?	The first six letters of its top row	The surname of its inventor	A Greek word meaning 'to type'	The company that first made it
+tec_roomba	Easy	What is a Roomba?	A robot vacuum cleaner	A smart speaker	A drone	A video game console
+tec_pin_stand_bank	Easy	What does 'PIN' stand for, as in a bank card PIN?	Personal identification number	Private internet number	Protected identity note	Personal input number
+tec_stand_television	Easy	What does 'HD' stand for, as in HD television?	High definition	Home display	Hyper digital	Half-depth
+tec_louis_braille_blinded	Easy	Louis Braille, blinded as a child, is famous for inventing what?	A raised-dot alphabet	A hearing aid	A typewriter	A sign language
+tec_kind_media_original	Easy	What kind of media did the original 1979 Sony Walkman play?	Cassette tapes	CDs	Vinyl records	MiniDiscs
+tec_wipe_drawing_off	Easy	How do you wipe a drawing off an Etch A Sketch?	Turn it over and shake it	Press the reset button	Wipe it with a damp cloth	Blow hard on the screen
+tec_apple_airpods	Easy	What are Apple's AirPods?	Wireless earbuds	Smart glasses	Fitness bands	Phone chargers
+tec_shouldn_put_metal	Easy	Why shouldn't you put a metal fork in a microwave oven?	It can cause sparks	It makes the food toxic	It turns the fork magnetic	It switches the oven off
+tec_1980s_boombox	Easy	In the 1980s, what was a 'boombox'?	A big portable stereo	A home drum machine	A loud car alarm	A jukebox in a bar
+tec_vcr_let_home	Easy	What did a VCR let you do at home?	Record TV shows on tape	Play music from vinyl	Make video calls	Print photos from film
+tecx_sos	Easy	In Morse code, which distress signal is sent as three dots, three dashes, three dots?	SOS	MAYDAY	HELP	CQD
+tec_new_york_skyscraper	Easy	Which New York skyscraper has 102 floors and was the world's tallest for nearly 40 years?	The Empire State Building	The Chrysler Building	One World Trade Center	The Woolworth Building
+tec_kind_energy_photovoltaic	Easy	Which kind of energy do photovoltaic panels turn into electricity?	Sunlight	Wind	Heat from the ground	Moving water
+tec_still_say_dial	Easy	Why do we still say we 'dial' a phone number?	Old phones had a rotating dial	Calls were once timed on a dial	Operators turned a dial to connect	It comes from the word 'dialogue'
+scicmp_wynalazek_najnowszy	Medium	Which of these was invented most recently?	The smartphone	The transistor	The laser	The microprocessor
+org_mikrofalowka_batonik	Medium	The microwave oven was discovered when an engineer noticed what melting in his pocket?	A chocolate bar	A plastic comb	A wax crayon	A rubber band
+org_rzep_ost	Medium	Velcro was invented after its creator studied what stuck to his dog's fur?	Burrs	Pine resin	Thistledown	Wet clay
+tec_vhs	Medium	Which videotape format won the 1980s 'format war' against Betamax?	VHS	LaserDisc	Video 2000	Betacam
+tec_tesla_wynalazca	Medium	Which inventor championed alternating current and has a unit of magnetism named after him?	Nikola Tesla	Thomas Edison	Michael Faraday	James Watt
+tec_4k	Medium	What does '4K' refer to on a TV or monitor?	About 4,000 pixels across	4 kilograms of weight	4,000 colours	Four times the sound
+tec_post_it	Medium	The Post-it note grew out of a failed attempt to make what?	A super-strong glue	A new kind of paper	A fire-proof tape	A shopping list pad
+tec_led_stand	Medium	What does 'LED' stand for?	Light-emitting diode	Low-energy display	Laser electric device	Light energy distributor
+tec_atm_stand_cash	Medium	What does 'ATM' stand for, as in a cash machine?	Automated teller machine	Automatic transfer method	Any-time money	Account transaction module
+tec_inventor_created_phonograph	Medium	Which inventor created the phonograph, the first machine to record sound?	Thomas Edison	Alexander Graham Bell	Emile Berliner	Nikola Tesla
+tec_cctv_stand	Medium	What does 'CCTV' stand for?	Closed-circuit television	Central camera television	Coded colour TV	Computer-controlled TV
+tec_silly_putty_accident	Medium	Silly Putty was an accident, discovered during wartime attempts to make a substitute for what?	Rubber	Glass	Steel	Leather
+tec_super_strong_fibre	Medium	Which super-strong fibre, used in bulletproof vests, did chemist Stephanie Kwolek invent at DuPont?	Kevlar	Nylon	Teflon	Lycra
+tec_james_dyson_built	Medium	James Dyson built over 5,000 prototypes before perfecting which invention?	The bagless vacuum cleaner	The bladeless fan	The hand dryer	The hair straightener
+tec_revolutions_per_minute	Medium	At how many revolutions per minute does a standard LP vinyl record spin?	33 1/3	45	78	60
+tec_google_gadget_2013	Medium	Which Google gadget of 2013 put a tiny display just in front of the wearer's eye?	Google Glass	Google Cardboard	Google Lens	Google Nest
+tec_willis_carrier_1902	Medium	Willis Carrier's 1902 machine, built to stop paper wrinkling in a humid printing plant, grew into what?	Air conditioning	Central heating	The electric fan	The tumble dryer
+tec_according_popular_story	Medium	According to the popular story, the Popsicle was invented by an 11-year-old who left what outside on a cold night?	A drink with a stick in it	A jar of honey and a spoon	A bowl of ice cream	A bottle of milk
+tec_disc_format_beat	Medium	Which disc format beat HD DVD in the high-definition format war?	Blu-ray	DVD-Audio	UMD	VCD
+tec_hungarian_born_inventor	Medium	Which Hungarian-born inventor created the ballpoint pen in the 1930s?	Laszlo Biro	Erno Rubik	Laszlo Jozsef	Janos Irinyi
+tec_spray_lubricant_refer	Medium	What does the '40' in the name of the spray lubricant WD-40 refer to?	The 40th attempt at its formula	The year 1940, when it launched	Its 40 secret ingredients	The 40 uses printed on the can
+tec_noise_cancelling_headphones	Medium	How do noise-cancelling headphones quieten the drone of a plane engine?	They play a mirror-image sound wave	They block sound with thick foam	They lower the air pressure in your ears	They mask it with white noise
+tec_london_millennium_bridge	Medium	Why was London's Millennium Bridge shut just two days after it opened in 2000?	It swayed as crowds walked across	A ship hit one of its piers	Its main cable began to crack	Its lights dazzled boat crews
+tec_power_symbol_buttons	Medium	The power symbol on many buttons, a line through a broken circle, comes from which two digits?	1 and 0	0 and 0	1 and 1	6 and 9
+tec_words_ever_recorded	Medium	What were the first words ever recorded on the phonograph, in 1877?	'Mary had a little lamb'	'Mr Watson, come here'	'Hello, can you hear me?'	'God save the Queen'
+tec_ferris_wheel_1893	Medium	The first Ferris wheel, at the 1893 Chicago world's fair, was built to outdo which landmark?	The Eiffel Tower	Big Ben	The Statue of Liberty	The Crystal Palace
+tec_1999_talking_toy	Medium	In 1999, which talking toy was banned from offices of the US National Security Agency, over fears it could record secrets?	Furby	Tamagotchi	Teddy Ruxpin	Tickle Me Elmo
+tec_bakelite_invented_1907	Medium	What was Bakelite, invented in 1907?	The first fully synthetic plastic	The first stainless steel	An early type of glass	The first artificial rubber
+tec_typewriter_shift_key	Medium	On a typewriter, what did the Shift key physically shift?	The type position	The ribbon colour	The line spacing	The margin
+tec_alessandro_volta_invent	Medium	What did Alessandro Volta invent in 1800?	The electric battery	The light bulb	The telegraph	The electric motor
+tec_invented_practical_revolver	Medium	Who invented the first practical revolver, patented in 1836?	Samuel Colt	Richard Gatling	Oliver Winchester	Eliphalet Remington
+tec_phone_keypad_sits	Medium	On a phone keypad, 1 sits in the top-left corner. Which number is there on a calculator?	7	9	0	3
+wh_radio_marconi	Medium	Who carried out the first transatlantic radio transmission?	Guglielmo Marconi	Nikola Tesla	Heinrich Hertz	Lee de Forest
+cur_qwerty	Medium	According to the popular story, why was the QWERTY layout designed?	To stop typewriter keys from jamming	To make typing as fast as possible	To put the commonest letters together	To match the alphabet
+tecx_otis	Medium	Elisha Otis made skyscrapers practical by inventing what?	A safety brake for lifts	Steel girders	The revolving door	Reinforced concrete
+tec_engineer_designed_iron	Medium	Which engineer designed the iron framework inside the Statue of Liberty?	Gustave Eiffel	Isambard Kingdom Brunel	John Roebling	Ferdinand de Lesseps
+tec_american_inventor_froze	Medium	Which American inventor froze food quickly, creating frozen food in the 1920s?	Clarence Birdseye	Willis Carrier	Frederick Jones	Jacob Perkins
+tec_brought_down_tacoma	Medium	What brought down the Tacoma Narrows Bridge, nicknamed 'Galloping Gertie', in 1940?	Wind made it twist apart	An earthquake	A ship collision	Overloaded trucks
+tecx_tranzystor	Medium	Which tiny invention of 1947, from Bell Labs, made modern electronics possible?	The transistor	The microchip	The vacuum tube	The laser
+day_luthier_buduje	Hard	What does a luthier build?	Stringed instruments	Organs	Drums	Brass instruments
+org_bubble_tapeta	Hard	Bubble wrap was first put on sale as which product?	Wallpaper	Greenhouse insulation	A children's toy	Mattress padding
+org_playdoh_czyscik	Hard	Play-Doh was originally sold as a cleaner for what?	Wallpaper	Car upholstery	Silverware	Chalkboards
+org_slinky_sprezyna	Hard	The Slinky toy came from an engineer's work on springs meant to steady what?	Ship instruments	Aircraft landing gear	Railway carriages	Factory lathes
+org_faks_przed_telefonem	Hard	Which of these was patented first?	The fax machine	The telephone	The radio	The light bulb
+tec_baird	Hard	Who demonstrated the first working television, in 1926?	John Logie Baird	Philo Farnsworth	Guglielmo Marconi	Thomas Edison
+tec_kod_kreskowy	Hard	What was the first product ever scanned with a barcode, in 1974?	A pack of chewing gum	A can of soup	A box of cereal	A bottle of cola
+tec_rubik_cel	Hard	Why did Erno Rubik first build his famous cube?	To teach students about 3D shapes	As a puzzle for NASA astronauts	As a toy for his own children	As a new kind of safe lock
+tecx_bell_slowa	Hard	What were the first words spoken over Bell's telephone?	'Mr Watson, come here'	'Hello, can you hear me?'	'What hath God wrought'	'Testing, one, two, three'
+tecx_bankomat	Hard	In which country did the world's first cash machine open, in 1967?	Britain	The USA	Japan	Switzerland
+tec_laser_stand	Hard	What does 'laser' stand for?	Light Amplification by Stimulated Emission of Radiation	Light Activated Source of Energetic Radiation	Linear Amplified Signal of Emitted Rays	Long-range Amplified Source of Electronic Rays
+tec_dvd_stand	Hard	What does 'DVD' stand for?	Digital Versatile Disc	Digital Video Drive	Direct Visual Data	Dual Video Disc
+tec_skyscraper_world_tallest	Hard	Which skyscraper was the world's tallest building just before the Burj Khalifa?	Taipei 101	The Petronas Towers	The Shanghai Tower	The Sears Tower
+tec_sony_robot_dog	Hard	What was the name of Sony's robot dog, first sold in 1999?	AIBO	ASIMO	Furby	Rover
+tec_super_glue_stumbled	Hard	Super Glue was first stumbled upon by researchers trying to make what?	Clear plastic gun sights	Waterproof bandages	Artificial skin	Rubber shoe soles
+tec_edwin_land_invented	Hard	Edwin Land invented the Polaroid instant camera after his young daughter asked what?	Why she could not see the photo at once	Why photos were not in colour	Why cameras were so heavy	Whether she could take one herself
+tec_inventor_cash_machine	Hard	The inventor of the cash machine is said to have chosen a four-digit PIN instead of six for what reason?	His wife could only remember four	Bank computers held only four	Six took too long to type	Keypads then had only four keys
+tec_teflon_discovered_accident	Hard	Teflon was discovered by accident in 1938 by a chemist working on what?	Refrigerator gases	A stronger glue	Rocket fuel	Waterproof paint
+tec_walter_hunt_invented	Hard	Walter Hunt invented which everyday item in 1849, then sold the patent for $400 to pay off a debt?	The safety pin	The paper clip	The zip	The clothes peg
+tec_frisbee	Hard	The Frisbee is named after what?	A pie company whose tins students threw	A famous college football coach	The inventor's pet terrier	A Danish word meaning 'flying plate'
+tec_auto_tune_inventor	Hard	Auto-Tune's inventor came up with it using maths he had developed for which industry?	Oil exploration	Aircraft design	Medical scanning	Space flight
+tec_oled_screens_stand	Hard	In 'OLED' screens, what does the 'O' stand for?	Organic	Optical	Oxide	Ordered
+tec_englishman_process_made	Hard	Which Englishman's process made cheap steel possible in 1856?	Henry Bessemer	Abraham Darby	Andrew Carnegie	John Wilkinson
+tec_shopping_trolley_appeared	Hard	When the shopping trolley appeared in 1937, shoppers avoided it. What did its inventor do?	Hired people to push trolleys around	Made the trolleys compulsory	Painted every trolley gold	Gave away a toy with each one
+tec_chemist_designed_tall	Hard	When the chemist who designed the famous tall tube for stacked crisps died in 2008, where were some of his ashes buried?	In one of those crisp tubes	In an urn shaped like a crisp	Under the factory floor	In a potato field
+tec_harry_brearley_credited	Hard	Harry Brearley is credited with discovering stainless steel in 1913 in which city famous for its cutlery?	Sheffield	Solingen	Birmingham	Manchester
+tec_jacuzzi_whirlpool_bath	Hard	The Jacuzzi whirlpool bath grew out of a pump that the Jacuzzi brothers adapted for whom?	A family toddler with arthritis	Racehorses with sore legs	Injured war veterans	A famous baseball star
+tec_chainsaws_made_scotland	Hard	The first chainsaws, made in Scotland in the late 1700s, were meant for which job?	Cutting bone in surgery	Felling trees	Cutting blocks of ice	Carving whale blubber
+tec_stylus_etch_sketch	Hard	What does the stylus of an Etch A Sketch scrape off the back of the screen to draw a line?	Aluminium powder	Iron filings	Chalk dust	Graphite
+tec_2004_report_found	Hard	A 2004 report found what about most pedestrian 'walk' buttons in New York City?	They no longer did anything	They gave walkers longer to cross	They had been fitted with cameras	They only worked at night
+tec_contrary_popular_myth	Hard	Contrary to the popular myth, how did NASA get its famous 'space pen'?	A private company paid to develop it	NASA spent millions designing it	It was copied from a Soviet design	A schoolboy invented it in a contest
+tec_transatlantic_telegraph_cable	Hard	The first transatlantic telegraph cable, laid in 1858, worked for how long before failing?	About three weeks	About three hours	About three years	About thirty years
+tec_1884_barnum_led	Hard	In 1884, P. T. Barnum led 21 elephants across New York's new Brooklyn Bridge. Why?	To show the public it was safe	To celebrate the circus's anniversary	To test it before it opened	To win a bet with the engineer
+tec_film_electronic_toy	Hard	In the film 'E.T.', which electronic toy does the alien use to build a device to 'phone home'?	Speak & Spell	Simon	Lite-Brite	Etch A Sketch
+tec_official_colour_golden	Hard	What is the official colour of the Golden Gate Bridge?	International orange	Golden yellow	Rust red	Copper brown
+tec_hollywood_star_patented	Hard	Which Hollywood star co-patented a WWII frequency-hopping radio system later used in wireless tech?	Hedy Lamarr	Marilyn Monroe	Grace Kelly	Greta Garbo
+tec_word_alexander_graham	Hard	Which word did Alexander Graham Bell want people to use when answering the telephone?	'Ahoy'	'Hello'	'Greetings'	'Speak'
+tec_radar_stand	Hard	What does 'radar' stand for?	Radio detection and ranging	Radial distance and range	Radio alert and alarm	Remote area detection and reporting
+tec_scuba_stand	Hard	What does 'scuba' stand for?	Self-contained underwater breathing apparatus	Sealed cylinder for underwater breathing air	Submarine crew underwater breathing aid	Standard compressed underwater breathing air
+tec_floats_inside_magic	Hard	What floats inside a Magic 8 Ball toy, showing its answers through the window?	A 20-sided die	A rolling marble	A tiny printed scroll	A spinning paper wheel
+tec_electric_cotton_candy	Hard	The electric cotton candy (candy floss) machine was co-invented in 1897 by a man of which profession?	A dentist	A clockmaker	A blacksmith	A firefighter
+tec_duct_tape_developed	Hard	Duct tape was first developed during World War II for which job?	Sealing ammunition boxes	Sealing air ducts	Mending parachutes	Patching tank tyres
+tec_tin_cans_arrived	Hard	Tin cans arrived decades before the can opener. How were early cans opened?	With a hammer and chisel	By heating them until they burst	By twisting off a screw lid	With a pull-ring on the lid
+tec_spire_top_empire	Hard	The spire on top of the Empire State Building was first designed as what?	A mooring mast for airships	A giant flagpole	A church-style bell tower	A searchlight tower
+tecx_cd_74	Hard	The CD's 74-minute length was reportedly chosen to fit which piece of music?	Beethoven's Ninth Symphony	The Beatles' 'Abbey Road'	Vivaldi's 'Four Seasons'	Mozart's 'Requiem'
+tecx_zmywarka	Hard	Who invented one of the first successful dishwashers, in 1886?	Josephine Cochrane	Marie Curie	Ada Lovelace	Florence Nightingale
+tec_bell_labs_engineers	Hard	Bell Labs engineers who put the # key on telephone keypads gave it which name?	Octothorpe	Octagram	Tetragram	Crossbar
+tec_mp3	Expert	Which German research institute developed the MP3 audio format?	Fraunhofer	Max Planck	Siemens	Bosch
+tec_rubik_pozycje	Expert	Roughly how many different positions can a Rubik's Cube be in?	About 43 quintillion	About 43 million	About 43 billion	About 43 trillion
+tec_liczba_boga	Expert	Any Rubik's Cube position can be solved in at most how many moves?	20	12	36	54
+tecx_lazy_bones	Expert	What was one of the first TV remote controls, attached by a cable in 1950, called?	Lazy Bones	Couch King	Click Master	Zapper
+tec_almon_strowger_invented	Expert	Almon Strowger invented the automatic phone exchange after an operator kept diverting his calls. What was his trade?	Undertaker	Plumber	Baker	Tailor
+tec_swedish_american_engineer	Expert	Which Swedish-American engineer perfected the modern zip in 1913?	Gideon Sundback	Whitcomb Judson	Elias Howe	Walter Hunt
+tec_american_credited_practical	Expert	Which American is credited with the first practical sewing machine with a lockstitch, patented in 1846?	Elias Howe	Isaac Singer	Eli Whitney	Walter Hunt
+tec_edouard_benedictus_invented	Expert	Edouard Benedictus invented safety glass after a dropped flask cracked but did not shatter. Why did it hold together?	A dried plastic film coated its inside	It had been cooled very slowly	It was made of quartz, not glass	Wire mesh was set into the glass
+tec_wilson_greatbatch_stumbled	Expert	Wilson Greatbatch stumbled on the implantable pacemaker in 1956 after what mistake?	Fitting the wrong resistor to a circuit	Dropping a battery into a frog tank	Mixing up two patients' heart scans	Leaving a radio on near a patient
+tec_vending_machine_described	Expert	The first known vending machine, described by Hero of Alexandria, dispensed what?	Holy water	Wine	Olive oil	Perfume
+tec_true_television_picture	Expert	The first true television picture, made in a London workshop in 1925, showed the face of what?	A ventriloquist's dummy	A pet parrot	King George V	A marble statue
+tec_1898_exhibition_new	Expert	At an 1898 exhibition in New York, Nikola Tesla amazed crowds with which invention?	A radio-controlled boat	A death ray	A flying car	A wireless telephone
+tec_song_engineer_karlheinz	Expert	Which song did engineer Karlheinz Brandenburg use over and over to fine-tune the MP3 format?	'Tom's Diner'	'Bohemian Rhapsody'	'Imagine'	'Billie Jean'
+tec_odd_scott_martinville	Expert	What was odd about Scott de Martinville's 1860 'phonautograph' sound recordings?	They were never meant to be played back	They were carved into wax candles	They could only record whistling	They were made on sheets of glass
+tec_two_letters_missing	Expert	Which two letters were missing from the letters printed on old American phone dials?	Q and Z	X and Y	J and K	V and W
+tec_1978_welders_secretly	Expert	In 1978, why were welders secretly sent at night to New York's new Citicorp tower?	Strong winds could have toppled it	Its windows kept falling out	Its foundations were sinking	Its spire was struck by lightning
+tec_word_zipper_began	Expert	The word 'zipper' began as a trademark of which company, for its rubber boots?	B.F. Goodrich	Firestone	Dunlop	Goodyear
+tec_word_escalator_began	Expert	The word 'escalator' began as the trademark of which company?	Otis	Schindler	Westinghouse	Siemens
+tec_inventor_lava_lamp	Expert	The inventor of the lava lamp got the idea in 1963 from what?	A homemade egg timer in a pub	A jellyfish in an aquarium	Oil floating on a puddle	Wax dripping from a candle
+tec_regency_1954_transistor	Expert	The Regency TR-1 of 1954, the first transistor radio on sale, used transistors from which company, later famous for calculators?	Texas Instruments	Casio	Hewlett-Packard	Sharp
+tec_barcode_inventor_norman	Expert	Barcode inventor Norman Woodland got his idea on a beach by drawing what in the sand?	Morse code stretched into lines	The ripples left by waves	A row of his own footprints	The planks of a boardwalk
+tec_engineer_lonnie_johnson	Expert	Engineer Lonnie Johnson came up with the Super Soaker water gun while building what?	A heat pump that used water	A rocket fuel pump	A garden sprinkler	A fire extinguisher
+tec_working_escalator_built	Expert	The first working escalator, built in 1896, was a novelty ride where?	Coney Island	Blackpool Pier	Niagara Falls	Harrods in London
+tec_country_opened_nuclear	Expert	Which country opened the first nuclear power station to supply an electricity grid, in 1954?	The Soviet Union	The United States	Britain	France
+tec_1913_harry_brearley	Expert	In 1913, Harry Brearley created stainless steel while looking for a better metal for what?	Gun barrels	Cutlery	Surgical tools	Ship hulls
